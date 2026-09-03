@@ -1,0 +1,6201 @@
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_0_0.png)
+
+
+    Musaab Hasan
+
+    Zayed Balbahaith
+
+
+    # Mastering Linux Security
+
+
+    Step by Step Practical Guide
+
+
+    Hasan, Balbahaith
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_0_1.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Musaab Hasan
+
+    Zayed Balbahaith
+
+
+    # Mastering Linux Security'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Musaab Hasan
+
+    Zayed Balbahaith
+
+
+    # Mastering Linux Security
+
+
+    Step by Step Practical Guide
+
+
+    LAP LAMBERT Academic Publishing'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Imprint
+
+
+    Any brand names and product names mentioned in this book are subject to trademark,
+    brand or patent protection and are trademarks or registered trademarks of their
+    respective holders. The use of brand names, product names, common names, trade,
+    product descriptions etc. even without a particular marking in this work is in
+    no way to be construed that such names may be regarded as unrestricted in respect
+    of trademark and brand protection legislation and could thus be used by anyone.
+
+
+    Cover image: www.ingimage.com
+
+
+    Publisher:
+
+
+    LAP LAMBERT Academic Publishing
+
+
+    is a trademark of
+
+    International Book Market Service Ltd., member of OmniScriptum Publishing
+
+    Group
+
+
+    17 Meldrum Street, Beau Bassin 71504, Mauritius
+
+
+    Printed at: see last page
+
+    ISBN: 978-620-0-56603-4
+
+
+    Copyright © Musaab Hasan, Zayed Balbahaith
+
+    Copyright © 2020 International Book Market Service Ltd., member of
+
+    OmniScriptum Publishing Group'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   - Chapter I: Getting Started With Linux OS...........................................................................
+    3
+
+
+    +   - Chapter Objectives ................................................................................................
+    4
+
+
+    +   - Needed Tools ............................................................................................................
+    4
+
+
+    +   - Chapter Overview..................................................................................................
+    4
+
+
+    +   - Basic Linux Commands ..............................................................................
+    5
+
+
+    +   - Creating and Removing Directories.......................................................................
+    12
+
+
+    +   - Output Redirection.....................................................................................
+    15
+
+
+    +   - Manipulating Files...............................................................................................
+    18
+
+
+    +   - Running and managing processes in the background...........................................
+    25
+
+
+    +   - Becoming a super-user..................................................................................
+    28
+
+
+    +   - Using ssh to connect to another machine.......................................................
+    32
+
+
+    +   - Using VirtualBox and Kali Linux..................................................................
+    34
+
+
+    +   - Examining Further Linux Commands...............................................................
+    35
+
+
+    +   - End of Chapter Conclusions & Recommendations..................................................
+    50
+
+
+    +   **Chapter II: Exploring Various Security Tools...............................................
+    52**
+
+
+    +   - Chapter Objectives ................................................................................
+    53
+
+
+    +   - Needed Tools ............................................................................................
+    53
+
+
+    +   - Chapter Overview..................................................................................
+    53
+
+
+    +   - Tasks & Procedures ................................................................................
+    54
+
+
+    +   - Default File Permissions.......................................................................
+    55
+
+
+    +   - Password files.....................................................................................
+    57
+
+
+    +   - Sudo ...................................................................................................
+    58
+
+
+    +   - Installing Software Packages (RPM and YUM)...................................
+    62
+
+
+    +   - Console and Login Security...........................................................
+    65
+
+
+    +   - Wireshark ..............................................................................
+    71'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'End of Chapter Conclusions & Recommendations................................................................75
+
+
+    # Chapter III Digging Deeper into Linux ...................................................................76
+
+
+    Chapter Objectives ................................................................................................77
+
+
+    Needed Tools .......................................................................................................77
+
+
+    Chapter Overview..................................................................................................77
+
+
+    SUID and SGID ................................................................................................78
+
+
+    SUID Vulnerability ........................................................................................82
+
+
+    Firewall ............................................................................................................85
+
+
+    Immutable Files ...................................................................................87
+
+
+    Forwarding X with OpenSSH ................................................................89
+
+
+    Managing Files...............................................................................................91
+
+
+    Mounting the File System and NFS ................................................93
+
+
+    End of Chapter Conclusions & Recommendations.........................................97
+
+
+    # Chapter IV Advanced Linux Tools ............................................................98
+
+
+    Chapter Objectives ............................................................................99
+
+
+    Needed Tools ....................................................................................99
+
+
+    Chapter Overview................................................................................99
+
+
+    Syslog Basics ................................................................................100
+
+
+    Fine Tuning the Defaults ................................................................103
+
+
+    Dmesg...............................................................................................104
+
+
+    Log Rotation ................................................................................105
+
+
+    Apache HTTP or Tomcat...............................................................108
+
+
+    Listing Open Files.......................................................................109
+
+
+    Cracking the system through boot loader...............................111
+
+
+    File Integrity Check with TripWire.......................................115
+
+
+    Syslog-ng ................................................................115
+
+
+    End of Chapter Conclusions & Recommendations................................116
+
+
+    References ........................................................................117'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Chapter I
+
+
+    # Getting Started with Linux OS'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Chapter Objectives
+
+
+    +   - To be familiar with Linux operating system environment.
+
+    - To use Linux terminal to perform various tasks.
+
+    - To explore and use Linux utilities and commands.
+
+
+    # Needed Tools
+
+
+    +   - Fedora 24 Workstation image.
+
+    - Oracle VirtualBox
+
+
+    # Chapter Overview
+
+
+    Linux is an open source operating system that provides various utilities that
+    help professionals to perform their tasks in an efficient and simple way. Linux
+    has been known in the industry as one of the most stable operating systems. Regular
+    users may not prefer to use Linux operating system since it was originally designed
+    to be used through a command line interface and for professional users. This chapter
+    aimed generally to introduce Linux OS and perform multiple tasks and implement
+    and test various commands on it. The Experiments and Exercises section explains
+    thoroughly how each of the tenths parts of the chapter was performed in accordance
+    with the screenshots. The aim for each part of the report is as follows.
+
+
+    The aim of part 1 to practice basic Linux commands and discover different commands
+    to list files and show their properties and permission, display shell and users''
+    information and how to use the help of man command to read manual lately to any
+    command and its attribute how to move between system directories and return to
+    your login directory.
+
+
+    The aim of part 2 to use mkdir command to create directories in different locations,
+    and to remove directories using rmdir if the directory is empty using rm -rf is
+    the best option to delete directories with all of its contents.
+
+
+    The aim of part 3 are to explore different output redirection commands to overwrite
+    the content of the files or append contents to an existing file, also using cat
+    command to view the contents of the files and confirm changes occurred to the
+    files.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'The aim of part 4 to manipulate the files by renaming the files names, moving
+    the files from one directory to other directories, copying the files to different
+    directories and finally removing files and directories with all its content.
+
+
+    The aim of part 5 is to allow the owners of the files to set permissions of the
+    files and directories. chmod command used to allow or restrict access of files
+    & directories created by you or others. Permission changed regularly based on
+    files importance.
+
+
+    The aim of part 6 to create a soft (symbolic) link using Ln -s command to an existing
+    file, then practice different scenarios of the linked files by updating and deleting
+    the original file and discover the changes occurred over the linked files.
+
+
+    The aim of part 7 to learn how to install packages using yum command and run the
+    processes in foreground and background notice the differences, also as a second
+    goal is to list the processes that are running in the background and use the kill
+    command to terminate it.
+
+
+    The aim of part 8 be to play with root user and running tasks through cronlab,
+    also to be able to define certain users from cron utility by adding a list of
+    denied users in cron.deny file, finally to be familiar of creating new users using
+    graphical tools.
+
+
+    The aim of part 9 to use ssh command to be able to login to Linux server, to use
+    different Linux commands to see who is on the server, accessing others'' files
+    and read them and updating their files and see what they are doing.
+
+
+    The aim of part 10 to be able to install KALI Linux through VirtualBox or VMware
+    workstation.
+
+
+    # Basic Linux Commands
+
+
+    The task started by installing and accessing fedora Linux at the virtual machine
+    and starting a new terminal window. Several basic commands have been applied to
+    experiment their effects, these commands are as follows:
+
+
+    +   - date command to print the current date and time. (Figure 1.3)
+
+    - cal command to present the calendar for the current month. (Figure 1.4)
+
+    - ls command to list the known files not starting with ".". (Figure 1.5)
+
+    - ls -a command to list all files and folder, including hidden ones. (Figure 1.6)
+
+    - ls -l command to list the files and folders with permission and ownership information.
+    (Figure 1.7)
+
+    - clear command to clear the screen and start with an empty shell. (Figure 1.8)
+
+    - cat .bash_profile to display startup file which is bash_profile. (Figure 1.9)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '+   - exit” command to close the terminal window. (Figure 1.10)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_10_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_10_1.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# zbalbaihath@Fedora24:-\n\n```\nFile Edit View Search Terminal Help\n[zbalbaihath@M00007225\
+    \ ~]$ date\nFri Oct 14 16:56:20 GST 2016\n[zbalbaihath@M00007225 ~]$\n```\n\n\
+    Figure 1.3: shows the results of date command\n\n```\n[zbalbaihath@M00007225 ~]$\
+    \ cal\nOctober 2016\nSu Mo Tu We Th Fr Sa\n             1\n2 3 4 5 6 7 8\n9 10\
+    \ 11 12 13 14 15\n16 17 18 19 20 21 22\n23 24 25 26 27 28 29\n30 31\n[zbalbaihath@M00007225\
+    \ ~]$ ╘\n```\n\nFigure 1.4: cal command display the calendar for the month.\n\n\
+    # zbalbaihath@Fedora24:-\n\n```\nFile Edit View Search Terminal Help\n[zbalbaihath@M00007225\
+    \ ~]$ ls\nDesktop Documents Downloads Music Pictures Public Templates Videos\n\
+    [zbalbaihath@M00007225 ~]$ ╘\n```\n\nFigure 1.5: is command used to list the files\
+    \ & folders in directory.\n\n# zbalbaihath@Fedora24:-\n\n```\nFile Edit View Search\
+    \ Terminal Help\n[zbalbaihath@M00007225 ~]$ ls\nDesktop Documents Downloads Music\
+    \ Public Templates Videos\n[zbalbaihath@M00007225 ~]$ ls -F\n.bash_profile  Desktop\
+    \ .group      Music Templates\n.bash_cache    .localAuthority Pictures Videos\n\
+    .bash_history  Downloads          Public\n.bash_logout config .edauth .mozilla\
+    \ .ssh\n[zbalbaihath@M00007225 ~]$ ╘\n```\n\nFigure 1.6: is a command applied\
+    \ to show the hidden files with other directories and files\n\n# zbalbaihath@Fedora24:-\n\
+    \n```\nFile Edit View Search Terminal Help\n[zbalbaihath@M00007225 ~]$ ls -l\n\
+    total 32\ndrwxr-xr-x. 2 zbalbaihath zbalbaihath 4096 Oct 12 17:42 Desktop\ndrwxr-xr-x.\
+    \ 2 zbalbaihath zbalbaihath 4096 Oct 12 17:42 Documents\ndrwxr-xr-x. 2 zbalbaihath\
+    \ zbalbaihath 4096 Oct 12 17:42 Downloads\ndrwxr-xr-x. 2 zbalbaihath zbalbaihath\
+    \ 4096 Oct 12 17:42 Music\ndrwxr-xr-x. 2 zbalbaihath zbalbaihath 4096 Oct 12 17:42\
+    \ Pictures\ndrwxr-xr-x. 2 zbalbaihath zbalbaihath 4096 Oct 12 17:42 Public\ndrwxr-xr-x.\
+    \ 2 zbalbaihath zbalbaihath 4096 Oct 12 17:42 Templates\ndrwxr-xr-x. 2 zbalbaihath\
+    \ zbalbaihath 4096 Oct 12 17:42 Videos\n[zbalbaihath@M00007225 ~]$ ╘\n```\n\n\
+    Figure 1.7: is -l command presented permission and ownership for each directory\
+    \ and file.\n\n7"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_12_0.png)
+
+
+    Figure 1.8: clear command used to erase the results of the previous commands.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_12_1.png)
+
+
+    Figure 1.9: cat .bash_profile command output shows the startup file of the user.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_12_2.png)
+
+
+    Figure 1.10: exit command used to exit and close the terminal.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'A new terminal window was opened again and all the currently logged in users
+    have been listed using who command, and the commands "whoami" and "who am i" have
+    been tested and the results compared to show differences between them.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_13_0.png)
+
+
+    ```
+
+    zbalbahaith@Fedora24~
+
+    File Edit View Search Terminal Help
+
+    zbalbahaith@00007225 ~$ who
+
+    zbalbahaith tty2               2016-10-14 16:08 (:1)
+
+    zbalbahaith@00007225 ~$
+
+    ```
+
+
+    Figure 1.12: who command.
+
+
+    ```
+
+    zbalbahaith@Fedora24~
+
+    File Edit View Search Terminal Help
+
+    zbalbahaith@00007225 ~$ whoami
+
+    zbalbahaith
+
+    zbalbahaith@00007225 ~$ who am i1
+
+    zbalbahaith@00007225 ~$
+
+    ```
+
+
+    Figure 1.13: "whoami" and "who am i" commands.
+
+
+    The who command prints the user name (login name) of the current login on the
+    shell while the who am command shows nothing.
+
+
+    A finger package has been installed to use the "finger" command with the login
+    name to display detailed information about current terminal'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# zbalbahaith@Fedora24~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zbalbahaith@M0007225 ~]$ finger zbalbahaith
+
+    Login: zbalbahaith               Name: Zayed Balbahaith
+
+    Directory: /home/zbalbahaith      Shell: /bin/bash
+
+    ls -ld 16:00 (GST) from tty2 -1nhour 2 minutes idle
+
+    No mail.
+
+    No Plan.
+
+    $zbalbahaith@M0007225 ~]
+
+    ```
+
+
+    Figure 1.14: display detailed information about user terminal command was used.
+
+
+    Moved to /directory using cd command then present all the files on one page at
+    time using pipe command between ls -l and less command. A current working directory
+    displayed with pwd command. cd used to move back to home directory and a new empty
+    file created using touch command, and the touch command has been tested on existing
+    filename and discover the effects occurred to it.
+
+
+    Figure 1.15: the changes to /bin directory.
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zbalbahaith@M0007225 ~]$ ls -l |less
+
+    ```
+
+
+    | | | | group | owner | size | date | time | name |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | total 18064 | | root | root | 53264 | May 25 | 12:54 | abrt-analyze-backtrace
+    |
+
+    | -rwxr-xr-x | root | root | 52708 | May 25 | 12:54 | abrt-analyze-ab |
+
+    | -rwxr-xr-x | root | root | 11280 | May 25 | 12:54 | abrt-analyze-core |
+
+    | -rwxr-xr-x | root | root | 11624 | May 25 | 12:54 | abrt-analyze-ccpp-local
+    |
+
+    | -rwxr-xr-x | root | root | 66860 | May 25 | 12:53 | abrt-analyze-core |
+
+    | -rwxr-xr-x | root | root | 15816 | May 25 | 12:54 | abrt-analyze-oops |
+
+    | -rwxr-xr-x | root | root | 11624 | May 25 | 12:54 | abrt-analyze-report |
+
+    | -rwxr-xr-x | root | root | 2818 | May 25 | 12:53 | abrt-analyze-vmcore |
+
+    | -rwxr-xr-x | root | root | 13572 | May 25 | 12:54 | abrt-crash-unable |
+
+    | -rwxr-xr-x | root | root | 11034 | May 25 | 12:53 | abrt-analyze-sort |
+
+    | -rwxr-xr-x | root | root | 2186 | May 25 | 12:53 | abrt-check-ops-for-alt |
+
+    | -rwxr-xr-x | root | root | 5537 | May 25 | 12:53 | abrt-check-ops-for-hwi |
+
+    | -rwxr-xr-x | root | root | 5425 | May 25 | 12:53 | abrt-find-body-update |
+
+    | -rwxr-xr-x | root | root | 12028 | May 25 | 12:54 | abrt-generate-report |
+
+    | -rwxr-xr-x | root | root | 11272 | May 25 | 12:54 | abrt-generate-core-back
+    |
+
+    | -rwxr-xr-x | root | root | 9777 | May 25 | 12:53 | abrt-install-debuginfo |
+
+
+    Figure 1.17: Display result on one page at a time.
+
+
+    10'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\n[zbalbahaith@M0007225 bin]$ ls -l |less\n[zbalbahaith@M0007225 bin]$ pwd\n\
+    /bin\n[zbalbahaith@M0007225 bin]$\n```\n\nFigure 1.18: shows the user working\
+    \ directory using pwd command.\n\n```\nzbalbahaith@Fedora24:/home\n[zbalbahaith@M0007225\
+    \ bin]$ cd\n[zbalbahaith@M0007225 /]$ ls cd /home\n[zbalbahaith@M0007225 home]$\
+    \ home\n```\n\nFigure 1.19: cd command used to direct user to HOME directory\n\
+    \n```\n[root@M0007225 home]# touch myfile\n[root@M0007225 home]# ls -a\n.\n.\n\
+    myfile\ttzbalbahaith\n[root@M0007225 home]#\n```\n\nFigure 1.20: shows the new\
+    \ file generated by touch command\n\n```\nzbalbahaith@Fedora24:/home\n[root@M0007225\
+    \ home]# touch myfile\n[root@M0007225 home]# ls -l\nmyfile\ttzbalbahaith\n-rw-r--r--\
+    \ 1 root 0 Oct 14 17:42 myfile\n[root@M0007225 home]#\n```\n\nFigure 1.21: applying\
+    \ touch command on an existing file\n\nUsing touch command on an existing file\
+    \ will not show anything on the screen and will not overwrite the content of the\
+    \ file; the only effect will be shown on the last modified date when using the\
+    \ command -l to show the long format of the file, its noticeable that the time\
+    \ changed based on the last touch command on an existing file.\n\nLinux manual\
+    \ entry has been viewed using man command; man command has been tested with the\
+    \ touch command and displays all the available options for using touch command,\
+    \ an interface opened using man man."
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# zbalbahaith@Fedora24:~home
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root@M8007225 home]## man
+
+    What manual_page do you want?
+
+    [root@M8007225 home]##
+
+    ```
+
+
+    Figure 1.22: output generated after playing man command.
+
+
+    # zbalbahaith@Fedora24:~home
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    TOUCH(1) User Commands TOUCH(1)
+
+    1mNAME0m
+
+    touch change file timestamps
+
+    1mSYNOPSIS0m
+
+    touch [24OPTION24m]...4mFILE24m...
+
+    1mDESCRIPTION0m
+
+    Update the access and modification times of EACH FILE to the current
+
+    time.
+
+    A FILE argument that does not exist is empty, unless lm-c 22mor
+
+    l-h0m
+
+    A FILE argument string of- is handled specially and causes touch to
+
+    change times of the file associated with short
+
+    Mandatory arguments to long options are mandatory for short options
+
+    too.
+
+    1m-a 22change the access time
+
+    ```
+
+
+    Figure 1.23: applying man manual with touch command.
+
+
+    # zbalbahaith@Fedora24:~home
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    MAN(1) Manual page utils MAN(1)
+
+    NAME
+
+    man - an interface to the on-reference manuals
+
+    SYNOPSIS
+
+    man [-C file] [-D] [-D] [--warnings[warnings]] [-R encoding] [-L
+
+    local;]-m scrob... [-M path [-S list [-i[-e extension]] -i,-T
+
+    [-R]-m scrob... [-M path [-S list [-i[-e extension]] -u numbers]
+
+    pager [-p prompt] [-p string] [-E encoding] [--nohyphenation] --no-justifi-
+
+    cation [section] pages [-t device] [-H browser] [-X dpi] [-Z]
+
+    man -k [apropos options] regex
+
+    man -w [what options] page
+
+    man [-C file] [-D] [-D] [--warnings[warnings]] [-R encoding] [-p t
+
+    local;]-p header [-s encoding] [-p t
+
+    [-t device] [-H browser]
+
+    man -W [-C file] [-D] [-D] page
+
+    man [-Z] [-t title] page
+
+    ```
+
+
+    ```
+
+    DESCRIPTION
+
+    Manual page man(1) line 1 (press h for help or q to quit)
+
+    ```
+
+
+    # Creating and Removing Directories
+
+
+    Linux operating system provides a flexible set of commands that facilitate the
+    process
+
+    of creating, modifying, and managing directories. In this part several
+
+
+    12'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'commands were used to implement various actions on directories and these commands
+    are as follows:
+
+
+    +   - pwd command to print the current working directory in the screen. (Fig.
+    1.26)
+
+    - mkdir command to create and name a new directory. (Fig. 1.27)
+
+    - ls command to list and display all the files and directories of a certain path.
+    (Fig. 1.28)
+
+    - cd command to change the directory from the current path to the specified path.
+    (Fig. 1.29-1.31)
+
+    - touch command to create an empty file. (Fig. 1.32)
+
+    - rmdir command to delete and remove a current empty directory. (Fig. 1.33 – 1.34)
+
+    - rm -rf command to delete and remove a current directory even if it had a content.
+    (Fig. 1.33 – 1.34)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_17_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_17_1.png)
+
+
+    A combination of mkdir and cd commands was used to create the following directory
+    structure.
+
+
+    ```
+
+    /home/ituser/security
+
+    /home/ituser/class
+
+    /home/ituser/class/backup
+
+    ```
+
+
+    ```
+
+    ituser@M80007225 ~$ pwd
+
+    /home/ituser
+
+    ituser@M80007225 ~$ mkdir security
+
+    ituser@M80007225 ~$ mkdir class
+
+    ituser@M80007225 ~$ cd class
+
+    ituser@M80007225 ~/class]$ mkdir backup
+
+    ituser@M800007225 ~/class]$
+
+    ```
+
+
+    Figure 1.27: applying mkdir command to make the required directories.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\n[ituser@M80007225 ~]$ ls -a\n .bashrc Desktop .gnupg .ssh\n  .cache Documents\
+    \ ICEauthority Pictures Templates\n  .bash_logout class Downloads .local Public\
+    \ Videos\n  .bash_profile firefox .mozilla security\n[ituser@M80007225 ~]$ cd\
+    \ class\n[ituser@M80007225 class]$ ls -a\n\n[ituser@M80007225 class]$ \n```\n\n\
+    Figure 1.28: The list of the created directories shown\n\n```\nituser@M80007225:~/security\n\
+    File Edit View Search Terminal Help\n[ituser@M80007225 ~]$ cd security\n[ituser@M80007225\
+    \ security]$ \n```\n\nFigure 1.29: Accessing the security directory to confirm\
+    \ the creation of the directory.\n\n```\nituser@M80007225:~/class\nFile Edit View\
+    \ Search Terminal Help\n[ituser@M80007225 ~]$ cd class\n[ituser@M80007225 class]$\
+    \ \n```\n\nFigure 1.30: Accessing the class directory to confirm the creation\
+    \ of the directory.\n\n```\nituser@M80007225:~/class/backup\nFile Edit View Search\
+    \ Terminal Help\n[ituser@M80007225 class]$ cd backup\n[ituser@M80007225 backup]$|\n\
+    ```\n\nFigure 1.31: Accessing the security directory to confirm the creation of\
+    \ the directory.\n\n```\nituser@M80007225:~/security\nFile Edit View Search Terminal\
+    \ Help\n[ituser@M80007225 ~]$ cd security\n[ituser@M80007225 security]$ touch\
+    \ NewFile\n[ituser@M80007225 security]$ ls -a\n  NewFile\n[ituser@M80007225 security]$\
+    \ \n```\n\nFigure 1.32: An empty file created in /home/ituser/security through\
+    \ touch command\n\nA non-empty directory can't be removed by rmdir command and\
+    \ be removed using the rm -rf command."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# ituser@M80007225~\n\n```\nFile Edit View Search Terminal Help\n[ituser@M80007225~]$$\
+    \ rmdir security\nrmdir: failed to remove 'security': Directory not empty\n[ituser@M80007225~]$$\
+    \ rm -rf security\n[ituser@M80007225~]$$ |\n```\n\nFigure 1.33: rm -rf command\
+    \ was used to remove directory and all its contents.\n\n# ituser@M80007225~\n\n\
+    ```\nFile Edit View Search Terminal Help\n[ituser@M80007225~]$$ rmdir security\n\
+    rmdir: failed to remove 'security': Directory not empty\n[ituser@M80007225~]$$\
+    \ rm -rf security\n[ituser@M80007225~]$$ \n  bash Desktop gnupg Music Templates\n\
+    \  cache Documents .IAuthority Pictures Videos\n  bash logout Downloads .local\
+    \ Public\n  bash profile .ed_auth mozilla .ssh\n[ituser@M80007225~]$|\n```\n\n\
+    Figure 1.34: list the directories required after the directories deleted.\n\n\
+    # Output Redirection\n\nOutput Redirection is the concatenation of cat command\
+    \ and \"> cat command applied to a file named textfile1 and some paragraphs added\
+    \ to the created file as shown in Figure 35, Then cat command used again to view\
+    \ the content of the created file as shown in Figure 36. Statistics information\
+    \ about the created file displayed using wc command.\n\n```\nzbalbhaith@M80007225~~\n\
+    File Edit View Search Terminal Help\n[zbalbhaith@M80007225~]$$ cat textfile1\n\
+    Hi,my name is Zayed Balbhaith, my id is M80007225, am working at Dubai Police,\n\
+    and I like video games and playing football, Thanks.\n[zbalbhaith@M80007225~]$|\n\
+    ```\n\nFigure 1.35: textfile1 created using cat and > commands.\n\n```\nzbalbhaith@M80007225~~\n\
+    File Edit View Search Terminal Help\n[zbalbhaith@M80007225~]$$ cat textfile1\n\
+    Hi,my name is Zayed Balbhaith, my id is M80007225, am working at Dubai Police,\n\
+    and I like video games and playing football, Thanks.\n[zbalbhaith@M80007225~]$$\
+    \ wc textfile1\n  1 23 l32 textfile1\n[zbalbhaith@M80007225~]$|\n```\n\nFigure\
+    \ 1.36: cat command used to view the created file, also wc command used to list\
+    \ content statistics"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'The output redirection to print all the files in the "/bin" directory and gather
+    them in a file called output. cat command used to view the output file. Using
+    pipe " |" with less command to display the output on one page.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_20_0.png)
+
+
+    Figure 1.37: prints all the files in the "/bin" directory into the file output
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_20_1.png)
+
+
+    Figure 1.38: cat command used to view the contents of the output file
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_20_2.png)
+
+
+    Figure 1.39: using | less command to display the output on one page.
+
+
+    16'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# zbalbhaith@M80007225:/bin
+
+
+    ```
+
+    total 184180
+
+    dfr-root 2 root root 40960 Oct 15 07:16
+
+    drwxr-xr-x 12 root root 4096 Jun 14 12:39
+
+    drwxr-xr-x 1 root root 52752 Feb 3 2016
+
+    drwxr-xr-x 1 root root 11264 May 25 04:54 abrt-action-analyze-backtrace
+
+    drwxr-xr-x 1 root root 11264 May 25 04:54 abrt-action-analyze-c
+
+    drwxr-xr-x 1 root root 11261 May 25 04:53 abrt-action-analyze-core
+
+    drwxr-xr-x 1 root root 60868 May 25 04:53 abrt-action-analyze-local
+
+    drwxr-xr-x 1 root root 15336 Feb 15 2016 abrt-action-analyze-java
+
+    drwxr-xr-x 1 root root 11264 May 25 04:54 abrt-action-analyze-python
+
+    drwxr-xr-x 1 root root 11264 May 25 04:54 abrt-action-analyze-vtrace
+
+    drwxr-xr-x 1 root root 11265 May 25 04:54 abrt-action-analyze-vulnerability
+
+    sty 1 root root 1357 May 25 04:53
+
+    -rwxr-xr-x 1 root root 11304 May 25 04:54 abrt-action-check-ops-for-hw
+
+    drwxr-xr-x 1 root root 2106 May 25 04:53 abrt-action-check-ops-for-alt
+
+    -component 1 root root 3537 May 25 04:53 abrt-action-check-crash
+
+    drwxr-xr-x 1 root root 54095 May 25 04:54 abrt-action-find-bodie.indump
+
+    drwxr-xr-x 1 root root 11288 May 25 04:54 abrt-action-generate-backtrace
+
+    drwxr-xr-x 1 root root 11272 May 25 04:54 abrt-action-generate-core-back
+
+    ```
+
+
+    Figure 1.40: the content displayed on one page at a time
+
+
+    Finally the output redirection `>` tested on a file that exists which will overwrite
+    its contents, a command which can overwrite the output file which created previously
+    and using command it has been viewed as shown in Figure 1.42. The output redirection
+    `>>` can be used to append contents to an existing file, a date command has been
+    appended to the output file which contains now the result of the command who with
+    the current date and time as shown in Figure 1.44.
+
+
+    # zbalbhaith@M80007225:/bin
+
+
+    ```
+
+    [root@M80007225 bin#] who > output
+
+    [root@M80007225 bin#]#
+
+    ```
+
+
+    Figure 1.41: using command to overwrite the content of the file
+
+
+    # zbalbhaith@M80007225:/bin
+
+
+    ```
+
+    [root@M80007225 bin#] cat_output
+
+    zbalbhaith tty2 2016-10-15 07:07 (:1)
+
+    [root@M80007225 bin#]#
+
+    ```
+
+
+    Figure 1.42: display the contents of the output file'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_22_0.png)
+
+
+    Figure 1.43: output re-direction ">>" used to append contents to the output file.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_22_1.png)
+
+
+    Figure 1.44: display the content of the output file
+
+
+    # # Manipulating Files
+
+
+    "cp" and "mv" commands are used to manipulate files. cd command is used to navigate
+    to the home directory while cp command was applied to create backup copies of
+    files named: output_Backup, datafile1_Backup. command was used to list the files
+    and ensure they were created successfully as shown in Figure 1.47. mv command
+    was used to move the created backup files to class/backup which was created in
+    exercise.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_22_2.png)
+
+
+    Figure 1.45: Change to home directory using command cd
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_22_3.png)
+
+
+    Figure 1.46: Using cp command to create output file copy backup
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_22_4.png)
+
+
+    18'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'Figure 1.47: Using cp command to create textfile backup copy
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    ituser@M80007225:~~
+
+    [ituser@M80007225 ~]$ mv output_Backup class/backup
+
+    [ituser@M80007225 ~]$ ls - Music Pictures Templates textfile1_Backup
+
+    Desktop Downloads output Public textfile Videos
+
+    [ituser@M80007225 ~]$
+
+    ```
+
+
+    Figure 1.48: use mv command to move the output file to backup directory
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 ~]$ mv textfile1_class/backup
+
+    [ituser@M80007225 ~]$ ls - Music Pictures Templates Videos
+
+    Desktop Downloads output Public textfile1
+
+    [ituser@M80007225 ~]$
+
+    ```
+
+
+    Figure 1.49: use mv command to move the textfile1 to backup directory.
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 ~]$ cd class/backup
+
+    [ituser@M80007225 backup]$ cp ../output_Backup to newfile textfile1 backup$
+
+    [ituser@M80007225 backup]$ █
+
+    ```
+
+
+    Figure 1.50: confirm the files moved correctly
+
+
+    The created backup file copied to /tmp directory which is accessible to all users
+    on the same Linux system. After that mv command was used to rename the output_Backup
+    to newfile. using rm command we removed the newly created file. As shown in figure
+    1.55 we used the command rm - to remove the class directory with all its content.
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 backup]$ cp output Backup /tmp
+
+    [ituser@M80007225 backup]$ cp textfile1_ Backup /tmp
+
+    [ituser@M80007225 backup]$ █
+
+    ```
+
+
+    Figure 1.51: copy the backup files to /tmp directory
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 backup]$ mv output_Backup newfile
+
+    [ituser@M80007225 backup]$ █
+
+    ```
+
+
+    Figure 1.52: rename the output file to newfile'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Ituser@M80007225~/class/backup
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 backup]$ mv output Backup newfile
+
+    [ituser@M80007225 backup]$ ls
+
+    newfile textfile Backup
+
+    [ituser@M80007225 backup]$ _
+
+    ```
+
+
+    Figure 1.53: confirm the rename of the file
+
+
+    # Ituser@M80007225~/class/backup
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 backup]$ rm -f newfile
+
+    [ituser@M80007225 backup]$ ls
+
+    textfile Backup
+
+    [ituser@M80007225 backup]$ _
+
+    ```
+
+
+    Figure 1.54: rm command to remove the file, Is the file has been removed
+
+
+    # ituser@M80007225:~-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 -~]$ rm -rf class
+
+    [ituser@M80007225 -~]$ ls
+
+    Desktop Downloads Output Public textfile
+
+    Documents Music Pictures Templates Videos
+
+    [ituser@M80007225 -~]$ _
+
+    ```
+
+
+    Figure 1.55: rm -rf command used to remove the class directory with all its content.
+
+
+    # 1. Sharing and Security
+
+
+    Allowing or restricting access to certain files can be performed using chmod command.
+    Long format of home directory files has been listed as shown in Figure 1.56; also
+    long format of root / directory files has been listed as shown in Figure 1.57.
+    Both listed files shows the permissions for each file.
+
+
+    # zeydalbahaitha@M80007225:~-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zeydalbahaitha@M80007225 -~]$ cd
+
+    [zeydalbahaitha@M80007225 -~]$ ls
+
+    total
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Desktop
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Documents
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Downloads
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Music
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Pictures
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Public
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Templates
+
+    drwxr-xr-x. 2 zeydalbahaitha zeydalbahaitha 4096 Oct 15 16:44 Videos
+
+    [zeydalbahaitha@M80007225 -~]$ _
+
+    ```
+
+
+    Figure 1.56: listing the files in long format is -l
+
+
+    20'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# zayedbalbahaith@M80007225:/
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 ~]$ cd /
+
+    [zayedbalbahaith@M80007225 ~]$ ls -l
+
+    -drwxr-xr-x. 1 root root Feb  4 2016 15:30 usr/bin
+
+    -drwxr-xr-x. 6 root root 1024 Jun 14 20:25 dev
+
+    -drwxr-xr-x. 12 root root 12500 Oct 15 16:43 home
+
+    -drwxr-xr-x. 4 root root 4096 Oct 15 16:41 home
+
+    -lrwxr-xr-x. 1 root root 7 Feb  4 2016 lib64 ->/usr/lib
+
+    -drwxr-xr-x. 1 root root 16384 Jun 14 20:25 tmp
+
+    -drwxr-xr-x. 4 root root 4096 Oct 15 16:43 media
+
+    -drwxr-xr-x. 2 root root 4096 Feb  4 2016 mnt
+
+    -drwxr-xr-x. 2 root root 4096 Oct 15 16:43 opt
+
+    -rw-r--r--. 1 root root-drwxr-xr-x. 1 root root 4096 Oct 15 19:47 root
+
+    -drwxr-xr-x. 12 root root 12500 Oct 15 16:43 bin
+
+    -drwxr-xr-x. 8 root root 4096 Dec 21 16:31 boot
+
+    -lrwxr-xr-x. 1 root root Feb  4 2016 15:36 ->/usr/sbin
+
+    -drwxr-xr-x. 13 root root 2205 Oct 22 19:05 sys
+
+    -drwxr-xr-x. 6 root root 4096 Jun 14 22:53 tmp
+
+    -drwxr-xr-x. 2 root root 4096 Oct 15 16:43 var
+
+    [zayedbalbahaith@M80007225 ~]$ _
+
+    ```
+
+
+    Figure 1.57: List files under the root / directory in long format
+
+
+    The files under user home directory us to have a full permission over it, group
+    and others have only read permission as they have limited access permissions,
+    but the file types under the root directory have different permissions based on
+    the users with all and specify permission based on the user role.
+
+
+    Touch command was used to create an empty file called personal.txt, the default
+    privileges follow:
+
+
+    +   - Owner having read & write permission.
+
+    - Groups having read & write permission.
+
+    - Others having read permission only.
+
+
+    Then the permissions were changed to be as follow:
+
+
+    +   - Owner having read & write permission.
+
+    - Groups having read & write permission.
+
+    - Others having read permission only.
+
+
+    ```
+
+    zayedbalbahaith@M80007225:~~
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 ~]$ touch personal.txt
+
+    [zayedbalbahaith@M80007225 ~]$ ls -l personal.txt
+
+    -rw-r--r--. 1 zayedbalbahaith zayedbalbahaith 0 Oct 15 19:58 personal.txt
+
+    [zayedbalbahaith@M80007225 ~]$ _
+
+    ```
+
+
+    Figure 1.58: The new file created and its permission presented
+
+
+    21'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# zayedbalhaith@M80007225~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalhaith@M80007225~]$ ls -l personal.txt
+
+    -rw-r--r-- 1 zayedbalhaith zayedbalhaith 0 Oct 15 19:58 personal.txt
+
+    [zayedbalhaith@M80007225~]$ chmod g-w personal.txt
+
+    [zayedbalhaith@M80007225~]$ ls -l personal.txt
+
+    -rw-r--r-- 1 zayedbalhaith zayedbalhaith 0 Oct 15 19:58 personal.txt
+
+    [zayedbalhaith@M80007225~]$ _
+
+    ```
+
+
+    Figure 1.59: The permissions have been changed and confirmed
+
+
+    A new directory was created and named classes and the default file permissions
+    have been presented as shown in Figure 1.60. The previously created file "personal.txt"
+    was copied to the classes directory. The permissions on the "classes" directory
+    changed to be readable and writable by owner group and others don''t have any
+    permission on it as shown in Figure 1.62.
+
+
+    # zayedbalhaith@M80007225~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalhaith@M80007225~]$ mkdir classes
+
+    [zayedbalhaith@M80007225~]$ cp personal.txt classes
+
+    dr-xr-x 2 zayedbalhaith zayedbalhaith 4096 Oct 15 20:09 classes
+
+    [zayedbalhaith@M80007225~]$ _
+
+    ```
+
+
+    Figure 1.60: directory classes created and the permission presented.
+
+
+    # zayedbalhaith@M80007225~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalhaith@M80007225~]$ cp personal.txt classes
+
+    [zayedbalhaith@M80007225~]$ _
+
+    ```
+
+
+    Figure 1.61: copy the personal file to the classes directory
+
+
+    # zayedbalhaith@M80007225~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalhaith@M80007225~]$ chmod 600 classes
+
+    [zayedbalhaith@M80007225~]$ ls -ld classes
+
+    dr-xr-x 2 zayedbalhaith zayedbalhaith 4096 Oct 15 20:12 classes
+
+    [zayedbalhaith@M80007225~]$ _
+
+    ```
+
+
+    Figure 1.62: changing the permission of the classes directory.
+
+
+    22'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    zayedbalbahaith@M80007225:/home/zayedbalbahaith/classes
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 ~]$ cd classes
+
+    bash: cd: cd classes: Permission denied
+
+    [zayedbalbahaith@M80007225 ~]$ cd su
+
+    Password:
+
+    [root@M80007225 zayedbalbahaith]# cd classes
+
+    [root@M80007225 classes]# ls -l
+
+    ```
+
+
+    Figure 1.63: rooting to the classes directory using cd command.
+
+
+    As shown on Figure 1.63 that the user was not able to access to the classes directory
+    because he didn''t have sufficient permissions so the permission was denied, the
+    issue was solved by accessing the classes directory by the root user and viewing
+    the directory contents.
+
+
+    # 2. Creating soft and hard links
+
+
+    Textfile1 was created and a soft link to it was lun through “ln -s” and named
+    textfile2. The content of the original file was updated, and the soft link was
+    checked and its update accordingly with the original file.
+
+
+    ```
+
+    zayedbalbahaith@M80007225:~
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 ~]$ echo "Hi, This is file pointer" > textfile1
+
+    [zayedbalbahaith@M80007225 ~]$ ln -s textfile1 textfile2
+
+    [zayedbalbahaith@M80007225 ~]$
+
+    ```
+
+
+    Figure 1.64: created and a soft link to it lunched through ln -s and its name
+    textfile2
+
+
+    ```
+
+    zayedbalbahaith@M80007225:~
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 ~]$ cat textfile1
+
+    Hi, This is file pointer
+
+    [zayedbalbahaith@M80007225 ~]$ cat textfile2
+
+    Hi, This is file pointer
+
+    [zayedbalbahaith@M80007225 ~]$ _
+
+    ```
+
+
+    Figure 1.65: confirming the soft link creation'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# zayedbalbahaith@M80007225:-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 -js echo "This is the new added file" >> textfile
+
+    zayedbalbahaith@M80007225 -js cat textfile
+
+    Hi, This is the file pointer
+
+    This is the new added file
+
+    [zayedbalbahaith@M80007225 -js cat textfile2
+
+    Hi, This is the file pointer
+
+    This is the new added file
+
+    [zayedbalbahaith@M80007225 ~$]
+
+    ```
+
+
+    Figure 1.66: updating the content of the soft link that is pointing to the same
+    file
+
+
+    Changing the original file will result in changing the soft link that is pointing
+    to the same file.
+
+
+    Using rm command, the original link was removed and a confirmation for that was
+    accomplished as shown in Figure 1.67. The linked file still exists but the terminal
+    will show an error message because it can''t find the original file that was pointing
+    to as shown in Figure 68, so the link no longer exists.
+
+
+    # zayedbalbahaith@M80007225:-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 -js rm textfile1
+
+    [zayedbalbahaith@M80007225 -js cat textfile2
+
+    cat: textfile2: No such file or directory
+
+    [zayedbalbahaith@M80007225 -js ■]
+
+    ```
+
+
+    Figure 1.67: removing the original file and confirm that it was removed.
+
+
+    # zayedbalbahaith@M80007225:-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [zayedbalbahaith@M80007225 -js rm textfile1
+
+    [zayedbalbahaith@M80007225 -js cat textfile2
+
+    cat: textfile2: No such file or directory
+
+    [zayedbalbahaith@M80007225 -js ls
+
+    Classes Documents Music Pictures t4 Textfile2
+
+    Desktop Downloads personal.txt Public Templates Videos
+
+    [zayedbalbahaith@M80007225 ~$]
+
+    ```
+
+
+    Figure 1.68: listing the files to view the soft link (shown in red)
+
+
+    Deleting the original file that the softlink is pointing to, will result in an
+    error that tells the user he tries to run it and it is pointing to a non-existing
+    file.
+
+
+    24'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Running and managing processes in the background
+
+
+    Linux terminal provides a useful utility that allows the user to run multiple
+    commands at the same time by adding & sign to the end of the command. After running
+    multiple commands the user can use ps command to view the running process and
+    kill command to terminate any of process. The following screenshots shows the
+    process followed in exploring the mentioned commands.
+
+
+    To achieve and test these xclock utility was installed and ran in the background
+    and tested
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_29_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_29_1.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# zayedbalbahaith@M8007225:/home/zayedbalbahaith
+
+
+    File Edit check Search Terminal Help
+
+    Transaction succeeded.
+
+    Transaction succeeded.
+
+    Running transaction
+
+
+    +   Installing : xorg-xbitmaps-1.1.1-9.fc24,noarch 2/4
+
+    Installing : xorg-x11-fonts-misc-7.5-16.fc24,noarch 2/4
+
+    Installing : libXaw-1.0.13-4.fc24,x86 3/4
+
+    Verifying : xorg-x11-apps-7.5-15.fc24,x86 3/4
+
+    Verifying : libXaw-1.0.13-4.fc24,x86 4/4
+
+    Verifying : xorg-x11-fonts-misc-7.5-16.fc24,noarch 2/4
+
+    Verifying : xorg-x11-bitmaps-1.1.1-9.fc24,noarch 4/4
+
+
+    Installed:
+
+    libXaw-x86 1.0.13-4.fc24 xorg-x86 6.7-15-fc24
+
+    xorg-x11-fonts-misc.7.5-16.fc24
+
+
+    Complete!
+
+    [root@M8007225 zayedbalbahaith#] xclock
+
+    Warning: Tried to connect to session manager, None of the authentication protocols
+    nispecified are supported
+
+    Warning: Missing charset in String to FontSet conversion
+
+    [root@M8007225 zayedbalbahaith#] Figure 1.71: Terminate the xclock application
+    using ctrl+c
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_30_0.png)
+
+
+    Figure 1.72: Running xclock in the background'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    zayedbalbahaith@M80007225/home/zayedbalbahaith
+
+    File Edit View Search Terminal Help
+
+    [root@M80007225 zayedbalbahaith]# xclock &
+
+    [2] 8390
+
+    [root@M80007225 zayedbalbahaith]# Warning: Tried to connect to session manager,
+
+    None of the authentication protocols specified are supported
+
+    Warning: Missing characters in String to Fontset conversion\ls
+
+    classes Documents Music Pictures Templates
+
+    Desktop Downloads personal.txt Public Videos
+
+    [1]- Done xclock
+
+    [root@M80007225 zayedbalbahaith]# $
+
+    ```
+
+
+    Figure 1.73: execute the command to be executed in the background at the same
+    time when there is another application running in the background.
+
+
+    ```
+
+    zayedbalbahaith@M80007225/home/zayedbalbahaith
+
+    File Edit View Search Terminal Help
+
+    [root@M80007225 zayedbalbahaith]# xclock &
+
+    [2] 8390
+
+    [root@M80007225 zayedbalbahaith]# Warning: Tried to connect to session manager,
+
+    None of the authentication protocols specified are supported
+
+    Warning: Missing characters in String to Fontset conversion\ls
+
+    classes Documents Music Pictures Templates
+
+    Desktop Downloads personal.txt Public Videos
+
+    [1]- Done
+
+    [root@M80007225 zayedbalbahaith]# ps
+
+    PID TTY TIME CMD
+
+    7984 pts/0 00:00:00 su
+
+    7993 pts/0 00:00:00 bash
+
+    8390 pts/0 00:00:00 xclock
+
+    8411 pts/0 00:00:00 ps
+
+    [root@M80007225 zayedbalbahaith]# #
+
+    ```
+
+
+    Figure 1.74: list the processes running in the background using the ps command
+
+
+    ```
+
+    zayedbalbahaith@M80007225/home/zayedbalbahaith
+
+    File Edit View Search Terminal Help
+
+    [root@M80007225 zayedbalbahaith]# ps
+
+    PID TTY TIME CMD
+
+    7984 pts/0 00:00:00 su
+
+    7993 pts/0 00:00:00 bash
+
+    8390 pts/0 00:00:00 xclock
+
+    8463 pts/0 00:00:00 ps
+
+    [root@M80007225 zayedbalbahaith]# kill 8390
+
+    [2]+ Terminated
+
+    xclock
+
+    [root@M80007225 zayedbalbahaith]# #
+
+    ```
+
+
+    Figure 1.75: terminate xclock process running the background using kill command'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Becoming a super-user
+
+
+    The multi-user property of Linux provides extra protections and security to the
+    system; all users will be having a limited set of permissions while the root user
+    will be having a full access to the system with maximum permissions. In this part
+    and experiments were done in creating new users and modifying the permissions
+    and access levels to the current users through the cron command as a test case.
+
+
+    ```
+
+    ituser@MB8007225:~
+
+    File Edit View Search Terminal Help
+
+    [ituser@MB8007225 -$ whoami
+
+    ituser
+
+    [ituser@MB8007225 -$]#
+
+    ```
+
+
+    Figure 1.76: whoami command result shows the currently logged in user is Ituser
+
+
+    ```
+
+    ituser@MB8007225:/home/ituser
+
+    File Edit View Search Terminal Help
+
+    [ituser@MB8007225 -$] su
+
+    Password:
+
+    [root@MB8007225 user]#
+
+    ```
+
+
+    Figure 1.77: accessing the shell as root user
+
+
+    ```
+
+    ituser@MB8007225:/home/ituser
+
+    File Edit View Search Terminal Help
+
+    [root@MB8007225 user]# whoami
+
+    root
+
+    [root@MB8007225 user]#
+
+    ```
+
+
+    Figure 1.78: whoami command result shows the currently logged in user is root
+    root
+
+
+    Whoami command at part "a" showed the user as the user who is controlling the
+    shell and limited permissions were assigned to his files but at part "c" the command
+    Whoami displayed the user as root and he has full permissions.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# Ituser@M8000725:/home/ituser\n\n```\nFile Edit View Search Terminal Help\n\
+    [root@M8000725 ituser]# # touch /etc/cron.deny\n[root@M8000725 ituser]# #\n```\n\
+    \nFigure 1.79: create a new file at /etc/cron.deny\n\n# Ituser@M8000725:/home/ituser\n\
+    \n```\nFile Edit View Search Terminal Help                               Modified\n\
+    GNU nano 2.5.3                               File: /etc/cron.deny\nituser    \
+    \                                                                          \n\n\
+    \nRead 0 lines\n-Get Help Write Out Where Is Exec Next Justify\n-M Read File Replace\
+    \ Uncut Text To Spell\n-Exit Go To Line\n```\n\nFigure 1.80: ituser entry added\
+    \ to the denied file\n\n# ituser@M8000725:~\n\n```\nFile Edit View Search Terminal\
+    \ Help\n[root@M8000725#]# exit\n[ituser@M8000725~ -] #\n```\n\nFigure 1.81: Log\
+    \ out from the root\n\n# ituser@M8000725:~\n\n```\n[root@M8000725 it]# exit\n\
+    (ituser) are not allowed to use this program (crontab)\nSee crontab(1) for more\
+    \ information\n[ituser@M8000725~ -] #\n```\n\nFigure 1.82: running crontab command\
+    \ from cron utility rule is not allowed\n\nSince the file was blocked using the\
+    \ cron utility at \"d\", then the shell will not allow the ituser to run the crontab\
+    \ command.\n\n# ituser@M8000725:~\n\n```\nFile Edit View Search Terminal Help\n\
+    [ituser@M8000725~ -]# rm /etc/cron.deny\nrm: remove write-protected regular file\
+    \ '/etc/cron.deny'? ? y\nrm: remove '/etc/cron.deny': Permission denied\n[ituser@M8000725~\
+    \ -] #\n```\n\nFigure 1.83: failure to remove the file (/etc/cron.deny) due to\
+    \ blocked permission of ituser using cron utility\n\n29"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Ituser@M80007225:/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@M80007225 ~]$ su
+
+    Password:
+
+    [root@M80007225 #] /etc/cron.deny
+
+    rm: remove regular file ''/etc/cron.deny''? y
+
+    [root@M80007225 ituser]# #
+
+    ```
+
+
+    Figure 1.84: The file (/etc/cron.deny) removed using root user
+
+
+    Since the (/etc/cron.deny) file was created by the root user then any modifications
+    to ituser will not be utilized by other users, and the only user that will be
+    able to delete it is the root user.
+
+
+    A new account was created and tested using the graphical user interface provided
+    an easy user-friendly utility.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_34_0.png)
+
+
+    Figure 1.85: Creating shahrazad user through the graphical tools
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_34_1.png)
+
+
+    Figure 1.86: sign in as the shahrazad user
+
+
+    30'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_35_0.png)
+
+
+    Since the required password by the question was "qw" and fedora workstation password
+    length policy states it should be at minimum 8 characters, we added two extra
+    digits at the end to the specified password to create the account otherwise it
+    will not be possible through the graphical interface.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_35_1.png)
+
+
+    31'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Using ssh to connect to another
+
+
+    Most servers are configured and accessed remotely, and ssh provides a secure and
+    reliable way of performing this task. In this ssh session was initiated to a server
+    with ip and address of 172.18.64.31 and multiple commands were performed to get
+    statistics about the server itself if like "who", "finger", and "w". furthermore,
+    a navigation and modifications to the directories in the server were performed
+    and tested. The following screenshots shows in the details tasks for this part
+    of the chapter.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_36_0.png)
+
+
+    ```
+
+    root@z10150~~
+
+    [root@z10150~]$ # ssh 172.18.64.11
+
+    The authenticity of host ''172.18.64.11'' can''t be established.
+
+    ECDSA fingerprint is SHA256:M133zkKBFY3n07bcbccYtd1qgdH9jkjNp4HUV0kyBkB
+
+    ECDSA fingerprint is MD39:a43:d3a:4b:09:c24:db:04:c4ec:bl:21:76:f5:cb
+
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+    Warning: Permanently added ''172.18.64.11'' (ECDSA) to the list of known hosts.
+
+    [root@z10150~]$ password:
+
+    Last login: Oct 12 20:35:49 from 172.18.64.34
+
+    [root@z10150~]#
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_36_1.png)
+
+
+    ```
+
+    root@z10150~]$ # ssh 172.18.64.11
+
+    The authenticity of host ''172.18.64.11'' can''t be established.
+
+    ECDSA fingerprint is SHA256:M133zkKBFY3n07bcbccYtd1qgdH9jkjNp4HUV0kyBkB
+
+    ECDSA fingerprint is MD39:a43:d3a:4b:09:c24:db:04:c4ec:bl:21:76:f5:cb
+
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+    Warning: Permanently added ''172.18.64.11'' (ECDSA) to the list of known hosts.
+
+    [root@z10150~]$ password:
+
+    Last login: Oct 12 20:35:49 from 172.18.64.34
+
+    [root@z10150~]# who
+
+    user    tty2    2016-10-12 20:21:20 (:0)
+
+    root    pts/1    2016-10-12 20:34 (172.18.64.24)
+
+    root    pts/1    2016-10-12 20:35 (172.18.64.31)
+
+    root    pts/2    2016-10-12 20:35 (172.18.64.21)
+
+    root    pts/3    2016-10-12 20:35 (172.18.64.34)
+
+    root    pts/4    2016-10-12 20:36 (172.18.64.11)
+
+    root    pts/5    2016-10-12 20:36 (172.18.64.25)
+
+    [root@z10150~]#
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_36_2.png)'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# root@z10150-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    root@z10150-# finger      Idle Login Time Office Phone Host
+
+    Login tty tty2 Oct 12 21:29 (172.18.64.24)
+
+    root root pts/1 Oct 12 20:34 (172.18.64.21)
+
+    root root pts/2 Oct 12 20:35 (172.18.64.111)
+
+    root root pts/3 Oct 12 20:36 (172.18.64.111)
+
+    root root pts/4 Oct 12 20:36 (172.18.64.25)
+
+    ```
+
+
+    Figure 1.92: Using finger command to find more details about users.
+
+
+    ```
+
+    root@z10150-# w
+
+    20:41:07 3.13, 6 users, load average: 0.13, 0.09, 0.06
+
+    USER LOGIN IDLE JCPU CPU MEM
+
+    tuser tty22 20:34 0.05s 0.09s /usr/lib/libexec/gsd-print
+
+    root pts/1 20:35 1.08s 0.16s ssh in 172.18.64.111
+
+    root pts/2 20:35 1.08s 0.07s -bash
+
+    root pts/3 20:36 0.02s -bash
+
+    root pts/4 20:36 2.08s 0.00s -bash
+
+    root@z10150-#
+
+    ```
+
+
+    Figure 1.93: Using w to find what other students are doing
+
+
+    # root@z10150/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    root@z10150# cd home
+
+    root@z10150# ls
+
+    root@z10150 home# cd ituser
+
+    root@z10150# ls
+
+    Documents Downloads Music Pictures salimIsHere Templates Videos
+
+    root@z10150#
+
+    ```
+
+
+    Figure 1.94: listing it home directory using cd command
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    root@z10150# touch ituser
+
+    root@z10150# ls
+
+    Documents Downloads Music Pictures salimIsHere Templates Videos
+
+    root@z10150#
+
+    ```
+
+
+    Figure 1.95: listing the files of ituser ls commands
+
+
+    # root@z10150/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    root@z10150# ls
+
+    Administrator Downloads Music Pictures salimIsHere Videos
+
+    salimIsHere Public Template ZAYEDIsHere
+
+    root@z10150# cd Documents
+
+    root@z10150# cd Documents
+
+    root@z10150# cd Downloads
+
+    root@z10150# cd Downloads
+
+    root@z10150# cd Music
+
+    root@z10150# cd Music
+
+    root@z10150# cd Public
+
+    root@z10150# cd Public
+
+    root@z10150#
+
+    root@z10150#
+
+    ```
+
+
+    Figure 1.96: creating a file in ituser home directory using touch command.
+
+
+    Figure 1.97: accessing ituser directories and view them.
+
+
+    33'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    root@z10150:~/home/user$
+
+    File Edit View Search Terminal Help
+
+    GNU nano 2.5.3 File: salimIsHere Modified
+
+    hisalim, this is mussab
+
+    hisalim, this is Zayed also.
+
+    ```
+
+
+    Figure 1.98: updating ituser file content and save it.
+
+
+    # # Using VirtualBox and Kali Linux
+
+
+    Linux is having a great number of flavors and distributions on the internet, and
+    each one of them is characterized by the type and amount of built utilities that
+    are installed on it. In this section an installation of Kali linux os was performed
+    on a virtual environment using oracle virtualbox.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_38_0.png)
+
+
+    Figure 1.99: installing KALI in virtualBox
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_38_1.png)
+
+
+    Figure 1.100: KALI installed'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Examining Linux Commands
+
+
+    1. Execute the following command and explain what it does:
+
+
+    ```
+
+    find / -print
+
+    ```
+
+
+    This command searches for all the files and directories that are in the root directory
+    and accessible by the current user then print on the terminal screen, Figure 1.101
+    shows the output generated by the command.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_39_0.png)
+
+
+    35'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 2. What commands would you dire to accomplish the following: create the file
+    “sayhi” in your HOME directory and write the following in the file “echo hi there
+    and how you are doing today”. Save the file and then run it.
+
+
+    The following commands will be used to navigate to the home directory and create
+    the file then allow the execution of it then you run:
+
+
+    ```
+
+    cd ~
+
+    cat > sayhi
+
+    echo hi there and how you are doing today
+
+    chmod 764 sayhi
+
+    ```
+
+
+    /sayhi
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_40_0.png)
+
+
+    Figure 1.02: creating a file containing “echo” command then running it.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 3. Use the touch command to create a new file. What is the default permission
+    on that file?
+
+
+    Depending on the specified UMASK the default permissions will be assigned to the
+    newly created files. On this machine the UMASK was not modified, which will lead
+    to a read and write permissions for the owner and the group having only read permission
+    for others. The commands used to perform this task are shown below as well as
+    in Figure 1.103.
+
+
+    ```
+
+    touch newfile
+
+    ```
+
+
+    ```
+
+    ls -l
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_41_0.png)
+
+
+    Figure 1.103 : Creating a new file viewing its default permissions assignment'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '4. Print the value of each of the environment variables HOME, SHELL, PATH.
+
+
+    As shown in Figure 1.104 for the specified variables can be displayed with the
+    echo command either one time
+
+
+    ```
+
+    echo HOME=$HOME SHELL=$SHELL PATH=$PATH
+
+    ```
+
+
+    Or one by one separately
+
+
+    ```
+
+    echo $HOME
+
+    ```
+
+
+    ```
+
+    echo $SHELL
+
+    ```
+
+
+    ```
+
+    echo $PATH
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_42_0.png)
+
+
+    Figure 1.104: Displaying the value of multiple variables.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '5. Remove the directory “class” (from your HOME directory) and all of its contents
+    in just one command.
+
+
+    A directory that has content can be deleted using the command shown below and
+    in Figure 1.105.
+
+
+    ```
+
+    rm ~/class -r
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_43_0.png)
+
+
+    Figure 1.105 : Removing a directory that has a content
+
+
+    39'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '6. Change the permission mode on the file "output" to be readable and writable
+    by you (the owner of the file), and no read/write/execute for people in the same
+    group and others.
+
+
+    To perform the requested task permission of 600 must be assigned as shown below
+    and in Figure 1.106.
+
+
+    ```
+
+    chmod 600 output
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_44_0.png)
+
+
+    Figure 1.106: Changing the permissions assigned to a file.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '7. Change the permission mode on a "public_html" (assume it exists) directory
+    so that the owner could read/write/execute, and users in the same group and others
+    should be able to view (using a Web browser) the html pages contained in that
+    directory.
+
+
+    Changing the permissions for a directory to be described in the question is performed
+    as shown in Figure 1.107 with the command below
+
+
+    ```
+
+    chmod 744 public_html
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_45_0.png)
+
+
+    Figure 1.107: Changing the permissions for a directory'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '8. Run the xclock command in the background. Use the “ps” command to list the
+    running processes, and the “kill” command to send a signal to xclock to terminate
+    it. Give the exact sequence of commands along with any arguments.
+
+
+    To run a command in the background "&" character must be added to the end of the
+    word, using “ps" the running process will be displayed with their PID that can
+    be used with the “kill" command to terminate any process as shown in the commands
+    below and in Figure 1.8.
+
+
+    # xclock&
+
+    ps
+
+    kill 3949
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_46_0.png)
+
+
+    Figure 1.108 : Running a process in a background then terminating it
+
+
+    42'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '9. Use the find utility to locate the file “passwd” in the system.
+
+
+    A search for the file named passwd in the root directory can be performed as follows
+    and as what is shown in Figure 1.109.
+
+
+    find / -name passwd
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_47_0.png)
+
+
+    Figure 1.109: Initiating a search in the root directory for a file named passwd'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '10. Use the find command to locate all files that are owned by you.
+
+
+    To locate the files that are owned by certain user the -user can be used and since
+    we want to display all the files that are owned by the current user the value
+    of the USER variable can be used in according with the find command as follows:
+
+
+    ```
+
+    find / -user $USER
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_48_0.png)
+
+
+    Figure 1.110 : listing all the files that are owned by the current user'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '11. Use the grep utility to find the record for your username (ituser) in /etc/passwd
+
+
+    In our case the ituser is not existing on the system so as an alternative for
+    that we replaced the search with the current logged in user which is in our case
+    m80006988. The implementation for that is shown below.
+
+
+    ```
+
+    grep $USER /etc/passwd
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_49_0.png)
+
+
+    Figure 1.111 : Searching for a username entry inside /etc/passwd
+
+
+    45'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '12. Use the grep utility to find all lines in the /etc/passwd file that do
+    not contain your username (ituser).
+
+
+    To find all the lines that are not matching -v can be added to the grep utility
+    as shown below.
+
+
+    ```
+
+    grep -v $USER /etc/passwd
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_50_0.png)
+
+
+    Figure 1.112: Using grep utility to search for the unmatched lines'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '13. Where do each of the following commands reside (what command would you
+    use to find out): ls, cd, echo
+
+
+    where command can be used to locate the location where the command is stored in
+    the system as shown below.
+
+
+    where ls echo ed
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_51_0.png)
+
+
+    Figure 1.113 : Using딨 command to locate the location where the commands resides'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 14. Use the tar command to create an archive of all the files you have in
+    your home directory (call the archive myfiles.tar).
+
+
+    The tar command can be used to create an archive for the home directory as shown
+    below
+
+
+    tar -cvf myfiles.tar ~
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_52_0.png)
+
+
+    Figure 1.114 : Archiving the home directory using the tar command'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '15.Use the gzip command to create a compressed filed of myfiles.tar (the new
+    filename will be myfiles.tar.gz).
+
+
+    gzip command is used typically with tar archives to produce a compressed version
+    of them. The implementation for this task is shown below.
+
+
+    # gzip myfiles.tar
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_53_0.png)
+
+
+    Figure 1.15 : Using the gzip command to compress tar archive'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# End of Chapter Conclusions & Recommendations
+
+
+    +   - Linux OS provides a useful set of preinstalled utilities that allows the
+    user to perform the required tasks easily.
+
+
+    +   - Linux machine is a box with building blocks that you may set concurrently
+    supporting your own needs and views.
+
+
+    +   - Linux provide a wide range of attributes with each command to display and
+    use commands in different perspective and generate different results.
+
+
+    +   - Linux implements manual entry to show information about commands and explores
+    different ways it can be managed. Linux provides extra precautions when deleting
+    and modifying non-empty directories.
+
+
+    +   - Linux provide multiple applications and packages that can be installed to
+    be able to use them for different prospect in foreground and background.
+
+
+    +   - In Linux the user can direct the output either to the terminal window, file,
+    or other process.
+
+
+    +   - Linux provides a useful property in specifying the permissions for each
+    file and directory to allow or permit the read, write, execution of the files.
+
+
+    +   - Soft links in Linux are similar to the shortcuts in Windows however Windows
+    doesn''t support the hard links.
+
+
+    +   - Linux provides a useful utility that lets the user secludes tasks and commands
+    to be automatically executed and allowing certain users from establishing this
+    activity.
+
+
+    +   - Linux affords server commands to enable users log in to the server and accomplishes
+    multiple activities with others on the same server and manipulating their files
+    and keep tracing them.
+
+
+    +   - Multiple distributions of Linux are available in the market and each of
+    them is characterized by the tools that are preinstalled on it.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '+   - Linux is a stable operating system that provides varies useful utilities.
+
+
+    +   - Having an open sources operating system creates a flexibility to maintain
+    the system
+
+
+    +   - It is recommended to install Linux on a physical machine to get better performance.
+
+
+    +   - Linux has a built in command called man that displays the manual and instructions
+    for using any command in the system.
+
+
+    +   - It is always recommended to become su when needed and not login as a root.
+
+
+    +   - Linux OS has assigned multiple variables like SHELL PATH USER that can be
+    used effectively with the commands.
+
+
+    +   - It is recommended that the user terminates any unused processes to improve
+    the performance of the system and reduce the chances of being hacked.
+
+
+    +   - Keeping the OS updated with the latest patches ensures that the latest security
+    updates have been installed.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Chapter II
+
+
+    # Exploring Various Security Tools'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Chapter Objectives
+
+
+    +   - To understand and use advanced Linux tools.
+
+    - To explore and implement the installation and analysis of software packages.
+
+    - To practice various commands to secure the system and trace user activity on
+    the system or through the network.
+
+    - To secure the console from a denial of service attack activities by implementing
+    good practices to console services.
+
+    - To eliminate direct remote connection to the system and warring unauthorized
+    activities.
+
+
+    # Needed Tools
+
+
+    +   - Fedora 24 Workstation image.
+
+    - Oracle VirtualBox
+
+    - Wireshark
+
+
+    # Chapter Overview
+
+
+    Linux OS provides a useful set of preinstalled utilities that allows the user
+    to perform the required tasks easily, it also provides multiple applications and
+    packages that can be installed to be used for different purposes. Using these
+    utilities without limitations and restrictions would allow many of the breakthroughs
+    that can be prevented by applying simple security standards. An attacker may cause
+    a denial of service attack by running some of the console apps by remotely connected
+    to the system using the weak permissions provided to the console. The misconfiguration
+    of the permissions of a sensitive file or directory will result in exposing it
+    to hackers that can perform unauthorized actions to it. Also setting the permissions
+    for each user according to the security requirements is an important issue to
+    be protected from all actions, the Tasks and Procedures section explains thoroughly
+    how each of the sixth'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'parts of the chapter was performed in accordance with the screenshots. The
+    aim for each part of the report is as follows.
+
+
+    The aim of part 0 to test and verify that Linux allows users to reboot or shutdown
+    the server using multiple commands such as halt, reboot, shutdown, power off,
+    or eject which could cause a denial of service to the server.
+
+
+    The aim of part 1 to determine the file permissions for newly created files using
+    three-digit octal number with a umask command, and to change the default set of
+    permissions based on the umask command.
+
+
+    The aim of part 2 to discover user account information stored in "/etc/passwd",
+    and view the details of the current logged in user.
+
+
+    The aim of part 3 to allow non-root users to execute particular commands as if
+    they were the root, to be able to access the sudo file and add a user to the determined
+    commands. Also to view the audit log and determine particular actions occurred.
+
+
+    The aim of part 4 to explore various tools that allows the users to install, manage
+    and updates software packages. Also to download packages from various sites and
+    handle them through rpm and yum tools.
+
+
+    The aim of part 5 to explore how to secure the system by locking when we leave
+    the machine running using xlock command, to be able to disable applications to
+    avoid denial of service attack, to be able to disable the direct root remote login
+    through ssh and telnet a modification and finally to hide all related information
+    from the login screen and display a warning messages motd and issue files.
+
+
+    The aim of part 6 to install Wireshark software package as tools for sniffing
+    network packets, to explore different options for interface for activity tracing,
+    to be able to use Wireshark to sniff the entered username and password in http
+    websites.
+
+
+    # Tasks & Procedures
+
+
+    # What are the risks
+
+
+    Remotely connected users the permission to perform and run some of the console
+    apps may rise various security risks; one of the major risks is that if an attacker
+    performed halt, shutdown, or reboot to the system which may cause a denial of
+    service attack.
+
+
+    In this section two Fedora workstations were installed on VirtualBox. One of the
+    machines was configured to be hosting ssh service while the other was communicating
+    with it ssh. Through the established ssh connection halt command applied to test
+    the effect on the other machine. Figure 2.1 shows the client and server machines'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'while having an active ssh connection. As shown in Figure 2.2 that the remote
+    user was able to stop the other machine through halt command.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_59_0.png)
+
+
+    Figure 2.1: An ssh session was established between two workstations that were
+    installed on VirtualBox.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_59_1.png)
+
+
+    Figure 2.2: Using ssh remote connection, halt command was applied to the other
+    Fedora machine that caused the machine to stop.
+
+
+    # Default File Permissions
+
+
+    Taking care of the permissions for each newly created file or directory is not
+    an easy task, and at the same time the misconfiguration of a sensitive file or
+    directory will result in exposing it to hackers who can modify it or delete it.
+
+
+    In this section the default permissions assigned to a newly created file were
+    examined before and applying umask command within the same and new terminal window.
+    A new file was created using touch command, and the default permissions given
+    to the created file were as follow: **Owner**: Read & Write, **Group**: Read &
+    Write, **Others**: Read only as shown in Figure 2.3. The umask command was used
+    to give the owner full access and remove all the permissions from the group and
+    others, the value used to accomplish this task was 077. As noticed from Figure
+    2.4 that even the owner was supposed to have execute permission, only read and
+    write permissions were assigned to him since the maximum permissions that can
+    be set for a file using the umask command are read and write only. Figure 2.5
+    shows that a new terminal was'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'opened a new file was created, the permissions for the file took the default
+    permissions and the umask which was applied previously did not take effect on
+    the new terminal. When a new session is initiated, the terminal will take the
+    default permissions from the file in /etc/bashrc or /etc/profile and the default
+    permissions of the umask will be 002 for all newly created files, this is the
+    reason for why the umask changes after switching to a new terminal.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_60_0.png)
+
+
+    Figure 2.3: A new file "testfile" was created using touch command and the default
+    permissions are 664.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_60_1.png)
+
+
+    Figure 2.4: Even after changing the umask to 077, the new created files will be
+    having at maximum read permissions only.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Password files
+
+
+    Recently most linux distributions stores the information about the users in three
+    main files /etc/group, /etc/passwd, /etc/shadow files. /etc/group includes information
+    about the groups and users that are created on the system while /etc/passwd includes
+    a list for all the users displayed with the following details: Login name, Password
+    field, User ID, Group ID, Home directory, Login shell. The /etc/shadow file has
+    a hashed version of the passwords that cannot be accessed by any user other than
+    the root. The content of /etc/passwd was viewed using the more command as shown
+    in Figure 2.6. It is always more convenient to retrieve the information for the
+    user of interest by piping the output of cat to grep as shown in Figure 2.7.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_61_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_61_1.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Sudo
+
+
+    Setting the permissions for each user according to the security requirements is
+    an important issue that can be accomplished by editing the /etc/sudoers file.
+    This file lists the users and the permissions associated with each one of them.
+    If a non-root user was trying to run a certain command that is allowed for him
+    as the /etc/sudoers file then he can type the sudo followed by the command to
+    require entering his password. Non-root users are not allowed to access the /etc/sudoers
+    file as shown in Figure 2.8. If a non-root user was listed in the /etc/sudoers
+    file then he will be allowed to access it through the sudo command and entering
+    his password as shown in Figure 2.9. A log file can be found in /var/log/audit/audit.log
+    that includes all the logs for the activities performed using the sudo command
+    as shown in Figure 2.10.
+
+
+    Figure 2.7: The line containing the information about the current logged in user
+    was retrieved using cat and grep commands from /etc/passwd file.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_62_0.png)
+
+
+    Figure 2.8: Non-root users are not allowed to access the /etc/sudoers file.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_62_1.png)'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Activities Terminal
+
+
+    # Fri 23:35
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    group1@M8000968 ~$ cat /etc/sudoers
+
+    cat: Permission denied
+
+    group1@M8000968 ~$ sudo cat /etc/sudoers
+
+
+    We have received the usual lecture from the local System
+
+    Administrator; it usually boils down to these things:
+
+    #1 Respect the power of others.
+
+    #2 Think before you type.
+
+    #3 With great power comes responsibility.
+
+    # Sudoers for group
+
+    # Sudo allows particular users to run various commands as
+
+    # the root user, without needing the password.
+
+    # They are provided at the bottom of the file for collections
+
+    # of related commands, which can be delegated to particular
+
+    # users or groups.
+
+    # This file must be edited with the ''visudo'' command.
+
+    # Host Alias
+
+    # Machines: You may prefer to use hostnames (or perhaps
+
+    # wildcards for entire domains): IP addresses instead.
+
+    # Host Alias
+
+    MAILSVERS = smtp, smtp
+
+    # User Alias
+
+    # It''s not often necessary, as you can use regular groups
+
+    # (ie, from file, LDAP, etc) in this file - just %username
+
+    # User Admins = jsmith, mike
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_63_0.png)
+
+
+    Figure 2.9: The current log for successful access /var/log/audit.audit through
+    the sudo command.
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    TYPE=SERVICE_DOP_msg start audit=1477088916.144:370; pid=3250 uid=429469725 ses=429469725
+    system=user:system
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    Failed to match audit log: invalid argument
+
+    type=SERVICE_DOP_msg end audit=1477088917.736; pid=3250 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=SERVICE_DOP_msg start audit=1477088917.117; pid=3251 uid=429469725 ses=429469725
+    system=user:system
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    type=SERVICE_DOP_msg end audit=1477088917.629; pid=3251 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=SERVICE_DOP_msg start audit=1477088918.301; pid=3252 uid=429469725 ses=429469725
+    system=user:system
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    type=SERVICE_DOP_msg end audit=1477088918.393; pid=3252 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=SERVICE_DOP_msg end audit=1477088918.682; pid=3250 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=SERVICE_DOP_msg start audit=1477088919.514; pid=3253 uid=429469725 ses=429469725
+    system=user:system
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    type=SERVICE_DOP_msg end audit=1477088919.729; pid=3253 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=AUTH_DOP_msg start audit=1477088918.378; pid=3251 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    type=AUTH_DOP_msg end audit=1477088918.777; pid=3252 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=AUTH_DOP_msg start audit=1477088918.623; pid=3250 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    type=AUTH_DOP_msg end audit=1477088919.025; pid=3253 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=ACRED_DOP_msg start audit=1477088918.462; pid=3251 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    type=ACRED_DOP_msg end audit=1477088918.837; pid=3252 uid=429469725 ses=429469725
+    system=unconfined:root
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=success
+
+    crc=0
+
+    type=SERVICE_DOP_msg start audit=1477088919.577; pid=3253 uid=429469725 ses=429469725
+    system=user:system
+
+    item=1 tid=1000 comm="hostname-system" exe="/usr/lib/system/hostname" addr=? terminal=7?=res=su
+
+    crc=0
+
+    ```
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_63_1.png)
+
+
+    Figure 2.10: Audit logs found when adding permissions to non-root users, /var/log/audit.audit
+    and by the root.
+
+
+    To test the process of adding permissions to non-root users, a new user was created
+    in Figure 2.11 by running the command sudo date but other returned information
+    that was displayed as shown in Figure 2.12, as this
+
+
+    59'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'is not in the /etc/sudoers file. The permission for the created user to run
+    sudo command can be granted by modifying the /etc/sudoers file using visudo command.
+    The permission for the new user was added allowing him to access the /bin/date
+    command as shown in Figure 2.13,14, then the date command tested and Figure 2.15
+    shows that it started working without any errors.
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [group1]@M80006988:~$ sudo date
+
+    Password:
+
+    [root@M80006988 group1]## sudo sudo_user
+
+    [root@M80006988 group1]## passwd sudo_user
+
+    [root@M80006988 group1]## changing password for sudo_user.
+
+    New password:
+
+    Retype new password:
+
+    all authentication tokens updated successfully.
+
+    [root@M80006988 group1]#
+
+    ```
+
+
+    Figure 2.11: A new user called sudo_user was created to test it with the sudoers
+    file
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [sudo_user@M80006988:~$ sudo date
+
+    We trust that you have received the usual lecture from the local System Administrator.
+    It usually boils down to these three things:
+
+
+    #1) Respect the privacy of others.
+
+    #2) Think before you type.
+
+    #3) With power comes great responsibility.
+
+
+    [sudo] password for sudo user:
+
+    sudo is not in the sudoers file. This incident will be reported.
+
+    [sudo_user@M80006988:~]#
+
+    ```
+
+
+    Figure 2.12: The sudo date command was tested by the newly created user "sudo_user"
+    and an error occurred telling that it is not in the sudoers file.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Activities
+
+
+    # Sat 17:49
+
+
+    ```
+
+    sudo.user@MB006968:~/home/sudo_user~
+
+    File Edit View Search Terminal Help
+
+    Defaults    env keep = "LC MONETARY LC LC NUPERIC LC LCPER LC TELEPHONE"
+
+    Defaults    env keep = "LC TIME LC ALL LANGUAGE LINUAS XX CHARSET AUTHORITY"
+
+    Defaults    secure_path = /bin:/usr/sbin:/usr/bin
+
+
+    # This is the main part; which users can run on software
+
+    # Which Machines (the sudoers file can be shared between multiple
+
+    # Syntax:
+
+    user    MACHINE-COMMANDS
+
+    # The COMMANDS section may have other options added to it.
+
+    ALL=(ALL) ALL
+
+    # Allow root to run any commands anywhere
+
+    root (ALL) /bin/bash
+
+    # Allow members of the ''sys'' group to run networking, software,
+
+    # sys ALL=(NETWORKING, SOFTWARE, STORAGE, DELEGATING, PROCESSES, LOCATES)
+
+    # Allows members of group to run all commands
+
+    wheel (ALL) ALL
+
+    # Same thing without a password
+
+    # wheel (ALL) NOPASSWD: ALL
+
+    # Allows members of the group to mount and unmount the
+
+    # users /bin/mount /mnt/cdrom,/bin/umount /mnt/cdrom
+
+    # Allows members of the group to shut down this system
+
+    # users local=(ALL)/usr/sbin/shutdown -h now
+
+    # Read files in /etc/sudoers.d (the # does not mean a comment)
+
+    #include /etc/sudoers.d
+
+    ```
+
+
+    Figure 2-13: The sudo file was accessed using visudo command and the root user
+    initaila in the sudoers
+
+
+    # Activities
+
+
+    # Sat 17:53
+
+
+    ```
+
+    sudo.user@MB006968:~/home/sudo_user~
+
+    File Edit View Search Terminal Help
+
+    Defaults    env keep = "LC MONETARY LC LC NUPERIC LC LCPER LC TELEPHONE"
+
+    Defaults    env keep = "LC TIME LC ALL LANGUAGE LINUAS XX CHARSET AUTHORITY"
+
+    Defaults    secure_path = /bin:/usr/sbin:/usr/bin
+
+
+    # Next comes the main part; which users can run on software
+
+    # Machines (the sudoers file can be shared between multiple
+
+    # Syntax:
+
+    user    MACHINE-COMMANDS
+
+    # The COMMANDS section may have other options added to it.
+
+    ALL=(ALL) ALL
+
+    # Allow root to run any commands anywhere
+
+    root (ALL) /bin/bash
+
+    # Allow members of the ''sys'' group to run networking, software,
+
+    # sys ALL=(NETWORKING, SOFTWARE, STORAGE, DELEGATING, PROCESSES, LOCATES)
+
+    # Allows members of group to run all commands
+
+    wheel (ALL) ALL
+
+    # Same thing without a password
+
+    # wheel (ALL) NOPASSWD: ALL
+
+    # Allows members of the group to mount and unmount the
+
+    # users /bin/mount /mnt/cdrom,/bin/umount /mnt/cdrom
+
+    # Allows members of the group to shut down this system
+
+    # users local=(ALL)/usr/sbin/shutdown -h now
+
+    # Read files in /etc/sudoers.d (the # does not mean a comment)
+
+    #include /etc/sudoers.d
+
+    ```
+
+
+    Figure 2-14: The sudo entry was added to the sudoers file enabling him to access
+    the /bin/bash command.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Installing Software Packages RPM and YUM
+
+
+    Linux provide various tools that allows the users to install, manage, and update
+    software packages. Fedora has two main tools that are rpm and yum; in rpm the
+    user most search for the package of interest download it and install it, knowing
+    that if the package was requiring extra other packages they must be searched and
+    downloaded then installed separately. Yum command gives provides the same functionality
+    but it performs most of the work automatically from searching for the package
+    in the internet then downloading and installing it with all required other packages
+    installed automatically.
+
+
+    Test both rpm and yum a trial for installing xlockmore package was performed.
+    The package was found in rpmfind.net website as shown in Figure 2.16. Then the
+    link was obtained and downloaded using the wget command to the Downloads directory
+    as shown in Figure 2.17.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# RPM Found 10 for xlock
+
+
+    | Package | Summary | Distribution |
+
+    | --- | --- | --- |
+
+    | xlock-5.3-9.1.1506.i686 | Screen Saver and Lock for the X Window | OpenSUSE
+    12.3 for x86 |
+
+    | xlock-5.3-9.1.1506.i686 | Screen Saver and Lock for the X Window | OpenSUSE
+    12.3 for x86 |
+
+    | xlock-5.3-9.1.1506.i664 | Screen Saver and Lock for the X Window | OpenSUSE
+    12.3 for x86_64 |
+
+    | xlock-5.3-9.1.1506.i664 | Screen Saver and Lock for the X Window | OpenSUSE
+    12.2 for x86_64 |
+
+    | xlock-5.3-7.2.1586.i686 | Screen Saver and Lock for the X Window | OpenSUSE
+    12.1 for x86 |
+
+    | xlock-5.3-7.2.1586.i664 | Screen Saver and Lock for the X Window | OpenSUSE
+    12.1 for x86_64 |
+
+    | xlock-5.3.4.2.1506.i686 | Screen Saver and Lock for the X Window | OpenSUSE
+    11.4 for x86 |
+
+    | xlock-5.3.4.2.1506.i664 | Screen Saver and Lock for the X Window | OpenSUSE
+    11.4 for x86_64 |
+
+    | xlock-5.32-4.1.1506.i686 | Screen Saver and Lock for the X Window | OpenSUSE
+    11.4 for x86 |
+
+    | xlock-5.32-4.1.1506.i664 | Screen Saver and Lock for the X Window | OpenSUSE
+    11.4 for x86_64 |
+
+
+    Figure 2.16: a search for xlock was initiated in rpmfind.net and the rpm file
+    was downloaded.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_67_0.png)
+
+
+    After the download process finished the installation of the package was initiated
+    using rpm -iv command, but an error displayed indicating that other packages must
+    be downloaded and installed before installing the xlock package as shown in Figure
+    2.18'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_68_0.png)
+
+
+    According to Figure 2.18 the package was not installed since other packages were
+    required to be preinstalled on the system. A verification if the package was installed
+    or not can be performed using the rpm-q command as shown in Figure 2.19.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_68_1.png)
+
+
+    Figure 2.19: the xlockmore package was not installed as rpm -q command was showing.
+
+
+    Yum command provide an easy and convenient way in installing the packages as other
+    actions are required other than typing the package name after yum install command
+    as shown in Figure 2.20. Using the yum command in a recent Linux showing a warning
+    that it will not be used in the newer versions as it will be replaced by dnf command.
+    The dnf command was used as shown in Figure 2.21 to install the xlockmore in only
+    one command.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Console and Login Security
+
+
+    locking the console
+
+
+    Unlocked running machine provides an easy to hack system as it allows the attacker
+    to obtain multiple files from the system. A good practice to eliminate this risk
+    is to lock the screen when leaving the running machine. This action can be performed
+    using the xlock utility in linux as it locks the screen and asks for the password
+    of the root to
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_69_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_69_1.png)'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'unlock it. The xlock command was entered to the terminal and the screen saver
+    displayed as in Figure 2.22 and when any key is pressed another screen shows asking
+    for the root password as in Figure 2.23.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_70_0.png)
+
+
+    Figure 2.22: The screen is locked after running the xlock command
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_70_1.png)
+
+
+    Figure 2.23: The screen is locked and xlock utility is asking for a password to
+    unlock the screen
+
+
+    # Disabling Console Applications
+
+
+    If an attacker gained a remote access to a system, then he will be able to use
+    all tools specified by the /etc/security/console.apps. These tools give the functionality
+    of shutting down or rebooting the system which could cause a denial of service
+    attack to an important running server. A good practice can be performed to remove
+    the console.apps or change the permissions to it as has been done in Figure 2.24.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_71_0.png)
+
+
+    Figure 2.24: The permissions for the /etc/security/console.apps were not allowed
+    to shut down or reboot the system.
+
+
+    # Securing the Console
+
+
+    Console in Linux is considered the main link that control and configure the system.
+    Securing the console must be assigned with high priority, one of the common practices
+    in securing the console is to limit the login to a single root terminal and can
+    be done through /etc/security. The console can be controlled remotely over the
+    network through various ways such as ssh and telnet. From some of remote access
+    tools like telnet the username and password of the authentication in a plain text
+    creates a big security risk. A precaution to reduce the risk can be accomplished
+    by not allowing the direct connection to the system through the root user, which
+    means that the user can access the system through a non-root user and use or sudo
+    command when needed.
+
+
+    To disable the direct root login through ssh and a modification to the /etc/ssh/sshd_config
+    must be done to change the PermitRootLogin to no as shown in Figure 2.25.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_71_1.png)
+
+
+    Figure 2.25: Root login for ssh was disabled through the /etc/ssh/sshd_config.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'After modifying PermitRootLogin to no, a test to connect to the ssh server
+    through the root user was performed and permission denied message was displayed
+    as shown in Figure 2.26.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_72_0.png)
+
+
+    Figure 2.26: The ssh permission was denied when trying to ssh as root even though
+    the entered password was correct.
+
+
+    # Login Screens
+
+
+    Most of the time login screens provide the attacker with useful information about
+    the system and the used services. When an attacker knows the type and version
+    of the system that is running he will be able to lunch a specified attacks towards
+    the system with the published an well-known vulnerabilities. A good practice would
+    be hiding all system related information from the login screen while displaying
+    warning messages that warn the attacker that he is about to access a system that
+    is not allowed to which will make him guilty in the court if a case was initiated
+    about him. Both motd and issue can be used for this purpose.
+
+
+    Displaying a warning message using motd can be accomplished by editing the /etc/motd
+    file and adding the warning text as shown in Figure 2.27. When a user tries to
+    login to the system through the ssh the entered warning will be displayed to him
+    as shown in Figure 2.28.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# group1@M80006988~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    GNU nano 2.5.3                               File: /etc/motd                               Modified
+
+    Please don''t login to this machine unless you are allowed to do so. all
+
+    actions will be recorded and may be used in the court if required.
+
+    Group 1 machine
+
+
+    Get Help Write Out ^ Where Is ^ Cut Test Justify Cur Pos
+
+    Exit Read File \ Replace Uncut Text ^ To Spell Go To Line
+
+    ```
+
+
+    Figure 2.27: /etc/motd file was modified and a message was displayed to the users
+    when they login
+
+
+    # group1@M80006988~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [group1@M80006988 ~ -ls ssh group1@10.0.2.15
+
+    group1@10.0.2.15 ~ password:
+
+    Last login: Sat Oct 22 19:53:31 2016 from 10.0.2.15
+
+    Please don''t login to this machine unless you are allowed to do so. all
+
+    actions will be recorded and may be used in the court if required.
+
+    Group 1 machine
+
+    [group1@M80006988 ~]$
+
+    ```
+
+
+    Figure 2.28: Message of the day was displayed to once the login was initiated
+    to the machine through ssh
+
+
+    The same way can be followed in accomplishing the task using the issue (for local
+    login) and issue.net for remote login. Figure 2.29 showed the entered message
+    inside the /etc/issue.net file.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# group1@M80006988~
+
+
+    File Edit View Search Terminal Help
+
+    GNU nano 2.5.3 File: /etc/issue.net Modified
+
+
+    \S
+
+    Kernel \ on an \m (\l)
+
+
+    This is a banner warning to warn you that you had attempted an unuthirized
+
+    use to the system and which gives the Group1 members all the right to sue you
+    and present your actions to the court of law.
+
+
+    I
+
+
+    ^ Get Help ^ Write Out Where Is ^ Cut Text Justify ^ Cur Pos
+
+    ^ Exit Read File Replace ^ Uncut Text To Spell ^ Go To Line
+
+
+    Figure 2.29: The /etc/issue.net file was modified with a new banner message to
+    be displayed when an unauthorized access is initiated
+
+
+    The banner option and the location for the /etc/issue.net file must be specified
+    in the /etc/ssh/sshd_config file in Figure 2.30.
+
+
+    | Activities Terminal | Set 2101 |
+
+    group1@M80006988~ |
+
+    File Edit View Search Terminal Help
+
+    File: /etc/ssh/sshd_config Modified
+
+    Config mode 2
+
+    #Printing last line
+
+    PasswordAuthentication yes
+
+    PubkeyAuthentication yes
+
+    UsePAMSeparation sandbox
+
+    PermitRootEnvironment no
+
+    ClientAliveCountMax
+
+    ClientAliveInterval no
+
+    ShowPasslevel no
+
+    #File /etc/ssh/sshd_config
+
+    Match Group sftp
+
+    PermitTunnel no
+
+    VersionAddendum none
+
+    # Allow forwarding with
+
+    etc/issue.net
+
+    # Accept locale-environment variables
+
+    acceptenv LC_TYPE NAME LC_COLLATE LC MESSAGES
+
+    acceptenv LC_PAPER NAME LC TELEPHONE MEASUREMENT
+
+    acceptenv LC_SIZE LC ALL LANGUAGE
+
+    acceptenv XMODIFIERS
+
+    # override default of subsystems
+
+    # Example of overriding settings on a per-user base
+
+    Match group users Shell=/usr/bin/sftp-server
+
+    AllowForwarding no
+
+    ^ Get Help ^ Write Out Where Is ^ Cut Text Justify ^ Cur Pos Prev Page
+
+    ^ Exit Read File Replace ^ Uncut Text To Spell ^ Go Line Next Page
+
+
+    Figure 2.30: The banner message was enabled by adding banner /etc/issue.net line
+    to /etc/ssh/sshd_config file
+
+
+    *'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'After enabling the banner through the /etc/ssh/sshd_config test to ssh system
+    was performed and the entered message was displayed as shown in Figure 2.31.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_75_0.png)
+
+
+    Figure 2.31: The predefined banner is displayed when ssh session is initiated
+
+
+    # Wireshark
+
+
+    Using non-encrypted services like telnet, and http can post the credentials and
+    communication information to the risk of being sniffed by an attacker as they
+    are all sent and received in clear text. One of the most common tools for sniffing
+    network packets is Wireshark software.
+
+
+    In this Wireshark software package was installed and started as shown in Figure
+    2.32,33,34. Figure 2.36 shows that the capturing was started and a test http website
+    was accessed and a username and password was entered into the form post as shown
+    in Figure 2.37. The Wireshark was able to sniff the entered username and password
+    successfully as shown in Figure 2.38.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_75_1.png)
+
+
+    Figure 2.32: Wireshark package was installed successfully using the dnf install
+    command'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Wireshark
+
+
+    Sat 23:56
+
+
+    ```
+
+    Transaction Summary
+
+    Detail 1 Packages
+
+    Total size: 7.6 M
+
+    Time: 23:56:00.000000
+
+    SKIPPED ssl-connection-tls-2.1.21-py3-x86_64 already downloaded
+
+    SKIPPED scapy- already downloaded
+
+    SKIPPED ssl-connection-tls-2.1.21-py3-x86_64 already downloaded
+
+    SKIPPED cryptography-36.0.0-py3-x86_64 already downloaded
+
+    Running transaction cache...
+
+    Transaction test successful
+
+    Installing urllib3-1.26.5-py3-x86_64
+
+    Installing flask-2.0.2-py3-x86_64
+
+    Installing jinja2-3.1.2-py3-x86_64
+
+    Installing werkzeug-2.0.1-py3-x86_64
+
+    Installing itsdangerous-2.1-py3-x86_64
+
+    Verifying packages...
+
+    Verifying urllib3-1.26.5-py3-x86_64
+
+    Verifying flask-2.0.2-py3-x86_64
+
+    Verifying jinja2-3.1.2-py3-x86_64
+
+    Verifying werkzeug-2.0.1-py3-x86_64
+
+    Verifying itsdangerous-2.1-py3-x86_64
+
+    Processing packages...
+
+    installed 5 packages
+
+    ```
+
+
+    Figure 2.33: Wireshark-home was installed successfully using the dnf install
+
+
+    # Wireshark
+
+
+    Sat 22:36
+
+
+    The Wireshark Network Analyzer [Wireshark 2.2.1 (Git Rev from unknown)]
+
+
+    Stop the running capture
+
+
+    # The World''s Most Popular Network Protocol Analyzer
+
+
+    Version 2.2.1 (Git Rev from unknown)
+
+
+    # WIRESHARK
+
+
+    # Capture
+
+
+    # Files
+
+
+    # Online
+
+
+    # Interface List
+
+
+    Visit the project website
+
+
+    Select one or more interfaces to capture
+
+
+    # Open
+
+
+    Open a previously captured file
+
+
+    # User Guide
+
+
+    The User Guide (online version)
+
+
+    # Start
+
+
+    Choose one or more interfaces to capture from
+
+
+    # Sample Captures
+
+
+    rich assortment of sample capture files on the web
+
+
+    # Security
+
+
+    Work with Wireshark as securely as
+
+
+    +   * cm3
+
+    * any
+
+    * bluetooth-monitor
+
+    * eth0
+
+    * intourne
+
+
+    # Capture Options
+
+
+    Start with default options.
+
+
+    Figure 2.34: Wireshark imated and different menu bar have been discovered and
+    viewed.
+
+
+    72'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Wireshark Capture Interfaces
+
+
+    | Interface | Traffic | Link layer Header | Promiscuous | Snapslen (B) | Buffer
+    (M) |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | any | | Addresses: 172.31.20.121, 80:e6:cf:91:c5b | enabled | default | 2 |
+
+    | Loopback | | Ethernet | enabled | default | 2 |
+
+    | nflog | | Linux cooked messages | enabled | default | 2 |
+
+    | RawPcap | | | enabled | default | 2 |
+
+    | usmb0 | | unknown | enabled | default | 2 |
+
+    | usmb1 | | unknown | enabled | default | 2 |
+
+    | usmb2 | | unknown | enabled | default | 2 |
+
+    | usmb3 | | unknown | enabled | default | 2 |
+
+    | usmb4 | | unknown | enabled | default | 2 |
+
+    | usmb5 | | unknown | enabled | default | 2 |
+
+    | usmb6 | | unknown | enabled | default | 2 |
+
+
+    +   - Enable promiscuous mode on all interfaces
+
+
+    Capture Filter for selected Interfaces: [Enter a capture filter...]
+
+
+    Manage Interfaces...
+
+
+    Start Close Help
+
+
+    Figure 2.35: wireshark with the correct and active IP address selected for traffic
+    tracking.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_77_0.png)
+
+
+    | No. | Time | Source | Destination | Protocol | Length | Info |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | 1 | 0.000000 | 172.31.20.121 | 192.168.1.1 | TCP | 66 | [SYN] seq=0, win=64240,
+    options [MSS: 1460, SackOK, Permitted, scale:7] |
+
+    | 2 | 0.000001 | 192.168.1.1 | 172.31.20.121 | TCP | 54 | [SYN] ack=0, win=65535
+    |
+
+    | 3 | 0.000002 | 172.31.20.121 | 192.168.1.1 | TCP | 54 | [ACK] seq=1, ack=1,
+    win=64240 |
+
+    | 4 | 0.000003 | 192.168.1.1 | 172.31.20.121 | TCP | 54 | [ACK] seq=1, ack=1,
+    win=65535 |
+
+    | 5 | 0.000004 | 172.31.20.121 | 192.168.1.1 | TCP | 54 | [ACK] seq=1, ack=2,
+    win=64240 |
+
+    | 6 | 0.000005 | 192.168.1.1 | 172.31.20.121 | TCP | 54 | [ACK] seq=2, ack=2,
+    win=65535 |
+
+    | 7 | 0.000006 | 172.31.20.121 | 192.168.1.1 | TCP | 54 | [ACK] seq=3, ack=3,
+    win=64240 |
+
+    | 8 | 0.000007 | 192.168.1.1 | 172.31.20.121 | TCP | 54 | [ACK] seq=3, ack=3,
+    win=65535 |
+
+    | 9 | 0.000008 | 172.31.20.121 | 192.168.1.1 | TCP | 54 | [ACK] seq=4, ack=4,
+    win=64240 |
+
+    | 10 | 0.000009 | 192.168.1.1 | 172.31.20.121 | TCP | 54 | [ACK] seq=4, ack=5,
+    win=65535 |
+
+
+    * Frame 1: 0.000000 Length 66 bytes, 54 bytes data
+
+    * Frame 2: 0.000001 Length 54 bytes, 0 bytes data
+
+    * Frame 3: 0.000002 Length 54 bytes, 0 bytes data
+
+    * ... (7 more frames)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_77_1.png)
+
+
+    Figure 2.36: Wireshark capture was started on the Ethernet port
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_77_2.png)
+
+
+    Figure 2.37: A website was accessed and username of Group1 and password of dromar
+    was entered'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '[HTTP request 1]
+
+    [Response in frame: 2228]
+
+
+    - HTTP URL Encoded: application/x-www-form-urlencoded
+
+
+    +   - Form item: "user" = "dave"
+
+    - Form item: "password" = "forever"
+
+    - Form item: "submit" = "Log In"
+
+    - Form item: "radius" = "123"
+
+
+    ```
+
+    Frame 2227  Time        00:00:00.000  Source                 Destination            Length  Info
+
+    2227     00:00:00.000  192.168.1.105        10.0.0.1.22           542     HTTP
+    Request
+
+    2228     00:00:00.015  10.0.0.1.22           192.168.1.105        216     HTTP
+    Response
+
+
+    Frame 2227: Ethernet, Src: 00:0C:29:AA:BB:CC, Dst: 00:50:56:DD:EE:FF, Type: IPv4
+    (0x0800)
+
+    Frame 2227: IPv4, Src: 192.168.1.105, Dst: 10.0.0.1. Protocol: TCP (6), Len: 488
+
+    Frame 2227: TCP, Src: 192.168.1.105.54321, Dst: 10.0.0.1.22, Seq: 1, Ack: 1, Window:
+    64240, Flags: [PSH, ACK], Options: [0]
+
+    Frame 2227: HTTP, POST /login HTTP/1.1
+
+    Host: test-site.example.com
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+
+    Accept: *//*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 48
+
+
+    user=dave&password=forever&submit=Log+In&radius=123
+
+
+    Frame 2228: Ethernet, Src: 00:50:56:DD:EE:FF, Dst: 00:0C:29:AA:BB:CC, Type: IPv4
+    (0x0800)
+
+    Frame 2228: IPv4, Src: 10.0.0.1, Dst: 192.168.1.105, Protocol: TCP (6), Len: 212
+
+    Frame 2228: TCP, Src: 10.0.0.1.22, Dst: 192.168.1.105.54321, Seq: 1, Ack: 489,
+    Window: 65535, Flags: [ACK], Options: [0]
+
+    Frame 2228: HTTP, 200 OK HTTP/1.1
+
+    Server: Apache/2.4.1
+
+    Content-Type: text/html; charset=UTF-8
+
+    Content-Length: 160
+
+    Connection: close
+
+
+    <html><body><h1>Welcome back, dave!</h1></body></html>
+
+    ```
+
+
+    Figure 2.38: The Wireshark capturing was stopped and the username and password
+    was sniffed successfully.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# End of Chapter Conclusions & Recommendations
+
+
+    +   - Restricting the permissions for the remotely connected users for accessing
+    the console apps is an important issue to consider, and it can be configured easily
+    by Linux.
+
+
+    +   - Linux provide a convenient way to deal with the permissions for the newly
+    created files or directories to eliminate the risk of misconfiguration of the
+    permissions of a newly created files or directories.
+
+
+    +   - Most Linux distributions stores the information about the users in three
+    main files /etc/group, /etc/password, and /etc/shadow files to reduce the risk
+    by separating the users as if they were the root, setting the permissions for
+    each user according as and store the password as MD5 hashes.
+
+
+    +   - Linux affords functions that allow selected non-root users to execute particular
+    commands as if they were the root, setting the permissions for each user according
+    to the security requirements is an important issue.
+
+
+    +   - Linux produces various tools that permit the users to install, manage, and
+    update software packages, also recognizing if the package requires extra other
+    packages it will be installed separately.
+
+
+    +   - Console in Linux is considered the main link that control and configure
+    the system. It''s also provides a way for hiding all system related information
+    from the login screen and displaying a warning messages to warn the attacker for
+    increasing the security.
+
+
+    +   - Linux provides a ways to sniff the data posted on the network by installing
+    tools for sniffing network packets to trace user activity.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# # Chapter III
+
+
+    # Digging Deeper into Linux'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Chapter Objectives
+
+
+    +   - To test and explore the setuid and setgid functionalities of Linux.
+
+    - To use the graphical version of Linux firewall to enable and disable remote
+    connections.
+
+    - To test immunizing the files and directories and securing them.
+
+    - To be able to forward the graphical packages through ssh remote connection.
+
+    - To test and evaluate various techniques in managing, transferring, and mounting
+    files and directories locally and over the network.
+
+
+    # Needed Tools
+
+
+    +   - Fedora 24 Workstation image.
+
+    - Oracle VirtualBox
+
+
+    # Chapter Overview
+
+
+    Securing Linux machine is an important task and the security issue become one
+    of the main priorities when dealing with the machine as a server. In this chapter
+    multiple tasks have been accomplished and performed through the subsections of
+    the Questions and Answers section. The first and second sub-sections targeted
+    testing and verifying the options that will be set when configuring a file or
+    directory with setuid on them and the vulnerabilities when activating this option.
+    In the third sub-section the graphical version of Linux firewall was tested by
+    enabling and disabling the communication over ssh. The immunization functionality
+    that is available in Linux to secure files and directories was tested and evaluated
+    in the fourth sub-section. In the fifth sub-section the process of forwarding
+    the execution of graphical packages over ssh was accomplished successfully. Transferring
+    files and directories over the network'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'using both scp sftp commands was tested and implemented in the sixth subsection.
+    In the last subsection of Questions and Answers section a test for mounting files
+    and directories locally and over the network was accomplished successfully.
+
+
+    # SUID and SGID
+
+
+    Linux OS permissions system provide the ability to set certain files or directories
+    with SUID andor SGID. Setting SUID will let the user access the file as if he
+    the owner of it setting SGID will let the user access the file as if he was a
+    part of the group''s owning the file. In this section a test was performed to
+    check the effect of activating and deactivating the SUID on password file and
+    some other files. First task required changing ituser password and it was done
+    using passwd ituser command. Then the location of password checked with the "which"
+    and the result was /usr/bin/passwd.The set-uid program for the password file removed
+    using the chmod u-s, in Figure 3.4 clearly shows the s removed from the file permission,
+    which mean the normal user will not be able to run as root and permission denied
+    error or other error will be shown when tried to execute passwd command. Figure
+    3.5 demonstrated the error message shown when trying to change ituser password.
+    The file turned into a set-uid program to give the normal user the chmod u+s command
+    password is set with SUID to give the owner permissions so that he can update
+    /etc/passwd.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_82_0.png)
+
+
+    Figure 3.1:the password for ituser has been changed using the command passwd.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_82_1.png)
+
+
+    Figure 3.2:the location of the "passwd" directory checked using which command.
+
+
+    78'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '```
+
+    File Edit View Search Terminal Help
+
+    [root@GroupA ituser]# which password
+
+    /usr/bin/password
+
+    [root@GroupA ituser]# ls -l /usr/bin/password
+
+    -rw-r--r--x 1 root 27072 Feb 4 2016 /usr/bin/password
+
+    [root@GroupA ituser]#
+
+    ```
+
+
+    Figure 3.3: The file attributes of password checked using ls -l and the s for
+    set includ in the file permission.
+
+
+    # ituser@M80007225:/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root@GroupA ituser]# chmod u-s /usr/bin/password
+
+    [root@GroupA ituser]# ls -l /usr/bin/password
+
+    -rwxr-xr-x 1 root 27072 Feb 4 2016 /usr/bin/password
+
+    [root@GroupA ituser]#
+
+    ```
+
+
+    Figure 3.4: The password file turned into a non-setuid by changing the file permission.
+
+
+    # ituser@M80007225:~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@GroupA A~]$ ls password
+
+    Changing password for ituser.
+
+    Changing password for ituser.
+
+    (Current) UNIX password:
+
+    password: Authentication token manipulation error
+
+    [ituser@GroupA A~]$ $
+
+    ```
+
+
+    # ituser@M80007225:/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root@GroupA ituser]# chmod u+s /usr/bin/password
+
+    [root@GroupA ituser]# ls -l /usr/bin/password
+
+    -rwxr-xr-x 1 root 27072 Feb 4 2016 /usr/bin/password
+
+    [root@GroupA ituser]#
+
+    ```
+
+
+    Figure 3.6: The password file turned into a set-uid program using chmod u+s.
+
+
+    The sudo file checked from its default directory which is /usr/bin/sudo and its
+    set-uid is available when it is moved to ituser home directory. The chsh program
+    not available on Fedora 24 so we installed it as an alternative for this program
+    as shown in Figure 3.8, then the zsh permission limited with the command and set-uid
+    not available for this as shown in Figure 3.9. When we moved from their default
+    locations to the ituser home directory then the set-uid is removed since the file
+    location changed, so when trying to execute the programs from ituser home directory
+    showing an error message as shown in Figure 3.11 for the sudo while it was working
+    for the zsh as a normal non-root user. All SUID files in the system have been
+    saved and saved in a file called UID_Apps, then “more” command to read the content
+    of the file as shown in Figure 3.12.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# ituser@Group1_A:/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root]@Group1_A ituser]# which sudo
+
+    /usr/bin/sudo
+
+    [root]@Group1_A ituser]# ls -l /usr/bin/sudo
+
+    -rwxr-xr-x 1 root root 143152 Sep 21 20:14 /usr/bin/sudo
+
+    [root]@Group1_A ituser]# cp /usr/bin/sudo /home/ituser
+
+    [root]@Group1_A ituser]#
+
+    ```
+
+
+    Figure 3: Check the file attributes for sudo and copy it to the home directory.
+
+
+    # ituser@M80007225:/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root]@Group1_A ituser]# install zsh
+
+    Redirecting to /usr/bin/dnf install zsh (see ''man yum2dnf'')
+
+    Last metadata expiration date: 12:12:17 on Wed Oct 26 18:43:40 2016.
+
+    Dependencies resolved.
+
+    | Package | Arch | Version | Repository | Size |
+
+    |---|---|---|---|---|
+
+    | zsh | x86_64 | 5.2-fc24 | fedora | 2.7 M |
+
+    |Transaction Summary
+
+    Install 1 Package
+
+    Total download size: 2.7 M
+
+    Installed size: 6.2 M
+
+    this is ok (y/N): y
+
+    ```
+
+
+    Figure 3.8: Install zsh package using the yum command.
+
+
+    # ituser@Group1_A:/
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root]@Group1_A ituser]# which zsh
+
+    /usr/bin/zsh
+
+    [root]@Group1_A ituser]# ls -l /usr/bin/zsh
+
+    -rwxr-xr-x 1 root root 113132 Feb 5 2016 /usr/bin/zsh
+
+    [root]@Group1_A ituser]# cp /usr/bin/zsh /home/ituser
+
+    [root]@Group1_A ituser]#
+
+    ```
+
+
+    Figure 3.9: Checking the file attributes for zsh and copying it to the home directory.
+
+
+    # ituser@Group1_A~-
+
+
+    ```
+
+    [ituser]@Group1_A~- ls zsh
+
+    Desktop Downloads Pictures sudo Videos
+
+    Documents Music Public Templates zsh
+
+    [ituser]@Group1_A~- ls -l sudo zsh
+
+    -rwxr-xr-x 1 root root 143152 Oct 26 20:41 sudo
+
+    -rwxr-xr-x 1 root root 113132 Oct 26 20:42 zsh
+
+    [ituser]@Group1_A~- ls l
+
+    ```
+
+
+    Figure 3.10: The file permissions for the copied file on the home directory.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Activities Terminal
+
+
+    Wed 20:48
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@Group1_A~] ~ /home/ituser
+
+    sudo /home/ituser must be owned by uid 0 and have the setuid bit set
+
+    [ituser@Group1_A~] ~ /home/ituser/sudo
+
+    ```
+
+
+    This is the Zsh configuration function for new users,
+
+    run .zinstall.
+
+    You are seeing this message because you have no zsh startup files.
+
+    To create them, log again to the home directory.
+
+    This function can help you with a few settings that should
+
+    make sure of your shell be easier.
+
+    You can:
+
+
+    +   - Quit and do nothing. The function will run again next time.
+
+    - Creating the file ~/.zshrc containing a comment.
+
+    That will prevent this message from running again.
+
+
+    Figure 3.1: Running the sudo and shad file from the home directory.
+
+
+    The search for the files that has said updated done by serration for the permissions
+    of 4000 as in Figure 3.11, and if it was needed to search for sgid, and bits all
+    together 7000 can be performed
+
+
+    # Activities Terminal
+
+
+    Wed 20:09
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root@M8007225~] ~
+
+    [root@Group1_A~] # -f /user/root -perm 4000 -exec ls -ld {} > /tmp/UID_Apps
+
+    /file/29929/task/30926/5/: No file or directory
+
+    /file/29929/fq/6/: No file or directory
+
+    /file/29929/fq/6/: No file or directory
+
+    /file/root/user/group1/: Permission denied
+
+    -rwxr-xr-x 1 root root 13264 5 2016 /usr/bin/bridge-helper
+
+    -rwxr-xr-x 1 root root 13264 5 2016 /usr/bin/timestamp_check
+
+    -rwxr-xr-x 1 root root 40934 5 2016 /usr/bin/userhelper
+
+    -rwxr-xr-x 1 root root 40934 5 2016 /usr/bin/xauth
+
+    -rwxr-xr-x 1 root root 30926 5 2016 /usr/bin/unix_chroot
+
+    -rwxr-xr-x 1 root root 30926 5 2016 /usr/bin/gdb
+
+    -rwxr-xr-x 1 root root 5798 12 2016 /usr/lib/libgtk-x86_64/client-helper
+
+    -rwxr-xr-x 1 root root 15392 13 2016 /usr/lib/libexec/relu
+
+    -rwxr-xr-x 1 root root 15392 13 2016 /usr/libexec/dbus-daemon
+
+    -rwxr-xr-x 1 root root 15352 5 2016 /usr/lib/polkit-1/dbus-agent-helper-1
+
+    -rwxr-xr-x 1 root root 15352 5 2016 /usr/libexec/uidmap
+
+    -rwxr-xr-x 1 root root 57072 28 2016 /usr/bin/at
+
+    -rwxr-xr-x 1 root root 57072 28 2016 /usr/bin/chd
+
+    -rwxr-xr-x 1 root root 41884 17 2016 /usr/bin/newgrp
+
+    -rwxr-xr-x 1 root root 32064 6 2021 /usr/bin/fsusermount
+
+    -rwxr-xr-x 1 root root 32064 6 2021 /usr/bin/newgidmap
+
+    -rwxr-xr-x 1 root root 34848 17 2016 /usr/bin/newid
+
+    -r--xr--x 1 root root 143152 23 2014 /usr/bin/sudo
+
+    -rwxr-xr-x 1 root root 27888 7 1750 /usr/bin/umount
+
+    -rwxr-xr-x 1 root root 62996 22 2012 /usr/bin/ping
+
+    -rwxr-xr-x 1 root root 76288 17 2016 /usr/bin/gassd
+
+    [root@Group1_A~] #
+
+    ```
+
+
+    Figure 3.12: all files in the system have been discovered and saved in a file
+    UID_Apps.
+
+
+    81
+
+
+    * With'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# SUID Vulnerability
+
+
+    Multiple files that are owned by the root may needed to be run by one of the users
+    like the case password when a certain user wants to change his own password, in
+    cases the suid can be set for these files. In this subsection, files passwd, and
+    sudo attributes have been checked and in all files the set-uid program was enabled,
+    and these programs considered essential for users to execute high privilege commands
+    and set-uid program enable user executing files to get the permissions of the
+    individual or group that owns the file. The three programs copied to the ituser
+    home directory, and checking the file attributes that the set-uid has been disabled
+    and the s letter has been removed from permissions as in Figure 3.15. As shown
+    in Figure 3.s 15-18 all the programs disabled the set-uid program and the programs
+    when executing any of these commands as normal user, an error message displayed
+    for accomplishing any of these task. Figure 3.13-25 shows the process followed
+    in
+
+
+    ituser@M8007225:~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root]@Group1 A# ls -l /usr/bin/su /usr/bin/sudo /usr/bin/passwd
+
+    -rwxr-xr-x. 1 root 27872 Oct 4 20:16 usr/bin/passwd
+
+    -rwxr-xr-x. 1 root 32152 Sep 7 17:50 usr/bin/su
+
+    --s-xr-x. 1 root 141352 Sep 21 28:14 usr/bin/sudo
+
+    [root]@Group1 A# ls -
+
+    ```
+
+
+    Figure 3.13: The attributes of passwd, sudo, have been checked and displayed.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_86_0.png)
+
+
+    Wed 20:54
+
+
+    ituser@Group1_A-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser]@Group1 A# ls which passwd
+
+    [ituser]@Group1 A# ls cp /usr/bin/passwd/home/ituser
+
+    [ituser]@Group1 A# ls which su
+
+    /usr/bin/sudo
+
+    [ituser]@Group1 A# ls cp /usr/bin/su /home/ituser
+
+    /usr/bin/sudo
+
+    [ituser]@Group1 A# ls cp /usr/bin/sudo /home/ituser
+
+    cp: cannot open ''/usr/bin/sudo'' for reading: Permission denied
+
+    [ituser]@Group1 A# ls -
+
+    ```
+
+
+    Figure 3.14: copy the above programs to ituser directory.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_86_1.png)
+
+
+    Wed 20:54
+
+
+    ituser@Group1_A-
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser]@Group1 A# ls l passwd sudo
+
+    -rwxr-xr-x. 1 ituser 27872 Oct 26 20:51 passwd
+
+    -rwxr-xr-x. 1 ituser 32152 Oct 26 20:52 su
+
+    --s-xr-x. 1 root 141352 Oct 26 20:41 sudo
+
+    [ituser]@Group1 A# ls -
+
+    ```
+
+
+    Figure 3.15: The permissions of the moved files in which no s bit is defined.
+
+
+    82'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# ituser@M80007225:~\n\n```\nFile Edit View Search Terminal Help\n[ituser@Group1\
+    \ A~$] /home/ituser/passwd\nChanging password for user ituser.\nChanging password\
+    \ for ituser.\n(current) UNIX password:\nNew password:\nRetype password:\nAuthentication\
+    \ token manipulation error\n[ituser@Group1 A~$] \n```\n\nFigure 3.17: Executing\
+    \ the sudo from user home directory, an error message for running the program.\n\
+    \n# Activities Terminal Wed 21:03\nituser@Group1_A_~\n\n```\nFile Edit View Search\
+    \ Terminal Help\n[ituser@Group1 A~$] /home/ituser/su\nPassword:\n: Authentication\
+    \ failure\n[ituser@Group1 A~$] \n```\n\nFigure 3.18: Executing the sudo from user\
+    \ home directory, an error message for running the program.\n\n```\nituser@M80007225~\n\
+    [ituser@Group1 A~$] /home/ituser/sudo\nsudo: /home/ituser/sudo must be owned by\
+    \ uid 0 and have the setuid bit set\n[ituser@Group1 A~$] \n```\n\nThe zsh program\
+    \ has been installed to /tmp directory and viewing the file permissions shows\
+    \ that the set-uid not set on, so we used the chmod 4755 to set-uid for it as\
+    \ shown in Figure 3.21.Since the zsh was installed and its permissions have been\
+    \ changed, the Linux disable it from running as normal user from his home directory\
+    \ as a security concern, so there will be nothing shown when running the zsh command\
+    \ as normal user as shown in Figure 3.22.\n\n# Activities Terminal Wed 21:04\n\
+    ituser@Group1_A_~\n\n```\nFile Edit View Search Terminal Help\n[ituser@Group1\
+    \ A~$] which is zsh\n/usr/bin/zsh\n[ituser@Group1 A~$] \n```\n\nFigure 3.19: the\
+    \ zsh is installed on the first instance.\n\n```\nituser@M80007225:~/tmp\nFile\
+    \ Edit View Search Terminal Help\n[root@Group1 A#] which zsh\n/usr/bin/zsh\n[root@Group1\
+    \ A#] cp /usr/bin/zsh /tmp\n[root@Group1 A#] cd /tmp\n[root@Group1 A#] ls\nsystemd[1]:\
+    \ Starting c7c0d4f9c27904c279c6189516d2-color.service-EuU6b3\nsystemd-private:\
+    \ Starting c7c0d4f9c27904c279c6189516d2-rtkit-daemon.service-EmHv8\ntacker-extract-files.1801\n\
+    tacker-extract-files.1801\n[root@Group1 A#] \n```\n\nFigure 3.20: copy the zsh\
+    \ to the /tmp directory and confirmed it.\n\n83"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'ituser@M80007225:/tmp
+
+
+    ```
+
+    [root]@Group1_A tmp# ls
+
+    system-private-03c7d04dcf9c4279017f698659166d2-color.service-XU6b3
+
+    system-private-03c7d04dcf9c4279017f698659166d2-rtkit-demon.service-EnhV1b
+
+    root-extract-files.1001
+
+    tracker-extract-files.1001
+
+    r
+
+    [root]@Group1_A tmp# ls -l zsh
+
+    -rwr-xr-x. 1 root 813132 Nov 1 11:28 zsh
+
+    [root]@Group1_A tmp# chmod 755 zsh
+
+    -rwxr-xr-x. 1 root 813132 Nov 1 11:20 zsh
+
+    [root]@Group1_A tmp#
+
+    ```
+
+
+    Figure 21: set right for the file using chmod and confirm the s letter added to
+    permissions.
+
+
+    ```
+
+    [group1@M80006988]/tmp# ls -l zsh
+
+    -rwr-xr-x. 1 root 813132 Nov 2 11:25 zsh
+
+    [group1@M80006988]/tmp# cd zsh
+
+    [group1@M80006988]/tmp#
+
+    ```
+
+
+    Figure 32: login as normal user and using the zsh command.
+
+
+    Bash program has been copied to the /tmp directory as root user. Then make it
+    a set-uid program with permission 4755 using chmod. Running the bash command as
+    normal user will be executed perfectly and no error will be shown after changing
+    the permission and set uid program, the reason for that because bash is the default
+    shell on most systems and Linux considered as a secure action since the set-uid
+    enables the bash program so the user get the privilege as shown in Figure 3.25.
+
+
+    ituser@M80007225:/tmp
+
+
+    ```
+
+    [ituser@Group1_A ituser]# su
+
+    Password:
+
+    [root]@Group1_A ituser]# cp /usr/bin/bash /tmp
+
+    [root]@Group1_A ituser]# cd /tmp
+
+    [root]@Group1_A tmp# ls -l
+
+    -rwxr-xr-x. 1 root 1072056 Nov 1 11:37 bash
+
+    [root]@Group1_A tmp# chmod 4755 bash
+
+    -rwsr-xr-x. 1 root 1072056 Nov 1 11:37 bash
+
+    [root]@Group1_A tmp# ls -l
+
+    -rwsr-xr-x. 1 root 1072056 Nov 1 11:37 bash
+
+    [root]@Group1_A tmp#
+
+    ```
+
+
+    Figure 3.2: copy the program to the /tmp directory, then set-uid program to it,
+    and confirm the changes.
+
+
+    ituser@M80007225:~
+
+
+    ```
+
+    [ituser@Group1_A -]$ /tmp/bash
+
+    bash-4.39
+
+    ```
+
+
+    Figure 3.24: Running the bash program as ituser and its working perfectly.
+
+
+    84'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# ituser@M@8007225:/tmp
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@group_A ~]$ /tmp/bash
+
+    bash-4.3 exit
+
+    exit
+
+    [ituser@group_A ~]$ cd /tmp
+
+    [ituser@group_A ~]$ ls -l bash
+
+    -rwxr-xr-x. 1 root root 102056 May 11 11:37 bash
+
+    [ituser@group_A ~]$
+
+    ```
+
+
+    Figure 3.25: checking again for the file permissions of the bash program.
+
+
+    Suggested solutions to solve setuid programs are as follows:
+
+
+    +   - Limit the use of setuid to only reduce the risk.
+
+    - A regular check for the binaries and directories that are created with setuid
+    activated on them must be checked to identify the unusual ones.
+
+    - Remove the setuid bit from the ssh, this will prevent the attack from entering
+    the system.
+
+    - Use the kernel-utils package which helps to correct incorrectly set uid to users
+    and fix setuid vulnerability.
+
+    - Disable the users from running scripting command from their directories and
+    must use root privilege.
+
+
+    # Firewall
+
+
+    Firewall is considered one of the most important defense line in computer systems.
+    Configuring it properly by eliminating and closing all ports that are not important
+    and allowing the specific machines or domain reduces the chance of being compromised.
+    Linux provide various utilities to perform this task, iptables command that can
+    be used through the terminal is considered the most common one which can be found
+    in all Linux distributions. Fedora provides a user-friendly graphical user interface
+    for configuring the firewall. In this task, we used the graphical utility to enable
+    and disable the ssh connectivity to the machine and testing from other machines.
+    The steps for performing this task are shown in Figure 3.4s – 31.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_89_0.png)
+
+
+    Figure 3.26: Firewall package is not installed by default on the Group1_A machine.
+
+
+    85'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'The framework was installed successfully by the Group1_A machine.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_90_0.png)
+
+
+    Figure 3.28: The ssh started and the address of Group1_A machine was obtained.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_90_1.png)
+
+
+    Figure 3.29: An ssh session was successfully started to Group1_A machine from
+    Group2_B machine.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Firewall Configuration
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_91_0.png)
+
+
+    Figure 3.30: The ssh service was disabled on Group1_A machine through the graphical
+    firewall configuration.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_91_1.png)
+
+
+    Figure 3.31: After disabling the ssh service from Group1_A machine an ssh session
+    was tried from Group1_B and it was not successful.
+
+
+    # Immutable Files
+
+
+    Linux deals with everything ever connected devices as files, which raise the need
+    of finding an advanced way for securing these files. Linux provide a utility that
+    can be launched on a file through chatter +i command which will immunize any file
+    by preventing the ever root user from renaming, deleting or creating hard link
+    to it. In this section the chatter +i command will be used to immunize the /etc/services
+    file that includes important information that attackers may modify to ease the
+    process of compromising the system by opening useful ports for them. The steps
+    followed in performing this task are shown in Figure 3.2-36.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_92_0.png)
+
+
+    Figure 3.32: The content of /etc/services was viewed using cat.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_92_1.png)
+
+
+    Figure 3.33: The default permissions for services files were listed using -l /etc/services
+    commands.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_92_2.png)
+
+
+    Figure 3.34: The permissions for /etc/services were modified to be owned by root
+    and can be modified only by the root.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_92_3.png)
+
+
+    Figure 3.35: The /etc/services file was immunized using chatter +i command to
+    not allow any modifications to the file even by the root'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Forward X with OpenSSH
+
+
+    The default configurations when connecting to a machine over the network using
+    ssh
+
+    dn''t allow the display of graphical packages. The -X attribute can be added to
+    the
+
+    command that starts an ssh session to allow forwarding the graphics over ssh
+
+    communication. In this section two methods used for testing this functionality
+
+    disabling the firewalls in both sides and then turning the default ssh connection
+
+    to xclock package and after connecting while using the -X attribute. Figure 3.s
+    37-42 shows in detail the process to accomplish this task.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_93_0.png)
+
+
+    Figure 3.36: When other has full permissions on the /etc/services file he was
+    not able to remove it since it
+
+    was immunized by the chtr + command.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_93_1.png)
+
+
+    Figure 3.37: The firewall was disabled on both machines Group1_A and Group1_B.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_93_2.png)
+
+
+    Figure 3.38: The ip address for Group1_A machine was obtained using the ifconfig
+    command.
+
+
+    89'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# ituser@Group1_A~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root]@Group1 B ituser# ssh -i ituser 172.18.64.24
+
+    ituser@172.18.64.24: sudo
+
+    Last login: Wed Oct 26 19:43:55 GST 2016 from 172.18.64.25 on ssh:tty
+
+    There were 2 failed login attempts from the last login.
+
+    Last login: Wed Oct 26 18:43:10 2016 from 172.18.64.25
+
+    [ituser@Group1_A -is who
+
+    B000698 (tty1) 2016-10-26 17:33 (1)
+
+    ituser 2016-10-26 18:32 (2)
+
+    ituser pts/2 2016-10-26 19:44 (172.18.64.35)
+
+    [ituser@Group1_A -is] $ ]
+
+    ```
+
+
+    Figure 3.39: A successful ssh session initiated from Group1_B machine to Group1_A
+    machine.
+
+
+    # ituser@Group1_A~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@Group_A -is] xclock
+
+    Error: Cannot open display:
+
+    [ituser@Group_A -is] $ ]
+
+    ```
+
+
+    Figure 3.41: Group1_B machine failed to start the xclock from the Group1_A machine.
+
+
+    # root@B0006988~
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [ituser@Group_A -is] xclock
+
+    Error: Cannot open display:
+
+    [ituser@Group_A -is] exit
+
+    login
+
+    Connection to 172.18.64.24 closed.
+
+    [root]@Group1 B0006988]# ]
+
+    ```
+
+
+    Figure 3.41: The currently active remote connection from Group1_A machine was
+    terminated.
+
+
+    An error occurred in running the interface since the other machine was a virtual
+    machine. So, the same commands were applied to a physical fedora and it worked
+    successfully as shown in Figure 3.42.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_94_0.png)
+
+
+    Figure 3.42: xclock running remotely over ssh from a physical Fedora machine.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# Managing Files
+
+
+    Managing and transferring files over the network is a critical issue that no administrator
+    does not use the scp and sftp a useful utility that combines between reliability
+    and security. As all the data transmitted being secured and not easy to sniff
+    by the attackers. In the coming subsections both scp and sftp will be tested and
+    investigated thoroughly.
+
+
+    # Using scp
+
+
+    The scp command is used to transfer files from and to another machine on the network
+    while maintaining the security and reliability of the transfer. In this subsection
+    a files were created using touch command and these files were transferred back
+    between the two machines using the scp command as shown in Figure 3.s 43-46.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_95_0.png)
+
+
+    Figure 3.4: Two new files were created on the two machines.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_95_1.png)
+
+
+    Figure 3.4: The ip address for the machines were obtained using ifconfig command.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "The authenticity of host '172.18.64.24 (172.18.64.24)' can't be established.\n\
+    ECDSA key fingerprint is SHA256:b3d5:22:f7:57:f8:90:78:68:73:39:b4:959.\nAre you\
+    \ sure you want to continue connecting (yes/no/[fingerprint])?\nroot@172.18.64.24's\
+    \ password:\n\n```\n$ituser@Group1_B$ scp -r root@172.18.64.24:/home/ituser/home/ituser/\n\
+    ```\n\nFigure 3.46: a file was copied from Group1_A to Group1_B through the scp\
+    \ command.\n\n```\n$ituser@Group1_B$ ls -la\ntotal 16\n-wxr-xr-x 2 ituser ituser\
+    \ 4096 May 20 10:00 .\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testA\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 test0B\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testC\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testD\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testE\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testF\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testG\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testH\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testI\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testJ\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testK\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testL\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testM\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testN\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testO\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testP\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testQ\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testR\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testS\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testU\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testV\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testW\n-rw-r--r--\
+    \ 1 ituser ituser    0 May 20 09:55 testX\n-rw-r--r-- 1 ituser ituser    0 May\
+    \ 20 09:55 testY\n-rw-r--r-- 1 ituser ituser    0 May 20 09:55 testZ\n```\n\n\
+    Figure 3.46: a file was copied successfully from local machine to a server connected\
+    \ to the network.\n\nUsing sftp\n\nThe sftp utility provides a convenient way\
+    \ to transfer large files other than scp since it has more commands and a better\
+    \ environment. The get command can be used to download a file from the server\
+    \ to the current machine while put command can be used to upload a file to the\
+    \ server. Figure 3.47-48 shows the process involved in creating files then transferring\
+    \ them using the sftp and get commands.\n\n```\nituser@MB000698B~_\nFile Edit\
+    \ View Search Terminal Help\nituser@Group1_A$ sftp root@172.18.64.24\nroot@172.18.64.24>\n\
+    connected to 172.18.64.24\nput /home/ituser/file2sftp /home/ituser/\nput /home/ituser/file2sftp\
+    \ /home/ituser/file2sftp\nsftp exit\nituser@Group1_A$ ls\nanaconda.cfg Documents\
+    \ Pictures test0A\nfile2sftp Pictures test0B\nhosting Documents Templates test0C\n\
+    hosting Documents Public test0D\nituser@Group1_A$ \n```\n\nFigure 3.47: a file\
+    \ was created on Group1_A machine to be copied on to the other machine.\n\n```\n\
+    ituser@MB000698B~_\nFile Edit View Search Terminal Help\nituser@Group1_B$ sftp\
+    \ root@172.18.64.24\nroot@172.18.64.24>\nconnected to 172.18.64.24\nput /home/ituser/file2sftp\
+    \ /home/ituser/file2sftp\nsftp exit\nituser@Group1_B$ ls\nanaconda.cfg Documents\
+    \ Pictures test0A\nfile2sftp Pictures test0B\nhosting Documents Templates test0C\n\
+    hosting Documents Public test0D\nituser@Group1_B$ \n```\n\nFigure 3.48: the created\
+    \ file in Group1_A machine was copied successfully to Group1_B machine through\
+    \ the sftp."
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Monitoring The File System NFS
+
+
+    NFS provides a useful utility that allows system administrators to monitor file
+    systems from a remote computer on local machine so they can be accessed as if
+    they were locally mounted. This functionality is useful when it is required to
+    centralize the storage on a main server that holds all the data. In this section
+    a directory was created in one machine that includes some subdirectories and files
+    then the main directory was mounted and accessed from the other machine that is
+    connected on the network. Figure 3-49 shows the process in accomplishing this.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_97_0.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    ituser@MB00006988:~home/ahmad
+
+    File Edit View Search Terminal Help
+
+    [ituser@MB00006988~]$ su
+
+    Password:
+
+    [root@MB00006988 ituser#] useradd ahmad
+
+    [root@MB00006988 ituser#] cd /home/ahmad
+
+    [root@MB00006988 ahmad#] mkdir d1 d2 d3 d4
+
+    [root@MB00006988 ahmad#] cd d1
+
+    [root@MB00006988 ahmad#] touch f1
+
+    [root@MB00006988 ahmad#] cd d2
+
+    [root@MB00006988 ahmad#] touch f2
+
+    [root@MB00006988 ahmad#] cd d2
+
+    [root@MB00006988 ahmad#] touch f3 f4
+
+    [root@MB00006988 ahmad#] ls -l
+
+    total 16
+
+    drwxr-xr-x 2 root root 4096 Nov 20 15:25 d1
+
+    drwxr-xr-x 2 root root 4096 Nov 20 15:25 d2
+
+    drwxr-xr-x 2 root root 4096 Nov 20 15:24 d3
+
+    drwxr-xr-x 2 root root 4096 Nov 20 15:24 d4
+
+    -rw-r--r-- 1 root root 0 Nov 20 15:24 f3
+
+    -rw-r--r-- 1 root root 0 Nov 20 15:24 f4
+
+    [root@MB00006988 ahmad#]
+
+    ```
+
+
+    Figure 3.50: A new user was created and two directories were created in the home
+    directory of that user.
+
+
+    ```
+
+    ituser@MB00006988:~home/ahmad
+
+    File Edit View Search Terminal Help
+
+    GNU nano 2.5.3 File:/etc/exports Modified
+
+    /home/ahmad 172.18.64.36(rw,sync,no_root squash)
+
+
+
+    Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?nY Yes
+
+    No Cancel
+
+    ```
+
+
+    Figure 3.51: The /etc/exports file was modified to add the entry to allow the
+    sharing of the home folder for ahmad.
+
+
+    ```
+
+    ituser@MB00006988:~home/ahmad
+
+    File Edit View Search Terminal Help
+
+    [root@MB00006988 ahmad#] rpm -qa nfs-utils
+
+    nfs-utils-1.3.4-1.rc2.fc24.x86_64
+
+    [root@MB00006988 ahmad#] _
+
+    ```
+
+
+    Figure 3.52: The nfs-utils package was already installed with the version of 1.3.3-8.
+
+
+    94'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# ituser@M00006988:/home/ahmad
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root@M00006988 ahmad]# exports -a
+
+    [root@M00006988 ahmad]# exports -v
+
+    /home/ahmad
+
+    172.18.64.36:(rw,delay,no root squash,no subtree_check,sec=sys,r
+
+    w.secgroup,no root squash,no_all_squash)
+
+    [root@M00006988 ahmad]#
+
+    ```
+
+
+    Figure 5.33: The directory was exported and a verification for that was accomplished
+    using the command exported -v.
+
+
+    # ituser@M00006988:/home/ahmad
+
+
+    ```
+
+    File Edit View Search Terminal ...Help
+
+    [root@M00006988 ahmad]# /bin/service rpcbind start
+
+    Redirecting to /dev/systemctl start rpcbind.service
+
+    [root@M00006988 ahmad]# /bin/service nfs start
+
+    Redirecting to /dev/systemctl start nfs-service
+
+    [root@M00006988 ahmad]# systemctl start nfs-utils
+
+
+    ```
+
+
+    Figure 5.34: Both rpcbind and nfs services were started.
+
+
+    # ituser@M00006988~
+
+
+    ```
+
+    [ituser@M00006988~]$ $ df -h
+
+    Filesystem Size Used Available Use Mounted on
+
+    devtmpfs 738M 0 738M 0% /
+
+    tmpfs 749M 432K 749M 1% /dev/shm
+
+    tmpfs 749M 1.2M 748M 1% /run
+
+    tmpfs 749M 0 749M 0% /sys/fs/cgroup
+
+    /dev/mapper/fedora-root 6.5G 24K 6.5G 1% 80% /
+
+    tmpfs 150M 0 150M 0% /tmp
+
+    /dev/sddb1 477M 13M 464M 3% /boot
+
+    tmpfs 150M 16K 134M 0% /run/user/42
+
+    tmpfs 150M 16K 134M 0% /run/user/1001
+
+    /dev/sro1 56M 0 56M 0% /run/media/ituser/VBOXADDITIONS_5
+
+    [ituser@M00006988~]$
+
+    ```
+
+
+    Figure 5.35: A list of the mounted partitions displayed using the df -h command.
+
+
+    # ituser@M00006988:/home/ituser
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    [root@M00006988 ituser]# mount -t nfs 172.18.64.37:/home/ahmad /home/ituser
+
+    [root@M00006988 ituser]# ls /home/ituser
+
+    direct 0 fs /
+
+    [root@M00006988 ituser]#
+
+    ```
+
+
+    Figure 5.36: The directory was mounted on the other machine /home/ituser directory.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '```
+
+    [root@MB0006968 ituser]## df -h
+
+    Filesystem      Size Used Avail Use% Mounted on
+
+    dodefs               512M  0 512M 0% /
+
+    tmpfs               739M 368K 739M 0% /dev/shm
+
+    tmpfs               1.2G  0 1.2G 0% /run
+
+    tmpfs               749M  0 749M 0% /tmp
+
+    /dev/mapper/fedora-root 6.5G 4.9G 1.3G 86% /
+
+    /dev/sda             477M 139M 338M 31% /
+
+    tmpfs               1.5G  156K 1.3G 10% /run/user/10001
+
+    /dev/sr0             1.5G  16K 1.5G 1% /run/user/18001
+
+    /dev/sda3              56M  0 56M 100% /home/ituser
+
+    s931
+
+    [root@MB0006968 ituser]#
+
+    ```
+
+
+    Figure 3.57: The usage of df -h command showed that the directory is mounted on
+
+
+    ```
+
+    [root@MB0006968 ~]# mount -B /home/ahmad ~/MountingTest
+
+    [root@MB0006968 ~]# ls ~/MountingTest
+
+    t-f3
+
+    f4
+
+    [root@MB0006968 ~]#
+
+    ```
+
+
+    Figure 3.58: The /home/ahmad directory was mounted locally on the server in the
+    ~/MountingTest successfully.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# End of Chapter Conclusions & Recommendations
+
+
+    +   - It is important to limit the usage of setuid to only required binaries to
+    reduce the security threat.
+
+    - A regular check for the binaries and directories that are created on the system
+    with setuid activated on them must be checked to identify the unusual ones.
+
+    - Configuring the firewall properly by eliminating the unused ports and services
+    is important to reduce the security threat.
+
+    - Sensitive files and directories on the system must be immunized to secure them
+    from deletion and removal.
+
+    - Dealing with the secure version of transferring files and directories like scp
+    and sftp ensures that the communication is secured and not sniffed easily by attackers.
+
+    - Centralizing the storage in companies and institutions is considered to be convenient
+    and can be accomplished easily using the mount command.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Chapter IV
+
+
+    # Advanced Linux Tools'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Chapter Objectives
+
+
+    +   - To test and explore the logging system in Linux and the provided options.
+
+    - To tune and modify the system logging configuration file according to the requirements.
+
+    - To use the log rotation functionality in Linux to rotate log files.
+
+    - To explore the vulnerabilities in old GRUB versions and modify the settings
+    to secure the host.
+
+    - To investigate and explore HIDS and files integration utilities in Linux.
+
+
+    # Needed Tools
+
+
+    +   - Fedora 24 Workstation image.
+
+    - Fedora 18 Workstation image.
+
+    - Oracle VirtualBox.
+
+    - Syslog package.
+
+    - Logrotate package.
+
+    - Apache http server.
+
+    - Tripwire package.
+
+    - Syslog-ng package.
+
+
+    # Chapter Overview
+
+
+    Security should be one of the first considerations at all stages of setting up
+    Linux. Securing Linux machine is a primary responsibility and maintaining a secure
+    environment become one of the main priorities when dealing with Log files. The
+    first subsection is titled with **Syslog Basics** in which test in logging for
+    multiple facilities and priorities were implemented and their log files were viewed
+    and examined. **Fine Tuning the Defaults** subsection a modification was implemented
+    to syslog'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'configuration file to add an extra facility to be logged using syslog utility.
+    In the third subsection that was titled with dmesg the dmesg logging utility was
+    examined and the content of the log file was tested and verified. In the fourth
+    subsection that is titled with Log Rotation the logrotate utility was examined
+    and tested to see how the process is done when rotating the log files when having
+    a massive data. The log files for Apache HTTP web server were examined and tested
+    while implementing different activities and checking their track in the log files.
+    In Listing Options Files subsection the Lof command was examined to view and check
+    the opened processes. In the seventh subsection that was titled with Cracking
+    the system through boot loader a testing was performed on both Fedora 18 and Fedora
+    24 and it was noticed that it is easier to crack the Fedora 18 version. Then a
+    grub was configured to be secured with a username and a password so attackers
+    can’t login directly using the root and start the system. In the eighth and ninth
+    sub sections both TripWire and Syslog-ng were examined and explored.
+
+
+    # Syslog Basics
+
+
+    Logging is an essential part of system administration process in which the administrator
+    refers to it to identify issues; these issues may include identifying intrusions
+    to the system, maintaining the system, identifying faulty services that are not
+    working properly and much more. In Fedora 24 the logging service can be maintained
+    and implemented using a tool called syslog or rslog. In this section the rslog
+    package was installed and tested on logging facilities with different priorities
+    and the utility provided its functionality and reliability in recording events.
+
+
+    At the beginning the rslog package was installed on the system using sudo dns
+    install rslog command as shown in Figure 4.1.Then ps us aux and service rslog
+    restart commands the rslog service was verified that it is currently running on
+    the host as shown in Figure 4.2. In Figure 4.3 the configuration file for the
+    rslog utility was examined and viewed less /etc/rslog.conf command and it was
+    found to be including details about the host devices and the facilities with the
+    specified priorities and the corresponding actions. The logger command was used
+    as shown in Figure 4.4 to send a log message to the log file that is concerned
+    with local0 facility of alert'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'priority and, in which afterwards the /var/log/messages log file was found
+    to be including the test message at the end of it. To test logging on different
+    facilities and priorities their assigned log file must be located from the /etc/rsyslog.conf
+    configuration file as shown in Figure 4.5. Figure 4.6,7 shows how logger command
+    was used to test logging in the specified facilities and their log files were
+    viewed to notice the test messages.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_105_0.png)
+
+
+    Figure 4.1: The rsyslog service was installed using dll install command and started
+    on the system.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_105_1.png)
+
+
+    Figure 4.2: The rsyslog service is running on the host on the user with PID of
+    2650 and its service was restarted successfully.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_105_2.png)
+
+
+    Figure 4.3: The rsyslog configuration file was viewed using less command and it
+    showed all the devices and facilities and priorities the corresponding action.
+
+
+    101'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'Figure 4.4: A test log message was created using logger command and assigned
+    to the local facility with /var/log/messages files.
+
+
+    Figure 4.5: The location where the log messages were saved for both kern.info
+    and mail.alert were located from the /etc/syslog.conf.
+
+
+    Figure 4.6: A test log message was created on the kern.info then it was located
+    in the /var/log/messages log.
+
+
+    Figure 4.7: A test log message was created on mail.alert and was located in the
+    /var/log/maillog file.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Fine Tuning the Defaults
+
+
+    The rslog daemon receives its configuration information from rslog.conf file,
+    the file is placed under the /etc directory. Typically, the rslog.conf file tells
+    the rslog daemon where to save its log messages. The file consists of instruction
+    comes from a series of two-part lines which are selector and action. The selector
+    section defines the source of the log message and the action section what to do
+    with the message.
+
+
+    In this task the default configuration file for rslog was edited and the rslog
+    daemon has been restarted. Before starting editing rslog configuration file, the
+    command applied to make a copy for the default configuration file to be able to
+    recover the content after editing it from the copied version as shown in Figure
+    4.8. The rslog.conf file has been edited successfully and a new entry added to
+    the file indicating that the messages of type local5 go to /var/log/local5 as
+    shown clearly in Figure 4.9. The command Service restart applied to restart the
+    syslog services so the changes applied in the configuration file takes immediately.
+    Finally the logger command for testing syslog configuration as shown in Figure
+    4.10 and the message has been verified by using the created lines in /var/log/messages.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_107_0.png)
+
+
+    Figure 4.8: A backup of the configuration file for rslog was created and saved
+    on the same directory.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_107_1.png)
+
+
+    Figure 4.9: A new entry was added to the rslog.conf file to save all local5 messages
+    to /var/log/local5 file.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Dmesg
+
+
+    Dmesg (Display message or driver message) is a command which will display Kernel
+    ring buffers. These messages contain worthy information about device drivers loaded
+    into the kernel at the time of booting, also provide us with specifications about
+    hardware drivers connected to, disconnected from a machine and any errors when
+    hardware driver is loaded into the kernel. These messages are helpful in diagnosing
+    and debugging hardware and device driver issues. Figure 4.11 shows the result
+    after running dmesg command in fedora 24.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_108_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_108_1.png)'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Log Rotation
+
+
+    logrotate is designed to facilitate the performance of systems that generate large
+    numbers of log files. It allows automatic rotation, compression, removal, and
+    mailing of log files. Each log file may be handled daily, weekly, monthly, or
+    when it grows too large. Additionally, it''s difficult to view a particular event
+    if there are million log entries, so it''s a good idea to keep log files down
+    to manageable size. Figure 4.12 shows the content of the log rotate configuration
+    file, its clearly presented on the file that are rotated weekly and logs rotated
+    four times before they are deleted. A search for the logrotate word started to
+    find the word on the whole system files. Logrotate was started in debug mode and
+    the logrotate.conf file was directed to /tmp/logrotate.out with forwarding the
+    error to the output. The local5 file which created in task number 2 added to the
+    rotation list as shown in Figure 4.16. The logrotate executed in debug mode again
+    and the command diff applied to compare the two created log files. Figure 4.17
+    shows the results of the comparison between the two log files.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_109_0.png)
+
+
+    Figure 4.12: The log rotation configuration file was viewed and accessed using
+    nano editor.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# Activities > Terminal\n\n```\n$ Edit View Touch Inspect\n$ sudo nano /etc/logrotate.d/logrotate\n\
+    /etc/logrotate\n/etc/logrotate.d/cron\n/etc/logrotate.d/cron2\n/etc/logrotate.d/rsyslog\n\
+    /etc/logrotate.d/syslog\n/etc/logrotate.d/dmesg\n/etc/logrotate.d/ufw\n/etc/logrotate.d/apt\n\
+    /etc/logrotate.d/fail2ban\n/etc/logrotate.d/mysql\n/etc/logrotate.d/postgresql\n\
+    /etc/logrotate.d/apache2\n/etc/logrotate.d/nginx\n/etc/logrotate.d/memcached\n\
+    /etc/logrotate.d/redis\n/etc/logrotate.d/mongodb\n/etc/logrotate.d/docker\n/etc/logrotate.d/containerd\n\
+    /etc/logrotate.d/systemd\n/etc/logrotate.d/unattended-upgrades\n/etc/logrotate.d/root/etc/logrotate.d/clamav\n\
+    /etc/logrotate.d/modsecurity\n/etc/logrotate.d/logrotate\n/etc/logrotate.d/logrotate.conf\n\
+    /etc/logrotate.d/logrotate.status\n/etc/logrotate.d/logrotate.state\n/etc/logrotate.d/logrotate.daily\n\
+    /etc/logrotate.d/logrotate.weekly\n/etc/logrotate.d/logrotate.monthly\n/etc/logrotate.d/logrotate.hourly\n\
+    /etc/logrotate.d/logrotate.*\n```\n\nFigure 4.13: A search was initiated to locate\
+    \ all the files that contain the name logrotate on them.\n\n# Activities > Terminal\n\
+    \n```\n$ Edit View Touch Search Help\n$ sudo logrotate -d /etc/logrotate.conf\
+    \ > /tmp/logrotate.out 2>&1\n```\n\nFigure 4.14: Logrotate was started in debug\
+    \ mode and the logrotate configuration file was directed to /tmp/logrotate.out\
+    \ with forwarding the error to the output.\n\n# Activities > Terminal\n\n```\n\
+    $ Edit View Touch Search Help\n$ sudo logrotate -d /etc/logrotate.conf > /tmp/logrotate.out\
+    \ 2>&1\n\nparsing /var/log/syslog (1 definitions)\n  considering /var/log/syslog\n\
+    \    size 1000k\n    rotate 4\n    missingok\n    notifempty\n    compress\n \
+    \   ncompress\n    delaycompress\n    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate\
+    \ /var/log/syslog\n    endscript\nparsing /var/log/auth.log (1 definitions)\n\
+    \  considering /var/log/auth.log\n    size 1000k\n    rotate 4\n    missingok\n\
+    \    notifempty\n    compress\n    ncompress\n    delaycompress\n    sharedscripts\n\
+    \    postrotate\n      /usr/sbin/logrotate-rotate /var/log/auth.log\n    endscript\n\
+    parsing /var/log/kern.log (1 definitions)\n  considering /var/log/kern.log\n \
+    \   size 1000k\n    rotate 4\n    missingok\n    notifempty\n    compress\n  \
+    \  ncompress\n    delaycompress\n    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate\
+    \ /var/log/kern.log\n    endscript\nparsing /var/log/messages (1 definitions)\n\
+    \  considering /var/log/messages\n    size 1000k\n    rotate 4\n    missingok\n\
+    \    notifempty\n    compress\n    ncompress\n    delaycompress\n    sharedscripts\n\
+    \    postrotate\n      /usr/sbin/logrotate-rotate /var/log/messages\n    endscript\n\
+    parsing /var/log/dpkg.log (1 definitions)\n  considering /var/log/dpkg.log\n \
+    \   size 1000k\n    rotate 4\n    missingok\n    notifempty\n    compress\n  \
+    \  ncompress\n    delaycompress\n    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate\
+    \ /var/log/dpkg.log\n    endscript\nparsing /var/log/* (1 definitions)\n  considering\
+    \ /var/log/*\n    size 500k\n    rotate 0\n    missingok\n    notifempty\n   \
+    \ compress\n    ncompress\n    delaycompress\n    sharedscripts\n    postrotate\n\
+    \      /usr/sbin/logrotate-rotate /var/log/*\n    endscript\n```\n\nFigure 4.15:\
+    \ The created logrotate file was viewed using cat command.\n\n# Activities > Terminal\n\
+    \n```\n$ Edit View Touch Search Help\n$ cat /tmp/logrotate.out\n\nparsing /var/log/syslog\
+    \ (1 definitions)\n  considering /var/log/syslog\n    size 1000k\n    rotate 4\n\
+    \    missingok\n    notifempty\n    compress\n    ncompress\n    delaycompress\n\
+    \    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate /var/log/syslog\n\
+    \    endscript\nparsing /var/log/auth.log (1 definitions)\n  considering /var/log/auth.log\n\
+    \    size 1000k\n    rotate 4\n    missingok\n    notifempty\n    compress\n \
+    \   ncompress\n    delaycompress\n    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate\
+    \ /var/log/auth.log\n    endscript\nparsing /var/log/kern.log (1 definitions)\n\
+    \  considering /var/log/kern.log\n    size 1000k\n    rotate 4\n    missingok\n\
+    \    notifempty\n    compress\n    ncompress\n    delaycompress\n    sharedscripts\n\
+    \    postrotate\n      /usr/sbin/logrotate-rotate /var/log/kern.log\n    endscript\n\
+    parsing /var/log/messages (1 definitions)\n  considering /var/log/messages\n \
+    \   size 1000k\n    rotate 4\n    missingok\n    notifempty\n    compress\n  \
+    \  ncompress\n    delaycompress\n    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate\
+    \ /var/log/messages\n    endscript\nparsing /var/log/dpkg.log (1 definitions)\n\
+    \  considering /var/log/dpkg.log\n    size 1000k\n    rotate 4\n    missingok\n\
+    \    notifempty\n    compress\n    ncompress\n    delaycompress\n    sharedscripts\n\
+    \    postrotate\n      /usr/sbin/logrotate-rotate /var/log/dpkg.log\n    endscript\n\
+    parsing /var/log/* (1 definitions)\n  considering /var/log/*\n    size 500k\n\
+    \    rotate 0\n    missingok\n    notifempty\n    compress\n    ncompress\n  \
+    \  delaycompress\n    sharedscripts\n    postrotate\n      /usr/sbin/logrotate-rotate\
+    \ /var/log/*\n    endscript\n```\n\nFigure 4.16: The new log file was added the\
+    \ syslog rotation configuration file.\n\n106"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_111_0.png)
+
+
+    The logrotate command started in the verbose mode to show more details using the
+    -v as displayed in 4.18.Cheking the log files to examine the rotation of the local5
+    file, but as shown in 4.19 it''s not rotated. Finally the log rotate command was
+    forced using the -f, and the local5 log file was rotated and a new file as created
+    in 4.20.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_111_1.png)'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: 'Figure 4.19: No log rotation was done to the local5 file.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_112_0.png)
+
+
+    Figure 4.20: The log rotation command forced and the local5 file was rotated and
+    a new file was created.
+
+
+    # # Apache HTTP or Tomcat
+
+
+    Apache already installed on the host machine. httpd service started successfully
+    on the host machine as shown in Figure 4.21 with the command service http start.
+    A new HTML page created to be examined on the log files as shown in Figure 4.22.23
+    shows the tomcat test page which displayed using localhost address that implies
+    tomcat working perfectly, also the created html page accesses on the browser to
+    trace it later on the log files. Two Apache log files located at /var/log/apache/
+    which are: error and access logs. Figure 4.24 display the apache logs and it clearly
+    shows that the newly created html page activity is displayed on the access log.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_112_1.png)
+
+
+    Figure 4.21: The http service was started successfully on the host machine.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_112_2.png)
+
+
+    Figure 4.22: A new test page was created to be mentioned in the log file.
+
+
+    108'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Fedora Test Page
+
+
+    This page is used to test the operation of the Apache HTTP server after it has
+    been installed. If you can see this page, the web server is working properly.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_113_0.png)
+
+
+    +   If you are a member of the general public:
+
+    * The fact that you are seeing this page proves that the web server is installed
+    and working correctly.
+
+    * If you would like to extend the content of this website, please contact the
+    Fedora Project.
+
+    * If you find an error in the content of this page, please report it to the webmaster
+    by clicking the email link below.
+
+    * If you have questions about the Fedora operating system, please visit the Fedora
+    mailing lists.
+
+    * The Fedora operating system is used by hosting many websites around the world.
+    If you would like to host the Fedora distribution, please contact the Fedora Project.
+
+    * If you find any bugs, please report them to the bug tracker.
+
+
+    +   If you are the website administrator:
+
+    * You may add content to the directory in which this page is located.
+
+    * If you wish to delete this page, simply remove the file from the server.
+
+    * If you wish to change the content of this page, follow the instructions in the
+    manual.
+
+    * This server is powered by Apache HTTP servers. For using Apache, visit http://httpd.apache.org/
+
+
+    Figure 4.23: The localhost is running properly that indicates tomcat is started
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_113_1.png)
+
+
+    Figure 4.24: The error and access logs were examined to see the last activities
+    performed with apache server.
+
+
+    # Listing Open Files
+
+
+    Lsof is a command based utility which is used to list information about the files
+    that are opened by various processes. In Linux, everything is a file, ( pipes,
+    sockets, directories, devices, etc.). So by using lsof, we can get the information
+    about opened files. Different lsof options have been shown in table 1:
+
+
+    | command | Result |
+
+    ---|---|---|n| lsof | Lists open files belonging to all processes | Figure 4.25
+    |
+
+    | lsof -p 1 | List all files currently opened by process with PID 1 | Figure 4.26
+    |
+
+    | lsof -u ituser | List all files currently being accessed by ituser | Figure
+    4.27 |
+
+    | lsof /bin/bash | Find the PID of processes who have /bin/bash opened | Figure
+    4.28 |
+
+    | lsof -i TCP | Display a listing of all Internet files of type TCP | Figure 4.29
+    |
+
+
+    109'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_114_0.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_114_1.png)
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_114_2.png)'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: 'Figure 4.28: All PID of processes which have /bin/bash were listed using sudo
+    lsof /bin/bash.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_115_0.png)
+
+
+    Figure 4.29: The listing of all internet files of type TCP were displayed using
+    sudo -i TCP command.
+
+
+    # # Cracking the system through boot loader
+
+
+    At this part a crack for the system through boot loader have been tested in fedora
+    18 and fedora 24.The steps that followed to crack fedora 18 as follows:
+
+
+    +   - The boot was stopped on the grub screen by pressing any key on this stage
+    as shown in Figure 4.30.
+
+    - The e key was pressed to edit the commands of the grub menu as shown in Figure
+    4.31.
+
+    - The number 1 were added after root=/dev/mapper/fedora-root to start with a single
+    mode as shown in Figure 4.32.
+
+    - After pressing F10 the system was restarted and the root user was logged in
+    the command line as shown in Figure 4.33.
+
+    - Through the same command line screen the password for it ituser was changed
+    successfully as shown in Figure 4.34, which indicate that the system hacked easily
+    and the system can be accessed now.
+
+
+    # ## 7.1 Bypassing the system security
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_115_1.png)
+
+
+    Figure 4.30: The boot were stopped on the grub screen by pressing any key on this
+    stage.'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_116_0.png)
+
+
+    Figure 4.31: The e key was pressed to edit the grub menu.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_116_1.png)
+
+
+    Figure 4.32: The number 1 were added after root=/dev/mapper/fedora-root to start
+    with a single mode.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_116_2.png)
+
+
+    Figure 4.33: After pressing F10 the system was restarted and the root user was
+    logged in the command line.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_116_3.png)
+
+
+    Figure 4.34: Through the same command line screen the password for ituser was
+    changed successfully.
+
+
+    The steps that followed to test cracking fedora 24 as follows:
+
+
+    +   - The boot menu was displayed when running the system as shown in Figure 4.35.
+
+
+    +   - The menu commands for boot were viewed as shown in Figure 4.36.
+
+
+    +   - The number 1 were added after root=/dev/mapper/fedora_group-root 1 as shown
+    in Figure 4.37.
+
+
+    +   - The system was started in resque mode and it was asking for the root password
+    which indicates a better security than fedora 18 as shown in Figure 4.38.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# Fedora (4.5.5-300 fc24:x86_64) (Workstation Edition)\nFedora 00-rescue-4f36a25c20459b0d-47a5ca8b76d8e0\
+    \ 24 (Workstations Editi-\n\n![](img/7be05572b414927ff78ba38f31a7ecfc_117_0.png)\n\
+    \nFigure 4.35: The boot menu was displayed when running Fedora 24.\n\n```\ninsmod\
+    \ ext2\nset root=\"hddb-modul\"\nif [ $(search_platform_search_hist) -eq 1 ];\
+    \ then\nsearch --no-floppy -void --set-root e3c35c55-f446-b2fe-atlde\n/dev/hddb-modul:\
+    \ /root/kernel/modules/hddb.modul --init \"hddb-modul\" e3c35c55-d304-4f62-a7c4a693708\n\
+    fi\nsearch --no-floppy -void --set-root e3c35c55-f446-b2fe-atlde\nmlinuz-linux-initramfs-4f36a25c20459b0d-47a5ca8b76d8e0\
+    \ /dev/mapper/fedora-group_root root=/dev/mapper/vglv/fedora-group_root /dev/sda1\
+    \ rw dev=sd1 quiet\ninitramfs-0-rescue 4f36a25c20459b0d-47a5ca8b76d8e0.img\n```\n\
+    \nPress Ctrl-x for a command prompt or Escape to nondiscard and return to the\
+    \ menu. Pressing Tab lists\npossible completions.\n\nFigure 4.36: The menu config\
+    \ for boot for Fedora 24 were viewed.\n\n```\ninsmod ext2\nset root=\"hddb-modul\"\
+    \nif [ $(search_platform_search_hist) -eq 1 ]; then\nsearch --no-floppy -void\
+    \ --set-root e3c35c55-f446-b2fe-atlde\n/dev/hddb-modul: /root/kernel/modules/hddb.modul\
+    \ --init \"hddb-modul\" e3c35c55-d304-4f62-a7c4a693708\nfi\nsearch --no-floppy\
+    \ -void --set-root e3c35c55-f446-b2fe-atlde\nmlinuz-linux-initramfs-4f36a25c20459b0d-47a5ca8b76d8e0\
+    \ /dev/mapper/fedora-group_root root=/dev/mapper/vglv/fedora-group_root /dev/sda1\
+    \ rw dev=sd1 quiet\ninitramfs-0-rescue 4f36a25c20459b0d-47a5ca8b76d8e0.img\nPress\
+    \ Ctrl-x for a command prompt or Escape to nondiscard and return to the menu.\
+    \ Pressing Tab lists\npossible completions.\n```\n\nFigure 4.37: The number 1\
+    \ added after root=/dev/mapper/fedora_group-root 1\n\n```\nlogin to root mode\
+    \ after logging in; type -a journalctl\nsystemctl reboot to reboot, \"systemctl\
+    \ default\" or \"B\"\nto into default mode\nlive root password for maintenance\n\
+    (or press Control-D to continue):\nenter password: \nlive root password for maintenance\n\
+    (or press Control-D to continue): -\n```\n\nFigure 4.38: In Fedora 24 the system\
+    \ started in rescue mode and was asking for the root password which indicates\
+    \ a better security feature than fedora 18."
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# 7.2 Password Protecting the Boot Loader
+
+
+    At this point an encrypted password for grub will be generated by providing a
+    long alphanumeric code, grub-mkpasswd-pbkdf2 used to encrypt “zayedu” password
+    and the generated encrypted text highlighted as shown in Figure 4.39. Nano editor
+    used to edit the content of the /etc/grub.d/00_header file as shown in Figure
+    4.40. The addition on the file was to place the hashed password and a username
+    to be required for logging in to the Grub. To enforce the Grub configuration file
+    to be updated a grub2-mkconfig -o /boot/grub/grub.cfg command as shown in 4.41.
+    When the system restarted, grub asked for a username and password to authenticate
+    and allow the login as shown in Figure 4.42, which indicate an advanced security
+    stage has been present in fedora 24.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_118_0.png)
+
+
+    Figure 4.39. A hashed version of password was created and copied to be used for
+    securing the grub.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_118_1.png)
+
+
+    Figure 4.40: The /etc/grub.d/00_header file was modified to include the created
+    hashed password and a username to be required for logging in the grub.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_118_2.png)
+
+
+    Figure 4.41: The grub configurations were updated to include the newly created
+    username and password.
+
+
+    114'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_119_0.png)
+
+
+    Figure 4.42: The system when restarted and grub asked for a username and password
+    to authenticate and allow the login.
+
+
+    # File Integrity Check with TripWire
+
+
+    TripWire is a host-based ID that collects data from the host filesystem and configurations,
+    these collected data to be checked and verified at later stage to identify the
+    good and bad states of the system. TripWire can also notify the administrator
+    if his system was compromised based on the specifications. After installing TripWire
+    the database must be initialized and a good practice to that is to modify the
+    policy file of TripWire to be matching with the requirements to reduce the false
+    positives. TripWire can be configured to be running every day and sending email
+    notifications to the administrator to keep him updated with all information even
+    if he was away.
+
+
+    # Syslog-ng
+
+
+    Syslog-ng is an open source package that extends syslog with content-based filtering,
+    rich filtering capabilities, flexible configuration options. Syslog-ng adds extra
+    features and functionalities to syslog such as using TCP for transport.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# End of Chapter Conclusions & Recommendations
+
+
+    +   - Log files provide a useful data to system administrator to analyze intrusions
+    and
+
+    s fails.
+
+
+    +   - A good practice to maintain and to organize log files is to use the log
+    rotation utility.
+
+
+    +   - Most applications comes by default with a logging system that records all
+    events\and errors.
+
+
+    +   - Grub must be secured with a username and password to not allow attackers
+    to login
+
+    and perform malicious actions.
+
+
+    +   - Useful utilities can be used to check file integrity and detect intrusions
+    on the
+
+    system such as TripWire.
+
+
+    +   - To extend the functionalities of the original rsyslog the syslog-ng utility
+    can be used
+
+    for this purpose.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# # References\n\n+   - Hatch, B., Lee, J., & Kurtz, G. (2001). Hacking Linux\
+    \ exposed: Linux security secrets & solutions.\nNew York: Osborne/McGraw-Hill.\
+    \ Chicago\n\n+   - Halcrow, M. A. (2004, July). Demands, solutions, and improvements\
+    \ for Linux filesystem security.\nIn Proceedings of the 2004 Linux Symposium (Vol.\
+    \ 1, pp. 269-286).\n\n+   - Hasan, M., Z. Balbahaith and M. Tarique, \"Detection\
+    \ of SQL Injection Attacks: A Machine Learning\nApproach,\" 2019 International\
+    \ Conference on Electrical and Computing Technologies and\n (ICECTA), Ras Al Khaimah,\
+    \ United Arab Emirates, 2019, pp. 1-6.\n\n+   - Bishop, M. (2007). About penetration\
+    \ testing. IEEE Security & Privacy, 5(6), 84-87.\n\n+   - Alfandi, O., Balbahaith,\
+    \ & Balbahaith, (2019, June). Assessment and Hardening of IoT\nDevelopment Boards.\
+    \ In International Conference on Wired/Wireless Internet Communication\n(pp. 27-39).\
+    \ Springer, Cham\n\n+   - Ramchandander, V. (2011). Backtrack 5 Wireless Penetration\
+    \ Testing: Beginner's Guide. Packt\nPublishing Ltd.\n\n+   - Hasan, M., Iqbal,\
+    \ F., Hung, P. C., Fung, B. C., & Rafferty, L. (2018). A security study for smart\n\
+    metering systems. World Academy of Science, Engineering and Technology, International\
+    \ Journal\nofof Urban and Civil Engineering, 5(1), 1-11.\n\n+   - Bradford, E.,\
+    \ & Maurer, L. (2002). Linux and Windows interoperability guide. Upper Saddle\
+    \ River,\nNJ: Prentice Hall PTR.\n\n+   - Zhang, W. (2000, July). Linux virtual\
+    \ server for scalable network services. In Ottawa Linux\nSymposium (Vol. 2000).\n\
+    \n+   - Lala, J. H. (2003). Foundations of intolerant systems. Los Alamitos, CA:\
+    \ IEEE Computer\nSociety.\n\n+   - Forouzan, B. A. (2007). Cryptography & network\
+    \ security. McGraw-Hill, Inc.,\n\n+   - Gregg, M., & Santos, O. (2020). Ceh: certified\
+    \ ethical hacker version 10. Honoken, NJ: Pearson."
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '![](img/7be05572b414927ff78ba38f31a7ecfc_123_0.png)
+
+
+    # I want morebooks!
+
+
+    Buy your books fast and straightforward online - at one of world''s fastest growing
+    online book stores! Environmentally sound due to Print-on-Demand technologies.
+
+
+    Buy your books online at
+
+    **www.morebooks.shop**
+
+
+    Kaufen Sie Ihre Bücher schnell und unkompliziert online – der am schnellsten wachsenden
+    Handelsplattformen weltweit! Dank Print-on-Demand umwelt- und ressourcenschonend
+    produert.
+
+
+    Bücher schneller online kaufen
+
+    **www.morebooks.shop**
+
+
+    | KS OmniScriptum Publishing Brivas gatve 197 LV-10397 Riga, Latvia Telefac +371
+    686 204 55 | info@omniscriptum.com www.omniscriptum.com | OMNIScriptum |'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: 'Linux is an open-source operating system that provides various utilities that
+    help professionals to perform their tasks in an efficient and simple way. Linux
+    has been known in the industry as one of the most stable operating systems, Linux
+    OS provides a useful set of preinstalled utilities that allows the user to perform
+    the required tasks easily, it also provides multiple applications and packages
+    that can be installed to be used for different purposes. Using these utilities
+    without limitations and restrictions would allow many of the breakthroughs that
+    can be prevented by applying simple security standards. Securing a Linux machine
+    is an important task and the security issue becomes one of the main priorities
+    when dealing with the machine as a server, Security should be one of the first
+    considerations at all stages of setting up a Linux computer. Securing a Linux
+    machine is a primary responsibility and maintaining a secure environment becomes
+    one of the main priorities when dealing with Log files. This book presents a detailed
+    practical step by step guide to experiment and master Linux security-related tools.
+
+
+    Musaab Hasan
+
+    Academic researcher and cybersecurity expert, involved in various research directions
+    and worked on numerous industrial projects that gained broad recognition.
+
+
+    Zayed Balbahaith
+
+    Senior information security specialist, academic lecturer, researcher, websites
+    and games developer, involved in various governmental and military projects.
+
+
+    ![](img/7be05572b414927ff78ba38f31a7ecfc_124_0.png)
+
+
+    978-620-0-56603-4'
+  merge: -1
+  pgno: 124
