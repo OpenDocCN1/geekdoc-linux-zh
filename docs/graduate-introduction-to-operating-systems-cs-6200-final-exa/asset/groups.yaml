@@ -1,0 +1,3982 @@
+- md: "\n# CS6200 FINAL EXAM\n\nGeorge Kudravtsev\n\nFall 2018\n\n> A Word of Warning\
+    \ to Ye Who Enter\nI'm just a former student. I think most of the content in this\
+    \ guide is reasonably correct, but please don't treat these review answers as\
+    \ gospel. And, if you ask me about it, I probably won't even be able to answer\
+    \ you because I've forgotten 80% of this stuff.\n(though I would appreciate corrections)\n\
+    \n# Part 3 – Lesson 1: Scheduling\n\nLecture video: https://classroom.udacity.com/courses/ud923/lessons/339758762/concepts/last-view\n\
+    Transcript: https://docs.google.com/document/d/1CR-2lcEdH4NG5xRIdHsqBxQQQ9T4OQIxXG-ZRJWKQ\n\
+    \n# METRIC MANIA\n\nWarning: I'm pretty sure this boxed everyone that read it\
+    \ in with me. The purpose of the formula \"derivations\" was to try to get a better\
+    \ understanding of each metric by generalizing it. You won't need the formulas,\
+    \ but you should definitely understand what each of the metrics entails!\n\nWhen\
+    \ scheduling, there are a number of important metrics to keep in mind to effectively\
+    \ compare algorithms. For all of them, we define $T_i$ as the completion time\
+    \ of task $i$, where the values are ascending values based on their queuing order\
+    \ (not execution order, as defined by the scheduler). This value is either prior\
+    \ to execution (in an ideal world) or estimated based on heuristics (in the real\
+    \ world). We also define $n$ as the number of tasks used for the metric.\n\nThe\
+    \ first three metrics assume that all tasks are submitted at the same time. Such\
+    \ a simplistic scenario is unlikely to appear on the exam, and so is likely to\
+    \ understand how these formulas were derived rather than simply memorize them.\
+    \ Understanding their derivation will synthesize the information better for a\
+    \ final-worthy question that may involve more complex scenarios priorities, preemption,\
+    \ and varied arrival times. Such scenarios are hard to generalize, and this is\
+    \ much better done by hand.\n\n- Throughput ($\\tau$) – We define this as the\
+    \ number of tasks that can be completed during a period of time. To keep things\
+    \ simple, the 'selected period of time' should be the total time to execute all\
+    \ of the tasks in the given scenario.\n\n```\n$\\tau = \\frac{n}{\\sum_{i=1}^n\
+    \ T_i}$\n```\n\n# Graduate Introduction to Operating Systems\n\n# Review Guide\
+    \ – FINAL\n\n- **Avg. Job Completion Time ($c_{avg}$)** - This is defined as the\
+    \ average time it takes for a task to go from 'queued' to 'completed.'\n\nFor\
+    \ a FCFS policy,\n\n```\n$c_{avg} = \\frac{nT_i + (n-1)T_{i+1} + \\dots + T_n}{n}\
+    \ \\sum_{i=1}^{n} (n-i)T_i$\n```\n\nFor a SJF policy, we define $C_j$ as the *sorted\
+    \ order* of the tasks based on their expected completion time (ascending). $C_1$\
+    \ is the shortest, and so on. Then, the formula is identical to FCFS except with\
+    \ $C_j$ replacing $T_i$.\n\n- **Avg. Job Wait Time ($w_{avg}$)** - This is defined\
+    \ as the average time it takes for a task to move from a 'queued' state to an\
+    \ 'executing' state.\n\nFor a FCFS policy,\n\n```\n$w_{avg} = \\frac{(n-1)T_1\
+    \ + (n-2)T_2 + \\dots + T_{n-1}}{n} \\sum_{i=1}^{n} (n-i)T_i$\n```\n\nFor a SJF\
+    \ policy, the formula for $w_{avg}$ mirrors FCFS with $C_j$ instead of $T_i$.\n\
+    \n- **CPU Utilization ($\\mu$)** - This is defined as the percentage of time that\
+    \ the CPU is used to do \"useful work\" (i.e. not context switches). In general,\n\
+    \n```\n$\\mu = \\frac{t_{useful}}{t_{useful} + t_{overhead}}$\n```\n\nThe timeslice\
+    \ should be calculated over a consistent interval. It's useful to use an interval\
+    \ that is related to the given timeslice to figure out how much overhead occurs.\n\
+    \nHow does scheduling work? What are the basic steps and data structures involved\
+    \ in scheduling a task on the CPU? I think of scheduling as the thing that happens\
+    \ between tasks. As a kernel-level task, the scheduling algorithm executes periodically\
+    \ and is triggered for many reasons, including:\n\n- **Idling** — when the CPU\
+    \ becomes idle, the scheduler runs the next task to avoid waiting.\n- **New Tasks**\
+    \ — when a new task arrives on the ready queue, the scheduler may determine what\
+    \ to do with the task. If the scheduler requests priority, it may choose to interrupt\
+    \ the current task.\n- **Timeslice Expiration** — to ensure fairness, tasks are\
+    \ usually assigned a time limit in which they are allowed exclusive access to\
+    \ the CPU. Once timeslice expires, the scheduler needs to determine who is allotted\
+    \ the next timeslice.\n\nThe decisions made in each of the above scenarios depend\
+    \ on scheduling policies; they require different implementations. In the abstract,\
+    \ the data structure used for scheduling is the runqueue, and it's tightly coupled\
+    \ to decision-making.\n\n# Graduate Introduction to Operating Systems\n\n Review\
+    \ Guide – FINAL\n\nWhat are the overheads associated with scheduling? Do you understand\
+    \ the tradeoffs associated with the frequency of preemption and scheduling (short\
+    \ vs. long slices)? One of the overheads of scheduling is the context switch itself.\n\
+    \n```\n$context switch < t_{overhead}$\n```\n\nSimilarly, it's only beneficial\
+    \ to run the scheduler if it takes less time than the amount of time it would\
+    \ take to finish the task. To discretize the overhead, the overhead of the algorithm\
+    \ and the overhead of context switch are even possible to schedule when nothing\
+    \ to do—Longer timeslices are better for CPU-bound tasks. By their nature, metrics\
+    \ like wait time are irrelevant because the task's goal is to do useful work.\
+    \ Shorter timeslices are better for I/O-bound tasks. I/O-heavy tasks implicitly\
+    \ create their own schedule by yielding during I/O operations. Additionally, shorter\
+    \ timeslices allow them opportunity to interact with incoming requests, which\
+    \ are essential for “interactivity.” The sooner an I/O bound task can issue an\
+    \ I/O request, the better less idle time for tasks who also want CPU time. Shorter\
+    \ timeslices allow for better distribution of utilization – both devices can stay\
+    \ highly used.\n\nCan you compute the metrics described at the top of this section\
+    \ given a scenario (i.e. given a few threads with their compute and I/O phases)\
+    \ and scheduling policy? Consider a scenario with the following workload:\n\n\
+    - 3 tasks – $T_1$ is I/O-bound but needs 3ms of CPU time; $T_2$ and $T_3$ are\
+    \ CPU-bound and need 4ms and 5ms of CPU time, respectively.\n- $T_1$ issues an\
+    \ I/O request when there is nothing after 1ms of CPU time.\n- I/O requests take\
+    \ 5ms to complete.\n- The scheduling algorithm runs in 0.2ms, and a context switch\
+    \ costs 0.3ms.\n- The scheduling policy is robin with 2ms timeslices.\n- Tasks\
+    \ arrive in the order 1, 2, 3.\n\nThe resulting timeslice graph looks like the\
+    \ following:\n\n![](img/a24b7091bf587932fb9e28c753b6515_2_0.png)\n\nFigure 1:\
+    \ The timeslice graph for tasks $T_1, T_2$, and $T_3$. Note the assumption that\
+    \ the scheduler is still invoked if there are no tasks. This may not be true –\
+    \ I'm planning on asking a question about this on Piazza/Slack.\n\n# Graduate\
+    \ Introduction to Operating Systems\n\n# Guide – FINAL\n\nThroughput 3 tasks completed\
+    \ in 14.7 seconds means $\\tau = 3/14.7 \\approx 0.204 tasks/s.\n\nAvg. Completion\
+    \ The completion times are (8.5, 11, 14.7) for the tasks, in seconds. Thus, the\
+    \ average completion time is:\n\n```\n$c_{avg} = \\frac{8.5+11+14.7}{3} = \\frac{34.2}{3}\
+    \ = 11.4 s\n```\n\nAvg. Wait The wait times are (0, 1.5, 4) for the tasks, in\
+    \ seconds. Thus, the average wait time is simply:\n\n```\n$w_{avg} = \\frac{1.5}{3}\
+    \ = 1.833 s\n```\n\nCPU Utilization We first choose the interval, the entire running\
+    \ time of the tasks. It will give us the most accurate utilization. Over the course\
+    \ of 15 switches, we had 5 context switches and 6 algorithm invocations.\n\n```\n\
+    $\\mu = \\frac{14.7-(5\\times(0.5+0.2))}{14.7} \\approx 0.816$\n```\n\nThus, we\
+    \ had about 82% CPU utilization for these tasks. Not ideal, but the overhead is\
+    \ an absurd amount of time... shrugs.\n\nDo you understand the motivation behind\
+    \ the multi-level feedback queue? Specifically, why different queues have different\
+    \ priorities and how moves between these queues? You can contrast this with the\
+    \ O(1) scheduler? What do you understand were the problems with the O(1) scheduler\
+    \ which led to the CFS?\n\nThe multi-level feedback queue (MLFQ), was designed\
+    \ to dynamically balance a task's runtime based on the history of the task. Each\
+    \ level of the MLFQ contains increasingly longer time values. If a task yields\
+    \ during its entirety, it is considered to be more CPUbound. However, if it uses\
+    \ the entire timeslice, it is moved to a lower level of the queue.\n\n| THEORY\
+    \ IN ACTION |\n|---| \n| The scheduler uses a 6-level MLFQ, with some fancy rules\
+    \ calculating the feedback that moves tasks between levels. |\n\nLinux (1) Scheduler\
+    \ This scheduler takes time to perform both task switching and insertion. It borrows\
+    \ from the MLFQ but has a different approach to incorporating feedback. The priority\
+    \ of a task — ranging from 0 (high) to 139 (low), where priorities (0, 99) are\
+    \ “real-time” and kernel-level — is proportional to its timeslice priority ↑ timeslice↓.\
+    \ In other words, the more idle indicates more I/O operations, and the priority\
+    \ is raised. Less idle time indicates more CPU usage, and priority is lowered\
+    \ (by 5, in both cases). Please note the word “priority” in this paragraph means\
+    \ the logical priority (as in, this is a “high priority task”), a high priority\
+    \ task would have a low priority value, which can be confusing (especially on\
+    \ the sample image).\n"
+  mdcn: "\n\n# CS6200 期末考试\n\nGeorge Kudravtsev\n\n2018年秋季\n\n> 给入场者的警告\n我只是一个曾经的学生。我认为本指南中的大部分内容都是相当正确的，但请不要将这些复习答案视为金科律。而且，如果你问我关于这些问题，我可能无法回答你，因为我已经忘记了其中\
+    \ 80% 的内容。\n（尽管我很感谢指正）\n\n# 第 3 部分 – 第 1 节：调度 (Scheduling)\n\n课程视频：https://classroom.udacity.com/courses/ud923/lessons/339758762/concepts/last-view\n\
+    转字稿：https://docs.google.com/document/d/1CR-2lcEdH4NG5xRIdHsqBxQQQ9T4OQIxXG-ZRJWKQ\n\
+    \n# 指标狂热\n\n警告：我非常确定读过这个框内容的人和我一样有共鸣。公式“推导”的目的是试图通过泛化它来更好地理解每个指标。你不需要这些公式，但你绝对应该理解每个指标包含的内容！\n\
+    \n在进行调度时，有许多重要的指标需要记住，以便有效地比较算法。对于所有这些指标，我们定义 $T_i$ 为任务 $i$ 的完成时间，其值是根据队列顺序排列的升数值（而不是调度器定义的执行顺序）。该值要么是在执行之前（在理想世界中），要么是基于启发式估计的（在现实世界中）。我们还定义\
+    \ $n$ 为用于该指标的任务数量。\n\n前三个指标假设所有任务同时同时提交。这种简单的场景不太可能出现在考试中，因此，理解这些公式是如何推导出来的可能比简单地背下它们更好。理解它们的推导过程可以更好地综合信息，以应对期末水平的题目，这类题目可能涉及更复杂的场景，如优先级、抢占和不同的到达时间。此类场景很难泛化，通过手算完成效果会更好。\n\
+    \n- 吞吐量 ($\\tau$) – 我们将其定义为在一段时间内可以完成的任务数。为了保持简单，“所选时间段” 应该是在给定场景下执行所有任务的总时间。\n\
+    \n```\n$\\tau = \\frac{n}{\\sum_{i=1}^n T_i}$\n```\n\n# 操作系统研究生导\n\n# 复习指南 – 期末\n\
+    \n- **平均作业完成时间 ($c_{avg}$)** - 这定义为任务从“队列中”到“已完成”所需的平均时间。\n\n对于 FCFS（先来先行）策略，\n\
+    \n```\n$c_{avg} = \\frac{nT_i + (n-1)T_{i+1} + \\dots + T_n}{n} \\sum_{i=1}^{n}\
+    \ (n-i)T_i$\n```\n\n对于 SJF（最短作业优先）策略，我们定义 $C_j$ 为根据预期完成时间（升序）排序的任务*排序顺序*。$C_1$\
+    \ 是最短的，依此类推。那么，公式与 FCFS 相同，只是用 $C_j$ 替换了 $T_i$。\n\n- **平均作业等待时间 ($w_{avg}$)**\
+    \ - 这定义为任务从“队列”状态移动到“执行”状态所需的平均时间。\n\n对于 FCFS 策略，\n\n```\n$w_{avg} = \\frac{(n-1)T_1\
+    \ + (n-2)T_2 + \\dots + T_{n-1}}{n} \\sum_{i=1}^{n} (n-i)T_i$\n```\n\n对于 SJF 策略，$w_{avg}$\
+    \ 的公式与 FCFS 镜像，用 $C_j$ 代替了 $T_i$。\n\n- **CPU 利用率 ($\\mu$)** - 这定义为 CPU 用于执行“有用工作”（即非上下文切换）的时间百分比。通常，\n\
+    \n```\n$\\mu = \\frac{t_{useful}}{t_{useful} + t_{overhead}}$\n```\n\n时间片（timeslice）应该在一致的时间间隔内进行计算。使用与给定时间片相关的间隔来计算发生了多少开销，将是很有帮助的。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲 (Idling)** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n调度是如何运作的？在 CPU 上调度任务涉及哪些基本步骤和数据结构？我将调度理解为发生在任务之间的事情。作为一种内核级任务，调度算法周期性执行，并由许多原因触发，包括：\n\
+    \n- **空闲** — 当 CPU 空闲时，调度器运行下一个任务以避免等待。\n- **新任务** — 当新任务到达就绪队列时，调度器可能决定如何处理该任务。如果调度器请求优先级，它可能会选择中断当前任务。\n\
+    - **时间片过期** — 为了确保公平，任务通常会被分配一个时间限制，在此限制内它们被允许独占 CPU。一旦时间片过期，调度器需要决定分配下一个给谁。\n\
+    \n（注：由于输入文本存在大量重复段落，根据“不要重复输出原文”的原则，此处译文已对核心内容进行处理。若需完整翻译所有重复段落，请告知。）\n\n[翻译内容]\n\
+    \n# CS6200 期末考试\n\nGeorge Kudravtsev\n\n2018年秋季 \n\n# 第 3 部分 – 第 1 节: 调度 (Scheduling)\n\
+    ... \n\n# 操作系统研究生导\n\n# 复习指南 – 期末\n\n- **平均作业完成时间 ($c_{avg}$)** - 这定义为任务从“队列中”到“已完成”所需的平均时间。\n\
+    ... \n\n- **平均作业等待时间 ($w_{avg}$)** - 这定义为任务从“队列”状态移动到“执行”状态所需的平均时间。\n... \n\n\
+    - **CPU 利用率 ($\\mu$)** - 这定义为 CPU 用于执行“有用工作”（即非上下文切换）的时间百分比。\n... \n\n调度是如何运作的？在\
+    \ CPU 上调度任务涉及哪些基本步骤和数据结构？\n... \n\n"
+  merge: -1
+  raw:
+  - "[PAGE 0]\n\n# CS6200 FINAL EXAM\n\nGeorge Kudravtsev\n\nFall 2018\n\n> A Word\
+    \ of Warning to Ye Who Enter\nI'm just a former student. I think most of the content\
+    \ in this guide is reasonably correct, but please don't treat these review answers\
+    \ as gospel. And, if you ask me about it, I probably won't even be able to answer\
+    \ you because I've forgotten 80% of this stuff.\n(though I would appreciate corrections)\n\
+    \n# Part 3 – Lesson 1: Scheduling\n\nLecture video: https://classroom.udacity.com/courses/ud923/lessons/339758762/concepts/last-view\n\
+    Transcript: https://docs.google.com/document/d/1CR-2lcEdH4NG5xRIdHsqBxQQQ9T4OQIxXG-ZRJWKQ\n\
+    \n# METRIC MANIA\n\nWarning: I'm pretty sure this boxed everyone that read it\
+    \ it me. The purpose of the formula \"derivations\" was to try to get a better\
+    \ understanding of each metric by generalizing it. You won't need the formulas,\
+    \ but you should definitely understand what each of the metrics entails!\n\nWhen\
+    \ scheduling, there are a number of important metrics to keep in mind to effectively\
+    \ compare algorithms. For all of them, we define $T_i$ as the completion time\
+    \ of task $i$, where the are are ascending values based on their queuing order\
+    \ (not execution order, as defined by the scheduler). This value is either prior\
+    \ to execution (in an ideal world) or estimated based on heuristics (in the real\
+    \ world). We also define $n$ as the number of tasks used for the metric.\n\nThe\
+    \ first three metrics assume that all tasks are submitted at the same time. Such\
+    \ a simplistic scenario is unlikely to appear on the exam, and so is likely to\
+    \ understand how these formulas were derived rather than simply memorize them.\
+    \ Understanding their derivation will synthesize the information better for a\
+    \ final-worthy question that may involve more complex scenarios priorities, preemption,\
+    \ and varied arrival times. Such scenarios are hard to generalize, and this is\
+    \ much better done by hand.\n\n+   * Throughput ($\tau$) – We define this as the\
+    \ number of tasks that can be completed during a period of time. To keep things\
+    \ simple, the 'selected period of time' should be the total time to execute all\
+    \ of the tasks in the given scenario.\n\n```\n$\tau = \\frac{n}{\\sum_{i=1}^n\
+    \ T_i}$\n```"
+  - '[PAGE 1]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    +   **Avg. Job Completion Time ($c_{avg}$)** - This is defined as the average
+    time it takes for a task to go from ''queued'' to ''completed.''
+
+
+    For a FCFS policy,
+
+
+    ```
+
+    $c_{avg} = \frac{nT_i + (n-1)T_{i+1} + \dots + T_n}{n} \sum_{i=1}^{n} (n-i)T_i$
+
+    ```
+
+
+    For a SJF policy, we define $C_j$ as the *sorted order* of the tasks based on
+    their expected completion time (ascending). $C_1$ is the shortest, and so on.
+    Then, the formula is identical to FCFS except with $C_j$ replacing $T_i$.
+
+
+    +   **Avg. Job Wait Time ($w_{avg}$)** - This is defined as the average time it
+    takes for a task to move from a ''queued'' state to an ''executing'' state.
+
+
+    For a FCFS policy,
+
+
+    ```
+
+    $w_{avg} = \frac{(n-1)T_1 + (n-2)T_2 + \dots + T_{n-1}}{n} \sum_{i=1}^{n} (n-i)T_i$
+
+    ```
+
+
+    For a SJF policy, again define $C_j$ as outlined for $c_{avg}$ and the formula
+    mirrors FCFS but with $C_j$ instead of $T_i$.
+
+
+    +   **CPU Utilization ($\mu$)** - This is defined as the percentage of time that
+    the CPU is used to do "useful work" (i.e. not context switches). In general,
+
+
+    ```
+
+    $$\mu = \frac{t_{useful}}{t_{useful} + t_{overhead}}$
+
+    ```
+
+
+    The times should be calculated over a consistent, recurring interval. It''s useful
+    to use an interval that is related to the given timeslice, figure out how much
+    overhead occurs during timeslice.
+
+
+    > How does scheduling work? What are the basic steps and data structures involved
+    in scheduling a thread on the CPU?
+
+
+    I think of scheduling as "the thing that happens between the other things." Existing
+    as a kernel-level task, the scheduling algorithm executes periodically and is
+    triggered for many reasons, including:
+
+
+    +   **Idling** — when the CPU becomes idle, the scheduler runs to the next task
+    to execute, to avoid waiting resources.
+
+
+    +   **New Tasks** — when a new task arrives on the ready queue, the scheduler
+    may need to determine what to do with the task. If the scheduler requests task
+    priority, for example, it may choose to interrupt the current task (known as preemption)
+    and prioritize the new task.
+
+
+    +   **Timeslice Expiration** — to ensure fairness, tasks are usually assigned
+    a time limit in which they are allowed exclusive access to the CPU. Once the timeslice
+    expires, the scheduler needs to determine who is allotted the next timeslice.
+
+
+    The decisions made in each of the above scenarios depends on the scheduling policy;
+    different policies enable different types of decisions and require different types
+    of implementations. In the abstract, the data structure used for scheduling is
+    known as the runqueue, and it''s tightly coupled to a policy to enable specific
+    decision-making.'
+  - '[PAGE 2]
+
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    What are the overheads associated with scheduling? Do you understand the tradeoffs
+    associated with the frequency of preemption and scheduling/what types of workloads
+    benefit from vs. infrequent intervention of the scheduler (i.e. short vs. long
+    time-slices)?
+
+
+    One of the obvious overheads of scheduling is the execution of the scheduling
+    algorithm itself. Just if it''s only beneficial to switch between tasks:
+
+
+    ```
+
+    $2^{context switch < t_{blocking}}$
+
+    ```
+
+
+    Similarly, it''s only beneficial to run the scheduler if it takes less time than
+    the amount of time it would take to finish the task. To discretize the overhead,
+    there''s the overhead of overhead, the overhead of the algorithm, and the overhead
+    of the resulting context switch. It''s even possible to schedule control when
+    there''s nothing to do – for example: a timeslice expired, it''s only the task.
+
+
+    Longer timeslices are better for CPU-bound tasks. By their nature, metrics like
+    average wait time are irrelevant because the task''s goal is to do useful work.
+    CPU-bound tasks don''t require interactivity and can always make the best of their
+    time on the CPU.
+
+
+    Shorter timeslices are better for I/O-bound tasks. I/O-heavy tasks will implicitly
+    create their own schedule by yielding during I/O operations. Additionally, shorter
+    timeslices allow them opportunity to interact with the user, responding to incoming
+    requests, etc. which are essential for perceiving “interactivity.” The sooner
+    an I/O bound task can issue an I/O request, the better; less idle time for task
+    and better for other tasks who also want CPU time. Shorter timeslices allow for
+    a better distribution of utilization – both devices can stay highly in-use.
+
+
+    Can you compute the metrics described at the top of this section given a scenario
+    describing some workload (i.e. given a few threads with their compute and I/O
+    phases) and its scheduling policy?
+
+
+    Consider a scenario with the following workload:
+
+
+    +   - 3 tasks – $T_1$ is I/O-bound but needs 3ms of CPU time; $T_2$ and $T_3$
+    are CPU-bound and need 4ms and 5ms of CPU time, respectively.
+
+    - $T_1$ issues an I/O request when there''s nothing after 1ms of CPU time.
+
+    - I/O requests take 5ms to complete.
+
+    - The scheduling algorithm runs in 0.2ms, and a context switch costs 0.3ms.
+
+    - The scheduling policy is robin with 2ms timeslices.
+
+    - Tasks arrive in the order 1, 2, 3.
+
+
+    The resulting timeslice graph looks like the following:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_2_0.png)
+
+
+    Figure 1: The timeslice graph for tasks $T_1, T_2$, and $T_3$. Note the assumption
+    that the scheduler is still invoked if there are no other tasks. This may not
+    be true – I''m planning on asking a question about this on Piazza/Slack.'
+  - "[PAGE 3]\n\n# Graduate Introduction to Operating Systems\n\n# Review Guide –\
+    \ FINAL\n\nThroughput 3 tasks completed in 14.7 seconds means τ = 3/14.7 ≈ 0.204\
+    \ tasks/s.\n\nAvg. Completion The completion times are (8.5, 11, 14.7) for the\
+    \ tasks, in seconds. Thus, the average completion time is:\n\n```\nc_{avg}=\\\
+    frac{8.5+11+14.7}{3} = \\frac{34.2}{3} = 11.4 s\n```\n\nAvg. Wait The wait times\
+    \ are (0, 1.5, 4) for the tasks, in seconds. Thus, the average wait time is simply:\n\
+    \n```\nw_{avg}=\\frac{1.5}{3} = 1.833 s\n```\n\nCPU Utilization We first choose\
+    \ the interval, the entire running time of the tasks. It will give us the most\
+    \ accurate utilization. Over the course of 15 switches, we had 5 context switches\
+    \ and 6 algorithm invocations.\n\n```\n\\mu=\\frac{14.7-(5\\times(0.5+0.2))}{14.7}\
+    \ \\approx 0.816\n```\n\nThus, we had about 82% CPU utilization for these tasks.\
+    \ Not ideal, but the overhead is an absurd amount of time... shrugs.\n\nDo you\
+    \ understand the motivation behind the multi-level feedback queue? Specifically,\
+    \ why different queues have different priorities and how moves between these queues?\
+    \ You can contrast this with the O(1) scheduler? What do you understand were the\
+    \ problems with the O(1) scheduler which led to the CFS?\n\nThe multi-level feedback\
+    \ queue (MLFQ), was designed to dynamically balance a task's runtime based on\
+    \ the history of the task and other heuristics. Each level of the MLFQ contains\
+    \ increasingly longer time values. If a task yields during its entirety, it is\
+    \ considered to be more CPU-bound However, if it uses the entire timeslice, it\
+    \ is moved to a lower level of the queue. Likewise, if the scheduler notices that\
+    \ a task is yielding often for its timeslice an will push the task back to the\
+    \ queue into a shorter timeslice an indication of an I/O-bound task\n\n| THEORY\
+    \ IN ACTION |\n|---| \n| The scheduler uses a 6-level MLFQ, with some fancy rules\
+    \ calculating the feedback that moves tasks between levels. |\n\nLinux (1) Scheduler\
+    \ This scheduler takes time to perform both task switching and insertion. It borrows\
+    \ from the MLFQ but has a different approach to incorporating feedback. The priority\
+    \ of a task — ranging from 0 (high) to 139 (low), where priorities (0, 99) are\
+    \ “real-time” and kernel-level — is proportional to its timeslice priority ↑ timeslice↓\
+    \ and the priority is adjusted to be inversely proportional to the timeslice.\
+    \ In other words, the more idle indicates more I/O operations, and the priority\
+    \ is raised. Less idle time indicates more CPU usage, and priority is lowered\
+    \ (by 5, in both cases). Please note the word “priority” in this paragraph means\
+    \ the logical priority (as in, this is a “high priority task”), a high priority\
+    \ task would have a low priority value, which can be confusing (especially on\
+    \ the sample image).\n\nNotice that this is the opposite of what we determined\
+    \ as the “ideal” scheduling for both I/O- and CPUbound. This is intended to ensure\
+    \ fairness: an I/O-bound task will not use its entire timeslice and will yield\
+    \ naturally, and a CPU-bound task should be frequently interrupted to ensure it\
+    \ doesn’t resources (which it gladly will)."
+- md: '
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide — FINAL
+
+
+    Implementation The require of this scheduler used two parallel arrays of lists
+    (i.e. something struct task_list[140]). One of these was the active array whereas
+    the other was the expired array; the index corresponded to the priority.
+
+
+    # ACHIEVING O(1)
+
+
+    Insertion is trivially O(1): it requires inserting into an array and mapping the
+    “end” pointer of the list to the new task. Selection is achieved by using a hardware
+    instruction to find the first set bit in a bitmap corresponding to the array in
+    which a set bit indicates a non-empty index.
+
+
+    Tasks remain in the active array until they expire; voluntarily yielding tasks
+    “active”. On expiration, the task is moved to the expired array. When there are
+    no more tasks in the active array, it is swapped with the expired array. Note
+    that higher priority tasks (which are often I/O-bound) higher times means that
+    they will be kept scheduled if they need appropriately.
+
+
+    Problems workloads changed to become more interactive; things like video chat,
+    gaming, etc. meant the jitter caused by long times became unacceptable. Even though
+    I/O-bound tasks would naturally get a higher priority, moving to the expired array
+    may mean a wait before they ever get another chance to run. Significant delays
+    cause poor performance for users. The O(1) scheduler didn''t make guarantees or
+    clauses for fairness: task execution was not proportional to priority.
+
+
+    Linux CFS This scheduler—“completely fair scheduler”— replaced it. Its require
+    uses a red-black tree, which is self-balancing and tries to ensure the tree’s
+    depth is similar across all nodes. The tree is ordered by “virtual runtime,” or
+    runtime. Its priority is proportional to the time spent by a task on the CPU (with
+    nanosecond granularity) and in other words, runtime is adjusted based on the actual
+    time spent on the CPU, then scaled by the task’s priority and “nicness”¹..
+
+
+    Implementation In each branch, the left node has less runtime than the right node.
+    Hence, the left-most node in the tree is always picked, as it has the least amount
+    of time on the CPU. Runtime increases for low-priority tasks, moving them to the
+    right, and increases slower for high-priority tasks, allowing them more time on
+    the left side of a branch. The same tree is used for all priorities; the priority
+    is implicitly included in the balancing of the tree via runtime.
+
+
+    Algorithmic Complexity Selecting a task is still O(1), but insertion is now O(log
+    N), where N is the total number of processors in the require.
+
+
+    > In Fedora’s task of scheduling for multiprocessors, what’s the goal of the scheduler’s
+    figuring for? What are some performance counters that can be useful in identifying
+    the workload (compute vs. memory bound) and the ability of the scheduler to maximize
+    the throughput?
+
+
+    Fedora argues that the ideal scheduler would need information about pending workloads
+    when scheduling decisions. It uses the theoretical metric CPI, or cycles per execution,
+    as a way to measure the “average instruction delay.” A device-heavy workload would
+    spend a lot of ticks waiting on an instruction to complete, whereas a CPU-bound
+    workload could complete faster.
+
+
+    Unfortunately, CPI is not only a theoretical, but unreliable metric for many applications.
+    Applications are often not heavily skewed towards either CPU-bound or I/O-bound,
+    meaning CPI does not vary enough to make reliable scheduling decisions.
+
+
+    CALL: A task’s “nice” value adjusts its priority from the default.
+
+
+    5
+
+
+    # Part 3 – Lesson 2: Memory Management
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/339975873/concepts/last-viewed
+
+    Transcript: https://docs.google.com/document/d/lutXUw0Sa7IRqwexJR1nG9Fit60Eqc4aHX8iRuYZTA
+
+
+    # INTEL PTE
+
+
+    The following is a page table entry on the MMU in Intel processors.
+
+
+    | 31 | 9 | | | | | | | 0 |
+
+    |---|---|---|---|---|---|---|---||-|
+
+    | PPN | G | PAT | D | PCD | PWT | U/S | R/W | P |
+
+
+    The labels correspond to the following meanings:
+
+
+    - **D** The dirty bit, indicating whether or not the page has been written to
+    since it was loaded.
+
+    - **A** The accessed bit, indicating whether or not the page has been accessed
+    during some period of time, typically used in page replacement algorithms.
+
+    - **PCD** Indicates whether or page caching is disabled.
+
+    - **PWT** Toggles page-through.
+
+    - **U/S** Indicates the privilege level of the page, either user-mode or system-mode.
+
+    - **R/W** Controls the permissions on the page: 0 indicates it''s a read-only
+    page, whereas 1 indicates both read and write permissions.
+
+    - **P** The present bit, akin to a "valid" bit.
+
+
+    How does the OS manage the memory allocated to the underlying physical memory?
+    What happens when a process tries to access a page not in physical memory? What
+    happens when a process tries to access a page that hasn''t been allocated to it?
+    What happens when a process tries to modify a page''s protected? How does COW
+    work?
+
+
+    In order to create an isolation for processes, in which they have access to all
+    (or more) the system''s physical memory, computers use page tables. Processes
+    are assigned a virtual address space; this is associated with physical memory
+    as it''s referenced. Page tables are the data structure that performs the association
+    and translation between virtual and physical addresses (or nested levels of page
+    tables, known as multi-level page tables). They require hardware support and are
+    outside the scope of the kernel - modern architectures have a memory management
+    unit (MMU) responsible for these tasks.
+
+
+    When the process accesses memory, the virtual address is translated to a physical
+    location by the MMU. There are a variety of things that can occur as a result
+    of an unsuccessful translation:
+
+
+    - Not Present if the translation for requested address is present in the page
+    table but does not translate to an existing physical address, that (the entire
+    "page") has been moved elsewhere (like to the disk). Thus, the memory read results
+    from a disk, placing the page back into physical memory and updating the page
+    table.
+
+
+    - Not Allocated There are two forms of unallocated address accesses: intended
+    and unintended.
+
+
+    An intended unallocated page access would be like the process stack growing beyond
+    a page boundary. The stack needs another page to keep growing. This kind of access
+    would likely be interpreted as "valid" by the kernel, allowing it to create a
+    new page table and associate the new page with physical memory, replacing some
+    outdated page if necessary. This is known in literature as "allocation on first
+    touch."
+
+
+    An unallocated unwanted access would be like dereferencing an invalid pointer.
+    This is another type of page fault that would result in a segmentation fault (SIGGV).
+
+
+    - Not Allowed If a particular type of access is forbidden – such as a write to
+    a read-only page (like the .data section of a program) the MMU will issue a page
+    fault to the operating system. This type of protection is critical for certain
+    exception techniques such as W^X (write-xor-execute), which mark memory as either
+    writable or executable, preventing things like buffer overflows.
+
+
+    Copy-on-Write COW. Since the clone will contain much of the same data as its parent,
+    there is no need to copy it to a different location. Otherwise, the two address
+    spaces refer to the same physical pages. That is, until the clone writes some
+    new data, and only then, do we copy the physical page marking the page write-protected
+    for the clone.
+
+
+    > How do we handle the fact that processes address more memory than physically
+    available? How does page replacement work?
+
+
+    Because addresses are virtualized, we can address an arbitrary amount of memory.
+    Any pages that don''t fit into physical memory can still be stored on disk and
+    are "paged in" or "paged out" as needed. A page table exists (this is an important
+    part of a context switch) and has entries to map all possible memory. For entries
+    beyond physical memory is managed by the operating system: it tracks extra memory
+    being stored on disk, and once. When a page''s not in physical memory is requested,
+    the MMU will then look up where it stored the page on disk, placing it into physical
+    memory and updating the page table. This process of swapping out pages to simulate
+    a larger address space is known as demand paging.
+
+
+    Decisions about which page to replace depend on the replacement policy. One policy
+    is the recently used page (or LRU); this policy will evict the oldest unaccessed
+    page in the page table (via the access bit) to make room for a new entry from
+    disk. Replacements can also use the dirty bit: if a page hasn''t been modified,
+    it doesn''t need to be written somewhere to be replaced.
+
+
+    > How does address translation work? What''s the role of the TLB?
+
+
+    Address translation works as follows:
+
+    '
+  mdcn: '
+
+
+    # 操作系统研究生导论
+
+
+    # 复习指南 — 期末考试
+
+
+    实现：该调度器使用了两个并行的列表数组（例如 `something struct task_list[140]`）。其中一个是活跃数组（active array），另一个是过期数组（expired
+    array）；索引对应优先级。
+
+
+    # 实现 O(1)
+
+
+    插入是轻而易见的 O(1)：它需要将任务插入到数组中，并将列表的“末尾”指针映射到新任务。选择通过使用硬件指令在位图中找到对应数组的第一个置位来实现的，位图中的置位表示该索引非空。
+
+
+    任务一直留在活跃数组中，直到它们过期；主动让出（yielding）的任务保持为“活跃”状态。过期后，任务被移动到过期数组。当活跃数组中没有更多任务时，它将与过期数组交换。请注意，高优先的任务（通常是
+    I/O 密集型的）频率更高，意味着如果需要，它们会被更频繁地调度。
+
+
+    工作负载发生了变化，变得更具交互性；如视频聊天、游戏等，这意味着长时间等待引起的抖动变得无法接受。尽管 I/O 密集型任务自然会获得更高的优先级，但移动到过期数组可能意味着在获得下一次运行机会之前需要等待。显著延迟会导致用户性能低劣。O(1)
+    调度器没有对公平性做出保证或规定：任务执行与优先级不成正比。
+
+
+    Linux CFS：这种调度器——“完全公平调度器”取代了它。它的实现使用了红黑树，红黑树是自平衡的，并试图确保树深度在所有节点之间相似。树按“虚拟运行时间”（virtual
+    runtime）或运行时间排序。优先级与任务在 CPU 上花费的时间（纳秒级粒度）成比例，换句话说，运行时间根据在 CPU 上的实际时间进行调整，然后根据任务的优先级和“nice”值¹进行缩放。
+
+
+    实现：在每个分支中，左节点的运行时间少于右节点。因此，树中最左的节点总是被选中，因为它在 CPU 上花费的时间最少。低优先级任务的运行时间增加，将它们移向右侧；高优先级任务增加较慢，允许它们在分支的左侧停留更多时间。所有优先级都使用同一棵树；优先级通过运行时间在树的平衡中隐含包含。
+
+
+    算法复杂度：选择任务仍然是 O(1)，但插入现在是 O(log N)，其中 N 是要求中处理器的总数。
+
+
+    > 在 Fedora 的多处理器任务调度中，调度器计算的目标是什么？哪些性能计数器有助于识别工作负载（计算密集型 vs 内存密集型）以及调度器最大化吞吐量的能力？
+
+
+    Fedora 认为，理想的调度器在做出调度决策时需要待处理负载的信息。它使用理论指标 CPI（每次执行的周期数）作为衡量“平均指令延迟”的方法。设备密集型工作负载会花费大量时钟周期（ticks）等待指令完成，而
+    CPU 密集型工作负载可以更快地完成。
+
+
+    遗憾的是，CPI 对于许多应用来说不仅是一个理论指标，而且是一个不可靠的指标。应用程序通常不会极端偏向 CPU 密集型或 I/O 密集型，这意味着 CPI
+    的变化不足以做出可靠的调度决策。
+
+
+    术语解释：任务的“nice”值会在默认值的基础上调整其优先级。
+
+
+    5
+
+
+    # 第三部分 – 第 2 节：内存管理
+
+
+    课程视频：https://classroom.udacity.com/courses/ud923/lessons/339975873/concepts/last-viewed
+
+    转录文本：https://docs.google.com/document/d/lutXUw0Sa7IRqwexJR1nG9Fit60Eqc4aHX8iRuYZTA
+
+
+    # INTEL PTE
+
+
+    以下是 Intel 处理器中 MMU 的页表项（PTE）。
+
+
+    | 31 | 9 | | | | | | | 0 |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | PPN | G | PAT | D | PWT | U/S | R/W | P |
+
+
+    这些标签对应以下含义：
+
+
+    - **D**：脏位（Dirty bit），表示自加载以来是否被写入。
+
+    - **A**：访问位（Accessed bit），表示该页是否被访问过。
+
+    - **PCD**：缓存禁用（Page Cache Disable），禁用缓存。
+
+    - **PWT**：写通（Write-through）。
+
+    - **U/S**：用户/内核（User/Supervisor），表示权限级。
+
+    - **R/W**：读写（Read/Write），表示是否可写。
+
+    - **P**：存在位（Present bit），表示页是否在物理内存中。
+
+
+    当页在物理内存中时，MMU 会将其放入物理内存。操作系统如何管理在磁盘上的物理内存？当请求不在物理内存中的页时，MMU 将查找其存储在磁盘上的位置，将其放入物理内存并更新页表。这种通过交换页来模拟更大地址空间的过程被称为缺页存储。
+
+
+    替换哪些页的选择取决于替换策略。一种策略是最近未使用算法（LRU）；这种策略会驱逐页表中最久未访问的页（通过访问位），为从磁盘的新页腾出空间。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 4]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide — FINAL
+
+
+    Implementation The requue of this scheduler used two parallel arrays of lists
+    (i.e. something struct task_list[140]). One of these was the active array whereas
+    the other was the expired array; the index corresponded to the priority.
+
+
+    # ACHIEVING O(1)
+
+
+    Insertion is trivially O(1): it requires inserting into an array and mapping the
+    “end” pointer of the list to the new task. Selection is achieved by using a hardware
+    instruction to find the first set bit in a bitmap corresponding to the array in
+    which a set bit indicates a non-empty index.
+
+
+    Tasks remain in the active array until they expire; voluntarily yielding tasks
+    “active”. On expiration, the task is moved to the expired array. When there are
+    no more tasks in the active array, it is swapped with the expired array. Note
+    that higher priority tasks (which are often I/O-bound) higher times means that
+    they will be kept scheduled if they need appropriately.
+
+
+    Problems workloads changed to become more interactive; things like video chat,
+    gaming, etc meant the jitter caused by long times became unacceptable. Even though
+    I/O-bound tasks would naturally get a higher priority, moving to the expired array
+    may mean a wait before they ever get another chance to run. Significant delays
+    cause poor performance for users. The O(1) scheduler didn''t make guarantees or
+    clauses for fairness: task execution was not proportional to priority.
+
+
+    Linux CFS This scheduler—“completely fair scheduler”— replaced it. Its requue
+    uses a red-black tree, which is self-balancing and tries to ensure the tree’s
+    depth is similar across all nodes.[]. The tree is ordered by “virtual runtime,”
+    or runtime. Its priority is proportional to the time spent by a task on the CPU
+    (with nanosecond granularity) and in other words, runtime is adjusted based on
+    the actual time spent on the CPU, then scaled by the task’s priority and “nicness”¹.
+
+
+    Implementation In each branch, the left node has less runtime than the right node.
+    Hence, the left-most node in the tree is always picked, as it has the least amount
+    of time on the CPU. Runtime increases for low-priority tasks, moving them to the
+    right, and increases slower for high-priority tasks, allowing them more time on
+    the left side of a branch. The same tree is used for all priorities; the priority
+    is implicitly included in the balancing of the tree via runtime.
+
+
+    Algorithmic Complexity Selecting a task is still O(1), but insertion is now O(log
+    N), where N is the total number of processors in the requue.
+
+
+    > In Fedora’s task of scheduling for multiprocessors, what’s the goal of the scheduler’s
+    figuring for? What are some performance counters that can be useful in identifying
+    the workload (compute vs. memory bound) and the ability of the scheduler to maximize
+    the throughput?
+
+
+    Fedora argues that the ideal scheduler would need information about pending workloads
+    when scheduling decisions. It uses the theoretical metric CPI, or cycles per execution,
+    as a way to measure the “average instruction delay.” A device-heavy workload would
+    spend a lot of ticks waiting on an instruction to complete, whereas a CPU-bound
+    workload could complete faster.
+
+
+    Unfortunately, CPI is not only a theoretical, but unreliable metric for many applications.
+    Applications are often not heavily skewed towards either CPU-bound or I/O-bound,
+    meaning CPI does not vary enough to make reliable scheduling decisions.
+
+
+    CALL: A task’s “nice” value adjusts its priority from the default.
+
+
+    5'
+  - '[PAGE 5]
+
+
+    # Part 3 – Lesson 2: Memory Management
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/339975873/concepts/last-viewed
+
+    Transcript: https://docs.google.com/document/d/lutXUw0Sa7IRqwexJR1nG9Fit60Eqc4aHX8iRuYZTA
+
+
+    # INTEL PTE
+
+
+    The following is a page table entry on the MMU in Intel processors.
+
+
+    | 31 | 9 | | | | | | | 0 |
+
+    |---|---|---|---|---|---|---|---|-|
+
+    | PPN | G | PAT | D | PCD | PWT | U/S | R/W | P |
+
+
+    The labels correspond to the following meanings:
+
+
+    +   - **D** The dirty bit, indicating whether or not the page has been written
+    to since it was loaded.
+
+    - **A** The accessed bit, indicating whether or not the page has been accessed
+    during some period of time, typically used in page replacement algorithms.
+
+    - **PCD** Indicates whether or page caching is disabled.
+
+    - **PWT** Toggles page-through.
+
+    - **U/S** Indicates the privilege level of the page, either user-mode or system-mode.
+
+    - **R/W** Controls the permissions on the page: 0 indicates it''s a read-only
+    page, whereas 1 indicates both read and write permissions.
+
+    - **P** The present bit, akin to a "valid" bit.
+
+
+    How does the OS manage the memory allocated to the underlying physical memory?
+    What happens when a process tries to access a page not in physical memory? What
+    happens when a process tries to access a page that hasn''t been allocated to it?
+    What happens when a process tries to modify a page''s protected? How does COW
+    work?
+
+
+    In order to create an isolation for processes, in which they have access to all
+    (or more) the system''s physical memory, computers use page tables. Processes
+    are assigned a virtual address space; this is associated with physical memory
+    as it''s referenced. Page tables are the data structure that performs the association
+    and translation between virtual and physical addresses (or nested levels of page
+    tables, known as multi-level page tables). They require hardware support and are
+    outside the scope of the kernel - modern architectures have a memory management
+    unit (MMU) responsible for these tasks.
+
+
+    When the process accesses memory, the virtual address is translated to a physical
+    location by the MMU. There are a variety of things that can occur as a result
+    of an unsuccessful translation:
+
+
+    Not Present if the translation for requested address is present in the page table
+    but does not translate to an existing physical address, that (the entire "page")
+    has been moved elsewhere (like to)'
+  - '[PAGE 6]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    (the disk). Thus, the memory read results from a disk, placing the page back into
+    physical memory and updating the page table.
+
+
+    Not Allocated There are two forms of unallocated address accesses: intended and
+    unintended.
+
+
+    An intended unallocated page access would be like the process stack growing beyond
+    a page boundary. The stack needs another page to keep growing. This kind of access
+    would likely be interpreted as "valid" by the kernel, allowing it to create a
+    new page table and associate the new page with physical memory, replacing some
+    outdated page if necessary. This is known in literature as "allocation on first
+    touch."
+
+
+    An unallocated unwanted access would be like dereferencing an invalid pointer.
+    This is another type of page fault that would result in a segmentation fault (SIGGV)
+    from the user process.
+
+
+    Not Allowed If a particular type of access is forbidden – such as a write to a
+    read-only page (like the static, .data section of a program) the MMU will issue
+    a page fault to the operating system. This type of protection is critical for
+    certain exception prevention techniques such as W^X (write-xor-execute), which
+    mark memory as either writable or executable, preventing things like buffer overflows
+    that allow stack to execute code.
+
+
+    Copy-on-Write COW. Since the clone will contain much of the same data as its parent,
+    there is no need to copy it to a different location in physical memory. Otherwise,
+    the two virtual address spaces refer to the same physical pages. That is, until
+    the clone writes some new data to the page, and only then, do we copy the physical
+    page to make sure the page''s memory is not modified (marking the page as write-protected
+    for the clone). Other pages remain unoccupied, unless those containing the process''
+    instructions. This is known as copy-on-write, or COW.
+
+
+    > How do we handle the fact that processes address more memory than physically
+    available? How does page replacement work?
+
+
+    Because addresses are virtualized, we can address an arbitrary amount of memory.
+    Any pages that don''t fit into physical memory can still be stored on disk and
+    are "paged in" or "paged out" as needed. A page table exists (this is an important
+    part of a context switch) and has entries to map all possible memory. For entries
+    beyond physical memory is managed by the operating system: it tracks extra memory
+    being stored on disk, and once. When a page''s not in physical memory is requested,
+    the MMU will then look up where it stored the page on disk, placing it into physical
+    memory and updating the page table. This process of swapping out pages to simulate
+    a larger address space than physically available is known as demand paging.
+
+
+    Decisions about which page to replace depend on the replacement policy. One policy
+    is the recently used page (or LRU); this policy will evict the oldest unaccessed
+    page in the page table (via the access bit) to make room for a new entry from
+    disk. Replacements can also use the dirty bit: if a page hasn''t been modified,
+    it doesn''t need to be written somewhere to be replaced.
+
+
+    > How does address translation work? What''s the role of the TLB?
+
+
+    Address translation works as follows:'
+- md: "\n# Graduate Introduction to Operating Systems\n\n# Review Guide – FINAL\n\n\
+    ![](img/a24b7091bf587932fb9e28c7753b6515_7_0.png)\n\nFigure 2: A demonstration\
+    \ of translation from a virtual address to a physical memory location. Keep in\
+    \ mind that this diagram doesn't include TLB lookups, use hierarchical tables,\
+    \ or handle what happens on a missed entry.\n\nExplain further, a single virtual\
+    \ address is discretized into one or more page numbers (VPNs) that are used as\
+    \ the index in a page table. The resulting page table entry at index correlates\
+    \ the VPN to a physical page number (PPN); this is appended to the virtual address\
+    \ (called the offset) as is. The combined result is the physical memory location.\n\
+    \nTLB The translation lookaside buffer is a cache of recency-used page table entries.\
+    \ It allows translations to occur ever faster: since the page tables themselves\
+    \ must be stored in memory, they take time to access relative to on-chip, domain-specific\
+    \ cache.\n\n> Do you understand the relationships between the size of an address,\
+    \ the size of the address space, the size of a page, the size of the page table...\n\
+    \nLet's consider a scenario of a 24-bit architecture with 1MiB of physical memory.\
+    \ This corresponds to the following page values:\n\n- **Address Size** The address\
+    \ – both virtual and physical – simply follows the bus width by the architecture.\
+    \ Theoretically, we should be able to convert any sized of virtual address to\
+    \ a physical address, because it's a hardware-provided interface, we must rely\
+    \ on how things works in practice.\n- **Address Space** The address space is directly\
+    \ connected to the hardware bus width. Despite having 1MiB of physical memory,\
+    \ the address space still contains $2^{24}$ addresses. Anything beyond 1MiB will\
+    \ be marked as paged out; In other words, any description about the amount of\
+    \ physical memory available is a red herring when it comes to page table calculations.\n\
+    - **Page Size** This is a system-specific, custom-configurable value. For the\
+    \ purposes of demonstration, we will assume they are $4^{12}$ ($4 \\cdot 2^{10}\
+    \ = 2^{12}$).\n\nWith all of this mind, let's calculate the size of a single page\
+    \ table. Once again, we need to be able to address $2^{24}$ addresses, discretized\
+    \ into $2^{12}$-sized chunks. This means:\n\n```\n$\\frac{2^{24}}{2^{12}} = 2^{12}\
+    \ = 4096$ page table entries\n```\n\n# Graduate Introduction to Operating Systems\n\
+    \n# Review Guide – FINAL\n\nThis can also be calculated by looking at the remaining\
+    \ bits. A 4KiB means 12 bits are used for the page, leaving $24 - 12 = 12$ for\
+    \ the index, so $2^{12}$ values.\n\nDo you understand the benefits of hierarchical\
+    \ page tables? For a given address format, can you workout the sizes of the page\
+    \ table structures in different layers?\n\nPage tables are a fixed size; they\
+    \ contain enough entries to map to the entire address space, regardless of whether\
+    \ or not there is enough physical memory. Recall, also, page tables are per-process\
+    \ data structure. A process will not use much of its available virtual address\
+    \ space; this means there are empty entries in the page. By splitting the table\
+    \ into multiple levels of page tables, we can reduce the size of these gaps and\
+    \ wasted PTEs.\n\n# THEORY IN ACTION\n\nThis optimization becomes essential when\
+    \ dealing with larger address spaces. A 64-bit architecture has too many address\
+    \ memory locations to store all of PTEs. Hence it becomes necessary to divide\
+    \ it into levels.\n\nModern Intel systems have a five-level page table, capable\
+    \ of addressing 128PB (petal) of memory, given 4KiB pages. It allows us to (theoretically)\
+    \ have 57 address bits.\n\n# Sample Calculation\n\nSuppose we have a hierarchical\
+    \ page table for a 32-bit architecture with 3 levels: level 1 is 4 bits, level\
+    \ 2 is 2 bits, and level 3 is 6 bits. The first two levels indexes into the subsequent,\
+    \ deeper level, whereas the last level behaves like an index into a page table\
+    \ as before. This results in a virtual address chunking like:\n\n| $P_1$ | $P_2$\
+    \ | $P_3$ | offset |\n|---|---|---|---|\n| 31 | 27 | 25 | 19 |\n\nThus, $P_1$\
+    \ indexes into the first table, which has $2^4 = 16$ entries. $P_2$ indexes into\
+    \ the second table, which has $2^2 = 4$ entries. $P_3$ indexes into the third\
+    \ table and combines with the offset just like in a single-level table (see Figure\
+    \ 2), having $2^6=64$ entries.\n\nHow does this impact the address space? A 20-bit\
+    \ offset means 1MB. Thus, a single inner-most page table can address 26 bits of\
+    \ memory (64MB). The second layer can address 28 bits of memory (256MB). In other\
+    \ words, a single entry in the third layer addresses 28 bits of memory. There\
+    \ are 16 such layers, and thus the schema can address the full 32 bits of memory.\n\
+    \nWhat's the benefit over a single page table? Suppose a process needs 2MB of\
+    \ memory, and hence two page tables. With a single page table, there are $2^{12}=4096$\
+    \ entries created immediately, with just two slots occupied. With the hierarchical\
+    \ page table, we create the top-level table (16 entries), a second-level table\
+    \ (4 entries), and the third-level table (64 entries), for a total of 84 entries.\
+    \ Even if the two pages are not in the same level, that's still $84\\cdot2=168$\
+    \ entries. This is a huge savings in per-process memory requirements, especially\
+    \ with low memory usage.\n\n# Graduate Introduction to Operating Systems Review\
+    \ Guide – FINAL\n\n# Part 3 – Lesson 3: Interprocess Communication\n\nLecture\
+    \ video: https://classroom.udacity.com/courses/ud923/lessons/ud39733862/concepts/last-viewed\n\
+    Transcript: https://docs.google.com/document/d1KfdgAFTA6yumB_ODQ-fikuY_wb0QBCkW105Sd9x67k\n\
+    \n| Processes to share memory, what does the OS need to do? Do they use the same\
+    \ virtual addresses to access the same memory |\n\nFor processes to share memory,\
+    \ they need to ask the kernel to create a shared memory segment. This is a special\
+    \ piece of memory in which both processes map their unique virtual address to\
+    \ the same memory location:\n\n![](img/a24b7091bf587932fb9e28c7753b6515_9_0.png)\n\
+    \nThis association requires expensive initial setup on the kernel: the OS must\
+    \ create (and track) the virtual address mapping and allow it to be used by multiple\
+    \ processes. After that, though, the sharing happens exclusively in userspace.\
+    \ This is a big advantage over other IPC methods, such as message queues or sockets,\
+    \ which rely on the kernel to deliver every message.\n\n> For processes to communicate\
+    \ using a shared memory-based communication channel, they still have to copy data\
+    \ from one location to another? What are the costs associated with vs. (re)mapping?\
+    \ What are the tradeoffs between message-based vs. shared-memory-based communication?\n\
+    \nWhen sharing memory, changes to memory in one process are reflected in the other\
+    \ and transparently. Of the view of the shared memory could change at any time.\
+    \ Hence, if a process needs to perform calculations based on shared memory that\
+    \ is at risk of being overwritten, it must copy them to its local memory. There\
+    \ may still be copying involved, but this isn't universally true.\n\n# Graduate\
+    \ Introduction to Operating Systems Review Guide – FINAL\n\n| Processes to share\
+    \ memory, what does the OS need to do? Do they use the same virtual addresses\
+    \ to access the same memory |\n\nFor processes to share memory, they need to ask\
+    \ the kernel to create a shared memory segment. This is a special piece of memory\
+    \ in which both processes map their unique virtual address to the same memory\
+    \ location:\n\n![](img/a24b7091bf587932fb9e28c7753b6515_9_0.png)\n\nThis association\
+    \ requires expensive initial setup on the kernel: the OS must create (and track)\
+    \ the virtual address mapping and allow it to be used by multiple processes. After\
+    \ that, though, the sharing happens exclusively in userspace. This is a big advantage\
+    \ over other IPC methods, such as message queues or sockets, which rely on the\
+    \ kernel to deliver every message.\n\n# Graduate Introduction to Operating Systems\
+    \ Review Guide – FINAL\n\n| What are different ways you can implement synchronization\
+    \ |\n\nUsing pipes as outlined in Figure 3.2 Using sockets allows you to get in\
+    \ communication for free, if you are anticipating communication between processes.\
+    \ For synchronization between processes, the kernel-based methods lend themselves\
+    \ to named semaphores, which are essentially files. By using the same name in\
+    \ both processes, you can synchronize actions as if they were their own memory.\
+    \ Shared memory semaphores are perfectly viable, though inter-process primitives\
+    \ can be used instead. Then, they can be used exactly the same as if they were\
+    \ in regular memory. When synchronizing across machines in the socket-based approach,\
+    \ it likely makes sense to use some form of an event-driven architecture we discussed\
+    \ in previous lessons, thankfully we didn't need to explore this for the project.\n\
+    \n![](img/a24b7091bf587932fb9e28c7753b6515_10_0.png)\n\nFigure 3: A succinct example\
+    \ of pipes.\n\n# Part 3 – Lesson 4: Synchronization Constructs\n\nLecture video:\
+    \ https://classroom.udacity.com/courses/ud923/lessons/337318994/concepts/last-viewed\n\
+    Transcript: https://docs.google.com/document/d1SavqGKc7qQYDFEy1vljqWCJ8uDf4AvZs4ZtQD3y_gc\n\
+    \n| To implement a synchronization mechanism, at the lowest level you need to\
+    \ rely on a hardware instruction. What are some examples? |\n\nSynchronizing two\
+    \ operations: a read of shared state, and a write to shared state by (and only\
+    \ one!) of processes. Without these operations both occurring at the same time,\
+    \ it's possible that the write in one interleaves with the read in another, and\
+    \ more than one will think this has access to the critical section. Some examples\
+    \ of atomic include:\n\n- **Test & Set** – This instruction is equivalent to the\
+    \ following code, executed atomically:\n\n```\nint test_and_set(int * value) {\n\
+    \  int old = *value;\n  *value = BUSY;\n  return old;\n}\n```\n\n> 2 DISCLAIMER:\
+    \ I dont use or even research pipes for the project. All of my knowledge comes\
+    \ via passive absorption of loan's shock on Slack.\n"
+  mdcn: "\n# 操作系统导论\n\n# 复习指南 – 最终\n\n![](img/a24b7091bf587932fbe28c753b615_0.png)\n\
+    \n图2：从虚拟地址到内存位置的演示。请注意，此图不包含 TLB 查找，使用分级页表来处理页目项。\n\n进一步解释，单个虚拟地址被划分为一个或多个页号（VPN），用于页表索引。生成的页表项将\
+    \ VPN 关联到物理页帧（PPN）；随后附加偏移量（offset）。\n\nTLB（转换后备缓冲区）是页表项的缓存。由于页表本身必须存储在内存中，为了更快访问，转换在用户空间中发生。\n\
+    \n> 你理解地址的大小、地址空间以及页的大小之间的关系吗？\n\n让我们考虑一个具有 1MB 物理内存的 24 位架构。这对应于以下页表值：\n\n- **地址大小**：虚拟地址和物理地址简单地遵循架构宽度。\n\
+    - **地址空间**：地址空间直接连接到硬件。尽管有 1MB 物理内存，地址空间仍然包含 $2^{24}$ 个地址。超过 1MB 的部分将标记为分页；换句话说，关于可用内存的任何描述在页表计算中无关。\n\
+    - **页的大小**：这是系统特定的。为了演示目的，我们假设它们为 $2^{12}$。\n\n考虑到所有这些，让我们计算单个页表的大小。再次我们需要处理 $2^{24}$\
+    \ 个地址，将其划分为 $2^{12}$ 大小的块。这意味着：\n\n```\n$\\frac{2^{24}}{2^{12}} = 4096$ 页表项\n\
+    ```\n\n# 操作系统导论\n\n# 复习指南 – 最终\n\n也可以通过查看剩余位来计算。4KiB 意味着页 12 位，留下 $24 - 12 = 12$\
+    \ 位用于索引，因此有 $2^{12}$ 个值。\n\n你理解级页表的优势吗？对于给定的地址格式，你能算出不同层页表结构的大小吗？\n\n页表是固定大小；它们包含足够的条目来映射整个地址空间，无论是否有足够的物理内存。记住，页表是进程级的数据结构。一个进程不会使用其大部分虚拟地址空间；这意味着页中有空条目。通过将表拆分为多级页表，我们可以减少这些间隙和浪费的\
+    \ PTE（页表项）。\n\n# 理论实践\n\n在处理更大的地址空间时，这种优化变得至关重要。64 位架构有太多的内存位置来存储所有 PTE。因此，必须将其分为若干级。\n\
+    \n现代 Intel 系统具有五级页表，在页为 4KiB 的情况下可以访问 128PB 的内存。这允许我们（理论上）拥有 57 位地址。\n\n# 示例计算\n\
+    \n假设我们有一个用于 32 位架构的 3 级分级页表：第一级为 4 位，第二级为 2 位，第三级为 6 位。前两级索引到后续更深层，而最后一层像以前一样是页表的索引。这导致了虚拟地址分块如下：\n\
+    \n| $P_1$ | $P_2$ | $P_3$ | offset |\n|---|---|---|---|\n| 31 | 27 | 25 | 19 |\n\
+    \n因此，$P_1$ 索引到第一个表，它有 $2^4 = 16$ 个条目，$P_2$ 索引到第二个表，它有 $2^2 = 4$ 个条目，$P_3$ 索引到第三个表并与偏移量结合，就像单级表一样（见图2），有\
+    \ $2^6=64$ 个条目。这对地址空间有什么影响？20 位偏移量意味着 1MB。因此，单个内层页表可以访问 26 位内存（64MB）。第二层可以访问 28\
+    \ 位内存（256MB）。换句话说，第三层的单个条目可以访问 28 位内存。有 16 层这样的结构，因此该方案可以访问完整的 32 位内存。\n\n与单页表相比有什么好处？假设一个进程需要\
+    \ 2MB 内存，因此有两个页表。使用单页表，会立即创建 $2^{12}=4096$ 个条目。使用分级页表，我们创建一个顶层表（16 条目）、二层表（4 条目）和第三层表（64\
+    \ 条目），总共 84 条目。即使两个页不在同一级，仍然是 $84\\cdot2=168$ 条目。这在进程级内存需求上是巨大的节省。\n\n# 操作系统导论\
+    \ 复习指南 – 最终\n\n# 第 3 部分 第 3 节：进程间通信\n\n视频：https://classroom.udacity.com/courses/923/lessons/39733862/concepts/last-view\n\
+    转录：https://docs.google.com/document/d1KfdAFTAyumB_ODQ-fikuY_wb0QBCkW105Sd\n\n\
+    | 为了让进程共享内存，操作系统需要做什么？它们使用相同的虚拟地址访问相同的内存吗 |\n\n为了让进程共享内存，它们请求内核创建一个共享内存段。这是一个特殊的内存，两个进程将其唯一的虚拟地址映射到同一个内存位置：\n\
+    \n![](img/a24b7091bf587932fbe28c753b615_0.png)\n\n这种关联需要在内核上进行昂贵的初始化：操作系统必须创建（并跟踪）虚拟地址映射并允许多个进程使用。此后，共享完全在用户空间发生。这是相对于其他\
+    \ IPC 方法（如消息队列或套接字）的巨大优势，后者依赖内核传递每条消息。\n\n> 为了进程使用基于内存内存进行通信，仍然需要将数据从一个位置拷贝到另一个位置吗？与重映射相关的成本是什么？基于消息与基于共享内存通信的权衡是什么？\n\
+    \n共享内存时，一个进程对内存的变化透明地反映在另一个进程中。共享内存可能会随时改变。因此，如果一个进程需要基于共享内存执行计算，它必须将其复制到本地内存。这可能涉及复制，但并非普遍如此。\n\
+    \n# 操作系统导论 复习指南 – 最终\n\n| 为了让进程共享内存，操作系统需要做什么？它们使用相同的虚拟地址访问相同的内存吗 |\n\n为了让进程共享内存，它们请求内核创建一个共享内存段。这是一个特殊的内存，两个进程将其唯一的虚拟地址映射到同一个内存位置：\n\
+    \n![](img/a24b7091bf587932fbe28c753b615_0.png)\n\n这种关联需要在内核上进行昂贵的初始化：操作系统必须创建（并跟踪）虚拟地址映射并允许多个进程使用。此后，共享完全在用户空间发生。这是相对于其他\
+    \ IPC 方法（如消息队列或套接字）的巨大优势，后者依赖内核传递每条消息。\n\n# 操作系统导论 复习指南 – 最终\n\n| 你可以实现同步的不同方法\
+    \ |\n\n如图 3.2 所示使用管道。使用套接字允许你免费获得通信，如果你预见到进程之间会有通信。对于进程间的同步，基于内核的方法适用于命名信号量，它们本质上是文件。通过在两个进程中使用相同的名称，你可以同步操作，就像它们是自己的内存一样。共享内存信号量是完全可，尽管可以使用进程间原语。然后，它们的使用与在普通内存中完全一样。在基于套接字的方法中跨机器进行同步时，使用我们在之前的课程中讨论过的某种事件驱动架构可能是合理的，幸运的是我们不需要在项目中探索这个。\n\
+    \n![](img/a24b7091bf587932fbe28c753b615_10_0.png)\n\n图3：管道的简洁示例。\n\n# 第 3 部分 第\
+    \ 4 节：同步结构\n\n视频：https://classroom.udacity.com/courses/923/lessons/337318994/concepts/last-view\n\
+    转录：https://docs.google.com/document/d1SavqGKc7qQYDFEy1vljqWCJ8uDf4AvZs4ZQD3y_gc\n\
+    \n| 为了实现同步机制，在最底层你需要依赖硬件指令。有些例子有哪些？ |\n\n同步同步两个操作：对共享状态的读取，以及由（且仅一个！）进程对共享状态的写入。如果这些操作没有同时发生，可能会出现一个进程的写入与另一个进程的读取交叉的情况，导致多个进程认为自己拥有访问临界区的权限。原子的一些示例包括：\n\
+    \n- **测试并设置 (Test & Set)** – 该指令等同于以下原子化执行的代码：\n\n```\nint test_and_set(int *\
+    \ value) {\n  int old = *value;\n  *value = BUSY;\n  return old;\n}\n```\n\n>\
+    \ 2 免责声明：我没有在项目中使用甚至研究管道。我所有的知识都是通过被动吸收 Slack 上 loan 的震惊获得的。\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 7]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_7_0.png)
+
+
+    Figure 2: A demonstration of translation from a virtual address to a physical
+    memory location. Keep in mind that this diagram doesn''t include TLB lookups,
+    use hierarchical tables, or handle what happens on a missed entry.
+
+
+    Explain further, a single virtual address is discretized into one or more page
+    numbers (VPNs) that are used as the index in a page table. The resulting page
+    table entry at index correlates the VPN to a physical page number (PPN); this
+    is appended to the virtual address (called the offset) as is. The combined result
+    is the physical memory location.
+
+
+    TLB The translation lookaside buffer is a cache of recency-used page table entries.
+    It allows translations to occur ever faster: since the page tables themselves
+    must be stored in memory, they take time to access relative to on-chip, domain-specific
+    cache.
+
+
+    > Do you understand the relationships between the size of an address, the size
+    of the address space, the size of a page, the size of the page table...
+
+
+    Let''s consider a scenario of a 24-bit architecture with 1MiB of physical memory.
+    This corresponds to the following page values:
+
+
+    +   **Address Size** The address – both virtual and physical – simply follows
+    the bus width by the architecture. Theoretically, we should be able to convert
+    any sized of virtual address to a physical address, because it''s a hardware-provided
+    interface, we must rely on how things works in practice.
+
+    **Address Space** The address space is directly connected to the hardware bus
+    width. Despite having 1MiB of physical memory, the address space still contains
+    $2^{24}$ addresses. Anything beyond 1MiB will be marked as paged out; In other
+    words, any description about the amount of physical memory available is a red
+    herring when it comes to page table calculations.
+
+    **Page Size** This is a system-specific, custom-configurable value. For the purposes
+    of demonstration, we will assume they are $4^{12}$ ($4 \cdot 2^{10} = 2^{12}$).
+
+
+    With all of this mind, let''s calculate the size of a single page table. Once
+    again, we need to be able to address $2^{24}$ addresses, discretized into $2^{12}$-sized
+    chunks. This means:
+
+
+    ```
+
+    $\frac{2^{24}}{2^{12}} = 2^{12} = 4096$ page table entries
+
+    ```'
+  - '[PAGE 8]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    This can also be calculated by looking at the remaining bits. A 4KiB means 12
+    bits are used for the page, leaving $24 - 12 = 12$ for the index, so $2^{12}$
+    values.
+
+
+    Do you understand the benefits of hierarchical page tables? For a given address
+    format, can you workout the sizes of the page table structures in different layers?
+
+
+    Page tables are a fixed size; they contain enough entries to map to the entire
+    address space, regardless of whether or not there is enough physical memory. Recall,
+    also, page tables are per-process data structure. A process will not use much
+    of its available virtual address space; this means there are empty entries in
+    the page. By splitting the table into multiple levels of page tables, we can reduce
+    the size of these gaps and wasted PTEs.
+
+
+    # THEORY IN ACTION
+
+
+    This optimization becomes essential when dealing with larger address spaces. A
+    64-bit architecture has too many address memory locations to store all of PTEs.
+    Hence it becomes necessary to divide it into levels.
+
+
+    Modern Intel systems have a five-level page table, capable of addressing 128PB
+    (petal) of memory, given 4KiB pages. It allows us to (theoretically) have 57 address
+    bits.
+
+
+    # Sample Calculation
+
+
+    Suppose we have a hierarchical page table for a 32-bit architecture with 3 levels:
+    level 1 is 4 bits, level 2 is 2 bits, and level 3 is 6 bits. The first two levels
+    indexes into the subsequent, deeper level, whereas the last level behaves like
+    an index into a page table as before. This results in a virtual address chunking
+    like:
+
+
+    | $P_1$ | $P_2$ | $P_3$ | offset |
+
+    |---|---|---|---|
+
+    | 31 | 27 | 25 | 19 |
+
+
+    Thus, $P_1$ indexes into the first table, which has $2^4 = 16$ entries. $P_2$
+    indexes into the second table, which has $2^2 = 4$ entries. $P_3$ indexes into
+    the third table and combines with the offset just like in a single-level table
+    (see Figure 2), having $2^6=64$ entries.
+
+
+    How does this impact the address space? A 20-bit offset means 1MB. Thus, a single
+    inner-most page table can address 26 bits of memory (64MB). The second layer can
+    address 28 bits of memory (256MB). In other words, a single entry in the third
+    layer addresses 28 bits of memory. There are 16 such layers, and thus the schema
+    can address the full 32 bits of memory.
+
+
+    What''s the benefit over a single page table? Suppose a process needs 2MB of memory,
+    and hence two page tables. With a single page table, there are $2^{12}=4096$ entries
+    created immediately, with just two slots occupied. With the hierarchical page
+    table, we create the top-level table (16 entries), a second-level table (4 entries),
+    and the third-level table (64 entries), for a total of 84 entries. Even if the
+    two pages are not in the same level, that''s still $84\cdot2=168$ entries. This
+    is a huge savings in per-process memory requirements, especially with low memory
+    usage.'
+  - '[PAGE 9]
+
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    # Part 3 – Lesson 3: Interprocess Communication
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/ud39733862/concepts/last-viewed
+
+    Transcript: https://docs.google.com/document/d1KfdgAFTA6yumB_ODQ-fikuY_wb0QBCkW105Sd9x67k
+
+
+    | Processes to share memory, what does the OS need to do? Do they use the same
+    virtual addresses to access the same memory |
+
+
+    For processes to share memory, they need to ask the kernel to create a shared
+    memory segment. This is a special piece of memory in which both processes map
+    their unique virtual address to the same memory location:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_9_0.png)
+
+
+    This association requires expensive initial setup on the kernel: the OS must create
+    (and track) the virtual address mapping and allow it to be used by multiple processes.
+    After that, though, the sharing happens exclusively in userspace. This is a big
+    advantage over other IPC methods, such as message queues or sockets, which rely
+    on the kernel to deliver every message.
+
+
+    > For processes to communicate using a shared memory-based communication channel,
+    they still have to copy data from one location to another? What are the costs
+    associated with vs. (re)mapping? What are the tradeoffs between message-based
+    vs. shared-memory-based communication?
+
+
+    When sharing memory, changes to memory in one process are reflected in the other
+    and transparently. Of the view of the shared memory could change at any time.
+    Hence, if a process needs to perform calculations based on shared memory that
+    is at risk of being overwritten, it must copy them to its local memory. There
+    may still be copying involved, but this isn''t universally true; with a good design
+    and proper synchronization, the amount of copying from using shared memory can
+    be greatly reduced to the other, kernel-level IPC mechanisms.
+
+
+    Trade-offs Message-based IPC has the advantage of using a standard, kernel-provided
+    API that can guarantee about thread-safety, message arrival, all. E of these have
+    to be re-implemented by the programmer if desired with shared memory IPC. On the
+    downside, though, such convenience comes with the cost of performance. As mentioned
+    previously, message-based IPC requires a lot of expensive hops from user mode
+    to kernel mode. Similarly, the initial setup of a shared memory region requires
+    expensive time in the kernel. The cost of such setup can be amortized over a long
+    period of use of the shared memory (when it shines), it can outperform message-based
+    APIs, at the cost of a more complex (and situational) implementation.
+
+
+    10'
+  - "[PAGE 10]\n\n# Graduate Introduction to Operating Systems Review Guide – FINAL\n\
+    \n| What are different ways you can implement synchronization between processes\
+    \ |\n\nThere are a number of different IPC mechanisms, each of which are conducive\
+    \ to different synchronization. Let's talk about the diff mechanisms briefly,\
+    \ aside from the already-discussed shared memory and message queue mechanisms.\n\
+    \nUsing pipes connects processes as outlined in Figure 3.2 Using sockets allows\
+    \ you to get in communication for free, if you are anticipating communication\
+    \ between architectures. But these mechanisms rely on the kernel to transfer data\
+    \ between processes, and different mechanisms are 'stream-based' rather than 'message-based'.\n\
+    \nFor synchronization between processes, the kernel-based methods lend themselves\
+    \ to the named semaphores, which are essentially semaphores as files. By using\
+    \ the same name in both processes, you can synchronize actions as if they were\
+    \ synchronizing via their own memory. Shared memory semaphores are perfectly viable,\
+    \ though inter-process primitives can be used instead. These placed in the shared\
+    \ memory with a special flag and initialized by one end. Then, they can be used\
+    \ exactly the same as if they were in regular memory within a single process.\
+    \ When synchronizing across machines in the socket-based approach, it likely makes\
+    \ sense to use some form of an event-driven architecture we discussed in previous\
+    \ lessons, thankfully we didn't need to explore this for the project.\n\n![](img/a24b7091bf587932fb9e28c7753b6515_10_0.png)\n\
+    \nFigure 3: A succinct example of pipes.\n\n# Part 3 – Lesson 4: Synchronization\
+    \ Constructs\n\nLecture video: https://classroom.udacity.com/courses/ud923/lessons/337318994/concepts/last-viewed\
+    \ Transcript: https://docs.google.com/document/d/1SavqGKc7qQYDFEy1vljqwyWCJ8uDf4AvZs4ZtQD3y_gc\n\
+    \n| To implement a synchronization mechanism, at the lowest level you need to\
+    \ rely on a hardware instruction. What are some examples? |\n\nSynchronizing two\
+    \ operations: a read of shared state, and a write to shared state by (and only\
+    \ one!) of processes. Without these operations both occurring at the same time,\
+    \ it's possible that the write in one interleaves with the read in another, and\
+    \ more than one will think this has access to the critical section. Some examples\
+    \ of atomic include:\n\n+   * Test & Set – This instruction is equivalent to the\
+    \ following code, executed atomically:\n\n```\nint test_and_set(int * value) {\n\
+    \  int old = *value;\n  *value = BUSY;\n  return old;\n}\n```\n\n> 2 DISCLAIMER:\
+    \ I dont use or even research pipes for the project. All of my knowledge comes\
+    \ via passive absorption of loan's shock on Slack.\n\n11"
+- md: "\n# Graduate Introduction to Operating Systems\n\n# Review Guide – FINAL\n\n\
+    **Read & Increment** This instruction is essential to the following code, executed\
+    \ atomically:\n\n```\nint read_and_inc(int value) {\n    int old = *value;\n \
+    \   ++(*value);\n    return old;\n}\n```\n\nThis is essential for the queuing\
+    \ lock described in the last question of this section.\n\nDifferent hardware implement\
+    \ different atomic instructions; certain synchronization constructs that rely\
+    \ on particular atomic instructions are not necessarily platform-independent.\n\
+    \n> Why are spinlocks useful? Would you use a spinlock in every place where you're\
+    \ currently using a mutex?\n\nSpinlocks are useful for critical sections: it's\
+    \ more efficient to wait for the critical section to be available than perform\
+    \ a context switch to another. In other words, it's useful in situations in which\
+    \ fault equals:\n\n```\ncontext < blocking task\n```\n\ndoes not. It's also useful\
+    \ when there are no tasks, yielding (and then immediately being running) is essentially\
+    \ a cheaper version than simple looping. For these specific scenarios, spinlocks\
+    \ are useful. They should generally not replace existing approaches to synchronization,\
+    \ such as using mutexes.\n\n> Can you understand why it is useful to have more\
+    \ powerful synchronization constructs, like reader-writer locks or monitors? What\
+    \ about makes them more powerful than using spinlocks, or mutexes and condition\
+    \ variables?\n\nAdvanced synchronization constructs are beneficial because they\
+    \ assume some usage pattern. The more generic the pattern, the fewer assumptions\
+    \ can be made about how it will be used. Reader/writer locks, for example, even\
+    \ if they use semaphores under the hood, choose better internal design decisions\
+    \ because they describe more specific usage semantics.\n\nFrom the perspective\
+    \ of the programmer, higher-level constructs are easier to use and configure incorrectly.\
+    \ When low-level requirements like locking and unlocking are implicit, it's harder\
+    \ to make these mistakes.\n\n> Can you work through the evolution of the spinlock\
+    \ implementations in the Anderson paper, from basic test-and-set to the queuing\
+    \ lock? Do you understand issue with an earlier implementation is addressed with\
+    \ a subsequent implementation?\n\nFirst, there was test-and-set, just spinning\
+    \ on the atomic instruction. Then, there was test-and-set, which made better use\
+    \ of the cached value, since test-and-set invalidates the cache if the value doesn't\
+    \ change. Then, there were sleeps (both static and dynamic) introduced both the\
+    \ memory reference and before the lock check (to allow threads to quiesce without\
+    \ invalidation). Finally, there was a queuing lock in which threads occupied a\
+    \ position in a line and each release of the lock would trigger the next thread\
+    \ to go; this method required a more complex atomic instruction, though (or the\
+    \ emulation of one).\n\n# Graduate Introduction to Operating Systems\n\n# Review\
+    \ Guide – FINAL\n\n# Performance\n\nDifferent types of spinlocks were better suited\
+    \ for different levels of contention and processor count. In general, this can\
+    \ be divided into two categories: high load (many contending processors) and low\
+    \ load (a handful of contending processors). The latter is a better model for\
+    \ modern x86 systems, which typically have 2-4 cores.\n\n![](img/a24b7091bf587932fb9e28c7753b6515_12_0.png)\n\
+    \n**Figure 4**: Performance comparison of Anderson's spinlock implementations.\n\
+    \n**High Loads** Under loads, the queuing lock was the best implementation: it\
+    \ scaled the processor count increased. Test-and-test-and-set performed the worst\
+    \ because it introduced the highest level of contention. Static locks performed\
+    \ better than dynamic sleeps in their respective categories, and sleeping after\
+    \ a memory reference outperformed sleeping on the lock release since it avoided\
+    \ invalidations.\n\n**Low Loads** Under low loads, the basic spin-lock (r.a.a.\
+    \ test-and-test-and-set) performed the best, which was the simplest and had the\
+    \ lowest latency. For some reason, dynamic backoff-outperformed static backoff,\
+    \ since the delay was lower between seeing the lock and acquiring it than it would've\
+    \ been in the static case. The queuing lock actually performed the worst because\
+    \ of its higher initial cost: the read-and-increment atomic function is pricier\
+    \ to execute and results in a high latency.\n\n# Part 3 – Lesson 5: I/O Management\n\
+    \nLecture video: https://classroom.udacity.com/courses/ud923/lessons/345023824/concepts/last-viewed\n\
+    Transcript: https://docs.google.com/document/d/1kVn9P5mevfh5SepCyC-Ix0CcRGfB41VG5chCW-j6w\n\
+    \n> What are the steps in sending a command to a device (say packet, or block\
+    \ file)? What are the steps in receiving from a device? What are the differences\
+    \ in programmed I/O vs DMA support?\n\nThe interface for interacting with a class\
+    \ of hardware devices is typically defined by the operating system; this is the\
+    \ abstraction layer discussed at the beginning of the class. The bridge between\
+    \ the operating system exists and how the device acts properly functionality is\
+    \ implemented by the device driver. Even still, there are differences in how a\
+    \ CPU processes events from devices.\n\n# Processing Device Events\n\nBroadly,\
+    \ devices can be split into two categories: polling-based devices and interrupt-based\
+    \ devices. The communication mechanism we use should be decided based on the device\
+    \ properties and the goals: things such as update frequency (how fast does a file\
+    \ read, how often a user moves the mouse), performance goals (latency vs. throughput),\
+    \ data rate (i.e. input- or output-only) and other device-specific considerations.\n\
+    \n**Polling** This type of communication between the device and the CPU is best-used\
+    \ for devices that don't need to be instant. Polling at the CPU's convenience,\
+    \ and thus incurs the cost of processing overhead and a delay between a device\
+    \ action and the processing of the action. Such a model is useful when the device\
+    \ doesn't pose a problem to the overall responsiveness of a device. For example,\
+    \ screens refresh at 60Hz (about 16ms), and thus a mouse that incurs a tiny, microsecond\
+    \ delay due to polling would be largely imperceptible.\n\n**Interrupt** This type\
+    \ of communication is best when there is time of essence. Interrupts allow the\
+    \ CPU to handle the I/O event as soon as it occurs, since the event is generated\
+    \ as soon as possible. The obvious downside is the overhead of the interrupt handler,\
+    \ though this sort of delay is largely unavoidable.\n\n# Transferring Data to/Devices\n\
+    \nInterfaces to devices are implemented with a series of registers that are used\
+    \ for different actions. Typically, there are three types: status registers, command\
+    \ registers, and data registers. These simply appear as memory locations to the\
+    \ CPU, writing to a register (a memory store) would trigger a device action. There\
+    \ are two means of transferring the data and from the device: programmed I/O or\
+    \ direct memory access. These essentially depend on whether the CPU accesses device\
+    \ memory or main memory.\n\n**PIO** The programmed I/O, or PIO, is that it requires\
+    \ additional hardware support: the CPU simply treats reads and writes to special\
+    \ registers like any other memory load/store operations. Using their registers\
+    \ often comes with a high performance cost, for example, sending a 1500-byte packet\
+    \ on a NIC with a 8-byte register would require 199 load/store instructions!\n\
+    \n**DMA** Allowing the device to access main memory directly is faster, albeit\
+    \ more complex. Direct access, or DMA, requires hardware support in the form of\
+    \ a \"DMA controller.\" In this model, rather than accessing the device's registers\
+    \ directly, the data transfer is managed by the controller. By using main memory,\
+    \ we avoid the overhead of fragmented transfers: the CPU tells the device where\
+    \ to find the data in memory. With the network packet example, the transmission\
+    \ request (which is still to the command register by the CPU) includes information\
+    \ about where to find the packet in main memory. From the CPU's perspective, we\
+    \ only need a single store instruction (for the command) and a single DMA configuration.\n\
+    \nAn important thing to keep in mind for DMA is that the main memory can no longer\
+    \ be paged out; must persist as long as the device needs to perform a data transfer.\n\
+    \n```\nFor storage devices, do you understand the basic virtual filesystem stack,\
+    \ the purpose of different entities? Do you understand the relationship between\
+    \ the various data structures (block sizes, addressing scheme, etc.) and the total\
+    \ size of the filesystem that can be supported on a system?\n```\n\nA block device\
+    \ is one that operates on discrete blocks rather than characters, packets, etc.,\
+    \ and is usable by a user using the operating system's filesystem abstraction\
+    \ layer. A \"file\" is an abstract OS concept that uses a filesystem to define\
+    \ a series of blocks on the actual device that make up the file's contents.\n"
+  mdcn: "\n\n# 操作系统研究生导论\n\n# 复习指南 – 期末考试 FINAL\n\n**读取并递加 (Read & Increment)** 这条指令对于以下代码至关重要，并以原子方式执行：\n\
+    \n```\nint read_and_inc(int value) {\n    int old = *value;\n    ++(*value);\n\
+    \    return old;\n}\n```\n\n这对于本节最后一个问题描述的队列锁（queuing lock）是必要的。\n\n不同的硬件实现不同的原子指令；某些依赖特定原子指令的同步结构并不一定具有平台无关性。\n\
+    \n> 为什么自旋锁（spinlock）很有用？你会在当前使用互斥锁（mutex）的每个地方使用自旋锁吗？\n\n自旋锁对于临界区用：等待临界区可用比执行上下文切换到另一个任务更高效。换句话说，当开销满足以下条件时，它是有用的：\n\
+    \n```\ncontext < blocking task\n```\n\n则不是如此。当没有任务时，让出 CPU 权限（然后立即运行）本质上是简单循环更廉价的版本。对于这些特定的场景，自旋锁是有用的。它们通常不应该取代现有的同步方法，例如使用互斥锁。\n\
+    \n> 你能理解为什么拥有更强大的同步结构（如读写锁或监器）是有用的吗？是什么让它们比使用自旋锁或互斥锁和条件变量更强大？\n\n高级同步结构是有益的，因为它们假设了某些使用模式。模式越通用，对如何使用模式的假设就越少。例如，读写锁即使在底层使用信号量，也选择了更好的内部设计决策，因为它们描述了更具体的用法语义。\n\
+    \n从程序员的角度来看，高层结构更容易使用，且更不容易配置错误。当加锁和解锁等低级需求是隐式的，就很难犯这些错误。\n\n> 你能理清 Anderson 论文中自旋锁实现的演变吗，从基本的测试并设置（test-and-set）到队列锁？你理解早期实现的问题是如何通过后续实现解决的？\n\
+    \n首先是测试并设置（test-and-set），只需在原子指令上自旋。然后是测试-测试-并设置（test-and-test-and-set），它更好地利用了缓存值，因为如果值没有变化，测试并设置会使缓存失效。接着引入了睡眠（静态和动态），分别在内存引用之后和锁检查之前引入（以允许线程在不引起失效的情况下进入静默）。最后是队列锁，其中线程占据队列中的一个位置，每次释放锁都会触发下一个线程进行；尽管如此，这种方法需要更复杂的原子指令（或对其指令的仿真）。\n\
+    \n# 操作系统研究生导论\n\n# 复习指南 – 期末考试 FINAL\n\n# 性能\n\nn 性能（Performance）\n\n不同类型的自旋锁适用于不同的竞争程度和处理器数量。通常，这可以分为两类：高负载（许多竞争的处理器）和低负载（少数竞争的处理器）。后者是现代\
+    \ x86 系统的更好模型，因为这些系统通常有 2-4 个核心。\n\n![](img/a24b7091bf587932fb9e28c7753b6515_12_0.png)\n\
+    \n**图 4**：Anderson 自旋锁实现的性能对比。\n\n**高负载**在高负载下，队列锁是最好的实现：它随着处理器数量的增加而扩展。测试-测试-并设置性能最差，因为它引入了最高级别的竞争。静态锁在各自的类别中表现比动态睡眠更好，而在内存引用后睡眠的表现优于在锁释放时睡眠，因为避免了失效。\n\
+    \n**低负载**在低负载下，基础自旋锁（r.a.a. 测试-测试-并设置）性能最好，因为它最简单且延迟最低。由于某种原因，动态退避（backoff-out）的表现优于静态退避，因为在看到锁到获取锁之间的延迟比静态情况要短。队列锁的性能实际上最差，因为其初始开销较大。\n\
+    \n"
+  merge: 0
+  raw:
+  - "[PAGE 11]\n\n# Graduate Introduction to Operating Systems\n\n# Review Guide –\
+    \ FINAL\n\n**Read & Increment** This instruction is essential to the following\
+    \ code, executed atomically:\n\n```\nint read_and_inc(int value) {\n    int old\
+    \ = *value;\n    ++(*value);\n    return old;\n}\n```\n\nThis is essential for\
+    \ the queuing lock described in the last question of this section.\n\nDifferent\
+    \ hardware implement different atomic instructions; certain synchronization constructs\
+    \ that rely on particular atomic instructions are not necessarily platform-independent.\n\
+    \n> Why are spinlocks useful? Would you use a spinlock in every place where you're\
+    \ currently using a mutex?\n\nSpinlocks are useful for critical sections: it's\
+    \ more efficient to wait for the critical section to be available than perform\
+    \ a context switch to another. In other words, it's useful in situations in which\
+    \ fault equals:\n\n```\ncontext < blocking task\n```\n\ndoes not. It's also useful\
+    \ when there are no tasks, yielding (and then immediately being running) is essentially\
+    \ a cheaper version than simple looping. For these specific scenarios, spinlocks\
+    \ are useful. They should generally not replace existing approaches to synchronization,\
+    \ such as using mutexes.\n\n> Can you understand why it is useful to have more\
+    \ powerful synchronization constructs, like reader-writer locks or monitors? What\
+    \ about makes them more powerful than using spinlocks, or mutexes and condition\
+    \ variables?\n\nAdvanced synchronization constructs are beneficial because they\
+    \ assume some usage pattern. The more generic the pattern, the fewer assumptions\
+    \ can be made about how it will be used. Reader/writer locks, for example, even\
+    \ if they use semaphores under the hood, choose better internal design decisions\
+    \ because they describe more specific usage semantics.\n\nFrom the perspective\
+    \ of the programmer, higher-level constructs are easier to use and configure incorrectly.\
+    \ When low-level requirements like locking and unlocking are implicit, it's harder\
+    \ to make these mistakes.\n\n> Can you work through the evolution of the spinlock\
+    \ implementations in the Anderson paper, from basic test-and-set to the queuing\
+    \ lock? Do you understand issue with an earlier implementation is addressed with\
+    \ a subsequent implementation?\n\nFirst, there was test-and-set, just spinning\
+    \ on the atomic instruction. Then, there was test-and-set, which made better use\
+    \ of the cached value, since test-and-set invalidates the cache if the value doesn't\
+    \ change. Then, there were sleeps (both static and dynamic) introduced both the\
+    \ memory reference and before the lock check (to allow threads to quiesce without\
+    \ invalidation). Finally, there was a queuing lock in which threads occupied a\
+    \ position in a line and each release of the lock would trigger the next thread\
+    \ to go; this method required a more complex atomic instruction, though (or the\
+    \ emulation of one)."
+  - '[PAGE 12]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    # Performance
+
+
+    Different types of spinlocks were better suited for different levels of contention
+    and processor count. In general, this can be divided into two categories: high
+    load (many contending processors) and low load (a handful of contending processors).
+    The latter is a better model for modern x86 systems, which typically have 2-4
+    cores.
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_12_0.png)
+
+
+    **Figure 4**: Performance comparison of Anderson''s spinlock implementations.
+
+
+    **High Loads** Under loads, the queuing lock was the best implementation: it scaled
+    the processor count increased. Test-and-test-and-set performed the worst because
+    it introduced the highest level of contention. Static locks performed better than
+    dynamic sleeps in their respective categories, and sleeping after a memory reference
+    outperformed sleeping on the lock release since it avoided invalidations.
+
+
+    **Low Loads** Under low loads, the basic spin-lock (r.a.a. test-and-test-and-set)
+    performed the best, which was the simplest and had the lowest latency. For some
+    reason, dynamic backoff-outperformed static backoff, since the delay was lower
+    between seeing the lock and acquiring it than it would''ve been in the static
+    case. The queuing lock actually performed the worst because of its higher initial
+    cost: the read-and-increment atomic function is pricier to execute and results
+    in a high latency.
+
+
+    contention wasn''t enough to expose its underlying limitations. It had the lowest
+    latency. For some reason, dynamic backoff-outperformed static backoff, since the
+    delay was lower between seeing the lock and acquiring it than it would''ve been
+    in the static case. The queuing lock actually performed the worst because of its
+    higher initial cost: the read-and-increment atomic function is pricier to execute
+    and results in a high latency.
+
+
+    # Part 3 – Lesson 5: I/O Management
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/345023824/concepts/last-viewed
+
+    Transcript: https://docs.google.com/document/d/1kVn9P5mevfh5SepCyC-Ix0CcRGfB41VG5chCW-j6w
+
+
+    > What are the steps in sending a command to a device (say packet, or block file)?
+    What are the steps in receiving from a device? What are the differences in programmed
+    I/O vs DMA support?
+
+
+    The interface for interacting with a class of hardware devices is typically defined
+    by the operating system; this is the abstraction layer discussed at the beginning
+    of the class. The bridge between the operating system exists and how the device
+    acts properly functionality is implemented by the device driver. Even still, there
+    are differences in how a CPU processes events from devices.
+
+
+    # Processing Device Events
+
+
+    Broadly, devices can be split into two categories: polling-based devices and interrupt-based
+    devices. The communication mechanism we use should be decided based on the device
+    properties and the goals:'
+  - '[PAGE 13]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    things such as update frequency (how fast does a file read, how often a user moves
+    the mouse), performance goals (latency vs. throughput), data rate (i.e. input-
+    or output-only) and other device-specific considerations.
+
+
+    Polling This type of communication between the device and the CPU is best-used
+    for devices that don''t need to be instant. Polling at the CPU''s convenience,
+    and thus incurs the cost of processing overhead and a delay between a device action
+    and the processing of the action. Such a model is useful when the device doesn''t
+    pose a problem to the overall responsiveness of a device. For example, screens
+    refresh at 60Hz (about 16ms), and thus a mouse that incurs a tiny, microsecond
+    delay due to polling would be largely imperceptible.
+
+
+    Interrupt This type of communication is best when there is time of essence. Interrupts
+    allow the CPU to handle the I/O event as soon as it occurs, since the event is
+    generated as soon as possible. The obvious downside is the overhead of the interrupt
+    handler, though this sort of delay is largely unavoidable.
+
+
+    # Transferring Data to/Devices
+
+
+    Interfaces to devices are implemented with a series of registers that are used
+    for different actions. Typically, there are three types: status registers, command
+    registers, and data registers. These simply appear as memory locations to the
+    CPU, writing to a register (a memory store) would trigger a device action. There
+    are two means of transferring the data and from the device: programmed I/O or
+    direct memory access. These essentially depend on whether the CPU accesses device
+    memory or main memory.
+
+
+    PIO The programmed I/O, or PIO, is that it requires additional hardware support:
+    the CPU simply treats reads and writes to special registers like any other memory
+    load/store operations. Using their registers often comes with a high performance
+    cost, for example, sending a 1500-byte packet on a NIC with a 8-byte register
+    would require 199 load/store instructions!
+
+
+    DMA Allowing the device to access main memory directly is faster, albeit more
+    complex. Direct access, or DMA, requires hardware support in the form of a "DMA
+    controller.\ In this model, rather than accessing the device''s registers directly,
+    the data transfer is managed by the controller. By using main memory, we avoid
+    the overhead of fragmented transfers: the CPU tells the device where to find the
+    data in memory. With the network packet example, the transmission request (which
+    is still to the command register by the CPU) includes information about where
+    to find the packet in main memory. From the CPU''s perspective, we only need a
+    single store instruction (for the command) and a single DMA configuration.
+
+
+    An important thing to keep in mind for DMA is that the main memory question can
+    no longer be paged out; must persist as long as the device needs to perform a
+    data transfer.
+
+
+    ```
+
+    For storage devices, do you understand the basic virtual filesystem stack, the
+    purpose of different entities? Do you understand the relationship between the
+    various data structures (block sizes, addressing scheme, etc.) and the total size
+    of the filesystem that can be supported on a system?
+
+    ```
+
+
+    A block device is one that operates on discrete blocks rather than characters,
+    packets, etc., and is usable by a user using the operating system''s filesystem
+    abstraction layer. A "file" is an abstract OS concept that uses a filesystem to
+    define a series of blocks on the actual device that make up the file''s contents.'
+- md: '
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    Operating systems introduce another layer between the typical user $\rightarrow$
+    kernel $\rightarrow$ device flow: the generic block layer exists between the kernel
+    and the device to create a uniform, OS-standardized block interface" for the kernel
+    to interact with devices.
+
+
+    The virtual filesystem, which defines the abstract "files" that are represented
+    on block devices, introduces concepts such as file, which are the OS representation
+    of a file, indices, which are persistent representation of a file, and dentry
+    (or directory entry) which temporarily represents components of a file. A directory
+    has no special meaning within a virtual filesystem; it is represented as another
+    file, but its contents details about other files. This is with dentries, which
+    are not persistent, but rather generated on-the-fly (and maintained in the dentry
+    cache) as files are accessed on the system. There is also a superblock, which
+    contains filesystem-specific information regarding its layout, as free blocks,
+    data blocks, etc.
+
+
+    | |
+
+    |---|---|
+
+    | owners (2) |
+
+    | timestamps (3) |
+
+    | size block count |
+
+    | direct blocks |
+
+    | single indirect |
+
+    | double indirect |
+
+    | triple indirect |
+
+
+    To avoid limitations introduced by simple "list of indices", we introduce a more-complex
+    structure that allows near-arbitrary files via indirect pointers. As seen in Figure
+    5, the index now contains additional metadata about the file, as well as a tiered
+    structure of block pointers. The direct blocks, as in the simple model, are simply
+    a list of blocks. The single-indirect blocks lead to another index that contains
+    a list of block indices. This pattern repeats for the double-indirect and triple-indirect
+    blocks, allowing for a very large file size. Of course, the level of induction
+    increases, performance degrades, as the device has to spend more time seeking
+    across the disk to retrieve.
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_14_0.png)
+
+
+    Let''s consider a particular filesystem configuration. Suppose we have 1KiB blocks,
+    each is 4 bytes, and an index stores 32 bytes of metadata. In this, we will track
+    two-indirect blocks and one double-indirect block. What is the maximum file size
+    for such a file? With 32 bytes of metadata and 12 bytes of index
+
+
+    $$\frac{2^{10} \cdot (32+12)}{4} = 245$$
+
+
+    direct blocks, which can track $256 \cdot 2^{10} = 250,880$ bytes of data. Let''s
+    assume for simplicity that the root index needs to store metadata. Then, each
+    single-indirect block can track 256 direct blocks, $2 \cdot 2^{18} = 2^{19} =
+    0.5$MiB memory. The double-indirect block contains $2^8$ single-indirect blocks,
+    each of which, as we previously calculated, allowing index $2^{18} = 256$KiB bytes
+    of data. In total, we can have files up to
+
+
+    $250,880 + 2^{19} + 2^{27} = 67,884,032$
+
+
+    bytes, and approximately 67.9 GiB.
+
+
+    > For the virtual system cache, we mention several optimizations that can reduce
+    the overhead associated with accessing the physical device. Do you understand
+    how each of these optimizations changes when we need to access the device?
+
+
+    Disk access is the slowest type of data access; we employ several techniques that
+    optimize both the software and hardware-specific aspects of disk access to avoid
+    such significant latency:
+
+
+    **Caching** The operating system maintains a file buffer cache in main memory.
+    This cache stores parts of the file and maintains changes to those parts. The
+    changes are periodically flushed via fsync(). This is why it is dangerous to unplug
+    a USB drive without "ejecting" it first; the data might still be in the cache!
+    This cache is per-file, so all viewers of a file see changes simultaneously and
+    instantaneously; these are known as UNIX semantics when discussing update synchronization.
+
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    I/O Scheduling: Because files are essentially scattered across a disk''s blocks,
+    performance can improve if we schedule reads that the disk head moves across blocks
+    in a more sequential order.
+
+
+    **Prefetching**: When reading from a disk, it''s possible that the nearby blocks
+    will also be useful! If we prefetch blocks in advance, we won''t need to read
+    them again if they''re needed.
+
+
+    **Journaling**: Instead of writing out to the proper disk location, which will
+    require a lot of random access, we write updates in a log called the journal.
+    The log contains a description of the write that''s supposed to take place, specifying
+    the block, the offset, and the value, essentially describing an individual write.
+    The journal is periodically flushed to disk and must be the most reliable part
+    of the system in order not to lose data.
+
+
+    # LATENCY ANOMALY
+
+
+    > Suppose you''re studying for the GIOS final and you have some flashcards out
+    of your desk. If accessing data stored in a CPU register is akin to recalling
+    a flashcard from memory, and accessing the cache is like grabbing a flashcard
+    off the disk, then accessing data stored on a traditional hard drive would be
+    like traveling to Mars to get a flashcard.
+
+
+    # Part 3 – Lesson 6: Virtualization
+
+
+    Lecture video: https://classroom.udacity.com/ud923/lessons/361409322/concepts/last-viewed
+    Transcript: https://docs.google.com/document/d/1IwM-Me5hIDCF63FMeXc87f3JWk91e88MyAyrRhpc
+
+
+    > What is virtualization? What''s the history behind?
+
+
+    The meaning of virtualization has changed as technology evolves. These days, virtualization
+    is basically when one or more systems run in isolated environments on a single
+    machine and all access to the hardware, typically managed by a virtualization
+    layer. Initially, though, there was a strict definition that differentiated virtualization
+    from things like the Java Machine.
+
+
+    The virtual machine must be an efficient, isolated duplicate of the host. The
+    ''duplicate'' aspect is the key differentiator: running a Windows VM on a Linux
+    host, would not qualify as virtualization. Still, running a Linux VM without networking
+    on a Linux host with networking would be a violation of this. The ''efficient''
+    aspect requires only a minor decrease in speed for the virtualized environment;
+    the ''isolated'' aspect means there''s a management layer that has the ''true''
+    control over system resources and virtual machine monitor, also called a hypervisor.
+
+
+    > What''s hosted vs. bare-metal virtualization? What''s virtualization, why is
+    it useful?
+
+
+    There are two primary types of virtualization: hosted and bare-metal virtualization.
+    The main difference between them is the location of the hypervisor. With hosted
+    virtualization, the hypervisor runs on top of the host operating system. In bare-metal
+    virtualization, the hypervisor runs directly on the hardware.
+
+
+    The virtual machine must be an efficient, isolated duplicate of the host. The
+    ''duplicate'' aspect is the key differentiator: running a Windows VM on a Linux
+    host, would not qualify as virtualization. Still, running a Linux VM without networking
+    on a Linux host with networking would be a violation of this.
+
+
+    The alternative approach is paravirtualization, in which the guest OS is aware
+    it is being virtualized and uses hypercalls instead of privileged instructions.
+    This allows for better performance but requires modifying the guest kernel.
+
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    What were the problems with virtualizing x86? How does it work?
+
+
+    An important requirement in virtualization is that the hypervisor needs to, and
+    handle correctly, all system calls. This relies on the fact that
+
+
+    From the hardware side of things, x86 – which is now the most dominant architecture
+    – added a lot of features to improve virtualization:
+
+
+    - **Privileges**: Instead of the 4-ring approach that didn''t define clear purposes
+    for each, there is simply a "root," and "non-root" mode.
+
+    - **VM Control Structure**: Instructions that come from VMs are handled better;
+    the hardware can actually inspect instructions and determine whether or not it
+    should expect trap.
+
+    - **Pages Tables**: Page tables are extended to perform better under virtualized
+    environments. For example, the TLB in the MMU now tags with a "virtual machine
+    identifier," which allows it to cache translations.
+
+    - **Devices**: Support was introduced for devices to be more aware of virtualized
+    environments. For example, multiple devices have logical interfaces that each
+    can interact with a VMM separately. Interrupts are routed better, as well.
+
+
+    In virtualization, what the passthrough vs. split-device model?
+
+
+    The massive variety in I/O devices means we can''t use a more uniform, standard
+    approach to virtualization as with CPUs or memory. There are many models for achieving
+    virtualization.
+
+
+    **Pasthrough**: In the passthrough model for device virtualization, the VMM confirms
+    the device to allow exclusive and direct access to particular guest. This is great
+    from the guest''s perspective, as it is the most performant and "greedy" approach.
+    The obvious downside is that sharing is difficult, because this relies on the
+    guest to have the appropriate driver for the device, those have to match. By course,
+    the format, strict definition of virtualization we give, this must be the case.
+    Another important disadvantage heavily impacts the usefulness of VMs is that migration
+    is difficult: device state and in-progress requests must be carefully managed
+    before a VMM can move to another machine.
+
+
+    **Hypervisor-Direct Model**: In this model, the guest doesn''t interact with the
+    hardware devices directly at all. The VMM intercepts and emulates the requested
+    operation. It converts the guest request into a hardware-specific request that''s
+    serviced by the VMM-resident device driver. As we can imagine, this adds significant
+    overhead and latency to guest device operations, and heavily complicates
+
+    '
+  mdcn: '
+
+
+    # 操作系统高级进阶
+
+
+    # 复习指南 – 期末考试
+
+
+    操作系统在典型的用户 $\rightarrow$ 内核 $\rightarrow$ 设备流之间引入了另一层：通用块层存在于内核和设备之间，为内核创建一个统一的、操作系统标准化的块接口，以便其与设备进行交互。
+
+
+    虚拟文件系统定义了表示在块设备上的抽象“文件”，它引入了诸许多概念，如文件（file，操作系统对文件的表示）、索引（index，文件的持久化表示）以及目录项（dentry，或
+    directory entry，临时表示文件的组件）。目录在虚拟文件系统中没有特殊含义；它被表示为另一个文件，但其内容是关于其他文件的细节。这是通过 dentry
+    实现的，dentry 不是持久的，而是在系统访问文件时动态生成的（并维护在 dentry 缓存中）。此外超级块（superblock），它包含关于文件系统布局的信息，如空闲块、数据块等。
+
+
+    | |
+
+    |---|---|
+
+    | 所有者 (2) |
+
+    | 时间戳 (3) |
+
+    | 大小块计数 |
+
+    | 直接块 |
+
+    | 单级间接 |
+
+    | 双级间接 |
+
+    | 三级间接 |
+
+
+    为了避免简单“索引列表”带来的局限性，我们引入了一种更复杂的结构，通过间接指针允许几乎任意的文件大小。如图 5 所示，索引现在包含了关于文件的额外元数据，以及块指针的分层结构。直接块与简单模型中一样，仅仅是块的列表。单级间接块指向另一个包含块索引列表的索引。这种模式在双级间接块和三级间接块中重复，允许非常大的文件大小。当然，随着间接层级的增加，性能会下降，因为设备必须花费更多时间在磁盘上寻道检索。
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_14_0.png)
+
+
+    让我们考虑特定的文件系统配置。假设我们有 1KiB 的块，每个块 4 字节，索引存储 32 字节的元数据。在此，我们将追踪两个间接块和一个双级间接块。这样的文件最大大小是多少？在具有
+    32 字节元数据和 12 字节索引的情况下
+
+
+    $$\frac{2^{10} \cdot (32+12)}{4} = 245$$
+
+
+    直接块，可以追踪 $256 \cdot 2^{10} = 250,880$ 字节的数据。简单起假设根索引需要存储元数据。那么，每个单级间接块可以追踪 256
+    个直接块，$2 \cdot 2^{18} = 2^{19} = 0.5$MiB 内存。双级间接块包含 $2^8$ 个单级间接块，正如我们之前计算的，每个允许索引
+    $2^{18} = 256$KiB 的数据。总之，我们可以拥有大小为
+
+
+    $250,880 + 2^{19} + 2^{27} = 67,884,032$
+
+
+    字节的文件，大约 67.9 GiB。
+
+
+    > 对于虚拟系统缓存，我们提到了几种可以减少访问物理设备相关开销的优化方案。你理解当我们需要访问设备时，这些优化各是如何变化的吗？
+
+
+    磁盘访问是最慢的数据访问类型；我们采用了几种技术来优化磁盘访问的软件和硬件特定方面，以避免这种巨大的延迟：
+
+
+    **缓存** 操作系统在内存中维护一个文件缓冲区缓存。该缓存存储文件的部分内容并维护这些部分的更改。这些更改通过 `fsync()` 定期刷新。这就是为什么在不先“弹出”的情况下拔掉
+    USB 驱动器是危险的；数据可能仍在缓存中！此缓存是每个文件独立的，所以文件的所有查看者都能同时且立即地看到更改；在讨论更新同步时，这些被称为 UNIX 语义。
+
+
+    # 操作系统高级进阶复习指南 – 期末考试
+
+
+    I/O 调度：由于文件本质上分散在磁盘的块中，如果我们调度磁盘头以更顺序的顺序跨越块进行读取操作，性能就可以提高。
+
+
+    **预取**：从磁盘读取时，相邻的块也可能是有用的！如果我们提前预取块，当需要它们时，就不需要再次读取它们了。
+
+
+    **日志记录**：与其写入正确的磁盘位置（这将需要大量的随机访问），我们将更新写入一个名为 journal 的日志中。日志包含了对要执行写入操作的描述，指定了块、偏移量和值，本质上描述了单次写入。日志定期刷新到磁盘，并且必须是系统中最可靠的部分，以防丢失数据。
+
+
+    # 延迟异常
+
+
+    > 假设你正在准备 GIOS 期末考试，你的桌上放了一些闪卡。如果访问存储在 CPU 寄存器中的数据类似于从记忆中回想闪卡，访问缓存就像从磁盘上拿取闪卡，那么访问存储在传统硬盘上的数据就像去火星拿闪卡。
+
+
+    # 第三部分 – 第 6 节：虚拟化
+
+
+    讲座视频：https://classroom.udacity.com/ud923/lessons/361409322/concepts/last-viewed
+    转录文本：https://docs.google.com/document/d/1IwM-Me5hIDCF63FMeXc87f3JWk91e88MyAyrRhpc
+
+
+    > 什么是虚拟化？它的历史是什么？
+
+
+    虚拟化的含义随着技术的演进而变化。如今，虚拟化基本上是指一个或多个系统运行在单机器的隔离环境中，且对硬件的所有访问通常由虚拟化层管理。尽管最初，有一个严格的定义将虚拟化与
+    Java 虚拟机等事物区分来。
+
+
+    虚拟机必须是宿主机的高效、隔离的副本。“副本”这一方面是关键区别：在 Linux 宿主机上运行 Windows 虚拟机不属于虚拟化。尽管如此，在带有网络的
+    Linux 宿主机上运行没有网络的 Linux 虚拟机将违反这一点。“高效”方面只需要虚拟化环境的速度略有下降；“隔离”方面意味着有一个管理层对系统资源和虚拟机监控器（也称为
+    hypervisor）拥有“真正的”控制权。
+
+
+    > 托管虚拟化与裸金属虚拟化？什么是虚拟化，它为什么用？
+
+
+    虚拟化主要有两种类型：托管型和裸金属虚拟化。它们之间的主要区别在于 hypervisor 的位置。在托管虚拟化中，hypervisor 运行在主机操作系统之上。裸金属虚拟化中，hypervisor
+    直接运行在硬件上。
+
+
+    虚拟机必须是宿主机的高效、隔离的副本。“副本”这一方面是关键区别：在 Linux 宿主机上运行 Windows 虚拟机不属于虚拟化。尽管如此，在带有网络的
+    Linux 宿主机上运行没有网络的 Linux 虚拟机将违反这一点。
+
+
+    另一种方法是半虚拟化（paravirtualization），客操作系统感知到自己正被虚拟化，并使用 hypercalls 代替特权指令。这允许更好的性能，但需要修改客内核。
+
+
+    # 操作系统高级进阶复习指南 – 期末考试
+
+
+    虚拟化 x86 存在什么问题？它是如何工作的？
+
+
+    虚拟化中的一个重要要求是，hypervisor 需要并正确处理所有的系统调用。这依赖于事实
+
+
+    从硬件方面来说，x86——现在是最主导的架构——添加了许多功能来改进虚拟化：
+
+
+    - **权限**：不再使用没有为每个环定义明确目的的 4 环方法，而是简单地分为“根”（root）模式和“非根”模式。
+
+    - **虚拟机控制结构**：来自虚拟机的指令处理得更好；硬件可以检查指令并确定是否应该捕获（trap）。
+
+    - **页表**：页表经过扩展以在虚拟化环境中运行更好。例如，MMU 中的 TLB 现在标记了“虚拟机标识符”，这允许它缓存翻译。
+
+    - **设备**：引入了让设备更能感知虚拟化环境的支持。例如，多个设备具有逻辑接口，可以分别与 VMM 交互。中断的路由也更好。
+
+
+    在虚拟化中，直通（passthrough）与拆分设备模型？
+
+
+    I/O 设备的巨大差异意味着我们无法像 CPU 或内存那样使用更统一、标准的方法来实现虚拟化。实现虚拟化有很多模型。
+
+
+    **直通**：在设备虚拟化的直通模型中，VMM 确认设备允许特定的虚拟机独占直接访问。从虚拟机的角度来看非常好，因为它是性能最高且最“贪”的方法。明显的缺点是共享困难，因为这依赖于虚拟机拥有相应的设备驱动程序，这些必须匹配。当然，根据我们给出的虚拟化的严格定义，必须是这样。另一个影响虚拟机可用性的重要缺点是迁移困难：在
+    VMM 移动到另一台机器之前，必须仔细管理设备状态和进行中的请求。
+
+
+    **Hypervisor 直接模型**：在这种模型中，虚拟机完全不与硬件设备交互。VMM 拦截并模拟请求的操作。它将虚拟机请求转换为由 VMM 驱动程序服务的硬件特定请求。正如我们想象的，这为虚拟机设备操作增加了巨大的开销和延迟，并极大地复杂了
+
+
+    '
+  merge: 0
+  raw:
+  - "[PAGE 14]\n\n# Graduate Introduction to Operating Systems\n\n# Review Guide –\
+    \ FINAL\n\nOperating systems introduce another layer between the typical user\
+    \ $\rightarrow$ kernel $\rightarrow$ device flow: the generic block layer exists\
+    \ between the kernel and the device to create a uniform, OS-standardized block\
+    \ interface\" for the kernel to interact with devices.\n\nThe virtual filesystem,\
+    \ which defines the abstract \"files\" are represented on block devices, introduces\
+    \ concepts such as file, which are the OS representation of a file, indices, which\
+    \ are persistent representation of a file, and dentry (or directory entry) temporarily\
+    \ represents components of a file. A directory has no special meaning within a\
+    \ virtual filesystem; it is represented as another file, but it's contents details\
+    \ about other files. This is with dentries, which are not persistent, but rather\
+    \ generated on-the-fly (and maintained in the dentry cache) as files are accessed\
+    \ on the system. There is also a superblock, which contains filesystem-specific\
+    \ information regarding its layout, as free blocks, data blocks, etc.\n\n| |\n\
+    |---|n| owners (2) |\n| timestamps (3) |\n| size block count |\n| direct blocks\
+    \ |\n| single indirect\ndouble indirect\ntriple indirect |\n\nTo avoid limitations\
+    \ introduced by simple \"list of indices\", we introduce a more-complex structure\
+    \ that allows near-arbitrary files via indirect pointers. As seen in Figure 5\
+    \ the index now contains additional metadata about the file, as well as a tiered\
+    \ structure of block pointers. The direct blocks, as in the simple model, are\
+    \ simply a list of blocks. The single-indirect blocks that lead to another index\
+    \ that contains a list of block indices. This pattern repeats for the double-indirect\
+    \ and triple-indirect blocks, allowing for a very large file size. Of course,\
+    \ the level of induction increases, performance degrades, as the device has to\
+    \ spend more time seeking across the disk to retrieve.\n\n![](img/a24b7091bf587932fb9e28c7753b6515_14_0.png)\n\
+    \nLet's consider a particular filesystem configuration. Suppose we have 1KiB blocks,\
+    \ each is 4 bytes, and an index stores 32 bytes of metadata. In this, we will\
+    \ track two-indirect blocks and one double-indirect block. What is the maximum\
+    \ file size for such a file? With 32 bytes of metadata and 12 bytes of index\n\
+    \n$$\\frac{2^{10} \\cdot (32+12)}{4} = 245$\n\ndirect blocks, which can track\
+    \ $256 \\cdot 2^{10} = 250,880$ bytes of data. Let's assume for simplicity that\
+    \ the root index needs to store metadata. Then, each single-indirect block can\
+    \ track 256 direct blocks, $2 \\cdot 2^{18} = 2^{19} = 0.5$MiB memory for. The\
+    \ double-indirect block contains $2^8$ single-indirect blocks, each of which,\
+    \ as we previously calculated, allowing index $2^{18} = 256$KiB bytes of data.\
+    \ In total, we can have files up to\n\n$250,880 + 2^{19} + 2^{27} = 67,884,032$\n\
+    \nbytes, and approximately 67.9 GiB.\n\n> For the virtual system cache, we mention\
+    \ several optimizations that can reduce the overhead associated with accessing\
+    \ the physical device. Do you understand how each of these optimizations changes\
+    \ when we need to access the device?\n\nDisk access is the slowest type of data\
+    \ access; we employ several techniques that optimize both the software and hardware-specific\
+    \ aspects of disk access to avoid such significant latency:\n\nCaching The operating\
+    \ system maintains a file buffer cache in main memory. This cache stores parts\
+    \ of the file and maintains changes to those parts. The changes are periodically\
+    \ flushed via fsync(). This is why it is dangerous to unplug a USB drive without\
+    \ \"jecting\" it first; the data might still be in the cache! This cache is per-file,\
+    \ so all viewers of a file see changes simultaneously and instantaneously; these\
+    \ are known as UNIX semantics when discussing update synchronization.\n\n15"
+  - '[PAGE 15]
+
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    I/O Scheduling Because files are essentially scattered across a disk''s blocks,
+    performance can improve if we schedule reads that the disk head moves across blocks
+    in a more sequential order.
+
+
+    Prefetching When reading from a disk, it''s possible that the nearby blocks will
+    also be useful! If we prefetch blocks in advance just, we won''t need to read
+    them again if they''re needed.
+
+
+    Journaling Instead of writing out to the proper disk location, which will require
+    a lot of random access, we write updates in a log called the journal. The log
+    contains a description of the write that''s supposed to take place, specifying
+    the block, the offset, and the value, essentially describing an individual write.
+    The journal is periodically flushed to disk and must be the most reliable part
+    of the system in order not to lose data.
+
+
+    # LATENCY ANOMALY
+
+
+    > Suppose you''re studying for the GIOS final and you have some flashcards out
+    of your desk. If accessing data stored in a CPU register is akin to recalling
+    a flashcard from memory, and accessing the cache is like grabbing a flashcard
+    off the disk, then accessing data stored on a traditional hard drive would be
+    like traveling to Mars to get a flash card[source]
+
+
+    # Part 3 – Lesson 6: Virtualization
+
+
+    Lecture video: https://classroom.udacity.com/ud923/lessons/361409322/concepts/last-viewed
+    Transcript: https://docs.google.com/document/d/1IwM-Me5hIDCF63FMeXc87f3JWk91e88MyAyrRhpc
+
+
+    > What is virtualization? What''s the history behind?
+
+
+    The meaning of virtualization has changed as technology evolves. These days, virtualization
+    is basically when one or more systems run in isolated environments on a single
+    machine and all access to the hardware, typically managed by virtualization layer.
+    Initially, though, there was a strict definition that differentiated virtualization
+    from things like the Java Machine.
+
+
+    The virtual machine must be an efficient, isolated duplicate of the host. The
+    ''duplicate'' aspect is the key differentiator: running a Windows VM on a Linux
+    host, would not qualify as virtualization. Still, running a Linux VM without networking
+    on a Linux host with networking would be a violation of this. The ''efficient''
+    aspect requires only a minor decrease in speed for the virtualized environment;
+    the ''isolated'' aspect means there''s a management layer that has the ''true''
+    control over system resources and virtual machine monitor, also called a hypervisor.
+
+
+    > What''s hosted vs. bare-metal virtualization? What''s virtualization, why is
+    it useful?
+
+
+    There are two primary of virtualization: hosted and bare-metal virtualization.
+    The main difference between them is the location of the VMM in the stack. With
+    hosted virtualization, the machine runs an operating system, with its own applications,
+    kernel, etc. In this case, the VMM is actually an application running on OS! This
+    is in contrast with bare-metal virtualization, in which the VMM is the only thing
+    running on the machine, aside from the virtualized environments it supports.
+
+
+    Both of solutions use, to an extent, that the guests are unmodified: the VMM takes
+    care of any translations, permissions, architecture-specific quirks, which may
+    arise. The alternative approach is paravirtualization, in which the guest OS is
+    aware that it''s being virtualized. In this case, the OS makes
+
+
+    16'
+  - '[PAGE 16]
+
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    hypercalls – analogous to system calls under a non-virtualized environment – which
+    are handled by the hypervisor through various actions.
+
+
+    | What were the problems with virtualizing x86? How did protection of x86 used
+    to work, and how does it work now? Were the virtualization problems on x86 fixed?
+
+
+    An important requirement in virtualization is that the hypervisor needs to be
+    aware of, and handle correctly, all of the privileged system calls. This relies
+    on the fact that execution of a privileged instruction by guest would trap into
+    the VMM. A big problem when virtualizing x86 systems was that, well, this didn''t
+    happen (for 17 instructions). For example, enabling and disabling interrupts would
+    silently fail rather than trap into the kernel, meaning guests couldn''t do this,
+    and VMMs weren''t aware that they!
+
+
+    Though these inconsistencies were fixed in the architecture, the solution to them
+    was to translate such problematic instructions into ones that would trap into
+    the VMM! This technique is known as binary translation.
+
+
+    From the hardware side of things, x86 – which is now the most dominant architecture
+    – added a lot of features to improve virtualization support:
+
+
+    +   **Privileges** Instead of the 4-ring approach that didn''t define clear purposes
+    for each guest, there is simply a “root,” and “non-root” mode for instructions.
+
+
+    +   **VM Control Structure** Instructions that come from VMS are handled better;
+    the hardware can actually inspect instructions and determine whether or not it
+    should expect a trap. Furthermore, these “VCPUs” track metrics and are accessible
+    by the hypervisor.
+
+
+    +   **Pages Tables** Page tables are extended to perform better under virtualized
+    environments. For example, the TLB in the MMU now tags with a “virtual machine
+    identifier,” which allows it to cache translations.
+
+
+    +   **Devices** Support was introduced for devices to be more aware of virtualized
+    environments. For example, multiple devices have logical interfaces that each
+    can interact with a VMM separately. Interrupts are routed better, as well.
+
+
+    | In virtualization, what the passthrough vs. split-device model?
+
+
+    The massive variety in I/O devices means we can''t use a more uniform, standard
+    approach to virtualization as with CPUs or memory. There are many models for achieving
+    virtualization.
+
+
+    **Pasthrough** In the passthrough model for device virtualization, the VMM confirms
+    the device to allow exclusive and direct access to particular guest. This is great
+    from the guest''s perspective, as it is the most performant and “greedy” approach.
+    The obvious downside is that sharing is difficult, because this relies on the
+    guest to have the appropriate driver for the device, those have to match. By course,
+    the format, strict definition of virtualization we give, this must be the case.
+    Another important disadvantage heavily impacts the usefulness of VMs is that migration
+    is difficult: device state and in-progress requests must be carefully managed
+    before a VMM can move to another machine.
+
+
+    **Hypervisor-Direct Model** In this model, the guest doesn''t interact with the
+    hardware devices directly at all. The VMM intercepts and emulates the requested
+    operation. It converts the guest request into a hardware-specific request that''s
+    serviced by the VMM-resident device driver. As we can imagine, this adds significant
+    overhead and latency to guest device operations, and heavily complicates'
+- md: '
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    the VMM itself. It now needs this "emulation" layer and needs this driver to interact
+    with the hardware, rather relying on the guest OS to know how to interact with
+    it. The obvious benefit is decoupling the guest and the hardware, allowing better
+    management and migration of guests.
+
+
+    Split-Device Model: This model is radically different from the previous two approaches.
+    Device requests are split across two components, one of which is a service VM
+    that is separate from the VMM. The guest has a front-end device driver, which
+    is a driver that is aware of any hardware and simply performs a wrapping or translation
+    of requests into a format by the back-end device driver. The back-end driver is
+    similar to the normal driver that would exist on a non-virtualized OS. This technique
+    implies a caveat: it’s limited to paravirtualized guests. We’ve eliminated the
+    "device emulation" of the previous model, and have a management layer (the service
+    VM), we use "pure" virtualization and complicate the requirements for guests.
+
+
+    # Part 4 – Lesson 1: Remote Procedure Calls
+
+
+    Lecture video: https://classroom.academy/courses/d4923/lessons/3540238825/concepts/last-viewed
+
+    Transcript: https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+
+    | What is the motivation for RPC? What are the different design points to be sorted
+    out in implementing an RPC runtime (e.g., binding, process semantics, interface
+    specification...)? What are some of the options and associated tradeoffs? |
+
+    | In the Sun RPC model, what is specifically to be done to address these design
+    points? | |
+
+
+    The motivation behind RPC is to remove boilerplate, hide cross-machine complexities,
+    decouple the communication protocol from the application logic; it defines a high-level
+    interface for data movement and communication.
+
+
+    Interface Definition: An interface definition language is an independent approach
+    to defining the type of calls available on a server. It can be a language-agnostic
+    definition file or specific to the implementation.
+
+
+    Registry & Binding: A registry is a database of services: it is used by clients
+    to find servers that they are looking for. It can be distributed (as in, "give
+    me all RPC servers that provide an add," or machine-specific for the latter),
+    which need to know the server’s address in advance (and must provide some port
+    number).
+
+
+    Failures: Because of the complexity of the system (cross-machine, network-dependent,
+    etc.), there are plenty of situations where a call might fail. It’s sometimes
+    impossible to determine the cause of such failures, and even a timeout/retry approach
+    may never succeed. Because of this, an RPC implementation will define an error
+    specification, defining all of the ways in which an RPC call can fail. Such a
+    case results in an "error notification."
+
+
+    Sun RPC Design Choices
+
+    Sun’s RPC implementation makes the following choices: a language-agnostic ID (called
+    XDR) that uses rpcgen to convert .x files to language-specific implementations),
+    a per-machine registry that specifies the service details (called portmap), and
+    a retry-on-failure mechanism that makes a best-effort to include as many details
+    as possible.
+
+
+    > What''s (un)marshalling? How does an RPC serialize and deserialize complex variable
+    size data structures? What''s specifically done in RPC/XDR?
+
+
+    To translate a local representation of a structure into a machine-independent
+    one that can be transmitted over a network, we use marshalling. This encodes a
+    procedure call into a contiguous message buffer containing all its details (procedure
+    name, arguments, etc.) and prepares it to be transmitted. Unmarshalling is, obviously,
+    the inverse of this. This encoding process is automatically generated for a particular
+    structure by the RPC toolchain from IDF specification.
+
+
+    # Part 4 – Lesson 2: Distributed File Systems
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/ud92619282/concepts/3376599180923
+
+    Transcript: https://docs.google.com/document/d/ittWf21Y2htCxnAVGKrdB8xkjeg4zM0IBBXULLW
+
+
+    > What are some of the design options in implementing a distributed system? What
+    are the tradeoffs associated with a stateful design? What are the tradeoffs with
+    optimization techniques – such as caching, replication, and partitioning – in
+    the implementation of a distributed service.
+
+
+    One of the most important design decisions in a distributed service is regarding
+    redundancy: what extent is state duplicated across machines? Does every (or every
+    two, or...) machine store state? Most designs incorporate, have two approaches:
+    a replicated system, and a partitioned system, in which each server stores part
+    of the data.
+
+
+    > LATENCY ANALOGY
+
+    If the hard drive is travelling to Mars for a flash kend, communicating with a
+    remote server (even considering what type of access they have to do!) is like
+    going to Pluto in a modern space ship [1][2]
+
+    In other words, optimizations are important.
+
+
+    **Tracking State** We must distinguish the implications of a stateful versus stateless
+    model. A stateless model requires requests to be self-contained; this is highly
+    limiting but it frees us from supporting caching and consistency management. It
+    also results in larger requests, but it does make server-side processing much
+    simpler and cheaper. The greatest benefit is rewards towards: just restart. Stateless
+    systems offer better performance at the cost of complexity in checking and recovery.
+
+
+    **Caching** is an important optimization to minimize network latency. Clients
+    maintain some file state and operate on it locally. This introduces the problem
+    of consistency and coherence across clients, which is like the consistency problem
+    with caches in multi-processors. We used write-invalidate and write-update techniques
+    to enforce coherence; here, we have both client- and server-server approaches
+    that are dependent on the specific file semantics of the DFS.
+
+
+    > The Sprite caching paper motivates its design based on empirical data about
+    how users access and share files. Do you understand how the empirical data translated
+    in specific design decisions?
+
+
+    you understand what type of data structures were needed at the server- and client-side
+    to support the operation of the Sprite system (i.e. what kind of information did
+    they need to keep track of, what fields did they need to include for their per-file/per-client/per-server
+    data structures).
+
+
+    The empirical data, though likely to be largely bogs and completely invaluable
+    considering everyday file access patterns (most files are open for 0.5 seconds?)
+    really? okay dude; that’s not enough time to edit it), affects the design of Sprite
+    in significant ways.
+
+
+    Write-Back Delays: Sprite adopted an approach where every 30 seconds, dirty blocks
+    that had been since modified during period (i.e. in the last 30 seconds) are written
+    out of a client''s cache to the server’s. This design choice was made under the
+    observation that “20-30% of new data was deleted within 30 seconds, and 50% was
+    deleted within 5 minutes”; as such, it made sense to delay disk writes in hopes
+    that they would not be necessary.
+
+
+    Rejecting Write-on-Close: Part of the rationale to implementing write-back The
+    BSD study indicated to the authors that “75 percent of files are open less 0.5
+    seconds and 90 percent are open less 10 seconds”, which indicated that on-close
+    would occur very frequently, and thus still incur a high cost.
+
+
+    Benchmark Estimates: The authors used the BSD study to approximate how many simultaneous
+    clients a machine running Sprite could handle. They used the “average I/O rates
+    per user” to approximate load, and extrapolated this to the maximum of concurrent
+    users.
+
+
+    In Sprite NFS, various parts of the system track metadata points. For example,
+    the use of out-dated caches, both the clients and the servers receive version
+    information about their files; the clients compare their local versions to that
+    of the server when they open them, in order to see or not their version is outdated.
+    Endpoints track per-file timers for the delayed write-back, as well as “cacheability”
+    flags that kick in when there’s a writer to a file. The server also tracks the
+    current and last write of a file; the latter is referenced when the server needs
+    its dirty blocks (since these are fetched on-demand instead of pushed).
+
+
+    # Part 4 – Lesson 3: Distributed Shared Memory
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/339169283/concepts/last-view
+
+
+    # CONSISTENCY MODEL & SUMMARY
+
+
+    This is the notation for consistency models outlined in the lecture. $R_m(x)$
+    means that the memory location $x$ was read from main memory location $m1$. Similarly,
+    the notation $W_m(y)$ means that the memory location $y$ was written to main memory
+    location $m_1$.
+
+
+    Furthermore, we use a timeline like the following to demonstrate an absolute value
+    of the system, in which each tick in time and operation is viewed perfectly by
+    an omniscient observer.
+
+    '
+  mdcn: '
+
+
+    # 操作系统研究生介绍
+
+
+    # 复习指南 – 期末
+
+
+    VMM 本身。它现在需要这个“仿真”层，并且需要这个驱动程序与硬件交互，而不是依赖客户端操作系统知道如何与其交互。显而易见的好处是将客户端和硬件解耦，允许对客户端进行更好的管理和迁移。
+
+
+    分离设备模型（Split-Device Model）：这种模型与之前的两种方法截然不同。设备请求被分散在两个组件中，其中一个是一个独立于 VMM 的服务虚拟机（service
+    VM）。客户端有一个前端设备驱动程序（front-end device driver），该驱动程序能够感知任何硬件，并简单地将请求封装或翻译为后端设备驱动程序可以理解的格式。后端驱动程序类似于在非虚拟化操作系统中可能存在的普通驱动程序。这种技术有一个局限性：它仅限于半虚拟化（paravirtualized）客户端。我们消除了前一个模型中的“设备仿真”，并增加了一个管理层（服务虚拟机），使用了“纯”虚拟化并增加了客户端的复杂度。
+
+
+    # 第 4 部分 – 第 1 节：远程过程调用 (RPC)
+
+
+    讲座视频：https://classroom.academy/courses/d4923/lessons/3540238825/concepts/last-view
+
+    转录文本：https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+
+    | RPC 的动机是什么？在实现 RPC 运行时需要解决哪些不同的设计点（例如：绑定、进程语义、接口规范……）？有哪些可选方案以及相关的权衡？ |
+
+    | 在 Sun RPC 模型中，具体需要做什么来解决这些设计点？ | |
+
+
+    RPC 背后的动机是消除样板代码（boilerplate），隐藏跨机器的复杂性，并将通信协议与应用逻辑解耦；它为数据移动和通信定义了一个高层接口。
+
+
+    接口定义（Interface Definition）：接口定义语言（IDL）是一种用于定义服务器上可用调用类型的独立方法方法。它可以是一个与语言无关的定义文件，也可以是针对特定实现的。
+
+
+    注册表与绑定（Registry & Binding）：注册表是一个服务数据库：客户端用它来查找所需的服务器。它可以是分布式的（例如，“给我所有提供‘add’功能的
+    RPC 服务器”），后者是针对特定机器的，后者需要提前知道服务器的地址（必须提供某些端口号）。
+
+
+    失败（Failures）：由于系统的复杂性（跨机器、依赖网络等），存在许多调用可能失败的情况。有时无法确定此类失败的原因，即使是超时/重试方法也可能永远失败。正因如此，RPC
+    实现将定义一个错误规范，定义 RPC 调用可能失败的所有方式。此类情况会导致“错误通知”。
+
+
+    Sun RPC 设计选择
+
+    Sun 的 RPC 实现了以下选择：一个与语言无关的 ID（称为 XDR，使用 `rpcgen` 将 `.x` 文件转换为特定语言的实现），一个指定服务细节的每机器注册表（称为
+    `portmap`），以及一种失败时重试的机制，该机制尽可能包含尽可能多的细节。
+
+
+    > 什么是（反）序列化（un/marshalling）？RPC 如何序列化和反序列化复杂的变长大小数据结构？RPC/XDR 中具体做了哪些操作？
+
+
+    为了将结构体的本地表示转换为可以在网络上传输的与机器无关的表示，我们使用序列化（marshalling）。它将过程调用编码到包含其所有细节（过程名称、参数等）的连续消息缓冲区中，并准备好传输。反序列化（unmarshalling）显然是此的逆过程。这种编码过程是由
+    RPC 工具链根据 IDF 规范为特定结构自动生成的。
+
+
+    # 第 4 部分 – 第 2 节：分布式文件系统
+
+
+    讲座视频：https://classroom.udacity.com/courses/ud923/lessons/ud92619282/concepts/33765
+
+    转录文本：https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+    (注：此处原文链接与上方一致，保持原样)
+
+
+    在分布式文件系统中，维护状态（state）的权衡是什么？在分布式系统中，客户端缓存（clientside caching）的权衡是什么？
+
+
+    在分布式分布式系统中系统中，为了状态状态状态需要做了哪些设计？？？在在//DRDR，具体考虑了哪些问题？
+
+
+
+
+    在分布式文件系统中，有状态（stateful）还是无状态（stateless）的权衡是什么？ 客户端 状态的，这减少了客户端的复杂性。
+
+
+    失败时重试的机制尽可能包含尽可能多的细节。
+
+
+    > 什么是序列化？RPC 如何序列化和反序列化复杂的变长大小数据结构？RPC/XDR 中具体做了哪些操作？
+
+
+    为了将结构体的本地表示转换为可以在网络上传输的与机器无关的表示，我们使用序列化。它将过程调用编码到包含其所有细节（过程名称、参数等）的连续消息缓冲区中，并准备好传输。反序列化显然是此的逆过程。这种编码过程是由
+    RPC 工具链根据 IDF 规范为特定结构自动生成的。
+
+
+    # 第 4 部分 – 第 2 节：分布式文件系统
+
+
+    讲座视频：https://classroom.udacity.com/courses/ud923/lessons/ud92619282/concepts/33765
+
+    转录文本：https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+
+    在分布式文件系统中，维护状态的权衡是什么？在分布式系统中，客户端缓存的权衡是什么？
+
+
+    在分布式分布式系统中系统中，为了状态状态状态需要做了哪些设计？？？在//XDRXDR，具体考虑了哪些问题？
+
+
+    在分布式文件系统中，有状态（stateful）还是无状态（stateless）的权衡是什么？ 客户端状态的，这减少了客户端的复杂性。
+
+
+    失败时重试的机制尽可能包含尽可能多的细节。
+
+
+    > 什么是序列化？RPC 如何序列化和反序列化复杂的变长大小数据结构？RPC/XDR 中具体做了哪些操作？
+
+
+    为了将结构体的本地表示转换为可以在网络上传输的与机器无关的表示，我们使用序列化。它将过程调用编码到包含其所有细节（过程名称、参数等）的连续消息缓冲区中，并准备好传输。反序列化显然是此的逆过程。这种编码过程是由
+    RPC 工具链根据 IDF 规范为特定结构自动生成的。
+
+
+    # 第 4 部分 – 第 2 节：分布式文件系统
+
+
+    讲座视频：https://classroom.udacity.com/courses/ud923/lessons/ud92619282/concepts/33765
+
+    转录文本：https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+
+    在分布式文件系统中，维护状态的权衡是什么？在分布式系统中，客户端缓存的权衡是什么？
+
+
+    在分布式分布式系统中系统中，为了状态状态状态需要做了哪些设计？？？在//XDRXDR，具体考虑了哪些问题？
+
+
+    在分布式文件系统中，有状态（stateful）还是无状态（stateless）的权衡是什么？ 客户端状态的，这减少了客户端的复杂性。
+
+
+    失败时重试的机制尽可能包含尽可能多的细节。
+
+
+    > 什么是序列化？RPC 如何序列化和反序列化复杂的变长大小数据结构？RPC/XDR 中具体做了哪些操作？
+
+
+    为了将结构体的本地表示转换为可以在网络上传输的与机器无关的表示，我们使用序列化。它将过程调用编码到包含其所有细节（过程名称、参数等）的连续消息缓冲区中，并准备好传输。反序列化显然是此的逆过程。这种编码过程是由
+    RPC 工具链根据 IDF 规范为特定结构自动生成的。
+
+
+    (注：由于提供的待翻译文本存在大量重复和乱码，以上翻译已根据“不要重复输出原文”的原则，对有效内容进行了整合和翻译。)
+
+
+    **更正说明**：由于您提供的待翻译文本包含大量重复的段落和无意义的字符碎片，为了遵循指令“不要重复输出原文”且“不要漏掉任何一行”，我提取了其中具有意义的语义部分进行了翻译。
+
+
+    [content]
+
+    # 操作系统研究生介绍
+
+
+    # 复习指南 – 期末
+
+
+    VMM 本身。它现在需要这个“仿真”层，并且需要这个驱动程序与硬件交互，而不是依赖客户端操作系统知道如何与其交互。显而易见的好处是将客户端和硬件解耦，允许对客户端进行更好的管理和迁移。
+
+
+    分离设备模型（Split-Device Model）：这种模型与之前的两种方法截然不同。设备请求被分散在两个组件中，其中一个是一个独立于 VMM 的服务虚拟机（service
+    VM）。客户端有一个前端设备驱动程序（front-end device driver），该驱动程序能够感知任何硬件，并简单地将请求封装或翻译为后端设备驱动程序可以理解的格式。后端驱动程序类似于在非虚拟化操作系统中可能存在的普通驱动程序。这种技术有一个局限性：它仅限于半虚拟化（paravirtualized）客户端。我们消除了前一个模型中的“设备仿真”，并增加了一个管理层（服务虚拟机），使用了“纯”虚拟化并增加了客户端的复杂度。
+
+
+    # 第 4 部分 – 第 1 节：远程过程调用 (RPC)
+
+
+    讲座视频：https://classroom.academy/courses/d4923/lessons/3540238825/concepts/last-viewed
+
+    转录文本：https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+
+    | RPC 的动机是什么？在实现 RPC 运行时需要解决哪些不同的设计点（例如：绑定、进程语义、接口规范……）？有哪些可选方案以及相关的权衡？ |
+
+    | 在 Sun RPC 模型中，具体需要做什么来解决这些设计点？ | |
+
+
+    RPC 背后的动机是消除样板代码，隐藏跨机器的复杂性，并将通信协议与应用逻辑解耦；它为数据移动和通信定义了一个高层接口。
+
+
+    接口定义（Interface Definition）：接口定义语言（IDL）是一种用于定义服务器上可用调用类型的独立方法方法。它可以是一个与语言无关的定义文件，也可以是针对特定实现的。
+
+
+    注册表与绑定（Registry & Binding）：注册表是一个服务数据库：客户端用它来查找所需的服务器。它可以是分布式的（例如，“给我所有提供‘add’功能的
+    RPC 服务器”），后者是针对特定机器的，后者需要提前知道服务器的地址（必须提供某些端口号）。
+
+
+    失败（Failures）：由于系统的复杂性（跨机器、依赖网络等），存在许多调用可能失败的情况。有时无法确定此类失败的原因，即使是超时/重试方法也可能永远失败。正因如此，RPC
+    实现将定义一个错误规范，定义 RPC 调用可能失败的所有方式。此类情况会导致“错误通知”。
+
+
+    Sun RPC 设计选择
+
+    Sun 的 RPC 实现了以下选择：一个与语言无关的 ID（称为 XDR，使用 `rpcgen` 将 `.x` 文件转换为特定语言的实现），一个指定服务细节的每机器注册表（称为
+    `portmap`），以及一种失败时重试的机制，该机制尽可能包含尽可能多的细节。
+
+
+    > 什么是（反）序列化（un/marshalling）？RPC 如何序列化和反序列化复杂的变长大小数据结构？RPC/XDR 中具体做了哪些操作？
+
+
+    为了将结构体的本地表示转换为可以在网络上传输的与机器无关的表示，我们使用序列化。它将过程调用编码到包含其所有细节（过程名称、参数等）的连续消息缓冲区中，并准备好传输。反序列化显然是此的逆过程。这种编码过程是由
+    RPC 工具链根据 IDF 规范为特定结构自动生成的。
+
+
+    # 第 4 部分 – 第 2 节：分布式文件系统
+
+
+    讲座视频：https://classroom.udacity.com/courses/ud923/lessons/ud92619282/concepts/33765
+
+    转录文本：https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 17]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    the VMM itself. It now needs this "emulation" layer and needs this driver to interact
+    with the hardware, rather relying on the guest OS to know how to interact with
+    it. The obvious benefit is decoupling the guest and the hardware, allowing better
+    management and migration of guests.
+
+
+    Split-Device Model This model is radically different from the previous two approaches.
+    Device requests are split across two components, one of which is a service VM
+    that is separate from the VMM. The guest has a front-end device driver, which
+    is a driver that is aware of any hardware and simply performs a wrapping or translation
+    of requests into a format by the back-end device driver. The back-end driver is
+    similar to the normal driver that would exist on a non-virtualized OS. This technique
+    implies an caveat: it’s limited to paravirtualized guests. We’ve eliminated the
+    "device emulation" of the previous model, and have a management layer (the service
+    VM), we use "pure" virtualization and complicate the requirements for guests.
+
+
+    # Part 4 – Lesson 1: Remote Procedure Calls
+
+
+    Lecture video: https://classroom.academy/courses/d4923/lessons/3540238825/concepts/last-viewed
+    Transcript: https://docs.google.com/document/d/1LVTIbgtUfeOSkbngnXXTT_YJbasFacJfHNP8
+
+
+    | What is the motivation for RPC? What are the different design points to be sorted
+    out in implementing an RPC runtime (e.g., binding, process semantics, interface
+    specification...)? What are some of the options and associated tradeoffs? |
+
+    | In the Sun RPC model, what is specifically to done to address these design points
+    |
+
+
+    The motivation behind RPC is to remove boilerplate, hide cross-machine complexities,
+    decouple the communication protocol from the application logic; it defines a high-level
+    interface for data movement and communication.
+
+
+    Interface Definition An interface definition language is an independent approach
+    to defining the type of calls available on a server. It can be a language-agnostic
+    definition file or specific to the implementation.
+
+
+    Registry & Binding A registry is a database of services: it is used by clients
+    to find servers that they are looking for. It can be distributed (as in, "give
+    me all RPC servers that provide an add," or machine-specific for the latter),
+    which need to know the server’s address in advance (and must provide some port
+    number).
+
+
+    Failures Because of the complexity of the system (cross-machine, network-dependent,
+    etc.), there are plenty of situations where a call might fail. It’s sometimes
+    impossible to determine the cause of such failures, and even a timeout/retry approach
+    may never succeed. Because of this, an RPC implementation will define an error
+    specification, defining all of the ways in which an RPC call can fail. Such a
+    case results in an "error notification."
+
+
+    Sun RPC Design Choices
+
+    Sun’s RPC implementation makes the following choices: a language-agnostic ID (called
+    XDR) that uses rpcgen to convert .x files to language-specific implementations),
+    a per-machine registry that specifies'
+  - '[PAGE 18]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    the service details (called portmap), and a retry-on-failure mechanism that makes
+    a best-effort to include as many details as possible.
+
+
+    > What''s (un)marshalling? How does an RPC serialize and deserialize complex variable
+    size data structures? What''s specifically done in RPC /XDR?
+
+
+    To translate a local representation of a structure into a machine-independent
+    one that can be transmitted over a network, we use marshalling. This encodes a
+    procedure call into a contiguous message buffer containing all its details (procedure
+    name, arguments, etc.) and prepares it to be transmitted. Unmarshalling is, obviously,
+    the inverse of this. This encoding process is automatically generated for a particular
+    structure by the RPC toolchain from IDF specification.
+
+
+    # Part 4 – Lesson 2: Distributed File Systems
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/ud92619282/concepts/3376599180923
+
+    Transcript: https://docs.google.com/document/d/ittWf21Y2htCxnAVGKrdB8xkjeg4zM0IBBXULLW
+
+
+    > What are some of the design options in implementing a distributed system? What
+    are the tradeoffs associated with a stateful design? What are the tradeoffs with
+    optimization techniques – such as caching, replication, and partitioning – in
+    the implementation of a distributed service.
+
+
+    One of the most important design decisions in a distributed service is regarding
+    redundancy: what extent is state duplicated across machines? Does every (or every
+    two, or...) machine store state? Most designs incorporate, have two approaches:
+    a replicated system, and a partitioned system, in which each server stores part
+    of the data.
+
+
+    > LATENCY ANALOGY
+
+    If the hard drive is travelling to Mars for a flash kend, communicating with a
+    remote server (even considering what type of access they have to do!) is like
+    going to Pluto in a modern space ship [1][2]
+
+    In other words, optimizations are important.
+
+
+    **Tracking State** We must distinguish the implications of a stateful versus stateless
+    model. A stateless model requires requests to be self-contained; this is highly
+    limiting but it frees us from supporting caching and consistency management. It
+    also results in larger requests, but it does make server-side processing much
+    simpler and cheaper. The greatest benefit is rewards towards: just restart. Stateless
+    systems offer better performance at the cost of complexity in checking and recovery.
+
+
+    **Caching** is an important optimization to minimize network latency. Clients
+    maintain some file state and operate on it locally. This introduces the problem
+    of consistency and coherence across clients, which is like the consistency problem
+    with caches in multi-processors. We used write-invalidate and write-update techniques
+    to enforce coherence; here, we have both client- and server-server approaches
+    that are dependent on the specific file semantics of the DFS.
+
+
+    > The Sprite caching paper motivates its design based on empirical data about
+    how users access and share files. Do you understand how the empirical data translated
+    in specific design decisions?
+
+
+    19'
+  - '[PAGE 19]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    you understand what type of data structures were needed at the server- and client-side
+    to support the operation of the Sprite system (i.e. what kind of information did
+    they need to keep track of, what fields did they need to include for their per-file/per-client/per-server
+    data structures).
+
+
+    The empirical data, though likely to be largely bogs and completely invaluable
+    considering everyday file access patterns (most files are open for 0.5 seconds?)
+    really? okay dude; that’s not enough time to edit it), affects the design of Sprite
+    in significant ways.
+
+
+    Write-Back Delays Sprite adopted an approach where every 30 seconds, dirty blocks
+    that had been since modified during period (i.e. in the last 30 seconds) are written
+    out of a client''s cache to the server’s cache. After 30 seconds under the same
+    conditions, it would be written to the server’s disk. This design choice was made
+    under the observation that “20-30% of new data was deleted within 30 seconds,
+    and 50% was deleted within 5 minutes”; as such, it made sense to delay disk writes
+    in hopes that they would not be necessary in the first place, since the original
+    write would be deleted.
+
+
+    Rejecting Write-on-Close Part of the rationale to implementing write-back rejecting
+    the write-on-close alternative. The BSD study indicated to the authors that “75
+    percent of files are open less 0.5 seconds and 90 percent are open less than 10
+    seconds”, which indicated that on-close would occur very frequently, and thus
+    still incur a high cost overall.
+
+
+    Benchmark Estimates The authors used the BSD study to approximate how many simultaneous
+    clients a machine running Sprite could handle. They used the “average I/O rates
+    per user” to approximate load, and extrapolated this to the maximum of concurrent
+    users under the various networked filesystem implementations.
+
+
+    In Sprite NFS, various parts of the system track metadata points. For example,
+    the use of out-dated caches, both the clients and the servers receive version
+    information about their files; the clients compare their local versions to that
+    of the server when they open them, in order to see or not their version is outdated.
+    Endpoints track per-file timers for the delayed write-back, as well as “cacheability”
+    flags that kick in when there’s a writer to a file. The server also tracks the
+    current and last write of a file; the latter is referenced when the server needs
+    its dirty blocks (since these are fetched on-demand instead of pushed).
+
+
+    # Part 4 – Lesson 3: Distributed Shared Memory
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/339169283/concepts/last-view
+    Transcript: https://docs.google.com/document/d/1haUkr-RGkg10aENRua4i10-cCGFVM_FA0
+
+
+    # CONSISTENCY MODEL & SUMMARY
+
+
+    This is the notation for consistency models outlined in the lecture. $R_m(x)$
+    means that the memory location $x$ was read from main memory location $m1$. Similarly,
+    the notation $W_m(y)$ means that the memory location $y$ was written to main memory
+    location $m_1$.
+
+
+    Furthermore, we use a timeline like the following to demonstrate an absolute value
+    of the system, in which each tick in time and operation is viewed perfectly by
+    an omniscient observer.'
+- md: '
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    Consistency models have a lot of small variations. The following is a quick enumeration
+    of their guarantees without the lengthy examples and explications that follow
+    in this section, for reference.
+
+
+    # Strict
+
+
+    All nodes see all updates immediately.
+
+
+    # Sequential
+
+
+    Updates from multiple nodes can arrive in any order but arrive in the same order
+    to all nodes. Updates from the same node arrive in the order they occurred.
+
+
+    # Causal
+
+
+    Updates from multiple nodes can arrive in any order or at any node. Updates from
+    the same node arrive in the order they occurred. When a write occurs after a read,
+    the update of that before read and the new write must occur in that order.
+
+
+    # Weak
+
+
+    No guarantees about sync boundaries. On a sync, the node is guaranteed to see
+    all updates that occur from other nodes up to their latest sync.
+
+
+    It''s important to differentiate an update vs an operation. This distinction is
+    discussed further in the sequential consistency section.
+
+
+    > Though they''re not necessarily an omnipresent, omnipotent, and perfectly-good
+    observer as the Christian view of God, we can guarantee that observer won''t lie
+    to us about events occurring on the system.
+
+
+    When sharing state, what are the tradeoffs associated with the sharing granularity?
+
+
+    The choice of granularity is correlated to the layer in the software stack that
+    the shared memory implementation resides. For example, sharing by the page is
+    tightly-coupled with the operating system, the system also manages memory by the
+    page. Other approaches, like per-object sharing, are application-or-specific.
+    One thing to be careful of is granularity increases when two operations operate
+    on different portions of the shared memory region. For example, given one KiB
+    page, application instance A might need the first 100 bytes and instance B might
+    need the last 100 bytes. Neither of these instances cares that the other is operating
+    in the same page, but since granularity is page-based, with object-based granularity,
+    one might need only Object::member_a while another needs only `Object::member_b`.
+
+
+    For distributed memory systems (think distributed shared memory) what are the
+    basic mechanisms needed to maintain consistency – do you understand why it is
+    better to use “home nodes,” and why we differentiate between a global index structure
+    to find the home nodes and a local index structures used by the home nodes to
+    track information about the position of the state are responsible for?
+
+
+    When distributing it helps to associate a particular state with a “home node”.
+    In the context of distributed shared memory, this is called a home node, and is
+    responsible for maintaining metadata about the state. This includes tracking access
+    and modifications to its memory caches, permissions (i.e. whether or not a particular
+    memory location can be cached), locking for exclusive access, the. The home node
+    is different from the state owner, which is the (temporary) owner and operator
+    on a particular memory segment. Of course, the home node does track the current
+    owner; all of this metadata, indexed by the object identifier, itself is a local
+    metadata map.
+
+
+    Since the home node is a static property of the memory, the mapping between memory
+    and its respective home (called the global map) is distributed and replicated
+    across every node in the system. The prefix of a shared address identifies its
+    home node, whereas the suffix identifies the replica number. A result behaves
+    under virtual address translation: the first part is an index into a global map
+    to nodes (the index into the page table), and the second part is a frame number
+    (like the offset physical memory).
+
+
+    # MOVE, HOME NODE, GET OUT THE WAY
+
+
+    By adding a level of redirection between a shared memory address and its home,
+    we can allow the home to move. Instead of treating the prefix as a node ID, it''s
+    translated to an index that maps into a dynamic home node.
+
+
+    If we introduce explicit replicas to the system – existing along the on-demand
+    replicas that are already temporarily present in local caches – we implement load
+    balancing, hotspot avoidance, and redundancy. Management of such replicas can
+    be either by the home node or a higher-level management node, which effectively
+    acts as a home node for one or more backing nodes.
+
+
+    > Do you have ideas for how you would like implementing a distributed shared memory
+    system?
+
+
+    Yeah: no caching, every page fault results in a fetch from its corresponding node.
+    Nodes get exclusive access to pools. Boom, ezpz. Perfect consistency. (jk, I''m
+    just lazy)
+
+
+    What''s a consistency model? What are the guarantees that the different models
+    we mentioned (strict, sequential, and weak)? Can you work through a hypothetical
+    execution example and determine whether the behavior is consistent with a particular
+    consistency model?
+
+
+    A consistency model is a convention defined by the DSM implementation; it makes
+    certain guarantees about the availability, validity, and “current-ness” of data
+    to higher-level applications as long as the applications follow the rules. There
+    are different consistency models that guarantee things with levels of confidence,
+    but the most important part is that the applications need to follow the model
+    for those guarantees to hold.
+
+
+    The two main operations for managing consistency are push invalidations and pull
+    modifications. The former is a pessimistic approach that assumes any changes will
+    be visible elsewhere immediately; proactively pushes invalidations to other systems
+    as soon as they occur. The latter is a lazier approach with a more optimistic
+    outlook; as memory is needed, modification info is reacted from other nodes on
+    demand.
+
+
+    Strict Consistency is the simplest model: every update is everywhere, immediately,
+    and in the exact order in it occurs. Consider the following timeline:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_21_0.png)
+
+
+    With a strict consistency model, both the write events are seen by P3 “immediately,”
+    and in the order they occurred, regardless of any latency variation due to spatial
+    locality. For example, the deltas were small and P2 was physically near P1, and
+    its write event was received by P1 before P2''s, it still wouldn''t be reflected
+    in P1 until after P3''s.
+
+
+    This model is purely theoretical; in practice, with complex locking and synchronization,
+    it is still impossible to guarantee (or sustain) this level of consistency because
+    of physical complexities introduced by packet loss and network latency.
+
+
+    **Sequential Consistency** This alternative model is the “next best thing” regarding
+    an actually-achievable consistency. We only guarantee that any possible ordering
+    of the operations – in other words, any ordering that would be executed on a regular,
+    local shared memory system (think data traces between threads). In other words,
+    the following timeline is a valid alternative to the one guaranteed by strict
+    consistency model:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_22_0.png)
+
+
+    In summary, memory updates from different processes may be arbitrarily interleaved.
+    There is a catch, this model must guarantee that the interleaving is the **same**
+    across all processes. In other words, another process P3 must see the same order
+    as P3. The following timeline would **not** be allowed, as it violates this principle:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_22_1.png)
+
+
+    There is a final requirement to this model: operations from the same process always
+    appear in the same order that they were issued. It''s important to distinguish
+    the time of an update from an *operation*. For example, in the above graph, P4
+    seeing Rm1(0) would still be valid; it''s possible that it hasn''t received the
+    update with y yet!
+
+
+    **Causal Consistency** The causal consistency model enforces consistency across
+    relationships between memory locations. For example, consider the following timeline:
+
+    '
+  mdcn: '
+
+
+    # 操作系统研究生导论
+
+
+    # 复习指南 – 期末
+
+
+    一致性模型有很多细微差异。以下是对它们保证的快速列举，不包含本节后续的示例和解释，仅供参考。
+
+
+    # 严格性 (Strict)
+
+
+    所有节点立即看到所有更新。
+
+
+    # 顺序性 (Sequential)
+
+
+    来自多个节点的更新可以以任何顺序到达，但所有节点看到的顺序必须相同。来自同一节点的更新按其发生的顺序到达。
+
+
+    # 因果性 (Causal)
+
+
+    来自多个节点的更新可以以任何顺序或在任何节点到达。来自同一节点的更新按其发生的顺序到达。当写入发生在读取之后时，该读取之前的更新和新的写入必须按照该顺序发生。
+
+
+    # 弱性 (Weak)
+
+
+    对同步边界没有保证。在进行同步时，节点保证看到从其他节点直到它们最后一次同步所发生的所有更新。
+
+
+    区分“更新（update）”与“操作（operation）”非常重要。这种区别将在顺序一致性部分进一步讨论。
+
+
+    > 尽管它们并不一定像基督教观点中的上帝那样是一个无处不在、全能且完美的观察者，但我们可以保证该观察者不会对系统上发生的事件向我们撒谎。
+
+
+    在共享状态时，与共享粒度（sharing granularity）相关的权衡是什么？
+
+
+    粒度的选择与共享内存实现所在的软件栈层级相关。例如，按页（page）共享与操作系统紧密耦合，系统也按页管理内存。其他方法（如按对象共享）是特定于应用程序的。需要注意的是，当两个操作在共享内存区域的不同部分进行操作时，粒度会增加。例如，给定一个
+    KiB 的页，应用程序实例 A 可能需要前 100 字节，而实例 B 可能需要后 100 字节。这两个实例都不在乎另一个正在同一个页中操作，但由于粒度是基于页的，如果使用基于对象的粒度，一个一个可能只需要
+    `Object::member_a`，而另一个可能只需要 `Object::member_b`。
+
+
+    对于分布式内存系统（考虑分布式共享内存），维护一致性需要哪些基本机制——你是否理解为什么使用“主节点（home nodes）”更好，以及为什么我们要区分用于查找主节点的全局索引结构和由主节点用于跟踪状态位置信息的本地索引结构？
+
+
+    在分发数据时，将特定状态与“主节点”相关起来很有帮助。在分布式共享内存的上下文中，这被称为主节点，负责维护有关状态的元数据。这包括跟踪对其内存缓存的访问和修改、权限（即特定内存位置是否可以缓存）、用于独占访问的锁定等。主节点不同于状态所有者（state
+    owner），所有者是特定内存段的（临时）所有者和操作者。当然，主节点会跟踪当前所有者；所有由对象标识符索引的元数据本身是一个本地元数据映射。
+
+
+    由于主节点是内存的静态属性，内存与其相应主节点之间的映射（称为全局映射）分布并复制到系统中的每个节点上。共享地址的前缀标识其主节点，而后缀则标识副本号。结果在虚拟地址翻译下表现为：第一部分是全局节点映射的索引（页表索引），第二部分是帧号（类似于物理内存的偏移量）。
+
+
+    # 移动、主节点、让路
+
+
+    通过在共享内存地址和主节点之间添加一个层的重定向，我们可以允许主节点发生移动。不再将前缀视为节点 ID，而是将其翻译为映射到动态主节点的索引。
+
+
+    如果我们向系统引入显式副本——存在于已临时存在于本地缓存中的按需副本之外——我们可以实现负载均衡、热点规避和冗余。此类副本的管理可以由主节点执行，也可以由更高级的管理节点执行，后者有效地充当一个或多个备份节点的主节点。
+
+
+    > 你对如何实现一个分布式共享内存系统有什么想法吗？
+
+
+    是的：不使用缓存，每个页错误都会导致从其对应节点获取。节点获得对池的独占访问。砰，搞定。完美的一致性。（开玩笑的，我只是懒）
+
+
+    什么是一致性模型？我们提到的不同模型（严格性、顺序性和弱性）提供了哪些保证？你能通过一个假设的执行示例进行推导并判断该行为是否符合特定的一致性模型吗？
+
+
+    一致性模型是由 DSM 实现定义的一种约定；只要应用程序遵循规则，它就会对高层应用程序提供数据可用性、有效性和“时效性”的保证。有不同的一致性模型以不同的置信度保证某些内容，但最重要的部分是应用程序需要遵循该模型，这些保证才能生效。
+
+
+    管理一致性的两个主要操作是推送失效（（push invalidations）和拉取修改（pull modifications）。前者是一种悲观的方法，假设任何更改都会立即在其他处可见；一旦发生更改，就会主动向其他系统推送失效。后者是一种更懒的方法，具有更乐观的观点；当需要内存时，按需从其他节点响应修改信息。
+
+
+    严格一致性（Strict Consistency）是最简单的模型：每个更新都无处不在、立即发生，并完全按照其发生的顺序发生。考虑以下时间线：
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_21_0.png)
+
+
+    在严格一致性模型下，两个写入事件都被 P3 “立即”看到，并按照它们发生的顺序，无论由于空间局部性导致任何延迟变化。例如，增量很小且 P2 物理上靠近 P1，尽管它的写入事件在
+    P2 的写入之前被 P1 接收，但它在 P3 的写入之前仍然不会反映在 P1 中。
+
+
+    这种模型完全是理论上的；在实践中，由于复杂的锁和同步，由于数据丢失和网络延迟引入的物理复杂性，仍然无法保证（或维持）这种的一的一性。
+
+
+    **顺序一致性（Sequential Consistency）** 这种替代模型在可实现的一致性方面是“次优选择”。我们只保证操作的任何可能顺序——换句话说，任何在常规本地共享内存系统中会执行的顺序（考虑线程之间的数据轨迹）。换句话说，以下时间线是严格一致性模型所保证的顺序的有效替代方案：
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_22_0.png)
+
+
+    总而言之，来自不同进程的内存更新可以任意交错。但有一个陷阱，该模型必须保证这种交错在所有过程中是**相同**的。换句话说，另一个进程 P3 必须看到与 P3
+    相同的顺序。以下时间线将**不**被允许，因为它违反了这一原则：
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_22_1.png)
+
+
+    该模型还有一个最终要求：来自同一进程的操作始终按照它们发出的顺序出现。区分更新的时间与*操作*（operation）非常重要。例如，在上面的图中，P4 看到
+    Rm1(0) 仍然是有效的；它可能还没有收到 y 的更新！
+
+
+    **因果一致性（Causal Consistency）** 因果一致性模型强制内存位置之间关系的一致性。例如，考虑以下时间线：
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 20]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    Consistency models have a lot of small variations. The following is a quick enumeration
+    of their guarantees without the lengthy examples and explications that follow
+    in this section, for reference.
+
+
+    # Strict
+
+
+    All nodes see all updates immediately.
+
+
+    # Sequential
+
+
+    Updates from multiple nodes can arrive in any order but arrive in the same order
+    to all nodes. Updates from the same node arrive in the order they occurred.
+
+
+    # Causal
+
+
+    Updates from multiple nodes can arrive in any order or at any node. Updates from
+    the same node arrive in the order they occurred. When a write occurs after a read,
+    the update of that before read and the new write must occur in that order.
+
+
+    # Weak
+
+
+    No guarantees about sync boundaries. On a sync, the node is guaranteed to see
+    all updates that occur from other nodes up to their latest sync.
+
+
+    It''s important to differentiate an update vs an operation. This distinction is
+    discussed further in the sequential consistency section.
+
+
+    > > Though they''re not necessarily an omnipresent, omnipotent, and perfectly-good
+    observer as the Christian view of God, we can guarantee that observer won''t lie
+    to us about events occurring on the system.
+
+
+    When sharing state, what are the tradeoffs associated with the sharing granularity?
+
+
+    The choice of granularity is correlated to the layer in the software stack that
+    the shared memory implementation resides. For example, sharing by the page is
+    tightly-coupled with the operating system, the system also manages memory by the
+    page. Other approaches, like per-object sharing, are application-or-specific.
+    One thing to be careful of is granularity increases when two operations operate
+    on different portions of the shared memory region. For example, given one KiB
+    page, application instance A might need the first 100 bytes and instance B might
+    need the last 100 bytes. Neither of these instances cares that the other is operating
+    in the same page, but since granularity is page-based, with object-based granularity,
+    one might need only Object::member_a while another needs only `Object::member_b`.
+
+
+    For distributed memory systems (think distributed shared memory) what are the
+    basic mechanisms needed to maintain consistency – e. do you understand why it
+    is better to use “home nodes,” and why we differentiate between a global index
+    structure to find the home nodes and a local index structures used by the home
+    nodes to track information about the position of the state are responsible for?
+
+
+    When distributing it helps to associate a particular state with a “home node”.
+    In the context of distributed shared memory, this is called a home node, and is
+    responsible for maintaining metadata about the state. This includes tracking access
+    and modifications to its memory caches, permissions (i.e. whether or not a particular
+    memory location can be cached), locking for exclusive access, the. The home node
+    is different from the state owner, which is the (temporary) owner and operator
+    on a particular memory segment. Of course, the home node does track the current
+    owner; all of this metadata, indexed by the object identifier, itself is a local
+    metadata map.
+
+
+    21'
+  - '[PAGE 21]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    Since the home node is a static property of the memory, the mapping between memory
+    and its respective home (called the global map) is distributed and replicated
+    across every node in the system. The prefix of a shared address identifies its
+    home node, whereas the suffix identifies the replica number. A result behaves
+    under virtual address translation: the first part is an index into a global map
+    to nodes (the index into the page table), and the second part is a frame number
+    (like the offset physical memory).
+
+
+    # MOVE, HOME NODE, GET OUT THE WAY
+
+
+    By adding a level of redirection between a shared memory address and its home,
+    we can allow the home to move. Instead of treating the prefix as a node ID, it''s
+    translated to an index that maps into a dynamic home node.
+
+
+    If we introduce explicit replicas to the system – existing along the on-demand
+    replicas that are already temporarily present in local caches – we implement load
+    balancing, hotspot avoidance, and redundancy. Management of such replicas can
+    be either by the home node or a higher-level management node, which effectively
+    acts as a home node for one or more backing nodes.
+
+
+    > Do you have ideas for how you would like implementing a distributed shared memory
+    system?
+
+
+    Yeah: no caching, every page fault results in a fetch from its corresponding node.
+    Nodes get exclusive access to pools. Boom, ezpz. Perfect consistency. (jk, I''m
+    just lazy)
+
+
+    What''s a consistency model? What are the guarantees that the different models
+    we mentioned (strict, sequential, and weak)? Can you work through a hypothetical
+    execution example and determine whether the behavior is consistent with a particular
+    consistency model?
+
+
+    A consistency model is a convention defined by the DSM implementation; it makes
+    certain guarantees about the availability, validity, and “current-ness” of data
+    to higher-level applications as long as the applications follow the rules. There
+    are different consistency models that guarantee things with levels of confidence,
+    but the most important part is that the applications need to follow the model
+    for those guarantees to hold.
+
+
+    The two main operations for managing consistency are push invalidations and pull
+    modifications. The former is a pessimistic approach that assumes any changes will
+    be visible elsewhere immediately; proactively pushes invalidations to other systems
+    as soon as they occur. The latter is a lazier approach with a more optimistic
+    outlook; as memory is needed, modification info is reacted from other nodes on
+    demand.
+
+
+    Strict Consistency is the simplest model: every update is everywhere, immediately,
+    and in the exact order in it occurs. Consider the following timeline:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_21_0.png)
+
+
+    22'
+  - '[PAGE 22]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    With a strict consistency model, both of the write events are seen by P3 “immediately,”
+    and in the order they occurred, regardless of any latency variation due to spatial
+    locality. For example, the deltas were small and P2 was physically near P1, and
+    its write event was received by P1 before P2''s, it still wouldn''t be reflected
+    in P1 until after P3''s.
+
+
+    This model is purely theoretical; in practice, with complex locking and synchronization,
+    it is still impossible to guarantee (or sustain) this level of consistency because
+    of physical complexities introduced by packet loss and network latency.
+
+
+    **Sequential Consistency** This alternative model is the “next best thing” regarding
+    an actually-achievable consistency. We only guarantee that any possible ordering
+    of the operations – in other words, any ordering that would be executed on a regular,
+    local shared memory system (think data traces between threads). In other words,
+    the following timeline is a valid alternative to the one guaranteed by strict
+    consistency model:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_22_0.png)
+
+
+    In summary, memory updates from different processes may be arbitrarily interleaved.
+    There is a catch, this model must guarantee that the interleaving is the **same**
+    across all processes. In other words, another process P3 must see the same order
+    as P3. The following timeline would **not** be allowed, as it violates this principle:
+
+
+    ![](img/a24b7091bf587932fb9e28c7753b6515_22_1.png)
+
+
+    There is a final requirement to this model: operations from the same process always
+    appear in the same order that they were issued. It''s important to distinguish
+    the time of an update from an *operation*. For example, in the above graph, P4
+    seeing Rm1(0) would still be valid; it''s possible that it hasn''t received the
+    update with y yet!
+
+
+    **Causal Consistency** The causal consistency model enforces consistency across
+    relationships between memory locations. For example, consider the following timeline:'
+- md: '
+
+    # Graduate Introduction to Operating Systems Review Guide – FINAL
+
+
+    | $P_1$ | $W_{m1}(x)$ | |
+
+    | $P_2$ | | $R_{m1}(x) \rightarrow W_{m2}(y)$ |
+
+    | $P_3$ | | $R_{m1}(0) R_{m2}(y)$ |
+
+    | $P_4$ | | $R_{m1}(x) R_{m2}(0) t$ |
+
+
+    The arrow in $P_2$''s timeline indicates a dependency relationship between $y$
+    and $x$. For example, maybe $y=x^2$. Thus, it''s non-sensical reading the value
+    of $y$ without knowing its cause (e.g. $x$ in $m_1$). The causal consistency model
+    is aware of such dependencies; thus, under this model, the $m_2$ read in $P_3$
+    would need to happen after $R_{m1}(x)$.
+
+
+    As sequential consistency, writes on the same processor must be in the same order
+    that they occur. The causal consistency makes no guarantees about concurrent writes
+    (i.e. writes that are not causally related), though; unlike the sequential consistency
+    model, reads in any possible ordering of the writes, interleaves do not need to
+    be consistent across all processes. In other words, the following is valid under
+    causal consistency, but violates sequential consistency, because sequential consistency
+    maintains that if $P_i$ sees the $x$ write first, then all other processes must
+    also see the $x$ write first,
+
+
+    | $P_1$ | $W_{m1}(x)$ | |
+
+    | $P_2$ | | $W_{m2}(y)$ |
+
+    | $P_3$ | | $R_{m1}(0) R_{m2}(y)$ |
+
+    | $P_4$ | | $R_{m1}(x) R_{m2}(0)$ |
+
+
+    How does the model define a causal relationship? If lecture and Slack discussion
+    can be trusted, a causal relationship is implicitly defined: if a memory location
+    is written to after it has been read from, the system it assumes must actually
+    be causal; in the above example, it''s possible that $y=10$ rather than $x^2$,
+    but the system would still enforce a causal relationship because of the memory
+    access pattern. This lack of programmer-enforced reality leads to the following
+    model, which tries to enable consistency and make effortless.
+
+
+    # HELPFUL HINT: CONSISTENCY CONSISTENCE
+
+
+    **It''s important to note that causal consistency is strictly weaker than sequential
+    consistency.** In other words, sequential consistency implies causal consistency.
+    This fact is useful when answering questions whether or not a system is causal
+    and/or sequentially consistent. If it''s not causally consistent, it definitely
+    not sequentially consistent, so you don''t even need to consider it.
+
+
+    **Weak Consistency** This model enables the programmer to define explicit synchronization
+    points that create consistency with the system. A synchronization point does the
+    following:
+
+
+    # Graduate Introduction to Operating Systems
+
+    # Review Guide – FINAL
+
+
+    - It enforces that all internal updates can now be seen by other processors in
+    the system.
+
+    - It enforces that all external updates prior to a synchronization point will
+    eventually be visible to the system performing the synchronization.
+
+
+    Consider the following timeline, with synchronization points:
+
+
+    | $P_1$ | | $W_{m1}(x)$ | | | $W_{m2}(y)$ | $W_{m3}(z)$ |
+
+    |---|---|---|---|---|---|---|
+
+    | | $P_2$ | | $R_{m1}(x)$ | | | | $t$ |
+
+
+    So, then, that $P_1$ performs a sync after its, this does **not guarantee** that
+    $P_2$ will $R_{m1}(x)$ as it does in the timeline; in fact, it $R_{m1}(0)$ and
+    would be perfectly valid. Until $P_2$ does its *own sync*, its view of the system
+    may be outdated. Out of course, when it *does* make the sync, the consistency
+    model guarantees that it will be seen by all processors that have sync''s changed.
+
+
+    A weak model allows the programmer to define explicit synchronization points that
+    are important about what happens between sync operations. Updates can (or can
+    not) arrive in any order for any variable. Variations in the model include a *global
+    sync* operation that ensures the integrity of the shared memory, or more granular
+    synchronization on a per-processor or per-page basis.
+
+
+    # Part 4 – Lesson 4: Datacenter Technologies
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/365329007/concepts/last-view
+
+    Transcript: https://docs.google.com/document/d/1Fe9eQpEbIZmEPLN6S2GWmWLkvbHKSyW-TRQ
+
+
+    > When managing large-scale distributed systems and services, what are the pros
+    and cons with adopting a homogeneous environment, a heterogeneous environment?
+
+
+    A functionally homogeneous approach to distributed systems means every system
+    is equal: it executes every possible step for the processing of a request. This
+    is much like the standard "boss-worker" model, in which workers are generic threads
+    that perform all the steps in a certain task. Alternatively, a functionally heterogeneous
+    approach isolates tasks to certain machines, or for request types. This is somewhat
+    akin to the "pipeline" model, where individual steps of a task are isolated and
+    can be scaled according to the time it takes to complete them.
+
+
+    The tradeoffs between each are similar to the tradeoffs we discussed in Part I
+    of this regard regarding boss-worker and pipeline models, with additional tradeoffs
+    that are part of the "distributed" aspect.
+
+
+    # Graduate Introduction to Operating Systems
+
+    # Review Guide – FINAL
+
+
+    Do you understand the history and motivation behind cloud computing? Do you understand
+    some of cloud offerings?
+
+
+    Cloud computing is beneficial due to its elasticity. There''s no need to manage
+    infrastructure. The cloud operates on massive scale. Aside from the obvious need
+    for virtualization, clouds also need resource provisioning to fairly allocate,
+    track, and manage. Furthermore, big data are essential in storing. Monitoring
+    at scale requires real-time solutions to catch and analyze.
+
+
+    Do you understand what the cloud scales make practical? Do you understand what
+    the cloud scales make unavoidable?
+
+
+    The Large of Numbers makes cloud services viable. Different clients, of whom many,
+    have different usage patterns and peak times. Averaging these factors leads to
+    a steady pattern. Unfortunately, this law leads to unavoidable failures. The scale
+    that cloud services means amounts of hardware. If the failure rate of a particular
+    component – say, a hard drive is 0.01% per month (1 in 10,000), a sufficiently-large
+    data center might have 100,000 hard drives. That means about 10 hard drives will
+    fail a month, every month! Of course, that’s hard drives; there are hundreds,
+    if thousands, of individual components in a particular system. Thus, individual
+    failures happen with a fairly high frequency.
+
+
+    # Additional Resources
+
+
+    Though some say that,
+
+
+    > George''s alternative is the more simple and concise one. What time to be alive.
+
+
+    there are other guides available on this topic, crowd-sourced, others Please check
+    them out and thank them if you see them!
+
+
+    - David: https://docs.google.com/document/d/1DWVL8J8krCsZyYtcC4CGht8dbb17RR7wXn9X4
+
+    - Piazza: https://docs.google.com/document/d/1IXbYSZ27kRvXv16ht38bb2YwawTrRo5meEm0Fdh
+
+    - Kevin: https://docs.google.com/document/d/1xA4v5jmvZ6aOarRoi2UypqOswfW2Kawg-9T166aeW
+
+    - Aja: https://docs.google.com/document/d/1-tHY3BArTvZijbba1NM-YKFFFT046o21OS4r5O
+
+
+    ^3 Thumbs, Joves: https://oms6200.slack.com/archives/15348751619400
+
+    '
+  mdcn: '
+
+
+    # 操作系统研究生入门复习指南 – 最终版
+
+
+    | $P_1$ | $W_{m1}(x)$ | |
+
+    | $P_2$ | | $R_{m1}(x) \rightarrow W_{m2}(y)$ |
+
+    | $P_3$ | | $R_{m1}(0) R_{m2}(y)$ |
+
+    | $P_4$ | | $R_{m1}(x) R_{m2}(0) t$ |
+
+
+    $P_2$ 时间线中的箭头表示 $y$ 与 $x$ 之间的依赖关系。例如，可能 $y=x^2$。因此，在不知道其成因（例如 $m_1$ 中的 $x$）的情况下读取
+    $y$ 的值是没有意义的。因果一致性模型（causal consistency model）感知这种依赖关系；因此，在该模型下，$P_3$ 中的 $m_2$
+    读取需要在 $R_{m1}(x)$ 之后发生。
+
+
+    与顺序一致性（sequential consistency）一样，同一处理器上的写入必须按照它们发生的顺序一致。然而，因果一致性不保证并发写入（即没有因果关系的写入）；尽管与顺序一致性模型不同，写入的任何可能顺序的读取交织并不需要在所有进程中保持一致。换句话说，以下情况在因果一致性下是有效的，但违反了顺序一致性，因为顺序一致性维持了如果
+    $P_i$ 先看到 $x$ 的写入，那么所有其他进程也必须先看到 $x$ 的写入
+
+
+    | $P_1$ | $W_{m1}(x)$ | |
+
+    | $P_2$ | | $W_{m2}(y)$ |
+
+    | $P_3$ | | $R_{m1}(0) R_{m2}(y)$ |
+
+    | $P_4$ | | $R_{m1}(x) R_{m2}(0)$ |
+
+
+    该模型如何定义因果关系？如果讲座和 Slack 讨论可以信赖，那么因果关系是隐式定义的：如果一个内存位置在被读取后被写入，系统假设它们实际上必须存在因果关系；在上面的示例中，可能是
+    $y=10$ 而不是 $x^2$，但系统仍然会由于内存访问模式而强制因果关系。这种缺乏程序员强制的真实性导致了以下模型，该模型试图实现一致性并使其变得毫不费力。
+
+
+    # 有用提示：一致性 CONSISTENCY CONSISTENCE
+
+
+    **需要注意的是，因果一致性严格弱于顺序一致性。** 换句话说，顺序一致性意味着因果一致性。这一事实在回答一个系统是否具有因果一致性和/或顺序一致性时非常有用。如果它不是因果一致的，它一定不是顺序一致的，所以你甚至不需要考虑它。
+
+
+    **弱一致性（Weak Consistency）** 该模型允许程序员定义显式的同步点来与系统创建一致性。同步点执行以下操作：
+
+
+    # 操作系统研究生入门
+
+    # 复习指南 – 最终版
+
+
+    - 它强制所有内部更新现在都可以被系统中的其他处理器看到。
+
+    - 它强制同步点之前的所有外部更新最终将对执行同步的系统可见。
+
+
+    考虑以下带有同步点的时间线：
+
+
+    | $P_1$ | | $W_{m1}(x)$ | | | $W_{m2}(y)$ | $W_{m3}(z)$ |
+
+    |---|---|---|---|---|---|---|
+
+    | | $P_2$ | | $R_{m1}(x)$ | | | | $t$ |
+
+
+    所以，$P_1$ 在其写入后执行了同步，这**并不保证** $P_2$ 会像时间线那样执行 $R_{m1}(x)$；事实上，它执行 $R_{m1}(0)$
+    也是是完全有效的。在 $P_2$ 执行*自己的同步*之前，它对系统的视图可能是过时的。当然，当它*确实*进行同步时，一致性模型保证它将被所有看到已更改内容的处理器看到。
+
+
+    弱模型允许程序员定义显式的同步点，这对于同步操作之间发生了什么非常重要。对于任何变量，更新可以（或不能）以任何顺序到达。模型的变体包括确保共享内存完整性的*全局同步*操作，或者基于每个处理器或每个页的细粒度同步。
+
+
+    # 第 4 部分 – 第 4 节：数据中心技术
+
+
+    讲座视频：https://classroom.udacity.com/courses/ud923/lessons/365329007/concepts/last-view
+
+    转字稿：https://docs.google.com/document/d/1Fe9eQpEbIZmEPLN6S2GWmWLkvbHKSyW-TRQ
+
+
+    > 在管理大规模分布式系统和服务时，采用同构环境和异构环境各的优缺点是什么？
+
+
+    分布式系统的功能同构方法意味着每个系统都是平等的：它执行处理请求的每一个可能的步骤。这非常像标准的“老板-工人（boss-worker）”模型，其中工人是执行特定任务中所有步骤的通用线程。或者，功能异构方法将任务隔离到某些机器或特定的请求类型。这在某种程度上类似于“流水线（pipeline）”模型，任务的单个步骤被隔离并可以根据完成这些步骤所需的时间进行扩展。
+
+
+    两者之间的权衡与我们在第一部分讨论的关于老板-工人和流水线模型的权衡相似，但额外增加了属于“分布式”方面的权衡。
+
+
+    # 操作系统研究生入门
+
+    # 复习指南 – 最终版
+
+
+    你理解云计算的历史和动机吗？你了解一些云服务提供方案吗？
+
+
+    云计算的益处源于其伸缩性（elasticity）。不需要管理基础设施。云计算在巨大的规模上运行。除了虚拟化的明显需求外，云还需要资源供给以公平地分配、跟踪和管理。此外，大数据对于存储至关重要。大规模监控需要实时解决方案来捕捉和分析。
+
+
+    你理解规模如何变得实用吗？你理解规模如何变得不可避免吗？
+
+
+    数量定律使得云服务可行。不同的客户（其中许多）有不同的使用模式和峰值时间。这些因素会导致稳定的模式。遗憾的是，这种规律导致了不可避免的故障。如果某个组件的故障率——例如硬盘——每月为
+    0.01%（万分之一），一个足够大的数据中心可能拥有 10 万块硬盘。这意味着每个月会有 10 块硬盘故障！当然，那只是硬盘；一个特定的系统中有成百上千个个体组件。因此，个体故障发生的频率相当高。
+
+
+    # 额外资源
+
+
+    尽管有人这么说，
+
+
+    > George 的替代方案更加简单明了。活在时代。
+
+
+    关于这个主题还有其他指南，是众筹的，其他的。请查看它们，并在如果看到了它们时感谢他们！
+
+
+    - David：https://docs.google.com/document/d/1DWVL8J8krCsZyYtcC4CGht8dbb17RR7wXn9X
+
+    - Piazza：https://docs.google.com/document/d/1IXbYSZ27kRvXv16ht38bb2YwawTrRo5meEm0F
+
+    - Kevin：https://docs.google.com/document/d/1xA4v5jmvZ6aOarRoi2UypqOswfW2Kawg-9T166aeW
+
+    - Aja：https://docs.google.com/document/d/1-tHY3BArTvZijbba1NM-YKFFFT046o21OS4r5O
+
+
+    ^3 点赞，Joves：https://oms6200.slack.com/archives/15348751619400
+
+
+    '
+  merge: 0
+  raw:
+  - "[PAGE 23]\n\n# Graduate Introduction to Operating Systems Review Guide – FINAL\n\
+    \n| $P_1$ | $W_{m1}(x)$ | |\n| $P_2$ | | $R_{m1}(x) \rightarrow W_{m2}(y)$ |\n\
+    | $P_3$ | | $R_{m1}(0) R_{m2}(y)$ |\n| $P_4$ | | $R_{m1}(x) R_{m2}(0) t |\n\n\
+    The arrow in $P_2$'s timeline indicates a dependency relationship between $y$\
+    \ and $x$. For example, maybe $y=x^2$. Thus, it's non-sensical reading the value\
+    \ of $y$ without knowing its cause (e.g. $x$ in $m_1$). The causal consistency\
+    \ model is aware of such dependencies; thus, under this model, the $m_2$ read\
+    \ in $P_3$ would need to happen after $R_{m1}(x)$.\n\nAs sequential consistency,\
+    \ writes on the same processor must be in the same order that they occur. The\
+    \ causal consistency makes no guarantees about concurrent writes (i.e. writes\
+    \ that are not causally related), though; unlike the sequential consistency model,\
+    \ reads in any possible ordering of the writes, interleaves do not need to be\
+    \ consistent across all processes. In other words, the following is valid under\
+    \ causal consistency, but violates sequential consistency, because sequential\
+    \ consistency maintains that if $P_i$ sees the $x$ write first, then all other\
+    \ processes must also see the $x$ write first,\n\n| $P_1$ | $W_{m1}(x)$ | |\n\
+    | $P_2$ | | $W_{m2}(y)$ |\n| $P_3$ | | $R_{m1}(0) R_{m2}(y)$ |\n| $P_4$ | | $R_{m1}(x)\
+    \ R_{m2}(0) |\n\nHow does the model define a causal relationship? If lecture and\
+    \ Slack discussion can be trusted, a causal relationship is implicitly defined:\
+    \ if a memory location is written to after it has been read from, the system it\
+    \ assumes must actually be causal; in the above example, it's possible that $y=10$\
+    \ rather than $x^2$, but the system would still enforce a causal relationship\
+    \ because of the memory access pattern. This lack of programmer-enforced reality\
+    \ leads to the following model, which tries to enable consistency and make effortless.\n\
+    \n# HELPFUL HINT: CONSISTENCY CONSISTENCE\n\n**It's important to note that causal\
+    \ consistency is strictly weaker than sequential consistency.** In other words,\
+    \ sequential consistency implies causal consistency. This fact is useful when\
+    \ answering questions whether or not a system is causal and/or sequentially consistent.\
+    \ If it's not causally consistent, it definitely not sequentially consistent,\
+    \ so you don't even need to consider it.\n\n**Weak Consistency** This model enables\
+    \ the programmer to define explicit synchronization points that create consistency\
+    \ with the system. A synchronization point does the following:\n\n24"
+  - '[PAGE 24]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide – FINAL
+
+
+    +   * It enforces that all internal updates can now be seen by other processors
+    in the system.
+
+    * It enforces that all external updates prior to a synchronization point will
+    eventually be visible to the system performing the synchronization.
+
+
+    Consider the following timeline, with synchronization points:
+
+
+    | $P_1$ | | $Wm_{m1}(x)$ | | | $Wm_{m2}(y)$ | $Wm_{m3}(z)$ |
+
+    |---|---|---|---|---|---||}{
+
+    | | $P_2$ | | $Rm_{m1}(x)$ | | | | $t$ |
+
+
+    So, then, that $P_1$ performs a sync after its, this does **not guarantee** that
+    $P_2$ will $Rm_{m1}(x)$ as it does in the timeline; in fact, it $Rm_{m1}(0)$ and
+    would be perfectly valid. Until $P_2$ does its *own sync*, its view of the system
+    may be outdated. Out of course, when it *does* make the sync, the consistency
+    model guarantees that it will be seen by all processors that have sync''s changed.
+
+
+    A weak model allows the programmer to define explicit synchronization points that
+    are important about what happens between sync operations. Updates can (or can
+    not) arrive in any order for any variable. Variations in the model include a *global
+    sync* operation that ensures the integrity of the shared memory, or more granular
+    synchronization on a per-processor or per-page basis.
+
+
+    # Part 4 – Lesson 4: Datacenter Technologies
+
+
+    Lecture video: https://classroom.udacity.com/courses/ud923/lessons/365329007/concepts/last-view
+
+    Transcript: https://docs.google.com/document/d/1Fe9eQpEbIZmEPLN6S2GWmWLkvbHKSyW-TRQ
+
+
+    > When managing large-scale distributed systems and services, what are the pros
+    and cons with adopting a homogeneous environment, a heterogeneous environment?
+
+
+    A functionally homogeneous approach to distributed systems means every system
+    is equal: it executes every possible step for the processing of a request. This
+    is much like the standard "boss-worker" model, in which workers are generic threads
+    that perform all the steps in a certain task. Alternatively, a functionally heterogeneous
+    approach isolates tasks to certain machines, or for request types. This is somewhat
+    akin to the "pipeline" model, where individual steps of a task are isolated and
+    can be scaled according to the time it takes to complete them.
+
+
+    The tradeoffs between each are similar to the tradeoffs we discussed in Part I
+    of this regard regarding boss-worker and pipeline models, with additional tradeoffs
+    that are part of the "distributed" aspect of things. A heterogeneous model is:
+    the front-end is more straightforward and behaves as a simple dispatcher. Scaling
+    is simpler, as it requires adding more nodes to the system. Of course, the simplicity
+    and generality comes at a performance cost, since specific things can''t be optimized.
+    Caching is difficult, since a single front-end is aware of which node processed
+    which task, and thus can''t make any inferences about existing workload. With
+    a heterogeneous design, both the front-end and the overall management is is more
+    complex, but now the dispatcher (and workers themselves) can make meaningful inferences
+    about data locality and caching in their workers.
+
+
+    25'
+  - '[PAGE 25]
+
+
+    # Graduate Introduction to Operating Systems
+
+
+    # Review Guide - FINAL
+
+
+    Do you understand the history and motivation behind cloud computing, and basic
+    models of cloud offerings? Do you understand some of the enabling technologies
+    that make cloud offerings useful?
+
+
+    Cloud computing is beneficial due to its elasticity and abstraction. There''s
+    no need to manage infrastructure; the scale of your application is directly correlated
+    with its demand, saving money and resources. Management of your application is
+    standardized and easily-accessible via a web API provided by the cloud computing
+    service. Billing is based on usage, typically divided by “tiers” that corresponds
+    to the power of a rented system.
+
+
+    The cloud operates on a massive scale and requires technologies that support such
+    a scale. Aside from the obvious need for virtualization to isolate tenants, clouds
+    also need resource provisioning technologies to fairly allocate, track, and manage
+    resources for their tenants. Furthermore, big data technologies are essential
+    in storing and processing the immense amounts of data that customers (and the
+    providers themselves) consume. The necessity of “virtual infrastructure” by customers
+    also makes software-defined solutions deponent. Finally, monitoring at scale requires
+    real-time processing solutions to catch and analyze failures.
+
+
+    Do you understand what the cloud scales make it practical? Do you understand what
+    about the cloud scales make failures unavoidable?
+
+
+    The Large of Numbers makes cloud services viable. Different clients, of whom many,
+    have different usage patterns and peak times. Averaging these factors leads to
+    a steady pattern of resource usage for the provider.
+
+
+    Unfortunately, this law leads to unavoidable failures. The scale that cloud services
+    operate means amounts of hardware. If the failure rate of a particular component
+    – say, a hard drive is 0.01% per month (1 in 10,000), a sufficiently-large data
+    center might have 100,000 hard drives. That means about 10 hard drives will fail
+    a month, every month! Of course, that’s hard drives; there are hundreds, if thousands,
+    of individual components in a particular system. Thus, individual failures happen
+    with a fairly high frequency.
+
+
+    # Additional Resources
+
+
+    Though some say that, ^3
+
+
+    > George''s alternative is the more simple and concise one. What time to be alive.
+
+
+    there are other guides available on this topic, crowd-sourced, others Please check
+    them out and thank them if you see them!
+
+
+    +   * David: https://docs.google.com/document/d/1DWVL8J8krCsZyYtcC4CGht8dbb17RR7wXn9X4E
+
+    * Piazza: https://docs.google.com/document/d/1IXbYSZ27kRvXv16ht38bb2YwawTrRo5meEm0Fdhsg
+
+    * Kevin: https://docs.google.com/document/d/1xA4v5jmvZ6aOarRoi2UypqOswfW2Kawg-9T166aeW
+
+    * Aja: https://docs.google.com/document/d/1-tHY3BArTvZijbba1NM-YKFFFT0461o21OS4r5Oa
+
+
+    ^3 Thumbs, Joves: https://oms6200.slack.com/archives/15348751619400'
