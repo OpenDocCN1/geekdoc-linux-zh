@@ -1,0 +1,3564 @@
+- img_proc: true
+  md: '# # RASPBERRY PI SETUP GUIDE
+
+
+    ![](img/07ce46bbd010b8e902c19471558cb9d6_0_0.png)
+
+
+    HOW TO USE YOUR RASPBERRY PI AND PYTHON PROGRAMMING FROM SCRATCH'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# INTRODUCTION
+
+
+    Python is a basic, simple to learn language like composed English. Raspberry pi
+    is a straightforward single motherboard PC, convenient quick, and simple to utilize.
+    Presently consolidate an extremely simple to get familiar with a language with
+    a simple to utilize PC and what you''ll get will be outright effortlessness that
+    can squeeze solidly into your back pocket. There are different options in contrast
+    to the Raspberry pi and other substitute programming dialects out there you can
+    utilize all things being equal. But here is the thing, none of the other options,
+    for example, Arduino, gives you simplicity plus computing power and speed that
+    the Raspberry pi will offer. This book will take you through the essentials, and
+    you''ll do yourself a lot of good to enhance them considerably assist later you
+    are finished perusing this book.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# CHAPTER ONE What is Raspberry Pi?
+
+
+    Raspberry Pi is a reasonable, pocket-sized PC that plugs advantageously into a
+    screen like a screen or TV with a mouse and a standard console. It is the most
+    well known single-board PC in the market.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# MERITS OF RASPBERRY PI
+
+
+    Some inquiries do spring up when an individual or an entrepreneur means to put
+    a lot of cash in pretty much anything. Questions like “will the worth merit the
+    cash?”, “what different choices are there is?” When questions like this ring a
+    bell, the following strategy is to think about the different advantages it offers
+    in the more limited and benefits terms.
+
+
+    There are many benefits Raspberry Pi offers, which anybody ready to purchase should
+    consider prior to spending one.
+
+
+    +   1. It is reasonable for low spending plan organizations or projects.
+
+
+    +   2. It can be utilized by pretty much anybody with or without earlier coding
+    or programming experience.
+
+
+    +   3. The default programming language is python (with Linux OS), which is extremely
+    straightforward, dissimilar to other programming languages.
+
+
+    +   4. It devours way less power contrasted with what a customary PC will burn-through.
+    This infers decreased spending on power bills.
+
+
+    +   5. It has a low carbon footprint.
+
+
+    +   6. It is excellent for testing versatile technologies.
+
+
+    +   7. It upholds other programming dialects as well. This implies assuming you
+    are not a major devotee of python programming language, you can in any case utilize
+    regardless utilizing your favored programming language.
+
+
+    +   8. It has numerous interfaces yet can fit easily in your purse.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# A TOUR OF RASPBERRY PI
+
+
+    The Raspberry Pi comes in two variations, specifically; Model An and Model B.
+    The error between the two models is the miniature USB port. Model B accompanies
+    an ethernet port, which implies it devours more power than its model A.
+
+
+    To completely comprehend the reason for the introduction of the Raspberry Pi,
+    a decent comprehension of its different parts is quintessential.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# The Raspberry Hardware components
+
+
+    The Raspberry miniature PC board like some other PC is comprised of the RAM (Read
+    Only Memory), Processor, GPU (Graphics Programming unit), CPU (Central Processing
+    Unit), the Ethernet Port, GPIO pins (Graphics Programming Input/Output pins),
+    XBee pin out/attachment, UART (Universal Asynchronous Transceiver), power connector,
+    SD card opening, RCA connector, LED (Light-emanating Diodes), Bluetooth, WiFi,
+    MIPI DSI (Display Serial Interface), MIPI CSI (Camera Display Interface), HDMI
+    port and augmentation for other gadgets through the USB port.
+
+
+    # RAM
+
+
+    The board accompanies two memory variations, which are: 250MB and 512MB for early
+    models. The more up to date forms presently flaunt up to 4GB RAM.
+
+
+    # PROCESSOR
+
+
+    This unit is liable for helping out guidelines through legitimate operations.
+
+    GPU
+
+    The GPU part is answerable for all picture related operations.
+
+
+    # THE GPIO PINS
+
+
+    They are universally useful pins used to interface the Raspberry pi board to outer
+    sheets. These pins are for executing I/O orders from outer electronic circuit
+    boards.
+
+
+    # POWER CONNECTOR
+
+
+    The power connector takes into account the Raspberry Pi board to be associated
+    with an outside power source.
+
+
+    # XBEE PIN OUT/ SOCKET
+
+
+    It is utilized for remote communication.
+
+
+    # ETHERNET PORT
+
+
+    The Ethernet port furnishes a method for correspondence with extra devices.
+
+
+    # SD CARD'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'This fills in as the capacity and can be compared to a PC hard drive of a customary
+    PC. This is also
+
+    where the working arrangement of the Raspberry pi boots from.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# The Raspberry Software Components
+
+
+    Though Raspian has been the most famous Linux-based working framework for the
+    Raspberry pi, there are other working frameworks that are broadly utilized. Here
+    is a list of must-dos of them;
+
+
+    # Raspbian
+
+
+    This is one of the working frameworks of the Raspberry Pi. The OS is fabricated
+    dependent on Debian. It is viable with every one of the renditions of Raspberry
+    pi, in addition to it is not difficult to adjust to as a beginner.
+
+
+    # Ubuntu MATE
+
+
+    The Ubuntu MATE working framework is a lot easier and straight forward. Additionally,
+    in view of Linux, the Ubuntu MATE OS has a cutting edge feel to it and especially
+    exceptional. Notwithstanding, it isn’t accessible for every one of the forms of
+    Raspberry pi. It begins from Raspberry 2 upwards.
+
+
+    # RetroPie
+
+
+    Based on Raspian, it is an emulator that permits you to play old games way back
+    as the ‘70s.
+
+
+    # DietPi
+
+
+    DietPi runs on a streamlined Debian variant. Its little size makes it the lighter
+    contrasted with Raspberry light. It is accessible for all form of Raspberry Pi
+    models.
+
+
+    # Manjaro
+
+
+    It is an extraordinary framework on Raspberry Pi dependent on curve Linux. Straightforward,
+    cool, light, and very adaptable. It additionally gives you the opportunity to
+    introduce just what you need to use.
+
+
+    # Fyde OS: Chromium OS for Raspberry Pi
+
+
+    The OS can be introduced on pretty much any gadget, including Raspberry'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Pi. Introducing the Operating framework likewise gives you admittance to Cloud-Based
+    devices accessible on chrome OS.
+
+
+    # OSMC
+
+
+    This is probably the best medium arrangements worked for the Raspberry pi dependent
+    on Debian. It can stream and play pretty much any media designs. Simple to introduce
+    and use.
+
+
+    # Windows 10 ARM
+
+
+    With the WDOA introduce windows deployer, you can undoubtedly
+
+
+    10 on your Raspberry Pi. This is accomplished by booting ARM windows 10 from Micro
+    SD card.
+
+
+    # Open ELEC
+
+
+    This is created to utilize the framework and its assets to get to media perusing
+    and playback.
+
+
+    # Android
+
+
+    Android is known to run on pretty much any gadget, and its uplifting news; it
+    likewise runs on Raspberry Pi. This offers the client the chance to get to the
+    immense assortment of android applications and games.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# SETTING UP RASPBERRY PI FOR THE FIRST TIME
+
+
+    To get Raspberry pi to work, you really want to initially introduce a working
+    framework on it through a miniature SD card. NOOBX (New out of box programming)
+    turns out to be the installer for the Raspberry pi OS.
+
+
+    # HOW DO YOU GET NOOB S
+
+
+    There are two different ways you can get your hands on NOOBS. One is by purchasing
+    a SD card with NOOBS preintroduced on it. The second is to download on the Raspberry
+    pi official website at https://www.raspberrypi.org/downloads.
+
+
+    How to introduce NOOBS on SD card
+
+    Before you start the establishment of NOOBS from your SD card;
+
+    - Make sure the SD card is basically 8GB. 16GB for full Raspberry pi installation.
+
+    - The SD card is arranged as FAT.
+
+    - Extract the document from the NOOB S compress file.
+
+    - You would then be able to duplicate the record to the organized SD card for
+    installation.
+
+
+    +   - As soon as you boot, the Recovery FAT parcel will naturally be resized to
+    a base. A rundown of working frameworks accessible for establishment will pop
+    up.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# CHAPTER TWO Taking off
+
+
+    At this point, you probably got to know the essentials of Raspberry pi going from
+    the equipment to the product parts of it. Presently, we should climb a smidgen
+    up to the Linux structure, the work area, and the web.
+
+
+    # LINUX
+
+
+    The Linux working framework presumably the most popular and regularly used working
+    system.
+
+
+    It is a product that sits in the middle of the product and the equipment parts
+    of a PC system.
+
+
+    Linux is the working arrangement of the Raspberry pi by default.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# HOW LINUX DIFFERS FROM OTHER OPERATING SYSTEMS
+
+
+    Like other working frameworks, Linux has a GUI (graphical client interphase) and
+    similar kinds of programming you might have appeared to be video and photograph
+    editors, word processors on Microsoft Windows, MacOS, etc. Basically, assuming
+    that you can work a PC or some other electronic gadget, you sure can work Linux.
+
+
+    There are, in any case, significant contrasts among Linux and other working frameworks.
+    Here are a portion of the reasons
+
+
+    Linux is an open-source programming or working framework. This infers that it
+    is free.
+
+
+    The code used to make the product is sans open, and open to anybody to view, use,
+    and adjust this is particularly for developers.
+
+
+    There are numerous appropriation of Linux, which accompanies diverse programming
+    choices. This infers that Linux is really adaptable and simple to customize.
+
+
+    Another with Linux is that clients have the opportunity to choose the center parts
+    they need to utilize. This is one reason why the raspberry pi can effectively
+    run on many working frameworks sharing the essential Linux kernel.
+
+
+    Linux isn ’t totally security evidence, however safer contrasted with other working
+    frameworks, for example, windows.
+
+
+    It can be accustomed to take more established PC frameworks back to life. Software
+    refreshes are done easily and a lot quicker on the Linux working system.
+
+
+    It appreciates enormous local area backing to assist you with exploring through
+    any issues you may encounter.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'It is truly steady contrasted with other working frameworks. In windows, at
+    whatever point you uninstall an application, you should reboot. This isn’t really
+    in Linux.
+
+
+    Linux guarantees the security of its clients and doesn’t gather client information
+    like other working systems.
+
+
+    It is useful for superior execution on different organizations and work stations.
+    It can effectively deal with an enormous number of clients to work at the same
+    time and handles them smoothly.
+
+
+    It offers huge base help for network functionalities. This infers that, with Linux,
+    you can undoubtedly set up server frameworks for customers on your PC in addition
+    to speed of delivery.
+
+
+    Linux is a truly adaptable working framework as you can pick what to introduce
+    without cut back on performance.
+
+
+    Linux is viable with pretty much document design and can run any program record
+    you can imagine, be it windows or macintosh working systems. Linux is simple and
+    quick to introduce contrasted with other working systems.
+
+
+    It likewise gives elite execution as identifies with equipment. All errands are
+    effectively executable in any event, when the hard drive is nearly full.
+
+
+    Linux is memory cordial as it can undoubtedly play out numerous undertakings all
+    the while with practically no cut back on its speed and in general performance.
+
+
+    It additionally considers different work area conditions, consequently making
+    it extremely simple to use.
+
+
+    # USES OF LINUX
+
+
+    There are many employs of Linux. It resembles so many other working frameworks
+    you can discover there.
+
+
+    Here are a portion of these uses; ** server**
+
+
+    More than 50percent of all sites on the web run on an open program called'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Apache, which much of the time runs on Linux. Thus, assuming you are riding
+    the web at the present time, the possibilities that you are Linux is very high.
+
+
+    # Networking
+
+
+    Linux is vigorously used to run a bigger piece of the web. They are additionally
+    used to run little and huge organizations in homes, workplaces, and corporations.
+
+
+    # Databases
+
+
+    Linux is generally utilized in data set frameworks for putting away a lot of data.
+    This is on the grounds that it is vigorous, secure, and robust.
+
+
+    # Desktop
+
+
+    Because Linux is really adaptable and stable, it has effectively tracked down
+    its direction on our different desktops.
+
+
+    # Heavy computing
+
+
+    Linux frameworks can be coincided to cooperate for enormous datasets testing.
+    This one reason it is utilized with supercomputers in climate determining
+
+
+    # Home use
+
+
+    And in all honesty, individuals like you and me can likewise utilize Linux on
+    an everyday basis.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# COMMAND PROMPTS USING LINUX AND ITS APPLICATIONS
+
+
+    The Linux order line interface is the program that grants clients to type orders
+    as text educating the PC framework to complete a predefined task or a gathering
+    of tasks.
+
+
+    If you are curious about the order line interface, you can essentially look for
+    order brief on your work area arrangements of utilizations. Open and run. It’s
+    ordinarily with a dull background.
+
+
+    Here is a list of must-dos of essential Linux order you will find very useful:
+
+
+    +   1. cd command
+
+    This brief is utilized to explore through the Linux documents, envelopes, or directories.
+
+    di. disc.. to move one index up
+
+    ii. compact disc go directly to home
+
+    iii. cd to move to your past directory
+
+
+    +   2. PWD command
+
+    This order brief is utilized to find the way of the current directory.
+
+
+    +   3. Is command
+
+    It is utilized in survey the substance of a directory
+
+
+    +   4. cat command
+
+    It is one of the most normally utilized orders on Linux. It is utilized to list
+    the substance of a document consecutively on the standard output.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# # CHAPTER THREE
+
+    Python Basics
+
+
+    IDLE
+
+
+    The Integrated Development and Learning Environment are completely coded in python
+    with a cross-stage usefulness, i.e., it can chip away at pretty much any working
+    framework, be it windows or MacOs. It is made out of two fundamental windows,
+    which are; the shell window and the manager window.
+
+
+    IDLE MENU
+
+
+    When you open the IDLE, the main text that you see inside the supervisor is the
+    rendition of the IDLE, which is likewise composed strikingly at the upper left
+    corner of the application. The different menus inside the application are;
+
+
+    +   - File
+
+    - Edit
+
+    - Shell
+
+    - Debug
+
+    - Options
+
+    - Windows
+
+    - Help'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\nFile\n  Name: 20230101_123000.txt\n  ID: DB-1\n  Date: DB-2\n  Status:\
+    \ \"Confidential\"\n  Path: C:\\Users\\Documents\n\nMenu\n  Edit: DB-3\n  Save:\
+    \ DB-4\n  Save As: DB-5\n  Copy: DB-6\n\nWindow\n  Close: DB-7\n  Size: DB-10\n\
+    ```\n\n# FILE MENU\n\nThis menu contains other sub-menus. Here is a rundown of\
+    \ them and their different uses;\n\n# New File\n\nIs utilized to make another\
+    \ document altering window Open...\nTo open a prior record with an open dialog\n\
+    \n# Recent files\n\nTo open a rundown of as late date made files\n\n# Open Module...\n\
+    \nTo open a current module\n\n# Class Browser\n\nThis is utilized to show classes,\
+    \ capacities, and techniques in the current manager file\n\n# Path browser\n\n\
+    A tick on this shows the framework way indexes, modules, classes, capacities,\
+    \ and strategies in a tree structure.\n\n# Save\n\nThis will save a duplicate\
+    \ of the current windows to the record related with it.\n\n# Save as...\n\nThis\
+    \ will save a duplicate of the current window with a save as exchange.\nThe saved\
+    \ document turns into the new related record for the window.\n\n# Save copy as...\n\
+    \nThis will save the current window without changing the record name related with\
+    \ it."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Print window
+
+
+    This will print the current window to the default printer.
+
+
+    # Close
+
+
+    This will close the current window and brief in the event that substance are
+
+    yet to be saved.
+
+
+    # Exit
+
+
+    This will close all open windows and quit IDLE.
+
+
+    # THE EDIT MENU
+
+
+    # Undo
+
+
+    This will fix the changes done to the current window. The absolute
+
+    number of changes must never be more than 1000.
+
+
+    ![](img/07ce46bbd010b8e902c19471558cb9d6_17_0.png)
+
+
+    This will re-try the last scattered and change to the flow window
+
+
+    # Cut
+
+
+    This will duplicate the choice to clipboard and erase the selection.
+
+
+    # Copy
+
+
+    This will duplicate the determination into the clipboard
+
+
+    # Paste
+
+
+    This will embed the substance of the clipboard into the momentum window.
+
+
+    # Select all...
+
+
+    Select the whole substance of the ebb and flow window
+
+
+    # Find...
+
+
+    This will open a hunt discourse with numerous options
+
+
+    Redo'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Find again
+
+
+    This will rehash the last inquiry assuming that there is a background marked by
+    one.
+
+
+    # Find selection
+
+
+    This will look for the as of now chose on the off chance that there is one
+
+
+    # Find in files...
+
+
+    This will open a record search exchange and show results in a new window
+
+
+    # Replace...
+
+
+    This will open a pursuit and supplant the current assuming that there is one.
+
+
+    # Go to line
+
+
+    This will move the cursor to the beginning of a line and make it visible.
+
+
+    # Show completions
+
+
+    This opens a rundown that you can scroll, permitting choice of catchphrases and
+    attributes
+
+
+    # Expand word
+
+
+    This will grow a prefix composed to match a word in the equivalent window
+
+
+    # Show call tip
+
+
+    This will open a small window containing function hints
+
+
+    # Surrounding parents
+
+
+    This will feature the encompassing parenthesis
+
+
+    # FORMAT MENU
+
+
+    ![](img/07ce46bbd010b8e902c19471558cb9d6_18_0.png)
+
+
+    # Indent region
+
+
+    This will move the chose lines to the right by the width of the indent
+
+
+    # Dedent region
+
+
+    This will move the chose lines to the left by the width of the indent'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Comment out region
+
+
+    This will remember twofold hash for front of chose lines
+
+
+    # Uncomment region
+
+
+    Remove the main hash or the twofold hash from the chose lines
+
+
+    # Tabify region
+
+
+    This will transform driving stretches of spaces into tabs
+
+
+    # Untabify region
+
+
+    This transforms all tabs into right number of spaces
+
+
+    # Toggle tabs
+
+
+    This opens an exchange to switch in the middle indenting with space and tabs.
+
+
+    # New indent width
+
+
+    This opens an exchange to change the width of indent
+
+
+    # Format paragraph
+
+
+    This will reformat the ebb and flow clear line~delimited passage in remark block
+    or multiline string or chose line in a string.
+
+
+    # Strip trailing whitespace
+
+
+    Evacuate following space and other whitespace characters later the last non-whitespace
+    character of a line by applying str.rstrip to each line, including lines inside
+    multiline strings. Except for Shell windows, empty extra newlines at the completion
+    of the record.
+
+
+    # RUN MENU'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Run Module
+
+
+    Do Check Module. If no screw up restarts the shell to clean the earth, by then,
+    execute the module. Yield is displayed in the Shell window. Note that yield requires
+    of print or form. Exactly when execution is done, the Shell holds the middle and
+    shows a brief. Presently, one may cleverly examine the eventual outcome of execution.
+    This resembles executing a report with python
+
+
+    +   - I record at a request line.
+
+
+    # Run... Modified
+
+
+    Same as Run Module, yet run the module with altered settings. Request Line Contentions
+    extend sys.argv like passed on a request line. The module can be run in the Shell
+    without restarting.
+
+
+    # Check Module
+
+
+    Check the design of the module at this point open in the Editor window. If the
+    module has not been saved, Inert will either incite the customer to save or autosave,
+    as picked in the General tab of the Inactive Settings talk. In case there is a
+    language structure botch, the unpleasant region is displayed in the Editorial
+    supervisor window.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Python Shell
+
+
+    Open or wake up the Python Shell window.
+
+
+    # SHELL MENU
+
+
+    # View Last Restart
+
+
+    Look over the shell window to the last Shell restart.
+
+
+    # Restart Shell
+
+
+    Restart the shell to clean the environment.
+
+
+    # Previous History
+
+
+    Cycle through earlier orders ever, which arranges the current section.
+
+
+    # Next History
+
+
+    Cycle through later orders ever, which organizes the current section.
+
+
+    # Interrupt on Execution
+
+
+    Stop a running program.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# TROUBLESHOOT MENU
+
+
+    Go to File/Line
+
+
+    Look at the current line, with the cursor, the line above for a filename and line
+    number. At whatever point found, open the archive if not adequately open, and
+    show the line. Use this to see source lines referred to in an extraordinary case
+    fall back and lines found by Find in Documents. Moreover, open in the setting
+    menu of the Shell window and result windows.
+
+
+    Debugger (switch)
+
+
+    At the moment that ordered, code entered in the Shell or run from a Supervisor
+    will run under the debugger. In the Editorial chief, breakpoints can be set with
+    the setting menu. This component is at this point divided and decently test.
+
+
+    Stack Viewer
+
+
+    Show the stack traceback of the last exclusion in a tree device, with admittance
+    to local people and globals.
+
+
+    Auto-open Stack Viewer
+
+
+    Switch normally opening the stack watcher on an unhandled exceptional case.
+
+
+    OPTION MENU'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Configure IDLE
+
+
+    Open a game plan trade and change tendencies for the going with: literary styles,
+    space, key ties, text concealing themes, startup windows and size, additional
+    help sources, and increases. On MacOS, open the plan talk by picking Inclinations
+    in the application menu. For extra nuances, see Setting tendencies under Assistance
+    and inclinations.
+
+
+    Most plan options apply to all windows or each and every future window. The decision
+    things underneath apply to the dynamic window.
+
+
+    # Show/ hide Code Setting
+
+
+    Open a sheet at the most elevated mark of the modify window, which shows the square
+    setting of the code, which has investigated the most elevated place of the window.
+    See Code Setting in the Altering and Route portion beneath.
+
+
+    # Show/ Hide Line Numbers
+
+
+    Open a section aside of the modify window, which shows the amount of each line
+    of text. The default is off, which may be changed in the tendencies (see Setting
+    inclinations).'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Zoom/Reestablish Height
+
+
+    Flips the window between average size and most outrageous tallness. The fundamental
+    size defaults to 40 lines by 80 dishes aside from whenever changed on the General
+    tab of the Arrange In Inactive talk. The most outrageous height for a screen is
+    directed by rapidly intensifying a window on the principal event when one is zoomed
+    on the screen. Changing screen settings might ruin the saved height. This switch
+    has no effect when a window is expanded.
+
+
+    # WINDOW MENU
+
+
+    ![](img/07ce46bbd010b8e902c19471558cb9d6_24_0.png)
+
+
+    Records the names of each and every open window; select one to convey it to the
+    nearer view (de-identifying it if significant). For additional subtleties on this
+    visit;
+
+
+    https://docs.python.org/3/library/idle.html
+
+
+    Now that we know about the menus in the IDLE we should make a plunge solidly into
+    the programming part of it.
+
+
+    # NUMBERS
+
+
+    Numbers are quintessential in science, so is it in programming as well. Each'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'line of code makes them thing or more to do with numbers or possibly at the
+    equipment level, and the explanation is that PCs are great at running numbers.
+
+
+    In this example, we''ll utilize a Python programming language to run numbers.
+    Indeed! Run numbers like your calculator.
+
+
+    Here is a model: >>>20*2 In your inactive, essentially type
+
+
+    ```
+
+    >>>print(20*2) and this gives you back 40
+
+    ```
+
+
+    Here is another, Example: >>>10*3/5-2 You can basically hit the enter button,
+    and get 4.0
+
+
+    Alternatively, you can utilize the print function >>>print(10*3/5-2)
+
+
+    And the appropriate response continues as before i.e., 4.0 This takes us to two
+    keywords; Integers: The numbers in the calculation
+
+
+    Float: the aftereffect of the isolated numbers with “0,0”i.e., each time partition
+    a number in python, the outcome is afloat.
+
+
+    Example: >>>25/7 3.5714
+
+
+    The outcome is a float. Consider these; Example: >>>20//3 The outcome gives 6.0
+    This is called floor division, i.e., the rest of overlooked. Model: >>>2**5
+
+
+    This is a method for communicating force of numbers in python 2**5 means 2 raised
+    to a force of 5'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'And the
+
+    outcome is 32
+
+    (integer)
+
+    Example: >>>7%2
+
+
+    This will show the outcome as 1. The remaining portion is displayed.
+
+    VARIABLES
+
+
+    What is a variable? You can imagine a variable like your dad, who ends up
+
+    addressing every one of you by enrolling your home in his last name, a name
+
+    all of you. Presently, at whatever point name is referenced locally,
+
+    they''ll know it''s your family. Like the name your Dad utilized in en
+
+    hnhome, which focuses straightforward to your family, a variable
+
+    highlight a specific worth or a bunch of qualities put away in the memory.
+
+    interpreter allocates memory space and takes the decision to store a
+
+    particular type to know in the reserved memory.
+
+
+    Here are what to know variables:
+
+
+    +   1. You can''t utilize a saved word in the python library as a variable
+
+    2. A variable name can''t begin with a number
+
+    3. You can begin a variable with images, unique characters or letters
+
+    4. Variable names can be in upper or lower case.
+
+    5. White space characters are not permitted in naming a variable.
+
+
+    Example: >>>k=3*5
+
+    H, k is the variable addressing the result of two numbers 3 and 5.
+
+    The following is to print
+
+    i.e. >>>print (k)
+
+    Which gives 15.
+
+    Model: >>>k+5/4
+
+    Now print the result
+
+    >>>print k+5/4
+
+    16.25
+
+
+    # STRINGS
+
+
+    Letters or a gathering of letters, numbers, or images that are encased in one
+    or
+
+    the other single or twofold statements are called strings. The factors or'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'components contained in a string can’t be changed. Consequently, they are immutable.
+
+
+    Keep at the top of the priority list that strings should now be encased in statements,
+    be it single or twofold, or it will return a mistake. This is one of the new highlights
+    of Python 3.
+
+
+    Example: >>>“Hello world.”
+
+    This is deciphered and shown as;
+
+    ‘Hi, world.’
+
+
+    Example: >>>’I love you programming language.’
+
+    Alternatively, you can utilize the print work. This implies that the capacity
+    to be called for print should be in parenthesis.
+
+
+    Example: >>> print (“Python is my beloved programming language”)
+
+    Python is my cherished programming language
+
+
+    # TUPLES
+
+
+    Tuples are viewed as Like strings. This is on the grounds that they contain similar
+    components as strings, yet they contrast in that they are encased in the enclosure
+    rather than sections. Like strings, the upsides of the factors in tuples can’t
+    be changed. Subsequently, they are immutable.
+
+
+    Keep as a primary concern that the upsides of the factors in the rundowns can
+    be changed. Subsequently, they are mutable.
+
+
+    ```
+
+    Example: >>> tuple1= (‘Merlin’, ‘Morgana’, 246, ‘Dublin,’ ‘Mowena’)
+
+    >>>print(tuple1) Which displays
+
+    (''Merlin’, ‘Morgana’, 246, ‘Dublin,’ ‘Mowena’)
+
+    Example: >>>tuple2= (‘Seeker’, ‘Frodo’, ‘Mango’, 1945)
+
+    >>>print(tuple1+tuple2)
+
+    (''Merlin’, ‘Morgana’, 246, ‘Dublin,’ ‘Mowena’, ‘Searcher’, ‘Frodo’,
+
+    Mango’, 1945)
+
+    Example: >>>tuple1= (‘April’, ‘May’, ‘June’, 326, ‘December’)
+
+    >>>print(tuple1+tuple2)
+
+    (''April,’’May,’ June,’ 326, ‘December,’ ‘January,’ ‘February,’ ‘April,’’
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '‘May,’ 326, 559)
+
+
+    Note: a portion of the factors in the tuple are likewise found in tuple2
+
+    hover the outcome stays unaltered. This is to re-ins the way that tuples
+
+    are immutable.
+
+
+    # LISTS
+
+
+    At least two strings consolidate to frame a rundown. The upsides of records
+
+    can be altered, connected, or cut. It can contain different information types
+    or
+
+    similar information types, i.e., the information can be homogenous and
+
+    heterogeneous. Similar to tuples, they are mutable.
+
+
+    Example: >>>‘April,’ ‘May,’ ‘June,’ 326, ‘December’
+
+    To name records or a rundown, you can just dole out names that are
+
+    identified with their contents.
+
+
+    Examples: >>>vegetables = {''Lettuce,’ ‘Amaranthus,’ Cabbage, ‘Carrot’’
+
+    Or you can basically utilize the list
+
+
+    Example: >>>list1= ‘Lettuce,’ ‘Amaranthus,’ ‘Cabbage,’ ‘Carrot’
+
+    >>>>>>list2= ‘January,’ ‘February,’ ‘April,’ ‘May,’ 326, 559
+
+    >>>print(list1+list2)
+
+
+    ‘April,’ ‘May,’ ‘June,’ 326, ‘December,’ ‘January,’ ‘February,’ ‘April,’
+
+    ‘May,’ 326, 559)
+
+
+    Example: >>>print(list1 or list2)
+
+
+    ‘April,’ ‘May,’ ‘June,’ 326, ‘December,’ ‘January,’ ‘February,’ ‘April,’
+
+    ‘May,’ 326, 559)
+
+
+    ‘April,’ ‘May,’ ‘June,’ 326, ‘December’
+
+
+    Example: >>>print(list1 and list2)
+
+
+    ‘January,’ ‘February,’ ‘April,’ ‘May,’ 326, 559
+
+
+    # Sets
+
+
+    They are made out of an unordered assignment of datatypes or components
+
+    has no copy components in a similar set. Sets, in contrast to records, has
+
+    a method of really taking a look at whether or not a component is rehashed in
+
+    a similar set. Thus, they are mutable.
+
+
+    Example: >>>set1= ‘Bread,’ ‘Rice,’ ‘Egg,’ ‘Chicken,’ ‘Rice’'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '```
+
+    >>>print (set1)
+
+    {''Bread’, ‘Rice’, ‘Egg’, ‘Chicken’}
+
+    ‘Rice’ was copied yet in the long run eliminated from the list.
+
+    To add components to the above set
+
+    >>>set1.add(’Fish ’) Frozen sets
+
+    ```
+
+
+    These sorts of sets can ''t be changed, i.e., unchanging. This is not normal for
+    sets which are typically impermanent in any event, when they contain unalterable
+    elements.
+
+
+    ```
+
+    Example>>>weapons= frozenset([“Axe,” “Knives,” Arrow,” “Firearm,”
+
+    “Bomb”])
+
+    ```
+
+
+    ```
+
+    >>>print (weapons)
+
+    {''Axe’, ‘Blades’, ‘Bolt’, ‘Weapon’, ‘Bomb’}
+
+    ```
+
+
+    # Operations for sets
+
+
+    +   i. Clear ( ) function
+
+    This will get all components free from the set. Example:>>> weapons={“Axe”, “Blades”,
+    Arrow”, “Firearm,” “Bomb”}
+
+    >>>weapons.clear()
+
+
+    +   ii. Difference ( ) function
+
+    This will return the contrast between components in a set. Model: >>>set1= C,
+    ‘f’, ‘g’ >>>set2={‘f’, ‘g’}
+
+    >>>print (set1). contrast (set2)
+
+    {''e’, ‘d’, ‘c’}
+
+
+    Alternatively, you can fill a similar role as:
+
+    >>>set1-set2
+
+    {''e’, ‘d’, ‘c’}
+
+    The result is just as the set.
+
+    To know the components in set1 or set2, you can utilize set1|set2.
+
+    Example:>>>set1|set2
+
+    {''c’, ‘d’, ‘e’, ‘f’, ‘g’}
+
+    For components in both set1 and set2, you utilize set1&set2 Example:>>>set1&set2
+
+    {''f’, ‘g’}
+
+    For unduplicated elements in set1 and set2, use set1^set2
+
+    Example:>>> set1^set2'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '‘c’, ‘d’, ‘e’
+
+
+    # iii. Add () function
+
+
+    This strategy is utilized to add unalterable components to a set. Example:>>>players={“Messi”,“Pepe”,“Son”}
+
+    >>>players.add(“Ronaldo")
+
+    >>>names
+
+
+    “Messi,”“Pepe,”“Child,”“Ronaldo”
+
+
+    # iv. Discard/Remove () function
+
+
+    You can utilize dispose of capacity to eliminate any component in a set. Then
+    again, you can utilize eliminate (().
+
+
+    ```
+
+    Example:>>>set1={1,2,3,4,5}
+
+    >>>set1.discard(5)>>>print(set1)
+
+    {1,2,3,4}
+
+    ```
+
+
+    Note that dispose of capacity can just take one contention. More than one dispose
+    of will return error.
+
+
+    The uplifting news is that you don’t need to compose one of some them place or
+    keep them. Very well may be effectively available whenever you need to utilize
+    them. In python 3, when you begin composing, for instance, the capacity “dispose
+    of,” before you complete “dispose of,” a drop-down away flies for choices to pick
+    from.
+
+
+    All these capacities prove to be useful when attempting to maneuver information
+    and putting them toward systematic files.
+
+
+    # Booleans
+
+
+    The result addresses two steady qualities, which can either be ‘Valid’ or ‘Bogus.’
+    The implicit capacity“bool ()” is used.
+
+
+    ```
+
+    Example:>>>7<9
+
+    True
+
+    Example:>>>15==19
+
+    False
+
+    Example:>>>4*2! !=10
+
+    Note that (!)=) denotes not equivalent
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'administrator True
+
+    Example:>>>5<=9
+
+    True
+
+    If Statements
+
+
+    You can utilize the ‘if’ articulations to run your code assuming determined
+
+    conditions are met. In the event that the articulation is valid, it is executed.
+
+    any case, they are not conveyed out.
+
+
+    ```
+
+    Example:>>>if 5>9:
+
+    >>>print("9 more noteworthy than 5")
+
+    >>>print("program
+
+    finished") The result gives
+
+    9 more prominent
+
+    than 5 program
+
+    finished Example:
+
+    >>> error=9
+
+    >>> if error>6:
+
+    print("6")
+
+    if error>10:
+
+    print
+
+    ("10") the result gives 6.
+
+    ```
+
+
+    For more perplexing checks, assuming that assertions can be settled,
+
+    inside the other. This infers that the inward assuming the assertion is
+
+    important for the external one.
+
+
+    ```
+
+    Example:>>> file=7
+
+    >>> if file>3:
+
+    print("3")
+
+    ```
+
+
+    Else statements
+
+    It follows an ‘if’ proclamations, and contains code that is considered when
+
+    the ‘if’ articulation is false.
+
+
+    ```
+
+    Example:>>>m=7
+
+    If m==8:
+
+    print (‘yes’)
+
+    else: print (‘no’)
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'no,
+
+
+    # Boolean Logic
+
+
+    This is utilized to make more convoluted conditions for ‘if’ explanations that
+
+    depend on more than one condition.
+
+
+    The Boolean administrators in python are ‘as well as,’ and ‘not’.
+
+
+    # And operator
+
+
+    The ‘and’ administrator for the most part takes two articulations, and the
+
+    outcomes are valid if provided that the two assertions are true.
+
+
+    ```
+
+    Example:>>>3==3 and 1==1 True
+
+    Example:>>>5==5 and 3==4
+
+    False
+
+    Example:>>>if (5==5) and (3>7)
+
+    print\(''valid'') else:
+
+    print (''false'') true.
+
+    ```
+
+
+    # Or operator
+
+
+    The ‘and’ administrator, likewise takes two contentions, and it returns
+
+    ‘valid’ assuming either or the two attentions are valid and’bogus’ on the off
+
+    chance that the two attentions are false.
+
+
+    ```
+
+    Example:>>>4==4 or 5==5
+
+    True
+
+    Example:>>>1==1 or 7==8
+
+    True
+
+    Example:>>>2+1>1 or 2*3<5 False
+
+    Example:>>>age=17
+
+    >>> fee=1000
+
+    >>>if age >18 or fee>500
+
+    >>>print (“Qualified")
+
+    ```
+
+
+    # Boolean not
+
+
+    Not takes just a single contention and reverses it. i.e., ‘false’ will be bogus,
+
+    and’not bogus’ is true.
+
+
+    ```
+
+    Example:>>>not 1==1
+
+    False
+
+    Example:>>>not 5<4
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# True
+
+
+    # LOOP
+
+
+    There are two kinds of circles in python. They are ‘while’ and ‘for’ loops.
+
+
+    # While Loop
+
+
+    They are utilized to execute a square of explanations or contentions ceaselessly
+    until specific conditions are met. Square of code is executed constantly as long
+    as the condition holds. When it turns out to be bogus, the following square of
+    code is executed.
+
+
+    ```
+
+    Example:>>> i=2
+
+    >>> while i<=4:
+
+    print (I)
+
+    i=i+1
+
+    print (''finished'') 2
+
+    compl
+
+    eted 3
+
+    compl
+
+    eted 4
+
+    ```
+
+
+    Finished. For Loops
+
+    They are utilized for repeating every component in a rundown, string, tuple, or
+    a dictionary.
+
+    Example: >>>num=[1,2,3,4]
+
+
+    ```
+
+    >>> for n in num:
+
+    print (n)
+
+    1
+
+    2
+
+    3
+
+    4.
+
+    ```
+
+
+    # Simulating Dice
+
+
+    To additional expand on you ''ve realized up to this point, here is an illustration
+    of a moving kick the bucket program in python.
+
+
+    ```
+
+    >>>import random
+
+    >>>while true:
+
+    rolled_num = random.randint(1,6)
+
+    print (“the dice rolled, and you have:
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '“rolled_num) input (“Press any key to roll again")
+
+    The main line of code was utilized to import library of arbitrary numbers
+
+    Import random
+
+
+    The irregular numbers are produced utilizing the randint () library work.
+
+    this situation the numbers range somewhere in the range of 1 and 6.
+
+
+    If you run this code, the dice will continue to move until it experiences a
+
+    bender and stops eventually.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# CHAPTER FOUR An Outlook into Functions
+
+
+    By now, you ought to be comfortable with capacities, at the most essential level.
+    We should revive our recollections a smidgen. You can characterize a capacity
+    collectively of articulations that plays out a particular undertaking. One of
+    the beneficial things with a capacity is that it assists you with separating your
+    code into more modest and basic pieces simple to assemble. This you can allude
+    to as square, which not just assists you with trying not to compose a line of
+    code over and over again yet additionally guarantee code recycling.
+
+
+    Let’s beginning with the print
+
+    work. Model :>>> print
+
+    (“Mangoes”) Which will display
+
+    Mangoes as output. Here is another example;
+
+    Example :>>> print (‘I love python programming Language’)
+
+    I love python programming Language.
+
+
+    # DEFINING FUNCTIONS
+
+
+    Functions are characterized utilizing the shortened catchphrase “def”. The overall
+    code punctuation can be composed as;
+
+
+    ```
+
+    def function_name():
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# GENERAL CODE SYNTAX OF FUNCTIONS\n\n```\ndef function_name (boundary or contention\
+    \ list):\n    \"\"\"docstring\"\"\"\n    Statement(s)\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Component parts of a Function
+
+
+    +   i. The capacity watchword“def” that denotes the start of the capacity header
+
+    ii. Parameters which is the place where capacity esteems are incorporated.
+
+    iii. A Colon (:) which demonstrates the end of the capacity header
+
+
+    iv. Python explanations that comprise the body of the functions
+
+    v. A return articulation in the event that you choose to reuse code.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# How to Call a Function
+
+
+    Once a capacity has been characterized, you can undoubtedly call it from another
+    capacity or program.
+
+    Example: >>> welcome
+
+    (name):““ ”
+
+
+    This capacity will welcome the named individual in a boundary““ ”
+
+    print(“hello, “+name.”) “How are you doing today?”")
+
+    Good morning Leonard. How are you doing today?
+
+
+    # Docstrings
+
+
+    The main thing that comes following the capacity header is docstring. It clarifies
+    what a capacity does. Model: def welcome (name):
+
+    ““ ”
+
+
+    This capacity will welcome the named individual in a boundary““ ”
+
+    print(“greetings,+name.”) “How are you doing today?”
+
+
+    # Return statement
+
+
+    Statements can have expression(s) that gets assessed, and the worth returned,
+    and it can have at least one returns relying upon the line of code you are running.
+
+
+    Example: >>> def meters (L_in_centimeters):
+
+    “““ this will return the length in
+
+    centimeters“““ return (l_in_centimeters/100)
+
+    for L in (120,332,145,270,225):
+
+    print (l,“: meters (l))
+
+
+    The result should appear as this:
+
+    Centimeters
+
+    120: 0.12
+
+    332: 0.332
+
+    145: 0.145 270: 0.270'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '225: 0.225
+
+
+    Functions can be characterized in wording of;
+
+    *Keyword arguments
+
+    *Default contentions values *Arbitrary contentions lists
+
+
+    # Keyword Arguments
+
+
+    The catchphrase contentions can be utilized to call capacities. Model: >>> def
+    printdata(age, state):
+
+    “This prints the information into this capacity” print("age": , age)
+
+    print("state":, state)
+
+    printdata(age="45")
+
+    return
+
+
+    # Default Argument values
+
+
+    They are generally used to call a capacity once.
+
+    Model: >>>def print information (tallness, eyes = Brown):“This will print this
+    information into the function.”
+
+
+    print(“ stature:
+
+    “tallness) print(
+
+    “eyes) print
+
+    information (height= 6ft) return
+
+    Height: 6ft
+
+    Eyes: Brown
+
+
+    # Arbitrary Argument Lists
+
+
+    You can call this capacity assuming it includes various contentions. You can likewise
+    watchwords boundaries to call functions.
+
+
+    The code grammar is generally in the form;
+
+    >>>def fullname([formal_args,]*var_args_tuple):
+
+
+    # STRING THEORY
+
+
+    You ought to be comfortable with the nuts and bolts of strings. We should rapidly
+    have a revive on that;
+
+
+    I bet you have gone over the single, twofold, or even triple statements throughout
+    these illustrations up to this point. Well that is the thing that we call string
+    in python programming language.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Here is a speedy one to grab;
+
+    Example: >>> (“Python is a wonderful programming language”
+
+
+    ‘Python is a marvelous programming language.’
+
+
+    Alternatively, you can likewise print;
+
+    Example: >>> print (“Python is a great programming language”)
+
+
+    Python is an amazing programming language.
+
+
+    # Escaping Quotes
+
+
+    This can just be accomplished utilizing the oblique
+
+    punctuation line image \ Example: >>>print (‘I won’t be
+
+    there today’)
+
+
+    I will not be there today
+
+
+    # Concatenating strings
+
+
+    You can without much of a stretch and quickly join strings utilizing the
+
+    expansion sign (+) and rehash the expansion utilizing the reference bullet
+
+    sign (*).
+
+
+    Example: >>>str1=“Mango"
+
+    ‘Mango’
+
+
+    ```
+
+    >>>str2=“es"
+
+    ’es''
+
+    >>>str1+str2 ‘Mangoes’
+
+    ```
+
+
+    In a more basic manner, you can put this
+
+    way Example: >>>“Hydro” + “Quinone"
+
+    Hydroquinone
+
+
+    Example: >>> 2*“Chloro” + “Carbons"
+
+    ‘ChloroChloroCarbons’
+
+
+    2* means the main indent will be rehashed twice.
+
+
+    # Creating New strings
+
+
+    You can make strings or information from old ones. Since strings are\unchanging,
+    you can transform them. Be that as it may, you can control the
+
+    methodology in executing them.
+
+
+    Example: >>>str1=“sky”'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '''sky''
+
+    Str2="fall" "fall"
+
+    Str1+str2
+
+    ''skyfall''
+
+
+    # Indexing strings
+
+
+    Indices beginning from 0 can be applied to strings. Turn around ordering can likewise
+    be applied.
+
+
+    # Slicing strings
+
+
+    You can essentially make new strings by cutting through the old ones or anybody
+    for that matter.
+
+
+    Example: >>> >>> str1="charger"
+
+    >>> str1[2]
+
+
+    ''a''
+
+    Example: >>>str1="charger"
+
+    >>>str1[3]
+
+
+    ''r''
+
+    Example: >>>str1="Abacus"
+
+    >>>str1[1:3]
+
+
+    ''ba''
+
+    Keep as a top priority while composing your code that python translator will return
+    a mistake assuming you enter a non-existent index.
+
+    Example: >>> str1="Abacus"
+
+
+    Str1[9]
+
+    The result should reveal this:
+
+    Traceback (latest call last): File "<pyshell#36>", line 1, in
+
+    <module> str1 [9]
+
+    IndexError: string record out of range.
+
+    Example: >>>str2="Apparatus"
+
+    >>>str2 [2:4]
+
+
+    ''pa''
+
+    Example: >>>str2 [1:]
+
+    ''apparatus''
+
+
+    If you plan to get the primary listed worth up to a predetermined file, you can
+    just make your assertion this way.
+
+
+    Example: >>>str2 [:5]'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '''Appar’'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# # How to determine the length of a string
+
+
+    To decide the length of a string isn''t exactly hard. This can be accomplished
+    by utilizing the key capacity "len ()". This viewpoint is key in controlling your
+    indexes.
+
+
+    Example: >>>str1="Samuel" len(str1)\6
+
+
+    Example: >>>myAddress="Maddison Street"
+
+    >>>len (myAddress)
+
+    14.
+
+
+    # HANGMAN
+
+
+    Hangman is a word speculating game that can be played by somewhere around two
+    players. In this game, a pen and paper is utilized. At the point when a player
+    defines a boundary, the other player attempt to figure the it relates to until
+    every one of the letters of the secret word(s) is totally speculated, on the off
+    chance that you ended speculating some unacceptable letter, you''ll lose a daily
+    existence at time until you have zero remaining. This game is by all accounts
+    fascinating, right! In this way, we should compose a program for it in python.
+
+
+    ```
+
+    import arbitrary, sys
+
+    from composing
+
+    import List # TODO attempt to stack these from a
+
+    text record WORD_LIST = [
+
+    "elevated", "yellow", "family", "screen", "bamboo", organic product", "work
+
+    area", "chair",
+
+    "lap", "snake", "fish", "nylon"
+
+    ]
+
+    GUESS_WORD = []
+
+    SECRET_WORD = random.choice(WORD_LIST) # lets randomize single
+
+    word from the list
+
+    LENGTH_WORD = len(SECRET_WORD)
+
+    ALPHABET="abcdefuvwxyz" letter_storage = []
+
+    # Utility functions
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\ndef print_word_to_guess(letters: List) -> None:\n    \"\"\"Utility capacity\
+    \ to print the current word to figure\"\"\"\n    print(\"Word to figure: {0}\"\
+    .format(\".join(letters))) def\n    print_guesses_taken(current: int, abs: int)\
+    \ -> None:\n    None:\"\"\"Prints the number of chances the player\nhas used\"\
+    \"\"print(\"You are on surmise\n{0}/{1}\".format(current, total))\n# Game functions\n\
+    def starting() -> None:\n    \"\"\"Starts the game\"\"\"\n    print(\"Hello Mate!\\\
+    n\")\n    while True:\n        name = input(\"Please enter your name\\n\").strip()\
+    \ if\n        name ===\"\":\n            print(\"That's not permitted! No clear\
+    \ lines\")\n        else:\n            break def ask_user_to_play() -> None:\n\
+    \                \"\"\"Ask client to play\"\"\"print(\"Let's\nget started!\\n\"\
+    ) while True:\n                    gameChoice = input(\"Would You?\\n\").upper()\
+    \ if\n                    gameChoice==\"YES\" or gameChoice==\"Y\":\n        \
+    \                break\n                elif gameChoice==\"NO\" or gameChoice==\"\
+    N\":\n                    sys.exit(\"That's wrong! Have a decent one\")\n    \
+    \            else:\n                    print(\"kindly Answer Yes or No\")\n \
+    \               continue\n            def prepare_secret_word() -> None:\n   \
+    \             \"\"\"Prepare secret word and educate client regarding it\"\"\"\n\
+    \                                for character in SECRET_WORD: # printing spaces\
+    \ for each letter stealthily\n                word\n                GUESS_WORD.append(\"\
+    - \")\n            print(\"Ok, so the word you really want to guess has\", LENGTH_WORD,\n\
+    \"characters\")\n            print(\"Be mindful that You can enter just 1 letter\
+    \ from az\\n\\n\")\n            print_word_to_guess(GUESS_WORD)\n            def\
+    \ speculating() -> - >\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nMAX_GUESS = 10\nprint_guesses(guess_taken, MAX_GUESS)\nwhile guess_taken\
+    \ < MAX_GUESS:\n surmise = input(\"Pick a letter\\n\").lower()\n not surmise in\
+    \ ALPHABET: #checking input print(\"Enter a letter from a-z ALPHABET\")\nel surmise\
+    \ in letter_storage: #checking assuming letter has been now used\nprint(\"You\
+    \ have effectively speculated that letter!\")\n else:\n letter_storage.append(guess)\n\
+    \ if guess in SECRET_WORD:\nprint(\"That's correctly!\")\n for i in range(0, LENGTH_WORD):\
+    \ if SECRET_WORD[i] == guess:\n GUESS_WORD[i] = guess\nprint_word_to_guess(GUESS_WORD)\n\
+    print_guesses_taken(guess_taken, MAX_GUESS)\n if not '-' in GUESS_WORD:\nprint(\"\
+    Congratulations you won!\")\n break\n else:\nprint(\"The letter does not match\
+    \ any in the word.\n Try Again!\")\ngess_taken += 1\nprint_guesses(guess_taken,\
+    \ MAX_GUESS)\nif guess_taken == 10:\nprint(\"Sorry Buddy, you lost :! The secret\
+    \ word was {}\".format(SECRET_WORD))\n```\n\nKeep in mind that python interpreter\
+    \ will ignore the hashed statements because they are comments. They are included\
+    \ to\n\n# DICTIONARIES"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'A dictionary is simply a group of items or elements that are unarranged, mutable
+    and indexed. They are usually written with curly brackets with keys and values
+    to them.
+
+
+    Example:
+
+
+    ```
+
+    # Changing and adding Dictionary Elements
+
+    >>>my_dict = {''name'': ''Pablo'', ''age'': 65}
+
+    # update value
+
+    my_dict [''age''] = 66
+
+    #Output: {''age'': 66, ''name'': ''Pablo''}
+
+    >>>print(my_dict)
+
+    # add item
+
+    my_dict [''address''] = ''Efijuiu''
+
+    # Output: {''address'': ''Efijuiu'', ''age'': 66, ''name'': ''Pablo''} print(my_dict)
+
+    ```
+
+
+    Python dictionaries are quintessential in the creation and execution of correct
+    syntax and statements.
+
+    Here are some of the keywords to keep in mind regarding dictionaries and their
+    various meanings;
+
+
+    # Maps
+
+
+    Python 3 dictionaries are different in some ways to that of python 2 in that they
+    have maps (something they have in common with a list) whose values you caIn gain
+    access to and if only you have the unique key corresponding to each of the maps.
+    Think of a map as your smartphone whose contents you can only get to when you
+    have the password. The good news about them is that you can store them and get
+    later on when you need them.
+
+    >>>mygirlfriend={"Jane": 21, "Debby": 23, "Loveth": 19, "Keith": 25}
+
+
+    ```
+
+    >>>print(myfriends)
+
+    {''Jane'': 21, ''Debby'': 23, ''Loveth'': 19, ''Keith'': 25}
+
+    ```
+
+
+    Since they can be modified, you can add elements to them if you want to.
+
+    Example:
+
+
+    ```
+
+    >>>myfamily={"Mother": 54, "Father": 62, "Sister": 17} >>>print(myfamily)
+
+    {''Mother'': 54, ''Father'': 62, ''Sister'': 17}
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'You can simply create dictionaries directly from key: value Pairs
+
+    Example:
+
+
+    ```
+
+    >>> dict([("Mother",54), ("Father", 62), ("Sister",17)])
+
+    {''Mother'': 54, ''Father'': 62, ''Sister'': 17}
+
+    ```
+
+
+    # Creating an empty Dictionary
+
+
+    You can simply create empty dictionaries by using two empty curly brackets {}
+    and unemptied them by inserting values.
+
+
+    # Deleting an entry from a dictionary
+
+
+    You can remove a key: value pair from a dictionary using the "del" function.
+
+    Let’s use the previous example family:
+
+
+    Example:
+
+
+    ```
+
+    >>> myfamily={ "Mother":54, "Father": 62, "Sister": 17 }
+
+    >>>del myfamily["Sister": 17] >>>print(myfamily)
+
+    ```
+
+
+    Accessing and sorting keys from a dictionary
+
+    To see all of the keys from a dictionary, simply use the command function
+
+    list(d.keys())
+
+
+    This will show you all of the keys within your dictionary.
+
+    Example:
+
+
+    ```
+
+    >>>list (myfamily.keys ))
+
+    [''Mother’, ‘Father’, ‘Sister’]
+
+    ```
+
+
+    And if you want to arrange them, you can simply use the keyword for sorting data;
+
+    sorted.(d.keys()) >>>sorted (myfamily.keys())
+
+    [''Father’, ‘Mother’, ‘Sister’]
+
+
+    # Finding specific keys
+
+
+    If you are looking for a specific key in a dictionary, you . Here is an example;can
+    simply use the ‘in’ keyword
+
+    Example:
+
+
+    ```
+
+    >>> “Father” in myfamily
+
+    And the output reads
+
+    True
+
+    ```
+
+
+    Example:'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '>>>"Uncle" in myfamily
+
+    False
+
+
+    You can see a dictionary as a reservoir which you can tap from any time because
+    it will serve you well in your python coding journey.
+
+
+    # TUPLES
+
+
+    You should, at this point, know a thing or two about tuples, and if you don''t
+    know already, a quick refresh will do you a great deal of good.
+
+
+    Tuples are similar to strings and numbers in that they are immutable but contain
+    mutable elements or sets of values. They can be homogeneous, i.e., contain the
+    same elements as numbers or letters and can also be heterogeneous, i.e., containing
+    a mixture of letters and
+
+
+    numbers. Like strings and lists, they are separated by commas, but it is enclosed
+    in parentheses.
+
+
+    Why Tuples?
+
+
+    Unlike lists, tuples can contain heterogeneous data or elements that can be arranged
+    properly.
+
+
+    Example:
+
+
+    ```
+
+    >>>tuple1=(1720, 2003, 1945, "Indianapolis", "Kentucky")
+
+    >>>print(tuple1)
+
+    (1720, 2003, 1945, ''Indianapolis'', ''Kentucky'')
+
+    ```
+
+
+    Tuples can also be nested. Here is an example below:
+
+
+    Example:
+
+
+    ```
+
+    >>>tuple2=((1720
+
+    ```
+
+
+    # Updating Tuples
+
+
+    Tuples can be updated by creating new tuples from the values or elements of existing
+    or previous.
+
+
+    This is simply because they are unalterable.
+
+
+    Example
+
+
+    ```
+
+    >>>marks=(35, 27, 54, 64, 69)
+
+    >>>studentnames=("Arthur", "Bella", "Vickky", "Blessing", "Matthew")
+
+    >>>candidates=marks + studentnames
+
+    >>>print(candidates)
+
+    (35, 27, 54, 64, 69, ''Arthur'', ''Bella'', ''Vickky'', ''Blessing'', ''Matthew'')
+
+    ```'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# CHAPTER FIVE
+
+
+    # Modules Classes and Methods
+
+
+    Modules are used to organize or arrange files. They are grouped elements or values
+    that you can refer to and call them any time they are needed.
+
+
+    Packages They are similar to folders. They contain more than a single module that
+    are properly organized. They are represented by `__init__.py` file name (empty
+    file)
+
+
+    To have a glimpse of how modules truly work, a good knowledge of import will be
+    of great essence. Let''s do a little bit of straight dive.
+
+
+    There are two ways you can import packages:
+
+
+    Absolute Import
+
+
+    What an absolute import does point out the elements or values to be imported using
+    its full path from the project''s
+
+
+    main folder. The absolute import can be associated with the following codes;
+
+    import package.module
+
+    obj = package.module.class A ()
+
+    from package.module.class A ()
+
+    import class A ()
+
+    from package import module
+
+    obj = module.classA () >>>from module_name import*
+
+
+    This statement will import all modules from the root folder. The only one you
+    must avoid is duplicate.
+
+
+    Relative Imports
+
+
+    You can simply import the class of a module into another within the same package.
+    A relative import points out the data to be imported depending on the recent location
+    of the import.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Here are a few examples of relative imports;
+
+
+    ```
+
+    From.module2 import classB
+
+    Obj = classA ()
+
+    From..some_module3 import some_classC
+
+    Obj = classC ()
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Dates and Time Module
+
+
+    These are two types, which are dates and times objects. These are “naïve” and
+    “aware.”
+
+
+    Aware is conscious of its environment as relates to time zones, time adjustments,
+    and other aspects of time may currently or in the near future be in. The naive,
+    on the other hand, is unaware of its environment and cannot work on its work since
+    it lacks the necessary information to work on its own.
+
+
+    Here are some of the examples of constants that can be exported by datetime module;Datetime.minyear
+
+
+    This is tantamount to 1. This implies that the output will include years back
+    in the past, even before the birth of the python programming language.
+
+
+    ```
+
+    >>>datetime.time = datetime.time (hours=0, minute =0):
+
+    Example:
+
+    >>>import datetime
+
+    >>>current_time = datetime.datetime.now ()
+
+    >>>print ("{:%H:%M}".format (current_time))
+
+    10:38
+
+    Example:
+
+    >>>import datetime
+
+    >>>datetime.datetime.now ()
+
+    >>>print (now.year)
+
+    2020
+
+    Example:
+
+    >>> import datetime >>> datetime.datetime.now () datetime.datetime (2020, 6, 27,
+    16, 10, 180317) This is the same as 16:10
+
+    Datetime.maxyear
+
+    ```
+
+
+    This is like writing 9999, i.e., the largest amount of year into the future that
+    can be provided by an element or datetime object.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# OBJECT ORIENTATION
+
+
+    The python programming language is object-based, meaning that more emphasis is
+    placed on objects rather than functions. When data and objects and data becomes
+    bigger, the need for an object-oriented programming approach becomes quintessential.
+
+
+    You can simply look at object-oriented programming as a way of representing or
+    modeling real-world objects in your codes. The key thing to remember here is that
+    python is an object-oriented programming language, and everything is woven around,
+    built on and about objects even if some aspects of it is not directly pointing
+    to an object, it may be a representation of it.
+
+
+    # CLASSES IN PYTHON
+
+
+    You can, by analogy, refer to a class as a clay reserve where several mugs and
+    plates are made from. A class, in short, is like a code guide or model from which
+    objects are built or made.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# How to create a class\n\nYou can easily create a class using “class” keyword.\
+    \ Here is an example of a class\n\nExample:\n\n```\n>>> class religion:\ndef __init__(self,name,doctrine):\n\
+    \    self.name = name\n    self.doctrine = doctrine\nr1=religion(“christian\"\
+    ,\n“pentecostal”) print(r1.name)\nprint(r1.doctrine)\n```\n\nKeep in mind this\
+    \ example that the function __init__ is called each time an object is created\
+    \ within or from a class.\n\n# Instances\n\nYou can simply refer to an instance\
+    \ as a duplicate of class with real values, i.e., an object member of a class.\n\
+    \nTry and imagine a google form URL or link that is shared in, let’s say your\
+    \ WhatsApp group. You clicked on it and yooza! A form appeared with fields for\
+    \ to fill up. At the end of it, a copy of all the info you entered was your inbox.\
+    \ Now, the copy sent to you is an instance which contains the info you filled\
+    \ out yourself.\n\n`Instance Attributes\n in python are object-specific, and they\
+    \ have certain properties known as “Attributes.”\n\n# Class Attributes\n\nThe\
+    \ variables are the same for all instances.\n\n# INHERITANCE\n\nThis is used to\
+    \ refer to a situation where a class assumes the method and attribute of another\
+    \ one. Usually of two forms which are; the parent or base class and the child\
+    \ or derived class."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "Child classes are a resultant of a parent inheritance, and they share all of\
+    \ the attributes of parent classes. However, they can choose the path they intend\
+    \ to follow,\n\nwhich in some cases may be different from that of their parent.\n\
+    You can create a parent class from just about any class of objects or variables.\
+    \ Here is an example;\n\nExample:\n\n```\n>>> class HouseAddress:\n    def __init__(self,\
+    \ housename, streetname):\n        self.housename = housename\n        self.streetname\
+    \ = streetname\n    def printname(self): print(self.housename, self.streetname)\n\
+    ```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# CHAPTER SIX Files and the Web
+
+
+    # File Management
+
+
+    File management is very important in python programming; this is because, with
+    files, you can properly arrange your codes and store them. You can carry out simple
+    tasks like writing into a file, reading a stored file, or closing a file. Before
+    we dive right in, there are a few things about a file or files you should be familiar
+    with;
+
+
+    # Header
+
+
+    This refers to the data about the contents of the file, like the name of the file,
+    size, format, etc.
+
+
+    # Data
+
+
+    What is contained in the file.
+
+
+    # End of file
+
+
+    This is used to signify the end of a file.
+
+
+    # File Path
+
+
+    This is where a file is located on your system. This is further divided into three,
+    which are;
+
+
+    +   i. **Filename**
+
+    This is the name given to a file. You can rename anytime you want.
+
+    ii. **Extension**
+
+    This is used to indicate the file type.
+
+    iii. **Folder Path**
+
+    This indicate the location of a file in a folder or sub-folder.
+
+
+    # Reading a File
+
+
+    To read a file is very easy. All you have to do is open the target file with the
+    open () function.
+
+    Here is the syntax
+
+
+    ```
+
+    Open ()
+
+    Open (filename, mode)
+
+    filename.read()
+
+    filename.readline()
+
+    ```
+
+
+    This will allow you read the file line by line'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '```
+
+    filename.readlines ()
+
+    This will allow you to read lines in a given text file.
+
+    ```
+
+
+    # Closing a File
+
+
+    You can simply close a file using the file object method close (fobj). Here is
+    the syntax,
+
+    fobj = open("filename.txt")
+
+    for line in fobj:
+
+    print (line.strip() ()
+
+    fobj.close ()
+
+    Alternatively, you can decide to use this one instead;
+
+    quote = open("filename.txt").readlines ()
+
+    print (quote)
+
+    You can also use this; quote = open("filename.txt").read ()
+
+    print (quote[:])
+
+
+    # Writing into a File
+
+
+    To write to a file, you can use the write () method. Here is the syntax,
+
+    fh.("filename.txt", "w")
+
+    fh.write("live and let live") fh.close ()'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Creating a File
+
+
+    If you want to create a file in python, you can start by simply opening a text
+    editor and input all the contents you intend to input. When you are done, before
+    you exit, do not forget to name and save your file for later use. You will be
+    prompted to save the file before you exit the application.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Reading and Writing Binary Data
+
+
+    In python programming language, you can use the open () function and the read
+    binary "rb" or write binary "wb" mode to read or write binary data. Bytes, byte
+    array, and memory view are all part of binary sequence types.
+
+
+    # Bytes
+
+
+    Bytes can be expressed in terms of integers, zero filled bytes objects, or binary
+    data contained in the buffer protocol, and the binary values are unchanging.
+
+
+    # Bytearrays
+
+
+    Unlike the bytes, the variables are mutable.
+
+
+    ```
+
+    PICKLE MODULE OR PICKLING
+
+    ```
+
+
+    Pickling or pickle module in python programming is used to describe the process
+    of turning objects structures or their equivalent values into byte fragments or
+    streams, i.e., 0s and 1s. importing pickle can simply be achieved by using the
+    command below:
+
+
+    # The Dump Method
+
+
+    This is simply used to dump objects using the command
+
+    >>>pickle.dump(obj,file [protocol], *, fix_imports = true)
+
+    And you can also read the contents of the dumped files whenever you want to by:
+
+    >>>pickle.load(file).pickle
+
+
+    # Example:
+
+
+    ```
+
+    >>>import pickle
+
+    >>>subjects = ["Mathematics", "Biology", "Chemistry", "Physics"]
+
+    >>>fh = open ("data.pk1", "wb")
+
+    >>>fh.close(0) where fh means file handle object
+
+    ```
+
+
+    Some important things to keep in mind regarding pickling in python:
+
+
+    +   - The fact that pickling can be put to good use in saving complicated data
+    is undeniable'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '+   - It is quite simple, doesn’t require long lines of code
+
+    - Pickled file in python may be unreadable in other programming languages
+
+    - The pickled file or module is not malware proof
+
+
+    # INTERNET
+
+
+    Most of the applications weKNow rely on the internet, a chunk of them works without
+    the internet, though, but one way or another, they still rely on the internet,
+    whether for download, upload, import or update. You can comfortably liken the
+    internet to a classroom filled with students with each of them having their unique
+    identities and names. Now, you want to call on one of them at a
+
+
+    particular point in time; all you have to do is call on the identity of that particular
+    student, whether by name or a designated id number. This is how the internet works.
+
+
+    Simply put, your raspberry pi communicates with the internet through a web server
+    by sending HTTP (Hypertext transfer protocol) requests to it. The server then
+    responds by returning packets of data in form of text, usually in HTML (hypertext
+    markup language). You can use python to perform other web services like parsing
+    and retrieval of data using XML (extensible markup language).'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# CHAPTER SEVEN Tkinter
+
+
+    There are many frameworks associated with python regarding the Graphical User
+    Interface, and Tkinter happens to be the only one that’s embedded in the python
+    library. Of the many GUIs available, Tkinter is the most typically used technique.
+    Python with Tkinter is the quickest and easiest method to make the user interface
+    victimization Tkinter is a straightforward task.
+
+
+    To create applications using Tkinter, here are the steps you need to follow:
+
+
+    +   * Importing the module – Tkinter
+
+    * Create the key window (container)
+
+    * Add any variety of widgets to the key window
+
+    * Carry out the event Trigger over the widgets.
+
+
+    To import Tkinter, you can simply use the “import Tkinter” function. When creating
+    GUI in python programming language, keep these in mind;
+
+    *In the process of creating the main window, you can make use of;
+
+    >>>tk (screen=None, baseName= None, className=''tk'', uset=1)
+
+
+    You can also change the name of the window you have created by simply altering
+    the “className” to the one you want. Here is the code to make it happen:
+
+
+    ```
+
+    m=tkinter.tk (), in this case, m is the name of the window.
+
+    As soon as you are ready to run your application, you can simply the mainloop
+    function to execute the codes in your Tkinter application.
+
+    m.mainloop (), mainloop is an endless loop used in the running of tk application.
+
+    ```
+
+
+    There are several widgets you can include in your Tkinter application to make
+    it intuitive. Here are some of them;
+
+
+    Several options are available to alter buttons. Some of these choices may the
+    format of be passed as'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'parameters separated by commas. A number of them is listed below.
+
+
+    +   • Button
+
+
+    This widget is used to include button in your application. Here is the code syntax;
+
+    w = Button (master, option=value)
+
+
+    # Activebackground
+
+
+    This widget is typical in the fixing of the background color once button is beneath
+    the mouse pointer.
+
+
+    # Active foreground
+
+
+    This is used to fix the foreground color once button is beneath the mouse pointer.
+
+
+    # Bg
+
+
+    This comes in handy when you want to fix the default background color.
+
+
+    # Command
+
+
+    This is used to retrieve a function.
+
+
+    # Font
+
+
+    This is used to line the font on the button label.
+
+
+    # Image
+
+
+    You can utilize this to line the image on the button. Width\To line the dimension
+    of the button.
+
+
+    # Height
+
+
+    This is used to fix the peak of the button.
+
+    Example:
+
+
+    ```
+
+    >>>import tkinter as tk
+
+    r = tk.Tk ()
+
+    r.title (''Countdown'')
+
+    button = Button (r, text=''end'', width=20, command=r.destroy)
+
+    button.pack (
+
+    r.mainloop()
+
+    ```
+
+
+    +   1. Canvas
+
+
+    You can make use of this to depict images and other conventional graphics
+
+    layouts like text and widget. Here is the code syntax;
+
+
+    ```
+
+    >>>w = canvas (master, option = value)
+
+    Where master stands for the mother window.
+
+    ```'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'There a number of options available that you can make use of to alter the outlook
+    of a widget. Here is a quick list of some of them;
+
+
+    # Bd
+
+
+    This can be used to put the border width in pixels
+
+
+    # Bg
+
+
+    You can use this to fix the traditional background-color
+
+
+    # Cursor
+
+
+    This can be used to include the mouse pointer in the canvas widget
+
+
+    # Highlight color
+
+
+    You can make use of this to fix the color of the highlighted area in place
+
+
+    # Width
+
+
+    This is used mainly to put the widget in place
+
+
+    # Height
+
+
+    To measure the height of the widget
+
+
+    Example:
+
+
+    ```
+
+    >>>from Tkinter import * master = Tk
+
+    w = Canvas(master, width=42, height= 58)
+
+    w.pack()
+
+    canvas_height =20
+
+    canvas_width = 220
+
+    y = int (canvas_height / 2)
+
+    w.create_line (0, y, canvas_width, y)
+
+    mainloop()
+
+    ```
+
+
+    There are other widgets too apart from canvas used in GUI. Here is a list of them
+    and their various definitions;
+
+
+    +   * Check Button
+
+
+    This is used to pick an option from a number of options shown to the user in a
+    toggle button. Here is the code syntax;
+
+
+    ```
+
+    w = CheckButton(master, option=value)
+
+    ```
+
+
+    +   * Entry
+
+
+    You can type in the one-line text using entry. For more than one line, simply
+    opt for the widget.
+
+
+    The code syntax is written as;
+
+
+    ```
+
+    w=Entry(master, option=value)
+
+    ```'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '+   • Frame
+
+    This used to put widgets together as a single entity in an organized form.
+
+    The code syntax is written as;
+
+    w = Frame (master, option=value)
+
+    • Label
+
+
+    A label is like a box where you can palace a text or image to be displayed and
+    altered any time you want to. The code syntax is written as;
+
+
+    ```
+
+    w=Label (master, option=value)
+
+    ```
+
+
+    +   • Listbox
+
+    This offers a user some options to choose from, be it of long or shortlist.
+
+    The code syntax is written as;
+
+    w = Listbox (master, option=value)
+
+    • MenuButton
+
+
+    It is a part of a drop-down menu that remains within the window at all times,
+    with each of them having their various usage. The code syntax is written as;
+
+    w = MenuButton (master, option=value)
+
+
+    +   • Menu
+
+    With this, you can create just any type of menu for Tkinter application.
+
+    Here is the code syntax;
+
+    w = Menu (master, option=value)
+
+    • Message
+
+
+    This functions like a label, and it has a non-single unalterable text.
+
+    The code syntax is written as;
+
+    w = Message (master, option=value)
+
+    • ScrollBar
+
+
+    +   This refers to a slider regulator that can be carried out using listed widgets.
+
+    The code syntax is written as;
+
+    w = Scrollbar (master, option=value)
+
+    • Text
+
+
+    This is utilized to adjust the manner in which a different line text is shown.
+
+    The following is the code syntax;
+
+    w = Text (ace, option=value) TEMPERATURE CONVERTER
+
+    Here is an illustration of a straightforward temperature converter application
+    utilizing Tkinter.
+
+
+    # tempconverter.py (filename)'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\nfrom Tkinter import *\ndef convert_to_cel():\nwords = fbtext.get()\nftemp\
+    \ = float (words)\ncelbox.delete(0, END)\ncelbox.insert(0,%.3f' % (tocel (ftemp)))\n\
+    return\ndef convert_to_fahr():\nwords = cbtext.get()\nctemp = float (words)\n\
+    fahrbox.delete(0, END)\nfahrbox.insert(0,%.3f' % (tofahr (ctemp)))\ndefef tocel(fahr):\
+    \ return (fahr-32) * 5.0/9.0\ndef tofahr(cel):\nreturn cel * 9.0/5.0 + 32\napplication\
+    \ = Tk ()\\app.title('Temperature converter')\nfahrlabel = Label(app, message='Fahrenheit')\n\
+    fahrlabel.grid(line =0, section =0, padx =5, pady =5, tacky = E)\ncellabel = Label(app,\
+    \ message='Celsius')\ncellabel.grid(line = 1, segment =0, padx =5, pady =5, tacky\
+    \ = E)\nfbtext = StringVar ()\nfbtext.set('32')\nfahrbox = Entry (application,\
+    \ textvariable = fbtext)\nfahrbox.grid(line =0, segment = 1, padx =5, pady =5)\n\
+    cbtext = StringVar ()\ncbtext.set('0')\ncelbox = Entry (application, textvariable=cbtext)\n\
+    celbox.grid(line = 1, segment = 1, padx =5, pady = \n5)\ngobutton = Button (application,\
+    \ message='Go', order = convert_to_cel)\ngobutton.grid(line =0, segment = 2, padx\
+    \ =5, pady =5, tacky = \nN+S+E+W)\ncobutton = Button (application, message='Go',\
+    \ order = convert_to_fahr)\ncobutton.grid(line = 1, segment = 2, padx = 5, pady\
+    \ = 5, tacky =\nN+S+E+W)\nexitbutton = Button (application, message='Leave', order\
+    \ = quit)\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '```
+
+    exitbutton.grid (line = 2, segment = 0, padx = 5, pady = 5, tacky = N+S+E+W, colspan
+    = 3) app.mainloop ()
+
+    ```'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# CHAPTER EIGHT
+
+
+    # Games Programming
+
+
+    There are some programming dialects you can use in game turn of events, and python
+    turns out to be one of them. An awesome illustration of this is the Pygame, which
+    we''''ll investigate in this section. I bet this section certainly won''t divert
+    you from a new kid on the block to a specialist, yet it will arm you with the
+    fundamentals to drive you on your excursion in making games utilizing python.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# What is Pygame?
+
+
+    Pygame is a bunch of modules explicitly written in python programming language
+    to make computer game or any kind of game you can think of.
+
+
+    Many occasions you wish to picture the projects you’re making since work with
+    you to discover programming rationale rapidly. Games region unit is fantastic
+    for this, as your space unit explicitly programming all that you see.
+
+
+    Game creation in any fake language is unimaginably bountied, and also makes for
+    a decent instructing apparatus. With game turn of events, you routinely have a
+    significant smidgen of rationale, math, software engineering, and elective things,
+    all of move for game creation. Not exclusively this, notwithstanding, the subject
+    is games; subsequently, it is regularly horribly fun.
+
+
+    To started, you’ll have to transfer pygame, then install it, and you’re able to
+    go! If you’re a Raspberry pi user, you’ll merely open the applying at once because
+    it comes with pygame already put in the default raspbian installation.
+
+
+    You can at present start to make your first python program.
+
+    But before you progress to any further here, here are a portion of the things
+    you might want to keep in mind:
+
+
+    +   - In Pygame, Multicore CPUs are regularly utilized simply.
+
+    - It is truly movable and light-weight.
+
+
+    - It’s direct and clear to use.
+
+    Many games are printed. In excess of 660 games are imprinted on the pregame; in
+    this manner, you’ll ensure a
+
+
+    ton of it’s been tried by voluminous users.
+
+
+    You can utilize pygame from guidance assuming you might want to utilize basically
+    to technique pictures, get joystick information, or play sounds.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'It doesn ''t have a large number of lines of code for stuff you won''t utilize
+    in any case. The center is solid, clear, and further things like interface libraries
+    and impacts region unit fostered a few outside of pygame.
+
+
+    Now, we should consider an illustration of a run of the mill pygame. Toward the
+    finish of the code line, you ought to have a functioning snake game composed absolutely
+    in python.
+
+
+    ```
+
+    #Snake.py
+
+    Import pygame
+
+    Import sys
+
+    Import time
+
+    Import random
+
+    From pygame.locals import * FPS = 5
+
+    Pygame.init ()
+
+    Clock = pygame.time.Clock ()
+
+    SCREEN_WIDTH, SCREEN_HEIGHT = 620, 460
+
+    Screen = pygame.display.set_mode ((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
+
+    Surface = pygame.Surface (screen.get_size ())
+
+    Surface = surface.convert ()
+
+    Surface.fill((250,250,250))
+
+    Clock = pygame.time.Clock ()
+
+    Pygame.key.set_repeat (1, 40)
+
+    GRIDSIZE=10
+
+    GRID_WIDTH = SCREEN_WIDTH/GRIDSIZE
+
+    GRID_HEIGHT = SCREEN_HEIGHT/GRIDSIZE
+
+    UP = (0, - 1) DOWN = (0, 1)
+
+    LEFT = (- 1, 0)
+
+    RIGHT = (1, 0)
+
+    Screen.blit (surface, (0, 0))
+
+    def draw_box (surf, shading, pos):
+
+    R = pygame.Rect ((pos [0], pos [1]), (GRIDSIZE, GRIDSIZE))
+
+    Pygame.draw.rect (surf, shading, r)
+
+    Class Snake (object):
+
+    def init (self):
+
+    Self.lose ( )
+
+    ```'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "```\nSelf.colour = (0, 0, 0)\ndef get_head_position(self):\n    Return self.positions\
+    \ [0]\ndef lose(self): Self.length = 1\n    Self.positions = [(SCREEN_WIDTH /\
+    \ 2), (SCREEN_HEIGHT/2))]\n    Self.direction = random.choice([UP, DOWN, LEFT,\
+    \ RIGHT])\ndef point(self, pt):\n    If self.length > 1 and (pt[0] * -1, pt[1]\
+    \ * -1) == self.direction:\n        Return\n    Else:\n        Self.direction\
+    \ = pt\ndef move(self):\n    Cur = self.positions[0]\n    X, y = self.direction\n\
+    \nNew = (((mutt[0])+(x*(GRIDSIZE))) % SCREEN_WIDTH, (mongrel[1] +y*(GRIDSIZE)))\
+    \ % SCREEN_HEIGHT)\n\nIf len(self.positions) > 2 and new in self.positions[2]:\n\
+    \    Self.lose ()\nElse:\n    Self.positions.insert(0, new)\n    If len(self.positions)\
+    \ > self.length:\n        Self.positions.pop ()\ndef draw (self, surf, surf):\
+    \ For\n    p in self.positions:\n        Draw_box(surf, self.color, p)\nClass\
+    \ Rat(object):\n    def init(self):\n        Self.position = (0, 0) Self.color\
+    \ = (255, 0, 0)\n        Self.randomize ()\n    def randomize(self):\n       \
+    \ Self.position = (random.randint(0, GRID_WIDTH-1) * GRIDSIZE,\n        random.randint(0,\
+    \ GRID_HEIGHT-1) * GRIDSIZE\n    def draw(self, surf): Draw_box(surf, self.color,\
+    \ self.position)\n    def check_eat(self, snake, rat):\n        If snake.get_head_position\
+    \ () == rat.position:\n```"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\nSnake.length += 1\nRat.randomize ()\nIf name == ' primary':\nSnake = Snake\
+    \ ()\nRat = Rat () While True:\nFor occasion in pygame.event.get (): \nevent.type\
+    \ == QUIT\nPygame.quit () Sys.exit ()\nElif event.type == KEYDOWN: If\nevent.key\
+    \ == K_UP:\nSnake.point(UP)\nif event.key == K_DOWN: Snake.point(DOWN) Elif event.key\
+    \ == K_LEFT:\nSnake.point(LEFT)\nelif event.key == K_RIGHT:\nSnake.point (RIGHT)\n\
+    Surface.fill ((255,255,255)) Snake.move\n()\nCheck_eat (snake,\nrodent) Snake.draw\n\
+    (surface) Rat.draw\n(surface)\nFont = pygame.font.Font(None, 36)\nText = font.render(str\
+    \ (snake.length), 1, (10, 10, 10))\nTextpos = text.get_rect ()\nTextpos.centerx\
+    \ = 20\nSurface.blit (text, textbox)\nScreen.blit (surface, (0, 0))\nPygame.display.flip\
+    \ () Pygame.display.update ()\nfpsClock.tick (FPS + snake.length/3)\n```\n\nIt\
+    \ 's somewhat long yet finally, here we are. Up to this point, we have,\nthrough\
+    \ the code, utilize the accompanying essential pieces of pygame. Here\nthey are;\n\
+    \n# Screen pixels"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'This is an image component apparent on the screen comprising principally of
+    pixels (littlest unit of a picture on a screen).
+
+
+    These image components can be changed by basically utilizing the “blit ()” work.
+    This will copy the pixel from one picture component to another.
+
+
+    # Screen Coordinates
+
+
+    I want to speculate and say that you have in some run over the Cartesian direction
+    framework, most presumably in your secondary school years. A similar idea aplies
+    in pygame. The main distinction when contrasted with the manner in which you use
+    it in the pygame world is that your directions (x, y) is at the upper left corner
+    of your screen rather than in the center, which is maybe what you are acclimated
+    inside your insight into mathematics.
+
+
+    To situate an article on the screen, we need to educate the blit () work regarding
+    where to put the picture on the screen. In pygame, we will quite often ceaselessly
+    pass positions as (x, y) coordinate. This addresses the measure of pixel to one
+    side and, and accordingly, the scope of pixels down to put the image component.
+    The upper left corner of a surface is coordinate (0, 0). Moving to the right somewhat
+    would be (10, 0), and dropping down would be (10, 10).once blitting,
+
+
+    the position contention addresses where the upper left corner of the beginning
+    ought to be set on the destination.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# # CHAPTER NINE Interfacing with the Hardware
+
+
+    There are numerous ways you can associate other equipment to the raspberry pi
+    board. It tends to be through the GPIO pins, the USB ports, or some other ports
+    you can find on the raspberry board. In this part, we will zero in on associating
+    other outside equipment utilizing the GPIO pins to the raspberry pi.
+
+
+    # ## GPIO PIN CONNECTIONS
+
+
+    An excellent element of the Raspberry Pi is that the column of GPIO (universally
+    useful information/yield) pins on the most elevated edge of the board. A 40-pin
+    GPIO header is found on all current Raspberry Pi sheets (uninhabited on Pi Zero
+    and Pi Zero W). Prior to the Pi one Model B+(2014), sheets included a more limited
+    26-pin header.
+
+
+    # ## Voltages
+
+
+    Two 5V pins and 2 3V3 pins square measure gift on the board, likewise assortment
+    of ground pins (0V), that square measure unconfigurable.
+
+
+    # ## Outputs
+
+
+    The power yield is for the most part somewhere in the range of 0V and 3.3V.
+
+
+    ![](img/07ce46bbd010b8e902c19471558cb9d6_72_0.png)
+
+
+    Image source: raspberrypi.org
+
+
+    # ## Inputs
+
+
+    A GPIO pin chose as an information pin can be pretty much as high as (3.3V) or
+    low (0V). The resistors added to it makes it simpler to control the voltage level
+    anytime in time.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '![](img/07ce46bbd010b8e902c19471558cb9d6_73_0.png)
+
+
+    source: raspberrypi.org 2'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# INTERFACING THE BREADBOARD TO RASPBERRY PI USING JUMPER WIRES
+
+
+    # The breadboard live connection
+
+
+    You can just utilize a jumper wire to associate the breadboard to a 5V pin on
+    the Raspberry Pi gadget and make certain to affirm that the live and unbiased
+    end are appropriately associated with the right pin port on the board.
+
+
+    # The breadboard’s ground connection
+
+
+    On the ground end of the breadboard, utilize a jumper wire to start a scaffold
+    between the ground (GND) nail to
+
+
+    pi load up and the GND nail port to the breadboard utilizing jumper wire (you
+    might choose to utilize an alternate tone for the GND association with separate
+    it from different wires). Remember that all blue openings presently go about as
+    a ground pin.
+
+
+    # Add an electrical device to the board
+
+
+    Take an electrical gadget and interface one leg of it to an opening on the base
+    of the board. Take the contrary leg and interface it to an opening on the major
+    board.
+
+
+    # Add the junction rectifier to the board
+
+
+    Take partner degree intersection rectifier part and appearance at the legs. Notice
+    that one of the legs is more limited than the inverse. Place the more limited
+    leg in a very opening on indistinguishable column on the grounds that the electrical
+    device.
+
+
+    # Wire up the board
+
+
+    Place the more drawn out leg in a very opening on succeeding line. At present,
+    take another male-tomale jumper and spot one completion inside the'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'opening close to the long leg of the intersection rectifier. Place the contrary
+    completion in a very hole
+
+
+    on the red live rail to finish the circuit. The intersection rectifier lights
+    up.
+
+
+    ![](img/07ce46bbd010b8e902c19471558cb9d6_75_0.png)'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# ARDUINO AND RASPBERRY PI
+
+
+    You might be acquainted with or found out about Arduino previously, and you end
+    up reasoning they are something similar. Indeed, it isn''t actually the manner
+    in which you have envisioned it.
+
+
+    You can compare an Arduino to the circuit leading body of a microcontroller. A
+    microcontroller may basically be alluded to as a pc which will run one program
+    on numerous occasions. It''s clear to use.
+
+
+    A Raspberry Pi is single-board equipment outfitted with the speed and memory to
+    run many projects. It has extra modern utilization contrasted with Arduino.
+
+
+    An Arduino is generally appropriate for a solitary errand that can be rehashed
+    however many occasions as possible.
+
+
+    Raspberry Pi can be utilized for pretty much anything a conventional PC would
+    regularly do. This can go from programming to hacking, plan, and anything you
+    can expect to envision or dream of.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# CHAPTER TEN Linux Resources
+
+
+    There are numerous frameworks out there that are constructed fundamentally from
+    Linux, and raspberry pi turns out to be one of them. It principally runs on Linux.
+    This book doesn''t cover much on Linux, however the uplifting news is there huge
+    loads of assets out there you can get your hands on, and you don''t have to visit
+    a library to accomplish that. All of that can be accomplished at the solace of
+    your smartphone.
+
+
+    Here are a portion of the assets you will see as exceptionally supportive; Linuxcommand.org
+    Geekuniversity.com Linuxnewbieguide.org Linux.com
+
+
+    If you end getting your hands on any of the books composed on Linux in the library,
+    don''t stop for a second to get as numerous data you can from it.
+
+
+    # Python Resources
+
+
+    The raspberry pi sn isn ''t constructed completely on the python programming language.
+    This implies there is a practically interminable pool of assets out there for
+    learning it Like I have said before, you don''t need to visit a library to get
+    your hands on the assets expected to learn python. Here is a rundown of some you
+    will see as extremely accommodating while heading to turning into an expert python
+    programmer.
+
+
+    Docs.python.org Realpypython.com W3schools.com Codecademy.com Pygame.org'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Raspberry pi Resources
+
+
+    If there is anything you need to be aware of raspberry pi, you will think that
+    it is on their authority site on raspberrypi.org'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Other Programming Languages
+
+
+    In the former sections, we have managed broadly on the most proficient method
+    to program the raspberry pi utilizing python. Notwithstanding, there are other
+    programming dialects that can be utilized. One of such is the C language. To attempt
+    other programming dialects on the raspberry pi, there are a huge load of them
+    out there you can make use of.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Applications and Projects
+
+
+    There are huge loads of utilizations out there that can come to live because of
+    the raspberry pi, and there is a tremendous local area of software engineers out
+    there who are committed to the improvement of the raspberry pi or any innovation
+    that is related with it.
+
+
+    One of these local area drives is the CoderDojo club for youngsters between the
+    ages of 7 and 17 and the Raspberry Jam meetups for any individual who needs to
+    simply make things utilizing raspberry pi.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# CONCLUSION
+
+
+    Having a quick PC while you do your writing computer programs is very noteworthy,
+    substantially more when utilizing a programming language that is straightforward.
+    The mix of the Raspberry Pi and Python programming language yields amazing outcomes;
+    your occupation gets simple and can be finished quicker. With the thoughts partook
+    in this book, all troubles encompassing how to utilize your Raspberry Pi and programming
+    with Python can be brought to a settled case. Consequently, you would now be able
+    to see how the Raspberry Pi equipment parts work, the essentials of Python, and
+    better information on module classes and their strategies.'
+  merge: -1
+  pgno: 81
