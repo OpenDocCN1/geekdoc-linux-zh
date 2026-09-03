@@ -1,0 +1,3059 @@
+- img_proc: true
+  md: '# # The Linux Kernel Module Programming Guide
+
+
+    Peter Jay Salzman
+
+    Michael Burian
+
+    Ori Pomerantz
+
+
+    Copyright © 2001 Peter Jay Salzman
+
+
+    2007–05–18 version 2.6.4
+
+
+    The Linux Kernel Module Programming Guide is a free book; you may reproduce and/or
+    modify it under the terms of the Open Software License, version 1.1. You can obtain
+    a copy of this license at http://opensource.org/licenses/osl.php.
+
+
+    This book is distributed in the hope it will be useful, but without any warranty,
+    without the implied warranty of merchantability or fitness for a particular purpose.
+
+
+    The author encourages wide distribution of this book for personal or commercial
+    use, provided the above copyright notice remains intact and the method adheres
+    to the provisions of the Open Software License. In summary, you may copy and distribute
+    this book free of charge or for a profit. No explicit permission is required from
+    the author for reproduction of this book in any medium, physical, or electronic.
+
+
+    Derivative works and translations of this document must be placed under the Open
+    Software License, and the original copyright notice must remain intact. If you
+    have contributed new material to this book, you must make the material and source
+    code available for your revisions. Please make revisions and updates available
+    directly to the document maintainer, Peter Jay Salzman <peter@linux.org>. This
+    will allow for the merging of updates and provide consistent revisions to the
+    Linux community.
+
+
+    If you publish or distribute this book commercially, donations, royalties, and/or
+    printed copies are greatly appreciated by the author and the Linux Documentation
+    Project (LDP). Contributing in this way shows your support for free software and
+    the LDP. If you have questions or comments, please contact the address above.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    # # Table of Contents
+
+
+    Foreword................................................................................................................................................1
+
+
+    +   1. Authorship....................................................................................................................................................1
+
+    2. Versioning and Notes..................................................................................................................................................1
+
+    3. Acknowledgements.............................................................................................................................................1
+
+
+    Chapter 1. Introduction...............................................................................................................................2
+
+
+    +   1.1. What Is A Kernel Module?...............................................................................................................2
+
+    1.2. How Do Modules Get Into The Kernel?...............................................................................................2
+
+    1.2.1. Before We Begin................................................................................................................................3
+
+
+    Chapter 2. Hello World..................................................................................................................5
+
+
+    +   2.1. Hello World, (part 1): The Simplest Module...........................................................................5
+
+    2.1.1. Introducing printk().................................................................................................................6
+
+    2.2. Compiling Kernel Modules......................................................................................................................6
+
+    2.3. Hello World (part 2).................................................................................................................7
+
+    2.4. Hello World (part 3): The init and exit Macros...............................................................................8
+
+    2.5. Hello World (part 4): Licensing and Module Documentation...........................................................9
+
+    2.6. Passing Line Arguments to a Module...............................................................................................11
+
+    2.7. Modules Spanning Multiple Files.....................................................................................................13
+
+    2.8. Building modules for a precompiled kernel.....................................................................................15
+
+
+    Chapter 3. Preliminaries...............................................................................................17
+
+
+    +   3.1. Modules vs Programs......................................................................................................17
+
+    3.1.1. How modules begin and end...............................................................................................17
+
+    3.1.2. Functions available to modules.........................................................................................17
+
+    3.1.3. User Space as Kernel Space...............................................................................................18
+
+    3.1.4. Name Space........................................................................................................................18
+
+    3.1.5. Code space........................................................................................................................19
+
+    3.1.6. Device Drivers...............................................................................................................19
+
+
+    Chapter 4. Character Device Files..................................................................................21
+
+
+    +   4.1. Character Device Drivers.....................................................................................21
+
+    4.1.1. The file operations Structure.....................................................................................21
+
+    4.1.2. The file structure...............................................................................................................22
+
+    4.1.3. Registering A Device.......................................................................................................22
+
+    4.1.4. Unregistering A Device.....................................................................................................23
+
+    4.1.5. chardev.c................................................................................................................23
+
+    4.1.6. Writing Modules for Multiple Kernel Versions.......................................................26
+
+
+    Chapter 5. The /proc File System......................................................................28
+
+
+    +   5.1. The /proc File System.......................................................................................28
+
+    5.2. Read and Write a /proc File.....................................................................................30
+
+    5.3. Manage /proc file with standard filesystem................................................................33
+
+    5.4. Manage /proc file with seq_file...............................................................................37
+
+
+    Chapter 6. Using /proc For Input..................................................................40
+
+
+    +   6.1. TODO: Write a chapter about sysfs..................................................................40'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    # Table of Contents
+
+
+    +   Chapter 7. Talking To Device Files....................................................................41
+
+    7.1. Talking to Device Files (writes and IOCTLs)................................................................41
+
+
+    +   Chapter 8. System Calls................................................................................................50
+
+    8.1. System Calls.......................................................................................................................50
+
+
+    +   Chapter 9. Blocking Processes...........................................................................................55
+
+    9.1. Blocking Processes................................................................................................................55
+
+
+    +   Chapter 10. Replacing Printks...............................................................................................63
+
+    10.1. Replacing printk..................................................................................................................63
+
+    10.2. Flashing keyboard LEDs.......................................................................................................65
+
+
+    +   Chapter 11. Scheduling Tasks...............................................................................................68
+
+    11.1. Scheduling Tasks...............................................................................................................68
+
+
+    +   Chapter 12. Interrupt Handlers.....................................................................................72
+
+    12.1. Interrupt Handlers...............................................................................................................72
+
+    12.1.1. Interrupt Handlers.......................................................................................................72
+
+    12.1.2. Keyboards on the Intel Architecture...............................................................................72
+
+
+    +   Chapter 13. Symmetric Multi-Processing........................................................................76
+
+    13.1. Symmetrical Multi-Processing................................................................................76
+
+
+    +   Chapter 14. Common Pitfalls...............................................................................................77
+
+    14.1. Common Pitfalls................................................................................................................77
+
+
+    +   Appendix A. Changes: 2.0 To 2.2......................................................................................78
+
+    A.1. Changes between 2.4 and 2.6...............................................................................................78
+
+    A.1.1. Changes between 2.4 and 2.6..................................................................................................78
+
+
+    +   Appendix B. Where To Go From Here.........................................................................79
+
+    B.1. Where From Here?...............................................................................................................79'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Foreword
+
+
+    # 1. Authorship
+
+
+    The Linux Kernel Module Programming Guide was originally written for the 2.2 kernels
+    by Ori Pomerantz. Eventually, Ori no longer had time to maintain the document.
+    After all, the Linux kernel is a fast moving target. Peter Jay Salzman took over
+    maintenance and updated it for the 2.4 kernels. Eventually, Peter no longer had
+    time to follow developments with the 2.6 kernel, so Michael Burian became a co-maintainer
+    to update the document for the 2.6 kernels.
+
+
+    # 2. Versioning and Notes
+
+
+    The Linux kernel is a moving target. There has always been a question whether
+    the LKMPG should remove deprecated information or keep it around for historical
+    sake. Michael Burian and I decided to create a new branch of the LKMPG for each
+    new stable kernel version. So version LKMPG 2.4.x will address Linux kernel 2.4
+    and LKMPG 2.6.x will address Linux kernel 2.6. No attempt will be made to archive
+    historical information; a person wishing this information should read the appropriately
+    versioned LKMPG.
+
+
+    The source code and discussions should apply to most architectures, but I can''t
+    promise anything. One exception is Chapter 12, Interrupt Handlers, which should
+    not work on any architecture except for x86.
+
+
+    # 3. Acknowledgements
+
+
+    The following people have contributed corrections or good suggestions: Ignacio
+    Martin, David Porter, Daniele Paolo Scarpazza, Dimo Velev, Francois Audeon and
+    Horst Schirmeier.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Chapter 1. Introduction
+
+
+    # ## 1.1. What Is A Kernel Module?
+
+
+    So, you want to write a kernel module. You know C, you''ve written a few programs
+    to run as processes, and now you want to get where the real action is, where a
+    single wild pointer can wipe out your file system and a core dump needs to be
+    loaded.
+
+
+    What exactly is a kernel module? Modules are pieces of code that can be loaded
+    and unloaded into the kernel upon demand. They extend the functionality of the
+    kernel without the need to reboot the system. For example, one type of module
+    is the device driver, which allows the kernel to access hardware connected to
+    the system. Without modules, we would have build monolithic kernels and add any
+    new functionality directly into the kernel image. Being larger kernels, this has
+    the disadvantage of requiring us to rebuild and reboot the kernel every time we
+    want new functionality.
+
+
+    # ## 1.2. How Do Modules Get Into The Kernel?
+
+
+    You can see what modules are already loaded into the kernel by running `lsmod`,
+    which gets its information by reading the file `/proc/modules.
+
+
+    How these modules find their way into the kernel? When the kernel needs a feature
+    that is not resident in the kernel, the kernel daemon kmod[1] executes modprobe
+    to load the module. modprobe is passed in one of two forms:
+
+
+    +   * A module name softdog or ppp.
+
+    * A more generic identifier like char-major-10-30.
+
+
+    If modprobe is handed a generic identifier, it first looks for strings in the
+    file `/etc/modprobe.conf[2] If it finds an alias line like:
+
+
+    ```
+
+    alias char-major-10-30 softdog
+
+    ```
+
+
+    it knows the generic identifier refers to the module softdog.ko.
+
+
+    Next, modprobe looks through the file `/lib/modules/version/modules.dep`, to see
+    if other modules must be loaded before the requested module is loaded. This file
+    is created by depmod -a and contains module dependencies. For example, mdsos requires
+    the fat.ko to be already loaded into the kernel. The module has a dependency on
+    another module if the other module defines symbols (variables or functions) that
+    the requested module uses.
+
+
+    Lastly, modprobe uses insmod to load any prerequisite modules into the kernel,
+    and then the requested module. insmod directs to `/lib/modules/version/[3], the
+    standard directory for modules. insmod is intended to be fairly dumb about the
+    location of modules, whereas modprobe is aware of the location of modules, how
+    to figure out the dependencies and load the modules in the right order. So for
+    example, if you wanted to load the mdsos module, you would have to run:
+
+
+    ```
+
+    insmod /lib/modules/2.6.11/kernel/fs/fat.ko
+
+    insmod /lib/modules/2.6.11/kernel/fs/mdsos.ko
+
+    ```'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    or:
+
+
+    ```
+
+    modprobe msdos
+
+    ```
+
+
+    What we''ve seen here: **insmod** requires you to pass the full pathname and to
+    insert the modules in the right order, while **modprobe** just takes the name,
+    without any extension, and figures out all it needs to know by parsing /lib/modules/version/modules.dep.
+
+
+    Linux distros provide modprobe, insmod and depmod as a package called module–init-tools.
+    In previous versions that package was called modules. Some distro also set up
+    wrappers that allow both packages to be installed in parallel and do the right
+    thing in order to be able deal with 2.4 and 2.6 kernels. Users should not need
+    care about the details, as they''re running recent versions of those those.
+
+
+    Now you know how modules get into the kernel. There''s a bit more to the story
+    if you want to write your own modules which depend on other modules (calling this
+    ''stacking modules''). But this will have to wait for a future chapter. We''ve
+    got to cover more before addressing this high-level issue.
+
+
+    # 1.2.1. Before We Begin
+
+
+    Before we induce code, there are a few issues we need to cover. Everyone''s system
+    is different and everyone has their own groove. Getting your first "hello world"
+    program to compile and load correctly can sometimes be tricky. Rest assured, after
+    you get the initial hurdle of doing it for the first time, it will be smooth thereafter.
+
+
+    # 1.2.1.1. Modversion
+
+
+    A module compiled for one kernel won''t load if you boot a different kernel unless
+    you enable CONFIG_MODVERS in the kernel. You won''t go into module versioning
+    until this guide. Until we cover modversions, the examples in the guide may not
+    work if you''re running a kernel with modversion turned on. However, most Linux
+    distro kernels come with it turned on. If you''re having trouble loading the because
+    of versioning errors, compile a kernel with modversion turning off.
+
+
+    # 1.2.1.2. Using X
+
+
+    It is highly recommended that you type, compile and load all the examples this
+    guide discusses. It''s also highly recommended to do this from a console. You
+    should not be working on this stuff in X.
+
+
+    Modules can''t print to the screen using printf(), but they can log information
+    and warnings, which ends being printed on your screen, but only on a console.
+    If you insmod from an xterm, the information and warnings will be logged, but
+    only to your log files. You won''t see it unless you look through your log files.
+    To have immediate access to this information, do all your work from the console.
+
+
+    # 1.2.1.3. Compiling Issues and Kernel Version
+
+
+    Often, Linux distros will distribute source that has been patched in various non–standard
+    ways, which may cause trouble.
+
+
+    A more common problem is that some Linux distro distribute incomplete kernel headers.
+    You''ll need to compile your code using various header files from the Linux kernel.
+    Murphy''s law states that the headers that are missing are exactly the ones you''ll
+    need for your module work.
+
+
+    Chapter 1. Introduction
+
+
+    3'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    To avoid these two problems, I highly recommend that you download, compile and
+    boot into a fresh, stock Linux kernel which can be downloaded from any of the
+    Linux kernel mirror sites. See the Linux Kernel HOWTO for more details.
+
+
+    Ironically, this can also cause a problem. By default, gcc on your system may
+    look for the kernel headers in their default location rather than where you installed
+    the new copy of the kernel (usually in `/usr/src/`. This can be fixed by using
+    gcc''s -I switch.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Chapter 2. Hello World\n\n# 2.1. Hello, World (part 1): The Simplest Module\n\
+    \nWhen the first caveman chiseled the first program on the walls of the first\
+    \ cave computer, it began with a program to paint the string 'Hello, world' in\
+    \ Antelope pictures. Roman programming textbooks began with the 'Salut, Mundi'\
+    \ program. I don't know what people who break with this tradition, but I think\
+    \ it's safer not to find out. We'll start with a series of hello world programs\
+    \ that demonstrate the different aspects of the basics of writing a kernel module.\n\
+    \nHere's the simplest possible. Don't compile it yet; we'll cover module compilation\
+    \ in the next section.\n\nExample 2–1. hello-1c\n\n```\n/*\n * hello-l.c - The\
+    \ simplest kernel module.\n */\n#include <linux/module.h>    /* Needed by all\
+    \ modules */\n#include <linux/kernel.h>    /* Needed for KERN_INFO */\n\nint init_module(void)\n\
+    {\n    printk(KERN_INFO \"Hello world 1.\\n\");\n    /*\n     * A non 0 return\
+    \ means init_module failed; module can't be loaded.\n     */\n    return 0;\n\
+    }\n\nvoid cleanup_module(void)\n{\n    printk(KERN_INFO \"Goodbye world 1.\\n\"\
+    );\n}\n```\n\nKernel modules must have at least two functions: a \"start\" (initialization)\
+    \ function called init_module() and an \"end\" (cleanup) function called cleanup_module()\
+    \ which is called when the module is inserted into the kernel, and just before\
+    \ it is removed. Actually, things have changed starting with kernel 2.3.1. You\
+    \ can now use whatever name like for the start and end functions of a module,\
+    \ and you'll learn how to do it using Section 2.3, and cleanup_module() for their\
+    \ start and end functions.\n\nTypically, init_module() either registers a handler\
+    \ for something with the kernel, or it replaces one of the kernel functions with\
+    \ its own code (usually to do something and then call the original function).\
+    \ The cleanup_module() is supposed to undo whatever init_module() did, so the\
+    \ module can be unloaded safely.\n\nLastly, every kernel module needs to include\
+    \ linux/module.h. We needed to include linux/kernel.h only for the macro expansion\
+    \ for the printk() log level, KERN_ALERT, which you'll learn about in Section\
+    \ 2.1.1."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n# ## 2.1.1. Introducing printk()\n\
+    \nDespite what you might think, printk() was not meant to communicate information\
+    \ to the user, though we used it for exactly this purpose in hello! It happens\
+    \ to be a logging mechanism for the kernel, and is used to log information or\
+    \ warnings. Therefore, printk() statement comes with a priority, which is the\
+    \ <1> and KERN_ALERT you see. There are 8 priorities and the kernel has many for\
+    \ them, you don't have to use cryptic numbers, and you can view them in linux/kernel.h.\
+    \ If you don't use a priority level, the default priority, DEFAULT_MESSAGE_LOGLEVEL,\
+    \ will be used.\n\nTake time to read through the priority macros. The header file\
+    \ also describes what each priority means. In practise, always use the number,\
+    \ like <4>, like KERN_WARNING.\n\nIf the priority is less than const console_loglevel,\
+    \ the message is printed to your current terminal. Through both syslog and klog,\
+    \ the message will also get appended to /var/log/messages, whether it gets printed\
+    \ to the console or not. We use a high priority, KERN_ALERT, to make sure the\
+    \ printk() messages get printed to your console not just logged to your log. When\
+    \ you write your modules, you'll want to use priorities that are meaningful for\
+    \ the situation at hand.\n\n# ## 2.2. Compiling Kernel Modules\n\nKernel modules\
+    \ need to be compiled differently from regular users apps. Former kernel versions\
+    \ require us to make these settings, which are mostly stored in Makefiles. Although\
+    \ hierarchically organized, many redundant assignments accumulated in sublevel\
+    \ Makefiles make them large and difficult to maintain. Unfortunately, there is\
+    \ a new way of doing these things, kbuild, and the build process for external\
+    \ loadable modules is now fully integrated into the standard kernel build mechanism.\
+    \ Learn more on how to compile modules which are not part of the official kernel\
+    \ (as all the examples you'll find in this guide), see linux/Documentation/kbuild/modules.txt.\n\
+    \nSo, let's look at a Makefile for compiling a module named hello-1.c:\n\n###\
+    \ Example 2–2. Makefile for a basic kernel module\n\n```\nobj-m += hello-l.o\n\
+    \nall:\n    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules\n\n\
+    clean:\n    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n```\n\
+    \nFrom a technical point of view the first line is really necessary, the \"all\"\
+    \ and \"clean\" targets are added for pure convenience.\n\nNow you can compile\
+    \ the module by issuing the command make . You should obtain an output which resembles\
+    \ the following:\n\n```\nhostname:~/lkmp-examples/02-HelloWorld# make\nmake -C\
+    \ /lib/modules/2.6.11/build M=/root/lkmp-examples/02-HelloWorld\n[1]: Entering\
+    \ directory /usr/src/linux-2.6.11\nCC [M] /root/lkmp-examples/02-HelloWorld/hello-1.o\n\
+    Building modules, stage 2.\nMODPOST\n```\n\nChapter 2. Hello World"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    ```
+
+    CC /root/kmpkg-examples/02-HelloWorld/hello-1.mod.o
+
+    LD [M] /root/kmpkg-examples/02-HelloWorld/hello-1.ko
+
+    make[1]: Leaving directory ''/usr/src/linux-2.6.11''
+
+    hostname:/root/kmpkg-examples/02-HelloWorld#
+
+    ```
+
+
+    Note that kernel 2 introduces a new naming convention: kernel modules have a .ko
+    extension (in place of the .o extension) which distinguishes them from conventional
+    object files. The reason for this is that they can contain an additional .modinfo
+    section where additional information about the module is wrote. We''ll keep on
+    to what additional information is good for.
+
+
+    Use modinfo-* to see what kind of information it is.
+
+
+    ```
+
+    hostname:/kmpkg-examples/02-HelloWorld# modinfo hello-1.ko
+
+    filename: hello-1.ko
+
+    vermagic: 2.6.11 preempt PENTIUMII 4STACKS gcc-3.3
+
+    depends:
+
+    ```
+
+
+    Nothing spectacular, so that. Changes we''re using modinfo on one of our later
+    examples, hello-5.ko.
+
+
+    ```
+
+    hostname:/kmpkg-examples/02-HelloWorld# modinfo hello-5.ko
+
+    filename: hello-5.ko
+
+    license: GPL
+
+    author: Peter Jay Salomon
+
+    vermagic: 2.6.11 preempt PENTIUMII 4STACKS gcc-3.3
+
+    depends:
+
+    parm: myArray:A character string (array of int)
+
+    parm: mystring:A character (char)
+
+    parm: mylong:A long integer (long)
+
+    parm: myint:An integer (int)
+
+    parm: myshort:A short (short)
+
+    hostname:/kmpkg-examples/02-HelloWorld#
+
+    ```
+
+
+    Lot''s useful information for kernel to see. An author here for bugreports, license
+    information, even a short description of the parameters it accepts.
+
+
+    Additional details for Makefiles for kernel modules are available in linux/Documentation/kbuild/makefiles.txt.
+    Be sure to read that and the related files starting to make Makefiles. You''ll
+    probably see lots of work.
+
+
+    Now it is time to insert your freshly-compiled module into the kernel with insmod
+    /hello-1.ko (ignore anything you see about we tainted kernels; we''ll cover that
+    shortly).
+
+
+    All modules loaded into the kernel are in /proc/modules. Go ahead and check to
+    see that your module is really part of the kernel. Congratulations, you are now
+    the author of kernel code! When the novelty wears, remove your module from the
+    kernel using rmmod hello-1. Take a look at /var/log/messages to see that it got
+    logged to your system log.
+
+
+    Here''s another exercise for the reader. See what about the return statement in
+    init_module()? Change the value to something negative, recompile and load the
+    module again. What happens?
+
+
+    # 2.3. Hello World (part 2)
+
+
+    As of Linux 2.4, you can rename the init and cleanup functions of your module;
+    they no longer have to be called init_module() and cleanup_module() respectively.
+    This is done with the module_init()
+
+
+    Chapter 2. Hello World'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nand __module_exit() macros.\
+    \ These macros are defined in linux/init.h. The only caveat is that init and cleanup\
+    \ functions must be defined before calling the macros, otherwise you'll get compilation\
+    \ errors.\nHere's an example of this technique:\n\n# Example 2-3. hello-2.c\n\n\
+    ```\n/*\n* hello-2.c Demonstrating the module_init() and module_exit() macros.\n\
+    * This is preferred over using init_module() and cleanup_module().\n */\n#include\
+    \ <linux/module.h>    /* Needed by all modules */\n#include <linux/kernel.h> \
+    \   /* Needed for KERN_INFO */\n#include <linux/init.h>       /* Needed for the\
+    \ macros */\nstatic int __init_hello_2_init(void)\n{\n    printk(KERN_INFO \"\
+    Hello, world 2\\n\");\n    return 0;\n}\nstatic void __exit_hello_2_exit(void)\n\
+    {\n    printk(KERN_INFO \"Goodbye, world 2\\n\");\n}\n```\n\nmodule_init(hello_2_init);\n\
+    module_exit(hello_2_exit);\nSo now we have two kernel modules under our belt.\
+    \ Adding another module is as simple as this:\n\n# Example 2-4. Makefile for our\
+    \ modules\n\n```\nobj-m += hello-1.0\nobj-m += hello-2.0\n```\n\n```\nall:\n\t\
+    -make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n\nclean:\n\t-make\
+    \ -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n```\n\nNow have a look\
+    \ at linux/drivers/char/Makefile for a real world example. As you can see, some\
+    \ things get hardened into the kernel (obj-y) but there are also obj-m modules.\
+    \ Those with familiar scripts will easily be able to spot them. For the not, obj-CONFIG_FOO\
+    \ shows you everywhere expand to obj-y or obj-m, depending on whether CONFIG_FOO\
+    \ variable has been set to y or m. When we are at it, these exactly the kind of\
+    \ variables that you have set in the linux/.config file, the last time you use\
+    \ menuconfig or something like that.\n\n# 2.4 Hello World (part 3): __init and\
+    \ __exit Macros\n\nThis demonstrates a feature of kernel 2.2 and later. Notice\
+    \ the change in the definitions of the init and cleanup functions. The __init\
+    \ macro allows the function to be discarded and its memory freed once the init\
+    \ function finishes for built-in drivers, but not loadable modules. If you think\
+    \ about when the init function is invoked, this makes perfect sense.\n\nChapter\
+    \ 2. Hello World"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nThere is also __initdata which\
+    \ works similarly to __init for init variables rather than functions.\n\nThe __exit\
+    \ macro causes the omission of the function when the module is built into the\
+    \ kernel, and like __exit, has no effect for loadable modules. Again, if you consider\
+    \ the cleanup function runs, this makes complete sense: built-in drivers do not\
+    \ need a cleanup function, while loadable modules.\n\nThese macros are defined\
+    \ in linux/init.h and serve to free up kernel memory. When you boot your kernel\
+    \ and see something like Freeing unused kernel memory: 236k freed, this is precisely\
+    \ what is freeing.\n\n# Example 2-5. hello-3c\n\n```\n/*\n* hello-3.c - Illustrating\
+    \ the __init, __initdata and __exit macros.\n */\n#include <linux/module.h>  \
+    \  /* Needed by all modules */\n#include <linux/kernel.h>   /* Needed for KERN_INFO\
+    \ */\n#include <linux/init.h>      /* Needed for the macros */\n\nstatic int hello_3_data\
+    \ __initdata = 3;\nstatic int __init hello_3_init(void)\n{\n    printk(KERN_INFO,\
+    \ \"Hello, world %%d\\n\", hello_3_data);\n    return 0;\n}\n\nstatic void __exit\
+    \ hello_3_exit(void)\n{\n    printk(KERN_INFO, \"Goodbye, world 3\\n\");\n}\n\
+    ```\n\n# 2.5. Hello World (part 4): Licensing and Module Documentation\n\nIf you're\
+    \ running kernel 2.4 or later, you might have noticed something like this when\
+    \ you loaded proprietary modules:\n\n```\n# insmod xxxxx.o\nWarning: loading xxxxx.ko\
+    \ will taint the kernel: no license\nSee http://www.tux.org/linux/lml/#export-tainted\
+    \ for information about tainted modules\nModule xxxxx loaded, with warnings\n\
+    ```\n\nIn kernel 2.4 and later, a mechanism was devised to identify code for the\
+    \ GPL (and friends) so people can be warned that the code is not open-source.\
+    \ This is accomplished by the MODULE_LICENSE () macro which is demonstrated in\
+    \ the next piece of code. By setting the license to GPL, you can keep the warning\
+    \ from being printed. This license mechanism is defined and documented in linux/module.h:\n\
+    \n+   * The following license idents are currently accepted as indicating free\n\
+    \nChapter 2. Hello World"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n+   * software modules\n* \"\
+    GPL\" [GNU Public License v2 or later]\n* \"GPL v2\" [GNU Public License v2]\n\
+    * \"GPL and additional rights\" [GNU Public License v2 rights and more]\n* \"\
+    Dual BSD/GPL\" [GNU Public License v2 or BSD License choice]\n* \"Dual MIT/GPL\"\
+    \ [GNU Public License v2 or MIT license choice]\n* \"Dual MPL/GPL\" [GNU Public\
+    \ License v2 or Mozilla License choice]\n\n* The following other identifies are\
+    \ available\n\n+   * \"Proprietary\" [Non free products]\n* There are dual licensed\
+    \ components, but when running with Linux it is the GPL that is relevant so this\
+    \ is a non issue. Similarly LGPL linked with GPL is a GPL combined work.\n\n+\
+    \   * This exists for several reasons\n* 1. So modinfo can show license info for\
+    \ users wanting to verify their setup free\n* 2. So community can ignore bug reports\
+    \ including proprietary modules\n* 3. So vendors may likewise behave on their\
+    \ own policies\n\nSimilarly, MODULE_DESCRIPTION() is used to describe what the\
+    \ module does, MODULE_AUTHOR() declares the module's author, and MODULE_SUPPORTED_DEVICE()\
+    \ declares what types of devices the module supports.\n\nThese macros are all\
+    \ defined in linux/module.h and are by the kernel itself. They're simple for documentation\
+    \ and can be viewed by a tool like admire. As an exercise, to read reader, try\
+    \ and see how these macros use linux/drivers to document their modules.\n\nI'd\
+    \ recommend to use grep -in MODULE_AUTHOR * in /usr/src/linux-2.6.x/. People unfamiliar\
+    \ with command line tools will probably like some web base solution, search for\
+    \ sites that kernel trees got indexed with LXR (or set it up on your local machine).\n\
+    \nUsers of traditional editors, like emacs or vi will also find tag files useful.\
+    \ They can be generated by make tags or tags in /usr/src/linux-2.6.x/. Once you've\
+    \ got a tagfile in your kerneltree you can put the cursor on function call and\
+    \ use some key combination to directly jump to the definition function.\n\n# Example\
+    \ 2-6. hello-4.c\n\n```\n/*\n* hello-4.c - Demonstrates module documentation.\n\
+    \ */\n#include <linux/module.h> /* Needed for all modules *\n#include <linux/kernel.h>\
+    \ /* Needed for KERN_INFO *\n#include <linux/init.h> /* Needed for the macros\
+    \ *\n#define DRIVER_AUTHOR \"Peter Jayman <p@dirac.org\"\n#define DRIVER_DESC\
+    \ \"A sample driver\"\n{\nstatic int __init_hello_4(void)\n```\n\n# Chapter 2.\
+    \ Hello World"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\nprintk(KERN_INFO \"Hello, world 4\\n\");\nreturn 0;\n}\nstatic void _exit\
+    \ cleanup_hello_4(void)\n{\n    printk(KERN_INFO \"Goodbye, world 4\\n\");\n}\n\
+    module_init(init_hello_4);\nmodule_exit(cleanup_hello_4);\n```\n\n```\n/*\n *\
+    \ You can use strings, like this:\n /\n * Get rid of taint message by declaring\
+    \ code as GPL\nMODULE_LICENSE(\"GPL\");\n\n/*\n * Or definitions, like this:\n\
+    \ */\nMODULE_AUTHOR(DRIVER_AUTH); /* Who wrote this module? */\nMODULE_DESCRIPTION(DRIVER_DESC);\
+    \ /* What does this module do? */\n\n/*\n * This module uses /dev/testdevice.\
+    \ The MODULE_SUPPORTED_DEVICE might\n * be used in the future to help automatic\
+    \ configuration of modules, but is\n * currently unused other than for documentation\
+    \ purposes.\n */\nMODULE_SUPPORT_DEVICE(\"testdevice\");\n```\n\n# 2.6. Passing\
+    \ Command Line Arguments to a Module\n\nModules can take command line arguments,\
+    \ but not with the argc/argv you might be used to.\n\nTo allow arguments to be\
+    \ passed to your module, declare the variables that will take the values of the\
+    \ command line arguments as global and use the module_param() macro (defined in\
+    \ linux/moduleparam.h) to set the mechanism. At runtime, insmod will fill the\
+    \ variables with any command line arguments that are given, like /insmod mymodule.ko\
+    \ variable=5. The declarations and macros should be placed at the beginning of\
+    \ the module for clarity. The example code should clear up my somewhat loose explanation.\n\
+    \nThe module_param() macro takes 3 arguments: the name of the variable, its type\
+    \ and permissions for the corresponding file in sysfs. Integer types can be signaled\
+    \ as signed or unsigned. If you'd like to use arrays of integers or strings use\
+    \ module_param_array() and module_param_string().\n\n```\nint myint = 3;\nmodule_param(myint,\
+    \ int, 0);\n```\n\nArrays are supported, but things are a bit different now than\
+    \ they were in the 2.4 days. To keep track of the number of parameters you need\
+    \ to pass a pointer to a count variable as third parameter. At your option, you\
+    \ could also ignore the count and pass NULL instead. We show both possibilities\
+    \ here:"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# The Kernel Module Programming Guide\n\n```\nint myintarray[2];\nmodule_param_array(myintarray,\
+    \ int, NULL, 0); /* not interested in count *\nint myshortarray[4];\n count;\n\
+    module_param_array(myshortarray, short, , 0); /* put count into \"count\" variable\
+    \ */\n```\n\nA good use for this is to have the module's default values set, like\
+    \ an port or IO address. If the variables contain the default values, perform\
+    \ autodetection (elsewhere). Otherwise, keep the current value. This will be clear\
+    \ later on.\n\nLastly, there's a macro function, MODULE_PARM_DESC(), which is\
+    \ used to document arguments about the module. It can take two variables: a variable\
+    \ name and a free string describing that variable.\n\n# Example 2-7. hello-5.c\n\
+    \n```\n/*\n * hello-5.c - Demonstrates command line argument passing to a module.\n\
+    \ */\n#include <linux/module.h>\n#include <linux/moduleparam.h>\n#include <linux/kernel.h>\n\
+    #include <linux/init.h>\n#include <linux/stat.h>\n\nMODULE_LICENSE(\"GPL\")\n\
+    MODULE_AUTHOR(\"Peter Jay Salzman\");\n\nstatic int myshort = 1;\nstatic int myint\
+    \ = 420;\nstatic long mylong = 9999;\nstatic char *mystring = \"blah\"\nstatic\
+    \ int myintArray[2] = { -1, -1 };\nstatic int arr_argc = 0;\n\n/*\n * module_param(foo,\
+    \ int, 0000)\n * The first param is the parameters name\n * The second param is\
+    \ it's data type\n * The final argument is the permissions bits,\n * for exposing\
+    \ parameters in sysfs (if non-zero) at a later stage.\n */\nmodule_param(myshort,\
+    \ short, S_IRUSG | S_IWUSG | S_IRGRP | S_IWGRP);\nMODULE_PARM_DESC(myshort, \"\
+    A short integer\");\nmodule_param(myint, int, S_IRUSG | S_IRGRP | S_IROTH);\n\
+    MODULE_PARM_DESC(myint, \"An integer\");\nmodule_param(mylong, long, S_IRUSG);\n\
+    MODULE_PARM_DESC(mylong, \"A long integer\");\nmodule_param(mystring, char*, 0000);\n\
+    MODULE_PARM_DESC(mystring, \"A character string\");\n\n/*\n * module_param_array(name,\
+    \ type, num,)\n * The first param is the parameter's (in case the array's) name\n\
+    \ * The second param is the data type of the elements of the array\n * The third\
+    \ argument is a pointer to the variable that will store the number\n * of elements\
+    \ of the array initialized by the user at module loading time\n * The fourth argument\
+    \ is the permission Bits\n```\n\n# Chapter 2. Hello World"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# The Linux Kernel Programming Guide\n\n```\n/*\nmodule_param_array(myintArray,\
+    \ int, &argc, 0000);\nMODULE_PARM_DESC(myintArray, \"An array of integers\");*/\n\
+    static int __init hello_5_init(void)\n{\n    int i;\n    printk(KERN_INFO, \"\
+    Hello, world 5\\n===============\\n\\n    printk(KERN_INFO, \"myshort is a short\
+    \ integer: %hd\\n\", myshort);\n    printk(KERN_INFO, \"myint is an integer: %d\\\
+    n\", myint);\n    printk(KERN_INFO, \"mylong is a long integer: %ld\\n\", mylong);\n\
+    \    printk(KERN_INFO, \"mystring is a string: %s\\n\", mystring);\n    for (i\
+    \ = 0; i < (sizeof(int)); i++)\n    {\n        printk(KERN_INFO, \"myintArray[%d]\
+    \ = %d\\n\", i, myintArray[i]);\n    }\n    printk(KERN_INFO, \"got %d arguments\
+    \ for myintArray.\\n\", argc);\n    return 0;\n}\n\nstatic void __exit hello_5_exit(void)\n\
+    {\n    printk(KERN_INFO, \"Goodbye, world 5\\n\");\n}\n```\n\nmodule_init(hello_5_init);\n\
+    module_exit(hello_5_exit);\n\nI would recommend playing around this code:\n\n\
+    ```\nsatan# insmod hello-5.ko mystring=\"bebop\" mybyte=255 myintArray=-1\nmybyte\
+    \ an 8 bit integer: 255\nmyshort is a short integer: 1\nmyint is an integer: 20\n\
+    mylong is a long integer: 9999\nmystring is a string bebek\nmyintArray is -1 and\
+    \ 420\n\nsatan# rmmod hello-5\nGoodbye, world 5\n\nsatan# insmod hello-5.ko mystring=\"\
+    supercalifragilisticexpialididocious\" \\\n> mybyte=256 myintArray=-1,1\nmybyte\
+    \ is an 8 bit integer: 0\nmyshort is a short integer: 1\nmyint is an integer:\
+    \ 20\nmylong is a long integer: 9999\nmystring is a string: supercalifragilisticexpialidocious\n\
+    myintArray is -1 and -1\n\nsatan# rmmod hello-5\nGoodbye, world 5\n\nsatan# insmod\
+    \ hello-5.ko mylong=hello\nhello-5.o:o: invalid argument syntax for mylong: 'h'\n\
+    ```\n\n# 2.7 Modules Spanning Multiple Files\n\nSometimes it makes sense to divide\
+    \ a kernel module between several source files."
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nHere's an example of such a\
+    \ kernel module.\n\n# Example 2–8. start.c\n\n```\n/*\n * start.c - Illustration\
+    \ of multi filed modules\n */\n\n#include <linux/kernel.h>    /* We're doing kernel\
+    \ work */\n#include <linux/module.h>     /* Specifically, a module */\n\nint init_module(void)\n\
+    {\n    printk(KERN_INFO \"Hello, world - this is the kernel speaking\\n\");\n\
+    \    return 0;\n}\n\n```\n\nThe next file:\n\n# Example 2–9. stop.c\n\n```\n/*\n\
+    \ * stop.c - Illustration of multi filed modules\n */\n\n#include <linux/kernel.h>\
+    \    /* We're doing kernel work */\n#include <linux/module.h>     /* Specifically,\
+    \ a module */\n\nvoid cleanup_module()\n{\n    printk(KERN_INFO \"Short is the\
+    \ life of a kernel module\\n\");\n}\n\n```\n\nAnd finally, the make:\n\n# Example\
+    \ 2–10. Makefile\n\n```\nobj-m += hello-1.0\nobj-m += hello-2.0\nobj-m += hello-3.0\n\
+    obj-m += hello-4.0\nobj-m += hello-5.0\nobj-m += startstop.o\nstartstop-objs :=\
+    \ start.o stop.o\n\nall:\ntmake -C /lib/modules/$(shell uname -r)/build M=$(PWD)\
+    \ modules\n\nclean:\ntmake -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n\
+    \n```\n\nThis is the complete Makefile for all the examples we've seen so far.\
+    \ The first lines are nothing special, but for the last example we will need two\
+    \ lines. First we invent an object name for our combined module, second we tell\
+    \ make what object files are part of that.\n\n# Chapter 2. Hello World"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    # 2.8. Building modules for a precompiled kernel
+
+
+    Obviously, we strongly suggest you to recompile your kernel, so that you can enable
+    a number of useful debugging features, such as force unloading (MODULE_FORCE_UNLOAD):
+    when this option is enabled, you can force the kernel to unload a module when
+    it believes it is unsafe, via **rmmod -f module**. This option can save you a
+    lot of time and many reboots in the development of a module.
+
+
+    Nevertheless, there are a number of cases in which you might want to load your
+    module into a precompiled running kernel, as the ones shipped with common Linux
+    distributions, or a kernel you have compiled in the past. In certain circumstances
+    you could compile and insert a module into a running kernel which you are not
+    allowed to recompile, or on a machine that you need to reboot. If you can''t think
+    of a case that will force you to use modules for a precompiled kernel you might
+    want to skip this and treat the rest of this thing as a big bother.
+
+
+    Now, if you install a kernel source tree, use it to compile your kernel module
+    and you try to insert your module into the kernel, in most cases you would obtain
+    an error as:
+
+
+    ```
+
+    insmod: error inserting ''poet_atkm.ko'': -1 Invalid module format
+
+    ```
+
+
+    Less exceptional is equal to /var/log/messages:
+
+
+    ```
+
+    Jun 22:07:54 localhost kernel: poet_atkm: version magic ''2.6.5-1.358custom 686
+
+    REGPARM 4KSTACK gcc-3'' should be ''2.6.5-1.358 686 REGPARM 4KSTACK gcc-3''
+
+    ```
+
+
+    In other words, your kernel refuses to load because your module version strings
+    (more precisely, version strings) do not match. Starting with **vermagic**: Version
+    data is inserted into your module object in the form of a static string, when
+    linked against the **init/vermagic.c** file. To inspect version magic and other
+    strings in a given module, issue the **modinfo module.ko** command:
+
+
+    ```
+
+    [root@cmmons]# modinfo hello-ko
+
+    license:
+
+    GPL
+
+    author:\Peter Jay Salzman <p@dirac.org>
+
+    description:
+
+    A sample driver
+
+    vermagic:
+
+    2.6.5-1.358 686 REGPARM 4KSTACK
+
+    depends:
+
+    ```
+
+
+    To overcome this problem we could use the **--vermagic** option, which is potentially
+    unsafe, and unquestionably unacceptable in production modules. Consequently, we
+    want to compile our module in an environment which was identical to the one in
+    which your precompiled kernel was built. How to do this, is the remainder of this
+    chapter.
+
+
+    First of all, make sure a kernel source tree is available, having exactly the
+    version as your current kernel. Then, find the configuration file which was used
+    to compile your precompiled kernel. Usually, this is available in your current
+    **/boot** directory, make a link like **config-2.6.x**. You might just want to
+    copy it to your kernel source tree: **cp /boot/config-uname -r /usr/src/-uname
+    -rf/.
+
+
+    Focus your attention on this error message: a closer look at the version strings
+    suggests that, even with two configuration files which are the same, a slight
+    difference in the version could be possible, and it is sufficient to prevent insertion
+    of the module into the kernel. That difference, namely the **custom** string which
+    appears in the module''s version magic and not in the kernel''s, is due to
+
+
+    # Chapter 2. Hello World'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    modification with respect to the original, in the makefile that some distribution
+    include. Then, examine your
+
+    /usr/src/linux/Makefile, and make sure that the specified version information
+    matches exactly the
+
+    one used for your current kernel. For example, makefile could start as follows:
+
+
+    ```
+
+    VERSION = 2
+
+    PATCHLEVEL = 6
+
+    SUBLEVEL = 5
+
+    EXTRAVERSION = -1.358custom
+
+    ```
+
+
+    In this case, you need to restore the value of symbol EXTRAVERSION to -1.358.
+    We suggest to keep a
+
+    backup copy of the makefile used to compile your kernel available in
+
+    /lib/modules/2.6.5-1.358/build. A simple cp /lib/modules/~uname -r /build/Makefile
+
+    /usr/src/linux-uname -r should suffice. Additionally, if you already started a
+    kernel with the
+
+    previous (wrong) Makefile, you should also run `make`, or directly modify symbol
+    UTS_RELEASE in file
+
+    /usr/src/linux-2.6.x/include/linux/version.h according to contents of file
+
+    /lib/modules/2.6.x/build/include/linux/version.h, or overwrite the latter with
+    the first.
+
+
+    Now, please make run to update configuration and version headers objects:
+
+
+    ```
+
+    [root@pcsensrv linux-2.6.x:#]# make
+
+    CHK include/linux/version.h
+
+    UFD include/linux/version.h
+
+    SYMLINK include/asm - asm-1386
+
+    SPLIT include/linux/autoconf.h -> include/config/*
+
+    HOSTCC scripts/basic/fix.mp
+
+    HOSTCC scripts/basic/split-include
+
+    HOSTCC scripts/basic/docproc
+
+    HOSTCC scripts/cmakehash
+
+    HOSTCC scripts/kallsyms
+
+    CC scripts/empty.o
+
+    ```
+
+
+    If you do not decide to actually compile the kernel, you can interrupt the process
+    (CTRL-C) just after
+
+    t SPLIT line, because at that time, the files you need will be ready. You can
+    now turn back to the
+
+    directory of module and compile it: it will be exactly accounting your current
+    kernel settings, and it
+
+    will load into without any errors.
+
+
+    Chapter 2. Hello World'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# # Chapter 3. Preliminaries\n\n# ## 3.1. Modules vs Programs\n\n# ### 3.1.1.\
+    \ How modules begin and end\n\nA program usually begins with a main() function,\
+    \ executes a bunch of instructions and terminates upon completion of these instructions.\
+    \ Kernel modules work a bit differently. A module always begins with either the\
+    \ init_module function or the function you specify with module_init call. This\
+    \ is the entry function for modules; it tells the kernel functionality the module\
+    \ provides and sets up the kernel to run the module's functions when they're needed.\
+    \ If it does this, entry function returns and the module does nothing until the\
+    \ kernel wants to do something with the code that the module provides.\n\nAll\
+    \ modules end by calling cleanup_module or the function you specify with the module_exit\
+    \ call. This is the exit function for modules; it undoes whatever entry function\
+    \ did. It unregisters the functionality that the entry registered.\n\nEvery module\
+    \ must have an entry function and an exit function. There is more than one way\
+    \ to specify entry and exit functions, I'll try my best to use the 'entry function'\
+    \ and 'exit function', but if I slip and simply refer to them as init_module and\
+    \ cleanup_module, I think you'll know what I mean.\n\n# ## 3.1.2. Functions available\
+    \ to modules\n\nProgrammers use functions they don't define all them. A prime\
+    \ example is printf(). You use these library functions which are provided by the\
+    \ standard C library, libc. The definitions for these functions don't actually\
+    \ enter your program until the linking stage, which ensures that the code (for\
+    \ printf()) is available), and fixes the call instruction to point to that.\n\n\
+    Kernel modules are here too. In the hello world example, you might have noticed\
+    \ that we used a function, print() but didn't include a standard I/O library.\
+    \ Because modules are object files whose symbols get resolved insmoding. The definition\
+    \ for the symbols comes from the kernel itself; the only functions you can use\
+    \ are the ones provided by the kernel. If you're curious about what symbols are\
+    \ exported by your kernel, take a look at /proc/kallsyms.\n\nOne to keep in mind\
+    \ is the difference between library functions and system calls. Library functions\
+    \ are higher level, run in user space and provide a more convenient interface\
+    \ for the programmer to the functions that do the real work—system calls Calls\
+    \ run in kernel mode on the user's behalf and are provided by the kernel itself.\
+    \ The library function printf() may look like a very general printing function,\
+    \ but it really formats the data into strings and writes the string data using\
+    \ the low-level system call write(), which then sends the data to standard output.\n\
+    \nWould you like to see what system calls are by printf()? It's easy! Compile\
+    \ the following program:\n\n```\n#include <stdio.h>\nint main(void) {\n    printf(\"\
+    hello\"); return 0;\n}\n```\n\nwith gcc -Wall -o hello hello.c Run the executable\
+    \ with strace /hello. Are you impressed? Every line corresponds to a system call.\
+    \ trace[4] is a handy program that gives you details about what system calls a"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    program making, which call is made, what arguments are what it returns. It''s
+    an invaluable tool for figuring out things like files a program is trying to access.
+    Towards the end, you''ll see a line looks like write(1, "hello", 5). There it
+    the face before the printf(). You may not be familiar with it, since most people
+    use library functions for free (like open, fpeen, fclose). It is
+
+
+    that''s the case, making at 2 write. The 2nd section is devoted to system calls
+    (like kill()) and read().). The 3rd section is devoted to library calls, which
+    you would probably be more familiar with (like cosh() and random()).
+
+
+    You can write modules to replace the kernel''s system calls, which we will shortly.
+    Crackers make after use of this for backdoors or trojans, but you can write your
+    own modules to do more benign things, like the kernel tee, that ticks! everyone
+    tries to delete a file on your system.
+
+
+    # 3.1.3. User Space and Kernel Space
+
+
+    A kernel is all access to resources, whether the resource in question happens
+    to be a video card, a hard drive or even memory. Programs often compete for the
+    same resource. As I just saved this, updatedb updating the locate database. My
+    vision and updatedb are both using the hard drive connectivity. The kernel needs
+    to keep things orderly, and not give users access to whatever they feel like.
+    This, CPU can run in different modes. Each mode has a different level of freedom
+    to what you want on the system. The Intel i086 architecture has 4 of these modes,
+    which are called rings. Unix uses two rings; the highest (ring 0, also known as
+    ''supervisor mode'' where everything is allowed to happen) and the lowest, which
+    is called ''user mode''.
+
+
+    Recall the discussion about library functions vs system calls. Typically, you
+    use a library function in user mode. The library function calls one or more system
+    calls, and these system calls execute on the library function''s behavior, but
+    do so in supervisor mode since they are part of the kernel itself. Once the system
+    call completes its task, return and execution gets transferred back to user mode.
+
+
+    # 3.1.4. Name Space
+
+
+    When you write a small C program, you use variables which are convenient and make
+    sense to the reader. On the other hand, your writing routines will be part of
+    a bigger problem, global variables you have part of other people'' global variables;
+    some of the variable names clash. When program has lots of global variables not
+    meaningful enough to be distinguished, you get namespace pollution. In large projects,
+    effort must be made to remember reserved names, and to find ways to develop a
+    scheme for unique variable names and symbols.
+
+
+    When writing kernel code, the smallest module will be linked to the entire kernel,
+    so this is definitely an issue. The The best way to deal with this is to declare
+    your variables as static and use a well-defined prefix for them. By convention,
+    all prefixes are lowercase. If you don''t want to declare everything as static,
+    another option is to declare a symbol table and register it with a kernel. We''ll
+    get to this later.
+
+
+    The file /proc/kallsyms holds all the symbols that the kernel knows about and
+    are therefore accessible to your modules since they share the kernel''s codespace.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n# 3.1.5. Code space\n\nMemory\
+    \ management is a very complicated subject—the majority of O'Reilly's Understanding\
+    \ The Linux Kernel is just on memory management! We're not setting out to be experts\
+    \ on memory management, but we need to know a couple of factors to even begin\
+    \ worrying about writing modules.\n\nIf you have thought about what a segfault\
+    \ really means, you might be surprised by how pointers actually point to memory\
+    \ locations. Not real ones, anyway. When a process is created, the kernel sets\
+    \ aside portion of physical memory and hands it to the process for its executing\
+    \ code, variables, stack, heap and other things a computer scientist would know\
+    \ about[5]. This memory begins with 0x0000000 and extends up to whatever it needs\
+    \ to be. 0xffff978 would be accessing a different location in real physical memory!\
+    \ The processes would be accessing an index named 0xffff978 which points to some\
+    \ kind of offset into the region of memory set aside that particular process.\
+    \ For the most part, a process like our Hello, World program can access the space\
+    \ of another process, although there are ways we'll talk about later.\n\nThe kernel\
+    \ has its own space of memory. Since a module can be dynamically inserted and\
+    \ removed from the kernel (as a semi-autonomous object), the kernel's codespace\
+    \ differs from having its own. Therefore, if you modify yourself, the kernel faults.\
+    \ And if you start writing data because of an off-by-one error, you're trampling\
+    \ on kernel data (or code). This is even worse than it sounds, so your best try\
+    \ is to be careful.\n\nI would like to point out that the above is true for any\
+    \ operating system which uses a monolithic kernel[6]. There are things microkernels\
+    \ which have modules which get their own codebase. The GNU Hurd and QNX Neutrino\
+    \ are two examples of a microkernel.\n\n# 3.1.6. Device Drivers\n\nOne class of\
+    \ module is the device driver, which provides functionality for hardware like\
+    \ a TV card or a serial port. On Unix, each piece of hardware is represented by\
+    \ a file located in /dev named device file which provides the means to communicate\
+    \ with the hardware. The device driver provides the communication on behalf of\
+    \ a user process. The esl37.0 sound device driver may connect the /dev/sound device\
+    \ file to the Ensoniq IS1370 sound card. A users program like mp3blaster can use\
+    \ /dev/sound without knowing what kind of sound card is installed.\n\n# 3.1.6.1.\
+    \ Major and Minor Numbers\n\nLet's look at some device files. Here are device\
+    \ files which represent the first partitions of the primary hard drive:\n\n```\n\
+    # ls -1 /dev/hda[1-3]\nbr-rw---- 1 root disk 3, 1 Jul 5 2000 /dev/hda1\br-rw----\
+    \ 1 root disk 3, 2 Jul 5 2000 /dev/hda2\br-rw---- 1 root disk 3, 3 Jul 5 2000\
+    \ /dev/hda3\n```\n\nNotice the column of numbers separated by a comma? The first\
+    \ number is called the major number. The second number is the minor number. The\
+    \ major number tells you which driver is used to access the hardware. Each driver\
+    \ is assigned a unique major number; all device files with the same major number\
+    \ are controlled by the same driver. All the above major numbers are 3, because\
+    \ they're all controlled by the same driver.\n\nChapter 3. Preliminaries"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    The minor number is used to distinguish between the various hardware controls.
+    Returning to the example above, although all three devices are handled by the
+    same driver they have unique minor numbers because the driver sees them as different
+    pieces of hardware.
+
+
+    Devices are divided into two types: character devices and block devices. The difference
+    is that block devices have a buffer for requests, so they can choose the order
+    in which to respond to the requests. This is important in the case of storage
+    devices, where it''s faster to read or write sectors which are close to each other,
+    rather than those further apart. Another difference is that block devices can
+    only accept input and return output in blocks (whose size varies according to
+    the device), whereas character devices are allowed to use as many or few bytes
+    as they like. Most devices in the world are character, because they don''t need
+    this buffering, and don''t operate with a fixed block size. You can tell whether
+    a device file is a block device or a character device by looking at the first
+    character in the output of -l. If it''s ''b'' then it''s a block device and ''c''
+    then a character device. Here are some character devices (the serial ports):
+
+
+    ```
+
+    crw-rw---- 1 root dial,    64 Feb 18 23:34 /dev/tty0
+
+    crw-r--r-- 1 root dial,    65 Nov 17 10:26 /dev/tty1
+
+    crw-rw---- 1 root dial,    66 Jul  5 2000 /dev/tty2
+
+    crw-rw---- 1 root dial,    67 Jul  5 2000 /dev/tty3
+
+    ```
+
+
+    If you want to see which minor numbers have been assigned, you can look at
+
+    `/usr/src/linux/documentation/devices.txt`
+
+
+    When the system is installed, all of those device files were created by the mknod
+    command. To create a new device name with minor number 1 and 2, do mknod /dev/c
+    12 2. You do not have to put your device files into /dev/, but by convention.
+    Linux puts its device files in /dev, but it''s done by you. When creating a device
+    file for testing purposes, it''s probably OK to place it in your working directory
+    where you compile the kernel module. Just should be put in the right place when
+    you''re writing the device driver.
+
+
+    I would like to make a few points which are implicit from the above discussion,
+    but I''d like to make them explicit in case. When a device file is accessed, the
+    kernel uses the major number of the file to determine which driver should be used
+    to handle the access. This means that the kernel doesn''t really need to use or
+    know about the minor number. The driver itself is the only one that cares about
+    the major number. It uses the minor number to distinguish between different pieces
+    of hardware.
+
+
+    By the way, I say ''hardware'', I mean a bit more than just a PCI card that you
+    can hold in your hand. Look at these two examples:
+
+
+    ```
+
+    $ ls -l /dev/fd0 /dev/fd01680
+
+    brw-rw---- 1 root floppy      2, 0 Jul 2000 /dev/fd0
+
+    brw-rw---- 1 root floppy      2, 44 Jul 2000 /dev/fd01680
+
+    ```
+
+
+    Now you can look at these two device files and know that they are block devices
+    and are handled by same driver (block major 2). You might even be aware that these
+    represent both your floppy drive, even if you only have one floppy drive. Why
+    two files? One represents the floppy drive with 1.68 MB of storage, and corresponds
+    to what some people call a ''superformatted'' disk. One that holds more data than
+    a standard floatted floppy. So here''s a case where two device files with different
+    minor number actually represent the same piece of physical hardware. So just be
+    aware that the word ''hardware'' in our discussion can mean something very abstract.
+
+
+    # Chapter 3. Preliminaries'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Chapter 4. Character Device Files\n\n# 4.1. Character Device Drivers\n\n\
+    # 4.1.1. The file_operations Structure\n\nThe file_operations structure is defined\
+    \ in linux/fs.h, and holds pointers to functions defined by the driver that performs\
+    \ various operations on the device. Each field of the structure corresponds to\
+    \ the address of some function defined by the driver to handle a requested operation.\n\
+    \nFor example, every character driver needs to define a function that reads from\
+    \ the device. The file_operations structure holds the address of the module's\
+    \ function that performs that operation. Here is what the definition looks like\
+    \ for kernel 26.5:\n\n```\nstruct file_operations {\n    struct module *owner;\n\
+    \    loff_t(*llseek) (struct file *, loff_t, int);\n    ssize_t(*read) (struct\
+    \ file *, char __user *, size_t, loff_t);\n    ssize_t(*write) (struct file *,\
+    \ struct kiochack *, char __user *, size_t, loff_t);\n    ssize_t(*aio_write)\
+    \ (struct file *, const char __user *, size_t, loff_t);\n    ssize_t(*aio_read)\
+    \ (struct file *, const char __user *, size_t, loff_t);\n    int (*add_seekseek)\
+    \ (struct file *, void *, filldir_t);\n    unsigned int (*poll) (struct file *,\
+    \ struct poll_table_struct *);n    int (*ioctl) (struct inode *, struct file *,\
+    \ unsigned int);\n    int (*mmap) (struct file *, struct vm_area_struct *);\n\
+    \    int (*open) (struct inode *, struct file *);\n    int (*flush) (struct file\
+    \ *);\n    int (*release) (struct inode *, struct file *);\n    int (*fsync) (struct\
+    \ file *, struct destroy *, int datasync);\n    int (*aio_fsync) (struct kiochack\
+    \ *, int datasync);\n    int (*fasync) (struct file *, int, struct file_lock *);\n\
+    \    int (*lock) (struct file *, const struct file_lock *);\n    ssize_t(*readv)\
+    \ (struct file *, const struct iovec *, unsigned long, loff_t);\n    ssize_t(*writev)\
+    \ (struct file *, struct iovec *, unsigned long, loff_t);\n    ssize_t(*sendfile)\
+    \ (struct file *, loff_t, size_t, read_actor_t, __user *);n    ssize_t(*sendpage)\
+    \ (struct file *, struct page *, int_t, loff_t, int);\n    unsigned long (*get_unmapped_area)\
+    \ (struct file *, unsigned long, unsigned long, unsigned long);\n};\n```\n\nSome\
+    \ operations are not implemented by a driver. For example, a driver that handles\
+    \ a video card won't need to read from a directory structure. The corresponding\
+    \ entries in the file_operations structure should be set to NULL.\n\nThere is\
+    \ a gcc extension that makes adding to this structure more convenient. You'll\
+    \ see in modern drivers, what might catch you by surprise. This is what the way\
+    \ of adding to the structure looks like:\n\n![](img/012b87801a83171d68e1e1da140117be_23_0.png)"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "```\nstruct file_operations fops = {\n  read: device_read,\n  write: device_write,\n\
+    \  open: device_open,\n  release: device_release\n};\n```\n\nHowever, there's\
+    \ also a C99 way of assigning elements to a structure, this is definitely preferred\
+    \ over the GNU extension. The version of gcc we used when writing this, 2.95,\
+    \ is the new C99 syntax. You should use this syntax in case someone wants to port\
+    \ your driver. It will help with compatibility:\n\n```\nstruct file_operations\
+    \ fops = {\n  .read = device_read,\n  .write = device_write,\n  .open = device_open,\n\
+    \  .release = device_release\n};\n```\n\nThe meaning is, and you should be aware\
+    \ that any member of the structure which you don't explicitly assign will be initialized\
+    \ to NULL by gcc.\n\nAn instance of struct file_operations containing pointers\
+    \ to functions that are used to implement read, write, open, ... syscalls are\
+    \ commonly known as fops.\n\n# 4.1.2. The file structure\n\nEach device is represented\
+    \ in the kernel by a file structure, which is defined in linux/fs.h. Be aware\
+    \ that a file is a kernel level structure and never appears in a user space program.\
+    \ It's not the same as a FILE, which is defined by glibc and also, its name is\
+    \ a bit misleading; it represents an open 'file', not a file on a disk, which\
+    \ is represented by a structure named inode.\n\nAn instance of struct file is\
+    \ commonly known as filp. You'll also see it referred to as struct file file.\
+    \ Resist the temptation.\n\nGo ahead and look at the definition of file. Most\
+    \ of the entries you see, like struct entry aren't used by drivers, and you can\
+    \ ignore them. This is because drivers don't fill file directly; they only use\
+    \ structures in file which are created elsewhere.\n\n# 4.1.3. Registering A Device\n\
+    \nAs discussed earlier, devices are accessed through device files, usually located\
+    \ in /dev/[7]. The major number tells you which driver handles which file. The\
+    \ minor number is used only by the driver itself to differentiate which device\
+    \ it's operating on, just in case driver handles more than one device.\n\nAdding\
+    \ a driver to your system means registering it with the kernel. This is synonymous\
+    \ with assigning it a major number during the module's initialization. You can\
+    \ do this by using the register_chdev function, defined by linux/fs.h.\n\n```\n\
+    int register_chdev(unsigned int major, const char *name, struct file_operations\
+    \ *fops);\n```\n\nChapter 4. Character Device Files"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# The Linux Kernel Programming Guide
+
+
+    where unsigned int is the major number you want to register, const char *name
+    is the name of the device as it''ll appear in /proc/devices and struct file_operations
+    *fops is a pointer to the file_operations table for a driver. A return value negative
+    means the registration failed. Note that we didn''t pass the number to register_chrdev.
+    That''s because the kernel doesn''t care about the minor number; our drivers use
+    it.
+
+
+    The question is, how do you get a major number without hitting one that''s already
+    in use? The easiest way would be to look through Documentation/devices.txt and
+    pick an unused one. That bad way of doing things because you''ll never be sure
+    if the number you picked will be assigned. The answer is that you can ask the
+    kernel to assign you a dynamic number.
+
+
+    If you pass a major of 0 to register_chrdev, the return value will be the dynamically
+    allocated major number. The downside is that you can''t make a device file in
+    advance, since you don''t know what the major number will be. There are a couple
+    of ways to do this. First, the driver can print the assigned number and we can
+    make the device file for. Second, the newly registered device will have an entry
+    in /proc/devices, and we either make the device file by hand or write a script
+    to read the file and make the device file. The third method is to have our driver
+    make the device file using the mkmod system call after a successful registration
+    and rm during the call to cleanup_module.
+
+
+    # 4.1.4. Unregistering A Device
+
+
+    We can''t allow the kernel module to be rmmoded whenever root feels like it. If
+    the device file is opened by a process and then we remove the kernel module, using
+    would cause a call to the memory location where the appropriate function (read/write)
+    used to be. If we''re lucky, no code was loaded there, and we''ll get an error
+    message. If we''re unlucky, another kernel module was loaded into the same location,
+    which means a jump into the middle of another function within the kernel. This
+    would be impossible to predict, but we can''t easily vary it.
+
+
+    Normally, when you don''t want anything to do it. With cleanup_module that is
+    impossible because it''s a void function. However, there''s a counter which keeps
+    track of how many processes are using your module. You can see what it values
+    by looking at the 3rd field of /proc/modules. If this number is zero, rmmod will
+    fail. Note that you don''t have to check the counter from cleanup_module because
+    the check will be performed for you by the system sys_delete_module, defined in
+    linux/module.c. You shouldn''t use this counter directly, but there are functions
+    defined in linux/module.h which let you increase and display this counter:
+
+
+    +   - try_module_get (THIS_MODULE): Increment the use count.
+
+    * module_put (THIS_MODULE): Decrement the use count.
+
+
+    It''s important to keep the counter acute; if you ever lose track of the correct
+    usage count, you''ll never be able to unload the module; it''s now reboot time,
+    boys and girls. This is bound to happen you sooner or later during a module''s
+    development.
+
+
+    # 4.1.5. chardevc
+
+
+    The next code sample creates a char driver named chardevc. You can cat its device
+    file or open the file with a program and the driver will return the number of
+    times the device file has read from the file. We don''t support writing to the
+    file (like echo "hi" >/dev/null), but these attempts will tell you that operation
+    isn''t supported. Don''t worry if you don''t see what we do with the data we read
+    into the
+
+
+    Chapter 4. Character Device Files'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nbuffer; we not do much with\
+    \ it. We simply read in the data and print a message acknowledging that we received\
+    \ it.\n\nExample 4-1. chardev.c\n\n```\n/*\n * chardev.c: Creates a read-only\
+    \ char device that says how many times\n * you've read from the dev file\n */\n\
+    \n#include <linux/kernel.h>\n#include <linux/module.h>\n#include <linux/fs.h>\n\
+    #include <asm/uaccess.h>                /* for put_user */\n\n/*\n * Prototypes\
+    \ this would normally go in a .h file\n */\nint init_module(void);\nvoid cleanup_module(void);\n\
+    static int device_open(struct inode *, struct file *);\nstatic int device_release(struct\
+    \ inode *, struct file *);\nstatic size_t device_read(struct file *, char *, size_t,\
+    \ loff_t *);\nstatic size_t device_write(struct file *, const char *, size_t,\
+    \ loff_t *);\n\n#define SUCCESS 0\n#define DEVICE_NAME \"chardev\"        /* as\
+    \ it appears in /proc/devices */\n#define BU_LEN 80                     /* Max\
+    \ length of the message from the device */\n\n/*\n * Global variables are declared\
+    \ as static, so are global within the file.\n */\n\nstatic int Major;        \
+    \         /* Major number assigned to the device driver */\nstatic int Device_Open\
+    \ = 0;       /* Is device open? */\nstatic char msg[BUF_LEN];          /* Used\
+    \ to prevent multiple access to device */\nstatic char *msg_Ptr;             \
+    \ /* The msg device will be given when as */\n\nstatic struct file_operations\
+    \ fops = {\n  .read = device_read,\n  .write = device_write,\n  .open = device_open,\n\
+    \  .release = device_release\n};\n\n/*\n * This function is called when the module\
+    \ is loaded\n */\nint init_module(void) {\n\tMajor = register_chardev(0, DEVICE_NAME,\
+    \ &fops);\n\n\tif (Major < 0) {\n\tprintk(KERN_ALERT \"Registering char device\
+    \ failed with %d\\n\", Major);\n\treturn Major;\n\t}\n\nprintk(KERN_INFO \"I was\
+    \ assigned major number %d. To talk to\\n\", Major);\nprintk(KERN_INFO \"the driver,\
+    \ create a dev file with\\n\");\n```\n\n# Chapter 4. Character Device Files\n\n\
+    24"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# # Linux Kernel Module Programming Guide\n\n```\nprintk(KERN_INFO, \"mkmod\
+    \ /dev/%s c %d 0.\\\\n\", DEVICE_NAME, Major);\nprintk(KERN_INFO, \"Try various\
+    \ minor numbers. Try to cut and echo to\\n\");\nprintk(KERN_INFO, \"the device\
+    \ file.\\\\n\");\nprintk(KERN_INFO, \"Remove the device file and module when done.\\\
+    \\n\");\n\nreturn SUCCESS;\n/*\n * This function is called when the module is\
+    \ unloaded\n */\nvoid cleanup_module(void)\n{\n    * Unregister the device\n \
+    \   */\n    int ret = unregister_chrdev(Major, DEVICE_NAME);\n    if (ret < 0)\n\
+    \        printk(KERN_ALERT, \"Error in unregister_chrdev: %d\\\\n\", ret);\n}\n\
+    /*\n * Methods\n */\n/*\n * Called when a process tries to open the device file,\n\
+    \ * \"cat /dev/mycharfile\"\n */\nstatic int device_open(struct inode *inode,\
+    \ struct file *file)\n{\n    static int counter = 0;\n\n    if (Device_Open)\n\
+    \        return -EBUSY;\n\n    Device_Open++;\n    sprintf(msg, \"I already told\
+    \ you %d times Hello world!\\\\n\", counter++);\n    msg_Ptr = msg;\n    try_module_get(THIS_MODULE);\n\
+    \n    return SUCCESS;\n}\n/*\n * Called when a process closes the device file.\n\
+    \ */\nstatic int device_release(struct inode *inode, struct file *file)\n{\n \
+    \   /* We are now ready for our next caller */\n    /*\n * Decrement the usage\
+    \ count, or else once you opened the file,\n * never get rid of the module.\n\
+    \ */\n    module_put(THIS_MODULE);\n\n    return 0;\n}\n```\n\n+   * Called when\
+    \ a process, which already opened the dev file, attempts to"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n* read from it.\n*/\nstatic\
+    \ ssize_t device_read(struct file *filp,\n    char *buffer,\n    size_t length,\n\
+    \    loff_t * offset)\n    /* see include/linux/fs.h */\n    /* buffer to fill\
+    \ with data */\n    /* length of the buffer */\n```\n\n```\n{\n    /*\n     *\
+    \ Number of bytes actually written to the buffer\n     */\n    int bytes_read\
+    \ = 0;\n\n    /*\n     * If we're at the end of the message,\n     * return 0\
+    \ signifying end of file\n     */\n    if (*msg_Ptr == 0)\n        return 0;\n\
+    \n```\n\n```\n    /*\n     * Actually put the data into the buffer\n     */\n\
+    \    while (length & *msg_Ptr) {\n        /* The buffer is in user data segment,\
+    \ not the kernel\n         * segment so **= assignment won't work. We have to\
+    \ use\n         * put_user which copies data from the kernel data segment\n  \
+    \       * the user data segment.\n         */\n        put_user(*msg_Ptr++), buffer++);\n\
+    \n        length--;\n        bytes_read++;\n    }\n```\n\n```\n    /*\n     *\
+    \ Most read functions return the number of bytes put into the buffer\n     */\n\
+    \    return bytes_read;\n}\n```\n\n```\n/* Called when a process writes to dev\
+    \ file: echo \"hi\" > /dev/hello */\nstatic ssize_t\ndevice_write(struct file\
+    \ *filp, const char *buffer, size_t len, loff_t *off)\n{\n    printk(KERN_ALERT\
+    \ \"Sorry, this operation isn't supported.\\\\n\");\n    return -EINVAL;\n}\n\
+    ```\n\n# 4.1.6. Writing Modules for Multiple Kernel Versions\n\nThe system calls,\
+    \ which are the major interface the kernel shows to the processes, generally stay\
+    \ the same across versions. A new system may be added, but usually the old ones\
+    \ will behave exactly like they used to be. This is necessary for backward compatibility\
+    \ — a new version is not supported to break regular processes. In many cases,\
+    \ the device files will also remain the same. On the other hand, the internal\
+    \ interfaces within the kernel can change between versions.\n\nChapter 4. Character\
+    \ Device Files"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    The Linux versions are divided between the stable versions (n.$<number>$) and
+    the development versions (n.$<number>$). The development versions include all
+    the new ideas, including those which will be considered a mature, or reintroduced,
+    in the next version. As a result, you can''t trust the interface to remain the
+    same in those versions (which is why I don''t to support them in this book, it''s
+    too much work and it would become too quickly). In the stable versions, on the
+    other hand, we can expect the interface to remain the same regardless of the bug
+    fix version (the m number).
+
+
+    There are differences between kernel versions, and if you want to support multiple
+    kernel versions, you''ll find yourself having to code conditional compilation
+    directives. The way to do this is to compare the macro LINUX_VERSION_CODE to the
+    macro KERNEL_VERSION. In version a.b.c of the kernel, the value of this macro
+    would be $2*[16]+a*[8]+b.
+
+
+    Previous versions of this guide showed how you can write backward compatible code
+    with such constructs in great detail, we decided to break with this tradition
+    for the better. People interested in doing such might now use a LKMPG with a version
+    matching to their kernel. We decided to version the LKMPG like the one so LKMPG
+    version 2.4.x for kernels 2.4.x, use LKMPG version 2.6.x for kernels 2.6.x and
+    so on. Also make sure that you always use current, up to date versions of both,
+    kernel and guide.
+
+
+    Update: What we''ve said about was true for kernels up to and including 2.6.10.
+    You might have already noticed that recent kernels look different. In case you
+    haven''t they they look like 2.6.x.y now. The meaning of the first three items
+    stays the same, but a subpatchlevel has been added and will indicate security
+    fixes till the next stable patchlevel stays. So people can choose between a stable
+    version with security updates and use the latest kernel as developer tree. Search
+    the kernel mailing list archives if you''re interested in the full story.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Chapter 5. The /proc File System
+
+
+    # 5.1. The /proc File System
+
+
+    In Linux, there is an additional mechanism for the kernel and proc modules to
+    send information to processes — the /proc file. Originally designed to allow easy
+    access to information about processes (hence the name), it is now used by every
+    bit of the kernel which has something interesting to report, such as /proc/modules
+    which provides the list of modules and /proc/meminfo which stores memory statistics.
+
+
+    The method to use the proc file system is similar to the one with device drivers
+    — a structure is created with all the information needed for the /proc file, including
+    pointers to any handler functions (in case there is only one, the one called when
+    somebody attempts to read from the /proc file). init_module registers the structure
+    with the kernel and the cleanup_module unregisters.
+
+
+    The reason we use proc_register_dynamic[8] is because we not want to determine
+    the inode number used for our file in address, but to allow the kernel to determine
+    to prevent clashes. Normal file systems are located on a disk, rather than in
+    memory (where /proc is), and in that case the inode number is a pointer to a disk
+    location where the file''s index-node (short for inode) is located. The inode
+    contains information about the file, for its permissions, together with a pointer
+    to the disk location or locations where the file''s data can be found.
+
+
+    Because we dont called when the file is opened or closed, there''s nowhere for
+    us to put try_module_get and try_module_put in this module, and if the file is
+    opened and then the module is removed, there is no way to avoid the concerns.
+
+
+    Here a simple example showing how to use a /proc file. This is the HelloWorld
+    for the /proc system. There are three parts: create the file /proc/helloworld
+    in the function init_module, return a value (and a buffer) when the file /proc/helloworld
+    is read in the callback function procfs_read, and delete the file /proc/helloworld
+    in the function cleanup_module.
+
+
+    Each time, every the file /proc/helloworld is read, the function procfs_read is
+    called. Two parameters of this function are very important: the buffer (the first
+    parameter) and the offset (the third one). The content of the buffer will be returned
+    to the application which read it (for example the cat command). The offset is
+    the current position in the file. If the return value of the function isn''t null,
+    then this function is called again. Be careful with this function, if it never
+    returns zero, the read function is called endlessly.
+
+
+    ```
+
+    # cat /proc/helloworld
+
+    HelloWorld!
+
+    ```
+
+
+    Example 5-1. procfs.c
+
+
+    +   * procfs.c - create a "file" in /proc
+
+
+    Chapter 5. The /proc File System'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\n/* /\n#include <linux/module.h>\n#include <linux/kernel.h>\n#include <linux/proc_fs.h>\n\
+    \n/* Specifically, a module /\n/* We're doing kernel work */\n/* Necessary because\
+    \ we use the proc fs */\n\n#define procs_name \"helloworld\"\n\n/**\n * This structure\
+    \ hold information about the /proc file\n */\n\nstruct proc_dir_entry *Our_Proc_File;\n\
+    \n/* Put data into the proc fs file.\n\n * Arguments\n * 1. The buffer where the\
+    \ data is to be inserted, if\n *    you decide to use it.\n * 2. A pointer to\
+    \ a pointer to characters. This is\n *    useful if you don't want to use the\
+    \ buffer\n *    allocated by the kernel.\n * 3. The current position in the file\n\
+    \ * 4. The size of the \"l\" here to EOF.\n * 5. Write a \"0\" here to indicate\
+    \ EOF.\n * 6. A pointer to data (useful in case one common\n *    read for multiple\
+    \ /proc/... entries)\n\n * Usage and Return Value\n\n * A return value of zero\
+    \ means you have no further\n * information at this time (end of file). A negative\n\
+    \ * return value is an error condition.\n\n * For More Information\n\n * The why\
+    \ discovered what to do with this function\n * wasn't by reading documentation,\
+    \ but by reading the\n * code which used; I just looked to see what uses\n * the\
+    \ _info field of proc_dir_entry struct (I used a\n * combination of find and grep,\
+    \ if you're interested),\n * and I saw that it is used in <kernel source\n * directory>/fs/array.c.\n\
+    \n * If something is unknown the way to go. The kernel, this is\n * usually the\
+    \ way to. In Linux we have the great\n * advantage of having the kernel source\
+    \ code for\n * free - use it.\n */\nint\nprocfile_read(char *buffer,\n\t     \
+    \          loff_t offset, int buffer_length, int *eof, void *data)\n{\n\tint ret;\n\
+    \tprintk(KERN_INFO \"procfile_read (/proc/%s) called\\n\", procs_name);\n\n\t\
+    /*\n * We give all of our information in one go, so if the\n * user asks us if\
+    \ we have more information the\n */\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# The Linux Kernel Programming Guide\n\n```\n* answer should always be no.\n\
+    * This is important because the standard read\n* function from the library would\
+    \ continue to issue\n* the read system until the kernel replies\n* that has no\
+    \ more information, or until its\n* buffer is filled.\n/*\nif (offset != 0) {\n\
+    \    /* we have finished to read, return 0 */\n    ret 0;\n} else {\n    /* fill\
+    \ the buffer, return the buffer size */\n    ret = sprintf(buffer, \"HelloWorld!\\\
+    n\");\n}\n```\n\nreturn ret;\n\n```\nint init_module()\n{\n    Our_Proc_File =\
+    \ create_proc_entry(procfs_name, 0644, NULL);\n    if (Our_Proc_File == NULL)\
+    \ {\n        remove_proc_entry(procfs_name, &proc_root);\n        printk(KERN_ALERT\
+    \ \"Error: Could not initialize /proc/%s\\n\",\n               procfs_name);\n\
+    \        return -ENOMEM;\n    }\n\n    Our_Proc_File->read_proc = procfile_read;\n\
+    \    Our_Proc_File->owner = THIS_MODULE;\n    Our_Proc_File->mode == S_IFREG |\
+    \ S_IRUGO;\n    Our_Proc_File->uid = 0;\n    Our_Proc_File->gid = 0;\n    Our_Proc_File->size\
+    \ = 37;\n\n    printk(KERN_INFO \"/proc/%s created\\n\", procfs_name);\n    return\
+    \ 0;\n}\n```\n\n```\nvoid cleanup_module()\n{\n    remove_proc_entry(procfs_name,\
+    \ &proc_root);\n    printk(KERN_INFO \"/proc/%s removed\\n\", procfs_name);\n\
+    }\n```\n\n# 5.2. Read and write a /proc File\n\nWe have seen a simple example\
+    \ for a /proc file where we read the file /proc/helloworld. Its also possible\
+    \ to write the same way as read, a function is called when the /proc file is written.\
+    \ But there is a little difference, with data from users, so you have to use data\
+    \ from user space to kernel space (using copy_from_user or get_user)\n\nThe reason\
+    \ for copy_from_user or get_user is that Linux (on Intel architecture, it may\
+    \ be different from other processors) is segmented. This means that a pointer,\
+    \ by itself, does not refer a unique location in memory, only a memory segment,\
+    \ and you need to know memory segment it is able to use it. There is one memory\
+    \ segment for the kernel, and one for each of the\n\nChapter 5. The /proc File\
+    \ System"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nThe only memory segment accessible\
+    \ to process is its own, when writing regular programs to run as processes, there's\
+    \ no need to worry about segments. When you write a kernel module, normally you\
+    \ want to access the memory segment, which is handled automatically by the system.\
+    \ However, when the content of a memory buffer needs to be passed between the\
+    \ currently running process and the kernel, the put_user and get_user allow you\
+    \ to access the memory buffer. These functions handle only one character, with\
+    \ copy_to_user and copy_from_user. As the buffer (in read or write) is in kernel\
+    \ space, for write function you need to import data because it comes from user\
+    \ space, but not for the read function because data is already in kernel space.\n\
+    \n# Example 5-2. procfs2.c\n\n```\n/*\n* procfs2.c - create a \"file\" in /proc\n\
+    \ */\n\n#include <linux/module.h>\n#include <kernel.h>\n#include <linux/proc.h>\n\
+    #include <asm/uaccess.h>\n/* Specifically, a module /\n * We're doing kernel work\
+    \ */\n * Necessary because we use the proc fs */\n * for copy_from_user */\n\n\
+    #define PROFS_MAX_SIZE      1024\n#define PROFS_NAME          \"bufferlk\"\n\n\
+    /**\n* This structure holds information about the /proc file\n */\nstatic struct\
+    \ proc_dir_entry *Our_Proc_File;\n\n/**\n* The buffer is used to store character\
+    \ for this module\n */\nstatic char procfs_buffer[PROFS_MAX_SIZE];\n\n/**\n* The\
+    \ size of the buffer\n */\nstatic unsigned long procfs_buffer_size = 0;\n\n/**\n\
+    * This function is called then the /proc file is read\n */\nint\nprocfile_read(char\
+    \ *buffer,\n               char **buffer_location,\n               off_t offset,\
+    \ int buffer_length, int *eof, void *data)\n{\n\n\tint ret;\n\n\t(KERN_INFO, \"\
+    procfile_read (/proc/%s) called\\n\", PROFS_NAME);\n```\n\nChapter 5. The /proc\
+    \ File System\n\n31"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nif (offset > 0) {\n   \
+    \ /* we have finished to read, return 0 */\n    ret = 0;\n} else {\n    /* fill\
+    \ the buffer, return the buffer size */\n    memcopy(buffer, procfs_buffer, procfs_buffer_size);\n\
+    \    ret = procfs_buffer_size;\n}\n\nreturn ret;\n```\n\n** This function is called\
+    \ with the /proc file is written\n\n```\nint procfile_write(struct file *file,\
+    \ const char *buffer, unsigned long count, void *data) {\n    /* get buffer size\
+    \ */\n    procfs_buffer_size = count;\n    if (procfs_buffer_size > PROCFS_MAX_SIZE)\
+    \ {\n        procfs_buffer_size = PROCFS_MAX_SIZE;\n    }\n\n    /* write data\
+    \ to the buffer */\n    if ( copy_from_user(procfs_buffer, buffer, procfs_buffer_size)\
+    \ ) {\n        return -EFAULT;\n    }\n\n    return procfs_buffer_size;\n}\n```\n\
+    \n** This function is called when the module is loaded\n\n```\nint init_module()\
+    \ {\n    /* create the /proc file */\n    Our_Proc_File = create_proc_entry(PROCFS_NAME,\
+    \ 0644, NULL);\n    if (Our_Proc_File == NULL) {\n        remove_proc_entry(PROCFS_NAME,\
+    \ &proc_root);\n        printk(KERN_ALERT \"Error: Could not initialize /proc/%s\\\
+    n\", PROCFS_NAME);\n        return -ENOMEM;\n    }\n\n    Our_Proc_File->read\
+    \ = procfile_read;\n    Our_Proc_File->write = procfile_write;\n    Our_Proc_File->owner\
+    \ = THIS_MODULE;\n    Our_Proc_File->umode = S_IFREG | S_IRUGO;\n    Our_Proc_File->uid\
+    \ = 0;\n    Our_Proc_File->gid = 0;\n    Our_Proc_File->size = 37;\n\n    printk(KERN_INFO\
+    \ \"/proc/%s created\\n\", PROCFS_NAME);\n    return 0;\n}\n```\n\n# Chapter 5.\
+    \ The /proc File System"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n* This function is called\
+    \ when the module is unloaded\n*\nvoid cleanup_module() {\n    remove_proc_entry(PROCS_NAME,\
+    \ &proc_root);\n    printk(KERN_INFO, \"/proc/%s removed\\n\", PROCS_NAME);\n\
+    }\n```\n\nWe have seen to read and write a /proc file with the /proc interface.\
+    \ But it's also possible to manage /proc file with inodes. The main interest is\
+    \ to use advanced function, like permissions.\n\nIn Linux, there is a standard\
+    \ mechanism for file system registration. Since every file system has its own\
+    \ functions to handle inode and file operations, there is a special structure\
+    \ to hold pointers to all functions, struct inode_operations, which includes a\
+    \ pointer to struct file_operations. In /proc, whenever we register a new file,\
+    \ we're allowed to specify which struct inode_operations will be used to access\
+    \ it. This is the mechanism we use, a struct inode_operations which includes pointers\
+    \ to our procfs_read and procfs_write functions.\n\nAnother interesting point\
+    \ is the module_permission function. This is called whenever a process tries whether\
+    \ to access or not. Right now it is only by operation and the uid of the user\
+    \ (as available in current, a pointer to a structure which includes information\
+    \ (the currently running process)), but it could be based on anything like, as\
+    \ other processes dealing with the same file, the time of day, or the last input\
+    \ received.\n\nIt's important to note that the order of read and write are reversed\
+    \ in the kernel. Read functions are used for output, whereas write functions are\
+    \ used for input. The reason for that is that read and write refer to the user's\
+    \ point of view —— if a process reads from the kernel, the kernel needs to output\
+    \ it, and if a process writes to the kernel, the kernel receives it as input.\n\
+    \n# 5–3. procfs3c\n\n```\n/* procfs3c - create a \"file\" in /proc, use the file_operation\
+    \ way\n to manage the file.\n*/\n#include <linux/kernel.h>\n#include <linux/module.h>\n\
+    #include <linux/proc_fs.h>\n#include <asm/uaccess.h>\n/* We're doing kernel work\
+    \ *\n/* Specifically, a module */\n/* Necessary because we use proc fs */\n/*\
+    \ for copy_user * */\n\n#define PROC_ENTRY_FILENAME  *buffer2k*\n#define PROCS_MAX_SIZE\
+    \        2048\n/**\n/* The buffer (2k) for this module */\n/*\nstatic char procfs_buffer[PROCS_MAX_SIZE];\n\
+    ```\n\n# 5. The /proc File System"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n/**\n * The size of the\
+    \ data hold in the buffer\n *\n * static unsigned long procfs_buffer_size = 0;\n\
+    \ */\n```\n\n```\n/**\n * The structure keeping information about the /proc file\n\
+    \ *\n * static struct proc_dir_entry *Our_Proc_File;\n */\n```\n\n```\n/**\n *\
+    \ This function is called when the /proc file is read\n *\n * see include/linux/fs.h\
+    \ *\n * buffer to fill with data *\n * static ssize_t procfs_read(struct file\
+    \ *filp,\n *                              char *buffer,\n *                  \
+    \            size_t length,\n *                              loff_t *offset)\n\
+    \ *                              length of the buffer\n */\n    int finished =\
+    \ 0;\n    /*\n     * We return 0 to indicate end of file, that we have\n     *\
+    \ no more information. Otherwise, processes will\n     * continue to read from\
+    \ us in an endless loop.\n     */\n    if (finished) {\n        printk(KERN_INFO\
+    \ \"procfs-read: END\\n\");\n        finished = 0;\n        return 0;\n    }\n\
+    ```\n\n```\n    finished = 1;\n    /*\n     * We use put_to_user to copy the string\
+    \ from the kernel's\n     * memory segment to the memory segment of the process\n\
+    \     * that called us. get_from_user, BTW, is\n     * used for the reverse.\n\
+    \     */\n    if (copy_to_user(buffer, procfs_buffer, procfs_buffer_size)) {\n\
+    \        return -EFAULT;\n    }\n```\n\n```\nprintk(KERN_INFO \"procfs-read: %lu\
+    \ bytes\\n\", procfs_buffer_size);\n\n    return procfs_buffer_size; /* Return\
+    \ the number of bytes \"read\" */\n```\n\n```\n/**\n * This function is called\
+    \ when /proc file is written\n */\nstatic size_t\nprocfs_write(struct file *file,\
+    \ const char *buffer, size_t len, loff_t *off) {\n    if (len > PROCS_MAX_SIZE)\
+    \ {\n        procfs_buffer_size = PROCS_MAX_SIZE;\n    }\n    else {\n       \
+    \ procfs_buffer_size = len;\n    }\n```\n\nChapter 5. The /proc File System"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nif ( copy_from_user(procfs_buffer,\
+    \ buffer, procfs_buffer_size) {\n    return -EFAULT;\n}\n\nprintk(KERN_INFO, \"\
+    procfs_write: write %lu bytes\\n\", procfs_buffer_size);\n\nreturn procfs_buffer_size;\n\
+    ```\n\n```\n/*\n* This function decides whether to allow an operation\n* (return\
+    \ zero) or not allow it (return a non-zero\n* which indicates why it is not allowed).\n\
+    * The operation can be one of the following values:\n* 0 - Execute run the \"\
+    File\" - meaningless in our case\n* 2 - Write (input to the kernel module)\n*\
+    \ 4 - Read (output from the kernel module)\n\n* This is the real function that\
+    \ checks file\n* permissions. The permissions returned by ls -l are\n* for reference\
+    \ only, and\n```\n\n```\nstatic int module_permission(struct inode *inode, int\
+    \ op, struct nameidata *foo) {\n    /*\n     * We allow everybody to read from\
+    \ our module,\n     * only root (uid 0) may write to it\n     */\n    if (op ==\
+    \ 4 || op == 2 && current->uid == 0) {\n        return 0;\n    }\n\n    /*\n \
+    \    * If it's anything else, access is denied\n     */\n    return -EACCES;\n\
+    }\n```\n\n```\n/*\n* The file is opened - we don't really care about\n* that,\
+    \ but it does mean we need to increment the\n* module's reference count.\n*/\n\
+    int procfs_open(struct inode *inode, struct file *file) {\n    try_module_get(THIS_MODULE);\n\
+    \    return 0;\n}\n```\n\n```\n/*\n* The file is closed - again, interesting only\
+    \ because\n* of the reference count.\n*/\nint procfs_close(struct inode *inode,\
+    \ struct file *file) {\n    module_put(THIS_MODULE);\n    return 0;\n}\n```\n\n\
+    Chapter 5. The /proc File System\n\n35"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nstatic struct file_operations\
+    \ File_Ops_4_Our_Proc_File = {\n  .read = procfs_read,\n  .write = procfs_write,\n\
+    \  .open = procfs_open,\n  .release = procfs_close,\n};\n```\n\n> * Inode operations\
+    \ for our proc file. We need it so\n* we'll have some place to specify the file\
+    \ operations\n* structure we want to use, and the function we use for\n* permissions.\
+    \ It's also possible to specify functions\n* to be called for anything else which\
+    \ could be done to\n* an inode (although we don't bother, we will just put\n*\
+    \ NULL());\n\n```\nstatic struct inode_operations Inode_Ops_4_Our_Proc_File =\
+    \ {\n  .permission = module_permission, /* check for permissions */\n};\n```\n\
+    \n> * Module initialization and cleanup\n* /\n\n```\nOur_Proc_File->owner = THIS_MODULE;\n\
+    Our_Proc_File->proc_ops = &Inode_Ops_4_Our_Proc_File;\nOur_Proc_File->fops = &File_Ops_4_Our_Proc_File;\n\
+    Our_Proc_File->mode = S_IFREG | S_IRUGO | S_IWUSR;\nOur_Proc_File->uid = 0;\n\
+    Our_Proc_File->gid = 0;\nOur_Proc_File->size = 80;\n```\n\n```\nprintk(KERN_INFO\
+    \ \"/proc/%s created\\n\", PROC_ENTRY_FILENAME);\n\n  return 0;\n}\n```\n\nStill\
+    \ hungry for procs? First of all keep in mind, there are rounds around, claiming\
+    \ that procs is on its way out, consider using sysfs instead. If you're not greedy,\
+    \ there's a highly recommended bonus level for procs below linux/Documentation/Doc/.\
+    \ Use make help in your topl kernel directory for instructions about how to convert\
+    \ it into your favourite format. Example: make htmltdocs . Using this mechanism,\
+    \ in case you want to document something kernel related yourself.\n\n# Chapter\
+    \ 5. The /proc File System"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n# 5.4. Manage /proc file with\
+    \ seq_file\n\nAs we have seen, writing a /proc file may be quite \"complex\".\
+    \ So to help people writing /proc file, there is an API named seq_file that helps\
+    \ formatting /proc file for output. Based on sequence, which is composed of 3\
+    \ functions: start(), next(), and stop(). The seq_file API starts a sequence when\
+    \ we read the /proc file.\n\nA sequence begins with the call of the function start().\
+    \ If the return is a NULL value, the function next() is called. This function\
+    \ is an iterator, the goal is to go that all the data. Each time next() is called,\
+    \ the function show() is called. It writes data values in the buffer by the reader.\
+    \ The function next() is called until it returns NULL. The sequence ends when\
+    \ next returns NULL, then the function stop() is called.\n\nBE CAREFUL: when a\
+    \ sequence is finished, another starts. Means that at the end of function stop(),\
+    \ the function start() is called again. This loop finishes when the function start()\
+    \ returns NULL. You can see a scheme of this in the figure \"How seq_file works\"\
+    .\n\nFigure 5–1. How seq_file works\n\nSeq_file provides basic functions for /file_operations,\
+    \ as seq_read, seq_lseek, and some. But nothing to write in the /proc file. Of\
+    \ course, you can still use the same way as in the previous example.\n\n# Figure\
+    \ 5–4. procfs4.c\n\n```\n/**\n* procfs4.c - create a \"file\" in /proc\n* This\
+    \ program uses the seq_file library to manage the /proc file.\n */\n\n#include\
+    \ <linux/kernel.h>\n#include <linux/module.h>\n#include <linux/proc_fs.h>\n#include\
+    \ <linux/seq_file.h>\n\n/* We're doing kernel work */\n/* Specifically\n```\n\n\
+    Chapter 5. The /proc File System"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n/* * yes => return a non\
+    \ null value to begin the sequence */\nreturn &counter;\n} else {\n    /* * no\
+    \ => it's the end of the sequence, return end to stop reading */\n    pos = 0;\n\
+    \    return NULL;\n}\n```\n\n```\n/** This function is called after the beginning\
+    \ of a sequence.\n* It's called until the return is NULL (this ends the sequence).\n\
+    \ */\nstatic void *my_seq_next(struct seq_file *s, void *v, void *v, loff_t *pos)\
+    \ {\n    unsigned long *tmp_v = (unsigned long *)v;\n    (*tmp_v)++;\n    (*pos)++;\n\
+    \    return NULL;\n}\n```\n\n```\n/** This function is called at the end of a\
+    \ sequence\n */\nstatic void *my_seq_stop(struct seq_file *s, void *v) {\n   \
+    \ /* nothing to do, we use a static value in start() */\n}\n```\n\n```\n/** This\
+    \ function is called for each \"step\" of a sequence\n */\nstatic int my_seq_show(struct\
+    \ seq_file *s, void *v) {\n    loff_t *spos = (loff_t *)v;\n    fprintf(s, \"\
+    %Ld\\n\", spos);\n    return 0;\n}\n```\n\n```\n/** This structure \"function\"\
+    \ to manage the sequence\n */\nstatic struct seq_operations my_seq_ops = {\n \
+    \   .start = my_seq_start,\n    .next = my_seq_next,\n    .stop = my_seq_stop,\n\
+    \    .show = my_seq_show\n};\n```\n\n```\n/** This function is called when the\
+    \ /proc file is open.\n */\nstatic int my_open(struct inode *inode, struct file\
+    \ *file)\n```\n\nChapter 5. The /proc File System"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n{\n    return seq_open(file,\
+    \ &my_seq_ops);\n}\n/**\n * This structure gather \"function\" that manage the\
+    \ /proc file\n */\nstatic struct file_operations my_file_ops = {\n    .owner =\
+    \ THIS_MODULE,\n    .open = my_open,\n    .read = seq_read,\n    .llseek = seq_lseek,\n\
+    \    .release = seq_release\n};\n```\n\n```\n/**\n * This function is called when\
+    \ the module is loaded\n */\nint init_module(void) {\n    struct proc_dir_entry\
+    \ *entry;\n\n    entry = create_proc_entry(PROC_NAME, 0, NULL);\n    if (entry)\
+    \ {\n        entry->proc_fops = &my_file_ops;\n    }\n    return 0;\n}\n```\n\n\
+    ```\n/**\n * This function is called when the module is unloaded.\n */\nvoid cleanup_module(void)\
+    \ {\n    remove_proc_entry(PROC_NAME, NULL);\n}\n```\n\nIf you want more information,\
+    \ you can read this page:\n\n+   * http://lwn.net/Articles/22355/\n* http://www.kernelnewbies.org/documents/seq_file_howto.txt\n\
+    \nYou can also read the code of fs/seq_file in the linux kernel."
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: This is just a placeholder for now. Finally I'd like to see a (yet to be written)
+    chapter about sysfs instead here. If you are familiar with sysfs and would like
+    to take part in writing this chapter, feel free to contact us (the LKMPG maintainers)
+    for further details.
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# # Chapter 7. Talking To Device Files\n\n# ## 7.1. Talking to Device Files\
+    \ (writes and IOCTLs)\n\nDevice files are supposed to represent physical devices.\
+    \ Most physical devices are used for output as well as input, so there has to\
+    \ some mechanism for device drivers in the kernel to get the output to send to\
+    \ the device from processes. This is done by opening the device file for output\
+    \ and writing to it, just like writing to a file. In the following example, this\
+    \ is implemented by `device_write`.\n\nThis is not enough. Imagine you had a serial\
+    \ port connected to a modem (even if you have an internal modem, it is still implemented\
+    \ from the CPU's perspective as a serial port connected to a modem, so you don't\
+    \ have to tax your imagination too). The natural thing to do would be to use the\
+    \ device file to write things to the modem (either commands or data to be sent\
+    \ through the phone line) and read them from the modem (either responses for commands\
+    \ or the data received through the phone line). However, this leaves open the\
+    \ question of what to do when you need to talk to the serial port, for example\
+    \ to send the rate at which data is sent and received.\n\nThe answer in Unix is\
+    \ to use a special function `ioctl` (short for Input Output Control). Every device\
+    \ has its own `ioctl` commands, which can be read `ioctl` (to send information\
+    \ from a process to the kernel), write `ioctl` (to return information to a process),\
+    \ [10] both or neither. The ioctl function is called with three parameters: the\
+    \ file descriptor of the appropriate device file, the ioctl number, and a parameter,\
+    \ which is of long so you can use a case to pass anything. [11]\n\nThe ioctl number\
+    \ encodes the device number, the type of the ioctl, the command, and the type\
+    \ of. This number is usually created by a macro call `_IO__IOR__OW` (depending\
+    \ on the type) in a header file. This header should then be included by the programs\
+    \ which will use `ioctl` (so they can generate the appropriate `ioctl`) and by\
+    \ the kernel module (so it can understand it). In the example, the file header\
+    \ is `chardev.h` and the program which uses it is `ioctl.c`.\n\nIf you want to\
+    \ use `ioctl` in your own kernel modules, it is best to receive an official ioctl\
+    \ assignment, or if you accidentally get someone else's `ioctl`, or if they get\
+    \ yours, you'll know something is wrong. For more information, check the kernel\
+    \ source tree at `Documentation/ioctl-number.txt`.\n\n# ### Example 7-1. chardev.c\n\
+    \n```\n/*\n * chardev.c - Create an input/output character device\n */\n\n#include\
+    \ <linux/kernel.h>\n/* * We're doing kernel work */\n#include <linux/module.h>\n\
+    /* * Specifically, a module */\n#include <linux/fs.h>\n#include <asm/uaccess.h>\n\
+    \n/* * for get_user and put_ptr */\n\n#include <chardev.h>\n#define SUCCESS 0\n\
+    #define DEVICE_NAME \"chardev\"\n#define BUF_LEN 80\n```\n\n+   * Is the device\
+    \ open right now? Used to prevent\n\nChapter 7. Talking To Device Files\n\n71"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n* concurrent access into\
+    \ the same device\n*/\nstatic int Device_Open = 0;\n```\n\n```\n/*\n* The message\
+    \ the device will give when asked\n */\nstatic char Message[BUF_LEN];\n```\n\n\
+    ```\n/*\n* How far did the process reading the message get?\n* Useful if the message\
+    \ is larger than the size of the\n* buffer we get to fill in device_read.\n */\n\
+    static char *Message_Ptr;\n```\n\n```\n/*\n* This is called whenever a process\
+    \ attempts to open the device file\n */\nstatic int device_open(struct inode *inode,\
+    \ struct file *file)\n{\n#ifdef DEBUG\n    printk(KERN_INFO \"device_open(%p)\\\
+    n\", file);\n#endif\n\n```\n\n```\n  /*\n* We don't want to talk to two processes\
+    \ at the same time\n */\n if (Device_Open)\n    return -EBUSY;\n\nDevice_Open++;\n\
+    \n  /*\n* Initialize the message\n */\n Message_Ptr = Message;\n try_module_get(THIS_MODULE);\n\
+    \ return SUCCESS;\n}\n\n```\n\n```\nstatic int device_release(struct inode *inode,\
+    \ struct file *file)\n#ifdef DEBUG\n    printk(KERN_INFO \"device_release(%p,%p)\\\
+    n\", inode, file);\n#endif\n```\n\n```\n  /*\n* We're ready now for our next caller\n\
+    \ */\n Device_Open--;\n\nmodule_put(THIS_MODULE);\n return SUCCESS;\n}\n```\n\n\
+    ```\n/*\n* This function is called whenever a process has already opened the\n\
+    * device file attempts to read from it.\n */\nstatic ssize_t device_read(struct\
+    \ file *file, \n    /*    /* see include/linux/fs.h */\n    char __user *buffer,\
+    \ /* buffer to be */\n    /* filled with data */\n```\n\n# Chapter 7. Talking\
+    \ To Device Files\n\n42"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nsize_t length,        \
+    \   /* length of the buffer */\nloff_t * offset);                    */\n\n/*\n\
+    \ * Number of bytes actually written to the buffer\n */\nint bytes_read = 0;\n\
+    \n#ifdef DEBUG\nprintk(KERN_INFO \"device_read(%p,%p,%d)\\n\", file, buffer, length);\n\
+    #endif\n\n/*\n * If we're at the end of the message, return 0\n * (which signifies\
+    \ end of file)\n */\nif (*Message_Ptr == 0) {\n    return 0;\n}\n\n/*\n * Actually\
+    \ put the data into the buffer\n */\nwhile (length && *Message_Ptr) {\n\n/*\n\
+    \ * Because the buffer is in the user data segment,\n * not the kernel data segment,\
+    \ assignment wouldn't\n * work. We have to use put_user\n * copies data from the\
+    \ kernel data segment to the\n * user data segment.\n */\n    if (put_user(*(Message_Ptr++),\
+    \ buffer++))\n        length--;\n    bytes_read++;\n}\n\n#ifdef DEBUG\nprintk(KERN_INFO\
+    \ \"Read %d bytes, %d left\\n\", bytes_read, length);\n#endif\n/*\n * Read functions\
+    \ are supposed to return the number\n * of bytes actually inserted into the buffer\n\
+    \ */\nreturn bytes_read;\n};\n```\n\n```\n/* This function is called when somebody\
+    \ tries to\n * write into our device file.\n */\nstatic ssize_t\ndevice_write(struct\
+    \ file *file, const char __user *buffer, size_t length, loff_t *offset)\n{\n \
+    \   int i;\n\n#ifdef DEBUG\nprintk(KERN_INFO \"device_read(%p,%s,%d)\", file,\
+    \ buffer, length);\n#endif\n\n    for (i = 0; i < length && i < BUF_LEN; i++)\n\
+    ```\n\nChapter 7. Talking To Device Files"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nget_user(Message[i], buffer\
+    \ + i);\n\nMessage_Ptr = Message;\n```\n\n> /*\n * Again, return the number of\
+    \ input characters used\n */\nreturn i;\n\nThis function is called whenever a\
+    \ process tries to do an ioctl on our device file. We get two extra parameters\
+    \ (additional to the inode and file structures, which all devices get): the number\
+    \ of the ioctl called and the parameter given to the ioctl function.\n\nIf the\
+    \ ioctl is write or read/write (meaning output is returned to the calling process),\
+    \ the ioctl returns the output of this function.\n\n```\nint device_ioctl(struct\
+    \ inode *inode, /* see include/linux/fs.h */\nstruct file *file, /* */nunsigned\
+    \ int ioctl_num, /* number and param for ioctl */\n```\n\n```\nint i;\nchar *temp;\n\
+    char *ch;\n\nunsigned long ioctl_param)\n```\n\n```\nSwitch according to the ioctl\
+    \ call\nwitch (ioctl_num) {\ncase IOCTL_SET_MSG:\n```\n\n+   * Receive a pointer\
+    \ to a message (in user space) and set that\n* to be the device's message. Get\
+    \ the parameter given to\n* ioctl by the process.\n\n```\ntemp = (char *)ioctl_param;\n\
+    ```\n\n+   * Find the length of the message\n\n```\nget_user(ch, temp);\nfor (i\
+    \ = 0; ch && i < BUF_LEN; i++, temp++);\nget_user(ch, temp);\n```\n\n```\ndevice_write(file,\
+    \ (char *)ioctl_param, i, 0);\nbreak;\n```\n\n+   * Give the current message to\
+    \ the calling process\n* the parameter we get is a pointer, fill it.\n\n```\n\
+    i = device_read(file, (char *)ioctl_param, 99, 0);\n```\n\n+   * Put a zero at\
+    \ the end of the buffer, so it will be\n* properly terminated\n\n# Chapter 7.\
+    \ Talking To Device Files"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\nput_user(\\\\0', (char *)ioctl_param + i);\n  break;\n```\n\n```\ncase\
+    \ IOCTL_GET_NHY_BYTE:\n/*\n * ioctl is both input (ioctl_param) and\n * output\
+    \ (the return value of this function)\n */\nreturn Message[ioctl_param];\n  break;\n\
+    ```\n\n```\n}\nreturn SUCCESS;\n}\n```\n\n```\n/* Module Declarations */\n```\n\
+    \n```\n/*\n * This structure will hold the functions to be called\n * when a process\
+    \ does something to the device we\n * created. Since a pointer to this structure\
+    \ is kept in\n * the device table, it can't be local to\n * init_module, NULL\
+    \ is for unimplemented functions.\n */\n```\n\n```\nstruct file_operations Fops\
+    \ {\n  .read = device_read,\n  .write = device_write,\n  .ioctl = device_ioctl,\n\
+    \  .open = device_open,\n  .release = device_release, /* a.k.a. close */\n};\n\
+    ```\n\n```\n/*\n * Initialize the module Register the character device\n */\n\
+    ```\n\n```\nint init_module() {\n  int ret_val;\n  /*\n * Register the character\
+    \ device (atleast try)\n */\n  ret_val = register_chrrdev(MAJOR_NUM, DEVICE_NAME,\
+    \ &Fops);\n  /*\n * Negative values signify an error\n */\n  if (ret_val < 0)\
+    \ {\n    printk(KERN_ALERT \"%s failed with %d\\n\",\n           \"Sorry, registering\
+    \ the character device \\ ret_val);\n    return ret_val;\n  }\n}\n```\n\n```\n\
+    printk(KERN_INFO \"%s major device number is %d.\\n\",\n       \"Registration\
+    \ is a success\", MAJOR_NUM);\nprintk(KERN_INFO \"If you want to talk to the device\
+    \ driver,\\n\", \"\\nprintk(KERN_INFO \"you'll have to create a device file. \\\
+    n\", \"\\nprintk(KERN_INFO \"We suggest you use init.\\n\", \"\\nprintk(KERN_INFO\
+    \ \"mkmod %s c %d 0\\n\", DEVICE_FILE_NAME, MAJOR_NUM);\nprintk(KERN_INFO \"The\
+    \ device file name is important, because\\n\", \"\\nprintk(KERN_INFO \"The ioctl\
+    \ program assumes that's the\\n\", \"\\nprintk(KERN_INFO \"file you'll use init.\\\
+    n\", \"\");\n```\n\nChapter 7. Talking To Device Files"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nreturn 0;\n/*\n * Cleanup\
+    \ - unregister the appropriate file from /proc\n */\nvoid cleanup_module() {\n\
+    \    int ret;\n\n    /*\n     * Unregister the device\n     */\n    ret = unregister_chdev(MAJOR_NUM,\
+    \ DEVICE_NAME);\n\n    /*\n     * If there's an error, report it\n     */\n  \
+    \  if (ret < 0)\n        printk(KERN_ALERT \"Error: unregister_chdev: %d\\n\"\
+    , ret);\n}\n```\n\n# Example 7–2. chardev.h\n\n```\n/*\n * chardev.h - the header\
+    \ file with the ioctl definitions.\n * The declarations here have to be in a header\
+    \ file\n```\n\n# Chapter 7. Talking To Device Files"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n/* /\n *\n Get the message\
+    \ of the device driver\n * /\n#define IOCTL_GET_MSG _IOR(MAJOR_NUM, 1, char *)\n\
+    \ * /\n* This IOCTL is used for output, to get the message\n* of the device driver.\
+    \ However, we still need the\n* buffer to place the message in be input,\n* as\
+    \ it is allocated by the process.\n* /\n```\n\n```\n/* /\n Get the n-th byte of\
+    \ the message\n * /\n#define IOCTL_GET_NTH_BYTE _IOW(MAJOR_NUM, 2, int)\n * /\n\
+    * The IOCTL is used for both input and output. It\n* receives from the user a\
+    \ number, n, and returns\n* Message[n].\n* /\n```\n\n```\n/* /\n Get the name\
+    \ of the device file\n * /\n#define DEVICE_FILE_NAME \"char_dev\"\n\n#endif\n\
+    ```\n\nExample 7–3. ioctlc\n\n```\n* ioctl.c - the process to use ioctl's to control\
+    \ the kernel module\n *\n Until now we could have used cat for input and output.\
+    \ But now\n* we need to do ioctl's, which require writing out our own process.\n\
+    * /\n```\n\n```\n* device specifications, such as ioctl numbers and the\n* major\
+    \ device file.\n* #include \"chardev.h\"\n```\n\n```\n#include <stdio.h>\n#include\
+    \ <stdlib.h>\n#include <fcntl.h>\n#include <unistd.h>\n#include <sys/ioctl.h>\n\
+    /* open */\n/* exit */\n/* ioctl */\n```\n\n```\n* Functions for the ioctl calls\n\
+    * /\n```\n\n```\nioctl_set_msg(int file_desc, char *message)\n{\n    int ret_val;\n\
+    \n    ret_val = ioctl(file_desc, IOCTL_SET_MSG, message);\n}\n```\n\nChapter 7.\
+    \ Talking To Device Files\n\n47"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\nif (ret_val < 0) {\n    printf(\"ioctl_set_msg failed:%d\\n\", ret_val);\n\
+    \    exit(-1);\n}\n```\n\n```\nioctl_get_msg(int file_desc) {\nint ret_val;\n\
+    char message[100];\n```\n\n+   * Warning - this is dangerous because we don't\
+    \ tell the kernel far it's allowed to write, so it\n* might overflow the buffer.\
+    \ In a real production\n* program, we would have used two ioctls one to tell\n\
+    * the kernel buffer length and another to give\n* it the buffer to fill\n\n```\n\
+    ret_val = ioctl(file_desc, IOCTL_GET_MSG, message);\n\nif (ret_val < 0) {\n  \
+    \  printf(\"ioctl_get_msg failed:%d\\n\", ret_val);\n    exit(-1);\n}\n```\n\n\
+    ```\nprintf(\"get msg message:%s\\n\", message);\n```\n\n```\nioctl_get_nth_byte(int\
+    \ file_desc) {\nint i;\nchar c;\nprintf(\"get_nth_byte message:%s\\\");\n```\n\
+    \n```\ni = 0;\ndo {\n    c = ioctl(file_desc, IOCTL_GET_NTH_BYTE, i++);\n\n  \
+    \  if (c < 0) {\n        printf(\"ioctl_get_nth_byte failed at the %d'th byte:%d\\\
+    n\", i);\n        exit(-1);\n    }\n\n    putchar(c);\n} while (c != 0);\nputchar(\"\
+    \\n\");\n```\n\n```\n/*\nMain - Call the ioctl functions\n*/\n```\n\n```\nmain()\
+    \ {\nint file_desc, ret_val;\nchar *msg = \"Message passed by ioctl\\n\";\n\n\
+    file_desc = open(DEVICE_FILE_NAME, 0);\nif (file_desc < 0) {\n```\n\n# Chapter\
+    \ 7. Talking To Device Files"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\nprintf(\"Can't open device file: %s\\n\", DEVICE_FILE_NAME);\n    exit(-1);\n\
+    \nioctl_get_nth_byte(file_desc);\nioctl_get_msg(file_desc);\nioctl_set_msg(file_desc,\
+    \ msg);\n\n    close(file_desc);\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# # Chapter 8. System Calls
+
+
+    # ## 8.1. System Calls
+
+
+    So far, the only thing we''ve done was to use well defined kernel mechanisms to
+    register /proc files and device handlers. This is fine if you want to do something
+    the kernel programmers thought you''d want, such as write a device driver. But
+    what if you want to do something unusual, to change the behavior of the system
+    in some way? Then, you''re on your own.
+
+
+    This is where kernel programming gets dangerous. While writing the example, I
+    killed the open () system call. This meant I couldn''t open any files, I couldn''t
+    run any programs, and I couldn''t shutdown the computer. I had to pull the power
+    switch. Luckily, no files died. To ensure you don''t lose any files either, please
+    run sync before you insmod and rmmod.
+
+
+    About /proc files, forget device files. They''re just minor details. The real
+    process to kernel communication mechanism, the one used by processes, is system
+    calls. When a process requests a service from the kernel (such as opening a file,
+    forking to a new process, or requesting more memory), this is the mechanism. If
+    you want to change the behaviour of the kernel in interesting ways, this is the
+    place to do it. By the way, if you want to see which system calls your programs,
+    run trace <arguments>.
+
+
+    In general, a process is not supposed to access the kernel. It can''t access kernel
+    memory and it can''t call kernel functions. The hardware of the CPU enforces this
+    (that''s the reason why it''s ''protected mode'').
+
+
+    System calls are an exception to this rule. What happens if the process registers
+    the kernel with the appropriate values and calls a special instruction which jumps
+    to a predefined location in the kernel (of course, that location is readable by
+    user processes, it is not writable by them). Under Intel CPUs, this is done by
+    means of interrupt 0x80. The hardware ensures that once you jump to this location,
+    you are no longer in restricted mode, but by operating the system kernel — and
+    therefore you''re allowed to do whatever you want.
+
+
+    The location in which a process can jump is called system_call. The procedure
+    at that location the system number, tells the kernel what process was requested.
+    Then it looks at the table of system calls (sys_call_table) to see the address
+    of the kernel function to call. Then it calls the function, and returns, it does
+    a system check and returns to the process (or to a different process, if the process
+    times out). If you want to read this code, it''s at the source file arch/$architecture$/kernel/entry.S
+    at the line ENTRY(system_call).
+
+
+    So, if we want to change a certain system call works, what we need to do is to
+    write our own function to implement it (usually by adding a bit of our code, and
+    calling the original function) and change the pointer at sys_call_table to point
+    to our function. Because we might be removed later and we don''t want to lose
+    the system in an unstable state, it''s important for cleanup_module to restore
+    to its original state.
+
+
+    The source code here is an example of such a kernel module. We want to ''spy''
+    on a certain user, and to print() a message whenever that user opens a file. To
+    this end, we replace the system call to open a file with our own, called our_sys_open.
+    This function checks the uid (id) of the current process, and if it is equal to
+    the uid we spy on, it print() to display the name of the file to be opened. Then,
+    either way, it calls the original () function with the same parameters, to actually
+    open the file.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nThe init_module function replaces\
+    \ the location in sys_call_table and keeps the original pointer in a variable.\
+    \ The cleanup_module function uses variable to restore everything back to normal.\
+    \ This is necessary because of the possibility of two kernel modules changing\
+    \ the same system call. Imagine we have two kernel modules, A and B. A's system\
+    \ call will be A_open and B's will be B_open. When A is inserted into the kernel,\
+    \ the system call is replaced with A_open, which will be the original sys_open\
+    \ when it's. Next, B is inserted into the kernel, which replaces the system call\
+    \ with B_open, which will be the original system call, A_open, when it's done.\n\
+    \nNow, if B is removed, everything will be well——it simply restore the system\
+    \ call to A_open, which calls the original. However, if A is removed and B is\
+    \ removed, the system will crash. A removal will restore the system call to the\
+    \ original, sys_open, cutting B out of the loop. Then, when B is removed, it will\
+    \ restore the system call to it A_open, which is no longer in memory. At first\
+    \ glance, it could solve this particular problem by checking if the system call\
+    \ is equal to our function and if not changing it (so B won't change the system\
+    \ call when it's removed), but that will cause even worse problem. When A is removed,\
+    \ it sees that the system call changed to B_open so that there is no longer pointing\
+    \ to A_open, so it won't restore to sys_open before it is removed from memory.\n\
+    \nUnfortunately, B will still try to call A_open which is no longer exported,\
+    \ so that without removing B the system would crash.\n\nNote that all the related\
+    \ make syscall sys_call_table infeasible for production use. In order to keep\
+    \ from doing potential harmful effects sys_call is no longer exported. This means,\
+    \ if you want to do more than a dry run of this experiment, you will have to patch\
+    \ your current kernel in order to have it. The example directory you will find\
+    \ README and the path. As you can imagine, such modifications not to be taken\
+    \ lightly. Do not try this on valuable systems (systems that you do not own –\
+    \ cannot restore easily). You'll need to get the complete sourcecode of this guide\
+    \ as a tarball in order to get the path and the README. Depending on your kernel\
+    \ version, you might even need to hand apply the path. Still here? Well, so is\
+    \ this chapter. If Wyle E. Coyote is a kernel hacker, this would be the first\
+    \ thing you'd try ;\n\n# 8–1. syscall.c\n\n```\n/\n* syscall.c\n *\nSystem call\
+    \ \"stealing\" sample.\n/\n```\n\n```\n/\n* Copyright (C) 2001 by Peter Jay Salzman\n\
+    */\n```\n\n```\n/\n* The necessary header files\n*/\n```\n\n```\n/\n* Standard\
+    \ in kernel modules\n#include <linux/kernel.h>      / * We're doing kernel */\n\
+    #include <linux/module.h>      / * Specifically, a module, +\n#include <linux/moduleparam.h>\
+    \ / * which will have params *\n#include <linux/unistd.h>      / * The list of\
+    \ system calls */\n/\n```\n\n# Chapter 8. System Calls\n\n91"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# # The Linux Kernel Module Programming Guide
+
+
+    +   * For the current (process) structure, we need
+
+    * this to know the current user is.
+
+    *
+
+    #include <linux/sched.h>
+
+    #include <asm/uaccess.h>
+
+
+    ```
+
+    /*
+
+    * The system call table (a table of functions). We
+
+    * just define this as external, and the kernel will
+
+    * fill it up for us when we are insmoded
+
+    * sys_call_table is no longer exported in 2.6.x kernels.
+
+    * If you really want to try this DANGEROUS module you will
+
+    * have to apply the supplied patch against your current kernel
+
+    * and recompile it.
+
+    */
+
+    extern void *sys_call_table[];
+
+    ```
+
+
+    ```
+
+    /*
+
+    * UID we want to spy on -- will be filled from the
+
+    * command line
+
+    */
+
+    static int uid;
+
+    module_param(uid, int, 0664);
+
+    ```
+
+
+    ```
+
+    /*
+
+    * A pointer to the original system call. The reason
+
+    * we keep this, rather than call the original function
+
+    * (sys_open), is because somebody else might have
+
+    * replaced the system call before. Note that this
+
+    * is not 100% safe, because if another module
+
+    * registers sys_open before us, then when we are inserted
+
+    * we''ll call the function in that module - and it
+
+    * might be removed before we are.
+
+    */
+
+    ```
+
+
+    ```
+
+    /*
+
+    * Another reason for this is that we can''t get sys_open.
+
+    * It''s a static variable, so it is not exported.
+
+    */
+
+    asmlinkage int (*original_call)(const char *, int, int);
+
+    ```
+
+
+    ```
+
+    /*
+
+    * The function we replace sys_open (the function
+
+    * called when you call the open system call with. To
+
+    * find the exact prototype, with the number and type
+
+    * of arguments, we find the original function first
+
+    * (int (*orig_open)(...))
+
+    */
+
+    ```
+
+
+    ```
+
+    /*
+
+    * In theory, this means that we''re tied to the
+
+    * current version of the kernel. In practice, the
+
+    * system calls almost never change (it would wreck havoc)
+
+    * and require programs to be recompiled, since the system
+
+    * calls are the interface between the kernel and the
+
+    * processes.
+
+    */
+
+    ```
+
+
+    ```
+
+    asmlinkage int our_sys_open(const char *filename, int flags, int mode)
+
+    {
+
+    int i = 0;
+
+    char *ch;
+
+    /*
+
+    * Check if this is the user we''re spying on
+
+    */
+
+    }
+
+    ```
+
+
+    # Chapter 8. System Calls'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nif (uid == current->uid)\
+    \ {\n  /*\n   * Report the file, if relevant\n   */\n  printf(\"Opened file by\
+    \ %d\", uid);\n  do {\n    get_user(ch, filename + i);\n    i++;\n    printf(\"\
+    %c\", ch);\n  } while (ch != 0);\n  printf(\"\\n\");\n}\n```\n\n```\n/*\n * Call\
+    \ the original sys_open - otherwise, we lose\n * the ability to open files\n */\n\
+    return original_call(filename, flags, mode);\n```\n\n```\n/*\n * Initialize the\
+    \ module - replace the system call\n */\nint init_module() {\n```\n\n```\n/*\n\
+    \ * Warning - too late for it now, but maybe for\n * next time...\n */\nprintk(KERN_ALERT\
+    \ \"I'm dangerous. I hope you did a **\");\nprintk(KERN_ALERT \"%sync before you\
+    \ insmoded me.\\\\n\");\nprintk(KERN_ALERT \"My counterpart, cleanup_module(),\
+    \ is even)\"\");\nprintk(KERN_ALERT \"More dangerous.\\n\");\nprintk(KERN_ALERT\
+    \ \"you value your file system, it will **\");\nprintk(KERN_ALERT \"Be \\\\sync\
+    \ rmodmod *\\n*\");\nprintk(KERN_ALERT \"When you remove this module.\\\\n*\"\
+    );\n```\n\n```\n/*\n * Keep a pointer to the original function in\n * original_call,\
+    \ and then replace the system call\n * in the system call table with our_sys_open\n\
+    \ */\noriginal_call = sys_call_table[__NR_OPEN];\nsys_call_table[__NR_OPEN] =\
+    \ our_sys_open;\n```\n\n```\n/*\n * To get the address of the function for system\n\
+    \ * call foo, go to sys_call_table[__NR_foo].\n */\nprintk(KERN_INFO \"Spying\
+    \ on UID:%d\\n\", uid);\nreturn 0;\n```\n\n```\n/*\n * Cleanup register the appropriate\
+    \ file from /proc\n */\nvoid cleanup_module() {\n```\n\n```\n/*\n * Return the\
+    \ system call back to normal\n */\n```\n\n# Chapter 8. System Calls\n\n53"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nif (sys_call_table[__NR_open]\
+    \ != our_sys_open) {\n    printk(KERN_ALERT \"somebody else played with the \"\
+    );\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# Chapter 9. Blocking Processes\n\n# 9.1. Blocking Processes\n\nWhat do you\
+    \ do when somebody asks you for something you can't do right? If you're a human\
+    \ being and you're bothered by a human being, the only thing you can say: \"Not\
+    \ right now, I'm busy. Go away\". If you're a kernel module and you're bothered\
+    \ by a process, you have another possibility. You can put the process to sleep\
+    \ until you can service it. After all, processes are put to sleep and the woken\
+    \ up until all the time (that's when multiple processes appear to run on the same\
+    \ time on a CPU).\n\nThis module is an example of this. The file (/proc/sleep)\
+    \ can be only opened by a single process at a time. If the file is already open,\
+    \ the kernel calls wait_event_interruptible[2]. This function changes the status\
+    \ of the task (a task is the kernel data structure which holds information about\
+    \ a process and the system calls it, if any) to TASK_INTERRUPTIBLE, which means\
+    \ the task will not run until it is woken up, and adds to WaitQueue, the queue\
+    \ of tasks waiting to access the file. Then, the function calls the scheduler\
+    \ to context switch to a different process, which has some use for the CPU.\n\n\
+    When a process is done with the file, it closes it, and module_close fails (there's\
+    \ no mechanism to wake up one of them). It returns the process which just closed\
+    \ the file can continue to run. The scheduler decides that the process had no\
+    \ advantage and gives control of the CPU to another. Eventually, one of the processes\
+    \ that was in the queue will be given control of the CPU by the scheduler. It\
+    \ starts at the point right after the call to module_interruptible_sleep[3]. It\
+    \ can then proceed to set a global variable to tell all the other processes that\
+    \ the file is still open and go on with it. When the other processes get a piece\
+    \ of the CPU, they'll see that global variable and go back to sleep.\n\nSo we'll\
+    \ use tail to keep the file in the background, while you want to access it with\
+    \ another process (in the background, so that we do not switch to a different\
+    \ v). As soon as the first background process is killed with %1, the second is\
+    \ woken up, is able to access the file and finally terminates.\n\nTo make life\
+    \ more interesting, module_close doesn't have a monopoly on waking the processes\
+    \ which want to access the file. A signal such as Ctrl+c (SIGINT) can also wake\
+    \ up a process. [14] In this case, we want to return -EINTR immediately. This\
+    \ is important so users can, if they kill the process before it receives it.\n\
+    \nThere is one more point to remember. Sometimes processes don't want to sleep,\
+    \ they want either get what they want immediately, or to be told it cannot. Such\
+    \ processes use the O_NONBLOCK flag when opening the file. The kernel is supposed\
+    \ to respond with the error code -EAGAIN. The program cat_nonblock, available\
+    \ in the source directory for this file, can be used to open a file with O_NONBLOCK.\n\
+    \n```\nhostname:~/kmpg-examples/09-BlockingProcesses# insmod sleep.ko\nhostname:~/kmpg-examples/09-BlockingProcesses#\
+    \ cat_nonblock /proc/sleep\nLast input:\nhostname:~/kmpg-examples/09-BlockingProcesses#\
+    \ tail -f /proc/sleep & \nLast input:\nhostname:~/kmpg-examples/09-BlockingProcesses#\
+    \ \nLast input:\nhostname:~/kmpg-examples/09-BlockingProcesses# \nLast input:\n\
+    hostname:~/kmpg-examples/09-BlockingProcesses# \nLast input:\n```\n\nChapter 9.\
+    \ Blocking Processes\n\n95"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\nLast input:\ntail :/proc/sleep:\
+    \ file truncated\n[1] 6540\nhostname=:lkmp-examples/09-BlockingProcesses# cat_noblock\
+    \ /proc/sleep\nOpen would block\nhostname=:lkmp-examples/09-BlockingProcesses#\
+    \ kill %1\n[1]+ Terminated\ntail -f /proc/sleep\nhostname=:lkmp-examples/09-BlockingProcesses#\
+    \ cat_noblock /proc/sleep\nLast input:\nhostname=:lkmp-examples/09-BlockingProcesses#\n\
+    \nExample 9-1. sleep.c\n\n```\n/*n sleep.c - create a /proc file, and if several\
+    \ processes try to open it at\n* the same time, but all one to sleep\n*/\n```\n\
+    \n```\n#include <linux/kernel.h>\n#include <linux/module.h>\n#include <proc/fs.h>\n\
+    #include <linux/sched.h>\n\n/* We're doing kernel work */\n* Specifically, a module\
+    \ */\n* Necessary because we use proc fs /\n* For putting processes to sleep\n\
+    waking them up */\n```\n\n```\n#include <asm/user.h>\n\n/* / for get_user and\
+    \ put_user */\n```\n\n```\n/*\nThe module's file functions\n```\n\n+   * Here\
+    \ we keep the last message received, to prove that we can process our\n* input\n\
+    \n```\n#define MESSAGE_LENGTH 80\nstatic char Message[MESSAGE_LENGTH];\n```\n\n\
+    ```\nstatic struct proc_dir_entry *Our_Proc_File;\n#define PROC_ENTRY_FILENAME\
+    \ \"sleep\"\n```\n\n+   * Since we use the file operations, we / * see include/linux/fs.h\
+    \ /\n* output provisions - we have to use a standard read function, /* * which\
+    \ is this\n* function\n\n+   /*\n* Return 0 to signify end of file - that we have\
+    \ nothing\n* more to stay at this point.\n*/\n\n```\nif (finished) {\n\t\tfinished\
+    \ = 0;\n\t\treturn 0;\n```\n\nChapter 9. Blocking Processes\n\n56"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n/*\n* If you don't understand\
+    \ this by now, you're hopeless as a kernel\n* programmer.\n*/\nprintf(message,\
+    \ \"Last input:%s\\n\", Message);\nfor (int i = 0; i < len && message[i]; i++)\n\
+    \    put_user(message[i], buf + i);\n\nfinished = _1; /* Return the number of\
+    \ bytes \"read\" */\nreturn i;\n```\n\n```\n/*\n* This function receives input\
+    \ from the user when the user writes to /proc\n* file.\n*/nstatic ssize_t module_input(struct\
+    \ file *file, /* The file itself */\n    const char *buf, /* The buffer with input\
+    \ * */\n    size_t length, /* The buffer's length */\n    loff_t *offset) /* offset\
+    \ to file - ignore * */\n{\n    int i;\n```\n\n```\n/*\n* Put the input into Message,\
+    \ where module_output will later be\n* able to use it\n*/\nfor (int i = 0; i <\
+    \ MESSAGE_LENGTH - 1 && i < length; i++)\n    get_user(Message[i], buf + i);\n\
+    \n/*\n* We want a standard, zero terminated string\n*/\nMessage[i] = '\\0';\n\n\
+    /*\n* We need to return the number of input characters used\n*/\nreturn i;\n```\n\
+    \n```\n/*\n* If the file is currently opened by somebody\n*/\nint Already_Open\
+    \ = 0;\n```\n\n```\n/*\n* Called when the /proc file is opened\n*/\nstatic int\
+    \ module_open(struct inode *inode, struct file *file)\n{\n    /* If the file's\
+    \ flags include O_NONBLOCK, it means the process doesn't\n     * want to wait\
+    \ for the file. In this case, if the file is already\n     * open, we should fail\
+    \ with -EAGAIN, meaning 'you'll have to try\n     * again', instead of blocking\
+    \ a process which would rather stay awake. \n     */\n```\n\n# 9. Blocking Processes"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# The Linux Kernel Programming Guide\n\n```\nif ((file->f_flags & _O_NONBLOCK)\
+    \ && Already_Open)\n    return -EAGAIN;\n```\n\n```\n/*\n* This is the correct\
+    \ place for try_module_get(THIS_MODULE)\n* if a process is in the loop, which\
+    \ is within the kernel module,\n* the kernel module must not be removed.\n*/\n\
+    ```\n\n```\ntry_module_get(THIS_MODULE);\n```\n\n```\n/*\n* If the file is already\
+    \ open, wait until it isn't\n*/\n```\n\n```\nwhile (Already_Open) {\n    int i,\
+    \ is_sig = 0;\n```\n\n```\n/*\n* This function puts the current process, including\
+    \ any system\n* calls, such as us, to sleep. Execution will be resumed right\n\
+    * after the function call, either because module_close does that, when the file\n\
+    * is closed or when by signal, such as Ctrl-C, is sent\n* to the process\n*/\n\
+    ```\n\n```\nwait_interruptible(WaitQ, !Already_Open);\n```\n\n```\n/*\n* If we\
+    \ wake because we got a signal we're not blocking,\n* return -EINTR (fail the\
+    \ system call).  This allows processes\n* to be killed or stopped.\n*/\n```\n\n\
+    +   * Emmanuel Papirakis:\n\n+   * This is a little update to work with 2.2.*\
+    \  Signals now are contained in\n* two words (64 bits) and are stored in a structure\
+    \ that contains an array of\n* two unsigned longs. We now have to make 2 checks\
+    \ in if.\n\n+   * Ori Pomerantz:\n* Nobody told me they'll never use more than\
+    \ 64 bits, or that this book\n* won't be for the use of a Linux with a width size\
+    \ of 16 bits. This code\n* would work in any case.\n\n```\nfor (int i = 0; i <\
+    \ _NSIG_WORDS && is_sig; i++) {\n    is_sig = current->pending.signal[i] & -current->\n\
+    \    blocked.signal[i]);\"\n```\n\n```\nif (is_sig) {\n    /*\n* It is important\
+    \ to put module_put(THIS_MODULE), here\n* because for processes the one is interrupted\n\
+    * there will never be a corresponding file. If we\n* don't decrement the usage\
+    \ count here, we will be\n* left with a positive usage count which we have no\n\
+    * way to bring down to zero, giving us an immortal\n* module, which can only be\
+    \ killed by rebooting\n* the machine.\n*/\n}\n```\n\nChapter 9. Blocking Processes\n\
+    \n58"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nmodule_put(THIS_MODULE);\n\
+    \    return -EINTR;\n```\n\n```\n/*\n * If we got here, Already_Open must be zero\n\
+    \ */\n```\n\n```\n/*\n * Open the file\n */\nAlready_Open = 1;\n    return 0;\
+    \ /* Allow the access */\n```\n\n```\n/*\n * Called when the /proc file is closed\n\
+    \ */\nint module_close(struct inode *inode, struct file *file)\n{\n```\n\n```\n\
+    /*\n * Set Already_Open to zero, one of the processes in the WaitQ will\n * be\
+    \ able to set Already_Open back to one and open the file. All\n * the other processes\
+    \ will be called when Already_Open is back to one,\n * they'll go back to sleep.\n\
+    \ */\n    Already_Open = 0;\n```\n\n```\n/*\n * Wake up all the processes in WaitQ,\
+    \ so if anybody is waiting for the\n * file, they can have it.\n */\n    wake_up(&WaitQ);\n\
+    ```\n\n```\nmodule_put(THIS_MODULE);\n\n    return 0; /* success */\n```\n\n```\n\
+    /*\n * This function decides whether to allow an operation (return zero) or not\n\
+    \ * allow it (return a non-zero which indicates why it is not allowed).\n *\n\
+    \ * The operation can be one of the following values:\n * 0 - Execute (run the\
+    \ \"file\" - meaningless in our case)\n * 2 - Write (input to the kernel module)\n\
+    \ * 4 - Read (output from the kernel module)\n *\n * This is the real function\
+    \ that checks file permissions. The permissions\n * returned by ls -l are for\
+    \ reference only, and can be overridden here.\n */\n```\n\n```\nstatic int module_permission(struct\
+    \ inode *inode, int op, struct nameidata *nd)\n{\n    /*\n * We allow everybody\
+    \ to read our module, but only root (uid 0)\n * may may write to it\n */\n   \
+    \ if (op == 4 || (op == 2 && current->euid == 0))\n        return 0;\n```\n\n\
+    ```\n/*\n```\n\n# Chapter 9. Blocking Processes\n\n59"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n* If it's anything else, access is denied\n*/\nreturn -EACCES;\n```\n\n\
+    ```\n/*\n* Structures to register as the /proc file, with pointers to all the\
+    \ relevant\n* functions.\n*/\n```\n\n```\n/*\n* File operations for our proc file.\
+    \ This is where we place pointers to all\n* the functions called when somebody\
+    \ tries to do something to our file. NULL\n* means we don't want to deal with\
+    \ something.\n*/\n```\n\n```\nstatic struct file_operations File_Ops_4_Our_Proc_File\
+    \ = {\n    .read = module_output, /* \"read\" from the file */\n    .write = module_input,\
+    \ /* \"write\" to the file */\n    .open = module_open, /* called when the /proc\
+    \ file is opened *\n    .release = module_close, /* called when it's closed */\n\
+    };\n```\n\n```\n/*\n* Inode operations for our proc file. We need so we'll have\
+    \ somewhere to\n* specify the file operations structure we want to use, and the\
+    \ function we\n* use for permissions. It's also possible to specify functions\
+    \ to be called\n* for anything else could be done to an inode (although we don't\
+    \ bother,\n* we just put NULL).\n*/\n```\n\n```\nstatic struct inode_operations\
+    \ In_Ops_4_Our_Proc_File = {\n    .permission = module_permission, /* check for\
+    \ permissions */\n};\n```\n\n```\n/*\n* Module initialization and cleanup\n*/\n\
+    ```\n\n```\n/* Initialize the module - register the proc file\n*/\n```\n\n```\n\
+    int init_module() {\n\n    Our_Proc_File = create_proc_entry(PROC_ENTRY_FILENAME,\
+    \ 0644, NULL);\n\n    if (Our_Proc_File == NULL) {\n        remove_proc_entry(PROC_ENTRY_FILENAME,\
+    \ &proc_root);\n        printk(KERN_ALERT \"Error: Could not initialize /proc/test\\\
+    n\");\n        return -ENOMEM;\n    }\n\n    Our_Proc_File->owner = THIS_MODULE;\n\
+    \    Our_Proc_File->inode = &Inode_Ops_4_Our_Proc_File;\n    Our_Proc_File->fop\
+    \ = &File_Ops_4_Our_Proc_File;\n    Our_Proc_File->mode = S_IFREG | S_IRUGO |\
+    \ S_IWUSUSR;\n    Our_Proc_File->uid = 0;\n    Our_Proc_File->size = 80;\n\n \
+    \   printk(KERN_INFO \"/proc/test created\\n\");\n}\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nreturn 0;\n```\n\n```\n\
+    /\n* Cleanup - unregister our file from /proc. This could get dangerous if\n*\
+    \ there are still processes waiting in WaitQ, because they are inside our\n* open\
+    \ function, which will get unloaded. I'll explain how to avoid removal\n* of a\
+    \ kernel module in such a case in chapter 10.\n/\n```\n\n```\nvoid cleanup_module()\
+    \ {\n    remove_proc_entry(PROC_ENTRY_FILENAME, &proc_root);\n    printk(KERN_INFO,\
+    \ \"/proc/test removed\\n\");\n}\n```\n\n# Example 9-2. cat_noblock\n\n```\n*\
+    \ cat_noblock.c - open a file and display its contents, but exit rather than\n\
+    * wait for input */\n```\n\n```\n/* Copyright 1998 by Ori Pomerantz */\n```\n\n\
+    ```\n#include <stdio.h>      /* standard I/O */\n#include <fcntl.h>      /* for\
+    \ open */\n#include <unistd.h>     /* for read */\n#include <stdlib.h>     /*\
+    \ for exit */\n#include <errno.h>      /* for errno */\n\n#define MAX_BYTES 1024*4\n\
+    ```\n\n```\nmain(int argc, char *argv[]) {\n    int fd; /* The file descriptor\
+    \ for the file to read */\n    size_t bytes; /* The number of bytes read */\n\
+    \    char buffer[MAX_BYTES]; /* The buffer for the bytes */\n\n    /* Usage */\n\
+    \    if (argc != 2) {\n        printf(\"Usage: %s <filename>\\n\", argv[0]);\n\
+    \        puts(\"Reads the content of a file, but doesn't wait for input\\n\\n\
+    \        exit(-1);\n    }\n```\n\n```\n/* Open the file for reading in non blocking\
+    \ mode */\n    fd = open(argv[1], O_RDONLY | O_NONBLOCK);\n\n    /* If open failed\
+    \ */\n    if (fd == -1) {\n        if (errno == EAGAIN)\n            puts(\"Open\
+    \ would block\\n\\n        else\n            puts(\"Open failed\\n\\n        exit(-1);\n\
+    \    }\n}\n```\n\nChapter 9. Blocking Processes"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\n/* Read the file and output its contents */\ndo {\n    int i;\n\n    /*\
+    \ Read characters from the file */\n    bytes = read(fd, buffer, MAX_BYTES);\n\
+    \    \n    /* If there's an error, report it and die ie */\n    if (bytes == -1)\
+    \ {\n        if (errno == EAGAIN)\n            puts(\"Normally I'd block, but\
+    \ you told me not to*\");\n        else\n            puts(\"Another read error*\"\
+    );\n            exit(-1);\n    }\n\n    /* Print the characters */\n    if (bytes\
+    \ > 0) {\n        for(i=0; i<bytes; i++)\n            putchar(buffer[i]);\n  \
+    \  }\n\n    /* While there are no errors and the file isn't over */\n} while (bytes\
+    \ > 0);\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# # Chapter 10. Replacing Printks\n\n# ## 10.1. Replacing printk\n\nIn Section\
+    \ 1.2.1.2, I said that X and kernel module programming don't mix. That's true\
+    \ for developing kernel modules, but in actual, you want to be able to send messages\
+    \ to whichever tty[15] the command to load the module from:\n\nThe way this is\
+    \ done by using current, a pointer to the currently running task, to get the current\
+    \ task's structure. Then, we look inside that tty structure to find a pointer\
+    \ to a string write function, which we use to write a string to the tty:\n\n**Example\
+    \ 10-1. print_string**\n\n```\n* print_string.c - Send output to the tty we're\
+    \ running on, regardless if it's\n* through Xll, telnet, etc. We do this by printing\
+    \ the string to the tty\n* associated with the current task.\n\n#include <linux/kernel.h>\n\
+    #include <linux/module.h>\n#include <linux/init.h>\n#include <linux/sched.h> \
+    \     /* For current */\n#include <linux/tty.h>       /* For the tty declarations\
+    \ */\n#include <linux/version.h> /* For LINUX_VERSION_CODE */\n\nMODULE_LICENSE(\"\
+    GPL\");\nMODULE_AUTHOR(\"Peter Jay Salzman\");\n\nstatic void print_string(char\
+    \ *str)\n{\n    struct tty_struct *my_tty;\n\n    /*\n     * tty struct went into\
+    \ signal struct in 2.6.6\n     */\n    if ( LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,5)\
+    \ )\n        /*\n         * The tty for the current task\n         */\n      \
+    \  my_tty = current->tty;\n    } else {\n        /*\n         * The tty for the\
+    \ current task, for 2.6.6+ kernels\n         */\n        my_tty = current->signal->tty;\n\
+    \    }\n\n    /*\n     * If my_tty is NULL, the current task has no tty you can\
+    \ print to\n     * (ie, if it's a daemon). If so, there's nothing we can do.\n\
+    \     */\n    if (my_tty != NULL) {\n        /*\n         * my_tty->driver is\
+    \ a struct which holds the tty's functions,\n         */\n    }\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# # The Linux Kernel Module Programming Guide\n\n+   * one which (write) is\
+    \ used to write strings to the tty.\n* It can be used to take a string either\
+    \ from the user's\n* kernel's memory segment.\n* The function's lst parameter\
+    \ is the tty to write to,\n* because the same function would normally be used\
+    \ for all\n* tty's of a certain type. The 2nd parameter controls\n* whether the\
+    \ function receives a string from kernel\n* memory (false, ()) or from memory\
+    \ (true, non zero)\n* BTW: this param has been removed in Kernels: 2.6.9\n* The\
+    \ (2nd) 3rd parameter is a pointer to a string.\n* The (3rd) 4th parameter is\
+    \ the length of the string.\n* As you see below, sometimes it's necessary to use\n\
+    * preprocessor stuff to create code that works for different\n* kernel versions.\
+    \ The (naive) approach we've taken here\n* does not scale well. The right way\
+    \ to deal with this\n* is described in section of 2\n* linux/Documentation/SubmittingPatches\n\
+    \n```\n(my_tty-driver)->write(my_tty), /* itself *\n#if ( LINUX_VERSION_CODE <=\
+    \ KERNEL_VERSION(2,6,9) )\nreturn 0, /* Don't take the string\n    from user space\n\
+    */\n#endif\nstr, /* String\nstrlen(str); /* Length */\n```\n\n+   * ttys were\
+    \ originally hardware devices, which (usually)\n* strictly followed the ASCII\
+    \ standard. In ASCII, to move\n* a new line needs two characters, a carriage return\
+    \ and a\n* line feed. On Unix, the ASCII line feed is used for both\n* purposes\
+    \ so we can just \\n, it wouldn't have\n* a carriage return and the next line\
+    \ will start at the\n* column right after the line feed.\n* This is why text files\
+    \ are different between Unix and\n* MS Windows. In CF/M and derivatives, like\
+    \ MS-DOS and\n* MS Windows, the ASCII standard was strictly adhered to,\n* and\
+    \ therefore a newline requires both a LF and a CR.\n\n```\n#if ( LINUX_VERSION_CODE\
+    \ < KERNEL_VERSION(2,6,9) )\n    (my_tty-driver)->write(my_tty, \"\\015\\012\"\
+    , 2);\nelse\n    (my_tty-driver)->write(my_tty, \"\\015\\012\", 2);\n#endif\n\
+    ```\n\n```\nstatic int init_print_string_init(void)\n{\n    print_string(\"*The\
+    \ module has been inserted. Hello world!\");\n    return 0;\n}\n```\n\n```\nstatic\
+    \ void exit_print_string_exit(void)\n{\n    print_string(\"*The module has been\
+    \ removed. Farewell world!\");\n}\n```\n\nChapter 10. Replacing Printks"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nmodule_init(print_string_init);\n\
+    module_exit(print_string_exit);\n```\n\n# 10.2. Flashing keyboard LEDs\n\nIn certain\
+    \ conditions, you may desire a simpler and more direct way to communicate with\
+    \ the external world.\nFlashing keyboard LEDs can be such a solution: It is an\
+    \ immediate way to attract attention or to display a\nstatus condition. Keyboard\
+    \ LEDs are present on every hardware, they are always visible, they do not need\
+    \ any\nsetup, and their use is simple and non-intrusive,compared to writing to\
+    \ a tty or a file.\n\nThe following source code illustrates a minimal kernel module,\
+    \ when loaded, starts blinking the\nkeyboard LED until unloaded.\n\n# Example\
+    \ 10–2. kbleds\n\n```\n/*\n * kbleds.c - Blink keyboard leds until the module\
+    \ is unloaded.\n */\n\n#include <linux/module.h>\n#include <linux/config.h>\n\
+    #include <linux/init.h>\n#include                               /* For fs_console,\
+    \ MAX_NR_CONSOLES *\n#include <linux/tty.h>                            /* For\
+    \ KDSETLED */\n#include <linux/kd.h>\n#include <linux/struct.h>              \
+    \                 /* For vc_cons */\nMODULE_DESCRIPTION(Example module illustrating\
+    \ the use of Kernel LEDs.)\nMODULE_AUTHOR(\"Daniele Paolo Scaparazza\")\nMODULE_LICENSE(\"\
+    GPL2\");\n\nstruct timer_list my_timer;\nstruct tty_driver *my_driver;\nchar kbledstatus\
+    \ = 0;\n\n#define BLINK_DELAY      HZ/5\n#define ALL_LEDS_ON      0X07\n#define\
+    \ RESTORE_LEDS     0xFF\n```\n\n> /*\n * Function_timer_func blinks the keyboard\
+    \ LEDs periodically by invoking\n * command KDSETLED of ioctl() on the keyboard\
+    \ driver. To learn more about virtual\n * terminal ioctl operations, please see\
+    \ file:\n * /usr/src/drivers/vt_ioctl.c, function vtioctl().\n *\n * The argument\
+    \ to KDSETLED is alternatively set to 7 (thus causing the led\n * mode to be set\
+    \ to LED_SHOW_IOCTL, and all the leds are lit) to 0xFF\n * (any value above 7?\
+    \ switches the led mode to LED_SHOW_FLAGS, thus\n * the LEDs reflect the actual\
+    \ keyboard status). To learn more on this,\n * please see file:\n * /usr/src/drivers/char/keyboard.c,\
+    \ function setledstate()\n * */\n\n```\nstatic void my_timer_func(unsigned long\
+    \ ptr)\n{\n    int *pstatus = (int *)ptr;\n```\n\nChapter 10. Replacing Printks"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nif (*pstatus == ALL_LEDS_ON)\n\
+    \    *pstatus = RESTORE_LEDS;\nelse\n    *pstatus = ALL_LEDS_ON;\n\n(my_driver)->ioctl(vc_cons[fg_console].d->vc_tty,\
+    \ NULL, KDISETLED,\n    *pstatus);\n\nmy_timer.expires = jiffies + BLINK_DELAY;\n\
+    \    add_timer(&my_timer);\n```\n\n```\nstatic int __init kbbled_init(void)\n\
+    {\n    int i;\n    printk(KERN_INFO, \"kbbled: loading\\n\");\n    printk(KERN_INFO,\
+    \ \"kbbled: console is %x\\n\", fg_console);\n    for (i = 0; i < MAX_CONSOLES;\
+    \ i++) {\n        if (vc_cons[i].d->vc_tty)\n            printk(KERN_INFO, \"\
+    poet_atkm:%d-%u %%#u, tty %lu %n\",\n                i, i/i, vc_cons[i].d->vc_num,\n\
+    \                (unsigned long)vc_cons[i].d->vc_tty);\n        break;\n    }\n\
+    \    printk(KERN_INFO, \"kbbled: finished scanning consoles\\n\");\n```\n\n```\n\
+    my_driver = vc_cons[fg_console].d->vc_tty->driver;\nprintk(KERN_INFO, \"kbbled:\
+    \ tty driver manager %x\\n\", my_driver->magic);\n```\n\n+   * Set up the BLINK\
+    \ link timer the first time\ninit_timer(&my_timer);\nmy_timer.function = my_timer_func;\n\
+    my_timer.data = (unsigned long)&kbbledstatus;\nmy_timer.expires = jiffies + BLINK_DELAY;\n\
+    \    add_timer(&my_timer);\n\n```\nstatic void __exit kbbled_cleanup(void)\n{\n\
+    \    printk(KERN_INFO, \"kbbled: unloading...\\n\");\n    del_timer(&my_timer);\n\
+    \    (my_driver)->ioctl(vc_cons[fg_console].d->vc_tty, NULL, KDISETLED,\n    \
+    \    RESTORE_LEDS);\n```\n\n```\nmodule_init(kbbled_init);\nmodule_exit(kbbled_cleanup);\n\
+    ```\n\nIf none of the examples in this chapter fit your debugging there might\
+    \ yet some other tricks to try. Ever wondered CONFIG_LL_DEBUG in make menuconfig\
+    \ is good for if you activate that you get low level access to the serial port.\
+    \ This might not sound very powerful but if you patch kernel/printk.c or any other\
+    \ essential service to useprintk, making it possible to trace everything that\
+    \ your code does over a serial line. If you find yourself working to the netconsole\
+    \ architecture this is among the first things that should be implemented. Logging\
+    \ over a netconsole might also be worth a try.\n\n# Chapter 10. Replacing Printk"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# The Linux Kernel Module Programming Guide
+
+
+    While you have seen lots of stuff that can be used to aid debugging here, there
+    are some things to be aware of. Debugging is almost always intrusive. Adding debug
+    code can change the situation enough to make the bug seem to dissappear. Thus
+    you should try to keep debug code to a minimum and make sure it does not show
+    up in production code.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# # Chapter 11. Scheduling Tasks\n\n# ## 11.1. Scheduling Tasks\n\nVery often,\
+    \ we have \"housekeeping\" tasks which have to be done at a certain time, or so\
+    \ often. If the task is to be done by a process, we do it by putting it in the\
+    \ crontab file. If the task is to be done by a kernel module, we have two possibilities.\
+    \ The first is to put a process in the crontab file which will wake up the module\
+    \ by a system call when necessary, for example by opening a file. This is terribly\
+    \ inefficient, however--- we run a new process of crontab, read a new executable\
+    \ to memory, and all this to wake up a kernel module which is in memory away.\n\
+    \nInstead of doing that, we can create a function that will be called once for\
+    \ every timer interrupt. The way we do this is to create a task, held in a queue_struct,\
+    \ which will hold a pointer to the function. Then, we use queue_delayed_work to\
+    \ put that task on a list called my_workqueue, which is the list of tasks to be\
+    \ executed on the next timer interrupt. Because we want the function to keep being\
+    \ executed, we need to put it back on my_workqueue when called, for the next timer\
+    \ interrupt.\n\nThere's one more we need to remember here. When a module is removed\
+    \ by rmmod, its first reference count is checked. If it is zero, module_cleanup\
+    \ is called. Then, the module is removed from memory with all its functions. Things\
+    \ need to be shut down properly, or bad things will happen. See the code below\
+    \ how this can be in a safe way.\n\nExample 11-1. sched.c\n\n```\n* sched.c -\
+    \ schedule a function to be called on every timer interrupt.\n* Copyright (2001)\
+    \ by Peter Jay Salzman\n*/n\n* The necessary header files\n*/\n\n* Standard in\
+    \ kernel modules\n#include <linux/kernel.h>\n#include <linux/module.h>\n#include\
+    \ <linux/proc_fs.h>\n#include <linux/workqueue.h>\n#include <linux/sched.h>\n\
+    #include <linux/init.h>\n#include <linux/interrupt.h>\n/* We're doing kernel work\
+    \ */\n/* Specifically, a module */\n/* Necessary because we use the proc fs */\n\
+    /* We schedule tasks here */\n/* We need to put ourselves to sleep\n wake up later\
+    \ */\n/* For init and -exit */\n/* For irqreturn_ */\n\nstruct proc_dir_entry\
+    \ *Our_Proc_File;\n#define PROC_FILENAME \"sched\"\n#define MY_WORK_QUEUE_NAME\
+    \ \"Wqsched.c\"\n\n/* The number of times the timer interrupt has been called\
+    \ so far\n*/\nstatic int TimerIntrpt = 0;\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\nstatic void intrpt_routine(void\
+    \ *);\nstatic int die = 0;              /* set to 1 for shutdown */\n/*\n* The\
+    \ workqueue structure for this task, from workqueue.h\n */\nstatic struct workqueue_struct\
+    \ *my_workqueue;\nstatic struct work_struct Task;\nstatic DECLARE_WORK(Task, intrpt_routine,\
+    \ NULL);\n\n/*\n* This function will be called on every interrupt. Notice the\
+    \ void *\n* task functions can be used for more than one purpose, each time\n\
+    * getting a different parameter.\n */\nstatic void intrpt_routine(void *irrelevant)\n\
+    {\n    /*\n    Increment the counter\n    */\n    TimerIntrpt++;\n\n    /*\n \
+    \   If cleanup wants us to die\n    */\n    if (die == 0)\n        queue_delayed_work(my_workqueue,\
+    \ &Task, 100);\n}\n/*\n* Put data into the proc fs file.\n */\nssize_t\nprocfile_read(char\
+    \ *buffer,\n               char **buffer,\n               off_t offset, int buffer_length,\
+    \ int *eof, void *data)\n{\n    int len;                      /* The number of\
+    \ bytes actually used */\n    /*\n    * It's static so it will still be in memory\n\
+    \    * when we leave this function\n    */\n    static char my_buffer[80];\n\n\
+    \    /*\n    * give all of our information in one go, so if anybody asks us\n\
+    \    * if we have more information the answer should always be no.\n    */\n \
+    \   if (offset > 0)\n        return 0;\n\n    /*\n    * Fill the buffer and get\
+    \ its length\n    */\n    len = sprintf(my_buffer, \"Timer called %d times so\
+    \ far\\n\", TimerIntrpt);\n\n    /*\n    * Tell the function which uses where\
+    \ the buffer is\n    */\n```\n\nChapter 11. Scheduling Tasks\n\n69"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n/*\n*buffer_location =\
+    \ my_buffer;\n\n/*\n* Return the length\n */\nreturn len;\n}\n```\n\n```\n/*\n\
+    * Initialize the module - register the proc file\n */\nint __init_module_()\n\n\
+    ```\n\n```\n/*\n* Create /proc file\n */\nOur_Proc_File = create_proc_entry(PROC_ENTRY_FILENAME,\
+    \ 0644, NULL);\n\nif (Our_Proc_File == NULL)\n    remove_proc_entry(PROC_ENTRY_FILENAME,\
+    \ &proc_root);\n    printk(KERN_ALERT \"*Error: Could not initialize /proc/%s\\\
+    n\",\n           PROC_ENTRY_FILENAME);\n    return -ENOMEM;\n\n```\n\n```\nOur_Proc_File->read_proc\
+    \ = procfile_read;\nOur_Proc_File->owner = THIS_MODULE;\nOur_Proc_File->mode =\
+    \ S_IFREG | S_IRUGO;\nOur_Proc_File->uid = 0;\nOur_Proc_File->gid = 0;\nOur_Proc_File->size\
+    \ = 80;\n```\n\n```\n/*\n* Put the task in the work_task task queue, so it will\
+    \ be executed\n* next timer interrupt\n */\nmy_workqueue = create_workqueue(MY_WORK_QUEUE_NAME);\n\
+    queue_delayed_work(my_workqueue, &Task, 100);\n```\n\n```\nprintk(KERN_INFO \"\
+    /proc/%s created\\n\", PROC_ENTRY_FILENAME);\n\nreturn 0;\n}\n```\n\n```\n/*\n\
+    * Cleanup\n */\nvoid __exit cleanup_module()\n\n```\n\n```\n/*\n* Unregister /proc\
+    \ file\n */\nremove_proc_entry(PROC_ENTRY_FILENAME, &proc_root);\nprintk(KERN_INFO\
+    \ \"/proc/%s removed\\n\", PROC_ENTRY_FILENAME);\n\ndie = 1; /* keep intrup_routine\
+    \ from queueing itself */\ncancel_delayed_work(&Task); /* no \"new ones\" */\n\
+    flush_workqueue(my_workqueue); /* wait till all \"old ones\" finished */\ndestroy_workqueue(my_workqueue);\n\
+    ```\n\n# Chapter 11. Scheduling Tasks"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\n/*\n* Sleep until intrprt_routine is called one last time. This is\n*\
+    \ necessary, because otherwise we'll deallocate the memory holding\n* intrprt_routine\
+    \ and Task while work_timer still references them.\n* Notice that here we don't\
+    \ allow signals to interrupt us.\n *\n* Since WaitQ is now NULL, this automatically\
+    \ tells the interrupt\n* routine it's time to die.\n */\n/*\n* some work_queue\
+    \ related functions\n* are just available to GPL licensed Modules\n */\nMODULE_LICENSE(\"\
+    GPL\");\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Chapter 12. Interrupt Handlers
+
+
+    # 12.1. Interrupt Handlers
+
+
+    # 12.1.1. Interrupt Handlers
+
+
+    Except for the last part, everything we did in the kernel so far we''ve done as
+    a response to a process asking for it, either by dealing with a special file,
+    sending an `ioctl()`, or issuing a system call. But the job of the kernel isn''t
+    just to respond to process requests. Another job, which is very as important,
+    is to speak to the hardware connected to the machine.
+
+
+    There are two types of interaction between the CPU and the rest of the computer''s
+    hardware. The first type is when the CPU gives orders to the hardware, or when
+    the hardware needs to tell the CPU something. The second, interrupts, is much
+    harder to implement because it is both difficult and convenient for the hardware,
+    not the CPU. Hardware devices have a very small amount of RAM, and if you don''t
+    read their information when available, it is lost.
+
+
+    Under Linux, hardware interrupts are called IRQ (InterruptReqs). There are two
+    types of IRQs, short and long. A short IRQ is one which is expected to take a
+    very short period of time, during which the rest of the machine will be blocked
+    and no other interrupts be handled. A long IRQ is one which can take longer, and
+    during which other interrupts may occur (but not from the same device). If it
+    is possible, it''s better to declare an interrupt handler to be.
+
+
+    When the CPU receives an interrupt, it stops whatever it''s doing (unless a more
+    important interrupt, in which case it will deal with this only when the more important
+    one is done), saves certain parameters on the stack and calls the interrupt handler.
+    This means that certain things are not allowed in the interrupt handler itself,
+    because the system is in an unknown state. The solution is for the interrupt handler
+    to do what needs to be done immediately, usually reading from the hardware or
+    send something to the hardware, and then schedule the handling of the new information
+    at a later time (this is called the "bottom half") and return. The kernel is guaranteed
+    to call the bottom half as soon as possible — and when it does, everything allowed
+    in kernel modules will be allowed.
+
+
+    The way to implement this is to call `request_irq()` to get your interrupt handler
+    when the relevant IRQ is received. This function returns the IRQ number, the name
+    of the function, flags for `/proc/interrupts` and a parameter to pass to the interrupt
+    handler. There is a certain number of IRQs available. How many IRQs are hardware-dependent?
+    The flags can indicate whether sharing with other interrupt handlers (usually
+    because a number of hardware devices sit on the same IRQ) and `SA_INTERRUPT` to
+    indicate whether this is a fast interrupt. This function will succeed if there
+    isn''t a handler on this IRQ, or if you''re willing to share.
+
+
+    Then, from within the interrupt handler, we communicate with the hardware and
+    then use `queue_work(mark_BH_IMMEDIATE)` to schedule the bottom half.
+
+
+    # 12.1.2. Keyboards on the Intel Architecture
+
+
+    The rest of this is completely Intel specific. If you''re not running on an Intel
+    platform, it will not work. Don''t try to compile the code.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# # The Linux Kernel Module Programming Guide\n\nI had a problem with writing\
+    \ the sample code for this chapter. On one hand, for an example to be useful it\
+    \ to run on everyone's computer with meaningful results. On the other hand, the\
+    \ kernel already includes drivers for all the common devices, and those devices\
+    \ won't coexist with what I'm going to do. The solution I found was to write something\
+    \ for the keyboard interrupt, and disable the regular keyboard interrupt handler.\
+    \ Since it is defined as a static symbol in the kernel source files (specifically,\
+    \ drivers/char/keyboard.c), there is no way to restore it. Before insmoding this\
+    \ code, do on another terminal sleep 120; reboot if you use the file system.\n\
+    \nThis code binds itself to IRQ 1, which is the IRQ of the keyboard controlled\
+    \ under Intel architectures. When it receives a keyboard interrupt, it reads the\
+    \ keyboard's status (the purpose of inb (0x64)) and the scan code, which is the\
+    \ value returned by the keyboard. Then, as soon as the kernel thinks it's feasible,\
+    \ it runs got_char which gives the code of the key (the first seven bits of the\
+    \ scan code) and whether it has pressed (if the 8th bit is zero) or released (if\
+    \ it's.\n\n# ## Example 12-1. intprtc.c\n\n+   * * intprtc.c - An interrupt handler\n\
+    * * Copyright (C) 2001 by Peter Jay Salzman\n*/\n\n+   * * The necessary header\
+    \ files\n*/\n\n```\n/* Standard in kernel modules\n*/\n#include <linux/kernel.h>\n\
+    #include <linux/module.h>\n#include <linux/sched.h>\n#include <linux/workqueue.h>\n\
+    #include <linux/interrupt.h>\n#include <linux/io.h>\n\n/* We're doing kernel work\
+    \ */\n/* Specifically, a module */\n\n/* We want an interrupt */\n\n#define MY_WORK_QUEUE_NAME\
+    \ \"WQsched.c\"\nstatic struct workqueue_struct *my_workqueue;\n```\n\n+   * *\
+    \ This will get called by the kernel as soon as it's safe\n* to do everything\
+    \ normally allowed by kernel modules.\n*/\n\n```\nstatic void got_char(void *scscode)\n\
+    {\n    printk(KERN_INFO \"Scan Code %x %s.\\n\",\n           (int)((char*)scscode)\
+    \ & 0x7F,\n           *((char*)scscode) & 0x80 ? \"Released\" : \"Pressed\");\n\
+    }\n```\n\n+   * * This function services keyboard interrupts. It reads the relevant\n\
+    * information from the keyboard and then puts the non time critical\n* part into\
+    \ the work queue. This will be run when the kernel considers it safe.\n*/\n\n\
+    ```\nirreturn_t irq_handler(int irq, void *dev_id, struct pt_regs *regs)\n```\n\
+    \nChapter 12. Interrupt Handlers\n\n72"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\n{\n  /*\n   * This variables are static because they need to be\n   *\
+    \ accessible (through pointers) to the bottom half routine.\n   */\n  static int\
+    \ initialised = 0;\n  static unsigned char scancode;\n  static struct work_struct\
+    \ task;\n  unsigned char status;\n\n  /*\n   * Read keyboard status\n   */\n \
+    \ status = inb(0x64);\n  scancode = inb(0x60);\n\n  if (initialised == 0) {\n\
+    \    INIT_WORK(&task, got_char, &scancode);\n    initialised = 1;\n  } else {\n\
+    \    PREPARE_WORK(&task, got_char, &scancode);\n  }\n\n  queue_work(my_workqueue,\
+    \ &task);\n\n  return IRQ_HANDLED;\n}\n\n* Initialize the module - register the\
+    \ IRQ handler\n\nint init_module() {\n  my_workqueue = create_workqueue(MY_WORR_QUEUE_NAME);\n\
+    \n  /*\n   * Since the keyboard handler won't co-exist with another handler,\n\
+    \   * us, we have to disable it (free IRQ) before we do\n   * anything. Since\
+    \ we don't know where it is, there's no way to\n   * reinstate it later - so the\
+    \ computer will have to be rebooted\n   * when we're done.\n   */\n  free_irq(1,\
+    \ NULL);\n\n  /*\n   * Request IRQ 1, the keyboard IRQ, to go to our irq_handler.\n\
+    \   * SA_SHIRQ we're meaning to have handlers on this IRQ.\n   * SA_INTERRUPT\
+    \ can be used to make the handler into a fast interrupt.\n   */\n  return request_irq(1,\
+    \ /* The number of the keyboard IRQ on PCs */\n      irq_handler, /* our handler\
+    \ */\n      SA_SHIRQ, \"test_keyboard_irq_handler\",\n      (void *) (irq_handler));\n\
+    }\n\n* Cleanup\nvoid cleanup_module() {\n  /*\n   * This is only for completeness.\
+    \ It's totally irrelevant,\n   */\n}\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# The Linux Kernel Module Programming Guide\n\n```\n/*\n * we don't have a\
+    \ way to restore the normal keyboard interrupt so the\n * computer is completely\
+    \ useless and has to be rebooted.\n */\nfree_irq(1, NULL);\n}\n/*\n * some work_queue\
+    \ related functions are just available to GPL licensed Modules\n */\nMODULE_LICENSE(\"\
+    GPL\");\n```\n\nChapter 12. Interrupt Handlers\n\n75"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Chapter 13. Symmetric Multi Processing
+
+
+    # 13.1. Symmetrical Multi–Processing
+
+
+    One of the easiest and cheapest ways to improve hardware performance is to put
+    more than one CPU on the board. This can be done either making the different CPUs
+    take on different jobs (asymmetrical multi-processing) or by making them all in
+    parallel, doing the same job (symmetrical multi-processing, a.k.a. SMP). Doing
+    symmetrical multi–processing effectively requires specialized knowledge about
+    the tasks the computer should do, which is unavailable in a general purpose operating
+    system such Linux. On the other hand, symmetrical multi–processing is relatively
+    easy to implement.
+
+
+    By relatively easy, I mean exactly that: not it''s really easy. In a symmetrical
+    multi–processing environment, the CPU''s share the same memory, and as a result
+    running in one CPU can affect the memory used by another. You can no longer be
+    certain that variable you''ve set to a certain value in the previous line still
+    has that value; the other CPU might have played with it while you weren''t looking.
+    Obviously, it''s impossible to program like this.
+
+
+    In the case of process programming normally this isn’t an issue, because a process
+    will normally only run on one CPU at a time[18]. The kernel, on the other hand,
+    could be called by different processes running on different CPU’s.
+
+
+    In version 2.0.x, this isn’t a problem because the entire kernel is in one big
+    spinlock. This means that if one CPU is in the kernel and another CPU wants to
+    get in, for example because of a system call, it has to wait until the first CPU
+    is done. This makes Linux SMP safe[19], but inefficient.
+
+
+    In version 2.2.x, several CPU’s can be in the kernel at the same time. This is
+    something module writers need to be aware of.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# # Chapter 14. Common Pitfalls
+
+
+    # ## 14.1. Common Pitfalls
+
+
+    Before I send you on your way to go out into the world and write kernel modules,
+    there are a few things I need to warn you about. If I fail to warn you and something
+    bad happens, please report the problem to me for a full refund of the amount I
+    was paid for your copy of the book.
+
+
+    Using standard libraries
+
+    You can''t do that. In a kernel module you can only use kernel functions, which
+    are the functions you can see in /proc/kallsymms.
+
+
+    Disabling interrupts
+
+    You might need to do this for a short time and that is OK, but if you don''t enable
+    them afterwards, your system will be stuck and you''ll have to power it off.
+
+
+    Sticking your head inside a large carnivore
+
+    probably don''t have to warn you about this, but I figured I will anyway, just
+    in case.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Appendix A. Changes: 2.0 To 2.2
+
+
+    # A.1. Changes between 2.4 and 2.6
+
+
+    # A.1.1. Changes between 2.4 and 2.6
+
+
+    I don''t know the entire kernel well enough to document all of the changes. Some
+    hints for porting can be found by comparing this version of the LKMPG with its
+    counterpart for kernel 2.4. Apart from that, anybody who needs to port drivers
+    from 2.4 to 2.6 kernels might want to visit http://jwn.net/Articles/driver-porting/
+    . If you still can''t find an example that exactly meets your needs, find a driver
+    that is similar to your driver and present in both kernel versions. File comparison
+    tools like xxdiff or meld can be a great help then. Also check if your driver
+    is covered by docs in linux/Documentation/. Before starting with porting and in
+    case you''re stuck it''s a good idea to find an appropriate mailinglist and ask
+    people there for pointers.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Appendix B. Where To Go From Here
+
+
+    # B.1. Where From Here?
+
+
+    I could easily have squeezed a few more chapters into this book. I could have
+    added a chapter about creating new file systems, or adding new protocol stacks
+    as if there''s a need for that — you''d have to dig underground to find a protocol
+    stack not supported by Linux). I could have added explanations of the kernel mechanisms
+    we haven''t touched upon, such as bootstrapping or the disk interface.
+
+
+    However, I chose not to. My purpose in writing this book was to provide initiation
+    into the mysteries of kernel module programming and to teach the common techniques
+    for that purpose. For people seriously interested in kernel programming, I recommend
+    Juan-Mariano de Goyencche''s list of kernel resources . Also, as Linus said, the
+    best way to learn the kernel is to read the source code yourself.
+
+
+    If you''re interested in more examples of short kernel modules, I recommend Phrack
+    magazine. Even if you''re not interested in security, and as a programmer you
+    should be, the kernel modules there are good examples of what you can do inside
+    the kernel, and they''re short enough not to require too much effort to understand.
+
+
+    I hope I have helped you in your quest to become a better programmer, or at least
+    to have fun through technology. And, if you write useful kernel modules, I hope
+    you publish them under the GPL, so I can use them too.
+
+
+    If you''d like to contribute to this guide, please contact the maintainers for
+    details. As you''ve already seen, there''s a placeholder chapter here now, waiting
+    to be filled with examples for sysfs.'
+  merge: -1
+  pgno: 81
