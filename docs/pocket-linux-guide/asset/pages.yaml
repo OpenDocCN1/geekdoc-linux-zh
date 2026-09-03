@@ -1,0 +1,4821 @@
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    David Horton
+
+
+    <dhorton<AT>NOSPAM.member.fsf.org>
+
+
+    # Revision History
+
+
+    | Revision 3.1 | 2005–04–09 | Revised by: DH |
+
+    | Minor clarifications and spelling corrections. | | |
+
+    | Revision 3.0 | 2004–11–02 | Revised by: DH |
+
+    | Changed bootloader to GRUB rather than LILO. Updated versions on all source
+    code packages. Added minor clarifications to some shell commands and scripts.
+    | | |
+
+    | Revision 2.1 | 2004–02–18 | Revised by: DH |
+
+    | Corrected types. Changed resource site hosting to SourceForge. Added appendix
+    B to include the GNU Free Documentation License as part of this document. | |
+    |
+
+    | Revision 2.0 | 2003–11–08 | Revised by: DH |
+
+    | Updated to use coreutils in place of fileutils, sh–utils and textutils. Updated
+    version numbers on many real source code packages. Introduced Freshheat as a resource
+    for finding source code. Changed /etc/mtab to a real file rather than using a
+    symlink to /proc/mount. Corrected local_fs script errors. Updated email address.
+    | | |
+
+    | Revision 1.2 | 2003–05–31 | Revised by: DH |
+
+    | Corrected errors in “strip –o” commands. | | |
+
+    | Revision 1.1 | 2003–05–21 | Revised by: DH |
+
+    | Bug fixes, typo corrections and improved XML markup. | | |
+
+    | Revision 1.0 | 2003–02–17 | Revised by: DH |
+
+    | Initial Release, reviewed by LLP. | | |
+
+
+    The Pocket Linux Guide is for anyone interested in the techniques of building
+    a GNU/Linux system from source code. The guide is structured as a project that
+    builds a small disk-based GNU/Linux system called Pocket Linux. Each chapter explores
+    a small piece of the overall system explaining how it works, why it is needed
+    and how to build it. After completing the Pocket Linux project, readers should
+    possess an enhanced knowledge of what makes GNU/Linux systems work as well as
+    the confidence to explore larger, more complex source–code–only projects.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Legal Information...........................................................................................................1
+
+    1. Copyright and License...............................................................................................................1
+
+    2. Disclaimer...............................................................................................................................1
+
+
+    +   Introduction................................................................................................................2
+
+    1. About Pocket Linux................................................................................................2
+
+    2. Prerequisite Skills......................................................................................................2
+
+    3. Project Format................................................................................................................2
+
+    4. Help & Support...........................................................................................................2
+
+    5. Feedback...............................................................................................................................3
+
+
+    +   Chapter 1. Project Initiation.......................................................................................4
+
+    1.1. A Brief History of GNU/Linux..................................................................................4
+
+    1.2. The Goal of Pocket Linux...............................................................................................4
+
+    1.3. Working Within The Constraints...............................................................................4
+
+
+    +   Chapter 2. A Simple Prototype...............................................................................6
+
+    2.1. Analysis................................................................................................................................6
+
+    2.2. Design................................................................................................................................6
+
+    2.2.1. Simplification......................................................................................................6
+
+    2.2.2. Boot Disk...........................................................................................................................6
+
+    2.2.3. Root Disk...........................................................................................................................7
+
+    2.2.4. CPU Compatibility...............................................................................................7
+
+    2.3. Construction.......................................................................................................................7
+
+    2.3.1. Prepare the boot disk media..................................................................................7
+
+    2.3.2. Build the GRUB bootloader...............................................................................8
+
+    2.3.3. Copy the bootloader files to diskette................................................................8
+
+    2.3.4. Finish bootloader installation...............................................................................8
+
+    2.3.5. Build the Linux kernel...........................................................................................8
+
+    2.3.6. Copy the kernel to diskette...............................................................................9
+
+    2.3.7. Unmount the boot disk...............................................................................................9
+
+    2.3.8. Prepare the root disk media................................................................................9
+
+    2.3.9. Build BASH...............................................................................................................9
+
+    2.3.10. Copy BASH to the root disk...............................................................................9
+
+    2.3.11. Create device files that BASH needs...............................................................9
+
+    2.3.12. Unmount the root disk...............................................................................9
+
+    2.4. Implementation.....................................................................................................10
+
+    2.4.1. System startup...............................................................................................10
+
+    2.4.2. Testing what works......................................................................................10
+
+    2.4.3. Noting what does not work.........................................................................10
+
+    2.4.4. System shutdown..............................................................................................11
+
+
+    +   Chapter 3. Saving Space................................................................................12
+
+    3.1. Analysis.........................................................................................................................12
+
+    3.2. Design................................................................................................................................12
+
+    3.2.1. Shared Libraries...............................................................................................12
+
+    3.2.2. Stripped Binaries.........................................................................................12
+
+    3.2.3. Compressed Root Filesystem..................................................................12'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Chapter 3. Saving Space ................................................................................13
+
+    3.3. Construction .......................................................................................................13
+
+    3.3.1. Create a ramdisk ..............................................................................................13
+
+    3.3.2. Rebuild the BASH shell ................................................................................13
+
+    3.3.3. Determine which libraries are required...............................................................13
+
+    3.3.4. Copy BASH and its libraries to the ramdisk.......................................................13
+
+    3.3.5. Create a console device ...............................................................................14
+
+    3.3.6. Compress the ramdisk image ............................................................................14
+
+    3.3.7. Copy the compressed image to diskette ............................................................14
+
+    3.4. Implementation ................................................................................................14
+
+    3.4.1. System startup ................................................................................................14
+
+    3.4.2. Verify results ...............................................................................................15
+
+    3.4.3. System shutdown ............................................................................................15
+
+
+    +   Chapter 4. Some Basic Utilities ...................................................................16
+
+    4.1. Analysis ................................................................................................................16
+
+    4.2. Design ...................................................................................................................16
+
+    4.2.1. Determining Required Commands ................................................................16
+
+    4.2.2. Locating Source Code .................................................................................16
+
+    4.2.3. Leveraging FSG ............................................................................................16
+
+    4.2.4. Downloading Source Code ........................................................................17
+
+    4.3. Construction ................................................................................................17
+
+    4.3.1. Create a staging area ..................................................................................17
+
+    4.3.2. Copy contents of phase 2 rootdisk...............................................................17
+
+    4.3.3. Install binaries from GNU utilities...............................................................18
+
+    4.3.4. Copy additional libraries ........................................................................18
+
+    4.3.5. Strip binaries and libraries......................................................................18
+
+    4.3.6. Create a compressed root disk image..............................................................18
+
+    4.3.7. Write the root disk image to floppy..............................................................18
+
+    4.4. Implementation ............................................................................................19
+
+    4.4.1. System startup ............................................................................................19
+
+    4.4.2. Testing new commands...............................................................................19
+
+    4.4.3. System shutdown ............................................................................20
+
+
+    +   Chapter 5. Checking and Mounting Disks ...................................................21
+
+    5.1. Analysis ................................................................................................................21
+
+    5.2. Design .................................................................................................................21
+
+    5.2.1. Determining necessary utilities...............................................................21
+
+    5.2.2. Finding source code......................................................................................21
+
+    5.2.3. Automating fsck and mount......................................................................22
+
+    5.2.4. File dependencies...............................................................................22
+
+    5.3. Construction ............................................................................................23
+
+    5.3.1. Install utilities from e2fsprogs...........................................................23
+
+    5.3.2. Install utilities from util-linux......................................................23
+
+    5.3.3. Check library requirements......................................................................24
+
+    5.3.4. Strip binaries to save space................................................................24
+
+    5.3.5. Create additional device files.......................................................24
+
+    5.3.6. Create the fstab and mitab files..................................................24'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    # Table of Contents
+
+
+    +   Chapter 5. Checking and Mounting Disks ...................................................................24
+
+    5.3.7. Write a script to check and mount local filesystems...............................................25
+
+    5.3.8. Create a compressed root disk image.............................................................................25
+
+    5.3.9. Write the root disk image to floppy................................................................................25
+
+    5.4. Implementation..................................................................................................................25
+
+    5.4.1. System startup...............................................................................................................25
+
+    5.4.2. Test the local fs script......................................................................................................26
+
+    5.4.3. Create and mount additional filesystems......................................................................26
+
+    5.4.4. System shutdown...............................................................................................26
+
+
+    +   Chapter 6. Automating Startup & Shutdown ............................................................28
+
+    6.1. Analysis.............................................................................................................................28
+
+    6.2. Design...............................................................................................................................28
+
+    6.2.1. Determining necessary utilities...............................................................................28
+
+    6.2.2. Obtaining source code...........................................................................................28
+
+    6.2.3. Checking dependencies...........................................................................................29
+
+    6.2.4. Designing a simple GRUB configuration file...............................................................29
+
+    6.2.5. Outlining start-up scripts......................................................................................29
+
+    6.3. Construction...............................................................................................................30
+
+    6.3.1. Create a GRUB configuration file.......................................................................30
+
+    6.3.2. Install sysvinit utilities......................................................................................30
+
+    6.3.3. Create /etc/initab file......................................................................................30
+
+    6.3.4. Create /etc/init.d/rc script...............................................................................31
+
+    6.3.5. Modify /etc/init.d/local fs script.......................................................................31
+
+    6.3.6. Create a hostname script...............................................................................32
+
+    6.3.7. Create halt & reboot scripts..............................................................................32
+
+    6.3.8. Create rcNd directories and links...........................................................................33
+
+    6.3.9. Create the root disk image................................................................................33
+
+    6.3.10. Copy the image to diskette................................................................................33
+
+    6.4. Implementation.........................................................................................................33
+
+    6.4.1. System Startup..................................................................................................33
+
+    6.4.2. Verify success of startup scripts...............................................................34
+
+    6.4.3. System shutdown...........................................................................................34
+
+
+    +   Chapter 7. Enabling Multiple Users ...................................................................35
+
+    7.1. Analysis...........................................................................................................................35
+
+    7.2. Design...............................................................................................................................35
+
+    7.2.1. The login process...............................................................................................35
+
+    7.2.2. Obtaining source code...............................................................................35
+
+    7.2.3. Creating support files...............................................................................35
+
+    7.2.4. Dependencies................................................................................................36
+
+    7.2.5. Assigning ownership and permissions.......................................................36
+
+    7.3. Construction..................................................................................................37
+
+    7.3.1. Verify presence of getty and login..................................................................37
+
+    7.3.2. Modify initab for multi-user mode...........................................................37
+
+    7.3.3. Create ity devices...............................................................................38
+
+    7.3.4. Create support files in /etc...............................................................38
+
+    7.3.5. Copy required libraries...........................................................................39'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   Chapter 7. Enabling Multiple Users...............................................................................39
+
+    7.3.6. Set directory and file permissions...............................................................................40
+
+    7.3.7. Create the disk image..............................................................................................40
+
+    7.3.8. Copy the image to diskette.........................................................................................40
+
+    7.4. Implementation...........................................................................................................40
+
+    7.4.1. System Startup.......................................................................................................40
+
+    7.4.2. Add a new user to the system......................................................................................40
+
+    7.4.3. Test the new user''s ability to use the system...............................................................41
+
+    7.4.4. System shutdown.....................................................................................................41
+
+
+    +   Chapter 8. Filling in the Gaps...............................................................................42
+
+    8.1. Analysis...................................................................................................................42
+
+    8.2. Design......................................................................................................................42
+
+    8.2.1. more......................................................................................................................42
+
+    8.2.2. More device files................................................................................................43
+
+    8.2.3. ps, sed & ed...........................................................................................................43
+
+    8.3. Construction.............................................................................................................43
+
+    8.3.1. Write a “more” script...............................................................................................43
+
+    8.3.2. Create additional device files...............................................................................44
+
+    8.3.3. Install ps..............................................................................................................44
+
+    8.3.4. Install sed............................................................................................................44
+
+    8.3.5. Install ed..............................................................................................................45
+
+    8.3.6. Strip binaries to save space...............................................................................45
+
+    8.3.7. Ensure proper permissions.......................................................................45
+
+    8.3.8. Create the root disk image...............................................................................45
+
+    8.3.9. Copy the image to diskette...............................................................................45
+
+    8.4. Implementation...........................................................................................45
+
+    8.4.1. System startup.......................................................................................45
+
+    8.4.2. Test the “more” script..................................................................................45
+
+    8.4.3. Use ps to show running processes..................................................................46
+
+    8.4.4. Run a simple sed script.............................................................................46
+
+    8.4.5. Test the “ed” editor................................................................................46
+
+    8.4.6. System shutdown.....................................................................................46
+
+
+    +   Chapter 9. Project Wrap Up..................................................................47
+
+    9.1. Celebrating Accomplishments.......................................................................47
+
+    9.2. Planning Next Steps......................................................................................47
+
+
+    +   Appendix A. Hosting Applications..................................................................48
+
+    A.1. Analysis................................................................................................................48
+
+    A.2. Design...................................................................................................................48
+
+    A.2.1. Support for audio hardware.......................................................................48
+
+    A.2.2. Creating space for the program..................................................................49
+
+    A.2.3. Accessing audio files...............................................................................49
+
+    A.2.4. Other required files...............................................................................50
+
+    A.2.5. Summary of tasks.....................................................................................50
+
+    A.3. Construction.............................................................................................50
+
+    A.3.1. Create an enhanced boot disk..................................................................51'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   Appendix A. Hosting Applications
+
+    nA.3.2. Create an enhanced root disk....................................................................................51
+
+    A.3.3. Create a compressed /usr disk for mp3blaster.......................................................................53
+
+    A.3.4. Create a data diskette for testing...............................................................................................54
+
+    A.4. Implementation....................................................................................................................................54
+
+    A.4.1. System Startup................................................................................................................................54
+
+    A.4.2. Verify that the /usr diskette loaded properly..............................................................54
+
+    A.4.3. Check the audio device initialization......................................................................................54
+
+    A.4.4. Test audio output...............................................................................................................................54
+
+    A.4.5. Play a sample file...............................................................................................................................54
+
+    A.4.6. System shutdown.............................................................................................................................55
+
+
+    Appendix B. GNU Free Documentation License...............................................................................56
+
+    B.1. PREAMBLE................................................................................................................................56
+
+    B.2. APPLICABILITY AND DEFINITIONS.........................................................................................56
+
+    B.3. VERBATIM COPYING...............................................................................................................57
+
+    B.4. COPYING IN QUANTITY...........................................................................................................58
+
+    B.5. MODIFICATIONS................................................................................................................................58
+
+    B.6. COMBINING DOCUMENTS...........................................................................................................59
+
+    B.7. COLLECTIONS OF DOCUMENTS................................................................................................60
+
+    B.8. AGGREGATION WITH INDEPENDENT WORKS................................................................................60
+
+    B.9. TRANSLATION................................................................................................................................60
+
+    B.10. TERMINATION................................................................................................................................61
+
+    B.11. FUTURE REVISIONS OF THIS LICENSE......................................................................................61
+
+    B.12. ADDENDUM: How to use this License for your documents.......................................................61'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Legal Information
+
+
+    # 1. Copyright and License
+
+
+    This document, Pocket Linux Guide, is copyright (c) 2003 – 2005 by David Horton.
+    Permission is granted to copy, distribute and/or modify this document under the
+    terms of the GNU Free Documentation License, Version 1.2 or any later version
+    published by the Free Software Foundation; with no Invariant Sections, and with
+    no Back-Cover Texts. A copy of the license is available at the end of this document.
+
+
+    Linux is a registered trademark of Linus Torvalds.
+
+
+    # 2. Disclaimer
+
+
+    This documentation is provided as-is with no warranty of any kind, either expressed
+    or implied, but not limited to, the implied warranties of merchantability and
+    fitness for a particular purpose. Use the concepts, examples and information at
+    your own risk. The author(s) do not take any responsibility for damages that may
+    arise from the use of this document.
+
+
+    All copyrights are held by their respective owners, unless specifically noted
+    otherwise. Use of a term in this document should not be regarded as affecting
+    the validity of any trademark or service mark. Naming of particular products or
+    brands should not be seen as endorsements.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Introduction
+
+
+    # 1. About Pocket Linux
+
+
+    The Pocket Linux Guide demonstrates how to build a small console–based GNU/Linux
+    system using only source code and a couple of diskettes. It is intended for Linux
+    users who would like to gain a deeper understanding of how their system works
+    beneath the shroud of distribution specific features and tools.
+
+
+    # 2. Prerequisite Skills
+
+
+    This guide is intended for intermediate to advanced Linux users. It is not intentionally
+    obscure, but certain assumptions about the readers skill level are made. Success
+    with this guide depends in part on being able to perform the following tasks:
+
+
+    +   * Use basic shell commands
+
+    * Reference man and info pages
+
+    * Build a custom Linux kernel
+
+    * Compile source code using made and related tools
+
+
+    # 3. Project Format
+
+
+    The Pocket Linux Guide takes a hands-approach to learning. The guide is written
+    with each chapter building a piece of an overall project. Chapters are further
+    broken into sections of Analysis, Design, Construction and Implementation. This
+    format is derived from Rapid Application Development (RAD) methodology. Without
+    going into detail about design methodologies, the sections may be summed up as
+    follows.
+
+
+    +   * The Analysis section gives a high-level overview of what is to be accomplished
+    in each chapter. It will introduce the tasks that need to be completed and why
+    they are important to the overall system.
+
+    * The Design section defines the source code packages, files and configuration
+    necessary to address the requirements set forth in the Analysis section. Much
+    of the theory of why certain system files exist and what their purpose is can
+    be found here.
+
+    * The Construction section is where the hands-on action takes place. This section
+    goes into detail about building source code and configuring the system files.
+
+    * The Implementation section will test the proper execution of the project at
+    the end of each chapter. There are often a few shell commands to perform and samples
+    of screened output are given.
+
+
+    Readers interested in learning more about RAD may want to consult a textbook systems
+    analysis and design or visit the following University of California, Davis website
+    on the subject: http://sysdev.ucavis.edu/WEBADM/document/rad–stages.htm.
+
+
+    # 4. Help & Support
+
+
+    Readers are encouraged to visit the Pocket Linux Resource Site at http://pocket-linux.sourceforge.net/.
+    The resource site is home to:
+
+
+    +   * Information about the Pocket Linux mailing list.
+
+
+    Introduction'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '+   • A web-based troubleshooting forum where readers can ask questions and
+    give tips to others.
+
+    • A collection of diskette images for various chapters.
+
+    • Additional projects that may be of interest to Pocket Linux Guide readers.
+
+
+    # # 5. Feedback
+
+
+    For technical questions about Pocket Linux use the mailing list or the troubleshooting
+    forum for the resource site. General comments and suggestions may be sent to the
+    mailing list or emailed to the author directly.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# # Chapter 1. Project Initiation
+
+
+    # ## 1.1. A Brief History of GNU/Linux
+
+
+    In the early 90s GNU/Linux systems consisted of little than a beta–quality Linux
+    kernel and a small collection of software ported from the GNU project. It was
+    a true hacker''s operating system. There were no CD-ROMs or GNU installation tools;
+    everything had to be compiled and configured by the end user. Being a Linux Expert
+    knowing your system inside and out.
+
+
+    Toward the middle of the decade GNU/Linux distributions began appearing. One of
+    the first was Slackware since 1993 and then have been many others. Even though
+    there are many “flavors” of Linux today, the main purpose of the distribution
+    remains the same. The distribution automates many of the tasks involved in GNU/Linux
+    installation and configuration taking the burden off of the system administrator.
+    Being a Linux Expert now knowing which to click in the GUI administration tool.
+
+
+    Recently there has been a yearn for a return to the “good old days” of Linux when
+    sysadmins were hardcore geeks and everything was compiled from source code. A
+    notable indication of this movement was the publication of the Linux-From-Scratch-HOWTO
+    version 1.0 by Gerard Beekmans in 1999. Being a Linux Expert once again means
+    knowing how to do it yourself.
+
+
+    For more historical information, Ragib Hasan’s “History of Linux” at http://netlify.uiuc.edu/rhasan/linux
+
+
+    # ## 1.2. The Goal of Pocket Linux
+
+
+    The purpose of Pocket Linux is to support and encourage people who wish to explore
+    Linux by building a GNU/Linux system from nothing but code. Pocket Linux is not
+    intended to be a full featured system, but rather to give the reader a taste of
+    what is involved in building an operating system from source code. After completing
+    the Pocket Linux system the reader should have enough knowledge to confidently
+    build any project using only source code. Given this can put a few constraints
+    on the project.
+
+
+    +   * The main focus should be learning. The project should not just describe
+    how to do something, it should also describe why it should be done.
+
+    * The required time commitment should be minimal and manageable.
+
+    * The project should not require any investment in additional hardware or reconfiguration
+    of existing hardware to set up a lab environment.
+
+    * Readers should not need to know any programming languages in order to complete
+    the project.
+
+    * To remain true to the spirit of GNU/Linux, all software used in the project
+    should be covered under the GNU/GPL or another, similarly limited, open-source
+    license.
+
+
+    # ## 1.3. Working Within The Constraints
+
+
+    The Pocket Linux gets its name from the fact that the bulk of it fits onto two
+    disks making possible to carry the entire, working system around in one. This
+    has the advantage of not needing any additional hardware since any PC can be booted
+    from the diskettes without disrupting any OS that exists on the hard drive. Using
+    diskettes also partially addresses the aspect of time commitment, because the
+    project size and complexity is necessarily limited by the 1.44 Megabyte size of
+    the installation media.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    To further reduce the time commitment, the Pocket Linux project is divided into
+    several phases, each one in length. Each phase builds a small piece of the overall
+    project, but at the same time the conclusion of each chapter results in a self-contained,
+    working system. This step-by-step approach should allow readers to pace themselves
+    and not feel the need to see results.
+
+
+    Chapters are further subdivided into four sections. The first two sections, analysis
+    and design, focus on the theory of what is to be accomplished in each phase and
+    why. The last two sections, construction and implementation, detail the steps
+    needed to do the actual building. Advanced readers, who may be familiar with the
+    theories laid out in a particular chapter are encouraged to gloss over the analysis
+    and design sections in the interest of time. The separation of theory from hands-on
+    exercises should allow readers of all skill levels to complete the project without
+    feeling completely lost or minded in too much detail.
+
+
+    Finally, the Pocket Linux project will strive to use GNU/GPL software when possible
+    and other open–source licensed software when there is no GNU/GPL alternative.
+    Also, Pocket Linux will never require any programming more complex than a BASH
+    shell script.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Chapter 2. A Simple Prototype
+
+
+    # 2.1. Analysis
+
+
+    Since this is the first phase of the project it will be kept very simple. The
+    goal here is not to create the ultimate GNU/Linux system on the first try. Instead,
+    we will be building a very minimal, working system to be used as a building block
+    in subsequent phases of the project. Keeping this in mind, we can list a few goals
+    for phase one.
+
+
+    +   * Keep it simple to avoid stress out.
+
+    * Build something that works for instant gratification.
+
+    * Make something that it is useful in later phases of the project.
+
+
+    # 2.2. Design
+
+
+    # 2.2.1. Simplification
+
+
+    Take a moment to skim through the Bootdisk-HOWTO or the From-PowerUp-to-BASH-Prompt-HOWTO.
+    These HOWTO documents can be found online at http://www.ldp.org/docs.html#howto.
+    Both documents offer an excellent view of what it takes to get a GNU/Linux system
+    up and running. There is also a lot of information to digest. Remember that one
+    of our goals,"keep it simple to avoid stress out," so we want to ignore everything
+    but the absolutely critical pieces of boot root disk.
+
+
+    Basically it boils down to the following required items:
+
+
+    +   * A boot loader
+
+    * The Linux kernel
+
+    * A shell
+
+    * Some /dev files
+
+
+    We don''t even need an init daemon. The kernel can be told to run the shell directly
+    by passing it an option through the boot loader.
+
+
+    For easy construction we will build a two-disk boot root set rather than trying
+    to get everything onto a single diskette. The boot loader and kernel will go on
+    the boot disk and the shell will reside on the root disk.
+
+
+    # 2.2.2. Boot Disk
+
+
+    For the boot disk we simply need to install the GRUB bootloader and a Linux kernel.
+    We will need to use a kernel that does not require modules for the hardware we
+    need to access. Mainly, it should have compiled-in support for the floppy drive,
+    ram disk, some extended filesystem, proc filesystem, ELF binaries, and a text-based
+    console. If such a kernel is not available, it will need to be built from source
+    code. Kwan''s Kernel Rebuild Guide is a good reference for this task, however
+    we can ignore the sections that deal with modules and the initial ramdisk.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 2.2.3. Root Disk
+
+
+    For the root disk we will need a floppy that has been prepared with a filesystem.
+    We will also need a BASH shell that is statically-linked so we can avoid the additional
+    complexities of shared libraries. The configure program in the BASH source code
+    recognizes the --enable-static-link option for this feature. We will also be using
+    the --enable-minimal-config option to keep the BASH binary down to a manageable
+    size. Additional requirements for the root disk are a /dev device and a file for
+    the console. The console device is required for BASH to be able to communicate
+    with the keyboard and video display.
+
+
+    # 2.2.4. CPU Compatibility
+
+
+    There is one less, obvious requirement to keep in mind that is CPU compatibility.
+    Each generation of CPU features a far more complex architecture than its predecessor.
+    Late generation chips have additional registers and instructions when compared
+    to an older 486 or 386. A kernel optimized for a new, fast 686 machine will not
+    run on an older box.(See the README file in the Linux kernel code for details.)
+    A BASH shell built for x86 will probably not run on an older processor either.
+    To avoid this problem, we can choose the 386 as a lowest denominator CPU and build
+    all for that architecture.
+
+
+    # 2.3. Construction
+
+
+    In this section, we will be building the actual boot disk and root disk floppies.
+    Lines preceded by bash# indicate a shell command and lines starting with grub>
+    indicate a command typed within the grub shell.
+
+
+    # 2.3.1. Prepare the boot disk media
+
+
+    Insert a blank disk labeled "boot disk".
+
+
+    > It may be necessary to erase the "blank" disk if it comes factory pre-formatted
+    for another, non-Linux operating system. You can do this using the command dd
+    if=/dev/zero of=/dev/fd0 bs=1k count=1440
+
+
+    # 2.3.2. Build the GRUB bootloader
+
+
+    The GRUB source code from http://alpha.gnu.org/gnu/grub/ and unpack it into the
+    /usr/src directory.
+
+
+    Configure and build the GRUB source for an i386 processor using the following
+    commands:
+
+
+    ```
+
+    bash# cd /usr/src/grub-0.95
+
+    bash# export CC="gcc -m3pu=i386"
+
+    bash# ./configure --host=i386-pc-linux-gnu --without-curses
+
+    bash# make
+
+    ```'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    # 2.3.3. Copy the bootloader files to diskette
+
+
+    Normally, after compiling source code, one would use the command make install
+    to copy the finished files to their proper destinations in the filesystem. However,
+    using make install does not work with small media the floppy disks we are using.
+    The problem is that there are many files in a package besides the actual binaries
+    that get the job done. For example, there are man or info pages that provide documentation.
+    These extra files can take up more space than we span on the disk. We can work
+    around this by limitation copying essential files manually rather than using make
+    install.
+
+
+    For GRUB to boot we will need to copy the stage1 and stage2 bootloader files to
+    the /boot/grub directory on the floppy.
+
+
+    ```
+
+    bash# mkdir -p /mnt/boot/grub
+
+    bash# cp /usr/src/grub-0.95/stage1/stage1 /mnt/boot/grub
+
+    bash# cp /usr/src/grub-0.95/stage2/stage2 /mnt/boot/grub
+
+    ```
+
+
+    # 2.3.4. Finish bootloader installation
+
+
+    Once the bootloader are copied to the disk we can enter the grub shell to finish
+    the installation.
+
+
+    ```
+
+    bash# /usr/src/grub-0.95/grub/grub
+
+    grub> root (fd0)
+
+    grub> setup (fd0)
+
+    grub> quit
+
+    ```
+
+
+    # 2.3.5. Build the Linux kernel
+
+
+    The steps for building the kernel were tested using Linux kernel version 2.4.26
+    and should work any 2.4.x or 2.6.x kernel. The latest version of the kernel source
+    code may be downloaded from http://www.kernel.org/ or one of its mirrors.
+
+
+    > The instructions are very brief and intended for someone who has previous experience
+    building custom kernels. A more detailed explanation of the kernel building process
+    can be found in the Kernel Rebuild Guide by Kwan Lowe.
+
+
+    ```
+
+    bash# cd /usr/src/linux
+
+    bash# make menustconfig
+
+    ```
+
+
+    Be sure to configure support for the:
+
+
+    +   * 386 processor
+
+    * Console on virtual terminal (2.4.x kernels only)
+
+    * ELF binaries
+
+    * Floppy disk
+
+    * proc filesystem
+
+    * RAM disk with a default size of 4096K
+
+    * Second extended (ext2) filesystem
+
+    * VGA console
+
+
+    ```
+
+    bash# make dep
+
+    bash# make clean
+
+    bash# make bzimage
+
+    ```
+
+
+    Chapter 2. A Simple Prototype'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# 2.3.6. Copy the kernel to diskette\n\n```\nbash# cp /usr/src/linux/arch/i386/boot/bzImage\
+    \ /mnt/boot/vmlinux\n```\n\n# 2.3.7. Unmount the boot disk\n\n```\nbash# cd /\n\
+    bash# umount /mnt\n```\n\n# 2.3.8. Prepare the root disk media\n\nInsert a blank\
+    \ diskette labeled \"root disk\".\n\n```\nbash# mke2fs -m0 /dev/fd0\nbash# mount\
+    \ /dev/fd0 /mnt\n```\n\n# 2.3.9. Build BASH\n\nGet the bash-3.0 source code package\
+    \ from http://ftp.ftp.gnu/gnu/bash/ and undar it into the /usr/src directory.\n\
+    \nBuild BASH for an i386 CPU with the following commands:\n\n```\nbash# cd /usr/src/bash-3.0\n\
+    bash# export CC=\"gcc -mcpu=i386\"\nbash# ./-configure --enable-static-link \\\
+    \n    --enable-minimal-config --host=i386-pc-linux-gnu\nbash# make\nbash# strip\
+    \ bash\n```\n\n# 2.3.10. Copy BASH to the root disk\n\n```\nbash# mkdir /mnt/bin\n\
+    bash# cp bash /mnt/bin/bash\nbash# ln -s /mnt/bin/sh\n```\n\n# 2.3.11. Create\
+    \ device files that BASH needs\n\n```\nbash# mkdir /mnt/dev\nbash# mknod /mnt/dev/console\
+    \ c 5 1\n```\n\n# 2.3.12. Unmount the root disk\n\n```\nbash# cd /\nbash# umount\
+    \ /mnt\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 2.4. Implementation
+
+
+    # 2.4.1. System startup
+
+
+    Follow these steps to boot the system:
+
+
+    +   - Restart the PC with the boot disk in the floppy drive.
+
+    - When the `grub` prompt appears, type `kernel (fd0)/boot/vmlinuz init=/bin/sh
+    root=/dev/fd0 load_ramdisk=1 prompt_ramdisk=1` and press `Enter`.
+
+    - After the kernel loads, type `boot` and press `Enter`.
+
+    - Insert the root disk when prompted.
+
+
+    If all goes well the screen should look something like the example below.
+
+
+    ```
+
+    grub> kernel (fd0)/boot/vmlinuz init=/bin/sh root=/dev/fd0 load_ramdisk=1 prompt_ramdisk=1
+
+    [Linux-bzimage, setup=0xc00, size=0xc29b]
+
+
+    grub> boot
+
+    Linux version 2.4.26
+
+    ..
+
+    [ various kernel messages]
+
+
+    VFS: Insert root floppy disk to be loaded into RAM disk and press ENTER
+
+    RAMDISK: ext2 filesystem found at block 0
+
+    RAMDISK: Loading 1440 blocks [1] into ram disk... done.
+
+    VFS: Mounted root (ext2 filesystem) readonly.
+
+    Freeing unused kernel memory: 178k freed
+
+    #
+
+    ```
+
+
+    # 2.4.2. Testing what works
+
+
+    Try out a few of BASH''s built-in commands to see if they are working properly.
+
+
+    ```
+
+    bash# echo "Hello World"
+
+    bash# cd /
+
+    bash# pwd
+
+    bash# echo *
+
+    ```
+
+
+    # 2.4.3. Noting what does not work
+
+
+    Try out a few other familiar commands.
+
+
+    ```
+
+    bash# ls /var
+
+    bash# mkdir /var/tmp
+
+    ```
+
+
+    Notice that only commands internal BASH actually work and that external commands
+    like **ls** and **mkdir** do not work at all. This shortcoming is something that
+    can be addressed in a future phase of the project. For now we should just enjoy
+    the fact that our prototype boot / root disk works and that it was not all that
+    hard to build.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 2.4.4. System shutdown
+
+
+    Remove the diskette from fd0 and restart the system using CTRL-ALT-DELETE.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Chapter 3. Saving Space
+
+
+    # 3.1. Analysis
+
+
+    One of the drawbacks of the prototype phase was that the diskset was not all useful.
+    The only commands that worked were the ones built into the BASH shell. We could
+    improve our root disk by installing commands like cat, ls, mv, rm and so on. Unfortunately,
+    we are short on space. The current root disk has no shared libraries so each utility
+    would have to be statically-linked just like the BASH shell. A lot of binaries
+    together with a static shell would rapidly exceed the 1.44M of available disk
+    space. Our main goal in this phase should be to maximize space savings on the
+    root disk and pave the way for expanded functionality in the next phase.
+
+
+    # 3.2. Design
+
+
+    Take another look at the Bootdisk-HOWTO and notice how many utilities can be squeezed
+    into a 1.44M floppy. There are three things that make this possible. The second
+    is stripped binaries. And the third is the use of a compressed filesystem. We
+    can use all of these techniques to save space on our root disk.
+
+
+    # 3.2.1. Shared Libraries
+
+
+    First, in order to use shared libraries we will need to rebuild the BASH shell.
+    This time we will configure it using the --enable-static-link option. Once BASH
+    is rebuilt we need to figure out which libraries it is linked with and be sure
+    they are on the root disk. The ldd command makes this job easy. By typing ldd
+    bash on the command–line we can see a list of all the shared libraries that BASH
+    uses. As long as all libraries are copied to the root disk, the new BASH shell
+    should work fine.
+
+
+    # 3.2.2. Stripped Binaries
+
+
+    Next, we should strip any binaries that get copied to the root disk. The manpage
+    for strip does not give much description of what it does other than say, "strip
+    discards all symbols from the file." It means removing pieces of a binary would
+    render it useless, but this is not the case. The reason it is because a large
+    number of these discarded symbols are used for debugging. While debugging symbols
+    are very helpful to programmers working to improve the code, they do not for the
+    average end-user other than take up disk space. And since space is a premium,
+    we should definitely remove as many symbols as possible from BASH and any other
+    binaries before we copy over to the ramdisk.
+
+
+    The process of stripping files to save space also works with shared libraries.
+    When stripping libraries it is important to use the --strip-unneeded option so
+    as not to break them. Using --strip-unneeded shrinks the file size, but the symbols
+    needed for relocation remain intact which is something that shared libraries need
+    to function properly.
+
+
+    # 3.2.3. Compressed Root Filesystem
+
+
+    Finally, we can tackle the problem of how to build a compressed root filesystem.
+    The Bootdisk-HOWTO suggests three ways of constructing a compressed filesystem
+    using either a ramdisk, a hard drive partition or a loopback device. This project
+    will concentrate on using the ramdisk approach. It seems logical'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'if the root filesystem is going to run from a ramdisk, it may as well be built
+    on a ramdisk. All we have to do is create a second extended filesystem on a ramdisk
+    device, mount it and copy files to it. Once the filesystem is populated with all
+    the files that the root disk needs, we unmount it, compress and write it to a
+    floppy.
+
+
+    +   * For this work, we need to make sure the system for building has ramdisk
+    support. If ramdisk is not available it is also possible to use a loopback device.
+    See the Bootdisk–HOWTO for more information on using loopback devices.
+
+
+    # 3.3. Construction
+
+
+    This section is written using ramdisk (/dev/ram7) to build the root image. There
+    is nothing particularly special about ramdisk seven and it is possible to use
+    any of the other available ramdisk provided they are not already in use.
+
+
+    # 3.3.1. Create a ramdisk
+
+
+    ```
+
+    bash dd if=/dev/sdc0 of=/dev/ram7 bs=1k count=409
+
+    bash# mk2fs -m0 /dev/ram7 4096
+
+    bash# mount /dev/ram7 /mnt
+
+    ```
+
+
+    # 3.3.2. Rebuild BASH shell
+
+
+    ```
+
+    bash# cd /usr/src/bash-3.0
+
+    bash# make distclean
+
+    bash# export CC="gcc" -mpu=i386
+
+    bash# ./configure --enable-minimal-config --host=i386-pc-linux-gnu
+
+    bash# make
+
+    bash# strip bash
+
+    ```
+
+
+    # 3.3.3. Determine which libraries are required
+
+
+    View the output of the ldd command. It should look similar to the example below.
+
+
+    ```
+
+    bash# ldd bash
+
+    libdi.so.2 => /lib/libdi.so.2 (0x4001d000)
+
+    libc.so.6 => /lib/libc.so.6 (0x40020000)
+
+    /ld-linux.so.2 => /lib/ld-linux.so.2 (0x40000000)
+
+    ```
+
+
+    > > Some may have a slightly different library set up. For example, you may see
+    libc.so.6 => /lib/tls/libc.so.6 rather than libc.so.6 => /lib/libc.so.6 as shown
+    in the example. If your ldd output does not match the example use the path given
+    by your ldd command when completing the next step.
+
+
+    # 3.3.4. Copy BASH and its libraries to the ramdisk
+
+
+    ```
+
+    bash# mkdir /mnt/bin
+
+    bash# cp bash /mnt/bin
+
+    bash# ln -s bash /mnt/bin/sh
+
+    ```
+
+
+    Chapter 3. Saving Space'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '```
+
+    bash# mkdir /mnt/lib
+
+    bash# strip --strip-unneeded -o /mnt/lib/libld.so.2 /mnt/lib/libld.so.2
+
+    bash# strip --strip-unneeded -o /mnt/lib/libc.so.6 /mnt/lib/libc.so.6
+
+    bash# strip --strip-unneeded -o /mnt/lib/ld-linux.so.2 /mnt/lib/ld-linux.so.2
+
+    bash# chmod +x /mnt/lib/ld-linux.so.2
+
+    ```
+
+
+    Using strip might seem odd to strip the symbols while the file is in transit from
+    the source location to the destination. What it does is the effect of stripping
+    symbols from the file on the ramdisk. This has the effect of stripping symbols
+    from the library on the ramdisk without altering the libraries on the development
+    system. Unfortunately file permissions are lost when copying libraries which is
+    why the chmod +x command is used to set the execute flag for the rootdisk''s dynamic
+    loader.
+
+
+    # 3.3.5 Create a console device
+
+
+    ```
+
+    bash# mkdir /mnt/dev
+
+    bash# mknod /mnt/dev/console c5 1
+
+    ```
+
+
+    # 3.3.6 Compress the ramdisk image
+
+
+    ```
+
+    bash# cd /
+
+    bash# umount /dev/ram7
+
+    bash# dd if=/dev/ram7 of=/phase2-image bs=1k count=4096
+
+    bash# gzip -9phase2-image
+
+    ```
+
+
+    # 3.3.7 Copy the compressed image to diskette
+
+
+    Insert the floppy labeled "root disk" into fd0.
+
+
+    ```
+
+    bash# dd if=~/phase2-image.gz of=/dev/fd0 bs=1k
+
+    ```
+
+
+    # 4. Implementation
+
+
+    Successful implementation of this phase is probably the most difficult part of
+    the Pocket Linux Guide. If you need help getting things to work please visit the
+    Pocket Linux Guide Resource Site to browse the troubleshooting forum and subscribe
+    to the mailing list.
+
+
+    # 4.4.1. System startup
+
+
+    Follow these steps to boot:
+
+
+    +   - Restart the PC using the boot disk from the chapter.
+
+    - At the grub> prompt, type kernel (fd0)/boot/vmlinux init=/bin/sh root=/dev/fd0
+    load_ramdisk=1 prompt_ramdisk=1 and press Enter.
+
+    - Type boot at the grub prompt and press Enter.
+
+    - Insert the new, compressed root disk when.
+
+
+    The screen output should be similar to the following example:
+
+
+    ```
+
+    GNU GRUB version 0.95
+
+    ```
+
+
+    Chapter 3. Saving Space'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    grub kernel (fd0)/vmlinuz init=/bin/sh root=/dev/fd0 load_ramdisk=1 prompt_ramdisk=1
+
+    [Linux-bzImageImage, setup=0xc00,size=0xce29b]
+
+    gub boot
+
+    ```
+
+
+    ```
+
+    Linux version 2.4.26
+
+    ..\ [Various kernel messages]
+
+    ..
+
+    VFS: Insert root floppy disk to be loaded into RAM disk and press ENTER
+
+    RAMDISK: Compressed image found at block 0
+
+    VFS: Mounted root (ext2 filesystem) readonly.
+
+    Freeing unused kernel memory: 178k freed
+
+    #
+
+    ```
+
+
+    # 3.4.2. Verify results
+
+
+    If the implementation was successful, this new root disk should behave exactly
+    like the root disk from the previous chapter. The key difference is that this
+    compressed root disk has much more room to grow and we will put this extra space
+    to good use in the next phase of the project.
+
+
+    # 3.4.3. System shutdown
+
+
+    Remove the diskette from fd0 and restart the system using CTRL-ALT-DELETE.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# # Chapter 4. Some Basic Utilities
+
+
+    # ## 4.1. Analysis
+
+
+    In the previous chapter it might seem we did not accomplish very much. A lot of
+    energy was expended redesigning the root disk, but the functionality is basically
+    the same as in the initial prototype phase. The root disk does not very much.
+    But we did make significant improvements when it comes to space savings. In this
+    chapter we will put that extra space to use and start the root disk with as many
+    utilities as it can hold.
+
+
+    The two root disks we built only had shell built–in commands like **echo** and
+    **pwd**. This time it would be nice to have some of the commonly used external
+    commands like **cat**, **ls**, **mkdir**, **rm** and so on the root disk. Keeping
+    this in mind we can define the goals for this phase as follows:
+
+
+    +   - Retain all of the functionality from the previous root disk.
+
+    - Add some of the commonly used external commands.
+
+
+    # ## 4.2. Design
+
+
+    # ### 4.2.1. Determining Required Commands
+
+
+    The first question that might come to mind is, "How do we know which commands
+    are needed?" It is possible to start with cat and then install other commands
+    as we discover a need for them. This is terribly inefficient. We need a plan or
+    a blueprint for work. From this we can turn to the Filesystem Hierarchy Standard
+    (FHS) available at http://www.pathname.com/hs/; The FHS dictates what commands
+    should be present on a Linux system and where they should be placed in the directory
+    structure.
+
+
+    # ## 4.2.2. Locating Source Code
+
+
+    The next question is, "Now that we know what we need, where do we get the source
+    code?" One way to find the answer to this question is to check the packages. We
+    can search the packages included with one of the GNU Linux distributions or use
+    one of the package engines listed at http://www.linux.org/docs/html#man. One that
+    should tip you off as where to find the source code for a particular command is
+    the email address listed for reporting bugs. The cat manager lists bug-textutils@gnu.org.
+    From this email address we can deduce that cat is part of the textutils package
+    from GNU.
+
+
+    # ### 4.2.3. Leveraging FHS
+
+
+    So let''s look at the FHS requirements for the /bin directory. The first commands
+    in the list are **cat**, **chgrp**, **chmod** and **chown**. We already know that
+    cat is part of GNU''s. Using the next commands as keywords in a package search
+    we discover that GNU''s fileutils for chmod, chgrp and chown are in fact. In fact
+    a few of the commands in /bin come from GNU''s utils. The **date** also comes
+    from a GNU package called-utils. A good way to tackle the problem of finding source
+    code might be to group the commands together as shown below:
+
+
+    +   - The BASH shell --- echo, false, pwd, sh, true
+
+    - GNU textutils --- cat'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '+   • GNU fileutils -- chgrp, chown, cp, dd, df, ls, mkdir, mknod, mv, rm,
+    rmdir, sync
+
+    • GNU sh-utils -- date, hostname, stty, su, uname
+
+
+    These four packages do not contain all the commands in the /bin directory, but
+    they represent over 70% of them. That should be enough to achieve our goal of
+    adding some of the commonly used external commands. We can worry about the other
+    commands in later phases of the project.
+
+
+    # 4.2.4. Downloading Source Code
+
+
+    To fetch the source code we simply need to connect to GNU''s FTP site and navigate
+    to the appropriate package directory.
+
+
+    When we get to download for textutils there are several versions available. There
+    is also a note informing that the package has been renamed to coreutils. The same
+    message about coreutils appears in the and sh-utils directories as well. Instead
+    of downloading three separate packages we can get everything in one convenient
+    bundle in the coreutils directory.
+
+
+    # 4.3. Construction
+
+
+    Rather than copying files directly to the ramdisk, we can make things easier by
+    setting up a staging area. The staging area will give us room to work without
+    worrying about the space constraints of the ramdisk. This also provide a way to
+    save our work and make it easier to enhance the rootdisk in later phases of the
+    project.
+
+
+    The staging procedure will work like this:
+
+
+    +   1. Create a directory structure as defined in the FHS.
+
+    2. Copy the files from phase 2''s root disk.
+
+    3. Build the new package from source code.
+
+    4. Install files into the correct FHS directories.
+
+    5. Strip the binaries to save space.
+
+    6. Check library dependencies.
+
+    7. Copy to the whole directory structure to the ramdisk.
+
+    8. Compress the ramdisk and write it out to floppy.
+
+
+    # 4.3.1. Create a staging area
+
+
+    ```
+
+    bash mkdir ~/staging
+
+    bash cd ~/staging
+
+    bash mkdir bin boot dev etc home mnt opt proc root sbin usr var
+
+    bash mkdir var/log/run
+
+    ```
+
+
+    # 4.3.2. Copy contents of phase 2 rootdisk
+
+
+    ```
+
+    bash dd if=/phase2-image.gz | gunzip -c > /dev/ram7
+
+    bash mount /dev/ram7 /mnt
+
+    bash cp -dPR /mnt/* ~/staging
+
+    bash umount /dev/ram7
+
+    bash rmdir ~/staging/lost+found
+
+    ```
+
+
+    Chapter 4. Some Basic Utilities'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 4.3.3. Install binaries from GNU coreutils
+
+
+    ```
+
+    bash# cd /usr/src/coreutils-5.2.1
+
+    bash# export CC="gcc -mcpu=i386"
+
+    bash# ./configure --host=i386-pc-linux-gnu
+
+    bash# make
+
+    bash# cd src
+
+    bash# cp chgrp chmod cp cp date df ~/staging/bin
+
+    bash# cp hostname ln ld mkdir mkifno mkn ~/staging/bin
+
+    bash# cp mv rmdir stty sync uname ~/staging/bin
+
+    ```
+
+
+    # 4.3.4. Copy additional libraries
+
+
+    Check library requirements using ldd on some of the new binaries.
+
+
+    ```
+
+    bash# ldd ~/staging/bin/cat
+
+    bash# ldd ~/staging/bin/ls
+
+    bash# ldd ~/staging/bin/su
+
+    bash# ldd ~/staging/lib
+
+    ```
+
+
+    The differences in the required, as shown by the ldd command, and the libraries
+    present in the staging area, as shown by the ls command, then copy any missing
+    libraries to the staging area.
+
+
+    ```
+
+    bash# cp /lib/librt.so.1 ~/staging/lib
+
+    bash# cp /lib/libthread.so.0 ~/staging/lib
+
+    bash# cp /lib/libcrypt.so.1 ~/staging/lib
+
+    ```
+
+
+    # 4.3.5. Strip binaries and libraries
+
+
+    ```
+
+    bash# strip ~/staging/bin/*
+
+    bash# strip --strip-unneeded ~/staging/lib/*
+
+    ```
+
+
+    # 4.3.6. Create a compressed root disk image
+
+
+    ```
+
+    bash# cd /
+
+    nbash# dd if=/dev/zero of=/dev/ram7 bs=1k=4096
+
+    bash# mk2fs -m0 /dev/ram7 4096
+
+    bash# mount /dev/ram7 /mnt
+
+    bash# cp -dpr ~/staging/* /mnt
+
+    bash# umount /dev/ram7
+
+    bash# dd if=/dev/ram7 of=/phase3-image bs=1k=4096
+
+    bash# gzip -9 ~/phase3-image
+
+    ```
+
+
+    > The process for creating the compressed root disk image will change very little
+    throughout the chapters. Writing a simple script to handle this can be a great
+    time saver.
+
+
+    # 4.3.7. Write the root disk image to floppy
+
+
+    Insert the diskette labeled "root" into drive fd0.
+
+
+    ```
+
+    bash# dd if=/phase3-image.gz of=/dev/fd0 bs=1k
+
+    ```
+
+
+    Chapter 4. Some Basic Utilities'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# 4.4. Implementation\n\nWe will need to have a read-write filesystem in order\
+    \ for some of the commands to work. The kernel's normal behavior is to mount read-only,\
+    \ but we can change this using a kernel option. By passing the kernel rw before\
+    \ init=/bin/sh we will get a read-write filesystem.\n\n# 4.4.1. System startup\n\
+    \nFollow these steps to get the system running.\n\n+   * Boot the PC from the\
+    \ GRUB boot disk.\n* At the grub> prompt, type kernel (fd0)/boot/vmlinuz rw init=/bin/sh\
+    \ root=/dev/fd0 load_ramdisk=1 prompt ramdisk=1.\n* Verify that you remembered\
+    \ to add the rw parameter and press Enter.\n* Type boot\n* Insert the recently\
+    \ created root disk when prompted.\n\nThe terminal display should look similar\
+    \ to the example below.\n\n```\nGNU GRUB version 0.95\ngrub kernel (fd0)/boot/vmlinuz\
+    \ rw init=/bin/sh root=/dev/fd0 load_ramdisk=1 prompt ramdisk=1\n[Linux-bzImage,\
+    \ setup=0xc00, size=0xc2c9b]\ngrub> boot\nLinux version 2.4.26\n...\n [various\
+    \ kernel messages]\n...\nVFS: Insert root floppy disk to be loaded into RAM disk\
+    \ and press ENTER\nRAMDISK: Compressed image found at block 0\nVFS: Mounted root\
+    \ (ext2 filesystem) read-write.\nFreeing unused kernel memory: 178k freed\n# _\n\
+    ```\n\n# 4.4.2. Testing new commands\n\nNow that the system is up, try using some\
+    \ of the new commands.\n\n```\nbash# uname -a\nbash# ls /\nbash# echo \"PocketLinux\"\
+    \ > /etc/hostname\nbash# hostname $(cat /etc/hostname)\nbash# uname -n\nbash#\
+    \ mkdir /home/stuff\nbash# cd /home/stuff\n```\n\nIf everything goes well the\
+    \ commands like cat, ls and hostname should work now. Even mkdir should work since\
+    \ the root filesystem is mounted read-write. Of course since we are using a ramdisk,\
+    \ any changes will be lost once the PC is reset.\n\n# Chapter 4. Some Basic Utilities"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 4.4.3. System shutdown
+
+
+    Remove the diskette from fd0 and restart the system using CTRL-ALT-DELETE.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# # Chapter 5. Checking and Mounting Disks
+
+
+    # ## 5.1. Analysis
+
+
+    In the previous chapter we added many new commands by installing coreutils and
+    there are still a few things lacking. One thing that really stands out is that
+    there was no way to mount disks. In order to get a read-write filesystem we had
+    to resort to passing the `rw` kernel parameter at the `grub>` prompt. This is
+    for an emergency situation, but a normal system boot process should do things
+    differently.
+
+
+    Most GNU/Linux distributions take several steps to mount filesystems. Watching
+    the boot process or digging into the startup scripts one of the popular Linux
+    distributions reveals the following sequence of events:
+
+
+    +   - 1. The kernel automatically mounts the root filesystem as read-only.
+
+    - 2. All local filesystems are checked for errors.
+
+    - 3. If filesystems are clean, root is remounted as read-write.
+
+    - 4. The rest of the local filesystems are mounted.
+
+    - 5. Network filesystems are mounted.
+
+
+    So far our Linux system can do step one and that is it. If we want to have a professional
+    looking boot /root diskset we have to do better than one out of five. In this
+    phase of the project we will work on steps two and three. Steps four and five
+    can wait. Since this is a diskette-based system, there really are no other filesystems
+    besides root.
+
+
+    Taking into account all of the above information, the goals for this phase are
+    defined as follows:
+
+
+    +   - A way to check filesystem integrity.
+
+    - The ability to mount filesystems.
+
+    - A script to automate checking and mounting of local filesystems.
+
+
+    # ## 5.2. Determining necessary utilities.
+
+
+    # ### 5.2.1. Finding source code
+
+
+    We can use the Filesystem Hierarchy Standard (FHS) document to find the names
+    of utilities we need and where they reside in the directory structure. The FHS
+    `/sbin` directory lists `fsck` and something called `fsk.` for checking filesystems.
+    Since we are using a Second Extended (ext2) filesystem the `fsk.` becomes `fsck2`
+    for our purposes. Mounting filesystems is done using the commands `mount` and
+    `umount` in the `/bin` directory. However, the name of a script to automatically
+    mount local filesystems cannot be found. In most systems this type of script is
+    in the `/etc` directory, while FHS does not list it. Several GNU/Linux distributions
+    use `/etc/init.d` as the place to hold startup scripts we will put our filesystem
+    mounting script there.
+
+
+    In the previous chapter we used methods to find source code. In this chapter we
+    will use a tool Linux Software Map (LSM). LSM is a database of GNU/Linux software
+    that tracks such things as package name, author, of binaries that make up the
+    package and download sites. Using an LSM search engine
+
+
+    Chapter 5. Checking and Mounting Disks'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'we can locate packages Linux command as keywords.
+
+
+    If we search Ibiblio Linux Software Map (LSM) at http://www.ibiblio.org/pub/Linux/
+    for the keyword "fck" we get a large number of matches. Since we are using a Second
+    Extended filesystem, called e2fs for short, we can refine the search using "ext2"
+    as a keyword. Publishing both keywords to the LSM search engine comes with a package
+    called e2sprogs. Looking at the LSM for e2fsprogs we find out that this package
+    contains the utilities e2fs, mke2fs, mke2dumpe, fsck. We also find that the LSM
+    for e2fsprogs has not been used for a while. There is almost certainly a newer
+    version there somewhere. Another good Internet resource for source code is SourceForge
+    at http://sourceforge.net/. Using the keyword "e2fsprogs" in the SourceForge search
+    engine results in a newer version of e2fsprogs.
+
+
+    Finding fsck was quite an adventure, but now we move on to finding mount and unmount.
+    A search on LSM comes up a number of matches, but from point to various versions
+    of a package called util-linux. All we have do is search and pick the most recent
+    version. The LSM entry for util-linux lists a of utilities besides mount and unmount.
+    We should definitely search the list to see if any of the other util-linux commands
+    show in the FHS requirements for /bin and /sbin.
+
+
+    Below is a list of packages we have gathered so far and the utilities that match
+    up with FHS.
+
+
+    +   * e2sprogs - fsck, mkfs.ext2 (e2fsck), mkfs.ext2 (mke2fs)
+
+    * util-linux - dmesg, getty (agate), kill, mount, swap, unmount
+
+
+    # 5.2.3. Automating fsck and mount
+
+
+    Now that we have fsck and mount commands we need to do with a shell script to
+    automate checking and mounting the filesystems. Any way to do this would be to
+    write a short, line script that calls fsck and mount. But, what if the filesystems
+    are not clean? The system should definitely not try to mount a corrupted filesystem.
+    We need to decide a way of determining the status of the filesystems before mounting.
+    The mapping for fsck gives some insight into how this can be achieved using return
+    codes. Basically, if fsck returns a code of zero or one it means the filesystem
+    is okay and a return code of two or greater means some manual intervention is
+    needed. A simple if-then statement could evaluate the fsck return code to determine
+    whether or not the filesystem should be mounted. For help on writing scripts we
+    can use the BASH(1) manpage and the Advanced-BASH-Scripting-Guide. Both references
+    are freely available from the Linux Documentation Project at http://www.tld.org/
+
+
+    # 5.2.4. File dependencies
+
+
+    The last thing is to figure out if other files besides the binaries are needed.
+    We learned using ldd to check for library dependencies in the last phase of the
+    project and we will use it to check the utilities in this phase two. There are
+    also some other files that fsck and mount will need the fsck(8) and mount(8) manpages
+    give some insight into what those files are. They are /etc/fstab lists devices
+    and their mount points, /etc/mtab keeps track of what is mounted, and a number
+    of /dev files that represent the various disks. We need to include all of these
+    to have working right.
+
+
+    # 5.2.4.1. /etc/fstab
+
+
+    The /etc/fstab file is a simple text file that can be created with any editor.
+    We will need an entry for the root filesystem and the proc filesystem. Information
+    about the format of this file can be found in the fstab(5) manpage or by looking
+    at /etc/fstab file on any of the GNU/Linux distributions.
+
+
+    Chapter 5. Checking and Mounting Disks'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 5.2.4.2./etc/mtab\n\nThe /etc file presents a unique challenge, because it\
+    \ does not contain static information like fstab. The mtab file tracks mounted\
+    \ filesystems and therefore its contents change from time to time. We are particularly\
+    \ interested in the state of mtab when the system starts up, before any filesystems\
+    \ are mounted. At this point /etc/mtab should be empty so we may configure a startup\
+    \ script to create an empty /etc/mtab before any filesystems are mounted. But\
+    \ it is not possible to create files in the /etc directory because is read-only\
+    \ at startup. This creates a paradox. We cannot create an empty mtab, because\
+    \ the filesystem is not mounted as writable and we should not mount any filesystems\
+    \ until we have created an empty mtab. In order to sidestep this problem we need\
+    \ to do the following:\n\n+   1. Read as-write, use the -n option so that mount\
+    \ does not attempt to write an entry to\n   /etc/mtab which is read-only at this\
+    \ point.\n2. Create an empty /etc/mtab file now that the filesystem is writable.\n\
+    3. Read as read-write again, this time using the -f option so that an entry is\
+    \ written into\n   /etc/mtab, but is not actually mounted a second time.\n\n#\
+    \ 5.2.4.3. Device files\n\nThe only thing to do is to create device files. We\
+    \ need /dev/ram0, because that is where the root filesystem is located. We also\
+    \ need /dev/fd0 to mount other floppy disks and /dev/null for use by some of the\
+    \ commands.\n\n# 5.3. Construction\n\n# 5.3.1. Install utilities from e2fsprogs\n\
+    \nDownload the e2fsprogs source code package from http://sourceforge.net/projects/e2fsprogs/\n\
+    \n```\nbash\ncd /usr/src/e2fsprogs-1.35\nbash export CC=\"gcc -mpu=i386\"\nbash\
+    \ ./configure --host=i386-pc-linux-gnu\nbash make\nbash cd e2fsck\nbash cp e2fsck.shared\
+    \ /staging/sbin/e2fsck\nbash ln -s e2fsck /staging/sbin/fsck.ext2\nbash cd ../misc\n\
+    bash cp fs m2fs /staging/bin\nbash ln -s m2fs /staging/bin/mkfs.ext2\n```\n\n\
+    # 5.3.2. Install utilities from util-linux\n\nGet the latest util-linux source\
+    \ from http://ftp.lin.net.pl/linux-kernel/local/utils/util-linux/\n\n```\nbash\
+    \ cd /usr/src/util-linux-2.12lh\nUse a text editor to make the following changes\
+    \ to MCONFIG:\n```\n\n+   • Change \"CPU=\\$(shell uname -name)\" to \"CPU=i386\"\
+    \n• Change \"HAVE_SHADOW=yes\" to \"HAVE_SHADOW=no\"\n\n```\nbash ./configure\n\
+    ```\n\nChapter 5. Checking and Monitoring Disks\n\n23"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    ```
+
+    bash# make
+
+    bash# cp disk-utils/mkfs ~staging/sbin
+
+    bash# cp fdisk/fdisk ~staging/sbin
+
+    bash# cp login-utils/agetty ~staging/sbin
+
+    bash# ls agetty ~staging/utils/sbin/bin
+
+    bash# cp login-utils/login ~staging/bin
+
+    bash# cp misc-utils/kill ~staging/bin
+
+    bash# cp mount/mount ~staging/bin
+
+    bash# cp mount/umount ~staging/bin
+
+    bash# cp mount/swapon ~staging/bin
+
+    bash# cp sys-utils/dmesg ~staging/bin
+
+    ```
+
+
+    # 5.3.3. Check library requirements
+
+
+    ```
+
+    bash# ldd ~/staging/bin/* | more
+
+    bash# ldd ~/staging/sbin/* | more
+
+    bash# ls ~/staging/lib
+
+    ```
+
+
+    All of the dependencies revealed by the ldd command are for libraries already
+    present in the staging area there is no need to copy anything new.
+
+
+    # 5.3.4. Strip binaries to save space
+
+
+    ```
+
+    bash# strip ~/staging/bin/*
+
+    bash# strip ~/staging/sbin/*
+
+    ```
+
+
+    # 5.3.5. Create additional device files
+
+
+    ```
+
+    bash# mknod ~/staging/dev/ram0 b 1 0
+
+    bash# mknod ~/staging/dev/fd0 b 2 0
+
+    bash# mknod ~/staging/dev/null c 1 3
+
+    ```
+
+
+    # 5.3.6. Create the fstab and mtab files
+
+
+    bash# cd ~/staging/etc
+
+    Use an editor vi, emacs or proc to create the fstab and save it as ~/staging/etc/fstab.
+
+
+    | proc /proc proc | defaults 0 0 |
+
+    | /dev/ram0 ext2 | defaults 1 1 |
+
+
+    Create an empty mtab file.
+
+
+    ```
+
+    bash# echo -n >mtab
+
+    ```
+
+
+    # 5.3.7. Write a script to check and mount local filesystems
+
+
+    Use an editor to create the following shell script and save it as ~/staging/etc/init.d/local_fs_:
+
+
+    ```
+
+    #!/bin/sh
+
+    #
+
+    # local_fs - check and mount local filesystems
+
+    #
+
+    PATH=/sbin:/bin ; export PATH
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    fsck -ATcp
+
+    if [ $? -gt 1 ]; then
+
+    echo "Filesystem errors exist! Manual intervention required."
+
+    /bin/sh
+
+    else
+
+    echo "Remounting / as read-write."
+
+    mount -n remount,rw /
+
+    echo -n /etc/mtab
+
+    mount -f remount,rw /
+
+    echo "Mounting local filesystems."
+
+    mount -t nonfs,nosmbfs
+
+    fi
+
+    ```
+
+
+    Set execute permissions on the script.
+
+
+    ```
+
+    bash# chmod +x local_fs
+
+    ```
+
+
+    # 5.3.8 Create a compressed root disk image
+
+
+    ```
+
+    bash# cd
+
+    bash# dd if=/dev/zero of=/dev/ram7 bs=1 count=4096
+
+    bash# mk2fs -m0 /dev/ram7 4096
+
+    bash# mount /dev/ram7 /mnt
+
+    bash# cp -dpR ~/staging/* /mnt
+
+    bash# unmount /dev/ram7
+
+    bash# dd if=/dev/ram7 of=/phase4-image bs=1 count=4096
+
+    bash# gzip -9 /phase4-image
+
+    ```
+
+
+    # 5.3.9. Write the root image to floppy
+
+
+    Insert the diskette labeled "root disk" into fd0.
+
+
+    ```
+
+    bash# dd if=/phase4-image.gz of=/dev/fd0 bs=1k
+
+    ```
+
+
+    # 5.4. Implementation
+
+
+    # 5.4.1. System startup
+
+
+    Using the following procedure:
+
+
+    +   - Boot the PC using the floppy labeled "root disk".
+
+    - At the grub prompt, type the kernel and boot commands, but without the rw parameter
+    this time. In other words, type kernel (fd0)/boot/vmlinux init=/bin/sh root=/dev/fd0
+    load_ramdisk=1 prompt_ramdisk=1, press boot and press Enter.
+
+    - In the recently created root disk when prompted.
+
+
+    The output should resemble the example below:
+
+
+    ```
+
+    GNU GRUB version 0.95
+
+    >kernel (fd0)/boot/vmlinux init=/bin/sh root=/dev/fd0 load_ramdisk=1 prompt_ramdisk=1-
+
+    ```
+
+
+    Chapter 5. Checking and Mounting Disks'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    ```
+
+    [Linux-bziImage, setup=0xc00, size=0xc29b]
+
+    ngub> boot
+
+    ```
+
+
+    Linux version 2.4.26
+
+    ...
+
+    [various kernel messages]
+
+    ...
+
+    VFS: Insert root floppy disk to be loaded into RAM disk and press ENTER
+
+    RAMDISK: Compressed image found at block 0
+
+    VFS: Mounted root (ext2 filesystem) readonly.
+
+    Freeing unused kernel memory: 178k freed
+
+    #
+
+
+    # 5.4.2. Test the local_fs script
+
+
+    Run the script by typing the following commands at the prompt:
+
+
+    ```
+
+    bash# PATH=/sbin/bin:/etc/init.d ; export PATH
+
+    bash# cat /etc/mtab
+
+    bash# local_fs
+
+    bash# cat /etc/mtab
+
+    bash# df
+
+    ```
+
+
+    If everything is working properly, the screen output should look something like
+    this example below.
+
+
+    ```
+
+    bash# PATH=/sbin/bin:/etc/init.d ; export PATH
+
+    bash# cat /etc/mtab
+
+    bash# local_fs
+
+    /dev/ram0: clean 74/1024 files 3178/4096 blocks
+
+    Remounting / as read-write.
+
+    Mounting local filesystems.
+
+    bash# cat /etc/mtab
+
+    bash#dev/ram0 / ext2 rw 0 0
+
+    proc /proc rw 0 0
+
+    bash# df
+
+    ```
+
+
+    | Filesystem | Used Available Use% on |
+
+    | /dev/ram0 | 3963 | 3045.918 77% / / |
+
+
+    # 5.4.3. Create and mount additional systems
+
+
+    Procure a blank disk and label it as "home". Remove the root floppy disk and insert
+    the "home". Type the following commands:
+
+
+    ```
+
+    bash# mkfs -t ext2 /dev/fd0
+
+    bash# fsck /dev/fd0
+
+    bash# mount /dev/fd0 /home
+
+    bash# mkdir /home/floyd
+
+    bash# cd /home/floyd
+
+    bash# echo "goodbye cruel world." > goodbye.txt
+
+    bash# cat goodbye.txt
+
+    ```
+
+
+    # 5.4.4. System shutdown
+
+
+    ```
+
+    bash# cd /
+
+    nbash# umount /home
+
+    ```
+
+
+    Chapter 5. Checking and Mounting disks'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# # Chapter 6. Automating Startup & Shutdown
+
+
+    # ## 6.1. Analysis
+
+
+    The root disk from the last chapter is looking pretty good. It has about seventy
+    percent of the commands that the Filesystem Hierarchy Standard (FHS) document
+    requires for the root filesystem. It plus commands for checking and monitoring
+    filesystems. But even with all of this root disk is far from perfect. The list
+    below outlines three things that could use improvement if the Pocket Linux system
+    is to stand next to the more professional looking distributions.
+
+
+    +   - The system currently requires the kernel parameters to be typed at the `grub>`
+    prompt in order to start properly. On any other GNU/linux system this is only
+    done in an emergency situation when the system is corrupted.
+
+    - Checking and mounting the root filesystem has to be done manually by running
+    a script at shell prompt. Most modern operating systems this is handled automatically
+    as part of the system start-up process.
+
+    - Using `CTRL-ALT-DELETE` for shutdown is not very graceful. Filesystems should
+    be unmounted and cached information should be flushed prior to shutdown. Again,
+    this is something most operating systems handle automatically.
+
+
+    Taking the above list into consideration, the goals for this phase are defined
+    as follows:
+
+
+    +   - Leads without manual intervention.
+
+    - Automated system start-up sequence.
+
+    - Graceful shutdown capability.
+
+
+    # ## 6.2. Design
+
+
+    # ### 6.2.1. Determining necessary utilities
+
+
+    Loading the kernel without manually typing parameters is easy to do if we read
+    the root info page. According to the section "configuration" of all the commands
+    for booting can be put in a file `menu.lst` and placed in the `/boot/grub` directory.
+
+
+    > Be sure to type the menu.lst filename correctly with a lowercase L after the
+    dot and not a number one. To automate system start-up we will need an init daemon.
+    We know this because the Bootdisk-HOWTO and From-Power-To-BASH-Prompt-HOWTO both
+    make of init as the first program to start after the kernel loads. The latter
+    HOWTO also goes into detail about the /etc/inittab file and the organization of
+    startup scripts. This could be helpful for FHS, the blueprint we have used so
+    far, makes no recommendation for init scripts.
+
+
+    We will also need to perform the shutdown command to fulfill the goal of graceful
+    shutdown capability.
+
+
+    # ## 6.2.2. Obtaining source code
+
+
+    Searching the Linux Software Map for Ibhib for the keyword "init" gives a large
+    number of results. From reading the From-Power-To-BASH-Prompt-HOWTO however, we
+    know that most Linux systems use a'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    System V style init daemon. Narrowing the search with the additional key phrase
+    of "System V" gives much better results. The sysvinit contains init, shutdown,
+    halt and reboot which is everything we need. The version listed by the LSM entry
+    looks to be pretty old, but there is a primary-site URL that will probably lead
+    to the latest version.
+
+
+    # 6.2.3. Checking dependencies
+
+
+    The manage for init mentions a FIFO called /dev/initctl that is required for init
+    to communicate with other programs in the sysvinit package. We will need to create
+    this for init to function properly.
+
+
+    # 6.2.4. Designing a simple GRUB configuration file.
+
+
+    Using a GRUB configuration file is slightly more complex than specifying the bootloader
+    commands manually. There are directives for like menu, defaults and timeouts that
+    need to be specified in the configuration file as well as the familiar kernel
+    command. The info page for GRUB gives us much of the necessary information. We
+    may also be able to use the GRUB configuration on the development system as a
+    template. However, there is some inconsistency between vendors as to the name
+    and location of the file. Regardless of what is on the development system it should
+    be /boot/grub/menu.list on the Linux System.
+
+
+    # 6.2.5. Outlining start-up scripts
+
+
+    Many of the GNU/Linux distributions use System V style init scripts. Since we
+    are using a "sysvinit" daemon it makes sense to use System V style scripts as
+    well. The following documents all touch upon the System V style init in some ways
+    and serve as references when building the scripts for this project:
+
+
+    +   - The Debian Policy Manual — available online at http://www.debian.org/doc/debian-policy.
+
+    - The Linux Base specification — downloadable in many formats from http://www.linuxbase.org/spec/index.html.
+
+    - Essential System Administration, 3rd Edition by Aeleen Frisch — available at
+    libraries, bookstores or or directly from O''Reilly Publishing at http://www.oreilly.com/
+
+
+    After glancing one or two of the above references we should have a good idea of
+    how the System V style initialization process works. We should also know what
+    it takes to create System V style scripts for the Pocket Linux project. Below
+    is a list of what needs to be:
+
+
+    +   - Create an inittab file to call an rc script with a numerical argument giving
+    the runlevel.
+
+    - Write an rc script that uses the runlevel argument to execute the "K" and "S"
+    scripts.
+
+    - Modify the previously built local_fs script to start and stop arguments.
+
+    - Create new scripts for shutdown and reboot.
+
+    - Set up /etc/rc.d directories and links to scripts in /etc/init.d.
+
+
+    As always, the BASH(1) manage and the Advanced Bash Scripting Guide are very helpful
+    for writing and understanding shell scripts.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# 6.3. Construction\n\nThere is a lot of typing to do in this section because\
+    \ of all the start-up scripts that need to be created. Using a mouse to copy the\
+    \ text from this guide and paste it into a text editor can be a great time saving\
+    \ tool.\n\n# 6.3.1. Create a GRUB configuration file\n\nInsert and mount the floppy\
+    \ labeled \"boot disk\".\n\n```\nbash# mount /dev/fd0 /mnt\nbash# cd /mnt/boot/grub\n\
+    \ your favorite text editor to create the following file and save it as /mnt/boot/grub/menu:\n\
+    default 0\ntimeout 3\ntitle Pocket Linux Boot Disk\nkernel (fd0)/vmlinuz root=/dev/fd0\
+    \ load_ramdisk=1 prompt_ramdisk=1\n```\n\n# 6.3.2. Install sysinit utilities\n\
+    \nDownload the latest sysinit from http://ftp.cisron.in/pub/people/miquels/software/\n\
+    \n```\nbash cd /usr/src/sysinit-2.85/src\nbash# make CC=gcc -mppu=i386\nbash#\
+    \ cp halt halt shutdown -~/staging/sbin\nbash# ln -s halt ~/staging/sbin/reboot\n\
+    bash# ln -s init ~/staging/sbin/telinit\nbash# mknod -~/staging/dev/initctl p\n\
+    ```\n\n> In the interest of respect we are skipping the steps for checking libraries\
+    \ and stripping binaries. The library for sysinit is very basic and the Makefile\
+    \ is configured to automatically strip the binaries.\n\n# 6.3.3. Create /etc/inittab\
+    \ file\n\nUse a text editor to create the file and save it as ~/staging/etc/inittab\n\
+    \n```\n# /etc/inittab - init daemon configuration file\n#\n# Default runlevel\n\
+    id:1:initdefault:\n#\n# System initialization\nsis:sysinit:/etc/init.d/rc S\n\
+    #\n# Runlevel scripts\nr0:0:wait:/etc/init.d/rc 0\nr1:1:respawn:/bin/sh\nr2:2:wait:/etc/init.d/rc\
+    \ 2\nr3:3:wait:/etc/init.d/rc 3\nr4:4:wait:/etc/init.d/rc 4\nr5:5:wait:/etc/init.d/rc\
+    \ 5\nr6:6:wait:/etc/init.d/rc 6\n```\n\n# Chapter 6. Automating Startup & Shutdown"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\n#\n# end of /etc/inittab\n```\n\n# 6.3.4. Create /etc/init.d/rc script\n\
+    \nUse a text editor to create the following file and save it as ~/staging/etc/init.d/rc\n\
+    \n```\n#!/bin/sh\n#\n/etc/init.d/rc - runlevel change script\n#\nPATH=/sbin:/bin\n\
+    SCRIPT_DIR=\"/etc/rc1$\"\n\n# Check that the rcn.d directory really exists.\n\
+    if [ -d $SCRIPT_DIR ]; then\n# Execute the kill scripts first.\nfor SCRIPT in\
+    \ $SCRIPT_DIR/K*; do\nif [ -x $SCRIPT ]; then\n $SCRIPT stop\nfi\ndone\nfi\n#\
+    \ Do the Start scripts last.\nfor SCRIPT in $SCRIPT_DIR/S*; do\nif [ -x $SCRIPT\
+    \ ]; then\n $SCRIPT start\nfi\ndone\n\n# end of /etc/init.d/rc\n```\n\nMake the\
+    \ file chmod +x ~/staging/etc/init.d/local_fs\n\n# 6.3.5. Modify /etc/init.d/local_fs\
+    \ script\n\nA case statement is added to allow the script to mount or unmount\
+    \ local filesystems depending on the command-line argument given. The original\
+    \ script is contained inside the \"start\" portion of the case statement. The\
+    \ \"stop\" portion is new.\n\n```\n#!/bin/sh\n#\n/local_fs - check and mount local\
+    \ filesystems\n#\nPATH=/sbin:/bin; export PATH\n\ncase $1 in\nstart)\necho \"\
+    Checking local filesystem integrity.\"\nfsck -ATcp\nif [ $ -gt 1 ]; then\necho\
+    \ \"Filesystem errors still exist! Manual intervention required.\"\n/bin/sh\n\
+    ```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    echo "Remounting / as read-write"
+
+    mount -n -o remount,rw /
+
+    echo -n > /etc/mtab
+
+    mount -f -o remount,rw /
+
+    echo "Unmounting local filesystems"
+
+    mount -a -t nonfs,smbfs
+
+    fi
+
+    ```
+
+
+    ```
+
+    stop)
+
+    echo "Unmounting local filesystems"
+
+    mount -a -r
+
+    ```
+
+
+    ```
+
+    *)
+
+    echo "usage: $0 start|stop";
+
+    esac
+
+    #
+
+    # end of local_fs
+
+    ```
+
+
+    # 6.3.6. Create a hostname script
+
+
+    Use a text editor to create the following script and save it as ~/staging/etc/init.d/hostname
+
+
+    ```
+
+    #!/bin/sh
+
+    # hostname - set the system name to the name stored in /etc/hostname
+
+    #
+
+    PATH=/sbin:/bin; export PATH
+
+    echo "Setting hostname."
+
+    if [ -f /etc/hostname ]; then
+
+    hostname $(cat /etc/hostname)
+
+    elelse
+
+    hostname gnu-linux
+
+    fi
+
+    #
+
+    # end of hostname
+
+    ```
+
+
+    # 6.3.7. Create halt & reboot scripts
+
+
+    Use a text editor to create ~/staging/etc/init.d/halt as shown below.
+
+
+    ```
+
+    #!/bin/sh
+
+    #
+
+    halt - halt the system
+
+    #
+
+    PATH=/sbin:/bin; export PATH
+
+    echo "Initiating system halt."
+
+    halt
+
+    #
+
+    # end of /etc/init.d/halt
+
+    ```
+
+
+    Create the following script and save it as ~/staging/etc/init.d/reboot'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    ```
+
+    #!/bin/sh
+
+    #
+
+    # reboot reboot the system
+
+    #
+
+    PATH=/sbin/bin ; export PATH
+
+
+    echo "Initiating system reboot."
+
+    reboot
+
+    #
+
+    # end of /etcinit.d/reboot
+
+    ```
+
+
+    Flag all script files as executable.
+
+
+    ```
+
+    bash# chmod +x ~/staging/etc/init.d/*
+
+    ```
+
+
+    # 6.3. Create rcNd directories and links
+
+
+    ```
+
+    bash# cd /staging/etc
+
+    bash# mkdir rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d
+
+    bash# cd ../staging/etc/rc5.d
+
+    bash# ln -s ../../init/local_fs S20local_fs
+
+    bash# ln -s ../../init/hostname S30hostname
+
+    bash# cd ../staging/etc/rc0.d
+
+    bash# ln -s ../../init/local_fs F10local_fs
+
+    bash# ln -s ../../init.d/halt K90halt
+
+    bash# cd ../staging/etc/rc6.d
+
+    bash# ln -s ../../init/local_fs K10local_fs
+
+    bash# ln -s ../../init.d/reboot K90reboot
+
+    ```
+
+
+    # 6.3.9. Create the root disk image
+
+
+    ```
+
+    bash# cd
+
+    bash# dd if=/dev/zero of=/dev/ram7 bs=1k count=4096
+
+    bash# mkefs -m0 /dev/ram7 4096
+
+    bash# mount /dev/ram7 /mnt
+
+    bash# cp -DR /staging/* /mnt
+
+    bash# unmount /dev/ram7
+
+    bash# dd if=/dev/ram7 of=/phase5-image bs=1k
+
+    bash# gzip -9 ~/phase5-image
+
+    ```
+
+
+    # 6.3.10. Copy the image to the diskette
+
+
+    Insert the diskette labeled "root disk" into drive fd0.
+
+
+    ```
+
+    bash# dd if=~/phase5-image.gz of=/dev/fd0 bs=1k
+
+    ```
+
+
+    # 6.4. Implementation
+
+
+    # 6.4.1. System Startup
+
+
+    Boot the PC using the floppy labeled "boot disk". Place the recently created root
+    disk in fd0 when prompted. The output should resemble the example:
+
+
+    ```
+
+    GNU GRUB version 0.95
+
+    ```
+
+
+    Chapter 6. Automating Startup & Shutdown'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    ```
+
+    Uncompressing Linux... Ok, booting kernel.
+
+    [Various kernel messages]
+
+    nVFS: Insert root floppy to be loaded into RAM disk and press ENTER
+
+    RAMDISK: Compressed image found at block 0
+
+    VFS: Mounted root (ext2 filesystem) readonly.
+
+    Freed measured kernel (memory): 178k freed
+
+    Checking local filesystem integrity;
+
+    /dev/mem0: clean 105/1024 files 2842/4096 blocks
+
+    Remounting as read-write.
+
+    Mounting local filesystems.
+
+    Setting the hostname.
+
+    INIT: Entering runlevel: 1#
+
+    ```
+
+
+    # 64.2. Verify success of startup scripts
+
+
+    Use the `mount` command to check that local filesystems are mounted as read-write.
+    The output should look like the example below.
+
+
+    ```
+
+    bash# mount
+
+    /dev/root on / type ext2 (rw)
+
+    proc on /proc type proc (rw)
+
+    Check the hostname.
+
+    ```
+
+
+    ```
+
+    bash# uname -n
+
+    gnu-linux
+
+    ```
+
+
+    # 64.3. System shutdown
+
+
+    Bring the system down gracefully with the `shutdown` command.
+
+
+    ```
+
+    bash# shutdown -h now
+
+    We will see the following output from `init` and the shutdown scripts:
+
+    ```
+
+
+    ```
+
+    INIT: Switching to runlevel: 0
+
+    INIT: Sending processes the TERM signal
+
+    Terminated
+
+    INIT: Sending processes the KILL signal
+
+    Unmounting local filesystems.
+
+    Initiating system halt.
+
+    System halted.
+
+    ```
+
+
+    Chapter 6. Automating Startup & Shutdown 34'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Chapter 7. Enabling Multiple Users
+
+
+    # 7.1. Analysis
+
+
+    Up to now the system has been operating in single–user mode. There is no login
+    process and anyone who boots the system gets into a shell with root privileges.
+    Obviously, this is not the normal operating mode for GNU/Linux distributions.
+    Most systems feature multi-user capability where many users can access the system
+    simultaneously with different privilege levels. multi-user systems also support
+    virtual consoles so the keyboard and video display can be multiplexed between
+    several terminal sessions. So in this phase we would like to add the following
+    enhancements to the system:
+
+
+    +   - Enable multi-user capability.
+
+    - Create multiple, virtual consoles.
+
+
+    # 7.2. Design
+
+
+    # 7.2.1. The login process
+
+
+    The From–PowerUp–To–BASH–Prompt–HOWTO does a good job of outlining the steps in
+    the login process. Basically it works like this:
+
+
+    +   1. The init daemon starts a getty process on the terminal.
+
+    2. The getty process displays the contents of /etc/issue and prompts for a user
+    name.
+
+    3. When the user name is entered, control is handed off to the login process.
+
+    4. The login program asks for a password and verifies the credentials using /etc/passwd,/etc/group
+    and possibly /etc/shadow.
+
+    5. If everything is okay the user’s shell is started.
+
+
+    # 7.2.2. Obtaining source code
+
+
+    The getty and login programs were already installed as part of the util–linux
+    package so there is no need to download any new source code.
+
+
+    # 7.2.3. Creating support files
+
+
+    # 7.2.3.1. Device nodes
+
+
+    Details about virtual console device files can be found in the Linux kernel source
+    code file called devices.txt in the Documentation directory. We will need to create
+    tty through t6 for each of the virtual consoles as well as tty0 and tty to represent
+    the current virtual console.
+
+
+    # 7.2.3.2. /etc/issue
+
+
+    The /etc/issue file is pretty easy to construct. It can contain any text we want
+    displayed on the screen prior to the login prompt. It could be something like
+    "Welcome to Pocket Linux", something menacing like "Authorized users only!" or
+    informational like "Connected to tty at 9600bps". getty(8) manpage explains how
+    to display information like tty line and baud rate using escape codes.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 7.2.3.3. /etc/passwd
+
+
+    The format of /etc/passwd can be obtained by reading passwd(5) manpage. We can
+    easily create a user account by adding a line `root:0:0:superuser:root:/bin/sh`
+    to the file.
+
+
+    Maintaining passwords will be somewhat challenging because the system being loaded
+    into ramdisk. Any changes to /etc/passwd will be lost when the system is shut
+    down. To make things easy, we will create all users with null passwords.
+
+
+    # 7.2.3.4. /etc/group
+
+
+    The structure of /etc/group is available from group(5) manpage. A line of `root::0:root`
+    would define a group called `root` with no password, a group or user assigned
+    to it as the only member.
+
+
+    # 7.2.3.5. Conventions
+
+
+    User and group name and id''s are generally not chosen at random. Most Linux systems
+    have very similar looking /etc/passwd and /etc/group files. Definitions for commonly
+    used id and group assignments may be found in one of several places:
+
+
+    +   * /etc/passwd and /etc/group files on any popular GNU/Linux distribution.
+
+    * The Debian Policy Manual — available at http://www.debian.org/doc/debian-policy/
+
+    * The Linux Standard Base specification — downloadable in many formats from http://www.linuxbase.org/spec/index.html.
+
+    * Essential System Administration, 3rd Edition by Aeleen Frisch — available at
+    libraries, bookstores or O''Reilly Publishing at http://www.oreilly.com/
+
+
+    # 7.2.4. Dependencies
+
+
+    Running id on the login program from util-linux will reveal that it is linked
+    to the libraries libcrypt.so.1, libc.so.6 and ld-linux.so.2. In addition to these
+    libraries there is another, dependency on the configuration file /etc/nwitch.conf.
+
+
+    The name service switch library libnssfiles.so.2 and nswitch.conf are required
+    for libc.so, which the login program, to access the /etc/passwd file. Without
+    it and its configuration file, all logins will mysteriously fail. More information
+    about glibc''s use of the name service switches can be found http://www.gnu.org/software/libc/manual/html/node/Service-Switch.html.
+
+
+    # 7.2.5. Assigning ownership and permissions
+
+
+    Previously, with the single user system, there was no need to worry about permissions
+    when installing directories, files and device nodes. The shell was effectively
+    operating as root, so everything was accessible. Things become more complex with
+    the addition of multiple user capability. We need to make sure that every user
+    has access to what they need and at the same time get blocked from what they do
+    not need.
+
+
+    A good guideline for assigning ownership and permissions would be to give the
+    minimum level of access required. The /bin directory as an example. The Filesystem
+    Hierarchy (FHS) document, "bin
+
+
+    Chapter 7. Enabling Multiple Users'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'commands that may be used by the system administrator and users". From that
+    statement we can infer that /bin should have read and execute permission for everyone.
+    On the other hand, the /boot directory contains files for the boot loader. Chances
+    that regular users will not need to access anything in the /boot directory. So
+    the minimum level of access would be read permission for the root user and other
+    administrators who are members of the root group. Normal users would have no permissions
+    assigned to the /boot directory.
+
+
+    Most of the time we can assign permissions to all the commands in a directory,
+    but there are some programs that may be exceptions to the rule. The su command
+    is a good example. Other commands in the /bin directory have a minimum requirement
+    of read and execute, but the su command needs to be setuid in order to run correctly.
+    Since it is setuid binary, it might not be a good idea to allow anyone to run
+    it. Ownership of 0 (root, root group) and permissions of rwsxr-x (octal 4750)
+    would be a good fit for it.
+
+
+    The same logic can be applied to other directories and files in the root filesystem
+    using the following steps:
+
+
+    +   1. Assign ownership to the root user and root group.
+
+    2. Set the most restrictive permissions possible.
+
+    3. Adjust ownership and permissions on an "needed" basis.
+
+
+    # 7.3. Construction
+
+
+    # 7.3.1. Verify presence of getty and login
+
+
+    ```
+
+    bash ls ~/staging/sbin/getty
+
+    bash ls ~/staging/bin/login
+
+    ```
+
+
+    # 7.3.2. Modify initab for multi–user mode
+
+
+    Modify ~/staging/etc/initab by changing the default level and adding getty entries
+    as shown below.
+
+
+    ```
+
+    # /etc/initab - init daemon configuration file
+
+    #
+
+    # Default runlevel
+
+    id:2:initdefault:
+
+    #
+
+    # System initialization
+
+    sS:sysinit:/etc/init.d/rc S
+
+    #
+
+    # Runlevel scripts
+
+    r0:wait/etc/init.d/rc 0
+
+    r1:respawn:/bin/sh
+
+    r2:wait/etc/init.d/rc 2
+
+    r3:wait/etc/init.d/rc 3
+
+    r4:wait/etc/init.d/rc 4
+
+    r5:wait/etc/init.d/rc 5
+
+    r6:wait/etc/init.d/rc 6
+
+    #
+
+    # Spawn virtual terminals
+
+    1:235:respawn:/sbin/getty 38400 tty1 linux
+
+    2:235:respawn:/sbin/getty 38400 tty2 linux
+
+    3:235:respawn:/sbin/getty 38400 tty3 linux
+
+    ```
+
+
+    # Chapter 7. Enabling Multiple Users'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 7.3.3. Create tty devices
+
+
+    ```
+
+    bash# cd ~/staging/dev
+
+    bash# mknod ~/staging/dev/tty0 c 4 0
+
+    bash# mknod ~/staging/dev/tty1 c 4 1
+
+    bash# mknod ~/staging/dev/tty2 c 4 2
+
+    bash# mknod ~/staging/dev/tty3 c 4 3
+
+    bash# mknod ~/staging/dev/tty4 c 4 4
+
+    bash# mknod ~/staging/dev/tty5 c 4 5
+
+    bash# mknod ~/staging/dev/tty6 c 4 6
+
+    bash# mknod ~/staging/dev/tty7 c 5 0
+
+    ```
+
+
+    # 7.3.4. Create support files in /etc
+
+
+    # 7.3.4.1. /etc/issue
+
+
+    Create the file ~/staging/issue using the example below or design a customized
+    message.
+
+
+    Connected to \l at \ bps.
+
+    Be sure that "L" is a lowercase L and not the number one.
+
+
+    # 7.3.4.2. /etc/passwd
+
+
+    Use a text editor to create a minimal passwd file conforming to the Linux Standards
+    Base (LSB) document. Save the file as ~/staging/etc/passwd
+
+
+    ```
+
+    root:0:0:Super User:/root:/bin/sh
+
+    bin:x:1:1:Legacy UID:/bin/bin/false
+
+    daemon:x:2:2:Legacy UID:/sbin:/bin/false
+
+    ```
+
+
+    # 7.3.4.3. /etc/group
+
+
+    Use a text editor to create an LSB conforming group file and save it as ~/staging/etc/group
+
+
+    ```
+
+    root:x:1:root,bin,daemon
+
+    daemon:x:2:root,bin,daemon
+
+    ```
+
+
+    # 7.3.4.4. /etc/nsswitch.conf
+
+
+    Create the following file and save it as ~/staging/etc/nsswitch.conf
+
+
+    ```
+
+    passwd: files
+
+    group: files
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 7.3.5. Copy required libraries
+
+
+    ```
+
+    bash# cp /lib/libnss_files.so.2 ~/staging/lib
+
+    bash# strip --strip-needed ~/staging/lib/*
+
+    ```
+
+
+    # 7.3.6. Set directory and file permissions
+
+
+    Set minimal privileges on all files and directories under ~/staging. Everything
+    is owned by the root group. Permissions are read-write for the owner and read-only
+    for the group. Exceptions to the blanket permissions are handled by case.
+
+
+    ```
+
+    bash# cd ~/staging
+
+    bash# chown -R 0:0 ~/staging/*
+
+    bash# chmod 640 ~/staging/*
+
+    ```
+
+
+    Set execution permission on all directories. (Note the capital "X")
+
+
+    ```
+
+    bash# chmod -R +X ~/staging/*
+
+    ```
+
+
+    Files in /bin read and execute for all, but su is an exception.
+
+
+    ```
+
+    bash# chmod 755 ~/staging/bin/*
+
+    bash# chmod 4750 ~/staging/bin/su
+
+    ```
+
+
+    Files in /dev have various permissions. Devices should be accessible to administrators
+    only. Other files like /dev/null have full privileges granted to everyone.
+
+
+    ```
+
+    bash# chmod 660 ~/staging/dev/ram0
+
+    bash# chmod 666 ~/staging/dev/null
+
+    bash# chmod 622 ~/staging/dev/console
+
+    bash# chmod 600 ~/staging/dev/initctl
+
+    bash# chmod 622 ~/staging/dev/tty
+
+    bash# chmod 622 ~/staging/dev/tty2
+
+    ```
+
+
+    The password and group files must be readable.
+
+
+    ```
+
+    bash# chmod 644 ~/staging/etc/passwd
+
+    bash# chmod 644 ~/staging/etc/group
+
+    ```
+
+
+    The scripts in /etc/init.d are read and execute for administrators.
+
+
+    ```
+
+    bash# chmod 750 ~/staging/etc/init.d/*
+
+    ```
+
+
+    Libraries need read and execute permissions for everyone.
+
+
+    ```
+
+    bash# chmod 755 ~/staging/lib/*
+
+    ```
+
+
+    Only root should have access to the /root directory.
+
+
+    ```
+
+    bash# chmod 700 ~/staging/root
+
+    ```
+
+
+    Files in /sbin read and execute for administrators.
+
+
+    ```
+
+    bash# chmod 750 ~/staging/sbin/*
+
+    ```
+
+
+    Temp should be read-write for all with the sticky bit.
+
+
+    ```
+
+    bash# chmod 1777 ~/staging/tmp
+
+    ```'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 7.3.7. Create the root disk image
+
+
+    ```
+
+    bash# cd /
+
+    bash# dd if=/dev/zero of=/dev/ram7 bs=1k count=4096
+
+    bash# mk2fs -f0 /dev/ram7 4096
+
+    bash# mount /dev/ram7 /mnt
+
+    bash# cp -dr ~/staging/* /mnt
+
+    bash# umount /dev/ram7
+
+    bash# dd if=/dev/ram7 of=/phase6-image bs=1k count=4096
+
+    bash# gzip -9 /phase6-image
+
+    ```
+
+
+    # 7.3.8. Copy the image to diskette
+
+
+    Insert the diskette labeled "root disk" into drive fd0.
+
+
+    ```
+
+    bash# dd if=/phase6-image.gz of=/dev/fd0 bs=1k
+
+    ```
+
+
+    # 7.4. Implementation
+
+
+    # 7.4.1. System Startup
+
+
+    If everything goes well, the virtual console display should look similar to the
+    following example:
+
+
+    ```
+
+    Connected to tty1 at 3840 bps.
+
+    nu-linux login:
+
+    ```
+
+
+    # 7.4.2. Add a new user to the system
+
+
+    Log in as root.
+
+
+    Create a new, privileged user and group by appending a line to the /etc/passwd
+    and /etc/group files, respectively. Be sure to use a double greater-than (>>)
+    to avoid accidentally overwriting the files.
+
+
+    ```
+
+    bash# echo floyd:501:500:user:/home/floyd:/bin/sh* >>/etc/passwd
+
+    bash# echo users:::* >>/etc/group
+
+    bash# mkdir /home/floyd
+
+    bash# chown floyd:users /home/floyd
+
+    bash# chmod 700 /home/floyd
+
+    ```
+
+
+    # 7.4.3. Test the new user''s ability to use the system
+
+
+    Switch to virtual terminal tty2 by pressing ALT+F2.
+
+
+    Log in as floyd.
+
+
+    Try the following commands and verify that they work.
+
+
+    ```
+
+    bash$ pwd
+
+    bash$ ls -l /
+
+    bash$ cat /etc/passwd
+
+    ```
+
+
+    Chapter 7. Enabling Multiple Users'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    Try the following commands and verify that they do not work.
+
+
+    ```
+
+    bash$ ls /root
+
+    bash$ /sbin/shutdown -h now
+
+    bash$ su -
+
+    ```
+
+
+    # ## 7.4.4. System shutdown
+
+
+    Switch back to tty1 where root is logged in.
+
+
+    ```
+
+    bash# shutdown -h now
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# # Chapter 8. Filling in the Gaps
+
+
+    # ## 8.1. Analysis
+
+
+    The root disk has come a long way since its humble beginnings as a statically-linked
+    shell. It now shares features with the popular, ready-made distributions. For
+    example it has:
+
+
+    +   - Several common utilities like cat, ls and so on.
+
+    - Startup scripts that automatically check and mount filesystems.
+
+    - Graceful shutdown capability.
+
+    - Support for multiple users and virtual terminals.
+
+
+    As a final test, we can put the root disk using the Filesystem Hierarchy Standard
+    (FHS) requirements for the root filesystem.(We will ignore anything in the /usr
+    hierarchy of space constraints.) Compared to FHS requirement, the only files missing
+    are a few commands in the /bin directory. Specifically, the root disk lacks the
+    following commands:
+
+
+    +   - more
+
+    - ps
+
+    - sed
+
+
+    In addition to the required commands, it might be nice to include the "ed" editor
+    list as an option by the FHS. It is not as robust as vi or emacs, but it works
+    and should fit onto the tiny root filesystem.
+
+
+    So in order to finish this phase of the project, we need to accomplish the following
+    goals:
+
+
+    +   - Add the more, ps and sed commands.
+
+    - Install the optional ed editor.
+
+
+    # ## 8.2. Design
+
+
+    # ### 8.2.1. more
+
+
+    There is a more command that comes with util-linux, but it will not work for this
+    project. The reason is because of library dependencies and space constraints.
+    The util-supplied more needs either the libncurses or libterm to work and there
+    is not enough space on the root disk floppy to fit everything. So, in order to
+    have a more command we will have to create.
+
+
+    The more command is used to display a file page by page. It''s a little like having
+    a cat command that pauses twenty-five lines. The basic logic is outlined below.
+
+
+    +   - Read one line of the file.
+
+    - Display the line on the screen.
+
+    - If 25 lines have been displayed, pause.
+
+    - Loop and do it again.
+
+
+    Of course there are some details left out what to do if the screen dimensions
+    are not what we anticipated, but overall it is a fair representation of what more
+    does. Given this simple program logic, it should not be hard'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Pocket Linux Guide\n\nto put together a short shell script that emulates\
+    \ the basic functionality of more. The BASH(1) manpage and Adv-BASH-Scripting-Guide\
+    \ will serve as references.\n\n# 8.2.2. More device files\n\nThe more script will\
+    \ need access to device files that are not on the disk yet. Specifically more\
+    \ needs to stdin, stdout and stderr while we are at it should check for any missing\
+    \ /dev files. The Linux Standard Base requires null, zero and tty to be present\
+    \ in the /dev directory. For null and tty already present from previous phases\
+    \ of the project, but we still need /dev/zero. We can refer to devices.txt in\
+    \ the Linux source Documentation directory for major and minor numbers.\n\n# 8.2.3.\
+    \ ps, sed & ed\n\nThese three packages can be found using the Internet resources\
+    \ we have used plus one new site. The \"sed\" and \"ed\" packages can be found\
+    \ at the same place where BASH, the GNU FTP server. The procs package shows up\
+    \ in Ibiblio LSM search, but it is an old version. In order to find the latest\
+    \ version we can go to the website at http://freshmeet.net and search for \"procs\"\
+    \ in projects.\n\nBoth \"sed\" and \"ed\" package GNU's basic configure script\
+    \ are therefore very easy to build. There is no configure for \"procs\" which\
+    \ does not make things difficult. We can just read the package's README file to\
+    \ find out how to set various configuration options. We can use one of these options\
+    \ to avoid the complexity of installing and linking. Setting SHARED=0 makes libproc\
+    \ part of ps rather than a separate, shared library.\n\n# 8.3. Construction\n\n\
+    # 8.3.1. Write a \"more\" script\n\nCreate the following script with a text editor\
+    \ and save it as ~/staging/bin/more.sh\n\n```\n#!/bin/sh\n#\n# more.sh     emulates\
+    \ the basic functions of the \"more\" binary without\n#               requiring\
+    \ ncurses or termcap libraries.\n#\n# Assume input is coming from STDIN unless\
+    \ a valid file is given as\n#   a command-line argument.\nif [ -f $1 ]; then\n\
+    \  INPUT=\"$1\"\nelse\n  INPUT=\"/dev/stdin\"\nfi\n\n# Set IFS to newline one.\
+    \ See BASH(1) manpage for details on IFS.\nIFS=$'\n'\n\n# If terminal dimensions\
+    \ are not already set as shell variables, take\n# a guess of 80x25.\nif [ \"$COLUMNS\"\
+    \ = \"\" ]; then\n  let COLUMNS=80\nfi\nif [ \"$LINES\" = \"\" ]; then\n  let\
+    \ LINES=25;\n```\n\nChapter 8. Filling in the Gaps"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# Pocket Linux Guide\n\n```\n#\n# Initialize line counter variable\nlet LINE_COUNTER=$LINES\n\
+    \n# Read the input file line at a time and display on STDOUT until\n# the page\
+    \ fills up. Display \"Press <Enter>\" message on STDERR and wait\n# for keypress\
+    \ from STDERR. Continue until the end of the input file.\n# Any input greater\
+    \ than $COLUMNS characters in length is wrapped\n# and counted as multiple lines.\n\
+    \nwhile read -n $COLUMNS LINE_BUFFER; do\n  echo \"$LINE_BUFFER\"\n  let LINE_COUNTER=$((LINE_COUNTER-1))\n\
+    \  if [ $LINE_COUNTER -le 1 ]; then\n    echo \"Press for next page or <CTRL>C\
+    \ to quit.\" >/dev/stderr\n    read </dev/stderr\n    let LINE_COUNTER=$LINES\n\
+    \  fi\ndone <$INPUT\n\n# Create a symbolic link for more\n```\n\n```\nbash# ln\
+    \ -s more.sh ~/staging/bin/more\n```\n\n# 8.3.2. Install create device files\n\
+    \n```\nbash# ln -s /proc/self/fd ~/staging/dev/fd\nbash# ln -s fd/0 ~/staging/dev/stdin\n\
+    bash# ln -s fd/1 ~/staging/dev/stdout\nbash# ln -s fd/2 ~/staging/dev/stderr\n\
+    bash# mknod -m644 ~/staging/dev/zero c 1 5\n```\n\n# 8.3.3. Install ps\n\nGet\
+    \ the latest source package from http://procps.ps.sourceforge.net/\n\n```\nbash#\
+    \ cd /usr/src/procps-3.2.3\nbash# make SHARED=0 CC=\"gcc\" -mcpu=i386\nbash# cd\
+    \ ps\nbash# cp ps ~/staging/bin\n```\n\n# 8.3.4. Install sed\n\nDownload GNU sed\
+    \ from ftp.gnu.org/gnu/sed/\n\n```\nbash# cd /usr/src/sed-4.1.2\nbash# export\
+    \ CC=\"gcc\" -mcpu=i386\nbash# ./configure --host=i386-pc-linux-gnu\nbash# make\n\
+    bash# cd sed\nbash# cp sed ~/staging/bin\n```\n\nChapter 8. Filling in the Gaps"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 8.3.5. Install ed
+
+
+    The ed package also comes from GNU at `ftp://ftp.gnu.org/gnu/ed/`
+
+
+    ```
+
+    bash# cd /usr/src/ed-0.2
+
+    bash# ./configure --host=i386-pc-linux-gnu
+
+    bash# make
+
+    bash# cp ed ~/staging/bin
+
+    ```
+
+
+    # 8.3.6. Strip binaries to save space
+
+
+    ```
+
+    bash# strip ~/staging/bin/*
+
+    ```
+
+
+    # 8.3.7. Ensure proper permissions
+
+
+    ```
+
+    bash# chown 0:0 ~/staging/bin/*
+
+    bash# chmod -R 755 ~/staging/bin
+
+    bash# chmod 4750 ~/staging/bin/su
+
+    ```
+
+
+    # 8.3.8. Create the root disk image
+
+
+    ```
+
+    bash# cd /
+
+    bash# dd if=/dev/zero of=/dev/ram7 bs=1k count=4096
+
+    bash# mkefs -m0 /dev/ram7 4096
+
+    bash# mount /dev/ram7 /mnt
+
+    bash# cp -pR ~/staging/* /mnt
+
+    bash# umount /dev/ram7
+
+    bash# dd if=/dev/ram7 of=~/phase7-image bs=1k
+
+    bash# gzip -9 /phase7-image
+
+    ```
+
+
+    # 8.3.9. Copy the image to diskette
+
+
+    Insert the diskette labeled "root disk" into drive fd0.
+
+
+    ```
+
+    bash dd if=~/phase7-image.gz of=/dev/fd0 bs=1k
+
+    ```
+
+
+    # 8.4. Implementation
+
+
+    # 8.4.1. System startup
+
+
+    Boot from the diskette in the usual way and log in as root.
+
+
+    # 8.4.2. Test the "more" script
+
+
+    Display kernel messages by piping the output of dmesg to more.
+
+
+    ```
+
+    bash# dmesg | more
+
+    Examine the local_fs script using more with a command-line argument.
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '```
+
+    bash# more /etc/init.d/local_fs
+
+    ```
+
+
+    # 8443. Use ps to show running processes
+
+
+    Display processes for the user currently logged in.
+
+
+    ```
+
+    bash# ps
+
+    Display all available information about all running processes.
+
+    ```
+
+
+    ```
+
+    bash# ps -ef
+
+    ```
+
+
+    # 8444. Run a simple sed script
+
+
+    Use sed to display an alternate version of /etc/passwd.
+
+
+    ```
+
+    bash# sed -e "s/Legacy/Old School/" /etc/passwd
+
+    Verify that sed did not make the changes permanent.
+
+    ```
+
+
+    ```
+
+    bash# cat /etc/passwd
+
+    ```
+
+
+    # 8445. Test the "ed" editor
+
+
+    Use ed to change properties on the "daemon" user.
+
+
+    ```
+
+    bash# ed -p*
+
+    ed* r /etc/passwd
+
+    ed* %p
+
+    ed* /daemon/s/Legacy/Old School/
+
+    ed* %p
+
+    ed* w
+
+    ed* q
+
+    Verify that the changes are permanent (at least until the system is restarted).
+
+    ```
+
+
+    ```
+
+    bash# cat /etc/passwd
+
+    ```
+
+
+    # 8446. System shutdown
+
+
+    Bring the system down gracefully with the shutdown command.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# # Chapter 9. Project Wrap Up
+
+
+    # ## 9.1. Celebrating Accomplishments
+
+
+    The Pocket Linux Project draws to a close we should take a moment to celebrate
+    all of our accomplishments. Some of the highlights are listed below:
+
+
+    +   - We have built a system, from source code only, that fully implements all
+    of the commands described in the Filesystem Hierarchy Standard requirements for
+    a root system.
+
+    - We have learned how to use Internet resources to locate and download the source
+    code needed to build a GNU/Linux system.
+
+    - We have written basic system setup and shutdown scripts and configured them
+    to execute in the proper runnels.
+
+    - We have included support for multiple users on virtual consoles and implemented
+    permissions on system files.
+
+    - But most importantly, we have learned some good design techniques and project
+    management skills that will enable us to tackle any future projects with ease
+    and confidence.
+
+
+    # ## 9.2. Planning Next Steps
+
+
+    The Pocket Linux system is nearly overflowing, so there is really no room to expand
+    the current root diskette to support any additional commands and features. This
+    leaves us with a few choices of where to go next. We can:
+
+
+    +   - Find a way to expand the current system just enough to host a small application.(For
+    more information about hosting applications with Pocket Linux, see Appendix A)
+
+    - Remove multi-user capability and some of the least used commands from the root
+    disk, replacing them with utilities like tar and gzip that would be useful for
+    a rescue/restore diskset.
+
+    - Use the techniques we have learned to design and build an entire GNU/Linux system
+    and install it on a more spacious hard disk partition. (For more infom about building
+    a larger system, check out the GNU/Linux System Architect Toolkit at: http://architect.sourceforge.net/)
+
+
+    Which ever path is chosen, we can move forward confidently, armed with the knowledge
+    we need in our endeavors.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Appendix A. Hosting Applications
+
+
+    # A.1. Analysis
+
+
+    An operating system by itself is not much fun. What makes an OS great is the applications
+    that can be run on top of it. Unfortunately, Pocket Linux currently does not have
+    much room for anything other than system programs. Still, it would be nice to
+    expand the system just to host some cool applications. Obviously a full-blown
+    X–Windows GUI is out of the question, but running a console-based program should
+    be within our reach.
+
+
+    Rather than doing a typical "hello world" program as an example, application hosting
+    will be demonstrated using a console-based audio player called mp3blaster. Building
+    mp3blaster offers much more technical challenge than "hello world" and the finished
+    product would be a lot more. However, it should not be construed that a console-based
+    jukebox is the only application for Pocket Linux. On the contrary, after completing
+    this phase the reader will have the knowledge and tools to build any–based program
+    he or she desires.
+
+
+    So what will it take to turn a pocket-sized GNU/Linux system into a pocket-sized
+    mp3 player? A few things are listed below.
+
+
+    +   - Add support for audio hardware.
+
+    - Create space for the mp3blaster program.
+
+    - Provide a convenient way to access audio files.
+
+
+    # A.2. Design
+
+
+    # A.2.1. Support for audio hardware
+
+
+    There is a vast proliferation of audio hardware on the market and each sound card
+    has its particular configuration. For details on how to set up a particular sound
+    card we can turn to the Sound–HOWTO available from The Linux Documentation Project.
+    In a broader sense, however, we can turn a sound card like any other piece of
+    hardware. To add new hardware to a GNU/Linux system we will need to configure
+    the kernel to recognize it and /dev files on the root disk to access it.
+
+
+    # A.2.1.1. Kernel support for audio
+
+
+    In order to support sound, a new kernel will have to be built. It is very important
+    that audio support be configured as built-in, because Pocket Linux is not set
+    up to handle kernel modules.
+
+
+    # A.2.1.2. Root disk support for audio
+
+
+    Searching devices.txt for the keyword "sound" will list quite a few possible audio
+    devices, but usually only /dev/dsp and /dev/mixer are required to get sound from
+    a PC. These two files control the digital audio output and mixer controls, respectively.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# A.2.2. Creating space for the program
+
+
+    The easiest way to create more space for the mp3blaster program is to put an additional
+    storage device. There are several choices for mount points. So far /usr,/home
+    and /opt are all directories and any of them could be used to mount a floppy,
+    CD-ROM or additional ramdisk image. The /usr directory is a logical choice for
+    a place to put an application, but what about the choice of media? Mp3blaster
+    and its required libraries are too big to fit on a 1.44M floppy and a CD-ROM seems
+    like a lot of work for one little program. Given these constraints, the best choice
+    would be to put the program on a compressed floppy.
+
+
+    # A.2.2.1. Mounting additional compressed floppies
+
+
+    Mounting CDs and uncompressed diskettes is easy, but what about loading compressed
+    images into ramdisk? It will have to be done manually, unless automatic mounting
+    of compressed floppies only works for the root disk. Since there no filesystem
+    on the disk, there are only the contents of a gzip file. The actual filesystem
+    is inside the gzip file. How can we mount the ramdisk buried the gzip file? This
+    puzzle can be solved by examining the steps used to create the familiar compressed
+    root disk floppy.
+
+
+    +   1. A ramdisk is created, mounted and filled with files.
+
+    2. The ramdisk device is unmounted.
+
+    3. The contents of the ramdisk are dumped to an image file using dd.
+
+    4. The image is compressed with gzip.
+
+    5. The compressed image file is written to floppy with dd.
+
+
+    If that is the compressed image makes its way from ramdisk to compressed floppy,
+    then going from compressed floppy to ramdisk should be as simple as running through
+    the steps in reverse
+
+
+    +   1. The compressed image file is read from floppy with dd.
+
+    2. The image is uncompressed with gzip.
+
+    3. The contents of the image file are dumped into ramdisk using dd.
+
+    4. The ramdisk is mounted.
+
+    5. The files are available.
+
+
+    We can cut the intermediate image file by using a pipe to combine dd and gzip:
+    dd if=/dev/fd0 | gzip -cq > /dev/ram1. Now the compressed floppy goes straight
+    into ramdisk, decompressing on the fly.
+
+
+    # A.2.2.2. Root support for additional ramdisks
+
+
+    We already have kernel support for ramdisks, because we are using a compressed
+    root disk, but we need to create more ramdisks in /dev. Typically the kernel supports
+    eight ramdisks on /dev/ram0 through /dev/ram7 with ram0 being used for the rootdisk.
+    The devices.txt file included in the Linux source documentation will be helpful
+    for matching devices to major and minor numbers.
+
+
+    # A.2.3. Accessing audio files
+
+
+    The sample file that we will be using in our example is small enough to fit on
+    an uncompressed floppy disk so there is no need to burn a CD. However, serious
+    music lovers may want the capability to mount a CD-ROM full of tunes and that
+    will require support for additional hardware.
+
+
+    Appendix A. Hosting Applications'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# A.2.3.1. CD-ROM hardware support
+
+
+    Most modern CD-ROM drives will use IDE devices /dev/hdc or /dev/hdd. To support
+    these CD-ROM drives we will have to configure IDE support in the kernel and create
+    the appropriate device files on the root disk.
+
+
+    # A.2.3.2. CD-ROM filesystem support
+
+
+    CD-ROMs have different filesystems than hard disks and floppies. Most CD burning
+    applications use a filesystem ISO-9660 and have the capability to support Joliet
+    or Ridgecliff extensions. We will have to include support for these filesystems
+    in the kernel in order to mount CD-ROMs.
+
+
+    # A.2.4. Other required files
+
+
+    We will want to have all mp3blaster''s libraries and other supporting files available
+    as part of the compressed /usr image so that mp3blaster can run correctly. The
+    familiar ldd command can determine which mp3blaster may require. Any additional
+    libraries can be placed in /usr/lib. Even though some of the libraries may appear
+    in /lib on the development system, they can still go in /usr/lib on the Pocket
+    Linux system. The dynamic linker, lld-linux.so, is smart enough to look in both
+    places when loading libraries.
+
+
+    Because mp3blaster uses the curses (or ncurses) control library there is one additional
+    file we need. The curses library to know the characteristics of the terminal it
+    is controlling and it gets information from the terminfo database. The terminfo
+    database consists of all the files that use /usr/share/terminfo directory and
+    is very large compared to our available disk space. But, since Linux only supports
+    the PC console, we only have one terminal type to worry about and therefore need
+    only one file. The piece of the terminfo database we need is the file /usr/share/terminfo/1/linux,
+    because we are using a "Linux" terminal. For more information about the subject
+    of curses, see John Strang''s book "Programming with Curses" available from O''Reilly
+    publishing
+
+
+    # A.2.5. Summary of tasks
+
+
+    Between sound cards, ramdis, CD-ROMs and terminfo there is quite a lot to keep
+    track of. So let''s take a moment to organize and summarize the tasks necessary
+    to make the pocket jukebox viable.
+
+
+    +   * Create a new kernel that includes built-in support for audio hardware, IDE
+    devices and CD-ROM filesystems.
+
+    * Create the appropriate /dev files on the root disk to support audio hardware,
+    additional ramdisks and IDE CD-ROMs.
+
+    * Install the gunzip utility to enable decompression of the usr image.
+
+    * Create a startup script to load a compressed image into a ramdisk and mount
+    the /usr.
+
+    * Create a compressed floppy that holds the mp3blaster program, its required libraries
+    and terminfo files.
+
+
+    # A.3. Construction'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# A.3.1. Create an enhanced boot disk
+
+
+    # A.3.1.1. Build a new kernel
+
+
+    ```
+
+    bash# cd /usr/src/linux
+
+    bash# make menuconfig
+
+    ```
+
+
+    Be sure to configure support for the following:
+
+
+    +   * 386 processor
+
+    * Floppy disk
+
+    * RAM disk
+
+    * Second extended (ext2) filesystem
+
+    * Virtual console
+
+    * Audio hardware
+
+    * CD-ROM hardware
+
+    * ISO-9660 and Joliet filesystems
+
+
+    ```
+
+    bash# make dep
+
+    bash# make clean
+
+    bash# make bzImage
+
+    ```
+
+
+    # A.3.1.2. Copy the kernel to diskette
+
+
+    Place the boot disk in drive fd0
+
+
+    ```
+
+    bash# mount /dev/fd0 /mnt
+
+    bash# copy cp /usr/src/linux/arch/i386/boot/bzImage /mnt/boot/vmlinux
+
+    ```
+
+
+    # A.3.1.3. Unmount the boot disk
+
+
+    ```
+
+    bash# cd /
+
+    nbash# unmount /mnt
+
+    ```
+
+
+    # A.3.2. Create an enhanced root disk
+
+
+    # A.3.2.1. Create additional device files
+
+
+    # A.3.2.1.1. IDE CD-ROM
+
+
+    ```
+
+    bash# mknod -m640 ~staging/dev/hdc b 22 0
+
+    bash# mknod -m640 ~staging/dev/hdd b 22 64
+
+    ```
+
+
+    Optionally create additional IDE devices.
+
+
+    # A.3.2.1.2. Ramdisk
+
+
+    ```
+
+    bash# mknod -m640 ~staging/dev/ram1 b 1 1
+
+    bash# mknod -m640 ~staging/dev/ram2 b 1 2
+
+    bash# mknod -m640 ~staging/dev/ram3 b 1 3
+
+    bash# mknod -m640 ~staging/dev/ram4 b 1 4
+
+    bash# mknod -m640 ~staging/dev/ram5 b 1 5
+
+    bash# mknod -m640 ~staging/dev/ram6 b 1 6
+
+    bash# mknod -m640 ~staging/dev/ram7 b 1 7
+
+    ```
+
+
+    Appendix A. Hosting Applications'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# A.3.2.1.3. Audio\n\n```\nbash# mknod -m664 ~/staging/dev/dsp c 14 3\nbash#\
+    \ mknod -m664 ~/staging/dev/mixer c 14 0\n```\n\n# A.3.2.2. Install the gunzip\
+    \ binary\n\n```\nbash# cd /usr/src/gunzip-1.2.4a\nbash# export CC=\"gcc -mcpu=i386\"\
+    \nbash# ./configure --host=i386-pc-linux-gnu\nbash#\nmake\nbash# strip gzip\n\
+    bash# cp gzip ~/staging/bin\nbash# ln -s gzip ~/staging/bin/gunzip\n```\n\nDon't\
+    \ forget to verify library requirements, check the ownership and permissions on\
+    \ the gzip binary.\n\n# A.3.2.3. Write a startup script to mount a compressed\
+    \ floppy\n\nUse a text editor to create the following script and save it as~/staging/etc/init.d/usr_image\n\
+    \n```\n#!/bin/sh\n# usr_image - load compressed images from floppy into ramdisk\
+    \ and\n# mount on /usr.\n\necho -n \"Is there a compressed disk to load for /usr\
+    \ [y/N]?\"\nread REPLY\nif [ \"$REPLY\" = \"y\" || \"$REPLY\" = \"Y\" ]; then\n\
+    \  echo \"Please insert the usr floppy into fd0 and press <ENTER>.\"\n  read REPLY\n\
+    \  echo \"Clearing /dev/raml.\"\n  dd if=/dev/zero of=/dev/raml bs=1k count=4096\n\
+    \  echo \"Loading compressed image from /dev/fd0 into /dev/raml...\"\n  (dd if=/dev/sd0\
+    \ | gunzip -q) >>/dev/null\n  fsck -fp /dev/raml\n  if [ $? -ne 0 ]; then\n  \
+    \  echo \"Filesystem errors on /dev/raml! Manual intervention required.\"\n  else\n\
+    \    echo \"Mounting /usr.\"\n    mount /dev/raml /usr\n  fi\nfi\n# end of usr_image\n\
+    ```\n\nConfigure the script to run right after it is mounted.\n\n```\nbash# ln\
+    \ -s ../init.d/usr_image ~/etc/rcS.d/S21usr_image\n```\n\n# A.3.2.4. Create a\
+    \ compressed root disk\n\n```\nbash# cd /\nbash# dd if=/dev/zero of=/dev/ram7\
+    \ bs=1k count=4096\nbash# mkfs -m0 /dev/ram7\nbash# mount /dev/ram7 /mnt\nbash#\
+    \ cp -pR ~/staging/* /mnt\nbash# umount /dev/ram7\n```\n\nAppendix A. Hosting\
+    \ Methods"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    bash# dd if=/dev/ram7 of=/phase8-image bs=1lk
+
+    bash# gzip -9 /phase8-image
+
+    ```
+
+
+    Insert the diskette labeled "root disk" into drive fd0.
+
+
+    ```
+
+    bash# dd if=/phase8-image.gz of=/dev/fd0 bs=1lk
+
+    ```
+
+
+    # A.3.3. Create a compressed /usr disk for mp3blaster
+
+
+    The compressed /usr diskette will be created in the same process that is used
+    to create the compressed root disk. We will copy files to a staging area, copy
+    the staging area to ramdisk, compress the ramdisk and write it to disk.
+
+
+    # A.3.3.1. Create a staging area
+
+
+    ```
+
+    bash# mkdir ~/usr-staging
+
+    bash# cd ~/usr-staging
+
+    bash# mkdir bin lib
+
+    bash# mkdir -p share/terminfo/1
+
+    ```
+
+
+    # A.3.3.2. Install the mp3blaster program
+
+
+    Download the latest version of mp3blaster source code from its home at http://www.stack.nl/~brama/mp3blaster/
+
+
+    ```
+
+    bash# cd ~/usr/src/mp3blaster-3.2.0
+
+    bash# .//configure
+
+    bash# make
+
+    bash# cp src/mp3blaster ~/usr-staging/bin
+
+    ```
+
+
+    # A.3.3.3. Copy additional libraries and terminfo
+
+
+    Use ld to find which libraries are needed for mp3blaster.
+
+
+    > The following is an example from the author''s development system. It is possible
+    that different systems may yield different results in terms of library requirements.
+
+
+    ```
+
+    bash# cd ~/usr-staging/lib
+
+    bash# ldd ~/usr-staging/bin/mp3blaster
+
+    bash# cp /usr/lib/ncurses.so.5.0
+
+    bash# cp /usr/lib/libc++.so.3
+
+    bash# cp /usr/lib/libgcc_s.so.1
+
+    bash# cd ~/usr-staging/share/terminfo/1
+
+    bash# cp /usr/share/terminfo/1/*
+
+    ```
+
+
+    # A.3.3.4. Make a compressed image and copy it to a diskette
+
+
+    ```
+
+    bash# cd /
+
+    bash# dd if=/dev/zero of=/dev/ram7 bs=1lk count=4096
+
+    bash# mk2fs -m0 /dev/ram7
+
+    bash# mount /dev/ram7 /mnt
+
+    bash# cp -dPR ~/usr-staging/* /mnt
+
+    bash# umount /dev/ram7
+
+    ```
+
+
+    Appendix A. Hosting Applications'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    bash# dd if=/dev/ram7 of=~/mp3blaster-image bs=lk
+
+    bash# gzip -9 ~/mp3blaster-image
+
+    ```
+
+
+    Insert the diskette labeled "mp3blaster" into drive fd0.
+
+
+    ```
+
+    bash# dd if=~/mp3blaster-image.gz of=/dev/fd0 bs=lk
+
+    ```
+
+
+    # A.4.3. Create a diskette for testing
+
+
+    Go to the Internet site http://www.paul.sladen.org and download the mp3 file of
+    Linux Torvalds pronouncing "Linux". The direct link is: http://www.paul.sladen.org/pronunciation/torvalds-says-linux.mp3.
+    Create a Second Extended (ext2) filesystem on a floppy and copy the mp3 file onto
+    the diskette.
+
+
+    # A.4. Implementation
+
+
+    # A.4.1. System Startup
+
+
+    +   1. Boot from the kernel diskette.
+
+    2. Insert the root floppy when prompted.
+
+    3. When prompted for a /usr diskette, say ''Y''.
+
+    4. Insert the mp3blaster diskette and press Enter.
+
+
+    # A.4.2. Verify that the /usr diskette loaded properly
+
+
+    ```
+
+    bash# mount
+
+    bash# ls -lR /usr
+
+    ```
+
+
+    # A.4.3. Check the audio device initialization
+
+
+    ```
+
+    bash# dmesg | more
+
+    ymfci: YMC740AC at 0xf4800000 IRQ 10
+
+    ac97_codec: AC97 Audio codec, id: 0x4144:0x5303 (Analog Devices AD1819)
+
+    ```
+
+
+    If everything worked there should be a line or two indicating that the kernel
+    found the audio hardware. The example below shows how the kernel might report
+    a Yamaha integrated sound system.
+
+
+    # A.4.4. Test audio output
+
+
+    ```
+
+    bash# echo "Garbage" > /dev/dsp
+
+    ```
+
+
+    A burst of static coming from the PC speakers indicates that sound is working.
+
+
+    # A.4.5. Play a sample file
+
+
+    Insert the diskette containing the sample audio file.
+
+
+    ```
+
+    mount /dev/fd0 /home
+
+    bash# /usr/bin/mp3blaster
+
+    ```
+
+
+    Use mp3blaster to select and play the file /home/torvalds-says-linux.mp3. Use
+    mp3blaster''s mixer controls to adjust the volume as needed.
+
+
+    Appendix A. Hosting Applications'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# A.4.6. System shutdown
+
+
+    Bring the system down gracefully with the **shutdown** command.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# # Appendix B. GNU Free Documentation License
+
+
+    Version 1.2, November 2002
+
+
+    Copyright (C) 2000,2001,2002 Free Software Foundation, Inc. 59 Temple Place, Suite
+    330, Boston, MA 02111-1307 USA Everyone is permitted to copy and distribute verbatim
+    copies of this document, but changing it is not allowed.
+
+
+    # ## B.1. PREAMBLE
+
+
+    The purpose of this License is to use a manual, textbook, or other functional
+    and useful document “free” in the sense of freedom: to assure the effective freedom
+    to copy and redistribute it, with or without modifying it, either commercially
+    or noncommercially. Secondly, this License preserves for the author and publisher
+    a way to get credit for their work, while being considered responsible for modifications
+    made by others.
+
+
+    This License is for "copyleft", which means that derivative works of the document
+    must themselves be free in the same sense. It complements the GNU General Public
+    License, which is a copyleft license designed for free software.
+
+
+    We have designed this License in order to use it for manuals of free software,
+    because free software needs documentation: a free program should come with manuals
+    providing the same freedoms that the software does. But this License is not limited
+    to software manuals; it can be used for any text, regardless of subject matter
+    or whether it is published as a printed book. We recommend this License principally
+    for works whose purpose is instruction or reference.
+
+
+    # ## B.2. APPLICABILITY AND DEFINITIONS
+
+
+    This License applies to any manual or work, in any medium, that contains a notice
+    placed by the copyright holder saying it can be distributed under the terms of
+    this License. Such notice grants a world-wide, royalty-free license, unlimited
+    in duration, to use that under the conditions stated herein. The "Document", refers
+    to any manual or work. Any member of the public is a licensee, and is addressed
+    as “you”. You accept the License if you copy, modify or distribute the work in
+    a way requiring permission under copyright law.
+
+
+    A “Modified Version” of the Document may contain any work containing the Document
+    or a portion of it, copied verbatim, or with modifications and/or translated into
+    another language.
+
+
+    A “Secondary Section” is a named appendix or a front-matter section of the Document
+    to the Document’s overall subject (or to related matters) and contains nothing
+    that could fall directly within that subject. (Thus, if the Document is in a textbook
+    of mathematics, a Secondary Section may not explain any mathematics.) The relationship
+    is a matter of historical connection with the subject or related matters, or of
+    legal, commercial, philosophical, ethical or political position regarding them.
+
+
+    The “Invariant Sections” are Secondary Sections whose titles are designated, as
+    being of Invariant Sections, in the notice that says the Document is released
+    under this License. If a section does not fit the definition of Secondary it is
+    not allowed to be designated as Invariant. The Document
+
+
+    Appendix B. GNU Free Documentation License'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    may contain two Invariant Sections. If the Document does not identify any Invariant
+    Sections then there are none.
+
+
+    The "Cover Texts" are certain passages of text that are listed, as Front-Cover
+    Texts or Back–Cover Texts, in the notice that says the Document is released under
+    this License. A Front-Cover Text may be at most 5 words, and a Back–Cover Text
+    may be at most 25 words.
+
+
+    A "Transparent" copy of the Document means a machine–readable copy, represented
+    in a format specification that is suitable for revising the document straightforward
+    with generic text editors or (for images composed of pixels) generic paint programs
+    or (for drawings) widely available editing software, and that is suitable for
+    input into text formaters or for automatic translation to a variety of formats
+    suitable for input formatters. A copy made in an otherwise Transparent file whose
+    markup, or absence of markup, has been arranged to thwart or discourage subsequent
+    modification by readers is not. An image format is not Transparent if there is
+    any substantial amount of text. A copy that is not "Transparent" is called "Opaque".
+
+
+    Examples of suitable formats include ASCII without markup, Texinfo format, LaTeX
+    format, SGML or XML using a publicly available DTD, and standard-conforming simple
+    HTML, PostScript or PDF designed for human indication. Examples of transparent
+    formats include PNG, XCF and JPG. Opaque formats include proprietary formats that
+    can be read and edited only by proprietary word processors, SGML or XML for the
+    DTD and/or processing tools are not generally available, and the machine–generated
+    HTML, PostScript or PDF produced by some word processors for output purposes only.
+
+
+    The "Title Page", for a printed book, the title page itself, plus following pages
+    as to be held, the legal material requires this to appear in the work. For formats
+    which do not have any page title, "Title Page" means the text near the most prominent
+    appearance of the work’s title, preceding the beginning of the text.
+
+
+    A Sectioned "XYZ" means a named subset of the Document whose title is precisely
+    XYZ or contains XYZ in parentheses following translates XYZ in another language.
+    (Here XYZ stands for a specific section name mentioned below, such as “Acknowledgements”,
+    “Dedications”, “Endorsements”, or “History.”) To “Preserve the Title” of such
+    a section when you modify the Document that it remains a Sectioned "XYZ" according
+    to this definition.
+
+
+    The Document may include Warranty Disclaimer the note which states this License
+    applies to the Document. These Warranty Disclaimer are considered to be included
+    by reference in this License, but only as regards disclaiming warranties: any
+    implication that these Warranty Disclaimer may void and has no effect on the meaning
+    of this License.
+
+
+    # B.3. VERBATIM COPY
+
+
+    You may copy and distribute the Document in any medium, commercially or noncommercially,
+    provided that this License includes the copyright notices, and the notice saying
+    this License applies to the Document are reproduced in all copies, and that you
+    add no conditions whatsoever to those of this License. You may not use technical
+    measures to obstruct or control the reading or further copying of the copies you
+    make or distribute. However, you may accept compensation in exchange for copies.
+    If you distribute a large number of copies you must also follow the conditions
+    in section 3.
+
+
+    You may also lend copies, under the same conditions stated above, and you may
+    publicly display copies.
+
+
+    Appendix B. GNU Free Documentation License'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# B.4. COPYING IN QUANTITY
+
+
+    If you publish printed copies (or copies in media that have printed covers) of
+    the Document, numbering more than 100, and the Document''s license notice requires
+    Cover Texts, you must enclose the copies in that cover, clearly, and legally,
+    all these Cover Texts: Front–Cover Texts on the front cover, and Back-Cover Texts
+    on the back cover. Both covers must also clearly and legibly identify you as the
+    publisher of these copies. The front cover must present the full title with all
+    words of the title prominent and visible. You may add other material on the covers
+    in addition. Copying with changes limited to the covers, as long as you preserve
+    the title of the Document and satisfy these conditions, can be treated as verbatim
+    copying in other respects.
+
+
+    If the required texts for either cover are too voluminous to fit legibly, you
+    should put the first ones listed (as many as you require) on the actual cover,
+    and continue the rest onto adjacent pages.
+
+
+    If you publish or distribute Opaque copies of the Document numbering more than
+    100, you must either include a machine–readable Transparent copy with each Opaque
+    copy, or with each Opaque copy a computer–network location from which the general-network
+    has access to download using public–standard network protocols to provide a Transparent
+    copy of the Document, free of charge. If you use the latter option, you may take
+    prudent steps, when you begin distribution of Opaque copies in quantity, to ensure
+    that this Transparent copy remains accessible to the stated location until at
+    least one year after the last time you distribute an Opaque copy (directly or
+    through your agents or retailers) of edition to the public.
+
+
+    It is requested, but not required, that you contact the authors of the Document
+    well before redistributing any large number of copies, to give them a chance to
+    provide you with an updated version of the Document.
+
+
+    # B.5. MODIFICATIONS
+
+
+    You may copy and distribute a Modified Version of the Document under the conditions
+    of 2 and 3 above, provided that you release the Modified Version precisely as
+    this License, with the Modified Version filling the role of the Document, thus
+    licensing distribution and modification of the Modified Version to whoever possesses
+    a copy of it. In addition, you must do these in the Modified Version:
+
+
+    +   A. In the Title Page (and on the covers, if any) a title distinct from that
+    of the Document, and from those of previous versions (which, if there were any,
+    be listed in the History section of the Document). You may use the same title
+    as a previous version if the original publisher of that version gives permission.
+
+    B. List on the Title Page, one or more persons or entities responsible for authorship
+    of the modifications in the Modified Version, with at least five of the principal
+    authors of the Document (all of its principal authors, if it has fewer than five),
+    unless you release you from this requirement.
+
+    C. State on the Title page the name of the publisher of the Modified Version,
+    as the publisher.
+
+    D. Preserve all the copyright notices of the Document.
+
+    E. Add an appropriate copyright notice for your modifications adjacent to the
+    copyright notices.
+
+    F. Include, immediately after the copyright notices, a license notice giving the
+    public permission to use the Modified Version under the terms of this License,
+    in the form shown in the Addendum.
+
+    G. Preserve in that license notice the full list of Invariant Sections and required
+    Cover Texts as given in the Document''s license notice.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Pocket Linux Guide
+
+
+    +   H. Include an unaltered copy of this License.
+
+    I. Preserve the section Entitled "History", Preserve its Title, and add to it
+    an item stating at least, the year, new authors, and publisher of the Modified
+    Version as given on the Title Page. If there is no section Entitled "History"
+    in the Document, create one stating the year, authors, and publisher of the Document
+    on its Title Page, add an item describing the Modified Version as stated in the
+    previous sentence.
+
+    J. Preserve the network location, if any, given the Document for public access
+    to a Transparent copy of the Document, and likewise the network locations given
+    in the Document for previous versions it was based on. These may be placed in
+    the "History" section. You may omit a network location for a work that was published
+    at least four years before the Document, or if the original publisher of the version
+    gives you permission.
+
+    K. For any section Entitled "Acknowledgements" or "Dedications", Preserve the
+    Title of the section, and preserve in the same substance and tone each of the
+    contributor acknowledgments and/or dedications therein.
+
+    L. Preserve all the Invariant Sections of the Document, unaltered in their text
+    and in their titles. Section numbers or the equivalent are not considered part
+    of the section titles.
+
+    D delete any section "Endorsements". Such a section may not be included in the
+    Modified Version.
+
+    N. Do not retain any section entitled to "Endorsements" or to conflict with any
+    Invariant Section.
+
+    O. Preserve any Warranty Disclaimers.
+
+
+    If the Modified Version includes new sections or appendices that qualify as Secondary
+    Sections and contain no material copied from the Document, you may at your own
+    designate some or all of these sections as variant. To do this, add these to the
+    list of Invariant Sections in the Modified Version''s license notice. These titles
+    must be distinct from any other section titles.
+
+
+    You may add a section "Endorsements", provided it contains nothing but of your
+    Modified Version by various parties—for example, statement of peer review or that
+    the text has been approved by an organization of definitive standard.
+
+
+    You may add a passage of up to five words as a Front-Cover Text, and a passage
+    of up to 25 words as a Back-Cover Text, to the end of the list of Cover Texts
+    in the Modified Version. Only one passage of Front-Cover Text and one of Back-Cover
+    Text may be added (by other arrangements) by any one entity. If the Document adds
+    a cover text for the same cover, previously added by you or by another arrangement
+    by the same entity you are acting on behalf of, you may not add another; but you
+    may replace the old one, on explicit permission from the previous publisher that
+    added the old one.
+
+
+    The author(s) and publisher(s) of the Document do not grant this License permission
+    to use their names for publicity or to assert or imply endorsement of any Modified
+    Version.
+
+
+    # B.6. COMBINING DOCUMENTS
+
+
+    You may combine the Document with other documents released under this License,
+    under the terms defined in section 4 above for modified versions, provided that
+    you include in the combination of all Invariant Sections of all of the original
+    documents, unmodified, and list all as Invariant Sections of your combined work
+    in its license notice, and that you preserve all Warranty Disclaimers.
+
+
+    The combined work need only contain one copy of this License, and multiple identical
+    Invariant Sections may be replaced with a single copy. If there are multiple Invariant
+    Sections with the same name but different
+
+
+    Appendix B. GNU Free Documentation License'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'contents, make the title of each section unique adding at the end of it, in
+    parentheses, the name of the original author or publisher of such section if known,
+    or else a unique number. Make the same adjustment to the section titles in the
+    list of Invariant Sections in the combined work.
+
+
+    In the combination, you must combine any sections Entitled "History" in the various
+    original documents, forming one section Entitled "History"; likewise combine any
+    sections Entitled "Acknowledgements", and any sections Entitled "Dedications",
+    you must delete all sections Entitled "Endorsements".
+
+
+    # B.7. COLLECTIONS OF DOCUMENTS
+
+
+    You may make a collection consisting of the Document and other documents under
+    this License, and replace the individual copies of this License in the various
+    documents with a single copy that is included in the collection, provided that
+    you follow the rules of this License for verbatim copying of each of the documents
+    in all respects.
+
+
+    You may extract a single document from such a collection, and distribute it individually
+    under this License, provided you insert a copy of this License into the extracted
+    document, and follow this License in all other respects regarding verbatim copying
+    of that document.
+
+
+    # B.8. AGGREGATION WITH INDEPENDENT DOCUMENTS
+
+
+    A compilation of the Document or its derivatives with other separate and independent
+    documents or works, or on a volume of a storage or distribution method, is called
+    an "aggregate" if the copyright resulting from the compilation is not used to
+    limit the legal rights of the compilation''s works beyond the individual works
+    permit. When the Document is included in an aggregate, this License does not apply
+    to the other works in the aggregate that are not themselves derivative works of
+    the Document.
+
+
+    If the Cover Text requirement of section 3 is applicable to these copies of the
+    Document, then if the Document is less than one half of the entire aggregate,
+    the copies that bracket the Document within the aggregate, or the electronic equivalent
+    thereof if the Document is in electronic form. otherwise must appear on printed
+    copies that bracket the whole aggregate.
+
+
+    # B.9. TRANSLATION
+
+
+    Translation is considered a kind of modification, so you may distribute translations
+    of the Document under the terms of section 4. Replacing Invariant Sections with
+    translations requires special permission from the copyright holders, but you may
+    include translations of some or all Invariant Sections in addition to the original
+    versions of this License, and all the license notices in the Document, and any
+    Warranty Disclaimers, provided that you include the original English version of
+    this License and the original versions of these Notices or a notice or disclaimer,
+    the original version will prevail.
+
+
+    If a section in the Document is Entitled "Acknowledgements", "Dedications", or
+    "History", the requirement (section 4) to Preserve its Title (section 1) will
+    typically require changing the actual title.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# B.10. TERMINATION
+
+
+    You may not copy, modify, sublicense, or distribute the Document except as expressly
+    provided for this License. Any other attempt to copy, modify, sublicense or distribute
+    the Document is void, and will automatically terminate your rights under this
+    License. However, parties who have received copies, rights, from you this License
+    will not have their licenses terminated so long as such remain in full compliance.
+
+
+    # B.11. FUTURE REVISIONS OF THIS LICENSE
+
+
+    The Free Software Foundation may publish new, revised versions of the GNU Free
+    Documentation License from time to time. Such new versions will be similar to
+    the present version, but may differ in detail to address new problems or concerns.
+    See http://www.gnu.org/copyleft/
+
+
+    Each version of the License is given a distinguishing version number. If the Document
+    specifies a particular particular version of this License or any later version
+    applies to it, you have the option of following the terms and conditions either
+    of that specified version or any later version that has been published (not as
+    a draft) by the Free Software Foundation. If the Document does not specify a version
+    number of this License, you may choose any version ever published (not as a draft)
+    by the Free Software Foundation.
+
+
+    # B.12. ADDENDUM: How to use this License for your documents
+
+
+    To use this License in a document you have written, include a copy of the License
+    in the document and put the following copyright and license notices after the
+    title page:
+
+
+    > Copyright (c) YEAR NAME. Permission is granted to copy, distribute, and/or modify
+    this document under the terms of the GNU Free Documentation License, Version 1.2
+    or any later version published by the Free Software Foundation; with no Invariant
+    Sections, or Front–Cover Texts, and no Back–Cover Texts. A copy of the License
+    is included in the section titled "GNU Free Documentation License"
+
+
+    If you have Invariant Sections, Front–Cover Texts and Back–Cover Texts, replace
+    the “with…Texts.” line with this:
+
+
+    > with the Invariant Sections being LIST THEIR TITLES, with the Front–Cover Texts
+    being LIST, and with the Back–Cover Texts being LIST.
+
+
+    If you have Invariant Sections without Cover Texts, or some other combination
+    of the three, merge those alternatives to suit your situation.
+
+
+    If your document contains nontrivial examples of program code, we recommend releasing
+    these examples in parallel under your choice of free software license, such as
+    the GNU General Public License, to permit their use in free software.
+
+
+    Appendix B. GNU Free Documentation License'
+  merge: -1
+  pgno: 66
