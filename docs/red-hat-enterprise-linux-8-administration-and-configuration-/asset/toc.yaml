@@ -1,0 +1,393 @@
+- - '#'
+  - Red Hat Enterprise Linux 8：使用 RHEL 系统角色的管理与配置任务
+- - '#'
+  - 摘要
+- - '#'
+  - 让开源更具包容性
+- - '#'
+  - 对红帽文档提供反馈
+- - '#'
+  - 第 1 章.开始使用 RHEL 系统角色
+- - '##'
+  - 1.1. RHEL 系统角色简介
+- - '###'
+  - 额外资源
+- - '##'
+  - 1.2. RHEL 系统角色术语
+- - '###'
+  - Ansible playbook
+- - '###'
+  - 控制节点 (Control node)
+- - '###'
+  - 清单 (Inventory)
+- - '###'
+  - 受管理节点 (Managed nodes)
+- - '##'
+  - 1.3. 应用角色
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - ansible-playbook your_playbook.yml
+- - '####'
+  - ansible-playbook -i inventory_file.ini your_playbook.yml
+- - '####'
+  - 注意
+- - '####'
+  - Ansible Playbook | example-playbook.yml
+- - '####'
+  - ansible-playbook -i host1..hostn -e target_host=host5 example-playbook.yml
+- - '###'
+  - 额外资源
+- - '##'
+  - 1.4. 额外资源
+- - '#'
+  - 第 2 章.在您的系统中安装 RHEL 系统角色
+- - '###'
+  - yum install rhel-system-roles
+- - '###'
+  - subscription-manager refresh
+- - '###'
+  - subscription-manager repos --enable ansible-2-for-rhel-8-x86_64-rpms
+- - '###'
+  - yum install ansible
+- - '#'
+  - 第 3 章.安装与使用集合 (COLLECTIONS)
+- - '##'
+  - 3.1. ANSI Collections 简介
+- - '###'
+  - 额外资源
+- - '##'
+  - 3.2. 集合结构
+- - '##'
+  - 3.3. 使用 CLI 安装集合
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - yum install rhel-system-roles
+- - '####'
+  - 验证步骤
+- - '##'
+  - 3.4. 从 CLI 安装集合
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - ansible-galaxy collection install redhat.rhel_system_roles
+- - '####'
+  - 验证步骤
+- - '##'
+  - 3.5. 使用 Collections 应用本地日志系统角色
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - logging-playbook.yml
+- - '####'
+  - ansible-playbook -i inventory-file logging-playbook.yml
+- - '####'
+  - 验证步骤
+- - '####'
+  - rsyslog -N 1
+- - '####'
+  - logger test
+- - '####'
+  - cat /var/log/messages
+- - '#'
+  - 第 4 章. 使用 Ansible ROLES 永久配置内核参数
+- - '##'
+  - 4.1. KERNEL SETTINGS 角色简介
+- - '###'
+  - 资源
+- - '##'
+  - 4.2. 使用 KERNEL SETTINGS 角色应用选定的内核参数
+- - '#'
+  - 使用 System Roles 进行 Red Hat Enterprise Linux 8 的管理与配置任务
+- - '##'
+  - 前提条件
+- - '##'
+  - 步骤
+- - '####'
+  - /home/doe/<ansible_project_name>/inventory
+- - '####'
+  - /home/doe/<ansible_project_name>/ansible.cfg
+- - '####'
+  - vi /home/jdoe/<ansible_project_name>/kernel_roles.yml
+- - '####'
+  - ansible-playbook --check kernel_roles.yml
+- - '####'
+  - ansible-playbook kernel_roles.yml
+- - '##'
+  - 使用 RHEL System Roles 进行 Red Hat Enterprise Linux 8 管理与配置任务
+- - '##'
+  - 更多资源
+- - '#'
+  - 第 5 章：使用 SYSTEM ROLES 配置网络连接
+- - '##'
+  - 5.2. 使用 RHEL SYSTEM ROLES 通过接口名称配置动态以太网连接
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - ansible-playbook -u root ~/ethernet-dynamic-IP.yml
+- - '####'
+  - ansible-playbook -u user_name --ask-become-pass ~/ethernet-dynamic-IP.yml
+- - '###'
+  - 更多资源
+- - '##'
+  - 5.3. 使用 SYSTEM ROLES 配置 VLAN 标签标记
+- - '####'
+  - ansible-playbook -u root ~/vlan-.yml
+- - '####'
+  - ansible-playbook -u user_name --ask-become-pass ~/vlan-.yml
+- - '##'
+  - 5.4. 使用 SYSTEM ROLES 配置桥接 (Bridge)
+- - '####'
+  - ansible-playbook -u root ~/bridge.yml
+- - '####'
+  - ansible-playbook -u user_name --ask-become-pass ~/bridge.yml
+- - '##'
+  - 在 RHEL 中使用 System Roles 执行 Red Hat Enterprise Linux 8 管理和配置任务
+- - '###'
+  - 为 bond 添加一个以太网配置
+- - '###'
+  - 为 bond 添加第二个以太网配置
+- - '##'
+  - 5.6. 使用 RHEL SYSTEM ROLES 配置带有 802.1X 网络身份认证的静态以太网连接
+- - '##'
+  - 5.7 使用 SYSTEM ROLES 为现有连接设置默认网关
+- - '###'
+  - 注意
+- - '###'
+  - 前提条件
+- - '###'
+  - 额外资源
+- - '##'
+  - 5.8. 使用 RHEL 系统角色配置静态路由
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - ansible-playbook -u root ~/add-static-routes.yml
+- - '####'
+  - ansible-playbook -u user_name --ask-become-pass ~/add-static-routes.yml
+- - '####'
+  - ip route
+- - '##'
+  - 5.9. 使用系统角色设置 TOOL 特性
+- - '##'
+  - 使用 RHEL 中的 System Roles 进行 Red Hat Enterprise Linux 管理和配置任务
+- - '#'
+  - 第 6 章 使用 SYSTEM ROLES 配置 SELINUX
+- - '##'
+  - 6.1. SELINUX 系统角色简介
+- - '##'
+  - 6.2. 使用 SELINUX 系统角色在多个系统上应用 SELINUX 设置
+- - '###'
+  - subscription-manager repos --enable
+- - '###'
+  - subscription-manager ansible
+- - '###'
+  - yum install rhel-system-roles
+- - '###'
+  - cp /usr/share/doc/rhel-system-roles/selinux/example-selinux-playbook.yml my-selinux.yml
+- - '###'
+  - ansible-playbook -i host1,host2,host3 my-selinux.yml
+- - '#'
+  - 第 7 章 使用 LOGGING
+- - '##'
+  - 7.1. LOGGING ROLE
+- - '##'
+  - 7.2. LOGGING 参数
+- - '##'
+  - 7.3. 应用本地日志角色
+- - '###'
+  - 注意
+- - '###'
+  - 注意
+- - '####'
+  - logging-playbook.yml
+- - '####'
+  - ansible-playbook -i inventory-file /path/to/file/logging-playbook.yml
+- - '####'
+  - rsyslog -N 1
+- - '####'
+  - logger test
+- - '####'
+  - cat /var/log/messages
+- - '##'
+  - 7.4. 在本地日志角色中过滤日志
+- - '###'
+  - 验证
+- - '####'
+  - rsyslog -N 1
+- - '####'
+  - cat /var/log/errors.log
+- - '##'
+  - 使用 RHEL 中的系统角色进行 Red Hat Enterprise Linux 8 管理和配置任务
+- - '###'
+  - 验证
+- - '##'
+  - 第 7章 使用日志
+- - '###'
+  - cat /var/log/messages
+- - '###'
+  - 额外资源
+- - '##'
+  - 7.6. 额外资源
+- - '#'
+  - 第 8章 使用 SSH 角色配置通信
+- - '##'
+  - 8.1. SSH 系统角色
+- - '###'
+  - SSH 角色的变量
+- - '###'
+  - SSHD 角色的辅助变量
+- - '##'
+  - 8.2. 使用 SSH 系统配置 OpenSSH 服务器
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - cp /usr/share/doc/rhel-system-roles/sshd/example-root-login-playbook.yml path/custom-playbook.yml
+- - '####'
+  - vi path/custom-playbook.yml
+- - '##'
+  - 第 8 章：使用 SSH 系统角色配置通信
+- - '##'
+  - 8.3. SSH 系统角色变量
+- - '###'
+  - SSH 角色的变量
+- - '####'
+  - ansible-playbook --syntax-check path/custom-playbook.yml
+- - '####'
+  - ansible-playbook -i inventory_file path/custom-playbook.yml
+- - '###'
+  - 验证
+- - '####'
+  - /etc/sshd_config
+- - '#'
+  - 第 9 章：跨系统设置加密策略
+- - '##'
+  - 9.1. 加密策略角色变量与事实
+- - '##'
+  - 9.2. 使用加密角色设置自定义加密策略
+- - '###'
+  - 步骤
+- - '####'
+  - ansible-playbook --syntax-check playbook.yml
+- - '####'
+  - ansible-playbook -i inventory_file playbook.yml
+- - '####'
+  - 验证
+- - '####'
+  - ansible-playbook -i inventory_file verify_playbook.yml
+- - '##'
+  - 9.3. 附加资源
+- - '#'
+  - 第 10 章. 使用 CLEVIS 和 TANG 系统角色
+- - '##'
+  - 10.1. CLEVIS 和 TANG 系统角色简介
+- - '###'
+  - 额外资源
+- - '##'
+  - 10.2. 使用 NBDE_SERVER 系统角色设置 T T 服务器
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - subscription-manager
+- - '####'
+  - yum
+- - '####'
+  - yum install rhel-system-roles
+- - '####'
+  - cp /usr/share/ansible/roles/rhel-system-roles.nbnd_server/examples/playbook.yml
+    .
+- - '####'
+  - vi playbook.yml
+- - '####'
+  - ansible-playbook -i inventory_file playbook.yml
+- - '###'
+  - 重要
+- - '####'
+  - grubby --update-kernel=ALL --args="rd.neednet=1"
+- - '##'
+  - 10.3. 使用 NBDE_CLIENT 角色设置 CLEVIS 客户端
+- - '#'
+  - 第 11 章。使用 RHEL 系统角色请求证书
+- - '##'
+  - 11.1. 证书系统角色
+- - '##'
+  - 11.2. 使用证书系统角色请求新的自签名证书
+- - '##'
+  - RHEL 中使用系统角色进行 Red Hat Enterprise Linux 8 管理和配置任务
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '##'
+  - 11.3. 使用证书系统角色从 IdM CA 请求证书
+- - '##'
+  - 11.4. 使用证书系统角色在证书颁发前或之后指定运行命令
+- - '#'
+  - 第 12 章 使用 RHEL 系统角色配置 KDUMP
+- - '##'
+  - 12.1. KDUMP RHEL 系统角色
+- - '##'
+  - 12.2. KDUMP 角色参数
+- - '##'
+  - 12.3. 使用 RHEL 系统角色配置 KDUMP
+- - '##'
+  - 使用系统角色进行 Red Hat Enterprise Linux 8 管理和配置任务
+- - '###'
+  - 前提条件
+- - '###'
+  - 步骤
+- - '####'
+  - ansible-playbook --syntax-check playbook.yml
+- - '####'
+  - ansible-playbook -i inventory_file/path/to/file/playbook.yml
+- - '###'
+  - 附加资源
+- - '#'
+  - 第 13 章 使用 RHEL 系统角色管理本地存储
+- - '##'
+  - 13.1. STORAGE 角色简介
+- - '##'
+  - 13.2. 标识存储设备的参数
+- - '##'
+  - 13.3. 在块设备上创建 XFS 的示例 playbook
+- - '##'
+  - 13.4. 持久挂载文件系统的示例 playbook
+- - '##'
+  - 13.5. 管理逻辑卷的示例 playbook
+- - '##'
+  - 13.6. 使用 RHEL 系统角色配置存储
+- - '##'
+  - 13.7. 持久挂载文件系统的示例 playbook
+- - '##'
+  - 13.8. 管理逻辑卷的示例 playbook
+- - '##'
+  - 13.9. 使用系统角色设置 SWAP
+- - '##'
+  - 13.10. 管理逻辑卷的示例 playbook
+- - '##'
+  - 13.11. 使用 RHEL 系统角色配置 RAID
+- - '##'
+  - 13.12. 使用系统角色设置 SWAP
+- - '##'
+  - 13.13. 验证步骤
+- - '##'
+  - 13.14. 额外资源
+- - '##'
+  - 13.15. 附加资源
