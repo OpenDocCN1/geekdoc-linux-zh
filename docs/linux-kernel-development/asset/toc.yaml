@@ -1,0 +1,1156 @@
+- - '#'
+  - Linux 内核开发
+- - '#'
+  - 前言
+- - '#'
+  - 序
+- - '#'
+  - 作者自序
+- - '#'
+  - 操作系统与内核概述
+- - '##'
+  - 性质截然不同的猛兽
+- - '##'
+  - 无法（轻松）使用浮点数
+- - '##'
+  - 小型的、固定大小的栈
+- - '##'
+  - 同步与并发
+- - '##'
+  - 可移植性很重要
+- - '##'
+  - 构建内核
+- - '##'
+  - 在开始之前
+- - '#'
+  - 进程管理
+- - '##'
+  - 进程描述符和任务结构
+- - '##'
+  - 分配进程描述符
+- - '##'
+  - 存储进程描述符
+- - '##'
+  - 进程状态
+- - '##'
+  - 操作当前进程状态
+- - '##'
+  - 进程上下文
+- - '##'
+  - 进程创建
+- - '##'
+  - 写时拷贝 (Copy-on-Write)
+- - '##'
+  - Fork
+- - '##'
+  - vfork()
+- - '##'
+  - 线程的实现
+- - '##'
+  - 表 2.1 clone() 标志
+- - '##'
+  - 内核线程
+- - '##'
+  - 进程终止
+- - '##'
+  - 移除进程描述符
+- - '##'
+  - 无父任务的困境
+- - '#'
+  - 调度
+- - '##'
+  - 策略
+- - '##'
+  - I/O 密集型与 CPU 密集型
+- - '##'
+  - 调度器
+- - '##'
+  - 进程优先级
+- - '##'
+  - 时间片 (Timescale)
+- - '##'
+  - 进程抢占
+- - '##'
+  - 调度算法
+- - '##'
+  - 运行队列 (Runqueues)
+- - '##'
+  - 重新计算时间片
+- - '##'
+  - schedule()
+- - '##'
+  - 计算和及时性
+- - '##'
+  - 睡眠与唤醒
+- - '##'
+  - 负载均衡器
+- - '##'
+  - 抢占与切换
+- - '##'
+  - 用户抢占
+- - '##'
+  - 内核抢占
+- - '##'
+  - 处理器亲和性 (Processor Affinity)
+- - '##'
+  - 优先级让出 (Yielding Priority)
+- - '##'
+  - 系统调用 (System Calls)
+- - '##'
+  - API、POSIX 和 C 库 (APIs, POSIX, and the Library)
+- - '##'
+  - 处理器亲和性 (Processor Affinity)
+- - '##'
+  - 优先级让出 (Yielding Priority)
+- - '##'
+  - 系统调用 (System Calls)
+- - '##'
+  - API、POSIX 和 C 库 (APIs, POSIX, and the Library)
+- - '##'
+  - 系统调用 (Syscalls)
+- - '##'
+  - 系统调用编号 (System Call Numbers)
+- - '##'
+  - 系统调用性能
+- - '##'
+  - 系统调用处理
+- - '##'
+  - 指定正确的系统调用
+- - '##'
+  - 参数传递
+- - '##'
+  - 系统调用实现
+- - '##'
+  - 验证参数
+- - '##'
+  - 系统调用上下文
+- - '##'
+  - 系统调用的最后步骤
+- - '##'
+  - 用户空间访问系统调用
+- - '#'
+  - 中断
+- - '##'
+  - 中断与处理
+- - '##'
+  - 异常
+- - '##'
+  - 上半部与下半部 (Top Halves Versus Bottom Halves)
+- - '##'
+  - 注册中断处理
+- - '##'
+  - 释放中断程序
+- - '##'
+  - 编写中断
+- - '##'
+  - 重入性中断处理
+- - '##'
+  - 共享处理程序
+- - '##'
+  - 实时中断处理
+- - '##'
+  - 中断上下文
+- - '##'
+  - 中断控制
+- - '##'
+  - 禁用和启用中断
+- - '##'
+  - cli()
+- - '##'
+  - 禁用特定的中断
+- - '##'
+  - 中断系统的状态
+- - '##'
+  - 下半部与工作
+- - '##'
+  - 下半部
+- - '##'
+  - 为什么需要半部
+- - '##'
+  - 内核定时器
+- - '##'
+  - 软中断困惑
+- - '##'
+  - 表 6.1 半中断状态
+- - '##'
+  - 软中断 (Softirqs)
+- - '##'
+  - 软中断的实现
+- - '##'
+  - 执行 Softirq
+- - '##'
+  - 分配索引
+- - '##'
+  - 注册处理程序
+- - '##'
+  - 唤醒 Softirq
+- - '##'
+  - Tasklets
+- - '##'
+  - 调度任务
+- - '##'
+  - 使用 Tasklet
+- - '##'
+  - 声明 Tasklet
+- - '##'
+  - 编写 Tasklet
+- - '##'
+  - 调度 Tasklet
+- - '##'
+  - softirqd
+- - '##'
+  - 旧的 机制
+- - '##'
+  - 工作队列
+- - '##'
+  - 工作队列的实现
+- - '##'
+  - 工作队列
+- - '##'
+  - 数据结构
+- - '##'
+  - 工作结构
+- - '##'
+  - run_workqueue()
+- - '##'
+  - 什么意思
+- - '##'
+  - 使用工作队列
+- - '##'
+  - 创建工作
+- - '##'
+  - 工作队列处理
+- - '##'
+  - 调度工作
+- - '##'
+  - 调度工作
+- - '##'
+  - 刷新工作
+- - '##'
+  - 创建新队列
+- - '##'
+  - 应该使用哪种下半部？
+- - '##'
+  - 禁用下半部
+- - '##'
+  - 内核同步
+- - '##'
+  - 临界区与竞态
+- - '##'
+  - Thread 1
+- - '##'
+  - Thread 2
+- - '##'
+  - 锁
+- - '##'
+  - 什么导致了并发？
+- - '##'
+  - 选项：SMP 对比
+- - '##'
+  - 死锁
+- - '##'
+  - Thread 1
+- - '##'
+  - Thread 2
+- - '##'
+  - Thread 1
+- - '##'
+  - Thread 2
+- - '##'
+  - 竞争与扩展性
+- - '##'
+  - 锁与代码
+- - '##'
+  - 内核同步
+- - '##'
+  - 原子操作
+- - '##'
+  - Thread 1
+- - '##'
+  - Thread 2
+- - '##'
+  - 原子整数方法
+- - '##'
+  - 表 8.2 原子位操作
+- - '##'
+  - 自旋锁 (Spin Locks)
+- - '##'
+  - 警告：自旋锁不是递归
+- - '##'
+  - 我应该锁什么？
+- - '##'
+  - 调试自旋锁
+- - '##'
+  - 其他旋锁方法
+- - '##'
+  - 表 8.3 自旋锁（Spin Lock）方法列表
+- - '##'
+  - 自旋锁与下半部（Bottom Halves）
+- - '##'
+  - 读写自旋锁（Reader-Writer Spin Locks）
+- - '##'
+  - 表 8.4 读写自旋锁列表
+- - '#'
+  - 信号量（Semaphores）
+- - '##'
+  - 创建和初始化信号量 (Creating and Initializing Semaphores)
+- - '##'
+  - 使用信号量 (Using Semaphores)
+- - '##'
+  - 读写信号量 (Reader-Writer Semaphores)
+- - '##'
+  - 完成变量 (Completion Variables)
+- - '##'
+  - BKL：大内核锁 (The Big Kernel Lock)
+- - '##'
+  - 顺序锁 (Seq Locks)
+- - '##'
+  - 禁用抢占 (Preemption Disabling)
+- - '##'
+  - 内存屏障 (Barriers)
+- - '##'
+  - Thread 1
+- - '##'
+  - Thread 2
+- - '##'
+  - Thread 1
+- - '##'
+  - Thread 2
+- - '#'
+  - 定时器与时间管理
+- - '##'
+  - 内核的时间通知
+- - '##'
+  - 理想的 HZ 值
+- - '##'
+  - 无答 Jiffies
+- - '##'
+  - jiffies 的内部表示
+- - '##'
+  - Jiffies 回绕（Wraparound）
+- - '##'
+  - 用户空间与 BZ
+- - '##'
+  - 硬件时钟与定时器
+- - '##'
+  - 实时时钟
+- - '##'
+  - 系统定时器
+- - '##'
+  - 无零的一天
+- - '##'
+  - 竞态条件
+- - '##'
+  - 定时器的实现
+- - '##'
+  - 延迟执行
+- - '##'
+  - 忙轮
+- - '##'
+  - 小延迟
+- - '##'
+  - 我的 BogoMIPS 比你的大！
+- - '##'
+  - schedule_timeout()
+- - '##'
+  - 在等待队列上睡眠，带有超时
+- - '#'
+  - 内存管理
+- - '##'
+  - 页 (Pages)
+- - '##'
+  - 区域 (Zones)
+- - '##'
+  - 表 10.1 x86 上的区域
+- - '##'
+  - 获取页面
+- - '##'
+  - 获取清零页面
+- - '##'
+  - 释放页面
+- - '##'
+  - malloc()
+- - '##'
+  - GFP_map Flags
+- - '##'
+  - Action Modifiers
+- - '##'
+  - Zone Modifiers
+- - '##'
+  - Type Flags
+- - '##'
+  - kfree()
+- - '##'
+  - vmalloc()
+- - '#'
+  - Slab 层（Slab Layer）
+- - '##'
+  - 层的设计
+- - '##'
+  - 分配器接口
+- - '##'
+  - 使用 分配器的示例
+- - '##'
+  - 在栈上进行静态分配
+- - '##'
+  - 高内存
+- - '##'
+  - 永久映射
+- - '##'
+  - 临时映射 (Temporary Mappings)
+- - '##'
+  - 取消映射完成
+- - '##'
+  - 我应该使用哪种分配方法？
+- - '#'
+  - 11 虚拟文件系统 (The Virtual Filesystem)
+- - '##'
+  - 通用文件系统接口
+- - '##'
+  - 文件系统抽象层 (Filesystem Abstraction Layer)
+- - '#'
+  - Unix 文件系统
+- - '##'
+  - VFS 对象及其数据结构
+- - '##'
+  - Inode 对象 (Inode Object)
+- - '##'
+  - Inode 操作
+- - '##'
+  - Dentry 缓存 (Dentry Cache)
+- - '##'
+  - Dentry 操作 (Dentry Operations)
+- - '##'
+  - 文件对象 (The File Object)
+- - '##'
+  - 与文件系统相关的数据结构
+- - '##'
+  - 表 11.1 挂载标志列表
+- - '#'
+  - Linux 中的文件系统
+- - '##'
+  - 块 I/O 层
+- - '##'
+  - 块设备的结构
+- - '##'
+  - 表 12.1 bh 状态标志
+- - '##'
+  - bio 结构
+- - '##'
+  - 新旧对比
+- - '##'
+  - 请求队列
+- - '##'
+  - 请求
+- - '##'
+  - I/O 调度器
+- - '##'
+  - I/O 调度器的工作
+- - '#'
+  - 预期 I/O 调度器 (Anticipatory I/O Scheduler)
+- - '#'
+  - 进程地址空间
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 (The Memory Descriptor)
+- - '##'
+  - 内存描述符 ( ( Memory )
