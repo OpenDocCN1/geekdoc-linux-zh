@@ -1,0 +1,2848 @@
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'David Haskins
+
+
+    # C Programming in Linux'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'C Programming in Linux
+
+    © 2009 David Haskins & Ventus Publishing ApS
+
+    ISBN 978-87-7681-472-4'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Contents
+
+
+    +   About the author, David Haskins 7
+
+
+    +   Introduction 8
+
+
+    +   Setting up your System 11
+
+
+    +   1. Chapter One: Hello World 13
+
+    1.1 Hello Program 1 13
+
+    1.2 Hello Program 2 14
+
+    1.3 Hello Program 3 17
+
+    1.4 Hello Program 4 19
+
+    1.5 Hello World conclusion 22
+
+
+    +   2. Data and Memory 23
+
+    2.1 Simple data types? 23
+
+    2.2 What is a string? 27
+
+    2.3 What can a string “mean” 28
+
+    2.4 Parsing a string 31
+
+    2.5 Data and Memory – conclusion 34'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'C Programming in Linux                                                                                                   Contents
+
+
+    3. Functions, pointers and structures | 35
+
+    3.1 Functions | 35
+
+    3.2 Library Functions | 38
+
+    3.3 A short library function reference | 39
+
+    3.4 Data Structures | 41
+
+    3.5 Functions, pointers and structures – conclusion | 44
+
+    4. Logic, loops and flow control | 46
+
+    4.1 Syntax of C Flow of control | 46
+
+    4.2 Controlling what happens and in which order | 47
+
+    4.3 Logic, loops and flow conclusion | 57
+
+    5. Database handling with MySQL | 58
+
+    5.1 On not reinventing the wheel | 58
+
+    5.2 MySQL C API | 58
+
+    6. Graphics with GD library | 63
+
+    6.1 Generating binary content | 63
+
+    6.2 Using TrueType Fonts | 66
+
+    6.3 GD function reference | 68
+
+
+    5'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   7. Apache C modules 73
+
+
+    +   7.1 Safer C web applications 73
+
+
+    +   7.2 Adding some functionality 76
+
+
+    +   7.3 Apache Modules Conclusion 77
+
+
+    +   8. The Ghost project 78
+
+
+    +   8.1 A PHP web site generator project 78
+
+
+    # Conclusion 84'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# About the author, David Haskins
+
+
+    I was born in 1950 in Chelsea, London, but grew up in New Zealand returning to
+    England in 1966. I have worked in the computer industry since 1975 after a couple
+    of years as a professional drummer.
+
+
+    My first experience was five years as a mainframe engineer for Sperry Unic (now
+    Unisys) followed by 14 years as an analyst programmer with British Telecom in
+    London.
+
+
+    While engaged in a complex task of converting large quantities of geographical
+    data (map coordinate references) I discovered the joys of C – speed and efficiency.
+    That was in 1985 and I have been a fan of C ever since.
+
+
+    Since 1994 I have been a senior lecturer at the Faculty of Computing, Information
+    Systems and Mathematics at Kingston University, London. This is a mostly technically
+    university that evolved from a former poly college with a long tradition of aeronautical
+    engineering.
+
+
+    I am engaged in teaching many computer languages and internet systems design to
+    a large and multicultural student body.
+
+
+    Most of my academic research and commercial consultancy has been involved with
+    spatial systems design and the large data volumes and necessary processing efficiency
+    concerns has led me to concentrate on C and C++. My teaching web site is www.abiubi.org
+    which shows some of its material.
+
+
+    A keen Open Systems enthusiast, I have exclusively centred my teaching on the
+    Linux platform since 2002 and Kingston University is well advant in delivering
+    dual boot facilities for all its student labs.
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_6_0.png)
+
+
+    I am a keen swimmer and in 2009 completed the annual Lorne Pier-to-Pub race in
+    Victoria, Australia which is the largest open-sea swimming race in the world where
+    4,500 people of all ages swim each January as the sharp-spotting planes fly overhead.
+
+
+    When not teaching I am a keen vegetable gardener and amateur musician, playing
+    in jazz groups and in Scottish bagpipe bands. I play the drums, the great highland
+    bagpipe, the clarinet, the guitar and the piano.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Introduction
+
+
+    # Why learn the C language?
+
+
+    Because the C language is like Latin - it is finite and has not changed for years.
+    C is tight and spare, and in the current economic climate we will need a host
+    of young people who know C to keep existing critical systems running.
+
+
+    C is built into the core of Linux and Unix. The design idea behind Unix was to
+    write an operating system in C so all you need to port it to a new architecture
+    is a C compiler. Linux is essentially the success story of years of earlier attempts
+    to make a PC version of Unix.
+
+
+    A knowledge of C is now and has for years a pre-requisite for serious software
+    professionals and with the recent popularity and maturity of Open Systems this
+    terseness and perceived difficulty of C saw it being ousted from university teaching
+    the late 1990s in favor of Java but there is a growing feeling among some communities
+    that Java really is not such good place to start beginners.
+
+
+    Students paradoxically arrive at colleges knowing less about computing than they
+    did ten years ago as programming is seen as too difficult for schools to teach.
+    Meanwhile the body of knowledge expected of a competent IT professional nearly
+    doubles every few years.
+
+
+    Java is commonly taught as a first language but can cause student confusion as
+    it is in constant flux, it is very abstract and powerful, and has become too big
+    with many different ways to do the same thing. It is also a "safe" and isolates
+    students from scary experiences, like driving with air-bags and listening to headphones
+    so you take less care. The core activity of writing code within methods seems
+    impenetrable to those who start from classes and objects.
+
+
+    So do we start? A sensible place is "at the beginning" and C is as close as most
+    of us will ever need to go unless unless we are becoming hardware designers. Even
+    for these students to start at C and go further down into the machine is a good
+    idea.
+
+
+    C is like having a very sharp knife which can be dangerous, but if you were learning
+    to be a chef you would need one and probably cuts discovering what it can do.
+    Similarly C expects you to know what you are doing, and if you don''t it will
+    not warm before crashes.
+
+
+    A knowledge of C will give you deep knowledge of what is going beneath the surface
+    of higher level languages like Java. The syntax of C pretty-well guarantees you
+    will easily understand other languages that came afterwards like C++, Java, Javascript,
+    and C#.
+
+
+    C gives you access to the heart of the machine and all its resources at a fine-grained
+    bit-level.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Introduction
+
+
+    C has been described as “driving a Porsche with no brakes” - because it is as
+    fast as this can be exhilarating. C is often the only option when speed and efficiency
+    is crucial.
+
+
+    C has been called “dangerous” in that it allows low-level access to the machine
+    but this scarness is exactly what you need to understand as it gives you respect
+    for the higher-level languages you will use.
+
+
+    Many embedded miniaturised systems are all still written in C and the machine-to-machine
+    world of the invisible internet for monitoring and process control often uses
+    C.
+
+
+    Hopefully this list of reasons will start you thinking that it might be a good
+    reason to have a go at this course.
+
+
+    # References
+
+
+    The C Programming Language – Second Edition - Kernigan and Richie ISBN 0-13-11-1632-8
+
+
+    The GNU C Library Free Software Foundation C Manual
+
+    http://www.gnu.org/software/libc/manual/
+
+
+    MySQL C library
+
+    http://dev.mysql.com/doc/refman/5.1/en/index.html
+
+
+    The GD C library for graphics
+
+    http://www.libgd.org/Documentation
+
+
+    APXS - the Apache eXtension tool
+
+    http://httpd.apache.org/docs/2.0/programs/apxs.html
+
+
+    Apache
+
+    http://httpd.apache.org/docs/2.2/developer/
+
+
+    “The Apache Modules Book” Nick Kew, Prentice Hall
+
+    ISBN 0-13-240967-4
+
+
+    A Source Code Zip File Bundle is supplied with this course which contains all
+    the material described and a Makefile.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # The teaching approach
+
+
+    I began university teaching later in life after a career programming in the telecommunications
+    industry.
+
+
+    My concern has been to convey the sheer fun and creativity involved in getting
+    computers to do what you want them to do and always try to give useful, practical
+    examples of the kinds of students commonly tell they want to do.
+
+
+    Learning a language can be dry, boring affair unless results are immediate and
+    so I intend to use the internet as the input-output channel from the start.
+
+
+    I prefer teaching an approach to programming which is deliberately "simple" using
+    old-fashioned command-line tools and editors and stable, relatively unchanging
+    components that are already built-in to Unix and Linux distributions such as Suse,
+    Ubuntu and Red Hat.
+
+
+    This is in response to the growing complexity of modern Integrated Development
+    Environments (IDEs) as Developer Studio, Netbeans and Eclipse which give students
+    an illusion that they know what they are doing but generate obfuscation.
+
+
+    My aim is to get students confident and to speed quickly without all the nightmare
+    associated with configuring complex tool chains. It is essentially a license-free
+    approach and runs on anything.
+
+
+    With this fundamental understanding about what is really going on you can progress
+    on to use and actually understand whatever tools you need in your career.
+
+
+    In order to give a sense of doing something real and useful and to date, the focus
+    is on developing visible and effectively professional-quality web-server and client
+    projects to put on-line, using:
+
+
+    +   - Apache Web server and development libraries.
+
+    - C language programs (C programming using the "make" utility).
+
+    - C language Modules.
+
+    - MySQL server with C client library interfaces.
+
+    - GD graphics library with C interfaces.
+
+    - Incidental use of CSS, (X)HTML, XML, JavaScript, Ajax.
+
+
+    This course has been designed for and lab-tested by first and second year Computer
+    Science Students at Kingston University, London UK.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Setting up your System
+
+
+    This book presumes you are using the Linux operating system with either the KDE3.5,
+    KDE4, or Gnome desktop. Specific instructions are included for Ubuntu (and Kubuntu)
+    and OpenSense 11.
+
+
+    If you are using the KDE desktop you will have Konqueror or Dolphin as the File
+    Manager and kedit for an editor
+
+
+    In Gnome you would probably use Nautilus and gedit
+
+
+    You need to be familiar with the idea of doing some things as “super user” so
+    that you have permission to copy or edit certain files. This is normally done
+    by prefacing the Linux command with “sudo” and providing the password, in this
+    example:
+
+
+    ```
+
+    “sudo cp hello3 /sr/www/cgi-bin/hello3”
+
+    ```
+
+
+    which copies the file “hello3” to the area where the Apache server locates common
+    gateway interface or cgi programs.
+
+
+    In KDE “desku konqueror” would open a file manager as super user.
+
+
+    In Gnome “gnomesu nautilus” would open a file manager as super user.
+
+
+    You will need to install the following packages:
+
+
+    | package | Ubuntu | Open S |
+
+    | --- | --- | --- |
+
+    | C development libraries | build-essential | Base Development (pattern) |
+
+    | Apache web server | apache2 | Web and LAMP Server (pattern) |
+
+    | Apache development libraries | apache2-prefork-dev | apache2-devel |
+
+    | MySQL server, client and development libraries | mysql-server libmysqlclient15-dev
+    | libmysqlclient-dev |
+
+    | GD and development libraries | libgd2-xpm | gd gd-devel |
+
+
+    Throughout the text you will see references to the folder cgi-bin. The location
+    of this will vary between Linux distributions. By default this folder used for
+    web programs is:
+
+
+    +   - OpenSuse: /sr/www/cgi-bin
+
+    - Ubuntu: /usr/lib/cgi-bin'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: To place programs there you need superuser rights, so it may be better to create
+    a folder inside your own home=****/public_html/cgi-bin directory and change the
+    ScriptAlias and associated Directory references inside the Apache configuration
+    files (OpenSuse) **/etc/apache2/default-server.conf** or (Ubuntu) **/etc/apache2/default-server.conf.
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 1. Chapter One: Hello World\n\n# 1.1 Hello Program 1\n\nUsing the File Manager\
+    \ (in KDE, Konqueror or Gnome, Nautilus) create a new directory somewhere in your\
+    \ home directory called something appropriate for all the examples in this book,\
+    \ perhaps “Programming_In_Linux” without any spaces in the name.\n\nOpen an editor\
+    \ (in KDE, kate, or in Gnome, gedit) and type in (or copy from the supplied source\
+    \ code bundle) the following:\n\n```\nC Programming in Linux (c) David Haskins\
+    \ 2008\nchapter1_1.c\n\ninclude <stdio.h>\n\nint main(int argc, char *argv[])\n\
+    {\n    printf(\"Hello, you are learning C!\"\n);\n    return 0;\n}\n```\n\nSave\
+    \ the text as chapter1_1.c in the new folder you created in your home directory.\n\
+    \nOpen a terminal window and type: `gcc -o hello chapter1_1.c` to compile the\
+    \ program into a form that can be executed.\n\nNow type `ls -l` to list the details\
+    \ of all the files in this directory. You should see that chapter1_2.c is there\
+    \ and a file “hello” which is the compiled C program you have just written.\n\n\
+    Now type: `./hello` to execute, or run the program and it should return the text:\n\
+    \n\"Hello you are learning C!\"\n\n\nIf this worked, congratulations, you are\
+    \ now a programmer!"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Anatomy of the program:
+
+
+    The part inside/*** *** is a comment and is not compiled but just for information
+    and reference.
+
+
+    The "#include..." part tells the compiler which system libraries are needed and
+    which header files are being referenced by program. In our case "printf" is used
+    and is defined in the stdio.h header.
+
+
+    The "int main(int argc, char *argv[])" part is the start of the actual program.
+    This is an entrypoint and most C programs have a main function.
+
+
+    The "int argc" is an argument to the function "main" which is an integer count
+    of the number of character strings passed in "char argv[]" (a list of pointers
+    to character strings) that might be passed at the command line when we run it.
+
+
+    A pointer to something is a name given to a memory address for this kind of data
+    type. We can have a pointer to integer: int *iptr, or a floating point number:
+    float *ptr. Any list of things is described by [], and if we know exactly how
+    big this list is we declare it as [200]. In this case we know that the second
+    argument is a list of pointers to character strings.
+
+
+    Everything else in the curly brackets is the main function and in this case the
+    entire program expressed as lines.
+
+
+    Each line or statement ends with a semi-colon ".
+
+
+    We have function calls like "printf(...)" which is a call to the standard input
+    / output library defined in the header file stdio.h.
+
+
+    At the end of the program "return 0" ends the program by returning a zero to the
+    system.
+
+
+    Return values are used to indicate the success or status should the program not
+    run correctly.
+
+
+    # 1.2 Hello Program
+
+
+    Taking this example stage further, we examine the start of the program at the
+    declaration of the entry point function: int main(int argc, char *argv[])
+
+
+    In plain English this means:'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Chapter One: Hello World
+
+
+    The function called "main", which returns an integer, takes two arguments, integer
+    called "argc" which is a count of the number of command arguments then *argv[]
+    which is a list or array of pointers to strings which are the actual arguments
+    typed in when you run the program from the command line.
+
+
+    Some Definitions:
+
+
+    **function**: a block of program code with a **return data type**, a name, some
+    arguments of varying data types separated by commas, enclosed in **brackets**,
+    then the body of the function enclosed in **curly brackets**, ending with a **semi-colon**.
+
+    **integer** symbol int : a counting number like 0,1,2,3,4,5.
+
+    **list, array** symbol []; a sequence of the same kind in a numbered order.
+
+    **pointer** symbol * : a memory address locating the start of piece of data of
+    a certain type.
+
+    **string** or **char** *: a pointer to a sequence of characters like ''c'', ''a'',
+    ''t'' making up "cat". A character string ends with s special character NULL or
+    "0'' ascii value 0 or hex 00'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# C Programming in Linux\n\nLet's rewrite the program to see what all this\
+    \ means before we start to panic.\n\n```\n****************************************************/\n\
+    Programming in Linux (c) David Haskins 2008\nchapter1_2.c\n****************************************************/\n\
+    #include <stdio.h>\n\nint main(int argc, char *argv[])\n{\n    int i=0;\n    printf(\"\
+    Hello, you are learning C!!\\n\");\n    printf(\"Number of arguments to the main\
+    \ function:%d\\n\", argc);\n    for(i=0; i<argc; i++)\n    {\n        printf(\"\
+    argument number %d is %s\\n\", i, argv[i]);\n    }\n    return 0;\n}\n```\n\n\
+    Save the text chapter1_2.e in the same folder.\n\nOpen a terminal window and type:\n\
+    gcc -o hello2 chapter1_2.c to compile the program into a form that can be executed.\n\
+    \nNow type ls -l to list the details of all the files in this directory. You should\
+    \ see that chapter1_2.c is there and a file called hello2 is the compiled C program\
+    \ you have just written.\n\nNow type ./hello2 to execute, or run the program and\
+    \ it should return the:\n\n> Hello, you are still learning C!!\nNumber of arguments\
+    \ to the main function:1\nargument number 0 is /hello2\n\nWe can see that the\
+    \ name of the program itself is counted as a command line argument and that the\
+    \ counting of things in the list or array of arguments starts at zero not at one.\n\
+    \nNow type ./hello2 my name is David to execute the program and it should return\
+    \ the text:\n\n> Hello, you are still learning C!!\nNumber of arguments to the\
+    \ main function:5\nargument number 0 is /hello2\nargument number 1 is my\nargument\
+    \ number 2 is name"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'argument number 3 is is
+
+    argument number 4 is David
+
+
+    So, what is happening here? It seems we are reading back each of the character
+    strings (words) that were typed in to run the program.
+
+
+    # Anatomy of the program:
+
+
+    ```
+
+    printf("Hello, you are learning C!\n\n");
+
+    ```
+
+
+    the library function printf is called with one argument, a character string ending
+    with a \n or new line character.
+
+
+    ```
+
+    printf("Number of arguments to the main function:%d\n", argc);
+
+    ```
+
+
+    the library function printf is called with two arguments, a character string ending
+    with a ''n'' that includes %d as a placeholder for the second argument which is
+    an int.
+
+
+    ```
+
+    for(i=0; i<n; i++)
+
+    ```
+
+
+    is a "for loop" in which we do something repeatedly using a counter integer i
+    which is incremented (by the expression i++) at each iteration or looping continues
+    while it stays less than the value of argc
+
+
+    ```
+
+    printf("argument number %d is %s\n", i, argv[i]);
+
+    ```
+
+
+    the library function printf is called with three arguments, a character string
+    ending with a \n that includes %d as a placeholder for the second argument which
+    is an int, and %s which is a placeholder for the third argument argv[1], the i-th
+    member of the array of pointers to character strings argv[].
+
+
+    # 1.3 Hello Program 3
+
+
+    Lets get real and run this in a web page. Make the extra change adding the first
+    output printf "Content-type:text/plain\n\n" which tells our server kind of MIME
+    type is going to be transmitted.
+
+
+    Compile using gcc -o hello3 chapter1_3c and copy the compiled file hello3 to your
+    public_html/cgi-bin directory (or on your machine as server copy the program to
+    /srv/www/cgi-bin (OpenSUSE) or /usr/lib/cgi-bin (Ubuntu)).'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# C Programming in Linux\n\n# Chapter One: Hello World\n\n```\n****************************************************\n\
+    * C Programming in Linux (c) David Haskins 2008\n* chapter1_3_c              \
+    \                *\n* C Programming in Linux (c) David Haskins 2008\n* chapter1_3_c\
+    \                              *\n****************************************************/\n\
+    \n#include <stdio.h>\n\nint main(int argc, char *argv[])\n{\n    int i=0;\n\n\
+    \    printf(\"Content-type:text/plain\\n\\n\");\n    printf(\"Hello, you are still\
+    \ learning C!\\n\\n\");\n    printf(\"Number of arguments to the main function:%d\\\
+    n\", argc);\n    for(i=0;i<argc;i++)\n{\n        printf(\"argument number %d is\
+    \ %s\\n\", i, argv[i]);\n    }\n    return 0;\n}\n```\n\nOpen a web browser and\
+    \ type in the URL http://localhost/cgi-bin/hello3?david+haskins and you should\
+    \ see that web content can be generated by a C program.\n\n![](img/7850df81ed1a1b9c43f67da3d9dfcff8_17_0.png)"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# 1.4 Hello Program 4\n\nA seldom documented feature of the function signature\
+    \ for \"main\" is that it can take three arguments and the last one we will now\
+    \ look at char *env[] which is also a list of pointers to strings, but in case\
+    \ these are the system environment variables available to the program at the time\
+    \ it run\n\n```\n* C Programming in Linux (c) David Haskins 2008\n* chapter1_4.c\n\
+    \ */\n#include <stdio.h>\n\nint main(int argc, char *argv[], char *env[])\n{\n\
+    \    int i=0;\n\n    printf(\"Content-type:text/plain\\n\");\n    printf(\"Hello,\
+    \ you are still learning C!\\n\");\n    printf(\"Number of arguments to the main\
+    \ function:%d\\n\", argc);\n    for(i=0;i<argc;i++)\n    {\n        printf(\"\
+    argument number %d is %s\\n\", i, argv[i]);\n    }\n    i = 0;\n    printf(\"\
+    Environment variables:\\n\");\n    while(env[i])\n    {\n        printf(\"env[%d]\
+    \ = %s\\n\", i, env[i]);\n        i++;\n    }\n    return 0;\n}\n```\n\nCompile\
+    \ with gcc -o hello chapter1_4.c and as superuser copy the program to /srv/cgi-bin\
+    \ (OpenSense) or /usr/lib/cgi-bin (Ubuntu). You can run this from the terminal\
+    \ where you compiled it with ./hello4 and will see a long list of environment\
+    \ variables. In the browser when you enter http://localhost/cgi-bin/hello4 you\
+    \ will have a different set altogether."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Wikipedia defines environment variables like this:
+
+
+    > In all Unix and Unix-like systems, each process has its own private set of environment
+    variables. By default, when a process is created it inherits a duplicate environment
+    of its parent process, except for explicit changes made by the parent when it
+    creates the child....... All Unix operating system flavor s as well as DOS and
+    Microsoft Windows have environment variables; however, they do not use all the
+    same variable names. Running programs can access the values of environment variables
+    for configuration purposes. Examples of environment variables include......PATH,
+    HOME... “'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Chapter One: Hello World
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_20_0.png)
+
+
+    Hello, you are learning C!
+
+    The main function:
+
+    number of arguments
+
+    argument number 0 is /usr/www/cgi-bin/hello4
+
+    argument number 1 is david
+
+    argument number 2 is haskins
+
+    Environment variables:
+
+
+    ```
+
+    env[0]=HTTP_HOST-localhost
+
+    env[1]=ACCEPT_USER_AGENT-Mozilla/5.0 (X11; Linux; i686; rv:1.9.0.3) Gecko/20080905
+
+    env[2]=ACCEPT-text/html,application/xml,application/xml;q=0.9*;q=0.8
+
+    env[3]=ACCEPT_LANGUAGE-en-GB;q=0.5
+
+    env[4]=ACCEPT_ENCODING-zip,deflate
+
+    env[5]=ACCEPT_CHARSET-ISO-8859-1,utf-8;q=0.7;q=0.7
+
+    env[6]=HTTP_KEEP_ALI=300
+
+    env[7]=HTTP_CONNECTION-keep-alive
+
+    env[8]=PATH-//usr/bin:/usr/sbin
+
+    env[9]=SERVER-Apache/2.2.8 (Linux/SUSE) at localhost Port 80
+
+    env[10]=SERVER_SOFTWARE-Apache/2.2.8 (Linux/SUSE)
+
+    env[11]=SERVER_NAME-localhost
+
+    env[12]=SERVER_ADDR=127.0.0.1
+
+    env[13]=SERVER_PORT-80
+
+    env[14]=REMOTE_ADDR=127.0.0.1
+
+    env[15]=DOCUMENT_ROOT=/usr/www/htdocs
+
+    env[16]=SERVER_ADMIN=[no address given]
+
+    env[17]=SCRIPT_FILENAME=/usr/www/cgi-bin/hello4
+
+    env[18]=REMOTE_PORT-1991
+
+    env[19]=GATEWAY_INTERFACE=CGI/1.1
+
+    env[20]=SERVER_PROTOCOL=HTTP/1.1
+
+    env[21]=REQUEST_METHOD=GET
+
+    env[22]=QUERY_STRING=davidhaskins
+
+    env[23]=REQUEST_URL=/cgi-bin/hello4?davidhaskins
+
+    env[24]=SCRIPT_NAME=/cgi-bin/hello4
+
+    ```
+
+
+    We will find out that QUERY_STRING is an important environment variable for us
+    in communicating with our program and in see it has a value of "david+haskins"
+    or everything after "?" in the URL. It is a valid way to send information to a
+    common gateway interface (CGI) program like hello4 but we should restrict this
+    to just one string. In our case we have used a "+\ to join two strings. If we
+    typed: "david haskins" the browser would translate this so we see:
+
+
+    QUERY_STRING=%20david20haskins
+
+
+    We will learn later how complex sets of input values can be transmitted to our
+    programs.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 1.5 Hello World conclusion
+
+
+    We have seen that a simple program with a tiny bit of input and some output is
+    in fact extremely powerful that it reveals and exposes the inner workings of a
+    great deal of our computer.
+
+
+    Even though we have just begun we have encountered many of the key concepts we
+    will use over and over again:
+
+
+    +   * functions and arguments
+
+    * Numbers (integers) and character strings as data types
+
+    * Lists or arrays
+
+    * Loops using “for” and “while”
+
+
+    We have made a deliberate leap from writing a program that runs simply in a “terminal
+    screen” to one which will be visible over the internet in a browser.
+
+
+    The reason for this is that the process of writing programs that interact with
+    users in windowing systems like Windows, Gnome or KDE is extremely complex and
+    not something you will be asked very often to do.
+
+
+    The internet browser has become the de facto interface mode for almost everything
+    we do these days so we might as well understand using it from the start.
+
+
+    In all the successive chapters we will follow this model: starting off with some
+    basic technique then applying it to a web-based system.
+
+
+    In practice there is not much real-world C common gateway interface programming
+    going on but there is a great deal of C and C++ based code running as Apache modules
+    and Microsoft IIS API DLLs. Perhaps not many know that much of Ebay is written
+    in C / C++.
+
+
+    Why? It is as fast as things get and their business with the bargain snipers in
+    the global real-time market needs this lightning fast core, so there is no other
+    way to get that performance.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 2. Data and Memory
+
+
+    # 2.1 Simple data types?
+
+
+    When we write programs we have to make decisions or assertions about the nature
+    of the world as we declare and describe variables to represent the kinds of things
+    we want to include in our information processing.
+
+
+    This process is deeply philosophical; we make **ontological** assertions that
+    this or that thing exists and we make **epistemological** assertions when we select
+    particular data types or collections of data types to use to describe the attributes
+    of these things. Heavy stuff with a great responsibility and not to be lightly
+    undertaken.
+
+
+    As a practical example we might declare something that looks like the beginnings
+    of a database record for geography.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# C Programming in Linux\n\n************************************************\n\
+    C Programming in Linux (c) David Hawkins 2008\nchapter2_1.c\n************************************************/****\n\
+    \n```\n#include <stdio.h>\n#DEFINE STRINGSIZE 256\n\nint main(int argc, char *argv[])\
+    \ {\n\n    char town[STRINGSIZE] = \"Guildford\";\n    char county[STRINGSIZE]\
+    \ = \"Surrey\";\n    char country[STRINGSIZE] = \"Great Britain\";\n    int population\
+    \ = 51.238599;\n    float latitude = -0.566257;\n    float longitude = -0.123456;\n\
+    \    printf(\"town: %s\\npopulation: %d\\n\", town, population);\n    printf(\"\
+    County: %s\\n\", county);\n    printf(\"Country: %s\\n\", country);\n    printf(\"\
+    Location latitude: %f fin\\nlongitude: %f fin\\n\", latitude, longitude);\n  \
+    \  printf(\"char: %d byte int = %d bytes\\n\", sizeof(char), sizeof(int));\n \
+    \   sizeof(char),sizeof(int),sizeof(float));\n    printf(\"memory used:%d bytes\\\
+    n\", (STRINGSIZE * 3) * sizeof(char) + 2 * sizeof(float));\n    return 0;\n}\n\
+    ```\n\nHere we are doing the following:\n\n+   - asserting that all the byte int\
+    \ limited to characters so we define this with a preprocessor statement – these\
+    \ start with #.\n- assert that towns are associated with counties, and counties\
+    \ are associated with countries some hierarchical manner.\n- assert that the population\
+    \ is counted in whole numbers - no half-people.\n- assert the location is to be\
+    \ recorded in a proper variant (WGS84) of the convention describing spots on the\
+    \ surface of the world in latitude and longitude that use a decimal for degrees,\
+    \ minutes, and seconds.\n\nEach of these statements allocates memory within the\
+    \ scope of the function in which it is declared. Each data declaration will occupy\
+    \ an amount of memory bytes and give that bit of memory a label which is the variable\
+    \ name. Each data type has a specified size and the sizeof() library function\
+    \ will return this as an integer. In this case 3 x 256 characters, one integer,\
+    \ and two floats. The exact size is machine dependent probably but it is 780 bytes."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Outside the function in which the data has declared this data is inaccessible
+    – this is the *scope* of declaration. If we had declared the main() function would
+    be *global* in scope and other functions could access it. C lets you do kind of
+    dangerous stuff if you want to, or be careful.
+
+
+    Generally we keep a close eye on the scope of data, and pass either **read-only
+    copies**, or **memory addresses** to our parts of the programs that might need
+    to work on it and even change it. These labelled memory addresses are called **pointers**.
+
+
+    We are using the *printf* family of library functions (**sprintf** for creating
+    strings, **fprintf** for writing to files etc) which all use a common **format
+    string** argument to specify how the data is to be represented.
+
+
+    +   - %c character
+
+    - %s string
+
+    - %d integer
+
+    - %f floating point number.
+
+
+    The remaining series of variables in the arguments are placed in sequence into
+    the format string as specified.
+
+
+    In C it is a good idea to **initialise** any data you declare as the contents
+    of the memory allocated for it is not cleared but may contain any old rubbish.
+
+
+    Compile with: `gcc -o data1 chapter2_1.c -lc`nOutput of the program when called
+    with : ./data1
+
+
+    ```
+
+    Town name: Guildford population:66773
+
+    County: Surrey
+
+    Country: Great Britain
+
+    Location latitude: 51.238598 longitude: -0.566258
+
+    char = 1 byte int = 4 bytes float = 4 bytes
+
+    memory used:780 bytes
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# A note on make a helpful utility\n\nBy now you are probably getting bored\
+    \ typing in all these compiler commands and for this reason there is a utility\
+    \ called make that runs on a file called Makefile in the folder where your code\
+    \ is stored. Here is the Makefile for the examples so far:\n\n```\n#Makefile\n\
+    all:chap1 chap2\nchap1: 1-1 1-2 1-3 1-4\n1-1:\n    gcc -o hello1 chapter1.c -lc\n\
+    1-2:\n    gcc -o hello2 chapter1.c -lc\n1-3:\n    gcc -o hello3 chapter1.c -lc\n\
+    1-4:\n    gcc -o hello4 chapter1.c -lc\nchap2: 2-1 2-2\n2-1:\n    gcc -o data1\
+    \ chapter2.c -lc\n2-2:\n    gcc -o data2 chapter2.c -lc\nclean:\n    rm hello*\
+    \ data* **\n```\n\nto compile everything type make all\nto compile target 2-1\
+    \ for chapter2_1.c type make 2-1\nthe tab after each make target is vital to the\
+    \ syntax of make\n\nIn the code bundle there is a Makefile for the whole book."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 2.2 What is a string?
+
+
+    Some programming languages like Java and C++ have a **string data type** that
+    hides some of the complexity underneath what might seem a simple thing.
+
+
+    An essential attribute of a character string is that it is a series of individual
+    character elements of indeterminate length.
+
+
+    Most of the individual characters we can type into a keyboard are represented
+    by simple numerical ASCII codes and the C data type **char** is used to store
+    character data.
+
+
+    Strings are stored as **arrays** of characters ending with NULL so an array must
+    be large enough to hold the sequence of characters plus one. Remember array members
+    are always counted from zero.
+
+
+    In this example we can see 5 individual characters declared and initialised with
+    values, and an empty character array set to """"'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# C Programming in Linux\n\nTake care to notice the difference between single\
+    \ quote marks ' used around characters and double quote marks \" used around character\
+    \ strings.\n\n```\n/*\n* C Programming in Linux (c) David Haskins 2008\n* chapter2_2.c\n\
+    */\n#include <stdio.h>\n\nint main(int argc, char *argv[], char *env[])\\{\n \
+    \   char c1 = 'd';\n    char c2 = 'a';\n    char c3 = 'v';\n    char c4 = 'i';\n\
+    \    char c5 = 'd';\n    char name[6] = \"david\";\n    printf(\"%c%c%c%c%c\"\
+    ,c1,c2,c3,c4,c5);\n    printf(\"%s\\n\",name);\n    return 0;\n}\n```\n\nCompile\
+    \ with: gcc -o data2 chapter2_2.c -lc\nOutput of the program when called with\
+    \ : ./data2\n\ndavid\n\n# 2.3 What can a string \"mean\"\n\nAnything at all –\
+    \ name given to a variable and its meaning or its use is entirely in the mind\
+    \ of the beholder. Try this"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# C Programming in Linux\n\n****************************************************\n\
+    * C Programming in Linux (c) David Haskins 2008\n* chapter2_3_c\n****************************************************/\n\
+    \n```\n#include <stdio.h>\n#include <string.h>\n\nint main(int argc, char *argv[],\
+    \ char *env[])\n{\n    printf(\"Content-type:text/html\\n\\n\");\n    printf(\"\
+    <html>\\n\");\n    printf(\"<body> bgcolor=%s\">\\n\",argv[1]);\n    printf(\"\
+    </body>\\n\");\n    printf(\"</html>\\n\");\n    return 0;\n}\n```\n\nCompile\
+    \ with: gcc -o data3 chapter2_3_c -lc\nAs superuser copy the program to your public_html/cgi-bin\
+    \ directory (or /srv/www/cgi-bin\nOpenSuse) or /usr/lib/cgi-bin (Ubuntu).\n\n\
+    In the browser enter: http://localhost/cgi-bin/data3?red\nwhat you should see\
+    \ this is:\n\n![](img/7850df81ed1a1b9c43f67da3d9dfcff8_28_0.png)"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Data and Memory
+
+
+    Or if send a parameter of anything at all you will get surprising results:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_29_0.png)
+
+
+    What we are doing here is **using the string parameter `argv[1]`** as a background
+    colour code inside **HTML** body tag. We change the Content-type specification
+    to text/html and miraculously now our program is generating HTML content. A language
+    being expressed inside another language. Web browsers understand a limited set
+    of colors rather can also be defined hexadecimal codes such as #FFFFFF (white)
+    #FF0000 (red) #00FFFF (green) #0000FF (blue).
+
+
+    This exercise is not just a lightweight trick, the idea that one program can generate
+    another in another language is very powerful and behind the power of the internet.
+    When we generate HTML (or XML anything) from a **common gateway interface program**
+    like we are creating **dynamic content** that can be linked to live, changing
+    data rather than **static** pre-edited web pages. In most web sites have a mix
+    of dynamic and static content, but here we see how this is done at a very simple
+    level.
+
+
+    Throughout this book we use the browser as the preferred interface to our programs
+    here we will be generating HTML and binary stream web content purely as a means
+    to make immediate the power of our programs. Writing code that you peer at a terminal
+    screen is not too impressive, and writing window-type applications is not nearly
+    straightforward.
+
+
+    In most software you may be asked to write is running on the web so we might start
+    well with this idea away. Most applications involve **multiple languages** too
+    such as CSS, (X)HTML, XML, JavaScript, PHP, JAVA, JSP, ASP, .NET, SQL. If this
+    sounds frightening, don''t panic. A knowledge of C will show you that many of
+    these languages, which all perform different functions, have a basis of C in their
+    syntax.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# ##2.4 Parsing a string
+
+
+    The work involved in extracting meaning or valuable information from some kind
+    of input string is called “parsing”. We will now build another fun internet-callable
+    CGI program to demonstrate the power in our hands.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    * C Programming in Linux (c) David Haskins 2008
+
+    * chapter2_4c
+
+
+    Compile with: gce -o data4 chapter2_4.c -lc
+
+    As superuser copy the program to /srv/www/cgi-bin (OpenSense) or /usr/lib/cgi-bin
+    (Ubuntu).'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Data and Memory
+
+
+    In the browser enter:
+
+
+    http://localhost/cgi-bin/data4?red:blue:5:5:
+
+    what you see is in this:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_32_0.png)
+
+
+    In this program we take argv[1] which here is yellow:blue:5:5: and parse it using
+    the library function strtok which chops the string into tokens separated by an
+    arbitrary character '' '' and uses these tokens as strings to specify colours
+    and integer numbers to specify the row and cell counts of a table.
+
+
+    The function atoi converts a string representation of an integer to an integer
+    (“1” to 1).
+
+
+    The function strtok is a little odd in that the first time you call it with the
+    string name you want to parse, then on subsequent calls the first parameter is
+    changed to NULL.
+
+
+    The for(...) loop mechanism was used to do something a set number of times.
+
+
+    The HTML terms introduced were:
+
+
+    ```
+
+    <html><body><tr> table row <td>table data cell
+
+    ```
+
+
+    33'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 2.5 Data and Memory – conclusion
+
+
+    We have used some simple data types to represent some information and transmit
+    input to a program and to organise and display some visual output.
+
+
+    We have used HTML embedded in output strings to make output visible in a web browser.
+    As an exercise try this:
+
+
+    Write a program to put into your /public_html/cgi-bin folder which can be called
+    in a browser with the name of a sports team or a country and a series of colours
+    specified perhaps hexadecimals e.g. ff0000 = red (rrggbb) should be used for the
+    team colours or map colours, which displays something sensible. My version looks
+    like this:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_33_0.png)
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_33_1.png)'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# 3. Functions, pointers and structures
+
+
+    # 3.1 Functions
+
+
+    The entry point into all our programs is called main() and this is a function,
+    or a piece of code that does something, usually returning some value. We structure
+    programs into functions and also to stop them become unreadable blocks of code
+    that cannot be seen in one screen or page to ensure that we do not have repeated
+    identical chunks of code all over the place. We can call library functions like
+    printf or strtok which are part of the C language and we can call our own or other
+    peoples functions and libraries of functions. We have to ensure that the appropriate
+    header file exists and can be read by the preprocessor or compiled library exists
+    too and is accessible.
+
+
+    As we learned before, the scope of data is restricted to the function in which
+    is declared, so we use pointers to data and blocks of data to pass to functions
+    that we wish to do some work on our data. We have seen already that strings are
+    handled as pointers to arrays of single characters terminated with a NULL character.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# C Programming in Linux\n\n* C Programming in Linux (c) David Haskins 2008\n\
+    * chapter3_1.c\n\n```\n#include <stdio.h>\n#include <string.h>\n#include <math.h>\n\
+    \ndouble doit(int number1, int number2)\n{\n    return sqrt((double)number1 +\
+    \ number2);\n}\n\nint main(int argc, char *argv[], char *env[])\n{\n    int n1\
+    \ = 0, n2 = 0, i=0;\n    n1 = atoi((char *) strtok(argv[1],\",\"));\n    n2 =\
+    \ atoi((char *) strtok(NULL,\",\"));\n    printf(\"Content-type:text/html\\n<html>\\\
+    n<body>\\n\");\n    for(i=1;i<100;i++) printf(\"%f ,\\n\",doit(n1+i,n2));\n  \
+    \  printf(\"</body>\\n</html>\\n\");\n    return 0;\n}\n```\n\nIn this example\
+    \ we can repeatedly call the function \"do\" that takes two integer arguments\
+    \ and the result of some mathematical calculation.\n\n+   Compile: gcc - func1\
+    \ chapter3_1.c -lm\nCopy to cgi-bin: cp func1 /home/david/public_html/cgi-bin/func1\n\
+    \n(by now you should be maintaining a Makefile as you progress, adding targets\
+    \ to compile examples as you go.)\n\n36"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Functions, pointers and structures
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_36_0.png)
+
+
+    The result in a browser looks like this called "func1:5".
+
+
+    In this case the arguments to our function are sent as copies and are not modified
+    in the function used.
+
+
+    If we want to modify a variable we would have to send its pointer to a function.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    We send the address of the variable ''result'' with &result, and in the function
+    we de-reference the pointer *result to get the float and change its value, outside
+    its scope inside main . This gives identical output to chapter3_1.c.
+
+
+    # 3.2 Library Functions
+
+
+    C contains a number of built-in functions for doing commonly used tasks. So far
+    we have used atoi, printf, sizeof, strtok, sqrt. To get full details of any built-in
+    library function all we have to do is type example:
+
+
+    +   - man 3 atoi
+
+
+    and we will see all this:'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Functions, pointers and structures
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_38_0.png)
+
+
+    Which pretty-well tells everything you know about this function and how to use
+    it and
+
+    variants of it. Most importantly it tells you header file to include.
+
+
+    # 3.3 A short library function reference
+
+
+    Full details of all the functions available can be found at:
+
+    http://www.gnu.org/software/libc/manual/'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Common Library Functions by Header File:
+
+
+    math.h
+
+    Trigonometric Functions e.g.:
+
+    cos sin tan
+
+    Exponential, Logarithmic, and Power Functions e.g.:
+
+    exp log pow sqrt
+
+    Other Math Functions e.g.:
+
+    ceil floor fmod
+
+
+    stdio.h
+
+    File Functions e.g.:
+
+    close feof fgetpos fopen read freseek
+
+    Formatted I/O Functions e.g.:
+
+    print scanf Functions
+
+    Character I/O Functions e.g.:
+
+    getc fgetc fputc getuts getchar gets putc puts
+
+
+    stdlib.h
+
+    String Functions e.g.:
+
+    atof atoi atoi
+
+    Memory Functions e.g.:
+
+    calloc free malloc
+
+    Environment Functions e.g.:
+
+    abort exit getenv system
+
+    Math Functions e.g.:
+
+    abs div rand
+
+
+    string.h
+
+    String Functions e.g.:
+
+    strcat strchr strcmpncmp strncpy
+
+    strnpy strcspn strstr strtok
+
+
+    time.h
+
+    Time Functions e.g.:
+
+    asctime clock difftime time
+
+
+    There is no point in learning library functions until you find to do something
+    which then leads you to look for a function or a library of functions that has
+    been written for this purpose. You will need to understand the function signature
+    – or what the argument list means and how to use it and what will be returned
+    by the function or done to variables passed as pointers to functions.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 3.4 Data Structures
+
+
+    Sometimes we wish to manage a set of variable as a group, perhaps taking all the
+    values from a database record and passing the whole record around our program
+    to process it. To do this we can group data into structures.
+
+
+    This program uses a struct to define a set of properties for something called
+    a player. The main function contains a declaration and instantiation of an array
+    of 5 players. We pass a pointer to each array member in turn to a function to
+    rank each one. This uses a switch statement to examine the first letter of each
+    player name to make an arbitrary ranking. Then we pass a pointer to each array
+    member in turn to a function that prints out the details.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# C Programming in Linux\n\n* C Programming in Linux (c) David Hawkins 2008\n\
+    * chapter3_c\n\n```\n#include <stdio.h>\n#include <string.h>\nstruct player {\n\
+    \    char name[255];\n    char role[255];\n    int ranking;\n};\nvoid struct(struct\
+    \ player *p) {\n    switch(p->name[0]) {\n        case 'P': p->ranking = 4;break;\n\
+    \        case 'H': p->ranking = 1;break;\n        case 'R': p->ranking = 2;break;\n\
+    \        case 'J': p->ranking = 5;break;\n        case 'B': p->ranking = 3;break;\n\
+    \    }\n}\nvoid show(struct player *p) {\n    printf(\"%s:%s Ranking:%d<br\\n\"\
+    , p->name,p->role,p->ranking);\n}\nint main(int argc, char *argv[], char *env[])\
+    \ {\n    struct player myteam[5] = { {\"Pele\",\"striker\",0 },\n    { \"Beckham\"\
+    ,\"male model\",0 },\n    { \"Roddick\",\"tennis\",0 },\n    { \"Haskins\",\"\
+    swimmer\",0 },\n    { \"Jagger\",\"singer\",0 } };\n\n    int i=0;\n    printf(\"\
+    Content-type:text/html\\n\\n\");\n    for(i=0;i<5;i++) rank (&myteam[i]);\n  \
+    \  for(i=0;i<5;i++) show (&myteam[i]);\n    return 0;\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'C Programming in Linux
+
+
+    Functions, pointers and structures
+
+
+    The results are shown here, as usual in
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_42_0.png)
+
+
+    This is a very powerful technique that is quite advanced but you will need to
+    be aware of it. The idea of structures leads directly to the idea of classes and
+    objects.
+
+
+    We can see that using a struct greatly simplifies the business task of passing
+    the data elements around the program to have different work done. If we make a
+    change to the definition of the struct it will work and we simply have to add
+    code to handle new properties rather than having to change the argument lists
+    or signatures of the functions doing the work.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# C Programming in Linux\n\nThe definition of the structure does not actually\
+    \ create any data, but just sets the formal shape of\nwhat we can instantiate.\
+    \ In the main function we can express this instantiation in the form shown\ncreating\
+    \ a list of sequences data elements that conform to the definition we have made.\n\
+    \nYou can possibly see that a struct with additional functions or methods is essentially\
+    \ what a class is in\nJava, and this is also in C++. Object Oriented languages\
+    \ start here and in fact many early\nsystems described as \"object oriented\"\
+    \ were in fact just built using C language structs.\n\nIf you take a look at,\
+    \ the Apache server development header files you will see a lot of\nstructs for\
+    \ example in this fragment of http.h:\n\n```\nstruct server_addr_rec {\n/** The\
+    \ next server in the list */\nserver_addr_rec *next;\n  /* The bound address,\
+    \ for this server */\napr_sockaddr_t *host_addr;\n  /* The bound port, for this\
+    \ server */\napr_port_t *host_port;\n  /* The name in \"VirtualHost\" * /\nchar\
+    \ *virthost;\n};\n```\n\nDont worry about what this all means – just notice that\
+    \ this is a very common and very powerful\ntechnique, and the design of data structures,\
+    \ just like the design of database tables to which it is closely\nrelated the\
+    \ core, vital task for you to understand as a programmer.\n\nYou make the philosophical\
+    \ decisions that the world is like this and can be modelled in this way. A\nheavy\
+    \ responsibility - in philosophy this work is called ontology (what exists?) and\
+    \ epistemology\n(how we can know about it?). I bet you never thought that was\
+    \ what you were doing!\n\n# 3.5 Functions, pointers and structures – conclusion\n\
+    \nWe have used simple data types to represent some information and transmit input\
+    \ to a program\nto to organise and display some visual output.\n\nWe have used\
+    \ HTML embedded in output strings to make output visible in a web browser.\n\n\
+    We have learned about creating libraries of functions for reuse.\n\nWe have learning\
+    \ about data structures and the use of pointers to pass them around a program."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Exercise:
+
+
+    Using C library functions create a program that:
+
+
+    +   * opens a file in write mode,
+
+    * writes a command line argument to the file
+
+    * closes the file
+
+    * opens the file in read mode
+
+    * reads the contents
+
+    * closes the file
+
+    * prints this to the screen
+
+
+    This will give you experience with finding things out, looking for suitable library
+    functions, and finding examples on-line or from a book.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# # 4. Logic, loops and flow control\n\n# ## 4.1 Syntax of C Flow of control\n\
+    \nWe can use the following C constructs to control program execution.\nWhen we\
+    \ can count our way through a sequence or series:\n\n```\nfor[ initial value;\
+    \ keep on until ; incremental change )\n    { do this; and this; and this; }\n\
+    ```\n\nWhen we are waiting for some condition to change:\n\n```\nwhile( this is\
+    \ true )\n    { do this; and this; and this; }\norif we want to do something at\
+    \ least once then test:\n    do { do this; and this; and this; }\n    while( this\
+    \ is true)\n```\n\nWhen have more a single option to test:\n\n```\nif( this is\
+    \ true )\n    { do this; and this; and this; }\nelse\n    { do this; and this;\
+    \ and this; }\n```\n\nWhen have more options to test:\n\n```\nif( this is true\
+    \ )\n    { do this; and this; and this; }\nelse if ( this is true )\n    { do\
+    \ this; and this; and this; }\nelse\n    { do this; and this; and this; }\n```\n\
+    \nWhen have more options to test based on an integer or single character value:\n\
+    \n```\nswitch( on an integer or character value )\n{\n    case 0: do this; and\
+    \ this; and this; break;\n    case n: do this; and this; and this; break;\n  \
+    \  default:do this; and this; and this;\n}\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# 4.2 Controlling what happens and in which order\n\nThis part is all about\
+    \ if, and then, and else true and false – the nuts and bolts of how we express\
+    \ and control the execution of a program. This can be very dry and dusty material\
+    \ to make it more understandable we are going to solve a problem you are going\
+    \ to solve to do any interactive web of our complexity.\n\nWe will build something\
+    \ we can use in order to provide like the functionality that is obtained from\
+    \ getParameter(\"ITEM1\") method in Java servlets or _REQUEST['\"ITEM1\"]' function\
+    \ in PHP.\n\nIn Chapter 1 we saw that environment variables are caused by the\
+    \ implicit argument to the main function. We can also use the library function\
+    \ getenv() to request the value of any named environment variable.\n\n```\n* C\
+    \ Programming in Linux (c) David Haskins 2008\n* chapter4_1.c\n\n#include <stdio.h>\n\
+    #include <string.h>\n\nint main(int argc, char *argv[], char *env[]) {\n    printf(\"\
+    Content-type:text/html\\n<html><body bgcolor=\\#23abe2>\\n\",\\n    char value[256]\
+    \ = \"\";\n    strncpy(value, char *) getenv(\"QUERY_STRING\"),255);\n    printf(\"\
+    QUERY_STRING :%%s<BR>in\", value);\n    printf(\"<form>in\\n    printf(\"<input\
+    \ type=\\\"TEXT\\\" name=\\\"ITEM1\\\">in\");\n    printf(\"<input type=\\\"TEXT\\\
+    \" name=\\\"ITEM2\\\">in\");\n    printf(\"<input type=\\\"SUBMIT\\\">in\");\n\
+    \    printf(\"</form></body></html>in\");\n    return 0;\n}\n```\n\nHere we display\
+    \ the QUERY_STRING which is what the program gets as the contents of an HTML form\
+    \ which contains NAME=VALUE pairs for all the named form elements.\n\nAn HTML\
+    \ form by default uses the GET method which transmits all form data back to the\
+    \ program or page that contains the form unless otherwise specified in an action\
+    \ attribute. This data is contained in the QUERY_STRING as variable of variable\
+    \ = value pairs separated by the & character."
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    Note that in HTML values of things are enclosed in quotation marks, so to embed
+    these inside a C string we have to "escape" the character with a special sign
+    \ like this "\"ITEM1\" ". Also we are using "\n" or explicit new line characters
+    at the end of each piece of HTML output, so that when we select "view source"
+    in the browser we get some reasonably formatted text to view rather than the whole
+    page appearing as one long single line.
+
+
+    Calling this program in a browser we can see and enter some data in the boxes:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_47_0.png)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Logic, loops and flow control
+
+
+    After submitting the form here we see:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_48_0.png)
+
+
+    To make much sense of the QUERY_STRING and find a particular value in it, we are
+    going to have to parse, to chop it up into its constituent pieces and for this
+    we will need some conditional logic (if, else etc) and loop to count through the
+    characters in the variable. A basic function to do this would be ideal as this
+    is a task you might need to do again and again so it makes sense to have a chunk
+    of code that can be called over again.
+
+
+    In the next example we add this function and the noticeable difference in the
+    output is that we can insert the extracted values into the HTML boxes after we
+    have parsed them. We seem to have successfully created something like a java getParameter()
+    function – or have we?
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_48_1.png)
+
+
+    We have a good long look at chapter4_2.c and try it out with characters other
+    than A-Z a-z or numerals and you will see something is not quite right. There
+    is some kind of encoding going on here!'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    Logic, loops and flow control
+
+
+    If I were type DAVID !!! into the first field:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_49_0.png)
+
+
+    I get this result:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_49_1.png)
+
+
+    A space character has become a + and ! has become %21.
+
+
+    This encoding occurs because certain characters are explicitly used in the transmission
+    protocol itself. The &&_ for example is used to separate portions of the QUERY_STRING
+    and the space cannot be seen at all as it is.
+
+
+    Any program wishing to use information from the HTML form must be able to decode
+    all this stuff which will now attempt to do.
+
+
+    The program chapter4_2.c accomplishes what we see so far. It has a main function
+    and a decode_value function all in the same file.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'The decode_value function takes three arguments:
+
+
+    +   - the name of the value we are looking for "ITEM1=" or "ITEM2="
+
+    - the address of the variable into which we are going to put the value if found
+
+    - the maximum number of characters to copy
+
+
+    The function looks for the start and end positions in the QUERY_STRING of the
+    value and then copies the characters found one by one to the value variable, adding
+    a NULL charcter to terminate the string.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Logic, loops and flow control
+
+
+    ********************************************************************************
+
+    * C Programming in Linux (c) David Haskins 2008
+
+    * chapter4_2 c
+
+    ********************************************************************************
+
+
+    52'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    It looks like we are going to have to do some work on this decode_value package
+    so as this is work we can expect to do over and again it makes sense to write
+    a function that can be reused.
+
+
+    First off we can put this function into a separate file called decode_value.c
+    and create a file for all the functions we may write called e_in_linux.h and compile
+    this into a library. In the Make file we can add:
+
+
+    ```
+
+    SRC_CIL = decode_value.c
+
+    OBJ_CIL = decode_value.o
+
+    #CIL_INCLUDES = -I/usr/include/apache2 -I/usr/include/apache2 -I/usr/include/apr-1
+
+    #CIL_LIBS = -L/usr/lib -lmysqlclient -L/usr/lib -lgd -
+
+    L/home/david/public_html/Ventus/code
+
+
+    all: lib cil 4-4
+
+    lib_cil:
+
+    gcc -c $(SRC_CIL)
+
+    ar cs c_in_linux.a $(OBJ_CIL)
+
+    $(RM) *o
+
+
+    4-4:
+
+    gcc -o logic4_3.c c_in_linux.a -lc
+
+    cp logic4 /home/david/public_html/cgi-bin/logic4
+
+    ```
+
+
+    This looks horrible and complex but all it means this:
+
+    typing "make all" will:
+
+
+    ```
+
+    compile all *.c files listed in the list OBJ_SRC and into object files *.o
+
+    compile the object files into a library archive called lib_c_in_linux.a
+
+    compile 4-4 using this new archive.
+
+    ```
+
+
+    This is the model we will use to keep our files as small as possible and the share-ability
+    of code at its maximum.
+
+
+    We can now have a simpler "main" function file, and files for stuff we might want
+    to write as call-able functions from anywhere which we do not know about. This
+    is organised into a library file (*,a for archive) – these can also be compiled
+    as dynamically loadable shared objects ,*so which are much like Windows DLLs.
+    This exactly how all Linux software is written and delivered.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    For the MySQL C Application Programmers Interface (API) comprises:
+
+
+    +   - all header files in /usr/include/mysql
+
+    t library file /usr/lib/mysql/libmysqlclient.a
+
+
+    What we are doing reveal how all of Linux is put together – we are simply adding
+    to it in the same way.
+
+
+    Our main file now looks like this:
+
+
+    ```
+
+    ****************************************************
+
+    * C Programming in Linux (c) David Haskins 2008
+
+    * chapter4_3_c
+
+    ****************************************************/
+
+
+    #include <stdio.h>
+
+    #include <string.h>
+
+    #include "c_in_linux.h"
+
+
+    int main(int argc
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    This code calls the function decode_value in the same way but the library, **e_in_linux.a**
+    was linked in when it was compiled and it has access to the header file **e_in_linux.h**
+    that lists all the functions in the library it works properly.
+
+
+    Try to describe the process in `pseudocode` of decoding this QUERY_STRING:
+
+
+    ```
+
+    get the QUERY_STRING
+
+    find the search string "ITEM1=" inside it
+
+    look for the end of the value of "ITEM1="
+
+    copy the value to "value" variable, translating funny codes as:
+
+    %21 is ! %23 is #
+
+    ```
+
+
+    These special codes are generated by the browser so that whatever you put in an
+    HTML form will get safely transmitted and not mess about the HTTP protocol. There
+    are lot of them and the task for this chapter is to **finish this task off** so
+    that EVERY key on your keyboard works as you think it should!!
+
+
+    Program chapter4_3.c calls this unfinished function decode_value which this far
+    can cope with the **space** character and ! - it uses **if** and **else** and
+    **for** for the library function **getenv, strcpy, strlen, strstr** in a piece
+    of **conditional** logic in which a string is analysed to find a specific item
+    and this thing copied into a piece of memory called **value** which has been passed
+    to it.
+
+
+    The result shows the decoded value pasted into the first field:
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_54_0.png)
+
+
+    55'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# C Programming in Linux\n\n# Logic, loops and flow control\n\n```\n********************************************************************\n\
+    * program: decode_value.c                               *\n* version: 0.1    \
+    \                                                 *\n* author: david haskins February\
+    \ 2008                                 *\n********************************************************************/\\\
+    n\n#include <stdlib.h>\n#include <string.h>\nvoid decode_value(const char *key,\
+    \ char *value, int size)\n{\n    unsigned int intlen = 0;\n    unsigned int i\
+    \ = 0;\n    int j = 0;\n    char *pos1=\"0\",*pos2=\"0\",code1=\"\\0\",code2=\"\
+    \\0\";\n\n    strcpy(value,\"\"\");\n    if (pos1 = strstr(getenv(\"QUERY_STRING\"\
+    , key)) != NULL)\n    {\n        for(i=0; i<strlen(key); i++) pos1++;\n      \
+    \  if((pos2 = strchr(pos1,\"\"\")) != NULL)\n        {\n            length = pos2\
+    \ - pos1;\n        } else length = strlen(pos1);\n        for(i=0, j=0; i < length;\
+    \ i++, j++)\n        {\n            if(j < size)\n            {\n            \
+    \    value[j] = pos1[i];\n                if(pos1[i] == '%')\n               \
+    \ {\n                    i++; code1 = pos1[i];\n                    i++; code2\
+    \ = pos1[i];\n                    if(code1=='2' && code2=='0')\n             \
+    \           value[j] = '2';//0x20\n                    else if(code1=='2' && code2=='1')\n\
+    \                        value[j] = '1';//0x21\n                }\n          \
+    \  }\n            else value[j] = pos1[i];\n        }\n        if(j < size)\n\
+    \        {\n            value[j] = \"\\0\";\n        }\n    else value[size-1]\
+    \ = \"\\0\";\n}\n```\n\n56"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 4.3 Logic, loops and flow conclusion
+
+
+    The most important part of controlling the flow of your program is to have a clear
+    idea about what it is trying to do. We have also learned to break out your code
+    into manageable lumps, and started to build and use a library and header file
+    of your own.
+
+
+    Being able to express a process in normal words or pseudocode is useful and helps
+    you to break the code into steps.
+
+
+    Use for loops to explicitly count through things you know have an ending point.
+
+    Use while and do...while loops to do things until some condition changes.
+
+    Use switch statements to when integers or single characters determine what happens
+    next.
+
+    Use if and else if and else mutually exclusive things can be tested in a sequence.
+
+    Complex sets of if and else and not (!) conditionals can end up unreadable.
+
+    Use braces { } to break it all into chunks.
+
+
+    Exercise:
+
+
+    A useful task now would be to complete the function decode_value so you now have
+    a useful tool to grab web content from HTML forms decoding all the non alpha-numeric
+    keys on your keyboard.
+
+    You will use this exercise again and again so it is worth getting it right.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# 5. Database handling with MySQL
+
+
+    # 5.1 On not reinventing the wheel
+
+
+    It is pretty sensible to start from scratch at every project so we build work
+    on by others who came this way. All of the C libraries we are using were written
+    by someone from even lower level bits and pieces that we can access and modify
+    this code we want to. This is what Open Systems is all about.
+
+
+    In practice we simply want to use reliable services, and the first two we are
+    going to use are ubiquitous - databases access and graphical image generation.
+
+
+    # 5.2 MySQL C API
+
+
+    To access the set of MySQL functions we sure our compiler can access the header
+    and libraries of MySQL and simply call some mysql functions we have not had to
+    write ourselves.
+
+    in this example we join the database code onto the last work we did and insert
+    the decoded data into a database, and read out what we have stored so far.
+
+    in a new terminal window type:
+
+
+    +   mysql test
+
+    then: create table CIL (ITEM1 varchar(255),ITEM2 varchar(255));
+
+
+    This creates a table for the program to write in the test database that should
+    already be created in your MySQL setup.
+
+    Looks like this if it all works OK.
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_57_0.png)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'The data types declared MYSQL, MYSQL_RES, and MYSQL_ROW are preprocessor definitions
+    that stand for more complex C declarations in mysql.h and all we need to know
+    is how to call them.
+
+
+    The documentation at MySQL provides all the information you will need to do more
+    complex operations.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Database handling with MySQL
+
+
+    ****************************************************************
+
+    * C Programming in Linux (c) David Haskins 2008
+
+    * chapter5_1_c
+
+    ****************************************************************/
+
+
+    ```
+
+    #include <stdio.h>
+
+    #include <string.h>
+
+    #include <mysql/mysql.h>
+
+    #include "c_linux.h"
+
+
+    int main(int argc
+
+    ```
+
+
+    60'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'Understand all that?
+
+
+    In barely 10 lines (highlighted) of C we have inserted our data into a database
+    table and can read it out again, which is pretty painless. With **mysql_init**
+    we obtain a pointer to a data structure of type MYSQL, we can then use this to
+    connect to the test database with **mysql_options** and **mysql_real_connect**,
+    then execute SQL statements just as we would in a terminal session. The results
+    of a query can be retrieved as a sequence of MYSQL_ROW arrays of strings with
+    **mysql_use_results**. We free up the memory with **mysql_free_result** and close
+    the database with **mysql_close**.
+
+
+    As is usual with C libraries, you need to be able understand the usually sparse
+    documentation to understand the function calls, and for MySQL 5.1 we can find
+    all this information at: http://dev.mysql.com/doc/refman/5.1/en/index.html'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# The MySQL 5.1 Reference Manual / Connectors and APIs / MySQL C API includes:
+
+
+    | mysql_affected_rows() | mysql_insert_id() |
+
+    | mysql_autocommit() | mysql_kill() |
+
+    | mysql_change_user() | mysql_library_end() |
+
+    | mysql_character_set_name() | mysql_library_init(mysql_list_dbs()) |
+
+    | mysql_close() | mysql_list_fields() |
+
+    | mysql_commit() | mysql_list_processes() |
+
+    | mysql_connect() | mysql_list_tables() |
+
+    | mysql_create_db() | mysql_more_results() |
+
+    | mysql_data_seek() | mysql_next_result() |
+
+    | mysql_debug() | mysql_num_fields() |
+
+    | mysql_drop_db() | mysql_options() |
+
+    | mysql_dump_debug_info() | mysql_ping() |
+
+    | mysql_eof() | mysql_query() |
+
+    | mysql_errno() | mysql_real_connect() |
+
+    | mysql_error() | mysql_real_escape_string() |
+
+    | mysql_escape_string() | mysql_real_query() |
+
+    | mysql_fetch_field() | mysql_refresh() |
+
+    | mysql_fetch_field_direct() | mysql_reload() |
+
+    | mysql_fetch_fields() | mysql_rollback() |
+
+    | mysql_fetch_lengths() | mysql_row_seek() |
+
+    | mysql_fetch_row() | mysql_row_tell() |
+
+    | mysql_field_count() | mysql_select_db() |
+
+    | mysql_field_seek() | mysql_set_character_set() |
+
+    | mysql_field_tell() | mysql_set_local_infile_default() |
+
+    | mysql_free_result() | mysql_set_local_infile_handler() |
+
+    | mysql_get_character_set_info() | mysql_set_server_option() |
+
+    | mysql_get_client_info() | mysql_shutdown() |
+
+    | mysql_get_client_version() | mysql_sqlite() |
+
+    | mysql_get_host_info() | mysql_ssl_set() |
+
+    | mysql_get_proto_info() | mysql_stat() |
+
+    | mysql_get_server_info() | mysql_store_result() |
+
+    | mysql_get_server_version() | mysql_thread_id() |
+
+    | mysql_get_ssl_cipher() | mysql_use_result() |
+
+    | mysql_hex_string() | mysql_warning_count() |
+
+    | mysql_info() | |
+
+    | mysql_init() |'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 6. Graphics with GD library
+
+
+    The ability to generate interesting images dynamically to suit the situation is
+    an enjoyable, challenging, rewarding type of programming. We will be using Thomas
+    Boutell''s GD C library which has been around for many years as an open systems
+    project.
+
+
+    # 6.1 Generating binary content
+
+
+    Here we create an image and print it into the value of the TEXT= part of the QUERY
+    STRING and set our content type to image/gif. the **gdImageGif** function writes
+    the binary image to **stdout** which is the output stream instead of a file, so
+    binary image data is sent back to the browser.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# C Programming in Linux\n\n# Graphics with GD library\n\n************************************************\n\
+    * C Programming in Linux (c) David Haskins 2008\n* chapter6_1c               \
+    \                *\n**************************************************\n\n```\n\
+    #include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <gd.h>\n\
+    #include <gdfonts.h>\n#include \"c_in_linux.h\"\n\nint main(int argc, char *argv[],\
+    \ char *env[]) {\n\tint text=0,background=0,height=50,width=0;\n\tchar value[255]\
+    \ = \"\";\n\tgdlImagePtr im_out= NULL;\n\ndecode_(\"TEXT=\", (char *)&value, 255);\n\
+    \twidth = strlen(value) * 10 + 5;\n\tim_out = gdImageCreate(width,height);\n\t\
+    background = gdImageColorAllocate(im_out,0,255,255);\n\ttext = gdImageColorAllocate(im_out,0,0,255);\n\
+    \tgdImageFilledRectangle(im_out,0,0,width-1,height-1,background);\n\tgdImageString(im_out,gd_out,GdFontGetSmall(),10.5,(unsigned\
+    \ char*)value,text);\n\tgdlImageGif(im_out,stdout);\n\tgdlImageDestroy(im_out);\n\
+    \treturn 0;\n}\n```\n\nThe program produces this output when called with cgi/gdgraph1?TEXT=DavidHaskins\n\
+    \n![](img/7850df81ed1a1b9c43f67da3d9dfcff8_63_0.png)\n\nWhile this is not the\
+    \ most fancy or attractive exercise but at least demonstrate the key principles\
+    \ involved in generating graphical output. With the GD library you can load existing\
+    \ images and generate them in many formats as GIF, WMBP, and even create animated\
+    \ GIFs.\n\n64"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'C Programming in Linux
+
+
+    Graphics with GD library
+
+
+    If you have used PHP development tools you will recognise the GD library functions
+    as they are pretty well identifying that PHP is a wrapper in this case around
+    the C library.
+
+
+    The text displayed here is using one of the internal fonts, Tiny, Small, Medium
+    Bold, Large and Giant which are adequate for simple labelling but you can also
+    use TrueType fonts for more attractive output.
+
+
+    Geometric drawing with lines or certain styles, filled and open polygons, circles,
+    arcs can be created. The main thing to remember is that the origin of an image
+    is the TOP left hand corner which might seem unintuitive to anyone who studies
+    mathematics - quite why this is I have never discovered but can only imagine that
+    the first programmer to do anything in this area happened to not know about graphs
+    in which we think of x=0,y=0 as being at the bottom left hand.
+
+
+    Colours are specified as RGB values in the range 0 to 255 so that white is 255,255,255
+    and red is 255,0.0. To work out fine-grained hues use a graphics tool like GNU
+    GIMP which has colour pickers so you can find out subtle RGB values. Palettes
+    of colours from one image can be used in another and the closest colour in a palette
+    requested or created if there is space for it to be allocated.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# 6.2 Using TrueType Fonts\n\nIn this example we modify the previous program\
+    \ to generate a label using TrueType font.\n\n```\n************************************************\n\
+    * C Programming in Linux (c) David Hawkins 2008 chapter6_2.c\n************************************************/\n\
+    #include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <gd.h>\n\
+    #include <gdfonts.h>\n#include \"c_linux.h\"\n\nint main(int argc, char *argv[],\
+    \ char *env[]) {\n    int text=0,background=0,height=50,width=x=0,y=0,size=30,string_rectangle[8];\n\
+    \    double angle=0;\n    char value[256] = \"\";\n    //OpenSource TrueType Font\n\
+    \    char font[256] = \"/usr/share/fonts/DejaVuSans.ttf\";\n    //Ubuntu TrueType\
+    \ Font\n    char font[256] = \"/usr/share/fonts/truetype-dejavu/DejaVuSans.ttf\"\
+    ;\n    char *err = NULL;\n    gdImagePtr im_out = NULL;\n\n\n\n    decode_value(\"\
+    TEXT\", (char *) &value, 255);\n    //call gdlmImageStringFT with NULL &string\
+    \ to obtain size\n    err = gdlmImageStringFT(NULL,&string_rectangle[0],0,\n \
+    \   font,size,angle,0,0,value);\n    x = string_rectangle[2]-string_rectangle[6]\
+    \ + 6;\n    y = string_rectangle[3]-string_rectangle[7] + 6;\n    // create an\
+    \ big image for the string plus a little space\n    im_out = gdlmImageCreate(x,y);\n\
+    \    //allocate colors\n    background = gdlmColorAllocate(im_out,0,0,0);\n  \
+    \  text = gdlmColorAllocate(im_out,255,255,255);\n    //get starting position\n\
+    \    x = 3 - string_rectangle[6];\n    y = 3 - string_rectangle[7];\n    //draw\
+    \ the string\n    err = gdlmImageStringFT(im_out,&string_rectangle[0],\n    text,font,size,angle,x,y,value);\n\
+    \    //output\n    printf(\"Content-type: image/gif\\n\");\n    gdlmImageGif(im_out,stdout);\n\
+    \    gdImageDestroy(im_out);\n    return 0; }\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'We call this program as before cgi-bin/gdgraph1?TEXT=C+PROGRAMMING+IN+LINUX
+
+
+    to get this kind of output which you will probably see is more likely to be a
+    useful kind of tool. The location and contents of your systems fonts will vary
+    whatever gives example:
+
+
+    +   - OpenSense /usr/share/fonts/truetype/*.ttf
+
+    - Ubuntu. /usr/share/fonts/truetype/ttf-dejavu/*.ttf
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_66_0.png)
+
+
+    To get any good at using a library GD you do have to be prepared to experiment
+    and take a lot of time to understand the function parameters, looking in great
+    detail at the available documentation at: http://www.libgd.org/Documentation'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 6.3 GD function reference
+
+
+    A full detailed set of documentation is maintained at: http://www.libgd.org
+
+
+    GD contains a wealth of functionality for all kinds of drawing and many formats,
+    as TrueType fonts and animated Gif images. A categorized list of functions follows:
+
+
+    Image creation, destruction, loading and saving:
+
+
+    ```
+
+    gdImageCreate(int sx, int sy)
+
+    gdImageCreateFromJpeg(FILE *in)
+
+    gdImageCreateFromPng(FILE *in)
+
+    gdImageCreateFromGif(FILE *in)
+
+    gdImageCreateFromGd(FILE *in)
+
+    gdImageCreateFromWBMP(FILE *in)
+
+    gdImageDestroy(gdImagePtr im)
+
+    void gdImageFromJpeg(gdImagePtr im, FILE *out, int quality)
+
+    void gdImageFromPng(gdImagePtr im, FILE *out)
+
+    void gdImageFromPng(gdImagePtr im, FILE *out)
+
+    void gdImageFromWBMP(gdImagePtr im, int fg, FILE *out)
+
+    void gdImageFromGd(gdImagePtr im, FILE *out)
+
+    ```
+
+
+    Drawing Functions:
+
+
+    ```
+
+    void gdImageSetPixel(gdImagePtr im, int x, int y, int color)
+
+    void gdImageLine(gdImagePtr im, int x1, int y1, int x2, int y2, int color)
+
+    void gdImageDashedLine(gdImagePtr im, int x1, int y1, int x2, int y2, int color)
+
+    void gdImagePolygon(gdImagePtr im, gdPointPtr point s, int point sTotal, int color)
+
+    void gdImageOpenPolygon(gdImagePtr im, int x, int y, int x2, int y2, int point,
+    int point sTotal, int color)
+
+    void gdImageRectangle(gdImagePtr im, int x1, int y1, int x2, int y2, int color)
+
+    void gdImageFilledPolygon(gdImagePtr im, gdPointPtr point s, int point sTotal,
+    int color)
+
+    void gdImageFilledRectangle(gdImagePtr im, int x1, int y1, int x2, int y2, int
+    color)
+
+    void gdImageArc(gdImagePtr im, int cx, int cy, int w, int h, int s, int e, int
+    color)
+
+    void gdImageFilledArc(gdImagePtr im, int cx, int cy, int w, int h, int s, int
+    e, int color, int style)
+
+    void gdImageFilledEllipse(gdImagePtr im, int cx, int cy, int w, int h, int color)
+
+    void gdImageFillBorder(gdImagePtr im, int x, int y, int border, int color)
+
+    void gdImageFill(gdImagePtr im, int x, int y, int color)
+
+    void gdImageSetAntiAliased(gdImagePtr im, int c)
+
+    void gdImageSetAntiAliasedDBlend(gdImagePtr im, int c)
+
+    void gdImageSetBrush(gdImagePtr im, gdImagePtr brush)
+
+    void gdImageSetTile(gdImagePtr im, gdImagePtr tile)
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'C Programming in Linux
+
+
+    Graphics with GD library
+
+
+    ```
+
+    void gdImageSetStyle(gdImagePtr im, int *style, int styleLength)
+
+    void gdImageSetThickness(gdImagePtr im, int, thickness)
+
+    void gdImageAlphaBlending(gdImagePtr im, int, blending)
+
+    void gdImageSaveAlpha(gdImagePtr im, int, saveFlag)
+
+    void gdImageSetClip(gdImagePtr im, int x1, int y1, int x2, int y2)
+
+    void gdImageGetClip(gdImagePtr im, int *x1P, int *y1P, int *x2P, int *y2P)
+
+    ```
+
+
+    # Query Functions:
+
+
+    ```
+
+    int gdImageAlpha(gdImagePtr im, int, color)(MACRO)
+
+    int gdImageGetPixel(gdImagePtr im, int x, int y)
+
+    int gdImageBoundsSafe(gdImagePtr im, int x, int y)
+
+    int gdImageGreen(gdImagePtr im, int, color)(MACRO)
+
+    int gdImageRed(gdImagePtr im, int, color)(MACRO)
+
+    int gdImageSX(gdImagePtr im)(MACRO)
+
+    int gdImageSY(gdImagePtr im)(MACRO)
+
+    int gdImageTrueColor(im)(MACRO)
+
+    ```'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Text-handling functions:
+
+
+    ```
+
+    gdFontPtr gdFontGetSmall(void )
+
+    gdFontPtr gdFontGetLarge(void )
+
+    gdFontPtr gdFontGetMediumBold(void )
+
+    gdFontPtr gdFontGetGiant(void )
+
+    gdFontPtr gdFontGetTiny(void )
+
+    void gdStringChar(gdImagePtr im, int, gdFontPtr font, int, x, y, int, c, color)
+
+    void gdStringUp(gdImagePtr im, int, gdFontPtr font, int, x, y, int, c, color)
+
+    void gdStringString(gdImagePtr im, gdFontPtr font, int, x, y, unsigned char*s,
+    int, color)
+
+    void gdString1(gdImagePtr im, gdFontPtr font, int, x, y, unsigned char*s, int,
+    color)
+
+    void gdStringUp(gdImagePtr im, gdFontPtr font, int, x, y, unsigned char*s, int,
+    color)
+
+    void gdStringUp6(gdImagePtr im, gdFontPtr font, int, x, y, unsigned char*s, int,
+    color)
+
+    ```
+
+
+    ```
+
+    char* gdStringFT(gdImagePtr im, int, *brect, int, fg, char *fontname, double psize,
+    double angle, int, x, y, char*string)
+
+    char* gdStringFTEX(gdImagePtr im, int, *brect, int, fg, char *fontname, double
+    psize, double angle, int, gdFTText ExtraPtr)
+
+    char* gdStringFTCircle(gdImagePtr im, int, cx, cy, radius, doubleRadius, doubleFillPortion(char*,
+    double point s,
+
+    char*top, char*bottom, int fgcolor)
+
+    char* gdStringTTF(gdImagePtr im, int, *brect, int, fg, char *fontname, double
+    psize, double angle, int, x, y, char *string)
+
+    ```
+
+
+    # Color-handling functions:
+
+
+    ```
+
+    int gdColorAllocate(gdImagePtr im, int, r, g, int, b)
+
+    int gdColorAllocateAlpha(gdImagePtr im, int, r, g, int, b, a)
+
+    int gdColorClosest(gdImagePtr im, int, r, g, int, b)
+
+    int gdColorClosestAlpha(gdImagePtr im, int, r, g, int, b, a)
+
+    int gdColorClosestHWB(gdImagePtr im, int, r, g, int, b)
+
+    int gdColorExact(gdImagePtr im, int, r, g, int, b)
+
+    int gdColorResolve(gdImagePtr im, int, r, g, int, b)
+
+    int gdColorResolveAlpha(gdImagePtr im, int, r, g, int, b, a)
+
+    int gdColorTotal(gdImagePtr im)(MAX)
+
+    int gdColorRed(gdImagePtr im, int, c)(MAX)
+
+    int gdColorGreen(gdImagePtr im, int, c)(MAX)
+
+    int gdColorBlue(gdImagePtr im, int, c)(MAX)
+
+    int gdColorGetInteraced(gdImagePtr im)(MAX)
+
+    int gdColorGetTransparent(gdImagePtr im)(MAX)
+
+    ```'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Programming in Linux
+
+
+    # Graphics with GD library
+
+
+    ```
+
+    void gdiImageColorDeallocate(gdiImagePtr im, int color)
+
+    void gdiImageColorTransparent(gdiImagePtr im, int color)
+
+    void gdiTrueColor(int red, int green, int blue)(MACRO)
+
+    void gdiTrueColorAlpha(int red, int green, int blue, int alpha)(MACRO)
+
+    ```
+
+
+    Resizing functions:
+
+
+    ```
+
+    void gdiImageCopy(gdiImagePtr dst, gdiImagePtr src, int dstX, int dstY, int srcX,
+
+    srcY, int w, int h)
+
+    void gdiImageCopyResized(gdiImagePtr dst, gdiImagePtr src, int dstX, int dstY,
+    int
+
+    srcX, int srcY, int destW, int destH, int srcW, int srcH)
+
+    void gdiImageCopyResampled(gdiImagePtr dst, gdiImagePtr src, int dstX, int dstY,
+    int
+
+    srcX, int srcY, int destW, int destH, int srcW, int srcH)
+
+    void gdiImageCopyRotated(gdiImagePtr dst, gdiImagePtr src, int doubledX, doubledY,
+
+    int srcX, int srcY, int srcW, int srcH, int angle)
+
+    void gdiImageCopyMerge(gdiImagePtr dst, gdiImagePtr src, int dstX, int dstY, int
+    srcX,
+
+    srcY, int w, int h, int pct)
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# C Programming in Linux
+
+
+    # Graphics with GD library
+
+
+    ```
+
+    void gdImageCopyMergeGray(gdlImagePtr dst, gdlImagePtr src, int dstX, int dstY,
+    int srcX,
+
+    int srcY, int w, int h, int pct)
+
+    void gdImagePaletteCopy(gdlImagePtr dst, gdlImagePtr src)
+
+    void gdImageSquareToCircle(gdlImagePtr im, int radius)
+
+    void gdImageSharpen(gdlImagePtr im, int pct)
+
+    ```
+
+
+    # Miscellaneous Functions:
+
+
+    ```
+
+    int gdImageCompare(gdlImagePtr im1, gdlImagePtr im2)
+
+    gdImageInterlace(gdlImagePtr im, int int erlace)
+
+    gdFree(void *ptr)
+
+    ```
+
+
+    In order to use a library like this you will need familiarity with the arguments
+    which are often data types defined within the library itself such as gdImagePtr
+    which is some kind of structure containing all the data for an image to be processed
+    or stored. These may all seem unusual but after a while you will begin to get
+    used to the syntax and on-line documentation and begin to see patterns in the
+    complexity.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# 7. Apache C modules
+
+
+    # 7.1 Safer C web applications
+
+
+    In real life few web administrators would dream of letting anyone C programs as
+    CGI content generators because of the Apache server itself is written in C there
+    are simple utilities that with its development tools permit you to create code
+    stubs into which you can place your C programs and run them as Apache modules
+    when they are loaded as part of the server and managed safely in a kind of "sand-box".
+    Here we will take an earlier example and turn it into an Apache module.
+
+
+    A utility apachexs2 is included in the Apache2 development libraries which can
+    be invoked to generate a code stub for a program that can be compiled into a module
+    that is loaded and managed by the Apache server. These modules can be used to
+    perform a huge variety of tasks but in our case we will do doing something is
+    ack the ISAPI found in the IIS server. The exact location of the apachexs2 utility
+    will change according to the Linux distribution you are using with OpenSuse runs
+    like this.
+
+
+    $ /usr/sbin/apachexs2 -n labelmaker -g
+
+    david@linux-bxso:~\$ /usr/sbin/apachexs2 -n labelmaker -g
+
+    Creating [DIR] labelmaker
+
+    Creating [FILE] labelmaker/Makefile
+
+    Creating [FILE] labelmaker/modules.mk
+
+    Creating [FILE] labelmaker/mod_labelmaker.c
+
+    Creating [FILE] labelmaker/.deps
+
+    david@linux-bxso:~\$
+
+
+    This creates a folder of the name you give (labelmaker) and a Makefile, modules.mk
+    file which can be used by the Make utility, and a file called mod_labelmaker.c.
+
+
+    The C file is generated is like a Hello World for Apache. It may look like a complex
+    thing but it does supply a explanatory comment header which is worth reading.
+    The idea is that Apache starts its modules in a specified location which are configured
+    as needing to be loaded in the server configuration files, will be loaded. The
+    *_register_hooks function lists the names and signatures of functions that can
+    be called at specific stages in the Apache server process. In this case the name
+    http://localhost/labelmaker is called this module will be asked to handle whatever
+    happens in the *_handler_hook function.
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_72_0.png)'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "The configuration of the server can be a bit fiddly in OpenSuse we have to\
+    \ add this to the file\n\n# /etc/apache2/default-server.conf\n\n```\n<Location\
+    \ /labelmaker>\n    SetHandler labelmaker\n</Location>\n```\n\nand in /etc/config.sys/apache2\
+    \ we add the name of our module labelmaker to long comma,comma-separated list\
+    \ in the line starting\n\nAPACHE_MODULES=\"....labelmaker\"\nNow go to the folder\
+    \ labelmaker and type:\n\n```\nsudo /usr/sbin/apxs2 -e -i mod_labelmaker.c\nsudo\
+    \ /etc/init.d/apache2 restart\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "C Programming in Linux\n\nApache modules\n\nCall this in a browser like this:\n\
+    \n![](img/7850df81ed1a1b9c43f67da3d9dfcff8_74_0.png)\n\n```\n#include \"httpd.h\"\
+    \n#include \"http_config.h\"\n#include \"http_protocol.h\"\n#include \"ap_config.h\"\
+    \n\n/* The sample content handler */\nstatic int labelmaker_handler(request_rec\
+    \ *r)\n{\n    if (strcmp(r->handler, \"labelmaker\")) {\n        return DECLINED;\n\
+    \    }\n    r->content_type = \"text/html\";\n}\n\nif (r->header_only) {\n   \
+    \ ap_puts(\"The sample page from mod_labelmaker.c\\n\", r);\n    return OK;\n\
+    }\n\nstatic void labelmaker_register_hooks(apr_pool_t *p)\n{\n    ap_hook_handler(labelmaker_handler,\
+    \ NULL, NULL, APR_HOOK_MIDDLE);\n}\n\n/* Dispatch list for API hooks */\nmodule\
+    \ AP_MODULE_DECLARE_DATA labelmaker_module = {\n    STANDARD20_MODULE_STUFF,\n\
+    \    NULL,        /* create per-dir config structures */\n    NULL,        /*\
+    \ merge per-dir config structures */\n    NULL,        /* create per-server config\
+    \ structures */\n    NULL,        /* merge per-server config structures */\n \
+    \   NULL,        /* table of config file commands */\n    labelmaker_register_hooks\
+    \ /* register hooks */\n};\n```\n\n75"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# 7.2 Adding some functionality\n\nWe can plug in the work we did for the graphics\
+    \ library in Chapter 6 as a replacement handler function (in the code Chapter_7.c\
+    \ there are BOTH handlers, one commented out). Note the (highlighted) call to\
+    \ a modified decode_value function that uses the r->args pointer to get the QUERY_STRING\
+    \ handler from getenv(); Also Apache handles the output a bit differently -- get\
+    \ a pointer to the array of bytes in the image by calling gdImageGifPtr then the\
+    \ ap_write function outputs the data. We have to free the pointer with gdFree\
+    \ after the call.\n\n```\nstatic int labelmarker_handler(request_rec *rec)\n{\n\
+    \    void *iptr;\n    int sz = 0;\n\n    if (strcmp(r->handler, \"labelmarker\"\
+    )) {\n        return DECODED;\n    }\n\n    r->header_type = \"Content-type: image/gif\"\
+    ;\n    int text=0,background=0,x=0,y=0,size=30,string_rectangle[8];\n    double\
+    \ angle=0.0;\n    char value[255] = \"Hello\";\n    char font[256] = \"/usr/share/fonts/truetype/DejaVuSans.ttf\"\
+    ;\n    char *err = NULL;\n    gdImagePtr im_out=(char*)&255);\n    decode_value(r,\"\
+    TEXT\",(char*)&value, 255);\n    err=gdImageStringFT(NULL,string_rectangle[0],0,\n\
+    \    font_size,angle,0.0,value[6]) + 6;\n    x=string_rectangle[2]-string_rectangle[6]\
+    \ + 6;\n    y=string_rectangle[3]-string_rectangle[7] + 6;\n    im_cat = gdImageCreate(x,y);\n\
+    \    background=gdImageColorAllocate(im_out,0,0,0);\n    text=gdImageColorAllocate(im_out,255,255,255);\n\
+    \    x=3-string_rectangle[6];\n    y=3-string_rectangle[7];\n    err = gdImageStringFT(im_out,string_rectangle[0],text,\n\
+    \    font_size,angle,x,y,value);\n    iptr = gdImageGifPtr(im_out,&sz);\n    ap_write(iptr,sz,\
+    \ r);\n    gdFree(iptr);\n}\n    gdImageDestroy(im_out);\n    return OK;\n}\n\
+    ```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# 7.3 Apache Modules Conclusion
+
+
+    Whilst tricky to write and debug, this is probably the most rewarding and esoteric
+    area where you do real, commercially useful and safely deployable web content
+    generation. It is easy to see how this example could be extended with parameters
+    for colours and fonts to make a useful web content tool.
+
+
+    There is very little clear simple material about apache modules but start with
+    the on-line documentation at http://httpd.apache.org/docs/2.2/developer/
+
+
+    One recent book worth looking at “The Apache Modules Book” Nick Kew, Prentice
+    Hall.
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_76_0.png)'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# 8. The Ghost project
+
+
+    # 8.1 A PHP web site generator project
+
+
+    The ability to write short programs in C to automate tedious tasks or to do things
+    that would otherwise take hours of fiddling with cumbersome tools such as doing
+    mail-merge, is one of the things you will be pleased you have learned how to do
+    it. This project is such a time-saver. Ghost is a lightweight PHP generator for
+    you to customise.
+
+
+    If you find yourself having to build PHP web sites all the time, a quick way to
+    generate all the parameter-passing, decoding, forms building and database management
+    code in one step would be useful. Tools like Ruby on Rails offer such functionality
+    but are infinitely more complex to set up and run you without needing to learn
+    yet another language to go any.
+
+
+    To run the site generator type:
+
+
+    +   /ghost testwebsite data1 data2 data3 data4 data6 data6
+
+    Will create:
+
+    - a folder public_html/testwebsite
+
+    - a mysql database table called testwebsite with text fields data1 data2 data3
+    data4 data6
+
+    - a testwebsite.css file
+
+    - empty header.html and footer.html pages
+
+    - index.php that demonstrates a form handling entry, edit & update, and delete
+    to the database table for the data items specified.
+
+
+    In a browser you will see this at http://localhost/~username/testwebsite
+
+
+    ![](img/7850df81ed1a1b9c43f67da3d9dfcff8_77_0.png)'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'The idea behind this is that all the mechanical bits to create and manage the
+    form content are done and can be customised. This screen shot shows the result
+    of submitting one record. Thode top row is for entering data, the lower row(s)
+    allow editing or deleting of records. It is a framework that allows you to take
+    and use parts in your own website design.
+
+
+    Let us use code in sections.
+
+
+    The first section declares the required data and creates the folder and CSS file.
+
+
+    ```
+
+    int main(int argc
+
+    ```
+
+
+    Next the header.html and footer.html files are generated. These files is loaded
+    by the PHP file and could be used as a generic header and footers. The CSS file
+    is referenced from the header.html file.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '```
+
+    //BUILD HEADER HTML////////////////////////////////////
+
+    printf(BIT,"../%s/head.html",argv[1]);
+
+    out = fopen(BIT,"w");
+
+    printf(out,"<html>\n");
+
+    printf(out,"<head>\n");
+
+    printf(out,"<link rel="%s" type="text/css" href="\%s.css" />\n",argv[1]);
+
+    printf(out,"<title>%s</title>",argv[1]);
+
+    printf(out,"</head>\n");
+
+    printf(out,"<body>\n");
+
+    printf(out,"<center>\n");
+
+    printf(out,"<table><tr><td>\n");
+
+    printf(out,"</td></tr></table>\n");
+
+    printf(out,"\n");
+
+    fclose(out);
+
+    //BUILD FOOT HTML////////////////////////////////////
+
+    printf(BIT,"../%s/foot.html",argv[1]);
+
+    out = fopen(BIT,"w");
+
+    printf(out,"</body></html>\n");
+
+    fclose(out);
+
+    ```'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# C Programming in Linux\n\n# The Ghost project\n\nWe create the DATABASE base.\n\
+    \n```\n// OPEN DATABASE/////////////////////////////////////\nconn = mysql_init((MYSQL\
+    \ *) 0);\nmysql_options(conn,MYSQL_READ_DEFAULT_GROUP,\"mysqlcap\");\nmysql_real_connect(conn,\"\
+    localhost\",\"\",\"\",\"test\",0,NULL,0);\n// CREATE TABLE///////////////////////////////////////\n\
+    sprint(SQL,\"drop table if exists %s\",argv[1]);\nrc = mysql_query(conn,SQL);\n\
+    sprint(SQL,\"create table %s (ID varchar(255)),\",argv[1]);\nfor(i=2; i < argc;\
+    \ i++) {\n\tsprint(SQL,\"BIT,%s varchar(255)),\",argv[i]);\n\tstrcat(SQL,\\BIT);\"\
+    );\n}\nrc = mysql_query(conn,SQL);\n```\n\nThe complicated part starts now, of\
+    \ generating php script. The best way to understand this is to examine the actual\
+    \ output of the program when we view the source of the page in the browser.\n\n\
+    The top row is a form with a text box for each column defined in the table generated\
+    \ by running the ghost program.\n\n```\n<tr>\n<form><input type='hidden' name='MODE'\
+    \ value='INSERT>\n<td><input type='hidden name='ID' value='1'> 1 </td>\n<td><input\
+    \ type='text' name='data1'></td>\n<td><input type='text' name='data2'></td>\n\
+    <td><input type='text' name='data3'></td>\n<td><input type='text' name='data4'></td>\n\
+    <td><input type='text' name='data5'></td>\n<td><input type='text' name='data6'></td>\n\
+    <td><input type='submit' value='post'></td>\n</form>\n</tr>\n```\n\n81"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'For each row in the table we now generate a form allowing editing of the data
+    and an anchor link to do a delete operation.
+
+
+    ```
+
+    <pre>
+
+    <form><input type=''hidden'' name=''MODE'' value=''UPDATE''>
+
+    <td><input type=hidden name=''ID'' value=''0''></td>
+
+    <td><input type=''text'' name=''data1'' value=''aaaaaaaaaaaa''></td>
+
+    <td><input type=''text'' name=''data2'' value=''aaaaaaaaaaaaaaaa''></td>
+
+    <td><input type=''text'' name=''data3'' value=''aaaaaaaaaaaaaaaaaa''></td>
+
+    <td><input type=''text'' name=''data4'' value=''aaaaaaaaaaaaaaaaaa''></td>
+
+    <td><input type=''text'' name=''data5'' value=''aaaaaaaaaaaaaaaaaa''></td>
+
+    <td><input type=''text'' name=''data6'' value=''aaaaaaaaaaaaaaaaaa''></td>
+
+    <td><input type=''submit'' value=''edit''></form>
+
+    <td><a href=''?ID=0&MODE=DELETE''>delete</a></td>
+
+    </pre>
+
+    ```
+
+
+    Close examination of the file index.php will allow you to see where all this happens,
+    and to work backward to find where in the ghost.ghost source this PHP code is
+    generated. A good idea is to use a highlighter pen on a printout we are embedding
+    a language (HTML) inside another language (PHP) which is in turn inside another
+    language so very careful use is made of the escape characters \ to express quotation
+    marks both single and double where necessary to make it all work. This may seem
+    complex – the speedy prototyping that ghost permits it worthwhile to spend time
+    customising the C code so the PHP that you want and the database you want come
+    out the way you want.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# C Programming in Linux\n\n# The Ghost project\n\nHere is the part of the\
+    \ PHP file index.php which generates the edit or delete rows. The static HTML\
+    \ is highlighted and the other parts are inserted by MySQL PHP function calls.\n\
+    \n```\n$result = mysql_query(\"select * from testwebsite\");\nwhile($row = mysql_fetch_array($result))\n\
+    {\n    echo \"<tr>\";\n    echo \"<form><input type='hidden' name='MODE' value='UPDATE'>\"\
+    ;\n    for($i=0; $i<mysql_num_fields($result); $i++) {\n        if($i==0) {\n\
+    \            echo \"<td><input type='hidden' name='\" .\n                mysql_field_name($result,$i)\
+    \ . \" value='\" .\n                \">\" .\n                $row[mysql_field_name($result,$i)]\
+    \ .\n                \"</td>\";\n        } else {\n            echo \"<td><input\
+    \ type='text' name='\" .\n                mysql_field_name($result,$i) .\n   \
+    \             \" value='\" .\n                \">\" .\n                $row[mysql_field_name($result,$i)]\
+    \ .\n                \"</td>\";\n        }\n    }\n    echo \"<td><input type='submit'\
+    \ value='edit'></form>\";\n    echo \"<a href='?ID=\" .\n        \"&MYSQL_FIELD_name=\"\
+    \ . $result[0] . \">delete</a>\";\n    echo \"<td>delete</td>\";\n    echo \"\
+    </tr>\";\n}\n\nmysql_free_result($result);\nmysql_close($con);\n```\n\nAs you\
+    \ can see a deal of tedious and repetitive works has been automated. You can move\
+    \ on by modifying the PHP code or go deeper to customise the C program which generates\
+    \ all of it.\n\nI personally use ghost frequently to save time on-building and\
+    \ this is why I wrote it. I got bored making mistakes writing virtually identical\
+    \ code to decode HTML forms and populate or update databases.\n\n83"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Conclusion
+
+
+    Now you have worked through these simple examples I hope you can see why a knowledge
+    of the C language is always going to be a useful and continually practical skill.
+
+
+    After 25 years I regularly write C programs to do everyday tasks quickly and effectively
+    and once written they form part of a set of durable tools that suit me and which
+    are portable.
+
+
+    This short book contains a number of "tricks" that I have learned over the years
+    for which there is little explicit documentation, and it frankly presupposes a
+    familiarity with Linux. After testing the material with students of a wide range
+    of experience I am confident that an attentive student will get all this material
+    working and can start from there to discover the joy of C. Many of my students
+    say “This is much more fun than Java, I can see what is really going on!” which
+    is most gratifying and makes me confident you will find the material useful.
+
+
+    Those interested might ask the publisher to commission me to write a companion
+    volume :
+
+
+    C++ Standard Template Library Programming in Linux
+
+
+    Good luck and happy programming.
+
+
+    David
+
+    March 31st 2009'
+  merge: -1
+  pgno: 83
