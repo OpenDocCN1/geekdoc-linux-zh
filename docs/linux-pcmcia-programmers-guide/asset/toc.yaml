@@ -1,0 +1,246 @@
+- - '#'
+  - Linux PCMCIA 程序员指南
+- - '#'
+  - 7 驱动服务接口
+- - '#'
+  - 8 Card Services 客户端驱动的结构
+- - '#'
+  - 9 Socket 驱动层
+- - '#'
+  - 10 更多信息的获取途径 73
+- - '#'
+  - 1 引言
+- - '##'
+  - 1.2 致谢
+- - '#'
+  - 2 基础概念
+- - '##'
+  - 2.1 Socket 接口
+- - '##'
+  - 2.2 Socket 控制器
+- - '#'
+  - 3 Card Services 子函数描述
+- - '##'
+  - 3.1 客户端管理函数
+- - '###'
+  - 3.1.1 RegisterClient
+- - '###'
+  - 3.1.2 DeregisterClient
+- - '###'
+  - 3.1.3 SetEventMask
+- - '###'
+  - 3.1.4 BindDevice
+- - '##'
+  - 3.2 插槽状态
+- - '###'
+  - 3.2.1 GetStatus
+- - '###'
+  - 3.2.2 ResetCard
+- - '###'
+  - 3.2.3 SuspendCard
+- - '###'
+  - 3.2.4 ResumeCard
+- - '###'
+  - 3.2.5 EjectCard
+- - '###'
+  - 3.2.6 InsertCard
+- - '##'
+  - 3.3 IO 卡配置单元
+- - '###'
+  - 3.3.1 RequestIO
+- - '###'
+  - 3.3.2 ReleaseIO
+- - '###'
+  - 3.3.3 RequestIRQ
+- - '###'
+  - 3.3.4 ReleaseIRQ
+- - '###'
+  - 3.3.5 RequestConfiguration
+- - '###'
+  - 3.3.6 ModifyConfiguration
+- - '###'
+  - 3.3.7 ReleaseConfiguration
+- - '###'
+  - 3.3.8 GetConfiguration
+- - '##'
+  - 3.4 卡片信息结构 (CIS) 调用
+- - '###'
+  - 3.4.1 GetFirstTuple, GetNextTuple
+- - '###'
+  - 3.4.2 GetTupleData
+- - '###'
+  - 3.4.3 ParseTuple
+- - '###'
+  - 3.4.4 ValidateCIS
+- - '###'
+  - 3.4.5 ReplaceCIS
+- - '##'
+  - 3.5 内存窗口
+- - '###'
+  - 3.5.1 RequestWindow
+- - '###'
+  - 3.5.2 ModifyWindow
+- - '###'
+  - 3.5.3 ReleaseWindow
+- - '###'
+  - 3.5.4 GetFirstWindow, GetNextWindow
+- - '###'
+  - 3.5.5 MapMemPage
+- - '##'
+  - 3.6 批量内存服务
+- - '###'
+  - 3.6.1 RegisterMTD
+- - '###'
+  - 3.6.2 GetFirstRegion, GetNextRegion
+- - '###'
+  - 3.6.3 OpenMemory
+- - '###'
+  - 3.6.4 CloseMemory
+- - '###'
+  - 3.6.5 ReadMemory, WriteMemory
+- - '###'
+  - 3.6.6 RegisterEraseQueue
+- - '#'
+  - Card Services 子函数描述
+- - '##'
+  - 3.6.7 DeregisterEraseQueue
+- - '##'
+  - 3.6.8 CheckEraseQueue
+- - '##'
+  - 3.7 杂项调用
+- - '###'
+  - 3.7.1 GetCardServicesInfo
+- - '###'
+  - 3.7.2 AccessConfigurationRegister
+- - '###'
+  - 3.7.3 AdjustResourceInfo
+- - '#'
+  - 4 卡信息定义
+- - '###'
+  - 4.1.1 CISTPL_CHECKSUM
+- - '###'
+  - 4.1.2 CISTPL_LONLINK_A, CISTPL_LONLINK_C, CISTPL_LINK, CISTPL_NOLINK
+- - '###'
+  - 4.1.3 CISTPL_DEVICE, CISTPL_DEVICE_A
+- - '##'
+  - 4. 卡片信息结构定义
+- - '###'
+  - 4.1.5 CISTPL_VERS_1
+- - '###'
+  - 4.1.6 CISTPL_ALTSTR
+- - '###'
+  - 4.1.7 CISTPL_JEDEC_C, CISTPL_JEDEC_A
+- - '###'
+  - 4.1.8 CISTPL_CONFIG, CISTPL_CONFIG_CB
+- - '###'
+  - 4.1.9 CISTPL_BAR
+- - '###'
+  - 4.1.10 CISTPL_CFTABLE_ENTRY
+- - '###'
+  - 4.1.14 CISTPL_DEVICE_GEO
+- - '###'
+  - 4.1.15 CISTPL_VERS_2
+- - '###'
+  - 4.1.16 CISTPL_ORG
+- - '###'
+  - 4.1.17 CISTPL_FORMAT
+- - '##'
+  - 4.2 CIS 配置寄存器定义
+- - '###'
+  - 4.2.1 配置选项寄存器
+- - '###'
+  - 4.2.2 状态寄存器
+- - '##'
+  - 4.2 CIS 配置寄存器
+- - '###'
+  - 4.2.1 配置选项寄存器
+- - '#'
+  - 5 卡服务事件
+- - '##'
+  - 5.2 事件描述
+- - '##'
+  - 5.3 客户端驱动职责
+- - '#'
+  - 6 存储技术驱动
+- - '##'
+  - 6.1 MTD 请求处理
+- - '###'
+  - MTD_REQ_ACTION
+- - '###'
+  - MTD_REQ_NOASE
+- - '###'
+  - MTD_REQ_VERIFY
+- - '###'
+  - MTD_REQ_READY
+- - '###'
+  - MTD_REQ_TIMEOUT
+- - '###'
+  - MTD_REQ_FIRST
+- - '###'
+  - MTD_REQ_LAST
+- - '###'
+  - MTD_REQ_KERNEL
+- - '###'
+  - MTD_WAITREQ
+- - '###'
+  - MTD_WAITTIMER
+- - '###'
+  - MTD_WAITRDY
+- - '###'
+  - MTD_WAITPOWER
+- - '##'
+  - 6.2 MTD 辅助函数
+- - '###'
+  - 6.2.1 MTDRequestWindow, MTDRleaseWindow
+- - '###'
+  - 6.2.2 MTDModifyWindow
+- - '###'
+  - 6.2.3 MTDSVpp
+- - '###'
+  - 6.2.4 MTDRMask
+- - '#'
+  - 7 驱动程序服务接口
+- - '##'
+  - 7.1 与其他驱动程序的接口
+- - '###'
+  - 7.1.1 dev_link_t 结构
+- - '##'
+  - 7.2 驱动服务接口
+- - '###'
+  - 7.2.3 driver_operations 入口
+- - '##'
+  - 7.3 访问用户态工具的接口
+- - '###'
+  - 7.3.1 Card Services 事件通知
+- - '###'
+  - 7.3.2 Ioctl 描述
+- - '#'
+  - 8 Card Services 客户端驱动程序
+- - '##'
+  - 8.1 使用 Linux 驱动程序
+- - '#'
+  - 9 Socket 驱动程序层
+- - '##'
+  - 9.1 用于 socket 驱动程序的 Card Services 入口
+- - '##'
+  - 9.2 socket 驱动程序提供的服务
+- - '###'
+  - 9.2.1 SS_InquireSocket
+- - '###'
+  - 9.2.2 SS_RegisterCallback
+- - '###'
+  - 9.2.3 SS_GetStatus
+- - '###'
+  - 9.2.4 SS_GetSocket, SS_SetSocket
+- - '###'
+  - 9.2.5 SS_GetIOOMap, SS_SetIOOMap
+- - '##'
+  - 9.2 插槽驱动程序层
+- - '###'
+  - 9.2.6 SS_GetMemMap, SS_SetMemMap
+- - '###'
+  - 9.2.7 SS_GetBridge, SS_SetBridge
+- - '###'
+  - 9.2.8 SS_ProcSetup
+- - '##'
+  - 9.3 支持异常的插槽架构

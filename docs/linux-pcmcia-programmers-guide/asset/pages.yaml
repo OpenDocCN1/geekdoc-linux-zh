@@ -1,0 +1,3303 @@
+- img_proc: true
+  md: "# Linux PCMIA Programmer's Guide\n\nDavid Hinds, dahinds@users.sourceforge.net.\
+    \ v2.33, 22 January 2003\n\nThis document describes how to write kernel device\
+    \ drivers for the Linux PCMIA Card Services interface. It also describes how to\
+    \ write user-mode utilities for communicating with Card Services. The latest version\
+    \ of this document can be found at <http://pcmia-cs.sourceforge.net>.\n\n# Contents\n\
+    \n+   1 Introduction ................................................................................................................................\
+    \ 5\n   1.1 Copyright notice and disclaimer .................................................................................................\
+    \ . . . . . . 5\n   1.2 Acknowledgements ...................................................................................................................................\
+    \ . . . . . . . . 6\n2 Basic Concepts ................................................................................................................................................\
+    \ 6\n   2.1 The socket interface ...................................................................................................................................\
+    \ . . . . . . 6\n   2.2 The socket controller .....................................................................................................................................\
+    \ . . . . . . . 6\n3 Card Services Subfunction Descriptions .....................................................................................................\
+    \ 7\n   3.1 Client management functions ...................................................................................................................................\
+    \ 7\n   3.1.1 RegisterClient .....................................................................................................................................................\
+    \ 7\n   3.1.2 DeregisterClient .................................................................................................................................................\
+    \ 8\n   3.1.3 SetEventMask .......................................................................................................................................................\
+    \ 9\n   3.1.4 BindDevice .......................................................................................................................................................\
+    \ 9\n   3.2 Socket state control ................................................................................................................................................\
+    \ 10\n   3.2.1 GetStatus ..........................................................................................................................................................\
+    \ 10\n   3.2.2 ResetCard ........................................................................................................................................................................\
+    \ 11\n   3.2.3 SuspendCard ......................................................................................................................................................\
+    \ 11\n   3.2.4 ResumeCard .......................................................................................................................................................\
+    \ 12\n   3.2.5 EjectCard ........................................................................................................................................................................\
+    \ 12\n   3.2.6 InsertCard ......................................................................................................................................................................\
+    \ 13\n3.3 IO card configuration calls ........................................................................................................................................\
+    \ 13\n   3.3.1 RequestIO ......................................................................................................................................................................\
+    \ 13\n   3.3.2 ReleaseIO ......................................................................................................................................................................\
+    \ 15\n   3.3.3 RequestIRQ ...................................................................................................................................................................\
+    \ 15\n   3.3.4 ReleaseIRQ ......................................................................................................................................................\
+    \ 16"
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   3.3.5 RequestConfiguration ................................................................
+    17
+
+
+    +   3.3.6 ModifyConfiguration ................................................................
+    19
+
+
+    +   3.3.7 ReleaseConfiguration .......................................................
+    20
+
+
+    +   3.3.8 GetConfigurationInfo ...................................................
+    20
+
+
+    +   3.4 Card Information Structure (CIS) calls .....................................
+    21
+
+
+    +   3.4.1 GetFirstTuple, GetNextTuple ........................................
+    21
+
+
+    +   3.4.2 GetTupleData ............................................................
+    22
+
+
+    +   3.4.3 ParseTuple ...............................................................
+    23
+
+
+    +   3.4.4 ValidateCIS .......................................................
+    23
+
+
+    +   3.4.5 ReplaceCIS ........................................................
+    24
+
+
+    +   3.5 Memory window control ...................................................
+    25
+
+
+    +   3.5.1 RequestWindow ......................................................
+    25
+
+
+    +   3.5.2 ModifyWindow .......................................................
+    26
+
+
+    +   3.5.3 ReleaseWindow ......................................................
+    27
+
+
+    +   3.5.4 GetFirstWindow, GetNextWindow ................................ 27
+
+
+    +   3.5.5 MapMemPage, GetMemPage ................................... 27
+
+
+    +   3.6 Bulk Memory Services ........................................ 28
+
+
+    +   3.6.1 RegisterMTD ...................................................... 28
+
+
+    +   3.6.2 GetFirstRegion, GetNextRegion ........................ 29
+
+
+    +   3.6.3 OpenMemory ....................................................... 30
+
+
+    +   3.6.4 CloseMemory ...................................................... 30
+
+
+    +   3.6.5 ReadMemory, WriteMemory ................................ 31
+
+
+    +   3.6.6 RegisterEraseQueue ................................... 31
+
+
+    +   3.6.7 DeregisterEraseQueue ................................ 33
+
+
+    +   3.6.8 CheckEraseQueue ...................................... 33
+
+
+    +   3.7 Miscellaneous calls ........................................ 33
+
+
+    +   3.7.1 GetCardServicesInfo ................................... 33
+
+
+    +   3.7.2 AccessConfigurationRegister ................... 34
+
+
+    +   3.7.3 AdjustResourceInfo ................................... 35
+
+
+    +   3.7.4 ReportError ........................................ 37
+
+
+    # 4 Card Information Structure Definitions ................... 37
+
+
+    +   4.1 CIS Tuple Definitions ................................... 37
+
+
+    +   4.1.1 CISTPL_CHECKSUM ................................ 38'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   4.1.2 CISTPL_LONGLINK_A, CISTPL_LONGLINK_C, CISTPL_LINKTARGET, CISTPL_NOLINK
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    38
+
+    4.1.3 CISTPL_LONGLINK_MFC . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . 38
+
+    4.1.4 CISTPL_DEVICE, CISTPL_DEVICE_A . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . 38
+
+    4.1.5 CISTPL_VERS_1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . 40
+
+    4.1.6 CISTPL_ALTSTR . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . 40
+
+    4.1.7 CISTPL_JEDEC_C, CISTPL_JEDEC_A . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . 40
+
+    4.1.8 CISTPL_CONFIG, CISTPL_CONFIG_CB . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . 41
+
+    4.1.9 CISTPL_BAR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . 41
+
+    4.1.10 CISTPL_CFTABLE_ENTRY . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . 41
+
+    4.1.11 CISTPL_CFTABLE_ENTRY_CB . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . 45
+
+    4.1.12 CISTPL_MANFID . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . 45
+
+    4.1.13 CISTPL_FUNCID . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . 45
+
+    4.1.14 CISTPL_DEVICE_GEO . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 46
+
+    4.1.15 CISTPL_VERS_2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . 47
+
+    4.1.16 CISTPL_ORG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . 47
+
+    4.1.17 CISTPL_FORMAT . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 48
+
+    4.2 CIS configuration register definitions . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 48
+
+    4.2.1 Configuration Option Register . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . 48
+
+    4.2.2 Card Configuration and Status Register . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . 49
+
+    4.2.3 Pin Replacement Register . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 49
+
+    4.2.4 Socket and Copy Register . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . 50
+
+    4.2.5 Extended Status Register . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 50
+
+    4.2.6 IO Base and Size Registers . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . 51
+
+
+    +   5 Card Services Event Handling . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 51
+
+    5.1 Event handler operations . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . 51
+
+    5.2 Event descriptions . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . 52
+
+    5.3 Client driver event handling responsibilities . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . 53
+
+
+    +   6 Memory Technology Drivers . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . 53
+
+    6.1 MTD request handling . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . 53
+
+    6.2 MTD helper functions . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . 55
+
+    6.2.1 MTDRequestWindow, MTDReleaseWindow . . . . . . . . . . . . . . . . . . .
+    . . . . . 55
+
+    6.2.2 MTDModifyWindow . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . 55'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   6.2.3 MTDSetVpp .................................................................................................
+    . . . . . . . . . . . . 56
+
+
+    +   6.2.4 MTDRDYMMask .................................................................................
+    . . . . . . . . . . . . . . . . 56
+
+
+    # 7 Driver Services Interface
+
+
+    +   7.1 Interface to other client drivers ................................................................................................
+    57
+
+
+    +   7.1.1 The dev_link_t_structure ...................................................................................................
+    57
+
+
+    +   7.1.2 register_pccard_driver ......................................................................................................
+    58
+
+
+    +   7.1.3 unregister_pccard_driver ......................................................................................
+    59
+
+
+    +   7.2 The CardBus client interface ..........................................................................................
+    59
+
+
+    +   7.2.1 register_driver ..........................................................................................................
+    59
+
+
+    +   7.2.2 unregister_driver ........................................................................................................
+    59
+
+
+    +   7.2.3 The driver_operations entry points ...................................................................
+    60
+
+
+    +   7.3 Interface to user mode utilities ................................................................................
+    60
+
+
+    +   7.3.1 Card Services event notifications ......................................................................
+    61
+
+
+    +   7.3.2 ioctl descriptions ..........................................................................................
+    61
+
+
+    # 8 Anatomy of a Card Services Client Driver
+
+
+    +   8.1 Module initialization and cleanup ...................................................................
+    63
+
+
+    +   8.2 The *_attach() and *_detach() functions ............................................................
+    63
+
+
+    +   8.3 The *_config() and *_release() functions ...................................................
+    64
+
+
+    +   8.4 The client event handler ................................................................
+    64
+
+
+    +   8.5 Locking and synchronization issues ........................................................
+    64
+
+
+    +   8.6 Using existing Linux drivers to access PC Card devices ..........................
+    64
+
+
+    # 9 The Socket Driver Layer
+
+
+    +   9.1 Card Services entry points for socket drivers .......................................
+    65
+
+
+    +   9.2 Services provided by the socket driver ................................................
+    65
+
+
+    +   9.2.1 SS_InquireSocket ..................................................................................
+    66
+
+
+    +   9.2.2 SS_RegisterCallback ...................................................................
+    67
+
+
+    +   9.2.3 SS_GetStatus .......................................................................................
+    67
+
+
+    +   9.2.4 SS_GetSocket, SS_SetSocket ........................................................
+    68
+
+
+    +   9.2.5 SS_GetIOMap, SS_SetIOMap ................................................
+    69
+
+
+    +   9.2.6 SS_GetMemMap, SS_SetMemMap ..................................................
+    70
+
+
+    +   9.2.7 SS_GetBridge, SS_SetBridge ................................................
+    71
+
+
+    +   9.2.8 SS_ProcSetup ......................................................................
+    71'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 1. Introduction
+
+
+    9.3 Supporting unusual socket architectures 72
+
+
+    10 Where to Go for More Information 73
+
+
+    # 1 Introduction
+
+
+    The Linux kernel PCMC system has three main components. At the lowest level are
+    the socket drivers. Next is the Card Services module. Drivers for specific cards
+    are layered on top of Card Services. One special Card Services client, called
+    Card Services, provides a link between user level utility programs and the kernel
+    facilities.
+
+
+    The socket driver is loosely based on the Socket Services API. There are two socket
+    driver modules: The tcic module supports the Datasbook TICC-2 family of host controllers.
+    The i82365 family and various compatible-controllers, including Cirrus, VLSI,
+    Ricoh, and Vadem chips. In addition, the i82365 module implement CardBus controllers
+    that follow the "Yenta" register-level specification.
+
+
+    Card Services is the largest component of the package. It provides an API similar
+    to DOS Card Services, adapted to a Unix environment. The Linux implementation
+    was built in part on the Solaris interface specification. It is implemented in
+    the pcmia_core module. Most version 2.1 features are implemented, with some PC
+    Card 95 features.
+
+
+    The Driver layer uses a user pseudo-device for accessing some Card Services functions
+    from utility programs. It is responsible for keeping track of all client drivers,
+    and for matching up drivers with physical sockets. It is implemented in the da
+    module.
+
+
+    This document describes the interface to the Card Services and Driver Services
+    modules, and the user interface to Driver Services. It is intended for use by
+    client device driver developers. The Linux PCMCIA-HOWTO describes how to install
+    and use Linux PCMCIA support. It is available from <http://pcmcia-cs.sourceforge.net>.
+
+
+    # 1.1 Copyright and disclaimer
+
+
+    Copyright (1996-2002 David A. Hinds
+
+
+    This document may be reproduced or distributed in any form without your prior
+    permission. Modified versions of this document, including translations into other
+    languages, may be freely distributed, provided that they are clearly identified
+    as such, and this copyright is intact.
+
+
+    This document may be included in commercial distributions without your prior consent.
+    While it is not required, I would like to be informed of such usage. If you intend
+    to incorporate this document in a published work, please contact me to make sure
+    you have the latest available version.
+
+
+    This document is provided "AS IS", with no express or implied warranties. Use
+    the information in this document at your own risk.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 2. Basic Concepts
+
+
+    # 1.2 Acknowledgements
+
+
+    I''d like to thank all the Linux users who helped test and debug this software,
+    and who have helped with driver development. I should also thank Linux Torvalds,
+    Donald Becker, Alan Cox, and Bjorn Ekwall for Linux kernel development help. I''m
+    especially grateful to Michael Bender for many helpful discussions about the Solaris
+    implementation.
+
+
+    # 2. Basic Concepts
+
+
+    # 2.1 The socket interface
+
+
+    The PC Card bus has two operating modes: "memory-only" and "memory and IO". The
+    first mode was defined by the original Version 1.0 specification and only supports
+    simple memory cards. The second mode, defined in Version 2.0, redefines few of
+    the memory card control signals to support IO port addressing and interrupt signalling.
+
+
+    PC Card devices have two spaces: "attribute memory" and "common memory". The interface
+    can address up to 16MB of each type of memory. Attribute memory is typically used
+    for holding descriptive information and configuration registers. Common memory
+    may include the bulk storage of a memory card, or device buffers in the case of
+    IO cards. All cards that conform should have a Card Information Structure ("CIS")
+    in attribute memory, which describes the card and how it should be configured.
+
+
+    Separate control signals allow cards to signal their status to the system. These
+    signals include card detect, ready/busy, write, power, battery, and allow dead
+    card.
+
+
+    The "memory and IO" interface mode allows cards to address up to 64K of IO ports.
+    It also allows cards to signal IO interrupts, and routes one card output to the
+    host system''s speaker. In this mode, several of the memory card control signals
+    are unavailable because those pins are used to carry the extra IO card signals.
+    On some cards, these signals can be read from a special configuration register
+    in attribute memory, the "Pin Replacement Register".
+
+
+    # 2.2 The socket controller
+
+
+    The socket controller serves as a bridge between PC Card devices and the system
+    bus. There are several varieties of controllers, but all share the same basic
+    functionality. The Socket software layer takes care of all the details of how
+    to program the host controller.
+
+
+    The socket controller has the job of mapping windows of addresses in the host
+    memory and IO spaces to windows of addresses in card space. All supported controllers
+    support at least four memory windows and two IO windows per socket.
+
+
+    Each memory window is defined by a base address in the host address space, a base
+    address in the card address space, and a window size. Some controllers differ
+    in their alignment rules for memory windows, but all controllers will support
+    windows whose size is at least 4K and a power of two, where the base address is
+    a multiple of the window size. Each window can be programmed to point to either
+    attribute or common memory.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nIO windows differ from memory\
+    \ windows in host addresses that fall within an window are not modified before\
+    \ they are passed on to an IO card. Effectively, the base addresses of the window\
+    \ in the host and card address spaces are always equal. IO windows also have no\
+    \ alignment or size restrictions; an IO window can start and end on any boundary\
+    \ in the 4K IO address space.\n\nThe PC Card defines a single interrupt service\
+    \ from the card to the controller. The controller has the responsibility of steering\
+    \ this interrupt to an appropriate interrupt request ('Irq') line. All controllers\
+    \ supporting steer Card interrupts to essentially any free interrupt line. Because\
+    \ steering happens in the controller, the card itself is unaware of which interrupt\
+    \ it uses.\n\nAll PC Controllers can generate interrupts in response to card status\
+    \ changes. These interrupts are distinct from the IO interrupts generated by an\
+    \ IO card, and use a separate interrupt line. Signals that generate interrupts\
+    \ include card detect, ready/busy; write protect, battery low, and battery dead.\n\
+    \n# 3 Card Services Subfunction Descriptions\n\nCard Services calls the general\
+    \ form:\n\n```\n#include \"cs_types.h\"\n#include \"cs.h\"\n\nint CardServices(int\
+    \ subfunc, void *arg1, void *arg2, ...);\n```\n\nSome Card Services functions\
+    \ require additional #include statements. The particular subfunction determines\
+    \ the number of expected arguments. A return code of CS_SUCCESS indicates that\
+    \ a call succeeded. Other return codes identify errors.\n\n# 3.1 Client management\
+    \ functions\n\nDevice drivers that use Card functions are called 'clients'. A\
+    \ device driver should use the RegisterClient call to get a client handler before\
+    \ using other services. Most Card Services functions will take this client handler\
+    \ as an argument. Before unloading, drivers should also unregister with DeregisterClient.\n\
+    \n# 3.1.1 RegisterClient\n\n```\nint CardServices(RegisterClient, client_handle_t\
+    \ *client, client_reg_t *reg);\n```\n\nThe client_reg_t data structure is given\
+    \ by:\n\n```\ntypedef struct client_reg_t {\n    dev_info_t\n    *dev_info;\n\
+    \    Attributes;\n    u_int\n    EventMask;\n    (*event_handler)(event_t event,\
+    \ int priority, event_callback_args_t event_callback, event_callback_args_t *args);\n\
+    \    u_int\n    Verzion;\n} client_reg_t;\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    RegisterClient establishes a link between a client driver and Card Services, and
+    connects the client with an appropriate socket. The dev_info parameter is used
+    by Card Services to match the client with a socket and function; this correspondence
+    is normally established by Driver Services via a call to BindDevice. If successful,
+    a client handle will be returned in client.
+
+
+    The following flags can be specified in Attributes:
+
+
+    # INFO_MASTER_CLIENT
+
+
+    For use only by the Driver Services. Among other things, specifies that this client
+    should not be automatically unbound when a card is ejected from this socket.
+
+
+    # INFO_IO_CLIENT
+
+
+    Specifies that this client is an IO driver.
+
+
+    # INFO_MTD_CLIENT
+
+
+    Specifies that this client is a Memory Technology Driver.
+
+
+    # INFO_MEM_CLIENT
+
+
+    Specifies that this client is a memory card driver.
+
+
+    # INFO_CARD_SHARE
+
+
+    Included for compatibility, has no effect.
+
+
+    # INFO_CARD_EXCL
+
+
+    Included for compatibility, has no effect.
+
+
+    EventMask specifies what events this client should be notified. The event_handler
+    entry point will be called by Card Services when an event in EventMask is processed.
+    The event_handler_args structure is a template for the structure that will be
+    passed to the event handler. The Version parameter identifies the Card Services
+    level that this driver expects; it is currently ignored.
+
+
+    A driver should be prepared to handle Card Services events before calling RegisterClient.
+    This call will always generate a CS_REGISTRATION_COMPLETE event, and may also
+    generate an artificial CS_CARD_INSERTION event if the socket is currently occupied.
+
+
+    Return codes:
+
+
+    # CS_OUT_QF_RESOURCE
+
+
+    An appropriate socket could not be found for this driver.
+
+
+    # 3.1.2 DeregisterClient
+
+
+    ```
+
+    int CardServices(DeregisterClient, client_handle_t client);
+
+    ```
+
+
+    DeregisterClient severs the connection between a client and Card Services. It
+    should be called after the client has freed any resources it has allocated. Once
+    a connection is broken, it cannot be reestablished until after another call to
+    BindDevice.
+
+
+    Return codes:'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nCS_BAD_HANDLE\n\nThe client\
+    \ handle is invalid.\n\nCS_IN_USE\n\nThe client still has allocated resources,\
+    \ such as IO port windows or an interrupt, or the socket configuration is locked.\n\
+    \n# 3.1.3 SetEventMask\n\n```\nint CardServices(SetEventMask, client_handle_t\
+    \ client, eventmask_t *mask);\n```\n\nThe eventmask_t structure is given by:\n\
+    \n```\ntypedef struct eventmask_t {\n    u_int\n    Attributes;\n    u_int\n \
+    \   EventMask;\n} eventmask_t;\n```\n\nSetEventMask updates the mask that determines\
+    \ which events this client will be notified.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\
+    \nThe client handle is invalid.\n\n# 3.1.4 BindDevice\n\n```\nint CardServices(BindDevice,\
+    \ bind_req_t *req);\n```\n\nThe bind_req_t structure is given by:\n\n```\ntypedef\
+    \ struct bind_req_t {\n    socket_t\n    Socket;\n    u_char\n    Function;\n\
+    \    dev_info_t\n    *dev_info;\n} bind_req_t;\n```\n\nBindDevice associates a\
+    \ device with a particular socket. It is normally called Driver Services after\
+    \ a newly inserted card has been identified. Once a driver has been bound to a\
+    \ socket, it will be eligible to register as a client of that socket. Note that\
+    \ this call does not take a client handle as an argument. This is the only Card\
+    \ Service that takes a socket number as an argument.\n\nFunction field specifies\
+    \ which function(s) of a multifunction card are to be bound to this driver. Function\
+    \ numbers correspond to entries in the card's CISPL_LONGLINK_MFC tuple. If Function\
+    \ is set to BIND_FN_ALL, the driver will be bound to all card functions. A driver\
+    \ will only be able to access CIS tuples corresponding to functions for which\
+    \ it is bound.\n\nReturn codes:\n\nCS_BAD_SOCKET\n\nThe specified socket number\
+    \ is invalid."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.2 Socket state control\n\
+    \nThese functions are more or less concerned with getting and setting the current\
+    \ operating state of a socket. GetStatus returns the current socket state. ResetCard\
+    \ is used to send a hard reset signal to a socket. SuspendAnd ResumeCard can be\
+    \ used to power down and power up a socket without releasing the drivers currently\
+    \ bound to that socket. EjectCard and InsertCard essentially mimic real card ejection\
+    \ and insertion events.\n\n# 3.2.1 GetStatus\n\n```\nint CardServices(GetStatus,\
+    \ client_handle_t client, cs_status_t *status);\n```\n\nThe cs_status_t data structure\
+    \ is given by:\n\n```\ntypedef struct cs_status_t {\n    u_char Function;\n  \
+    \  u_int CardState;\n    u_int SocketState;\n} cs_status_t;\n```\n\nGetStatus\
+    \ returns the current status of a client's socket. For cards that are configured\
+    \ in IO mode, GetStatus uses the Pin Replacement Register and Extended Status\
+    \ Register to determine the card state. For normal clients, the Function is ignored,\
+    \ but for clients bound with BIND_FN_ALL, this field specifies the function whose\
+    \ configuration registers should be used to determine the socket state, if the\
+    \ socket is currently configured. The following flags are defined in CardState:\n\
+    \n+   - CS_EVENT_CARD_DETECT\n  Specifies that the socket is occupied.\n- CS_EVENT_CB_DETECT\n\
+    \  Specifies that the socket is occupied by a CardBus device.\n- CS_EVENT_WRITE_PROTECT\n\
+    \  Specifies that the card is currently protected.\n- CS_EVENT_BATTERY_LOW\n \
+    \ Specifies that the card is low.\n- CS_EVENT_BATTERY_DEAD\n  Specifies that the\
+    \ card is dead.\n- CS_EVENT_READY_CHANGE\n  Specifies that the card is ready.\n\
+    - CS_EVENT_PM_SUSPEND\n  Specifies that the socket is suspended.\n- CS_EVENT_REQUEST_ATTENTION\n\
+    \  Specifies that the request attention bit in the extended status register is\
+    \ set."
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    ```
+
+    CS_EVENT_CARD_INSERTION
+
+    ```
+
+
+    Specifies that a card insertion event is in progress. An insertion event will
+    be sent to the client when socket setup is complete.
+
+
+    ```
+
+    CS_EVENT_3VCARD
+
+    ```
+
+
+    Indicates that the card supports 3.3V operation.
+
+
+    ```
+
+    CS_EVENT_XVCARD
+
+    ```
+
+
+    Indicates that the card supports “X.X”V operation. The actual voltage is currently
+    undefined in the specification.
+
+
+    SocketState is currently unused, but in theory, it should latch changes in the
+    state of the fields in CardState.
+
+
+    Return codes:
+
+
+    ```
+
+    CS_BAD_HANDLE
+
+    ```
+
+
+    The client handle is invalid.
+
+
+    # 3.2.2 ResetCard
+
+
+    ```
+
+    int CardServices(ResetCard, client_handle_t client);
+
+    ```
+
+
+    ResetCard requests a client''s socket be reset. When this call is made, Card Services
+    sends all clients a CS_EVENT_RESET_REQUEST event. If any client requests the request,
+    Card Services sends the initiating client a CS_EVENT_RESET_COMPLETE event with
+    event_callback_args.info set to the return code of the client that rejected the
+    request.
+
+
+    If all clients agree to the request, Card Services sends a CS_EVENT_RESET_PHYSICAL
+    event, then resets the socket. When the socket signals that it is ready, a CS_EVENT_CARD_RESET
+    event is generated. Finally, the CS_EVENT_RESET_COMPLETE event is sent to the
+    initiating client, with event_callback_args.info set to zero.
+
+
+    Return codes:
+
+
+    ```
+
+    CS_BAD_HANDLE
+
+    ```
+
+
+    The client handle is invalid.
+
+
+    ```
+
+    CS_NO_CARD
+
+    ```
+
+
+    The socket assigned to this client is currently vacant.
+
+
+    ```
+
+    CS_IN_USE
+
+    ```
+
+
+    This socket is currently being reset.
+
+
+    # 3.2.3 SuspendCard
+
+
+    ```
+
+    int CardServices(SuspendCard, client_handle_t client);
+
+    ```'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    Card Services sends all clients CS_EVENT_PM_SUSPEND events, shuts down and turns
+    off power to the socket.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_NO_CARD
+
+
+    The socket assigned to this client is currently vacant.
+
+
+    CS_IN_USE
+
+
+    This socket is already suspended.
+
+
+    # 3.2.4 ResumeCard
+
+
+    ```
+
+    int CardServices(ResumeCard, client_handle_t client);
+
+    ```
+
+
+    After restoring power to the socket, Card Services will notify all clients with
+    CS_EVENT_PM_RESUME events.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_NO_CARD
+
+
+    The socket assigned to this client is currently vacant.
+
+
+    CS_IN_USE
+
+
+    This socket is not currently suspended.
+
+
+    # 3.2.5 EjectCard
+
+
+    ```
+
+    int CardServices(EjectCard, client_handle_t client);
+
+    ```
+
+
+    Card Services sends eject events to all clients, shuts down and turns off power
+    to the socket. All clients except for Driver Services will be unlinked from the
+    socket.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_NO_CARD
+
+
+    The socket assigned to this client is currently vacant.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.2.6 InsertCard\n\n```\n\
+    int CardServices(InsertCard, client_handle_t client);\n```\n\nCard Services sends\
+    \ insertion events to all clients of this socket (normally, only Driver Services).\n\
+    \nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client handle is invalid.\n\nCS_NO_CARD\n\
+    \nThe socket assigned to this client is currently vacant.\n\nCS_IN_USE\n\nThe\
+    \ socket has already been configured.\n\n# 3.3 IO card configuration cells\n\n\
+    The normal order of events is for a driver to reserve IO ports and an interrupt\
+    \ line with calls to RequestIO and RequestIRQ, to actually configure the socket.\
+    \ If any of these calls fails, a driver should be sure to release any resources\
+    \ it successfully reserved.\n\nMultunction cards can have separate configurations\
+    \ for each card function. However, the configurations need to be consistent with\
+    \ one another. Each card has its own set of configuration registers, each socket\
+    \ has a single interrupt line and can only map two ranges of IO ports.\n\nCardBus\
+    \ cards are configured somewhat differently. The RequestIO and RequestConfiguration\
+    \ calls have similar roles, Card Services takes responsibility for most of the\
+    \ configuration details, and the contents of the request structures are ignored.\n\
+    \n# 3.3.1 RequestIO\n\n```\nint CardServices(RequestIO, client_handle_t client,\
+    \ io_req_t *req);\n```\n\nThe io_req_t data structure is given by:\n\n```\ntypedef\
+    \ struct io_req_t {\n    ioaddr_t BasePort1;\n    ioaddr_t NumPorts1;\n    u_int\
+    \ Attributes1;\n    ioaddr_t BasePort2;\n    ioaddr_t NumPorts2;\n    u_int Attributes2;\n\
+    \    u_int IOAddrLines;\n} io_req_t;\n```\n\nRequestIO reserves port windows for\
+    \ a card. BasePort1 specifies the base IO port address of the window to be reserved.\
+    \ If NumPorts2 is non-zero, a second IO port window will also be reserved. IOAddrLines"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    specifies the number of address lines that are actually demanded by the card.
+    The IO allocation algorithm assumes that any of the requested address(es) preserves
+    the IOAddrLines bits will be acceptable, and will update BasePort1 and BasePort2
+    to reflect the address range(s) actually assigned.
+
+
+    Prior to release 3.1.4, the IOAddrLines field was ignored. The allocator always
+    tried to assign the address range requested, unless the base was zero; in that
+    case, it would assign any available window aligned to nearest power of two larger
+    than the window size. The new allocator verifies that the IOAddrLines parameter
+    agrees with the window parameters, and defaults to the pre-3.1.4 behavior if an
+    inconsistency is found.
+
+
+    With multifunction cards, this will allocate IO ports for each card function in
+    such a way that all a card''s ports can be managed by the two low-level IO windows
+    associated with physical socket. For example, if the drivers for a hypothetical
+    four-function card each attempt to allocate one IO window of 8 ports, Card Services
+    will consolidate these into a single contiguous 32-port block.
+
+
+    When this is invoked by a CardBus client, the IO request is ignored. Instead,
+    Card Services examines and allocates any necessary resources: this includes IO
+    and memory space, well as an interrupt, if needed. One card will reserve all resources
+    needed for all card functions, not just the function of the client making the
+
+
+    This call does not actually configure a socket''s IO windows: this is done by
+    a subsequent call to RequestConfiguration.
+
+
+    The following flags can be specified in Attributes1 and Attributes2:
+
+
+    IO_DATA_PATH_WIDTH
+
+
+    This field may be either IO_DATA_PATH_WIDTH_16 for 16-bit access, or IO_DATA_PATH_WIDTH_8
+    for 8-bit access, or IO_DATA_PATH_WIDTH_AUTO to dynamically size the bus based
+    on the access size.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_NO_CARD
+
+
+    The socket assigned to this client is currently vacant.
+
+
+    CS_IN_USE
+
+
+    This socket''s IO windows have already been reserved.
+
+
+    CS_CONFIGURATION_LOCKED
+
+
+    This socket''s configuration has been locked by a call to RequestConfiguration.
+
+
+    CS_BAD_ATTRIBUTE
+
+
+    An unsupported attribute flag was specified.
+
+
+    CS_UNSUPPORTED_FUNCTION
+
+
+    For a CardBus client, this is returned if Card Services was not configured with
+    CardBus support.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.3.2 ReleaseIO\n\n```\nint\
+    \ CardServices(ReleaseIO, client_handle_t client, io_req_t *req);\n```\n\nReleaseIO\
+    \ un-reuses IO port windows allocated by a previous call to RequestIO. The req\
+    \ parameter should be the same one passed to RequestIO. If several card functions\
+    \ are sharing a larger IO port window, ports released by one function may not\
+    \ become available for other uses until all card functions have released their\
+    \ ports.\n\nFor a CardBus client, this call releases all system resources allocated\
+    \ for this card.\n\nReturn codes:\n\n+   * CS_BAD_HANDLE\n  The client handle\
+    \ is invalid.\n* CS_CONFIGURATION_LOCKED\n  This socket's configuration has been\
+    \ locked by a call to RequestConfiguration. The configuration should be released\
+    \ before calling RequestIO.\n* CS_BAD_ARGS\n  The parameters in req do not match\
+    \ the parameters passed to RequestIO.\n\n# 3.3.3 RequestIRQ\n\n```\nint CardServices(RequestIRQ,\
+    \ client_handle_t client, irq_req_t *req);\n```\n\nThe irq_req_t structure is\
+    \ given by:\n\n```\ntypedef struct irq_req_t {\n    u_int               Attributes;\n\
+    \    u_int               AssignedIRQ;\n    u_int               IRQInfo1, IRQInfo2;\n\
+    \    void                *(Handler)(int, struct pt_regs *);\n    void        \
+    \        *Instance;\n};\n```\n\nRequestIRQ uses an interrupt line for a card.\
+    \ The IRQINFO1 and IRQInfo2 fields correspond to the interrupt description bytes\
+    \ in a CFTABLE_ENTRY tuple. If IRQINFO2_VALID is set in IRQInfo1, then IRQInfo2\
+    \ is a bit-mapped mask of allowed interrupt values. Each bit corresponds to one\
+    \ interrupt line: bit 0 = irq, bit 1 = irq, etc. A bitmask of 0x100 would mean\
+    \ that 12 and 8 would be used. If IRQINFO2_VALID is just the desired interrupt\
+    \ number. If the call is successful, the returned interrupt is set in AssignedIRQ.\n\
+    \nIf the IRQ_HANDLER_PRESENT flag is set, this call also specifies an interrupt\
+    \ handler to be installed when the interrupt is enabled. When RequestConfiguration\
+    \ is called, the handler given by Handler will be installed. For 2. 4 kernels,\
+    \ the interrupt handler will be installed with the device \"instance\" in Instance.\
+    \ For pre-2.1.60 kernels, the kernel irq_dev_map table will also be updated. With\
+    \ multifunction cards, the interrupt will be allocated in shared mode, and the\
+    \ handler(s) has responsibility for determining which card function(s) require\
+    \ attention when an interrupt is received. If a client instead bypasses Card"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    Services to install its own interrupt service routine, it should allocate the
+    interrupt in shared mode of this client could be bound to a multifunction card.
+
+
+    The following flags can be specified in Attributes:
+
+
+    +   IRQ_FORCED_PULSE
+
+    Specifies that the interrupt should be configured for pulsed mode, rather than
+    the default level mode.
+
+
+    +   IRQ_TYPE_TIME
+
+    Specifies that this interrupt can be time-shared with other Card Services drivers.
+    Only one driver should enable the interrupt at any time.
+
+
+    +   IRQ_FIRST_SHARED
+
+    In conjunction with IRQ_TYPE_TIME, this should be set by the first driver requesting
+    a shared interrupt.
+
+
+    +   IRQ_HANDLER_PRESENT
+
+    Indicates that the Handler field points to an interrupt service routine that should
+    be installed.
+
+
+    Return codes:
+
+
+    +   CS_BAD_HANDLE
+
+    The client handle is invalid.
+
+
+    +   CS_NO_CARD
+
+    The socket assigned to this client is currently vacant.
+
+
+    +   CS_IN_USE
+
+    An interrupt has already been reserved for this socket, or the requested interrupt
+    is unavailable.
+
+
+    +   CS_CONFIGURATION_LOCKED
+
+    This card function''s configuration has been locked by a call to RequestConfiguration.
+
+
+    +   CS_BAD_ATTRIBUTE
+
+    An unsupported attribute flag was specified.
+
+
+    # 3.3.4 ReleaseIRQ(ReleaseIRQ, client_handle_t client, irq_req_t *irq);
+
+
+    ```
+
+    ReleaseIRQ un-reserves an interrupt assigned by an earlier call to RequestIRQ.
+    The req structure that was passed to RequestIRQ. If a handler was specified in
+    the RequestIRQ call, it will be unregistered at this time.
+
+    ```
+
+
+    Return codes:
+
+
+    +   CS_BAD_HANDLE
+
+    The client handle is invalid.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Card Services Subfunction Descriptions\n\nCS_CONFIGURATION_LOCKED\n\nThis\
+    \ socket has been locked by a call to a RequestConfiguration. The configuration\
+    \ should be released before calling ReleaseIRQ.\n\nCS_BAD_IRQ\n\nThe parameters\
+    \ in req do not match the parameters passed to RequestIRQ.\n\n# 3.3.5 RequestConfiguration\n\
+    \n```\nint CardServices(RequestConfiguration, client_handle_t client, config_req_t\
+    \ *req);\n```\n\nThe config_req_t structure is given by:\n\n```\ntypedef struct\
+    \ config_req_t {\n    u_int Attributes;\n    u_int Vpp1, Vpp2;\n    u_int IntType;\n\
+    \    u_int ConfigBase;\n    u_char Status, Pin, Copy, ExtStatus;\n    u_char ConfigIndex;\n\
+    \    u_int Present;\n} config_req_t;\n```\n\nRequestConfiguration is responsible\
+    \ for actually configuring a socket. This includes setting voltages,\nsetting\
+    \ CIS configuration registers, setting up IO port windows, and setting interrupts.\n\
+    IntType specifies the type of interface to use for this card. It may be INT_MEMORY,\
+    \ INT_MEMORY_AND_IO, or\nINT_CARDBUS. Voltages are specified in units of 1/10\
+    \ volt. Currently, Vpp1 must equal Vpp2.\n\nWith multifunction cards, each card\
+    \ function is configured separately. Each function has its own set of\nCIS configuration\
+    \ registers. However, all functions must be configured with the power and interface\n\
+    settings.\n\nWhen invoked by a CardBus client, most of the request is ignored,\
+    \ and all functions will\nbe configured on data collected in a previous Request10\
+    \ call. This includes configuring the CardBus\nbridge, while initializing the\
+    \ Base Address, and Interrupt Line in each card function's\nconfiguration space.\
+    \ IntType must be set to INT_CARDBUS in this case.\n\nThe following flags can\
+    \ be specified in Attributes. DMA and speaker control are not supported on all\n\
+    systems.\n\nCONF_ENABLE_IRQ\n\nEnable the IO interrupt requested by a previous\
+    \ call to RequestIRQ.\n\nCONF_ENABLE_DMA\n\nEnable DMA accesses for this socket.\n\
+    \nCONF_ENABLE_SPKR\n\nEnable speaker output from this socket."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    The Present parameter is a bit map specifying CIS configuration registers are
+    implemented by this card. ConfigBase gives the offset of the configuration registers
+    in attribute memory. The following registers can be specified:
+
+
+    PRESENT_OPTION
+
+
+    Specifies that the Configuration Option Register is present. The COR register
+    will be set using the ConfigIndex parameter.
+
+
+    PRESENT_STATUS
+
+
+    Specifies that the Card Configuration and Status Register is present. The CCSR
+    will be initialized with the Status parameter.
+
+
+    PRESENT_PIN_REPLACE
+
+
+    Specifies that the Pin Replacement Register is present. The PRR will be initialized
+    with the Pin parameter.
+
+
+    PRESENT_COPY
+
+
+    Specifies that the Socket and Copy Register is present. The SCR will be initialized
+    with the Copy parameter.
+
+
+    PRESENT_EXT_STATUS
+
+
+    Specifies that the Extended Status Register is present. The ESR will be initialized
+    with the ExtStatus parameter.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_NO_CARD
+
+
+    The socket assigned to this client is currently vacant.
+
+
+    CS_OUT_OF_RESOURCE
+
+
+    Card Services was unable to allocate a memory window to access the card''s configuration
+    registers.
+
+
+    CS_CONFIGURATION_LOCKED
+
+
+    This card''s configuration has already been locked by another call to RequestConfiguration.
+
+
+    CS_BAD_VCC
+
+
+    The requested Vcc voltage is not supported.
+
+
+    CS_BAD_VPP
+
+
+    The requested Vpp1/Vpp2 voltage is not supported.
+
+
+    CS_UNSUPPORTED_MODE
+
+
+    A non-CardBus client attempted to configure a CardBus card, or a CardBus client
+    attempted to configure a non-CardBus card.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.3.6 ModifyConfiguration\n\
+    \n```\nint CardServices(ModifyConfiguration, client_handle_t client, modconf_t\
+    \ *mod);\n```\n\nThe modconf_t structure is given by:\n\n```\ntypedef struct modconf_t\
+    \ {\n    u_int               Attributes;\n    u_int               Vcc, Vpp1, Vpp2;\n\
+    } modconf_t;\n```\n\nModifyConfiguration modifies some attributes of a socket\
+    \ that has been configured by a call to RequestConfiguration.\n\nThe following\
+    \ flags can be specified in Attributes:\n\nCONF_IRQ_CHANGE_VALID\n\nIndicates\
+    \ that the CONF_ENABLE_IRQ setting should be updated.\n\nCONF_ENABLE_IRQ\n\nSpecifies\
+    \ that IO interrupts should be enabled for this socket.\n\nCONF_VCC_CHANGE_VALID\n\
+    \nIndicates that Vcc should be updated.\n\nCONF_VPP1_CHANGE_VALID\n\nIndicates\
+    \ that Vpp1 should be updated.\n\nCONF_VPP2_CHANGE_VALID\n\nIndicates that Vpp2\
+    \ should be updated.\n\nCurrently, Vpp1 and Vpp2 must always have the same value.\
+    \ So, the two values must always be changed at the same time.\n\nReturn codes:\n\
+    \nCS_BAD_HANDLE\n\nThe client handle is invalid.\n\nCS_NO_CARD\n\nThe socket assigned\
+    \ to this client is currently vacant.\n\nCS_CONFIGURATION_LOCKED\n\nThis actually\
+    \ means that this socket has not locked.\n\nCS_BAD_VCC\n\nThe requested Vcc voltage\
+    \ is not supported.\n\nCS_BAD_VPP\n\nThe requested Vpp1/Vpp2 voltage is not supported."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.3.7 ReleaseConfiguration\n\
+    \n```\nint CardServices(ReleaseConfiguration, client_handle_t client, config_req_t\
+    \ *req);\n```\n\nReleaseConfiguration un-configures a socket previously set by\
+    \ a call to RequestConfiguration. The req parameter should be the same one used\
+    \ to configure the socket.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe window handle\
+    \ is invalid, or the socket is not configured.\n\n# 3.3.8 GetConfigurationInfo\n\
+    \n```\nint CardServices(GetConfigurationInfo, client_handle_t client, config_info_t\
+    \ *config);\n```\n\nThe config_info_t structure is defined as:\n\n```\ntypedef\
+    \ struct config_info_t {\n    u_char\n    Function;\n    u_int\n    Attributes;\n\
+    \    u_int\n    Vcc, Vpp1, Vpp2;\n    u_int\n    IntType;\n    u_char\n    Status,\
+    \ Pin, Copy, ExtStatus;\n    u_int\n    Present;\n    u_int\n    AssignedIRQ;\n\
+    \    u_int\n    IRQAttributes;\n    ioaddr_t\n    BasePort1;\n    ioaddr_t\n \
+    \   NumPorts1;\n    u_int\n    Attributes1;\n    ioaddr_t\n    BasePort2;\n  \
+    \  ioaddr_t\n    NumPorts2;\n    u_int\n    Attributes2;\n    u_int\n    ID0Lines;\n\
+    } config_info_t;\n```\n\nGetConfigurationInfo returns the current configuration\
+    \ as it was set by RequestIRQ, and RequestConfiguration. Most fields will only\
+    \ be filled if the socket is fully configured; the CONF_VALID_CLIENT field in\
+    \ Attributes indicates this fact. For normal clients bound to a single function,\
+    \ the Function field is ignored, and data for that client's assigned function\
+    \ is returned. For clients bound to BIND_FN_ALL, the ConfigBase field is set to\
+    \ the PCI's vendor/device ID, and the Option field is set to the CardBus PCI bus\
+    \ number.\n\nFor CardBus cards, the ConfigBase field is set to the PCI's vendor/device\
+    \ ID, and the Option field is set to the CardBus PCI bus number.\n\nReturn codes:\n\
+    \nCS_BAD_HANDLE\n\nThe window handle is invalid, or the socket is not configured."
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nCS_NO_CARD\n\nThe socket assigned\
+    \ to this client is currently vacant.\n\nCS_CONFIGURATION_LOCKED\n\nThis means\
+    \ that the configuration is not locked.\n\n# 3.4 Card Information Structure (CIS)\
+    \ calls\n\nThe definition of the Card Information Structure (CIS) is the darkest\
+    \ chapter of the PC Card standard. All version 2 clients should have a CIS, which\
+    \ describes the card and how it should be configured. The CIS is a linked list\
+    \ of “tuples” for the card's attribute memory space. Each tuple consists of an\
+    \ identification code, a length byte, and a series of data bytes. The layout of\
+    \ the data bytes for some tuples is absurd complicated, in an apparent effort\
+    \ to use very last.\n\nValidateCIS calls to check if a card has a reasonable CIS.\
+    \ The GetFirstTuple and GetNextTuple calls are used to step through CIS tuples.\
+    \ GetTupleData extracts data bytes from a tuple. And ParseTuple unpacks many tuples\
+    \ into more easily forms. The ReplaceCIS allows a client to provide a substitute\
+    \ for the CIS found on the card.\n\n# 3.4.1 GetFirstTuple, GetNextTuple\n\n```\n\
+    #include \"cispl.h\"\n\nint CardServices(GetFirstTuple, client_handle_t client,\
+    \ tuple_t *tuple);\nint CardServices(GetNextTuple, client_handle_t client, tuple_t\
+    \ *tuple);\n```\n\nThe tuple_t data is given by:\n\n```\ntypedef struct tuple_t\
+    \ {\n    u_int\tAttributes;\n    cis_data_t\tDesiredTuple;\n    u_int\tFlags;\n\
+    \    cisdata_t\tTupleCode;\n    u_int\tTupleLink;\n    cisdata_t\tTupleOffset;\n\
+    \    cisdata_t\tTupleData;\n    cisdata_t\tTupleLen;\n    cisdata_t\t*TupleData;\n\
+    } tuple_t;\n```\n\nGetFirstTuple searches for a CIS for the first tuple matching\
+    \ DesiredTuple. RETURN_FIRST_Tuple will match the first tuple of any kind. If\
+    \ successful, TupleCode is set to the code of the first matching tuple, and TupleLink\
+    \ is the address of this attribute in memory.\n\nGetNextTuple is like GetFirstTuple,\
+    \ except given a tuple_t returned by a previous call to GetFirstTuple or GetNextTuple,\
+    \ it will return the next tuple matching DesiredTuple.\n\nThese functions will\
+    \ automatically traverse any link tuples in the CIS. For multifunction cards using\
+    \ a CISPL_LONLINK_MFC, these functions will automatically follow the CIS chain\
+    \ specific to a client driver's assigned function. If a client was bound to BIND_FN_ALL,\
+    \ all tuples will be returned."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    The following flags can be specified in Attributes:
+
+
+    TUPLE_RETURN_LINK
+
+
+    Indicates that link tuples (CISTPL_LONGLINK_A, CISPL_LONGLINK_C, CISPL_LONGLINK_MFC,
+    CISPL_NOLINK, CISPL_LINTARGET) should be returned. Normally these tuples are processed
+    silently.
+
+
+    TUPLE_RETURN_COMMON
+
+
+    Indicates that tuples in the "common" CIS section of a multifunction CIS should
+    be returned. In the absence of this flag, normally, Card Services will only return
+    tuples specific to the function bound to the client.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_OUT_OF_RESOURCE
+
+
+    Card Services was unable to set up a memory window to map the card''s CIS.
+
+
+    CS_NO_MORE_ITEMS
+
+
+    There were no tuples matching DesiredTuple.
+
+
+    # 3.4.2 GetTupleData
+
+
+    ```
+
+    #include "cistpl.h"
+
+    ```
+
+
+    ```
+
+    int CardServices(GetTupleData, client_handle_t client, tuple_t *tuple);
+
+    ```
+
+
+    GetTupleData extracts a series of bytes from the specified tuple, which must have
+    been returned by a previous call to GetFirstTuple or GetNextTuple. A maximum of
+    TupleDataMax bytes will be copied into the TupleData buffer, starting at an offset
+    of TupleOffset bytes. The number of bytes copied is returned in TupleDataLen.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    CS_OUT_OF_RESOURCE
+
+
+    Card Services was unable to set up a memory window to map the card''s CIS.
+
+
+    CS_NO_MORE_ITEMS
+
+
+    The tuple does not contain any more data. TupleOffset is greater than or equal
+    to the length of the tuple.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.4.3 ParseTuple\n\n```\n\
+    #include \"cistpl.h\"\n\nint CardServices(ParseTuple, client_handle_t client,\
+    \ tuple_t tuple, tuple_t *tuple, cisparse_t *parse);\n```\n\nThe cisparse_t data\
+    \ structure is given by:\n\n```\ntypedef union cisparse_t {\n\tcistpl_device_t\
+    \      device;\n\tcistpl_checksum_t    checksum;\n\tcistpl_longlink_t    longlink;\n\
+    \tcistpl_longlink_mfc_t longlink_mfc;\n\tcistpl_vers_1_t      version_1;\n\tcistpl_altstr_t\
+    \      altstr;\n\tcistpl_jedec_t       jedec;\n\tcistpl_manifold_t     manifold;\n\
+    \tcistpl_funcd_t       funcd;\n\tcistpl_config_t       config;\n\tcistpl_ctable_entry_t\
+    \ cftable_entry;\n\tcistpl_device_geo_t  device_geo;\n\tcistpl_vers_2_t      version_2;\n\
+    \tcistpl_org_t         org;\n\tcistpl_format_t      format;\n} cisparse_t;\n```\n\
+    \nParseTuple interprets tuple data returned by a previous call to GetTupleData.\
+    \ The structure returned depends on the type of the parsed tuple. See the cistpl.h\
+    \ file for these structure definitions; some of them are quite complex\n\nReturn\
+    \ codes:\n\n```\nCS_BAD_TUPLE\n```\n\nAn error was encountered during parsing\
+    \ of this tuple. The tuple may be incomplete, or may be formatted incorrectly.\n\
+    \n```\nCS_UNSUPPORTED_FUNCTION\n```\n\nParseTuple cannot parse the specified type.\n\
+    \n# 3.4.4 ValidateCIS\n\n```\nint CardServices(ValidateCIS, client_handle_t client,\
+    \ cisinfo_t *cisinfo0);\n```\n\nThe cisinfo_t structure is given by:\n\n```\n\
+    typedef struct cisinfo_t {\n\tu_int                Chains;\n} cisinfo_t;\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nValidateCIS attempts to verify\
+    \ that a card has a reasonable Card Information Structure. It returns the number\
+    \ of tuples found in Chains. If the CIS appears to be uninterpretable, Chains\
+    \ will be set to 0.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client handle is\
+    \ invalid.\n\nCS_OUT_OF_RESOURCE\n\nCard Services was unable to set up a memory\
+    \ window to map the card's CIS.\n\n# 3.4. ReplaceCIS\n\n```\nint CardServices(ReplaceCIS,\
+    \ client_handle_t client, cisdump_t *cisifno);\n```\n\nThe cisdump_t structure\
+    \ is given by:\n\n```\ntypedef struct cisdump_t {\n    u_int Length;\n    cisdata_t\
+    \ Data[CISTPL_MAX_CIS_SIZE];\n} cisinfo_t;\n```\n\nReplaceCIS allows a client\
+    \ to pass Card Services a replacement for the CIS on a card. Its intended application\
+    \ is for cards with incomplete or inaccurate CIS information. If a correct CIS\
+    \ can be deduced from other information available for the card, this allows information\
+    \ to be provided to clients in a clean fashion. The alternative is to pollute\
+    \ client source code with fixes targeted for each card with a CIS error. The replacement\
+    \ CIS remains in effect until the card is ejected, and all tuple-related services\
+    \ use the replacement instead of the actual CIS.\n\nThe Length field gives the\
+    \ number of bytes of CIS data in the Data array. The Data array can be considered\
+    \ to be the even bytes of a card's attribute memory. It should contain all required\
+    \ of a normal CIS, including an initial CISTPL_DEVICE tuple and a final CISTPL_END\
+    \ tuple. Long links (including CISTPL_LONGLINK_MPFC) may be used: all target addresses\
+    \ are interpreted in the replacement CIS space. In general, a replacement CIS\
+    \ should also contain the same identification tuples (CISTPL_MANIFID, CISTPL_VERS_1)\
+    \ as the original card.\n\nThis service was added in release 3.0.1.\n\nReturn\
+    \ codes:\n\nCS_BAD_HANDLE\n\nThe client handle is invalid.\n\nCS_OUT_OF_RESOURCE\n\
+    \nCard Services was unable to allocate memory to hold the replacement CIS."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions 25\n\n# 3.5 Memory window control\n\
+    \nEach socket can have up to four active memory windows, mapping portions of card\
+    \ memory into the host system address space. A PC card device can address most\
+    \ 16MB of both common and attribute memory. Windows would typically be sized to\
+    \ a power of two. Depending on socket capabilities, they may need to be aligned\
+    \ on a multiple of the window size in both the host and card address spaces.\n\
+    \nA memory window is initialized by a call to RequestWindow. Some attributes can\
+    \ be modified using ModifyWindow. The segment of card memory mapped to the window\
+    \ can be modified using MapMemPage. And windows are released with ReleaseWindow.\
+    \ Unlike almost all Other Card subfunctions, the memory functions normally act\
+    \ on window_t handles, rather than client_t handles.\n\n# 3.5.1 RequestWindow\n\
+    \n```\nint CardServices(RequestWindow, client_handle_t *handle, win_req_t *req);\n\
+    ```\n\nThe win_req_t structure is given:\n\n```\ntypedef struct win_req_t {\n\
+    \    u_int               Attributes;\n    u_long              Base;\n    u_int\
+    \               Size;\n    u_int               AccessSpeed;\n} win_req_t;\n```\n\
+    \nRequestWindow maps a window of card memory into system memory. On entry, the\
+    \ handle parameter should point to a valid client handle. On return, this will\
+    \ be replaced by a window_handle_t handle that should be used in subsequent calls\
+    \ to ModifyWindow, MapMemPage, and ReleaseWindow.\n\nThe following flags can be\
+    \ specified in Attributes:\n\nWIN_MEMORY_TYPE\n\nThis field can be either WIN_MEMORY_TYPE_CM\
+    \ for common memory, or WIN_MEMORY_TYPE_AM for attribute memory.\n\nWIN_DATA_WIDTH\n\
+    \nEither WIN_DATA_WIDTH_16 for 16-bit accesses, or WIN_DATA_WIDTH_8 for 8-bit\
+    \ access.\n\nWIN_ENABLE\n\nIf this is set, the window is turned on.\n\nWIN_USE_WAIT\n\
+    \nSpecifies that the controller should observe the MWAIT signal.\n\nWIN_MAP_BELOW_1MB\n\
+    \nRequests that the window be mapped below the 1MB address boundary. This may\
+    \ not be possible on some platforms.\n\nWIN_STRICT_ALIGN\n\nRequests that the\
+    \ base be aligned to a multiple of the window size. Added in release 3.1.2."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nBase specifies the base physical\
+    \ address of the window in system memory. If zero, Card Services will set Base\
+    \ to the first available window address. Size specifies the window size in bytes.\
+    \ If zero, Card Services will set Size to the smallest window size supported by\
+    \ the host controller. AccessSpeed specifies the memory access speed, in nanoseconds.\n\
+    \nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client handle is invalid.\n\nCS_NO_CARD\n\
+    \nThe socket assigned to this client is currently vacant.\n\nCS_BAD_ATTRIBUTE\n\
+    \nAn unsupported window attribute was requested.\n\nCS_OUT_OF_RESOURCE\n\nThe\
+    \ maximum number of memory windows for this socket are already being used.\n\n\
+    CS_IN_USE\n\nRequestWindow was unable to find a free window of system memory.\n\
+    \nCS_BAD_SIZE\n\n,\n\nCS_BAD_BASE\n\nEither Base or Size does not satisfy the\
+    \ alignment rules for this socket.\n\n# 3.5.2 ModifyWindow\n\n```\nint CardServices(ModifyWindow,\
+    \ window_handle_t handle, modwin_t *mod);\n```\n\nThe modwin_t structure is given\
+    \ by:\n\n```\ntypedef struct modwin_t {\n    u_int       Attributes;\n    u_int\
+    \       AccessSpeed;\n} modwin_t;\n```\n\nModifyWindow modifies the attributes\
+    \ of a window handle returned by a previous call to RequestWindow. The following\
+    \ attributes can be changed:\n\nWIN_MEMORY_TYPE\n\nThis field can be either WIN_MEMORY_TYPE_CM\
+    \ for common memory, or WIN_MEMORY_TYPE_AM for attribute memory.\n\nWIN_DATA_WIDTH\n\
+    \nEither WIN_DATA_WIDTH_16 for 16-bit accesses, or WIN_DATA_WIDTH_8 for 8-bit\
+    \ access."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 3. Card Services Subfunction Descriptions
+
+
+    WIN_ENABLE
+
+    If this is set, the window is turned on.
+
+
+    AccessSpeed gives the new memory access speed, in nanoseconds.
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+    The window handle is invalid.
+
+
+    # 3.5.3 ReleaseWindow
+
+
+    ```
+
+    int CardServices(ReleaseWindow, window_handle_t handle);
+
+    ```
+
+
+    ReleaseWindow releases a memory window previously allocated with RequestWindow.
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+    The window handle is invalid.
+
+
+    # 3.5.4 GetFirstWindow, GetNextWindow
+
+
+    ```
+
+    int CardServices(GetFirstWindow, client_handle_t *client, win_req_t *req);
+
+    int CardServices(GetNextWindow, window_handle_t *handle, win_req_t *req);
+
+    ```
+
+
+    These sequences retrieve window configuration information for all of a socket''s
+    memory windows.
+
+    GetFirstWindow replaces the client window with a memory window handle, which will
+    in turn be updated by calls to GetNextWindow.
+
+    These services were added in release 3.1.0.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+    The client handle is invalid.
+
+
+    CS_NO_MORE_ITEMS
+
+    No windows are configured for this socket.
+
+
+    # 3.5.5 MapMemPage
+
+
+    ```
+
+    int CardServices(MapMemPage, window_handle_t handle, memreq_t *req);
+
+    int CardServices(GetMemPage, window_handle_t handle, memreq_t *req);
+
+    ```
+
+
+    The memreq_t structure is given by:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n```\ntypedef struct memreq_t\
+    \ {\n    u_int           CardOffset;\n    page_t          Page;\n} memreq_t;\n\
+    ```\n\nMapMemPage sets the address of card window that is mapped to the base of\
+    \ a memory window to CardOffset. The window should have been created by a call\
+    \ to RequestWindow. The Page parameter is not implemented in this version and\
+    \ should be set to 0. In GetMemPage retrieves the current card address mapping\
+    \ for a memory window.\n\nThe GetMemPage service was added in release 3.1.0.\n\
+    \nReturn codes:\n\nCS_BAD_HANDLE\nThe window handle is invalid.\n\nCS_BAD_PAGE\n\
+    The Page value was non-zero.\n\nCS_BAD_OFFSET\nThe requested CardOffset was out\
+    \ of range or did not have proper alignment.\n\n# 3.6 Bulk Memory Services\n\n\
+    Bulk memory services provide a higher level interface for accessing memory regions\
+    \ than that provided by the memory window services. A client using memory calls\
+    \ does not need to know about the underlying memory organization or access methods.\
+    \ The device-specific code is packaged into a special Card Services client called\
+    \ a Memory Technology Driver.\n\n# 3.6.1 RegisterMTD\n\n```\nint CardServices(RegisterMTD,\
+    \ client_handle_t handle, mtd_reg_t *reg);\n```\n\nThe mtd_reg_t data structure\
+    \ is given by:\n\n```\ntypedef union mtd_reg_t {\n    u_int           Attributes;\n\
+    \    u_int           Offset;\n    u_long          MediaID;\n} mtd_reg_t;\n```\n\
+    \nRegisterMTD informs Card Services that this client MTD will handle requests\
+    \ for a specified memory region. The Offset field specifies the starting address\
+    \ of the memory region. The following fields are defined in Attributes:\n\nREGION_TYPE\n\
+    \nEither REGION_TYPE_CM for common memory, or REGION_TYPE_AM for attribute memory."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nThe MediaID field is recorded\
+    \ by Card Services, and will be passed to the MTD of any request that references\
+    \ this memory region.\n\nOnce an MTD is bound to a memory region by a call to\
+    \ RegisterMTD, it will remain bound until the MTD calls DeregisterClient.\n\n\
+    Return codes:\n\nCS_BAD_HANDLE\n\nThe client handle is invalid.\n\nCS_BAD_OFFSET\n\
+    \nEither the offset does not match a valid memory region for this card, or another\
+    \ MTD has already registered for this region.\n\n# 3.6.2 GetFirstRegion, GetNextRegion\n\
+    \n```\nint CardServices(GetFirstRegion, client_handle_t handle, region_info_t\
+    \ *region);\nint CardServices(GetNextRegion, client_handle_t handle, region_info_t\
+    \ *region);\n```\n\nThe region_info_t data structure is:\n\n```\ntypedef union\
+    \ region_info_t {\n    u_int               Attributes;\n    u_int            \
+    \   CardOffset;\n    u_int               RegionSize;\n    u_int              \
+    \ AccessSpeed;\n    u_int               BlockSize;\n    u_int               PartMultiple;\n\
+    \    u_char              JecDMfr, JecDecInfo;\n    memory_handle_t next;\n} region_info_t;\n\
+    ```\n\nGetFirstRegion and GetNextRegion summarize the information in a CISTPL_DEVICE,\
+    \ CISTPL_JEDEC, and CISTPL_DEVICE_GO tuples. CardOffset gives the starting address\
+    \ of a region. RegionSize gives the length of the region in bytes. AccessSpeed\
+    \ gives the device's cycle time in nanoseconds. BlockSize gives the erase block\
+    \ size in bytes, and PartMultiple gives the granularity of partitions on this\
+    \ device, in units of BlockSize. JecDMfr and JecDecInfo give the JEDEC identification\
+    \ bytes for this region.\n\nThe following fields are defined in Attributes:\n\n\
+    REGION_TYPE\n\nEither REGION_TYPE_CM for common memory, or REGION_TYPE_AM for\
+    \ attribute memory.\n\nWhen these calls are made by an MTD client, only regions\
+    \ that have been bound to this client through calls to BindMTD will be returned.\n\
+    \nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client handle is invalid."
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nCS_NO_MORE_ITEMS\n\nNo memory\
+    \ regions are defined.\n\n# 3.6.3 OpenMemory\n\n```\nint CardServices(OpenMemory,\
+    \ client_handle_t *handle, open_mem_t *req);\n```\n\nThe open_mem_t structure\
+    \ is given by:\n\n```\ntypedef struct open_mem_t {\n    u_int       Attributes;\n\
+    \    u_int       Offset;\n} open_mem_t;\n```\n\nOpenMemory is used to obtain a\
+    \ handle for a memory region via the other bulk memory services. The Offset field\
+    \ specifies the base address of the region to be accessed. If successful, the\
+    \ client argument is replaced by the new memory handle.\n\nThe following fields\
+    \ are defined in Attributes:\n\nMEMORY_TYPE\n\nEither MEMORY_TYPE_CM for common\
+    \ memory, or MEMORY_TYPE_AM for attribute memory.\n\nMEMORY_EXCLUSIVE\n\nSpecifies\
+    \ that this client should have exclusive access to this memory region.\n\nReturn\
+    \ codes:\n\nCS_BAD_HANDLE\n\nThe window handle is invalid.\n\nCS_BAD_OFFSET\n\n\
+    The offset does not specify a valid region, or the region does not have an associated\
+    \ MTD to service bulk memory requests.\n\n# 3.6.4 CloseMemory\n\n```\nint CardServices(CloseMemory,\
+    \ memory_handle_t handle);\n```\n\nCloseMemory releases a memory handle returned\
+    \ by a previous call to OpenMemory. A client should release all memory handles\
+    \ before calling DeregisterClient.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe memory\
+    \ handle is invalid."
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n# 3.6.5 ReadMemory, WriteMemory\n\
+    \n```\nint CardServices(ReadMemory, memory_handle_t handle mem_op_t *req, caddr_t\
+    \ buf);\nint CardServices(WriteMemory, memory_handle_t handle, mem_op_t *req,\
+    \ caddr_t buf);\n```\n\nThe mem_10_t structure is given by:\n\n```\ntypedef struct\
+    \ mem_10_t {\n\tu_int               Attributes;\n\tu_int               Offset;\n\
+    \tu_int               Count;\n} mem_op_t;\n```\n\nReadMemory and WriteMemory read\
+    \ from and write to a card memory area defined by the specified memory handle,\
+    \ returned by a previous call to OpenMemory. The Offset field gives the offset\
+    \ of the operation from the start of the card memory region. The Count field gives\
+    \ the number of bytes to be transferred. The buf field points to a memory buffer\
+    \ as the destination for a ReadMemory operation, or the source for a WriteMemory\
+    \ operation.\n\nThe following fields are defined in Attributes:\n\nMEM_OP_BUFFER\n\
+    \nEither MEM_OP_BUFFER_USER if the host buffer is in a user memory segment, or\
+    \ MEM_OP_BUFFER_KERNEL if the host is in kernel memory.\n\nMEM_OP_DISABLE_ERASE\n\
+    \nSpecifies that card area should not be erased before it is written.\n\nMEM_OP_VERIFY\n\
+    \nSpecifies verification of write operations.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\
+    \nThe window handle is invalid.\n\nCS_BAD_OFFSET\n\nThe specified card offset\
+    \ is beyond the end of the memory region.\n\nCS_BAD_SIZE\n\nThe specified transfer\
+    \ size extends past the end of the memory region.\n\n# 3.6.6 RegisterEraseQueue\n\
+    \n```\nint CardServices(RegisterEraseQueue, client_handle_t *handle, eraseq_hdr_t\
+    \ *header);\n```\n\nThe eraseq_hdr_t structure is given by:"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n```\ntypedef struct erase_queue_header_t\
+    \ {\n    int QueueEntryCount;\n    erase_entry_t *QueueEntryArray;\n} erase_hdr_t;\n\
+    ```\n\nThis registers a queue of erase requests with Card Services. An erase_handle_t\
+    \ handle will be returned in *handle. When the client calls CheckEraseQueue, Card\
+    \ Services will scan the queue and begin asynchronous processing of any new requests.\n\
+    \nThe erase_entry_t structure is given by:\n\n```\ntypedef struct erase_entry_t\
+    \ {\n    memory_handle_t Handle;\n    u_char State;\n    u_int Size;\n    u_int\
+    \ Offset;\n    void *Optional;\n} erase_entry_t;\n```\n\nIn an erase queue, the\
+    \ Header field is a memory handle returned by a previous call to OpenMemory. The\
+    \ State field indicates the state of the erase request. The following values are\
+    \ defined:\n\n+   ERASE_QUEUED\n\n+   Set by the client to indicate that this\
+    \ is a new request.\n\n+   ERASE_IDLE\n\n+   Set by the client to indicate that\
+    \ this entry is not active.\n\n+   ERASE_PASSED\n\n+   Set by the MTD to indicate\
+    \ successful completion.\n\n+   ERASE_FAILED\n\n+   Set by the MTD to indicate\
+    \ that the erase failed.\n\n+   ERASE_MEDIA_WRPROT\n\n+   Indicates that the region\
+    \ is write protected.\n\n+   ERASE_NOT_ERASABLE\n\n+   Indicates that this region\
+    \ does not support erase operations.\n\n+   ERASE_BAD_OFFSET\n\n+   Indicates\
+    \ that the erase does not start on an erase block boundary.\n\n+   ERASE_BAD_SIZE\n\
+    \n+   Indicates that the requested erase size is not a multiple of the erase block\
+    \ size.\n\n+   ERASE_BAD_SOCKET\n\n+   Set by the MTD to indicate that there is\
+    \ no card present."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Card Services Subfunction Descriptions
+
+
+    Additionally, the macro ERASE_IN_PROGRESS() will return a true condition for values
+    of State that indicate an erase is being processed.
+
+
+    The Size field gives the size of the erase request in bytes. The Offset field
+    gives the offset from the start of the region. The size and offset should be aligned
+    to erase block boundaries. The Optional field is not used by Card Services and
+    may be used by the client driver.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The client handle is invalid.
+
+
+    # 3.6.7 DeregisterEraseQueue
+
+
+    ```
+
+    int CardServices(DeregisterEraseQueue, eraseq_handle_t handle);
+
+    ```
+
+
+    DeregisterEraseQueue frees a queue previously registered by a call to RegisterEraseQueue.
+    If there are any pending requests in the specified queue, the call will fail.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The erase queue handle is invalid.
+
+
+    CS_BUSY
+
+
+    The erase queue has erase requests pending.
+
+
+    # 3.6.8 CheckEraseQueue
+
+
+    ```
+
+    int CardServices(CheckEraseQueue, eraseq_handle_t handle);
+
+    ```
+
+
+    This call notifies Card Services that there are new erase requests in a queue
+    previously registered with RegisterEraseQueue.
+
+
+    Typically, a client will initially assign each erase queue the state value ERASE_IDLE.
+    When new requests are added to the queue, the client will set their states to
+    ERASE_QUEUED, and call CheckEraseQueue. When the client is notified of an erase
+    completion event, it will check the state field to determine whether the request
+    was successful.
+
+
+    Return codes:
+
+
+    CS_BAD_HANDLE
+
+
+    The erase queue handle is invalid.
+
+
+    # 3.7 Miscellaneous calls
+
+
+    # 3.7.1 GetCardServicesInfo
+
+
+    ```
+
+    int CardServices(GetCardServicesInfo, servinfo_t *servinfo);
+
+    ```
+
+
+    * Note'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nThe servinfo_t structure is\
+    \ given by:\n\n```\ntypedef struct servinfo_t {\n    char Signature[2];\n    u_int\
+    \ Count;\n    u_int Revision;\n    u_int CSLevel;\n    char *VendorString;\n}\
+    \ servinfo_t;\n```\n\nGetCardServicesInfo returns revision information about this\
+    \ version of Card Services. Signature is set to \"CS\". Count is set to the number\
+    \ of sockets currently configured. Revision is set to the revision level of the\
+    \ Card Services package, and CSLevel is set to the level of compliance with the\
+    \ PC Card standard. They are encoded as BCD numbers. VendorString is set to point\
+    \ to an RCS identification string.\n\nThis call always succeeds.\n\n# 3.7.2 AccessConfigurationRegister\n\
+    \n```\n#include \"cisreg.h\"\n```\n\n```\nint CardServices(AccessConfigurationRegister,\
+    \ client_handle_t handle, conf_reg_t reg);\n```\n\nThe conf_reg_t structure is\
+    \ given by:\n\n```\ntypedef struct conf_reg_t {\n    u_char Function;\n    u_int\
+    \ Action;\n    off_t Offset;\n    u_int Value;\n} conf_reg_t;\n```\n\nFor normal\
+    \ clients bound to a specific card function, the Function field is ignored. For\
+    \ clients bound to BIND_FN_ALL, this field specifies which function's configuration\
+    \ registers should be accessed.\n\nThe Action parameter can be one of the following:\n\
+    \n+   CS_READ\nRead the specified configuration register and return Value.\n\n\
+    +   CS_WRITE\nWrite Value to the specified configuration register.\n\nAccessConfigurationRegister\
+    \ reads or writes the one-byte CIS configuration register at offset from the start\
+    \ of the config register. It can only be used for a socket that has been configured\
+    \ with RequestConfiguration.\n\nThe following values for Offset are defined in\
+    \ cistpl.h:\n\n+   CISREG_COR\nThe Configuration Option Register."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\nCISREG_CCSR\n\nThe Card Configuration\
+    \ and Status Register.\n\nCISREG_PRR\n\nThe Pin Replacement Register.\n\nCISREG_SCR\n\
+    \nThe Socket and Copy Register.\n\nCISREG_ESR\n\nThe Extended Status Register.\n\
+    \nCISREG_IOBASE_0...CISREG_IOBASE_3\n\nThe I/O Base Registers.\n\nCISREG_IOSIZE\n\
+    \nThe I/O Size Register.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client handle\
+    \ is invalid.\n\nCS_BAD_ARGS\n\nThe specified Action is not supported.\n\nCS_CONFIGURATION_LOCKED\n\
+    \nThis actually means that the configuration has not been locked.\n\nCS_OUT_OF_RESOURCE\n\
+    \nCard Services was unable to allocate a memory window to access the card's configuration\
+    \ registers.\n\n# 3.7.3 AdjustResourceInfo\n\n```\nint CardServices(AdjustResourceInfo,\
+    \ client_handle_t handle, adjust_t *adj);\n```\n\nThe adjust_t structure is given\
+    \ by:\n\n```\ntypedef struct adjust_t {\n    u_int           Action;\n    u_int\
+    \           Resource;\n    u_int           Attributes;\n    union {\n        struct\
+    \ memory {\n            u_long           Base;\n            u_long           Size;\n\
+    \        } memory;\n        struct io {\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# 3. Card Services Subfunction Descriptions\n\n```\nioaddr_t    BasePort;\n\
+    ioaddr_t    NumPorts;\nu_int       IOAddrLines;\n    struct irq {\n    u_int \
+    \       IRQ;\n} irq;\n} resource;\nadjust_t;\n```\n\nAdjustResourceInfo is used\
+    \ to tell Card Services what resources may or may not be allocated by PC devices.\
+    \ The normal Linux resource management systems (the *_region class for IO ports,\
+    \ interrupt allocation) are respected by Card Services, but this gives the user\
+    \ another level of control.\n\nThe Action parameter can have the following values:\n\
+    \nADD_MANAGED_RESOURCE\n\nPlace the specified resource under Card Services control,\
+    \ so that it may be allocated by PC devices.\n\nREMOVE_MANAGED_RESOURCE\n\nRemove\
+    \ the specified resource from Card Services control.\n\nAt initialization time,\
+    \ Card Services assumes that it can use all available interrupts, IO ports and\
+    \ memory regions must be explicitly enabled with ADD_MANAGED_RESOURCE.\n\nThe\
+    \ Resource parameter can have the following values:\n\nRES_MEMORY_RANGE\n\nSpecifies\
+    \ a memory resource, described by adj->resource.memory.\n\nRES_IO_RANGE\n\nSpecifies\
+    \ an IO port resource, described by adj->resource.io.\n\nRES_IRQ\n\nSpecifies\
+    \ an interrupt resource, described by adj->resource.irq.\n\nThe following flags\
+    \ may be specified in Attributes:\n\nRES_RESERVED\n\nIndicates that the resource\
+    \ should be reserved for PC Card devices that specifically request it. The resource\
+    \ will not be allocated for a device that asks Card Services for any available\
+    \ location. This is not implemented yet.\n\nReturn codes:\n\nCS_UNSUPPORTED_FUNCTION\n\
+    \nThe specified Action or Resource is not supported."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    #include "cistpl.h"
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\n# 4.1.1 CISTPL_CHECKSUM\n\n\
+    The cistpl_checksum_t structure is given by:\n\n```\ntypedef struct cistpl_checksum_t\
+    \ {\n    u_short addr;\n    u_short len;\n    u_char sum;\n} cistpl_checksum_t;\n\
+    ```\n\n# 4.1.2 CISTPL_LONGLINK_A, CISTPL_LONGLINK_C, CISTPL_LINKTARGET, CISTPL_NOLINK\n\
+    \nThe cistpl_longlink_t structure is given by:\n\n```\ntypedef struct cistpl_longlink_t\
+    \ {\n    u_int addr;\n} cistpl_longlink_t;\n```\n\nThese tuples are pointers to\
+    \ additional chains of CIS tuples, either in attribute or common memory. Each\
+    \ CIS tuple can have at most one long link. CISTPL_LONGLINK_A tuples point to\
+    \ attribute memory, and CISTPL_LONGLINK_C point to common memory. The standard\
+    \ CIS chain at address 0 in attribute memory has an implied link to address 0\
+    \ in common memory. A CISTPL_NOLINK tuple can be used to cancel this default link.\n\
+    \nThe first tuple of a chain pointed to by a long link must be a CISTPL_LINKTARGET.\
+    \ The CS tuple handling will automatically follow long links and verify link targets;\
+    \ these tuples are normally invisible unless the TUPLE_RETURN_LINK attribute is\
+    \ specified in GetNextTuple.\n\n# 4.1.3 CISTPL_LONGLINK_MFC\n\nThe cistpl_longlink_mfc_t\
+    \ structure is given by:\n\n```\ntypedef struct cistpl_longlink_mfc_t {\n    int\
+    \ nfn;\n    struct {\n        u_char space;\n        u_int addr;\n    } fn[CISTPL_MAX_FUNCTIONS];\n\
+    } cistpl_longlink_mfc_t;\n```\n\nThis tuple identifies a multifunction card, and\
+    \ specifies long pointers to CIS chains specific for each function. The space\
+    \ field is either CISTPL_MFC_ATTR or CISTPL_MFC_COMMON for attribute or common\
+    \ memory space.\n\n# 4.1.4 CISTPL_DEVICE, CISTPL_DEVICE_A\n\nThe cistpl_device_t\
+    \ structure is given by:"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\n```\ntypedef struct cistpl_device_t\
+    \ {\n    int ndev;\n    struct {\n        u_char type;\n        u_char wp;\n \
+    \       u_int speed;\n        u_int size;\n    } dev[CISTPL_MAX_DEVICES];\n} cistpl_device_t;\n\
+    ```\n\nThe CISTPL_DEVICE tuple describes address regions in a card's memory. The\
+    \ CISTPL_DEVICE_A tuple describes regions in attribute memory. The type flag indicates\
+    \ the type of memory device for this region. The wp flag indicates if this region\
+    \ is write protected. The speed field is in nanoseconds, and size is in bytes.\
+    \ Address regions are assumed to be ordered consecutively starting with address\
+    \ 0. The following device types are defined:\n\nCISTPL_DYPE_NULL\nSpecifies that\
+    \ there is no device, or a \"hole\" in the card address space.\n\nCISTPL_DYPE_ROM\n\
+    Masked ROM\n\nCISTPL_DYPE_OTPROM\nOne-type programmable ROM.\n\nCISTPL_DYPE_EPROM\n\
+    UV erasable PROM.\n\nCISTPL_DYPE_EEPROM\nElectrically erasable PROM.\n\nCISTPL_DYPE_FLASH\n\
+    Flash EPROM.\n\nCISTPL_DYPE_SRAM\nStatic or non-volatile RAM.\n\nCISTPL_DYPE_DRAM\n\
+    Dynamic or volatile RAM.\n\nCISTPL_DYPE_FUNCSPEC\nSpecifies a function-specific\
+    \ device, such as a memory-mapped IO device or buffer, as opposed to general purpose\
+    \ storage.\n\nCISTPL_DYPE_EXTEND\nSpecifies an extended device type. This type\
+    \ is reserved for future use."
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\n# 4.1.5 CISTPL_VERS_1\n\nThe\
+    \ cpl_vers_1_t structure is given by:\n\n```\ntypedef struct cistpl_vers_1_t {\n\
+    \    u_char major;\n    u_char minor;\n    int ns;\n    int ofs[CISTPL_VERS_1_MAX_PROD_STRINGS];\n\
+    \    char str[254];\n} cistpl_vers_1_t;\n```\n\nThe ns field specifies the number\
+    \ of product information strings in the tuple. The string data is contained in\
+    \ the str array. Each string is null terminated, and ofs gives the offset to the\
+    \ start of each string.\n\n# 4.1.6 CISTPL_ALTSTR\n\nThe cistpl_altstr struct cistpl_altstr_t\
+    \ is given by:\n\n```\ntypedef struct cistpl_altstr_t {\n    int ns;\n    int\
+    \ ofs[CISTPL_ALTSTR_MAX_STRINGS];\n    char str[254];\n} cistpl_altstr_t;\n```\n\
+    \nThe ns field specifies the number of alternate language strings in the tuple.\
+    \ The string data is contained in the str array. Each string is null terminated,\
+    \ and ofs gives the offset to the start of each string.\n\n# 4.1.7 CISTPL_JEDEC_C,\
+    \ CISTPL_JEDEC_A\n\nThe cistpl_jedec_t structure is given by:\n\n```\ntypedef\
+    \ struct cistpl_jedec_t {\n    int nid;\n    struct {\n        u_char mfr;\n \
+    \       u_char info;\n    } id[CISTPL_MAX_DEVICES];\n} cistpl_jedec_t;\n```\n\n\
+    JEDEC identifiers describe the specific device type used to implement a region\
+    \ of card memory. The nid field specifies the number of JEDEC identifiers in the\
+    \ tuple. There should be a one-to-one correspondence between JEDEC identifiers\
+    \ and device descriptions in the corresponding CISTPL_DEVICE tuple.\n\n# 4.1.8\
+    \ CISTPL_CONFIG, CISTPL_CONFIG_CB\n\nThe cistpl_config_t structure is given by:"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\n```\ntypedef struct cistpl_config_t\
+    \ {\n    u_char          last_idx;\n    u_int           base;\n    u_int     \
+    \      rmask[4];\n    u_char          subtuples;\n} cistpl_config_t;\n```\n\n\
+    The last_idx field gives the index of the highest numbered configuration table\
+    \ entry. The base field gives the offset of a card's configuration registers in\
+    \ attribute memory. The rmask array is a series of bit masks indicating which\
+    \ configuration registers are present. Bit 0 of rmask[0] is the COR, bit 1 is\
+    \ for the CSSR, and so on. The subtples field gives the number of bytes of subtples\
+    \ following the normal tuple contents.\n\nFor CISTPL_CONFIG_CB, rmask is undefined,\
+    \ and base points to the CardBus status registers.\n\n# 4.1.9 CISTPL_BAR\n\nThe\
+    \ cistpl_bar_t structure is given by:\n\n```\ntypedef struct cistpl_bar_t {\n\
+    \    u_char          attr;\n    u_int           size;\n} cistpl_long_t;\n```\n\
+    \nA CISTPL_BAR tuple describes the characteristics of an address space pointed\
+    \ to by a PCI base address register, for CardBus cards.\n\nThe following bit fields\
+    \ are defined in attr:\n\nCISTPL_BAR_SPACE\n\nIdentifies the base address register,\
+    \ from 1 to 6. A value of 7 describes the card's Extension ROM space.\n\nCISTPL_BAR_PREFETCH\n\
+    \nIf set, this region maps IO space (as opposed to memory space).\n\nCISTPL_BAR_CACHEABLE\n\
+    \nIf set, this region is cacheable as well as prefetchable.\n\nCISTPL_BAR_IMEG_MAP\n\
+    \nIf set, this region should only be mapped into the first 1MB of the host's physical\
+    \ address space.\n\n# 4.1.10 CISTPL_CFTABLE_ENTRY\n\nThe cistpl_cftable_entry_t\
+    \ structure is given by:"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\n```\ntypedef struct cistpl_cftable_entry_t\
+    \ {\n    u_char index;\n    u_char flags;\n    u_char interface;\n    cistpl_power_t\
+    \ vcc, vpp1, vpp2;\n    cistpl_timing_t timing;\n    cistpl_ie_t io;\n    cistpl_irq_t\
+    \ irq;\n    cistpl_mem_t mem;\n    u_char subtples;\n} cistpl_cftable_entry_t;\n\
+    ```\n\nA CISTPL_CFTABLE_ENTRY structure describes a complete operating mode for\
+    \ a Card. Many sections are optional. The index field gives the configuration\
+    \ for this operating mode; writing this value to the Card's Configuration Option\
+    \ Register selects this mode. The following fields are defined in flags:\n\n#\
+    \ CISTPL_CFTABLE_DEFAULT\n\nSpecifies that this is the default configuration entry.\n\
+    \n# CISTPL_CFTABLE_BVDS\n\nSpecifies that this configuration implements the BVD1\
+    \ and BVD2 signals in the Pin Replacement Register.\n\n# CISTPL_CFTABLE_WP\n\n\
+    Specifies that this configuration implements the write protect signal in the Pin\
+    \ Replacement Register.\n\n# CISTPL_CFTABLE_RDBSYS\n\nSpecifies that this configuration\
+    \ implements the Ready/Busy signal in the Pin Replacement Register.\n\n# CISTPL_CFTABLE_MWAIT\n\
+    \nSpecifies that the WAIT signal should be observed during memory access cycles.\n\
+    \n# CISTPL_CFTABLE_AUDIO\n\nSpecifies that this configuration generates an audio\
+    \ signal that can be routed to the host system speaker.\n\n# CISTPL_CFTABLE_READONLY\n\
+    \nSpecifies that the card has a memory region that is read-only in this configuration.\n\
+    \n# CISTPL_CFTABLE_PWRDOWN\n\nSpecifies that this configuration supports a power\
+    \ down mode, via the Card Configuration and Status Register.\n\nThe cistpl_power_t\
+    \ structure is given by:\n\n```\ntypedef struct cistpl_power_t {\n    u_char present;\n\
+    \    u_char flags;\n    u_int param[7];\n} cistpl_power_t;\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\nThe present field is bit mapped\
+    \ and indicates which parameters are present for this power signal. The following\
+    \ indices are defined:\n\nCISTPL_POWER_VNOM\nThe nominal supply voltage.\n\nCISTPL_POWER_VMIN\n\
+    The minimum supply voltage.\n\nCISTPL_POWER_VMAX\nThe maximum supply voltage.\n\
+    \nCISTPL_POWER_ISTATIC\nThe continuous supply current required.\n\nCISTPL_POWER_IAVG\n\
+    The maximum current averaged over one second.\n\nCISTPL_POWER_IPEAK\nThe maximum\
+    \ current averaged over 10 ms.\n\nCISTPL_POWER_IDOWN\nThe current required in\
+    \ power down mode.\n\nVoltages are given in units of 10 microvolts. Currents are\
+    \ given in units of 100 nanoamperes.\nThe cistpl_timing_t structure is given by:\n\
+    \n```\ntypedef cistpl_timing_t {\n    u_int wait, waitscale;\n    u_int ready,\
+    \ rdyscale;\n    u_int reserved, rsvscale;\n} cistpl_timing_t;\n```\n\n```\ntypedef\
+    \ struct cistpl_io_t {\n    u_char flags;\n    int nwin;\n    struct {\n     \
+    \   u_int base;\n        u_int len;\n    } win[CISTPL_IO_MAX_WIN];\n} cistpl_io_t;\n\
+    ```\n\nThe number of IO windows is given by nwin. Each window is described by\
+    \ a base address, base, and a length in bytes, len. The following bit fields are\
+    \ defined in flags:"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\nCISTPL_IO_LINES_MASK\n\nThe\
+    \ number of IO lines decoded by this card.\n\nCISTPL_IO_8BIT\n\nIndicates that\
+    \ the card supports 8-bit accesses to 16-bit IO registers.\n\nCISTPL_IO_16BIT\n\
+    \nIndicates that the card supports full 16-bit accesses to IO registers.\n\nThe\
+    \ cistpl_irq_t structure is defined by:\n\n```\ntypedef struct cistpl_irq_t {\n\
+    \    u_int IRQInfo;\n    u_int IRQInfo2;\n} cistpl_irq_t;\n```\n\nThe following\
+    \ bit fields are defined in IRQInfo:\n\nIRQ_MASK\n\nA specific interrupt number\
+    \ that this card should use.\n\nIRQ_NMI_ID, IRQ_IOC_ID, IRQ_LOCK_ID, IRQ_BERR_ID,\
+    \ IRQ_VEND_ID\n\nWhen IRQ_INFO2_VALID is set, this indicate if a corresponding\
+    \ interrupt signal may be assigned to this card. These four flags are for the\
+    \ non-maskable, IO check, bus error, and vendor specific interrupts.\n\nIRQ_INFO2_VALID\n\
+    \nIndicates that IRQInfo2 contains a valid bit mask of allowed interrupt requests.\n\
+    \nIRQ_LEVEL_ID\n\nIndicates that the card supports level mode interrupts.\n\n\
+    IRQ_PULSE_ID\n\nIndicates that the card supports pulse mode interrupts.\n\nIRQ_SHARE_ID\n\
+    \nIndicates that the card supports sharing interrupts.\n\nIf IRQInfo is 0, then\
+    \ no interrupt information is available.\n\nThe cistpl_mem_mem_t structure is\
+    \ defined by:\n\n```\ntypedef struct cistpl_mem_mem_t {\n    u_char nwin;\n  \
+    \  struct {\n        u_int len;\n        u_int card_addr;\n        u_int host_addr;\n\
+    \    } win[CISTPL_MEM_MAX_WIN];\n} cistpl_mem_mem_t;\n```\n\nThe number of memory\
+    \ windows is given by nwin. Each window is described by an address in the card\
+    \ memory space, card_addr, an address in the host memory space, host_addr, and\
+    \ a length in bytes, len. If the host address is 0, the position of the window\
+    \ is arbitrary."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\n# 4.1.11 CISTPL_CFTABLE_ENTRY_CB\n\
+    \nThe cistpl_cftable_entry_cb_t structure is given by:\n\n```\ntypedef struct\
+    \ cistpl_cftable_entry_cb_t {\n    u_char index;\n    u_char flags;\n    cistpl_power_t\
+    \ vcc, vpp1, vpp2;\n    u_char io;\n    cistpl_irq_t irq;\n    u_char mem;\n \
+    \   u_char suptples;\n} cistpl_cftable_entry_cb_t;\n```\n\nA CISTPL_CFTABLE_ENTRY_CB\
+    \ structure describes a complete operating mode for a CardBus card. Many fields\
+    \ are identical to corresponding fields in CISTPL_CFTABLE_ENTRY.\nThe io and mem\
+    \ fields specify which address registers need to be initialized for this configuration.\
+    \ Bits 1 through 6 correspond to the six base registers, and bit 7 indicates the\
+    \ expansion ROM base registers.\n\n# 4.1.12 CISTPL_MANIFID\n\nThe cistpl_manfid_t\
+    \ structure is given by:\n\n```\ntypedef struct cistpl_manfid_t {\n    u_short\
+    \ man;\n    u_short card;\n} cistpl_manfid_t;\n```\n\nThe man field identifies\
+    \ the card manufacturer. The card field is chosen by the vendor and should identify\
+    \ the card type and model.\n\n# 4.1.13 CISTPL_FUCID\n\nThe cistpl_funcid_t structure\
+    \ is given by:\n\n```\ntypedef struct cistpl_funcid_t {\n    u_char func;\n  \
+    \  u_char sysinit;\n} cistpl_funcid_t;\n```\n\nThe func field identifies the card\
+    \ function. The sysinit field contains several bit-mapped flags describing how\
+    \ the card should be configured at boot time.\n\nThe following functions are defined:\n\
+    \n# CISTPL_FUCID_MULTI\n\nA multi-function card."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# 4. Card Information Structure Definitions\n\nCISTPPL_FUNCID_MEMORY\n\nA simple\
+    \ memory device.\n\nCISTPPL_FUNCID_SERIAL\n\nA serial port or modem device.\n\n\
+    CISTPPL_FUNCID_PARALLEL\n\nA parallel port device.\n\nCISTPPL_FUNCID_FIXED\n\n\
+    A fixed disk device.\n\nCISTPPL_FUNCID_VIDEO\n\nA video interface.\n\nCISTPPL_FUNCID_NETWORK\n\
+    \nA network adapter.\n\nCISTPPL_FUNCID_AIMS\n\nAn auto-incrementing mass storage\
+    \ device.\n\nThe following flags are defined in sysinit:\n\nCISTPPL_SYSINIT_POST\n\
+    \nIndicates that the system should attempt to configure this card during its power-on\
+    \ initialization.\n\nCISTPPL_SYSINIT_ROM\n\nIndicates that the card contains a\
+    \ system expansion ROM that should be configured at boot time.\n\n# 4.1.14 CISTPL_DEVICE_GEO\n\
+    \nThe cistpl_device_geo_t structure is given by:\n\n```\ntypedef struct cistpl_device_geo_t\
+    \ {\n    int\n    ngeo;\n    struct {\n        u_char  buswidth;\n        u_int\
+    \   erase_block;\n        u_int   read_block;\n        u_int   write_block;\n\
+    \        u_int   partition;\n        u_int   interleave;\n    } geo(CISTPL_MAX_DEVICES);\n\
+    } cistpl_device_geo_t;\n```\n\nThe erase_block, read_block, and write_block sizes\
+    \ are in units of buswidth times interleave.\nThe partition size is in units of\
+    \ erase_block."
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Card Information Structure Definitions\n\n# 4.1.15 CISTPL_VERS_2\n\ncistpl_vers_2_t\
+    \ structure is given by:\n\n```\ntypedef struct cistpl_vers_2_t {\n    u_char\
+    \       vers;\n    u_char       comply;\n    u_short      dindex;\n    u_char\
+    \       vspec8, vspec9;\n    u_char       nhdr;\n    int          vendor, info;\n\
+    \    char         str[244];\n} cistpl_vers_2_t;\n```\n\nThe vers field should\
+    \ be 0. The comply flag indicates the degree of standard compliance and also be\
+    \ 0. The dindex field reserves the specified number of bytes at the start of common\
+    \ memory. The vspec8 and vspec9 fields may contain vendor-specific information.\
+    \ The nhdr field gives the number of copies of the CIS that are present on this\
+    \ card. The str array two strings: a vendor name, and an informational message\
+    \ describing the card. The offset of the vendor string is given by vendor, and\
+    \ the offset of the product string is in info.\n\n# 4.1.16 CISTPL_ORG\n\ncistpl_org_t\
+    \ structure is given by:\n\n```\ntypedef struct cistpl_org_t {\n    u_char  data_org;\n\
+    \    char    desc[30];\n```\n\nThis tuple describes the data organization of a\
+    \ memory partition. The following values are defined for data_org:\n\n+   CISTPL_ORG_FS\n\
+    \nThe partition contains a filesystem.\n\n+   CISTPL_ORG_APPSPEC\n\nThe partition\
+    \ is in an application specific format.\n\n+   CISTPL_ORG_XIP\n\nThe partition\
+    \ follows the Execute-In-Place specification.\n\nThe desc field gives a text description\
+    \ of the data organization.\n\n# 4.1.17 CISTPL_FORMAT\n\ncistpl_format_t structure\
+    \ is given by:"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Card Information Structure Definitions\n\n```\ntypedef struct cist_org_t\
+    \ {\n  u_char  type;\n  u_char  edc;\n  u_int   offset;\n  u_int   length;\n}\n\
+    ```\n\nThis tuple describes the data recording format for a memory region. The\
+    \ following values are defined for type:\n\nCISTPL_FORMAT_DISK\n\nThe partition\
+    \ uses a disk-like format.\n\nCISTPL_FORMAT_MEM\n\nThe partition uses a memory-like\
+    \ format.\n\nThe following values are defined for edc:\n\nCISTPL_EDC_NONE\n\n\
+    No error detection code is used.\n\nCISTPL_EDC_CKSUM\n\nEach block has a one-byte\
+    \ arithmetic checksum.\n\nCISTPL_EDC_CRC\n\nEach block has a two-byte cyclic redundancy\
+    \ check.\n\nCISTPL_EDC_PCC\n\nThe entire partition has a one-byte checksum.\n\n\
+    The offset specifies the address of the first data byte, and length specifies\
+    \ the total number of bytes in this partition.\n\n# 4.2 CIS configuration register\
+    \ definitions\n\nThe PC standard defines a few standard configuration registers\
+    \ located in a card's memory space. A card's CONFIG tuple specifies which of these\
+    \ registers are implemented. Programs using these definitions include:\n\n```\n\
+    #include \"cisreg.h\"\n```\n\n# 4.2.1 Configuration Option Register\n\nThis register\
+    \ should be present for virtually all I/O cards. Writing to this register selects\
+    \ a configuration table entry and enables a card's IO functions.\n\nThe following\
+    \ bit fields are defined:"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# 4. Card Information Structure Definitions
+
+
+    COR_CONFIG_MASK
+
+
+    Specifies the configuration table index describing the card''s current operating
+    mode.
+
+
+    COR_LEVEL_REQ
+
+
+    Specifies that the card should generate level mode (edge-triggered) interrupts,
+    the default.
+
+
+    COR_SOFT_RESET
+
+
+    Setting this bit performs a “soft” reset operation. Drivers should use the ResetCard
+    call to reset a card, rather than writing directly to this register.
+
+
+    # 4.2.2 Card Configuration and Status Register
+
+
+    The following bit fields are defined:
+
+
+    CCSR_INTR_ACK
+
+
+    If this bit is set, the CCSR_INTR_PENDING bit will remain set until it is explicitly
+    cleared.
+
+
+    CCSR_INTR_PENDING
+
+
+    Signals that the card is currently asserting an interrupt request. This signal
+    may be helpful for supporting interrupt sharing.
+
+
+    CCSR_POWER_DOWN
+
+
+    Setting this bit signals the card should enter a power down state.
+
+
+    CCSR_AUDIO_ENA
+
+
+    Specifies that the card''s audio output should be enabled.
+
+
+    CCSR_IODISS
+
+
+    This is used by the host to indicate that it can only perform 8-bit IO operations
+    and 16-bit accesses be carried out as two 8-bit accesses.
+
+
+    CCSR_SIGCHG_ENA
+
+
+    This indicates to the card that it should use the SIGCHG signal to indicate changes
+    in the WP, READY, BVD1, and BVD2 signals.
+
+
+    CCSR_CHANGED
+
+
+    This bit signals to the host that one of the signals in the Pin Replacement Register
+    has changed state.
+
+
+    # 4.2.3 Pin Replacement Register
+
+
+    Signals in this register replace signals that are not available when a socket
+    is operating in memory and IO mode. An IO card will normally assert the SIGCHG
+    signal to indicate that one of these signals has changed state, a driver can pull
+    this register to find out specifically what happened.
+
+
+    The following bit fields are defined:
+
+
+    PRR_WP_STATUS
+
+
+    The current state of the write protect signal.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 4. Card Information Structure Definitions
+
+
+    PRR_READY_STATUS
+
+    The current state of the ready signal.
+
+
+    PRR_BVD2_STATUS
+
+    The current state of the battery warn signal.
+
+
+    PRR_BVD1_STATUS
+
+    The current state of the battery dead signal.
+
+
+    PRR_WP_EVENT
+
+    Indicates that the write protect signal has changed state since the PRR register
+    was last read.
+
+
+    PRR_READY_EVENT
+
+    Indicates that the ready signal has changed state since the PRR register was last
+    read.
+
+
+    PRR_BVD2_EVENT
+
+    Indicates that the battery warn signal has changed state since the PRR register
+    was last read.
+
+
+    PRR_BVD1_EVENT
+
+    Indicates that the battery dead signal has changed state since the PRR register
+    was last read.
+
+
+    This register can also be written. In this case, the STATUS bits act as a mask;
+    if a STATUS bit is set, the corresponding EVENT bit is updated by the write.
+
+
+    # 4.2.4 Socket and Copy Register
+
+
+    This register is used when identical cards may be set up to share the same range
+    of IO ports, to emulate an ISA card that would control several devices. For example,
+    an ISA hard drive controller might control several drives, selectable by writing
+    a drive number to an IO port. For several card drives to emulate this controller
+    interface, each needs to “know” which drive it is, so that it can identify which
+    IO operations are intended for it.
+
+
+    The following bit fields are defined:
+
+
+    SCR_SOCKET_NUM
+
+    This should indicate the socket number which the card is located.
+
+
+    SCR_COPY_NUM
+
+    If several identical cards are installed in a system, this field should be set
+    to a unique number identifying which of the cards this is.
+
+
+    # 4.2.5 Extended Status Register
+
+
+    The following bit fields are defined:
+
+
+    ESR_REQ_ATTN_ENA
+
+    When set, the CCSR_CHANGED bit will be set when the ESR_REQ_ATTN bit is set, possibly
+    generating a status change interrupt.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 5. Card Services Event Handling\n\nESR_REQ_ATTN\n\nSignals a card event,\
+    \ such as an incoming call for a modem.\n\n# 4.2.6 IO Base and Size Registers\n\
+    \nFor multifunction cards, these registers are used to tell the card how the host\
+    \ IO windows have been configured for each card. There are four IO Base registers,\
+    \ int priority, CISREG_IOBASE_0 to CISREG_IOBASE_3, for the low-order high-order\
+    \ bytes of an IO address up to 32 bits. CISREG_IOSIZE register is supposed to\
+    \ be written as the number of IO ports allocated, minus one. For MFC-compliant\
+    \ cards, Card Services will automatically set all of these registers when RequestConfiguration\
+    \ is called.\n\n# 5 Card Services Event Handling\n\nCard Services events have\
+    \ several sources:\n\n+   * Card status changes reported by the low-level socket\
+    \ drivers.\n* Artificial events generated by Card Services itself.\n* Advanced\
+    \ Power Management (APM) events.\n* Events generated by other Card Services clients.\n\
+    \nSocket driver may be either interrupt-driven or polled.\n\n# 5.1 Event handler\
+    \ operations\n\nWhen Card Services recognizes an event has occurred, it checks\
+    \ the event mask of each client to determine which clients should receive an event\
+    \ notification. When a client registers with Card Services, it specifies an event\
+    \ handler callback function. This handler should have the form:\n\n```\nint (*event_handler)(event_t,\
+    \ int priority, event_callback_args_t *args);\n```\n\nThe priority is set to either\
+    \ CS_EVENT_PRI_LOW for ordinary events, or CS_EVENT_PRI_HIGH for events that require\
+    \ an immediate response. The only high priority event is CS_EVENT_CARD_REMOVAL.\
+    \ A client event handler should process this event as efficiently as possible\
+    \ so that Card Services can quickly notify others.\n\nThe event_callback_args_t\
+    \ is structured by:\n\n```\ntypedef struct event_callback_args_t {\n    client_handle_t\n\
+    \    client_handle;\n    void\n    *info;\n    void\n    *mtdrequest;\n    void\n\
+    \    *buffer;\n    void\n    *misc;\n    void\n    *client_data;\n    struct bus_operations\n\
+    \    *bus;\n} event_callback_args_t;\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 5. Card Services Event Handling
+
+
+    The client_handle member is set to handle the client whose socket was responsible
+    for the event. This is useful if a driver is bound to several sockets. The info
+    field is currently used to return an exit status from ResetCard. The client_data
+    field may be used by a driver to point to a local data structure associated with
+    this device. The remaining fields are unused.
+
+
+    For sockets that do not directly map cards into the host IO and memory space,
+    the bus field is a pointer to a table of entries for IO primitives for this socket.
+
+
+    # 5.2 Event descriptions
+
+
+    ```
+
+    CS_EVENT_CARD_INSERTION
+
+    ```
+
+
+    This event signals that a card has been inserted. If a driver is bound to an already
+    occupied socket, Card Services will send the driver an artificial insert event.
+
+
+    ```
+
+    CS_EVENT_CARD_REMOVAL
+
+    ```
+
+
+    This event signals that a card has been removed. This event should be handled
+    with minimum delay so that Card Services can notify all clients as quickly as
+    possible.
+
+
+    ```
+
+    CS_EVENT_BATTERY_LOW
+
+    ```
+
+
+    This event signals a change of state of the “battery low” signal.
+
+
+    ```
+
+    CS_EVENT_BATTERY_DEAD
+
+    ```
+
+
+    This event signals a change of state of the “battery dead” signal.
+
+
+    ```
+
+    CS_EVENT_READY_CHANGE
+
+    ```
+
+
+    This event signals a change of state of the “ready” signal.
+
+
+    ```
+
+    CS_EVENT_WRITE_PROTECT
+
+    ```
+
+
+    This event signals a change of state of the “write protect” signal.
+
+
+    ```
+
+    CS_EVENT_REGISTRATION_COMPLETE
+
+    ```
+
+
+    This event is sent to a driver after a successful call to RegisterClient.
+
+
+    ```
+
+    CS_EVENT_RESET_REQUEST
+
+    ```
+
+
+    This event is sent when a client calls ResetCard. An event handler can veto the
+    reset operation by returning failure.
+
+
+    ```
+
+    CS_EVENT_RESET_PHYSICAL
+
+    ```
+
+
+    This event is sent to all clients before a reset signal is sent to a card.
+
+
+    ```
+
+    CS_EVENT_CARD_RESET
+
+    ```
+
+
+    This event signals that a reset operation is finished. The success or failure
+    of the reset should be determined using GetStatus.
+
+
+    ```
+
+    CS_EVENT_RESET_COMPLETE
+
+    ```
+
+
+    This event is sent to a client that has called ResetCard to signal the end of
+    reset processing.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 6. Memory Technology Drivers
+
+
+    CS_EVENT_PM_SUSPEND
+
+
+    This event signals that Card Services has received either a user initiated or
+    APM suspend request. An event handler can veto the suspend by returning failure.
+
+
+    CS_EVENT_PM_RESUME
+
+
+    This signals that the system is back on line after a suspend/resume cycle.
+
+
+    CS_EVENT_MTD_REQUEST
+
+
+    This is used to initiate an MTD memory operation. A description of the request
+    is passed in the mdrequest field of the callback arguments. A host buffer address
+    may be passed in buffer.
+
+
+    CS_EVENT_ERASE_COMPLETE
+
+
+    This is used to signal a client that a queued erase operation has completed. A
+    pointer to the erase entry is returned in the info field of the callback arguments.
+
+
+    # 5.3 Client driver handling responsibilities
+
+
+    A client driver should respond to CS_EVENT_CARD_INSERTION and CS_EVENT_CARD_REMOVAL
+    events by configuring and unconfiguring the socket. Because card removal is a
+    high priority event, the driver should immediately block IO to the socket, by
+    setting a flag in a device structure, and schedule all shutdown processing to
+    happen later using a timer interrupt.
+
+
+    When a CS_EVENT_PM_RESET_REQUEST event is received, a driver should block IO and
+    receive a locked socket configuration. When a CS_EVENT_CARD_RESET is received,
+    a driver should restore the socket configuration and unlock IO.
+
+
+    A CS_EVENT_PM_SUSPEND event should be handled something like a CS_EVENT_PM_RESET_REQUEST
+    event, in that IO should be blocked and the socket configuration should be restored.
+    When a CS_EVENT_PM_RESUME event is received, a driver can expect a card to be
+    ready to be reconfigured, similar to when a CS_EVENT_CARD_RESET event is received.
+
+
+    # 6 Memory Technology Drivers
+
+
+    A Memory Technology Driver ("MTD") is used by Card Services to implement memory
+    services for a particular type of memory device. An MTD should register as a normal
+    Card Client with a call to RegisterClient. When it receives a card insert event,
+    it should use GetFirstRegion and GetNextRegion to identify regions it will administer.
+    Then, it should RegisterMTD to take control of these regions. MTD read, write,
+    copy, and erase requests are packed into CS_EVENT_MTD_REQUEST events by Card Services,
+    and passed to the MTD''s event handler for processing.
+
+
+    # 6.1 MTD request handling
+
+
+    An MTD receives requests from Card Services in the form of CS_EVENT_MTD_REQUEST
+    events. Card Services pass a description of the mdrequest field of the callback
+    arguments. For requests that transfer data to or from the host, the host buffer
+    address is passed in the buffer.
+
+
+    The mdrequest_t structure is given by:'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\ntypedef struct mtd_request_t {\n    u_int SrcCardOffset;\n    u_int DestCardOffset;\n\
+    \    u_int TransferLength;\n    u_int Function;\n    u_long MediaID;\n    u_int\
+    \ Status;\n    u_int Timeout;\n} mtd_request_t;\n```\n\nThe Function field is\
+    \ mapped and describes the action to be performed by this request:\n\n# MTD_REQ_ACTION\n\
+    \nEither MTD_REQ_ERASE, MTD_REQ_READ, MTD_REQ_WRITE, or MTD_REQ_COPY.\n\n# MTD_REQ_NOERASE\n\
+    \nFor a write command that is sized and aligned on erase block boundaries, this\
+    \ specifies that no erase should be performed.\n\n# MTD_REQ_VERIFY\n\nSpecifies\
+    \ that writes should be verified.\n\n# MTD_REQ_READY\n\nIndicates that this request\
+    \ is a retry of a previously request that was delayed until the card asserted\
+    \ READY.\n\n# MTD_REQ_TIMEOUT\n\nIndicates that this request is a retry of a previously\
+    \ request that was delayed by a timeout.\n\n# MTD_REQ_FIRST\n\nIndicates that\
+    \ this request is the first in a series of requests.\n\n# MTD_REQ_LAST\n\nIndicates\
+    \ that this request is the last of a series of requests.\n\n# MTD_REQ_KERNEL\n\
+    \nIndicates that the host buffer for a read or write command is located in kernel\
+    \ memory, as opposed to user memory.\n\nThe MediaID field is value specified in\
+    \ the RegisterMTD for this region. The Status field is used by the MTD when it\
+    \ is unable to satisfy a request because a device is busy. MTD requests normally\
+    \ run without blocking. If an MTD request would block, it would return an error\
+    \ code of CS_BUSY, and set Status to one of the following values:\n\n# MTD_WAITREQ\n\
+    \nSpecifies that the request should be retried after another MTD request currently\
+    \ in progress completes.\n\n# MTD_WAITTIMER\n\nSpecifies that the request should\
+    \ be continued after the time specified in the timeout field."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# 6. Memory Technology Drivers\n\nMTD_WAITRDY\n\nSpecifies that the request\
+    \ should be continued when the card signals READY, or when the time specified\
+    \ in Timeout lapses, whichever happens first.\n\nMTD_WAITPOWER\n\nSpecifies that\
+    \ the request should be retried after something happens that affects power availability\
+    \ to the socket.\n\nFor MTD_WAITIMER and MTD_WAITRDY, the Timeout field will specify\
+    \ the timeout interval in milliseconds.\n\n# 6.2 MTD helper functions\n\nSince\
+    \ an MTD processes requests generated by Card Services, there may be some restrictions\
+    \ on the sorts of Card Services calls that can be safely made from the MTD event\
+    \ handler. MTD helper functions provide a limited set of special services that\
+    \ may be needed by an MTD but would be tricky to implement using the normal Card\
+    \ Services. In the Linux implementation, most CS calls can be safely made from\
+    \ an MTD event handler, the MTD helper interface is included for compatibility.\n\
+    \n```\n#include \"cs.types.h\"\n#include \"cs.h\"\n#include \"bulkmem.h\"\n\n\
+    int MTDHelperEntry(int subfunc, void *arg, void *arg2);\n```\n\n# 6.2.1 MTDRequestWindow,\
+    \ MTDRleaseWindow\n\n```\nint MTDHelperEntry(MTDRequestWindow, client_handle_t\
+    \ *handle, win_req_t *mod);\nint MTDHelperEntry(MTDRleaseWindow, window_handle_t\
+    \ handle);\n```\n\nThese services are identical to the standard Card Services\
+    \ RequestWindow and ReleaseWindow calls.\n\n# 6.2.2 MTDModifyWindow\n\n```\nint\
+    \ MTDHelperEntry(MTDModifyWindow, memory_handle_t handle, mtd_mod_req_t *mod);\n\
+    ```\n\nThe mtd_mod_req_t structure is given by:\n\n```\ntypedef struct mtd_mod_req_t\
+    \ {\n\tu_int\t\tAttributes;\n\tu_int\t\tAccessSpeed;\n\tu_int\t\tCardOffset;\n\
+    } mtd_mod_req_t;\n```\n\nMTDModifyWindow is essentially equivalent to using the\
+    \ normal ModifyWindow and MapMemPage calls.\n\nThe following flags can be specified\
+    \ in Attributes:"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# 6. Memory Technology Drivers\n\nWIN_MEMORY_TYPE\n\nEither WIN_MEMORY_TYPE_CM\
+    \ for common memory, or WIN_MEMORY_TYPE_AM for attribute memory.\n\nWIN_USE_WAIT\n\
+    \nSpecifies that the controller should observe the card's MWAIT signal.\n\nA window\
+    \ configured with MTDMifyWindow will always be enabled, and have a 16 bit data\
+    \ width.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe memory handle is invalid.\n\n\
+    # 6.2.3 MTDSVpp\n\n```\nint MTDHelperEntry(MTDSVpp, client_handle_t client, mtd_vpp_req_t\
+    \ *req);\n```\n\n```\ntypedef struct mtd_vpp_req_t {\n    u_char    Vpp1, Vpp2;\n\
+    } mtd_vpp_req_t;\n```\n\nMTDSVpp changes the programming voltage for a socket.\
+    \ Vpp1 and Vpp2 should be given in units of 1/10 volt. Currently, Vpp1 should\
+    \ always equal Vpp2.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client handle is\
+    \ invalid.\n\nCS_BAD_VPP\n\nThe specified Vpp is not available, or Vpp1 does not\
+    \ equal Vpp2.\n\n# 6.2.4 MTDRDYMask\n\n```\nint MTDHelperEntry(MTDRDYMask, client_handle_t\
+    \ client, mtd_rdy_req_t *req);\n```\n\n```\ntypedef struct mtd_rdy_req_t {\n \
+    \   u_int    Mask;\n} mtd_rdy_req_t;\n```\n\nMTDRDYMask selects whether or not\
+    \ CS_EVENT_READY_CHANGE events will be enabled. The client has already indicated\
+    \ to Card Services that it should receive ready change events, via a call to either\
+    \ RegisterClient or SetEventMask. Ready change events will be enabled if the CS_EVENT_READY_CHANGE\
+    \ bit is set in the Mask argument.\n\nReturn codes:\n\nCS_BAD_HANDLE\n\nThe client\
+    \ handle is invalid."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Driver Services Interface\n\nDriver Services provides a link between Card\
+    \ Services drivers and user mode utilities like the cardmgr daemon. It is a sort\
+    \ of Card Services “super-client”. Driver Services use the BindDevice function\
+    \ to link other clients with their corresponding cards. Unlike other clients,\
+    \ Driver Services remains bound to all sockets as are inserted and removed.\n\n\
+    # 7.1 Interface to other client drivers\n\nDriver Services keeps track of all\
+    \ client drivers that are installed and ready to attach to a socket. Client drivers\
+    \ need to have entry points for creating and deleting device “instances”, where\
+    \ one device instance is everything needed to manage one physical card.\n\nEach\
+    \ client driver is identified by a unique 16-character tag that has the special\
+    \ type dev_info_t, defined in cs_types.h. Each device instance is described by\
+    \ a dev_link_t structure.\n\n# 7.1.1 The dev_link_t structure\n\nThe dev_node_t\
+    \ and dev_link_t data structures are given by:\n\n```\n#include \"ds.h\"\n\ntypedef\
+    \ struct dev_node_t {\n    char dev_name[DEV_NAME_LEN];\n    u_char major, minor;\n\
+    \    struct dev_node_t *next;\n}\n\ntypedef struct dev_link_t {\n    dev_node_t\
+    \ *dev;\n    u_int state, open;\n    struct wait_queue *pending;\n    struct timer_list\
+    \ release;\n    client_handle_t handle;\n    io_req_t io;\n    irq_req_t irq;\n\
+    \    config_req_t conf;\n    window_handle_t win;\n    void *priv;\n    struct\
+    \ dev_link_t *next;\n} dev_link_t;\n```\n\nThe field of the dev_link_t structure\
+    \ points to a linked list of dev_node_t structures. In dev_node_t, the dev_name\
+    \ field is filled by the driver with a device file name for accessing this device,\
+    \ for example, the serial_cs driver uses names like “ttyS1”. The major and minor\
+    \ device numbers for accessing this device. Driver Services relays these fields\
+    \ to user mode programs via the DS_GET_DEVICE_INFO ioctl.\n\nIn dev_link_t, the\
+    \ state field is used to keep track of the current device state. The following\
+    \ flags are:"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# 7. Driver Services Interface\n\nDEV_PRESENT\n\nIndicates that the card is\
+    \ present. This bit should be set and cleared by the driver's event handler to\
+    \ respond to card insertion and removal events.\n\nDEV_CONFIG\n\nIndicates that\
+    \ the card is configured for use.\n\nDEV_CONFIG_PENDING\n\nIndicates that configuration\
+    \ is in progress.\n\nDEV_SUSPEND\n\nIndicates that the card is suspended.\n\n\
+    DEV_BUSY\n\nIndicates that an IO operation is in progress. This bit may be used\
+    \ as an interlock to prevent access conflicts.\n\nDEV_STALE_CONFIG\n\nFor some\
+    \ drivers, when a running card is ejected, the socket should not be unconfigured\
+    \ until any devices corresponding to this card are closed. This flag indicates\
+    \ that the socket should be unconfigured when the device is closed.\n\nDEV_STALE_LINK\n\
+    \nA driver instance should not be deleted until all its resources are released.\
+    \ This flag indicates that the driver instance should be freed as soon as the\
+    \ socket is unconfigured.\n\nThe open field is a usage count for this device.\
+    \ The device should only be freed when the open count is zero. The pending field\
+    \ can be used to manage a queue of processes waiting to use the device.\n\nThe\
+    \ release field is used to schedule shutdown processing when a card is ejected.\
+    \ A removal event needs to be handled at high priority, so a driver's event handler\
+    \ will typically deal with an eject by resetting the DEV_PRESENT bit in the device\
+    \ state, scheduling the shutdown to running at a later time.\n\nThe handle, io,\
+    \ irq, conf, and win fields comprise all the data structures needed to configure\
+    \ an ordinary PC Card device\n\nThe priv field can be used for any sort of private\
+    \ data structure to manage the device. The next field can be linked to lists of\
+    \ dev_link_t structures, for drivers that can handle multiple instances.\n\n#\
+    \ 7.1.2 register_pccard_driver\n\n```\nint register_pccard_driver(dev_info_t *dev_info,\n\
+    \    dev_link_t (*attach)(void),\n    void (*detach)(dev_link_t *timer));\n```\n\
+    \nregister_pccard_driver informs Driver Services that a client driver is present\
+    \ and ready to be bound to sockets. When Driver Services receives a DS_BIND_REQUEST\
+    \ ioctl that matches the driver's dev_info string, it will call the driver's attach()\
+    \ entry point. When it gets a DS_UNBIND_REQUEST ioctl, it will call detach()."
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# 7. Driver Services Interface\n\n# 7.1.3 unregister_pccard_driver\n\n```\n\
+    int unregister_pccard_driver(dev_info_t *dev_info);\n```\n\nThis informs Driver\
+    \ Services that it should no longer bind sockets to the specified client driver.\n\
+    \n# 7.2 The CardBus client interface\n\nThe CardBus card interface is designed\
+    \ to be essentially an extension of the PCI bus. CardBus cards are typically designed\
+    \ using standard PCI chip sets. For simplicity in the client drivers, and maximum\
+    \ code sharing with kernel PCI drivers, we provide a sort of “super client” for\
+    \ configuring CardBus cards. This is implemented in the cb_enable module.\n\n\
+    The cb_enable module is somewhat similar in philosophy to the Driver Services\
+    \ for 16-bit cards. CardBus client drivers register with it, and provide a few\
+    \ entry points for handling device setup and shutdown, as well as power management\
+    \ handling. The cb_enable module takes care of configuring the card and fielding\
+    \ Card Services Events. So, all CardBus-specific code is the enabler rather than\
+    \ the PCI driver.\n\nIt is not mandatory for CardBus clients to use the cb_enable\
+    \ interface. If a particular client requires more direct control over its CardBus\
+    \ configuration than provided by the cb_enable module, it can register directly\
+    \ with Card Services and perform Card Services directly, just like a 16-bit client.\n\
+    \nThe cb_enable module has two entry points: register_driver and unregister_driver.\
+    \ At some point, these functions may migrate into the kernel: hence the generic\
+    \ names.\n\n# 7.2.1 register_driver\n\n```\nint register_driver(struct driver_operations\
+    \ *ops);\n```\n\nThe driver_operations structure is given by:\n\n```\nstruct driver_operations\
+    \ {\n    char *name\n    dev_node_t *(attach)(dev_locator *tloc);\n    void (*suspend)(dev_node_t\
+    \ *dev);\n    void (*resume)(dev_node_t *dev);\n    void (*detach)(dev_node_t\
+    \ *dev);\n};\n```\n\nThe name field is used by cb_enable when registering this\
+    \ client with Card Services. The rest of the structure describes a set of event\
+    \ handlers for this client.\nThe function returns 0 on success, and -1 on failure.\n\
+    \n# 7.2.2 unregister_driver\n\n```\nvoid unregister_driver(struct driver_operations\
+    \ *ops);\n```\n\nThe ops parameter should be the same structure pointer passed\
+    \ to prior successful call to register_driver. The client should take care to\
+    \ only call this function when no devices are currently being managed by the client."
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# 7. Driver Services Interface\n\n# 7.2.3 The driver_operations entry points\n\
+    \nThe attach() entry point is used to configure a single device, given a \"device\
+    \ locator\" structure describing where to find it.\n\nThe dev_locator_t structure\
+    \ is given by:\n\n```\ntypedef struct dev_locator_t {\n    enum { LOC_ISA, LOC_PCI\
+    \ } bus;\n    union {\n        struct {\n            u_short io_base_1, io_base_2;\n\
+    \            u_long mem_base;\n            u_char irq, dma;\n        } isa;\n\
+    \        struct {\n            u_char bus;\n            u_char devfn;\n      \
+    \  } pci;\n    } b;\n} dev_locator_t;\n```\n\nThe attach() function should return\
+    \ either NULL or a valid dev_node_t structure describing the new device. All other\
+    \ entry points use this pointer to identify the device to be manipulated. The\
+    \ cb_enabler module will invoke the attach() and detach() entry points in response\
+    \ to card insertion and removal events. The suspend() and resume() entry points\
+    \ will be called in response to power management events.\n\nThere is no way to\
+    \ refuse a suspend() or detach(). When a detach() event is received, the driver\
+    \ should block any subsequent IO to the specified device, but may preserve internal\
+    \ data structures until the kernel device is actually closed.\n\n# 7.3 Interface\
+    \ to user mode utilities\n\nDriver Services creates a pseudo-device for communicating\
+    \ with user mode PC Cards. The major number of the device is chosen dynamically,\
+    \ and PC Cards use /proc/devices to determine it. Minor device corresponds to\
+    \ socket numbers, starting with 0.\n\nOnly one process is allowed to open a socket\
+    \ for read/write. Other processes can open the socket in read-only. A read-only\
+    \ connection to Driver Services can perform a subset of ioctl. A read/write connection\
+    \ can issue all ioctl, and can also receive Card Services event notifications.\n\
+    \n# 7.3.1 Card Services event notifications\n\nDriver Services implements read()\
+    \ and select() functions for event notification. Reading from a PC Card device\
+    \ returns an unsigned value containing all the events received by Driver Services\
+    \ since the previous read(). If no events have been received, the call will block\
+    \ until the next event. A select() can be used to monitor several sockets for\
+    \ new events.\n\nThe following events are monitored by Driver Services: CS_EVENT_CARD_INSERTION,\
+    \ CS_EVENT_CARD_REMOVAL, CS_EVENT_RESET_PHYSICAL, CS_EVENT_CARD_RESET, and CS_EVENT_RESET_COMPLETE."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# 7. Driver Services Interface\n\n# 7.3.2 Ioctl descriptions\n\nMost Driver\
+    \ Services ioctl operations directly map to Card Services functions. An ioctl\
+    \ call has the form:\n\n```\nint ioctl(int fd, int cmd, ds_ioctl_arg *arg);\n\
+    ```\n\nThe ds_ioctl_arg_t structure is given by:\n\n```\ntypedef union ds_ioctl_arg_t\
+    \ {\n\tservino_t\t\tservino;\n\tadjust_t\t\tadjust;\n\tconfig_info_t\t\tconfig;\n\
+    \ntuple_t\t\ttuple;\n\ntuple_parse_t\t\ntuple_parse;\n\tclient_req_t\t\tclient_req;\n\
+    \tstatus_t\t\tstatus;\n\tconf_reg_t\t\tconf_reg;\n\tcisinfo_t\t\tcisinfo;\n\t\
+    region_info_t\t\tregion;\n\tbind_info_t\t\tbind_info;\n\tmtd_info_t\t\tmtd_info;\n\
+    \tcidump_t;\t\tcidump;\n} ds_ioctl_arg_t;\n```\n\nThe following ioctl commands\
+    \ execute the corresponding Card Services function:\n\nDS_GET_CARD_SERVICES_INFO\n\
+    \nCalls CardServices(GetServicesInfo, ..., &arg->servino).\n\nDS_ADJUST_RESOURCE_INFO\n\
+    \nCalls CardServices(AdjustResourceInfo, ..., &arg->adjust).\n\nDS_GET_CONFIGURATION_INFO\n\
+    \nCalls CardServices(GetConfigurationInfo, ..., &arg->config).\n\nDS_GET_FIRST_TUPLE\n\
+    \nCalls CardServices(GetFirstTuple, ..., &arg->tuple).\n\nDS_GET_NEXT_TUPLE\n\n\
+    Calls CardServices(GetNextTuple, ..., &arg->tuple_parse.data).\n\nDS_GET_TUPLE_DATA\n\
+    \nCalls CardServices(GetTupleData, ..., &arg->tuple_parse.tuple). The tuple data\
+    \ is returned in arg->tuple_parse.data.\n\nDS_PARSE_TUPLE\n\nCalls CardServices(ParseTuple,\
+    \ ..., &arg->tuple_parse.tuple, &arg->tuple_parse.parse)."
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# 7. Driver Services Interface\n\nDS_RESET_CARD\nCalls CardServices(ResetCard,\
+    \ ...).\n\nDS_GET_STATUS\nCalls CardServices(GetStatus, ..., &arg->status).\n\n\
+    DS_ACCESS_CONFIGURATION_REGISTER\nCalls CardServices(AccessConfigurationRegister,\
+    \ ..., &arg->conf_reg).\n\nDS_VALIDATE_CIS\nCalls CardServices(ValidateCIS, ...,\
+    \ &arg->cisinfo).\n\nDS_SUSPEND_CARD\nCalls CardServices(SuspendCard, ...).\n\n\
+    DS_RESUME_CARD\nCalls CardServices(ResumeCard, ...).\n\nDS_EJECT_CARD\nCalls CardServices(EjectCard,\
+    \ ...).\n\nDS_INSERT_CARD\nCalls CardServices(InsertCard, ...).\n\nDS_GET_FIRST_REGION\n\
+    Calls CardServices(GetFirstRegion, ..., &arg->region).\n\nDS_GET_NEXT_REGION\n\
+    Calls CardServices(GetNextRegion, ..., &arg->region).\n\nDS_REPLACE_CIS\nCalls\
+    \ CardServices(ReplaceCIS, ..., &arg->cisump).\n\nThe following ioctl invoke Driver\
+    \ Services functions. They act on bind_info_t structures:\n\n```\ntypedef struct\
+    \ bind_info_t {\n    dev_info;\n    dev_info_t\n    u_char\n    function;\n  \
+    \  struct dev_info_t\n    *instance;\n    char\n    name[DEV_NAME_LEN];\n    u_char\n\
+    \    major, minor;\n    void\n    *next;\n} bind_info_t;\n```\n\nDS_BIND_REQUEST\n\
+    This calls a socket to a client device. The specified device ID_info is looked\
+    \ up in the list of registered drivers. If this is a multifunction card, the function\
+    \ field identifies which card function is being bound. If found, the driver is\
+    \ bound to this socket and function using the BindDevice call. Then, Driver Services\
+    \ calls the client's attach() entry to create a device instance. The new dev_link_t\
+    \ pointer is returned in instance."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# 8. Anatomy of a Card Services Client Driver\n\nDS_GET_DEVICE_INFO\n\nThis\
+    \ call retrieves the dev_name, major, and minor entries from the dev_link_t structure\
+    \ pointed to by instance.\n\nDS_UNBIND_REQUEST\n\nThis calls the detach() function\
+    \ for the specified driver and instance, shutting down this device.\n\nFinally,\
+    \ the DS_BIND_MTD request takes an argument of type mtd_info_t:\n\n```\ntypedef\
+    \ struct mtd_info_t {\n    dev_info dev_info;\n    u_int    Attributes;\n    u_int\
+    \    CardOffset;\n} mtd_info_t;\n```\n\nThis call associates an MTD identified\
+    \ by dev_info with a memory region described by Attributes and Cardoffset, which\
+    \ have the same meanings as the Card Services BindMTD call.\n\n# 8 Anatomy of\
+    \ a Card Services Client Driver\n\nEach release of the Linux Card Services package\
+    \ comes with a well-commented \"dummy\" client driver that should be used as a\
+    \ starting point for writing a new driver. Look for it in clients/dummy_cs.c.\
+    \ This is not just a piece of sample code; it is written as a sort of generic\
+    \ driver. If bound to an IO card, it will read the card's CIS and configure the\
+    \ card appropriately, assuming the card's CIS is complete and accurate.\n\n# 8.1\
+    \ Module initialization and cleanup\n\nAll loadable modules must supply init_module()\
+    \ and cleanup_module() functions, which are invoked by the module support when\
+    \ the module is installed and removed. A driver's init function should register\
+    \ the driver with Driver Services, using the register_pcard_driver(). The cleanup\
+    \ function should unregister_pcard_driver() to unregister from Driver Services.\
+    \ Depending on the driver, the cleanup function may also need to free any device\
+    \ structures that still exist at shutdown.\n\n# 8.2 The *attach() and *_detach()\
+    \ functions\n\n*_attach() entry point is responsible for creating an \"instance\"\
+    \ of the driver, setting up any data structures needed to manage one. The *attach()\
+    \ function should allocate and initialize a dev_link_t structure, and call RegisterClient\
+    \ to establish a link with Card Services. It returns a pointer to the new dev_link_t\
+    \ structure, or NULL if the instance could not be created.\n\n*detach() entry\
+    \ point deletes a driver instance created by a call to *attach(). It breaks the\
+    \ link with Card Services, using DeregisterClient.\n\n*attach() entry point is\
+    \ called by Driver Services when a card has been successfully identified and mapped\
+    \ to a mapping driver by DS_BIND_REQUEST ioctl(). The *detach() entry point is\
+    \ called in response to a DS_UNBIND_REQUEST ioctl() call."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# 8. Anatomy of a Card Services Client Driver
+
+
+    # 8.3 The *_config() and *_release() functions
+
+
+    The *_config() function is called to prepare a card for IO. Most drivers read
+    some configuration details from the card itself, but have at least some built-in
+    knowledge of how the device should be set up. For example, the serial card driver
+    reads a CFTABLE_ENTRY tuples to determine appropriate IO port addresses and corresponding
+    configuration indices, but the driver ignores interrupt information in the CIS.
+    The *_config() function parses relevant parts of a card''s CIS, then calls RequestIO,
+    RequestIn, and/ RequestWindow, then call RequestConfiguration.
+
+
+    When a card is successfully configured, the config() routine should run for the
+    dev_name, major, and minor fields in the dev_link_t structure. These fields will
+    be returned to user by Driver Services in response to a DS_DEVICE_INFO ioctl.
+
+
+    The *_release() function should release any resource allocated by a previous call
+    to *_config(), and blank the device''s dev_name field.
+
+
+    The *_config() and *_release functions are normally called in response to card
+    status change events or from timer interrupts. They, thus cannot sleep, and must
+    not call kernel functions that might block.
+
+
+    # 8.4 The client event handler
+
+
+    The *_event() entry point is called from Card Services to notify a driver of card
+    status change events.
+
+
+    # 8.5 Locking and synchronization issues
+
+
+    A configured socket should be released when all allocated devices are closed.
+    Releasing a socket allows its system resources to be allocated for another device.
+    If the driver allows resources are reallocated while IO to the original device
+    is still in progress, the original driver may interfere with use of the new device.
+
+
+    A driver instance should only be freed after its corresponding socket configuration
+    has been released. Card Services requires that the client release any allocated
+    resources before calling DeregisterClient
+
+
+    All loadable modules have a "use count" that is used by the system to determine
+    when it is safe to unload a module. In client drivers this is to increment the
+    use count when a device is opened, and decrement the count when a device is closed.
+    So, a driver can be unloaded whenever all allocated devices are closed. in particular,
+    a driver can be unloaded even if it is bound to a socket, and the module cleanup
+    needs to be able to free any such resources that are allocated. This will always
+    be safe; if the driver has a use count of zero, all devices are closed, which
+    means all active sockets can be released, and all instances can be detached.
+
+
+    If a *_release() is called while a device is still open, it should set the DEV_STALE_CONFIG
+    flag in the device state, to signal that the device should be released when the
+    driver''s close() function is called. If a *_detach() is called for a configured
+    device, the DEV_STALE_LINK flag should be set to signal that the instance should
+    be detached when the *_release() function is called.
+
+
+    # 8.6 Using Linux drivers to access PC Card devices
+
+
+    Many of the current client drivers use Linux driver code to perform IO operations.
+    The Card Services client module handles card configuration and responds to card
+    status change events, but delegates'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# 9. The Socket Driver Layer
+
+
+    device IO to a compatible driver for a conventional ISA bus card. In some cases,
+    a conventional driver can be used without modification. However, to fully support
+    PC features like hot swapping and power management, there needs to be some communication
+    between the PC Card client code and the device IO code.
+
+
+    Most Linux drivers expect to probe for devices at boot time, and are not designed
+    to handle adding and removing devices. One side-effect of the moves towards driver
+    modularization is that it is easily to adapt a modularized driver to handle removable
+    devices.
+
+
+    It is important that a device driver be able to recover from having a device disappear
+    at an inappropriate time. At best, the driver should check for device presence
+    before attempting any IO operation or before handling an interrupt. Loops that
+    check device status should have timeouts or they will eventually exit if a device
+    never.
+
+
+    The dummy cs may be used for loading legacy drivers for compatible PC Devices.
+    By binding dummy_cs to a card, the driver module may be able to detect and communicate
+    with the device as if it were not a PC Card. This arrangement will generally not
+    support clean hot swapping or power management functions, however may be useful
+    as a base for later developing a more full-featured client driver.
+
+
+    # 9 The Socket Driver Layer
+
+
+    In the PCMIA model, the "Socket Services" layer is a private API intended for
+    the use of Card Services. The API is based loosely on the PCMIA Socket Services
+    specification, but is oriented for support for the x86 laptop controller types.
+
+
+    # 9.1 Card Services entry points for socket drivers
+
+
+    Card Services provides special entry points for registering and unregistering
+    socket drivers:
+
+
+    ```
+
+    typedef int (*ss_entry_t)(u_int sock, u_int cmd, void *arg);
+
+    extern int register_ss_entry(int sock, ss_entry_t entry);
+
+    extern void unregister_ss_entry(int sock, ss_entry_t entry);
+
+    ```
+
+
+    The socket driver invokes register_ss_entry with nsock indicating how many sockets
+    are owned by this driver, and entry pointing to the function that will provide
+    socket services for these sockets. The unregister_ss_entry can be safely invoked
+    whenever Card Services does not have any callback functions registered for sockets
+    owned by this driver.
+
+
+    # 9.2 Services provided by the socket driver
+
+
+    Socket Services calls the following form:
+
+
+    ```
+
+    #include "pcmcia/ss.h"
+
+
+    int (*ss_entry)(u_int sock, int service, void *arg);
+
+    ```
+
+
+    Non-zero return codes indicate that a request failed.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# 9. The Socket Driver Layer\n\n# 9.2.1 SS_InquireSocket\n\n```\nint (*ss_entry)(u_int\
+    \ sock, SS_InquireSocket, socket_cap_t *cap);\n```\n\nThe socket_cap_t data structure\
+    \ is given by:\n\n```\ntypedef struct socket_cap_t {\n    u_int features;\n  \
+    \  u_int irq_mask;\n    u_int map_size;\n    u_char pci_irq;\n    u_char cardbus;\n\
+    \    struct bus_operations *bus;\n} socket_cap_t;\n```\n\nThe SS_Inquire service\
+    \ is to retrieve socket capabilities. The irq_mask field is a bit indicating whether\
+    \ ISA interrupts are configured for IO cards. The map_size field gives the granularity\
+    \ of memory windows. The pci_irq field, if not zero, is the PCI interrupt number\
+    \ assigned to this socket. It is independent of irq_mask, and can actually be\
+    \ used in any situation where exactly one interrupt is associated with a specific\
+    \ socket. For CardBus bridges, the cardbus field should be non-zero, and gives\
+    \ the PCI bus number of the CardBus side of the bridge.\n\nFor sockets that do\
+    \ not directly map cards to the host IO and memory space, the bus field is a pointer\
+    \ to a table of entry points for IO primitives for this socket.\n\nThe following\
+    \ flags may be specified in features:\n\n+   \n\n- **SS_CAP_PAGE_REGS**\n  Indicates\
+    \ that this socket supports full 32-bit addressing for 16-bit PC Card memory windows.\n\
+    \n- **SS_CAP_VIRTUAL_BUS**\n  Indicates that this 16-bit card memory and IO accesses\
+    \ must be performed using the bus operations table, rather than using native bus\
+    \ operations.\n\n- **SS_CAP_MEM_ALIGN**\n  Indicates that memory windows must\
+    \ be aligned by the bus size.\n\n- **SS_CAP_STATIC_MAP**\n  Indicates that memory\
+    \ windows are statically mapped at fixed locations in the host address space,\
+    \ and cannot be repositioned.\n\n- **SS_CAP_PCARD**\n  Indicates that this socket\
+    \ supports 16-bit PC cards.\n\n- **SS_CAP_CARDBUS**\n  Indicates that this supports\
+    \ 32-bit CardBus cards."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# 9. The Socket Driver Layer\n\n# 9.2.2 SS_RegisterCallback\n\n```\nint (*ss_entry)(u_int\
+    \ sock, SS_RegisterCallback, ss_callback_t *call);\n```\n\nThe ss_callback_t data\
+    \ structure is given by:\n\n```\ntypedef struct ss_callback_t {\n    void (*handler)(void\
+    \ *info, u_int events);\n    void *info;\n} ss_callback_t;\n```\n\nThe SS_RegisterCallback\
+    \ sets up a callback function to be invoked when the socket driver receives status\
+    \ change events. To unregister a callback, this function is called with a handler\
+    \ value of NULL. Only one callback function can be registered per socket.\n\n\
+    The handler will be called with the value of info that was passed to SS_RegisterCallback\
+    \ for this socket, and with a bit map of events in the events parameter. The following\
+    \ events are defined:\n\nSS_DETECT\n\n+   - A card detect change (insertion or\
+    \ removal) has been detected.\n\nSS_READY\n\n+   - A memory card's ready signal\
+    \ has changed state.\n\nSS_BATDEAD\n\n+   - A memory card has raised the battery-dead\
+    \ signal.\n\nSS_BATWARN\n\n+   - A memory card has raised the battery-low signal.\n\
+    \nSS_STSCHG\n\n+   - An IO has raised the status change signal.\n\n# 9.2.3 SS_GetStatus\n\
+    \n```\nint (*ss_entry)(u_int sock, SS_GetStatus, u_int *status);\n```\n\nThe SS_GetStatus\
+    \ service returns the current status of this socket. The status parameter will\
+    \ be constructed out of the following flags:\n\nSS_WRPROT\n\n+   - The card is\
+    \ write-protected.\n\nSS_BATDEAD\n\n+   - A memory card has raised the battery-dead\
+    \ signal.\n\nSS_BATWARN\n\n+   - A memory card has raised the battery-low signal."
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# 9. The Socket Driver Layer\n\nSS_READY\n\nA memory card has raised its ready\
+    \ signal.\n\nSS_DETECT\n\nA card is present.\n\nSS_POWERON\n\nPower has been applied\
+    \ to the socket.\n\nSS_STCHG\n\nAn IO card has raised the status change signal.\n\
+    \nSS_CARDBUS\n\nThe socket contains a CardBus card (as opposed to a 16-bit PC\
+    \ Card).\n\nSS_3VCARD\n\nThe card must be operated at no more than 3.3V.\n\nSS_XVCARD\n\
+    \nThe card must be operated at no more than X.XV (not yet defined).\n\n# 9.2.4\
+    \ SS_GetSocket, SS_SetSocket\n\n```\nint (*ss_entry)(u_int sock, SS_GetSocket,\
+    \ socket_state_t *);\nint (*ss_entry)(u_int sock, SS_SetSocket, socket_state_t\
+    \ *);\n```\n\nThe socket_state_t data structure is given by:\n\n```\ntypedef struct\
+    \ socket_state_t {\n    u_int\t\tflags;\n    u_int\t\tcsc_mask;\n    u_char\t\t\
+    Vcc, Vpp;\n    u_char\t\tio_irq;\n} socket_state_t;\n```\n\nThe csc_mask field\
+    \ indicates which event types should generate card status change interrupts. The\
+    \ following event types can be monitored:\n\nSS_DETECT\n\nCard detect changes\
+    \ (insertion or removal).\n\nSS_READY\n\nMemory card ready/busy changes.\n\nSS_BATDEAD\n\
+    \nMemory card battery-dead changes.\n\nSS_BATWARN\n\nMemory card battery-low changes."
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# 9. The Socket Driver Layer\n\nSS_STSCHG\n\nIO card status changes.\n\nThe\
+    \ Vcc and Vpp parameters are in units of 0.1 volts. If non-zero, io_irq specifies\
+    \ an interrupt number to be assigned to the card, in IO mode. The following fields\
+    \ are defined in flags:\n\nSS_PWR_AUTO\n\nIndicates that the socket should automatically\
+    \ power up sockets at card insertion time, if supported.\n\nSS_IOCARD\n\nIndicates\
+    \ that the socket should be configured for “memory and IO” interface mode, as\
+    \ opposed to simple memory card mode.\n\nSS_RESET\n\nIndicates that the card's\
+    \ hardware reset signal should be raised.\n\nSS_SPKR_ENA\n\nIndicates that speaker\
+    \ output should be enabled for this socket.\n\nSS_OUTPUT_ENA\n\nIndicates that\
+    \ data signals to the card should be activated.\n\n# 9.2.5 SS_GetIOOMap, SS_SetIOOMap\n\
+    \n```\nint (*ssentry)(u_int sock, SS_GetIOOMap, pccard_io_map *);\nint (*ssentry)(u_int\
+    \ sock, SS_SetIOOMap, pccard_io_map *);\n```\n\nThe pccard_io_map data structure\
+    \ is given by:\n\n```\ntypedef struct pccard_io_map {\n  u_char          map;\n\
+    \  u_char          flags;\n  u_short         speed;\n  u_short         start,\
+    \ stop;\n} pccard_io_map;\n```\n\nThe SS_GetIOOMap and SS_SetIOOMap entries are\
+    \ used to configure IO space windows. IO windows are assumed to not support address\
+    \ translation. The Linux Card Services layer assumes that each socket has at least\
+    \ two independently configurable IO port windows.\n\nThe map field specifies which\
+    \ IO map should be accessed. The speed field is the map access speed in nanoseconds.\
+    \ The start and stop fields give the lower and upper addresses for the IO map.\
+    \ The flags field is composed of the following:\n\nMAP_ACTIVE\n\nSpecifies that\
+    \ the address map should be enabled."
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# 9. The Socket Driver Layer\n\nMAP_16BIT\n\nSpecifies that the map should\
+    \ be configured for 16-bit accesses (as opposed to 8-bit).\n\nMAP_AUTOSZ\n\nSpecifies\
+    \ that the map should be configured to auto-size bus accesses in response to the\
+    \ card's IOCS16\n\nMAP_OWS\n\nRequests zero wait states, as opposed to standard\
+    \ ISA bus timing.\n\nMAP_WRPROT\n\nSpecifies that the map should be write protected.\n\
+    \nMAP_USE_WAIT\n\nSpecifies that access timing should respect the card's WAIT\
+    \ signal.\n\nMAP_PREFETCH\n\nSpecifies that this map may be configured for prefetching.\n\
+    \n# 9.2.6  SS_GetMemMap, SS_SetMemMap\n\n```\nint (*ss_entry)(u_int sock, SS_GetMemMap,\
+    \ pcard_mem_map *);\nint (*ss_entry)(u_int sock, SS_SetMemMap, pcard_mem_map *);\n\
+    ```\n\nThe pcard_mem_map data structure is given by:\n\n```\ntypedef struct pcard_mem_map\
+    \ {\n    u_char      map;\n    u_char      flags;\n    u_short     speed;\n  \
+    \  u_long      sys_start, sys_stop;\n    u_int       card_start;\n} pcard_mem_map;\n\
+    ```\n\nThe map field specifies the map number. The speed field specifies an access\
+    \ speed in nanoseconds. The sys_start and sys_stop fields give the starting and\
+    \ ending addresses for the window in the host's physical address space. The card_start\
+    \ value specifies the card address to be mapped to sys_start. The Linux Card Services\
+    \ layer assume that each socket has at least four independently configurable memory\
+    \ windows.\n\nMAP_ACTIVE\n\nSpecifies that the address map should be enabled.\n\
+    \nMAP_16BIT\n\nSpecifies that the map should be configured for 16-bit accesses\
+    \ (as opposed to 8-bit).\n\nMAP_AUTOSZ\n\nSpecifies that the map should be configured\
+    \ to auto-size bus accesses in response to the card's IOCS16 signal."
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 9. The Socket Driver Layer
+
+
+    MAP_OWS
+
+
+    Requests zero wait states, as opposed to standard ISA bus timing.
+
+
+    MAP_WRPROT
+
+
+    Specifies that the map should be write protected.
+
+
+    MAP_ATTRIB
+
+
+    Specifies that the map should be for attribute (as opposed to common) memory.
+
+
+    MAP_USE_WAIT
+
+
+    Specifies that access timing should respect the card''s WAIT signal.
+
+
+    # 9.2.7 SS_GetBridge, SS_SetBridge
+
+
+    ```
+
+    int (*ss_entry)(u_int sock, SS_GetBridge, cb_bridge_map*);
+
+    int (*ss_entry)(u_int sock, SS_SetBridge, cb_bridge_map*);
+
+    ```
+
+
+    The cb_bridge_map data structure is given by:
+
+
+    ```
+
+    typedef struct cb_bridge_map {
+
+    u_char map;
+
+    u_char flags;
+
+    u_int start, stop;
+
+    } cb_bridge_map;
+
+    ```
+
+
+    The SS_GetBridge and SS_SetBridge entry points are used for configuring bridge
+    address windows for
+
+    CardBus devices. They are similar to the 16-bit IO and memory map services. It
+    is assumed that each
+
+    CardBus socket has at least two IO and two memory bridge windows. The flags field
+    is composed of:
+
+
+    MAP_ACTIVE
+
+
+    Specifies that the address map should be enabled.
+
+
+    MAP_PREFETCH
+
+
+    Specifies that this map can be configured for prefetching.
+
+
+    MAP_IOSPACE
+
+
+    Specifies that this space is for 10 space (as opposed to memory space).
+
+
+    # 9.2.8 SS_ProcSetup
+
+
+    ```
+
+    int (*ss_entry)(u_int sock, SS_ProcSetup, struct proc_dir_entry *base);
+
+    ```
+
+
+    Card Services use this entry point to give the socket driver a procfs directory
+    handle under which it may
+
+    create status files for a specific socket. It is the socket driver''s responsibility
+    to delete any proc entries before
+
+    it is unloaded.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# 9. The Socket Driver\n\n# 9.3 Supporting unusual socket architectures\n\n\
+    The Socket Services interface is oriented towards socket controllers that allow\
+    \ PCMCIA cards to be configured to mimic native system devices with the same functionality.\
+    \ ExCA standard specifies that socket controllers should provide two IO and memory\
+    \ windows per socket, which can be independently configured and positioned in\
+    \ the host address space and mapped to arbitrary segments of address space. Some\
+    \ controllers and architectures do not provide this level of functionality. In\
+    \ these situations, Socket Services can effectively visualize the socket interface\
+    \ for client drivers.\n\nThe client side (including internal Card Services uses),\
+    \ to use the virtualized socket interface, code must first specify:\n\n```\n#include\
+    \ \"pcmia/bus_ops.h\"\n```\n\n+   - inb, inw, inl, inw_ns, inl_ns\n- insb, insw,\
+    \ insl, insw_ns, insl_ns\n- outb, outwl, outw_ns, outl_ns\n- outsb, outsw, outsl,\
+    \ outsw_ns, outsl_ns\n- readb, readl, readw, readw_ns, readl_ns\n- writeb, writeol,\
+    \ writer, write_ns, writer_ns\n- ioremap, iounmap\n- memcpy_fromio, memcpy_toio\n\
+    - request_irq, free_irq\n\nAll IO operations need to be replaced with new bus-neutral\
+    \ forms. The following functions need to be virtualized:\n\nThe bus-neutral functions\
+    \ have a prefix of \"bus-\", with a new first argument, the bus operations pointer\
+    \ returned by SS_InquireSocket. For example, inb(port) should be replaced with\
+    \ bus_inb(bus, port).\n\nAll the IO primitives are defined as macros that call\
+    \ entry points in the bus operations table. There is not one-to-one mapping from\
+    \ IO primitives to bus operation entry points.\n\nThe bus operations table is\
+    \ defined as:\n\n```\ntypedef struct bus_operations {\n    *priv;\n    u32 void\
+    \ (*inb)(void *bus, u32 port, s32 sz);\n    void (*insb)(void *bus, u32 port,\
+    \ void *buf,\n        u32 count, s32 sz);\n    void (*outb)(void *bus, u32 val,\
+    \ u32 port, s32 sz);\n    void (*outsb)(void *bus, u32 port, void *buf,\n    \
+    \    u32 count, s32 sz);\n    void (*ioremap)(void *bus, long long off, long long\
+    \ sz);\n    void (*iounmap)(void *bus, void *addr);\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# 10. Where to Go for Information\n\n```\nu32    (*b_read)(void *bus, void\
+    \ *addr, s32);\nvoid    (*b_write)(void *bus, u32 val, void *addr, s32);\nvoid\
+    \    (*b_copy_from)(void *bus, void *d, void *s, u32 count);\nvoid    (*b_copy_to)(void\
+    \ *bus, void *d, void *s, u32 count);\nint     (*b_request_irq)(void *bus, u_int\
+    \ irq,\n                        (*handler)(int, void *\n                     \
+    \       struct pt_regs *),\n                        u_long flags, const char *device,\n\
+    \                        void *dev_id);\nvoid    (*b_free_irq)(void *bus, u_int\
+    \ irq, void *dev_id);\nbus_operations;\n```\n\nThe priv field can be used by any\
+    \ the socket driver, to indicate of which sockets is addressed. The b_in, b_out,\
+    \ b_read, and b_write entry supports byte, word, and dword operations, either\
+    \ byte-swapped or swapped. The sz parameter is 0, 1, or 2 for byte, word, or dword\
+    \ accesses; -1 and -2 select word and dword accesses.\n\n# 10 Where to Go for\
+    \ Information\n\nThe Linux Kernel Hacker' Guide, written by Michael Johnson, is\
+    \ a good source of general information about writing Linux drivers. It is available\
+    \ from the usual FTP sites, and is included in many compilations of Documentation.\n\
+    \nThe PC Card standard is only available from the PCMC association and is somewhat\
+    \ expensive for non-members. The PCMC association is at <http://www.pc-card.com>.\n\
+    \nPersonal Computer Memory Card International Association\n1030 East Avenue, Suite\
+    \ G\nSunnyvale, CA 94086 USA\n(408) 720-0107, (408) 720-9416, FAX, (408) 720-9388\
+    \ BBS\n\nAn alternative is the PCMCIA Developer's Guide, by Michael Mori, available\
+    \ from Syctard Technology, at <http://www.syctard.com>.\n\nSycard Technology\n\
+    180-F Miramal Way\nSunnyvale, CA 94086\n(408) 749-0130, (408) 749-1323 FAX\n\n\
+    The PCMCIA Software Developer's Handbook by Steven Kipisz, Dana Beatty, and Brian\
+    \ Moore includes an overview of the PC Card standard, and descriptions of how\
+    \ to write client drivers. It also includes the Linux PCMCIA Programmer's Guide,\
+    \ as an appendix. It is published by Peer-to-Peer Communications, ISBN-1-57398-010-2\n\
+    \nLarry Levine has written a more general introduction to PCMCIA called the PCMCIA\
+    \ Priner. It is published by M & T Books, ISBN-1-55828-437-0.\n\nProgramming information\
+    \ for various PC Card hosts controllers is available from the corresponding chip\
+    \ vendors. Generally, data sheets are available either online or can be ordered\
+    \ from each company's web site. A collection of datasheets can be found at <http://pcmcia-cs.sourceforge.net/specs>."
+  merge: -1
+  pgno: 72
