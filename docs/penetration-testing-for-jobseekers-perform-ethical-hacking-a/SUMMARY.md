@@ -1,0 +1,2 @@
++   [求职者的渗透测试：使用 Kali Linux、Burp Suite、MobSF 和 Metasploit 对 Web 应用、网络和移动设备进行道德黑客攻击（英文版）](README.md)
++   [求职者的渗透测试：使用 Kali Linux、Burp Suite、MobSF 和 Metasploit 对 Web 应用、网络和移动设备进行道德黑客攻击（英文版）](penetration-testing-for-jobseekers-perform-ethical-hacking-a.md)
