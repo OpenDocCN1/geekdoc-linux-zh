@@ -1,0 +1,386 @@
+- - '#'
+  - Pragmatic Flutter：构建 Android、iOS、Web 及桌面端跨平台移动应用
+- - '#'
+  - 前言
+- - '#'
+  - 作者
+- - '#'
+  - 1 Dart 基础
+- - '##'
+  - 主函数
+- - '##'
+  - 运行 Dart 程序
+- - '##'
+  - 变量与数据类型
+- - '##'
+  - 集合
+- - '###'
+  - List
+- - '###'
+  - 展开运算符 (SPREAD OPERATOR)
+- - '###'
+  - 转换项 (TRANSFORM ITEMS)
+- - '###'
+  - 过滤 (FILTERING)
+- - '###'
+  - Set
+- - '###'
+  - 添加项 (ADDING ITEM)
+- - '###'
+  - 删除项 (REMOVING ITEM)
+- - '###'
+  - 添加多个项 (ADDING MULTIPLE ITEMS)
+- - '###'
+  - 两个集合的交集 (INTERSECTION OF TWO SETS)
+- - '###'
+  - 两个集合的并集 (UNION OF TWO SETS)
+- - '###'
+  - Map
+- - '##'
+  - 检查键
+- - '##'
+  - 检查值
+- - '##'
+  - 获取所有值
+- - '##'
+  - 遍历键值对
+- - '##'
+  - 源代码
+- - '##'
+  - 函数
+- - '##'
+  - 带有可选参数的函数
+- - '##'
+  - 命名参数
+- - '##'
+  - 将函数作为参数传递
+- - '#'
+  - 2 Flutter 简介
+- - '##'
+  - 跨平台解决方案
+- - '##'
+  - 原生 SDK
+- - '##'
+  - 为什么选择 Flutter
+- - '##'
+  - 开发者生产力
+- - '##'
+  - 简介
+- - '##'
+  - 使用 Dart 开发前端与后端
+- - '##'
+  - DART 语言
+- - '##'
+  - 人机界面设计
+- - '##'
+  - FIREBASE 集成
+- - '##'
+  - IDE 支持的多样性
+- - '##'
+  - OEM 组件独立性
+- - '##'
+  - 开源/社区支持
+- - '##'
+  - 成本效益
+- - '#'
+  - 3 环境配置
+- - '##'
+  - 下载稳定版 Flutter SDK
+- - '##'
+  - 更新 PATH
+- - '##'
+  - Flutter Doctor
+- - '##'
+  - Flutter 通道
+- - '##'
+  - 为 ANDROID 平台设置
+- - '###'
+  - ANDROID STUDIO
+- - '###'
+  - ANDROID 模拟器
+- - '###'
+  - 测试你的设置
+- - '###'
+  - Android 设备
+- - '###'
+  - 设置环境
+- - '##'
+  - 为 iOS 平台设置
+- - '###'
+  - Xcode
+- - '###'
+  - iOS 模拟器
+- - '##'
+  - 为 WEB 设置
+- - '#'
+  - 4 实战 Flutter
+- - '##'
+  - 测试你的安装
+- - '##'
+  - 在线源码
+- - '##'
+  - 编辑器设置
+- - '##'
+  - 总结
+- - '#'
+  - 5 Flutter 应用结构
+- - '##'
+  - FLUTTER 组件
+- - '###'
+  - StatelessWidget (无状态组件)
+- - '###'
+  - StatefulWidget (有状态组件)
+- - '##'
+  - 显示‘HELLO BOOKS’ 文本
+- - '##'
+  - 入口点
+- - '##'
+  - 文本居中
+- - '##'
+  - '应用结构 #1'
+- - '##'
+  - '应用结构 #2'
+- - '##'
+  - Scaffold Widget
+- - '##'
+  - Flutter App Structure
+- - '##'
+  - The AppBar Widget
+- - '##'
+  - The FloatingActionButton Widget
+- - '##'
+  - Styling Text Widget
+- - '##'
+  - COMPLETE CODE
+- - '##'
+  - Source Code Online
+- - '##'
+  - Managing State with StatefulWidget
+- - '##'
+  - 'StatefulWidget: MyHomePage'
+- - '##'
+  - 'State Widget: MyPageState'
+- - '##'
+  - SOURCE ONLINE
+- - '##'
+  - CONCLUSION
+- - '#'
+  - 6 Flutter 项目结构
+- - '##'
+  - 选择 Flutter 通道
+- - '##'
+  - 创建 Flutter 项目
+- - '##'
+  - 使用命令行 (TERMINAL)
+- - '##'
+  - 使用 IDE (ANDROID STUDIO)
+- - '##'
+  - “New Flutter Project”屏幕
+- - '##'
+  - “New Flutter Application”屏幕
+- - '##'
+  - 跨平台 Flutter 项目结构
+- - '##'
+  - 运行默认应用：ANDROID, iOS, WEB 和 DESKTOP
+- - '###'
+  - ANDROID 平台
+- - '###'
+  - iOS 平台
+- - '###'
+  - WEB 平台
+- - '###'
+  - DESKTOP (macOS) 平台
+- - '##'
+  - 源代码
+- - '##'
+  - 运行代码示例
+- - '##'
+  - 列出示例代码 ID
+- - '##'
+  - ‘samples.json’文件的内容
+- - '##'
+  - 从示例代码创建应用
+- - '##'
+  - 在线源代码
+- - '##'
+  - 有用的命令
+- - '#'
+  - 7 Flutter Widgets
+- - '##'
+  - Image
+- - '###'
+  - Local Image
+- - '###'
+  - 互联网（远程）图像
+- - '##'
+  - ToggleButtons
+- - '###'
+  - 使用 ToggleButtons
+- - '##'
+  - TextField
+- - '##'
+  - FutureBuilder 异步小部件
+- - '###'
+  - Future 数据对象
+- - '###'
+  - Future 对象
+- - '##'
+  - FutureBuilder 小部件
+- - '##'
+  - Placeholder 占位符小部件
+- - '##'
+  - StreamBuilder 异步小部件
+- - '###'
+  - Stream 数据对象
+- - '###'
+  - Stream 错误对象
+- - '##'
+  - StreamBuilder 小部件
+- - '##'
+  - AlertDialog 小部件
+- - '##'
+  - ElevatedButton
+- - '#'
+  - 8 样式
+- - '##'
+  - MATERIAL 样式
+- - '##'
+  - CUPERTINO 样式
+- - '##'
+  - 结论
+- - '##'
+  - 总结
+- - '##'
+  - 参考文献
+- - '#'
+  - 9 布局构建
+- - '##'
+  - 回顾 HelloBooksApp 布局
+- - '##'
+  - 布局部件
+- - '###'
+  - 可见部件
+- - '###'
+  - 将可见部件添加到布局部件中
+- - '###'
+  - 将布局部件添加到 MaterialApp
+- - '##'
+  - 构建布局
+- - '##'
+  - 布局部件的类型
+- - '##'
+  - CONTAINER部件
+- - '###'
+  - 构建布局
+- - '###'
+  - Color属性
+- - '###'
+  - Padding属性
+- - '###'
+  - Margin属性
+- - '###'
+  - Alignment属性
+- - '###'
+  - Constraints属性
+- - '###'
+  - Transform属性
+- - '##'
+  - 装饰属性 (Decoration PROPERTY)
+- - '##'
+  - 内边距组件 (Padding WIDGET)
+- - '##'
+  - 约束框 (ConstrainedBox)
+- - '##'
+  - 最小宽度与高度 (MINIMUM WIDTH & HEIGHT)
+- - '###'
+  - BoxConstraints.expand()
+- - '###'
+  - BoxConstraints.loose()
+- - '##'
+  - SizedBox 组件
+- - '##'
+  - Row 组件
+- - '##'
+  - Column 组件
+- - '##'
+  - IntrinsicWidth 组件
+- - '##'
+  - ListView 组件
+- - '##'
+  - GridView 组件
+- - '##'
+  - Table 组件
+- - '##'
+  - Stack 组件
+- - '##'
+  - IndexedStack 组件
+- - '##'
+  - FittedBox 组件
+- - '##'
+  - 响应式界面
+- - '##'
+  - Expanded 组件
+- - '###'
+  - '`flex` 属性'
+- - '###'
+  - '`Flex.tight` 属性'
+- - '###'
+  - '`FlexFit.loose` 属性'
+- - '##'
+  - LayoutBuilder 组件
+- - '#'
+  - 10 状态管理
+- - '##'
+  - Managing State with StatefulWidget
+- - '##'
+  - 'StatefulWidget: MyHomePage'
+- - '##'
+  - 'State Widget: MyPageState'
+- - '#'
+  - 11 集成 REST API
+- - '##'
+  - 什么是 API？
+- - '##'
+  - API 端点
+- - '##'
+  - 发起 HTTP 请求
+- - '##'
+  - 密钥 (API KEY)
+- - '#'
+  - 12 数据持久化
+- - '##'
+  - pubspec.yaml 依赖
+- - '##'
+  - 本地数据库 (MOOR 库)
+- - '##'
+  - 跨平台实现
+- - '###'
+  - 文件：shared.dart
+- - '###'
+  - 文件：native.dart
+- - '###'
+  - 文件：web.dart
+- - '###'
+  - 文件：unsupported.dart
+- - '#'
+  - 13 数据建模
+- - '##'
+  - 解析 JSON
+- - '##'
+  - dart:convert 库
+- - '#'
+  - 14 跨平台实现
+- - '##'
+  - 安卓
+- - '###'
+  - iOS
+- - '###'
+  - Web
+- - '###'
+  - 桌面端 (macOS)
+- - '#'
+  - 15 状态管理
+- - '##'
+  - Provider
+- - '#'
+  - 16 实用型 Flutter
