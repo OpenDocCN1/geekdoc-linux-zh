@@ -1,0 +1,7 @@
+# 极小值图谱或患者成为行动者
+
+> 原文：[Minima Cartographia or The Patient Becomes the Agent]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
