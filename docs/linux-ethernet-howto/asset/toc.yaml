@@ -1,0 +1,200 @@
+- - '#'
+  - Linux 以太网指南
+- - '#'
+  - 1. 引言
+- - '#'
+  - 常见问题
+- - '#'
+  - 3. 性能优化技巧
+- - '#'
+  - 5. 电缆、同轴、双绞
+- - '#'
+  - 9. 杂项
+- - '#'
+  - 1. 引言
+- - '##'
+  - 本档的新版本
+- - '##'
+  - 1.3 HELP – 它无法工作！
+- - '#'
+  - 2.1 我应该为 Linux 购买什么样的网卡？
+- - '#'
+  - 2.2 Alpha 驱动 --- 获取和使用它们
+- - '#'
+  - 2.3 在一台机器上使用多个以太网卡
+- - '##'
+  - 2.4 ether= 东西对我不起作用。为什么？
+- - '##'
+  - 2.5 NE1000 / NE2000 网卡（及克隆卡）的问题
+- - '#'
+  - Linux 以太网使用指南
+- - '#'
+  - SMP 机器上的 Linux 以太网卡
+- - '##'
+  - 使用 `ifconfig` 和硬件地址为 00:00:00:00:00 的 Link UNSPEC
+- - '###'
+  - 3.1 通用概念
+- - '#'
+  - Etherlink Plus 3c505
+- - '#'
+  - Etherlink-16 3c507
+- - '#'
+  - Etherlink III, 3c509 / 3c509B
+- - '#'
+  - Linux 以太网教程
+- - '#'
+  - 3c501
+- - '#'
+  - EtherLink II, 3c503, 3c503/16
+- - '#'
+  - 3c592 / 3c597
+- - '#'
+  - 3c900 / 3c905 / 3c905B / 3c905C
+- - '#'
+  - 3c985
+- - '#'
+  - 4.2 Accton
+- - '##'
+  - Accton MPX
+- - '##'
+  - Acton EN1203, EN1207, EtherDuo-PCI
+- - '##'
+  - Acton EN2209 并口适配器 (EtherPocket)
+- - '##'
+  - Acton EN2212 PCMCIA 卡
+- - '#'
+  - 4.3 Allied Telesyn/Telesis
+- - '##'
+  - AT1500
+- - '##'
+  - AT1700
+- - '##'
+  - AT2400
+- - '##'
+  - AT2450
+- - '##'
+  - AT2500
+- - '##'
+  - AT2540
+- - '#'
+  - 4.4 Advanced Micro Devices (AMD)
+- - '##'
+  - AMD 79C971 (PCnet–FAST)
+- - '##'
+  - AMD 79C972 (PCnet–FAST+)
+- - '##'
+  - AMD 79C974 (PCnet–SCSI)
+- - '#'
+  - 4.5 Ansel Communications
+- - '##'
+  - AC3200 EISA
+- - '#'
+  - 4.6 Apricot
+- - '##'
+  - Apricot Xen–II 板载以太网
+- - '#'
+  - 4.7 Arcnet
+- - '#'
+  - 4.8 AT&T
+- - '##'
+  - AT&T T7231 (LanPACER)+
+- - '#'
+  - 4.9 Boca Research
+- - '##'
+  - Boca BEN400
+- - '##'
+  - Boca BEN (ISA, VLB, PCI)
+- - '##'
+  - Cogent EMMASTER+, EM100–PCI, EM400, EM960, EM964
+- - '##'
+  - 4.12 Compaq
+- - '###'
+  - Compaq Deskpro / Compaq XL (嵌入 AMD 芯片)
+- - '###'
+  - Compaq NetIntelligent/NetFlex (嵌入 ThunderLAN 芯片)
+- - '###'
+  - Compaq PCI 网卡
+- - '#'
+  - 4.13 Danpex
+- - '###'
+  - Danpex EN9400
+- - '#'
+  - 4.14 D–Link
+- - '##'
+  - DE–100, DE–200, DE–220–T, DE–250
+- - '##'
+  - DE–520
+- - '##'
+  - DE–528
+- - '##'
+  - DE–530
+- - '##'
+  - DE-600
+- - '##'
+  - DE-620
+- - '##'
+  - DE-650
+- - '##'
+  - DFE-530
+- - '##'
+  - DFE538TX
+- - '#'
+  - 4.15 DFI
+- - '###'
+  - DFINET–300 和 DFINET–400
+- - '#'
+  - 4.16 Digital / DEC
+- - '##'
+  - DEPCA, DE100/1, DE200/1/2, DE210, DE422
+- - '##'
+  - Digital EtherWorks (DE203, DE204, DE205)
+- - '##'
+  - DE425 EISA, DE434, DE435, DE500
+- - '##'
+  - DEC 21040, 21041, 2114x, Tulip
+- - '#'
+  - 4.17 Farallon
+- - '###'
+  - Farallon Etherwave
+- - '##'
+  - Farallon PCI 593
+- - '#'
+  - 4.18 富士通 (Fujitsu)
+- - '##'
+  - 富士通 FMV–181/182/183/184
+- - '#'
+  - 4.19 惠普 (Hewlett Packard)
+- - '##'
+  - HP Night Director+ 10/100
+- - '##'
+  - 27245A
+- - '##'
+  - HP EtherTwist, PC Lan+ (27247, 27252A)
+- - '##'
+  - HP–J2405A
+- - '##'
+  - HP–Vectra 板载以太网
+- - '##'
+  - HP 10/100 VG 任意 Any Lan 网卡 (27248B, J2573, J2577, J2585, J970, J973)
+- - '##'
+  - HP NetServer/10/100TX PCI (D5013A)
+- - '#'
+  - 4.20 IBM / 国际商业机器 (International Business Machines)
+- - '##'
+  - IBM Thinkpad 300
+- - '##'
+  - IBM 以太网信用卡适配器 (Credit Card Adaptor for Ethernet)
+- - '##'
+  - IBM 10/100 EtherJet PCI
+- - '##'
+  - IBM 环形网 (Token Ring)
+- - '#'
+  - 4.21 富士通 (Fujitsu)
+- - '##'
+  - ICL 以太网卡
+- - '#'
+  - 4.22 富士通 (Fujitsu)
+- - '##'
+  - HP 10/100 VG 任意 Lan 网卡
+- - '##'
+  - HP NetServer/10/100TX PCI (D5013A)
