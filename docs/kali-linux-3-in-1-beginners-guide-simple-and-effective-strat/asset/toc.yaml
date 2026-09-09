@@ -1,0 +1,726 @@
+- - '#'
+  - Kali Linux：3合1：初学者指南+简单有效的策略+学习 Kali Linux 的高级方法与策略
+- - '#'
+  - 第 6 章：安装故障排除
+- - '#'
+  - 引言
+- - '#'
+  - 第 5 章：利用
+- - '#'
+  - 第 1 章
+- - '#'
+  - Kali Linux 简介
+- - '#'
+  - Kali Linux 的特性
+- - '##'
+  - 渗透测试工具
+- - '##'
+  - 免费使用
+- - '##'
+  - 开源
+- - '##'
+  - 符合 FHS 标准
+- - '##'
+  - 对无线设备的支持
+- - '##'
+  - 自定义内核
+- - '##'
+  - GPG 签名
+- - '##'
+  - 语言支持
+- - '##'
+  - 可定制
+- - '##'
+  - 第 2 章
+- - '#'
+  - 在哪里获取官方 Kali Linux 镜像
+- - '###'
+  - 适用于 Intel 电脑的 ISO 文件
+- - '###'
+  - VMware 镜像
+- - '###'
+  - ARM 镜像
+- - '##'
+  - 验证你下载的 Kali 镜像
+- - '###'
+  - 我为什么需要做这一步？
+- - '#'
+  - Kali Linux 默认 root 密码为 toor
+- - '###'
+  - 默认 root 密码
+- - '##'
+  - 第 3 章
+- - '##'
+  - 启动 U 盘的优点
+- - '###'
+  - 无破坏性
+- - '###'
+  - 便携性
+- - '###'
+  - 可定制性
+- - '#'
+  - 持久化
+- - '##'
+  - 创建 Kali Linux USB 的要求
+- - '##'
+  - Kali Linux Live USB 安装步骤
+- - '##'
+  - 在 Windows 上创建可启动的 Kali USB 盘
+- - '##'
+  - 在 Linux 上创建可启动的 Kali USB 盘
+- - '###'
+  - 第一步
+- - '###'
+  - 第二步
+- - '###'
+  - 第三步
+- - '##'
+  - 在 OS X 上创建可启动的 Kali USB 盘
+- - '###'
+  - 第一步
+- - '###'
+  - 第二步
+- - '###'
+  - 第三步
+- - '##'
+  - rEFInd 配置
+- - '##'
+  - 在 Mac 硬件上单启动 Kali
+- - '##'
+  - Kali Linux 安装要求
+- - '#'
+  - 安装前提
+- - '#'
+  - 安装准备工作
+- - '##'
+  - Kali Linux 网络 PXE 安装
+- - '##'
+  - 设置 PXE 服务器
+- - '##'
+  - 下载 Kali PXE 网络启动镜像
+- - '#'
+  - 适用于 64 位系统：
+- - '#'
+  - 适用于 32 位系统：
+- - '##'
+  - 配置目标从网络启动
+- - '##'
+  - Kali Linux – ASUS Chromebook Flip
+- - '#'
+  - Raspberry Pi2 Kali 开发者指南
+- - '#'
+  - Kali Linux – Raspberry Pi
+- - '#'
+  - Raspberry Pi2 Kali 用户指南
+- - '#'
+  - Raspberry Pi2 Kali 开发者指南
+- - '#'
+  - Kali Linux – Trimslice
+- - '#'
+  - Trimslice Kali 用户指南
+- - '#'
+  - Trimslice Kali 开发者指南
+- - '#'
+  - Kali Linux – Cubieboard
+- - '#'
+  - Cubieboard Kali 用户指南
+- - '#'
+  - Cubieboard Kali 开发者指南
+- - '#'
+  - Kali Linux – Riotboard
+- - '#'
+  - Riotboard Kali 用户指南
+- - '#'
+  - Riotboard Kali 开发者指南
+- - '#'
+  - RIOTboard 上的 Kali – 开发者指南
+- - '#'
+  - Kali Linux – NanoPi2
+- - '#'
+  - NanoPi2 上的 Kali – 用户指南
+- - '#'
+  - NanoPi2 上的 Kali – 开发者指南
+- - '#'
+  - Kali Linux – Utility Pro
+- - '#'
+  - Utility Pro 上的 Kali – 用户指南
+- - '#'
+  - Utility 上的 Kali – 开发者指南
+- - '#'
+  - Kali Linux – ODROID-C1
+- - '#'
+  - ODROID-C1 上的 Kali – 用户指南
+- - '#'
+  - ODROID-C1 上的 Kali – 开发者指南
+- - '#'
+  - Kali Linux – USB Armory
+- - '#'
+  - USB Armory 上的 Kali – 用户指南
+- - '#'
+  - USB Armory 上的 Kali – 开发者指南
+- - '#'
+  - Kali Linux – Acer Tegra Chromebook 13”
+- - '#'
+  - Chromebook 版 Kali Linux – 用户指南
+- - '#'
+  - Acer Tegra Chromebook 版 Kali Linux – 开发者指南
+- - '#'
+  - ODROID-XU3 上的 Kali Linux
+- - '#'
+  - ODROID-XU3 版 Kali Linux – 用户指南
+- - '#'
+  - ODROID-XU3 版 Kali Linux – 开发者指南
+- - '#'
+  - Kali Linux – Box-i4Pro
+- - '#'
+  - Box-i4Pro 版 Kali Linux – 用户指南
+- - '#'
+  - Kali Pro – 开发者指南
+- - '#'
+  - Kali Linux – Chromebook 2
+- - '#'
+  - Chromebook 2 版 Kali Linux – 用户指南
+- - '#'
+  - Chromebook 2 版 Kali Linux – 开发者指南
+- - '#'
+  - Kali Linux – Raspberry Pi
+- - '#'
+  - Raspberry Pi 版 Kali Linux — 预构建版本
+- - '#'
+  - 树莓派上的 Kali Linux — 自定义构建
+- - '#'
+  - Kali Linux – BeagleBone Black
+- - '#'
+  - BeagleBone Black Kali Linux – 预构建版本
+- - '#'
+  - BeagleBone Black Kali Linux – 自定义构建
+- - '#'
+  - Kali Linux – HP Chromebook
+- - '#'
+  - Chromebook 上的 Kali – 用户说明
+- - '#'
+  - HP Chromebook 上的 Kali – 开发者指令
+- - '#'
+  - Kali Linux – CuBox
+- - '#'
+  - CuBox 上的官方 Kali – 易用版
+- - '#'
+  - CuBox 上的 Kali – 长版本
+- - '#'
+  - Kali Linux – ODROID U2
+- - '#'
+  - ODROID U2 上的 Kali – 用户说明
+- - '#'
+  - ODROID U2 上的 Kali Linux – 开发者指南
+- - '##'
+  - 第 6 章
+- - '##'
+  - 安装故障排除
+- - '###'
+  - Kali Linux 安装失败
+- - '###'
+  - 应该如何保存或传输调试日志？
+- - '#'
+  - 无线驱动程序故障排除
+- - '##'
+  - 第 7 章
+- - '##'
+  - Kali Linux 的现实世界应用
+- - '#'
+  - 其他实用命令
+- - '#'
+  - 搜索命令
+- - '#'
+  - 文件权限
+- - '##'
+  - 文件命令
+- - '##'
+  - 压缩命令
+- - '##'
+  - 打印命令
+- - '##'
+  - 网络命令
+- - '##'
+  - SSH 命令
+- - '##'
+  - 用户管理命令
+- - '##'
+  - 进程管理命令
+- - '##'
+  - 源码安装命令
+- - '##'
+  - 停止和启动命令
+- - '##'
+  - 10. 密码攻击工具
+- - '##'
+  - 漏洞利用工具
+- - '##'
+  - Armitage
+- - '##'
+  - 后门工厂 (BDF)
+- - '##'
+  - 浏览器漏洞利用框架 (BeEF)
+- - '##'
+  - Commix
+- - '##'
+  - Crackle
+- - '##'
+  - Linux Exploit Suggester
+- - '##'
+  - Maltego Teeth
+- - '##'
+  - sqlmap
+- - '##'
+  - Yersinia
+- - '##'
+  - Cisco-global-exploiter
+- - '##'
+  - Cisco-torch
+- - '##'
+  - 取证工具
+- - '##'
+  - Binwalk
+- - '##'
+  - Bulk-extractor
+- - '##'
+  - p0f
+- - '##'
+  - pdf-parser
+- - '##'
+  - Dumpzilla
+- - '##'
+  - ddrescue
+- - '##'
+  - Foremost
+- - '##'
+  - Galleta
+- - '##'
+  - Volatility
+- - '##'
+  - Autopsy
+- - '##'
+  - Xplico（注：原文为ploico）
+- - '##'
+  - Information Gathering Tools
+- - '##'
+  - Nmap and Zen（注：原文为Zen）
+- - '##'
+  - Stealth Scan（隐身扫描）
+- - '##'
+  - accccheck
+- - '##'
+  - Amap
+- - '##'
+  - CaseFile
+- - '##'
+  - braaa
+- - '##'
+  - dnmsmap
+- - '##'
+  - DotDotPwn
+- - '##'
+  - Fierce
+- - '##'
+  - Wireshark
+- - '#'
+  - The Harvester
+- - '#'
+  - Metagoofil
+- - '#'
+  - Miranda
+- - '#'
+  - Ghost Phisher
+- - '#'
+  - Fragroute
+- - '#'
+  - Masscan
+- - '#'
+  - 逆向工程工具
+- - '##'
+  - Apktool
+- - '##'
+  - Dex2jar
+- - '##'
+  - Jad 调试器
+- - '##'
+  - Javasnoop
+- - '##'
+  - OllyDbg
+- - '##'
+  - Valgrind
+- - '#'
+  - 无线攻击工具
+- - '##'
+  - Aircrack
+- - '##'
+  - AirSnort
+- - '##'
+  - Kismet
+- - '##'
+  - Cain & Able
+- - '##'
+  - Fern Wi-Fi Wireless Cracker
+- - '##'
+  - CoWPatty
+- - '##'
+  - Airjack
+- - '##'
+  - WepAttack
+- - '##'
+  - Airjack
+- - '##'
+  - Wifiphisher
+- - '##'
+  - Reaver
+- - '##'
+  - WepDecrypt
+- - '##'
+  - CommonView for Wi-Fi
+- - '##'
+  - Pyrit
+- - '##'
+  - 报告
+- - '##'
+  - Dradis
+- - '##'
+  - Magic Tree
+- - '##'
+  - Magic Tree vs. Dradis
+- - '##'
+  - FunkLoad
+- - '##'
+  - ipv6-toolkit
+- - '##'
+  - SlowHTTPTest
+- - '##'
+  - 维持访问
+- - '##'
+  - Cryptcat 软件包
+- - '##'
+  - DNSChef
+- - '##'
+  - Honey
+- - '##'
+  - 密码攻击工具
+- - '##'
+  - crowbar
+- - '##'
+  - john
+- - '##'
+  - RainbowCrack
+- - '##'
+  - 结论
+- - '##'
+  - 第 1 章
+- - '##'
+  - 什么是 Kali Linux？
+- - '#'
+  - 安装与准备工作
+- - '##'
+  - 使用 USB 方法安装 Linux
+- - '##'
+  - 双系统启动安装
+- - '##'
+  - 在 Hyper-V 上安装 Kali Linux
+- - '##'
+  - 在你的机器上启用 Hyper-V
+- - '##'
+  - 开始安装
+- - '##'
+  - Kali Linux 特性
+- - '##'
+  - Kali Linux 适合你吗？
+- - '##'
+  - 第 2 章
+- - '##'
+  - 开始黑客攻击
+- - '##'
+  - 什么是黑客？
+- - '##'
+  - 了解黑客类型
+- - '##'
+  - 黑帽
+- - '##'
+  - 白帽（道德黑客）
+- - '##'
+  - 黑客行为的后果
+- - '##'
+  - 受害者
+- - '##'
+  - 第 3 章：破解过程
+- - '##'
+  - 信息收集（侦察）
+- - '##'
+  - 被动侦察
+- - '##'
+  - 主动侦察
+- - '##'
+  - 扫描
+- - '##'
+  - 获取访问
+- - '##'
+  - 清痕迹
+- - '##'
+  - CIA 三要素 (CIA Triad)
+- - '##'
+  - 机密性
+- - '##'
+  - 完整性
+- - '##'
+  - 可用性
+- - '##'
+  - CIA 带来了什么？
+- - '##'
+  - 不同类型的网络威胁
+- - '##'
+  - 恶意软件 (Malware)
+- - '##'
+  - 社会工程 (Social Engineering)
+- - '##'
+  - 高级持续威胁 (Advanced Persistent Threats)
+- - '##'
+  - 勒索软件 (Ransomware)
+- - '##'
+  - 网络钓鱼 (Phishing)
+- - '##'
+  - Man-in-the-Middle MITM
+- - '##'
+  - SQLi 攻击
+- - '##'
+  - 拒绝服务 (DoS) 攻击
+- - '##'
+  - XSS 跨站脚本攻击
+- - '##'
+  - 网络安全如此重要？
+- - '##'
+  - 本章到的知识
+- - '##'
+  - 第 5 章：学习 Debian
+- - '##'
+  - Kali Linux 如何管理 Debian
+- - '##'
+  - 如何 Debian 的差异
+- - '##'
+  - 第 6 章：复习 Linux
+- - '##'
+  - 理解 Linux
+- - '##'
+  - 内核驱动
+- - '##'
+  - 进程管理
+- - '##'
+  - 命令行：交互界面
+- - '##'
+  - 文件系统层次
+- - '##'
+  - 主目录
+- - '##'
+  - 更多命令
+- - '##'
+  - 修改和显示
+- - '##'
+  - 第 7 章：网络配置
+- - '##'
+  - NetworkManager
+- - '##'
+  - 使用命令行配置
+- - '##'
+  - 使用 systemd-network
+- - '##'
+  - 用户账户创建
+- - '##'
+  - chfn
+- - '##'
+  - chage
+- - '##'
+  - 禁用账户
+- - '##'
+  - 配置服务
+- - '##'
+  - 远程登录
+- - '##'
+  - 配置 SSH
+- - '##'
+  - 生成 SSH 密钥
+- - '##'
+  - PostgreSQL 数据库配置
+- - '##'
+  - 配置 PostgreSQL
+- - '##'
+  - Apache 配置服务
+- - '##'
+  - 第 8 章：文档来源
+- - '##'
+  - 手册页 (Manual Pages)
+- - '##'
+  - 了解文档
+- - '##'
+  - 软件包特定文档
+- - '##'
+  - Docs.Kali.Org：Kali 文档
+- - '##'
+  - 社区驱动 Kali
+- - '##'
+  - Freenode 频道
+- - '##'
+  - 理解规则
+- - '##'
+  - 社区的一部分：报告
+- - '##'
+  - 数据机密
+- - '##'
+  - 极端情况
+- - '##'
+  - 方法
+- - '##'
+  - 安全措施
+- - '##'
+  - 笔记本安全
+- - '##'
+  - 服务器设置
+- - '##'
+  - 如何保护网络
+- - '##'
+  - 防火墙工作：数据包过滤
+- - '##'
+  - 如何检测变化
+- - '##'
+  - 结论
+- - '##'
+  - 第 10 章：APT 简介
+- - '##'
+  - APT 与 dpkg
+- - '##'
+  - Kali-Rolling 仓库
+- - '##'
+  - Kali-Dev 仓库
+- - '##'
+  - Kali-Bleeding-Edge 仓库
+- - '##'
+  - 基础交互
+- - '##'
+  - 安装软件包
+- - '##'
+  - 使用 dpkg 安装
+- - '##'
+  - 一个更优的整体解决方案
+- - '##'
+  - 列出已知软件包
+- - '##'
+  - 软件包故障排除
+- - '##'
+  - 升级后的问题
+- - '##'
+  - 降级
+- - '##'
+  - 第 11 章：Kali Linux 与安全评估
+- - '##'
+  - 为安全准备 Kali Linux
+- - '##'
+  - 不同类型的安全评估
+- - '##'
+  - 什么是漏洞 (Vulnerability)？
+- - '##'
+  - 什么是利用 (Exploit)？
+- - '##'
+  - 漏洞评估
+- - '##'
+  - 合规性渗透测试
+- - '##'
+  - 传统渗透测试
+- - '##'
+  - 应用评估 (Application Assessment)
+- - '##'
+  - 黑盒应用评估 (Black Box Application Assessment)
+- - '##'
+  - 白盒应用评估 (White Box Application Assessment)
+- - '##'
+  - 第 12 章：服务器与网络扫描 - 如何发现并加固网络
+- - '##'
+  - 提出正确的问题 (Asking the Right Questions)
+- - '##'
+  - 像黑客一样思考 (Thinking Like A Hacker)
+- - '##'
+  - 创建公开信息地图 (Create A Map Of Publicly Information)
+- - '##'
+  - 加固所有薄弱环节和漏洞
+- - '###'
+  - 第一步：
+- - '###'
+  - 第二步：
+- - '###'
+  - 第三步：
+- - '###'
+  - 第四步：
+- - '##'
+  - 在本章我们学到了
+- - '##'
+  - 第13 章：Kali Linux 工具
+- - '##'
+  - Aircrack-ng - 无线安全工具套件
+- - '##'
+  - Kismet Wireless - 无线局域网分析器、嗅探器和 IDS
+- - '##'
+  - John The Ripper - 密码学测试工具
+- - '##'
+  - BeEF - 浏览器利用框架
+- - '##'
+  - Yersinia - L2 攻击
+- - '##'
+  - DHCPig - DHCP 耗尽应用
+- - '##'
+  - THC Hydra - 用于暴力破解远程身份服务
+- - '##'
+  - Metasploit Framework - 渗透测试套件
+- - '##'
+  - FunkLoad - 压力工具
+- - '##'
+  - SlowHTTP - 用于 HTTP 服务器的压力应用程序
+- - '##'
+  - Inundator - 多线程基于队列的入侵检测规避安全工具
+- - '##'
+  - Social Engineering Toolkit
+- - '##'
+  - OpenVAS - 漏洞扫描工具
+- - '##'
+  - Nikto - 帮助进行全 Web 服务器扫描
+- - '##'
+  - WPScan - WordPress 安全性审计工具
+- - '##'
+  - CMSMap - 针对所有流行 CMS 的集中安全解决方案
+- - '##'
+  - 选择正确的工具并强化你的网络安全
+- - '##'
+  - 我们在本章中学到的东西
+- - '##'
+  - 结论
+- - '##'
+  - 第一章：Kali 中的防火墙
+- - '##'
+  - Netfilter 的行为
+- - '##'
+  - iptables -A INPUT -m state --state NEW - p tcp --dport 80 -j ACCEPT
+- - '##'
+  - iptables -A INPUT -m state --state NEW - p tcp --dport 143 -j ACCEPT
+- - '##'
+  - iptables -n L INPUT Chain INPUT (policy ACCEPT)
+- - '##'
+  - iptables -n -L INPUT --line-numbers
+- - '##'
+  - iptables -D INPUT 2
+- - '##'
+  - iptables -D INPUT 1
+- - '##'
+  - iptables -n -L INPUT --line-numbers
+- - '##'
+  - 创建规则
+- - '##'
+  - apt install fwbuilder
+- - '##'
+  - 侦察
+- - '##'
+  - 扫描
+- - '##'
+  - 利用
+- - '##'
+  - 维持访问
