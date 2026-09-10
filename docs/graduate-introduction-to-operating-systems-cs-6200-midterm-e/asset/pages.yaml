@@ -1,0 +1,803 @@
+- img_proc: true
+  md: '# CS6200 MIDTERM EXAM REVIEW
+
+
+    George Kudrayavtsev
+
+
+    Fall 2018
+
+
+    > A Word of Warning to Ye Who Enter
+
+    I''m just a former student. I think most of the content in this guide is reasonably
+    correct, but please don''t treat these review answers as gospel. And, if you ask
+    me something about it, I probably won''t be able to answer you because I''ve forgotten
+    80% of this stuff.
+
+    Enter at your own peril!
+
+    (though I would appreciate corrections)
+
+
+    # Questions: Part 1
+
+
+    An operating system is the key mediator between applications and the system hardware
+    resources. It provides common abstractions to differing hardware interfaces, such
+    as "file" objects for both hard disks and state drives. It provides security via
+    process through virtual memory, as well as restricting access to hardware resources.
+    It enforces fairness among multiple, potentially disjoint, users and their processes
+    by task scheduling algorithms.
+
+
+    Can you distinguish between OS abstractions, mechanisms, policies?
+
+
+    | user-mode | abstractions |
+
+    | --- | --- |
+
+    | ↓ | mechanisms policies |
+
+
+    What does the principle of “separation of mechanism and policy” mean?
+
+
+    In essence, this is just further abstraction on a lower level in the system: for
+    kernel developers instead of users.
+
+    This ties into the idea of "separation of concerns." A particular mechanism, as
+    scheduling, shouldn''t actually care what the scheduling policy is. It should
+    delegate responsibility to the policy itself, which should be swappable / configurable.
+    By providing a common interface for policies, it makes easier for'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "# MIDTERM\n\n# April 15, 2019\n\npeople define their own without actually being\
+    \ concerned with how its implemented; they can trust the mechanism to do the right\
+    \ thing based on their policy.\n\n> What does the principle “optimize for the\
+    \ common case” mean?\n\nIt's pretty self-explanatory; the design should be optimized\
+    \ for the way it's most likely to be used. For example, the “interrupts as threads”\
+    \ design is beneficial to overall system performance despite the fact that there\
+    \ is a cost incurred for interrupts, there are savings on every mutex/lock/operation.\
+    \ Because the latter occurs more frequently than the former (common case), it's\
+    \ an overall gain.\n\n> What happens during a user-kernel mode crossing, and what\
+    \ are some of the reasons why user-kernel mode crossings?\n\nThis “crossing” is\
+    \ known as a system call. These special cases are the only means through which\
+    \ users can interact with the system in a privileged way. Here's what happens,\
+    \ to some granularity of detail:\n\n+   - A permission flag is set in the kernel\
+    \ that indicates ‘kernel mode’ privileges.\n- The program jumps to the kernel\
+    \ interrupt handler. based on the system call parameters) will jump to the system\
+    \ call requested.\n- The system calls executing in the kernel. This involves things\
+    \ checking parameters (safety) copying data from userspace,\n- The requested action\
+    \ is taken (such as telling a driver to read bytes and put them in a particular\
+    \ memory location).\n\nPrimarily, these crossings involve interaction with privileged\
+    \ resources and hardware. For example, applications reading from a file (read()),\
+    \ requesting more (map()), creating network resources (socket()), are all examples\
+    \ of actions that require entering kernel mode. Crossings can also occur if users\
+    \ violate rules. If a user tries to access a privileged memory address (recall\
+    \ that part of the process address space is reserved for the OS), the CPU will\
+    \ trigger a trap (!) and the kernel will take control to investigate.\n\nSimilarly,\
+    \ the boundary can be crossed in the “opposite direction” by a signal occurs if\
+    \ the program has the appropriate signal mask enabled, the kernel will transfer\
+    \ control to its signal handler.\n\n> What is a kernel trap? Why does it happen?\
+    \ What are the steps that take place during a kernel trap?\n\nThough the trap\
+    \ and interrupt are sometimes used interchangeably, for the sake of differentiating\
+    \ them from the “latter as an interrupt?”, we will say that a kernel trap is a\
+    \ kernel interrupt that occurs in “exceptional” conditions. Exceptional cases\
+    \ are those where errors are encountered. This could be like a disk read failure\
+    \ or a user process attempting to access protected memory.\n\nDuring a kernel\
+    \ trap, control is given to the kernel's interrupt handler with certain parameters\
+    \ (the type of arguments, etc.), and the handler will inspect the cause of the\
+    \ trap. If it's caused by the user, it will take action accordingly; this could\
+    \ mean terminating the process, returning an error code to the trap-causing function.\n\
+    \n1 You just activated my trap card \n2 For example, pressing Ctrl+C in your program\
+    \ will trigger SIGINT.\n\n2"
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# MIDTERM
+
+
+    # April 15, 2019
+
+
+    Contrast the design decisions and performance tradeoffs among monolithic, modular
+    and microkernel-based OS designs.
+
+
+    Each of these designs has trade-offs, from efficiency to maintainability.
+
+
+    # Monolithic OS: These include FreeBSD, OpenBSD, Solaris, and MS-DOS.
+
+
+    This design contains every service/abstraction at the kernel level. It is first
+    and historical OS design: every service an application could be part of the OS.
+    This includes memory managers, drivers, file management, processes/threads, scheduling,
+    file systems for random and sequential access, etc.
+
+
+    **Benefits:** Everything is included in the OS. all the services and everything
+    is packaged at the same time. This creates the possibility for **compile time
+    optimizations.**
+
+
+    **Disadvantages:** Too much stuff, too much that''s hard to maintain, debugging
+    and upgrading. The size poses large memory requirements that can negatively affect
+    performance.
+
+
+    # Modular OS: This include most modern operating systems, including WinNT, macOS,
+    and Linux.
+
+
+    This design carries basic services and APIs at OS level; everything can be added
+    as a module. This design delivers significant improvements over monolithic''s
+    OS due to its simplicity and "plug-and-play" approach. With this design, you can
+    customize which file system or scheduler the OS uses. The **OS specifies interfaces**
+    that any module must implement to be part of the OS, making it possible to install
+    modules that are applied for different workloads, instead of having the OS contain
+    all possible modules.
+
+
+    **Benefits:** OS are easier to maintain (patching, new modules, etc.) and upgrade.
+    Smaller size and less resource-intensive code means more memory is available to
+    applications; this can lead to better performance.
+
+
+    **Disadvantages:** Because of the lacks of abstraction and defining the OS-module
+    layer, there is a performance impact due to the bigger call stack and more general-purpose
+    code required. We also lose out on inlining and compile-time operations on the
+    system as a whole (because there is no "whole" anymore). These aren''t very significant
+    on modern-day hardware, however, the modular architecture means that code can
+    come from many different places; this tracking the down of an error more complex,
+    and development spans many groups and codebases.
+
+
+    # Microkernel OS: This used more historically, or in embedded systems. It includes
+    kernels MINIX 3, Mach, and QNX.
+
+
+    These operating systems include only the most primitives at the OS level; this
+    is just the necessities for executing applications (address spaces, threads).
+    Everything else, including file systems, device drivers, etc., are outside of
+    the kernel level. This model requires a lot of process interaction, which the
+    kernel must support (well) as one of its cores.
+
+
+    **Benefits:** These kernels are small: less overhead and better performance for
+    kernel code. Testing is another benefit; it''s easier to verify that behaves as
+    intended. Thus, microkernels are valuable in cases where this is a critical aspect
+    of the system more than performance (typically embedded devices and controls).
+
+
+    **Disadvantages:** Portability is questionable; the kernel is tailored for particular
+    hardware and can be highly-specialized for the expected case(s). Thus, it''s harder
+    to find common components for software, leading to complexity. Finally, as discussed
+    previously, the lack of kernel support for common features leads to a lot of IPC
+    and frequent user-kernel crossings, which are costly.
+
+
+    # Questions: Part 2
+
+
+    3'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Process vs. thread, describe the distinctions. What happens on a process
+    vs. thread switch.
+
+
+    Both processes and threads are units of execution. A process represents the current
+    state of a program''s execution; every new launch of the program results in a
+    new process. Their distinction is mainly the details are stored in the kernel.
+    A process is the "parent" of its threads; Info is stored in the process control
+    block (or PCB) and contains details like the virtual address mapping, the signal
+    handler(s), any open file descriptors, etc. On the other hand, things like register
+    state, respective stack pointer, thread-local storage that cannot be accessed
+    across threads, individual signal handlers.
+
+
+    When switching context, the entirety of the current PCB is swapped out for another
+    process'' PCB. This means that the new process now has access to the CPU and the
+    old process is no longer executing. A context switch empties the cache (cold cache),
+    so the new process has to "start from scratch" in terms of the memory it needs,
+    which is a performance penalty.
+
+
+    When there is a thread switch, only the thread items are swapped out. Data accessed
+    could remain in the cache. The address space mapping also stays the same, since
+    we are still within the same PCB. There is still quite a lot of stuff to swap
+    out, though,
+
+
+    # Describe the states in a lifetime of a process.
+
+
+    Processes are in four "primary" states: running or idle. Various actions move
+    the process between these states and to the other states.
+
+
+    As you see in Figure 1, many stages that a process goes through. When a process
+    is initially created, it is in the new state. It''s placed on the ready queue.
+    From there, it moves into the running state on the kernel''s scheduler. If it
+    performs a "blocking" operation like a disk read that would cause the process
+    to wait for I/O, it''s moved to the waiting queue until that operation completes
+    (typically via an interrupt). Then, it''s ready. Even if it doesn''t block any
+    I/O, it will still end up on the ready queue when interrupted by the scheduler,
+    so it doesn''t hog processing time indefinitely. When it''s done, the terminated
+    state will eventually be cleaned up by the kernel.
+
+
+    ![](img/1250e62c383dbb8b9d771b210db4a869_3_0.png)
+
+
+    Figure 1: The Solaris process life.
+
+
+    # Describe the lifetime of a thread.
+
+
+    The lifetime of a thread is quite akin to that of a process; in Linux doesn''t
+    really track the content of a "process", everything is treated as a "task" or
+    thread.
+
+
+    There are many cases, though, as seen in Figure 2. If a thread blocks on a synchronization
+    variable, it enters the SLEEP state, which is akin to the process WAITING state.
+    There is also the concept of thread parking, which is an optimization for context
+    switches. A thread parking "park" is like "set" on some kernel; it can immediately
+    restore the thread instead of context switches, checking queues, etc. Parking
+    when a bound thread blocks (since its LWP can no longer do anything), or when
+    an unbound thread blocks and there are no more RUNNABLE threads (there''s nothing
+    to switch).
+
+
+    ![](img/1250e62c383dbb8b9d771b210db4a869_3_1.png)
+
+
+    Figure 2: The Solaris thread library life cycle.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# MIDTERM April 15, 2019
+
+
+    An important thing to mention is the concept of the ZOMBIE state and thread reaping.
+    A thread in the ZOMBIE state is considered to be dead, but its resources haven''t
+    been recovered. When a thread has completed its task, it enters the ZOMBIE state,
+    but there are two variants to what happens:
+
+
+    +   - a detached thread exits, it''s on the "deathrow" list, indicating it should
+    eventually be cleaned up by the reaper thread.
+
+    - When an undetached thread exits, nothing happens to it until another join()
+    is it, which causes it to be reaped.
+
+
+    What''s the purpose of a reaper thread and what "reaping"? This is an optimization
+    to speed up thread destruction and creation. By placing a thread on a queue, non-critical
+    cleanup is delayed until there is idle. After a reaper, its allocated stack is
+    in a list of free stacks; when a new thread starts, it can use one of these instead
+    of the costly operation of requesting a new one.
+
+
+    Describe all the steps that take place for a process to transition from a waiting
+    (blocked) state to a running (on the CPU) state.
+
+
+    Let''s assume that a thread was placed on the waiting queue following some-blocking
+    I/O operation, and now that operation complete, a hardware interrupt will trigger
+    a handler in the device driver, something indicating to the kernel that the thread
+    is now runnable. The kernel will place it on the ready queue and move on. Eventually,
+    the scheduler will decide that thread can begin execution. The kernel will restore
+    state from the PCB, this things as CPU register contents, local stacks, handlers
+    and memory. Finally, set the kernel mode permission bit (important! without this
+    code is executing (kernel permissions) on the CPU and set instruction pointer
+    (pc) to point to the last-executed of the process; this gives control over the
+
+
+    What are the pros-cons of message-based vs. shared-memory IPC.
+
+
+    These are similar in how they function. In message-based IPCs, there is a buffer
+    in kernel memory that is accessible by both processes, whereas in shared-memory
+    IPCs, the "shared buffer" is within the address space of both processes.
+
+
+    In the former case, the processes use kernel-provided APIs to communicate across
+    the buffer (some form of read() and write()). This has the benefit of having a
+    unified, standardized communication model, but suffers from the necessity of user-kernel
+    crossings.
+
+
+    In the case, processes gain the performance benefit of eliminating the OS management,
+    but have to suffer the downside of defining their means through which to use the
+    shared buffer to communicate. This boundary is a height performance gain, but
+    setting up this shared buffer has a higher initial cost. This, shared memory IPC
+    is only better if the initial cost can be amortized over the lifetime that it
+    is used.
+
+
+    What are benefits of multithreading; when is it useful to add more threads, when
+    does threads lead to pure overhead? What are the possible sources of overhead
+    associated with multithreading?
+
+
+    Multi-threading allows a system to always stay busy, or "hide idle time." For
+    example, if one requires a disk read, it will need to wait for a long time. Allowing
+    another thread to do something in the meantime is an efficient use of time and
+    resources.
+
+
+    Threads are only beneficial in certain situations. If you need to process something
+    in order, for example, threads would have no benefit. You''d end up with a cluster
+    of mutexes making your threads
+
+
+    5'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# MIDTERM 1
+
+
+    # April 15, 2019
+
+
+    operate synchronously, with the additional overhead of constantly having to switch
+    between them. If an operation is highly parallelizable (i.e. separable into disjoint
+    tasks), though, threads can have a huge performance benefit. The general rule
+    of thumb is that threads are beneficial
+
+
+    ```
+
+    $2ct_{context} < t_{blocking}$
+
+    ```
+
+
+    This is just a rough guideline and doesn''t take into account things like the
+    performance of evicting data from the cache. Many too thread switches can throttle
+    and harm performance. This is further limited by the amount of CPUs available,
+    the threading model by the system (I-to-many, $m \times n$, etc.).
+
+
+    Describe the boss-worker multithreading pattern. If you need to improve a performance
+    metric like throughput or response time, what could you do in a boss-worker model?
+    What are the limiting factors in improving this pattern?
+
+
+    The boss-worker multi-ithreading pattern involves using a task queue, managed
+    by the boss and referenced by the workers. The boss adds tasks to the queue and
+    signals to workers that there is work available. Workers removes the tasks from
+    the queue and process them.
+
+
+    The task queue is that, every task is the same. For example, a task may be responding
+    to an incoming request on a web server. Each worker will take approximately the
+    same amount of time as all of the others to complete a task (obviously, specific
+    tasks may take longer, but in the average...). Furthermore, every worker operates
+    independently. This means you can only scale "horizontally," by adding more worker
+    threads.
+
+
+    Improving throughput. The definition of throughput is the amount of tasks that
+    can be completed in a given amount of time. Each worker thread processes a discrete
+    task, the throughput of a bossworker pattern is limited by the number of workers;
+    improving throughput means increasing the number of simultaneous workers. Of course,
+    even a heavily parallelizable process is still limited, since thread context switching
+    has a non-negligible cost.
+
+
+    Improving response time. Doing something like optimizing the boss thread''s processing
+    of requests will mean that a worker will start on sooner, it will get faster.
+    Unfortunately, the time spends on the task is much lower than the overall time
+    the task takes. Thus, optimizing the worker itself (i.e. the way a task is processed),
+    response time can''t be really lowered.
+
+
+    As such, the limiting factor in boss-worker performance is the worker. This is
+    contrasted with the pipeline model (discussed below), where individual portions
+    of the task can be optimized, and different stages have additional resources.
+    An important calculation is the time it takes to finish $n$ orders:
+
+
+    ```
+
+    $T = t_{avg} \frac{n}{w}$
+
+    ```
+
+
+    where $t_{avg}$ is the average time it takes to finish a task and $w$ is the number
+    of worker threads (that is, the total number of tasks sends the boss).
+
+
+    Describe the pipelined multithreading pattern. If you need to improve a performance
+    metric like
+
+
+    6'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# MIDTERM 1 April 15, 2019
+
+
+    throughput or response time, what could you do in a pipelined model? What are
+    the limiting factors in improving performance with this pattern?
+
+
+    The pipelined multithreading pattern divides a task into disjoint stages and assigns
+    workers to each of these stages. Each worker has a queue of pending inputs, which
+    are the outputs of the previous stage.
+
+
+    Suppose a 2-stage pipeline has a first stage (10ms) but a slow second stage (100ms).
+    This means that the bottleneck is the second stage. If two tasks are submitted
+    simultaneously the first stage ($T_1$) takes 110ms, but the second stage ($T_2$)
+    takes 210ms to complete:
+
+
+    | Time (ms) | Stage 1 | Stage 2 |
+
+    | --- | --- | --- |
+
+    | $t_0$ | $T_1$ | Stage 1 pending: $[T_2,\dots]$ |
+
+    | $t_{10}$ | | $T_1$ |
+
+    | $t_{20}$ | $T_1$ | Stage 2 pending: $[T_2,\dots]$ |
+
+    | $t_{110}$ | | $T_2$ |
+
+    | $t_{210}$ | | $T_2$ |
+
+
+    Generalize this, the time $T(t)$ it takes for $n$ tasks to complete an $x$-stage
+    pipeline in the naive model of a single thread per stage can be calculated as:
+
+
+    $T = T_1 + ((n - 1)t_{max})$
+
+
+    Where $T_1$ is the time it takes to complete the first task (i.e. the duration
+    of the entire pipeline) and $t_{max}$ is the time it takes to complete the *longest*
+    stage.
+
+
+    **Improving throughput.** Notice how the queue builds up for the longest possible
+    stage, and this build-up accumulates a task-delay for the rest of the pipeline
+    and severely hinders throughput. To alleviate this delay, longer tasks can have
+    additional workers! In this way, each stage stage takes more threads should be
+    available to keep the queue from building up. For a 3-stage pipeline with stages
+    taking 10, 30 and 20ms respectively, the second stage could have 3 workers and
+    the third stage has 2 workers. This brings the time *every* task to 60ms instead
+    of the first task. In this case (i.e. tiered stages such that each stage can keep
+    up with the output of the previous stage), the formula holds on whatever the fastest
+    stage:
+
+
+    $T = T_1 + ((n - 1)t_{min})$
+
+
+    **Improving response time.** What''s interesting about this model is that improving
+    throughput also improves response time! By allowing each stage to process more
+    requests simultaneously, it takes to process an individual request. Again, the
+    longest stage causes the build-up, so improving an task''s response time can be
+    achieved by optimizing the slowest stage.
+
+
+    What''s a simple way to prevent deadlocks? Why?
+
+
+    The most-accepted solution for preventing deadlocks is to **maintain a lock order**.
+    This means that all locks are taken in the same order, regardless of the unit
+    of execution they require. It ensures that no threads are ever conflicting in
+    access to separate locks, since they will need to wait on the previous lock first.
+
+
+    This works because it prevents a cycle in the "wait graph." Cycles cause deadlocks,
+    and the absence of a cycle means a deadlock cannot occur, because there is always
+    a resolution order.
+
+
+    7'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# MIDTERM April 15, 2019
+
+
+    > Can you explain the relationship among kernel vs. user-level threads? Think
+    about a general $m \times n$ scenario (as described in the Solaris papers), and
+    in the current Linux model. What happens during scheduling, synchronization and
+    signaling in these cases?
+
+
+    Whew, this question is deep. In general, user-level threads (ULTs) differ from
+    kernel-level threads (KTs) in the amount of knowledge available about their friends
+    on the opposite side of the privilege boundary.
+
+
+    The current Linux model, thanks to the low cost of memory and high speed of kernel
+    hardware, maintains a kernel for every user thread. This is known as the one-to-one
+    model.
+
+
+    # Solaris Threading Model. It makes sense to discuss this model first because
+    it''s a generalized version of the Linux model. We can see the disadvantages of
+    such an approach and how they''re overcome.
+
+
+    Scheduling. The Sun on Solaris introduces the generalized $m \times n$ scenario
+    by introducing lightweight processes (or LWPs). LWPs have a 1:1 relationship with
+    kernel threads, and act like "virtual CPUs" from the ULT perspective. The ULT
+    is assigned to the LWP, and the LWP is scheduled on the CPU by the KT. Thus there
+    are two levels of threading: the scheduling occurring in the ULT library onto
+    the LWP and the scheduling occurring by the kernel of KTs on various CPUs.
+
+
+    Synchronization. Synchronization is done by the LWP. This comes with a big disadvantage,
+    that the kernel has no knowledge of the sync actions by the ULTs. Consider the
+    following case: a ULT is assigned to an LWP and blocks. Thus, the process thinks
+    it is hanging, despite the fact that there are threads waiting for the opportunity
+    to run. This can be further regardless of how many LWPs a user process has; if
+    all ULTs are waiting, the kernel can''t control scheduling. Another paper discussing
+    a lightweight user-level threading library introduces a new signal to the kernel
+    for this, SIGNALING, which would be triggered when the kernel detects that all
+    of its executing threads are blocking. This would allow the LWP to perform scheduling.
+
+
+    Signaling. Recall that signal handlers are associated with a process and signal
+    masks are associated with threads. There is a difficulty with managing signals
+    because different threads have different masks, yet we don''t want to miss out
+    on signals. If a thread is executing with a signal disabled, we need to ensure
+    that our thread can process to that signal, The threading paper proposes solving
+    this by having a global signal handler that "pre-processes" all signals. The mask
+    is set to be either or less restrictive than the intersection of the signal masks
+    across all threads.
+
+
+    Linux Threading Model. This model implicitly avoids many of the workarounds in
+    Solaris'' model by simplifying the user-kernel interaction. It uses a one-to-one
+    model, so the kernel is always aware of the user threads, as well as their requirements
+    and actions.
+
+
+    Scheduling. The kernel sees all threads and their priorities are free to allow
+    the scheduler to optimize things. There is no longer any need for user-level scheduling.
+
+
+    Synchronization. Primitives are provided by the kernel, and can be woken immediately
+    once a mutex is freed, rather than needing to traverse through a user-level threading
+    library that relies on global synchronization primitives. Furthermore, blocking
+    operations (like waiting on a lock) are trivial to recognize, and deadlocks can
+    be avoided because the kernel sees all primitives.
+
+
+    8'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# MIDTERM 1
+
+
+    # April 15, 2019
+
+
+    Signaling. With 1: threads, there is no management of signal masks. The kernel
+    will deliver signals to its user thread if the mask is enabled, period.
+
+
+    > Can you explain why some of the mechanisms described in the Solaris OS (for
+    configuring the degree concurrency, for signaling, the use of LWPs...) are not
+    used or necessary in the current threads model in Linux?
+
+
+    This is touched on by the simplicity of the “Linux Threading Model” breakdown
+    of the previous question, but we can go into detail here. Degree concurrency is
+    used by the mx model to control the amount of multiplexing ULTs to LWPs (and thus
+    KTs). More degrees means less deduction of a KT to a particular unit. With 1:1
+    each ULT gets a KT; there is no worry about concurrency. Signaling is simpler
+    because the KT signal mask always reflects the ULT; there is no multiplicity to
+    have a global handler and thread masks. The light-weight processes are because
+    all the data for a thread is stored within the thread itself; shared data across
+    is stored in their PCB.
+
+
+    > What''s an interrupt? What happens during interrupt or signal handling? How
+    does the OS know to respond to an interrupt or signal? Can each process configure
+    their own handler? Can each thread have their own signal handler?
+
+
+    Interrupts are hardware-triggered events that indicate to the kernel that something
+    needs to be handled. Similarly, signals are software-triggered events that indicate
+    that something needs to be handled (or is handled for, certain signals like SIGXILL),
+    the kernel has an interrupt table which jumps to a particular subroutine depending
+    on the interrupt type. For signals, the process has a signal handler which enables
+    certain signals using a thread-specific signal mask. The kernel calls the handler
+    if the mask allows (i.e. has the bit set) the signal.
+
+
+    > What''s the potential issue if an interrupt or signal handler leads to a mutex?
+    What''s the workaround described in the Solaris papers?
+
+
+    If code is executing and acquires a lock, then an asynchronous event that triggers
+    a handler (interrupting the ongoing execution) and handler tries to acquire the
+    same lock, then a deadlock will occur one time after the lock is released. For
+    interrupts, this is also viable, mitigated by spiking a signal. Instead, to clear
+    the signal mask so that the expensive signal is ignored (or marked as pending)
+    during the critical section and reset it.
+
+
+    > Contrast the pros-and-cons of a multithreaded (MT) and multiprocessing (MP)
+    implementation of a webserver, as described in the Flash paper.
+
+
+    Honestly, an MP server doesn''t have any pros over an MT server on modern-day
+    systems. It is used because it was portable: kernel-level multi-threading support
+    wasn''t as ubiquitous as it is. However, MT wins in performance because synchronization
+    across threads is much cheaper than the high cost of IPC in an MP architecture.
+
+
+    > What are the benefits of the event-based model described in the Flash paper
+    over MT and MP? What are the limitations? Would you convert the AMPED model into
+    an AMTED (async multi-threaded event-driven)? How do you think an AMTED version
+    of Flash would compare to the AMPED version
+
+
+    9'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# MIDTERM 1 April 15, 2019
+
+
+    of Flash?
+
+
+    An event-based model has many benefits: there are lower memory requirements, no
+    context switches, lower "communication" costs for consolidation of data (like
+    request logging or tracking statistics). Its limitations arise when processing
+    disk-heavy requests; a single blocking operation halts the entirety of the server.
+    In years past, there was also the issue of support I/O; not every OS allowed it,
+    and even then, they may not do it right or readily. A limitation that was touched-on
+    in lecture is that there is some overhead to an event-based approach when around
+    multiple CPUs; there are complexities in routing and dispatching.
+
+
+    These limitations were the entire purpose of the AMPED model introduced for the
+    Flash web server: it combined the efficiency of event-based requesting with the
+    non-blocking benefit of MP file I/O handling. Just like MT leaves MP in the dust,
+    I imagine AMTED would likewise leave AMPED in the dust. The paper itself notes
+    that AMPED is preferred as an architecture for portability. This is no longer
+    an issue AMTED is likely per favor.
+
+
+    > There are several sets of experimental results from the Flash paper discussed
+    in the demo. Do you understand the purpose of each experiment (what was the question
+    to answer to?) Do you understand why the experiment was structured in a particular
+    way (why the chose variables be varied, the workload parameters, metrics ...)
+
+
+    The comparison graphs are a little to keep track of, the terminology / abbrevations
+    we use are defined here. The base model is the AMPED model (there''s also AMTED
+    which uses threads but this isn''t compared) compared against its variants which
+    replaces the main with other architectures while maintaining the same performance
+    optimizations they outline. MP and MT variants refer to the multi-process and
+    multi-threaded models that they developed specifically for a performance comparison.
+    MP should be thought of similar to Apache, whereas SPED, which AMPED is the helpers
+    (i.e. purely single-process), is similar in design to Zeus.
+
+
+    With out of the way, let''s get into the summary of every performance comparison.
+    Something is universally across every scenario: Apache specs relative to the others,
+    which they try to gently attribute to the fact that it doesn''t employ the same
+    "aggressive optimizations" that they use. Some Flash (usually AMPED) almost always
+    out-performs Zeus, except in one special case outlined. Furthermore, MT outperforms
+    MP because of the expensive interprocess communication of the architecture, but
+    MT isn''t always although.
+
+
+    Synthetic workload: Clients requested the multiple file times, with varying file
+    sizes per request.
+
+
+    The curves are identical with more increases in performance. SPED and AMPED were
+    neck and neck (recall that these all Flash variants), SPED edging out because
+    AMPED had to do some extra checks that provide better performance in later workloads.
+
+
+    This heavily tests performance on a cached workload, since the (identical) response
+    is in-memory after the first request.
+
+
+    Trace-based workload: These workloads based on trace of two different systems:
+    the CS trace and the Owlet trace, with the latest dataset being much smaller and
+    cache-friendly.
+
+
+    AMPED has the best throughput across the board; it''s followed by SPED for Owlet,
+    which is cache-friendly, and MT for the CS traces are disk-heavy.
+
+
+    Real-world workload: Logs from a real-world are minced and truncated to a particular
+    size to test different data- and working-sets sizes.
+
+
+    10'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# MIDTERM 1
+
+
+    # April 15, 2019
+
+
+    Until the cache is exceeded, SPED beats AMPED beats Zeus. Then, there''s a short
+    range (approx. 100-110MB) in which Zeus beats AMPED beats SPED. This is attributed
+    to Zeus prioritizing requests for small documents. After that, AMPED beats Zeus.
+    The conclusion is that AMPED is the **general-purpose architecture** which was
+    their goal.
+
+
+    **Flash optimization comparison:** Different optimizations were tested against
+    identical repeated requests.
+
+    The optimizations that they compared were **memory-mapped files** (essentially
+    caching file contents in memory), **response header caching** (responding with
+    a pre-made header for identical requests), and **caching pathname translation**
+    (avoiding the lookup and parsing by storing in memory). The latter of these was
+    actually the most impactful on its. *Without any optimizations*, Flash''s performance
+    halves relative to all of them enabled.
+
+
+    **WAN comparison:** Longer-lived connections stress-test in simultaneous requests.
+
+
+    In this, AMPED, SPED, and MT are very similar. MT starts ahead until about 200
+    clients, after which SPED pulls ahead. AMPED would likely out-perform SPED once
+    caches were insufficient.
+
+
+    > If you run your server for the class project for two different traces: (i) many
+    requests across a very large pool of very large files, what do you think happen
+    as you add more threads to your server? Can you sketch a hypothetical graph?
+
+
+    Requests for the same file will benefit greatly from caching, requests for a variety
+    of large files will trash the disk very early on. This is results in a trend similar
+    to [Figure 3]()
+
+
+    For (i), even if the file is larger than the available cache, requests will still
+    hit a hot cache very often. Then, throughput is nearly linear as the number of
+    threads increases. Even, though, context switches for every request will be cheaper
+    than the benefit of serving a cached file. For the (ii) case, despite a slight
+    increase in performance as multiple requests are handled simultaneously, performance
+    drops like a rock as threads increase increasing on (longer than they would).
+    This is called **disk trashing**, and it occurs very early on. Caches are constantly
+    invalidated and performance suffers quickly as more threads are added, despite
+    improving a bit at first.
+
+
+    ![](img/1250e62c383dbb8b9d771b210db4a869_10_0.png)
+
+
+    **Figure 3:** Theoretical performance of the GET-FILE library under two different
+    traces. (lmao I know this graph aucks but I got tired of trying to make matplotlib
+    show what I wanted to show...)
+
+
+    11'
+  merge: -1
+  pgno: 10
