@@ -1,0 +1,361 @@
+- - '#'
+  - FreeBSD 精通之路：高级 ZFS (IT Mastery Book 9)
+- - '#'
+  - 第 0 章：引言
+- - '##'
+  - 前提条件
+- - '##'
+  - ZFS 最佳实践
+- - '##'
+  - 空间管理
+- - '###'
+  - 选择 VDEV 类型
+- - '###'
+  - 标签的重要性
+- - '###'
+  - 磁盘标记
+- - '####'
+  - GPT 标记（手动）
+- - '####'
+  - gpart add -t freebsd-zfs -zfs-mirror-1 da2
+- - '####'
+  - gpart modify -i 2 -f01-serialnumber da2
+- - '####'
+  - GPTID 标记（自动）
+- - '####'
+  - 磁盘标识标记（自动）
+- - '####'
+  - Glabel（手动）
+- - '####'
+  - glabel label -v mylabel /dev/ada02
+- - '####'
+  - glabel status
+- - '##'
+  - DTrace
+- - '##'
+  - 安装数据集
+- - '####'
+  - zfs list
+- - '####'
+  - zfs mount
+- - '##'
+  - 使用启动环境
+- - '####'
+  - pkg install -y
+- - '####'
+  - 查看启动环境
+- - '####'
+  - beadm list
+- - '####'
+  - 创建启动环境
+- - '####'
+  - freebsd-version
+- - '####'
+  - 激活启动环境
+- - '####'
+  - beadm activate 10.3-release
+- - '####'
+  - beadm list
+- - '####'
+  - beadm list
+- - '####'
+  - beadm destroy 10.3-release
+- - '##'
+  - 启动环境与 ZFS
+- - '####'
+  - zfs list -t snapshot
+- - '####'
+  - 访问未使用的启动环境
+- - '####'
+  - beadm mount 10.3-p19
+- - '####'
+  - beadm unmount 10.3-p19
+- - '##'
+  - 启动环境与应用程序
+- - '####'
+  - 移动应用程序数据
+- - '####'
+  - zfs create zroot/var/mysql
+- - '####'
+  - 创建新数据集
+- - '####'
+  - zfs create zroot/usr/local/postgresql
+- - '####'
+  - zfs create -o canmount=off zroot/usr/local
+- - '####'
+  - zfs create zroot/usr/local/postgresql
+- - '##'
+  - 磁盘加密与启动环境
+- - '#'
+  - 第 2 章：委托与监狱 (Jails)
+- - '##'
+  - ZFS 委托
+- - '###'
+  - 添加权限
+- - '####'
+  - zfs allow remotepool
+- - '####'
+  - zfs allow -u username permissions pool/dataset
+- - '####'
+  - zfs allow -u lucas snapshot,rollback mypool/usr/home/lucas
+- - '####'
+  - zfs allow mypool/usr/home/lucas
+- - '####'
+  - zfs allow mypool/usr/home/lucas/blackmail
+- - '####'
+  - zfs allow -u lucas destroy,mount mypool/usr/home/lucas
+- - '####'
+  - zfs allow mypool/usr/home/lucas
+- - '###'
+  - 创建时间权限 (Create Time Permissions)
+- - '####'
+  - zfs allow -l -e create,mount mypool/scratch
+- - '####'
+  - zfs allow -c snapshot,rollback,destroy mypool/scratch
+- - '####'
+  - zfs allow mypool/scratch
+- - '####'
+  - su lucas
+- - '###'
+  - 修改权限的权限 (Permission to change permissions)
+- - '####'
+  - zfs allow -u lucas myypool/scratch/lucas
+- - '####'
+  - zfs allow myypool/scratch/lucas
+- - '####'
+  - su lucas
+- - '###'
+  - 权限集 (Permission Sets)
+- - '##'
+  - 委托与监狱 (Delegation and Jails)
+- - '##'
+  - 监狱 (Jailing a Dataset)
+- - '####'
+  - zfs create -o jailed=on mountpoint=/jail zroot/lucas/jail
+- - '####'
+  - jail -c path=/zroot/lucas/jail mount.devfs allow.allow.mount.zfs
+- - '####'
+  - jexec lucas sh
+- - '##'
+  - 构建带有 ZFS 委托的监狱
+- - '####'
+  - zfs create -p mypool/jails/lucas/zroot
+- - '####'
+  - fetch -o ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/10.3-RELEASE/base.txz
+    | tar -Xf -C /
+- - '####'
+  - tar -xf base.txz -C /mypool/jails/lucas/
+- - '####'
+  - zfs set mountpoint=/zroot mypool/jails/lucas/zroot
+- - '####'
+  - zfs set jailed=on mypool/jails/lucas/zroot
+- - '####'
+  - service jail start nogelatoforyou
+- - '####'
+  - jexec nogelatoforyou /bin/sh
+- - '####'
+  - service jail restart
+- - '####'
+  - service ctld start
+- - '##'
+  - 网络文件系统
+- - '###'
+  - NFS 配置类型
+- - '###'
+  - 启用 NFSv2/v3
+- - '###'
+  - 通过 ZFS 配置 NFSv2/v3
+- - '####'
+  - zfs share="203.0.113.0/24" zroot/home
+- - '####'
+  - zfs share="-network 203.0.113.0 -mask 255.255.255.0" zroot/home
+- - '##'
+  - 快照复制
+- - '###'
+  - 基础复制
+- - '####'
+  - zfs snapshot mypool/someata@snappy
+- - '###'
+  - 本地复制
+- - '####'
+  - zfs send mypool/someata@snappy > backup_file
+- - '####'
+  - zfs receive backup_file
+- - '###'
+  - 远程复制
+- - '####'
+  - zfs send zroot/home@snappy | zfs receive remotool/backup/usr-home
+- - '###'
+  - 用户和数据集
+- - '####'
+  - zfs allow -u replicator send,snapshot zroot/home
+- - '###'
+  - 增量复制
+- - '####'
+  - zfs list -t snap -r zroot/home
+- - '####'
+  - zfs send zroot/home@tuesday | zfs receive remotool/backup/usrhome
+- - '###'
+  - 增量假设
+- - '####'
+  - zfs send -I zroot/home@wednesday | ssh zfs receive remotool/backup/home
+- - '###'
+  - 差异复制
+- - '####'
+  - zfs set readonly=on@remotpool/backup
+- - '####'
+  - zfs send -I zroot/home@monday | ssh zfs receive remotool/backup/home
+- - '###'
+  - 增量复制复杂
+- - '####'
+  - zfs send zroot/home@monday | zfs receive remotool/backup/usrhome
+- - '###'
+  - 增量复制
+- - '####'
+  - zfs send zroot/home@tuesday | zfs receive remotool/backup/usrhome
+- - '###'
+  - 高级发送选项
+- - '####'
+  - zfs allow -u replicator zroot/backup
+- - '####'
+  - 发送属性
+- - '####'
+  - 去重数据流
+- - '####'
+  - 调试与测试
+- - '####'
+  - 大块与小块
+- - '####'
+  - 高级接收选项
+- - '####'
+  - 路径与挂载管理
+- - '####'
+  - zfs send zroot:/usr/ | zfs receive remotool/backup
+- - '####'
+  - zfs send zroot:/home/ | zfs receive remotool/backup
+- - '####'
+  - 滚更改
+- - '####'
+  - zfs send zroot:/home/ | zfs receive remotool/backup
+- - '####'
+  - zfs list -t snapshot,bookmark -s creation -d zroot/home
+- - '####'
+  - 'zfs send -i #bm-friday zroot/home@saturday zfs receive remotool/backup/home'
+- - '##'
+  - 可恢复的发送 (Resumable Send)
+- - '####'
+  - zfs get receive_token remotool/to
+- - '##'
+  - 自动化复制
+- - '####'
+  - pkg install zxfer
+- - '####'
+  - 使用 zxfer
+- - '####'
+  - Zxfer 拉模式
+- - '####'
+  - 轮快快 (Rotating Snapshots)
+- - '####'
+  - 保留旧快照
+- - '####'
+  - 属性与灾难恢复
+- - '####'
+  - 'zxfer -defP -R remotool/web5/ '
+- - '####'
+  - Zxfer 选项
+- - '##'
+  - 卷模式 (Volume Mode)
+- - '####'
+  - 命令行中的 volmode
+- - '####'
+  - zfs create -V 10G -o volmode=dev vm/swap0
+- - '####'
+  - 默认 volmode
+- - '####'
+  - 访问 zvol
+- - '####'
+  - gpart create -s g /dev/zvol/vm/db1
+- - '####'
+  - gpart add -t freebs-ufs -1 db1 /dev/zvol/vm/db1
+- - '####'
+  - glabel db1 /dev/zvol/vm/db1
+- - '####'
+  - newfs -j /dev/zvol/vm/db1
+- - '####'
+  - mount /dev/gpt/db1 /media/
+- - '##'
+  - 封闭路径 (Closure Path)
+- - '####'
+  - ls -l /dev/enc@n5003048178BB8D/type//@slot/elmdesc@Slot_10/
+- - '##'
+  - 保持指示灯开启 (Keeping the lights on)
+- - '####'
+  - 开启 sesutil locate da2
+- - '####'
+  - sesutil map
+- - '####'
+  - sesutil locate -u /dev/ses0 3 on
+- - '##'
+  - 控制主机适配器 (Controlling Host Adapters)
+- - '###'
+  - 适配器详情 (Adapter Details)
+- - '####'
+  - mpsutil show adapters
+- - '###'
+  - 显示机箱 (Display Enclosures)
+- - '####'
+  - mpsutil -u 1 show enclosures
+- - '##'
+  - sas2ircu
+- - '###'
+  - 查看硬件 (Viewing Hardware)
+- - '####'
+  - sas2ircu 0 display
+- - '###'
+  - 物理设备信息 (Physical device information)
+- - '####'
+  - 机柜信息
+- - '####'
+  - sas2ircu 定位指示灯 (Locate Lights)
+- - '####'
+  - sas2ircu <controller#> Locate <enclosure#:slot#> on
+- - '####'
+  - sas2ircu 0 locate 1:7 on
+- - '##'
+  - SAS 多路并发 (SAS Multipath)
+- - '###'
+  - 为什么需要多路？
+- - '###'
+  - 多路模式
+- - '###'
+  - 识别磁盘
+- - '####'
+  - camcontrol inquiry da7 -S
+- - '####'
+  - camcontrol inquiry da43 -S
+- - '###'
+  - 更改多路径模式
+- - '####'
+  - gmultipath configure -R f07-1EHNLWRC
+- - '####'
+  - gmultipath status
+- - '####'
+  - gmultipath rotate f07-1EHNLWRC
+- - '####'
+  - gmultipath status
+- - '##'
+  - SSD
+- - '##'
+  - NVMe
+- - '###'
+  - 查看 NVMe 设备
+- - '####'
+  - nvmectl list
+- - '####'
+  - nvmectl identify nvme0
+- - '####'
+  - nvmectl identify nvme0ns1
+- - '###'
+  - NVMe 性能
+- - '####'
+  - for threads in 1 2 4 8 16 32 64; do nvmeftest -n $threads -o read
