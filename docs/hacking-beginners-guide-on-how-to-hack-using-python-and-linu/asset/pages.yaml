@@ -1,0 +1,2332 @@
+- img_proc: true
+  md: '# # HACKING
+
+
+    Beginners Guide on How to Hack Using Python and Linux
+
+
+    ![](img/4f9b58559135953e944a2b36c56eb1e4_0_0.png)
+
+
+    # BRUCE ROGERS'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Hacking
+
+
+    # ## Beginners Guide on How to Hack Using Python and Linux'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Why This Book
+
+
+    This how to book really is a basis for any aspiring hacker to start learning how
+    to be accepted within the hacker community. In addition to learning Python, you
+    will also learn to understand the importance and great things that the Linux operating
+    system has given the hacking community, as well as how it is vital in exploring
+    the hacker mentality.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Part of this great, free and open source operating system is something that
+    should never be taken for granted and also emulated in the work that we do as
+    hackers. By the time you finish reading this book, you will have a sound understanding
+    of Linux operating systems and its foundations, and know how to use it to exploit
+    potential entry points within it.
+
+
+    Ultimately, the aim of this book is to provide all aspiring hackers who are just
+    starting out with a solid reference'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: point to learning how to hack using python programming, helping you develop
+    a strong understanding of Linux operating systems, and giving you descriptive
+    passages for you to learn and imagine how to utilize terminology within the hacker
+    community. I provide a great starter manual for anyone who is looking to get into
+    hacking itself, or even just a beginners’ guide to Linux and Python. With step
+    by step directions in some cases, as well a helpful reference for figuring out
+    “how” and “what” command line is, to moving on to how to
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: hack into different things by finding vulnerabilities you will gain and learn
+    a multitude of new skills. With the invention of shared, open sourcing of Linux
+    systems, hopefully you will be able to find the one that works best for you and
+    your purpose. My goal is to assist you in knowing just what that may be and giving
+    you the resources to find it in order for you to become an elite hacker.
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Overview: What is Hacking?
+
+
+    There is a common misconception among the public of what hacking actually is.
+    Up until now, hackers have been viewed as mischiefs behind a keyboard with the
+    intent and technical savvy to only perform malicious and hateful crimes online
+    like theft, robbery or cyber-attacks. Perhaps this is a result of the media selectively
+    publicizing and'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'shaming a handful of hackers that used their craft to do harm to others, while
+    ignoring the good that the hacking community actually does.
+
+
+    In recent years, however, there has been a somewhat noticeable shift in how hackers
+    are being portrayed to the public. Thanks to platforms like YouTube, Hacktivist
+    groups like Anonymous now have a voice in what’s been a very one sided story about
+    what hacking is and what hackers do.
+
+
+    Hacking is more than just knowing how to gain access to restricted information.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Hacking is about freedom, creativity and most importantly a push to make things
+    better.
+
+
+    The important thing to understand is that not all hackers are alike. Hacking is
+    an art and a skill that takes time to perfect. What a person decides to do with
+    that skill is on the individual, not the community. There will always be good
+    and bad people in this world.
+
+
+    My intention with this book is to provide you with the basic resources and skill
+    sets to get started on your journey as hacker. The tools I have chosen are'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Python and Linux, which we will discuss thoroughly throughout the book so that
+    you not only understand the “how” but the “why” to what you are doing.
+
+
+    We will also discuss the importance of mindset and principles that will help guide
+    your path as a hacker.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Table of Contents
+
+
+    Introduction
+
+
+    Chapter 1-The Hackers Mindset
+
+
+    Chapter 2- Linux Systems Basics for Hacking
+
+
+    +   - What is Linux?
+
+
+    +   - How is Linux used for hacking?
+
+
+    Chapter 3- Understanding Python
+
+
+    +   - Why is Python the preferred hackers’ language?
+
+
+    +   - Benefits of learning Python as a'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# programming language
+
+
+    # Chapter 4- Learning Python
+
+
+    # Programming
+
+
+    +   - How to get started
+
+    - Best ways to learn Python
+
+
+    # Chapter 5 – The Importance of Command Lines
+
+
+    # Chapter 6- Identifying Vulnerabilities
+
+
+    +   - How do hackers identify potential points of entry?
+
+    - Socket
+
+    - Registry
+
+    - Programmatic interface
+
+    - Environment Variable'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '+   * Command Line Argument
+
+    * Protocol Handlers
+
+    * HTTP Header
+
+    * How can hackers exploit these using Python & Linux Systems
+
+
+    # ## Chapter 7- Useful Resources
+
+
+    +   * Beginner tutorials
+
+    * Cryptography
+
+    * Helpful websites for security news and articles
+
+    * Videos, forums and playlists
+
+    * Vulnerability resources and databases
+
+    * Tools and programs'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Chapter 8- Next Steps to Develop Your Hacker Skills
+
+
+    # Conclusion'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Introduction
+
+
+    Congratulations on purchasing, *Hacking; Beginners Guide on How to Hack Using
+    Python and Linux* and thank you for doing so. This book contains proven strategies
+    on how to make your first steps in becoming a hacker. It also serves as an excellent
+    resource for those internet savvy people who want to create a space for themselves
+    within the hacking community. If you are a beginner'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'that’s just starting out and your goal is to master Python and Linux OS, then
+    this will be a great introduction for you into how to start learning the basics.
+
+
+    In this book, you will be provided with summaries and simple “how to” guides to
+    using Python programming language within the Linux operating system. It allows
+    for the user to be immersed in the “how” and “why” of basic properties of inputting
+    commands into the operating system through command lines.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: To grow as a hacker, it is important to not only know how to do something but
+    rather, you should work to understand the fundamentals and reasoning behind what
+    it is that you are doing. Part of this book will be dedicated to purely learning
+    about the python programming language to help you develop this understanding.
+    Essentially, this is what you will use to build and operate your way around the
+    command lines within the walls that make up the virtual world you are trying to
+    intercept and figure out. Remember that Python is not the
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'only language that you can use within the world of hacking, just the one I
+    have chosen because I believe it to be the best starting point for any new hacker.
+
+
+    After you have developed an understanding of the fundamentals, we will go through
+    basic lessons in programming using Python and the best way to really learn how
+    to do so. I try to provide comprehensive tricks of the trade and ways to be successful.
+    Another goal of this book is to allow you to always have a reference guide for'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'programming with Python and hear some messages that will help to push you through
+    difficult times in your hacker puzzles.
+
+
+    Lastly, in this book I’ve provided for you an explanation and description of what
+    it means to be a hacker and the type of etiquette that is required within the
+    hacker community. You will also learn how to gain acceptance within the community
+    through a set of core values I will share with you. Not only will I cover these
+    values, I will also tell you'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'why they are important and how they will open up doors for you. This book will
+    also allow for you to see just how hackers start projects and why they believe
+    so strongly in freedom and the anti-authoritative stance hackers take when taking
+    on a problem.
+
+
+    This how to book asks you, the reader, to think about just how you may want to
+    join the internet’s world of hackers. Working with that theme, the descriptions
+    and ideas of how to use'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'different resources to allow yourself to be as successful as possible to become
+    a hacker. You are your own best friend when it comes to developing yourself within
+    the community of hackers. It is important to never forget the type of hacker you
+    want to be, which should be an excellent mix of both intelligence and creativity.
+    Oh, and a lot of know-how on how to operate a computer!
+
+
+    Thanks again for purchasing this book, I hope you enjoy it!'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Books You May Also Be
+
+    Interested in:'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/4f9b58559135953e944a2b36c56eb1e4_22_0.png)
+
+
+    # # HACKING
+
+
+    Ultimate Beginners Guide To Becoming A Top-Notch Hacker
+
+
+    BRUCE ROGERS'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Guide to Hacking Made Simple for Beginners: Learn The Basics in Under 24
+    Hours
+
+
+    This book contains proven steps and strategies on how to enter the mysterious
+    world of hacking. Many hacking tutorials and instruction guides assume you are
+    already a high level programmer. This book uses very plain, easy to understand
+    language so that you can become the hacker you aspire to be. It also provides
+    great resources to basic programs, systems and tutorials that will facilitate
+    your learning process'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Not only will you learn the secrets behind hacking and cracking within IT Security,
+    you will also gain valuable insight and knowledge into how how you can start protecting
+    yourself TODAY against hackers from stealing your information!
+
+
+    This is a MUST READ for anyone who is serious about learning how to become an
+    elite hacker
+
+
+    # Here Is a Preview of What You''ll Learn:
+
+
+    +   - The Basics of Hacking'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '+   * The Different Types of Hackers
+
+    * How to Get Started as A Hacker
+
+    * How to Hack Systems and Networks
+
+    * Penetration Testing
+
+    * And Much, much more!
+
+
+    Download Link:
+
+
+    http://amzn.to/2iQhAUA'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Copyright 2017 by Bruce Rogers - All rights reserved.
+
+
+    The follow eBook is reproduced below with the goal of providing information that
+    is as accurate and reliable as possible. Regardless, purchasing this eBook can
+    be seen as consent to the fact that both the publisher and the author of this
+    book are in no way experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'purposes only. Professionals should be consulted as needed prior to undertaking
+    any of the action endorsed herein.
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'creating a secondary or tertiary copy of the work or a recorded copy and is
+    only allowed with express written consent from the Publisher. All additional right
+    reserved.
+
+
+    The information in the following pages is broadly considered to be a truthful
+    and accurate account of facts and as such any inattention, use or misuse of the
+    information in question by the reader will render any resulting actions solely
+    under their purview. There are no scenarios in which the publisher or the original
+    author of this work can be in'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'any fashion deemed liable for any hardship or damages that may befall them
+    after undertaking information described herein.
+
+
+    Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the we'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: trademark holder.
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Chapter 1- The Hackers Mindset
+
+
+    Although there may be some with associations of hackers being people who tend
+    to skirt the rules and work towards creating mayhem on the internet, the fact
+    of the matter is that this is not the attitude of a hacker at all. Hackers have
+    a general code that they live up to. This consists of the following: they must
+    not'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'only give others voluntary and mutual help, they also believe in freedom. In
+    order to truly belong and find your place within the hacker community, you have
+    to truly believe in this mission yourself and find camaraderie with those who
+    share your core mission and value. By the end of this book, I am positive that
+    you will feel confident in laying the ground work for yourself to be the hacker
+    you aspire to be.
+
+
+    It is important that you understand the hierarchy within the community and the'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'traits that are valued by your fellow hackers. It is also very important to
+    always be open minded, as this is the way you will most likely come up with the
+    greatest solutions to problems that may seem impossible to solve. Using your creative
+    forces of deduction, you should try to assess and figure out where your personal
+    ideals and goals will take you within this community.
+
+    With that being said, this attitude is not the only attribute one needs to be
+    accepted within the hacker culture. This attitude itself is an important piece
+    of the'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: puzzle, however, one must truly believe that the actions they will take will
+    both assist you personally to learn through the process, as well as be motivated
+    through your personal progress. Hacking is, in itself, an art form that involves
+    both creative and intellectual abilities that embody the mind set of what a hacker
+    is. There is an emotional tie to the work you do as a hacker and it is important
+    to let that be a driving force in your work. There are some basic rules that I
+    find helpful to embodying and allowing your work as a hacker to create the image
+    you
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'and the hacker culture will be able to stand behind. These basic premises should
+    become like mantras to you as you continue to grow and develop your hacking skills.
+    I truly believe that by keeping a consistent mindset, you will be able to develop
+    better and more creative solutions than most hackers that align with your set
+    of beliefs and values. These five core values or ideas are that: freedom is essential,
+    there is absolutely no substitute for one’s competence—attitude does not take
+    the place of competence, always try to solve new'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'problems and avoid repetitive and boring tasks, you should never have to solve
+    the same problem twice and there is an endless supply of absolutely fascinating
+    tasks just waiting to be solved.
+
+
+    As any citizen of a Western country that knows what freedom is, it is vital also
+    to abide by this value in order to properly know how to use your hacking know
+    how. Hackers, being huge supporters of freedom, are also anti-authoritarian in
+    nature and therefore truly value and work to achieve and expose things that'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'do not stand for freedom on the internet. Groups like Anonymous, for example,
+    are all about exposing those organizations and people who do not seem to believe
+    in freedom. Instead of the secrecy that holds together authoritarian organizations
+    and people, hackers break down those barriers by exposing these sorts of truths
+    about oppression.
+
+
+    Although having the proper hacker attitude is essential to your success as a hacker,
+    it is also important to know your craft. The key to being able to prove'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: your competence is to learn how to properly address and solve actual program
+    coding problems. Being able to master the skills and programming languages that
+    will allow for you to be successful is absolutely essentially. Hackers are able
+    to spot out wannabes who have not done their homework and learned how to use coding
+    skills to solve problems. Take advantage of resources and tools that help you
+    learn the basics to these skills--- for example, resources such as this book!
+    You must never try to pass as a hacker without knowing your
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'stuff, so to speak.
+
+    When it comes to any creative process, emulating a person’s work is acceptable;
+    however, repeating the same work over again is not something you want to do.
+
+    Within the creativity of the world created by you as a hacker, you want to strive
+    to always be challenging yourself to do something new and different. The creative
+    challenge for the hacker should be something to the effect of “what new challenge
+    can I tackle and problem solve today?” You want to create a positive vibe within
+    the hacker community that'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'allows for, not only you to be creatively motivated, but to assist others with
+    keeping up the hacker spirit. One never wants to be boring and dull and not allow
+    for creativity to be in your work. There truly is something to having a great
+    morale within any group, especially one that is trying to inspire and create change.
+
+    Building on the fact that one should always be creating new tasks and solving
+    new problems, a good rule of thumb for the hacker is to never, ever solve the
+    same problem twice. In fact,'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: some consider this to be completely unacceptable as hackers should always be
+    striving to solve new problems. It is a rule that hackers share information with
+    each other, not ever allowing for others to solve problems that you have already
+    solved. There is this sense of camaraderie within the hacker community that should
+    always be a wealth of shared information. Hackers are not out for themselves,
+    they are out to solve problems and allow for freedom to reign supreme. One should
+    keep in mind, however, that another
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'hacker may come up with a more efficient way to solve a problem—that is most
+    definitely allowed and encouraged. Efficiency is certainly something hackers value,
+    just not repetitive problem solving that is inefficient. You do not need to give
+    away all your secrets, if they are the secrets keeping you employed with a roof
+    over your head and food on the table, but do not be stingy with information if
+    your fellow hackers need it.
+
+    Always remaining constantly optimistic and hardworking, looking for new'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: problems to solve, is a large part of what keeps hacking an enjoyable learning
+    experience. Allow yourself to learn and tune your craft and what areas of the
+    internet and hacking are of upmost interest to you. Within your own personal arena
+    of work, you want to constantly be pushing yourself to find and solve more problems.
+    You want to refine your craft by always solving problems, allowing for your intelligence
+    to be exercised and finally keep your skills sharp and always building on knowledge
+    to destroy the next problems
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'your way. Although it may not initially seem like it, hackers are finely tuned
+    artists that really do work towards consistent and excellent performance. If this
+    is not something that comes naturally to you, you will certainly want to work
+    on it, always working out your mental muscles and keeping your brain fully engaged
+    and on. This is an excellent way to keep up and constantly improving your performance.
+
+    By synthesizing all of this information, hopefully it makes sense and allows you
+    to feel as though it is something not'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: only believe in but will strive to achieve in your work. In order to find your
+    place within the hacker community, you must constantly be able to remind yourself
+    and live within your creed of creativity, intelligence and constant improvement
+    of your skills. There are a variety of people around the world that use hacking
+    to solve creative problems and really focus on the fact that they are exposing
+    potential authoritarian sources of trouble. It is important to remember that you
+    are practicing something that is a part of this large picture of a message of
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'freedom. Why should one every do something they do not believe in? You must
+    believe in the personal message of these hacking values, or you will not last
+    long within the community.
+
+    Practice, intelligence, passion and creativity are things that should be traits
+    you either have, or are willing to pump up and allow yourself to grow into.
+
+    There is nothing shameful about not potentially having these skills at first,
+    everyone must start somewhere. Now'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: that you are aware of the mindset you need to have in order to be hacker, it
+    is from here that you must build your tool box and create your own personal path
+    into the world of hacking. Along with the information you learn in this book,
+    you need to make sure to continue to constantly learn and find new resources and
+    avenues to improve your skills. Toward the end of this book, I will talk more
+    about how to continue on your
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'quest to hacking, through some resources
+
+
+    I see as essential in your knowledge data base. First things first, however, as
+    a new hacker, you need to make sure you know how to speak and create code using
+    both Linux and Python, and this book will serve as your brief introduction to
+    these languages.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# # Chapter 2- Linux System Basics for Hacking
+
+
+    # ## What is Linux?
+
+
+    The first question you are probably asking yourself, if you have never heard of
+    Linux before is, what is it? Linux is the operating system that has been put together
+    as a completely open source and free software for people to use and access. It
+    is a computer operating system that lends itself to the “shared'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: 'intellectual property” motto of the hacker. Linux operating system kernel was
+    initially released on September 17th, 1991 by creator Linus Torvalds, and has
+    been free and downloadable for anyone since that time. The operating system can
+    be on any electronic device from TiVo, to Android smart phones and, obviously,
+    computers.
+
+
+    What is an operating system, though? If you are someone who has had little experience
+    with computers and how they operate, you probably have heard the'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: word but are a little unsure as to what this means within an actual computer.
+    One can basically define an operating system as a software that allows for the
+    user to execute applications (run programs), supports everyday computer functions
+    with things like being able to schedule tasks and allows you to control peripherals.
+    Essentially, the operating system is a series of coding that tells the computer
+    how it is going to run and what types of programs are set off by different coding.
+    It is also how one puts in a security of checks and balances that
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'allow for your computer, or network, to be behind the safest of virtual walls
+    it possibly can be.
+
+    Although this software was originally developed for personal computers, today
+    it is ported to more platforms more than any other operating system in the world.
+
+    One can see Linux used on bit servers and mainframe computers for many different
+    people and businesses. Most recently, it has been added to Google Chromebook laptops
+    that have seen a huge increase in usage by the American education system. Linux
+    is also seen on'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: Android operational systems for the smartphones, which now is the dominant source
+    of operating systems on smartphones. Another great thing about this operating
+    system is that it also runs in embedded systems that allow it to transcend different
+    technologies such as routers, DVRs and computer tablets. This allows for the operating
+    system to truly touch every part of the technological space and be a friendly
+    and known source of operating systems for any computer hacker in training. Linux
+    is really, truly the largest and most
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: well-known example of something that is an open-source software collaboration
+    that is free to the public. The source code of the operating system is something
+    that can be modified, distributed and used by anyone under the GNU or General
+    Public License. That is a large reason why it is found and used on so many different
+    devices. Normally, for desktops and server uses, one will see Linux packaged as
+    *Linux Distribution*, so this may be the way you have inently seen it before.
+    Other mainstream, popular distributions you
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'have seen may have been openSUE, Ubuntu, Arch Linux, Debian, Fedore, Linux
+    Mint, CentOS, Mageia or Gentoo Linux. All of these, and the other unnamed distributions,
+    include both a support library and supporting utilities, which include the Linux
+    kernel. The kernel, for your knowledge, is really the basis of the operating system—you
+    could really think of it as the heart of it.
+
+
+    As you can distribute Linux to anyone in any intended usage, it is meant to be
+    used by the masses and be completely'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'free. The distributions of Linux that are out there include both a desktop
+    environment (like KDE Software Compilation) as well as a windowing system (Like
+    Wayland or X11). Sometimes there are intended distributions that leave out all
+    graphic environments for standard install—a different feature one may not generally
+    see—that may operate on software such as solution stack.
+
+
+    Interestingly, when Tovald invented Linux, he did so because he was frustrated
+    with licensing of education'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: use only software MINIX. Tovald felt frustrated that he was unable to use it
+    and eventually created the Linux kernel as his own creative and ingenious solution
+    for the problem he saw at hand. If you notice, Tovald seems to abide by a large
+    hacker rule that he solved a problem using his own creative abilities. He began
+    his development of the operating system based on applications written for MINIX,
+    but replaced components with the GNU applications that anyone can reuse in any
+    computer program; as long as they are released
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'with a similarly compatible license. By integrating both GNU and the Linux
+    kernel, a fully free and fully functional operating system was made available
+    to the masses. Truly, this has allowed and assisted hackers since its inception.
+    It truly is also a prime example of creativity and freedom based operating system
+    knowledge spreading between users.
+
+
+    Although this software is designed for both homes and business infrastructures,
+    where large organizations (for example, NASA) began to use Linux in their'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: expensive machines with the inexpensive Linux options. After initial success
+    within a few large companies’ infrastructures, commercial computer companies followed
+    suit, companies like Dell and IMB, added Linux support to move away from the Microsoft
+    monopoly that had been in the desktop operating system market. With the addition
+    of Linux to the Google Chrome OS software and on Android smartphones, Linux is
+    slowly taking over larger operating systems on large computer and technology companies.
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'Linux gaming is also starting to gain some wind, with the company Valve starting
+    its own Linux oriented gaming distribution.
+
+    The design of Linux is based on the Linux kernel, which uses a monolithic kernel
+    to handle everything from networking, file systems, process control and access
+    to the peripherals. Drivers on different devices are either modules that load
+    while the system runs, or integrated in directly with the kernel. There are four
+    different things that are components installed on a Linux system; these are, an'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'init program (root of the process tree), software libraries (containing code
+    used by running processes including C standard library and widget tool kits),
+    a bootloader that loads the Linux kernel into the main memory of the computer
+    and finally user interface programs (windowing environments or command shells).
+    As you can see, the operating system itself is multi-tasking and inclusive of
+    the needs of most any user.
+
+
+    The operating system Linux, and its founder, really fit well into the hacker'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: ideals and mindset that are essential and important when considering how the
+    software is used, and what the hacker community is trying to achieve. Through
+    a stance about freedom being of utmost importance, as well as transparency and
+    a lack of authoritative personalities in charge, the Linux system allows for every
+    user to be a part of the experience in creating and maintaining the system itself.
+    As hackers are creative people who are innovators by nature, it is only fitting
+    that they use an operating system that supports their mission.
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# # How is Linux used for hacking?
+
+
+    There are a multitude of operating systems one could potentially use to hack,
+    so why was Linux chosen as the standard in the community? First of all, it is
+    available to absolutely everyone, as it is free. This allows access for anyone
+    with a technological device to have Linux as its operating system. There are many
+    people across the world who use Linux for the simple fact that it is free and
+    can be used by virtually anyone. However, there are other things that allow for
+    hackers to utilize and enjoy'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'using the Linux operating system. These things are that it is an Open Source
+    operating system, it is available in a variety of distributions and hackers feel
+    that Linux is an operating system that can be secured.
+
+
+    What is an Open Source operating system and why does this appeal to hackers? Well,
+    in case you are not aware of what an operating system itself is, essentially it’s
+    the background running of all programs that relays requests to a computer’s different
+    hardware. The open'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: source part of the software is the fact that it is free, and that anyone can
+    publicly edit, view and contribute to the coding of the software. Linux is essentially
+    endlessly customizable as well because you can switch out and change both user
+    interface components, as well as the core components of the operating system.
+    This is truly an operating system that lends itself to hackers and their mission
+    of freedom and collective intelligence used to fight the authoritarian influences
+    in our society. It is a wonderfully created and
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'executed example of and operating system and showing the world what can be
+    done using an open sourcing distribution.
+
+
+    The distributions that Linux is available to one is also quite incredible. The
+    nature of the open sourcing allows for open access for everyone, it could honestly
+    be called an operating system that promotes equality for all. There are countless
+    distributions that one can choose from, some of which are listed above. The interesting
+    thing about these variety of options is how people have'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: worked together to create these options. From the creating to the distribution,
+    there are countless tasks that need to be done in order to streamline the final
+    product efficiently to the public. The types of roles people play are anything
+    from designers of the graphics and different interfaces, some individuals test
+    the hardware and software to discover any potential bugs and making sure everything
+    works. There are people who translate the software for people around the world
+    so everyone has access, these people, who are like
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'evangelists, work to spread the word of Linux to people far and wide—as well
+    as a multitude of other roles that help assist the creation and distribution of
+    the different versions. It is truly a wonderful thing that allows for anyone who
+    wants to participate in the Linux system building and creating process, to be
+    able to. This is a great intellectual and creative mechanism for hackers to begin
+    to practice their craft.
+
+
+    Of interest to anyone who uses technology these days, is how safe and secure is
+    the software they are using?'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'The fact that anyone can access source codes for the operating system may,
+    at first, cause people to think it is less secure than other operating systems.
+    However, there are truly five things that allow for the security of the Linux
+    system to stand up to any tests—these being that there is a social engineering
+    component, the privileges one must have access to, the effect of monoculture,
+    the size of the audience and the amount of eyes that have looked through the different
+    Linux products.
+
+
+    Probably anyone who uses a computer'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: knows about social engineering, just not using that particular terminology.
+    Most people have heard of viruses and worms being spread through things like attachments
+    or bogus emails. These worms and viruses spread through people literally clicking
+    on tempting, yet fishy, advertisements or emails that allow for malware to attack
+    their computers. Linux is special because users of the product do not have root
+    access. Within the Linux interface, in order for someone to open and allow malware
+    onto their computer, they would
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: have to carry out a series of actions. Unlike, say, Microsoft Windows, where
+    you click on the attachment and upload the virus; In Linux, you would have to
+    save the attachment and then go through the process of giving it executable permissions
+    and only then could you run the actual executable. This is quite more complex
+    than what most would do before realizing something is fishy. The next interesting,
+    and securable, component is the privileges that one must have in order to use
+    the system. Unlike an administrator of a Windows
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: based program, Linux users do not have root privileges to the system itself.
+    Meaning that, if the system itself is compromised, a virus won’t have root access
+    and it will be impossible to do damage system wide. In this circumstance, instead
+    of the entire system crashing, it will likely just effect the users’ programs
+    and files. It really can be seen as the difference between taking down an entire
+    businesses infrastructure or just one person’s personal documents. Clearly, the
+    ruin of only one is superior to the entire system.
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: Next up is the monoculture effect that other systems, like Microsoft Windows,
+    have built within their programs that allows for them to stand alone, without
+    any diversity. As we have seen over the first few pages of this book in explaining
+    Linux, it is all about diversifying and creating a better product for people to
+    use. This culture of sharing and building upon different ideas allow for a better
+    quality of operating system software to be produced and used by everyone. There
+    is something to be said for diversity in every aspect of life, this
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'being no different.
+
+    Building on the principle of diversity and not falling into a monoculture effect
+    category, is the size of the audience of a potential virus or malware attack.
+    With the majority of security concerns being programmed for Windows platforms,
+    Linux has the obvious advantage of simply not being one of those operating systems.
+    This works great to further insure security and safety within the Linux system.
+
+    Last, the amount of people, and eyeballs, that overlook the process is simply'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: invaluable. There is a phrase coined by the creator, Linus Torvalds, where he
+    states that “given enough eyeballs, all bugs are shallow”, something that really
+    shines light on the conceptual growth that continues under this direction. With
+    the power of many users overlooking all parts of any coding and being able to
+    find and assign someone to change a potential bug, the problems in any creators
+    operating system coding is sure to be lessened. Instead of a company like Windows
+    were there is a very small, limited team of paid developers who are
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: 'trying to keep all of their codes and activities a secret, Linux brings groups
+    of people together as a community to solve problems. This is an invaluable, communal
+    lesson that Western society seems to lack in most aspects. This sort of philosophy
+    exemplifies the type of mindset and manner that hackers want to use and grow their
+    skills and creative talents.
+
+
+    Although obviously Linux is not infallible and unable to be compromised, it is
+    important to'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: remember and look at the competitors’ products and just how many different functions
+    are built into Linux operating systems. The goal of any project is to create and
+    produce the best possible product possible, which is something the Linux users
+    truly embody. Hackers really use all the aspects of this community based culture
+    to change and manipulate the operating system to make a higher quality of computer
+    program and access for all.
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Chapter 3- Understanding Python
+
+
+    # Why is Python the Preferred Hackers Language?
+
+
+    Although the system itself that hackers prefer is Linux, there is a language within
+    that in which the hackers choose to use. When you are learning to be a hacker,
+    Python is a great building block for one to learn how to code. When'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'hackers start to learn how to code and use a programming language, Python can
+    play a key role as allowing people to figure out different coding solutions that
+    work, even if just temporary solutions. A beginner hacker can see the results
+    of their work with the prebuilt frameworks and tools that allow for a new hacker
+    to learn with the benefit of some premade examples.
+
+
+    Much like the manner in which Linux is something that is appealing to hackers
+    because of its open source nature;'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'Python is a good, complementary language to this type of operating system.
+    The language itself is something that is focused and relatively easy to use once
+    you get used to it and research why and how it works. There are lots of different
+    languages out there, most will agree that Python is great to learn on and should
+    definitely be used in tandem with Linux for a beginner hacker to try your skills
+    out on.
+
+
+    Python also is a great language to try out different things just to see if they
+    are able to succeed in making and improving'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: code. This is great for people who like to take things apart and then put them
+    back together. Python allows for a user to literally build and take down their
+    project in order to understand exactly how it works. Python easily allows for
+    a user to do that. There are massive amounts of libraries for new users to look
+    through and address any issues, or problems, you are trying to solve. Having something
+    like this as a resource can be invaluable to a new programmer who is trying to
+    learn and discover the ropes. It is also a great communal
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'resource, as the hacking community likes to keep and share its resources.
+
+
+    One goal of a hacker may be to system crack something. When it comes to Python,
+    this language is an excellent methodology for doing just that. In order to hack
+    a system, one must have three things—a creative way to apply knowledge, a method
+    based manner of testing and finally a very thorough technical knowledge base.
+    Fortunately for anyone attempting to do just that, Python actually gives a strong
+    and'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: 'simple syntax for all of those things.
+
+    Pthons libraries and resources, both written and in the form of other users, allow
+    for one to find all the tools they need for system cracking. The greatest part
+    is that it allows you to truly learn the subject matter through researching and
+    implementing lessons learned.
+
+    Hacking is a combination of creativity and intelligence, along with other concepts,
+    and Python allows for a new, or seasoned, hacker to optimize their performance.
+    Python, with its extensive knowledge base and simplicity, allows'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'for a beginning hacker to to quickly, efficiently and wisely learn the ropes
+    of programming language and its power.
+
+
+    # Benefits of Learning Python as Programming Language
+
+
+    Although every language has its advantages, when you are starting out learning
+    the new language, there are some benefits Python offers that set it apart from
+    the rest. Basically, Python is a great beginning language that can help you build
+    blocks that will serve you well as you move through more difficult'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "programming in your hacking career. With the Python language, one is getting\
+    \ what is referred to as a high level programming language. Essentially this means\
+    \ that the language itself essentially ignored all low level matters. The more\
+    \ familiar you get and greater your knowledge base becomes, the more you will\
+    \ be able to reach into the low level matters. However, Python is a great starting\
+    \ place for anyone to learn the basic, high level skills needed in a programming\
+    \ language. \nIn addition to the somewhat beginning"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'based language skills one will need using Python, there are additional advantages
+    when it comes to time. Time spent in Python will be much less than in C++ and
+    other programming languages. Typically, time spent in order to develop a hack
+    will take about 30 minutes in Python. Whereas in other programming languages,
+    it may take much longer than just 30 minutes. This is a great way to inspire a
+    new hacker as they will be able to achieve their desired hacks in a reasonable
+    amount of time.
+
+    The next benefit has already been'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: touched on above; however, it truly is important to have resources like the
+    libraries. These libraries truly enable a new hacker to have a place to refer
+    to for any sort of issue they may be having. These extensive libraries allow for
+    a hacker to find knowledge to be able to accomplish their goals. Nothing good
+    ever comes easy, although having an aid in figuring something out also never hurt
+    anyone. Being able to accomplish things allows for anyone to get more motivated
+    to continue to work hard and achieve greater excellence. Hackers sharing their
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: basic knowledge with each other truly is a great gateway into the type of culture
+    we have been talking about creating throughout this book. The creative input melting
+    pot like what is available in Python is a type of gem no one should take for granted.
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# Chapter 4- Learning Python Programming
+
+
+    # How to Get Started
+
+
+    Now that I have pumped up Python and allowed for you to believe it is the greatest
+    place to start—let’s talk about how to use it to program! A fun fact about the
+    Python programming language is that it gets its name from Monty Python, just an
+    interesting fact that is in'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: no way related to the actual learning to program it itself. The Python language
+    can not only be used by hackers to write simple programs, you can also utilize
+    its capacities to create complex and large scale solutions. With Python you can
+    not only use it to create web and internet development, it also can serve as a
+    way to graphically apply desktop development (like games) and it also will allow
+    the user to scientifically and mathematically analyze data. Overall, it’s a very
+    well rounded programming language.
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: With that all being said to pump up how Python can be used and what it is, let’s
+    get down to choosing a version of it that will best suit you and your needs. Right
+    now there are two main versions of Python, 2.x and 3.x really, there are few differences
+    between the two and when you learn one, you can easily use the knowledge to learn
+    the other. It is suggested by some that, when you are beginning to learn the language,
+    start with version 3.x. The reason for this is that there are more refinements
+    than in the 2.x version, more added features and *
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: bug fixes. That being said, version 2.x has more user support, in terms of libraries
+    to find answers and support. More than likely, if you have Linux, it already includes
+    Python in it. If not, you will need to download it. You will probably also want
+    to download the most current version available. From there, you will want to begin
+    to interact with the shell. All that is required to do this is to open your terminal
+    and run Python. From there, you can play around with basic coding within the infrastructure.
+    Continuing on, you can
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'play around with the features like the mathematical and scientific uses, or
+    begin to figure out how coding within Python works. During the next section, I
+    will talk about just how to learn Python in all capacities in the easiest and
+    most efficient way for a beginning to hacking.
+
+
+    The fact that Python is included as the language in most Linux software, it should
+    only build your confidence in learning it. As a basic, fundamental component of
+    something that is like a hackers’ bible (Linux that is); you should'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: think that those hackers and others who help tweak and create new versions would
+    only use something if they liked it and had great success when using it. Although
+    as you learn and expand your programming language vocabulary, you may decide that
+    another language is something you would prefer to use. That being said, you will
+    never regret initially learning Python as your first language, as you can build
+    on it not only within the language of Python itself, it can help you understand
+    and navigate through other languages as well.
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Best Ways to Learn Python
+
+
+    To learn the coding in Python, one could think about getting a code editor to
+    assist in the process. What is a code editor exactly? It is really a way for you
+    to customize the program and play with the code itself. This should also help
+    you to figure out how to create programs themselves. There are certain things
+    you should look for in a code editor. These are first, the ease at which you can
+    use the editor, the syntax highlight, tabbed views, ability to customize, auto-'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'indentation, line numbering, and finally the availability of add-ons.
+
+    You can easily research which have these traits in various degrees through Google;
+    but I will provide suggestions that I believe works best. First off there is a
+    code editor called Sublime Text 3. This editor is free to try, cross-platform
+    and is a powerful tool. However, this editor is slightly advanced for some and
+    there are easier options. One such option is called gedit and may not possess
+    the powers of Sublime Text 3, however it is free and still very useful. The last
+    option'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: I am going to talk about is Vim, which is also a free code editor. The downside
+    to this code editor is that the learning curve is steep—however, once you learn
+    it, you will be a loyal fan for the foreseeable future. Out of these three options,
+    I would recommend that you choose Sublime Text 3 as it is great for customizing
+    specifically in writing Python code. This sets it above the rest for our particular
+    purpose. I would advise that you do your own research and not be afraid to try
+    out different options. Everyone has a particular
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: 'affinity for certain things and no two people are going to have the same experience
+    with the same product. Find what works for you.
+
+    When it comes to starting to play around with Python and do some coding, there
+    are a few tricks and tips that are helpful for someone just starting out. New
+    users are often taken aback by the fact that Python uses indentation (or four
+    spaces) that aid in organizing code into code blocks. Each of these blocks begins
+    with an indent to allow for you to visually see the code broken up into sections.
+    You'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: will automatically get an error message if you forget to indent that prevents
+    you from being able to execute the code. This is the time where you code editor
+    really plays a key role for you. This will highlight and catch the indentation
+    errors for you to see and change. I think you should always use spaces, instead
+    of tabbing, when creating this indent. Guess what, with these few simple steps,
+    you have now begun to code! That is pretty impressive and should make you feel
+    like you are on your way to becoming a hacker. Python really is a
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: great way for you to learn because it is really made to be read very easily.
+    It’s nice for a beginning hacker to have something that is straightforward to
+    create the foundation of their hacking skills with. Essentially, the very best
+    way to learn Python is to start to code and use your coding editor to check yourself.
+    With access to many resources online, it is easy to find an answer or description
+    of how something can be done and coded within the program. The more you play around
+    with the coding, the more comfortable and competent you
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'will be in the language itself. Remember, it is called a programming language
+    for a reason, you really are building a vocabulary and knowledge of how to work
+    the program.
+
+
+    Be sure that you continue to practice and use your intelligence, and resources,
+    to continuously challenge yourself to try and come up with new mind puzzles to
+    challenge yourself on coding. There are always new tricks to learn within the
+    code itself. Studying code can help you to think of tweaks you could make to'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: existing code in a project you are working on. As a hacker, you are trying to
+    break down walls and expose wrong doing or perhaps cause mayhem for those that
+    are in the wrong. Remember that no one starts out knowing everything and there
+    was a time when those that are now experts knew nothing at all. Make sure not
+    to give yourself a hard time when you can't seem to get things right, everybody
+    makes mistakes, especially as they are learning. Access your resources and make
+    sure to look over the code you are creating multiple times to see if you
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'have maybe missed something small that is causing you a big headache.
+
+
+    Next I will start to get you familiar with the coding set up itself.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Chapter 5- The Importance of Command Lines
+
+
+    A command line is essentially a fancy way of saying you are telling your computer
+    what to do and how to do it. How you give your computer program a command happens
+    through lines of text (coding). Essentially you, as the user, will learn how to
+    format and make command lines through the process of learning to code; as well
+    as using your resources like your code editor. Using'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'command lines is a more advanced way to interact with your computer, rather
+    than using your mouse to click on various desktop icons. With the command line,
+    you can really master controlling a program or operating system, which is what
+    the goal of hacking is. We want to be able to control different aspects of programs
+    or the operating systems themselves.
+
+    With all of this information about Linux and Python, you are probably wondering
+    when you will get to the actual hacking. Although we touched on that with the'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: coding in the last chapter, learning to understand and master command lines
+    is essential to understanding how a computer functions and how you will be able
+    to hack a system or program. As with anything, using command lines has both advantages
+    and disadvantages in the way you interact with your computer. The clear advantages
+    of the command line become even more evident the more you begin to get familiar
+    with coding. The first advantage of this method is that it requires fewer resources
+    than other methods. You are simply able to tell the
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'computer what you would like it to do.
+
+    This is a very powerful and concise tool for one to use to control and manipulate,
+    one of the goals you as a hacker have.
+
+    Finally, it is expert-friendly, so you can feel like you have achieved and learned
+    a greater understanding of the computer or program you are manipulating.
+
+    As with anything else, there are also some disadvantages you will want to be aware
+    of. The first, and perhaps largest, is that unlike the icons on a desktop, it
+    is not intuitive. Meaning that you have to have an understanding of what you want'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: 'to tell the computer or what you would
+
+    like it to do, hence why it is expert
+
+    friendly. Commands in a computer are
+
+    not obvious things, so you will have to
+
+    do your research. However, since you
+
+    goal is to hack into things, this could be
+
+    seen as a learning opportunity rather than
+
+    a disadvantage. This difficulty when
+
+    sting out is figuring out how the
+
+    computer and operating system need to
+
+    be talked to. So, in this way, command
+
+    lines are certainly not beginner friendly,
+
+    so this is where resources like this book
+
+    come in to help!'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: Every operating system has a command line interface that you will interact with.
+    We refer to this interface, typically, as a shell or command processor. Keep in
+    mind, however, that a shell can also be used to describe graphic interfaces—for
+    the purposes of this book, to clarify, we are speaking of the shell in which you
+    enter text (command lines) to tell the computer what you would like it to do.
+    This is the manner in which you will also change the operating system itself.
+    Now, although there are obvious differences in every command line
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: system, there are three major types of interface mechanisms. The first is the
+    parameters of an interface, essentially the support that allows for a passing
+    for information to a program when it is launched. To explain further, these are
+    the types of things you put into the software that tell a program how and when
+    to open a certain program. The second is, after launching the application interface
+    mechanism, there will be an interactive command line session. What this means
+    is that there is a way that a program provides someone with a
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: method to enter text, like a shell that you enter your command lines into. Finally,
+    there is the OS inter-process communication that allows different programs and
+    processes to be redirected to different programs by methods such as standard streams
+    or named pipes. Although most people are not familiar with command lines and the
+    interface software that you use to input them, there are some applications that
+    only run command line interface. These types of programs are what is used to control
+    the interworking of an operating system,
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'essentially you can think of it as manipulating the Linux operating system
+    using Python coding. Hopefully that puts it in a less jargon type manner that
+    you will easily understand.
+
+    The history of how command lines came to be actually helps you to understand their
+    use. Before there were command interfaces, a human would communicate one line
+    at a time over a teleprinter (TTY) machine. Although this allowed people to exchange
+    information remotely, a huge advancement, it only allowed one line at a time to
+    be'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: 'transmitted at a time. The command line allows for, instead of communicating
+    with a TTY machine, you communicate directly with the computer.
+
+    The first models of command line interfaces actually could not have programs easily
+    replaced as they can be with operating systems like Linux.
+
+    Interestingly, these command line interfaces are the original manner in which
+    computers were used. Everyone use command lines until the graphically interfaces
+    were invented and used by companies like Apple. Command lines'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: 'are essential for computer programmers, administrators and hackers to know
+    how to use as their different roles rely on the ability to change and manipulate
+    the command lines.
+
+    You may be wondering, or wanting to know more about, the types of commands you
+    will be putting into the Linux command line interface. As these lines are what
+    you will be learning how to manipulate, change and learn how to properly tell
+    your computer what to do, I figured I would let you know a few of the more common
+    ones and their uses'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: 'within Linux specifically.
+
+    For manipulating files and folders, here is a list of commands and a description
+    of what they are and how to use them, just for a general jumping off point:
+
+
+    Here is a similar list for moving around the file system:
+
+
+    +   - pwd: stands for print working directory. If you use this command in the
+    desktop directory it will show ~/Desktop
+
+    - cd: allows you to change directories. For example, to navigate to your'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: 'desktop directory would be cd ~/Desktop
+
+
+    Next here are some system information commands:
+
+
+    +   - df: This command displays the filesystem disk space usage for all partitions
+
+    - free: allows you to see the free and used memory in the system
+
+    - top: this allows you to see information about the running system, system resources
+    and Linux system.
+
+    - uname-a: this prints out all system'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '+   * ifconfig: gives a report on system network interfaces
+
+    * iwconfig: shows any wireless network adaptors as well as the specific information
+    from them (like speed or network connection)
+
+    * ps: is a command that lets you view all the processes that are running
+
+
+    # What about dealing with Groups and Users?
+
+
+    +   * adduser: this creates a new user.
+
+    * passwd: this allows for a'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: 'command to change the user’s password
+
+
+    +   * who: this tells you who is currently logged into the machine
+
+    * addgroup: this adds a new group
+
+    * deluser: this removes a user from the system
+
+    * delgroup: a command that removes a group from the system
+
+
+    There come times when you will need to do things that are outside these categories,
+    we call these wildcards.
+
+    Examples of these are:'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '+   *- which allows you to match something with the files, kind of life a search
+    function
+
+
+    +   ?- this matches one character
+
+
+    +   - [match].rar - the brackets allow for you to match up the characters with
+    whatever is inside the brackets. For this example, we would be looking to match,
+    match
+
+
+    +   - ![xy].rar- this matches any characters that are not included in the brackets.
+    So, this example would match z.rar but not x.rar or y.rar'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: 'Now let’s talk about searching and editing text files:
+
+
+    +   - grep: this allows for you to search files for a particular search patter
+    and print matching lines
+
+
+    +   - sed: Stands for stream editor. This will allow you to search and replaced
+    within a file.
+
+
+    +   - cat: this command is short for concatenate and is useful for viewing as
+    well as adding to text files
+
+
+    +   - nano: this acts a simple text editor on the command line
+
+
+    +   - less: use this command for standard'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: 'output and viewing text files
+
+
+    How can we manipulate files and folders? Here are some command suggestions:
+
+
+    +   - cp: this is a simple copy command
+
+
+    +   - mv: this moves a file, either to a different locate or it will rename the
+    file
+
+
+    +   - rm: this command deletes or removes a file
+
+
+    +   - ls: allows for you to see the files in your directory
+
+
+    +   - mkdir: you can use this to create'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: 'directories
+
+
+    +   - chmod: this allows you to change permissions on whatever files you list
+
+
+    +   - chown: with this command you can change both the group ownerships and user
+    of a file
+
+
+    We all know there will come a time when we need to execute more than one command
+    at the same time. There are two examples I will give on how to run different multiple
+    commands at the same time:'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '+   lspci; lsusb- First is running commands sequentially (or how to run commands
+    in a sequence). In order to run these commands one after each other you need just
+    two letters to do so—ls. The semi colon in-between them allows for the second
+    command to run, even if the first does not for some reason.
+
+
+    +   ./configure && make && install- this is an example of how to format sequentially
+    if you only want to second command to run if the first succeeds.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '+   - ls|less allows for you to pass output, in this example, meaning you would
+    be able to see the contents of ls easier.
+
+
+    Finally, how can you get help on the command line? Here is a list of helpful tips
+    on how to get help when you are working on the command line interface.
+
+
+    +   - Use your arrow keys to move up and down!
+
+    - Q: this is the command for quit!
+
+    - Man man: this is a good place to start—it brings up the man command
+
+    - Man intro: this is another extremely'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: 'helpful command as it brings up the intro to user commands. This is a brief,
+    but helpful, beginning introduction to Linux command line.
+
+
+    These lists of commands are really a starting place for you to help you begin
+    to explore the command line interface within your operating system. It is helpful
+    to have a quick reference guide, especially as at first you will not be able to
+    just type a command and have it be useful to you. There are tons of places online
+    to find helpful lists and command'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: 'guides. The more you use them, the more familiar you will become with them.
+    Being able to play around and see what the commands do for you is really the best,
+    and only, way to start getting to know more about how your computer takes orders.
+    Knowing how to manipulate your command lines is an important building block to
+    becoming a master hacker.
+
+
+    I encourage you to go into your own computer and play with some of these commands
+    right now. The only way to'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: start learning is to start and putting thoughts into action is much more fruitful
+    than just reading how to! Before continuing, I ask that you take a few moments
+    and start to both use your Linux OS and Python language skills and try to put
+    these hacking skills to the test! The only way to figure things out is to try.
+    See what you can do with these commands and come back to this book when you get
+    stuck! This book will be here whenever you are ready—to help you along your next
+    step in your journey to becoming a hacker.
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# # Chapter 6- Identifying Vulnerabilities
+
+
+    # ## How Do Hackers Identify Potential Points of Entry?
+
+
+    As a potential hacker, why do you think you would want to be smart about finding
+    a point of entry? Is it because you do not want the people or system you are hacking
+    into knowing you are there? Yes, I would say, this is a main concern. You also
+    likely only have one'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: 'shot at being able to break through the barriers. This is where doing your
+    research and knowing your craft become important parts of the work that you do
+    as a hacker.
+
+
+    As we now know how to tell the system what to do using the command lines, we may
+    want to start thinking about how hackers use these commands. In addition to the
+    commands, you should use Python language to change and hack into Linux systems.
+    How can you pinpoint and exploit a potential weakness in order to'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: gain access to the information you want or the system you want to explore? There
+    are a few manners in which this is made possible, all accessible with your new
+    found coding and command line skills. This is where you can start to feel like
+    a hacker who knows how to manipulate and figure out the inner workings of system.
+    Getting used to command lines and what they are, how you can personally maneuver
+    around them to see and gain access to what you want, is vital to synthesizing
+    the data you are about to receive from your new
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: 'found ability to find weaknesses.
+
+
+    Although these are not all of the potentially entry points for breaking into something,
+    here is a good list of places that you can start as a beginner hacker. These different
+    methods are socket, registry, programmatic interface, environment variable, command
+    line argument, protocol handlers and finally http header. Keep in mind that the
+    following are not the only potential points of entry for another system. Remember
+    that there are always people'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: 'creating and finding new ways to break into another system, most often by finding
+    a new entry point. Take these first few potential break in points as something
+    to study and master as you begin your hacker journey. Know that you must truly
+    understand how these things work in order to be able to break down and find the
+    weak spots within.
+
+
+    # Socket
+
+
+    Sockets are something that are easy to connect to, however, the data passing through
+    the network is not safe all the'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: time. They consist of an IP address and a port number—they are bidirectional
+    communication between applications that have various protocols. It can be extremely
+    exploited if the there is a data entry point found. With a breach by a hacker
+    such as this, one is able to intercept data, monitor the data being passed through,
+    sending malformed data from client or server and finally MITM attack while data
+    may be sent over a network—if the socket is open. One should use what is called
+    a threat modeling process to indemnify the
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: 'availability of an entry point.
+
+
+    # Registry
+
+
+    If one is looking to exploit using this method, there are different keys that
+    allow for a hacker to exploit the weaknesses. You can do this sort of hacking
+    without local access by tricking a user into open a rouge file and then, the following
+    time, data can be used. The permission for a registry key plays a significant
+    role in accessing particular types of stored data. This can be a manner in which
+    a hacker can study what'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: is being accessed and the permission needed to security test this entry point.
+    Without the access to the source code, you cannot determine which registry key
+    is being accessed (most of the time). Instead, using a Process Explorer tool you
+    can instead use our judgment to discover which registry key is being accessed.
+    Determining permission is something that the utility does disclose. This can be
+    a good source of determining a weak point if you are an astute hacker.
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# Programmatic Interface
+
+
+    Remoting program interface (such as COM, DCOM, RPCs) are ways to enable communication
+    between different applications that are found on diverse platforms. By unfolding
+    the programmatic interface, there is a lot of functionality that a hacker can
+    exploit. Keep in mind that this process is complex and potentially difficult to
+    understand at this point; especially if this is your first attempt at learning
+    exact what and how computer programming is and how to use it as a hacker. This
+    is a'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: one of the more complex ideas I touch on in this book. Do not push yourself
+    to try and do more than you are understanding right now. You may just tuck this
+    information into a part of your brain you can pull out another time when you are
+    a little more experienced. This is due to the fact that there is only a certain
+    environment in which the application can run in. The full spectrum of the programmatic
+    interface is a large and detailed discussion we will not have in this book. However,
+    I encourage you to look into it yourself. Some interfaces
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: 'you may want to look into are Gacutil, RpcDump, Dcomcnf and OleView.
+
+
+    # Environment Variable
+
+
+    Typically environmental variables are used to store information like a path regarding
+    the current configuration environment and a currently logged on user. Within the
+    system, variables are used by all of the computer users. Data is not safe within
+    a program is it makes security based decisions on the information in the stored
+    variables. Hackers are able to change the'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: 'environment variable, only if they have broken into and compromised administrators
+    account.
+
+
+    # Command Line Argument
+
+
+    As previously discussed, command lines really supply data to make functions happen
+    within an application. In order to spring this attack on a system, the hacker
+    must convince the user to type in a command line argument that is malicious. Using
+    this method, a hacker may be able to fully change the behavior of an application
+    to achieve their'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: 'desired result. An example of this type of malicious intent would be to switch
+    opening a desired file, into deleted said file.
+
+
+    # Protocol Handlers
+
+
+    These start with http or https and are used to state to the system which an application
+    will be invoked, in order to process and handle the data when a hyperlink is clicked.
+    They hyperlinks clicked enable for an application to be launched and then perform
+    the function for the user. Protocol handlers have the'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: 'potential to be dangerous if the application that is calling has confidential
+    type information. As the data is passed through to the registered application,
+    they become an entry point that should be clearly checked for loopholes that are
+    potential security breaches. There are tools that you can get that allow for the
+    totality of the protocol handlers to be enumerated.
+
+
+    # Http Header
+
+
+    This Http Header operated over TCP protocol, uses ports 80 and allows for'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: 'data to communicate between a server and a client. This is a very simple manner
+    in which to relay data, therefore making it incredibly popular. In order to determine
+    vulnerability in an entry point, breaking down the request into smaller, sub-parts
+    is a good way to figure that out.
+
+
+    How do you secure these entry points? There are a few critical thinking skills
+    you can put to the test in order to find the most secure manner of entry. You
+    need to figure out how much damage an entry'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: 'point can cause and what access level you need to be at in order to access
+    an entry point; also, you should try attacking yourself where the suspected vulnerability
+    you see is and finally be able to put in order and categorize more high level
+    points of entry for penetration testing perspective on the problem at hand.
+
+
+    Hopefully these examples have allowed you to see the many different potential
+    ways to break into a system as a hacker. Although these are certainly not the
+    only'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '# How Can Hackers Exploit These Using Python Programming and Linux'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# Systems?
+
+
+    Really what was covered in the previous section laid out some great ways for you
+    to start figuring out how to exploit weaknesses and become a hacker weaknesses.
+    Although, like I stated previously, these exploitations are not the only ones
+    that exist, they are ones that are great to practice and begin to find holes to
+    enter through and gain access to information.'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# # Chapter 7– Useful Resources
+
+
+    As we now know how to tell the system what to do using the command lines, we may
+    want to start thinking about how hackers use these commands and Python language
+    to change and hack into Linux systems. Within the world of World Wide Web, there
+    are a variety of different phrases and things that you could search in order to
+    find helpful'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: resources to problem solve. I am going to give you a good idea of different
+    categories and topics to research that will help you overcome any speed bump,
+    or something you cannot find in the libraries of your operating system! These
+    resources will consist of beginning tutorials (other than this book of course!),
+    cryptography help and tutorials (and why I think they are helpful!), websites
+    that are helpful for security and news related to hacking, the videos and playlists
+    that may help you, benefits to online forums for both
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: 'security and hacking professionals, vulnerability resources and databases,
+    why to search out product specific information and how that is helpful to your
+    learning and finally an idea of some good programs and tools to assist you in
+    your hacking journey.
+
+
+    # Beginning tutorials
+
+
+    If you have little knowledge of how a computer works, hopefully this manual has
+    put you in a good position to begin to understand exactly how a computer operating
+    system works. Building on this'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: information is a vital part of figuring out how to become a hacker. Although
+    everyone thinks and defines the tutorial for beginners as something a little different;
+    a wannabe hacker needs to acquire these basic skills to become more advanced as
+    a script kiddie. Essentially this is just meaning that you are comfortable and
+    knowledgeable about the fundamentals of computers, as well as programming. There
+    are some excellent sites to check out for resources in regards to beginning tutorials.
+    These include websites like
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: 'breakthesecurity.com, guru99.com, as well as this manual that has a basic guide.
+    You also may want to check out a resource called Cybrary. If you are looking for
+    a guide in hacking ethics, that will teach you in a great platform, this resource
+    has free online videos and testing to help you hone and gain skills you need in
+    order to be a hacker. Going with the vibe that was started by Linux being free,
+    these resources are made available to you for free as well!
+
+
+    # Cryptography'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: In order to be a successful and ethical hacker, it is essential to understand
+    how decryption and encryption is done. This is an area we have not covered in
+    this book and is a great idea to look into further and research. This should allow
+    for you to grow your hacking skills and then knowledge of just how data is encrypted
+    and decrypted. Such a potentially helpful and vital skill. There are lots of tutorials
+    that provide an explanation online. As always, Google searches do wonders, as
+    well as searching for how to videos.
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# Helpful Websites for Security News and Articles
+
+
+    There are many websites out there where you can access and read about internet
+    safety specifics. Allowing yourself to be educated on different hacking resources
+    is important. These resources allow you to pick up many different tips and tricks
+    that are used by those currently hacking. To make sure you are an informed hacker,
+    keeping up with news, vulnerability reports and security issues is important as
+    a hacking'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: professional. Looking at sites such as 2600.com or packetstormsecurity.com can
+    help you to read and keep informed on a variety of different security based notices
+    and breaches that may be occurring, or found and exploited by other hackers. Sharing
+    information is, as was talked about earlier in the book, a very important part
+    of being in the hacker community. Being able to build off of what knowledge is
+    already out there is an important part in not having repetitious energy wasted
+    on the same targets, or the same inception of an idea
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: 'of how to get information.
+
+
+    # Videos, Forums and Playlists
+
+
+    Never forget about resources like YouTube that are full of how to videos on just
+    about every subject. In order to find the video you want, you may have to weed
+    through some duds but, I guarantee, you will eventually find users that create
+    videos that are helpful in your quest for knowledge. You may also come across
+    videos on other sites or forums you gravitate towards to gain'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: 'knowledge. There are countless free resources out there waiting for you to
+    assist learning about whatever fascinating subject you may be interested in. Also,
+    if any of the knowledge in this book we have talked about has not been completely
+    clear, go and find a video that explains it better and allows for you to see,
+    step by step, the process. Unfortunately reading words is not the same as seeing
+    an example, especially if you are a visual learner!
+
+
+    # Vulnerability Resources and in'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# Databases
+
+
+    These types of databases are excellent for a source of information on vulnerability.
+    These types of resources are places where hackers can learn how to fix, avoid
+    or exploit potential vulnerabilities within systems command lines or coding. As
+    we talked about briefly just above, there are many ways to initially spot these
+    sorts of potential breaks in security. Even though we listed a few in this book,
+    it is good to go out and find different resources that allow for you to gain more
+    intellectual'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: 'knowledge and know how in to finding
+
+    tose vulnerable spots in a system.
+
+
+    # Tools and Programs
+
+
+    Just as with any sort of tool you may acquire, it is all to help and assist you
+    in becoming the best and most qualified person for the job at hand. Find out what
+    looks and feels best for you and use that to grow and hone your personal hacker
+    skill set. From tools like Wireshark, Nikto, nmap, NSS and Hping, among others;
+    the possibilities on the internet are nearly endless. If something does not'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: 'tickle your fancy and work for you, try something else. Just because something
+    is called the “perfect solution” by someone else, this does not mean it will work
+    for you. Create yourself a world that allows you to feel confident in your abilities
+    and the software comes naturally to you, or the most natural after experimenting
+    with a few. You will quickly learn how things work, the more you practice, try
+    and research!
+
+
+    It is important to always keep an eye out for things that can help you be the
+    best'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: hacker that you can. You never know who will be able to point you in the right
+    direction of a resource that will help you improve your skills. Never be shy in
+    getting on a forum or asking a fellow hacker for help in whatever particular new
+    hacking experience or wall you might come up against. This book should also always
+    serve as a jumping off point for you to come and look back upon. Not only does
+    this how to book tell you how and what makes a hacker, it allows for you to see
+    basic examples through Linux OS and Python language and what
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: exactly command lines are. These are all essentially building blocks in becoming
+    an expert hacker. Always remind yourself that good, quality work is better than
+    trying to hurry though steps to try and jump into being an expert hacker just
+    as soon as you can. Other hackers who have worked for years and are truly experts
+    will be able to pick you out and call your bluff in no time. Do not rush yourself,
+    take your time and learn, try, be creative and do your homework. That is the way
+    to learn how to be a member of the hacking elite.
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: Personally, as staying on with the mission of hackers across the world, I find
+    that getting on to forum sites is particularly helpful. You are able to read the
+    opinion of many different hackers of all levels of experience. You are also able
+    to see where others have tried and failed. Reading about the failed experiments
+    of others can both help you know what to avoid, as well as go with an idea, that
+    may be mutually between you and the other person, and try different new and creative
+    methods to
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: 'solve a problem. You can also find comaderie in these places that help to reinforce
+    any feelings you may have about a group or organization that perhaps you feel
+    is authoritarian in nature and needs to be exposed. There is certainly a power
+    in numbers and forums allow for you to see that you are not alone in thinking
+    a certain way, or having a certain approach to a problem.
+
+
+    Never allow yourself to try to demean your own personal importance with you input
+    in the hacker community. Do not'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: discount yourself and your thoughts or potential ideas, no matter how much of
+    a beginner you may be. As you look at these new puzzles with a fresh set of eyes,
+    you may be able to explore an idea that someone else has not seen due to being
+    someone who has looked at the same problem with potentially jaded and perhaps
+    old view point. There is always room for growth and improvement and it is certainly
+    something vital to the hacker community.
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: '# Chapter 8- Next Steps to Develop Your Hacker Skills
+
+
+    As we now know how to tell the system what to do using the command lines, we may
+    want to start thinking about how hackers use these commands and Python language
+    to change and hack into Linux systems. Every hacker imaginable wants to be the
+    best hacker they can be; the skill set for a hacker should be built upon the type
+    of person we outlined in'
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: 'the first couple of chapters. I think that the best advice I have for you to
+    improve and develop your skills as a hacker is made up of a lot of the ideals
+    we have talked about through this entire book.
+
+
+    First, I advise you to continue to study and try to emulate the hacker code of
+    ethics, this is not what I called it earlier, but, that is really what it is.
+    In order to do this, you need to make sure you are diligently working towards
+    creative, intelligent and thoughtful work in every aspect of the hacking that
+    you do. Do not'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: 'think of hacking as simply something that you do behind a computer screen by
+    typing hours of code. Although this is obviously a main part of it, it does not
+    define the hacker that you are or want to be.
+
+
+    I also suggest that you go back and sharpen your basic computer skills that you
+    need in order to be a successful hacker. These are not things like how to write
+    and create a document in Word, you need to be able to understand how a command
+    line works (hey, we talked'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: 'about that earlier!) and also being able to write and manipulate within the
+    structures you may have in an operating system you have chosen. Remember that
+    being able to talk the programming language is also a vital and essential part
+    to being able to work through problems as a hacker.
+
+
+    You next want to make sure that you understand how basic networking works. This
+    is not something that really fell under the scope of this book, however it is
+    very important in understanding how'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: 'computers and their systems talk to each other. The more you understand a technology,
+    the better you are for it and the more doors you open up for yourself in your
+    creative hacking process.
+
+
+    Linux skills are something that we covered in some detail in this book and are
+    certainly an important part of your hacking skills. The open source model really
+    is what all hackers find themselves using and that they are up against when trying
+    to break through entry points and find data in those they'
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: Another good resource that has been briefly mentioned is Wireshark. There is
+    also another program called Tcpdump that are widely used protocol analyzers. They
+    are helpful tools in figuring out TCP/IP traffic in your system, as well as
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: 'attacks. I encourage you, after you have really mastered these basic skills,
+    to look into these types of programs that may allow you to be a more efficient
+    hacker.
+
+
+    There are many options that you can try out all of your newly discovered hacker
+    skills in through others creations and operating systems, as well as playing around
+    on your own computer. This is a good way to try and see if you have the right
+    ideas about different coding strategies you may want to try and use to'
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: 'find an entry point. One such program is called VMWare Workstation, however
+    there are other options. You can also play with these on your own system and increase
+    your level of understanding.
+
+
+    As has been mentioned before, knowledge of security and the associated technologies
+    is a vital part of learning to be a hacker. You must familiarize yourself with
+    how these different security measures work and how the system can be used to gain
+    access to them. These are things like firewalls and'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: 'PKI (public key infrastructure) that may need to be taken down in order to
+    gain access to vital data as a hacker. There is a basic security course that you
+    may want to look into, called Security+ that should help increase your knowledge
+    of how internet and computer security works at its core.
+
+
+    As there are countless wireless technologies these days, it is also important
+    for you to learn how to hack wirelessly and how the technology itself works. Just
+    as with every other part of'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: being a hacker, you want to make sure you can navigate your way through the
+    world of wireless technologies. It may be good to find a free online class, video
+    series, or article that helps you understand the litany of different wireless
+    technology options. The world is constantly changing and technology is a seemingly
+    fluid, changing and evolving part of our world. It is important to try and stay
+    on top of all of those technologies in order to understand the cyber world you
+    are trying to break through.
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: 'Skills that are outside the scope of this book are things that fall into the
+    intermediate category. These are things that are building blocks you can look
+    into after you have mastered the skills and ideas mentioned in this book. That
+    being said, I will give you an introduction to a few more of them now in case
+    you need more advanced skills and such to look into.
+
+
+    Scripting is one skill that every hacker needs to master in order to move to the'
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: 'next level of hacking. Python is actually something that you can build upon
+    in order to increase and hone your scripting skills. This tool can be used to
+    discover and understand countless things in the virtual world and the more you
+    learn, the further you can go with your hacking abilities. You can easily challenge
+    yourself in the world of scripting, as there is always more to learn within a
+    language, and always other languages to study, like Perl or Ruby.
+
+
+    Learning how to hack into databases is a'
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: skill that can be acquired as you work towards more difficult hacking tasks.
+    In order to hack them, you need to first understand them, just as with anything
+    else. Understanding and figuring out how they work is a potentially great topic
+    to research as you advance within your hacking levels. With data bases, you will
+    need to learn a new language called SQL. There are many terms and technologies
+    you should be aware of before you jump in. A quick Google search can help you
+    get some basic knowledge. As with anything else, go to *
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: 'forums or helpful videos, or another one of my How to Books (or someone else’s!)
+    to learn more about how databases work and how you can hack into them.
+
+
+    Learning about web applications is really the gold mine for hackers, especially
+    in the recent years. Web applications are something else you can study to gain
+    knowledge into how both the applications work as well as the databases that power
+    them. The deeper you get into the world of hacking, the more'
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: you will learn that things tend to play off and involve each other. That is
+    why a clear understanding of each concept or premise is extremely important to
+    master. Always remember, just like our teachers told us in school, there are no
+    stupid questions. Do not hold back in asking a question because, more than likely,
+    at some point we all asked the same one. Building your own phishing website is
+    a good place to learn more about nefarious purposes of hacking. It is good to
+    know all sides of any skill, including the darker ones.
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: In order to be a good hacker, one should obviously not get caught. You can’t
+    become a good hacker if you are caught! There is certainly no hacking from within
+    your prison cell! Learning about digital forensics is an absolutely endlessly
+    fascinating subject area. You can really learn more about how to avoid and evade
+    detection by anyone. This is something that will really help you get through barriers
+    by being one step ahead of anyone who may be attempting to catch you.
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: 'The more you can become knowledgeable about TCP/IP, like protocol stack and
+    fields, the more comprehensive your hacking skills will become. You can use these
+    skills to use against attacks as well as create your own potential attacks on
+    others. This is a great area of research for you to look into as you continue
+    up your journey from beginner to intermediate level hacker.
+
+
+    Learning more about cryptography, that I'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: 'briefly mentioned earlier, is also something that will help you grow as a hacker.
+    You can use this skill to hide from detection by being able to literally build
+    yourself a wall so you will not be found by encoding. It is a great skill to become
+    well versed in.
+
+
+    As I talked about earlier, being able to take apart and put something back together
+    in the digital world can help you understand it more-- reverse engineering is
+    another form of saying this same thing. Being able to add on to'
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: 'something and make it more efficient and better is not only something that
+    will make you feel better about your abilities, it also has the potential to share
+    and help others with their tasks. As a community that works together, it is important
+    to be able to share your skills and be able to build upon what others have started.
+
+
+    As you are learning and developing all of these skills into more advanced levels,
+    it is important not to forget the ideals that you founded and started your hacking
+    on. Being able to constantly'
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: 'have a creative mind to use when thinking about new possibilities allows for
+    you to reach endless boundaries of an operating system or programming--then break
+    through those and make new ground.  Keeping in touch with your creativity is a
+    vital part of the hacker mindset, something you should be sure never to let yourself
+    forget.
+
+
+    As much as being creative is something that you will build on, and is an essential
+    skill, you will also need to constantly be working on your problem solving skills.'
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: 'These types of skills come in handy both within the virtual world and in your
+    personal life. Always finding new ways to approach problems that you believe to
+    be unsolvable will continue to aid you in growing and challenging your intellect.
+    This is something that hackers can work towards both on their own and within the
+    group as a whole.
+
+
+    When you feel like you can’t go anymore, the greatest thing you can do is persist
+    and continue to push yourself towards overcoming whatever hump you'
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: may find yourself falling into. The greatest of thinkers and creators were problem
+    solvers. People who were persistent in challenging themselves to grow and become
+    better at their skill. Rock stars and actresses hear “no” hundreds or thousands
+    of times but they continue to persist. This makes you not only stronger, it also
+    allows you to make good things better and better. If at first you don’t succeed,
+    try, try again!
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: '# Conclusion
+
+
+    Thank you again for purchasing this book!
+
+
+    I hope this book was able to help you to with learning tools to become a hacker.
+    I hope you have a clearer understanding for how a a computer system is actually
+    hacked and the components that it’s made of. Being a hacker is all about how you
+    approach problems, solve them and being sure to emulate the hacker’s'
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: 'attitude and mindset. Keeping in mind that there are nearly endless possibilities
+    for different hacks to Linux operating systems using Python, you should be able
+    to take these basic, beginner ideas and skills and create a name for yourself
+    within the hacker community.
+
+
+    It is important that you keep in mind the traits of a hacker that we talked about
+    in the beginning of this book. Recognizing the importance of creativity within
+    the hacker world can only serve you well as you take on new challenges and'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: 'adventures. It is important to constantly remind yourself of the fact that
+    hacking is all about freedom, non-repetitive work, not allowing boredom into your
+    world, and remembering to reinvent the wheel and come up with new, creative and
+    intelligent solutions to a problem.
+
+
+    Remember that you are a part of an anti-authoritarian community. When you think
+    of the basis of Linux itself as a free operating system, you want to add your
+    piece of helpful intellectual property to the puzzle. Creating and being a part
+    of'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: 'something that serves the greater good of all people should be something you
+    work into your daily practice. Make sure to keep your brain busy, active and constantly
+    solving puzzles and problems.
+
+
+    Hopefully this guide has opened your eyes and taught you something about how,
+    and where, computer programming has come from, in order to allow you to be the
+    best hacker you can be. There is endless and countless examples of coding, hacking
+    and research tips of the trade. Finding your way around the'
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: 'internet has probably been something you have done for a while, figure out
+    how to use the internet and what makes you passionate, allowing for your hacker
+    creative energy flow.
+
+
+    I have shared my personal thoughts and ideas that have helped shaped myself as
+    a hacker within the community. Although I know that these skills were helpful
+    to me, I cannot see the future and know that they will be your ultimate guide
+    for answers. That being said, I have given you some great ideas for additional-'
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: places to go and find information that you may need in order to clarify anything
+    that has been talked about in this book. Use your own unique style of learning
+    to come up with new approaches to how to do things, and learn your craft inside
+    and out in order to be able to call yourself a master. Do not think that this
+    type of thing will happen overnight, or just because you read this book. I hope
+    this book gives you the strong foundation you need to do great things for exposing
+    authoritarian agencies or people. I also hope that you will be able to feel as
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: 'though you are making a difference. I believe that just by putting some good,
+    hard work and energy into trying, you create a better chance for yourself to succeed.
+    There are many people in the world not working hard towards a greater purpose.
+    It is my hope that this book may guide you into realizing that purpose and being
+    able to use it to help others.
+
+
+    The next step is to start putting your new knowledge to good use! Start to play
+    with the operating system and learn more'
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: about Python as a language. Study the things that your fellow hackers do and
+    allow yourself to add on to their work; or, figure out your own niche and start
+    to cultivate what and how you would like to accomplish your hacker goals. Remember
+    to constantly remind yourself of your desire to learn and create new and exciting
+    things to expose the bad, authoritarian nature of some things in the world. Strive
+    to create, expose and allow yourself to be a part of something that you are proud
+    of each and every day. Find your hacker community out there
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: 'and be a part of something great.
+
+
+    Finally, if you enjoyed this book, then I’d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It’d be greatly
+    appreciated!
+
+
+    Thank you and good luck!'
+  merge: -1
+  pgno: 195

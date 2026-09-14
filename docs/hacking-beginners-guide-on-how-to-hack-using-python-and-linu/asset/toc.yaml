@@ -1,0 +1,48 @@
+- - '#'
+  - 第1章 - 黑客心态
+- - '#'
+  - 第 2 章 - 黑客所需的 Linux 系统基础
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - 如何使用 Linux 进行黑客攻击？
+- - '###'
+  - 什么是开源操作系统？为什么它对黑客有吸引力？
+- - '#'
+  - 第 3 章- 理解 Python
+- - '###'
+  - 为什么 Python 是黑客的首选语言？
+- - '###'
+  - 学习 Python 作为编程语言的好处
+- - '#'
+  - 第 4 章-学习 Python 编程
+- - '###'
+  - 如何开始
+- - '#'
+  - Chapter 5- The Importance of Command Lines
+- - '###'
+  - 关于组（Groups）和用户（Users）
+- - '##'
+  - 识别漏洞
+- - '##'
+  - 黑客如何识别潜在的切入点？
+- - '##'
+  - Socket（套接字）
+- - '##'
+  - Registry（注册表）
+- - '##'
+  - Programmatic Interface（程序接口）
+- - '##'
+  - Environment Variable（环境变量）
+- - '##'
+  - Command Line Argument（命令行参数）
+- - '##'
+  - 协议处理器 (Protocol Handlers)
+- - '##'
+  - HTTP 报头 (Http Header)
+- - '##'
+  - 黑客如何利用 Python 编程和 Linux 系统利用这些工具？
+- - '#'
+  - 第 7 章——有用资源
+- - '#'
+  - 第 8 章 - 开发黑客技能的后续
