@@ -1,0 +1,2960 @@
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    Konstantin Boldyshev
+
+
+    Linux Assembly
+
+
+    konst@linuxassembly.org
+
+
+    Francois–Rene Rideau
+
+
+    Tunes project
+
+
+    fare@tunes.org
+
+
+    Copyright © 1999–2002 by Konstantin Boldyshev
+
+
+    Copyright © 1996–1999 by Francois–Rene Rideau
+
+
+    $Date: 2002/08/17 08:35:59 $
+
+
+    This is the Linux Assembly HOWTO, version 0.6f. This document describes how to
+    program in assembly language using free programming tools, focusing on development
+    for or from the Linux Operating System, mostly on IA–32 (i386) platform. Included
+    material may or not be applicable to other hardware and/or software platforms.
+
+
+    Permission is granted to copy, distribute and/or modify this document under the
+    terms of the GNU Documentation License, Version 1.1; with no Invariant Sections,
+    with no Front–Cover Texts, and no Back–Cover texts.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   Chapter 1. Introduction...........................................................................................1
+
+    Chapter 2. Do you need assembly?...............................................................................3
+
+    2.1. Pros and Cons................................................................................................3
+
+    2.1.1. The advantages of Assembly................................................................3
+
+    2.1.2. The disadvantages of Assembly................................................................3
+
+    2.1.3. Assessment..................................................................................................4
+
+    2.2. How to NOT use Assembly to achieve efficient code................................4
+
+    2.2.1. General procedure to achieve efficient code...........................................4
+
+    2.2.2. Languages with optimizing compilers...............................................5
+
+    2.2.3. General procedure to speed up your code up.......................................5
+
+    2.2.4. Inspecting compiler-generated code....................................................5
+
+    2.3. Linux and assembly...............................................................................6
+
+    Chapter 3. Assemblers..................................................................................7
+
+    3.1. GCC Inline Assembly.............................................................................7
+
+    3.1.1. Where to find GCC.......................................................................7
+
+    3.1.2. Where to find docs for GCC Inline Asm......................................................7
+
+    3.1.3. Invoking GCC to build proper inline assembly code..............................8
+
+    3.1.4. Macro support................................................................................9
+
+    3.2. GAS...............................................................................................................9
+
+    3.2.1. Where to find it.........................................................................................9
+
+    3.2.2. What is this AT&T syntax......................................................................9
+
+    3.2.3. Intel syntax..............................................................................................10
+
+    3.2.4. 16-bit mode..................................................................................10
+
+    3.2.5. Macro support...............................................................................10
+
+    3.3. NASM..............................................................................................11
+
+    3.3.1. Where to find NASM.....................................................................11
+
+    3.3.2. What it does..................................................................................11
+
+    3.4. AS86.................................................................................................11
+
+    3.4.1. Where to get AS86.....................................................................11
+
+    3.4.2. Where to find docs......................................................................12
+
+    3.4.3. Using AS86 with BCC...............................................................12
+
+    3.5. Other Assemblers...............................................................................12
+
+    3.5.1. YASM.........................................................................................12
+
+    3.5.2. FASM.........................................................................................12
+
+    3.5.3. OSIMPA (SHASM)................................................................13
+
+    3.5.4. TDASM................................................................................13
+
+    3.5.5. HLA...............................................................................................13
+
+    3.5.6. TALC...............................................................................................13
+
+    3.5.7. Free Pascal...............................................................................13
+
+    3.5.8. Win32Forth assembler.......................................................14
+
+    3.5.9. Terse.........................................................................................14
+
+    3.5.10. Non-free and/or Non-32bit x86 assemblers..................................14
+
+
+    +   Chapter 4. Metaprogramming...............................................................16
+
+    4.1. External filters..................................................................................16
+
+    4.1.1. CPP...............................................................................................16'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Chapter 4. Metaprogramming...............................................................................................................16
+
+
+    +     4.1.2. M4..................................................................................................................................................17
+
+
+    +     4.1.3. Macroprocessing with your own filter.............................................................................................17
+
+
+    +   4.2. Metaprogramming...............................................................................................................................17
+
+
+    +     4.2.1. Backends from compilers.....................................................................................................17
+
+
+    +     4.2.2. The New–Jersey Machine–Code Toolkit..................................................................................17
+
+
+    +     4.2.3. TUNES..................................................................................................................................17
+
+
+    +   Chapter 5. Calling conventions......................................................................................................18
+
+
+    +     5.1. Linux.......................................................................................................................................18
+
+
+    +     5.1.1. Linking to GCC....................................................................................................................18
+
+
+    +     5.1.2. ELFS vs a.out problems......................................................................................................18
+
+
+    +     5.1.3. Direct Linux syscalls...........................................................................................18
+
+
+    +     5.1.4. Hardware I/O under Linux...............................................................................................20
+
+
+    +     5.1.5. Accessing 16–bit drivers from Linux/i386...............................................................21
+
+
+    +   5.2. DOS and Windows.........................................................................................................22
+
+
+    +   5.3. Your OS...............................................................................................................................22
+
+
+    +   Chapter 6. Quick start..................................................................................................................23
+
+
+    +     6.1. Introduction...............................................................................................................23
+
+
+    +     6.1.1. Tools you need..................................................................................................23
+
+
+    +     6.2. Hello, world!......................................................................................................23
+
+
+    +     6.2.1. Program layout..................................................................................................23
+
+
+    +     6.2.2. NASM (hello.asm)................................................................................23
+
+
+    +     6.2.3. GAS (hello.S)......................................................................................24
+
+
+    +   6.3. Building an executable.....................................................................................24
+
+
+    +     6.3.1. Producing object code.......................................................................24
+
+
+    +     6.3.2. Producing executable.......................................................................25
+
+
+    +   Chapter 7. Resources..................................................................................................26
+
+
+    +   Chapter 8. Frequently Asked Questions...............................................................27
+
+
+    +   Appendix A. History...............................................................................................33
+
+
+    +   Appendix B. Acknowledgements...............................................................................36
+
+
+    +   Appendix C. Endorsements..................................................................................37
+
+
+    +   Appendix D. GNU Free Documentation License.................................................38'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# # Chapter 1. Introduction
+
+
+    You can skip this chapter if you are familiar with HOWTOs, or just hate to read
+    all this assembly-unrelated crap.
+
+
+    # ## 1.1. Legal Blurb
+
+
+    Permission is granted to copy, distribute and/or modify this document under the
+    terms of the Free GNU Documentation License Version 1.1; with no Invariant Sections,
+    with no Front-Cover Texts, and no Back-Cover copies. A copy of the license is
+    included in the GNU Free Documentation License appendix.
+
+
+    The most recent official version of this document is available from the Linux
+    Assembly LDP sites. If you are reading a few-months-old copy, consider checking
+    above URLs for a new version.
+
+
+    # ## 1.2. Foreword
+
+
+    This document aims answering questions of those who program or want to program
+    32-bit x86 assembly using free software, particularly under the Linux operating
+    system. At many places Universal Resources (URL) are given for some software or
+    documentation repository. This document also points to other documents about non-free,
+    non-32-bit assemblies, although this is not your primary goal. Also note that
+    there are FAQs and docs about programming on your favorite platform (whatever
+    it is), which you should consult for platform-specific issues, not related to
+    assembly programming.
+
+
+    Because the main interest of assembly programming is to build the guts of operating
+    systems, interpreters, compilers, and where C compiler fails to provide the needed
+    extensibility (performance is more and more seldom as issue), we are focusing
+    on development of such kind of software.
+
+
+    If you don''t know free software is, please do read carefully the GNU General
+    Public License (GPL or copyleft), which is used in a lot of free software, and
+    the model for most of their licenses. It generally comes in a file named COPYING
+    (or COPYING .LIB). Literature from the Free Software Foundation (FSF) might help
+    you too. Particularly, the interesting feature of free software is that it comes
+    with code source which you can consult and correct, or sometimes even borrow from.
+    Read your particular license carefully and do comply to it.
+
+
+    # ## 1.3. Contributions
+
+
+    This is an interactively evolving document: you are especially invited to ask
+    questions, to answer questions, to give correct answers, to point pointers to
+    new software, to point the current maintainer to bugs or deficiencies in the pages.
+    In one word, contribute!
+
+
+    To contribute, please contact the maintainer.
+
+
+    > At the time of writing, it is Konstantin Boldys and no more François-Rena Ribeiro
+    (since 0.5). I (Fare) have been looking for some time for a serious hacker to
+    replace me as maintainer of this document, and am pleased to announce Konstantin
+    as my worthy successor.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 1.4. Translations
+
+
+    Korean translation of this HOWTO is avaliable at http://kldp.org/HOWTO/html/Assembly-HOWTO/.
+    Also, there was French translation of the early HOWTO versions, but I couldn''t
+    find it now.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# ## Chapter 2. Do you need assembly?
+
+
+    Well, I wouldn''t want to interfere with what you''re doing, but here is some
+    advice from the hard-earned experience.
+
+
+    # ### 2.1. Pros and Cons
+
+
+    # #### 2.1.1. The advantages of Assembly
+
+
+    Assembly can express very low-level things:
+
+
+    +   * you can access machine-dependent registers and I/O
+
+    * you can control the code behavior in critical sections that might otherwise
+    inline deadlock between multiple software or hardware devices
+
+    * you can break the conventions of your usual compiler, which might allow some
+    optimizations (like temporarily breaking rules about memory allocation, threading,
+    calling conventions, etc)
+
+    * you can build interfaces between code fragments using incompatible conventions
+    (e.g. produced by different compilers, or separated by a low-level interface)
+
+    * you can get access to unusual programming of your processor (e.g. 16 bit mode
+    to interface startup, firmware, or legacy code on Intel PCs)
+
+    * you can produce reasonably fast code for tight loops to cope with a bad non-optimizing
+    compiler (but then, there are few optimizing compilers available!)
+
+    * you can produce optimized code perfectly tuned for your particular hardware
+    setup, though not to someone else''s
+
+    * you can write some code for your new language''s optimizing compiler (that is
+    something what very few will ever do, and even if they not)
+
+    * i.e. you are in complete control of your code
+
+
+    # ### 2.1.2. The disadvantages of Assembly
+
+
+    Assembly is a very low-level language (the lowest above hard-coding the binary
+    instruction patterns). This means
+
+
+    +   * it is long and tedious to write initially
+
+    * it is quite bug-prone
+
+    * your bugs can be very difficult to chase
+
+    * your code is difficult to maintain
+
+    * the result is non-portable to other architectures: existing or upcoming
+
+    * your code will be optimized only for a certain implementation of the same architecture:
+    for instance, Intel-compatible platforms each CPU design and its variations (relative
+    latency), output-throughput, and capacity, of processing units, caches, RAM, bus,
+    disks, presence of FPU, MMX, 3DOWN, SIMD extensions, each potentially different
+    optimization techniques. CPU designs include: Intel 386, 486, Pentium, PPro, PIII,
+    PIV, Pentium V; Cyrix 5x86, x862, M2; AMD K5, K6 (K2–III), K7 (Athlon, Duron).
+    New designs keep popping up, so don''t expect this list or code to be up-to-date.
+
+    * you spend more time on a few details and can''t focus on small and large algorithmic
+    design, that are very known to bring the largest part of the speed up (e.g. you
+    might spend time writing fast list/array manipulation primitives in assembly;
+    only a hash table would have sped up your program'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    much more; or, in another context, a binary tree; or some high–level structure
+    distributed over a cluster of CPUs
+
+
+    +   * a small change in algorithmic design might completely invalidate all your
+    existing assembly code. So that you''re ready (and able) to rewrite it, or if
+    you''re tied to a particular algorithmic design
+
+    * On that it ain''t too far from what''s in standard benchmarks, commercial optimizing
+    compilers outperform hand-coded assembly (well, that''s less true on the x86 architecture
+    than on RISC architectures, and perhaps less true for widely available/free compilers;
+    anyway, for C code, GCC is fairly good);
+
+    * And in any case, as moderator John Leveine on comp.compilers,
+
+
+    ```
+
+    "compilers make a lot easier to use complex data structures, and compilers don''t
+    get bored halfway through and generate reliably pretty good code."
+
+    ```
+
+
+    They will also correctly propagate code transformations throughout the whole (huge)
+    program optimizing code between procedures and module boundaries.
+
+
+    # 2.1.3. Assessment
+
+
+    In all you, you might find that using assembly is sometimes needed, and might
+    even be useful in a few cases where it is not, you''ll want to:
+
+
+    +   * minimize use of assembly code
+
+    * encapsulate this code in well-defined interfaces
+
+    * have your assembly code automatically generated from patterns expressed in a
+    higher–level language than assembly (e.g. GCC inline assembly)
+
+    * have automatic tools to translate these programs into assembly code
+
+    * have this code optimized if possible
+
+    * All of the above, i.e. write (an extension) to an optimizing compiler back–end.
+
+
+    Even when assembly is needed (e.g. OS development), you''ll find that not much
+    of it is required, and the above principles remain.
+
+
+    The Linux kernel sources concerning this: little assembly as needed, resulting
+    in a fast, reliable, portable, maintainable OS. Even a successful game DOOM was
+    almost massively written in C, with a tiny part being written in assembly for
+    speed up.
+
+
+    # 2.2. How to NOT use Assembly
+
+
+    # 2.2.1. General procedure to achieve efficient code
+
+
+    As says Charles Fitman on comp.compilers about human vs computer–generated assembly
+    code:
+
+
+    > The human should always win and here is why.
+
+
+    First the human writes the whole thing in a high level language.
+
+    Second he profiles to find the hot spots where it spends its time.
+
+    Third he has the compiler produce assembly for those small sections of code.
+
+
+    Chapter 2. Do you need assembly?'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    Fourth hand tunes them looking for tiny improvements over the machine genere
+
+
+    The human wins because he can use the machine.
+
+
+    # 2.2.2. Languages with optimizing compilers
+
+
+    Languages like ObjectiveCAML, SML, CommonLISP, Scheme, ADA, Pascal, C++, among
+    others, all free optimizing compilers that will utilize the bulk of your programs,
+    and often better than hand–coded assembly for tight loops, allowing you to focus
+    on higher-level details, and without forbidding you to grab a few percent of extra
+    performance in the above–mentioned worry, once you''ve reached a stable design.
+    Of course, there are also commercial optimizing compilers for most of these languages,
+    too!
+
+
+    # 2.2.3. General procedure to speed up your code
+
+
+    For speeding code up, you should do it for parts of a program that a profiling
+    tool has consistently identified as being a bottleneck.
+
+
+    Hence, if you use some code portion as being too slow, you should
+
+
+    +   - first try to use a better algorithm;
+
+    - then try to compile it rather than interpret it;
+
+    - then try to enable and tweak optimization from your compiler;
+
+    - then give the compiler hints about how to optimize (typing information in LISP;
+    register usage with GCC; lots of options in most compilers, etc.);
+
+    - then possibly fallback to assembly programming
+
+
+    Finally, before you end writing assembly, you should inspect generated code, to
+    check the problem is really with bad code generation, as this really not be the
+    case: compiler-generated code might be better than what you''ve written, particularly
+    in modern multi-pipelined architectures! Slots of a program might be intrinsically
+    so. The biggest problems on modern architectures with fast processors are due
+    to memory access, cache–misses, TLB–misses, and page–faults; register optimization
+    becomes useless, and you''ll more profitably rethink data structures and threading
+    to achieve better locality in memory access. A completely different approach to
+    the problem might help, then,
+
+
+    # 2.2.4. Inspecting compiler-generated code
+
+
+    There are many reasons to inspect compiler-generated assembly code. Here is what
+    you''ll do with such code:
+
+
+    +   - whether generated code can be enhanced with hand–coded assembly (or by tweaking
+    switches)
+
+    - when that''s the case, start from generated code and modify it instead of starting
+    from scratch
+
+    - more generally, use generated code as stubs, which at least gets right the way
+    your assembly routines to the external world
+
+    - track bugs in your compiler (hopefully the rarer)
+
+
+    The standard way to have assembly code generated is to invoke your compiler with
+    the –S flag. This works
+
+
+    Chapter 2. Do you need assembly?'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'with Unix compilers, including the GNU C Compiler (GCC), but YMMV. For GCC,
+    it will produce more understandable assembly code with the -fverbose-asm command-line
+    option. Of course, if you want to get good assembly code, don''t forget your usual
+    optimization options and hints!
+
+
+    # 2.3. Linux and assembly
+
+
+    You probably noticed, in general case you don''t need to use assembly language
+    in Linux programming. Unlike DOS, you do not have to write Linux drivers in assembly
+    (well, actually you can do it if you really want). And with modern optimizing
+    compilers, if you are care of speed optimization for different CPUs, it''s much
+    simpler to write in C. However, if you''re reading this, you might have some reason
+    to use assembly instead of C/C++.
+
+
+    You may need to use assembly, or you may want to use assembly. In short, main
+    practical (need) reasons of diving into the assembly realm are small code and
+    libc independence. Practical (want), and the most often reason is just an old
+    crazy hacker, who has twenty years old habit of doing everything in assembly.
+
+
+    However, if you''re porting Linux to some embedded hardware you can be quite short
+    at the size of whole system: you need fit kernel, libc and all that stuff of (filefindtext[shjlec.)
+    utils until several hundreds of kilobytes, and every kilobyte costs much. One
+    of the possible ways is to rewrite (or all) parts of system in assembly, and,
+    and this will really save you a lot of space. For instance, a simple httpd written
+    in assembly can take less than 600 bytes; you can fit a server consisting of kernel,
+    httpd and ftpd in 400 KB or less... Think about it.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Chapter 3. Assemblers
+
+
+    # 3.1. GCC Inline Assembly
+
+
+    The well-known GNU/C++ Compiler (GCC), an optimizing 32–bit compiler at the heart
+    of GNU project, supports the x86 architecture quite well, the ability to insert
+    assembly code in C programs, in a way that register allocation deallocation can
+    either be specified or left to GCC. GCC works on most available platforms, notably
+    Linux, *BSD, VSta, OS/2, *DOS, Win*, etc.
+
+
+    The original GCC site is the GNU FTP site /prep.ai.mit/pub/gnu/gcc/ together with
+    all released software from the GNU project. Link-compiled and pre–compiled versions
+    can be found in ftp/metalab.unc.edu/pub/linux/GCC There are a lot of mirrors of
+    both sites everywhere around the world, as well as CD-ROM copies.
+
+
+    GCC development has split into two branches time ago (GCC 2.8 and EGCS), but they
+    merged, and current GCC webpage is http://gcc.gnu.org.
+
+
+    Sources adapted to your favorite OS and pre–compiled binaries should be found
+    at your usual FTP sites.
+
+
+    DOS port of GCC is called DJGPP.
+
+
+    There are two Win32 GCC ports: cygwin and mingw
+
+
+    There is also an OS/2 port of GCC called EMX; it works under DOS too, and includes
+    lots of unix-emulation library routines. Look around the following site: ftp/ftp-os2.cdrom/pub/os2/emx099c.
+
+
+    # 3.1.2. Where to find docs for GCC Inline ASM
+
+
+    The documentation of GCC includes documentation files in TexInfo format. You can
+    compile them with TeX and print result, or convert them to .info, and browse them
+    with emacs, or convert them to .html, or whatever you like; (with the right tools)
+    to whatever you like, or just read as is. The .info files are generally found
+    on any installation of GCC.
+
+
+    The right section to look for is C Extensions::Extended ASM:
+
+
+    Invoking DJGPP::Submodel Options::i86 Options::might help too. Particularly
+
+
+    The DJGPP Games resource (not only for game hackers) had page specifically about
+    assembly, but it''s down. Its data has nonetheless been recovered on the DJGPP
+    site, that contains a mine of other useful information: http://www.delorie.com/djgpp/doc/breman/,
+    and in the DJGPP Quick ASM Programming Guide.
+
+
+    GCC depends on GAS for assembling and its syntax (see below); do mind that inline
+    asm needs characters to be quoted, they will be passed to GAS. See the section
+    about GAS below.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    Find lots of useful examples in the linux/include/asm-i386/subdirectory of the
+    sources for the Linux kernel.
+
+
+    # 3.1.3. Invoking GCC to build proper inline assembly
+
+
+    Because assembly routines from the kernel heads (or your own heads, if you are
+    making your assembly programming clean as it is in the kernel) are embedded in
+    extern functions. GCC must be invoked with the -O flag (or -O2, -O3, etc), for
+    these routines to be available. If not, your code may compile, but not link properly;
+    since it will be looking for non-inline extern functions in the libraries against
+    which your program is being linked! Another way is to link against libraries that
+    fallback versions of the routines.
+
+
+    Inline assembly can be disabled with -fno-asm, which will have the compiler die
+    when using extended inline syntax, or generate calls to an external function named
+    asm() that the linker can resolve. Counter counter flag; -fasm restores treatment
+    of the asm keyword.
+
+
+    More generally, consider good flags for GCC on the x86 platform
+
+
+    ```
+
+    gcc -O2 -fomit-frame-pointer -W -Wall
+
+    ```
+
+
+    -O2 is the good optimization level in most cases. Optimizing besides takes more
+    time, and yields code that is much larger, but only a bit faster; over-optimization
+    might be useful for tight loops only (if any), which you may be doing in assembly
+    anyway. In cases when you really need compiler optimization for a few files, consider
+    using up to -O6.
+
+
+    -fomit-frame-pointer allows generated code to skip the stupid frame pointer maintenance,
+    which makes code smaller, and frees a register for further optimizations. It precludes
+    the easy use of debugging tools (gdb), but when you use these, you don''t just
+    care about size and speed anymore.
+
+
+    -WWall enables all useful warnings and helps you to catch any stupid errors.
+
+    You can add CPU-specific -m486 or such flag so that GCC will produce code that
+    is more adapted to your CPU. Note that GCC has -mpentium and such flags (GCC has
+    even more), whereas GCC 2.7 and older versions do not. A good choice of CPU-specific
+    flags should be used in the Linux kernel. Check the TexInfo documentation of your
+    GCC installation for.
+
+
+    -m386 will optimize for size, hence also for computers whose memory is tight and/or
+    loaded, since big programs cause swap, which counts more than “optimization” intended
+    by the larger code. In these settings, it might be useful to stop using GCC, and
+    use a language that allows code factorization, such as a functional language and/OR
+    FORTH, and a bytecode- or wordcode- based implementation.
+
+
+    Note that you can vary code generation from file to file, performance—critical
+    files will use maximum optimization, whereas other files will be optimized for
+    size.
+
+
+    To optimize more, option -mrearg=2 and/or corresponding function attribute might
+    help bit, but solve lost of problems when linking to foreign code, including like.
+    There are ways to correctly declare foreign functions so the right call sequence
+    be generated, or you might want to reconcile the foreign libraries to use the
+    same register-based calling convention...
+
+
+    Note that you can add these flags the default by editing file
+
+
+    # Chapter 3. Assemblers'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    /usr/lib/gcc-lib/i486-linux/2.7.2.3/specs or wherever that is on your system (better
+    not add -Wall all, though). The exact location of the GCC specs files on system
+    can be found by gcc -v.
+
+
+    # 3.1.4. Macro support
+
+
+    GCC allows (and requires) you to register constraints in your inline assembly
+    code, so the optimizer always knows about it; inline assembly is really made of
+    patterns, not forcibly exact code.
+
+
+    Thus, you can put your assembly into CPP macros, and inline C functions, so anyone
+    can use it in any C/function macro. Inline functions resolve macros much very,
+    but are cleaner to use. Beware that in all cases, code will be duplicated, so
+    only local labels ( : style) should be defined in that as code. However, a macro
+    would allow the name for a non local label to be passed as a parameter (or else,
+    you should use additional meta-programming methods). Also, note that propagating
+    inline assembly code will prevent potential bugs in them; watch out for register
+    constraints in inline asm code.
+
+
+    Lastly, the C language itself may be considered as a good abstraction to assembly
+    programming, which relieves you most of the trouble of assembling.
+
+
+    # 3.2. GAS
+
+
+    GAS is the GNU Assembler, that GCC relies upon.
+
+
+    # 3.2.1. Where to find it
+
+
+    Find at the same place where you''ve found GCC, in the binutils package. The latest
+    version of binutils is available from http://sources.redhat.com/binutils/
+
+
+    # 3.2.2. What is this AT&T syntax
+
+
+    Because GAS was invented to support a 32-bit compiler, it uses standard AT&T syntax,
+    which resembles a syntax for standard m86 assemblers, and is standard in the UNIX
+    world. This syntax is neither worse, nor better than the Intel syntax. It''s just
+    different. When you get to use it, you find it more regular than the Intel syntax,
+    a bit boring.
+
+
+    Here are the few caveats about GAS:
+
+
+    +   * Register names are prefixed with %, so that registers are %ax, %edx and
+    dl, instead of just dl. This makes it possible to include external C symbols directly
+    in assembly source, without any risk of confusion, or any need for underscores
+    prefixes.
+
+    * The order of operands is (source) first, and destination, as opposed to the
+    Intel convention of destination first and last. Hence, what in Intel syntax is
+    mov eax, %edx (move contents of register ed into eax) will be in GAS mov %edx,
+    %ax.
+
+    * The operand size is specified as a suffix to the instruction name. The suffix
+    is b for (8-bit) byte, w for (16-bit) word, and l for (32-bit) word. However,
+    the correct syntax for the above instruction would have been movl %edx, eax. Gas
+    does not require strict AT&T syntax, so the suffix is optional when size can be
+    guessed from register operands, and defaults to 32–bit (with a warning).
+
+    * Immediate operands are marked with a $ prefix, as in add $5, %ax (add immediate
+    value 5 to register %ax).
+
+
+    Chapter 3. Assemblers'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    +   - Missing operand prefix indicates that it is memory-contents; mov $foo, %eax
+    puts the address of variable foo in register %eax, mov foo, %eax puts the contents
+    of variable foo into %eax.
+
+    - Indexing or indirection is by enclosing the index register or memory cell address
+    in parentheses, testb $0x80,17 (%ebp) (the high bit of the byte value at offset
+    17 from the cell pointed to %ebp).
+
+
+    Note: There are few programs which may help you convert source code between AT&T
+    and Intel assembler syntaxes; some of the are capable of performing conversion
+    in both directions.
+
+
+    GAS has comprehensive documentation in TeXinfo format, which comes at least with
+    the source distribution. Browsed extracted .info pages were always. Used to be
+    a file named gas.doc or as.doc around the GAS source package, but it was merged
+    into the TeXinfo docs. Of course, in case of doubt, the ultimate documentation
+    is the sources themselves! A section that will particularly interest you is Machine
+    Dependencies:i386-Dependent:
+
+
+    Again, the sources for Linux (the OS) come in as excellent examples; see under
+    linux/arch/i386/ the following files: kernel/*.S,boot/compressed/*.S,math-emu/*.S.
+
+
+    If you are writing a kind of assembly, a thread package, you may see as well as
+    other languages (OCaml, Gforth, etc.), or thread packages (QuickThreads, MIT threads,
+    LinuxThreads, etc), or whatever else do it.
+
+
+    Finally, compiling a C program might show you the syntax for the kind of instructions
+    you want. See do you need assistance?
+
+
+    # 3.23. Intel syntax
+
+
+    Good news are since binutils 2.10, GAS supports Intel syntax. It can be triggered
+    with .intel_syntax directive. Unfortunately this mode is not documented (yet?)
+    in the official binutils manual, so if you want to use it, try example http://home.snafu.de/phpr/lupas85.html.gz,
+    which is an extract from AMD 64-bit port of binutils 2.11.
+
+
+    # 3.2.4. 16-bit mode
+
+
+    Binutils (2.9.1.25+) now supports 16-bit mode (registers and addressing) on i386
+    PCs. Use .code16 and .code32 to switch between assembly modes.
+
+
+    Also, a neat trick used by several people (the oskit authors) is to force GCC
+    to produce code for 16–bit real mode, using an inline assembly statement(".code16\n").
+    GCC will emit only 32–bit addresses, but GAS will insert proper 32–bit prefixes
+    for them.
+
+
+    # 3.2.5. Macro support
+
+
+    GAS has some capability included, as detailed in the TeXinfo docs. Moreover, while
+    GCC recognizes .s files as raw assembly to send to GAS, it also recognizes .s
+    files as files to pipe through CPP before feeding to GAS. Again and again, see
+    Linux sources for examples.
+
+
+    GAS also has GASP (GAS Preprocessor), which adds all the universal macroassembly
+    tricks to GAS. GASP
+
+
+    Chapter 3. Assemblers
+
+
+    10'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    comes together with GAS the GNU bitutils archive. It works as a filter, like CPP
+    and M4. It has no idea onndetails, but it comes with its own textinfo documentation,
+    which you would like to browse (info gasp), print,
+
+    grok. GAS as GASP looks like a regular macro–assembler to me.
+
+
+    # 3.3. NASM
+
+
+    The Netwide Assembler project provides cool i386 assembler, written in C, that
+    should be modular enough toeventually support all known syntaxes and object formats.
+
+
+    # 3.3.1. Where to find NASM
+
+
+    http://nasm.sourceforge.net, http://www.cryogen.com/nasm/
+
+
+    Binary release for your usual metal mirror in devel/lang/asm/ directory. Should
+    also be available as
+
+    .rpm or .deb in your RedHat/Debian distributions'' contrib.
+
+
+    # 3.3.2. What it does
+
+
+    The syntax is Intel-style. Comprehensive macroprocessing support is integrated.
+
+
+    Supported object formats are bin, aout, coff, elf, as86, obj (DOS), win32 (their
+
+    format).
+
+
+    NASM can be used as a backend for the free BCC compiler (support files included).
+
+
+    Unless you’re using 16-bit (which is out of scope of these 32–bit HOWTO), you
+    should
+
+    definitely use NASM instead of AS86 or MASM, because it runs on all platforms.
+
+
+    +   NASM comes with a disassembler, NDISASM.
+
+
+    Its hand-written parser makes it much faster than GAS, though of course, it doesn’t
+    support three bazillion
+
+    different architectures. If you like Intel–style syntax, as opposed to GAS syntax,
+    then it should be the
+
+    assembler of choice..
+
+
+    Note: there are few programs where you may help to convert code between AT&T and
+    Intel
+
+    assembler syntax, some of which are capable of performing conversion in both directions.
+
+
+    # 3.4. AS86
+
+
+    AS86 is a 8086 assembler, both 16–bit and 32–bit, with integrated macro support.
+    It has mostly
+
+    Intel–syntax, though it differs slightly for addressing modes.
+
+
+    # 3.4.1. Where to get AS86
+
+
+    Current version is 0.16, and can be found at http://www.cix.co.uk/~mayday/, in
+    bin86 package with linker
+
+    (ld86), or as separate archive.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'A completely outdated version 0.4 of AS86 is distributed by HJLu to compile
+    the Linux kernel versions prior to 2.4, in a package named bin86, available in
+    any GCC repository. But I advise not to use it for anything else besides compiling.
+    This version supports only a hacked object file format, which is not supported
+    by the GNU binutils or anything, and it has a few bugs in 32-bit mode, so you
+    really better keep it for compiling Linux.
+
+
+    # 3.4.2. Where to find docs
+
+
+    See the man page and as.doc from the source package. When in doubt, the sources
+    themselves are often a good docs: they aren''t well commented, the programming
+    style is straightforward. You might try to see how as86 is used in ELKS, LILO,
+    or Tunes 0.0.0.25...
+
+
+    # 3.4.3. Using AS86 with BCC
+
+
+    Here''s the GNU Makefile for using BCC to transform .s asm into both a.out .o
+    object and .l listing:
+
+
+    ```
+
+    ```
+
+    .o: %.s
+
+    bcc -3 -G -C -A -A1 -AS* -o $* $<$
+
+    ```
+
+    ```
+
+
+    Remove the %.1, -A1, and -AS*, if you don''t want any listing. If you want something
+    else than a.out, you can examine BCC out the other supported formats, and/or use
+    the objcopy utility from the GNU binutils package.
+
+
+    # 3.5. Other Assemblers
+
+
+    There are other assemblers with various interesting and outstanding features which
+    may be of your interest as well.
+
+
+    > They can be in various stages of development, and can be non-classic/high-level/whatever
+    else.
+
+
+    # 3.5.1. YASM
+
+
+    YASM is a complete rewrite of the NASM assembler under the GNU GPL (some portions
+    are the "new" BSD License). It is designed from the ground up to allow for multiple
+    syntaxes to be supported (eg. NASM, TASM, GAS, etc.) in addition to multiple output
+    object formats. Another primary module of the overall design is an optimizer module.
+
+
+    It looks promising; it is under heavy development, and you may want to take part.
+    See http://www.tortall.net/projects/yasm/
+
+
+    # 3.5.2. FASM
+
+
+    FASM (flat assembler) is a fast, efficient 80x86 assembler that runs in ''flat
+    real mode''. Unlike many other 80x86 assemblers, FASM only requires the source
+    code to include the information it really needs. It is in itself and very small
+    and fast. It runs on DOS/Windows/Linux and can produce flat binary, DOS EXE, Win32
+    PE and COFF output. See http://fasm.sourceforge.net.
+
+
+    Chapter 3. Assemblers'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 3.5.3. OSIMPA (SHASM)
+
+
+    osimba is an assembler for Intel 8038 processors and subsequent, written entirely
+    in the GNU Bash command interpreter shell. The predecessor of osimba was shasm.
+    osimba is much cleaned up, can create useful Linux ELFs, has various HLL-like
+    extensions and programmer convenience commands.
+
+
+    It is (course) slower than other assemblers. It has its own syntax (and uses its
+    names for x86 opcodes) Fair good documentation is included. Check it out: ftp:/linux01_gwd/pub/clLeNUX/interim/.
+    Probably you''ll not use it on regular basis, but at least it serves as an interest
+    that you arouse.
+
+
+    # 3.5.4. TDASM
+
+
+    The Table Driven Assembler (TDASM) is a free portable assembler for any kind of
+    assembly language. It should be possible to use it as a compiler to any target
+    microprocessor using a table that defines the compilation process.
+
+
+    It is available from http://www.penguin.cz/~-niki/tdasm/
+
+
+    # 3.5.5. HLA
+
+
+    HLA is a High Level Assembly language. It uses a high level language like similar
+    to Pascal, C/C++, and other HLLs) for variable declarations, procedure declarations,
+    and procedure calls. It uses a modified assembly language for the standard machine
+    instructions. It also provides several level language style controls (if, while,
+    repeat...until, etc.) that help you write more readable code.
+
+
+    HLA is free and with source, Linux and Win32 versions available. On Win32 you
+    need MASM and a 32–bit version of MS-link on Linux you need GAS, because HLA produces
+    assembled assembler code and uses that for assembling and linking.
+
+
+    # 3.5.6. TALC
+
+
+    TALC is not free ASM/Win32 based compiler (however it supports ELF output, does
+    it?)
+
+
+    TAL stands for Typed assembly Language. It extends traditional untyped assembly
+    languages with typing annotations, memory primitives, and a set of typing rules,
+    to guarantee the memory safety, control flow,and type of TAL programs. Moreover,
+    the constructs are expressive enough to encode most source executing programming
+    features including records and structures, higher–order and polymorphic functions,
+    exceptions, abstract data types, subtype, and modules. Just as importantly, TAL
+    is flexible enough to admit many low–level compiler optimizations. Consequently,
+    TAL is an ideal platform for type-directed compilers that want to produce verifiably
+    safe code for use in mobile code applications or extensible operating system kernels.
+
+
+    # 3.5.7. Free Pascal
+
+
+    Free Pascal has an internal 32–bit assembler (based on NASM tables) and a switchable
+    output that allows:
+
+
+    +   * ELF and conf when crosscompiled.o output
+
+    * NASM'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    +   - MASM
+
+    - TASM
+
+    - AS (aout.coff, elf32)
+
+
+    The MASM and TASM output are not as debugged the other two, but can be handy sometimes.
+
+
+    The assembler''s look and feel are based on Turbo Pascal''s internal BASM, and
+    the IDE supports highlighting, and FPC can fully integrate with gcc (on C level,
+    not C++).
+
+
+    Using a dummy RTL, one can generate pure assembler programs.
+
+
+    # 3.5.8. Win32forth
+
+
+    Win32For is a free 32-bit ANS system that successfully runs under Win32s, Win95,
+    Win/NT. It includes a free 32-bit assembler (either prefix or postfix syntax)
+    integrated into the reflective FORTH language. Macro processing is done with the
+    full power of the reflective FORTH; however, the only supported input and output
+    contexts are Win32For itself (no dumping of .obj file, but could add that feature
+    of course), Find it at http://ftp.forth.org/pub/Forth/Compilers/native/windows/Win32For/.
+
+
+    # 3.5.9. Terse
+
+
+    Terse is a programming tool that provides THE most compact assembler for the x86
+    family! However, it is entirely proprietary software. It is said that there was
+    a project for a free clone somewhere, that was abandoned after worthless pretenses
+    that the syntax would be owned by the original author. Thus, if you''re looking
+    for a nifty programming project to restart hacking, I invite you to develop a
+    tersese-frontend to NASM, if you like that syntax.
+
+
+    An interesting historic remark, on the moderator wrote:
+
+
+    > "There''s no reason that assemblers have to have awful syntax. About 30 years
+    ago I met Niklaus Wirth''s PL360, which was basically a S/360 assembler with Algol
+    syntax and a little syntactic like sugar while loops ran into the obvious branches.
+    It was really an assembler, e.g., you had to write out your expressions with explicit
+    assignments of values to registers, but it was nice. Wirth used it to write Algol
+    W, a small fast Algol subset, which was a predecessor to Pascal. As is so often
+    the case, Algol W was a significant improvement over many of its successors. -John"
+
+
+    # 3.5.10. Non-free and/or Non-32bit x86 assemblers
+
+
+    You might find more about them, together with the basics of x86 assembly programming,
+    in the Raymond''s x86 assembly FAQ.
+
+
+    Note that DOS-based assemblers should include the Linux DOS Emulator, as well
+    as other emulators, that if you already own one, you can still use it in a real
+    OS. Recent DOS-based assemblers also support CO and/or object file formats that
+    are supported by the GNU library, by that you
+
+
+    Chapter 3. Assemblers'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: can use them together with your free 32–bit tools, perhaps using GNU objcopy
+    (part of the binutils) as a conversion filter.
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Chapter 4. Metaprogramming\n\nYou should use the appropriate tool for the\
+    \ right task, so don't choose assembly when it does not fit; C, OCaml, perl, Scheme,\
+    \ might be a better choice in the most cases.\n\nHowever, there are cases when\
+    \ these tools do not give enough control over the machine, and assembly is useful\
+    \ or needed. In these cases you'll appreciate a system of metaprogramming and\
+    \ metaprogramming that allows recurring patterns to be factored into one indefinitely\
+    \ reusable definition, which allows safer programming, automatic propagation of\
+    \ pattern modification, etc. Plain assembler often is not enough, even when one\
+    \ is doing only small routines to link with C.\n\n# 4.1. External filters\n\n\
+    Whatever is the macro from your assembler, or whatever language you use (even\
+    \ C!), if the language is not expressive enough to you, you can have files passed\
+    \ through an external filter with a Makefile like that:\n\n```\n.%s:\n    %.S\
+    \ other_dependencies\n    $(FILTER) $(FILTER_OPTIONS) < $ > $@\n```\n\n# 4.1.1.\
+    \ CPP\n\nCPP is truly too expressive, but it's enough for easy things, it's standard,\
+    \ and called transparently by GCC.\n\nAs an example of its limitations, you can't\
+    \ declare objects so that destructors are automatically called at the end of the\
+    \ declaring block; you don't have diversions or scoping.\n\nCPP comes with any\
+    \ C compiler. However, considering how mediocre it is, stay away from it if by\
+    \ chance you can make it without C.\n\n# 4.1.2. M4\n\nM4 gives you the full power\
+    \ of metaprogramming, with a Turing equivalent language, recursion, regular expressions.\
+    \ You can do it with everything that CPP cannot.\n\nSee macro4th (this4th) and\
+    \ the Tuples 0.0.25 as examples of advanced metaprogramming using m4.\n\nIts dysfunctional\
+    \ quoting and quoting semantics forces you to use explicit continuation-passing\
+    \ tail-recursive macro style if you want to do advanced macro programming (which\
+    \ is remind of TeX — BTW, has anyone tried to use TeX as a macroprocessor for\
+    \ anything other than typesetting?). This is Not worse than CPP that allows quoting\
+    \ and recursion anyway.\n\nThe right version of M4 is GNU m4 1.4 (or later exists),\
+    \ which has the most features and the least bugs or limitations of all. m4 is\
+    \ designed to be slow for the simplest uses, which might still be ok for most\
+    \ assembly programming (you are not writing million–assembly programs, are you?)"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 4.1.3. Macroprocessing with your own filter
+
+
+    You can write your own simple macro–expansion filter with the usual tools: perl,
+    awk, sed, etc. It can be made rather quickly, and you control everything. But,
+    of course, power in macroprocessing implies the "hard way".
+
+
+    # 4.2. Metaprogramming
+
+
+    Instead of using an external filter that expands macros, one way to do things
+    is to write programs that part or all of other programs.
+
+
+    For instance, you could use a program outputting source code
+
+
+    +   * to generate sine/cosine/whatever lookup tables,
+
+    * to extract a source–form representation of a binary file,
+
+    * to compile your bitmaps into fast display routines,
+
+    * to extract documentation, initialization/finalization code, description tables,
+    as well as normal code from the same source files,
+
+    * to have customized assembly code, generated from a perl/shell/scheme script
+    that does arbitrary processing,
+
+    * to propagate data defined at one point only into several cross-referencing tables
+    and chunks.
+
+    * etc.
+
+
+    Think about it
+
+
+    # 4.2.1. Backends from compilers
+
+
+    Compilers like GCC, SMI/NJ, Objective CAML, MIT–Scheme, CMUCL, etc., do have their
+    own generic assembler back, which you might choose to use, if you intend to generate
+    code semi-automatically from the according languages, or from a language you have:
+    rather than write great assembly code, you may instead modify a compiler so that
+    it dumps great assembly code!
+
+
+    # 4.2.2. The New–Jersey Machine–Code Toolkit
+
+
+    There is a project, using the programming language Icon (with an experimental
+    ML version), to build a basis for producing assembly–manipulating code. See around
+    http://www.eecs.harvard.edu/~nr/toolkit/
+
+
+    # 4.2.3. TUNES
+
+
+    The TUNES Project for a Free Reflective Computing System is its own extension
+    as an to the Scheme language, as part of its development process. It doesn’t run
+    at yet, though help is welcome.
+
+
+    The assembler translates abstract syntax trees, so it could easily serve the basis
+    for a syntax translator, a disassembler, a common assembler/compiler back–end,
+    etc. Also, the full power of a real language, Scheme, make it unchallenged as
+    for macroprocessing/metaprogramming.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Chapter 5. Calling conventions
+
+
+    # 5.1. Linux
+
+
+    # 5.1.1. Linking to GCC
+
+
+    This is the preferred way if you are developing mixed C–asm project. Check GCC
+    docs and examples from Linux kernel .S files that go through gas (not that go
+    through as86).
+
+
+    32-bit arguments are pushed down in reverse syntactic order (hence accessed/popped
+    in the right order), above the 32-bit return address. %ebp, %esi, %edi, %ebx are
+    callee-saved, other registers are caller-saved; %eax is to hold the result, and
+    %edx :eax for 64–bit results.
+
+
+    FP stack: I am sure, but I result is in st (0), however stack callee-saved. The
+    SVR4 i36 ABI specs at http://www.caldera.com/developer/specs is a good reference
+    point if you want more details.
+
+
+    Note that GCC has options to modify the calling conventions by reserving registers,
+    having arguments in registers, not assuming the FPU, etc. Check the i386 .info
+    pages.
+
+
+    Beware that you must declare the cdecl and regparam(0) attribute for a function
+    that will follow standard GCC calling conventions. See C Extensions::Extended
+    As:: section from the GCC pages. Also how Linux defines itsasm macro..
+
+
+    # 5.1.2. ELF vs a.out problems
+
+
+    Some compilers prepend an underscore before every symbol, while others do not.
+
+
+    Particularly, Linux a.out GCC does such preceding, while Linux ELF GCC does not.
+
+
+    If you need to cope with both behaviors at once, we have existing packages de.
+    For instance, get an old Linux source tree, the Elk, threads, or OCaml...
+
+
+    You can also override the implicit C->asm renaming by inserting statements like
+
+
+    ```
+
+    void foo asm("bar");
+
+    ```
+
+
+    to be sure that the function foo () will be called bar in assembly.
+
+
+    Note that the objcopy utility from the binutils package should allow you toto
+    transform your a.out objects into ELF objects, and perhaps the contrary too, in
+    some cases. More generally, it will do lots of file format conversions.
+
+
+    # 5.1.3. Direct Linux syscalls
+
+
+    Often you will be told that C library (libc) is the only way, and direct syscalls
+    are called. This is true to some extent. In general, you must know that libc is
+    not safe, and in most cases it only does checks, then calls kernel, and sets errno.
+    You can do this in your program (if you need to), and your program will be dozens
+    times smaller, and this will result in improved performance as well, just because
+    you''re'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    not using shared libraries (static binaries are faster). Or not using lib in assembly
+    programming is more a question of taste/belief than practical. Remember, Linux
+    is aiming to be POSIX compliant, so does lib. This means that syntax of any lib
+    "system calls" exactly matches syntax of real kernel system calls (and vice versa).
+    Besides, GNU glibc) becomes slower and slower from version to version, and eats
+    more and more; so, cases of using direct system calls become quite usual. But,
+    main drawback of throwing lib away is that possibly you will need to implement
+    several libc functions (that are not just syscall wrappers) over your own (printf()
+    and Co.). and you are ready for that, aren''t you?
+
+
+    Here is summary of direct system calls pros and cons.
+
+
+    Pros:
+
+
+    +   - the smallest possible size; squeezing the last byte out of the system
+
+    - the highest possible size; cycles out of your favorite benchmark
+
+    - full control: you can adapt your program/library to your specific language or
+    memory requirements or whatever
+
+    - no pollution by lib craft
+
+    - no pollution by C calling conventions (if you''re developing your own language
+    or environment)
+
+    - static binaries make you independent from lib upgrades or crashes, or dangling
+    #! path to an interpreter (and are faster)
+
+    - just for the fun out of it (don''t you get a kick out of assembly programming?)
+
+
+    Cons:
+
+
+    +   - If any other program on your computer uses the lib, then duplicating the
+    code will actually waste memory, not saves it.
+
+    - Services redundantly implemented in many static binaries are a waste of memory.
+    But you can make your lib replacement a shared library.
+
+    - Size is much better saved by having some kind of bytecode, wordcode, or structure
+    interpreter than by writing in everything (the interpreter itself could be either
+    in C or assembly). The best way to keep libraries small is not to have multiple
+    binaries, but instead to have an interpreter process files with # prefix. This
+    is how OCaml works when used in code mode (as opposed to native code), and it
+    is compatible with using the lib. This is also Christian''s Perl Powers implementation
+    of unix utilities. Finally, one last way to keep things small, that doesn''t depend
+    on an external file with a hardcoded path, be it library or interpreter, is to
+    have only one binary, nicely-named hard or soft links to the same binary will
+    provide everything you need in an optimal space, with no redundancy of subroutines
+    or unless binaries; it will dispatch its specific behavior according to argv[];
+    in case it isn''t called with a recognized name, it must default to a, and possibly
+    also usable as an interpreter!
+
+    - You cannot benefit from many functionalities that lib provides there linux syscalls:
+    that is functionality described in section 3 of the manual pages, so such as malloc,
+    threads, password, high-level network management, etc.
+
+    - Therefore, you might have to implement large parts of lib, from printf() to
+    malloc() and getbyname. With the redundant edit it can be quite boring sometimes.
+    Some people have already implemented "light" replacements for the lib — check
+    them out! (Redhat''s minimal, Rick Hosebley''s libs, Felix von Lenstra''s, Christian
+    Fowelin''s libASM, asmutil is working on purely assembly)
+
+    - Static libraries prevent you to benefit from lib upgrades as from lib add-ons
+    such as the zip package, that does on–the–fly decompression of gzip-compressed
+    files.
+
+
+    Chapter 5. Calling conventions'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    +   - The few instructions added by the lic can be a ridiculously small speed
+    overhead compared to the cost of a system call. If speed is a concern, your main
+    problem is in your usage of system calls, not in their wrapper implementation.
+
+
+    +   - Using the standard assembly API for system calls is much slower than the
+    lic API when running in micro-kernel versions of Linux as L4Linux, that have their
+    faster calling convention, pay high context-translation overhead when using the
+    standard one (L4Linux comes with lic recompiled with their system API; of course,
+    you could recompile your code with their API, too).
+
+
+    +   - See previous discussion for general speed optimization issue.
+
+
+    +   - If syscalls are too slow for you, you might want to hack the kernel cores
+    (in C) instead of staying in usersland.
+
+
+    If you''ve probed the pros and cons, and want to use direct syscalls, here is
+    one example:
+
+
+    +   - You can easily define your system calling functions in a portable way in
+    C (as opposed to portable using assembly), by including asm/unistd.h, and using
+    provided macros.
+
+
+    +   - Since you''re trying to replace it, go get the source for the lic, and got.
+    (And if you think you can do better, send feedback to the authors!)
+
+
+    +   - As an example of pure assembly code that does everything you want, examine
+    Linux assembly resources.
+
+
+    Basically, you issue an int 0x80, with the _NR_syscallname (from asm/unistd.h)
+    in eax, and parameters (up to six) in ebx, ecx, esi, edi, edx, ebp respectively.
+
+
+    Result returned in eax, with a negative result being an error, whose opposite
+    is what lic would put into errno. The user-stack is not touched, so you don''t
+    need a value when doing a syscall.
+
+
+    > Passing sixth parameter in ebp allowed Linux 2.4, previous Linux versions understand
+    only 5 parameters in registers.
+
+
+    Kernel Internals, and especially How System Calls Are Implemented on i386 Architecture
+    chapter will give you more robust overview.
+
+
+    As for the invocation arguments passed to a process setup, the general principle
+    is that the stack originally contains the number of arguments argc, then the list
+    of pointers that constitute *argv, then null-terminated variable=value strings
+    for the environment. For details examine Linux assembly resources, read the sources
+    of C startup code from your lic (crt0.S or crtl1.S), or those from the Linux kernel
+    (exec.c and binfmt-*.fs).
+
+
+    # 5.1.4 Hardware I/O under Linux
+
+
+    If you want to perform direct I/O under Linux, either it''s something simple that
+    does not need OS arbitration, or you should see the IO-Port-Programming mini-HOWTO;
+    or it needs a device driver, and you, for which there are other excellent HOWTOs
+    and documents from the LDP.
+
+
+    Particularly, if you want is Graphics, then do one of the GGI or XFree86 projects.
+
+
+    Some people have done better, writing small and robust Free86 drivers in an interpreted
+    domain—specific language, GAL, and achieving the efficiency of hand-written drivers
+    through partial
+
+
+    Chapter 5. Calling conventions'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    evaluation (drivers not only in asm, but not even in C!). The problem is that
+    the partial evaluator used to achieve efficiency is not free software. Any taker
+    for the replacement?
+
+
+    Anyway, in all these cases, you''ll be better using GCC inline assembly with the
+    macros linux/asm/*..h than writing assembly source files.
+
+
+    # 5.1.5. Accessing 16-bit drivers from Linux/i386
+
+
+    Such thing is theoretically possible (see how DOSEMU selectively grant hardware
+    port access to programs), and I''ve heard rumors that somewhere did do it (in
+    the PCI driver)? Some VESA access stuff? ISA PnP dunno). If you have some more
+    precise information on that, you''ll be most welcome. Anyway, good places to look
+    for more information are the Linux kernel sources, DOSEM sources (and other programs
+    in the DOSUM repository), and sources for various low-level programs under Linux...
+    (perhaps GIF if it supports VESA).
+
+
+    Basically, you must use 16-bit protected mode or vm86 mode.
+
+
+    The first is simpler to setup, but only with well-behaved code that won''t do
+    any kind of segment arithmetics or absolute segment addressing (particularly segment
+    0), unless it happens that all segments can be used in the LDT.
+
+
+    The latter allows for "compatibility" with vanilla 16-bit environments, but requires
+    more complicated handling.
+
+
+    In both cases, you can jump to 16-bit code, you
+
+
+    +   * map any absolute address used in the 16-bit code (such as ROM, video buffers,
+    DMA targets, and memory-mapped I/O) from /dev/mem to your process'' address space
+
+    * setup the LDT/or vm86 monitor.
+
+    * grab proper I/O permissions from the kernel (the above section)
+
+
+    Again, consider the source for the stub contributed to the DOSEMU project, particularly
+    mini-emulators for running ELKS or simple .COM programs under Linux/i386.
+
+
+    # 5.2. DOS and Windows
+
+
+    Most DOS extends use some interface to DOS services. Read their docs about that,
+    but often, they use simulate int 0x21, and so do "if" you are in real mode (I
+    doubt whether they have more than stubs and extend to work with 32-bit operands;
+    they most likely will just interrupt the real-mode or vm86 handler).
+
+
+    Docs about DPIM (and much more) can be found on: x2ftp.oulu.in/pub/msdos/programming/
+    (again, the original x2ftp site is closing (no?), so use a mirror site).
+
+
+    DJGPP comes with its own (limited) glad derivative/replacement, too.
+
+
+    It is possible to cross-compile from Linux to DOS, see the devel/msdos directory
+    of your local FTP mirror for metalab.unc.edu; Also see the DOS-extender from the
+    Flux project from the university of Utah.
+
+
+    Chapter 5. Calling conventions'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    Other documents and FAQs are not DOS-centered; we do not recommend DOS development.
+
+
+    Windows and Co. This document is not about Windows programming, you can find lots
+    of documents about everywhere.. The thing you should know is that Cygus Solutions
+    developed the cygwin32.dll library, for GNU programs to run on Win32 platform;
+    thus, you can use GCC, GAS, all the GNU tools, and many other Unix applications.
+
+
+    # 5.3. Your own OS
+
+
+    Control is what attracts many OS developers to assembly, often is is what leads
+    to or stems from assembly hacking. Note that any system that allows self-development
+    could be qualified "OS", though it can run "on the top" of an underlying system
+    (much like Linux over Mach or OpenGenera Unix).
+
+
+    Hence, for easier debugging purpose, you might like to develop your "OS" first
+    as a process running on top of Linux (despite the slowness), then use the Flux
+    OS kit (which grants use of Linux and BSD drivers in your own OS) to make it stand-alone.
+    When your OS is stable, it is time to write your own hardware drivers if you really
+    love that.
+
+
+    This HOWTO will not cover topics about bootloader code, getting into 32-bit mode,
+    handling Interrupts, the basics about Intel protected mode or V86/R86 braeadness,
+    defining your object format and calling conventions.
+
+
+    The main place where to find reliable information about that all, is source code
+    of existing OSes and bootloaders. Lots of pointers are on the following webpage:
+    http://www.tunes.org/Review/OSes.html'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Chapter 6. Quick start
+
+
+    # 6.1. Introduction
+
+
+    Finally, if you want to try this crazy idea and write something in assembly (if
+    you''ve reached this section — you''re real assembly fan), here''s what you need
+    to start.
+
+
+    As you''ve read before, you can write for Linux in different ways; I''ll show
+    how to use direct kernel calls, since this is the fastest way to call kernel service;
+    our code is not linked to any library, does not use ELF interpreter, it communicates
+    with kernel directly.
+
+
+    I will show the same sample program in two assemblers, nasm and gas, showing Intel
+    and AT&T syntax.
+
+
+    You may also want to read Introduction to UNIX assembly programming tutorial,
+    it contains sample code for other UNIX-like OSEs.
+
+
+    # 6.1. Tools you need
+
+
+    First of all you need assembler (compiler) — nasm or gas.
+
+
+    Second, you need a linker — ld, since assembler produces only object code. Almost
+    all distributions have it ld, in the binutils package.
+
+
+    As for most, you may have to download and install binary packages for Linux and
+    docs from the nasm site; note that several distributions (Stampede, SuSe, Debian,
+    Mandrake) already have nasm, check.
+
+
+    If you''re going to dig in, you should also include files for your OS, and if
+    possible, kernel source.
+
+
+    # 6.2. Hello, world!
+
+
+    # 6.2.1. Program layout
+
+
+    Linux is 32-bit, runs in protected mode, has flat memory model, and uses ELF for
+    binaries.
+
+
+    A program can be divided into sections: .text for your code (read-only), .data
+    for your data (read-write), .bss for uninitialized data (read-write); there can
+    actually be a few other standard sections, as well as some user-defined sections,
+    but there''s rare need to use them and they are out of interest here. A program
+    must have at least .text section.
+
+
+    Now we will show your first program. Here is code:
+
+
+    ```
+
+    section .data                      ;section declaration
+
+    msg      db          "Hello, world!",0xa    our dear string
+
+    len     equ        $ - msg             ;length of our dear string
+
+
+    section .text                      ;section declaration
+
+    ```
+
+
+    # 6.2.2. NASM (hello.asm)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    | global _start | ;we must export the entry point to the ELF linker or
+
+    ;loader. They conventionally recognize _start as their
+
+    ;entry point. Use ld -e foo to override the default. |
+
+    | --- | --- |
+
+    | :start:write string to stdout | mov edx,len ;third argument: message length
+
+    |mov ecx,msx ;second argument: pointer to message to write
+
+    |mov ebx,1 ;first argument: file handle (stdout)
+
+    |mov eax,4 ;system call number (sys_write)
+
+    |int 0x80 ;call kernel |
+
+    |and exit | mov ebx,0 ;first syscall: exit code
+
+    |mov eax,1 ;system call number (sys_exit)
+
+    |int 0x80 ;call kernel |
+
+
+    # 6.2.3. GAS (hello.S)
+
+
+    .data # section declaration
+
+    msg .ascii "Hello, world!\n" # our dear string
+
+    len - . msg # length of our dear string
+
+    .text # section declaration
+
+    .global _start # we must export the entry point to the ELF linker or
+
+    # loader. They conventionally recognize _start as their
+
+    # entry point. Use ld -e foo to override the default.
+
+
+    _start:
+
+    # write our string to stdout
+
+
+    | movl $len,$ebx #third argument: message length
+
+    |movl $msg,$ecx #second argument: pointer to message to write
+
+    |movl $1,$ebx #first argument: file handle (stdout)
+
+    |movl $4,$eax #system call number (sys_write)
+
+    |int 0x80 #call kernel |
+
+    |and exit | movl $0,$ebx #first argument: exit code
+
+    |movl $1,$eax #system call number (sys_exit)
+
+    |int 0x80 #call kernel |
+
+
+    # 6.3. Building an executable
+
+
+    # 6.3.1. Producing object code
+
+
+    First step of building an executable is compiling (or assembling) object file
+    from the source:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'For nasm example:
+
+
+    ```
+
+    $ nasm -f elf hello.asm
+
+    ```
+
+
+    For gas example:
+
+
+    ```
+
+    $ as -o hello.o hello.S
+
+    ```
+
+
+    This makes hello.o object file.
+
+
+    # 6.3.2. Producing executable
+
+
+    Second step is producing executable file itself from the object file by invoking
+    linker:
+
+
+    ```
+
+    $ ld -s -o hello.o
+
+    ```
+
+
+    This will finally build hello executable.
+
+
+    Hey, try to run it... Works? That''s it. Pretty simple.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Chapter 7. Resources
+
+
+    # 7.1. Pointers
+
+
+    Your main resource for Linux/UNIX assembly programming material is:
+
+
+    http://linuxassembly.org/resources.html
+
+
+    Do visit it, and get plenty of pointers to assembly projects, tools, tutorials,
+    documentation, guides, etc, concerning different UNIX operating systems and CPUs.
+    Because it evolves quickly, I will no longer duplicate it here.
+
+
+    If you are new to assembly in general, here are few starting pointers:
+
+
+    +   * The Art Of Assembly
+
+    * x86 assembly FAQ
+
+    * ftp.ltuth.se mirrors the hornet and x2ftp former archives of msdos assembly
+    coding stuff
+
+    * CoreWars, a fun way to learn assembly in general
+
+    * Usenet: comp.lang.asm.x86; alt.lang.asm
+
+
+    # 7.2. Mailing list
+
+
+    If you are interested in Linux/UNIX assembly programming (or have questions, or
+    are just curious) I especially invite you to join Linux assembly programming mailing
+    list.
+
+
+    This is an open discussion of assembly programming under Linux, *BSD, BeOS, or
+    any other UNIX/POSIX like OS; also it is not limited to x86 assembly (Alpha, Sparc,
+    PPC and other hackers are welcome too!).
+
+
+    Mailing list address is <linux-assembly@vger.kernel.org>.
+
+
+    To subscribe send a message to <majordomo@vger.kernel.org> with the following
+    line in the body of the message:
+
+
+    ```
+
+    subscribe linux-assembly
+
+    ```
+
+
+    Detailed information and list archives are available at http://linuxassembly.org/list.html.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Chapter 8. Frequently Asked Questions
+
+
+    Here are frequently asked questions (answers) about Linux assembly programming.
+    Some of the questions (and the answers) were taken from the linux–assembly mailing
+    list.
+
+
+    +   8.1. How do I graphics programming in Linux?
+
+    8.2. How do I debug assembly code under Linux?
+
+    8.3. Any other useful debugging tools?
+
+    8.4. How do I access BIOS functions from kernel modules (BSD, BeOS, etc)?
+
+    8.5. Is it possible to write kernel modules in assembly?
+
+    8.6. How do I allocate memory dynamically?
+
+    8.7. I can''t understand how to use system call!
+
+
+    # 8.1. How do I graphics programming in Linux
+
+
+    An answer from Paul Further:
+
+
+    > You have a number of options to graphics in Linux. Which one you use depends
+    on what you want to do. There isn''t one Web site with all the information but
+    here are some tips:
+
+    GALib: This is a C library for console SVGA.
+
+    Pros: very easy to learn, good coding examples, not all that different from equivalent
+    gfxx libraries for DOS, all the effects you know from DOS can be converted with
+    little difficulty.
+
+    Cons: need special rights to run since they write directly to the hardware, doesn''t
+    work with chipsets, can run under X-Windows.
+
+    Search for svgalib-1.4x on http://ftp.isco.za
+
+    Framebuffer: Do it yourself graphics at SVGA res
+
+    Pros: fast, linear mapped video access, ASM can be used if you want :
+
+    Cons: has to be compiled into the kernel, chipset-specific issues, must switch
+    out of X to run, relies on good knowledge of linux system calls and kernel, tough
+    to debug
+
+    Example: (http://www.linuxassembly.org/) and the leaves example and my own site
+    for framebuffer code and tips in asm (http://ma.verick.co/linuxx/)
+
+    Xlib: The access control and development libraries for XFree86.
+
+    Pros: Complete control over your X application
+
+    Cons: Difficult to learn, horrible to work with and requires a bit of knowledge
+    to how X works at the low level.
+
+    Not recommended if you''re really masochistic for it. All the include and file
+    libs are probably installed already so you have what you need.
+
+    Low-level APIs: include PTC, SGI, and Clanlib
+
+    Pros: very flexible, run under X or the console, generally abstract away video
+    hardware a little so you can draw a linear surface, lots of good coding examples,
+    can link to other APIs like OpenGL and sound libs, Windows DirectX versions for
+    free
+
+    Cons: Not as fast as doing it yourself, even in development so versions (can change
+    frequently)
+
+    Examples: PTC and SGI have excellent demos, SDL is used in sdlQuake,
+
+    Myth II, Civ CTP and Clanlib have been used for games as well.
+
+
+    High-level APIs: OpenGL – any others?'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Linux Assembly HOWTO\n\nPros: clean api, tons of functionality and examples,\
+    \ industry standard\nso you can learn from SGI demos for example\nCons: hardware\
+    \ acceleration is normally a must, some quirks between\nversions and platforms\n\
+    Examples: loads - check out we mesa3.org for the links section.\n\nTo get going\
+    \ looking at the avgalib examples and also install SDL\nand get it working. After\
+    \ that, get the sky's limit.\n\n# 8.2. How do I debug assembly code under Linux?\n\
+    \nThere's an early version of the Assembly Language Debugger, which is designed\
+    \ to work with assembly code,\nand is portable to run on Linux and #BSD. It is\
+    \ already functional and should be the right choice,\ncheck it out!\n\nYou can\
+    \ also try gdb ). Although it is source-level debugger, it can be used to debug\
+    \ pure assembly code,\nwith some trickery you can use gdb to do what you need\
+    \ (unfortunately, nam-'g' switch does not\ngenerate proper info for gdb; this\
+    \ is nasty bug, here's an answer from Dmitry Bakhvalov:\n\n+   Personally, I use\
+    \ gdb for debugging asutils. Try this:\n\n1) Use the following to compile:\n \
+    \  $ nm -f elf -g smth.asm\n   $ ld -o smth.o\n\n2) Fire up gdb:\n   $ gdb smth\n\
+    \n3) In gdb:\n(gdb) disassembly _start\nPlace a breakpoint at _start+1 (If placed\
+    \ at _start the breakpoint\nwouldnt, dummy why)\n(gdb) b *0x80480\n\nTo step through\
+    \ the code I use the following macro:\n(gdb)define n\n-ni\n-printf \"ea=%4x ebx=%4x\
+    \ ...%s,...\",$ea,$ebx\n-disassemble $pc $pc+15\nend\n\nThen start the program\
+    \ with r command and debug with n.\n\nHope this helps.\n\nAn additional note from\
+    \ ???:\n\nI have a macro in .gdbinit for some time now, and it\ns sure makes life\
+    \ easier. A small difference : I use \"x /i $pc\",nwhich guarantee a fixed number\
+    \ of disassembled instructions. Then,\nwith a well chosen size for my xterm, gdb\
+    \ output looks like it is\nrefreshed, and not scrolling.\n\nIf you want to set\
+    \ breakpoints around your code, you can just int 3 instruction as breakpoint (instead\
+    \ of\nentering address manually in gdb).\n\nIf you're using gas, you should consult\
+    \ gdb and gdb related tutorials.\n\n# Chapter 8. Frequently Asked Questions"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Linux Assembly HOWTO\n\n# 8.3. Any other useful debugging tools?\n\nDefinitely\
+    \ strace can help a lot (ktrace kdump on FreeBSD), it is used to trace system\
+    \ calls and signals. Read its manual page (man strace) and strace --help output\
+    \ for details.\n\n# 8.4. How do I access BIOS functions from Linux (BSD, BeOS,\
+    \ etc)?\n\nShort answer is -- now. This is protected, use OS services instead.\
+    \ Again, you can't int 0x10, int 0x13. Fortunately almost everything can be implemented\
+    \ by system calls or library functions. In the worst case you may go through direct\
+    \ access, or make a kernel patch to implement functionality, or use LRMI library\
+    \ to access BIOS functions.\n\n# 8.5. Is it possible to write kernel modules in\
+    \ assembly?\n\nYes, indeed it is. While in general it is not a good idea (it would\
+    \ wildly anything), there may be a need of such wizard. The process of writing\
+    \ a module itself is not that hard — a module must have some predefined global\
+    \ function, it may also need to call some external functions from the kernel.\
+    \ Examine kernel source (that can be built as module) for details.\n\nMeanwhile,\
+    \ here's an example of a minimum kernel module (module.asm) (source is based on\
+    \ example by mammoth_ API #8):\n\n```\nsection .text\n\nglobal init_module\nglobal\
+    \ cleanup_module\nglobal kernel_version\n\nextern printk\n\ninit_module:\n   \
+    \ push    db str1\n    call    printk\n    pop     eax\n    xor     eax, eax\n\
+    \    ret\n\ncleanup_module:\n    push    db str2\n    call    printk\n    pop\
+    \     eax\n    ret\n\nstr1    db      \"init_module done\",0xa,0\nstr2    db \
+    \     \"cleanup_module done\",0xa,0\n\nkernel_version  db      \"2.18\",0\n```\n\
+    \nThe only thing this example shows is reporting its acts. Modify kernel_version\
+    \ to match yours, and build with:\n\n```\n$ nasm -f elf -o module.m module.asm\n\
+    \n$ ld -r -o module.o module.m\n```\n\nChapter 8. Frequently Asked Questions"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Linux Assembly HOWTO\n\nNow you can play with it using insmod/rmmod/lsmod\
+    \ (root privileged are required); a lot of fun, huh?\n\n# 8.6. How do I allocate\
+    \ memory dynamically?\n\nA laconic answer from H–Peter Reckwald:\n\n```\nebx :=\
+    \ 0                (in fact, any value below .bss seems to do)\nsys_brk\neax \
+    \   := current top (of .bss section)\n\n\n\n\n\nebx := [ current top < ebx < (esp\
+    \ - 16K) ]\nsys_brk\neax    := new top of  .bss\n```\n\nAn extensive answer from\
+    \ Tiago Gasiba:\n\n```\nsection .bss\n\nvarl resb 1\nsection .text\n\n;\n;allocate\
+    \ memory\n;\n%define LIMIT 0x04000000      ; about 100Megs\nmov      ebx,0   \
+    \                ; get bottom of data segment\ncall     sys_brk\n\ncmp      eax,-1\
+    \                  ; ok?\nje       errol\n\nadd      eax,LIMIT              ;\
+    \ allocate +LIMIT memory\nmov      ebx,eax\ncall     sys_brk\n\ncmp      eax,-1\
+    \                  ; ok?\nje       errol\n\nncmp      eax,varl+1             ;\
+    \ has the data segment grown?\nje       errol\n\n;\nuse allocated memory\n;\n\n\
+    mov      ebx,eax                ; now eax contains bottom of\nmov      ebax,varl\
+    \               ; data segment\nrepeat:                         ; save bottom\n\
+    \      mov      ebax\nmov      word  [eax],1          ; fill up with 1's\ninc\
+    \      eax                 ; eax-beginning of data\ncmp      ebx,eax         \
+    \    ; current pos = bottom\njne      repeat\n\n;\n;free memory\n;\n```\n\n# Chapter\
+    \ 8. Frequently Asked Questions"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    | mov ebx,varl ; deallocate memory |
+
+    | call sys_brk ; by forcing its beginning=var |
+
+    | cmp eax,-1 ; ok? |
+
+    | je erro2 |
+
+
+    #  8.7. I can''t understand how to use system call!
+
+
+    An answer from Patrick Model:
+
+
+    When you call sys_open, you get back a file descriptor, which is simply an index
+    into a table of all the open file descriptors that your process has. stdin, stdout,
+    and stderr are all 0, 1, and 2, respectively, because that is the order in which
+    they are all open for your process from there. Also, notice that the first file
+    descriptor you open (w/o first closing any of those file descriptors) is always
+    3, and they increment from there.
+
+
+    Understanding the index scheme will explain what select. When you call select,
+    you are saying that you are waiting certain file descriptors to read from, certain
+    ones to write from, and certain ones to watch from except for. Your process can
+    have up to 1024 file descriptors open, so an fd_set is just a bit mask describing
+    which file descriptors are valid for each operation. Make sense?
+
+
+    Since each fd you have open is an index, and it only needs to be on or off for
+    each fd_set, you need only 1024 bits for an fd_set structure. 1024 /32 = 32 longs
+    enough to represent the structure.
+
+
+    Now, for the loose example.
+
+    Suppose you want to read from a file descriptor (w/o timeout).
+
+
+    +   - Allocate the equivalent to an fd_set.
+
+
+    ```
+
+    .data
+
+    my_fds times:32 dd 0
+
+    ```
+
+
+    +   - open the file descriptor that you want to read from.
+
+
+    +   - set the bit in the fd_set structure.
+
+
+    First, you need to figure out which bit of the 32 dword. bts will be a modulo
+    32 when setting the bit. That''s why you need to first figure out which dword
+    to start with.
+
+
+    ```
+
+    mov edx,0
+
+    mov ebx,32
+
+    div ebx
+
+
+    lea eax,my_fds
+
+    bts ebx[eax*4],ed
+
+    ```
+
+
+    +   - repeat the last step for any file descriptor you want to read from.
+
+
+    +   - repeat the entire exercise for either of the two fd_sets if you want action
+    from them.
+
+
+    That leaves two other parts of the equation - the n parameter and the timeout
+
+
+    # Chapter 8. Frequently Asked Questions'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    parameter. I''ll leave the timeout parameter as an exercise for the reader
+
+    (yes, I''m lazy), I''ll briefly talk about the n parameter.
+
+
+    It is the value of the largest file descriptor you are selecting from (from
+
+    any of the fd_sets), plus one. Why plus one? Well, because it''s easy to
+
+    determine a mask from that value. Suppose there is data available on
+
+    x file descriptors, but the highest you care about is (n - 1). Since
+
+    an fd_set is just a bitmask, the kernel needs some efficient way for
+
+    determining whether you care about checks if anything is available from the bits
+    that are
+
+    Well, it''s not as easy as I fantasized it would be. To see how the kernel
+
+    determines that mask, look in fs/select.c in the kernel source tree.
+
+
+    Anyway, you need to know that number, and the easiest way to do it is to save
+
+    t value of the last file descriptor open somewhere so you don''t lose it.
+
+
+    Ok, that''s what I know. A warning about the code above (as always) is that
+
+    it is not tested. I think it should work, but if it doesn''t let me know.
+
+    But, if it starts a global nuclear meltdown, don''t call me. ;-
+
+
+    That''s all for now, folks.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Appendix A. History
+
+
+    Each revision includes a few fixes and minor corrections, that need not to be
+    repeatedly mentioned every time.
+
+
+    # Revision History
+
+
+    | Revision 0.6f | 17 Aug 2002 | Revised by: konst |
+
+    | Added FASM, added URL to Korean translation, added URL to SVR4 i386 ABI specs,
+    update on HLA/Linux, small fix in hello.S mic updates; | |
+
+    | Revision 0.6e | 12 Jan 2002 | Revised by: konst |
+
+    | Added URL describing AS Intel syntax; Added OSIMPA(former SHASM); Added YASM;
+    FAQ update. |
+
+    | Revision 0.6d | 18 Mar 2001 | Revised by: konst |
+
+    | Added Free Pascal; new ASM URL answer |
+
+    | Revision 0.6c | 15 Feb 2001 | Revised by: konst |
+
+    | Added SHASM; new answer in FAQ, new ASM URL, mailing list address |
+
+    | Revision 0.6b | 21 Jan 2001 | Revised by: konst |
+
+    | new questions in FAQ, corrected few URLs |
+
+    | Revision 0.6a | 10 Dec 2000 | Revised by: konst |
+
+    | Remade section on AS86 (to Hollibay Ivan for pointing out obsolete information),
+    Fixed several URLs that can be incorrectly rendered from smgl to html. |
+
+    | Revision 0.6 | 11 Nov 2000 | |
+
+    | HOWTO is completely rewritten using DocBook DTD. Layout is totally rearranged;
+    too many changes to list here. |
+
+    | Revision 0.5n | 07 Nov 2000 | |
+
+    | Added question regarding kernel modules to FAQ, fixed NASM URLs, GAS as has
+    Intel syntax too |
+
+    | Revision 0.5m | 22 Oct 2000 | Revised by: konst |
+
+    | Linux 2.4 system calls have 6 args, Added ALD note to FAQ, fixed mailing list
+    subscribe address |
+
+    | Revision 0.5l | 23 Aug 2000 | |
+
+    | Added TDASM, updates on NASM |
+
+    | Revision 0.5k | 11 Jul 2000 | Revised by: konst |
+
+    | Few additions to FAQ |
+
+    | Revision 0.5j | 14 Jun 2000 | Revised by: konst |
+
+    | Complete rearrangement of Introduction and Resources sections. FAQ added to
+    Resources, mis cleanups and additions. |
+
+    | Revision 0.5i | 04 May 2000 | Revised by: konst |
+
+    | Added HLA, TALC; rearrangements in Resources, Quick Start Assemblers. New pointers.
+    |
+
+    | Revision 0.5h | 09 Apr 2000 | Revised by: konst |
+
+    | finally managed to state LDP device on document, new resources added, mis fixes
+    |
+
+    | Revision 0.5g | 26 Mar 2000 | Revised by: konst |
+
+    | new resources on different CPUs |
+
+    | Revision 0.5f | 02 Mar 2000 | Revised by: konst |
+
+    | new resources, mis corrections |
+
+    | Revision 0.5e | 10 Feb 2000 | Revised by: konst |
+
+
+    Appendix A. History'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    URL updates, changes in GAS example
+
+
+    Revision 0.5d 01 Feb 2000 Revised by: konst
+
+
+    Resources (former "Pointers") section completely redone, redous URL updates.
+
+
+    Revision 0.5c 05 Dec 1999 Revised by: konst
+
+
+    New pointers, updates and some rearrangements. Rewrite of sgml source.
+
+
+    Revision 0.5b 19 Sep 1999 Revised by: konst
+
+
+    Discussion about libc or not being continues. New web pointers and overall updates.
+
+
+    Revision 0.5a 01 Aug 1999 Revised by: konst
+
+
+    Quick start section rearranged, added GAS example. Several new web pointers.
+
+
+    Revision 0.5 01 Aug 1999 Revised by: konstfare
+
+
+    GAS has 16-bit mode. New maintainer (at last): Konstantin Boldshev. Discussion
+    about libc or not lib.
+
+
+    Added Quick Start section with assembly of code.
+
+
+    Revision 0.4q 22 Jun 1999 Revised by: fare
+
+
+    process argument (argc, argv, environ) in assembly. This is yet anotherlast release
+    by Fare Before
+
+
+    new maintainer takes over". Nobody knows who might be the new maintainer.
+
+
+    Revision 0.4p 06 Jun 1999 Revised by: fare
+
+
+    clean and updates
+
+
+    Revision 0.4o 01 Dec 1998 Revised by: fare
+
+
+    Revision 0.4m 23 Mar 1998 Revised by: fare
+
+
+    corrections about gcc invocation
+
+
+    Revision 0.4l 16 Nov 1997 Revised by: fare
+
+
+    release for LSL 6th edition
+
+
+    Revision 0.4k 19 Oct 1997 Revised by: fare
+
+
+    Revision 0.4j 07 Sep 1997 Revised by: fare
+
+
+    Revision 0.4i 17 Jul 1997 Revised by: fare
+
+
+    info on 16-bit mode access from Linux
+
+
+    Revision 0.4h 19 Jun 1997 Revised by: fare
+
+
+    still more on "how not to use assembly"; updates on NASM, GAS.
+
+
+    Revision 0.4g 30 Mar 1997 Revised by: fare
+
+
+    Revision 0.4f 20 Mar 1997 Revised by: fare
+
+
+    Revision 0.4e 13 Mar 1997 Revised by: fare
+
+
+    Release for DrLinux
+
+
+    Revision 0.4d 28 Feb 1997 Revised by: fare
+
+
+    Vapor announce of a new Assembly–HOWTO maintainer
+
+
+    Revision 0.4c 09 Feb 1997 Revised by: fare
+
+
+    Added section Do you need assembly?
+
+
+    Revision 0.4b 03 Feb 1997 Revised by: fare
+
+
+    NASM moved: now is before AS86
+
+
+    Revision 0.4a 20 Jan 1997 Revised by: fare
+
+
+    CREDITS section added
+
+
+    Revision 0.4 20 Jan 1997 Revised by: fare
+
+
+    # Appendix A. History
+
+
+    34'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    first release of the HOWTO as such
+
+
+    Revision 0.4pre1 13 Jan 1997 Revised by: fare
+
+    text mini–HOWTO transformed into a full linuxdoc–sgml HOWTO, to see what SGML
+    tools are like
+
+
+    Revision 0.3l 11 Jan 1997 Revised by: fare
+
+
+    Revision 0.3k 19 Dec 1996 Revised by: fare
+
+    What? I had forgotten to point to terse???
+
+
+    Revision 0.3j 24 Nov 1996 Revised by: fare
+
+    point to French translated version
+
+
+    Revision 0.3i 16 Nov 1996 Revised by: fare
+
+    NASM is getting pretty slick
+
+
+    Revision 0.3h 06 Nov 1996 Revised by: fare
+
+    more about cross-compiling — See on sunrise: devel/msdos/
+
+
+    Revision 0.3g 02 Nov 1996 Revised by: fare
+
+    Created the History. Added pointers in cross-compiling. Added section about I/O
+    programming under Linux (particularly video).
+
+
+    Revision 0.3f 17 Oct 1996 Revised by: fare
+
+
+    Revision 0.3c 15 Jun 1996 Revised by: fare
+
+
+    Revision 0.2 04 May 1996 Revised by: fare
+
+
+    Revision 0.1 23 Apr 1996 Revised by: fare
+
+    Francois-Rene “Fare” Rideau creates and publishes the first mini–HOWTO, because
+    “I’m sick of answering ever the same questions on comp.lang.asm.x86”
+
+
+    Appendix A. History'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Appendix B. Acknowledgements
+
+
+    I would like to thank all the people who have contributed ideas, answers, remarks,
+    and moral support, and additionally the following persons, by order of appearance:
+
+
+    +   * Linus Torvalds for Linux
+
+    * Bruce Evans for bcc from which as86 is extracted
+
+    * Simon Tatham and Julian Hall for NASM
+
+    * Greg Hankins and now Tim Bynam for maintaining HOWTOs
+
+    * Raymond Moon for his FAQ
+
+    * Eric Dumas for his translation of the mini–HOWTO into French (sad thing for
+    the original author to be French and write in English)
+
+    * Paul Anderson and Rahim Azizarab for helping me, if not for taking over the
+    HOWTO
+
+    * Marc Lehman for his insight on GCC invocation
+
+    * Abhijit Menon–Sen for helping me figure out the argument passing convention'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Appendix C. Endorsements
+
+
+    This version of the document is endorsed by Konstantin Boldyshev.
+
+
+    Modifications (including translations) must remove this appendix according to
+    the license agreement.
+
+
+    ```
+
+    $Id: Assembly-HOWTO.sgml,v 1.7 2002/08/17 08:35:59 konst Exp $
+
+    ```'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Appendix D. GNU Free Documentation License
+
+
+    GNU Free Documentation License
+
+    Version 1.1, March 2000
+
+
+    Copyright (C) 2000 Free Software Foundation, Inc.
+
+    59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+    Everyone is permitted to copy and distribute verbatim copies
+
+    of this document, but changing it is not allowed.
+
+
+    # 0. PREAMBLE
+
+
+    The purpose of this License is to make a manual, textbook, or other written document
+    "free" in the sense of freedom: to assure everyone effective freedom to copy and
+    redistribute it, with or without modifying it, either commercially or noncommercially.
+    Secondly, this License preserves for the author a way to get credit for their
+    work, without being considered responsible for modifications made by others.
+
+
+    This License is a kind of "copyleft", which means that derivative works of the
+    document must themselves be free in the same sense. It complements the GNU General
+    Public License, which is a copyleft license designed for free software.
+
+
+    We have designed this License in order to use it for manuals of free software,
+    because free software needs freedom that software does. This License is not limited
+    to software manuals; it can be used for any textual work, regardless of subject
+    matter or whether it is published as a printed book. We recommend this Licenseにつき
+    for works whose purpose is instruction or reference.
+
+
+    # 1. APPLICABILITY AND DEFINITIONS
+
+
+    This License applies to any manual or other work that contains a notice placed
+    by the copyright holder saying it can be distributed under the terms of this License:
+    The "Document", below, refers to any manual or work. Any member of the public
+    is a licensee, and is addressed as "you".
+
+
+    A "Modified Version" of the Document means any work containing the Document or
+    a portion of it, either copied verbatim, or with modifications and/translated
+    into another language.
+
+
+    A "Secondary Section" is a named appendix or a front-matter section of the Document
+    that deals exclusively with the publishers or authors of the Document''s overall
+    subject (or related matters) and contains nothing that could fall directly within
+    that overall subject. (For example, if the Document is in part of a textbook,
+    a Secondary Section may not explain any mathematics.) The relationship could be
+    a matter of historical connection with the subject or related matters, or of legal,
+    commercial, philosophical, ethical or political position regarding them.
+
+
+    The "Invariant Sections" are certain Secondary Sections whose titles are designated,
+    as being of Invariant Sections, in the notice that says the Document is released
+    under this License.
+
+
+    The "Cover Texts" are short passages of the Document that are listed, as Front-Cover
+    Texts or Back-Cover Texts, in the notice that says the Document is released under
+    this License.
+
+
+    A "Transparent" copy of the Document means a machine-readable copy, represented
+    in a format whose specification is available to the general public, whose contents
+    can be viewed and edited
+
+
+    Appendix D. GNU Free Documentation License'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    directly straightforward with generic text editors or (for images composed of
+    pixels) generic paint programs or (for drawings) some widely available drawing
+    editor, that is suitable for input text formatters or for automatic translation
+    to a variety of formats suitable for input text formatters. A copy made in other
+    Transparent file format without markup is designed to thwart or discourage subsequent
+    modification by not Transparent. A copy that is not "Transparent" is called "Opaque".
+
+
+    Examples of suitable formats for Transparent copies include plain ASCII without
+    markup, Textinho input format, LaTex input format, SGML or XML using a publicly
+    available DTD, and standard-forming simple HTML designed for human modification.
+    Opaque formats include PostScript, PDF, proprietary formats that can be read and
+    edited only by proprietary word processors, SGML or XML for the DTD and processing
+    tools are not generally available, and the machine-generated HTML produced by
+    word processors for output purposes only.
+
+
+    The "Title Page" for a printed book, the title itself, such following pages are
+    needed to hold, the material this License requires to appear in the title page.
+    For works which do not have any title page as, "Title Page" means the text the
+    most prominent appearance of the work''s title, preceding the beginning of the
+    body.
+
+
+    +   2. VERBATIM COPYING
+
+    You may copy and distribute the Document in any media, either commercially or
+    noncommercially, provided that this License, the copyright notices, and the notice
+    saying this License to the Document are reproduced in all copies, and that you
+    add no other conditions whatsoever to this License. You may not use measures to
+    obstruct or control the reading or copying of the copies you make or distribute.
+    However, you may accept compensation in exchange for copies. If you distribute
+    a large number of copies you must also follow the conditions in section 3.
+
+
+    You may also lend, under the same conditions stated above, and you may publicly
+    display copies.
+
+
+    +   3. COPYING IN QUANTITY
+
+    If you publish copies of the Document numbering more than 100, and the Document''s
+    license requires Cover Texts, you must enclose the copies in covers that carry,
+    clearly and legally, these Cover Texts: Front-Cover Texts on the front, and Back-Cover
+    Texts on the back cover. Both covers must also clearly and legally identify you
+    as the publisher of these copies. The cover must present the full title with all
+    of the words equally prominent and visible. You may add other material on the
+    covers in addition. With changes limited to the copies, as long as you preserve
+    the title of the Document and satisfy these conditions, it can be treated as verbatim
+    copying in other respects.
+
+
+    If the required texts for either cover are too voluminous to fit legibly, you
+    should put the first ones (listed as as reasonably) on the actual cover, and ensure
+    the rest onto adjacent pages.
+
+
+    If you publish or distribute Opaque copies of the Document numbering more than
+    100, you must include either a machine--readable Transparent copy with each Opaque
+    copy, or in state or with each Opaque copy a publicly-accessible-network location
+    containing a Transparent copy of the Document, free of added material, which the
+    general-public has access to download at no charge using public--standard network
+    protocols. If you use the latter option, you must take reasonably prudent steps,
+    when you begin distribution of opaque copies in quantity, to ensure that this
+    Transparent copy will remain accessible at the stated location until at least
+    one year after the last time you distribute an Opaque copy (directly or through
+    your agents or retailers) of that edition to the public.
+
+
+    # Appendix D. GNU Free Documentation License'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'It is requested, not required, that you contact the authors of the Document
+    before redistributing any large number of copies, to give them a chance to provide
+    you with an updated version of the Document.
+
+
+    # 4. MODIFICATIONS
+
+    You may copy and distribute a Modified Version of the Document under the conditions
+    of sections 2 and 3 above, provided that you release the Modified Version under
+    this Licence, with the Modified Version filling the role of the Document, thus
+    licensing distribution and modification of the Modified Version to possess a copy
+    of it. In addition, you must do these things in the Modified Version:
+
+
+    +   A. Use in the Title Page (and on the covers, if any) a title distinct from
+    that of the Document, and from those of previous versions (which, if there any,
+    be listed in the History of the Document). You may use the same title as a previous
+    version if the original publisher of that version gives permission.
+
+    B. List on the Title Page, one or more persons or entities responsible for authorship
+    of the modifications in the Modified Version, together with at least five of the
+    principal authors of the Document (all of its principal authors, if it has less
+    than five).
+
+    C. State on the Title Page the name of the publisher of the Modified Version,
+    as the publisher.
+
+    D. Preserve all copyright notices of the Document.
+
+    . Add an appropriate copyright notice for your modifications adjacent to any other
+    copyright notices.
+
+    F. Include, immediately after the copyright notices, a license notice giving the
+    public permission to use the Modified Version under the terms of this Licence,
+    in the form shown in the Addendum below.
+
+    G Preserve the full list of Invariant Sections and required Cover Texts given
+    in the Document''s license notice.
+
+    H. Include an unlinked copy of this Licence.
+
+    I. Preserve the section titled "History", and its title, and add to it an item
+    stating at least the year, new authors, and publisher of the Modified Version
+    as given on the Title Page. If there is no section titled "History" in the Document,
+    create one section stating the year, authors, and publisher of the Document as
+    given on its Title Page, then add an item describing the Modified Version as stated
+    in the previous sentence.
+
+    J. Preserve the network location, if any, given in the Document for public access
+    to a Transparent copy of the Document, and likewise the network locations where
+    previous versions were based. They may be placed in the "History" section. You
+    may omit a network location for a work that was published at least four years
+    before the Document itself, or if the original publisher of the version it refers
+    to gives permission.
+
+    K. In any section titled "Acknowledgements" or "Dedic", preserve the section''s
+    title, and preserve in the section substance and tone of each contributor the
+    acknowledgments or dedications therein.
+
+    L. Preserve all the Invariant Sections of the Document, unaltered in their text
+    and in their titles. Section numbers or the equivalent are not considered part
+    of the sections.
+
+    M. Delete any section titled "Endorsements". Such a section may not be included
+    in the Modified Version.
+
+    . Do not retain any existing section as "Endorsements" or to conflict in title
+    with any Invariant Section.
+
+
+    If the Modified Version includes new front-matter sections or appendices that
+    qualify as Secondary Sections and contain no material copied from the Document,
+    you may at your own designate one or all of these as invariant. To do this, add
+    them to the list of Invariant Sections in the Modified Version''s license notice.
+    These titles must be distinct from any other section titles.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    You may add a section entitled "Endorsements", provided it contains nothing but
+    endorsements of your Modified Version by various parties—for example, statements
+    of peer review or that the text has been approved by an organization as the authoritative
+    version of a standard.
+
+
+    You may add a passage of use to yours as a Front-Cover, and a passage of 25 words
+    as a Back-Cover, to the end of the list of Covers in the Modified Version. Only
+    one passage of Front-Cover Text and one of Back-Cover Text may be added by (or
+    through arrangements made by) any one entity. If the Document already includes
+    a cover text for the same cover, previously added by you or by arrangement made
+    by the same entity you are acting on behalf of, you may not add another; but you
+    may replace the old one, on explicit permission from the publisher that added
+    the old one.
+
+
+    The author(s) and publisher(s) of the Document do not grant you this License permission
+    to use their names for publicity or to assert or import any of Modified Version.
+
+
+    +   The Document with other documents released under this License, under the terms
+    defined in section 4 above for modified versions, provided that you include in
+    the combination all of the Invariant Sections of all of the original documents,
+    unmodified, and list all as Invariant Sections of your work in its license notice.
+
+
+    The combined work need only contain one copy of this Document, and multiple Invariant
+    Sections may be replaced with a single copy. If there are multiple Invariant Sections
+    with the same name but different contents, make the title of each section by adding
+    at the end of it, in parentheses, the name of the original author or publisher
+    of section if known, or else use a number. Make the same adjustment to the sections
+    in the list of Invariant Sections in the license notice of the combined work.
+
+
+    In the combination, you must combine any sections entitled "History" in the various
+    original documents, forming one section entitled "History"; likewise combine any
+    sections entitled "Acknowledgements", and any sections entitled "Dedications".
+    You must delete all sections entitled "Endorsements".
+
+
+    +   6. COLLECTIONS OF DOCUMENTS
+
+    You may make a collection consisting of the Document and other documents released
+    under this License, and replace the individual copies of this License in the various
+    documents with a single copy that is included in the collection, provided that
+    you follow the rules of this License for verbatim copying of each document in
+    all other works.
+
+
+    You may extract a single document from such a collection, and distribute it individually
+    under this License, provided you insert a copy of this License into the extracted
+    document, and follow this License in all respects regarding verbatim copying of
+    that document.
+
+
+    +   7. AGGREGATION WITH INDEPENDENT WORKS
+
+    A compilation of the Document or its derivatives with other separate and independent
+    documents or works, or on a volume of storage or distribution media, does not
+    count as a Modified Version of the Document, provided no copyright is claimed
+    for the compilation. Such a compilation is called an "aggregate", and this License
+    does not apply to the other self-contained works compiled with the Document, on
+    account of their being, if they are not themselves derivative works of the Document.
+
+
+    If the Cover Text requirement of section 3 is applicable to these copies of the
+    Document, then if the Document is less than one quarter of the entire aggregate,
+    the Document''s Cover Texts may be placed on covers that surround only the Document
+    within the aggregate. Otherwise they must appear on
+
+
+    Appendix D. GNU Free Documentation License'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Linux Assembly HOWTO
+
+
+    8. TRANSLATION
+
+    Translation is considered a kind of modification, so you may distribute translations
+    of the Document under the terms of 4. Replacing Invariant Sections requires special
+    permission from your copyright holders, but you may include translations of some
+    or all Invariant Sections in addition to the original versions of these Invariant
+    Sections. You may include a translation of this License provided you also include
+    the original English version of this License. In case of a disagreement between
+    the translation and the original English version of this License, the original
+    English version will prevail.
+
+
+    9. TERMINATION
+
+    You may not copy, modify, sublicense, or distribute the Document except as expressly
+    provided for this License. Any other attempt to copy, modify, sublicense or distribute
+    the Document is void, and will automatically terminate your rights under this
+    License. However, parties who have received copies, from you under this License
+    will not have their licenses terminated so long as such parties remain in full
+    compliance.
+
+
+    10. FUTURE REVISIONS OF THIS LICENSE
+
+    The Free Foundation may publish, revised versions of the GNU Free License from
+    time to time. Such new revisions will be similar to the present version, but may
+    differ in address new problems or concerns. See http://www.gnu.org/copyleft/
+
+
+    Each version of the License is a distinguishing version number. If the Document
+    specifies a particular numbered version of this License "or later version" applies
+    to you, you have the option of following the terms and conditions either of that
+    specified version or any later version that has been published (not as a draft)
+    by the Free Foundation. If the Document does not specify a version number of this
+    License, you may choose any version published (not as a draft) by the Free Software
+    Foundation.
+
+
+    How to use this License for your documents
+
+
+    To use this License in a document you have written, include a copy of the License
+    in the document and put the following copyright and license notices just after
+    the title:
+
+
+    Copyright (c) YOUR NAME.
+
+    Permission is granted to copy, distribute and/or modify this document under the
+    terms of the GNU Free Documentation License, Version 1.1 or any later version
+    published by the Free Software Foundation; with the Invariant Sections being LIST
+    THEIR TITLES, with the Front-Cover Texts being LIST, and with the Back-Cover Texts
+    being LIST A copy of the License is included in the section entitled "GNU Free
+    Documentation License".
+
+
+    If you have no Invariant Sections, write "no Invariant Sections" instead of saying
+    which ones are invariant. If you have no Front-Cover Texts, write "no Front-Cover
+    Texts" instead of "Front-Cover Texts being LIST"; likewise for Back-Cover Texts.
+
+
+    If your document contains nontrivial examples of program code, we recommend including
+    these examples in parallel under your choice of free license, such as the GNU
+    General Public License, to permit their use in free software.'
+  merge: -1
+  pgno: 44
