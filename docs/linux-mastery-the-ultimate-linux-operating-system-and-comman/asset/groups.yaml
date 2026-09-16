@@ -1,0 +1,8661 @@
+- md: '
+
+    # LINUX MASTERY
+
+
+    THE ULTIMATE LINUX OPERATING SYSTEM AND COMMAND LINE MASTERY GUIDE
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_0_0.png)
+
+
+    Jonathan Bates
+
+
+    # Linux Mastery
+
+
+    The Ultimate Linux Operating System and Command Line Mastery Guide
+
+
+    # Contents
+
+
+    + Introduction
+
+    + Chapter 1 What Is Linux?
+
+    + Chapter 2 Why Linux?—The Benefits of Linux
+
+    + Chapter 3 Choosing a Distribution
+
+    + Chapter 4 Preparing to Install Linux
+
+    + Chapter 5 Installing Linux
+
+    + Chapter 6 Using Linux for Work and Play
+
+    + Chapter 7 Getting to Know Commands
+
+    + Chapter 8 Managing Files and Directories
+
+    + Chapter 9 Administration and Security
+
+    + Conclusion
+
+
+    Copyright 2016 by Jonathan Bates - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are the owned by the owners
+    themselves, not affiliated with this document.
+
+
+    # Introduction
+
+
+    I want to thank you and congratulate you for downloading the book, “Linux Mastery
+    - The Ultimate Linux Operating System and Command Line Mastery Guide"
+
+
+    While not as popular as Windows—at least, for some—Linux is definitely one of
+    the most reliable Operating Systems around—and the best part about it is that
+    it''s free, so you don''t really have to pay for anything just to get it, and
+    you also wouldn''t have to go for counterfeit types of Operating Systems just
+    because you could not pay for the legal copy. More than anything, Linux can be
+    used for a variety of applications. Whether you''re opting to create a better
+    system for business, or just want to be more creative and play around with things,
+    Linux can help you do a great job.
+
+
+    This book contains proven steps and strategies on how to make use of Linux, whether
+    for work or play, understand the commands that you have to use, choose distributions,
+    and understand exactly why Linux matters—and more.
+
+
+    Surely, after reading this book, you''ll be adept about Linux—and you will have
+    an easy time using it for your needs.
+
+
+    Read this book now, and find out how!
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+    # Chapter 1 What Is Linux?
+
+
+    So, what is Linux, actually?
+
+
+    For starters, Linux is a free and open-source Operating System, based on UNIX
+    and POSIX codes. In short, it is free to download, and free to use, and was originally
+    based on the paradigm of Intel x86. In fact, out of all Operating Systems, Linux
+    has the largest base that has been installed, compared to the rest. This is why
+    a computer or device that works on Linux works fast, and are sometimes even even
+    compared to those amazing supercomputers! This is because Linux gets to be tailored
+    to any kind of system where it''s being used—compared to other operating systems
+    that work best on a certain kind of device alone. This so happens because of the
+    so-called open source software collaboration that can support various kinds of
+    libraries and directories.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_6_0.png)
+
+
+    http://cdn1.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-distros-im-650-80.jpg
+
+
+    ## Early Beginnings
+
+
+    In 1969, the UNIX Operating System—also known as the forefather of Linux—was created
+    at the AT & T Bell Laboratories, with C-Programming basics, and high availability
+    of languages that were used for porting purposes. With that kind of background,
+    OS became the most-reliant operating system of business and school administrators.
+
+
+    However, certain controversies happened when an anti-trust case prevented UNIX
+    from continually being used for businesses, but since its developers—and its supporters—believed
+    that there''s still more to UNIX than people think, they decided to develop the
+    GNU Kernel—and it was because of this that LINUX finally came to fruition.
+
+
+    ## Enter Linux
+
+
+    With the help of its principal author, Lin Torvalds, and his principle of finding
+    a truly functional Operating System that everyone could use, he decided to work
+    on the GNU Kernel. He wanted something that people, whether they''re professionals
+    or just wanting to use the computer or other devices for entertainment, could
+    really use. He then began to upload files created from the Kernel to the FTP Server,
+    and wanted to call it "Freax", but his collaborators and other professionals at
+    the time didn''t think it was a good idea, and so playing with his name, Linux
+    was born in 1991!
+
+
+    - 1. To create an Open-Source Programming Language, so it would be free, and everyone
+    would be able to contribute to its development;
+
+    - 2. To create something that is as good as its predecessors and competitors,
+    make sure that it is easy to understand, and that it is intuitive;
+
+    - 3. To create a programming language that would be useful for everyday tasks,
+    and;
+
+    - 4. To simply create a programming language that could be compared to plain English,
+    functions, and inheritance such as *str, dict,* and *list* were already available.
+    In 1994, Version 1.0 was released and it involved *reduce, dict,* and *list* were
+    already available. In 1994, Version 1.0 was released and it involved *reduce,
+    dict,* and *list* were already available. In 1994, Version 1.0 was released and
+    it involved *reduce, dict,* and *list* were already available. In 1994, Version
+    1.0 was released and it involved *reduce, dict,* and *list* were already available.
+    In 1994, Version 1.0 was released and it involved *reduce, dict,* and *list* were
+    already available. In 1994, Version 1.0 was released and it involved *reduce,
+    dict,* and *list* were already available. In 1994, Version 1.0 was released and
+    it involved *reduce, dict,* and *list* were already available. (Note: OCR text
+    contained repetitions, cleaned here).
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance..
+
+
+    The trademarks that are used are without consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are the owned by the owners
+    themselves, not affiliated with this document.
+
+
+    # Introduction
+
+
+    I want to thank you and congratulate you for downloading the book, “Linux Mastery
+    - The Ultimate Linux Operating System and Command Line Mastery Guide"
+
+
+    While not as popular as Windows—at least, for some—Linux is definitely one of
+    the most reliable Operating Systems around—and the best part about it is that
+    it''s free, so you don''t really have to pay for anything just to get it, and
+    you also wouldn''t have to go for counterfeit types of Operating Systems just
+    because you could not pay for the legal copy. More than anything, Linux can be
+    used for a variety of applications. Whether you''re opting to create a better
+    system for business, or just want to be more creative and play around with things,
+    Linux can help you do a great job.
+
+
+    This book contains proven steps and strategies on how to make use of Linux, whether
+    for work or play, understand the commands that you have to use, choose distributions,
+    and understand exactly why Linux matters—and more.
+
+
+    Surely, after reading this book, you''ll be adept about Linux—and you will have
+    an easy time using it for your needs.
+
+
+    Read this book now, and find out how!
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+    # Chapter 1 What Is Linux?
+
+
+    So, what is Linux, actually?
+
+
+    For starters, Linux is a free and open-source Operating System, based on UNIX
+    and POSIX codes. In short, it is free to download, and free to use, and was originally
+    based on the paradigm of Intel x86. In fact, out of all Operating Systems, Linux
+    has the largest base that has been installed, compared to the rest. This is why
+    a computer or device that works on Linux works fast, and are sometimes even even
+    compared to those amazing supercomputers! This is because Linux gets to be tailored
+    to any kind of system where it''s being used—compared to other operating systems
+    that work best on a certain kind of device alone. This so happens because of the
+    so-called open source software collaboration that can support various kinds of
+    libraries and directories.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_6_0.png)
+
+
+    http://cdn1.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-distros-im-650-80.jpg
+
+
+    ## Early Beginnings
+
+
+    In 1969, the UNIX Operating System—also known as the forefather of Linux—was created
+    at the AT & T Bell Laboratories, with C-Programming basics, and high availability
+    of languages that were used for porting purposes. With that kind of background,
+    OS became the most-reliant operating system of business and school administrators.
+
+
+    However, certain controversies happened when an anti-trust case prevented UNIX
+    from continually being used for businesses, but since its developers—and its supporters—believed
+    that there''s still more to UNIX than people think, they decided to develop the
+    GNU Kernel—and it was because of this that LINUX finally came to fruition.
+
+
+    ## Enter Linux
+
+
+    With the help of its principal author, Lin Torvalds, and his principle of finding
+    a truly functional Operating System that everyone could use, he decided to work
+    on the GNU Kernel. He wanted something that people, whether they''re professionals
+    or just wanting to use the computer or other devices for entertainment, could
+    really use. He then began to upload files created from the Kernel to the FTP Server,
+    and wanted to call it "Freax", but his collaborators and other professionals at
+    the time didn''t think it was a good idea, and so playing with his name, Linux
+    was born in 1991!
+
+
+    - 1. To create an Open-Source Programming Language, so it would be free, and everyone
+    would be able to contribute to its development;
+
+    - 2. To create something that is as good as its predecessors and competitors,
+    make sure that it is easy to understand, and that it is intuitive;
+
+    - 3. To create a programming language that would be useful for everyday tasks,
+    and;
+
+    - 4. To simply create a programming language that could be compared to plain English,
+    functions, and inheritance such as *str, dict,* and *list* were already available.
+    In 1994, Version 1.0 was released and it involved *reduce, dict,* and *list* were
+    already available. (Note: OCR text contained repetitions, cleaned here).
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are the owned by the owners
+    themselves, not affiliated with this document.
+
+
+    # Chapter 2 Why Linux?—The Benefits of Linux
+
+
+    Apart from what was mentioned earlier, why is it that you have to choose Linux?
+    What exactly can you get from it?
+
+
+    Well, there are loads of advantages you can get if you choose Linux as your Operating
+    System, some of which are:
+
+
+    ## Amazing Security
+
+
+    One of the best things that people love Linux is that compared to other operating
+    systems, it is quite secure. What you have to understand is since Linux is an
+    open source system, even if some programmers can create bugs or anything that
+    might be "harmful" to your computer, you can expect that counter-attack is just
+    within reach. In fact, if you can research or study about it, you might even create
+    yourself.
+
+
+    ## Great Hardware, and Software
+
+
+    If you''re one of those people who use big, clunky, old computers, or if your
+    computer doesn''t have much memory or processing power, you''d be glad that Linux
+    could work for it, too. In fact—and in relation to what was mentioned above—even
+    if your computer does not have firewall or any "safety creations", you can still
+    expect it to work without fail.
+
+
+    Now, when it comes to software, Linux also has a lot to offer. While Windows offers
+    one version for each app—example, Text Editor, Microsoft Word, Windows Movie Maker,
+    Linux has hundreds and thousands of options that you can choose from—and that
+    you get for free. So, if you''re going to search for a text editor, you can just
+    search for it, and guess what? A lot of options will be presented to you, so you
+    can choose the one you''re most comfortable with, and the one you think would
+    yield the best results.
+
+
+    # You Have the "Power of Choice"
+
+
+    As aforementioned, you have the choice to decide on what kind of software you
+    like to use. You also have the choice to design your desktop or device the way
+    you want, simply by using Linux. It makes the act of using the computer or any
+    device you have more personalized—more like something you''d feel comfortable
+    with, and one that would be quite manageable for you.
+
+    '
+  mdcn: '
+
+
+    # Linux 精通
+
+
+    终极 LINUX 操作系统与命令行精通指南
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_0_0.png)
+
+
+    Jonathan Bates
+
+
+    # Linux 精通
+
+
+    终极 Linux 操作系统与命令行精通指南
+
+
+    # 目录
+
+
+    + 引言
+
+    + 第1章 什么是 Linux？
+
+    + 第2章 为什么选择 Linux？——Linux 的优势
+
+    + 第3章  choose一个发行版
+
+    + 第4章 准备安装 Linux
+
+    + 第5章 安装 Linux
+
+    + 第6章 在工作和娱乐中使用 Linux
+
+    + 第7章 熟悉命令
+
+    + 第8章 管理文件和目录
+
+    + 第9章 节点管理与安全
+
+    + 结论
+
+
+    版权所有 2016，Jonathan Bates - 保留所有权利。
+
+
+    本文旨在就其涵盖的主题和问题提供准确且可靠的信息。本书的销售基于以下理念：即出版者无需提供会计、官方许可或其他合格的服务。如果需要法律或专业建议，应聘请该领域的执业人士。
+
+
+    - 源自一份经美国律师协会委员会与出版商及协会委员会共同接受并批准的原则宣言。
+
+
+    以电子手段或打印格式复制、复制或传输本文的任何部分都是不法的。严禁录制本出版，未经出版者书面许可，不允许对本文进行任何存储。保留所有权利。
+
+
+    此地提供的信息声明是真实且一致的，对于由于疏忽或其他原因使用或滥用包含的任何政策、流程或指示而导致的任何责任，均由接收读者承担全部责任。在任何情况下，对于因此处信息直接或间接导致的任何赔偿、损害或资金损失，出版者不承担任何法律责任或责任。
+
+
+    相应作者拥有出版者未持有的所有版权。
+
+
+    此处信息仅供参考之用，且具有通用性。信息的呈现不带有合同或任何类型的保证说明。
+
+
+    所使用的商标未经许可，且该商标的发布未经商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，并归所有者所有，与本文无关联。
+
+
+    # 引言
+
+
+    我想感谢你，并祝贺你下载了《Linux 精通 - 终极 Linux 操作系统与命令行精通指南》这本书。
+
+
+    虽然 Linux 没有 Windows 那么流行——至少对某些人来说是这样——但它绝对是世界上最可靠的操作系统之一——最棒的一点是它是免费的，所以你不需要为了获取它而支付任何费用，你也不会因为付不起正版费用而不得不寻找冒版操作系统。比这更重要的是，Linux
+    可用于各种应用程序。无论你是选择为企业创建一个更好的系统，还是只是想更有创意地玩玩各种东西，Linux 都能帮助你完成出色的工作。
+
+
+    本书包含了如何利用 Linux 的经过的步骤和策略，无论是为了工作还是娱乐，帮助你理解必须使用的命令、选择发行版，并准确理解 Linux 为何如此重要以及更多内容。
+
+
+    相信，在读完这本书后，你将精通 Linux——并在你的需求中使用它将变得轻而易举。
+
+
+    现在阅读这本书，发现如何做到吧！
+
+
+    再次感谢下载本书，希望你喜欢它！
+
+
+    # 第1章 什么是 Linux？
+
+
+    那么，Linux 到底是什么？
+
+
+    首先，Linux 是一个基于 UNIX 和 POSIX 代码的免费开源操作系统。简而言之，它是免费下载、免费使用的，最初基于 Intel x86 范式。事实上，在所有操作系统中，Linux
+    的安装基数比其他系统都要大。这就是为什么运行 Linux 上的计算机或设备运行速度很快，有时甚至与那些惊人的超级计算机相媲美！这是因为 Linux 可以根据其被使用的任何类型的系统进行定制——而其他操作系统只能在特定类型的设备上运行良好。这归功于所谓的开源软件协作，这种协作支持各种库和目录。
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_6_0.png)
+
+
+    http://cdn1.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-distros-im-650-80.jpg
+
+
+    ## 早期起源
+
+
+    1969 年，UNIX操作系统（被称为 Linux 的祖先）在 AT & T 贝尔实验室创建，具有 C 语言基础，以及用于移植目的的高可用语言。在这样的背景下，该系统成为企业和学校管理员最依赖的操作系统。
+
+
+    然而，当一起反垄断案件阻止 UNIX 持续用于商业时，发生了一些争议，但由于其开发者及其支持者认为 UNIX 比人们想象的要多得多，他们决定开发 GNU 内核——正是因为这样，LINUX
+    终于应而生。
+
+
+    ## 进入 Linux
+
+
+    在其主要作者 Lin Torvalds 的帮助下，基于寻找一个所有人都可以使用的真正功能操作系统的原则，他决定致力于 GNU 内核。他想要一种人们（无论是专业人士还是只想用计算机或其他设备娱乐的人）都能真正使用的东西。然后他开始将内核创建的文件上传到
+    FTP 服务器，并想将其命名为 "Freax"，但他当时的合作者和其他专业人士认为这不是一个好主意，于是利用他的名字，Linux 在 1991 年诞生了！
+
+
+    - 1. 创建一种开源语言，它是免费的，每个人都能为开发做出贡献；
+
+    - 2. 创建一种与其竞争对手一样好的东西，确保它是易于理解的，并且是直观的；
+
+    - 3. 创建一种对日常任务有用的语言；
+
+    - 4. 简单创建与纯英语类似的编程语言、功能以及等等（注：OCR 文本包含重复）。
+
+
+    相应作者拥有出版者未持有的所有版权。
+
+
+    此处信息仅供参考之用，且具有通用性。信息的呈现不带有合同或任何类型的保证说明。
+
+
+    所使用的商标未经许可，且该商标的发布未经商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，并归所有者所有，与本文无关联。
+
+
+    # 引言
+
+
+    我想感谢你，并祝贺你下载了《Linux 精通 - 终极 Linux 操作系统与命令行精通指南》这本书。
+
+
+    虽然 Linux 没有 Windows 那么流行——至少对某些人来说是这样——它绝对是世界上最可靠的操作系统之一——最棒的一点是它是免费的，所以你不需要为了获取它而支付任何费用，你也不会因为付不起正版费用而不得不寻找冒版操作系统。比这更重要的是，Linux
+    可用于各种应用程序。无论你是选择为企业创建一个更好的系统，还是只是想更有创意地玩玩各种东西，Linux 都能帮助你完成出色的工作。
+
+
+    本书包含了如何利用 Linux 的经过的步骤和策略，无论是为了工作还是娱乐，帮助你理解必须使用的命令、选择发行版，并准确理解 Linux 为何如此重要以及更多内容。
+
+
+    相信，在读完这本书后，你将精通 Linux——并在你的需求中使用它将变得轻而易举。
+
+
+    现在阅读这本书，发现如何做到吧！
+
+
+    再次感谢下载本书，希望你喜欢它！
+
+
+    # 第1章 什么是 Linux？
+
+
+    那么，Linux 到底是什么？
+
+
+    首先，Linux 是一个基于 UNIX 和 POSIX 代码的免费开源操作系统。简而言之，它是免费下载、免费使用的，最初基于 Intel x86 范式。事实上，在所有操作系统中，Linux
+    的安装基数比其他系统都要大。这就是为什么运行 Linux 上的计算机或设备运行速度很快，有时甚至与那些惊人的超级计算机相媲美！这是因为 Linux 可以根据其被使用的任何类型的系统进行定制——而其他操作系统只能在特定类型的设备上运行良好。这归功于所谓的开源软件协作，这种协作支持各种库和目录。
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_6_0.png)
+
+
+    http://cdn1.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-distros-im-650-80.jpg
+
+
+    ## 早期起源
+
+
+    1969 年，UNIX操作系统（被称为 Linux 的祖先）在 AT & T 贝尔实验室创建，具有 C 语言基础，以及用于移植目的的高可用语言。在这样的背景下，该系统成为企业和学校管理员最依赖的操作系统。
+
+
+    然而，当一起反垄断案件阻止 UNIX 持续用于商业时，发生了一些争议，但由于其开发者及其支持者认为 UNIX 比人们想象的要多得多，他们决定开发 GNU 内核——正是因为这样，LINUX
+    终于应而生。
+
+
+    ## 进入 Linux
+
+
+    在其主要作者 Lin Torvalds 的帮助下，基于寻找一个所有人都可以使用的真正功能操作系统的原则，他决定致力于 GNU 内核。他想要一种人们（无论是专业人士还是只想用计算机或其他设备娱乐的人）都能真正使用的东西。然后他开始将内核创建的文件上传到
+    FTP 服务器，并想将其命名为 "Freax"，但他当时的合作者和其他专业人士认为这不是一个好主意，于是利用他的名字，Linux 在 1991 年诞生了！
+
+
+    - 1. 创建一种开源语言，它是免费的，每个人都能为开发做出贡献；
+
+    - 2. 创建一种与其竞争对手一样好的东西，确保它是易于理解的，并且是直观的；
+
+    - 3. 创建一种对日常任务有用的语言；
+
+    - 4. 简单创建与纯英语类似的编程语言、功能以及等等（注：OCR 文本包含重复）。
+
+
+    相应作者拥有出版者未持有的所有版权。
+
+
+    此处信息仅供参考之用，且具有通用性。信息的呈现不带有合同或任何类型的保证说明。
+
+
+    所使用的商标未经许可，且该商标的发布未经商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，并归所有者所有，与本文无关联。
+
+
+    # 第2章 为什么选择 Linux？——Linux 的优势
+
+
+    除了之前提到的，为什么你必须选择 Linux？你从中可以获得什么？
+
+
+    嗯，如果你选择 Linux 作为你的操作系统，可以获得许多优势，其中包括：
+
+
+    ## 极安全性
+
+
+    人们喜欢 Linux 的点之一是与其他操作系统相比，它是非常安全的。你需要理解的是，由于 Linux 是一个开源系统，即使某些程序员可能会创建对你的计算机“有害”的漏洞，你也可以预期反击触手可及。事实上，如果你能研究或学习它，你甚至可以自己创建。
+
+
+    ## 出色的硬件和软件
+
+
+    如果你是那些使用笨大、过时计算机的人之一，或者你的计算机没有多少内存或处理能力，你会为 Linux 也能为它们运行而高兴。事实上——与上述相关——即使你的计算机没有防火墙或任何“安全创建”，你仍然可以预期运行无故障。
+
+
+    现在，在软件方面，Linux 也提供了丰富的选择。Windows 为每个应用提供一个版本——例如文本编辑器、Microsoft Word、Windows 视频制作，而
+    Linux 有成百上千的选项供你选择——而且都是免费的。所以，如果你想搜索文本编辑器，你只需要搜索，猜怎么着？会有很多选项呈现给你，这样你可以选择你最熟悉的、以及你认为能产生最佳结果的一个。
+
+
+    # 你拥有“选择权”
+
+
+    如前所述，你有权决定使用哪种软件。你还可以通过 Linux 按照你想要的设计桌面或设备。这让使用计算机或你拥有的任何设备的行为更加个性化——更像让你感到舒服的东西，并且对你来说非常容易管理。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # LINUX MASTERY
+
+
+    THE ULTIMATE LINUX OPERATING SYSTEM AND COMMAND LINE MASTERY GUIDE
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_0_0.png)
+
+
+    Jonathan Bates'
+  - '[PAGE 1]
+
+
+    # Linux Mastery
+
+
+    The Ultimate Linux Operating System and Command Line Mastery Guide'
+  - '[PAGE 2]
+
+
+    # Contents
+
+
+    +   Introduction
+
+
+    +   Chapter 1 What Is Linux?
+
+
+    +   Chapter 2 Why Linux?—The Benefits of Linux
+
+
+    +   Chapter 3 Choosing a Distribution
+
+
+    +   Chapter 4 Preparing to Install Linux
+
+
+    +   Chapter 5 Installing Linux
+
+
+    +   Chapter 6 Using Linux for Work and Play
+
+
+    +   Chapter 7 Getting to Know Commands
+
+
+    +   Chapter 8 Managing Files and Directories
+
+
+    +   Chapter 9 Administration and Security
+
+
+    +   Conclusion'
+  - '[PAGE 3]
+
+
+    Copyright 2016 by Jonathan Bates - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    +   - From a Declaration of Principles which was accepted and approved equally
+    by a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance..
+
+
+    The trademarks that are used are without consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are the owned by the owners
+    themselves, not affiliated with this document.'
+  - '[PAGE 4]
+
+
+    # Introduction
+
+
+    I want to thank you and congratulate you for downloading the book, “Linux Mastery
+    - The Ultimate Linux Operating System and Command Line Mastery Guide"
+
+
+    While not as popular as Windows—at least, for some—Linux is definitely one of
+    the most reliable Operating Systems around—and the best part about it is that
+    it''s free, so you don''t really have to pay for anything just to get it, and
+    you also wouldn''t have to go for counterfeit types of Operating Systems just
+    because you could not pay for the legal copy. More than anything, Linux can be
+    used for a variety of applications. Whether you''re opting to create a better
+    system for business, or just want to be more creative and play around with things,
+    Linux can help you do a great job.
+
+
+    This book contains proven steps and strategies on how to make use of Linux, whether
+    for work or play, understand the commands that you have to use, choose distributions,
+    and understand exactly why Linux matters—and more.
+
+
+    Surely, after reading this book, you''ll be adept about Linux—and you will have
+    an easy time using it for your needs.
+
+
+    Read this book now, and find out how!
+
+
+    Thanks again for downloading this book, I hope you enjoy it!'
+  - '[PAGE 5]
+
+
+    <!-- no content -->'
+  - '[PAGE 6]
+
+
+    # # Chapter 1 What Is Linux?
+
+
+    So, what is Linux, actually?
+
+
+    For starters, Linux is a free and open-source Operating System, based on UNIX
+    and PSOIX codes. In short, it is free to download, and free to use, and was originally
+    based on the paradigm of Intel x86. In fact, out of all Operating Systems, Linux
+    has the largest base that has been installed, compared to the rest. This is why
+    a computer or device that works on Linux works fast, and are sometimes even even
+    compared to those amazing supercomputers! This is because Linux gets to be tailored
+    to any kind of system where it''s being used—compared to other operating systems
+    that work best on a certain kind of device alone. This so happens because of the
+    so-called open source software collaboration that can support various kinds of
+    libraries and directories.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_6_0.png)
+
+
+    http://cdn1.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-distros-im-650-80.jpg
+
+
+    # ## Early Beginnings
+
+
+    In 1969, the UNIX Operating System—also known as the forefather of Linux—was created
+    at the AT & T Bell Laboratories, with C-Programming basics, and high availability
+    of languages that were used for porting purposes. With that kind of background,
+    OS became the most-reliant operating system of business and school administrators.
+
+
+    However, certain controversies happened when an anti-trust case prevented UNIX
+    from continually being used for businesses, but since its developers—and its supporters—believed
+    that there''s still more to UNIX than people think, they decided to develop the
+    GNU Kernel—and it was because of this that LINUX finally came to fruition.
+
+
+    # ## Enter Linux
+
+
+    With the help of its principal author, Linux Torvalds, and his principle of finding
+    a truly functional Operating System that everyone could use, he decided to work
+    on the GNU Kernel. He wanted something that people, whether they''re professionals
+    or just wanting to use the computer or other devices for entertainment, could
+    really use. He then began to upload files created from the Kernel to the FTP Server,
+    and wanted to call it "Freax", but his collaborators and other professionals at
+    the time didn''t think it was a good idea, and so'
+  - '[PAGE 7]
+
+
+    playing with his name, Linux was born in 1991!
+
+
+    +   1. To create an Open-Source Programming Language, so it would be free, and
+    everyone would be able to contribute to its development;
+
+    2. To create something that is as good as its predecessors and competitors, make
+    sure that it is easy to understand, and that it is intuitive;
+
+    3. To create a programming language that would be useful for everyday tasks, and;
+
+    4. To simply create a programming language that could be compared to plain English,
+    functions, and inheritance such as *str, dict,* and *list* were already available.
+    In 1994, Version 1.0 was released and it involved *reduce, filter, map,* and *lambda*,
+    amongst others, and in 1995, Van Rosum continued to work on developing Linux while
+    at the *Corporation for National Research Initiatives* in Virginia!
+
+
+    When it was first published (to be used) in 1991 in Version 0.9.0, core datatypes,
+    functions, and inheritance such as *str, dict,* and *list* were already available.
+    In 1994, Version 1.0 was released and it involved *reduce, filter, map,* and *lambda*,
+    amongst others, and in 1995, Van Rosum continued to work on developing Linux while
+    at the *Corporation for National Research Initiatives* in Virginia!
+
+
+    In 2000, the *BeOpen Linux Labs* team was established, and Version 1.6 of the
+    language was put out, with important bug-fixes. Another version called Version
+    2.0 was released in 2008, followed by 3.0—which could coexist with the other!
+
+
+    # Linux Now
+
+
+    Today, Linux is partly responsible for helping the world work like it should.
+    From people who only work with computers at home, to larger feats such as NASA
+    using Linux-powered computers, it is no surprise why Linux is getting the attention
+    of many—and today, you have the chance to learn about it, and more!'
+  - '[PAGE 8]
+
+
+    <!-- no content -->'
+  - '[PAGE 9]
+
+
+    # Chapter 2 Why Linux?—The Benefits of Linux
+
+
+    Apart from what was mentioned earlier, why is it that you have to choose Linux?
+    What exactly can you get from it?
+
+
+    Well, there are loads of advantages that you can get if you choose to use Linux
+    as your Operating System, some of which are as follows:
+
+
+    # Amazing Security
+
+
+    One of the best things that people love Linux is that compared to other operating
+    systems, it is quite secure. You wouldn''t have to buy those costly anti-virus
+    systems because on its own, Linux could do all the virus and security checks that
+    you need, and in fact, you will learn a lot about this in the last chapter of
+    this book.
+
+
+    What you have to understand is since Linux is an open source system, even if some
+    programmers can create bugs or anything that might be "harmful" to your computer,
+    you can expect that a counter-attack is just within reach. In fact, if you can
+    research or study about it, you might even create yourself.
+
+
+    # Great Hardware, and Software
+
+
+    If you''re one of those people who use those big, clunky, old computers, or if
+    your computer doesn''t have much memory or processing power, you''d be glad that
+    Linux could work for it, too. In fact—and in relation to what was mentioned above—even
+    if your computer does not have firewall or any of "safety creations", you can
+    still expect it to work without fail—mainly because Linux was created to "work",
+    and not to give you so many ridiculous problems.
+
+
+    Now, when it comes to software, Linux also has a lot to offer. While Windows offers
+    one version for each app—example, Text Editor, Microsoft Word, Windows Movie Maker,
+    Linux has hundreds and thousands of options that you can choose from—and that
+    you get for free. So, if you''re going to search for a text editor, you can just
+    search for it, and guess what? A lot of options will be presented to you, so you
+    can choose the one you''re most comfortable with, and the one you think would
+    yield the best results. This also means that Linux Software has greater usability
+    and readability, therefore, it won''t be alienating to you the away software from
+    other operating systems—especially if you have to pay a lot for them!
+
+
+    # You Have the "Power of Choice"
+
+
+    As aforementioned, you have the choice to decide on what kind of software you
+    like to use. You also have the choice to design your desktop or device the way
+    you want, simply by using Linux. It makes the act of using the computer or any
+    device you have more personalized—more like something you''d feel comfortable
+    with, and one that would be quite manageable for you.
+
+
+    The problem with other Operating Systems is that somehow, they feel so hard to
+    maneuver'
+- md: '
+
+    —and''s not good, especially if you''re a beginner in the whole process. Now,
+    not only will you be able to learn what needs to be done easily, you also won''t
+    have a hard time when it comes to using your computer the way you want—and the
+    way you want it to look like.
+
+
+    ## Flexibility
+
+
+    Flexibility is also one of the best things about Linux. With Linux, you won’t
+    have to deal with hoop-jumping, pirates, scams, or anything that would make it
+    hard for you to “take control” of any given situation. It also has forums that
+    you can join to think about security and other issues, if those are bothering
+    you, or are making you confused.
+
+
+    ## Multiple Program Paradigms
+
+
+    Linux also supports various program paradigms, such as:
+
+
+    - **Object-Oriented Programming.** This makes use of the concept of objects, such
+    as fields, data, and data structures and their attributes.
+
+    - **Imperative Programming.** Meanwhile, Imperative Programming involves the use
+    of statements to modify the state of a program. Simply put, it deals with how
+    the program achieves its result, as opposed to what the program should achieve.
+
+    - **Functional Programming.** And, finally, Linux also deals with functional programming,
+    or the paradigm that deals with mathematical computations and functions to develop
+    an outcome.
+
+
+    ## It’s Compatible for Most Devices!
+
+
+    You do not have to buy a new device to use Linux. Again, and as mentioned earlier,
+    it might even work for old computers—which is amazing because some people have
+    issues when it comes to letting their old computers and devices go—and that’s
+    something you would not feel for this one. Its kernels work for old and new devices,
+    so there’s no need to upgrade anything or buy something new.
+
+
+    ## It’s Easy to Use and Understand
+
+
+    Sometimes, it’s so hard to find a product or a service that really, ultimately
+    works well for you. But, when it comes to Linux, that happens almost instantly—and
+    that’s amazing especially if you’re new to the open-source paradigm!
+
+
+    ## And, It Gives You Lots of Choices!
+
+
+    Linux is all about helping you make the most out of what’s installed in your computer.
+    It is not alienating. If you don’t like something, it gives you the chance to
+    look for something else—find something better. And with that in mind, it becomes
+    easier for you to do what you should—and make use of it in the manner that you
+    know best for you.
+
+
+    ## Chapter 3 Choosing a Distribution
+
+
+    The next thing you have to do is choose your own Linux Distribution. Basically,
+    these are just the different versions of Linux that you can choose from, and,
+    all of them are the same, when it comes to being Operating Systems, but they differ
+    when it comes to aesthetics, and the way they “work”.
+
+
+    Basically, there are various distributions to choose from, but there are seven
+    that are the most trusted, and these these are:
+
+
+    Ubuntu
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_12_0.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net//art/software/Linux/Best%20distro/ubuntu-650-80.jpg
+
+
+    Ubuntu is possibly one of the most popular distributions of Linux, and is deemed
+    to be the best to choose if you’re new to Linux, and have not tried before. Ubuntu
+    has amazing easy-to-install repositories, and is quite customizable—perfect for
+    art and media practitioners, or those who are extremely careful about what they
+    see onscreen. The problem with Ubuntu is that compared to other distributions,
+    it does not work as great with mobile devices—which can be a bit of a problem,
+    especially if you’re the type who’s on your mobile device all the time.
+
+
+    Solus
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_12_1.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net//art/software/Linux/Best%20distro/solus-1-650
+
+
+    Solus has that modern feel, and is in fact, somewhat new as it was released in
+    2012—a time when Ubuntu was mostly used in schools and businesses. Some say that
+    the best about Solus is its aesthetic feel, because it really has elegant, nice-to-look-at
+    feel to it. One thing, though, that there aren’t too many “Solus Communities”
+    around yet, so if you get to have problems with this distribution, you might have
+    to look for the solution yourself.
+
+
+    ## Mint Cinnamon
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_13_0.png)
+
+
+    http://cdn4.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-cinnamon-650-80.jpg
+
+
+    Such a fresh-sounding name, isn’t it? Well, Mint Cinnamon actually has that fresh
+    and light feel as it makes use of white and grey for aesthetics. It’s quite the
+    minimalist distribution of Linux—perfect for people who do not like seeing a lot
+    of pizzazz and anything colorful on their screens. The best thing is that its
+    repositories are the same as Ubuntu’s, so you won’t have much of a hard time to
+    understand them, and its UI is also less-demanding—so it wouldn’t be too taxing
+    on your computer, and on you who’s going to be using it. Mint Cinnamon is also
+    deemed to be great for beginners, because as aforementioned, there’s not much
+    to understand it—and you really don’t have to give yourself a hard time for it.
+
+
+    ## Ubuntu Studio
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_13_1.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/ubuntu-studio-650-80.jpg
+
+
+    As the name suggests, this incarnation of Linux is perfect for producers, sound
+    engineers, designers, and artists who need to work with various kinds of multimedia,
+    and who need computers or devices that are tailored for that purpose—Ubuntu Studio
+    definitely makes easy. Having been around since 2007, this has a multi-track digital
+    recorder and sequencer named “Audio” that’s being relied on by many artists around
+    the globe. The best thing about it is that it synthesizes guitar and other instruments,
+    making sure that your output would be really pleasing to the ears, and not all
+    to deal with. Therefore you’d get to create projects that are professional quality—without
+    spending much for it.
+
+
+    ## Arch Linux
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_14_0.png)
+
+
+    http://cdn2.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/arch-linux-650-80.jpg
+
+
+    This one is deemed to be perfect for professionals because it is something you
+    have to work with and customize on your own. In fact, it does not come with many
+    applications as other distributions, which means you have to know what you’re
+    doing. With this, you have to apply the “Keep it Short and Simple” philosophy,
+    because downloading too much makes you get confused. Find what you really want,
+    and then prune or get rid of those you feel won’t matter so that your screen won’t
+    be cramped, and you can make the most of this distribution. However, what’s good
+    about it is that you may learn a lot, even if you have a bit of a hard time in
+    the beginning, rest assured, you’d get past that, and experience what Arch Linux
+    really is
+
+
+    ## Chrome OS
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_14_1.png)
+
+
+    http://cdn4.mos.techradar.futurecdn.net/art/software/ChromeOS/chromedesktop-650-80.jpg
+
+
+    It’s said that this is one of the main and closest renditions of the early Linux
+    Kernel.
+
+
+    And finally, there''s the Elementary Distribution. Not only is it one of the most
+    aesthetically-pleasing versions of Linux, it''s also highly functional, and some
+    say it has a resemblance to the Mac—perfect for multimedia artists and those who
+    work with high-end applications, as well. In fact, it may well be your perfect
+    Windows or Mac replacement, in the event that you are looking for something new
+    that you can rely on quite. It also has an amazing line of pre-installed apps,
+    and even a custom web browser that can really personalize the way you use Linux.
+
+
+    ## Chapter 4 Preparing to Install Linux
+
+
+    Before installing Linux, make sure that you are mindful of what it poses for you
+    first. Basically, these are:
+
+
+    ### Linux isn’t just Linux.
+
+
+    If you’ve been reading the earlier chapter properly, you would understand that
+    Linux isn’t just “one” operating system, or one version that continually evolves
+    over time, the way Windows does. Linux is something that contains different versions
+    within it, and works with GNU.
+
+
+    If you’re confused as to what GNU is, you can think of it as a collection of applications,
+    schedulers, text editors, compilers, and anything else you can work with in a
+    command line. When you think of Linux now, you can think about it as a “kernel”—and
+    a kernel may contain multitudes within it. This matters when it comes to hardware,
+    because Linux offers an amazing collection of software, it doesn’t have much hardware.
+    So, in the event that you find something wrong with hardware, you have to find
+    the solution on your own, or find the answer from a list of Linux’s collected
+    answers—and with over 200 variations of Linux, you’ll surely be able to find what
+    you need sooner or later. The lack of hardware would also make you more discerning
+    of your choices. It will help you question whether you’ve got in front of you
+    is really good, and if it’s something that you actually need—you won’t download
+    everything and ruin your computer.
+
+
+    ### You would have a fun time customizing and accessorizing your desktop.
+
+
+    Gone are the days when you’d just install an OS, and that’s that. You have to
+    wait for the latest update, or try something new if you don’t like how it looks
+    onscreen. However, with the help of Linux, you get to customize your desktop,
+    and turn it the way you want it to be. This happens because Linux works with what’s
+    called a “Desktop Environment”. This means that you can let your browser, and
+    other programs be displayed on your desktop all at once so you don’t have to close
+    your Word Processor while trying to compute something, watching your favorite
+    show, and the like. It really puts “multi-tasking” to a test—and helps you access
+    a modernized version of using the computer exactly for what you need it for.
+
+    '
+  mdcn: '
+
+    —而且这并不好，特别是如果你是整个过程中的初学者的话。现在，你不仅能够轻松地学习需要做什么，而且当你想要按照你的方式以及你想要的外观使用你的电脑时，你不会再遇到困难。
+
+
+    ## 灵活性
+
+
+    灵活性也是 Linux 的最大优点之一。通过 Linux，你将不必应付各种圈套、盗版软件、诈骗或任何让你难以“掌控”特定情况的情况。它还拥有许多你可以加入的论坛，如果安全或其他问题困扰着你，或让你感到困惑，你可以在那里一起思考这些问题。
+
+
+    ## 多种编程范式
+
+
+    Linux 还支持多种编程范式，例如：
+
+
+    - **面向对象编程。** 这利用了对象的概念，例如字段、数据、数据结构及其属性。
+
+    - **命令式编程。** 与此同时，命令式编程涉及使用语句来修改程序的状态。简单来说，它处理的是程序如何实现其结果，而不是程序应该实现什么。
+
+    - **函数式编程。** 最后，Linux 同时也处理函数式编程，或者说处理通过数学计算和函数来开发结果的范式。
+
+
+    ## 它兼容大多数设备！
+
+
+    你不需要购买新设备就可以使用 Linux。再次，正如前面提到的，它甚至可以运行在旧电脑上——这太了不起了，因为有些人在放弃他们的旧电脑和设备时会遇到问题——而你在使用
+    Linux 时绝不会有这种感觉。它的内核适用于旧和新设备，因此无需升级任何东西或购买新设备。
+
+
+    ## 它简单易于理解
+
+
+    有时候，想要找到一个真正、最终对你有帮助好的产品或服务是非常困难的。但当涉及到 Linux 时，这种情况几乎瞬间发生——如果你是开源范式的新手，这简直太棒极了！
+
+
+    ## 而且，它为你提供了很多选择！
+
+
+    Linux 的核心在于帮助你充分利用电脑中安装的内容。它并不具有排斥性。如果你不喜欢某些东西，它给了你机会去寻找其他的——寻找更好的。考虑到这一点，你去做应该做的事情就会变得更容易——并以你认为最适合你自己的方式来使用它。
+
+
+    ## 第 3 章选择发行版
+
+
+    你接下来需要做的是选择你自己的 Linux 发行版（Distribution）。基本上，这些只是你可以选择的 Linux 的不同版本，在作为操作系统方面，它们都是相同的，但在审美和它们的“工作”方式上有所不同。
+
+
+    基本上，有各种发行版供选择，但有七个是最受信任的，它们是：
+
+
+    Ubuntu
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_12_0.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net//art/software/Linux/Best%20distro/ubuntu-650-80.jpg
+
+
+    Ubuntu 可能是最流行的 Linux 发版之一，如果你是 Linux 新手且以前没有尝试过，被认为是最佳选择。Ubuntu 拥有非常易于安装的仓库，而且非常可定制——非常适合艺术和媒体从业者，或那些对屏幕显示内容极其仔细的人。Ubuntu
+    的问题在于，与其他发行版相比，它在移动设备上的表现并不理想——这可能会是一个问题，特别是如果你那种一直盯着移动设备的人。
+
+
+    Solus
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_12_1.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net//art/software/Linux/Best%20distro/solus-1-650
+
+
+    Solus 具有那种现代感，事实上，它是相当较新的，因为它是在 2012 年发布的——那时 Ubuntu 主要被用于学校和企业。有些人说 Solus 最好的地方在于它的审美感，因为它确实有一种优雅、赏心眼的感觉。不过，有一点是，目前还没有太多的“Solus
+    社区”，所以如果你在这个发行版上遇到问题，你可能需要自己寻找解决方案。
+
+
+    Mint Cinnamon
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_13_0.png)
+
+
+    http://cdn4.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-cinnamon-650-80.jpg
+
+
+    一个听起来很新鲜的名字，不是吗？嗯，Mint Cinnamon 实际上具有这种清新、轻盈的感觉，因为它利用白色和灰色来进行审美设计。它是一个非常极简主义的
+    Linux 发行版——非常适合不喜欢在屏幕上看到很多花哨和任何彩色内容的人。最好的一点是它的仓库和 Ubuntu 相同，所以你理解它们不会太困难，而且它的
+    UI 需求也较低——所以它对你的电脑以及对将要它的你来说都不会有太大负担。Mint Cinnamon 也认为非常适合初学者，因为前面提到的，它没什么需要理解的——你真的不需要为它为自己为难。
+
+
+    Ubuntu Studio
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_13_1.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/ubuntu-studio-650-80.jpg
+
+
+    正如名称所示，这个 Linux 版本非常适合制片人、音频工程师、设计师和艺术家，他们需要处理各种多媒体，并且需要为该目的量身定制的电脑或设备——Ubuntu
+    Studio 绝对让这一切变得简单。自 2007 年以来，它一直有一个名为“Audio”的多轨道数字录音机和序列器，全球许多艺术家都在使用它。它最棒的一点是它可以合成吉他和和其他乐器，确保你的输出非常悦耳，而不是那么难以处理。因此，你可以创建出专业质量的项目——而不需要花费很多钱。
+
+
+    Arch Linux
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_14_0.png)
+
+
+    http://cdn2.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/arch-linux-650-80.jpg
+
+
+    这被认为非常适合专业人士，因为你必须亲自对它进行工作和定制。事实上，它不像其他发行版那样带有许多应用程序，这意味着你必须知道自己在做什么。借此，你必须应用“保持简短简单”的哲学，因为下载太多会让你感到困惑。找到你真正想要的东西，然后修剪或丢弃那些你认为不重要的东西，这样你的屏幕就不会拥挤，你就可以充分利用这个发行版了。然而，它的好处在于你可以学到很多东西，即使开始可能会遇到困难，请放心，你会度过那关，并体验到
+    Arch Linux 的真面目。
+
+
+    Chrome OS
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_14_1.png)
+
+
+    http://cdn4.mos.techradar.futurecdn.net/art/software/ChromeOS/chromedesktop-650-80.jpg
+
+
+    它被认为是 Linux 的一种非常接近的形式，而且最后，它可能是一个发行版。
+
+
+    ## 第 4 章 准备安装 Linux
+
+
+    在安装 Linux 之前，请确保你对它提出的要求有所了解。基本上，这些是：
+
+
+    ### Linux 不仅仅是 Linux
+
+
+    如果你正确阅读了前面的章节，你就会理解 Linux 不仅仅是一个操作系统，或者一个随着时间不断演进的版本。Linux 包含了许多版本。如果你对 GNU 感到困惑，你可以把它看作是应用程序、调度器、文本编辑器以及任何可以在命令行中使用的工具的集合。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 10]
+
+
+    —and''s not good, especially if you''re a beginner in the whole process. Now,
+    not only will you be able to learn what needs to be done easily, you also won''t
+    have a hard time when it comes to using your computer the way you want—and the
+    way you want it to look like.
+
+
+    # Flexibility
+
+
+    Flexibility is also one of the best things about Linux. With Linux, you won’t
+    have to deal with hoop-jumping, pirates, scams, or anything that would make it
+    hard for you to “take control” of any given situation. It also has forums that
+    you can join to think about security and other issues, if those are bothering
+    you, or are making you confused.
+
+
+    # Multiple Program Paradigms
+
+
+    Linux also supports various program paradigms, such as:
+
+
+    **Object-Oriented Programming.** This makes use of the concept of objects, such
+    as fields, data, and data structures and their attributes.
+
+
+    **Imperative Programming.** Meanwhile, Imperative Programming involves the use
+    of statements to modify the state of a program. Simply put, it deals with how
+    the program achieves its result, as opposed to what the program should achieve.
+
+
+    **Functional Programming.** And, finally, Linux also deals with functional programming,
+    or the paradigm that deals with mathematical computations and functions to develop
+    an outcome.
+
+
+    # It’s Compatible for Most Devices!
+
+
+    You do not have to buy a new device to use Linux. Again, and as mentioned earlier,
+    it might even work for old computers—which is amazing because some people have
+    issues when it comes to letting their old computers and devices go—and that’s
+    something you would not feel for this one. Its kernels work for old and new devices,
+    so there’s no need to upgrade anything or buy something new.
+
+
+    # It’s Easy to Use and Understand
+
+
+    Sometimes, it’s so hard to find a product or a service that really, ultimately
+    works well for you. But, when it comes to Linux, that happens almost instantly—and
+    that’s amazing especially if you’re new to the open-source paradigm!
+
+
+    # And, It Gives You Lots of Choices!
+
+
+    Linux is all about helping you make the most out of what’s installed in your computer.
+    It is not alienating. If you don’t like something, it gives you the chance to
+    look for something else—find something better. And with that in mind, it becomes
+    easier for you to do what you should—and make use of it in the manner that you
+    know best for you.'
+  - '[PAGE 11]
+
+
+    <!-- no content -->'
+  - '[PAGE 12]
+
+
+    # Chapter 3 Choosing a Distribution
+
+
+    The next thing you have to do is choose your own Linux Distribution. Basically,
+    these are just the different versions of Linux that you can choose from, and,
+    all of them are the same, when it comes to being Operating Systems, but they differ
+    when it comes to aesthetics, and the way they “work”.
+
+
+    Basically, there are various distributions to choose from, but there are seven
+    that are the most trusted, and there these are:
+
+
+    Ubuntu
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_12_0.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net//art/software/Linux/Best%20distro/ubuntu-650-80.jpg
+
+
+    Ubuntu is possibly one of the most popular distributions of Linux, and is deemed
+    to be the best to choose if you’re new to Linux, and have not tried before. Ubuntu
+    has amazing easy-to-install repositories, and is quite customizable—perfect for
+    art and media practitioners, or those who are extremely careful about what they
+    see onscreen. The problem with Ubuntu is that compared to other distributions,
+    it does not work as great with mobile devices—which can be a bit of a problem,
+    especially if you’re the type who’s on your mobile device all the time.
+
+
+    Souls
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_12_1.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net//art/software/Linux/Best%20distro/solus-1-650'
+  - '[PAGE 13]
+
+
+    Souls has that modern feel, and is in fact, somewhat new as it was released in
+    2012—a time when Ubuntu was mostly used in schools and businesses. Some say that
+    the best about Souls is its aesthetic feel, because it really has elegant, nice-to-look-at
+    feel to it. One thing, though, that there aren’t too many “Soul Communities” around
+    yet, so if you get to have problems with this distribution, you might have to
+    look for the solution yourself.
+
+
+    # Mint Cinnamon
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_13_0.png)
+
+
+    http://cdn4.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/linux-cinnamon-650-80.jpg
+
+
+    Such a fresh-sounding name, isn’t it? Well, Mint Cinnamon actually has that fresh
+    and light feel as it makes use of white and grey for aesthetics. It’s quite the
+    minimalist distribution of Linux—perfect for people who do not like seeing a lot
+    of pizzazz and anything colorful on their screens. The best thing is that its
+    repositories are the same as Ubuntu’s, so you won’t have much of a hard time to
+    understand them, and its UI is also less-demanding—so it wouldn’t be too taxing
+    on your computer, and on you who’s going to be using it. Mint Cinnamon is also
+    deemed to be great for beginners, because as aforementioned, there’s not much
+    to understand about it—and you really don’t have to give yourself a hard time
+    for it, too.
+
+
+    # Ubuntu Studio
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_13_1.png)
+
+
+    http://cdn3.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/ubuntu-studio-650-80.jpg
+
+
+    As the name suggests, this incarnation of Linux is perfect for producers, musicians,
+    sound engineers, designers, and artists who need to work with various kinds of
+    multimedia, and'
+  - '[PAGE 14]
+
+
+    who need computers or devices that are tailored for that purpose—Ubuntu Studio
+    definitely makes easy. Having been around since 2007, this has a multi-track,
+    digital recorder and sequencer named “Arbour” that’s being relied on by many artists
+    around the globe. The best thing about the said recorder is that it synthesizes
+    guitar and other instruments that have been used, making sure that your final
+    output would be really pleasing to the ears, and not at all to deal with. Therefore,
+    you’d get to create projects that are of professional quality—without spending
+    much for it.
+
+
+    # Arch Linux
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_14_0.png)
+
+
+    http://cdn2.mos.techradar.futurecdn.net/art/software/Linux/Best%20distro/arch-linux-650-80.jpg
+
+
+    This one is deemed to be perfect for professionals because it is something that
+    you have to work with and customize on your own. In fact, it does not come with
+    many applications as other distributions, which means you have to know what you’re
+    doing. With this, you have to apply the “Keep it Short and Simple” philosophy,
+    because downloading too much just make you get confused. Find what you really
+    want, and then prune or get rid of those you feel won’t matter to, so that your
+    screen won’t be too cramped, and you can make the most out of this distribution.
+    However, what’s good about it is that you may learn a lot, even if you have a
+    bit of a hard time in the beginning, rest assured, you’d get past that, and experience
+    what Arch Linux really is
+
+
+    # Chrome OS
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_14_1.png)
+
+
+    http://cdn4.mos.techradar.futurecdn.net/art/TRBC/Software/ChromeOS/chromedesktopopaj
+    hero-650-80.jpg
+
+
+    It’s said that this is one of the main and closest renditions of the early Linux
+    GNU Kernel,'
+  - '[PAGE 15]
+
+
+    And finally, there''s the Elementary Distribution. Not only is it one of the most
+    aesthetically-pleasing versions of Linux, it''s also highly functional, and some
+    say has that has resemblance to the Mac—perfect for multimedia artists and those
+    who work with high-end applications, as well. In fact, it may as well be your
+    perfect Windows or Mac replacement, in the event that you are looking for something
+    new that you can rely on quite well. It also has an amazing line of pre-installed
+    apps, and even a custom web-browser that can really personalize the way you use
+    Linux.'
+  - '[PAGE 16]
+
+
+    <!-- no content -->'
+  - '[PAGE 17]
+
+
+    # Chapter 4 Preparing to Install Linux
+
+
+    Before installing Linux, make sure that you are mindful of what it poses for you
+    first.
+
+    Basically, these are:
+
+
+    # Linux isn’t just Linux.
+
+
+    If you’ve been reading the earlier chapter properly, you would understand that
+    Linux isn’t
+
+    just “one” operating system, or one version that continually evolves over time,
+    the way
+
+    Windows does. Linux is something that contains different versions within it, and
+    with
+
+    works with GNU.
+
+
+    If you’re confused as to what GNU is, you can think of it as a collection of applications,
+
+    schedulers, text editors, compilers, and anything else you can work with in a
+
+    command line. When you think of Linux now, you can think about it as a “kernel”—and
+    a
+
+    kernel may contain multitudes within it. This matters when it comes to hardware,
+    because
+
+    Linux offers an amazing collection of software, it doesn’t have much hardware.
+    So,
+
+    in the event that you find something wrong with hardware, you have to find the
+    solution
+
+    on your own, or find the answer from a list of Linux’s collected answers—and with
+    over
+
+    200 variations of Linux, you’ll surely be able to find what you need sooner or
+    later.
+
+    The lack of hardware would also make you more discerning of your choices. It will
+    help you
+
+    question whether you’ve got in front of you is really good, and if it’s something
+    that
+
+    you actually need—you won’t download everything and ruin your computer.
+
+
+    # You would have a fun time customizing and accessorizing your desktop.
+
+
+    Gone are the days when you’d just install an OS, and that’s that. You have to
+    wait for
+
+    the latest update, or try something new if you don’t like how it looks onscreen.
+
+    However, with the help of Linux, you get to customize your desktop, and turn it
+    the way
+
+    You want it to be. This happens because Linux works with what’s called a “Desktop
+
+    Environment”. This means that you can let your browser, and other programs be
+    displayed
+
+    y your desktop all at once so you don’t have to close your Word Processor while
+    trying
+
+    to compute something, watching your favorite show, and the like. It really puts
+    “multi-
+
+    tasking” to a test—and helps you access a modernized version of using the computer
+
+    exactly for what you need it for.'
+- md: "\n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_18_0.png)\n\nhttp://cdn.mos.cms.futurecdn.net/56d8a1d50e1d0c1cfc9262fd5243d40b-650-80.png\n\
+    \nAside from that, there's also a Gnome3 Activities panel which allows you to\
+    \ choose from various Linux Desktop Environments. You might choose more than one,\
+    \ if you just want to have fun with your desktop and not make it monotonous. Then\
+    \ you can configure this way as you want.\n\n## There are different devices, files,\
+    \ and folders.\n\nLinux is not Windows—it is far from that might be confusing\
+    \ at first, but do remember that even if the names of the folders onscreen are\
+    \ different, they work in the same paradigm—albeit in a much improved manner.\n\
+    \n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_18_1.png)\n\nhttp://cdn.mos.cms.futurecdn.net/b2ec717d872a45911ffdc770ad46310-650-80.png\n\
+    \nBasically, the file system starts with the root, also known as a “simple path”—or\
+    \ where everything stems from, where they go. So, if you're traveling and you\
+    \ want to bring your laptop with you, you can choose one port for the go, and\
+    \ another for files at home—and this would not disintegrate your system. This\
+    \ is good because it is confusing, and it allows you to focus.\n\nApart from the\
+    \ root and the parts, things look a bit the same as you're used to, but you might\
+    \ also notice that they're cleaner now, or that they are easier on the eyes. These\
+    \ file extensions are meant to help you as a user, which means that while they\
+    \ may be confusing on the go-go, you won't have a hard time learning about them—and\
+    \ you'd appreciate them sooner or later.\n\n## There are great software repositories.\n\
+    \nYou know how with Windows, you often have to search the web for the applications\
+    \ or programs that you need? And, chances, if you're not using Google Play or\
+    \ the App Store, you'd have to filter what you've found because they might not\
+    \ be legit, or might not be working? Well, you wouldn't experience that with Linux.\n\
+    \n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_19_0.png)\n\nhttp://cdn.mos.cms.futurecdn.net/139f6b116326daebac6bba8c925660f-80.80\n\
+    \nLinux has some of the best software repositories—packages that you can choose\
+    \ to determine what would work best for you, depending on your preferences. From\
+    \ the Software Center, you can choose from various kinds of packages, and rest\
+    \ assured that all of these are working. Getting viruses from this is not common,\
+    \ and if it happens, you can easily find the antidote, too—and that's definitely\
+    \ perfect, especially if you're only starting out with Linux!\n\nIt'll help you\
+    \ appreciate and understand the “open-source” paradigm.\nFree software doesn't\
+    \ have to be something that's not of high quality, or that so easily malfunctions.\
+    \ With the help of Linux, you'll realize that sometimes, the best things in life\
+    \ really do come free. It'll help you get a different perspective on things, especially\
+    \ when technology is concerned, and you'll see your computer and other devices\
+    \ as much than just virtual machines, but stuff that you can personalize and can\
+    \ really help you out in various ways.\n\nAnd, it's safe for your device!\n\n\
+    ```\nalex@Mari ~# sudo pacman -Syu\n[sudo] password for alex:\n:: Synchronizing\
+    \ package databases...\n core is up to date\nextra is up to date\ncommunity is\
+    \ up to date\nmultilib is up to date\n:: Starting full system upgrade...\n resolving\
+    \ dependencies...\n Looking for conflicting packages...\nPackages (58) avahi-0.6.32r-1\
+    \ boost-1.59.0-2 cgal-4.7-1\nchromium-48.0.2491.72 dbus-1.10.0-4\ndevice-manager-1.2.5-1\
+    \ git-2.26.2-1 glib2-2.46.1\nnome-system-monitor-3.18.0-1 gptdisk-1.0.1 libudev-20150310-1\n\
+    sd-networkd-systemd-20150310-1\n```\n\n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_20_0.png)\n\
+    \nLinux is not the kind of OS that works so slowly that it becomes detrimental\
+    \ for the health of your computer, or any device. fact that you can easily search\
+    \ for and use antidotes for bugs, and other damage from Linux. It won't leave\
+    \ you alone in the dark, and won't make you feel lost, especially if you are still\
+    \ a beginner, or have used this operating system before. So, instead of seeing\
+    \ your die, and looking for hard expensive ways of solving the problem, you can\
+    \ do it now. It works fast, as reiterated in this book, is easy to understand—so\
+    \ no more illnesses for devices from this point.\n\n## Chapter 5 Installing Linux\n\
+    \nOf course, before using any distribution of Linux, it is essential to install\
+    \ it first. To make that happen, here's what you have to do:\n\nDownload the latest\
+    \ version from the official website (https://www.linux.org/). You will find that\
+    \ if you have another version of Linux on your system, you can still download\
+    \ a new one as a new path would not get in conflict with all the other versions.\
+    \ Add directories to PATH.\n\nYou can also try running the following script in\
+    \ PowerShell:\n\n```\nvivek@nash:~# su -\n# Finding existing ssh-agent: 2160\n\
+    # Finding existing gpg-agent: 2160\n# Known keys for: /root/.ssh/id_rsa\nroot@nash:~#\
+    \ apt-get install screenfetch\nReading package lists... Done\nBuilding dependency\
+    \ tree\nReading state information...\nThe following NEW packages will be installed:\n\
+    screenfetch\n0 upgraded, 1 installed, 0 removed.\nNeed to get 14.4 MB of disk\
+    \ space which will be used.\nAfter this operation, 596 KB of additional disk space\
+    \ will be used.\nSelecting previously installed package screenfetch.\n(Reading\
+    \ database... 72532 files and directories currently installed.)\nPreparing to\
+    \ unpack .../screenfetch_3.6.5-1_all.deb\nUnpacking screenfetch (3.6.5-1)\nProcessing\
+    \ triggers for all-arch (2.7.0-2)\nSetting screenfetch (3.6.5-1)... Done\nroot@nash:~#\
+    \ logout\n```\n\nhttp://s0.cybercity.org/uploads/cms/2015/09/ubuntu-debian-linux-apt-get-install-\n\
+    screenfetch.jpg\n\n## Version 2.0 (if the above does not work)\n\nYou can also\
+    \ try opening the Command Prompt (Start > All Programs > Accessories > Command\
+    \ Prompt).\n\nThen, on the command prompt window, type:\n\nset path=%path%; and\
+    \ press Enter, and install package Simplejson. (You can download it from this\
+    \ link: http://pypi.org/simplejson)\n\nExtract package into download directory.\
+    \ After doing that, you should see something like on your screen: C:\\Users\\\
+    pdxNat\\Downloads\\simplejson-2.1.6\n\n```\n8.920847 input: H Intel PCH Headset\
+    \ as /devices/pci0000:0000/0000:1b:0\n/sound/card0/pcm0i1\n8.921082 mei 0000:00:16:\
+    \ PCI INF -> MSI 16 (level, low) -> IRQ 16\n8.921096 mei mid 0000:00:16: setting\
+    \ latency to 64\n8.924561 Synaptics Touchpad, mode: 1, fs: 7.5, id:0x06b1, caps:0x00073\n\
+    /0x240000:0a04001/input/event0\n9.287988 input: SynPS/2 Synaptics Touchpad as\
+    \ /devices/platform1802/series\n9.422009 scsi 6:00:0: Direct-Access Multiple Card\
+    \ 1.00 PO:\nABC: 0\n9.425568 sd 6:00:0: [sdb] Attached removable disk\n9.767993\
+    \ [link] eth0: state UP\n10.50393 XFS (data): Mounting Filesystem\n```\n"
+  mdcn: "\n\n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_18_0.png)\n\nhttp://cdn.mos.cms.futurecdn.net/56d8a1d50e1d0c1cfc9262fd5243d40b-650-80.png\n\
+    \n此外，还有一个 Gnome3 活动面板，允许你从各种 Linux 桌面环境中进行选择。如果你只是想让你的桌面变得好趣而不是让它变得单调，你可以选择多个。然后，你可以按照自己的意愿进行配置。\n\
+    \n## 有不同的设备、文件和文件夹。\n\nLinux 并不是 Windows——这起初可能会让你感到困惑，但请记住，即使屏幕上的文件夹名称不同，它们也以相同的范式运行——尽管这种方式得到了极大改进。\n\
+    \n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_18_1.png)\n\nhttp://cdn.mos.cms.futurecdn.net/b2ec717d872a45911ffdc770ad46310-650-80.png\n\
+    \n基本上，文件系统从根目录（root）开始，它也被称为“简单路径”——它是一切的源头，也是去的地方。所以，如果你在旅行并想带上笔记本电脑，你可以选择一个端口用于外出，另一个端口用于家里的文件——这不会导致你的系统崩溃。这很很好，因为它虽然很困惑，但能让你专注于此。\n\
+    \n除了根目录和分区之外，事情看起来和你习惯的有些相似，但你可能还会注意到它们现在更整洁了，或者看起来更舒服。这些文件扩展名是为了帮助你作为用户，这意味着虽然它们在旅途中可能会让你困惑，但你学习它们并不会困难——你迟早会感激它们的。\n\
+    \n## 有非常优秀的软件仓库。\n\n你知道在 Windows 中，你通常必须要在网上搜索你需要的应用程序或程序吗？而且，如果你没有使用 Google Play\
+    \ 或 App Store，你可能不得不对找到的内容进行过滤，因为它们可能不是正版的，或者可能无法运行？很好，在 Linux 上你不会遇到这种情况。\n\n\
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_19_0.png)\n\nhttp://cdn.mos.cms.futurecdn.net/139f6b116326daebac6bba8c925660f-80.80\n\
+    \nLinux 拥有一些最好的软件仓库——你可以根据自己的喜好选择软件包，以决定什么最适合你。从软件中心（Software Center），你可以选择各种类型的包，并放心所有这些包都是正常工作的。从这里获取病毒是不常见的，而且如果发生了，你也可以轻松地找到解药——这绝对是完美的，尤其是当你刚开始接触\
+    \ Linux 的时候！\n\n它将帮助你欣赏并理解“开源”范式。\n免费软件并不意味着质量不高，或者那么容易发生故障。在 Linux 的帮助下，你会意识到，有时生活中最美好的东西确实是免费的。它将帮助你对事物产生不同的看法，特别是在涉及技术时，你会把电脑和其他设备看作不仅仅是虚拟机，而是看作是可以你可以个性化并在各种方面真正帮助你的东西。\n\
+    \n而且，它对你的设备是安全的！\n\n```\nalex@Mari ~# sudo pacman -Syu\n[sudo] password for alex:\n\
+    :: Synchronizing package databases...\n core is up to date\nextra is up to date\n\
+    community is up to date\nmultilib is up to date\n:: Starting full system upgrade...\n\
+    \ resolving dependencies...\n Looking for conflicting packages...\nPackages (58)\
+    \ avahi-0.6.32r-1 boost-1.59.0-2 cgal-4.7-1\nchromium-48.0.2491.72 dbus-1.10.0-4\n\
+    device-manager-1.2.5-1 git-2.26.2-1 glib2-2.46.1\nnome-system-monitor-3.18.0-1\
+    \ gptdisk-1.0.1 libudev-20150310-1\nsd-networkd-systemd-20150310-1\n```\n\n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_20_0.png)\n\
+    \nLinux 不是那种运行极其缓慢以至于损害你电脑或任何设备健康的操作系统。事实上，你可以轻松地搜索并使用针对 Linux 错误和其他损坏的解药。它不会让你独自置于黑暗中，也不会让你感到迷茫，特别是如果你还是初学者，或者以前用过这个操作系统。所以，与其面对你的死机并寻找昂贵且困难的方法来解决问题，你现在就可以这样做。它运行很快（正如本书反复强调的），而且易于理解——所以设备再也不会病了。\n\
+    \n## 第5章 安装 Linux\n\n当然，在使用任何 Linux 发行版之前，安装它是至关重要的。为了让这一切发生，你需要：\n\n从官方网站（https://www.linux.org/）下载最新版本。你也可以在系统中找到它。\n\
+    \n你可以尝试运行：\n\n```\nalex@Mari ~# sudo pacman -Syu\n[同步内容]\n:: Synchronizing package\
+    \ databases...\ncore is up to date\nextra is up to date\ncommunity is up to date\n\
+    multilib is up to date\n:: Starting full system upgrade...\nresolving dependencies...\n\
+    Looking for conflicting packages...\nPackages (58) avahi-0.6.32r-1 boost-1.59.0-2\
+    \ cgal-4.7-1\nchromium-48.0.2491.72 dbus-1.10.0-4\ndevice-manager-1.2.5-1 git-2.26.2-1\
+    \ glib2-2.46.1\nnome-system-monitor-3.18.0-1 gptdisk-1.0.1 libudev-20150310-1\n\
+    sd-networkd-systemd-20150310-1\n```\n\nhttp://s0.cybercity.org/uploads/cms/2015/09/ubuntu-debian-apt-get-\n\
+    screenfetch.jpg\n\n## 版本2.0（如果上述方法无效）\n\n你也可以打开命令提示符（开始 > 所有程序 > 命令提示符）。\n\n然后，在命令提示符窗口中输入\
+    \ `set path=%path%;` 并回车，你可以从此链接下载：http://pypi.org/simplejson\n\n将包解压到下载目录。完成后，你应该会在屏幕上看到类似的内容：C:\\\
+    Users\\pdxNat\\Downloads\\simplejson-2.1.6\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 18]
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_18_0.png)
+
+
+    http://cdn.mos.cms.futurecdn.net/56d8a1d50e1d0c1cfc9262fd5243d40b-650-80.png
+
+
+    Aside from that, there''s also a Gnome3 Activities panel which allows you to choose
+    from various Linux Desktop Environments. You might choose more than one, if you
+    just want to have fun with your desktop and not make it monotonous. Then you can
+    configure this way as you want.
+
+
+    # There are different devices, files, and folders.
+
+
+    Linux is not Windows—it is far from that might be confusing at first, but do remember
+    that even if the names of the folders onscreen are different, they work in the
+    same paradigm—albeit in a much improved manner.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_18_1.png)
+
+
+    http://cdn.mos.cms.futurecdn.net/b2ec717d872a45911ffdc770ad46310-650-80.png
+
+
+    Basically, the file system starts with the root, also known as a “simple path”—or
+    where everything stems from, where they go. So, in you''re traveling and you want
+    to bring your laptop with you, you can choose one port for the go, and another
+    for files at home—and this would not disintegr your system. This is good because
+    it is confusing, and it allows you to focus.
+
+
+    Apart from the root and the parts, things look a bit the same as you''re used
+    to, but you might also notice that they''re cleaner now, or that they are easier
+    on the eyes. These file extensions are meant to help you as a user, which means
+    that while they may be confusing on the go-go, you won''t have a hard time learning
+    about them—and you''d appreciate them sooner or later.'
+  - '[PAGE 19]
+
+
+    # There are great software repositories.
+
+
+    You know how with Windows, you often have to search the web for the applications
+    or programs that you need? And, chances, if you''re not using Google Play or the
+    App Store, you''d have to filter what you''ve found because they might not be
+    legit, or might not be working? Well, you wouldn''t experience that with Linux.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_19_0.png)
+
+
+    http://cdn.mos.cms.futurecdn.net/139f6b116326daebac6bba8c925660f-80.80
+
+    Linux has some of the best software repositories—packages that you can choose
+    to determine what would work best for you, depending on your preferences. From
+    the Software Center, you can choose from various kinds of packages, and rest assured
+    that all of these are working. Getting viruses from this is not common, and if
+    it happens, you can easily find the antidote, too—and that''s definitely perfect,
+    especially if you''re only starting out with Linux!
+
+
+    It''ll help you appreciate and understand the “open-source” paradigm.
+
+    Free software doesn''t have to be something that''s not of high quality, or that
+    so easily malfunctions. With the help of Linux, you''ll realize that sometimes,
+    the best things in life really do come free. It''ll help you get a different perspective
+    on things, especially when technology is concerned, and you''ll see your computer
+    and other devices as much than just virtual machines, but stuff that you can personalize
+    and can really help you out in various ways.
+
+
+    And, it''s safe for your device!'
+  - "[PAGE 20]\n\n```\nalex@Mari ~# sudo pacman -Syu\n[sudo] password for alex:\n\
+    :: Synchronizing package databases...\n core is up to date\nextra is up to date\n\
+    community is up to date\nmultilib is up to date\n:: Starting full system upgrade...\n\
+    \ resolving dependencies...\n Looking for conflicting packages...\nPackages (58)\
+    \ avahi-0.6.32r-1 boost-1.59.0-2 cgal-4.7-1\nchromium-48.0.2491.72 dbus-1.10.0-4\n\
+    device-manager-1.2.5-1 git-2.26.2-1 glib2-2.46.1-1\nnome-system-monitor-3.18.0-1\
+    \ gptdisk-1.0.1-1\nsettings-desktop-3.22.11-1 libudev-20150310-1\nlibsd-networkd-systemd-20150310-1\n\
+    ```\n\n![](img/10d8527c9e139fb95cc6a2e58d9d3f19_20_0.png)\n\nLinux is not the\
+    \ kind of OS that works so slowly that it already becomes detrimental for the\
+    \ health of your computer, or any device you have. This also happens because of\
+    \ the fact that you can easily search for, and use antidotes for bugs, viruses,\
+    \ and other software damage from Linux itself. It won't leave you alone in the\
+    \ dark, and won't make you feel lost, especially if you are still a beginner,\
+    \ or have not used this operating system before. So, instead of seeing your device\
+    \ die, and looking for hard to understand, and expensive ways of solving the problem,\
+    \ you can do it yourself now. It works fast, and as reiterated in this book, is\
+    \ easy to understand—so no more terminal illnesses for your devices from this\
+    \ point."
+  - '[PAGE 21]
+
+
+    <!-- no content -->'
+  - "[PAGE 22]\n\n# Chapter 5 Installing Linux\n\nOf course, before using any distribution\
+    \ of Linux, it is essential that you install it first. To make that happen, here's\
+    \ what you have to do:\n\nDownload the latest version from the official website.\
+    \ (https://www.linux.org/).\n\nThere, you will find an MSI Package—just double\
+    \ the file and follow the installation procedure that you will onscreen. Take\
+    \ note that if you already have another version of Linux on your system, you can\
+    \ still download a new one as installs in a new path, with the number of Linux\
+    \ versions that you have (i.e., C:\\Linux\\27) This would not get in conflict\
+    \ with all the other versions you use.\n\nAdd directories to PATH for it to easily\
+    \ be found. (i.e., C:\\Linux\\27 to PATH, etc)\n\nYou can also try running the\
+    \ following script in PowerShell (just look for this label):\n:\\Linux27\\; C:\\\
+    Linux27\\ Scripts\n[Environment]::SetEnvironmentVariable(\"Path\", \"Path;C:\\\
+    Linux27\\Script\")\n\n```\nvivek@nash:~# su - \n# keychain 2.7.1 ~ http://www.funtao.org\n\
+    # Finding existing ssh-agent: 2160\n# Finding existing gpg-agent: 2160\n# Known\
+    \ keys for: /root/.ssh/id_rsa\nroot@nash:~# apt-get install screenfetch\nReading\
+    \ package lists... Done\nBuilding dependency tree\nReading state information...\n\
+    The following NEW packages will be installed:\nscreenfetch\n0 upgraded, 1 installed\
+    \ to remove, 0 not upgraded.\nNeed to get 14.4 MB of disk space which will be\
+    \ used.\nAfter this operation, 596 KB of additional disk space will be used.\n\
+    Selecting previously installed package screenfetch.\n(Reading database... 72532\
+    \ files and directories currently installed.)\nPreparing to unpack .../screenfetch_3.6.5-1_all.deb\n\
+    Unpacking screenfetch (3.6.5-1)\nProcessing triggers for all-arch (2.7.0-2)\n\
+    Setting screenfetch (3.6.5-1)... Done\nroot@nash:~# logout\n```\n\n> http://0.cybcerciti.org/uploads/cms/2015/09/ubuntu-debian-linux-apt-get-install-screenfetch.jpg\n\
+    \n# Version 2.0 (if the above does not work)\n\nYou can also try opening the Command\
+    \ Prompt (Start > All Programs > Accessories > Command Prompt\n\nThen, on the\
+    \ command prompt window, type:"
+  - '[PAGE 23]
+
+
+    set path=%path%;C:\Linux\ and press Enter, and install package Simplejson. (You
+    can
+
+    download it from this link: http://ypi.linux.org/pypi/simplejson)
+
+
+    Extract package into download directory. After doing that, you should see something
+    like
+
+    on your screen: C:\Users\pdxNat\Downloads\simplejson-2.1.6
+
+
+    ```
+
+    8.920847 input: H Intel PCH Headset as /devices/pci0000:00:00/0000:1b:0
+
+    /sound/card0/pcm0i1
+
+    8.921082 mei 0000:00:16: PCI INF -> MSI 16 (level, low) -> IRQ 16
+
+    8.921096 mei mid 0000:00:16: setting latency to 64
+
+    8.924561 Synaptics Touchpad, mode: 1, fs: 7.5, id:0x06b1, caps:0x00073
+
+    /0x240000:0a0400
+
+    1/input/event0
+
+    9.287988 input: SynPS/2 Synaptics Touchpad as /devices/platform1802/series
+
+    9.422009 scsi 6:00:0: Direct-Access Multiple Card 1.00 PO:
+
+    ABC: 0
+
+    9.425568 sd 6:00:0: [sdb] Attached SCSI removable disk
+
+    9.767993 add device 20671a48 on /dev/sdb3. Priority:1 extents:1:2
+
+    10.503933 XFS (data): Mounting Filesystem
+
+    10.777454 XFS (data): Ending clean mount
+
+    11.258262 alx 0000:02:00: irq 44 for MSI/MSI-X
+
+    11.258265 alx 0000:02:00: irq 45 for MSI/MSI-X
+
+    11.258268 alx 0000:02:00: irq 46 for MSI/MSI-X
+
+    21.356334 alx 0000:02:00: link Up: 100 Mbps Full
+
+    21.356939 ADDRCON(NETDEV_UP): enp2s0: link is not ready
+
+    21.356939 ADDRCON(NETDEV_CHANGE): enp2s0: link becomes ready
+
+    29.017958 [link] eth0: state UP
+
+    31.707722 enp2s0: no IPv6 routers present
+
+    ```
+
+
+    http://s0.cybercity.org/uploads/cms/2015/09/ubuntu-debian-linux-apt-get-install-
+
+    screenfetch.jpg
+
+
+    Once you see that, open a new command prompt and type:
+
+
+    ```
+
+    cd downloads\simplejson-2.1.6 or c:\Users\pdxNat\Downloads\simplejson-2.1.6
+
+    to get a result of:
+
+    ```
+
+
+    ```
+
+    c:\Users\pdxNat\Downloads\simplejson-2.1.6>
+
+    ```
+
+
+    Open another command prompt and type setup.py install
+
+
+    Open IDLE (Start > Linux 2.7 > IDLE (GUI)) and then Insert Simplejson
+
+
+    That''s it! You''re all set!'
+- md: '
+
+    # Chapter 6 Using Linux for Work and Play
+
+
+    As mentioned earlier, Linux can be used for a variety of applications—and can
+    work for both work, and play.
+
+
+    # For Work
+
+
+    On the serious side, Linux can work for supercomputers. In fact, it is the OS
+    used for all supercomputers after the demise of Earth Simulator, a supercomputer
+    of the past. NASA also uses Linux for all their computers and applications—so
+    it’s really something that helps bring earth closer to space, and helps a lot
+    of people learn more about the universe! In some offices, Linux is used to help
+    create an efficient system of inputs and outputs—minus the slowness that other
+    Operating Systems bring.
+
+
+    Linux also works for embedded systems, or any device that uses “real-time” mechanisms.
+    For example, if you’re going to watch “TV” but have no television and can only
+    use devices as BusyBox, you can expect that what’s being fed on real time screens
+    would also be captured by the BusyBox—in real time! This means you wouldn''t have
+    to miss out on anything—so if you’re a media practitioner, this can certainly
+    aid you in your work.
+
+
+    Linux is also used for mobile devices to help make sure virtualization becomes
+    easy and prevalent, and helping the user get the best virtual experience possible—perfect
+    for advertisers who make use of augmented reality in their ads. Apart from that,
+    Linux is also used in most servers, especially dynamic sites that work under LYCE
+    and LYME, those that use LAMP, respectively. It also works for cloud computing,
+    as well as for managing services and infrastructures, and the like.
+
+
+    # For Play
+
+
+    And of course, Linux works great for fun purposes, too! It can work as a human
+    interactive device, and place to play your favorite games on Android and other
+    mobile devices, because Linux can work as an amazing gaming platform, with gaming
+    greats such as Valve choosing Linux as a platform for its applications starting
+    in 2012. The famous Steam also uses Linux, and helps customers understand that
+    it’s actually not alienating—and it can help one play games faster, and in a more
+    enjoyable manner.
+
+
+    In short, Linux is around for most anything that you need—and that’s why you wouldn’t
+    hurt for you to try it.
+
+
+    # Chapter 7 Getting to Know Commands
+
+
+    There are various commands that can make the way you use Linux even easier and
+    better. You can learn more about them below.
+
+
+    Main Keywords/Commands:
+
+
+    - zip
+
+    Package and compress files.
+
+
+    - yes
+
+    Print a string until interrupted
+
+
+    - xz
+
+    Compress or decompress .xz and .lzma files
+
+
+    - xdg-open
+
+    Open URL or file in user’s preferred application
+
+
+    - xargs
+
+    Execute utility, pass constructed argument list/s
+
+
+    - write
+
+    Send a message to another user
+
+
+    - whoami
+
+    Print the current user id and name (`id -un`)
+
+
+    - who
+
+    Print all usernames currently logged in
+
+
+    - while
+
+    Execute commands
+
+
+    - which
+
+    Search the user’s $path for a program file
+
+
+    - whereis
+
+    Search the user’s $Path, man pages and source files for a program
+
+
+    - wget
+
+    Retrieve web pages or files via HTTP, HTTPS or FTP
+
+
+    - wc
+
+    Print byte, word, and line counts
+
+
+    - watch
+
+    Execute/display a program periodically
+
+
+    - wait
+
+    Wait for a process to complete
+
+
+    - vmstat
+
+    Report virtual memory statistics
+
+
+    - vi
+
+    Text Editor
+
+
+    - vdir
+
+    Verbosely list directory contents (`ls -l -b`)
+
+
+    - Verbosely
+
+    list directory contents (`ls -l -b`)
+
+
+    - uencode
+
+    Encode a binary file
+
+
+    - uudecode
+
+    Decode a file created by uencode
+
+
+    - users
+
+    List users currently logged in
+
+
+    - usermod
+
+    Modify user account
+
+
+    - userdel
+
+    Delete a user account
+
+
+    - useradd
+
+    Create new user account
+
+
+    - uptime
+
+    Show uptime
+
+
+    - until
+
+    Execute commands (until error)
+
+
+    - unshar
+
+    Unpack shell archive scripts
+
+
+    - unset
+
+    Remove variable or function names
+
+
+    - unrar
+
+    Extract files from a rar archive
+
+
+    - units
+
+    Convert units from one scale to another
+
+
+    - uniq
+
+    Uniquify files
+
+
+    - unexpand
+
+    Convert spaces to tabs
+
+
+    - uname
+
+    Print system information
+
+
+    - unalias
+
+    Remove an alias
+
+
+    - umount
+
+    Unmount a device
+
+
+    - umask
+
+    Users file creation mask
+
+
+    - ulimit
+
+    Limit user resources
+
+
+    - type
+
+    Describe a command
+
+
+    - tty
+
+    Print filename of terminal on stdin
+
+
+    - tsort
+
+    Topological sort
+
+
+    - true
+
+    Do nothing, successfully
+
+
+    - trap
+
+    Run a command when a signal is set(bourne)
+
+
+    - traceroute
+
+    Trace Route to Host
+
+
+    - tr
+
+    Translate, squeeze, and/or delete characters
+
+
+    - tput
+
+    Set terminal-dependent capabilities, color, position
+
+
+    - touch
+
+    Change file timestamps
+
+
+    - top
+
+    List processes running on the system
+
+
+    - times
+
+    User and system times
+
+
+    - timeout
+
+    Run a command with a time limit
+
+
+    - time
+
+    Measure Program running time
+
+
+    - test
+
+    Evaluate a conditional expression
+
+
+    - tee
+
+    Redirect output to multiple files
+
+
+    - tar
+
+    Store, list or extract files in an archive
+
+
+    - tail
+
+    Output the last part of file
+
+
+    - sync
+
+    Synchronize data on disk with memory
+
+
+    - suspend
+
+    Suspend execution of this shell
+
+
+    - sum
+
+    Print a checksum for a file
+
+
+    - sudo
+
+    Execute a command as another user
+
+
+    - su
+
+    Substitute user identity
+
+
+    - strace
+
+    Trace system calls and signals
+
+
+    - stat
+
+    Display file or file system status
+
+
+    - ssh
+
+    Secure Shell client
+
+
+    - split
+
+    Split a file into fixed-size pieces
+
+
+    - source
+
+    Run commands from a file
+
+
+    - sort
+
+    Sort text files
+
+
+    - slocate
+
+    Find files
+
+
+    - sleep
+
+    Delay for a specified time
+
+
+    - shutdown
+
+    Shutdown or restart linux
+
+
+    - shopt
+
+    Shell Options
+
+
+    - shift
+
+    Shift positional parameters
+
+
+    - sftp
+
+    Secure File Transfer Program
+
+
+    - set
+
+    Manipulate shell variables and functions
+
+
+    - seq
+
+    Print numeric sequences
+
+
+    - select
+
+    Accept keyboard input
+
+
+    - sed
+
+    Stream Editor
+
+
+    - sdiff
+
+    Merge two files interactively
+
+
+    - screen
+
+    Multiplex terminal, runs remote shells through ssh
+
+
+    - scp
+
+    Secure copy or create remote file copy
+
+
+    - rsync
+
+    Remote file copy
+
+
+    - rmdir
+
+    Remove folder/
+
+
+    - rm
+
+    Remove files
+
+
+    - rev
+
+    Reverse lines of a file
+
+
+    - return
+
+    Exit a shell function
+
+
+    - renice
+
+    Alter priority of running processes
+
+
+    - rename
+
+    Rename files
+
+
+    - remsync
+
+    Synchronize remote files via email
+
+
+    - reboot
+
+    Reboot the system
+
+
+    - readonly
+
+    Mark variables/functions as read only
+
+
+    - readarray
+
+    Read from stdin into an array variable
+
+
+    - read
+
+    Read from stdin
+
+
+    - rcp
+
+    Copy files between two machines
+
+
+    - rar
+
+    Archive files with compression
+
+
+    - ram
+
+    ram device
+
+
+    - quotacheck
+
+    Scan file system for disk usage
+
+
+    - quota
+
+    Display disk usage and limits
+
+
+    - pwd
+
+    Print Working Directory
+
+
+    - pv
+
+    Monitor the progress of data through a pipe
+
+
+    - pushd
+
+    Save and then change the current directory
+
+
+    - ps
+
+    Process status
+
+
+    - printf
+
+    Format and print data
+
+
+    - printenv
+
+    Print environment variables
+
+
+    - printcap
+
+    Printer capability database
+
+
+    - pr
+
+    Prepare files for printing
+
+
+    - popd
+
+    Restore the previous value of the current directory
+
+
+    - pkill
+
+    Kill processes by name
+
+
+    - kill
+
+    Kill a process by specifying its PID
+
+
+    - join
+
+    Join lines on a common field
+
+
+    - jobs
+
+    List active jobs
+
+
+    - ip
+
+    Routing, devices and tunnels
+
+
+    - install
+
+    Copy files and set attributes
+
+
+    - import
+
+    Capture an X server screen and save the image to file
+
+
+    - ifup
+
+
+    - logout
+
+    Exit a login shell
+
+
+    - logname
+
+    Print current login name
+
+
+    - locate
+
+    Find files
+
+
+    - local
+
+    Create variables
+
+
+    - ln
+
+    Create a symbolic link to a file
+
+
+    - link
+
+    Create a link to a file
+
+
+    - let
+
+    Perform arithmetic on shell variables
+
+
+    - less
+
+    Display output one screen at time
+
+
+    - killall
+
+    Kill processes by name
+
+
+    - nl
+
+    Number lines and write files
+
+
+    - look
+
+    Display lines beginning with a given string
+
+
+    - paste
+
+    Merge lines of files
+
+
+    - passwd
+
+    Modify a user password
+
+
+    - open
+
+    Open a file in its default application
+
+
+    - op
+
+    Operator access
+
+
+    - nslookup
+
+    Query Internet name servers
+
+
+    - notify-send
+
+    Send desktop notifications
+
+
+    - nohup
+
+    Run a command immune to hangups
+
+
+    - nice
+
+    Set lines priority of a command or job
+
+
+    - netstat
+
+    Networking information
+
+
+    - nc
+
+    Netcat, read and write data across networks
+
+
+    - mv
+
+    Move or rename files or directories
+
+
+    - mtr
+
+    Network diagnostics
+
+
+    - mtools
+
+    Manipulate MS-DOS files
+
+
+    - mount
+
+    Mount a file system
+
+
+    - most
+
+    Browse or page through a text file
+
+
+    - more
+
+    Display output one screen at time
+
+
+    - mnvy
+
+    Mass Move and rename file/s
+
+
+    - mknod
+
+    Make block or character special files
+
+
+    - mkisofs
+
+    Create a hybrid ISO9660/JOLIET/HFS filesystem
+
+
+    - mkfifo
+
+    Make FIFOs
+
+
+    - mkdir
+
+    Create new folder/
+
+
+    - man
+
+    Help manual
+
+
+    - make
+
+    Recompile a group of programs
+
+
+    - lsof ownList open files
+
+
+    - ls
+
+    List information about file/s
+
+
+    - lprm
+
+    Remove jobs from the print queue
+
+
+    - lprintq
+
+    List the print queue
+
+
+    - lprintd
+
+    Abort a print job
+
+
+    - lprint
+
+    Print a file
+
+
+    - lpr
+
+    Off line print
+
+
+    - lpc
+
+    Line printer control
+
+    '
+  mdcn: '
+
+
+    # 第 6 章 使用 Linux 进行工作和娱乐
+
+
+    如前所述，Linux 可用于各种应用程序——既可以用于工作，也可以用于娱乐。
+
+
+    # 用于工作
+
+
+    在严肃方面，Linux 可以运行于超级计算机。事实上，在过去的“地球模拟器（Earth Simulator）”超级计算机退役后，它是所有超级计算机所使用的操作系统。NASA
+    的所有计算机和应用程序也使用了 Linux——所以它确实是一项能让地球更接近太空的技术，并帮助许多人了解宇宙！在某些办公室内，Linux 被用于创建一个高效的输入/输出系统——而且消除了其他操作系统带来的缓慢感。
+
+
+    Linux 还适用于嵌入式系统，或任何使用“实时”机制的设备。例如，如果你想看“电视”但没有电视机，只能使用像 BusyBox 这样的设备，你可以预期实时屏幕上显示的内容也会被
+    BusyBox 捕获——是*实时的*！这意味着你将不会错过任何内容——所以如果你是一名媒体从业者，这无疑可以辅助你的工作。
+
+
+    Linux 也被用于移动设备，以确保虚拟化变得简单且普及，并帮助用户获得尽可能好的虚拟体验——对于那些在广告中使用增强现实技术的广告商来说非常完美。此外，Linux
+    还被用于大多数服务器，特别是位于 LYCE 和 LYME 下运行的动态网站（即分别使用 LAMP 的网站）。它还适用于云计算，以及管理的服务、基础设施等。
+
+
+    # 用于娱乐
+
+
+    当然，Linux 在娱乐方面也表现极佳！它可以作为一个人机交互设备，以及在 Android 等其他移动设备上玩你喜欢的游戏的地方，因为 Linux 可以作为一个出色的游戏平台，像
+    Valve 这样的游戏巨头已从 2012 年开始选择 Linux 作为其应用的平台。著名的 Steam 也使用 Linux，并帮助客户理解它其实并不疏远——而且它可以帮助人们更快速、更愉快地玩游戏。
+
+
+    简而言之，Linux 涵盖了你需要的大部分——这就是为什么你应该尝试一下的原因。
+
+
+    # 第 7 章 认识命令
+
+
+    有很多命令可以让你使用 Linux 的方式变得更加简单、更好。你可以在下方学习更多信息。
+
+
+    主要关键词/命令：
+
+
+    - zip
+
+    打包并压缩文件。
+
+
+    - yes
+
+    持续打印字符串直到被中断
+
+
+    - xz
+
+    压缩或解压 .xz 和 .lzma 文件
+
+
+    - xdg-open
+
+    在用户首选应用程序中打开 URL 或文件
+
+
+    - xargs
+
+    执行实用程序，传递构造的参数列表
+
+
+    - write
+
+    向另一个用户发送消息
+
+
+    - whoami
+
+    打印当前用户 ID 和名称 (`id -un`)
+
+
+    - who
+
+    打印所有当前登录的用户名
+
+
+    - while
+
+    执行命令
+
+
+    - which
+
+    在用户的 $path 中搜索程序文件
+
+
+    - whereis
+
+    在用户的 $Path、手动帮助页（man pages）和源文件中搜索程序
+
+
+    - wget
+
+    通过 HTTP、HTTPS 或 FTP 获取网页或文件
+
+
+    - wc
+
+    打印字节数、单词数和行数
+
+
+    - watch
+
+    定期（周期性）执行/显示一个程序
+
+
+    - wait
+
+    等待进程完成
+
+
+    - vmstat
+
+    报告虚拟内存统计信息
+
+
+    - vi
+
+    文本编辑器
+
+
+    - vdir
+
+    详细列出目录内容 (`ls -l -b`)
+
+
+    - Verbosely
+
+    详细列出目录内容 (`ls -l -b`)
+
+
+    - uencode
+
+    对二进制文件编码
+
+
+    - uudecode
+
+    解码由 uencode 创建的文件
+
+
+    - users
+
+    列出当前登录的用户
+
+
+    - usermod
+
+    修改用户账户
+
+
+    - userdel
+
+    删除用户账户
+
+
+    - useradd
+
+    创建新用户账户
+
+
+    - uptime
+
+    显示运行时间
+
+
+    - until
+
+    执行命令（直到错误）
+
+
+    - unshar
+
+    解包 shell 存档脚本
+
+
+    - unset
+
+    移除变量或函数名
+
+
+    - unrar
+
+    从 rar 存档中提取文件
+
+
+    - units
+
+    将单位从一种比例转换为另一种
+
+
+    - uniq
+
+    唯一化文件
+
+
+    - unexpand
+
+    将空格转换为制表符
+
+
+    - uname
+
+    打印系统信息
+
+
+    - unalias
+
+    删除别名
+
+
+    - umount
+
+    卸载设备
+
+
+    - umask
+
+    用户文件创建掩码
+
+
+    - ulimit
+
+    限制用户资源
+
+
+    - type
+
+    描述命令
+
+
+    - tty
+
+    打印标准输入上终端的文件名
+
+
+    - tsort
+
+    拓扑排序
+
+
+    - true
+
+    什么都不做，成功
+
+
+    - trap
+
+    在设置信号时运行命令 (bourne)
+
+
+    - traceroute
+
+    追踪到主机的路由
+
+
+    - tr
+
+    翻译、压缩和/或删除字符
+
+
+    - tput
+
+    设置终端相关的能力、颜色、位置
+
+
+    - touch
+
+    更改文件时间戳
+
+
+    - top
+
+    列出系统上运行的进程
+
+
+    - times
+
+    用户和系统时间
+
+
+    - timeout
+
+    在时间限制内运行命令
+
+
+    - time
+
+    测量程序运行时间
+
+
+    - test
+
+    评估条件表达式
+
+
+    - tee
+
+    将输出重定向到多个文件
+
+
+    - tar
+
+    在存档中存储、列出或提取文件
+
+
+    - tail
+
+    输出文件的最后部分
+
+
+    - sync
+
+    将磁盘数据与内存同步
+
+
+    - suspend
+
+    暂停此 shell 的执行
+
+
+    - sum
+
+    打印文件的和
+
+
+    - sudo
+
+    以另一个用户的身份执行命令
+
+
+    - su
+
+    切换用户身份
+
+
+    - strace
+
+    追踪系统调用和信号
+
+
+    - stat
+
+    显示文件或文件系统状态
+
+
+    - ssh
+
+    安全 Shell 客户端
+
+
+    - split
+
+    将文件分成固定大小的份
+
+
+    - source
+
+    从文件运行命令
+
+
+    - sort
+
+    排序文本文件
+
+
+    - slocate
+
+    查找文件
+
+
+    - sleep
+
+    延迟指定的时间
+
+
+    - shutdown
+
+    关闭或重启 linux
+
+
+    - shopt
+
+    Shell 选项
+
+
+    - shift
+
+    移动位置参数
+
+
+    - sftp
+
+    安全文件传输程序
+
+
+    - set
+
+    操作 shell 变量和函数
+
+
+    - seq
+
+    打印数字序列
+
+
+    - select
+
+    接受键盘输入
+
+
+    - sed
+
+    流编辑器
+
+
+    - sdiff
+
+    交互式合并两个文件
+
+
+    - screen
+
+    终端复用，通过 ssh 运行远程 shell
+
+
+    - scp
+
+    安全复制或创建远程文件副本
+
+
+    - rsync
+
+    远程文件复制
+
+
+    - rmdir
+
+    删除文件夹/
+
+
+    - rm
+
+    删除文件
+
+
+    - rev
+
+    反转文件的行
+
+
+    - return
+
+    退出 shell 函数
+
+
+    - renice
+
+    更改运行进程的优先级
+
+
+    - rename
+
+    重命名文件
+
+
+    - remsync
+
+    通过电子邮件同步远程文件
+
+
+    - reboot
+
+    重启系统
+
+
+    - readonly
+
+    将变量/函数标记为只读
+
+
+    - readarray
+
+    从标准输入读取到数组变量
+
+
+    - read
+
+    从标准输入读取
+
+
+    - rcp
+
+    在两台机器之间复制文件
+
+
+    - rar
+
+    压缩存档文件
+
+
+    - ram
+
+    ram 设备
+
+
+    - quotacheck
+
+    扫描文件系统的磁盘占用
+
+
+    - quota
+
+    显示磁盘使用情况和限制
+
+
+    - pwd
+
+    打印工作目录
+
+
+    - pv
+
+    监控通过管道的数据进度
+
+
+    - pushd
+
+    保存并切换当前目录
+
+
+    - ps
+
+    进程状态
+
+
+    - printf
+
+    格式化并打印数据
+
+
+    - printenv
+
+    打印环境变量
+
+
+    - printcap
+
+    打印机能力数据库
+
+
+    - pr
+
+    准备打印文件
+
+
+    - popd
+
+    恢复之前目录的值
+
+
+    - pkill
+
+    按名称杀死进程
+
+
+    - kill
+
+    通过指定 PID 杀死进程
+
+
+    - join
+
+    按共同字段合并行
+
+
+    - jobs
+
+    列出活动作业
+
+
+    - ip
+
+    路由、设备和隧道
+
+
+    - install
+
+    复制文件并设置属性
+
+
+    - import
+
+    捕获 X 屏幕并保存图像到文件
+
+
+    - ifup
+
+    启动接口
+
+
+    - logout
+
+    退出登录 shell
+
+
+    - logname
+
+    打印当前登录名
+
+
+    - locate
+
+    查找文件
+
+
+    - local
+
+    创建变量
+
+
+    - ln
+
+    为文件创建符号链接
+
+
+    - link
+
+    为文件创建链接
+
+
+    - let
+
+    对 shell 变量执行算术运算
+
+
+    - less
+
+    分页显示输出
+
+
+    - killall
+
+    按名称杀死所有进程
+
+
+    - nl
+
+    给行编号并写入文件
+
+
+    - look
+
+    显示以指定字符串开头的行
+
+
+    - paste
+
+    合并文件
+
+
+    - passwd
+
+    修改用户密码
+
+
+    - open
+
+    在默认应用程序中打开文件
+
+
+    - op
+
+    操作员访问
+
+
+    - nslookup
+
+    查询 DNS 服务器
+
+
+    - notify-send
+
+    发送桌面通知
+
+
+    - nohup
+
+    运行不受挂起的命令
+
+
+    - nice
+
+    设置命令或作业的优先级
+
+
+    - netstat
+
+    网络信息
+
+
+    - nc
+
+    Netcat，在网络上读取和写入数据
+
+
+    - mv
+
+    移动或重命名文件或目录
+
+
+    - mtr
+
+    网络诊断
+
+
+    - mtools
+
+    处理 MS-DOS 文件
+
+
+    - mount
+
+    挂载文件系统
+
+
+    - most
+
+    浏览或分页查看文本文件
+
+
+    - more
+
+    分页显示输出
+
+
+    - mnvy
+
+    批量移动和重命名/s
+
+
+    - mknod
+
+    创建块或字符特殊文件
+
+
+    - mkisofs
+
+    创建混合 ISO9660/JOLIET/HFS 文件系统
+
+
+    - mkfifo
+
+    创建 FIFOs
+
+
+    - mkdir
+
+    创建新文件夹/
+
+
+    - man
+
+    帮助手册
+
+
+    - make
+
+    重新编译一组程序
+
+
+    - lsof
+
+    列出打开的文件
+
+
+    - ls
+
+    列出文件信息
+
+
+    - lprm
+
+    从打印队列中删除作业
+
+
+    - lprintq
+
+    列出打印队列
+
+
+    - lprintd
+
+    取消打印作业
+
+
+    - lprint
+
+    打印文件
+
+
+    - lpr
+
+    离线打印
+
+
+    - lpc
+
+    行打印机控制
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 24]
+
+
+    <!-- no content -->'
+  - '[PAGE 25]
+
+
+    # Chapter 6 Using Linux for Work and Play
+
+
+    As mentioned earlier, Linux can be used for a variety of applications—and can
+    work for both work, and play.
+
+
+    # For Work
+
+
+    On the serious side, Linux can work for supercomputers. In fact, it is the OS
+    used for all supercomputers after the demise of Earth Simulator, a supercomputer
+    of the past. NASA also uses Linux for all their computers and applications—so
+    it’s really something that helps bring earth closer to space, and helps a lot
+    of people learn more about the universe! In some offices, Linux is used to help
+    create an efficient system of inputs and outputs—minus the slowness that other
+    Operating Systems bring.
+
+
+    Linux also works for embedded systems, or any device that uses “real-time” mechanisms.
+    For example, if you’re going to watch “TV” but have no television and can only
+    use devices as BusyBox, you can expect that what’s being fed on real time screens
+    would also be captured by the BusyBox—in real time! This means you wouldn''t have
+    to miss out on anything—so if you’re a media practitioner, this can certainly
+    aid you in your work.
+
+
+    Linux is also used for mobile devices to help make sure virtualization becomes
+    easy and prevalent, and helping the user get the best virtual experience possible—perfect
+    for advertisers who make use of augmented reality in their ads. Apart from that,
+    Linux is also used in most servers, especially dynamic sites that work under LYCE
+    and LYME, those that use LAMP, respectively. It also works for cloud computing,
+    as well as for managing services and infrastructures, and the like.
+
+
+    # For Play
+
+
+    And of course, Linux works great for fun purposes, too! It can work as a human
+    interactive device, and place to play your favorite games on Android and other
+    mobile devices, because Linux can work as an amazing gaming platform, with gaming
+    greats such as Valve choosing Linux as a platform for its applications starting
+    in 2012. The famous Steam also uses Linux, and helps customers understand that
+    it’s actually not alienating—and it can help one play games faster, and in a more
+    enjoyable manner.
+
+
+    In short, Linux is around for most anything that you need—and that’s why you wouldn’t
+    hurt for you to try it.'
+  - '[PAGE 26]
+
+
+    <!-- no content -->'
+  - '[PAGE 27]
+
+
+    # Chapter 7 Getting to Know Commands
+
+
+    There are various commands that can make the way you use Linux even easier and
+    better. You can learn more about them below.
+
+
+    Main Keywords/Commands:
+
+
+    +   - zip
+
+    Package and compress files.
+
+
+    +   - yes
+
+    Print a string until interrupted
+
+
+    +   - xz
+
+    Compress or decompress .xz and .lzma files
+
+
+    +   - xdg-open
+
+    Open URL or file in user’s preferred application
+
+
+    +   - xargs
+
+    Execute utility, pass constructed argument list/s
+
+
+    +   - write
+
+    Send a message to another user
+
+
+    +   - whoami
+
+    Print the current user id and name (`id -un`)
+
+
+    +   - who
+
+    Print all usernames currently logged in
+
+
+    +   - while
+
+    Execute commands
+
+
+    +   - which
+
+    Search the user’s $path for a program file
+
+
+    +   - whereis
+
+    Search the user’s $Path, man pages and source files for a program
+
+
+    +   - wget
+
+    Retrieve web pages or files via HTTP, HTTPS or FTP
+
+
+    +   - wc'
+  - '[PAGE 28]
+
+
+    Print byte, word, and line counts
+
+
+    # watch
+
+
+    Execute/display a program periodically
+
+
+    # wait
+
+
+    Wait for a process to complete •
+
+
+    # vmstat
+
+
+    Report virtual memory statistics
+
+
+    # vi
+
+
+    Text Editor
+
+
+    # vdir
+
+
+    Verbosely list directory contents (`ls -l -b`)
+
+
+    # Verbosely
+
+
+    list directory contents (`ls -l -b`)
+
+
+    # uencode
+
+
+    Encode a binary file
+
+
+    # uudecode
+
+
+    Decode a file created by uencode
+
+
+    # users
+
+
+    List users currently logged in
+
+
+    # usermod
+
+
+    Modify user account
+
+
+    # userdel
+
+
+    Delete a user account
+
+
+    # useradd
+
+
+    Create new user account
+
+
+    # uptime
+
+
+    Show uptime
+
+
+    # until
+
+
+    Execute commands (until error)
+
+
+    # unshar
+
+
+    Unpack shell archive scripts
+
+
+    # unset'
+  - '[PAGE 29]
+
+
+    Remove variable or function names
+
+
+    # unrar
+
+
+    Extract files from a rar archive
+
+
+    # units
+
+
+    Convert units from one scale to another
+
+
+    # uniq
+
+
+    Uniquify files
+
+
+    # unexpand
+
+
+    Convert spaces to tabs
+
+
+    # uname
+
+
+    Print system information
+
+
+    # unalias
+
+
+    Remove an alias
+
+
+    # umount
+
+
+    Unmount a device
+
+
+    # umask
+
+
+    Users file creation mask
+
+
+    +   - ulimit Limit user resources •
+
+
+    # type
+
+
+    Describe a command
+
+
+    # tty
+
+
+    Print filename of terminal on stdin
+
+
+    # tsort
+
+
+    Topological sort
+
+
+    # true
+
+
+    Do nothing, successfully
+
+
+    # trap
+
+
+    Run a command when a signal is set(bourne)
+
+
+    # traceroute
+
+
+    Trace Route to Host
+
+
+    # tr
+
+
+    Translate, squeeze, and/or delete characters'
+  - '[PAGE 30]
+
+
+    # tput
+
+
+    Set terminal-dependent capabilities, color, position
+
+
+    # touch
+
+
+    Change file timestamps
+
+
+    # top
+
+
+    List processes running on the system
+
+
+    # times
+
+
+    User and system times
+
+
+    # timeout
+
+
+    Run a command with a time limit
+
+
+    # time
+
+
+    Measure Program running time
+
+
+    # test
+
+
+    Evaluate a conditional expression
+
+
+    # tee
+
+
+    Redirect output to multiple files
+
+
+    # tar
+
+
+    Store, list or extract files in an archive
+
+
+    # tail
+
+
+    Output the last part of file
+
+
+    # sync
+
+
+    Synchronize data on disk with memory
+
+
+    # suspend
+
+
+    Suspend execution of this shell
+
+
+    # sum
+
+
+    Print a checksum for a file
+
+
+    # sudo
+
+
+    Execute a command as another user
+
+
+    # su
+
+
+    Substitute user identity
+
+
+    # strace'
+  - '[PAGE 31]
+
+
+    Trace system calls and signals
+
+
+    # stat
+
+
+    Display file or file system status
+
+
+    # ssh
+
+
+    Secure Shell client
+
+
+    # split
+
+
+    Split a file into fixed-size pieces
+
+
+    # source
+
+
+    Run commands from a file
+
+
+    # sort
+
+
+    Sort text files
+
+
+    # slocate
+
+
+    Find files
+
+
+    # sleep
+
+
+    Delay for a specified time
+
+
+    # shutdown
+
+
+    Shutdown or restart linux
+
+
+    # shopt
+
+
+    Shell Options
+
+
+    # shift
+
+
+    Shift positional parameters
+
+
+    # sftp
+
+
+    Secure File Transfer Program
+
+
+    # set
+
+
+    Manipulate shell variables and functions
+
+
+    # seq
+
+
+    Print numeric sequences
+
+
+    # select
+
+
+    Accept keyboard input
+
+
+    # sed
+
+
+    Stream Editor
+
+
+    # sdiff'
+  - '[PAGE 32]
+
+
+    Merge two files interactively
+
+
+    # screen
+
+
+    Multiplex terminal, runs remote shells through ssh
+
+
+    # scp
+
+
+    Secure copy or create remote file copy
+
+
+    # rsync
+
+
+    Remote file copy
+
+
+    # rmdir
+
+
+    Remove folder/
+
+
+    # rm
+
+
+    Remove files
+
+
+    # rev
+
+
+    Reverse lines of a file
+
+
+    # return
+
+
+    Exit a shell function
+
+
+    # renice
+
+
+    Alter priority of running processes
+
+
+    # rename
+
+
+    Rename files
+
+
+    # remsync
+
+
+    Synchronize remote files via email
+
+
+    # reboot
+
+
+    Reboot the system
+
+
+    # readonly
+
+
+    Mark variables/functions as read only
+
+
+    # readarray
+
+
+    Read from stdin into an array variable
+
+
+    # read
+
+
+    Read a line from standard input
+
+
+    # rcp
+
+
+    Copy files between two machines
+
+
+    # rar'
+  - '[PAGE 33]
+
+
+    # Archive files with compression
+
+
+    ram
+
+    ram disk device
+
+
+    quotacheck
+
+    Scan file system for disk usage
+
+
+    quota
+
+    Display disk usage and limits
+
+
+    pwd
+
+    Print Working Directory
+
+
+    pv
+
+    Monitor the progress of data through a pipe
+
+
+    pushd
+
+    Save and then change the current directory
+
+
+    ps
+
+    Process status
+
+
+    printf
+
+    Format and print data
+
+
+    printenv
+
+    Print environment variables
+
+
+    printcap
+
+    Printer capability database
+
+
+    pr
+
+    Prepare files for printing
+
+
+    popd
+
+    Restore the previous value of the current directory
+
+
+    pkill
+
+    Kill processes by a full or partial name.
+
+
+    ping
+
+    Test a network connection
+
+
+    pathchk
+
+    Check file name portability
+
+
+    paste'
+  - '[PAGE 34]
+
+
+    # Merge lines of files
+
+
+    passwd
+
+    Modify a user password
+
+
+    open
+
+    Open a file in its default application
+
+
+    op
+
+    Operator access
+
+
+    nslookup
+
+    Query Internet name servers interactively
+
+
+    notify-send
+
+    Send desktop notifications
+
+
+    nohup
+
+    Run a command immune to hangups
+
+
+    nl
+
+    Number lines and write files
+
+
+    nice
+
+    Set the priority of a command or job
+
+
+    netstat
+
+    Networking information
+
+
+    nc
+
+    Netcat, read and write data across networks
+
+
+    mv
+
+    Move or rename files or directories
+
+
+    mtr
+
+    Network diagnostics
+
+
+    mtools
+
+    Manipulate MS-DOS files
+
+
+    mount
+
+    Mount a file system
+
+
+    most
+
+    Browse or page through a text file
+
+
+    more'
+  - '[PAGE 35]
+
+
+    Display output one screen at a time
+
+
+    # mnvy
+
+
+    Mass Move and rename file/s
+
+
+    # mknod
+
+
+    Make block or character special files
+
+
+    # mkisofs
+
+
+    Create a hybrid ISO9660/JOLIET/HFS filesystem
+
+
+    # mkififo
+
+
+    Make FIFOs
+
+
+    # mkdir
+
+
+    Create new folder/s
+
+
+    # man
+
+
+    # Help manual
+
+
+    # make
+
+
+    Recompile a group of programs
+
+
+    # lsof
+
+
+    List open files
+
+
+    # ls
+
+
+    List information about file/s
+
+
+    # lprm
+
+
+    Remove jobs from the print queue
+
+
+    # lprintq
+
+
+    List the print queue
+
+
+    # lprintd
+
+
+    Abort a print job
+
+
+    # lprint
+
+
+    Print a file
+
+
+    # lpr
+
+
+    Off line print
+
+
+    # lpc
+
+
+    Line printer control program
+
+
+    # look'
+  - '[PAGE 36]
+
+
+    Display lines beginning with a given string
+
+
+    +   logout
+
+
+    Exit a login shell
+
+
+    +   logname
+
+
+    Print current login name
+
+
+    +   locate
+
+
+    Find files
+
+
+    +   local
+
+
+    Create variables
+
+
+    +   ln
+
+
+    Create a symbolic link to a file
+
+
+    +   link
+
+
+    Create a link to a file
+
+
+    +   let
+
+
+    Perform arithmetic on shell variables
+
+
+    +   less
+
+
+    Display output one screen at time
+
+
+    +   killall
+
+
+    Kill processes by name
+
+
+    +   kill
+
+
+    Kill a process by specifying its PID
+
+
+    +   join
+
+
+    Join lines on a common field
+
+
+    +   jobs
+
+
+    List active jobs
+
+
+    +   ip
+
+
+    Routing, devices and tunnels
+
+
+    +   install
+
+
+    Copy files and set attributes
+
+
+    +   import
+
+
+    Capture an X server screen and save the image to file
+
+
+    +   ifup'
+- md: '
+
+    Start a network interface up
+
+
+    # ifdown
+
+
+    Stop a network interface
+
+
+    # ifconfig
+
+
+    Configure a network interface
+
+
+    # if
+
+
+    Conditionally perform command
+
+
+    # id
+
+
+    Print user and group id’s
+
+
+    # iconv
+
+
+    Convert the character set of a file
+
+
+    # htop
+
+
+    Interactive process viewer
+
+
+    # hostname
+
+
+    Print or set system name
+
+
+    # history
+
+
+    Command History
+
+
+    # help
+
+
+    Display help for a built-in command
+
+
+    # head
+
+
+    Output the first part of file/s
+
+
+    # hash
+
+
+    Remember the full pathname of a name argument
+
+
+    # gzip
+
+
+    Decompress or compress named file/s
+
+
+    # groups
+
+
+    Print group names a user is in
+
+
+    # groupmod
+
+
+    Modify a group
+
+
+    # groupdel
+
+
+    Delete a group
+
+
+    # groupadd
+
+
+    Add a user security group
+
+
+    # grep
+
+
+    Search file/s for lines matching a given pattern
+
+
+    # getopts
+
+
+    Parse positional parameters
+
+
+    # gawk
+
+
+    Find and Replace text within file/s
+
+
+    # fuser
+
+
+    Identify/kill the process that is accessing a file
+
+
+    # function
+
+
+    Define Function Macros
+
+
+    # ftp
+
+
+    File Transfer Protocol
+
+
+    # fsck
+
+
+    File system consistency check and repair
+
+
+    # free
+
+
+    Display memory usage
+
+
+    # format
+
+
+    Format disks or tapes
+
+
+    # for
+
+
+    Expand words, and execute commands
+
+
+    # fold
+
+
+    Wrap text to fit a specified width.
+
+
+    # fmt
+
+
+    Reformat paragraph text
+
+
+    # find
+
+
+    Search for files that meet a desired criteria
+
+
+    # file
+
+
+    Determine file type
+
+
+    # fgrep
+
+
+    Search file/s for lines that match a fixed string
+
+
+    # fg
+
+
+    Send job to foreground
+
+
+    # **fdisk**
+
+
+    Partition table manipulator for Linux
+
+
+    # **fdformat** Low-level format a floppy disk
+
+
+    # **false**
+
+
+    Do nothing, unsuccessfully
+
+
+    # **expr**
+
+
+    Evaluate expressions
+
+
+    # **export**
+
+
+    Set an environment variable
+
+
+    # **expect**
+
+
+    Automate arbitrary applications that are accessed over a terminal
+
+
+    # **expand**
+
+
+    Convert tabs into spaces
+
+
+    # **exit**
+
+
+    Exit the shell
+
+
+    # **exec**
+
+
+    Execute a command
+
+
+    # **eval**
+
+
+    Evaluate several commands/arguments
+
+
+    # **ethtool**
+
+
+    Ethernet card settings
+
+
+    # **env**
+
+
+    Environment variables
+
+
+    # **enable**
+
+
+    Enable and disable builtin shell commands
+
+
+    # **eject**
+
+
+    Eject removable media
+
+
+    # **egrep**
+
+
+    Search file(s) for lines that match an extended expression
+
+
+    # **echo**
+
+
+    Display message on screen
+
+
+    # du
+
+
+    Estimate file usage
+
+
+    # dmesg
+
+
+    Print kernel & driver messages
+
+
+    # dirs
+
+
+    Display list of remembered directories
+
+
+    # dirname
+
+
+    Convert a full pathname to just a path
+
+
+    # dircolors
+
+
+    Colour setup for `ls`
+
+
+    # dir
+
+
+    Briefly list directory contents
+
+
+    # dig
+
+
+    DNS lookup
+
+
+    # diff3
+
+
+    Show differences among three files
+
+
+    # diff
+
+
+    Display the differences between two files
+
+
+    # df
+
+
+    Display free disk space
+
+
+    # declare
+
+
+    Declare variables and give them attributes
+
+
+    # ddrescue
+
+
+    Data recovery
+
+
+    # dd
+
+
+    Convert and copy a file, write disk headers, boot records
+
+
+    # dc
+
+
+    Desk Calculator
+
+
+    # date
+
+
+    Display or change the date & time
+
+
+    # cut
+
+
+    Divide a file into several parts
+
+
+    # curl
+
+
+    Transfer data from or to a server
+
+
+    # csplit
+
+
+    Split a file into context-determined pieces
+
+
+    # crontab
+
+
+    Schedule a command to run at a later time
+
+
+    # cron
+
+
+    Daemon to execute scheduled commands
+
+
+    # cp
+
+
+    Copy one or more files to another location
+
+
+    # continue
+
+
+    Resume the next iteration of a loop
+
+
+    # command
+
+
+    Run a command - ignoring shell functions
+
+
+    # comm
+
+
+    Compare two sorted files by line
+
+
+    # cmp
+
+
+    Compare two files files
+
+
+    # clear
+
+
+    Clear terminal screen
+
+
+    # cksum
+
+
+    Print CRC checksum and byte counts
+
+
+    # chroot
+
+
+    Run a command with a different root directory
+
+
+    # chown
+
+
+    Change file owner and group
+
+
+    # chmod
+
+
+    Change access permissions
+
+
+    # chkconfig
+
+
+    System services
+
+
+    # chgrp
+
+
+    Change group ownership
+
+
+    # cfdisk
+
+
+    Partition table manipulator for Linux
+
+
+    # cd
+
+
+    Change Directory
+
+
+    # cat
+
+
+    Concatenate and print the content of files
+
+
+    # case
+
+
+    Conditionally perform command
+
+
+    # cal
+
+
+    Display a calendar
+
+
+    # bzip2
+
+
+    Decompress or compress named file/s
+
+
+    # builtin
+
+
+    Run a shell builtin
+
+
+    # break
+
+
+    Exit from a loop •
+
+
+    # bind
+
+
+    Set or display readline key and function bindings •
+
+
+    # bg
+
+
+    Send to background
+
+
+    # bc
+
+
+    Arbitrary precision calculator language
+
+
+    # bash
+
+
+    GNU Bourne-Again SHell
+
+
+    # basename
+
+
+    Strip directory and suffix from filenames
+
+
+    # awk
+
+
+    Find and Replace text, database sort/validate/index
+
+
+    # aspell
+
+
+    pell
+
+
+    Find and Replace text, database sort/validate/index
+
+
+    # aspell
+
+
+    pell
+
+
+    Find and Replace text, database/Ubuntu
+
+
+    # apt-get
+
+
+    Search for packages
+
+
+    # Comment
+
+
+    Run a command
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude
+
+
+    Search for packages
+
+
+    # Comment
+
+
+    Run a command
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude
+
+
+    Search for packages
+
+
+    # Comment
+
+
+    Run a command
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude
+
+
+    Search for packages
+
+
+    # Comment
+
+
+    Run a command
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude
+
+
+    Search for packages
+
+
+    # Comment
+
+
+    Run a command
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # Built-in String Method
+
+    '
+  mdcn: '
+
+    启动网络接口
+
+
+    # ifdown
+
+
+    停止网络接口
+
+
+    # ifconfig
+
+
+    配置网络接口
+
+
+    # if
+
+
+    条件条件执行命令
+
+
+    # id
+
+
+    打印用户和组的 ID
+
+
+    # iconv
+
+
+    转换文件的字符集
+
+
+    # htop
+
+
+    交互式进程查看器
+
+
+    # hostname
+
+
+    打印或设置系统主机
+
+
+    # history
+
+
+    命令历史
+
+
+    # help
+
+
+    显示内置命令的帮助信息
+
+
+    # head
+
+
+    输出文件的开头部分
+
+
+    # hash
+
+
+    记住名称参数的完整路径
+
+
+    # gzip
+
+
+    解压或压缩指定的文件
+
+
+    # groups
+
+
+    打印用户所属的组名
+
+
+    # groupmod
+
+
+    修改组
+
+
+    # groupdel
+
+
+    删除组
+
+
+    # groupadd
+
+
+    添加用户安全组
+
+
+    # grep
+
+
+    在文件中搜索匹配给定模式的行
+
+
+    # getopts
+
+
+    解析位置参数
+
+
+    # gawk
+
+
+    在文件中查找并替换文本
+
+
+    # fuser
+
+
+    识别/杀死正在访问文件的进程
+
+
+    # function
+
+
+    定义函数宏
+
+
+    # ftp
+
+
+    文件传输协议
+
+
+    # fsck
+
+
+    文件系统一致性检查和修复
+
+
+    # free
+
+
+    显示内存使用情况
+
+
+    # format
+
+
+    格式化磁盘或磁带
+
+
+    # for
+
+
+    扩展单词并执行命令
+
+
+    # fold
+
+
+    折叠文本以适应指定的宽度
+
+
+    # fmt
+
+
+    重新格式化段落文本
+
+
+    # find搜索符合特定标准的文件
+
+
+    # file
+
+
+    确定文件类型
+
+
+    # fgrep
+
+
+    在文件中搜索匹配固定字符串的行
+
+
+    # fg
+
+
+    将作业发送到前台
+
+
+    # **fdisk** Linux 分区表操作工具
+
+
+    # **fdformat** 低级格式化软磁盘
+
+
+    # **false** 什么都不做，并返回失败
+
+
+    # **expr** 求值表达式
+
+
+    # **export** 设置环境变量
+
+
+    # **expect** 自动化处理通过终端访问的任意应用程序
+
+
+    # **expand** 将制表符转换为空格
+
+
+    # **exit** 退出 shell
+
+
+    # **exec** 执行命令
+
+
+    # **eval** 求值多个命令/参数
+
+
+    # **ethtool** 以太网卡设置
+
+
+    # **env** 环境变量
+
+
+    # **enable** 启用和禁用内置 shell 命令
+
+
+    # **eject** 弹出可移动媒体
+
+
+    # **egrep** 在文件中搜索匹配扩展表达式的行
+
+
+    # **echo** 在屏幕上显示消息
+
+
+    # du 估算文件用量
+
+
+    # dmesg 打印内核和驱动程序消息
+
+
+    # dirs
+
+
+    显示已记忆目录列表
+
+
+    # dirname 将完整路径转换为纯路径
+
+
+    # dircolors `ls` 的颜色设置
+
+
+    # dir 简要列出目录内容
+
+
+    # dig DNS 查询
+
+
+    # diff3 显示三个文件之间的差异
+
+
+    # diff 显示两个文件之间的差异
+
+
+    # df 显示空磁盘空间
+
+
+    # declare 声明变量并赋予属性
+
+
+    # ddrescue 数据恢复
+
+
+    # dd 转换并复制文件，写入磁盘头、引导记录
+
+
+    # dc 桌面计算器
+
+
+    # date 显示或更改日期和时间
+
+
+    # cut 将文件分成若干部分
+
+
+    # curl 从服务器向服务器传输数据
+
+
+    # csplit 将文件分割为上下文决的部分
+
+
+    # crontab 调度命令在稍后运行
+
+
+    # cron 执行调度命令的守护进程
+
+
+    # cp 将一个或多个文件复制到另一个位置
+
+
+    # continue 继续循环的下次迭代
+
+
+    # command 运行命令 - 忽略 shell 函数
+
+
+    # comm 按行比较两个已排序的文件
+
+
+    # cmp 比较两个文件
+
+
+    # clear 清除终端屏幕
+
+
+    # cksum 打印 CRC 校验和和字节数
+
+
+    # chroot 在不同的根目录下运行命令
+
+
+    # chown 更改文件所有者和组
+
+
+    # chmod 修改访问权限
+
+
+    # chkconfig 系统服务
+
+
+    # chgrp 修改组所有权
+
+
+    # cfdisk Linux 分区表操作工具
+
+
+    # cd 切换目录
+
+
+    # cat 拼接并打印文件内容
+
+
+    # case 条件执行命令
+
+
+    # cal 显示日历
+
+
+    # bzip2 解压或压缩指定的文件
+
+
+    # builtin 运行 shell 内置
+
+
+    # break 退出循环
+
+
+    # bind 设置或显示 readline 按键和函数绑定
+
+
+    # bg 发送至后台
+
+
+    # bc 任意精度计算器语言
+
+
+    # bash GNU Bourne-Again Shell
+
+
+    # basename 去掉文件名中的目录和后缀
+
+
+    # awk 查找并替换文本，数据库 sort/validate/index
+
+
+    # aspell 查找并替换文本，数据库 sort/validate/index
+
+
+    # aspell 查找并替换文本，数据库/Ubuntu
+
+
+    # apt-get 搜索软件包
+
+
+    # Comment 运行命令
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude 搜索软件包
+
+
+    # Comment 运行命令
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude 搜索软件包
+
+
+    # Comment 运行命令
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude 搜索软件包
+
+
+    # Comment 运行命令
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # apt-get-
+
+
+    # aptitude 搜索软件包
+
+
+    # Comment 运行命令
+
+
+    # Numbers are:
+
+
+    ```
+
+    var1
+
+    var2
+
+    ```
+
+
+    # 内置字符串方法
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 37]
+
+
+    Start a network interface up
+
+
+    # ifdown
+
+
+    Stop a network interface
+
+
+    # ifconfig
+
+
+    Configure a network interface
+
+
+    # if
+
+
+    Conditionally perform command
+
+
+    # id
+
+
+    Print user and group id’s
+
+
+    # iconv
+
+
+    Convert the character set of a file
+
+
+    # htop
+
+
+    Interactive process viewer
+
+
+    # hostname
+
+
+    Print or set system name
+
+
+    # history
+
+
+    Command History
+
+
+    # help
+
+
+    Display help for a built-in command
+
+
+    # head
+
+
+    Output the first part of file/s
+
+
+    # hash
+
+
+    Remember the full pathname of a name argument
+
+
+    # gzip
+
+
+    Decompress or compress named file/s
+
+
+    # groups
+
+
+    Print group names a user is in
+
+
+    # groupmod
+
+
+    Modify a group
+
+
+    # groupdel
+
+
+    Delete a group
+
+
+    # groupadd'
+  - '[PAGE 38]
+
+
+    Add a user security group
+
+
+    # grep
+
+
+    Search file/s for lines matching a given pattern
+
+
+    # getopts
+
+
+    Parse positional parameters
+
+
+    # gawk
+
+
+    Find and Replace text within file/s
+
+
+    # fuser
+
+
+    Identify/kill the process that is accessing a file
+
+
+    # function
+
+
+    Define Function Macros
+
+
+    # ftp
+
+
+    File Transfer Protocol
+
+
+    # fsck
+
+
+    File system consistency check and repair
+
+
+    # free
+
+
+    Display memory usage
+
+
+    # format
+
+
+    Format disks or tapes
+
+
+    # for
+
+
+    Expand words, and execute commands
+
+
+    # fold
+
+
+    Wrap text to fit a specified width.
+
+
+    # fmt
+
+
+    Reformat paragraph text
+
+
+    # find
+
+
+    Search for files that meet a desired criteria
+
+
+    # file
+
+
+    Determine file type
+
+
+    # fgrep
+
+
+    Search file/s for lines that match a fixed string
+
+
+    # fg'
+  - '[PAGE 39]
+
+
+    Send job to foreground
+
+
+    # **fdisk**
+
+
+    Partition table manipulator for Linux
+
+
+    # **fdformat** Low-level format a floppy disk
+
+
+    # **false**
+
+
+    Do nothing, unsuccessfully
+
+
+    # **expr**
+
+
+    Evaluate expressions
+
+
+    # **export**
+
+
+    Set an environment variable
+
+
+    # **expect**
+
+
+    Automate arbitrary applications that are accessed over a terminal
+
+
+    # **expand**
+
+
+    Convert tabs into spaces
+
+
+    # **exit**
+
+
+    Exit the shell
+
+
+    # **exec**
+
+
+    Execute a command
+
+
+    # **eval**
+
+
+    Evaluate several commands/arguments
+
+
+    # **ethtool**
+
+
+    Ethernet card settings
+
+
+    # **env**
+
+
+    Environment variables
+
+
+    # **enable**
+
+
+    Enable and disable builtin shell commands
+
+
+    # **eject**
+
+
+    Eject removable media
+
+
+    # **egrep**
+
+
+    Search file(s) for lines that match an extended expression
+
+
+    # **echo**
+
+
+    Display message on screen'
+  - '[PAGE 40]
+
+
+    # du
+
+
+    Estimate file usage
+
+
+    # dmesg
+
+
+    Print kernel & driver messages
+
+
+    # dirs
+
+
+    Display list of remembered directories
+
+
+    # dirname
+
+
+    Convert a full pathname to just a path
+
+
+    # dircolors
+
+
+    Colour setup for `ls`
+
+
+    # dir
+
+
+    Briefly list directory contents
+
+
+    # dig
+
+
+    DNS lookup
+
+
+    # diff3
+
+
+    Show differences among three files
+
+
+    # diff
+
+
+    Display the differences between two files
+
+
+    # df
+
+
+    Display free disk space
+
+
+    # declare
+
+
+    Declare variables and give them attributes
+
+
+    # ddrescue
+
+
+    Data recovery
+
+
+    # dd
+
+
+    Convert and copy a file, write disk headers, boot records
+
+
+    # dc
+
+
+    Desk Calculator
+
+
+    # date
+
+
+    Display or change the date & time
+
+
+    # cut
+
+
+    Divide a file into several parts'
+  - '[PAGE 41]
+
+
+    # curl
+
+
+    Transfer data from or to a server
+
+
+    # csplit
+
+
+    Split a file into context-determined pieces
+
+
+    # crontab
+
+
+    Schedule a command to run at a later time
+
+
+    # cron
+
+
+    Daemon to execute scheduled commands
+
+
+    # cp
+
+
+    Copy one or more files to another location
+
+
+    # continue
+
+
+    Resume the next iteration of a loop
+
+
+    # command
+
+
+    Run a command - ignoring shell functions
+
+
+    # comm
+
+
+    Compare two sorted files by line
+
+
+    # cmp
+
+
+    Compare two files files
+
+
+    # clear
+
+
+    Clear terminal screen
+
+
+    # cksum
+
+
+    Print CRC checksum and byte counts
+
+
+    # chroot
+
+
+    Run a command with a different root directory
+
+
+    # chown
+
+
+    Change file owner and group
+
+
+    # chmod
+
+
+    Change access permissions
+
+
+    # chkconfig
+
+
+    System services
+
+
+    # chgrp
+
+
+    Change group ownership'
+  - '[PAGE 42]
+
+
+    # cfdisk
+
+
+    Partition table manipulator for Linux
+
+
+    # cd
+
+
+    Change Directory
+
+
+    # cat
+
+
+    Concatenate and print the content of files
+
+
+    # case
+
+
+    Conditionally perform command
+
+
+    # cal
+
+
+    Display a calendar
+
+
+    # bzip2
+
+
+    Decompress or compress named file/s
+
+
+    # builtin
+
+
+    Run a shell builtin
+
+
+    # break
+
+
+    Exit from a loop •
+
+
+    # bind
+
+
+    Set or display readline key and function bindings •
+
+
+    # bg
+
+
+    Send to background
+
+
+    # bc
+
+
+    Arbitrary precision calculator language
+
+
+    # bash
+
+
+    GNU Bourne-Again SHell
+
+
+    # basename
+
+
+    Strip directory and suffix from filenames
+
+
+    # awk
+
+
+    Find and Replace text, database sort/validate/index
+
+
+    # aspell
+
+
+    pell Checker
+
+
+    # aptitude
+
+
+    Search for and install software packages (Debian/Ubuntu)'
+  - '[PAGE 43]
+
+
+    # apt-get
+
+
+    Search for and install software packages (Debian/Ubuntu)
+
+
+    # apropos
+
+
+    search help manual pages
+
+
+    # alias
+
+
+    Create an alias
+
+
+    *
+
+
+    Run a command script in the current shell
+
+
+    # ###
+
+
+    Comment / Remark
+
+
+    # !!
+
+
+    Run the last command again
+
+
+    # Numbers
+
+
+    Of course, you can expect that numbers are used to store numerical values. Assign
+    your preferred numbers to the variables. For example:
+
+
+    ```
+
+    var1 = 1
+
+    ```
+
+
+    ```
+
+    var2 = 10
+
+    ```
+
+
+    You can also make use of the following numerical types:
+
+
+    +   1. Int (signed integers)
+
+    2. Complex (complex numbers)
+
+    3. Float (floating real point values)
+
+    4. Long (long integers; can be hexadecimal or octal)
+
+
+    # Lists
+
+
+    Linux allows you to create lists that could be enclosed in brackets []. They are
+    like the lists used in C Language, but are definitely easier to make. Again, make
+    use of slice operators (| or [:]), and start with indices of 0. You can concentrate
+    the strings using the plus sign (+) and repeat by using the asterisk (*).
+
+
+    # Dictionaries
+
+
+    In Linux, Dictionaries are considered hash tables or associative arrays. They
+    are filled up with numbers and strings. They are enclosed by curly braces {} and
+    values are assigned by square braces [].
+
+
+    # Linux Classes
+
+
+    Classes define the scope of the program, which are:
+
+
+    Local names, or innermost scope;'
+  - '[PAGE 44]
+
+
+    Built-in names and words searched, or outermost scope;
+
+
+    Current global module names or next to last scope, and;
+
+
+    Enclosing Function scope.
+
+
+    Loops
+
+
+    There are three types of loops and that they are:
+
+
+    For Loop. This is when statements are executed a multiple number of times and
+    codes are abbreviated.
+
+
+    While Loop. This is when statements or groups of statements are repeated when
+    conditions are said to be true.
+
+
+    Nested Loop. This means you''re using loops inside or above the first few loops.
+
+
+    You can also use of Loop Control Statements, such as:
+
+
+    Continue Statement. This makes the loop rest of its body and resets it back to
+    its original form.
+
+
+    Break Statement. This transfers statement execution before terminating the loop,
+    and immediately brings back the other loop. For example:
+
+
+    Pass Statement. When you do not want to execute codes or commands for syntax,
+    that''s what you call a pass statement.
+
+
+    Tuple
+
+
+    A Tuple is like list data but is composed of a lot of values that are separated
+    by commas, and are enclosed in parentheses () as opposed to brackets. Tuples cannot
+    be updated.
+
+
+    # Data Type Conversion
+
+
+    Unichr (x). And finally, with this command, you''ll convert a Unicode character.
+
+
+    Tuple (t). Converts x to tuple.
+
+
+    Str (x). converts x to string representation.
+
+
+    Set (s). converts x to set.
+
+
+    Repr (x). Converts x to repression string.
+
+
+    Ord (x).This gives a single character its integer value.
+
+
+    Oct (x). Converts x to octal string.
+
+
+    Long (x, [base]). Converts x to long integers.
+
+
+    List (L.). Converts x to list.
+
+
+    Int (x, [base]). If x is a string, it becomes the base; also converts x to an
+    integer.
+
+
+    Hex (x). Converts x to hexadecimal string.
+
+
+    Frozen set (s). Converts x to frozen set.
+
+
+    Float (x). Converts integers into floating numbers.'
+  - '[PAGE 45]
+
+
+    Eval (str). This evaluates a string and gives you an object in return.
+
+
+    Dict (d). This gives you a dictionary.
+
+
+    Complex (real [,imag]). This gives you a complex number.
+
+
+    # Assigning the Right Values
+
+
+    The equal sign (=) is important here because. You do not need to make explicit
+    declarations here but you have to make sure that you place the variable before
+    the equal sign, and on the right, put what you want to happen to the variable.
+
+
+    # Statements and Loops
+
+
+    There are three types of loops and they are:
+
+
+    +   * **For Loop.** This is when statements are executed a multiple number of
+    times and codes are abbreviated.
+
+
+    +   * **While Loop.** This is when statements or groups of statements are repeated
+    when conditions are not to be true.
+
+
+    +   * **Nested Loop.** This means you are using loops inside or above the first
+    few loops.
+
+
+    You can also make use of Loop Control Statements, such as:
+
+
+    +   * **Continue Statement.** This makes the loop skip the rest of its body and
+    resets it back to its original form.
+
+
+    +   * **Break Statement.** This transfers statement execution before terminating
+    the loop, and immediately brings back the other loop. For example:
+
+
+    +   * **Pass Statement.** When you do not want to execute codes or commands for
+    syntax, that''s what you call a pass statement.
+
+
+    # Comparison Operators
+
+
+    +   ==. Condition equals true if the operands are equal. ((a==b))
+
+
+    +   <. If values are not equal, condition becomes true. ((a<b))
+
+
+    +   !=. Condition becomes true if value of two operands are not equal.
+
+
+    +   <=. Condition becomes true if left operand value is less than the right operand.
+    (a <=b) is true
+
+
+    +   >=. Condition becomes true if value of left operand is greater than right
+    operand. (a>=b) is (not true)
+
+
+    +   <. If left operand is less than right operand, condition is true. ((a < b))
+
+
+    +   >. If value of left operand is greater than right, condition is true. ((a>b)
+    is not true)
+
+
+    # Special Codes and Characters
+
+
+    In order to program those, you have to make use of special characters and codes.
+    These
+
+
+    # Built-in String Method'
+- md: '
+
+    Zfill(width). Left-pads original string with zeros.
+
+
+    Upper(). Turns lowercase letters into uppercase.
+
+
+    Translate(table, deletechars="") Turns string into translation table.
+
+
+    Title(). Turns string into title-case version, which means uppercase becomes lowercase
+    and vice-versa.
+
+
+    Swapcase(). All letters in the string will be inverted.
+
+
+    Strip([chars]). Performs rstrip() and lstrip() on each string.
+
+
+    Startswith(str, beg=0, end=len(str)). Checks whether string is string itself or
+    subset of string.
+
+
+    Splitlines(num=string.count("\n")). Returns each of the line with new strings.
+
+
+    Split(sep="", num=string.count(sep)). Splits the string into delimiters.
+
+
+    Rjust(width, [fillchar]). This gives you space-padded strings.
+
+
+    Rindex(str, beg=0, end=len(string)). This is just like index but with backward
+    string.
+
+
+    Replace(old, new, [max]). This replaces string with max occurrences.
+
+
+    Max(str). This returns max character alphabetical string.
+
+
+    Join(seq). This merges representations of the strings.
+
+
+    Isdecimal(). If Unicode string contains decimal characters, value returns as true;
+    false otherwise.
+
+
+    Find(str, beg=0, end=len(string)). This checks whether str is string or on subsequent
+    string.
+
+
+    Expandtabs(tabsize=8). Strings and tabs are placed in multiple spaces.
+
+
+    Encode(suffix, beg=0, end=len(string)). This runs an encoded version of each string.
+
+
+    Decode(encoding="UTF-8", errors=strict). The codec registered for encoding will
+    be used for this method, and you''d get a default string.
+
+
+    Count(str, beg=0, end=len(string)). This counts the number of times a string appears
+    and begins indexing.
+
+
+    Center(width, fill). Along with the original string, this''ll give you a space-padded
+    string consuming the total width of the columns.
+
+
+    Capitalize(). This basically capitalizes the first letter of the string.
+
+
+    # Format Symbols and their Functions
+
+
+    - %X hexadecimal integer (UPPER letters)
+
+    - %x hexadecimal integer (lowercase letters)
+
+    - %u unsigned decimal integer
+
+    - %s string conversion via str() prior to formatting
+
+    - %o octal integer
+
+    - %i signed decimal integer
+
+    - %g the shorter of %f and %e
+
+    - %G the shorter of %f and %E
+
+    - %f floating point real number
+
+    - %E exponential notation (with UPPERcase ‘E’)
+
+    - %e exponential notation (with lowercase ‘e’)
+
+    - %d signed decimal integer
+
+    - %c character
+
+
+    # Other Important Symbols
+
+
+    - m.n. m is the minimum total width and n is the number of digits to display after
+    the decimal point (if appl.)
+
+    - 0. pad from left with zeros (instead of spaces)
+
+    - <sp>. leave a blank space before a positive number
+
+    - +. display the sign
+
+    - * argument specifies width or precision
+
+    - (var.) mapping variable (dictionary arguments)
+
+    - %. ‘%%’ leaves you with a single literal ‘%’
+
+    - # add octal leading zero (‘0’) or the hexadecimal leading ‘0x’ or ‘0X’, depending
+    on whether ‘x’ or ‘X’ were used.
+
+    - left justification
+
+
+    # Chapter 8 Managing Files and Directories
+
+
+    Managing Linux files and directories would help you keep things in check. As with
+    any kind of OS, it is important to make sure that you know what’s happening to
+    your system so that it would not disintegrate. More so, it is a way of being mindful
+    of the things you have in your system. Learn more about them in this chapter.
+
+
+    # Directories of Addresses
+
+
+    As the name suggests, this is a telecommunications protocol that makes it easy
+    for communication apps and websites to work. It is used to map network addresses,
+    making messaging—and even video calls—possible, and has also been used for important
+    technologies, such as Xerox PARC Universal Packet, DEC Net, ChaosNet, and IPv4,
+    among others. For this, you can keep in mind the following:
+
+
+    - 1. 0 – Hardware Type (HTYPE)
+
+    - 2. 2 – Protocol Type (PTYPE)
+
+    - 3. 4 – Hardware Address (HLEN) | Protocol Address (PLEN)
+
+    - 4. 6 – Operation (OPER)
+
+    - 5. 8 – Sender Hardware Address (SHA)
+
+    - 6. 10 – Next 2 succeeding bytes
+
+    - 7. 12 – Last 2 succeeding bytes
+
+    - 8. 14 – Sender Address Protocol (SAP)
+
+    - 9. 16 – last 2 succeeding bytes
+
+    - 10. 18 – Target Hardware Address (THA)
+
+    - 11. 20 – next 2 succeeding bytes
+
+    - 12. 22 – last 2 succeeding bytes
+
+    - 13. 24 – Target Protocol Address (TPA)
+
+    - 14. 26 – last 2 succeeding bytes
+
+
+    # Transport Directories
+
+
+    The Transport Directories contain the channels of data that are involved in Linux,
+    which also establish process-to-process connectivity and end-to-end message transfers
+    that provide the right information and logistics for any specific purpose in the
+    network. This could be implemented, connectionless, or object-oriented.
+
+
+    The port is then established with the help of the transport layer where logical
+    constructs are around. It basically means that:
+
+
+    - 1. Data should be correct—and could only have minimal error;
+
+    - 2. Data should arrive in order;
+
+    - 3. Data should include traffic congestion control;
+
+    - 4. Packets that are discarded or lost have to be resent, and;
+
+    - 5. Duplicate data has to be discarded.
+
+
+    When that happens, you can expect the newest version of the Stream Control Protocol
+    to work properly in your network. You don''t have to rely on connection datagrams,
+    though, because as the name suggests, they don''t offer the right connections—and
+    are quite unreliable.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_50_0.png)
+
+
+    http://www.linuxjournal.com/files/linuxjournal/linuxjournal/articles/059/5918fhtml
+
+
+    # Application Directories
+
+
+    The Application Directories encapsulates the protocols by services that provide
+    exchanging protocols. This also includes configuration protocols, routing services
+    and network support services. Examples include File Transfer Protocol (FTP), Hypertext
+    Transfer Protocol (HTTP), and Dynamic Host Configuration Protocol (DHCP). This
+    way, you would be to lower data transfer based on the protocols you are using.
+
+
+    Application layer also treats the Transport Directories as a stable network with
+    black boxes that allow communication to happen all the application, making sure
+    that key qualities of each part of the application still works as strong as it
+    can. Whatever happens to the Application Directories does not concern the Transport
+    and Internet layers because traffic does not usually examine the.
+
+
+    # Link Directories
+
+
+    The networking methods are defined within the link layer. With the help of the
+    link layer, packets could easily be moved and receive driver the network, and
+    it means that the layer corresponds to the OSI model.
+
+
+    # Internet Directories
+
+
+    Basically, the Internet Directories works in such a way that it holds responsibility
+    over sending the right packets, and making sure they could move across several
+    networks. Its main functions are:
+
+
+    - 1. Packet Routing. This is all about sending packets of data from the destination''s
+    source, all the way to where it needs to. Unique Protocol Numbers identify these.
+
+    - 2. Host Identification and Addressing. With the help of a hierarchical IP System,
+    this one is achieved.
+
+    '
+  mdcn: '
+
+
+    Zfill(width). 在原始字符串左侧填充零。
+
+
+    Upper(). 将小写字母转换为大写字母。
+
+
+    Translate(table, deletechars="") 将字符串转换为翻译表。
+
+
+    Title(). 将字符串转换为标题大小版本，这意味着大写字母变为小写字母，反之亦然。
+
+
+    Swapcase(). 字符串中的所有字母都将反转。
+
+
+    Strip([chars]). 对每个字符串执行 rstrip() 和 lstrip()。
+
+
+    Startswith(str, beg=0, end=len(str)). 检查字符串是否是字符串本身或字符串的子集。
+
+
+    Splitlines(num=string.count("\n")). 返回每一行并作为新字符串。
+
+
+    Split(sep="", num=string.count(sep)). 将字符串拆分为分隔符。
+
+
+    Rjust(width, [fillchar]). 这将为你提供右填充的字符串。
+
+
+    Rindex(str, beg=0, end=len(string)). 这与 index 类似，但针对反向字符串。
+
+
+    Replace(old, new, [max]). 以最大出现次数替换字符串。
+
+
+    Max(str). 返回字母表中顺序最大的字符。
+
+
+    Join(seq). 合并字符串的表示形式。
+
+
+    Isdecimal(). 如果 Unicode 字符串包含数字字符，则值返回 true；否则返回 false。
+
+
+    Find(str, beg=0, end=len(string)). 检查 str 是否在字符串或后续字符串中。
+
+
+    Expandtabs(tabsize=8). 将字符串和制表符放在多个空格中。
+
+
+    Encode(suffix, beg=0, end=len(string)). 运行每个字符串的编码版本。
+
+
+    Decode(encoding="UTF-8", errors=strict). 注册编码的编码器将用于此方法，你将得到默认字符串。
+
+
+    Count(str, beg=0, end=len(string)). 统计字符串出现的次数并开始索引。
+
+
+    Center(width, fill). 与原始字符串一起，这将给你一个空格填充的字符串，占用列的总宽度。
+
+
+    Capitalize(). 这基本上是将字符串的首字母大写。
+
+
+    # 格式符号及其功能
+
+
+    - %X 十六进制整数（大写字母）
+
+    - %x 十六进制整数（小写字母）
+
+    - %u 无符号十进制整数
+
+    - %s 格式化前通过 str() 进行字符串转换
+
+    - %o 八进制整数
+
+    - %i 有符号十进制整数
+
+    - %g %f 和 %e 中较短的一个
+
+    - %G %f 和 %E 中较短的一个
+
+    - %f 浮点实数
+
+    - %E 指数计数法（带有大写 ‘E’）
+
+    - %e 指数计数法（带有小写 ‘e’）
+
+    - %d 有符号十进制整数
+
+    - %c 字符
+
+
+    # 其他重要符号
+
+
+    - m.n. m 是最小总宽度，n 是小数点后的显示位数（如果适用）
+
+    - 0. 从左侧填充零（而不是空格）
+
+    - <sp>. 在正数前留出空白格
+
+    - +. 显示符号
+
+    - * 参数指定宽度或精度
+
+    - (var.) 映射变量（字典参数）
+
+    - %. ‘%%’ 留给你单个字面量 ‘%’
+
+    - # 添加八进制前导零（‘0’）或十六进制前导‘0x’或‘0X’，取决于使用了 ‘x’ 还是 ‘X’。
+
+    - 左对齐
+
+
+    # 第 8 章 管理文件和目录
+
+
+    管理 Linux 文件和目录将帮助你控制一切。与任何类型的操作系统一样，确保你了解系统正在发生什么是非常重要的，这样它才不会崩溃。更重要的是，这是对系统中拥有的事物的一种关注方式。在本章中学习更多相关知识。
+
+
+    # 地址目录
+
+
+    正如名称所示，这是一种电信协议，使得通信应用和网站能够轻松工作。它用于映射网络地址，使得消息——甚至视频通话成为可能，并已用于重要技术，例如 Xerox PARC
+    通用数据包、DEC Net、ChaosNet 和 IPv4 等。对于这些，你可以记住以下内容：
+
+
+    - 1. 0 – 硬件类型 (HTYPE)
+
+    - 2. 2 – 协议类型 (PTYPE)
+
+    - 3. 4 – 硬件地址 (HLEN) | 协议地址 (PLEN)
+
+    - 4. 6 – 操作 (OPER)
+
+    - 5. 8 – 发送方硬件地址 (SHA)
+
+    - 6. 10 – 后继的两个字节
+
+    - 7. 12 – 后继的两个字节
+
+    - 8. 14 – 发送方地址协议 (SAP)
+
+    - 9. 16 – 后继的两个字节
+
+    - 10. 18 – 目标硬件地址 (THA)
+
+    - 11. 20 – 后继的两个字节
+
+    - 12. 22 – 后继的两个字节
+
+    - 13. 24 – 目标协议地址 (TPA)
+
+    - 14. 26 – 后继的两个字节
+
+
+    # 传输目录
+
+
+    传输目录包含涉及 Linux 的数据通道，这些通道还建立了进程间的连接和端到端的消息传输，为网络中的任何特定目的提供了正确的信息和逻辑支持。这可以通过无连接的或面向对象的方式来实现。
+
+
+    端口在传输层的帮助下建立，传输层是逻辑结构所在的地方。这基本上意味着：
+
+
+    - 1. 数据应该是正确的——且只能有极小的错误；
+
+    - 2. 数据应该按顺序到达；
+
+    - 3. 数据应该包含流量拥塞控制；
+
+    - 4. 丢弃或丢失的数据包必须重发，并且；
+
+    - 5. 重复数据必须丢弃。
+
+
+    当这种情况时，你可以预期最新版本的流控制协议（Stream Control Protocol）正常工作。然而，你并不需要依赖数据报文，因为正如名称所示，它们并不可靠。
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_50_0.png)
+
+
+    http://www.linuxjournal.com/files/linuxjournal/linuxjournal/articles/059/5918f
+
+
+    # 应用目录
+
+
+    应用目录封装了提供服务的协议。这包括配置协议、路由服务和网络支持服务。示例包括文件传输协议（FTP）、超文本传输协议（HTTP）和动态主机配置协议（DHCP）。通过这种方式，你将根据所使用的协议降低数据传输。
+
+
+    应用层还将传输目录视为一个带有黑盒的网络，允许通信发生，确保应用程序的每个部分的关键特性都能尽可能强大地运行。应用层发生的任何事情通常不涉及传输和互联网层。
+
+
+    # 链路目录
+
+
+    网络方法在链路层中定义。在链路层的帮助下，数据包可以轻松地在网络中移动和接收，这意味着该层对应于 OSI 模型。
+
+
+    # 互联网目录
+
+
+    基本上，互联网目录的工作方式是负责将正确的数据包从源地发送到目的地，并确保它们可以跨越多个网络。它的主要功能是：
+
+
+    - 1. 数据包路由。这完全关于将数据包从目的地的源发送到它需要的地方。唯一的协议号识别这些包。
+
+    - 2. 主机识别和寻址。通过分层 IP 系统可以实现这一点。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 46]
+
+
+    Zfill(width). Left-pads original string with zeros.
+
+
+    Upper ((). Turns lowercase letters into uppercase.
+
+
+    Translate(table, deletechars="") Turns string into translation table.
+
+
+    Title ((). Turns string into titlecard version, which means uppercase becomes
+    lowercase and vice-versa.
+
+
+    Swapcase ((). All letters in the string will be inverted.
+
+
+    Strip ([chars]). Performs rstrip() and Istrip() on each string.
+
+
+    Startswith(str, beg=0, end=len(str)). Checks whether string is string itself or
+    subset of string.
+
+
+    Splitlines(num=string.count("n")). Returns each of the line with new strings.
+
+
+    Split(str=""", num=string.count(str)). Splits the string into delimiters.
+
+
+    Rjust(width, [fillchar]). This gives you space-padded strings.
+
+
+    Rindex(str, beg=0, end=len(string)). This is just like index but with backward
+    string.
+
+
+    Replace(old, new [max]). This replaces string with max occurrences.
+
+
+    Max (str). This returns max character alphabetical string.
+
+
+    Join(seq). This merges representations of the strings.
+
+
+    Isdecimal(). If Unicode string contains decimal characters, value returns as true;
+    false otherwise.
+
+
+    Find(str, beg=0, end=len(string)). This checks whether str is string or on subsequent
+    string.
+
+
+    Expandtabs(tabsize=8). Strings and tabs are placed in multiple spaces.
+
+
+    Encode (suffix, beg=0, end=len(string)). This runs an encoded version of each
+    string.
+
+
+    Decode (encoding UTF-8, errors=strict). The codec registered for encoding will
+    be used for this method, and you''d get a default string.
+
+
+    Count (str, beg=0, end=len(string)). This counts the number of times a string
+    appears and begins indexing.
+
+
+    Center (width, fill). Along with the original string, this''ll give you a space-padded
+    string consuming the total width of the columns.
+
+
+    Capitalize(). This basically capitalizes the first letter of the string.
+
+
+    # Format Symbols and their Functions
+
+
+    +   - %X hexadecimal integer (UPPER letters)
+
+    - %x hexadecimal integer (lowercase letters)
+
+    - %u unsigned decimal integer
+
+    - %s string conversion via str() prior to formatting'
+  - '[PAGE 47]
+
+
+    %o octal integer
+
+
+    %i signed decimal integer
+
+
+    %g the shorter of %f and %e
+
+
+    %G the shorter of %f and %E
+
+
+    %f floating point real number
+
+
+    %E exponential notation (with UPPERcase ‘E’)
+
+
+    %e exponential notation (with lowercase ‘e’)
+
+
+    %d signed decimal integer
+
+
+    %c character
+
+
+    # Other Important Symbols
+
+
+    +   m.n. m is the minimum total width and n is the number of digits to display
+    after the decimal point (if appl.)
+
+
+    +   0. pad from left with zeros (instead of spaces)
+
+
+    +   <sp>. leave a blank space before a positive number
+
+
+    +   +. display the sign
+
+
+    +   * argument specifies width or precision
+
+
+    +   (var.) mapping variable (dictionary arguments)
+
+
+    +   %. ‘%%’ leaves you with a single literal ‘%’
+
+
+    +   # add octal leading zero (‘0’) or the hexadecimal leading ‘0x’ or ‘0X’, depending
+    on whether ‘x’ or ‘X’ were used.
+
+
+    +   - left justification'
+  - '[PAGE 48]
+
+
+    <!-- no content -->'
+  - '[PAGE 49]
+
+
+    # Chapter 8 Managing Files and Directories
+
+
+    Managing Linux files and directories would help you keep things in check. As with
+    any kind of OS, it is important to make sure that you know what’s happening to
+    your system so that it would not disintegrate. More so, it is a way of being mindful
+    of the things you have in your system. Learn more about them in this chapter.
+
+
+    # Directories of Addresses
+
+
+    As the name suggests, this is a telecommunications protocol that makes it easy
+    for communication apps and websites to work. It is used to map network addresses,
+    making messaging—and even video calls—possible, and has also been used for important
+    technologies, such as Xerox PARC Universal Packet, DEC Net, ChaosNet, and IPv4,
+    among others. For this, you can keep in mind the following:
+
+
+    +   1. 0 – Hardware Type (HTYPE)
+
+    2. 2 – Protocol Type (PTYPE)
+
+    3. 4 – Hardware Address (HLEN) | Protocol Address (PLEN)
+
+    4. 6 – Operation (OPER)
+
+    5. 8 – Sender Hardware Address (SHA)
+
+    6. 10 - Next 2 succeeding bytes
+
+    7. 12 – Last 2 succeeding bytes
+
+    8. 14 – Sender Address Protocol (SAP)
+
+    9. 16 – last 2 succeeding bytes
+
+    10. 18 – Target Hardware Address (THA)
+
+    11. 20 – next 2 succeeding bytes
+
+    12. 22 – last 2 succeeding bytes
+
+    13. 24 – Target Protocol Address (TPA)
+
+    14. 26 – last 2 succeeding bytes
+
+
+    # Transport Directories
+
+
+    The Transport Directories contain the channels of data that are involved in Linux,
+    which also establish process-to-process connectivity and end-to-end message transfers
+    that provide the right information and logistics for any specific purpose in the
+    network. This could be implemented, connectionless, or object-oriented.
+
+
+    The port is then established with the help of the transport layer where logical
+    constructs are around. It basically means that:
+
+
+    +   1. Data should be correct—and could only have minimal error;'
+  - '[PAGE 50]
+
+
+    2. Data should arrive in order;
+
+
+    3. Data should include traffic congestion control;
+
+
+    4. Packets that are discarded or lost have to be resent, and;
+
+
+    5. Duplicate data has to be discarded.
+
+
+    When that happens, you can expect the newest version of the Stream Control Protocol
+    to work properly in your network. You don''t have to rely on connection datagrams,
+    though, because as the name suggests, they don''t offer the right connections—and
+    are quite unreliable.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_50_0.png)
+
+
+    http://www.linuxjournal.com/files/linuxjournal/linuxjournal/articles/059/5918fhtml
+
+
+    # Application Directories
+
+
+    The Application Directories encapsulates the protocols by services that provide
+    exchanging protocols. This also includes configuration protocols, routing services
+    and network support services. Examples include File Transfer Protocol (FTP), Hypertext
+    Transfer Protocol (HTTP), and Dynamic Host Configuration Protocol (DHCP). This
+    way, you would be to lower data transfer based on the protocols you are using.
+
+
+    Application layer also treats the Transport Directories as a stable network with
+    black boxes that allow communication to happen all the application, making sure
+    that key qualities of each part of the application still works as strong as it
+    can. Whatever happens to the Application Directories does not concern the Transport
+    and Internet layers because traffic does not usually examine the said layer. However,
+    sometimes, it is essential for the NAT, or Network Address Translator, to consider
+    the payload of the application—and make sure things are running smoothly.
+
+
+    # Link Directories
+
+
+    The networking methods are defined within the link layer. The scope is the intervening
+    routers, together with the host network, including the protocols that are being
+    used to describe the topology of the network, and datagrams are also evident with
+    various goals and assumptions together with strict layering. This means that you
+    can implement Linux'
+  - '[PAGE 51]
+
+
+    above any hardware network technology.
+
+
+    With the help of the link layer, packets could easily be moved and receive driver
+    card packets, and it means that the layer corresponds to the OSI model.
+
+
+    # Internet Directories
+
+
+    Basically, the Internet Directories works in such a way that it holds responsibility
+    over sending the right packets, and making sure that they could move across several
+    networks. Its main functions are:
+
+
+    +   1. Packet Routing. This is all about sending packets of data from the destination''s
+    source, all the way to where it needs to be used. Unique Protocol Numbers identify
+    these.
+
+
+    +   2. Host Identification and Addressing. With the help of a hierarchical IP
+    System, this one is achieved.
+
+
+    # Directory 5 to 10
+
+
+    These are used to resolvethe host because they work under the syntax LinuxConnector::resolvehostname()
+    and they are able to convert IP Addresses and host names with the help of getaddrinfo()
+    function. This way is better than gethostname() because it is a safe thread.
+
+
+    # Directory 13 to 15
+
+
+    These lines are collectively known as LinuxConnector::resolvehost. They''re able
+    to convert the name string and DNS Host to an IP Address so that every assumption
+    made be converted to different network addresses.
+
+
+    # Directory 16
+
+
+    This is the socket() first argument so that you could select specifics and choose
+    protocol families of the communication networks. SOCK_STREAM and PF_INET should
+    be used as they work together.
+
+
+    # Directory 17 to 20
+
+
+    These are known as connect::passing() because it points the user to the right
+    structure with the help of sockaddr_in pointers. It will help you know how long
+    the structure is so you would not confuse it with the other functions of the program
+    and the network itself.
+
+
+    # Lines 28 to 34
+
+
+    These make use of the listen() function. Basically, you could make TCP Requests
+    and have them queued for you to support participating branches of your network.
+    Some Operating Systems do not support this, though, but then you could just try
+    the function m_listening.
+
+
+    # Lines 23 to 27
+
+
+    These are able to bind the listening socket by returning the proper message/bind()
+    values.
+
+
+    # Lines 20 to 21
+
+
+    These allow you to listen to the IP and search for connections even abruptly after
+    certain'
+- md: '
+
+    connections end. However, you can disable this by making use of SO_REUSEADDR function.
+
+
+    # Lines 21 to 32
+
+
+    This gives you in indefinite and continuous number of connections from the clients,
+    and also helps you process a good number of bytes from them, too. It uses the
+    syntax LinuxAcceptor::start where you could also process a number of bytes from
+    the client. Zero (0) appears when there are no available clients—and servers—around.
+
+
+    # Lines 12 to 20
+
+
+    These gives you command-line arguments with the TCPAcceptor function. Take note
+    that you have to specify the IP Address for the server to start making connections.
+
+
+    # Lines 5 to 10
+
+
+    These lines will help you realize that the server would be listening to the IP
+    Port and that there would be a line between the important IP Addresses. Error
+    Messages would be displayed when the server tries to invoke the wrong information.
+
+
+    # Lines 13 to 18
+
+
+    With this, you''ll know whether the server is listening or not because it uses
+    m_address. It also puts and converts bytes into order and prevents socket failures
+    while listening is in order.
+
+
+    # Lines 9 to 12
+
+
+    This will help you initialize new sockets in your network by making use of the
+    PF_INET protocol. TCP Port will come in order, too.
+
+
+    # Line 7
+
+
+    This will help you create the description for the socket so that you could create
+    different calls for different sockets.
+
+
+    # Lines 3 to 10
+
+
+    Meanwhile, if you are trying to accept connections from your clients, these lines
+    will come in handy. For these, the TCPAcceptor::accept syntax is extremely useful.
+    This way, you get all the qualified functions in one thread and you won''t get
+    confused.
+
+
+    # Encapsulation Directory
+
+
+    Now, in order to provide Linux with its much-needed abstraction layers, Encapsulation
+    is done. It is aligned with the protocol suite''s functional division so that
+    each level would be properly encapsulated and dealt with. Take note that whatever
+    is on top of the layer are closely used in the user applications. However, there
+    is no single architectural model that has to be followed, especially when you
+    have less OSI model.
+
+
+    # Chapter 9 Administration and Security
+
+
+    To help you gain better security, and make sure your OS would always be in a “healthy”
+    state, it’s best that you take note of commands given below:
+
+
+    # Protocol of Datagrams
+
+
+    This is an important member of the Internet Suite. It provides connectionless
+    transmissions in such way that they could actually be reliable, and its main difference
+    from other protocols, especially earlier ones, is:
+
+
+    - 1. It is capable of providing datagrams to the network;
+
+    - 2. It is transaction-oriented and work for both Network Protocols and Domain
+    Systems;
+
+    - 3. It works with unidirectional communication, which is suitable for service
+    and broadcast;
+
+    - 4. It works for real-time applications (such as Twitter, Snapchat, etc.) because
+    it makes ways of delays.
+
+    - 5. It is suitable for large number of clients, and is stateless. It also works
+    for streaming applications, well;
+
+    - 6. It is perfect for bootstrapping it is simple. It also works for Octets 0
+    to 4, even 16 in some cases.
+
+
+    # Cross Platforms
+
+
+    You could do cross-platform programming for Linux. For this, have to keep in mind:
+
+
+    - 1. windows.h and winsock.h should be used as the header files.
+
+    - 2. Instead of close(), closesocket() has to be used.
+
+    - 3. Send() and Receive() are used, instead of read() or write().
+
+    - 4. WSASStartup() is used to initialize the library.
+
+
+    # Protocols of Aliases
+
+
+    Another important protocol of Linux, one could send requested and messages to
+    the router, and also has its number. The difference is that it starts in IPv4
+    Header, and is mostly known as ‘1’. It also works between octets 0 to 4, where:
+
+
+    | Field | Description |
+
+    | :--- | :--- |
+
+    | Code = Control Messages | ICMP Subtype |
+
+    | Type = Control Messages | ICMP Subtype |
+
+    | Rest of Header = Contents | ICMP Subtype |
+
+    | Checksum = Error Checking | ICMP Header and Data |
+
+
+    Data then derives a check in IPv4 where error-checking is done. Implementation
+    are also accessible through APIs and various kinds of sockets, together with Network
+    Protocols and microcontroller firmware.
+
+
+    img/10d8527c9e139fb95cc6a2e589d3f19_55_0.png
+
+    https://www.blackmoreops.com/wp-content/uploads/2015/02/Linux-file-hierarchy-Linux-file-structure-blackMORE-Ops.jpg
+
+
+    # Internet Message Protocol
+
+
+    By inputting listen(), the user will be able to accept blocks on the program.
+    This binds the program together and makes it whole. Now, to make things clearer,
+    you have to understand the basic model of the internet.
+
+
+    The Internet Model combines session, presentation, and application layers and
+    the ports of the TCP, making way of bind() to happen. Now, you also have to wait
+    for the response from both the sender and the receiver. This makes it easy for
+    the exchange of requests and messages to be done until the connection is closed.
+    When done properly, the sender and receiver will not have to worry about messages
+    getting unset or communications getting cut.
+
+
+    Connections could then be contained in one thread that it would not be too complicated
+    for the network to understand. This way, the right Protocol Stacks could be created.
+
+
+    # Working on Transmissions
+
+
+    This provides error-checked, orderly, and reliable stream of octets between the
+    IP Network and the various networks that it contains. This is used for email,
+    and most of the World Wide Web, as well. This is also a latent, connectionless
+    protocol, and works by processing data that has already been transmitted. It works
+    from octets 0 to 16, connecting source and destination ports. It also contains
+    sequence numbers, and acknowledgment numbers.
+
+
+    Data Offset is also reserved, together with window size, checksum, and urgent
+    pointers, as well.
+
+
+    Basically, what you can keep in mind is:
+
+
+    - 1. 16 bits identify the source port;
+
+    - 2. 16 bits also identify the receiving port;
+
+    - 3. 4 bits specify the data header in 32-bit words;
+
+    - 4. 32 bits identify the acknowledgment numbers;
+
+    - 5. 9-bits contain the 9-bit flags;
+
+    - 6. 3 bits define data that is reserved for future use. Other bits define options
+    that you could create for your app or website using this OS.
+
+
+    # Host Resolutions
+
+
+    One thing you have to keep in mind about this is that you should use the syntax
+    gethostname() so the standard library can make the right call. This also happens
+    when you''re trying to look for the name of a certain part of the program, and
+    when you want to use it for larger applications. It''s almost the same as python
+    as you could code this way
+
+
+    # Linux Sockets
+
+
+    What you have to understand about Linux is that it is an Open System Interconnect
+    (OSI) Internet Model which means that it works. By inputting listen(), the user
+    will be able to accept blocks on the program. This binds the program together
+    and makes it whole. Now, to make things clearer, you have to understand the basic
+    model of the internet.
+
+
+    | Action | Method |
+
+    | :--- | :--- |
+
+    | Server | bind() |
+
+    | Connection | listen() |
+
+    | Request | accept() |
+
+    | Reply | write() |
+
+    | Client | connect() |
+
+    | Connection | close() |
+
+
+    # Linux Internet
+
+
+    Internet Protocol is all about providing boundaries in the network, as well as
+    relaying datagrams. This involves:
+
+
+    | Field | Description |
+
+    | :--- | :--- |
+
+    | UDP Header | UDP Transport |
+
+    | IP Header | IP Data |
+
+    | Frame Header | Frame Footer |
+
+    '
+  mdcn: '
+
+    连接结束。然而，你可以通过使用 `SO_REUSEADDR` 函数来禁用此限制。
+
+
+    # 第 21 到 32 行
+
+
+    这将让你从客户端获得无限且连续的连接，同时也帮助你处理来自客户端的大量字节。它使用了 `LinuxAcceptor::start` 语法，你也可以在那里处理来自客户端的字节数。当周围没有可用的客户端和服务器时，会显示零
+    (0)。
+
+
+    # 第 12 到 20 行
+
+
+    这些通过 `TCPAcceptor` 函数为你提供了命令行参数。请注意，你必须为服务器指定 IP 地址以开始建立连接。
+
+
+    # 第 5 到 10 行
+
+
+    这些行将帮助你意识到服务器正在监听 IP 端口，并且在重要的 IP 地址之间存在一条线。当服务器尝试调用错误信息时，将显示错误消息。
+
+
+    # 第 13 到 18 行
+
+
+    通过此操作，你将知道服务器是否正在监听，因为它使用了 `m_address`。它还将字节进行排序并转换为顺序，并在监听过程中防止套接字失败。
+
+
+    # 第 9 到 12 行
+
+
+    这将帮助你通过使用 `PF_INET` 协议在网络中初始化新的套接字。TCP 端口也会顺序到达。
+
+
+    # 第 7 行
+
+
+    这将帮助你为套接字创建描述，以便你为不同的套接字创建不同的调用。
+
+
+    # 第 3 到 10 行
+
+
+    同时，如果你尝试接受来自客户端的连接，这些行将大有用。对于这些，`TCPAcceptor::accept` 语法非常有用。通过这样，你可以在一个线程中获得所有的限定函数，而不会感到困惑。
+
+
+    # 封装目录
+
+
+    现在，为了给 Linux 提供其急需的抽象层，进行了封装。它与协议族的功能划分对齐，使得每一层都能得到适当的封装和处理。请注意，层之上的任何内容在用户应用程序中都被密切使用。然而，并没有必须遵循的单一架构模型，特别是当你使用的
+    OSI 模型较少时。
+
+
+    # 第 9 章 管理与安全
+
+
+    为了帮助你获得更好的安全性，并确保你的操作系统始终处于“健康”状态，最好留意下面给出的命令：
+
+
+    # 数据报协议
+
+
+    这是互联网套件的一个重要成员。它提供无连接的传输方式，这种方式实际上实际上是可靠的，它与其他协议（尤其是早期的协议）的主要区别在于：
+
+
+    - 1. 它能够向网络提供数据报；
+
+    - 2. 它是面向事务的，同时适用于网络协议和域名系统；
+
+    - 3. 它与单向通信一起，适用于服务和广播；
+
+    - 4. 它适用于实时应用（如 Twitter、Snapchat 等），因为它产生了延迟的方式。
+
+    - 5. 它适用于大量客户端，并且是无状态的。它也很好地适用于流媒体应用；
+
+    - 6. 它非常适合引导，因为它非常简单。它也适用于 0 到 4 字节，在某些情况下甚至适用于 16 字节。
+
+
+    # 跨平台
+
+
+    你可以为 Linux 进行跨平台编程。为此，必须记住：
+
+
+    - 1. 应该使用 `windows.h` 和 `winsock.h` 作为头文件。
+
+    - 2. 必须使用 `closesocket()` 而不是 `close()`。
+
+    - 3. 使用 `Send()` 和 `Receive()`，而不是 `read()` 或 `write()`。
+
+    - 4. 使用 `WSASStartup()` 来初始化库。
+
+
+    # 别名协议
+
+
+    Linux 的另一个重要协议，人们可以向路由器发送请求和消息，而且它也有编号。区别在于它始于 IPv4 头部，并通常被称为“1”。它也工作在 0 到 4 字节之间，其中：
+
+
+    | 字段 | 描述 |
+
+    | :--- | :--- |
+
+    | Code = 控制消息 | ICMP 子类型 |
+
+    | Type = 控制消息 | ICMP 子类型 |
+
+    | Rest of Header = 内容 | ICMP 子类型 |
+
+    | Checksum = 错误检查 | ICMP 头部和数据 |
+
+
+    数据随后在 IPv4 中进行检查，在那里进行错误检查。实现也可以通过 API 和各种类型的套接字，同网络协议和微控制器固件访问。
+
+
+    img/10d8527c9e139fb95cc6a2e589d3f19_55_0.png
+
+    https://www.blackmoreops.com/wp-content/uploads/2015/02/Linux-file-hierarchy-Linux-file-structure-blackMORE-Ops.jpg
+
+
+    # 互联网消息协议
+
+
+    通过输入 `listen()`，用户将能够接受程序上的块。这把程序绑定在一起使其完整。现在，为了让事情更清晰，你必须理解互联网的基本模型。
+
+
+    互联网模型结合了会话、表示和应用层以及 TCP 端口，使得 `bind()` 的发生。现在，你还需要等待发送方和接收方的响应。这使得请求和消息的交换可以进行，直到连接关闭。如果处理得当，发送方和接收方将不必担心消息丢失或通信被中断。
+
+
+    连接可以包含在一个线程中，这样对网络理解来说就不会太复杂。通过这种方式，可以创建正确的协议栈。
+
+
+    # 传输处理
+
+
+    这在 IP 网络与其包含的各种网络之间提供了经过错误检查、有序且可靠的字节流。这被用于电子邮件以及大多数世界维网。这是一种延迟的、无连接的协议，通过处理已经传输的数据来工作。它工作于
+    0 到 16 字节，连接源端口和目的端口。它还包含序列号和确认号。
+
+
+    数据偏移量（Data Offset）也被保留了，还有窗口大小、校验和和紧急指针。
+
+
+    基本上，你可以记住的是：
+
+
+    - 1. 16 位标识源端口；
+
+    - 2. 16 位也标识接收端口；
+
+    - 3. 4 位指定 32 位字中的数据标部；
+
+    - 4. 32 位标识确认号；
+
+    - 5. 9 位包含 9 位标志位；
+
+    - 6. 3 位定义了留以后使用的数据。其他位定义了你可以使用此操作系统为你的应用或网站创建的选项。
+
+
+    # 主机解析
+
+
+    关于这一点你必须记住的是，你应该使用 `gethostname()` 语法，以便标准库可以进行正确的调用。当你尝试查找程序的某个部分的名称，以及当你想将其用于更大的应用程序时，也会发生。这与
+    Python 几乎一样，你可以这样编写。
+
+
+    # Linux 套接字
+
+
+    你必须理解的 Linux 是它是一个开放系统互连 (OSI) 互联网模型，这意味着它是有效的。通过输入 `listen()`，用户将能够接受程序上的块。这把程序绑定在一起使其完整。现在，为了让事情更清晰，你必须理解互联网的基本模型。
+
+
+    | 操作 | 方法 |
+
+    | :--- | :--- |
+
+    | 服务器 | bind() |
+
+    | 连接 | listen() |
+
+    | 请求 | accept() |
+
+    | 回复 | write() |
+
+    | 客户端 | connect() |
+
+    | 连接 | close() |
+
+
+    # Linux 互联网
+
+
+    互联网协议主要关于为网络提供边界，以及中继数据报。这涉及：
+
+
+    | 字段 | 描述 |
+
+    | :--- | :--- |
+
+    | UDP 头部 | UDP 传输层 |
+
+    | IP 头部 | IP 数据 |
+
+    | 帧头部 | 帧尾部 |
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 52]
+
+
+    connections end. However, you can disable this by making use of SO_REUSEADDR function.
+
+
+    # Lines 21 to 32
+
+
+    This gives you in indefinite and continuous number of connections from the clients,
+    and also helps you process a good number of bytes from them, too. It uses the
+    syntax LinuxAcceptor::start where you could also process a number of bytes from
+    the client. Zero (0) appears when there are no available clients—and servers—around.
+
+
+    # Lines 12 to 20
+
+
+    These gives you command-line arguments with the TCPAcceptor function. Take note
+    that you have to specify the IP Address for the server to start making connections.
+
+
+    # Lines 5 to 10
+
+
+    These lines will help you realize that the server would be listening to the IP
+    Port and that there would be a line between the important IP Addresses. Error
+    Messages would be displayed when the server tries to invoke the wrong information.
+
+
+    # Lines 13 to 18
+
+
+    With this, you''ll know whether the server is listening or not because it uses
+    m_address. It also puts and converts bytes into order and prevents socket failures
+    while listening is in order.
+
+
+    # Lines 9 to 12
+
+
+    This will help you initialize new sockets in your network by making use of the
+    PF_INET protocol. TCP Port will come in order, too.
+
+
+    # Line 7
+
+
+    This will help you create the description for the socket so that you could create
+    different calls for different sockets.
+
+
+    # Lines 3 to 10
+
+
+    Meanwhile, if you are trying to accept connections from your clients, these lines
+    will come in handy. For these, the TCPAcceptor::accept syntax is extremely useful.
+    This way, you get all the qualified functions in one thread and you won''t get
+    confused.
+
+
+    # Encapsulation Directory
+
+
+    Now, in order to provide Linux with its much-needed abstraction layers, Encapsulation
+    is done. It is aligned with the protocol suite''s functional division so that
+    each level would be properly encapsulated and dealt with.
+
+
+    Take note that whatever is on top of the layer that are closely used in the user
+    applications themselves. However, there is no single architectural model that
+    has to be followed, especially when you have less-defined models such as the OSI
+    model. This is its main difference from other internet protocols, especially the
+    earlier ones.'
+  - '[PAGE 53]
+
+
+    <!-- no content -->'
+  - '[PAGE 54]
+
+
+    # Chapter 9 Administration and Security
+
+
+    To help you gain better security, and make sure your OS would always be in a “healthy”
+    state, it’s best that you take note of the commands given below:
+
+
+    # ### Protocol of User Datagrams
+
+
+    This is an important member of the Internet Protocol Suite. It provides connectionless
+    transmissions in such a way that they could actually be reliable, and that they
+    would not ruin the protocol of the network in any way. They are perfect for time-sensitive
+    applications that easily drop pockets. User Diagram Protocols are also:
+
+
+    +   1. It is capable of providing datagrams to the network;
+
+
+    +   2. It is transaction-oriented and work for both Network Time Protocols and
+    Domain Name Systems;
+
+
+    +   3. It works with unidirectional communication, which is suitable for service
+    discoveries and broadcast information;
+
+
+    +   4. It works for real-time applications (such as Twitter, Snapchat, Periscope,
+    etc.) because it makes ways of transmission delays. It also works for VOIP applications
+    (such as Skype), and works for some games, well;
+
+
+    +   5. It is suitable for a large number of clients, and is stateless. It also
+    works for streaming applications, and;
+
+
+    +   6. It’s perfect for bootstrapping it is simple and stateless.
+
+
+    It also works for Octets 0 to 4, and even 20 to 160 in some cases.
+
+
+    # ### Cross Platforms
+
+
+    You could do cross-platform programming for Linux. For this, you have to keep
+    the following in mind:
+
+
+    +   1. windows.h and winsock.h should be used as the header files.
+
+
+    +   2. Instead of close(), closesocket() has to be used.
+
+
+    +   3. Send() and Receive() are used, instead of read() or write().
+
+
+    +   4. WSASStartup() is used to initialize the library.
+
+
+    # ### Protocols of Aliases
+
+
+    Another important protocol of Linux, one could send requested services and messages
+    to the router, and also has its protocol number. The difference is that it starts
+    in the IPv4 Header, and is mostly just known as ‘1’. It also works between octets
+    0 to 4, where:
+
+
+    +   1. Code = Control Messages | ICMP Subtype
+
+
+    +   2. Type = Control Messages | ICMP Subtype'
+  - '[PAGE 55]
+
+
+    # 3. Rest of Header = Contents | ICMP Subtype
+
+
+    # 4. Checksum = Error Checking Data | ICMP Header and Data
+
+
+    Data then derives a check in IPv4 where error-checking is done. Implementations
+    are also accessible through APIs and various kinds of sockets, together with Network
+    Protocols and microcontroller firmware.
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_55_0.png)
+
+
+    https://www.blackmoreops.com/wp-content/uploads/2015/02/Linux-file-system-hierarchy-Linux-file-structure-blackMORE-Ops.jpg
+
+
+    # Internet Message Protocol
+
+
+    By inputting listen (), the user will be able to accept () blocks on the program.
+    This binds () the program together and makes it whole. Now, to make things clearer,
+    you have to understand the basic model of the internet.
+
+
+    The Internet Model combines session, presentation, and application of layers and
+    the ports of the TCP, making way of bind() to happen. Now, you also have to wait
+    for the response from both the sender and the receiver. This makes it easy for
+    the exchange of requests and messages to be done until the connection is closed.
+    When done properly, the sender and receiver will not have to worry about messages
+    getting unset, or communications getting cut.
+
+
+    Connections could then be contained in one thread that it would not be too complicated
+    for the network to understand. This way, the right Protocol Stacks could be created.
+
+
+    # Working on Transmissions
+
+
+    This provides error-checked, orderly, and reliable stream of octets between the
+    IP Network'
+  - '[PAGE 56]
+
+
+    and the various networks that it contains. This is used for email, and most of
+    the World Wide Web, as well. This is also a latent, connectionless protocol, and
+    works by processing data that has already been transmitted. It works from octets
+    0 to 160, connecting source and destination ports. It also contains sequence numbers,
+    and acknowledgment numbers.
+
+
+    Data Offset is also reserved, together with window size, checksum, and urgent
+    pointers, as well.
+
+
+    Basically, what you can keep in mind is:
+
+
+    +   1. 16 bits identify the source port;
+
+    2. 16 bits also identify the receiving port;
+
+    3. 4 bits specify the data header in 32-bit words;
+
+    4. 32 bits identify the acknowledgment numbers;
+
+    5. 9-bits contain the 9-bit flags;
+
+    6. 3 bits define data that is reserved for future use.
+
+
+    Other bits define options that you could create for your app or website using
+    this OS.
+
+
+    # Host Resolutions
+
+
+    One thing you have to keep in mind about this is that you should use the syntax
+    gethostname() so the standard library can make the right call. This also happens
+    when you''re trying to look for the name of a certain part of the program, and
+    when you want to use it for larger applications. It''s almost the same as python
+    as you could code this way
+
+
+    # Linux Sockets
+
+
+    What you have to understand about Linux is that it is an Open System Interconnect
+    (OSI) Internet Model which means that it works in sockets (). In order to establish
+    connections, you need to make use of listening sockets so that the host could
+    make calls—or in other words, connections.
+
+
+    By inputting listen(), the user will be able to accept() blocks on the program.
+    This binds the program and makes it whole. For this, you could keep the following
+    in mind:
+
+
+    | Server: socket() bind() listen() accept() read() write() read() |
+
+    | Send Request: write() read() |
+
+    | Receive Reply: write() read() |
+
+    | Establish connections: connect accept() |
+
+    | Close Connection: close() read() |
+
+    | Client: socket() connect write() read() close() |
+
+
+    # Linux Internet Protocols
+
+
+    Internet Protocol is all about providing boundaries in the network, as well as
+    relaying'
+  - '[PAGE 57]
+
+
+    datagrams allow internet-networking to happen.
+
+
+    The construction involves a header and a payload where the header is known to
+    be the main IP Address, and with interfaces that are connected with the help of
+    certain parameters. Routing prefixes and network designation are also involved,
+    together with internal or external gateway protocols, too. Reliability also depends
+    on end-to-end protocols, but mostly, you could expect the framework to be this:
+
+
+    | UDP Header | UDP DATA Transport |
+
+    | IP Header | IP Data Internet |
+
+    | Frame Header | Frame Data | Frame Footer Link |
+
+    | Data Application |
+
+
+    # Getting Peer Information
+
+
+    In order to get peer information, you have to make sure that you return both TCP
+    and IP information. This way, you could be sure that both server and client are
+    connected to the network. You could also use the getpeername() socket that when
+    information is available, it could easily be captured and saved. This provides
+    the right data to be sent and received by various methods involved in Linux, and
+    contains proper descriptors and grants privileges to others in the program. Some
+    may be deemed private, to make the better experience for the users.
+
+
+    To accept information, let the socket TCPAcceptor::accept() be prevalent in the
+    network. This way, you could differentiate actions coming from the server and
+    the client.
+
+
+    # Construct and Destroy
+
+
+    These are connected to the descriptor of the socket that allow peer Ports and
+    peer IP Addresses to show up onscreen. Note that this does not use other languages,
+    except for C++, unlike its contemporaries in Linux.
+
+
+    Destructors are able to close any connections that you have made. For example,
+    if you want to log out of one of your social networking accounts, you''re able
+    to do it because destructors are around.
+
+
+    # Linux and SMTP Clients
+
+
+    As for SMTP Clients, you could expect that it involves some of the same characters
+    above—with just a few adjustments. You should also keep in mind that this is all
+    about opening the socket, opening input and output streams, reading and writing
+    the socket, and lastly, cleaning the client portal up. You also have to know that
+    it involves the following:
+
+
+    +   1. Datagram Communication. This means that local sockets would work every
+    time your portal sends datagrams to various clients and servers.
+
+
+    +   2. Linux Communications. This time, stream and datagram communication are
+    involved.
+
+
+    +   3. Programming Sockets. And of course, you can expect you''ll program sockets
+    in the right manner!'
+- md: '
+
+    # Echo Client Set-ups
+
+
+    In Linux, Echo Clients work by means of inserting arguments inside the socket()
+    because it means that you will be able to use the IP together with the PF_INET
+    function so that they could both go in the TCP socket. To set up a proper client
+    structure, just remember you have to make a couple of adjustments from earlier
+    codes.
+
+
+    # IO Network Models
+
+
+    In order to get peer information, you have to make sure that both server and client
+    are connected to the network. You could also use the getpeername() socket so that
+    when information is available, it could be easily captured and saved.
+
+
+    To accept information, let the socket LinuxAcceptor::accept() be prevalent in
+    the network. This way, you could differentiate actions from the server and the
+    client.
+
+
+    # Linux and its Sockets
+
+
+    You also have to understand that you can code Linux in C mainly because they both
+    involve the use of sockets. The socket works like a bridge that binds the client
+    to the port, and is responsible for sending the right kinds of requests to the
+    server while waiting for it to respond. Finally, sending and receiving of data
+    is done.
+
+
+    At the same time, the Linux Socket is also able to create a socket for the server
+    that would then bind itself to the port. During that stage, you can begin listening
+    to create traffic as it builds up. You could also wait for the client at that
+    point, and finally, the sending and receiving of data to happen. Its other functions
+    are the following:
+
+
+    - socket_description. This allows the description of both the client and the server
+    will show onscreen.
+
+    - write_buffer. This describes the data that needs to be sent.
+
+    - write_buffer length. In order to write the buffer length, you’ll have to see
+    the string’s output.
+
+    - client_socket. The socket description will also show on top.
+
+    - address. This is used for the connection function so that address_len would
+    be on top.
+
+    - address_len. If the second parameter is null, this would appear onscreen.
+
+    - return. This helps return description of both the client and the socket. This
+    also lets interaction become between the client and the server.
+
+    - server_socket. This is the description of the socket’s located on top.
+
+    - backlog. This is the amount of requests that have not yet been dealt with.
+
+
+    You could also put personal comments every once in a while—but definitely not
+    all the time!
+
+
+    # Conclusion
+
+
+    Thank you for reading this book!
+
+
+    Hopefully, with the help of this book, you have learned what you need to learn
+    about Linux—and what it entails.
+
+
+    Do try the tips mentioned in this book, and let this book serve as your guide
+    when it comes to using and understanding Linux.
+
+
+    Finally, if you enjoyed this book, kindly post a short review on Amazon. It will
+    be greatly appreciated.
+
+
+    Thank you, and enjoy!
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_59_0.png)
+
+
+    # Check Out My Other Books
+
+
+    Congratulations on learning a new operating system. Now the next step would be
+    to continue and practice your new skills and I would like to strongly recommend
+    that you learn other software and programming languages.
+
+
+    # OTHER BOOKS
+
+
+    - WINDOWS 10 MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE
+
+
+    I have also have more books that are part of my “A Code Like a Pro” series that
+    you can download.
+
+    —Here are the Links to my other books: –
+
+
+    # A CODE LIKE A PRO BOOK SERIES
+
+
+    - PYTHON MASTERY – A CODE LIKE A PRO GUIDE FOR PYTHON BEGINNERS
+
+    - ANGULARJS – A CODE LIKE A PRO GUIDE
+
+    - HACKING MASTERY – A CODE LIKE A PRO GUIDE FOR COMPUTER HACKING BEGINNERS
+
+
+    If the links do not work, for whatever reason, you can simply search for these
+    titles on the Amazon website to find them.
+
+    '
+  mdcn: '
+
+
+    # Echo 客户端设置
+
+
+    在 Linux 中，Echo 客户端通过在 `socket()` 中插入参数来工作，这意味着你可以将 IP 配合 `PF_INET` 函数使用，以便它们都能进入
+    TCP 套接字。要设置一个正确的客户端结构，只需记住你必须对之前的代码进行一些调整。
+
+
+    # IO 网络模型
+
+
+    为了获取对端信息，你必须确保服务器和客户端都连接到网络。你还可以使用 `getpeername()` 套接字，这样当信息可用时，就可以轻松地捕获并保存。
+
+
+    为了接收信息，让 Linux 的 `LinuxAcceptor::accept()` 在网络中运行。这样你就可以区分服务器和客户端的操作。
+
+
+    # Linux 及其套接字
+
+
+    你还需要理解，你可以用 C 语言编写 Linux 是因为它们都涉及到套接字的使用。套接字像桥梁一样将客户端绑定到端口，并负责向服务器发送正确的请求，同时等待其响应。最后，完成数据的发送和接收。
+
+
+    同时，Linux 套接字还能为服务器创建一个套接字，然后将其自身绑定到端口。在那个阶段，你可以开始监听并随着流量的建立产生流量。你也可以在该点等待客户端，最后发生数据的发送和接收。它的其他功能如下：
+
+
+    - `socket_description`。允许客户端和服务器的描述显示在屏幕上。
+
+    - `write_buffer`。描述了需要发送的数据。
+
+    - `write_buffer length`。为了写入缓冲区长度，你需要查看字符串的输出。
+
+    - `client_socket`。顶部也会显示套接字描述。
+
+    - `address`。这用于连接函数，以便 `address_len` 显示在顶部。
+
+    - `address_len`。如果第二个参数为 null，它将显示在屏幕上。
+
+    - `return`。这有助于返回客户端和套接字的描述。这也让客户端和服务器之间产生交互。
+
+    - `server_socket`。这是位于顶部的套接字描述。
+
+    - `backlog`。这是尚未处理的请求数量。
+
+
+    你也可以偶尔添加一些注释——但千万不要一直写！
+
+
+    # 结
+
+
+    感谢阅读本书！
+
+
+    希望在本书的帮助下，你已经学习了关于 Linux 所需的知识——以及它所包含的内容。
+
+
+    请尝试书中提到的技巧，让这本书在你在使用和理解 Linux 时成为你的指南。
+
+
+    最后，如果你喜欢这本书，请在 Amazon 上发表简短的评论。我们将不胜感激。
+
+
+    感谢，祝得愉快！
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_59_0.png)
+
+
+    # 查看我的其他书籍
+
+
+    恭喜你学习了一个新的操作系统。现在下一步一步是继续并练习你的新技能，我强烈建议你学习其他的软件和编程语言。
+
+
+    # 其他书籍
+
+
+    - WINDOWS 10 MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE
+
+
+    我还有更多属于我的“A Code Like a Pro”系列的书籍供你下载。
+
+    ——这里是我其他书籍的链接：——
+
+
+    # A CODE LIKE A PRO BOOK SERIES
+
+
+    - PYTHON MASTERY – A CODE LIKE A PRO GUIDE FOR PYTHON BEGINNERS
+
+    - ANGULARJS – A CODE LIKE A PRO GUIDE
+
+    - HACKING MASTERY – A CODE LIKE A PRO GUIDE FOR COMPUTER HACKING BEGINNERS
+
+
+    如果由于某种原因链接无效，你可以直接在 Amazon 网站上搜索这些标题来找到它们。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 58]
+
+
+    # Echo Client Set-ups
+
+
+    In Linux, Echo Clients work by means of inserting arguments inside the socket()
+    because it means that you will be able to use the IP together with the PF_INET
+    function so that they could both go in the TCP socket. To set up a proper client
+    structure, just remember you have to make a couple of adjustments from earlier
+    codes.
+
+
+    # IO Network Models
+
+
+    In order to get peer information, you have to make sure that both server and client
+    are connected to the network. You could also use the getpeername() socket so that
+    when information is available, it could be easily captured and saved.
+
+
+    To accept information, let the socket LinuxAcceptor::accept() be prevalent in
+    the network. This way, you could differentiate actions from the server and the
+    client.
+
+
+    # Linux and its Sockets
+
+
+    You also have to understand that you can code Linux in C mainly because they both
+    involve the use of sockets. The socket works like a bridge that binds the client
+    to the port, and is responsible for sending the right kinds of requests to the
+    server while waiting for it to respond. Finally, sending and receiving of data
+    is done.
+
+
+    At the same time, the Linux Socket is also able to create a socket for the server
+    that would then bind itself to the port. During that stage, you can begin listening
+    to create traffic as it builds up. You could also wait for the client at that
+    point, and finally, the sending and receiving of data to happen. Its other functions
+    are the following:
+
+
+    socket_description. This allows the description of both the client and the server
+    will show up onscreen.
+
+
+    write_buffer. This describes the data that needs to be sent.
+
+
+    write_buffer length. In order to write the buffer length, you’ll have to see the
+    string’s output.
+
+
+    client_socket. The socket description will also show on top.
+
+
+    address. This is used for the connection function so that address_len would be
+    on top.
+
+
+    address_len. If the second parameter is null, this would appear onscreen.
+
+
+    return. This helps return description of both the client and the socket. This
+    also lets interaction become between the client and the server.
+
+
+    server_socket. This is the description of the socket’s located on top.
+
+
+    backlog. This is the amount of requests that have not yet been dealt with.
+
+
+    You could also put personal comments every once in a while—but definitely not
+    all the time!'
+  - '[PAGE 59]
+
+
+    # Conclusion
+
+
+    Thank you for reading this book!
+
+
+    Hopefully, with the help of this book, you have learned what you need to learn
+    about
+
+    Linux—and what it entails.
+
+
+    Do try the tips mentioned in this book, and let this book serve as your guide
+    when it comes
+
+    to using and understanding Linux.
+
+
+    Finally, if you enjoyed this book, kindly post a short review on Amazon. It will
+    be greatly
+
+    appreciated.
+
+
+    Thank you, and enjoy!
+
+
+    ![](img/10d8527c9e139fb95cc6a2e58d9d3f19_59_0.png)'
+  - '[PAGE 60]
+
+
+    # Check Out My Other Books
+
+
+    Congratulations on learning a new operating system. Now the next step would be
+    to continue and practice your new skills and I would like to strongly recommend
+    that you learn other software and programming languages.
+
+
+    # OTHER BOOKS
+
+
+    +   WINDOWS 10 MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE
+
+
+    I have also have more books that are part of my “A Code Like a Pro” series that
+    you can download.
+
+    —Here are the Links to my other books: –
+
+
+    # A CODE LIKE A PRO BOOK SERIES
+
+
+    +   PYTHON MASTERY – A CODE LIKE A PRO GUIDE FOR PYTHON BEGINNERS
+
+    -
+
+    ANGULARJS – A CODE LIKE A PRO GUIDE
+
+
+    HACKING MASTERY – A CODE LIKE A PRO GUIDE FOR COMPUTER HACKING BEGINNERS
+
+
+    If the links do not work, for whatever reason, you can simply search for these
+    titles on the Amazon website to find them.'
