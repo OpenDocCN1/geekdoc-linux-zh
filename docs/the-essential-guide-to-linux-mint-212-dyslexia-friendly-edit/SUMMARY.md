@@ -1,0 +1,2 @@
++   [Linux Mint 21.2 核心指南：阅读障碍友好版：你的 Linux Mint 21.2 之旅阅读障碍友好指南](README.md)
++   [Linux Mint 21.2 核心指南：阅读障碍友好版：你的 Linux Mint 21.2 之旅阅读障碍友好指南](the-essential-guide-to-linux-mint-212-dyslexia-friendly-edit.md)

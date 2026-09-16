@@ -1,0 +1,328 @@
+- - '#'
+  - Linux Mint 21.2 核心指南：阅读障碍友好版：你的 Linux Mint 21.2 之旅阅读障碍友好指南
+- - '#'
+  - 致谢
+- - '##'
+  - SDDM
+- - '##'
+  - Slim
+- - '#'
+  - 前言
+- - '#'
+  - Linux Mint 安装准备
+- - '#'
+  - Brasero
+- - '#'
+  - CDBurnerXP
+- - '#'
+  - Ventoy
+- - '#'
+  - 设置 BIOS 从 USB 启动
+- - '#'
+  - 启动进入 Linux Mint 21.2 ISO
+- - '#'
+  - 安装 Linux Mint 21.2
+- - '#'
+  - 键盘布局
+- - '#'
+  - 多媒体解码器
+- - '#'
+  - 安装类型
+- - '#'
+  - Install alongside/Erase disk
+- - '#'
+  - Something else（其他）
+- - '#'
+  - 新分区表
+- - '#'
+  - EFI 分区
+- - '#'
+  - SWAP
+- - '#'
+  - Root filesystem
+- - '#'
+  - Install Now（立即安装）
+- - '#'
+  - Choosing timezone（选择时区）
+- - '#'
+  - Creating the user（创建用户）
+- - '#'
+  - Installation complete（安装完成）
+- - '#'
+  - Selecting boot entry（选择启动项）
+- - '#'
+  - First Linux Mint 21.2 Login
+- - '#'
+  - Adding user to sudo group（将用户添加到 sudo 组）
+- - '#'
+  - 将用户添加到 vboxusers 组
+- - '#'
+  - 挂起 root 账户
+- - '#'
+  - /usr/sbin/nologin
+- - '#'
+  - /etc/ssh/ssh_config
+- - '#'
+  - /etc/shadow
+- - '#'
+  - Linux Mint 仓库
+- - '#'
+  - 添加存储库变量
+- - '#'
+  - 更新 Linux Mint 21.2
+- - '#'
+  - 更新管理器
+- - '#'
+  - 命令行更新
+- - '#'
+  - 自动更新
+- - '#'
+  - 禁用更新通知
+- - '#'
+  - 更改 Linux Mint 内核
+- - '##'
+  - 将软件安装设为默认打开方式
+- - '##'
+  - 软件管理器
+- - '##'
+  - APT
+- - '##'
+  - Flatpak
+- - '##'
+  - Flatpak 扩展
+- - '##'
+  - Flathub
+- - '##'
+  - Snap
+- - '##'
+  - Snap 商店
+- - '##'
+  - Snap 扩展
+- - '##'
+  - AppImageLauncher
+- - '##'
+  - AppOutlet
+- - '##'
+  - Python PIP
+- - '##'
+  - Node.js NPM
+- - '##'
+  - NVM - 安装与切换 Node.js NPM 版本
+- - '##'
+  - pnpm (包管理器)
+- - '##'
+  - Homebrew
+- - '##'
+  - 安全
+- - '##'
+  - UFW (用户友好防火墙)
+- - '##'
+  - 通用端口
+- - '###'
+  - '端口 - TCP:'
+- - '###'
+  - '端口 - UDP:'
+- - '##'
+  - 安装自定义 UFW 规则
+- - '#'
+  - 将自定义 ufw 文件夹复制到 /etc
+- - '##'
+  - 添加单端口规则 (UFW)
+- - '##'
+  - 添加多端口规则 (UFW)
+- - '##'
+  - 添加范围端口规则 (UFW)
+- - '##'
+  - 多端口和范围端口规则
+- - '##'
+  - 删除端口规则 (UFW)
+- - '##'
+  - GUFW (防火墙配置)
+- - '##'
+  - 单端口规则 (GUFW)
+- - '##'
+  - 多端口规则 (GUFW)
+- - '##'
+  - 范围端口规则 (GUFW)
+- - '##'
+  - 从报告添加端口规则 (GUFW)
+- - '##'
+  - 删除端口规则 (GUFW)
+- - '#'
+  - ClamAV
+- - '##'
+  - Clamd 配置设置
+- - '##'
+  - 计划更新与扫描 (ClamAV)
+- - '##'
+  - ClamTk
+- - '###'
+  - ClamTk (右) 扫描
+- - '###'
+  - ClamTk (计划扫描)
+- - '#'
+  - DNS 安全 (DNS Over TLS)
+- - '##'
+  - 备用 DNS Hosts
+- - '###'
+  - Cloudflare
+- - '###'
+  - Google
+- - '#'
+  - hosts
+- - '#'
+  - 移除内部网络
+- - '#'
+  - 防电磁辐射漆
+- - '#'
+  - 防电磁面料
+- - '#'
+  - 3.5 MM 音箱
+- - '#'
+  - 信鸽
+- - '#'
+  - 学习古语和古典语言
+- - '#'
+  - 厚胶带
+- - '#'
+  - 驱动程序
+- - '##'
+  - Nvidia
+- - '##'
+  - Intel Arc
+- - '##'
+  - 所有 Linux Mint 打印机驱动
+- - '#'
+  - 办公套件
+- - '##'
+  - LibreOffice
+- - '##'
+  - SoftMaker FreeOffice
+- - '##'
+  - Calligra
+- - '##'
+  - OpenOffice (AppImage)
+- - '##'
+  - OpenOffice (AppImage) 桌面快捷方式
+- - '##'
+  - 电子邮件客户端
+- - '##'
+  - Gnu 图像处理程序
+- - '##'
+  - Pinta
+- - '##'
+  - Krita
+- - '##'
+  - Inkscape
+- - '##'
+  - Blender
+- - '##'
+  - Darktable
+- - '##'
+  - Tuxpaint
+- - '##'
+  - 音频编辑器
+- - '##'
+  - Audacity
+- - '##'
+  - Ardour
+- - '##'
+  - MIXXX
+- - '#'
+  - 视频编辑器
+- - '##'
+  - atom-ng
+- - '##'
+  - Visual Studio Code
+- - '##'
+  - VSCodium
+- - '##'
+  - Atom
+- - '##'
+  - Geany
+- - '##'
+  - Bluefish
+- - '##'
+  - Internet Streaming (网络直播)
+- - '##'
+  - OBS Studio
+- - '##'
+  - Owncast
+- - '##'
+  - Individual Privacy (个人隐私)
+- - '##'
+  - Searx
+- - '#'
+  - I2PD 配置设置
+- - '##'
+  - outproxy.enabled = false
+- - '##'
+  - outproxy 的地址和端口
+- - '##'
+  - outproxy = 127.0.0.1
+- - '##'
+  - outproxyport = 9050
+- - '##'
+  - 为 i2pd 配置 Firefox
+- - '#'
+  - Freenet
+- - '##'
+  - FREENET .desktop 快捷方式
+- - '#'
+  - ZeroNet
+- - '##'
+  - ZeroNet .desktop 快捷方式
+- - '#'
+  - Lokinet
+- - '##'
+  - Lokinet Start .desktop 快捷方式
+- - '##'
+  - Lokinet Stop .desktop 快捷方式
+- - '##'
+  - 基于 Chromium 的浏览器
+- - '##'
+  - Google Chrome
+- - '##'
+  - Microsoft Edge
+- - '##'
+  - Thorium Browser
+- - '##'
+  - Opera
+- - '##'
+  - Opera One
+- - '##'
+  - Chromium
+- - '##'
+  - Vivaldi
+- - '##'
+  - Brave
+- - '##'
+  - 基于 Firefox 的浏览器
+- - '##'
+  - Firefox
+- - '##'
+  - Waterfox
+- - '##'
+  - 双击 waterfox。
+- - '##'
+  - Waterfox .desktop 快捷方式
+- - '##'
+  - Mercury
+- - '##'
+  - Mercury .desktop 快捷方式
+- - '##'
+  - LibreWolf
+- - '##'
+  - Pale Moon
+- - '##'
+  - Palemoon .desktop 快捷方式
+- - '##'
+  - Basilisk
+- - '##'
+  - Basilisk .desktop 快捷方式
+- - '##'
+  - Mullvad
+- - '##'
+  - Mullvad .desktop 快捷方式
+- - '#'
+  - 密码管理器
