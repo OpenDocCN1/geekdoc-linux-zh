@@ -1,0 +1,872 @@
+- - '#'
+  - LINUX 完全指南：命令参考，第一版
+- - '#'
+  - 概述
+- - '#'
+  - 引言
+- - '#'
+  - xiii
+- - '#'
+  - 第二部分 系统调用
+- - '#'
+  - 引言
+- - '#'
+  - 第三部分 库函数
+- - '#'
+  - 简介
+- - '#'
+  - 引言
+- - '#'
+  - 第四部分 特殊文件
+- - '#'
+  - 第五部分 文件格式
+- - '#'
+  - 引言
+- - '##'
+  - 第六部分 游戏
+- - '##'
+  - 第七部分 杂项
+- - '##'
+  - 第八部分 管理与特权命令
+- - '#'
+  - 引言
+- - '#'
+  - Linux 完全命令索引
+- - '#'
+  - 第 IX 部分内核参考指南
+- - '#'
+  - 告诉我们您的想法！
+- - '##'
+  - 注意
+- - '#'
+  - 版权
+- - '#'
+  - 引言
+- - '#'
+  - Linux 命令参考手册
+- - '#'
+  - 第一部分：用户命令
+- - '##'
+  - 介绍
+- - '##'
+  - 作者
+- - '##'
+  - addftinfo
+- - '##'
+  - 概览
+- - '##'
+  - 描述
+- - '##'
+  - 选项
+- - '##'
+  - 参见
+- - '##'
+  - afmtodit
+- - '##'
+  - 概览
+- - '##'
+  - 描述
+- - '##'
+  - appres
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - 参见
+- - '##'
+  - 作者
+- - '##'
+  - ar
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - 参见
+- - '##'
+  - 复制
+- - '##'
+  - arch
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - 参见
+- - '##'
+  - GNU as
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - GNU as 的 选项
+- - '##'
+  - 定义
+- - '##'
+  - 保留字 (RESERVED WORDS)
+- - '##'
+  - Shell 语法
+- - '###'
+  - 简单命令 (SIMPLE COMMANDS)
+- - '###'
+  - 管道 (PIPELINES)
+- - '###'
+  - 列表 (LISTS)
+- - '##'
+  - 复合命令 (COMPOUND COMMANDS)
+- - '##'
+  - 注释
+- - '##'
+  - 参数 (PARAMETERS)
+- - '##'
+  - 位置参数 (POSITIONAL PARAMETERS)
+- - '##'
+  - 特殊参数 (SPECIAL PARAMETERS)
+- - '#'
+  - bash
+- - '#'
+  - SHELL VARIABLES
+- - '##'
+  - nlinks
+- - '##'
+  - hostname_completion_file HOSTFILE
+- - '##'
+  - noclobber
+- - '##'
+  - auto-resume
+- - '##'
+  - no_exit_on_failed_exec
+- - '##'
+  - cdable_vars
+- - '##'
+  - EXPANSION（扩展）
+- - '##'
+  - bash
+- - '###'
+  - BRACE EXPANSION（大括号扩展）
+- - '##'
+  - TILDE EXPANSION（波浪号扩展）
+- - '##'
+  - PARAMETER EXPANSION（参数扩展）
+- - '##'
+  - COMMAND Substitution（命令替换）
+- - '##'
+  - ARITHMETICANSION（算术扩展）
+- - '##'
+  - PROCESS SUBSTITUTION（进程替换）
+- - '#'
+  - 单词拆分 (WORD SPLITTING)
+- - '#'
+  - 路径名扩展 (PATHNAME EXPANSION)
+- - '#'
+  - 去除引号 (QUOTE REMOVE)
+- - '#'
+  - 重定向 (IRECTION)
+- - '#'
+  - 重定向输入 (REDIRECTING INPUT)
+- - '#'
+  - 重定向输出 (REDIRECTING OUTPUT)
+- - '#'
+  - 追加重定向输出 (APPENDING REDRECTED OUTPUT)
+- - '#'
+  - 重定向标准输出和标准错误 (REDIRECTING STANDARD OUTPUT AND STANDARD ERROR)
+- - '#'
+  - Here-Documents (HERE-DOCUMENTS)
+- - '#'
+  - 复制文件描述符 (DUPLICATING FILE DESCRIPT)
+- - '#'
+  - 打开读写文件描述符 (OPENING FILE DESCRIPTORS FOR READING AND WRITING)
+- - '#'
+  - 函数 (FUNCTIONS)
+- - '#'
+  - 别名 (ALIASES)
+- - '#'
+  - 作业控制 (JOB CONTROL)
+- - '#'
+  - 信号 (SIGNALS)
+- - '#'
+  - 命令执行 (COMMAND EXECUTION)
+- - '#'
+  - 环境 (ENVIRONMENT)
+- - '#'
+  - 退出状态 (EXIT STATUS)
+- - '#'
+  - 提示符 (PROMPTING)
+- - '#'
+  - READLINE
+- - '##'
+  - bash
+- - '###'
+  - mode
+- - '###'
+  - term
+- - '###'
+  - application
+- - '#'
+  - Quote the current and previous word
+- - '#'
+  - 'C-x: ''\"''''\"'''
+- - '##'
+  - 移动命令
+- - '##'
+  - 历史操作命令
+- - '##'
+  - 修改文本命令
+- - '##'
+  - 数字参数
+- - '##'
+  - 补全
+- - '##'
+  - completion
+- - '##'
+  - 键盘宏
+- - '##'
+  - 杂项
+- - '##'
+  - 历史 (HISTORY)
+- - '##'
+  - 历史扩展 (HISTORY EXPANSION)
+- - '##'
+  - 事件标识符 (EVENT DESIGNATORS)
+- - '##'
+  - 单词标识符 (WORD DESIGNATORS)
+- - '##'
+  - 修饰符 (MODIFIERS)
+- - '#'
+  - SHELL 内置命令
+- - '#'
+  - bash
+- - '#'
+  - shift [n]
+- - '#'
+  - suspend [-f]
+- - '#'
+  - test [expr]
+- - '#'
+  - 调用
+- - '#'
+  - 另参
+- - '#'
+  - 文件
+- - '#'
+  - 版权
+- - '##'
+  - 错误报告
+- - '##'
+  - 缺陷
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - 选项
+- - '##'
+  - 参见
+- - '##'
+  - 作者
+- - '#'
+  - bitmap, bmtoa, atbm
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - 命令行选项
+- - '##'
+  - 用法
+- - '##'
+  - 编辑
+- - '##'
+  - 绘制命令 (垂直, 左, 折, 右, )
+- - '###'
+  - 垂直翻转 (Flip Vertically)
+- - '###'
+  - 向左 (Left)
+- - '###'
+  - 折 (Fold)
+- - '###'
+  - 向右 (Right)
+- - '###'
+  - 左旋转 (Rotate Left)
+- - '###'
+  - 向下 (Down)
+- - '###'
+  - 右旋转 (Rotate Right)
+- - '###'
+  - 点画 (Point)
+- - '###'
+  - 曲线 (Curve)
+- - '###'
+  - 线段 (Line)
+- - '###'
+  - 矩形 (Rectangle)
+- - '###'
+  - 填充矩形 (Filled Rectangle)
+- - '###'
+  - 圆形 (Circle)
+- - '###'
+  - 填充圆形 (Filled Circle)
+- - '###'
+  - 油漆桶 (Flood Fill)
+- - '###'
+  - 热点 (Hot Spot)
+- - '###'
+  - 清除热点 (Clear Hot Spot)
+- - '##'
+  - 文件菜单 (FILE MENU)
+- - '###'
+  - 新建 (New)
+- - '###'
+  - 加载 (Load)
+- - '###'
+  - 插入 (Insert)
+- - '###'
+  - 保存 (Save)
+- - '###'
+  - 另存为 (Save As)
+- - '###'
+  - 调整大小 (Resize)
+- - '###'
+  - 缩放 (Rescale)
+- - '###'
+  - 文件名 (Filename)
+- - '###'
+  - 基名 (Basename)
+- - '###'
+  - 退出 (Quit)
+- - '##'
+  - 剪切和粘贴
+- - '##'
+  - 颜色
+- - '##'
+  - 小部件 (WIDGETS)
+- - '##'
+  - 编辑菜单 (EDIT MENU)
+- - '###'
+  - 图像 (Image)
+- - '###'
+  - 网格 (Grid)
+- - '###'
+  - 虚线 (Dashed)
+- - '###'
+  - 轴 (Axes)
+- - '###'
+  - 点彩 (Stippled)
+- - '###'
+  - 比例 (Proportional)
+- - '###'
+  - 放大 (Zoom)
+- - '##'
+  - 位图组件 (BITMAP WIDGET)
+- - '##'
+  - 颜色
+- - '##'
+  - 位图 (BITMAP)
+- - '##'
+  - bmptopp
+- - '##'
+  - brushtopbm
+- - '##'
+  - cal
+- - '##'
+  - cat
+- - '##'
+  - chattr
+- - '##'
+  - chgrp
+- - '##'
+  - ckdupexe
+- - '##'
+  - chmod
+- - '##'
+  - chown
+- - '##'
+  - chsh
+- - '##'
+  - ci
+- - '##'
+  - clear
+- - '##'
+  - 另见 (See)
+- - '#'
+  - 第一部分：用户命令
+- - '##'
+  - 环境
+- - '##'
+  - 诊断
+- - '##'
+  - 标识
+- - '##'
+  - cidentd
+- - '##'
+  - cksum
+- - '##'
+  - clear
+- - '##'
+  - cmuwtopbm
+- - '##'
+  - CO (关键字替换)
+- - '##'
+  - 文件模式 (FILE MODES)
+- - '##'
+  - 文件 (FILES)
+- - '##'
+  - 诊断信息 (DIAGNOSTICS)
+- - '##'
+  - 限制 (LIMITS)
+- - '##'
+  - col
+- - '##'
+  - colrt
+- - '##'
+  - colrm
+- - '##'
+  - column
+- - '##'
+  - cp
+- - '##'
+  - ccp, cpp
+- - '##'
+  - ccc, cpp
+- - '##'
+  - crontab
+- - '##'
+  - ctags
+- - '##'
+  - CU
+- - '##'
+  - cut
+- - '##'
+  - CVS
+- - '##'
+  - tag
+- - '##'
+  - update
+- - '##'
+  - cvs.lock
+- - '##'
+  - date
+- - '##'
+  - depmod, modprobe
+- - '##'
+  - 配置
+- - '##'
+  - 策略
+- - '##'
+  - dig
+- - '##'
+  - dnsquery
+- - '##'
+  - domainname
+- - '##'
+  - dsplit
+- - '##'
+  - du
+- - '##'
+  - editres
+- - '##'
+  - 导出 (Export)
+- - '##'
+  - expand—将表符转换为空格
+- - '##'
+  - 表达式 (EXPRESSIONS)
+- - '##'
+  - find
+- - '##'
+  - 动作 (ACTIONS)
+- - '##'
+  - 时间字段：
+- - '##'
+  - 日期字段：
+- - '##'
+  - 运算符 (Operator)
+- - '##'
+  - fitstop
+- - '##'
+  - fmt
+- - '##'
+  - fold
+- - '##'
+  - free
+- - '##'
+  - fsinfo
+- - '##'
+  - fslsfonts
+- - '##'
+  - fstdf
+- - '##'
+  - fstopgm
+- - '##'
+  - ftp
+- - '##'
+  - 取消文件
+- - '##'
+  - fuser
+- - '##'
+  - fdisk
+- - '##'
+  - filechan
+- - '##'
+  - fsck
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '##'
+  - 选项
+- - '##'
+  - 描述 (## (fs)
+- - '##'
+  - fstdf
+- - '##'
+  - fstopgm
+- - '##'
+  - ftp (重复)
+- - '##'
+  - 文件命名规范
+- - '##'
+  - 文件参数
+- - '##'
+  - .netrc 文件
+- - '##'
+  - macdef name
+- - '##'
+  - 环境
+- - '##'
+  - 查找
+- - '##'
+  - hostid
+- - '##'
+  - hostname
+- - '##'
+  - head
+- - '##'
+  - hexdump
+- - '##'
+  - ipinfo
+- - '##'
+  - lptest
+- - '##'
+  - ls, dir, vdir
+- - '##'
+  - lsmod
+- - '##'
+  - lynx
+- - '##'
+  - 事项 (致谢)
+- - '##'
+  - macptopbm
+- - '##'
+  - make
+- - '##'
+  - makedepend
+- - '##'
+  - mattrib
+- - '##'
+  - mbadblocks
+- - '##'
+  - mcd
+- - '##'
+  - mcookie
+- - '##'
+  - mcopy
+- - '##'
+  - md5sum
+- - '##'
+  - mdel (重复)
+- - '##'
+  - mdeltree (重复)
+- - '##'
+  - mdir (重复)
+- - '##'
+  - merge (重复)
+- - '##'
+  - mesg (重复)
+- - '##'
+  - 描述 (重复)
+- - '##'
+  - manifest
+- - '##'
+  - mknod
+- - '##'
+  - mlabel
+- - '##'
+  - mmd
+- - '##'
+  - mmount
+- - '##'
+  - mmove
+- - '##'
+  - more
+- - '##'
+  - mrd
+- - '##'
+  - read
+- - '##'
+  - mren
+- - '##'
+  - mtest
+- - '##'
+  - mtools
+- - '##'
+  - mtype
+- - '##'
+  - mtvoppm
+- - '##'
+  - mtype (重复)
+- - '##'
+  - MV
+- - '##'
+  - mtopsps
+- - '##'
+  - mmtofits
+- - '##'
+  - n1
+- - '##'
+  - nlmconv
+- - '##'
+  - nm 339
+- - '##'
+  - 'nm '
+- - '##'
+  - objcopy
+- - '##'
+  - objdump
+- - '##'
+  - oclock
+- - '##'
+  - od
+- - '##'
+  - passwd
+- - '##'
+  - paste
+- - '##'
+  - pbmfilters (重复)
+- - '##'
+  - pbmmake
+- - '##'
+  - pbbm
+- - '##'
+  - pbmmask
+- - '##'
+  - pbmpscale
+- - '##'
+  - pbmreduce
+- - '##'
+  - ppm (重复)
+- - '##'
+  - prunem
+- - '##'
+  - pmntops (重复)
+- - '##'
+  - pmntoxed
+- - '##'
+  - ps
+- - '##'
+  - 'ps '
+- - '##'
+  - psupdate
+- - '##'
+  - pstree
+- - '##'
+  - pt
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part (重复)
+- - '##'
+  - ppm3d
+- - '##'
+  - ppmntsc
+- - '##'
+  - ppmpat
+- - '##'
+  - ppmquant
+- - '##'
+  - ppmquantall
+- - '##'
+  - ppmvqga
+- - '##'
+  - ppmmake
+- - '##'
+  - ppmmix
+- - '##'
+  - ppmnorm
+- - '##'
+  - ppmrelief
+- - '##'
+  - ppmshift
+- - '##'
+  - ppmspread
+- - '##'
+  - ppmtocad
+- - '##'
+  - ppmforge (重复)
+- - '##'
+  - ppmforge (重复)
+- - '##'
+  - ppmhist (重复)
+- - '##'
+  - p1 (重复)
+- - '##'
+  - pinfo
+- - '##'
+  - ptop
+- - '##'
+  - ptop
+- - '##'
+  - ptoplot
+- - '##'
+  - ppmtopi
+- - '##'
+  - ppmtopk
+- - '##'
+  - ppmtoplot
+- - '##'
+  - pmtoptx
+- - '##'
+  - pmt10bm
+- - '##'
+  - 'pt '
+- - '##'
+  - pfile
+- - '##'
+  - pictoppm
+- - '##'
+  - pjtoppm
+- - '##'
+  - pi1toppm
+- - '##'
+  - pi3topbm
+- - '##'
+  - pictoppm (重复)
+- - '##'
+  - pictoppm (重复)
+- - '##'
+  - pjtoppm (重复)
+- - '##'
+  - pkptobm
+- - '##'
+  - pnmalias
+- - '##'
+  - pnmarith
+- - '##'
+  - pnmcat
+- - '##'
+  - pnmcomp -difference 计算绝对
+- - '##'
+  - pnmcat (重复)
+- - '##'
+  - pnmcomp (重复)
+- - '##'
+  - pnmconv
+- - '##'
+  - pnmarith (重复)
+- - '##'
+  - pnmcomp -difference 计算绝对 (重复)
+- - '##'
+  - pnmcat (重复)
+- - '##'
+  - pnmcomp (重复)
+- - '##'
+  - pnmconv (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - pntops (重复)
+- - '##'
+  - part
+- - '##'
+  - 'part '
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - part
+- - '##'
+  - 'part-part-part-## part-part-part-part-part-part-part-part-part '
+- - '##'
+  - part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-part-
