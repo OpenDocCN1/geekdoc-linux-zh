@@ -1,0 +1,242 @@
+- - '#'
+  - Linux 和网络系统管理员指南：参考、快速复习、入门指南及概述
+- - '#'
+  - 使用 sysctl 调整资源
+- - '#'
+  - sysctl 选项
+- - '#'
+  - 关于 /proc 和 /sys 的更多信息
+- - '#'
+  - dmesg
+- - '#'
+  - 重要日志位置及用法！
+- - '#'
+  - 连接并配置 rsyslog 和 journal
+- - '#'
+  - 基本硬件工具
+- - '#'
+  - 内核监控工具
+- - '#'
+  - 内存监控工具
+- - '#'
+  - 磁盘和文件系统工具
+- - '##'
+  - 杀死进程信号 (Kill Signals)
+- - '##'
+  - CPU 优先级
+- - '#'
+  - 使用 ps 检查进程
+- - '##'
+  - PS 输出列：VSZ=虚拟内存大小，RSS=驻内存大小，STAT=(S=睡眠, R=运行， F 代表派生进程数），PPID 父进程，CHAN 是名称
+- - '##'
+  - 状态：
+- - '##'
+  - 附加状态码
+- - '##'
+  - 示例
+- - '##'
+  - TOP
+- - '##'
+  - 按 'F' 键调出窗口，允许按列进行排序
+- - '##'
+  - 内存到底有多少空闲？（磁盘缓冲区/缓存）
+- - '##'
+  - sysstat 套件与 sar
+- - '##'
+  - iostat - 设备和分区的 CPU 及 I/O 统计
+- - '##'
+  - mpstat - 多处理器统计
+- - '#'
+  - Linux 性能观测性工具
+- - '##'
+  - Linux 性能观测性：sar
+- - '##'
+  - 命令等效项 - SysUnit 和 systemd
+- - '##'
+  - SysVinit - 目录结构
+- - '##'
+  - kudzu 此脚本运行 kudzu 硬件探测。
+- - '##'
+  - 'config: 34 05 95'
+- - '##'
+  - 'description: 此脚本运行硬件探测，并可选地配置修改的硬件。'
+- - '##'
+  - 源函数库。
+- - '##'
+  - /etc/initab SysVinit 主配置文件
+- - '##'
+  - 运行级别管理工具 - SysV init
+- - '##'
+  - systemd 单元脚本内容示例
+- - '##'
+  - vim /etc/systemd/lvdisk.mount
+- - '##'
+  - vim /etc/systemd/lvdisk.automount
+- - '#'
+  - 系统软件包内容
+- - '##'
+  - systemd-spawn
+- - '##'
+  - systemd-path
+- - '##'
+  - systemd-resolve
+- - '##'
+  - systemd-run
+- - '##'
+  - systemd-tmpfiles
+- - '##'
+  - systemd-tty-ask-agent
+- - '##'
+  - timedatectl
+- - '##'
+  - udev
+- - '##'
+  - libsystemd
+- - '##'
+  - libudev
+- - '#'
+  - 网络配置
+- - '##'
+  - ifconfig 命令
+- - '##'
+  - netstat
+- - '##'
+  - 从传统的 UNIX 软件包迁移到 iproute2
+- - '##'
+  - ip 命令
+- - '##'
+  - 设备命名
+- - '##'
+  - 任务示例 - iproute2 和 net-tools 软件包等价
+- - '##'
+  - 显示所有连接的接口
+- - '##'
+  - 显示接口的 IPv4 地址
+- - '##'
+  - 显示接口的 IPv6 地址
+- - '##'
+  - 查看 IP 路由表
+- - '##'
+  - 查看套接字统计
+- - '##'
+  - 查看 ARP 表
+- - '##'
+  - 激活或禁用网络接口
+- - '##'
+  - 从网络接口中删除 IPv4 地址
+- - '##'
+  - 在网络接口上分配或删除 IPv6 地址
+- - '##'
+  - 为接口分配多个 IP 地址
+- - '##'
+  - 修改网络接口的 MAC 地址
+- - '##'
+  - 添加或修改默认路由
+- - '##'
+  - 添加或删除静态路由
+- - '##'
+  - 添加或删除静态 ARP 条目
+- - '##'
+  - 添加、删除或查看组播地址
+- - '##'
+  - 禁用 Network Manager
+- - '##'
+  - 仅为 eth1 禁用 Network Manager（示例）
+- - '#'
+  - 可选将这些放在这里或添加到它们对应的文件中：vi /etc/sysconfig/network
+- - '##'
+  - '同样的操作使用 - 或添加到 resolv.conf 中 #vi /etc/resolv.conf'
+- - '##'
+  - 这些之所以是可选的是因为你可以为每个接口文件不同的默认网关和 DNS。虽然不保证一定有效，但确实可以这样做。
+- - '##'
+  - 找到/添加你的 eth0 条目以禁用 Network Manager
+- - '##'
+  - systemd-networkd
+- - '##'
+  - 虚拟设备（网桥、VLAN、绑定）
+- - '##'
+  - 使用 wpa_supplicant
+- - '##'
+  - 关于 Kismet 的说明
+- - '##'
+  - WiFi 渗透测试工具
+- - '###'
+  - Aircrack-ng 软件包
+- - '###'
+  - WiFiTap 软件包
+- - '###'
+  - Fern WiFi Cracker - 提供以下功能的 GUI，但不限于无线攻击。他们宣传：
+- - '#'
+  - Netfilter/iptables
+- - '##'
+  - 基础概念
+- - '###'
+  - 安全级别：MCS 和 MLS（可选的安全增强）
+- - '#'
+  - SELinux 模式
+- - '##'
+  - sestatus
+- - '##'
+  - SELlinux 可以取以下三个值之一：
+- - '##'
+  - enforcing -强制执行 SELinux 安全策略。
+- - '##'
+  - permissive - SELinux 打印警告而非执行。
+- - '##'
+  - disabled - 加载 SELinux 策略。
+- - '##'
+  - SELinux=可以取以下值之一：
+- - '##'
+  - targeted - 保护目标进程。
+- - '##'
+  - minimum - 目标策略的修改。仅保护选定的进程。
+- - '##'
+  - mls - 多层级安全保护。
+- - '##'
+  - 查看文件的 SELinux 上文：标签
+- - '##'
+  - $ ls -Z
+- - '##'
+  - ls -Z /var/www/html/
+- - '##'
+  - 使用 semanage 配置 SELinux
+- - '#'
+  - SELinux 布尔值 (Boolean)
+- - '##'
+  - 在运行期间禁用特定的（目标）策略
+- - '##'
+  - MLS/MCS 级别详解
+- - '#'
+  - SELinux 用户 MLS/MCS 范围
+- - '##'
+  - SELINux 文件与位置
+- - '##'
+  - 为不支持的软件创建策略/
+- - '##'
+  - SELINUX 命令与包
+- - '##'
+  - 策略的创建与管理
+- - '#'
+  - 嵌套 RAID 级别
+- - '##'
+  - RAID0
+- - '##'
+  - RAID 5
+- - '##'
+  - RAID 6
+- - '##'
+  - RAID 10
+- - '#'
+  - NFS 系统
+- - '##'
+  - NFSv3
+- - '##'
+  - NFSv4
+- - '##'
+  - autofs 配置
+- - '#'
+  - Samba - SMB
+- - '##'
+  - locking ... 控制多个客户端共享访问的选项
+- - '##'
+  - oplocks ... 与乐观锁相关的选项（高级）
