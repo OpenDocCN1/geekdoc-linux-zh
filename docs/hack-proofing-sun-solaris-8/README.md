@@ -1,0 +1,7 @@
+# Sun Solaris 8 安全加固指南
+
+> 原文：[Hack Proofing Sun Solaris 8]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
