@@ -1,0 +1,4295 @@
+- pgno: 0
+  md: '# # Linux Fundamentals
+
+    nA Training Manual
+
+
+    Philip Carinhoas, Ph.D.
+
+    Fortuitous Technologies
+
+    www.fortuitous.com
+
+    pac@fortuitous.com
+
+
+    Version of August 26, 2001'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Copyright 2000-2001 Fortuitous Technologies, Inc.
+
+    Fortuitous Technologies Inc.
+
+    6909A Hardy Dr.
+
+    Austin, Tx 78757
+
+    USA
+
+    WWW: http://fortuitous.com
+
+    E-mail: fundamentals@fortuitous.com
+
+
+    This training manual is a free book; you may reproduce and modify it under the
+    terms of version 2 of the GNU General Public License as published by the Free
+    Software Foundation whose website is located at http://www.gnu.org/copyleft/gpl.html.
+
+
+    This book is distributed in the hope that it will be useful, but without any warranty;
+    without even the implied warranty of merchantability or fitness for a particular
+    purpose.
+
+
+    The author encourages wide distribution of this book for personal and commercial
+    use, provided the above copyright notice remains intact and the method adheres
+    to the provisions of the GNU General Public License located at
+
+
+    http://www.gnu.org/copyleft/gpl.html
+
+
+    In summary, you may copy and distribute this book free of charge or for a profit.
+    No explicit permission is required from the author for reproduction of this book
+    in any medium, physical or electronic.
+
+
+    Note, derivative works and translations of this document must be placed under
+    the GNU General Public License, and the original copyright notice must remain
+    intact. If you have contributed new material to this book, you must make the source
+    code (e.g., LATEX source) available for your revisions.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# # Contents\n\n+   1 Introduction to Linux . . . . . . . . . . . . . . . .\
+    \ . . . . . . . . . . 5\n  1.1 Linux Features . . . . . . . . . . . . . . . .\
+    \ . . . . . . . . . . . 5\n  1.2 Multi-User Operation . . . . . . . . . . . .\
+    \ . . . . . . . . . . . . . . 5\n  1.3 Why Linux? . . . . . . . . . . . . . .\
+    \ . . . . . . . . . . . . . . 6\n  1.4 Conventions . . . . . . . . . . . . . .\
+    \ . . . . . . . . . . . . . . . . . 7\n2 UNIX Command Line Basics . . . . . .\
+    \ . . . . . . . . . . . . . . . . . . . . . . 9\n  2.1 Logging In To Your Account\
+    \ . . . . . . . . . . . . . . . . . . . . . . 9\n  2.2 Command Structure . . .\
+    \ . . . . . . . . . . . . . . . . . . . . . . . . . 9\n  2.3 The Linux Manuals\
+    \ and the man Utility . . . . . . . . . . . . . 11\n  2.4 Create, List, Copy,\
+    \ and Move . . . . . . . . . . . . . . . . . . . 13\n  2.5 I/O, Redirection, and\
+    \ Pipes . . . . . . . . . . . . . . . . . . . 15\n  2.6 Command Line Editing .\
+    \ . . . . . . . . . . . . . . . . . . . . . . . 18\n3 The Linux Environment .\
+    \ . . . . . . . . . . . . . . . . . . . . . . . . . . 21\n  3.1 The UNIX Shell\
+    \ Game . . . . . . . . . . . . . . . . . . . . . . . . . 21\n  3.2 Bash . . .\
+    \ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23\n  3.3\
+    \ Shell Variables . . . . . . . . . . . . . . . . . . . . . . . . . . 25\n  3.4\
+    \ Choosing the Right Path . . . . . . . . . . . . . . . . . . . . . . . 27\n \
+    \ 3.5 Groups and Newgrp . . . . . . . . . . . . . . . . . . . . . . . . . 27\n\
+    4 Filesystem Essentials . . . . . . . . . . . . . . . . . . . . . . . . . . .\
+    \ . 29\n  4.1 The Linux Virtual Filesystem (VFS) . . . . . . . . 29\n  4.2 File\
+    \ Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\
+    \ 32\n  4.3 Changing File Attributes with chmod . . . . . . . . . . . . . . 33\n\
+    \  4.4 Changing File Ownership with chown and chgrp . . . . . 35\n  4.5 Devices\
+    \ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36\n5\
+    \ Process Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\
+    \ 39\n  5.1 Creating Foreground and Background Processes . . . . 39\n  5.2 Killing\
+    \ Processes With kill . . . . . . . . . . . . . . . . . . 41\n  5.3 Managing Process\
+    \ Priorities . . . . . . . . . . . . . . . . 43\n  5.4 Cron . . . . . . . . .\
+    \ . . . . . . . . . . . . . . . . . . . . . . . 45"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 6 Text Editing Tools ................................................................................................
+    49
+
+
+    6.1 Vi .................................................................................................................................................................................................................
+    . . . . 49
+
+
+    6.2 Editing With Pico .................................................................................................................................................................................................
+    . . . . . . 51
+
+
+    6.3 Editing With emacs .......................................................................................................................................................................................................
+    . . . 52
+
+
+    6.4 Using Mail .................................................................................................................................................................................................................................................................................................
+    . . . 53
+
+
+    6.5 Regular Expressions .................................................................................................................................................................................................................................................................................................
+    54
+
+
+    # 7 Shell Scripting ................................................................................................................................................................................................................
+    59
+
+
+    7.1 Shell Initialization Files .................................................................................................................................................................................................................................................................................................
+    . . 59
+
+
+    7.2 Utility Shell Scripts ............................................................................................................................................................................................................................................................................................................................
+    61
+
+
+    7.3 General Scripting ............................................................................................................................................................................................................................................................................................................................................................
+    64
+
+
+    7.4 Script Automation .................................................................................................................................................................................................................................................................................................................................................................................................................
+    65
+
+
+    # 8 Using X-Windows .................................................................................................................................................................................................................................
+    67
+
+
+    8.1 Customizing the X Environment ............................................................................................................................................................................................................................................................................................................................
+    67
+
+
+    8.2 Window Managers .................................................................................................................................................................................................................................................................................................................................................................................................................................
+    69
+
+
+    # 9 TCP/IP Networking Basics .................................................................................................................................................................................................................................................
+    73
+
+
+    9.1 Network Communication .................................................................................................................................................................................................................................................................................................................................................................................................................
+    74
+
+
+    9.2 Using X-Windows Over the Network .................................................................................................................................................................................................................................................................................................................................................................................................................
+    77
+
+
+    9.3 Network Security for Users .................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+    79
+
+
+    # 10 Native Linux Compilers, Software, and Services .................................................................................................................................
+    81
+
+
+    # A Glossary .................................................................................................................................................................................................................................................................................................................................................................................................................................
+    85'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Chapter 1
+
+
+    # Introduction to Linux
+
+
+    Linux is a computer operating system originally developed by Linus Torvalds as
+    a research project. There is some interesting history about the rapid Linux evolution,
+    but suffice it to say, Linux has come a long way in a decade.
+
+
+    Linux runs on Intel, Mac, Sun, Dec Alpha, and several other hardware platforms.
+
+
+    # 1.1 Linux Features
+
+
+    +   * Linux is a full-featured, 32-bit multi-user/multi-tasking OS.
+
+    * Linux adheres to the common (POSIX) standards for UNIX .
+
+    * Native TCP/IP support.
+
+    * A mature X Windows GUI interface.
+
+    * Complete development environment. C, C++, Java, editors, version control systems.
+
+    * Open Source.
+
+
+    # 1.2 Multi-User Operation
+
+
+    UNIX and Linux , all interactions with the OS are done through designated “users”,
+    who each have an identification ID (login name) and a password. UNIX allows different
+    users to co-exist simultaneously and allows for different levels of users.
+
+
+    The most powerful user is called superuser or “root”, and has access to all files
+    and processes. The superuser does many of the system management tasks like adding
+    regular users, file backups, system configuration etc.
+
+
+    Common users accounts, which perform non-system type tasks, have restricted access
+    to system-sensitive components to protect Linux from being accidentally or purposely'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'damaged. In a moment you will enter a user account and start exploring the
+    Linux filesystem.
+
+
+    # 1.3 Why Linux?
+
+
+    Linux can operate as a web, file, smb (WinNT), Novell, printer, ftp, mail, SQL,
+    masquerading, firewall, and POP server to name but a few.
+
+    It can act as a graphics, C, C++, Java, Perl, Python, SQL, audio, video, and documentation,
+    development workstation etc.
+
+
+    ![](img/88f6e495c6955949cf21ab740d865351_5_0.png)
+
+
+    Figure 1.1: Linux Uses
+
+
+    Linux is a good solution for developers that need a stable and reliable platform
+    that has open source code. It is not a good system for beginners that want a simple
+    GUI interface to a programming language, although Linux has many GUI software
+    development interfaces.
+
+
+    Linux is ideal as a workstation also, and offers many customizable features not
+    found in any other platform. It makes a good platform for dedicated workstations
+    that have limited functions in an educational or laboratory environment.
+
+
+    Its may not be ideal as a workstation for beginners who want an instantly customizable
+    universal WYSIWYG interface. Other systems provide solutions for this need. Still,
+    Linux becomes easier to use on a daily basis. It''s only a matter of time until
+    Linux is accessible by everyone.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 1.4 Conventions
+
+
+    In order to take full advantage of this manual, students should execute every
+    command that is listed in the text as well as do the exercises. The following
+    is a list of conventions supported in this manual:
+
+
+    ```
+
+    <bash>: indicates a command entered in a terminal by the user. When you see this
+    sign, you are expected to enter these commands exactly as indicated and check
+    that the results are consistent with what is written. If you see a problem, please
+    ask the instructor to elaborate or clarify.
+
+    ```
+
+
+    ```
+
+    <tcsh>: indicates commands in the tcsh shell. Most of these commands are to be
+    completed after hours or at home. Since Linux advocates freedom of choice, we
+    wish to make students aware of this option to bash.
+
+    ```
+
+
+    ```
+
+    <Super>: indicates a command entered by the System Administrator or Root. The
+    student is also expected to enter these commands in as indicated.
+
+    ```
+
+
+    **Bold** indicates a command entered at the prompts above.
+
+
+    **Big Bold TW** is used to identify commands in the text.
+
+
+    _Underline_" indicates a file or a directory in the text."
+
+
+    *Slant* indicates command options.
+
+
+    Plain TW indicates a screen text of command output or editor.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Chapter 2
+
+
+    # UNIX Command Line Basics
+
+
+    The objective of this chapter is to configure the shell account so that printing,
+    manuals, and editor functions are working normally. This will give us experience
+    with the basic commands, environment variables, and workhorse tools needed.
+
+
+    # 2.1 Logging In To Your Account
+
+
+    Log into your system with the login name and password given to you. You will see
+    something like
+
+
+    ```
+
+    bash:
+
+    ```
+
+
+    Your system should always prompt you with the name of the shell (bash) and your
+    login name. This is a customizable feature in the bash shell which you are now
+    using.
+
+    The most basic command in Linux is the directory listing "ls" command.
+
+    You can see the contents of your account by typing
+
+
+    ```
+
+    ls -al
+
+    ```
+
+
+    You will see files like
+
+
+    | drwxxr-xr-x 13 joe 1024 Nov 9 17:06 .dt |
+
+    | -rwxrxr-xr 1 joe 5111 Sep 30 15:19 .dtprofile |
+
+    | drwxxr-r-- 2 joe 96 Dec 1 12:25 .elm |
+
+    | -drwxr---- 1 joe 1178 Nov 19 10:58 .emacs |
+
+
+    # 2.2 Command Structure
+
+
+    We''ve already seen ls give a directory listing the current working directory
+    (cwd).
+
+    Commands in Linux follow a general format:
+
+
+    Command -options Other parameters'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# CHAPTER 2. UNIX COMMAND LINE BASICS
+
+
+    for example:
+
+
+    ```
+
+    <bash>: ls -bashrc
+
+    ```
+
+
+    First comes the command name, followed by options. Options are normally preceded
+    by a dash or minus sign. There is always a space between the command and the dash.
+    Some commands use no options at all. After the options comes any other parameters
+    or informations that command may need.
+
+
+    Let''s talk about the workhorse commands. Note that these definitions are purposely
+    abbreviated and incomplete! Consult the man pages for each of the commands below.
+    In the commands in square brackets [...] [-opts] refers to options in the style
+    mentioned.
+
+
+    # Special Keys Strokes:
+
+
+    +   - q quits from many commands like more and less
+
+    - Ctrl+c also quits out of many commands
+
+    - Ctrl+L putsn cursor at the beginning of the command line
+
+    - Ctrl+e puts the cursor at the end of the command line
+
+
+    # Help, Search, Info Tools:
+
+
+    +   - env [-opts] [exp] Print environment or run a command with another environment.
+
+    - find [path] [exp] Find files in path exp
+
+    - info keyword List info pages containing keyword
+
+    - locate keyword Locate all files of name keyword in a database
+
+    - man -k keyword List man pages with keyword (same as apropos keyword)
+
+    - man command Display the manual for command
+
+    - printenv Print environment variables (see set)
+
+    - set [vars] Print/Set env vars and functions
+
+    - whatis keyword Search the whatis DB for keyword
+
+    - where command Locate source/binary and manuals for command
+
+    - which command Display path of command
+
+
+    # Text Manifestation Tools
+
+
+    +   - awk|awk [pgrm][file] Filter file by pgrm
+
+    - cat file Display contents of file without paging
+
+    - clear Clears the screen. Same as Ctrl+L
+
+    - grep pattern file Finds pattern in file
+
+    - head file List the first five lines of file
+
+    - more file Display & page text text (See Less)
+
+    - sed [script] file Stream edit/filter file using script
+
+    - tail [-opts] List the trailing lines of file
+
+    - tr char1 char2 file Change characters in char1 to char2
+
+    - less file Display & page the text file
+
+
+    10 Copyright © 2001 Fortuitous Technologies, Inc.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 2.3. THE LINUX MANUALS AND THE MAN UTILITY
+
+
+    # General Tools
+
+
+    | cd dir | Change cwd to dir (home if omitted) |
+
+    | chmod perms files | Change file permissions of files |
+
+    | chown owner.group files | Change file owner and/or group |
+
+    | chsh | Change the default shell |
+
+    | cp [-opts] f1 (f2/dir) | Copy file f1 to f2 or directory dir |
+
+    | date | Displays the date |
+
+    | kill pid | Kills process ID pid |
+
+    | login [username] Old New | Link to system with UID username |
+
+    | lpr file | Print file on the default printer |
+
+    | ls [file] | Listing for file (cwd if omitted) |
+
+    | mkdir dir | Creates directory dir |
+
+    | mv file1 file2 | Rename file1 to file2 |
+
+    | passwd [-opt] | Output a list of currently active processes |
+
+    | pwd | List the current working directory |
+
+    | rm files | Removes files |
+
+    | startx | Start the X-Windowing system |
+
+    | tar [-opt][arch][file] | Manage tar archives |
+
+    | telnet [port] | Connect to the remote host |
+
+    | uname [-opts] | Output name and version number of OS |
+
+    | who | List users logged into this system |
+
+    | xterm [-opts] | Start a brand new X-terminal window |
+
+
+    # 2.3 The Linux Manuals and the man Utility
+
+
+    Virtually every command is worth knowing having an entry in the man pages, and
+    is accessed by a man command . To get all related commands to a keyword, use man
+    -k keyword as in the example:
+
+
+    ```
+
+    $bash> man -k manual
+
+    man (1) - format and display the on-line manual pages
+
+    man2html (1) - format a manual page in html
+
+    perlxs (1) - XS language reference manual
+
+    whereis (1) - locate the binary, source, and manual page files
+
+    xman (1x) - Manual page display program for the X Window System
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# CHAPTER 2. UNIX COMMAND LINE BASICS
+
+
+    When in doubt, use **man** and **man -k keyword** to get info on a command or
+    UNIX related term.. Find the man page for the **ls** command. **ls** will list
+    directory contents:
+
+
+    ```
+
+    bash: ls
+
+    ```
+
+
+    | LS(1) | FSF | LS(1) |
+
+    | --- | --- | --- |
+
+    | NAME | ls - list directory contents | |
+
+    | SYNOPSIS | ls [OPTION]... [FILE] | |
+
+    | DESCRIPTION | List information about the FILES (the current directory by default).
+    Sort entries alphabetically if none of -cftUX --sort.-a,--all do not hide entries
+    starting with ...... |
+
+
+    Figure 2.1: Manual Page for **ls**
+
+
+    Here is a **man** entry for **cd** which changes your working directory (folder):
+
+
+    ```
+
+    bash: man cd
+
+    ```
+
+
+    | cd(n) | Tcl Built-In Commands | cd(n) |
+
+    | --- | --- | --- |
+
+    | NAME | cd - Change working directory | |
+
+    | SYNOPSIS | cd dirName | |
+
+    | DESCRIPTION | Change the working directory to dirName, or to the home directory
+    (as specified in the HOME environment variable) if dirName is not given. Returns
+    an empty string. |
+
+
+    Figure 2.2: Manual Page for **cd**
+
+
+    # 2.3.1 Exercises
+
+
+    +   1. **bash**: man man
+
+    2. **bash**: man 7 signal
+
+    3. Man cd and look for information on “..” and “.”
+
+    4. **bash**: cd .. ; pwd
+
+    5. **bash**: cd . ; pwd
+
+    6. **bash**: cd ~ ; pwd
+
+    7. Discuss what “..” and “.” are in terms of the filesystem.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 2.4 Create, List, Copy, and Move
+
+
+    The most fundamental of all commands is to list, create, copy, move (rename),
+    remove files. This section will show you the basics. Lets start with creating
+    some files now, so we can list them later.
+
+
+    # 2.4.1 Creating New Files
+
+
+    File creation can be done by invoking an editor on a new filename. Before we try
+    this, there is an easier way to make a new empty file by using the touch command.
+    This is how it works:
+
+
+    ```
+
+    bash touch file1
+
+    ```
+
+
+    This will make a new file named file1` that is empty. There are many ways to make
+    new files that we will see later.
+
+
+    # 2.4.2 Creating New Directories
+
+
+    Directories are created with the mkdir command. Thus
+
+
+    ```
+
+    bash mkdir dir1
+
+    ```
+
+
+    will create a new directory named dir1 located in your current working directory.
+    List this file now with the "long" format we just spoke about. Check your files
+    with
+
+
+    ```
+
+    bash ls -l
+
+    ```
+
+
+    # 2.4.3 Listing Files and Directories
+
+
+    By far, listing a file is the most basic of all commands. As we have seen before,
+    you list files with the ls command:
+
+
+    ```
+
+    bash ls file1
+
+    file
+
+    bash ls -l file1
+
+    -rw-r--r-- 1 joe users 0 Oct 28 22:05 file1
+
+    ```
+
+
+    Using the -l flag causes a "long" listing that shows more information about file1.
+    You list your directories in a similar way the second example shows that dir1
+    is empty):
+
+
+    ```
+
+    bash ls -l
+
+    total 10
+
+    drwxr-xr-x 1 joe users 0 Oct 28 22:05 dir1
+
+    0
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 2.4.4 Copying Files and Directories
+
+
+    You can copy a file by using the cp command. The following statement
+
+
+    ```
+
+    cp file1 file2
+
+    ```
+
+
+    will copy file1 to file2. Copying a folder or directory requires the use of the
+    recursive or -r flag indicating that cp should descend into the directory and
+    copy all sub-files and sub-folders:
+
+
+    ```
+
+    cp -r dir1 dir2
+
+    ```
+
+
+    Exercise 2.4.4: Please create a directory like this now. Explain clearly the following
+    examples are different from the above:
+
+
+    ```
+
+    cp file1 dir1
+
+    ```
+
+
+    ```
+
+    cp -r dir1 dir2/
+
+    ```
+
+
+    ```
+
+    cp -r dir1 dir2/dir3
+
+    ```
+
+
+    # 2.4.5 Moving Files and Directories
+
+
+    Moving a file is as simple as renaming it. This allows for the possibility that
+    you move the file to another directory as well:
+
+
+    ```
+
+    mv file2 file3
+
+    ```
+
+
+    ```
+
+    mv file1 dir1/file2
+
+    ```
+
+
+    You move a directory in EXACTLY the same way as a file:
+
+
+    ```
+
+    mv dir1 dir3
+
+    ```
+
+
+    # 2.4.6 Changing Directories
+
+
+    Changing your current directory is done with the cd command:
+
+
+    ```
+
+    cd dir1
+
+    ```
+
+
+    ```
+
+    cd ..
+
+    ```
+
+
+    # 2.4.7 Removing Files and Directories
+
+
+    Normal files are removed with the rm command:
+
+
+    ```
+
+    rm file1
+
+    ```
+
+
+    Removing directories is also done with the rm command, but again you need to use
+    the "recursive" or -r option:
+
+
+    ```
+
+    rm -r dir1
+
+    ```
+
+
+    After you try the make, make sure file1 and dir1 are gone.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# 2.5 I/O, Redirection, and Pipes
+
+
+    I/O refers to Input (I) and Output (O). This section talks about input and output
+    of commands and how you can manipulate these. These principials are very important
+    because they are used constantly in Unix.
+
+
+    # 2.5.1 Standard I/O
+
+
+    In UNIX , Standard Input (stdin) and Standard Output (stdout) are mechanisms that
+    allow you to input or output data from a command line. Simple commands like "cat
+    file!" send their results to stdout (normally to your screen) while the word file1
+    is an example of stdin which is fed to the command **cat**.
+
+
+    Independent of stdin and stdout, there is also the standard error (stderr) which
+    normally goes to your screen when the command detects an error. This manipulation
+    is special feature. Bash assigns special numbers, called File Descriptors, stdin,
+    stdout, and stderr:
+
+
+    | Name | Abbreviation | File Descriptor | Standard Device |
+
+    |---|---|---||
+
+    | Standard Input | stdin | 0 | Keyboard |
+
+    | Standard Output | stdout | 1 | Console |
+
+    | Standard Error | stderr | 2 | Console |
+
+
+    Table 2.1: Bash Standard I/O
+
+
+    # 2.5.2 Redirection
+
+
+    Redirection refers to the art of redirecting input and output from commands. Shells
+    like bash allow for redirection of stdin and stdout with the < and > operators
+    respectively. As an example, you can list some files and send (redirect) the output
+    to a file instead of the screen. Do it this easy way:
+
+
+    ```
+
+    bash: ls -al > output.txt
+
+    ```
+
+
+    To check the output, you can use cat (short for concatenate). cat is useful when
+    you want to view your files:
+
+
+    ```
+
+    bash: cat output.txt
+
+    -rw------ 1 carinhas users 1606 Aug 17 23:14 .acrorc
+
+    -rw------ 1 carinhas users 153 Dec 20 08:47 .bashrc
+
+    -rw------ 1 carinhas users 3189 Dec 23 15:34 .cshrc
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "Examples of stdin redirecting:\n\n```\nbash: cat < output.txt\nbash: wc -l\
+    \ output.txt\n  7 output.txt\nbash: wc -l < output.txt\n7\n```\n\nNote that \"\
+    cat output.txt\" and \"cat < output.txt\" give the same result, but the \"wc -1\"\
+    \ gives something slightly different.\n\nIn bash stderr is redirected with the\
+    \ 2> operator, while in tcsh, the >& operator. Just relax and will see examples\
+    \ of this shortly.\n\nLinux Warning: Please note that > will overwrite anything\
+    \ in the output file, if it exists, or create the file if it does not. In contrast,\
+    \ the >> operator will append to the existing file.\n\nHere is a brief summary\
+    \ of the redirects:\n\n| Name | Operator | Description |\n| Redirect stdin | <\
+    \ | Feeds the file to input |\n| Redirect stdout | > | Creates or overwrites |\n\
+    | Append stdout | >> | Creates or appends |\n| Redirect stderr | >< | Both stdout\
+    \ and stderr |\n| Redirect stderr | 2> | Only stderr in bash |\n\nTable 2.2: Standard\
+    \ Redirection I/O\n\n# 2.5.3 Pipes\n\nWhen you want to take the output of one\
+    \ command and use that is input into another, use the \"pipe operator\" | . Think\
+    \ of actually connecting a metal pipe from one command to another. The following\
+    \ example sorts some ls command in reverse order (do it!):\n\n```\nbash:ls | sort\
+    \ -r\ndoomrc\n.cshrc\n.bashrc\n.acrorc\n```"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# 2.5.4 Examples to Try
+
+
+    ```
+
+    <bash>: cat noname 2> error.txt               # Sends error to error.txt
+
+    <bash>: cat noname > error.txt 2>&1      # Send stdout + stderr to error.txt
+
+    <bash>: cat noname &\ error.txt             # everything (as above) goes to error.txt
+
+    ```
+
+
+    Try these examples in tcsh:
+
+
+    ```
+
+    <tcsh>: tcsh
+
+    <tcsh>: (cat noname > output.txt) >& error.txt # Send stderr to error.txt
+
+    <tcsh>: more output.txt                            # Same as in bash.
+
+    <tcsh>: more error.txt                             # Just like in bash.
+
+    <tcsh>: cat testfile.txt >& out.txt               # ditto
+
+    <tcsh>: cat < testfile.txt | sort | more          # ditto
+
+    <tcsh>: locate .bashrc | xargs grep alias         # find ''alias'' in .bashrc
+
+    <tcsh>: exit
+
+    ```
+
+
+    Don''t forget the last "exit" to get out of tcsh and back into fabulous bash.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# CHAPTER 2. UNIX COMMAND LINE BASICS
+
+
+    #  2.6 Command Line Editing
+
+
+    A great shortcut in bash tcsh is to use the command editing facilities. Just hit
+    the up-arrow key to a previous command and move the cursor to edit that command.
+    Just try it. Command editing is very useful in repeating and correcting previous
+    commands. Now we discuss other features of command line editing.
+
+
+    #  2.6.1 Command and File Completion
+
+
+    Most shells support command and file completion typing shortcuts. These shortcuts
+    allow you to hit the Tab key to finish the name of a command or file after hitting
+    a few keys. Try this example for a filename (directory):
+
+
+    ```
+
+    bash: cd /usr/inc<TAB> will produce
+
+    bash: cd /usr/include/
+
+    ```
+
+
+    Now this example for a command:
+
+
+    ```
+
+    bash: ghostv<TAB> should produce
+
+    bash: ghostview
+
+    ```
+
+
+    Note that command and file completion can only complete up a unique set of commands.
+    This means you have to provide a unique start string.
+
+
+    Thus bash:ghost<TAB> won''t work because it could complete to ghostview ghostscript.
+
+
+    tcsh has the same file-name completion mechanism as bash. The <TAB> key will complete
+    filename and command up to unique names.
+
+
+    #  2.6.2 Possible Command Completion
+
+
+    bash will show the possible choices by hitting <TAB>twice (Ctrl-D) in tcsh:
+
+
+    ```
+
+    bash: ls /etc/h<TAB>
+
+    host.conf hosts.allow hosts.deny httpd/
+
+    bash: ls /etc/
+
+    ```
+
+
+    The shell tells you what your choices are and again ready for more input. This
+    also works on commands too:
+
+
+    ```
+
+    bash: mo<TAB>
+
+    modemights:applet mount.smbfs
+
+    modemtool more mouse-properties-capplet
+
+    modinfo morepgpp mouse-test
+
+    modprobe mount mouseconfig
+
+    bash: mo
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# 2.6. COMMAND LINE EDITING\n\nThis shows us the possibilities, and again returns\
+    \ us so we can continue typing a command.\nRemember that tcsh has the same possible-completion\
+    \ mechanism as bash does above.\nJust use <Ctrl-D> instead.\n\n# 2.6.3 Command\
+    \ Line Substitution and History\n\nIn both tcsh and bash we have the facility\
+    \ of Command Line Substitution and Command History.\nCommand Line Substitution\
+    \ allows you to substitute a dynamic expression inside a command-\n\n```\n<bash>:\
+    \ echo My name is $USER\nMy name is Joe\n<bash>:\n```\n\nThe $ symbol allows bash\
+    \ to process the expression in-line and later provide the results to the echo\
+    \ command.\nCommand History allows you to use stuff from your old commands in\
+    \ your current command. Remember: recycling is good for the environment. The following\
+    \ list shows the history reference syntax to both bash and tcsh:\n\n+   !!\n!-\
+    \ Redo the last command. Same as -1\n!- Repeat the Nth most recent command (see\
+    \ next)\n!-3 Repeat the 3rd most recent command\n!N Redo the Nth entry in the\
+    \ history list\n!string Redo last command starting with the string \"string\"\n\
+    !?string? The most recent command which contains the text \"string\"\n\nFigure\
+    \ 2.3: History Referencing Specifications\n\nOn top of history referencing, you\
+    \ can add these to the shell command line by appending them to the history reference\
+    \ after a colon (:\n\n+   0 The first (command) word\nn The nth word on the command\
+    \ line beside the command.\n- The first word, equivalent to '1'\n$ The last word\n\
+    % The word matched by an ?s? search\nx-y A range of words. '-y' abbreviates '0-y'.\n\
+    * Equivalent to '$-', but returns nothing if the event contains only 1 word\n\
+    x* Equivalent to '*'\n x- Equivalent to '*', but omitting the last word ('$')\n\
+    \nFigure 2.4: History Modifiers"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# 2.6.4 Exercises\n\nYou can get a list of your history by typing history.\
+    \ Create two files called boogie.man and boogie.man.old. The file contents are\
+    \ not important for this exercise. Try these examples of the above history machinery\
+    \ to try. The exact history will vary depending on what you do so please adapt\
+    \ this to your current situation:\n\n```\n<bash>: history | tail -4\n  9 8:30\
+    \ touch boogie.man\n  10 8:31 cp boogie.man boogie.man.old\n  11 8:36 echo hello\
+    \ >> boogie.man\n  12 8:37 diff boogie.man.old boogie.man\n```\n\n```\n<bash>!-2\n\
+    vi boogie.man\n```\n\n```\n<bash>:diff !2-2:old !2-2\ndiff boogie.man.old boogie.man\n\
+    ```\n\n```\n<bash>:diff !!1.old !!2\ndiff boogie.man.old boogie.man\ndiff: boogie.man.old.old:\
+    \ No such file or directory\n```\n\n```\n<bash>:!?cat?:0 !!2\ncat boogie.man\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Chapter 3
+
+
+    # ## The Linux Environment
+
+
+    In Linux and UNIX , you carry many local attributes that control how your immediate
+    shell interface interacts with the system. These attributes are called Shell and
+    Environment Variables, and they are critical to Linux operation. UNIX and Linux
+    use many variables for internal processing. These help the system manage resources
+    for users. This chapter discusses the bare necessities all Linux survivalists
+    need to know.
+
+
+    # ### 3.1 The UNIX Shell Game
+
+
+    One prominent feature of UNIX is that you can control the interface by which you
+    communicate with it. These interfaces are called shells and the original shell
+    is sh and has many cousins including ash
+
+
+    Many users prefer to use the Berkeley C-type shells like csh and tcsh. Your choice
+    is largely a matter of preference, however, we will use bash as the default in
+    the course. We will also discuss tcsh because of its easy to understand C-like
+    syntax.
+
+
+    Normally a shell can be invoked anywhere in your login session by typing the shell
+    name. This is used for testing, but normally, you will use your default shell.
+
+    A user can control fundamental aspects of his/her environment by setting shell
+    variables as work, or inside of a startup script file which gets invoked when
+    you log to your account. Simple examples common to each shell are your prompt
+    (the thing that stays at and waits for your commands) and aliases. An alias is
+    a shorthand for some other command which a user can define, normally in the shell
+    startup files like .bashrc. We''ll work with these concepts shortly.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# CHAPTER 3. THE LINUX ENVIRONMENT
+
+
+    # 3.1.1 Shell Features
+
+
+    Most Linux distributions come with bash and tcsh which replace sh and csh respectively.
+    These are the two big shells that 99.9% of the Linux world uses. There are several
+    key commonalities and differences between the two. The following tables outline
+    these:
+
+
+    | Action | bash | tcsh |
+
+    | --- | --- | --- |
+
+    | Default Prompt | | # |
+
+    | Force Redirection | > | > |
+
+    | Force Append | >> | >> |
+
+    | Variable assignment | var=value | set var=value |
+
+    | Set Environment | export var | setenv VAR value |
+
+    | Number of arguments | # | $$ ($argv in csh) |
+
+    | End loop statement | esac | end |
+
+    | Loop | for/do | foreach |
+
+    | If statement | if [ ...] | if ( ) |
+
+    | End if | fi | endif |
+
+    | Read from terminal | read | $<$ |
+
+    | Start until loop | until/do | until |
+
+    | While loop | while/do | while |
+
+
+    Table 3.1: Bash-Tesch Difference
+
+
+    | Symbol/Command | Action |
+
+    | --- | --- |
+
+    | > | Redirect output |
+
+    | >& | Redirect stdout stderr |
+
+    | >> | Append output to file |
+
+    | \| | Pipe output |
+
+    | & | Run process in background |
+
+    | TAB | Filename/command completion |
+
+    | $ | Repeat command #n in history |
+
+    | $var | Variable substitution |
+
+    | # | Comment line |
+
+    | bg | Put process in background |
+
+    | fg | Put process in foreground |
+
+    | cd | Change directory |
+
+    | echo | Echo execution output |
+
+    | jobs | List current shell processes |
+
+    | kill | Kill specified processes |
+
+    | unmask | Set default file permissions |
+
+
+    Table 3.2: Bash-Tesch Commonality List (Incomplete)
+
+
+    22
+
+
+    Copyright © 2001 Fortuitous Technologies, Inc.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# 3.2 Bash
+
+
+    Bash is the default shell for Linux . The default shell is like an environment
+    where all the basic commands come from bash. Let''s look at the bash manual page:
+
+
+    ```
+
+    <bash>: man bash
+
+    ```
+
+
+    Look at the default prompt on your screen. Notice that the prompt contains the
+    shell name and username. The prompt in bash is controlled by the variable PS1.
+    Type in the command "set" to get the following sort of output:
+
+
+    ```
+
+    PRINTER=astro
+
+    PS1=$s
+
+    PS2>
+
+    PS4=+
+
+    PWD=/home/joe
+
+    SHELL=/bin/bash
+
+    SHLVL=2
+
+    TERM=vt100
+
+    ```
+
+
+    # 3.2.1 Setting your Prompt
+
+
+    Note that set provides the definition for PS1 and several other variables. You
+    are looking at an endless stream of information from the native Linux manual pages.
+    Type by typing "man bash". Type "/prompt" to search for the word "prompt". You
+    can find the next occurrence by typing "n". Keep going until you see something
+    similar to
+
+
+    # PROMPTING
+
+
+    When executing interactively, bash displays the primary PS1 when it is ready to
+    read a command, and the secondary prompt PS2 when it needs more input to complete
+    a command.
+
+
+    ```
+
+    \t the current time in HH:MM:SS format
+
+    d the date in "Weekday Month Date" format
+
+    w the name of the shell, the basename of $0
+
+    w the current working directory
+
+    W the basename of the current working directory
+
+    u the username of the current user
+
+    h the hostname
+
+    # the command number of this command
+
+    ! the history number of this command
+
+    $ if the effective UID is 0, a, #, otherwise a $
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'Lets change the bash prompt by adding the command number. This is an example:
+
+
+    ```
+
+    bash PS1='' \s \u \t# \#: ''
+
+    ```
+
+
+    which should produce something like
+
+
+    ```
+
+    bash joe 00:02:07#: 13:
+
+    ```
+
+
+    Now let set your prompt so that it always displays your path. Even though this
+    manual will specify <bash>, you should still use a prompt like this:
+
+
+    ```
+
+    bash PS1=''<w> ''
+
+    ```
+
+
+    # 3.2.2 Creating Aliases (Shortcuts)
+
+
+    Now as it happens, I get very tired of typing out ls -Agl every time I want a
+    long directory listing, so I want to alias command d (for "directory") as follows:
+
+
+    ```
+
+    bash alias d=''ls -Agl''
+
+    ```
+
+
+    We really would like to make this definition permanent, by putting this comand
+    into .bashrc, and we will learn how to do this in section 7 on scripts.
+
+    The same alias in tcsh (or csh) is written without the equals (=) sign: You start
+    tcsh by typing tcsh:
+
+
+    ```
+
+    tcsh: tcsh
+
+    tcsh: alias d ''ls -Agl''
+
+    tcsh: d
+
+    ....
+
+    tcsh: exit
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# 3.3. SHELL VARIABLES
+
+
+    # 3.3 Shell Variables
+
+
+    In Linux , you always keep shell variables user, directory, path, group, and many
+    others. These variables help your shell cope with all the information it needs
+    to deal with normal operations. As we discussed before, the set, env, printenv
+    commands will display your environment variables: (with: #comments)
+
+
+    ```
+
+    PWD   = /home/carinhas/misc  # Your current working directory
+
+    GID   = 100                   # Your current group ID number
+
+    GROUP = users                 # Your current group name
+
+    HOME  = /home/joe             # Your current home directory
+
+    HOST  = astro                  # The name of your workstation.
+
+    PATH  = <>                     # Your current path to executable commands.
+
+    PS1  = <s>                      # Your current prompt
+
+    SHELL = /bin/bash            # Your current shell
+
+    UID  = 501                    # Your current user ID number
+
+    USER  = carinhas               # Your current user name
+
+    ```
+
+
+    Your current working directory (cwd) is where all files are sought and written
+    by default. wid and gid are the numerical values for your user and group, which
+    identify you as a user and group member respectively. Your home is where you (and
+    your files) live, and your path is where you look for your prey (executable commands).
+
+
+    You can determine your cwd with the pwd command. Your cwd is always referred by
+    the "dot" (.) symbol, and the directory directly is referred to by the double-dot
+    (..) symbol as the result of an ls -Agl:
+
+
+    ```
+
+    <bash> ls -gl
+
+    total 608
+
+    drwxr-xr-x 2 joe users       1024 Dec 20 19:09
+
+    drwxr-xr-x 15 root root       1024 Dec 10 10:04 ..
+
+    drwx------------ 1 joe users       3185 Dec 19 15:51 .cshrc
+
+    drwx------------ 1 joe users       3185 Dec 19 15:51 .bashrc
+
+    dr-xr-x-- 1 joe users       33 Dec 20 10:49 doubletake
+
+    drwxrwxrwx 1 joe users       33 Dec 20 10:49 maxwm
+
+    ```
+
+
+    Note that ".. refers to /home/joe when you are in your home directory /home/joe.
+    The first character in the file listing is the file type, which tells us what
+    kind of animal we have. also ~ refers to your home directory in your prompt, and
+    changes to the /fully/qualified/path only when moved out of /home/joe .'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    <bash>: tcsh
+
+    <tcsh>: setenv PATH /bin:/sbin:/usr/sbin
+
+    <tcsh>: setenv DISPLAY groucho:0
+
+    <tcsh>: setenv EDITOR /bin/vi
+
+    <tcsh>: env
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 3.4 Choosing the Right Path
+
+
+    Your PATH is used by the system to find commands. Its is important to set this
+    correctly so that you can access everything that you need.
+
+    To set path in bash we edit the .bash profile file:
+
+
+    ```
+
+    <bash>: pico .bash.profile
+
+    PATH=$PATH:$bin # Add $HOME/bin to $PATH
+
+    write and quit ... (hit Ctrl-X, type Y, return)
+
+    <bash>: source .bash.profile # Initialize $PATH.
+
+    ```
+
+
+    Once this is done, bash will look in your own /home/user/bin folder to find any
+    commands you put there. It is a good thing which will come in handy later when
+    we work on scripting.
+
+
+    # 3.4.1 Exercises
+
+
+    Set your path in tcsh by editing your .login file, and add ~/bin to your path.
+
+
+    ```
+
+    <tcsh>: pico .login
+
+    set path = (/bin /sbin /bin /usr/bin /usr/usr /usr/bsd) # added /bin
+
+    write and quit ...
+
+    <tcsh>: source .login # Install the new $path.
+
+    <tcsh>: rehash # Tell csh to find files in $path.
+
+    ```
+
+
+    tcsh uses its refresh function to reall the folders in your path and find the
+    new commands.
+
+
+    # 3.5 Groups and Newgrp
+
+
+    Groups allow users to have access to files and programs jointly. This is what
+    the group attribute is for. Users can belong to many groups. You can belong to
+    more than one group, however you can only be active in one group at a time. All
+    users have a default group that they enter at login. You change your group interactively
+    using the newgrp command:
+
+
+    ```
+
+    <bash>: newgrp groupname
+
+    ```
+
+
+    which will spawn a new shell (on top of the one) with your default group given
+    by groupname. To work this, you must belong to this group to begin.
+
+    Once you are in your new group state, all processes and files created will carry
+    the group name as your user name. Having multiple groups can be useful when accessing'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'restricted hardware or working in a team of developers, where everyone needs
+    access to common software and systems.
+
+
+    To exit this group-shell, simply type **exit**.
+
+
+    # 3.5.1 Exercises
+
+
+    +   1. Look at the files /etc/passwd and /etc/group. Determine how groups are
+    created and assigned with the help of the manual pages. Write your observations
+    down here.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Chapter 4
+
+
+    # Filesystem Essentials
+
+
+    In this chapter, we will learn how to master files and filesystems. This is a
+    very important aspect of Linux , and is used constantly.
+
+
+    # 4.1 The Linux Virtual Filesystem (VFS)
+
+
+    All files in Linux are accessible from a single integrated filesystem called a
+    Virtual Filesystem. The base of that system is called the root and often denoted
+    by a slash (/). Use the mc command to navigate around the system files:
+
+
+    | /(root) | etc | usr | var |
+
+    | --- | --- | --- | --- |
+
+    | bin | | X11R6 | lib |
+
+    | boot | DrakConf | bin | local |
+
+    | dev | X11 | dict | lock |
+
+    | etc | rc.d | doc | log |
+
+    | home | init.d | etc | mail |
+
+    | lib | rc0.d | games | news |
+
+    | misc | rc1.d | lib | samba |
+
+    | mnt | rc5.d | libexec | run |
+
+    | opt | rc6.d | local | spool |
+
+    | proc | security | man | anacron |
+
+    | sbin | skel | share | at |
+
+    | tmp | sysconfig | src | lpd |
+
+    | usr | console | | mail |
+
+    | var | network-scripts | | |
+
+
+    Figure 4.1: Linux VFS as viewed by mc'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'The next figure outlines the root VFS root tree as set by the Filesystem Hierarchy
+    Standard located at http://www.pathname.com/fhs/
+
+
+    +   / The root directory
+
+    - bin Essential command binaries
+
+    - boot Static files of the boot loader
+
+    - dev Device files
+
+    - etc Host-specific system configuration
+
+    - lib Essential shared libraries and kernel modules
+
+    - mnt Mount point for mounting filesystem
+
+    - opt Add-on application software
+
+    - sbin Essential system binaries
+
+    - tmp Temporary files
+
+    - usr Secondary hierarchy
+
+    - var Variable data
+
+
+    ![](img/88f6e495c6955949cf21ab740d865351_29_0.png)
+
+
+    Among the most important of these are /, /etc, /usr, and /opt, /tmp and /home.
+    Below is a sample directory tree that starts from root lacks the /var subtree.
+
+
+    ![](img/88f6e495c6955949cf21ab740d865351_29_1.png)
+
+
+    ![](img/88f6e495c6955949cf21ab740d865351_29_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# 4.1.1 Exercises
+
+
+    +   1. The tree diagram above is not correct for a modern version of Linux. Find
+    and compare the differences with your system and write down your results.
+
+
+    +   2. The /proc filesystem is a special on that has direct access to the system
+    kernel. The files in /proc have no size, but what happens if you do the following:
+
+
+    ```
+
+    ```bash: cat /proc/cpuinfo
+
+    <bash>: cat /proc/pci```
+
+    ```
+
+
+    Discuss the possible uses of this.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# CHAPTER 4. FILESYSTEM ESSENTIALS\n\n# ## 4.2 File Attributes\n\nLets take\
+    \ a close look at a directory listing of `mail`. Enter the command `ls -lgl:`\n\
+    \n```\n```\ndrwxr-xr-x  1 joe users     33 Dec 20 10:49 mail\n-file root     root\n\
+    \  user ID group ID Size Month Day Time File Name\n```\n```\n\nFigure 4.4: Unix\
+    \ File Attributes\n\nIts entry gives us a lot of information. It has all of its\
+    \ entries open, so everyone can read, write, and execute. Note that the first\
+    \ attribute listed is its type, in this case a “d” for directory. File attributes\
+    \ for restricted (plain type) files are listed as dashes (-).\n\nThe next 9 parameters\
+    \ are file permissions or access parameters In UNIX , files have 3 sets of 3 access\
+    \ parameters or “permissions”. The first 3 are for the owner, the second 3 for\
+    \ the group, and the last 3 for “other” or the “world”. The permissions are read\
+    \ (r), write (w), and execute (x). When you look at a file listing in long format\
+    \ you will see these attributes listed as (r,w,x) or omitted with a “-” in their\
+    \ place. If the attributes are present, access is granted for that action, otherwise\
+    \ access is denied.\n\nOther file types include symbolic links (l), an internal\
+    \ reference to another file, and plain files (-). The following table summarizes\
+    \ native Linux file types as listed by the find command. Note that the file permission\
+    \ is listed by ls (f) or as a dash (-).\n\n| | |\n|---||\n| b | block special\
+    \ file |\n| c | character special file |\n| d | directory |\n| l | symbolic link\
+    \ |\n| p | named pipe (FIFO) |\n| s | socket |\n\nTable 4.1: File Types as Listed\
+    \ by find"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# 4.3 Changing File Attributes with chmod
+
+
+    An important task for any Linux user is to manage file attributes (permissions)
+    with the chmod command. The syntax for chmod is
+
+
+    ```
+
+    chmod [-R] MODE FILE
+
+    ```
+
+
+    where MODE can be a comma separated combinations of 3 sets of symbols:
+
+
+    ```
+
+    [ugo][+ -] [rwx]
+
+
+    uu --> user
+
+    g --> group
+
+    o --> others
+
+    na --> all
+
+    ```
+
+
+    You can add (+), subtract (-), or exactly (=) the mode. Examples:
+
+
+    ```
+
+    chmod u+w mail      # Add user (u) write (w) privileges
+
+    chmod u-w mail      # Remove user (u) write privileges.
+
+    chmod g+w mail      # Add group (g) write privileges
+
+    chmod g-r mail      # Allow only the group read privileges, nothing else.
+
+    chmod o+x mail      # Add execute (x) privileges for others.
+
+    chmod a+x mail      # Add execute (x) privileges for everyone.
+
+    chmod a=xr mail     # Allow read and execute to everyone.
+
+    chmod go-r mail     # Remove group and others read privileges.
+
+    chmod u+w mail      # Same as chmod+w mail
+
+    ```
+
+
+    MODE can also be an octal representation which represents the absolute mode:
+
+
+    ```
+
+    1 = others execute #=x
+
+    2 = others write   #=w
+
+    4 = others read    #=r
+
+    10 = group execute #=x
+
+    20 = group write   #=w
+
+    40 = group read    #=r
+
+    100 = user execute  #=x
+
+    200 = user execute  #=w
+
+    400 = user read    #=r
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# CHAPTER 4. FILESYSTEM ESSENTIALS
+
+
+    The trick with octal is that you can add up the different numbers to get all different
+    combinations of privileges like:
+
+
+    ```
+
+    1 = others execute # o=x
+
+    + 2 = others write # o=w
+
+    + 4 = others read # o=r
+
+    ```
+
+
+    ```
+
+    = 7 = other read, write, and execute = o+rwx
+
+    ```
+
+
+    ```
+
+    10 = group execute # g=x
+
+    20 = group write # g=w
+
+    00 = no group read #
+
+    100 = user execute # u=x
+
+    000 = no write execute #
+
+    400 = user read # u=r
+
+    ```
+
+
+    add these last 6 to get
+
+
+    ```
+
+    530 = u=rx, g=wx
+
+
+    chmod 750 mail => chmod u=rwx,g=rx,u=mail
+
+    chmod 701 mail => chmod u=rwx,g=,u= (wait, error in text)
+
+    chmod 751 mail => chmod u=rwx,g=rx,o=x mail
+
+    chmod 741 mail => chmod u=rwx,g=r,o=x mail
+
+    ```
+
+
+    # 4.3.1 Exercises
+
+
+    +   1. On directories, the execution privilege allows for access into the directory,
+    having just read and (rw) privilege is not enough. Only execute privilege will
+    allow any access to anything inside the directory. Try this by doing a
+
+
+    ```
+
+    <bash>: chmod 600 mail
+
+    <bash>: cd mail
+
+    ```
+
+
+    There are many other modes that can be set using the first (non-octal) method.
+    The ones we discussed are the essential ones. Please check out the man pages on
+    chmod and ls.
+
+
+    +   2. Restore your mail directory back to a usable mode.
+
+
+    +   3. Write down the command you just used in both octal and symbolic modes.
+
+
+    +   4. Read the pages and learn how to set and the function of the “set user ID
+    on execution” (SUID) bit for chmod. Discuss this with your classmates and instructor.
+    This concept is a requirement for the LPI exams.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Changing File Ownership with chown and chgrp
+
+
+    Just as you can change the file permission, you can change the owner and group
+    of a file. chown does not this for you with the syntax:
+
+
+    ```
+
+    chown [-R] USER[:.GROUP] FILE
+
+    ```
+
+
+    Note that chgrp can change the group at the same time as that in the following
+    examples.
+
+
+    ```
+
+    <bash>: chown johnson mail # Sorry, only johnson or Root can do that.
+
+    chown mail: Operation not permitted
+
+    <Super>: chown joe.users mail # Change owner to joe and group to users.
+
+    <Super>: chown joe.bozos mail # Change owner to joe and group to bozos.
+
+    chown mail: Operation not permitted # You''re not a member of bozos group!
+
+    <Super>: chown .testers mail # Ok, you are in the testers group.
+
+    ```
+
+
+    chgrp is less powerful and not really needed but should be noted. Its syntax is
+
+
+    ```
+
+    chgrp [-R] GROUP FILE
+
+    ```
+
+
+    Here is an example.
+
+
+    ```
+
+    <bash>: chgrp testers mail # Same as “.testers mail’
+
+    <bash>: chgrp users mail # Same as “.users mail”
+
+    ```
+
+
+    # 4.4.1 Questions
+
+
+    Why can''t you change ownership of someone else files? Who can do this? Is this
+    a good or bad feature?
+
+
+    # 4.4.2 Exercises
+
+
+    +   1. Log in as root and change the owner and group of some files in the /tmp
+    directory. Make sure you are in /tmp and not /home/you/tmp or some other place.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# CHAPTER 4. FILESYSTEM ESSENTIALS
+
+
+    # ## 4.5 Devices
+
+
+    In Unix (almost) all commands and hardware are represented by files. The hardware
+    devices are fundamentally different and live in the directory /dev. Device files
+    allow access to the hardware directly through the kernel.
+
+
+    These special files have major and minor numbers that identify the driver in the
+    Linux kernel. Major Device Numbers specify a particular driver for I/O redirection
+    in the kernel, and Minor Device Numbers specify a device to be accessed by that
+    driver. A typical example is the /dev/hda
+
+
+    ```
+
+    brw-rw---- 1 root disk 3,0 May 5 1998 /dev/hda
+
+    ```
+
+
+    It has a major number 3 and minor number 0. The leading “b” indicates that this
+    is a block device. Its owner is root and its group is disk.
+
+
+    An ls -agsl /dev to see the major and minor numbers of typical devices. We list
+    the most commonly used devices below. Note that N will represent an integer number.
+
+
+    | Device Name | Type | Description |
+
+    |---|---|---|
+
+    | /dev/hda | B | first IDE hard disk |
+
+    | /dev/hdaN | B | Nth partition of /dev/hda |
+
+    | /dev/sda | B | first SCSI hard disk |
+
+    | /dev/sdaN | B | Nth partition of /dev/sda |
+
+    | /dev/loop0 | B | first loopback device |
+
+    | /dev/console | C | System console |
+
+    | /dev/parport0 | C | first parallel port |
+
+    | /dev/lp0 | C | first printer port |
+
+    | /dev/nll | C | System Trash Can (Black Hole) |
+
+    | /dev/ttyN | C | N virtual console |
+
+    | /dev/pts/N | C | Nth pseudo terminal (dynamically created) |
+
+    | /dev/ttySN | C | N serial port |
+
+    | /dev/psaux | C | PS/2-style mouse port |
+
+    | /dev/mouse | L | Soft link to a serial mouse like psaux |
+
+    | /dev/printer | S | lpd local socket |
+
+
+    Table 4.2: Linux Devices (See 4.1 for type info)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '/dev/null is a funny device that swallows everything you feed it like a _black
+    hole, so don''t put anything there that you want back. It''s very convenientient
+    for swallowing up unwanted error messages like this:
+
+
+    ```
+
+    <bash>: netscape & /dev/null &
+
+    ```
+
+
+    We will learn the meaning of the preceding example in the next section. The cat
+    command prints a text file to the console and the cp command copies one file to
+    another. Try this example
+
+
+    ```
+
+    <bash>: cat .csshrc
+
+    <bash>: cp .csshrc /dev/null
+
+    <bash>: cat /dev/null
+
+    ```
+
+
+    The last command should produce nothing.
+
+
+    # 4.5.1 Exercise: Redirect the output of command top to file top.log
+
+
+    # 4.5.2 Exercise:
+
+
+    ```
+
+    <bash>: ls -l /dev | grep ^c
+
+    <bash>: ls -l /dev | grep ^b
+
+    <bash>: ls -l /dev | grep ^l
+
+    <bash>: ls -l /dev/hda*
+
+    <bash>: ls -l /dev/sda*
+
+    ```
+
+
+    # 4.5.3 Discussion'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Chapter 5
+
+
+    # Process Control
+
+
+    In this chapter we will learn how to control your processes both interactively
+    and non-interactively. It is very important to maintain control of your system
+    and manage unruly processes.
+
+
+    # 5.1 Creating Foreground and Background Processes
+
+
+    Process control refers to the ability to control processes both in the foreground
+    and back-ground of the shell. A foreground process is one that is running interactively
+    in your shell, and include most processes we have discussed so far. You can interrupt
+    a foreground process by typing Ctrl-Z pronounced "control z" (hold <Ctrl> and
+    hit the z key). To put that process back into the foreground, use the <bash> command
+    fg.
+
+    A background process, by contrast, is one that does not interact with your shell
+    directly. It keeps itself and runs silently. To place a process into the background
+    you use the builtin command bg. From the shell point of view, all processes have
+    a job number. From the system''s point of view, all processes have a process ID,
+    often (see the ps command).
+
+
+    To actually be catch one of these processes, we need to find a command that lasts
+    longer than an instant (like date). Lets work with the xterm command which creates
+    an X-terminal window:
+
+
+    ```
+
+    <bash>: xterm
+
+    Ctrl-Z
+
+    [1]+ Stopped xterm
+
+    # Start a fresh xterm
+
+    # You hit Ctrl-Z and suspended it!
+
+    <bash>: fg
+
+    exterterm
+
+    Ctrl-Z
+
+    [1]+ Stopped xterm
+
+    # Restarted with fg
+
+    # You suspended it again.. good.
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# CHAPTER 5. PROCESS CONTROL
+
+
+    ```
+
+    <bash>:jobs      # Find the job number.
+
+    [3]+ Stopped xterm
+
+    <bash>:
+
+    ```
+
+
+    ```
+
+    <bash>:bg %3      # Put xterm in the background.
+
+    [3] xterm &\n<bash>:
+
+    ```
+
+
+    You should now have an xterm which behaves normally. The last [3] displayed indicates
+    its Job Number is 3. You can use that to refer to it using fg as in
+
+
+    ```
+
+    <bash>:fg %3      # foreground it with fg
+
+    Ctrl-Z           # Suspend it again.
+
+    ```
+
+
+    ```
+
+    <bash>:bg %3      # Put it in the background with bg
+
+    [3] xterm &
+
+    <bash>:jobs
+
+    [1] Running         xterm -cr red -ms &
+
+    [2] Running         xclock
+
+    [3] Running         xterm
+
+    <bash>:kill -9 %3
+
+    ```
+
+
+    ```
+
+    <bash>:jobs         xterm -cr red -ms &
+
+    [1] Running         xclock
+
+    [2] Running         xterm
+
+    [3]- Terminated
+
+    ```
+
+
+    The jobs displays all jobs in the shell with their number and status. The kill
+    -9 %N kills job N. The flag (-9) is needed to force a "sure kill" which is sometimes
+    needed. The ampersand symbol (&) is what you use to put a command directly into
+    the background with xterm &.
+
+
+    Be careful because some commands can write errors to the standard output stdout
+    and could cause strange results on your screen. To avoid this, you can redirect
+    stdout to /dev/null (or a log file) AND put it into the background in one gulp:
+
+
+    ```
+
+    <bash>:xterm & /dev/null &
+
+    or
+
+    <bash>:xterm & /tmp/xterm-log &
+
+    ```
+
+
+    This is advisable if you plan to script your commands, because stdout that has
+    no place to stop your script in tasks. Experience has shown to always deal with
+    the trash in advance.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# 5.2 Killing Processes With kill\n\nNow we display process numbers with the\
+    \ ps command\n\n```\n<bash>: ps\nPID TTY CMD\n683 ttypi 00:00:00\n31466 ttypi\
+    \ 00:00:00 xterm\n32716 ttypi 00:00:00 xclock\n\n<bash>: ps -agl\n      # Get\
+    \ a long list with ps\nF UID PID PPRI NI VSZ RSS SHARE STAT TTY TIME COMMAND\n\
+    000 501 683 672 13 2220 804 rt_sig S tty1 0:01 [bash]\n000 501 31666 683 0 3012\
+    \ 1904 wait4 S tty1 0:00 xterm -cr r\n000 501 32716 683 0 2572 1304 do_sel S tty1\
+    \ 0:00 xclock\n\n<bash>: top\n42 processes: 40 running, 2 zombie, 0 zombie\nCPU\
+    \ stats: 2.3% user, 0.7% system, 0.0%, 96.8% idle\nMem: 63848k av, 52328k user,\
+    \ 11166k free, 180204k shrd, 2896k buff\nSwap: 223018k av, 49864k used, 215326k\
+    \ free, 28804k cached\nPID USER NI SIZE RSS SHARE LIB %CPU %MEM TIME COMMAND\n\
+    664 root 18 0 14824 14M 150 R 0 1 22.7 18:21 X\n31797 carinas 0 0 7060 7060 3276\
+    \ S 0 0 11.1 0:16 emacs\n464 carinas 0 0 6020 6020 3596 S 0 0 9.4 0:03 netscapecape\n\
+    31666 carinas 0 0 1900 1900 1440 S 0 0 2.9 0:00 xterm\n32716 carinas 0 0 1304\
+    \ 1304 1096 S 0 0 2.0 0:00 xclock\n  <Shift-M> Sorted by memory usage...\n  Ctrl-C<>\n\
+    ```\n\nNow I have located a regress process xclock seems ways using too much memory\
+    \ according the top utility. For example, if you want to kill process 32716, of\
+    \ the following:\n\n```\n<bash>: kill -9 32716\n[3] Terminated\n<bash>:\n```\n\
+    \nStudy also the man pages for killall, ptree, and proc for the LPI exams.\nNext\
+    \ is an abbreviated command for kill, but most shells should have their own built-in\
+    \ version of kill."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# CHAPTER 5. PROCESS CONTROL\n\nKILL(1) Linux Programmer's Manual KILL(1)\n\
+    NAME\n\nSYNOPSIS\nkill - terminate a process\nkill [ -s signal ]Job pid ...\n\
+    kill -l [ signal ]\n\n+   OPTIONS\npid .. Specify the list of processes.\n-s Specify\
+    \ the signal name or number to send.\n-l Print a list of signal names. See signal(7)\n\
+    \nHere is the relevant and manual section of signal(7):\n\nSIGNAL(7) Linux Programmer's\
+    \ Manual SIGNAL(7)\nNAME signal - list of available signals\n\n| Signal | Value\
+    \ | Action | Comment |\n|---|---|---|---|\n| SIGHUP | | A | Hangup detected on\
+    \ controlling terminal |\n| SIGINT | 2 | A | Interrupt from keyboard |\n| SIGQUIT\
+    \ | 3 | A | Quit from keyboard |\n| SIGILL | 4 | A | Illegal Instruction |\n|\
+    \ SIGABRT | 6 | C | Abort signal from abort(3) |\n| SIGFPE | 8 | C | Floating\
+    \ point exception |\n| SIGKILL | 9 | AEF | Kill signal |\n| SIGSEV | 11 | C |\
+    \ Invalid memory reference |\n| SIGPIPE | 13 | A | Broken pipe: write to pipe\
+    \ with no readers |\n| SIGALRM | 14 | A | Timer signal from alarm(2) |\n| SIGTERM\
+    \ | 15 | A | Termination signal |\n| SIGUSR1 | 30,11,16 | A | User-defined signal\
+    \ 1 |\n| SIGUSR2 | 31,12,17 | A | User-defined signal 2 |\n| SIGCHLD | 20,17,18\
+    \ | B | Child stopped or terminated |\n| SIGCONT | 19,18,25 | | Continue if stopped\
+    \ |\n| SIGSTOP | 17,19,23 | DEF | Stop process |\n| SIGTSTP | 18,20,24 | D | Stop\
+    \ typed at tty |\n| SIGTTIN | 21,21,26 | D | tty input for background process\
+    \ |\n| SIGTTOU | 22,22,27 | D | tty output for background process |\n\nThe letters\
+    \ in the \"Action\" column have the following meanings:\n\n+   A Default action\
+    \ is to terminate the process.\nB Default action is to ignore the signal.\n Default\
+    \ action is to dump core.\nD Default action is to stop the process.\nE Signal\
+    \ cannot be caught.\nF Signal cannot be ignored.\nG Not a POSIX.1 conformant signal.\n\
+    \n22 © 2001 Fortuitous Technologies, Inc."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# 5.3 MANAGING PROCESS PRIORITIES
+
+
+    # 5.3 Managing Process Priorities
+
+
+    In Linux and UNIX , all processes have an importance factor called a priority.
+    The priority tells the system kernel how to serve that process. Obviously some
+    processes are much more critical to the system than others. Hardware access is
+    more important than email. The smaller priority value, the more importance the
+    process is given. Priority values from -20 to 20, where -20 is the highest priority
+    and 20 is the least.
+
+
+    You can see the priority of your processes by reading the PRI column in the ps
+    -xl command:
+
+
+    ```
+
+    <bash>: ps -xl
+
+    ```
+
+
+    | F UID PID PPID NI VSZ RSS WCHAN STAT TTY TIME COMMAND |
+
+    | 000 501 617 612 0 2032 504 do_del S ? | 0:03 fvvm |
+
+    | 000 501 622 617 0 3144 872 do_del S ? | 0:03 xterm -cr r |
+
+    | ... | |
+
+
+    There are two major tools for manipulating process priorities, nice and renice.
+    nice lets you specify the priority for a command, and renice allows you to change
+    the priority after the process is started. Here''s an exercise for you:
+
+
+    ```
+
+    <bash>: man nice
+
+    ```
+
+
+    NICE(1)
+
+    nice - run a program with modified scheduling priority
+
+
+    SYNOPSIS
+
+    nice -priority command [arguments]
+
+
+    # 5.3.1 Exercises
+
+
+    ```
+
+    <bash>: xclock -rv &\n<bash>: -10 xclock -rv &\n<bash>: /bin/nice -10 xclock -rv
+    &\n<bash>: ps -xl
+
+    ```
+
+
+    | F UID PID PPID NI VSZ RSS WCHAN STAT TTY TIME COMMAND |
+
+    | 000 501 617 612 0 2032 504 do_del S ? | 0:03 fvvm |
+
+    | 000 501 622 617 0 3144 872 do_del S ? | 0:03 xterm -cr r |
+
+    | 000 501 2855 1321 8 2568 1030 do_del SN ttype2 | 0:00 xclock
+
+
+    ```
+
+    <bash>: renice 20 2855
+
+    2855: old priority 4, new priority 20
+
+    ```
+
+
+    > # Renice to LOWER # xclock pid 2855.
+
+    # Don''t worry if others don''t join.
+
+    # Only HIGHER #''s allowed!
+
+
+    ```
+
+    <bash>: renice 5 2855
+
+    2855: priority: Permission denied
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '```
+
+    TCSH(1)
+
+    Builtin commands
+
+    ice [+priority] [command]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# 5.4 Cron
+
+
+    *Cron* is a daemon that can automate tasks by periodically running them based
+    on a time scheme. It is very useful for maintenance tasks. *Cron* takes a filename
+    as a script for input that it incorporates internally and checks periodically.
+    The file is called a crontab file.
+
+
+    # 5.4.1 Making a Crontab File
+
+
+    The crontab file is by default a *bash* style script. It has extra parameters
+    that tell *cron* when to start execution. Here is the format:
+
+
+    ```
+
+    | mm hh dd D COMMAND |
+
+    |---|---|---|---|---|---|
+
+    | -minute -hour -day -Month-Weekday -Executable |
+
+    ```
+
+
+    Figure 5.1: Crontab File Specification Format
+
+
+    Stars (*) are wildcards which always match, and on the other parameters to give
+    *cron* timing queues. If you want to execute every day, just put a * in the day
+    column.
+
+    A simple example of this would be to run a script at 12 midnight every night:
+
+
+    ```
+
+    # File: crontab. Execute me at 00.00 hours EVERYDAY!
+
+    0 0 * * /home/joe/bin/backup & /home/joe/backup-log &
+
+    ```
+
+
+    Notice that we have carefully routed *stdout* to a log file, otherwise *cron*
+    could hang the job, or send us all the error by mail.
+
+    Another interesting property of the *cron* time spec is it''s ability to specify
+    numbers in a *modulo* fashion. Just divide a * by a number to cron to execute
+    a periodic command:
+
+
+    ```
+
+    # File: crontab. Execute backups every four hours.
+
+    * /4 * * /home/joe/bin/backup >> /home/joe/backup-log 2>&1
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# CHAPTER 5. PROCESS CONTROL
+
+
+    # 5.4.2 Submitting Cron Jobs
+
+
+    Once we have written our crontab file, we can submit it by doing a crontab crontab-file.
+    crontab -l lists the crontab entries for you.
+
+
+    ```
+
+    bash: crontab crontab-file
+
+    bash: crontab -l
+
+    # DO NOT EDIT THIS FILE - edit the master and reinstall.
+
+    # (crontab installed on Mon Feb 7 00:13:36 2000)
+
+    # (Cron version $Id: crontab,c,v 2.13 1994/01/17 03:20:37 vixie Exp)$
+
+    # Execute the job every four hours.
+
+    # /home/joe/crontab-file
+
+    * 0 * * * /home/joe/bin/backup >> /home/joe/backup-log 2>&1
+
+    ```
+
+
+    You may also edit the crontab file using the crontab -e command, which will throw
+    you into your default editor. When you exit, the crontab file is automatically
+    updated.
+
+
+    # 5.4.3 Removing Cron Jobs
+
+
+    You can always remove your cron jobs by using the (-r) flags:
+
+
+    ```
+
+    bash: crontab -r
+
+    bash: crontab -l
+
+    ```
+
+
+    # 5.4.4 Exercises
+
+
+    Exercise 1:
+
+
+    Create a simple script named hello that prints out "hello joe". It should only
+    have two lines:
+
+
+    ```
+
+    #!/bin/bash
+
+    echo Hello joe you slacker...
+
+    ```
+
+
+    This file should be placed in your personal ~bin directory, and should have the
+    appropriate file mode for execution (hint: chmod). Make sure to test this script
+    before you go on.
+
+
+    Exercise 2:
+
+
+    Now create a crontab file named crontab-file that will execute hello every 2 minutes.
+    Submit this crontab file as discussed above and check your mail on the even minutes
+    to see if the scripts works.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'Note: Cron''s default behavior is to send any unhandled output to your mail.
+    If mail is not working for some reason, you may send your output to a file or
+    to your screen.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Chapter 6
+
+
+    # Text Editing Tools
+
+
+    # 6.1 Vi
+
+
+    Although vi is considered one of the most primitive editors in Linux , it is still
+    the most native of the UNIX editors. In a pinch, you will have to know how to
+    use vi if your favorite editor is not available.
+
+
+    vi has basic modes: Command mode, and Insert mode. First we will start to work
+    on our project. Basic command mode functions are listed below. Those with star
+    beside them indicate commands which enter insert mode.
+
+
+    | key | Insert | Description |
+
+    | --- | --- | --- |
+
+    | A | * | Append after this line |
+
+    | a | * | Append after this character |
+
+    | c | * | Replace to end of line |
+
+    | cw | * | Replace this word |
+
+    | i | * | Insert (start typing here) |
+
+    | O | * | Open to the line above cursor |
+
+    | o | * | Open to the line below cursor |
+
+    | R | | Override Mode |
+
+    | r | | Overwrite with the next char |
+
+    | j | | Move cursor one line downward |
+
+    | k | | Move cursor one up |
+
+    | l | | Move cursor one char right |
+
+    | h | | Move cursor one char left |
+
+    | x | | Delete character |
+
+    | w | | Move one word forward |
+
+    | b | | Move one word back |
+
+    | D | | Delete to end of line |
+
+    | dd | | Delete line |
+
+    | dw | | Delete word |
+
+    | yy | | Yank a line into buffer |
+
+    | p | | Insert buffer after this line |
+
+    | P | | Insert buffer before this line |
+
+    | <esc> | | Exit insert mode |
+
+
+    Table 6.1: Vi Command Mode Operations'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# CHAPTER 6. TEXT EDITING TOOLS
+
+
+    These commands may not seem obvious from a mnemonic point of view, but were designed
+    for simplicity and keyboard efficiency.
+
+
+    You can read and write files in command mode by using ex mode which is invoked
+    by typing :w (which will prompt you at the bottom of the vi screen)
+
+
+    +   * :w Write this file out.
+
+    * :q Quit vi w/o writing.
+
+    * :q! Force quit w/o writing.
+
+    * :w! Force write.
+
+    * :wq Write this file AND quit vi.
+
+    * :r Read in ''''file'''' before cursor.
+
+
+    Find, replace, and execute commands are done in a similar way:
+
+
+    ```
+
+    /pattern Find ''pattern'' and move cursor there
+
+    :1,100 s/blue/green/g For line 1 to 100, substitute green for blue
+
+    :1,$ s/blue/green/g For all lines, substitute green for blue
+
+    :''a,''b s/pie/cake/g From mark ''a'' to mark ''b'', substitute out pie
+
+    :1,$ !sort all lines
+
+    ```
+
+
+    Once we get familiar with vi we will discuss these modes further. The first thing
+    to do is to start the editor by typing the following:
+
+
+    ```
+
+    vi input.txt
+
+    ```
+
+
+    You should now have an empty screen that looks like
+
+
+    | |
+
+    | |
+
+    | |
+
+
+    Now type i and start typing some meaningful text like
+
+
+    | Mary had a little lambda, who''s feet were white as snow.
+
+    | <esc>
+
+    | -'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'The i puts you into insert mode, and the final <esc> puts you back into command
+    mode.
+
+    Now write and quit by doing a :wq
+
+
+    | Mary had a little lambda, whose fleets was white as snow |
+
+    | - |
+
+    | - |
+
+    | :wq |
+
+    | "input.txt 1 line, 58 characters written |
+
+
+    # 6.2 Editing With Pico
+
+
+    Pico is by far the easiest editor to use since it usually displays its commands
+    at
+
+    bottom of the screen. Start by typing pico input.txt.
+
+
+    | UW PICO(tm) 3.5 | File: input.txt |
+
+    | Mary had a little foo, whose fleece was white as snow.... |
+
+    Start xxx xxx Regular |
+
+    bar foo them@where.com Regular |
+
+    Linux Rocks TurboLinux eats apples Regular |
+
+    Some nay Linux Rocks |
+
+
+    The only problem with pico (and other non-vi editors) is that it may not be on
+    your
+
+    system in an emergency situation, which is when you need the most. Hit "X to exit
+
+    ico.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# CHAPTER 6. TEXT EDITING TOOLS
+
+
+    # 6.3 Editing With `emacs`
+
+
+    emacs is the most powerful off all editors commonly used under Linux . The X-Windows
+    version is fully loaded with all kinds of option menus and panels. Despite the
+    complexity, you can get by with a handful of commands. In this section, C- represents
+    Ctrl-, so for example C-x is Ctrl-x.
+
+
+    # emacs Exiting and File Manipulation
+
+
+    +   save a file back to disk
+
+    save all files
+
+    exit emacs permanently
+
+    read a file into emacs
+
+    insert contents of another file into this buffer
+
+    suspend emacs (or ignore it under X)
+
+    go beginning of line
+
+    go end of line
+
+    delete character
+
+    cut to end of line
+
+    cut and buffer text
+
+    set mark
+
+    paste buffer
+
+
+    +   C-x C-s
+
+    C-x s
+
+    C-x C-c
+
+    C-x C-f
+
+    C-x i
+
+    C-z
+
+    C-a
+
+    C-e
+
+    C-d
+
+    C-k
+
+    C-w
+
+    C-space
+
+    C-y
+
+
+    # emacs Error Recovery and Searching
+
+
+    +   undo an unwanted change
+
+    abort partially typed or executing command
+
+    redraw garbaged screen
+
+    search forward
+
+    search backward
+
+    regular expression search
+
+    reverse regular expression search
+
+
+    +   C-x u
+
+    C-g
+
+    C-l
+
+    C-s
+
+    C-r
+
+    C-M-s
+
+    C-M-r
+
+
+    # emacs Formatting
+
+
+    +   indent current line (mode-dependent)
+
+    indent region (mode-dependent)
+
+    indent sex (mode-dependent)
+
+    indent region rigidly any columns
+
+
+    +   TAB
+
+    C-M-
+
+    C-M-q
+
+    C-x TAB
+
+
+    # emacs Help
+
+
+    +   basic help
+
+    scroll help window
+
+    emacs Tutorial
+
+    apropos: show commands matching a string
+
+    describe what a key runs
+
+    desescribe a function
+
+
+    +   C-h
+
+    C-M-v
+
+    C-h t
+
+    C-h a
+
+    C-h c
+
+    C-h f'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# 6.4 Using Mail
+
+
+    Linux with several mail handlers. I prefer elm because I know it well and it is
+
+    powerful, however `pine` is very user friendly and easy to use. We will discuss
+    both.
+
+
+    # 6.4.1 Elm
+
+
+    Fire up by typing "elm". When it first starts, it will ask you some questions
+    about
+
+    files, just say yes to it.
+
+
+    ```
+
+    Mailbox is ''/var/spool/mail/carinhas'' with 2 messages [ELM 2.5 PL1]
+
+    Jan 12 * Mail Delivery Subs (61) Returned mail: Host unknown
+
+    Jan 12 * Mail Delivery Subs (62) Returned mail: Host unknown
+
+    |=pipe,|l=shell,,?=help,<>-=set current to n, /=search pattern
+
+    alias,C)opy,c)hange folder,d)lete,e,f)forward,g)roup reply,m)ail,
+
+    next,o)options,p)rint,s)ave,t)ag,n)undelete, e(c)xit
+
+    ```
+
+
+    Command:
+
+    Once inside elm, hit "m" at the command prompt, and follow the signs. elm is more
+
+    command driven and UNIX-like. When in doubt, just hitting "q" for quit. Use the
+
+    arrows to go up and down the message list.
+
+
+    # 6.4.2 Pine
+
+
+    Pine is easier to learn and use, and is compatible with elm, so you can use them
+    inter-\changably. Use the up-arrow, down-arrow, <, and > to navigate.
+
+
+    | PINE 4.10 | MAIN MENU | Folder: INBOX | 2 Messages |
+
+    |---|---|---|---|
+
+    | | HELP | | Get help using Pine |
+
+    | C | COMPOSE MESSAGE | Compose and send a message |
+
+    | I | MESSAGE INDEX | View messages in current folder |
+
+    | L | FOLDER LIST | Select a folder to view |
+
+    | A | ADDRESS BOOK | Update address book |
+
+    | S | SETUP | Configure Pine Options |
+
+    | Q | QUIT | Leave the Pine program |
+
+
+    | | Help | P PrevCmd | R RelNotes |
+
+    |---|---|---|---||
+
+    | OTHER CMDS | > [ListDirs] | N NextCmd | K KBLock'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# CHAPTER 6. TEXT EDITING TOOLS
+
+
+    # 6.5 Regular Expressions
+
+
+    Regular Expressions form the pillars of UNIX obscurity in text processing. Regular
+    Expressions are search patterns that give you ominous control over how text patterns
+    are found. Here are the basics pattern matching symbols:
+
+
+    +   * Match anything. `.*` matches any number of times. See *
+
+    * Match the last char or exp 0 or more times. `a*` matches ``, `a`, `aa`,...
+
+    * Match the last char or exp 1 or more times. `a+` matches `a`, `aa`, `aaa`,...
+
+    * Match the last char or exp 0 time. `a?` matches ``,...
+
+    * Match the beginning of the line. `^` matches lines starting with.
+
+    * Match the end of the line. `$` matches empty lines.
+
+    * Match chars: `[abc]` can match `a`, `b`, or `c.
+
+    * Negates chars: `[^abc]` matches anything except `a`, `b`, or `c.
+
+    * Grouping: `(abc)` matches `abc`, `abcabc`,...
+
+    * Match chars like `\.` and `\.
+
+    * `{n}` The preceding item is matched exactly n times.
+
+    * `{n,}` The preceding item is matched n or more times.
+
+    * `{m}` The preceding item is optional and matched at most m times.
+
+    * `{n,m}` The preceding is matched at least n times, not more than m times.
+
+    * Match a word boundary: `\b` matches `abc` but not `abcd.
+
+    * Match a non-boundary: `\B` matches `abcd` but not `abc`.
+
+    * Match a word: `\w` matches `abcdef` but not `abc`.
+
+    * Match a non-word: `\W` matches `abcd` but not `abc`.
+
+
+    # 6.5.1 GREP
+
+
+    grep is a search tool. It will find patterns in a file and print them to the terminal.
+    These patterns are regular expressions as well. Test grep with the file as before.
+
+
+    grep [ options ] pattern file..
+
+
+    ```
+
+    # 1. Find lines with "Linux" ANYWHERE in the file.
+
+    grep input.txt
+
+
+    # 2. Find "Linux" in a non word boundary ``TurboLinux"
+
+    grep "\bLinux\" input.txt # Remember \b
+
+
+    # 3. Find "Linux" at beginning and end of line, regular expressions.
+
+    grep input.txt # Note the single quotes to trick the shell,
+
+    grep input.txt # Because shell tries to interpret stuff like $.
+
+
+    # 4. Lines start with ``Linux", end with ``Respect"
+
+    grep "^Linux.*Respect$\
+
+    ```
+
+
+    Copyright © 2001 Fortuitous Technologies, Inc.
+
+
+    105'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# 6.5.2 AWK
+
+
+    Awk is a pattern scanning and process language. Its Syntax is
+
+
+    ```
+
+    awk ''program'' input-files
+
+    ```
+
+
+    When the program is long, it is usually more convenient to put it in a file and
+    run it with a command like:
+
+
+    ```
+
+    awk -f program-file input-files
+
+    ```
+
+
+    Take a look at the manual now. Here are some one-liner examples:
+
+
+    ```
+
+    awk ''/***'' input.txt # Find '''''''''' in input.txt
+
+    Most all regular expression syntax works inside the //''
+
+    awk ''NF > 0'' input.txt
+
+    ```
+
+
+    This program prints every line that has at least one field. Its an easy way to
+    delete blank lines from a file.
+
+
+    ```
+
+    awk -F: ''{ print $1 } /etc/passwd | sort
+
+    awk ''{ END print NR } input.txt
+
+    ```
+
+
+    This program prints a sorted list of the login names of all users.
+
+    This program counts lines in input.txt.
+
+
+    ```
+
+    awk ''NR % 2 == 0'' input.txt
+
+    awk ''{if(length($0) > max) max=length($0)} END print max}'' input.txt
+
+    awk ''length($0) > 80'' input.txt
+
+    ```
+
+
+    This program prints the length of the longest line.
+
+    This program prints lines longer than 80 characters.
+
+    Since the sole rule has a relational expression as its pattern, and the default
+    action, printing the record, is used.
+
+
+    ```
+
+    awk ''BEGIN { for (i=1; i<=100; i++) print int(101 * rand()) }''
+
+    ls -lg *.txt | awk ''{ x += 5 }; END print "total bytes:" x }
+
+    ```
+
+
+    This program prints seven numbers from zero to 100, inclusive.
+
+    This program prints the total number of bytes used by all .txt files.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# CHAPTER 6. TEXT EDITING TOOLS
+
+
+    # 6.5.3 Perl
+
+
+    Perl, “Practical Extraction and Report Language” is the Swiss Army Knife of all
+    scripting languages. It has everything except a Megawatt laser, and a kitchen
+    sink. Perl has a very complete set of regular expressions and a large set of UNIX
+    system calls that make it a steroid-pumped tool:
+
+
+    ```
+
+    perl [options] [ program ]
+
+    ```
+
+
+    On the command line you can use the syntax
+
+
+    ```
+
+    perl -ne ''command'' file
+
+    ```
+
+
+    where the options are
+
+
+    +   -e ''command''execute command instead of script-file
+
+    -n run the script on each line of input file
+
+    -w Print WARNINGS for your script file
+
+
+    Even though complex, we can learn a few one liners that work miracles:
+
+
+    +   # 1. Find lines starting with ‘Linux Rocks’ in input.txt.
+
+    perl -ne ''if ( /Linux Rocks /) {print}'' input.txt
+
+
+    +   # 2. Find ‘Linux’ in a non word boundary like ‘TurboLinux’
+
+    perl -ne ''if (<VBLinux/) {print}'' input.txt
+
+
+    +   # 3. Find ‘Linux Rocks’ and replace it with ‘Rocks Linux’
+
+    # Regular expressions matching ()''s get name $1, $2, $3, etc...
+
+    perl -ne ''s/(Linux) (Rocks)/$$1/'' input.txt
+
+
+    +   # 4. Lines start with ‘Linux’, end with ‘Rocks’.
+
+    perl -ne ''print if /Linux$$/'' input.txt
+
+
+    +   # 5. Find email addresses in input.txt.
+
+    perl -ne ''print if (/(\w[\]*@[\w\-]+)/gm)'' input.txt
+
+
+    56 Copyright © 2001 Fortuitous Technologies, Inc.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# 6.5.4 SED
+
+
+    sed is a stream editor, which means that it works like a conveyer belt on your
+    terminal.
+
+    The text flies past just until it works.
+
+
+    sed [ script ] file..
+
+
+    sed is complex so we''ll just show some simple usage and examples:
+
+
+    +   # 1. From line 1 to 32, print the line number
+
+    sed ''1,32 ={ }'' input.txt      # Almost works in VI
+
+
+    +   # 2. Delete lines 1 through 32
+
+    sed ''d"'' input.txt      # :1,32 d in VI
+
+
+    +   # 3. Under UNIX: convert DOS newlines (CR/LF) to Unix format
+
+    sed ''s/^M$//'' input.txt      # In bash ^M = C-v C-m, tcsh ^M = C-v C-j
+
+
+    +   # 4. Under DOS: convert Unix newlines (LF) to DOS format
+
+    sed ''s/\//'' input.txt      # method 1
+
+    sed -n p input.txt      # method 2
+
+
+    +   # 5. Delete whitespace (spaces/tabs) from front of each line
+
+    # ''t'' represents a tab character. ^t => Ctrl-V Ctrl-I.
+
+    sed ''s/^[t]*//'' input.txt      # OK in VI without single quotes.
+
+
+    +   # 6. Delete trailing whitespace (spaces/tabs) from end of each line
+
+    sed ''s/[t]*$///'' input.txt      # see note on ''^t'', above
+
+
+    +   # 7. BOTH leading and trailing whitespace from each line
+
+    sed ''s/^[t]*\s[t]*$///'' input.txt      # see note on ''^t'', above
+
+
+    +   # 8. Substitute "foo" with "bar"
+
+    sed ''s/foo/bar/'' input.txt      # replaces 1 instance foo with bar
+
+    sed ''s/bar/4/'' input.txt      # replaces only 4th instance in a line
+
+    sed ''s/bar/g/'' input.txt      # replaces ALL instances within a line
+
+    sed ''/baz/foo/bar/g/'' input.txt      # Sub ONLY on lines which contain "baz"
+
+
+    +   # 9. Match lines that have ''Regular'' in them:
+
+    sed ''s/^Regular/d'' input.txt      # Delete lines starting with ''Regular''
+
+    sed ''s/Regular$/d'' input.txt      # Delete lines ending with ''Regular''
+
+
+    +   #10. From ''Start'' to ''Linux'', substitute apples for oranges
+
+    sed ''s*/Linux/s/apples/oranges/'' input.txt'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# # Chapter 7\n\n# # Shell Scripting\n\nThere's nothing more aggravating than\
+    \ having to type out long commands over and over again. Shell scripts are simple\
+    \ text files that list shell commands into a convenient “tool” which you can use\
+    \ more easily than typing in all those commands over and over.\nNow that we know\
+    \ enough shell workings to be dangerous, we need to focus our attention to making\
+    \ changes permanent. It is essential to have use environments and scripts to do\
+    \ complex tasks, because otherwise we are stuck repeating numerous small commands\
+    \ daily. The natural starting point is to customize our .bashrc .cshrc files with\
+    \ few aliases and a prompt or two.\n\n# ## 7.1 Shell Initialization Files\n\n\
+    We are going to develop simple aliases and shell variables for our bash shell\
+    \ that will make easier when you log into your Linux system.\n\n# ### 7.1.1 Initialization\
+    \ Files for Bash\n\nStart editing .bashrc now. In writing the aliases and prompt\
+    \ definitions:\n\n```\n```\nalias m='less -EMsX ' \nalias h='history | tail -40'\n\
+    alias d=ls -1 $* |less -EMsX'\nalias dt='ls -blt $* |less -EMsX'\nalias D='ls\
+    \ -aglt $* |less -EMsX'\nPS1='[\\]:u: '\n```\n```\n\nThe $ represents all remaining\
+    \ variables on the command line for calling the command. It is equivalent to all\
+    \ subsequent command line variables, \"$1 $2 ...\".\nAfter modify you must do\
+    \ a \"source .bashrc\" to initialize your changes. Type aliases to see what the\
+    \ system defines, and try out our new aliases."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# CHAPTER 7. SHELL SCRIPTING\n\nRemember we can also have a .bash_profile which\
+    \ is supposed to carry your environment variables:\n\n```\n# .bash_profile\n#\
+    \ Get the aliases and functions\nif [ -f \".bashrc ]; then\n  . ~/.bashrc\nfi\n\
+    \n# User specific environment and startup programs\nPATH=$PATH:/usr/local/bin:$HOME/bin\n\
+    ENV=$HOME/.bashrc\nUSERNAME=\"\"\n\nexport USERNAME ENV PATH\n```\n\nNote the\
+    \ final export at the end of the file.\n\n# 7.1.2 Initialization Files for Tcsh\n\
+    \nNow lets make the analogous aliases in your .cshrc:\n\n```\nalias lester \"\
+    less -ExS\"      # Use less as our pager.\nalias h \"history\\*! | tail -40 |\
+    \ lester\"\nalias m lester                   # Used to be more, now is less.\n\
+    alias d \"-ls -1 |\\*! | lester\"\nalias dt \"-ls -lt |\\*! | lester\" # Sort\
+    \ by chronological order.\nalias D \"-ls -laft |\\*! | lester # Same as above,\
+    \ show dot (.xxx) files.\nset prompt=\"%n:%m:%\"           # \"user:location/location/location:\"\
+    \n```\n\nTry these out in test after executing\n\n```\n<tcsh> source .cshrc\n\
+    Now submit these changes by typing source .cshrc. Type alias to see what the system's\
+    \ definitions, and try some of them. Both Tcsh and use .cshrc and .login. The\
+    \ .login is normally to store environment variables and path information, while\
+    \ .cshrc normally hold aliases and prompt information.\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# 7.2 Utility Shell Scripts\n\nOur first goal is to create a script utility\
+    \ that will print files in a directory /home/joe/address. The syntax will be\n\
+    \n```\nphone.shell file1 file2 ....\n```\n\nBecause of tcsh's simple and clear\
+    \ syntax, we will first use the tcsh language to construct a solution. Afterwards,\
+    \ we will show the equivalent bash solution.\n\n# 7.2.1 Tcch Solution\n\nThe first\
+    \ thing we want to do is to tell the script that it is a csh script, and what\
+    \ the acceptable number of parameters are. In the following scripts make sure\
+    \ you ALWAYS remove the comment from the first line, otherwise these examples\
+    \ will not function. In general, students should NOT write any comments in these\
+    \ examples.\nStarting by editing a file named ~/bin/phone.csh:\n\n```\n#!/bin/csh\
+    \ -f      # This is not a comment. Remove from 2nd #.\n#\nset a=$0 # $0 refers\
+    \ to the name of this script.\nif($#argv < 1) then\n  echo Usage::$a 'Name'\n\
+    \  exit(1)\nendif\n```\n\nThe set a=$0 refers to the 0th component of the command\
+    \ line, which is the command line, phone.csh, in our case. The $a:t instructs\
+    \ csh to remove all the leading pathname components, since we are uninterested\
+    \ in seeing the full path. Test this by invoking the name of the script:\n\n```\n\
+    <bash>: phone.csh\nUsage: phone.csh Name\n```\n\nDid you remember to chmod our\
+    \ script so that it is executable?\nSo far the script does nothing but tell us\
+    \ if we have the right format. We will add a foreach line that will give us control\
+    \ for each filename:\n\n```\nforeach name ($*)\n  echo \"/address/$name\"\nend\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# CHAPTER 7. SHELL SCRIPTING\n\nNow your script should print each filename\
+    \ you enter on the command-line, as a check in our progress. Again, test this\
+    \ script and check that the loop works:\n\n```\nbash: phone.csh red green blue\n\
+    \n/home/joe/address/red\n/home/joe/address/green\n/home/joe/address/blue\n```\n\
+    \nNow that we know it, replace the echo command with the correct cat phrase. While\
+    \ we are at it, we will check for the existence of each file with the (-e filename)\
+    \ test. The previous foreach clause should NOW look like:\n\n+   foreach ($)\n\
+    \  if (-e \"/address/$name\") then\n    cat /address/$name\n  else\n    echo \"\
+    no such file $name\"\n  endif\n  echo \"--------------------------------------\"\
+    \nend\n\n# (-e) flag checks for existence\n# Separate entries with a line.\n\n\
+    The final script should resemble the following:\n\n```\n#!/bin/csh -f\n# phone.csh\n\
+    set a=$0\nif ($#argv < 1) then\n  echo Usage: $a:t 'name'\n  exit(1)\nendif\n\n\
+    foreach ($)\n  if (-e \"/address/$name\") then\n    cat /address/$name\n  else\n\
+    \    echo \"no such file $name\"\n  endif\n  echo \"--------------------------------------\"\
+    \nend\n```\n\n# This csh script, omit this comment!\n# Comment to give the filename.\n\
+    # $0 refers to the name of this script.\n# If right number of arguments,\n# Echo\
+    \ the proper syntax\n# Exit with error code 1\n# End if\n# For each name on the\
+    \ command line.\n# If file exists (-),\n# List the file\n# Else\n# Barf\n# End\
+    \ if\n# Separate entries with a line, cosmetic.\n# Bye-Bye"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "Lets check our program by creating an /address directory and several files\
+    \ there...\n\n```\n<bash>: mkdir ~/address\n<bash>: cd ~/address\n<bash>: echo\
+    \ hello1 123 > hello1  # Creates a file called hello1\n<bash>: echo hello2 456\
+    \ > hello2  # Creates a file called hello2\n<bash>: echo hello3 789 > hello3 \
+    \ # Creates a file called hello3\n<bash>: phone.csh hello1 hello2 hello3\n```\n\
+    \n```\nhello1 says 123\n------------\nhello2 says 456\n------------\nhello3 says\
+    \ 789\n------------\n```\n\n# 7.2.2 Bash Solution\n\nThe bash solution to the\
+    \ exercise is not as obvious as the csh one because of bash's bizarre syntax.\
+    \ Call it phone.bash:\n\n```\n#! /bin/bash\nif [ \"$#\" -lt 1 ]; then\n    echo\
+    \ Usage: $0 args\n    exit 1\nfi\nfor i in $@; do\n    if [ -f \"/address/$i\"\
+    \ ]; then\n        print $i;\n    else\n        echo There is no file $i\n   \
+    \ fi\ndone\n# This is a bash script. Omit comment.\n# If number of arguments too\
+    \ small\n# State the correct usage\n# Exit with error status\n# Note \"f\" closes\
+    \ \"if\" statements\n# Start a \"-f\" loop on the $@ array\n# If the file exists.\n\
+    # \n# # Error message if absent.\n# End if\n# Print a separator between files\n\
+    # \"done\" closes the \"do\" loop\n```\n\n# 7.2.3 Exercises\n\nExercise 1: Make\
+    \ the phone.bash version above work.\n\nExercise 2: Add an extra error message\
+    \ line if the file does not exist."
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "# 7.3 General Scripting\n\nIn this section we will create several script programs\
+    \ named \"doubleletake\" that will remove entries in a list. We will use several\
+    \ of our newly learned languages to accomplish that task.\n\n# 7.3.1 awk version\n\
+    \nEdit doubleletake and put in the following lines:\n\n```\n#! /bin/csh -f\n#\
+    \ This script remove double in a sorted file. See the uniq manual.\nset file=\
+    \ $1 # $1 is going to be the filename.\ncat $file | awk '{ if ($0 != last) {print\
+    \ $0; } } { last = $0; }'\n```\n\nThe script first starts the first command in\
+    \ '$1'. It then cat's the file into awk.\nNotice the initial line of\n#! /bin/csh\
+    \ -f\n\nNow the script that awk does 2 things. It first checks to see if the variable\
+    \ last was seen, if not, the second thing it does is to store the current line\
+    \ in last. Of course you could just type the second line into the command line,\
+    \ but that's not much fun if you have to do it 9 times a day.\n\n# 7.3.2 Perl\
+    \ Version\n\n```\n# /usr/bin/perl -w\nmy $line = \"\"; # declare this variable.\n\
+    foreach $filename (@ARGV) {# cycle through each filename in the ARGV list.\n{\n\
+    \    open($SF, $filename) or die \"Can't open $filename\"; # open the file and\
+    \ complain if not.\n    while (<$SF>) {\n# For every line in the file\n      \
+    \  chomp($line); # Remove trailing whitespace and/or linefeeds.\n        if ($line\
+    \ != $_) {\n# ne = not equal\n            print \"$line\\n\"; # Yes, print me.\n\
+    \        }\n        $line = $_; # Reset $line.\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# 7.4 Script Automation\n\nShell scripts are great tools when you can use them,\
+    \ and can save a lot of time. If you need to run applications or backups at odd\
+    \ hours or nightly, you really want to automate the task by using cron tools,\
+    \ which have already covered in chapter 5.4.\n\nThe following exercise describes\
+    \ how to set up a script program to do your dirty work while you are playing golf\
+    \ or sleeping.\n\n# 7.4.1 Getting Scripts in Order\n\nBefore you submit a cron\
+    \ to handle, you must make sure you can run the job by hand. This involves making\
+    \ every command self sufficient by providing complete paths to the commands and\
+    \ setting the right permissions. Lets take backups for example. You need to have\
+    \ privileges to write to the tape device as a normal user unless you plan to run\
+    \ your jobs as root.\n\nHere is a typical script, /home/guest/bin/backup.sh that\
+    \ would back up your home directory to the floppy device /dev/fd0. In this example,\
+    \ the floppy is being used as a character device just like the tape drive would\
+    \ be:\n\n```\n#! /bin/bash\n# This file is named backup.sh      # Make sure you\
+    \ are at home.\ncd /home/guest                          # Back up your home directory\n\
+    /bin/tar cvfz /mnt/fd0 .                 \necho All done boss!\n```\n\nIn this\
+    \ example, we have specified all paths to commands. This is required since your\
+    \ normal path/shell is not invoked in a script like this one. This script will\
+    \ create a lot of output which must be sent into a log file or /dev/null later\
+    \ when we make our crontab file."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# 7.4.2 Testing the Scripts
+
+
+    You must make sure you can run the scripts by hand before you try to invoke cron.
+    This is typical for all programs that must be automated. Also make sure as mentioned
+    before that all commands are given by their full path names. BTW, why doesn''t
+    the echo command need a path?
+
+
+    # 7.4.3 Exercises
+
+
+    Ex 1: Once you are confident that your script will run on its own two feet, you
+    are ready to set it up with cron. Create a crontab file /home/guest/crontab.backup
+    and submit it with
+
+
+    ```
+
+    bashcrontab crontab.backup
+
+    ```
+
+
+    as done in section 5.4. Ask for help if you get stuck.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# # Chapter 8
+
+
+    # # Using X-Windows
+
+
+    The X-Windows system is the Linux answer to a graphical user interface or GUI.
+    It allows users a great interface to work from. To start X from the console, just
+    type startx
+
+
+    If everything works, you should have a terminal that has a few big black windows
+    a clock or two. This is just a single version of how X can be presented. X has
+    many toys to play with. Here are a few:
+
+
+    # ## Basic X Tools
+
+
+    +   - xterm [options]
+
+    - xclock [options]
+
+    - xman -options
+
+    - xbiff -option
+
+    - xboard
+
+    - xrdb -merge Xfile
+
+    - xload
+
+
+    +   - Start an X-Terminal
+
+    - A basic wall clock
+
+    - Display the manual X-style
+
+    - Mailbox flag to keep you waiting for mail
+
+    - A chess game
+
+    - Incorporate Xfile into the environment
+
+    - Show the system''s usage load
+
+
+    There are actually too many applications in X list. Almost everything these days
+    has X interface.
+
+
+    # ### 8.1 Customizing the X Environment
+
+
+    Just about everything in X can be customized, depending on how hard you want to
+    work on it. The most simple thing you can do to customize your environment is
+    to keep a defaults file, normally called .Xdefaults located in your home directory.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# CHAPTER 8. USING X-WINDOWS\n\nA typical .Xdefaults looks like this:\n\n```\n\
+    ---------------------------------\n! .Xdefaults X-Resource File\n---------------------------------\n\
+    Netscape.Navigator.geometry :=700x700\nXTerm*visualBell : on\nXTerm*Font : 9x15\n\
+    XTerm*scrollBar : on\nXTerm*saveLines : 4940\nXTerm*borderColor : white\nxclock*geometry\
+    \ : 60x60-0+0\nxclock*background : black\nxclock*foreground : white\n```\n\nThe\
+    \ initial instance in the variables is a class name. The subsequent variables\
+    \ in string all X-resources or just Resources identify the property of the program\
+    \ or property to modify. The *s are wildcards and can match anything.\nFinding\
+    \ and isnt a valid X-resource can be difficult, but normally most man pages have\
+    \ a list of these and examples of how to them. If you have edited this file to\
+    \ your liking, you must activate the changes using the xrdb utility like this:\n\
+    \n```\nxrdb -merge .Xdefaults\n```\n\nAfterwards, try a command to see if your\
+    \ changes hold. Normally, there is an initialization script in a system folder\
+    \ or in your home directory that read when you start your X session. This file\
+    \ is sometimes called .xinitrc and is easy to customize:\n\n```\n#!/bin/sh\nresources=$home/.Xdefaults\n\
+    usermap=$home/.Xmodmap\nsysresources=/usr/X11/lib/X11/xinit/.Resources\n\n# merge\
+    \ in Xdefaults and keymaps\nif [ -f $home/.netscape/lock ]; then\nrm -rf $home/.netscape/lock\n\
+    fi\nif [ -f $sysresources ]; then\n/usr/bin/X11/xrdb -merge $sysresources\nfi\n\
+    if [ -f $sysmodmap ]; then\nxmodmap $sysmodmap\nfi\n\n# start some new programs\n\
+    xterm & \nxclock & \n# fix the bell- 11 Nov 96 rcr\n/usr/bin/X11/xset b 50 4500\
+    \ 100 &\nexec fvwm\n```"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# 8.2 Window Managers
+
+
+    Unlike MS GUIs, the X environment has many managers that completely control the
+    look and feel of the environment. The one you are probably using now is called
+    fvwm and is much simpler than the Gnome manager you are accustomed to using in
+    RedHat. Here is a brief description of the managers (and some of their config
+    files) that does no justice to any of them:
+
+
+    # 8.2.1 Gnome
+
+
+    Gnome is one of the two popular X-window managers out there.
+
+
+    | Documentation | Appearance | Themes |
+
+    |---|---|--|
+
+    | GNOME New | Themes | Checker |
+
+    | Games | Styles | Default |
+
+    | Medicine | Icon Sets | LeetWM |
+
+    | Multimedia | Background | Night |
+
+    | Network | Save Theme | OpenStep |
+
+    | System | Save IconSet | Pastel |
+
+    | Appearance | Preferences Utility | STEP2000 |
+
+    | Exit | OK | SteelBlueSilk |
+
+
+    ![](img/88f6e495c6955949cf21ab740d865351_68_0.png)
+
+
+    Lets look at Figure 8.1. First notice that the bottom panel has several typical
+    icons like a tool-box, terminal window, and netscape.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# CHAPTER 8. USING X-WINDOWS
+
+
+    It has a four panel virtual display which gives you four screens to work in. This
+    gives some room to spread out. Inside the window we we see some drop down panels
+    that set the appearance. There is also the file manager visible. There are click-able
+    icons on the desktop itself, much like the other OS''s you have used. Not too
+    shabby for a free OS.
+
+
+    # 8.2.2 KDE
+
+
+    KDE is the other popular X-window manager. Here is a sample of what the KDE looks
+    like:
+
+
+    ![](img/88f6e495c6955949cf21ab740d865351_69_0.png)
+
+
+    Figure 8.2: KDE Interface
+
+
+    70'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'Notice that KDE also has four virtual panels to work on, and has all the bells
+    and whistles
+
+    a high quality GUI would provide.
+
+
+    You can get more info on Gnome and KDE at the X-User''s Howta at http://www.linuxuxdoc.org/HOWTO/,
+    the KDE homepage http://www.kde.org, and the Gnome home-page http://www.gnome.org.
+
+
+    Here is a list of the most popular window managers out there:
+
+
+    # X-Window Managers for Linux
+
+
+    +   - TWM (.twmrc) One of the oldest and simplest managers. Very basic.
+
+    - FVWM (.fvumrc) Young nephew of TWM
+
+    - FVWM2 (.fvum2rc) Clever brother of FVWM
+
+    - GNOME (.gnome* dirs)Anentire environment, more than just a manager.
+
+    - KDE Like GNOME, KDE is an environment, and uses the QT X-library.
+
+    - AfterStep NextStep feel and beyond
+
+    - Window Maker NextStep look and feel. Easy to configure
+
+    - Enlightenment An extreme, detailed, and configurable environment. Crashes'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Chapter 9
+
+
+    # TCP/IP Networking Basics
+
+
+    Linux comes with all the TCP/IP networking goodies you would expect from a full-featured
+    UNIX box. It has telnet, ftp, mail, and many other services. Here''s a quick list
+    of the bread-n-butter commands:
+
+
+    # Basic Network Applications and Services
+
+
+    +   telnet RemoteHost Connect to another system (insecure)
+
+    login RemoteHost Login to RemoteHost (insecure)
+
+    ftp RemoteHost File Transfer Protocol transfers files between hosts
+
+    ssh RemoteHost Secure connection to RemoteHost
+
+    scp RemoteHost Secure copy file from here to RemoteHost
+
+    scp Host1:f1 Host2:f2 Secure copy f1 from Host1 to Host2
+
+
+    # TCP/IP Diagnostics
+
+
+    +   ping RemoteHost Send a "ping" to a remote host to check connectivity
+
+    slookup RemoteHost Query a DNS server for hostname resolution
+
+    route Print out the routing table (check /sbin/route)
+
+    ifconfig Print local TCP/IP network interface configuration
+
+    arp print/manipulate ARP cache
+
+    tctpdump -i ethX listen to traffic on ethX
+
+
+    # Networking Terms
+
+
+    +   TCP/IP Transmission Control Protocol / Internet Protocol
+
+    ARP Address Resolution Protocol
+
+    route a route to another machine
+
+    host Any machine on the network
+
+    client The that wants data or a service
+
+    server The host that provides data or a service'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# 9.1 Network Communication
+
+
+    This section covers network communication from a user point of view. We won''t
+    talk much about how to set up hardware or server configurations. This has already
+    been done by your administrator.
+
+
+    # 9.1.1 Checking Network Status
+
+
+    Sometimes it is unclear if your network is working correctly. There are some easy
+    commands that you can use to check if a computer is “alive” on the network. The
+    first and most important command is ping will send a test message to the computer
+    who should respond:
+
+
+    ```
+
+    [LocalHost]/home/joe:ping grouch
+
+    PING grouch (192.168.1.3): 56 data bytes
+
+    64 bytes from 192.168.1.3: icmp_seq=0 ttl=255 time=0.7 ms
+
+    64 bytes from 192.168.1.3: icmp_seq=1 ttl=255 time=0.3 ms
+
+    64 bytes from 192.168.1.3: icmp_seq=2 ttl=255 time=0.3 ms
+
+    ...
+
+    ```
+
+
+    This shows that the host group is alive and well. It provides us with some timing
+    information which indicates the speed of the connection between LocalHost and
+    Remote-Host.
+
+
+    If your DNS (see next section) is not working, you may not be able to ping by
+    name, but perhaps by number. You can also ping by IP number like:
+
+
+    ```
+
+    [LocalHost]/home/joe:ping 192.168.1.3
+
+    PING 192.168.1.3 (192.168.1.3): 56 data bytes
+
+    64 bytes from 192.168.1.3: icmp_seq=0 ttl=255 time=0.7 ms
+
+    64 bytes from 192.168.1.3: icmp_seq=1 ttl=255 time=0.3 ms
+
+    etc....
+
+    ```
+
+
+    If you don''t get any response, or get an error, something is wrong with the network
+    and you will not be able to communicate with that computer.
+
+
+    # 9.1.2 DNS and Nslookup
+
+
+    The Domain Name Service also known as DNS allows you, the users, to translate
+    names like www.yahoo.com into a number like 216.32.74.52 which is needed for your
+    computer communicate over the network. Networks are controlled by gremlins that
+    only use names not. DNS is very important if you are going to use the network
+    at all.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: 'Sorry, you are SOL. No do do.. (unless you know the number already) Maybe try
+    www.belse.com.
+
+    Sometimes you connect by IP number when DNS doesn''t work. To connect to www.io.com
+    with one of the numbers we found. Note that Linux has a text browser called Lynx
+    that is many-convenient.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# CHAPTER 9. TCP/IP NETWORKING BASICS
+
+
+    # 9.1.3 The “R” Commands
+
+
+    The so-called R-Commands are login, rcp, rsh, and friends. These are powerful
+    and dangerous commands, and should be used with great care. Many systems exposed
+    to the Internet disable, as they, these commands because data is completely open
+    to public scrutiny that network. Now, some of these commands have secure versions
+    where data is encrypted, or the commands are replaced by ssh, the secure shell.
+
+
+    In order to execute remote commands on a remote machine without passwords, you
+    set up a file called .hosts (in your home dir) that looks like the following:
+
+
+    ```
+
+    .hosts file for RemoteHost
+
+    LocalHost joe
+
+    ```
+
+
+    and on the local machine a complimentary setup allows you to work from there.
+
+
+    ```
+
+    .hosts file for LocalHost
+
+    RemoteHost joe
+
+    ```
+
+
+    Now try to copy a file from here to there:
+
+
+    rc filename RemoteHost:
+
+    rc filename RemoteHost:: # Same as above.
+
+
+    Now copy a file from RemoteHost to LocalHost:
+
+
+    rc RemoteHost:fileA # Copy the file to . with same name.
+
+    rc RemoteHost:fileAB # Renames the file
+
+
+    Now user login to log into RemoteHost:
+
+
+    login RemoteHost
+
+    Last login: Sat Jan 15 02:53:13 from beppo
+
+    You have mail.
+
+    [RemoteHost]/joe:is -agl
+
+
+    ```
+
+    total 3236
+
+    drwx-xr-x 20 users 4096 Jan 14 09:45 .
+
+    drwx-xr-x 5 root 4096 Jan 14 08:42 .
+
+    --rw-rw-- 1 joe users 1748 Jan 14 06:59 .ICEauthority
+
+    --rw-rw-- 1 joe users 101 Jan 14 08:35 .Xauthority
+
+    --rw-r--r-- 1 joe users 1506 Jan 14 08:18 .Xdefaults
+
+    --rw-rw-- 1 joe users 133 Jan 11 15:56 .bash_history
+
+    ....
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# 9.2 Using X-Windows Over the Network
+
+
+    One great thing about X is that it has networking right into it. You can use any
+    X application from anywhere on your network. All you need to do is set a few parameters
+    that allow communications.
+
+
+    # 9.2.1 Connecting X to another client
+
+
+    There are two things you do to get X to work over a network. First you need to
+    allow other machines to connect to your workstation. One way to do this is use
+    xhost RemoteHost, where RemoteHost is the machine you want to communicate with.
+    Second, you must telnet (or ssh) to another workstation, and set the DISPLAY environment
+    variable to your workstation like this:
+
+
+    ```
+
+    [LocalHost]/home/joe:xhost + RemoteHost
+
+    [LocalHost]/home/joe:telnet RemoteHost
+
+    Red Linux release 6.1
+
+    Kernel 2.2.12-20 on an i586
+
+    login: joe
+
+    Password: ******
+
+    Last login: Jan 13 12:13:37 from bistro.rr.com
+
+    [RemoteHost]/home/joe:setenv DISPLAY LocalHost:0
+
+    [LocalHost]/home/joe:xcalc - title RemoteHost
+
+    Ctrl-C
+
+    [RemoteHost]/home/joe:exit
+
+    [LocalHost]/home/joe:
+
+    ```
+
+
+    Remember that RemoteHost and LocalHost need to be changed to whatever your workstation
+    is named. What you should have now is a process that is run by the remote system!
+    It should be clear that this is powerful. In the next chapter we''ll talk about
+    other networking features.. If you put a line like the following in your .login
+    or .bashrc, your DISPLAY variable will be set automatically for you. Play with
+    this for a second:
+
+
+    ```
+
+    <tcsh>:setenv DISPLAY ''who am i | perl -n ''\/(.+)/; print $1":""0'' in bash,
+
+    <bash>:set DISPLAY=''who am i | perl -n ''\/(.+)/; print $1":"""0''
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# CHAPTER 9. TCP/IP NETWORKING BASICS
+
+
+    # 9.2.2 Securing Your X Connection
+
+
+    Above we talked about xhost and how it allows other machines to connect to your
+    X-Server on your workstation. There is a security flaw that allows ALL people
+    from the RemoteHost to connect to your workstation. This “hole” has been used
+    to exploit many a computer.
+
+
+    Fortunately there is a secure alternative to using xauth. The way to use xauth
+    is to first execute xauth list on the RemoteHost, grab the information it produces
+    with your mouse (middle-click drag), and then paste it (middle-click) on your
+    workstation after typing xauth add.
+
+
+    ```
+
+    [RemoteHost]/home:xauth list
+
+    bistro.max:0 MIT-MAGIC-COOKIE-1 6c7d8ba30a
+
+    bistro/unix:0 MIT-MAGIC-COOKIE-1 7bf452301a230498
+
+    localhost:0 MIT-MAGIC-COOKIE-1 a43f0989db
+
+    localhost:10 MIT-MAGIC-COOKIE-1 3c08b9241d
+
+    ```
+
+
+    On your (local) workstation:
+
+
+    ```
+
+    <bash>:xauth add bistro/unix:0 MIT-MAGIC-COOKIE-1 7bf452301a230498
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Network Security for Users
+
+
+    Network security from a user point of view is simple: Don''t use easy-to-guess
+    passwords, and don''t leave the “R” commands open to attack.
+
+
+    Hard to guess passwords do not resemble any word and should have non alphabetic
+    characters in them. Hello is not a good password, but h39Xz is. Hackers always
+    use crack which uses a dictionary to guess passwords, and Hello would be cracked
+    in a few seconds. As far as security is concerned, you need remember a couple
+    of things.
+
+
+    +   * Always keep your home directory () protected.
+
+    * `bash: chmod -R 700 ~`
+
+
+    +   * Don''t use Rcommands over an insecure network, as hackers can see most everything.
+    If you secure shell OpenSSH and secure versions of R-commands, you are better
+    off. Check http://www.openssh.org for info on OpenSSH.
+
+
+    +   * Programs like telnet show your passwords over the Internet. Use OpenSSH
+    from http://www.openssh.org.
+
+
+    +   * Never tell anyone your password, and if you do, change it the next day.
+
+
+    +   * `chmod 600 .hosts`
+
+
+    +   * Change your password every few months.
+
+
+    +   * Never write your password down or identify it as a password.
+
+
+    +   * Pick an account name that is difficult to guess. Passwords should have uppercase,
+    lowercase, and numerical characters. Do not use a dictionary word as a password
+    or even part of a password. You can check your password tables again crack at
+    http://ftp.cerias.purue.edu/pub/tools/unix/pwdutils/crack.
+
+
+    +   * Check permissions on files periodically. Most files should be 600 or 700.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# Chapter 10\n\n# # Native Linux Compilers, Software,\n and Services\n\nLinux\
+    \ includes versions of C++, C, Perl, Python, awk, and many others. It also has\
+    \ text formatting solutions of TeX and LaTeX which is what we use to format this\
+    \ document. There are many other freely available additions like Java, Fortran,\
+    \ and Lisp.\n\nHere is what our systems spits out with man -k compiler:\n\n+ \
+    \  - ccc, cpp (1) - The GNU C-Compatible Compiler Preprocessor.\n- f4rpcgen (1)\
+    \ - an RPC protocol compiler\n- g++ (1) - GNU project C++ Compiler\n- gcc, g++\
+    \ (1) - GNU project C and C++ Compiler (egcs - 1.1.2)\n- gcc, g++ (1) - GNU project\
+    \ C and C++ Compiler (egcs-1.1.2)\n- tic (im) - the termino entry-description\
+    \ compiler\n- zic (8) - The Perl Compiler\n- B (3)\n- B::Bytecode (3) - Perl compiler's\
+    \ bytecode backend\n- B::C (3) - Perl's C backend\n- B::CC (3) - Perl compiler's\
+    \ optimized C translation backend\n- B::Deparse (3) - Perl compiler backend to\
+    \ produce perl code\n- Generic interface to Perl Compiler backends\n\nHere is\
+    \ what our systems give for man -k language:\n\n+   - Tcl (n) - Summary of Tcl\
+    \ language syntax.\n- bc (1) - An arbitrary precision calculator language\n- gawk\
+    \ (1) - pattern scanning and processing language\n- perl (1) - Practical Extraction\
+    \ and Report Language\n- perls (1) - XS language reference manual\n- python (1)\
+    \ - an interpreted, object-oriented programming language"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# CHAPTER 10. NATIVE LINUX COMPILERS, SOFTWARE, AND SERVICES
+
+
+    Consult the following websites for current software information:
+
+
+    http://www.freshtmeat.net for Linux software.
+
+    http://www.sourceforge.net for OpenSource software.
+
+    http://www.newsforge.com Open Source News.
+
+    http://www.seul.org Linux software for education and science.
+
+    http://www.slashdot.org Don''t forget Slashdot.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Bibliography
+
+
+    +   [1] Welsh, Dalheimer, and Kaufman, Running Linux, 3rd Edition. O''Riley &
+    Associates, 1999.
+
+    [2] Ellen Sievier, Linux in a Nutshell, 3rd Edition. O''Riley & Associates, 2000.
+
+    [3] M. Sobell, A Practical Guild to Linux. Addison-Wesley, 1997.
+
+    [4] http://www.linuxdot.org/nlm/ Linux Newbie Guide.
+
+    [5] http://sunsite.auc.dk/linux-newbie/ Linux Newbie Administrator Guide.
+
+    [6] The AfterStep Homepage at http://www.afterstep.org'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Appendix A
+
+
+    # Glossary
+
+
+    +   alias A shortcut name for another command
+
+    ASCII American Standard Code for Information Interchange = text
+
+    background Processes work silently here and not bother you
+
+    bash The GNU Bourne-Again Shell.
+
+    bin Refers to an executable "binary", usually a highlighted rectangle
+
+    cwd Your Current Working Directory
+
+    cursor The active point for editing, usually a highlighted rectangle
+
+    daemon A program in the background and provides a service, like HTTPD
+
+    device A physical or logical component of a computer
+
+    directory A folder in the computer
+
+    DNS Domain Name Service: domain names for IP numbers & vice-versa
+
+    environment A set of parameters your shell works in
+
+    execute To enter command
+
+    extext2 The native Linux filesystem
+
+    file permissions They control who reads, writes, and executes files
+
+    foreground Where processes your console
+
+    FTP File Transfer Protocol, used to move files over networks\GID Group ID of a
+    file or process
+
+    GUI Graphical User Interface. Think Windows, but better!
+
+    Home Your directory.
+
+    host A computer on a network
+
+    job A process running in your shell
+
+    kernel The core software that runs Linux
+
+    man The MANUAL pages
+
+    mount Attach a disk partition to Linux
+
+    mount point An empty directory you attach (mount) to a partition
+
+    network A series of communication channels for computers
+
+    partition subdivision of a hard disk. A slice of pie.
+
+    path /This/is/where/you/are/ in the filesystem (folder)
+
+    PID Process indicates how important a process is to the kernel
+
+    priority Every running program has a number
+
+    process id
+
+    prompt That place of text just before you some commands. Customizable.
+
+    regular expression A pattern used for searching text.
+
+    route The path data takes through a network.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# APPENDIX A. GLOSSARY
+
+
+    +   script ................................ An shell program much like a "batch
+    file" in MS-DOS.
+
+    shell ................................... A program that reads/executes command
+    from users.
+
+    server ................................ A computer that provides data and/or services
+
+    stderr ............................... Standard Error
+
+    stdin ................................ Standard Input
+
+    stdout ................................ Standard Output
+
+    string ................................ Just a text word
+
+    swap ................................... Memory on a disk
+
+    tcsh ................................... The C-Shell, very friendly
+
+    UID ................................ User ID. Each user has one and files get
+    tagged with it.
+
+    username ............................. Your login name
+
+    user ................................... A computer user
+
+    xterm ................................ A console program for X-Windows'
+  merge: -1
+  img_proc: true
