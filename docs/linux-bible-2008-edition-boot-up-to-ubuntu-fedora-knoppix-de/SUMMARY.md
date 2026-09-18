@@ -1,0 +1,2 @@
++   [Linux 圣经（2008版）：启动 Ubuntu、Fedora、KNOPPIX、Debian、openSUSE 及其他 11 种发行版](README.md)
++   [Linux 圣经（2008版）：启动 Ubuntu、Fedora、KNOPPIX、Debian、openSUSE 及其他 11 种发行版](linux-bible-2008-edition-boot-up-to-ubuntu-fedora-knoppix-de.md)
