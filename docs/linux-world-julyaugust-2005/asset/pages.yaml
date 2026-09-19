@@ -1,0 +1,5209 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# GUEST COLUMN: SAVE $100m USING LINUX
+
+
+    # www.cpilive.net
+
+
+    # LINUX WORLD
+
+
+    ISSUE 05 JULY - AUGUST 2005
+
+
+    MIDDLE EAST & AFRICA
+
+
+    DIV: @TeamAM@yypg;c-US
+
+    e=TeamAM@yypg,ou=TeamAM
+
+    YYPG,emailyypg@msn.com
+
+    Reason: I attest to the accuracy\and integrity of this document
+
+    Date: 2005.10.19 10:19:41 -08''00''
+
+
+    # THE OPEN WORLD
+
+
+    # Why more and more financial companies
+
+
+    # Open source turning to Linux
+
+
+    # $saves money
+
+
+    PLUS+
+
+    Linux laptops for less than $100
+
+    Businesses can save on hardware
+
+    costs; Linux goes to school Learn
+
+    how the education sector can cut
+
+    costs; B success stories CIOs talk
+
+    about their implementation
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Unleash Linux!
+
+
+    We see open, industry-standard systems as a key to flexibility and growth. That''s
+    leading more businesses to choose HP systems. We''re helping customers integrate
+    Linux into business-critical processes, and partnering with companies like BEA,
+    Oracle and SAP to ensure maximum flexibility. All so change arrives, you''ll be
+    more than ready for it.
+
+    www.hp.com/info/linux
+
+
+    # change hp
+
+
+    Solutions for the adaptive enterprise.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/a883fb7c73397cd76c2dae63f64a20f1_3_0.png)
+
+
+    # EDITORIAL
+
+
+    3
+
+
+    # Back to the grass roots
+
+
+    +   My first brush with computers was in the time: ''80s during my school days.
+
+
+    The computers I grew up with had boring screens, limited functionality, multimedia;
+    no internet, e-mail or chat; no applications, which were expensive and we had
+    to ratify them in our lab. I couldn''t modify, change or tinker with them — in
+    short they curtailed my fidget imagination. And sadly, they dashed my dreams of
+    becoming a programmer.
+
+
+    Linux and open source, gives freedom, functionality that any fertile imagination
+    would want to have. It encourages everyone to work together for the greater good,
+    and sure even make some money. It''s (almost free) meaning Universities can save
+    lot of money. Students can play with it; its multimedia; network enabled; and
+    they can make it their own, which is not the case with closed operating systems.
+
+
+    A few weeks ago, I read a report by the British Educational Communications and
+    Technology Agency (BETA), which stated that the cost PC for primary schools in
+    the UK using open source software was half of those running proprietary software,
+    and 20% less for secondary schools.
+
+
+    Everyone regardless of who they are having access to reliable and affordable computing
+    services, students having the freedom to play out their imagination. The possibilities
+    are endless.
+
+
+    The report, and of schools, disposed that open source software is harder to support
+    and went on to say that it needed cut support costs up to 60%.
+
+
+    Not surprisingly companies, like Microsoft, Dell, Sun Microsystems, Google, Yahoo,
+    Netscape and even Linux were started by enterprise college students or University
+    projects.
+
+
+    Interingly, we''re also covering four large projects across the US, India and
+    South Asia to bring Linux to the masses. These initiatives promise to bring Linux
+    notebooks and desktops for as low as $500 to $550 for the common man.
+
+
+    If we encounter open source and Linux in the learning space, who knows the next
+    big thing will come from?
+
+
+    Though these products are targeted at the masses, I see no reason why they can''t
+    be used by SMBs, the government, and schools and even enter markets to cut costs.
+
+
+    Personally, these two developments got me excited.
+
+
+    Regards,
+
+    Maddy Reddy.
+
+
+    Editor
+
+    maddy@@cpidubai.com
+
+
+    July – August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CONTENTS
+
+
+    # EDITORIAL
+
+
+    03 Back to the grass roots
+
+
+    # NEWSDESK
+
+
+    +   > 08 FSC receives Novell Technology
+
+    > Partner of the Year Award
+
+    > Hooloo unveils Arabised Linux
+
+    > RDBMS market action heats up
+
+    > 09 Sun open sources Solaris
+
+    > Lay off at the Linux labs
+
+    > 10 Novell Aquiline Immunity
+
+    > HP ships'' million tax servers
+
+    > Mandriva acquires lyr assets
+
+    > Former Linux architect moves to Window
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_4_0.png)
+
+
+    # CASE STUDY FINANCIAL SERVICES
+
+
+    20 CHINA''S BIGGEST BANK USES LINUX
+
+    China''s biggest bank plans to deploy Linux
+
+    servers across its network of 20,000 national
+
+    branches in a project that may be the biggest
+
+    Linux deployment yet in China.
+
+
+    21 ITALIAN BANK DEPLOYS ENTERPRISE
+
+    LINUX ACROSS THE BOARD
+
+    BPU Banca, the operational part of the
+
+    group Banca Popolare, Italy''s seventh
+
+    largest banking group and first co-operative
+
+    credit banking group, has chosen to implement
+
+    Red Hat Enterprise across its desktops
+
+    and servers.
+
+
+    # MIGRATION GUIDE
+
+
+    30 MIGRATING TO OPEN SOURCE
+
+    How can you better your chances of success?
+
+    Read on to learn what open source users and
+
+    industry watchers advise.
+
+
+    # Open Source saves money
+
+
+    The financial services industry, which encompasses banks, asset
+
+    management firms, stock exchanges, insurance companies and credit
+
+    agencies, has sought operational efficiencies while also trying to
+
+    down costs. This costly vertical is now turning to Linux
+
+    and open source to achieve, just that.
+
+
+    # GUEST COLUMN
+
+
+    # OPEN SOURCE ASCENDANT
+
+
+    How Cedant Travel Distribution Services
+
+    replaced a $100 million mainframe with 144
+
+    Linux servers and lived to tell about it.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_4_1.png)
+
+
+    Christopher Koch, is
+
+    t Executive Editor of
+
+    CIO magazine, an IDG
+
+    publication.
+
+
+    52'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/a883fb7c73397cd76c2dae63f64a20f1_5_0.png)
+
+
+    # Linux Solutions By Red Hat Experts
+
+
+    700+ Trained and Certified RHCEis MEA Red Hat Master Distributor Recognised Expertise
+    & Consultancy Centre Official Red Hat Support Centre
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_5_1.png)
+
+
+    http://www.opennet.ae Opennet MEA FZ LLC, Tel: +971 4 390 1943 Fax : +971 4 390
+    4767 Email : info@opennet.ae'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # CONTENTS
+
+
+    # ## COST LINUX PCS
+
+
+    26 LINUX FOR THE MASSES
+
+    Vendors are all set to unveil of raft low-cost Linux based laptops, thin clients
+    and desktops priced under $550 with bundled software for the mass market.
+
+
+    27 $100 LINUX LAPTOPS NEXT YEAR
+
+    The MIT Media Lab''s project to develop and sell $100 Linux laptop is expected
+    to be the first machines available in June.
+
+
+    30 PARC TAKES A SECOND LOOK
+
+    Regional market research revumps its existing open source infrastructure to increase
+    its return on investment
+
+
+    32 BIRMINGHAM BETA ON LINUX
+
+    UK City Council is migrating to Open Source, 1,500 desktops to cut costs and save
+    taxpayers money.
+
+
+    # ## IN ACTION
+
+
+    # ## LINUX IN SCHOOLS
+
+
+    34 BACK TO THE GRASS ROOTS
+
+    Linux brings its value to the education sector – the place it was created. Now
+    more schools and colleges are turning to open source to reap the benefits.
+
+
+    # # LINUXWORLD
+
+
+    MIDDLE EAST & AFRICA
+
+
+    # ## OPEN TALK
+
+
+    38 LEAPING AHEAD WITH LINUX
+
+    As Linux Business Manager for HP''s Technology Solutions Group (TSG) in Europe,
+    Middle East and Africa, Eva Beck''s role is to drive HP''s strategy and marketing.
+
+
+    40 RED HAT''S CEO TALKS
+
+    SHOP AND APPS
+
+    If anyone can be an evangelist of the commercial value of open source software,
+    it''s Matthew Szilik, CEO of Red Hat.
+
+
+    42 LINUX GNU SHARES HIS OPEN SOURCE VIEWS
+
+    Linux World MEA caught up with John "Maddock" Hall, executive director of Linux
+    International and guru, to get his take on the Linux universe, today and in the
+    future.
+
+
+    # ## 44 PRODUCTS
+
+
+    # ## 58 LAST WORD
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_6_0.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_6_1.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_6_2.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_6_3.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_6_4.png)
+
+
+    # ## THE VOICE OF OPEN WORLD
+
+
+    | Publisher | Chief Designer | Head of Sales and Marketing | IT Manager | Production
+    | Head Office | Regional partner of |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Domneic De Sousa | Denis Feistel | Anil Patel | Nadeem Rahul | Pratik Dikshan
+    | PO Box 13703<br>London W12 2QE | | © Copyright 2005 CPI... |
+
+    | Editorial Director Dave Reid | Lyssa Gentry | | Webmaster Roy Magnus | David
+    Johnnehju | | | |
+
+    | Managing Editor Kajal Vasudevkar | Designer Monica Primavera | | Database Miguel
+    Agrawal | | | |
+
+    | Editor Maddie Reddy | | | | | | |'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# MAKE SOLARIS™
+
+    FASTER.
+
+    MAKE LINUX
+
+    FASTER.
+
+    MAKE YOUR BUSINESS
+
+    FASTER.
+
+
+    Introducing Sun Fire™ Servers powered
+
+    by AMD Opteron™ processors.
+
+
+    The Solaris Operating System and Linux are up to 45% faster than comparable 32-bit
+    systems when powered by
+
+    Sun Fire™ V20 servers featuring screaming AMD Opteron processors.
+
+
+    Add the Sun Java™ Enterprise System - Sun’s entire infrastructure portfolio of
+    software - and Sun Storage and Services
+
+    to experience the full Sun systems advantage. Engineered to deliver extreme performance
+    at compelling prices.
+
+
+    Certified for Windows, Solaris and Linux
+
+    Up to 30% Discount for MCSE professionals on selected dual
+
+    CPU models
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_7_0.png)
+
+
+    OPT FOR SUN AND AMD OPTERON AT
+
+    middleeast.sun.com/v20z
+
+    OR CALL 0097 14 366 2600
+
+
+    +   1. BASED ON TESTS WITH AMD OPTERON VS. 3.2 GHZ XEON RUNNING LINUX, AMD OPTERON
+    RAN 45% FASTER. ON OPTERON SPECIFIC WORKLOADS - BASED ON DATA FROM WWW.SPEC.ORG
+    01/22/04. FOR SOLARIS,
+
+    MICROBENCHMARKS PERFORMED TO AN AVERAGE 42% FASTER ON AN AMD OPTERON PROCESSOR,
+    245 (12.0 GHZ) BASED SYSTEM COMPARED TO 3.2 GHZ XEON SYSTEM.
+
+    2. SUN SYSTEMS © 2004. ALL RIGHTS RESERVED. SUN, MICRO SYSTEMS, THE SUN LOGOS,
+    SOLARIS, THE SOLARIS LOGO, THE JAVA LOGO, AND "THE NETWORK IS THE COMPUTER™ TAGLINE
+
+    ARE TRADEMARKS OF SUN SYSTEMS, INC. OR MICRO SYSTEMS, INC. IN THE UNITED STATES
+    AND OTHER COUNTRIES, AND THE AMD LOGOS AND OPTERON AND COMBINATIONS THEREOF.\*'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# NEWSDESK
+
+
+    # FSC receives Novell Technology Partner of the Year Award
+
+
+    Fujitsu Siemens Computers (FSC) was recently presented with the Novell Partner
+    of the Year Award for operational excellence and its FlexFrame for mySAP Business
+    Solution, based on Linux.
+
+
+    The first Infrastructure realisation of SAP''s Adaptive Computing capabilities,
+    as part of SAP Netherworld FlexFrame for myDB Business Suite, is based on the
+    use of grid technology on IT infrastructure. Customers who have implemented FlexFrame
+    for mySAP claim to have achieved up to 60% reduction in Total Cost of Ownership
+
+
+    Sheila Bibi Communications Director, International Sales Region, Fujitsu Siemens
+    Computers says, expanding throughout the global markets, including the Middle
+    East and an emerging platform for innovation, the dynamic data center is a very
+    prestigious recognition and we are proud to receive such an award.
+
+
+    Our lasting partnership with Novell is a key component in our strategy to leverage
+    the potential of Linux for our enterprise customers.
+
+
+    "Novell and FSC have collaborated successfully for many years, and we are committed
+    to identifying and resolving challenges"
+
+
+    said John Rosie VP Alliance at Novell has demonstrated its technology based on
+    leading-edge concepts for practical implementation in today''s data
+
+
+    The company Premiere servers currently support Novell and Linux.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_8_0.png)
+
+
+    Hoolool has introduced its bilingual version of the Linux operating system, HOST
+    at the recent Saudi Arabia. The Novell vendor debuts its version of the open source
+    OS stands out for its friendly user interface (GUI). Hoolool, which started in
+    2003 in Hyderabad, India has three products named Ensys, an ERP product; HOST
+    – a Linux operating system and soon to be launched (IT)
+
+
+    The four-year-old company is targeting the government region, education and SME
+    (Small Office Home) users. Hoolool claims distribution of Linux offers greater
+    stability, reliability and graphical user interface making it easy for Windows
+    users to migrate to Linux. All HOST products support Hyper Threading and "plug
+    and play" of hardware through standard USB.
+
+
+    # RDBMS market action heats up
+
+
+    Linux seeks help Oracle database catch IBM
+
+
+    Oracle recovered ground in the worldwide relational (RDBMS) market to draw nearly
+    level growth with IBM, in path to segment. Microsoft is said to see new license
+    sales by 18% to be the fastest growing database vendor, which it remained in third
+    place behind battle. Overall, sales of RDBMS software grew 10.3% in 2004, to $5.8
+    billion, said. That compared to growth of 5%
+
+
+    in 2003 a decline of 6% in Linux.
+
+
+    IBM Oracle took in new license sales, which has partly parity to IBM acquisition
+    of interest. IBM''s database grew just 5.8% last year, with growth of 14.6% for
+    Oracle, which had a share of 31.6% of market
+
+
+    Significantly intensifying market, making it too close to declare a leader. Oracle
+    said
+
+
+    Microsoft came from the 2052, or mainframe of its DB database, sales of DB2 on
+    Linux also performed well, which IBM continues to develop but less in market,
+    declined 17.6% to $51 million
+
+
+    Oracle has been heavily marketing Linux as
+
+
+    for use to reduce costs, and the strategy appears to pay off. The market remains
+    competitive with new license sales, Oracle accounting for $654.8 million in new
+    sales, but more than double from 2003.
+
+
+    Database sales on Windows were also strong, growing 20% from 2003 to $5.1 billion
+    in new sales. The gains are due to Microsoft''s SQL Server 2005 database date
+    entry
+
+
+    Microsoft earned the year with 20% of the database market, or $1.56 billion in
+    new sales, up 18% in 2004.
+
+
+    Gartner''s figure do not include maintenance fees. New license sales are considered
+    a good health indicator, however as they reflect new business.
+
+
+    LinuxWorld ERA — July 2005'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# NEWSDESK\n\n# Sun open sources Solaris\n\nHope to breathe new life into OS.\n\
+    \n+   Sun has started releasing part of Solaris to open source. Technologies including\
+    \ the kernel and networking software were available for free usage under Sun's\
+    \ Development and Distribution License, said Tom Goguen, Sun's platform VP\nThe\
+    \ kernel includes features such as self-healing and Solaris containers for isolating\
+    \ an application within the operating system.\n part of the release are system\
+    \ libraries and commands.\nUsers can download source code, combine it with their\
+    \ own source and make commercial products out of it.\"It's a completely royalty-free\
+    \ open source product,\" Goguen said, \"Our goal is to increase and really drive\
+    \ up the ecosystem\n\n![](img/a883fb7c73397cd76c2dae63f64a20f1_9_0.png)\n\n# Lay\
+    \ off at the Linux labs\n\nTorvalds retains job\n\n> \"It's a completely royalty-free\
+    \ open source product. Our goal is to increase and really drive up the Solaris\
+    \ OS. It's going to be a full, buildable environment. That's the key thing.\"\n\
+    \n+   The Open Source Development Labs, the organisation that employs Linux leader\
+    \ Torvalds, has laid off a sixth of staff as part of a shift to new priorities.\
+    \ The group cut nine of 57 staff and contractor positions\nThe cuts affected several\
+    \ programmers who worked on the open source operating system as well as in sales,\
+    \ business development and internet operations.\n\nAround Solaris, it's going\
+    \ to be a beautiful environment. That puts the key thing.\nSolaris will run on\
+    \ x86 and x64, bit AMD operating systems as well as on Sun's SPARC hardware supporting\
+    \ packages to what it hopes becomes a more popular operating system. If, opening\
+    \ the OS sees its success, Sun will help boost demand for its other products.\n\
+    Goguen said the first time that has been based on Sun's success by combining Sun\
+    \ itself was more than 20 years ago through open source technology - BSD Unix\
+    \ Bill Joy, who was one of the founders of the company, arguably could be considered\
+    \ one of the founders of Linux.\nThere are markets underserved by Linux, which\
+    \ lacks the higher uses of Solaris such as self-healing and dynamic tracing. Solaris\
+    \ also offers high-end symmetric-processing capabilities and advantages in multi-core\
+    \ chips. \"Red's offering is competitive as well as Solaris today,\" Goguen said.\n\
+    \nSun opens Solaris will be suitable to Linux, as said Harold Gordon of Illumina.\n\
+    \"In terms of being the mass-market alternative to Linux, does not seem likely\
+    \ to have priority. Sun's focus is more on its current customer base and deliver\
+    \ what is currently in the Solaris camp,\" Haff said.\nThe move is not to attract\
+    \ Linux users because Windows is a different system from Solaris.\nSun will still\
+    \ offer the creative freedom of Solaris, but commercial releases will be based\
+    \ on the development going on as part of Open Solaris. Goguen said.\nSun made\
+    \ the dynamic tracing feature of Solaris DTrace, will be open source in January\
+    \ Some administrative and install technologies will be kept out of the Solaris\
+    \ release.\nThe Solaris Project plan calls for future releases of tests, a tool\
+    \ to manage bug and patch problems, a code management solution, and design documents.\n\
+    \n> \"We are a small change in what would be a big change in focus for a bigger\
+    \ company to have an offsite. New projects include the establishment of a European\
+    \ office and part of Asian operations' base in Japan,\" said Nathan, Director\
+    \ of Marketing.\n\nOSDL CEO David Cohen who confirmed the news to the press said\
+    \ the nonprofit will continue to employ Torvalds and others.\n\nJuly — August\
+    \ 2005 LinuxWorld ME"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# NEWSDESK
+
+
+    Novell has acquired Immunix, a provider of host-based application security solutions
+    for Linux. Immunix is the creator of AppArmor, a Linux application security system.
+    This new product is called Novell AppArmor powered by Immunix, protects both the
+    Linux operating system and applications from external or internal attacks, viruses,
+    and malicious applications.
+
+
+    "Businesses under attack say Novell AppArmor provides an enterprise-class security
+    system for Linux that is easy to deploy, and maintain. Novell customers will sleep
+    better at knowing their applications are protected.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_10_0.png)
+
+
+    # Former Linux architect moves to Windows
+
+
+    Goodbye Gentoo, hello Microsoft
+
+
+    +   - Daniel Robbins, the founder of Gentoo Linux and his former chief architect,
+    has accepted a position at Microsoft.
+
+    - In a note to the Gentoo community, Robbins said "I am helping Microsoft to understand
+    Gentoo and Open Source and community-based projects."
+
+    - Microsoft confirmed that Robbins will work at Microsoft''s Linux team at Source
+    is working with Bill Hill.
+
+    - Hill is Microsoft''s lead program manager for its Platform Strategy organisation.
+    He leads Microsoft''s Linux and Open Source technology team. Microsoft will drive
+    IBM''s Linux strategy for its enterprise and markets organizations. Robbins''s
+    title is to manage the program and Linux development strategy.
+
+    - Robbins has been moving away from history for some time. He has resigned from
+    responsibilities and the role as Chief architect of Gentoo.
+
+    - At that time, he also began up the non-profit Gentoo community, which runs on
+    Gentoo developers'' servers.
+
+    - Before joining Microsoft, Robbins finalised the transfer of Gentoo''s intellectual
+    property, everybody easily combines copyrights and other software, as well as
+    soon-to-trademarked Gentoo deos to the Foundation.
+
+
+    # HP spans 1 million Tux servers
+
+
+    $8.3b by HP has seen an first-industry milestone by shipping more than 1 million
+    Linux servers since counts started in 1998, 45% more than any other hardware vendor.
+
+
+    Ciling of IDC''s latest word Quarterly Server Tracker, HP claims to have the worldwide
+    Linux market share for consecutive quarters. In the first quarter of 2005, HP
+    grew 2.5 percentage points faster than the market in units a
+
+
+    year-over-year basis, shipped nearly 10 times as many Linux servers as Sun, IBM
+    led by almost 8% points in revenue share and outpaced Dell in both units.
+
+
+    "The don''t lie. Customers are clearly pushing HP as the preferred choice for
+    deploying Linux and open source solutions," said Martin Fink, VP and General Manager,
+    Open Source and Linux Organisation, HP
+
+
+    # Mandriva acquires Lycor assets
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_10_1.png)
+
+
+    Mandriva has purchased several assets from Lycor, a North American insider. As
+    part of the agreement, Mandriva founder and CEO Jeffing is joining Mandriva to
+    develop a new Linux distribution.
+
+
+    Since its inception five years ago it has been developing Linux versions targeted
+    to the consumer.
+
+    The vendor has also developed products for the market market, such as a Tablet
+    and a Pocket edition of Lycor Desktop/LX, which led several partnerships with
+    hardware vendors in Asia.
+
+
+    The plan is to produce a product that will be the convergence of Linux and Desktop.
+    We have already started working on this project.
+
+
+    Lycor currently has no money to produce but Joseph Jenkins has two Linux versions
+    targeted to the desktop that we will prove next.
+
+    We bring an unique expertise in desktop and user interface design. Our goal is
+    to provide a path forward for moving the desktop to the thousands of Linux users,"
+    said François Bonillon, CEO of Mandriva.
+
+
+    LinuxWorld EMEA — July 2005'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # ERP +
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_11_0.png)
+
+
+    = ACCPAC®
+
+
+    Visit us at www.accpac.com, call+(971) 4 390 0222 or email east@accpac.com to
+    see why more than 140,000 companies trust ACCPAC for their mission-critical business
+    applications.
+
+
+    © ACCPAC International, Inc. All rights reserved. ACCPAC, and the ACCPAC Logo
+    are registered trademarks or trademarks of ACCPAC International, Inc. ACCPAC International,
+    Inc. is part of the Sage Group family of companies.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# NEWSDESK
+
+
+    # Taiwan Mobile launches 3G
+
+    network, Linux
+
+
+    # Indian government
+
+    gave away free CDs
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_12_0.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_12_1.png)
+
+
+    The Indian government
+
+    distributing free CDs of localised
+
+    open source software like Firefox,
+
+    OpenOffice.org and other free applications
+
+    to encourage the use of computers across
+
+    the country. The decision to free software in the
+
+    day will likely be a blow to Microsoft, which might
+
+    release a low-cost version of Windows in
+
+    soon. Microsoft originally hoped to release
+
+    Windows XP start to restricted version of Windows XP- by the end
+
+    March, but not without a Q3 os release.
+
+
+    tuned to 3G services. Linux is already a proven
+
+    and working operating system. But whereas
+
+    and Linux don''t have the resources to do the
+
+    continuous upgrades and improvements.
+
+
+    Juan
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_12_2.png)
+
+
+    Taiwan Mobile de-pend on outside vendors
+
+    for most of the initial services being offered
+
+    in its trial run, like video calls, video streaming
+
+    and Internet access. It will most likely have to
+
+    increasingly turn to Linux for the software
+
+    that runs success, Juan said.
+
+
+    Taiwan Mobile, one of Taiwan''s
+
+    bigest mobile phone service
+
+    providers has launched a trial of
+
+    Linux (third generation) network using
+
+    as its backbone.
+
+    While Taiwan Mobile has Taiwan''s
+
+    main operating system for the past years,
+
+    it is less certain with Linux because it is difficult
+
+    to ensure the ongoing development of Linux
+
+    applications, Juan said. "We needed
+
+    new development of Mobile.
+
+    to use Linux for a few years ago we needed a
+
+    stable system that wouldn''t go down.
+
+    at that time, Linux was the best choice," Juan said
+
+    Linux mobile systems changes things a bit because
+
+    service providers will depend more and more
+
+    on outside vendors to continuously develop and
+
+    uupgrade the software applications that keeps us
+
+
+    Some help may be on Linux. Taiwan Mobile''s giant
+
+    Nokia, Juan said, that it would allow all of its
+
+    patents to be used for development of
+
+    t Linux kernel. Open source development
+
+    fosters innovation and help in the
+
+    creation and adaptation of technologies,
+
+    a company in itself. As it said helped
+
+    other supporters of Linux and open source would
+
+    follow suit.
+
+
+    # Cuba embraces Linux
+
+
+    Nokia''s staff may help to develop
+
+    patent conflicts and could provide a boost for
+
+    companies that offer support and uses
+
+    Linux applications with Juan said.
+
+
+    For service providers, the mission is
+
+    dependency and ensuring they can
+
+    be used across Linux networks, Juan
+
+    said. Three main control points of Linux
+
+    mobile phone, and they may have to
+
+    to develop a standards group at ensuring
+
+    they service works on each other outlook.
+
+
+    Cuba will gradually embrace
+
+    t open source Linux system
+
+    for its system computers,
+
+    eliminating exclusive of Microsoft Windows,
+
+    government has reportedly reported.
+
+    Robert del Puerto, said the development of
+
+    information technology, that Cuba has
+
+    already 1500 computers using the Linux
+
+    server, a free operating system which
+
+    helps people.
+
+    Del Puerto said himself was working on a legal
+
+    framework that would allow the replacement of
+
+    the Windows system
+
+
+    While Linux is on about 50%
+
+    of the world''s computers, some
+
+    goverments and large organisations
+
+    switched to the Linux system or have
+
+    treated to do so as costly.
+
+
+    # EU studies of patent on open source
+
+
+    Researchers at a Dutch
+
+    university conducting a study of the
+
+    European Commission on the effect
+
+    of open source patents - but the
+
+    Commission is pressing with what
+
+    nto introduce patents in Europe without
+
+    the research to be based on.
+
+    The University of the Netherlands
+
+    began their three-year study last December,
+
+    examining the legal and technical
+
+    effects of software patents
+
+    The study will take a broad view of the
+
+
+    economic consequences: "We are doing a
+
+    not so much on patents on innovation, and
+
+    just software," said Ribah Aloher, group
+
+    leaders for freedom of speech and open
+
+    software at the Maastricht Research
+
+    Institution on Technology and Merit (Merit).
+
+    The study is not clear on what
+
+    the merit might mean Linux to review
+
+    report on its patents: "We are
+
+    publishing something by the end of this
+
+    year," said.
+
+    Even those interim findings on
+
+
+    patents may have to influence relevant
+
+    European legislation,
+
+    While Ghosh is research supported by the
+
+    Commission''s Director-General for the
+
+    Information Society and Media, another branch
+
+    the Commission, the Directorate-General
+
+    of the Internal Market, is pressing with what
+
+    hotel contested legislation that will harmonize
+
+    t way in which software is used throughout
+
+    thout the 25 members of the EU.
+
+    Does it seem that the Commission would
+
+    sk for a report on whether software patent
+
+    legislation is good or bad for innovation, and
+
+    not wait for the answer?
+
+
+    LinuxWorld ERA — July 2005
+
+
+    Mei-wei'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# FINANCIAL SERVICES
+
+
+    # OPEN $OURCE $SAVES MONEY
+
+
+    The financial services industry, which encompasses banks, asset management firms,
+    stock exchanges, insurance companies and credit agencies, has long sought operational
+    efficiencies while also trying to drive down costs. This conscious vertical is
+    now turning to Linux and open source to achieve, just that.
+
+
+    +   - Support for Linux in the traditionally conservative world of financial services
+    has more than doubled in the last year according to technology researchers Finextra.
+    The market intelligence firm substantiates it by stating that support for open
+    source from mainstream players has boosted the number of financial institutions
+    using Linux from 27% last year to 58% in 2005.
+
+
+    Paul Dawson, VP, enterprise Server research. Gartner EMEA agrees. "There is lot
+    of momentum in this vertical and its moving away from Sun''s Solaris. Windows
+    is still strong, but most of the migration is from Unix to Linux because of the
+    ease." Dawson''s firm predicts that by the end of 2005, Linux adoption will reach
+    40% among all financial services.
+
+
+    In fact, the growing support for Linux has been the single biggest technology
+    change in financial organisations over the past 12 months, say the researchers
+    writing in the Financial Technology Strategies 2005 survey.
+
+
+    # The first phase
+
+
+    When financial companies discover by combining free open-source code, low-cost
+    x86 chips, they could get similar output that rivals most expensive and proprietary
+    Unix and mainframe servers, a few embraced it to cut costs. Others did so owing
+    to its portability
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_13_0.png)
+
+
+    *'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# FINANCIAL SERVICES
+
+
+    to standardise their fragmented environment, and to overhaul their aging legacy
+    systems.
+
+
+    functions with CIOs from the world''s largest financial companies discussed their.
+
+
+    The result was of $3,800-processor Linux-based servers that could operate at twice
+    the speed of a $250,000 Sun 600 running numbers. To tackle the onslaught of cheap
+    commodity servers, Sun is now operating on Solaris for lower-cost x86-based servers,
+    powered by AMD.
+
+
+    For instance, Brown Brothers Harman & Co., the oldest and largest partnership
+    bank in America put Linux on its radar two years ago. Before the move, Brown Brothers
+    chose Solaris, Open Linux servers spread quickly throughout the
+
+
+    Aaron Graves, a Senior VP at Citigroup''s technology infrastructure group in New
+    York, said that while Citigroup decided to use its existing mainframes, it looked
+    to Linux to distribute workloads beyond mainframe hardware. Citigroup looked at
+    Linux as a way to get beyond mainframe platform by many Linux virtual servers
+    on one IBM.
+
+
+    The way forward is incredible. The nice thing about Linux is that it can be supported
+    in many ways, from both vendors and the community, and there is not merely around
+    it," says Levin.
+
+
+    2003, puts on its data center operation and sparking cost containment, security
+    and stability concerns.
+
+
+    Furthermore, the company on an IBM zseries running mainframes IBM DB2 database
+    and Solaris/Open e22 running software on Sun of Linux to handle transaction processing.
+    When a purchase order is done, it comes through this system.
+
+
+    When asked about the ''risk'' of using open source and Linux, Levin replied, We
+    million dollars in assets, and we''re regulated by pretty much everyone on earth,
+    what do you think? If we fail, I''ll be on Citrix explaining my mistake.
+
+
+    In the first half of 2003, pockets of Linux had no hardware factor to drive our
+    business, strategy or servers, DNS, some Web servers, a fellow manager and an
+    Internet gateway," says Jeff Levin, Senior VP Infrastructure at Brown Brothers.
+    "The benefits of moving to Linux have been about eight million. Stability and
+    security were also addressed, and we were to practise our in-house skill sets,"
+    adds Tech Summit.
+
+
+    Before adopting Linux, the company spent months on legal issues related to the
+    move to open source, Aaron Graves, VP of technology at the New firm. "It was for
+    us to understand what a support contract for open source means. It was really
+    a different model," said he.
+
+
+    The recent Linux Summit in May confirmed the day that Linux has made by being
+    a financial platform for non-mission-critical
+
+
+    # Vendor action
+
+
+    Even Nasdaq Stock Market, the webseller for IT companies has scrapped its proprietary
+    trading system in favor of an open-source system from electronic Internet. The
+    new Instinct platform uses more than ten thousand transactions daily with over
+    20,000 requests per second. Reuters is using a Linux version of its financial
+    software.
+
+
+    # Partner predicts by the end of 2005, Linux adoption will reach 40% among all
+    financial services.
+
+
+    HP and Red Hat have teamed up to use a new Linux Web site - www.linuxfinancial.central.a
+    central platform where banks and insurance companies can receive in-depth information
+    and discounts on Linux.
+
+
+    Phil Dawson, VP enterprise Server research, Gartner EMEA
+
+
+    After Grave T. IBM and Sun use multiple mainframes and multiple databases, Citigroup''s
+    back-end Linux environment now processes card transactions at a rate of 90 and
+    120 transactions per second per Linux instance.
+
+
+    Witnessing the excellence results, Citigroup is looking at a 6.4-bit Linux''s
+    Linux environment.
+
+
+    IBM and Red Hat have joined up to use Sun''s operating system on Linux for Red
+    Hat. Blue is working with two financial services vendors, to help their port.
+    Solutions projects to Linux. To date, they have moved 33 out of 88 total operations
+    over Linux.
+
+
+    # Unix to Linux
+
+
+    # Banking on Linux
+
+
+    Numerous banks around Europe are using Linux to cut costs and keep up security.
+    In Italy''s BU Banca, which announced a deal with Red Hat for all desktop computers
+    and servers to Linux. Even Germany''s best financial services company Finance
+    GmbH has migrated its core web services
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_14_0.png)
+
+
+    LinuxWorld ME – August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Linux desktops make an entry
+
+
+    When Ireland''s dairy bank, Allied Irish Bank (AIB), is disposing of the Windows
+    PCs that its tellers count on in favour of Linux-based terminals, analysts say
+    an IT insurance is emerging in the financial services sector.
+
+
+    AIB, in Dublin, signed a deal with Sun Micros to move the computers of 3,500 branches
+    to the Linux Java Desktop System (JDS), Release 2.
+
+
+    Working with a local partner, Horizon Open Systems and Sun will bring the systems
+    into Ireland and the UK by the end of next year, Jun will empower their terminals
+    as part of the bank''s new branch platform, which will be the tellers'' interface
+    with all applications.
+
+
+    The Irish bank serves many communities, and the small businesses that have a need
+    for better consumer services just like them. It is imperative that financial institutions
+    assist farmers to grow and develop, says Michael Dowling, head of strategy at
+    AIB.
+
+
+    The Linux-based desktop systems could help AIB as much as confirm in a number
+    of ways.
+
+
+    For fixed-location applications, the work that tellers do, Linux would be ideal
+    for saving and cutting costs. The bank can stand on x86 servers with Linux, which
+    the user does not need a lot of flexibility, they will use only one core application
+    and a free office suite, such as OpenOffice when working without a concern that
+    Linux doesn''t have any major worrisome virus or spyware issues.
+
+
+    Banks like AIB could well paving the way for Linux desktops.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_15_0.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_15_1.png)
+
+
+    infrastructure to Linux with 30% less than a Unix system would have cost
+
+
+    China''s biggest bank, ICBC is deploying Linux across its network of 20,000 branches
+    for all of its front-end banking operations over a three-year period
+
+
+    With global financial power houses putting their weight behind open source, vendors
+    are now seeing the ripples in the Middle East. The major reason why Linux here
+    has less than a year. The major reason is that the top 10 banks in Asia, many
+    large banks like East are Cognos customers. From feedback with them, most of the
+    conversations on their technology investments around Linux, says David Brierley,
+    Regional Manager, Cognos Middle East
+
+
+    in the Middle East, banks have set the standards by embracing open source, with
+    or without vendor support.
+
+
+    For starters HSBC AG Zurich (HSBC), the 38-year-old bank has taken a manwich approach:
+    when it gets down to Linux, more than six years ago, they chose Linux to select
+    areas as which source, HDFC made the choice of place in 2001.
+
+
+    HSBC purchased a copy of Suez Linux (less than $50) and made the move greatly
+    – fast forward – it runs everything from the, more than 450 desktops and 36 servers
+    across 50 branches and subsidiaries in 100 countries – all
+
+
+    manned by its IT Staff relying on Linux. Besides using open source like Open Office
+    suite, MySQL, JBoss also developed inexpensive machines based on Linux (Linux
+    Virtual Server) technology for the bank.
+
+
+    After the [complete] migration security Syam Pillai says we have forgotten about
+    Linux three years ago. Implementation of the end-users and staff in bank still
+    don''t know why we are running Linux – it''s seamless for them. They don''t have
+    the worry about security vulnerabilities we have. The vulnerability is everyone
+    everywhere when scrutinising Linux, when an issue occurs it''s solved in hours
+    or for a few days.
+
+
+    Despite his enthusiasm for Linux and wideread adoption by global Linux, Pillai
+    admits Linux outage is conservative with the region''s financial sector. He bolts
+    down to complexity and mandates.
+
+
+    July – August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Can the PCs you build be up to 80% more powerful using their existing motherboard?
+
+
+    # For a smarter PC go AMD Athlon™ 64 X2
+
+
+    # AMD Athlon™ 64 X2 Dual-Core processor
+
+
+    We designed the AMD Athlon™ 64 X2 Dual-Core processor with you in mind. Its two
+    processor cores increase your computing performance by as much as 80% on selected
+    digital media & productivity applications compared to single-core AMD Athlon™
+    64 processors. And AMD Athlon™ 64 X2 Dual-Core processors maintain compatibility,
+    because we made sure to retain the current motherboard and chipset 939-pin infrastructure.
+    So we can save money by lowering your inventory and design costs.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_16_0.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_16_1.png)
+
+
+    *© 2005 Advanced Micro Devices, Inc. All rights reserved. The AMD Arrow logo,
+    AMD Athlon 64 X2 Dual-Core processor and combinations thereof, are trademarks
+    of Advanced Micro Devices, Inc. other names are for informational purposes only
+    and may be trademarks of their respective owners.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# FINANCIAL SERVICES
+
+
+    for global banks migration to Linux to be an arduous task considering their scale
+    and complexity. For instance, ABN Amro reportedly has over 150 different applications,
+    36 different databases across multiple platforms. To migrate such a monstrous
+    infrastructure could be a challenge.
+
+
+    For mid sized banks like HBZ where strategic decisions are taken from Dubai, migrating
+    to Linux was considerably easy, HBZ relied on one core banking application, which
+    could be easily ported onto Linux he. Having seen the adaption of Linux in the
+    first ring, banks like yours have now changed, "The past couple of years, have
+    changed, more vendors are adopting Linux and more firms are now success stories
+    from Linux in Europe, and more banks are here looking at Linux actively".
+
+
+    # Why financial firms are choosing Linux?
+
+
+    “If we depend on financial firms outsourced it is hard to coordinate any R&D work
+    or experiment. If their efforts go into maintenance internal support and upgrading
+    existing systems... Linux isn''t exactly a highlight. The high priority is outperforming
+    systems and integrators. If the vendors live in Linux they don''t bother,” says
+    Pilleri
+
+
+    COST
+
+    Lower fees than Unis, Windows operating systems; its ability to use a wide range
+    of commodity hardware means cheaper alternatives to buying proprietary systems.
+    In most cases open source software is free for.
+
+
+    “Managing all multiple vendors and applications is itself a challenge...getting
+    all the vendors to support their migration and ensuring that operations and enough
+    savings is very hard” Pilleri says for most firms stands that Linux is not a losing
+    issue, it could take years – they instead turn to open source for well
+
+
+    # Market trends
+
+
+    i-Flex Solutions, a provider of IT solutions to the financial services industry
+    through its FlexCube portfolio seems to agree. Vinod Totawat,i-Flex regional manager
+    says "Are now qualified on Linux, we don''t have customers. There''s lot of interest,
+    but customers are yet to see serious deployments."
+
+
+    Totawat believes this on the market dynamics.
+
+
+    PERFORMANCE
+
+    Ability to provide high performance with small footprint. Linux clusters, grid
+    computing, visualisation and now blades provide super-computer performance at
+    the expense with small footprint.
+
+
+    # With more success stories on Linux and more than banks are looking at Linux
+    actively"
+
+
+    OPENNESS
+
+    Reduces leverage that vendors have traditionally had on us (by coupling hardware
+    and the OS) enhances competition, promotes open environment and vendor neutrality.
+    Firms can download source code for Linux, which wasn''t the case a few years ago.
+    Firms can also choose support, from the community or the vendor directly.
+
+
+    Vinod Totawat,
+
+    Regional Manager,
+
+    i-Flex
+
+
+    tested-non critical criteria to minimize any risk and cut foreseeable costs.
+
+    A few managers working for multi-financial firms with regional presence, who didn''t
+    want to be quoted, even though they want to break the mold, they and are forced
+    to adopt a conservative approach to Linux, since IT decisions take a while trickle
+    down from their head office.
+
+
+    From a vendor perspective, David Brierley of Canon says: "For many MNCs, corporate
+    decisions are taken in America or Europe: The Middle East banks of the MNC are
+    never the first. Local banks don''t seem as conscious as the foreign counterparts.
+    That could be because of a different mind-set, or less competition. Linux isn''t
+    interested or there, but it could take a moment until it is a priority.".
+
+
+    Source: Tower Group/ LWIMEA
+
+
+    August 2005 LinuxWorld MEA
+
+
+    * Windows*'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# FINANCIAL SERVICES
+
+
+    The size of the western market is huge; availability of qualified people is plenty;
+    most there have large in-house IT teams and budgets, they can experiment and control
+    of development. The work culture here [the Middle East] is more operational and
+    less experimenting or trying on new systems. Linux they open source find, and
+    it will be hard to make a sell. So to go, firms here are using Linux on the periphery.
+
+    As Linux''s competence in handling network services has been denied, its maturity
+    in critical areas such as transactions and banking has been used without any doubt.
+    That change now divides one another.
+
+
+    S2 now supports Linux and x86 hardware across the Middle East since last year.
+
+
+    With more local support and hardware vendors, banks such as Commercial Bank in
+    Amman have rolled out Linux 24 out of 26 its branches the past year new open source
+    systems powering everything from its tells to servers.
+
+
+    # Who''s running Linux?
+
+
+    +   * Credit Suisse First Boston''s Agora Trading System runs on Linux
+
+    * Morgan Stanley runs 1000 servers on the platform
+
+    * Lehman Brothers'' trading and risk analytics on Linux;
+
+    * Schwab runs its trading system on Linux
+
+    * Goldman Sachs has multiple software applications supporting trading on the platform;
+
+    * Dresner Bank has risk applications on it; and Charles Schwab revoked it to Linux
+    in June.
+
+    * Chicago Mercantile Exchange runs off Linux
+
+    * Jordan Commercial Bank powers 23 branches on Linux
+
+    * Habib Zuric runs its infrastructure on Linux
+
+    * Standard Chartered, Emirates International run specific departments off Linux
+
+    * E-Trade Finance and Citgroup run a large chunk of their infrastructure Linux
+
+    * NYSE''s Linux TradeWorks handles 1.6 billion shares shared today
+
+    * Dresden Kleintvart Wassstein runs on Linux, using Intel-based x86 4000 servers
+    deployed in clusters
+
+    * State Street runs IBM''s on Linux
+
+    * Nasdaq Stock Market has scrapped its Proprietary SuperEntry and execution system
+    in favor of an open-source system from electronic broker.
+
+    * Plus FinanzService, one of Germany''s biggest financial services has migrated
+    to cloud services infrastructure to Linux
+
+    * Ireland''s leading bank, Allied Irish Bank (AIB) is migrating its desktops in
+    7500 branches to Sun''s Linux based desktop system (JDS)
+
+
+    Barrowing a few innovative firms who have been using Linux for mensal tasks the
+    pressing, others are still hesitant. Sandeep Chhabra, Manager for Telecom & Financial
+    Services Industry, HP Middle East voices in his "The Middle East is that Linux
+    is being used more for for technical and strategic reasons. The benefits of open
+    source have been fully explored by companies here. They are restricting the potential
+    of
+
+
+    Chabiba, open source gives customers the capability to tailor the way they want.
+    A great feature. There is little extra work does most people pick up middleware,
+    customise it through a third party and deploy it.
+
+    However, the number of success stories is scant. Vander claims that firms in the
+    region are using Linux in some form or the other, but these use Linux on and avoid
+    for competitive reasons. Their biggest concern? Most of these firms have heterogeneous
+    environments and by denying Linux, they are not standing with other OS vendors.
+
+
+    Despite all the opportunities, as shown by Dawson from Carter are optimistic about
+    the prospects. "Although the Linux penetration is not aggressive, in the Middle
+    East but''s is interesting that could very quickly be. If Linux is gaining maturity
+    eventually, the acceptance will be quicker or the adoption process will be in
+    two years from now, which could be radically different," adds Dawson.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_18_0.png)
+
+
+    Thomas Reda,
+
+    Sales Manager
+
+    S2 Systems
+
+    Middle East
+
+
+    LinuxWorld ME – July 2005'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/a883fb7c73397cd76c2dae63f64a20f1_19_0.png)
+
+
+    # 25th Anniversary
+
+
+    # 25 - 29 September 2005
+
+    Dubai International Convention
+
+    and Exhibition Centre
+
+    United Arab Emirates
+
+
+    Timings:
+
+    25 September 1 pm - 7 pm
+
+    26 - 29 September 10 am - 7 pm
+
+
+    Admission:
+
+    1 day ticket Dhs 25
+
+    5 day season ticket Dhs 60
+
+
+    # The Middle East’s Premier Information Technology
+
+    & Communications Event
+
+
+    # GITEX 2005 ... 25 years on the IT circuit
+
+
+    Over 3,000 Exhibitors from over 60 countries
+
+
+    Increased hall space: Hall 4A • Comms & Networking: The Pavilion
+
+    New Country Groups: Australia • Romania • Singapore • Spain • Tunisia
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_19_1.png)
+
+
+    STRICTLY FOR TRADE AND BUSINESS VISITORS ONLY
+
+    GITEX Shopper, the largest event in the Gulf for IT vendors, will be held at Airport
+    Expo Dubai, 24 - 30 September 2005.
+
+
+    Dubai World Trade Centre (L.L.C.),
+
+    P.O. Box 9292, Dubai, United Arab Emirates
+
+    Tel:(9714) 3321000
+
+    Fax:(9714) 3318034/3329006
+
+    E-mail: claire.windfield@dwtc.com
+
+    E-mail: aly.alali@dwtc.com
+
+
+    # GITEX 2005
+
+    Floorplan
+
+
+    | Convention Gate | Novotel Hotel |
+
+    |---|---|
+
+    | Hall 7 | Hall 8 |
+
+    | Hall 6 | SOFTWARE |
+
+    | Hall 5 | Sheikh Rashid Hall |
+
+    | Hall 5A | |
+
+    | Hall 4A | IBIS Hotel |
+
+
+    H A D W A R E
+
+
+    Hall 1 Hall 2 Hall 3 Hall 4
+
+    Concourse 1
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_19_2.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_19_3.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_19_4.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_19_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# CASE STUDY FINANCIAL SERVICES
+
+
+    # China’s biggest bank
+
+    makes switch to Linux
+
+
+    China’s biggest bank plans to deploy Linux on servers across its
+
+    network of 20,000 branches in a project that may be
+
+    the biggest Linux deployment yet seen in China, according to
+
+    an own executive involved with the deal.
+
+
+    than switching the applications to Microsoft’s
+
+    Windows operating system, according to Claude
+
+    Zhou, GM of Turbolinx China.
+
+
+    The Chinese bank has granted a site license
+
+    and front-end applications based on TurboLinux
+
+    7 DataServer. Implementation will be rolled out
+
+    a step-by-step basis to all of ICBC’s 20,000
+
+    offices. Zhou says, "This is the biggest
+
+    applications from these terminals," claims Zhou.
+
+    ICBC is not the only of China’s four main
+
+    banks have decided to deploy Linux. For
+
+    example, Bank of China has deployed Linux
+
+    distributions from TurboLinux and Red Hat in
+
+    regional projects.
+
+
+    More banks are expected to follow ICBC’s lead
+
+    with large-scale deployments, according to
+
+    Zhou. Agricultural Bank of China, another of the
+
+    country’s top four banks, is expected to announce
+
+    within the next month a plan for Linux
+
+    license similar to the ICBC project.
+
+
+    The fourth bank, China Construction Bank,
+
+    is also expected to announce this year
+
+    moves to its IT systems to Linux, according to
+
+    China’s state-run media.
+
+
+    The shift to Linux is driven by the banks’
+
+    for better software performance and better vendor
+
+    support, says Niels Jiang, an Analyst at ICBC,
+
+    in Beijing. Currently, most of these banks are running
+
+    the applications on SCO and they are
+
+    to upgrade their systems. "In China, SCO
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_20_0.png)
+
+
+    > The shift to Linux isndriven by the banks’
+
+    need for better software
+
+    performance and better
+
+    vendor support.
+
+
+    +   Under the terms of an agreement,
+
+    Industrial and Commercial Bank of China
+
+    (ICBC) plans to gradually out TurboLinux’s
+
+    7 DataServer operating system for all of its-
+
+    bending operations over a three-year period.
+
+    Financial terms of the deal were not disclosed.
+
+    What makes this deal special is size: With
+
+    $64bn in total assets, ICBC is the biggest
+
+    bank, serving 100 million individuals and 8
+
+
+    million accounts across more than 20,000
+
+    branch offices across China. When the project is
+
+    complete, many of ICBC’s 300,000 employees will
+
+    be accessing applications hosted on Linux servers
+
+    a a daily basis.
+
+    ICBC chose Linux in part its existing
+
+    front-end applications, which were developed
+
+    inouse, run on SCO, and migrating them
+
+    to Linux was determined to be an
+
+
+    WorldMedia July — August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Italian Bank deploys enterprise Linux across the board
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_21_0.png)
+
+
+    BPU Banca migrates from Unix to Red Hat Enterprise Linux to reduce workstation
+    cost by 50% and avoid vendor lock-in. The operational network of the bank Popolare
+    in Italy, the largest co-operative banking group, has chosen to implement Red
+    Hat Enterprise Linux across its desktops and servers.
+
+
+    The bank is migrating all of its 8000 Windows clients to Red Hat Desktop. In this
+    project replacing hardware with Intel-based PCs achieved software cost savings
+    of about 50%
+
+
+    The migration of its systems from Unix to Red Hat Enterprise Linux also delivers
+    vendor independence for both hardware and software, ensuring BPU Banca greater
+    flexibility when
+
+
+    implementing infrastructure solutions that comply with new industry trends and
+    best practices. The migration will enable the use of PCs in dual-boot mode to
+    support Linux and Windows without additional cost
+
+
+    "This project is the most important migrations to Linux in the Italian financial
+    sector," says Roberto Simplicityi, Account Executive Red Hat Italy. BPU Banca
+    is a clear proof-point of the advantages guaranteed by Red Hat Enterprise Linux
+    product family, opening the path to future Linux
+
+
+    implementations in this market sector. Using Red Hat Enterprise Enterprise Linux
+    systems will allow BPU Banca to easily manage servers and workstations virtually
+    anywhere via a Web interface. BPU Banca will conclude its migration from Unix
+    to Red Hat Enterprise Linux by the end of this year.
+
+
+    Future plans include widening its migration to Red Hat Enterprise Linux to encompass
+    the group''s entire infrastructure.
+
+
+    > This project is one of the most important migrations to Linux in the Italian
+    financial sector.
+
+    — ROBERTO SIMPLICI, ACCOUNT EXECUTIVE RED HAT ITALY
+
+
+    July – August 2005 LinuxWorld ME'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# MIGRATION GUIDE
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_22_0.png)
+
+
+    While a recent Forrester Research report found that roughly 40% of the 100 US
+    companies surveyed had no disappointments that still leaves six out of 10 perhaps
+    wishing they had done things differently.
+
+
+    How can you better your chances of success? Read on to learn what open source
+    users and industry watchers advise.
+
+
+    +   1. Getting started
+
+
+    While open source software can be quickly downloaded and put to use, industry
+    watchers say rollout should be approached in the same way as they would with commercial
+    applications. That means assembling a proof-of-concept plan and determining long-term
+    investment, support and labour costs.
+
+
+    > "They need to put together a pilot and show the reasons why open source is better
+    than commercial products." Linux and Apache might have flourished in one-off rollouts,
+    but users
+
+
+    LinuxWorld MEA – August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# # GLOBAL GOVERNMENT & BUSINESS LEADERS
+
+    CONFERENCE: 24th - 25th Sept. 2005 • WORKSHOP: 26th - 27th Sept. 2005 Dubai- U.A.E.
+
+    www.leadersleaders.com
+
+
+    Keynote Speakers, Analysts & Moderators From Around the World
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_23_0.png)
+
+
+    HON. JOSE MARIA AZNAR
+
+    Former Prime Minister of Spain
+
+
+    HON. MARY ROBINSON
+
+    Former President, Republic of Ireland
+
+
+    DATO SRI ANWAR IBRAHIM
+
+    Former Deputy PM of Malaysia
+
+
+    HON. MICHAEL JOHNSON
+
+    Federal Member,
+
+    Parliament of Australia
+
+
+    DR. SULTANA PARVANTA
+
+    Dir.of Planning,Ministry of Urban Dev.\&
+
+    Housing,Islamic Republic of Afghanistan
+
+
+    JOHN LOGAN
+
+    President Obian
+
+
+    PROF. JEAN-CHRISTOPHE ISEUX
+
+    People''s University of China, Beijing
+
+
+    # GLOBAL LEADERSHIP THAT WORKS
+
+
+    Why are Today''s Executives Widely Regarded as Bureaucrats rather than leaders?
+
+
+    Is this Perception Valid?
+
+
+    Best Practices,
+
+    New Thinking,
+
+    Fresh Perspectives
+
+    and Tested Strategies
+
+    for Today''s Leaders
+
+
+    The New World Order and the
+
+    Government and Business Leadership
+
+    LEADING BUT WITHOUT
+
+    CORRUPTION!
+
+
+    Powered & Organized by:
+
+    Datamatix
+
+    Tel: +9714-3326688 • Fax: +9714-3328223 • email:info@datamatixgroup.com • www.datamatixgroup.com
+
+    Media Partner CPInCORPORATE PUBLISHING INTERNATIONAL'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# MIGRATION GUIDE
+
+
+    say a full-blown migration to open source needs to be driven more than experimental
+    curiosity.
+
+
+    "Teams will know they are ready when commercial software just meets all of their
+    needs. Those gaps being a critical factor in the decision to go open source,"
+    says Anders Andrew, Director of Web engineering and applications for advertising
+    giant Ogvy & Mather in New York
+
+
+    EHarmony''s Douglas says with every type of open source software, there is more
+    likely a manager committed to providing support. IT managers can contact vendors
+    such as Red Hat and Covalent, for example, to get contracts that rival those for
+    commercial software,
+
+
+    "It hasn''t been any different when we became a bit of a train wreck," says Douglas
+    WebLogic, I contact the sake and they get more support," Douglas
+
+
+    For example, GPL permits unlimited use modification and redistribution of source
+    code without sharing the source code and explicitly publishing the warranty notice.
+
+
+    # 4. Go to the source
+
+
+    One of the biggest benefits of open source is the flexibility of having access
+    to the source. There are two cases: One, IT staff has the skills to write codes
+    and make the software for them, and two, IT staff will take full responsibility
+    when the manipulation code doesn''t line up expectations.
+
+
+    # 2. Support scheme
+
+
+    One Catch-2 with open source on support. There are numerous sources for help with
+    the 20,000 open source components available for download on the Internet, but
+    how are they?
+
+
+    "There may appear to support, but it really needs to be investigated surface appearances,"
+    says Michael Goulde, a Senior Analyst at Forrester "You have to determine if you
+    are choosing a viable product with long-term development plans and
+
+
+    # 3. Learn the license
+
+
+    Open source doesn''t always mean free.
+
+    "Deciphering the license models for open source, and even commercial, software
+    can be tricky says Sam Lucia, IT Director at California general contracting and
+    engineering company Ruison & Slten "You have to figure out which licensing scheme
+    is to work for your company and how you are using the open source.
+
+
+    "You may not get all the refinements you are used to, so you will need to understand
+    software, data and architectures," Ogvy & Mather''s Andrew "You will cut the umbilical
+    cord of vendor accountability in this
+
+
+    # 5. Tying it all together
+
+
+    The differences in open source code from developer can make it difficult for a
+    company to adapt and integrate an open source stack.
+
+
+    One route is to use the LAMP model, an integrated stack that includes Linux, Apache,
+    MySQL and programming languages PHP, Perl or Python-Start up with the Octopus,
+    and Source will say that the integration work for IT managers provides services
+    or stacks that fit the LAMP model
+
+
+    "Open source can become a real time sink if you are working to multiple species
+    together," says Rick Benke, Manager of system and network Engineering from IT-Med
+    at the University School of Medicine. "Many open source projects are built on
+
+
+    other open projects and the hidden costs with open source is directly related
+    to the time it takes to work out the integration.
+
+
+    # 6. Security concerns
+
+
+    Open source advocates contend that the technology is more secure than commercial,
+    but open source software has susceptibilities of its own.
+
+
+    According Analyst Laura Koetzle, open source'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 25
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_25_0.png)
+
+
+    developers are not motivated by customer satisfaction numbers or the potential
+    of hackers as commercial vendors to participate in vendor listings to report bugs
+    and holes in the software. Open source maintainers will respond widely to security
+    vulnerabilities," she writes in a "good-enough security tests" that commercial
+    products do, but she adds that
+
+
+    source code. Software release management processes also should be applied. And
+    you should consider using tools like GNU privacy guard, a free replacement to
+    the data encryption program PGP (Pretty Good Privacy).
+
+
+    Koetz says open source software passes the "good-enough security tests" that commercial
+    products do, but she can take extra measures to ensure the security of open source
+    software on your network.
+
+
+    One "gotcha" is to check out ahead of time," says a Windows application will perform
+    the same if moved to Linux.
+
+
+    # **7. Make management a priority**
+
+
+    While management is historically an afterthought when rolling out new technology,
+    Yale''s Bee suggests standardising open source rollouts help simplify management
+    and ensure better performance later. It can get confusing, fast if you have different
+
+
+    "It pays to check it out before we unleash something on the bank." says Kerry
+    Miller, Network Engineer at Victoria National Bank in Houston. "We like to run
+    things in a test environment for all first, then a couple of users to try it out
+    before we
+
+
+    To start, standardise on one distribution of
+
+
+    July — August 2005 LinuxWorld ME'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# LOW COST LINUX PCs
+
+
+    # Linux for the masses
+
+
+    Vendors are all to use raft of low-cost linux desktops, clients and desktops priced
+    under $25 with bundled software for the market cost. This could prove be a boon
+    for small and medium sized business, governments and even enterprises cutting
+    IT hardware and software costs.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_26_0.png)
+
+
+    Airing for a share of the low-cost market in developing countries, a number of
+    vendors are introducing specially designed products that offer lower startup costs,
+    easier manageability and maintenance. The products, based on Linux, are expected
+    to go on sale this year
+
+
+    Desktop PCs in India reached 0.9 million units in last year''s count
+
+
+    To tap such market, Enforce from Bangalore, under the guidance and financial support
+    of the New Millennium Indian Technology Des. Initiative has launched Mobile
+
+
+    The Linux mobile device and two of its variants, the Mobile Wireless and Soft,
+    offer an affordable and ultra-cost desktop products that are priced between $220
+    and $535, depending on the configuration. All three are targeted at unsophisticated
+    users who want to run routine tasks
+
+
+    Mobile, with a 7-inch VGA LCD screen at cost near that, while having a full-size
+    laptop-like keyboard on the move, acts up as a desktop stand. Powered by Intel''s
+    X-Scale architecture based PA555 processor features an it features, msoffice,
+    on-screen flash storage, and an optional GPS or analog line modem.
+
+
+    Additionally, Ubuntu offers built-in PCs with GPS and Wireless modem options.
+    These devices offer integrated smart card-read/write capability as well. The third
+    product, Soft, is a very compact desktop designed for offices that won''t really
+    need the cost and bulk of today''s high-speed PCs for day-to-day work.
+
+
+    Another listed-level examples are available
+
+
+    in South India, is working on a Linux thin client that will sell for about $100
+    and lack moving prices. The companies that are proliferates, the most viable option
+    for low-cost computing in markets will be to have a simple appliance on a Linux
+    server on a network. In addition to low prices, in emerging markets, manageability
+    is also critical, says Novatum''s spokesperson
+
+
+    Novatum''s thin client brings from the ground up, and is a processor designed
+    in-house by the Besides supporting technical design, the thin client supports
+    multimedia applications as streaming video. Novatum aims to deliver computing
+    as a utility that is piped through thin networks
+
+
+    Via Technologies, a hardware vendor wants to introduce a range of low-cost computer
+    designs aimed at india''s users in the Middle East
+
+
+    The Tencent Project plans ia to bring three different products, which will use
+    Linux products and chassis, says Ravi Pathrai, Country Manager of India. To be
+    priced between $500 and $550, and will be introduced in this India in September
+    with other companies, such as JPS
+
+
+    Vai''s first line of products will run Linux to lower costs, the company may consider
+    offering products with Windows at a later date
+
+
+    The Tencent range plans ia a Featured PC, priced at $250 including a drive and
+    a monitor. It also features a memory-based multiuser with flash memory which is
+    designed for Broadband Internet applications, such as VoIP over Internet Protocol.
+
+
+    Indicates are that the company will market the products under brand India. Via
+    is also negotiating with India-based companies to manufacture them. Via will also
+    offer low-end products with flash memories. The products will include Linux-based
+    software for manageability that is developed. In the future, Via is developing
+    a series of product bundling for Terra PCs clients, a targeted at specific applications,
+    such as an internet cafe,
+
+
+    > for $400 in India, the TCO is far higher when unfunctioning under poor quality,
+    maintenance and software costs, Vijay Deshpande, Chairman of Encore
+
+
+    > lowering the computers: overall cost was the challenge. We offer a backup system
+    for six months and an optional hard drive because the power is poor in India,
+    particularly in rural areas.
+
+
+    > Our products are not PCs, as the term includes use of Windows and maintenance
+    PC configurations
+
+
+    All three products have built-in local-language support, office suites, personnel
+    information manager, an e-mail. BW synchronization or as well text-to-speech,
+    no extra cost
+
+
+    Encore launched Simple, a $500 Linux hardware computer. The product has not done
+    well in the market, with about 500 units since its commercial last launch product
+    is in demand, says Deshpande
+
+
+    Mobile added three major clients like ITC (for education), Re Electric Car Company
+    (for dollars) and South African students for students
+
+
+    Encore''s not alone in the cheap PC for developing economies. Intel is reportedly
+    designing a PC that will work on a car battery. Other vendors are also testing
+    low-cost computing models. Novatum''s, a startup
+
+
+    LinuxWorld EMEA July August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# $100 Linux laptops next year
+
+
+    The Media Lab project to develop and sell a $100 Linux laptop is expected to see
+    the first machines available in 2006.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_27_0.png)
+
+
+    An ambitious mission by the Massachusetts Institute of Technology''s (MIT) Media
+    Lab to develop and distribute a laptop costing no more than $100 is moving forward
+    with the receipt of the first orders.
+
+
+    Orders from five to six countries, for a total of six million machines, are hoped
+    for a pilot project led by Nicholas Negropone, chairman of the MIT Media Lab The
+    goal is to provide a laptop for every child, though any country that can afford
+    them.
+
+
+    Negropone was in Japan recently to present the project at the Tokyo Ubiquitous
+    Network Conference, a side conference to the United Nations'' World Summit on
+    the Information Society, bringing together delegates from around the world.
+
+
+    "Many countries lack the means or ability to realize the full potential of children
+    through their current education systems, he says. The combination of laptops to
+    all children, broaden connections for the towns and villages where they live and
+    in a school for the use of
+
+
+    digital materials, will improve not only the education each child receives but
+    their future prospects as well, "Negropone says".
+
+
+    Advanced discussions with various leaders for projects are already well underway.
+    China is expected to order three million machines and Brazil is expected to buy
+    million. Negropone is looking for more than three nations—each in Africa, the
+    Middle East and South Asia—to commit to orders, in addition to supplying some
+    schools with production, hopefully sometime in 2006.
+
+
+    The standard model for laptops requires a large investment of capital, distribution,
+    and profit. Negropone is convinced that with simplified models and some reinventing
+    of the devices the machine won''t be under cost. The company, having the team
+    of The $100 Laptop Company, plans to sell laptops in-buy, directly to ministries
+    and is looking to make a profit. About 50% of the cost price is contributed by
+    marketing, sales, distribution costs and profit, so those remaining aspects
+
+
+    will provide big savings, Negropone says. The remaining half of the laptop''s
+    cost is accounted for by the parts and manufacturing, and Negropone is planning
+    things: Roughly two thirds of this cost is the display panel and backlight, but
+    Negropone''s version of the machine will use a projection system that costs a
+    tenth of about that?
+
+
+    The laptop will run Linux. At this stage, the distribution hasn''t been decided
+    yet but the project is in serious discussions with Red Hat and Beijing''s Red
+    Software.
+
+
+    The first generation processor will be based on a SoAMD processor from AMD, one
+    of the project''s main barriers, and will have 512MB flash memory in place of
+    a hard-disk and a wireless connection. The connections will automatically connect
+    with others, forming a mesh network to support communications and allow Internet
+    sharing and software sharing, open-source approach
+
+
+    Plans are already underway to include second and third generation machines, due
+    in 2007 and 2008 A prototype of the third generation was made based on a flexible-film
+    display from E-link. That could use an advanced printing technology to reduce
+    the cost and further cutting the price down.
+
+
+    Current plans for the six million machines to be manufactured in China and for
+    nations manufacturing centers to be built in Brazil is also interested in building
+    a plant to produce laptops for more than one nation in America, adds Negropone.
+
+
+    Additional manufacturing might be needed if the project reaches its overall goal
+    of between two hundred and three million laptops per year. In comparison the total
+    world PC market in 2004 was 195 million, according to a recent report from
+
+
+    The project is being developed by Negropone along with two other faculty members:
+    Jeffrey Jacobson, who developed the E-link technology and Seymour Paper, an expert
+    in child learning.
+
+
+    The project home page is http://media.mit.edu
+
+
+    July – 2005 LinuxWorld ME'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# NEWS ANALYSIS
+
+
+    # UK turns to Linux for defence
+
+
+    New Linux cluster to aid in nuclear simulation
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_28_0.png)
+
+
+    management environment," says David Ball, Group Leader, HPC platforms at AWE.
+    "These were some of the leading factors AWE''s choice of Linux Networks."
+
+
+    AWE''s Evolution visualisation cluster consists of Intel E6 processors, with each
+    node providing 16 GB of storage. Each rendering node has a PCI interface to a
+    Nvidia FX3000 high performance graphics card and contains packages such as Chromium,
+    CEI, VTK, and Paraview.
+
+
+    The visualisation cluster also includes cluster management from Linux Networks,
+    Clusterwork and icebox, to provide total cluster management from one interface.
+
+
+    Linux Networks'' experience delivering landmark status to many of the United States,
+    national laboratories such as Los Alamos National Laboratory (LANL) and Lawrence
+    Livermore Laboratory (LLNL), with excellent performance, was one of the reasons
+    for AWE''s selection of Evolution technology.
+
+
+    The Atomic Weapons Establishment (AWE) responsible for a key part of the United
+    Kingdom''s nuclear defence capability, has acquired Evolution visualisation cluster
+    system from Linux Networks. AWE is using the cluster as part of their research
+    into new techniques for visualisation data produced by their computer simulations.
+
+
+    "We are delighted that AWE chose Linux Networks to be our partner in producing
+    visualisations in a cluster environment," says Fabio Gallo, Vice President of
+    Europe, Middle East and Africa (EMEA) regions. We are committed to meeting the
+    needs of the engineering and physics oriented supercomputing centers, and are
+    confident we can meet AWE''s requirements for reliable, and easy-to-manage cluster
+    systems.
+
+
+    The high performance computing cluster will play a major role at AWE which is
+    responsible for managing the entire life cycle of the United Kingdom''s nuclear
+    deterrent since the cessation of underground nuclear testing. The development
+    of the United''s nuclear deterrent is dependent on large-scale computer simulations,
+    including the visualisation of scientific and engineering data. Visualisation
+    is an integral component of AWE''s technical computing facilities, and is essential
+    to the understanding of the massive data produced in simulations.
+
+
+    With the arrival of high-speed interconnect technologies, such as Infiniband,
+    64-bit processors and PCI Express, Linux clusters can be used to build scalable
+    graphics engines to generate detailedisations.
+
+
+    > "Visualization and Clusters have moved in the last few years and nowadays have
+    to deliver more performance than before This includes large memory, 64-bit addressing,
+    low latency interconnect, Open Source and the most recent development - a mature
+    system
+
+
+    # With the arrival of high-speed interconnect technologies, such as Infiniband,
+    64-bit processors and PCI Express, Linux clusters can now be used to build scalable
+    graphics engines to generate detailed visualisations.
+
+
+    LinuxWorld MEA July August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Don’t let ‘out of office’ mean ‘out of touch with your business’…
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_29_0.png)
+
+
+    # Instead rely onn‘on demand business continuity’
+
+
+    +   - LESS COMPLEX
+
+    - COST-EFFECTIVE
+
+    - FAST AND FLEXIBLE
+
+    - NO OUTLAY
+
+    - BEST PRACTICE
+
+    - TRUSTED PARTNER
+
+    - All from the region’s market leader
+
+
+    ...thank you for leaving IT to us
+
+    Contact details: Office: +971 4 391 6855 Fax: +971 4 391 6856 Email: marketing@aspgulf.com
+
+    ASPGulf.com Ltd, Bldg. No.3, Office No.306 Dubai Internet City P.O. Box 71834,
+    Dubai, UAE.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# INACTION
+
+
+    # PARC takes a second look at Linux
+
+
+    Regional market research firm revamps its existing open source infrastructure
+    to increase its return on investment
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_30_0.png)
+
+
+    As market research firm, Pan Arab Research Centre (PARC) had its of growing gains
+    in an emerging market like the Middle East.
+
+
+    The mail routing schema was also complicated. It was a tough time," explains Neeraj
+    Chabra, PARC’s Software support Manager.
+
+
+    Unlike most companies, which choose to migrate to a stable platform, PARC was
+    already using Linux. "We have been using Linux for seven years. This old Linux
+    solution was developed in-house by my former colleagues. It served us well, when
+    they were working (with PARC but after they left, we found it difficult to handle
+    support, so we decided to get external
+
+
+    The member of Gallup International, handles large-scale multi-market media and
+    consumer marketing research for the Arab market, PARC’s IT infrastructure wasn’t
+    scaling up to serve them. "We had an unstable system causing enough disruption
+    to the network. Furthermore, we didn’t have sufficient in-house resources to shoot
+    and and maintain the aging system. Even the gateway virus filter was ineffective,
+    so everyday we had virus issues, floods of spam
+
+
+    With a total staff base of 32 full-time members excluding the pools of part-time
+    field interviewers and supervisors, located across satellite offices in the Gulf,
+    supporting staff was also an issue.
+
+
+    > "For day to maintenance, Linux has not been an issue it’s all GUI basis, we
+    need one configuration, we have never any downtime issues So far, we haven’t had
+    a single issue technically or operation wise."
+
+
+    Neeraj Chabra
+
+
+    LinuxWorld ME — July – 2005'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# AN IT SECURITY AWARENESS CAMPAIGN BY
+
+    SECURITY ADVISOR MIDDLE EAST MAGAZINE
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_31_0.png)
+
+
+    # THINK SECURE.
+
+    ACT SECURE.
+
+    BE SECURE.
+
+
+    Sometimes it seems that the more we hear about security problems the less
+
+    do we take control of the problem ourselves. Yet the single most effective thing
+
+    a company can do to counter the everyday or the unexpected security threat is
+
+    to get individuals involved into a security mindset. That''s why Security Advisor
+
+    Middle East magazine has developed a security awareness campaign, to build a
+
+    security conscious work force within the corporate community.
+
+
+    # The goal
+
+
+    To build awareness in the eight key IT security
+
+    topics below, that affect every organisation
+
+    both at the individual and corporate level.
+
+
+    +   1. Viruses, spyware and malicious
+
+    code protection
+
+    2. Internet security: Including Web browsing
+
+    3. Account control and password security
+
+    4. Social engineering and the human element
+
+    5. E-mail and instant messaging security
+
+    6. Mobile communication security
+
+    7. Physical security
+
+    8. Data security and integrity
+
+
+    # Activities
+
+
+    The security awareness campaign brings
+
+    together experts from around the region
+
+    intentionally to form a panel of
+
+    experts, offering advice and addressing
+
+    key security issues of corporate participants
+
+    of the campaign.
+
+
+    A Weekly Web based quiz will provide the
+
+    participants with feedback on the level of
+
+    response and understanding of the select
+
+    security topics.
+
+
+    To be a part of this campaign and build an information security mindset both internally\and
+    externally, contact CPI: E-mail: alex@cpidual.com Tel: +971 (04) 351 5316
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_31_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# INACTION
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_32_0.png)
+
+
+    > The solution we proposed was based on open source to achieve benefits - total
+    cost of ownership. For the servers, we decided to base it on a popular enterprise
+    server for stability, security with local vendor support. We didn''t want to reuse
+    or improve the code in an already buggy system.
+
+
+    V.S Dileep, Director, Network Gulf
+
+    Information Technology (NGIT)
+
+
+    support, and not in a packaged solution,
+
+    has Chabra.
+
+    The challenge for Chabra and his team was
+
+    not migration, which is the case with most
+
+    companies to utilise the existing Linux
+
+    infrastructure, especially something as vital
+
+    as email services. High on the
+
+    agenda employees in the
+
+    head office and 25 researchers in the
+
+    branches have some access to all the
+
+    etwork service.
+
+
+    source components to be implemented on the
+
+    exting hardware. "The solution we proposed
+
+    based on open source to achieve the lowest
+
+    total cost of ownership. For the servers, we
+
+    decided to base it on a popular enterprise server
+
+    for stability, security with local vendor support.
+
+    as an already buggy system. We
+
+
+    the environment is predominantly Windows
+
+    G8 and with a less than five Windows XP
+
+    machines. With the lifecycle of most of these\Windows clients, PARC has to
+
+    upgrade to Linux and use the existing
+
+    architecture.
+
+    For day to maintain, Linux has
+
+    not been an all GUI, one needs time
+
+    configuration, we have not another daily
+
+    issues So, technically or wisely. At this stage,
+
+    de desktop Linux has home to base, but
+
+    for the servers we don''t see any issue in
+
+    migrating other else.
+
+    Technically PARC''s servers are in auto-pilot
+
+    the past few months, but Chabra
+
+    dn''t want to take any changes. The company
+
+    h signed NGIT for an enterprise level
+
+    envelopment and another maintenance contract.
+
+    Looking back, PARC believes it was legal
+
+    thousand excellent benefits - since the server
+
+    hand hard disks; no need upgrades; no application
+
+    licenses for servers or mail servers;
+
+    no security issues; no training of employees.
+
+    Chabra''s ended up with more than he
+
+    bargained for.
+
+
+    Since PARC''s IT team had limited Linux
+
+    skill, they turned to Network Gulf
+
+    Information Technology (NGIT) - V Dileep, as
+
+    open source solutions. The Director
+
+    who also oversaw the explain projects,
+
+    the challenges they had to start: "PARC
+
+    was running on an old customised Linux
+
+    which was failing. They had problems. The new IT team was
+
+    saby-sitting the servers, but it was very
+
+    unexperienced and undisciplined. As of the
+
+    old PARC last year, they were left in the
+
+    wild stranded with Linux.
+
+    Dileep''s team analysed the existing system
+
+    where the proposed, solution based on
+
+    Red Hot Enterprise Linux 3.0 and other
+
+
+    For NGIT, chose to use a locally assembled server,
+
+    with dual processors, GB memory, with some
+
+    additional external storage.
+
+    NGIT used Samba for file server
+
+    services which manages the users and group
+
+    access controls. The client machines log
+
+    to the Samba server and have drivers mapped
+
+    to the server.
+
+    For, PARC uses Post for mail server
+
+    Mails are distributed by Fetchmail and
+
+    dributed locally. All the j-mail means that
+
+    PARC receives and sends are content
+
+    scanned for virus by ClamAV andnSpamAssassin. For mobile problems, PARC employees
+    use
+
+    SquirrelMail, a lightweight web client.
+
+    As the 30-year old research firm''s back-
+
+    is powered by Linux, but on the client.
+
+
+    LinuxWorld EMEA July – 2005'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Birmingham bets on Linux
+
+
+    UK City Council is migrating to Open Source, 1,500 desktops to costs and save
+    taxpayers'' money.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_33_0.png)
+
+
+    Birmingham City Council has launched one of the UK''s most ambitious open-source
+    trials to date, shifting 1,500 client computers and adequate server infrastructure
+    to Linux and other open-source software.
+
+
+    The project is expected to generate objective information on open source benefits,
+    according to the UK city''s council. The Office of the Deputy Prime Minister (ODPM)
+    via the e-innovations program is funding the trial, which is part of a wider project
+    called Open Source Academy.
+
+
+    The Academy, announced in April this year, is also setting up infrastructure such
+    as a code repository, database of open source suppliers and an accreditation program
+    for open source, in order to make open source an easier option for local authorities.
+    The Academy hopes open source will mean more efficiency gains and cost savings,
+    promote inter-operability and open
+
+
+    standards, avoid proprietary lock-in, reduce duplication work amongst local authorities
+    and extend hardware life.
+
+
+    Birmingham will be migrating 1,500 clients in its library to open source software
+    including GNU Linux operating system, and such application software as the Firefox
+    browser, office suite and the Firefox details are yet to be worked out. The PCs
+    will include public-access desktops around the city, as well as the city''s server-side
+    infrastructure.
+
+
+    Unlike University''s open source project under the auspices of the Academy — Bristol
+    City Council''s mission of 5,000 desktops to StartRunning on Windows — Birmingham
+    will be open source through and through. This is really the rubber hitting road,
+    says Mark Taylor of the Open Source Consortium, an advocacy group
+
+
+    that has an advisory role with several of the Academy''s projects. "Birmingham
+    has the biggest metropolitan council in the UK and Europe, and it is rolling out
+    a complete production business system
+
+
+    The council is currently putting together a usability study and will begin rolling
+    out the systems later year. The trial will be followed by an impartial evaluation,
+    taking into account productivity and ongoing costs such as training and hiring
+    IT staff
+
+
+    While a number of local authorities are already using open source — usually on
+    the server — the benefits have not been made clear enough, according to Taylor.
+    One of the major deliverables of this is having an unbiased study. Here''s what
+    we have done and here are the good and bad aspects of it," says A lot of councils
+    are just objective case studies in the industry.
+
+
+    July – August 2005 LinuxWorld MEDIA'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# BACK TO THE GRASS ROOTS
+
+
+    The past decade Linux has made inroads into enterprises, SMBs and the government
+    sector. However, its real value to the education sector – the very place where
+    it was created – wasn’t quantified. Things are changing. Now more schools and
+    colleges are turning to open source to reap the benefits.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Hobby Industry
+
+
+    Back in 1991, University of Helsinki Linus Torvalds created a rudimentary version
+    of the Linux kernel. For his hobby project, Torvalds used Minix (a flavor of Linux),
+    programming help from his peers until University''s facilities allowed Linux.
+
+
+    Interestingly, the past decade was made by Microsoft, IBM and the government sector,
+    but the education sector – the only place where Linux was created – changed?
+
+
+    To put things in perspective, the British Educational Communications and Technology
+    schools across the UK that used open source software (FOSS) incurred half that
+    those using proprietary software, and 20% for less schools. Becta''s 24-page report
+    looked at three areas – technical infrastructure, management, and curriculum software.
+
+
+    The traditional perception that open source software is harder to support was
+    disposed by the report. FOSS found to cost up by 60%. In other words, schools
+    and universities can save millions of dollars every year.
+
+
+    > "This report indicates that open source software can provide a cost-effective
+    and efficient solution in schools if deployed," says Owen Lynch, CEO at Becta.
+    "We believe that software used in schools should be of a high quality and adhere
+    to standards, enabling compatibility and interoperability between products."
+
+
+    The report, which does not explicitly mention Microsoft, suggests that the best
+    performing schools were those running dual-platform PCs. This gave the advantages
+    of open source''s cost reductions while guaranteeing interoperability with commercial
+    software.
+
+
+    Technology, an active user of Linux since last year. charge. We can download open
+    source software for free, duplicate it and it works the way we want.
+
+
+    The Dubai based college currently runs more than 50 Linux desktops, based on Suse
+    and Red Hat, which have to come with 500 plus users accord.
+
+
+    "Windows licensing was proving to be costly and expensive. We bought a Linux distro
+    for about $500. It came with all servers, suites, browsers and standard applications.
+    We duplicated and used it without any restrictions. For similar usage of Windows,
+    we would have had to spend thousands of dollars," explains Abdul Rehman, Manager
+    - Department of Computing & Technology
+
+
+    Before deploying Linux, Rehman and his three member it did the math. An academic
+    license for Windows XP and Office costs $159 per person. Add to this-windows licenses,
+    server costs, administration and support the network, and Microsoft provides volume
+    discounts, but the numbers still add up to thousands of dollars per year.
+
+
+    "Microsoft allows a single copy of Windows to be used on only one computer and
+    in contrast, once you have purchased Linux, you can run it on any number of computers
+    for no
+
+
+    Motivated by the results of using FOSS, Emirates College is embedding Linux directly
+    into the curriculum and Linux certification tracks to help its students. There''s
+    a man power issue are, so we are trying to create an environment by first training
+    our students and staff this will help us and even when the students get their
+    job market," says Rehman.
+
+
+    Emirates College also using Moodle, a free course management system (CMS) for
+    higher education create online learning communities. Currently they are being
+    offered under the college''s e-learning program.
+
+
+    Despite unbiased endorsement for Linux, Rehman remains windows for the staff to
+    maintain interoperability with the Emirates ERP solution.
+
+
+    Emirates College is one of hundreds to open. Arab Open University has been using
+    Moodle in all branches throughout Arab states since last year. Moodle, likes than
+    50 educational institutions across the Middle East as registered users.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_35_0.png)
+
+
+    # Licensing and iteration
+
+
+    A few colleges in the Middle East are not surprised by the survey results. That
+    instance Emirates College for Management &
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_35_1.png)
+
+
+    Abdul Rehman, Manager - Department of Computing & Technology Services Emirates
+    College
+
+
+    August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# LINUX IN SCHOOLS
+
+
+    Bashar Kilani, Manager of IBM Software Group Middle East and North Africa
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_36_0.png)
+
+
+    IBM''s ITG''s efforts are being paying off. The joint effort aims to provide comprehensive
+    K-12 and higher education e-learning for over 3,000 Junior schools. The vendors
+    are currently deploying the Linux based e-learning platform for Bahrain''s Ministry
+    of Education around a quarter of a million users.
+
+
+    Similarly, Novell has launched a new introductory Linux course designed for academic
+    environments that gives institutions tools to promote open source. The course
+    covers the objects of Linux exam and certification, an international industry
+    credential that offers proof of knowledge in Linux areas, with networking configuration
+    directions to the Linux desktop.
+
+
+    Initial Base Product
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_36_1.png)
+
+
+    Brent Pinear, IT Coordinator, DWC
+
+
+    # Unleash Linux
+
+
+    On the other hand, the Dubai Women''s College (DWC), part of the Higher College
+    of Technology in UAE has more conservative approach towards Linux. DWC currently
+    uses Linux for a few network services, besides a 15-node open source lab by IBM
+    for software engineering students.
+
+
+    The Linux usage has a base of 250 students, which expects to grow to 290 by the
+    next academic year. "We want to use something that is relevant to the market...so
+    we haven''t seen any drive for Linux to train our students or its," says DWC''s
+    IT Coordinator Brent Pinear.
+
+
+    Unlike institutions such as Emirates College, where Linux sees no reason to follow
+    up.
+
+
+    Furthermore, there might be a cost saving in using Linux, but we need to negotiate
+    for 10,000 licenses for all the colleges," concedes Pinear. "The support issue
+    is more important to us. We want to have a team in, so to keep support costs low
+    or minimal. There isn''t much Linux to know out there to be assured of getting
+    good support."
+
+
+    # Vendors go to school
+
+
+    For example, IBM is working with Red Hat to bring universities to teach kids open
+    source schools. According to IBM''s research of technology at universities around
+    the world we have found some need for open-standards offerings. About 75% of CEOs
+    interviewed by Big Blue''s Consulting Services said a lack of quality skills are
+    the issues with the greatest impact on their business.
+
+
+    In the region too, IBM and Integrated Technology Group (ITG), a Jordanian software
+    vendor have Edu''s e-learning platform to run on the Linux system. Edu has the
+    potential to revolutionize education and learning management in the Middle East.
+    We are supporting Edu as part of our e-learning efforts, we will be able to offer
+    the service to the regional governments who are now developing. Bashar Kilani,
+    Manager of IBM Software Group Middle East and North Africa
+
+
+    The new version of Edu will enable educational authorities to specify and deploy
+    open-standards-based Linux rather than being ''locked'' in proprietary software
+    environments.
+
+
+    # Educational enterprise
+
+
+    Software providers as SunCard are now trying to get the example. The vendor has
+    started by porting its office to Linux and is going to have 1300 institution clientele
+    worldwide to work with them to improve the code and share the benefits.
+
+
+    SunCard seeks despite the recent vendor investment, the issues down to the nature
+    of an educational institution.
+
+
+    > "A lot of universities do not look at IT, in the same way an enterprise does,
+    since making profits, competition, reporting to shareholders isn''t high on the
+    agenda."
+
+
+    A couple years ago, Pinear''s concern may have held true, but things are changing.
+    Traditionally, IT vendors have closed ties with Universities to seek the best
+    young talent, research projects and helping them through corporate IT. Companies
+    are now developing relationship to open source.
+
+
+    LinuxWorld ME — July 2005'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# South Korea pushes forward
+
+    with Linux for schools
+
+
+    source and open standards should be of great interest to the academia, because
+    many of these initiatives started out from universities," says Matthew Boice,
+    General Manager, Suncard, SCT EMEA.
+
+
+    The efforts are not coming from vendors alone. Even Linux user groups (LUGs) are
+    pitching in to get more schools and colleges involved. "We want to get youngsters
+    educated in open technology actively. They should have the freedom to work in
+    any system, not be bound to use Windows instead. Open source technology gives
+    them ample freedom," says John Joseph, Coordinator for one of Dubai''s LUGs.
+
+
+    The self-funded group is distributing 5000 Free OSS CDs to students across the
+    UAE and working with the region''s schools to integrate Information Technology
+    (ICT) to the facility and students.
+
+
+    At this point in time, both vendors and academia are facing the benefits.
+
+    Opening up to software and getting the academia and open community involved is
+    helping us generate more businesses. We are trying to establish academic administrations
+    so schools can operate with the same efficiency as any other enterprise," says
+    Boice
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_37_0.png)
+
+
+    > The South Korean government is moving forward with a program to roll out servers
+    running the Linux operating system that will handle data for 10,000 of the nation''s
+    schools by 2006, according to the Korea IT Industry Promotion Agency (KIPA).
+
+
+    Under a program that started last October, Linux servers have been deployed to
+    handle students for 132 schools in Seoul, the national capital, according to Sungha,
+    vice president of KIPA''s Open Source Software Promotion Center, a nonprofit-backed
+    agency in Seoul.
+
+
+    The project will replace Linux students'' academic and medical records with a
+    local distribution of Linux called Woody, by South Korea''s Ministry of Education
+    and Human Resource Development to cut IT costs. The project, which will involve
+    the National Education Information System (NES), will ultimately involve the installation
+    of 288 servers to handle records for 10,000 schools.
+
+
+    The project''s cost was not disclosed. Woody was introduced last year and was
+    developed by the Electronics and Communications Research Institute, a government
+    laboratory, and seven South Korean companies, including Linux software vendor
+    Microsoft, Yang.
+
+
+    A growing number of government and government-affiliated organisations in South
+    Korea are using Linux, but however have a small share of the market compared to
+    Unix and Microsoft''s Windows operating system, according to KIPA.
+
+
+    Major Linux users in South Korea include the National Institute of Agriculture
+    where Linux accounts for 95% of the institute''s servers, and the Korea Center
+    for Disease Control and Prevention, where Linux is used on more than half of the
+    center''s servers, according to figures provided by Yang.
+
+
+    By 2007, KIPA hopes to see Linux used on 30% of servers operated by central and
+    local government in South Korea he said. By then, the policy wants to raise this
+    to 40%, he said.
+
+
+    At present, Linux is used on 6% of the South Korean government''s servers, Yang
+    said.
+
+
+    # OPEN SOURCE TOOL KIT:
+
+
+    +   - http://www.becta.org.uk/
+
+    - http://www.schoolforge.net/
+
+    - http://moodle.org/
+
+    - http://www.uptortal.org/
+
+
+    +   - http://www.freshmeat.net
+
+    - http://edu.kde.org/
+
+    - http://ktzlinux.org/
+
+
+    July – August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# OPEN TALK
+
+
+    Interview with Eva Beck, HP
+
+
+    As the Linux Business Manager for HP''s Technology Solutions Group (TSG) in Middle
+    East and Africa, Eva Beck''s role is to drive HP''s strategy and marketing. Eva
+    has been performing this role for the last two and a half years, having joined
+    HP in 2001 as the Programme Manager for Microsoft DataCenter and Intel Alliance
+    Manager. Following is the transcript of a telephonic interview with LWMEA:
+
+
+    # Leaping ahead with Linux
+
+
+    > YOU COVER A LARGE MARKET LIKE EMEA. BUT MOST OF THE LINUX ACTION SEEMS TO BE
+    HAPPENING IN EUROPE, MORE SO GERMANY, UK AND THE US FROM THE MIDDLE EAST.
+
+
+    Actually, we are seeing quite some interest from this region. We did a Linux now
+    for the Middle East and recently there were 260 attendees. If you look at the
+    market size, in proportion, that''s lot of interest. A good proof point for us
+    [HP] how important Linux and open source is in general. More and more companies
+    are now eager to get into.
+
+
+    In the past two years, Linux has really taken off in the Gulf. That''s excellent
+    news for us. Some customers are a bit hesitant to take the first step, they prefer
+    waiting for others to take the risk. On a worldwide level, there is a wide level
+    of acceptance. Three years ago people only with pony tails wanted Linux. Two the
+    Linux argument moved to TCO and ROI. Now Linux is given and enterprises are taking
+    it granted.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_38_0.png)
+
+
+    IN TERMS OF PERCENTAGE HOW MUCH OF HP''S GLOBAL LINUX REVENUES COME FROM THE EMEA
+    MARKET?
+
+
+    About 40 to 45%, it''s a pretty substantial number. If you have to split those
+    percentages however. If you look at the server market, then its around 42%. If
+    you look at the client and workstations side, then it is different. In that case,
+    the numbers are bigger. There are more Linux desktops and then clients in Europe
+    than in North America. Here are the adoptions rates.
+
+
+    CAN YOU DRILL DOWN NUMBERS FURTHER FOR THE MIDDLE EAST MARKET?
+
+
+    LinuxWorld MEA – July – August 2005
+
+
+    38'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# “Three years ago, people thought only with pony tails wanted Linux. Two years
+    ago, the Linux argument moved to TCO and ROI. Now Linux is given and enterprises
+    are taking it for granted.”
+
+
+    Unfortunately, we can''t. We track the EMEA market as a show.
+
+
+    WHAT DO I AND MANAGERS HAVE A BIG ISSUE WHEN IT COMES TO LINUX?
+
+    ARE ISSUES LIKE SECURITY, MIGRATION, COSTS STILL ON THEIR CONCERN?
+
+
+    Their biggest issue is still support. Customers want to call upon one another
+    for support. They want to tell different vendors for support. In our Linux strategy
+    We want to be the interface for the customer from the hardware, middleware to
+    the applications.
+
+
+    DO WE HAVE LOCAL SUPPORT CENTERS IN THE MIDDLE EAST? MOST CUSTOMERS HAVE TO DEAL
+    WITH US OR EUROPE SUPPORT?
+
+
+    We offer support directly through our partners.
+
+
+    DO YOU HAVE ANY NEW FOR LINUX INITIATIVES?
+
+
+    We invested into notebooks. In the past you could run Linux on the laptop, but
+    it was painful and tiresome. Diverse, without support. So we preinstalled Ubuntu
+    Linux on our laptop and enabled it. Customers can now install it easily and it
+    comes with all the functions they need. We want to test the market, so we are
+    sharing these things with financial customers in Italy, who want to migrate their
+    desktops to Linux. We are seeing this in government organisations all.
+
+
+    HOW HAS THE RESPONSE TO THE NOTEBOOKS?
+
+    We have a preloaded notebooks with Ubuntu. Customers can use the software either
+    from the reseller or do it for free. We expect to see tremendous response from
+    the market, with this notebook line. That''s what we got so far. In six months
+    time, when we talk again, you will get concrete notebooks. HP is the only one
+    with a large Linux hardware portfolio.
+
+
+    But isn''t that whole issue with Linux and Windows? OEMs include the bundle and
+    the cost, so customers don''t need to buy anything. Because it comes with it,
+    people end using it and rarely see the need to migrate to Linux. So why would
+    they make the extra effort, if they already paid for it?
+
+
+    People want to use Linux to make the effort. It''s a lot of cost to customers
+    and they say its an excellent idea. Earlier, they would spend time trying to configure
+    their Linux notebooks, now they don''t need to be preconfigured.
+
+
+    Most of the customers are coming from the Linux world. Sun has seen their business
+    face from the edge of the networks. We see lot of customers coming to Linux on
+    x86 servers. A bit tricky because people have lot of personnel in Windows that
+    they put quite some effort into training them on Linux. It is possible but a little
+    challenging.
+
+
+    WHAT INTEREST IS HP MAKING TO PUSH LINUX?
+
+    The client is on the side. We have a Big Tug, a project to help scale Linux to
+    64-way on a single server. We recently opened an open source utility center in
+    France to help prototyping and deploying Linux systems. The feedback from the
+    market is exciting. We are making some investments so customers can get buy and
+    support for everything they want to do.
+
+
+    WHICH ARE THE BIG CUSTOMERS WIN HP HAD RECENTLY?
+
+
+    Continental Airlines, Universities of Oslo, ADMA Oppo, a few stock exchanges,
+    Police of lower Saxony and others.
+
+
+    WHAT ABOUT MARKET SHARE THE VENDORS TO MAKE BIG CLAIMS ABOUT LEADERSHIP IN LINUX?
+
+
+    That''s something we are really proud of. Everyone says IBM is in Linux, but if
+    you look at the numbers we have a true server share of 38% in EMEA. For us, that''s
+    the best part of what that HP likes.
+
+
+    But this server number changes every quarter because it depends on what metrics
+    we use, what we are considering and who we talk to, there are how many factors
+    you are involved.
+
+
+    This numbers the total server revenue. This number has been stable since 28 quarters,
+    and most of the IBM has had 20 to 22% market share. So its is a kind of indication
+    that we are an integral part of the market.
+
+
+    How about desktops?
+
+    We have workstations, coming with Red Hat Linux a few years. In the years we shared
+    with Maverick. Moving forward, customers will have have Linux desktops. That''s
+    already in place.
+
+
+    IBM AND HP SEE TO HAVE THEIR LOCKED ON LINUX. BUT IF YOU ARE BIG LINUX CHAMPIONS;
+    SHOW US YOUR OWN MACHINES, LINUX AND MAFRAMES. SO WHAT OF CUSTOMER MIGRATION PATTERNS
+    DO YOU SEE?
+
+
+    DO YOU HAVE ANY TARGETS FOR THIS YEAR?
+
+    The market is growing fast, so we would like to maintain the market share. We
+    want to deliver complete solutions.
+
+
+    July - August 2005 Linux World ME'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# OPEN TALK
+
+
+    Interview with Matthew Szulik, CEO, Red Hat
+
+
+    # # Red Hat’s CEO talks shop and apps
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_40_0.png)
+
+
+    OF RELIEF THIS WEEK WHEN YOU FOUND OUT [SUN MICROYSTEMS] WERE PURCHASING STORAGE
+    TECH FOR $4.1B
+
+
+    MATTHEW SZULIK: I''ve come to the conclusion that when people make big facts about
+    acquisitions, they usually become underwhelming.
+
+
+    WHAT ABOUT THE ISSUE OF CONSOLIDATION? THIS IS HAPPENING SO MUCH NOW IN THE SOFTWARE
+    INDUSTRY NOW. IS THAT GOING TO HAPPEN WITH THE LINUX INDUSTRY AS WELL?
+
+
+    I don''t think so.
+
+
+    YOU DON''T THINK YOU OR NOVELLL ARE GOING TO GET PICKED UP BY A LARGER COMPANY?
+    Well, I don''t speculate on that, but I think the industry of open source is at
+    a point of maturity. I think the economic models are exhausted, as in my view,
+    they are proprietary software business. I have a hard time reconciling the economics
+    of scale that they would create.
+
+
+    I had a chance to speak at Harvard mock ago, and I met 20 CIOs whose IT budgets
+    of $5 or larger. So there were very serious executives, and many of them had deployments,
+    nothing strategic. My take-away from that, "Hall mackerel!! This is still a mark
+    at a very early stage"
+
+
+    So if you believe, that we would consolidate pretty robust technical talent? When
+    we look at our last two acquisitions, we consider those to be highly strategic.
+    One was in the field of systems, which of course is important. And the Netscape
+    [directory server] asset was an that we had been tracking for four years. We had
+    believed that the source lock of dome experience in building directories [and
+    the strategic importance of being able to deliver advanced levels of security,
+    certification. This is highly strategic for our company.
+
+
+    And when you look at us as databases and application servers, is that a really
+    compelling business for Red Hat to think? That''s not clear to me, and I don''t
+    hear our customers asking for it, quite frankly.
+
+
+    If one can be an evangelist of the commercial value of open source software, it''s
+    manage the company to prove otherwise that Linux startups have gone down in flames
+    around all, while managing the difficult task of succeeding in both the open source
+    software community
+
+
+    Today, Red Hat is unique. After all, where else would see the chief executive
+    of a one-employee company to take the stage during a keynote address and both
+    with a local gospel choir, Szulik did at his company in recent Hat Summit 2005
+    in New Orleans. And that unique blend of open source credibility
+
+
+    and marketplaceability has become the standard for a new generation of open source
+    companies, including JBoss, MySQL and Spike: a successful business built on free
+    software
+
+
+    Linux World mea sat with Szulik in New Orleans to help us understand, Microsoft
+    and whether he''s thinking of buying of those us and coming open source suppliers.
+
+
+    LWN HAS BEEN HINTING FOR THAT IT WAS WORKING ON A MAJOR ACQUISITION, AND AT ONE
+    EVEN POINT SUGGESTED THAT THEY MIGHT CONSIDER PURCHING NOVEL. DID YOU BREATHE
+    A SIGN
+
+
+    SO WHERE DO YOU SEE RED HAT GETTING BEYOND BEING AN OPERATING SYSTEM PROVIDER?
+
+
+    LinuxWorld Media July — 2005'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# “When I look at the Unix competitors, HPs seem to be de-emphasizing their
+    Unix business. We continue to take share away from Solaris. I think the next deepest
+    competitor that has proved a roadblock is Microsoft.”
+
+
+    In 2004 there were $5b globally, in Unix systems sold. When people say ''Are you
+    going to grow past an OS?'' I say, ''I don''t get bored with this Unix-to-Linux
+    migration. It''s still in its infancy.''nWe want to be pragmatic and not be over
+    zealous and ignore the siren call of Wall Street ''Go buy company X'', ''Go buy
+    Y''. And then we have an integration problem. You might miss out on the speed
+    with which the industry is moving while you''re trying to integrate a disparate
+    culture, a separate set of people that may not have the motivations as you
+
+
+    desktop technology. It''s in Europe and Asia. Organizations that have or are already
+    in the process of moving their legacy systems forward ... or are looking around
+    identity stagnant. They either re leaving [or] existing and just staying. They
+    now have the benefit of Unix and open-source technologies, and they are asking
+    for things that are new and different
+
+
+    change. You''re starting to see markets in India come to the fore, in systems,
+    China, Brazil.
+
+
+    # DO YOU WORK MOST ABOUT A COMPETITOR RIGHT NOW?
+
+
+    # WILL IT BE WORTH THE RESOURCE EXPENSE FOR RED HAT TO ENTER THE DIRECTORY MARKET?
+
+
+    First of all we already have a rich customer base ...And so we have an absolute
+    advantage on providing an open-source delivery to deliverance, improved capabilities
+    around identity management.
+
+
+    # WHY MUST YOU JUST TALKING ABOUT UNIX-TO-LINUX MIGRATION?
+
+
+    I think it economics, and which economic and model which will move us. As when
+    other changes in this industry, it really will change to economic models, business
+    strategies and people
+
+
+    ultimately the ability to manage the hundreds of devices that will be connected
+    to someone''s infrastructure for remote management and will.
+
+    When I look at the Unix competitors, HPs seem to be de-emphasizing their Unix
+    business. We continue to take share from Solaris. The next deepest competitor
+    that has proved a roadblock is Microsoft.
+
+
+    When I look at the Unix competitors, HPs seem to be de-emphasizing their Unix
+    business. We continue to take share from Solaris. The next deepest competitor
+    that has proved a roadblock is Microsoft.
+
+
+    # WHAT MARKETS DO YOU THINK YOU MIGHT AFTER THIS?
+
+
+    # RED HAT''S KITE CHARGED THAT REDUCE THE AMOUNT OF MONEY CAN BE MADE BY IT. HOW
+    DO YOU RESPOND TO?
+
+
+    We want to look at what software can be delivered as a service -- to deliver value
+    around the areas, as opposed to taking the economics of work for you.. The classical
+    software packaged is only going to decline in value.
+
+
+    Do Microsoft take money out of the industry when we want our frameworks? No. Sun
+    Microsystems and other entrepreneurs at that time [the early 80s] took enormous
+    personal risk and created great competitors that can see change.
+
+
+    # WILL YOU EVER ENTER THE APPLICATION BUSINESS?
+
+
+    I don''t think the application business is going to look the way that it looked
+    the last 5 years.
+
+
+    # WHAT IS HERE THAT CUSTOMERS WILL GO TO A FULL OPEN-SOURCE SOFTWARE STACK WHEN
+    THEY ALREADY EXISTING PRODUCTS FOR SUCH THINGS DIRECT AND IDENTITY MANAGEMENT?
+
+
+    # HOW DO YOU THINK IT WILL CHANGE?
+
+
+    We''re working as a service... . I think it will change our relationship to applications.
+    Component-based delivery of open-source is increasingly going to become a reality.
+    There will be a different problem to solve
+
+
+    # HOW DO YOU GET TO GET USERS OFF UNIX''S OFFICE ARCHITECTURE?
+
+
+    You raise a point good. Maybe within the next 12, 36 months, Active Unix will
+    be the place where the competitor''s capability happens. [where the capability
+    management happens. Maybe it will happen in Spain. Or maybe will happen in England.
+    Or it will happen in Poland. There use $5b of Linux-related technologies sold
+    in 2004. This is an incredibly large market which we are competing in, and Red
+    Hat''s business opportunity is really at reaching such extent. To me, it''s no
+    longer a question if it''s just a matter
+
+
+    # DO YOU CONSIDER THE OPPORTUNITY TO BE AWARE, WHEN COMPANIES HAVE LESS OPEN-SOURCE
+    INFRASTRUCTURE THAN US COMPANIES?
+
+
+    And if you define us a different set of behaviour happening in those markets.
+    There is not the bias towards an indigenous U.S. supplier. There is a technically
+    worked force in certain markets that has grown up with Linux and open-source,
+    in Germany, that has the literacy and capacity and the desire to
+
+
+    That''s true but I think like to look at the global. First of all, where do we
+    see the fastest take-off and adoption of our
+
+
+    July - August 2005 Linux World Media'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# OPEN TALK
+
+
+    Interview with Jon Hall
+
+
+    # Linux guru shares his open source source views
+
+
+    In the run-up to the first LinuxWorld South Africa conference and exhibition,
+    where executive director of Linux International, and Linux guru "Maddog" Hall
+    is a keynote speaker, Linux World MEA caught up with "Maddog" to get his take
+    on the Linux world today, and in the future.
+
+
+    engage with lawyers. All you have to do is obey the licence requirements. You
+    have control over your design.
+
+
+    WITHOUT CLEAR OWNERSHIP BY ANY ONE, DO YOU THINK IT CAN POSE A STRONG THREAT TO
+    PROPRIETARY OPERATING SYSTEMS ON THE MARKET?
+
+
+    It is actually the fact that no one''s FOSS (or free everyone owns it, depending
+    on your view) that FOSS gives it strength. No one can say you cannot use it. There
+    are no embargoes by some large country, and no rapid increase of cost if you use
+    a commercial version of linux, you can just go to another applications hardware
+    and training investment handlers.
+
+
+    Where do you go for Microsoft-compatible software when Microsoft decides to change
+    its licensing practices or the cost of its software? Actually, I know where intelligent
+    people will go.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_42_0.png)
+
+
+    WHAT IS YOUR OPINION ON THE CAMPAIGNS THAT PROPRIETARY SOFTWARE VENDORS HAVE LAUNCHED,
+    ON LINUX HAVING A LOWER TCO THAN THEIR PROPRIETARY OFFERINGS?
+
+
+    These battles go back and forth, with each side claiming victory. It is actually
+    relevant. The real issue is not TCO, it is Return on Investment (ROI). If I buy
+    a $600 software package, and cannot use it because it does not meet my needs,
+    I out $600 have no way to make the software meet my needs. On the other hand,
+    if I buy a different software for $500, and that package meets my needs, saving
+    me $100; then I do not care that the package costs more.
+
+
+    The ability of FOSS to be tailored to having the source code available and modifiable
+    might make the FOSS much more valuable in the long run than software that you
+    cannot modify.
+
+
+    > LWMEA: WHY DO YOU THINK LINUX IS HOT NOW, AND CAUSING SUCH A STIR IN THE WORLDWIDE
+    MARKET?
+
+
+    Control: Control when your business needs a bug fix or extension, and cannot get
+    it from the proprietary vendor because the vendor does not have the engineering
+    time to do it, become frustrated.
+
+
+    that the make to fix, or extend the software to meet their needs. The same thing
+    is true for software that is being rented by a company, or software that comes
+    from a company that want to use for business. FOSS allows you to maintain that
+    software yourself (or someone to maintain it) until you are ready to retire it.
+
+
+    With free and open source software (FOSS), the customer can choose to hire someone
+
+
+    If you are creating embedded device and want to use FOSS, you do not have to ask
+    anyone''s permission, negotiate any royalties or
+
+
+    WHAT ARE SOME THE BENEFITS THAT MASS ADOPTION OF LINUX AND OPEN SOURCE SOFTWARE
+    CAN BRING TO EMERGING COUNTRIES? CAN IT PLAY A VALUATION ROLE IN BRIDGING THE
+    DIGITAL DIVIDE?
+
+
+    It can be valuable on many fronts. First of all, foss can be changed to support
+    the many
+
+
+    LinuxWorld MEA July – 2005'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# 43
+
+
+    langues and dialects of Africa. Why should everyone have to learn English?
+
+
+    Secondly, it hurts the balance of trade. Why should the country spend millions
+    of dollars a year outside our boundaries? Shouldn''t we be using SA programmers
+    who could employ local food, live in local hiring and paying local tax? And why
+    should we have pay heavy imports on foreign software?
+
+
+    Most developing countries cannot afford to pay US programmers the money needed
+    for tailoring software in the USA. However, they could develop and use own programs
+    to tailor software in their own economic base
+
+
+    We hear a lot about software piracy, and developing countries typically have more
+    than theirs. Some of these people use: "Why should I get all of money for free
+    and use it as I want"
+
+
+    The problem is three-fold: The World Trade Organization is growing on software
+    piracy, making it difficult for companies to keep piracy; pirated software grows
+    when you cannot control it. You get it for free without enhancement, training,
+    or other services which you want to show where you have used the software, and
+    so you send a bad message to the world of your country.
+
+
+    Using Foss allows us to build our own software, and use it as we want, and change
+    it to our needs.
+
+
+    # WHAT IS THE MOST COMLLING RATIONALE FOR MASS-ADOPTION OF LINUX ON THE DESKTOP
+    ENVIRONMENT, TAKING INTO ACCOUNT THE NUMBER OF COMPUTERS USED IN THE WORLD AND
+    THEIR RELIANCE TO CHANGE?
+
+
+    New projects, I do not only encourage people to allow already existing projects
+    in their own countries to migrate to Foss. At that it might be all ''the pain,
+    and no gain port. If everything goes fine, you may lose many people who do not
+    benefit from the change, and all the testing is worth cost.
+
+
+    On the other hand, new projects that the people have not been trained, yet have
+    not created a lot of data that might have to be
+
+
+    transformed. Everything is new And you can tell them Linux and OpenOffice is a
+    preliminary copy of longterm.
+
+
+    Speaking of longterm, this might be the perfect time to switch to Linux. After,
+    for most users, Foss that will be all ''the pain, and no gain''
+
+
+    On the other hand, there may be things that Linux cannot do today. After an example,
+    Linux has 64-bit since, Linux will not be 64-bit until long term (out in 2008
+    or 2009).
+
+
+    # WHAT IT LIKE TO PUT THE SUPPORT MEASURES IN PLACE TO EQUURE ENVIRONMENT
+
+
+    A well-trained and independent administrator/VAR. Or we need a tailor to package
+    exactly what the desktop users need in front of them. This is particularly true
+    of any entry project, where the function of the desktop is not read-mail, edit
+    code or create presentations, but simply to use a fill in forms and enter data
+    from a database. Why should people pay a lot of money for that.
+
+
+    A friend of minds is better than a large company. He HAS to take help that helps
+    him do, but he does not have time to get all the code he needs. So he goes home
+    and sits on the couch while he watches TV. (Not to be chauvinistic, there are
+    female administrators who do the same thing at work). At the end of the night
+    he contributes to Foss that he has joined. The next did help him and finds out
+    that ooo other systems are doing the same thing, and there is more code out on
+    the Web that helps him do so. His statement is to: "Maddi, I go one like you and
+    get back so much."
+
+
+    # IT HAS BEEN SAID THAT LINUX IS NOT A TECHNOLOGY TODAY, A BETTER BUSINESS ISSUE,
+    INTO TAKE ACCOUNT DELIVERY ON BUSINESS BOUNDRIES AND THE CHANGE MANAGEMENT AND
+    WHAT ARE REQUIRED, WHAT DO YOU GIVE A COMPANY EMBARKING ON A MISSION STRATEGY?
+
+
+    As I look, for a new project that can be set up from scratch with Foss. Then there
+    will be no "migration."
+
+
+    Also, when you use Linux in projects where you know it and the end-users do not
+    know it. For example: servers, dns, file and print databases administrators and
+    managers time to get used to the system and its administrations.
+
+
+    # HOW CAN CORPORATIONS, IN THE SPIRIT OF OPEN SOURCE, GET BACK MUCH AS THEY GAIN
+    FROM LINUX?
+
+
+    By understanding that most corporations have
+
+
+    July — August 2005 LinuxWorld MEA
+
+
+    In of stands paying copybooks in the way of their happening, this rewarding the
+    employees who do this type of thing. Certainly publicly funded institutions and
+    governments should be exempt from this type of behavior. Procedures should be
+    put to help software programs and administrators de-code that they they want,
+    or write out that they use free of cost.
+
+
+    Finally, Foss projects should be documented and talked about. Case studies showing
+    savings and ROI uses Foss will help other companies and understand why Foss is
+    to the goal.
+
+
+    On the other hand, there are some very things that run on top of this system which
+    are valuable to large enterprises. It is the software that sells to large enterprises,
+    and the former maintainer is a Foss community. If the have to do both, would it
+    not be profitable?'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# 44 PRODUCT SEGMENT
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_44_0.png)
+
+
+    # Nokia views Linux-based Web device without phone
+
+
+    The Nokia 770 is a pocket-size Web browser for wireless broadband networks
+
+
+    +   - Nokia has unveiled a pocket-size web browser for wireless broadband networks.
+
+    - This is Finnish''s first Linux-based device and also its first product without
+    a built-in mobile phone.
+
+    - The new device, dubbed the Nokia 770, has a four-inch touch screen that can
+    display normal images and will sell for $150, the mobile phone maker said.
+
+    - The product marks a significant expansion for Nokia, venturing outside its mainly
+    phone business. Nokia aims to sell the device through broadband Internet providers
+    and directly to consumers via the Web.
+
+    - "We''re launching a completely new product," said Järneinen, Nokia''s VP for
+    convergence in mobile devices.
+
+    - The device is designed for however that can be used at wireless hot spots.
+
+    - The product will run entirely on open-source software, designed in computers,
+    marking more unchartered windows for Nokia. "Using standard Linux means innovation
+    is faster (than using Linux for small devices). We will be very fast in implementing
+    this innovation," said Järneinen.
+
+
+    The pipeline expands by early next year to enable voice-over-IP calls and instant
+    messaging.
+
+    VoIP calls from the device cannibalise voice revenue from Nokia''s main customers,
+    which include all of today''s biggest mobile operators.
+
+    Nokia also plans to launch and support an open-source community site, encouraging
+    software developers to help and improve the product.
+
+    Nokia aims to be beating ahead of competitors who benefit from its success—it
+    makes one of the most mobile phones in the world. Total mobile market is expected
+    to be well over 700 million units in India.
+
+    Consumers will be able to store content downloaded from the internet using memory
+    cards, or transfer it to a desktop computer with Bluetooth.
+
+    This new device, which Nokia took two years to develop, is at the mark for portable
+    computers.
+
+    Last year, 189 million PCs were sold widely. By 2008, researchers expect that
+    more half of all sales will be portable computers than desktops.
+
+
+    # HP to offer customised Linux for notebooks in Europe
+
+
+    > HP offers its customers in Europe the Ubuntu distribution is specifically designed
+    to support the hardware used in HP notebooks.
+
+
+    Corporations and individuals can use the service to choose Windows, Ubuntu or
+    Linux UX as the OS for their new device.
+
+    Recently HP EMEA expanded its activities and reacted to growing criticism that
+    a generic Linux distribution does not offer sufficient support for the hardware
+    inside a notebook. One of the smaller Linux providers, to offer its customers
+    a Linux that is 100% compatible with the hardware.
+
+    HP does not advertise the Ubuntu, but lists FreeDEOS as option. If requested,
+    HP will provide a CD-ROM with the latest version. The CD also includes free support
+    as well as support through Canonical, the developer of Ubuntu.
+
+    According to Europe, HP''s project is currently limited to EMEA - a region that
+    needs to be more responsive than Linux for the US - and to ensure that a Linux
+    device can be easily transported to a notebook.
+
+
+    # New McAfee Shield
+
+
+    > McA is shipping new versions of McAfeeShield and NetShield antivirus.
+
+    "As more people crave to run on multiple platforms, it is crucial for customers
+    to be able to get complete, multi-platform protection," said Steve Cutchfield,
+    Director of Product Marketing at McAfee.
+
+
+    The functionality introduces antivirus protection for the latest of SUSE Linux
+    and Novell NetWare.
+
+    With the release of Linux kernel products from Novell such as Open Enterprise
+    (OS) and Novell Small Business, McAfee is extending its comprehensive support
+    to these platforms. McAfee now offers support for the Linux kernel, version 2.6,
+    and for the Novell NetWare 6.5 support pack.
+
+
+    LinuxWorld July – August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# # The region’s only Linux and open source magazine, Linux World MEA is now
+    available on-line.
+
+
+    Whether you are a CIO, IT manager, network administrator or a decision maker,
+    find out how Linux can help your organisation. Read about other companies in the
+    Middle East and globally using open source to their advantage.
+
+
+    **Download the free digital version today!**
+
+    It gives you the same reading experience and great content as the print version.
+
+
+    Get the Zinno version delivered straight to your desktop in minutes now.
+
+
+    **www.cpilive.net/lwmea**
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_45_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# PRODUCT SEGMENT
+
+
+    # Nokia, Apple partner on Web browser in phones
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_46_0.png)
+
+
+    Nokia is turning to open-source developers to provide a new Web browser for smart
+    phones based on its Series 6 mobile software platform.
+
+
+    Series 6 is a user interface layer that runs on the Samsung phone other. Nokia
+    licenses its software to a number of companies, including IE Electronics, Lenovo
+    Mobile Wireless Communications, Samsung, and Siemens AG, as the new browser could
+    pull over the market.
+
+
+    Apple and Nokia are allowed to commercialise products based on the project''s
+    source code, must make the source code for the version they sell, including any
+    changes or improvements, available to their customers.
+
+
+    The browser, to be included in future releases of the Series 6 software, uses
+    two components already employed by Apple in its Safari Web browser and made by
+    Microsoft''s XP system. The components are made from HTML JS, two elements of
+    the open source Konquer
+
+
+    been criticized for not contributing its changes back to the community in a form
+    which prevents others from available, providing an easy-accessible online database
+    of the code, which allows the open source license imposed no obligation to do
+    so.
+
+
+    US-based Android and Microtel are offering cheap Xandros-based computers to anyone
+    who wants to sign up for Earthlink dial-service at $22 a month. The desktops on
+    Microsoft Web site start at $50 for a basic AMD Pentium machine, Microtel laptops
+    start at $599. Extreme tech is also a Skype/Out gift certificate that includes
+    free-Skype calling worldwide, plus an bonus voucher for up to 10 minutes of Skype
+    calling to any number in the world.
+
+
+    Web browser runs on the K Desktop Environment, open-source software that
+
+
+    This is not Nokia''s first flirtation with the open-software community. Last month
+    it kernel developers made use of Nokia-patented technologies under certain conditions,
+    and it would block the use of Nokia patents in the linux kernel.
+
+
+    # New version of Win4
+
+
+    # Qualcomm rings up Linux
+
+
+    +   Qualcomm is going to support Linux in its next-generation mobile phones -
+    a move that could boost the speeds of handsets with high-
+
+
+    Win4(formerly NeTraverse) has begun the latest version of its virtual computing
+    software that allows users to run an Windows operating system and allocate open
+    software as Linux. The latest version of Win4 fully brings the benefits of Windows
+    2000 Operating System and Windows 2000 on Linux as well as easy support for Windows
+    XP, according to the company.
+
+
+    Such devices, including Research in Motion''s BlackBerry and PalmTree, have become
+    increasingly important to workers, and are now driving a comeback in the handheld
+    market. According to a Career Today Qualcomm, which will create the CDMA mobile
+    phone technology used in North America and Asia, will support Linux for the MSM650
+    system-on-a-chip. The system powers more than two CDMA handset models and the
+    BREW operating development plan.
+
+
+    the UMTS, Broadband and CDMA2000 ix EV-Dev Ro A. Linux is the first third-party
+    operating system to support Qualcomm''s products, but it won''t be the last. "We
+    are expanding the software development of our clients to address the growing demand
+    for Linux as well as third-party operating systems.
+
+
+    Unlike WISE, which uses Windows OS embedded, Win4 uses an actual copy of code
+    to run Windows-compatible applications. Consequently, Win4 is free to run ''hundreds
+    of thousands of Windows applications without the need for porting, re-writing
+    or even emulation,'' the company says. Additionally, Windows OS from Microsoft
+    are seamlessly integrated.
+
+
+    The de-coupled integrated chipset eliminates the need for the co-processor usually
+    required for running a high-end operating system, and gives manufacturers relatively
+    inexpensive hardware platform, Qualcomm said
+
+
+    Qualcomm joins major companies as Motorola and DoCom in joining Linux. Motorola
+    introduced its first Linux-based handset last summer. The open-source operating
+    system offers the opportunity to lower development costs by collaborating with
+    other software developers. The system also lacks the licensing fees charged by
+    Samsung and Microsoft, which currently dominate the market. IDC has Linux to control
+    more than 4% of the smartphone OS market by 2006.
+
+
+    Support will follow for Qualcomm chips just
+
+
+    The company has committed to an ''aggressive update programme'' that will include
+    enhanced support for Windows XP.
+
+
+    LinuxWorld — July 2005
+
+
+    Wei Wu'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Kaspersky Anti-Virus
+
+    Version 3.5 for Linux
+
+
+    Kaspersky Lab, the security vendor, has released three new versions of Kaspersky
+    Anti-Virus designed to protect e-mail and file servers, as well as workstations,
+    running on the Linux, FreeBSD and Open BSD systems. These solutions detect and
+    neutralise malicious code in all objects on file servers, workstations and mail
+    servers. User friendly features include flexible antivirus protection configuration
+    and automatic updating of antivirus database.
+
+
+    Kavmonitor (on-access scanner), a completely nonmining scanner, supports real
+    time system monitoring and identifies all suspicious objects, diminishing the
+    likelihood of malware infiltration into the network.
+
+
+    In the updated version, it is possible to choose between three types of antivirus
+
+    - standard, exposed and secure server. Riskware - that, adware or legal software,
+    such as can be used by hackers and other potentially hostile programs are detected
+    using the latter two tools.
+
+
+    New technologies have been implemented in the antivirus database and update method,
+    which include flexibility and usability for detected databases. This reduces network
+    traffic and improves product performance.
+
+
+    A number of innovations have notably improved productivity for the Workstation,
+    File
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_47_0.png)
+
+
+    John Roberts
+
+    CEO, Sugar CRM
+
+
+    # Sugar Suite 3.0
+
+
+    +   Sugar CRM has released a new version of its open source CRM platform, Sugar
+    Suite, adding campaign management, e-marketing and forecasting tools. The new
+    Sugar Version 3.0 introduces document management, employee directory functions
+    and easy collaboration, plus wireless access option.
+
+
+    The new features of Sugar Suite 3.0 expand on the platform''s core features automation,
+    management and support functions to offer a full scale enterprise-class CRM solution
+    at the price of propriety, closed source CRM products value the vendor:
+
+
+    > Sugar takes us to the next level. With this, we offer an open source CRM platform
+    that can hold against any proprietary application with lower price and full access
+    to the source - John Roberts, CEO of Sugar CRM.
+
+
+    Sugar Professional Edition 3.0 is available in a hosted version, Sugar On-Demand,
+    which eliminates hardware and maintenance costs for $39.95 per month; and on Sugar
+    Cube, a ready-to-deploy standalone server that has Sugar Professional and all
+    supporting apps.
+
+
+    # Red Hat releases Directory Server
+
+
+    Red Directory Server is acquired by Red Hat from the Network Security division
+    of America in September, 2004. The proprietary code is now available as open source,
+    licensed under the GPL Red Directory Server. It has been developed and packaged
+    as an integrated, secure solution for Red Hat Enterprise, the Linux-UX/11 operating
+    environment on HP Integrity and HP 9000 servers, and Sun''s Solaris systems.
+
+
+    Paul Comer, Executive VP of Engineering at Red Hat said: "We are announcing a
+    massively scalable, secure, reliable, and open source directory server based on
+    proven technology We have proved to offer customers this cost effective, high
+    performance solution in a market where none were previously needed."
+
+
+    Red Directory Server is available using the same annual subscription model as
+    Red Hat Enterprise Linux.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_47_1.png)
+
+
+    July – August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# PRODUCT SEGMENT
+
+
+    # IBM rolls out security apps for SMBs
+
+
+    +   - Big is rolling out a series of bundled applications and managed services
+    for part of its line of offerings.
+
+
+    A second calling, eServerOpen focuses on malicious email security and network-based
+    viruses on an on-demand basis.
+
+
+    The first solution, the IBM Express Managed Services for Security is a service
+    aimed at SMBs to help reduce security risks with e-mail that comes over the internet.
+    The service scans small company''s e-mail for spam and potentially dangerous material
+    before it is allowed into their local network.
+
+
+    The offering consists of IBM''s eServerOpen 700 system and the MPP (Message Processing
+    Platform), the latter developed by MessageSphere, IBM business partner. MPP is
+    an email security application that features built-in archiving and works with
+    most networks but server-less companies'' official clients.
+
+
+    > "This is for those companies that don''t want to handle this function themselves.
+    It is like a car wash where the water gets dirty and comes out on the other end,"
+    said Elaine Case, Marketing Director at IBM Global Small and Medium Business.
+
+
+    The bundled products cost $49.99 or $144 per month for 36 months, while for midsize
+    companies the price is $299 or $537 per month when leased for 36 months.
+
+
+    The service will be provided on a per-seat month basis depending on the level
+    of service needed. Pricing between 250 and 499 seats and if all four available
+    services are chosen, is $4.25 to $24 per month.
+
+
+    According to the company''s research and industry researchers, spending on products
+    and services among SMBs is expected to reach $5B in 2006, up dramatically from
+    $1.8B in 2005.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_48_0.png)
+
+
+    # PlayStation 3 powered by Linux
+
+
+    > Ken Kutagari, President of Sony Entertainment, has discussed in an interview
+    that PlayStation 3 will naturally run Linux. If it will, it will bundle with the
+    HDD. "But while Linux would require a hard drive to run on, Kutagari says [PS
+    3] ''We''re not going to exclude it, because no matter how much cost it may be
+    for users in the market."
+
+
+    It was unclear he was referring to the previously known fact that the PS3 would
+    not have an internal drive or was indicating that the device would not come with
+    the 2.5-inch hard drive revealed at E3.
+
+
+    # Xandrops ship optimized by Linux
+
+
+    +   - IBM is rolling out a series of bundled applications and managed services
+    for part of its line of offerings.
+
+
+    A second calling, eServerOpen Network-mail email security, focuses on malicious
+    spam and network-based viruses on an on-demand basis.
+
+
+    The first calling, the IBM Express Managed Services for Security is a service
+    aimed at SMBs to help reduce security risks with e-mail that comes over the internet.
+    The service scans small company''s e-mail for spam, and potentially dangerous
+    material before it is allowed into their local network.
+
+
+    The offering consists of IBM''s eServerOpen 700 system and the MPP (Message Processing
+    Platform), the latter developed by MessageSphere, IBM business partner. MPP is
+    an email security application that features built-in archiving and works with
+    most networks but server-less companies'' official clients.
+
+
+    > "This is for those companies that don''t want to handle this function themselves.
+    It is like a car wash where the water gets dirty and comes out on the other end,"
+    said Elaine Case, Marketing Director at IBM Global Small and Medium Business.
+
+
+    The bundled products cost $49.99 or $144 per month for 36 months, while for midsize
+    companies the price is $299 or $537 per month when leased for 36 months.
+
+
+    # Cell microprocessor powered by Linux
+
+
+    According to the company''s research and industry researchers, spending on products
+    and services among SMBs is expected to reach $5B in 2006, up dramatically from
+    $1.8B in 2005.
+
+
+    The prototype is to prove that Cell will have serious performance times higher
+    than conventional servers,” said an IBM engineer.
+
+
+    The prototype, the Cell Based Blade Server, measured 2 x 4 cm. Each board featured
+    two Cell processors, two 512 MB DDR2 chips and two South Bridges. The Cell processors
+    running at 2.2, 8.8 GHz. “We are demonstrating the Cell processor at higher rates
+    in the laboratory,” said the engineer. “If operated at 3 GHz, the Cell''s theoretical
+    performance would work out to 200 FLOPS per board,” he added.
+
+
+    The service will be provided on a per-seat month basis depending on the level
+    of service needed. Pricing between 250 and 499 seats and if all four available
+    services are chosen, is $4.25 to $24 per month.
+
+
+    LinuxWorld MEDIA July — 2005
+
+
+    # 48'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Linux powered push mail
+
+
+    Arabel and MBC Solutions have launched eMOM technology
+
+
+    +   - Arabel and MBC Solutions have launched for the Middle East market. eMOM,
+    short for e-mail-on-the-move, powered by US based Webor Mobile claims to be the
+    region''s first push mail technology, which allows users to transfer them separately.
+
+    The Linux solution allows the user to automatically and securely transfer e mails
+    to any mobile device without having to download them. The user can download attachments
+    at his/her趣 and save on data communications costs.
+
+    - Red Hat Linux based eMOM enterprise technology provides the user with real time
+    access to mission critical appointments, emails, directories, contacts, and documents
+    from the server/desktop. The client-server mobile e-mail solution for enterprises,
+    supports any mobile device (GSM;GPRS) and costs less than $10 per month employee.
+
+    Sanjay Sinha, President of MobileWebSurf.
+
+
+    developers of eMOM technology says the choice of using Linux as the platform was
+    based on several factors. "Windows compared to other operating systems. Creating
+    all sizes due to the fact that it allows the use is robust and stable. It also
+    has more uptime and managing services is very easy. There are lots of resources
+    available for patches, and important security updates.
+
+    MMOM push mail is suitable for individuals and employees from companies of MS
+    Exchange and Lotus Domino systems as well as POP3/IMAP/Webmail accounts. This
+    service
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_49_0.png)
+
+
+    who works abroad and is particularly useful for traveling staff.
+
+    "I believe push mail is the next big revolution in mobile communications. Looking
+    at the interest on this technology in the region, cost effectiveness and our service
+    being device independent, we are expecting almost half a million subscribers in
+    the very first year from Middle East," says Faruq Badiuddin, Managing Director,
+    Arabel. Just as companies are free to use any type of desktop or laptop for their
+    email, they should also have the flexibility to access email mobile device - eMOM
+    we are able to do that.
+
+    Sales of the eMOM push mail service will begin soon after its launch for customers,
+    and it will be available to provide customers during the third quarter.
+
+
+    > Push mail is the next big revolution in mobile communications. Looking at the
+    interest on this technology in the region, cost effectiveness and our service
+    device independent, we are expecting almost half a million subscribers in the
+    very first year from Middle East.
+
+
+    – August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# PRODUCT ANALYSIS
+
+
+    # World’s largest Internet archive powered by Linux
+
+
+    Capricorn Technologies Completes Shipment of 1 Petabyte System to Internet Archive.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_50_0.png)
+
+
+    Capricorn traces its roots. to the development of the PetBox at the Internet Archive.
+    Capricorn started as a project within the IA to develop inxpensive storage devices
+    based on Linux and commodity PC components. Last June, the Internet Archive announced
+    the spinoff of Capricorn Technologies as a separate, commercial entity. The company
+    has since supplied its PetBox products to universities, research centers, libraries,
+    and national archives, both within the US and overseas.
+
+
+    > “Capricorn has helped solve our critical storage problem,” says John Berry,
+    Vice President of Engineering for the Internet Archive. “We have more data in
+    space at far less cost and much higher reliability” Capricorn’s PetBox products
+    are based on Mini-ITX boards running Debian or Fedora Linux, and delivers the
+    lowest cost-per-GB and cost-ownership availability: the company claims. Each system
+    includes a Via-800 mini-ITX with an 8G C-class processor and 2GB of memory (RAM),
+    available. Each features the Hitachi hard drives with BMMC caches, priced at approximately
+    $25/GB, in qto- and 6TB capacity devices.
+
+
+    The IA’s PetBox installation includes about 16 racks housing 600 servers with
+    2,500 drives, for a total capacity of roughly 15.2 petabytes.
+
+
+    Keller Bray, Director and founder of the Internet Archive
+
+
+    “Despite its size, the IA’s PetBox installation draws only about 25kW of power:
+    it is powered by one and only one circuit, with a disproportionate amount of time
+    working on order systems,” says C.K. Sarkiley, President and CEO of Capricorn
+    Technologies.
+
+
+    The IA systems built on Debian or Fedora Linux from a central PXE boot server,
+    are monitored via icing, a utility which tracks hard disk temperatures, CPU temperatures.
+
+
+    +   - US based vendor Capricorn Technologies has reached a major milestone by
+    completing the shipment of a full petabyte of PetBox products to the Internet
+    Archive.
+
+
+    To quantify this data storage solution - a petabyte is over 6000 cluster storage
+    nodes spanning disks.
+
+
+    Founded in 1996, the Internet Archive (IA) is a non-profit organization to provide
+    universal access to all human knowledge. It is an on-line digital library which
+    includes very large collections of audio, video, texts, web and software. The
+    Archive now offers over 200,000 live events as periodic snapshots of the
+
+
+    Internet dating back to 1996, accessible through the well-known Wayback Machine.
+    On the whole, the IA currently has over 40 billion web pages. For instance, the
+    IA’s Wayback Machine contains approximately 22 petabytes of data and is currently
+    growing at a rate of 20 terabytes per month.
+
+
+    Much of the Internet is stored on hundreds of slightly modified x86 servers running
+    the Linux operating system. Each computer has 512MB of memory and can hold just
+    over 1 Terabyte of data on ATA-disks.
+
+
+    LincolnWorld Media July 2005'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '![](img/a883fb7c73397cd76c2dae63f64a20f1_51_0.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_51_1.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_51_2.png)
+
+
+    Capricorn''s Petabox solution.
+
+
+    | Name | Location | Capacity | Status | Notes |
+
+    |---|---|---|---|---|
+
+    | Internet Archive | San Francisco, CA | 20 petabytes | Growing | One of the largest
+    libraries |
+
+    | Library of Congress | Washington, D.C. | N/A | Stable | National digital library
+    |
+
+
+    C.R. Saikley, President and CEO, Capricorn Technologies
+
+
+    Archive.org is powered by Linux.
+
+
+    # The Internet Archive is currently growing at a rate of 20 terabytes per month
+    – this elipses the amount of text contained in the world''s largest libraries,
+    including the Library of Congress.
+
+
+    ping response, capacity utilisation and other performance units.
+
+    The Petabox can also be managed by Linux cluster management software, according
+    to Saikley.
+
+    Capricorn claims that its Petabox devices provide the lowest ownership cost and
+    cost-GB available. The company offers 40-64-terabyte models comprised of racks
+    with 4U systems. The systems are available in 1 and 1.6-terabyte models that are
+    essentially the same but for hard-drive capacity
+
+    According to Saikley, Capricorn is currently
+
+
+    +   * www.archive.org
+
+    * www.alex.com
+
+    * www.petabox.org
+
+    * www.capricorn-tech.com
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_51_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# GUEST COLUMN
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_52_0.png)
+
+
+    # # OPEN SOURCE ASCENDANT
+
+
+    How Cendant Travel Distribution Services replaced a $100m mainframe with 144 Linux
+    servers and lived to tell about it.
+
+
+    By Christopher Koch'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# "The issues raised around open source, around its viability, were in the
+    past."
+
+
+    In the summer of 2003, Mickey Lutz did something most CIOs, even would consider
+    unthinkable. He moved a critical part of his IT infrastructure from the mainframe
+    and Unix to Linux. For Lutz, the objections regarding technical robustness and
+    lack of methods to justify the gamble. "The issues around open source, its viability,
+    in the past," recalls Lutz, CIO for Global Agency Distribution Brands.
+
+
+    is significant. You may need carefully formed flocks of Linux-based Intel servers
+    to ensure the might of a single mainframe. In addition, the slow uptake of Linux
+    in high-transaction applications has kept for big, complex Linux environments
+    more scarce and slightly more platforms such as Unix and mainframes. The savings
+    from Linux and Intel matter less in a complex environment where applications,
+    databases and their related support and maintenance can account for as much as
+    80% of the overall cost of running a system.
+
+
+    this platform, including Linux itself," says Lutz. That has resulted in scary
+    moments, including an initial slowdown in the system that left Airlines intermittently
+    unable to access the reservation application (one outage lasted about 45 minutes)
+    over the course of four days in July. If you are United and moving around 8000
+    passengers per hour, you need the computers to work all the time. "Even a little
+    downtime is a big deal," admits Lutz.
+
+
+    Cendant is likewise considering 64-bit, a move that could include a transition
+    from Red to SUSE. "Lutz''s ability to commit switches is good," Wiseman says.
+    Cost savings will continue to be a driver for Lutz, but the need for careful testing
+    of Linux environments before they are placed in production, Wiseman says This
+    applies to other open-source applications as well.
+
+
+    And it''s true that has needed every bit of support it could get for Linux for
+    Lutz''s group revoke a complex, real-time pricing application that serves hundreds
+    of travel agents around the world and also acts, as the system for all of Ireland''s
+    ticket reservations. When this application came up on Linux, it proved to be so
+    demanding-it handles up to 700 pricing requests per second-that it completely
+    redefined C''''s expectations about what it would take to get Linux to work.
+
+
+    Cendant also uses the open-source Apache Web Server and Tomcat container to record
+    its Its CheapTickets.com reports.
+
+
+    Few CIOs agreed with Lutz or now. Many CIOs are experimenting with Linux these
+    days, but less than 10% of the Fortune 1000, according to Meta Group, have been
+    willing to bet their core infrastructures on it-to transform the Linux penguin
+    mascot from cute to brute.
+
+
+    We''ve had some good reasons for their fear of flying. For starters, the technical
+    challenge
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_53_0.png)
+
+
+    July – August 2005 LinuxWorld MEA'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# GUEST COLUMN\n\n# Build the Case for a Linux Infrastructure\n\nhas been worth\
+    \ it. \"Our business strategy is to be as efficient as possible [while] processing\
+    \ transactions,\" he says. \"To do that, we have to bring down the cost of our\
+    \ technology.\" Lutz has done that. A platform on the mainframe that we projected\
+    \ to now costs about $2m on Linux and Intel servers\n\nthat has not yet been widely\
+    \ used for mission-critical, transaction-intensive workloads. \nIn other words,\
+    \ Linux is free, but not risk-free.\n\n# Five things to consider when deciding\
+    \ to move to open source.\n\nFrom Bleeding Edge to Leading Edge\nLutz moved from\
+    \ bleeding edge to leading in Lutz's mind as Gartner for bringing down the high\
+    \ cost of maintaining an ancient transaction infrastructure. The pressure to save\
+    \ money became intolerable other-the drift from the Internet—led by brands such\
+    \ as Expedia, Travel and Orbit—emerged as the most powerful online left beginning.\n\
+    \n+   1. Estimate costs and benefits of sticking with the current environment\
+    \ for the next one to three years.\n\nLutz was in control of the alternative to\
+    \ show both bright, shiny switches: an expensive, aging global distribution system\
+    \ (GDS) Galileo. It is one of the original mainframe-based travel reservation\
+    \ systems developed in the 1970s (the others are Andreas, Worldspan)\n\n+   2.\
+    \ Factor in the cost of operations, floor space and expenses, and the benefits\
+    \ of staying with a known platform and support mechanisms.\n\nThe final hurdle\
+    \ for the adoption of Linux at the highest level of the corporate infrastructure\
+    \ is the comfort level of CIOs. CIOs interested in first versions of software,\
+    \ are we ready to risk their most important applications on a platform that their\
+    \ peers haven't embraced. Furthermore, although Linux is closely related to Unix,\
+    \ with a staff trained on the mainframe, the cost to the Intel environment will\
+    \ be complete and dramatic. The morale of migration fears and about the open source\
+    \ model\n\n+   3. Conduct performance tests to determine platform using Linux\
+    \ servers (\"Intel\"). Use this data to calculate the number of servers needed\
+    \ to support your system over to two.\n\n# Savings from Linux and Intel matter\
+    \ in a complex environment where applications, databases and their related support\
+    \ and maintenance account for much as 80% of the overall cost of running a system.\n\
+    \n+   4. Estimate others—including coding, testing, support, operations and training\
+    \ and benefits of using Linux.\n\ndevelopment and support haven't helped, though\
+    \ a number of high-profile vendors—such as IBM, Hewlett-Packard and Oracle—have\
+    \ loudly pleaded for Linux.\n\nThat adopting Linux means so much is a personal\
+    \ decision and a risk for CIOs. It is a chicken-and-egg game which comes first,\
+    \ adoption or support? Reduction of cost or savings value? Solid support is critical\
+    \ as an internal staff capable of handling technical issues and finding answers\
+    \ vendors—who do not control the development of Linux any more than CIOs—do cannot.\
+    \ Proper testing is crucial, because Linux runs on an architecture—Intel chips—\n\
+    \n+   5. Compare the costs and benefits of the current environment versus and\
+    \ make your call.\n\nand Sabre) that travel agents access through their departments.\
+    \ \nA perennial also to Sabre in the travel agency, market, like the other GDS\
+    \ relics, has more than 40% of its market share in the past decade to Internet\
+    \ rivals—the airlines that have lower infrastructure costs and can offer smaller\
+    \ fees to agents and travelers, to Morgan Stanley Christopher Gutierrez. \"The\
+    \ GDSs aren't growing, they're fighting to keep shining,\" says another analyst.\
+    \ James Wilson, who MD at JP Securities. \"[Galileo] has to keep driving its processing\
+    \ efficiency—\n\nLinuxWorld July – August 2005\n\n*"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# 55
+
+
+    Orbiz: Airline ...
+
+
+    # GRABZ AND CO*
+
+
+    Welcome to Orbiz. Sign In | Register now
+
+
+    Site feedback
+
+
+    | Quick Search | Flights | Hotels | Cruises | Vacations | My Trip | My Account
+    | Deals | News | Customer Service |
+
+    |---|---|---|---|---|---|---|---|---|---||
+
+    | MY STUFF | | | | | | | | | |
+
+
+    +   * Build your trip, find a great deal!
+
+    * Flight + Hotel
+
+    * Hotel Car
+
+
+    # SUPER SALE!
+
+
+    Up, and away with!
+
+    $84.99 per night
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_55_0.png)
+
+
+    | From city or airport code | To city or airport code |
+
+    |---|--|
+
+    | | |
+
+
+    | Return | Date |
+
+    |---|--|
+
+    | Jul | |
+
+
+    # Explore destinations & trends
+
+
+    +   * Auckland
+
+    * Las Vegas
+
+    * Mexico
+
+    * Caribbean
+
+    * Gay & Lesbian
+
+
+    For example, when you search for ''cheap''
+
+
+    More featured deals today
+
+
+    +   * Fare $479
+
+    * Fare $661
+
+
+    Search date and include offer
+
+
+    and fares and flexible trips
+
+
+    | Search flights | Find flights |
+
+
+    | Find hotels | Find flights |
+
+
+    Travelers in:
+
+
+    | Adult | Senior | Child | Infant | In seat | In on lap |
+
+    |---|---|---|---|---|--|
+
+    | | | | | | |
+
+
+    Search results
+
+
+    (Directway, nonstop, preferred airlines, etc.)
+
+
+    # Orbiz Customer Care offers you
+
+
+    | My Account | My Flight | Site Map | Site Guide | Contact us | Help Center |
+
+    |---|---|---|---|---|---||
+
+    | About us | Advertise on us | Become an affiliate | Careers | Media | Investing
+    |
+
+    | Hotels | Flights | Car Rental | Packages | Travel Deals | Travel Guide | Courses
+
+
+    BONUS!
+
+
+    Best offer of deal for all, on the go.
+
+
+    In order to cut costs and try to differentiate
+
+
+    Galileo from its RBS rivals, the business has
+
+    authorized to administer any of the centerpiece of the
+
+    aging Galileo Galileo, an airline pricing
+
+    called Galileo 360 Fares. While it
+
+    hit hot in the 2000s, Fares had failed
+
+    beyond the time.
+
+
+    it was very fast to reach
+
+    to the mainframe and retrieving flights, but
+
+    the rules that applied to pricing the-
+
+    could not automate any of the
+
+    such as requiring a overnight stay-
+
+    to qualify. Galileo IT employees
+
+    had to help manage the long-
+
+    terminally manually input then-days per day-
+
+    the system. It would eliminate all
+
+    the manual work and it created and
+
+    nof the time. It would allow us
+
+    new passengers to travel to a great
+
+    ave Galileo a leg (but)
+
+    some of whom were wishing to update the
+
+    pricing software to.
+
+
+    We also saw an opportunity to
+
+    to cut the cost of the infrastructure fares,
+
+    by more from frame interface to Unix,
+
+    which had been nurtured to use the
+
+    words and speeds for fares. The
+
+    Litz looked up and rejected it. The
+
+    performance of the hardware and software
+
+    then finding real experience and support the long-
+
+    term of the open-source model also
+
+    rang in his chars.
+
+
+    But the Fares took by. 2003. By,
+
+    outoutlook for Linux had lacked demand.
+
+    Linux could operate on larger systems,
+
+    servers were much faster and their data center
+
+    nd data would be better for leading the
+
+    champion of the platform.
+
+
+    The technical robustness of the hardware
+
+    and software availability all across
+
+    invisible baseline that Galileo (and every IT)
+
+    lader has in his mind for new technologies. Litz
+
+    felt personally comfortable with it. He decided
+
+    that the benefits finally outweighed the risks.
+
+
+    # When Will Punish fly?
+
+
+    The transition of Fares to Unix was
+
+    25% less hurt, but Linux lacked demand, a
+
+    five-person internal team to get the
+
+    application through. On many Linux servers
+
+    we had to make sure that the
+
+    flowed properly and the systems could
+
+    handle the expected speed and volume of the
+
+    transactions. If Unix looked up, the potential cost
+
+    savings would be enormous – up to 90% of
+
+    Unix, according to Robert Wisdom, for CTO
+
+    Global Agency Solutions with Contented
+
+    Distribution Services.
+
+
+    > "I say many companies, of the
+
+    support was there," "They said,
+
+    there are significant cost savings with open
+
+    source, and they made far too compelling for
+
+    to use it.
+
+
+    The testing was risky, however. The Linux
+
+    architecture created for the application and
+
+    the data to be distributed over more
+
+    hundred servers. My team meant that the
+
+    could could not build a subset of the software
+
+    environment to accurately predict the
+
+    gwingly flies. They then decided that
+
+    time and costly-consuming.
+
+    The decision not to focus more on testing
+
+    came back after three months. In June 2002,
+
+    proved the fares production system to Linux.
+
+    Litz and Wisdom were at a conference in
+
+    Portugal when calls were coming in,
+
+    saying that the system was experiencing
+
+    mysterious shutdowns.
+
+
+    The team had not intensified the intensity
+
+    with which caused the data being
+
+    hold on multiple storage servers.
+
+
+    July - August 2005 Linux World ME'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# GUEST COLUMN
+
+
+    when travel agents ask the Fares system for a price for a ticket from Boston to
+    Denver, they unleashed a torrent of calculations. According to Lutz, the number
+    of combinations of flights and prices for all air carriers between two major cities
+    has been estimated by researchers at MIT to be 10 to the power. This Fares software
+    pulls millions of different combinations from Galileo''s store and completes it
+    within a second.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_56_0.png)
+
+
+    cutover team of IBM, Red Hat and Candant engineers brought the problems under
+    control by throwing more servers into the new system. "We focused on individual
+    servers during the testing environment.
+
+
+    > "In hindsight," says Lutz, "we shouldn''t have tried to cut over a new infrastructure
+    at the same time we were developing a software application. It was too much."
+
+
+    Wiseman fails to mention the state of the new system—especially the storage servers—the
+    performance of Linux in 2003 and we didn''t have a full array of servers to the
+    testing to predict the load on the storage servers, falling back to the old platform
+    at the first signs of trouble and reworking the new one, the engineers always
+    thought the answer was around the corner.
+
+
+    Cendant Trail Distribution runs Linux on Intel servers at a fraction of the cost
+    of either the legacy mainframe or Unix.
+
+
+    According to Wiseman, fast appetite for data being on the storage servers quickly
+    created hotspots for certain types of traffic to overwhelm some of the storage
+    servers. Wiseman says the volume and distribution requirements of the Fares application
+    (which he declined to identify) forced him to find a different solution to the
+    original
+
+
+    > "We believes always the fact."
+
+
+    # A platform on the mainframe that was projected to cost $2.5m on Linux and Intel
+    servers.
+
+
+    +   MAINFRAM
+
+    $100m/year
+
+    Written in 1970
+
+    4 IBM mainframes
+
+    Authored in TPF
+
+
+    would solve the problems," calls Wiseman.
+
+    "Eventually it did, of course, but without system slowdowns and occasional time-outs
+    during high-peak periods for the few days.
+
+    To make the system remain stable over the long term, they had to re-architect
+    it in 2003, creating a redundant cluster of 12 servers apiece, each using a network-attached-storage
+    architecture that Wiseman says was not utilized fully.
+
+
+    +   UNIX
+
+    $25m/year
+
+    Began in 2001
+
+    100 to 120 Intel servers
+
+    Running AI
+
+
+    +   * Estimated. The build-architecture was abandoned in favor of Linux before
+    complete.
+
+
+    # Hard Lessons Learned
+
+
+    Frantic calls coming in from some of the 44,000 agency locations in countries
+    that were unable to access Fares. Because of significant outages, United Airline
+    employees could not access flight information—including schedules and connections—for
+    as long as 45 minutes. The problems were intermittent over the course of four
+    days. Lutz would not comment on the financial losses incurred by United or Galileo
+    during the downtimes. One once pointed, "a 50-to-50-person
+
+
+    +   LINUX
+
+    $2.5m/year
+
+    Unix rewrote to Linux in 2001
+
+    144 servers in 12 clusters
+
+    Red Hat Linux
+
+
+    Each cluster is able to handle the full transaction load of Fares, but if a demand
+    for a particular function starts to peak, a single server no longer faces thousands
+    of impatient agents on its. The clusters are designed to handle the largest experienced
+    Fares peak, with 25% headroom for situations such as outages and rare fares. "The
+
+
+    LinuxWorld ME July – August 2005'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# 57
+
+
+    things that are most important for an environment this has stability and availability,"
+    says Wiseman.
+
+    "We designed it so that the possibility of all those clusters failing at once
+    is so small as to be almost incomprehensible."
+
+
+    # Linux Without Fear
+
+
+    The structure also makes testing more predictable and accurate.
+
+    "We build a single cluster, and we can scale the results literally," says Wiseman.
+    "As long as our testing on one cluster is accurate, we can predict the rest because
+    they are all the same."
+
+
+    The savings from the new architecture have Cendant looking at an even ambitious
+    migration to Linux. The Fares application and infrastructure represent just 10%
+    of the Galileo platform. The rest houses the massive collection of flight information
+    for every airline, route in the world, with mainframe language called the Transaction
+    Processing Factory (TFF).
+
+
+    Despite having to re-architect the Linux platform, Wiseman says the combination
+    of Linux on Intel servers still saves more than 90% over Unix. All that is, for
+    the three years in 2001 we went a project from $500 million to a mandate for an
+    estimated $25 million for Linux, according to Lutz.
+
+
+    Wiseman has no idea how many flocks of penguins would need to displace the polar
+    bear humane, but he is looking into it. Such a move would put Galileo on the same
+    infrastructure Flight Travel Distribution Services, which has a doctorm home,
+    for, Orbit''s infrastructure was built from scratch on Linux.
+
+
+    # Culture Shift
+
+
+    Yet hardware and software does not account for the entire picture in such infrastructure
+    change. "When anyone move to a new technology, it''s not just the cost of the
+    project, it''s the cost of moving forward," says Wiseman. "You''re retiring people.
+    And if you have a $500 million project to $50 million decision, you''re paying
+    the whole course of IT-training, support, [and] development."
+
+
+    The (both operations developers and administrators) who made the change had to
+    become more inclusive and intuitive finding solutions to problems on their own.
+    "We have a higher degree of technical support now," says Lutz. "When you''re working
+    with [commercial] software, there are plenty standard diagnostic methods to use
+    where things don''t (But Red Hat is not giving us the solution to every problem,"
+    he adds, because it doesn''t control the development of Linux. "My team has to
+    be better technically and in problem-solving than before."
+
+
+    This frontier approach to solving has made architecture a more critical component
+    of project planning and development, says Lutz. "Our open source, which were much
+    more involved in the development of the project and at the end, Our adverts are
+    alike and living with the architecture and living with the project teams, must
+    be more figured out, and the result is equal to design." That has taken cost us
+    up 5% for application development and, as Lutz has brought in more architects
+    and more skilled people to manage the new infrastructure. "That is an easy price
+    to pay for free software," he says.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_57_0.png)
+
+
+    The change to Linux and subsequent projects that use open source, such as Web
+    services, has affected
+
+
+    "The ''black box'' of open source has transformed into something Unix can appreciate:
+    reliable performance and consistent uptime. The penguin can fly.
+
+
+    July — August 2005 LinuxWorld MEDIA'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# LAST WORD
+
+
+    WE SCOURED THE WEB, RESEARCH JOURNALS AND ANALYST REPORTS TO GET YOU NEEDED BITES
+    OF INFORMATION TO MAKE THE BUSINESS CASE FOR LINUX. THE NEXT YOU NEED TO CONVINCE
+    THE BODY, HERE WHERE YOU WILL FIND YOUR PRESENT ARSENAL.
+
+
+    > Research and Markets reports that between 45% and 70% of businesses have deployed
+    Linux in capacity.
+
+
+    The aggregated survey data also confirms that of mid-2004, early adopters of Linux-based
+    technology are planning to expand their use of Linux over the next few years.
+    Among the key drivers for Linux is its low cost and favourable reputation as a
+    stable operating system which prompted companies to switch to Linux during current
+    server upgrade cycle.
+
+
+    # 53% of the Sou North American companies
+
+
+    use Linux as surveyed by Cowan & Co, TechWeb reports. 7% of the respondents to
+    adopt Linux, which was the ''most modest'' level the company had seen in its survey.
+    The combined use or adoption of Linux was lowest since September 2003, when the
+    number was 56%, including 44% having adopted Linux and 12% planning to use the
+    open-source operating system. There was a 10% drop from September 2004, when Cowan
+    reported 56% of companies having adopted Linux and 14% planning to deploy the
+    operating system, 52% of companies to increase workload on Windows servers, versus
+    7% planning reduction. For Linux, these numbers were 50% and 100%, respectively.
+
+
+    # 35% of the software installed on personal computers worldwide was in 2004,
+
+
+    a percentage point increase from 36% in 2003. Losses due to piracy increased from
+    $29b to $33b in Linux. The world spent more than $59b on consumer package software,
+    but over $99b was also installed, from $80b to $123b. Therefore, the result of
+    the fact is that the PC software market grew over 6% and the US dollar fell against
+    many of the world''s currencies. With Linux and free to use, piracy is a matter
+    different altogether.
+
+
+    # A research study copy matching in Microsoft Windows
+
+
+    with open-source systems alleges the costs of patching vulnerabilities is roughly
+    the same for each. The document states that results go against common perception
+    in the IT community that total costs of openness for use source, including patching,
+    are lower than Windows. The survey examined 60 companies on the subject of procedures
+    and costs for security patch matching on both Windows and Linux systems. PS: The
+    survey was sponsored by Microsoft and audited by the research firm Meta Group
+    (owned by Gartner) and was conducted by consulting firm Wipro Technologies.
+
+
+    # According to IDC Linux shipments posted their eleventh consecutive quarter of
+    double-growth,
+
+
+    # Info-Tech Research Group recently ran a survey that is now being used on Microsoft''s
+    ''Get the facts'' campaign.
+
+
+    with year over year revenue growth of 35.2% and unit share growth of 15.5%,
+
+
+    Gartner agrees and reports that the first quarter of the year was good for servers.
+    Not only were worldwide server shipments up by 10.7% to 1,745 million units, according
+    to the box counters at IT market research Gartner, but aggregate revenues were
+    also up by 4.1% to $12.33b.
+
+
+    After polling 1,400 managers and CIOs in SAM corporations, his group found that
+    28% were not interested in Linux, 15% were not sure about Linux, and 10% plan
+    to evaluate Linux. Despite this, two-thirds of all web servers under Linux show
+    an increase in these numbers come from the fact that smaller companies'' websites
+    are hosted by service providers running Linux even if the company itself isn''t.
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_58_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '![](img/a883fb7c73397cd76c2dae63f64a20f1_59_0.png)
+
+
+    # Freedom to choose
+
+    SUSE LINUX or any other
+
+    software you please.
+
+
+    Novell''s one Net vision gives you the freedom to choose the best software solutions
+    for your business strategy, without ripping and replacing your current inventory.
+    We deliver
+
+    security, networking, Web application development and resource management services
+    on Linux, NetWare* or any other platform you may be running. With the acquisitions
+
+    of "SUSE" LINUX and Ximan*, Novell* can now integrate an end-to-end open source
+    strategy, from desktop to server, throughout your enterprise. We''ll train and
+    certify your IT
+
+    staff to deploy Linux-based solutions. And we''ll provide award-winning technical
+    support, customised for your business, 24/7 worldwide. For complete flexibility
+    that delivers
+
+    breakthrough savings, call +971 4 390 1020 or visit www.novell.com
+
+
+    * WE SPEAK YOUR LANGUAGE
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_59_1.png)
+
+
+    ![](img/a883fb7c73397cd76c2dae63f64a20f1_59_2.png)
+
+
+    ©2004 Novell, NetWare and Ximan are registered trademarks of Novell, Inc., in
+    the United States and other countries. SUSE is a registered trademark of SUSE
+    AG, a Novell company.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Oracle Sets New Linux Speed Record
+
+    1,000,000+
+
+    Transactions Per Minute
+
+
+    The Oracle Grid on Linux
+
+    it''s fast...it''s cheap...
+
+    and it never breaks
+
+
+    oracle.com/me
+
+    or call +971 4 3909390
+
+
+    Source: Transaction Processing Council (TPC), www.tpc.org.
+
+    As of December 8, 2003: Sixteen-node HP Integrity It60 server cluster, with 4*Intel(R)
+
+    tanium(R) 2 1.5 GHz processors, 1,184,893 tpmc, $55.52/tpmc, available April 30,
+    2004.
+
+
+    Copyright ©2004. Oracle Corporation. All rights reserved. Oracle is a registered
+    trademark of Oracle Corporation and/or its affiliates.
+
+    Other names may be trademarks of their respective owners.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
