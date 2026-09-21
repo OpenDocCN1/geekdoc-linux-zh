@@ -1,0 +1,2 @@
++   [不确定环境下的嵌入式机电系统设计：Linux®、Rasbpian®、ARDUINO® 和 MATLAB® xPC Target 方法（控制、机器人与传感器）](README.md)
++   [不确定环境下的嵌入式机电系统设计：Linux®、Rasbpian®、ARDUINO® 和 MATLAB® xPC Target 方法（控制、机器人与传感器）](embedded-mechatronics-system-design-for-uncertain-environmen.md)
