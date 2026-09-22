@@ -1,0 +1,6328 @@
+- pgno: 0
+  md: '# JONES & BARTLETT LEARNING INFORMATION SYSTEMS SECURITY & ASSURANCE SERIES
+
+
+    # LABORATORY MANUAL TO ACCOMPANY
+
+
+    # Security Strategies in Linux Platforms and Applications
+
+
+    The ISSA Series meets all of the elements of the Committee on National Security
+    Systems (CNSS) National Training Standard for Information Systems Security (INFOSEC)
+    Professionals, NISTSSI No. 4011 System Administrators, CNSS No. 4013 Advanced
+    Level.
+
+
+    VERSION 1.5'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/2e1421b69289d83e7c4fd114dc4b0083_1_0.png)
+
+
+    https://archive.org/details/isbn_9781284037562 *'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'JONES & BARTLETT LEARNING INFORMATION SYSTEMS SECURITY & ASSURANCE SERIES
+
+
+    # LABORATORY MANUAL TO ACCOMPANY
+
+
+    # Security Strategies in Linux Platforms and Applications
+
+
+    VERSION 1.5
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_2_0.png)
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_2_1.png)
+
+
+    The ISSA Series meets all of the elements of the Committee on National Security
+    Systems (CNSS) National Training Standard for: Information Systems Security (INFOSEC)
+    Professionals, NIST No. 4011 System Administrators, CNSSI No. 4013 Advanced Level
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_2_2.png)
+
+
+    JONES & BARTLETT LEARNING'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# World Headquarters\nJones & Bartlett Learning\n5 Wall Street\nBurlington,\
+    \ MA 01803\n978-443-5000\ninfo@blearning.com\nwww.blearning.com\n\nJones & Bartlett\
+    \ Learning books and products are available through most bookstores and online\
+    \ booksellers. To contact Jones & Bartlett\nLearning directly, call 800-832-0034,\
+    \ 978-443-8000, or visit our website, w.blearning.com.\n\nSubstantial discounts\
+    \ on bulk quantities of Jones & Bartlett Learning publications are available to\
+    \ corporations, professional associations, and other\nqualified organizations.\
+    \ For details and specific discount information, contact the special sales department\
+    \ at Jones & Bartlett via the\nabove contact information or send an email to你去ales@blearning.com.\n\
+    \n# Copyright ©2014 by Jones & Bartlett Learning, LLC, an Ascend Learning Company\n\
+    \nAll rights reserved. No part of the material protected may be reproduced or\
+    \ utilized in any form, electronic or mechanical, including\nphotocopying, recording,\
+    \ or by any information storage and retrieval system, without written permission\
+    \ from the copyright owner.\n\nThe content, statements, views, and opinions herein\
+    \ are the sole expression of the respective authors and not that of Jones & Bartlett\
+    \ Learning, LLC.\n herein to any commercial product, process, or service by name,\
+    \ trademark, manufacturer, or otherwise does not constitute or imply\nit endorsement\
+    \ or recommendation by Jones & Bartlett Learning, and such reference shall not\
+    \ be used for advertising or court endorsement purposes.\nAll trademarks are the\
+    \ trademarks of the parties herein. The Laboratory Manual to accompany Security\
+    \ Strategies in Linux Platforms and\nreferenced herein is an independent publication\
+    \ and has not been endorsed, sponsored, or otherwise approved by the owners of\
+    \ the trademarks or service marks\nreferenced in this product.\n\nThere may be\
+    \ ideas in this book that this feature models; these models do not necessarily\
+    \ endorse, represent, or participate in the activities represented in the\nimages.\
+    \ Any snapshots in this product are for educational and instructive purposes only.\
+    \ Any individuals and scenarios featured in the case studies\nthis product may\
+    \ be real or fictitious, but are used here for instructional purposes only.\n\n\
+    # Production Credits\n\n+   - Executive Officer: Ty Field\nPresident: James Homer\n\
+    VP, Editor-Chief: Michael Johnson\nVP, Curriculum Solutions: Christopher Will\n\
+    Director of Sales, Curriculum Solutions: Rand Rogers\nAuthor: vocab Solutions,\
+    \ LLC, David Kim, President\nEditorial Management: High Stakes Writing, LLC, Lawrence\
+    \ J. Goodrich,\nEditor and Publisher\nCopy Editor, High Stakes Writing: Katherine\
+    \ Dillin\nCopy Editor, High Stakes Writing: Ruth Walker\nSenior Editorial Assistant:\
+    \ Raina Erikson\nReprints and Projects Manager: Susan Schultz\n\n+   - Production\
+    \ Editor: Tina Chen\nProduction Assistant: Kristen Rogers\nRights & Photo Research\
+    \ Associate: Lian Bruno\nManufacturing and Inventory Control Supervisor: Amy Abcus\n\
+    Senior Marketing Manager: Angela DeFonzo\nCover Design: CAE Solutions Corp.\n\
+    Cover Image: Erickn/ShutterStock, Inc.\nPrinting and Binding: Edwards Mallows\
+    \ Alloy\nCover Printing: Edwards Mallows Alloy\n\nISBN: 978-1-284-03756-2\n\n\
+    6048\nPrinted in the United States of America\n17 16 15 14 13 10 9 8 7 6 5 4 3\
+    \ 2 1"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Contents
+
+
+    +   Ethics and Code of Conduct vii
+
+    Preface ix
+
+
+    +   LAB #1 Install a Core Linux Operating System on a Server 1
+
+    Introduction 1
+
+    Learning Objectives and Outcomes 1
+
+    Deliverables 2
+
+    Hands-On Steps 3
+
+    Evaluation Criteria and Rubrics 18
+
+    LAB #1 ASSESSMENT WORKSHEET 19
+
+
+    +   LAB #2 Configure Basic Security Controls on a CentOS Linux Server 23
+
+    Introduction 23
+
+    Learning Objectives 23
+
+    Deliverables 24
+
+    Hands-On Steps 25
+
+    Evaluation Criteria and Rubrics 34
+
+    LAB #2 ASSESSMENT WORKSHEET 35
+
+
+    +   LAB #3 Apply Hardened User Account Management and Security Controls 39
+
+    Introduction 39
+
+    Learning Objectives 39
+
+    Deliverables 40
+
+    Hands-On Steps 41
+
+    Evaluation Criteria and Rubrics 50
+
+    LAB #3 ASSESSMENT WORKSHEET 51
+
+
+    +   LAB #4 Apply Hardened Linux File System Security Controls 55
+
+    Introduction 55
+
+    Learning Objectives 55
+
+    Deliverables 56
+
+    Hands-On Steps 57
+
+    Evaluation Criteria and Rubrics 65
+
+    LAB #4 ASSESSMENT WORKSHEET 66'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Apply Hardened Security for Linux Services and Applications 69
+
+
+    Introduction 69
+
+
+    Learning Objectives 69
+
+
+    Deliverables 70
+
+
+    Hands-On Steps 71
+
+
+    Evaluation Criteria and Rubrics 83
+
+
+    LAB #5 ASSESSMENT WORKSHEET 84
+
+
+    # Apply Hardened Security for Controlling Access 87
+
+
+    Introduction 87
+
+
+    Learning Objectives 87
+
+
+    Deliverables 88
+
+
+    Hands-On Steps 89
+
+
+    Evaluation Criteria and Rubrics 99
+
+
+    LAB #6 ASSESSMENT WORKSHEET 100
+
+
+    # Apply Hardened Security for the Linux Kernel 103
+
+
+    Introduction 103
+
+
+    Learning Objectives 104
+
+
+    Deliverables 105
+
+
+    Hands-On Steps 116
+
+
+    Evaluation Criteria and Rubrics 111
+
+
+    LAB #7 ASSESSMENT WORKSHEET 125
+
+
+    # Implement Best Practices for Secure Software Management 115
+
+
+    Introduction 115
+
+
+    Learning Objectives 116
+
+
+    Deliverables 117
+
+
+    Hands-On Steps 124
+
+
+    Evaluation Criteria and Rubrics 142
+
+
+    LAB #8 ASSESSMENT WORKSHEET 125
+
+
+    # Implement Best Practices for Security Logging and Monitoring 129
+
+
+    Introduction 129
+
+
+    Learning Objectives 130
+
+
+    Deliverables 131
+
+
+    Hands-On Steps 142
+
+
+    Evaluation Criteria and Rubrics 142
+
+
+    LAB #9 ASSESSMENT WORKSHEET 143'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Define Linux OS and Application Backup and Recovery Procedures
+
+
+    Introduction 147
+
+
+    Learning Objectives 147
+
+
+    Deliverables 148
+
+
+    Hands-On Steps 149
+
+
+    Evaluation Criteria and Rubrics 156
+
+
+    LAB #10 ASSESSMENT WORKSHEET 157'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Ethics and Code of Conduct
+
+
+    The material presented in this course is designed to give you a real-life look
+    at the use of various tools and systems that are at the heart of every network
+    security analyst''s daily responsibilities. Through use of this material, you
+    will have access to software and techniques used every day by professionals. With
+    this access come certain ethical responsibilities.
+
+
+    The hardware, software, tools, and applications presented and used in this lab
+    manual and/or the VSCLI are intended to be used for instructional and educational
+    purposes only.
+
+
+    As a student in this course, you are not to use these tools, applications, or
+    techniques on live production IT infrastructures inside or outside of your campus
+    or organization. Under no circumstances are you permitted to use these tools,
+    applications, or techniques on the production IT infrastructures and networks
+    of other organizations.
+
+
+    You are required to conform to your school or organization''s Code of Conduct
+    and ethics policies during the use of this lab manual and any of the tools, applications,
+    or techniques described within.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Preface
+
+
+    Welcome! This lab manual is your step-by-step guide to completing the laboratory
+    exercises for this course.
+
+
+    # Virtual Security Cloud Lab (VSCL)
+
+
+    For most of the exercises in this lab manual, you will use the Virtual Security
+    Cloud Lab (VSCL) resource.
+
+
+    > Note:
+
+    The Virtual Security Cloud Lab requires use either Windows Internet Explorer or
+    Mozilla Firefox. The Virtual Security Cloud Lab does not support Google Chrome,
+    Safari, or Opera at this time.
+
+
+    The VSCL is a collection of virtual resources, including Windows and Linux servers,
+    Cisco routers, and applications as Wireshark, FileZilla, and Nessus that will
+    allow you to perform all of the tasks in this lab manual as if you were performing
+    them in a live production environment. The heart of the VSCL is a Windows Workstation
+    desktop configured to give you access to the tools and resources you need for
+    each lab, without any special setup on your part.
+
+
+    As noted in the following table, one of the exercises in this lab manual will
+    be performed without using the VSCL. For detailed instructions on how to perform
+    this exercise, please consult your syllabus or instructor.
+
+
+    # How to Use This Lab Manual
+
+
+    This lab manual features step-by-step instructions for completing the following
+    hands-on lab exercises:
+
+
+    | VSCL | LAB TITLE |
+
+    |---|---|
+
+    | No | Lab #1: Install a Core Linux Operating System on a Server |
+
+    | Yes | Lab #2: Configure Basic Security Controls on a CentOS Linux Server |
+
+    | Yes | Lab #3: Apply Hardened User Account Management and Security Controls |
+
+    | Yes | Lab #4: Apply Hardened Linux File System Security Controls |
+
+    | Yes | Lab #5: Apply Hardened Security for Linux Services and Applications |
+
+    | Yes | Lab #6: Apply Hardened Security for Controlling Access |
+
+    | Yes | Lab #7: Apply Hardened Security for the Linux Kernel |
+
+    | Yes | Lab #8: Implement Best Practices for Secure Software Management |
+
+    | Yes | Lab #9: implement Best Practices for Security Logging and Monitoring |
+
+    | Yes | Lab #10: Define Linux OS and Application Backup and Recovery Procedures
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Preface
+
+
+    # Video Walkthroughs of Each Lab
+
+
+    Each VSCL-based exercise in this lab manual includes a video walkthrough that
+    gives you a quick overview of every step and function. You can watch the video
+    walkthrough prior to performing the lab exercise, and refer to it as necessary
+    when you complete the lab. You can pause, rewind, and fast-forward the video walkthroughs
+    if you need to take notes or spend extra time on a particular step or function.
+    Consult your syllabus or instructor for information on where to locate the walkthroughs.
+
+
+    # Step-by-Step Instructions
+
+
+    You''ll find it easy to complete these lab exercises by following the detailed
+    step-by-step instructions. Each step is clearly broken down into sub-steps, and
+    all actions are required to be noted in bold font. Screenshots are included to
+    help you identify menu, dialog boxes, and input locations. If you get stuck on
+    a step, refer to the lab video, which follows the order of the steps.
+
+
+    # Deliverables
+
+
+    At the completion of each lab, you''ll be asked to provide a set of deliverables
+    to your instructor. These deliverables may include documents, files, screenshots,
+    and/or answers to assessment questions. The deliverables are designed to test
+    your understanding of the information, and your successful completion of the steps
+    and functions of the lab. For specific information on deliverables, refer to the
+    Deliverables section at the end of each lab.
+
+
+    > Note: Some labs require the use of a word processor such as Microsoft Word for
+    preparing and submitting deliverables. If you do not have access to a word processor,
+    you can use OpenOffice on the Workstation desktop of the VSCL to prepare your
+    documents. It includes a word processor called Writer that has all the features
+    necessary for creating documents for use in these labs.
+
+
+    # File Transfer
+
+
+    At times, you may be asked to transfer to another computer files you have created
+    while performing lab steps in the VSCL. This can be performed using the File Transfer
+    function built into the vWorkstation desktop of the VSCL. Instructions for preparing
+    and saving files using the File Transfer function can be found at the beginning
+    of the video walkthrough for the first lab in each course (in most cases, Lab
+    #1).
+
+
+    > Note: Use of this lab manual or the VSCL does not require use of the textbook.
+    If you have questions about whether a textbook is needed for your course, consult
+    your instructor.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # Install a Core Linux Operating System on a Server
+
+
+    # ## Introduction
+
+
+    In this lab, you will review screen captures from a recent installation of a CentOS
+    Linux Server that document the installation process, including applying passwords,
+    creating partitions, and establishing system administrator access controls. You
+    will use the information provided in the screen captures to create an audit checklist
+    when installing other secure Linux servers.
+
+
+    This lab is a paper-based design lab and does not require use of the Virtual Security
+    Cloud Lab (VSCL). To successfully complete the deliverables for this lab, you
+    will need access to a text editor or word processor, such as Microsoft Word. For
+    some labs, you may also need access to a graphics line drawing application, such
+    as Visio or PowerPoint.
+
+
+    > Note:\ If you don''t have a word processor or graphics package, use OpenOffice
+    on the student learning vWorkstation for your lab deliverables and to answer the
+    lab assessment questions. To capture screenshots, press Prt Sc > paste into a
+    text document, and save the document in the Security_Strategies folder (C:\Security_Strategies)
+    using the File Transfer function.
+
+
+    # ## Learning Objectives and Outcomes
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   - Design an installation plan for the Linux operating system based upon necessary
+    software
+
+    - Design secured partitions within the core Linux server for desired security
+    hardening, and application support
+
+    - Understand how to enable a network time server during installation to maintain
+    a synchronized time setting throughout the system
+
+    - Create a non-privileged user account for system administration access as a secure
+    alternative to logging in as a root user'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Deliverables
+
+
+    Upon completion of this lab, you are required to provide the following deliverables
+    to your instructor:
+
+
+    +   1. Audit Checklist and Installation Summary:
+
+    2. Lab Assessment Questions & Answers for Lab #1.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Hands-On Steps
+
+
+    1. This lab begins with a request from your supervisor. As the newest member of
+    the network administration team for a fictitious financial institution. First
+    World Bank, you will be required to create an audit checklist based on the screen
+    captures included in this lab. The checklist will be used in the future for ensuring
+    secure Linux servers at the organization.
+
+
+    > Note:
+
+    The next steps include screen captures of a recent Linux installation. Use these
+    screen captures as references as you create an Audit Checklist and Installation
+    Summary that meets your company''s needs.
+
+
+    2. In a new document, create an Audit Checklist and Installation Summary.
+
+    You will follow the steps in this lab to complete the checklist as if you were
+    part of the network administration team. You will be responsible for determining
+    what to document in this report.
+
+    3. In your text document, explain why it is especially important to physically
+    secure Linux computers.
+
+    4. Review the following screen captures.
+
+
+    FIGURE 1.1
+
+    Accept the default for a new install in graphical mode, press Enter
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_14_0.png)
+
+
+    FIGURE 1.2
+
+    Click Next to continue
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_14_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# LAB #1 | Install a Core Linux Operating System on a Server
+
+
+    FIGURE 1.3
+
+
+    Select the appropriate language and click Next
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_15_0.png)
+
+
+    FIGURE 1.4
+
+
+    Select the appropriate keyboard and click Next
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_15_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Hands-On Steps
+
+
+    If this is a new drive, the installation program will display an option to re-initialize.
+    **Select the re-initialize option.**
+
+
+    # FIGURE 1.5
+
+
+    **Select Create custom layout** from the type of installation drop-down menu
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_16_0.png)
+
+
+    # FIGURE 1.6
+
+
+    **Create an ext2 file system type** for /boot with 500MB of space
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_16_1.png)
+
+
+    +   5. In your text document, **explain** the significance of creating separate
+    partitions for both /var and /boot.
+
+
+    +   6. In your text document, **explain** the features and benefits of selecting
+    an ext 3 file system type, instead of the ext2 selected in this screen capture.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 7. Review the following screen capture.
+
+
+    FIGURE 1.7
+
+
+    Create a swap file system type with 4000MB of space
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_17_0.png)
+
+
+    8. In your text document, explain the significance of the SWAP partition.
+
+
+    9. Review the following screen capture.
+
+
+    FIGURE 1.8
+
+
+    Create a Physical Volume (LVM) and fill to maximum allowable size
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_17_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Hand-On Steps
+
+
+    10. In your text document, explain how partitioning with LVM can relate to the
+    CIA Triad of Security.
+
+
+    11. Review the following screen captures.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_18_0.png)
+
+
+    FIGURE 1.10
+
+    Create partitions with the LVM group for /var, /home, and /tmp with pre-defined
+    sizes, and to fill the maximum allowable size (the remaining disk space)
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_18_1.png)
+
+
+    12. In your text document, summarize reasons for partitioning as it relates to
+    security and availability.
+
+
+    13. In your text document, explain why it is important to partition a Linux system
+    correctly.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# LAB #1 | Install Core Linux Operating System on a Server
+
+
+    14. Review the following screen captures.
+
+
+    # FIGURE 1.11
+
+
+    Final layout of the partition design
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_19_0.png)
+
+
+    # FIGURE 1.12
+
+
+    Install boot loader (GRUB) and create a password to help protect in case of unauthorized
+    physical access
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_19_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# On-Hand Steps
+
+
+    FIGURE 1.13
+
+    Type the hostname in the Hostname section of the page
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_20_0.png)
+
+
+    FIGURE 1.14
+
+    Click the Edit button to set status IP Address, Gateway, and DNS Server information
+    and click Next to continue
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_20_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# LAB #1 | Install a Core Linux Operating System on a Server
+
+
+    FIGURE 1.15
+
+    Select the appropriate time zone and click Next
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_21_0.png)
+
+
+    FIGURE 1.16
+
+    Type an appropriate password, confirm it, and click Next
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_21_1.png)
+
+
+    15. In your text document, explain the root user account and how it is used.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Hands-On Steps
+
+
+    16. Review the following screen captures.
+
+
+    FIGURE 1.17
+
+    Select the Server-
+
+    GUI checkbox and
+
+    click Next
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_22_0.png)
+
+
+    This will install about 1,000 packages, including the GNOME desktop.
+
+
+    FIGURE 1.18
+
+    Click Next to start
+
+    the CentOS installation
+
+    process
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_22_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# LAB #1 | Install a Core Linux Operating System on a Server
+
+
+    FIGURE 1.19
+
+    ject the Installation
+
+    Disk and click Reboot
+
+    when prompted
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_23_0.png)
+
+
+    FIGURE 1.20
+
+    Click the Forward
+
+    button on the firstboot
+
+    welcome screen
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_23_1.png)
+
+
+    17. In your text document, explain the purpose of the "firstboot."'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Hands-On Steps
+
+
+    18. Review the following screen capture.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_24_0.png)
+
+
+    19. In your text document, describe a method for administrators to log into the
+    server and perform administrative tasks, such as remote or physical access, and
+    what accounts should be used for login.
+
+
+    20. Review the following screen captures.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_24_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# LAB #1 | Install a Core Linux Operating System on a Server
+
+
+    FIGURE 1.23
+
+    Click the Forward button to select SELinux in Enforcing mode
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_25_0.png)
+
+
+    FIGURE 1.24
+
+    Click the Forward button to accept the default kdump setting
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_25_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Hands-On Steps
+
+
+    # FIGURE 1.25
+
+
+    Set the current date and time and click the Forward button
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_26_0.png)
+
+
+    # FIGURE 1.26
+
+
+    Click the Network Time Protocol tab and enable the Network Time Protocol checkbox.
+    Click the Forward button to continue
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_26_1.png)
+
+
+    +   21. In your text document, explain why it''s important to keep accurate time
+    on a Linux server.
+
+    22. In your text document, describe your recommendation on how to maintain synchronization
+    with Network Time Protocol.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# LAB #1 | Install a Core Linux Operating System on a Server
+
+
+    23. Review the following screen captures.
+
+
+    FIGURE 1.27
+
+    Create a user account and password. Click the Forward button
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_27_0.png)
+
+
+    FIGURE 1.28
+
+    Click the Forward button to accept the default sound card settings
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_27_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Hand-On Steps
+
+
+    17
+
+
+    FIGURE 1.29
+
+    Click the Finish button to complete the "firstboot" process
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_28_0.png)
+
+
+    FIGURE 1.30
+
+    Type the username and root password at the GNOME login manager
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_28_1.png)
+
+
+    +   24. In your text document, explain which runlevel was configured by this installation.
+
+
+    +   25. In your text document, explain why it may be acceptable to install X-Window
+    and a graphical user interface with the server and how risks can be mitigated.
+
+
+    +   26. Submit the text document to your instructor as a deliverable for this
+    lab.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #1 that the students
+    must perform:
+
+
+    +   1. Was the student able to design an installation plan for the Linux operating
+    system based upon necessary software? – [25%]
+
+    2. Was the student able to design secured partitions within the core Linux server
+    for desired security hardening, performance, and application support? – [25%]
+
+    3. Did the student understand how to enable a network time server during installation
+    to maintain a synchronized time setting throughout the system? – [25%]
+
+    4. Was the student able to create a non-privileged user account for system administration
+    access as a secure alternative to logging in as a root user? – [25%]'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'Assessment Worksheet
+
+
+    # LAB #1 – ASSESSMENT WORKSHEET
+
+
+    # Install a Core Linux Operating System on a Server
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    Overview
+
+    In this lab, you reviewed screen captures from a recent installation of CentOS
+    Linux Server that document the installation process, including applying passwords,
+    creating partitions, and establishing system administrator access controls. You
+    used the information provided in the screen captures to create an audit checklist
+    to be used when installing other secure Linux servers.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. During the install, the option to sync with an NTP (Network Time Protocol)
+    server was checked. From a security perspective, why is it important for a system
+    to keep accurate time?
+
+
+    +   2. During the install, a password has been set for the “root” user. What is
+    the “root” user, and when is it appropriate to use this account?
+
+
+    +   3. During the install, X-Window and a desktop manager were installed. However,
+    in a production environment it is recommended NOT to run the X-Window environment.
+    Explain the purpose of this recommendation.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '4. During the installation process, what are options available to create the
+    partition?
+
+
+    5. Why is it important to partition a Linux system correctly?
+
+
+    6. What is the significance of the SWAP partition in a Linux system? What different
+    ways can the swap space be configured, and why would you recommend one over the
+    other?
+
+
+    7. What are some of the benefits and features that are available to Linux users
+    by selecting the ext3 file system for the partitioning of a Linux system?'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '8. How is the passwd file used, and what fields make up its content? Explain.
+
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+
+    9. What is the fstab file used for and what fields make up its content? Explain.
+
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+
+    10. Explain the significance of creating separate partitions of the /var and /boot
+    directories. What is contained within these directories?
+
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+
+    11. How would selecting the option “encrypt filesystem” be useful?
+
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________
+
+    ______________________________________________________________________________________________________________________________________'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '12. How can partitioning with Logical Volume Manager (LVM) help as it relates
+    to the CIA Triad of Security?
+
+
+    13. What security advantages can be realized when selecting the “minimal” software
+    install option?
+
+
+    14. How could you automate a CentOS or Red Hat install geared for security?
+
+
+    15. What is the purpose of “firstboot”?'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # Configure Basic Security Controls on a CentOS Linux Server
+
+
+    In this lab, you will practice properly securing a Linux server system. You will
+    perform the steps to secure the bootloader, enable iptables, and run SELinux to
+    help lock down the Linux OS. You will also apply ACLs to directories and files
+    to secure file and data access and then check those ACLs and permissions on the
+    system.
+
+
+    # ## Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   - Configure the bootloader with the timeout to 0 and password credential to
+    mitigate tampering with the GRUB loader and the boot sequence of the server
+
+    - Verify SELinux mode on a CentOS Linux Server by viewing the configuration file
+    and using the sestatus command
+
+    - Create a student user account and add it to a user group for managing permissions
+    and applying access controls across the system
+
+    - Configure user groups with limited sudo access (with password credentials) to
+    log and properly monitor access across the system
+
+    - Create iptables set to "on" for runlevels 2 through 5 to enable an internal,
+    host-based IP stateful firewall
+
+    - Set restrictions and permissions for user access to files and system log files
+
+
+    | TOOLS AND SOFTWARE USED |
+
+    | NAME | MORE INFORMATION |
+
+    | None | | |'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Your changes to the grub.conf file;\n\
+    \   b. Your changes to the SELinux configuration file;\n   c. Your changes to\
+    \ the firewall for runlevels 2 through 5;\n   d. Your changes to the sudoers file;\n\
+    \   e. Your changes to add an immutable flag to a temp file;\n   f. Your changes\
+    \ to the permissions for the log file;\n2. Lab Assessment Questions & Answers\
+    \ for Lab #2."
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation virtual machine desktop
+    of the VSCL, shown here.
+
+
+    FIGURE 2.1
+
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_36_0.png)
+
+
+    +   2. Double-click the ISSA_VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 2.2
+
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    | Name | Type | Date Modified | Attributes |
+
+    |---|---|---|---|
+
+    | TargetRedHat01 | Folder | 9/27/2011 11:58 AM | |'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# LAB #2 | Configure Basic Security Controls on CentOS Linux Server
+
+
+    4. Log in to the TargetRedHat01 server with the following credentials:
+
+
+    +   - User name: student
+
+    - Password: ISS3516Security
+
+
+    The GNOME, the graphical user interface (GUI) for the virtual Linux server, is
+    displayed.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_37_0.png)
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by modifying the GRUB
+    bootloader so that it will boot into the default operating system without displaying
+    the bootloader menu. A bootloader is a program that allows the user or administrator
+    to choose which operating system or kernel to load when the computer starts.
+
+
+    5. Double-click the Terminal icon on the GNOME desktop to open the terminal emulator
+    and access the Linux server command line.
+
+
+    6. At the command prompt, type su -c ''vi /boot/grub/grub.conf '' and press Enter
+    to load the GRUB configuration file into the VI Editor.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Hand-On Steps
+
+
+    7. When prompted for a password, type ISS3165Security.
+
+    The grub.conf file appears in the VI Editor window.
+
+
+    FIGURE 2.4
+
+
+    grub.conf within the
+
+    VI Editor
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_38_0.png)
+
+
+    8. Press the key to enter the INSERT mode.
+
+
+    9. Use the arrow keys to find the timeout=30 line in the editor. Change the 30
+    to a 0. This will change the length of the timeout from 30 seconds to zero, which
+    forces GRUB to skip the edit menu when it loads.
+
+    10. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line. A colon with a blinking cursor at the bottom of the window indicates
+    that you are in the command line mode.
+
+
+    11. Type w and press Enter to save your changes and exit the VI Editor.
+
+
+    12. At the command prompt, type /sbin/grub and press Enter to open the GRUB Console
+    for editing. In the GRUB Console, the command prompt appears grub.
+
+
+    13. At the command prompt, type md5crypt and press Enter to attach a hash string-encrypted
+    password to the GRUB menu so that it can only be edited by an authorized user.
+
+
+    14. When prompted for the password, type linuxlab2 and press Enter to create a
+    password.
+
+    The hash string that is is encryption for the password you created.
+
+
+    15. Highlight the hash string and right-click. Select Copy from the context menu
+    to copy the hash string for use in a later step.
+
+
+    16. Type quit at the command prompt, type su -c '' /boot/grub/grub.conf'' and
+    press Enter to load the GRUB configuration file into the VI Editor.
+
+
+    17. When prompted for a password, type ISS316Security.
+
+    The grub.conf file appears in the VI Editor window.
+
+
+    18. Press the key to enter the INSERT mode.
+
+
+    19. Use the arrow keys to find the timeout=0 line in the editor. At the beginning
+    of the next line, press
+
+    Enterter to start a new line.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# LAB #2 | Configure Basic Security Controls on a CentOS Linux Server
+
+
+    21. Use the up arrow to move to the empty line, type password --md5 and right-click
+    and select Paste from the context menu to paste the hash string you copied in
+    step 15.
+
+
+    FIGURE 2.5
+
+
+    Adding encrypted password to the GRUB
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_39_0.png)
+
+
+    ```
+
+    nk@student@Targethost01.localdomain1002:~Targethost# 1
+
+    Applications Places System
+
+    -fire./redhatio...
+
+    Edit View Terminal Tabs Help
+
+    # grub.conf generated by anaconda
+
+    # Note that you do not have to rerun grub after making changes to this file
+
+    # NOTICE: You have a /boot/ partition. This means that
+
+    all kernel and initrd paths are relative to /boot/, eg.
+
+    root=(hd0,8)
+
+    initrd/initrd.img
+
+    kernel /vmlinuz-2.6.18-164.el5 root=/dev/VolGroup0/LogVol08
+
+    # /etc/grub
+
+    default
+
+    timeout=0
+
+    password --md5 $1$S1W0B5IX9ZVrPKPGtGjt3FHB
+
+    splash=(hd0,8)/splash.xpg
+
+    hiddenmenu
+
+    title CentOS (2.6.18-164.el5)
+
+    kernel /vmlinuz-2.6.18-164.el5 root=/dev/VolGroup0/LogVol08 rhgb qui
+
+    initrd/initrd-2.6.18-164.el5.img
+
+    ```
+
+
+    22. Make a screen capture of the VI Editor window showing your hash string and
+    paste into a new text document.
+
+
+    > Note:
+
+    To capture the screen, press the Ctrl and PrtSc keys together, and then use Ctrl
+    + V to paste the image into a Word or other word processor document.
+
+
+    23. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command line mode.
+
+
+    24. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by verifying that CentOS
+    SELinux (Security-Enhanced Linux) server is set to permissive mode. SELinux is
+    actually a set of security enhancements built into the Linux kernel and should
+    be set to permissive mode by default.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '25. At the terminal command prompt, type cat /etc/selinux/config and press
+    Enter to check the SELinux configuration.
+
+
+    # FIGURE 2.6
+
+
+    SELinux configuration settings
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_40_0.png)
+
+
+    26. Type /usr/sbin/sestatus and press Enter to see which mode SELinux is running.
+
+
+    # FIGURE 2.7
+
+
+    SELinux current mode
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_40_1.png)
+
+
+    27. Make a screen capture of the SELinux configuration showing the current mode
+    line and paste it into your text document.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by enabling the internal
+    host-based IP stateful firewall. You will set the firewall to start when it enters
+    levels 2 through 5.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '28. At the command line prompt, type su -c '' /bin/chnconfig --level 2345 iptables
+    on '' and press Enter.
+
+    29. When prompted for a password, type ISS3316Security.
+
+    The command prompt changes before the scenes. There will be no visible feedback
+    apart from the reappearance of the command line prompt.
+
+
+    30. At the command line prompt, type su -c '' /bin/service iptables start '' and
+    press Enter to start the firewall.
+
+    31. When prompted for a password, type ISS3316Security.
+
+    32. At the command line prompt, type /bin/chnconfig iptables --list and press
+    Enter to verify that your changes have been made on the server.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_41_0.png)
+
+
+    33. Make a screen capture of the terminal window showing the runlevels and paste
+    it into your text document.
+
+
+    > Note The next steps will apply security measures on this server by allowing
+    the sudo user. Administrators may choose to grant authorized users limited root
+    level access for a specific purpose. The sudo access also can be used to allow
+    the administrator to audit the actions that authorized users take on the server.
+    Any actions not specifically granted to the sudo user will require the actual
+    root password.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Hands-On Steps
+
+
+    34. At the command line prompt, type su -c /usr/bin/visudo and press Enter to
+    edit the sudoers configuration file for the sudo users) file.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_42_0.png)
+
+
+    35. Press the key I to enter.
+
+
+    36. Use the arrow keys to find the %wheel ALL = NETWORKING, SOFTWARE, SERVICES,
+    STORAGE, DELEGATING, PROCESSES, LOCATES line in the editor. At the beginning of
+    the next line, press Enter to start a new line.
+
+    TargetRedHat11 is preconfigured to allow any user in the "wheel" group to have
+    sudo access for all of the commands listed in this step.
+
+
+    37. Use the arrow to move to the empty line, type %webALL = NETWORKING, SOFTWARE,
+    SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATES.
+
+    This step creates a new group that will have sudo access for each of the commands
+    listed here.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_42_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# LAB #2 Configure Basic Security Controls on CentOS Linux Server
+
+
+    38. Make a screen capture of the window showing the new web group and paste it
+    into a new text document.
+
+
+    39. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the line mode.
+
+
+    40. Type wq to save your changes and exit the sudoers file.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by setting immutable
+    permissions on a temp file. An immutable designation prevents a file from being
+    deleted, even by someone with root level access.
+
+
+    +   41. At the command line prompt, type touch /tmp/mytest and press Enter to
+    create a temp file.
+
+
+    +   42. Type lsattr /tmp/mytest and press Enter to list the file attributes and
+    view the current permissions for the new file.
+
+
+    +   43. Type su - c ''+'' /tmp/mytest and press Enter to change the file attributes
+    and add the immutable flag (i) to the file permissions.
+
+
+    +   44. When prompted for a password, type ss5316Security.
+
+
+    +   45. Type lsattr /tmp/mytest and press Enter to list the file attributes and
+    verify that the immutable flag has been added to the file permissions.
+
+
+    The results will include a lowercase i (for example, ----i----).
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_43_0.png)
+
+
+    +   46. Make a screen capture of the window showing the immutable flag and paste
+    it into a new text document.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by granting special
+    permissions to allow a user access to the server''s log file. You will assign
+    access control list permissions (ACL) to the wheel group.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Hands-On Steps
+
+
+    33
+
+
+    47. Type su -c setfacl -m g:wheel:/var/log/messages '' and press Enter to set
+    ACL permissions on the log file.
+
+
+    48. Type getfacl /var/log/messages and press Enter to get the current ACL permissions
+    for the log file and verify that they were set properly in the previous step.
+    The wheel group now has access to the log file.
+
+
+    FIGURE 2.12
+
+    Setting ACL permissions on the log file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_44_0.png)
+
+
+    49. Make a screen capture of the window showing the log file and paste it into
+    a new text document.
+
+
+    50. Close the terminal window.
+
+
+    51. Close the TargetRedHat01 window.
+
+
+    52. Click Disconnect prompted to disconnect the session.
+
+
+    53. Close the ISSA_VM Server Farm_RDP folder.
+
+
+    54. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #2 that the students
+    must perform:
+
+
+    +   1. Was the student able to configure the bootloader with the timeout set to
+    0 and password credential to mitigate tampering with the GRUB boot sequence of
+    the server? – [10%]
+
+    2. Was the student able to verify SELinux mode on CentOS Linux Server by viewing
+    the configuration file and using the sestatus command? – [10%]
+
+    3. Was the student able to create a student user account and add it to a user
+    group for managing permissions and applying access controls across the system?
+    – [20%]
+
+    4. Was the student able to configure user groups with limited sudo access (with
+    password credentials) to log and properly monitor access across the system? –
+    [20%]
+
+    5. Was the student able to create iptables set to “on” for runlevels 2 through
+    5 to enable an internal, host-based IP stateful firewall? – [20%]
+
+    6. Was the student able to set restrictions and permissions for user access to
+    files and system log files? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# Configure Basic Security Controls on a CentOS Linux Server\n\n| Course Name\
+    \ and Number: \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ |\n| Student Name: \\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_ |\n| Instructor Name: \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ |\n| Lab\
+    \ Due Date: \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\\
+    _\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ |\n\nOverview\n this lab, you practiced\
+    \ properly securing a Linux server system. You performed the steps to secure the\
+    \ bootloader, enable iptables, and run SELinux to help lock down the Linux OS.\
+    \ You also applied ACLs to directories and files to secure file and data access\
+    \ and then checked those ACLs and permissions on the system.\n\nLab Assessment\
+    \ Questions & Answers\n\n+   1. What is GRUB and why is it important to lock it\
+    \ down?\n\n+   2. Discuss the purpose of granting \"sudo\" access. Why is it a\
+    \ good idea not to log in as a root user?\n\n+   3. If a file is set with the\
+    \ immutable flag, what security controls does this provide for the file?"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '4. Is it possible for anyone to edit GRUB with “vi”?
+
+
+    5. What visual clues in the prompt tell you that you are logged in as a root user?
+
+
+    6. What is iptables and how does this help harden the CentOS Linux Server?
+
+
+    7. Why is it important to configure and enable iptables on your CentOS Linux Server?'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '8. What is the difference between “setfacl” and “getfacl”? How can “setfacl”
+    help achieve security hardening?
+
+
+
+
+
+
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_48_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # Apply Hardened User Account Management and Security Controls
+
+
+    # ## Introduction
+
+
+    This lab is an extension of the previous labs. In this lab, you will apply security
+    hardening for user accounts with a secure password policy definition. You will
+    also create temporary user accounts and apply automatic account and password deletion
+    after 90 days.
+
+
+    # ## Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   - Configure a password policy by editing the /etc/login.defs file and implementing
+    stringent security measures on a CentOS Linux Server
+
+    - Enforce a password change every 60 days showing a warning 14 days prior to the
+    password''s expiration across the system for all users
+
+    - Configure a minimum password length of eight characters with stringent complexity
+    requirements
+
+    - Create users and groups with the proper permissions and restrictions to enforce
+    role-based access controls
+
+    - Create a temporary user account that expires in 90 days to enforce the proper
+    principle of least privilege with contractors and temporary workers/consultants
+
+
+    | TOOLS AND SOFTWARE USED |
+
+    | NAME | MORE INFORMATION |
+
+    | None | |'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Your changes to the login.defs file;\n\
+    \   b. Output from the groups command;\n   c. Output from your changes to the\
+    \ jtemp user account;\n   d. Output from the modified pam.d/su file;\n2. Lab Assessment\
+    \ Questions & Answers for Lab #3."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Hands-On Steps
+
+
+    # Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation virtual machine desktop
+    of the VSCL, as shown here.
+
+
+    FIGURE 3.1
+
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_52_0.png)
+
+
+    +   2. Double-click the ISSA_VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 3.2
+
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    | Name | Size | Date Modified | Attributes |
+
+    |---|---|---|--|
+
+    | TargetRedHat01 | 24 KB | Short | 05/27/2021 11:58 AM | |
+
+
+    Apply Hardened User Account Management and Security Controls'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# LAB #3 | Apply Hardened User Account Management and Security Controls
+
+
+    +   4. Log in to the TargetRedHat01 server with the following credentials:
+
+    * User name: student
+
+    * Password: ISS5316Security
+
+
+    The GNOME desktop, the graphical user interface (GUI) for the virtual Linux server,
+    is displayed.
+
+
+    # FIGURE 3.3
+
+    The GNOME desktop
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_53_0.png)
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by configuring stringent
+    passwords according to a policy definition. You will edit the login de Matrix
+    (login.defs) file in the VI Editor.
+
+
+    +   5. Double-click the Terminal icon on the GNOME desktop to open the terminal
+    emulator and access the Linux server command line.
+
+
+    +   6. At the command prompt, type su -c '' /etc/login.defs '' and press Enter
+    to load the GRUB configuration file into the VI Editor.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Hands-On Steps
+
+
+    7. When prompted for a password, type ISS3165security.
+
+    The login.defs file appears in the VI Editor window.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_54_0.png)
+
+
+    ```
+
+    # vi student@targethdat.login.com (editor) -root
+
+    Applications Places System
+
+    vi Edit View Terminal Tab Help
+
+    # Security:
+
+    # Directory where mailbox resides, or name of file, relative to
+
+    the home directory. If de-fine both, MAIL_DIR takes precedence.
+
+    MA_DIR is for Email
+
+    # EMAIL_DIR Maildir:
+
+    MA_DIR /var/spool/mail
+
+    MA_FILE
+
+    # Password aging controls:
+
+    # PASS_DAYS Maximum number of days a password may be used.
+
+    # PASS_MIN Minimum number of days allowed between password changes.
+
+    # PASS_LEN Minimum length of password.
+
+    # PASS_WARN_AGE Number of days given before a password expires.
+
+    PASS_DAYS 99999
+
+    PASS_MIN_DAYS 0
+
+    PASS_LEN 8
+
+    PASS_WARN_AGE 14
+
+    # vi /etc/login.defs 15031
+
+    ```
+
+
+    8. Press the I key to enter the INSERT mode.
+
+
+    9. Use the arrow keys to locate the Password aging controls: section in the editor.
+    Changes to this section affect the requirements for user account passwords, including
+    the length of the password and the number of days before a password expires.
+
+
+    +   10. Change the password aging controls to match the following definition:
+
+    + PASS_MAX_DAYS 60
+
+    + PASS_MIN_DAYS 0
+
+    + PASS_LEN 8
+
+    + PASS_WARN_AGE 14
+
+
+    11. Make a screen capture of the VI Editor window showing your changes and paste
+    it into a new text document.
+
+
+    > Note:
+
+    to capture the screen, press the Ctrl and PrSc keys together, then use Ctrl +
+    V to paste the image into a Word or other word processor document.
+
+
+    12. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.
+
+
+    13. Type w to save your changes and exit the VI Editor.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by creating several
+    new user accounts using the us command and set an initial password for one of
+    the accounts, then require password to be changed at the first login attempt.
+    You will also create two new groups, add the new users to those groups, and verify
+    which groups the student user account belongs to.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '14. At the command prompt, `type su -c '' /usr/sbin/useradd dbadmin1` and press
+    **Enter** to create a new database administrator user account (dbadmin1).
+
+
+    15. Creating a new user account requires root access, so **type ISS5316Security**
+    when prompted for a password.
+
+
+    16. **Repeat steps 14-15** to add the following additional users:
+
+    * dbadmin2
+
+    * webadmin1
+
+    * webadmin2
+
+
+    # FIGURE 3.5
+
+
+    Creating user accounts
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_55_0.png)
+
+
+    17. At the command prompt, **type su -c passwd dbadmin1** and press **Enter**
+    to set a password for the dbadmin1 user account you created.
+
+
+    18. Setting a user account password requires root access, so **type ISS5316Security**
+    when prompted for a password.
+
+
+    19. When prompted for the new password for this account, **type lab3** and press
+    **Enter.
+
+    The system will display a warning indicating that the password is weak, but users
+    with root access, as you have in lab, will be able to set the password anyway.
+
+
+    20. When prompted to retype the password for this account, **type lab3** and press
+    **Enter.**
+
+
+    # FIGURE 3.6
+
+
+    Setting a user account password
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_55_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Hand-On Steps
+
+
+    +   21. At the command prompt, type su -c '' chage -d dbadmin1 '' and press Enter
+    to force the password you just set to change at the next login attempt.
+
+
+    +   22. This command requires root access, so type ISS5316Security when prompted
+    for a password.
+
+
+    +   23. At the command prompt, type su -c '' /usr/sbin/groupadd dba '' and press
+    Enter to add a new group called dba (database administrators).
+
+
+    +   24. This command requires root access, so type ISS5316Security when prompted
+    for a password.
+
+
+    +   25. Repeat steps 23-24 to add a new group called web.
+
+
+    # FIGURE 3.7
+
+
+    Creating new group accounts
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_56_0.png)
+
+
+    +   26. At the command prompt, type su -c '' /usr/sbin/usermod -g ba dbadmin1
+    '' and press Enter to add the dbadmin1 user account to the new db group.
+
+
+    +   27. This command requires root access, so type ISS5316Security when prompted
+    for a password.
+
+
+    +   28. Repeat steps 26-27 to add dbadmin2 user account to the dba group.
+
+
+    +   29. At the command prompt, type su -c '' /usr/sbin/usermod -g web webadmin1
+    '' and press Enter to add the webadmin1 user account to the new web group.
+
+
+    +   30. This command requires root access, so type ISS5316Security when prompted
+    for a password.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# LAB #3 | Apply Hardened User Management and Security Controls
+
+
+    31. Repeat steps 29-30 to add the webadmin2 user account to the web.
+
+
+    # FIGURE 3.8
+
+
+    Adding user accounts to
+
+    group accounts
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_57_0.png)
+
+
+    32. At the command prompt, **type groups** and **press Enter**.
+
+    This command will display all the groups of which the logged-in user (student)
+    is a member. In this lab, the student account is preconfigured to be a member
+    of the *wheel* group (which includes sudo commands at the root level) and the
+    *student* group, which is automatically created by the CentOS. When new user accounts
+    are created, CentOS and other Red Hat-based Linux distributions create a group
+    with the same name.
+
+
+    # FIGURE 3.9
+
+
+    Output from the groups
+
+    command
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_57_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Hands-On Steps
+
+
+    33. Make a screen capture of the output from the groups command and make note
+    of any unexpected results, if any. Paste it into your document.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by creating temporary
+    user accounts that will automatically expire in 90 days. This type of account
+    is common in a business that hires contractors or others who will need temporary
+    access to their network.
+
+
+    34. At the terminal command prompt, type su -c /usr/sbin/useradd jtemp and press
+    Enter to create a new database administrator user (jtemp).
+
+
+    35. Creating a new user account requires root access, so type ISS516Security when
+    prompted for a password.
+
+
+    36. At the command prompt, type su -c ''passwd jtemp'' and press Enter to set
+    a password for the jtemp user account you created.
+
+
+    37. Setting a user account requires root access, so ISS516Security when prompted
+    for a password.
+
+
+    38. When prompted for the new password, type tempab3 and press Enter.
+
+    The system will display a warning indicating that the password is weak, but with
+    root access as you have in this case, it will be able to set the password anyway.
+
+
+    39. When prompted to retype the password, type tempab3 and press Enter.
+
+
+    40. At the command prompt, type su -c ''chage -d 0 jtemp'' and press Enter to
+    force the jtemp user to change the password you set at the next login.
+
+
+    41. This command requires root access, so ISS516Security when prompted for a password.
+
+
+    42. At the command prompt, type su -c ''chage -e date'' and press Enter to force
+    the jtemp user to change the password you just set on the required date.
+
+
+    For this command, the date should be entered in the format of YYYY-MM-DD. For
+    this lab, replace the date in the command line with an actual date 90 days after
+    you perform this task-in activity.
+
+
+    43. This command requires root access, so ISS516Security when prompted for a password.
+
+
+    44. At the command prompt, type su -c ''chage -l jtemp'' and press Enter to review
+    the password settings for the jtemp user account.
+
+
+    45. This command requires root access, so ISS516Security when prompted for a password.
+
+
+    # FIGURE 3.10
+
+    Output from the jtemp user account configuration
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_58_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '46. Make a screen capture of the terminal window showing the string of commands
+    used to configure the jtemp account. Paste it in your text document.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by restricting the
+    use of the su command, which grants the user root level access. You will edit
+    the pam.d file to restrict the wheel group using the su command.
+
+
+    47. At the command line prompt, type su -c vi /etc/pam.d/su to edit the access
+    for the su command in the pluggable authentication module file.
+
+    The pam.d file opens in the VI Editor.
+
+
+    48. This requires root access, type su ISS316Security when prompted for a password.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_59_0.png)
+
+
+    49. Press the I key to enter the INSERT mode.
+
+
+    50. Use the arrow keys to locate the #auth required pam_wheel.so line in the editor.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Hands-On Steps
+
+
+    49
+
+
+    +   51. Replace the hash tag (#) at the beginning of the line with x so that the
+    entire line now reads xauth required pam_wheel.so_use_uid.
+
+
+    This action removes the wheel group from those authorized to use the command.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_60_0.png)
+
+
+    +   52. Make a screen capture of the window showing the edits you just made and
+    paste it into your text document.
+
+
+    +   53. Press the Esc key to exit the INSERT mode and press Shift + : to return
+    to the command line mode. A colon with a blinking cursor at the bottom of the
+    window indicates that you are in the command line mode.
+
+
+    +   54. Type we to save your changes and exit the sudoers file.
+
+
+    +   55. Close the terminal window.
+
+
+    +   56. Close the TargetRedHat01 window.
+
+
+    +   57. Click Disconnect when prompted to disconnect the session.
+
+
+    +   58. Close the ISSA, VM Server Farm, RDP folder.
+
+
+    +   59. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #3 that the students
+    must perform:
+
+
+    +   1. Was the student able to configure a password policy by editing the /etc/login.defs
+    file and implementing stringent password security measures on a CentOS Linux Server?
+    – [20%]
+
+    2. Was the student able to enforce a password change every 60 days showing a warning
+    14 days prior to the password''s expiration across the system for all users? –
+    [20%]
+
+    3. Was the student able to configure a minimum password length of eight characters
+    with stringent complexity requirements? – [20%]
+
+    4. Was the student able to create users and groups with the proper permissions
+    and restrictions to enforce role-based access controls? – [20%]
+
+    5. Was the student able to create a temporary user account that expires in 90
+    days to enforce proper principle of least privilege with contractors and temporary
+    workers/consultants? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Apply Hardened User Account Management and Security Controls
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    Overview
+
+    This lab is an extension of the previous labs. In this lab, you applied security
+    hardening for user accounts with a secure password policy definition. You also
+    created temporary user accounts and applied automatic account and password deletion
+    after 90 days.
+
+
+    Lab Assessment Questions & Answers
+
+
+    +   1. What is the significance of creating groups and adding users to groups?
+    Explain.
+
+
+    +   2. Given a scenario where there are five (5) database administrators who may
+    periodically need access to a given system, discuss a concept to better manage
+    these administrators'' access permissions.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '3. The new web administrator''s account (webadmin1) has been set up and a password
+    provided to the user. What is the command to force the user to change the password
+    upon first login?
+
+
+    4. How can the use of the "su" command be restricted?
+
+
+    5. What is the purpose of the login.defs file? Explain the contents and configuration
+    options.
+
+
+    6. What is the PASS_MIN_DAYS setting? Why would it be a good idea to set the PASS_MIN_DAYS
+    setting?'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '7. Will changes to the PASS_MAX_DAYS, PASS_MIN_DAYS, and PASS_WARN_AGE commands
+    in /etc/login.defs settings affect existing accounts?
+
+
+    ________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________
+
+
+    8. Describe the password and account settings you would configure if you were
+    told that a few contractors needed accounts on the Linux system for the next 14
+    days.
+
+
+    ________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Apply Hardened Linux File System Security Controls
+
+
+    # LAB 4
+
+
+    # Introduction
+
+
+    This lab is an extension of the previous labs. It incorporates security hardening
+    for file systems and user access to mounted file systems. In this lab, you will
+    mount a file system on the CentOS Linux Server that does not have execute permissions.
+    You will also mount a remote file system and set quotas for users of mounted file
+    systems.
+
+
+    # Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   - Mount a file system without execute permissions, so you can safely read
+    the data contained in the disk without executing any unexpected programs
+
+    - Mount a remote file system and configure the system to be mounted at boot time
+    for an automatic network share on a Linux system
+
+    - Set user quotas on disk to protect the availability and security on the Linux
+    system and prevent users from taking up all the disk drive on the system
+
+    - Edit and modify the /etc/fstab file to manage local and remote NFS shares as
+    well as the necessary disk mounting configurations required
+
+    - Configure and use the repquota command to verify usage of disk space by users
+    and manage quotas
+
+
+    | TOOLS AND SOFTWARE USED |
+
+    | NAME | MORE INFORMATION |
+
+    | None | |'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Output from the modified fstab captures\
+    \ of the:\n   b. Results of the attempt to edit the revenue.doc file:\n   c. Results\
+    \ of the attempt to create a test.txt file:\n   d. Output from the attempt to\
+    \ create a test.file file:\n   e. Output from the student quota report;\n2. Lab\
+    \ Assessment Questions & Answers for Lab #4."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation virtual machine desktop
+    of the VSCL,
+
+    shown here.
+
+
+    FIGURE 4.1
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_68_0.png)
+
+
+    +   2. Double-click the ISSA VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 4.2
+
+
+    Open remote desktop connection to the TargetRedHat01 server
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_68_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# LAB #4 | Apply Hardened Linux File System Security
+
+
+    4. Log in to the TargetRedHat01 server with the following credentials:
+
+    * User name: student
+
+    * Password: ISS3516Security
+
+    The GNOME desktop, the graphical user interface (GUI) for the virtual Linux server,
+    is displayed.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_69_0.png)
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by mounting a file
+    system with read-only permissions. You will modify the fstab file and perform
+    several tests to make sure that your changes are effective.
+
+
+    5. Double-click the Terminal icon on the GNOME desktop to open the terminal emulator
+    and access the Linux server command line.
+
+    6. At the command prompt, type su -c ''/etc/fstab '' and press Enter to load the
+    fstab file into the VI Editor.
+
+    7. When prompted for a password, type ISS3516Security.
+
+    The fstab file appears in the VI Editor.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_69_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# On-the Steps\n\n8. **Press the key** to enter the INSERT line in the file:\n\
+    \n9. Use the arrow keys to **locate** the following line: \nextext3 loop.defaults\
+    \ 00\n\n+   * /virtualimages/disk/rimage.img /archives\n* Move the cursor immediately\
+    \ after the default words and type **,ro** to allow the read-only permissions.\n\
+    \n10. Move the cursor to modify the fstab file\n\n![](img/2e1421b69289d83e7c4fd114dc4b0083_70_0.png)\n\
+    \n11. Make a **screen capture** of the VI Editor window showing your changes and\
+    \ **paste** it into a new document.\n\n> Note:\nTo capture the screen, press the\
+    \ **Ctrl** and **PrtSc** keys together, and then use **Ctrl + V** to paste the\
+    \ image into\nWord or other word processor document.\n\n12. Press the **Esc**\
+    \ to exit the INSERT mode and **press Shift :** to return to the command line\
+    \ mode.\nA colon with a blinking cursor at the bottom of the window indicates\
+    \ that you are in the command\nmode.\n\n13. Type **wq** and **press Enter** to\
+    \ save your changes and exit the VI Editor.\n\n14. At the command prompt, type\
+    \ **su c -mount or remount /archives/**' and **press Enter** to remount the\n\
+    archives partition after making the changes to the fstab file.\n\n15. This command\
+    \ requires root access, so **type ISS5316Security** when prompted for a password.\n\
+    \n16. At the command prompt, **type cd /archives/2011** and **press Enter** to\
+    \ change the directory.\nNotice that the command prompt indicates that the directory\
+    \ has changed."
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '17. At the command prompt, type ls -is and press Enter to list the files in
+    this directory and review the permissions are currently applied to each file.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_71_0.png)
+
+
+    18. At the command prompt, type su -c ''vi revenue.doc'' and press Enter to open
+    the revenue.doc file in the VI.
+
+
+    19. This command requires root access, so type ISS316Security when prompted for
+    a password.
+
+
+    20. Press the I key to enter the INSERT mode.
+
+    Status line at the bottom of the editor indicates that the file is read-only.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_71_1.png)
+
+
+    21. Make a screen capture of the VI Editor window showing the read-only indicator
+    and paste it into your text document.
+
+
+    22. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# On-Hand Steps
+
+
+    23. Type q and press Enter to exit the VI Editor.
+
+
+    24. At the command prompt, type su -c ''touch test.txt'' and press Enter to create
+    a new file in this directory.
+
+
+    You should not see a cannot ''test.txt'' error message indicating that this is
+    a read-only system.
+
+
+    FIGURE 4.8
+
+    Creating a new file in a read-only directory
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_72_0.png)
+
+
+    25. Make a screen capture of the terminal window showing the error message and
+    paste it into your text document.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by setting user account
+    quotas on file system partitions. Quotas can be used as a disk management tool
+    to restrict the amount of disk space to specific users can write.
+
+
+    26. At the command prompt, type su -c ''vi'' /etc/fstab and press Enter to reopen
+    the fstab file.
+
+
+    27. This command requires root access, so type ISS5316Security when prompted for
+    a password.
+
+
+    28. Press the I key to enter the INSERT mode.
+
+
+    29. Use the arrow keys to locate the following line in the file:
+
+
+    +   * /virt/images/disk/qimage.img /common ext3 loop,defaults 0 0
+
+
+    Apply Hardened Linux File System Security Controls Technical White*'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# LAB #4 | Apply Hardened Linux File System Controls
+
+
+    30. Move the cursor immediately after the default and type,`usrquota` to apply
+    the quotas.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_73_0.png)
+
+
+    +   31. Press the Esc key to exit the INSERT mode and press Shift + : return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command line mode.
+
+    32. Type `wq` or `wq -c` to save your changes and exit the VI Editor.
+
+    33. At the terminal command prompt, type `su -c ''umount /common ''` and press
+    Enter to free the file system.
+
+    34. This command requires root access, type `ISS316Security` when prompted for
+    a password.
+
+    35. At the command prompt, type `su -c '' /sbin/mkfs -f ext3 -q /var/images/disk/qimage.img
+    -F ''` and press `Enter` to make a new Linux ext3 file system.
+
+    36. This command requires root access, type `ISS316Security` when prompted for
+    a password.
+
+    37. At the command prompt, type `su -c ''mount /common ''` and press `Enter` to
+    mount the /common partition.
+
+    38. This command requires root access, type `ISS316Security` when prompted for
+    a password.
+
+    39. At the command prompt, type `su -c ''/sbin/quotacheck -cug /common ''` and
+    press Enter to initialize the quota database.
+
+    40. This command requires root access, type `ISS316Security` when prompted for
+    a password.
+
+    41. At the command prompt, type `su -c ''/sbin/quotaon /common ''` and press Enter
+    to turn quotas on.
+
+    42. This command requires root access, type `ISS316Security` when prompted for
+    a password.
+
+    43. At the command prompt, type `su -c ''/usr/sbin/edquota -f /common student
+    ''` and press Enter to open the user quota settings.
+
+    44. This command requires root access, type `ISS316Security` when prompted for
+    a password.
+
+    45. Press the I key to enter the INSERT mode.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '46. Use the arrow keys to locate the Disk quotas for user student (uid 500):
+    section in the file and change the OMB limits in the /dev/loop1 line to the following
+    limits:
+
+
+    +   - First soft column: 30
+
+    - First hard column: 100
+
+
+    FIGURE 4.10
+
+    Setting the quotas for the student user account
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_74_0.png)
+
+
+    47. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode.
+
+    A with a blinking cursor at the bottom of the window indicates that you are in
+    the command line mode.
+
+
+    48. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    > Note:
+
+    The next steps will walk through several test scenarios to make sure that your
+    changes were effective.
+
+
+    49. At the command line prompt, type su -c mkdir /common/student && chmod student.student
+    /common/student to create a new directory called student and change ownership
+    of that directory to the student user account.
+
+
+    50. This command requires root access, so type ISS5316Security when prompted for
+    a password.
+
+
+    51. At the command prompt, type cd /common/student and press Enter to change the
+    directory.
+
+    Notice that the command prompt indicates that the directory has changed.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# 64 LAB #4 | Hardened Linux File System Controls
+
+
+    52. At the command prompt, type dd if=/dev/urandom of=test.file bs=9548576count=1
+    and press Enter to create a file with approximately 100MB of random data.
+
+
+    FIGURE 4.11
+
+    Attempting to create a file that exceeds quotas
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_75_0.png)
+
+
+    53. Make a screen capture of the terminal window showing the output from your
+    post and paste it into your document.
+
+
+    54. At the command prompt, type su -c ''/usr/sbin/repquota /common'' to run a
+    report of the quota limit already used.
+
+
+    55. This command requires root access, so type ISS316Security when prompted for
+    a password.
+
+
+    FIGURE 4.12
+
+    Quota report
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_75_1.png)
+
+
+    56. At the command prompt, type quota run to show a quota report of the student
+    directory.
+
+
+    57. Make a screen capture of the terminal window showing the quota report and
+    paste it into your text document.
+
+
+    58. Close the terminal window.
+
+
+    59. Close the TargetRedHat01 window.
+
+
+    60. Click Connect when prompted to disconnect the session.
+
+
+    61. Close the ISSA VM Server Farm, RDP folder.
+
+    62. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the student able to evaluation criteria and rubrics for Lab
+    #4 that the students must perform:
+
+
+    +   1. Was the student able to mount a file system without execute permissions,
+    so he or she can safely read the data contained in the disk without executing
+    any unexpected programs? – [20%]
+
+    2. Was the student able to mount a remote file system and configure the system
+    to be mounted at boot time for an automatic network share on a Linux system? –
+    [20%]
+
+    3. Was the student able to set user quotas on disk to protect the availability
+    and security on the Linux system and to prevent users from taking up all the disk
+    drive on the system? – [20%]
+
+    4. Was the student able to edit and modify the /etc/fstab file to manage local
+    and remote NFS shares as well as the necessary disk mounting configurations required?
+    – [20%]
+
+    5. Was the student able to configure and use the repquota command to verify usage
+    of disk space by users and manage quotas? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Apply Hardened Linux File System Security Controls
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    Overview
+
+
+    This lab is an extension of the previous labs. It incorporated security hardening
+    for file systems and user access to mounted file systems. In this lab, you mounted
+    a file system on the CentOS Linux Server that does not execute permissions. You
+    also mounted a remote file system and set quotas for users of mounted file systems.
+
+
+    Lab Assessment Questions & Answers
+
+
+    +   1. You are given a scenario where a web server will need to access PDF documents
+    located on another server within the local area network. These documents are for
+    customers to view their personal account information only. What permissions option
+    reflect this condition: /tmp, ext3, ro, or 0?'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '2. Describe the process to create a quota hard limit of 2G for a user.
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    3. How do you initialize quotas on a file system?
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    4. Why would you get an error stating “cannot remount filesystem mounted”?
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    5. What is the /etc/fstab file for?
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    6. What is the mount command? Explain.
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 7. What is the "repquota" command in Linux used for? Explain.
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# # Apply Hardened Security for Linux Services and Applications
+
+
+    # ## Introduction
+
+
+    This lab is an extension of the previous labs, and it incorporates security hardening
+    for Linux services and applications loaded in the physical server. In this lab,
+    you will configure security and hardened services and applications to ensure the
+    confidentiality, integrity, and availability of those services. You will configure
+    and secure an Apache Web server and MySQL database and the components necessary
+    to harden the implementation of both. You will also configure the Sendmail application
+    for secure local messaging and enable secure, encrypted remote access using Secure
+    Shell (SSH).
+
+
+    # ## Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   * Harden Linux server services when configuring them, and keep a security
+    perspective during configuration
+
+    * Perform basic security configurations to ensure that the system has been hardened
+    before hosting a website
+
+    * Configure and perform basic security for a MySQL database, understanding the
+    ramifications of a default installation and recommending hardening steps for the
+    database instance
+
+    * Set up and perform basic security configuration for Sendmail to be able to leverage
+    the built-in messaging capabilities of the Linux system
+
+    * Enable and implement secure SSH for encrypted remote access over the network
+    or across the Linux server system
+
+
+    # ## TOOLS AND SOFTWARE USED
+
+
+    | NAME | MORE INFORMATION |
+
+    |---|---|
+
+    | None | |'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Output of the my.cnf file;\n   b. Output\
+    \ of the httpd.conf file;\n   c. Output from the telnet connection;\n   d. Output\
+    \ of the sshd_config file;\n   e. VI editor showing the MOTD text;\n   f. MOTD\
+    \ banner displayed in an SSH session;\n2. Lab Assessment Questions & Answers for\
+    \ Lab #5."
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Hands-On Steps
+
+
+    # Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation virtual machine desktop
+    of the VSCL, as shown here.
+
+
+    FIGURE 5.1
+
+    “Student Landing” VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_82_0.png)
+
+
+    +   2. Double-click the ISSA VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 5.2
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    | >Documents and Settings\Administrator\Desktop\VM Server Farm_RDP |
+
+    | Name | Size | Type | Date Modified | Attributes |
+
+    |---|---|---|---|---|
+
+    | TargetRedHat01 | 2 KB | Folder | 10/27/2013 11:03 AM | A |'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# LAB #5 | Apply Hardened Security for Linux Services and Applications
+
+
+    4. Log in to the TargetRedHat01 server with the following credentials:
+
+    - User name: student
+
+    - Password: ISS3316Security
+
+    The GNOME desktop, the graphical user interface (GUI) for the virtual Linux server,
+    is displayed.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_83_0.png)
+
+
+    > Note:
+
+    The next steps will apply security measures for a MySQL database application by
+    modifying the my.cnf configuration file. You will add skip-networking to prevent
+    remote access to the database and disallow the ability to load a local data file.
+    You will also configure the database to start automatically on runlevel 3, and
+    set the MySQL root password.
+
+
+    5. Double-click the Terminal icon on the GNOME desktop to open the terminal emulator
+    and access the Linux server command line.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Hand-On Steps
+
+
+    6. At the command prompt, type sudo /bin/service mysql status and press Enter
+    to check the status of the MySQL service.
+
+
+    # FIGURE 5.4
+
+
+    Using the sudo command to check the status of a service
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_84_0.png)
+
+
+    7. When prompted for a password, type ISS316Security.
+
+    The system returns a failed status indicating that the MySQL service is not running.
+
+
+    8. At the command prompt, type sudo -c '' /etc/my.cnf '' and press Enter to open
+    the MySQL configuration file in the VI Editor.
+
+
+    9. When prompted for a password, type ISS316Security.
+
+
+    10. Press the I1 key to enter the INSERT mode.
+
+
+    11. Use the arrow keys to locate the following lines in the file:
+
+
+    +   * symbolic-links=0
+
+    * #skip-networking
+
+
+    12. Move the cursor to the beginning of each line and remove the # symbol.
+
+
+    # FIGURE 5.5
+
+
+    Modifying the my.cnf file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_84_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# LAB #5 | Apply Hardened Security for Linux Services and Applications
+
+
+    13. Make a screen capture of the VI Editor window showing your changes and paste
+    it into a new text document.
+
+
+    > Note:
+
+    To capture the screen, press the Ctrl and PrtSc keys together, and then use Ctrl
+    + V to paste the image into a Word or other word processor document.
+
+
+    14. Press the Esc key to exit the INSERT mode and press Shift + : return to the
+    command line mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.
+
+
+    15. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    16. At the command prompt, type sudo /sbin/chkconfig --level 3 mysql on and press
+    Enter to start the database server automatically in runlevel 3.
+
+
+    17. At the command prompt, type sudo /sbin/chkconfig --list and press Enter to
+    view the MySQL runlevel settings and verify that the service is turned on in runlevel
+    3.
+
+    Though the sudo command usually requires a password, repeated sudo commands in
+    the same session (as this instance) do not require re-entry of the password.
+
+
+    # FIGURE 5.6
+
+    MySQL runlevel settings
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_85_0.png)
+
+
+    18. At the command prompt, type sudo /sbin/service mysql start and press Enter
+    to start the database server.
+
+    The system returns an OK flag indicating that the MySQL service is starting. Notice
+    that the service started without a database password.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "# Hand-On Steps\n\n19. At the command prompt, type mysql -u root -p and press\
+    \ Enter to enter the MySQL environment.\n20. At the password prompt, press Enter\
+    \ without entering a password.\n\nNotice that the command prompt has changed to\
+    \ mysql>. By default, no password is required for the database root user, which\
+    \ can be a significant security risk. You can harden the security by setting a\
+    \ root password for the MySQL server.\n\nFIGURE 5.7\n\nWorking in the MySQL console\n\
+    \n![](img/2e1421b69289d83e7c4fd114dc4b0083_86_0.png)\n\n```\nstudent@targetredhat01:~$\
+    \ sudo /usr/bin/mysql --list\n[student@targetredhat01 ~]$ mysql -u root -p\nstudent@targetredhat01:~$\
+    \ /usr/bin/mysql start\nstudent@targetredhat01:~$ mysql -u root -p\npassword:\
+    \ \nWelcome to the MySQL monitor. Commands end with ; or ;\nYour connection id\
+    \ is 1.\nServer version: 5.5.15 MySQL Community Server (GPL)\n\nCopyright (2000-2018,\
+    \ Oracle and/or its affiliates). All rights reserved.\nOracle is a registered\
+    \ trademark of Oracle Corporation and/or affiliates. Other names may be trademarks\
+    \ of/or their respective.\nType 'help' or 'h' for help. Type 'c' to clear the\
+    \ current input statement\nmysql> _\n```\n\n21. At the command prompt, type SET\
+    \ PASSWORD FOR root@localhost=PASSWORD('ISS316Security'); and press Enter to set\
+    \ the MySQL root password.\n\nFIGURE 5.8\n\nSetting the MySQL root password\n\n\
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_86_1.png)\n\n```\nstudent@targetredhat01:~$\
+    \ mysql -u root -p\npassword: \nWelcome to the MySQL monitor. Commands end with\
+    \ ; or ;\nYour connection id is 2.\nServer version: 5.5.15 MySQL Community Server\
+    \ (GPL)\n\nCopyright (2000-2018, Oracle and/or its affiliates). All rights reserved.\n\
+    Oracle is a registered trademark of Oracle Corporation and/or affiliates. Other\
+    \ names may be trademarks of/or their respective.\nType 'help' or 'h' for help.\
+    \ Type 'c' to clear the current input statement\nmysql> SET PASSWORD FOR root@localhost=PASSWORD('ISS316Security');\n\
+    Query OK, 0 rows affected (0 sec)\nmysql> _\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '22. At the command prompt, **type quit**; to exit the MySQL environment and
+    return to the TargetRedHat01 command prompt.
+
+
+    > NotenThe next steps will harden security measures on this server by modifying
+    the Apache Web services configuration file (http.conf). You will first set the
+    service to start automatically in runlevel 3, disable the default HTTP Trace connection
+    method and verify your changes.
+
+
+    23. At the command prompt, **type sudo /bin/chkconfig --level 3 httpd** and **press
+    Enter** to set the Web service to start automatically on runlevel 3.
+
+
+    24. At the command prompt, **type sudo /bin/service httpd start** and **press
+    Enter** to start the httpd service. The system returns an OK flag indicating that
+    the httpd service is starting.
+
+
+    # **FIGURE 5.9**
+
+
+    The httpd runlevel settings
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_87_0.png)
+
+
+    25. At the command prompt, **type su -c ''vi +82 /etc/httpd/conf/httpd.conf ''**
+    and **press Enter** to open the httpd.conf file in the VI Editor.
+
+
+    26. When prompted for a password, **type ISS316Security.**
+
+
+    27. **Press the I key** to enter the INSERT mode.
+
+
+    28. Use the arrow keys to **locate** the following line in the file:
+
+
+    +   * #Trace off'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Hand-On Steps
+
+
+    29. Move the cursor to the beginning of the line and remove the # symbol to disable
+    the Trace connection method. This method has the potential to leak more information
+    about the server than necessary and poses a security risk.
+
+
+    # FIGURE 5.10
+
+
+    Disabling the Trace method
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_88_0.png)
+
+
+    ```
+
+    ```
+
+    # For him line KeepAlive tight step
+
+    # one request per connection. Set to "Off" to deactivate.
+
+    KeepAlive Off
+
+
+    # MaxAliveRequests: The maximum number of requests to allow
+
+    # during a persistent connection. Set to 8 to allow an unlimited amount.
+
+    # We recommend you leave this number high, for maximum performance.
+
+    MaxAliveRequests 100
+
+    dis active we don''t like
+
+    traceoff
+
+
+    # KeepAliveTimeout: Number of seconds to wait for the next request from the
+
+    # same client on the same connection
+
+    KeepAliveTimeout 15
+
+
+    # Server-Pool Size Regulation (MPM specific)
+
+    INSERT
+
+    ```
+
+    ```
+
+
+    30. Make a screen capture of the VI Editor window showing your changes and paste
+    it into your text document.
+
+
+    31. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line modenA colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command line mode.
+
+
+    32. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    33. At the command prompt, type sudo /bin/service httpd configtest and press Enter
+    to test for any syntaxn errors in the configuration file caused by your edits.
+
+
+    The system returns a Syntax OK message indicating that the file is error-free.
+
+
+    34. At the command prompt, type sudo /bin/service http reload and press Enter
+    to reload the configuration file and put your changes into effect.
+
+
+    The system returns an OK flag indicating that the Web service is reloading.
+
+
+    35. At the command prompt, type telnet localhost 80 and press Enter to open a
+    connection to port 80 tontest your configuration changes.
+
+
+    Once you are connected to the localhost, the blinking cursor becomes the command
+    prompt.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# LAB #5 | Apply Hardened Security for Linux Services and Applications
+
+
+    36. At the blinking cursor prompt, type TRACE/HTTP/1.0 and press Enter to open
+    the raw code of an HTML file.
+
+    The <h1> Method Not Implemented</h1> line along with the final line generated
+    by the server.
+
+    Connection closed by foreign host, verifies that your changes were successful.
+
+
+    # FIGURE 5.11
+
+
+    Output from telnet connection
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_89_0.png)
+
+
+    37. Make a screen capture of the VI Editor showing your changes and paste it into
+    your text document.
+
+
+    > Note:
+
+    The next steps will apply security measures on this server by modifying the Sendmail
+    configuration file (sendmail.mc). Sendmail is the default Linux mail server and
+    the source of many security threats if not hardened properly. You will first set
+    the server to start automatically in runlevel 3, then configure the secure shell
+    (SSH service) so that it allows remote access, and then the banner message of
+    the MOTD.
+
+
+    38. At the command prompt, type sudo /sbin/chkconfig sendmail --level 3 and press
+    Enter to set the the Sendmail service to start automatically on runlevel 3.
+
+
+    39. When prompted for a password, type ISS316Security.
+
+
+    40. At the command prompt, type su -c ''vi + 116 /etc/sendmail.mc '' and press
+    Enter to open the main configuration file in the VI Editor.
+
+
+    41. When prompted for a password, type ISS316Security.
+
+
+    42. Press the key to enter the INSERT mode.
+
+
+    43. Use the arrow keys to locate the following line in the file:
+
+
+    +   - DAEMON_OPTIONS=''(Port=smtp,Name=MTA)''dnl'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Hand-On Steps
+
+
+    44. Move the cursor between smtp and Name and type the following phrase: Addr=172.0.0.1,
+    to restrict relaying through the specified location, instead of leaving it as
+    an open relay.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_90_0.png)
+
+
+    ```
+
+    # Applications System
+
+    # For using c-SMTP as POP3/IMAP server for delivery announcement
+
+    # the following 2 definitions and activate them in the MAILER section
+
+    # of sendmail.mc
+
+    # define CYGOVER_MAILER, "/usr/sbin/sendmail -var/spool/smtp/sendmail"
+
+    # The following causes sendmail to only listen on the IPv4 loopback address
+
+    # and address to accept from the internet or intranet
+
+    # define OPTIONS=(Port:Addr=172.0.0.1)
+
+    # The following causes sendmail to additionally listen to port 587 for
+
+    # mail from users that authenticate. Roaming users who can''t reach their
+
+    # perfect domain due to port 25 being blocked or redirected
+
+    # and this is useful
+
+    # define DENY_OPTIONS=(Port:submission,Name-Msa,Msa-ea)
+
+    # The following causes sendmail to additionally listen to port 465, but
+
+    # if TLS is mandatory this works shuts down port 25 or 587 followed
+
+    # by STARTTLS is preferred, but clients using Express Connect can''t
+
+    ```
+
+
+    45. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode.
+
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.
+
+
+    46. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    47. At the command prompt, type sudo /sbin/service sendmail start and press Enter
+    to start the Sendmail server.
+
+
+    The system returns OK flags to indicate that both the Sendmail server and client
+    service are running.
+
+
+    48. At the command prompt, type sudo -c '' /etc/ssh/sshd_config '' and press Enter
+    to open the SSH configuration file in the VI Editor.
+
+
+    49. When prompted for a password, type ISS316Security.
+
+
+    50. Press the I key to locate and insert the following lines in the file:
+
+
+    +   * PermitRootLogin yes
+
+    * PasswordAuthentication yes
+
+    * UsePam yes
+
+    * Banner /some/path'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# LAB #5 | Hardened Security for Linux Services and Applications
+
+
+    52. Move the cursor to the beginning of the line and remove the # symbols. where
+    they exist, and make the following changes:
+
+
+    +   - PermitRootLogin no (This setting disables the root''s ability to login).
+
+    - PasswordAuthentication no (This setting disables logins with passwords.)
+
+    - UsePam no (This setting disables the pluggable authentication module.)
+
+    - Banner /etc/motd (This setting displays the MOTD warning to everyone who attempts
+    to log in.)
+
+
+    FIGURE 5.13
+
+    Modifying the sshd_config file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_91_0.png)
+
+
+    53. Make a screen capture of the VI Editor window showing your changes and paste
+    it into your text document. Notice that you may need more than one capture to
+    show all of your changes.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# On-Line Steps
+
+
+    54. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command line mode.
+
+
+    55. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    56. At the command prompt, type su -c /etc/motd and press Enter to open the MOTD
+    (message of the day) banner file in the VI Editor.
+
+
+    57. When prompted for a password, type ISS316Security.
+
+
+    58. Press the i to enter the INSERT mode.
+
+
+    59. Use the arrow keys to move the cursor to the beginning of the first line and
+    type PROPERTY OF FIRST WORLD BANK SAVINGS AND LOAN. AUTHORIZED USERS ONLY!
+
+
+    60. Make a screen capture of the VI Editor showing your changes and paste it into
+    your text document.
+
+
+    # FIGURE 5.14
+
+
+    Modifying the motd file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_92_0.png)
+
+
+    61. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command line mode.
+
+
+    62. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    63. At the command prompt, type sudo /sbin/service sshd status and press Enter
+    to check the status of the open SSH server.
+
+
+    64. This command requires root access, so type ISS316Security when prompted for
+    a password. The system will return an indicator that the openssh-daemon is running.
+
+
+    65. At the command prompt, type sudo /sbin/service sshd reload and press Enter
+    to reload the open SSH configuration file and put your changes into effect. The
+    system returns an OK flag indicating that the SSH service is reloading.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# LAB #5 | Hardened Security for Linux Services and Applications
+
+
+    66. At the command prompt, type ssh localhost and press Enter to open an SSH connection
+    to
+
+    the localhost.
+
+
+    The system returns an error indicating that the connection cannot be established.
+
+
+    67. When prompted to continue connecting, type yes and press Enter.
+
+    The SSH server will deny access because a key wasn''t used indicating that your
+    changes to the
+
+    PasswordAuthentication line were properly configured.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_93_0.png)
+
+
+    68. Make a screen capture of the terminal window showing the message of the day
+    banner and paste it
+
+    to your text document.
+
+
+    69. Close the terminal window.
+
+
+    70. Close the TargetRedHat01 window.
+
+
+    71. Click Disconnect when prompted to disconnect the session.
+
+
+    72. Close the ISSA_VM Server Farm_RDP folder.
+
+
+    73. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of
+
+    your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #5 that the students
+    must perform:
+
+
+    +   1. Was the student able to harden Linux server services when configuring and
+    keep a security perspective during configuration? – [20%]
+
+    2. Was the student able to perform basic security configurations to ensure that
+    the system has been hardened before hosting a website? – [20%]
+
+    3. Was the student able to configure and perform basic security for a MySQL database,
+    understanding the ramifications of a default installation and recommending hardening
+    steps for the database instance? – [20%]
+
+    4. Was the student able to set up and perform basic security configuration for
+    Sendmail to be able to leverage the built-in messaging capabilities of the Linux
+    system? – [20%]
+
+    5. Was the student able to enable and implement secure SSH for encrypted remote
+    access over the network or across the Internet of a Linux server system? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Apply Hardened Security for Linux Services and Applications
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    # Overview
+
+
+    This lab is an extension of the previous labs, and it incorporated security hardening
+    for Linux services and applications loaded in the physical server. In this lab,
+    you configured security and hardened services and applications to ensure the confidentiality,
+    integrity, and availability of those services. You configured and secured an Apache
+    Web server and MySQL database and the components necessary to secure harden the
+    implementation of both. You also configured the Sendmail application for secure
+    local messaging and enabled secure, encrypted remote access using Secure Shell
+    (SSH).
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. When configuring services, what Linux directory typically contains server
+    configuration files?'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '2. What is a Linux runlevel for a specific service or application? What command
+    allows you to define the runlevel uniquely for a service or application?
+
+
+    3. What is the Apache Web server? Review the /etc/httpd/conf/httpd.conf configuration
+    file, and point out a setting that could enhance security.
+
+
+    4. OpenSSH is the de facto method to remotely access Linux systems. Explain why
+    the use of telnet is discouraged.
+
+
+    5. What are symbolic links?
+
+
+    6. Why is it recommended to disable symbolic links in MySQL?
+
+
+    7. Why would you add the “skip-networking” command?'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Apply Hardened Security for Controlling Access
+
+
+    # LAB 6
+
+
+    # Introduction
+
+
+    This lab is an extension of the previous labs, and it incorporates access control
+    for the CentOS Linux Server. In this lab, you will first review current host-based
+    IP firewall services, flush the current firewall configuration, and then reconfigure
+    it with stringent permit/deny rule sets. You will also configure TCP Wrappers
+    for unauthorized access controls and logging and SELinux for implementation of
+    a layered security strategy.
+
+
+    # Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   * Review current internal host-based firewall parameters and configuration
+    settings to verify allowed and denied IP communications
+
+    * Configure an internal host-based firewall using iptables and create stringent
+    allow/deny rules for services that may require remote access to the system
+
+    * Harden the system by enabling TCP Wrappers to deny and log unauthorized attempts
+    against services and ports running on the system
+
+    * Secure processes running on the system by using and configuring SELinux to help
+    perform more in-depth security
+
+    * Verify configurations of the settings applied by connecting to the Linux server
+    using SSH and connect to other services running on a Linux server
+
+
+    | TOOLS AND SOFTWARE USED |
+
+    | NAME | MORE INFORMATION |
+
+    | None | |'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Results of the iptables save command:\
+    \ \\\n   b. Output of the iptables -L command:\n   c. Output of the hosts.deny\
+    \ file's response to your attempt to connect as lab6.hackers.com;\n   d. Output\
+    \ from the selinux/config file:\n   e. Your changes to the Boolean settings for\
+    \ the Web server type;\n2. Lab Assessment Questions & Answers for Lab #6."
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Hands-On Steps
+
+
+    +   1. This lab begins at the student vWorkstation virtual machine desktop of
+    the VSCL, as shown here.
+
+
+    FIGURE 6.1
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_100_0.png)
+
+
+    +   2. Double-click the ISSA_VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 6.2
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_100_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "# LAB #6 | Apply Hardened Security for Controlling Access\n\n+   4. Log in\
+    \ to the TargetRedHat01 server with the following credentials:\n   * User name:\
+    \ student\n   * Password: ISS5316Security\n\nThe GNOME desktop, the graphical\
+    \ user interface (GUI) for the virtual Linux server, is displayed.\n\n![](img/2e1421b69289d83e7c4fd114dc4b0083_101_0.png)\n\
+    \n> Note:\nThe next steps will apply security measures for the LINUX host-based\
+    \ IP firewall by configuring stringent permit and deny rule sets. You will append\
+    \ the INPUT, OUTPUT, and FORWARD chains to permit HTTP, ICMP ping, and SSH access\
+    \ and to deny all other access.\n\n+   5. Double-click the Terminal icon on the\
+    \ GNOME desktop to open the terminal emulator and access the Linux server command\
+    \ line."
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Hands-On Steps
+
+
+    6. At the command prompt, type sudo /bin/iptables -L and press Enter to list the
+    current host-based firewall rules.
+
+
+    7. When prompted for a password, type sudo ISS316Security.
+
+    The system returns a list of the existing INPUT, OUTPUT, and FORWARD chains indicating
+    that there are no firewall rules set for any of them.
+
+
+    FIGURE 6.4
+
+    Existing INPUT, OUTPUT,
+
+    and FORWARD chains
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_102_0.png)
+
+
+    8. At the command prompt, type sudo /bin/iptables -I INPUT -m state --state ESTABLISHED,RELATED
+    -j ACCEPT and press Enter to add a new firewall rule that allows INPUT chains
+    to the firewall rules and allow established connections.
+
+
+    9. At the command prompt, type sudo /bin/iptables -A INPUT -p tcp --dport 80 -j
+    ACCEPT and press Enter to add a new firewall rule that allows INPUT chains to
+    the firewall rules and allow http (Web) access.
+
+
+    10. At the command prompt, type sudo /bin/iptables -A INPUT -p tcp --dport 443
+    -j ACCEPT and press Enter to add a new firewall rule that allows INPUT chains
+    to the firewall rules and allow https (SSL) access.
+
+
+    11. At the command prompt, type sudo /bin/iptables -A INPUT -p tcp --dport 22
+    -j ACCEPT and press Enter to add a new firewall rule that allows INPUT chains
+    to the firewall rules and allow secure shell (SSH) connections.
+
+
+    12. At the command prompt, type sudo /bin/iptables -A INPUT -p icmp -j ACCEPT
+    and press Enter to add a new firewall rule that allows INPUT chains to the firewall
+    rules and allow ICMP ping.
+
+
+    13. At the command prompt, type sudo /bin/iptables -A INPUT -p all -j DROP and
+    press Enter to add a new firewall rule that denies all other traffic from the
+    INPUT chains.
+
+
+    14. At the command prompt, type sudo /bin/service iptables save and press Enter
+    to save the rule you just created.
+
+    The system returns an OK flag indicating that the rules have been saved.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# LAB #6 | Hardened Security for Controlling Access
+
+
+    15. Make a screen capture of the terminal window showing the results of the iptables
+    command and paste into a new text document.
+
+
+    > Note: To capture the screen, press the Ctrl and PrSc keys together, and then
+    use Ctrl + V to paste the image into a Word or other word processor document.
+
+
+    16. At the command prompt, type sudo /sbin/iptables -L and press Enter to list
+    the newly saved firewall rules. The system returns a list of the existing INPUT,
+    OUTPUT, and FORWARD commands, including the firewall rules you created in this
+    lab.
+
+
+    # 6.5
+
+    New firewall rules for the INPUT chain
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_103_0.png)
+
+
+    17. Make a screen capture of the terminal window showing the output of the iptables
+    -L, and paste it into your text document.
+
+
+    > Note: The next steps will apply security measures on this server by configuring
+    the TCP Wrappers to deny and log all connections from a particular domain (hackers.com).
+    You will modify the hosts.deny configuration file and attempt to establish an
+    SSH connection to verify your changes.
+
+
+    18. At the command prompt, type su -c ''vi /etc/hosts.deny'' and press Enter to
+    open the hosts.deny configuration file in the VI Editor.
+
+
+    19. When prompted for a password, type ISS316Security.
+
+
+    20. Press the key to enter the INSERT mode.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Hands-On Steps
+
+
+    21. Use the arrow keys to locate the first blank line in the file and type the
+    following new line:
+
+
+    +   - ALL: .hackers.com:severity emergent
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_104_0.png)
+
+
+    22. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command mode. A colon with a blinking cursor at the bottom of the window indicates
+    that you are in the command line mode.
+
+
+    23. Type w and press Enter to save your changes and exit the VI Editor.
+
+
+    24. At the command prompt, type /sbin/ifconfig eth0 and press Enter to find the
+    IP address (inet addr) for the eth0 server.
+
+
+    25. Document the IP address (inetaddr=...) you find in the eth0 section. You will
+    need it in a later stage.
+
+
+    26. At the command prompt, type su -c '' /etc/hosts '' and press Enter to open
+    the hosts file in the VI Editor.
+
+
+    27. When prompted for a password, type ISS316Security.
+
+
+    28. Press the I key to enter the INSERT mode.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# LAB #6 | Apply Hardened Security for Controlling Access
+
+
+    29. Use the arrow keys to locate the IP address you documented in 25.
+
+
+    30. Move the cursor to the space after IP address and type the following address
+    to become the first hostname for this IP address. This change will allow the TargetRedHat01
+    machine to emulate a computer from the restricted hackers.com domain:
+
+
+    +   - lab6.hackers.com
+
+
+    FIGURE 6.7
+
+    Modifying the hosts file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_105_0.png)
+
+
+    31. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.
+
+
+    32. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    33. At the command prompt, type sudo /bin/service ssh status and press Enter to
+    verify that the SSH service is running.
+
+
+    34. When prompted for a password, type ISS5316Security.
+
+    The system will return an OK flag indicating that the service is running. If the
+    service is running, skip to step 36.
+
+
+    35. If the system returns a Failed flag indicating that the service is not running,
+    type sudo /bin/service ssh start and press Enter at the command prompt to start
+    the SSH service.
+
+    The system will return an OK flag indicating that the service is running.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# Hand-On Steps
+
+
+    36. At the command prompt, **type ssh TargetRedHat01 and press press Enter** to
+    attempt an SSH connection from
+
+    the host address that you entered in the hosts file.
+
+    The system will return a refused connection message indicating that lab6.hackers.com
+    is denied
+
+
+    # FIGURE 6.3
+
+
+    Attempting to connect
+
+    host lab6.hackers.com
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_106_0.png)
+
+
+    37. **Make a screen capture** of the terminal window showing the hosts.deny''s
+    output in response to the
+
+    attempt to connect and **paste** into your text document.
+
+
+    > Note:
+
+    The next steps will harden security measures on this server by modifying the SELinux
+    configuration file
+
+    (selinux/config) to enable layered security solutions. You will see the TargetRedHat01
+    server to enforcing mode
+
+    upon boot or reboot. You will also modify the Boolean settings to allow the http
+    server to send e-mail, execute
+
+    PHP scripts, and make use of an NFS share.
+
+
+    38. At the command prompt, **type su -c '' / /etc/selinux/config '' and press
+    Enter** to open the SELinux
+
+    configuration file in the VI Editor.
+
+
+    39. When prompted for a password, **type ISS316Security.**
+
+
+    40. Press the **I** key** to enter the INSERT mode.
+
+
+    41. Use the arrow keys to **locate** the following line:
+
+
+    +   * SELINUX=permissive'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '42. Change the SELINUX setting from permissive to enforcing upon boot or reboot
+    as indicated below:
+
+    * SELINUX=enforcing
+
+
+    # FIGURE 6.9
+
+
+    Modifying the selinux/config file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_107_0.png)
+
+
+    43. Press the Esc key to enter the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command mode.
+
+
+    44. Type wq and press Enter to save your changes and enter the VI Editor.
+
+
+    45. At the command prompt, type su -c ''/usr/bin/setforce 1'' and press Enter
+    to set the server without requiring a reboot.
+
+
+    46. When prompted for a password, type ISS5316Security.
+
+
+    47. At the command prompt, type /usr/sbin/sestatus and press Enter to check the
+    SELinux status. In the output, the current mode and mode from config file should
+    be enforcing.
+
+
+    # FIGURE 6.10
+
+
+    The SELinux status
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_107_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# Hand-On Steps
+
+
+    48. Make a screen capture of the terminal window showing the SELinux status and
+    paste it into your text document.
+
+
+    49. At the command prompt, type sudo /bin/service http status and press Enter
+    to check the status of http service.
+
+
+    50. When prompted for a password, type ISS5316Security.
+
+    The system returns a message indicating that the http service stopped.
+
+
+    51. At the command prompt, type sudo /sbin/service http start and press Enter
+    to start the http (Web) service.
+
+    The system will return an OK flag indicating that the service is running.
+
+
+    52. At the command prompt, type ps -Z http and press Enter to see the SELinux
+    setting to see which Web processes are currently protected.
+
+    The system returns a list of processes under the label user_ucysystem_r:httpd_t.
+
+
+    53. At the command prompt, type /usr/sbin/getsetboolean -a | grep http and press
+    Enter to view the Boolean settings for the Web server type.
+
+    The system returns a list of settings for this, including the following settings
+    that you will modify during this lab:
+
+
+    +   - http_builtin_scripting --off (prohibits the Web server from executing PHP
+    and other Web scripts)
+
+    - http_can_sendmail --off (prohibits the Web server from sending e-mail)
+
+    - http_use_nfs --off (prohibits the Web server from connecting to a remote NFS
+    share)
+
+
+    54. At the command prompt, type su -c ''/usr/sbin/setboolean -P httpd_builtin_scripting
+    1 '' and press Enter to toallow the Web server to execute Web scripts.
+
+
+    55. When prompted for a password, type ISS5316Security.
+
+    This command may take a few moments to relapse. Do not press any keys until the
+    command prompt returns.
+
+
+    56. At the command prompt, type su -c ''/usr/sbin/setboolean -P httpd_can_sendmail
+    1 '' and press Enter to allow the Web server to send mail.
+
+
+    57. When prompted for a password, type ISS5316Security.
+
+    This command may take a few moments to relapse. Do not press any keys until the
+    command prompt returns.
+
+
+    58. At the command prompt, type su -c ''/usr/sbin/setboolean -P httpd_use_nfs
+    1 '' and press Enter to allow the Web server to connect to a remote NFS share.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_108_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# LAB #6 | Apply Hardened Security for Controlling Access
+
+
+    59. When prompted for a password, type ISS316Security.
+
+    This command may take a few moments to relabel. Do not press any keys until the
+    command prompt returns.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_109_0.png)
+
+
+    60. At the command prompt, type /usr/sbin/getsebook -a | grep and press Enter
+    to view the settings for the Web server type.
+
+    The system returns a list of settings for this type; including the following settings
+    that you have already modified during this lab:
+
+
+    +   * httpd_builtin_scripting -> off (allows the Web server from executing PHP
+    and other Web scripts)
+
+    * httpd_can_sendmail -> off (allows the Web server from sending e-mail)
+
+    * httpd_use_nfs -> off (allows the Web server from connecting to a remote NFS
+    shares)
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_109_1.png)
+
+
+    +   61. Make a screen capture of the terminal window showing your changes to the
+    Boolean settings for the Web server type and paste it into your text document.
+
+    62. Close the terminal window.
+
+    63. Close the TargetRedHat1 window.
+
+    64. Click Disconnect when prompted to disconnect the session.
+
+    65. Close the ISSA VM Farm RDP folder.
+
+    66. Use the File Transfer to download the file to your local computer and submit
+    it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #6 that the students
+    must perform:
+
+
+    +   1. Was the student able to review current internal host-based firewall parameters
+    and configuration settings to verify allowed and denied IP communications? – [20%]
+
+
+    +   2. Was the student able to configure an internal host-based firewall using
+    iptables and enable stringent allow/deny rules for services that may require remote
+    access to the system? – [20%]
+
+
+    +   3. Was student able to harden the system by enabling TCP Wrappers to deny
+    and log unauthorized attempts against services and ports running on the system?
+    – [20%]
+
+
+    +   4. Was the student able to secure processes running on the system by using
+    and configuring SELLinux to help perform more in-depth layered security? – [20%]
+
+
+    +   5. Was the student able to verify configurations of the settings applied by
+    connecting to the Linux server using SSH and connect to other services running
+    on a Linux server? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# LAB #6 – ASSESSMENT WORKSHEET
+
+
+    # Apply Hardened Security for Controlling Access
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    # Overview
+
+
+    This lab is an extension of the previous labs, and it incorporated access control
+    for the CentOS Linux Server. In this lab, you first reviewed current host-based
+    IP firewall services, flushed the current firewall configuration, and then re-configured
+    it with stringent permit/deny rule sets. You also configured TCP Wrappers for
+    unauthorized access controls and logging and SELinux for implementation of a layered
+    security strategy.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. Suppose the domain hackers.com is denied for all services in the hosts.deny,
+    and the hosts.allow file has the rule ALL: All. Will TCP Wrappers allow hackers.com
+    access anyway?
+
+
+    +   2. How do you enable SELinux?'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '3. What are three modes of SELinux? Explain their basic functionality.
+
+
+    4. Consider the following firewall rule, and describe what this permits or denies:
+
+
+    5. What command would you use to allow all the traffic from the loopback?
+
+
+    6. What switch would you use to view the network port configuration for the iptables?
+
+
+    7. If a service is to allow in one place and to deny in another, what is the outcome?
+
+
+    8. Is the order of the rules important? If you deny something within the IP network
+    layer, but permit something within the TCP transport layer that uses the IP network
+    layer that you just denied, will your TCP traffic be permitted?'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 9. If one of the files does not exist, what happens?
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Apply Hardened Security for the Linux Kernel
+
+
+    # Introduction
+
+
+    This lab is an extension of the previous labs, and it incorporates security hardening
+    for the Linux kernel with security parameters. In this lab, you will view and
+    tune all kernel parameters and discover information regarding the current Loadable
+    Kernel Modules (LKMs) and information about the kernel itself. The kernel is the
+    core, or base component, of the OS and consists of program code that runs and
+    manages all other code and resources. Finally, you will also enable and interpret
+    the results of the lsmod command.
+
+
+    # Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   * Review and tune the kernel parameters on a CentOS Linux Server for security
+    and monitoring purposes
+
+    * Produce kernel versions and loaded options for a better understanding of how
+    the system is configured and to identify potential security vulnerabilities in
+    the CentOS Linux Server
+
+    * Edit /etc/sysctl.conf file and adjust tcp_syncookies settings to configure secure
+    options for users on a CentOS Linux Server
+
+    * Review and assess the Loaded Kernel Modules (LKMs) of the target Linux system
+    and provide recommendations on the output and current running configuration
+
+    * Use and interpret the lsmod command output and perform security hardening configurations
+    on the CentOS Linux Server
+
+
+    | TOOLS AND SOFTWARE USED |
+
+    | NAME | MORE INFORMATION |
+
+    | None | |'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Your changes to the /etc/sysctl.conf\
+    \ file;\n   b. Output of the sysctl -a command;\n   c. Output of the cat /proc/filesystems\
+    \ command;\n   d. Output of the cat /proc/modules command;\n   e. Output of the\
+    \ cat /proc/version command;\n   f. Output of the cat /proc/cpuinfo command;\n\
+    \   g. Output of the cat /proc/meminfo command;\n   h. Output of the lsmod command;\n\
+    2. Lab Assessment Questions & Answers for Lab #7."
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# Hands-On Steps
+
+
+    # Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation virtual machine desktop
+    of the VSCL, shown here.
+
+
+    FIGURE 7.1
+
+    "Student Landing"
+
+    VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_116_0.png)
+
+
+    +   2. Double-click the ISSA_VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 7.2
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    C:\Documents and Settings\Administrator\Desktop\ISSA_VM Server Farm_RDP
+
+    | Name | Size | Type | Date Modified | Attributes |
+
+    |---|---|---|---||
+
+    | targetRedHat01 | - | Shortcut | 10/21/2021 11:09 AM | |'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# LAB #7 | Apply Hardened Security for the Linux Kernel
+
+
+    +   4. Log in to the TargetRedHat01 server with the following credentials:
+
+    * User name: student
+
+    * Password: ISS3166Security
+
+
+    The GNOME prompt, type cat graphical user interface (GUI) for the virtual Linux
+    server, is displayed.
+
+
+    # FIGURE 7.3
+
+    GNOME desktop
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_117_0.png)
+
+
+    > Note:
+
+    The next steps will harden security measures for a MySQL database application
+    by tuning the CentOS Linux parameters. You will first view the existing settings
+    for the running kernel and then modify the system control configuration (sysctl.conf)
+    file to enable SYN cookies and change the maximum number of files the student
+    user can open.
+
+
+    +   5. Double-click the Terminal icon on the GNOME desktop to open the terminal
+    emulator and access the Linux server command line.
+
+    6. At the command prompt, type cat /etc/sysctl.conf | less and press Enter to
+    view the current settings for the running kernel.
+
+    The system returns a list of the preset configuration. Use the arrow keys to review
+    these settings.
+
+    7. Type q and press Enter to return to the command prompt.
+
+    8. At the command prompt, type su -c '' vi /etc/sysctl.conf '' and press Enter
+    to open the system control configuration file in the VI Editor.
+
+    9. When prompted for a password, type ISS316Security.
+
+    10. Press the I key to enter the INSERT mode.
+
+    11. Use the arrow keys to locate the following lines in the file:
+
+    * net.ipv4.tcp_syncookies=0'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# Hand-On Steps
+
+
+    12. Replace the 0 with a 1 to enable the SYN cookies.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_118_0.png)
+
+
+    13. Make a screen capture of the current configuration and paste it into a new
+    text document.
+
+
+    > Note:\To capture the screen, press the Ctrl and PrtSc keys, and then use Ctrl
+    + V to paste the image into a Word or other word processor document.
+
+
+    14. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command mode.
+
+
+    15. Type wq and press Enter to save your changes and exit the Vi Editor.
+
+
+    16. At the command prompt, type su -c ''echo "1" >/proc/sys/net/ipv4/tcp_syncookies
+    '' and press Enter to change the kernel settings for SYN cookies without requiring
+    for a reboot.
+
+
+    17. When prompted for a password, type ISS316Security.'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# LAB #7 | Hardened Security for the Linux Kernel
+
+
+    18. At the command prompt, type cat /proc/sys/net/ipv4/tcp.sync_cookies and press
+    Enter to view the current kernel parameters.
+
+
+    A in the runtime data indicates that the setting has been changed and SYN cookies
+    are enabled.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_119_0.png)
+
+
+    19. At the command prompt, type /sbin/sysctl -a | less and press Enter to view
+    all available parameters for the running kernel.
+
+
+    The system returns a list of the available parameters.
+
+
+    20. Make a screen capture of the current configuration and paste it into your
+    text document.
+
+
+    21. Type q to return to the command prompt.
+
+
+    22. At the command prompt, type su -c ''/sbin/sysctl -w fs.file-max=100000 ''
+    and press Enter to change the maximum number of files the user can open at one
+    time to 100,000.
+
+
+    23. When prompted for a password, type SS516Security.
+
+
+    > Note: The next steps will harden security measures on this server by using the
+    cat command to uncover information about the processes, file systems, modules,
+    and other details about the current running kernel. You will need screen captures
+    of the output as a deliverable for this lab.'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# Hand-On Steps
+
+
+    24. At the command prompt, **type cat /proc/filesystems and press Enter** to find
+    what types of file systems are supported by the kernel.
+
+
+    25. **Make a screen capture** of this output and **paste it** into your text document.
+    You may have to take multiple screen captures to display the entire output.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_120_0.png)
+
+
+    26. At the command prompt, **type cat /proc/modules and press Enter** to find
+    what modules the kernel is loading.
+
+
+    27. **Make a screen capture** of this output and **paste it** into your text document.
+    You may have to take multiple screen captures to display the entire output.
+
+
+    28. At the command prompt, **type cat /proc/version and press Enter** to find
+    what version of the kernel is currently running.
+
+
+    29. **Make a screen capture** of this output and **paste it** into your text document.
+
+
+    30. At the command prompt, **type cat /proc/cpuinfo and press Enter** to find
+    out information about the CPU.
+
+
+    31. **Make a screen capture** of this output and **paste it** into your text document.
+    You may have to take multiple screen captures to display the entire output.
+
+
+    32. At the command prompt, **type cat /proc/meminfo and press Enter** to find
+    out what processes are running in memory.
+
+
+    33. **Make a screen capture** of this output and **paste it** into your text document.
+    You may have to take multiple screen captures to display the entire output.
+
+
+    > Note:
+
+    The next steps will harden security measures on this server by removing unused
+    modules. You will use the lsmod command to list the modules currently loaded in
+    the kernel and remove an unused module before replacing it. You will document
+    these actions to use as a deliverable for this lab.'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# LAB #7 | Hardened Security for the Linux Kernel
+
+
+    34. At the command prompt, type `/sbin/ismod` and press Enter to list the modules.
+
+    The system returns a list of all the modules currently loaded in the kernel. A
+    `0` in the Used By column indicates the loaded module is not in use and can be
+    removed.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_121_0.png)
+
+
+    35. Make a screen capture of this output and paste it into your text document.
+    You may have to take multiple screens to display the output.
+
+
+    36. At the command prompt, type `su -c ''/sbin/modprobe -r rfcomm'' ` and press
+    Enter to remove the `rfcomm` module.
+
+
+    37. When prompted for a password, type `iss5316security`.
+
+
+    38. At the command prompt, type `/sbin/ismod` and press Enter to list the modules.
+
+    Notice that the `rfcomm` module is no longer in this list.
+
+
+    39. Make a screen capture of this output and paste it into your text document.
+
+    40. ... press Enter to load the `rfcomm` module that was removed in step 36.
+
+
+    41. When prompted for a password, type `iss5316security`.
+
+
+    42. At the command prompt, type `/sbin/ismod` and press Enter to list the loaded
+    modules.
+
+    Notice that the `rfcomm` module is once again loaded in the running kernel.
+
+
+    43. Close the terminal.
+
+
+    44. Close the TargetRedHat01 window.
+
+
+    45. Click Disconnect when prompted to disconnect the session.
+
+
+    46. Close the ISSA_VM Server Farm, RDP folder.
+
+
+    47. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #7 that the students
+    must perform:
+
+
+    +   1. Was the student able to review and tune the kernel parameters on a CentOS
+    Linux Server for security and monitoring purposes? – [20%]
+
+
+    +   2. Was the student able to produce kernel versions and loaded options for
+    a better understanding of how the system is configured and identify potential
+    security vulnerabilities in the CentOS Linux Server? – [20%]
+
+
+    +   3. Was the student able to edit /etc/sysctl.conf file and adjust tcp_syscookies
+    settings to configure secure options for users on a CentOS Linux Server? – [20%]
+
+
+    +   4. Was the student able to review and assess the Loaded Kernel Modules (LKMs)
+    of the target Linux system and provide recommendations on the output and current
+    running configuration? – [20%]
+
+
+    +   5. Was the student able to use and interpret the lsmod command output and
+    perform security hardening configurations on the CentOS Linux Server? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# Apply Hardened Security for the Linux Kernel
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    # Overview
+
+
+    This lab is an extension of the previous labs, and it incorporated security hardening
+    for the Linux kernel with security parameters. In this lab, you viewed and tuned
+    all kernel parameters and discovered information regarding the current Losadable
+    Kernel Modules (LKMs) and information about the kernel itself. The kernel is the
+    core, or base component, of the OS and consists of program code that runs and
+    manages all other code and resources. Finally, you also enabled and interpreted
+    the results of the lsmod command.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. What is the command to view the current Linux kernel parameters?
+
+
+    +   2. What command can you run to list all the kernel''s available parameters
+    one screen at a time with the ability to move forward and backward on the output?
+
+
+    +   3. What is the purpose of enabling SYN cookies in the Linux kernel?'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '4. If you wanted to limit the number of files that a user can open simultaneously
+    on the CentOS Linux Server to a maximum of one, what is the command syntax you
+    need to enable in the Linux kernel?
+
+
+    ________________________________________________________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________________________________________________________
+
+
+    5. What is the best way to make a systemwide permanent change to the kernel to
+    enable SYN cookies?
+
+
+    ________________________________________________________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________________________________________________________
+
+
+    6. Given a system that has been freshly installed, your boss wants to make sure
+    it is up to date and locked down at the kernel level. What steps would you take
+    to verify what modules are loaded into the kernel and how would you go about locking
+    them down?
+
+
+    ________________________________________________________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________________________________________________________
+
+
+    ________________________________________________________________________________________________________________________________________________'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# LAB #7 | Apply Hardened Security for the Linux Kernel
+
+
+    7. What is the relation between sysctl.conf and the sysctl command?
+
+
+    8. If you wanted to modify a kernel parameter without editing the sysctl.conf
+    file, would it be possible? If yes, please give an example.'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# # Implement Best Practices for Secure Software Management
+
+
+    ### Introduction This lab is an extension of the previous labs, and it incorporates
+    security hardening for the Linux kernel with security parameters. In this lab,
+    you will install kernel rpm packages, verify a source tariff used for application
+    integrity verification when downloading and installing new applications, and add
+    a third-party repository to properly secure the rpm databases. You will also use
+    the MD5sum for hashing and integrity verification.
+
+
+    # ## Learning Objectives
+
+
+    +   Upon completing this lab, you will be able to:
+
+    * Recommend security settings after discovering all installed packages in the
+    kernel to help evaluate security measures are necessary
+
+    * Configure the rpm database to add repositories securely for the distribution
+    of software to persons who do not need access to the system directly, only to
+    download any updates or rpm
+
+    * Verify a source tarball to determine whether the integrity and contents of the
+    package are what you expect before executing or installing it
+
+    * Use and leverage MD5sum to verify the integrity of a downloaded software tarball
+
+    * Use GPG to view the signature of a downloaded public key
+
+
+    | TOOLS AND SOFTWARE USED |
+
+    | NAME | MORE INFORMATION |
+
+    | Python | http://www.python.org/download/releases/2.6.5/ |'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Output from the rpm -ql command:\n\
+    \   b. Output from the rpm -qf command:\n   c. Output from the sudo rpm -V command:\n\
+    \   d. Output from the rpm -qa command:\n   e. Output from the verified MD5 checksum\
+    \ of the downloaded Python software:\n   f. Signature of the downloaded GPG key:\n\
+    \   g. Output of ls command showing the added google.repo file:\n2. Lab Assessment\
+    \ Questions & Answers for Lab #8."
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Hands-On Steps
+
+
+    +   1. This lab begins at the student vWorkstation virtual machine desktop of
+    the VSCL, as shown here.
+
+
+    FIGURE 8.1
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_128_0.png)
+
+
+    +   2. Double-click the ISSA_VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 8.2
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    | : Documents and Settings\Administrator\Desktop\ISSA_VM Server Farm_RDP |
+
+    | Name | Size | Date Modified | Attributes |
+
+    | TargetRedHat01 | 0 KB | 07/27/2021 11:05 AM | |'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# LAB #8 | Implement Best Practices for Secure Software Management
+
+
+    4. Log in to the TargetRedHat01 server with the following credentials:
+
+
+    +   * User name: student
+
+    * Password: ISS5316Security
+
+
+    The GNOME desktop, the graphical user interface (GUI) for the virtual Linux server,
+    is displayed.
+
+
+    # LAB 8.3
+
+
+    The GNOME desktop
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_129_0.png)
+
+
+    > Note:
+
+    The next steps will use the RedHat Package Manager (RPM), one of the built-in
+    tools that Linux provides for software management tasks. You will use RPM to view
+    and manage files associated with several software applications.
+
+
+    5. Double-click the Terminal icon on the GNOME desktop to open the terminal emulator
+    and access the Linux server command line.
+
+
+    6. At the command prompt, type rpm -ql sendmail | less and press Enter to view
+    all files associated with the sendmail package.
+
+
+    # LAB 8.4
+
+
+    Output of the rpm -ql command
+
+
+    ```
+
+    $ /etc/alias.db
+
+    ret/mail/aliasfile
+
+    ret/mail/Makefile
+
+    ret/mail/access.db
+
+    ret/mail/bintable.db
+
+    ret/mail/dbfile
+
+    ret/mail/names
+
+    ret/mail/mailtable.db
+
+    ret/mail/sendmail.cm
+
+    ret/mail/sendmail.ct
+
+    ret/mail/sendmail.cf
+
+    ret/mail/sendmail-users
+
+    ret/mail/trusted-users
+
+    ret/mail/vtable.db
+
+    /sbin/init.d/sendmail
+
+    /etc/rc.config/sendmail
+
+    visdbm
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# Hand-On Steps
+
+
+    7. Make a screen capture of the resulting list and paste it into a new text document.
+    You may have to take multiple screen captures to display the entire output.
+
+
+    > Note:
+
+    To capture the screen, press the Ctrl and PrSc keys together, and then use Ctrl
+    + V to paste the image into a Word or other word processor document.
+
+
+    8. Type q to return to the command prompt.
+
+
+    9. At the command prompt, type rpm -qf /bin/ls and press Enter to discover which
+    package installed the /bin/ls executable.
+
+
+    10. Make a screen capture of the resulting list and paste it into your text document.
+
+
+    11. At the command prompt, type sudo rpm -V http and press Enter to verify the
+    integrity of files in the httpd package.
+
+
+    12. This command requires a password, type ss5316Security at the command prompt.
+
+    This command returns any instance where the content of the referenced file, in
+    this case the httpd file, has changed. If no changes have occurred in the file,
+    there will be no output. If the file has been changed, the output will indicate
+    what type of change has been made.
+
+
+    # FIGURE 8.5
+
+    Output from the rpm -qf and rpm -V commands
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_130_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '13. Use the information in the following table to determine which type of change
+    has been made to the httpd file.
+
+
+    | FLAG | DESCRIPTION |
+
+    | --- | --- |
+
+    | S | Size changed |
+
+    | M | Permissions changed |
+
+    | 5 | MD5 changed |
+
+    | L | Symlink changed |
+
+    | D | Device changed |
+
+    | U | User changed |
+
+    | G | Group changed |
+
+    | Missing | File has been deleted or moved |
+
+
+    14. Make a screen capture of your output results and paste it into your text document
+    along with assessment of the type of change indicated by the results.
+
+
+    15. At the command prompt, type rpm -qa | less and press Enter to view all installed
+    packages on this computer.
+
+
+    # **FIGURE 8.6**
+
+    Output of the rpm -qa command
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_131_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '16. Make a screen capture of the resulting list and paste it into your text
+    document. You may have to multiple screen captures to display the entire output.
+
+
+    17. Type q to return to the command prompt.
+
+
+    > Note:
+
+    The next steps will use MDsum hashing to verify the integrity of the source code
+    for the downloaded Python software on this computer. Downloaded software is a
+    significant security threat that should be verified to make sure that it hasn''t
+    been tampered with before it is installed. This portion of the lab requires access
+    to a workstation with Internet access.
+
+
+    18. At the command prompt, type is /opt/software and press Enter to view a list
+    of all of the downloaded software on this computer.
+
+
+    19. From a workstation with Internet access, open a Web browser, such as Mozilla
+    Firefox or Microsoft* Explorer.
+
+
+    20. In the browser''s address box, type http://www.python.org/download/releases/2.6.5/,
+    the URL (uniform resource location) for the Python software.
+
+
+    21. On the Python website, locate the MD5 checksum for the Python 2.6.5.tgz release
+    in the MD5 checksums and sizes of the released files section of the page.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_132_0.png)
+
+
+    22. At the command prompt of the terminal window on vbox, type md5sum /opt/software/Python-2.6.5.tgz
+    and press Enter to view the MD5 checksum for the Python release installed on this
+    computer.
+
+
+    23. Compare the two MD5 checksums to verify that the version of Python installed
+    on this computer matches the version released by Python.'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# LAB #8 Implement Best Practices for Secure Software Management
+
+
+    24. Make a screen capture of this output along with your assessment of the checksum
+    verification and paste into your text document.
+
+
+    > Note:
+
+    The next steps will create a new repository file to hold any software downloaded
+    by Google. When managing downloaded software on a Linux platform, you often have
+    to download GPG keys from the Internet and verify their signatures. You will do
+    that in this lab and then import them to the RPM database before creating the
+    new repository file.
+
+
+    25. At the command prompt, type gpg /opt/software/linux_signing_key.pub and press
+    Enter to view the signature of the downloaded GPG key.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_133_0.png)
+
+
+    26. Make a screen capture of the results and paste into your text document.
+
+
+    27. At the command prompt, type sudo rpm --import /opt/software/linux_signing_key.pub
+    and press Enter to import the key into the RPM database.
+
+
+    28. When prompted for a password, type ISS3316Security.
+
+
+    29. At the command prompt, type cd /etc/yum.repos/ and press Enter to enter the
+    yum.repos directory.
+
+
+    30. At the command prompt, type su -c ''vi google.repo '' and press Enter to open
+    a new file called google.repo in the VI Editor.
+
+
+    31. When prompted for a password, type ISS3316Security.
+
+
+    32. Press the I key to enter the INSERT mode.'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '33. Use the arrow keys to locate the first blank line in the file and type
+    the following new lines:
+
+
+    +   - [Google]
+
+    - name=Google IS418
+
+    - baseurl=http://dl.google.com/linux/rpm/stable/i386
+
+    - enabled=1
+
+    - gpgcheck=1
+
+    - gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_134_0.png)
+
+
+    34. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.
+
+
+    35. Type wq and press Enter to save your changes and exit the VI Editor.
+
+    The new google.repo file will be saved in the yum.repos.d directory. The YUM installer
+    will now check any newly installed software published by Google against the information
+    in this file.
+
+
+    36. At the command prompt, type ls and press Enter to list the files in the yum.repos.d
+    directory.
+
+    The resulting list of files should include the google.repo file you just created.
+
+
+    37. Make a screen capture of the list results and paste it into your text document.
+
+
+    38. Close the terminal window.
+
+
+    39. Close the TargetHat01 window.
+
+
+    40. Click Disconnect when prompted to disconnect the session.
+
+
+    41. Close the ISSA_VM Server Farm. RDP folder.
+
+
+    42. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #8 that the students
+    must perform:
+
+
+    +   1. Was the student able to recommend security settings after discovering all
+    installed packages in the kernel to help evaluate what security measures are necessary?
+    – [20%]
+
+
+    +   2. Was the student able to configure the rpm database to all repositories
+    securely for the distribution of software to persons who do not need access to
+    the system directly, only to download any updates or rpms? – [20%]
+
+
+    +   3. Was the student able to verify a source tarball to determine whether the
+    integrity and contents of the package were what he or she expected before executing
+    or installing it? – [20%]
+
+
+    +   4. Was the student able to use and leverage MD5sum to verify the integrity
+    of a downloaded software tarball? – [20%]
+
+
+    +   5. Was the student able to use GPG to view the signature of a downloaded public
+    key? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# Implement Best Practices for Secure Software Management
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    # Overview
+
+
+    This lab is an extension of the previous labs, and it incorporated security hardening
+    for the Linux kernel with security parameters. In this lab, you installed kernel
+    rpm packages, verified a source tarball used for application integrity verification
+    when downloading and installing new applications, and added a third-party repository
+    to properly secure the rpm databases. You also used the MD5sum for hashing and
+    integrity verification.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. Explain the following command: "rpm -qf /bin/ls"
+
+
+    +   2. Discuss the purpose of a software repository as it relates to YUM.
+
+
+    +   3. How can one ensure a downloaded software package (tarball) is legitimate
+    and hasn’t been tampered with?'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '4. List and explain at least three switches associated with the rpm command
+    that can be leveraged to verify. list, and install rpm packages.
+
+
+    5. What security countermeasure can you enable to verify the integrity of downloaded
+    applications (tar balls) before you perform the installation?
+
+
+    6. Explain what hashing is and how this differs from encryption.
+
+
+    7. If you wanted to know which package a certain program belonged to, what command
+    would you run?'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: 8. During this lab, you reviewed the httpd file for changes. What changes did
+    you record in your text document?
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# # Implement Best Practices for Security Logging and Monitoring
+
+
+    # Introduction
+
+
+    In this lab, you will configure remote logging in the CentOS Linux Server and
+    send syslogs to a remote host for secure secondary logging. You will use Tripwire,
+    a third-party file integrity tool, to identify modifications to important system
+    files. You will configure Rootkit Hunter (rkhunter), to look for rootkits and
+    other anomalies on a set schedule. You will also search the log files for specific
+    criteria.
+
+
+    # Learning Objectives
+
+
+    +   * Configure remote logging in the CentOS Linux Server and send syslogs and
+    other events to a remote host for secure secondary logging
+
+    * Search through different log files in the CentOS Linux Server to identify where
+    certain types of logs are stored and how they get recycled
+
+    * Configure the Tripwire file integrity tool so that modifications to important
+    system files are quickly identified and properly logged locally and remotely
+
+    * Configure and schedule rkhunter to run locally at said interval using the cron
+    subsystem so that a rootkit can be properly properly and quickly identified if
+    possible
+
+    * Configure both automatic searches on log files as well as automatic running
+    of important security applications to properly monitor a CentOS Linux Server for
+    malicious activity
+
+
+    | NAME | MORE INFORMATION |
+
+    | --- | --- |
+
+    | Tripwire | http://www.tripwire.com |
+
+    | Rootkit Hunter | http://rkhunter.sourceforge.net/ |'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. A text document containing\
+    \ screen captures of the following:\n   a. Your changes to the /etc/rsyslog.conf\
+    \ file:\n   b. Output of the /var/log/secure log files:\n   c. Output of the lastb\
+    \ command:\n   d. Output of the tail /var/log/messages command:\n   e. Output\
+    \ of the Tripwire integrity check:\n   f. Your changes to the /etc/rkhunter.conf\
+    \ file:\n   g. Output of the crontab-l command:\n   h. Output of the rkhunter\
+    \ system check summary report;\n2. Lab Assessment Questions & Answers for Lab\
+    \ #9."
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation machine desktop of
+    the VSCL, as shown here.
+
+
+    FIGURE 9.1
+
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_142_0.png)
+
+
+    +   2. Double-click the ISSA_VM Server Farm_RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+
+    +   3. Double-click the TargetRedHat01 file to open the Linux server.
+
+
+    FIGURE 9.2
+
+
+    Open a remote desktop connection to the TargetRedHat01 server
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_142_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "# LAB #9 | Implement Best Practices for Security Logging and Monitoring\n\n\
+    +   4. Log in to the TargetRedHat01 server with the following credentials:\n \
+    \  * User name: student\n   * Password: ISS316security\nThe GNOME command line,\
+    \ the graphical user interface (GUI) for the virtual Linux server, is displayed.\n\
+    \nFIGURE 9.3\nThe GNOME desktop\n\n![](img/2e1421b69289d83e7c4fd114dc4b0083_143_0.png)\n\
+    \n> Note:\nThe next steps will explore the robust nature of Linux's log files\
+    \ and monitoring tools. These tools can help you lock down, guard against, discover,\
+    \ and mitigate security threats. First, you will configure remote logging for\
+    \ an external logging and monitoring server by creating a new rsyslog.conf remote\
+    \ log configuration file. Next, you will search through the log files to search\
+    \ for evidence of an intrusion.\n\n+   5. Double-click the Terminal icon on the\
+    \ GNOME desktop to open the terminal emulator and access the Linux server command\
+    \ line.\n6. At the command prompt, type su -c ' vi /etc/rsyslog.conf ' and press\
+    \ Enter to create a new remote system log configuration file in the VI Editor.\n\
+    7. When prompted for a password, type ISS316Security.\n8. Press the I key to enter\
+    \ the INSERT mode."
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# Hands-On Steps
+
+
+    9. **Type the following new line of text to direct theTargetRedHat01 server and
+    press Enter to send all (**) logging information to a remote server logs.firstworldbank-example.com:
+
+
+    +   * @logs.firstworldbank-example.com
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_144_0.png)
+
+
+    10. **Make a screen capture** showing your changes and **paste** it into a new
+    text document.
+
+
+    > Note:
+
+    to capture the screen, press the **Ctrl PrtSc** keys together, and then use **Ctrl
+    + V** to paste the image into a Word or other word processor document.
+
+
+    11. **Press the Esc key** to exit the INSERT mode and **press Shift +** : to return
+    to the command line mode.
+
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command mode.
+
+
+    12. **Type w** and **press Enter** to save your changes and exit the VI Editor.
+
+
+    13. At the command prompt, **type sudo /sbin/service syslog restart** and **press
+    Enter** to restart the syslog logging mechanism without rebooting.
+
+
+    The system will return OK flags indicating that the process has restarted.
+
+
+    14. When prompted for a password, **type ISS316Security.**'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# LAB #9 | Implement Best Practices for Security Logging and Monitoring
+
+
+    +   15. At the command prompt, **type sudo /sbin/service sshd status** and **press
+    Enter** to check the running status of the openSSH server.
+
+
+    +   16. When prompted for a password, **type iss5316Security.
+
+    The system will return a message indicating that the service is running. If the
+    service is running, skip to step 18.
+
+
+    +   17. If the service is not running, **type sudo /sbin/service sshd start**
+    and **press Enter** at the command prompt to start the SSH service.
+
+    The system will return an OK flag indicating that the service is running.
+
+
+    +   18. At the command prompt, **type ssh nonexistent@localhost** and **press
+    Enter** to attempt to establish an SSH connection to an account that does not
+    exist on the server.
+
+
+    +   19. If prompted to answer the question: **Are sure you want to continue connecting
+    (yes/no)?**, **type yes and press Enter**.
+
+
+    +   20. When prompted for a password for the nonexistent@localhost, **type test
+    and press Enter** to attempt to log into the server.
+
+    Because this account does not exist on the server, the login attempt will fail
+    and the failed attempt will be logged into the system''s log file.
+
+
+    +   21. **Type test and press Enter** for this account.
+
+    The system will return a Permission denied message indicating that the login attempt
+    has aborted.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_145_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# Hands-On Steps
+
+
+    22. At the command prompt, type su -c ''cat /var/secure | grep nonexistent ''
+    and press Enter to see the log file for all the login attempts for the user account
+    named nonexistent.
+
+
+    23. When prompted for a password, type ISS316Security.
+
+
+    24. Make a screen capture of these results and paste it into your text document.
+
+
+    FIGURE 9.6
+
+    Failed login attempts by nonexistent@localhost
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_146_0.png)
+
+
+    25. At the command prompt, type su -c ''last '' and press Enter to read only the
+    failed login attempts on the TargetRedHat01 server.
+
+
+    26. When prompted for a password, type ISS316Security.
+
+
+    27. Make a screen capture of these results and paste it into your text document.
+
+
+    28. At the command prompt, type su -c ''tail /var/log/messages '' and press Enter
+    to read the messages from the last 10 lines recorded in the log file.
+
+
+    29. When prompted for a password, type ISS316Security.
+
+
+    30. Make a screen capture of these results and paste it into your text document.
+
+
+    > Note:
+
+    The next steps will use Tripwire, a third-party tool loaded as a module on this
+    server, to perform an integrity check. First, you will configure a default policy
+    file for Tripwire and create a site and local password. With the passphrase in
+    place, you will initialize the Tripwire database and index all the files on the
+    system.'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# LAB #9 | Implement Best Practices for Security Logging and Monitoring
+
+
+    31. At the command prompt, type su -c ''/usr/bin/tripwire-setup-keyfiles'' and
+    press Enter to load the configuration files, the first step in creating a default
+    policy for Tripwire.
+
+
+    32. When prompted for a password, type ISS5316Security.
+
+
+    33. When prompted by the Tripwire process to enter a site key passphrase, type
+    lab09 and press Enter.
+
+
+    34. Type lab09 to verify the site key passphrase.
+
+
+    35. Once the keyfile has been created, Tripwire will prompt you to create a local
+    keyfile passphrase.
+
+
+    36. Type lab09 to verify the local key passphrase.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_147_0.png)
+
+
+    37. When the keyfiles have been created, Tripwire will prompt you for the site
+    passphrase to sign the configuration file. Type lab09 and press Enter.
+
+
+    38. With the configuration file signed, Tripwire will prompt you for the site
+    passphrase to sign the policy file. Type lab09 and press Enter.
+
+
+    With the policy file (/etc/tripwire/tw.pol) created, Tripwire will provide instructions
+    on to run the command to initialize the database. This process reads the policy
+    file and generates a database from its contents.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Hands-On Steps
+
+
+    39. At the command prompt, `type su -c '' /usr/bin/tripwire ''init '' and press
+    Enter` to begin the initialization process.
+
+
+    40. When prompted for a password, `type ISS316Security`.
+
+
+    41. When prompted for a local passphrase, `type type lab09`.
+
+    Tripwire will index all of the files on the computer as specified in the policy
+    file. This may take several minutes. Do not touch any keys until the terminal
+    prompt appears. You will see *No such file or directory* messages because the
+    policy file used in this lab references several locations that are not found on
+    this server.
+
+
+    # FIGURE 9.8
+
+
+    Initializing the Tripwire database
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_148_0.png)
+
+
+    42. At the command prompt, `type su -c '' '' /bin/ls '' and press Enter` to force
+    a timestamp on the bin/ls file.
+
+
+    43. When prompted for a password, `type ISS316Security`.
+
+
+    44. At the command prompt, `type su -c '' '' /usr/bin/tripwire --check '' and
+    press Enter` to run a file integrity check with Tripwire.
+
+
+    45. When prompted for a password, `type ISS316Security`.
+
+    Tripwire will check the indexed files as specified in the policy file. This may
+    take several minutes. Do not touch any keys until the terminal prompt appears.
+    You will see *No such file or directory* messages because the policy file used
+    in this lab references several locations that are not found on this server.'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# LAB #9 | Implement Best Practices for Security Logging and Monitoring
+
+
+    46. Use the scrollbar to review the reported violations in the integrity check.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_149_0.png)
+
+
+    47. Make a screen capture of the report and paste it into your text document.
+    You may have to take multiple screen captures to display the entire output.
+
+
+    > Note:
+
+    The next steps will use rkhunter (Rootkit Hunter), a tool that scans the server
+    for rootkits, backdoors, and other anomalies. You will edit the rkhunter configuration
+    file, schedule the rkhunter report to run at a specific time, and run the rkhunter
+    check summary report.
+
+
+    48. At the command prompt, type su -c ''vi /etc/rkhunter.conf'' and press Enter
+    to open the system log configuration in the VI Editor.
+
+
+    49. When prompted for a password, type type ISS316Security.
+
+
+    50. Press the key to enter the INSERT mode.
+
+
+    51. Use the arrow keys to locate the following line. Press Enter at the end of
+    the line to create a new line:
+
+
+    +   - #MAIL-ON-WARNING=me@mydomain root@mydomain'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# Hand-On Steps
+
+
+    52. Type the following line of text and press Enter to add the student account
+    to rkhunter tool:
+
+
+    +   - MAIL-ON-WARNING=student
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_150_0.png)
+
+
+    53. Make a screen capture showing your changes and paste it into your text document.
+
+
+    54. Press the Esc key to exit the INSERT mode and press Shift + : return to the
+    command line mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command
+
+    line mode.
+
+
+    55. Type wq to save your changes and exit the VI Editor.
+
+
+    56. At the command prompt, type vi rkhunter.txt and press Enter to create a new
+    text file in the VI Editor.
+
+
+    57. Press the I key to enter the INSERT mode.
+
+
+    58. Type the following new line of text and press Enter to use with cron scheduler
+    to run an rkhunter
+
+    report every morning at 2:30 a.m.:
+
+
+    +   - 30 2 * * * /usr/local/bin/rkhunter -c - >dev/null 2>&1
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_150_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# LAB #9 | Implement Best Practices for Security Logging and Monitoring
+
+
+    59. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode.
+
+    A colon with a blinking cursor at the bottom of the window indicates that you
+    are in the command line mode.
+
+
+    60. Type wq and press Enter to leave the VI Editor.
+
+
+    61. At the command prompt, type su -c ''crontab rkhunter.txt '' and press Enter
+    to schedule the cron job for the root user.
+
+
+    62. When prompted for a password, type ISS3316security.
+
+
+    63. At the command prompt, type su -c ''crontab -l'' and press Enter to list the
+    scheduled cron jobs.
+
+
+    64. When prompted for a password, type ISS3316security.
+
+
+    65. Make a screen capture of this output and paste it into your text document.
+
+
+    66. At the command prompt, type su -c ''/usr/local/bin/rkhunter -c '' and press
+    Enter to run the rkhunter check summary report.
+
+
+    67. When prompted for a password, type ISS3316security.
+
+    Rkhunter will check the system for any anomalies that could indicate a breach.
+    This check may take several minutes. Throughout this process, rkhunter will prompt
+    you to Press Enter to continue.
+
+
+    FIGURE 9.12
+
+    Running the rkhunter report
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_151_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# Hand-On Steps
+
+
+    68. Follow the onscreen instructions and press Enter as indicated until the command
+    prompt returns.
+
+
+    69. Use the scrollbar to review the reported anomalies in the summary.
+
+
+    FIGURE 9.13
+
+    rkhunter check
+
+    summary report
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_152_0.png)
+
+
+    70. Make a screen capture of the summary report and paste it into your text document.
+    You may have to take multiple screen captures to display the entire summary.
+
+
+    +   71. Close the terminal window.
+
+    72. Close the TargetRedHat01 window.
+
+    73. Click Disconnect when prompted to disconnect the session.
+
+    74. Close the ISSA_VM Server Farm_RDP folder.
+
+    75. Use the File Transfer button to download the text file to your local computer
+    and submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #9 that the students
+    must perform:
+
+
+    +   1. Was the student able to configure remote logging in the CentOS Linux Server
+    and send syslogs and other events to a remote host for secure logging? – [20%]
+
+    2. Was the student able to search through different log files in the CentOS Linux
+    Server to identify where certain types of logs are stored and how often they get
+    recycled? – [20%]
+
+    3. Was the student able to configure the Tripwire integrity tool so that important
+    system files are quickly identified and properly logged both locally and remotely?
+    – [20%]
+
+    4. Was the student able to configure and schedule rkhunter to run at said interval
+    using the cron subsystem so that a rootkit can be properly and quickly identified
+    if possible? – [20%]
+
+    5. Was the student able to configure both automatic searches on log files as well
+    as automatic running important security applications to properly monitor a CentOS
+    Linux Server for malicious activity? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# Implement Best Practices for Security Logging and Monitoring
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    Overview
+
+    In this lab, you configured remote logging in the CentOS Linux Server and sent
+    syslogs to a remote host for secure secondary logging. You used Tripwire, a third-party
+    file integrity tool, to identify modifications to important system files. You
+    configured Rootkit Hunter (rkhunter), to look for rootkits and other anomalies
+    on a set schedule. You also searched the log files for specific criteria.
+
+
+    Lab Assessment Questions & Answers
+
+
+    +   1. What is the primary place to store log files on a local Linux system and
+    what are recommended procedures for that location?
+
+
+    +   2. Why is remote logging to a central server considered a best practice?'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '3. What change would you make to the rsyslog.conf file to send logging information
+    from your Linux system to a remote logging server at 172.130.1.254?
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    4. Why is the Tripwire application considered a file integrity checker?
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    5. Could rkhunter be considered a file integrity checker? Why or why not?
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    6. How would you check to see that a recurring cron job was scheduled to run?
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    7. How would you send syslogs for cron jobs to a remote server identified as 172.130.1.254?
+    Include only error conditions or higher.
+
+
+    ______________________________________________________________________________________________________________________________________________________
+
+
+    ______________________________________________________________________________________________________________________________________________________'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: 8. Specify a security implication of the syslog service on a system.
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# # Define Linux OS and Application Backup and Recovery Procedures
+
+
+    # ## Introduction
+
+
+    In this lab, you will maximize availability and define a recovery time objective
+    for data file backups and recovery on a production CentOS Linux Server. You will
+    secure a data file backup using openssl encryption and restore the data file from
+    the encrypted backup. You also will recover a deleted file using the /proc function.
+
+
+    # ## Learning Objectives
+
+
+    Upon completing this lab, you will be able to:
+
+
+    +   - Ensure Linux OS, application, and data availability with documented backup
+    and recovery procedures
+
+    - Configure and perform backups within the Linux operating system as an automated
+    and stable version of enhancing backup and recovery procedures and maximizing
+    system availability
+
+    - Encrypt backups in the Linux operating system as they are being performed and
+    for securing data backups and storage
+
+    - Restore encrypted backups for full recovery of the Linux OS as per defined recovery
+    time objectives (RTO)
+
+    - Back up and restore deleted files using /proc in Linux so that an entire system
+    does not have to be restored in the instance of a deleted file
+
+
+    | NAME | MORE INFORMATION |
+
+    | --- | --- |
+
+    | None | |'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: "# Deliverables\n\nUpon completion of this lab, you are required to provide\
+    \ the following deliverables to your instructor:\n\n+   1. Lab10tar.gz.des 3;\n\
+    2. A text document containing the recovery time objective (RTO) for the restored\
+    \ sendmail.mc file and screen captures of the following:\n   a. Output of the\
+    \ ls /etc/mail/sendmail.mc command:\n   b. Output of the hacked.sh restore;\n\
+    3. Lab Assessment Questions & Answers for Lab #10."
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# Hands-On Steps
+
+
+    149
+
+
+    # Hands-On Steps
+
+
+    +   1. This lab begins at the student landing vWorkstation virtual machine desktop
+    of the VSCL, as shown here.
+
+
+    FIGURE 10.1
+
+    "Student Landing" VSCL workstation
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_160_0.png)
+
+
+    +   2. Double-click the ISSA, VM Server Farm, RDP icon on the desktop. This folder
+    contains links to the virtual servers in this lab environment.
+
+    3. Double-click the TargetRedHat01file to open the Linux server.
+
+
+    FIGURE 10.2
+
+    Open remote desktop connection to the TargetRedHat01 server
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_160_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# LAB #10 | Define Linux OS and Application Backup and Recovery Procedures
+
+
+    +   4. Log in the TargetRedHat01 server with the following credentials:
+
+    * User name: student
+
+    * Password: ISS316Security
+
+
+    The GNOME desktop, the graphical user interface (GUI) for the virtual Linux server,
+    is displayed.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_161_0.png)
+
+
+    > Note:
+
+    The next steps will back up a data file on the Linux OS. You will secure a backup
+    file, encrypt it using the openssl command, and then remove the unencrypted data
+    file.
+
+
+    +   5. Double-click the Terminal icon on the GNOME desktop to open the terminal
+    emulator and access the Linux server command line.
+
+    6. At the command prompt, type cd and press Enter to change the directory to the
+    home directory.
+
+    7. At the command prompt, type pwd and press Enter to verify that you are in the
+    home directory. The system will return the current directory as /home/student.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_161_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# On-Hand Steps
+
+
+    8. At the command prompt, type su -c ''tar zcvf lab10.tar.gz /etc /var '' and
+    press Enter to archive and compress the /etc /var directories for backup.
+
+
+    9. This command requires a password, type ISS316Security at the command prompt.
+
+    The system will return all directories and files as they are backed up. This will
+    take several minutes. Once the backup process is complete, the system will create
+    a new compressed file lab10.tar.gz containing the contents of the /etc and /var
+    directories.
+
+
+    10. At the command prompt, type su -c ''openssl des3 -salt -out lab10.tar.gz.des3
+    lab10.tar.gz '' and press Enter to encrypt the file.
+
+
+    11. When prompted for a password, type ISS316Security.
+
+    To finalize the encryption process, the system will prompt you for an encryption
+    password.
+
+
+    12. Type lab10 when prompted to enter a de-ede3-3c encryption password.
+
+    13. Type lab10 when prompted to verify the de-ede3-3c encryption password.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_162_0.png)
+
+
+    14. At the command prompt, type ls lab10.tar.gz.des3 and press Enter to verify
+    that the new encrypted file has been created.
+
+    The system will return the lab10.tar.gz.des3 file. If the system returns no such
+    file or directory message, confirm your spelling in step 14 or repeat steps 10-13
+    to ensure the file is created.
+
+
+    15. At the command prompt, type su -c ''rm -f lab10.tar.gz '' and press Enter
+    to delete (remove) the unencrypted file. When prompted for a password, type ISS316Security.
+
+
+    16. Use the File Transfer button to download lab10.tar.gz to your local computer
+    and submit it as part of your deliverables.
+
+
+    > > Note:
+
+    The next steps will simulate a deleted file, then you will decrypt the backup
+    file and use it to restore the "deleted" data file (sendmail.mc). You will be
+    keeping track of the time that it takes to perform the steps in this section.
+    That time is the recovery time objective (RTO) for this data recovery. You will
+    submit with that time your deliverables for this lab.'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '# LAB #10 | Define Linux OS and Application Backup and Recovery Procedures
+
+
+    17. Check the system clock and record the start time ( ) for this set of steps.
+
+
+    18. At the command prompt, type su -c '' mv /etc/mail/sendmail.mc /tmp '' and
+    press Enter to move the sendmail.mc file to the /tmp directory storing a deleted
+    configuration.
+
+
+    19. When prompted for a password, type IS55316Security.
+
+
+    20. At the command prompt, type su -c '' openssl des3 -d -salt -in lab10.tar.gz.des3
+    -out lab10.tar.gz '' andnpress Enter to decrypt the backup file.
+
+
+    21. When prompted for a password, type IS55316Security.
+
+
+    22. When prompted for the password, type the de-eds3-cbc decryption password,
+    type lab10.
+
+    deryption process will take several seconds. Do not touch any keys until the prompt
+    returns.
+
+
+    23. At the command prompt, type su -c '' tar xvf lab10.tar.gz -c /etc/mail/sendmail.mc
+    '' and press Enter to restore the sendmail configuration from the backup file
+    to its appropriate location. Note the space on the backslash before /etc/mail...
+    This is a required space and the command will not work without it.
+
+
+    24. When prompted for a password, type IS55316Security.
+
+
+    25. At the command prompt, type ls /etc/mail/sendmail.mc and press Enter to verify
+    that the sendmail.mcfile has been restored.
+
+    The system will return the sendmail.mc filename. If the system returns a No file
+    or directory message, confirm your prompt in step 25 or repeat steps 20-25 to
+    ensure the file is created.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_163_0.png)
+
+
+    26. Check the system clock and record the stop time ( ) for this set of steps.
+
+
+    27. Make a screen capture of the terminal window showing the results of the ls
+    /etc/mail/sendmail.mccommand and paste it into a new text document.
+
+
+    > Note:
+
+    to capture the screen, press the Ctrl and PrtSc keys together, and then use Ctrl
+    + V to paste the image into a Word or other processor document.'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '28. In your document, record the RTO (RTO=stop time less start time) for the
+    recovery of the sendmail.
+
+
+    > The next steps will restore a deleted file that was not captured in a backup
+    data file. The system will hold deleted files in memory for a period of time with
+    a process ID number (PID). As long as the file is still being referenced by the
+    less command, you can restore it. You will first create a new file (acked.sh)
+    that is not a part of the lab10.tar.gz backup and delete it. Finally, you will
+    restore the file using the /proc command.
+
+
+    29. At the command prompt, type vi hacked.sh and press Enter to open a new file
+    called hacked.sh in the VI Editor.
+
+
+    30. Press the I to enter INSERT mode.
+
+
+    +   31. Use the arrow keys to locate the first blank line in the file and type
+    the following line:
+
+    - You have been hacked!
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_164_0.png)
+
+
+    32. Press the Esc key to exit the INSERT mode and press Shift + : to return to
+    the command line mode. A colon with a blinking cursor at the bottom of the window
+    indicates that you are in the command line mode.
+
+
+    33. Type wq and press Enter to save your changes and exit the VI Editor.
+
+
+    34. At the command prompt, type less hacked.sh and press Enter to view the contents
+    of the hacked.sh file you just created.
+
+
+    35. Hold CTRL and press the Z key to exit the less screen.
+
+
+    36. At the command prompt, type rm -f hacked.sh and press Enter to delete the
+    hacked.sh file.'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# LAB #10 | Define Linux OS and Application Backup and Recovery Procedures
+
+
+    37. At the command prompt, type /usr/bin/lsof | grep hacked and press Enter to
+    verify that the file is being referenced by the command and obtain the process
+    ID (PID).
+
+
+    The PID is a numeric reference number for the file. The number may be different.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_165_0.png)
+
+
+    38. Document the process ID for the hacked.sh file on your vWorkstation (PID=...).
+    You will need it in the next step.
+
+
+    39. At the command prompt, type cd /proc/PID/fd and press Enter to find the file
+    in the system memory. Replace PID in this command line with the actual number
+    you documented in step 38.
+
+
+    40. At the command prompt, type ls -is and press Enter to find the file descriptor
+    associated with the deleted file.
+
+
+    Though several file may be returned, the correct descriptor will reference the
+    previous location of the deleted file (/home/student/hacked.sh).
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_165_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# Hands-On Steps
+
+
+    41. Document the file descriptor for the hacked.sh file (descriptor=). You will
+    need it in the next step.
+
+
+    42. At the command prompt, type cp descriptor /home/student/hacked.recovered and
+    press Enter to recover the file by copying the file descriptor to the hard drive.
+
+    Replace descriptor in this command line with the actual number documented in step
+    41.
+
+
+    43. At the command prompt, type cat /home/student/hacked.recovered and press Enter
+    to view the contents of the recovered file.
+
+
+    FIGURE 10.10
+
+    Recovering the hacked.
+
+    sh file
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_166_0.png)
+
+
+    44. Make a screen capture of the terminal window showing the results of the recovery
+    and paste it into a new text document.
+
+
+    45. Close the terminal window.
+
+
+    46. Close the TargetRedHat01 window.
+
+
+    47. Click Disconnect when prompted to disconnect the session.
+
+
+    48. Close the ISSA. VM Server Farm. RDP folder.
+
+
+    49. Use the File Transfer button to download the file to your local computer and
+    submit it as part of your deliverables.'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria for Lab #10 that the students must perform:
+
+
+    +   1. Was the student able to ensure Linux OS, application, and data availability
+    with documented backup and recovery procedures? – [20%]
+
+    2. Was the student able to configure and perform backups within the Linux operating
+    system as an automated and stable way of enhancing backup and recovery procedures
+    and maximizing system availability? – [20%]
+
+    3. Was the student able to encrypt backups in the Linux operating system as they
+    are being performed and for securing data backups? – [20%]
+
+    4. Was the student able to restore encrypted backups for full recovery of the
+    Linux OS as per defined recovery time objectives (RTO)? – [20%]
+
+    5. Was the student able to back up and restore deleted files using /proc in Linux
+    so that an entire system does not have to be restored in the instance of a deleted
+    or corrupted file? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# Define Linux OS and Application Backup and Recovery Procedures
+
+
+    | Course Name and Number: |
+
+    | Student Name: |
+
+    | Instructor Name: |
+
+    | Lab Due Date: |
+
+
+    Overview
+
+
+    In this lab, you maximized availability and defined a recovery time objective
+    for data file backups and recovery on a production CentOS Linux Server. You secured
+    a data file backup using openssl encryption and restored the data file from the
+    encrypted backup. You also recovered a deleted file using the /proc recovery function.
+
+
+    Lab Assessment Questions & Answers
+
+
+    +   1. Why is encrypting an already compressed file necessary?
+
+
+    +   2. Why is it best practice to encrypt backups?
+
+
+    +   3. Why is performing messaging, such as e-mails, in an encrypted fashion recommended
+    as part of a secure communications strategy? Explain.'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '4. Explain each of the switches used in the following command: `tar xvzf fwbsl.tar.gz
+    etc/mail/sendmail.mc -C /etc/mail.`
+
+
+    _________________________________________________________________________________\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+    _________________________________________________________________\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    5. How is it possible to recover a deleted file from the pseudo file system /proc?
+
+
+    _________________________________________________________________________________\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\n_________________________________________________\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    6. If the recovery time objective (RTO) were unacceptable to your organization’s
+    business continuity plan, what could you do to ensure that you achieve the desired
+    RTO for data file, applications, or systems?
+
+
+    _________________________________________________________________________________\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\n_________________________________\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '7. What would be an issue when restoring a tar that was saved onto the local
+    drive under /home/student/
+
+
+    8. What descriptor did you type in step 42 of this lab: cp descriptor /home/student/hacked.recovered'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# LABORATORY MANUAL TO ACCOMPANY
+
+
+    # Security Strategies in Linux Platforms and Applications
+
+
+    VERSION 1.5
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_177_0.png)
+
+
+    This manual includes lab instructions to be carried out using the Jones & Bartlett
+    Learning Virtual Security Labs powered by Toolwire. These labs allow users to
+    experience hands-on, equipment-based labs that mimic real-world IT security scenarios
+    in a realistic mock environment.
+
+
+    ![](img/2e1421b69289d83e7c4fd114dc4b0083_177_1.png)'
+  merge: -1
+  img_proc: true
