@@ -1,0 +1,778 @@
+- - '#'
+  - Linux Shell 命令参考：从 A 到 Z
+- - '#'
+  - 使用说明
+- - '#'
+  - 屏幕说明
+- - '##'
+  - 引言
+- - '#'
+  - 命令概述
+- - '###'
+  - 文件管理
+- - '###'
+  - 查找文件
+- - '###'
+  - 压缩与归档
+- - '###'
+  - 文本处理
+- - '##'
+  - 转换器 (Converters)
+- - '##'
+  - 进程管理 (Managing Processes)
+- - '##'
+  - 用户与组管理 (Managing Users and Groups)
+- - '##'
+  - 文件系统管理 (Administrating the File System)
+- - '#'
+  - 包管理
+- - '#'
+  - 网络管理
+- - '#'
+  - 攻击与安全
+- - '#'
+  - 打印机、数据库和服务器管理
+- - '#'
+  - 音频功能与硬件管理
+- - '#'
+  - 蓝牙
+- - '#'
+  - 内核 (Kernel)
+- - '#'
+  - 系统启动与停止、init 系统、日志记录和 GRUB
+- - '#'
+  - 虚拟化、容器、云服务
+- - '#'
+  - 终端和文本控制台
+- - '#'
+  - 在线帮助
+- - '#'
+  - 图形系统和 Gnome
+- - '#'
+  - bash 编程 (Programming)
+- - '#'
+  - bash 变量管理 (Variable Management)
+- - '#'
+  - bash 命令和特殊字符 (Commands and Special Characters)
+- - '#'
+  - 配置文件 (Configuration Files)
+- - '#'
+  - 快捷键
+- - '##'
+  - 引言
+- - '##'
+  - 什么是命令？
+- - '##'
+  - 选项
+- - '##'
+  - man, info, 和 help
+- - '##'
+  - 示例
+- - '##'
+  - acme.sh [options]
+- - '##'
+  - alsactl [options] [command] [card/id/device]
+- - '##'
+  - alternatives [options] command
+- - '##'
+  - amixer [options] command
+- - '##'
+  - apt-cache 命令
+- - '##'
+  - apt-file [options]
+- - '##'
+  - apt-get [options] 命令
+- - '##'
+  - /etc/apt/sources.d/myrepo.list
+- - '##'
+  - aptitude search
+- - '##'
+  - arp [options] [hosts/ipaddresses/network]
+- - '##'
+  - arp-scan [options] [hosts/ipaddresses/network]
+- - '##'
+  - atq
+- - '##'
+  - atrm n
+- - '##'
+  - attr [options] files
+- - '##'
+  - aws [options] command [subcommand]
+- - '##'
+  - 安装与配置
+- - '##'
+  - 语法与在线帮助
+- - '##'
+  - S3 管理
+- - '##'
+  - EC2 管理
+- - '##'
+  - bat 文本文件
+- - '##'
+  - batch
+- - '##'
+  - bc [file]
+- - '##'
+  - 替代方案
+- - '##'
+  - bg [process]
+- - '##'
+  - blkid [options] [device]
+- - '##'
+  - bluetoothctl
+- - '##'
+  - boltctl 命令
+- - '##'
+  - break [n]
+- - '##'
+  - btrfs 命令
+- - '##'
+  - bunzip2 file.bz2
+- - '##'
+  - bzip2 file
+- - '##'
+  - canonical-livepatch [command]
+- - '##'
+  - cat [options] [files]
+- - '##'
+  - Variants
+- - '##'
+  - chkrootkit [options]
+- - '##'
+  - setuid, setgid, and sticky Bits
+- - '##'
+  - 八进制表示
+- - '##'
+  - 选项
+- - '##'
+  - chpasswd [options]
+- - '##'
+  - chroot directory [command]
+- - '##'
+  - cksum file
+- - '##'
+  - cmp [options] file1 file2
+- - '##'
+  - cnf 命令
+- - '##'
+  - column [options] file
+- - '##'
+  - compress [options] file
+- - '##'
+  - continue [n]
+- - '##'
+  - convert or magick [options] image old image
+- - '##'
+  - 复制目录
+- - '##'
+  - cpio 命令 [选项]
+- - '##'
+  - crontab [options]
+- - '##'
+  - cryptsetup [options] 命令
+- - '##'
+  - 分割位置规范
+- - '##'
+  - 替代方案
+- - '##'
+  - dd 命令
+- - '##'
+  - delta [options] file1 file2
+- - '##'
+  - deluser [options] name
+- - '##'
+  - depmod [options]
+- - '##'
+  - df [options] [directory]
+- - '##'
+  - dig [options] [@dnsserver] host/ipaddr [type]
+- - '##'
+  - dircolors [options] [file]
+- - '##'
+  - dirname string
+- - '##'
+  - dirs
+- - '##'
+  - disown [options] [jobspec]
+- - '##'
+  - dmesg [options]
+- - '##'
+  - dnf [options] 命令
+- - '##'
+  - config-manager [options]
+- - '##'
+  - copr [enable|remove|list|search]
+- - '##'
+  - download
+- - '##'
+  - downgrade
+- - '##'
+  - grouplist/groupinfo/groupinstall/groupupdate/groupremove
+- - '##'
+  - history
+- - '##'
+  - info
+- - '##'
+  - install name12 ...
+- - '##'
+  - list
+- - '##'
+  - makecache [fast]
+- - '##'
+  - module install/update/remove/enable/disable/lock/unlock/list/info
+- - '##'
+  - repoquery name
+- - '##'
+  - search query term
+- - '##'
+  - update
+- - '##'
+  - update name12 ...
+- - '##'
+  - upgrade
+- - '##'
+  - docker [options] 命令
+- - '##'
+  - dpkg options [filename/packagename]
+- - '##'
+  - dvips [options] name.dvi
+- - '##'
+  - 'e4derag '
+- - '##'
+  - egrep [options] search pattern file
+- - '##'
+  - enscript [options] source file
+- - '##'
+  - erd [options]
+- - '##'
+  - etherwake [options]
+- - '##'
+  - exit
+- - '##'
+  - exiftool [options] file/directory
+- - '##'
+  - fc-list [pattern]
+- - '##'
+  - fdisk [options] [device]
+- - '##'
+  - ffmpeg [-i] infile [-opts] outfile
+- - '##'
+  - fg [process]
+- - '##'
+  - fgconsole [--next-available]
+- - '##'
+  - file [options]
+- - '##'
+  - firewall-cmd 选项
+- - '##'
+  - flatpak [options]
+- - '##'
+  - fold
+- - '##'
+  - fsck [options] [device]
+- - '##'
+  - findmnt [options] [device/mountpoint]
+- - '##'
+  - free [options]
+- - '##'
+  - fdisk
+- - '##'
+  - ftp [options]
+- - '##'
+  - fwupdmgr get-devices
+- - '##'
+  - getenforce
+- - '##'
+  - getfacl [options] file
+- - '##'
+  - getopts
+- - '##'
+  - git 命令
+- - '##'
+  - groupadd name
+- - '##'
+  - groupdel name
+- - '##'
+  - groupmod [options] name
+- - '##'
+  - groups [username]
+- - '##'
+  - grub-install [device]
+- - '##'
+  - gsettings [options]
+- - '##'
+  - gunzip file
+- - '##'
+  - gzip [options] file
+- - '##'
+  - halt
+- - '##'
+  - hciconfig [idevice] [command]
+- - '##'
+  - hcitool [options] [command]
+- - '##'
+  - head [options] file
+- - '##'
+  - help name
+- - '##'
+  - host [options] /ip-address
+- - '##'
+  - hostnamectl [options] [command]
+- - '##'
+  - htop
+- - '##'
+  - iconv
+- - '##'
+  - id
+- - '##'
+  - iftop [options]
+- - '##'
+  - inotifywait [options] [files/directories]
+- - '##'
+  - install [options] source target
+- - '##'
+  - ipcalc ipaddress [netmask]
+- - '##'
+  - iptables [options]
+- - '##'
+  - iptables -N mychain
+- - '##'
+  - iptables -L [chain] [-t table] [-v]
+- - '##'
+  - iptables -D chain [-t table]
+- - '##'
+  - iptables -F chain [-t table]
+- - '##'
+  - iptables -X [mychain]
+- - '##'
+  - iw 命令
+- - '##'
+  - john [options] [hashfile]
+- - '##'
+  - kill [-s signal] 进程号
+- - '##'
+  - kpartx [磁盘设备]
+- - '##'
+  - l2ping [options] 蓝牙 [蓝牙]
+- - '##'
+  - lame [options] 输出文件
+- - '##'
+  - last [options]
+- - '##'
+  - lastb [options]
+- - '##'
+  - ldconfig
+- - '##'
+  - ldd 程序
+- - '##'
+  - loadkeys [options] file-name
+- - '##'
+  - logger [options] message
+- - '##'
+  - logname
+- - '##'
+  - logout
+- - '##'
+  - Lpadmin [options]
+- - '##'
+  - Lpinfo [options]
+- - '##'
+  - lpoptions [options]
+- - '##'
+  - lpq [options]
+- - '##'
+  - lpr 文件
+- - '##'
+  - lprm [options] [id]
+- - '##'
+  - lpstat [options]
+- - '##'
+  - lsb_release [options]
+- - '##'
+  - lscpu [options]
+- - '##'
+  - lshw [options]
+- - '##'
+  - lsmod
+- - '##'
+  - lsof [options] [file/interface]
+- - '##'
+  - lspci [options]
+- - '##'
+  - lvreduce [options] lvname
+- - '##'
+  - lvremove [options] lvname
+- - '##'
+  - lvrename oldlvname newname
+- - '##'
+  - lvscan [options]
+- - '##'
+  - magick [options] imageold imagenew
+- - '##'
+  - mail [options] mail@hostname < message text
+- - '##'
+  - md5sum files
+- - '##'
+  - mdadm [options]
+- - '##'
+  - mkdir directory
+- - '##'
+  - mkfifo file
+- - '##'
+  - mkfs [options] device [blocks]
+- - '##'
+  - mkfs.btrfs [options] device1 [device2]
+- - '##'
+  - mkfs.exfat [options] device
+- - '##'
+  - mkfs.vfat [options] device
+- - '##'
+  - mkfs.fs [options] device
+- - '##'
+  - 通用挂载选项
+- - '##'
+  - 通用文件系统选项
+- - '##'
+  - btrfs 选项
+- - '##'
+  - CIFS 选项
+- - '##'
+  - exFAT 选项
+- - '##'
+  - ext3/ext4 选项
+- - '##'
+  - ext3/ext4 日志模式
+- - '##'
+  - NFS 选项
+- - '##'
+  - NTFS 选项
+- - '##'
+  - VFAT 选项
+- - '##'
+  - XFS Options
+- - '##'
+  - mtr [options] host name
+- - '##'
+  - multitail options [file1 file2 file3 ...]
+- - '##'
+  - mv
+- - '##'
+  - n [options] [hostname/ip-]
+- - '##'
+  - ncdu [options] [directory]
+- - '##'
+  - needsrestart [options] [##] [port]
+- - '##'
+  - netplan [options]
+- - '##'
+  - networkctl [command]
+- - '##'
+  - newaliases
+- - '##'
+  - newgrp [group name]
+- - '##'
+  - newusers
+- - '##'
+  - nft Commands
+- - '##'
+  - ngrep [options] [grep-expression]
+- - '##'
+  - nice [options] program
+- - '##'
+  - ncap [options] [cap-filter]
+- - '##'
+  - ncli [options]
+- - '##'
+  - nmap
+- - '##'
+  - 外部的 SSH
+- - '##'
+  - 外部的连接
+- - '##'
+  - HTTP + HTTPS (端口80 443), Samba
+- - '##'
+  - 现在你可以运行脚本：
+- - '##'
+  - nmblookup [options] workgroupname
+- - '##'
+  - nmblookup [options] workgroupname
+- - '##'
+  - parted [options] [device]
+- - '##'
+  - pdf2ps [options] source.pdf [target.ps]
+- - '##'
+  - pdfimages [options] source.pdf [image name]
+- - '##'
+  - pdftotext [options] source.pdf [target.txt]
+- - '##'
+  - pdfunite in1.pdf in2.pdf out.pdf
+- - '##'
+  - pdfinfo
+- - '##'
+  - pdfpages
+- - '##'
+  - pdfstructure
+- - '##'
+  - patch [options] file
+- - '##'
+  - pip3 命令
+- - '##'
+  - popd
+- - '##'
+  - postconf [options] [parameter=value]
+- - '##'
+  - postqueue [options]
+- - '##'
+  - powertop
+- - '##'
+  - CREATE DATABASE test (id SERIAL PRIMARY KEY, data TEXT);
+- - '##'
+  - INSERT INTO mytable (data) VALUES ('abc', 'efg');
+- - '##'
+  - SELECT * FROM mytable;
+- - '##'
+  - pssh 和 pscp
+- - '##'
+  - pvcreate [options] 设备
+- - '##'
+  - pvdisplay 设备
+- - '##'
+  - pvremove 设备
+- - '##'
+  - pvscan
+- - '##'
+  - qalc [expression]
+- - '##'
+  - qemu [options] [image]
+- - '##'
+  - readonly
+- - '##'
+  - reboot [options]
+- - '##'
+  - rename
+- - '##'
+  - rename 在 Debian, Raspberry OS 和 Ubuntu 上
+- - '##'
+  - rename 在 Fedora, RHEL 和 SUSE 上
+- - '##'
+  - resize2fs [options] device [size]
+- - '##'
+  - resolvectl [options]
+- - '##'
+  - rfkill 命令
+- - '##'
+  - rkhunter [options]
+- - '##'
+  - rpicam-still [options]
+- - '##'
+  - rpcinfo [options]
+- - '##'
+  - rpm options [filename/package name]
+- - '##'
+  - screen [options] [tty-device]
+- - '##'
+  - sestatus [options]
+- - '##'
+  - set
+- - '##'
+  - setcap [options] capability name
+- - '##'
+  - setbool [options] bool1=value1 bool2=value2 ...
+- - '##'
+  - insert into .bashrc
+- - '##'
+  - fsdisk [options]
+- - '##'
+  - sgdisk [option] device
+- - '##'
+  - shansum 文件
+- - '##'
+  - shift [n]
+- - '##'
+  - showmount [options]
+- - '##'
+  - slurp
+- - '##'
+  - smartctl options device
+- - '##'
+  - smbpasswd [options] [name]
+- - '##'
+  - smbstatus [options]
+- - '##'
+  - snap [options] 命令
+- - '##'
+  - sort [options] file
+- - '##'
+  - speaker-test [options]
+- - '##'
+  - ss [options]
+- - '##'
+  - ssh [options] computer name
+- - '##'
+  - ssh [options] computer name 命令
+- - '##'
+  - stat [options] files
+- - '##'
+  - strace [options] command
+- - '##'
+  - strings [options] file
+- - '##'
+  - systemctl 命令
+- - '##'
+  - systemd-analyze
+- - '##'
+  - journalctl
+- - '##'
+  - tar
+- - '##'
+  - grep 命令
+- - '##'
+  - tasksel
+- - '##'
+  - tcpdump [options] [filter]
+- - '##'
+  - tee [options] host [port]
+- - '##'
+  - telnet [options]
+- - '##'
+  - time 命令
+- - '##'
+  - tldr
+- - '##'
+  - top [q]
+- - '##'
+  - touch [options] files
+- - '##'
+  - traceroute
+- - '##'
+  - trap [command]
+- - '##'
+  - tune-fs [options] device
+- - '##'
+  - update-alternatives [options] command
+- - '##'
+  - update-alternatives [options] command
+- - '##'
+  - vgmerge vgname1 vgname2
+- - '##'
+  - vgreduce [options] vgname [pvname1 pvname2 ...]
+- - '##'
+  - vgscan
+- - '##'
+  - vgname oldvgname newname
+- - '##'
+  - virt-install [options]
+- - '##'
+  - virt-top [options]
+- - '##'
+  - wc files
+- - '##'
+  - whatis
+- - '##'
+  - whereis
+- - '##'
+  - which
+- - '##'
+  - whatis
+- - '##'
+  - whereis
+- - '##'
+  - which
+- - '##'
+  - 'type '
+- - '##'
+  - wpa_passphrase ssid
+- - '##'
+  - write username
+- - '##'
+  - xargs [command]
+- - '##'
+  - xinput [command]
+- - '##'
+  - xkill
+- - '##'
+  - xrandr [options]
+- - '##'
+  - xset [command]
+- - '##'
+  - XZ [options] 文件
+- - '##'
+  - 选项
+- - '##'
+  - 特殊 bash字符
+- - '##'
+  - 配置文件
+- - '##'
+  - /etc/aliases
+- - '##'
+  - /etc/crontab
+- - '##'
+  - SHELL, PATH, 和 MAIL
+- - '##'
+  - /etc/deluser.conf
+- - '##'
+  - /etc/dnf/dnf.conf
+- - '##'
+  - /etc/fstab
+- - '##'
+  - /etc/group
+- - '##'
+  - /etc/default/grub
+- - '##'
+  - /boot/grub/grub.cfg
+- - '##'
+  - /etc/hosts
+- - '##'
+  - /etc/network/interfaces
+- - '##'
+  - /etc/network/interfaces (manual configuration with WPA)
+- - '##'
+  - /etc/network/interfaces (WiFi configuration on Raspberry OS)
+- - '##'
+  - /etc/locale.conf
+- - '##'
+  - /etc/login.defs
+- - '##'
+  - /etc/systemd/network/networkd.network
+- - '##'
+  - /etc/systemd/network/01-mystatic.network
+- - '##'
+  - /etc/systemd/network/01-dhcpclient.network
+- - '##'
+  - /etc/NetworkManager/system-connections/<interface>.nmconnection
+- - '##'
+  - /etc/NetworkManager/system-connections/en1s0.nmconnection
+- - '##'
+  - /etc/NetworkManager/system-connections/en1s0.nmconnection
+- - '##'
+  - /etc/nsswitch.conf
+- - '##'
+  - /etc/os-release
+- - '##'
+  - /etc/passwd
+- - '##'
+  - /etc/resolv.conf
+- - '##'
+  - /etc/rsyslog.conf
+- - '##'
+  - /etc/rsyslog.d/50-default.conf
+- - '##'
+  - /etc/apt/sources.list
+- - '##'
+  - /etc/sudoers on Ubuntu
+- - '##'
+  - /etc/sysctl.conf
+- - '##'
+  - systemd.service
+- - '##'
+  - '[Unit] 关键字'
+- - '##'
+  - '[Service] 关键字'
+- - '##'
+  - '[Install] 关键字'
+- - '##'
+  - /lib/systemd/system/httpd.service (Fedora)
+- - '##'
+  - systemd.timer
+- - '##'
+  - '[Timer] 关键字'
