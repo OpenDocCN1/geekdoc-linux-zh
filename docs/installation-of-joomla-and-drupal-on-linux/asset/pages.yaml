@@ -1,0 +1,1385 @@
+- pgno: 0
+  md: 'So now we are about to start installing Joomla and Drupal on Linux PC, here
+    are some of the software’s which are required.
+
+
+    Drupal Latest (Download it from - http://drupal.org/project/drupal)
+
+
+    XAMPP for Linux (Download it from- http://www.apachefriends.org/en/xamppp-linux.html
+
+
+    Joomla latest (download it from -http://www.joomla.org/download.html )
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_0_0.png)
+
+
+    Save the following three files on your Desktop.
+
+
+    +   1. xampp-linux-1.7.1.tar.gz
+
+    2. drupal-6.13.tar.gz
+
+    3. Joomla_1.5.13-Stable-Full_Package.tar.gz
+
+
+    First of all install XAMPP on the P.C. by CLI.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Install XAMPP by extracting its content from a folder named "opt", this folder
+    is located at the root of the file system.
+
+
+    +   1. Open the Terminal, enter the following command:
+
+
+    ```
+
+    jesse@Punjabzim ~ $ sudo tar -xvf /home/jesse/Desktop/xampp-linux-1.7.1.tar.gz
+    -C /opt/
+
+    ```
+
+
+    (Please note here jesse is my user name so you must enter the name of the user
+    on which you are currently logged in.)
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_1_0.png)
+
+
+    Press enter after giving this command now it will prompt you for your Password,
+    give your user login password and press enter.
+
+
+    This command will extract all the files on Xampp into your /opt/ directory.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/4a38974b8034a42576d180572f120df8_2_0.png)
+
+
+    # CHE GEVARA
+
+
+    ★★★★★
+
+
+    Joanna_1.5.13-Stable-full-Package.tar.gz
+
+
+    Joanna
+
+    Installation of Drupal
+
+
+    Now all the files have been extracted. So, we can Start XAMPP
+
+
+    +   1. Open the Terminal, entering the following command:
+
+
+    sudo /opt/lampp/lampp start
+
+
+    The following lines will appear on your Terminal, if everything is going correctly:
+
+
+    XAMPP: Starting Apache with SSL (for PHP5)...
+
+    XAMPP: Starting MySQL...
+
+    XAMPP: Starting ProFTPD...
+
+    XAMPP for Linux started.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# CHE GUEVARA
+
+
+    ```
+
+    lampp/var/mysql/phpmyadmin/pma designer coords.MYD
+
+    lampp/var/mysql/mysql upgrade_info
+
+    lampp/var/mysql/functions.2008
+
+    lampp/var/prolog/
+
+    lampp/var/log/mysqld.delay
+
+    lampp/var/run/
+
+    lampp/XAMPP
+
+    lampp/
+
+    lampp/build.sh
+
+    $user@punjabim ~# sudo /opt/lampp/xampp start
+
+    XAMPP: Starting Apache for Linux 2.6....
+
+    XAMPP: Starting Apache with SSL (and PHP)...
+
+    XAMPP: Starting MySQL ...nXAMPP: Starting ProFTPD...
+
+    All services started.
+
+    $user@punjabim ~#
+
+    ```
+
+
+    Now Test your your XAMPP installation
+
+
+    +   1. Open web browser.
+
+    2. Enter the following address:
+
+
+    http://localhost
+
+
+    It should show the following page:
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_3_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/4a38974b8034a42576d180572f120df8_4_0.png)
+
+
+    Click the Status link to see what''s running:'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # XAMPP for Linux 1.7.1 - Mozilla Firefox
+
+
+    ## XAMPP Status
+
+    This page shows you all information about what''s running and what''s not.
+
+
+    | Component | Status | Hint |
+
+    | --- | --- | --- |
+
+    | MySQL database | ACTIVATED | |
+
+    | Perl | ACTIVATED | |
+
+    | Common Gateway Interface (CGI) | ACTIVATED | |
+
+    | Server Side includes (SSI) | ACTIVATED | |
+
+    | PHP extension -eAccelerator- | DEACTIVATED | 596 FAQ |
+
+    | PHP extension -OCI/Oracle- | DEACTIVATED | 596 FAQ |
+
+
+    Some changes to the configuration may cause false status reports.
+
+
+    If it appears like this, then you''re on the right track.
+
+    Now click on "phpmyadmin" which is listed under Tools. And here create a database
+    named joomla.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/4a38974b8034a42576d180572f120df8_7_0.png)
+
+
+    Don''t mess with anything else, just click home and come back on the previous
+    screen.
+
+    Now in the same way, create another database named drupal.
+
+
+    Your XAMPP installation part is done.
+
+    Now you install Joomla on your PC.
+
+
+    First of all create a folder named "jooomla" in /opt/lampp/htdocs/ directory;
+    you can get it done by giving the following command in the terminal window.
+
+
+    ```
+
+    sudo mkdir /opt/lampp/htdocs/jooomla
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/4a38974b8034a42576d180572f120df8_8_0.png)
+
+
+    Provide the password if it asks!
+
+
+    Joomla directory is made, now on the screen of the terminal give the following
+    command.
+
+
+    ```
+
+    sudo tar -zxvf /home/jesse/Desktop/Joomla_1.5.13-Stable-Full-Package.tar.gz -C
+    /opt/lampp/htdocs/joomla/
+
+    ```
+
+
+    This will extract all the files of joomla into htdocs/jooomla.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "```\nlampp/var/mysql/freeside.err.old\\lampp/var/proftpd/\nlampp/var/proftpd/proftpd.delay\n\
+    lampp/RELEASNOTES\nlampp/log/\nlampp/libexec/\nlampp/php.ini\n[jesse@machine]\
+    \ ~ sudo /opt/lampp/lampp start\nXAMP: Starting Apache 2.4..\nXAMP: Starting Apache\
+    \ with SSL (PHP5)...\nXAMP: Starting MySQL...\nXAMP: Starting ProFTPD.. \nXAMP\
+    \ for Linux started.\n[jesse@machine]$ sudo mkdir /not/htdocs/joomla\n[sudo] password\
+    \ for jesse: \n[jesse@machine]$ tar -xvf /home/jesse/Desktop/Joomla_3.5.13-Stable-Full-Package-tar.gz\
+    \ -C /opt/lampp/htdocs/joomla\n```\n\n# CHE GUEVARA\n\n![](img/4a38974b8034a42576d180572f120df8_9_0.png)\n\
+    \nAfter finishing it open your web browser and type http://localhost/joomla It\
+    \ will show the following screen."
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Joomla! Web Installer - Mozilla Firefox
+
+
+    # Joomla! Installation
+
+
+    # Steps
+
+
+    +   1: Language
+
+    2. Pre-installation Check
+
+    3: License
+
+    4. Database
+
+    5: FTP Configuration
+
+    6: Configuration
+
+    7: Finish
+
+
+    # Choose Language
+
+
+    Please select the language to use during the Joomla! installation.
+
+
+    +   ar-AR - Arabic
+
+    be-BY - Belarusian (беларуская)
+
+    bg-BG - Bulgarian (Български)
+
+    bn-BD - Bengali (Bangladesh)
+
+    ca-ES - Catalan
+
+    cs-CZ - Czech (Český)
+
+    da-DK - Danish (Dansk)
+
+    de-DE-CH - Deutsch (DE-CH)
+
+    de-EG - Egyptian
+
+    en-GB - English (United Kingdom)
+
+    en-US - English (US)\id-ID - Indonesian
+
+    es-ES - Spanish (Español internacional)
+
+    fa-IR - Persian (فارسی)
+
+    fi-FI - Finnish
+
+    fr-FR - French (Français)
+
+    gl-ES - Galician
+
+    gu-IN - Gujarati (ગુજરાતી)
+
+    hr-HR - Croatian (Hrvatski)
+
+    h-HU - Hungarian (Magyar)
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_10_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # Joomla! Web Installer - Mozilla Firefox
+
+
+    # ## Steps Pre-installation Check
+
+
+    +   1: Language
+
+    2: Pre-installation Check
+
+    3: License
+
+    4: Database
+
+    5: FTP Configuration
+
+    6: Configuration
+
+    7: Finish
+
+
+    Pre-installation check for Joomla! 1.5.3 Stable [Wojmammi Ama Bai] 23-July-2009
+    04:00 GMT:
+
+
+    If any of these items are not supported by Neo, your system does not meet the
+    requirements for installing Joomla and you may encounter errors. This could lead
+    to your Joomla installation not functioning properly.
+
+
+    | Property | Value |
+
+    |---|---|
+
+    | PHP Version >= 4.3.10 | Yes |
+
+    | Zlib Compression Support | Yes |
+
+    | SSL Support | Yes |
+
+    | MySQL Support | Yes |
+
+    | MB Language = Default | Yes
+
+
+    MB String Overload
+
+    You can still continue the installation if the configuration settings are not
+    exactly as expected. You must manually update the code file. Click on the link
+    below to download the sample configuration code file. Rename this file ''configuration.php''
+    and upload it to your root folder.
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_11_0.png)
+
+
+    Recommended Settings:
+
+    Ensure the recommended settings for PHP in order to ensure full compatibility
+    with Joomla. Joomla will operate fine even if your settings do not match.
+
+
+    | Directive | Recommended | Actual |
+
+    |---|---|---|
+
+    | Safe Mode | Off | Off |
+
+    | Display Errors | Off | On |
+
+    | File Updates | Off | On |
+
+    | Magic Quotes Runtime | Off | Off |
+
+    | Register Classes | Off | On |
+
+    | Output Buffering | Off | Off |
+
+    | Session Auto Start | Off | Off'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Joomla! Web Installer - Mozilla Firefox
+
+
+    # Joomla! Installation
+
+
+    # Steps
+
+
+    # License
+
+
+    +   1: Language
+
+
+    +   2: Pre-Installation Check
+
+
+    +   3: License
+
+
+    +   4: Database
+
+
+    +   5: FTP Configuration
+
+
+    +   6: Configuration
+
+
+    +   7: Finish
+
+
+    GNU GENERAL PUBLIC LICENSE:
+
+
+    Table of Contents
+
+
+    +   - GNU GENERAL PUBLIC LICENSE
+
+    - Preamble
+
+    - TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+    - How to Apply Terms to Your Programs
+
+
+    Version 2, 1991
+
+
+    Copyright (C) 1990-1991 Free Software Foundation, Inc.
+
+    59 Temple Place, Suite 350, Boston, MA 02110, USA
+
+
+    Preamble
+
+
+    Freedom is permitted to copy and distribute verbatim copies of this license, provided
+    that it is not altered.
+
+
+    When we speak of software, we are referring to freedom, not price. Our GNU General
+    Public Licenses are designed to make sure that you have the freedom to share and
+    change free software. This is intended to guarantee that freedom is real and free.
+    It is designed to prevent proprietary interference and ensure that all users remain
+    free. Other Free Software may be covered by the GNU Library Public License instead;
+    you may apply both to your programs.
+
+
+    To protect rights, we need to make restrictions that forbid anyone to deny you
+    these rights or to ask you to surrender the rights. These restrictions are necessary
+    to ensure that the software remains free for all its users, even if they modify
+    it.
+
+
+    For example, if you distribute copies of such a program, whether gratis or for
+    a fee, you must give the recipients to all the rights that you have.
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_12_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Joomla! Web Installer - Mozilla Firefox
+
+
+    File Edit View History Bookmarks Help
+
+
+    ```
+
+    http://localhost/joomla/installation/index.php
+
+    ```
+
+
+    # Joomla! Installation
+
+
+    | Steps | |
+
+    | 1: Language |
+
+    | 2: Pre-Installation Check |
+
+    | 3: License |
+
+    | 4: Database |
+
+    | 5: FTP Configuration |
+
+    | 6: Configuration |
+
+    | 7: Finish |
+
+
+    Connection Settings:
+
+
+    Setting Up Joomla to run on your server four easy steps.
+
+
+    The first step is database configuration. Choose your preferred settings.
+
+
+    | Basic Settings | |
+
+    | Database Type | This is probably MySQL preferred settings. |
+
+    | mysql | This is usually localhost or a host name provided by the hosting provider.
+    |
+
+    | localhost | This is the database name which is username provided by your hosting
+    provider. You may change this to your database name. |
+
+    | Username |
+
+    | root | When entering the password for the MySQL account it is mandatory for
+    security. This is the same password that may be provided by your hosting provider.
+    |
+
+    | Password | | Leave the password blank in case with your setup, use the table
+    prefix option to differentiate more than one Joomla site. |
+
+    | Database Name |
+
+    | joomla | |
+
+    | Table Prefix |
+
+    | JO_ | Do not use the prefix ''bak''. This is used for backup tables.|
+
+
+    Basic Settings
+
+
+    Enter the hostname of the database server. Joomla will be installed in the database
+    you select. Use localhost server if you do not have a hosting provider.
+
+
+    Enter the MySQL username, password and database name you wish to use. These are
+    most absolutely except for the database you are going to use.
+
+
+    Advanced Settings
+
+
+    How to handle existing tables from a previous installation.
+
+
+    Enter a table prefix to be used for your Joomla installation.
+
+
+    Delete existing tables
+
+
+    Backup Old Tables
+
+
+    Any existing backup tables from previous installation will be imported.
+
+
+    Menu Installation of Drupal joomla! Web installer
+
+
+    Mon Jan 25, 1:31 AM
+
+
+    This is the main window, select database type "mysql"
+
+    fill in the user name "root"
+
+
+    Leave the password blank (as you haven''t given any password when you made database
+    joomla in XAMPP.)
+
+    fill up the Database name joomla.
+
+    leave the remaining settings as they are and next.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Joomla! Web Installer - Mozilla Firefox
+
+
+    File Edit View History Bookmarks Help
+
+
+    # Joomla! Installation
+
+
+    FTP Configuration
+
+    FTP Permissions:
+
+    Due to system restrictions on Linux and other operating systems, an FTP layer
+    is used to handle file system manipulation and installation. Joomla! FTP handles
+    all file system operations when Joomla requires access to the server.
+
+    Enter an FTP user username and password with access to the directory. The FTP
+    layer handles all file system operations when Joomla requires access to the server.
+
+    For security reasons, if the option is enabled, it is best to create a separate
+    FTP user account with access to the Joomla directory. On Windows Operating System,
+    the FTP layer is not required.
+
+
+    +   1: Language
+
+    2: Pre-Installation Check
+
+    3: License
+
+    4: Database
+
+    5: FTP Configuration
+
+    6: Configuration
+
+    7: Finish
+
+
+    | Basic Settings |
+
+    |---||
+
+    | Enable FTP file layer [ ] Yes |
+
+    | FTP User |
+
+    | FTP Password |
+
+    | FTP Root Path |
+
+    | Advanced Settings |
+
+    | FTP Host 127.0.0.1 |
+
+    | FTP Port 21 |
+
+    | Save FTP Password [ ] Yes |
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_14_0.png)
+
+
+    Joomla! is free software released under the GNU GPL, v2.0 License.
+
+
+    Installation of Drupal Joomla-Web-Installer Mon Jan 25, 1:30 AM'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Joomla! Web Installer - Mozilla Firefox
+
+
+    File Edit View History Bookmarks Help
+
+
+    http://localhost/joomla/installation/index.php
+
+
+    Joomla! Web Installer
+
+
+    # Joomla! Installation
+
+
+    15:13
+
+
+    # Main Configuration
+
+
+    Previous Next
+
+
+    +   1: Language
+
+    2: Pre-Installation Check
+
+    3: License
+
+    4: Database
+
+    5: FTP Configuration
+
+    6: Configuration
+
+
+    Site Name:
+
+
+    Enter the name of your Joomla site.
+
+
+    Site Name
+
+
+    jessewood
+
+
+    # Confirm the Admin and Email Password.
+
+
+    Your E-mail
+
+
+    esse@email.ru
+
+
+    Admin Password
+
+
+    ******
+
+
+    Confirm Admin Password
+
+
+    Enter your e-mail. This will be the e-mail of the Web administrator. Enter a new
+    password and then confirm it in the appropriate fields. You will use this password
+    to log in to the Control Panel settings after installation. If you are upgrading,
+    you can ignore this section. Your current settings will be saved automatically.
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_15_0.png)
+
+
+    Install Sample Data
+
+
+    Installing sample data is recommended for beginners. It includes sample content
+    that is included in the Joomla! installation package.
+
+
+    Install Sample Data
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_15_1.png)
+
+
+    Load Migration Script
+
+
+    The migration script needs to be created on the old site by providing the path
+    to the new site and entering the encoding used in URL. If the file length exceeds
+    the limit set by the server, see the Joomla! documentation (encoding/sources)
+    for help on migrating large sample data.
+
+
+    # Load sample data, restore or migrate backed-up data
+
+
+    Important: It is strongly recommended to start your Joomla! installation with
+    an empty database by selecting the option and clicking on the button moving to
+    the next stage.
+
+
+    Before restoring or migrating you must empty the current database. To do this,
+    select the option and click on the Next button. There are three ways to do this:
+
+
+    +   1. Default sample data can be inserted. To do this, select the option and
+    click on the Next button.
+
+    2a. Joomla! 1.5 compatible script file can be used to restore the database. This
+    script could be used for installing sample data or restoring a Joomla! database.
+
+
+    Finish
+
+
+    Menu
+
+
+    Installation of Output
+
+
+    jooomla! Web Installer
+
+
+    Mon Jan 25, 1:39 AM
+
+
+    Fill in your Site name here,
+
+
+    In the next section provide your Email address.
+
+
+    And then provide password. (You will require this email and password at time you
+    will login as the administrator page of your site)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Joomla! Web Installer - Mozilla Firefox\n\nFile Edit View History Bookmarks\
+    \ Help\n\nhttp://localhost/jooomla/installation/index.php\n\nJoomla! Web Installer\n\
+    \n# Joomla! Installation\n\n# Finish\n\n+   1: Language\n2: Pre-Installation Check\n\
+    3: License\n4: Database\n5: FTP Configuration\n6: Configuration\n\nCongratulations!\
+    \ Joomla! is now installed.\n\nClick the button to view your Joomla! Web site\
+    \ or the button below to edit configuration.\nOn the Joomla! Help Site, you will\
+    \ find an easy, step-by-step guide to installing your own language package in\
+    \ Joomla! You will also find many tutorials.\nClick the button on the right to\
+    \ open the Help Site in a new window.\n\n> PLEASE REMEMBER TO COMPLETELY REMOVE\
+    \ THE INSTALLATION DIRECTORY. You will not be able to proceed beyond this point\
+    \ until the installation directory has been removed. This is a security feature.\n\
+    \nAdministration Login Details\n\nUsername: admin\n\nJoomla! is in your language?\n\
+    Visit the Joomla! Site for more information and downloads.\n\nYour configuration\
+    \ file is not writable or there was a problem creating it. We have copied the\
+    \ following code to the text area below. Highlight all of the code and paste it\
+    \ into a new file. Name this file configuration.php and save it to your site root.\n\
+    \n```\n<?php\nclass SiteSettings {\n  public $offline = true;\n  public $offline_message\
+    \ = 'This site is down for maintenance. Please check back again soon.';\n}\n```\n\
+    \n![](img/4a38974b8034a42576d180572f120df8_16_0.png)\n\nDone Menu | Installation\
+    \ of Drupal Joomla! Web Installer Mon Jan 25, 1:43 AM\n\nRead all the instruction\
+    \ on this screen and copy the text from the text area and open text editor, paste\
+    \ the text in the text editor and save this file on desktop, name it \"configuration.php\"\
+    .\n\nNow open terminal window and type the following command to move this file\
+    \ from Desktop to /opt/lampp/htdocs/jooomla/\n\njesse@Punjabish ~ sudo mv /home/jesse/Desktop/configuration.php\
+    \ /opt/lampp/htdocs/jooomla/"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '![](img/4a38974b8034a42576d180572f120df8_17_0.png)
+
+
+    Now remove the installation directory from your site root folder by giving this
+    command on the terminal window.
+
+
+    jesse@Punjabism ~ $ sudo rm -r /opt/lampp/htdocs/joomla/installation'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Terminal
+
+
+    ```
+
+    reen light in A.M. for new projects. //
+
+    light in P.M. for traffic tickets. //
+
+    (root)
+
+    @punjabize = $ sudo mv /home/Jesse/Desktop/configuration.php /opt/lampp/ht
+
+    password for jesse:
+
+    @punjabize = $ sudo rm -r /opt/lampp/htdocs/jooomla/installation/
+
+    ```
+
+
+    # CHE GUEVARA
+
+    *****
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_18_0.png)
+
+
+    Now again open your web browser and type http://localhost/joomla'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/4a38974b8034a42576d180572f120df8_19_0.png)
+
+
+    # IT''S Done..!!
+
+
+    Now let''s install Drupal by extracting its content to "opt/lampp/htdocs":
+
+    you know that your tar.gz file of drupal is on your desktop screen to extract
+    it
+
+
+    +   1. Open the Terminal, enter the following command:
+
+
+    ```
+
+    sudo tar -xvf /home/jesse/Desktop/drupal-6.13.tar.gz -C /opt/lampp/htdocs/
+
+    ```
+
+
+    (Please note here jesse is my user name, you must give here your user name on
+    which you are\logged in)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/4a38974b8034a42576d180572f120df8_20_0.png)
+
+
+    It will create a folder of drupal in your /opt/lampp/htdocs/ directory. But we''ll
+    need to rename this folder to drupal only.
+
+
+    +   1. Enter the following command:
+
+
+    jesse@Punjabizm ~ $ sudo mv /opt/lampp/htdocs/drupal-6.13 /opt/lampp/htdocs/drupal
+
+
+    (drupal-6.13 is the file version which I''ve used, you must type the name of the
+    drupal version you have downloaded)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Terminal\n\n```\ndrupal-6.13/themes/pushbutton/logo-hover.jpg\ndrupal-6.13/themes/pushbutton/logo.png\n\
+    drupal-6.13/themes/pushbutton/node-tip.gif\ndrupal-6.13/themes/pushbutton/get.php\n\
+    drupal-6.13/themes/pushbutton/pushbutton.info\ndrupal-6.13/themes/pushbutton/checkbox.png\n\
+    drupal-6.13/themes/pushbutton/style.css\ndrupal-6.13/themes/pushbutton/tabs-off.png\n\
+    drupal-6.13/themes/pushbutton/tabs-hover.rtl.png\ndrupal-6.13/themes/pushbutton/tabs-on.png\n\
+    drupal-6.13/themes/pushbutton/tabs-on.rtl.png\ndrupal-6.13/themes/pushbutton/tabs-option.png\n\
+    drupal-6.13/themes/pushbutton/tabs-option-hover.rtl.png\ndrupal-6.13/themes/pushbutton/tabs-option-off.png\n\
+    drupal-6.13/themes/pushbutton/tabs-option-rtl.png\ndrupal-6.13/themes/pushbutton/default.png\n\
+    jesse@drupal~$ sudo mkdir -p /opt/lamp/htdocs/drupal-6.13 /opt/lamp/htdocs/drupal\n\
+    jesse@drupal~$ $ \n```\n\n![](img/4a38974b8034a42576d180572f120df8_21_0.png)\n\
+    \n# CHE GEVARA ★★★★\n\nOkay. ! You made it..\n\nNow\n\nLet's\n\nTry\n\n# Drupal\n\
+    \n+   1. Open your web browser.\n2. Enter the following address:\n\nhttp://localhost/drupal\n\
+    \nYou should see this page:"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/4a38974b8034a42576d180572f120df8_22_0.png)
+
+
+    # Select install Drupal in English
+
+
+    Next it will show a red screen with some warning''s and all other stuff.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Requirements problem | Drupal - Mozilla Firefox
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_23_0.png)
+
+
+    Don Panic.
+
+
+    Just open terminal window and type following command
+
+
+    ```
+
+    jesse@Punjabjab ~ $ sudo cp /opt/lampp/htdocs/drupal/sites/default/default.settings.php
+    /opt/lampp/htdocs/drupal/sites/default/settings.php
+
+    ```
+
+
+    This will make a copy of the file "default.settings.php"and rename it to "settings.php".
+
+
+    Next, need to grant permissions to the settings.php file so that it''s writable:
+
+
+    +   - Enter the following commands one by one (press Enter after each command):
+
+
+    ```
+
+    jesse@Punjabjab ~ $ sudo chmod a+w /opt/lampp/htdocs/drupal/sites/default/settings.php
+
+    jesse@Punjabjab ~ $ sudo chmod a+w /opt/lampp/htdocs/drupal/sites/default
+
+    ```
+
+
+    Now we need to increase your PHP memory limit from 8M to 16M.
+
+
+    +   - Open the Terminal window and type:'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'sudo nano /opt/lampp/etc/php.ini and press enter
+
+
+    The following screen will appear.
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_24_0.png)
+
+
+    Now there you''ll need to change the buffer size to 16 KB
+
+
+    The location of the text is given in the screen shot below:'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# Terminal\n\nFile Edit View Terminal Help File: /opt/lamp/etc/php.ini\n\n\
+    nano 2.0.9 Modified\n\n```\n buffering allows you to send headers (including cookies)\
+    \ even\nafter you send body content, at the price of storing PHP's output layer\
+    \ in\nmemory. You can also enable output buffering by calling the output\nbuffering\
+    \ functions.\nYou can also enable output buffering for all files by\nto a certain\
+    \ size - you can use a maximum number of bytes instead of 'on', or\na value for\
+    \ it (e.g., output_buffering=4096)\nYou can redirect all of your output handler\
+    \ to a function, for example\n\\xample, if you want the entire output page to\
+    \ be compressed according to a\ntransparent encoding.\nSetting an output handler\
+    \ automatically turns on output buffering.\nput_handler =\nThe unserialize callback\
+    \ function will be called (with the undefined\nclass name) if the unserializer\
+    \ finds a class\nwhich should not be instantiated.\nA serialization error occurs\
+    \ if the function is not defined, or if the\nfunction doesn't exist, i.e., if\
+    \ you really want to implement such a\nallback-function\nserialize_callback =\n\
+    Transparent output compression using the zlib library\nvalid output compression\
+    \ method: deflate or a Specific Buffer size\nto be used for compression (default\
+    \ is 0)\nNote: output header must be empty if this is set to '0'\nzlib.output_compression\
+    \ = off\n```\n\n![](img/4a38974b8034a42576d180572f120df8_25_0.png)\n\nAfter changing\
+    \ it exit from this window by pressing Ctrl+X\n\nThe following option will appear\
+    \ on the screen.\n\n“Modified buffer (ANSWERING \"No\" WILL DESTROY CHANGES)?\
+    \ \"\nPress \"Y\" and press enter, again press enter on the next screen. Done.\
+    \ You can close the\nterminal window now.\n\nRefresh your browser window now by\
+    \ pressing \"F5\".\nIt will show the screen where you have to connect Drupal to\
+    \ the database."
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Database configuration | Drupal - Mozilla Firefox
+
+
+    Database configuration
+
+    Consider increasing your PHP memory limit to 16M to help prevent errors in the
+    installation process. Increase the memory limit by editing the php.ini file and
+    then restart your web server (or contact your system administrator or hosting
+    provider for assistance). See the Drupal requirements for more information. (Currently
+    using PHP memory limit: 8M)
+
+
+    Basic options:
+
+
+    To set your Drupal database, enter the following information:
+
+
+    Database type: *
+
+
+    +   - mysql
+
+    -pgsql
+
+
+    The type of your database data will be stored in:
+
+
+    Database name: *
+
+
+    The name of the database your Drupal data will be stored in. It must exist on
+    your server before Drupal can create the database.
+
+
+    Database username: *
+
+
+    Database password: *
+
+
+    Fill up the database name "drupal"
+
+    Fill up the database user name "root"
+
+    Leave the password blank.
+
+
+    Click Save and continue
+
+
+    Then, in the next step fill up the site information'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Drupal
+
+
+    # Configure site
+
+
+    All necessary changes to /sitesdefault/sitesdefault/settings.php have been made,
+    so, you should remove write permissions to them now in order to avoid security
+    risks. If you are unsure how to do so, please consult the online handbook.
+
+
+    To configure your website, please provide the following information.
+
+
+    # Site information
+
+
+    Site name: *
+
+
+    mywebsite.com
+
+
+    Site e-mail address: *
+
+
+    admin@example.com
+
+
+    The administrator e-mails are sent during registration and new password requests,
+    and other notifications. use an address ending in your site''s domain to help
+    prevent this e-mail being flagged as spam.
+
+
+    # Administrator account
+
+
+    The administrator account has complete access to the site. it will automatically
+    be granted all permissions and can perform any administrative activity. This will
+    be the only account that can perform certain activities, so keep its credentials
+    safe.
+
+
+    +   * Choose language
+
+    * Verify requirements
+
+    * Set up database
+
+    * Install site
+
+    * Configure site
+
+    * Finished'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '![](img/4a38974b8034a42576d180572f120df8_28_0.png)
+
+
+    Click save and continue
+
+
+    If any dialogue like "Fatal error: Allowed memory size of 8388608 bytes exhausted
+    (tried to allocate 453 bytes) in /opt/lampp/htdocs/drupal/includes/database.mysql-common.inc
+    on line 35" doesn''t appear be angry, we still have one "brahma Astra" again time
+    to use it ....
+
+
+    Open the Terminal, and restart the XAMPP by giving following commands one by one.
+
+
+    ```
+
+    jesse@Punjabism ~ $ sudo /opt/lampp/lampp stop
+
+    jesse@Punjabism ~ $ sudo /opt/lampp/lampp start
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '```
+
+    jesse@Punjababiz ~ $ sudo /opt/lampp stop
+
+    password for user:
+
+    Stopping XAMP for Linux 1.7.1..
+
+    XAMP: Stopping Apache with SQL...
+
+    XAMP: Stopping MySQL...
+
+    XAMP: Stopping ProFTPD...
+
+    stopping done.
+
+    jesse@Punjababiz ~ $ sudo /opt/lampp start
+
+    Starting XAMP for Linux 1.7.1..
+
+    XAMP: Starting Apache with SQL (and MySQL)...
+
+    XAMP: Starting MySQL...
+
+    XAMP: Starting ProFTPD...
+
+    OK.
+
+    XAMP for Linux started.
+
+    ```
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_29_0.png)
+
+
+    Okay, now target achieved.
+
+
+    Refresh your browser page
+
+
+    For security purposes, it will tell you to remove write permissions to the settings.php
+    file. Let''s do that:
+
+
+    Open the Terminal, enter the following command:
+
+
+    jesse@Punjababiz ~ $ sudo chmod a-w /opt/lampp/htdocs/drupal/sites/default/settings.php'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Terminal
+
+
+    ```
+
+    jesse@Panjabim ~$ sudo /opt/lampp/lampp stop
+
+    [sudo] password for jesse:
+
+    stoping XAMP for Linux 1.7.1...
+
+    XAMP: Stopping Apache with SSL...
+
+    XAMP: Stopping MySQL...
+
+    XAMP: Stopping ProFTPD...
+
+    jessie@Panjabim ~$ sudo /opt/lampp/lampp start
+
+    Starting XAMP for Linux 1.7.1...
+
+    XAMP: Starting Apache with SSL (and PHP)...
+
+    XAMP: Starting MySQL...
+
+    XAMP: Starting ProFTPD...
+
+    jessie@Panjabim ~$ sudo chmod a-w /opt/lampp/htdocs/drupal/sites/default/settings.php
+
+    jessie@Panjabim ~$ _
+
+    ```
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_30_0.png)
+
+
+    After refreshing your browser you will see the main page of your site'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # TA-DA...!!!
+
+
+    You made it..!
+
+
+    Now, you can start building your site on your local pc.
+
+
+    # ## Automatic startup of XAMPP server
+
+
+    But every time you boot up your pc you will have to Start your Xampp server by
+    typing command in terminal window ( Sudo /opt/lampp/lampp start ) and I am trying
+    to make this easy for everyone. You should put Xampp services in Startup, so that
+    Xampp server will automatically start, whenever you boot up your PC. In order
+    to do so, you will have to follow the following steps.
+
+
+    +   1. First, find out your default run level.
+
+
+    which is actually a folder from which the system loads its startup services at
+    the time of boot.
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_31_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'Open Terminal and type command
+
+
+    jesse@Punjabizm / $ egrep :initdefault:/etc/initt.
+
+
+    You should not see a line containing a number between two colons.
+
+
+    In most cases 3 or 5 (if you''re using Debian). Now here I will choose rc3.d folder
+    coz my pc loads its startup configuration from there.
+
+
+    +   2. Go into the directory by command mode which configures the Startup, by
+    giving command in terminal window
+
+
+    jesse@Punjabizm / $ cd /etc/rc2/d/
+
+
+    If your system didn''t provide /etc/rc2.d please try also /etc/init.d/rc2.d and
+    /etc/rc2.d. In command mode now type the following command.
+
+
+    ```
+
+    jesse@Punjabizm /etc/rc2.d $ sudo In -s /opt/lampp S99lampp
+
+    jesse@Punjabizm /etc/rc2.d $ sudo In -s /opt/lampp K01lampp
+
+    ```
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_32_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'This command will put shortcuts of Xampp startup services "S99lampp" and "K01lampp"
+    in the folder /etc/rc2.d. You can also see that in rc2.d folder.
+
+
+    ![](img/4a38974b8034a42576d180572f120df8_33_0.png)
+
+
+    Now XAMPP should start and stop automatically if you boot or shutdown for your
+    machine.
+
+
+    (Installation of both the CMS''s were only for GNOME Linux platform)
+
+
+    Rupinder singh Dhammu
+
+    HIIAS | Shimla
+
+    jesse@email.ru'
+  merge: -1
+  img_proc: true
