@@ -1,0 +1,2896 @@
+- pgno: 0
+  md: '# # Linux Complete Backup and Recovery HOWTO
+
+
+    Charles Curley
+
+
+    ccurley at trib dot com
+
+
+    # ## Revision History
+
+
+    | Revision | Date | Revised by |
+
+    | --- | --- | --- |
+
+    | Revision 0.02 | 2002–01–27 | Revised by: c^2 |
+
+    | Added Mondo to resources | | |
+
+    | Revision 0.01 | 2001–10–25 | Revised by: c^2 |
+
+    | Initial version for LDP release | | |
+
+
+    Imagine your disk drive has just become a very expensive hockey puck. Imagine
+    you have had a fire, and your computer case now looks like something Salvador
+    Dali would like to paint. Now what?
+
+
+    Total restore, sometimes called bare metal recovery, is the process of rebuilding
+    a computer after a catastrophic failure. In order to make a total restoration,
+    you must have complete backups, not only of your file system, but of partition
+    information and other data. This HOWTO is a step-by-step tutorial on how to back
+    up a Linux computer so as to be able to make a bare metal recovery, and how to
+    make that bare metal recovery. It includes some related scripts.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # Table of Contents
+
+
+    +   1. Introduction...............................................................................................................1
+
+    1.1. Copyright Information...............................................................................................1
+
+    1.2. Disclaimer......................................................................................................................1
+
+    1.3. New Versions................................................................................................................2
+
+    1.4. Credits...............................................................................................................................2
+
+    1.5. Feedback.............................................................................................................................2
+
+    1.6. Translations......................................................................................................................2
+
+
+    +   2. Overview...............................................................................................................3
+
+    2.1. Limitations...............................................................................................................4
+
+
+    +   3. Preparation...........................................................................................................5
+
+    3.1. Installing the ZIP® Drive.....................................................................................5
+
+
+    +   4. Creating the Stage 1 Back Up.......................................................................6
+
+
+    +   5. Booting tomsrtbt................................................................................................8
+
+
+    +   6. Second Stage Restoration......................................................................10
+
+    7. Distribution Specific Notes.....................................................................12
+
+    7.1. Red Hat 7.1.........................................................................................................12
+
+    7.2. Red Hat 7.0.........................................................................................................12
+
+
+    +   8. Application Specific Notes...............................................................13
+
+    8.1. Squid..................................................................................................................13
+
+    8.2. Arkeia................................................................................................................13
+
+
+    +   9. Some Advice for Disaster Recovery.......................................................15
+
+    10. What Now?...............................................................................................15
+
+    10.1. To Do...............................................................................................................15
+
+
+    +   11. The Scripts...........................................................................................16
+
+    11.1. First Stage......................................................................................................16
+
+    11.1.1. make.fdisk...............................................................................................16
+
+    11.1.2. make.dev.hda.....................................................................................23
+
+    11.1.3. dev.hda......................................................................................................24
+
+    11.1.4. save.metadata.....................................................................................25
+
+    11.1.5. restore.metadata.............................................................................27
+
+    11.2. Second Stage...............................................................................................28
+
+    11.2.1. back.up.all.....................................................................................28
+
+    11.2.2. back.up.all.ssh.....................................................................29
+
+    11.2.3. restore.all......................................................................................30
+
+    11.2.4. restore.all.ssh.....................................................................30
+
+    11.3. Backup Server Scripts...............................................................31
+
+    11.3.1. get.tester..................................................................................31
+
+    11.3.2. restore.tester.........................................................................33'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table of Contents
+
+
+    +   12. Resources...............................................................................................................34
+
+    A. GNU Free Documentation License...............................................................................35
+
+    0. PREAMBLE................................................................................................................36
+
+    1. APPLICABILITY AND DEFINITIONS...............................................................37
+
+    2. VERBATIM COPYING...............................................................................................38
+
+    3. COPYING IN QUANTITY......................................................................................39
+
+    4. MODIFICATIONS...............................................................................................40
+
+    5. COMBINING DOCUMENTS.....................................................................................42
+
+    6. COLLECTIONS OF DOCUMENTS...............................................................................43
+
+    7. AGGREGATION WITH INDEPENDENT WORKS...............................................................44
+
+    8. TRANSLATION...............................................................................................................45
+
+    9. TERMINATION...............................................................................................................46
+
+    10. FUTURE REVISIONS OF THIS LICENSE...............................................................47
+
+    11. How to use this License for your documents........................................................48'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # 1. Introduction
+
+
+    The normal bare metal restoration process is: install the operating system from
+    the product disks. Install the backup software, so you can restore your data.
+    Restore your data. Then you get to restore functionality by verifying your configuration
+    files, permissions, etc.
+
+
+    The process and scripts explained in this HOWTO save re-installing the operating
+    system. The process explained here will restore only files that were backed up
+    from the production computer. Your configuration will be intact when you restore
+    the system, which should save you hours of verifying configurations and data.
+
+
+    # ## 1.1. Copyright Information
+
+
+    Copyright © 2001,2002 Charley and distributed under the terms of the GNU Free
+    Documentation License (GFDL) license, stated below. Permission is granted to copy,
+    distribute and/or modify this document under the terms of the GNU Free Documentation
+    License, Version 1.1 or later version published by the Free Software Foundation;
+    with no Invariants, with no Front-Texts and no Back-Cover-Texts. A copy of the
+    license is included in the section "GNU Free Documentation License".
+
+
+    If you have any questions, please contact <linux-howto at metalab.unc.edu>.
+
+
+    # ## 1.2. Disclaimer
+
+
+    No liability for the contents of this documents can be accepted by the author,
+    the Linux Documentation Project or anyone else. Use the concepts, examples and
+    other content at your own risk. There may be errors and inaccuracies that may
+    be damaging to your system. Proceed with caution, and all errors are unlikely,
+    the author(s) take responsibility for them.
+
+
+    All copyrights are held by their respective owners, unless specifically noted
+    otherwise. Use of a term in this document should not be regarded as affecting
+    the validity of any trademark or service mark.
+
+
+    Naming of particular products or brands should not be seen as endorsements.
+
+
+    You are strongly recommended to take a backup of your system before major installation
+    and backups at regular intervals.
+
+
+    In addition, you are strongly recommended to use a sacrificial experimental computer
+    when mucking with the material, especially the scripts, in this HOWTO.
+
+
+    # ## 1.3. New Versions
+
+
+    You can find this document at its home page or at the Linux Documentation Project
+    homepage in many formats. Please comment to <ccurley at tri b dot com>.
+
+
+    +   - bzip2 compressed chunky (lots of small pages. Faster reading.) HTML.
+
+    - bzip2 compressed smooth (one monster page — no chunks. Easier to search.) HTML.
+
+
+    +   1. Introduction'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '+   - bzip2 compressed postscript (US letter format).
+
+    - bzip2 compressed PDF (US letter format).
+
+    - Use the source, Luke. It will be available here until I get this checked into
+    the LDP CVS.
+
+
+    # 1.4. Credits
+
+
+    This document is derived from two articles originally published in Linux Journal.
+    My thanks to Linux Journal for reverting the rights to those articles, thereby
+    helping make this HOWTO possible.
+
+
+    Thanks to Joy Y Goodreau for excellent HOWTO editing.
+
+
+    # 1.5. Feedback
+
+
+    Feedback is most certainly welcome for this document. Without your corrections,
+    suggestions and other input, this document wouldn''t exist. Please send your additions,
+    comments and criticisms to me at: <ccurley at trib.com>.
+
+
+    # 1.6. Translations
+
+
+    Not everyone speaks English. Volunteers are welcome.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2. Overview
+
+
+    The process shown below is not easy, and can be hazardous to your data. Practice
+    it before you need it! Do I did, and practice on a sacrificial computer!
+
+
+    The target computer for this HOWTO is a Pentium computer with a Red Hat 7.1 Linux
+    server or workstation installation on one IDE hard drive. The target computer
+    does not have amounts of data because the computer was set up as a "sacrificial"
+    test bed. I did not want to test this process with a production computer and production
+    data. Also, I did a fresh install before I started the testing so I could always
+    re-install if I needed to revert to a known configuration.
+
+
+    ![](img/b7e9f987ef9af3f87243de7cf4b11b84_5_0.png)
+
+
+    # NOTE
+
+
+    The sample commands will show, in most cases, what I had to type to recover the
+    target system. You may have to use similar commands, but with different parameters.
+    It is up to you to be sure you duplicate your system, not the test computer''s
+    setup.
+
+
+    The basic procedure is set out in W. Curtis Preston, Unix Backup & Recovery, O''Reilly
+    & Associates, 1999, which I have favorably reviewed in Linux Journal. However,
+    the book is a bit thin on specific, real-time questions. For example, exactly
+    which files do you back up? What metadata do you need to preserve, and how?
+
+
+    Before beginning the process set fact in this HOWTO you need to back up your system
+    with a typical backup tool as Amanda, BRU", tar, Arkeia or cpio. The question,
+    then, how to get from toasted hardware to the point where you run the restoration
+    will restore your data.
+
+
+    Users of Red Hat Package Manager (RPM) based Linux distributions should also save
+    RPM metadata of their normal backups. Something like:
+
+
+    ```
+
+    bash# rpm -Va /etc/rpmVa.txt
+
+    ```
+
+
+    in your backup script will give you a base for comparison after a bare metal restoration.
+
+
+    To get this, you need:
+
+
+    +   - Your hardware and running again, with replacement components as needed.
+    The BIOS should be properly configured, including time date, and hard drive parameters.
+    At the moment, there is no provision for a different hard drive.
+
+    - A parallel port Iomeg@ZIP drive or equivalent. You will need at least 30 MB
+    of space.
+
+    - Your backup media.
+
+    - A minimal Linux that will allow you to run the restoration software.
+
+
+    To get there, you need at least two stages of backup, and possibly three. Exactly
+    what you back up and in which stage is determined by your restoration process.
+    For example, if you are restoring a server, you may not networking during the
+    restoration process. So only back up networking in your regular backups.
+
+
+    # 2. Overview'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'You will restore in stages. In stage one, we build partitions, file systems,
+    and restore a minimal file system from the ZIP® disk. The goal of stage one is
+    to be able to boot a running computer with a network connection, tape drives,
+    restoration software, or whatever we need for stage two.
+
+
+    The second stage, if it is necessary, consists of restoring backup software and
+    any relevant databases. For example, suppose you use Arkeia you are building a
+    bare recovery ZIP® disk for your backup. Arkia keeps a huge database on the server''s
+    hard drives. You can recover the database from the tapes, if you want. Instead,
+    not tar and gzip the whole akeia directory (/usr/knos), and to save that to another
+    computer over nfs or ssh? Stage one, which we have defined below, does not include
+    X, so you will have some experimenting to do if you wish to boot up X as your
+    backup program. Some restore require X.
+
+
+    Of course, if you are using some other backup program, you may have some work
+    to do. You will have to find the directories and files it needs to run. If you
+    use tar, gzip, cpio, mt or dd for your backup and recovery tools, they will be
+    saved and restored from your ZIP® disk as part of the one process describe how.
+
+
+    The last stage is a total restoration from tape or other media. After you have
+    done that last stage, you should be able to boot to a fully restored and operational
+    system.
+
+
+    # 2.1. Limitations
+
+
+    HOWTO is restricted to making a minimal backup such that
+
+
+    Even with that narrow brief, HOWTO is not exhaustive. You still have some research,
+    script editing, and testing to do.
+
+
+    The scripts here restore the partition data exactly as found on the source hard
+    drive. This is nice if you restoring on an identical computer or at identical
+    hard drive, but that is not the case. For now, there are two remedies (which will
+    make more sense after you''ve read the rest of the HOWTO):
+
+
+    +   - Edit the partition table file. I''ve done a few times. You can also add
+    to this new partitions or deleting ones (but edit the script that uses the partition
+    table file as well).
+
+    - Build a new partition table and go from there. That is one reason why restore_metadata
+    does not call the hard drive rebuilding script. (Another being that I don''t know
+    what hard drives you have drove.) Make sure you remove the call to fdisk from
+    the rebuilding script.
+
+
+    The scripts shown here only handle ext2fs, FAT12 and FAT16. Until some eager volunteer
+    supplies code for doing in these scripts, you will need other tools for backing
+    up and restoring file systems we''t covered. Partition Image looks like a useful
+    candidate here.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 3. Preparation
+
+
+    > WARNING
+
+
+    Do your normal backups on their regular schedule. This HOWTO is useless if you
+    don''t do that.
+
+
+    Build yourself a rescue disk. I use tomsrtbt. It is well documented and packs
+    a lot of useful tools onto one floppy diskette. There is an active list for it,
+    and the few questions Ive had were quickly and accurately answered. I like that
+    in a product my shop may depend on one day.
+
+
+    Next, figure out how to do the operating system backup you will need that you
+    can restore your normal backup. I followed Preston''s advice and used an Iomega®
+    parallel port ZIP® drive. The drives get approximately 90 MB of useful storage
+    to a disk. I need about 85 MB to back up my desktop, so a 100MB ZIP® drive may
+    be pushing your luck.
+
+
+    # 3.1. Installing the ZIP® Drive
+
+
+    Installing the ZIP® drive is covered in the ZIP® Drive HOWTO, available at the
+    Linux Documentation Project and at its home page, http://www.njtom.com/dansie/zip-drive.html.
+
+
+    ![](img/b7e9f987ef9af3f87243de7cf4b11b84_7_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 4. Creating the Stage 1 Back Up
+
+
+    Having made production backups, you need to preserve your partition information
+    so that you can rebuild your partitions.
+
+
+    The script make.fdisk scans a hard drive for partition information, and saves
+    it in two files. One is an executable script, called make.dev.x. The other, dev.x
+    (where "x" is the name of the device file, e.g. hda), contains the commands for
+    fdisk. You specify which hard drive you want to build scripts for (and thus the
+    file names) by naming the associated device file as the argument make.fdisk. For
+    example, a typical IDE system,
+
+
+    ```
+
+    bash# make.fdisk /dev/hda
+
+    ```
+
+
+    spits out the script make.dev.hda and the input file for fdisk, dev.hda.
+
+
+    In addition, make.fdisk encounters a FAT partition over FAT32, it preserves the
+    partition''s boot sector in a file named dev.xy, where x is the device name (e.g.
+    sdc) and y is the partition number. The boot sector is the first sector, 512,
+    of the partition. This sector is restored at the same time the partitions are
+    rebuilt, in the script make.dev.hda
+
+
+    Fortunately, the price of hard drives is plummeting as fast as the public''s trust
+    in politicians after an election. So it is good that the output files are text,
+    and allow easy editing. Now, that''s the only way to rebuild on a larger partition.
+    (See the To Do List](http://example.com/to-do-list))
+
+
+    Other metadata are preserved in the script save.metadata. The script saves the
+    partition information in the file fdisk.hda in the root of the ZIP® disk. It is
+    a good idea to print this file and your /etc/fstab so that you have hard copy
+    which you ever have to restore the partition data manually. You can save it by
+    toggling between two consoles, running fdisk in one and catting /etc/fstab or
+    fdisk.hda as needed. However, doing so is error prone.
+
+
+    You will also need to preserve files for your restoration method. For example,
+    if you use nfs to save your data, you will need to preserve hosts,devs, etc. Also,
+    if you are using any network-backed restoration process, such as Amanda or Quick
+    Restore, you will need to preserve networking files like HOSTNAME, hosts, and
+    the relevant software tree.
+
+
+    The simplest to handle and similar questions is to preserve the entire etc directory.
+
+
+    There is no way like a 100 MB ZIP® drive is going to hold a server installation
+    of a modern distribution of Linux. We have to be more selective than simply preserving
+    the whole kazoo. What files do we need?
+
+
+    +   * The boot directory.
+
+    * The /etc directory and subdirectories.
+
+    * Directories needed at boot time.
+
+    * Device files in /dev.
+
+
+    To determine the directories needed at boot, we look at the boot initialization
+    file /etc/rc.sysinit. It sets its one path like so:
+
+
+    ```
+
+    PATH/bin:/sbin:/usr/bin:/usr/sbin
+
+    export PATH
+
+    ```
+
+
+    # 4. Creating the Stage 1 Back Up'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    Trial and error indicated that we needed some other directories as well, such
+    as /dev. In Linux, you can''t much without device files.
+
+
+    In reading the script save.metadata, note that we aren''t necessarily saving files
+    that are called with absolute paths.
+
+
+    We may require several iterations of back up, test the bare metal restore, re–install
+    from CD and try again, before we have a working backup script. While I worked
+    on this HOWTO, I made five such iterations before I had a successful restoration.
+    That is one reason why it is essential to use scripts whenever possible. Test
+    thoroughly!
+
+
+    # 4. Creating the Stage 1 Back Up'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 5. Booting tomsrbt
+
+
+    The first thing to do before starting the restoration process is to verify that
+    the hardware time is set correctly. Use the BIOS setup for this. How close to
+    exact you have to set the time depends on your applications. For restoration,
+    within a few minutes of time should be accurate enough. This will allow time-critical
+    events to pick up where they left off when you finally launch the restored system.
+
+
+    Before booting tomsrbt, make sure your ZIP® drive is placed on a parallel port,
+    either /dev/lp0 or /dev/lp1. The start-up software will load the parallel port
+    ZIP® driver for you.
+
+
+    The next step is to set the video mode. I would like to see as much on the screen
+    as I can. When the option to select a video mode, use 6, 80 columns by 60 lines.
+    Your hardware or may not be able to handle high resolutions like that, so experiment
+    with it.
+
+
+    Once tomsrbt has booted and you have a console, mount the ZIP® drive. It is probably
+    a good idea to mount it only:
+
+
+    ```
+
+    # mount /dev/sdal /mnt - ro
+
+    ```
+
+
+    Check to be sure it is here:
+
+
+    ```
+
+    # ls -1 /mnt
+
+    ```
+
+
+    Then change to the directory where the scripts are on the ZIP® drive.
+
+
+    ```
+
+    # cd /mnt/root.bin
+
+    ```
+
+
+    Now run the script that will partition the information, e.g.:
+
+
+    ```
+
+    # .make.dev.hda
+
+    ```
+
+
+    This script will:
+
+
+    +   * Clean the first 1024 bytes of the hard drive, killing off any existing partition
+    table and master boot record (MBR).
+
+    * Recreate the partitions from the information gathered when you ran make.fdisk.
+
+    * Make ext2 file system partitions and Linux swap partitions as appropriate.
+
+    * Make some types of FAT partitions.
+
+    * Make mount points and the ext2 partitions for you.
+
+
+    > NOTE
+
+
+    If you have other operating systems to restore, now is a good time to do so. First,
+    reboot tomsrbt to finishing Linux. You will have to mount the partitions you just
+    built. Make a new, separate, script to mount the partitions to the tail end of
+    the make.dev.x script.
+
+
+    Once you have created all your directories and mounted partitions to them, you
+    can run the script restore.metadata. This will restore the contents of the ZIP®
+    drive to the hard drive.
+
+
+    # 5. Booting tomsrbt'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'You should see a directory of the ZIP® disk''s root directory, then a list
+    of the archive files as they are restored. Tar on tomsrtbt will tell you tar''s
+    block size is 20, and that''s fine. You can ignore it. Be sure that lilo prints
+    out its results:
+
+
+    ```
+
+    Added linux *
+
+    ```
+
+
+    That will be followed by the output from a "df -m" command.
+
+
+    If you normally boot directly to X, you could have some problems. To be safe,
+    change your boot run level temporarily. In /target/etc/inittab, find the line
+    that looks like this:
+
+
+    ```
+
+    id:5:initdefault:
+
+    ```
+
+
+    and change it to this:
+
+
+    ```
+
+    id:3:initdefault:
+
+    ```
+
+
+    Now, you can gracefully reboot. Remove the tomsrtbt floppy from your floppy drive
+    if you haven''t already done so, and give the computer the three fingered salute,
+    or its equivalent:
+
+
+    ```
+
+    shutdown -r now
+
+    ```
+
+
+    The computer will shut down and reboot.
+
+
+    +   5. Booting tomsrtbt'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 6. Second Stage Restoration
+
+
+    As the computer reboots, go back to the BIOS and verify that the clock is more
+    or less correct.
+
+
+    Once you have verified the clock is correct, exit the BIOS and reboot to the hard
+    drive. You can simply let the computer boot in its normal sequence. You will see
+    a lot of error messages, mostly along the lines of "I can''t find blah! Waahhh!
+    If you have done your homework correctly until now, those error messages won''t
+    matter. You don''t need linuxconf or apache to do what you need to do.
+
+
+    # NOTE
+
+
+    As an alternative, you can boot to single user mode (at the lilo prompt, enter
+    linux single), but you will have to configure your network manually and set up
+    sshd or whatever daemons you need to restore your system. How you do things is
+    very system specific.
+
+
+    You should be able to log into a root console (no X — users, sorry). You should
+    now be able to use the network, for example to nfs mount the backup of your system.
+
+
+    If you did the two stage backup I suggested for Arkeia, you can now restore Arkeia''s
+    database and executables. You should be able to run
+
+
+    ```
+
+    /etc/rc.d/init.d/arkeia start
+
+    ```
+
+
+    and start the server. If you have the GUI installed on another computer with X
+    installed, you should now be able to log in to Arkeia on your tape server, and
+    prepare your restoration.
+
+
+    # NOTE
+
+
+    When you restore, read the documentation for your restoration programs carefully.
+    For example, tar does not normally restore certain characteristics of files, like
+    laid bits. File permissions are set by the user''s umask. To restore your files
+    exactly as you saved them, use tar''s option. Similarly, make sure your restoration
+    software will restore everything exactly as you saved it.
+
+
+    To restore the computer:
+
+
+    ```
+
+    bash# restore.all
+
+    ```
+
+
+    If you used tar for your backup and restoration, and used the -k (keep old files,
+    don''t overwrite) option, you will see a lot of this:
+
+
+    ```
+
+    tar: usr/sbin/rpcinfo: Could not create file: File exists
+
+    tar: usr/sbin/zbdum: Could not create file: File exists
+
+    tar: usr/sbin/zic: Could not create file: File exists
+
+    tar: usr/sbin/ab: Could not create file: File exists
+
+    ```
+
+
+    # 6. Second Stage Restoration'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    This is normal, as tar is overwriting files you restored during the first stage
+    of restoration.
+
+
+    Then you reboot. On the way down, you will see a lot of error messages, such as
+    "no such pid." This is a normal part of the process. The shutdown code is using
+    the pid files daemons that were not running when the backup was made to shut down
+    daemons that were not started on the last boot. Of course there''s no such pid.
+
+
+    Your system should come up normally, with a lot fewer errors than it had before,
+    ideally no errors. The acid test of how well your restore works on an RPM system
+    is to verify all packages:
+
+
+    ```
+
+    bash# rpm -Va
+
+    ```
+
+
+    Some files, such as configuration and log files, will have changed in the normal
+    course of things, and you should be able to mentally filter those out of the report.
+    You can redirect the output to a file, and diff it against the one that was made
+    at backup time (/etc/rpmVa.txt), thereby speeding up this step considerably. Emacs
+    users should check out its diff facilities.
+
+
+    Now you should be up and running. It is time to test your applications, especially
+    those that run as daemons. The more sophisticated the application, the more testing
+    you may need to do. If you have remote users, disable them using the system, or
+    make it "read only" while you test it. This is especially important for databases,
+    to prevent making any corruption or data loss worse than it might be.
+
+
+    If you normally boot to X, and disabled it above, test X before you re-enable
+    it. Re-enable it by changing that line in /etc/inittab back to:
+
+
+    ```
+
+    id:5:initdefault:
+
+    ```
+
+
+    You should now be ready for rock and roll — and some aspirin and a couch.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # 7. Distribution Specific Notes
+
+
+    Below are distribution notes from past experiences. If you have additional notes
+    that you would like to add for other distributions, please forward them to me.
+
+
+    # ## 7.1. Red Hat 7.1
+
+
+    This distribution is the one I use on my test computer. I have had no problems
+    with it.
+
+
+    # ## 7.2. Red Hat 7.0
+
+
+    This version seems to require libcrack in (/usr/lib) and its attendant files in
+    order to authenticate users. So in `save.metadata`, add to the line that saves
+    `/usr/lib` the following: `/usr/lib/*crack*` and enable that line.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 8. Application Specific Notes
+
+
+    I have listed below notes about backing up particular applications.
+
+
+    # 8.1. Squid
+
+
+    Squid is a http proxy and Cache. As it keeps a lot of temporary data on the hard
+    drive. There is no point in backing up that. Insert "--exclude /var/squid/squid"
+    into the appropriate tar command in your second stage backup script. Then, get
+    squid to rebuild its directory for you. Tack the tail end of the second stage
+    restore script to initialize it. This is how I did it over ssh
+
+
+    restore.tester:
+
+
+    ```
+
+    ssh $target ''mkdir /var/spool/squid ; chown squid:squid /var/spool/squid;
+
+    /usr/sbin/squid -z;touch /var/spool/squid/.OPB_NOBACKUP''
+
+    ```
+
+
+    The last command creates a file of length 0 called OPB_NOBACKUP. This is for the
+    benefit of Arkeia and tells Arkeia not to back up this directory
+
+
+    # 8.2. Arkeia
+
+
+    Arkeia is a backup and restore program that runs on a variety of platforms. You
+    can use Arkeia as part of a bare metal restore scheme, but there are two caveats.
+
+
+    The first is the most problematic, as absent any more elegant solution you have
+    to hand select the directories to restore in the navigator at restoration time.
+    The reason is that, apparently, Arkeia has no mechanism for restoring files already
+    present on the disk, not analogous to tar -p option. If you simply allow a full
+    restore, the restore will crash as Arkeia over-writes a library which is in use
+    at restore time, e.g. lib/libc-2.1.so. Selection of directories to restore is
+    best at doi, so I recommend it against.
+
+
+    The second is that you have to back up the Arkeia data dictionary and/or programs.
+    To do that, modify the save.metadata script by adding Arkeia to the list of directories
+    to save:
+
+
+    ```
+
+    # Arkeia specific:
+
+    tar cf -usr/knox | gzip -c $zip/arkeia.tar.gz
+
+    ```
+
+
+    You must back up the data dictionary because Arkeia does not back up the data
+    dictionary. This is one of my complaints about Arkeia, and I solve it on my own
+    computer by saving the data dictionary to tape with The TOLIS Group''s BRU.
+
+
+    The data dictionary will be restored in the script restore.metadata automatically.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# 9. Some Advice for Disaster Recovery
+
+
+    You should take your ZIP® disk for each computer and the printouts you made, and
+    place them in a secure location in your shop. You should store copies of these
+    in your off-site backup storage location. The major purpose of off-site backup
+    storage is to enable disaster recovery, and restoring each host onto replacement
+    hardware is a part of disaster recovery.
+
+
+    You should also have several tomstrtbt floppies and possibly some ZIP® drives
+    in your off-site storage as well. Also, have copies of the tomstrtbt distribution
+    on several of your computers so that they back each other up.
+
+
+    You should probably have copies of this HOWTO, with your site-specific annotations
+    on it, with your backups and in your off-site backup storage.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 10. What Now?
+
+
+    This HOWTO results from experiments on one computer. No doubt you will find some
+    directories or files you need to back up in your first stage backup. I have not
+    dealt with saving and restoring X on the first stage, nor have I touched at all
+    processors than Intel.
+
+
+    I would appreciate your feedback as you test and improve these scripts on your
+    own computers. I also encourage vendors of backup software to document how to
+    do a minimal backup of their products. I''d like to see the whole Linux community
+    sleep just a little better at night.
+
+
+    # 10.1. To Do
+
+
+    Volunteers are welcome. Check with me before you start on one of these in case
+    someone else is working on it already.
+
+
+    +   - A partition editor to adjust partition boundaries for a different hard drive,
+    or the same one with different geometry, or to adjust partition sizes within the
+    same hard drive. A GUI would be a good idea here. On the other tactile, the FSF''s
+    parted looks like it will fill part of the bill. It does re-size existing partitions,
+    but with restrictions.
+
+    - make.fdisk currently splits out one script. Separate out the mount counts to
+    another script, so you can run make.dev.hda then reboot to do something else,
+    like build a partition for exotic OS I never heard of, or parted, then reboot
+    to tombsrt, mount all the Linux partitions, and continue.
+
+    - Since tombsrt supports bzip2, convert the scripts to bzip2, and see if there
+    is a noticeable reduction in the first stage data saved.
+
+    - make.fdisk currently only recognizes FAT partitions, not all. Add code to make.fdisk
+    to recognize others and make appropriate जिक्र to rebuild them in the output files.
+
+    - For FAT12 or FAT16 partitions we do not format, write zeros into the partition
+    that Mess-DOS 6.x does get confused. See the notes on fdisk for an explanation
+    of the problem.
+
+    - Make a script to partition ext2 file systems on ZIP disks.
+
+    - Translations into other (human) languages.
+
+    - Find out how loadlinux or similar programs affect this process.
+
+    - Changes for GRUB
+
+    - Change the scripts to use a CD-ROM. A CD-ROM that would boot to tombsrt, with
+    the first stage restore data on the rest of it, which would be the ticket.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # The Scripts
+
+
+    See the notes in the beginning of each script for a summary of what it does.
+
+
+    # ## 11. First Stage
+
+
+    # ### 11.1.1. make_fdisk
+
+
+    This script, run at backup time, creates a script similar to make.dev.hda, below,
+    for you to run at restore time. It also produces data files similar to dev.hda,
+    below. The name of the script and data produced depends on the device given this
+    script as a parameter. That script, run at restore time, builds the partitions
+    on the hard drive. make.fdisk is created from save.metadata. below.
+
+
+    ```
+
+    #! /usr/bin/perl
+
+    # A script to create a script and input file for fdisk to
+
+    # re-create the partitions on the hard disk, and format the Linux and
+
+    # Linux swap partitions. The first parameter is the fully qualified
+
+    # path of the device of the hard disk, e.g /dev/hda. The two
+
+    # resulting files are the script make.dev.x and the data file dev.x
+
+    # where x is the hard drive described, e.g. hda, sdc). make.dev.x is
+
+    # run at restore time to rebuild hard drive x, prior to running
+
+    # restore.metadata is the input file for fdisk.
+
+
+    # Time-stamp:<2001-12-13 15:41:22 curley make.fdisk
+
+    ```
+
+
+    ```
+
+    # Copyright 2001 through the last date of modification Charles Curley
+
+    # except for the subroutine cut2fmt.
+
+    ```
+
+
+    ```
+
+    # cut2fmt Copyright (c) 1998 Tom Christiansen, Nathan Torkington and
+
+    # O''Reilly & Associates, Inc. Permission is granted to use this code
+
+    # freely EXCEPT for book publication. You may use this code for book
+
+    # publication only with the explicit permission of O''Reilly &
+
+    # Associates, Inc.
+
+    ```
+
+
+    ```
+
+    # This program is free software; you can redistribute it or/modify it
+
+    # under the terms of the GNU General Public License as published by the
+
+    # Free Software Foundation; version 2 of the License, or (at your
+
+    # option) later version.
+
+    ```
+
+
+    ```
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without the implied warranty of
+
+    # # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+    ```
+
+
+    ```
+
+    # You have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.,
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+    ```
+
+
+    ```
+
+    # In addition, as a special exception, Tom Christiansen, Nathan
+
+    # Torkington and O''Reilly & Associates, Inc. give permission to use
+
+    # the code of this subroutine cut2fmt (or with
+
+    # modified versions of the subroutine cut2fmt that use the same
+
+    # license as the subroutine cut2fmt), and distribute linked
+
+    # combinations including the two. You must obey the GNU
+
+    # Public License in all respects for all of the code used than
+
+    ```
+
+
+    11. The Scripts'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    # the subroutine cut2fmt. If you modify this file, you may extend
+
+    # this exception to your version of the file, but you are not
+
+    # obligated to so. If you do not wish to do so, delete this
+
+    # exception statement and the subroutine cut2fmt from your version.
+
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+
+    # Changes:
+
+
+    +   * 2001 11 25: Changed the way mke2fs gets its bad block
+
+    * list. badblocks does not guess at the block size, so you have to get
+
+    * it (from dump2fs) and feed it to badblocks. It is simpler to get
+
+    * have mke2fs call badblocks, but you do lose the ability to have
+
+    * writing test easily. C2
+
+
+    +   * 2001 11 25: Changed the regex that extracts partition labels from
+
+    * the mount command. This change does not affect the results at all,
+
+    * it just makes possible to use Emace'' per mel to indent
+
+    * correctly. I just escaped the left bracket in the regex. -- C2
+
+
+    # Discussion:
+
+
+    # fdisk will spit out a file of the form before you run it as "fdisk
+
+    # "-1".
+
+
+    ```
+
+    $root@tester ~/bin -1 /dev/hda
+
+    ```
+
+
+    ```
+
+    $ Disk /dev/hda: 64 heads, 63 sectors, 1023 cylinders
+
+    # Units = cylinders of 402 *
+
+    ```
+
+
+    | Device Boot | Start | Blocks Id System |
+
+    | /dev/h1 | | 1 | 9 | 18112+ | Linux |
+
+    | /dev/h2 | | 10 | 204424 | 5 Extended |
+
+    | /dev/h5 | | 10 | 368 | 723712+ | 83 Linux |
+
+    | /dev/h6 | | 369 | 727 | 723712+ | 83 Linux |
+
+    | /dev/h7 | | 728 | 858 | 264064+ | 83 Linux |
+
+    | /dev/h8 | | 859 | 989 | 264064+ | 83 Linux |
+
+    | /dev/h9 | | 990 | 1022 | 66496+ | 82 Linux swap |
+
+
+    # fdisk does not provide output suitable for later
+
+    # importing into fdisk, a sdisk. This script parses the output
+
+    # from fdisk and creates an input file for fdisk. Use the input file
+
+    # like so:
+
+
+    ```
+
+    $ /dev/hdx ~dev.hdx
+
+    ```
+
+
+    # For the bare metal restore package, this script also builds a
+
+    # that will execute the above command so you can run it from your zip
+
+    # because the bare metal restore scripts all are in /root/bin,
+
+    # the data file created by this script are also placed
+
+    # there. The script also creates Linux file systems,
+
+    # either ext2fs or Linux swap. There is limited support for FAT12 and
+
+    # FAT16. There is no support right (now, hint) for FAT32. For
+
+    # anything else, you''re on your own.
+
+
+    # Note for FAT32: To allocate the MS KB, there are more than one
+
+    # reserved sectors for FAT32, 92, but it can vary. Do a search
+
+    # in ms''s KB for "boot sector" or RPB for the gory details. For more
+
+    # info when you really need the boot sector are used, see
+
+    # http://microsoft.com/support/kb/articles/Q140/4/18/as
+
+
+    # You can also edit dev.dx to change the size of partitions. Don''t
+
+
+    # 11. The Sections
+
+
+    17'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# Linux Complete Backup and Recovery HOWTO\n\n```\n# forget, if you changed\
+    \ the size of a FAT partition across the 32MB\n# boundary, you need to change\
+    \ the type as well! Run `fdisk /dev/sda`\n# or some, then use the command to see\
+    \ the available partition\n# types. Go ahead and edit it appropriately. Also,\
+    \ when moving\n# partition boundaries with hand edits, make sure you move both\
+    \ logical\n# extended partition boundaries appropriately.\n```\n\n```\n# Bad block\
+    \ checking now is a quick read of the partition.\n# writing check is also possible\
+    \ but more difficult. You have to run\n# badblocks as a separate command, and\
+    \ pass the bad block list to\n# mk2fs in a file (/tmp, which is a ram disk). You\
+    \ also have to\n# know how the blocks are, which you learn by running\n# dump2fs.\
+    \ It gets messy if you haven't done it yet. You probably\n# don't need it for\
+    \ a local drive, but if you had a hard drive\n# crash on and you are reusing it\
+    \ (while you are waiting for its\n# replacement to come in, I presume), then I\
+    \ highly recommend it.\n# me know how you do it.\n```\n\n```\n# For more information\
+    \ contact the author, Charles Curley, at\n# http://w3.trib.com/~curley/\n```\n\
+    \n```\n# cut2fmt figures out the format string for the unpack function we use\n\
+    # to slice and dice the output from fdisk. From Christians and\n# Torkington,\
+    \ Publ Cookbook 5.\n```\n\n```\nsub cut2fmt {\nmy (@positions) = _;\nmy $template\
+    \ = '';\nmy $lastpos = 1;\n```\n\n```\nforeach $place (@positions) {\n    $template\
+    \ .= \"A\" ($place - $lastpos) . \" \";\n    $lastpos = $place;\n}\n```\n\n```\n\
+    $template = \"A\";\nreturn $template;\n}\n```\n\n```\n# Provide a default device.\n\
+    if ($ARGV[0] == \"\") {\n    $device=\"/dev/sda\";\n} else {\n    $device=$ARGV[0];\n\
+    }\n```\n\n```\n# print \"Device is $device.\\n\";\n# prepare format string.\n\
+    $fmt = cut2fmt (11, 19, 24, 34, 45, 49);\n# print \"Format string is $fmt.\\n\\\
+    n\"\n```\n\n```\n# define fields in the array _.\n$dev = 0;\n$bootable = 1;\n\
+    $firstcyl = 2;\n$lastcyl = 3;\n$partype = 5;\n$partstring = 6;\n```\n\n# 11. The\
+    \ Scripts"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "```\n$target = \"\\target\"\n\n$outputfilename = $device;\n$outputfilename\
+    \ -= s/\\\\/.//g;\n$outputfilename = substr ($outputfilename, 1, 100);\n\n$outputfilepath\
+    \ = \"/root/bin//\";\n\n# Make a hash of the labels.\n$spmid = open (MOUNT, MOUNT\
+    \ -l |) or die \"Couldn't fork: $!\\n\"\nwhile (<MOUNT>) {\n    if ($_ =~ /\\\
+    device/i) { # this is a line with a partition in it?\n        print $_;\n    \
+    \    # print it for grins\n        split;\n        if (${_[6]} != \"\") { # only\
+    \ process if there is actually a label\n            ${_[6]} -= s/[\\\\\\]]//;\
+    \ # strike and ].\n            $labels[$_[0]] = ${_[6]};\n            print \"\
+    The label of file device $_[0] is $labels[$_[0]].\"\n        }\n    }\n}\n\n#\
+    \ We only mount if it's ext2fs and read and write.\nif (${_[4]} eq \"ext2\" and\
+    \ ${_[5]} eq \"rw\") {\n    $mountpoints[$_[2]] = $_[0];\n    print \"$_[2] is\
+    \ the mountpoint for $mountpoints[$_[2]].\\n\"\n}\nclose (MOUNT);\n```\n\n```\n\
+    $fpid = open (FDISK, fdisk -l $device |) or die \"Couldn't fork: $!\\n\"\n\nopen\
+    \ (OUTPUT, \"> $outputfilepath$(outputfilename)\nor die \"Couldn't open file $outputfilepath$(outputfilename).\\\
+    n\"\n\nwhile (<FDISK>) {\n    if ($_ =~ /\\device/i) { # this is a line with a\
+    \ partition in it?\n        print $_;\n        # print it for grins\n        chop\
+    \ = unpack ($fmt, $);\n        # killing trailing \\r\n    }\n    # strip wide\
+    \ white spaces from cylinder numbers\n    ${_[firstcyl]} =~ s/[\\t]//;\n    ${_[lastcyl]}\
+    \ =~ s/[\\t]//;\n    ${_[parttype]} =~ s/[\\t]//;\n}\n\n$partnumber = substr_($dev,\
+    \ 8, 10); # get partition number for this line\n# just for grins\n    print \"\
+    $partnumber, ${_[firstcyl]}, ${_[lastcyl]}, ${_[partstring]}\\n\"\n\n# Here we\
+    \ are creating the input to recreate the partition\n# this lines represents.\n\
+    \nprint OUTPUT \"\\n\";\nif ($partnumber < 5) {\n    # primary Linux partition\n\
+    \    if (${_[parttype]} == 83) {\n        print OUTPUT \"OUTPUT\\n$p$partnumber\
+    \ n@${_[firstcyl]}\\n\"\n        if (${_[firstcyl]} ne ${_[lastcyl]}) { # in case\
+    \ it's all on one cylinder\n```\n\n# 11. The Scripts"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# Linux Compute Backup and Recovery HOWTO\n\n```\nprint OUTPUT \"@_[$lastcyl]\\\
+    n\"\n\nif (${labels[@_[$dev]}) { # do we have a label?\n    # no bad block check\n\
+    \    format = \"mkfs2fs @_[$dev] -L Llabels[@_[$dev]]\\n\"\n    format = \"echo\
+    \ necho formatting and checking @_[$dev]}\\n\"\n    format = \"mkfs2fs -c -Llabels[@_[$dev]}\
+    \ @_[$dev]\\n\"\n} else {\n    format = \"mkfs2fs @_[$dev]}\\n\" # no bad block\
+    \ check\n    format = \"echo necho formatting and checking @_[$dev]}\\n\"\n  \
+    \  format = \"mkfs2fs -c @Llabels[@[$dev]}\\n\"\n}\n\n# extended partition\nelsis\
+    \ (@_[$partype] == 5) {\n    print OUTPUT \"@_[$partnumber]\\n@_[$firstcyl]\\\
+    n\"\n    if (@[$firstcyl] != @_[$lastcyl]) {\n        print OUTPUT \"@_[$lastcyl]\\\
+    n\"\n    }\n}\n\n# primary Linux swap partition\nelsis (@_[$partype] == 82) {\n\
+    \    print OUTPUT \"@_[$partnumber]\\n@_[$firstcyl]\\n\"\n    if (@[$firstcyl]\
+    \ != @_[$lastcyl]) {\n        print OUTPUT \"@_[$lastcyl]\\n\"\n    }\n    print\
+    \ OUTPUT \"@_[$n82]\\n\"\n    format = \"mkswap -c @_[$dev]\\n\"\n}\n\n# primary-dos\
+    \ partition. We don't handle FAT32,\n# which requires a command line switch for\
+    \ mkdosfs.\nselif (@_[$partype] == 1 || @_[$partype] == 6 ) {\n    print \"dd\
+    \ if=@_[$dev] of=outputfilepathoutputfilename$partnumber\\n\"\n    print \"* bs=512\
+    \ count=1\\n\"\n    system \"dd if=@_[$partnumber]\\n@_[$firstcyl] of=outputfilepathoutputfilename$partnumber\
+    \ bs=512 count=1\"\n    print OUTPUT \"@_[$partnumber]\\n@_[$firstcyl]\\n\"\n\
+    \    if (@[$firstcyl] != @_[$lastcyl]) { # in case it's all on one cylinder\n\
+    \        print OUTPUT \"@_[$lastcyl]\\n\"\n    }\n    print OUTPUT \"@_[$partnumber]\\\
+    n@_[$partype]}\\n\"\n    format = \"*mkdosfs @_[$dev]}\\n\" # no bad block check\n\
+    \    format = \"echo necho formatting and checking @_[$dev]}\\n\"\n    format\
+    \ = \"mkdosfs -c @_[$dev]}\\n\"\n    format = \"* restore FAT boot sector.\\n\"\
+    \n    print \"dd if=@_outputfilenamename of=@_[$dev] bs=512 count=1\\n\"\n}\n\
+    elsis {\n    # anything else partition\n    print OUTPUT \"@_[$partnumber]\\n@_[$firstcyl]\\\
+    n\"\n    if (@[$firstcyl] != @_[$lastcyl]) {\n        print OUTPUT \"@_[$lastcyl]\\\
+    n\"\n    }\n    print OUTPUT \"@_[$partnumber]\\n@_[$partype]\\n\"\n} else {\n\
+    \    # logical Linux partition\n    if (@_[$partype] == 83) {\n        print OUTPUT\
+    \ \"1_[$n]\\n@_[$firstcyl]\\n\"\n        if (@[$firstcyl] != @_[$lastcyl]) {\n\
+    \            print OUTPUT \"@_[$lastcyl]\\n\"\n        }\n    }\n```\n\n1. The\
+    \ Scripts\n\n20"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# Linux Backup and Recovery HOWTO\n\n```\n) if ($labels[@{$dev}]) { # do we\
+    \ have a label?\n# no bad block check\n$format = \"mke2fs @_{$dev} -L $labels[@{$dev}]\\\
+    n\"\n$format = \"echo echo formatting and checking @_{$dev}\\\\n\"\n$format =\
+    \ \"mke2fs -c -L labels[@{$dev}]\\n\"\n} else {\n  $format = \"mke2fs @_{$dev}\\\
+    \\n\" # no bad block check\n  $format = \"echo echo formatting and checking @_{$dev}\\\
+    \\n\"\n  $format = \"mke2fs -c @_{$dev}\\\\n\"\n}\n\n# logical Linux partition\n\
+    elsis (@_{$parttype} == 82) {\n  print OUTPUT \"\\1\\n0@_{$firstcycle}\\n\"\n\
+    \  if (@_{$firstcycle} != @_{$lastcycle}) {\n    print OUTPUT \"\\0@_{$lastcycle}\\\
+    n\"\n  }\n  print OUTPUT \"\\t\\nnumber@n82\\n\"\n  $format = \"mkswap -c @_{$dev}\\\
+    \\n\"\n}\n# primary mdos partition. We don't handle FAT32\n# which requires a\
+    \ command line switch for mkdosfs.\nelsis (@_{$parttype} == @_{$parttype} == 6)\
+    \ {\n  print \"\\dd if @_{$dev} of=outputfilefilenamepartnumber\\n\"\n  $format\
+    \ = \"-b 512 count=1\\n\"\n  system(\"\\dd if @_{$dev} of=outputfilefilenamepartnumber\
+    \ bs=512 count=1\"\n  print OUTPUT \"\\t\\nnumber@_{$parttype}\\n\"\n  if (@_{$firstcycle}\
+    \ != @_{$lastcycle}) { # in it's on one cylinder\n    print OUTPUT \"\\0@_{$lastcycle}\\\
+    n\"\n  }\n  print OUTPUT \"\\t\\nnumber@_{$parttype}\\n\"\n  $format = \"mkdosfs\
+    \ @_{$dev}\\\\n\" # no bad block check\n  $format = \"echo echo formatting and\
+    \ checking @_{$dev}\\\\n\"\n  $format = \"mkdosfs -c @_{$dev}\\\\n\"\n  $format\
+    \ = \"-prealloc FAT sector.\\n\"\n  $format = \"\\dd ifoutputfilenamepartnumber\
+    \ of=@_{$dev} bs=512 count=1\\n\"\n} else {\n  # anything else\n  print OUTPUT\
+    \ \"\\1\\n0@_{$firstcycle}\\n\"\n  if (@_{$firstcycle} != @_{$lastcycle}) {\n\
+    \    print OUTPUT \"\\0@_{$lastcycle}\\n\"\n  }\n  print OUTPUT \"\\t\\nnumber@_{_{$parttype}\\\
+    n\"\n}\n\n# handle bootable partitions\nif (@_{$bootable} == - \\/\\*/) {\n  print\
+    \ OUTPUT \"\\a\\npartitionnumber\\n\"\n}\n```\n\n```\nprint OUTPUT \"\\v\\nw\\\
+    n\";\n```\n\n```\nclose(OUTPUT);\nclose(FDISK);\n```\n\n# 11. The Scripts"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    ```
+
+    open (OUTPUT, ">$(outputfilepath)make.$outputfilename)
+
+    or die "Cldn''t open output file $(outputfilepath).$outputfilename.\n";n
+
+    ```
+
+
+    ```
+
+    print OUTPUT <<FINIS;
+
+    !/bin/sh
+
+    ```
+
+
+    ```
+
+    # A script to restore the partition data of a hard drive and format
+
+    # the partitions. Created at bare metal backup by the Perl script
+
+    # make.fdisk.
+
+    ```
+
+
+    ```
+
+    # Copyright 2001 through the last date of modification Charles Curley.
+
+    ```
+
+
+    ```
+
+    # This program is free software; you can redistribute it and/or modify it
+
+    # under the terms of the GNU Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any later version.
+
+    ```
+
+
+    ```
+
+    # This program is distributed in the hope that it will be useful, and
+
+    # WITHOUT ANY WARRANTY; even without the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+    ```
+
+
+    ```
+
+    # You should have received a copy of the GNU Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+    ```
+
+
+    ```
+
+    # You can also contact the Free Software Foundation at http://www.fsf/ -
+
+    ```
+
+
+    ```
+
+    # For more information contact the author, Charles Curley, at
+
+    # http://w3.trib.com/~curley/
+
+    ```
+
+
+    ```
+
+    FINIS
+
+    ```
+
+
+    ```
+
+    # Clean the old partition table out.
+
+    print OUTPUT "dd if=/dev/zero of=$device bs=512 count=2\nsync\n\n";
+
+    ```
+
+
+    ```
+
+    print OUTPUT "Fdisk \$outputfilename\n\nsync\n\n"
+
+    print OUTPUT \$format;
+
+    ```
+
+
+    ```
+
+    # We build the mount points on the root and other partitions.
+
+    # We have a hash of mount points and devices in %mountpoints. However,
+
+    # we process them that directories are built on the
+
+    # appropriate target partition. E.g. where /usr/local is on its own
+
+    # partition, we have to mount /user we build /usr/local. We can
+
+    # ensure we can''t sort a hash directly, so we use an array.
+
+    ```
+
+
+    ```
+
+    # We build commands to create the appropriate mount points and then
+
+    # mount the partitions to the mount points. This is in preparation for
+
+    # untering the contents of the ZIP disk, done in restore.metadata.
+
+    ```
+
+
+    ```
+
+    foreach $point sort keys %mountpoints) (
+
+    print OUTPUT "\n# $point is the mountpoint for \$mountpoints($point).\n\"
+
+    print OUTPUT "\nmkdir \$target\$mountpoints($point) \$target\$point\n\"
+
+    )
+
+    ```
+
+
+    close (OUTPUT);
+
+
+    # 11. The Scripts'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    # These scripts are dangerous & should only be visible to root.
+
+
+    chmod 0700, "${$(outputfilepath)$make.$outputfilename"
+
+    chmod 0600, "${$(outputfilepath)$outputfilename";
+
+
+    # 11.1.2. make.dev.hda
+
+
+    This script is a sample of the sort protected by make.fdisk. Above. It uses files
+    like dev.hda, below. It builds and partitions file systems on one of them. The
+    first script run at restore.
+
+
+    If you are brave to edit dev.hda (q.v.), say, to add a new partition, you may
+    need to edit this script as well.
+
+
+    ```
+
+    #! /bin/sh
+
+
+    # A script to restore the partition data of a hard drive and format
+
+    # the partitions. Created at bare metal backup time by the Perl script
+
+    # make.fdisk.
+
+
+    # Copyright 2001 through the last date of modification Charles Curley.
+
+
+    # This program is free software; you can redistribute it and/or modify
+
+    # under the terms of the GNU General Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any later version.
+
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without even the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+
+    # You should have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+
+    # For more information contact the author, Charles Curley, at
+
+    # http://w3.trib.com/~curley/.
+
+
+    df if=/dev/zero of=/dev/hda=bs=52 count=2
+
+    sync
+
+
+    fdisk /dev/hda < dev.hda
+
+
+    sync
+
+
+    echo
+
+    echo formatting and checking /dev/hdal
+
+    mkdosfs -c /dev/hdal
+
+    # restore FAT boot sector.
+
+    dd if=/dev.hda of=/dev/hda bs=52 count=1
+
+
+    echo
+
+    echo formatting and checking /dev/hda2
+
+    backlocks -c 128 -o /tmp/dev.hda2 /dev/hda2
+
+    make2fs -L /boot -1 /tmp/dev.hda2 /dev/hda2
+
+    ```
+
+
+    # 11.1.2. make.dev.hda
+
+
+    *'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    ```
+
+    echo
+
+    echo formatting and checking /dev/hda5
+
+    badblocks -c 128 -o /tmp/dev.hda5 /dev/hda5
+
+    mke2fs -L / /tmp/dev.hda5 /dev/hda5
+
+    mkswap /dev/hda6
+
+    ```
+
+
+    ```
+
+    # / is the mountpoint for /dev/hda5.
+
+    mkdir /target/
+
+    mount /dev/hda5 /target/
+
+
+    #/boot is the mountpoint for /dev/hda2.
+
+    mkdir /target/boot
+
+    mount /dev/hda2 /target/boot
+
+    ```
+
+
+    # 11.1.3. dev.hda
+
+
+    This data file is used at restore time. It is fed to fdisk by make.dev.hda. It
+    is produced at backup time by make.fdisk Those familiar with fdisk recognize that
+    each line is an fdisk command or value, such as a cylinder number. Thus, it is
+    possible to change the partition sizes and add new partitions by editing this
+    file. That''s the penultimate command is v, to verify the partition table before
+    it is written.
+
+
+    +   n
+
+    p
+
+    1
+
+    29
+
+    t
+
+    6
+
+    ga
+
+    1
+
+    n
+
+    P
+
+    2
+
+    30
+
+    44
+
+    n
+
+    e
+
+    3
+
+    45
+
+    1023
+
+    n
+
+    1
+
+    45
+
+    944
+
+    n
+
+    1
+
+    945
+
+    1023
+
+    t
+
+    6
+
+    82
+
+    v
+
+    w
+
+
+    11.1.3. dev.hda
+
+
+    24'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# 11.1.4. save.metadata
+
+
+    This is the first script to run as part of the backup process. It calls make.fdisk,
+    above. If you have a SCSI hard drive or multiple hard drives to back up, edit
+    the call to make.fdisk appropriately.
+
+
+    ```
+
+    #! /bin/sh
+
+
+    # A script to save certain meta-data off the boot partition. Useful for
+
+    # restoration.
+
+
+    # Time-stamp: <2001-11-19 09:18:52 ccurley save.metadata>
+
+
+    # Copyright 2000 through the last of modification, Charles Curley.
+
+
+    # This program is free software; you can redistribute it and/or modify it
+
+    # under the terms of the GNU General Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any version.
+
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+
+    # You should have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.,
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+    # For more information contact the author, Charles Curley, at
+
+    # http://w3.trib.com/~curley/.
+
+
+    export zip="/mnt/zip"
+
+    # export save="/mnt/save"
+
+
+    echo "saving hard drive"
+
+    make.fdisk /dev/hda
+
+
+    # back up rpm metadata
+
+
+    echo "Verifying RPMs."
+
+    rpm -Va > /etc/rpmVa.txt
+
+
+    echo "Finished verifying RPMs; mounting the ZIP directory."
+
+
+    umount zip
+
+
+    modprobe ppa
+
+
+    mount /dev/sdal
+
+
+    # clean it all out
+
+    rm -r $zip/*
+
+
+    echo "Building the ZIP drive backups.")
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "```\nmkdir $zip/lost+found\n```\n\n```\nfdisk -l /dev/hda > $zip/fdisk.hda\n\
+    ```\n\n```\nls -al /mnt > $zip/ls.mnt\nls -al / > $zip/ls.root.txt\n```\n\n```\n\
+    mkdir $zip/etc\ncp -p /etc/* $zip/etc\n```\n\n```\ncd /\n```\n\n# These appear\
+    \ to be required so we can restore later on.\n\n```\ntar cf -boot | gzip -c >\
+    \ $zip/boot.tar.gz\ntar cf -root | gzip -c > $zip/root.tar.gz\ntar cf -etc | gzip\
+    \ -c > $zip/etc.tar.gz\ntar cf -lib | gzip -c > $zip/lib.tar.gz\n```\n\n```\n\
+    tar cf -usr/bin | gzip -c > $zip/usr.bin.tar.gz\ntar cf -usr/bin | gzip -c > $zip/usr.bin.tar.gz\n\
+    tar cf -sbin | gzip -c > $zip/sbin.tar.gz\ntar cf -dev | gzip -c > $zip/dev.tar.gz\n\
+    ```\n\n# Optional saves.\n\n```\n# arkeia specific:\ntar cf -usr/knox | gzip -c\
+    \ > $zip/arkeia.tar.gz\n```\n\n# save these we can use ssh for restore. *crack*\
+    \ for RH 7.0 login\n# authentication.\ntar cf -usr/lib/crypt* usr/lib/libssl*\
+    \ usr/lib/libcrypto*\\\n  | gzip -c > $zip/usr.lib.tar.gz\n\n# save the scripts\
+    \ we used to create the zip disk and the ones we will\n# use to restore.\nmdir\
+    \ $zip/root.bin/* $zip/root.bin\nrm $zip/root.bin/*-* $zip/root.bin/*#*\n\n```\n\
+    echo \"Test our results.\"\nfind $zip \\*.\" | xargs gzip -t\n```\n\n# Not a normal\
+    \ part of the process: we duplicate the ZIP disk onto another\n# NFS mount elsewhere.\n\
+    \n```\n# echo \"Backing the ZIP drive to the NFS mount.\"\n```\n\n```\n# amount\
+    \ $save\nmount $save\n```\n\n```\n# rm -r $save/zip\nmkdir $zip/save\ncp -pr $zip\
+    \ $save\n```\n\n```\n-m\neject $zip\n```\n\n# 11.1.4.save.metadata"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# 11.1.5.restore.metadata
+
+
+    This script restores metadata from the ZIP® as a first stage restore.
+
+
+    ```
+
+    #!/bin/sh
+
+
+    # A script to restore the meta-data from the ZIP disk. This runs under
+
+    # tomsrt only after partitions have been rebuilt, file systems made,
+
+    # and mounted. It also assumes the ZIP disk has already been
+
+    # mounted. The ZIP disk read only is a good idea.
+
+
+    # Time-stamp: <2001-11-19 09:21:51 curley restore.metadata>
+
+
+    # Copyright 2000 through the last date of modification Charles Curley.
+
+
+    # This program is free software; you can redistribute it and/or modify it
+
+    # under the terms of the GNU Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # (option) any later version.
+
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; even without the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+
+    # You should have received a copy of the GNU Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.,
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307
+
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+    # For more information contact the author, Charles Curley, at
+
+    # http://w3.trib.com/~curley.
+
+
+    zip="$mnt"
+
+    target="$target"
+
+
+    # warm fuzzies for the user.
+
+    ls -lt $zip
+
+
+    cd $target
+
+
+    # restore the archived metadata files.
+
+    for archive in $( ls $zip/*.gz ); do
+
+    echo $archive
+
+    ls -al $archive
+
+    gzip -dc $archive | tar -xf -
+
+    done
+
+
+
+    nmkdir $target/proc
+
+    chmod a-w $target/proc
+
+    mkdir $mnt
+
+
+    # build a mount point directory so we''ll have it on reboot.
+
+    mkdir $target/mnt
+
+
+    # Build the mount points for our second stage restoration and other
+
+    # things;
+
+    mkdir $target/mnt/save
+
+    mkdir $target/mnt/zip
+
+    mkdir $target/mnt/cdrom
+
+    mkdir $target/mnt/floppy
+
+    ```
+
+
+    # 11.1.5.restore.metadata'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    ```
+
+    mkdir $target/mnt/imports
+
+
+    # Restore the scripts we used to create the ZIP disk and the ones we will
+
+    # use to restore it. It should be the latest & greatest in case we had
+
+    # to do any editing during last stage restore.
+
+    cp -p $target/root/bin/* $target/root/bin
+
+
+    # Now install the boot sector.
+
+    chroot $target /sbin/lilo -C /etc/lilo
+
+    df -m
+
+    ```
+
+
+    # 11.2. Second Stage
+
+
+    These scripts run on the computer being backed up or restored.
+
+
+    # 11.2.1. back.up.all
+
+
+    This script saves to another computer via an NFS mount. You can adapt it to save
+    to tape drives or other media.
+
+
+    ```
+
+    #! /bin/sh
+
+
+    # Back the entire system to another computer''s drive. To make this
+
+    # work, we need a convenient chunk of disk space on the remote computer we
+
+    # can nfs mount as /mnt/save.
+
+
+    # Time-stamp: <2001-11-19 09:19:35 ccurley back.up.all>
+
+    ```
+
+
+    > # Copyright 2000 through the last date of modification Charles Curley.
+
+
+    # This program is free software; you can redistribute it and/or modify it
+
+    # under the terms of the GNU General Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any later version.
+
+
+    > # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+
+    > # You have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+
+    > # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+    # http://w3.trib.com/~ccurley/.
+
+    save=/mnt/save*
+
+
+    ```
+
+    # Make sure it''s there
+
+    umount $save
+
+    mount $save
+
+    ```
+
+
+    # 11.2. Second Stage'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# Linux Complete Backup and Recovery HOWTO\n\n```\ncd /\nrm $save/tester.tar.old.gz\n\
+    mv $save/tester.tar.gz $save/tester.tar.old.gz\n\n# save everything except /mnt,\
+    \ /proc, nfs mounted directories.\ntime tar cf / --exclude /mnt --exclude /proc\
+    \ --exclude $save$\n  gzip -c $save/tester.tar.gz\n```\n\n# 11.2.2. back.up.all.ssh\n\
+    \nThis script does exactly what back.up.all does, but it uses SSH instead of nfs.\n\
+    \n```\n#!/bin/sh\n\n# Back up the entire system to another computer's drive. To\
+    \ make this\n# work, we need a convenient chunk of disk space on the remote\n\
+    # computer. This version uses ssh to do its transfer, and compresses\n# using\
+    \ bzip2. This means this script has more modularization than the other\n# computer,\
+    \ which not make for good modularization.\n\n# Time-stamp: <2001-11-19 09:19:48\
+    \ curley back.up.all.ssh>\n\n# Copyright 2000 through the last date of modification\
+    \ Curley.\n\n# This program is free software; you can redistribute it/or modify\
+    \ it\n# under the terms of the GNU Public License as published by the\n# Free\
+    \ Software Foundation; either version 2 of the License, or (at your\n# option)\
+    \ any later.\n\n# This program is distributed in the hope that it will be useful,\
+    \ but\n# WITHOUT ANY WARRANTY; without the implied warranty of\n# MERCHANTABILITY\
+    \ OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU\n# General Public License for\
+    \ more details.\n\n# You should have received a copy of the GNU General Public\
+    \ License along\n# with this program; if not, write to the Free Software Foundation,\
+    \ Inc.\n# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\n\n# You can also\
+    \ contact the Free Software Foundation at http://www.fsf.org/\n# For more information\
+    \ contact the author, Curley, at\n# http://w3.trib.com/~curley/.\n\nsave=\"$save/tester\"\
+    \nbackup_server=$charlesc\n\n# rotate the old backups. Do it all in one line to\
+    \ minimize authentication overhead.\nsh $backup_server \"rm $save/tester.tar.old.bz2;\
+    \ mv $save/tester.tar.bz2 \\\n  $save/tester.tar.old.bz2\"\n\n# save everything\
+    \ except /mnt, /proc, squid directories.\ntime tar cf / --exclude /mnt --exclude\
+    \ /proc --exclude /var/spool/squid\n  | ssh $backup_server \"bzip2 -9 $save/tester.tar.bz2\"\
+    \n```\n\n# 11.2.2. back.up.all.ssh"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# Linux Complete Backup and Recovery HOWTO\n\n# 11.2.3. restore.all\n\nThis\
+    \ is the restore script to use if you backed up back.up.all.\n\n```\n#! /bin/sh\n\
+    \nA script to restore all of the data from an nfs mount. This is our final\n#\
+    \ stage restore.\n\n# Time-stamp: <2001-11-19 09:21:22 ccurley restore.all>\n\n\
+    # Copyright 2000 through the last date of modification Charles Curley.\n\n# This\
+    \ program is free software; you can redistribute it and/or modify it\n# under\
+    \ the terms of the GNU General Public License as published by the\n# Free Software\
+    \ Foundation; version 2 of the License, or (at your\n# option) any later version.\n\
+    \n# This program is distributed in the hope that it will be useful, but\n# WITHOUT\
+    \ ANY WARRANTY; without even the implied warranty of\n# MERCHANTABILITY OR FITNESS\
+    \ FOR A PARTICULAR PURPOSE. See the GNU\n# General Public License for more details.\n\
+    \n# You should have received a copy of the GNU General Public License along\n\
+    # with this program; if not write, write to the Free Software Foundation, Inc.\n\
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\n\n# You can also contact\
+    \ the Free Software Foundation at http://www.fsf.org/\n\n# For more information\
+    \ contact the author, Charles Curley, at\n# http://w3.trib/~ccurley/.\n\nexport\
+    \ save=\"mnt/save\"\nmount $save\n\ncd /\ngunzip -dc $save/tester.tar.gz | tar\
+    \ -xpkf -\n\rm /var/run/*.pid\n\nlilo\n```\n\n# 11.2.4. restore.all.ssh\n\nThis\
+    \ is the restore script to use if you used back.up.ssh to back up.\n\n```\n#!\
+    \ /bin/sh\n\nA script to restore all of the data using ssh and bunzip2. This is\n\
+    # our final stage restore.\n\n# Copyright 2000 through the last date of modification\
+    \ Charles Curley.\n\n# Time-stamp: <2001-11-19 09:21:33 ccururley restore.all.ssh>\n\
+    \n# This program is free software; you can redistribute it and/or modify it\n\
+    # under the terms of the GNU General Public License as published by the\n```\n\
+    \n# 11.2.3. restore.all\n\n31"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    ```
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any later version.
+
+    ```
+
+
+    ```
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+    ```
+
+
+    ```
+
+    # You should have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+    ```
+
+
+    ```
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+    # http://w3.trib.com/~curley/-
+
+    ```
+
+
+    ```
+
+    save="/backups/tester/"
+
+    backup_server="charlesc"
+
+
+    cd /
+
+
+    sh $backup_server "cat $save/tester.tar.bz2" | unzip | tar -xpkf
+
+
+    rm /var/run/*.pid
+
+
+    lilo
+
+    ```
+
+
+    # 11.3. Backup Server Scripts
+
+
+    The SSH scripts above have a possible security problem. If you run them on a firewall,
+    the firewall has to access via SSH to the backup server. In that case, a clever
+    cracker might also be able to crack the backup server. It would be more secure
+    to backup and restore scripts on the backup server, and let the backup server
+    have access to the firewall. That is what scripts are for: Rename them to .get
+    and x and restore.x where x is the name of the target computer. Edit them (the
+    variable $target''s initialization) to use the target computer''s host name, or
+    rewrite them to use a command line argument.
+
+
+    These scripts backup and restore the target completely, not just one backup and
+    restore. Also, not that get.tester backs up the ZIP disk as in case you need to
+    replace a faulty ZIP disk.
+
+
+    I use these routines.
+
+
+    # 11.3.1.get.tester
+
+
+    ```
+
+    #! /bin/sh
+
+    # Back up another computer''s drive to this system. To make this work, we
+
+    # need a convenient chunk of disk space on this computer. This version
+
+    # uses ssh to do its transfer, and compresses using br2. This version
+
+    # developed so that the system to be backed won''t be authenticated to
+
+    # log onto the backup computer. This script is intended to be used on a
+
+    # firewall. You don''t want the firewall to be authenticated to the backup
+
+    # system in case the firewall is cracked.
+
+    ```
+
+
+    # 11.3. Backup Server Scripts
+
+
+    31'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    ```
+
+    # Time-stamp: <2001-11-19 09:20:06 ccurley get.tester>
+
+
+    # Copyright 2000 through the last date of modification Charles Curley.
+
+
+    # This program is free software; you can redistribute it and/or modify it
+
+    # under the terms of the General Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any later version.
+
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without even the implied warranty of
+
+    # MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+
+    # You should have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+    # http://w3.trib.com/~ccurley/.
+
+
+    # For more information contact the author, Charles Curley, at
+
+    # The host name of the computer to be backed up.
+
+    target-tester
+
+
+    echo Backing up $target
+
+    echo Aging the ZIP disk backups.
+
+
+    rm -r $target.oldzip
+
+
+    mv $target.oldzip $target.oldzip
+
+
+    sh $target "probeppa ; mount -r /mnt/zip"
+
+    echo Copying the ZIP disk.
+
+
+    # -r for recursive copy, -p to preserve times and permissions, -q
+
+    # -quiet: no progress meter.
+
+    scp -qpr $target:/mnt/zip
+
+    echo Testing the results.
+
+    find . -iname \*.gz" | xargs gunzip -t
+
+
+    sh $target "eject $zip"
+
+
+    echo Aging the archives
+
+
+    rm $target.old.bz2
+
+    mv $target.old.bz2 $target.old.bz2
+
+
+    echo Backing up $target to the backup server.
+
+    sh $target -cf - / --exclude /mnt --exclude /proc --exclude /var/spool/squid/
+
+    bzip2 -9 | cat $target.old.bz2
+
+    ```
+
+
+    # 11.3. Backup Server Scripts'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# # Linux Complete Backup and Recovery HOWTO
+
+
+    ```
+
+    echo . -iname "*.bz2" | xargs bunzip2 -t
+
+    ```
+
+
+    # ## 11.3.2. restore.tester
+
+
+    ```
+
+    #!/bin/sh
+
+
+    # A script to restore all of the data to tester via ssh. This is our final
+
+    # stage restore.
+
+
+    # Time-stamp: <2001-11-19 09:22:01 ccurly restore.tester
+
+
+    # Copyright 2000 through the last date of modification Charles Curly.
+
+
+    # This program is free software; you can redistribute it and/or modify it
+
+    # under the terms of the GNU General Public License as published by the
+
+    # Free Software Foundation; either version 2 of the License, or (at your
+
+    # option) any later version.
+
+
+    # This program is distributed in the hope that it will be useful, but
+
+    # WITHOUT ANY WARRANTY; without even the implied warranty of
+
+    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
+    # General Public License for more details.
+
+
+    # You should have received a copy of the GNU General Public License along
+
+    # with this program; if not, write to the Free Software Foundation, Inc.
+
+    # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+
+    # You can also contact the Free Software Foundation at http://www.fsf.org/
+
+    # http://w3.trib.com/~ccurley/
+
+
+    # For more information contact the author, Charles Curly, at
+
+    # The host name of the computer to be restored.
+
+
+    bunzip2 -dc $target.tar.bz2 | ssh $target "cd / ; tar -xpkf"
+
+
+    ssh $target lilo
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# 12. Resources
+
+
+    +   - W. Curtis Preston''s Unix Backup & Recovery. This is the book that got me
+    started on this bare metal recovery stuff. I highly recommend it: read my review.
+
+    - A list of small Linux disties.
+
+    - [tomsbrt.](http://www.tomsbrt.com/) "The Most Linux on 1 floppy disk." Tom also
+    has links to other small disties.
+
+    - The Linux Documentation Project: See particularly the "LLO, Linux Crash Rescue
+    HOW-TO"
+
+    - The Free Software Foundation''s parted for editing (enlarging, shrinking, moving)
+    partitions.
+
+    - Partition Image for backing up partitions.
+
+    - Hugo Rabson''s Mondo "... creates one or more bootable Rescue CD''s (or tape+floppies)
+    containing some or all of your filesystem. In the event of catastrophic data loss,
+    you will be able to restore from bare metal."'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# A. GNU Free Documentation License
+
+
+    Version 1.1, March 2000
+
+
+    Copyright (C) 2000 Free Software Foundation, Inc. 59 Temple Place, Suite 330,
+    Boston, 02111–1307 USA Everyone is permitted to copy and distribute verbatim copies
+    of this license document, but changing it is not allowed.
+
+
+    A. GNU Free Documentation License'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# 0. PREAMBLE
+
+
+    The purpose of this License is to make a manual, textbook, or other written document
+    "free" in the sense of freedom: to assure everyone the effective freedom to copy
+    and redistribute it, with or without modifying it, either commercially or noncommercially.
+    Secondarily, this License preserves for the author and publisher a way to get
+    credit for their work, while not being considered responsible for modifications
+    made by others.
+
+
+    This License is a kind of "copyleft", which means that derivative works of the
+    document must themselves be free in the same sense. It complements the GNU General
+    Public License, which is a copyleft license designed for free software.
+
+
+    We have designed this License in order to use it for manuals for free software,
+    because free software needs free documentation: a free program should come with
+    manuals providing the same freedoms that the software does. But this License is
+    not limited to software manuals; it can be used for any textual work, regardless
+    of subject matter or whether it is published as a printed book. We recommend this
+    License principally for works whose purpose is instruction or reference.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# 1. APPLICABILITY AND DEFINITIONS
+
+
+    This License applies to any manual or other work that contains a notice below
+    by the copyright holder saying it can be distributed under the terms of this License.
+    The "Document", below, refers to any such manual or work. Any member of the public
+    is a licensee, and is addressed as "you".
+
+
+    A "Modified Version" of the Document means any work containing the Document or
+    a portion of it, either copied, or with modifications and/or translated into any
+    other language.
+
+
+    A "Secondary Section" is a named appendix or a front-matter section of the Document
+    that deals exclusively with the relationship of publishers or authors of the Document''s
+    overall subject (or to related matters) and contains nothing that could fall directly
+    within that overall subject.(For example, if the Document is in part of a textbook
+    of mathematics, a Secondary Section may not contain any mathematics.). The relationship
+    could be a matter of historical connection with the subject or with related matters,
+    or of legal, commercial, philosophical, or political position regarding them.
+
+
+    The "Invariant Sections" are certain Secondary Sections whose titles are designated,
+    as being of Invariant Sections, in the notice that says that the Document is released
+    under this License.
+
+
+    The "Cover Texts" are certain short passages of text that are listed, as Front-Cover
+    Texts and Back-Cover Texts, in the notice that says that the Document is released
+    under this License.
+
+
+    A "Transparent" copy of the Document means a machine-readable copy, represented
+    in a format specification is available to the general public, whose contents can
+    be viewed and edited directly and straightforward with (for images composed of
+    pixels) generic print graphics or (for drawings) with widely available drawing
+    editor, and which is suitable for input text formatters or for automatic translation
+    to a variety of formats suitable for input to text formatters. A copy made in
+    a Transparent file format whose markup is designed to thwart or discourage subsequent
+    modification by readers is not A copy that is not "Transparent" is called "Opaque".
+
+
+    Examples of suitable formats for Transparent copies include plain ASCII without
+    markup, Texinfo format, LaTeX format, SGML or XML using a publicly available DTD,
+    and standard-conforming simple HTML designed for human modification. Opaque formats
+    include PostScript, PDF, proprietary formats that can be read and edit only by
+    word processors, SGML, or XML for the DTD and/or processing tools are not generally
+    available, and the machine-generated HTML produced by some word processors for
+    output purposes only.
+
+
+    The "Title Page" means, for a printed book, the title page itself, plus such following
+    pages as are needed to hold, the material this License requires to appear in the
+    title page. For works which do not have any title page as such, "Title Page" means
+    the text near the most prominent appearance of the work''s title, preceding the
+    beginning of the body of the text.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 2. VERBATIM COPYING
+
+
+    You may copy and distribute the Document in any medium, either commercially or
+    noncommercially, provided that this License, the copyright notices, and the license
+    notice saying this License applies to the Document are reproduced in all copies,
+    and that you add no other conditions whatsoever to those of the License. You may
+    not use technical measures to obstruct or control the reading or further copying
+    of the copies you make or distribute. However, you may accept compensation in
+    exchange for copies. If you distribute a large enough number of copies you must
+    also follow the conditions in section 3.
+
+
+    You may also lend copies, under the same conditions stated above, and you may
+    publicly display copies.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# 3. COPYING IN QUANTITY
+
+
+    If you publish printed copies of the Document more than 100, and the Document’s
+    license notice requires Cover Texts, you must enclose the copies in covers that
+    carry, clearly and legibly, all these Cover Texts: Front–Cover Texts on the front
+    cover, and Back–Cover Texts on the back cover. Both covers must also clearly and
+    legibly identify you as the publisher of these copies. The front cover must present
+    the full title with all words of the title equally prominent and visible. You
+    may add other material on the covers in addition. Copying with changes limited
+    to the covers, as long as they preserve the title of the Document and satisfy
+    the required texts for either cover can be treated as verbatim copying in other
+    respects.
+
+
+    If the required texts for either cover are too voluminous to fit legibly, you
+    should put the first ones listed (as many as fit reasonably) on the actual cover,
+    and continue the rest onto adjacent pages.
+
+
+    If you publish or distribute Opaque copies of the Document numbering more than
+    100, you must either include a machine–readable Transparent copy with each Opaque
+    copy, or state in with each Opaque copy a publicly–accessible computer–network
+    location containing a complete Transparent copy of the Document, free of added
+    material, which the general network–using public has access to download anonymously
+    at no charge using public–standard network protocols. If you use the latter option,
+    you must take reasonably prudent steps, when you begin distribution of Opaque
+    copies in quantity, to ensure that your Transparent copy will remain accessible
+    at the stated location until at least one year after the last time you distribute
+    an Opaque copy (directly or through your agents or retailers) of that edition
+    to the public.
+
+
+    It is requested, but not required, that you contact the authors of the Document
+    well before redistributing any large number of copies, to give them a chance to
+    provide you with an updated version of the Document.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# 4. MODIFICATIONS
+
+
+    You may copy and distribute a Modified Version of the Document under the conditions
+    of sections 2 and 3 above, provided that you release the Modified Version under
+    precisely this License, with the Modified Version filling the role of the Document,
+    thus licensing distribution and modification of the Modified Version to whoever
+    possesses a copy of it. In addition, you must do these things in the Modified
+    Version:
+
+
+    +   - Use in the Title Page (and on the covers, if any) any distinct title from
+    that of the Document, and those of previous versions (which, if there were any,
+    would be listed in the History section of the Document). You may use the title
+    as a previous version if the original author of that version gives permission.
+
+    - List on the Title Page, one or more persons or entities responsible for authorship
+    of the modifications in the Modified Version, together with at least five of the
+    principal authors of the Document (all of its principal authors, if it has less
+    than five).
+
+    - State on the Title page: the name of the publisher of the Modified Version,
+    as the publisher.
+
+    - Preserve all the copyright notices of the Document.
+
+    - Add an appropriate copyright notice for your modifications adjacent to the other
+    notices.
+
+    - Include, immediately after the copyright notices, a license notice giving the
+    public permission to use the Modified Version under the terms of this License,
+    in the form shown in the Addendum below.
+
+    - Preserve in the notice the full list of Invariant Sections and required Covered
+    Texts given in the Document''s license notice.
+
+    - Keep an unaltered copy of this License.
+
+    - Preserve the section entitled "History", and its title, and add at least the
+    year, new authors, and publisher of the Modified Version as given on the Title
+    Page. If there is no section entitled "History" in the Document, create one section
+    stating the year, author, and publisher of the Document as given on its Title
+    Page, and add an item describing the Modified Version as stated in the previous
+    sentence.
+
+    - Preserve the network location, if given, in the Document for public access to
+    a Transparent copy of the Document, and likewise the network locations given in
+    the Document for previous versions it based on. These may be placed in the "History"
+    section. You may omit a network location for a work that was published at least
+    four years before the Document itself, or if the original publisher of the version
+    it refers to gives permission.
+
+    - In any section entitled "Acknowledgments" or "Dedications", preserve the section''s
+    title, and in the section all substance and tone of the contributor acknowledgments
+    and/or dedications.
+
+    - Preserve all the Invariant Sections of the Document, unaltered in their text
+    and titles. Section numbers or the equivalent are not considered part of section
+    titles.
+
+    - Delete any section entitled "Endorsements". Such may not be included in the
+    Modified Version.
+
+    - Do not retain any existing section as "Endorsements" or to conflict with any
+    Invariant Section.
+
+
+    If the Modified Version includes front-matter sections or appendices that qualify
+    as Secondary Sections and contain no material copied from the Document, you may
+    opt designate some or all of these sections as invariant. To do this, add their
+    titles to the list of Invariant Sections in the Modified Version''s license notice.
+    These titles must be distinct from any other section titles.
+
+
+    You may add a section entitled "Endorsements", provided it contains nothing but
+    endorsements of your Modified Version by various parties—for example, statements
+    of peer review or that the text has been approved by an organization or the authoritative
+    definition of a standard.
+
+
+    # 4. MODIFICATIONS'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Linux Complete Backup and Recovery HOWTO
+
+
+    You may add a passage of up to five words as a Front-Cover Text, and a passage
+    of up to 25 words as a Back-Cover Text, to the end of the list of Cover Texts
+    in the Modified Version. Only one passage of Front-Cover Text and one of Back-Cover
+    Text may be added by (or through arrangements made by) any one entity. If the
+    Document already includes a cover text for the same cover, previously added by
+    you or by arrangement made by the same entity you are acting on behalf of, you
+    may not add another; but you may replace the old one, on explicit permission from
+    the previous publisher that added the old one.
+
+
+    The author(s) and publisher(s) of the Document do not by this this License give
+    permission to use their names for publicity for or to assert or imply endorsement
+    of any Modified Version.
+
+
+    # 4. MODIFICATIONS'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# 5. COMBINING DOCUMENTS
+
+
+    You may combine the Document with other documents released under this License,
+    under the terms defined in section 4 above for modified versions, provided that
+    you include in the combination all of the Invariant Sections of all of the original
+    documents, unmodified, and list them all as Invariant Sections of your combined
+    work in its license notice.
+
+
+    The combined work will need only contain one copy of this License, and multiple
+    Invariant Sections may be replaced; with a single copy. If there are multiple
+    Invariant Sections with the same name but different contents, make the title of
+    each such section unique by adding at the end of it, in parentheses, the name
+    of the original author or publisher of that section if known, or else a unique
+    number. Make the same adjustment to the section titles in the list of Invariant
+    Sections in the license notice of the combined work.
+
+
+    In the combination, you must combine any sections entitled "History" in the various
+    original documents, forming one section entitled "History"; likewise combine any
+    sections entitled "Acknowledgements", and any sections entitled "Dedications".
+    You must delete all sections entitled "Endorsements."'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# 6. COLLECTIONS OF DOCUMENTS
+
+
+    You may make a collection consisting of the Document and other documents released
+    under this License, and replace the individual copies of this License in the various
+    documents with a single copy that is included in the collection, provided that
+    you follow the rules of this License for verbatim copying of each of the documents
+    in all other respects.
+
+
+    You may extract a single document from such a collection, and distribute it individually
+    under this License, provided you insert a copy of this License into the extracted
+    document, and follow this License in all other respects regarding verbatim copying
+    of that document.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# 7. AGGREGATION WITH INDEPENDENT WORKS
+
+
+    A compilation of the Document or its derivatives with other separate and independent
+    documents or works, in or on a volume of a storage or distribution medium, does
+    not as a whole count as a Modified Version of the Document, provided no compilation
+    copyright is claimed for the compilation. Such a compilation is called an "aggregate",
+    and this License does not apply to the other self-contained works compiled with
+    the Document, on account of their being thus compiled, if they are not themselves
+    derivative works of the Document.
+
+
+    If the Cover Text requirement of section 3 is applicable to these copies of the
+    Document, then if the Document is less than one quarter of the entire aggregate,
+    the Document’s Cover Texts may be placed on covers that surround only the Document
+    within the aggregate. Otherwise they must appear on covers around the whole aggregate.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 8. TRANSLATION
+
+
+    Translation is considered a kind of modification, so you may distribute translations
+    of the Document under the terms of section 4. Replacing Invariant Sections with
+    translations requires special permission from their copyright holders, but you
+    may include translations of some or all Invariant Sections in addition to the
+    original versions of these Invariant Sections. You may include a translation of
+    this License provided that you also include the original English version of this
+    License. In case of a disagreement between the translation and the original English
+    version of this License, the original English version will prevail.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# 9. TERMINATION
+
+
+    You may not copy, modify, sublicense, or distribute the Document except as expressly
+    provided for under this License. Any other attempt to copy, modify, sublicense
+    or distribute the Document is void, and will automatically terminate your rights
+    under this License. However, parties who have received copies, or rights, from
+    you under this License will not have their licenses terminated so long as such
+    parties remain in full compliance.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# 10. FUTURE REVISIONS OF THIS LICENSE
+
+
+    The Free Software Foundation may publish new, revised versions of the GNU Free
+    Documentation License from time to time. Such new versions will be similar in
+    spirit to the present version, but may differ in detail to address new problems
+    or concerns. See http://www.gnu.org/copyleft/
+
+
+    Each version of the License is given a distinguishing version number. If the Document
+    specifies a particular numbered version of this License "or any later version"
+    applies to it, you have the option of following the terms and conditions either
+    of that specified version or of any later version that has been published (not
+    as a draft) by the Free Software Foundation. If the Document does not specify
+    a version number of this License, you may choose any version ever published (not
+    as a draft) by the Free Software Foundation.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# 11. How to use this License for your documents
+
+
+    To use this License in a document you have written, include a copy of the License
+    in the document and put the following copyright and license notices just after
+    the title page:
+
+
+    Copyright (c) YEAR YOUR NAME. Permission is granted to copy, distribute and/or
+    modify this document under the terms of the GNU Free Documentation License, Version
+    1.1 or any later version published by the Free Software Foundation; with the Invariant
+    Sections being LIST THEIR TITLES, with the Front-Cover Texts being LIST, and with
+    the Back–Cover Texts being LIST. A copy of the license is included in the section
+    entitled "GNU Free Documentation License".
+
+
+    If you have no Invariant Sections, write "with no Invariant Sections" instead
+    of saying which ones are invariant. If you have no Front–Cover Texts, write "no
+    Front–Cover Texts" instead of "Front–Cover Texts being LIST"; likewise for Back–Cover
+    Texts.
+
+
+    If your document contains nontrivial examples of program code, we recommend releasing
+    these examples in parallel under your choice of free software license, such as
+    the GNU General Public License, to permit their use in free software.'
+  merge: -1
+  img_proc: true
