@@ -1,0 +1,2 @@
++   [Red Hat 认证技术员与工程师：RH202 和 RH302 考试 Red Hat enterprise Linux 5：培训指南与管理员参考](README.md)
++   [Red Hat 认证技术员与工程师：RH202 和 RH302 考试 Red Hat enterprise Linux 5：培训指南与管理员参考](red-hat-certified-technician-engineer-exams-rh202-and-rh302-.md)
