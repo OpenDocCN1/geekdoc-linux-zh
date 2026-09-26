@@ -1,0 +1,170 @@
+- - '#'
+  - Linux 与 Open：VMS 互操作性。 针对老手、新秀及热门系统的开源系统技巧指南
+- - '#'
+  - 前言
+- - '#'
+  - 第 1 章 — 评估 OpenVMS 和 Linux：用对人用事
+- - '##'
+  - 为什么选择 OpenVMS？
+- - '##'
+  - Linux 与 OpenVMS 的互操作性
+- - '##'
+  - 为什么选择 Linux 与 OpenVMS
+- - '##'
+  - 结论
+- - '#'
+  - 第 2 章 — 破解 OpenVMS 和 Linux
+- - '##'
+  - 为那些一无所有的人准备设备
+- - '##'
+  - 现实在回家路上出现
+- - '##'
+  - 回到寻宝现场
+- - '##'
+  - 破解 Linux 或 OpenVMS 计算机的合规理由
+- - '##'
+  - 修改 Linux Root 密码的十步骤
+- - '##'
+  - 修改 OpenVMS 系统密码的十步骤
+- - '#'
+  - 先是冲刺，后是失落
+- - '#'
+  - 第 3 章 — 用于 OpenVMS 和 Linux 的 TCP/IP
+- - '##'
+  - 今日的网络标准
+- - '##'
+  - 表 3-1：带有 TCP/IP 位置的标准 OSI 模型
+- - '##'
+  - 表 3-1：带有 TCP/IP 位置的标准 OSI 模型（续表）
+- - '##'
+  - 网络管理员的重要性
+- - '##'
+  - 'Q5: 我的默认网关/路由器地址是多少？'
+- - '##'
+  - 配置系统
+- - '##'
+  - 在 Linux 上配置 TCP/IP
+- - '##'
+  - 在 OpenVMS 上配置 TCP/IP
+- - '##'
+  - 用于 OpenVMS 的 DIGITAL TCP/IP 服务
+- - '###'
+  - 服务器配置
+- - '###'
+  - 菜单配置
+- - '###'
+  - 应用程序
+- - '#'
+  - 第 4 章 — OpenVMS 和 Linux 的安全工具
+- - '##'
+  - 你曾被黑过吗？
+- - '##'
+  - 四天后
+- - '#'
+  - Stunnel
+- - '##'
+  - 在 OpenVMS 上安装 Stunnel 服务器
+- - '##'
+  - Linux & OpenVMS 互操作性
+- - '##'
+  - Linux 上安装 Stunnel 客户端
+- - '##'
+  - 在 Linux 工作站上显示 OpenVMS X Windows
+- - '##'
+  - X Windows 会话的命令控制
+- - '###'
+  - 'Linux 命令: xhost'
+- - '###'
+  - OpenVMS 命令：SHOW DISPLAY 和 CREATE/TERMINAL
+- - '##'
+  - OpenVMS X Windows 应用程序
+- - '##'
+  - 在 OpenVMS 上显示你的 Linux Windows 应用程序
+- - '#'
+  - 总结
+- - '##'
+  - 从网络时代的黎明至今
+- - '##'
+  - 电子邮件程序的兴起兴灭
+- - '##'
+  - 开放标准互联网邮件
+- - '##'
+  - OpenVMS 电子邮件服务器配置
+- - '##'
+  - Compaq TCP/IP 服务 OpenVMS 配置菜单
+- - '##'
+  - Compaq TCP/IP 服务 OpenVMS 客户端组件配置菜单
+- - '#'
+  - SMTP 配置
+- - '##'
+  - OpenVMS 组件 Compaq TCP/IP 服务配置菜单
+- - '##'
+  - OpenVMS Compaq TCP/IP 服务配置菜单
+- - '##'
+  - OpenVMS Compaq TCP/IP 服务服务器组件配置菜单
+- - '#'
+  - IMAP 配置
+- - '##'
+  - OpenVMS 的 Compaq TCP/IP 服务配置菜单
+- - '##'
+  - OpenVMS 的 Compaq TCP/IP 服务配置菜单
+- - '##'
+  - OpenVMS Mozilla 安装
+- - '##'
+  - OpenVMS 或 Linux 上的邮件客户端配置
+- - '##'
+  - Compaq 安全网浏览器 - CSWB (V1.0)
+- - '##'
+  - 适用于 OpenVMS™ Alpha™ 的 Compaq 安全网浏览器
+- - '##'
+  - 什么是 CSWB？
+- - '##'
+  - 新账户设置
+- - '##'
+  - 账户向导
+- - '##'
+  - 服务器信息
+- - '##'
+  - 欢迎使用邮件与新闻
+- - '##'
+  - 电子邮件想要免费（免费）
+- - '#'
+  - 第 7 章 — 用于 Linux 和 OpenVMS 的 SMB
+- - '##'
+  - 在 OpenVMS 和 Linux 使用 SMB 进行磁盘共享
+- - '##'
+  - Linux 和 SAMBA
+- - '##'
+  - 服务配置
+- - '#'
+  - OpenVMS Advanced Server 安装与配置
+- - '##'
+  - 第 1 步：配置 OpenVMS 注册表
+- - '##'
+  - OpenVMS 注册表实用程序
+- - '##'
+  - 步骤 2：为高级服务器配置 OpenVMS
+- - '##'
+  - OpenVMS 的 Compaq TCP/IP 服务可选组件配置菜单
+- - '##'
+  - DECnet 和 Pathworks TCPIP 传输服务配置
+- - '##'
+  - OpenVMS 的 TCP/IP 服务配置菜单
+- - '##'
+  - 步骤 3：OpenVMS 高级服务器安装
+- - '##'
+  - 步骤 4：配置 OpenVMS 高级服务器进程
+- - '##'
+  - 节点 VMSONE 的高级服务器配置
+- - '##'
+  - 传输配置参数
+- - '##'
+  - 高级配置参数
+- - '##'
+  - 步骤 5：将 OpenVMS 高级服务器配置为域控制器
+- - '#'
+  - 第 8 章 — Apache VMS 与 Linux
+- - '##'
+  - 你永远忘记你的第一个 Web
+- - '##'
+  - 二进制发布
