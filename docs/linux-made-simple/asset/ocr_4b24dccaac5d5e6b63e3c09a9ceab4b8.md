@@ -1,0 +1,61 @@
+![](bbox=[0.37, 0.015, 0.44, 0.095])
+
+![](bbox=[0.44, 0.105, 0.87, 0.31])
+
+Ethernet port. Finally, attach the power supply to the micro USB port. Your Raspberry Pi 2 will now boot for the first time. On first boot NOOBS will ask you which OS to install, in this case we require Raspbian. Select the OS and start the installation, which will take around 10 minutes. With the install complete the Pi will reboot and start Raspbian for the first time, and the first thing that you will notice is how quick the boot process is now at 17 seconds versus 33 seconds for the B+! For the observant you'll also note that there are now four raspberries at boot up. This denotes that the Raspberry Pi 2 has four cores, a rather nice little Easter egg that harks back to the old boot screens of Linux distributions. Once booted we are immediately presented with the raspi-config menu, this is a tool to further configure your Raspberry Pi. At this stage we will simply exit out of the menu and login as normal. The standard login details have not been changed and remain as:
+
+```
+USERNAME: pi
+```
+
+```
+PASSWORD: raspberry
+```
+
+Once logged in you need to type
+
+```
+startx
+```
+
+to load the desktop. You'll see that the desktop is a little different to previous versions of Raspbian, this is due to extensive changes that were made by the Foundation back in December of 2014 and is largely the work of Simon Long, who used to work for Broadcom. In fact, it was Long who hired Eben Upton at Broadcom, but now Simon Long has joined the Raspberry Pi Foundation to work on the user interface and his first project was to develop a new desktop.
+
+The Raspberry Pi Foundation have created a very powerful single board computer, but how can we test that power? It is somewhat fitting that we can calculate Pi to as many decimal places as we wish, so lets say 10,000? To do that we need to install some software, first. Open LXterminal and type the following two lines:
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install bc
+```
+
+We've just installed a precision calculator that we can use from the terminal. So now to the test, calculating Pi to 10,000 places and timing the activity.
+
+```
+time echo "scale=10000; 4*a(1)" | bc -l
+```
+
+In our test it took 17 minutes 25.725s to calculate Pi to ten thousand decimal places on our stock Raspberry Pi 2. We repeated the same Pi test on a Raspberry Pi B+ and it took significantly longer at 25 minutes 5.989 seconds to perform the calculation. As you can see straight away that's a very clear indication that the processor of the new Raspberry Pi 2 is easily much more powerful than previous models we've seen.
+
+Computing Pi to 10,000 places is a fitting test for our Raspberry Pi. The command to run the test is run from LXTerminal. Here we show the time it took before we overclocked.
+
+Our quick test, gives us a good idea of how much of a serious performance beast the Raspberry Pi 2 is out of the box, but can we tweak it into more of an animal? Well, earlier we dismissed the raspi-config menu but for this next step we need it again. In LXTerminal, and type the following:
+
+```
+sudo raspi-config
+```
+
+# Turbo charge your Pi
+
+Our first post install configuration is to review the memory split. This is how the memory is divided between the GPU (Graphical Processing Unit) and the main system. On the Raspberry Pi a typical setup would be around 64MB of RAM for the GPU and the remaining RAM would be allocated to the system. This is an optional config tweak but you could just leave it as is. You can easily tinker with these values, and a general rule is that a terminal will not need as much RAM as the full desktop, so for a terminal-only project you can easily get away with 6MB allocated to the GPU. For desktop applications such as Minecraft a minimum of 64MB is needed. You will be prompted to reboot your Raspberry Pi, do this and you will be returned to the login prompt.
+
+With the changes made to the memory split now let us return to the raspi-config main menu and head to the Overclock menu. Your Raspberry Pi 2 already runs at 800MHz per core, which is an improvement over the original 700MHz single core ARM 11 CPU. We spoke to Eben Upton and Gordon Hollingsworth about the new CPU and they both confirmed that it can be overclocked to around 1.1GHz per
+
+# Quick tip
+
+> The default web browser for Raspbian, Midori has recently been replaced with Epiphany which has been optimised for use on the Raspberry Pi. The new browser is available via the latest Raspbian update and works really well on Raspberry Pi 2 and older Pis.
+
+# Ubuntu on Pi?
+
+The biggest surprise brought about by the new Raspberry Pi 2 is compatibility with Ubuntu for ARM 7 CPU. Before the original Raspberry Pi was released in early 2012, Ubuntu was often mentioned as a candidate for the Pi, but as Canonical didn't support the ARM 6 architecture, which the ARM 11 CPU used in the original Pi, another distro was needed. Early on we saw Pidora, a fork of Fedora for the Pi, being used to demonstrate the power of the Pi. But Pidora brought a full desktop experience to hardware that required a lighter distribution. After further investigations Debian, in the form of Raspbian, was seen as a suitable candidate and this remains the official distro and is used for all official tutorials and supporting documentation. But compatibility with Ubuntu doesn't mean that the Foundation is abandoning Raspbian: "We're not planning an official Ubuntu image," says Eben Upon. "We're going to benchmark 'regular' armhf Debian against Raspbian, and may switch if we see a compelling performance advantage. Our preference is to stick with Raspbian, perhaps with a few key libraries swapped out dynamically, as this will allow us to support Raspberry Pi 2 and Classic from the same image." At the time of writing there are no ready made images for Ubuntu on Pi, but over the coming months there are sure to be many on offer for you to try, including Ubuntu Core.
