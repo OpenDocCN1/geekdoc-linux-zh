@@ -1,0 +1,4288 @@
+- pgno: 0
+  md: "# Linux with zSeries and ESS: Essentials\n\n+   - Enterprise-class solutions\
+    \ with Linux\n  and IBM TotalStorage\n- Focus on zSeries and ESS\n- FCP support\
+    \ for Linux on\n  zSeries\n\n![](img/da33d6b6aa12b73deb3c350a0a89d424_0_0.png)\n\
+    \nBertrand Dufresne\nDon Skilton\nJonathan Wright\n\n# Redbooks"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_2_0.png)
+
+
+    International Technical Support Organization
+
+
+    # Linux with zSeries and ESS: Essentials
+
+
+    September 2003'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '**Note:** Before using this information and the product it supports, read the
+    information in “Notices” on page ix.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Contents
+
+
+    +   Figures ........................................................... v
+
+    Tables ........................................................... vii
+
+    Notices ........................................................... ix
+
+    Trademarks ........................................................ x
+
+
+    Preface ........................................................... xi
+
+    The team that wrote this redbook. .................................... xi
+
+    Become a published author ............................................ xii
+
+    Comments welcome. ................................................... xii
+
+
+    Chapter 1. Introduction to Linux ..................................... 1
+
+    1.1 The foundation for Linux ......................................... 2
+
+    1.2 The GNU General Public License ................................... 2
+
+    1.3 Open source ...................................................... 3
+
+    1.4 Linux: The operating system ...................................... 3
+
+    1.5 Where Linux fits in .............................................. 4
+
+    1.5.1 Working with other operating systems ........................... 4
+
+    1.5.2 Infrastructure ................................................ 5
+
+    1.6 Linux distributions .............................................. 5
+
+    1.6.1 Red Hat Enterprise Linux ...................................... 5
+
+    1.6.2 SuSE Linux Enterprise Edition .................................. 6
+
+    1.6.3 UnitedLinux ................................................... 6
+
+
+    Chapter 2. IBM and Linux ............................................. 9
+
+    2.1 IBM''s commitment to Linux ....................................... 10
+
+    2.1.1 The IBM Linux Technology Centers .............................. 11
+
+    2.2 Linux services and application solutions ......................... 11
+
+    2.2.1 IBM Services .................................................. 12
+
+    2.2.2 IBM Global Services ........................................... 12
+
+    2.2.3 IBM Support Line .............................................. 12
+
+    2.2.4 Linux consultancy ............................................. 13
+
+    2.3 IBM services and software ....................................... 14
+
+    2.3.1 WebSphere ..................................................... 14
+
+    2.3.2 DB2 for Linux ................................................. 15
+
+    2.3.3 Tivoli ........................................................ 15
+
+    2.3.4 Lotus ......................................................... 18
+
+    2.4 Platform services ............................................... 18
+
+    2.4.1 zSeries services .............................................. 19
+
+    2.4.2 iSeries services .............................................. 19
+
+    2.4.3 pSeries services .............................................. 20
+
+    2.4.4 xSeries services .............................................. 20
+
+    2.4.5 Consolidated platform matrix .................................. 21
+
+
+    Chapter 3. zSeries and Linux ......................................... 23
+
+    3.1 Introduction .................................................... 24
+
+    3.1.1 Ways to run Linux on zSeries .................................. 24
+
+    3.1.2 S/390 and zSeries architecture ................................ 25'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '+   3.1.3 Further information ................................................
+    26
+
+    3.2 Background to z/VM ................................................ 27
+
+    3.2.1 Virtual networking with z/VM ........................................ 28
+
+    3.2.2 Systems management functions built-in to z/VM ...................... 29
+
+    3.3 Consolidation and scalability ........................................ 29
+
+    3.3.1 Scalability ................................................ 29
+
+    3.3.2 Consolidation ................................................ 29
+
+    3.3.3 Some examples and further information ............................ 31
+
+    3.4 Linux application solutions ........................................ 31
+
+
+    Chapter 4. IBM TotalStorage and ESS ........................................ 35
+
+    4.1 IBM TotalStorage ................................................ 36
+
+    4.1.1 Value proposition .............................................. 36
+
+    4.2 IBM TotalStorage Proven™ ........................................... 37
+
+    4.3 Enterprise Storage Server .......................................... 38
+
+    4.3.1 ESS overview ................................................ 38
+
+    4.3.2 ESS features and benefits ....................................... 39
+
+    4.3.3 ESS Specialist ................................................ 44
+
+
+    Chapter 5. FCP for zSeries with Linux ...................................... 47
+
+    5.1 zSeries and FCP .................................................. 48
+
+    5.1.1 zSeries specific storage attachments .............................. 48
+
+    5.1.2 Distributed storage attachments .................................. 49
+
+    5.1.3 zSeries-specific versus distributed storage controllers ........... 50
+
+    5.2 Connecting ESS to Linux on zSeries using FCP ....................... 52
+
+    5.2.1 Hardware and software requirements ............................... 53
+
+    5.2.2 An implementation overview ...................................... 53
+
+
+    Chapter 6. ESS Copy Services and Linux .................................... 61
+
+    6.1 Introduction .................................................... 62
+
+    6.2 Peer-to-Peer Remote Copy (PPRC) .................................... 63
+
+    6.3 PPRC Extended Distance (PPRC-XD) ................................... 65
+
+    6.4 FlashCopy ....................................................... 68
+
+    6.5 ESS Copy Services Web User Interface ............................... 71
+
+    6.6 Copy Services command line interface ............................... 76
+
+    6.7 ESS Copy Services available with Linux on zSeries .................. 77
+
+
+    Related publications ................................................... 79
+
+    IBM Redbooks ........................................................ 79
+
+    Other publications ................................................... 79
+
+    Online resources ..................................................... 79
+
+    How to get IBM Redbooks .............................................. 80
+
+    Help from IBM ........................................................ 80
+
+
+    Index ................................................................ 81'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Figures
+
+
+    +   3-1 IBM eServer zSeries ........................................ 24
+
+    3-2 Running Linux on zSeries in an LPAR or as a z/VM guest ............... 25
+
+    3-3 The relationship between IFLs and LPARs .............................. 26
+
+    3-4 Configuration of CPs for a zSeries running z/OS and Linux under z/VM. ........
+    26
+
+    3-5 z/VM virtualization .............................................. 28
+
+    3-6 Server farm in a box............................................. 30
+
+    3-7 Horizontal server growth ........................................ 30
+
+    3-8 Samba file/print scenario - distributed solution .................... 32
+
+    3-9 Samba file/print scenario - zSeries solution........................ 33
+
+    4-1 IBM''s Seascape® architecture - ESS Model 800 ........................ 38
+
+    4-2 ESS Model 800 major components ................................... 39
+
+    4-3 IBM TotalStorage Enterprise Storage Server for storage consolidation ......
+    40
+
+    4-4 Enterprise Storage Server Model 800 ............................... 41
+
+    4-5 Disaster recovery and availability ............................... 42
+
+    4-6 Storage area network (SAN) ...................................... 44
+
+    4-7 ESS welcome screen.............................................. 45
+
+    5-1 Typical zSeries storage attachment concept......................... 48
+
+    5-2 SCSI addressing ................................................ 50
+
+    5-3 World Wide Names ............................................... 50
+
+    5-4 DASD addressing scheme......................................... 51
+
+    5-5 DASD access translations FICON vs. FCP ............................ 52
+
+    5-6 Storage Allocation panel ....................................... 54
+
+    5-7 Open Systems Storage panel ..................................... 54
+
+    5-8 Modify Host Systems panel - add the Linux on zSeries host........ 55
+
+    5-9 Configure Host Adapter ports panel.............................. 56
+
+    5-10 Fixed Block Storage panel..................................... 57
+
+    5-11 Add volumes (panel 1 of 2) .................................... 58
+
+    5-12 Add volumes (panel 2 of 2) .................................... 58
+
+    6-1 ESS Copy Services for zSeries .................................. 62
+
+    6-2 Synchronous volume copy PPRC ................................... 63
+
+    6-3 PPRC volume states - synchronous mode of operation .............. 65
+
+    6-4 PPRC-XD operation.............................................. 66
+
+    6-5 Duplex-pending XD volume state ................................ 67
+
+    6-6 PPRC-XD Basic operation....................................... 68
+
+    6-7 FlashCopy point-in-time copy .................................. 70
+
+    6-8 Incremental FlashCopy ........................................ 71
+
+    6-9 ESS Welcome screen ............................................ 72
+
+    6-10 Main menu ESS Copy Services Web User Interface.................. 72
+
+    6-11 Volumes panel................................................ 73
+
+    6-12 Logical Subsystems panel...................................... 74
+
+    6-13 Paths entry panel............................................. 75
+
+    6-14 Tasks panel .................................................. 76'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Tables
+
+
+    +   2-1 WebSphere for Linux product services matrix .................... 14
+
+    2-2 IBM Tivoli Security Management product matrix for Linux ....................
+    16
+
+    2-3 IBM Tivoli Storage Management product matrix for Linux ....................
+    16
+
+    2-4 IBM Tivoli Configuration Manager product matrix for Linux ....................
+    16
+
+    2-5 Tivoli Workload Scheduler product matrix for Linux .................... 16
+
+    2-6 IBM Tivoli Performance and Availability product matrix for Linux ....................
+    17
+
+    2-7 Tivoli Enterprise Console product matrix for Linux .................... 17
+
+    2-8 IBM Tivoli NetView product matrix for Linux .................... 17
+
+    2-9 TIBM Tivoli Service Level Advisor for Linux product matrix ....................
+    18
+
+    2-10 Lotus support matrix for Linux .................... 18
+
+    2-11 zSeries Linux information matrix .................... 19
+
+    2-12 iSeries Linux information matrix .................... 20
+
+    2-13 xSeries Linux information matrix .................... 20
+
+    2-14 IBM Web site matrix for each Linux platform .................... 21
+
+    4-1 IBM Storage for Linux summary .................... 37
+
+    6-1 Managing PPRC,PPRC-XD, and FlashCopy on Linux for zSeries ....................
+    77'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Notices
+
+
+    This information was developed for products and services offered in the U.S.A.
+
+
+    IBM may not offer the products, services, or features discussed in this document
+    in other countries. Consult your local IBM representative for information on the
+    products and services currently available in your area. Any reference to an IBM
+    product, program, or service is not intended to state or imply that only that
+    IBM product, program, or service may be used. Any functionally equivalent product,
+    program, or service that does not infringe any IBM intellectual property right
+    may be used instead. However, it is the user''s responsibility to evaluate and
+    verify the operation of any non-IBM product, program, or service.
+
+
+    IBM may have patents or pending patent applications covering subject matter described
+    in this document. The furnishing of this document does not give you any license
+    to these patents. You can send license inquiries, in writing, to:
+
+    IBM Director of Licensing, IBM Corporation, North Castle Drive Armonk, NY 10504-1785
+    U.S.A.
+
+
+    The following paragraph does not apply to the United Kingdom or any other country
+    where such provisions are inconsistent with local law: INTERNATIONAL BUSINESS
+    MACHINES CORPORATION PROVIDES THIS PUBLICATION "AS IS" WITHOUT WARRANTY OF ANY
+    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Some
+    states do not allow disclaimer of express or implied warranties in certain transactions,
+    therefore, this statement may not apply to you.
+
+
+    This information could include technical inaccuracies or typographical errors.
+    Changes are periodically made to the information herein; these changes will be
+    incorporated in new editions of the publication. IBM may make improvements and/or
+    changes in the product(s) and/or the program(s) described in this publication
+    at any time without notice.
+
+
+    Any references in this information to non-IBM Web sites are provided for convenience
+    only and do not in any manner serve as an endorsement of those Web sites. The
+    materials at those Web sites are not part of the materials for this IBM product
+    and use of those Web sites is at your own risk.
+
+
+    IBM may use or distribute any of the information you supply in any way it believes
+    appropriate without incurring any obligation to you.
+
+
+    Information concerning non-IBM products was obtained from the suppliers of those
+    products, their published announcements or other publicly available sources. IBM
+    has not tested those products and cannot confirm the accuracy of performance,
+    compatibility or any other claims related to non-IBM products. Questions on the
+    capabilities of non-IBM products should be addressed to the suppliers of those
+    products.
+
+
+    This information contains examples of data and reports used in daily business
+    operations. To illustrate them as completely as possible, the examples include
+    the names of individuals, companies, brands, and products. All of these names
+    are fictitious and any similarity to the names and addresses used by an actual
+    business enterprise is entirely coincidental.
+
+
+    # COPYRIGHT LICENSE:
+
+
+    This information contains sample application programs in source language, which
+    illustrates programming techniques on various operating platforms. You may copy,
+    modify, and distribute these sample programs in any form without payment to IBM,
+    for the purposes of developing, using, marketing or distributing application programs
+    conforming to the application programming interface for the operating platform
+    for which the sample programs are written. These examples have not been thoroughly
+    tested under all conditions. IBM, therefore, cannot guarantee or imply reliability,
+    serviceability, or function of these programs. You may copy, modify, and distribute
+    these sample programs in any form without payment to IBM for the purposes of developing,
+    using, marketing, or distributing application programs conforming to IBM''s application
+    programming interfaces.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Trademarks
+
+
+    The following terms are trademarks of the International Business Machines Corporation
+    in the United States, other countries, or both:
+
+
+    |  |  |  |
+
+    |---|---|---|
+
+    | IBM @server™ | DB2® | NUMA-Q® |
+
+    | e-business on demand™ | Enterprise Storage Server® | OS/390® |
+
+    | eServer™ | ESCON® | Parallel Sysplex® |
+
+    | ibm.com® | FlashCopy® | PowerPC® |
+
+    | iSeries™ | FICON™ | Redbooks™ |
+
+    | pSeries™ | HiperSockets™ | S/390® |
+
+    | xSeries® | IBM TotalStorage Proven™ | Seascape® |
+
+    | z/Architecture™ | IBM® | System/360™ |
+
+    | z/OS® | Lotus Notes® | Tivoli Enterprise™ |
+
+    | z/VM® | Lotus® | Tivoli Enterprise Console® |
+
+    | zSeries® | Multiprise® | Tivoli® |
+
+    | BladeCenter™ | MQSeries® | TotalStorage® |
+
+    | CICS® | NetView® | WebSphere® |
+
+    | Domino™ | Notes® | Redbooks(logo)™ |
+
+
+    The following terms are trademarks of other companies:
+
+
+    ActionMedia, LANDesk, MMX, Pentium and ProShare are trademarks of Intel Corporation
+    in the United States, other countries, or both.
+
+
+    Microsoft, Windows, Windows NT, and the Windows logo are trademarks of Microsoft
+    Corporation in the United States, other countries, or both.
+
+
+    Java and all Java-based trademarks and logos are trademarks or registered trademarks
+    of Sun Microsystems, Inc. in the United States, other countries, or both.
+
+
+    C-bus is a trademark of Corollary, Inc. in the United States, other countries,
+    or both.
+
+
+    UNIX is a registered trademark of The Open Group in the United States and other
+    countries.
+
+
+    SET, SET Secure Electronic Transaction, and the SET Logo are trademarks owned
+    by SET Secure Electronic Transaction LLC.
+
+
+    Other company, product, and service names may be trademarks or service marks of
+    others.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Preface
+
+
+    IBM® has been committed to Linux long before it became trendy. This early adoption
+    of the Linux potential explains why today IBM offers the widest range of platforms
+    and products for deploying solutions on Linux, along with support and services.
+
+
+    IBM TotalStorage® products are known for their high quality and reliability and
+    work well with Linux. As part of a well designed Linux based e-business infrastructure,
+    they can help you cut costs, consolidate infrastructure, and position you for
+    the new on-demand world.
+
+
+    This IBM Redbook presents high-level information on Linux in conjunction with
+    IBM @server and TotalStorage products, giving proof points that these products
+    can be deployed together to provide enterprise-class solutions. In particular
+    this book looks at Linux with the zSeries® servers and IBM TotalStorage Enterprise
+    Storage Server® (ESS) disk products. The book describes the Fibre Channel Protocol
+    (FCP) support now available when connecting the ESS to a zSeries host running
+    Linux. The last chapter describes the ESS copy services available for Linux on
+    zSeries.
+
+
+    This redbook is intended as a starting point and reference for IBM representatives,
+    and Business Partners or clients who are planning Linux based solutions with IBM
+    zServers and ESS storage products.
+
+
+    Most of the information contained in this book is a compilation of the material
+    from the Linux Handbook, SG24-7000, and Implementing Linux with IBM Disk Storage,
+    SG24-6262-01. We encourage the reader to refer to these redbooks for more complete
+    information, or for implementation details.
+
+
+    # The team that wrote this redbook
+
+
+    This redbook was produced by a team of specialists from around the world working
+    at the International Technical Support Organization, San Jose Center.
+
+
+    **Bertrand Dufrasne** is a Certified Consulting I/T Specialist and Project Leader
+    for Disk Storage Systems at the International Technical Support Organization,
+    San Jose Center. He has worked at IBM for 21 years in many IT areas. Before joining
+    the ITSO he worked for IBM Global Services in the US as an IT Architect. He holds
+    a degree in Electrical Engineering.
+
+
+    **Don Skilton** is a Storage Systems Specialist with IBM Global Services, Australia.
+    He has a degree in Mathematics, and joined IBM Australia in 1985. He has been
+    working with mainframe storage software and hardware for the last 15 years. Areas
+    of specialization in recent years include Tivoli® Storage Manager (especially
+    for Linux on zSeries clients), storage management process engineering, conversion
+    of third party tape management systems to IBM''s DFRMM, and data center relocations.
+
+
+    **Jonathan Wright** is a Technical Specialist in New Zealand. He has 10 years
+    of experience in the Intel server and storage field. His areas of expertise include
+    xSeries® hardware, Linux, clustering, and FAST Storage.
+
+
+    Thanks to the following people for their contributions to this project:
+
+
+    Cristina Zabeu
+
+    IBM Linux and Storage Solutions Market Leader'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "Mary T. Morris\nIBM WW Linux Sales Leader\n\nNick Harris, Ralph Cooley, Cameron\
+    \ Hunt, Randy Kuseke, Dan Lacine, Tomomi Takada, Bob Waite. Dirk Webbeler, Alexander\
+    \ Zaretsky, original authors of the Linux Handbook, A Guide to IBM Liux Solutions\
+    \ and Resources, SG24-7000.\n\nRonald Annuss, James Goodwin, Paul McWatt, Arwed\
+    \ Tschoke, original authors of the IBM Redbook Implementing Linux with IBM Disk\
+    \ Storage, SG24-6261-01.\n\nMark S. Fleming\nDavid Fosmire\nIBM SSG Tucson\n\n\
+    Gustavo Castets\nMaritza M. Dubec\nInternational Technical Support Organization,\
+    \ San Jose Center\n\n# Become a published author\n\nJoin us for a two- to six-week\
+    \ residency program! Help write an IBM Redbook dealing with specific products\
+    \ or solutions, while getting hands-on experience with leading-edge technologies.\
+    \ You'll team with IBM technical professionals, Business Partners and/or customers.\n\
+    \nYour efforts will help increase product acceptance and customer satisfaction.\
+    \ As a bonus, you'll develop a network of contacts in IBM development labs, and\
+    \ increase your productivity and marketability.\n\nFind out more about the residency\
+    \ program, browse the residency index, and apply online at:\nibm.com/redbooks/residencies.html\n\
+    \n# Comments welcome\n\nYour comments are important to us!\n\nWe want our Redbooks™\
+    \ to be as helpful as possible. Send us your comments about this or other Redbooks\
+    \ in one of the following ways:\n\n+   - Use the online Contact us review redbook\
+    \ form found at:\n  ibm.com/redbooks\n- Send your comments in an Internet note\
+    \ to:\n  redbook@us.ibm.com\n- Mail your comments to:\n  IBM Corporation, International\
+    \ Technical Support Organization\n  Dept. QXXE Building 80-E2\n  650 Harry Road\n\
+    \  San Jose, California 95120-6099"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_14_0.png)
+
+
+    # Introduction to Linux
+
+
+    Linux is a UNIX-like open source operating system. It was the original creation
+    of Linus Torvalds from Helsinki, Finland in 1991. He wrote the first kernel, which
+    is the underlying program interfacing and running the computer hardware.
+
+
+    Since the Linux source code is freely available, several companies have developed
+    different distributions of Linux. A distribution is a complete system. The key
+    component is the Linux kernel. Other utilities, services, and various applications
+    can be included as well, depending on the distribution and the intended use. There
+    is no standard distribution. Each distribution that is available has unique advantages.
+
+
+    IBM was early to recognize the value of Linux:
+
+
+    +   - Investing in Linux-related product development
+
+    - Forming alliances with key Linux distributors
+
+    - Contributing to the open-source community
+
+    - Aggressively supporting the platform
+
+
+    IBM believes this investment will benefit its customers as they continue to exploit
+    Linux for their IT infrastructures and e-business.
+
+
+    This chapter provides a brief introduction to Linux, and an historical perspective
+    to its origins and relationship to open source and the GNU General Public License.
+    The chapter continues with a high-level description of the Linux operating systems
+    and its components, where Linux fits in the IT world, and Linux distributions.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 1.1 The foundation for Linux
+
+
+    We know that Linux refers to a UNIX-like operating system, so let us begin with
+    a brief overview of the development of portable operating systems and open source
+    to see the context in which Linux evolved.
+
+
+    # 1.2 The GNU General Public License
+
+
+    In 1969, several AT&T Bell Labs employees¹ began work on an operating system (OS)
+    that would be called UNIX. A significant novelty of their development was that
+    the OS was portable across hardware platforms.
+
+
+    At the time, AT&T, for various legal reasons, was permitting free academic access
+    to the source code to UNIX while charging over $20,000 (in 1976 dollars!) for
+    commercial or government access. AT&T then halted publication of the source code
+    in university texts as this revealed proprietary Bell Labs code. The era of collaborative
+    programming had arrived.
+
+
+    In the US, the academic variant of interest to UNIX became the Berkeley Systems
+    Distribution (BSD),² where virtual memory and networking were added. These advancements
+    permitted large collaborative projects with contributors scattered throughout
+    the world. Lawsuits eventually ensued among AT&T, the Regents of the University
+    of California, and other parties over access to and distribution of the OS source
+    code. Such constraints on intellectual property rights to code provided strong
+    motivation for one researcher from the Artificial Intelligence Laboratories at
+    the Massachusetts Institute of Technology to write an operating system that was
+    both portable, and also would be licensed in a manner that would prevent its eventual
+    constraint by intellectual property claims.
+
+
+    The new OS was to be named GNU, a recursive acronym for “Gnu’s Not UNIX.” This
+    work would be “copylefted” instead of copyrighted, licensed under the GNU General
+    Public License (GPL), which stipulates that all programs run under or derived
+    from GNU must have their source code published freely, relinquishing rights of
+    control while retaining rights of ownership. This was the birth of free (as in
+    freedom) software, in contrast to software in the public domain. By this time,
+    vendors such as Sun, Hewlett-Packard, and IBM had proprietary commercial offerings
+    derived from licensed AT&T UNIX that were gaining popularity with corporate customers.
+    The nascent GNU development effort began by making tools such as editors, compilers,
+    and file utilities available in source form that could be compiled and executed
+    on any platform, standardizing and improving upon those offered by commercial
+    vendors. Around 1990, programmers had contributed a nearly complete operating
+    environment to GNU, with the exception of a kernel. The GNU kernel was to be based
+    on a micro kernel architecture for improved portability.
+
+
+    In the meantime, a small scale UNIX-like skeleton of an operating system³ called
+    Minix was published in a text to be used as a teaching tool. It is here that Linus
+    Torvalds enters the story. He decided to write a UNIX-like OS with improved functionality
+    over that of Minix to run on readily available personal computers. He and colleague
+    Lars Wirzenius published their source code under the GPL on the Internet for public
+    comment, and Linux was born.
+
+
+    Linux was a kernel without utilities, GNU was an operating environment lacking
+    a finished kernel, and unencumbered non-kernel BSD pieces were available to complete
+    the picture. In short order the components were combined with installation and
+    maintenance tools and
+
+
+    ¹ Ken Thompson, Dennis Ritchie, and J.F. Ossanna
+
+
+    ² Twenty Years of Berkeley UNIX: From AT&T-Owned to Freely Redistributable, Marshall
+    Kirk McKusick, in Open Sources: Voices from the Open Source Revolution, O’Reilly,
+    1999 1-56592-582-3
+
+
+    ³ Dr Andrew S. Tannenbaum, Vrije Universiteit, Amsterdam, The Netherlands'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'made available by distributors; the first of serious note is Slackware in 1993,
+    followed by many others, making the GNU/Linux (or simply Linux, as it has since
+    come to be known) combination readily available. In only a few years, a worldwide
+    Linux community has evolved, comprised of programmers and users attracted by the
+    reliability and flexibility of this “free” operating system.
+
+
+    The term “open source” began to replace the term “free software” as the commercial
+    adoption of GNU/Linux grew. There is in fact a difference, upon which hinges the
+    fate of commercial ventures in this arena.
+
+
+    # 1.3 Open source
+
+
+    Linux was developed under GNU, which has articulated a philosophy that defines
+    “free code” or the user’s right to use the code, rather than defining what they
+    cannot do, which is the case with proprietary software. This license allows the
+    user to alter, distribute and even sell the code covered under its license as
+    long as they allow those to whom they distribute the code to do the same.
+
+
+    The General Public License promotes free code on the GNU Web page. It also provides
+    protection for the developer and prevents a user from altering the code and then
+    asserting proprietorship over the code. This does not mean the code cannot be
+    sold. According to the GNU Web site, “free software” allows a user to run, copy,
+    distribute, study, change, and improve the software. It must also be available
+    for commercial use.
+
+
+    Standards enable communication among heterogeneous software and systems. Open
+    source can be viewed as a manifestation of this process, and the process itself
+    as a necessity for extending the development of inter-networking. When there is
+    a need for new software or hardware support, or a defect is discovered and reported,
+    the software (creation or correction) can be swiftly done by the user who required
+    the changes (or by the original author), with no need for a design review, cost
+    analysis, or other impositions of a centralized development structure. This is
+    made possible by open source code.
+
+
+    IBM has recognized the efficacy of this community and sees the benefit of the
+    rapid and innovative development of robust and stable code to provide the enabling
+    layer for e-business applications. As a result of the evolutionary development
+    of Linux, pieces of the code are located on various Web sites. Without some integration,
+    it is difficult to install and upgrade the product, keep track of module dependencies
+    and acquire drivers for the hardware. Distributions provide coherent bundles of
+    software in one location that furnish the capabilities needed for a usable server
+    or desktop. Generally, the products of different distributors have a lot of things
+    in common, but there may be particular features or functions, which you may require
+    that are not available from a given distributor.
+
+
+    # 1.4 Linux: The operating system
+
+
+    Linux is a fully functional operating system similar to a UNIX system. It has
+    all the standard features of enterprise UNIX systems. Management of the command
+    structure is enabled through shells. We mention two of the many advanced shells
+    that are available for Linux, the Bourne Again Shell (bash), and the tsch shell.
+    Both shells support a complete shell-based programming language that you can use
+    to create shell scripts.
+
+
+    There are four fundamental components of Linux:
+
+
+    +   - Kernel: Provides program and hardware device management (such as disks and
+    printers)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '+   - **Shell**: Receives commands from the user and sends those commands to
+    the kernel for the execution through a standard user interface.
+
+    - **File structure**: Files are organized into directories with the disk hardware.
+    Each directory may contain any number of subdirectories each holding files. This
+    is a similar structure to PC operating system file structures.
+
+    - **Utilities**
+
+
+    In some solutions, typically with clusters, the Linux server does not need the
+    traditional PC hardware BIOS. The hardware is directly controlled by Linux. This
+    provides phenomenal boot-up times (three seconds is the current record).
+
+
+    Linux has the same multiuser and multitasking capabilities as large UNIX servers.
+    It provides the same level of system administration that you find on standard
+    UNIX systems. Users can run several programs concurrently. You can create user
+    accounts for different users and define their access rights to the files and system
+    components. Installation of new devices, and network connection and control are
+    also provided as standard in the Linux operating system.
+
+
+    As a development environment, Linux has a powerful set of development tools for
+    creating industrial-strength applications. The development toolset includes the
+    *GNU C Compiler*.
+
+
+    The Linux structure provides the ability for programmers to access the hardware
+    of the computer and the networks to which it is connected. This is achieved by
+    the provision of a *hardware abstraction layer* where programs can take advantage
+    of hardware features through a standard applications programming interface (API).
+
+
+    Linux programs can be portable to other versions of UNIX systems. Linux can use
+    ANSI C, combined with one of several portability graphical user interface (GUI)
+    toolkits. These programs can be written for both UNIX systems and Windows servers.
+
+
+    # 1.5 Where Linux fits in
+
+
+    The adoption of Linux has been a rapid and changing process. It can be difficult
+    to determine where Linux fits into the modern IT world. Linux plays a role in
+    almost every area and is quickly making inroads where traditional operating systems
+    ruled for years.
+
+
+    # 1.5.1 Working with other operating systems
+
+
+    Linux is being used not only as the single operating system on a given computer
+    system. It is also frequently used to populate virtual partitions on larger, non-Intel
+    based systems such as the IBM @server, iSeries™, pSeries™, and zSeries servers.
+    The virtual or logical partition provide:
+
+
+    +   - **Server consolidation:** An organization with existing Linux or UNIX servers
+    can save hardware and personnel costs by consolidating those servers into virtual
+    partitions on an existing IBM eserver platform.
+
+    - **High availability:** Multiple virtual partitions can provide a level of availability
+    and application-based load balancing while retaining the management benefits of
+    consolidated hardware.
+
+    - **Infrastructure:** Linux virtual partitions can provide security and infrastructure
+    services to other partitions, which share the same virtual network.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# 1.5.2 Infrastructure
+
+
+    Linux enters the mainstream markets by providing critical infrastructure services.
+
+
+    # Web serving
+
+
+    The combination of Linux and Apache offers an attractive package for customers.
+    It provides a low cost, flexible solution for Web servers, with over 30% of the
+    world''s Web sites running this combination. The demand is now moving toward high
+    capacity Web sites, which users can interact with and that support high transaction
+    rates.
+
+
+    # File and print serving
+
+
+    One of the basics for Linux implementation is the provision of inexpensive facilities
+    such as file and print services. Linux offers a rapid return on investment (ROI)
+    in this part of the infrastructure space. The management capabilities and low
+    cost make this an easy solution to justify. Also, this is an important environment,
+    but it does not typically have the operational importance of line-of-business
+    applications. It is a relatively safe place for businesses to test this new technology.
+
+
+    # Domain name server (DNS) and DHCP
+
+
+    As a UNIX-clone, Linux is well proven at hosting Berkeley Internet Name Daemon
+    (BIND) name servers and Dynamic Host Configuration Protocol (DHCP) services.
+
+
+    # Router
+
+
+    Linux is capable of advanced routing using inexpensive commodity hardware. Also,
+    some router vendors have chosen Linux to be their embedded operating system.
+
+
+    # Firewall and Intrusion Detection Services (IDS)
+
+
+    Linux has been a popular provider of firewall and IDS services. Because of the
+    advanced configuration and customization options, along with a small memory footprint,
+    Linux has been an ideal solution for many organizations who want to avoid proprietary
+    solutions.
+
+
+    # 1.6 Linux distributions
+
+
+    Linux is available in many configurations from a variety of distributors. Linux
+    advocates have strong preferences for one distribution over the other. Distributions
+    from, for example, Red Hat, SuSE, Mandrake, and Debian, are presently available
+    and offer their own advantages in package management, installation, development
+    environment, and ease of use of various tools.
+
+
+    In this book we only highlight two Linux distributors. IBM does not favor any
+    specific Linux distribution, but instead IBM pushes for the standardization of
+    Linux in general.
+
+
+    # 1.6.1 Red Hat Enterprise Linux
+
+
+    +   - **Red Hat Enterprise Linux AS**: Formerly known as Red Hat Linux Advanced
+    Server, it is the core operating system and infrastructure enterprise Linux solution
+    from Red Hat, supporting up to 8 CPUs and 16 GB of main memory, and is certified
+    by the US Defense Information Systems Agency (DISA) as a Common Operating Environment
+    (COE) compliant. It features High Availability Clustering and IP load balancing
+    capabilities, asynchronous I/O support, Linux standard base interface conformity,
+    improved SMP integration, and reduced I/O memory copy overhead.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '+   - **Red Hat Enterprise Linux ES**: Provides the core operating system and
+    networking infrastructure specially suited for medium-scale, departmental applications.
+
+    - **Red Hat Enterprise Linux WS**: The desktop/client counterpart for either Enterprise
+    Linux ES or AS.
+
+
+    Red Hat offers support and maintenance services for their enterprise distributions.
+
+
+    For more information regarding Red Hat Linux, please visit:
+
+    http://www.redhat.com
+
+
+    # 1.6.2 SuSE Linux Enterprise Edition
+
+
+    Founded in 1992, SuSE Linux is based in Nuremberg, Germany, and is the most widely
+    used distribution in Europe. The latest versions have a new graphical installation
+    tool to simplify the installation. The advanced features include hardware acceleration
+    for 3-D graphic chips and a journaling file system. SuSE also develops and supports
+    a series of X Servers for newer, high-end graphic cards. The installation is available
+    in German, English, Italian, and French. SuSE Linux comes with a large group of
+    utilities and applications.
+
+
+    SuSE is available in business versions. These include SuSE Linux Enterprise Server
+    (SLES); servers for zSeries, xSeries, pSeries, and iSeries; and versions that
+    support Alpha, PowerPC®, and Intel platforms.
+
+
+    SLES is a package distribution of United Linux (see 1.6.3, “UnitedLinux) intended
+    for server applications.
+
+
+    For more information regarding SuSE Linux, please visit:
+
+    http://www.suse.com
+
+
+    # 1.6.3 UnitedLinux
+
+
+    UnitedLinux is a consortium formed in May 2002, established to combine the development
+    efforts of several distributors.
+
+
+    The vision is simple: partners combine the very best server operating system technology
+    from leading distributors into a robust, single code based system. In January
+    2003 IBM joined UnitedLinux as a technology partner.
+
+
+    The following United Linux consortium members have identical United Linux distributions:
+
+
+    +   - SuSE Linux Enterprise Server 8 (SLES 8)
+
+    - Turbolinux Enterprise Server 8 (TLES 8)
+
+    - Conectiva Linux Enterprise Edition Powered by United Linux
+
+
+    All three companies provide distributions for Intel (xSeries), iSeries, pSeries,
+    and zSeries. Turbolinux and Conectiva resell the SuSE distribution. Turbolinux
+    markets primarily in the Asia Pacific, while Conectiva markets primarily in Latin
+    America. Turbolinux and Conectiva will provide bug fixes to their customers within
+    30 days of their release by SuSE. SuSE is the lead UnitedLinux developer.
+
+
+    Key elements of the UnitedLinux distribution include POSIX standard asynchronous
+    I/O (AIO), raw I/O enhancements that provide high-bandwidth, low-overhead SCSI
+    disk I/O, and direct I/O that moves data directly between the user space buffer,
+    and the device performing the I/O, avoiding expensive copy operations, and bypassing
+    the operating system''s page cache.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: Other functionality in focus includes Hyper-Threading to enable multi-threaded
+    server software applications to execute threads in parallel within each individual
+    server processor; large memory support to take advantage of the Intel Physical
+    Address Extension to support up to 64 GB of physical RAM and the full 4 GB of
+    virtual addressing space per process; Internet Protocol Version 6 (IPv6), the
+    next generation protocol designed by the IETF to replace the current version Internet
+    Protocol; and LDAPv3, the latest available Directory Services protocol for better
+    user base management, and application integration for mail servers and authentication
+    servers.
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_22_0.png)
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_22_1.png)
+
+
+    # IBM and Linux
+
+
+    This chapter discusses IBM''s commitment to the Linux and open-source community,
+    and reviews available IBM services that help Linux customers gain the greatest
+    advantage of a Linux-powered IBM @server solution. It offers a scope of the tremendous
+    acceptance and commitment Linux has today.
+
+
+    The resources portrayed here provide a good, consolidated starting point to more
+    detailed information. We recommend that you read and learn about these resources
+    to help you stay current with Linux''s commitments and new services, which continue
+    to grow rapidly.
+
+
+    The information in this chapter was correct at the time this book was written.
+    However, some of the information may change due to normal variations in the life
+    cycle of each product. This is true for products other than Linux as well. This
+    means that IBM may not support a specific product even though it may appear to
+    be supported in this chapter. Therefore, we encourage you to investigate topics
+    such as end-of-service dates, product withdrawals, and other support restrictions
+    while gathering information from this chapter.
+
+
+    **Important:** The services portrayed here are for IBM customers only, and may
+    not be available in some specific countries or regions. Contact your local IBM
+    Global Services (IGS) representative for details.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 2.1 IBM’s commitment to Linux
+
+
+    The history of IBM''s involvement with Linux is so large as to be outside the
+    scope of this work. IBM is not a distributor of Linux. IBM is a contributor to
+    Linux, a supplier of servers that run Linux, and a provider of support for customers
+    who choose to use Linux. IBM''s commitment to Linux may best be illustrated with
+    some of the many notable highlights over the last several years:
+
+
+    +   - As early as March 1999, IBM had announced key alliances, products, and global
+    support for Linux, including among others distributors like SuSE Holding AG (all
+    of which later founded United Linux along with distributor Conectiva S.A22), and
+    Red Hat Software Inc. The IBM Thinkpad 600 became the first notebook computer
+    listed as supported hardware by Red Hat.
+
+    - Linux made its official debut on S/390® servers in May 2000, with commercial
+    deployment by a major ISP for server consolidation following shortly thereafter.
+    In June, SuSE announced Enterprise Linux for the RS6000.
+
+    - In 2001, IBM won top honors at LinuxWorld for zSeries and iSeries systems running
+    Linux, completing the availability of Linux across the entire eServer™ product
+    line. Complementing this was the announcement of a broad range of storage options
+    for Linux servers, including the Enterprise Storage Server (ESS) and Fibre Array
+    Storage System (FAStT) external storage arrays. IBM''s Linux supercomputer systems
+    were deployed in research and also in oil and gas exploration, and prepackaged
+    Linux clusters for eBusiness made their debut.
+
+    - In 2002, continued emphasis on robust computing for small and medium businesses,
+    server consolidation, retail, network infrastructure, advertising, telecom, and
+    life sciences strengthened IBM''s position as the most committed Linux player
+    across all market segments. By December 2002 IBM had made the eServer p630 available,
+    the first pSeries system dedicated to Linux support. Internally, IBM began migrating
+    its own business-critical services to Linux, demonstrating both an indisputable
+    commitment to, and demonstrated scalability of, Linux eBusiness solutions.
+
+    - In 2003 IBM regularly announced new Linux hardware, ports of additional existing
+    software to Linux, and new Linux services and support options.
+
+
+    # IBM industry leadership supporting Linux
+
+
+    IBM has over $1 billion investment in the Linux community. IBM has the Linux Technology
+    Center, IBM Research and Open Source Development Labs, and IBM Global Services
+    Consulting and Support, which all contribute to the Linux and open source community.
+
+
+    Linux support across IBM is growing across the entire product line with support
+    for TotalStorage disk and tape. IBM also supports middleware solutions such as
+    DB2®, Websphere, Lotus® Domino™, MQSeries®, Tivoli Storage Manager and more, and
+    continues to work closely with many leading Linux distributors.
+
+
+    # Worldwide IBM Linux commitment
+
+
+    The $200 million Linux initiative in each of the Europe and Asia Pacific markets
+    including the creation of Linux Solution Porting Centers. These centers are located
+    all around the world including Paris and Montpellier in France; Greenock and Hursley
+    in the UK; Boeblingen in Germany; Warsaw in Poland; Budapest in Hungary; Tokyo,
+    Shanghai, Beijing, Taipei, Seoul, and Bangalore in the Asia Pacific; and U.S.
+    centers in San Mateo, CA, Chicago, and Waltham, MA.
+
+
+    Centers allow customers and key ISVs to transition their applications to Linux.
+    IBM supports application development on all IBM servers.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# 2.1.1 The IBM Linux Technology Centers
+
+
+    The IBM Linux Technology Center (LTC), whose mission is to work directly with
+    the Linux development community with a shared vision of making Linux succeed,
+    has one of the industry''s most comprehensive Linux development teams. They are
+    a proven, accepted part of the open source Linux community, successfully bringing
+    enterprise features into Linux. By doing so they provide Linux technical expertise
+    to the community.
+
+
+    The LTC has a team of 250-plus, with a small part of the over community located
+    in many centers around the world. These centers are located in Adelaide, Austin,
+    Bangalore, Beaverton, Beijing, Bethesda, Boeblingen, Boston, Boulder, Cambridge,
+    Canberra, Chicago, Endicott, Hawthorne, Hursley, Kirkland, Mt. Laurel, New York
+    City, Portland, Poughkeepsie, Raleigh, Rochester, San Francisco, Somers, Urbana-Champaign,
+    Yamato, and Yorktown.
+
+
+    The Linux Technology center can be located on the Web at:
+
+    http://www.ibm.com/linux/ltc
+
+
+    # IBM contributes JFS to Linux Storage
+
+
+    IBM''s journaled file system (JFS) technology, currently used in IBM enterprise
+    servers is designed for high-throughput server environments, key to running intranet
+    and other high-performance e-business file servers. IBM is contributing this technology
+    to the Linux open source community with the hope that some or all of it will be
+    useful in bringing the best of journaling capabilities to the Linux operating
+    system.
+
+
+    JFS is a log-based, byte-level file system, which was developed for transaction-oriented,
+    high performance, high-throughput server environments, and is key to running intranet
+    and other high-performance e-business file servers. JFS is a scalable and robust
+    file system and provides fast file system restarts in the event of a system crash.
+
+
+    JFS is currently shipping with many Linux distributions including Red Hat and
+    SuSE Linux.
+
+
+    More information about JFS for Linux can be found at:
+
+    http://www-124.ibm.com/jfs/
+
+
+    # EVMS
+
+
+    The LTC is also working on volume management technology in the form of the Enterprise
+    Volume Management System (EVMS), where the result of the effort is aimed at providing
+    more volume management capability and interoperability in the kernel.
+
+
+    For information on EVMS, refer to:
+
+    http://evms.sourceforge.net/
+
+
+    # 2.2 Linux services and application solutions
+
+
+    Although the general opinion is that Linux has a limited number of enterprise-level
+    applications available, the Linux applications featured in the IBM Global Solutions
+    Directory has grown to more than 2,900. IBM has ten porting centers around the
+    world and is continually enhancing this portfolio.
+
+
+    For more in depth information regarding Linux application solutions refer to Linux
+    Handbook - A Guide to IBM Linux Solutions and Resources, SG24-7000-00.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 2.2.1 IBM Services
+
+
+    IBM''s main focus is on the creation, development, and manufacturing of the industry''s
+    most advanced information technologies. This includes computer systems, software,
+    networking systems, storage devices, and microelectronics.
+
+
+    IBM Global Services translates these advanced technologies into business value
+    for customers and helps in making information technology (IT) easy to acquire
+    and manage. To learn more about IBM Global Services, see:
+
+
+    ```
+
+    http://www.ibm.com/services/
+
+    ```
+
+
+    # 2.2.2 IBM Global Services
+
+
+    IBM helps customers optimize the business value of Linux-based solutions through
+    cost-effectiveness, choice, and competitive advantage. IBM has experienced Linux
+    consultants and architects engaged in thousands of open-source projects worldwide.
+    With this, IBM can help customers in all industries enhance resiliency, scalability,
+    stability, and security with their Linux deployments.
+
+
+    IBM Global Services is the largest part of IBM with over 140,000 employees in
+    164 countries or regions. It is widely recognized as the largest service company
+    in the world.
+
+
+    # 2.2.3 IBM Support Line
+
+
+    IBM offers “enterprise-grade” support for Linux through the Internet, and voice
+    support 24 hours-a-day, 7 days-a-week. This support ranges from answering usage
+    questions to identifying problems, all revolving around the customer''s needs.
+
+
+    Recent analyst studies have shown that among the most important concerns related
+    to Linux implementations, support is an important consideration for both solution
+    and vendor selection. IBM offers world-class support for Linux as a standard offering,
+    with several options including the ability to customize support according to the
+    skills and experience of the customers current IT staff.
+
+
+    Support Line is IBM''s support offering for e-infrastructure software. It is an
+    established worldwide proven service, which covers IBM and non-IBM Software products.
+    Support Line offers:
+
+
+    +   - Years of experience in world-wide support for IBM and non-IBM operating
+    systems
+
+    - World-wide support structure
+
+    - The right tools
+
+    - The right people
+
+    - The right alliances
+
+
+    # IBM Operational Support Services: Support Line for Linux
+
+
+    This fee service provides remote Linux technical assistance to answer usage, installation,
+    and technical questions, to address product compatibility and inter operability
+    concerns, and to isolate and diagnose problems. IBM Linux engineers are available
+    24 hours-a-day to provide defect support (fixes).
+
+
+    Support Line provides consistent, cross-platform Linux support for IBM @server
+    platforms and Intel/AMD OEM hardware. With this service, customers receive telephone
+    access and electronic access to IBM services specialists.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# IBM Operational Support Services: Support Line for Linux Clusters
+
+
+    This fee service provides remote Linux cluster technical assistance to answer
+    usage, installation, and technical questions, to address product compatibility
+    and inter operability concerns, and to isolate and diagnose Linux cluster problems.
+    It provides specialized Linux cluster support with open source and OEM. It offers
+    remote problem identification and technical support for your Linux clustered environments.
+    This service complements your in-house skills by providing comprehensive knowledge
+    of Linux cluster environments.
+
+
+    # IBM Operational Support Services: Advanced Support
+
+
+    IBM''s Advanced Support provides the highest level of remote support available
+    through IBM. The customer receives 24-x-7 coverage, 365 days-a-year. This service
+    is tailored to meet unique customer needs for continuous, business-critical Linux
+    system operation.
+
+
+    # IBM Operational Support Services: Custom Linux Support
+
+
+    IBM offers remote Linux engineering support for creating modified versions of
+    Linux. This services provides full remote support once you implement this custom
+    distribution throughout your enterprise or customer base. By leveraging IBM''s
+    vast industry of Linux knowledge, IBM helps you to avoid serious pitfalls that
+    can occur when you create your own distribution. We help you understand the necessary
+    interdependent packages and required modules.
+
+
+    IBM has the critical mass to deliver support teams in multiple worldwide locations.
+    It has used some of its best talent in multiple locations to create the Change
+    team. IBM can draw on the skills of over 200 key members of the Linux Technology
+    Center found in more than 20 locations worldwide.
+
+
+    You can learn more about the Support Line at:
+
+
+    http://www.ibm.com/services/its/us/supportline.html
+
+
+    # 2.2.4 Linux consultancy
+
+
+    Linux acceptance by the marketplace is rapidly moving forward. It has gained credibility
+    and is being deployed widely for Web serving and scientific and technical computing
+    clusters in a relatively short time. It is now being ported as well to mission-critical
+    areas such as workload consolidation, retail points-of-sale, and financial branch
+    automation.
+
+
+    IBM is committed to providing the same level of support normally associated with
+    enterprise computing environments as Linux continues to move in to those key business
+    and industry areas. IBM''s Linux service offerings are designed to help Linux
+    customers achieve better flexibility and cost-to-benefit rates.
+
+
+    IBM Global Services offers one of the industry''s most comprehensive portfolios
+    of Linux consultative and support offerings, from planning and design, to implementation
+    and technical support. IGS also offers a full portfolio of Linux Services and
+    has been doing so since February 2001. Over 300 IBM consultants skilled in Linux
+    are available worldwide to help customers design, build, and enhance their Linux
+    solutions.
+
+
+    For information about IBM''s services and support for Linux, refer to the following
+    IBM Linux Services and support Web sites at:
+
+
+    http://www.ibm.com/services/its/us'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# 2.3 IBM services and software
+
+
+    IBM is rolling out services to help customers rapidly deploy and optimize Linux-based
+    e-business environments. IBM services for Linux covers Software Group products
+    such as WebSphere®, Data Management (DB2), Lotus, and Tivoli. IBM is also delivering
+    migration services to help customers port applications to a wide variety of IBM
+    and non-IBM platforms running Linux.
+
+
+    # 2.3.1 WebSphere
+
+
+    Many customers need WebSphere as a front end to their legacy applications. Customers
+    need to access legacy applications (for example, CICS®) through a browser interface
+    to provide users (internal or external) with Web-enabled access to multiple existing
+    applications. They also want solutions that do not require a long development
+    cycle and that support an open-standards compliant integrated infrastructure.
+    Customers want to leverage existing transactional applications, database assets,
+    and existing investment in hardware platforms that have a superior scalability
+    characteristic on which to run their new application.
+
+
+    Every customer with an IBM mainframe capable of having Integrated Feature for
+    Linux (IFL) presents a good fit for WebSphere for Linux. IFL-capable systems are
+    the 9672 G Series (G5 and G6), Multiprise® 3000, zSeries 800, and zSeries 900
+    vendors.
+
+
+    IBM provides a variety of services for WebSphere that go from migration to specific
+    training in all WebSphere products. For WebSphere Software Services, see:
+
+
+    http://www.ibm.com/software/ad/vaws-services/websphere.html
+
+
+    For more information about WebSphere training and technical enablement, see:
+
+
+    http://www.software.ibm.com/wsdd/education/enablement/
+
+
+    IBM also provides support for the wide range of WebSphere products made to fit
+    the Linux environment. Table 2-1 lists references where you can find support for
+    WebSphere products that run on Linux.
+
+
+    Table 2-1 WebSphere for Linux product services matrix
+
+
+    | WebSphere product | Product detail | Support |
+
+    |---|---|---|
+
+    | WebSphere Application Server | Advanced Edition 4.0 for Linux on zSeries | http://www.ibm1ink.ibm.com/cgi-bin/master?xh=a3KRKds8D5usfr1USenGnN9332&request=announcements&parms=H%5f201%2d366&xfr=N#div19
+    |
+
+    | WebSphere Edge Server | IBM WebSphere Edge Server V2.0 for Linux multiplatform
+    | http://www.ibm.com/software/webservers/edgeserver/support.html |
+
+    | WebSphere Commerce Suite | WCS Business Edition for Linux Intel and Linux on
+    the zSeries | http://www.ibm.com/software/webservers/commerce/wc_be/support.html
+    |
+
+    | WebSphere Commerce Suite | WCS Professional Edition for Linux Intel | http://www.ibm.com/software/webservers/commerce/wc_pe/support.html
+    |
+
+    | WebSphere Personalization | WebSphere Personalization 4.0 for Linux on the zSeries
+    | http://www.ibm.com/software/webservers/personalization/support.html |
+
+    | WebSphere MQ (formerly MQ Series) | MQ V 5.2 for Linux on Intel and zSeries
+    | http://www.ibm.com/software/ts/mqseries/support/index.html |'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "| WebSphere product | Product detail | Support |\n|---|---|---|\n| WebSphere\
+    \ Portal | WebSphere Portal 4.1 for the Linux Intel Red Hat or SuSE 7.1 | http://www.ibm.com/software/webservers/portal/support.html\
+    \ |\n| WebSphere Studio Application Developer | WSAD V4.0 for Red Hat/SuSE 7.1\
+    \ or Higher on Intel | http://www.ibm.com/software/ad/studioappdev/support/ |\n\
+    | WebSphere Transcoding Publisher | Red Hat Linux V7.1or SuSE 6.4 on Intel | http://www.ibm.com/software/webservers/transcoding/support.html\
+    \ |\n\n# 2.3.2 DB2 for Linux\n\nDB2 for Linux Beta Version 8.1 is now available.\
+    \ You can learn more about this release on the IBM DB2 for Linux Web site at:\n\
+    http://www.ibm.com/software/data/db2/linux/validate/\n\nIBM offers the following\
+    \ services related to DB2 for Linux:\n\n+   - **Remote DB2 Installation**: This\
+    \ service is supported for DB2 for Linux running under a logical partition (LPAR),\
+    \ a guest system (VM), or a stand-alone Linux. For more information, see:\n  http://www.ibm.com/services/its/us/drmklm12.html\n\
+    \  IBM can also help customers to migrate to DB2 for Linux. Learn about a variety\
+    \ of options and helpful information on the Web at:\n  http://www.ibm.com/software/data/db2/migration/\n\
+    - **DB2 for Linux support**: For technical support, product information, and all\
+    \ other DB2 for Linux support-related issues, go to:\n  http://www.ibm.com/software/data/db2/udb/support.html\n\
+    \  For information about DB2 consulting services and other services, refer to:\n\
+    \  http://www.ibm.com/services/\n\n# 2.3.3 Tivoli\n\nCustomers’ growing use of\
+    \ Linux systems within their Tivoli-managed environments has extended IBM's commitment\
+    \ to scale Linux services and support to Tivoli products.\n\nIBM announced Tivoli\
+    \ Linux enablement since the summer of 2002 for its security software and Web\
+    \ management products. For more information, see:\nhttp://www.ibm.com/software/tivoli/solutions/linux/\n\
+    \nLinux enablement was also extended to Tivoli Storage Management, configuration,\
+    \ operations, performance, and availability products. For details on the current\
+    \ Linux supported Tivoli products, refer to:\nhttp://www.ibm.com/software/tivoli/\n\
+    \nYou can access services for Linux supported Tivoli products, which include consulting,\
+    \ training, and certification on the Tivoli services Web site at:\nhttp://www.ibm.com/software/tivoli/services/\n\
+    \nTivoli's customer support is quite extensive and complete. Some services are\
+    \ available only for registered users. You can find Tivoli Customer Support on\
+    \ the Web at:"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Product support matrices for Tivoli
+
+
+    Table 2-2 through Table 2-9 on page 18 describe Tivoli product support matrices
+    for Linux for each area of Tivoli.
+
+
+    # IBM Tivoli Security Management
+
+
+    Table 2-2 lists product detail for Tivoli Security Management.
+
+
+    *Table 2-2 IBM Tivoli Security Management product matrix for Linux*
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | Tivoli Access Manager for e-business | Tivoli Access Manager for SuSE SLES7
+    for zSeries |
+
+
+    # IBM Tivoli Storage Management
+
+
+    Table 2-3 lists product details for Tivoli Storage Management.
+
+
+    *Table 2-3 IBM Tivoli Storage Management product matrix for Linux*
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | Tivoli Storage Manager | TSM 5.15 Server for Linux on the x86 Platform |
+
+    |  | TSM 5.15 Clients for Red Hat 7.1 and 7.2 x86 |
+
+    |  | TSM 5.15 Clients for SuSE 7.1, 7.2 and 7.3 x86 |
+
+
+    # IBM Tivoli configuration and operations
+
+
+    Table 2-4 lists product details for Tivoli configuration and operations.
+
+
+    *Table 2-4 IBM Tivoli Configuration Manager product matrix for Linux*
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | IBM Tivoli Configuration Manager | TCM Server for SuSE 7.2 on x86 |
+
+    |  | TCM Server for Red Hat on zSeries |
+
+    |  | TCM Gateway for SuSE 7.2 on x86 |
+
+    |  | TCM Gateway for SuSE 7.0 and Red Hat on zSeries |
+
+    |  | TCM Web Gateway for Red Hat 7.1 on x86 |
+
+    |  | TCM Endpoint on Red Hat 7.1 7.2 and SuSE 7.2 on x86 |
+
+    |  | TCM Endpoint on Red Hat and SuSE 7.0 on zSeries |
+
+
+    # IBM Tivoli Workload Scheduler
+
+
+    Table 2-5 lists product details for the Tivoli Workload Scheduler.
+
+
+    *Table 2-5 Tivoli Workload Scheduler product matrix for Linux*
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | IBM Tivoli Workload Scheduler | TWS V8.1 Job Scheduler Console on Red Hat 7.1
+    for x86* |
+
+    |  | TWS V8.1Job Scheduler Connector on Red Hat 7.1 for x86 |'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# IBM Tivoli Performance and Availability Management products
+
+
+    IBM Tivoli Performance and Availability Management Products for Linux consists
+    of:
+
+
+    +   - IBM Tivoli Monitoring
+
+    - IBM Tivoli Enterprise™ Console
+
+    - IBM Tivoli NetView®
+
+    - IBM Tivoli Service Level Advisor
+
+
+    The details for each product are provided in the following tables. Table 2-6 lists
+    product details for Tivoli Monitoring.
+
+
+    Table 2-6 IBM Tivoli Performance and Availability product matrix for Linux
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | IBM Tivoli Monitoring | IBM Tivoli Monitoring Server, Gateway and Endpoint for
+    Red Hat 7.0 and 7.1 on Intel |
+
+    |  | IBM Tivoli Monitoring Server, Gateway and Endpoint for Turbo Linux 6.1 and
+    6.5 on Intel |
+
+    |  | IBM Tivoli Monitoring Server, Gateway and Endpoint for SuSE Linux 7.1 and
+    7.2 on Intel |
+
+
+    IBM''s Tivoli Enterprise Console® consists of the following components:
+
+
+    +   - Event Server
+
+    - Gateway
+
+    - Endpoint Adapter
+
+    - UI Server
+
+    - Event Console
+
+
+    Table 2-7 outlines the support availability for each Tivoli Enterprise Console
+    component on Linux.
+
+
+    Table 2-7 Tivoli Enterprise Console product matrix for Linux
+
+
+    | Supported version by platform | Event Server | Gateway | Endpoint Adapters |
+    UI Server | Event Console |
+
+    |---|---|---|---|---|---|
+
+    | Red Hat Linux for Intel 7.1 and 7.2 | Event Server | Gateway | Endpoint Adapters
+    | UI Server | Event Console |
+
+    | SuSE Linux for Intel 7.0 and 7.1 | Event Server | Gateway | Endpoint Adapters
+    | UI Server | Event Console |
+
+    | Turbo Linux for Intel 7.0 | Event Server | Gateway | Endpoint Adapters | UI
+    Server | Event Console |
+
+
+    Table 2-8 lists product details for IBM Tivoli NetView.
+
+
+    Table 2-8 IBM Tivoli NetView product matrix for Linux
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | Tivoli NetView | Tivoli NetView 7.1.2 for Red Hat or SuSE 7.1 on Intel |'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'Table 2-9 lists product details for IBM Tivoli Service Level Advisor.
+
+
+    Table 2-9 TIBM Tivoli Service Level Advisor for Linux product matrix
+
+
+    | Product | Product detail |
+
+    |---|---|
+
+    | Tivoli Service Level Advisor | Service Level Advisor SLM component for Linux
+    Red Hat or SuSE 7.1 on Intel |
+
+    |  | Service Level Advisor Reports Server for Linux Red Hat or SuSE 7.1 on Intel
+    |
+
+
+    # 2.3.4 Lotus
+
+
+    To support and enhance your Notes® and Domino environment, Lotus offers a full
+    range of professional services, including consulting, education, and customer
+    support. See IBM''s Lotus Software site for more information:
+
+
+    http://www.lotus.com/lotus/products.nsf/fa_prohomepage
+
+
+    Table 2-10 outlines the Lotus Family services and support matrix for Linux.
+
+
+    Table 2-10 Lotus support matrix for Linux
+
+
+    | Product | Product detail | Service and support |
+
+    |---|---|---|
+
+    | Lotus Notes® Domino | Lotus Notes Domino V 6 Red Hat Linux, Version 7.2 or SuSE
+    Linux, Version 8.0 on Intel | http://www.lotus.com/products/rnext.nsf/873769A79D9C5B2285256A0800720B96/478B755CB7C8CB9C85256C400005EF2A?OpenDocument&cwesite=domfamserv
+    |
+
+
+    # 2.4 Platform services
+
+
+    The xSeries, zSeries, iSeries, and pSeries platforms work with Linux as an operating
+    system today, among the other operating systems that exist in the marketplace.
+    Just as software-based services for Linux are needed, so is a well-founded, platform-based
+    service and support structure which is still growing.
+
+
+    The IBM Linux Support Line provides Operational Support Services and a Premier
+    Remote technical support service. For more information, see:
+
+
+    http://www-1.ibm.com/services/its/us/supportline.html
+
+
+    IBM provides technical support for the major distributions of the Linux operating
+    system running in the xSeries, zSeries, iSeries, and pSeries platforms, as well
+    as some non-IBM applications that operate in a Linux environment. IBM helps answer
+    how-to questions, performs problem source determination, and provides mechanisms
+    for a solution. In addition, by leveraging partnerships with the key distributors
+    of the Linux operating system, IBM provides defect-level support for the Linux
+    operating system. Remote assistance is available through toll-free telephone or
+    electronic access depending on the country or region.
+
+
+    IBM provides services for all currently supported xSeries (including BladeCenter™),
+    zSeries, iSeries, and pSeries platforms in a different degree of variety and complexity
+    through its Linux Portal. For more information see:
+
+
+    http://www.ibm.com/linux/
+
+
+    As Linux continues to grow, so will IBM’s commitment to enhance current services
+    or provide new ones.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'IBM also provides Learning Services for customers who are interested in knowing
+    more about Linux, and making it their key operating environment for e-business.
+    IBM''s Linux education and training services offer a full curriculum and help
+    to establish a personal Linux education plan. For details about IBM''s Linux Learning
+    services and Linux Training, you can visit:
+
+    http://www.ibm.com/services/learning/us/catalog/linux/
+
+
+    # 2.4.1 zSeries services
+
+
+    The IBM Managed Hosting for Linux on the zSeries service is intended to provide
+    cost-effective managed server capacity on demand. If you are new to e-business
+    on demand™, you can find out more information on the Web at:
+
+    http://www.ibm.com/services/ondemand/thinking.html
+
+
+    With IBM Managed Hosting - Linux virtual services, the customer can tap into managed
+    server capacity without the up-front expense of buying the physical hardware.
+    Instead of the physical Web, database, and application servers that businesses
+    currently rely on, virtual servers on the zSeries running Linux can be leveraged.
+    This means that availability and reliability gain a boost while IT infrastructure
+    is greatly simplified.
+
+
+    If you are interested in finding out more about this service, refer to:
+
+    http://www.ibm.com/services/e-business/hosting/mgdhosting/linux.html
+
+
+    Table 2-11 lists various resources for platform-based information about services
+    that are available for the zSeries server.
+
+
+    Table 2-11 zSeries Linux information matrix
+
+
+    | Information | Location on the Web |
+
+    |---|---|
+
+    | Linux for zSeries applications | http://www.ibm.com/servers/eserver/zseries/solutions/s390da/linuxisv.html
+    |
+
+    | Linux for zSeries operating system download | http://www.ibm.com/servers/eserver/zseries/os/linux/dist.html
+    |
+
+    | Linux for zSeries Development tools | http://www.ibm.com/servers/eserver/zseries/os/linux/ldt/
+    |
+
+    | Linux for zSeries Library | http://www.ibm.com/servers/eserver/zseries/os/linux/press.html
+    |
+
+    | Linux for zSeries Education | http://www.ibm.com/servers/eserver/zseries/os/linux/ed.html
+    |
+
+
+    # 2.4.2 iSeries services
+
+
+    IBM provides a variety of services for customers interested in consolidating their
+    servers on the iSeries server. To learn more about these services, see:
+
+    http://www.ibm.com/servers/eserver/iseries/linux/advs.html
+
+
+    Table 2-12 lists various references for platform-based information about services
+    that are available for the iSeries server.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'Table 2-12 iSeries Linux information matrix
+
+
+    | Information | Location on the Web |
+
+    |---|---|
+
+    | Linux for iSeries applications | http://www.ibm.com/servers/eserver/iseries/linux/apps.html
+    |
+
+    | Linux for iSeries Education | http://www.ibm.com/servers/eserver/iseries/linux/educ.html
+    |
+
+    | Linux for iSeries planning | http://www.ibm.com/servers/eserver/iseries/linux/plan.html
+    |
+
+    | Linux for iSeries Developer Resources | http://www.ibm.com/servers/eserver/iseries/linux/resc.html
+    |
+
+    | Linux for iSeries Reference Library | http://www.ibm.com/servers/eserver/iseries/linux/library.html
+    |
+
+    | Linux for the iSeries support | http://www.ibm.com/servers/eserver/iseries/linux/support.html
+    |
+
+
+    # 2.4.3 pSeries services
+
+
+    The pSeries server makes a reliable foundation for fast 64-bit native Linux servers.
+
+
+    IBM provides hardware and software support service for the new pSeries 630 6C4
+    and 630 6E4 Linux-ready express configurations that are now available.
+
+
+    For information about these models, see:
+
+
+    http://www.ibm.com/content/home/store_IBMPublicUSA/en_US/eServer/pSeries/entry/6306C4.html
+
+    http://www.ibm.com/content/home/store_IBMPublicUSA/en_US/eServer/pSeries/entry/6306E4.html
+
+
+    IBM will provide more services for Linux for pSeries in response to growing interest
+    from customers to use Linux as their native operating system in this platform.
+
+
+    For more information, see the IBM Linux for pSeries Web site at:
+
+
+    http://www.ibm.com/servers/eserver/pseries/linux/index.html
+
+
+    # 2.4.4 xSeries services
+
+
+    IBM is leveraging enterprise scalability and availability at attractive prices
+    through xSeries Linux enablement. IBM''s Linux combination with the xSeries has
+    proven successful. Many resources and information are available to users who are
+    interested in using Linux on the xSeries as their key environment to meet their
+    needs.
+
+
+    Table 2-13 lists various references that provide platform-based information about
+    services that are available for the xSeries server.
+
+
+    Table 2-13 xSeries Linux information matrix
+
+
+    | Information | Location on the Web |
+
+    |---|---|
+
+    | Linux for the xSeries information | http://www.pc.ibm.com/us/eserver/xseries/index.html
+    |
+
+    | eServer Blades Center | http://www.ibm.com/servers/eserver/blades/ |'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '| Information | Location on the Web |
+
+    |---|---|
+
+    | Linux clustering on xSeries | http://www.ibm.com/servers/eserver/clusters/ |
+
+    | Linux for xSeries ISV resources | http://www.ibm.com/developerworks/offers/linux-speed-start/isv.html
+    |
+
+
+    # 2.4.5 Consolidated platform matrix
+
+
+    For more valuable information about IBM Linux for all IBM @server services, as
+    well as latest information, updates, new services available, etc., refer to the
+    IBM Linux dedicated Web site for each platform as listed in Table 2-14.
+
+
+    *Table 2-14 IBM Web site matrix for each Linux platform*
+
+
+    | Platform | Location on the Web |
+
+    |---|---|
+
+    | zSeries | http://www.ibm.com/servers/eserver/zseries/os/linux/index.html |
+
+    | iSeries | http://www.ibm.com/servers/eserver/iseries/linux/index.html |
+
+    | xSeries | http://www.ibm.com/servers/eserver/xseries/linux/index.html |
+
+    | pSeries | http://www.ibm.com/servers/eserver/pseries/linux/index.html |'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# zSeries and Linux
+
+
+    This chapter provides a brief overview of the IBM @server zSeries with a focus
+    on how to run Linux on the zSeries architecture.
+
+
+    Since Linux can run on zSeries as a z/VM® guest, this chapter contains background
+    information on z/VM for the reader to get an understanding of the features and
+    functions that their Linux installation would inherit in that case.
+
+
+    Finally, this chapter discusses scenarios for scalability and consolidation of
+    Linux solutions on zSeries.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# 3.1 Introduction\n\nThe IBM @server zSeries is the successor of the S/390\
+    \ series and IBM's premier server for e-business transaction workloads. The zSeries\
+    \ has a long history in running commercial applications with unmatched reliability\
+    \ and availability. In 1999 Linux was ported to S/390 and became available in\
+    \ early 2000. Since then, many new features and device support have been added,\
+    \ and more and more customers are using Linux for S/390 and zSeries either for\
+    \ running new workloads or consolidating servers. Linux for zSeries is supported\
+    \ on all zSeries machines, and on the predecessor S/390 models G5, G6, and MP3000.\
+    \ These are shown in Figure 3-1.\n\n![](img/da33d6b6aa12b73deb3c350a0a89d424_37_0.png)\n\
+    \nFigure 3-1 IBM eServer zSeries\n\n# 3.1.1 Ways to run Linux on zSeries\n\nThere\
+    \ are three ways to run Linux on the zSeries. These are:\n\n+   - Basic or native\
+    \ mode\n  - Linux uses the entire machine, without any other operating system.\
+    \ In basic mode, you can use a single Linux image on the zSeries \"bare metal.\"\
+    \n- Logical partition or LPAR\n  - You can logically partition the zSeries hardware\
+    \ into a maximum of 15 separate LPARs. A single zSeries, for example, can host\
+    \ z/OS® applications in one partition, VM in another, and Linux applications in\
+    \ additional partitions.\n- z/VM\n  - A customer can run Linux as a virtual machine\
+    \ using z/VM as a hypervisor. z/VM provides virtualization of CPU processors,\
+    \ input/output (I/O) subsystems, and memory. A customer running z/VM can run hundreds\
+    \ of Linux systems on a single zSeries. With z/VM, for instance, a customer can\
+    \ offer a complete Linux server environment to each application developer and\
+    \ host production system all on the same zSeries server.\n\nThe decision on how\
+    \ to run Linux on zSeries is typically made based on the expected workload:\n\n\
+    +   - Few (if any) workloads require running Linux in basic mode.\n- Linux workloads\
+    \ with large resource requirements (such as memory footprint and processing power)\
+    \ may be best suited for running in an LPAR. This is particularly true if"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'the Linux systems will be running at peak workloads for extended periods, so
+    that there is limited opportunity for resource sharing. Use of LPARs may also
+    be appropriate when only a small number of images are required, since in this
+    case the additional resource and support requirements of z/VM may not be justified.
+
+
+    +   - Running Linux as a z/VM guest offers the maximum flexibility. The number
+    of Linux guests running under z/VM can be adjusted to meet workload requirements.
+    Only the hardware resources limit the amount of concurrently running instances.
+    Most customers choose this option to maximize their investment.
+
+
+    The last two options are depicted in Figure 3-2. Note that this figure is only
+    illustrative, and in a real production environment you would also expect to have
+    an LPAR running z/OS, as depicted in Figure 3-4 on page 26.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_38_0.png)
+
+
+    # 3.1.2 S/390 and zSeries architecture
+
+
+    The heart of zSeries and S/390 architecture is the multichip module (MCM) that
+    contains up to 20 processing units (PU). These are commonly referred to as central
+    processing units (CPUs) or engines.
+
+
+    All PUs are identical, but can take on different roles in the system. Each PU
+    can be one of:
+
+
+    +   - Central Processor (CP) PU: Used by the operating system for executing customer
+    work
+
+    - System Assist Processor (SAP) PU: This is a PU that runs the channel subsystem
+    Licensed Internal Code to control I/O operations.
+
+    - Integrated Facility for Linux (IFL) PU: An IFL engine is restricted to running
+    Linux or z/VM.
+
+    - Integrated Coupling Facility (ICF) PU: This engine is used to run the Coupling
+    Facility function for use in a Parallel Sysplex®.
+
+
+    # The IFL engine
+
+
+    An IFL is a processor reserved for Linux, or Linux under VM. The significance
+    is that it cannot be used to run other operating systems, and its existence is
+    not reflected in the system model numbers, MIPS rating, or other power ratings.
+    These power rating methods have significant implications for software costs. Adding
+    an IFL does not affect these costs, permitting the use of Linux without impacting
+    other software costs.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Figure 3-3 on page 26 shows how IFLs may be allocated to logical partitions
+    (LPARs).
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_39_0.png)
+
+
+    Figure 3-3 The relationship between IFLs and LPARs
+
+
+    Note: IFLs must be dedicated to LPARs running Linux or z/VM. They can be shared
+    by multiple LPARs, provided the LPARs are running Linux or z/VM. Also, an LPAR
+    cannot contain a mix of IFLs or CPs.
+
+
+    Figure 3-4 provides an example of the disposition of CPs for a zSeries server
+    running Linux under z/VM and other workloads.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_39_1.png)
+
+
+    Figure 3-4 Configuration of CPs for a zSeries running z/OS and Linux under z/VM.
+
+
+    # 3.1.3 Further information
+
+
+    Here are a few useful links to additional information.
+
+
+    Linux for IBM eServer zSeries:
+
+
+    ```
+
+    http://www.ibm.com/servers/eserver/zseries/os/linux
+
+    ```
+
+
+    A discussion group for Linux on zSeries can be found at:
+
+
+    ```
+
+    http://www2.marist.edu/htbin/wlvindex?linux-390
+
+    ```
+
+
+    The official home page of the Linux/390 project, which aims to provide a central
+    source of Linux/390 information and software can be found at:'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'http://www.linuxvm.org
+
+
+    zSeries mainframe servers:
+
+
+    http://www.ibm.com/servers/eserver/zseries
+
+
+    # 3.2 Background to z/VM
+
+
+    You can run tens to hundreds of virtual Linux systems under z/VM and, when running
+    Linux as a z/VM guest, you inherit all the features of z/VM. This section highlights
+    some of these features.
+
+
+    Virtual Machine (VM) technology was introduced with the IBM System/360™, the original
+    mainframe, back in the mid-1960s. At that time, VM enabled users of S/360 systems
+    to run multiple copies of operating systems on a single mainframe. Being able
+    to run multiple operating systems made it possible to migrate to new releases
+    and versions on the same mainframe system. A user could run a production workload
+    on the old level of software while, at the same time, performing the work required
+    to migrate the environment to the new operating system.
+
+
+    Over the course of 30-plus years, IBM made investments in hardware, architecture,
+    and microcode, as well as in the VM product itself, to enhance the virtualization
+    technology available with each successive line of mainframe computers. This ‘total
+    system’ investment is why IBM @server zSeries line of servers offers the industry''s
+    best-of-breed virtualization technology.
+
+
+    The virtualization technology found in z/VM is unique. Some ‘virtual server’ solutions
+    consist of running multiple applications on a single operating system using virtual
+    storage techniques to meet memory demands. z/VM on the other hand uses the real
+    resources at its disposal (processors, memory, I/O, network, etc.) to create virtual
+    machines, each able to run its own independent copy of any operating system that
+    supports the zSeries architecture (which includes Linux). An operating system
+    running in a virtual machine does so as if it were executing on real hardware.
+    Hardware architecture and facilities are presented to the ‘guest’ system (i.e.
+    are virtualized) by z/VM in such a way that the guest operating system believes
+    it is using a real system, not a virtual one. Figure 3-5 shows an example with
+    multiple virtual machines, including three Linux machines and a z/OS. The physical
+    hardware is not seen by the guests - instead, each guest sees the virtual machine
+    presented by z/VM.
+
+
+    z/VM is even able to create a virtual machine environment that is functionally
+    richer than a ‘real’ environment. Examples of this include:
+
+
+    +   - Using data-in-memory techniques to transparently enhance guest system performance
+
+    - Simulating device networking facilities that do not exist in the real mainframe
+    system
+
+    - Sharing a single copy of a kernel among several guest systems'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_41_0.png)
+
+
+    Figure 3-5  z/VM virtualization
+
+
+    # 3.2.1 Virtual networking with z/VM
+
+
+    Virtual networks use z/VM virtualization to provide connectivity between guests
+    without needing real hardware. Virtual networks enable fast and cost effective
+    TCP/IP communication between z/VM Linux guests. Note that connectivity in a z/VM
+    virtual network is limited to guests running in a single z/VM image. Virtual networks
+    cannot be used for inter-LPAR communication. There are three types of virtual
+    networks available to Linux guests:
+
+
+    +   - **Inter-user communication vehicle (IUCV)**: Point-to-point TCP/IP connections
+    between Linux guests can be established using IUCV. The Linux for S/390 and zSeries
+    kernels include an IUCV driver, allowing you to connect two Linux virtual machines.
+    Linux treats IUCV connections as any other TCP/IP network connection.
+
+    - **Virtual channel-to-channel (vCTC)**: vCTC networks provide point-to-point
+    connectivity between guests without real channel allocation. z/VM provides the
+    ability to define virtual channel-to-channel adapters so that users can connect
+    virtual machines using the CTCA protocol. On z/VM, this is useful for connecting
+    Linux virtual machines to other virtual machines that do not support IUCV, such
+    as z/OS. Virtual vCTC networks can also connect Linux virtual machines.
+
+    - **VM Guest LAN**: IUCV and vCTC support point-to-point connections. This can
+    be cumbersome to manage if you plan to connect a server image to a large number
+    of virtual machines. z/VM 4.2 introduces a new capability called ''Guest LAN''
+    support. A server image running z/VM connects to a Guest LAN using the Hipersocket
+    protocol. Virtual Hipersockets look just like the real thing to a Linux server,
+    or any software that supports real HiperSockets™. There is no limit to the number
+    of virtual Hipersockets connections that can be defined in a z/VM environment,
+    and there is no predefined limit on the number of Guest LANs that can be defined.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# 3.2.2 Systems management functions built-in to z/VM
+
+
+    There are many built-in systems management functions in z/VM. We describe just
+    a few of them.
+
+
+    Customers wanting to exercise command and control over their ‘real’ discrete server
+    farms typically have to purchase additional servers to run Command and Control
+    software products, often times also requiring client code to be installed on each
+    server image being managed. This can become expensive in terms of software licence
+    fees (for the servers and client code) plus additional hardware and networking
+    expenses for the servers, not to mention the added complexity. z/VM includes a
+    lot of Command and Control function built into the product.
+
+
+    Resource utilization controls include the ability to allocate processor capacity
+    on a per-image basis with a high degree of granularity. Adding more resources
+    like memory, disk space, and data-in-memory support can be done quickly and easily,
+    though sometimes requiring a re-boot of the affected Linux images depending on
+    the resource being added.
+
+
+    VM offers tools like REXX, the Programmable Operator (PROP) and Pipelines, to
+    build automation routines that can help minimize the manual intervention required
+    to manage a server farm. For example, you could capture console traffic from Linux
+    servers and programmatically perform system operations based on the console data.
+
+
+    # 3.3 Consolidation and scalability
+
+
+    In this section we explain the advantages that z/VM offers when you need to grow
+    the capacity of your solution (scalability) or make more efficient use of disparate
+    server resources (consolidation).
+
+
+    # 3.3.1 Scalability
+
+
+    The zSeries platform has long been recognized for its ability to scale to support
+    the consolidation of diverse workloads. Processors and disks (such as the Enterprise
+    Storage Server) can be incrementally upgraded to meet growing demands. Once upgraded,
+    the zSeries server can then scale or grow its Linux workload in two ways.
+
+
+    Vertical growth - when more system resources are added to an existing Linux image.
+    For example, a Linux virtual machine could be given more processor capacity, more
+    virtual memory, more I/O devices, or more virtual networking bandwidth.
+
+
+    Horizontal growth - when additional Linux systems (typically z/VM guests) are
+    added. This is illustrated in Figure 3-7.
+
+
+    # 3.3.2 Consolidation
+
+
+    Consolidation of real distributed servers onto a zSeries platform, and in particular
+    as guests under z/VM (as illustrated in Figure 3-6 on page 30), can offer many
+    advantages. Virtual servers on z/VM share total system resources, such as memory
+    and processor capacity, thus optimizing resource utilization. Disk space can be
+    also be shared amongst z/VM guests, and in particular read-only files (like application
+    code and operating systems software) can be placed on one disk and made accessible
+    to all the virtual Linux servers, thus minimizing maintenance workload and software
+    costs. z/VM also provides virtual networking and built-in systems management functions,
+    as described in 3.2, “Background to z/VM” on page 27.
+
+
+    Lightly to moderately loaded servers that do not peak concurrently are good candidates
+    for consolidating on a zSeries server running Linux.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_43_0.png)
+
+
+    Figure 3-6 Server farm in a box
+
+
+    Some key applications are usually deployed in a three-tiered mode; a database
+    tier, an application tier, and a presentation tier. In a hybrid z/OS and Linux
+    for zSeries environment, the database server resides on a z/OS image, while the
+    application server runs on a Linux for zSeries instance. Both reside on the same
+    hardware, enabling the customer to remove a layer of hardware and maintenance
+    effort while still meeting the performance requirements that the solution demands.
+    In addition, with the application and database now hosted on the one system, the
+    real networks between them can be replaced by the networking features of zSeries
+    (such as Hipersockets).
+
+
+    When servers have been consolidated onto a zSeries server, and in particular when
+    running as z/VM guests, the horizontal growth of your server farm can be accomplished
+    with minimal time (typically minutes), and without requiring additional hardware
+    or real estate, by simply adding another Linux virtual machine. This is shown
+    in Figure 3-7. Moreover, you are still able to maintain the distributed environment
+    paradigm of “one server one application.”
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_43_1.png)
+
+
+    Figure 3-7 Horizontal server growth
+
+
+    A number of the features and benefits discussed above are illustrated in “Typical
+    file/print serving scenario with Samba” on page 31, where we outline a scenario
+    in which multiple'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'distributed file/print servers, using the Samba application, are consolidated
+    into multiple Linux guests under z/VM.
+
+
+    # 3.3.3 Some examples and further information
+
+
+    Some customer experiences with running multiple virtual Linux systems under z/VM
+    can be found at:
+
+
+    http://www.ibm.com/servers/eserver/zseries/news/pressreleases/2002
+
+
+    http://www.ibm.com/servers/eserver/zseries/os/linux/stories.html
+
+
+    Some recent IBM white papers detailing experiences with multiple virtual Linux
+    systems under z/VM, and using an IBM TotalStorage Enterprise Storage Server, can
+    be found at the Web sites:
+
+
+    http://www.vm.ibm.com/linux
+
+
+    http://www.ibm.com/servers/eserver/zseries/library/whitepapers
+
+
+    Also see the Redpaper Server Consolidation with Linux for zSeries, REDP0222, and
+    the Web site:
+
+
+    http://www.ibm.com/server/eservers/zseries/os/linux/consolidate.html
+
+
+    An IBM portal for information on z/VM and Linux resources can be found at:
+
+
+    http://www.vm.ibm.com/linux
+
+
+    # 3.4 Linux application solutions
+
+
+    Linux distributions for zSeries contain such notable open source applications
+    as Apache, Samba, IMAP, OpenLDAP, Perl, Sendmail MTA, Squid, and PostgreSQL. Linux
+    applications are sourced from many areas. Open source applications are available
+    for download from the Internet. Applications can also be developed for the zSeries.
+    Compilers are available with the Linux for zSeries distributions.
+
+
+    Solutions providers have announced products for Linux on the zSeries server. These
+    include infrastructure applications, line-of-business applications, and Web-enablement
+    applications. There are more than 200 applications from more than 120 vendors
+    available for Linux on zSeries. For a detailed product list, see:
+
+
+    http://www.ibm.com/servers/eserver/zseries/solutions/s390da/linuxproduct.html
+
+
+    # Typical file/print serving scenario with Samba
+
+
+    We outline a typical consolidation of distributed file/print servers onto a zSeries.
+    Other scenarios are discussed in Linux Handbook, SG24-7000.
+
+
+    This scenario describes providing file/print services using the Samba file print
+    application. Samba is high quality open source code and is integrated in most
+    Linux distributions. File/print serving does not place great demand on the compute
+    resource of the processor. However, it exercises the I/O capabilities of the solution
+    as users upload/download files or route them to printers. Servers spend a significant
+    amount of time waiting for users to request print or file services.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'The distributed solution consists of 150 Intel 2-way 1000 MHz servers, which
+    is depicted in Figure 3-8. Note that the servers are connected to a physical network
+    that requires hardware. Also note that each server is running a separate copy
+    of the operating system and application code - this is duplicated for each of
+    the 150 servers in this case. Each server requires disk space, and if additional
+    disk storage is required for a server the alternatives are to purchase an additional
+    entire disk volume and install it, or purchase a higher capacity disk, move the
+    required software and data to it, and install it.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_45_0.png)
+
+
+    Figure 3-8 Samba file/print scenario - distributed solution
+
+
+    Maintenance must be performed on each server individually. Some type of operator
+    automation is required to monitor the 150 separate systems and respond to replies
+    when necessary. Backup is done by a dedicated backup server, which communicates
+    with client code on each system.
+
+
+    The zSeries solution for this scenario is shown in Figure 3-9. Notice that the
+    inter-server communication takes place within the machine, which allows the Linux
+    instances to communicate at memory speeds, as opposed to physical networking speeds
+    with the usual latency. In addition to improving inter-server communication, much
+    of the cost of external networking hardware and software is avoided.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_46_0.png)
+
+
+    Figure 3-9 Samba file/print scenario - zSeries solution
+
+
+    Disk storage for the operating system and application code is shared by all 150
+    virtual servers, while they must be duplicated in the distributed case. Sharing
+    the code offers the advantages of controlling the cost of disk storage and ease
+    of maintenance. Since only one copy of the code exists, it must only be serviced
+    in a single place, which results in savings in system management software and
+    operation.
+
+
+    z/VM can help you to share the available disk space amongst the servers. In the
+    distributed model, increasing disk space meant that you needed to buy new disks.
+    If there was free disk space on some servers, it could not be moved to the server
+    that needed the increased disk storage. In the zSeries solution, z/VM allows you
+    to partition disks into minidisks that you can easily allocate to a server that
+    requires additional disk space.
+
+
+    As in the distributed case, the 150 servers in operation will issue messages which
+    must be monitored, and responded to in some cases. The PROP function in z/VM is
+    designed for that purpose, avoiding the cost of additional software to perform
+    the task. Backup is performed by Tivoli Storage manager (TSM). A TSM server is
+    installed either on z/VM (as depicted in the figure), or in a Linux virtual instance
+    (available with TSM version 5.2). TSM clients are installed on each of the Linux
+    guests.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# IBM TotalStorage and ESS
+
+
+    This chapter starts with an overview of the major features and benefits of the
+    IBM TotalStorage offering, and its support for Linux solutions.
+
+
+    This chapter continues with a more specific description of the IBM TotalStorage
+    Enterprise Storage Server, otherwise known as the ESS.
+
+
+    The entire product family is discussed in the redbook *The IBM TotalStorage Solutions
+    Handbook*, SG24-5250. Further details of IBM''s TotalStorage products, software,
+    and solutions, including Linux support, can be found at the following Web sites:
+
+
+    http://www.storage.ibm.com
+
+
+    http://www.storage.ibm.com/linux'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# 4.1 IBM TotalStorage
+
+
+    Linux-enabled storage is a requirement for all servers running Linux, regardless
+    of the hardware infrastructure they rely on. We can observe that as Linux moves
+    from supporting infrastructure workloads such as Web serving, networking, file
+    and print operations, into the mission critical applications at the core of the
+    data center, more stringent requirements are placed on the storage infrastructure
+    to deliver superior reliability, scalability and security, and performance. These
+    are not new requirements for IBM''s storage portfolio, which has comprehensive
+    Linux support today with a commitment to make it even stronger with our new products
+    and solutions.
+
+
+    IBM continues to support Linux across all its server platforms and leads the industry
+    in storage networking based on open, industry standards for heterogeneous platforms.
+
+
+    IBM is the leader in delivering world-class disk and tape systems, storage management
+    software, services, and integrated solutions and incorporates the following:
+
+
+    +   - Highly scalable storage - Enables administrators to manage growth and quickly
+    respond to changing business needs, with ease of deployment and configuration
+
+    - High availability and fault-tolerant storage - Provides continuous and reliable
+    access to data using technologies like RAID and clustering
+
+    - Improved data management - Helps administrators better control the security
+    and growth of their data
+
+    - Increased storage utilization - Allocates storage through a centrally managed
+    pool of storage
+
+    - Reduced administrative costs - Manage additional storage without having to add
+    staff and, with IBM storage management tools, the ability to perform quicker problem
+    resolution
+
+    - Platform independence - Enables sharing of data and possibility of simplification
+    of backup procedures
+
+    - Centrally managed - Enables administrators to quickly respond to changing business
+    needs, with ease of deployment and configuration
+
+    - Reduced administrative costs - Manage additional storage without having to add
+    staff, and with IBM storage management tools, the ability to perform quicker problem
+    resolution
+
+
+    # 4.1.1 Value proposition
+
+
+    IBM provides a comprehensive Linux strategy that includes all elements, hardware,
+    software, and management tools to provide complete infrastructure for the major
+    IT workloads.
+
+
+    IBM storage on Linux provides pre-tested combinations of disk (high-end and mid-range),
+    tape and network storage and the major Linux distributions, and a clear strategy
+    of deploying Linux in storage.
+
+
+    IBM storage on Linux also provides alignment with IBM @server and software to
+    offer the most appropriate combinations to serve a wide variety of customer needs,
+    all exploiting the benefits of open source and heterogeneous environments made
+    possible by Linux.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "Table 4-1 IBM Storage for Linux summary\n\n| IBM Storage for Linux | What it\
+    \ does | What it means |\n|---|---|---|\n| Built on open standards, demonstrating\
+    \ IBM's intention to support Linux on all its products. | Allows IBM to bring\
+    \ a full array of products to the Linux environment | Variety of choice in selecting\
+    \ the most appropriate storage for your needs while limiting investment in proprietary\
+    \ infrastructures |\n| Pre-tested, documented and supported Linux storage configurations\
+    \ - disk, tape and networked storage. | Expedites implementation of IT infrastructures\
+    \ with superior reliability and support. | Take the \"guesswork\" out when choosing\
+    \ storage for your IT needs |\n| Wide variety of choices of Linux distribution's\
+    \ and storage attachments. | Protect investment in IT infrastructure | Freedom\
+    \ of choice for your preferred Linux distribution |\n\nIBM TotalStorage's major\
+    \ advantage is its ability to offer complete storage solutions in a Linux environment.\
+    \ IBM's statement of support is also more robust than that of the competition,\
+    \ encompassing our IBM e-Server, software, and storage products. Linux is part\
+    \ of IBM storage's core development, and Linux support for our advanced functions\
+    \ is growing.\n\n# 4.2 IBM TotalStorage Proven™\n\nIBM has introduced the TotalStorage\
+    \ Proven program to help customers identify storage solutions and configurations\
+    \ that have been pre-tested for interoperability. This program is also intended\
+    \ to ease the burden on IBM Business Partners, independent software vendors (ISVs),\
+    \ and other storage solution providers with respect to independent interoperability\
+    \ testing.\n\nThe IBM TotalStorage Proven program builds on IBM's already extensive\
+    \ interoperability efforts to develop and deliver products and solutions that\
+    \ work together with third party products. Under the Storage Proven program, IBM\
+    \ will continue its work with hardware vendors, ISVs, and solution developers\
+    \ to test their products on IBM's extensive line of storage products.\n\nThe continuing\
+    \ benefits would include:\n\n+   - Intended customer value:\n  - Lower risk by\
+    \ investing in proven solutions\n  - Lower Integration costs\n  - Faster solution\
+    \ deployment\n\nMore information about storage proven can be found at:\nhttp://www.ibm.com/totalstorage/proven\n\
+    \nYou can find an updated list of companies that have tested their products with\
+    \ IBM storage in a Linux environment at:\nhttp://www.ibm.com/totalstorage/proven/solutions.htm"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# 4.3 Enterprise Storage Server
+
+
+    This section introduces the Enterprise Storage Server and discusses the benefits
+    it provides. The features discussed here are not specific to Linux, but remain
+    for the most part available in a Linux environment as well.
+
+
+    For more detailed information, please refer to the redbook *IBM TotalStorage Enterprise
+    Storage Server Model 800*, SG24-6424.
+
+
+    # 4.3.1 ESS overview
+
+
+    Figure 4-1 summarizes the ESS architecture and features.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_51_0.png)
+
+
+    Figure 4-1 IBM''s Seascape® architecture - ESS Model 800
+
+
+    The ESS is IBM''s most powerful disk storage server, developed using IBM Seascape
+    architecture. The ESS provides un-matchable functions for all the IBM @server
+    family, and also for the non-IBM (that is, Intel-based and UNIX-based) families
+    of servers. Across all of these environments, the ESS features unique capabilities
+    that allow it to meet the most demanding requirements of performance, capacity,
+    and data availability that the computing business may require.
+
+
+    The Seascape architecture is the key to the development of IBM''s storage products.
+    Seascape allows IBM to integrate the best of breed technologies, both from IBM
+    and from the general industry, producing flexible and upgradeable storage solutions.
+    This Seascape architecture design has allowed the ESS to evolve from the initial
+    E models to the succeeding F models, and to the more recent 800 models, each featuring
+    new, more powerful hardware and functional enhancements. Server is part of the
+    ESS product name because one of the'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'most significant facets of the Seascape architecture strategy is the use of
+    server technology within the storage system. The integration of actual server
+    computers (SMPs) into the ESS helps reduce the need for expensive custom components,
+    and also increases reliability through the use of proven server and operating
+    system technologies.
+
+
+    The diagram in Figure 4-2 depicts an ESS Model 800, and all of its major components.
+    At the top of the frame are the disk drives modules (DDMs), and immediately under
+    them are the processor drawers that hold the cluster symmetrical multiprocessors
+    (SMPs). Just below the processor drawers are the I/O drawers that hold the SSA
+    device adapters that connect the SSA loops. Just below the I/O drawers are the
+    host adapter bays that hold the host adapters. At the bottom of the frame are
+    the AC power supplies and batteries.
+
+
+    Between the two cages of DDMs is an operator panel that includes an emergency
+    power switch, local power switch, power indicator lights, and message/error indicator
+    lights.
+
+
+    For larger configurations, the ESS base enclosure attaches to an Expansion Enclosure
+    rack that is the same size as the base ESS, and stands next to the ESS base frame.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_52_0.png)
+
+
+    Figure 4-2 ESS Model 800 major components
+
+
+    # 4.3.2 ESS features and benefits
+
+
+    The ESS set a new standard for storage servers back in 1999 when it was first
+    available, and since then it has evolved into the third-generation ESS Model 800.
+    The IBM TotalStorage Enterprise Storage Server Model 800 introduces important
+    changes that dramatically improve the overall value of the ESS and provide a strong
+    base for strategic Storage Area Network (SAN) initiatives.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Storage consolidation
+
+
+    The ESS attachment versatility and large capacity enable data from different platforms
+    to be consolidated onto a single high performance, high availability box. Storage
+    consolidation can be the first step towards server consolidation, reducing the
+    number of boxes you have to manage, and allowing you to flexibly add or assign
+    capacity when needed. The IBM TotalStorage Enterprise Storage Server supports
+    all the major operating systems platforms, from the complete set of IBM @server
+    series of e-business servers and IBM NUMA-Q®, to the non-IBM Intel-based servers,
+    and the different variations of UNIX, including Linux, as shown in Figure 4-3.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_53_0.png)
+
+
+    Figure 4-3 IBM TotalStorage Enterprise Storage Server for storage consolidation
+
+
+    With a total capacity of up to 55 TB, and a diversified host attachment capability,
+    SCSI, ESCON®, and Fibre Channel/FICON™ (the ESS Model 800) provide outstanding
+    performance while consolidating the storage demands of the heterogeneous set of
+    server platforms that must be dealt with nowadays.
+
+
+    # Performance
+
+
+    Key features that characterize the performance enhancements of the ESS Model 800
+    are:
+
+
+    +   - The ESS Model 800, with the optional Turbo feature for the SMP processors,
+    is capable of delivering 2.5 times the throughput of its predecessor Model F20.
+
+    - 64 Gb cache supports much larger system configurations and increases hit ratios,
+    driving down response times.
+
+    - Double the internal bandwidth provides high sequential throughput for digital
+    media, business intelligence, data warehousing, and life science application.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "+   - Larger non-volatile storage (NVS) of 2Gb, with twice the bandwidth, allows\
+    \ for greater scalability for write-intensive applications.\n- Third-generation\
+    \ hardware, such as more powerful SSA device adapters, provides response time\
+    \ improvements of up to 40% for important database applications\n- 2 GB Fibre\
+    \ Channel/FICON host adapters provide doubled performance sustained, and instantaneous\
+    \ throughput for both open systems and zSeries\n- RAID 10 can provide up to 75%\
+    \ greater throughput for selected database workloads compared to equal physical\
+    \ capacity configures as RAID 5. While most typical workloads will experience\
+    \ excellent response times with RAID 5, some cache-unfriendly applications and\
+    \ some applications with high random write content can benefit from the performance\
+    \ offered by RAID 10.\n- 15,000 rpm drives provide up to 80% greater throughput,\
+    \ and 40% improved response time as compared to 10,000 rpm drives. This allows\
+    \ driving the workloads to significantly higher access densities, while also experiencing\
+    \ improved response times.\n\nFigure 4-4 summarizes many of the ESS features mentioned\
+    \ above.\n\n# IBM TotalStorage Enterprise Storage Server Model 800\n\n+   - Third-generation\
+    \ intelligent storage server\n- Two active cluster processors with\n  - Faster\
+    \ symmetrical multiprocessors (SMP)\n  - Optional Turbo feature\n- 8, 16, 24,\
+    \ 32 or 64 GB cache options\n- 2 GB non-volatile storage (NVS)\n- 8 x 160 MBps\
+    \ SSA loops\n- 18.2 / 36.4 / 72.8 GB capacity disk options\n  - Disk capacity\
+    \ intermix\n- 10,000 rpm and 15,000 rpm disk options\n  - 10,000 rpm 18.2 / 36.4\
+    \ / 72.8 GB disks\n  - 15,000 rpm 18.2 / 36.4 GB disks\n- Up to 55 TB of physical\
+    \ capacity\n- Up to 16 Fibre Channel/FICON ports\n- Up to 32 ESCON ports\n- Up\
+    \ to 32 SCSI ports\n- Connects to Storage Area Network\n\n![](img/da33d6b6aa12b73deb3c350a0a89d424_54_0.png)\n\
+    \nFigure 4-4 Enterprise Storage Server Model 800\n\n# Efficient cache management\
+    \ and powerful back-end\n\nThe ESS is designed to provide the highest performance,\
+    \ for different types of workloads, even when mixing dissimilar workload demands.\
+    \ For example, zSeries servers and open systems put very different workload demands\
+    \ on the storage subsystem. A server like the zSeries typically has an I/O profile\
+    \ that is very cache-friendly, and takes advantage of the cache efficiency. On\
+    \ the other hand, an open system server does an I/O that can be very cache-unfriendly,\
+    \ because most of the hits are solved in the host server buffers. For the zSeries\
+    \ type of workload, the ESS has the option of a large cache (up to 64 GB) and\
+    \ most importantly it has efficient cache algorithms. For the cache unfriendly\
+    \ workloads, the ESS has a powerful back-end, with the SSA high performance disk\
+    \ adapters providing high I/O parallelism and throughput for the ever-evolving\
+    \ high-performance hard disk drives."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Data protection and Remote Copy functions
+
+
+    Figure 4-5 illustrates the ESS disaster recovery and availability features.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_55_0.png)
+
+
+    Figure 4-5 Disaster recovery and availability
+
+
+    Many design characteristics and advanced functions of the IBM TotalStorage Enterprise
+    Storage Server Model 800 contribute to protect the data in an effective manner.
+
+
+    # Fault-tolerant design and concurrent maintenance
+
+
+    The ESS incorporates a fault tolerant hardware design where major hardware elements
+    such as disk drives, data paths, logic components, power supplies, and cache are
+    redundant. For example, the NVS for cluster 1 is located in cluster 2, and the
+    NVS for cluster 2 is located in cluster 1, so that in the event of a cluster failure
+    the write data for the failed cluster will be preserved in the NVS of the other
+    cluster. Also, the ESS has built-in call home facilities for reactive IBM support
+    centre response and periodic proactive verification of ESS operational status.
+    The architecture of the ESS Model 800 allows nearly all maintenance actions such
+    as repairs, code upgrades, and capacity upgrades to be done concurrently with
+    ESS online operation. Changes to the ESS configuration, such as defining logical
+    disk volumes and assigning then to a host, can be done dynamically by the customer
+    at any time.
+
+
+    # RAID 5 or RAID 10 data protection
+
+
+    With the ESS Model 800 there is now the additional option of configuring the disk
+    arrays in RAID 10 disposition (mirroring plus striping) in addition to the RAID
+    5 arrangement, which gives more flexibility when selecting the redundancy technique
+    for protecting the users data. RAID 5 consists of six or seven disks for user
+    data, plus a parity disk. RAID 10 consists of a set of disks for user data plus
+    their mirrored disk counterparts.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Remote copy
+
+
+    The ESS Model 800 supports two types of Remote Copy, Peer-to-Peer Remote Copy
+    (PPRC), and Extended Remote Copy (XRC). PPRC is a hardware-based solution for
+    mirroring logical volumes from a primary site (the application site) onto the
+    volumes of a secondary site (the recovery site), using either a synchronous or
+    non-synchronous process. PPRC is a Remote Copy solution for open systems servers
+    (such as xSeries) as well as for zSeries servers. PPRC V2 was recently announced,
+    and it provides for cascading functions. PPRC is discussed more fully in 6.2,
+    “Peer-to-Peer Remote Copy (PPRC)” on page 63.
+
+
+    Note: XRC is only available for the z/OS and OS/390® environments, and not for
+    Linux on zSeries or open systems.
+
+
+    # Point-in-time Copy function
+
+
+    Users still need to take backups to protect data from logical errors and disasters.
+    For all environments, taking backups of user data traditionally takes a considerable
+    amount of time. Usually, backups are taken outside of prime shift because of their
+    duration and the consequent impact to normal operations. Databases must be closed
+    to create consistency and data integrity, and online systems are normally shut
+    down.
+
+
+    With the ESS Model 800, the backup time has been reduced to a minimal amount of
+    time when using the FlashCopy® function. FlashCopy creates an instant point-in-time
+    copy of data, and makes it possible to access both the source and target volumes
+    immediately, thus allowing the applications to resume with minimal disruption.
+    FlashCopy V2 was recently announced, which provides for multiple relationship
+    and incremental FlashCopy functions. FlashCopy is discussed more fully in 6.4,
+    “FlashCopy” on page 68.
+
+
+    Note: The IBM TotalStorage Enterprise Server Model 800 also provides a point-in-time
+    copy function called Concurrent Copy, but this function is only available for
+    the z/OS and OS/390 operating systems and not for Linux.
+
+
+    # Standby capacity on demand
+
+
+    To make the ESS Model 800 more scalable, and more able to accommodate dynamic
+    and unpredictable workload requirements, the Standby Capacity on Demand feature
+    has been announced. When your storage requirements increase, you can activate
+    the additional capacity without any intervention from IBM, and without any interruptions
+    to your work. When the standby capacity is activated, the ESS automatically reports
+    the increase in capacity usage. Capacity on demand helps control costs while avoiding
+    delays in acquiring storage that can result when the timing of capacity growth
+    cannot be accurately forecasted.
+
+
+    # Storage Area Network (SAN)
+
+
+    The SAN strategy is to connect any server to any storage as shown in Figure 4-6
+    on page 44. As SANs migrate to 2 Gb technology, storage subsystems must exploit
+    this more powerful bandwidth. Keeping pace with the evolution of SAN technology,
+    the Enterprise Storage Server Model 800 is introducing new 2 Gb Fibre Channel/FICON
+    host adapters for native server connectivity and SAN integration. These new 2
+    Gb Fibre Channel/FICON host adapters, which double the bandwidth and instantaneous
+    data rate of the previous adapters available with the F Model, have one port with
+    an LC connector for full-duplex data transfer over long-wave or short-wave fiber
+    links. These adapters support the SCSI-FCP (Fibre Channel Protocol) and the FICON
+    upper-level protocols. Each Fibre Channel port can be shared by multiple heterogeneous
+    hosts and HBAs, potentially reducing the number of ports needed. LUN masking is
+    included to support SAN security.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_57_0.png)
+
+
+    Figure 4-6 Storage area network (SAN)
+
+
+    The extensive connectivity capabilities make the ESS the unquestionable choice
+    when planning the SAN solution. For the complete list of the ESS fabric support,
+    please refer to:
+
+
+    http://www.storage.ibm.com/disk/ess/supserver.htm
+
+
+    For a description of the IBM TotalStorage SAN products, please refer to:
+
+
+    http://www.storage.ibm.com/ibmsan/products/sanfabric.html
+
+
+    # 4.3.3 ESS Specialist
+
+
+    The TotalStorage Enterprise Storage Server includes the ESS Specialist, which
+    is a Web-based interface located internally within the ESS that allows the storage
+    administrator to monitor and manage storage from the ESS Master Console or from
+    a remote workstation using a Web browser. The ESS Specialist interface is a set
+    of Java applets, which are programs that are dynamically loaded by the browser,
+    and which execute within your browser. When you request a change to the ESS configuration,
+    the Java applets communicate with the microcode running on the ESS clusters to
+    retrieve the current configuration data, submit the requested configuration change,
+    and display the outcome of the request. For further details please refer to IBM
+    TotalStorage Enterprise Storage Server Web Interface User''s Guide SC26-7448.
+
+
+    When you open a Web browser and log on to your ESS Specialist you get a welcome
+    screen, as shown in Figure 4-7.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_58_0.png)
+
+
+    Figure 4-7 ESS welcome screen
+
+
+    Note the two buttons on the left hand side:
+
+
+    +   - The **ESS Specialist** button displays the ESS Specialist main screen, from
+    where you can set up and view the storage segmentation in your ESS (we will use
+    this function in Chapter 5., “FCP for zSeries with Linux” on page 47).
+
+    - The **Copy Services** button leads to the ESS Copy Services main screen, from
+    where you can invoke and manage the various Copy Services functions available
+    on the ESS (we will be using this in Chapter 6., “ESS Copy Services and Linux”
+    on page 61).'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# FCP for zSeries with Linux
+
+
+    This chapter gives details about the Fibre Channel Protocol (FCP) support for
+    attaching the ESS to a zSeries server running Linux.
+
+
+    Note that it remains possible to connect the Enterprise Storage Server to Linux
+    on zSeries using traditional ESCON and FICON channels. This was in fact the only
+    supported method when Linux for zSeries became available in early 2000. The Enterprise
+    Storage Server can be configured as CKD disk, and generally speaking all current
+    models of the Enterprise Storage Server are interoperable with all current models
+    of the zSeries and all current levels of z/VM and Linux for zSeries, using ESCON
+    or FICON channels. For specific details, refer to the ESS Interoperability Matrix
+    and Host Systems Attachment Guide, SC267446, located at:
+
+
+    http://www.storage.ibm.com/disk/ess/supserver.htm'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# 5.1 zSeries and FCP
+
+
+    In February 2003, the support of Fibre Channel attached devices was added to zSeries.
+    (This support is only for Linux on zSeries, and not for z/OS or z/VM.) Using this
+    new zSeries Fibre Channel Protocol (FCP), Linux for zSeries can access standard
+    SCSI storage devices, and distributed storage in a SAN. This enables customers
+    to preserve their existing investment in FCP/SCSI storage devices while consolidating
+    distributed servers onto zSeries. A complete list of devices supported for attachment
+    to zSeries systems using FCP can be found at:
+
+
+    http://www-1.ibm.com/servers/eserver/zseries/connectivity/#fcp
+
+
+    http://www-1.ibm.com/servers/eserver/zseries/connectivity/fcp.html
+
+
+    The Enterprise Storage Server has been successfully connected to Linux for zSeries
+    using FCP, and this is discussed in 5.2, “Connecting ESS to Linux on zSeries using
+    FCP” on page 52. In this section we give a brief overview of the traditional zSeries
+    I/O architecture versus the zSeries Fibre Channel. This overview is based on the
+    redbook Implementing Linux with IBM Disk Storage, SG24-6261-01. Additional details
+    can be found in the before mentioned redbook, and also in the redpiece Getting
+    Started with zSeries Fibre Channel Protocol, REDP0205, and redbook IBM eServer
+    zSeries Connectivity Handbook, SG24-5444.
+
+
+    # 5.1.1 zSeries specific storage attachments
+
+
+    The I/O component of z/Architecture™ is based on channels, control units, and
+    devices. Channels provide a well-defined interface between a server and the attached
+    control units. Originally implemented on parallel copper media, today''s channels
+    such as ESCON and FICON use optical serial cables. Also, the parallel channel
+    was a multi-drop interface, while both ESCON and FICON are switched point-to-point
+    connections, as depicted in Figure 5-1.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_61_0.png)
+
+
+    Figure 5-1 Typical zSeries storage attachment concept
+
+
+    ESCON channels use a unique physical interface and transmission protocol. FICON,
+    on the other hand, is based on industry standard Fibre Channel lower-level protocols.
+    In both cases, the higher-level I/O protocol used by software is based on channel
+    programs consisting of channel command words (CCWs), and is unique to mainframes
+    adhering to z/Architecture or its predecessors (such as the ESA/390 architecture).
+    For access to disk storage, a specific set of CCWs is used, defined by the CKD
+    protocol. This protocol describes not only the commands and responses exchanged
+    across the channel, but also the format of the data as it is recorded on the disk
+    storage medium. For tape, similar CCW-based command protocols'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'exist, but there are no associated access protocols for media such as DVDs
+    or scanners, because the necessary software drivers and control units have never
+    been provided.
+
+
+    # zSeries and storage device addressing
+
+
+    With z/Architecture, software addresses a storage device using a device number,
+    which uniquely identifies the device. The device number is set by the IOCDS, and
+    is an arbitrary 16-bit number expressed as four hexadecimal digits. It is informally
+    know as an address. A device number is mapped to one or more physical paths to
+    the device by the IOCDS. This physical path is typically described by a quadruple
+    of hardware addresses consisting of:
+
+
+    +   - Channel path identifier (CHPID): Identifies the channel that provides a
+    path to the device
+
+    - Physical link address: Identifies a route through a switch or director
+
+    - Control unit address: Specifies the control unit
+
+    - Unit address: Identifies the device
+
+
+    Please refer to the left side of Figure 5-4 on page 51.
+
+
+    There is typically more than one physical path to a device, to allow for redundancy
+    for example. While these paths are specified using different address quadruples,
+    software still uses a single device number to address the device, independent
+    of the path that is chosen for any particular I/O.
+
+
+    # 5.1.2 Distributed storage attachments
+
+
+    Traditionally, storage controllers in the distributed world have been attached
+    through parallel SCSI cabling, which allows for only very limited distances between
+    the server and the controller. The SCSI standard uses a control-block-based command
+    and status protocol. Today, there is a clear distinction between the physical
+    level and the command/status level of the SCSI protocol.
+
+
+    # FCP advantages
+
+
+    Based on the higher-level SCSI command/status protocol, a new standard has been
+    defined called FCP, which stands for Fibre Channel Protocol for SCSI. FCP employs
+    the SCSI command/status protocol on top of an underlying Fibre Channel transmission
+    protocol. Due to the superiority of the optical Fibre Channel connection regarding
+    speed, distance, and reliability, storage attachments through FCP have the highest
+    growth rate in today''s distributed world.
+
+
+    # FCP storage addressing
+
+
+    Traditional SCSI devices have a simple addressing scheme. Originally, the device
+    address, known as the target address, was simply a number in the range 0-7 (extended
+    to 0-15 in newer SCSI architecture), with address 7 usually reserved for the host
+    adapter. As shown in Figure 5-2, SCSI also supports the definition of Logical
+    Unit Numbers (LUNs), where each LUN represents a partition of the target (or controller),
+    such as a disk drive.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_63_0.png)
+
+
+    Figure 5-2 SCSI addressing
+
+
+    For FCP, a new addressing scheme, based on World Wide Names (WWN) was developed.
+    Each node and each port on a node (such as an FCP port) is assigned a WWN, respectively
+    known as World Wide Node Name (WWNN) and World Wide Port Name (WWPN). In addition,
+    addressable units within a node (such as a disk drive) are assigned a LUN name.
+    This is illustrated in Figure 5-3.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_63_1.png)
+
+
+    Figure 5-3 World Wide Names
+
+
+    # 5.1.3 zSeries-specific versus distributed storage controllers
+
+
+    Two types of storage controllers with Fibre Channel interfaces are currently available
+    for zSeries:
+
+
+    +   - Those supporting the z/Architecture specific FICON interface based on CCW
+    architecture, with the CKD command set for disk storage and similar sets of commands
+    for tapes.
+
+    - Those supporting the SCSI-based FCP protocol, with SCSI command sets specific
+    to the device type, such as disk or tape.
+
+
+    Both types of controllers are normally based on the same hardware building blocks.
+    Their individual characteristics are achieved by different firmware handling the
+    host interface. For example, the Fibre Channel/FCP host adapter on the ESS can
+    be configured for either FICON or FCP protocols. The way the DASD addressing or
+    device mapping is handled is illustrated in Figure 5-4, which summarizes the previous
+    discussion.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_64_0.png)
+
+
+    Figure 5-4 DASD addressing scheme
+
+
+    # zSeries and storage: Summary
+
+
+    To summarize, classical zSeries operating systems such as z/OS and z/VM were designed
+    for use only with storage controllers that supported protocols defined by z/Architecture.
+    This changed with the advent of Linux for zSeries, since its storage I/O component
+    is oriented toward SCSI protocols. Lacking the capability to access SCSI-based
+    storage devices on a zSeries server system, it was necessary to add specific support
+    to Linux for zSeries to enable it to function in a CCW-based zSeries I/O environment.
+
+
+    However, this additional layer in Linux for zSeries is unique to zSeries, and
+    does not allow it to exploit storage subsystems and applications that are dependent
+    on a SCSI attachment. For this reason, an FCP attachment capability has been added
+    to the zSeries systems, allowing the attachment of SCSI-based storage controllers,
+    and enabling Linux for zSeries to access these controllers in the Linux-standard
+    manner. Figure 5-5 shows the differences in format translation between the two
+    access methods. The overhead for accessing block-oriented devices from a block-oriented
+    device layer through a conversion of the requests to CKD format has been removed.'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# DASD access translations
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_65_0.png)
+
+
+    Figure 5-5 DASD access translations FICON vs. FCP
+
+
+    # Supported devices
+
+
+    A complete list of devices supported for attachment to the zSeries systems using
+    FCP can be found at:
+
+
+    http://www-1.ibm.com/servers/eserver/zseries/connectivity/#fcp
+
+
+    http://www-1.ibm.com/servers/eserver/zseries/connectivity/fcp.html
+
+
+    Current information on FCP channel support for Linux on zSeries, and appropriate
+    support for z/VM, can be found by selecting June 2003 stream at:
+
+
+    http://www10.software.ibm.com/developerworks/opensource/linux390/index.shtml
+
+
+    # 5.2 Connecting ESS to Linux on zSeries using FCP
+
+
+    The ESS Model 800 has been successfully connected through FCP to Linux on zSeries,
+    and the results are described in the redbook Implementing Linux with IBM disk
+    Storage, SG24-6261. A customer''s experiences connecting an ESS Model F20 to Linux
+    on zSeries through FCP, during an Early Support Program, can be found at:
+
+
+    http://www-1.ibm.com/servers/eserver/zseries/connectivity/ficon_resources.html
+
+
+    Some channel performance measurements for an ESS Model F20 attached to Linux on
+    zSeries through FCP are located at:
+
+
+    http://oss.software.ibm.com/linux390/perf_hints_tips.shtml
+
+
+    For full details of supported configurations of the Enterprise Storage Server
+    and Linux on zSeries and FCP channels, please refer to the ESS Interoperability
+    Matrix and the ESS Host Systems Attachment Guide, SC26-7446, located at:
+
+
+    http://www.storage.ibm.com/disk/ess/supserver.htm
+
+
+    Note that Fibre Channel attachment of the Enterprise Storage Server to open systems
+    hosts has been available for a few years, even though it only recently became
+    available for zSeries hosts. For details, see the redbooks Implementing Fibre
+    Channel Attachment on the ESS, SG24-6113, and IBM TotalStorage Enterprise Storage
+    Server Model 800, SG24-6424, and the whitepaper Enterprise Storage Server Fibre
+    Channel Attachment located at:'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 5.2.1 Hardware and software requirements
+
+
+    The hardware and software features required for zSeries FCP function for Linux
+    are described in the Redpaper *Getting Started with zSeries Fibre Channel Protocol*,
+    REDP0205. We provide an overview here.
+
+
+    zSeries FCP channels require a FICON card (feature 2315 or 2318), or a FICON Express
+    card (feature 2319 or 2320). The type of firmware to be loaded into the FICON/FICON
+    Express card, turning it into either an FCP channel or a FICON channel, is controlled
+    by the definition of the channel type for that particular channel in the IOCP
+    (the CHPID statement). Thus, by defining FCP type channels in the IOCP, the total
+    number of FICON type channels that can be configured is reduced accordingly.
+
+
+    The Linux for zSeries distribution required for FCP support is SLES8. FCP and
+    SCSI controllers and devices can be accessed by Linux for zSeries with the appropriate
+    I/O driver. Linux may run either natively in a logical partition, or as a guest
+    operating system under z/VM.
+
+
+    > Note: The z/VM Version 4, Release 3 is required to support FCP for Linux guests.
+    However, z/VM itself does not support FCP devices, it supports FCP to the extent
+    of passing it through to guest systems.
+
+
+    Linux on zSeries cannot boot (or Initial Program Load (IPL)) from FCP attached
+    disk. Hence, a certain amount of CKD disk is required for Linux on zSeries to
+    hold the operating system.
+
+
+    # 5.2.2 An implementation overview
+
+
+    As mentioned earlier, the redbook *Implementing Linux with IBM Disk Storage*,
+    SG24-6261-01, describes an implementation of SuSE Linux (SLES8) on zSeries (both
+    as a z/VM guest and also running natively in an LPAR), and the FCP attachment
+    of an ESS Model 800 to these systems. We will briefly overview the ESS Specialist
+    activities involved in that implementation; for further details, such as the specific
+    hardware/software used, the steps to perform the installation of SuSE, the Linux
+    host setup tasks, and so on, refer to the redbook. The ESS Specialist activities
+    in this implementation involved defining a Linux on zSeries host, configuring
+    ESS host adapters, configuring RAID arrays, and allocating storage, all using
+    the ESS Specialist.
+
+
+    # ESS Specialist
+
+
+    We have introduced the ESS Specialist in 4.3.3, “ESS Specialist” on page 44. Using
+    your Web browser you first display the welcome screen shown in Figure 4-7 on page
+    45 and then click the **ESS Specialist** button to display the ESS Specialist
+    main screen. From there clicking the **Storage Allocation** button enables you
+    to set up and view the storage segmentation in your ESS, as shown in Figure 5-6.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_67_0.png)
+
+
+    Figure 5-6 Storage Allocation panel
+
+
+    Since we are attaching Fibre Channel disk (fixed-block FB format) to Linux on
+    zSeries, we chose the Open Systems Storage button this time, and the panel shown
+    in Figure 5-7 now appears.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_67_1.png)
+
+
+    Figure 5-7 Open Systems Storage panel
+
+
+    We then perform the configuration actions described below by clicking the respective
+    buttons at the bottom of the Open Systems Storage panel.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Define the Linux on zSeries host to the ESS
+
+
+    Unlike hosts accessing CKD disks in an ESS, hosts which access FB formatted disks
+    must be defined to the ESS. In order to define our Linux on zSeries host, we clicked
+    the Modify Host Systems button of the Open System Storage panel showing the panel
+    shown in Figure 5-8. The fields which have to be completed here are:
+
+
+    +   - Nickname - Unique identifier up to 29 characters long
+
+    - Host type - We chose Linux (zSeries) for any Linux on zSeries instance (either
+    LPAR or running under z/VM)
+
+    - Host Attachment - Since we are configuring storage in FB format, the only option
+    that will be available for Linux hosts is Fibre Channel attached, which is what
+    we chose.
+
+    - Hostname/IP Address
+
+    - World-Wide Port-Name - The WWPN of the FCP port on your zSeries
+
+    - Fibre-channel ports - Select the FC port(s) on the ESS which the Linux on zSeries
+    host should use to access the ESS.
+
+
+    After you have filled in the complete information click Add, and then Perform
+    Configuration Update. You will be returned to the Open Systems Storage panel.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_68_0.png)
+
+
+    Figure 5-8 Modify Host Systems panel - add the Linux on zSeries host
+
+
+    # Configure the ESS host adapters
+
+
+    The Fibre Channel adapters on an ESS have a single port. Each FC port (or adapter)
+    that the Linux on zSeries host will use to access the ESS needs to be configured.
+    To do this select the Configure Host Adapter Ports button on the Open System Storage
+    panel, and then click the icon for the Fibre Channel adapter to be configured.
+    Figure 5-9 shows an example of the fields that are enabled once this has been
+    done. Check that the value for Fibre Channel Topology is Point to Point (Switched
+    Fabric), as this is the only environment supported for a Linux on zSeries environment.
+    Repeat this for each of the Fibre Channel adapters that the Linux host will use
+    to access the ESS, and then click Perform Configuration Update. You will be returned
+    to the Open Systems Storage panel.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_69_0.png)
+
+
+    Figure 5-9 Configure Host Adapter ports panel
+
+
+    # Configure RAID arrays
+
+
+    Before any logical volumes can be defined and assigned to our Linux host, some
+    of the available disk space on the ESS has to be formatted with track format of
+    fixed-block, and a storage type of either RAID5 or RAID10 selected.
+
+
+    Selecting button Configure Disk Groups on the Open System Storage panel takes
+    us to the Fixed Block Storage panel, shown in Figure 5-10.
+
+
+    From the Available Storage table, select a disk group and select a Storage Type
+    of either RAID-5 or RAID-10. You will see entries appear in the Modification column
+    in the table. Repeat this step as required, and then click Perform Configuration
+    Update to apply the changes.
+
+
+    You will be returned to the Open Systems Storage panel.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_70_0.png)
+
+
+    Figure 5-10 Fixed Block Storage panel
+
+
+    # Allocate storage for Linux
+
+
+    In order to create fixed-block formatted volumes (LUNs) for use by the Linux on
+    zSeries host, we clicked Add Volumes on the Open Systems Storage panel.
+
+
+    This leads to the panel shown in Figure 5-11.
+
+
+    From this panel we selected the Linux host and the FC port to use, which highlights
+    the connection between them. Then click Next. A second screen appears (Figure
+    5-12) where you can choose from the available arrays and add volumes of different
+    sizes.
+
+
+    To add a volume, select the array and the desired size of the volume and the number
+    of such volumes, and then click Add. Click Perform Configuration Update and the
+    volume will be created.
+
+
+    Note that a message window will inform you that the actual format of the volumes
+    is being performed in the background (this formatting may take some time). You
+    have to wait until the formatting is complete before accessing the new volumes.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_71_0.png)
+
+
+    Figure 5-11  Add volumes (panel 1 of 2)
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_71_1.png)
+
+
+    Figure 5-12  Add volumes (panel 2 of 2)
+
+
+    Note that although LUNs must initially be defined to a particular host and port,
+    a volume can subsequently be added to additional ports. This is one of the actions
+    you can perform by clicking the Modify Volume Assignments button on the Open Systems
+    Storage panel. The volume is then accessible by any host configured to any port
+    to which the volume has been added. When a volume is defined to a host through
+    a Fibre Channel port, it becomes visible on all the ESS Fibre Channel ports, which
+    were defined for that host.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'Further details on many of the panels and processes presented in this chapter
+    can be found in *IBM TotalStorage Enterprise Storage Server: Implementing the
+    ESS in your Environment*, SG24-5420.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# ESS Copy Services and Linux
+
+
+    In this chapter we provide an overview of the Copy Services functions available
+    with the IBM TotalStorage Enterprise Storage Server, with particular reference
+    to Linux on zSeries. For full details of these functions the reader should refer
+    to the redbooks *Implementing ESS Copy Services with IBM eServer zSeries*, SG24-5680,
+    and *Implementing Copy Services in an Open Environment*, SG24-5757.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# 6.1 Introduction\n\nThe Enterprise Storage Server Copy Services are enterprise-level\
+    \ functions that give you leading edge solutions to meet your needs for disaster\
+    \ recovery, data migration, and data duplication. The set of products which make\
+    \ up the ESS Copy Services suite are:\n\n+   - Peer-to-Peer Remote Copy (synchronous\
+    \ PPRC)\n- Peer-to-Peer Remote Copy Extended Distance (non-synchronous PPRC-XD)\n\
+    - FlashCopy\n- Extended Remote Copy (XRC)\n- Concurrent Copy (CC)\n\n> **Note:**\
+    \ Two of the ESS Copy Services, Extended Remote Copy and Concurrent Copy, are\
+    \ only available for the z/OS and OS/390 operating systems, and are *not* available\
+    \ for Linux on zSeries. We provide very little detail of these copy functions\
+    \ in this book.\n\nFlashCopy and Peer-to-Peer Remote Copy (both synchronous PPRC\
+    \ and non-synchronous PPRC-XD) are hardware based functions of the Enterprise\
+    \ Storage Server, and can be used with open servers (UNIX and Intel based) as\
+    \ well as with zSeries and iSeries servers. Figure 6-1 illustrates these ESS Copy\
+    \ Services.\n\n![](img/da33d6b6aa12b73deb3c350a0a89d424_75_0.png)\n\n*Figure 6-1\
+    \ ESS Copy Services for zSeries*\n\nWith the ESS, we have copy functions for copying\
+    \ data either *locally*, that is within the same on-site ESS, or *remotely*, which\
+    \ is copying data to a separate remote-site ESS.\n\n+   - The ESS copy functions\
+    \ that fall within the *Remote Copy* category are:\n  - Extended Remote Copy (XRC)\n\
+    \  - Peer-to-Peer Remote Copy (PPRC)\n  - Peer-to-Peer Remote Copy Extended Distance\
+    \ (PPRC-XD)"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "+   ► The ESS copy functions that fall within the *local copy* category are:\n\
+    \  – FlashCopy\n  – Concurrent Copy\n\nThe ESS Copy Services copy functions can\
+    \ also be classified as either *dynamic* or *point-in-time*. Dynamic copy functions\
+    \ constantly update the secondary copy as applications make changes to the primary\
+    \ data source. Point-in-time copy functions provide an instantaneous copy or view\
+    \ of what the original data looked like at a specific point-in-time. For example,\
+    \ the Remote Copy functions listed above are all *dynamic*, while the local copy\
+    \ functions mentioned above are both *point-in-time*.\n\n# 6.2 Peer-to-Peer Remote\
+    \ Copy (PPRC)\n\nPeer-to-Peer Remote Copy (PPRC) is a synchronous remote data\
+    \ mirroring technology used primarily as part of a business continuance solution\
+    \ for protection against disk subsystem loss, or complete site failure. It is\
+    \ also used for remote migration of data and application workloads, and for off-site\
+    \ backups. It is a real-time copy technique that synchronously mirrors a *primary*\
+    \ set of volumes (that are being used by applications) onto a *secondary* set\
+    \ of volumes (see Figure 6-2). Typically, the secondary volumes will be on a different\
+    \ ESS located at a remote location some distance away from the application site.\
+    \ Mirroring is done at a logical volume level.\n\n![](img/da33d6b6aa12b73deb3c350a0a89d424_76_0.png)\n\
+    \nFigure 6-2 Synchronous volume copy PPRC\n\nPPRC is a hardware solution, thus\
+    \ it is application independent and the relevant hardware feature needs to be\
+    \ available on both the local and the remote ESS. Because the copy function occurs\
+    \ at the storage subsystem level, the application does no need to know of its\
+    \ existence. PPRC guarantees that the secondary copy is up-to-date by ensuring\
+    \ that the primary volume update will be successfully completed only when the\
+    \ primary ESS receives acknowledgement that the secondary copy has been successfully\
+    \ updated.\n\nThe sequence when updating records is as follows (refer to Figure\
+    \ 6-2):"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '+   1. Write to primary volume (to primary ESS cache and non-volatile storage
+    (NVS)). The application writes data to a primary volume on an ESS at the application
+    site, and cache hit occurs.
+
+    2. Write to secondary (to secondary ESS cache and NVS). The application site ESS
+    then initiates an I/O channel program to the recovery site ESS, to transfer the
+    updated data to the recovery site cache and NVS
+
+    3. Signal write complete on the secondary. The recovery site ESS signals write
+    complete to the application site ESS when the updated data is in its cache and
+    NVS.
+
+    4. Post I/O complete. When the application site ESS (primary ESS) receives the
+    write complete from the recovery site ESS, it returns I/O complete status to the
+    application system.
+
+
+    Destage from cache to the back-end disk drives on both the application ESS and
+    the recovery site ESS is performed asynchronously. The synchronous technique of
+    PPRC ensures that application-dependent writes will be applied in the same sequence
+    upon the secondary volumes, thus providing application consistency at every moment.
+    PPRC has tailorable parameters (CRIT and consistency groups) which identify what
+    should be done if there are errors or delays in updating the secondary copy.
+
+
+    From a PPRC perspective, the volumes within an ESS can be in one of the following
+    states (refer Figure 6-3):
+
+
+    +   - Simplex: The initial state of a volume. A PPRC volume pair relationship
+    has not been established yet between the primary and the secondary volumes.
+
+    - Pending: The initial state of a defined PPRC volume pair relationship, when
+    the initial copy of the primary volume to the secondary volume is happening. This
+    state also is found when a PPRC volume pair is re-synchronized after it was suspended.
+    During the pending period, the volume pair is not in synchronization, and PPRC
+    is copying tracks from the primary to the secondary volume.
+
+    - Duplex: The state of a PPRC volume pair after PPRC has fully completed the copy
+    operation of the primary volume onto the secondary volume. At this moment the
+    volume pair is in synchronization and all write updates to the primary volume
+    are synchronously applied onto the secondary volume.
+
+    - Suspended: In this state of the PPRC pair, the writes to the primary volume
+    are not mirrored onto the secondary volume. The secondary volume becomes out of
+    synchronization. During this time PPRC keeps a bit map record of the changed tracks
+    in the primary volume. Later, the volume pair can be re-synchronized, and then
+    only the tracks that were updated will be copied. A PPRC volume pair will automatically
+    go into suspended state, for instance, when the primary ESS cannot complete a
+    write operation to the recovery ESS.
+
+    - Duplex pending-XD: This state is found when a volume pair is established in
+    a non-synchronous PPRC-XD relationship. This PPRC volume state is explained in
+    6.3, “PPRC Extended Distance (PPRC-XD)” on page 65.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_78_0.png)
+
+
+    Figure 6-3  PPRC volume states - synchronous mode of operation
+
+
+    # Copying PPRC secondary volumes
+
+
+    A PPRC secondary volume can be a FlashCopy primary volume. This allows you, for
+    example, to produce a consistent point-in-time tertiary copy of the mirror volume
+    while it is suspended. With PPRC V2 you can perform Asynchronous Cascading PPRC,
+    whereby a (synchronous) PPRC secondary volume can simultaneously serve as the
+    PPRC primary volume for a PPRC-XD relationship to a remote site. This provides
+    the capability for a three-site PPRC configuration.
+
+
+    # 6.3 PPRC Extended Distance (PPRC-XD)
+
+
+    Peer-to-Peer Remote Copy Extended Distance (PPRC-XD) is a non-synchronous long-distance
+    copy option for both open systems and zSeries servers. PPRC-XD can operate at
+    distances well beyond the 103 km maximum supported distance for synchronous PPRC.
+    It is an excellent solution for:
+
+
+    +   - Data copy
+
+    - Data migration
+
+    - Off-site backup
+
+    - Transmission of data base logs
+
+    - Application recovery solutions based on periodic point-in-time copies of data
+
+
+    In PPRC-XD, the primary volumes updates are mirrored to the secondary volumes
+    in a non-synchronous operation while the application is running. Due to the non-synchronous
+    transmission of the updates, the write operations at the primary site (and thus
+    the application''s response time) are not affected by any transmission delay.
+    When PPRC-XD'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 'starts, a bitmap is built for each primary volume to keep a record of updated
+    primary volume tracks. The first phase of the copy is a sequential copy of the
+    primary volume tracks, which are sent in batches to the secondary volume. When
+    all tracks have been copied, the initial copy is done, then PPRC-XD starts to
+    periodically cycle through the bitmap for any updated tracks to send then in batches
+    of updates to the secondary volumes. This is a throughput oriented very efficient
+    way of non-synchronous mirroring.
+
+
+    Figure 6-4 shows a simplified sequence of a PPRC-XD operation, illustrating its
+    non-synchronous characteristics. The following is the sequence of the operation:
+
+
+    +   1. Host writes data to primary volume (to primary ESS cache and NVS). Channel
+    End is returned to the host.
+
+    2. Primary volume bitmap is updated to reflect the update for later transmission
+    to the secondary ESS. The ESS returns a Device End to the host, so the I/O operation
+    is complete for the application
+
+    3. The primary ESS mirrors the updates onto the secondary ESS volumes. The updates
+    are grouped in batches for efficient transmission.
+
+    4. The secondary ESS returns write completed to the primary ESS when the update
+    is secured in the secondary ESS cache and NVS. The primary volume bitmap is updated
+    to show that the primary update has been secured in secondary ESS cache and NVS.
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_79_0.png)
+
+
+    Figure 6-4 PPRC-XD operation
+
+
+    With PPRC-XD there is an addition to the PPRC traditional volume states (refer
+    Figure 6-3). The additional state is the duplex-pending XD state (refer Figure
+    6-5). While in this duplex-pending XD-state, PPRC is doing non synchronous mirroring
+    of primary volume updates to the secondary site. PPRC-XD will periodically cycle
+    through the bitmap of each volume for updated tracks and place them in a batch
+    for copying to the secondary. The pair will stay in this status until a command
+    is issued to go into synchronous mode (duplex state),'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'or a command is issued to suspend the pair (suspended state), or a command
+    is issued to delete the PPRC-XD pair (simplex state).
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_80_0.png)
+
+
+    Figure 6-5 Duplex-pending XD volume state
+
+
+    # Catch-up operation (go-to-synch)
+
+
+    PPRC-XD catch-up is the name of the transition that occurs to a PPRC-XD pair when
+    it goes from its normal out-of-sync condition until it reaches a full synchronous
+    condition. At the end of this transition, primary and secondary volumes become
+    fully synchronized. The catch-up transition can be accomplished by commanding
+    PPRC to go-to-SYNC, so the volume pair leaves the duplex-pending XD state and
+    reaches the duplex state. From this moment on, if the pairs were not immediately
+    suspended, primary write updates are synchronously transmitted to the recovery
+    site. Catch-up transition can also be accomplished by temporarily quiescing the
+    application writes to the primary volumes, and waiting for PPRC-XD to finish synchronization.
+
+
+    When doing the catch-up operation by commanding PPRC to go-to-SYNC, you will not
+    want any synchronous copy operations to occur if the volumes being mirrored are
+    separated by long distances, beyond the 103 km. For this there is a copy option
+    that allows you to ask PPRC to suspend the pair as soon as synchronization is
+    established. Figure 6-6 shows the basics of PPRC-XD.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_81_0.png)
+
+
+    Figure 6-6 PPRC-XD Basic operation
+
+
+    # Data consistency
+
+
+    While volume pairs are in the duplex-pending XD state, application writes to the
+    primary volumes are copied to the secondary volumes non synchronously. This means
+    that the secondary volumes are keeping a fuzzy copy of the data. Application-dependent
+    writes are not assured to be applied in the same sequence on the secondary volumes
+    as they were written on the primary volumes. Moreover, at any time there will
+    be a certain amount of application-updated data that is not reflected at the secondary
+    volumes; this data corresponds to the tracks that were updated since the last
+    volume bitmap scan was done. The catch-up transition will bring the pairs back
+    to synchronous, either by setting them to duplex or by stopping write updates
+    to the primary. When reaching duplex state, the pairs can be temporarily suspended
+    to flash the secondary before resuming the PPRC-XD relation between the pairs.
+    The FlashCopy will be a tertiary consistent point-in-time copy. Or, if it is a
+    database application and the archive logs are being mirrored, then once the pairs
+    catch up and are suspended, the logs can be applied on the shadow database.
+
+
+    # 6.4 FlashCopy
+
+
+    Today, data processing centers increasingly require applications to be available
+    24 hours per day, 7 days per week, with minimal application downtime for data
+    backups or copies. FlashCopy allows the user to implement such solutions.
+
+
+    FlashCopy provides an instantaneous point-in-time copy of data, also called a
+    T0 copy. FlashCopy enables applications that use either the source copy or the
+    target copy to have them available almost immediately. Only a minimal interruption
+    to the application is required'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'for the FlashCopy relationship to be established. The copy is then created
+    under the covers by the IBM TotalStorage Enterprise Storage Server with minimal
+    impact on other ESS activities. FlashCopy may be used in conjunction with either
+    local or remote copies of data create by PPRC.
+
+
+    Note that a new version of FlashCopy (FlashCopy V2) has been recently announced,
+    which eliminates some restrictions of FlashCopy V1, and adds some new functionality.
+    The following brief overview of FlashCopy is largely worded in terms of FlashCopy
+    V1, for simplicity, but we will specifically identify when additional FlashCopy
+    features are available with FlashCopy V2. Additional details on FlashCopy V2 can
+    be found in the redbook *Implementing ESS Copy Services with IBM eServer zSeries,
+    SG24-5680.*
+
+
+    FlashCopy is at the logical volume level (FlashCopy V2 may be invoked at the level
+    of volume extents, or even datasets). It has the following restrictions:
+
+
+    +   - The source and target volumes must have the same track format.
+
+    - The target volume must be at least as large as the source volume.
+
+    - The source and target volumes must be within the same ESS logical subsystem
+    (LSS). With FlashCopy V2 this condition is relaxed so that the source and target
+    only need to be within the same ESS.
+
+    - A source and target volume can only be involved in one FlashCopy relationship
+    at a time. With FlashCopy V2, it is possible for a volume to have multiple FlashCopy
+    relationships.
+
+
+    When FlashCopy is invoked, the ESS establishes a FlashCopy relationship between
+    the target volume and source volume. This relationship exists from the time you
+    initiate a FlashCopy operation until the ESS copies all data from the source volume
+    to the target volume. You may optionally request FlashCopy to not execute the
+    background copy (**NOCOPY** option), in which case the relationship must be specifically
+    withdrawn in order to terminate it.
+
+
+    During the *establish* phase of the FlashCopy relationship, a bitmap is created
+    for the relation. This bitmap is used by the ESS microcode to map source and target
+    volumes as they were at the time when the FlashCopy was requested (T0 copy), as
+    well as to manage subsequent reads and updates to the source and target volumes.
+    As soon as the relationship is established, both volumes become available for
+    application use, and the optional physical copy phase begins. (Note that applications
+    do not have to be stopped for FlashCopy to be initiated. However, you need to
+    consider that only data on the physical disk is copied, while data in the buffers
+    in the applications will not be copied. For this reason, you will probably need
+    to quiesce the applications while the FlashCopy relationship is being established.)
+
+
+    # FlashCopy background copy mode (default)
+
+
+    The background copy mode causes all tracks in the source volume be physically
+    copied to the target volume. The background copy task runs at a lower priority
+    than normal I/O on the ESS, thus ensuring minimal impact on normal application
+    I/O processing. Using the bitmap, the ESS keeps track of which data has been copied
+    from source to target, and manages the integrity of both copies. If an application
+    wants to read some data from the target that has not yet been copied, the data
+    is read from the source; otherwise, the read is satisfied from the target volume.
+    Before updating a not-yet-copied track on the source volume, the ESS does an on-demand
+    copy of the track to the target volume, thus preserving the T0 copy. Subsequent
+    reads to this track on the target volume will be satisfied from the target volume,
+    and subsequent updates to this track on the source volume are ignored by FlashCopy,
+    thus preserving the T0 copy. Before updating a not-yet-copied track on the target
+    volume, the ESS will perform an on-demand copy of this track to the target volume.
+    After some time, all tracks will have been copied to the target volume, and the
+    FlashCopy relationship will automatically end. Figure 6-7 illustrates how FlashCopy
+    works when background copy is requested.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_83_0.png)
+
+
+    Figure 6-7 FlashCopy point-in-time copy
+
+
+    # FlashCopy no-background copy mode (NOCOPY)
+
+
+    The NOCOPY option causes the FlashCopy relationship to be established without
+    initiating a background copy - only the source tracks which are updated are copied
+    to the target. This may be useful if you need the copy only for a short time,
+    such as making a backup to tape. While this relationship exists, before a track
+    is updated on the source volume, the ESS does an on-demand copy of the track to
+    the target volume, thus preserving the T0 copy. Similarly, before updating a track
+    on the target volume, the ESS will perform an on-demand copy of this track to
+    the target volume. A FlashCopy relationship established in this no-background
+    copy mode remains active until one of the following occurs:
+
+
+    +   - A FlashCopy withdraw is issued to remove the relationship.
+
+    - All source device tracks have been copied onto the target device because they
+    were updated.
+
+    - All target device tracks have been updated by user applications.
+
+
+    # Incremental FlashCopy
+
+
+    FlashCopy V2 has introduced a new function known as Incremental FlashCopy, which
+    provides the capability to refresh a FlashCopy relationship. With Incremental
+    FlashCopy, the the initial FlashCopy relationship between a source and a target
+    is maintained. When a subsequent FlashCopy establish is initiated, only the data
+    required to bring the target current to the source''s newly established point-in-time
+    is copied. Incremental FlashCopy helps reduce the background copy completion time
+    when only a subset of data on either the source or target has changed. Figure
+    6-8 gives a brief overview of how Incremental FlashCopy works.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_84_0.png)
+
+
+    Figure 6-8 Incremental FlashCopy
+
+
+    When FlashCopy is established for a large number of volumes, there is a finite
+    amount of time between the first and last establish, so that copies may not be
+    created at a consistent point-in-time. FlashCopy V2 introduces a Consistency Group
+    function, which can be used to create a consistent point-in-time copy across multiple
+    volumes.
+
+
+    # 6.5 ESS Copy Services Web User Interface
+
+
+    The ESS Copy Services that runs in the ESS provides a Web interface that can be
+    used to invoke and manage the ESS copy functions. First, one ESS has to be defined
+    as the ESS Copy Services Server (CSS), and this will hold all ESS Copy Services
+    related information. Optionally, there can be a second ESS defined to be the backup
+    ESS Copy Services Server. The recommendation is to define the Copy Services server
+    at the remote (recovery) site and the backup CSS at the primary (application)
+    site. Setting up the CSS in the ESS is done by an IBM Service Support Representative.
+
+
+    To access the Copy Services Web User Interface (WUI) you first open the ESS Welcome
+    Screen, discussed earlier in 4.3.3, “ESS Specialist” on page 44, and shown in
+    Figure 6-9.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_85_0.png)
+
+
+    Figure 6-9  ESS Welcome screen
+
+
+    You then select Copy Services, which will connect your browser to the ESS that
+    is specified as the Copy Services server. The main menu of the ESS Copy Services
+    Web User Interface will be displayed (refer Figure 6-10).
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_85_1.png)
+
+
+    Figure 6-10  Main menu ESS Copy Services Web User Interface'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'From the Copy Services main menu, you can access all ESS Copy Services panels
+    by selecting one of the buttons on the left hand side. We will briefly look at
+    each of these. For further details please refer to *IBM TotalStorage Enterprise
+    Storage Server Web Interface User''s Guide*, SC26-7448, and *Implementing ESS
+    Copy Services with IBM eServer zSeries*, SG24-5680.
+
+
+    # The Volumes panel
+
+
+    The Volumes panel is shown in Figure 6-11. From this panel you can:
+
+
+    +   - Receive information and the status of volumes defined in a logical subsystem
+    (LSS) of the ESS
+
+    - Select source and target volumes for a PPRC or FlashCopy task
+
+    - Filter the output of the volume display to a selected range
+
+    - Search for a specific volume based on its unique volume ID
+
+    - Establish, terminate, and suspend PPRC copy pairs and optionally save the task
+
+    - Establish and withdraw FlashCopy pairs and optionally save the task
+
+    - Enter the multiple selection mode for PPRC and FlashCopy
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_86_0.png)
+
+
+    *Figure 6-11 Volumes panel*
+
+
+    # The Logical Subsystems Panel
+
+
+    The Logical Subsystems panel is shown in Figure 6-12. This panel displays the
+    ESSs and the logical subsystems within the ESS storage network; the storage network
+    includes all ESSs that are configured to use the same ESS Copy Services Server.
+    From the Logical Subsystems panel you can:
+
+
+    +   - View all ESSs within the storage network
+
+    - View all logical subsystems (LSSs) within the storage network
+
+    - Get information about a logical subsystem and its status
+
+    - View and modify the copy properties of a logical subsystem
+
+    - Filter the output of a selected range
+
+    - Search for a specific logical subsystem based on its unique address
+
+    - Establish, terminate, and suspend PPRC copy pairs, and optionally save the task'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '► Perform operations on consistency groups
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_87_0.png)
+
+
+    Figure 6-12 Logical Subsystems panel
+
+
+    # The Paths panel
+
+
+    A path is used to send data between the primary and secondary PPRC pairs. The
+    physical path consists of the ESCON connection between two ESSs, while a logical
+    path describes the connection of the PPRC source and targets. Please note that
+    before you can create PPRC copy pair relationships, you must use the Paths panel
+    to establish logical paths between the source and target LSSs. The Paths panel
+    is shown in Figure 6-13. From this panel you can:
+
+
+    +   ► Establish PPRC paths
+
+    ► Remove PPRC paths
+
+    ► Create a PPRC consistency group
+
+    ► View information about paths'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_88_0.png)
+
+
+    Figure 6-13 Paths entry panel
+
+
+    # The Tasks Panel
+
+
+    By using the Volumes, Logical Subsystems, and Paths panels you can save the setup
+    of any data copy action within a task. A task can be any kind of FlashCopy, PPRC,
+    and path operation. Using the Tasks panel you can run and modify saved tasks.
+    You can also group multiple tasks into a single task group. This could be the
+    case if multiple FlashCopy pairs from different LSSs have to be established at
+    the same time in order to do a backup. This group of tasks can then by run by
+    selecting the task group and running it. The Tasks panel is shown in Figure 6-14.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '![](img/da33d6b6aa12b73deb3c350a0a89d424_89_0.png)
+
+
+    Figure 6-14 Tasks panel
+
+
+    # 6.6 Copy Services command line interface
+
+
+    Using the ESS Copy Services command line interface (CLI), users of selected open
+    systems servers are able to communicate with the ESS Copy Services Server from
+    the host''s command line to manage PPRC and FlashCopy. For example, any of the
+    tasks you have saved using the Web User Interface could be invoked from the host
+    through a command such as rsExecute Task. The CLI is a Java-based application
+    that runs on the host server. The host system does not necessarily need to be
+    connected to storage assigned to one of the host adapter ports of the ESS. The
+    only requirement is that the host from where you want to invoke the commands is
+    connected through the network to the ESS that is defined as the primary ESS Copy
+    Services Server. Detailed information on the ESS Copy Services command line interface
+    can be found in IBM TotalStorage Enterprise Storage Server Command Line Interface
+    User''s Guide, SC26-7494. Details of which open systems servers support the CLI
+    can be found at in the “ESS Interoperability Matrix” located at the Web site below.
+    Supported servers include Red Hat Linux and SuSE Linux.
+
+
+    http://www.storage.ibm.com/disk/ess/supserver.htm'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# 6.7 ESS Copy Services available with Linux on zSeries
+
+
+    There are several ways of invoking and managing the various ESS Copy Services
+    functions, for the different operating environments. For PPRC and FlashCopy, the
+    most commonly used are the Copy Services Web User Interface (WUI) and the Copy
+    Services command line interface (CLI). The only exception to this is the z/OS
+    environment where TSO commands provide a convenient management mechanism.
+
+
+    Table 6-1 summarizes the facilities available for invoking and managing PPRC,
+    PPRC-XD, and FlashCopy for Linux on zSeries. Some further details for the items
+    listed in that table are:
+
+
+    +   - WUI: Web user interface (refer 6.5, “ESS Copy Services Web User Interface”
+    on page 71)
+
+    - CLI: command line interface (refer 6.6, “Copy Services command line interface”
+    on page 76). Note that the CLI is run on a supported open systems server connected
+    to the ESS, and not on the Linux for zSeries server itself.
+
+    - VM ICKDSF: In a VM environment, some PPRC functions can be performed using the
+    ICKDSF utility. For full details see *Implementing ESS Copy Services with IBM
+    eServer zSeries*, SG24-5680.
+
+    - VM CP `flashcopy`: In a VM environment, FlashCopy is supported using the CP
+    command `flashcopy`. For full details see *Implementing ESS Copy Services with
+    IBM eServer zSeries*, SG24-5680.
+
+
+    Table 6-1 Managing PPRC,PPRC-XD, and FlashCopy on Linux for zSeries
+
+
+    |  | Linux running in LPAR | Linux running under VM |
+
+    |---|---|---|
+
+    | **ESS connection via ESCON/FICON** | WUI and CLI
+
+    (SuSE SLES 8 only) | WUI and CLI
+
+    VM ICKDSF (for PPRC)
+
+    VM CP `flashcopy` (for FlashCopy) |
+
+    | **ESS connection via FCP** | WUI and CLI
+
+    (SuSE SLES 8 only) | not formally supported |
+
+
+    Note that theoretically the WUI and CLI can be used for invoking and managing
+    ESS Copy Services functions for any Linux on zSeries system, regardless of the
+    kind of attachment (ESCON/FICON or FCP), and regardless of whether Linux is running
+    as a VM guest or natively in an LPAR. This is because the WUI and CLI interface
+    directly to the ESS, without reference to the host operating environment. However,
+    IBM has only tested these functions (and only provides official support for these
+    functions) as per details in Table 6-1.
+
+
+    Note that if the Linux for zSeries volumes are CKD (connected by ESCON or FICON),
+    and they are defined to a z/OS system via the HCD, then copy services functions
+    can be invoked and managed for those volumes using the z/OS system. (For details
+    of z/OS facilities for managing copy services see *Implementing ESS Copy Services
+    with IBM eServer zSeries* SG24-5680.) Obviously, this approach will introduce
+    operational complexities, particularly for the z/OS system, and especially for
+    functions that need to be performed on a regular basis. For this approach, it
+    would be desirable to format the Linux volumes using the Linux on S/390 Compatible
+    Disk Layout (CDL).'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "# Related publications\n\nThe publications listed in this section are considered\
+    \ particularly suitable for a more detailed discussion of the topics covered in\
+    \ this redbook.\n\n# IBM Redbooks\n\nFor information on ordering these publications,\
+    \ see “How to get IBM Redbooks” on page 80. Note that some of the documents referenced\
+    \ here may be available in softcopy only:\n\n+   - *Linux Handbook A Guide to\
+    \ IBM Linux Solutions and Resources*, SG24-7000\n- *Implementing Linux with IBM\
+    \ Disk Storage*, SG24-6261-01\n- *IBM TotalStorage Enterprise Storage Server Model\
+    \ 800*, SG24-6424\n- *IBM TotalStorage Enterprise Storage Server Implementing\
+    \ ESS Copy Services with IBM eServer zSeries*, SG24-5680-01\n- *IBM TotalStorage\
+    \ Enterprise Storage Server: Implementing the ESS in Your Environment*, SG24-5420\n\
+    - *IBM TotalStorage Enterprise Storage Server Web Interface User's Guide*, SC26-7346\n\
+    - *Linux for S/390*, SG24-4987\n- *Linux for IBM zSeries and S/390: Distributions*,\
+    \ SG24-6264\n- *Linux on IBM zSeries and S/390: Large Scale Linux Deployment*,\
+    \ SG24-6824\n\n# Other publications\n\nThese publications are also relevant as\
+    \ further information sources:\n\n+   - *IBM TotalStorage Enterprise Storage Server\
+    \ Web Interface User's Guide*, SC26-7448\n- *ESS Interoperability Matrix and Host\
+    \ Systems Attachment Guide*, SC26-7446\n- *IBM TotalStorage Enterprise Storage\
+    \ Server Command Line Interface User's Guide*, SC26-7494\n\n# Online resources\n\
+    \nThese Web sites and URLs are also relevant as further information sources:\n\
+    \n+   - IBM Linux Web site:\n  http://www.ibm.com/linux/\n- The Linux Technology\
+    \ Center:\n  http://www.ibm.com/linux/ltc\n- The IBM TotalStorage Web site:\n\
+    \  http://www.storage.ibm.com/\n- The IBM TotalStorage SAN fabric Web site:\n\
+    \  http://www.storage.ibm.com/ibmsan/products/sanfabric.html"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "+   - The IBM eServer Web site:\n  http://www.ibm.com/eserver\n\n# How to get\
+    \ IBM Redbooks\n\nYou can search for, view, or download Redbooks, Redpapers, Hints\
+    \ and Tips, draft publications and Additional materials, as well as order hardcopy\
+    \ Redbooks or CD-ROMs, at this Web site:\n\nibm.com/redbooks\n\n# Help from IBM\n\
+    \nIBM Support and downloads\n\nibm.com/support\n\nIBM Global Services\n\nibm.com/services"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "# Index\n\n+   A\naddressing\n  storage 49–50\napplications 31\n\nB\nbackground\
+    \ copy mode 69\nBIND (Berkeley Internet Name Daemon) 5\nBourne Again Shell (Bash)\
+    \ 3\nBSD (Berkeley Systems Distribution) 2\n\nC\ncache 41\nCascading PPRC 65\n\
+    CCW 48, 50–51\nchannel 48\nCHPID (channel path identifier) 49, 53\nCKD 48, 51,\
+    \ 53, 55\ncluster 13, 36\ncommand line interface (CLI) 77\nConcurrent Copy 43\n\
+    Consistency Group 71\nconsolidation 29, 40\n  storage 40\ncontrol unit 49\ncopy\
+    \ functions 42, 63\n  dynamic 63\n  point-in-time 63\nCopy Services 45, 61–62,\
+    \ 71\n  Concurrent Copy 43\n  Extended Remote Copy 43\n  FlashCopy 43, 68\n  Peer-to-Peer\
+    \ Remote Copy 43, 63\n  Peer-to-Peer Remote Copy Extended Distance 65\n\nD\ndata\
+    \ management\n  services for Linux 15\nDB2\n  for Linux Migration Services 15\n\
+    \    support for Linux 15\nDDM (disk drive module) 39\ndevice number 49\nDHCP\
+    \ 5\ndistribution 1, 3, 10, 13\ndomain name server (DNS) 5\ndrawer 39\ndynamic\
+    \ 63\n\nE\nenclosure 39\nESCON 40, 48\n\n+   ESS 10, 38\n  Specialist 44, 53\n\
+    Extended Remote Copy 43\n\nF\nFAStT 10\nFB (fixed-block) 54\nFCP 48–50, 52\nFibre\
+    \ Channel Protocol. See FCP\nFICON 40–41, 48, 53\nfile and print serving 5\nfile\
+    \ structure 4\nfirewall 5\nFlashCopy 43, 68\n  incremental 70\n\nG\nGNU 1–3\n\
+    GNU C Compiler (gcc) 4\nGPL (General Public License) 1–2\nguest 25, 27, 29\nguest\
+    \ LAN 28\n\nH\nhigh availability 4\nHipersocket 28, 30\nhost adapters 55\nHost\
+    \ type 55\n\nI\nIBM\n  Global Services 12\n  Linux Consultancy 13\n  services\
+    \ for Linux 9\n  Services introduction 12\nIBM Global Services 12\nIBM Support\
+    \ Line 12\nIBM TotalStorage\n  Proven 37\nICKDSF 77\nIDS (Intrusion Detection\
+    \ Services) 5\nIFL.See Integrated Facility for Linux\ninfrastructure 4\nIntegrated\
+    \ Facility for Linux 25\nIOCP 53\niSeries\n  iSeries Linux information matrix\
+    \ 20\n  iSeries services for Linux 19\n  Linux services for the iSeries 19\nIUCV\
+    \ (Inter-user communication vehicle) 28"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "+   **J**\nJFS (Journaled File System) 11\n\n**K**\nkernel 1–3, 27\n\n**L**\n\
+    legacy applications 14\nLinux\n  applications 31\n  cluster 13\n  distribution\
+    \ 1, 3, 13\n  guest 25\n  Integrated Feature for 14\n  Web site platform matrix\
+    \ 21\nLinux Technology Center (LTC) 11\nLinuxWorld 10\nlogical subsystems 73\n\
+    Lotus\n  IBM's Linux services for 18\nLPAR 24, 53\nLUN 49–50, 57\n\n**M**\nMinix\
+    \ 2\nmirroring 63\n\n**N**\nNVS 64\n\n**O**\non demand\n  capacity 43\nopen source\
+    \ 1, 3, 11\n\n**P**\npath 74\nPeer-to-Peer Remote Copy 43, 63\nPeer-to-Peer Remote\
+    \ Copy Extended Distance 65\npersonal Linux education plan 19\npoint-in-time 63\n\
+    point-in-time copy 70\nPPRC\n  path 74\nPPRC Extended Distance 64\nPPRC. See Peer-to-Peer\
+    \ Remote Copy\nPPRC-XD. See PPRC Extended Distance\nPROP 33\nProven 37\npSeries\n\
+    \  Linux for pSeries offerings 20\n\n**R**\nRAID 36, 41–42, 56\nRedbooks Web site\
+    \ 80\n  Contact us xii\n\n+   router 5\n\n**S**\nSamba 31\nSAN (Storage Area Network)\
+    \ 43\nscalability 29\nSCSI 49\nSeascape 38\nserver\n  consolidation 4, 40\nservices\n\
+    \  and IBM Software 14\n  IBM Managed Hosting 19\n  IBM's Linux Learning services\
+    \ 19\nshell 3–4\n  Bash 3\n  TSCH 3\nSSA 39, 41\n  loop 39\nstorage consolidation\
+    \ 40\nsupport\n  IBM's Linux Support Line 18\nSupport Line 13\nsystems management\
+    \ 29\n\n**T**\nTCSH shell 3\nTechnology Center 10\nTechnology Partner 6\nTivoli\
+    \ 15–16, 18, 33\n  Linux supported Tivoli products 15\n\n**U**\nUnitedLinux 6\n\
+    UNIX 2–3\n\n**V**\nvCTC (Virtual channel-to-channel) 28\nVirtual Machine 27\n\
+    virtual network 28\nVM. See Virtual Machine\nvolume 57, 63\n  primary 64, 68\n\
+    \  secondary 64, 68\n  source 69\n  target 69\n\n**W**\nWeb serving 5\nWebSphere\n\
+    \  product services matrix for Linux 14\n  services for Linux 14\nWorld Wide Name.See\
+    \ WWN\nWorld Wide Node Name. See WWNN\nWorld Wide Port Name. See WWPN\nWWN 50\n\
+    WWNN 50"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# X
+
+
+    xSeries
+
+
+    xSeries Linux information matrix 20
+
+
+    xSeries services for Linux 20
+
+
+    # Z
+
+
+    z/VM 24, 26–27
+
+
+    guest 27, 29
+
+
+    zSeries
+
+
+    zSeries Linux information matrix 19
+
+
+    zSeries services for Linux 19'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '(0.1" spine)
+
+    0.1" <-> 0.169"
+
+    53->89 pages'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Linux with zSeries and ESS: Essentials
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_101_0.png)
+
+
+    ![](img/da33d6b6aa12b73deb3c350a0a89d424_101_1.png)
+
+
+    +   - Enterprise-class solutions with Linux and IBM TotalStorage
+
+    - Focus on zSeries and ESS
+
+    - FCP support for Linux on zSeries
+
+
+    This IBM Redbook presents high-level information on Linux in conjunction with
+    IBM @server and TotalStorage products, giving proof points that these products
+    can be deployed all together to provide enterprise-class solutions.
+
+
+    In particular this redbook looks at Linux with the zSeries servers and IBM TotalStorage
+    Enterprise Storage Server (ESS) disk products. The book describes the Fibre Channel
+    Protocol (FCP) support now available when connecting the ESS to a zSeries host
+    running Linux. The last chapter describes the ESS copy services available for
+    Linux on zSeries.
+
+
+    This book is intended as a starting point and reference for IBM representatives,
+    Business Partners, or clients who are planning Linux based solutions with IBM
+    zServers and ESS storage products.
+
+
+    Most of the information contained in this book is a compilation of the material
+    from the Linux Handbook, SG24-7000, and Implementing Linux with IBM Disk Storage,
+    SG24-6262-01. We encourage the reader to refer to those IBM Redbooks for more
+    complete information, or for implementation details.
+
+
+    # INTERNATIONAL TECHNICAL SUPPORT ORGANIZATION
+
+
+    # BUILDING TECHNICAL INFORMATION BASED ON PRACTICAL EXPERIENCE
+
+
+    IBM Redbooks are developed by the IBM International Technical Support Organization.
+    Experts from IBM, Customers and Partners from around the world create timely technical
+    information based on realistic scenarios. Specific recommendations are provided
+    to help you implement IT solutions more effectively in your environment.
+
+
+    For more information:
+
+    ibm.com/redbooks'
+  merge: -1
+  img_proc: true
