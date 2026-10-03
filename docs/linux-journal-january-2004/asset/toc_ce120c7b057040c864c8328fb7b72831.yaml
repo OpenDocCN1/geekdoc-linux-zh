@@ -1,0 +1,12 @@
+- - '###'
+  - strip out only the sections that we care about
+- - '###'
+  - sha1 the sections
+- - '###'
+  - encrypt the sections
+- - '###'
+  - add the encrypted data to the module
+- - '###'
+  - remove the temporary files
+- - '###'
+  - /etc/smartd.conf config file
