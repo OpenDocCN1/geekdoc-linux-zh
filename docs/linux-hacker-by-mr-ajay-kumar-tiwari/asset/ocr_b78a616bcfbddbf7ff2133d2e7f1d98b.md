@@ -1,0 +1,1 @@
+in .commandline_warrior file instead of .bash_history file. I’m yet to figure out a practical use for this. I can see this getting used when you want to track commands executed from different terminals using different history file name.
