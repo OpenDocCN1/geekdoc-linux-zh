@@ -1,0 +1,13 @@
+# Chapter 9: Port Forwarding
+
+Port forwarding over SSH is a divisive topic.
+
+SSH can serve as a wrapper around arbitrary TCP traffic. You can cloak unencrypted services such as telnet, POP3, IMAP, or HTTP inside SSH, securely transporting these natively insecure protocols. An SSH session can carry any TCP/IP protocol, including protocols your local IT security team has forbidden on the organization network. For this reason, many organizations with high security requirements do not allow SSH to traverse and/or leave their network. Organizations that have less stringent requirements use this ability to secure their network. (You can also use SSH to create a VPN to carry all IP protocols, but that’s in Chapter 13.)
+
+For example, I manage my website and blog with WordPress. It provides a friendly pointy-clicky interface for website administration and design, giving me a decent-looking page without me actually needing to learn *anything* about web design.¹ At one time, in those dark days before Let’s Encrypt, my website used plain HTTP. I used SSH port forwarding to tunnel HTTP between my Web server and my desktop. This protected my credentials in transit and eliminated the risk of my password being stolen on the wire. This is a sensible and legitimate use of SSH port forwarding.
+
+Suppose my desktop is inside a high-security network, however. The firewall tightly restricts web browsing and blocks all file transfers. If I can use SSH to connect to a server outside the network, I could forward my desktop’s traffic to that outside server to get unrestricted Internet access. I could upload confidential documents over SSH, and the firewall logs would show only that I made an SSH connection. Your network administrator would object, with good reason.
+
+# Port Forwarding versus Security Policy
+
+If you’re an organization’s security officer, port forwarding might make you consider entirely blocking SSH. I understand. I’ve had your job. You should also know that a recalcitrant user can tunnel SSH *inside* DNS, HTTP, or almost any other service or protocol, including raw ICMP. The only way to absolutely block SSH is to deny all TCP, UDP, or ICMP connections, use a web proxy that intelligently inspects traffic, and not allow your client machines access to public DNS even through a proxy. I’ve seen one firm actually implement this type of security perimeter, and they had many gaps and exceptions for notably clunky business-critical software. If you cannot implement this in your environment but have stringent security requirements, you must work with your users to meet those requirements and the business needs. I strongly recommend establishing a
