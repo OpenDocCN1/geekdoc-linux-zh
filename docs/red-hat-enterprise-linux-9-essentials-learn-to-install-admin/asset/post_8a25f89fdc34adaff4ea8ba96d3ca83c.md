@@ -1,0 +1,121 @@
+
+## Table of Contents
+- 13.2 Securing Ports and Services....................................................101
+- 13.3 RHEL 9 Services and iptables Rules ....................................................102
+- 13.4 Well-Known Ports and Services ....................................................103
+- 13.5 Summary ....................................................106
+- 14. RHEL 9 Firewall Configuration with firewalld ....................................................107
+- 14.1 An Introduction to firewalld....................................................107
+- 14.1.1 Zones....................................................107
+- 14.1.2 Interfaces....................................................109
+- 14.1.3 Services....................................................109
+- 14.1.4 Ports....................................................109
+- 14.2 Checking firewalld Status ....................................................109
+- 14.3 Configuring Firewall Rules with firewall-cmd....................................................110
+- 14.3.1 Identifying and Changing the Default Zone....................................................110
+- 14.3.2 Displaying Zone Information ....................................................110
+- 14.3.3 Adding and Removing Zone Services....................................................111
+- 14.3.4 Working with Port-based Rules....................................................112
+- 14.3.5 Creating a New Zone....................................................112
+- 14.3.6 Changing Zone/Interface Assignments....................................................112
+- 14.3.7 Masquerading ....................................................112
+- 14.3.8 Adding ICMP Rules ....................................................113
+- 14.3.9 Implementing Port Forwarding....................................................113
+- 14.4 Managing firewalld from the Cockpit Interface....................................................114
+- 14.5 Managing firewalld using firewall-config ....................................................115
+- 14.6 Summary ....................................................116
+- 15. Configuring SSH Key-based Authentication on RHEL 9....................................................117
+- 15.1 An Overview of Secure Shell (SSH)....................................................117
+- 15.2 SSH Key-based Authentication ....................................................117
+- 15.3 Setting Up Key-based Authentication ....................................................118
+- 15.4 Installing and Starting the SSH Service....................................................118
+- 15.5 SSH Key-based Authentication from Linux and macOS Clients....................................................118
+- 15.6 Managing Multiple Keys ....................................................120
+- 15.7 SSH Key-based Authentication from Windows Clients ....................................................121
+- 15.8 SSH Key-based Authentication using PuTTY ....................................................123
+- 15.9 Generating a Private Key with PuTTYgen ....................................................124
+- 15.10 Summary ....................................................125
+- 16. RHEL 9 Remote Desktop Access with VNC....................................................127
+- 16.1 Secure and Insecure Remote Desktop Access ....................................................127
+- 16.2 Installing the GNOME Desktop Environment ....................................................127
+- 16.3 Installing VNC on RHEL 9....................................................129
+- 16.4 Configuring the VNC Server....................................................129
+- 16.5 Connecting to a VNC Server ........................................................ 131
+- 16.6 Establishing a Secure Remote Desktop Session .............................. 131
+- 16.7 Establishing a Secure Tunnel on Windows using PuTTY .......................... 133
+- 16.8 Shutting Down a Desktop Session ................................................... 134
+- 16.9 Troubleshooting a VNC Connection .................................................. 134
+- 16.10 Summary ....................................................................... 135
+- 17. Displaying RHEL 9 Applications Remotely (X11 Forwarding) .............................. 137
+- 17.1 Requirements for Remotely Displaying RHEL 9 Applications .................... 137
+- 17.2 Displaying a RHEL 9 Application Remotely ....................................... 138
+- 17.3 Trusted X11 Forwarding ........................................................... 138
+- 17.4 Compressed X11 Forwarding ....................................................... 138
+- 17.5 Displaying Remote RHEL 9 Apps on Windows....................................... 138
+- 17.6 Summary ....................................................................... 141
+- 18. Using NFS on RHEL 9 to Share Files with Remote Systems.............................. 143
+- 18.1 Ensuring NFS Services are running on RHEL 9..................................... 143
+- 18.2 Configuring the RHEL 9 Firewall to Allow NFS Traffic ........................... 144
+- 18.3 Specifying the Folders to be Shared .............................................. 144
+- 18.4 Accessing Shared Folders ........................................................ 145
+- 18.5 Mounting an NFS Filesystem on System Startup ................................... 145
+- 18.6 Unmounting an NFS Mount Point ................................................... 145
+- 18.7 Accessing NFS Filesystems in Cockpit............................................. 146
+- 18.8 Summary ....................................................................... 147
+- 19. Sharing Files between RHEL 9 and Windows Systems with Samba...................... 149
+- 19.1 Accessing Windows Resources from the GNOME Desktop........................... 149
+- 19.2 Samba and Samba Client........................................................... 150
+- 19.3 Installing Samba on RHEL 9....................................................... 150
+- 19.4 Configuring the RHEL 9 Firewall to Enable Samba ............................... 150
+- 19.5 Configuring the smb.conf File.................................................... 151
+- 19.5.1 Configuring the [global] Section.............................................. 151
+- 19.5.2 Configuring a Shared Resource ............................................... 151
+- 19.5.3 Removing Unnecessary Shares ................................................. 152
+- 19.6 Configuring SELinux for Samba ................................................... 152
+- 19.7 Creating a Samba User ........................................................... 154
+- 19.8 Testing the smb.conf File....................................................... 154
+- 19.9 Starting the Samba and NetBIOS Name Services .................................. 155
+- 19.10 Accessing Samba Shares........................................................ 156
+- 19.11 Accessing Windows Shares from RHEL 9 ......................................... 158
+- 19.12 Summary ..................................................................... 159
+- 20. An Overview of Virtualization Techniques ........................................... 161
+- 20.1 Guest Operating System Virtualization ........................................... 161
+- 20.2 Hypervisor Virtualization .................................................. 162
+- 20.2.1 Paravirtualization ...................................................... 163
+- 20.2.2 Full Virtualization...................................................... 164
+- 20.2.3 Hardware Virtualization .................................................. 164
+- 20.3 Virtual Machine Networking.................................................. 165
+- 20.4 Summary ................................................................... 165
+- 21. Installing KVM Virtualization on RHEL 9........................................... 167
+- 21.1 An Overview of KVM ........................................................... 167
+- 21.2 KVM Hardware Requirements.................................................... 167
+- 21.3 Preparing RHEL 9 for KVM Virtualization ....................................... 168
+- 21.4 Verifying the KVM Installation................................................ 168
+- 21.5 Summary ................................................................... 170
+- 22. Creating KVM Virtual Machines on RHEL 9 using Cockpit ........................... 171
+- 22.1 Installing the Cockpit Virtual Machines Module ................................ 171
+- 22.2 Creating a Virtual Machine in Cockpit ....................................... 171
+- 22.3 Starting the Installation.................................................... 174
+- 22.4 Working with Storage Volumes and Storage Pools............................... 176
+- 22.5 Summary ................................................................... 178
+- 23. Creating KVM Virtual Machines on RHEL 9 using virt-manager...................... 179
+- 23.1 Starting the Virtual Machine Manager......................................... 179
+- 23.2 Configuring the KVM Virtual System .......................................... 180
+- 23.3 Starting the KVM Virtual Machine ............................................ 184
+- 23.4 Summary ................................................................... 185
+- 24. Creating KVM Virtual Machines with virt-install and virsh ...................... 187
+- 24.1 Running virt-install to build a KVM Guest System ............................. 187
+- 24.2 An Example RHEL 9 virt-install Command ...................................... 187
+- 24.3 Starting and Stopping a Virtual Machine from the Command-Line .............. 188
+- 24.4 Creating a Virtual Machine from a Configuration File......................... 189
+- 24.5 Summary ................................................................... 189
+- 25. Creating a RHEL 9 KVM Networked Bridge Interface ............................... 191
+- 25.1 Getting the Current Network Manager Settings............................... 191
+- 25.2 Creating a Network Manager Bridge from the Command-Line ................... 193
+- 25.3 Declaring the KVM Bridged Network .......................................... 194
+- 25.4 Using a Bridge Network in a Virtual Machine ............................... 195
+- 25.5 Creating a Bridge Network using nm-connection-editor...................... 197
+- 25.6 Summary ................................................................... 200
+- 26. Managing KVM using the virsh Command-Line Tool............................... 201
+- 26.1 The virsh Shell and Command-Line............................................ 201
+- 26.2 Listing Guest System Status ................................................ 202

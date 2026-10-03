@@ -1,0 +1,78 @@
+
+```bash
+# modprobe jffs2
+# modprobe mtdblock
+# modprobe mtdram
+# dd if=jffs2.bin of=/dev/mtdblock0
+4690+1 records in
+4690+1 records out
+# mkdir /mnt/flash
+```
+
+¹你可以通过使用列表 6-1 中的示例轻松为本次练习重新创建一个最小文件系统。
+
+列表 10-2 继续
+
+```bash
+# mount -t jffs2 /dev/mtdblock0 /mnt/flash
+# ls -l /mnt/flash
+total 0
+drwxr-xr-x 2 root root Sep 17 22:02 bin
+drwxr-xr-x 2 root root Sep 17 21:59 dev
+drwxr-xr-x 7 root root Sep 17 15:31 etc
+drwxr-xr-x 2 root root Sep 17 22:02 lib
+drwxr-xr-x 2 root root Sep 17 15:31 proc
+drwxr-xr-x 2 root root Sep 17 22:02 sbin
+drwxr-xr-x t 2 root root Sep 17 15:31 tmp
+drwxr-xr-x 9 root root Sep 17 15:31 usr
+drwxr-xr-x 14 root root Sep 17 15:31 var
+#
+```
+
+在列表 10-2 中，我们首先安装 Linux 内核支持 JFFS2 和 MTD 子系统所需的加载内核模块。我们先加载 `jffs2` 模块，然后是 `mtdblock` 和 `mtdram` 模块。在加载必要的驱动程序后，我们使用 Linux 的 `dd` 命令通过 `mtdblock` 设备将我们的 JFFS2 文件系统复制到 MTD RAM 测试驱动器中。本质上，我们正在使用 RAM 作为后端驱动进行仿真。本质上，我们通过 `mtdblock` 设备将我们的 JFFS2 文件系统复制到 MTD RAM 测试驱动器中。本质上，与此配置选择相对应的是两个与基于 RAM 测试驱动程序相关的参数：设备大小和擦除大小。在本例中，我们指定了 8192KB 的总大小和 128KB 的擦除大小。该测试驱动程序的目的是仿真 Flash 驱动器，主要为了方便 MTD 子系统的测试和开发。由于 Flash 存储器采用固定大小的擦除块架构，测试驱动程序也包含了擦除块的概念。稍后我们将看到这些参数是如何使用的。
+
+## 10.1.2 MTD 基础
+
+最近的 Linux 内核版本已集成 MTD，因此你不需要应用 MTD 补丁即可启用它。如果你觉得需要处于 MTD 开发的最前沿，可以从本章最后一节列出的 MTD 主页下载最新的源代码。当然，如果在你的内核配置中必须启用 MTD，如图 10-1 所示。
+
+启用 MTD 后，我们可以在 Linux 开发工作站上检查该子系统是如何运行的。使用我们刚刚配置的 RAM 驱动程序，我们可以通过 MTD 设备挂载 JFFS 镜像。假设你已经按照第 9 章“文件系统”中的详细说明创建了 JFFS2 镜像，你可能想挂载并检查它。我们在第 9 章中构建的镜像名为 `jffs2.bin`¹。回想第 9 章，我们使用以下命令构建了 `jffs2.bin` 镜像：
+
+```bash
+# mkfs.jffs2 -d ./jffs2-image-dir -o jffs2.bin
+```
+
+内核不支持在回环设备上直接挂载 JFFS2 镜像，而 ext2 和其他文件系统镜像是可以实现的。因此，我们必须使用不同的方法。这可以通过开发工作站上的 MTD 测试驱动程序来实现。列表 10-2 说明了这些步骤。
+
+### 列表 10-2 在 MTD RAM 设备上挂载 JFFS2
+
+```bash
+# modprobe jffs2
+# modprobe mtdblock
+# modprobe mtdram
+# dd if=jffs2.bin of=/dev/mtdblock0
+4690+1 records in
+4690+1 records out
+# mkdir /mnt/flash
+```
+
+¹你可以通过使用列表 6-1 中的示例轻松为本次练习重新创建一个最小文件系统。
+
+列表 10-2 继续
+
+```bash
+# mount -t jffs2 /dev/mtdblock0 /mnt/flash
+# ls -l /mnt/flash
+total 0
+drwxr-xr-x 2 root root Sep 17 22:02 bin
+drwxr-xr-x 2 root root Sep 17 21:59 dev
+drwxr-xr-x 7 root root Sep 17 15:31 etc
+drwxr-xr-x 2 root root Sep 17 22:02 lib
+drwxr-xr-x 2 root root Sep 17 15:31 proc
+drwxr-xr-x 2 root root Sep 17 22:02 sbin
+drwxr-xr-x t 2 root root Sep 17 15:31 tmp
+drwxr-xr-x 9 root root Sep 17 15:31 usr
+drwxr-xr-x 14 root root Sep 17 15:31 var
+#
+```
+
+在列表 10-2 中，我们首先安装 Linux 内核支持 JFFS2 和 MTD 子系统所需的加载内核模块。我们先加载 `jffs2` 模块，然后是 `mtdblock` 和 `mtdram` 模块。在加载必要的驱动程序后，我们使用 Linux 的 `dd` 命令通过 `mtdblock` 设备将我们的 JFFS2 文件系统复制到 MTD RAM 测试驱动器中。本质上，我们正在使用 RAM 作为后端驱动进行仿真。本质上，我们通过 `mtdblock` 设备将我们的 JFFS2 文件系统复制到 MTD RAM 测试驱动器中。本质上，与此配置选择相对应的是两个与基于 RAM 测试驱动程序相关的参数：设备大小和擦除大小。在本例中，我们指定了 8192KB 的总大小和 128KB 的擦除大小。该测试驱动程序的目的是仿真 Flash 驱动器，主要为了方便 MTD 子系统的测试和开发。由于 Flash 存储器采用固定大小的擦除块架构，测试驱动程序也包含了擦除块的概念。稍后我们将看到这些参数是如何使用的。
