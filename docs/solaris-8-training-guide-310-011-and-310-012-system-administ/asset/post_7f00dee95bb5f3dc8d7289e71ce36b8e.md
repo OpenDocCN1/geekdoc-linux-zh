@@ -1,0 +1,369 @@
+
+- host guidelines, 662
+- information storage, 663-667
+- need guidelines, 662
+- NIS+, 688-693
+- planning domains, 667-668
+- slave servers, 686-688
+- structure, 659-661
+- printing, 378-379
+  - configuring hardware, 383
+  - configuring software, 385-394
+  - daemons, 382-383
+  - directories, 379-380
+  - Ethernet connections, 384
+  - parallel connections, 384
+  - serial connections, 385
+  - spooler, 381
+- start, 33
+- stop, 33
+- Session Manager, 882-888
+- sessions, exam, 851
+- Set Source Media window, 141
+- set-group identification. See setgid
+- set-user identification. See setuid
+- setfacl command, 298
+- setgid (set-group identification), 303-304
+- setuid (set-user identification), 302
+- setup_install_server command, 764, 814
+- share command, 608
+- sharing
+  - Mount/Shares tool, 720, 724
+  - file systems, 610
+- shells
+  - built-ins, 464-465
+  - conditionals, 466
+    - case statement, 470
+    - double ampersand (&&), 466
+    - if, 467
+    - test command, 468-470
+- true/false programs, 463, 467
+- customizing, 178
+- functions, 472-473
+- repeated-action commands, 471
+  - for loop, 471
+  - until loop, 472
+  - while loop, 472
+- restricted shells, 290-291
+- scripts, 454-455
+  - Bourne shell variables, 458-459
+  - delimiters, 461
+  - quoting, 457, 459, 461
+  - selecting, 456-458
+  - viewing values, 460-464
+- show ancestry, selecting, 349
+- show-devs command, 60
+- showmount command, 638
+- shutdown, 38-42, 128
+- signals, processes, 350, 353-355
+- single CPU systems, 51
+- single system events, scheduling at commands, 365-367
+- sizes
+  - blocks, 273
+  - directories, 232-233
+  - fragments, 218-219
+  - logical block, 217-218
+  - partitions, 118-120
+  - swap space, 527-528
+- slave servers, configuring, 686-688
+- slices
+  - disk storage systems, 114-117
+  - disks, 193-196
+    - creating, 197-202
+    - disk configuration information, 197-198
+    - free hog, 202
+    - logical volumes, 207
+    - modifying partitions, 201-206
+    - recovering partitions, 206-207
+- SLP (Service Location Protocol), 379
+- small file systems, 249
+- SMC (Solaris Management Console), 703-705, 709-716
+- software
+  - interactive installation program, 548-560
+  - packages
+    - adding, 137-138
+    - Admintool, 140-143
+    - deleting, 138
+    - installing, 152-154
+    - listing, 147
+    - Product Registry, 144-146
+    - spool directories, 138-139
+    - verifying, 147
+  - patches, 148
+    - deleting, 153-154
+    - installing, 149-152
+  - printers, 385-394
+  - terminology, 106-107
+  - tools, 135-136
+- Software Development Kit (SDK), 704
+- Solaris
+  - Install tool, 124-129
+  - media, 108
+  - servers, 546-547
+- Solaris Management Console. See SMC
+- Solstice DiskSuite, 586-588
+- sort command, 233, 337
+- source files
+  - databases, 684
+  - passwords, 670, 673-674
+- sourcing $HOME/.dtprofile script, 882-883
+- sourcing Xsession.d script, 883
+- SPARC (Scaleable Processor Architecture), 53, 108
+- special parameters, 261
+- Specify Media window, 875
+- spoolers
+  - directories, 138-139
+  - LP print service, 381
+- spray command, 512
+- stand-alone systems, 113-114, 544
+- standards, DES (Data Encryption Standard), 694
+- starting
+  - applications, 888
+  - clients, 816-817
+  - installation, 124-129
+  - Login Manager, 880
+  - NIS, 680
+  - services, 33
+- startup
+  - JumpStart, 761-765
+  - reconfiguring, 574-576
+  - scripts, 312-313
+  - shell scripts, 178
+- statements, case, 470
+- states, processes, 336
+- status
+  - name service search, 684
+  - printers, 400-402
+- sticky bits, 296
+- stop services, 33
+- stopping
+  - Login Manager, 881
+  - NIS, 680
+  - system for recovery, 42-43
+- storage. See also variables
+  - blocks, 214
+  - disk storage systems, 114-117
+  - information, 663-667
+  - user accounts, 286-290
+- StorEdge Volume Manager, 589-590
+- strategies, study, 848
+- structures, 659-661
+- studying
+  - exam sessions, 851
+  - learning process, 847
+  - pre-testing, 849
+  - study tips, 848, 850-851
+- styles, print, 390
+- su command, 294
+- subobjectives, preparing, 848
+- SUDO (superuser do), 317, 322-323
+- Sun Certified Network Administrator for Solaris 8, 904
+- Sun Certified System Administrator for Solaris 8, 903
+- Sun4c architecture, 104-105
+- superblock, 212-213
+- superuser do (SUDO), 317, 322-323
+- superusers
+  - monitoring, 321
+  - restricting root access, 320-321
+  - SUDO, 317, 322-323
+- support
+  - core system, 107
+  - developer system, 107
+  - end-user, 107
+  - platforms, 103-104
+- Suspend-Resume function, 560
+- SVR4 printing software, 385, 387-388
+- swap -l command, 530
+- swap -d command, 537
+- swap -l command, 537
+- swap -s command, 531
+- swap file system (swapfs), 524-537
+- swap space, 788-789
+- SWAPFS, 193
+- swapfs (swap file system), 524-537
+- swapper process, 24, 26
+- switches, 680-685
+- symname parameter, 261
+- sync command, 213
+- synchronizing file systems, 222-223
+- syntax
+  - boot device, 787
+  - client arch, 788
+  - client root, 788
+  - client swap, 789
+  - cluster file, 790
+  - dontuse file, 791
+  - locale, 799
+  - package, 799
+  - root device, 801
+  - rules file, 775
+  - ypcat, 667
+- sysdef command, 90, 570
+- sysidcfg files, 805
+- Syslog, 368-371
+- systems
+  - backing up, 419-420
+  - booting, 16
+    - INIT phase, 26-33
+    - kernel initialization, 19-26
+    - powering on, 16-17
+    - PROM/program phases, 17-18
+  - clients, 110
+    - AutoClient, 111-112
+    - diskless, 110
+    - JavaStation, 111
+    - stand-alone, 113-114
+  - commands, 76
+  - configuration, 109-114, 809-810
+  - disk storage, 114-117
+  - file, 188-191, 447-449
+  - identification information, 546
+  - minimum system requirements, 105
+  - name services, 657
+  - partitions
+    - multiple disks, 119-120
+    - planning, 118-119
+  - powering on, 16-18
+  - recovery, 42-43
+  - run states, 22-26
+  - security
+    - controlling access, 283-286
+    - restricted shells, 290-291
+    - storing user accounts, 286-290
+  - servers, 109
+  - shutdown, 38-42
+  - stand-alone, 544
+  - usage, 304-310
+
+## T
+- T-shell, 457
+- tables
+  - NIS+, 690-691
+  - partitions, 191
+- tape
+  - commands, 445
+  - device types, 420
+  - files, 445
+- tar command, 421-423
+- tasks, OpenBoot firmware, 52-53
+- TB (terabyte), 208
+- TCP (Transport Control Protocol), 313, 604
+- TCP/IP commands, 485-488
+  - finger, 510
+  - ftp, 508
+  - ping, 510-511
+  - rcp, 509
+  - rexec, 509
+  - rlogin, 508
+  - rsh, 509
+  - rup, 510
+  - rwho, 510
+  - spray, 512
+  - telnet, 507
+- techniques, security, 324-325
+- telnet command, 507
+- templates, name service files, 678-681
+- temporary file system (TMPFS), 193, 521-527
+- terabyte (TB), 208
+- terminals, configuring, 809-810
+- testing. See also exams
+  - class files, 797, 802-804
+  - commands, 468-470
+  - pre-testing, 849
+- time
+  - exams, 850
+  - modifying, 357-359
+  - servers, 809-810
+- time of day (TOD), 50
+- Time Zone window, 872
+- timezone, configuring, 809-810
+- tips
+  - exam sessions, 851
+  - study, 848, 850-851
+- TMPFS (temporary file system), 193, 521-527
+- TOD (time of day), 50
+- tools
+  - AdminSuite, 716
+    - applying, 718-721
+  - Computers/Networks tool, 723
+  - Log Viewer tool, 725
+  - Mount/Shares tool, 720, 724
+  - Serial Ports tool, 724
+  - users, 721
+  - Admintool, 159
+    - adding user accounts, 160-169
+    - deleting user accounts, 165-167
+    - modifying user accounts, 166-167
+  - ASET (Automated Security Enhancement Tool), 323-324
+  - CDE Process Manager, 348-350
+  - command-line
+    - adding groups, 174-175
+    - adding user accounts, 171-172
+    - deleting groups, 176
+    - deleting user accounts, 174
+    - modifying groups, 175
+    - modifying user accounts, 173
+- dtappgather, 885
+- format utility
+  - creating slices, 197-202
+  - modifying partitions, 201-206
+- power-management
+  - disabling, 560-561
+- printers, 382-383
+- software management, 135-136
+- Solaris Install, 124-129
+- swap monitoring, 529
+- TCP wrappers, 313
+- topologies
+  - LANs, 482
+  - WANs, 483
+- Transport Control Protocol (TCP), 313, 604
+- Transport layer, 487
+- trees, devices, 54
+- troubleshooting
+  - file systems, 223-227
+  - networks, 513
+  - OpenBoot, 72-77
+    - help command, 56-59
+    - input/output control, 77-79
+  - software patches, 148
+  - Volume Manager, 266-271
+- true programs, 463, 467
+- trusted hosts, 315
+- tunefs command, 221, 245-246
+- turning off the power, 43
+- types
+  - file systems, 191
+    - disk-based, 191
+    - network-based, 192
+    - virtual, 192-194
+  - organization, 221
+  - printers, 395
+  - tape, 420
+
+## U
+- UDF (Universal Disk Format), 192
+- UDP (User Datagram Protocol), 604
+- UFS (UNIX file system), 192, 204-211
+  - boot block, 212
+  - creating, 215-217
+  - free blocks, 214
+  - inodes, 213
+  - logging, 224, 231
+  - storage blocks, 214
+  - superblock, 212-213
+  - ufsboot, 18, 86-93
+- ufs dump command, 434-442
+- ufsrestore command, 442-447
+- UID (user ID), 208, 294
+- umask command, 295
+- umount command, 255-256, 617
+- umountall command, 194
+- uname -m command, 102
+- uninstallation, 146. See also installation
+- Universal Disk Format (UDF), 192
+- UNIX
+  - commands, 164
+  - sort command, 337
+- UNIX file system (UFS), 192
+- unmounting file systems, 255-257

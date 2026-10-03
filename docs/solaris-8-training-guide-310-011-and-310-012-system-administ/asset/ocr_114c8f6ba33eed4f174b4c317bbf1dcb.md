@@ -1,0 +1,14 @@
+LDAP is used as a resource locator, but is practical only in read-intensive environments where you do not need frequent updates. LDAP can be used to store the same information that is stored in NIS or NIS+. Use LDAP as a resource locator for an on-line phone directory to eliminate the need for a printed phone directory. This application is mainly read-intensive but authorized users will be able to update the contents to maintain its accuracy.
+
+LDAP provides a hierarchical structure that more closely resembles the internal structure of an organization and can access multiple domains, similar to DNS or NIS+. NIS only provides a flat structure and is accessible by only one domain. In LDAP, directory entries are arranged in a hierarchical tree-like structure that reflects political, geographic, and/or organizational boundaries. Entries representing countries appear at the top of the tree. Below them are entries representing states or national organizations. Below them might be entries representing people, organizational units, printers, documents, or just about anything else you can think of.
+
+LDAP has provisions for adding and deleting an entry from the directory, changing an existing entry, and changing the name of an entry. Most of the time, though, LDAP is used to search for information in the directory.
+
+LDAP servers index all the data in their entries, and “filters” may be used to select just the person or group you want, and return just the information you want to see. Information can be requested from each entry that matches the criteria. For example, here’s an LDAP search translated into plain English: “Search people located in Hudsonville whose name contains “Bill” that have an email address. Return their full name and email address.”
+
+Perhaps you want to search the entire directory subtree below the University of Michigan for people with the name Bill Calkins, retrieving the email address of each entry found. LDAP lets you do this easily. Or you might want to search the entries directly below the U.S. entry for organizations with the string “Pyramid” in their names, and that have a fax number. LDAP lets you do this.
+
+Some directory services provide no protection, allowing anyone to see the information. LDAP provides a method for a client to authenticate, or prove its identity to a directory server, paving the way for rich access control to protect the information the server contains.
+
+> NOTE
+LDAP is a protocol that email programs can use to look up contact information from a server. For instance, every email program has a personal address book, but how do you look up an address for someone who's never sent you email? Client programs can ask LDAP servers to look up entries in a variety of ways. The LDAP search operation allows some portion of the directory to be searched for entries that match some criteria specified by a search filter.

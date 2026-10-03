@@ -1,0 +1,76 @@
++   - crontab, 360, 362-364
+- dd, 423-425
+- devalias, 63
+- devfsadm, 579
+- device information, 569
+- df, 231-234, 272-273
+- df -k, 523, 536
+- dfmounts, 617
+- dfshares, 611
+- dmesg, 568
+- dmseg, 572
+- du, 233
+- Edit menu
+  - Add, 169, 392
+  - Delete, 167
+  - Modify, 168
+- eeprom, 70
+- fdformat, 266, 269-271
+- file access, 294
+- find, 300, 428
+- fmthard, 206
+- for, 471
+- format, 105
+- fsck, 223-227, 272-273
+- fsck -F cachefs, 633
+- fstyp, 247-248
+- fuser, 256-257
+- getfacl, 299
+- groupadd, 174-175
+- groupdel, 176
+- groupmod, 175
+- halt, 42, 128
+- help, 56-59
+- if, 467
+- ifconfig -a, 494
+- interactive restoration, 444
+- JumpStart, 757
+
++   - kill, 350, 353-355
+- labelit, 242-243
+- last, 310
+- logins, 305
+- lp, 388
+- lpadmin, 387
+- lpmove, 397
+- lpr, 387
+- lpstat, 400-402
+- make, 679
+- mkfile, 536
+- mkfs, 215, 238-242
+- more, 230
+- mount, 222-231, 249-253, 523, 622, 627
+- netstat, 513
+- newfs, 217, 447, 534
+- NFS mount, 612-613
+- nice, 357-359
+- NIS, 670
+- NVRAM, 70-71
+- OpenBoot, 62
+- passwd, 164
+- patch administration, 148
+- patchadd, 150
+- patchrm, 153
+- pax, 430-434
+- pfinstall, 797, 802-804
+- pgrep, 339-341
+- ping -sRv, 514
+- pkgadd, 136-137
+- pkginfo, 139, 147, 378
+- pkgrm, 136, 138
+- pkill, 354
+- poweroff, 39
+- printenv, 66
+- priocntl, 357-359
+- probe-scsi, 72
+- probe-scsi-all, 72

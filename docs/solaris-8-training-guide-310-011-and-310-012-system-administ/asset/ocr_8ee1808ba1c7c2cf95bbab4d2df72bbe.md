@@ -1,0 +1,9 @@
+continued
+
+The netstat command is used to monitor the system's TCP/IP network activity. netstat can provide some basic data about how much and what kind of network activity is happening. The -i option shows the state of the network interface used for TCP/IP traffic. The last option, 5, reissues the netstat command every 5 seconds to get a good sampling of network activity. Press Ctrl+C to break out of the netstat command.
+
++   4. Look in the colls column for a high number of collisions. To calculate the network collision rate, divide the number of output collisions (output colls) by the number of output packets. A network-wide collision rate of greater than 10% can indicate an overloaded network, a poorly configured network, or hardware problems.
+
+5. Examine the errs column for a high number of errors. To calculate the input packet error rate, divide the number of input errors by the total number of input packets. If the input error rate is high—more than 25%—the host might be dropping packets due to transmission problems. Transmission problems can be caused by other hardware on the network, as well as heavy traffic and low-level hardware problems. Routers can drop packets, forcing retransmissions and causing degraded performance.
+
+6. Type ping -sRv <hostname> from the client to determine how long it takes a packet to make a round trip on the network. If the round trip takes more than a few milliseconds, the routers on the network are slow, or the network is very busy. Issue the ping command twice, and ignore the first set of results. The ping -sRv command also displays packet losses. If you suspect a physical problem, use ping -sRv to find the response time of several hosts on the network. If the response time (in milliseconds) from one host is not what you expect, investigate that host.

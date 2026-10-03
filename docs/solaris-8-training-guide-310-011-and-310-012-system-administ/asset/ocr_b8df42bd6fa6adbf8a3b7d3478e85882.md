@@ -1,0 +1,71 @@
+# L
+
+# K
+
++   - overview, 760-771
+- preparing, 759
+- Custom JumpStart, 126
+- domain name keywords, 807-810
+- installing, 814
+  - clients, 816
+  - configuration servers, 815-816
+  - configuring install servers, 814-815
+  - creating directories, 815
+  - starting clients, 816-817
+- name servers keywords, 806-811
+- overview, 756-759
+- rules file, 771-779
+  - begin/finish scripts, 783
+  - validating, 778-783
+- sysidcfg files, 805
+- KDCs (key distribution centers), 809
+- kernels
+  - directories, 576
+  - initialization, 19-26
+  - instance names, 122, 576-579
+  - major/minor device numbers, 579-582
+  - OpenBoot, 86-93
+- key distribution centers (KDCs), 809
+- keywords
+  - backup_media, 785
+  - boot device, 787
+  - domain names, 807-810
+  - filesys, 786, 791
+  - name servers, 807-810
+  - name services, 806-810
+  - networks, 808
+- kill command, 350-355
+- Korn shell, 456
+
++   - labelit command, 242-243
+- labels, 191, 197-198, 242-243
+- LAN (local area network), 482, 604
+- large file systems, 231, 249
+- last command, 310
+- Lay Out File Systems window, 880
+- layers
+  - Application, 488
+  - hardware, 485-486
+  - Internet, 486
+  - ISO/OSI model, 484
+  - Network Interface, 486
+  - TCP/IP, 485-488
+  - Transport, 487
+- layout constraint keyword, 796, 798
+- LDAP (Lightweight Directory Access Protocol), 696-697
+- learning process, 847
+- life cycles, 520
+- Lightweight Directory Access Protocol (LDAP), 696-697
+- limiting access to printers, 401-407
+- links, Volume Manager, 259
+- lists
+  - defect, 190
+  - logical device names, 582-585
+  - software packages, 147
+- local area network (LAN), 482, 604
+- local servers, 706-716
+- locale keyword, 798
+- locale values, 795
+- locations, devices, 122
+- LOFS (Loopback File System), 193
+- Log Viewer tool, AdminSuite, 725
