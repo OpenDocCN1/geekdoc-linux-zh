@@ -1,0 +1,117 @@
+
+## format
+
+Searching for disks...done
+
++   AVAILABLE DISK SELECTIONS:
+
+0. c0d0 <DEFAULT 38767 alt 2 16 sec 63> /pci0/pci-ide0/0,l0/cmdk@0,0
+
+1. c0d1 <DEFAULT 1019 alt 2 255 sec 63> /pci0/pci-ide0/0,l0/cmdk@1,0
+
+Specify disk (enter its number): 0
+
+se c0d0
+
+Controller working list found
+
+[disk formatted, defect list found]
+
+Warning: Current Disk has mounted partitions.
+
+FORMAT MENU:
+
++   - `disk` - 选择一个磁盘
+
+`type` - 选择（定义）磁盘类型
+
+`partition` - 选择（定义）分区表
+
+`current` - 描述当前磁盘
+
+`format` - 格式化并分析磁盘
+
+`fdisk` - 运行 `fdisk` 程序
+
+`repair` - 修复缺陷扇区
+
+`show` - 翻译磁盘地址
+
+`label` - 向磁盘写入标签
+
+`analyze` - 表面分析
+
+`defect` - 缺陷列表管理
+
+`backup` - 搜索备份标签
+
+`verify` - 读取并显示标签
+
+`save` - 保存新的磁盘/分区定义
+
+`volname` - 设置 8 字符卷名
+
+`!<cmd>` - 执行 `<cmd>`然后返回
+
+`format>`
+
+### 考试警报
+
+对 `format` 命令的基本理解和通用用法是一个测试目标。请熟悉 `format` 子命令和子菜单及其用法。
+
+以下列出了若干几个 `format` 子命令：`disk`、`volname`、`verify` 和 `current`。请查阅 `format(1)` 手页以获取更多信息：
+
+```
+format> disk
+
+# AVAILABLE DISK SECTIONS:
+
++   0. c0d0 <DEFAULT cyl 38767 alt 2 hd 16 sec 63>
+   /pci0/pci-ide@0,1/ide@0/cmdk@0,0
+1. c0d1 <DEFAULT cyl 1019 alt 2 hd 255 sec 63> solaris
+   /pci0/pci-ide@0,1/ide@0/cmdk@1,0
+
+Specify disk (enter its number) [0]: 0
+selecting c0d0
+Controller working list found
+[disk formatted, defect list found]
+Warning: Current Disk has mounted partitions.
+
+format> volname
+
+format> verify
+
+Primary label contents:
+Volume name = solaris
+name = <DEFAULT cyl 38767 alt 2 hd 16 sec 63>
+cyl = 38767
+alt = 2
+cyl = 0
+sec = 63
+
+| Part | Tag | Flag | Size | Blocks |
+|---|---|---|---|---|
+| 0 | | | 0044 - 31520 (65GB) | (30477/0/0) 0720816 |
+| 1 | swap | wu | 0041 (337MB) ( (04110/0))1049328 |
+| 2 | backup | wm | 0 - 38767 (63GB) | (38768/0/0) 3907144 |
+| 3 | unassigned | wm | 0 | (0/0) |
+| 4 | unassigned | wm | 0 | (0/0) |
+| 5 | unassigned | wm | 0 | (0/0) |
+| 6 | unassigned | wm | 0 | (0/0) |
+| 7 | home | wm | 01521 - 31927 (200.32MB) | (4077/0/0) 410256 |
+| 8 | boot | wu | 0 - 0 (49MB) | (1/0) 1008 |
+| 9 | alternates | wu | 0 - 2 (98MB) | (0/0) 2016 | |
+```
+
+```
+format> current
+Current Disk = c0d0: solaris
+<DEFAULT cyl 38767 alt 2 hd 16 sec 63>
+/pci/0/pci-ide@0,1/ide@0/cmdk@0,0
+
+format>
+```
+
+# 分区子菜单
+
+在三个 `format` 子菜单（Partition、Analyze、Defect）中，Partition 使用最频繁。
