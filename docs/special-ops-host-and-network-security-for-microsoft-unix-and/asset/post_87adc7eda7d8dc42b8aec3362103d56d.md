@@ -1,0 +1,285 @@
+
+# 1010 Index
+
+- manual configuration. by Group Policy, 199
+- security zones, 8
+- SecurityNewsPortal, 17
+- SensePost, 573
+- server,
+- application, 75
+- bridgehead, 262
+- DNS, 126
+- member, 75
+- multi-tasking, 14
+- ROGUE: DHCP servers, 273-274
+- service delivery, 24-56
+- service enactment, 53
+- service Pack Manager 2000, 625
+- session management, 842
+- Shavlik Technologies, 155-157,
+- SIT,
+- SID, 261-282
+- SIDs. re Security Identifiers
+- MIME/MIME, 379
+- SMTP, 290
+- nbugs, 362
+- changing the banner, 363-394
+- logging, 373
+- message authenticity, 322
+- message reply, 323-324
+- providing encrypted data transport of traffic, 363
+- restricted SMTP relay, 361-362
+- virus scanners and content inspection, 350-351
+- virtual server, 341-344
+- Sniffer, 2127
+- SNMP, 215-218
+- asset scanning, 28-29
+- becurity, 868-873
+- tool, 832-835
+- brute forcing accounts, 641–642
+- buffer overflows, 637
+- case study, 661–662
+- choosing targets, 634–640
+- cleanup, 650
+- command batches, 663
+- committing and SQL Server
+- commercial scanners, 639–640
+- concatenating using UNION operators, 665
+- configuring, 658-656
+- database, 632-634
+- database users, 631-632
+- defending, 662-667
+- defending against SQL injection, 664-667
+- diminishing overly privileges, 653
+- disabling ad hoc queries, 653-654
+- dumping permissions, 660
+- editions, 621-624
+- enabling auth and event log, 652
+- encrypting, 678-679
+- escalating privileges, 643-648
+- evolution of, 620-624, 674, 676
+- unpatched vulnerabilities, 647-648
+- extender-attacks, 653
+- (XPS), 655-656
+- finding application configuration files, 642-643
+- fixed database rules, 632
+- governing system process
+- implementing change control, 657-658
+- implementing consistent coding standard, 666-667
+- instantiation, 624-626
+- links to sites, 665
+- mailing lists, 675-676
+- Microsoft Data Engine (MSDE) 2000, 623-624
+- minimizing privileges, 665-666
+- monitor and maintenance, 656-660
+- named n pipes list, 630
+- network libraries, 628-630, 651-652, 679
+- out-logging, 637
+- resources, 676
+- retail editors, 622
+- 'sa' account passwords, 649-650, 680
+- Sc.exe escaping of services, 637-638
+- scraping logs, 658–659
+- security basics, 676–677
+- security checklist, 667–673
+- security principles, 630–633
+- server logs, 631
+- service accounts, 650
+- service packs and hotfixes, 657
+- setting operating system ACL, 654
+- shared memory netlib, 629
+- sniffing packets, 649–641
+- SQL and Windows Authentication, 627-628
+- SQL injection, 662-667, 674
+- SQL Server Resource Solution, 635-637
+- SSL encryption, 630, 678-679
+- Super Socks, 628–629
+- TCP/IP content needs, 629
+- tightening permissions on job-related procedures, 656
+- Trojan procedures and backdoors, 648
+- user-defined rules, 632
+- validating all user input, 664
+- Web hosting tools, Windows and SQL Server Authentication, 679
+- Windows Authentication method, 627, 667-679
+- writing secure applications for, 662-667, 677
+- SQLLife,
+- SQLSecurity, 74
+- SSL, 605-608
+- enabling for Internet or remote clients, 332-337
+- enabling for Outlook Web Access clients, 336-337
+- enabling for POP3, IMAP4, and NNTP clients, 334-336
+- SSLProxy.com
+- SSLv3, 608
+- static hence, 24, 207, 238
+- system patches, Windows XP Professional, 154-155
+- system services, 186–187
+- evaluating and configuring, 203-204
+
+# T
+
+- TACACS+, 687
+- Tangram Enterprise Solutions, 45
+- TCO: See total cost of ownership
+- TCP ping sweeps, 24
+- TCP/IP hosting Peter, 10
+- corporate security policies, 977–979
+- security, 191–199
+- Terminal Access Controller Access Control. Server, TACACS+
+- Terminal Services, 87, 54, 504
+- application server, 481–488
+- Application Server mode, 455
+- application sharing specifics, 503
+- attacking, 125
+- attacking terminal servers, 471–488, 500, 501–507
+- powered password guessing, 476–481
+- breaking out of a feature Internet Explorer application, 428
+- clients–464
+- crash course, 506–507
+- Ctrl+Alt+Del, 509
+- defending terminal servers, 488–500, 508
+- disabling DisablerUser and removing licensing service, 496
+- disabling remote control, 492
+- disabling user access to shared clipboard, 499
+- enumerating users and logon rights, 474–481
+- file security, 499
+- Finding Windows servers to access other segments, 473–474
+- general powers of server inspection, 501–503
+- getting your pools for further attacks, 486
+- Group Policy, 493–494, 497–498
+- identifying hidden terminal servers, 472
+- implementing host-level security, 495
+- increasing security with extreme measures, 496–497
+- stalling current patches, 489
+- John the Ripper, 502
+- left privilege, 495–498
+- locating terminal servers, 471
+- Macintosh clients, 464
+- mailing lists, 506
+- manual password guessing, 476
+- maximizing your SQL compromise with terminal server, 485–486
+- MMC snap-in, 462
+- NetServerEnum function, 472
+- port scanning, 471–472
+- privilege escalation, 483–484
+- Query terminus, 465
+- Qwinex, 465
+- Rdesktop login clients, 462–464, 506–508
+- gaining rights as Administrator, 484–485
+- relocating terminal server to obscure, 494
+- Remote Administrator mode, 495–497, 500, 3
+- renaming the Administrator, 497
+- restricting access, 490
+- running Exploit to get server, 483
+- seeing the OS, 489
+- server checklist, 501–503
+- setting advertising, 473
+- setting strong user permissions, 491–495
+- shadowing, 465
+- starting an initial on Windows XP, 495
+- Terminal Services Configuration, (TSAC (Active)), 450–462
+- Terminal Services Manager, 469
+- TmCl.exe, 466–469
+- TSDisconnect and Reset Session, 466
+- TSGrinder, 474–475
+- TSKill, 487–488
+- using hacker tools to exclude from terminal services, 464–470
+- using high encryption for Windows 2000, 491–495
+- using the Task Manager to obtain endpoints, 473–474
+- using WinZip to obtain Windows 2000, 455–466
+- Windows commands, 465–469
+- Windows passwords, 489, 490
+- Windows Remote Desktop clients, 462
+- Windows Server 2003, 456–468
+- Windows Remote Desktop, 506, 509
+- Windows XP Shell, 496, 505
+- variable vs real, 5
+- Trivial Transfer Protocol (TFTP), 23, 40
+- total cost of ownership, 34–37
+
+# 1012 Index
+
+- Advanced Detection, 107–111
+- auditing, desktops, 748, 752
+- engineering a secure system, 737–754
+- evaluating inheriting systems, 766–772
+- exploring generative algorithms, 733–734
+- gaining renown, 733–735
+- gaining relevant information, 738–740
+- gaining sufficient information, 766–768
+- general services for user, 741, 757–758
+- host-based intrusion detection, 765
+- information gathering attacks, 730–735
+- input validation errors, date, 762
+- installing an OS via connection, 777–781
+- stalling the system, 744–746
+- kernel, 769
+- kernel parameters, 750
+- kernel security, 759
+- links to sites, 665–676
+- mapping, 777–788
+- non-executable stacks and Linux, 760–761
+- non-executable stacks and Linux, 747–754
+- platform-specific configurations, 754–766
+- principle of least privilege, 781
+- process of securing systems, 763–770
+- program integrity and type of, 776–778
+- password security, 749
+- pseudo-environments, 749
+- private networks, Set VPNs, 862–863
+- developing access procedures, 908–910
+- organizational access procedures, 910–912
+- technical access procedures, 912–913
+- vulnerabilities, defined, 971
+- vulnerability assessments, 210
+- remediating vulnerabilities, 122
+- standard features of VA tools, 52–54
+- vulnerability checking, 53–54
+- vulnerability scanners, 19
+
+- See also high-severity vulnerabilities
+- CANVAS, 73
+- false positives and negatives, 55–56
+- Fire & Water Toolkit, 64–65
+- FoundScan-Spy, 57–93
+- freeware, 62–74
+- host discovery, 53
+- ISS Internet Scanner, 60
+- LangGuard Network Scanner (LNNS), 65
+- LHF Tool Suite, 66–67
+- NBentum, 67
+- Nessus, 63–64
+- other resources, 734
+- QualGuard Intranet Scanner, 59, 83
+- Quick Quill script, 68
+- reporting, 54
+- Retina, 61–62, 104–105
+- selecting a convivial control, 55–56
+- service discovery, 53
+- service enactment, 53
+- SPIKE, 68
+- SQLHex, 66
+- standard features, 52–54
+- testing performance, 56
+- Typhon II, 61
+- vulnerability checking, 53–54
+- whisker, 65
+- WinLexe, 66
+- wireless LANs, 801–802
+- VulWatch, 963
+
+# W
+
+- war chilling, 798
+- war driving, 784, 822–823
+- wardlining, 31–42
+- ToneLoc, 32–37
+- tools and techniques, 32–33
+- Web Sleuth, 601
+- WebProxy, 594
+- whisker, 65
+- Windows, 200, 172–173
+- accounts data, 190
+
+- Active Directory Users And Computers (ADUC), 181–183
+- analyzing weaknesses and configuration changes, 230–233
+- applying patches and service packs, 225–226

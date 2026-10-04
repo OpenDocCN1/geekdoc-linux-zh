@@ -1,0 +1,44 @@
+
+# Solving the Problem
+
+Unfortunately, there is no silver bullet to eliminate the risks posed by the services described in the preceding section. Virus scanners, server- and client-level, and an effective signature update scheme goes a long way minimizing the introduction of malicious code, but anti-virus software protects only against known threats, and even only when the code is either self-propagating or commonly deployed by customers that have demanded detection for. I have been present on conference calls where virus scanner managers were providing reasons why Trojans, if not self-propagating, are not "viruses" and are therefore outside the realm of virus defense.
+
+As more of these applications become proxy-aware, and developers harness local networking libraries to afford themselves the preconfigured network access available, it should become clear to administrators that the reactive techniques provided by anti-virus software are ineffective. To fully protect the enterprise, these threats must be stopped before they can enter at the various external access points.
+
+Content filters are now a necessity for corporate computing environments. Although many complaints have been logged against filter vendors over the years (for failing to disclose filter lists, or over-aggressive filtering), the benefits of outsourcing content filtering outweighs the potential failings of an in-house system. We need only look at the proliferation of Web-mail providers to recognize that managing filter lists is a monumental task. Although early filtering devices incurred a substantial performance hit from the burden of comparing URLs to the massive databases of inappropriate content, most commercial proxy vendors have now established partnerships with content filtering firms to minimize the performance impact.
+
+Quite frequently in a large organization, one or more departments will require request exemption from content filtering, for business reasons. Legal departments, Human Resources, Information Technology, and Research and Development groups often have legitimate reasons for accessing content filters blocks. If this is the case in your organization, configure these users for an alternate, unfiltered proxy that uses authentication. Many proxies are available today that can integrate into established authentication schemes, and as described in the “Who, What, Where? The Case for Authentication and Logging” section earlier in this chapter, users subject to outbound access authentication are usually more careful about what they access.
+
+Although content filters can provide a great deal of control over outbound Web services, and in some cases can even filter mail, they can be easily circumvented by applications that work with SOCKS proxies. So you choose to implement SOCKS proxies to handle nonstandard network services, it is imperative that you work from the principle of least privilege. One organization I've worked with had a fully authenticated and filtered HTTP system but had an unfiltered SOCKS proxy in place (on the same IP address, no less) that permitted all traffic, including HTTP. Employees discovered that if they changed the proxy to 1080 with Internet Explorer, they were no longer prompted for credentials and could access filtered sites. One particularly resourceful employee had figured this out, and within six months more than 300 users were configured to use only the SOCKS proxy for outbound access.
+
+All SOCKS proxies, even the NEC "SOCKS Reference Proxy," provide access controls based on source and destination addresses and service ports. Many provide varying levels of access based on authentication credentials. If your base requires access to nonstandard services, make use of these controls to minimize your exposure. If you currently have an unfiltered or minimally filtered SOCKS proxy, use current access logs to profile the services that your users are passing through the system. Then, implement access controls initially to allow only those services. Once access controls are in place, work with the individuals responsible for updating and maintaining the company's Acceptable Use Policy document to begin restricting prohibited services, slowly. By implementing these changes slowly and carefully, you will minimize the impact, and will have the opportunity to address legitimate exceptions on a case-by-case basis in an acceptable timeframe. Each successful service restriction will pave the way for a more secure environment.
+
+# Managing Partner and Vendor Networking
+
+More and more frequently, partners and vendors are requesting and obtaining limited cross-organizational access to conduct business and provide support more easily. Collaborative partnerships and more complicated software are blurring network borders by providing inroads well beyond the DMZ. In this section, I review the implications of this type of access and provide suggestions on developing effective implementations.
+
+![](img/729efc56f204a2ebffb8295c3a2dfdfb_931_0.png)
+
+In many cases, your business partners will require access to a single host or small group of hosts on your internal network. These devices may be file servers, database servers, or custom gateways for managing collaborative access to resources. In any event, your task as a network administrator is to ensure that the solution implemented provides the requisite access while minimizing the potential for abuse, intentional or otherwise.
+
+In this section, I present two different methods of managing these types of working relationships with third-party entities. There are two common approaches to discuss, virtual private networking (VPN) and extranet shared resource management. Figure 17.2 shows how these resource sharing methods differ.
+
+# Figure 17.2 Extranet vs. VPN Vendor/Partner Access Methods
+
+![](img/729efc56f204a2ebffb8295c3a2dfdfb_932_0.png)
+
+# Developing VPN Access Procedures
+
+Virtual private networks (VPNs) were originally conceived and implemented to allow organizations to conduct business across public networks without exposing data to intermediate hosts and systems. Prior to this time, large organizations that wanted secure wide area networks (WANs) were forced to develop their own backbone networks at great cost and effort. Aside from the telecommunications costs of deploying links to remote locations, these organizations also had to develop their own network operations, often employing dozens of network engineers to support and manage growth.
+
+VPNs provided a method for security-conscious organizations to take advantage of the extensive infrastructure developed by large-scale telecommunication companies by eliminating the possibility of data interception through strong encryption. Initially deployed as a gateway-to-gateway solution, VPNs were quickly adapted to client-to-gateway applications, permitting individual outside outside of the network to operate as if they were on the corporate network.
+
+As the need for cross-organizational collaboration or support became more pressing, VPNs presented themselves as an effective avenue for managing these needs. If the infrastructure was already in place, VPN access could be implemented relatively quickly and with minimal cost. Partners were provided VPN clients and permitted to access the network as remote employees.
+
+However, the VPN approach to partner access has a few hidden costs and potential failings when viewed from the perspective of enduring security. Few organizations have the resources to analyze the true requirements of each VPN access request, and to minimize support load, there is a tendency to treat all remote clients as trusted entities. Even if restrictions are imposed on these clients, they are usually afforded far more than necessary. Due to the complexities of managing remote access, the principle of least-priv is frequently overlooked.
+
+Remote clients are not subject to the same enforcement methods used for internal hosts. Although you have spent countless hours developing and implementing border control policies to keep unwanted elements out of your network through the use of content filters, virus scanners, firewalls, and acceptable policies, your remote clients are free from these limitations once they disconnect from your network. If their local networks do not provide adequate security practices, or if their devices are compromised due to inadequate security practices, they can carry these problems directly into your network, bypassing all your defenses.
+
+This is not to say that VPNs cannot be configured in a secure fashion, minimizing the risk to your internal network. Through the use of well-designed remote access policies, proper VPN configuration and careful supervision of remote access gateways, you can continue to harness the cost-effective nature of VPNs.
+
+![](img/729efc56f204a2ebffb8295c3a2dfdfb_933_0.png)

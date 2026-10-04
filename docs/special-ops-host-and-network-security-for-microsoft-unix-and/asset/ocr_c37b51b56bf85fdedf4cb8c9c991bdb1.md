@@ -1,0 +1,7 @@
+# Command Execution
+
+It is not uncommon to find custom Web applications that execute some sort of command on the running Web server. Indeed Web-based applications exist that facilitate the administration of the remote operating system using back-end scripts with elevated privileges. The opportunities for abusing such applications are obvious, as is the author's failure to strip meta characters from the received user input.
+
+A typical example would be an application that allowed a user to enter a $QUERYSTRING and then performed an $ls (dir) of the specified directory. Behind the scenes, the user is presented with a form that (rather surprisingly) assigns the passed variable to the $ls and passes the command + $QUERYSTRING to the shell for execution. If the user entered /temp, the effective command would be $ls /temp. So far good—let's investigate further. Problems are introduced when the user becomes a little creative with her input. Unix/Linux shell allows the user to enter multiple commands on a single line by making use of the semicolon;) or ampersand (&&) characters. Therefore, if an attacker used special characters to concatenate our original request with a second nefarious request, the resulting output could be quite devastating to our server's security. For example, if a user entered /temp & cat /etc/passwd, both commands (ls and cat) would be run. If successful, this would provide the attacker with the contents of the /etc/passwd file (before you showed your password file).
+
+![](bbox=[0.068, 0.943, 0.296, 0.966])

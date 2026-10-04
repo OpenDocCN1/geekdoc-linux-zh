@@ -1,0 +1,13 @@
+# Chapter 14 • Attacking and Defending Unix
+
+this regard, this will give you an idea of how you need to go about verifying the integrity of the host (whether you can keep the host running, or whether you will need to mount the disk on another system to audit the host).
+
+The installation date of a system is an important fact to know, although it is not critical. Knowing the installation date of a system gives you a good idea of what threats the system has faced since it was initially put in production (such as vulnerabilities, worms, and public exploits).
+
+Installed software is another factor that must be considered. The operating system itself may be secure, and well maintained. However, third-party applications installed on the host may not be in good shape and may present a threat to the integrity of the system. Gathering this information will help you rate the integrity of the host and will be necessary in the securing of the system.
+
+The patch level of the host is necessary in determining which known the system currently faces. This information can be misleading, and you must pay careful attention to a number of factors that come into play. One factor is the system may still have a vulnerability present for which there is no patch available. Another reason is that the system may not have a patch installed for a vulnerability in a particular software package, the vulnerable package may not be installed. This is an example of when a system maintenance logbook proves its worth. From the entry in the logbook, you have an idea of when the patch was installed. With a little work, you can determine when the vulnerability was first disclosed. This gives you an idea of how long an exposure to a particular vulnerability existed before it was patched.
+
+The type of host-based IDS will also help you gather a better understanding of how trustworthy the information you gain from integrity checking is going to be. Knowing this information gives you an idea of the limitations of the IDS. It also helps you know whether or not the data used by the IDS is error-prone, or untrustworthy itself.
+
+Finally, you should know the operational requirements of the system. The operational requirements can be defined as the requirements of the system to meet business goals. This includes the uptime required of the system, such as whether it must be accessible during business hours, or 24/7. This includes any maintenance windows that provide an opportunity to perform integrity checks on the system with minimal impact to business. Finally, you should know any contingency plans in place, especially in the event that you blow up the host while performing integrity checks, or discover that the system is in fact compromised, and must be taken offline.

@@ -1,0 +1,11 @@
+# Chapter 4 • Attacking and Defending Windows XP Professional
+
+be a tedious task, but if Windows evolution remains the same, it is likely that some of those applications will be eventually incorporated into the core operating system. The pertinent external application is anti-virus, and configuring your system may prove to be the most cumbersome. Configuring your system policies, however, is somewhat minor in comparison to configuring your system, which in general is not an easy task, because it reviewing your Software Restriction Policies, verifying your local security policy, and defining your IP security policies. Lastly, and definitely the most important task in securing your system, is configuring particulars of your system. The particulars that I referencing NT File System (NTFS) usage, securing your system and file permissions, enabling ICE implementing an auto-update process, installing hotfixes and patches, and securing user and group permissions. Each of these concentrations will be covered in detail throughout the following section.
+
+# Verifying NTFS Usage
+
+The NTFS file system architecture provides multiple security and optimization advantages over other file systems you could select to install your XP Professional simply because if it is not NTFS, you may want to completely reinstall your system on a NTFS file system. NTFS has inherent protections that increase the complexity of accessing files within the OS without running in an authenticated session. It also aids in protecting files from other users accessing files to which they do not have the proper permissions. To verify if all of your disks are using NTFS, open the My Computer from the Start menu. Then right-click on each of the local disks underneath the Hard Disks heading at the top of the window. Scroll down and select Properties to ensure that it says NTFS next to File system, as shown in Figure 4.9.
+
+> It is assumed that you do not have a dual-boot system or will not install virtual machines running with a Linux or Unix operating system. Such OSs cannot freely read data from a NTFS file system. If you require the ability to access the file system or import it into a *nix structure, you probably want your XP Professional system to reside on a FAT32 system.
+
+www.synergy.com

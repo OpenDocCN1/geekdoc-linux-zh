@@ -1,0 +1,15 @@
+# Aaron Rhodes
+
+Aaron Rhodes is a security consultant for Foundstone, Inc. where he provides network services for Foundstone clients. Aaron was formerly a member of the security consulting group at Cisco Systems, a Founder at a security startup, and a member of the United Air Force 609th Information Squadron. Aaron earned a bachelor’s of Science in Operations Research from the US Air Force Academy in Colorado Springs, CO.
+
+Melanie Woodruff (CISSP, OSCE) is a Senior Consultant for Foundstone, specializing in attack and penetration assessments. At Foundstone, Melanie has extensive experience consulting for clients in the banking, government, and retail industries. She instructs Foundstone’s Ultimate Hacking and Ultimate Hacking NT/2000 Security courses. Melanie is a contributing author for the international best selling Hacking Exposed: Network Secrets & Solutions, Third Edition (ISBN: 0072193816). She also works closely with commercial warding software vendors as a beta customer, providing bug reports and feature enhancement recommendations.
+
+# Technical Editor and Cont
+
+Mark Burnett is an independent security consultant and freelance writer specializing in securing IIS. He is co-author of Maximum Windows Security (ISBN:0672319659) and Dr Tom Shinder’s Isa Server and Beyond: Real World Solutions for Microsoft Enterprise Networks (Syngress Publishing, ISBN: 1-931836-66-3). Mark is a regular contributor to security-related magazines, newsletters, and Web Publishing. As editor of www.issecurity.info, Mark shares his own unique research as well as that from security researchers around the globe.
+
+Mark is also the contributor of Chapter 10, Securing IIS.
+
+# Technical Editor
+
+Eric Schulte is the Director of Product Research and Development at Havlik Technologies, LLC where he manages Havlik’s product vision and implementation. Eric most recently served as a program manager for the Microsoft Security Response Center and a senior technologist in the Trustworthy Computing team at Microsoft Corporation. In those roles he managed the Microsoft security patch and release process and developed security solutions for Microsoft products, including patch management and deployment solutions. Before joining Microsoft, Eric co-founded Foundstone, Inc., where he directed his Ultimate Hacking: Hands on Training program. His experiences in assessing, penetrating, and securing Microsoft technologies formed the basis of Foundstone’s audit and assessment methodologies for Windows operating systems. Prior to starting Foundstone, Eric was a Senior Manager in Ernst & Young’s natural Attack & Penetration group, where he was widely recognized as the firm’s expert on Microsoft security. Eric is a contributing author to Hacking Exposed, Network Security Secrets & Solutions (ISBN: 0072121270) and is a frequent speaker at industry events such as Black Hat, CSI, MSI, SANS, and NetWorld+Interop. Eric received a bachelor’s of Arts degree in Psychology and Sociology from Amherst College.

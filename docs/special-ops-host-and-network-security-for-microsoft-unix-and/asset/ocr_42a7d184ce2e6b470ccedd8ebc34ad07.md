@@ -1,0 +1,11 @@
+to order the SQL Server Service Pack 2 CD from Microsoft. If you need help determining your MSDE installer file, see http://support.microsoft.com/default.aspx?scid=kb;en-us;q311762. Be sure to review the readme file that comes with the SQL2kdesktopSP2.exe download for more information regarding MSDE updating.
+
+# # Understanding SQL Server Security Basics
+
+In order to effectively defend SQL Server, you must first understand its basic terminology and features. Even if you are completely familiar with SQL Server, take the time to at least reread this section in case there were some security-related subtleties you may have missed. Each facet of SQL Server has security implications that may not be obvious at installation time, but it is important that you know them in order to match the risks with the specific threats that exist in your deployments.
+
+# # Explaining SQL Server Instances
+
+Beginning with version 2000, SQL Server now supports multiple instances installed on a single machine. Primarily targeted at application service providers (ASPs) and Internet service providers (ISPs), this gives users the ability to completely keep a customer's data, settings, and executables (server executables only—client tools) shared from other customers SQL Server instance. Obviously, this could be a good thing from a security perspective. However, it can also have some serious implications (see the sidebar that appears in this section).
+
+Try Ask a developer in your organization how many instances of SQL Server they have installed on their machines? The most likely answer will probably be a resounding “huh?” Truth to be, Microsoft has not made a very simple task to immediately identify all instances. One quick way to check is to look at the Services listing (in Control Manager or Computer Management) for any service that begins with MSSQL. The default instance of SQL Server will be called MSSQLServer, and any additional instances will be named MSSQL$(Instance Name), such as MSSQL\$Netsdk.

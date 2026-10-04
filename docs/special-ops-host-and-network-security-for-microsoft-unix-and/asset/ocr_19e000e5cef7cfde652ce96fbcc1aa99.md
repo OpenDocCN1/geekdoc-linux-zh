@@ -1,0 +1,5 @@
+wide-open Windows 2000 laptops, it's easier to break into a client system then spend time trying to bypass all of the other measures.
+
++   **Install a VPN** You're probably already using a VPN for remote Internet access. It's trivial to put the AP's Ethernet side in a similar configuration as your users will already be familiar with the software and operation,; Plus, since there's no need to retrain them on proprietary 802.11 solutions.
+
++   **Setup 802.1x** 802.1x is the “official” solution for the meantime, but IEEE has a working group (802.11) dedicated to providing the next standard for 802.11 security. 802.1x is a temporary fix that vendors are latching on to for something to provide a modicum of security until 802.11i is standardized. 802.11i will incorporate most of the 802.1x concepts being used today.

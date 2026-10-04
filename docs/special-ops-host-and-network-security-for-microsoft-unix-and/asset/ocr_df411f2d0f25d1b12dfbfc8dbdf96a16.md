@@ -1,0 +1,13 @@
+subsystems. This includes file management, input/output (I/O), resource management, interprocess communications, and virtual memory management duties. The microkernel is responsible for the microprocessor scheduling, multiprocessor synchronization, and interrupt handling. Device drivers act as the interpreter for communication requests for service and the hardware device, providing the ability to translate a job request into the specified action. The Hardware Abstraction Layer (HAL) allows compatibility with multiple processor platforms by isolating the Windows 2000 executive area from the hardware specific to the machine.
+
+The important consideration when looking at the kernel construction and isolation mechanisms is to realize that the provision of security and stability of the operating system is partially controlled by the method that is used in applications and coding. If the user mode functions are utilized, the processes and applications are running in their own separate spaces, better protection is provided to the Windows 2000 operating system from attack by outside control mechanisms.
+
+# Disk File System Basics and Recommendations
+
+Windows 2000 provides backward compatibility to previous DOS and Windows implementations through the capability to utilize any of the file systems used in earlier versions. Windows 2000 does not support the Network File System (NFS) as supported in Linux and Unix, or the structure or the format of the Netware file system for local use. Mount points are supported in a limited fashion, but file systems are not supported in this system as they may be in the various 'Nix flavors. Windows 2000 maintains the basic directory structure that has been present in all DOS-based and NT-based systems previously used. As I discuss the file types and their benefits and drawbacks, you will see that you should use this backward-compatible compatibility only in rare circumstances because it eliminates the possibility of securing the data on the affected machine, or more specifically, the affected partition. The unsecured partition becomes an easy source of attack for anyone with interactive (local) access to the machine.
+
+# NTFS
+
+NTFS (New Technology File System or NT File System, if you are not old) is used in all versions of the NT platform, with version changes occurring in the file system as newer versions of the NT platform have been released. Windows 2000, in all versions, supports NTFS 5.0, which incorporates new features and
+
+![](bbox=[0.065, 0.945, 0.295, 0.97])

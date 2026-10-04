@@ -1,0 +1,11 @@
+documents on such volumes, the chances of a passerby or a thief gaining access are greatly reduced. These encrypted volumes can be created as small or as large as a user wants, and occupy a subset of a physical hard disk as a standard file, so they can be backed up as easily as any other data. These volumes can be recorded to CD or other portable media to allow safe distribution of sensitive files.
+
+Many companies are afraid of widespread use of encryption for fear of losing their own data to forgotten passwords. Currently available PGP suites account for this through the use of escrow keys, a system in which one or more trusted corporate officers maintain a key which can decrypt all communications by keys generated within the organization.
+
+# Developing and Maintaining Organizational Awareness
+
+So far, we've covered some of the more frequently neglected aspects of managing internal security with effective border control. We've focused so far primarily on establishing your electronic checkpoints, with border patrol officers such as firewalls, Web and generic server proxies, logging, VPNs, and extranets. Although managing your network borders can help to prevent a substantial portion of the threats to your environment (and your sanity), there are always going to be access points that you simply hope to control.
+
+Users who bring their laptops home with them can easily provide a roaming proxy for autonomous threats such as worms, Trojan horses, and other applications that are forbidden by corporate policy;VPN tunnels can protect their encryption. A software update from a vendor may inadvertently contain the next Code Red, as of undetected in an inactive gestational state, waiting for a certain six months in the future. No matter how locked down your borders are, there will always be risks and vulnerabilities that must be addressed.
+
+In the remainder of this chapter, I review strategies and techniques for mitigating these risks on an organizational level. Although I touch briefly on the technical issues involving internal firewalling and intrusion detection, our primary focus here will be developing the human infrastructure and resources necessary to address both incident response and prevention.

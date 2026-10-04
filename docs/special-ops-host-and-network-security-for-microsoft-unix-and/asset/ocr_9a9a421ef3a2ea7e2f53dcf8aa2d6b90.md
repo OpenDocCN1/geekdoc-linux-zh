@@ -1,0 +1,15 @@
+# Chapter 18 · Creating Effective Corporate Security Policies
+
+was too general for a standard. A technical standard would usually include specific controls and how they are to be implemented. However, it has been argued that the generality of the ISO17799 is both its greatest weakness and greatest strength. Just as no two organizations are alike, no two security policies should be alike. Each should be customized to the specific needs of the company, an issue I get later in the “Creating Corporate Security Policies” section.
+
+There has been some confusion over the ISO17799, in that you cannot become certified as ISO17799-compliant. When the BS 7799 was originally submitted, BSI decided to include BS 7799-2 for approval, which is a checklist of controls that a company can be audited against. The ISO17799 is not appropriate to be certified and therefore the ISO has not offered a certification through its registrars. However, if your company has a desire to be certified against the BS 7799-2, which is the closest certification available, you can get more information at BSI’s homepage, www.bsi.com.
+
+Regardless of a company’s interest in certification, the ISO17799 provides high-level guidance for almost all of the areas your security policy should cover. In some cases, the ISO17799 may provide details relevant to your business practice. For example, if you do not outsource any software development, Section 10.5.5, titled “Outsourced software development,” may be irrelevant to you. In other cases, the ISO17799 might not provide enough detail to use for guidance. For example, if you require details on creating a security policy for international trade agreements, you may need to use another source for more detail than what is provided in section 4.2, “Security of third party access.”
+
+The ISO17799 can be purchased from BSI for under $200, and it is a worth investment. Though not perfect, it is one of the best we have, and one of the most widely-referred to security documents. It appears to have good traction and is gaining ground, both in the American and international communities, as a solid security standard.
+
+# SAS70
+
+The Statement on Auditing Standards (SAS) No. 70, Service Organizations, is a tool available to auditing firms and CPAs to conduct an audit of a company that has already implemented an information security program. The SAS70 does not contain a checklist of security controls, but allows an auditing firm to issue a statement of how well a company is adhering to their stated information security policy. The report can be issued of type I or type II:A type I includes the auditor’s reports and controls, and type II includes testing and verification of the security controls over a time of six months or more.
+
+![](bbox=[0.068, 0.946, 0.296, 0.971])

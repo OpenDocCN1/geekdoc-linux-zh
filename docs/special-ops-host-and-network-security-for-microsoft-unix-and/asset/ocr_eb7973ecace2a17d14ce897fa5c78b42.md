@@ -1,0 +1,13 @@
+# Fine Tuning Access Control
+
+Among many benefits of the development and introduction of Windows 2000, the ability to more precisely control access to systems and resources is the most important. Particularly in the case of machines and users configured to participate in the Active Directory domain structure, administrators and security professionals now have many of the tools that have been needed to enforce the concept of least privilege for the configuration of DACL levels and the administration of access control mechanisms.
+
+If Windows 2000 is utilized in a workgroup environment or is not attached to a domain structure that utilizes the enhanced authentication methods (either a Windows 2000 domain or a Kerberos realm), it will utilize the NT LAN Manager (NTLM) or NTLM v2 processes for authentication and access control. These processes will be used in communication scenarios involving down level Windows clients. Given the choice, it is preferred to join machines to a Windows 2000 domain, in order to fully utilize the capabilities of the Kerberos authentication process. This provides a mid level control over access levels, the ability to delegate permission to perform various system tasks, and the use of the time-based Kerberos access token process to limit the effects of playback in your network areas.
+
+# Defining Network Access
+
+Windows 2000 also allows a capability to define more fully than previous operating systems who has access from the network and how they may access the resources that the administrator is charged with protecting. This expanded capability provides the ability to block or filter protocols at the individual machine level and to configure settings for IP Security security templates, as discussed previously. For instance, Windows 2000 allows the administrator during configuration of accounts and services to require specific levels of authentication, secure communication channels, and also requirements for use of IPSec and IPS policies on individual machines. Additionally, you can use the capability to allow or deny TCP and UDP ports as desired on individual machines to further protect them.
+
+You can also control network access to resources with a combination of NTFS and share permission settings on the DACLs for folders on NTFS partitions. In the case of Windows 2000, you can map resources below the shared folder if you have been granted permission to access them. This capability was not available in Windows NT 4.0.
+
+![](bbox=[0.707, 0.946, 0.933, 0.966])

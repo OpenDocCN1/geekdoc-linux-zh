@@ -1,0 +1,11 @@
+programs today? When was the last time you reviewed your remote access policy? By asking these questions of yourself and your co-workers, you can begin to allocate more resources towards prevention. This change in stance will take time and effort, but when compared to the ongoing financial and time-based costs of managing incidents after the fact, you will find that it is time spent.
+
+# Links to Sites
+
++   - CSO Online (www.csoonline.com) This site, and its classic media subscription magazine (free to those who qualify) provides articles targeted to executive-level security personnel. In addition to providing insight into the mindset of the decision makers, its articles focus on organizational security, instead of the more localized approach taken by many other security-related sites and publications.
+- SecurityFocus (www.securityfocus.com) This site needs introduction to those in the computer security industry. It includes insightful articles from people “in the trenches,” from technical how-to’s to strategic discussions on matters pertaining to information security professionals.
+- International Information Systems Security Certifications Consortium (www.isc2.org) This is the site for the providers of the well-known CISSP and SSCP certifications. (ISC², as called, has established its mission as compiling a relevant “Common Body of Knowledge” and developing testing to validate a candidate’s understanding of the core principles of information security. (ISC)² provides a reference list of publications that are representative of the concepts tested for both of its certifications, many of these books are considered to be the authoritative source of information on their realm within information security.
+
+# Mailing Lists
+
++   - VulWatch (vulnwatch-help@vulnwatch.org) VulWatch is a rare mailing list in that it is extensively moderated with a high signal-to-noise ratio. Filtered to provide nothing but vulnerability announcements, this is an excellent resource for the administrator whose e-mail volume is already much too high.

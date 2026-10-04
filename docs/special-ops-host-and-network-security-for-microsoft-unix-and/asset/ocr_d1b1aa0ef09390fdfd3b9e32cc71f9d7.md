@@ -1,0 +1,1 @@
++   Digest authentication is more secure than basic authentication, because IIS uses a message digest (or hash) to verify the user's credentials rather than sending usernames and passwords over the network. However,

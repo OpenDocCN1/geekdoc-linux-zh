@@ -1,0 +1,13 @@
+# Introduction
+
+In today's climate of insecurity, more and more people are beginning to focus on the need for true security solutions. They are starting to think of their security posture as it relates to physical entities, as well how they should protect their data and intangible assets. Managers want to be able to tell their Board of Directors that their buildings are physically secure, that data is well protected, and that disgruntled workers or unauthorized users cannot disrupt the way they do business. As the IT manager or the LAN administrator, you are tasked with the impossible mission of protecting and managing all of those requirements.
+
+So where do you begin? You have no doubt some of the other chapters in this book. Each chapter provides unique solutions for the individual components of your network. The authors have utilized varying points of view from the security professional to the attacker, to provide a holistic view to assessing your network's vulnerabilities. In a similar manner, this chapter focuses on the task of securing the network devices that keep your network running and your users working.
+
+To help you on this assignment, I am going to share my experiences in locking down my networks. Together we will cover the principles of how to assess the risks facing your network, and how to remediate some of the holes you may find. By the end of this chapter, you will understand what tools are needed to help defend your network against some of the most widely internal attacks. You will also gain some crucial insights into how you should go about managing your network once it is secured.
+
+# Learning About Your Network’s Security Design
+
+Although it is simple for IT managers to mandate security policy and procedures, rarely do they comprehend the difficulty in applying doctrine to the attacker. All networks are dynamic, and ever growing, but none more than the corporate local area network (LAN). In this arena, access, traffic, and permissions change on almost an hourly basis. Without an understanding of these factors as they relate to your network, it will be nearly impossible to implement a security solution that will not cause a large amount of false positives or management obstacles.
+
+The following sections demonstrate some of the ways in which you can get an enhanced knowledge of your network. Although this may not be the most exciting exercise in securing your internal network, it is vital to your success.

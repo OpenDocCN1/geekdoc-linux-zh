@@ -1,0 +1,11 @@
+Windows platforms or exe() or system() exported by libc on Unix platforms. Any operating system command passed as a parameter to these functions would run in the security context of the account running the Oracle processes. On Unix systems, and on Windows NT/2000 this is, by default, the local SYSTEM account. Any commands executed as these users will have dire consequences for the targeted computer system. Several things can be done to mitigate the risk of such an attack. The first line of defense is, of course, with the use of a firewall. No one should be able to access the Listener port of TCP 1521 from the Internet. This not only helps risk concerned with this problem but few others. Provided the Web server has been secured, there should be minimal risk of an attacker originating from the Web server. Please see the "Securing the Listener" section later in the chapter for more details.
+
+# Figure 13.2 Extproc Communication
+
+| Standard extproc usage | Malicious extproc usage |
+|---|---|---|
+| Step 2 - Listener executes the extproc.exe file and passes the DLL as a parameter | Extproc.exe | Step 2 - Listener executes the extproc.exe file and requests to load msvcrt.dll | Extproc.exe |
+| Listener on port 151 | Step 1 - Attacker sends a request to the listener to execute extproc.exe and load the DLL msvcrt.dll | Listener on port 151 |
+| Step 1 - Database requests listener to start an extproc engine and load a specific DLL | Database SID=ord | Step 3 - Extproc loads msvcrt.dll and run system() with malicious command | Client | Database SID=ord
+
+Version 9.0.1.3.1 of Oracle is still vulnerable to this problem, version 9.2.0.1.0 takes steps to prevent an attacker from exploiting this. It does this in two ways: first, only libraries found in the ORACLE_HOME\bin directory can be loaded; and second, only connections coming from the local machine will be honored. There are still few problems with this, however. A remote attacker can still connect to extproc over TCP/IP and make the same request. Extproc will not service the request and will write out an error to log file stating that an attempt was made to load a library from a remote machine.
