@@ -1,0 +1,7 @@
+directory is available across the network in case the user logs in from several different stations. For a large site, you should store home directories on a server.
+
+Regardless of where their home directory is located, users usually access them through a mount point named /home/username. When AutoFS is used to mount home directories, you are not permitted to create any directories under the /home mount point on any system. The system recognizes the special status of /home when AutoFS is active. For more information about AutoFS and automounting home directories, see the NFS Administration Guide.
+
+To access the home directory anywhere on the network, you should always refer to it as $HOME, not as /export/home/username. The latter is machine-specific and should be discouraged. In addition, any symbolic links created in a user's home directory should use relative paths (for example, ../../x/y/x) so the links will be valid no matter where the home directory is mounted. The location of user home directories might change. By not using machine-specific names, you maintain consistency and reduce system administration.
+
+This concludes the discussion on how to add user login accounts to the system. By default, when users first log in, they are presented with a default desktop window environment called CDE (Common Desktop Environment). Setup and customization of CDE is described in Chapter 7, “Administration and Configuration of the CDE.”

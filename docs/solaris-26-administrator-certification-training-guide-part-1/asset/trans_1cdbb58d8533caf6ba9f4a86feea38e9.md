@@ -1,0 +1,192 @@
+
+When setting up slices, remember these rules:
+
+- Each disk slice holds only one file system.
+- No file system can span multiple slices.
+- After a file system is created, its size cannot be increased or decreased without repartitioning the entire disk and restoring all data from a backup.
+- Slices cannot span multiple disks; however, multiple swap slices on separate disks are allowed.
+
+Also follow these guidelines when planning the layout of file systems:
+
+- Distribute the workload as evenly as possible among different I/O systems and disk drives. Distribute /home and swap directories evenly across disks.
+- Keep projects or groups within the same file system.
+- Use as few file systems per disk as possible. On the system (or boot) disk, you usually have three slices: /, /usr, and a swap area. On other disks, create one or—at most—two slices. Fewer, roomier slices cause less file fragmentation than many small, overcrowded slices. Higher-capacity tape drives and the capability of ufsdump to handle multiple volumes facilitate backing up larger file systems.
+- It is not important for most sites to be concerned about keeping similar types of user files in the same file system.
+- Infrequently, you might have some users who consistently create very small or very large files. You might consider creating a separate file system with more inodes for users who consistently create very small files. See the sections on inodes and changing the number of bytes per inode later in this chapter.
+
+## Displaying Disk Configuration Information
+
+As described earlier, disk configuration information is stored in the disk label. If you know the disk and slice number, you can display information for a disk by using the prtvtoc (print volume table of contents) command. You can specify the volume by specifying any non-zero-size slice defined on the disk (for example, /dev/rdsk/c0t3d0s2 for all of disk 3 or /dev/rdsk/c0t3d0s5 for the sixth slice of disk 3). If you know the target number of the disk but do not know how it is divided into slices, you can show information for the entire disk by specifying either slice 2 or slice 0. The following steps show how you can examine information stored on a disk's label by using the prtvtoc command.
+
+1. Become superuser.
+2. Type prtvtoc /dev/rdsk/c0t3d0s2 and press Enter.
+
+Information for the disk and slice you specify is displayed. In the following steps, information is displayed for all of disk 3:
+
+1. Become superuser.
+2. Type `prtvtoc /dev/rdsk/c0t3d0s2` and press Enter.
+
+The system responds with:
+
+```
+* /dev/rdsk/c0t3d0s2 (volume "") partition map
+*
+* Dimensions:
+* 512 bytes/sector
+* 36 sectors/track
+* 9 tracks/cylinder
+* 324 sectors/cylinder
+* 1272 cylinders
+* 1254 accessible cylinders
+*
+* Flags:
+* 1: unmountable
+* 10: read-only
+*
+* PartitionTag  Flags First Sector Sector Count Last Sector Mount Directory
+2          5      01     0    406296   406295
+6          4      00     0    242352   242351
+7          0      00 242352   163944   406295   /files7
+```
+
+The prtvtoc command shows the number of cylinders and heads, as well as how the disk's slices are arranged.
+
+## Using the format Utility to Create Slices
+
+Before you can create a file system on a disk, the disk must be formatted and you must divide it into slices by using the Solaris format utility. Formatting involves two separate processes:
+
+- Formatting—Writing format information to the disk
+- Surface analysis—Compiling an up-to-date list of disk defects
+
+When a disk is formatted, header and trailer information is superimposed on the disk. When the format utility runs a surface analysis, the controller scans the disk for defects. It needs to be noted that defects and formatting information reduce the total disk space available for data. This is why a new disk usually holds only 90–95% of its capacity after formatting. This percentage varies according to disk geometry and decreases as the disk ages and develops more defects.
+
+The need for performing a surface analysis on a disk drive has dropped as more manufacturers ship their disk drives formatted and partitioned. You should not need to use the format utility when adding a disk drive to an existing system unless you think disk defects are causing problems or you want to change the partitioning scheme.
+
+> **CAUTION!** *Formatting and creating slices is a destructive process, so make sure user data is backed up before you start.*
+
+The `format` utility searches your system for all attached disk drives and reports the following information about the disk drives it finds:
+
+- Target location
+- Disk geometry
+- Whether the disk is formatted
+- Whether the disk has mounted partitions
+
+In addition, the `format` utility is used in disk repair operations to do the following:
+
+- Retrieve disk labels
+- Repair defective sectors
+- Format and analyze disks
+- Partition disks
+- Label disks (write disk name and configuration information to the disk for future retrieval)
+
+The Solaris installation program partitions and labels disk drives as part of installing the Solaris release. However, you might need to use the `format` utility when
+
+- Displaying slice information
+- Dividing a disk into slices
+- Adding a disk drive to an existing system
+- Formatting a disk drive
+- Repairing a disk drive
+
+The main reason a system administrator uses the `format` utility is to divide a disk into disk slices. The process of creating slices is as follows:
+
+1. Become superuser.
+2. Type format.
+
+The system responds with
+
+```
+AVAILABLE DISK SELECTIONS:
+0. c0t0d0 at scsi bus0 slave 24
+sd0: <SUN0207 cyl 1254 alt 2 hd 9 sec 36>
+1. c0t3d0 at scsi bus0 slave 0: test
+sd3: <SUN0207 cyl 1254 alt 2 hd 9 sec 36>
+```
+
+3. Specify the disk (enter its number).
+
+The system responds with
+
+```
+FORMAT MENU:
+disk - select a disk
+type - select (define) a disk type
+partition - select (define) a partition table
+current - describe the current disk
+format - format and analyze the disk
+repair - repair a defective sector
+label - write label to the disk
+analyze - surface analysis
+defect - defect list management
+backup - search for backup labels
+verify - read and display labels
+save - save new disk/partition definitions
+inquiry - show vendor, product and revision
+volname - set 8-character volume name
+quit
+```
+
+4. Type partition at the format prompt and the partition menu is displayed.
+
+```
+format> partition
+
+PARTITION MENU:
+0 - change '0' partition
+1 - change '1' partition
+2 - change '2' partition
+3 - change '3' partition
+4 - change '4' partition
+5 - change '5' partition
+6 - change '6' partition
+7 - change '7' partition
+select - select a predefined partition table
+modify - modify a predefined partition table
+name - name the current table
+print - display the current table
+label - write partition map and label to the disk
+quit
+```
+
+5. Type print to display the current partition map.
+
+The system responds with
+
+```
+partition> print
+Volume: test
+Current partition table (original sd3):
+```
+
+| Part | Tag | Flag | Cylinders | Size | Blocks |
+|------|-----|------|-----------|------|--------|
+| 0 | root | wm | 0 - 39 | 14.06MB | (40/0/0) |
+| 1 | swap | wu | 40 - 199 | 56.25MB | (160/0/0) |
+| 2 | backup | wm | 0 - 1150 | 404.65MB | (1151/0/0) |
+| 3 | unassigned | wm | 0 | 0 | (0/0/0) |
+| 4 | unassigned | wm | 0 | 0 | (0/0/0) |
+| 5 | - | wm | 0 | 10.20MB | (29/0/0) |
+| 6 | usr | wm | 200 - 228 | 121.29MB | (345/0/0) |
+| 7 | home | wm | 574 - 1150 | 202.85MB | (577/0/0) |
+
+6. After partitioning the disk, it must be labeled by typing label at the partition prompt.
+
+```
+partition> label
+```
+
+7. After labeling the disk, type quit to exit the partition menu.
+
+```
+partition> quit
+```
+
+8. Type quit again to exit the format utility.
+
+```
+format> quit
+```
+
+## Logical Volumes
+
+On a large server with many disk drives, standard methods of disk slicing are inadequate and inefficient. Limitations imposed by standard file systems include the inability to be larger than the size of the file system that holds them. Because file systems cannot span multiple disks, the size of the file system is limited to the size of the disk. Another problem with standard file systems is that they cannot be increased in size without destroying data on the file system. Sun has addressed these issues with two unbundled Sun packages: Solstice DiskSuite and Sun Enterprise Volume Manager. Both packages allow file systems to span multiple disks and provide for improved I/O and reliability compared to the standard Solaris file system. We refer to these types of file systems as logical volumes (LVMs). Both Sun packages are purchased separately and are not part of the standard Solaris operating system distribution. Typically, DiskSuite is used on Sun's multipacks and the Enterprise Volume Manager package is used on the SparcStorage arrays.
+
