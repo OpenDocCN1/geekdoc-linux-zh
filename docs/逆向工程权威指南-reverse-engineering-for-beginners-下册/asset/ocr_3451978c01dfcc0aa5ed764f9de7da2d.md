@@ -1,0 +1,22 @@
+# CPU - main thread, module loops_2
+
+| | | Registers (FPU) |
+|---|---|---|---|n| 0039101C | CC | INT3 | EAX 00000000
+| 0039101D | C7 | INT3 | ECX 6F85617 MSJF
+| 0039101E | C7 | INT3 | EDX 00000218
+| 0039101F | 55 | PUSH E | EBX 00000006
+| 00391020 | 55 0200000 | MOV ESI,2 | ESP 002CF410
+| 00391021 | 56 | PUSH ESI | E 00000006
+| 00391022 | 58 D4FFFF | CALL loops_2.00331:000 | EDI 00333718 loops
+| 00391023 | 46 | INC ESI | EIP 00391023 loops
+| 00391024 | 3B C4 04 | ROI EDI,4 | E ES 0028 32bit
+| 00391025 | 3B FE 01 | CMP ESI,EAX | PL CS 0023 32bit
+| 00391026 | 7C F1 | J SHORT loops_2.00331:026 | A S 0028 32bit
+| 00391027 | 3BC | XOR EAX,EAX | ZO DS 0028 32bit
+| 00391028 | 5D | POP ESI | S FS 0053 32bit
+| 00391029 | C3 | RETN | T0 GS 0028 32bit
+| 0039102A | 59 5B643300 | PUSH loops_2.00331:406 | |
+
+图14.2 OllyDbg: i=6时的循环
+
+当i=9的时候，循环语句会做最后一次迭代。进行了这次迭代之后，i值变为10，不会再触发条件指令转移到jL。main()函数结束时的情况如图14.3所示。

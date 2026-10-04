@@ -1,0 +1,238 @@
+
+```
+.set var_8, -8
+.set var_4, -4
+.set arg_8, 8
+stw 93 E1 FF FC %r31, var_4(%sp)
+mflr 7C 08 02 8A %r0
+stw 34 A8 00 00 %nli %r5, 0
+stw 93 C1 FF F8 %r30, var_8(%sp)
+lwl 43 C2 95 A8 %r30, off_1485E8$ #
+dword_24B704
+    .using dword_24B704,
+stw 93 A1 FF F4 %r29, var_C(%sp)
+addi 38 A3 00 00 %r29, %r3, 0
+li 38 60 00 00 %r3, 0
+stw 95 C0 01 00 %r0, arg_8(%sp)
+stwu 94 21 FF 80 %sp, -0x50(%sp)
+lwl 86 0E 00 00 %r6, dword_24B704
+addi 38 81 01 38 %r4, %r5, 0x50+var_18
+bl 76 4C 00 00 .RBEREADE
+nop
+54 60 04 03F
+clrlwi.%r0, %r3, 16
+beq 41 82 00 0C loc_118784
+li 38 60 00 00 %r3, 0
+b 78 02 02 00 exit
+
+loc_118784: # CODE XREF:
+check3+30j
+A0 01 00 38 lh %r0, 0x50+18(%sp)
+28 00 04 B2 cmmplwi %r0, 0x1100
+81 82 00 0C beg loc_118798
+38 60 00 00 li %r3, 0
+48 00 02 DC b exit
+
+loc_118798: # CODE XREF:
+check3+50j
+00 0E 00 00 lwz %r6, dword_24B704
+38 81 01 38 addi %r4, %sp, 0x50+var_18
+A38 60 00 00 li %r3, 1
+A38 0A 00 00 li %r5, 1
+48 00 21 0C bl .RBEREADE
+nop
+54 60 04 3F clrlwi.%r0, %r3, 16
+41 82 00 0C beg loc_1187C0
+38 60 00 00 li %r3, 0
+48 00 02 B4 b exit
+
+loc_1187C0: # CODE XREF:
+check3+78j
+seg00:001187C0 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:001187C4 28 00 06 4B  cmplwi %r0, 0x09AB
+seg00:001187C8 41 82 00 0C  beq loc_1187D4
+seg00:001187CC 36 60 00 00  li%r3, 0
+seg00:001187D0 48 00 02 A0  b exit
+seg00:001187D4: # CODE XREF:
+check3+8bc
+seg00:001187D4 4B F9 D39  bl sub_7BAC
+seg00:001187D8 60 00 00 00  nop
+seg00:001187DC 54 60 06 3E  clrlwi %r0, %r3, 24
+seg00:001187E0 22 00 00  cmwwi %r0, 5
+seg00:001187E4 41 82 01 00  beq loc_1188E4
+seg00:001187E8 40 80 00 10  bge loc_1187F8
+seg00:001187EC 22 00 04  cmwwi %r0, 4
+seg00:001187F0 40 80 00 58  bge loc_118848
+seg00:001187F4 48 00 01 8C  b loc_118980
+seg00:001187F8: # CODE XREF:
+check3+A1cj
+seg00:001187F8 2C 00 0B  cmwwi %r0, 0
+seg00:001187FC 41 82 01 00  beq loc_118804
+seg00:00118800 48 00 01 80  b loc_118980
+seg00:00118804: # CODE XREF:
+check3+C0j
+seg00:00118804 8E 00 00 00  lwz %r6, dword_24B04
+seg00:00118808 38 31 01 38  addi %r4, %sp, 0x50+var_18
+seg00:0011880C 38 60 00 00  li %r3, 8
+seg00:00118810 38 A0 00 00  li %r5, 0
+seg00:00118814 48 00 BF B5  bl .RBEREAD
+seg00:00118818 60 00 00 00  nop
+seg00:0011881C 54 60 04 3F  clrlwi %r0, %r3, 16
+seg00:00118820 42 82 00 00  beq loc_1188C2
+seg00:00118824 38 60 00 00  li %r3, 0
+seg00:00118828 48 00 02 48  b exit
+seg00:0011882C
+loc_1188C2: # CODE XREF:
+check3+E4j
+seg00:0011882C A0 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:00118830 28 00 11 30  cmplwi %r0, 0xFEA0
+seg00:00118834 41 82 00 0C  beq loc_118840
+seg00:00118838 38 60 00 00  li %r3, 0
+seg00:0011883C 48 00 02 34  b exit
+seg00:00118840
+loc_118840: # CODE XREF:
+check3+F8j
+seg00:00118840 38 60 00 01  li %r3, 1
+seg00:00118844 48 00 02 2C  b exit
+seg00:00118848
+loc_118848: # CODE XREF:
+check3+B4j
+seg00:00118848 80 DE 00 00  lwz %r6, dword_24B04
+seg00:0011884C 38 31 00 38  addi %r4, %sp, 0x50+var_18
+seg00:00118850 38 60 00 0A  li %r3, 0
+seg00:00118854 38 0A 00 00  li %r5, 0
+seg00:00118858 48 00 BF 71  bl -0x400 .REREAD
+seg00:0011885C 60 00 00 00  nop
+seg00:00118860 54 60 04 3F  clrlwi %r0, %r3, 16
+seg00:00118864 41 82 00 00  beq loc_118870
+seg00:00118868 38 60 00 00  li %r3, 0
+seg00:0011886C 48 00 02 04  b exit
+seg00:00118870
+loc_118870: # CODE XREF:
+check3+128j
+seg00:00118870 A0 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:00118874 28 00 0D F3  cmplwi %r0, 0xA6E1
+seg00:00118878 41 82 00 00  beq loc_118884
+seg00:0011887C 38 60 00 00  li %r3, 0
+seg00:00118880 48 00 01 00  b exit
+seg00:00118884
+loc_118884: # CODE XREF:
+check3+13Cj
+seg00:00118884 57 8F 03 3E  clrlwi %r31, %r29, 24
+seg00:00118888 28 1F 00 02  cmplwi %r31, 2
+seg00:0011888C 40 82 00 00  bne loc_118898
+seg00:00118890 38 60 00 01  li %r3, 1
+seg00:00118894 48 00 01 DC  b exit
+seg00:00118898
+loc_118898: # CODE XREF:
+check3+150j
+seg00:00118898 80 DE 00 00  lwz %r6, dword_24B04
+seg00:0011889C 38 31 00 38  addi %r4, %sp, 0x50+var_18
+seg00:001189A0 38 60 00 0B  li %r3, 0xB
+seg00:001189A4 38 0A 00 00  li %r5, 0
+seg00:001189A8 48 00 BF 71  bl -0x400 .REREAD
+seg00:001189AC 60 00 00 00  nop
+seg00:001189B0 54 61 04 3F  clrlwi %r0, %r3, 16
+seg00:001189BA4 41 82 00 00  beq loc_1188C0
+seg00:001189B8 38 60 00 00  li %r3, 0
+seg00:001189BC 48 00 01 B4  b exit
+seg00:001189A0
+loc_1189A0: # CODE XREF:
+check3+178j
+seg00:001189A0 A0 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:001189A4 28 00 23 1C  cmplwi %r0, 0x1C20
+seg00:001189A8 41 82 00 00  beq loc_1189D4
+seg00:001189CC 38 60 00 00  li %r3, 0
+seg00:001189D0 48 00 01 A0  b exit
+seg00:001189D4: # CODE XREF:
+check3+1BC
+seg00:001189D4 28 1F 00 03  cmplwi %r31, 1
+seg00:001189D8 40 82 01 94  bne error
+seg00:001189DC 38 60 00 01  li %r3, 1
+seg00:001189EB 48 00 01 90  b exit
+seg00:001189E4: # CODE XREF:
+check3+A8
+seg00:001189E4 80 0E 00 00  lwz %r6, dword_24B04
+seg00:001189E8 38 31 00 38  addi %r4, %sp, 0x50+var_18
+seg00:001189EC 38 60 00 0C  li %r3, 0xC
+seg00:001189F0 38 00 00 00  li %r5, 0
+seg00:001189F4 48 00 BE 05  bl .REREAD
+seg00:001189F8 60 00 00 00  nop
+seg00:001189FC 54 60 04 3F  clrlwi %r0, %r3, 16
+seg00:00118900 41 82 00 00  beq loc_11890C
+seg00:00118904 38 60 00 00  li %r3, 0
+seg00:00118908 48 00 01 68  b exit
+seg00:0011890C
+loc_11890C: # CODE XREF:
+check3+1C4j
+seg00:0011890C 01 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:00118910 28 01 1F 40  cmplwi %r0, 0x40FF
+seg00:00118914 41 82 00 00  beq loc_118920
+seg00:00118918 38 60 00 00  li %r3, 0
+seg00:0011891C 48 00 01 54  b exit
+seg00:00118920
+loc_118920: # CODE XREF:
+check3+D8j
+seg00:00118920 57 8F 06 3E  clrlwi %r3, %r9, 24
+seg00:00118924 28 1F 00 02  cmplwi %r31, 2
+seg00:00118928 40 82 00 00  bne loc_118934
+seg00:0011892C 38 60 00 01  li %r3, 1
+seg00:00118930 48 00 01 40  b exit
+seg00:00118934
+loc_118934: # CODE XREF:
+check3+ECj
+seg00:00118934 80 0E 00 00  lwz %r6, dword_24B04
+seg00:00118938 38 31 00 38  addi %r4, %sp, 0x50+var_18
+seg00:0011893C 38 60 00 0D  li %r3, 0xD
+seg00:00118940 38 00 00 00  li %r5, 0
+seg00:00118944 48 00 BE 85  bl .REREAD
+seg00:00118948 60 00 00 00  nop
+seg00:0011894C 54 64 03 3F  clrlwi %r0, %r3, 16
+seg00:00118950 41 82 00 00  beq loc_11895C
+seg00:00118954 38 60 00 00  li %r3, 0
+seg00:00118958 48 00 01 18  b exit
+seg00:0011895C
+loc_11895C: # CODE XREF:
+check3+214j
+seg00:0011895C A0 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:00118960 28 00 07 CF  cmplwi %r0, 0xFC
+seg00:00118964 41 82 00 00  beq loc_118970
+seg00:00118968 38 60 00 00  li %r3, 0
+seg00:0011896C 48 00 01 04  b exit
+seg00:00118970
+loc_118970: # CODE XREF:
+check3+228j
+seg00:00118970 28 1F 00 03  cmplwi %r31, 3
+seg00:00118974 40 82 00 08  bne error
+seg00:00118978 38 60 00 01  li %r3, 1
+seg00:0011897C 48 00 00 F4  b exit
+seg00:00118980
+loc_118980: # CODE XREF:
+check3+3Bj
+seg00:00118980 80 0E 00 00  lwz %r6, dword_24B04
+seg00:00118984 38 81 00 38  addi %r4, %sp, 0x50+var_18
+seg00:00118988 3B E0 00 00  li %r31, 0
+seg00:0011898C 38 60 00 04  li %r3, 4
+seg00:00118990 38 A0 00 00  li %r5, 0
+seg00:00118994 49 00 02 35  bl .RERBERADE
+seg00:00118998 60 00 00 00  nop
+seg00:0011899C 54 64 0A 3F  clrlwi %r0, %r3, 16
+seg00:001189A0 41 82 00 00  beq loc_1189AC
+seg00:001189A4 38 60 00 00  li %r3, 0
+seg00:001189A8 48 00 00 00  b exit
+seg00:001189AC
+loc_1189AC: # CODE XREF:
+check3+264j
+seg00:001189AC A0 01 00 38  lhz %r0, 0x50+var_18(sp)
+seg00:001189B0 28 00 1D 6A  cmpli %r0, 0xAEDD0
+seg00:001189B4 40 82 00 0C  bne loc_1189C0
+seg00:001189B8 3B E0 00 01  li %r31, 1
+seg00:001189BC 48 00 00 14  b loc_1189D0
+seg00:001189C0
+seg00:001189C0
+loc_1189C0: # CODE XREF:
+check+278j
+seg00:001189C0 28 00 18 28  cmplwi %r0, 0x2818
+seg00:001189C4 41 82 00 0C  beq loc_1189D0
+seg00:001189C8 38 60 00 00  li %r3, 0
+```
