@@ -1,0 +1,166 @@
+
+- timed - timedc (8) - 定时控制程序
+- timedc - timedc (8) - 定时控制程序
+- timer - getitimer, setitimer (2) - 操作间隔计时器值
+- timers - add_timer, del_timer, init_timer (9) - 内核事件计时器
+- times - difftime (3) - 计算两个时间之间的秒数
+- times - times (1) - bash 内置命令
+- times - times (2) - 获取进程时间
+- times - utime, utimes (2) - 更改 inode 中的访问或修改时间
+- timestamps - touch (1) - 更新文件时间戳
+- time-zone - adjust_clock (9) - 根据时区值将内核时钟设置为 GMT
+- tin - tin (1) - 网络新闻阅读器
+- tind - tind (1) - 网络新闻阅读器
+- tload - tload (1) - 以图形方式显示系统负载平均值
+- tmpfile - tmpfile (3) - 创建临时文件
+- tmpnam - tmpnam (3) - 为临时文件创建名称
+- token - strtok (3) - 从字符串中提取标记
+- tokens - strsep (3) - 将字符串拆分为标记
+- tolower - tolower (3) - 将字母转换为大写或小写
+- tools - mf, inimf, virmf (1) - 字体和标志设计工具
+- tools - Mtools (1) - 用于操作 DOS 文件的工具
+- tools - Mtools (5) - 用于操作 DOS 文件的工具
+- top - top (1) - 显示 CPU 使用率最高的进程
+- touch - touch (1) - 更新文件时间戳
+- toupper - toupper (3) - 将字母转换为大写或小写
+- tpic - pic2tpic (1) - 将 pic 文件转换为 tpic 格式
+- tr - tr (1) - 翻译字符
+- trace - ptrace (2) - 调试进程跟踪控制
+- trace - strace (1) - 运行命令并跟踪系统调用和信号
+- traceroute - traceroute (8) - 显示网络数据包所经过的路由
+- transfer - ftp (1) - 文件传输程序
+- transfer - ftpd (8) - Internet 文件传输协议守护进程
+- transfer - NcFTP (1) - Internet 文件传输程序
+- transfer - nntpd (8) - 网络新闻传输协议守护进程
+- transfer - readv, writev (3) - 使用多个缓冲区传输多个数据块
+- transfer - tftp (1) - 简单文件传输程序
+- transfer - tftpd (8) - 简单文件传输协议守护进程
+- transfig - transfig (1) - 为可移植的 LaTeX 插图创建 makefile
+- transformation - strxfrm (3) - 字符串转换
+- translate - colcrt (1) - 将 nroff 输出翻译为屏幕查看
+- translate - fig2dev (1) - 将 Fig 代码翻译为其他图形语言
+- translate - gftodvi (1) - 将通用字体文件翻译为 DVI 格式
+- translate - gftopk (1) - 将通用字体文件翻译为打包字体文件
+- translate - gftype (1) - 将通用字体文件翻译为人类可读格式
+- translate - htonl, htons, ntohl, ntohs (3) - 在主机字节序和网络字节序之间转换
+- translate - mft (1) - 将 metafont 程序翻译为 TeX 文件
+- translate - pfbtops (1) - 将 .pfb PostScript 字体翻译为 ASCII
+- translate - pktogf (1) - 将打包字体翻译为通用字体
+- translate - tr (1) - 翻译字符
+- translation - dumpkeys (1) - 显示键盘转换表
+- translation - loadkeys (1) - 加载内核键盘转换表
+- transport - deliver (8) - 本地邮件传输
+- transport - sendmail (8) - Internet 邮件传输程序
+- trap - trap (1) - bash 内置命令
+- tree - ftw (3) - 在目录树中的文件名上执行函数
+- tree - lndir (1) - 使用符号链接制作目录树的副本
+- tree - pstree (1) - 以树形显示进程层级
+- trig - acos (3) - 反余弦三角函数
+- trig - acosh (3) - 逆双曲余弦三角函数
+- trig - asin (3) - 反正弦三角函数
+- trig - asinh (3) - 逆双曲正弦三角函数
+- trig - atan (3) - 反正切三角函数
+- trig - atan2 (3) - 双变量反正切三角函数
+- trig - atanh (3) - 逆双曲正切三角函数
+- trig - cos (3) - 余弦三角函数
+- trig - cosh (3) - 双曲余弦三角函数
+- trig - sin (3) - 正弦三角函数
+- trig - sinh (3) - 双曲正弦三角函数
+- trig - tan (3) - 正切三角函数
+- trig - tanh (3) - 双曲正切三角函数
+- trivial - tftp (1) - 简单文件传输程序
+- trivial - tftpd (8) - 简单文件传输协议守护进程
+- troff - addftinfo (1) - 修改 troff 字体文件以供 groff 使用
+- troff - eqn (1) - troff 的公式排版
+- troff - gpic (1) - gnu pic 为 troff 或 TeX 生成图片
+- troff - groff (1) - gnu troff 兼容文档格式程序
+- true - true (1) - 不执行任何操作并返回真退出状态
+- truncate - truncate (2) - 将文件缩短到给定长度
+- tryaffix - tryaffix (1) - 拼写检查器
+- tsort - tsort (1) - 对有向图中的节点进行排序
+- tty - grotty (1) - groff tty 驱动程序
+- tty - isatty (3) - 测试文件描述符是否为 tty
+- tty - tty (1) - 打印控制终端的特殊文件名
+- tty - tty (4) - 控制终端特殊文件
+- ttyname - ttyname (3) - 获取打开终端设备的路径名
+- ttys - securetty (5) - root 可以登录的 ttys 列表
+- ttys - ttys (4) - 串行设备特殊文件
+- ttysnoop - ttysnoop (8) - 嗅探用户终端
+- ttytype - ttytype (5) - 终端名称和设备文件
+- tune - adjtimex (2) - 调整内核时钟
+- tune2fs - tune2fs (8) - 操作第二扩展文件系统中的参数
+- tunelp - tunelp (8) - 操作 lp 打印机设备的参数
+- twm - twm (1) - X11 的窗口管理器
+- type - sysfs (2) - 获取当前文件系统类型信息
+- type - type (1) - bash 内置命令
+- type-checks - test (1) - 为文件类型检查和值比较生成退出状态
+- types - file (1) - 显示文件类型
+- typeset - typeset (1) - bash 内置命令
+- typesetting - ams latex (1) - 文本格式和排版
+- typesetting - amstex (1) - 文本格式和排版
+- typesetting - latex (1) - 文本格式和排版系统
+- typesetting - tex, vtex (1) - 执行文本格式和排版
+- typesetting - vtex (1) - 用于生产排版的 TeX 版本
+- tzfile - tzfile (5) - 时区信息
+- tzset - tzset (3) - 初始化时区信息
+- ul - ul (1) - 下划线过滤器
+- ulimit - ulimit (1) - bash 内置命令
+- umask - umask (1) - bash 内置命令
+- umask - umask (2) - 设置文件创建掩码
+- umount - umount (2) - 将文件系统挂载和卸载到目录层次结构
+- umount - umount (8) - 将文件系统挂载和卸载到目录层次结构
+- unalias - unalias (1) - bash 内置命令
+- uname - uname (1) - 显示系统信息
+- uname - uname (2) - 返回有关当前内核的信息
+- uncompile - showrgb (1) - 反编译 rgb 颜色名称数据库
+- uncompile - untic (1) - 反编译编译后的 terminfo 文件内容
+- uncompress - gzip, gunzip, zcat (1) - 压缩和解压缩文件
+- uncompress - uncompress (1) - 压缩和扩展文件内容
+- uncompress - unsq (1) - 解压缩排序后的词列表
+- underlining - ul (1) - 下划线过滤器
+- unexpand - unexpand (1) - 将空格转换为制表的过滤器
+- ungetc - ungetc (3) - 字符串和字符输入函数
+- unimplemented - afs_syscall, break, gtty, lock, mpx, prof, quotactl, stty (2) - 未实现的系统调用
+- uniq - uniq (1) - 从排序文件中删除重复行
+- unique - mkstemp (3) - 从名称模板创建唯一临时文件
+- unique - mktemp (3) - 创建唯一临时文件名
+- unique - tempnam (3) - 创建唯一临时文件名
+- Unix - elvis, ex, vi, view, input (1) - Unix 标准编辑器
+- Unix - manmanifest (1) - 帮助恢复因 DOS 名称限制而修改的 Unix 文件名
+- unlink - unlink (2) - 从目录中删除文件
+- unload - rmmod (1) - 卸载已加载的内核模块
+- unmodified - rcs clean (1) - 清理未修改的 rcs 工作文件
+- unmount - mount, umount (2) - 将文件系统挂载和卸载到目录层次结构
+- unmount - mount, umount (8) - 将文件系统挂载和卸载到目录层次结构
+- unpack - unshar (1) - 解包嵌入邮件消息中的 shar 文件
+- unreferenced - get_empty_filp (9) - 在内核文件表中查找未引用的条目
+- unsaved - elvisrc (1) - 在崩溃后恢复未保存的 elvis 编辑器文件
+- unset - unset (1) - bash 内置命令
+- unshar - unshar (1) - 解包嵌入邮件消息中的 shar 文件
+- unsigned - strtoul (3) - 将字符串转换为无符号长整数
+- unsq - unsq (1) - 解压缩排序后的词列表
+- untic - untic (1) - 反编译编译后的 terminfo 文件内容
+- until - until (1) - bash 内置命令
+- unzip - unzip (1) - 从 zip 归档中提取压缩文件
+- unzipSFX - unzipSFX (1) - 创建自解压 zip 归档
+- update - patch (1) - 使用 diff 更新文件
+- update - psupdate (8) - 更新 ps 内核数据库
+- update - touch (1) - 更新文件时间戳
+- update - updatedb (1) - 更新文件名数据库
+- update - update.state (8) - 更新系统状态
+- updatedb - updatedb (1) - 更新文件名数据库
+- update.state - update.state (8) - 更新系统状态
+- upper - toupper, tolower (3) - 将字母转换为大写或小写
+- uptime - uptime (1) - 显示系统运行时间
+- usage - du (1) - 汇总磁盘使用情况
+- usage - top (1) - 显示 CPU 使用率最高的进程
+- uselib - uselib (2) - 选择共享库
+- userid - whoami (1) - 打印有效用户 ID
+- users - newmail, wnewmail (1) - 通知用户新邮件
+- users - rpc.rusersd (8) - rusers 已登录用户守护进程
+- users - rusers (1) - 列出在本地网络机器上登录的用户
+- users - rwall (1) - 向指定主机上登录的用户发送消息
+- users - rwho (1) - 列出在本地网络机器上登录的用户
+- users - users (1) - 显示当前登录用户的登录名
+- users - wall (1) - 向所有用户写消息
+- usleep - usleep (3) - 暂停进程执行指定微秒时间

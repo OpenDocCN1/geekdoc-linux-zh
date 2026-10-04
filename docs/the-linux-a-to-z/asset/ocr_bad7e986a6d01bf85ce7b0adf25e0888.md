@@ -1,0 +1,1 @@
+Your C solution should follow this basic pattern. Try to make it as bullet proof as possible by trying to deal with as many error conditions as you can find, including checking error returns from system calls.

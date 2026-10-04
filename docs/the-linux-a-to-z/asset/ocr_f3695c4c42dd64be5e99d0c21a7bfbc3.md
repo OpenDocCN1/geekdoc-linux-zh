@@ -1,0 +1,18 @@
++   - 24.1 User programs access hardware via device drivers. 370
+- 28.1 Simplified state transition diagram for CPU scheduler. 413
+- 29.1 Stack layout in main() just before calling twice(). 422
+- 29.2 Stack layout in twice() just before return. 423
+- 29.3 Thread stack layout just before context switch. 426
+- 29.4 Data structures set up in new_thread. 429
+- 29.5 Structure links created during rendezvous. 432
+- 30.1 Calculation of a linear address. 439
+- 30.2 How paging translates linear to physical addresses. 441
+- 30.3 Paging allows easy memory segment growth. 442
+- 31.1 System V disk partition layout. 448
+- 31.2 The initial data block free list. 449
+- 31.3 Data block free list after block allocations. 450
+- 31.4 Allocation and release of free inodes. 451
+- 31.5 Data block pointers in an inode. 453
+- 31.6 minix filesystem layout on a disk partition. 455
+- 31.7 ext2 filesystem layout on a disk partition. 456
+- 31.8 Layout of an ext2 block group. 457
