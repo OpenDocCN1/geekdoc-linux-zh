@@ -1,0 +1,513 @@
+- - '#'
+  - 像幽灵一样黑客：突破云端
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于技术审阅者
+- - '##'
+  - 第一部分：捉我试试
+- - '###'
+  - 1 在线匿名
+- - '###'
+  - 2 命令与控制的回归
+- - '###'
+  - 3 让基础设施存在
+- - '##'
+  - 第二部分：加倍努力
+- - '###'
+  - 4 健康的跟踪
+- - '###'
+  - 5 漏洞搜寻
+- - '##'
+  - 第三部分：完全沉浸
+- - '###'
+  - 6 破裂
+- - '###'
+  - 7 幕后
+- - '###'
+  - 8 肖申克的救赎：越狱
+- - '###'
+  - 9 持久 Shell
+- - '##'
+  - 第四部分：内部敌人
+- - '###'
+  - 10 内部敌人
+- - '###'
+  - 11 然而，我们坚持了下来
+- - '###'
+  - 12 神化
+- - '###'
+  - 13 最终剪辑
+- - '##'
+  - 致谢
+- - '##'
+  - 引言
+- - '##'
+  - 本书如何运作
+- - '##'
+  - The Vague Plan
+- - '##'
+  - 模糊计划
+- - '###'
+  - 1 在线匿名
+- - '####'
+  - BECOMING ANONYMOUS ONLINE
+- - '####'
+  - 在线匿名
+- - '####'
+  - VPNs and Their Failings
+- - '####'
+  - VPN 及其缺陷
+- - '###'
+  - 地点，地点，地点
+- - '###'
+  - 操作笔记本
+- - '###'
+  - 跳板服务器
+- - '###'
+  - 攻击基础设施
+- - '###'
+  - 资源
+- - '###'
+  - 2 命令与控制的回归
+- - '####'
+  - 命令与控制的传统
+- - '####'
+  - 寻找新的 C2
+- - '####'
+  - Merlin
+- - '####'
+  - Koadic
+- - '###'
+  - Executing the payload on the target machine
+- - '###'
+  - Our server
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
+- - '###'
+  - 3 让基础设施存在
+- - '####'
+  - 传统方法
+- - '####'
+  - 容器和虚拟化
+- - '####'
+  - 命名空间
+- - '####'
+  - 一个 Metasploit 容器
+- - '####'
+  - 联合文件系统
+- - '####'
+  - 'file: ~/SILENTTRINITY/Dockerfile'
+- - '####'
+  - The base Docker image containing binaries to run Python 3.7
+- - '####'
+  - We install the git, make, and gcc tools
+- - '####'
+  - We download SILENTTRINITY and change directories
+- - '####'
+  - We install the Python requirements
+- - '####'
+  - We inform future Docker users that they need to bind port 5000
+- - '####'
+  - ENTRYPOINT is the first command the container runs when it starts
+- - '####'
+  - Connect to the team server running on the container
+- - '####'
+  - 控制组
+- - '####'
+  - 'file: ~/nginx/Dockerfile'
+- - '####'
+  - The base image with scripts to configure Nginx and Let's Encrypt
+- - '####'
+  - Copy a template Nginx configuration
+- - '####'
+  - Copy phony HTML web pages
+- - '####'
+  - Small script that replaces __DOMAIN__ with the ENV domain value, same for IP
+- - '###'
+  - IP 伪装
+- - '###'
+  - 自动化服务器设置
+- - '####'
+  - provider.tf
+- - '####'
+  - main.tf
+- - '####'
+  - main.tf launching 10 EC2 servers
+- - '###'
+  - 调整服务器
+- - '####'
+  - main.tf - compatible with Terraform 0.12 only
+- - '####'
+  - We copy-paste our SSH public key
+- - '####'
+  - Empty resource, since the default AWS VPC (network) already exists
+- - '####'
+  - Firewall rule to allow SSH from our bouncing server IP only
+- - '####'
+  - All outgoing traffic is allowed
+- - '####'
+  - We link the SSH key and security group to our basic_ec2 server
+- - '####'
+  - We print the server's public IP
+- - '####'
+  - 'Listing 3-5: 向 main.tf 添加一些属性'
+- - '####'
+  - 'Listing 3-6: 检查属性是否定义良好'
+- - '####'
+  - 'Listing 3-7: 从 main.tf 启动容器'
+- - '###'
+  - 推送到生产环境
+- - '####'
+  - update a few variables
+- - '###'
+  - 资源
+- - '##'
+  - 第二部分
+- - '###'
+  - 更努力尝试
+- - '###'
+  - 4 健康的跟踪
+- - '###'
+  - 资源
+- - '###'
+  - 搜刮 GitHub
+- - '####'
+  - Sample of Github queries
+- - '####'
+  - Documents on gist.github.com
+- - '####'
+  - Documents on Pastebin
+- - '####'
+  - Documents on JustPaste.it
+- - '####'
+  - Documents on PasteFS
+- - '####'
+  - Documents on CodePen
+- - '###'
+  - 拉取 Web 域名
+- - '###'
+  - 来自证书
+- - '###'
+  - 通过收割互联网
+- - '####'
+  - 清单 4-1：使用 sublist3r 枚举域名
+- - '####'
+  - 清单 4-2：创建潜在的 MXR Ads 子域名列表
+- - '####'
+  - 清单 4-3：解析我们的子域名候选以查看哪些是真实的
+- - '###'
+  - 发现使用的 Web 基础设施
+- - '###'
+  - Resources
+- - '###'
+  - 5 VULNERABILITY SEEKING
+- - '####'
+  - Practice Makes Perfect
+- - '####'
+  - Revealing Hidden Domains
+- - '####'
+  - 调查 S3 URL
+- - '####'
+  - S3 存储桶安全
+- - '####'
+  - 检查存储桶
+- - '####'
+  - Enter any valid set of credentials to unlock the CLI.
+- - '####'
+  - You can use your own AWS account, for instance.
+- - '###'
+  - S3 文件系统
+- - '####'
+  - 'We extract the filenames in the "Key" parameters:'
+- - '###'
+  - 检查面向 Web 的应用程序
+- - '###'
+  - 使用 WebSocket 进行拦截
+- - '####'
+  - 'Modified WebSocket message:'
+- - '####'
+  - 'Modified WebSocket message:'
+- - '###'
+  - 将私有 IP 地址分配给公共域名
+- - '###'
+  - 服务端请求伪造
+- - '###'
+  - 探索元数据
+- - '####'
+  - AWS Region
+- - '####'
+  - Instance ID
+- - '####'
+  - AMI ID
+- - '####'
+  - Public hostname
+- - '####'
+  - MAC address of the network interface
+- - '####'
+  - AWS Owner ID
+- - '####'
+  - Security groups
+- - '####'
+  - Subnet ID where the instance lives
+- - '####'
+  - Subnet IP range
+- - '###'
+  - 元数据 API 的肮脏秘密
+- - '####'
+  - User data information
+- - '####'
+  - cloud-config
+- - '####'
+  - 清单 5-4：user-data 脚本的延续
+- - '####'
+  - 清单 5-5：包含密码的已解码 secrets.env 文件片段
+- - '####'
+  - 清单 5-6：似乎与 env.file 交互的发现服务
+- - '####'
+  - 清单 5-7：负责在 user-data 脚本中创建 get-region-params.sh 的行
+- - '####'
+  - 清单 5-8：解码后的 get-region-params.sh 脚本片段
+- - '####'
+  - cassandra-delivery.prod.euw1.mxrads.tech
+- - '####'
+  - cassandra-usersync.prod.euw1.mxrads.tech
+- - '####'
+  - Credentials
+- - '####'
+  - On our attacking machine
+- - '###'
+  - AWS IAM
+- - '####'
+  - Examining the Key List
+- - '###'
+  - Resources
+- - '##'
+  - PART III
+- - '###'
+  - TOTAL IMMERSION
+- - '###'
+  - 6 FRACTURE
+- - '####'
+  - 服务器端模板注入
+- - '####'
+  - Ruby templates
+- - '####'
+  - Play templates (Scala/Java)
+- - '####'
+  - Jinja or Django templates
+- - '####'
+  - 指纹识别框架
+- - '####'
+  - Payload
+- - '####'
+  - 任意代码执行
+- - '####'
+  - Payload
+- - '####'
+  - 确认所有者
+- - '####'
+  - 桶走私
+- - '####'
+  - Payload
+- - '####'
+  - Payload to the surveysandstats site form
+- - '####'
+  - Results in email
+- - '####'
+  - 使用 S3 的高质量后门
+- - '####'
+  - 创建代理
+- - '####'
+  - 创建操作员
+- - '####'
+  - Payload to the surveysandstats site form
+- - '####'
+  - SSRF 替代方法
+- - '####'
+  - 尝试突破
+- - '####'
+  - 检查特权模式
+- - '####'
+  - Demo lab
+- - '####'
+  - tty devices are usually filtered out by cgroups, so we must be inside a privileged
+    container
+- - '####'
+  - mount the host's main partition
+- - '####'
+  - inject our SSH key into the root home folder
+- - '####'
+  - get the host's IP and SSH into it
+- - '####'
+  - Linux 能力
+- - '####'
+  - 能力的复杂性
+- - '####'
+  - Docker 套接字
+- - '####'
+  - docker.sock not found
+- - '###'
+  - Resources
+- - '###'
+  - 7 BEHIND THE CURTAIN
+- - '####'
+  - Kubernetes Overview
+- - '####'
+  - Introducing Pods
+- - '####'
+  - myapp.yaml file
+- - '####'
+  - Minimal description to start a pod with 2 containers
+- - '####'
+  - deployment_myapp.yaml file
+- - '####'
+  - Minimal description to start 2 pods
+- - '####'
+  - 流量平衡
+- - '####'
+  - myservice.yaml file
+- - '####'
+  - Minimal description to start a service
+- - '####'
+  - 打开应用面向世界
+- - '####'
+  - Kube 内部原理
+- - '###'
+  - Resources
+- - '###'
+  - 8 肖申克的救赎：越狱
+- - '####'
+  - Kubernetes Overview
+- - '####'
+  - Introducing Pods
+- - '####'
+  - myapp.yaml file
+- - '####'
+  - Minimal description to start a pod with 2 containers
+- - '####'
+  - deployment_myapp.yaml file
+- - '####'
+  - Minimal description to start 2 pods
+- - '####'
+  - Resources
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
+- - '###'
+  - 9 持久 Shell
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
+- - '###'
+  - 10 内部敌人
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
+- - '###'
+  - 11 然而，我们坚持了下来
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
+- - '###'
+  - 12 神化
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
+- - '###'
+  - 13 最终剪辑
+- - '####'
+  - SILENTTRINITY
+- - '####'
+  - Terminal 1
+- - '####'
+  - Launch the team server
+- - '####'
+  - Terminal 2
+- - '####'
+  - Configure parameters
+- - '####'
+  - Start listener
+- - '####'
+  - Start agent
+- - '###'
+  - Resources
