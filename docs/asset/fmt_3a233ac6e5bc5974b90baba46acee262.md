@@ -1,0 +1,307 @@
+
+## 索引
+
+- options (选项). 参见 Shell, features
+- parameter (参数), 295
+- positional (位置的), 296
+- special (特殊的), 296
+- prompt (提示符), 19, 134, 220, 303
+- readonly variable (只读变量), 295
+- root privileges (root 权限), 492
+- sh, 276, 278
+- sleep (睡眠), 225
+- strings, comparing (字符串比较), 460
+- user-created variable (用户创建变量), 295
+- variable (变量). 参见 Shell variable
+- Shell script (Shell 脚本), 275, 282, 1060
+- `# comment` (注释), 285
+- `#!specifies which shell to use` (指定使用的哪个 shell), 284
+- `/dev/tty for a terminal` (终端的 `/dev/tty`), 450
+- addbuffer, 453
+- bash, 466
+- birthday (生日), 427
+- bundle (包), 428
+- chkargs, 398, 400
+- command_menu (命令菜单), 421
+- comment (注释), 285
+- configure (配置), 608
+- count (计数), 413
+- cpdir (拷贝目录), 289
+- creating (创建), 282
+- debugging (调试), 408
+- double quotation marks (双引号), 441, 446
+- error message (错误信息), 407, 424
+- executing (执行), 283, 285
+- Here document (在此文档), 427
+- infinite loop (无死循环), 452
+- invocation (调用), 285
+- is_logfile (是否为日志文件), 399
+- links (链接), 404
+- octletty, 417
+- makepath, 467
+- menu (菜单), 421
+- out (输出), 401
+- PATH usage (PATH 使用), 424
+- quiz (测验), 470
+- quote in (引号内), 397, 406, 412, 441
+- read user input (读取用户输入), 445
+- recursion (递归), 467
+- running (运行), 285
+- safetid, 423
+- shar, 428
+- specifying a shell (指定 shell), 284
+- shell_check, 414
+- temporary filename (临时文件名), 425, 437
+- usage message (用法信息), 400, 406, 424
+- user input (用户输入), 445
+- whos, 411
+- whoson, 283
+
+## Shell variable (Shell 变量)
+
+- `$`, 438
+- `$`, 423, 439
+- `$$`, 425, 437
+- `$*`, 440
+- `$`, 438
+- `$@`, 411, 440
+- `$0`, 439
+- BASH_ENV, 278
+- CDOPATH, 307
+- COLUMNS, 426
+- DISPLAY, 256
+- ENV, 278
+- FCEDIT, 316
+- HISTFILESIZE, 312
+- HISTSIZE, 312
+- HOME, 296, 301, 453
+
+## 索引 1126
+
+- Shell variable, continued (Shell 变量，续)
+- IFS, 305
+- INPUTRC, 325
+- keyword (关键字), 301
+- LINES, 426
+- MAIL, 303
+- MAILCHECK, 303
+- MAILPATH, 303
+- naming (命名), 295
+- noclobber (不覆盖), 231
+- OLDPWD (上一次目录), 342
+- OPTARG, 455
+- OPTIND, 455
+- PATH, 302
+  - example (示例), 423
+  - keyword shell variable (关键字 变量), 296
+  - security (安全), 521
+- PS1, 279, 303
+- PS2, 305, 332
+- PS3, 426
+- PS4, 408
+- PWD, 342
+- quoting (引用), 297
+- RANDOM (随机数), 473
+- readonly (只读), 295
+- REPLY, 426, 446
+- TERM, 134, 554
+- shell, 525
+- shift (内置命令), 441, 456, 558
+- Short-circuit operator (短路运算符), 464
+- Shortcut (快捷方式). 参见 Link
+- showmount utility, 816
+- Shutdown system (关闭系统), 133
+- shutdown utility (关闭工具), 518, 564
+- Side pane (侧边栏), Nautilus, 261
+- Signal (信号), 1060
+  - defined (定义), 451
+  - hang up (挂起), 680
+- KILL, 680
+  - kill (杀死), 452
+  - list of (列表), 451
+  - names (名称), 451, 554
+  - quit (退出), 452
+  - software termination (软件终止), 138
+- TERM, 138
+- terminal interrupt (终端中断), 452
+- Signature (签名), 993
+- Silicon Graphics, 391
+- Simple filename (简单文件名), 189, 190, 224, 1060
+- Single quotation mark (单引号), 146, 412
+- Single marks (单标记), 329
+- Single-user mode (单用户模式). 参见 Recovery
+- Single-user system (单用户系统), 1060
+- Size of file (文件大小), ls, 199
+- skel directory (模板目录), 660
+- Skip to top of page (跳到页顶), 178
+- Slave server (从服务器), DNS, 851, 877
+- Sleep (睡眠), 225
+- sleep call (睡眠调用), 312
+- Slice (切片). 参见 Partition
+- SLIP protocol (SLIP 协议), 363
+- slocate utility (工具), 166
+- Sloppy input focus (模糊输入焦点), 139
+- Slow system (慢系统), 680
+- Smartcard (智能卡), 1003
+- Smarthost (智能主机), 756, 759
+- SMB. 参见 Bamba
+- smb.conf file (smb.conf 文件), 832
+- smbcpient utility (smb客户端工具), 824, 840, 843
+- smbd daemon (smbd 守护进程), 386, 824
+- smbfiles system (smb文件系统), 371
+- smbpasswd utility (smbpasswd 工具), 828
+- smbstatus utility (smbstatus 工具), 824
+- smbtar utility (smbtar 工具), 824
+- smbtree utility (smbtree 工具), 824, 839
+- smbus file (smbus 文件), 826
+- SMF, 500
+- Smiley, 1060
+- Smiles (Smiley 的复数)
+- SmoothWall, Linux distribution (Linux 发行版), 695
+- SMTP, 375, 755, 1060
+- Snap, window (窗口), 1060
+- SNAT, 910
+- Sneakernet (软网络), 1060
+- Sniff (嗅探), 1060
+- sort utility (排序工具), 1008
+- SOA record (SOA 记录), DNS, 853
+- soc.ingles group (组), 389
+- Socket (套接字), 569
+- SO.KS, 1061
+- Soft link (软链接). 参见 Symbolic, link
+- Software (软件)
+  - bug tracking (缺陷跟踪), 584
+  - free (定义), 1011
+  - keep up-to-date (保持更新), 584
+  - Sources window (源窗口), 119
+
+## 索引 1127
+
+- termination signal (终止信号), 452
+- Update Notifier (更新通知), 100
+- updating (更新), 100
+- Software cache (软件缓存), 583
+  - 参见 APT; apt-cache; apt-file; aptitude; dmpkg
+  - adding (添加), 119, 120
+  - binary (二进制), 599
+  - category (类别), 119, 588
+  - CD/DVD, installing from (从...安装), 119
+  - dependencies (依赖), 586, 596
+  - dependencies, fixing broken (修复损坏), 593
+  - file, searching for (查找文件), 604
+  - files, listing (列文件), 604
+  - finding (寻找), 584
+  - formats (格式), 584
+  - information (信息), 595, 596, 597, 599, 600, 603
+  - installing (安装), 585, 602
+  - metapostage (元阶段), 592
+  - removing (移除), 119, 120, 586
+  - removing configuration (移除配置), 586
+  - epositories. 参见 Repositories
+  - source code (源代码), 598, 599
+- spamd daemon (spamd 守护进程), 769
+- SPARC processor architecture (SPARC 处理器架构), 27
+- Sparse file (稀疏文件), 1061
+- Spawn. 参见 Fork
+
+## Special (特殊)
+
+- character (字符), 146, 239, 1061
+- `*`, 240
+- `*`, 239
+- `[]`, 241
+- filename generation (文件名生成), 239
+- Here document (在此文档), 428
+- pathname expansion (路径扩展), 239
+- quoting (引用), 297, 298
+- regular expressions (正则表达式), 971
+- standard index (标准索引), 428
+- file (文件), 567
+  - about (关于), 567
+  - block (块), 568
+  - character (字符), 568
+  - device file (设备文件), 1033
+  - parameters (参数), 296, 436
+- Speed, Internet (速度), 355
+- spell_check shell script (拼写检查脚本), 414
+- Spin (旋转), 1061
+- Spinner. 参见 spin
+- splash parameter (参数), 480
+- Split horizon, DNS (分割视界), 878
+- Splitting, word (单词分割), 305
+- Spontaneous process (自发进程), 310
+- Spoofing, IP (IP 欺骗), 1043
+- spool (池), 1061
+- spool directory (池目录), 684, 982
+- SQL, 1061
+- Square bracket (方括号), 1061
+- Square bracket in place of test (测试位置的方括号), 799
+- SquirrelMail, 772
+- squaremail-config utility (邮件配置工具), 774
+- updating (更新), 119
+- updating index (更新索引), 594
+- updating list of available (可用列表), 600
+- upgrading (升级), 594
+- virtual (虚拟), 592
+- Solving a problem (解决问题), 982
+- Sort (排序), 1061
+- utility (工具), 14, 153, 236
+- source (源), 279
+- source code (源代码), 598
+- source.list file (list 文件), 599
+- SPACE (空格), 146
+- Spam (垃圾邮件), 1061
+- 参见 Spam
+- SpamAssassin, 768, 769
+- 参见 Spam
+- configuring (配置), 771
+- mail server (邮件服务器), 772
+- prerequisites (前提条件), 769
+- spassin init script (初始化脚本), 769
+- spamd daemon (spamd 守护进程), 769
+- testing (测试), 770
+- spassin init script (初始化脚本), 769
+- src directory (源目录), 196
+- sprc utility (工具), 1008
+- sh utility (工具), 709
+- sh init script (初始化脚本), 720
+- sh_known_hosts file (hosts 文件), 709, 712, 713
+- shd daemon (shd 守护进程), 384, 386
+- shd_config file (config 文件), 722
+- shd_keygen utility (工具), 712, 713, 721
+
+## 索引 1128
+
+- SSL
+  - Apache, 959
+  - email, 778
+  - security, 997
+- st0 file, 668
+- Stack (栈), 292
+  - directory, manipulation (目录操作), 292
+  - LIFO (后进先出), 292
+  - PAM, 548
+- Stallman, Richard, 2
+- Stand-alone-computer (单机计算机), 353
+- Standard (标准)
+  - directories and files (目录和文件), 194
+  - error (错误), 226, 280, 407, 1062
+  - file descriptor (文件描述符), 280, 429
+  - redirecting with execl (使用 execl 重定向), 449
+  - shell script (Shell 脚本), 406
+  - trap (陷阱), 454
+  - input (输入), 226, 1062
+  - file descriptor (文件描述符), 280, 429
+  - pipe (l), 288
+  - redirect (重定向), 230
+  - redirecting with execl (使用 execl 重定向), 449
+  - special character (特殊字符), 228
+  - output (输出), 226, 1062
+  - append (追加), 232
+  - file descriptor (文件描述符), 280, 429
+  - pipe (l), 288
+  - redirect (重定向), 228, 236
+  - redirecting with execl (使用 execl 重定向), 449
+- Standards (标准)
+  - FHS (Linux 文件系统层次结构), 194
+  - FSG (自由标准组), 194

@@ -1,0 +1,365 @@
+
+# 索引
+
+## 索引 1135
+
+- 查找 (find using versus), 164
+- 使用 which 查找 (find using which), 164
+- 用户信息查询 (finger), 167, 370, 371, 385, 411
+- flex, 107
+- 文件系统检查 (fsck), 570, 577
+- 传输协议 (ftp), 354, 730, 736
+- 进程用户 (fuser), 525
+- fwkt, 1007
+- gawk, 411, 412
+- gcc, 9
+- gdm (GNOME), 82
+- 媒体设置 (dmsmsetup), 183
+- 属性获取 (getfactl), 204
+- 终端登录 (getty), 310, 516
+- 图形化 sudo (gksudo), 491
+- GNOME 搜索工具 (gnome-search-tool), 269
+- GNOME 终端 (gnome-terminal), 270
+- opher (gopher), 390
+- 分区编辑器 (gparted), 533
+- 性能分析工具 (gprof), 171
+- 搜索 (grep), 151, 235, 427
+- 添加组 (groupaddp), 661
+- 删除组 (groupdel), 661
+- 修改组 (groupmod), 661
+- 组 (groups), 558
+- 引导加载程序 (grub), 647
+- 安装引导 (grub-instal), 653
+- 解压 (gunzip-ip), 161
+- gzph, 161
+- 停止 (halt), 518, 519
+- 头部 (head), 152
+- 主机信息 (host), 378, 857
+- 主机名 (hostname), 149, 703
+- hping, 1007
+- 标识 (id), 492, 499
+- 网络配置 (ifconfig), 541
+
+## INDEX 1136
+
+- 帮助 (info), 126, 243, 983
+- 初始化 (init), 310, 559
+- 初始化客户端 (initclient), 502
+- 插入模块 (insmod), 645
+- ipchains, 896
+- 防火墙规则 (iptables), 885
+- 恢复防火墙规则 (iptables-restore), 907
+- 保存防火墙规则 (iptables-save), 907
+- 无线配置 (iwconfig), 700
+- 密码破解器 (John the Ripper), 1007
+- jowis, 378
+- kdesu, 491
+- 身份验证协议 (kerberos), 1003, 1007
+- 杀死所有进程 (killall), 524
+- L6, 1007
+- 库依赖 (ldd), 552
+- 查看器 (less), 125, 148, 236, 288, 402
+- lftip, 718
+- 登录描述符 (lids), 1007
+- 链接 (links), 392
+- 链接 (ln), 210, 213, 566
+- 锁 (lock), 417
+- 登录 (login), 310, 516
+- DNS 解析 (logresolve), 938
+- 速率控制 (lograte), 684
+- 打印 (lp), 623
+- 打印管理 (lpadmin), 627
+- 打印信息 (lpinfo), 626
+- 打印队列 (lpq), 151, 623
+- 打印 (pr), 151, 235, 237, 623
+- 删除 (lrm), 151, 623
+- 状态查看 (lstat), 151, 623
+- 列出文件 (ls), 147, 192, 199, 202, 240, 284
+- Shell (lsh), 525, 696
+- 移除模块 (lismod), 645
+- 打开文件列表 (lsof), 681
+- PCI 设备查看 (lspci), 696
+- 浏览器 (lynx), 392
+- 邮件 (mail), 171
+- 邮件队列 (mailq), 765
+- 编译 (make), 162
+- 数据库创建 (makedb), 793
+- 帮助页 (man), 144, 124, 128
+- MD5 校验 (md5sum), 40
+- 内存测试 (memtest), 86, 62
+- 消息 (mesg), 171
+- 创建目录 (mkdir), 191, 192, 193, 803
+- 命名管道 (mkfifo), 568
+- 创建文件系统 (mkfs), 525, 574
+- 创建交换分区 (mkswap), 564
+- 模块信息 (modinfo), 645
+- 加载模块 (modprobe), 645
+- 查看 (more), 148, 236, 402
+- 挂载 (mount), 559, 572, 573, 803, 841
+- 挂载 (mtg), 668
+- 移动 (mv), 150, 197, 566
+- 名称 (names), 18
+- 漏洞扫描 (nessus), 107
+- 破解 (bet), 824
+- 网络 (net (Windows)), 842
+- 网络查看 (netview (Windows)), 842
+- 网络猫 (netcat), 1007
+- 网络状态 (netstat), 365
+- 网络 (network), 354, 372
+- much新别名 (newaliases), 764
+- much新列表 (newlist), 775
+- NIS 域 (nisdomain), 786
+- 端口扫描 (nmap), 1007
+- nmap 插件 (nmap-applet), 700
+- Samba 服务 (nmbd), 842, 843
+- nn, 389
+- 登录 (nlogin), 561, 556
+- OPI, 1002, 1007
+- 选项 (option), 221
+- 分区工具 (parted), 514, 673
+- 密码 (passwd), 562, 789
+- pbedbit, 824
+- pidgon, 105
+- pidol, 524
+- pnfo, 128
+- 探测 (ping), 375, 526, 562, 842
+- pinge, 376
+- 端口映射 (portmap), 802, 808, 818
+- 电源 (power), 518
+- 邮件处理 (procmail), 171
+- 进程状态 (ps), 238, 310, 437, 680, 684
+- 路径 (patres), 311
+- 工作目录 (pwd), 192, 213
+- 邮件服务器 (qmail), 998
+- 配额 (quota), 687
+- 启用配额 (quotaon), 687
+- 角色色的访问控制 (rbac), 1008
+- 复制 (rcp), 372
+- 可读性 (readness), 389
+
+## INDEX 1137
+
+工具程序 (Utility), 续
+
+- 重启 (reboot), 518
+- 拒绝 (reject), 629
+- 重置 (reset), 526
+- 解析配置 (resolconf), 858
+- 恢复 (restore), 666
+- 远程登录 (rlogin), 354
+- 删除 (rm), 148, 214, 330, 402, 567, 389
+- 删除目录 (rmdir), 196
+- 移除模块 (rmmod), 645
+- RPC 信息 (rpcinfo), 530, 788
+- 远程外壳 (rsh), 354, 372
+- 运行级别 (runlevel), 510, 519
+- 运行脚本 (run-parts), 669
+- 运行时 (runtime), 680
+- S/Key, 1002
+- saint, 1008
+- samhain, 1001, 1008
+- sara, 1008
+- 安全复制 (scp), 354, 569, 711
+  - 另见 OpenSSH
+- 脚本 (script), 158
+- 流编辑器 (sed), 684
+- 发送邮件 (sendmail), 779
+- 设置 ACL 权限 (setfacl), 205
+- 串口设置 (setserial), 526
+- 安全文件传输 (sftp), 718
+- 共享管理 (shares-admin), 658, 809, 827
+- 显示挂载 (showmount), 816
+- 关机 (shutdown), 518, 564
+- 快速查找 (slocate), 166
+- Samba 客户端 (smbclient), 824, 840
+- Samba 密码 (smbpasswd), 728
+- Samba 状态 (smbstatus), 824
+- Samba 存档 (smbtar), 824
+- Samba 树 (smbtree), 824, 839
+- 入侵检测 (snort), 1007
+- 排序 (sort), 14, 153, 235, 236
+- 垃圾邮件 (spam), 769
+- 邮件配置 (squiremail-config), 774
+- 脚本 (srip), 1008
+- ssh, 134, 354, 384, 569, 708, 711, 714
+- SSH 密钥生成 (ssh-keygen), 712, 713, 721
+- 启动图形 (startx), 254
+- 状态查看 (stat), 526
+- 状态 (status), 503
+- 终端 (tty), 417, 554, 526
+- 切换用户 (su), 488, 499
+- sudo, 88
+- 交换空间设置 (swapon), 564
+- 统计 (swat), 828
+- 颜色 (swatch), 1008
+- 软件包管理器 (Synaptic), 121
+- 系统控制 (sysctl), 636
+- 系统日志 (syslog), 386
+- SysV 配置 (sysv-rc-conf), 508
+- 尾部 (tail), 152, 238
+- 对话 (talk), 372, 386
+- 归档工具 (tar), 161, 289, 665
+- 管道输出 (tee), 236, 493
+- 远程登录 (telnet), 334, 374, 373, 957, 998
+- 测试 (test), 397, 403, 407
+- 分区测试 (testpart), 842
+- 进程查看 (top), 672, 680
+- 触摸 (touch), 159, 234, 281
+- 路由追踪 (traceroute), 376
+- 入侵检测 (tripwire), 1001, 1008
+- 真值 (true), 453
+- 终端设置 (tsetd), 526
+- 调优 (tunefs), 525, 578
+- 设置变量 (typeset), 299
+- 安装向导 (ubiquity)
+  - 参见 Installation
+- 设备管理器 (udev), 568
+- 磁盘转储 (udump), 357
+- 卸挂载 (umount), 559, 575, 804
+- 系统内核信息 (uname), 527
+- 解压缩 (uncompress), 187
+- Unix/Windows 转换 (unixdos), 154, 713, 736
+- 解压缩 (unzip), 161
+- 更新 (updated), 166
+- 更新获取 (update-grab), 651
+- 运行时间 (uptime), 169
+- 添加用户 (useradd), 660
+- 修改用户 (usermod), 661
+- uUC, 389
+- Vim 教程 (vimutor), 172
+- 虚拟统计 (vmstat), 671
+- 登录用户 (w), 169, 680
+
+## INDEX 1138
+
+- 广播消息 (wall), 677
+- Web (we), 343
+- 网站分析工具 (webalizer), 964
+- 下载工具 (wget), 609
+- 命令帮助 (whatis), 166
+- 路径查找 (whereis), 164
+- 查找位置 (which), 164
+- 用户信息 (who), 167, 226, 233, 235, 560, 686
+- 域名查询 (whois)
+  - 参见 工具程序, boys
+- 流量分析工具 (wireshark), 1008
+- 写入 (write), 167, 170, 677
+- X 服务 (X server), 252
+- 多参数处理 (xargs), 684
+- 属性查看 (xev), 254
+- 访问控制 (xhost), 255
+- Xnerama, 1070
+- 键盘映射 (xmodmap), 258
+- xn, 389
+- 电子新闻 (xvnews), 395
+- 密文测试 (yipnit), 795
+- 密码修改 (yppasswd), 788
+- 推送到邮件 (yppush), 793
+- 字典 (pywich), 787
+- 格式转换 (pyxfr), 795
+- 字符 (zeat), 161
+- 压缩 (zip), 161
+- 删除 (removing), 299
+- 终端 (shell), 295
+- 替换默认值 (substitute default value), 443
+- 替换 (substitution), 297
+- 未删除的 (undeared), 434
+- 取消设置 (unsetting), 299
+- 创建的用户 (user created), 295, 296
+- 数字签名 (VerSign), 994
+- 版本控制系统 (Bazaar), 584
+- FAT32 文件系统 (vfat filesystem), 572
+- vi bash 命令行编辑器, 322
+- 显卡配置 (Video card, configure), 76
+- 视图窗格 (View pane, Nautilus), 261
+- 窗口 (Viewport)
+  - 参见 工作区 (Workspace)
+
+### vim
+
+- bash 命令行编辑器, 322
+- 大小写敏感 (case sensitivity), 1027
+- 命令模式 (Command mode), 174
+- 纠正错误 (correcting a mistake), 176, 178
+- 创建文件 (creating a file), 172
+- d 命令 (d command), 177
+- 删除文本 (deleting text), 177
+- 编辑文件 (editing a file), 172
+- 结束会话 (end a session), 178
+- 输入文本 (enter text), 175
+- 退出 (exit from), 178
+- 紧急退出 (exit, emergency), 172
+- 入门 (getting started), 172
+- 输入模式 (Input mode), 174, 175
+- 插入文本 (inserting text), 178
+- 最后行模式 (Last Line mode), 175
+- 移动光标 (moving the cursor), 177
+- 普通模式 (Normal mode)
+  - 参见 Vim, 命令模式
+- 翻页 (page break), 178
+- 退出 (quitting), 178
+- 替换字符串 (replacement string), 980
+- 安全编辑脚本 (safedit script), 423
+- 特殊字符 (special characters), 180
+- 开始 (starting), 172
+- 终端 (terminal), 177
+- 撤销更改 (undoing changes), 177
+- Vim 教程 (vimutor), 172
+
+## INDEX 1139
+
+工具程序 (Utility), 续
+
+- 变量文件名 (var filename), 295
+- 分区 (var partition), 333
+- 变量 (Variable), 295
+- VxFS 文件系统 (VxFS filesystem), 572
+- 卷标签 (Volume label), 671
+- 虚拟机统计 (vmstat), 671
+- 虚拟 (Virtual), 525
+- 虚拟机 (Virtual machine), 576
+- 虚拟网络 (Virtual network), 592
+- 虚拟要求 (Virtual requirements), 765
+- VFS, 572
+- vt100 终端, 989
+- vt102 终端, 989
+- vt220 终端, 989
+
+# 索引 1139
+
+- 外观偏好, 102
+- 浏览, 99
+- 级联, 1027
+- 剪贴板, 113
+- 切切与粘贴, 113
+- 循环, 112
+- 装饰, 141
+- 文件, 226
+- 文件浏览器
+  - 参见 Nautilus
+- 焦点, 112, 139
+- 忽略, 1041
+- 输入焦点, 112, 139
+- 列表小部件, 109
+- 登录窗口偏好, 82
+- 管理器, 16, 141, 259, 1069
+  - Compiz, 103, 241
+  - GNUSep, 260
+  - Metacity, 103, 141
+  - WindowMaker, 260
+- 最小化, 1048
+- 鼠标按钮，重映射, 258
+- 对象属性, 116
+- 操作菜单, 112
+- 面板属性, 108
+- 选择颜色, 268
+- 选择字体, 268
+- 偏好窗口, 140
+- 根, 106, 113, 1058
+- 运行，应用程序, 92, 269
+- 保存, 99
+- 显示和图形偏好, 75
+- 滚动条, 1039
+- 搜索文件, 269
+- 共享
+  - 参见 Samba, 共享
