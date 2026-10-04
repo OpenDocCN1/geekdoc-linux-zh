@@ -1,0 +1,23 @@
+# 508 Rebuilding the Kernel
+
+Set the Network Packet Filtering option to check if you want to use your Fedora Core system as a firewall — an intermediary system that controls information flowing between a local area (LAN) and the Internet.
+
+Other categories in the Networking Support options include wireless LAN, Token Ring, wide area network (WAN), PCMCIA network devices, amateur radio, infrared, and Bluetooth.
+
+The infrared support is for infrared communication using the protocols specified by the Infrared Data Association (IrDa). IrDa communication is used by many laptops and personal digital assistants (PDAs), such as Palm and Handspring.
+
+Bluetooth is a low-power, short-range wireless technology for connecting devices on the 2.4 GHz frequency band. Devices that Bluetooth can usually connect when they are within 10 meters of one another. To find out about Bluetooth, visit www.bluetooth.com. Linux supports Bluetooth through a core driver and several other modules. You can click the option to enable Bluetooth support and then select other options specific to your Bluetooth devices.
+
+# ISDN subsystem
+
+This of options enables you to include support for ISDN (Integrated Services Network) — a digital telephone line you can use to connect the Linux system to the Internet. These ISDN-related options include the configuration of specific ISDN adapters.
+
+Build the ISDN driver only if your PC has an ISDN card. If you anticipate adding an ISDN card and purchase ISDN service from the phone company, you can build the driver as a module. Read the file /usr/src/linux/Documentation/isdn/README for more information on how to set up and use the ISDN driver in Linux.
+
+# Telephony support
+
+With the right hardware and software, the Telephony Support options enable you to use the Fedora Core system for making calls calls (also known as voiceover IP or VoIP). You can build driver modules for telephony support if you have a telephony card, such as the Internet PhoneJACK or LineJACK manufactured by Quicket Technologies, Inc. If you have no Quicket telephony cards, you can safely leave these options turned off.
+
+# Character devices
+
+These options deal with configuring character devices, which include devices connected to the serial and parallel ports. These options also

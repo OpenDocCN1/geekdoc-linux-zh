@@ -1,0 +1,35 @@
+# 204 Text Editing with ed and vi
+
+Table 5-1 (continued)
+| Command | Does the Following |
+| --- | --- |
+| - | Goes to preceding line. |
+| -n | Goes to *n*th previous line (where *n* is a number you designate); |
+| . | Refers to the current line in the buffer. |
+| /text/ | Searches forward for the specified text. |
+| ; | Refers to a range of lines; current through last line in the buffer. |
+| = | Prints line number. |
+| ?text? | Searches backward for the specified text. |
+| ^ | Goes to the preceding line; also see the - command. |
+| ^n | Goes to *n*th previous line (where *n* is a number you designate); also see the -n command. |
+| a | Appends after current line. |
+| c | Changes specified lines. |
+| d | Deletes specified lines. |
+| i | Inserts text before current line. |
+| n | Goes to line number *n*. |
+| Press Enter | Displays next line and makes that line current. |
+| q | Quits editor. |
+| Q | Quits editor without saving changes. |
+| r file | Reads and inserts contents of file after the current line. |
+| s/old/new/ | Replaces old string with new. |
+| u | Undoes the last command. |
+| w file | Appends contents of buffer to the end of the specified file. |
+| w file | Saves buffer in the specified file (if no file is named, saves in the default file — the file whose ed is currently editing). |
+
+# Using vi
+
+The *vi* is a full-screen editor, so you can view several lines at the same time. Most UNIX systems, including Fedora Core, come with *vi*. Therefore, if you know the basic features of *vi*, you can edit files on almost any UNIX system.
+
+When *vi* edits a file, it reads the file into a *buffer* — a block of memory — so you can change the text in the buffer. The *vi* editor also uses temporary files during editing, but the original file isn't altered until you save the changes.
+
+![](bbox=[0.125, 0.798, 0.218, 0.876])

@@ -1,0 +1,16 @@
+# 190 Multimedia Applications
+
+any user can activate it (this feature is called Non-Root Mode). If you want to get right on burning CDs, click Launch X-CD-Roast and the main window appears, as shown in Figure 4-5. You can do everything — configure X-CD-Roast and burn audio and data CDs — from the main window.
+
+**Figure 4-5:** You can burn CDs from the X-CD-Roast main window.
+
+![](bbox=[0.25, 0.218, 0.737, 0.493])
+
+# Exploring the Setup window
+
+If this is your first time with X-CD-Roast, click Setup from the main menu (refer to Figure 4-5). X-CD-Roast displays the Setup window (shown in Figure 4-6) with six tabs.
+
+Initially, X-CD-Roast displays the Device-Scan tab with list of CD/DVD devices it detects (shown in Figure 4-6). You also have to set up other parameters through the remaining tabs:
+
++   - CD: Enables you to specify the CD reading and writing speeds, the default CD writer device, the primary and secondary CD device (if you have multiple CD drives). You can also specify the CD writing mode. The default CD writing mode is Disk-At-Once (DAO). If this mode fails, try Track-At-Once (TAO) that puts a 2-second pause after each track, but that's supported by every CD writer.
+- HD Settings: Specify the directory for temporary storage of CD images. Click the Browse button and select the directory you want. You could, for example, select the /tmp directory for temporary storage. After selecting the directory, click the Add button.

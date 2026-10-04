@@ -1,0 +1,46 @@
+# Managing Print Queues in Fedora Core
+
+You can get the same result with the following `lpm` command:
+
+lpm 2
+
+> If you're in a hurry and want to cancel all print jobs you have submitted so far, use `cancel -a` as the argument, as follows:
+
+cancel -a
+
+# Checking the printer status using lpstat
+
+To see the status of print jobs, use the `lpstat` command. Here is a typical output from the `lpstat` command:
+
+```
+lpstat
+HPLaserjetRoom210-2  root  15360  Wed 25 Feb 2004 04:25:48 PM EST
+```
+
+The first field of the output shows the name of the queue with a job appended to it (that number identifies the print job). You need that job number to cancel the print job.
+
+# Controlling the print queue
+
+To see the names of printers connected to your system, use the `lpc status` command. On my system, the `lpc status` command shows the following:
+
+```
+lpc status
+HPLaserjetRoom210:
+  printer is on device 'parallel' speed 1
+  queuing is enabled
+  printing is enabled
+  no entries
+  daemon present
+```
+
+Notice that queuing and printing are both enabled for this printer. The last line tells you that the `cups daemon` (a server that runs all the time) is running and available to handle print jobs.
+
+You can use the `accept` and `reject` commands to enable or disable queuing for a print queue. For example, to stop queuing further print jobs for the HPLaserjetRoom210 printer, use type:
+
+```
+reject HPLaserjetRoom210
+```
+
+This command disables queuing jobs for this printer. If anyone tries to send a print job using the `lp` command, the user receives an error message like this:
+
+lp: unable to print file: server-error-not-accepting-jobs

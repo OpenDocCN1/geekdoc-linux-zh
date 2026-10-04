@@ -1,0 +1,154 @@
+
+# Playing with the Shell
+
+Such-a-single line of commands is commonly called a command line. On a command line, you enter a command followed by one or more optional parameters (or arguments). Such command-line options (or command-line arguments) help you specify what you want the command to do.
+
+One basic rule is that you have to use a space or a tab to separate the command from the options. You also must separate options with a space or a tab. If you use an option that contains embedded spaces, you have to put that option inside quotation marks. For example, to search for two words of text in the password file, I enter the following grep command (grep is one of those cryptic commands that searches for text in files):
+
+```
+grep "Font Server" /etc/passwd
+```
+
+When grep prints the line with those words, it looks like this:
+
+```
+xfs:43:43:X Font Server:/etc/X11/fs:/sbin/loglogin
+```
+
+If you created a user account in your name, go ahead and type the grep command with your name as an argument, but remember to enclose the name in quotes.
+
+# Trying a few Linux commands
+
+While you have the terminal window open, try a few Linux commands just for fun. I guide you through some random examples to give you a feel for what you can do at the shell prompt.
+
+To see how the Fedora Core PC has been up since you last powered it up, type the following command. (Note: I show the typed command in bold, by the output from that command.)
+
+```
+uptime
+```
+
+```
+21:19:01 up 29 days, 55 min, 3 users, load average: 0.04, 0.32, 0.38
+```
+
+The part up 29 days, 55 min tells you that this particular PC has been up for nearly a month. Hmmm ... can Windows do that?
+
+To see what version of Linux kernel your system is running, use the uname command like this:
+
+```
+uname -srv
+```
+
+```
+Linux 2.6.5-1.358 #1 Sat May 8 09:04:50 EDT 2004
+```
+
+# Playing with the Shell 97
+
+In this case, the system is running Linux kernel version 2.6.5.
+
+To read a file, use the more command. Here's an example:
+
+```
+more /etc/passwd
+root:x:0:0:root:/bin/bash
+bin:x:1:1:bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+... deleted ...
+```
+
+To see a list of all the programs running on the system, use the ps command, like this:
+
+| PID TTY STAT TIME COMMAND |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | ? | S | 0:05 | [5] |
+| 2 | ? | SWN | 0:00 | [ksoftirqd/0] |
+| 3 | ? | SW | 0:00 | [events/0] |
+| 4 | ? | SW | 0:00 | [blockd/0] |
+| 5 | ? | SW | 0:00 | [pdfflush] |
+| 6 | ? | SW | 0:00 | [pdfflush] |
+| 8 | ? | SW | 0:00 | [aio/0] |
+| 7 | ? | SW | 0:00 | [kswapod] |
+| 9 | ? | SW | 0:00 | [kseriod] |
+| 13 | ? | SW | 0:00 | [kjjournal] |
+| 98 | ? | SW | 0:00 | [thudbd] |
+| 222 | ? | SW | 0:00 | [usb-storage] |
+| 223 | ? | SW | 0:00 | [scsi_eh_0] |
+| 759 | ? | SW | 0:00 | [journal] |
+| 2177 | ? | S | 0:00 | [/sbin/dhclient -1 -q -lf] |
+
+```
+/var/lib/dhcp/dhclient-eth0.pid -cp /var/run/dhclient-eth0 -cf /etc/dhclient.conf eth0
+2226 ? S 0:00 syslog -m 0
+2230 ? S 0:00 klod -x
+2258 ? S 0:00 portmap
+2278 ? S 0:00 rpc.statd
+... lines deleted ...
+```
+
+Amazing how many programs that can run on a system even when only are logged in as a user, isn't it?
+
+As you can guess, you can do everything from a shell prompt, but it does take some getting used.
+
+# Shutting Down
+
+When you're ready to shut down Fedora Core, you must do so in an orderly manner. Even if you're the sole user of a Fedora Core PC, several other programs are running in the background. Also, operating systems such as Linux try to optimize the way they write data to the disk. Because disk access is relatively slow (compared with the time needed to access memory locations), data generally is held in memory and written to the disk in large chunks. Therefore, if you simply turn off the power, you run the risk that some files are not updated.
+
+Any user (you don't even have to be logged in) can shut down the desktop or from the graphical login screen. Choose Main Menu→Log Out. A Logout box appears and provides the options for rebooting or halting the system or simply logging out. To shut down the system, simply select Shutdown, and click OK. The system shuts down in an orderly manner.
+
+If you're at the graphical login screen, click the Shutdown label in the bottom part of the screen. Then another dialog box asks you to confirm that you really want to halt the system. Click the Yes button. The system shuts down in an orderly manner.
+
+When the system shuts down, you see messages about processes being shut down. You may be surprised at how many processes there are, even when no one is explicitly running any programs on the system. If your system does not automatically power off on shutdown, you can manually turn off the power.
+
+![](img/d9230b719dc0efd80851f363d8c6f571_124_0.png)
+
+> Note that shutting down and rebooting the system does *not require root access*. Make sure that physical access to the console is protected adequately.
+
+# Chapter 5: Cool Fedora-Core Install Projects
+
+**In This Chapter**
+
+- Joining the BitTorrent
+- Burning Fedora Core CDs
+- Preparing a Fedora Core DVD
+- Doing an FTP install over the network
+
+Have you ever wished you could burn your own Fedora Core CDs? What about a Fedora Core DVD? Do you wonder how the hip crowd downloads Fedora Core? Well, wonder no more! Here are a few projects to will help you master the Fedora Core download and install process.
+
+The first project shows how to join BitTorrent and help the community get their Fedora Core while you get yours as well. In the second project, you find out to burn CDs from the downloaded ISO images. If you have a DVD burner as well, the third project gives you the recipe for burning a Fedora Core DVD. Finally, the fourth project is about installing Fedora Core over the network, which can be handy if you are installing on a CD-less laptop.
+
+## Joining the BitTorrent
+
+BitTorrent is a protocol for distributing files. You don't really need to understand the protocol to use BitTorrent. All you need to know is that you download a file, your machine uploads the file to others who know the same file. You are not just taking something, you are also giving something—you are helping others get that file. That communal sharing in an equitable manner is what makes BitTorrent an appealing way to distribute software as Fedora Core. In fact, once you try it, you'll find that downloading Fedora Core is easier by joining the BitTorrent than getting it through FTP. You do have to do a few things before you using BitTorrent. It's a neat little project to download the CD- or DVD-image of Fedora Core and burn the CD. The first project is to join the BitTorrent and download the necessary.
+
+### Things you need
+
+Here's what you need to join the BitTorrent:
+
+- A PC running Red Hat Linux or Fedora Core — you use this system to run the BitTorrent client and download Fedora Core. If you are running Microsoft Windows on your PC, you can still use BitTorrent; just check the information at bitconjurer.org/BitTorrent/download.html.
+- Make sure Python version 2 is already installed on your Linux system. If not, insert the companion DVD into the DVD drive, mount it, and type rpm -ivh /mnt/cdrom/Fedora/RPMS/python-2*.rpm to install Python 2.
+- A connection to the internet, the higher the bandwidth the
+
+### Steps to follow
+
+You have three high-level steps to follow:
+
+1. Download and install the BitTorrent client software on your system.
+2. Adjust your system firewall settings to open up TCP ports 6881 through 6999 that are used by BitTorrent to send files to others.
+3. Run the BitTorrent client to start the file transfers.
+
+I describe these three high-level steps in detail in the following sections.
+
+# Download and install BitTorrent software
+
+Make your system's internet connection is up. Then follow these steps:
+
+1. Run the Mozilla Web browser and visit torrent.duleg.duke.edu/btmps and click one of the RPM files to download the BitTorrent software for your Red Hat Linux or Fedora Core. For Core, download the version with fc1 (that means Fedora Core 1) or rh90 (that means Red Hat 9.0 in the name — these versions run on Fedora Core). Save the downloaded RPM file in a directory on your system and make note of where you saved it.
+2. Open a terminal window and change the directory to where you have the BitTorrent RPM file and then install the BitTorrent software.
+
+Type the following command to install BitTorrent:
+
+```
+rpm -ivh bitstorrent*.rpm
+```

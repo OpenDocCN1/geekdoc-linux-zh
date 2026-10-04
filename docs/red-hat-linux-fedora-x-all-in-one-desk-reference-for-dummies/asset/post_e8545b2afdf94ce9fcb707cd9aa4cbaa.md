@@ -1,0 +1,365 @@
+
+# Index 825
+
+- resources on, 666
+- starting, 665, 271–672
+- input/output. *See I/O*
+- in.telnet server, 22. *See* also TELNET
+- Internet. *See also Web*
+- applications, 171
+- defined, 272
+- TCP/IP protocols and, 297
+- Minicom program and, 289–291
+- modem requirements, 34
+- PAP/CHAP authentication, 293–294
+- PPP connections, 285, 290–294
+- versus serial communication, 284–285
+- Internet Protocol. *See IP*
+- Internet servers. *See also* daemon; DNS: servers defined, 21–22, 602
+- httpd daemon, 615, 635. *See Apache*
+- innd daemon, 21, 65, 666
+- in.telnetd daemon, 22, 586
+- Internet Assigned Numbers Authority (INA), 603
+- Internet Configuration Wizard, 27, 290
+- Internet connections. *See also* Ethernet; wireless via cable model in10Base Ethernet LANS, 305–306
+- configuring fibrils, 283
+- defined, 273–290
+- versus dial and DSL, 273–374
+- serial port detection, 288
+- serial-port device names, 287–288
+- setup overview, 285
+- TCP/IP protocols, in 288
+- testing methods, 289–290
+- winmodems (softmods)
+- proxy servers, 564, 568, 570–571
+- sendmail server. *See* sendmail
+- server process, 299, 602
+- sh daemon, 22
+- standalone servers
+- auditing security of, 587
+- auto-starting, 403, 607–614
+- downstream data, 281
+- Ethernet cables, 284
+- Ethernet hubs, 283–284
+- how it works, 280–281
+- NAT routers, 283–284
+- setting up, 282–284
+- upstream data, 281
+- warning, 283
+- via dial-up networking connecting modules, 286–288
+- defined, 273
+- via Digital Subscriber Line in10Base Ethernet LANS, 305–306
+- Asymmetric DL
+- caveat, 272–273
+- configuring fibrils, 278
+- defined, 272, 274
+- versus dial and DSL, 273–274
+- configuring in graphical chk command, 607–609
+- utility, 609–614
+- defined, 606
+- disabling, 558
+- starting/stopping manually, 402–403, warning, 610
+- DSL modules, 274–275
+- 277–279
+- Ethernet hubs/cables, 278–279
+- how it works, 275–279
+- ISDN, DL
+- local loops, 275
+- microfilters, 277, 278
+- NAT routers, 278–279
+- PPPoE protocol, 279
+- setting up, 276–279
+- Symmetric DL, 276
+- warnings, 275, 278
+- overview, 271
+- vsftpd daemon, 21, 639. *See also FTP*
+- Web servers, 21, 352, 355–365,
+- xinetd daemon /etc/xinetd.conf file, 559–561, 603–606
+- auditing services started by, 585–586
+- configuring to disable servers, 555–586
+- defined, 603
+- versus DSL and cable, 273–274
+- internal/external modems, 287
+
+# 826 Red Hat Fedora Linux 2 All-in-One Desk Reference for Dummies
+
+- Internet services. See Also securing networks defined, 21–272–597
+- file-sharing services. See NFS:Samba
+- file-transfer services. See FTP: TFTP
+- listed/defined, 610–614
+- mail services. See e-mail
+- news services. See INN newsgroups remote access services, 21, 271. See Also SSH TCP/IP and See Also TCP/client/server architecture, 597–598
+- connection-oriented protocols, 589–600
+- connectionless protocols, 599–600
+- services/ports, 298–299, 601–603
+- sockets, 598–599–601
+- warnings, 557, 560
+- Web services, 21, 271. See Also Web servers
+- internetworking, 297. See Also DNS
+- binding sockets to, 600–601
+- in configuring TCP/IP networks, 304–305
+- in packet filtering, 565–567
+- IP (Internet Protocol), 272, 599. See Also TCP/IP routing/forwarding, 567
+- IP (Internet Protocol Next Generation), 298
+- IPP (Internet Printing Protocol), 489
+- IPv6 (Internet Protocol) version 6, 298
+- IRQs (interrupt requested numbers), 287
+- ISA (Industry Standard Architecture) busses, 502
+- ISBN (International Standard Book Number), 179
+- ISC (Internet Software Consortium) Consortium, 666
+- IDSN (Integrated Services Digital Network) DSL, 276
+- IDSN subsystem options, 508
+- ISO (International Organization for Standardization), 678
+- ISO images, 103
+- IV (Initialization Vector), 309
+- KB (kilobyte), 104
+- Kbps (kilobits per second), 272, 276
+- K (Desktop Environment). See Also GNOME backgrounds, 93–94, 133–134
+- defined, 88–89, 127
+- customizing, 92–94, 132–134
+- desktop pop-up menus, 112–113
+- de-conqueror feature, 128, 32–357
+- icon pop-up menus, 113–114
+- kdm login manager, 404
+- kmail client, 171, 340
+- as file manager, 72, 128–132
+- as Web browser, 132
+- logging in, 89–90, 127–128
+- logging out of, 94
+- Main Menu, 90–91, 116–117
+- online help, 23–24
+- overview, 19–20, 81, 111
+- panel, 90–92, 112–116
+- Service Configuration utility, 609–614
+- text editor, 200
+- Web site address, 89
+
+# Index 827
+
+- kernel hacking options, 513. See also Linux kernel
+- keyboards, 33, 41, 42
+- kill command, 147
+- keychain, 478–488
+- Kimball Spencer, 194
+- kmail application, 171, 340
+- as file manager, 72, 128–132
+- as Web browser, 132
+- Cd application, 170
+- kudzu utility, 443, 487
+- View application, 171
+- libraries. See also shared libraries
+- database, 18, 733
+- Libpng image, 18
+- SANE library, 171
+- LILO (Linux Loader), 481
+- Line Printer Daemon (LPD), 581
+- linking device into kernel, 497
+- linking, dynamic, 734
+- shared links to directory, 160–161
+- hypertext links, 353
+- symbolic links, 361
+- Linksys NE100
+- TX Ethernet Adapters, 54
+- compatibility, 010
+- Conetran driver, 286
+- distributions, 9–11
+- Linux-related groups, 374–375
+- operating system, 101
+- date and time, 146
+- getting online help, 143
+- making commands easier, 143
+- managing processes, 145
+- managing users, 145
+- trying in shell, 96–97
+- defined, 153–154
+- directory hierarchy, 154, 155–480
+- drive letters and, 153
+- filenames, 154, 155–156
+- mounting storage devices on., 440–443
+- navigating with Linux commands. See also Linux commands
+- archiving/compressing files, 145
+- changing permissions/owners, 162–163
+- checking disk-space usage, 167–168
+- commands, listed, 143–146
+- copying files, 163–164
+- deleting directories, 165
+- deleting files, 164
+- directory listings, 159–162
+- directory navigation, 158–159
+- language support, foreign, 51
+- layers in Inmers, 255–256
+- layouts in Imslide, 253–254
+- layouts in Writer, page, 228–231
+- Leach, P., 616
+- Less, 178
+- LGPL (Library General Public License), GNU, 733–734
+- /lib directory, 155, 439
+- Libpng software, 180
+
+# 828 Red Hat Linux 2 All-in-One Desk Reference For Dummies
+
+- Linux file system (continued)
+- finding files, 143–144, 165–166
+- making directories, 164–165
+- managing the file system, 145–146
+- managing files/directories, 143–165
+- mounting CDs/DVDs, 166–167, 440–443
+- moving files, overview, 143–146, 157–158
+- processing files, unmounting CDs, 167, 442
+- viewing permissions, 161
+- warning, 164
+- overview, 153
+- pathnames, 154–459
+- root directory, 153–156, 439
+- subdirectory, 156–157, 440
+- top-level directories, 155–156, 439
+- Linux kernel. See also rebuilding
+- boot commands, 62–64
+- booting, 75–76
+- defined, 10–11
+- executing in Perl scripts, 795–797
+- computer hardware, 53
+- device handling, 14–15
+- de-conqueror feature, 128, 357
+- storage devices on., 440–443
+- navigating with Linux commands. See also Linux commands
+- archiving/compressing files, 145
+- changing permissions/owners, 162–163
+- checking disk-space usage, 167–168
+- commands, listed, 143–146
+- copying files, 163–164
+- deleting directories, 165
+- deleting files, 164
+- directory listings, 159–162
+- directory navigation, 158–159
+
+# 829
+
+- IP (Internet Protocol), 272, 599. See Also TCP/IP routing/forwarding, 567
+- IP (Internet Protocol Next Generation), 298
+- IPP (Internet Printing Protocol), 489
+- IPv6 (Internet Protocol) version 6, 298
+- IRQs (interrupt requested numbers), 287
+- ISA (Industry Standard Architecture) busses, 502
+- ISBN (International Standard Book Number), 179
+- ISC (Internet Software Consortium) Consortium, 666
+- IDSN (Integrated Services Digital Network) DSL, 276
+- IDSN subsystem options, 508
+- ISO (International Organization for Standardization), 678
+- ISO images, 103
+- IV (Initialization Vector), 309
+- KB (kilobyte), 104
+- Kbps (kilobits per second), 272, 276
+- K (Desktop Environment). See Also GNOME backgrounds, 93–94, 133–134
+- defined, 88–89, 127
+- customizing, 92–94, 132–134
+- desktop pop-up menus, 112–113
+- icon pop-up menus, 113–114
+- kdm login manager, 404
+- kmail client, 171, 340
+- as file manager, 72, 128–132
+- as Web browser, 132
+- logging in, 89–90, 127–128
+- Main Menu, 90–91, 116–117
+- online help, 23–24
+- overview, 19–20, 81, 111
+- panel, 90–92, 112–116
+- Service Configuration utility, 609–614
+- text editor, 200
+- Web site address, 89
+
+# Index 830
+
+- kernel hacking options, 513. See also Linux kernel
+- keyboards, 33, 41, 42
+- kill command, 147
+- keychain, 478–488
+- Kimball Spencer, 194
+- kmail application, 171, 340
+- as file manager, 72, 128–132
+- as Web browser, 132
+- Cd application, 170
+- kudzu utility, 443, 487
+- View application, 171
+- libraries. See also shared libraries
+- database, 18, 733
+- Libpng image, 18
+- SANE library, 171
+- LILO (Linux Loader), 481
+- Line Printer Daemon (LPD), 581
+- linking device into kernel, 497
+- linking, dynamic, 734
+- shared links to directory, 160–161
+- hypertext links, 353
+- symbolic links, 361
+- Linksys NE100
+- TX Ethernet Adapters, 54
+- compatibility, 010
+- Conetran driver, 286
+- distributions, 9–11
+- Linux-related groups, 374–375
+- operating system, 101
+- date and time, 146
+- getting online help, 143
+- making commands easier, 143
+- managing processes, 145
+- managing users, 145
+- trying in shell, 96–97
+- defined, 153–154
+- directory hierarchy, 154, 155–480
+- drive letters and, 153
+- filenames, 154, 155–156
+- mounting storage devices on., 440–443
+- navigating with Linux commands. See also Linux commands
+- archiving/compressing files, 145
+- changing permissions/owners, 162–163
+- checking disk-space usage, 167–168
+- commands, listed, 143–146
+- copying files, 163–164
+- deleting directories, 165
+- deleting files, 164
+- directory listings, 159–162
+- directory navigation, 158–159
+- language support, foreign, 51
+- layers in Inmers, 255–256
+- layouts in Imslide, 253–254
+- layouts in Writer, page, 228–231
+- Leach, P., 616
+- Less, 178
+- LGPL (Library General Public License), GNU, 733–734
+- /lib directory, 155, 439
+- Libpng software, 180
+
+# Index 831
+
+- .m4 extension, 653
+- macros. See also programming
+- def, 652, 738
+- defining in C, 739
+- in GNU make, 721
+- in sendmail, 652–654, 657
+- m4 macro processor, 18, 652–654
+- macro expansion, 652
+- predefined macros in C, 740–741
+- in GNU make, 721–722
+- in sendmail, 654–660
+- stream-based processing, 652
+- Magicdev utility, 71
+- mail merges in Writer, 215. See also e-mail
+- mailto://URL, 354
+- main function in C, 757
+- Main buttons in GNOME, 83–85, 116–119
+
+# Index 832
+
+- 1p command, 489–490
+- 1pq command, 490
+- 1psstat command, 491
+- s command in combining shell commands, 138
+- getting directory listings, 159–162
+- smod command, 483–485
+- LSM (Linux Security Module), 15
+
+# Index 833
+
+- 826 Red Hat Fedora Linux 2 All-in-One Desk Reference for Dummies
