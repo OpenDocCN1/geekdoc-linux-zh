@@ -1,0 +1,15 @@
+called compliance-based penetration tests, or simply "compliance assessments" or "compliance checks".
+
+A compliance test often begins with a vulnerability assessment. In the case of PCI auditing, a vulnerability assessment, when performed properly, can satisfy several of the base requirements, including: "2. Do not use vendor-supplied defaults for system passwords and other security parameters" (with example, tools from the Password Attacks menu category), "11. Regularly test security systems and processes" (tools from the Database Assessment category) and others. Some requirements, such as "9. Restrict physical access to cardholder data" and "12. Maintain a policy that addresses information security for all personnel" don't seem to lend themselves to traditional-based vulnerability assessment and require additional creativity and testing.
+
+Despite the fact that it might not seem straight-forward to use Kali Linux for some elements of a compliance test, the fact is that Kali is a perfect fit in this environment, because of the open-source Debian environment it is built on, allowing for the installation of a wide range of. Searching the package manager with carefully chosen keywords from whichever compliance framework you are using is almost certain to turn up multiple results. As it stands, many organizations use Kali Linux as the standard platform for these exact sorts of assessments.
+
+# 11.2.3. Traditional Penetration Test
+
+A traditional penetration test has become a difficult item to define, with many working different dimensions, depending on the space they operate in. Part of this market confusion is driven by the fact that the term "Penetration Test" has more commonly used for the previously mentioned compliance-based penetration test (or even a vulnerability assessment) where, by design, you are not delving deep into the assessment because that would go beyond the minimum requirements.
+
+For the purposes of this section, we will side-step that debate and use this category for assessments that go beyond the minimum requirements; assessments that are designed to improve the overall security of the organization.
+
+As opposed to the previously-assessed assessment types, penetration tests don't often start with a scope definition, but instead de a goal such as, "simulate what would happen if an internal user is compromised" or, "identify what would happen if the organization came under attack by an external party." A key differentiator of these sorts of assessments is that they don't just find and validate vulnerabilities, but leverage identified issues to uncover the worst-case scenario. Instead of relying solely on heavy vulnerability scanning tools, you must follow up with validation of the findings through the use of exploits or tests to eliminate false positives and to better detect hidden vulnerabilities or false negatives. This often involves exploiting
+
+> 20 https://www.pcissecuritystandards.org/documents/PCID55_QRG3_2.pdf

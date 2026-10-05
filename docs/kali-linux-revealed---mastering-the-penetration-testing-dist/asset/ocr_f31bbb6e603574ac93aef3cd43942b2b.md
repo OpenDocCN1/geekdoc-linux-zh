@@ -1,0 +1,1 @@
+Now that you have a handle on Linux fundamentals, let's get Kali Linux set up and running.
