@@ -1,0 +1,12 @@
+# SuSE System Administration
+Part III
+
+Some time ago, Torvalds decreed that odd minor numbers denote experimental kernels, while even minor numbers would carry a stamp of respectability and be considered production editions. Today, although many Linux distributions still carry a 2.0 kernel as the default, it is the newer 2.2 kernel that has generated most of the public and commercial interest in Linux, with the impending advances building to 2.4 carrying the momentum even higher. Upgrading from 2.0 to 2.2, or from 2.2 to 2.3, is very likely why you are reading this chapter.
+
+On the experimental side, the 2.1 series kernels have been supplanted by 2.2, which is now a worthy successor to the two-year old workhorse of 2.0. The work continues with 2.3 as the kernel continues to refine the infrastructure in the new production kernel toward new models and methods, for example, in improved network and SMP performance. A successful software project must mature at some point, and the legendary development pace of Linux has slowed somewhat. Torvalds himself has stated that there aren't a lot of innovations left, other to take advantage of the current architecture to port Linux to new systems and to continue create new modules for new devices and services. He isn't always right, of course, but it does seem like the 2.4 kernel will follow relatively quickly compared to the jump up from 2.0, and this new Linux is largely transparent to enterprise and performance users. Of course, I am not right either.
+
+# Caution
+
+During the rapid development of the odd minor kernels, it is important that you don't simply jump in and expect to join the other kernel surfers. Although the development group endeavors to only release stable code, very often a core change can cause havoc for other users. These troubles are often traced to needing specific libraries, modules, or compiler tools, and sometimes the development can inadvertently strand whole communities of developers. When you're surveying the patches, the best practice is to first check the Linux kernel changes web site, and then watch the Linux kernel development mailing list for trouble reports. Only then should you dive in a development kernel revision that has been stable for at least a few days.
+
+The official Web site of the kernel development team is http://www.tux.org. Another excellent resource is Kernel Traffic, at http://kt.linuxcare.com/. This site features a weekly newsletter on the latest goings in the kernel world.

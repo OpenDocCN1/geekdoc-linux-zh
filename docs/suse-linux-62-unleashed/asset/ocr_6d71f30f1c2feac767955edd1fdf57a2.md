@@ -1,0 +1,1 @@
+Unlike some of the other UNIX tools (shell, grep, and so on), awk requires a program (Known as an awk script). This program can be as simple as one line or as complex as several thousand lines. (I once developed an awk program that summarizes data at several levels with multiple control breaks; it just short of 1,000 lines.)

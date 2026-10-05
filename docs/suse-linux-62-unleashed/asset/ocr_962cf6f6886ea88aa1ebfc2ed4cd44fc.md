@@ -1,0 +1,3 @@
+# # Summary
+
+This chapter covered the basic installation and configuration of the XFree86 X11 distribution for Linux. If you're a new user, you found out how to correctly configure and install X with fewer problems; if you're an experienced user, you hopefully discovered some new features (such as starting different window managers and multiple X sessions) that will make your X sessions more productive and enjoyable.

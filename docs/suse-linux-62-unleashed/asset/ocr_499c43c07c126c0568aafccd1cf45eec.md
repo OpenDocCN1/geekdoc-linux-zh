@@ -1,0 +1,3 @@
+# Summary
+
+The advent of advanced software management tools, such as rpm and YaST, greatly reduces the need for system administrators to spend inordinate amounts of time installing or managing software using command-line tools. These tools are contributing greatly to the taming of Linux administration. This chapter has introduced you to the fundamentals of these tools, and this opens the door to experimentation with all sorts of tools from third parties.

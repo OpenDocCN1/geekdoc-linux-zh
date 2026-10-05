@@ -1,0 +1,335 @@
+
+# ispell command
+
+ispell command, 1007
+- command-line option, 161
+- ISPs (Internet service providers)
+- newsgroup access, 412
+- ITEF Web site, 268
+- Java Wrapper Script, 677–678
+- jed command, 1007
+- jmacs command, 1008
+- joe command, 1008
+- JOIN command, 440
+- ?JOIN#channelname commands, 440
+- joystick, 695
+- jpico command, 1008
+- jastar command, 1008
+- junk mail, 301–302, 302
+- junk.jnk file, 263
+- icons and windows, 113
+- installation components, 113–114
+- kde directory, 115
+- kdm (K display manager login, 114–115)
+- kime file manager, 117
+- NTA (Network Access), Transparent, 113
+- personal productivity tools, 113
+- pop-up menus, 113
+- session Java applets, 809
+- application creation, 815
+- indent, 809
+- code, 808
+- compiling source code, 814
+- cross-platform development, 809–810
+- editing programs, 813
+- interpreters, 811
+- Java Virtual Machine, 808
+- language overview, 811–812
+- Linux support, 810
+- methods, 813–814
+- platforms supporting, 808
+- programming, 806–815
+- proprietary development, 809–810
+- software development kits, 810–814
+- uses, 807–808
+- writing programs, 812–813
+
+## K Desktop
+- games, 942
+- K Desktop Environment. See KDE
+- kadmin file, 113
+- kbase file, 113
+- KBerFTPD server, 319
+- KDE (K Desktop Environment), 100, 104, 162
+- basic desktop actions, 116
+- built-in help, 113
+- figuring, 118–128
+- desktop directory, 115
+- desktop elements, 116
+- desktop features, 115
+- drag-and-drop actions, 113
+- editing panel menus, 117
+- features, 112–118
+- graphic figurations, 163
+- management, 113
+- starting, 115
+- Stucky Buttons, 113
+- taskbar, 116
+- for X11, 2
+- KDE Control Center, 118–128
+- Background dialog box, 121
+- changing desktop wallpaper, 120–121
+- changing screensaver, 121–122
+- cursor movement through desktops, 128
+- desktop menu, 120
+- display manager options, 118–120
+- Input Devices drop-down menu, 124
+- keyboard and mouse settings, 124
+- Sound drop-down menu, 123
+- system sounds installation, 123
+- window button changes, 124, 126
+- Windows drop-down menu, 124
+- KDE desktop changing wallpaper, 120–121
+
+## kernel
+- BSD accounting, 674
+- building and installing, 703–705
+- building and running, 662
+- character devices, 693–695
+- halting while loading, 711
+- hardware support messages, 52
+- include files, 662
+- infrared port device drivers, 692
+- init process, 143–145
+- input chain, 208
+- inserting and deleting packet filtering rules, 208
+- KDE Menu Editor dialog box, 117
+- KDE panel, 116–113
+- Menu Editor, 118
+- rearranging icons, 117
+- resizing, 116
+- code maturity level, 671
+- configuration options, 670–671
+- configuring, 667–673
+- console drivers, 699–700
+- IP aliasing, 687–689
+- IP Tunneling, 687
+- IPC (Interprocess Communications), 674
+- IPX, 689–690
+- KDE pointer configuration dialog, 68
+- KDE wallpapers default, 121
+- consoles, 693
+- default chains, 208
+- dial-up networking directing to hosts connected to interface, 185
+- IrDA subsystem, 693
+- joystick, 695
+- kernel panic message, 711–712
+- loadable module support, 673
+- load/save
+- KDE Web site, 113
+- KDE window manager, 105
+- kdm (K display manager), 97, 114–115
+- kdm login box changing appearance, 118–882
+- DoubleTalk speech, 695
+- Dummy device, 991
+- enhanced IDE support, 683–684
+- enterprise networks, 690
+- fair queuing, 690
+- filesystems, 696–697
+- floppy disk driver, 681–683
+- forwards chain, 208
+- forwards on high-speed interfaces and 690
+- frame buffer support, 699–700
+- tape, 695
+- general setup, 673–685
+- loop back drives, 684
+- manually installing, 705–709
+- mirror FTP site, 661
+- misc binary support, 658–659, 666–666
+- mouse, 694
+- MTRR (Memory Type Register), 672–673
+- Kenneth E. Harker's Pages, 18
+- kerberos, 616
+- kernel, 1, 12, 654–655
+- amateur radio, 692
+- APM (Advanced Power Management), 680
+- basics, 657–670
+- boot file, 655
+- boot script changes, 662–663
+- multiple devices and RAID, 684–685
+- native language support, 699
+- Netlink socket, 685–686
+- network device support, 691
+- network filesystems, 697–698
+- Network Firewall, 686–887
+- networking options, 685
+- networking support, 674
+- new 2. features, 666–667
+- in standard place, 49
+- NVRAM, 694–695
+- obtaining source files, 666–667
+- old CD-ROM drivers, 693
+- optimizing as router, 687
+- output chain, 208
+- parallel ports, 679–680
+- parallel printers, 694
+- parport, 685
+- partial LILO prompt, 710
+- partition types, 699
+- patching source, 664–665
+- plug and play support, 681
+- processor type and features, 672
+- QoS, 690
+- references and resources, 713–714
+- rescue disks, 655–656
+- RTC devices, 694
+- SCLSI, 691
+- selecting, 365
+- serial ports, 694
+- SMP (Symmetric Multi-Processor) machines, 672–673
+- software version numbers, 663–664
+- sound, 700–702
+- sysctl file support, 674–776
+- system information files, 706–708
+- terminals, 693
+- troubleshooting, 706
+- troubleshooting and recovery, 709–713
+- UNIX8 PTY, 694
+- unusual name, for 49
+- version 2.23, 10
+- version numbers, 659–690
+- Video4linux, 695
+- watchdog, 694–695
+- watchdog support, 680
+- Webmasters, 887–889
+- wireless, 692
+- x.25, 690
+
+## Kernel FAQ
+- Kernel FAQ, 656
+- Kernel Hacking, 702–703
+- kernel modules, 152–153
+- settings, 153
+- Kernel Newsflash page, 667
+- kernel panic message, 711–712
+- Kernel selection dialog, 35
+- Kernel Traffic Web
+- device drivers, 152
+- available, 54
+- monolithic, 655–657
+- supporting IP chains, 207
+- Kernigan, Brian, 751
+- key combinations
+- Installation dialog box, 23
+- console 1 (Alt+F1)
+- console 3 (Alt+F3)
+- Install log, 23
+- console 4 (Alt+F4)
+- System log, 233
+- console 5 (Alt+F5)
+- installation messages, 23
+- keyboard changing settings, 124
+- character repeat, 124
+- cursor movement, 135
+- language, 84–85
+- management, 83
+- modifying, 94
+- selection, 70–71
+- switching keys, 77
+- type and settings, 83–84
+- number of seconds, 70–71
+- printing list of available, 54
+- kernels, 54
+- errors, 55
+- configuration, 24
+- reconfiguring, 48
+- uninstalling, 55
+- indentation, 117
+- figuration, 117–118
+- games, 113
+- graph, 113
+- file, 113
+- manager, 113
+- image, 113
+- multi, 113
+- net, 113
+- organ, 113
+- part, 113
+- supp, 113
+- toys, 113
+- utils, 114
+- int, 114
+
+## Linux
+- cost, 10
+- CPUs supported, 2
+- definition of, 9–10
+- desktop, 2
+- drive requirements, 10
+- firewall concepts, 207–208
+- GNU software support, 11
+- IEEE POSIX.1 standard, 11
+- IRC clients, 436–441
+- legacy hardware, 2
+- legacy systems, 11
+- lower cost, 11
+- masquerading, 207
+- networking support, 11
+- newsgroups, 413–415
+- no royalty or licensing fees, 2
+- nonproprietary source code, 11
+- packet filtering, 207
+- power of, 10
+- pre-emptive multitasking, 10
+- proxy-based firewalls, 207
+- RAM requirements, 10
+- reconfiguring on-the-fly, 176
+- servers operations, 2
+- shared libraries, 11
+- small size of, 10
+- source code, 10
+- starting, 142
+- virtual memory, 11
+- X Window System, 11
+- Y2K, 713
+- Linux clients
+- accessing smb shares, 505–506
+- mounting SMB shares, 507
+- smbclient program, 505–506
+- Linux Documentation Project
+- copyright license, 1033–1034
+- publishing manuals, 1034–1035
+- Linux Documentation Web site, 18
+- Linux file system organization, 576
+- Linux installation
+- destroying with system-restore CD-ROM, 18
+- Linux kernel FAQ, 667
+- Linux kernel mailing list, 688
+- archives, 667
+- Linux laptop user site, 66
+- Linux Serial HOWTO, 567
+- Linuxberg Web site, 444
+- Linux, 665
+- Listen directive, 372
+- In command, 577
+- load/save configuration, 703
+- loading modules, 152–153
+- LOADLIN, 142
+- LOADLIN.EXE, 56
+- local host, alternative names for, 301
+- local programs, 161
+- host interface, 515, 516
+- locate command, 1009
+- LogFormat directive, 374
+- variables, 374–375
+- logging Apache Web server, 374–375
+- logging FTP user actions, 332
+- logging in, 42
+- logical partitions, 555
+- login command, 1009
+- Login Manager dialog box, 118
+- Sessions tab, 120
+- Users tab, 120
+- login names, 9
+- loginfails command, 328
+- logins configuring, 97
+- logout command, 1009
+- look command, 1009
+- loopback devices, 558
+- loopback disk devices kernel, 684
+- loopback filesystems encryption, 559–560
+- loopback interface, 515
+- loopback network, 172
+- lost+found directory, 155
+- lpc command, 1009
+- lpd command, 1010
