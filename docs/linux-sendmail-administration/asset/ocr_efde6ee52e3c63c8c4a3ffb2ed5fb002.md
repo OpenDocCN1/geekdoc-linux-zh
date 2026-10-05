@@ -1,0 +1,49 @@
+Let's follow the advice at the beginning of the generic-linux.mc file to build our own
+simple configuration file.
+
+# Building a Simple m4 Configuration File
+
+The problem we want to solve is very straightforward. We have installed Sendmail 8.11
+on the sample system and we want a basic configuration that will work with that release.
+We aren't concerned yet with building a full-featured Sendmail configuration. We just
+want to get the system running. Let's start with the generic-linux.mc file.
+
+By changing to the cf/cf directory and copying the generic-linux.mc file to
+test.mc. Make sure the file permission for test.mc is 644 so that you can edit the file:
+
+```
+[root]# cd /usr/local/src/sendmail-8.11.0/cf/cf
+[root]# cp generic-linux.mc test.mc
+[root]# chmod 644 test.mc
+```
+
+Now edit the file to create the new configuration. Our goal is to create the simplest
+configuration to get the system running. To do that, remove the
+DOMAIN(generic) line from the test.mc macro configuration file; it is primarily included
+as an example and has not been customized for our domain. While editing the file, don't
+forget to update the VERSIONID to reflect the fact that this is a new configuration
+file. The following tail command shows the macros in the file after the edits:
+
+```
+[root]# tail -5 test.mc
+divert(0)dnl
+VERSIONID(`test.mc, v1.0`)
+OSTYPE(linux)dnl
+MAILER(local)dnl
+MAILER(smtp)dnl
+```
+
+The new test.mc file is simpler than the generic-linux.mc file.
+
+# The m4 Command Line
+
+The test.mc configuration file cannot be used by Sendmail directly. The test.mc file
+is an input file for the m4 command. The next step in creating the Sendmail config-\uration is to process the test.mc file through m4 as shown in Listing 4.8.
+
+Listing 4.8 Running m4
+
+```
+[root]# m4 ../cf/cf.m4 test.mc > test.cf
+```
+
+![](bbox=[0.913, 0.283, 0.978, 0.383])

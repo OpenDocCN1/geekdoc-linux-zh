@@ -1,0 +1,5 @@
+# 206 Chapter 7 The sendmail.cf File
+
+# Listing 7.12 The Mailers defined in sendmail.cf
+
+The sendmail.cf file created by the redhat.mc macro configuration contains each mailer definitions. The first five mailers define legacy traditional seven-bit SMTP mail, which is called smtp. The next mailer definition is for Extended SMTP mail and is also called esmtp. (It is the default mailer for Internet mail). The eight-bit SMTP handles unencoded data from remote servers that can't Handle SMTP. The dsmtp mailer is used when the recipient server initiates the connection and downloads mail with the ETRN command. Finally, relay is a mailer that relays TCP/IP mail through an external mail relay host. All of these mailers were covered in Chapter 5, “Understanding a Vendor’s Configuration,” in relationship to the MAILER(smtp) macro

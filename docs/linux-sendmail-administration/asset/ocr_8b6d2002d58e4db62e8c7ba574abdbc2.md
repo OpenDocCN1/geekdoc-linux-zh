@@ -1,0 +1,39 @@
++   - DOMAIN, when used, comes next.
+
++   - define commands that affect a FEATURE macro that will be specified in the macro configuration file must come before that FEATURE macro.
+
++   - FEATURE macros come next.
+
++   - define commands that specify variable settings for the configuration, other than those that affect a previously identified FEATURE, come after the FEATURE macros.
+
++   - MAILER macros are the last basic commands in the file.
+
+As you'll see later, there are several more commands that can be used in the m4 configuration files. These commands add complexity to the structure, but the basic structure is described above.
+
+The nine commands covered so far are used to build most configurations. The syntax and the purpose of the commands have been described, but until you see the commands in the context of a configuration file, it is difficult to imagine exactly how they are used.
+
+# # A Sample Macro Configuration File
+
+The Sendmail distribution comes with a large number of sample macro configuration files. One is sure to draw the attention of a Linux system administrator is the file generic-linux.mc. Listing 4.7 shows the contents of this file:
+
+Listing 4.7 The generic-linux.mc File
+
+```
+divert(-1)
+#
+# Copyright (1998, 1999 Sendmail, Inc. and its suppliers.
+# All rights reserved.
+# Copyright (1983) Eric P. Allman. All rights reserved.
+# Copyright (1983, 1993)
+# The Regents of the University of California. All rights reserved.
+#
+# By using this file, you agree to the terms and conditions set
+# forth in the LICENSE file which can be found at the top level of
+# the sendmail distribution.
+#
+#
+
+# This is a generic configuration file for Linux.
+# It has support for local and SMTP mail only. If you want to
+# customize it, copy it to a name appropriate for your environment
+```

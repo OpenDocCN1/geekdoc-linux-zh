@@ -1,0 +1,26 @@
+# 412 Appendix C Sendmail Variables, Options, and Flags
+
+value stored in a variable. This appendix lists all of the variables in two tables. Table C.1 lists all of the variables that use single-character names.
+
+> NOTE Throughout this the term "variable" is used to refer to the indirect values used in the sendmail.cf file. Sendmail documentation calls these same variables "macros." We call variables to avoid confusing them with the m4 macros. However, when you refer to the Sendmail documentation you should be aware of the fact that these same values will be called macros.
+
+# Table C.1 Reserved Variables with Single-Character Names
+
+| Variable | What It Holds |
+|---|--|
+ a | The date and time the mail was sent. |
+ b | The current date in RFC 822 format. |
+ B | The name of the BITNET relay. |
+ c | The number of times the mail has been forwarded. |
+ C | The name of the DECnet relay. |
+ d | The current date and time in ctime format. |
+ E | Sendmail reserves this for an X.400 relay. |
+ f | The sender address. |
+ F | The name of the FAX relay. |
+ g | The sender address written as a full return address. |
+ h | The recipient host. |
+ H | The name of the mail hub. |
+ i | The queue identifier. |
+ j | The fully qualified domain name of the local computer. |
+ k | The local system's UUCP node name. |
+ L | The name of the LUSER_RELAY. |
