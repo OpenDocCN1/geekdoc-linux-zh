@@ -1,0 +1,1 @@
+Finally, if your hardware is too new or proprietary, or if you have a notebook computer, you may want to buy a commercial X Server from Metrolink (www.metrolink.com) or Xi Graphics (www.xigraphics.com). Sometimes their code works when XFree86 does not. Plus, if you buy an X Server, you can call the company's technical support line if you can't get it installed.
