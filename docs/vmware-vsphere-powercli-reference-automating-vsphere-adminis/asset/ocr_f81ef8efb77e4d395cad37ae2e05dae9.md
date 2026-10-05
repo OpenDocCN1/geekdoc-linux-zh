@@ -1,0 +1,11 @@
+# Use and Manage Snapshots
+
+vSphere allows you to create snapshots of virtual machines. This creates a point-in-time "backup" of the VM. Notice that backup is mentioned within quotation marks, because a snapshot is not equivalent to a regular VM backup. Learn more about VM backup solutions in Chapter 11, "Backing Up and Restoring Your Virtual Machines." The snapshot saves a copy of the complete state of the virtual machine at the time it is taken (although saving the state is optional), allowing the VM to quickly revert to that state when necessary, without the need for restoring backups. Many administrators think about redo files whenever a snapshot is mentioned. Those thoughts cause confusion when it's time to permanently delete the snapshot in order to recover the changes that were made since the snapshot was taken. A snapshot is much more than a delta VMDK file. So just forget about all the details that vSphere uses under the hood; it is all about virtual machine states.
+
+A snapshot is a safety net. We recommend that be created whenever a major modification of any kind is made to a VM. For example, when modifying the virtual machine's configuration—be at the VM's hardware level or a modification of the guest operating system—create a snapshot. Snapshots are often created before installing new software, patching the operating system, or making changes to the operating system's configuration. If something goes wrong, the snapshot enables the VM to revert back to a good state. When the change is successfully tested, you can delete the snapshot.
+
+# Creating and Removing Snapshots
+
+Creating a snapshot is any easy task in the vSphere client—just a few clicks and the virtual machine has a known state to revert back to if an issue occurs. But what about doing so on a schedule or creating snapshots for a number of virtual machines? Remember the golden rule of scripting: "If you do something three times or more, then script it!"
+
+Snapshots are created using the New-Snapshot cmdlet. To preserve the VM's state, specify the -Memory parameter, but keep in mind that doing so increases the size of the snapshot state file (VMSN) with the size of the VM's configured memory for a running virtual machine.

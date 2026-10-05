@@ -1,0 +1,54 @@
+# CHAPTER 1 • AUTOMATING VCENTER SERVER DEPLOYMENT AND CONFIGURATION
+
++   - Snapshot management
+- vSphere Replication
+- Provisioning Service configuration
+- VRMPolicy
+- Resource Alarms Tasks
+- Scheduled task Sessions
+- Performance Permissions
+- Extension
+- vApp Host profile
+- ESX Agent cluster
+- Datastore cluster
+- Certificates
+- vCenter Inventory Service
+-Center Inventory Service Tagging
+- Provider
+- Storage views
+- vService
+- Profile-driven storage
+- AutoDeploy
+- Image Profile
+- Rule
+- RuleSet
+- Host
+- TransferService
+- Content Library
+
++   - Virtual machine snapshot management
+- vSphere Replication configuration
+- Virtual machine service configuration
+- Virtual Rights Policy
+- Resource allocation Alarms
+- Scheduled task Sessions
+- Performance Permissions
+- Extensions
+- Privileges related to vApps
+- Host profile
+- ESX Agent Manager
+- Datastore cluster
+- Certificates
+- Inventory Service
+- Create and Assign Tags to Objects...
+- Provider
+- Storage views
+- vService management
+- Profile-driven storage
+- Auto Deploy
+- Image Profile
+- Rule
+- Rule sets
+- Host
+- TransferService
+- Content Library

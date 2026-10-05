@@ -1,0 +1,2458 @@
+
+# POWERSHELL COMMANDS – REMOVING
+
+- querying execution workflows, 786–790
+- querying state, 779–782
+- retrieving detail workflows, 767–772
+- retrieving workflow output, 776–782
+- plug-in configuration, 715–718
+    - adding item, 716, 717
+    - stateful addition, 718
+    - User Credentials tab, 717
+- virtual host configuration, 715
+- remotely remove, 233
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- scheduling, 901–902
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+(Wait, some repeated lines)
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+- Remediate-Inventory cmdlet, 483–484
+- Remediate process, 483
+- Remediate-Network cmdlet, 274
+- Remove-Snapshot cmdlet, 325
+- Remove-Protection function, 800–801
+- Remove-StartInterval cmdlet, 565
+- Remove-SystemCopyfunction function, 877
+- QueryHostPath method, 653
+- QueryHostPath_Task, method cmdlet, 652
+- execution workflows, 786–790
+- workflow state, 779–782
+- QueryType parameter, enumerators name, 689
+
+# Q
+- RAID arrays, hardware, 120
+- raw device mapping (RDM), 277
+- RBAC (role-based control system), 18
+
+# R
+
+## RENAME - SCRIPTS
+
+- Rename method, for managed objects, 640–642
+- RenameDatastore method, 639,640
+- Rename_Task method, 640
+- Renouf, Atlas, 474,544
+- Rename-SyncWorkcopyitem, 877
+- replication, 790
+- fast stores, 794
+- report examples, 915–934
+- clusters, 929–943
+- guest operating system, 920–922
+- host adapters (HBAs), 923–924
+- hosts, 924–925
+- network adapters, 924–925
+- PCI devices, 926–929
+- resource limits, 918–919
+- snapshots, 919–920
+- virtual information, 915
+- reporting phase, xiii
+- report examples, 151–158
+- Also compliance report, 498–504
+- small, 538–544
+- en, plain text, 539
+- on screen, 538
+- web page, 543–547
+- generative in Azure Cloud, 706–708
+- information sources, 510–537
+- CIM method, 513–537
+- ESXi console, 515–552
+- Get-VIEClient, 527
+- performance data, 533
+- PowerCLI objects, 510–534
+- SDK, API, 527
+- tasks and events, 523–537
+- vSphere View objects, 514–515
+- org.Center, 675–677
+- on requested paths, 491–492
+- on security status, 486–492
+- datacenter collection, 487–489
+- standard switch/workcopy group, 486–511
+- techniques, 502–507
+- grouping data, 506–507
+- objects, 507–509
+- ordering data, 502–506
+- cloning, 882–888
+- creating, 880–881
+- removing code from, 891, 888
+- reverting changes in, 888, 890, 885–888
+- update code in, 856
+- for scavenging new, 129–130
+- resiliency of copies and soft groups, 835–848
+- balancing cluster across, 134
+- reports on multiple, 383,545–580
+- lists, 918–919
+
+# S
+- SANs (storage area networks), 131–132
+- ISCSI, 120
+- SATPs. Storage Array Type (SATAPs)
+- Savepoint, 392
+- saving hash table, 101
+- Scan-Inventory cmdlet, 482
+- scanning hosts, for nested paths, 482–483
+- SCCM System Configuration Manager, 215
+- scheduling scripts, 901–902
+- PowerCLIConfiguration cmdlet, 698
+- display report, 538
+- ScriptOutput property, from Invoke-VMS cmdlet, 305
+- ScriptProperty properties, 509
+- REST-API cmdlet, for communicating with NS, 102
+- REST-Import cmdlet, 638
+- REST-Interface for import, 537
+- REST-VMim cmdlet, 686
+- REST-VMGuest cmdlet, 686
+- Restore-SqlDatabase cmdlet, 402
+- restoring distributed views, 99
+- vCenter adapter, 402–406
+- reconnecting ESXi hosts, 403–406
+- virtual machine from VR backup obj, 396
+-rar object template, 391–392
+- Restricted, default exit policy, 899
+- RetrieveDescription method, 596
+- Restore-HardwareUpdate method, 653
+- return code: examples, 751
+- JavaScript case to process, 727
+- receiving code from external source, 721–727
+- receiving code from local source, 756
+- return keyword, 750
+- return values from exit, 656–658
+- Reverting Changes log block, 862
+- review of,, 667
+- comments in out, 907–908
+- dort-source file, 908–901
+- executing, 897–898
+- invoking, 720
+- with predefined values, 600
+- for Active Directory account user, 757–756–771
+- JavaScript code for cmdlet, 721
+- running in vCenter Orchestrator, 719–721
+- flexibility in, 36
+- helping get values, 912–913
+- for installation, 6
+- logging, 903–907
+- ending passwords, 901–911
+- Power-Actions, 818–826
+- hiding, 819–823
+- changing default policy for SAP, 832–833, 833, 834, 836
+- listing default list for SAPS, 827–831, 837
+- My Script and shared scripts, 819824, 825, 826
+- receiving code from local, 750–756
+- role-based access (RBAC) system, 18
+- creating, 23–25
+- root folder, 407–408
+- root password, 669
+- routed connection, for organization, 667
+- rules for policies, creating, 146
+- Roundback value, for PSR, 141
+- running for PowerActions, 83
+- recurring times, 571–572
+- Scope parameter of Set-VMS cmdlet, 305
+- script execution function, 599
+- security images, 382
+- security group, 875
+- security policies, reporting and updating, 467
+- security property, 467
+- Secure Shell, 294
+- support-port protocol, 460–461
+- support for corporate applications, 386–396
+    - Dell, 387–392
+- and CenterOrchestrator, 712
+- VISIONPowerShell commands, in scripts, 896
+- PowerShell console, 599
+- PowerShell Execution Policy, 713
+- PowerShell host, 713
+- PowerShell, for VDS functionality, 90
+- PowerShell profile set, 472
+- PowerShell Remove, 294, 295, 300–303
+    - reporting of service status, 302–304
+- PowerShell Submodule attributes, 876
+    - functions included, 887
+- Preboot Execution Environment (PXE), 46
+- private scale. Cloud-Drive VLAN, 913
+- applying to new role, 25
+- array for, 25
+- counter adding, 20
+- grating bar, 19–22
+- roles, 413
+- process action, xiv
+- Process Explorer, 599
+- data deduplication, with VirtualVH, 905
+- progress bar impact of, 230
+- for New-WM cmdlet, 229
+- project based on red exclamation marker in, 858, 859
+- projects in TortoiseSVN
+    - adding code, 854–855
+    - checking for changes, 861–862, 878
+    - checkout, 851–853
+    - committing code to file, 856
+    - creating structure, 850–851
+    - removing code, 867–869, 868
+    - reverting changes in, 865, 865–867
+    - updating code, 858–861
+    - viewing, 870, 870
+- prom, for credentials, 910
+- Prompt User No Default is Default provided, 559
+- Prompt(ForCredential) method, 425
+    - properties, 507
+- searching tasks by, 700
+- Select-Object function to create, 509
+    - variables for, 6
+    - viewing all, 915–917
+- Property parameter of, Search-Cloud, 689
+    - groups
+    - adding to body, 801–803
+    - adding VM to, 797–799
+    - in Service Manager Registry, 792
+    - information from, 774–797
+    - testing, 803–809
+- RDM (raw device mapping), 277
+- unregister virtual machines, 226–227
+- read performance, of virtual machines, 171
+- README.ml file, for GitHub, 882
+- real-time data, 546
+- real-time interval, 550
+- Runtime parameter, for Get-Statlet cmdlet, 565
+- Reconfigure-ComputeResource method, 187
+- Reconnect-Host method, 404
+- reconnecting SSH, 403–406
+- recovery of virtual machines, 434–439
+- recovery plans
+    - adding position to, 801–803
+    - in Service Manager Registry, 992
+    - information from, 774–797
+    - testing, 803–809
+- out output clean, 408
+- Register-VMX change, 436–439
+- registered views, 488
+- register, virtual machines (VMs), 223–227
+- regular expressions (regext), 297
+- reference sheet, 298
+(Wait, some repeated lines)
+- adjustment specification, 247
+- MiBMemory parameter, 256
+- NumCPU parameter, 269
+- Set-VMHRCT cmdlet, 383–386
+- Set-VMHost cmdlet, 403
+- Set-VMHostAccount cmdlet, 629
+- Set-VMHostADAdminGroup function, 200–210
+- Set-VMHostAuthentication function, 227
+- Set-VMHostFailureException cmdlet, 457
+- Set-VMHostCBInd own cmdlet, 122
+- Set-VMHostLockdown function, 54–56,125
+- Set-VMHostNetworkAdapter cmdlet, 97
+- Set-VMHostSnmp cmdlet, 690
+- Set-VMHostYSANMaintenanceMode cmdlet, 159–163
+- Set-VMOffline function, 267–271
+- Set-VMResourceConfiguration cmdlet, 34
+- Evacuateally parameter, 144
+- StorageConfigurableEnabled parameter, 143
+- dead alarm, 444
+- Execution-Policy cmdlet, 714
+- ExecutionPolicy Remediation settings, 615
+- Set-HardDisk cmdlet, CapacityGB, 285
+- Set-HarddiskVFR function, 176–182, 183
+- Set-Ipool function, 355–361
+- Set-LicenseKey function, 39–43
+- Set-ManagementAndVirtualMotion function, 83–86
+- Set-Pathcluster, 380–401
+- Set-PolicyLCConfiguration cmdlet, 603,697–699
+- Scope parameter, 698
+- to suppress deprecated cmdlets, 205
+- VMConsoleBrowser parameter, 699
+- WebOperationTimeCenter, 699
+- Set-Clmith cmdlet, PolicyManagement, 462
+- Security property, 467
+- Set-Interval cmdlet, 565
+- Set-IntervalLevel cmdlet, 553–554
+- Throb-cmd, 290–292
+- Set-VAppParameter function, 363–366
+- Set-VProduct function, 367–371
+- Set-AppDataOrderStart cmdlet, 340–344
+- Set-VRBOptions cmdlets, 395
+- Set-VRBSnapshot cmdlet, 394, 395
+- Set-VDGroupOverpolicy cmdlet, 467
+- Set-VDSPolicy cmdlet, 469
+- Set-VirtualPort cmdlet, 682
+- Set-VMNASADirect function, 870,872–873
+- Set-VM cmdlet for adjustment specification, 247
+- MiBMemory parameter, 256
+- NumCPU parameter, 269
+- Set-VMHRCT cmdlet, 383–386
+- Set-VMHost cmdlet, 403
+- Set-VMHostAccount cmdlet, 629
+- Set-VMHostADAdminGroup function, 200–210
+- Set-VMHostAuthentication function, 227
+- Set-VMHostFailureException cmdlet, 457
+- Set-VMHostCBInd own cmdlet, 122
+- Set-VMHostLockdown function, 54–56,125
+- Set-VMHostNetworkAdapter cmdlet, 97
+- Set-VMHostSnmp cmdlet, 690
+- Set-VMHostYSANMaintenanceMode cmdlet, 159–163
+- Set-VMOffline function, 267–271
+- Set-VMResourceConfiguration cmdlet, 34
+- Evacuateally parameter, 144
+- StorageConfigurableEnabled parameter, 143
+- dead alarm, 444
+- Execution-Policy cmdlet, 714
+- ExecutionPolicy Remediation settings, 615
+- Set-HardDisk cmdlet, CapacityGB, 285
+- Set-HarddiskVFR function, 176–182, 183
+- Set-Ipool function, 355–361
+- Set-LicenseKey function, 39–43
+- Set-ManagementAndVirtualMotion function, 83–86
+- Set-Pathcluster, 380–401
+- Set-PolicyLCConfiguration cmdlet, 603,697–699
+- Scope parameter, 698
+- to suppress deprecated cmdlets, 205
+- VMConsoleBrowser parameter, 699
+- WebOperationTimeCenter, 699
+- Set-Clmith cmdlet, PolicyManagement, 462
+- Security property, 467
+- Set-Interval cmdlet, 565
+- Set-IntervalLevel cmdlet, 553–554
+- Throb-cmd, 290–292
+- Set-VAppParameter function, 363–366
+- Set-VProduct function, 367–371
+- Set-AppDataOrderStart cmdlet, 340–344
+- Set-VRBOptions cmdlets, 395
+- Set-VRBSnapshot cmdlet, 394, 395
+- Set-VDGroupOverpolicy cmdlet, 467
+- Set-VDSPolicy cmdlet, 469
+- Set-VirtualPort cmdlet, 682
+- Set-VMNASADirect function, 870,872–873
+- Set-VM cmdlet for adjustment specification, 247
+- MiBMemory parameter, 256
+- NumCPU parameter, 269
+- Set-VMHRCT cmdlet, 383–386
+- Set-VMHost cmdlet, 403
+- Set-VMHostAccount cmdlet, 629
+- Set-VMHostADAdminGroup function, 200–210
+- Set-VMHostAuthentication function, 227
+- Set-VMHostFailureException cmdlet, 457
+- Set-VMHostCBInd own cmdlet, 122
+- Set-VMHostLockdown function, 54–56,125
+- Set-VMHostNetworkAdapter cmdlet, 97
+- Set-VMHostSnmp cmdlet, 690
+- Set-VMHostYSANMaintenanceMode cmdlet, 159–163
+- Set-VMOffline function, 267–271
+- Set-VMResourceConfiguration cmdlet, 34
+- Evacuateally parameter, 144
+- StorageConfigurableEnabled parameter, 143
+- dead alarm, 444
+- Execution-Policy cmdlet, 714
+- ExecutionPolicy Remediation settings, 615
+- Set-HardDisk cmdlet, CapacityGB, 285
+- Set-HarddiskVFR function, 176–182, 183
+- Set-Ipool function, 355–361
+- Set-LicenseKey function, 39–43
+- Set-ManagementAndVirtualMotion function, 83–86
+- Set-Pathcluster, 380–401
+- Set-PolicyLCConfiguration cmdlet, 603,697–699
+- Scope parameter, 698
+- to suppress deprecated cmdlets, 205
+- VMConsoleBrowser parameter, 699
+- WebOperationTimeCenter, 699
+- Set-Clmith cmdlet, PolicyManagement, 462
+- Security property, 467
+- Set-Interval cmdlet, 565
+- Set-IntervalLevel cmdlet, 553–554
+- Throb-cmd, 290–292
+- Set-VAppParameter function, 363–366
+- Set-VProduct function, 367–371
+- Set-AppDataOrderStart cmdlet, 340–344
+- Set-VRBOptions cmdlets, 395
+- Set-VRBSnapshot cmdlet, 394, 395
+- Set-VDGroupOverpolicy cmdlet, 467
+- Set-VDSPolicy cmdlet, 469
+- Set-VirtualPort cmdlet, 682
+- Set-VMNASADirect function, 870,872–873
+- Set-VM cmdlet for adjustment specification, 247
+- MiBMemory parameter, 256
+- NumCPU parameter, 269
+- Set-VMHRCT cmdlet, 383–386
+- Set-VMHost cmdlet, 403
+- Set-VMHostAccount cmdlet, 629
+- Set-VMHostADAdminGroup function, 200–210
+- Set-VMHostAuthentication function, 227
+- Set-VMHostFailureException cmdlet, 457
+- Set-VMHostCBInd own cmdlet, 122
+- Set-VMHostLockdown function, 54–56,125
+- Set-VMHostNetworkAdapter cmdlet, 97
+- Set-VMHostSnmp cmdlet, 690
+- Set-VMHostYSANMaintenanceMode cmdlet, 159–163
+- Set-VMOffline function, 267–271
+- Set-VMResourceConfiguration cmdlet, 34

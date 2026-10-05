@@ -1,0 +1,3 @@
+# Final Thoughts
+
+There is potential with PowerActions to bring almost any functionality to the vSphere Web Client that you think is missing and would be useful—either for yourself or maybe colleagues who are not able to write PowerShell code themselves. We have demonstrated that it is not difficult to take existing code, either your own from this book, and modify it to make it suitable for use in PowerActions. The limit with the tool is confined only to your imagination.
