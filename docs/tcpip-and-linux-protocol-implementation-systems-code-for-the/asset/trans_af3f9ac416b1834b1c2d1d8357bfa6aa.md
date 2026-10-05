@@ -1,0 +1,339 @@
+
+
+# 路由 599
+
+```c
+115 b -= (b)>>5;
+```
+
+```c
+116 b &= FZ_HASHMASK(fz);
+```
+
+```c
+117 return *(fn_bashash_idx_t*)&b;
+```
+
+```c
+118 }
+```
+
+```c
+119
+```
+
+```c
+120 #define fz_key_O(key) (key.datum = 0)
+```
+
+```c
+121 #define fz_prefix(key,fz) (key.datum)
+```
+
+```c
+122
+```
+
+```c
+123 static __inline_ fn_key_t fz_key(u32 dst, struct fn_zone *fz)
+```
+
+```c
+124 {
+```
+
+```c
+125
+```
+
+```c
+126 fn_key_t k;
+```
+
+```c
+127 k.datum = dst & FZ_MASK(fz);
+```
+
+```c
+128 return k;
+```
+
+```c
+129 }
+```
+
+```c
+130 static __inline__ struct fib_node *fz_chain_p(fn_key_t key, struct fn_zone *fz)
+```
+
+```c
+131 {
+```
+
+```c
+132 return &fz->fz_hash[fn_hash_hash(key, fz)].datum;
+```
+
+```c
+133 }
+```
+
+```c
+134
+```
+
+```c
+135 static __inline__ struct fib_node *fz_chain(fn_key_t key, struct fn_zone *fz)
+```
+
+```c
+136 {
+```
+
+```c
+137 return fz->fz_hash[fn_hash(key, fz)].datum;
+```
+
+```c
+138 }
+```
+
+```c
+139
+```
+
+```c
+140 extern __inline_ int fn_key_eq(fn_key_t a, fn_key_t b)
+```
+
+```c
+141 {
+```
+
+```c
+142 return a.datum == b.datum;
+```
+
+```c
+143 }
+```
+
+```c
+144
+```
+
+```c
+145 extern __inline_ int fn_key_le(fn_key_t a, fn_key_t b)
+```
+
+```c
+146 {
+```
+
+```c
+147 return a.datum <= b.datum;
+```
+
+```c
+148 }
+```
+
+```c
+149
+```
+
+```c
+150 static rlock_t fib_hash_lock = RW_LOCK_UNLOCKED;
+```
+
+```c
+151
+```
+
+```c
+152 #define FZ_MAX_DIVISOR 1024
+```
+
+8.75 通过哈希内联函数快速访问 FIB：ii: linux/net/ipv4/fib_hash.c。
+
+```c
+154 #define CONFIG_IP_ROUTE_LARGE_TABLES
+```
+
+```c
+155
+```
+
+```c
+/* 调用此函数时必须持有 fib hash 锁。 */
+157 static __inline_ void fn_rebuild_zone(struct fn_zone *fz,
+158 struct fib_node **old_ht,
+159 int old_divisor)
+160 {
+161 int i;
+162 struct fib_node *f, *fp, *next;
+```
+
+```c
+for (i=0; i<old_divisor; i++) {
+    for (f=old_ht[i]; f; f=f->next) {
+        next = f->fn_next;
+        for (fp = fz->chain_p(f->fn_key, f->fn_key); 
+             fp && fn_key_le((*fp)->fn_key, f->fn_key);
+             fp = &(*fp)->fn_next) {
+            /* 节点 */
+        }
+        f->fn_next = *fp;
+        *fp = f;
+    }
+}
+} // 缺少括号
+```
+
+# **8.76** 通过哈希内联函数快速访问 FIB：iii: linux/net/ip4/fib_hash.c
+
+```c
+static void fn_rehash_zone(struct fn_zone *fz) {
+    struct fib_node **ht, **old_ht;
+    int old_divisor, new_divisor;
+    u32 new_hashmask;
+
+    old_divisor = fz->fz_divisor;
+    switch (old_divisor) {
+        case 16:
+            new_divisor = 256;
+            new_hashmask = 0xFF;
+            break;
+        case 256:
+            new_divisor = 1024;
+            new_hashmask = 0x3FF;
+            break;
+        default:
+            printk(KERN_CRIT, "route.c: bad divisor %d\n", old_divisor);
+            return;
+    }
+
+#if RT_CACHE_DEBUG > 2
+    printk("fn_rehash_zone: hash for %d grows from %d\n", fz->fz_order, old_divisor);
+#endif
+
+    ht = kmalloc(new_divisor*sizeof(struct fib_node), GFP_KERNEL);
+    
+    if (ht) {
+        memset(ht, 0, new_divisor*sizeof(struct fib_node));
+        write_lock(&fz->hash_lock);
+        old_ht = fz->fz_hash = ht;
+        fz->fz_mask = new_hashmask;
+        fz->fz_divisor = new_divisor;
+        fn_rebuild_zone(fz, old_ht, old_divisor);
+        write_unlock(&fz->hash_lock);
+        kfree(old_ht);
+    }
+#endif // CONFIG_IP_ROUTE_LARGE_TABLES
+```
+
+## 区域信息
+
+接下来我们需要查找正确的区域：
+
+### 图 8.77 FIB 哈希区域访问函数：linux/net/ipv4/fib_hash.c。
+
+```c
+static void fn_free_node(struct fib_node *f) {
+    fib_release_info(FIB_INFO(f));
+    kmem_cache_free(fn_hash_kmem, f);
+}
+
+static struct fn_zone *new_zone(struct fn_hash *table, int z) {
+    int i;
+    struct fn_zone *fz = kmalloc(sizeof(fn_zone), GFP_KERNEL);
+    if (!fz) {
+        return NULL;
+    }
+    memset(fz, 0, sizeof(struct fn_zone));
+    if (z) {
+        fz->divisor = 16;
+        fz->hash_mask = 0xF;
+    } else {
+        fz->divisor = 1;
+        fz->hash_mask = 0;
+    }
+    fz->fz_hash = kmalloc(fz->divisor*sizeof(struct fib_node), GFP_KERNEL);
+    if (!fz) {
+        kfree(fz);
+        return NULL;
+    }
+    memset(fz->fz_hash, 0, fz->divisor*sizeof(struct fib_node));
+    fz->order = z;
+    fz->mask = inet_make_mask(z);
+    /* 查找具有更特定掩码的第一个空区域 */
+    for (i=z+1; i<32; i++) {
+        if (table->fn_zones[i])
+            break;
+    }
+
+    write_unlock(&table->hash_lock);
+    if (i == 32) {
+        /* 没有更特定的掩码，我们是第一个。 */
+        fz->fn_next = table->fn_zone_list;
+        table->fn_zone_list = fz;
+    } else {
+        fz->fn_next = table->fn_zones[i]->fn_next;
+        table->fn_zones[i]->fn_next = fz;
+    }
+    table->fn_zones[z] = fz;
+    write_unlock(&table->hash_lock);
+    return fz;
+}
+```
+
+## TCP/IP 和 Linux 协议实现
+
+然后我们查找实际条目：
+
+**图 8.78** 快速查找 FIB 函数：linux/net/ipv4/fib_hash.c。
+
+```c
+static int
+hash_lookup(struct fib_table *bt, const struct rt_key *key, struct fib_result *res) {
+    int err;
+    struct fn_zone *fz;
+    struct fn_hash *t = (struct fn_hash*)bt->tb_data;
+
+    read_lock(&t->hash_lock);
+    for (fz = t->fn_zone_list; fz = fz->fz_next) {
+        struct fn_node *f;
+        fn_key_t k = fz->key(key->dst, fz);
+
+        for (f = fz->fn_chain(k, fz); f; f = f->fn_next) {
+            if (!fn_key_eq(k, f->key))
+                if (fn_key_le(k, f->key))
+                    break;
+                else
+                    continue;
+        }
+        #ifdef CONFIG_IP_ROUTE_TOS
+        if (f->fn_tos && f->fn_tos != key->tos)
+            continue;
+        #endif
+        f->fn_state = FN_S_ACCESSED;
+
+        if (f->fn_state&FN_S_ZOMBIE)
+            continue;
+
+        if (f->fn_scope < key->scope)
+            continue;
+
+        err = fib_semantic_match(f->fn_type, FIB_INFO(f), key, res);
+        if (err == 0) {
+            res->type = f->fn_type;
+            res->scope = f->fn_scope;
+            res->prefix = fz->fz_mask;
+            break;
+        }
+    }
+    read_unlock(&t->hash_lock);
+    return -1;
+}
+```
+

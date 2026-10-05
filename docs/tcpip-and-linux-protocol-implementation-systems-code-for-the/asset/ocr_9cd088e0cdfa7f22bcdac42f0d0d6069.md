@@ -1,0 +1,15 @@
+# Introduction to the Linux Operating System
+
+requirement for process memory may exceed the physical memory in a machine.
+
+To this end, Linux implements a virtual memory system (like many operating systems) that extends the limits of physical memory by using disk space. To organize the memory systems into a coherent framework, the unit of allocation and mapping is the page. At the lowest level, this is typically managed by memory management, mapping, and paging hardware, which predeterm a limited set of page sizes (for efficiency reasons). The most common size is 4 Kbytes. The full set of descriptors of possible pages are in memory themselves and are represented by the page table, which is an array of descriptors with an associated set of flags indicating how the page is being used. Efficiency considerations have to do with the tradeoff between the page table size, and the cost of paging from disk to memory and back, and the accuracy of matching the unit of allocation to the unit of request for memory. Of course, actual usage doesn't map simply to convient 4 Kbytes chunks of memory.
+
+Some page puts constraints on the memory addresses (e.g., devices that cannot go via the MMU and/or can only access low parts of the address space) and this is specified in the flags on request.
+
+At the next level of abstraction, kernel functions require variable length pieces of memory allocated and freed dynamically that are often much shorter than a whole page. Linux implements a system called slab allocation algorithm is based on the idea that there is a common set of objects of a common set of sizes that is frequently allocated and freed (e.g., process descriptors, file table entries, and so on). The slab allocator groups requests into caches of similar sizes. Another important feature of memory allocated from slabs is that it can be aligned to a multiple of bytes or words, or even an entire page size, so that accesses can be faster and even avoid the address mapping process.
+
+Memory management is quite a complex process in general, and has to be tuned off the mix of jobs a system typically runs. In practice, it is the pattern of memory freeing that can dominate the performance.
+
+In the communications code, most memory allocation is done by a special function, and uses its set of data structures to overlay the memory with some patterns that are highly optimized to network packet header processing. This is called socket buffer, the aalloc_slab(), and related functions. These in turn call kmalloc() to allocate general purpose memory for general use purpose. These call kmem_cache_alloc() to allocate the appropriate cache block size. The use of these functions for networking is discussed in detail in Chapter 5.
+
+The exception to this is the use of lower-level access to memory allocation, typically for I/O buffers in device drivers when we need to restrict the possible locations to which memory is allocated. This is often because devices do not access memory via the page table or the segment register, or have restricted numbers of bits in the device's register that is used to specific buffers' locations.

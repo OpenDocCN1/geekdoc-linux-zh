@@ -1,0 +1,15 @@
+# 546 TCP/IP and Linux Protocol Implementation
+
+there are several examples of this, ranging from subnet routing, up to area routing (in Open Shortest Path First (OSPF) and Intermediate System-Intermedia System (IS-IS)). We will revisit this briefly at the end of this chapter.
+
+Routing table construction. It is an internal matter for a routing daemon how it constructs its routing information base. The entries will essentially list all the peer routers, and typically all possible destination prefixes, as well as some destinations known about but currently unreachable. The most general data structure for this would be a graph of nodes (routers) and edges (links), with the edges labeled with the various metrics for making route (or forwarding) decisions. Associated with any node and edge would be the source of the information about it, and the time that the last information was received. Of course, in practice, given all information arrives either from or via neighbors, this data could be built around a smaller data structure, such as a list of neighbors and the list of updates, with a single entry for the update time—it really depends on the granularity of information in the routing protocol.
+
+Forwarding table computation. At the end of each update epoch, a computation is carried out by the routing daemon to derive the new forwarding information base (FIB). This is then downloaded into the forwarding engine—in Linux terms, the kernel FIB is updated by the routing process. This can and often is manual, of course.
+
+In distance-vector algorithms, the data distribution is the computation. A router receives a vector of destinations and metrics from a neighbor, and simply replaces the forwarding entry for the next hop with the new value, if the value is better.
+
+In state protocols, a more complex procedure is needed to derive the forwarding table from the set of route updates. At the end of the route flooding epoch, the network graph is built, by adding all the updates in a jigsaw puzzle. Subsequently, Dijkstra's well-known graph-walking algorithm can be used to carry out a search from the current router to all others (and the networks attached to those routers). This finds the path from here to there with the lowest metric. If paths with different metrics need to be considered (or multiple alternate paths for load balancing or instant failover), then the algorithm can be called multiple times.
+
+Typically, we can imagine that this only occurs for the entire routing system very occasionally. Most updates may result in local parts of the graph being changed, and there are several techniques for incrementally computing a Dijkstra, and keeping the CPU to a minimum.
+
+Forwarding is simple. However, the lookup of an entry is complicated by the fact that the procedure typically involves an algorithm called longest match
