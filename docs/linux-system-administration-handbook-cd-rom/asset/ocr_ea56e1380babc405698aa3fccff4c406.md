@@ -1,0 +1,13 @@
+# 5.1 TCP/IP
+
+In a reverse situation, the BOOTP protocol involves a Reverse ARP (RARP) that announces its MAC address, asking which IP address to use. For diskless machines, or even Windows machines using Dynamic Host Configuration Protocol (DHCP), this is the way that these machines themselves configured. A machine that has RARP or DHCP running responds with the IP address and other information (the gateway and nameserver for example).
+
+Even though the Ethernet protocol is a standard, there are three main ways of actually implementing the physical layer. Thicknet is a 15-pin connection with very heavy gauge wire that is no longer in use. The best thing you can do with a thicknet connection is attach a transceiver on it to convert it to another physical layer. Thicknet or coax, runs one long wire which all the Ethernet adapters adding taps or T-connectors along the wire to connect. Coax is very inexpensive to implement, but a wiring problem along the wire can cause failure of the entire network. Coax also requires termination on both ends to keep the Ethernet signals from reflecting and causing problems. With the large number of wires and connectors that can be on an Ethernet run, your chances of failure for a large-scale installation increase. The last, and preferable, setup is RJ-45, also known as 10BaseT. It costs more, since you have to buy a hub, and is harder to implement, but the only of of failure of a hub would cause more than one person to work trouble at the same time. If a wire were to disconnect, no other users would be affected. The RJ-45 connection also has the capability of running at 100 Mbps instead of the regular 10 Mbps, and most new cabling installations use Category 5 (Cat 5) cabling which is required for 100 Mbps. Category 3 (Cat 3) is suitable for 10 Mbps.
+
+# Connecting to an Ethernet Network
+
+To get yourself hooked into an Ethernet network, get yourself an Ethernet card. Most should work, but you may want to check out the Ethernet-HOWTO for a list of cards. For the most part, if it's from a major provider like 3Com, there is probably support for that card. Install the card in your machine and reboot. If the kernel recognizes your card, then you're set for
+
+> I lied a bit. Thicknet provides for electrical isolation in areas where you might have a ground domain problem, for example, going between different floors in a multistory building. 10BaseT hubs have this capability as well.
+
+> Unless, of course, you are the disconnected user.

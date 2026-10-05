@@ -1,0 +1,13 @@
+My primary job is in technical support, and we use a database program called Remedy to provide our call tracking. One feature I wanted to add was the ability to have E-mail that comes in or out to be automatically added to a call. This involves a few steps:
+
++   - Make sure the Subject: line for a call has a four-digit number. This would be the call number.
+
++   - Extract the four-digit number.
+
++   - Take the body of the message and the sender and add it to the call.
+
+The first two items are actually easy, since Perl was designed with some powerful pattern matching capabilities. Searching the Internet gave me a group of people who gave a Perl interface to Remedy. This interface allowed me to log in to the Remedy server, modify the database to add the new entry, and then log out. The total size of the program was under 100 lines of code, and most of it was re-used from a sample program that came with the interface.
+
+Another project is to monitor the phone system and make a listing every day of the incoming calls and the average length of each file. Someone else wrote a program to get the information and dump it in a file. All I had to do was open the file, read through until I hit that day's records, and then add up the times. Since Perl is made for string manipulation, I can pull out the hours, minutes, and seconds of the call, convert it to all seconds, and build a total number of seconds of incoming calls for the day. I can then divide that by the number of calls, divide again to get hours, minutes, and seconds, and dump that into another file. Add a cron process to do this every night after midnight, and there is the program.
+
+My third example of why I like Perl has to do with our router to the Internet. Our current link (56 Kb) is not all that big, and slowdown are becoming more frequent. There has to be a way for me to find out how much of my bandwidth is being used during a day, and there is, using the SNMP network management tool. Sure, I could probably write a C application to talk directly to the router and pull the information out. But I don't like C and the thought of malloc() and free() disturbs me. Good thing there's (you guessed it) an SNMP interface to Perl—a 20-line Perl script to talk to the router and query it every few minutes for how many bytes it transmitted and received and divide that into the time that passed. Let that run for a few days, use a graphing tool like gnuplot to give me a graph, and now I have a reason for getting a T3. Well, maybe not a T3, but something faster anyway.

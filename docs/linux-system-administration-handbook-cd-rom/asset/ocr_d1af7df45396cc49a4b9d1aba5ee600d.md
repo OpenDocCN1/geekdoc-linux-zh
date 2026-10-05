@@ -1,0 +1,1 @@
+> ³Static is one of the quickest ways to ruin a card. Be sure you're grounded before working on the inside of a machine.
