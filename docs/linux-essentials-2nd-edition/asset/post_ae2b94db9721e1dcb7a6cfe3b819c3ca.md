@@ -1,0 +1,342 @@
+
+## Intel video drivers | logical operators
+
+- Intel video drivers, 91
+- Internet, 286
+- Internet Relay Chat (IRC), 124
+- interpreted languages, 69
+- interpreter, 16
+- IP addresses, 285, 286, 298
+- ip command, 298
+- IP masquerading, 303
+- IRC. See Internet Relay Chat
+- IRIX OS, 86
+- ISO-9660 filesystem, 77–88
+- tconfig command, 292
+- twlist command, 291–292
+- LDAP. See Lightweight Directory Access Protocol
+- LDP. See Linux Documentation Project
+- less. 114–117
+- Lesser GPL (LGPL), 26
+- Lessig. Recence, 29
+- GPL. See Lesser GPL
+- libc, 3
+- Libparted, 84
+- libraries, 3, 132
+- library directories, 176
+- library packages, 176
+- LibOffice, 12, 43, 59, 312, 319
+- licenses
+  - open source, 30–32
+  - software, 21
+  - copyright, 22–24
+  - FSF, 25–26
+- Lightweight Directory Access Protocol (LDAP), 232
+- Lightweight X11 Desktop Environment (LXDE), 48
+- links, 338
+  - files, 141–142
+  - hard, 141
+  - permissions, 275
+  - soft, 141
+  - symbolic, 141, 275
+  - using., 141–142
+- Linux. See all specific distributions
+  - changes over time, 38
+  - distributions, 13–18, 38, 308
+  - common, 14–17
+  - components, 13–14
+  - release cycles, 17–18
+- kernel, 2, 37, 38, 181, 308
+- kernel patch, 96
+- kernel ring buffer, 189–190, 318
+- keyboard/video/mouse switch (KVM switch), 92
+- KMail. 58, 213, 308
+- kernel, 2, 8, 181, 308
+  - Mac X compared to, 9–11
+  - origins, 36–37
+  - as software integrator, 40–8–9
+  - Unix compared to, 11–13
+  - Windows compared to, 11–13
+- KDE. See K Desktop Environment
+- K Kickoff Application Launcher, 52, 56
+- Kerberos realms, 223, 308
+- Linux Documentation Project (LDP), 123
+- Linux Essentials Certification, 327
+- objects, mapped, 329
+- Linux Mark Institute (LMI), 23
+  - In command, 141–142
+- Locate command, 122
+- K Desktop Environment (KDE), 3, 6, 9, 43, 48, 49, 52, 196, 310
+- Java, 70–71
+- JFS. See Journaled Filesystem
+- journal, 86
+- Journaled Filesystem (JFS), 86
+- Conqueror, 57
+- Konsole, 100
+- KVM switch. See keyboard/video/mouse switch
+- KWrite, 196, 212
+- LAMP stack, 66
+- laptop computers. see desktop and laptop computers
+- Last command, 254–255
+- LaTeX, 59
+- launching programs
+  - from desktop environment, 50–52
+  - program launchers, 7
+  - server programs, 66–67
+  - terminal, 100–103, 101–103
+  - text editors, 196–197, 197
+
+## J
+
+## K
+
+## L
+
+## login screens - Network File System
+
+- login screens, 6
+- logout options, 7
+- long-term support (LTS), 16
+- loopback device, 296
+- loops in scripts, 220–221, 321
+- lossless compression, 170
+- LPI Linux Essentials Technician (LPI LET), 328
+- command. 5. 133–135, 142
+  - hidden files: 281–282
+  - permissions, 282–283
+- liscpu, 77
+- lscpu, 79, 292, 312
+- LTS. See long-term support
+- Lubuntu distribution. 48
+- LXDE. See Lightweight X11 Desktop Environment
+- Lynx, 57
+- LyX, 59
+- MIPS CPUs, 77
+- MIT. See Massachusetts Institute of Technology
+- MIT license, 30
+- mkdir command, 140, 145, 147, 315–316
+- mobile phones, 41, 93–94
+- monolithic kernel, 37
+- motherboards,–80
+- mount command, 88
+- mount point, 85
+- mounted partitions, 136
+- Mozilla Firefox, 43–57, 106
+- Mozilla Thunderbird, 43, 58
+- MS-DOS, 83
+- mdos filesystem, 87
+- megabyte units, 83
+- multicore processors, 77
+- multiple desktops, 7
+- music players, 93–94
+- Mutt, 58
+- mvm command, 140–141, 315
+- MyTTV, 60
+
+## M
+
+- Mac OS X, 41
+  - filesystem, 87
+  - Linux compared to, 9–11
+- mail command, 214
+- mailing lists, 123–124
+- makewits command, 112
+- malware, 304
+- man command, 106, 314
+- man pages
+  - 114–117
+  - less with, 113
+  - locating by section number, 111–112
+  - purpose, 110
+  - reading, 112–114
+  - searching for, 112
+- mand command, 112
+- mndrivaria, 48, 178
+- mask. See network mask
+- Massachusetts Institute of Technology (MIT), 30
+- master boot record (MBR), 83
+- maximum resolution, 92
+- MBR. See master boot record
+- memory leak, 186
+- memory use, encoding, 185–187
+  - characters, 198
+- mkernel, 37
+- Microsoft DOS, 36
+- Microsoft Office, 11, 39
+- Microsoft Windows, 39
+  - Linux compared to, 11–13
+- Minix OS, 37
+- Mint distribution, 179
+- login, 5, 195, 196, 198–202, 212, 319
+  - launching, 17, 197
+  - saving changes, 201–202
+  - -editing procedures, 198–201
+- NAT. See Network Address Translation
+- Nautilus, 52–54, 53–55, 269–270, 276, 270
+  - dircserver, 292
+- Netfix, 66
+- netmask. See network mask
+- netstat command, 302–303
+- network account databases, 232–233
+- Network Address Translation (NAT), 303
+- network appliances, 16–17
+  - creating Wi-Fi connection, 289–292
+  - GUI, 293
+  - text-based tools, 295–298
+  - using DHCP, 288
+- basic connectivity, 299–300
+  - finding breaks, 300–301
+- network status, 302–303
+- routing table, 249
+- network device names, 296
+- network features, 285–287
+- Network File System (NFS), 43, 268, 310
+- Network Information System (NIS), 232
+- network mask, 226, 298
+- Network Time Protocol (NTP), 44
+- NFS. See Network File System
+- Nginx, 66
+- NIS. See Network Information System
+- reputable environment, 239
+- normal mode (vi editor), 202
+- lookup command, 302
+- NTFS filesystems, 87, 268
+- NTFS-3 driver, 87
+- Nvidia drivers, 91, 95
+
+## P
+
+- package database, 176
+- package management system (PMS), 71, 176–177, 318
+- packages, 15–16
+- pager, 114
+- Parallel ATA (PATA), 81
+- parameters, 215
+- parent process ID (PPID), 182
+- parent (), in regular expressions, 153
+- Document Format (PDF), 39, 121
+- ports for server programs, 63–64
+- POSIX time, 229
+- Postfix, 304, 310
+- PostScript, 121
+- pound bang, 212
+- power supply, 80–81
+- PPID. See parent process
+- preemptive multitasking, 36, 309
+- printers, 64
+- process ID (PID), 182
+- processes
+  - hierarchy, 181–182
+- identifying runner, 182–187
+- processor. See central processing unit
+- productivity programs, 3, 9, 55–62
+  - choosing, 56
+  - cloud computing, 60–61
+  - email clients, 58
+  - mobile applications, 61–62
+  - multimedia applications, 59–60
+  - office tools, 56–58
+  - web browsers, 56–58
+- program launchers, 7
+- programming languages
+  - common, 70–71
+  - compiled, interpreted, 68–70
+  - managing, 68–71
+  - project groups, 24
+  - proprietary software, 11
+  - protocols, 62
+- ps command, 182–183
+- pwd command, 135
+- Python, 71
+- Red Hat Enterprise Linux (RHEL), 15, 32, 72
+- Red Hat Product Documentation, 123
+- Red Hat systems, managing., 178–179
+- redirection
+  - basic operators, 161–163, 317
+  - generating command line, 164–165
+  - pipes, 163–164
+- Reduced Instruction Set Computing (RISC), 77
+- regular expressions, 151–153, 316
+- relative references, 137
+- release cycles, 16–18
+- remote host, 235
+- removable and optical disks, 88–89
+- replacing text, 207
+- repositories, 72, 177
+- reputation environment, 239
+- Request for Comments documents (RFC), 62
+- resolution, 92
+- returns status, 218
+- RFC. Request for Comments documents
+- RHEL. See Red Enterprise Linux
+- RISC. See Reduced Instruction Computing
+- rm command, 143
+- sticky bit, 279
+- mdir command, 145–146
+- Rock Ridge cycles, 58
+- rolling release, 17
+- root account, 102, 316, 322
+  - acquiring privileges, 228–240
+  - company policies, 239
+  - permissions, 276
+  - using safely, 241–242
+  - working as, 237–242
+- root directory, 136
+- root filesystem, 136
+- route command, 217, 295, 298, 299
+- router, 286, 287, 325
+- routing table, 299
+- rpm, 172
+- RPM Package Manager (RPM), 15, 175, 176
+- Rpmdrake, 178
+- runlevels, 104
+- running programs, 106–107, 314
+  - GUI, 106
+  - text-mode programs, 104–106
+- question mark (?)
+- file listing, 135
+- file manipulation, 143
+- filename expansion, 220
+- in regular expressions, 153
+- range expressions, 152
+- Raymond, Eric, S., 26, 40
+- read command, 218
+- README file, 120–121
+- Realtek, 292
+- recursive acronym, 8
+
+## O
+
+- object-oriented features, 70
+- Open Source Initiative (OSI), 21, 26, 29, 31
+  - open source software, 8, 10, 32
+  - business models, 32–33
+  - philosophy, 26–28
+  - using, 38–41
+- OpenDocument Format (ODF), 59
+- OpenOffice.org. See ApacheOffice
+- openSUSE, 15, 48, 178
+  - administration, 242, 262, 255, 260, 261
+- operating system (OS), 17
+- Patched Magic, 7
+- partitioning disks, 82–85, 313
+- partitions, 136
+- password command, 215, 257
+- passwords, 228
+- locking, 256
+- selecting, 246–248, 323
+- PATA. See Parallel ATA
+- patents, 233
+- path, 133
+- PATH variable, 105, 216
+- PCI devices, 312
+- PDF. See Portable Document Format
+- Perl, 31, 71–312
+- PHP, 71, 312
+- phishing, 57, 304
+- PID. See process ID
+- ping program, 216, 299–300, 324
+- pipes, 163–164
+- sign (+), in regular expressions, 153
+- PMS. See package management system
+- SAS. See See Attached Attached SCSI
