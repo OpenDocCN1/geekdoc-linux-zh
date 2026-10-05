@@ -1,0 +1,33 @@
+The root of the directory hierarchy Apache serves content from is called the document root and is controlled by the DocumentRoot directive (page 913). This directive defines a directory on the server that maps to /. This directory appears to users who are browsing a Web site as the root directory. As distributed by Ubuntu, the document root is /var/www.
+
+Modifying content with the default Ubuntu configuration of Apache, only a user with root privileges can add or modify content in /var/www. To avoid people work as root when they are manipulating content, create a group (webwork, for example), but people need to work with Web content in this group, and make the directory hierarchy starting at /var/www (another document root) writable by that group. In addition, if you give the directory set permission, all new files created within this hierarchy will belong to the group, which facilitates sharing files. The first three commands below add the new group, change the mode of the document root to setgid, and change the group that the document belongs to. The last command adds username to the webwork group; you must repeat this command for each user you want to add to the group.
+
+```
+$ sudo addgroup webwork
+$ chmod g+s /var/www
+$ sudo chown :webwork /var/www
+```
+
+See page 597 for more information about working with groups.
+
+ runs Apache version 2.2.
+
+# RUNNING A WEB SERVER (APCHE)
+
+This section explains how to install, test, and configure a basic Web server.
+
+# PREREQUISITES
+
+Minimal installation Install the following package:
+
++   * apache2
+
+apache2 init script When you install the apache2 package, the dpkg postinst script starts the apache2 daemon. After you configure Apache, call the apache2 init script to restart the apache2 daemon.
+
+```
+$ sudo service apache2 restart
+```
+
+After changing the Apache configuration on an active server, use reload in place of restart reload Apache configuration files without disturbing clients connected to the server.
+
+Optional packages The mod_ssl package is installed as part of the apache2 package—you do not need to install it separately. You may want to install the following optional packages:

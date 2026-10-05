@@ -1,0 +1,416 @@
+
+
+## 1224 主索引
+
+mail（邮件）
+- 另见 exim4
+- 别名 491, 722
+- 认证中继 736
+- 检查 root 权限 620
+- 与用户通信 615
+- Dovecot 735
+- IMAP 服务器 (Dovecot) 735
+- JumpStarting：配置 exim4 发送和接收
+- 邮件 718
+- JumpStarting：配置 exim4 使用智能主机 (smartarthost) 716
+- 列表服务器 390
+- 邮件文件 720
+- MAIL 变量 321
+- 邮箱箱 321
+- MAILCHECK 变量 321
+- maildir 格式 720
+- 邮件列表 733
+- Mailman 734–735
+- MAILPATH 变量 321
+- mailq 工具 723
+- mbox 格式 720
+- MDA（邮件投递代理） 715, 1199
+- 更多信息 715
+- MTA（邮件传输代理） 713, 1115
+- MUUA 713, 1116, 1160
+- 网络地址 186
+- newailies 工具 723
+- POP3 服务器 (Dovecot) 735
+- Postfix 715
+- 主管 (postmaster) 620
+- Qmail 717
+- 安全 115
+- 自签名证书 736
+- 发送给远程用户 390
+- sendmail 守护进程 404
+- SMTP 714
+- 垃圾邮件 (spam) 见 spam
+- SpamAssassin 见 SpamAssassin
+- SquirrelMail 731
+- SSL 736
+- 工具 186
+- 网页邮件 (Webmail) 731–733
+- 邮件文件 720
+- MAIL 变量 321
+- 邮箱箱 321
+- MAILCHECK 变量 321
+- maildir 格式 720
+- 邮件列表 733
+- Mailman 734–735
+- mailname 文件 (exim4) 718
+- MAILPATH 变量 321
+- mailq 工具 723
+- 主内存 1158
+- 主菜单 102, 122
+- 主软件包分类 522
+- 邮件工具栏, Nautilus 279
+- 大型机 102
+- 大型机机型 398
+- mainlog 目录 (exim4) 720
+- 主设备号 503, 1158
+- make 工具 1180
+- makedom 工具 753
+- makepath 函数 1026
+- man (帮助手册) 1159
+- man 目录 215
+- man 工具 136–138
+- 管理器，文件 另见 Nautilus
+- 管理器，章节 116
+- 管理器，窗口 155
+- mandub 139
+- 中间人攻击 (man-in-the-middle) 1114, 1114
+- 手册 见 help
+- 映射文件 794
+- Marvel 30
+- IP 伪装 (masquerading) 881, 890, 893, 1159
+- 麻萨塞理工学院 (MIT)
+- mawk 工具 970, 1096
+- mbox 格式 720
+- MBR (主引导记录) 84, 91, 583, 589
+- nd de 92
+- MD5 加密 1159
+- MDA 713, 1159
+- 兆字节 (mebibyte) 37, 1159
+- 千字节 (megabyte) 1159
+- 内存 (memory)
+- 另见 RAM
+- 主 1158
+- 分页 499
+- 测试 79
+- 虚拟空间和交换空间 498
+- 虚拟空间，使用 vast 的报告 609
+- memtest86+ 工具 79, 587
+- nenu 1159
+- 管理 122
+- bash 983
+- 上下文 (context) 104, 126, 127
+
+## 主索引 1225
+
+主 (Main) 122
+- 对象上下文 104, 126, 127
+- 对象 121
+- 面板 (Panel) 119
+- 面板对象上下文 121
+- 面板 见 panel
+- 偏好 (Preferences) 122
+- Shell (shell) 979
+- 系统 (System) 122
+- 窗口操作 124
+- menu.list 文件 584
+- 菜单栏, Nautilus 279
+- 合并 (merge) 1159
+- msg 工具 185
+- 消息 (message)
+- 另见错误消息 (error messages)；用法消息 (usage messages)
+- 守护进程 (daemon) 500, 625–627
+- 使用 mesg 拒绝 183
+- 消息目录 500
+- 消息文件 617
+- 当日消息 (of the day) 另见 mot.conf 文件 626–627
+- rsyslog 守护进程 625–627
+- 安全 500
+- 使用 motd 发送 615
+- 使用 wall 发送 615
+- 使用 write 发送 184, 615
+- 系统 (system) 500
+- 用法 (usage) 用法消息 (usage message)
+- 消息摘要 (Message Digest) 另见 MD5
+- 消息文件 1100
+- 元数据键值 (meta key) 119
+- 元数据库 (metabase) 1135
+- 元字符 (metacharacters) 1159, 另见特殊字符 (special characters)
+- Metacity 窗口危险 115, 155
+- 元数据 (metadata) 1159
+- 元软件包 (metapacks) 见软件包 (software packages), 虚拟
+- 城域网 (metropolitan area network) 376, 1159
+- 微处理器 11
+- Windows 见 Windows
+- 中间鼠标键 124
+- MIME 130, 1160
+- minggetty 工具 328
+- minicom 10
+- mini-TO 142
+- 最小化安装 CD 32
+- 最小系统 80
+- 最小化窗口 (minimize window) 1160
+- MINIX 6
+- minix 文件系统 505
+- 小设备号 503, 1160
+- 镜像 (mirrors), Ubuntu 45
+- 错误，纠正输入 150
+- MIT 17
+- MIT, Athena 项目 268
+- MIT, X 联盟 268
+- MIT 见 中间人 (man-in-the-middle)
+- mkdir 工具 208–209
+- mkfs 工具 458, 488, 509
+- mkiso+ 工具 488
+- mkswap 工具 499
+- locate 工具 180
+- mm_cfg.py 文件 (Mailman) 735
+- mm 目录 185
+- 调制调器 (modem) 1160
+- 调制调器, abbey 1139
+- modinit 工具 582
+- modprobe 工具 582
+- 可用模块目录 (mods-available) 905
+- 已启用模块目录 (mods-enabled) 905
+- 模块 (module), kernel 580
+- 模块 (module), Perl 1045
+- 模块助手 (module-assistant) 581
+- 模块目录 (modules) 214
+- 模块文件 (modules file) 580
+- 显示器 (monitor), LCD, 子像素平滑 284
+- 月文件 (month file) 607
+- 更多工具 (more) 162
+- Morris, Jr. 1122
+- Mosaic 浏览器 409
+- 挂载 (mount) 文件 494, 1139
+- 挂载 (mount) 1160
+- 自动 (automatic) 793, 136
+- DOS 文件系统 508
+- 文件系统 (filesystem) 509
+- 软磁盘 (diskette) 508
+- 点 (point) 36, 89, 507, 1136
+- 远程文件系统 (remotesystems) 777–780
+- 挂载 (mount) 494, 506–509, 777–780
+- 挂载 (mount): RPC: 未注册 816
+- 消息 (message) 777
+- mountd 守护进程 404
+- 挂载文件 (mounts file) 494, 790
+
+## 主索引 1226
+
+N
+- 鼠标 (mouse) 1160
+- 击点击 (click) 101, 102
+- 双击超时 (double-click timeout) 106
+- 焦点下方 (focus-stric-under) 154
+- 焦点下方 (focus-under) 153
+- 左手 (left-handed) 105, 274
+- 中间按钮 (middle button) 124
+- 鼠标悬停 (mouseover) 1160
+- 指针 (pointer) 1160
+- 交互，悬停 (inter, hover over) 102, 1152
+- 偏好设置 (preferences) 105
+- 映射按钮 (remapping buttons) 274
+- 右击 (right-click) 104
+- 右手 (right-handed) 274
+- 轮 (wheel) 274
+- 鼠标悬停 (mouseover) 1160
+- Mozilla 410
+- Mozilla, 网络新闻 (netnews) 407
+- msd 文件系统 506
+- mt 工具 605
+- MTA 713, 1115, 1160
+- mtb 文件 494
+- MUA 713, 1116, 1160
+- 多引导选择 (multiboot selection) 1160
+- 多组播 (multicast) 1161
+- 多磁盘设备 (multidisk device) 92
+- 乘法运算符 (multiplication operator) 1020
+- 多功能邮件扩展 (Multipurpose Mail Extension) 查看 MIME
+- 多任务处理 (multitasking) 13, 1161
+- 多用户 (multiuser) 13, 1161
+- 多用户模式 (multiuser mode) 448
+- 多宇宙软件包分类 (multiverse software package) 392
+- mv 工具 164, 212, 501
+- MX 记录, DNS 828
+- my 630
+
+名称 (name)
+- 命令 (command) 238
+- 守护进程 (daemon) 402
+- 域名 (domain) 见 域名 (name)
+- 登录 (login) 见 用户 (username)
+- 服务器 (servers) 399, 400
+- 空间 (space) 1161
+- named 守护进程 833
+- named 目录 847
+- named 管道 (named pipe) 503
+- named.conf 文件 836, 839–841, 856
+- named.conf.options 文件 841
+- 命名空间 (namespace) 35, 1161
+- nano 工具 425, 426
+
+## NAT 1161
+
+- 路由器 (routers) 638
+- 从 firestarter  (running from firestarter) 868
+- 从 iptables  (running from iptables) 892–896
+- iptables 881
+- 国家超级计算机应用中心 (National Center for Supercomputer Applications) 409
+- autilus 107–172, 282–283
+- 访问权限 (access permissions) 129
+- 控制条 (control bars) 278
+- 图标 (emblems) 129
+-  own浏览器对比空间 Windows (File Browser Versus Spatial Windows) 108
+-  own浏览器窗口 107, 276–282
+- 文件打开 (file, open with) 118
+- 显示隐藏文件 (hidden files, displaying) 282
+- 历史 (history) 278
+- 位置栏 (location bar) 279
+- 主工具 (Main tool) 279
+- 菜单 (menub) 279
+- 使用选择打开 (Open With Selection) 130
+- 位置 (places) 278
+- 侧边栏 (Side pane) 277
+- 空间视图 (spatial view) 282
+- 状态栏 (status bar) 279
+- 垃圾箱 (trash) 282
+- 视图面板 (View pane) 277
+- NBT 1161
+- cpfs 文件系统 506
+- dbnm 数据库 1444
+- 关系运算符 (ne relational operator) 1018
+- 否定运算符 (negation operator) 1020
+- ness 工具 1225
+- net use 工具 (Windows) 818
+- .mycnf 文件 630
+- mycp 函数 988
+- MySQL 628–635
+- .mycnf 文件 630
+- 列 (column) 628
+- 配置 (configuring) 650
+- 数据库 (database) 628
+- Jumpstart：设置 MySQL 629
+- 行 (row) 628
+- mysql_secure_installation 629
+
+## 主索引 1227
+
+- net 工具 798
+- net view (Windows) 818
+- NetBIOS 1161
+- 笔记本电脑 774, 1161
+- netcat 工具 1125
+- 网络礼仪 (netiquette) 1161
+- 网络网络 (netnetworks) 407
+- Netscape 407, 409
+- 地址 (address) 388
+- 掩码 (mask) 385
+- 私有空间 (space, private) 1166
+- 使用 wireshark 分析 (analyze using wireshark) 1226
+- 启动 (boot) 1161
+- 使用回溯查找瓶颈 (bottleneck, finding using traceback) 395
+- 广播 (broadcast) 374, 1138
+- 地址 (address) 381
+- 单播，对比 (unicast, compared) 381
+- 客户端/服务器模型 399
+- 解析器 (resolver) 400
+- 见 网络，集线器 (network, hub)
+- 使用 NetworkManager 配置 (configure using NetworkManager) 624–645
+- 守护进程 (daemons) 372, 402
+- 使用 netcat 诊断 (diagnose using netcat) 1125
+- 数据报 (datagram) 373, 1144
+- 双工 (duplex) 见 DNS
+- 以太网 (Ethernet) 374, 375, 1147
+- 扩展 (extran) 1147
+- FDDI 1148
+- 文件共享 (file sharing) 398
+- 防火墙 (firewall)
+- 全双工 (full-duplex) 374
+- 半双工 (half-duplex) 375
+- 跳数 (hops) 394
+- 主机名 (hostname) 见 FDN
+- 主机文件 (hosts file) 386
+- 集线器 (hub) 375, 1152
+- ICMP 数据包 (packet) 315
+- 网卡 (card) 见网络
+- 小写 (lowercase) 315
+- 空间 (space) 1154
+- 互联网 (Internet) 见 Internet
+- 互联网 (internet) 772
+- 局域网 (intranet) 772
+- 层 (layer), 3 380
+- 局域网 (LAN) 376
+- 大型机模型 (mainframe model) 398
+- 元数据 (metadata) 1159
+- 城域网 (metropolitan area) 376, 1159
+- 网络 (network) 见 网络，集线器
+- 网络 (netnetworks) 407
+- 网络礼仪 (netiquette) 1161
+- 网络工具 (net utility) 798
+- netcat 工具 (netcat utility) 1125
+- 网络使用 (net use) (Windows) 818
+- 网络 (name)
+- 命名空间 (namespace) 35, 1161
+- nano 工具 425, 426
+- 路由器 (routers) 638
+- 模块初始化工具 (modinit utility) 582
+- 模块探测 (modprobe utility) 582
+- 可用模块目录 (mods-available) 905
+- 已启用模块目录 (mods-enabled) 905
+- 模块 (module), kernel 580
+- 模块 (module), Perl 1045
+- 模块助手 (module-assistant) 581
+- 模块目录 (modules) 214
+- 模块文件 (modules file) 580
+- 多组播 (multicast) 1161
+- 多引导选择 (multiboot selection) 1160
+- 多磁盘设备 (multidisk device) 92
+- 乘法运算符 (multiplication operator) 1020
+- 多任务处理 (multitasking) 13, 1161
+- 多用户 (multiuser) 13, 1161
+- 多用户模式 (multiuser mode) 448
+- 多宇宙软件包分类 (multiverse software package) 392
+- NAT 1161
+- 网络地址转换 (NAT) 638
+- 路由器 (routers) 638
+- 从 firestarter 运行 (running from firestarter) 868
+- 从 iptables 运行 (running from iptables) 892–896
+- iptables 881
+- 国家超级计算机应用中心 (National Center for Supercomputer Applications) 409
+- autilus 107–172, 282–283
+- 访问权限 (access permissions) 129
+- 控制条 (control bars) 278
+- 图标 (emblems) 129
+- 文件浏览器对比空间 Windows (File Browser Versus Spatial Windows) 108
+- 文件浏览器窗口 107, 276–282
+- 文件打开 (file, open with) 118
+- 显示隐藏文件 (hidden files, displaying) 282
+- 历史 (history) 278
+- 位置栏 (location bar) 279
+- 主工具 (Main tool) 279
+- 菜单 (menub) 279
+- 使用选择打开 (Open With Selection) 130
+- 位置 (places) 278
+- 侧边栏 (Side pane) 277
+- 空间视图 (spatial view) 282
+- 状态栏 (status bar) 279
+- 垃圾箱 (trash) 282
+- 视图面板 (View pane) 277
+- NBT 1161
+- cpfs 文件系统 506
+- dbnm 数据库 1444
+- 关系运算符 (ne relational operator) 1018
+- 否定运算符 (negation operator) 1020
+- ness 工具 1225
+- net use 工具 (Windows) 818
+- .mycnf 文件 630
+- mycp 函数 988
+- MySQL 628–635
+- .mycnf 文件 630
+- 列 (column) 628
+- 配置 (configuring) 650
+- 数据库 (database) 628
+- Jumpstart：设置 MySQL 629
+- 行 (row) 628
+- mysql_secure_installation 629
+

@@ -1,0 +1,17 @@
+# MORE ABOUT LOGGING IN 145
+
+![](bbox=[0.313, 0.09, 0.804, 0.403])
+
+Figure 4-34 The Linux Documentation Project home page
+
+# # THE LOGIN SCREEN
+
+The login screen (Figure 4-1, page 100) presents a list of users who are allowed to log in on the system. On the panel at the bottom of the screen are two buttons. Click the button depicting a person in circle to select from list of accessibility preferences that may make it easier for some people to use the system. Click the button depicting a broken circle with a vertical line running through the break to restart or shut down the system. Click your name from the list of users to log in.
+
+Once you have clicked your name, the login screen displays a text box labeled **Password**. In addition, it adds drop-down lists labeled **Language, Keyboard, and Sessions** to the panel at the bottom of the screen. Enter your password in the text box and press RETURN to log in.
+
+Before you log in, the drop-down list labeled **Language** displays the name of the upcoming session will use. To change the language of the upcoming and future sessions, click the arrow at the right end of the list and select a language from the drop-down list. If the language you want is not listed, select *Other*; Ubuntu displays the Languages window. Select the language you want from this window, and then log in. The change in language preference affects window titles, prompts, error messages, and other textual items displayed by GNOME and many applications.
+
+You can change the keyboard layout that the upcoming and future sessions expect from the drop-down list labeled **Keyboard**.
+
+You can use the drop-down list labeled **Sessions** to choose between window managers for the upcoming and future sessions. Click the arrow at the right end of the list,...

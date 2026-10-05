@@ -1,0 +1,40 @@
+# 1002 CHAPTER 27 PROGRAMMING THE BOURNE AGAIN SHELL
+
+The shell expands the expression $ {name:=default} in the same manner as it expands $ {name:=default} but also sets the value of name to the expanded value of default. If a script contains a line like the following and LIT is set or null at the time this line is executed, LIT is assigned the value /home/max/literature:
+
+```
+$ ls {LIT:=home/max/literature}:
+```
+
+(null) builtin scripts frequently start with the (null) builtin on the same line by the := expansion modifier to set any variables that may be null or unset. The : builtin evaluates each token in the remainder of the command line but does not execute any commands. Without the leading colon (:), the shell evaluates and attempts to execute the “command” that results from the evaluation.
+
+Using the following syntax to set a default for a null or unset variable in a shell script (a SPACE follows the first colon):
+
+```
+$ {name:=default}
+```
+
+When a script needs a directory for temporary files and uses the value of TEMPDIR for the name of this directory, the following line assigns to TEMPDIR the value /tmp if TEMPDIR is null:
+
+```
+$ {TEMPDIR:=/tmp}
+```
+
+# :? DISPLAYS AN ERROR MESSAGE
+
+Sometimes a script needs the value of a variable that you cannot supply a reasonable default at the time you write the script. If the variable is null or unset, the ?: causes the script to display an error message and terminate with an exit status of 1:
+
+```
+$ {name:?message}
+```
+
+If you omit message, the shell displays the default error message (parameter null or not). Interactive shells do not exit when you use ?: In the following command, TESTDIR is not set so the shell displays on standard error the expanded value of the string following ?: In this case the string includes command substitution for date with the %T format, by the error string, variable not set.
+
+```
+cd {TESTDIR:?{date +T} error, variable not set}.
+bash: TESTDIR: 16:16:14 error, variable not set.
+```
+
+# BUILTIN COMMANDS
+
+Builtin commands, which were introduced in Chapter 7, do not fork a new process when you execute them. This section discusses the type, read, exec, trap, kill, and getopts builtins. Table 27-6 on page 1015 lists many bash builtin commands.

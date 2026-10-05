@@ -1,0 +1,32 @@
+# CHAPTER 26 APACHE: SETTING UP A WEB SERVER
+
+ServerAdmin Sets the email address used in mailto: links on error pages.
+
+# ServerAdmin email-address
+
+email-address is the email address of the person who is responsible for managing the Web content. Apache includes this address as a link on Apache-generated error pages. However, Ubuntu Linux sets ServerSignature (page 927) to On, which causes Apache to display information about the server—rather than a link to an email address—on error pages. Set ServerSignature to Email. Make sure email-address points to an email account that someone checks frequently. Users can use this address to get help with the Web site or to inform the administrator of problems. There is no default value for ServerAdmin; if you do not use this directive and ServerSignature is set to Email, the mailto: link on error pages points to [no address given].
+
+# ServerAdmin attacks spam
+
+security The email address you put in ServerAdmin often attacks spam. Use a spam-guarded address as "msg at sobie dot com" (you must use the quotation marks) or use a custom error page to point to a Web page with a form for sending to the right person.
+
+You can use a role alias such as webmaster at your domain and use a mail alias to forward that that is set to webmaster to the person who is responsible for maintaining the Web site. See the discussion of mail aliases on page 722.
+
+Contexts: server config, virtual host
+Specify in sites-available/*
+Default:
+Ubuntu: webmaster@localhost
+
+ServerName Specifies the server's name and the port it listens on.
+
+# ServerName FQDN [:port]
+
+FQDN is the fully qualified domain name or IP address of the server and port is the optional port number Apache listens on. The domain name of the server must be resolved by (DNS or /etc/hosts) and may differ from the hostname of the system running the server. If you do not specify a ServerName, Apache performs a DNS reverse name resolution (page 831) on the system's IP address and assigns that value to ServerName. If the reverse lookup fails, Apache assigns the system's IP address to ServerName.
+
+In the following example, substitute the FQDN of the server for www.example.com. Change the 80 to the port number Apache listens on (if it is not 80).
+
+```
+ServerName www.example.com:80
+```
+
+The ports specified by ServerName and Listen (page 910) must be the same if you want the FQDN specified by ServerName to be tied to the IP address specified by the Listen directive.

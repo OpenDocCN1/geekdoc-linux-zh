@@ -1,0 +1,458 @@
+
+## 1224 MAIN INDEX
+
+mail
+- see also exim4
+- alias 491, 722
+- authenticated relaying 736
+- checking root's 620
+- communicating with users 615
+- Dovecot 735
+- IMAP server (Dovecot) 735
+- JumpStarting: configuring exim4 to send and receive
+- mail 718
+- JumpStarting: configuring exim4 to use a smartarthost 716
+- list server 390
+- mail file 720
+- MAIL variable 321
+- mailbox 321
+- MAILCHECK variable 321
+- maildir format 720
+- mailing list 733
+- Mailman 734–735
+- MAILPATH variable 321
+- mailq utility 723
+- mbox format 720
+- MDA 715, 1199
+- more information 715
+- MTA 713, 1115
+- MUUA 713, 1116, 1160
+- network addresses 186
+- newailies utility 723
+- POP3 server (Dovecot) 735
+- Postfix 715
+- postmaster 620
+- Qmail 717
+- security 115
+- self-signed certificates 736
+- sending to a remote user 390
+- sendmail daemon 404
+- SMTP 714
+- spam see spam
+- SpamAssassin see SpamAssassin
+- SquirrelMail 731
+- SSL 736
+- utilities 186
+- Webmail 731–733
+- mail file 720
+- MAIL variable 321
+- mailbox 321
+- MAILCHECK variable 321
+- maildir format 720
+- mailing list 733
+- Mailman 734–735
+- mailname file (exim4) 718
+- MAILPATH variable 321
+- mailq utility 723
+- main memory 1158
+- Main menu 102, 122
+- main software package category 522
+- mail toolbar, Nautilus 279
+- mainframe computer 102
+- mainframe model 398
+- mainlog directory (exim4) 720
+- major device number 503, 1158
+- make utility 1180
+- makedom utility 753
+- makepath function 1026
+- man 1159
+- man directory 215
+- man utility 136–138
+- manager, file see Nautilus
+- manager, section 116
+- manager, window 155
+- mandub 139
+- man-in-the-middle 1114, 1114
+- manuals see help
+- map files 794
+- Marvel 30
+- masquerading, IP 881, 890, 893, 1159
+- Massachusetts Institute of Technology MIT
+- mawk utility 970, 1096
+- mbox format 720
+- MBR (master boot record) 84, 91, 583, 589
+- nd de 92
+- MD5 encryption 1159
+- MDA 713, 1159
+- mebibyte 37, 1159
+- megabyte 1159
+- memory
+- see also RAM
+- main 1158
+- paging 499
+- testing 79
+- virtual and swap space 498
+- virtual, report on using vast 609
+- memtest86+ utility 79, 587
+- nenu 1159
+- Administration 122
+- bash 983
+- context 104, 126, 127
+
+## MAIN INDEX 1225
+
+Main 122
+- Object context 104, 126, 127
+- objects 121
+- Panel (context) 119
+- Panel Object context 121
+- panel see panel
+- Preferences 122
+- shell 979
+- System 122
+- Window Operations 124
+- menu.list file 584
+- menubar, Nautilus 279
+- merge 1159
+- msg utility 185
+- message
+- see also error messages; usage messages
+- daemon 500, 625–627
+- deny using mesg 183
+- messages directory 500
+- messages file 617
+- of the day see mot.conf file 626–627
+- rsyslog daemon 625–627
+- security 500
+- send using motd 615
+- send using wall 615
+- send using write 184, 615
+- system 500
+- usage usage message
+- Message Digest see MD5
+- messages file 1100
+- meta key 119
+- metabase 1135
+- metacharacters 1159, see also special characters
+- Metacity window danger 115, 155
+- metadata 1159
+- metapacks see software packages, virtual
+- metropolitan area network 376, 1159
+- microprocessor 11
+- Windows see Windows
+- middle mouse button 124
+- MIME 130, 1160
+- minggetty utility 328
+- minicom 10
+- mini-TO 142
+- minimal install CD 32
+- minimal system 80
+- minimize window 1160
+- MINIX 6
+- minix filesystem 505
+- minor device number 503, 1160
+- mirrors, Ubuntu 45
+- mistakes, correct typing 150
+- MIT 17
+- MIT, Project Athena 268
+- MIT, X Consortium 268
+- MIT see man-in-the-middle
+- mkdir utility 208–209
+- mkfs utility 458, 488, 509
+- mkiso+ utility 488
+- mkswap utility 499
+- locate utility 180
+- mm_cfg.py file (Mailman) 735
+- mm directory 185
+- modem 1160
+- modem, abbey 1139
+- modinit utility 582
+- modprobe utility 582
+- mods-available directory 905
+- mods-enabled directory 905
+- module, kernel 580
+- module, Perl 1045
+- module-assistant utility 581
+- modules directory 214
+- modules file 580
+- monitor, LCD, subpixel smoothing 284
+- month file 607
+- more utility 162
+- Morris, Robert., Jr. 1122
+- Mosaic Web browser 409
+- mount file 494, 1139
+- mount 1160
+- automatic 793, 1136
+- DOS filesystem 508
+- filesystem 509
+- floppy diskette 508
+- point 36, 89, 507, 1136
+- remote filesystems 777–780
+- table 494, 506–509, 777–780
+- mount: RPC: Program not registered 816
+- message 777
+- mountd daemon 404
+- mounts file 494, 790
+
+## MAIN INDEX 1226
+
+N
+- mouse 1160
+- click 101, 102
+- double-click timeout 106
+- focus-stricly-under 154
+- focus-under 153
+- left-handed 105, 274
+- middle button 124
+- mouseover 1160
+- pointer 1160
+- inter, hover over 102, 1152
+- preferences, setting 105
+- remapping buttons 274
+- right-click 104
+- right-handed 274
+- wheel 274
+- mouseover 1160
+- Mozilla 410
+- Mozilla, netnews 407
+- msdos filesystem 506
+- mt utility 605
+- MTA 713, 1115, 1160
+- mtb file 494
+- MUA 713, 1116, 1160
+- multiboot selection 1160
+- multicast 1161
+- multidisk device 92
+- multiplication operator 1020
+- Multipurpose Mail Extension see MIME
+- multitasking 13, 1161
+- multiuser 13, 1161
+- multiuser mode 448
+- multiverse software package category 392
+- mv utility 164, 212, 501
+- MX records, DNS 828
+- my 630
+
+name
+- command 238
+- daemon 402
+- domain see domain, name
+- login see username
+- servers 399, 400
+- space 1161
+- named daemon 833
+- named directory 847
+- named pipe 503
+- named.conf file 836, 839–841, 856
+- named.conf.options file 841
+- namespace 35, 1161
+- nano utility 425, 426
+
+## NAT 1161
+
+- routers and 638
+- running from firestarter 868
+- running from iptables 892–896
+- table, iptables 881
+- National Center for Supercomputer Applications 409
+- autilus 107–172, 282–283
+- access permissions 129
+- control bars 278
+- emblems, 129
+- File Browser Versus Spatial Windows 108
+- File Browser window 107, 276–282
+- file, open with 118
+- hidden files, displaying 282
+- history 278
+- location bar 279
+- Main tool 279
+- menub 279
+- Open With Selection 130
+- places 278
+- Side pane 277
+- spatial view 282
+- status bar 279
+- trash 282
+- View pane 277
+- NBT 1161
+- cpfs file system 506
+- dbnm database 1444
+- ne relational operator 1018
+- negation operator 1020
+- ness utility 1125
+- net use utility (Windows) 818
+- .mycnf file 630
+- mycp function 988
+- MySQL 628–635
+- .mycnf file 630
+- column 628
+- configuring 650
+- database 628
+- Jumpstart: Setting Up MySQL 629
+- row 628
+- mysql_secure_installation 629
+
+## MAIN INDEX 1227
+
+- net utility 798
+- net view (Windows) 818
+- NetBIOS 1161
+- netbook 774, 1161
+- netcat utility 1125
+- netiquette 1161
+- netnetworks 407
+- Netscape 407, 409
+- address 388
+- mask 385
+- space, private 1166
+- analyze using wireshark 1126
+- boot 1161
+- bottleneck, finding using traceback 395
+- broadcast 374, 1138
+- address 381
+- unicast, compared 381
+- client/server model 399
+- resolver 400
+- see network, hub
+- configure using NetworkManager 624–645
+- daemons 372, 402
+- diagnose using netcat 1125
+- datagram 373, 1144
+- duplex see DNS
+- Ethernet 374, 375, 1147
+- extran 1147
+- FDDI 1148
+- file sharing model 398
+- firewall see firewall
+- frame 373, 1149
+- full-duplex 375
+- gateway 376, 1149
+- half-duplex 375
+- hops 394
+- hostname, FDN see FDN
+- hosts file 386
+- hub 375, 1152
+- ICMP packet 1153
+- interface card network, NIC
+- internet (lowercase) 1154
+- Internet see Internet
+- internet 372
+- intranet 372
+- layer, IP model 380
+- local area see LAN
+- mainframe model 398
+- metropolitan area 376, 1159
+- monitor with Cacti 647–658
+- multicast 1161
+- nameservers 399, 400
+- netmask 1161
+- network see networks; newsgroups
+- NIC 639
+- nm-connection-editor 643
+- node 638
+- number see, address
+- packet filtering 1164, see also firestarter; gfw; iptables
+- packet sniffer 1164
+- packets 373, 882, 1164
+- point-to-point link 374
+- port forwarding 1165
+- private address 642, 642, 1166
+- privileged port 1166
+- tp (peer-to-peer) model 399
+- route, display using traceroute 394
+- router 376, 377, 638, 1170
+- security 1116–1119
+- security guidelines 1117
+- segment 375, 1162
+- services 372, 402
+- setting up 638–641
+- sniff 117
+- sockets 503
+- specifications 373
+- subnet 385, 385, 1174
+- addresses 1175
+- masks 385, 1175
+- numbers 1175
+- specifying 462, 462
+- switch 374, 375, 1162
+- token ring 1177
+- topology, shared 1171
+- trusted hosts 391
+- tunnelling 1178
+
+## MAIN INDEX 1228
+
+network, continued
+- UDP 1178
+- unicast 1178
+- unicast versus broadcast packets 381
+- VPN 1180
+- WAN see WAN
+- wide area 1181, also see wireless
+- Wi-Fi 1181 see wireless
+- Network Address Translation see NAT
+- Network File System see NFS
+- Network Information see NFS
+- Network Time Protocol see NTP
+- NetworkManager daemon 642–645
+- newalises utility 723
+- NEWLINE (command separator) 304
+- NEWLINE key 20
+- NEWLINE, quote a backslash 304
+- newlist utility 734
+- news, Internet see news; newsgroups
+- newsgroups 408, 1103, 1119, also see news
+- NFS 773–776, 1162
+- all_squ option 779
+- attribute caching options 778
+- block size 780
+- data flow 775
+- dot utility 174
+- error handling 779
+- error messages 776, 777, 780
+- exports utility 745
+- exporting device 785
+- exporting directory 777
+- exporting links 785
+- exports file 783, 786, 789
+- filesystem 506
+- firewall setup 752
+- gsd daemon 404
+- idmapd daemon 777
+- JumpStart: configuring an NFS server 783–885
+- idmapadmin utility 783–885
+- locked daemon 777
+- line speed, testing 792
+- more information 776
+- mount utility 777
+- mountd daemon 404
+- mounting remote directory 777–780
+- mounts file 794
+- fs-common init script 776
+- fsd daemon 404
+- fs-kernel-server init script 782
+- NIS and 788
+- options 786, 789
+- all_squash 799
+- attribute caching 778
+- root_squash 788
+- performance, improving 780
+- portmap utility 776, 782, 792
+- prerequisites 776, 782
+- rmtab file 790
+- rpc.gssd daemon 779
+- rpc.idmapd daemon 777
+- rpc.lockd daemon 776
+- rpc.statd daemon 776
+- rquot daemon 404
+- running clients 776
+- security 776, 783, 788
+- server not responding error message 779
+- server-server dependency 793
+- setuid 777
+- shares-admin utility 783–885
+- showmount utility 790
+- ststed daemon 404, 776
+- testing 792
+- timeout: 779, 780
+- version 4 776

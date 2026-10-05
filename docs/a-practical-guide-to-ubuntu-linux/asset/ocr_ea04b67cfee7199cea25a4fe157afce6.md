@@ -1,0 +1,15 @@
+# TYPES OF NETWORKS AND HOW THEY WORK 377
+
+makes up the WAN backbone. When it reaches the end of its journey over the WAN, the data is converted by another gateway to a format appropriate for the receiving network. For the most part, these details are of concern only to the network administrators; the end user does not need to know anything about how the data takes place.
+
+Router A is the most popular form of gateway. Routers play an important role in internetworking. Just as you might study a map to plan your route when you need to drive to an unfamiliar place, so a computer needs to know how to deliver a message to a system attached to a distant network by passing through intermediary systems and networks along the way. Although you might envision using a giant network map to choose the route that your data follow, a static map of computer routes is usually a poor choice for a large network. Computers and networks along the route you choose may be overloaded or down, without providing a detour for your message.
+
+Routers instead communicate dynamically, keeping each other informed about which routes are open for. To extend the analogy, in this situation would be like heading out on a car trip without consulting a map to find a route to your destination; instead you head for a nearby gas station and ask directions. Throughout the journey you continue to stop at one gas station after another, getting directions to find the next one. Although it would take a while to make the stops, the owner of each gas station would advise you of bad traffic, closed roads, alternative routes, and shortcuts.
+
+The stops made by the data are much quicker than those you would make in your car, but each message leaves each router on a path chosen by the most current information. Thinking of this system as a GPS (global positioning system) that automatically gets updates at each intersection and tells you where to go, based on traffic and highway conditions.
+
+Figure 10-1 (next page) shows an example of how LANs might be set up three sites connected by a WAN (Internet). In this type of network diagram, Ethernet LANs are drawn as straight lines, with devices attached at right angles; WANs are represented as clouds, indicating that the details have been left out; and wireless connections are drawn as zigzag lines with breaks, indicating that the connection may be intermittent.
+
+In 10-1, a gateway or router relays messages between each LAN and the Internet. The three of routers in the Internet are shown (for example, the one closest to each site). Site A has a server, a network computer, and a PC sharing a single Ethernet LAN. Site B has an Ethernet LAN that serves a printer and four Linux workstations. A firewall permits only certain traffic to pass between the Internet router and the site's local router. Site C has three LANs linked by a single router, perhaps to reduce the traffic load that would result if the LANs were combined or to keep workgroups or locations on separate networks. Site C also includes a wireless access point that enables wireless communication with nearby computers.
+
+![](bbox=[0.158, 0.893, 0.175, 0.906])

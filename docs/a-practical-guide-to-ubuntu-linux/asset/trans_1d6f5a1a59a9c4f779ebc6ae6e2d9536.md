@@ -1,0 +1,466 @@
+
+
+# 1220 索引
+
+- IP 地址 1154
+- 客户端，指定 461t
+- 计算 384t
+- 回环本地服务 493
+- 表示 382
+- 静态 474
+- ip6.int 域名 831
+- IP 1155
+- ipchains 实用 880
+- IPP 协议 548
+- IPSec. 1117
+- tiptables 880–883
+- 另见 firestarter; gufw; iptables rules; ufw
+- 链 880
+- 链策略 886
+- 分类器 880
+- 命令行 884–885
+- 命令 885
+- 连接跟踪 882, 889
+- conntrack 模块 882
+- 显示标准 887
+- DNAT 目标 881, 890
+- 过滤表 881
+- firestarter 连接到 866
+- 共享共享 892–896
+- IP 伪装 893
+- ipchains 实用 880
+- tiptables-restore 实用 891
+- tiptables-save 实用 891
+- 跳转 885
+- Mangle 表 881
+- 伪装 1159
+- MASQUERADE 目标 881, 890
+- 匹配标准 884
+- 匹配扩展 887–890
+- 匹配项 880
+- 更多信息 283
+- NAT 表 881
+- NAT，运行自 892–896
+- netfilter 880
+- 网络数据包 882
+- 数据包匹配标准 884, 887
+- 策略命令 886
+- 前提条件 883
+- 协议文件 886
+- 重置规则 883
+- 路由器 892, 896
+- SNAT 目标 881, 891
+- 状态机 882, 889
+- 目标 880, 881, 885, 890–891
+
+- iptables 规则 880
+- 构建一组 885
+- 示例 880
+- 匹配标准 884
+- 数量 884
+- 保存 891
+- 规范 884
+- iptables-restore 实用 891
+- iptables-save 实用 891
+- IPv 387, 1155
+- 另见 记录 DNS 828
+- ping 394
+- traceoute 395
+- IRC, Ubuntu 频道 144
+- irqpool 启动参数 82
+- is_reg_file 壳脚本 957
+- ISDN 374, 1155
+- ISO 115
+- ISO 镜像文件 43
+- ISO 协议模型 380
+- ISO99660 文件系统 505, 1155
+- ISP 1155
+- 问题文件 147
+
+# J
+
+- JeOS 80
+- jffs2 文件系统 505
+- 任务 254, 307
+- 控制 16, 254, 307–310, 1155
+- 内置 jobs 256
+- 数量 254
+- 使用 jobs 确定数量 256
+- 使用控制挂起 255
+- ustart 433, 434, 435–436
+- 内置 jobs 152
+- John the Ripper 实用 1125
+- 日志文件系统 505, 514, 1155
+- Joy, Bill 1139
+- JPEG 1155
+- .peg 扩展名 203, 1155
+- .jpg 扩展名 203, 1155
+- justify 1155
+
+# K
+
+- K&R 12
+- KDE 99, 275
+- Adept 包管理器 525
+- 桌面 17
+- Kubuntu 2, 75, 225
+- 移植性 275
+- Qt 工具包 275
+- desudo 实用 dmesg 423
+- Kerberos 1156
+- kerberos 实用 1121
+- kernel 内核 6, 1156
+- 另见
+- 启动 444
+- 编译 579
+- .config 文件 775–579
+- 配置 775–579
+- depmod 实用 582
+- innomod 实用 582
+- 已编译 582
+- 可加载模块 580, 1157
+- lsmod 实用 582
+- m-a 实用 581
+- 消息 444, 589
+- 消息保存 444
+- modinfo 实用 582
+- modprobe 实用 582
+- module 580, 1157
+- module-assistant 实用 581
+- modules 文件 580
+- 模块，用于工具 582
+- 包，使用 dpkg 列表 588
+- 移除，使用 aptitude 588
+- 数据包过滤 firestarter; gufw; iptables; uv
+- 参数，使用系统修改 572
+- proc 文件系统 497
+- 编程接口 112
+- 重建前提条件 572
+- rmmod 实用 583
+- 源码，使用 aptitude 下载 573
+- 源码，使用 git 下载 574
+- 空间 516
+- 版本，使用名称显示 588
+- kernelspace 1156
+- Kernighan & Ritchie 12
+- 键绑定 1156
+- 键, META 1159
+- 键盘 1156
+- 键盘作为标准输入 244
+- 键盘布局，图形化安装 59
+- 键
+- BACKSPACE (删除字符) 151
+- CONTROL 20
+- CONTROL-A (退出) 152
+- CONTROL-C (复制) 124
+- CONTROL-C (中断) 152
+- CONTROL-D (EOF) 245
+- CONTROL-E (退出) 117
+- CONTROL-A (删除字符) 151, 240
+- CONTROL-Q (关闭) 147
+- CONTROL-U (行删除) 151, 240
+- CONTROL-V (粘贴) 124
+- CONTROL-W (删除单词) 151
+- CONTROL-W (删除单词) 240
+- CONTROL-X (剪切) 124
+- CONTROL-L (行删除) 151
+- CONTROL-Z (挂起) 151, 152, 255
+- DEL (删除字符) 151
+- 加密 1110
+- 行尾 220
+- ENTER 20
+- 删除 151
+- 中断 152
+- kill (行) 151
+- 行删除 151
+- NEWLINE 20
+- RETURN 20, 240
+- 字体 220
+- 关键字变量 313
+- 关键字，近似搜索 139
+- 内置 kill 152, 255, 455–457, 1009, 1012
+- kill 行键 (CONTROL-U) 151, 240
+- kill 进程 455–457
+- kill 信号 1009
+- kill 实用 618
+- kill 实用 457
+- known_hosts 文件 668–670
+- Conqueror 作为 LDAP 客户端 770
+- Kern, David 293, 1156
+- Kern Shell 293, 1156
+- ksh 壳 293, 1156
+- Kubuntu 2, 75, 225
+- VM 9
+
+# L
+
+- LAMP 32, 79, 648
+- LAN 375, 1156
+- 配置 637
+- 更多信息 658
+- 设置 638–641
+- LANG 变量 1107
+- 语言，系统使用 145
+- lapic 启动 82
+- 大数字 1156
+- launchd 守护进程 432
+- 启动器 121, 122
+- Launchpad 518, 1125
+- LBA 模式址，磁盘 758
+- LCD 监控器，亚像素平滑 284
+- LDAP 758–770, 1156
+- back_end 761
+- DB_CONFIG 文件 720
+- 目录 758
+- Evolution 客户端 767
+- Konqueror 客户端 770
+- LDIF 759
+- objectClass 759
+- schema 目录 758
+- 设置服务器 760
+- slapcat 实用 763
+- dldapadd 实用 765
+- dldapmodify 实用 764
+- idd 实用 465
+- _idfile 扩展名 759
+- -le 关系运算符 1018
+- 叶节点 1156
+- 最小特权 420, 1157
+- 左点击 101
+- 左手鼠标 105, 274
+- less 实用 138, 162, 960
+- 内置 let 361, 1016
+- 词法变量 1045
+- liftpu 实用 674
+- liftp.conf 文件 674
+- /lib 目录 214
+- lib 目录 274
+- 可执行文件调用的库，使用 ldd 465
+- libwrap, 库 465
+- libwrap 库 465
+- Lightweight Directory Access protocol LDAP
+- 行删除键 (control-u) 151, 240
+- Line Printer 守护进程使用 lpd
+- LINES 变量 984
+- links 14, 226, 226–232, 1157
+- 备用目录 491
+- 使用 rm 删除 232, 501
+- 使用 is 显示 229
+- 导出 785
+- 使用 links 查找 962
+- hard 228–230, 1151
+- hard versus symbolic 227, 230
+- hard, 使用 in 228, 501
+- hypertext 409
+- inode 501
+- 数量，使用 is 显示 216
+- 点对点 165
+- 使用 m 删除 232
+- soft, links
+- symbolic 230, 501, 1157, 176
+- d and 231
+- 使用 in 230 创建
+- 解引用 1144
+- hard versus symbolic 227, 230
+- symlinks 见 links, symbolic
+- unity names 491
+- links 实用 411
+
+# Linux
+
+- 另见 kernel
+- 优势 6–9
+- 分发版 66
+- 文档 136–144
+- Documentation Project 144
+- FHS (文件层次标准) 14, 213
+- 文件命名空间 35
+- Foundation 213
+- FSSTND (文件标准) 14, 213
+- 历史 1–6
+- LSB (Linux 标准) 213
+- 手册章节 138
+- newsgroups 454, 1103
+- 概述 12–19
+- PAM 另见 PAM
+- Pluggable Authentication Modules PAM
+- Software Map 数据库 1105
+- 标准 777
+- Terminal Server Project 774
+- UNIX 传统 3
+- linux 目录 575
+- linux 终端名称 1106
+- linux-gate.so.1 文件 467
+- 列表框见下拉列表
+- 列表操作符见字符，类
+- list, Perl
+- 列表项 387, 1155
+- 列表 152
+
+# 主索引 1224
+
+- 现场会话 52
+- 安装 75
+- Kubuntu 2
+- 移植性 275
+- Qt 工具包 275
+- desudo 实用 dmesg 423
+- Kerberos 1156
+- kerberos 实用 1121
+- kernel 6, 1156
+- 另见
+- 启动 444
+- 编译 579
+- .config 文件 775–579
+- 配置 775–579
+- depmod 实用 582
+- innomod 实用 582
+- 已编译 582
+- 可加载模块 580, 1157
+- lsmod 实用 582
+- m-a 实用 581
+- 消息 444, 589
+- 消息保存 444
+- modinfo 实用 582
+- modprobe 实用 582
+- module 580, 1157
+- module-assistant 实用 581
+- modules 文件 580
+- 模块，用于工具 582
+- 包，使用 dpkg 列表 588
+- 移除，使用 aptitude 588
+- 数据包过滤 firestarter; gufw; iptables; uv
+- 参数，使用系统修改 572
+- proc 文件系统 497
+- 编程接口 112
+- 重建前提条件 572
+- rmmod 实用 583
+- 源码，使用 aptitude 下载 573
+- 源码，使用 git 下载 574
+- 空间 516
+- 版本，使用名称显示 588
+- kernelspace 1156
+- Kernighan & Ritchie 12
+- 键绑定 1156
+- 键, META 1159
+- 键盘 1156
+- 键盘作为标准输入 244
+- 键盘布局，图形化安装 59
+- 键
+- BACKSPACE (删除字符) 151
+- CONTROL 20
+- CONTROL-A (退出) 152
+- CONTROL-C (复制) 124
+- CONTROL-C (中断) 152
+- CONTROL-D (EOF) 245
+- CONTROL-E (退出) 117
+- CONTROL-A (删除字符) 151, 240
+- CONTROL-Q (关闭) 147
+- CONTROL-U (行删除) 151, 240
+- CONTROL-V (粘贴) 124
+- CONTROL-W (删除单词) 151
+- CONTROL-W (删除单词) 240
+- CONTROL-X (剪切) 124
+- CONTROL-L (行删除) 151
+- CONTROL-Z (挂起) 151, 152, 255
+- DEL (删除字符) 151
+- 加密 1110
+- 行尾 220
+- ENTER 20
+- 删除 151
+- 中断 152
+- kill (行) 151
+- 行删除 151
+- NEWLINE 20
+- RETURN 20, 240
+- 字体 220
+- 关键字变量 313
+- 关键字，近似搜索 139
+- 内置 kill 152, 255, 455–457, 1009, 1012
+- kill 行键 (CONTROL-U) 151, 240
+- kill 进程 455–457
+- kill 信号 1009
+- kill 实用 618
+- kill 实用 457
+- known_hosts 文件 668–670
+- Conqueror 作为 LDAP 客户端 770
+- Kern, David 293, 1156
+- Kern Shell 293, 1156
+- ksh 壳 293, 1156
+- Kubuntu 2, 75, 225
+- VM 9
+
+# L
+
+- LAMP 32, 79, 648
+- LAN 375, 1156
+- 配置 637
+- 更多信息 658
+- 设置 638–641
+- LANG 变量 1107
+- 语言，系统使用 145
+- lapic 启动 82
+- 大数字 1156
+- launchd 守护进程 432
+- 启动器 121, 122
+- Launchpad 518, 1125
+- LBA 模式址，磁盘 758
+- LCD 监控器，亚像素平滑 284
+- LDAP 758–770, 1156
+- back_end 761
+- DB_CONFIG 文件 720
+- 目录 758
+- Evolution 客户端 767
+- Konqueror 客户端 770
+- LDIF 759
+- objectClass 759
+- schema 目录 758
+- 设置服务器 760
+- slapcat 实用 763
+- dldapadd 实用 765
+- dldapmodify 实用 764
+- idd 实用 465
+- _idfile 扩展名 759
+- -le 关系运算符 1018
+- 叶节点 1156
+- 最小特权 420, 1157
+- 左点击 101
+- 左手鼠标 105, 274
+- less 实用 138, 162, 960
+- 内置 let 361, 1016
+- 词法变量 1045
+- liftpu 实用 674
+- liftp.conf 文件 674
+- /lib 目录 214
+- lib 目录 274
+- 可执行文件调用的库，使用 ldd 465
+- libwrap, 库 465
+- libwrap 库 465
+- Lightweight Directory Access protocol LDAP
+- 行删除键 (control-u) 151, 240
+- Line Printer 守护进程使用 lpd
+- LINES 变量 984
+- links 14, 226, 226–232, 1157
+- 备用目录 491
+- 使用 rm 删除 232, 501
+- 使用 is 显示 229
+- 导出 785
+- 使用 links 查找 962
+- hard 228–230, 1151
+- hard versus symbolic 227, 230
+- hard, 使用 in 228, 501
+- hypertext 409
+- inode 501
+- 数量，使用 is 显示 216
+- 点对点 165
+- 使用 m 删除 232
+- soft, links
+- symbolic 230, 501, 1157, 176
+- d and 231
+- 使用 in 230 创建
+- 解引用 1144
+- hard versus symbolic 227, 230
+- symlinks 见 links, symbolic
+- unity names 491
+- links 实用 411
+

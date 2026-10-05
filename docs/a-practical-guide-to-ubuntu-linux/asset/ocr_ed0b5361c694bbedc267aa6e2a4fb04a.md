@@ -1,0 +1,38 @@
+Remember that the default rules pertain to files in the directory that are not assigned ACLs explicitly. You can also specify access rules for the directory itself.
+
+When you create a file within a directory that has default rules in its ACL, the effective rights mask for that file is created based on the file's permissions. In some cases the mask may override default ACL rules.
+
+In the next example, touch creates a file named new in the dir. The command shows that this file has an ACL. Based on the value of umask (page 459), both the owner and the group that the file is associated with have read and write permissions for the file. The effective rights mask is set to read and write so that the effective permission for pubs is read and the effective permissions for admin are read and write. Neither group has execution.
+
+```
+$ cd dir
+$ touch new
+$ ls -l new
+-rw-rw--+ 1 max 0 2010-02-13 00:39 new
+$ getfacl --omit new
+user::rw-
+group::-
+group:pubs:r-x #effective:r-
+group:admin:rwx #effective:rw-
+mask::rwx
+other::
+```
+
+If you change the file's traditional permissions to read, write, and execute for the owner and the group, the effective rights mask changes to read, write, and execute and the groups specified by the default rules gain access to the file.
+
+```
+$ chmod 770 new
+$ ls -l new
+-rwxrrwx+ 1 max 0 2010-02-13 00:39 new
+$ getfacl --omit new
+user::rwx
+group::-
+group:pubs:r-x
+group:admin:rwx
+mask::rwx
+other::---
+```
+
+# LINKS
+
+A link is a pointer to a file. Each time you create a file using vim, touch, cp, or by another means, you are putting a pointer in a directory. This pointer associates a filename with a place on the disk. When you specify a filename in a command, you are indirectly pointing to the place on the disk that holds the information you.

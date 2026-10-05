@@ -1,0 +1,23 @@
+# FINDING LINUX-Related INFORMATION 1101
+
+If you are unable to solve a problem yourself, a thoughtful question to an appropriate newsgroup (page 1103) or mailing list (page 1103) can elicit useful information. When you send or post a question, make sure you describe the problem and identify the local system architecture carefully. Include the version numbers of Ubuntu Linux and any packages that relate to the problem. Describe the hardware, if appropriate. There is an entropy to posting questions—see www.catb.org/faq/smart-questions.html for a good paper by Eric S. Raymond and Rick Moen “How To Ask Questions the Smart Way.",
+
+The author’s home page (www.sobell.com) contains corrections to this book, answers to selected chapter exercises, and pointers to other sites.
+
+# FINDING LINUX-Related INFORMATION
+
+Ubuntu Linux comes with reference pages stored online. You can read these documents by using the man or info (page 139). You can read man and info pages to get more information about specific topics while reading this book or to determine which features are available with Linux. To search for topics, use apropos (see page 139 or give the command appropos).
+
+# DOCUMENTATION
+
+Good books are available on various aspects of using and managing UNIX systems in general and Linux systems in particular. In addition, you may find the sites listed in Table B-1 useful.
+
+| Site | About the site | URL |
+| --- | --- | --- |
+| freedesktop.org | Creates standards for interoperability between open-source desktop environments | freedesktop.org |
+| GNOME | GNOME home page. | www.gnome.org |
+| GNU Manuals | GNU manuals. | www.gnu.org/manual |
+| info | Instructions for using the info utility. | www.gnu.org/software/texinfo/manual/info |
+| Internet FAQ Archives | Searchable FAQ archives. | www.faqs.org |
+
++   1. The right-hand columns of most of the tables in this appendix show Internet addresses (URLs). All sites have an implicit http:// prefix unless ftp:// or https:// is shown. Refer to “URLs (Web addresses)” on page 21.

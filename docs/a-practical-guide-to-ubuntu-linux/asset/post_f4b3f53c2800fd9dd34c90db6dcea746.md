@@ -1,0 +1,454 @@
+
+# MAIN INDEX 1199
+
+- apt cron script 524
+- apt.conf file 524
+- apt-cache utility 530
+- apt-file utility 521
+- apt-get utility see aptitude
+- atitude 519–520, 526–529
+- dependencies 520
+- commands, list of 526
+- full-upgrade command 529
+- install error 522
+- JumpStart: installing and removing packages 519
+- kernel, downloading source code for 573
+- log file, aptitude 526
+- options 527
+- packages, suggested 520
+- purge command 520
+- safe-upgrade command 528
+- search command 529
+- show command 529
+- update command 528
+- updating the index 528
+- aptitude file 526
+- archive 1135
+- archive, shell 986
+- archives files (APT) 524, 533
+- archiving files 174–178
+- arguments 238, 1135
+- command line 999
+- testing 956
+- asymmetric encryption see encryption, public key
+- asynchronous communication 503
+- asynchronous event 1136
+- at utility 403, 491, 608
+- AT&T Bell Laboratories 3, 292
+- at.allow file 491
+- at.deny file 491
+- at daemon 403
+- Athena, Project 268
+- ATM link 374
+- attachments 1136
+- attribute, LDAP 758
+- auth.log file 500, 1100
+- authenticated reclaiming, mailing table 736
+- authentication 1136
+- Apache 945
+- OpenSSH 666, 668
+- auto.master file 793
+- autofs directory hierarchy 793
+- autofs file 794
+- autofs init script 793
+- automatic mounting 1136
+- amount 792–794
+- home directory 792
+- available file (dpkg) 533, 534
+- avoided 1136
+- awk utility see gawk utility
+
+# B
+
+- B language 111
+- back door 1136
+- back ticks see command, substitution
+- background
+- command, running in the 254
+- foreground version 254
+- jobs 254–256
+- processes, 1136
+- backports software package category 522
+- BACKLASH escape character 160, 304, 314
+- BACKLASH in replacement strings 1095
+- BACKSPACE key (erase character) 151
+- backup 599–605
+- amanda utility 600
+- cpio utility 602, 602
+- dump/restore utilities 603–605
+- arithmetic
+- evaluation (bash) 360, 971, 994, 1016–1017
+- expansion (bash) 360–362, 1021
+- expression 1135
+- ARM processor architecture 30
+- Armel processor architecture 30
+- array 1045, 1135
+- ASCII 1135
+- ascii file 1135
+- ASCII terminal 1135
+- hash see dash shell
+- ASLR (Address Space Randomization) 29
+- ASP 1135
+- aspell utility 971
+- assembly language 11
+- assignment operators 1021
+- asterisk special character 257, 1092-
+
+# 1200 MAIN INDEX
+
+- backup, continued
+- dumpdates file 603
+- full 599
+- incremental 599
+- media 600
+- mt utility 605
+- partitioning planning and 39
+- simple 602
+- tar utility 600, 601, 602
+- utilities 600
+- base operators 1023
+- basename 205, 1137
+- basename utility 982
+- bash 292, 1138
+- see alias; history; bash variables; command; command line; commands; operators; shell scripts
+- alias alias alias
+- archive 986
+- arguments 999
+- arithmetic evaluation 360, 971, 994, 1016–1017
+- arrays by bash variables, array
+- background process 330
+- built in 333
+- calling program, name of 997
+- command line see command line
+- command not found error message 242, 301, 319
+- command substitution 96, 982
+- commands see command
+- conditional expressions 1017
+- control structures see control structures
+- debugging prompt 323, 966
+- directory stack 310–312
+- expressions 1016–1024
+- features 352–353, 354
+- file descriptors 987, 987–990
+- functions 349–352, 988–999
+- globbing 363
+- history see bash history
+- logical evaluation 1017
+- menu 983
+- operators see operators
+- options, command line 352
+- pathname expansion 315
+- Permission denied denied error message 242, 300, 319
+- prompt (PS1) 321
+- prompt (PS2) 322
+- prompt (PS3) 323, 984
+- prompt (PS4) 323, 966
+- quiz shell script 1032
+- quotation mark removal 357
+- recursion 1025
+- redirection operators 299
+- set, turns features on and off 353
+- shop, turns features on and off 353
+- special characters 160, 326, 327
+- standard error see standard error
+- standard input see standard input
+- standard output see standard output
+- starting files 293–296
+- string operators 1018
+- variables see bash variables
+- word splitting 323
+- x option 966, 1026
+- bash history 330, 330–346
+- bind builtin 344
+- Shell mechanism, class 335–339
+- editing 334–335, 340–346
+- viewing 332–339
+- event 330
+- designators 367
+- modifiers 339
+- numbers 331, 335
+- reference using 335–339
+- expansion 356
+- history builtin 330, 331
+- quick substitution 338
+- Readline 340–346
+- Readline variables 344
+- substitute modifier 338
+- variables 330, 331
+- designers 336, 338
+- bash parameters 312, 312–325
+- see also bash variables
+- $ 996
+- $ 997
+- $ 983, 995
+- $ 999
+- $ 996
+- @ 969, 700, 1000
+- $ 97
+- parameter or not set error message 1002
+- positional 996, 966
+- special 994–996
+- substitution 314
+
+# 1251 MAIN INDEX
+
+- bash variables 312, 312–325
+- see also bash parameters
+- * 991
+- array 990
+- assigning values to 313
+- attributes 317, 317–318
+- BASH_ENV 294
+- braces around 316
+- call by value 992
+- CDPATH 324
+- COLUMNS 384
+- completion 343
+- default values, assigning 1001
+- default values, substituting 1001
+- DEFAULT_RUNLEVEL 440, 445
+- DISPLAY 272
+- EDITOR 425, 426
+- ENV 294
+- environment 312
+- error messages, displaying 1002
+- expansion 360
+- global 992
+- HISTORYFILE 331
+- HISTSIZE 331, 331
+- history 330, 331
+- HOME 319
+- IFS 323–324
+- INPC 343, 318–325, 325
+- LANG 1107
+- LINES 984
+- local 992
+- MAIL 321
+- MAILCHECK 321
+- MAILPATH 321
+- naming 312
+- noclobber 248–250
+- null, expanding 1001
+- OLDPWD 360
+- OPTARG 1013
+- OPTIND 1013
+- parameter substitution 314
+- PS2 322
+- PS3 323, 984
+- PS4 323, 966
+- PWD 360
+- quoting 314
+- RANDOM 1031
+- readonly 317
+- removing 316
+- REPLY 984, 1004
+- RUNLEVEL 492
+- SUDO_EDITOR 425, 426
+- syntax 316
+- TERM 147
+- unset 316
+- unset, expanding 1001
+- user created 312, 314–316
+- VIS 425, 426
+- bash_bash: 492
+- BASH_ENV variable 294
+- .bash_history 330
+- .bash_login 294
+- .bash_logout 294
+- .bash_profile 294–295, 331, 488
+- .bashrc 294–295, 488
+- baud 1137
+- baud rate 1137
+- Bazarn version control 518
+- BCPL language 11
+- DBB 758
+- Bell Laboratories, 3, 292
+- Berkeley DB 758
+- Internet Internet Name set DNS
+- Berkeley UNIX 3, 1137
+- Berners-Lee, Tim 409
+- bg builtin 255, 309
+- /bin directory 213
+- bin directory 214
+- bind builtin 344
+- bind directory 836, 841
+- BIND see DNS
+- bind9 file 834
+- binding, key 1156
+- BIOS 583, 1137
+- CD/DVD, set to boot from 28
+- security 620
+- birthday shell script 985
+
+# 1202 MAIN INDEX
+
+- bit 1137
+- bucket 250, 489
+- bit-mapped display 1137
+- BitTornado 540
+- BitTorrent 539–541
+- BitTorrent, download Ubuntu 44, 46
+- bitwise operators 20
+- broadcast 1138
+- address 1138
+- network 374, 1138
+- packets 381
+- Browse/Save window 110
+- browsers 409, 410
+- file see Nautilus
+- Firefox 117
+- Mosaic 409
+- Mozilla 410
+- BSD see Berkeley UNIX
+- bdtownloads utility 540
+- btshowmementanio utility 541
+- buffer 1139
+- blank characters 315, 1137, 1173
+- blanks 160
+- block device 504, 1137
+- disk 1137
+- number 1137
+- Perl 1045
+- special file 1137
+- blocking factor 1138
+- Blowfish encryption 1113
+- .bmp file extension 203
+- Boolean operators 203
+- copy 124
+- disk 450
+- primary 124
+- bug 1139
+- defect 518
+- tracking systems 518
+- ! (NOT) 1024
+- && (AND) 1017, 1022–1023, 1024
+- 1 996
+- II (OR) 1017, 1022–1023, 1024
+- a (AND) 961, 1017
+- o (OR) 1016
+- short-circuit 1022
+- builtins 261, 1002–1015, 1015, 1169
+- dot 1007
+- (null) 1002, 1011
+- .. 1018
+- alias 346
+- bg 255, 309
+- bind 344
+- boot 53, 1138
+- failure 453
+- flag 90
+- loader 1138, see GRUB
+- options 57, 82
+- parameters 57, 82
+- system 533, 444
+- /boot directory 38, 213, 582, 583, 613
+- bootable flag 90
+- cd 209, 231, 324
+- declare 317–318, 991
+- dirs 310
+- echo 171, 980, 987
+- env 351
+- eval 351
+- exec 987, 1006–1009
+- executing 330
+- exit 117, 958, 996
+- export 318, 992
+- fc 332
+- gf 255
+- getops 1012–1015
+- history 330, 331
+- jobs 152, 256
+- kill 152, 255, 455, 457, 1009, 1010
+- let 361, 1016
+- list using info 261
+- bootstrap 1138
+- Bourne 292, 1138
+- Bourne (original) 292, 1138
+- brace 318
+- brace expansion 358
+- brace, variables and 316
+- bracket 1138
+- bracket, character class 1091
+- break control structure 976
+- bridge, network 1138
+
+# 1253 Main Index
+
+- popd 312
+- pushd 311
+- pwd 204
+- read 974, 1003–1005, 1005, 1006
+- set 317, 318, 353, 963, 998
+- shift 998
+- shopt 353
+- source 296
+- tput 975
+- trap 1095–1001
+- type 1003
+- typeset 317–318, 994
+- umask 459
+- unalias 346, 349
+- unset 316
+- versus 956
+- CD see installation, CD/DVD
+- CDPATH 324
+- CERN 409
+- /cgi filename extension 914
+- CGI scripts (Apache) 942
+- chain loading 1140
+- bundle shell script 986
+- bzip2 utility 175
+- Busybox 484
+- button, Session Indicator 117
+- buttons 121
+- by-path file 489
+- byte 1139
+- by-uid file 489
+- .bz2 filename extension 174, 203
+- bzat utility 175
+- bzip2recovery utility 175
+
+# character
+- alphanumeric 1134
+- blank 160, 315, 1173, 1173
+- classes 259, 1097, 1140
+- control 1142
+- device 504, 1140
+- escaping 160, 304
+- list see character, classes
+- meta 159, see also special characters
+- nonprinting 1162
+- printable 1166
+- quoting 160, 304
+- regular 1168
+- special see special special characters
+- special file 1140
+- typeface conventions 20
+- character 1140
+- character-based interface see command line; textual,
+- .c filename extension 203
+- programming language 10, 11, 1139
+- C++ programming language 12
+- C89 programming language 11
+- cable mediums 1139
+- cables 375
+- cache 1139
+- cache, dns see DNS, cache; DNS servers, cache
+- Cacti 647–658
+- apache.conf file 651
+- configuring 652
+- debian.php file 651
+- remote data source 654
+- SNMP 654
+
+# interface
+- character-terminal 1140
+- check see tick
+- check box 1140
+- check mark see tick
+- checksum 1140
+- child directories 201, 202
+- child processes 328, 1140
+- chgarks shell script 956, 958
+- chkroot utility 1124
+- chmod utility 216–218, 301, 301

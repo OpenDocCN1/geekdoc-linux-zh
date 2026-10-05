@@ -1,0 +1,27 @@
+# MORE ABOUT LOGGING IN 149
+
++   - Must be at least six characters long (or longer if the system administrator sets it up that way). Seven or eight characters is a good compromise between length and security.
+
++   - Should not be a word in a dictionary of any language, no matter how seemingly obscure.
+
++   - Should not be the name of a person, place, pet, or other thing that might be discovered easily.
+
++   - Should contain at least two letters and one digit or punctuation character.
+
++   - Should not be your username, the reverse of your username, or your username shifted by one or more characters.
+
+Only the first item avoid using control characters (such as CONTROL-H) because they may have a special meaning to the system, making it impossible for you to log in. If you are changing your password, the new password should differ from the old one by at least three characters. Changing the case of a character does not count as a different character. Refer to “Keeping the Secure System” on page 619 for more information about choosing a password.
+
+# pwgen helps you pick a password
+
+pwgen utility (the pwgen package) generates a list of almost random passwords. With a little imagination, you can pronounce, and therefore remember, some of these passwords.
+
+After you enter your password, the system asks you to retype it to ensure you did not make a mistake when you entered it first time. If the new password is the same both times you enter, your password is changed. If the passwords differ, you made an error in one of them. In this situation the system displays an error message or does not allow you to click the OK button. If the password you enter is not long, the system displays a message to The password is too short.
+
+When you successfully change your password, you can change how you log in. If you forget your password, a user running with root privileges can change it and tell you the new password.
+
+# USING VIRTUAL CONSOLES
+
+When running Linux on a personal computer, you will frequently work with the display and keyboard attached to the computer. Using this physical console, you can access many as 63 virtual consoles (also called virtual terminals). Some are set up to allow logins; others act as graphical displays. To switch between virtual consoles, hold the CONTROL and ALT keys and press the function that corresponds to the console you want to view. For example, CONTROL-ALT-F displays the fifth virtual console. This book refers to the console you see when you press CONTROL-ALT-F1 as the system console, or just console.
+
+By default, five or six virtual consoles are active and have textual login sessions running. When you want to use both textual and graphical interfaces, you can set up a
