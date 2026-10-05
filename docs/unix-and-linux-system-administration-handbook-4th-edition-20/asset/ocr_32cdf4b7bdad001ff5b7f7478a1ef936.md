@@ -1,0 +1,1 @@
++   3 Modern versions of IOS support a variety of access methods, including SSH. telnet, of course, is entirely insecure. If your site uses Cisco routers, contact your network administrator to find out which methods have been enabled.

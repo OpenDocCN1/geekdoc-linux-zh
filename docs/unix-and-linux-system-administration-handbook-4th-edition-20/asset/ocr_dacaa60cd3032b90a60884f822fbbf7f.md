@@ -1,0 +1,4 @@
+# SECTION THREE
+BUNCH O’ STUFF
+
+![](bbox=[0.078, 0.336, 0.963, 0.933])

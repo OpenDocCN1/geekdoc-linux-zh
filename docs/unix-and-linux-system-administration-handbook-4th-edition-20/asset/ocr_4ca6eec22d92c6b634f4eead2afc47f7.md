@@ -1,0 +1,15 @@
+# Chapter 24 Virtualization
+
+Implementations of virtualization have changed dramatically over the years, the core concepts are not new to the industry. Big Blue used virtual machines in the early mainframes while researching time-sharing concepts in the 1960s, allowing users to share processing and storage resources through an abstraction layer. The same techniques developed by IBM were used throughout the mainframe heyday of the 1970s until the client-server boom of the 1980s. The technology lay dormant during the 1980s and 190s until the cost and manageability problems of enormous servers rekindled interest in virtualization systems. VMware is widely credited with having started the current virtualization craze by creating a virtualization platform for the Intel x86 architecture in 1999.
+
+Today, virtualization technology is a flourishing business, with many twisting knots and pushing buttons to create unique entries into the market. VMware remains a clear leader and offers products targeted at business of all sizes, along with management software to support highly virtualized organizations. The open source community has responded with a project known as Xen, which is supported commercially by a company called XenSource, now owned by Citrix. With the release of Solaris 10, Sun introduced some powerful technology known collectively as zones and containers that can run more 8,000 virtual systems on a single Solaris deployment. These are just a few of the players in the market. There are dozens of competing products, each with a slightly different
+
+Although server virtualization is applied to many other areas of the IT infrastructure, including networks, storage, applications, and desktops. When storage area networks or network-attached storage are used, pools of disk space can be provisioned as a service, creating additional space on demand. Applying virtualization to the desktop can be useful for system administrators and users alike, allowing for custom tailored application environments for each user.
+
+The many virtualization options have created a struggle for hapless UNIX and Linux administrators. With dozens of platforms and configurations to choose from, identifying the right-term approach can be a daunting prospect. In this chapter, we start by defining the terms used for virtualization technologies, continue with a discussion of the benefits of virtualization, proceed with tips for selecting the best solution for your needs, and finally, work through hands-on implementation activities for some of the most commonly used virtualization software on our example operating systems.
+
+# 24.1 VIRTUAL VERNACULAR
+
+The virtualization market has its own set of confusing terms and concepts. Mastering the line is the first step toward sorting out the options.
+
+Operating systems assume they are in control of the system's hardware, so running two systems simultaneously causes resource conflicts. Server virtualization is

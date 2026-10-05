@@ -1,0 +1,183 @@
+
+
+# UNIX 和 Linux 系统管理手册
+
+- Bourne again shell bash
+- 逃逸箱 (breakout boxes) 1180
+- Bro 网络入侵检测系统 918
+- 广播地址 (broadcast addresses) 480
+- 定向 (directed) 473, 508
+- 域 (domain) 534
+- 流量 (stroms) 480
+- Bryant, 925
+- BSD 打印 (BSD printing) 1054–1065
+  - 另见打印架构 (printing architecture) 1054–1055 配置 (configuration) 1059–1065
+- lpc 命令 1057–1096
+- lpd 守护进程 (lpd daemon) 106
+- lnpq 命令 1057–1096
+- lprpr 命令 1057
+- printcap 文件 1059–1065
+- PRINTER 环境变量 BSD- UNIX 6, 12, 128–1267
+- 预算 (budgeting) 1184
+- Tuag 984, Burgess, Mark 408
+- 总线错误 (bus errors) 126
+- USB 总线 (USB bus) 125
+- 字节交换 (byte swapping) 316
+
+## C
+
+- C 语言 1266
+- CA (证书颁发机构) 972
+- 调制解调器电缆 (cable modem cables) 545
+  - 另见系列 (series) 10Base 533–535
+- 类别 (Category) 545
+- 以太网 (Ethernet) 534–536
+- PATA/IDE 215
+- SATA 216
+- accti 分区监控器 (accti partition monitor) 886
+- CIAA (互联网数据分析协作协会) 463
+- 加大, Rudd 165
+- 规范别名 (CNAME) 域名记录 585
+- ccapabilities (POSIX) 109
+- 容量规划 (capacity planning) 1104
+- 资本成本降低 (capital cost reduction) 1098–1110
+- 碳抵消 (carbon offsets) 1111
+- Card, Rémy 255
+- catman 命令 17
+- CBK (通用知识体系) 边缘 95
+- CD 备份 (CD backups) 239
+- CDN (内容分发网络) 978–979
+- CentOS Linux 10
+- CERT 952
+- 证书颁发机构 (CA) 972
+- 证书签名请求 (CSR) 972
+- 认证信息系统管理师 (CISA) 945
+- cf/cf 目录, sendmail 780
+- cfdisk 命令 236
+- cfengine 408
+- cfmgr 命令 263, 281, 419, 433
+- CGI 脚本 959 907
+- 挑战握手协议 (CHAP) 276
+- 变更管理 (change management) 1197–1198, 1205, 1225
+- ChaosNet 577
+- CHAP (挑战握手协议) 276
+- 字符设备文件 (character device files) 148, 150, 418
+- Chatsworth Products 1094
+- chattr 命令 159
+- chev 命令 178
+- chfin 命令 282
+- chgrp 组 (group) 157–158
+- chconf 命令 918, 941
+- chroot 脚本 904
+- chown 命令 152–156, 165, 167–169, 172
+- chown 命令 157–158
+- Christensen, Tom 49, 66.74
+- chrole 命令 108
+- chroot 913–914
+  - 针对匿名访客，643
+  - 针对 Postix，830
+  - 针对 sendmail，800
+- chos 命令 182
+- chuser 命令 195
+- CIA 944
+- CID 914
+- CIM (通用信息模块) 系统配置 410
+- CIP (关键基础设施保护) 1224
+- CISA (认证信息系统用户) 945
+- Centisco 475, 963
+- Centisco 路由器 525–528, 950
+- CentiscoWorks 889
+- CISSP (认证信息系统专业人员) 945
+- CIS (刑事司法信息系统) 1223
+- ClamAV 病毒扫描器 819, 903
+- 无类域间路由 (CIDR) 458, 460–461
+- ClearEmail 755
+- Clearshift 邮件联盟 853
+- 时钟同步 (clock synchronization) 288
+- logan 1002
+- 云计算 (cloud computing) 987, 1005, 1106
+  - 备份 303
+  - 主机 978
+- CNAME DNS 记录 585
+- COBIT 1223
+- 代码发布 (code promotion) 1204–1205
+- Coker, Rella 924
+- 托管 Web 托管 (co-location web hosting) 978
+- 通用知识体系 (CBK) 945
+- 通用标准 (Common Criteria) 947
+- 通用 Unix打印系统 (CUPS) 975
+- Communicate Pro 853
+- 社区关系 (community relations) 1210
+- 计算机系统 (Computer Systems) 1268
+- 以太网连接器，主机 424–425
+- Linux 内核配置文件 721–727
+- 配置文件 (configuration files) 290
+- 配置网络分布 (configuration network distribution) 722–727
+- 配置管理 (configuration management) 1225
+- config 命令 26
+- /usr/etc/config 文件 812
+- 冲突解决 (conflict resolution) 1213
+- 连接节流 (Connection Throttle)，选项 800
+- 联系作者 1196
+- 控制台设置文件 (console-setup file) 1172
+- 串口控制台 (consoles, serial) 1172
+- 内容控制 (CDW) 979
+- 内容分发 (content distribution) 1108
+- 内容扫描 (content scanning) 761–773
+- 内容控制器 (content controllers) 1177–1178
+- 内容终端 (content terminal) 123
+- 内容标准, DMS 615–616
+- 冷却 (cooling) 702
+- 负载计算 (calculating load) 1088–1089
+- 数据中心 (data center) 1089–1101
+- 冷过道 (cold aisle) 1018
+- 冷气流 (cold air) 1109
+- Cooper, Mendel 48
+- Cooper, Fernando 265
+- 核心文件 (core files) 289
+- ctime 文件 154
+- cshrc 文件 189
+- CSMA/CD (以太网) 532
+- CSR (证书签名请求) 972
+- CUPS 1032, 1033–1044
+- cupsd 守护进程 (cupsd daemon) 1038
+- cupsd.conf 文件 1039
+- cupsidable 命令 1042
+- cut 命令 34
+- 磁盘柱面 (cylinders, disk) 210
+- Cyrus IMAP 服务器 747
+- DAT 备份 (DAT backups) 301
+- 数据中心 (data center)
+  - 可用性 886
+  - 组件 886
+- 冷却 (cooling)
+  - 冷过道 1018
+  - 冷气流 1109
+  - 湿度 1090
+  - HVAC 1088
+  - 监控 1091
+  - 远程控制 109
+  - 冗余 1086
+  - 可靠性 1086
+  - 层级 1086
+  - 温度 1087
+  - 工具 1095
+  - 布线 1094
+  - 区域 1094
+- 数据中心 (data center)
+  - 可用性 886
+  - 组件 886
+- 冷却 (cooling)
+  - 冷过道 1018
+  - 冷气流 1109
+  - 湿度 1090
+  - HVAC 1088
+  - 监控 1091
+  - 远程控制 109
+  - 冗余 1086
+  - 可靠性 1086
+  - 层级 1086
+  - 温度 1087
+  - 工具 1095
+  - 布线 1094
+  - 区域 1094

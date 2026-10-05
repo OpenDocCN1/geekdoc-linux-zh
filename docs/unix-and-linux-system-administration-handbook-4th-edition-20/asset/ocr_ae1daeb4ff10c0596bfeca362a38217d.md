@@ -1,0 +1,15 @@
+# Chapter 1 Where to Start
+
+technical advances that did not exist in UNIX, so it is more than just a UNIX clone. At the same time, traditional UNIX vendors have continued to refine their systems, so there are certainly areas in which commercial UNIX systems are superior to Linux.
+
+Whatever the relative merits of the systems, Linux is a legally, developmentally, and historically distinct entity that cannot properly be referred to as "UNIX" or as "version of UNIX." To do so is to slight the work and innovation of the Linux community. At the same time, it is somewhat misleading to insist that Linux is not "UNIX." If your creation walks like a duck and ducks like a duck, you may have invented a duck.
+
+Schisms exist even within the Linux camp. It has been argued, with some justification, referring to Linux distributions simply as "Linux" fails to acknowledge the work that went into the software outside the kernel (in fact this constitutes the majority of software on an average system). Unfortunately, the most commonly suggested alternative, GNU/Linux, has its own political baggage and has been officially endorsed only by the Debian distribution. The Wikipedia entry for "GNU/Linux naming controversies" outlines the arguments on both sides. Interestingly, the use of open source is now more predominant over most UNIX systems, but no one is pushing for a GNU/UNIX designation just yet.
+
+Linux software is UNIX software. Thanks largely the GNU Project, most of the important software that gives UNIX systems value have been developed some form of open source model.The same code runs on Linux and Unix systems. The Apache web server, for example, doesn't much care whether it is running on Linux or Solaris. From the standpoint of applications and most administrative software, Linux is simply one of the best-supported and most widely available varieties of UNIX.
+
+It's worth noting that Linux is not the only UNIX-like operating system in the world. OpenSolaris is free and open source, although its licensing earned suspicious looks from some open source purists. FreeBSD, NetBSD, and FreeBSD—all offshoots of the Berkeley Distribution from UC Berkeley—have ardent followers of their own. These Oses are generally comparable to Linux in their features and reliability, although they enjoy somewhat less support from third-party software vendors.
+
++   1. Since Wikipedia contains Linux information and must refer to Linux frequently, the debate has particular relevance to Wikipedia itself. The discussion page for the Wikipedia article is also well reading.
+2. After all, "GNU not UNIX"
+3. Several of our technical reviewers protested that we seem to be credited with the creation of most of the world's free software. We are not however! GNU has certainly done more than any other group to promote the idea of free software as a social enterprise and to structure ongoing debate about licensing terms and interactions between free and nonfree software.

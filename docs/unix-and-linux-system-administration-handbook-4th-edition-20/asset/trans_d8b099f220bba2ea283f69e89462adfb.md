@@ -1,0 +1,247 @@
+
+
+# UNIX 和 Linux 系统管理手册
+
+- mksf 命令 1169
+- mkswap 命令 264
+- mouser 命令 195
+- /etc/security/mkuser.default 文件 195
+- kmvg 命令 209, 246, 254
+- mkswap 命令 1002
+- mod_perl 解释器 960
+- mod_php 解释器 960
+- mod_python 解释器 960
+- 调制 1167
+- modinfo 命令 431, 436-437
+- modload 命令 437
+- modprobe 命令 435
+- /etc/modprobe.conf 文件 436
+- MODULE_DEVICE_TABLE 名称 427
+- modunload 命令 437
+- Mondo Rescue 335
+- 监控
+  - 环境 1091
+  - 日志文件 358–359
+  - 进程 130–135
+  - 温度 1091
+- Morrelle, Terry
+- Morris, Robert, Jr. 86
+- mod 文件 1172
+- mount 命令 143–145, 258, 262–278–709
+- 挂载点文件系统 143
+- mount.smbfs
+- mount 守护进程 699
+- mountpoint ZFS 命令 262
+- mmpast 命令 1122
+- /var/pool/mountquery 目录 806
+- RTG (多路由流量生成器) 886
+- Msa (提交代理) 745
+- M Hot 743
+- mt 命令 317
+- MTA (邮件传输代理) 746
+- MTBF (平均故障间隔时间) 211
+- MTU (最大传输单元) 453–454
+- mts 软件包 318
+- MUAs (所有用户代理) 744
+- 多系统启动
+  - 多组播地址 456–457
+  - 多核处理器 990
+- 指标 1265
+- 多模光纤 536
+- 多处理器机器，性能分析 1122
+- 多用途互联网邮件扩展 (MIME) 744
+- 多用户模式 81
+- MX DNS 记录 583–584
+- MySQL 318, 320–321, 9516
+
+- named (续)
+  - domain 指令 562
+  - 错误信息 670
+  - file 语句 614
+  - forwards 选项 606
+  - 区域状态，配置 615
+  - GENERATE 指令 587
+  - HP-UX 684–685
+  - INCLUDE 指令 575
+  - include 语句 602
+  - nit 脚本 681
+  - isc ISC 配置示例 623
+  - key 语句 609
+  - Linux 681–684
+  - 本地区域配置示例 619
+  - 日志 667–672
+  - logging 语句 612, 662
+  - 主服务器，配置 613
+  - masters 语句 611, 614
+  - 主-客户端图表 617
+  - /etc/named.conf 文件 600–624, 643, 671
+  - named.run 文件 672
+  - named-checkconf 600, 648, 679
+  - named-checkzone 600, 679
+  - notify 选项 604
+  - options 指令 561
+  - options 语句 602–609
+  - ORIGIN 指令 575
+  - prefix-if 选项 639
+  - recusion 选项 604
+  - request-if 选项 639
+  - RHEL 684
+  - rndc 命令 632, 672, 704
+  - root.cache 文件 615
+  - search 目录 561
+  - server 语句 610, 639
+  - 从备服务器，配置 614
+  - Solaris 684
+  - 启动 640
+  - 语句列表 601
+  - 存根区域，配置 614
+  - SUSE 683
+  - 测试 667–681
+  - transfer-source 选项 623
+  - TTL 指令 575–576, 581
+  - Ubuntu 682
+  - update-policy 子句 641
+  - 更新区域文件 640–642
+
+- Nagios SNMP 工具 888
+- 名称服务器
+  - 另见 DNS
+  - 另见 BIND
+  - 另见 named
+  - 权威 564
+  - 缓存-n 557–559
+  - 仅缓存 554
+  - 动态更新 640–642
+  - forwards 606
+  - 提示: 566
+  - 声明 670, 678
+  - 主 564
+  - 非权威 564
+  - recusion 665
+  - resolver 561–663
+  - 从备 564
+  - switch 682
+  - 区域选择 596–597
+
+- ACL (访问控制列表) 639–644
+- allow-update 子句 613, 641
+- AIX 685–686
+- blackhole 选项 606
+- 使用 OpenSSL 编译 655
+- 配置 618–624
+- 调试 667–681
+- 命令行接口
+- 目录语句 603
+
+# 索引
+
+- named (续)
+  - 版本 599
+  - view 语句 617
+  - 区域命令 574–575
+  - zone-statistics 选项 613
+  - named 页面 148, 151
+  - named_dump.db 文件 600–624, 643, 671
+  - /etc/namedconf
+  - named-checkconf 600, 648, 679
+  - named-checkzone 600, 679
+  - named.run 文件 672
+  - notify 选项 604
+  - options 指令 561
+  - options 语句 602–609
+  - ORIGIN 指令 575
+  - prefix-if 选项 639
+  - recusion 选项 604
+  - request-if 选项 639
+  - RHEL 684
+  - rndc 命令 632, 672, 704
+  - root.cache 文件 615
+  - search 目录 561
+  - server 语句 610, 639
+  - slaver server，配置 614
+  - Solaris 684
+  - starting 640
+  - statements, list 601
+  - stub zone，配置 614
+  - SUSE 683
+  - testing 667–681
+  - transfer-source 选项 623
+  - TTL 指令 575–576, 581
+  - Ubuntu 682
+  - update-policy 子句 641
+  - updating 区域文件 640–642
+
+- 网络地址转换 (NAT) 462–464, 493–494, 500–501
+- Network Appliance, Inc. 711
+- Network Auto-Magic 494
+- 网络启动 363–364
+- 网络文档 1204
+- /etc/sysconf network
+- 网络打印机 1040
+- 网络不可达错误 482
+- 网络 679
+  - 构建 545–547
+  - 分析器 545
+  - 双重 533–536, 维护和文档 549
+  - 办公室 545
+  - Wireshark 网络嗅探器 545
+- NetworkManager 485–486, 475
+  - 另见以太网
+  - 另见 IP 地址
+  - 另见网络工作
+  - 另见 路由
+  - 另见 TCP/IP
+- 网络入侵检测系统 (NIDS) 918
+- 地址 454–457, 456, 467
+- 管理数据库 721, 736
+- AIX 配置 506–508
+- 广播风暴 535
+- 连接和扩展 537–539
+- 设计问题 547–549
+- 防火墙 932–942
+- 硬件选项 481
+- 主机地址 476–484
+- HP-UX 配置 501
+- 接口活动报告 873
+- 接口配置 478–481
+- IPfilter 939
+- 负载均衡 1114
+- 环回 457, 667
+- 管理问题 549–550, 859
+- 管理协议 779–883
+- 管理标准 779–880
+- 监控 869–870
+- 网络
+  - MTU 453–454
+  - ping 861–863
+  - 端口扫描 914–916
+  - 表，Nessus 916
+  - 故障排除 544–545
+  - 虚拟接口 481
+  - 无线 541–543
+- NFS (网络文件系统) 690-续
+  - 不安全选项 704
+  - Linux 702–705
+  - 维护状态 693
+  - 启动时挂载文件系统 706–709
+  - nfs 守护进程 705
+  - no_root_squash 选项 704
+  - 无主体 118, 697
+  - 广网性能 698
+  - 协议版本 692
+  - 伪文件系统 693
+  - Red Hat 717
+  - root 权限 697
+  - 安全选项 704
+  - secure_locks 选项 704–705
+  - 安全 695, 708, 709
+  - Solaris 700, 701, 708
+  - 统计数据 710
+  - ub_check 选项 706
+  - 调优 708
+  - 用于导出 756
+  - 版本 4 692
+  - 以及 ZFS 271–272
+- NIDS (网络交互检测) 716
+- NIS (网络信息服务器) 494
+
