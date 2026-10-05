@@ -1,0 +1,11 @@
+# CHAPTER XVI
+
+All the forces of the orator's life converge in oratory. The logical acuteness with which he marshals the facts around his theme, the rhetorical facility with which he orders his language, the control with which he has attained in the use of his body as a single organ of expression, whatever richness of acquisition and experience are his—these are all now incidents; the fact is the sending of his message to his hearers.... The hour of delivery is the "supreme, inevitable hour" for the orator. It is this fact that makes lack of adequate preparation such an impertinence. And it is this that sends such thrills of indescribable joy through the orator's whole being when he has achieved a success—it is like the mother forgetting the pangs for the joy of bringing a son into the world.
+
+—J.B.E., How to Attract and Hold an Audience.
+
+There are four fundamental methods of delivering an address; all others are modifications of one or more of these: reading from manuscript, committing the written speech and speaking from memory, notes, and extemporaneous speech. It is impossible to say which form of delivery is best for all speakers in all circumstances—including deciding for yourself should consider the occasion, the nature of the audience, the character of your subject, and your own limitations of time and ability. However, it is worth while warning you not to be lenient in self-exaction. Say to yourself courageously: What others can do, I can attempt. A bold spirit conquers where others flinch, and a trying task challenges pluck.
+
+Reading from Manuscript This method rightly deserves short in a book on public speaking, for delude yourself as you may, public reading is not public speaking. Yet there are so many who grasp the broken reed for support that we must discuss the "read speech"—apologetic misnomer as it is.
+
+Certainly there are occasions—among them, the opening of Congress, the presentation of a sore question before a deliberative body, or a historical commemoration—when it may seem not alone to the "orator" but to all those interested that the chief thing is to express certain thoughts in precise language—in language that must not be either misunderstood or misquoted.

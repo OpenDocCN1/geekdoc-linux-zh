@@ -1,0 +1,7 @@
+# CHAPTER XVII
+
+# 160
+
+The Thinking Mind Thinking is doing mental arithmetic with facts. Add this to fact and you have reach a conclusion. Subtract this from another and you have a definite result. Multiply this by another and have a precise product. See how many times this occurrence happens in space of time and you have reached a calculable dividend. In thought—processes you perform every known problem of arithmetic and algebra. That is why mathematics are such excellent mental gymnastics. But by the same token, thinking is work. Thinking takes energy. Thinking requires time, and patience, and broad information, and clearheadedness. Beyond a miserable little surface-scratching, few people really think at all—one in a thousand, according to the pund already quoted. So long as the present system of education prevails and children are taught through the ear rather than through the eye, so long as they are expected to remember thoughts of others rather than think for themselves, this proportion will continue—one man in a million will be able to see, and one in a thousand to think.
+
+But, however thoughtless has a mind, there is promise of better things so soon as the mind detects its own lack of thought–power. The first step is to stop regarding thought as "the magic of the mind," to use Byron's

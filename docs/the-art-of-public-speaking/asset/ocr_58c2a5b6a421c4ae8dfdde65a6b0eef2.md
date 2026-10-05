@@ -1,0 +1,11 @@
+# CHAPTER I
+
+Webster failed in his first appearance and had to take his seat without finishing his speech because he was nervous. Gladstone was often troubled with self-consciousness in the beginning of an address. Beecher was always perturbed before talking in public.
+
+Blacksmiths sometimes twist a rope tight around the nose of a horse, and by inflicting a little pain they distract his attention from the shoeing process. One way to get air out of a glass is to pour in water.
+
+Be Absorbed by Your Subject Apply the blacksmith's homely principle when you are speaking. If you feel deeply about your subject you will be able to think of little else. Concentration is a process of distraction from less important matters. It is too late to think about the cut of your coat when you are upon the platform, centre your interest on what you are about to say—fill your mind with your speech—material, and like the infilling water in the glass, will drive out your unsubstantial fears.
+
+Self-consciousness is undue consciousness of self, and for the purpose of delivery, itself is secondary to your subject, not only in the opinion of the audience, but if you are wise, in your own. To hold any other view is to regard yourself as an exhibit instead of a messenger with a message worth delivering. Do you remember Hubert Hubbard's tremendous little tract, "A Message to Garcia?" The youth subordinated himself to the message he bore. So must you, by all the determination you can muster. It is sheer egotism to fill your mind with thoughts of self when a greater thing is there—TRUTH. Say this to yourself sternly, and shame your self-consciousness into quiescence. If the theater caught fire you could rush to the stage and show directions to the audience without any self-consciousness, for the importance of what you were saying drive all fear—thoughts out your mind.
+
+Far worse than self-consciousness through doing poorly self-consciousness through assumption of doing well. The first sign of greatness is when a man does not attempt to look and act great. Before you can call yourself a man at all, Kipling assures us, you must "not look good nor talk too wise."

@@ -1,0 +1,11 @@
+# CHAPTER XIX
+
+=Analogy= which calls attention to similar relationships in objects not otherwise similar, is one of the most useful methods of exposition. The following striking specimen is from Beecher's Liverpool speech:
+
+A savage is a man of one story, and that one story a cellar. When a man begins to be civilized he raises another story. When you christianize and civilize the man, you put story upon story, for you develop faculty after faculty; and you have to supply every story with your productions.
+
+=Discarding= is a less common form of platform explanation. It consists of clearing away associated ideas so that the attention can be centered on the main thought to be discussed. Really, it is a negative factor in exposition though a most important one, for it is fundamental to the consideration of an intricately related matter that subordinate and side questions should be set aside in order to bring out the main issue. Here is an example of the method:
+
+I cannot allow myself to be led aside from the only issue before this jury. It is not pertinent to consider that this prisoner is the husband of a heartbroken woman and that his babies will go through the world under the shadow of the law's extreme penalty worked upon their father. We must forget the venerable father and the mother whom Heaven in pity took before she learned of her son's disgrace. What have these matters of heart, what have the blenched faces of his friends, what have the prisoner's long and honorable career to say before this bar when you are sworn to weigh only the direct evidence before you? The one and only question for you to decide on the evidence is whether this man did with revengeful intent commit the murder that every impartial witness has solemnly laid at his door.
+
+=Classification= assigns a subject to its class. By an allowable extension of the definition it may be said to assign it to its order, genus, and species. Classification is useful in public speech in narrowing the issue to a desired phase. It is equally valuable for showing a thing in its relation to other things, or in correlation. Classification is closely akin to Definition and Division.

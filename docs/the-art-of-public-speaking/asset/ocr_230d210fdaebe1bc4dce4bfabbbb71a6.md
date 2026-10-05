@@ -1,0 +1,11 @@
+# Part III, Annual Report of the Secretary of Internal
+
+352
+
+of new.
+
+Liberalism is sometimes suspected of being cold to these new hopes, and you may often hear it said that Liberalism is already superseded by Socialism. That a change is passing over party names in Europe is plain, but you may be sure that no change in name will extinguish these principles of society which are rooted in the nature of things, and are accredited by their success. Twice America has saved liberalism in Great Britain. The War for Independence in the eighteenth century was the defeat of usurping power no less in England than here. The War for Union in the nineteenth century gave the decisive impulse to a critical extension of suffrage, and an era of popular reform in the mother country. Any miscarriage of democracy here reacts against progress in Great Britain.
+
+If you seek the real meaning of most modern disparagement of popular parliamentary government, it is no more than, that no politics will suffice of themselves to make a nation's soul. What could be more true? Who says it will? But we may depend upon it the soul will be kept alive in a nation where there is the highest proportion of those who, in the phrase of an old worthy of the seventeenth century, think it a part of a man's religion to see to it that his country be well governed.
+
+Democracy, they tell us, is afflicted by mediocrity and by sterility. But has not democracy in my country, as in yours, shown before now that it knows how to choose rulers neither mediocre nor sterile; men more than the equals in unselfishness, in rectitude, in clear sight, of any absolutist statesman, ever in times past the scepter? If I live a few months, or it may be a few weeks longer, I hope to see something of three elections—one in Canada, one in the United Kingdom, and the other here. With us, in respect of leadership, and apart from height of social prestige, the personage corresponding to the president is, as you know, the prime minister. Our general election this time, owing to personal accident of the passing hour, may not determine quite exactly who shall be the prime minister, but it will determine the party from which the prime minister shall be taken. On normal occasions our election of a prime minister is as direct and personal as yours, and in choosing a member of

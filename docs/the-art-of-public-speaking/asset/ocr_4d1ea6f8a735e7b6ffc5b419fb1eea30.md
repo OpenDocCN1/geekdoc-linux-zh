@@ -1,0 +1,11 @@
+# Part III, Annual Report of the Secretary of Internal
+
+"Before thy mystic altar, heavenly truth, I kneel in manhood, as I knelt in youth, Thus let me kneel, till this dull form decay, And life's last shade be brightened by thy ray."
+
+# RUFUS CHOATE EULOGY OF WEBSTER
+
+Delivered at Dartmouth College, July 27, 1853.
+
+Webster possessed the element of an impressive character, inspiring regard, trust and admiration, not ummingled with love. It had, I think, intrinsically a charm such as belongs only to a good, noble, and beautiful nature. In its combination with so much fame, so much force of will, and so much intellect, it filled and fascinated the imagination and heart. It was affectionate in childhood and youth, and it was more than ever so in the few last months of his long life. It was the universal testimony that he gave to his parents, in largest measure, honor, love, obedience; that he eagerly appropriated the first means he could command to relieve the father from the contracted to educate his brother and himself; that he selected his first place of professional practice that he might soothe the coming on of his old age.
+
+Equally beautiful was his love of all his kindred and of all his friends. When I hear him accused of selfishness, and a cold, bad nature, I recall him lying sleepless all night, without tears of boyhood, conferring with Ezekiel the glaring desire of both hearts should be compassed, and he, too, admitted to the precious privileges of education; courage pleading the cause of both brothers in the morning; prevailing by the wise and discerning affection of the mother; suspending his studies of the law, registering deeds and teaching school to earn the means, for both, of availing themselves of the opportunity which the parental self—sacrifice had placed within their reach; loving him through life, mourning when dead, with a love and a sorrow very wonderful, passing the sorrow of woman; I recall the husband, the father of the living and the early departed, the friend, the counselor of many years, and my heart grows too full and liquid for the refutation of words.

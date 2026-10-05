@@ -1,0 +1,11 @@
+# CHAPTER IX
+
+# 92
+
+your vote in the wrong scale, _WE NEVER FORGET!_ You may go on your knees, and say, 'I am sorry I did the act''but we will say "IT WILL AVAIL YOU IN HEAVEN TO BE SORRY, BUT ON THIS SIDE OF THE GRAVE, NEVER!"' So that man in taking up the labor question will know he is dealing with a hair--trigger pistol, and will say, "I am to be true to justice and to man; otherwise I am a dead duck."
+
+*****
+
+In Russia there is no press, no debate, no explanation of what government does, no remonstrance allowed, no agitation of public issues. Dead silence, like that which reigns at the summit of Mont Blanc, freezes the whole empire, long ago described as "a despotism tempered by assassination." Meanwhile, such despotism has unsettled the brains of the ruling class, as unbridled power doubtless made some of the twelve Cæsars insane; a madman, sporting with the lives and comfort of a hundred millions of men. The young girl whispers in her mother's ear, under a ceiling roof, her pity for a brother knotted and dragged half dead into exile for his opinions. The next week she is stripped naked and flogged to death in the public square. No inquiry, no explanation, no trial, no protest, no dead uniform silence, the law of the tyrant. Where is there ground for any hope of peaceful change? No, no! in such land dynamite and the dagger are the necessary and proper substitutes for that in Faneui Hall. Anything that will make the madman quake in his bedchamber, and arouse his victims into reckless and desperate resistance. This is the only view an American, the child of 1620 and 1776, can take of Nihilism. Any other unsettles and perplexes the ethics of civilization.
+
+Born within sight of Bunker Hill--son of Harvard, whose first pledge was "Truth," citizen of a republic based on the claim that no government is rightful unless resting on the consent of the people, and which assumes to lead in asserting the rights of humanity--I at least can say nothing else and nothing less--no not if every tile on Cambridge roofs were a devil hooting my words!

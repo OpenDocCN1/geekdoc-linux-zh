@@ -1,0 +1,11 @@
+# CHAPTER IV
+
+# 39
+
+assured and permanent advantage, against which artificial conditions cannot much longer prevail, has grown an amazing system of industries. Not maintained by human contrivance of tariff or capital, afar off the fullest and cheapest source of supply, but resting in divine assurance, within touch of field and mine and forest—not set amid costly farms from which competition has driven the farmer in despair, but amid cheap sunny lands, with agriculture, to which neither season nor poor soil has a limit—this system of industries is mounting to a splendor that will dazzle and illuminate the world. _THAT, SIR, is the picture and the promise of my home—A LAND BETTER AND FAIRER THAN I HAVE TOLD YOU, and yet bit fit in its material excellence for the loyal and gentle quality of its citizenship._
+
+This hour needs the _LOYALTY THAT IS LOYAL TO ONE SECTION and yet holds the other in enduring suspicion and estrangement._ Give us the broad and perfect loyalty that loves and trusts Georgia with _Massachusetts—that knows no SOUTH, no North, no EAST, no West, but endears with equal and patriotic love foot of our soil, every State of our Union.
+
+_A MIGHTY DUTY, SIR, AND A MIGHTY INSPIRATION impels every one of us-to-night in patriotic consecration WHEVER ESTRANG, WHEVER DIVIDES._
+
+_WE, SIR, are Americans—AND WE STAND FOR HUMAN LIBERTY! The uplifting force of the American idea is under every throne of our._France, Brazil—THESE ARE OUR VICTORIES. To redeem the earth from kindkraft and oppression—THIS IS OUR MISSION! AND WE SHALL NOT FAIL._ God has sown in the soil of His millennial harvest, and He will not let the sickle to the ripening crop until His full and perfect day has come._OUR HISTORY, SIR, has been a constant and expanding miracle, FROM PLMOUTH ROCK AND JAMESTOWN,_ all the way—aye, even from the hour when the voiceless and traceless ocean a new world rose to the sight of the inspired sailor. As we approach the fourth century of stupendous day—when the old world will come to marvel and to learn amid our gathered

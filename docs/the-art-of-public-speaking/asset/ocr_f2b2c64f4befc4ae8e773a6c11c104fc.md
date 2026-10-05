@@ -1,0 +1,11 @@
+# CHAPTER XX
+
+201
+
+THE HOMES OF THE PEOPLE I went to Washington the other day, and I stood on the Capitol Hill; my heart beat quick as I looked at the towering marble of my country's Capitol and the mist gathered in my eyes as I thought of its tremendous significance, and the armies and the treasury, and the judges and the President, and the Congress and the courts, and all that was gathered there. And I felt that the sun in all its course could not go down on a better sight than that majestic home of a republic that had taught the world its best lessons of liberty. And I felt that if honor and wisdom and justice abided therein, the world would at last owe to that great house in which the ark of the covenant of my country is lodged, its final uplifting and its regeneration.
+
+Two days afterward, I went to visit a friend in the country, a modest man, with a quiet country home. It was just a simple, unpretentious home, set about big trees, encircled in meadow and field rich with the promise of harvest. The fragrance of the pink and hollyhock in the front yard was mingled with the aroma of the orchard and of the gardens, resonant with the cluck of poultry and the hum of bees.
+
+Inside was quiet, cleanliness, thrift, and comfort. There was the old clock that had welcomed, in steady measure, every newcomer to the family, that had ticked the solemn requiem of the dead, and had kept company with the watcher at the bedside. There were the big, restful beds and the old, fireplace, and the old family Bible, thumbed with the fingers of long since still, and wet with the tears of eyes long since closed, holding the simple annals of the family and the heart and the conscience of the home.
+
+Outside, there stood my friend, the master, a simple, upright man, with no mortgage on his roof, no lien on his growing crops, master of his land and master of himself. There was his old father, an aged, trembling man, but happy in the heart and home of his son. As they started to their home, the hands of the old man went down on the young man's shoulder, laying there the unspeakable blessing of the honored and grateful father and ennobling it with the knighthood of the fifth commandment.

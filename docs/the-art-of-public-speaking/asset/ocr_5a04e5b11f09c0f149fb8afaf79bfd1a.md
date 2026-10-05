@@ -1,0 +1,11 @@
+# CHAPTER XX
+
+# 203
+
+murder; certain old houses demand to be haunted; certain coasts are set aside for shipwreck. Other spots again seem to abide their destiny, suggestive and impenetrable, "michling mallecho." The inn at Burford Bridge, with its arbours and green garden and silent, eddies river—though it is already known as the place where Keats wrote of his Endymion and Nelson parted from Emma—still seems to wait the coming of the appropriate legend. Within these  walls, behind these old shutters, some further business shoulders, waiting for its time. The old Hawes Inn at the Queen's ferry makes a similar call upon my fancy. There stands, apart from the town, beside the pier, in a climate of its own, half inland, half marine—in front, the ferry bubbling with the tide and the guard—ship swinging with their anchor; behind, the old garden with the trees. Americans seek it for the sake of Love and Oldbuck, who dined there at the beginning of the Antiquary. By you not tell me—that is not all; there is some story, unrecorded or yet complete, which might express the meaning of that more fully.... I have lived both at the Hawes and Burford in a perpetual flutter, on the heel, as it seemed, of some adventure that should justify the place; but the feeling had me to bed at night and called me again in morning in one unbroken round of pleasure and suspense, nothing felt by me in either worth remark. The man or the hour had not yet come; but some day, I think, a boat shall put off from the Queen's ferry, fraught with a dear cargo, and some frosty horseman, on a tragic errand, rattle with his whip upon the green shutters at the inn at Burford.
+
+> --R.L. STEVENSON
+
+_FROM "MIDNIGHT IN LONDON" _
+
+Clang! Clang! Clang! The fire–bells! Bing! Bing! Bing! The alarm! In an instant quiet turns to uproar—an outburst of noise, excitement, clamor—bedlam broke loose; Bing! Bing! Bing! Rattle, clash and clatter. Open the fly doors; brace men mount their boxes. Bing! Bing! Bing! They're off! The horses tear down the street like mad. Bing! Bing! Bing! goes the gong!

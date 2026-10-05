@@ -1,0 +1,11 @@
+discussed. In this way a friendly rivalry for supremacy in conversation arose among the family, and an incident observed in the street, an idea gleaned from a book, a deduction from personal experience, was carefully stored as material for the family exchange. Thus his early years of practise in elegant conversation prepared the younger Gladstone for his career as a leader and speaker.
+
+There is a sense in which the ability to converse effectively is efficient public speaking, for our conversation is often heard by many, and occasionally decisions of great moment hinge upon the tone and quality of what we say in private.
+
+Indeed, conversation in the aggregate probably wields more power than press and platform combined. Socrates taught his great truths, not from public rostrums, but in personal converse. Men made pilgrims to Goethe's library and Coleridge's home to be charmed and instructed by their speech, and the culture of many nations was immeasurably influenced by the thoughts that streamed out from those rich well-springs.
+
+Most of the world—moving speeches are made in the course of conversation. Conferences of diplomats, business—getting arguments, decisions by boards of directors, considerations of corporate policy, all of which influence the political, mercantile and economic maps of the world, are usually the results of careful though informal conversation, and the man whose opinions weigh in such crises is he has first carefully pondered the words of both antagonist and protagonist.
+
+However important it may be to attain self—control in light social converse, or about the family table, it is undeniably vital to have oneself perfectly in hand while taking part in a momentous conference. The hints that we have given on poise, alertness, precision of word, closeness of statement, and force of utterance, with respect to public speech, are equally applicable to conversation.
+
+The form of nervous egotism—for it is both—that suddenly ends in flusters just when the vital words need to be uttered, is the sign of coming

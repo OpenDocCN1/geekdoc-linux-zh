@@ -1,0 +1,12 @@
+# CHAPTER IX
+
+# 88
+
+You cannot deliver an aggressive message with caressing strokes.
+No! Jab it in with hard, swift solar plexus punches. You cannot strike fire from flint or from an audience with love taps. Say to a crowded theatre in a lackadaisical manner: "It seems to me the house is on fire," and your announcement may be greeted with a laugh. If you flash out the words: "The house's on fire!" they will crush one another in getting to the exits.
+
+The spirit and the language of force are free de conviction. Now immortal speech in literature contains such expressions as "it seems to me," "I judge," "in my opinion," "I suppose," "perhaps it is true." The speeches that will have been delivered by men ablaze with the courage of their convictions, uttered their words as eternal truth. Of Jesus was said that "the common people heard gladly." Why? "He taught them as having AUTHORITY." An audience will never be moved by what "seems" to you to be truth or what in your "humble opinion" may be so. If you honestly assert convictions as your conclusions. Be sure you are right before you speak your speech, then utter your thoughts as though they were Gibraltar of unimachable truth. Deliver them with the iron hand and confidence of a Cromwell. Assert them with the fire of authority. Pronounce them as an ultimatum. If you cannot speak with conviction, be silent.
+
+What force did young minister have who, fearing to be too dogmatic, thus exerted his hearers: "My friends—as I assume that you are—it appears to be my duty to tell you if you do not repeat, to speak, forsake your sins, as it were, and turn to righteousness, if I may so express it, you will be lost, in a measure"
+
+Effective speech must reflect the era. This is not a rose water age, and a tepid half-hearted speech will not win. This is the century of trip hammers, of overland expresses that dash under cities and through mountain tunnels, and you must instill this spirit into your speech if you would move a popular audience. From a front seat listen to a first-class company present a modern Broadway drama—not a comedy, but a gripping, thrilling drama. Do not become absorbed in the story; reserve all your attention for the technique and the force of acting. There is a kick and a crash as well as

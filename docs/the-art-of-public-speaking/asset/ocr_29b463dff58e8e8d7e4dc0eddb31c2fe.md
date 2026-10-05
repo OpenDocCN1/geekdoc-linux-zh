@@ -1,0 +1,12 @@
+# CHAPTER XI
+
+105
+
+Have you ever stopped to analyze that expression, "a ready speaker?"
+Readiness, in its prime sense, is preparedness, and they are most ready who are best prepared. Quick firing depends more on the alert finger than on the hair trigger. Your fluency will be in direct ratio to two important conditions: your knowledge of what you are going to say, and your being accustomed to telling what you know to an audience. This gives us the second great element of fluency—to preparation must be added the ease that arises from practise; of which more presently.
+
+Knowledge is Essential Mr. Bryan is a most fluent speaker when he speaks on political problems, tendencies of the time, and questions of morals. It is to be supposed, however, that would not be so fluent in speaking in the bird life of the Florida Everglades. Mr. John Burroughs might be at his best on this last subject, yet entirely lost in talking international law. Do not expect to speak fluently on a subject that you know little or nothing Ctesisiphon boasted that he could speak all day (a sin in itself) on any subject that an audience would suggest. He was banished by the Spartans.
+
+But preparation goes beyond the getting of the facts in the case you are to present: it includes also the ability to think and arrange your thoughts, a full and precise vocabulary, an easy manner of speech and breathing, and absence of self—consciousness, and the several other characteristics of efficient delivery that have deserved special attention in other parts of this book rather than in this chapter.
+
+Preparation may be either general or specific; usually it should be both. A life-time of reading, of companionship with stirring thoughts, wrestling with the problems of life—this constitutes a general preparation of inimestable worth. Out of a well-stored mind, and—richer still—a broad experience, and—best of all—a warmly sympathetic heart, the speaker will have to draw such material that no immediate study could provide. General preparation consists of all that a man has put into himself, all that heredity and environment have instilled into him, and—that rich source of preparedness for speech—the friendship of wise companions. When Schiller returned home after a visit with Goethe a friend remarked: "I am amazed by the progress Schiller can make within a single fortnight." It
