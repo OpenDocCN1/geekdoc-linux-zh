@@ -1,0 +1,13 @@
+# 28 · CHAPTER 3
+
+Figure 3.1 shows a disk drive partitioned with fdisk (which would appear as Windows C:) and an extended partition. A logical partition (which would appear as D:) has been created within the extended partition. This extended logical partition allocates only once of the space in the extended partition. The remainder is left unallocated. Each of the partitions needs to have a file system written to it before Windows can use it. The program varies with the version of Windows. Windows 9x and ME use a derivative of the original FORMAT from the original DOS/Windows 3.1 operating system. Windows NT, 2000, and XP use a newer program called Disk Administrator, which does what FORMAT does and more.
+
+![](bbox=[0.365, 0.255, 0.735, 0.665])
+
+Figure 3.1: A simple partitioning scheme from a DOS/Windows viewpoint.
+
+Partitioning a disk drive with Linux is similar to partitioning it in Windows. A program called fdisk creates the partitions. As with Windows, the raw partitions must be formatted before they can store data, although there are exceptions to the rule. (For example, DBMSs can write data to a raw partition.) Once the drive is partitioned, it needs to be formatted. For this task, Linux includes a program called mke2fs (\`make ext2 file system\`) that performs the equivalent function of fdisk.
+
+Linux and Windows diverge, however, when it comes to managing partitions. Linux doesn't refer to partitions, or physical devices, with letters. There is no "A" to represent the floppy drive or "C" to the first hard drive or partition. The Linux file system is based on an inverted tree structure, typically drawn in a diagram with the root directory (indicated by a forward slash/) at the top. Windows also uses an inverted tree structure, which does so by partition, and with a backlash (\) instead of a forward slash for the root. There is a root directory on each floppy disk (A\) and on each physical hard drive or partition (C\, D\, etc.). Linux, on the other hand, has only one root directory, and every file, subdirectory, or physical device appears in the tree subordinate to the root.
+
+Figure 3.2 shows a single hard drive divided into three partitions by Linux: one contains the actual kernel (/boot), one is used for swap space (virtual memory to be used in lieu of physical memory), and one contains everything else (). Notice that the drive and partitions appear multiple times in the directory tree in Figure 3.2. In the /dev (devices) directory, for example, the entire hard drive is referred to as /dev/hda, and the individual partitions are /dev/hda1, /dev/hda2, /dev/hda5, and /dev/hda6.

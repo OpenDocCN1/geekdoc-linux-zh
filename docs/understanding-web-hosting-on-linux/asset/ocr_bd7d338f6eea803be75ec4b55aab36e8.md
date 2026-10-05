@@ -1,0 +1,17 @@
+# 74 CHAPTER 6
+
+# Applets
+
+While the Web was under development, Sun Microsystems was developing a small, object-oriented language called Oak, which was designed to transfer code to small appliances. The small appliance would require a "virtual" operating system (a virtual machine) that could interpret and execute dynamically transferred chunks of code. Sun's Oak language was a technical success, but it was shelved because Sun's marketing department realized the Web was not ready to pay the surcharge for appliances that contained virtual machines. In other words, nobody would pay $350 for a toaster. (Coincidentally, people are paying $350 for smart appliances today, when you consider the success of PDAs.)
+
+When the Web started to flourish, Sun realized that a Web browser was basically just a small appliance. Sun partnered with Netscape, and Netscape's Navigator was bundled with a virtual machine. Because Sun found out there was a trademark for Oak, it had to come up with a new name. Sun tells coming up with the name "Java" while in a coffee shop, but a more practical explanation is that it is an acronym for "Just Another Virtual Assembler." In any case, the marriage of Java and Web browser was a huge success.
+
+The early success of Java soon evaporated, however, because it was based on applets. The "applet" itself means "little application," and how busy programmers develop "little applications" Applets just too long to download from the Web to a Web browser. In fact, Java would have done it were not for the introduction of server-side Java with servlets and Java Pages. Chapter 7 covers servlets and Java Pages. This chapter explains HTML and HTTP.
+
+# HTTP: The Protocol of the Web
+
+A basic understanding of Hypertext Transfer Protocol is necessary to developing server-side Java applications. The first thing you need to understand is that the Web is a stateless protocol. Other Internet protocols, such as FTP, are stateful. When you use FTP, you sign on, and the FTP server maintains a persistent connection to the FTP client. If you change the directory or set an option, FTP stepping stays in effect throughout your session. With HTTP, however, each browser request requires a new connection to the server.
+
+Consider a URL as "http://www.WidgetsRS.com/sales/itemlist.html" entered by a user into a Web browser. The protocol is qualified by "http": the TCP/IP address of the server machine is qualified by the domain name "www.WidgetsRS.com"; and the file name is qualified by "sales/itemlist.html." The Web server that is sitting on the TCP/IP address qualified by the HTTP request and establishes a TCP/IP connection. The server connects the itemlist html file and sends an HTTP response to the client, which contains the contents of the requested HTML file. Then, the server terminates the connection. If the user immediately makes another request, the Web server makes a completely new connection. This means that your application's state (such as file cursors, data structures, and program variable) is not maintained between user requests. HTTP, therefore, is a stateless protocol.
+
+Clearly, there is a way around this. Otherwise, you'd never be able to visit a Web site like www.amazon.com, open a shopping cart, fill your cart with books, and confirm your order by entering your credit card information. Sun's Servlet API has a solution: the HttpSession object. The HttpServlet object maintains the application state between user requests.

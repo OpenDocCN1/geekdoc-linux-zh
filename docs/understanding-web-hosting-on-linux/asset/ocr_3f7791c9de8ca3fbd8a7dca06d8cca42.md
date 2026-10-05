@@ -1,0 +1,13 @@
+The file boot.img is a byte-for-byte copy of a 1.44 Mb Red Hat installation diskette. the rewrite program
+ that file and restores it to another floppy, creating a duplicate of a diskette. (If you are using another
+Linux or UNIX computer to use it, the dd program instead of rawwrite to accomplish the same thing.)
+
+At this point, you may begin the installation program. Power on your computer and insert Install CD #1 to the CD drive. If your computer cannot boot from the CD, insert the installation diskette you just created. In either case, press the Reset button, and you will see the screen shown in Figure 3.4. This screen allows you to select a text-based or graphical installation, with other options that you can ignore for now. If you are inquisitive, you might want to press F2 and read the information on the general boot screen. You may do likewise by using the F3 through F5 keys. There is quite a bit of information on these screens that you might find useful things not planned as with your installation.
+
+![](bbox=[0.195, 0.278, 0.905, 0.535])
+
+Figure 3.4.The initial screen presented by the Red Hat Installation CD.
+
+Once you've examined the information presented on the help screens, press Enter to begin the installation program. The first screen that will require input from you is the Language Selection screen. If your computer supports graphics, you will be in the graphical installer, which you can identify by the identification of the "Man in the Red Hat" in the upper-left corner. If your machine does not support graphics, you will be in the text-based installation program. The main difference between the two is the location of the help text. With the graphical installer, the pertinent help text is on the left side of the screen, with the options at the right. The help text is available by pressing F1.
+
+Additional information about the state of the installation script is available to you on other virtual consoles, because the Linux system treats them as separate devices without being actual hardware to support them. To switch between virtual consoles, use the key combination Ctrl-Alt-Fz, where z is a number between one and five. If you are using the graphical installer, the installation dialog occurs on virtual console 7. The text-based installer uses virtual console 1. Others include virtual console 4-system messages; and virtual console 5 to see the installation log; press the key combination Ctrl-Alt-F3 from either installer. Press Ctrl-Alt-F7 to return to the graphical installer, or Ctrl-Alt-F1 for the text-based installer.

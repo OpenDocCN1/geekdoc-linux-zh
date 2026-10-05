@@ -1,0 +1,38 @@
+
+Contents · xi
+
+## Chapter 12: Using the Bash Shell ... 171
+- What's a Shell? ... 171
+- Command Execution ... 173
+- Foreground/Background ... 173
+- Word Completion. ... 174
+- History Repeats Itself. ... 175
+- I/O Redirection and Piping ... 175
+- The stdin, stdout, and stderr Files ... 176
+- Redirection ... 176
+- Unix Filters ... 177
+- Variables ... 179
+- Dot Profile ... 180
+- Advanced Shell ... 181
+- Quoted Strings ... 182
+- Aliases ... 183
+- Chapter Summary ... 184
+- End of Chapter Review ... 184
+- Programming Assignment ... 185
+
+## Chapter 13: Shell Programming ... 187
+
+- Command Execution ... 188
+- Predicates ... 189
+- Exit Codes ... 190
+- Looping ... 191
+- Case Statements ... 192
+- Tomcat Code Review. ... 193
+- Which Java ... 198
+- Classpath ... 198
+- Command Parameters ... 199
+- Chapter Summary ... 199
+- End of Chapter Review ... 199
+- Programming Assignment ... 200
+
+## Index ... 201

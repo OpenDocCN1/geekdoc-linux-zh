@@ -1,0 +1,38 @@
+
+include a lot of disk I/O, such as a database server, faster disk hardware will keep the CPU supplied with data to work with, minimizing idle time. The newest Ultra-160 SCSI system is always a good bet, but the EIDE UDMA-100 hardware is no slouch either.
+
+You can improve your subsystem performance by spreading the requests over multiple units. With this setup, multiple disk arms can be working simultaneously. If you can afford to do so, install more than one disk drive and partition them so that the workload is distributed evenly across them. (You'll see how to do this). If you install multiple disks, particularly if you use EIDE drives, be sure to install them on separate IDE channels. Most motherboards support at least two IDE channels, by using both, you'll increase your I/O bandwidth, further enhancing performance.
+
+- as much RAM into the box as can. Linux has a real talent for managing memory. If the physical RAM exceeds the current processes, it will use it as a cache for data that would normally be sent straight to disk. It will also store recently accessed data in memory. If a request is made for data that is still in cache, it will be retrieved from instead of avoiding another request to the disk subsystem.
+
+In short, more RAM can allow for slower disk performance. Conversely, to compensate for less RAM by increasing the swap partition on the disk drive, but this will decrease the system's performance because of the relative performance differences between real memory and virtual (disk-space) memory.
+
+- Consider your CPU performance. This is where the numbers become more difficult to pin down. As you know, Linux is a multitasking operating system, meaning it can do many things at the same time. Well, not. Actually, the CPU works on one task, then switches to the next. It does switching quickly enough to give the illusion that everything is running at the same time.
+
+Although a complete discussion of how it selects task to execute next and how much time it spends on a task is beyond the scope of this book, you need to consider which tasks you plan to run on the server. If you run your Web server on one machine and have a separate computer for your database, even a 233 MHz Pentium might be fast enough for your Web server. On the other hand, if you plan on running the database on the same machine as your Web server (which might not be a great idea if you expect many queries to the database), you will need a CPU that has cycles to burn. A long-running query can easily soak up CPU time to make additional connections to the Web server appear sluggish and make the server seem unresponsive. Naturally, you should avoid this situation.
+
+You might also consider choosing a motherboard that can handle multiple CPUs. Older versions of these motherboards can be bought quite in. Linux will balance requests across the various CPUs, helping to keep a heavy-duty database query from hogging all CPU cycles.
+
+As you see, it is somewhat difficult to give explicit recommendations because of the variation in job mixes encountered in different installations. We know that you would still like some kind of recommendation, so, here goes:
+
+A low-volume Web server, or one that would be a great development machine, would consist of a Pentium/Pro Pentium II or faster processor, at least 128 MB of RAM, and a relatively fast disk drive system. This assumes that the server will be dedicated to this task and not used simultaneously as a workstation. A workstation implies the use of the X window system (the Linux GUI) and its inherent memory requirements, which would necessitate a corresponding increase in memory and CPU capacity.
+
+## Acquiring the Pieces and Updates
+
+After you have picked up the Red Hat distribution, one of the first things you'll want to do—either before the installation if you have another Internet-connected computer, or immediately after the installation—is to go to Red Hat's errata page (www.redhat.com/errata) and retrieve all of the updates for your distro. The Linux community is quick to produce patches for errant software, particularly if those have recently discovered security hole.
+
+Furthermore, the distribution will undoubtedly be missing some of the software you will require for your Web server. Almost all distros include the Apache Web server (which is the one we recommend), so that base is covered. However, if you intend to use Java to provide dynamic content to your site (which we also recommend), you'll need a Java virtual machine (JVM) for Linux. There are number to choose from. You can obtain a Linux JVM from the original supplier: Blackout, now at www.blackdown.org; from IBM at www.ibm.com; or from Sun Systems at http://java.sun.com.
+
+Once you have acquired the JVM, you'll need some kind of servlet container in which to run the server-side Java programs you'll be running. A good choice, if you have the hardware to run it, is IBM's WebSphere. The open-source alternative, Tomcat, is great for lightweight websites. It is available at http://jakarta.apache.org.
+
+It is the rare site that doesn't use some kind of database management system. Included with your Red Hat package are two MySQL and PostgreSQL. You'll need to check the Web sites for each of them to find which best suits your needs. MySQL can be found at www.mysql.com and PostgreSQL can be found at www.postgresql.com. If you need a commercial database, you can hardly go with IBM's own DB2 Universal Database, which is available on IBM's S/390 (zSeries) and AS/400 (iSeries) platforms. DB2 does, of course, cost money, while the open-source alternatives are free. The alternative you choose depends on your needs.
+
+This list of software requirements is not meant to be all-inclusive; instead, it is designed to get you thinking about your needs.
+
+## Carving Up the Disk
+
+One of the tasks during installation is to carve your disk. Partitioning a disk drive with Linux is similar to partitioning it in Windows. A program called fdisk creates the partitions. As with Windows, the raw partitions must be formatted before they can store data, although there are exceptions to the rule (For example, DBMSs can write data to a raw partition). Once the drive is partitioned, it needs to be formatted. For this task, Linux includes a program called mke2fs (make ext2 file system) that performs the equivalent function of formatting.
+
+Linux and Windows diverge, however, when it comes to managing partitions. Linux doesn't refer to partitions, or physical devices, with letters. There is no "A" to represent the floppy drive or "C" to the first hard drive or partition. The Linux file system is based on an inverted tree structure, typically drawn in a diagram with the root (indicated by a forward slash/) at the top. Windows also uses an inverted tree structure, which does so by partition, and with a backlash (\) instead of a forward slash for the root. There is a root directory on each floppy disk (A\) and on each physical hard drive or partition (C\, etc.). Linux, on the other hand, has only one root directory, and every file, subdirectory, or physical device appears in the tree subordinate to the root.
+
+Figure 3.2 shows a single hard drive divided into three partitions by Linux: one contains the actual kernel (/boot), one is used for swap space (virtual memory to be used in lieu of physical memory), and one contains everything else (). Notice that the drive and partitions appear multiple times in the directory tree in Figure 3.2. In the /dev (devices) directory, for example, the entire hard drive is referred to as /dev/hda, and the individual partitions are /dev/hda1, /dev/hda2, /dev/hda5, and /dev/hda6.

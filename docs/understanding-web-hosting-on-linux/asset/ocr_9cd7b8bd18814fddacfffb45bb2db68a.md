@@ -1,0 +1,11 @@
+To fully appreciate what an operating system kernel is, think of your computer as an integrated combination of software and hardware. Figure 2.1 shows this combination drawn as a layered rectangle. Communication between layers can be accomplished only by going through all intervening layers.
+
+![](bbox=[0.435, 0.143, 0.715, 0.513])
+
+The hardware components of the computer are at the core of the integrated mass in Figure 2.1. This core includes the memory, CPU, video system, I/O system (keyboard, communications, USB ports, etc.), and storage (hard drive, CD, floppy). Enveloping the core is a layer of software called *firmware*. This layer is supplied by the hardware's manufacturer to provide a means for communicating with other software. Firmware is also called *embedded software* because it's typically burned into read-only memory (ROM) or some kind of electrically erasable programmable read-only memory (EEPROM), which can be updated using manufacturer-supplied programs.
+
+The next layer is the operating system kernel. Through software modules known as *device drivers*, which can be provided by the manufacturer or by enterprising open-source programmers, the kernel can communicate with the hardware. Any program that requires a resource, such as a chunk of memory, must request it from the kernel. In fact, the kernel is responsible for the allocation of all the computer's resources. Using CPU time it provides the scheduling so that all processes get a chance to run, arbitrating between conflicting requests for resources. Most importantly, it provides protection between processes, so that some errant program instructions in one process can't cause damage to another.
+
+The next layer is the system software. This layer is an adjunct to the kernel and extends the services that the kernel provides. An operating system is the combination of the kernel and the system software.
+
+The kernel could function without this software, but the computer would be, in effect, spinning its wheels and accomplishing nothing. The system software adds whatever functionality is required to make the
