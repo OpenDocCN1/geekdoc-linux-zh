@@ -1,0 +1,13 @@
++   Raspberry Pi Zero: Released in February 2017, the Raspberry Pi Zero W added Wi-Fi and Bluetooth, and compatibility with the Raspberry Pi Camera Module. The Pi Zero W costs around $10 (or about £10). If you're happy to solder your GPIO pins, or you don't need them, the Raspberry Pi Zero or Zero W represents a great entry point to the Raspberry Pi family. After the Raspberry Pi 3, the Pi Zero W is our recommended best buy.
+
+Of course, the older Raspberry Pi Pis are still there. Recent models remain in production where there is demand, and you can buy secondhand versions from websites like eBay. Generally speaking, the newer the model, the faster its performance. Memory upgrades have made a difference, as well as the use of more powerful processors, as the Pi has evolved. There are plenty of uses for the Pi that don't need especially fast performance, though, you might find that an older Pi is perfect for your project. The older models are described in this list:
+
++   Raspberry Pi 1 Model B with 256MB memory: Although it's called Model B, this was the first Raspberry Pi to be released, in February 2012. The Raspberry Pi Model B features an Ethernet connection for the Internet and two USB ports. It uses an SD card for storage.
+
++   Raspberry Pi 1 Model B with 512MB memory: Released in October 2012, the Raspberry Pi Model B had twice the memory capacity. This improved the speed of some software, applications that used images heavily.
+
++   Raspberry Pi 1 Model A: The Model A, released in February 2013, is a stripped-down version of the Model B. It has one USB port and doesn't have an Ethernet port for connecting to the Internet. It has 256MB of memory.
+
++   Raspberry Pi 1 Model B+: The Model B+, released in July 2014, has been described by the Raspberry Pi Foundation as "the final evolution of the original Raspberry Pi." It runs all the same software as the previous versions of the Raspberry Pi, but it has four USB ports, GPIO pins for connecting electronics projects to the Pi, and lower power consumption and better audio than the Model B. In common with the Model B, it has 512MB of memory. Although all previous versions used SD cards for data storage, the Model B+ introduced the smaller microSD cards, which are now standard on the Raspberry Pi.
+
++   Raspberry Pi 2 Model B: Launched in February 2015, this Model B doubled the memory on the Model B+ to 1GB. It increased performance, compared to the Model B+, retaining its physical features. Over the years the Pi's performance has been improved by new software releases as well as updates to the hardware. The Pi 2 represents an immediately noticeable speed-up, compared to the Model B+.
