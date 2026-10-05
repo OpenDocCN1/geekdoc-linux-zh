@@ -1,0 +1,35 @@
+# QUIZ
+
+# IDENTIFYING FILE SYSTEMS AND\ DEVICES
+
+Choose the correct answers to the following questions:
+
++   1. What is the name of the device file of an entire SATA hard drive in the /dev directory?
+   a. /dev/vda
+   b. /dev/sda1
+   c. /dev/sda
+   d. /dev/vg_install/lv_home
+
++   2. Choose the device file name of the third partition on the second SATA hard drive.
+   a. /dev/vda2
+   b. /dev/sda3
+   c. /dev/sdb2
+   d. /dev/sdb3
+
++   3. What is the name of the device file for the entire second virtio-blk attached to a virtual machine?
+   a. /dev/vda2
+   b. /dev/sda2
+   c. /dev/vdb2
+   d. /dev/vdb
+
++   4. Choose the correct name of the device file for the third partition on the second virtio-blk disk attached to a virtual machine?
+   a. /dev/vda3
+   b. /dev/sda3
+   c. /dev/vdb3
+   d. /dev/vda3
+
++   5. Which command provides an overview of the file system mount points and the amount of free space available in SI units?
+   a. df
+   b. df -H
+   c. df -h
+   d. du -h

@@ -1,0 +1,35 @@
+# QUIZ
+
+# DESCRIBING USER AND GROUP CONCEPTS
+
+Choose the correct answer to the following questions:
+
++   1. Which item represents a number that identifies the user at the most fundamental level?
+a  primary user
+b  UID
+c  GID
+d  username
+
++   2. Which item represents the program that provides the user's command-line prompt?
+a  primary shell
+b  home directory
+c  login shell
+d  command name
+
++   3. Which item or file represents the location of the local group information?
+a  home directory
+b  /etc/passwd
+c  /etc/GID
+d  /etc/group
+
++   4. Which item or file represents the location of the user's personal files?
+a  home directory
+b  login shell
+c  /etc/passwd
+d  /etc/group
+
++   5. Which item represents a number that identifies the group at the most fundamental level?
+a  primary group
+b  UID
+c  GID
+d  groupid

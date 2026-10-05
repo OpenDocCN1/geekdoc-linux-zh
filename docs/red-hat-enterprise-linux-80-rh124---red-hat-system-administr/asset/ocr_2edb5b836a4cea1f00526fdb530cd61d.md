@@ -1,0 +1,17 @@
++   6. Which term describes the hardware display and keyboard used to interact with a system?
+a. Physical Console
+b. Virtual Console
+c. Shell
+d. Terminal
+
++   7. Which term describes one of multiple logical consoles that can each support an independent login session?
+a. Physical Console
+b. Virtual Console
+c. Shell
+d. Terminal
+
++   8. Which term describes an interface that provides a display for output and a keyboard input to a shell session?
+a. Console
+b. Virtual Console
+c. Shell
+d. Terminal
