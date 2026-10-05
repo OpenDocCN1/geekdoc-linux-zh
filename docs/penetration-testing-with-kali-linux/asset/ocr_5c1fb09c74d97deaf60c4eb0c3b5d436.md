@@ -1,0 +1,13 @@
+# 5.2.7 Appendices, Further Information
+
+The final part of the report is the Appendices section. Things that go here typically do not fit anywhere in the report, or are too lengthy or detailed to include inline. This includes long lists of compromised users or affected areas, large proof-of-concept code blocks, expanded methodology or technical write-ups, A good rule to follow is if it's necessary for the report but break the flow of the page, put it in an appendix.
+
+We may wish to include a Further Information section. In this section, we'd include things that may not be necessary for the main write-up but could reasonably provide value for the client. Examples would include articles that describe the vulnerability in more depth, standards for the remediation recommendation for the client to follow, and other methods of exploitation. If there is nothing that can add enough value, there is no reason to necessarily include this section.
+
+References can be a useful way to provide more information for the client in areas not directly relevant to the testing we carried out. When providing references, we need to ensure we use the most authoritative sources and we should also ensure that we cite them properly.
+
+In this Module we discussed various tools and practices which will come in handy while we write our penetration testing reports. However, just as within the penetration testing field itself, there is no "one tool to rule all" for report writing either. With the vast amount of reporting and note-taking tools, we recommend experimenting with them to find what works for you and/or the client. In the long run, this will make report writing more comfortable and effective at the same time.
+
+There are many aspects we need to keep in mind during penetration testing and note-taking is arguably one of the most important ones. We end up working with thousands of computers, users, applications, and remembering everything as we progress without documentation is close to impossible. Taking the time to document each step thoroughly will help us write a better report in the end. It will also make our penetration test more effective, allowing us to view the documentation as we go along to see what we have already done instead of repeating the steps.
+
+Finally, we need to keep in mind who will read the report. The goal should be to make the report useful for all potential audiences within an organization, both technical and non-technical. We can do this by splitting the report up in different parts, using different levels of technical language in each of them. This will ensure that everyone gets an idea of what the outcome of the penetration test really was.

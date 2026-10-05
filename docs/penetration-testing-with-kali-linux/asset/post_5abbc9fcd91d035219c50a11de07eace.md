@@ -1,0 +1,4 @@
+
+# 25.4 Wrapping Up
+
+If you've taken the time to understand the course material presented in the course Modules and associated videos and have tackled the Module exercises and Assembling the Pieces, you'll enjoy the Challenge Labs. If you're having trouble, consider filling in knowledge gaps in the course material, and if you're still stuck, step back and take on new perspective. It's easy to get fixated on a single challenge and lose sight of the fact that there may be a simpler solution waiting down a different path. Take good notes and review them often. Search for alternate paths that might advance your assessment. When all else fails, do not hesitate to reach out to the Student Mentors. Finally, remember that you often have all the knowledge you need to tackle the problem in front of you. Don't give up, and remember the Try Harder mindset!

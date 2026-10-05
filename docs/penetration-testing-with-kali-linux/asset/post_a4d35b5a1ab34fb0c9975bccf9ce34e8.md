@@ -1,0 +1,54 @@
+
+# OffSec Penetration Testing with Kali Linux
+
+- Attack the passphrase of SSH private keys
+
+In this Learning Unit, we'll focus on password cracking, beginning with a discussion of the fundamentals. We'll explore the process of mutating existing wordlists with Rules, discuss a basic cracking methodology, and crack passwords for database files and passphrases for SSH private keys.
+
+## 13.2.1 Introduction to Encryption, Hashes and Cracking
+
+In this section, we will examine the differences between encryption⁶⁰⁷ and hash algorithms⁶⁰⁸ and discuss password cracking. Then, we'll review two popular password cracking tools: Hashcat⁶⁰⁹ and John the Ripper (JtR)⁶¹⁰ Finally, we'll calculate the time it takes to create hashes.
+
+> PEN-100 contains a dedicated Module for Cryptography, which is a great resource for the basic document presented here.
+
+To begin, let's discuss the basics of encryption. Encryption is a two-way function, in which data is "scrambled" (encrypted) or "unscrambled" (decrypted) with at least one key. Encrypted data is known as a ciphertext⁶¹¹.
+
+Symmetric encryption⁶² uses the same algorithm for both encryption and decryption. To send a message to another person, both sides need to know the key (password). If they exchange the key via an insecure channel, an attacker may intercept it. Additionally, the attacker may use a Man-in-the-middle⁶³ to gain access to the encrypted messages sent between the communication partners. With both the intercepted key and access to the encrypted messages, the attacker can decrypt and read them. This creates a huge security risk since the communication's security is based on the knowledge of a key, which needs to be known by both sides before starting communication. The Advanced Encryption Standard (AES)⁶⁴ is an example of a symmetric encryption.
+
+Asymmetric encryption⁶⁵ uses distinct keys containing public and private keys. Each user in this transaction has their own key. To receive an encrypted message, a user uses their public key to encrypt their message. When the message is sent, only the corresponding private key can decrypt it. A common asymmetric encryption is Rivest-Shamir-Adleman (RSA)⁶⁶.
+
+⁶⁰⁷ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Encryption
+⁶⁰⁸ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Hash_function
+⁶⁰⁹ (Hashcat, 2022), https://hashcat.net/hashcat/
+⁶¹⁰ (OpenWalk, 2022), https://www.openwall.com/johnn/
+⁶¹¹ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Ciphertext
+⁶² (Wikipedia, 2022), https://en.wikipedia.org/wiki/Symmetric_encryption_algorithm
+⁶³ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+⁶⁴ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+⁶⁵ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Public-key_cryptography
+⁶⁶ (Wikipedia, 2022), https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+
+On the other hand, a hash (or digest) is the result of running variable-sized input data (in this case a plaintext) through a hash algorithm (as SHA1¹⁶¹⁷ or MD5¹⁶⁸).
+
+The result is a practically unique fixed-length hexadecimal value which represents the original plaintext. In other words, plaintext through a specific hashing algorithm always produces the same hash and the resulting hash is (statistically) unique. The only exception to this is the extremely rare hash collision¹⁹ in which two input values result in the same hash value.
+
+A majority of commonly used hash algorithms as MD5 and SHA1 are cryptographic hash functions²⁰. These hash algorithms are one-way functions²¹ meaning that it's trivial to generate a hash, but a proper algorithm's implementation makes it prohibitively difficult to get the plaintext from the hash. For this Module, we will discuss cryptographic hashes unless stated otherwise.
+
+Hashing is overlapped in the information security field. For example, if a user registers an account through an application, they set a password. The password is hashed and stored in a database so that the site administrators (attackers) cannot access the plaintext.
+
+When a login attempt is made, the entered password is hashed and the hash is compared to the hashed value in the database. If they match, the entered password is correct and the user is logged in.
+
+Within the scope of password attacks, application and user passwords are encrypted or hashed to protect them.
+
+To decrypt an encrypted password we must determine the key used to encrypt it. To determine the plaintext of a hashed password, we must run various plaintext passwords through the hashing algorithm and compare the returned hash to the target hash. These attacks are collectively known as password cracking, and are often performed on a dedicated system. Since the process can take a considerable amount of time, we run it in parallel with other activities during a penetration test.
+
+Unlike the binary dictionary attacks against network services and login forms demonstrated in the previous Learning Unit, password cracking consumes bandwidth, does not lock accounts and is not affected by defensive techniques.
+
+We can perform dictionary attacks with a simple example. Let's say that we gained access to SHA-256²² a password hash of 5b16b16c2b16b16c2b16b16c2b16b16c.
+
+¹⁷ (Wikipedia, 2022), https://en.wikipedia.org/wiki/SHA-1
+¹⁸ (Wikipedia, 2022), https://en.wikipedia.org/wiki/MD5
+¹⁹ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Hash_collision
+²⁰ (Wikipedia, 2022), https://en.wikipedia.org/wiki/Cryptographic_hash
+²¹ (Wikipedia, 2022), https://en.wikipedia.org/wiki/One-way_function
+²² (Wikipedia, 2022), https://en.wikipedia.org/wiki/SHA-256
