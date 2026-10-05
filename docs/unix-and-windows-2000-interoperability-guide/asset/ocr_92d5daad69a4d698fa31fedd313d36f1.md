@@ -1,0 +1,9 @@
+# What Is UNIX?
+
+Formally, the name UNIX is a registered trademark of The Open Group, an international consortium of vendors and customers dedicated to the advancement of open systems. In everyday use, however, means any variant, derivative, or clone of the operating system first developed by AT&T's Bell Laboratories in the 1970s. These variants include the commercially available HP-UX from Hewlett-Packard, AIX UNIX from IBM, Solaris from Sun Microsystems, UnixWare from SCO, and Tru64 UNIX from Compaq. These UNIX systems run mostly on RISC-based or Intel-based processors and usually contain modifications, additions, or other "enhancements" to make each of them different from the other, sometimes significantly different. Also available, for free on the Internet, are NetBSD, FreeBSD, and Linux. FreeBSD runs exclusively on Intel processor-based computers, while the others run on different platforms. Such operating systems are developed and maintained by volunteers who believe strongly in open systems and some form of open source software.
+
+Obviously, then, there is no such thing as THE operating system; there are many. Each has its own distinct characteristics, these operating systems have enough in common to warrant the designation of UNIX operating system. So, why is this the case? Where did UNIX come from anyway? Well—please don't groan—to answer these questions, we have to look at a little history.
+
+# 1.1 In the Beginning
+
+UNIX began as an in-house project within AT&T's Bell Telephone Labs (BTL) in 1969. Two BTL staff members, Ken Thompson and Dennis Ritchie, began writing an operating system on a DEC PDP-7, in part to run a simulation program (and game) called Space Travel. Originally, Space Travel ran on a mainframe operating system called Multics (Multiplexed Information and Computing Service), and as it is on this acronym the new operating system eventually became called UNIX.

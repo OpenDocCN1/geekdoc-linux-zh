@@ -1,0 +1,10 @@
+# Miscellaneous
+Interoperability Topics
+
+What remains is a look at some miscellaneous interoperability topics, namely, network attached storage, the X Window system and printing. So far, we have examined the most pressing issues system administrators face when confronted with a mixed environment: how systems communicate, how they find each other, how their naming systems work, how users are authenticated, and how to share files. With a brief look at other interoperability topics, realizing that these can also be worthy of extensive description. They are, perhaps, material for another book. So, let's proceed, starting with a twist to an area of file sharing: Network-Attached Storage (NAS).
+
+# 13.1 Network-Attached Storage
+
+Since file sharing is such an important goal in UNIX and Windows interoperability, we must take a look at the concept of NAS. NAS is disk storage accessible via networking technologies such as Ethernet, Gigabit Ethernet, and ATM, rather than channel technologies like SCSI and Fibre Channel. Unrestricted by distance and connectivity NAS makes it possible for large numbers of clients to access files anywhere on the network. NAS is achieved by connecting a file server running a stripped-down operating system optimized for network I/O to some kind of storage. This operating system does nothing serve files over network. It does not run other services like Dynamic Host Configuration Protocol (DHCP), Domain Name System (DNS), Windows Internet Name Service (WINS), or Network Information Service (NIS). Therefore, fast performance is a prominent NAS.
+
+EMC Corporation was the first to coin the term network-attached storage, but Auspex was the first to actually implement the concept. Today, the leading vendors of NAS are EMC and Network Appliance. Both companies provide NAS for UNIX (via NFS), Windows (CIFS), and mixed environments. The goal for these and other vendors is to provide NAS that is easy to integrate in mixed environments, easy to manage, performs well, and is always available.
