@@ -1,0 +1,11 @@
+# Q&A
+
+search engine inquiry, should land you some good results. There really aren't that many PC devices that aren't supported by Linux in some way. The trick is to research. Chances are, no matter how obscure you device may be, if more than 500 people have one, at least one of them gotten it to work under Linux.
+
++   Q I have a USB device. Can I use that?
+
++   A Perhaps. USB support in Linux is really in its infancy, but it is there. USB support does require you to patch the kernel. Because this is life on the bleeding edge, it might be successful at getting the device to work. But if the device is a pretty cutting-edge, standard one, there is no reason why it would not work. Therefore, although I wouldn't recommend buying a USB device explicitly for use in Linux at this point in time, expect this situation to change quickly. In any case, full USB support should work its way into standard kernel releases after it proven to be reliable enough. (By the way, if you happen to be an iMac owner, you're a perfect candidate to test and debug USB support in Linux.)
+
+# Exercise
+
+Well, honestly, if you have such a graphics-related peripheral device, chances are you want it to work in Linux, so that isn't much of an exercise, really. Your assignment then, now that the end of the book is at hand, is to try and surpass everything you have learned so far. At this point, if you have followed the tutorials, you have acquired a base of understanding that will enable you to create digital graphics with a little effort and creativity. The journey is far from over. One thing that I have encountered often in my many pursuits is the simple, yet true, popular pontification: “The more I learn, the more I find out that I don't know as much as I thought I did..." As you probably found, this maxim is especially true in the realm of computers. So, with that in mind, keep it! And remember that the fun you have had learning what you know so far pales in comparison to what lies ahead. You ain't seen notin'!
