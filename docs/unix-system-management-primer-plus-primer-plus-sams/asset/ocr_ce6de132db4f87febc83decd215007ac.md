@@ -1,0 +1,17 @@
+# UNIX SYSTEM MANAGEMENT PRIMER PLUS
+
+One way to accomplish this goal is to list the policies some of the more severe actions you might take as a result of violations, without associating the actions with any specific violations. This approach leaves you, your management, and possibly your legal department, free to decide what (if any) actions to take against a user who violates your policies. Here's an example of a feasible statement of penalties, which may be used in an academic environment:
+
+Users who violate the conditions of this policy may have their computing privileges revoked, and may also be subject to expulsion from the University. Any suspicious or illegal activities may be reported to the proper legal authorities.
+
+A user who is caught sending spam for the first time does not even deserve revocation of computing privileges, but a hacker who breaks into a system and riffs passwords for a week may deserve expulsion. The phrase "conditions of this policy" refers to the policy as a whole, making the consequences you relevant to all potential violations mentioning specific policies. The words "may" and "any" suggest that you are not committing specific, but the ones that are listed are severe enough that they make the reader patient.
+
+![](bbox=[0.148, 0.375, 0.852, 0.535])
+
+# Real-World Example: The Three-Strikes Policy
+
+One university with thousands of users decided to implement a "three-strikes" policy for violators. For severe violations, such as hacking into university systems, the university immediately revoked the offender's computing privileges. However, for less severe violations, such as sending spam or running resource-hungry processes on servers for interactive processes, users were given three. The first incident resulted in a warning. The user-advocate was responsible for handling user incidents (in a corporate environment, the human resources department manage this instead). This action aimed at showing the user that the situation would be escalated, and to warn the user-advocate that more severe action might be warranted. After the third, system administrators disabled the user's account and let the user-advocate deal with the situation from that point on, which would involve permanently revoking the user's computing privileges by exacting less severe penalties for minor violations, and it ensured that repeat violations were dealt with in a stern and swift manner.
+
+# User Rights and Responsibilities
+
+An acceptable usage policy lists what users can do using your services, but users also have rights that limit you as an administrator (and other staff) can do with regard to their account. You state these rights in a written policy order to protect your users against system administrators or other privileged IT staff who choose to abuse their authority. These rights are provided given that users honor responsibilities placed upon them. The policy documents these items is often called a "User Rights and Responsibilities" document. This document can be available electronically on a Web site or as a hard copy; what is important is that users are notified of its existence before using any of your services. For example, you can distribute the user rights and responsibilities document during the account creation process, if the user is available in person, or at a company orientation.
