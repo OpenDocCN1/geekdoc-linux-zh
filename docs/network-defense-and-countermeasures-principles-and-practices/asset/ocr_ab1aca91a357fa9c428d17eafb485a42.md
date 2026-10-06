@@ -1,0 +1,15 @@
++   Polymorphic: A polymorphic virus literally changes its form from time to time to avoid detection by antivirus software. A more advanced form of this is called the metamorphic virus; it can completely change itself.
+
+More complex, advanced viruses are developed in modules. One module may do very little except get installed on the target. Because it does no real malicious activity, it might not be detected by antivirus. Then a downloader module will download the actual malicious payload. If payload is encrypted, then the downloader may be responsible for decryption as well. A launcher module is responsible for activating, or launching, the downloaded malicious payload.
+
+# Virus Scanners
+
+The most obvious defense against viruses is the virus scanner. A virus scanner is essentially software that tries to prevent a virus from infecting your system. Usually it scans e-mail and other incoming traffic. Most virus scanners also have the ability to scan portable media devices as USB drives. Most people are aware, in a general way, how virus scanners work. In this section you will learn more about how scanners operate.
+
+In general, virus scanners work in two ways. The first method is that they contain a list of all known virus files. Generally, one of the services that vendors of virus scanners provides is a periodic update of this file. This is typically in a small file, often a .dat file (for data). When you update your virus definitions, what actually occurs is your current file is replaced by the most recent one on the vendor's website.
+
+Every virus scanner I have ever personally encountered also allows you to configure to periodically download the latest updates. It is critical that, no matter what virus scanner you choose, configure it to automatically update itself.
+
+The antivirus program scans your PC, network, and incoming e-mail for known virus files. Any file on your PC or attached to an e-mail is compared to the virus definition to see whether there any matches. With e-mail, this can be done by looking for specific subject line and content. Known viruses often have specific phrases in the subject line and the body of the messages they are attached to. Yet yroids and rehello:rethanks. Scanning against a list of known viruses would result in many false positives. Therefore, the virus scanner also looks at attachments to see whether they are of a certain size and creation date that matches a known virus or whether it contains virus code. The file creation date, and location are the telltale signs of a virus. Depending on the settings of your virus scanner, you may be prompted to take some action, the file may be moved to a quarantined folder, or the file may simply be deleted outright. This type of virus scanning works only if the .dat file for the virus scanner is updated, and only for known viruses.
+
+Another way a virus scanner can work is to monitor your system for certain types of behavior that are typical of a virus. This might include programs that attempt to write to a hard drive's boot sector, change system files, alter the system registry, automate e-mail software, or self-multiply. Another

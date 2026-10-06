@@ -1,0 +1,9 @@
+From this screen you can click on the button on the far left that has an icon of a house. Or you can go to File and select Host. Then you simply enter key either the URL or the IP address of the machine that you wish to scan. Click either the button with the "S" on it or go to File and select Start Scan. Cerberus will then scan and give you a wealth of information. You can see in Figure 12-7 all the various categories of information that you get from this scan.
+
+![](bbox=[0.118, 0.239, 0.731, 0.566])
+
+FIGURE 12-7 Cerberus scan results
+
+Click on the third button to review the report. The report will launch Hypertext Markup Language (HTML) document (thus the document is easy to save for future reference) with links to each category. Click the category you wish to see. As a rule you should save all security reports for future audits. In the event of litigation it may be necessary for you to verify that you are practicing diligence in implementing and auditing security. It is also important to document these activities as a part of record of precautions you take. This documentation could be crucial in the case of any external audit or even in helping a new IT security professional get to speed on what actions have been taken. This information should be stored in a secure location, as it is of great value to someone wishing to compromise your system security. An example of the report is shown in Figure 12-8.
+
+One of the most interesting sections to review, particularly for a security administrator, is the NT Registry report. This report will examine the Windows Registry and inform you of any security flaws found there and how to correct them. This report is shown in Figure 12-9.

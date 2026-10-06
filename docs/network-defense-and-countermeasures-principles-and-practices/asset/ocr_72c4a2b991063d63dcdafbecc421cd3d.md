@@ -1,0 +1,14 @@
+# Information Control
+
+Since World War II, control of information has been an important part of political and military conflicts.
+Below are just a few examples.
+
++   - Throughout the Cold War, Western democracies invested time and money for radio broadcasts into communist nations. This well-known campaign was referred to as Radio Free Europe. The goal was to create dissatisfaction among citizens of those nations, highly encouraging defection, dissent, and general discontent. Most historians and political analysts agree that this was a success.
+- The Vietnam War was the first modern war in which there was strong and widespread domestic opposition. Many analysts believe that opposition was due to the graphic images brought home via television.
+- Today, the government and military of every nation are aware of how the phrases they use to describe activities can affect public perception. They do not say innocent civilians were killed in a bombing raid. Rather, they state that there are "some collateral damage." Governments do not speak of being the aggressor or starting a conflict. They speak of "preemptive action." Dissenters in any nation are almost always painted as treasonous or cowards.
+
+Public perception is a very important part of any conflict. Each nation's own citizens to be totally in support of what it does and to maintain a high morale. High and strong support lead to volunteers for military service, public support for funding the conflict, and political success for the nation's leader. At the same time, you want the enemy to have low morale—to not doubt only their theirs but to be as opposed to the conflict as possible. The Internet provides a very inexpensive vehicle for swaying public opinion.
+
+Web pages are one facet of disseminating information. Having people to various discussion groups can also be effective. Full-time propaganda can easily manage 25 or more distinct online personalities, spending time in different bulletin boards and discussion groups, espousing the views that their political entity wants to espouse. They can reinforce what Internet news outlets are posting or undermine these postings. They can also start rumors. Rumors can be very effective even when people recall hearing something with a vague recollection of when they heard it and whether it was supported by any data.
+
+An agent could have one personality that purports to be a military member (it would take very little research to make this credible) and post information "not seen in newscasts" that would cast the conflict in either a positive or negative light. She could have other personas that entered the discussion who would agree with the original position. This would give the initial rumor more credibility. Some people suspect this is already occurring in Usenet newsgroups and as well as social media like Facebook and LinkedIn.
