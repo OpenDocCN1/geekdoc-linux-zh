@@ -1,0 +1,2 @@
++   [Linux 圣经2006 版：启动 Fedora、KNOPPIX、Debian、SUSE、Ubuntu 及其他 7 种发行版](README.md)
++   [Linux 圣经2006 版：启动 Fedora、KNOPPIX、Debian、SUSE、Ubuntu 及其他 7 种发行版](linux-bible-2006-edition-boot-up-to-fedora-knoppix-debian-su.md)

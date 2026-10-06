@@ -1,0 +1,294 @@
+
+
+## shell 命令（续）
+- encript, 576
+- 环境变量
+- BASH, 56
+- BASH_VERSION, 56
+- 创建, 57–58
+- 定义, 39
+- EUID, 56
+- 扩展, 51
+- 导出, 58
+- FACEIT, 56
+- HISTCMD, 56
+- HISTFILE, 56
+- HFILESIZES, 56
+- HOME, 56
+- HOSTYPE, 56
+- MAIL, 56
+- OLDPWD, 556
+- OSTYPE, 56
+- 覆盖值, 58
+- PATH, 54
+- PPID, 57
+- PROMPT_COMMAND, 57
+- PS1, 52–54, 57
+- PWD, 56
+- RANDOM, 57
+- SECONDS, 57
+- 设置, 37–58
+- SHLVL, 57
+- TMOUT, 54
+- UID, 57
+- USER, 56
+- 查看, 55
+- WHATEVER, 54–55
+- ror messages, 42
+- 退出, 38
+- 扩展, 50–51
+- export, 58
+- fdisk, 16
+- fg, 59
+- 文件系统命令, 42
+- find, 170
+- 资金, 40–42
+- 函数, 41
+- gcc, 578
+- gvg, 578
+- ghostscript, 578
+- groff, 555–556
+- 帮助, 39, 41
+- 历史, 42–48
+- id, 35
+- insmod, 155
+- 任务, 60
+- ldconfig, 796, 799
+- ldd, 798–799
+- less, 38, 43
+- 列出, 38
+- lpc, 577, 709
+- lpq, 576, 710
+- lpr, 575–576, 704–708
+- lrm, 577, 709–710
+- ls, 36–63
+- lmod, 153–154
+- lsof, 152
+- man, 39, 41
+- 元字符, 39, 48–49, 64–67
+- mkdir, 63–64
+- mkfs, 165–166
+- modprobe, 154–155
+- mount, 152–158, 162–164
+- mv, 70
+- nm, 796–797
+- roff, 555
+- oploune, 39
+- 密码, 145, 200–201
+- pipe (), 38, 49
+- ps, 37–38
+- pwd, 36, 63
+- alling, 47–48
+- 运行, 42
+- 保留字, 41
+- rm, 70
+- rmod, 155
+- scp, 210–211
+- 顺序, 49
+- sftp, 210–211
+- sh, 33
+- 快捷方式, 39
+- ssh, 210–211
+- su, 132–133
+- stitution, 50
+- sudo, 140–142
+- top, 171
+- touch, 66
+- troff, 555
+- type, 42
+- umount, 164–165
+- unset, 58
+- useradd, 143–148
+- usermod, 35
+- who, 35–36
+- hwdialconf, 193–194
+- shell 脚本, 30
+- 四线棋游戏, 626
+- SHLVL 环境变量, 57
+- Shorewall 功能 (Mandriva), 464
+- 关, 80
+- Shuttleworth, Mark (Ubuntu 赞助人), 442
+- Simple DirectMedia Layer 项目, 620
+- 简单邮件传输协议 (SMTP), 673
+- Slackware
+- 启动, 412–414
+- 使用...挑战, 404–405
+- 社区, 401–403
+- CUPS (通用 Unix 打印服务), 706
+- 开发历史, 14
+- 开发平台, 405
+- 下载, 406
+- DVD, 816–819
+- 特性, 399–401, 406
+- 4 规则, 399–400
+- 游戏, 622
+- GNOME 桌面环境, 400, 407
+- 硬件要求, 407
+- 帮助, 403
+- 安装, 405–412
+- ISO 镜像, 819
+- KDE (K 桌面环境), 407
+- 内核, 410
+- 原生 POSIX 线程库 (NPTL), 406
+- 安全, 198
+- 软件安装, 414
+- 软件包, 400–401, 410
+- 开始, 412–414
+- 支持, 403
+- 系统要求, 407
+- udev, 406
+- Web 应用程序, 803–828
+- XP 桌面环境, 407
+- Slacklang, 776
+- Slash.org 网站, 825–826
+- Slash Linux, 488–499
+- SLS Linux, 401–402
+- SMB (简单消息块) 协议, 730
+- SMB (Windows) 打印机, 702–704, 712
+- SMTP (邮件传输协议), 673
+- snfing, 219–220
+- SNAT (网络地址转换), 470
+- 软件, 472
+- 自由和开源软件 (FOSS), 102
+- GNU 公许可证 (GPL), 12
+- 软件奖金, 244
+- 软件安装
+- Debian GNU/Linux, 320
+- Gentoo, 388–389
+- Linux, 357
+- Linire, 417–419
+- Mandriva, 426
+- Slackware, 414
+- SUSE, 330–331, 336
+- Ubuntu, 453–456
+- Yellow Dog Linux, 378–389
+- 软件管理工具
+- 高级包工具 (APT) (Debian GNU/Linux), 301–302, 314
+- apt, 278
+- RPM 包管理器, 276, 778
+- task 工具, 320
+- yum, 278
+- 软件包
+- client, 677
+- Debian GNU/Linux, 300–316, 316
+- e-apt-get, 677
+- Gentoo, 389–390
+- check, 777
+- Linux, 344
+- o, 657
+- php-curl, 649
+- php-domxml, 650
+- php-gd, 650
+- php-idea, 650
+- php-mysql, 650
+- php-pear, 650
+- php-pgql, 650
+- php-snmp, 650
+- samba, 732
+- Slackware, 400–401
+- 电子表格表应用
+- Calc (OpenOffice), 546
+- Calc (StarOffice), 548
+- Excel (Microsoft), 552
+- KSpread, 548, 550
+- 访问日志, 206
+- SquirrelMail, 126, 688
+- ssh 命令, 210–241
+- sshc (安全套层) 工具, 209–213
+- SSL (安全套层) 加密, 688–690
+- Web 服务器, 667–661
+- Stallman, Richard M. (GNU 项目创始人), 12
+- 标准通用标记语言 (SGML), 571
+- StarOffice 办公套件, 545–546, 548–549
+- cryptography, 488
+- 后台进程
+- CUPS (通用 Unix 打印服务), 706–707
+- GNOME 桌面环境, 78
+- GNU 调试器, 808–809
+- KDE (桌面环境), 78
+- KNPIX, 350
+- shell, 30
+- shell, 310–313
+- Slackware, 412–414
+- startype, 79
+- starvation deck, 760
+- 静态库, 795–796
+- 打印机状态, 577, 709
+- cryptography, 488
+- Steinbruch, Burchard (SUSE Linux 创始人), 326
+- StoneX, 625
+- 强密码, 200
+- 数据库结构, 653
+- 结构化文档
+- DocBook DTD, 571–574
+- 标准通用标记语言 (SGML), 571
+- su 命令, 132–133
+- 替换 (shell 命令), 50
+- sudo 命令, 140–142
+- Sun Microsystems
+- OpenOffice, 549
+- StarOffice 办公套件, 545–546, 548–549
+- UNIX 系统, 12, 23
+- 超用户, 125
+- 支持
+- Debian GNU/Linux, 303–304
+- Gentoo, 385, 387
+- Linire, 419–420
+- man 页, 403
+- Mandriva, 430–431
+- Red Hat Linux, 23
+- Slackware, 403
+- SUSE, 332, 23
+- Ubuntu, 456–457
+- Yellow Dog Linux, 380
+- 支持的文件系统, 158–160
+- 通用 Unix 打印服务 (CUPS), 692
+- 配置, 337–338
+- 开发历史, 326–327
+- 下载, 333–334
+- DVD, 818
+- 特性, 325–327
+- GOME 桌面环境, 326, 335
+- 帮助, 590
+- 安装, 332–337
+- ISO 镜像, 818
+- KDE (桌面环境), 82, 326, 335
+- Open Source Labs
+- OpenOffice.org, 526
+- OpenSUSE, 315
+- 插件, 135
+- 性的, 315
+- 软件包, 330–331
+- rpm 工具, 315
+- 安全, 198
+- 软件安装, 330, 335
+- 软件包, 330, 335
+- 支持, 403
+- 更新, 331–332
+- Web 网站, 322, 827
+- YaST 更新, 331–332
+- YaST 工具, 315, 320
+- 文本编辑器, 315, 338
+- 文本模式界面 (TUIs), 770–776
+- 文本的邮件客户端, 509–601
+- 文本 Web 浏览器, 601–613
+- 邮件服务器, 588, 598
+- 邮件, 51,, 57
+- 文本提示符, 72
+- 终端模拟器, 31
+- 终端, 332
+- x, 331
+- 终端窗口, 331
+- 终止进程, 171
+- Terra Soft Solutions (Yellow Dog Linux), 363
+- 测试
+- KNPIX CD, 354
+- 打印机, 699
+- tetraves游戏, 625
+- TeX 文本处理器, 552–553, 555–569
+- 波浪线 ~ (目录), 65
+- TLS (传输安全层), 667
+- TMOUT 环境变量, 54, 57
+- /tmp 目录, 62
+- 令牌环网络, 179
+- 工具, 参见实用

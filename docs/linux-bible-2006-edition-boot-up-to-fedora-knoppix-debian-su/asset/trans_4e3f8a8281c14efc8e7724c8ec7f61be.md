@@ -1,0 +1,296 @@
+
+
+# 850 索引 L
+
+# L
+
+- CD 标签，528–529
+- LAMP (Linux, Apache, MySQL, PHP) 服务器
+  - Apache HTTPD, 648
+  - 配置, 665–666
+  - CoreMovie Photo Gallery (CPG), 659–663
+  - 特性, 647
+  - MySQL, 648–649
+  - 权限错误, 665–666
+  - PHP, 649–650
+  - 服务器错误, 665–666
+  - 设置, 650–653
+  - SSL/TLS, 667–671
+  - 故障排除, 663–666
+  - 用户目录, 658
+  - 虚拟主机, 654
+- 语言，89, 272
+- LaTeX 文档，565–569
+- 关于数字媒体的法律，505–508
+- 诉讼
+  - Linux, 21–22
+  - 美国电影制作协会 (MPAA), 508
+  - 美国录音行业协会 (RAAA), 508
+- Red Hat Linux 8, 222
+- Red Hat 源码，21–221
+- deconfig 命令，796–799
+- dd 命令，796–799
+- ld.so (动态链接器/加载器), 799
+- Ld (CMake 资源), 49
+- less 命令，38, 43
+- less (file)-重定向元字符，67
+- LGPL (较宽松的通用许可许可证),17
+- lib API, 780
+- lib_art API, 780
+- lib_exif API, 780
+- lib_ade API, 780
+- lib_65 API, 780
+- lib_ee128 API, 780
+- libjpeg API, 780
+- libmad API, 780
+- libng API, 780
+- libgg API, 780
+- libpng API, 781
+- 库
+  - ar 命令，797–798
+  - deconfig 命令，796, 799
+  - dd 命令，798–799
+  - nm 命令，796–797
+  - 共享
+    - 静态，795–796
+  - libcap API, 781
+  - libtiff API, 781
+- libungif API, 781
+- libusb API, 781
+- libvorbis API, 781
+- libwmf API, 781
+- libdbus API, 781
+- libbz2 API, 781
+- 许可证
+  - 伯克利软件分发许可证，18
+  - CD 内容，817
+  - DVD 内容，817
+  - GPL (GNU 通用许可证)
+    - 作者权，193
+    - 版权，193
+    - 指南，7
+  - 内核，12
+  - 出地 d.,12
+  - LGPL (较宽松的通用许可许可证)，17
+  - MIT 许可证，18
+  - Mozilla 库，17–18
+  - 开源，17–18
+- LILO (Linux 加载器)，266–270
+- Lindinds，415–416
+- Limes 游戏，625
+- links 文本 Web 浏览器，601, 612
+- Limodromo，174–175
+- Linscape
+  - apt-get 工具，419
+  - Audio Assistant，420
+  - 启动选项，422–423
+  - 业务合作伙伴，417
+  - Click-N Run Express 工具，418
+  - Click-N Run 工具，417–418
+  - DEBUG 包，419
+  - 开发历史，415–416
+  - dpkg 安装工具，419
+  - 特性，417
+  - 首次设置向导，423
+  - 论坛，420
+  - 硬空间，421
+  - 硬件要求，421
+  - 帮助，419–420
+  - 安装脚本，419
+  - 安装中，420–423
+  - KDE 环境，417
+  - Linscape Free:0, 416, 420
+  - Linscape Free: CNR 版，416
+  - 内存要求，421
+  - 调制解器，421
+  - 网卡，421
+  - 处理器速度，421
+  - RAM，421
+  - RPM 包，419
+  - 软件安装，417–418
+  - 软件包，417, 419
+  - 声卡，421
+  - 支持，419–420
+  - 系统要求，421
+  - 用户管理器，423
+  - 显卡，421
+  - 网站，827
+  - 虚拟主机，654
+- LUG (Linux 用户组)，18, 830
+- Mandriva，430–431
+- 项目，829
+- Red Hat 企业版 Linux (RHEL)，283–285
+- Slackware，401–403
+- Linux 网站，825–826
+- 支持公司和小组，428
+- Ubuntu，445–447, 456–457
+- 用户组，429–830
+- Linux 环境，380–381
+- 模块块，762–764
+- CPU 和内存管理，755–758
+- 特性，755–756
+- 进程间通信 (IPC)，671–762
+- 多进程设计，261
+- 抢占式多任务，759–761
+- 模型，756–757
+- Linux with mission，23
+- 开发历史，7–8, 14–15
+- 特性，15–16
+- 防火墙配置，459
+- 论坛，18
+- 硬件要求，26–27
+- 诉讼，21–22
+- 可移植性，15–16
+- 重启，83
+- 可扩展性，22
+- 关机，18
+- 系统要求，26–27
+- Mascot，25
+- X Window System，16
+- Linux Documentation Project，380, 826
+- Linux Forums 网站，826
+- Linux Game 网站，621
+- Linux Gamers' 网站，621
+- Linux Gurus 网站，474
+- Linux Help 网站，826
+- Linux Kernel Archives 网站，380
+- Linux Live Project，498
+- Linux LOADER (LLO)，266–270
+- Linux Meetup Groups 网站，229
+- Linux Online 网站，226, 830
+- Linux Standard Base，25
+- Linux Today 网站，826
+- Linux Toys (Nega and)，525
+- Linux Toys II (Negus)，493
+- Linux User Groups HOWTO (LUGS)，18, 830
+- Linux Tips 网站，380
+- Linux com 网站，826
+- Linux publishing.com 网站，621
+- Linux queries.com 网站，621
+- Linux Gazette 网站，830
+- Linux Insider，26
+- Linux SO.org 网站，827
+- Linux Links.com 网站，487
+- Linux Packages 网站，828
+- Linux Security 网站，199
+- Linux Tag (German Linux)，341
+- Linux, Apache, MySQL, PHP (LAMP) 服务器
+  - Apache HTTPD，648
+  - 配置，663–665
+  - Coppermine Photo Gallery (CPG)，659–663
+  - 特性，647
+  - MySQL，648–649
+  - 权限错误，665–666
+  - 服务器内部错误，665–666
+  - 设置，653–653
+  - SSL/TLS，667–669
+  - 故障排除，663–666
+  - 用户目录，654–658
+- Linux 命令行环境，768–769
+- Linux 社区
+  - Debian/GNU，303–304
+  - Debian Project，299–300
+  - Fedora Core，280, 283–285
+  - Fedora Project，280
+  - 论坛，18–19
+  - Gentoo，383, 385
+- 列表
+  - 目录内容，36–37
+  - 模块，153–154
+  - 分区，258
+  - 打印任务，576, 695
+  - 进程，38
+  - Shell 命令，383
+  - 打印机状态，709
+  - LiveCD 项目，500–501
+- LiveCDs
+  - Auditor Security Collection LiveCD，489
+  - 技术，483
+  - 选择，468
+  - 自定义，499–500
+  - Damn Stall Linux，495–496, 500
+  - DevilInLinux，499
+  - Dynoclic，404
+  - 特性，486
+  - Fedora Core，500
+  - 野火 Linux，499
+  - KNOPPFIX，498
+  - GeoNex，493
+  - Gento，500
+  - KNOPPFIX，341–342, 485–486–499
+  - KNOPPFIX 安全工具，490
+  - Linux Live Project，498
+  - MobiX，492
+  - 数量，485
+  - Red Hat 企业版 Linux (RHEL)，500
+  - Sentry Firewall，493
+  - System Rescue CD，489–490
+  - 故障排除，487
+  - X Window System，768
+- 登录
+  - 邮件服务器，683–684
+  - 消息，139, 205–208–209
+  - smbd，206
+  - sendmail，206
+  - 打印计时器，205
+  - syslog 服务，206–208
+  - tail 工具，684
+  - 查看，204
+  - vsftpd，206
+  - Xorg.log，139, 206
+- GNOME 桌面环境，281
+- GNOME (桌面环境)，78–79
+- GNOME 桌面环境，78–80
+- Shell，30–31
+- Loki Entertainment 网站，621
+- Loki Software 游戏，640–643
+- 管理，140
+- lpq 命令，577, 700
+- lpq 命令，576, 704, 708
+- lpr 命令，579–710
+- ls 命令，36–38
+- lsm 命令，153–154
+- LUG (Linux 用户组)，18, 830
+- lvm 文件系统 (Ubuntu)，443
+- Linux.Net 网站，155, 826–827
+- Lycons，245, 426
+- linux-based 浏览器，601
+- LaTeX 编辑器，567–568
+- 可加载模块，152–153
+- 加载媒体，154–155
+- 本地邮件代理 (MDAs)，674
+- 锁 (version)，800
+- 日志文件
+  - 启动，139, 205
+  - cron，205
+  - dmesg，206
+  - 邮件传输代理，683–684
+  - gdm.id.log，206
+- Mac-on-linux 软件，364, 379
+- Maelstrom 游戏，625
+- 麻将游戏，625
+- 邮件登录，140
+- MAIL 变量，56
+- 邮件服务器
+  - ClamAV 扫描器，675, 680–682
+  - 交付通知 (DSN)，678
+  - 域名系统 (DNS)，674
+  - IMAP (互联网访问协议)，674–675
+  - 进程间通信，674
+  - 日志文件，683–684
+  - 邮件交付代理 (MDA)，674–679
+  - 邮件交付选项，676–678
+  - 邮件主机，678
+  - 邮件传输代理 (MTA)，675–679
+  - 退出，675–679
+  - 如何工作，673–674
+  - 邮件用户代理 (MUA)，673–674
+  - POP3 (邮局协议)，673
+  - 简单邮件传输协议 (SMTP)
+  - 垃圾邮件过滤，675, 680–682
+  - SSL/TLS 加密，680
+  - 系统要求，676
+  - 故障排除，683–686
+  - 基于 Web 的邮件，688
+  - 邮箱箱，217–218
+

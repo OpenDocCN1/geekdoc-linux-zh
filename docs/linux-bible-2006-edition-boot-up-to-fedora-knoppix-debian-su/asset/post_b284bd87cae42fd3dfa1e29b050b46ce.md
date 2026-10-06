@@ -1,0 +1,381 @@
+
+# 846 Index H-I
+
+hard disk (continued)
+- partitions
+- adding, 255–257
+- assigning, 155
+- creating, 255–259–261
+- deleting, 255, 259
+- directory assignments, 261–262
+- editing, 256–259
+- listing, 258
+- mount points, 157–158
+- options, 255
+- removing, 259
+- resizing, 251
+- viewing, 156–157
+
+hard disk space
+- KNOPPP, 341
+- Linsphere, 421
+- Mandriva, 432
+- configuring, 149–150
+- drivers, 6
+- loadable modules, 142, 153–155
+- removable hardware, GNOME desktop environment, 150–151
+- KDE (K Desktop Environment), 151–152
+- hardware detection/Gentoo, 305
+- KNOPPP, 279, 344
+- kudzu, 278–279, 367
+- SUSE, 329
+- Ubuntu, 442
+- Yellow Dog Linux, 367
+
+hardware requirements
+- Debian/Linux, 304–305
+- Fedora, 249–250, 286
+- Gentoo, 386–392
+- KNOPPP, 349
+- Linsphere, 421
+- Linux, 26–27
+- Mandriva, 432–433
+- Slackware, 407
+- Yellow Dog Linux
+
+hash mark ($) (default prompt for shell), 30–31
+
+help
+- Debian/Linux, 304–305
+- Gentoo, 385, 387, 392
+- Google Web site, 826
+- Just Linux Web site, 380
+- Linsphere, 419–420
+- The Linux Documentation Project site, 380, 826
+- Linux Forums Web site, 826
+- Linux Help Web site, 826
+- Linux Journal Help Desk Web site, 380
+- Linux Kernel Archives site, 826
+- Linux Online Web site, 826
+- Linux Questions Web site, 826
+- Linux User Group HOWTO, 830
+- Linux Tips Web site, 380
+- man pages, 403
+- Mandriva, 430–431
+- shell commands, 39
+- Slackware, 403
+- SUSE, 332
+- Ubuntu, 456
+- Yellow Dog Linux
+
+Herit for Linux (Loki Software) game, 642
+- hierarchy of Linux file system, 61–62
+- HISTCD environment variable, 56
+- HISTFILE environment variable, 56
+- HISTSIZE environment variable, 56
+- history command, 47–48
+- history of shell commands, 42
+- Hoary Hedgehog (Ubuntu release), 442
+- home directory, 36–37, 65
+- /home HOME environment variable, 56
+- host name, 272
+- host names, 183–185
+- HOSTYPE environment variable, 56
+- HP Open Source Development Labs, 14
+- hnfs file system, 160
+- http://access_log log file, 205
+- http://error_log log file, 205
+
+- Iano games, 225
+- Ibibo Web site, 828
+
+IBM
+- Linux in torrent commercials, 3
+- Open Source Development Labs, 14
+- support of Linux, 828
+- Visual Age ID, 753
+- Web site resources, 828
+
+- id command, 35
+- id Software games, 621, 636–638
+- identifying directories, 65
+- IDEs (integrated development environments). See programming environments
+
+image galleries
+- Coppermine Photo Gallery (CPG), 659–663
+- Konquerer file manager (KDE), 94
+- images
+- SUSE, 330–331, 336
+- cropping, 581
+- Ubuntu, 453–456
+- Gtkam program, 538–539, 541–442
+- Yellow Dog Linux, 378–379
+- screen captures, 581–582
+- InstantSSL certificate authority, 667
+- IMAP (Internet Message Access Protocol), 674–675
+- integrated development environments (IDEs). See
+- 18|1, API, 780
+- programming environments
+
+- IMP, 688
+- Integrated Services Digital Network (ISDN), 179
+- Imp (OpenOffice), 546
+- Intel, 14
+- Imp (StarOffice), 548
+- Intel video cards, 623
+- INN, 19
+
+Internet
+- INSER (Inside Security Rescue Toolkit), 490–491, 820
+- connections
+- installing command, 155
+- broadband Internet service, 175–177
+- installers
+- dial-up service, 174, 187
+- Anaconda, 276–278
+- Ethernet, 180–188
+- Debian/Linux, 306–307, 309–311
+- host names, 183–185
+- Ubuntu, 344–343
+- Point-to-Point Protocol (PPP), 187–194
+- Install, 326–330
+- e-mail
+- Apache HTTPD Web server, 650
+- ClamVirus scanner, 675, 680–682
+- ClamVirus scanner, 680–682
+- Domain Name System (DNS), 674
+- Courier mail transfer, 678–679
+- IMAP (Internet Message Access Protocol), 674–675
+- CUPS (Common Unix Printing), 693
+- inter-process communications, 674, 371–762
+- Ex mail transfer, 678–679
+- Maildrop mail agent, 679–690
+- Mail Delivery Agent (MDA), 674
+- mail readers, 600–601
+- MySQL, 654
+- NFS client and server, 718
+- PHP module, 651–652
+- multihoming, 217–218
+- printers, 696
+- POP3 (Post Office Protocol, version 3), 674
+- same packages, 732
+- Procmail e-filtering tool, 217–218
+- SpamAssassin spam-filtering program, 680–682
+- Simple Mail Transfer Protocol (SMTP), 673
+- SpamAssassin spam-filtering program, 675, 680
+- SpamAssassin spam-filtering program, 680, 682
+- SSL/TLS encryption, 688–690
+- Web-based, 688
+- KNOPX, 354
+- Linspire, 420–430
+- configuring e-mail accounts, 589
+- Evolution, 595–598
+- Mandriva, 438–443
+- Slackware, 405–409, 411–412
+- features, 586–587, 589–590
+- SUSE/OpenLinux, 332–337
+- KMail, 588
+- Ubuntu, 447–450
+- Mozilla Mail, 588–595
+- upgrade options, 250
+- test-based, 691
+- Windows/Linux dual-boot systems, 251–252
+- Thunderbird, 588–599
+- Yellow Dog Linux, 367–377
+- transitioning to Windows, 577–588
+- Internet Explorer (Microsoft), 20
+- Debian/Linux, 320
+- Internet Message Access Protocol (IMAP), 674–675
+- interprocess communication (IPC), 674, 371–762
+- intrusion attacks, 216–217, 224–227
+- IP addresses, 172–272
+- IP Masquerading, 170–470
+- ipchains firewall, 464
+- ipsec package, 577
+- ipv6 firewall, 264
+- IPP (Internet Routing Protocol), 692
+- IPsec certificate authority, 234
+- iptables firewall
+- checking, 460–470
+- dynamic Network Address Translation (NAT), 237
+- IP Masquerading, 470–471
+- modules, 471–472
+- port forwarding, 473
+- rules, 464–468
+- saving, 468
+- scripts, 473
+- Source Network Address Translation (NAT), 470
+- transparent proxy, 372–473
+- Web site resources, 473–474
+- isDN (Initiated Services Digital Network), 179
+- ISO images
+- distros (DVD), 817
+- downloading, 247
+- Gentoo, 819
+- inside Security Rescue Toolkit (INSERT), 820
+- Slackware, 819
+- software repositories, 247
+- SUSE, 818
+- System Rescue CD, 820
+- Ubuntu, 819
+- is09660 file system, 159
+- Kbounce game, 626
+- KChart application, 548, 550
+- KDE (K Desktop Environment)
+- application launchers, 99–100
+- background, 98
+- booting, 78
+- colors, 98
+- configuring, 97–99
+- Control Center, 97–98
+- CUPS (Common Unix Printing Service), 693
+- desktop icon, 833
+- desktop items, 84
+- display options, 97–99
+- features, 77
+- fonts, 98
+- games, 626–627
+- dm graphical display manager, 78–79
+- kedit, 76
+- keystrokes, 85–86
+- mid MIDI player, 521
+- KNOPPP, 82, 333, 355–356
+- KOffice package, 548, 550
+- nonquer file manager, 84, 85–96
+- KPaint utility, 582
+- KS CD player, 512
+- Linscore, 417
+- login, 78–79
+- look and feel, 82–83
+- mouse actions, 84–85
+- navigating, 84–86
+- panel, 83, 99
+- Qt 3 graphical toolkit, 78
+- removable hardware, 151–152
+- Rhythmbox CD player, 516–517
+- screen-saver, 98
+- Slackware, 470
+- starting, 78
+- SUSE Linux, 82, 326, 335–356
+- text prompt, 81
+- window manager, 95–96
+- Yellow Dog Linux, 365–366
+- dm graphical display manager (KDE), 78–79
+- kedit text editor, 711, 754, 786
+- Kenolaba game, 626
+- jed text editor, 71, 786
+- jobs command, 60
+- joe text editor, 71, 554, 786
+- joev text editor, 786
+- Joy, Bill of the Caller (c), 33
+- JPEG library, 780
+- kafs file system, 398
+- Kasteroids game, 626
+- kate text editor, 701
+- atomic game, 627
+- backottom game, 626
+- battlesh game, 626
+- blackbox game, 626
+![](img/a2d95d7eab32ca5b892b8af08aa70_879_0.png)
+
+kernel
+- defined, 6
+- Gentoo, 395
+- GNU Public License (GPL), 12
+- Linux Kernel Web site, 826
+- Slackware, 410
+- supported file systems, 158–160
+- tainting the kernel, 623
+- Foul Eggs, 626
+- killing processes, 171
+- Klumping Cube game, 627
+- Klickary game, 628
+- klog utility, 139
+- Klotski game, 625
+- mahohn game, 626
+- KMail e-mail client, 588
+- knd M3 player, 521
+- kmines game, 627
+- Koper, Klauss (creator of KNOPPP), 341, 347
+- KNOPPX
+- additional tools, 347–348
+- automatic desktop startup, 344
+- boot options, 351–353
+- boot problems, 350–354
+- booting, 350
+- challenges with using, 346
+- cheat codes, 350–351
+- configuration tools, 345
+- creating your own version, 342, 345–347
+- custom, 345–347
+- customizing, 353
+- Debian/Linux, 344
+- development history, 347
+- DVD, 498
+- features, 341–345
+- games, 343
+- GamesKNOPPP, 498
+- hard disk space, 343
+- hardware detection, 279
+- hardware requirements, 349
+- INSERT (Inside Security Rescue Toolkit), 490–491
+- installing, 343
+- Internet tools, 343
+- KDE Environment, 98, 342, 335–356
+- KNOPPX Security Tools Distribution, 490
+- Kpackage, 344, 357
+- Light version, 342
+- LiveCDs, 341–342, 485–486, 499–500
+- Maxi version, 342
+- memory requirements, 346
+- imedia software, 343
+- network connections, 356–357
+- OpenOffice.org, 343
+- persistent desktop, 345
+- persistent home directory, 359–360
+- programming tools, 344
+- RAM, 346, 354
+- leleases, 341–342
+- starting, 361–362
+- save setup, 345, 360–361
+- save filing, 357–358
+- software installation, 357
+- software packages, 344
+- swap space, 345
+- system requirements, 349
+- testing the CD, 354
+- Web site, 628
+- Windows files, 345
+- writing to hard disk, 358–359
+- KNOPPP STD, 342
+- KnoppixMAME, 342
+- KnoppMyth, 494
+- KOFice package, 548, 550
+- Kolf game, 628
+- Color Lines game, 627
+- Knoppuer file manager (DE), 84), 86–98
+- Knoppuer Web browser, 601
+- Knoppquent game, 627
+- Korn, David (creator of the k shell), 34
+- Kern shell (ksh), 29, 34
+- Kpackage utility (KNOPPP), 344, 357
+- Kpaint utility, 582
+- Koper game, 627
+- Kpresent application, 548, 550
+- Krever game, 626
+- Ks CD player, 521
+- ksh (shell), 29, 34
+- Ksirtet game, 626
+- Kanakleice game, 626
+- Ksnapshot program, 581
+- Ksobkan game, 627
+- Kspaceduel game, 626
+- Kread spreadsheet application, 548, 550
+- term terminal emulator, 32
+- K3b - CD Creator, 823–824
+- Ktron game, 626
+- Kubuntu project, 445
+- Kwin4 game, 626
+- K word processor, 548, 550
+- Kwrite text editor, 554
+- Kylis IDE (Borland), 753

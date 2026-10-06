@@ -1,0 +1,332 @@
+
+
+# 846 索引 H-I
+
+硬盘（续）
+- 分区
+- 添加, 255–257
+- 分配, 155
+- 创建, 255–259–261
+- 删除, 255, 259
+- 目录分配, 261–262
+- 编辑, 256–259
+- 列出, 258
+- 挂载点, 157–158
+- 选项, 255
+- 移除, 259
+- 调整大小, 251
+- 查看, 156–157
+
+硬盘空间
+- KNOPPP, 341
+- Linsphere, 421
+- Mandriva, 432
+- 配置, 149–150
+- 驱动程序, 6
+- 可加载模块, 142, 153–155
+- 可移动式硬件, GNOME 桌面环境, 150–151
+- KDE (K 桌面环境), 151–152
+- 硬件检测/Gentoo, 305
+- KNOPPP, 279, 344
+- kudzu, 278–279, 367
+- SUSE, 329
+- Ubuntu, 442
+- Yellow Dog Linux, 367
+
+硬件要求
+- Debian/Linux, 304–305
+- Fedora, 249–250, 286
+- Gentoo, 386–392
+- KNOPPP, 349
+- Linsphere, 421
+- Linux, 26–27
+- Mandriva, 432–433
+- Slackware, 407
+- Yellow Dog Linux
+
+哈希标记 ($) (shell 默认提示符), 30–31
+
+帮助
+- Debian/Linux, 304–305
+- Gentoo, 385, 387, 392
+- Google 网站, 826
+- Just Linux 网站, 380
+- Linsphere, 419–420
+- The Linux Documentation Project 网站, 380, 826
+- Linux 论坛网站, 826
+- Linux Help 网站, 826
+- Linux Journal Help Desk 网站, 380
+- Linux 内内核存档网站, 826
+- Linux Online 网站, 826
+- Linux Questions 网站, 826
+- Linux User Group HOWTO, 830
+- Linux Tips 网站, 380
+- man 手页, 403
+- Mandriva, 430–431
+- shell 命令, 39
+- Slackware, 403
+- SUSE, 332
+- Ubuntu, 456
+- Yellow Dog Linux
+
+Herit for Linux (Loki Software) 游戏, 642
+- Linux 文件系统层次结构, 61–62
+- HISTCD 环境变量, 56
+- HISTFILE 环境变量, 56
+- HISTSIZE 环境变量, 56
+- history 命令, 47–48
+- shell 命令历史, 42
+- Hoary Hedgehog (Ubuntu 版本), 442
+- 家目录, 36–37, 65
+- /home HOME 环境变量, 56
+- 主机名, 272
+- 主机名列表, 183–185
+- HOSTYPE 环境变量, 56
+- HP 开源开发实验室, 14
+- hnfs 文件系统, 160
+- http://access_log 日志, 205
+- http://error_log 日志, 205
+
+- Iano 游戏, 225
+- Ibibo 网站, 828
+
+IBM
+- torrent 广告中的 Linux, 3
+- 开源开发实验室, 14
+- Linux 的支持, 828
+- Visual Age ID, 753
+- 网站资源, 828
+
+- id 命令, 35
+- id Software 游戏, 621, 636–638
+- 识别目录, 65
+- IDEs (集成开发环境)。另见编程环境
+
+图片库
+- Coppermine 照片库 (CPG), 659–663
+- Konquerer 文件管理器 (KDE), 94
+- 图像
+- SUSE, 330–331, 336
+- 裁剪, 581
+- Ubuntu, 453–456
+- Gtkam 程序, 538–539, 541–442
+- Yellow Dog Linux, 378–379
+- 屏幕截图, 581–582
+- InstantSSL 证书机构, 667
+- IMAP (Internet消息访问协议), 674–675
+- 集成开发环境 (IDEs)。另见 181, API, 780
+- 编程环境
+- IMP, 688
+- 集成数字网络 (ISDN), 179
+- Imp (OpenOffice), 546
+- Intel, 14
+- Imp (StarOffice), 548
+- Intel 显卡, 623
+- INN, 19
+- Internet
+- INSER (内部安全救援工具), 490–491, 820
+- 连接
+- 安装命令, 155
+- 宽带服务, 175–177
+- 安装程序
+- 拨号服务, 174, 187
+- Anaconda, 276–278
+- 以太网, 180–188
+- Debian/Linux, 306–307, 309–311
+- 主机名, 183–185
+- Ubuntu, 344–343
+- Point-to-Point Protocol (PPP), 187–194
+- 安装, 326–330
+- 电子邮件
+- Apache HTTPD 服务器, 650
+- ClamVirus 扫描器, 675, 680–682
+- ClamVirus 扫描器, 680–682
+- 域名系统 (DNS), 674
+- Courier 邮件传输, 678–679
+- IMAP (Internet消息访问协议), 674–675
+- CUPS (通用 Unix 打印), 693
+- 进程间通信, 674, 371–762
+- Ex 邮件传输, 678–679
+- Maildrop 代理, 679–690
+- Mail Delivery Agent (MDA), 674
+- 邮件阅读器, 600–601
+- MySQL, 654
+- NFS 客户端和服务器, 718
+- PHP 模块, 651–652
+- 多主机, 217–218
+- 打印机, 696
+- POP3 (邮局协议), 版本 3, 674
+- 相同包, 732
+- Procmail 过滤工具, 217–218
+- SpamAssassin 垃圾邮件过滤程序, 680–682
+- SpamAssassin 垃圾邮件过滤程序, 680–682
+- SpamAssassin 垃圾邮件过滤程序, 680–682
+- SpamAssassin 垃圾邮件过滤程序, 680–682
+- 675, 680
+- Simple Mail Transfer Protocol (SMTP), 673
+- SSL/TLS 加密, 688–690
+- Web 基础, 688
+- KNOPX, 354
+- Linspire, 420–430
+- Evolution, 595–598
+- Mandriva, 438–443
+- Slackware, 405–409, 411–412
+- SUSE/OpenLinux, 332–337
+- KMail, 588
+- Ubuntu, 447–450
+- Mozilla Mail, 588–595
+- 升级选项, 250
+- 测试的, 691
+- Windows/Linux 双引导系统, 251–252
+- Thunderbird, 588–599
+- Yellow Dog Linux, 367–377
+- 迁移到 Windows, 577–588
+- Internet Explorer (Microsoft), 20
+- Debian/Linux, 320
+- IMAP (消息访问协议), 674–675
+- 进程间通信 (IPC), 674, 371–762
+- 入侵攻击, 216–217, 224–227
+- IP 地址, 172–272
+- IP 伪装, 170–470
+- ipchains 防火墙, 464
+- ipsec 包, 577
+- ipv6 防火墙, 264
+- IPP (Internet路由协议), 692
+- IPsec 证书机构, 234
+- iptables 防火墙
+- 检查, 460–470
+- 动态网络地址转换 (NAT), 237
+- IP 伪装, 470–471
+- 模块, 471–472
+- 端口转发, 473
+- 规则, 464–468
+- 保存, 468
+- 脚本, 473
+- 源网络地址转换 (NAT), 470
+- 透明代理, 372–473
+- 网站资源, 473–474
+- isDN (启动式服务数字网络), 179
+- ISO 镜像
+- 发行版 (DVD), 817
+- 下载, 247
+- Gentoo, 819
+- 内部安全救援工具 (INSERT), 820
+- Slackware, 819
+- 软件仓库, 247
+- SUSE, 818
+- 系统救援 CD, 820
+- Ubuntu, 819
+- is09660 文件系统, 159
+- Kbounce 游戏, 626
+- KChart 程序, 548, 550
+- KDE (K 桌面环境)
+- 启动器, 99–100
+- 背景, 98
+- 启动, 78
+- 颜色, 98
+- 配置, 97–99
+- 控制中心, 97–98
+- CUPS (通用 Unix 打印服务), 693
+- 桌面图标, 833
+- 桌面项目, 84
+- 显示选项, 97–99
+- 特性, 77
+- 字体, 98
+- 游戏, 626–627
+- dm 图形显示管理器, 78–79
+- kedit, 76
+- 击键, 85–86
+- MIDI 播放器, 521
+- KNOPPP, 82, 333, 355–356
+- KOffice 包, 548, 550
+- nonquer 文件管理器, 84, 85–96
+- KPaint 工具, 582
+- KS 播放器, 512
+- 登录, 78–79
+- 外观, 82–83
+- 鼠标操作, 84–85
+- 导航, 84–86
+- 面板, 83, 99
+- Qt 图形工具包, 78
+- 可移动式硬件, 151–152
+- Rhythmbox 播放器, 516–517
+- 屏幕保护程序, 98
+- Slackware, 470
+- SUSE Linux, 82, 326, 335–356
+- 文本提示符
+- kafs 系统, 398
+- Kasteroids 游戏, 626
+- kate 编辑器, 701
+- atomic 游戏, 627
+- backottom 游戏, 626
+- battlesh 游戏, 626
+- blackbox 游戏, 626
+-内核
+- 定义, 6
+- Gentoo, 395
+- GNU 公许可证 (GPL), 12
+- Linux 内核网站, 826
+- Slackware, 410
+- 支持的系统, 158–160
+- 污染内核, 623
+- 杀死进程, 171
+- Klumping 游戏, 627
+- Klickary 游戏, 628
+- Kotski 游戏, 625
+- Kpackage 工具, 344, 357
+- Light 版本, 342
+- LiveCDs, 341–342, 485–486, 499–500
+- Maxi 版本, 342
+- 内存要求, 346
+- imedia 软件, 343
+- 网络连接, 356–357
+- OpenOffice.org, 343
+- 持久桌面, 345
+- 持久家目录, 359–360
+- 编程工具, 344
+- RAM, 346, 354
+- 发布, 341–342
+- 启动, 361–362
+- 保存设置, 345, 360–361
+- 保存文件, 357–358
+- 软件安装, 357
+- 软件包, 344
+- 交换空间, 345
+- 系统要求, 349
+- 测试 CD, 354
+- 网站, 628
+- Windows 文件, 345
+- 写入硬盘, 358–359
+- KNOPPP STD, 342
+- KnoppixMAME, 342
+- KnoppMyth, 494
+- KOFice 包, 548, 550
+- Kolf 游戏, 628
+- Color Lines 游戏, 627
+- Knoppuer 文件管理器 (DE), 84), 86–98
+- Knoppuer 浏览器, 601
+- Knoppquent 游戏, 627
+- Korn, David (k shell 创建者), 34
+- Kern shell (ksh), 29, 34
+- Kpackage 工具 (KNOPPP), 344, 357
+- Kpaint 工具, 582
+- Koper 游戏, 627
+- Kpresent 程序, 548, 550
+- Krever 游戏, 626
+- KS 播放器, 521
+- ksh (shell), 29, 34
+- Ksirtet 游戏, 626
+- Kanakleice 游戏, 626
+- Ksnapshot 程序, 581
+- Ksobkan 游戏, 627
+- Kspaceduel 游戏, 626
+- Kread 电子表格程序, 548, 550
+- term 终端模拟器, 32
+- K3b - CD 刻录, 823–824
+- Ktron 游戏, 626
+- Kubuntu 项目, 445
+- Kwin4 游戏, 626
+- K 字处理器, 548, 550
+- kwrite 编辑器, 554
+- Kylis IDE (Borland), 753
+
