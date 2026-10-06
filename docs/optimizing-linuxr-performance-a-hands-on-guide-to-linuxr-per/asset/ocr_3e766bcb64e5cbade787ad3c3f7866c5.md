@@ -1,0 +1,75 @@
+# # Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
++   - option
+  - slabtop tool
+- active
+    - vs inactive memory 2nd 3rd
+- Active option
+  - /proc/meminfo file
+- active option
+  - vmstat, top (v2.x and 3.x) tool
+- application optimization
+  - CPU usage 2nd
+  - disk I/O usage
+  - loaders
+  - network I/O usage
+  - memory
+  - startup time
+- application performance investigation
+  - analyzing tools 2nd 3rd 4th 5th 6th 7th
+  - configuring applications 2nd
+  - identifying problems 2nd
+  - installing/configuring performance tools
+  - latency problems 2nd
+  - analyzing time use 2nd
+  - analyzing tool results 2nd 3rd 4th
+  - configuring applications 2nd
+  - identifying problems 2nd
+  - installing/configuring tools
+  - running applications and tools 2nd 3rd 4th 5th 6th 7th 8th 9th 10th
+  - setting baseline/goals 2nd 3rd 4th
+  - solutions 2nd 3rd
+  - tracing function calls 2nd 3rd 4th 5th 6th
+- running applications and performance tools 2nd 3rd
+  - setting baseline/goals 2nd 3rd
+- solutions
+  - accessing image tiles 2nd
+  - accessing image tiles, with local arrays 2nd 3rd 4th
+  - increasing image cache 2nd
+  - searching Web for functions 2nd
+- verifying
+  - system-wide problems 2nd 3rd 4th 5th 6th
+  - configuring application 2nd
+  - configuring/installing performance tools
+  - running applications/tools 2nd 3rd 4th 5th 6th 7th 8th 9th
+  - simulating solution 2nd 3rd 4th 5th 6th
+  - submitting bug report 2nd 3rd
+- testing solution
+- application tests
+  - automating 2nd
+- applications
+  - CPU cache
+  - kernel mode
+  - subdividing time use
+- time use
+  - gprof command 2nd 3rd 4th 5th 6th 7th 8th 9th
+  - oprofile (ii) tool 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+  - time use versus library use 2nd
+- ltrace tool 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th
+- use of cache
+  - cachegrind 2nd
+  - oprofile tool
+  - use of memory
+  - /proc/PID tool 2nd 3rd 4th 5th 6th 7th 8th 9th
+  - kcachegrind 2nd 3rd 4th 5th 6th 7th 8th 9th
+  - memtool 2nd 3rd 4th 5th 6th
+  - oprofile (iii) tool 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+  - ps tool 2nd 3rd 4th 5th 6th
+  - tools supported for Java, Mono, Python, and Perl 2nd
+- valgrind tool 2nd 3rd 4th 5th 6th 7th
+- use of shared memory
+  - perf tool 2nd 3rd 4th 5th 6th
+- user mode
+- automation of tasks

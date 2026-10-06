@@ -1,0 +1,3 @@
+# # 11.5. Install and Configure Performance Tools
+
+The next step in the hunt is to install the performance tools we need to investigate the problem. As we did in the performance hunt for the GIMP, we will install both profile and ltrace. In this case, we will also download and install gdb (if it is not already installed). gdb enables us to look at some of the dynamic aspects of the running application.

@@ -1,0 +1,399 @@
+
+# Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- r/s statistic
+- iostat
+- disk I/O subsystem usage
+- RAM
+- rawckstatistic
+- sar tool
+- network I/O
+- rd_dev/s statistic
+- sar tool
+- disk I/O subsystem usage
+- read sectors statistic
+- vmstat
+- disk I/O subsystem usage 2nd
+- reads statistic
+- vmstat
+- disk I/O subsystem usage
+- reads merged statistic
+- vmstat
+- disk I/O subsystem usage
+- reads ms statistic
+- vmstat
+- disk I/O subsystem usage
+- reads statistic
+- vmstat
+- disk I/O subsystem usage
+- reads total statistic
+- vmstat
+- disk I/O subsystem usage
+- Red Hat Enterprise Linux (EL3)
+- installing
+- profile tool 2nd
+- performance tools included 2nd
+- requested writes statistic
+- vmstat
+- disk I/O subsystem usage
+- RES option, top (v. 2.x and 3.x) tool
+- rkB/s statistic
+- iostat
+- disk I/O subsystem usage
+- rqm/m statistic
+- iostat
+- disk I/O subsystem usage
+- rsec/s statistic
+- iostat
+- disk I/O subsystem usage
+- rss option
+- ps tool
+- application use of memory
+- runnable processes
+- queue statistics 2nd
+- runtime mode, top (v. 2.x) tool 2nd 3rd
+- runtime mode, top (v. 2.x and 3.x) tool 2nd
+- runtime mode, top (v. 3.x) tool 2nd 3rd 4th
+- RX packets statistic
+- ipconfig tool
+- network I/O
+- rxbyt/statistic
+- sar tool
+- network I/O
+- rxcmp/statistic
+- sar tool
+- network I/O
+- rxdrop/statistic
+- sar tool
+- network I/O
+- rxerr/statistic
+- sar tool
+- network I/O
+- rxfifo/statistic
+- sar tool
+- network I/O
+- rxfram/statistic sar tool
+
+# Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- S option
+- trace tool
+- slabtop tool
+- sample mode, vmstat II tool
+- memory performance
+- sample mode, vmstat tool 2nd
+- sar (II) tool
+- memory performance
+  - example 2nd
+  - options 2nd
+  - statistics 2nd
+- sar tool
+  - CPU-related options 2nd 3rd 4th
+  - CPU-related statistics 2nd
+  - disk I/O subsystem usage
+    - example 2nd
+    - options 2nd
+    - statistics 2nd
+    - example 2nd 3rd 4th S
+- network I/O
+  - example 2nd
+  - options 2nd
+  - statistics 2nd
+- script command
+  - example 2nd
+  - options 2nd
+  - statistics 2nd
+- script tool
+  - source location
+- seconds option
+  - trace tool
+  - Secure Shell (SSH) service
+- Serial Line Internet Protocol (SLIP)
+- Shared option
+  - free tool
+  - procinfo II tool
+- Short option, (top, v. 2nd and 3.x) tool
+- si option
+  - vmstat II
+- SIZE statistic
+  - lofs (Open Files) tool
+  - disk I/O subsystem usage
+- Slab option
+  - /proc/meminfo file
+- slabs, memory 2nd 3rd 4th S
+- slabtop tool
+  - memory performance
+    - example 2nd
+    - options 2nd
+    - source location
+- SLIP (Serial Line Internet Protocol)
+- so option
+  - vmstat II tool
+- software
+  - performance investigation
+  - SSH (Secure Shell) service
+- startup time of applications
+- static languages
+  - versus dynamic languages 2nd
+- trace tool
+  - disk I/O subsystem usage
+    - example 2nd
+    - options 2nd
+    - source location
+    - statistics 2nd
+- system-wide/configuring/installing tool
+    - running applications/tools 2nd 3rd 4th
+    - simulating solution 2nd 3rd 4th S
+- SUSE 9 (S9.1) distribution
+- installing
+- * tool
+
+# Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- T option
+- top (v. 2.0.x) tool
+- target for system performance 2nd
+- TCP (Transport Control Protocol)
+- network I/O
+- tpsckstatistic
+- sar tool
+- network I/O
+- tee tool
+  - example 2nd
+  - options 2nd
+  - tee tool
+  - source location
+- thrashing
+  - time command
+  - example 2nd 3rd 4th
+  - options 2nd 3rd
+  - statistics 2nd
+- time option
+- ps command
+- time tool
+- application use of time
+- time use
+- applications
+- oprofill command 2nd 3rd 4th 5th 6th 7th 8th 9th
+- oprofill (II) tool 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- libraries versus 2nd
+- trace 2nd 3rd 4th 5th 6th 7th 8th 9th 10th
+- Linux kernel versus users
+- subdividing application use
+- time use performance tools
+- time command
+  - example 2nd 3rd 4th
+  - options 2nd 3rd
+  - statistics 2nd
+- top (v. 0.x) tool
+- command-line mode
+- command-line options
+- CPU-related options 2nd
+- example 2nd 3rd 4th
+- runtime mode 2nd 3rd
+- sorting/display options
+- system-wide statistics 2nd
+- top (v. 2.x and 3.x)
+- memory performance
+- top (v. 2.x and 3.x) tool
+- memory performance
+- example 2nd 3rd
+- statistics 2nd
+- runtime mode 2nd
+- top (v. 2.x, 3.x) tool
+- command-line mode
+- command-line options
+- CPU-related options
+- example 2nd 3rd
+- runtime mode
+- runtime options 2nd 3rd
+- system-wide options
+- top tool
+- source location
+- system-wide slowdown 2nd
+- total option
+- free tool
+- procinfo II tool
+- total reads statistic
+- vmstat tool
+- disk I/O subsystem usage
+- total swap option
+- vmstat II tool
+- total, used free option, top (v. 2.x and 3.x) tool
+- total options
+- free tool
+
+# Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- UDP (User Datagram Protocol)
+- psockstatistic
+- sar tool
+  - network I/O
+- us option
+  - vmstat 2nd
+- usecs/call option
+  - trace tool
+- Used option
+  - free tool
+- used swap option
+  - vmstat II tool
+- Usedop
+  - protoinfo tool
+- User Datagram Protocol (UDP)
+  - network I/O
+- user mode
+  - applications
+- user spaces
+- CPU usage
+- USER statistic
+- lsf (List Open Files tool)
+  - disk I/O subsystem usage
+- User time option
+  - time command
+- users/call option
+  - trace tool
+- utility performance
+  - bash shell
+  - example 2nd 3rd
+  - options 2nd 3rd
+- GNU compiler collection
+  - example 2nd 4th
+  - options 2nd 3rd
+- GNU debugger
+  - example 2nd 4th
+  - options 2nd 3rd
+- gnumeric
+  - example 2nd 4th
+- gnumeric spreadsheet
+  - example 2nd 3rd
+- ld command
+  - example 2nd
+  - options 2nd
+- ltrace command
+- objum command
+  - example 2nd
+  - options 2nd
+- script command
+  - example 2nd 3rd
+  - options 2nd 3rd
+- tee command
+  - example 2nd
+  - options 2nd
+- watch command 2nd
+  - options 2nd 3rd
+
+# Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- v option
+- slabtop tool
+- valgrind tool
+- application use of memory
+  - example 2nd 3rd 4th 5th 6th
+  - options 2nd 3rd
+- source location
+- vsw (voluntary context switches) tool
+- VIRT option, top (v. 2.x and 3.x) tool
+- virtual memory
+- Virtual Memory Statistics. [See vmstat tool]
+- VmData statistic
+  - /proc/PID tool
+  - processes: status file
+- Vatic
+  - /proc/PID tool
+  - processes: status file
+- Vmlck statistic
+  - /proc/PID tool
+  - processes: status file
+- Vmrss statistic
+  - /proc/PID tool
+  - processes: status file
+- vmsta tool
+- source location
+- vmstat II tool
+- average mode
+- memory performance
+- memory performance 2nd
+- command-line options
+  - example 2nd 3rd 4th 5th
+- output statistics 2nd
+- sample mode
+- memory performance
+- vmstat tool
+- average mode 2nd 3rd
+- command-line options 2nd
+- CPU-specific statistics 2nd 3rd 4th 5th 6th 7th
+- disk I/O subsystem usage
+  - example 2nd 3rd 4th
+  - options 2nd
+  - statistics 2nd 3rd 4th 5th 6th 7th
+- sample mode 2nd 3rd
+- system-wide slowdown 2nd 3rd
+- Vmstk statistic
+  - /proc/PID tool
+  - processes: status file
+- Voluntary context switches option
+- time command
+- vs option
+- ps tool
+- application use of memory
+
+# Index
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- w/s statistic
+- iostat tool
+  - disk I/O subsystem usage
+- wa option
+  - vmstat tool 2nd
+- wa statistic
+- vmstat tool
+  - disk I/O subsystem usage
+- watch command
+  - automating/executing long commands
+  - options 2nd 3rd 4th
+- Web searches
+- source for performance investigation
+- while condition option
+- bk/s statistic
+- iostat tool
+  - disk I/O subsystem usage
+- wr_sec/s statistic
+- sar tool
+  - disk I/O subsystem usage
+- Writeback option
+  - /proc/meminfo file
+- writes statistic
+- mstat tool
+  - disk I/O subsystem usage 2nd
+- writes: merged statistic
+- mstat tool
+  - disk I/O subsystem usage
+- writes: ms statistic
+- mstat tool
+  - disk I/O subsystem usage
+- writes: sectors statistic
+- mstat tool
+  - disk I/O subsystem usage
+- writes: total statistic
+- mstat tool
+  - disk I/O subsystem usage
+- written sectors statistic
+- mstat tool
+  - disk I/O subsystem usage
+- wrqm/s statistic
+- iostat tool
+  - disk I/O subsystem usage
+- wsec/s statistic
+- iostat tool
+  - disk I/O subsystem usage
