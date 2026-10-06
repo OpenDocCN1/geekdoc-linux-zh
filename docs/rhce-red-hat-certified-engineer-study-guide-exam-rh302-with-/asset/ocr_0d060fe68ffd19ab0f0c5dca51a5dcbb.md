@@ -1,0 +1,1 @@
+Copyright ©2000 SYBEX, Inc., Alameda, CA www.sysex.com
