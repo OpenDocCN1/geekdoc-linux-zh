@@ -1,0 +1,55 @@
+# Part III Advanced Shell Scripting
+
+it eventually iterates down. Many advanced mathematical algorithms use recursion to reduce a complex equation one level repeatedly, until they get to the level defined by the base value.
+
+The classic example of a recursive algorithm is calculating factorials. A factorial of a number is the value of the preceding numbers multiplied by the number. Thus, to find the factorial of 5, you'd perform the equation:
+
+```
+5! = 1 * 2 * 3 * 4 * 5 = 120
+```
+
+Using recursion, the equation is reduced down to the:
+
+```
+x! = x * (x-1)!
+```
+
+or in English, the factorial of x is equal to x times the factorial of x-1. This can be expressed in a simple recursive script:
+
+```
+function factorial {
+  if [ $1 -eq 1 ]
+  then
+    echo 1
+  else
+    local temp=$[$1 - 1]
+    local result=`factorial $temp`
+    echo $[$result * $1]
+  fi
+}
+```
+
+The factorial function uses itself to calculate the value for the factorial:
+
+```
+cat test13
+#!/bin/bash
+# using recursion
+
+function factorial {
+  if [ $1 -eq 1 ]
+  then
+    echo 1
+  else
+    local temp=$[$1 - 1]
+    local result=`factorial $temp`
+    echo $[$result * $1]
+  fi
+}
+
+read -p "Enter value: " value
+result=`factorial. $value`
+echo "The factorial of $value is: $result"
+```
+
+378

@@ -1,0 +1,230 @@
+
+# Index
+
+- associative array variables
+  - gawk, 510–512
+  - sh93 shell, 595–596
+- asterisk (*)
+  - scale variable, 220
+  - in shell scripts, 221–223
+  - bash shell, 59–121
+- bashishs, 549
+- .bashrc, defining functions in, 382–383
+- Bourne variables, 131
+- built-in commands, listing, of, 750–751
+- command line parameters, 60
+- data files operations, 110–121
+- directory handling, 82–83
+- disk space monitoring, 108–110
+- environment variables, 123–145, 754–757
+- external commands, listing, of, 752–753
+- file handling, 75–82
+- file/directory listing, 69–75
+- filesystem, 64–68
+- functions of, 59
+
+- character classes, 461
+- in cron table, 353–354
+- regular expressions pattern matching, 448, 460–461
+- wildcard character, 75
+- atq command, actions of, 350–352
+- atrm command, actions of, 352
+- autoload command, zsh shell, 626, 635–636
+- awk program, 423
+
+## B
+
+- background mode
+  - ampersand (&) for, 341–342, 345
+  - color, 392–393
+  - exiting, 343
+  - multiple jobs, running, 342–343
+  - processes running in, 341
+  - scripts, running in, 341–343
+  - stop jobs, restarting, 347
+- backslash (\)
+  - with environment variables, 206
+  - in regular expressions, 451–452
+  - special prompt characters, 61
+- backtick
+  - back quote character, on keyboard, 209
+  - bash calculator (bc), 222–223
+    - example of, 210
+    - functions of, 209–210
+    - sed editor, output redirection, 490–491
+    - search: See archive(s)
+- bar operator (|), piping, 213
+- basename command, actions of, 288–289
+- BASH, functions of, 131, 754
+- bash calculator (bc), 219–223
+  - accessing, 220
+  - backtick, 222–223
+  - inline input redirection, 222
+  - interactive shell, 139–141
+  - login shell, 136–139
+  - media management, 104–110
+  - name, meaning of, 13
+  - non-interactive shell, 141
+  - online manual, 63–64
+  - processes, 91–104
+  - prompt commands, 60–62
+  - startup file, 135
+- BASH_GC, functions of, 754
+- BASHARGV, functions of, 754
+- BASH.COMMAND, functions of, 754
+- BASH.ENV, functions of, 131, 754
+- BASH.EXECUTION_STRING, functions of, 754
+- BASH.LINENO, functions of, 754
+- BASH.REMATCH, functions of, 754
+- BASH.SOURCE, functions of, 754
+- BASH.SUBSHELL, functions of, 754
+- BASH.VERSINFO, functions of, 131
+- BASH.VERSION, functions of, 131, 754
+- .bashrc, defining functions in, 382–383
+- Basic Regular Expression (BRE) engine, 449
+- batch command, actions of, 352–353
+- bash command, actions of, 220–222
+- bg command
+  - actions of, 347, 750
+  - ash shell, 537
+  - dash shell, 545
+  - ksh93 shell, 599
+  - tsh shell, 574
+- binary directory, 67
+- bind command, actions of, 750
+- bindkey command, 574, 577
+- blank lines, deleting, sed editor, 495–497
+- blink, control codes, listing of, 31
+- block device, 10
+- block mode graphics, terminal emulation support, 28
+- bold font, control codes for, 392–394, 397
+- bookmarks
+- Boolean operators, if-then statement, 249–250
+- boot directory, 67
+  - Linux run levels, 356
+  - process of, 356–357
+  - scripts, starting, 355
+  - startup files, location of, 357–358
+- Bourne shell, 13–14
+- Bourne variables, listing of, 131
+- bracket(s), double matching, 251–252
+- bracket(s), single (|), pattern-matching, GNOME terminal, 194
+- class definition, defining with, 455–456
+- bracket(s), double ([])]), pattern-matching, in math operations, 218–219
+- branch command, sed editor, 484–487
+- break command
+  - actions of, 275–277, 750
+  - break out of inner loop, 276–277
+  - break out of loop, 275–276
+  - break out of outer loop, 277, gawk program, 517–518
+- BREAK key, terminal support, 30
+- BSD-style parameters, ps command, 96–98
+- buffer(s), buffering, 29
+- emacs emulator, saving to file, 178
+- emacs emulator, use of buffers, 181
+- vim editor, saving to, 174
+- built-in command
+  - actions of, 750
+  - ash shell, 533
+  - dash shell, 544
+  - ksh93 shell, 597
+  - tsh shell, 574
+- built-in commands, 536–539
+- built-in variables, gawk program, 502–508, 766–788
+- builtin-command, ash shell, 574
+- bzip2 command, actions of, 117
+- bzcat command, actions of, 117
+- bzip2 command, actions of, 116–752
+
+## C
+
+- C language, for, 264–266
+- calculator, bash calculator (bc), 219–223
+- calendar, zeta dialog window, 413–414
+- caller command, actions of, 750
+- capturing feature, xterm terminal, 40
+- character classes, negating, 457–458
+- regular expression anchor, 452–453, 493
+- case command
+  - menu logic, adding, 388
+  - options, processing, 295–298
+  - value of evaluating, 252–253
+- case statements, zsh shell, 633
+- cat command, actions of, 85–87, 260, 325, 792
+- cd command
+  - actions of, 750
+  - ash shell, 537
+  - dash shell, 545
+  - ksh93 shell, 599
+  - tsh shell, 574
+  - zsh shell, 626
+- CD distribution, LiveCD, 23–24
+- CDPATH, dash shell, 541
+- change command
+  - actions of, 154, 156–157, 252
+  - parameters of, 157
+  - change command, sed editor, 438–439
+- change directory, 66
+- character classes, 455–458, asterisk (*), 461
+- brackets ([]) to define, 455–456
+- combining, 456–457
+- defined, 455
+- interval pattern matching, 464
+- spellings, finding, 457, 460
+- negating (l), 465
+- pipe symbol (|), 468
+- plus sign (+), 462–463
+- question mark (?), 462
+- range of characters, 458–459
+- special character classes, 459–460
+- utility of, 455–468
+- character device files, 10
+- character sets, terminal emulation support, MySQL, 647
+- chdir command
+  - tsh shell, 574
+  - zsh shell, 626
+- chfin command, actions of, 154, 155–156, 752
+- chpg command, actions of, 762
+- child processes
+  - and global environment variables, 124–125
+  - and local environment variables, 128
+- chmod command, actions of, 163–165, 167, 666, 752
+- chown command, actions of, 165–166, 752
+- chpasswd command, actions of, 154, 155, 752
+- chsh command, actions of, 154, 155, 752
+- clear command
+  - actions of, 386, 387, 396
+  - MySQL, 647
+- client(s)
+  - client/server connection, 695–696
+  - defined, 695
+  - See also TCP module
+- coding
+  - backtick, 209–210
+  - color, 391–397
+  - command line options, 295–305
+  - command line parameters, 285–295
+  - dash shell scripting, 549–555
+  - dialog boxes, 377–409
+  - environment variables, 206–207
+  - exiting script, 222–226
+  - functions, 363–384
+  - GNOME window widgets, 412–417
+  - if-then statement, 229–255
+  - input and output, 315
+  - job control, 342–347
+  - regular expressions, 448–461
+  - regular expression matching, 448–461
+  - mathematical operations, 218–223
+  - messages, displaying, 204
+  - output, 205–216
+  - scheduling, 348–349
+  - script file, 202–204
+  - scripts, starting at, 355–358
+  - scripts, running for, 348–349
+  - scripts, running background, 341–343
+  - scripts, without console, 343–344
+  - signals, 335–341
+  - text, 265–266
+  - user input, getting data from, 305–310
+  - user variables, 207–209
