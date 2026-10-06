@@ -1,0 +1,13 @@
+3. Make sure that the new kernel works before you remove the old kernel. To verify that the new kernel works, reboot the system using the new kernel.
+
+4. Remove the old kernel by removing the files that contain the release number (and EXTRAVERSION [number [1036], if applicable) in their filenames /boot or (root). Remove information about the old kernel from lilo.conf or grub.conf. Remember to run lilo if you modify lilo.conf. You may want to wait a while before removing the old kernel to make sure that there are no problems with the new one.
+
+# Installing Non-rpm Software
+
+Most software that does not come in rpm format comes with detailed instructions on how to configure, build (if necessary), and install it. Some binary distributions (those containing prebuilt executables that run on Red Hat) require you to unpack the software from the root directory of your system. Some newer application packages include scripts to install themselves automatically into a directory hierarchy under /opt, with files in a /opt subdirectory that is named after the package and executables in /opt/bin or /opt/package/bin. These scripts are relatively new additions to Red Hat but familiar ones to Solaris users.
+
+Other software packages allow you to choose where you unpack them. Because the software available for GNU/Linux is developed by many different people, there is no consistent method for doing installations. As you acquire local software, you should install it on your system in as consistent and predictable manner as possible. The default Red Hat file structure has a directory tree under /usr/local for binaries (/usr/local/bin), manual pages (/usr/local/man), and so forth. To prevent confusion later and to avoid overwriting or losing the software when you install standard software upgrades in the future, avoid installing nonstandard software in standard system directories (such as /usr/bin). Make sure that the users on your system know where to find the local software, and remember to make an announcement whenever you install, change, or remove local tools.
+
+# GNU Configure and Build System
+
+The GNU Configure and Build System makes it easy to build a program that is distributed as source code (see autoconf at developer.gnome.org/tools/build.html). The two-step process does not require special tools other than a shell, make, and gcc (GNU C compiler). You do not need to work with root privileges for either of these steps.

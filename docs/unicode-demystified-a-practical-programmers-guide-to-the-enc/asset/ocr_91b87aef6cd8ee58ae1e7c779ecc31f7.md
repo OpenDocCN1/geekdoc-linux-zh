@@ -1,0 +1,1 @@
+--create -o (copy-out mode) Constructs an archive from the files named on standard input. The files may be ordinary or directory files, and each must appear on a separate line. The archive is written to standard output as it is built. The find utility-

@@ -1,0 +1,15 @@
+# Stan Isaacs; and Dr. Eric H. Herrin, Vice President, Herrin Software Development, Inc.
+
+Thanks to Doug Hughes, who gave me a big hand with the systems on administration, networks, the Internet, and programming.
+
+Thanks also to the Addison-Wesley who helped bring this book to life: My editor Karen Getman; Tyrrell Albaugh, production manager, who gave me guidance and much latitude in producing the book; and everyone who worked behind the scenes to make this book happen.
+
+Thanks to the Texan, JFP (Dr. John Frank Peters), for his many hours on the understanding of this editor gave this chapter a depth and breadth that you want to go right. Fred Zlotnick, author of The POSIX.1-Standard, did a lot of work on Appendix D.
+
+I am also indebted to Denis Howe, who wrote The Free-line Dictionary of Computing. Dennis has graciously permitted me to extract entries from his compilation. Be sure to look at the dictionary at foldoc.ic.ac.uk/foldoc
+
+Thanks to Lorraine Callahan and Steve Maybler, who researched, wrote, analyzed reviews, and coordinated all the efforts that went into the first UNIX book. Thanks for help on my first UNIX book to Ronald Hiller, Graburn Technology, Inc.; Charles A. Palmer, Wayne State University; Bob Palowda, Tom Bialski, Microsystems; Roger Hartmuller, JIS Labs at Network Associates; Kaow Liu, Andy Spitzer, Ric Schneider, Jesse St. Laurent, Steve Belenton, Ray W. Hildbrand, Jennifer Whitman, Gert-Jan Hagenaars, and Casper Dik.
+
+A Practical Guide to Red Hat® is based in part on two of my previous UNIX books: UNIX V: A Practical Guide and A Practical Guide to Linux. Many people helped me with these books, and thanks here go to Pat Parseghian, Dr. Kathleen Hemenway, and BrianRose; Byron A. Jeff, Clark Atlanta University; Charles Strauss; Jeff Gitlin, Lucent Technologies; Kurt Hockenbury; Maury, Bach International Ltd.; Peter H. Salus; Rahul Dave, University of Pennsylvania; Sarah Walton, Intelligent Algorithmic Solutions; Tim Segall, Computer Sciences Corporation; Behruz Forouz, DeAn College; Mike Keenan, Virginia Polytechnic Institute and State University; Mike Johnson, Oregon State University; Janelyn Lane, University of Maryland; Arnold Robbins and Mathis Menon, Georgia Institute of Technology; Cliff Shaffer, Virginia Polytechnic Institute and State University; and Steven Stepanek, California State University, Northridge, for reviewing the book.
+
+I continue to be grateful to the many people who helped the early editions of my UNIX books. Special thanks to Roger Suppl, Laura King, and Roy Harrington for introducing me to the UNIX system. My mother, Dr. Helen Sobell, provided invaluable comments on the original manuscript at several junctures. Also thanks to Isaac Rabinovich, Professor Raphael Finkel, Professor Randolph Benton, Bob Greenberg, Professor Udo Pooch, Judy Ross, Dr. Robert Veroff, Dr. Mike Denny, Joe DiMartino, Dr. John Massey, Diane Schulz, Robert Jung, charles

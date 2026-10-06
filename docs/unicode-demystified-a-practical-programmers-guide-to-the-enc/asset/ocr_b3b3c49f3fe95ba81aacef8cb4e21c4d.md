@@ -1,0 +1,7 @@
+# X Window System and Graphical User Interface
+
+Over the past two decades, it has become the norm to use a GUI (Graphical Interface) to interact with a computer system. It is difficult to imagine using a GNU/Linux system (other than a server) that is not configured to take full advantage of the graphical displays and pointing devices that have become standard equipment.
+
+This chapter begins with a short background on the X Window System and how it works with GNU/Linux. The chapter builds a foundation for Chapters 7 (GNOME Desktop Manager) and 8 (KDE Desktop Environment) by describing the attributes that are common to most GUIs, including the GNOME and KDE desktop environments, and concludes with a section that covers X in more depth, showing you how to customize X for use with a desktop manager. Although this chapter acquaints you with the basic terminology and operations. For clarity this chapter focuses on examples that are straightforward; it does not describe every method or shortcut available in X.
+
++   1 Some claim, and rightfully so, that they can be more efficient working with a command line interface and such tools as emacs (Chapter 11), lynx, and others. The emacs "editor" is so comprehensive that some programmers spend all their time working from within, receiving their mail, browsing the Web, and doing other tasks.

@@ -1,0 +1,13 @@
+3. The third layer, called the network layer, frequently uses IP and addresses and routes packets.
+
+4. The fourth layer, called the transport layer, is where TCP and UDP exist. This layer provides a means for applications to communicate with each other. Common functions of the transport layer include guaranteed delivery, delivery of packets in the order of transmission, flow control, error detection, and error correction. The transport layer is responsible for dividing data into packets. This layer also performs port addressing, which allows it to distinguish among different services using the same transport protocol. Port addressing keeps the data from multiple applications using the same protocol (for example TCP) separate.
+
+5. Anything above the transport layer is the domain of the application and is part of the fifth layer. Unlike the ISO model, the Internet model does not distinguish among application, presentation, and session layers. All the upper-layer characteristics, such as character encoding, encryption, GUI, and so on, are part of the application. Applications choose the transport characteristics they require and choose the corresponding transport protocol to send and receive data.
+
+# TCP: Transmission Control Protocol
+
+TCP is most frequently run on top of IP in a combination referred to as TCP/IP. TCP provides error recovery and guaranteed delivery in packet transmission order and works with multiple ports that it can handle more than one application. TCP is a connection-oriented protocol (page 1461), also known as a streams-based protocol. Once established, a TCP connection looks like a stream of data, not individual IP packets. The connection is assumed to remain up and be uniquely addressable. Every piece of information you write to the connection always goes to the same destination and arrives in the order it was. Because TCP is connection oriented and establishes what you can think of as a virtual circuit between two machines, TCP is not suitable for one-to-many transmissions (like UDP). TCP has built mechanisms for dealing with congestion (or flow) control over networks and thrott back (slows the speed of data flow) when it has to retransmit dropped packets. TCP can also deal with acknowledgments, wide area links, high delay links, and other situations.
+
+# UDP: User Datagram Protocol
+
+UDP runs at layer 4 of the IP stack, as TCP does, but is much simpler. Like TCP, UDP works with multiple ports/multiple applications and has checksums for error detection but does not automatically retransmit packets that fail the checksum. UDP is a packet- (or datagram-) oriented protocol. Each packet must carry its own

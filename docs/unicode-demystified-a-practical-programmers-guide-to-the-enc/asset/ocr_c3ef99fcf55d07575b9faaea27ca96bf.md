@@ -1,0 +1,9 @@
+# The POSIX Standards
+
+In the past, the existence of various versions of the UNIX system was a fruitful source of creative and innovative software. However, it has also been a persistent source of frustration for users and programmers. Users who moved between the BSD and System V versions of the system, for example, discovered that commands that worked on one system did not work, or worked differently, on the other. Programmers found a similar phenomenon: Programs that worked on one system differently, or even failed to compile, on another. In 1984 the user's group /usr/group (now called UniForum) started an effort to specify a “standard UNIX.” This effort expanded beyond the wildest dreams of its initiators in the POSIX series of standards.
+
+POSIX standards specify interfaces for application programs but say nothing about how the interfaces are to be implemented. Thus a wide variety of systems, including most varieties of UNIX, GNU/Linux, and many systems that are unrelated to either, now supply versions of these interfaces. As an example, you can run bash with --posix option to make it conform closely with the POSIX.2 standard (page 1430). As a consequence, GNU/Linux can support more and more application programs that run on other POSIX systems.
+
+Richard Stallman¹ provides a connection between GNU and POSIX as he started GNU and was involved in the start of POSIX. The Introduction to POSIX.1 states that “The name POSIX was suggested by Richard Stallman.” POSIX is almost an acronym for Portable Operating System Interface and Stallman probably put the X on the end to give it UNIX “ring.”
+
++   1. Refer to “The GNU/Linux Connection” on page 4 for more information on Richard Stallman.

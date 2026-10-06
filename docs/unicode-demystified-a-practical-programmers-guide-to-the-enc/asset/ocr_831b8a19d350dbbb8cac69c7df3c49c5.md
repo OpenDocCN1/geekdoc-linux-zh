@@ -1,0 +1,15 @@
+# Appendix C Security
+
+# Encryption Implementation
+
+In practice, most commercial software packages use both public and symmetric encryption algorithms, taking advantage of the strengths of each and avoiding the weaknesses. The public key algorithm is used first, as a means of negotiating a randomly generated secret key and providing for message authentication. A secret key algorithm, such as 3-DES, IDEA, AES, or Blowfish, encrypts and decrypts the data on both ends for speed. Finally, a hash algorithm, such as DSA (Digital Signature Algorithm), generates a message digest that provides a signature that can alert you to your tampering. The digest is digitally signed with the sender's private key.
+
+# GnuPG/PGP
+
+The most popular personal encryption packages available today are GnuPG (GNU Privacy Guard—www.gnupg.org, see page 1030) and PGP (Pretty Good Privacy—www.pgp.com). Gnu Privacy Guard was designed as a free replacement for PGP, a security tool that made debut during the early 1990s. Phil Zimmermann developed PGP as a Public Key Infrastructure (PKI) featuring a convenient interface, ease of use and management, and the security of digital certificates. One characteristic of PGP apart from the majority of cryptosystems is then available: PGP functions entirely without certification authorities (CA). Until the introduction of PGP, PKI implementations were built around the concept of CAs and centralized management controls.
+
+PGP and GnuPG use the notion of a ring of trust: If you trust someone, and that person trusts someone, you can provide an introduction to the third party. When you trust someone, you perform an operation called key signing. By signing someone's key, you are verifying that that person's public key is authentic and for you to use to send email. When you sign a key, you are asked whether this person to introduce other keys to you. It is common practice to assign this task based on several criteria, including your knowledge of a person's character or a lasting professional relationship with the person. The best practice is to sign someone's key only after you have met face to face to avert any chance of a person-in-the-middle scenario. The disadvantage of this scheme is the lack of a central registry for associating with people you do not already know.
+
++   2. For more information, see the section of The GNU Privacy Handbook (www.gnupg.org/docs.html) titled "Validating Other Keys on Your Public Keyring"
+
++   3. In the middle: If Alex and Jenny try to secure a e-mail exchange over a network, Alex first sends Jenny's public key. However, suppose that Mr X is between Alex and Jenny on the network and intercepts Alex's public key. Mr X sends his own public key to Jenny. Jenny then sends her public key to Alex, but once again Mr X intercepts it and substitutes his public key and sends that to Alex. Without some kind of active protection (a piece of shared information), Mr X, the person in the middle, can decrypt all traffic between Alex and Jenny, reencrypt it, and send it on the other party.

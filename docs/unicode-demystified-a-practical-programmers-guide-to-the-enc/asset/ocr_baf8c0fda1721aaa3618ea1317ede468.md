@@ -1,0 +1,19 @@
+| < | Redirects standard input (page 147) |
+| << | Here document (page 659) |
+| * | Any string of characters in an ambiguous file reference (pages 158 and 547) |
+| ? | Any single character in an ambiguous file reference (page 157) |
+| \ | Quotes the following character (page 55) |
+| ' | Quotes a string, preventing all substitutions (page 55) |
+| " | Quotes a string, allowing only variable and command substitution (pages 55 and 568) |
+| ... | Performs command substitution (page 611) |
+| [] | Character class in an ambiguous file reference (page 159) |
+| $ | References a variable (page 566) |
+| . (dot builtin) | Executes a command (only at the beginning of a line) (page 581) |
+| # | Begins a comment (page 636) |
+| {} | Command grouping (used to surround the contents of a function) (page 672) |
+| : (null builtin) | Returns true exit status (page 669) |
+| && (Boolean AND) | Executes command on right only if command on left (returns a zero exit status [page 719 and 764]) |
+| || (Boolean OR) | Boolean OR: executes command on right only if command on left (returns a nonzero exit status [page 765]) |
+| ! (Boolean NOT) | Boolean NOT: reverses exit status of command |
+| $() | Performs command substitution (preferred form) (page 575) |
+| [] | Evaluates arithmetic expression (page 611) |

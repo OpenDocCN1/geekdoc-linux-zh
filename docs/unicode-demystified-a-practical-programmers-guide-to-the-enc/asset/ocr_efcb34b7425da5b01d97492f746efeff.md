@@ -1,0 +1,7 @@
+This program fragment uses a loop to check and shift arguments while the argument is not two hyphens (--). As long as the argument is not two hyphens, the program continues to loop through a case statement that checks all the possible options. The case label breaks out of the while loop. The * case label recognizes any option; it appears as the last case label to catch any unknown options, print an error message, and allow processing to continue. On each pass through the loop, the program does a shift to get to the next argument. If an option takes an argument, the program does an extra shift to get past that argument.
+
+The following program fragment processes the same options, using getopts:
+
+In this version of the code, the while structure evaluates the getopts builtin each time it comes to the top of the loop. The getopts builtin uses the OPTIND variable to keep track of the index of the argument it is to process the next time it is called. The second example calls shift only once, at the end, where the first example uses shift to get each new argument. The getopts builtin returns a nonzero (false) status when it has handled all the arguments and control passes to the statement done.
+
+Because you tell getopts which options are valid and which arguments, it can detect errors in the command line and can handle them in two ways. This example

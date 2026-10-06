@@ -1,0 +1,1273 @@
+
+# Index 1515
+
+- continue shell keyword 722
+- Control
+- bar, Nautilus 219
+- Center, GNOME 205, 237
+- Center, KDE 269, 314
+- character 1462
+- characters, printer 655
+- flow, see Control, structure
+- job 155
+- structure
+- about 626, 714
+- break 650, 670
+- case 651, 722
+- continue 650, 670
+- defined 1462
+- do 640, 641, 643, 647
+- done 640, 641, 643, 647
+- elif 632, 634
+- elif vs. fi 634
+- else 630
+- esac 651
+- nfi 626, 631, 633
+- fi vs. elfi 634
+- for 640, 641, 669
+- for...in 640, 641, 720
+- foreach 720
+- goto 717
+- if 626, 630, 712, 718
+- if...then 626
+- if...then else 632, 719
+- if...then else 630, 718
+- in 640
+- until 718
+- repeat 770
+- select 658, 770
+- shell keyword
+- break 722
+- breaksw 723
+- case 723
+- continue 722
+- default 723
+- else 718
+- endif 718
+- esac 723
+- switch 722
+- then 718
+- while 722
+- shell scripts 545
+- switch 722
+- then 626, 630, 632
+- two-way branch 630
+- until 647
+- while 643, 669, 722, 778
+- zsh 768
+- control 25
+- CONTROL-C key 38, 718
+- CONTROL-D key 36, 144, 557, 684
+- CONTROL-H key 37, 56, 140, 419
+- CONTROL-L key 85, 86, 421, 223
+- 1066
+- CONTROL-M key 56
+- CONTROL-Q key 29, 1066
+- CONTROL-R key 85, 86, 1066
+- CONTROL-S key 1066
+- CONTROL-U key 38, 56, 140, 419
+- CONTROL-V key 56
+- CONTROL-W key 38, 140, 419
+- CONTROL-X key 38
+- CONTROL-Z key 155
+- Convention
+- vim mistakes 424
+- correct variant 707
+- count shell keep 644
+- control language 1421
+- cp utility 61, 118, 155, 1053, 1122
+- cp vs. in 125
+- cdir shell script 551
+- cpio POSIX utility 226
+- cpio os utility 1001, 1124, 1167, 1221
+- cpp filename extension 852
+- CPU
+- defined 1462
+- intensive processes, route 1062
+- crack utility 1070
+- Cracker 1462
+- Crash 955, 1462
+- Crash flag 982
+- create system call 829
+- Create
+- directory using mkdir 1016
+- file using pico 495
+- file using vim 414
+- file, null 957
+- Create a directory using mkdir 1066
+- Creation date, file, display us 109
+- cron directory 395, 1130
+- cron unity 393, 925, 959, 1060, 1130
+- cron, Vix 1129
+- cron.* entries 1059
+- cron.allow 959, 1130
+- cron.d 395, 1130
+- cron.daily directory 959, 1130
+- cron.deny 395, 1130
+- cron.hourly directory 1130
+- cron.monthly directory 1130
+- cron.weekly directory 1130
+- cron-daemon 395
+- crontab file 395, 1129
+- crontab utility 1052, 1059, 1129
+- Cryptography 1463
+- cash 681, 1459
+- csh.shrc file 577, 684, 959
+
+Italic numbers indicate definitions; bold numbers indicate entries in Part III.
+
+# 156 Index
+
+- csh.login file 577, 684, 959
+- csh.login file 685
+- CSRG 8
+- CSS 337, 1459
+- CUPS 1010
+- cupsd daemon 1010
+- Current 1463
+- Current directory, as Working directory
+- Cursor 31, 1463
+- Customizing
+- GNOME 236
+- KDE 313
+- out utility 611, 1132, 1323
+- Cut-and-paste, KDE 283
+- CSV 871, 879, 1134
+- osv command
+- add 883
+- check out 881, 885
+- commit 882
+- export 884
+- import 885
+- log 880
+- release 885
+- remove 883
+- tag 884
+- update 883
+- vs utility 880, 1134
+- CVSEDITOR variable 1139
+- CVRSOOT variable 1138
+- cdw variable 707
+- cxx filename extension 852, 1213
+- Cycling, window 184
+- Cypher 1460
+- defined 1463
+- dhpcpd 395, 1028
+- dhpcd 395, 1028
+- finger 371
+- fingered 395, 1424
+- ftp 1180
+- ftpd 395, 1422
+- gated 396
+- gateway 396
+- gpm 395
+- htpd 393
+- ined 395
+- nippod 1023
+- kalamarn 389
+- lockd 395
+- login 1422
+- pd 395, 944, 1005, 1006, 1010, 1012, 1233
+- messages 968, 1067, 1071, 1417
+- name 394
+- naming 394
+- network 352, 394
+- nfs 1018
+- nnmbd 396
+- ntpd 396
+- portmap 396
+- postfix 1412
+- ppd 396, 1023, 1024
+- prefix in 394
+- rpc. 394
+- printer 395, 945
+- protocol 309
+- Lsa 992
+- rexcd 396, 1422
+- rhdm 938, 942
+- rolind 373, 1417
+- routed 396
+- routing 396
+- rshd 373, 1345, 1417
+- replacements, logda-mon 1422, 396
+- sendmail 396, 1050
+- services, providing 394
+- smbd 396
+- spooling 1012
+- sshd 374, 394, 396
+- Superuser, xeinted 115, 396, 1072, 1417
+- talkd 396, 1417, 1422
+- ftfpd 397
+- timed 397
+- xned 394, 397, 946
+- Data Encryption, see 150
+- Database
+- aliases 958, 1055
+- authentication 1418
+- CD-ROM 239, 332
+- dbm 555, 1055
+- DNS 388, 1021
+- domain names 555, 1021
+- gdbm 555, 1055
+- group 391, 1469
+- hosts 908, 1050
+- hwconf 1050
+- Linux Software Map 1401
+- locale 1143
+- locate 77
+- magic number 967
+- page header 1252
+- NIS 368, 390, 391, 1482
+- partition, raw 993, 1022, 1469, 1477, 1499
+- printcap 963, 1011
+- RHN 936
+- rpm 1050
+- slocate 77, 228, 923
+- SQL 1494
+- system services 1472
+- whatis 79, 923
+- whois 385, 192, 198
+
+# Daemon
+- amd 393
+- apmd 394
+- autocomm 393, 994, 980
+- configure 947
+- crond 395
+- cupsd 1010
+- Datagram, network 353, 1464
+- Datagram-oriented protocol 361
+- Descriptor, top-down 819
+- defined 174, 1464
+- Digital area, see 326
+- Digital Corporation, see 1408
+- Digital Signature, see 128
+- DIR_COLORS 1238
+- Directory Dataless system 392, 1464
+- date 70, 150, 685, 1141
+- date display 70
+- dateconfig utility 985, 1056
+- dbm database 555, 1055
+- dd utility 1144
+- ddu utility 862, 867
+- Debugger about 857
+- dd 867
+- deached process 174
+- Device block 971, 147
+- driver 869, 969, 971, 1464
+- file 143, 1464
+- file, export 979, 1020
+- filename 15
+- dependence 113, 143, 1478
+- input and output 15
+- /etc 113
+- cron*. 395, 1130
+- cron.daily 1130
+- cron.hourly 1130
+- cron.weekly 1130
+- logrotate.d 1072
+- DEC 170
+- declare built 572, 573
+- defined 1464
+- default shell keyword 723
+- defaultrouter file 396
+- Defect Tracking System 934
+- Delete directory using rmdir 115
+- file 54
+- file, rm 915, 1004
+- null nonrewinding 1004
+- major 370, 971, 1478
+- minor 970, 971, 1480
+- physical 1485
+- raw 972
+- tape 1003
+- tape, nonrewinding 1004
+- devplys systems 973
+- opt 113
+- pam.d 962, 1046
+- init.d 944
+- skel 966
+- sysconfig about 965, 1032
+- about 113
+- xinitit key 37
+- line 38
+- linking rm 130
+- Deletes key 37
+- Delimiter, regular expression 1384
+- Delta 1464
+- Demand mounting, filesystem 393, 979
+- dependency line (make) 850
+- depmod utility 1038
+- Dereference 1464
+- DES encryption 1409
+- xintrc.d 924, 397
+- xinctcd.d 397, 946
+- /home 113
+- /Lib lld, and 847
+- about 113
+- gcc, and 844, 1211
+- modules 114, 1038
+- security 1043, 1046
+- df utility 316, 392, 1147
+- DHCP 395, 1022, 1068
+- dhcped daemon 3950, 1028
+- dhcpd daemon 1028
+- Die, process 562
+- diff utility 73, 1135, 1149, 1274
+- diff, context 1153
+- dig utility 383
+
+Italic names indicate definitions; bold numbers indicate entries in Part III.
+
+# Index
+
+Directory continued
+- /lost+found 955
+- /mnt 114
+- /opt 114, 913, 931
+- /proc 114
+- /root 114
+- /sbin Superuser commands 897
+- /tmp 114, 657, 1082
+- /usr at 1094, bin 114
+- change using cd 108
+- child 881, 885
+- commit 882
+- export 884
+- import 885
+- log 880
+- release 885
+- remove 883
+- tag 884
+- update 883
+- vs utility 880, 1134
+- CVSEDITOR variable 1139
+- CVRSOOT variable 1138
+- cdw variable 707
+- cxx filename extension 852, 1213
+- Cycling, window 184
+- Cypher 1460
+- defined 1463
+- dhpcpd 395, 1028
+- dhpcd 395, 1028
+- finger 371
+- fingered 395, 1424
+- ftp 1180
+- ftpd 395, 1422
+- gated 396
+- gateway 396
+- gpm 395
+- htpd 393
+- ined 395
+- nippod 1023
+- kalamarn 389
+- lockd 395
+- login 1422
+- pd 395, 944, 1005, 1006, 1010, 1012, 1233
+- messages 968, 1067, 1071, 1417
+- name 394
+- naming 394
+- network 352, 394
+- nfs 1018
+- nnmbd 396
+- ntpd 396
+- portmap 396
+- postfix 1412
+- ppd 396, 1023, 1024
+- prefix in 394
+- rpc. 394
+- printer 395, 945
+- protocol 309
+- Lsa 992
+- rexcd 396, 1422
+- rhdm 938, 942
+- rolind 373, 1417
+- routed 396
+- routing 396
+- rshd 373, 1345, 1417
+- replacements, logda-mon 1422, 396
+- sendmail 396, 1050
+- services, providing 394
+- smbd 396
+- spooling 1012
+- sshd 374, 394, 396
+- Superuser, xeinted 115, 396, 1072, 1417
+- talkd 396, 1417, 1422
+- ftfpd 397
+- timed 397
+- xned 394, 397, 946
+- Data Encryption, see 150
+- Database
+- aliases 958, 1055
+- authentication 1418
+- CD-ROM 239, 332
+- dbm 555, 1055
+- DNS 388, 1021
+- domain names 555, 1021
+- gdbm 555, 1055
+- group 391, 1469
+- hosts 908, 1050
+- hwconf 1050
+- Linux Software Map 1401
+- locale 1143
+- locate 77
+- magic number 967
+- page header 1252
+- NIS 368, 390, 391, 1482
+- partition, raw 993, 1022, 1469, 1477, 1499
+- printcap 963, 1011
+- RHN 936
+- rpm 1050
+- slocate 77, 228, 923
+- SQL 1494
+- system services 1472
+- whatis 79, 923
+- whois 385, 192, 198
+# Daemon
+- amd 393
+- apmd 394
+- autocomm 393, 994, 980
+- configure 947
+- crond 395
+- cupsd 1010
+- Datagram, network 353, 1464
+- Datagram-oriented protocol 361
+- Descriptor, top-down 819
+- defined 174, 1464
+- Digital area, see 326
+- Digital Corporation, see 1408
+- Digital Signature, see 128
+- DIR_COLORS 1238
+- Directory Dataless system 392, 1464
+- date 70, 150, 685, 1141
+- date display 70
+- dateconfig utility 985, 1056
+- dbm database 555, 1055
+- dd utility 1144
+- ddu utility 862, 867
+- Debugger about 857
+- dd 867
+- deached process 174
+- Device block 971, 147
+- driver 869, 969, 971, 1464
+- file 143, 1464
+- file, export 979, 1020
+- filename 15
+- dependence 113, 143, 1478
+- input and output 15
+- /etc 113
+- cron*. 395, 1130
+- cron.daily 1130
+- cron.hourly 1130
+- cron.weekly 1130
+- logrotate.d 1072
+- DEC 170
+- declare built 572, 573
+- defined 1464
+- default shell keyword 723
+- defaultrouter file 396
+- Defect Tracking System 934
+- Delete directory using rmdir 115
+- file 54
+- file, rm 915, 1004
+- null nonrewinding 1004
+- major 370, 971, 1478
+- minor 970, 971, 1480
+- physical 1485
+- raw 972
+- tape 1003
+- tape, nonrewinding 1004
+- devplys systems 973
+- opt 113
+- pam.d 962, 1046
+- init.d 944
+- skel 966
+- sysconfig about 965, 1032
+- about 113
+- xinitit key 37
+- line 38
+- linking rm 130
+- Deletes key 37
+- Delimiter, regular expression 1384
+- Delta 1464
+- Demand mounting, filesystem 393, 979
+- dependency line (make) 850
+- depmod utility 1038
+- Dereference 1464
+- DES encryption 1409
+- xintrc.d 924, 397
+- xinctcd.d 397, 946
+- /home 113
+- /Lib lld, and 847
+- about 113
+- gcc, and 844, 1211
+- modules 114, 1038
+- security 1043, 1046
+- df utility 316, 392, 1147
+- DHCP 395, 1022, 1068
+- dhcped daemon 3950, 1028
+- dhcpd daemon 1028
+- Die, process 562
+- diff utility 73, 1135, 1149, 1274
+- diff, context 1153
+- dig utility 383
+# Directory continued
+- /lost+found 955
+- /mnt 114
+- /opt 114, 913, 931
+- /proc 114
+- /root 114
+- /sbin Superuser commands 897
+- /tmp 114, 657, 1082
+- /usr at 1094, bin 114
+- change using cd 108
+- child 881, 885
+- commit 882
+- export 884
+- import 885
+- log 880
+- release 885
+- remove 883
+- tag 884
+- update 883
+- vs utility 880, 1134
+- CVSEDITOR variable 1139
+- CVRSOOT variable 1138
+- cdw variable 707
+- cxx filename extension 852, 1213
+- Cycling, window 184
+- Cypher 1460
+- defined 1463
+- dhpcpd 395, 1028
+- dhpcd 395, 1028
+- finger 371
+- fingered 395, 1424
+- ftp 1180
+- ftpd 395, 1422
+- gated 396
+- gateway 396
+- gpm 395
+- htpd 393
+- ined 395
+- nippod 1023
+- kalamarn 389
+- lockd 395
+- login 1422
+- pd 395, 944, 1005, 1006, 1010, 1012, 1233
+- messages 968, 1067, 1071, 1417
+- name 394
+- naming 394
+- network 352, 394
+- nfs 1018
+- nnmbd 396
+- ntpd 396
+- portmap 396
+- postfix 1412
+- ppd 396, 1023, 1024
+- prefix in 394
+- rpc. 394
+- printer 395, 945
+- protocol 309
+- Lsa 992
+- rexcd 396, 1422
+- rhdm 938, 942
+- rolind 373, 1417
+- routed 396
+- routing 396
+- rshd 373, 1345, 1417
+- replacements, logda-mon 1422, 396
+- sendmail 396, 1050
+- services, providing 394
+- smbd 396
+- spooling 1012
+- sshd 374, 394, 396
+- Superuser, xeinted 115, 396, 1072, 1417
+- talkd 396, 1417, 1422
+- ftfpd 397
+- timed 397
+- xned 394, 397, 946
+- Data Encryption, see 150
+- Database
+- aliases 958, 1055
+- authentication 1418
+- CD-ROM 239, 332
+- dbm 555, 1055
+- DNS 388, 1021
+- domain names 555, 1021
+- gdbm 555, 1055
+- group 391, 1469
+- hosts 908, 1050
+- hwconf 1050
+- Linux Software Map 1401
+- locale 1143
+- locate 77
+- magic number 967
+- page header 1252
+- NIS 368, 390, 391, 1482
+- partition, raw 993, 1022, 1469, 1477, 1499
+- printcap 963, 1011
+- RHN 936
+- rpm 1050
+- slocate 77, 228, 923
+- SQL 1494
+- system services 1472
+- whatis 79, 923
+- whois 385, 192, 198
+# Daemon
+- amd 393
+- apmd 394
+- autocomm 393, 994, 980
+- configure 947
+- crond 395
+- cupsd 1010
+- Datagram, network 353, 1464
+- Datagram-oriented protocol 361
+- Descriptor, top-down 819
+- defined 174, 1464
+- Digital area, see 326
+- Digital Corporation, see 1408
+- Digital Signature, see 128
+- DIR_COLORS 1238
+- Directory Dataless system 392, 1464
+- date 70, 150, 685, 1141
+- date display 70
+- dateconfig utility 985, 1056
+- dbm database 555, 1055
+- dd utility 1144
+- ddu utility 862, 867
+- Debugger about 857
+- dd 867
+- deached process 174
+- Device block 971, 147
+- driver 869, 969, 971, 1464
+- file 143, 1464
+- file, export 979, 1020
+- filename 15
+- dependence 113, 143, 1478
+- input and output 15
+- /etc 113
+- cron*. 395, 1130
+- cron.daily 1130
+- cron.hourly 1130
+- cron.weekly 1130
+- logrotate.d 1072
+- DEC 170
+- declare built 572, 573
+- defined 1464
+- default shell keyword 723
+- defaultrouter file 396
+- Defect Tracking System 934
+- Delete directory using rmdir 115
+- file 54
+- file, rm 915, 1004
+- null nonrewinding 1004
+- major 370, 971, 1478
+- minor 970, 971, 1480
+- physical 1485
+- raw 972
+- tape 1003
+- tape, nonrewinding 1004
+- devplys systems 973
+- opt 113
+- pam.d 962, 1046
+- init.d 944
+- skel 966
+- sysconfig about 965, 1032
+- about 113
+- xinitit key 37
+- line 38
+- linking rm 130
+- Deletes key 37
+- Delimiter, regular expression 1384
+- Delta 1464
+- Demand mounting, filesystem 393, 979
+- dependency line (make) 850
+- depmod utility 1038
+- Dereference 1464
+- DES encryption 1409
+- xintrc.d 924, 397
+- xinctcd.d 397, 946
+- /home 113
+- /Lib lld, and 847
+- about 113
+- gcc, and 844, 1211
+- modules 114, 1038
+- security 1043, 1046
+- df utility 316, 392, 1147
+- DHCP 395, 1022, 1068
+- dhcped daemon 3950, 1028
+- dhcpd daemon 1028
+- Die, process 562
+- diff utility 73, 1135, 1149, 1274
+- diff, context 1153
+- dig utility 383
+# Directory continued
+- /lost+found 955
+- /mnt 114
+- /opt 114, 913, 931
+- /proc 114
+- /root 114
+- /sbin Superuser commands 897
+- /tmp 114, 657, 1082
+- /usr at 1094, bin 114
+- change using cd 108
+- child 881, 885
+- commit 882
+- export 884
+- import 885
+- log 880
+- release 885
+- remove 883
+- tag 884
+- update 883
+- vs utility 880, 1134
+- CVSEDITOR variable 1139
+- CVRSOOT variable 1138
+- cdw variable 707
+- cxx filename extension 852, 1213
+- Cycling, window 184
+- Cypher 1460
+- defined 1463
+- dhpcpd 395, 1028
+- dhpcd 395, 1028
+- finger 371
+- fingered 395, 1424
+- ftp 1180
+- ftpd 395, 1422
+- gated 396
+- gateway 396
+- gpm 395
+- htpd 393
+- ined 395
+- nippod 1023
+- kalamarn 389
+- lockd 395
+- login 1422
+- pd 395, 944, 1005, 1006, 1010, 1012, 1233
+- messages 968, 1067, 1071, 1417
+- name 394
+- naming 394
+- network 352, 394
+- nfs 1018
+- nnmbd 396
+- ntpd 396
+- portmap 396
+- postfix 1412
+- ppd 396, 1023, 1024
+- prefix in 394
+- rpc. 394
+- printer 395, 945
+- protocol 309
+- Lsa 992
+- rexcd 396, 1422
+- rhdm 938, 942
+- rolind 373, 1417
+- routed 396
+- routing 396
+- rshd 373, 1345, 1417
+- replacements, logda-mon 1422, 396
+- sendmail 396, 1050
+- services, providing 394
+- smbd 396
+- spooling 1012
+- sshd 374, 394, 396
+- Superuser, xeinted 115, 396, 1072, 1417
+- talkd 396, 1417, 1422
+- ftfpd 397
+- timed 397
+- xned 394, 397, 946
+- Data Encryption, see 150
+- Database
+- aliases 958, 1055
+- authentication 1418
+- CD-ROM 239, 332
+- dbm 555, 1055
+- DNS 388, 1021
+- domain names 555, 1021
+- gdbm 555, 1055
+- group 391, 1469
+- hosts 908, 1050
+- hwconf 1050
+- Linux Software Map 1401
+- locale 1143
+- locate 77
+- magic number 967
+- page header 1252
+- NIS 368, 390, 391, 1482
+- partition, raw 993, 1022, 1469, 1477, 1499
+- printcap 963, 1011
+- RHN 936
+- rpm 1050
+- slocate 77, 228, 923
+- SQL 1494
+- system services 1472
+- whatis 79, 923
+- whois 385, 192, 198
+# Daemon
+- amd 393
+- apmd 394
+- autocomm 393, 994, 980
+- configure 947
+- crond 395
+- cupsd 1010
+- Datagram, network 353, 1464
+- Datagram-oriented protocol 361
+- Descriptor, top-down 819
+- defined 174, 1464
+- Digital area, see 326
+- Digital Corporation, see 1408
+- Digital Signature, see 128
+- DIR_COLORS 1238
+- Directory Dataless system 392, 1464
+- date 70, 150, 685, 1141
+- date display 70
+- dateconfig utility 985, 1056
+- dbm database 555, 1055
+- dd utility 1144
+- ddu utility 862, 867
+- Debugger about 857
+- dd 867
+- deached process 174
+- Device block 971, 147
+- driver 869, 969, 971, 1464
+- file 143, 1464
+- file, export 979, 1020
+- filename 15
+- dependence 113, 143, 1478
+- input and output 15
+- /etc 113
+- cron*. 395, 1130
+- cron.daily 1130
+- cron.hourly 1130
+- cron.weekly 1130
+- logrotate.d 1072
+- DEC 170
+- declare built 572, 573
+- defined 1464
+- default shell keyword 723
+- defaultrouter file 396
+- Defect Tracking System 934
+- Delete directory using rmdir 115
+- file 54
+- file, rm 915, 1004
+- null nonrewinding 1004
+- major 370, 971, 1478
+- minor 970, 971, 1480
+- physical 1485
+- raw 972
+- tape 1003
+- tape, nonrewinding 1004
+- devplys systems 973
+- opt 113
+- pam.d 962, 1046
+- init.d 944
+- skel 966
+- sysconfig about 965, 1032
+- about 113
+- xinitit key 37
+- line 38
+- linking rm 130
+- Deletes key 37
+- Delimiter, regular expression 1384
+- Delta 1464
+- Demand mounting, filesystem 393, 979
+- dependency line (make) 850
+- depmod utility 1038
+- Dereference 1464
+- DES encryption 1409
+- xintrc.d 924, 397
+- xinctcd.d 397, 946
+- /home 113
+- /Lib lld, and 847
+- about 113
+- gcc, and 844, 1211
+- modules 114, 1038
+- security 1043, 1046
+- df utility 316, 392, 1147
+- DHCP 395, 1022, 1068
+- dhcped daemon 3950, 1028
+- dhcpd daemon 1028
+- Die, process 562
+- diff utility 73, 1135, 1149, 1274
+- diff, context 1153
+- dig utility 383
+# Directory continued
+- /lost+found 955
+- /mnt 114
+- /opt 114, 913, 931
+- /proc 114
+- /root 114
+- /sbin Superuser commands 897
+- /tmp 114, 657, 1082
+- /usr at 1094, bin 114
+- change using cd 108
+- child 881, 885
+- commit 882
+- export 884
+- import 885
+- log 880
+- release 885
+- remove 883
+- tag 884
+- update 883
+- vs utility 880, 1134
+- CVSEDITOR variable 1139
+- CVRSOOT variable 1138
+- cdw variable 707
+- cxx filename extension 852, 1213
+- Cycling, window 184
+- Cypher 1460
+- defined 1463
+- dhpcpd 395, 1028
+- dhpcd 395, 1028
+- finger 371
+- fingered 395, 1424
+- ftp 1180
+- ftpd 395, 1422
+- gated 396
+- gateway 396
+- gpm 395
+- htpd 393
+- ined 395
+- nippod 1023
+- kalamarn 389
+- lockd 395
+- login 1422
+- pd 395, 944, 1005, 1006, 1010, 1012, 1233
+- messages 968, 1067, 1071, 1417
+- name 394
+- naming 394
+- network 352, 394
+- nfs 1018
+- nnmbd 396
+- ntpd 396
+- portmap 396
+- postfix 1412
+- ppd 396, 1023, 1024
+- prefix in 394
+- rpc. 394
+- printer 395, 945
+- protocol 309
+- Lsa 992
+- rexcd 396, 1422
+- rhdm 938, 942
+- rolind 373, 1417
+- routed 396
+- routing 396
+- rshd 373, 1345, 1417
+- replacements, logda-mon 1422, 396
+- sendmail 396, 1050
+- services, providing 394
+- smbd 396
+- spooling 1012
+- sshd 374, 394, 396
+- Superuser, xeinted 115, 396, 1072, 1417
+- talkd 396, 1417, 1422
+- ftfpd 397
+- timed 397
+- xned 394, 397, 946
+- Data Encryption, see 150
+- Database
+- aliases 958, 1055
+- authentication 1418
+- CD-ROM 239, 332
+- dbm 555, 1055
+- DNS 388, 1021
+- domain names 555, 1021
+- gdbm 555, 1055
+- group 391, 1469
+- hosts 908, 1050
+- hwconf 1050
+- Linux Software Map 1401
+- locale 1143
+- locate 77
+- magic number 967
+- page header 1252
+- NIS 368, 390, 391, 1482
+- partition, raw 993, 1022, 1469, 1477, 1499
+- printcap 963, 1011
+- RHN 936
+- rpm 1050
+- slocate 77, 228, 923
+- SQL 1494
+- system services 1472
+- whatis 79, 923
+- whois 385, 192, 198
+# Daemon
+- amd 393
+- apmd 394
+- autocomm 393, 994, 980
+- configure 947
+- crond 395
+- cupsd 1010
+- Datagram, network 353, 1464
+- Datagram-oriented protocol 361
+- Descriptor, top-down 819
+- defined 174, 1464
+- Digital area, see 326
+- Digital Corporation, see 1408
+- Digital Signature, see 128
+- DIR_COLORS 1238
+- Directory Dataless system 392, 1464
+- date 70, 150, 685, 1141
+- date display 70
+- dateconfig utility 985, 1056
+- dbm database 555, 1055
+- dd utility 1144
+- ddu utility 862, 867
+- Debugger about 857
+- dd 867
+- deached process 174
+- Device block 971, 147
+- driver 869, 969, 971, 1464
+- file 143, 1464
+- file, export 979, 1020
+- filename 15
+- dependence 113, 143, 1478
+- input and output 15
+- /etc 113
+- cron*. 395, 1130
+- cron.daily 1130
+- cron.hourly 1130
+- cron.weekly 1130
+- logrotate.d 1072
+- DEC 170
+- declare built 572, 573
+- defined 1464
+- default shell keyword 723
+- defaultrouter file 396
+- Defect Tracking System 934
+- Delete directory using rmdir 115
+- file 54
+- file, rm 915, 1004
+- null nonrewinding 1004
+- major 370, 971, 1478
+- minor 970, 971, 1480
+- physical 1485
+- raw 972
+- tape 1003
+- tape, nonrewinding 1004
+- devplys systems 973
+- opt 113
+- pam.d 962, 1046
+- init.d 944
+- skel 966
+- sysconfig about 965, 1032
+- about 113
+- xinitit key 37
+- line 38
+- linking rm 130
+- Deletes key 37
+- Delimiter, regular expression 1384
+- Delta 1464
+- Demand mounting, filesystem 393, 979
+- dependency line (make) 850
+- depmod utility 1038
+- Dereference 1464
+- DES encryption 1409
+- xintrc.d 924, 397
+- xinctcd.d 397, 946
+- /home 113
+- /Lib lld, and 847
+- about 113
+- gcc, and 844, 1211
+- modules 114, 1038
+- security 1043, 1046
+- df utility 316, 392, 1147
+- DHCP 395, 1022, 1068
+- dhcped daemon 3950, 1028
+- dhcpd daemon 1028
+- Die, process 562
+- diff utility 73, 1135, 1149, 1274
+- diff, context 1153
+- dig utility 383
+# Directory continued
+- /lost+found 955
+- /mnt 114
+- /opt 114, 913, 931
+- /proc 114
+- /root 114
+- /sbin Superuser commands 897
+- /tmp 114, 657, 1082
+- /usr at 1094, bin 114
+- change using cd 108
+- child 881, 885
+- commit 882
+- export 884
+- import 885
+- log 880
+- release 885
+- remove 883
+- tag 884
+- update 883
+- vs utility 880, 1134
+- CVSEDITOR variable 1139
+- CVRSOOT variable 1138
+- cdw variable 707
+- cxx filename extension 852, 1213
+- Cycling, window 184
+- Cypher 1460
+- defined 1463
+- dhpcpd 395, 1028
+- dhpcd 395, 1028
+- finger 371
+- fingered 395, 1424
+- ftp 1180
+- ftpd 395, 1422
+- gated 396
+- gateway 396
+- gpm 395
+- htpd 393
+- ined 395
+- nippod 1023
+- kalamarn 389
+- lockd 395
+- login 1422
+- pd 395, 944, 1005, 1006, 1010, 1012, 1233
+- messages 968, 1067, 1071, 1417
+- name 394
+- naming 394
+- network 352, 394
+- nfs 1018
+- nnmbd 396
+- ntpd 396
+- portmap 396
+- postfix 1412
+- ppd 396, 1023, 1024
+- prefix in 394
+- rpc. 394
+- printer 395, 945
+- protocol 309
+- Lsa 992
+- rexcd 396, 1422
+- rhdm 938, 942
+- rolind 373, 1417
+- routed 396
+- routing 396
+- rshd 373, 1345, 1417
+- replacements, logda-mon 1422, 396
+- sendmail 396, 1050
+- services, providing 394
+- smbd 396
+- spooling 1012
+- sshd 374, 394, 396
+- Superuser, xeinted 115, 396, 1072, 1417
+- talkd 396, 1417, 1422
+- ftfpd 397
+- timed 397
+- xned 394, 397, 946
+- Data Encryption, see 150
+- Database
+- aliases 958, 1055
+- authentication 1418
+- CD-ROM 239, 332
+- dbm 555, 1055
+- DNS 388, 1021
+- domain names 555, 1021
+- gdbm 555, 1055
+- group 391, 1469
+- hosts 908, 1050
+- hwconf 1050
+- Linux Software Map 1401
+- locale 1143
+- locate 77
+- magic number 967
+- page header 1252
+- NIS 368, 390, 391, 1482
+- partition, raw 993, 1022, 1469, 1477, 1499
+- printcap 963, 1011
+- RHN 936
+- rpm 1050
+- slocate 77, 228, 923
+- SQL 1494
+- system services 1472
+- whatis 79, 923
+- whois 385, 192, 198
+# Daemon
+- amd 393
+- apmd 394
+- autocomm 393, 994, 980
+- configure 947
+- crond 395
+- cupsd 1010
+- Datagram, network 353, 1464
+- Datagram-oriented protocol 361
+- Descriptor, top-down 819
+- defined 174, 1464
+- Digital area, see 326
+- Digital Corporation, see 1408
+- Digital Signature, see 128
+- DIR_COLORS 1238
+- Directory Dataless system 392, 1464
+- date 70, 150, 685, 1141
+- date display 70
+- dateconfig utility 985, 1056
+- dbm database 555, 1055
+- dd utility 1144
+- ddu utility 862, 867
+- Debugger about 857
+- dd 867
+- deached process 174
+- Device block 971, 147
+- driver 869, 969, 971, 1464
+- file 143, 1464
+- file, export 979, 1020
+- filename 15
+- dependence 113, 143, 1478
+- input and output 15
+- /etc 113
+- cron*. 395, 1130
+- cron.daily 1130
+- cron.hourly 1130
+- cron.weekly 1130
+- logrotate.d 1072
+- DEC 170
+- declare built 572, 573
+- defined 1464
+- default shell keyword 723
+- defaultrouter file 396
+- Defect Tracking System 934
+- Delete directory using rmdir 115
+- file 54
+- file, rm 915, 1004
+- null nonrewinding 1004
+- major 370, 971, 1478
+- minor 970, 971, 1480
+- physical 1485
+- raw 972
+- tape 1003
+- tape, nonrewinding 1004
+- devplys systems 973
+- opt 113
+- pam.d 962, 1046
+- init.d 944
+- skel 966
+- sysconfig about 965, 1032
+- about 113
+- xinitit key 37
+- line 38
+- linking rm 130
+- Deletes key 37
+- Delimiter, regular expression 1384
+- Delta 1464
+- Demand mounting, filesystem 393, 979
+- dependency line (make) 850
+- depmod utility 1038
+- Dereference 1464
+- DES encryption 1409
+- xintrc.d 924, 397
+- xinctcd.d 397, 946
+- /home 113
+- /Lib lld, and 847
+- about 113
+- gcc, and 844, 1211
+- modules 114, 1038
+- security 1043, 1046
+- df utility 316, 392, 1147
+- DHCP 395, 1022, 1068
+- dhcped daemon 3950, 1028
+- dhcpd daemon 1028
+- Die, process 562
+- diff utility 73, 1135, 1149, 1274
+- diff, context 1153
+- dig utility 383

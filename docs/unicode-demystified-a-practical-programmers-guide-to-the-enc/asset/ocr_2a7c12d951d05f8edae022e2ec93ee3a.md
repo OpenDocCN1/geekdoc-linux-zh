@@ -1,0 +1,13 @@
+# KDE Control Center-> Look & Feel (Continued)
+
+| Clicks on the desktop | Specifies what happens when you click each of the mouse buttons on the root window. |
+| Appearance | Controls the workspace font color and size. Text Background Control the color of the box around the icon labels on the workspace. If you do not check this box, there will be no text background so you will see the wallpaper or color. If you choose to underline filenames, readability may be improved. |
+| Number of Desktops | Use the slider to specify the number of workspaces you want. Change the workspace names in the text boxes. |
+| Paths | Specifies where files that control KDE are located. Be careful: Changing these files can cause your desktop to stop working. You can change the Desktop path (where desktop information is stored), Trash path, Autostart path (page 346), and the Documents path (where you keep your documents). When you change one of these paths KDE, moves files in the old directory to the new one. |
+| Fonts | Controls the size and style of fonts that KDE uses for various tasks. Use Anti-Aliasing for fonts to turn antialiasing (page 1454). |
+| Icons | |
+| Theme | Allows you to install a new theme, remove existing one, or select a theme from the window. Click each selection, and watch the icons at the top of the window change. Additional themes available at www.kde-look.org. The default theme under Red Hat is Blueberry |
+| Advanced | Specifies configuration for icons that are used for different purposes. Select from the Icon list, and then specify how these icons are to appear in the rest of this tab. The right of this list, you can specify the size of the icons in pixels: double-sized pixels for larger, blurry icons, and Blend alpha channel for smooth transitions between icons and their backgrounds. Blend alpha channel can make icons flicker, so you may not want to use it. 
+The lower portion of the Advanced tab controls how the icons appear in their default, active (when the mouse pointer is over them), and disabled states. Click the Set Effect button that appears below the state you want to change. |
+| Launch Feedback | |
+| Busy Cursor | Displays a cursor showing some action when you start a program. It is easy to see this cursor when you start KDE. You can choose to have the cursor blink. Because some programs may not recognize the busy cursor, Startup timeout specifies the number of seconds before the busy cursor is turned off. |
