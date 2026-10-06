@@ -1,0 +1,15 @@
+# 14.1 Processor cache organization 253
+
+The highest tier is the Level 1 (L1) cache. Originally, this cache was introduced in the 80486 as a unified cache, meaning that it stored instructions and data. Starting with the P6 microarchitecture, there are two separate L1 caches, one dedicated to storing instructions and one dedicated to data. A cache that only stores instructions is referred to as an icache. Conversely, a cache that only stores data is referred to as a dache. The P6 microarchitecture also added a Level 2 (L2) cache. Both L1 and the L2 caches are duplicated per-core, and shared between the core's Hyper-Threads. On the other hand, the unified Level 3 (L3) cache is an unresource, i.e., it is shared by all of the processor's cores.
+
+When the execution unit needs a load of memory, the L1 cache is searched. In the case where the needed memory is found, it is simply copied from the cache. On the other hand, in case of a L1 cache miss, the L2 is searched next, and so on. This process repeats until data is found in one of the caches, or a cache miss in the LLC forces the memory request to access physical memory. In the case where the data request miss was satisfied from a different cache level, the data is loaded into the L1 first, and is provided to the processor.
+
+At this point, the reader may be wondering how such large caches are searched so quickly. An exhaustive iterative search wouldn't be capable of meeting the performance requirements needed from the cache. In order to answer this question, the internal organization of cache must be explained.
+
+Architecture uses a-way associative cache. A set is a block of memory, comprised of a fixed size memory chunks, each referred to as a cache line, form the basic building block of the cache. The number of ways indicates how many cache lines are in each set (Gerber et al., 2006).
+
+To reduce the number of entries that must be searched for a given address, each set is designated to hold entries from a range of addresses. Therefore, when searching for a specific entry, only the appropriate set must be checked, reducing the number of possible entries that require searching to the number of ways. Each set is encoded to a range of physical addresses.
+
+# 14.1.1 CACHE LINES
+
+Fundament, the concept of a cache line represents a paradigm shift in memory organization. Previously, memory could be considered occurring on demand, and in the size requested. For example, if the processor loaded a word, the corresponding address would be translated into a physical address, which would then be fetched as a word. As a result, if the address of the word was unaligned, it would require the processor to perform two loads and then splice the results together, making the memory access more expensive. With the introduction of cache lines, the execution unit no longer fetches data from memory directly, instead all data memory requests, except for two exceptions, are satisfied from the L1 cache. As a result, all requests to physical memory occur in the

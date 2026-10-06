@@ -1,0 +1,1 @@
+> This book is dedicated to God, my wife Riley, my mother and father, my brother Stephen, my friends, colleagues at Intel, and everyone who helped me with this book.

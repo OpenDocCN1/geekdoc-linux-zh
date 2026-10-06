@@ -1,0 +1,1 @@
+Intel® Pentium® (Israel, 1996).
