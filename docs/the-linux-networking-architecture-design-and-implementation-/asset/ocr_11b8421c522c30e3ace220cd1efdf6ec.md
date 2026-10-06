@@ -1,0 +1,17 @@
+# Chapter 14 The Internet Protocol V4
+
+We use ip_queue_xmit() to pack a transport-layer PDU into an IP packet and send it. Other functions are available to generate IP packets at the boundary with the transport layer. These functions and the operation of ip_queue_xmit() will be described in Section 14.2.2.
+
+With the third option, the IP layer generates IP packets itself, on the Internet Protocol's initiative. These are mainly multicast packets, new fragments of a large packet, and ICMP or IGMP packets that don't include a special payload. Such packets are created by specific methods (e.g., icmp_xnd()). (See Section 14.4.)
+
+Once a packet (or socket buffer) has entered the IP layer, there are several options for how it can exit. We generally distinguish two roles a computer can assume with regard to the Internet Protocol, where the first case is a special case of the second:
+
++   - End system: A Linux computer is normally configured as an end system—it is used as a workstation or server, assuming primarily the task of running user applications or providing application services. Also, a Web server and a network printer are not end systems (with regard to the IP layer). The basic property of end systems is that they do not forward IP packets. This means that you can recognize an end system easily by the fact that it has only one network adapter. Even a system with several network accesses can be configured as a host, if packet forwarding is disabled.
+
++   - Router: A router passes IP packets arriving in a network adapter to a second network adapter. This means that a router has several network adapters that forward packets between these interfaces. When packets arrive in a router, there are generally two options: they can deliver packets locally (i.e., deliver them to the transport layer) or they can forward them. The first case is identical to the procedure of packets arriving in an end system, where packets are always delivered locally. Consequently, a router can be thought of a generalization of an end system, with the additional capability of forwarding packets. In contrast to end systems, generally no applications are started in routers, to ensure that packets can be forwarded as fast as possible.
+
+Linux lets you enable and disable the packet-forwarding mechanism at runtime, provided that the forwarding support was integrated when the kernel was created. The directory /proc/sys/net/ipv4/ contains a virtual file, ip_forward. You will see in Appendix B3 that there is a way to change system settings from the proc directory. A 0 is written to this file, then packet forwarding is disabled. To activate IP forwarding, you can use the command '1' > /proc/sys/net/ipv4/ip_forward.
+
+Figure 14-4 shows how an IP packet takes across the Internet Protocol implementation in Linux. The gray ovals represent functions, and the rectangles show the position of the netfilter hooks in the Internet Protocol.
+
+The following sections describe paths a packet can take across the IP implementation in the Linux kernel. We begin with incoming packets, which have to be either forwarded or delivered locally. The next section describes how packets are passed from the transport layer to IP.
