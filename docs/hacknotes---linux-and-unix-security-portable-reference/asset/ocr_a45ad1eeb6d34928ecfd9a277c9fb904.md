@@ -1,0 +1,14 @@
+# HACK NOTES
+
+A Must-Have Resource for Critical Security Information
+
+# Linux and Unix Security
+
+Portable Reference
+
++   - Learn how hackers break into Linux and Unix systems
+- Secure your systems against the most sophisticated hackers
+- Get concise coverage of Linux and Unix security tools and best practices
+- Guard against advanced intrusion tactics such as buffer overflow attacks, port redirection, network sniffing, and more
+
+Nitesh Dhanjani

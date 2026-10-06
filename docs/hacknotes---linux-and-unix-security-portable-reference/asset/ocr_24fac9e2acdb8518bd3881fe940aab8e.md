@@ -1,0 +1,27 @@
+# Recognizing Services Running on Nonstandard Ports
+
+Any of the services listed here can be configured to listen on a nonstandard port. Tools such as Amap, available at http://www.thehackerschoice.com/releases.php, can be used to determine services listening on un- or nonstandard ports:
+
+```
+$bash amap -st intranet.somecompanyanexample.com 9934
+Total amount of tasks to perform: 15
+Amap v1.2.1b started at Sun Mar 9 09:30:22 2003, stand back and keep the children away.
+Protocol on IP 192.168.1.3 port 9934 tcp matches ssl
+Protocol on IP 192.168.1.3 port 9934 tcp matches http
+Unidentified ports: None.
+Amap v1.2.1b ended at Sun Mar 9 09:30:59 2003
+```
+
+In this example, Amap successfully discovered that host intranet.somecompanyanexample.com was HTTPS on port 9934. This is useful information, since the standard port for HTTPS is 443.
+
+# Block and Stop Unnecessary Services
+
+Some services are configured to accept connections from any source IP address. For example, an HTTP server for an e-commerce organization must accept connections from any IP address to allow remote users in all locations to view the organization's web site. In such a case, it is impossible for an organization to hide the fact that they are running an HTTP server.
+
+However, depending on the organization's requirements and network architecture, some services may only expect connections originating from authorized IP addresses. In such cases, firewall rules should be in place to ensure that connections originating from unauthorized IP addresses are blocked. In addition, unnecessary services must be turned off or blocked by firewall rules. This will prevent exploitation and identification of services that should not be accessible by unauthorized hosts.
+
+# FTP (File Transfer Protocol): 21 (TCP)
+
+FTP is a protocol for transferring files from one host to the other.
+
+Brute-Forcing It is possible to brute-force FTP accounts by using Hydra.
