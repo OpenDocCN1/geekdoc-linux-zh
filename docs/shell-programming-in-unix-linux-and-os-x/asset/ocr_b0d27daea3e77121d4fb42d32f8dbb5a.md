@@ -1,0 +1,3 @@
+![](bbox=[0.273, 0.231, 0.788, 0.473])
+
+An iconic symbol of the American West, **Monument Valley** is one of the natural wonders of the world. The red-sand desert region is located within the range of the Navajo Nation on the Arizona-Utah border and is host to towering sandstone rock formations that have been sculpted over time and soar 400 to 1,000 feet above the valley floor. Three of the valley's most photographed peaks are the distinctive East and West Mitten Buttes and Merrick Butte.
