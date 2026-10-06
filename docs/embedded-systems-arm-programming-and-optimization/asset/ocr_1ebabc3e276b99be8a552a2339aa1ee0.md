@@ -1,0 +1,7 @@
+3. Change the Horner example such that the coefficient array is allocated in local memory. How does this impact the performance results from Tables 5.2–5.4.
+
++   4. Use OpenCL to implement the image transformation example from Chapter 3. Use fixed-point datatypes. Write the kernel that it uses SIMD operations to calculate the interpolated values for 16 destination pixels in parallel. Invoke the kernel for all the pixels simultaneously. Calculate the resultant performance in frames per second and compare to that of your embedded CPU.
+
++   5. Use OpenCL to implement the Mandelbrot set generator from Chapter 3. Use floating-point datatypes. Write the kernel that it calculates the color value for a particular pixel given its coordinates and the x- and y-range. Invoke the kernel for all the pixels simultaneously. Calculate the resultant performance in frames per second and compare to that of your embedded CPU.
+
++   6. Use OpenCL to implement the tiled Sobel filter from Chapter 4. Copy the entire frame to the device memory before dispatching the kernel. Begin by processing each output pixel with each work item. Then change the code such that each work item processes one tile. Finally, change the kernel such that it buffers each input tile in local memory before processing it. What is the achieved performance in Gflops in each of these three cases?
