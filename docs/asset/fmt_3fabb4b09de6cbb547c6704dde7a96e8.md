@@ -1,0 +1,106 @@
+
+# Linux 网络 HOWTO
+
+可在 `www.lrz-muenchen.de` 获取。（您可以点击英文国旗以获取英文版本）。
+
+关于 PPP 的说明。PPP 协议族可以在异步或同步串行线上运行。Linux 常用的分发 PPP 守护进程 `pppd` 仅支持异步模式。如果你想在你的 ISDN 服务上运行 PPP 协议，你需要一个经过特殊修改的版本。关于在哪里找到该版本的详细信息，请参阅上述的文档。本节对你有帮助吗？为什么不捐赠 $2.50 ？
+
+## 11.2. Linux PLIP–2.0
+
+PLIP 设备名称为 `plip0`、`plip1` 和 `plip2`。
+
+### 内核编译选项：
+
+```
+Network device support --->
+<*> PLIP (parallel port) support
+```
+
+PLIP（并行线 IP）与 SLIP 类似，它们都用于在两台机器之间提供点对点网络。然而，你可以使用机器上的并行打印端口。它不使用串口端口（本文后文的接线图中包含一张接线图）。由于并行端口可以一次传输多个位，因此可以使用 PLIP 接口获得更高的速度。PLIP 获得的速度将高于使用标准设备的速度。此外，即使是最简单的并行打印端口都可以使用（而无需你为你的串口购买相当昂贵的 16550AFN）。PLIP 使用大量的 CPU 来转换为串行链路。例如，如果你能获得一些网卡，那么它不是一个好的选择。但是，当所有资源都可用时，它可以工作（而且运行得相当不错）。当链路运行时，你应该获得大约每秒 20 千字节的数据传输率。
+
+PLIP 驱动程序与并行设备驱动程序竞争并行端口硬件。如果你想同时使用这两个驱动程序，应该将它们编译为模块。这确保了你能够选择想要用于 PLIP 的端口，并可以为打印机驱动程序选择哪些端口。有关内核模块配置的更多信息，请参阅 `Modules-HOWTO`。
+
+请注意，某些笔记本电脑无法配合 PLIP。这些笔记本电脑不支持信号组合。PLIP 依赖这些信号，但打印机并不使用。
+
+PLIP 接口兼容 Cynwyr 数据包驱动 PLIP！这意味着你可以通过 PLIP 将 Linux 机器连接到运行任何其他 tcp/ip 软件的 DOS 机器。
+
+在 2.0* 系列中，内核设备映射到 I/O 端口和 IRQ 如下：
+
+| device | i/o | IRQ |
+|---|---|---|
+| plip0 | 0x3bc | 5 |
+| plip1 | 0x378 | 7 |
+| plip2 | 0x278 | 2 |
+
+如果你的端口与上述任何组合都不匹配，你可以更改端口的 IRQ。使用 `ifconfig` 命令配合 `irq` 参数来更改 IRQ（如果你的 ROM BIOS 支持此选项，则可以在你的打印机端口上启用 IRQ）。作为替代，你可以在 `insmod` 行中指定 `io=` `irq=` 选项（如果你使用模块）：
+
+```
+root# insmod plip.io io=0x288 irq=5
+```
+
+PLIP 操作由两个超时限制控制；它们的默认值在大多数情况下可能是的。如果你有一台特别慢的电脑，很可能需要增加它们。当涉及到计时器时，另一台计算机上的实际增加。一个名为 `plipconfig` 的程序允许你在无需重新编译内核的情况下更改这些计时器设置。该程序随许多 Linux 发行版提供。
+
+要配置 PLIP 接口，你需要遵循以下命令（或将它们添加到你的初始化脚本中）：
+
+```
+# /sbin/ifconfig plip localplip point remoteplip
+# /sbin/route add remoteplip plip
+```
+
+在这里，使用的端口位于 I/O 地址 `0x378`；`localplip` 和 `remoteplip` 是在 PLIP 电缆上使用的名称或 IP 地址。我个人将它们保留在我的 `/etc/hosts` 数据库中：
+
+```
+# plip entries
+192.168.3.1 localplip
+192.168.3.2 remoteplip
+```
+
+`pointpoint` 参数与 SLIP 的含义相同。它指定了链路另一端机器的地址。
+
+在各方面，你可以像信任 SLIP 接口一样信任 PLIP 接口。然而，`dip` 或 `slattach` 无法使用。
+
+关于 PLIP 的更多信息可以从 `PLIP mini-HOWTO` 获取。
+
+## 11.2.1. Linux PLIP–2.2
+
+在 2.1 内核版本的开发期间，对并行端口的支持更改为改进后的设置。
+
+### 内核编译选项：
+
+```
+General setup --->
+[*] Parallel port support
+Network device support --->
+<--> PLIP (parallel port) support
+```
+
+PLIP 的新代码行为与旧代码类似。你可以像上一节一样使用 `ifconfig` 和 `route` 命令。然而，由于高级的并行端口支持，设备的初始化是不同的。
+
+“第一个”PLIP 设备始终被称为 `plip0`（其中第一个是系统检测到的第一个设备；类似于以太网设备发生的情况）。实际使用的并行端口是可用端口之一，如 `/proc/parport` 所示。例如，如果你只有一个并行端口，你将只有一个名为 `/proc/parport` 的目录。
+
+## 11.2.2. Linux PLIP–2.2
+
+如果你的端口不匹配上述任何组合，你可以更改端口的 IRQ。使用 `ifconfig` 命令配合 `irq` 参数来更改 IRQ（如果你的 ROM BIOS 支持此选项，则可以在你的打印机端口上启用 IRQ）。作为替代，你可以在 `insmod` 行中指定 `io=` `irq=` 选项（如果你使用模块）：
+
+```
+root# insmod plip.io io=0x288 irq=5
+```
+
+PLIP 操作由两个超时限制控制；它们的默认值在大多数情况下可能是的。如果你有一台特别慢的电脑，很可能需要增加它们。当涉及到计时器时，另一台计算机上的实际增加。一个名为 `plipconfig` 的程序允许你在无需重新编译内核的情况下更改这些计时器设置。该程序随许多 Linux 发行版提供。
+
+要配置 PLIP 接口，你需要遵循以下命令（或将它们添加到你的初始化脚本中）：
+
+```
+# /sbin/ifconfig plip localplip point remoteplip
+# /sbin/route add remoteplip plip
+```
+
+在这里，使用的端口位于 I/O 地址 `0x378`；`localplip` 和 `remoteplip` 是在 PLIP 电缆上使用的名称或 IP 地址。我个人将它们保留在我的 `/etc/hosts` 数据库中：
+
+```
+# plip entries
+192.168.3.1 localplip
+192.168.3.2 remoteplip
+```
+
+`pointpoint` 参数与 SLIP 的含义相同。它指定了链路另一端机器的地址。
