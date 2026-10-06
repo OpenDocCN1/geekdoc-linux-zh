@@ -1,0 +1,94 @@
+
+**图 6.29** zSeries 的简化 `GET DIAGNOSTICS` 语法图。
+
+信息类型分为三个部分：语句信息、连接信息和条件信息。表 6.3 列出了使用 `GET DIAGNOSTICS` 语句可以获得的所有键。
+
+# 表 6.3 从 zSeries GET DIAGNOSTICS 语句获取的可用信息
+
+| 信息类型 | 信息关键字 |
+|---|---|
+| STATEMENT | DB2_LAST_ROW |
+| | DB2_NUMBER_PARAMETER_MARKERS |
+| | DB2_NUMBER_RESULT_SETS |
+| | DB2_RETURN_STATUS |
+| | DB2_SQL_ATTR_CURSOR_HOLD |
+| | DB2_SQL_ATTR_CURSOR_ROWSET |
+| | DB2_SQL_ATTR_CURSOR_SCROLLABLE |
+| | DB2_SQL_ATTR_CURSOR_SENSITIVITY |
+| | DB2_SQL_ATTR_CURSOR_TYPE |
+| | MORE |
+| | NUMBER |
+| | ROW_COUNT |
+| CONNECTION | DB2_AUTHENTICATION_TYPE |
+| | DB2_AUTHORIZATION_ID |
+| | DB2_CONNECTION_STATE |
+| | DB2_CONNECTION_STATUS |
+| | DB2_CONNECTION_TYPE |
+| | DB2_DDM_SERVER_CLASS_NAME |
+| | DB2_PRODUCT_ID |
+| CONDITION | CATALOG_NAME |
+| | CONDITION_NUMBER |
+| | CURSOR_NAME |
+| | DB2_ERROR_CODE1 |
+| | DB2_ERROR_CODE2 |
+| | DB2_ERROR_CODE3 |
+| | DB2_ERROR_CODE4 |
+| | DB2_INTERNAL_ERROR_POINTER |
+| | DB2_MESSAGE_ID |
+| | DB2_MODULE_DETECTING_ERROR |
+| | DB2_ORDINAL_TOKEN_n |
+| | DB2_REASON_CODE |
+| | DB2_RETURNED_SQLCODE |
+| | DB2_ROW_NUMBER |
+| | DB2_SQLERRD_SET |
+| | DB2_SQLERRRD1 |
+| | DB2_SQLERRRD2 |
+| | DB2_SQLERRRD3 |
+| | DB2_SQLERRRD4 |
+| | DB2_SQLERRRD5 |
+| | DB2_SQLERRRD6 |
+| | DB2_TOKEN_COUNT |
+| | MESSAGE_TEXT |
+| | RETURNED_SQLSTATE |
+| | SERVER_NAME |
+
+早些讨论的 LUW 某些选项也适用，但 zSeries 中的 `MESSAGE_text` 仅返回消息文本，而不是 `SQLCODE` 或 `SQLSTATE`。对于之前所示的示例，`MESSAGE_text` 返回了
+
+`SQL0727N` 在执行隐式系统操作类型 `"1"` 时发生错误。返回的错误信息包括 `SQLCODE` `"-204"`，`SQLSTATE` `"42704"` 以及消息标记 `"DB2ADMIN.EMPLOYEE"`。`SQLSTATE=56098`
+
+`DB2` for zSeries 仅返回：
+
+`DB2ADMIN.EMPLOYEE IS AN UNDEFINED NAME`
+
+如前所述，`DB2` for zSeries 的 `DB2 UDB` 不支持关键词 `DB2_TOKEN_STRING` 关键字。然而，其他不同关键字的组合可能提供类似的信息。图 6.30 显示了一个 SQL 过程返回 `SQLCODE`、`SQLSTATE` 和消息文本信息的示例。该 SQL 过程还反映了图 6.19 所示的过程 `simple_error_token` 在 zSeries 中被返回的方式。请注意，此过程也适用于 iSeries。
+
+```sql
+CREATE PROCEDURE simple_error_token ( IN p_midinit CHAR
+                               ,IN p_empno CHAR(6)
+                               ,OUT p_sqlcode_out INT
+                               ,OUT p_sqlstate_out CHAR(5))
+```
+
+## DB2 UDB for zSeries 考虑因素
+
+```sql
+OUT p_token_string VARCHAR(100 )
+LANGUAGE SQL
+-- SPECIFIC simple_error_token
+WLM ENVIRONMENT <env> -- 适用于 iSeries
+-- 适用于 zSeries
+set: BEGIN
+-- 声明变量
+DECLARE SQLSTATE CHAR(5) DEFAULT '00000';
+DECLARE SQLCODE INT DEFAULT 0;
+-- 声明条件处理器
+DECLARE EXIT HANDLER FOR SQLEXCEPTION
+GET DIAGNOSTICS EXCEPTION 1 p_sqlcode_out = DB2_RETURNED_SQLCODE,
+p_sqlstate_out = RETURNED_SQLSTATE,
+p_token_string = MESSAGE_TEXT; -- (1)
+-- 过程逻辑
+SET p_token_string = '';
+VALUES (SQLCODE, SQLSTATE)
+TO p_sqlcode_out
+p_sqlstate_out
+```
