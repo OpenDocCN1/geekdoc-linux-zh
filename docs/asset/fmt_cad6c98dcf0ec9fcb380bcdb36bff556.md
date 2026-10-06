@@ -1,0 +1,400 @@
+
+- 卷组 (VGs), 83
+- 使用 RAID, 81–85
+- 检查 RAID, 81
+- 类型, 78–81
+- `passwd` 指令, 407
+- 密码, 173
+- `passwd` 命令, 324, 376, 382, 411
+- `passwd` 文件, 379
+- `passwd` 映射, 383
+- `passwd.by` 文件, 38
+- `PASSWORD` 命令, 274
+- `PASSWORD()` 函数, 266
+- `PASSWORD` 信息, 90
+- 密码管理, 167
+- 密码属性, 3
+- 密码类型, 361–462
+- 路径参数, 327
+- 路径, 39
+- 模式, 46
+- 支付卡行业 (PCI), 90
+- 支付卡行业 (PCI), 90
+- PKCS#7 密钥转换为 DER, 179
+- `peer` 命令, 239
+- `peer_host` 指令, 255
+- PKCS#12 密钥转换为 DER, 179
+- PKCS#12 密钥转换为 DER, 179, 379
+- PKCS#7 密钥转换为 DER, 179
+- PEM 编码, 178
+- `.pem` 扩展, 178
+- PEM 密钥转换为 DER, 179
+- PEM 密钥转换为 DER, 179
+- PEM 密钥转换为 DER, 179
+- `PEM.test` 文件, 420
+- Perl 模块, 400–401
+- `.pfx` 扩展, 178
+- `pg_dump` 工具, 278
+- `pg_hba.conf` 文件, 279–280
+- `pool.ntp` 文件, 238
+- 物理卷 (PVs), 83–84
+- `psql` 命令, 252
+
+PostgreSQL 数据库, 272–280
+- 备份, 379
+- 创建, 275
+- 删除, 275
+- 获取数据库列表, 277
+- 交互式终端, 273–274
+- `pg_hba.conf` 文件, 279–280
+- 权限, 275
+- 恢复, 278
+- 角色属性, 更改, 277
+- 角色, 274
+- 设置, 272–273
+- 启动, 273
+- 用户, 删除, 275
+
+# 索引
+
+- `--replacepkgs` 命令, 138
+- 仓库,为 YUM 软件包创建, 150–151, 源,为 YUM 软件包添加, 148–150
+- 第三方, 在线, 17
+- 变量, 149
+- `repquota -a` 命令, 101
+- `repquota -ag` 命令, 101
+- 需要控制值, 167, 170
+- 要求的控制值, 167
+- 救援环境, 457–461
+- 救援模式, 3
+- `resolv.conf` 文件, 250
+- 资源限制, 102–103
+- `restorecond` 命令, 194
+- `restorecond` 服务, 196
+- 恢复
+    - MySQL 数据库, 207–271
+    - PostgreSQL 数据库, 274
+- 重试属性, 254
+- 反向单引号 (), 343
+- 反向 DENSE, 222
+- 反向查找, 255
+
+## 检查并修改分区布局
+
+- 选项, 10–11
+- `REVOKE` 命令, 269, 276
+- RH-Firewall-1-INPUT 链, 208
+- `logtool` 工具, 227
+- `rm` 命令, 469
+- `rm -rf <directory>` 命令, 42
+- `rm scripts/test1/` 命令, 42
+- `rm` 工具, 35
+- `rmdir` 命令, 41
+- `rmdir` 工具, 35
+- `rmmod` 命令, 421–422
+- `rdc` keys, 243
+- `drcc` 工具, 243
+- `drcc.conf` 文件, 243–246
+- `drcc-confgen` 命令, 243
+- `drcc-confgen` 工具, 243
+- `ro` 选项, 316
+- `ro` 参数, 466
+- 角色, 在 PostgreSQL 中, 274–275
+- `root` (/) 目录, 18, 33–34, 464
+- 根证书, 171
+- `root` 命令, 433
+- `rootkit`, 181
+- `root` 参数, 466
+- 根分区, 11
+- `root` 密码, 16, 461–462
+- Root Password 属性, 2–3
+- 根服务器, 242
+- `root` 用户, 98, 186, 264, 271
+- `root=LABEL=/` 参数, 466
+- `root123` 密码, 266
+- `rootbindn` 选项, 404
+- `drootdn` 指令, 390
+- `/root/nssfile` 目录, 319–320
+- `/root/nssfile` 文件, 319
+- `drootwp` 指令, 391
+- `droot.txt` 文件, 47
+- 路由器, 使用 CentOS OS, 216–217
+- RPC (远程过程调用), 315
+- `rpc.clock` 进程, 318
+- `rpc.moundt` 进程, 318
+- `rpc.nfsd` 进程, 318
+- `rpc.statd` 进程, 318
+
+## RPM (Redhat 包管理器), 133–135
+
+- 文件名内容, 134–135
+- 监控文件系统, 182–185
+- `rpm` 命令, 135–145
+    - 增加输出, 137–138
+    - 导入密钥, 136–137
+    - 软件包的信息和文件内容, 141–142
+    - 安装软件包, 135–136
+- 软件包依赖, 128–139
+- 查询软件包, 140
+- 移除软件包, 140
+- 签名软件包, 136
+- 源码包, 142–145
+- 升级软件包, 139–140
+- 验证软件包, 137
+- + 软件包依赖, 138–139
+- 查询软件包, 141
+- 移除软件包, 140
+- 签名软件包, 136
+- 源码包, 142–145
+    - 从源码包构建二进制包, 144–145
+    - `pmbuild` 命令, 144
+    - `spec` 文件, 143–144
+- + 升级软件包, 139–140
+- 验证软件包, 137
+- `rpm -V` 命令, 182, 184
+- `rpm verify` 命令, 1184
+- `pmbuild`, 143–145
+- `RPM-GPG-Key-CentOS-5` 文件, 137
+- 在终端中运行命令, 120
+- 运行级别, 60–61
+- + `ScriptAlias` 指令, 298–299
+- 脚本, 创建和运行, 52–54
+- `scripts` 目录, 42
+- `scripts` 文件夹, 41
+- `sd` 前缀, 72
+- Seamonkey 互联网应用程序套件, 336
+- `search` 命令, 148
+- 在 YUM 中搜索软件包, 148
+- 二级 DNS 属性, 2–3
+- `second.live` 文件, 394
+- 密钥, 410
+- `section_name` 参数, 323
+- `SectionEntry` 节, 107
+- `SectionName` 节, 107
+- 安全认证与安全层 (SASL), 359
+- 安全日志文件, 154
+- Secure Shell, (Secure Shell)
+- 安全套接层 (SSL), 309–312, 359
+- 安全, 153–201
+- 使用 cron 自动化任务, 160–163
+- `cron.allow` 文件和 `cron.deny` 文件, 161
+- `contab` 命令, 161
+- `contab` 文件, 161–163
+- + `<shell>` 选项, 94, 95
+- 代码, 183
+- 符号, 38
+- Samba 服务器, 321–333
+    - 配置, 322–333
+    - 与 OpenLDAP 接口, 406–408
+    - 以及 OpenLDAP, 399
+- 打印机, 323–338
+- 独立服务器, 325–326
+- 用户, 324
+- `samba_username` 参数, 322
+- 存储区域网络 (SAN), 78
+- SASL (安全认证与层), 359
+- `sbin` 目录, 34
+- `schedule` 部分，任务, 161
+- `scp` 工具, 229
+- 屏幕分辨率, 4
+- `Screen` 节, `xorg.conf`, 109–110
+- `script` 目录, 40
+- + 证书, 172–175
+- 部署, 176–181
+- 概述, 171
+- 注入, 181–191
+- 使用 AIDE 监控文件系统, 185–185
+- 使用 RPM 监控文件系统, 182–185
+- 使用 Netfilter 监控网络, 188–191
+- 可插拔认证模块, 163–170
+- PAM 模块, 170
+- PAM 规则和配置文件, 165–168
+- 测试 PAM, 168–170
+- SELinux, 199–200
+- 访问向量, 199–200
+- 在上下文上填充, 194–199
+- 启用和禁用, 192–193
+- `setforce Permissive` 命令, 193
+- `--setperms` 子命令, 185
+- `setroubleshoot`, 199
+- `setsewd` 命令, 198
+- 设置标签, 68
+- `setuidos` 子命令, 185
+- `sh` 命令, 52, 62
+- `sh hello.sh`, 52
+- `sh logs.sh` 命令, 53
+- `sh logs.sh juan` 命令, 53
+- SHA1 算法, 137
+- `shadow` 文件, 462
+- 共享目录挂载, 318–321
+- 卸载, 319
+- `shared_directory` 命令, 318
+- `sharedDirectory` 命令, 320
+- 共享目录, 317–318
+- `shell`, 32
+- 桌面图标, 121
+- `SHOW TABLE` 命令, 282
+- 关 命令, 453
+- SID (安全描述符), 409
+- 签名证书, 179–180
+- RPM 签名软件包, 136
+- `sign-server-cert.sh` 文件, 180
+- 简单邮件传输协议 (SMTP), 336, 363–364
+- 单一参数, 58
+- 单用户模式, 466–467
+- Strain, Timo, 350
+- 跳 选项, 459–460
+- `slapped` 命令, 399
+- `slapauth` 命令, 399
+- `slcat` 命令, 399
+- `slapd` 命令, 386
+- `slapd.conf` 文件, 386–387, 390, 408
+- `smb.conf` 文件, 322–323, 325, 408
+- `smbldap-bind.conf` 文件, 408–409
+- `smbldap.conf` 文件, 408
+- `smbldap-populate` 命令, 410
+- `smbldap-tools`, 408–411
+    - 安装和配置, 409–411
+- `smbldap_bind.conf` 文件, 408–409
+- `smbldap.conf` 文件, 408
+- `smbldap-tools` 属性, 408
+- `smbldap-tools` 脚本, 408
+- `smbpasswd` 命令, 324
+- `smbusers` 文件, 322
+- SMTP (简单邮件传输协议), 336, SMTP, 326–364
+- `smtp` 值, `sendmail`, 339
+- `smtp_generic_maps` 参数, Postfix, 357
+- `smptd_client_requests` 参数, Postfix, 355
+- `snd-card-o` 模块, 419
+- `snd-hta-internal` 模块, 419
+- `sort` 工具, 156
+- SOA (起始权威) 记录, 253
+- `soft` 选项, 321
+- `sort` 命令, 45–46
+- `sort /etc/password`, 46
+- GNOME 桌面, 121
+- 源参数, 40
+- 源代码 (src), RPM, 135
+- 源机器, 154
+- 源码软件包, RPM, 142–145
+- 从源码包构建, 144–145
+- `build` 命令, 144
+- `spec` 文件, 143
+- `spec` 文件, RPM, 143
+- `sourceHost` 命令, 320
+- `sport` 参数, 212
+- `sport` (结构化查询语言), SQL, 261
+- `suid` 缓存服务器, 256–260
+- ACL 和 ACL-操作符, 258–259
+- `squid.conf` 文件, 256–258
+- 与 Squid 交互, 259–260
+- 网站, 260
+- `src` (源代码文件), RPM, 135
+- `srv` 目录, 341
+- `/srv/cert/` 文件, 172
+- SSH (Secure Shell), 22, 31, 227
+- 登录消息, 154
+- XWindow 中, 130–131
+- `ssh` 命令, 227
+- SSH 协议, 207
+- `ssh_host_dsa_key`, 229
+- `ssh_host_sa_pub_key`, 229
+- `ssh_host_rsa_key`, 229
+- `ssh_host_rsa_pub_key` 文件, 230
+- `ssh_host_rsa_pub_key` 文件, 229
+- `sshd_conf` 文件, 227
+- `ssh-keygen` 命令, 230–231
+- SSL (安全套接层), 309–359
+- `ssl_cert_file`, Dovecot, 360
+- `ssl_key_file`, Dovecot, 360
+- `ssl_key_password`, Dovecot, 361
+- `ssl.ca` 目录, 180
+- `ssl.conf` 文件, 310
+- `st` 节, 240
+- 独立服务器 选项, 406
+- 标准错误, 46
+- 标准输入, 46
+- 标准输出, 46
+- 起始权威 (SOA) 记录, 253
+- `State` 节, 444
+- `state` 模块, `tcpc` 协议, 212
+- 状态包检测, 208
+- `statue` 属性, 281
+- `statename` 属性, 281–282
+- `stues` 节, 276, 282
+- `stocklicer` 角色, 277
+- 存储区域网络 (SAN), 78
+- `storagesize` 值, 257
+- `storagetype` 值, 257
+- 存储数据. 查看数据 结构化查询语言 (SQL), 261
+- `su` 命令, 33, 160
+- `Subject` 字段, 174
+- `subjectAltName` 扩展, 181
+- `SubjectAttribute` 选项, 109
+- 足够控制值, 168
+- `suffix` 指令, 390
+- `suffix` 选项, 408
+- `suid` 命令, 200
+- `supplier` 角色, 276
+- 交换分区, 11
+- 切换 MTA, 350–351
+- 符号, 38
+- 符号 (@), 32
+- `nsymlink`, 38
+- 对称活动/被动模式, NTP 服务器, 238–239
+- `sync` 选项, 316
+- 在启动服务前同步时钟 选项, 66
+- `sys` 目录, 35
+- `syslog` 设施, 223
+- `syslog` 服务, 189
+- `syslog.conf` 文件, 154–158
+    - 操作, 157–158
+    - 选择器, 155–157
+- `sysload` 进程, 153
+- 系统时钟使用 UTC 选项, 15
+- `syslog` 日志器, 153
+- 检测入侵者, 158–160
+- `syslog.conf` 文件, 154–158
+    - 操作, 157–158
+    - 选择器, 155–157
+- 系统菜单, GNOME 桌面, 117–118
+- 系统监控菜单, 117
+- `sys-config-keyboard` 命令, 63
+- `sys-config-language` 命令, 64
+- `sys-config-network` 工具, 67
+- `sys-config-securitylevel` 命令, 32
+- `sys-config-securitylevel` 工具, 204, 205
+- `sys-config-selinux` 工具, 197
+- `sys-config-services` 工具, 62
+- `sys-config-switch-mail` 命令, CentOS, 305
+
+## T
+
+- + T 代码, 184
+- `table_name` 参数, 281
+- `tail` 命令, 44
+- `tail/var/log/messages` 命令, 154
+- 目标控制, 158
+- `target_attribute value`, 397
+- `target_database` 表, 273
+- `target_db` 表, 268
+- `target_domain` 命令, 451
+- `target_host` 表, 273
+- `target_IP_address` 命令, 235
+- `target_table` 表, 268
+
+## 索引
+
+`target_user` 语法, 265
+`target_user` 表, 268, 273
+`targetdirectory` 值, 257
+`targetdisplay` 属性, 129
+`targetdisplay` 命令, 126, 129
+`targetdomain` 命令, 443
+`targethost` 命令, 126, 129
+`targetoption`, 125
+任务, 163
+TCP 协议, 211–212
+TCP SYN 标志, 189
+`ttcp_wrappers` 工具, 218–222
+`telnet` 工具, 220, 227
