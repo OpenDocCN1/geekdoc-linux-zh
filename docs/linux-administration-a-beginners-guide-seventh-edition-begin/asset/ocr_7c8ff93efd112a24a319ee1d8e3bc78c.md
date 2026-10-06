@@ -1,0 +1,1 @@
+> NOTE If prompted for a username and password at any point throughout the process, type root as the user and enter root's password.
