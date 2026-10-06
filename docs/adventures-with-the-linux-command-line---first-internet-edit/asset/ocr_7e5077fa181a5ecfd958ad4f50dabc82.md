@@ -1,0 +1,1 @@
++   * 1963 Timesharing: A Solution to Computer Bottlenecks This YouTube video from MIT provides some historical perspective on the invention of interactive systems and the transition away from batch processing. The concepts presented here are still the basis of all modern computing. https://youtu.be/Q07PhW5sCEk
