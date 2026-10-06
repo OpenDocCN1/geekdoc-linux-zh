@@ -1,0 +1,333 @@
+
+
+## 824 索引 G–I
+
+gzip 程序
+- 压缩与解压, 362–363
+- 与 tar 归包配合, 364
+
+gzip 文件
+- 压缩与解压, 362–363
+- 从正则表达式中提取行, 278
+- PostScript 文件, 363
+- tar 归包, 73, 364
+- 解压并显示内容, 272
+
+## H
+
+- h 命令, 302
+- h 命令, 309
+- HAL, 104
+- 硬链接 (hard links)
+  - 创建, 58
+  - 列出, 345–346
+- 硬挂载 (hard mount), 585
+- SUSE Linux 硬件架构, 110
+- 硬件, 配置, 40–43. *亦包括设备*; 虚拟化硬件参数, DHCP 配置, 562
+- Harris, Jeffrey（《SUSE Linux and Novel Enterprise Server Administrator's Handbook》）, 796
+- 哈希字符 (#), 注释清除, 61, 448
+- HBA (主机总线适配器), 684
+- head 命令, 620
+- Heiner’s SHELLOR, 040
+- HELO, 472
+- 帮助. 参见文档
+  - 从 KDE 访问, 208
+  - 在线查找, 153
+  - SUSE Center, 141–142
+  - SUSE Linux 论坛, 149
+  - SUSE Portal, 168
+  - SUSE 公共邮件列表, 149
+  - SUSE Wiki, 119
+- 非官方 SUSE FAQ, 103–404
+- 惠尔 ( (HP)企业级硬件, 676
+- ext 编辑器, 355
+- 隐藏列表, 333–344
+- 高性能 (HP) 集群, 669
+- history 命令, 49
+- 命令历史
+  - emacs, 216
+  - shell, 49
+- Hofman, Paul (*Perl For Dummies*), 409
+- Hogbin, Emma Jane (*LDP Author Guide*), 146
+- 家目录, 创建的, 63
+- HOME 环境变量, 50
+- Home 键, 303, 304
+- /home 分区, 20, 21
+- .bashconf 文件中的 homes 章节, 521
+- Horton, David (*Pocket Linux Guide*), 146
+- 主机适配器 (HRA), 684
+- 主机模块, YAST, 225
+- 主机名 (host name), 设置, 32–33
+- 主机程序, 574–575
+- hostnamer, DNS, 577
+- HOWTOs (LDP Linux 文档), 145
+- HP (惠尔)企业级硬件, 676
+- hp (高性能) 集群, 669
+- .htaccess 文件, 453
+- html 文件
+  - 转换为 verve, 297
+  - html2text 命令, 297
+- htpasswd2 实用, 454
+- HTTP (超文本传输协议)
+  - 通过其下载文件, 433–434
+  - 安装, 4
+  - 使用 Telnet 测试, 426–427
+- HTTP Web 服务器, 445
+  - httpd.conf 文件, 447–448
+  - http-server 模块, YAST, 225
+- Huffman, Stefan (《The YAST2 Shell Command》)
+- HowTo?, 150
+- Rwadm, *无 Linux 输出*, 413
+- hwininfo 命令, 103
+- hwinfo 模块, YAST, 224
+- 超文本传输协议 (HTTP)
+  - 通过其下载文件, 433–434
+  - 安装, 4
+  - 使用 Telnet 测试, 426–427
+- 超线程 (hyperthreading), 关闭, 27
+- 虚拟机监控程序 (hypervisor), Xen, 706
+
+## I
+
+- ic 命令, 301
+- IBM 企业, 674–676
+- IBM 新闻文件系统, 89
+- IBM JS20 架构, 677
+- IBM Linux 文档, 由 152 提供
+- ICA (智能控制台架构), 799
+- ICE (wm) 窗口管理器, 212–214
+- ICMP (互联网控制消息协议) 数据包
+  - 允许通过防火墙, 626–627
+  - 使用 ping 命令发送, 434
+- ide 参数, GRUB 配置文件, 737
+- iedma 模块, YaST, 224
+- £ 结构, shell 脚本, 402
+- config 命令, 411–415
+- ifconfig-dhcp 命令, 440, 564
+- ifolder
+  - NL (新 Linux 桌面), 802–804
+  - OES (开放企业服务器), 786, 794
+- ifup-dhcp 命令, 440, 564
+- 文件
+  - 用于 CD, 76
+  - 用于现有磁盘, 385–386
+  - 用于新磁盘, 387–388
+  - 用于分区, 384
+  - 写入磁盘, 386
+  - 镜像参数: Ludo 配置文件, 121
+- IMAP, 785, 793
+- IMAP (互联网消息协议), 486, 489
+- 不变属性 (immutable attribute), 369–370
+- 独立软件供应商 (ISVs), [Independent Software Vendors (ISVs)], 使用, 671
+- net add: ifconfig 输出, 413
+- net addr: ifconfig 输出, 413
+- net6 模块, YaST, 225
+- net_interface 参数, Postfix, 470, 477
+- info 命令, 551
+- info 日志级别, 175
+- info 页面, 141
+- 信息节点 (inode), 90
+- 基础架构, Linux 使用, 671–672
+- init 命令, 114, 116
+- init 进程, 114–115
+- init 目录, 116
+- init reboot
+  - 定义, 737
+  - 从...加载, 112–113
+  - init 文件, 726, 737
+- init 参数
+  - GRUB 配置文件, 123
+  - lib 配置文件, 121
+  - INIT_MODULES 变量, 737
+- inode (信息节点), 90
+- 输入
+  - 重定向, 55–54
+  - 标准输入 (stdin), 54
+- INPUT 链, 616
+- Insert 键, y, 304
+- insert 命令, 117
+- install macro, spec 文件, 336–337
+- 安装
+  - 在...期间, 10
+  - ADSL 连接, 36–37
+  - AutoYaST 安装, 5
+  - boot loader, 选择, 25–27
+  - boot 选项, 6–9
+  - CD 安装, 4, 5
+  - 可定制的, 12–14
+  - 桌面环境, 选择, 11–12
+  - DVD 安装, 4, 5
+  - 硬件, 配置, 40–43
+  - isDN 连接, 配置, 36–37
+  - 内核参数, 指定, 27
+  - 语言设置, 9–10
+  - 最后版本, 4
+  - Windows 系统的 Linux, 124
+  - 手动安装, 4
+  - 在...期间, 5
+  - 方法, 5
+  - 现代的, 配置, 35
+  - 网络访问, 配置, 34
+  - 网络连接, 35
+  - 在线更新, 125
+- 分区磁盘
+  - 数据删除, 129
+  - 扩展分区, 187
+  - 文件, 182
+  - 选项, 13–14
+  - 主分区, 177
+  - 根分区, 20
+  - 根密码, 28
+  - 运行, 129
+  - 用于, 123
+  - 系统时间, 124
+  - 测试, 43
+  - 用户, 125
+  - 何使用, 91
+  - 交换分区, 120
+  - YaST 模块, 223
+  - iedma 模块, YaST, 224
+  - £ 结构, shell 脚本, 402
+  - config 命令, 411–415
+  - ifconfig-dhcp 命令, 440, 564
+- ifolder
+  - NL (新 Linux 桌面), 802–804
+  - OES (开放企业服务器), 786, 794
+- ifup-dhcp 命令, 440, 564
+- 镜像文件
+  - 用于 CD, 76
+  - 用于现有磁盘, 385–386
+  - 用于新磁盘, 387–388
+  - 用于分区, 384
+  - 写入磁盘, 386
+  - 镜像参数: Ludo 配置文件, 121
+- IMAP, 785, 793
+- IMAP (互联网消息协议), 486, 489
+- 不变属性, 369–370
+- 独立软件供应商 (ISVs), [Independent Software Vendors (ISVs)], 使用, 671
+- net add: ifconfig 输出, 413
+- net addr: ifconfig 输出, 413
+- net6 模块, YaST, 225
+- net_interface 参数, Postfix, 470, 477
+- info 命令, 551
+- info 日志级别, 175
+- info 页面, 141
+- 信息节点 (inode), 90
+- 基础架构, Linux 使用, 671–672
+- init 命令, 114, 116
+- init 进程, 114–115
+- init 目录, 116
+- init reboot
+  - 定义, 737
+  - 从...加载, 112–113
+  - init 文件, 726, 737
+- init 参数
+  - GRUB 配置文件, 123
+  - lib 配置文件, 121
+  - INIT_MODULES 变量, 737
+- inode (信息节点), 90
+- 输入
+  - 重定向, 55–54
+  - 标准输入 (stdin), 54
+- INPUT 链, 616
+- Insert 键, y, 304
+- insert 命令, 117
+- install macro, spec 文件, 336–337
+- 安装
+  - 在...期间, 10
+  - ADSL 连接, 36–37
+  - AutoYaST 安装, 5
+  - boot loader, 选择, 25–27
+  - boot 选项, 6–9
+  - CD 安装, 4, 5
+  - 可定制的, 12–14
+  - 桌面环境, 选择, 11–12
+  - DVD 安装, 4, 5
+  - 硬件, 配置, 40–43
+  - isDN 连接, 配置, 36–37
+  - 内核参数, 指定, 27
+  - 语言设置, 9–10
+  - 最后版本, 4
+  - Windows 系统的 Linux, 124
+  - 手动安装, 4
+  - 在...期间, 5
+  - 方法, 5
+  - 现代的, 配置, 35
+  - 网络访问, 配置, 34
+  - 网络连接, 35
+  - 在线更新, 125
+- 分区磁盘
+  - 数据删除, 129
+  - 扩展分区, 187
+  - 文件, 182
+  - 选项, 13–14
+  - 主分区, 177
+  - 根分区, 20
+  - 根密码, 28
+  - 运行, 129
+  - 用于, 123
+  - 系统时间, 124
+  - 测试, 43
+  - 用户, 125
+  - 何使用, 91
+  - 交换分区, 120
+  - YaST 模块, 223
+
+## 索引 825
+
+- 智能控制台架构 (Intelligent Console Architecture), 799
+- 国际标准组织 (ISO),
+  - OSI 模型, 157
+- 浏览器 (Internet Explorer), 398
+- 互联网控制消息协议 (ICMP) 数据包
+  - 允许通过防火墙, 626–627
+  - 使用 ping 命令发送, 434
+- 互联网消息访问 (IMAP), 486, 489
+- 互联网打印协议 (IPP), 235
+- 互联网系统联盟 (ISC), 550
+- 集成服务网络 (ISDN)
+  - 连接, 36–37, 224
+- is 模块, Yeast, 224
+- ISOLUX 连接, 774
+- ISO 960 文件系统, 388
+- ISO 镜像, 创建, 376, 389
+- ISO (国际标准组织),
+  - OSI 模型, 157
+- ISOLUX 引导加载器, 110, 111
+- 独立软件供应商 (ISVs), [Independent Software Vendors (ISVs)], 参见
+  671
+- 安特腾架构 (Itanium architecture), Intel, 676
+- ifconfig 命令, 439
+
+## J
+
+- 命令, 302
+- Jaeger, Andres (Linux 大文件支持), 150
+- JFS 文件系统, 80–90
+- SLOK 中的作业 (tasks), 配置, 769–770
+- ss 命令, 282–284
+- 日志模式, EXT3 文件系统, 888
+- 日志文件系统 (journaling filesystem)
+  - 定义, 21, 87
+  - 作为 EXT3 文件系统, 88
+  - 作为 ifconfig, 80–90
+  - 作为 ReiserFS (Reiser 文件系统), 89
+  - 何使用, 91
+  - 作为 XFS 文件系统, 90
+- Joy, Bill (ut 编辑器), 300
+- ystick 模块, Yeast, 224
+- JS2 架构, IBM, 677
+
+## K
+
+- 命令, 302
+- K 桌面环境, 参见 KDE
+- kaddressbook 应用, 208
+- kaffee 程序, 358
+- kde 文件, 68
+- KDE (K 桌面环境). 参见 Conqueror
+- 浏览器
+  - 在...中分配网络程序, 36
+  - 外观和主题, 207
+  - 应用程序, 208–209
+

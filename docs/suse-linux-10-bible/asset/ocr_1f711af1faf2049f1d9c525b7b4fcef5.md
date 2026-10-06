@@ -1,0 +1,1 @@
++   * Webspace — The view of the resources as seen by the web server and by the client. For example the path /dir/ in the webspace might correspond to the path /srv/www/htdocs/dir/ in the filesystem. Of course, the webspace need not map directly to the filesystem, since web pages may be generated dynamically from databases or other locations.

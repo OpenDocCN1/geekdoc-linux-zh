@@ -1,0 +1,1 @@
+Many DOS programs will work fine in dosemu, but games and programs that produce graphical output may fail.
