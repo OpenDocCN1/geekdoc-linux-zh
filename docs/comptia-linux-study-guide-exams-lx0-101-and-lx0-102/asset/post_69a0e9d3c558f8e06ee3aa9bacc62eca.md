@@ -1,0 +1,342 @@
+
+# SysV startup scripts – TLDs (top-level domains)
+
+- SysV startup scripts (Continued)
+- and systemd package, 251
+- with Upstart, 250
+- XDMCP servers, 291
+- TERM environment variable, 13, 429
+- terminating shells, 7
+- terminations for SCSI bus, 129–130
+- territories in locales, 306–307
+- test keyword, 441
+- testing network connectivity, 412
+- text and text
+  - with backticks, 18
+  - displaying, 6
+  - extracting, 30–31
+  - filter commands, 4, 19
+  - combining files, 19–21
+  - formatting files, 25–28
+  - summarizing files, 30–31
+
+# T
+
+- + Tab key for command completion, 8–9
+- tables
+  - combining, 462–464
+  - deleting, 464
+  - MySQL, 457–459
+  - partition, 138
+  - SQL, 454–455, 454
+- tabs, converting files, 21–22, 24
+- tags for system log files, 353
+- tail command, 29, 356–357
+- tail-merging process, 204
+- tar utility, 184–186
+- tarballs, 47, 74, 184
+- target files, linking, 190
+- task scheduling, 366
+- anacron, 371–373
+- at, 373–374
+- cron, 367–391
+- + transforming files, 21–25
+- viewing files, 28–30
+- locales, 308
+- text editors
+  - command history text, 10
+  - scrypt, 434
+  - Vi, 252–256, 254
+  - text-mode X login, 296–297
+- ney keyword, 440
+- Third Extended File (ext3fs or ext3), 142, 153
+- 3D acceleration support, 280
+- Thunderbird mail reader, 448
+- tilde character (-)
+  - backup files, 18, 177
+  - home directory, 6
+  - Vi editor, 253, 255
+- time command, 6
+- time management, 358
+- NTP, 360–366, 361, 365
+- time commands, 358–359
+- time setting, 359–360
+- time of day at command, 373
+- time options for log rotation files, 355
+- time Out setting for accessibility, 299
+- time stamps, 183, 362
+- time zones, 303–305, 358
+- timeouts in GRUB, 231
+- titles in GRUB, 231
+- TLDs (top-level domains), 395
+- + TCP (Transmission Control Protocol), 388
+- TCP/IP (Transmission Control Protocol/Internet Protocol), 382
+  - hardware, 382–384, 384
+  - protocol stacks, 386–386
+  - types, 387–398
+- TCP wrappers, 475, 477–488, 501
+- tcp command, 479
+- tcpdump command, 414–415
+- tsh shell, 5, 433
+- te command, 17
+- nteletype (TTY) code, 89
+- telinit program
+  - runlevels, 246, 248
+  - X Window System, 272
+  - XDMCP servers, 291
+- telnet program, 416–417
+- tel protocol, 416–417, 497
+
+# /tmp directory – update command in yum
+
+- + /tmp directory, 211, 366
+- /tmp partition, 136
+- Token Ring networks, 383
+- top-level domains, 386, 395
+- top tool, 90–91, 90
+- touch command, 183
+- tr command, 23–24
+- tracepath command, 413
+- traceroute command, 412–413
+- tracing routes, 412–413
+- tack
+  - log files, 29
+  - mouse, 299
+  - tricks, disk, 116, 116
+  - transforming files, 21–25
+  - translating characters, 23–24
+- Transmission Control Protocol (TCP), 388
+- Transmission Control Protocol/Internet Protocol (TCP/IP), 382
+  - hardware, 382–384, 384
+  - protocol stacks, 386
+  - types, 378–388
+- transposing command history text, 10
+- TrueType fonts, 284–285, 288
+- ttf files, 285
+- tmfkdir program, 285
+- TTY (servlet) code, 89
+- tune2fs command, 148, 150–151
+- tuning filesystems, 148–151
+- tunnels in SSH, 296, 497–498, 504–505
+- pools in SQL, 454–455, 454
+- twisted-pair cabling, 383
+- Type fonts, 284–285, 288
+- type command, 214
+- TZ variable, 304–305
+- tzselect program, 304
+- + UDP (User Datagram Protocol), 388
+- UEFI (Unified EFI), 107
+- UIDs. See user IDs (UIDs)
+- ulimit command, 494–495
+- umask command, 202–203
+- umasks, 202–203
+- umount command
+  - external disks, 130
+  - filesystems, 158–159, 163
+- uname command, 86
+- deleting files, 152
+- filenames, 77–178
+- usernames, 331
+- expand command, 244
+- Unicode format, 306
+- Unicode Transformation Format (UTF-8), 306
+- uniform resource identifiers (URIs), 317
+- uninstallation
+  - packages, 47
+- unique command, 24–25
+- Universal Disc Format (UDF), 144
+- uniquely unique identifiers (UIDs), 151, 159
+- Unix ps options, 87
+- locking accounts, 337
+- unmounting
+  - external disks, 130
+  - filesystems, 158–159, 163
+- unprivileged ports, 401
+- scalable privilege, 286
+- unset command, 7
+- loops, 443
+- used servers, disabling, 481–484
+- UPDATE command in MySQL, 459
+- update command in yum, 56
+- + udev tool, 118
+
+# update copies - /var/log/boot
+
+- update copies, 181
+- update-rc.d program, 244
+- updating Debian, 66–67, 70
+- upgrade in yum, 56
+- Upstart process, 249–250
+- uptime command, 91
+- userversion
+  - drivers, 125–126
+- managing, 126
+- viewing, 124–125
+- ports, 124, 382
+- usbmgr package, 126
+- USE command, 458
+- user cron jobs, 367
+- User Datagram Protocol (UDP), 388
+- USER environment variable, 428
+- user IDs (UIDs)
+  - changing, 339
+  - configuration files, 341
+  - deleted accounts, 344
+  - searching for files, 212
+  - user accounts, 332–333, 335
+  - user masks, 162, 202–203
+- user-mountable media, 165
+- users and user accounts, 330
+  - adding, 334–336
+  - changing, 338–339
+  - configuration files, 340–343, 432
+  - configuring, 333–334
+  - creating, 338
+  - deleting, 344
+  - environments, 348–349
+  - expiration settings, 339–340
+  - groups, 331–332
+  - passwords, 336–338
+  - processes, 387
+  - scripts for, 437–438
+- useradd utility, 334–335, 437
+- user command, 344, 446
+- usermod command, 338–339, 346
+- server configuration files, 476
+- /user directory, 210
+- /usr/lib directory, 482
+- /usr/lib/rpm/rpm file, 59
+- /usr/local directory, 210
+- /usr/local partition, 135
+- /usr partition, 134
+- /usr/share/fonts directory, 284
+- /usr/share/X11 fonts directory, 284
+- /usr/share/zoneinfo directory, 303–304, 359
+- /usr/X11R directory, 210
+- /usr/X11/lib/modules/directory, 277
+- UTC (Universal Time), 303, 358–360
+- UTF-8 (Unicode Transformation Format), 306
+- UUIDs (universally unique identifiers), 151, 159
+- /var directory, 210
+- /var/lib/dpkg directory, 73
+- /var/lib/npt file, 362
+- /var/log directory, 356
+- /var/log/boot file, 238
+
+# /var/log/boot.log file - widgets
+
+- /var/log/boot.log file, 238
+- var/log/dmesg directory, 238
+- var/log/kernel directory, 352
+- var/log/kernel-info files, 352
+- var/log/mail file, 351
+- var/log/messages directory, 238
+- var/log/syslog directory, 238, 355
+- var/log/wtmp file, 355
+- var/partition, 136–137
+- var/spool/cron directory, 367, 370
+- var/spool/cups directory, 309
+- var/spool/mail directory, 446
+- VARCHAR data type, 458
+- variable files in FHS, 208
+- procedures, 255–256, 254
+- saving changes, 256
+- contrast, 301
+- fonts, 300–301
+- magnifier tools, 301
+- manufacturer-provided drivers, 269–270
+- resolution and color depth, 278–279
+- video card settings, 277–279, 280
+- viewing commands for files, 28–30
+- Vim editor, 252
+- virtual filesystems, 112, 211
+- virtual memory limits, 495
+- Virtual Network Computing (VNC) system, 297, 497
+- VISUAL environment variable, 366
+- visudo editor, 492
+- VNC (Virtual Network Computing) system, 297, 497
+- assignment, 12–13, 297, 304, 371–440
+- environment. See environment variables
+- vendors of USB devices, 125
+- verbose output
+- archiving files, 185, 187
+- filesystem checking, 154
+- filesystem mounting, 159
+- kernel modules, 122–123
+- packages, 49, 78
+- regular expressions, 323
+- scripts, 440
+- vfat driver, 177
+- vfat modfile, 121
+- vgrate utility, 134
+- Vi, 252
+- modes, 252–253
+- warning days setting, 340, 342
+- Wayland display method, 283
+- wc command, 31
+- web-based lists for CUPS, 315–317, 315
+- WEP (Wired Equivalent Privacy) encryption, 384
+- whatprovides command, 56
+- WHERE conditions, 444
+- where program, 213
+- while loops, 442–443
+- Wi-Fi Protected Access (WPA) protocol, 384
+- Wi-Fi protocols, 384
+- wide output with ps, 87
+- widget sets, 79, widgets, 79
+
+# width of printing pages – Xft fonts
+
+- width of printing pages, 27
+- wildcard characters case statements, 442
+- filename rules, 177–178
+- hard disk monitoring, 158
+- Windows NT 4.0 domains, 343
+- Windows time servers, 366
+- Wired Equivalent Proxy (WEP) encryption, 384
+- wireless networking, 383–384
+- word counts, 31
+- working directory, 6
+- world permissions, 195
+- WPA (Wi-Fi Protected Access) protocol, 384
+- WPA2 encryption, 384
+- wrappers, TCP, 475–478, 501
+- write command, 152
+- write permissions, 194–197, 195
+- keyboard settings, 273–274
+- localization and internationalization, 302–308
+- logins, 289–290, 290
+- module loading, 273–274
+- monitor settings, 276–277
+- mouse settings, 275–276
+- options, 268–269
+
+# X
+
+- * X. See X Window System
+- X Display Manager (XDM), 290 configuring, 292, remote access, 296
+* X Display Manager Control Protocol (XDMCP) servers, 289, 290 configuring, 292–293, running, 291–292
+* X logical fonts (XLDFDS), 285
+- Xorg-X11 server, 269 configuration tools for, 270–271, drivers, 269
+* X Window System, 268 configuration file, 271–272, configuration utilities, 270–271, configure-and-test cycle, 272–273
+- X11Forwards option, 499
+- xargs command, 18–19
+- Xconfigurator tool, 271
+- XDM (X Display Manager), 290 configuring, 292, remote access, 296
+- xdm script, 291
+- XDMCP (X Display Manager Control Protocol servers, 289, 290 configuring, 292–293, running, 291–292
+- dxpypinfo tool, 281
+- xf86cfg utility, 271
+- XF86Config file, 286
+- XF86Config-file, 271
+- xf86config tool, 271
+- XF86setup tool, 271
+- XFree server, 269 configuration file, 271–272, configuration tools, 270–271, drivers, 269
+- XFS (Extents File System), 143, 153
+  - fs_admin command, 151
+  - fs_check command, 154–155
+  - fs_db command, 152
+  - fs_info command, 149–150
+  - fs_metadump command, 150
+  - fs_repair command, 154–155
+- Xft fonts, 288–289

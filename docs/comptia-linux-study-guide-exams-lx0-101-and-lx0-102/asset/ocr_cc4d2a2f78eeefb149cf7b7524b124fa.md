@@ -1,0 +1,13 @@
+The fact there are so many RPM-based distributions can be a boon. You may be able to use an RPM intended for one distribution on another, although as noted earlier, this isn't certain. In fact, this advantage can turn into a drawback if you try to mix and match too much—you can wind up with a mishish of conflicting packages that can be difficult to disentangle.
+
+The RPMFind Web site, http://rpmfind.net, is an extremely useful resource when you want to find an RPM of a specific program. Another site with similar characteristics is Fresh RPMs, http://freshrpms.net. These sites include RPMs built by programs' authors, such distributions-RPMs, and those by third parties. Such as Yum repositories can make them even easier to use.
+
+Compare to tarballs, RPMs offer much more sophisticated package management tools. This can be important when you are upgrading or removing packages and also for verifying the integrity of installed packages. On the other hand, although RPMs are common in the Linux world, they're less common on other platforms. Therefore, you're more likely to find tarballs of generic Unix source code, and tarballs are preferred if you've written a program that you intend to distribute for other platforms.
+
+# # Using Debian Packages
+
+In their overall features, Debian packages are similar to RPMs; but the details of operation for each differ, and Debian packages are used on different distributions than RPMs. Because each system uses its own database format, RPMs and Debian packages aren't interchangeable without converting formats. Using Debian packages requires knowing how to use the dpkg, dselect, and apt-get commands. A few commands can also be helpful.
+
+# ## Debian Distributions and Conventions
+
+As the name implies, Debian packages originated with the Debian distribution. Since that time, the format has been adopted by several other distributions, including Ubuntu, Linux Mint, and Xandros. Such distributions are derived from the original Debian, which means that packages from the original Debian are likely to work well on other Debian-based systems. Although Debian doesn't emphasize GUI configuration tools, its derivatives tend to be more GUI-centric, which makes these distributions more appealing to Linux novices. The original Debian favors a system that is as bug-free as possible, and it tries to adhere strictly to open source software principles rather than invest effort in GUI configuration tools. The original Debian is unusual in that it's maintained not by a company that is motivated by profit, but rather by volunteers who are motivated by the desire to build a product they want to use.

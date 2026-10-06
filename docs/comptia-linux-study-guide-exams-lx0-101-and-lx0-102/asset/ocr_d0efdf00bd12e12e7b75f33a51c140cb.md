@@ -1,0 +1,14 @@
+# # Chapter
+#1
+
+# # Exploring Linux
+Command-Line Tools
+
+THE FOLLOWING EXAM OBJECTIVES ARE COVERED IN THIS CHAPTER:
+
++   - 1.103.1 Work on the command line
+- 1.103.2 Process text streams using filters
+- 1.103.4 Use streams, pipes, and redirects
+- 1.103.7 Search text files using regular expressions
+
+![](bbox=[0.0, 0.0, 0.353, 1.0])

@@ -1,0 +1,13 @@
+# Chapter 2
+
+# Managing Software
+
+THE FOLLOWING EXAM OBJECTIVES ARE COVERED IN THIS CHAPTER:
+
++   - 1.102.3 Manage shared libraries
+- 1.102.4 Use Debian package management
+- 1.102.5 Use RPM and Yum package management
+- 1.103.5 Create, monitor, and kill processes
+- 1.103.6 Modify process execution priorities
+
+![](bbox=[0.0, 0.0, 0.356, 1.0])

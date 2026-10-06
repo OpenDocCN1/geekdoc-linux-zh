@@ -1,0 +1,13 @@
+# Chapter 7 • Administering the System
+
+Log file entries can be conspicuous by their absence as well as suspicious content within them. Intruders often try to cover their tracks by editing log files to remove the entries that betray their unauthorized accesses. Sometimes, they're sloppy about this and delete all the log entries from the time in question. If you notice unusual gaps in your log files, as a space of an hour with no entries on a system that normally logs a couple dozen entries in that period, you may want to investigate further.
+
+# Maintaining the System Time
+
+Linux depends on its system clock more than many OSs. Tools such as cron and at (described later, "Running Jobs in the Future") run programs at specified times, the development tool uses files time stamps to determine which ones need attention, and so on. Thus, you should be familiar with how Linux deals with time, how to set the time zone, how to set the clock, and how to keep the clock accurate.
+
+# Linux Time Concepts
+
+The x86 and x86-64 computers that most run Linux, as well as most other computers of this general class, have two built-in clocks. The first of these, sometimes called the hardware clock, maintains the time while the computer is turned off. When you boot Linux, it reads the hardware clock and sets the software clock to the value it retrieves. The software clock is what Linux uses for most purposes while it's running.
+
+Most desktop OSs, such as Windows and pre-X Mac OS, set their clocks to the local time. This approach is simple and convenient for people who are de dealing mainly with local time, but for purposes of networking, it's inadequate. When it's 4:00 a.m. in New York, it's 1:00 a.m. in Los Angeles, network protocols that rely every on time can become confused (or at the very least, confusing log entries) when they operate across time zones. Linux, or other Unix-like OSs, set their clock to Coordinated Universal Time (GMT)—the time in Greenwich, England, unadjusted for daylight saving time. This approach means Linux systems in New York and Los Angeles (and London and Tokyo) are all correct. When communicating with users, these systems need to know their time zone. For instance, when you type ls -1 to see a list complete with time stamps, Linux reads the time stamp in UTC and adds or subtracts the appropriate amount of time so that the time stamp appears in your local time. Course, all of this means that you must be able to set the computer's time zone. On most systems, this is done at system installation; the distribution's installer asks you for your time zone and sets up correctly. If you erred during installation

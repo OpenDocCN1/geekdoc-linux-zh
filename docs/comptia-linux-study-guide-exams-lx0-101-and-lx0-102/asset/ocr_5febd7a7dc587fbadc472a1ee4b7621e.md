@@ -1,0 +1,15 @@
+# Appendix A · Answers to Review Questions 549
+
+described configuration redirects root's email to jody's queue. Thus, option D is incorrect. Because /etc/aliases is an configuration file, not an account configuration file, it can't have the effect described in option E.
+
++   18. The CREATE DATABASE command creates a new database with the specified name. Because SQL commands are case-insensitive, which may be typed in uppercase or lowercase, option B is correct. Options A and C both use the incorrect NEW rather than CREATE, and option C specifies the database name as FISH rather than fish. (Database names are case-sensitive). Option D reverses the order of the CREATE and DATABASE keywords. Option E uses the fictitious DB.
+
++   19. A single database can hold multiple tables, option A suggests. Option D is also correct; by splitting across tables (such as tables describing objects generally and specifically), databases can be more space-efficient. Option B is incorrect because the DROP command doesn't delete; deletes deletes table! Option C is incorrect because it reverses the meaning of rows and columns in a SQL table. A lossy algorithm, as the name suggests, deliberately compresses or loses some data—an unacceptable option for a text database, making option E incorrect. (Lossy compression is used for some audio and video formats, tough)
+
++   20. The UPDATE command modifies existing table entries, and in this case it does as option C corrects. Option B describes an update operation, but in a confused and incorrect way. Options A and D both describe database retrieval operations, but UPDATE doesn't retrieve data. Option E mistakenly identifies stars as a database name, but it's a name; and mistakenly identifies the operation as adding a new entry (INSERT in SQL) rather than modifying an entry (UPDATE in SQL).
+
+# Chapter 10: Securing Your System
+
++   E. The server names alone are insufficient to determine whether they are legitimate. The computer in use may or may not run any of these servers, and their presence may or not be intentional, accidental, or the sign of an intrusion. Option E is correct. Contrary to option A, the presence of an SSH server does not ensure security. Also, as option B, FTP is not a secure protocol; it's still useful in some situations, the presence of an FTP server is not, by itself, grounds for suspicion. Similarly, in option C, although administrators prefer Postfix or sendmail for security reasons, sendmail isn't necessarily better, and the names alone don't guarantee that the sshd and proftp servers are legitimate. Option D states, sendmail and proftp both encrypted text-mode transfers; but this is appropriate in some situations, option D is incorrect.
+
++   C. Although Nmap and other scanners are useful security tools, they're also used by crackers, and many organizations have policies restricting them. Thus, you should always obtain permission to use such tools prior to using them, as option C specifies. A

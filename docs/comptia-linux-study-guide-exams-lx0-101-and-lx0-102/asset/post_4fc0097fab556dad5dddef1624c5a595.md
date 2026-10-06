@@ -1,0 +1,389 @@
+
+# network ports – ORDER BY keyword
+
+network ports
+- overview, 398–401
+- use monitoring, 482–483
+- network printers, 317–318
+- network scanners, 484–486
+- network stacks, 382–384
+- Network Time Protocol (NTP), 360–361
+  - client configuration, 365–366
+  - overview, 361–362
+  - server configuration, 364–365
+  - time sources, 362–363
+- networking, 381
+- addresses. See network addresses
+- connections. See network connections
+- exam officials, 418–419
+- hardware, 382–384
+- local networks. See local networks
+- packets, 385
+- NTFS-3G filesystem, 144
+- NTP (Network Time Protocol), 360–361
+  - client configuration, 365–366
+  - overview, 361–362
+  - server configuration, 364–365, 365
+  - time sources, 362–363
+  - tp.drift file, 362
+  - tp package, 364
+  - tntpd daemon, 364
+  - tpdate command, 364–365
+- number of copies for print jobs, 318
+- numbering lines, 25–27
+- numeric sorts, 22
+- numeric tests with SELECT, 461
+- TCP/IP, 282
+  - hardware, 382–384
+  - protocol stacks, 386, 384
+  - types, 387–388
+- New Technology File System (NTFS), 144
+- newaliases command, 452
+- newgrp command, 203, 332
+- NFS (Network File System), 388
+  - nfs-command script, 244
+- nice command, 93–94
+- NIS (Network Information System), 343
+- nl command, 25–27
+- nmap command, 484–485
+- nmap scanner, 484–486
+- NTPSERVER environment variable, 15
+- node name, 86
+- hohup program, 95
+- non-blank lines numbering option, 26
+- non-Linux root, 231
+- nslookup program, 396
+- NSS (Name Service Switch), 398
+- octal file displays, 22
+- octal permissions, 201
+- od command, 22
+- on-board hardware, 109
+- onscreen keyboards, 299–300
+- open file lists, 483–484
+- open ports, 414–485
+- open relays, 446, 453
+- OpenFirmware program, 107
+- OpenPrinting database, 311
+- OpenSSH server, 498, 500–501
+- opensUSE configuration, 296
+- opt directory, 210
+- opt/fonts directory, 285
+- opt/local/fonts directory, 285
+- opt partition, 135
+- optflags lines, 59
+- optical media, 127, 189
+- options, command, 6–7
+- or operators
+  - scripts, 440
+  - SELECT, 461
+- Open speech synthesis product, 301
+- ORDER BY keyword, 461
+
+# OS (operating system) – passwords 579
+
+OS (operating system)
+- GRUB, 231
+- information, 86
+- outline fonts, 284
+- output
+  - printing, 27
+  - redirection, 15–17
+- ownership
+  - defaults, 202–203
+  - files, 180, 192–194
+  - filesystem mounting, 161
+- filesystems, 150–151
+- scripts, 437–438
+- server configuration files, 476
+- parent directories, 191
+- parent IDs (PPIDs), 89
+- parentheses ()
+  - ENUM lists, 458
+  - functions, 443
+  - regular expressions, 33
+- Parted Magic disk system, 151
+- Parted tool, 140–141
+
+# P
+
+packages
+- caches, 65
+- Debian. See Debian packages
+- dependencies and conflicts, 75–78
+- format conversions, 73–74
+- overview, 46–48
+- rebuilding, 77–78
+- RPM. See RPM (RPM Package Manager) and RPMs
+- shared libraries. See shared libraries
+- SQL, 453–454
+- startup script problems, 77–79
+- versions, 78
+- packet-filter firewalls, 480
+- packet sniffers, 414–415
+- packet, 385
+- page length in printing, 27–28
+- page separators in line numbering, 26
+- page width in printing, 27
+- paging through files, 29–30
+- PPAM (Pluggable Authentication Modules), 343, 493
+  - pam_limits module, 493
+- paragraphs, reating, 25
+- Parallel Advanced Technology Attachment (PATA), 126–127
+- Parallel Line Interface Protocol (PLIP), 382
+- parallel ports, 118, 382
+- parameters
+- partitions
+  - aligning, 138
+  - archiving, 188–189
+  - boot process, 239
+  - common, 135–136
+  - creating, 136–140
+  - deleting, 139–140
+  - displaying, 138
+  - fdisk tool, 137–140
+  - filesystems, 131, 142–147
+  - GNU Parted tool, 140–141
+  - GRUB, 230
+  - monitoring hard disk use by, 155–156
+  - mount point points, 134–135
+  - preparing, 141–142
+  - purpose, 130–131
+  - swap, 147–148
+  - systems, 131, 132
+- passwd command, 336–338, 437–491
+- passwords, 488
+  - change requirements, 339–340, 342
+  - changing, 491
+  - configuration files, 341
+  - cracking programs, 491
+  - filesystem, 166
+  - good, 489–491
+  - groups, 346–347
+  - history files, 10
+  - risks, 488–489
+  - root, 492
+  - setting, 336–338
+- SMB/CIFS, 317
+
+# passwords – PostgreSQL package
+
+passwords (Continued)
+- SSH logins without, 502–503
+- tools, 491–492
+- user accounts, 335–338
+- paste command, 271
+- PATA (Parallel Advanced Technology Attachment), 126–127
+- PATH environment variable, 8, 12, 367, 372, 428–429
+- paths
+  - archiving files, 185
+  - external commands, 7–8
+  - fonts, 286–287
+  - shared libraries, 81–83
+  - input file in regular expressions, 33
+- PCI (Peripheral Component Interconnect)
+  - card configuration, 118–120
+  - IRQs, 111–112
+- PCL (Printer Control Language), 310
+- image in GRUB, 231–252
+- period setting at, 373
+- chown, 193
+- filenames, 177–178
+- IP addresses, 392
+- regular expressions, 32
+- scripts, 434
+- TCP wrappers, 478
+- usernames, 331
+- Peripheral Component Interconnect (PCI)
+  - card configuration, 118–120
+  - IRQs, 111–112
+  - permission mode, searching for files by 212
+  - archiving files, 185
+  - bits, 194–197, 195
+  - chmod command, 199–202
+  - copying files, 180
+- cron jobs, 370
+- defaults, 202–203
+- directories, 191, 197
+- /etc/shadow, 343
+- special, 197–198
+- RootLogin option, 499
+- PGP (Pretty Good Privacy), 489
+- physical volumes, 134
+- PIDs (process IDs)
+  - boot process, 239
+  - displaying, 88
+  - in killing processes, 94–95
+  - system log files, 353
+- ping command, 412
+- pipes type code, 195
+- platters, disk, 115–116
+- play command, 442
+- PLIP (Parallel Line Interface Protocol), 382
+- Plug-and-Play (PnP)-configuration, 118
+- Pluggable Authentication Modules (PAM), 343, 493
+- at command, 373
+- attributes, 204
+- find, 496
+- regular expressions, 33
+- nnP (Plug-and-Play)-configuration, 118
+- Point-to-Point Protocol (PPP), 382–383, 411
+- pools, NTP server, 363
+- POP (Post Office Protocol), 445, 448
+- port numbers, 389–390
+  - monitoring, 482–483
+  - netstat, 481
+  - network, 398–401
+  - open, 444, 484–485
+  - SSH tunnels, 504–505, 504
+- USB, 124, 382
+- POST (power-on-test), 107
+- PostgreSQL package, 454
+
+# postmaster account – public keys
+
+postmaster account, 451
+PostScript Printer Definition (PPD), 312
+- /proc filesystem, 112
+- /proc/interrupts file, 112–113
+- /proc/iop file, 114
+- Postscript language, 310–311
+- Postscript Type fonts, 284–285, 288
+- process IDs (PIDs)
+  - boot process, 239
+  - displaying, 88
+  - in killing processes, 94–95
+  - system log files, 353
+- ping command, 412
+- pipes type code, 195
+- platters, disk, 115–116
+- play command, 442
+- PPPo (Point-to-Point), 382–383, 41
+- PPPoE over Ethernet, 411
+- PGP (Pretty Good Privacy), 506
+- primary boot loaders, 225–226
+- primary groups, 331
+- killing, 94–96
+- blocks, 92–90
+- memory limits setting, 493–495
+- primary keys, 462
+- primary partitions, 132–133
+- runlevels, 242
+- processors. central processing units (CPUs)
+- profile_file, 122
+- background, 92–93, 230
+- kernel information, 317–318
+- to network printers, 315
+- Postscript and Ghostscript, 310–311
+- primary manufacturers, 314
+- queues, 318–320, 319
+- running systems, 331
+- summary, 322
+- executing, 6
+- running persistently, 95
+- progress, filesystem checking, 154
+- prompts, combating, 430
+- protective MBR, 133
+- protocol, 385–386, 386
+- mouse, 275
+- server configuration files, 476
+- SSH configuration, 499
+- provides command, 56
+- system log file, 351, 353
+- proxy filters, 480
+- PS_PERSONALITY environment, 87
+- ps program
+  - email, 447
+  - GPG, 506
+  - SSH, 499–501
+- privileged ports, 401
+- /proc_directory, 211
+- /proc/bus/usb directory, 126
+- /proc/dma_file, 114
+- options, 86–88
+- output interpretation, 88–90
+- searching for running processes, 311
+- PS1 environment variable, 429–430
+- GPG, 506–507
+- SSH, 499–501
+
+# pull mail protocols – remove command
+
+pull mail protocols, 448
+- pump client, 402
+- punctuation in passwords, 490
+- pecreate utility, 134
+- pwd command, 6–7
+- PWD environment variable, 349, 428
+- read-only filesystems mounting, 159
+- read permissions, 194–197, 195
+- read/write filesystems mounting, 159, 161
+- reboot command, 274–248
+- library cache, 84–85
+- package naming, 53
+- receiving email, 449–450
+- reconfiguring servers, 487
+- recursive copies, 180–181
+- recursive filename listing in grep, 34
+- Red Hat distribution, 88
+- X configuration tools, 270–271
+- redirecting email, 451–452
+- input and output, 15–17
+- reduced-size pages, 319
+- reFind program, 236
+- reIt program, 236
+- reformatting paragraphs, 276–277
+- refresh rates for monitors, 234
+- registering domain names, 394
+- regular expressions, 32
+- grep with, 33–35
+- for line numbering, 26
+- overview, 32–33
+- sed with, 35–37
+- ReiserFS Filesystem
+  - description, 142–143
+  - journaling, 153
+
+# Q
+
+- qmail program, 447
+- Qt widget sets, 79
+- question marks (?)
+- filenames, 177–178
+- regular expressions, 32
+- seches, 30
+- queues
+  - displaying, 320
+  - email, 450–452
+  - Ghostscript for, 311
+  - print, 309, 318–320, 319
+- quota package, 205–206
+- quotacheck command, 207
+- quotaon command, 206
+- quotas
+  - enabling, 205–206
+  - setting, 206–207
+- quotation marks (")
+  - command options, 18
+  - in filenames, 177
+
+# R
+
+- RAM disks, 231
+- random access memory (RAM), 107
+- libraries, 80
+- video, 279–280
+- range expressions in regular expressions, 32
+- range of values in filenames, 178
+- raw network traffic, 414–415
+- rc program, 243
+- rc-update program, 244
+- read command, 439
+- partition monitoring, 155
+- relational databases, 454–455
+- release numbers for packages, 49
+- releases, kernel, 86
+- reload command in systemctl, 251
+- remote access in X Window System, 294–297, 294
+- remote login protocols, 489
+- remote network scanners, 484–486
+- remove command, 56

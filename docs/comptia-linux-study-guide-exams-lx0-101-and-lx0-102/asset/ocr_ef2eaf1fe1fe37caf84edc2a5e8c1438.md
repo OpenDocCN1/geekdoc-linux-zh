@@ -1,0 +1,11 @@
+# 116 Chapter 3 • Configuring Hardware
+
+configuration is that the BIOS must know how many cylinders, heads, and sectors the disk has. Modern hard disks relay this information to the BIOS automatically; but for compatibility with the early hard disks, BIOSs still enable you to set these values manually.
+
+FIGURE 3.3 Hard disks are built from platters, each of which is broken into tracks, which are broken into sectors.
+
+![](bbox=[0.223, 0.223, 0.768, 0.363])
+
+> NOTE BIOS will detect only certain types of disks. Of particular importance, SCSI disks and (on some older computers) serial ATA (SATA) disks won't appear in the main BIOS disk-detection screen. These disks are handled by supplementary firmware associated with the controllers for these devices. Some BIOSs provide explicit options to add SCSI devices into the boot sequence, so you can give priority to either ATA or SCSI devices. Without those options, SCSI disks generally take second seat to ATA disks.
+
+CHS geometry, unfortunately, it has problems. For one thing, all the earliest hard disks use variable numbers of sectors per cylinder—modern disks squeeze more sectors onto outer tracks, fitting more data on each disk. The CHS geometry presented to the BIOS by the ATA hard interface is a convenient lie. However, because of limits in the numbers in the BIOS and the ATA hard interface, plain CHS geometry puts out at 504MiB, which is puny by today’s standards. Various patches, such as CHS geometry translation, can be used to expand the limit to about 8Gb. Today, the preference is to use logical block addressing (LBA). In this mode, a single unique number is assigned to each sector on the disk, and the disk's firmware is smart enough to read from the correct head and cylinder given this sector number. Modern BIOSs typically provide an option to use LBA mode, CHS translation mode, or possibly some other modes with large disks. EFI doesn't use CHS addressing at all, except in its BIOS compatibility mode; instead, EFI uses LBA exclusively. In most cases, LBA is the best choice. If you need to retrieve data from very old disks, though you may need to change this option.

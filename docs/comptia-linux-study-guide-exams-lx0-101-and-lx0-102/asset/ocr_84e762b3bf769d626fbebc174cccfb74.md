@@ -1,0 +1,15 @@
+# Appendix A - Answers to Review Questions
+
+port scanner can't cause damage to /etc/passwd, so there's no need to back it up, contrary to option A. Port scanner also doesn't need the root password on a target system to operate, if you don't need this information, making option B incorrect.(In fact, asking for the root password could be seen as extremely suspicious!) Although you could use sudo to perform a TCP scan by running Nmap, there's no need to do so as root in which other ways (such as a direct login or by using sudo). Thus, option D isn't strictly necessary, although you might want to tweak /etc/sudoers as a matter of policy. As a firewall is part of your network security, it would be better to leave the firewall running and scan from it, if you want to test the security of the network in the case of a firewall breach.
+
++   3. The /etc/security/limits.conf (option C) file holds the configuration settings to allow you to limit users. The other options don't get the correct path to this file.
+
++   4. A, B, Nmap (option A) is used to perform scans of remote computers, but it can scan the computer on which it runs, also The netstat (option B) and lsof (option C) utilities can both identify programs that are listening for connections (that, is ports) on the local computer. The portmap command (option D) is used by the Network File System (NFS) and some others, but it's not used to open ports. There is no standard Linux servers program (option E), although the /etc/services file holds a mapping of ports to common service names.
+
++   5. The -perm option to find locates files with the specified permissions, and +4000 is a permission code that matches SUID files. The -type option restricts matches to files or directories. Option B uses these features correctly. Options A, C, and D use these features incorrectly. Option E specifies a fictitious -suid parameter to find.
+
++   6. Option A correctly describes the meaning of the specified line. A percent (%) identifies a Linux group name, and the remainder of the line tells sudoers to enable users of group to run all programs as using sudo. The remaining options will misinterpet one or more of this configuration file.
+
++   7. The netstat command can do what is described in the question. To do so, option B is correct. Although lsof can also accomplish the job, the -c option is incorrect; this option restricts output to processes whose names begin with a. Thus, option A is incorrect. Option C's ifconfig command does not display open connections, Although option D's nmap command will locate ports on the localhost interface, it doesn't locate open connections, nor it locate connections on anything but the localhost interface. Option D's top command displays a list of processes sorted by CPU use, not open network connections (and -net is an invalid option to top, as well).
+
++   8. Option D is correct. TCP Wrappers use this feature to allow you to override broad denials by adding more explicit access controls to hosts.allow, a default deny policy (ALL : ALL) in hosts.deny.
