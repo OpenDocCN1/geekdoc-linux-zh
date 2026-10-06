@@ -1,0 +1,126 @@
+
+特定用户的访问权限严格取决于相关类中的个人权限。这意味着 UNIX 首先确定用户是否属于组所有者（`group-owner`）或任何其他类（`any other`）。一旦确定，则只检查文件的访问类，并据此授予或拒绝对文件的所需访问。在用户属于多个类的情况下，并不存在渐进的自上而下访问检查点（用户所有者也可能是组所有者的成员，并且肯定属于其他类）。这里有一个示例：
+
+用户是 `bjl`；文件 `textfile` 的长列表显示如下：
+
+```bash
+$ ls -l textfile
+      1 bjl users 15 Jul 6 20:49 textfile
+     -rw-r----
+```
+
+- 具有以下内容：
+
+```bash
+$ cat textfile
+# This is just a test file
+#
+```
+
+- 让我们拒绝用户所有者 `bjl` 的访问：
+
+```bash
+$ chmod u-r textfile
+$ ls -l textfile
+--w-r--r-- 1 bjl users 15 Jul 6 20:49 textfile
+```
+
+- 然后再次尝试读取文件：
+
+```bash
+$ cat textfile
+cat: textfile: Permission denied
+```
+
+- 然而，文件可以被修改：
+
+```bash
+$ echo "# This is added text" >> textfile
+$ echo "##" textfile
+```
+
+- 除了 `bjl` 是文件 `textfile` 的所有者且是 `users` 组成员，以及组 `users` 和所有用户都授予了读取权限之外，该文件无法打开读取。文件的所有者 `bjl` 可以修改或删除文件（拥有 `w` 权限），但文件无法被读取。对于这种“异常情况”，所有者必须更改文件模式，使文件变得可读。
+
+```bash
+$ chmod 644 textfile
+$ ls -l textfile
+-rw-r--r-- 1 bjl users 15 Jul 6 20:49 textfile
+```
+
+```bash
+# This is just a test file
+# This is added text
+#
+```
+
+- 组所有者对组权限的情况同样有效。
+
+## 2.2.2.3 默认文件模式
+
+默认模式是创建文件时的模式。在文件创建时，默认模式决定了权限。一旦文件创建，就可以更改其模式。UNIX 的系统是灵活的，对于目录的默认模式如下：
+
+- 组所有者（`group-owner`）
+- 用户所有者（`user-owner`）
+- 其他用户（`others`）
+- 这种所有者
+
+在这种情况下，`umask` 命令用于设置创建文件的默认访问检查点。`umask` 命令设置的默认模式逻辑是：从请求的权限中“减去”掩码设置的权限。公式通常为：`new_mode = mode & ~umask`。例如，如果 `umask` 设置为 `022`，那么创建一个权限为 `666` 的文件时，实际权限将是 `666 & ~022 = 644`。
+
+`umask` 命令的用法如下：
+
+```bash
+# umask 022
+```
+
+这将当前会话的掩码设置为 `022`。要查看当前的 `umask` 值，可以直接运行：
+
+```bash
+$ umask
+```
+
+`umask` 的值通常以八进制表示。常见的值有 `0022`（新文件权限为 `644`）和 `0002`（新文件权限为 `664`）。
+
+如果你想将 `umask` 设置为 `027`，可以执行：
+
+```bash
+# umask 027
+```
+
+## 2.2.2.4 附加模式（Additional Modes）
+
+我们讨论了许多指代文件保护的术语；UNIX 简单地将文件保护称为文件模式。在 UNIX 术语中，设置文件权限意味着更改文件模式；为了这一目的，使用了 UNIX 的 `chmod` 命令：
+
+```bash
+#chmod access-string filename
+```
+
+其中 `access-string` 包含：
+
+- 访问类：`u`, `g`, `o`, 或 `a`
+- 操作符：`+`, `-`, 或 `=`
+- 权限：`r`, `w`, 或 `x`
+
+`filename`：当前目录下的文件，或完整路径文件名（多个文件用空格隔开）。
+
+也可以同时指定多个访问类和/或权限。还支持递归 `chmod` 命令，例如：
+
+```bash
+#chmod -R go-rwx /home/username
+```
+
+此命令将更改 `/home/username` 目录下所有文件和子目录的文件模式。它将拒绝组（`group`）和其他（`other`）的任何类型访问，而用户（`user`）访问将保持不变。
+
+此示例使用了符号模式表示法（`symbolic mode notation`）指定了文件模式。或者，也可以使用绝对模式或数值模式（`numeric mode`）表示法。两者的区别如下所示：
+
+| user group other 访问类 | | |
+| :--- | :--- | :--- |
+| r w x r - x -- | 符号模式 | |
+| 1 1 1 101 100 | 转换为二进制 | |
+| 7 5 4 | 转换为数字 | |
+| 754 | 对应的绝对（数值）模式 | |
+
+设置此特定文件模式的命令是：
+
+```bash
+# chmod 754 filename
+```
