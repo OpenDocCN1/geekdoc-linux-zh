@@ -1,0 +1,13 @@
+At this point, you can allow users to join the list. Encourage them to explore and set their own user preferences.
+
+If you encounter problems configuring mailman, refer to the INSTALL.REDHAT and README files in the /usr/share/doc/mailman-\* directory.
+
+# # Summary
+
+Fedora includes a full range of tools for configuring and managing mail servers. For Mail Transfer Agents, Fedora includes the sendmail and Postfix software packages. Both are considered to be excellent, professional-quality mail servers.
+
+To allow users to access their mailboxes from the server, Fedora includes the dovecot package. That package implements POP3 and IMAPv4 protocols to allow e-mail to be downloaded or manipulated on the server. You can also configure SquirrelMail to allow users to access their mail through a Web-based interface.
+
+Information is included to help keep your mail service safe from intruders. In particular, filtering software such as SpamAssassin and virus scanner software such as Clamav are critical to keeping your mail service clients safe from harm.
+
+To set up mailing lists in Fedora, you can use the mailman package. In addition to including some very flexible configuration tools, mailman also provides simple Web-based access to mailing list preferences and archives.

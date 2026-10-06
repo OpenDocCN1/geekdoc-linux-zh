@@ -1,0 +1,3 @@
+Some services in Fedora and RHEL can be implemented by several different software packages. Although you can, you probably don't want to run multiple mail and print servers on the same computer. At the very least, you should set the software you want to use by default.
+
+Assuming you have multiple mail agents, you can use system-switch-mail to switch among those services. Figure B-1 shows an example of the system-switch-mail window.

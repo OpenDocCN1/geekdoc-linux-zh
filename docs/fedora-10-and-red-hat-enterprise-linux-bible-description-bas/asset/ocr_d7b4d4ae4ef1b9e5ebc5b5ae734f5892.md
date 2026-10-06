@@ -1,0 +1,37 @@
+# Chapter 5: Accessing and Running Applications 237
+
+# Installing applications in WINE
+
+For Windows applications that are included on CD or DVD, you can try installing them by simply running the setup program on that medium with the wine command. So, with a CD containing the application you want to install inserted and mounted, you would run a command like the following:
+
+```
+# wine d:\Setup.exe
+```
+
+# Launching applications
+
+Depending on how the application's installer set up the application, there are a couple of ways in which you might launch your Windows application in WINE, as follows:
+
++   **Control Panel** — If the application set up an app for the Windows control panel, you can open a Windows control panel, and then select the app to launch the application from there. To start a Windows control panel, type the following:
+
+```
+$ wine control
+```
+
++   **WINE File System Browser** — If you installed the wine-tools package, you can launch the winefile window to see the WINE window. This displays a tree structure of the file system, as it relates to the drives you have configured for WINE. Select the drive letter containing the application you want to launch, browse to the application, and double-click to start.
+
+Just as you launch the application's installer, as described earlier, you can also launch a Windows application installed on your file system from the command line. Again, you can use drive letters to indicate the location of the application you want to launch. However, to have the path to the application properly interpreted, you should typically surround it with quotes:
+
+```
+$ wine "C:\program files\appdir\app.exe"
+```
+
+As a Windows file path use backslashes (\) instead of slashes (/) to separate subdirectories. Instead of using double quotes, you can add an extra backslash before each space or slash.
+
+Once you have a working wine command to run your Windows application, you can add a command to a launcher on your Fedora desktop. See Chapter 3 for information on adding application launchers to your panel, menus, or desktop area.
+
+# Tuning and configuring WINE
+
+Because the Windows applications you run with WINE expect to find Windows resources on a Linux system, those either have to be provided by WINE or need to be mapped into the existing Linux system. For example, an application may require a specific dll file that WINE doesn't include. Or, you may need to map your COM or LPT ports where WINE expects to find them.
+
+Here are some tips to help you tune your WINE configuration:

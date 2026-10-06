@@ -1,0 +1,31 @@
+```
+# part swap --size=128 --grow --maxsize=256 --ondisk=sda
+```
+
+To indicate which packages to install, define a section with the %packages command. (A few examples.) Designate whole installations, individual groups, or individual packages. On the %packages line, you can indicate whether or not to resolve dependencies by installing those packages needed by the ones you selected (--resolveddeps). After %packages, start an entry with an @ for a group of packages, and add each individual package by placing its name on a line by itself. Here is an example:
+
+> TIP: You can find a listing of package groups and individual packages on the Fedora installation DVD. Find the comps file in the Fedora/base directory, if you start with the anaconda-ks.cfg file that resulted from installing Fedora or RHEL, you might already have a set of packages that you want to install.
+
+```
+%packages --resolveddeps
+@base
+@editors
+@games
+@graphical-internet
+@kde-desktop
+@office
+@sound-and-video .
+```
+
+> NOTE: The %packages command is not supported for upgrades. To install everything, you can remove the package names shown. Then, after the %packages line, you can add an @everything line.
+
+The %post command starts the post-installation section. After it, you can add any shell commands you want to run after installation is completed. A useful thing to do is to add useradd commands for users you want to add during installation. You can also use usermod to add the user's password. (See Chapter 22 for information on creating an encrypted password.) Note that there is no %post section by default.
+
+```
+%post
+/usr/sbin/useradd jake
+chfn -f 'John W. Jones' jake
+/usr/sbin/usermod -p '$1kQUMYbFOH79wECnTnuaH.' Jake
+```
+
+At this point you should have a working ks.cfg file.

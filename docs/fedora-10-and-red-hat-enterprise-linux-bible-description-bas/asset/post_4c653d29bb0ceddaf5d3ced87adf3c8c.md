@@ -1,0 +1,380 @@
+
+# 1058 Index
+
+- lp login, 421
+- configuration, 705–707
+- network clients, 707–708
+- overview, 5–6
+- as proxy server, 717–718
+- as router, 704
+- squid daemon, 718–719
+- squid.conf file, 720–725
+- UNIX and, 6–8
+- Linux Game Tome, 280
+- Linux Gamers’ FAQ, 281
+- Linuxpublishing.com, 280
+- Linuxgames.com, 280
+- livecd-creator, 82
+- Livna.org, 193
+- loadable modules, 426
+- local printers
+  - adding, 734
+  - editing, 737–738
+- log files, 597
+- logwatch, 601–602
+- rsyslog service, 597, 600–601
+- syslog service, 597
+- logging
+  - iptables and, 593
+- sendmail, 799
+- login, 84–86
+- need for, 86
+- root user, 85
+- login servers, 1020
+- login sessions, 144–145
+- logs, 965
+- Logwatch, 965
+- Loki Entertainment Software, 281
+- Loki Software, 302
+- Civilization: Call to Power, 303
+- Heretic II, 305
+- Myth II: Soulblighter, 304
+
+## M
+- MAC (Mandatory Access Control), 456
+- Mac OS 8/OS 9, AppleTalk, 988
+- Mac OS X
+  - comparison to Linux, 984
+  - netatalk
+    - AppleTalk server settings, 995, 996
+    - firewall ports, 995
+    - security, 998–1004
+    - starting, 993–994
+    - user setup, 996
+    - volume sharing, 996–997
+- network services, 985
+- AppleTalk, 986–988
+- netatalk, 986–988
+- Samba server, access, 988–989
+- similarities to Linux, 984
+- X Window System and, 990–991
+- Macintosh
+  - AppleDesktop, 1000
+  - AppleDouble, 999
+  - hidden files, 999–1000
+  - Intel-based Fedora installation, 1008–1010
+  - Network Trash Folder, 1000
+  - NFS file access, 1005–1007
+- magnetic tape backups, 543
+- mail login, 421
+- mail servers, 797, 964
+- mail.rc directory, 417
+- mailbombing, 607–609
+- mailman, 821, 824–825
+- man pages, Groff and, 258
+
+# Index 1059
+
+- man.config directory, 417
+- man2html, 262
+- Matrox video cards, gaming, 283
+- MDA (Mail Delivery Agent), 796
+- media with book
+  - Fedora 10 Install DVD, 1011
+  - Fedora 10 Live/Install desktop
+    - CD, 1011
+  - Fedora source code, 1012
+  - messages logfile, 600
+- metacharacters, 175
+  - file-matching, 173–175
+  - file-redirection, 175
+- Metacity, 96–99
+- MIDI players, 326
+- minix file system, 433
+- modinfo command, 427
+- modprobeconf directory, 417
+- monitor, tuning, 138–140
+- Moon data applet, 101
+- mount command, 430
+- mounding Windows file systems, 65
+- Mousepad (Xfce), 135
+- moving files, Konqueror, 122
+- MP3s, 310
+- MediaPlayer, 372
+- MPM (Multi-Processing Module), 848
+- dmos file system, 433
+- MTA (Mail Transfer Agent), 796
+- itab directory, 417
+- mtools.conf directory, 417
+- MUA (Mail User Agent), 378, 796
+- Mugshot, 84, 112
+- multimedia, patents, 308
+- multiple users, 8
+- multitasking, 8, 147
+- music, listening to, 309–310
+- music CDs, 310
+- mutt, 386
+- my.cnf file, 926–927
+- MySpace, 113
+- mysql database creation, 935–936
+- MySQL, 921
+  - databases
+    - adding data, 936, 938–939
+    - backups, 951
+    - checking, 951, 953
+    - creating, 935–936
+  - displaying columns, 946
+  - displaying records, 945
+  - fixing, 951–951
+  - mysql command, 933–934
+  - sorting data, 947
+  - user access, 949–951
+  - packages, 923–924
+  - mysql, 922
+  - mysql-devel, 922
+  - mysql-server, 922
+  - php-mysql, 922
+  - tables, 939, 942–943
+  - altering structure, 948
+  - deleting records, 948
+  - updating records, 948
+  - MySQL AB, 921
+  - mysql command, 933–934
+  - checking to see if up and running, 932–933
+  - group accounts, 924
+  - my.cnf file, sample, 930, 931
+  - my.cnf file, 926–927
+  - starting, 931
+  - user accounts, 924
+  - options, 925–930
+
+## N
+- named.conf directory, 417 
+- NAT (Network Address Translation), 583
+- Nautilus, 96, 104–106
+- navigation, KDE desktop, 119–120
+- netftp command, 395–396
+- edit, 179
+- netatalk, 988
+  - AppleTalk server settings, 995–996
+  - copying files, 1001–1002
+  - deleting files, 1001–1002
+  - file sharing, Samba, 1002–1003
+  - moving files, 1001–1002
+  - firewall ports, 995
+  - permissions, 1000–1001
+  - Samba, 1002–1003
+  - security, 998
+  - directory-level, 999–1004
+  - file-level, 999–1004
+  - host-level, 999
+  - user-level, 998–999
+  - starting, 993–994
+  - troubleshooting, 1004–1005
+  - user setup, 996
+  - volume sharing, 996–997
+- networking, server configuration, 962–963
+- networking services alternatives, 1017
+- Arpwatch and, 1023
+- checklist for running, 1013–1024
+- daemons, 1015–1017
+- dabase servers, 1025
+- DNS (Domain Name System) server and, 1025
+- Dynamic Host Configuration Protocol server and, 1024
+- e-mail servers and, 1021
+- file servers and, 1019
+- FTP servers and, 1023
+- LDAP (Lightweight Directory Access Protocol) server and, 1024
+- login servers and, 1020
+- Netatalk servers and, 1020
+- news servers and, 1021
+- NIS (Network Information System) servers and, 1024
+- TP (Network Time Protocol) server and, 1022
+- portmap server and, 1022
+- print servers and, 1022
+- Netatalk servers, 1020
+- Netflix, 113
+
+# Index 1060
+
+- RARP (Reverse Address Resolution Protocol) server and, 1025
+- referencing, 1018–1028
+- Samba servers and, 1019
+- security services, 1027
+- proxy/caching server, 1028
+- system logging, 1027
+- SNMP (Simple Network Protocol) server and, 1023
+- SWAT (Samba Web Administration Tool) server and, 1022
+- user services, 1025–1027
+- finger server, 1026
+- remote execution server, 1025
+- remote user identification, 1027
+- talk server, 1026
+- Write-to-All server, 1027
+- Web server and, 1018
+- NetworkManager, 633
+- installation, 634
+- VPN (virtual private network), 637–638
+- wired networks, 634–636
+- wireless networks, 634–636
+- networks
+  - connectivity, 9
+  - debugging, 962
+  - poor reception, 678
+  - servers, 9
+- Neverwinter Nights game, 305
+- news login, 421
+- news servers, 1021
+- newsgroups, 387
+- fs file server, 433
+- NFS (Network File System)
+  - access from Mac, 1005–1007
+  - automatically, 765
+  - manually, 763
+  - server installation, 52
+  - sharing, 756
+  - unmounting, 769
+  - using, 763
+- NFS Server Configuration, 756–759
+- nfs daemons, 763
+- NICs (Network Interface Cards), LANs, 641
+- nis configuration, 45
+- NIS (Network Information System) servers, 1024
+- noauto file systems, 766
+- nohup command, 166
+- nodoka desktop theme, 83
+- nroff command, 256–257
+- NTFS file system, 61–433
+- NTP (Network Time Protocol) server, 1022
+- tp.conf directory, 417
+- NVIDIA video cards, 281
+- ogg123, 318
+- Ogg Vorbis, 310
+- OIDs (Object Identifiers), schemas, 894
+- OmniVision Web cams, 341
+- Online Desktop, 84, 112
+- Open Location, 88
+- open source games, 283
+- chess games, 289–290
+- Fedora games, 286–288
+- Freeciv, 290–294
+- GNOME games, 284
+- KDE games, 284
+- Penguin Racer, 295
+- Tux Racer, 295
+- opening files, Konqueror, 372
+- OpenLDAP
+  - configuration, 895–898
+  - installation, 895
+  - server, 892–998
+- OpenOffice.org
+  - documents, formatting, 251
+  - styles, 251
+  - drawing tools, 251
+  - wizards, 251
+  - Base, 250
+  - Calc, 249
+  - Draw, 249
+  - Impress, 249
+  - Math, 249
+  - Writer, 249
+- Opensnwan, 709
+- OpenVPN
+  - client, 716
+  - server, 715
+  - mysql, 709, 712
+- yum and, 196
+- packet filters, 580
+- pal2rgb, 262
+- panel
+  - Panel Items (Xfce), 136
+  - panels, 92, 94
+  - drawers, 103
+  - properties, 103–104
+  - GNOME desktop, 96, 99–104
+  - applets, 101–102
+  - Applications menu, 100–101
+  - KDE, applications, 118, 132
+  - System menu, 1
+- PAP (Password Authentication Protocol), 699
+- Partition Magic, 62
+- partitioning
+  - Disk Setup, 67–68
+  - fdisk and, 70–72
+  - reasons for, 66
+  - tips for, 72, 74
+- partitions
+  - deleting, 68–70
+  - dividing disk, 68
+  - file systems, 66
+  - operating systems, 66
+  - passwd directory, 417
+- passwords
+  - breaking, 578
+  - setting, 466
+- packages
+  - dhcp, 910
+  - from source code, 215–218
+
+# Index 1063
+
+- PDF (Portable Document Format)
+  - files, 267
+  - Adobe Reader and, 267
+- PDF files, 251
+- pdf2dsc, 262
+- pdf2pss, 262
+- performance, Conqueror, 128
+- permissions, netatalk, 1000–1001
+- pfb2pfa, 262
+- Philips USB Web cams, 341
+- php-mysql, 922
+- Picasa, 113
+- pine, 386
+- ping command, 673
+- pinning windows, KDE, 130
+- piping commands, 158
+- pk2bm, 262
+- Penguin Racer, 295
+- plasmoids, 118
+- playing music
+  - Equalizer, 324
+  - MIDI players, 326
+  - ogg123, 326
+  - Playlist Editor, 325
+  - Rhythmbox, 319, 321
+  - XMMS, 322–324
+- plug-ins
+  - Adobe Acrobat, 371
+  - Adobe Flash Player, 371
+  - DjVu, 371
+  - Java Runtime Environment, 372
+  - Konqueror, 128
+  - MediaPlayer, 372
+  - POP3 server, 818
+  - dovecot and, 819–820
+  - mailbox access, 818
+- portmap server, 1022
+- positional parameters, 498
+- Postfix, 797, 813–814
+- Power Manager agent, 451
+- ppm2tff, 262
+- PPP over OpenSSH, VPNs and, 709
+- preferences
+  - GNOME, 107–108
+  - accessibility, 107
+  - background, 107
+  - screensaver, 108
+  - theme, 108
+- print servers, 1022
+- printcap directory, 417
+- printer sharing, AppleTalk, 1003–1004
+- printers
+  - configuration, 734–739
+  - CUPS printers, 739
+  - JetDirect, 741
+  - local printers, 734
+  - Printer configuration window, 733–742
+  - selecting, 733
+  - SMB printers, 740–741
+  - UNIX printers, 740

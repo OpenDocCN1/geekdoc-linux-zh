@@ -1,0 +1,310 @@
+
+# 1046 Index
+
+- command-line servers, 963–964
+- arguments, 496
+- AppleTalk, 991–1004
+- completion, 155
+- networking, 962–963
+- editing and, 153
+- shell, 166
+- navigating, 154
+- connection speed
+- cable Internet, 959
+- arguments, 149
+- background, 159
+- DSL (digital subscriber), 959
+- frame relay, 159
+- environment variables, 149
+- ISDN (Integrated Services Digital Network), 959
+- expanding, 159
+- extracting music CDs, 331–332
+- history, 156–157
+- KRunner, 120
+- locating, 150–152
+- metacharacters, 150
+- mysql, 933–934
+- mysqladmin, 932
+- mysqlshow, 932
+- options, 149
+- running, 153
+- run command number (!!), 157
+- run previous command (!!), 157
+- sequential, 159
+- sudo, 421
+- commercial games, 296–297
+- Cedega, 300–301
+- BioWare, 305
+- Loki Software, 302–305
+- Linux, 27
+- id Software, 298–299
+- Microsoft Windows, 297
+- commercial software, 1037
+- desktop, 94–95
+- LANs, 643, 646–649
+- OpenLDAP server, 895–898
+- sendmail, 800–801
+- contacts, Evolution, 382
+- converting documents
+- DocBook, 266
+- LaTeX, 261–262
+- cookies, Konqueror, 127
+- copying files, Konqueror, 122
+- copyrights, video, 346
+- CPU Temperature applet, 101
+- creating files, Konqueror, 124–125
+- cron, backs and, 555–557
+- cron, 529–533
+- crontab directory, 416
+- Crypto, Konqueror, 127
+- cryptography
+- certificate service request, 623–625
+- certificates, 620–626
+- certificates, self-signed, 625–626
+- certificates, troubleshooting, 627
+- SLL (secure sockets layer), 619
+- csh.cshrc directory, 416
+- CUPS (Common UNIX Printing Configuration Service), 731–732
+- configuration, 750–751
+- drivers, 732
+- IPP, 732
+- printer classes, 732
+- Printer configuration window, 732
+- printer options, 746–747
+- UNIX print commands, 732
+- Web-based administration, 742, 743, 744,
+- cupsd daemon, 745–746
+- custom rules for firewalls, 582
+- cut command, 506
+- Nautilus, 96, 104–106
+- panels, 99–104
+- Home folder, 88–89
+- KDE, 116, 1034
+- applications, 132
+- clock, 118
+- color, 131
+- Desktop Pager, 118
+- Dolphin File Manager, 118
+- Fedora, 118
+- fonts, 130
+- Konqueror, 118, 120–123
+- navigating, 119–120
+- panel, 118
+- screensaver, 130
+- starting, 117
+- taskbar, 118
+- virtual, 130
+- panels, 92–94
+
+# D
+
+- Dag, 193
+- data privacy (IPSec), 711
+- databases (MySQL)
+  - adding data, 936, 938–939
+  - backups, 951
+  - checking, 951, 953
+  - creating, 935–936
+  - displaying columns, 946
+  - displaying records, 945
+  - fixing, 951–953
+  - mysql command, 933–934
+  - sorting data, 947
+  - user access, 949–951
+- preferences, 89
+  - background, 89
+  - browsers, 90
+  - editors, 90
+  - screensaver, 91
+  - themes, 91
+  - shell, 144
+  - switching environments, 115
+- DDOS (Distributed Denial of Service) attacks
+  - protecting against, 610–617
+- del.icio.us, 113–114
+- deleting files, Konqueror, 122
+- Desk applet, 101
+- deskbar-applet package, 101
+- Desktop Pager, KDE, 118
+- desktops, 86, 1033
+  - car analogy, 86
+  - configuration, 94–95
+  - creating, 478–479
+  - GNOME, 95–1034
+  - Metacity, 96–99
+  - troubleshooting GUI, startup, 137
+  - monitor tuning, 138–140
+- device drivers, 7
+- DHCP (Dynamic Host Configuration Protocol), 909
+  - client, 919–920
+  - dhcpd.conf file, 911–915
+  - firewall, opening, 911
+  - options, 915
+  - server starting, 918–919
+  - verifying working, 918
+- dhcp package, 910
+- dhcpconf file, 911–915
+- data types, 914
+- expanding, 912–914
+- dial-up connections, 691–692
+- Digg, 113
+- digital camera
+  - gThumb, 353–354
+  - images from, 353
+  - as storage device, 355
+- directories, 170
+  - hidden, Macintosh, 999–1000
+  - LDAP, 894
+  - replication, 904
+  - shell, 145–146
+- directory commands, FTP, 393–394
+- directory-level security, netalak, 999–1004
+- disk mirroring, 541
+- disk space
+  - checking space, 446–448
+  - df command, 446
+  - disk Usage Analyzer, 446
+  - d command, 447
+  - find command, 448
+- disk usage
+  - checking quotas, 490
+  - /etc/fstab file, 487
+  - quota files, 487
+  - quota rules, 489
+  - quota startup scripts, 488
+  - quotas and, 486–491
+  - tempemp files, removing, 491
+- distributions, 11
+- DjVu, 371
+- DNS (Domain Name Server)
+  - BIND (Berkeley Internet Domain), 969–970
+  - authoritative answer, 968
+  - checking if working, 980–981
+  - configuration files, 973
+  - named.conf, 974–976
+  - zone files, 977–979
+  - example, 970–972
+  - named daemon, 980
+  - primary (master) name server, 967
+  - quick start, 972–980
+  - risk, 968
+  - secondary (slave) name server, 967
+  - zones, 968, 966, 1025
+- DNSSEC secured zones, 772
+- DocBook, 266
+  - converting, 266
+  - creating, 263–265
+  - formatting, 251
+  - printing, 257
+  - styles, 251
+- Dolphin File Manager, 120–122
+- availability, 960–961
+- domains, resource records, 968
+- DOS, 231
+- DOS (Denial of Service) attacks, 606
+  - protecting against, 607, 610
+- dombombing, 607–609
+- surffing, 609
+- dovecot directory, 416
+- downloads, 401
+- du command, 491
+- dumb terminal, 164
+- dump command, 540, 552–554
+- dump levels, 555–556
+- DRI (Direct Redirecting Infrastructure), 958
+- DSL (digital subscriber line), 959
+- Dynamic Host Configuration server, 1024
+- dynamic IP addresses, 668
+- Ekiga, running, 342
+- emacs, 179
+- e-mail
+  - attachments, 380
+  - clients, 381
+  - managing, 360
+  - mail, 386
+  - pine, 386
+  - servers, 1021
+- encrypted file systems, 434
+- encryption keys, 713
+- environment variables, 160–162
+- Equalizer, 324
+- ETP (Extended Mail Protocol), 796
+- etc directory, 416
+- /etc/alternatives directory, 419
+- /etc/amanda directory, 419
+- /etc/cups directory, 419
+- /etc/default directory, 419
+- /etc/http directory, 419
+- /etc/mail directory, 419
+- /etc/postfix directory, 419
+- /etc/ppp directory, 419
+- /etc/rc.d directory, 419
+- /etc/security directory, 419
+- /etc/skel directory, 419
+- /etc/squid directory, 419
+- /etc/sysconfig directory, 420
+- /etc/uucp directory, 420
+- /etc/vsftpd directory, 420
+- /etc/X11, 418
+- /etc/xinetd.d directory, 420
+- Ethernet, 644
+- Everything Set, 20
+- Exchange, 382
+- Exim, 797
+- expanding arithmetic operations, 160
+- exports directory, 416
+- Enterprise comparison, 14
+- new features, 17
+- reasons to choose, 15–17
+- source code, 102
+- Fedora 10 Live desktop CD, 1011
+- Fedora 10 Install DVD, 2011
+- Fedora Ambassadors and Marketing, 13
+- Fedora Artwork, 13
+- Fedora Desktop Live CD (GNOME), 20
+- Fedora Desktop Live CD (KDE), 20
+- Fedora Documentation, 13
+- Fedora games, 283, 266–288
+- Fedora Live CD, 118
+- Fedora menu, KDE, 118
+- fedora-release directory, 416
+- file copying commands, FTP, 394–395
+- file-matching, metacharacters, 173–175
+- Fast User Switch
+- fax2pfs, 262
+- fax2tiff, 262
+- 2.6 Kernel, 1034
+- login, 84–85
+- Facebook, 113
+- File System Saint, 965
+- file systems, 7, 169
+- file-sharing, 333
+- file-level security, netatalk, 999–1004
+- files
+  - creating, 440–441
+  - copying, Konqueror, 122
+  - creating, 172–173
+- ext, 433
+- fstab and, 435
+- hard disk, adding, 441–443
+- hierarchy, 170
+- hpfs, 433
+- iso9660, 433
+- jfs, 434
+- kafs, 433
+- management, 429–372
+- minix, 433
+- mount command, 437
+- mounting, 432–440
+- mounting removable media, 438–439
+- fat, 333
+- fxs, 434
+- iafs, 434
+- partitions, 430
+- proc, 433
+- RAID disks, 443–345
+- port forwarding, 582
+- swap, 433
+- ufs, 434
+- vfat, 333
+- xenix, 434

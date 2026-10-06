@@ -1,0 +1,13 @@
+# KDE desktop basics
+
+Here are some descriptions of what you will find on the KDE 4.1 Plasma desktop for Fedora 10, as illustrated in Figure 3-18:
+
++   - **Plasmoids** — Applets that can be added to the desktop as well as the panel are referred to as plasmoids in KDE 4.1. Here you can see the clock, picture frame, KGet, downloader, network ticker, and dictionary all to the desktop. You can drag plasmoids around, group them, and arrange them as you like on your desktop.
+- **Konqueror** — The default Web browser and file manager for KDE.
+- **Dolphin** — A new file manager for KDE.
+- **Panel** — The panel provides some quick tools for launching applications and managing the desktop. You can adapt the panel to your needs by resizing it, adding tools, and changing its location. By default, you start with an application launcher, taskbar, desktop pager, some mini apps, device modifier, and a clock.
+- **Application Launcher/Menu** — This button opens the Kickoff Application menu, which helps you search for applications installed on your system and launch them. Choose between Favorites (applications you use), Applications (application menus), Computer (places and storage devices), or Recently Used Applications. Right-click the select and Switch to Classic Style to return to a classic view of application categories and menus.
+- **Taskbar** — This button shows the tasks that are currently running on the desktop. The button for the window that is currently active pressed in. Click a task to toggle between opening and minimizing the window.
+- **Desktop Pager** — This box on the panel consists of your virtual desktops, which contain small views of each desktop. There are labeled 1, 2, 3, 4. You join your KDE session on virtual desktop 1. If there are windows on the desktop, small icons representing them may cover the desktop number. You can change to any of the four desktops by clicking it.
+- **Mini apps** — Some applications, such as media players, clipboards, and battery power managers, will keep running after you have closed the related window. Some of those applications maintain a tiny app in the panel. Often clicking these apps restores the windows they represent. This is convenient for music players if you don't want to take up desktop space while you play music, but you want to be able to open the player to change songs.
+- **Clock** — The current time is shown on the right-hand side of the panel. Click it to see a calendar for the current month. Click the arrow keys on the calendar to move forward and back to other months.

@@ -1,0 +1,14 @@
+# Setting Up an NFS File Server
+
+Instead of representing storage devices as drive letters (A, B, C, and so on), as are in Microsoft operating systems, Linux systems connect file systems from hard drives, floppy disks, CD-ROMs, and other devices invisibly to form a single Linux file system. The Network File System (NFS) facility lets you to extend your Linux file system in the same way, to connect file systems from other computers to your local directory structure well.
+
+> > CROSS-REFERENCE: See Chapter 10 for a description of how to mount local devices on your Linux file system. The command (mount) is used to mount both local devices and NFS file systems.
+
+Creating an NFS file server is an easy way to share large amounts of data among the users and computers in an organization. An administrator of a Linux system that is configured to share its file systems with NFS has to perform the following tasks to set up:
+
++   1. **Set up the network** — If a LAN or network connection is already connecting the computers on which you want to use NFS (TCP/IP as the network transport), you already have the network you need.
+2. **On the server, choose what to share** — Decide which file systems on your Linux server to make available to other computers. You can choose any point in the file system and make all files and directories below that point accessible to other computers. However, it is most secure to share directories from the root of a file partition.
+3. **On the server, set up security** — You can use several different security features to suit the level of security with which you are comfortable. Mount-level security restricts the clients that can mount a resource and, for those allowed to mount it, you specify whether it can be mounted read/write or read-only. With user-level security, you use maps from the client systems to users on the NFS server. In this way, users can rely on standard Linux read/write/execute permissions, file ownership, and group permissions to access and protect files.
+4. **On the client, mount the file system** — Each client computer that is allowed access to the server's shared file system can mount it where the client chooses. For example, you may mount a file system from a computer called oak on the /media/oak directory in your local file system. After it is mounted, you can view the contents of that directory by typing `ls /media/oak`. Then you can use the `cd` command below the /media/oak` mount point to see the files and directories it contains.
+
+Figure 18-1 illustrates a Linux file server using NFS to share (export) a file system and a client computer mounting the file system to make it available to its local users.

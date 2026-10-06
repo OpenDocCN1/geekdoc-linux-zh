@@ -1,0 +1,78 @@
+
+
+在在上一个示例中，DHCP 服务器为无盘工作站使用的启动文件位于 `/boot/maple.nb`。硬件以太网值标识客户端上以太网网的地址。客户端的 IP 地址设置为 10.0.0.150。所有这些行都包含在一个 hosts 文件中，其中主机名定义为 maple。（数据类型的描述请参见表 23-1，其他可能用于配置瘦客户端的有用选项请参见表 23-2 中的“**Thin Clients**”（瘦客户端）标题。）
+
+## 添加选项
+
+在 `/etc/dhcpd.conf` 文件中，有几十个选项可以将信息从 DHCP 服务器传递给 DHCP 客户端。表 23-1 描述了你可以用于不同用途的数据类型。表 23-2 描述了可用的选项。
+
+### 表 23-1：数据类型
+
+| 数据类型 | 描述 |
+| --- | --- |
+| ip-address | 输入 ip-address，可以是 IP 地址 (111.111.111) 或完全限定域名 (client.history.com)。要使用域名名，该名称必须能够解析为 IP 地址 |
+| int32, int16, int18, uint32, uint16, uint8 | 用于表示有符号和无符号的 32 位、16 位和 8 位整数 |
+| "string" | 输入由双引号围绕的字符字符串 |
+| Boolean | 在需要布尔值时输入 true 或 false |
+| data-string | 输入八字节形式的字符字符串（"client1" 或十六进制八字节串 (00:05:4A:8E:47)） |
+
+选项包含了从 DHCP 服务器传递给客户端的值。表 23-2 列出了有效选项，客户端将无法使用你可能使用的每一个值。换句话说，并不是所有选项在所有情况下都是恰当的。
+
+表 23-2 分为以下几类：
+
+- 名称、地址和时间 — 这些选项设置的值供客户端用于其主机名、域名、网络号和时区（相对于定义值的偏移量）。
+- 服务器和路由器 — 这些选项用于告诉 DHCP 客户端在网络上的何处找到路由器和服务器。虽然列出了十多种服务器类型，但大多数情况下你只需要指定路由器的地址，客户端就会使用它。
+- 路由 — 这些选项指示客户端是否路由数据包。
+- **Thin Clients**（瘦客户端） — 如果 DHCP 用作客户端的服务器，这些选项非常有用。客户端可以是具有处理能力的 X Terminal 或无盘工作站，但没有磁盘（或磁盘非常小），因此无法自行存储启动镜像和文件系统。
+
+注意：Linux 终端服务器项目 (LTSP) 包含了设置服务器和瘦客户端所需的所有软件。你可以在《Linux Toys II》(Wiley Publishing, 2005) 中找到关于 LTSP 的描述。Fedora K12linux 项目 (http://fedoraproject.org/wiki/K12Linux) 是基于 LTSP 的项目示例，它为学校的数千名学生提供教育工具。
+
+### 表 23-3：DHCP 选项
+
+| 选项 | 描述 名称、地址和时间 |
+|---|---|
+| option host-name string; | 指示客户端计算机可以用于识别自身的名称。它可以是机名（例如 pine）或完全限定域名（例如 pine.hansonhistory.com）。你可以在声明中使用它，通过以太网地址识别主机计算机。 |
+| option domain-name string; | 指示客户端应用于解析 DNS 主机的默认域名。 |
+| option subnet-mask-ip-address; | 将子网掩掩码与 IP 地址关联。例如，option 255.255.255.0 10.0.0.1; |
+| option time-offset int32; | 指示与协调世界时 (UTC) 的偏移量（以为）。例如，美国东部标准时间的 UTC 偏移设置如下：option time-offset -18000; |
+| Servers and Routers option routers ip-address [, ip-address...]; | 按优先级顺序列出连接到本地网络的一个或多个路由器。客户端可能会将此值视为网关。 |
+| option domain-name-servers ip-address...]; | 列出客户端可用于将名称解析为 IP 地址的一个或多个域名系统 (DNS) 服务器。按应尝试的顺序列出服务器。 |
+| option time-servers ip-address [, ip-address...]; | 按优先级顺序列出 DHCP 客户端可以使用的一个或多个服务器。 |
+
+### 第四部分：Fedora RHEL 网络和服务器设置
+
+| 选项 | 描述 |
+|--- |--- |
+| option116-name-servers ip-address [, ip-address...]; | 按优先级顺序列出客户端可以使用的一个或多个 IEN 116 名称服务器。（116 名称服务器早于 DNS 服务器，被认为是过时的。） |
+| option log-servers ip-address [, ip-address...]; | 列出一个或多个 MIT-LCS UDP 服务器。按应尝试的顺序列出服务器。 |
+| option cookie-servers ip-address [, ip-address...]; | 列出一个或多个每日消息（饼/cookie）服务器（参见 RFC 865）。按应尝试的顺序列出服务器。 |
+| option lpr-servers ip-address [, ip-address...]; | 列出一个或多个可用的行打印机服务器。按应尝试的顺序列出服务器。 |
+| option impress-servers ip-address [, ip-address...]; | 列出一个或多个 Imagen Impress 镜像服务器。按应尝试的顺序列出服务器。 |
+| option resource-location-servers ip-address [, ip-address...]; | 列出一个或多个资源定位服务器 (RFC 887)。按应尝试的顺序列出服务器。 |
+| option nis-domain string; | 指示如果客户端有 NIS 服务器可用，则 NIS 域的名称。 |
+| option nis-servers ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 NIS 服务器地址。 |
+| option ntp-servers ip-address [, ip-address...]; | 按优先级顺序列出网络时间协议服务器的地址。 |
+| option netbios-name-servers ip-address [, ip-address...]; | 列出 WINS 服务器的地址，用于 NetBIOS 名称解析（用于 Windows 文件和打印共享）。 |
+| option netbios-dd-servers ip-address [, ip-address...]; | 列出 NetBIOS 报数服务器的地址。 |
+| option netbios-node-type uint8; | 包含一个字节，指示如何确定 NetBIOS 名称。接受的值有：1（广播：WINS），2（对等：WINS），4（混合：广播，WINS），8（混合：WINS，广播）。 |
+| option font-servers ip-address [, ip-address...]; | 按优先级顺序列出客户端可以使用的一个或多个 font 服务器。 |
+| option nisplus-domain string; | 指示 NIS+ 域。 |
+
+| 选项 | 描述 |
+| --- | --- |
+| option nisplus-servers ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 NIS+ 服务器。 |
+| option smtp-server ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 SMTP 服务器。 |
+| option pop-server ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 POP3 服务器。 |
+| option nntp-server ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 NNTP 服务器。 |
+| option www-server ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 WWW 服务器。 |
+| option finger-server ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 Finger 服务器。 |
+| option irc-server ip-address [, ip-address...]; | 按优先级顺序列出客户端可用的 IRC 服务器。 |
+
+## 路由
+
+- option ip-forwarding flag; 指示客户端是否允许 (1) 或不允许 (0) IP 转发。如果客户端作为路由器运行，则允许此操作。
+- option non-local-source-routing flag; 指示客户端是否允许 (1) 或禁止 (0) 转发具有本地源路由的数据包。 |
+- option static-routes ip-address ip-address... ]; 指定客户端用于访问特定主机的静态路由。（按优先级递减列出同一位置的多条路由。）
+- option router-discovery flag; 指示客户端是否尝试使用路由发现机制发现路由器 (1) 或不是 (0)。
+- option router-solicitation-address ip-address; 指示客户端应用于传输路由请求的地址。 |
+
