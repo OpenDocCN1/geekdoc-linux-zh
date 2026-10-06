@@ -1,6 +1,4 @@
 
-## `set` 变量
-
 - `set mode=vi`：切换模式到 vi。
 - `set mode=emacs`：切换模式到 emacs。
 - `set input_length`：设置输入行长度。
@@ -18,9 +16,7 @@
 
 使用 `bind -y` 查看启用的按键绑定。此命令显示可用命令的列表，如果某个命令已绑定到按键序列，它也会显示该序列。此处讨论使用的是 emacs 模式。
 
-## 第 10 章：Bourne Again Shell
-
-### Emacs 模式快捷键
+## 362 第 10 章：Bourne Again Shell
 
 - `CTRL-a`：到行首。
 - `CTRL-e`：到行尾。
@@ -61,7 +57,7 @@
 
 此处讨论使用的是 emacs 模式。
 
-## `.inputrc` 文件
+## .inputrc 文件
 
 Bourne Again Shell 以及其他使用 Readline 库的程序从你的家目录读取 `.inputrc` 作为初始化信息。如果没有设置 `INPUTRC` 环境变量，则使用此文件。如果设置了 `INPUTRC`，其值将作为初始化文件的文件名。
 
@@ -105,6 +101,8 @@ bash$ set -o emacs
 
 使用 `bind -y` 查看启用的按键绑定。此命令显示可用命令的列表，如果某个命令已绑定到按键序列，它也会显示该序列。此处讨论使用的是 emacs 模式。
 
+360 第 10 章：Bourne Again Shell
+
 ## 基础 Readline 命令
 
 有若干类命令符合通用文本编辑所需的命令：
@@ -139,6 +137,114 @@ bash$ set -o emacs
 - `ESC ~`：波浪展开命令（tilde-expand），将当前单词展开为以该前缀开头的用户名。例如，如果系统中只有一个以 `sc` 开头的用户名，输入 `set-TAB` 将导致结果 `scott`。
 - `ESC ^`：历史展开行命令（history-expand-line），对当前行的所有历史事件执行历史展开。
 
-## 命令行编辑
+## 命令行编辑 361
 
 - `ESC CONTROL-e`：shell 行命令（shell-expand-line），对当前行进行完全展开，就像 bash 在准备执行命令时所做的一样。甚至是别名和历史展开也会执行。
+
+## .inputrc 文件
+
+Bourne Again Shell 以及其他使用 Readline 库的程序从你的家目录读取 `.inputrc` 作为初始化信息。如果没有设置 `INPUTRC` 环境变量，则使用此文件。如果设置了 `INPUTRC`，其值将作为初始化文件的文件名。
+
+你可以在 `.inputrc` 中设置变量来控制 Readline 库的行为。你使用以下语法通过 `set` 设置变量：
+
+```
+set variable
+```
+
+- `set mode=vi`：切换模式到 vi。
+- `set mode=emacs`：切换模式到 emacs。
+- `set input_length`：设置输入行长度。
+- `set history length`：设置历史列表长度。
+- `set ignore-dups`：是否忽略历史中的重复命令。
+- `set ignore-case`：是否忽略历史中的大小写。
+- `set history-space`：是否将以空格开头的命令保存到历史。
+- `set verbose`：是否在提示符中添加空格。
+- `set completion-style`：是否使用增量搜索进行补全。
+- `set history-backward`：是否对历史进行向后搜索。
+- `set history-forward`：是否对历史进行向前搜索。
+- `set show-readline`：是否显示 readline
+
+熟悉 emacs 可以轻松地使用类 emacs 的编辑快捷键，文档中使用的符号也是类似的。还有熟悉的“剪切范围”和“剪切文本”的概念，这两者在 emacs 中都存在。你键盘上的按键已绑定到命令行编辑可用的命令。你可以在家目录下的 `.inputrc` 中更改这些绑定。任何使用 Readline 库的应用程序都会首先读取 `.inputrc`（如果存在），以设置初始命令绑定以及任何特殊配置设置。关于使用 `.inputrc` 的更多信息，请参阅第 361 页。
+
+使用 `bind -y` 查看启用的按键绑定。此命令显示可用命令的列表，如果某个命令已绑定到按键序列，它也会显示该序列。此处讨论使用的是 emacs 模式。
+
+## 362 第 10 章：Bourne Again Shell
+
+- `CTRL-a`：到行首。
+- `CTRL-e`：到行尾。
+- `CTRL-k`：从光标到结束。
+- `CTRL-u`：从光标到开头。
+- `CTRL-b`：删除光标前的单词。
+- `CTRL-w`：删除光标后的单词。
+- `CTRL-y`：删除上次的文本（等一下，不是）。
+- `CTRL-y`：提取/粘贴上次剪切的文本。
+- `CTRL-r`：在历史向后搜索。
+- `CTRL-s`：在历史向前搜索。
+- `CTRL-l`：清屏。
+- `ALT-b`：向后移动一个单词。
+- `ALT-f`：向前移动一个单词。
+- `ALT-d`：删除光标后的单词。
+- `ALT-h`：删除光标前的单词。
+- `ALT-u`：删除光标前的单词。
+- `ALT-t`：删除光标后的单词。
+- `ALT-w`：为单词向后搜索。
+- `ALT-x`：为单词向前搜索。
+- `CTRL-v`：插入字面 ESC 字符。
+- `CTRL-x-e`：编辑行。
+- `CTRL-i`：插入缩进。
+- `CTRL-j`：插入换行。
+- `CTRL-m`：插入换行。
+- `CTRL-o`：插入换行。
+- `CTRL-q`：撤销上次操作。
+- `CTRL-z`：挂起 shell。
+- `CTRL-x`：执行命令。
+- `CTRL-a`：到行首。
+- `CTRL-b`：向后移动一个字符。
+- `CTRL-f`：向前移动一个字符。
+- `CTRL-e`：到行尾。
+- `CTRL-k`：到结束删除。
+- `CTRL-u`：到开头删除。
+- `CTRL-w`：删除单词。
+- `CTRL-y`：提取。
+
+此处讨论使用的是 emacs 模式。
+
+## .inputrc 文件
+
+Bourne Again Shell 以及其他使用 Readline 库的程序从你的家目录读取 `.inputrc` 作为初始化信息。如果没有设置 `INPUTRC` 环境变量，则使用此文件。如果设置了 `INPUTRC`，其值将作为初始化文件的文件名。
+
+你可以在 `.inputrc` 中设置变量来控制 Readline 库的行为。你使用以下语法通过 `set` 设置变量：
+
+```
+set variable
+```
+
+- `set mode=vi`：切换模式到 vi。
+- `set mode=emacs`：切换模式到 emacs。
+- `set input_length`：设置输入行长度。
+- `set history length`：设置历史列表长度。
+- `set ignore-dups`：是否忽略历史中的重复命令。
+- `set ignore-case`：是否忽略历史中的大小写。
+- `set history-space`：是否将以空格开头的命令保存到历史。
+- `set verbose`：是否在提示符中添加空格。
+- `set completion-style`：是否使用增量搜索进行补全。
+- `set history-backward`：是否对历史进行向后搜索。
+- `set history-forward`：是否对历史进行向前搜索。
+
+Bourne Again Shell 提了一项功能，可以让你在执行命令之前轻松地纠正在命令行上输入的错误——这是一个常用功能。这种交互式功能模仿了 Korn Shell 中的命令行编辑功能，并类似于 tcsh 和 zsh 中的功能。它本身也有一些实用的扩展功能。
+
+## Readline 库
+
+Bourne Again Shell 的命令行编辑是通过由自由软件基金会（Free Software Foundation）开发的名为 Readline 库的包实现的。使用 C 语言编写程序的应用程序可以使用它将其到自己的程序中。任何使用 Readline 库的应用程序都支持与 bash 提供的致的行编辑。
+
+在 bash 中使用命令行编辑时，你可以在两种基本模式之间选择：emacs 或 vi。两种模式都提供了这些编辑器中许多但并非全部的命令。默认模式是 emacs，但你可以通过以下命令在 bash 中交互式切换到 vi：
+
+```bash
+bash$ set -o vi
+```
+
+要切换到 emacs 模式，请给出命令：
+
+```bash
+bash$ set -o emacs
+```
