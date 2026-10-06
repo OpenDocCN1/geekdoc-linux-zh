@@ -1,0 +1,7 @@
+After that, click Applications in the same Finder window and then look for and open the Utilities folder. In that folder, find and double-click Disk Utility. If the ISO is not listed in the left pane of the Disk Utility window when it opens, go back to the Finder window, locate the Ubuntu Live CD ISO you just downloaded, and drag it to the left pane of the Disk Utility window, just below the listings for your current drives. Once the ISO file appears in that, click it to highlight it.
+
+To complete the process, click the Burn icon in the Disk Utility's toolbar aind, when prompted to do so, insert a blank CD into your drive. Once the blank disc is inserted and recognized, you will be able to adjust the burn speed from the drop-down menu next to the word Speed. Select as low a speed probably 4X to 8X, which, depending on the age of your Mac, will allow. Finally, click the Burn button in that same window, and the burning process will begin.
+
+# Ordering an Install Disc from Other Online Sources
+
+While it is possible to buy Ubuntu Desktop CDs from the Ubuntu store (https://shop.canonical.com/), only the 32-bit version is available, which is the same version that comes with this disc. You can, however, order a 64-bit version from an independent online source, such as OSDisc.com (http://www.osdisc.com/).

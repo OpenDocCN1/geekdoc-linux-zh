@@ -1,0 +1,11 @@
+You can get Firestarter via the Ubuntu Software Center by searching for firestarter and installing it. Once it is installed, Open Firestarter from the Dash (you might be asked for password). Firestarter will open with a self-explanatory setup wizard the first time. Read each screen carefully; whatever selections are suggested, if any (the defaults should be fine), and click the Forward button in each of the wizards until you get to the last one (in Figure 20-2). On that screen, make sure that the box next to Start firewall is checked and then click the Save button. The window will close, and the main Firestarter window will appear. Assuming the correct network device was detected and selected and the correct choice made, the firewall will be up and running.
+
+![](bbox=[0.239, 0.273, 0.843, 0.542])
+
+Figure 20-2: The last screen of the Firestarter setup wizard
+
+If the wrong network device was selected, a warning window will appear telling you. In that case, you can do a bit of trial-and-error manipulation by selecting Edit » Preferences in the main Firestarter window and click Network Settings in the Preferences window that appears (Figure 20-3). In that window, select one of the other devices listed in the Detected device(s) drop-down menu and then click the Accept button. Once back at the main Firestarter window, click the Start Firewall button (which looks like a blue Play button) and see what happens. If you still can't start the firewall, repeat the process I've described, this selecting a different network device.
+
+Once your firewall is up and running, you really don't need to do anything else. You can simply look at the Firestarter window (Figure 20-4) to see what is going on network-wise on your computer—which active connections you have; how much information has been coming and going; and whether there have been any events in, for example, the firewall has blocked an intruder. If you click the Events tab, you can then see the details of these events, such as what connection attempts were blocked, where they came from, and when they happened.
+
+342 Chapter 2

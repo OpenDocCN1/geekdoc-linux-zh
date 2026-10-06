@@ -1,0 +1,15 @@
+when you come across new devices, you can allow the other device to do all the hard work of pairing with your computer, rather than having to do it yourself (as described above). Enabling this feature is a simple click of the Bluetooth icon on the top panel and making sure that the Visible option is chosen in the menu that appears. As long as Visible is checked and Bluetooth is turned on, other devices will be able to pair with your computer without you initiating the pairing process. A message will pop up asking for confirmation when this happens and, once paired, the other device will be able to send you files—simple as that.
+
+# Backing Up Your Files
+
+You’ve worked hard to accumulate all of your files. Hours of typing, hundreds of photos, music of CDs—they’re all on the hard disk. So, what happens to them if something goes wrong with your computer? In many cases the answer is, unfortunately, that all of the data is forever. To avoid the pain of this experience, you’ll want to make regular backups.
+
+Plenty of backup utilities are available, but Ubuntu comes with one installed by default, simply, Backup. Open the Dash and search for Backup to open it. Since you haven't created any backups yet, you can Just just my backup settings in the window that appears.
+
+Now is a good time to decide what you’re going to store your backups. I have an external USB hard that does the trick, but you can use a USB drive, recordable CD or DVD, or even a web server. I’d recommend putting your backups on the same computer. The best policy is to put some distance between the original files and the backups if there’s a fire or some other disaster, you will have an intact copy. Make sure you have enough space for the backup too; regular recordable CDs are only 700MB, but my Pictures folder alone weighs in at a whopping 5.8GB!
+
+Connect, or otherwise prepare your chosen backup device and click the Storage tab in the Window. You will see a window like the one in Figure 7-20. Choose the location in which you’d like to save the backup files from the drop-down menu. Depending on which option you choose, you might have to enter some more details; for example, if you choose Local Folder, click the Choose Folder button to select exactly where backups will be stored (this can be an external disk like a flash drive or something similar).
+
+If you want to put your backup files on a CD or DVD, you’ll have to save them to somewhere first and then copy that folder onto a disc using the burning software mentioned earlier in this chapter.
+
+Now, select the Folders tab and you’ll be presented with the screen in Figure 7-21. Your first task is to decide what you want to back up, check out the list labeled Folders to back up, which should be empty at the moment. You can add and remove items as you please using the plus and minus at the bottom of the list.

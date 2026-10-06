@@ -1,0 +1,15 @@
+The first stop is here; Trash. Sometimes I'm surprised by just how much stuff accumulates here; I can go for weeks on end without emptying it. Luckily, trash lacks the unpleasant odor of its real-world counterpart, all that stands in your way is a quick check to make sure you didn't accidentally throw away anything. Click the Trash icon at the bottom of the Launcher, and when the window opens, click Empty Trash to delete all the files there. They will be deleted permanently, with no way of getting them back.
+
+Next up is a little more sophisticated. If you're running on hard disk space and want to know why (or just want to spawn around your files), open the Dash and search for Disk Usage Analyzer. Open it and, and when the window appears, click Scan Home. Wait a your folders are sized up. A colorful ring chart will appear, accompanied by a list showing where all your hard disk space is being eaten up. Hover the mouse over one of the colored segments on the chart to see what's taking up the most room or double-click one of the segments to zoom in on a particular folder. After that, it's up to you to weed out the hard disks: Click a folder in the left and choose Move to Trash to delete it.
+
+# Project 7: Creating and Extracting Compressed Files
+
+Since I have been talking about file storage, it seems only to wrap up this chapter by teaching you how to create and extract compressed files. In the Windows world, these are generally referred to as Zip files, in the Linux world, tarball is the operative name. The Linux name, in case you're wondering, comes from the application that is used to create the archive for such files. Compressed archives have two reasons: they let you bundle a bunch of files into one handy package, and squeeze all the files so that they take up less space on your hard disk. If you've ever tried to email a bunch of files to someone, know how useful this can be.
+
+To get the hands-on stuff down, you'll be creating a Windows/Linux/Mac-zip file and extracting it. You can get busy by opening a Nautilus window and creating a couple of dummy files to work with. Do this by going to the Nautilus file and selecting Create New Document > Empty Document. A new file will appear in the Nautilus window, with its name highlighted. You can type a name for the file; I'm using dogwood. Now repeat the process to create a second file; I'll be calling that violet. Use something equally for yours.
+
+Now you have two files to work with, you can create the compressed archive by following these steps:
+
++   Select the two files by clicking your mouse to the side of the files and dragging the cursor (with the mouse button still pressed) over both files until they are highlighted or by holding the CTRL key and clicking each file individually.
+
++   Once both files are highlighted, right-click either and select Compress from the pop-up menu.
