@@ -1,0 +1,13 @@
+# ASSEMBLY LANGUAGE STEP-BY-STEP
+
+On the other hand, this benefit cuts both ways. Linux is a multitasking operating system, and many programs can be executing at the same time. The features of protected mode also serve to protect the other programs from your program—and your programs from the other programs. Bullying is prohibited.
+
+You will encounter the protection mechanism sooner or later, most likely when you try to address a portion of memory for which your program does not have permission. You must keep in mind that although a 32-bit memory address can theoretically run from 0 to 0xffffffff, your program does not have permission to access all of those addresses. By access I mean write or read! You can't just start from address 0 and inspect every memory location your computer has. Snooping is prohibited—except for your own little corner of Linux’s world.
+
+The message comes under Red Hat 6 for protection errors is this:
+
+> Segmentation fault (core dumped)
+
+Not very helpful and in itself, huh? This is why gdb is so crucial—and why I spent so much of Chapter 12 on it. If you’re single-stepping through gdb, you will (in most cases) know precisely which instruction causes the problem, because the fault will be thrown as soon as you single-step that instruction. If instruction references memory, you can probably assume that it references a region of memory for which you don't have permission. You may also discover that a protection fault occurs during a C library call, but what that means is that you passed a bad value of sort to the C library. This is less common, and you simply have to take a much closer look at what you’re passing to the library code.
+
+What does the “core dumped” part of the message mean? When segmentation fault occurs, Linux creates a kind of postmortem file containing a description of the machine’s state when the fault happened, including a snapshot of your program’s binary code. This file’s name defaults to “core” and it could be useful in debugging except NASM does not currently embed the same information in .o files that gcc embeds in .o files generated from C programs. The core file is further more difficult to interpret for NASM programs than for C programs. The NASM team indicates that this is on its to-do list for the assembler, and with some luck we’ll see that feature added soon. All the more reason to watch the NASM Web site for new releases!

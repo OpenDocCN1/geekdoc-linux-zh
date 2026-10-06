@@ -1,0 +1,13 @@
+You'll see that Pulchr, there is another .loop, which does not conflict with the .loop that "belongs" to Bufclr. As long as a global label exists between the two of them, NASM has no trouble distinguishing them.
+
+Some notes on local labels:
+
++   - In a library of subroutines, local labels are at least local to the subroutine in which they are defined. Each subroutine begins with a label (the name of the subroutine, which is a label), so a local label defined within a subroutine will at most be visible until the beginning of the next subroutine. You may, of course, have global labels within subroutines, which will confuse visibility of local labels even further.
+
++   - It's perfectly legal and often helpful to define global labels that are never referenced, simply to provide a context for local labels. If you're writing a utility program that executes in straight-through fashion without a lot of jumping or long-distance looping back, you may go a long way without needing to insert a global label. I like to use global labels to set off functional parts of a program, whether those labels are called or not. This allows me to use local labels freely within those major functional modules. As a stylistic convention, I mark such nonexistent global labels by using a capital letter for the first letter in the label. All labels meant to be referenced begin with lowercase letters. As a side benefit, these labels can be used as breakpoints when debugging with gdb.
+
++   - Local labels, unfortunately, are not accessible as breakpoints within gdb. I'm not entirely sure why this is, but gdb will refuse to set a breakpoint on a local label.
+
++   - A rule of thumb that I use: Global labels and all references to them should occur within a single screen's worth of code. In other words, you should be able to see both a local label and everything that refers to it without scrolling your program editor. This is just a guide to help you keep sense in your programs, and I've found it very useful in my own work.
+
++   - If you're writing dense code with a lot of intermixed global and local labels, be careful that you don't try to JMP to a local label on the other side of a global label. This is one reason not to have 15 local labels called .loop within one part of a program—you can easily get them confused, and in trying to jump to one five instructions up, you may unknowingly be jumping to one seven instructions

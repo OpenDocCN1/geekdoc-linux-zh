@@ -1,0 +1,13 @@
+If you confine each project to its own directory, you can keep the default make file named "makefile" and not worry about typing the name of the make file into EMACS each time you want to rebuild the project. (And with only one file in the directory, you won't have to worry about accidentally invoking on the wrong file. I've done on. If this block on it, you'll soon be doubting your sanity.)
+
+This also allows you to have standard names for test files, log files, and so on, that are identical irrespective of which you happen to be working on at any given time. If all the files were glommed together in one huge directory, you'd have to remember a whole set of unique names, one for each project. Why bother? Directories cost little in disk space and do an enormous amount to manage complexity.
+
+# Consider EMACS Home
+
+All of the various steps required for programming can be done right from inside EMACS. You can edit source code and make files. You can assemble files and link them to generate executable files. You can run the executable program files to test them. You can invoke the GNU debugger. You can execute nearly any Unix command that can be issued from inside a shell such as bash. Why waste time ducking in and out of EMACS as though it were nothing more than a text editor?
+
+More than one book has been written about EMACS. I recommend the book Learning GNU EMACS by Debra Cameron, Bill Rosenblatt, and Eric S. Raymond (O'Reilly, 1996). My one gripe is that it doesn't cover the X Window version of EMACS specifically, but all the key commands are the same. I don't want to duplicate a lot of that book's excellent material, and EMACS is relatively intuitive on the editing side.
+
+The important big-picture thing to understand about EMACS is that it is buffer-based, and those buffers may either be related to disk files, or may simply contain other text that is not from a disk file. When you open a file, EMACS opens a buffer and loads from the opened file into that buffer. You can also open a buffer as a scratch buffer, type something in it, cut or copy portions of that into another buffer, and then just kill the scratch buffer (delete it) without saving it to disk. (There is a separate EMACS menu item for killing buffers.)
+
+When EMACS runs the make facility, it pipes output from make and from the tools that make invokes into a new buffer. That buffer is the same as any other EMACS buffer, and if you want, you can give

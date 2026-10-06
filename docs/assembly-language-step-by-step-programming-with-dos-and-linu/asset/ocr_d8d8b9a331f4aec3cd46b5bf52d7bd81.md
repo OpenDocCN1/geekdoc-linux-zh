@@ -1,0 +1,11 @@
+ter 3. If you want to find out what's recorded in memory location number, you place the number 24,263 on a memory system's address lines, and the memory system will read the contents at that location and send them back to you.
+
+The 8080 memory-addressing scheme was very simple: You put a 16-bit address out the address lines, and you got back the 8-bit value that was stored at that address. Note well: there is no necessary relation between the number of address lines in a memory system and the size of the data stored at each location. The 8080 stored 8 bits at each location, but it could have stored 16 or even 32 bits at each location, and still had 16 memory address lines.
+
+By far and, the operating system most used with the 8080 CP/M-80. CP/M-80 was a little unusual in that it existed at the top of installed memory—sometimes it could be contained in ROM, but mostly just to get out of the way and allow a consistent starting point for transient programs—those (unlike the operating system) were loaded into memory and run only when needed. CP/M-80 read a program from disk to run; it would load the program into memory, at address 0100H—that is, 256 bytes from the bottom of memory. The first 256 bytes of memory were called the program-segment prefix (PSP) and contained various odd bits of information as well as a general-purpose memory buffer for the program's disk input/output (I/O). But the executable code itself did not begin until address 0100H.
+
+I've drawn the 8080 and CP/M-80 memory model in Figure 6.1.
+
+The 8080's memory model as used with CP/M-80 was simple, and people used it lot. So, when Intel created its first 16-bit CPU, the 8086, it wanted to make it easy for people to translate CP/M-80 software from the 8080 to the 8086—what we call porting. One way to do this was to make sure a 16-bit addressing system such as that of the 8080 still worked. So, even though the 8086 could address 16 times as much memory as the 8080 (16 x 64K = 1 MB), Intel set up the 8086 so that a program could take some 64K byte segment within megabyte of memory and run entirely inside it, just as though it were the smaller 8080 memory system.
+
+This was done by the use of segment registers—which are basically memory pointers located in CPU registers that point to a place in memory where things begin, whether this be data storage, code execution, what-
