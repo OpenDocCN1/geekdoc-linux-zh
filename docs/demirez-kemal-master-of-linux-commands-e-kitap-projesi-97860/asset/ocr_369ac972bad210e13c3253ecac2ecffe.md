@@ -1,0 +1,1 @@
+To create a symbolic link, in -s command is used. Again, let's create a file with the touch command, and let the shortcut link to this file.
