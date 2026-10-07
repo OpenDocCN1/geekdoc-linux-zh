@@ -1,0 +1,68 @@
+
+| set page length | `slines` `YZ` | Set page length to #1 lines (useparam) | 将页长度设置为 #1 行（使用参数） |
+| set right margin | `smgr` `MR` | Set right margin at current column | 设置当前列的右边缘 |
+| set right margin parm | `smgrp` `Zn` | Set right margin at column #1 | 设置列 #1 的右边缘 |
+| set tab | `hts` `st` | Set a tab in rows, current column | 在行和当前列设置标签 |
+| set tb margin | `smgtb` `MT` | Sets both top and bottom margins | 设置上下边距 |
+| set top margin | `smgt` `Zo` | Set top margin at current line | 设置当前行的顶部边缘 |
+| set top margin parm | `smgtp` `Zp` | Set top margin at line #1 | 设置行 #1 的顶部边缘 |
+| set window | `wind` `wi` | Current window is lines #1-#2 cols #3-#4 | 当前窗口为行 #1-#2 列 #3-#4 |
+| start bit image | `sbim` `Zq` | Start printing image | 开始打印图形 |
+| start char set def | `scsd` `Zr` | Start definition of a character set | 开始定义字符集 |
+| stop bit image | `rbm` `Zs` | End printing bit graphics | 结束打印图形 |
+| stop char set def | `rcsd` `Zt` | End definition of a character set | 结束字符集定义 |
+| subscript characters | `sucs` `Zu` | List of subscriptable chars | 下标字符列表 |
+| superscript characters | `supcs` `Zv` | List of superscriptable chars | 上标字符列表 |
+| tab | `ht` `ta` | Tab to next 8 space hardware stop | 跳到下一个 8 空格硬件停止 |
+| these cause cr | `docr` `Zw` | These characters cause a CR | 这些字符产生 CR |
+| to status line | `tsl` `ts` | Go to status line, column #1 | 到状态行，列 #1 |
+| underline char | `uc` `uc` | Underscore one char and move past it | 下划一个字符并跳过 |
+| up half line | `hu` `hu` | Half-line up (reverse 1/2 linefeed) | 向上半行（反转 1/2 行换行） |
+| xoff character | `xoxc` `XF` | XON 字符 |
+| xon character | `xonc` `XN` | XOFF 字符 |
+
+(The following string capabilities are present in the SYSVr term structure, are are not documented in the man page. Comments are from the term structure header.)
+
+| label format | `fln` `Lf` | |
+| set clock | `sclk` `SC` | Set time-of-day clock | 设置时钟 |
+| display clock | `dclk` `DK` | Display time-of-day clock | 显示时钟 |
+| remove clock | `rmclc` `RC` | Remove time-of-day clock | 删除时钟 |
+| create window | `cwin` `CW` | Define win #1 to go from #2,#3 to #4,#5 | 定义窗口 #1 从 #2,#3 跳到 #4,#5 |
+| goto window | `wingo` `WG` | Goto window #1 | 进入窗口 #1 |
+| hangup dial phone | `dial` `DI` | Hang up phone Dial phone number #1 | 挂机拨打号码 #1 |
+| quick dial | `qdial` `QD` | Dial phone number #1, without progress detection | 拨打号码 #1，无进度检测 |
+| tone | `tone` `TO` | Select touch tone dialing | 选择调调拨号 |
+| pulse | `pulse` `PU` | Select pulse dialing | 选择脉冲拨号 |
+| flash hook | `hook` `fh` | Flash the switch hook | 闪断开关 |
+| fixed pause | `pause` `PA` | Pause for 2-3 seconds | 暂停 2-3 秒 |
+| wait | `wait` `WA` | Wait for dial tone | 等待拨号音 |
+| user0 | `u0` `u0` | User string #0 | 用户字符串 #0 |
+| user1 | `u1` `u1` | User string #1 | 用户字符串 #1 |
+| user2 | `u2` `u2` | User string #2 | 用户字符串 #2 |
+| user3 | `u3` `u3` | User string #3 | 用户字符串 #3 |
+| user4 | `u4` `u4` | User string #4 | 用户字符串 #4 |
+| user5 | `u5` `u5` | User string #5 | 用户字符串 #5 |
+| user6 | `u6` `u6` | User string #6 | 用户字符串 #6 |
+| user7 | `u7` `u7` | User string #7 | 用户字符串 #7 |
+| user8 | `u8` `u8` | User string #8 | 用户字符串 #8 |
+| user9 | `u9` `u9` | User string #9 | 用户字符串 #9 |
+| get mouse | `getm` `Gm` | Curses should get button events | 曲线应获取按钮事件 |
+| mouse | `kmous` `Km` | Mouse info | 鼠标状态信息 |
+| pc term options | `pctrm` `Sr` | PC terminal options | PC 终端选项 |
+| req mouse pos | `reqmp` `RQ` | Request mouse position report | 请求鼠标位置报告 |
+| zero motion | `zerom` `Zx` | No motion for the subsequent character | 后续字符无运动 |
+| set-lr margin | `smblr` `ML` | Set both left and right margins | 设置左右边距 |
+| set page length | `slines` `YZ` | Set page length to #1 lines (useparam) | 将页长度设置为 #1 行（使用参数） |
+| set right margin | `smgr` `MR` | Set right margin at current column | 设置当前列的右边缘 |
+| set right margin parm | `smgrp` `Zn` | Set right margin at column #1 | 设置列 #1 的右边缘 |
+| set tab | `hts` `st` | Set a tab in rows, current column | 在行和当前列设置标签 |
+| set tb margin | `smgtb` `MT` | Sets both top and bottom margins | 设置上下边距 |
+| set top margin | `smgt` `Zo` | Set top margin at current line | 设置当前行的顶部边缘 |
+| set top margin parm | `smgtp` `Zp` | Set top margin at line #1 | 设置行 #1 的顶部边缘 |
+| set window | `wind` `wi` | Current window is lines #1-#2 cols #3-#4 | 当前窗口为行 #1-#2 列 #3-#4 |
+| start bit image | `sbim` `Zq` | Start printing image | 开始打印图形 |
+| start char set def | `scsd` `Zr` | Start definition of a character set | 开始定义字符集 |
+| stop bit image | `rbm` `Zs` | End printing bit graphics | 结束打印图形 |
+| stop char set def | `rcsd` `Zt` | End definition of a character set | 结束字符集定义 |
+| subscript characters | `sucs` `Zu` | List of subscriptable chars | 下标字符列表 |
+| superscript characters | `supcs` `Zv` | List of superscriptable chars | 上标字符列表 |
