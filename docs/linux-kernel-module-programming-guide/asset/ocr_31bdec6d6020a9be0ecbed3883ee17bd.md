@@ -1,0 +1,1 @@
+tional compilation depending on the kernel version. The way to do this to use the macro LINUX_VERSION_CODE. In version a.b.c of the kernel, the value of this macro would be $2^{16}a + 2^8b + c$. To get the value for a specific kernel version, we can use the KERNEL_VERSION macro. Since it's not defined in 2.0.35, we define it ourselves if necessary.

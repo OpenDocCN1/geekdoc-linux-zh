@@ -1,0 +1,1 @@
++   * **Be happy.** If I get to meet you, it will make the encounter better for me, it will make you more useful for me ;).
