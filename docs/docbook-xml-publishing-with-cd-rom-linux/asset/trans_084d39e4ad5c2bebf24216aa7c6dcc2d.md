@@ -1,0 +1,256 @@
+
+
+# 370
+# 索引
+
+- EPS, 47
+- HTML (超文本标记语言), 253
+- GIMP (GNU 图像处理程序), 46–48
+- anchor 元素, 103
+- 术语表, 89–91
+- 转换为文档, 108–113
+- FAQ (常见问题), 253
+- Glossary 元素, 89–91, 268–269
+- 输出
+- FieldSynopsis 元素, 26–270,
+- Figure 元素, 156
+- GlossInfo 元素, 304,
+- 图像以及, 112–113
+- 图, 52
+- GlossDiv 元素, 89–90
+- 在线文档, 96–99
+- LaTeX, 57–58,
+- filename 元素, 27–28, 312
+- 文件名, XML DTD, 814
+- 测试, 113
+- GlossEntry 元素, 90
+- SGML 工具和 Lite, 129–130
+- 检 (CVS), 151–153
+- Term 元素, 91
+- SGMLtools, 110–112
+- 回滚, 144–145
+- 提交, 256
+- 锁定, 版本, 138
+- 从头开始编译, 164
+- 多次, 编辑, 199–200
+- 打开, Vim, 198
+- ID 元素, 100, 263
+- ID 数据类型, 261
+- ID 类型, 264
+- 安装, 41–49
+- ITF (超文本任务组), 6
+- GPL (通用公共许可证), 253
+- Graphic 元素, 297
+- Graphics 元素, 300
+- ImageData 元素, 40, 301
+- Object 元素, 301,
+- First 元素, 288
+- Footnote 元素, 288–289
+- Footref 元素, 289
+- format 元素, 232–279
+- Formal 元素, 271
+- 图像, 34, 35
+- FPI (正式公共标识符), 206
+- Freebase, 85–88
+- FreeBSD 系统, 359–360
+- FTP (文件传输协议), 109
+- fullin, 156
+- 格式化, 3,
+- GIF 元素, 35–37
+- GIMP, 36
+- HTML 输出,以及, 112–113
+- JPEG 格式, 39
+- 标记, 39–43
+- 开源工具, 46–52
+- PNG 格式, 35–37
+- Def 元素, 312–313
+- Prototype 元素, 312–313
+- FunctionSynopsis 元素, 313
+- Fundamental 元素, 365
+- Hardware 元素, 315
+- 硬硬标记, 246–247
+- Important 元素, 239–240, 331
+- 帮助元素, 175
+- Tim vim 编辑器, 198
+- 层级, 200
+- Highlights 元素, 290
+- Holder 元素, 290
+- Honorific 元素, 290
+- 热键, 元素, 167–170
+- htref 属性, 100
+- Index 元素, 88–885
+- IndexDev 元素, 335
+- IndexEntry 元素, 83, 376
+- IndexInfo, 86, 304
+- 索引元素, 335–337
+- Index term 元素, 88, 336
+- CVS GUI 元素, 159
+- GIF (图形界面格式) 图像元素, 32, 35, 36–37
+- InformalTable 元素, 53–339–340
+- url 属性, 97
+- Initializer 元素, 315
+- GNU Emacs, 164
+- InlineEquation 元素, 331–332
+- InlineMediaObject 元素, 301–302
+- Linux Document Projection, 358
+- 插入模式, Vim, 194–198
+- Linux Online, 360–361
+- 安装并自定义 Slackware Linux, 366
+- LinuxDoc, 转换为 eBook, 131–132
+- Lisp, 254
+- 目录文件, 121–122
+- 列出代码, 技术文档, 225–227
+- CVS, 148–149
+- Listitem, 28
+- Docs, 121
+- 列表, ItemizedList, 28
+- DTDs, 119–122
+- 字面布局元素, 328–335
+- GNU 版本控制系统, 141
+- LiteralAttribute, 332
+- LocalInfo 属性, 106
+- UNIX 系统, 122
+- 锁定文件, RCS 版本控制, 138
+- Win32, 122
+- 逻辑类型, 7
+- Open, 125
+- 长数据类型, XML Schema, 221
+- PGML, Emacs, 176
+- LyX 排版程序, 365
+- SGMLtools, 126–127
+- LZW 压缩, 377
+- 样式表, 112
+- Vim, 192
+- label 属性, 106
+- Lang 属性, 263
+- int 数据类型, XML Schema, 221
+- 数据类型, XML Schema, 222–233
+- LaTeX, 34, 362–364
+- DIV (设备无关), 127
+- Definition 元素, 347
+- 图, 57–58
+- Name 元素, 316
+- 元素, 71
+- ISBN (国际标准书), 71
+- ISO (国际组织), 254
+- 客户端, 159
+- 链接, 291
+- link 元素, 104–105
+- LinkAttribute, 102, 105
+- 链接元素, 299
+- ItemizedList, 28, 332
+- Set, 336
+- LinkMode 属性, 106
+- 在文档内,
+- 电子邮件地址, 108
+- LinkEnd 元素, 105
+- UNIX 系统, 122
+- Target 属性, 106
+- 概述, 123–128
+- ULink 元素, 97–98
+- 规范性文档, 255
+- Note 元素, 29, 30–239, 243
+- Tcl, 155–156
+- Notepad 编辑器, 16
+- Para 元素, 271
+- Meta-Information 元素, 303–307
+- 元数据, 254
+- 编号章节, 20
+- 父元素, 255
+- metal 元素, 318
+- 解析器, 255
+- 数值数据类型, XML Schema, 221–222
+- 解析, 255
+- SGMLTools, 127–132
+- Microsoft Word, Sec-254
+- Part 元素, 74–77, 269
+- 部分码, 70
+- 模态编辑器, Vim, 193
+- PartInfo 元素, 305
+- SpecMode, 106
+- PartIntro 元素, 269–270
+- PGML , 180
+- PCDA, 256
+- 月份类型, XML, 222
+- PDF 文件, 43–45
+- EPS, 43–45
+- OASIS (结构信息标准协会), 255
+- Perl (实用提取和报告语言), 255
+- OASIS 技术委员会, 递减元素, 3, 350–351
+- Phone 元素, 293
+- OASIS 网站, 262
+- Phrase 元素, 40
+- Object 元素, 302, 过时元素, 346–347
+- 物理划分, 7
+- OLink 元素, 105–198
+- 在线文档, 链接, 96–99
+- PNG (网络图形) 图像格式, 35–37
+- Open Project 网站, 353
+- POB 元素, 294
+- 开源, 255
+- POSIX 1003.2 规范, 186
+- 出版资源, 362–366
+- POSIX (可移植操作系统接口), 187
+- 开源工具, 46–52
+- PostCode 元素, 294
+- OpenJade, 255
+- PostScript 文件, 32
+- option 元素, 231
+- OrderedList, 29–30, 333
+- Prefaceelement, 105
+- OrgElement, 292
+- Primaryelement, 87
+- ArgName 元素, 292
+- 原生数据类型, XML Schema, 221
+- OS 属性, 263
+- OtherAddr, 292–293
+- Procedure 元素, 322
+- OtherName 元素, 71, 293
+- program 元素, 307–328
+- ProgramList 元素, 235, 322
+- Prompt 元素, 323
+- Property 元素, 323
+- PSGM, 120
+- HTML Tidy, 110
+- PGML 模式, Emacs, 175
+- 标记向上, 180–181
+- SGMLTools, 125–132
+- 负值数据类型, XML, 221
+- 嵌套元素, 254
+- NetBeans GUI, 159
+- 非规范性文档, 255
+- Integer 数据类型, XML, Schema, 221
+- PubDate, 294
+- 公共标识符, 256
+- Publisher 元素, 294
+- 公共图像, 32
+- 公共标识符, 345
+- RefName 元素, 345
+- RefName 元素, 345
+- Reference 元素, 83, 344
+- 引用元素, 333–346
+- 引用页, 83–85
+- 手册, 233–234
+- ReferenceInfo 元素, 305
+- RefMeta 元素, 344
+- RefMiscInfo 元素, 344–345
+- 可替换元素, 323
+- 报告, CVS, 155–156
+- 仓库, CVS, 150
+- 命名资源, 256
+- ReturnValue 元素, 323–324
+- Revision 元素, 264
+- 版本控制, 137–138
+- 版本日志, TkCVS, 158
+- RevisionFlag 属性, 264
+- RFC (请求为), 256
+- Role 属性, 264
+- 回滚文件 (RCS), 144–145
+- 根元素, 5, 256
+- RPMs, CVS 以及, 149
+- RCS 和, 141
+- rtf 文件, 从 DocBooks 生成, 130–131
+- SANE (扫描仪访问媒体), 50
+- 保存, 纯文本, 162
+- SBR 元素, 324
+- 扫描仪, 50–52

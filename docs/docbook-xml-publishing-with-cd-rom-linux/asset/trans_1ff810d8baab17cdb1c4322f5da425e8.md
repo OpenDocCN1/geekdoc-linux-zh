@@ -1,0 +1,137 @@
+
+
+## Schema 与 DTD 有何不同？
+
+<para>
+<alink url="http://www.w3.org/"><cite>万维网联盟 (W3C)</cite></alink>这是文档中 URI 的示例。Ulink 元素的 URL 属性包含一个有效的 URI。
+</para>
+
+![](img/81f56bf497dbf7f7582072400d12cb42_248_0.png)
+
+图 11.2 文档中的 URI 示例
+
+# 引用
+
+另一个不完全属于字符串或 CDATA 数据类型的重要数据类型是 URL。如果你还记得，URIs 是统一资源标识符（Uniform Resource Identifiers）。这些对于 DocBook 和 XML 都非常重要。XML Schema 规范允许一种 URIReference 类型，它可以包含 URI 或 URL。图 11.2 显示了文档中的一个 URI。
+
+还有许多其他数据类型，多到无法在此处进行讨论。然而，你必须理解，数据类型对于 XML Schema 至关重要。当 XML DocBook Schema 变得越来越常用时，将需要了解每个元素可以使用哪些数据类型。
+
+# 元素与属性
+
+元素和属性的行为在大多数情况下与 DTD 中相同。你使用元素来定义其中包含的数据，并使用属性来进一步定义元素。
+
+# 第 11 章：XML Schema 和 DocBook
+
+然而，在 XML Schema 中，某些元素是不包含属性的。具有简单数据类型（例如小数数据类型）的元素，根据定义不应该包含属性。
+
+这与 DTD 不同，也与你可能已经在 DocBook 中习惯的用法不同。DocBook 中的所有元素都可以包含属性。
+
+# 定义元素
+
+你如何知道一个元素可以包含什么？这包含在元素的 Schema 规范中。让我们快速查看从一个定义简单元素的虚拟 Schema 中读取元素定义。
+
+你将首先指定一个简单元素，然后指定几个更复杂的元素以获取全貌。第一个元素是 Para 元素，包含任何可以出现在段落中的数据。
+
+```
+<xsd:schema xmlns:xsd="http://www.w3.org/2000/08/XMLSchema">
+<xsd:annotation>
+<xsd:documentation>
+这是一个示例文档
+</xsd:documentation>
+</xsd:annotation>
+<xsd:element name="para" type="CDATA"/>
+</xsd:schema>
+```
+
+你可能注意到的第一点是格式——Schema 声明的每个部分都以 `<xsd:` 开头，代表 Schema 声明。
+
+你可能注意到的另一点是 annotation（注释）和 documentation（文档）元素。XML Schema 允许在编写过程中对其自身进行文档说明。这意味着在编写 Schema 时，Schema 作者可以在包含定义的元素时添加文档来解释这些元素。这令人兴奋，因为它允许生成自有的文档。只需通过具有适当样式表的解析器运行 Schema，它就可以生成自己的文档。很很妙，不是吗？
+
+最后，元素声明本身非常简单。`<xsd:element` 标记让你知道正在声明一个元素。`Name` 属性告诉你该元素的名称，`Type` 属性定义了元素可以具有的数据类型。因为你想在段落元素中允许几乎任何内容，所以你指定了在本章前面介绍过的 CDATA 数据类型。
+
+现在来看一组稍微复杂的元素。这个示例定义了一个包含另外两个元素的元素。注意，顶层元素本身只包含其他元素而不包含数据。
+
+```
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/08/xml-schema">
+<xsd:annotation>
+<xsd:documentation>
+这是一个用于复杂元素的示例 Schema。
+</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType name="ComplexElement">
+<xsd:sequence>
+<xsd:element name="SimpleElement1" type="xsd:string"/>
+<xsd:element name="SimpleElement2" type="xsd:decimal"/>
+</xsd:sequence>
+</xsd:complexType>
+<!--这是一个注释 -->
+</xsd:schema>
+```
+
+当你查看这个示例时，你会发现格式基本上是相同的。然而，ComplexType 元素包含一个 `xsd:sequence`，它定义了 Complex 元素中包含元素的顺序。如果你看到 `MinOccurs` 或 `MaxOccurs` 属性，你就知道元素必须在 Complex 元素中出现特定次数，否则文档在 Schema 中将无效。
+
+注意，即使在 XML Schema 文档中，HTML 风格的注释也是有效的。
+
+本节的目的不是让你开始编写你自己的 Schema。Norman Walsh 和 DocBook 技术委员会将完成这项。然而，当 DocBook XML Schema 广泛使用时，你可能需要阅读 XML Schema 才能充分利用它。
+
+# DocBook XML Schema
+
+DocBook XML Schema 尚未最终定型，在编写此时尚未准备好投入生产。此外，你用于处理 DocBook 的所有工具都没有为了利用 DocBook 的 Schema 而设计。
+
+DocBook XML Schema 的第一个（Alpha）版本于 2000 年 11 月 8 日发布在 DocBook 邮件列表中。目前关于 DocBook Schema 的文档并不多，也没有用于处理 Schema 的工具。然而，关注其发展并为使用该 Schema 做准备是有价值的。
+
+# DocBook XML Schema
+
+DocBook XML Schema 尚未最终定型，在编写此时尚未准备好投入生产。此外，你用于处理 DocBook 的所有工具都没有为了利用 DocBook 的 Schema 而设计。
+
+DocBook XML Schema 的第一个（Alpha）版本于 2000 年 11 月 8 日发布在 DocBook 邮件列表中。目前关于 DocBook Schema 的文档并不多，也没有用于处理 Schema 的工具。然而，关注其发展并为使用该 Schema 做准备是有价值的。
+
+# 验证 XML
+
+如果你正在尝试验证文档，可以使用 Schema。现在有很多此类工具可用，但目前你可能需要使用 http://w3.org/2000/see 上的在线工具。
+
+![](img/81f56bf497dbf7f7582072400d12cb42_251_0.png)
+
+图 11.3 DocBook Schema
+
+![](img/81f56bf497dbf7f7582072400d12cb42_252_0.png)
+
+图 11.4 验证器
+
+# 总结
+
+在本章中，你查看了 Schema 以及它与 DocBook 的关系。尽管 Schema 仍处于开发阶段，但随着它的普及，它可能会变得非常重要。
+
+如果你在使用 DocBook，你将希望理解 Schema。特别是 DocBook XML Schema 目前尚未投入使用，因此目前你必须坚持 DocBook DTD。
+
+# 第 12 章：创建技术文档
+
+公司文档
+
+样式参考页
+
+注意事项、提示和警告
+
+处理错误的趣味
+
+关于 GUI 的编写
+
+命令语法标记
+
+许多为大公司编写的技术文档归公司所有，而不是归于某个人作者。
+
+要在文档中包含公司作者信息，我们在文档的元数据中使用 `CorpAuthor` 元素。例如，如果你正在准备一篇 DocBook 文章，标记如下：
+
+```
+<!DOCTYPE article PUBLIC "//ASIS//DTD DocBook V4.1//EN">
+<article>
+<articleinfo>
+<title>技术手册</title>
+<corporauthor>Mega-big Corporation</corporauthor>
+</articleinfo>
+..
+</article>
+```
+
+注意，`ArticleInfo` 元素是 DocBook 4.0 引入的新元素。如果你仍在维护 DocBook 3.0 的文档，你会在 `ArtHeader` 元素中找到相同的信息，该元素现在已废弃。
+

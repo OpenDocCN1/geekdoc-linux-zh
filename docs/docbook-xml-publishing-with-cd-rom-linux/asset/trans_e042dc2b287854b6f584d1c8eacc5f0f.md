@@ -1,0 +1,337 @@
+
+
+如果你想让 URL 在纯文本或类似格式中呈现，请使用此语法：
+
+<link url="http://www.slashdot.org/">http://www.slashdot.org</link>
+
+# XRef
+
+XRef 元素包含对文档其他部分的引用。
+XRef 元素接受以下属性：
+
+- Endterm. 接受一个 CDATA 值，没有默认值且不是必选的。如果提供了 Endterm 值，则该元素将作为链接显示。
+- Linkend. 接受一个 IDREF 值，没有默认值，但是是必需的。
+
+示例：
+
+```
+<sect1>
+<para>Review the following sections</para>
+<itemized list>
+<listitem><para>Section 1<xref linkend="sec1/"></para></listitem>
+<listitem><para>Section 2<xref linkend="sec2/"></para></listitem>
+</itemized list>
+</sect2 id="sec1">
+<title>Section 1</title>
+<para>This is text for Section 1</para>
+</sect2>
+<sect2 id="sec2">
+<title>Section 2</title>
+<para>This is text for Section 2</para>
+</sect2>
+</sect1>
+```
+
+# 媒体元素
+
+DocBook 处理多种媒体格式，以及纯文本。如果你的文档将使用声音或视频，你可能需要检查这些内容。
+
+# AudioObject
+
+AudioObject 元素包含关于 DocBook 文档中引用音频的信息和元信息。
+
+AudioObject 元素使用通用属性。
+
+# 附 B：DocBook 元素参考
+
+示例：
+
+```
+<!DOCTYPE mediaobject PUBLIC "//OASIS//DTD DocBook V4.1//EN">
+<mediaobject>
+<audioobject>
+  <objectinfo>Pronouncing Linux</objectinfo>
+  <audiata fileref="english.au"></audiata>
+</audioobject>
+</mediaobject>
+```
+
+# Caption
+
+Caption 元素为 DocBook 中的插图或其他图形元素提供说明。
+
+Caption 元素使用通用属性。
+
+示例：
+
+```
+<caption>This is a caption. Groovy, huh?</caption>
+```
+
+# Figure
+
+Figure 元素用于显示带有标题的插图。
+
+Figure 元素除了通用属性外，还接受以下属性：
+
+- Float. 接受一个 NUMBER 值，默认值为 0且不是必选的。
+- Label. 接受一个 CDATA 值，没有默认值，且不是必选的。
+- PgWide. 接受一个 NUMBER 值，没有默认值且不是必选的。
+
+示例：
+
+```
+<figure>
+<title>Jade's Error Message for Invalid Attribute</title>
+<screenshot>
+<graphic fileref="ch10/10-01*"></graphic>
+</screenshot>
+</figure>
+```
+
+# GraphicCO
+
+GraphicCO 元素引用带有注释区域的图形。GraphicCO 将在 DocBook 5.0 版本中废弃并由 MediaObjectCO 取代。
+
+GraphicCO 元素接受通用属性。
+
+用法请参见 MediaObjectCO 示例。
+
+# ImageData
+
+ImageData 元素包含关于图像的信息，例如文件名或图像类型。
+
+ImageData 元素接受以下属性：
+
+- Align
+- Depth
+- EntityRef
+- FileRef
+- Format
+- ScaleFit
+
+示例：
+
+```
+<!DOCTYPE mediaobject PUBLIC "//OASIS//DTD DocBook V4.1//EN">
+<mediaobject>
+ <imageobject>
+  <imagedata fileref="images/tux.gif" format="gif*">
+ </imageobject>
+</mediaobject>
+```
+
+# ImageObject
+
+ImageObject 元素包含关于图像的信息，包括元信息。
+
+ImageObject 元素使用通用属性。
+
+示例：
+
+参见 ImageData 元素示例。
+
+# ImageObjectCO
+
+ImageObjectCO 元素包含带有注释的图像信息。ImageObjectCO 元素已废弃，将在 DocBook 5.0 中被 MediaObjectCO 元素取代。
+
+ImageObjectCO 元素使用通用属性。
+
+用法请参见 MediaObjectCO 示例。
+
+# InlineMediaObject
+
+InlineMediaObject 元素包含关于任何内联媒体——图像、音频或视频的信息。
+
+InlineMediaObject 元素使用通用属性。
+
+示例：
+
+```
+<para>Tux is the cute penguin
+<linimediaobject>
+<imageobject>
+<imagemata fileref="tux.gif">
+</imageobject>
+</inlinmediaobject>that we have all love.</para>
+```
+
+# MediaObject
+
+MediaObject 元素包含关于任何类型媒体对象——音频、图形或视频的信息。
+
+MediaObject 元素使用通用属性。
+
+示例：
+
+参见 ImageData 元素示例。
+
+# MediaObjectCO
+
+MediaObjectCO 元素包含带有注释的任何类型媒体对象的信息。
+
+MediaObjectCO 元素使用通用属性。
+
+示例：
+
+```
+<mediaobject>
+<imageobject>
+<arespec units="example">
+<area id="example-a" coords="10">
+<area id="example-b" coords="20">
+</arespec>
+</imageobject>
+</mediaobject>
+```
+
+# ObjectInfo
+
+ObjectInfo 元素包含关于对象的元信息。
+
+ObjectInfo 元素使用通用属性。
+
+示例：
+
+参见 AudioObject 元素。
+
+# VideoData
+
+VideoData 元素引用视频文件或源。
+VideoData 元素接受以下属性：
+
+- Align
+- FileRef
+- Src
+- Depth
+- Format
+- Scale
+- EntityRef
+
+示例：
+
+<videata format="mpeg" fileref="video">
+
+# VideoObject
+
+VideoObject 元素包含关于视频的信息。
+
+VideoObject 元素使用通用属性。
+
+示例：
+
+```
+<!DOCTYPE mediaobject PUBLIC "//OASIS//DTD DocBook V4.1//EN">
+<mediaobject>
+<videoobject>
+<videata fileref="video.avi">
+</mediaobject>
+</mediaobject>
+```
+
+# Media-Information
+
+Media-Information 元素包含关于媒体的元信息。
+
+Media-Information 元素包含关于媒体的元信息。
+
+Media-Information 元素包含关于媒体的。
+
+# AppendixInfo
+
+AppendixInfo 元素包含关于附录的信息。
+
+AppendixInfo 元素使用通用属性。
+
+# BookInfo
+
+BookInfo 元素包含关于书籍的信息。
+
+BookInfo 元素包含关于书籍。
+
+BookInfo 元素使用通用属性。
+
+示例：
+
+```
+<!DOCTYPE book PUBLIC "//OASIS//DTD DocBook V4.1//EN">
+<book>
+<title>My Book</title>
+<author>John Doe</author>
+<publisher>OASIS Publishing</publisher>
+<pubdate>2023</pubdate>
+</book>
+```
+
+# ChapterInfo
+
+ChapterInfo 元素包含关于章节的信息。
+
+ChapterInfo 元素使用通用属性。
+
+# GlossaryInfo
+
+GlossaryInfo 元素包含关于术语表的信息。
+
+GlossaryInfo 元素使用通用属性。
+
+# IndexInfo
+
+IndexInfo 元素包含关于索引的信息。
+
+IndexInfo 元素使用通用属性。
+
+# PartInfo
+
+PartInfo 元素包含关于部分的信息。
+
+PartInfo 元素使用通用属性。
+
+# PrefaceInfo
+
+PrefaceInfo 元素包含关于前言的信息。
+
+PrefaceInfo 元素使用通用属性。
+
+# RefentryInfo
+
+RefentryInfo 元素包含关于引用条的信息。
+
+RefentryInfo 元素使用通用属性。
+
+# ReferenceInfo
+
+ReferenceInfo 元素包含关于引用的信息。
+
+ReferenceInfo 元素使用通用属性。
+
+# Sect1Info
+
+Sect1Info 元素包含关于第 1 节的信息。
+
+Sect1Info 元素使用通用属性。
+
+# Sect2Info
+
+Sect2Info 元素包含关于第 2 节的信息。
+
+Sect2Info 元素使用通用属性。
+
+# Sect3Info
+
+Sect3Info 元素包含关于第 3 节的信息。
+
+# Sect4Info
+
+Sect4Info 元素包含关于第 4 节的信息。
+
+# Sect5Info
+
+Sect5Info 元素包含关于第 5 节的信息。
+
+# SectionInfo
+
+SectionInfo 元素包含关于特定章节的元信息。
+
+SectionInfo 元素使用通用属性。
+

@@ -1,0 +1,128 @@
+
+## 视图菜单 (View Menu)
+
+视图菜单允许你切换文档的视图类型。有时，所有的元素和属性会阻碍实际写作，此时你只想阅读纯文本。没问题！视图菜单允许你在工作时隐藏或显示标签和属性，从而更高效地工作。
+
+图 8.18 是修改前的，图 8.19 是修改后的。注意看图 8.19 中的文档读起来变得多容易得多——而且所有信息仍然在那里。Emacs 暂时隐藏了它们。
+
+## DTD 菜单 (DTD Menu)
+
+DTD 菜单为你提供了有关当前 DTD 及其 DTD 内部元素的各种信息（见图 8.20）。你可以使用 DTD 菜单列出 DTD 的所有有效元素、有效属性及其对应的元素，以及可以在元素中出现的内容——包括其中可能出现的其他元素。
+
+![](img/81f56bf497dbf7f7582072400d12cb42_207_0.png)
+
+图 8.10 所有元素可见的 DocBook 文档
+
+## 如何使用 Emacs 节省时间 — Emacs PSGML 模式
+
+程序 收藏 桌面 emacs@emacs.org.net 上午11:32
+
+```
+Buffers Files Tools Edit Switch Searchable SGML Modify Move Markup View DTD Help
+Fold End (C-x (C-e))
+Introduction to PHPWeblog Fold Subelement (C-x (C-s))
+PHPWeblog 是一个 PHP 脚本集合或内容网站。PHPWeblog 有 Unfold Element (C-x (C-u))
+Web-based story submission Expand (C-x (C-e))
+Expand Region (C-x (C-a))
+Web polls Unfold All
+Easy list configuration Hide tags
+Threaded Comment System Hide Attributes
+Much, much more... Show All Lines
+```
+
+**关于 PHPWeblog**
+PHPWeblog 由 Jason Jones 编写，并由 PHPWeblog.org 维护。
+基于 PHP4 编写并需要 Apache。问题请访问 PHPWeblog.org，本文档的更正应发送邮件至 Zenker@mail.com。
+
+![](img/81f56bf497dbf7f7582072400d12cb42_208_0.png)
+
+程序 收藏 桌面 emacs@earthlink.net 上午11:41
+
+```
+Buffers Files Tools Edit Search Searchable SGML Modify Move Markup View DTD Help
+<!DOCTYPE book PUBLIC "-//W3//DTD DocBook V3.0//EN"> [
+  ENTITY intro "%intro.dtd">
+  ENTITY subelement "%subelement.dtd">
+  ENTITY author "%author.dtd">
+  ENTITY title "%title.dtd">
+  ENTITY preface "%proface.dtd">
+  ENTITY admin "%admin.dtd">
+  ENTITY body "%body.dtd">
+  ENTITY phone "%phone.dtd">
+  ENTITY resources "%resources.dtd">
+]
+<book>
+  pwml-main.smgl
+(SGML (BOOK/DTD))--L1--Top
+  <HEADER>
+    <W3C-FORMAT-HTML-4 REVISION
+    REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    <ABSTRACT>
+      REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    <HACCEL>
+      REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    </HACCEL>
+    <WECOND>
+      REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    <CHRONOMY>
+      REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    </CHRONOMY>
+  </HEADER>
+  <SECTION>
+    REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    <BODY>
+      REVISION 1.0.0 PUBLISHED VENDOR_REFLADE
+    </BODY>
+  </SECTION>
+  <ELEMENTS>
+    (fundamental)=-L1--top--
+</book>
+```
+
+![](img/81f56bf497dbf7f7582072400d12cb42_208_1.png)
+
+## 总结 (Summary)
+
+本章对 Emacs 以及用于在 Emacs 中编辑 SGML 和 XML 文档的 PSGML 模式进行了简要总结。遗憾的是，没有空间详尽介绍 Emacs，但本章提供了足够的信息让你开始使用 Emacs 并帮你轻松上手。Emacs 不是一个可以轻视的编辑器——斯蒂芬·霍金可能需要几天时间来消化 Emacs 中的所有可用功能。然而，当你熟悉 Emacs 后，你可以变得非常精通并高效工作。许多程序员和作家——包括《崩溃之旅》和《加密密码》的作者 Neal Stephenson——都倾向于 Emacs。
+
+## 第9 章：使用 Vim (Chapter 9: Using Vim)
+
+### 获取 Vim (Getting Vim)
+
+使用 Vim SGML 和 DocBook
+
+Vim 是 Vi Improved 的缩写，是 Linux 类型和 Free 类型操作系统最流行的文本编辑器之一。Vim 是 vi 的克隆，但并非完全相同。Vim 增加了原始 vi 不具备的功能。本章将向你展示如何在 Vim 中处理 DocBook，并在你没有使用过类 vi 编辑器的情况下涵盖 Vim 的基础知识。它不是 Vim 编辑器的详尽指南，而是让你在 Vim 中运行 DocBook 的概述。
+
+vi 不仅仅是一个文本编辑器，还能编辑二进制文件——如果你对此感兴趣的话。此外，vi 还具有作为 POSIX 1003.2 壳工具规范一部分的特性。大多数 vi 克隆在很大程度上都符合这一标准。
+
+![](img/81f56bf497dbf7f7582072400d12cb42_211_0.png)
+
+原始 vi 编辑器可用于 BSD，由 Bill Joy 编写，并在 1984 年左右之前一直保持着不可置疑的优地位（非常奥威尔式的）。原始 vi 并不具备 Vim 及其克隆版本所拥有的大量功能。如果你是一个使用过其他版本 vi 的 UNIX Guru，你会发现 Vim 并非唯一。
+
+Vim 适用于所有的计算平台：Linux、FreeBSD、NetBSD、Windows NT 和 9x、Amiga、macOS 以及 BeOS 等（仅列举）。如果你在家使用 Linux 而在工作中使用 Windows，你仍然可以在两个环境中享受 Vim 的处处。
+
+![](img/81f56bf497dbf7f7582072400d12cb42_211_1.png)
+
+事实上，Vim 是我的首选编辑器。我不在微软平台上进行任何开发工作，但显然 Vim 可以通过 OLE 与 Microsoft Studio 集成。
+
+### 获取 Vim (Getting Vim)
+
+如果你的电脑上没有 Vim，你需要访问 Vim 主页获取运行 Vim 所需的文件。大多数人可能已经在系统中安装了 Vim。
+
+### Linux/UNIX
+
+几乎所有的 Linux 和 BSD 发行版在标准安装中包含了 Vim。然而，如果你没有 Vim，或者使用的是非常陈旧的版本，可以从 http://www.vim.org/download.html 获取最新版本（见图 9.1）。
+
+要查找 Vim 的预编译二进制文件，请访问 http://www.vim.org/binaries.html。
+
+要从源码编译 Vim，你需要从其中一个 FTP 站点下载三个文件。首先是用于编译二进制文件的标准源码，接下来是 Vim 使用的运行时文件，最后是 Vim 使用的额外文件集合。因此你有：
+
+- vim-x.xx-src.tar.gz 源码 (Source)
+- vim-x.xx-rt.tar.gz 运行时 (Runtime)
+- vim-x.xx-extra.tar.gz 额外 (Extra)
+
+其中 x.xx 是版本号，请确保下载最新版本。
+
+![](img/81f56bf497dbf7f7582072400d12cb42_213_0.png)
+
+图 9.1 Vim 下载页面

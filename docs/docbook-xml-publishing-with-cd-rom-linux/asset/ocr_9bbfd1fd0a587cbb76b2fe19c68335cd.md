@@ -1,0 +1,11 @@
+his chapter walks through creating a book with DocBook. Specifically, you will look at the most common appropriate elements used within a DocBook Book element. If you're preparing a book with DocBook, you will find examples of all necessary structural elements for a book within this chapter, as well as examples of elements commonly used in a book, thrown in for good measure.
+
+A Book is a document type within DocBook. Each DocBook document must start with a document type element; common elements include Book, Article, Set, and Chapter. When a document is declared to be a Book, the Book element is the top-level, or root, element. A Book often has several elements that contain a Preface, a Dedication, Chapters, an Index, and other components. Nearly every DocBook element is valid within the Book element, with the exception of the set element.
+
+> When I say that nearly all elements are valid within the Book element, I mean that they fit somewhere in the hierarchy below the Book element. They might not be valid directly under the Book element, but they are valid nested within an element that is valid within the Book element. For example, the Sect element cannot be used directly beneath the Book element, but it might be used under the Chapter element, which is valid
+
+![](bbox=[0.073, 0.555, 0.143, 0.663])
+
+A DocBook element can be used regardless of the medium in which you eventually intend to distribute the book. Although we traditionally think of a book as being a collection of dead-tree pages bound within a cover, a DocBook Book can also be output and distributed as HTML, PDF, or even plain text. This can be particularly useful if you are distributing software, for instance. Many software manuals, frankly, go unread.
+
+Although it would be a very bad idea not to include documentation with a piece of software, why spend the money on printing a manual with your software when you can include documentation in electronic format? The users going to be at the computer when they need the documentation anyway. Why not include a format that is searchable and easier to browse on the computer?

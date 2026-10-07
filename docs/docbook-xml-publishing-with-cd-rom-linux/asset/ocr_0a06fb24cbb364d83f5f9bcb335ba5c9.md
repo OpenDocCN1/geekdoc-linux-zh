@@ -1,0 +1,13 @@
+# What Is Revision Control?
+
+# # What Is Revision Control?
+
+During the the development process, software gets a revision number. Every time a change is made, such as new features or bug fixes, the program gets a new revision number. Sometimes you'll find this revision number in commercial software as the release version of the software, whereas other times you'll find the revision number in the release number or service pack number. Revision numbers are typically more obvious in the case of Open Source development because there are frequent updates between major releases, which each have their own revision number.
+
+Revision control is the practice of maintaining older versions of the code base to allow developers to "roll back" to earlier versions of the code base if changes introduce new and worse bugs, or just to allow for maintenance of an older version of the code base while a new version is started.
+
+Revision control software automates the process, making it easier for developers (both software and documentation) to keep track of which revision is most current and which changes have been made between versions. If you're wondering what all this talk of programming versions and bug fixes has to do with managing a documentation project with DocBook, the overall process and benefits are the same. If you consider that a project editor or main author can allow all contributors to work on the same text simultaneously, each contributor will have his own release version, and if the editor or main author does not approve of the new release, the older version can be used. Through comment features the editors can track who is changing what, when, and who has permission to change what.
+
+# # Going to the Library
+
+In simple terms, you can compare version control systems to a library system. Like a library, content, whether it's text documentation or programming code, is checked out for viewing (and editing) and checked in allow the librarian to keep track of the content and take care of it for other library card holders to use. With DocBook, Bob (library card holder) can start writing his program or save it to a file (library book). He can then check in the first revision of the code to a repository (librarian). When he's ready to start again, he can check out the code from the system. Depending on the version control system he is using, RCS or CVS, Bob's file may be locked so other library card holders are unable to change the content until Bob checks the code back in.

@@ -1,0 +1,261 @@
+
+# 370
+# Index
+
+- EPS, 47
+- HTML (Hypertext Markup Language), 253
+- GIMP (GNU Image Manipulation Program), 46–48
+- anchor element, 103
+- glossary, 89–91
+- converting documents to, 108–113
+- FAQ (Frequently Asked Questions), 253
+- Glossary element, 89–91, 268–269
+- output
+- FieldSynopsis element, 26–270,
+- Figure element, 156
+- GlossInfo element, 304,
+- images and, 112–113
+- figures, 52
+- GlossDiv element, 89–90
+- online document, 96–99
+- LaTeX, 57–58,
+- filename element, 27–28, 312
+- filenames, XML DTD, 814
+- testing, 113
+- GlossEntry element, 90
+- SGML tools and Lite, 129–130
+- checking out (CVS), 151–153
+- Term element, 91
+- SGMLtools, 110–112
+- rolling back, 144–145
+- committing, 256
+- locked, version, 138
+- compiling from scratch, 164
+- multiple, editing, 199–200
+- opening, Vim, 198
+- ID element, 100, 263
+- ID data type, 261
+- ID type, 264
+- installation, 41–49
+- ITF (Hypertext Task Force), 6
+- GPL (General Public License), 253
+- Graphic element, 297
+- Graphics element, 300
+- ImageData element, 40, 301
+- Object element, 301,
+- First element, 288
+- Footnote element, 288–289
+- Footref element, 289
+- format element, 232–279
+- Formal element, 271
+- images, 34, 35
+- FPI (Formal Public Identifier), 206
+- Freebase, 85–88
+- FreeBSD system, 359–360
+- FTP (file transfer protocol), 109
+- fullin, 156
+- formatting, 3,
+- GIF element, 35–37
+- GIMP, 36
+- HTML output, and, 112–113
+- JPEG format, 39
+- markup, 39–43
+- Open Source tools, 46–52
+- PNG format, 35–37
+- Def element, 312–313
+- Prototype element, 312–313
+- FunctionSynopsis element, 313
+- Fundamental element, 365
+- Hardware element, 315
+- hard markup, 246–247
+- Important element, 239–240, 331
+- Help Elements, 175
+- Tim vim editor, 198
+- hierarchies, 200
+- Highlights element, 290
+- Holder element, 290
+- Honorific element, 290
+- hot-keys, element, 167–170
+- htref attribute, 100
+- Index element, 88–885
+- IndexDev element, 335
+- IndexEntry element, 83, 376
+- IndexInfo, 86, 304
+- indexing elements, 335–337
+- Index term element, 88, 336
+- CVS GUI element, 159
+- GIF (Graphical Interface Format) image element, 32, 35, 36–37
+- InformalTable element, 53–339–340
+- url attribute, 97
+- Initializer element, 315
+- GNU Emacs, 164
+- InlineEquation element, 331–332
+- InlineMediaObject element, 301–302
+- Linux Document Projection, 358
+- insert mode, Vim, 194–198
+- Linux Online, 360–361
+- Install, and Customize Slackware Linux, 366
+- LinuxDoc, converting to eBook, 131–132
+- Lisp, 254
+- catalog files, 121–122
+- listing code, technical documents, 225–227
+- CVS, 148–149
+- Listitem, 28
+- Docs, 121
+- lists, ItemizedList, 28
+- DTDs, 119–122
+- literal layout element, 328–335
+- GNU Revision Control System, 141
+- LiteralAttribute, 332
+- LocalInfo attribute, 106
+- UNIX systems, 122
+- locked files, RCS version control, 138
+- Win32, 122–123
+- logical type, 7
+- Open, 125
+- long data type, XML Schema, 221
+- PGML, Emacs, 176
+- LyX typesetting program, 365
+- SGMLtools, 126–127
+- LZW compression, 377
+- stylesheets, 112
+- Vim, 192
+- label attribute, 106
+- Lang attribute, 263
+- int data type, XML Schema, 221
+- data types, XML Schema, 222–223
+- LaTeX, 34, 362–364
+- DIV (device independent), 127
+- Definition element, 347
+- figures, 57–58
+- Name element, 316
+- element, 71
+- ISBN (International Standard Book), 71
+- ISO (International Organization for Standardization), 254
+- client, 159
+- linkage, 291
+- link element, 104–105
+- LinkAttribute, 102, 105
+- linking elements, 299
+- ItemizedList, 28, 332
+- Set, 336
+- LinkMode attribute, 106
+- within documents, 100
+- e-mail addresses, 108
+- LinkEnd element, 105
+- UNIX systems, 122
+- Target attribute, 106
+- overview, 123–128
+- ULink element, 97–98
+- normative documents, 255
+- Note element, 29, 30–239, 243
+- Tcl, 155–156
+- Notepad text editor, 16
+- Para element, 271
+- Meta-Information elements, 303–307
+- metadata, 254
+- numbered sections, 20
+- parent elements, 255
+- metal element, 318
+- parsers, 255
+- numeric data type, XML Schema, 221–222
+- parsing, 255
+- SGMLTools, 127–132
+- Microsoft Word, Sec-254
+- Part element, 74–77, 269
+- part number, 70
+- modal editors, Vim, 193
+- PartInfo element, 305
+- SpecMode, 106
+- PartIntro element, 269–270
+- PGML mode, 180
+- PCDA, 256
+- month days type, XML, 222
+- PDF files, 43–45
+- EPS, 43–45
+- OASIS (Organization for the Advancement of Structured Information Standards), 255
+- Perl (Practical Extraction and Reporting Language), 255
+- OASIS Technical Committee, decremented elements, 3, 350–351
+- Phone element, 293
+- OASIS Web site, 262
+- Phrase element, 40
+- Object element, 302, obsolete elements, 346–347
+- physical division, 7
+- OLink element, 105–198
+- online documentation, links, 96–99
+- PNG (Toggle Network Graphics) image format, 35–37
+- Open Project Web site, 353
+- POB element, 294
+- open source, 255
+- POSIX 1003.2 specification, 186
+- publishing resources, 362–366
+- POSIX (Portable Operating System Interface), 187
+- Open Source tools, 46–52
+- PostCode element, 294
+- OpenJade, 255
+- PostScript files, 32
+- option element, 231
+- OrderedList, 29–30, 333
+- Prefaceelement, 105
+- OrgElement, 292
+- Primaryelement, 87
+- ArgName element, 292
+- primitive data type, XML Schema, 221
+- OS attribute, 263
+- OtherAddr, 292–293
+- Procedure element, 322
+- OtherName element, 71, 293
+- program element, 307–328
+- ProgramList element, 235, 322
+- Prompt element, 323
+- Property element, 323
+- PSGM, 120
+- HTML Tidy, 110
+- PGML mode, Emacs, 175
+- Markup up, 180–181
+- SGMLTools, 125–132
+- negative data type, XML, 221
+- nested elements, 254
+- NetBeans GUI, 159
+- non-normative documents, 255
+- Integer data type, XML, Schema, 221
+- PubDate, 294
+- Public Identifiers, 256
+- Publisher element, 294
+- public images, 32
+- public identifiers, 345
+- RefName element, 345
+- RefName element, 345
+- Reference element, 83–85, 344
+- reference page elements, 333–346
+- reference pages, 83–85
+- manual, 233–234
+- ReferenceInfo element, 305
+- RefMeta element, 344
+- RefMiscInfo element, 344–345
+- Replaceable element, 323
+- reports, CVS, 155–156
+- repository, CVS, 150
+- named resources, 256
+- ReturnValue element, 323–324
+- Revision element, 264
+- revision control, 137–138
+- revision log, TkCVS, 158
+- RevisionFlag attribute, 264
+- RFC (request for), 256
+- Role attribute, 264
+- rolling back files (RCS), 144–145
+- root element, 5, 256
+- RPMs, CVS and, 149
+- RCS and, 141
+- rtf files, generating from DocBooks, 130–131
+- SANE (Scanner Access Media Easy), 50
+- saving, plain text, 162
+- SBR element, 324
+- scanners, 50–52
+- scratch buffer, Emacs, 168
+- Screen element, 324
+- Security attribute, 264
+- SeriesInfo element, 295, 347
+- SeriesVolNums element, 295
+- Set element, 270–271
