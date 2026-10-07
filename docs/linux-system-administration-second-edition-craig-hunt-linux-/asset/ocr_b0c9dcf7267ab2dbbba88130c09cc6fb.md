@@ -1,0 +1,3 @@
+![](bbox=[0.12, 0.03, 0.88, 0.84])
+
+Figure 14.2: Small businesses frequently want to provide internal mail services, but must use pull mail protocols to retrieve their own e-mail. This chapter has already described many features required of the mail.oneroomco.com server in Figure 14.2. Mail relaying and the local POP server, for instance, were covered in previous sections. (Figure 14.2 shows outgoing mail being sent directly, but it could as easily be relayed through either

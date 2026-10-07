@@ -1,0 +1,9 @@
+printing-only account on the Linux server for printing (users would have to enter this password, not their normal Linux login password, to print from Windows).
+
+# **Printing from Linux to a Windows Printer**
+
+To print from Linux workstations on a network to a printer attached to a Windows machine, each Linux machine needs a printcap entry for that printer. This is fairly easy to create using Red Hat's Printconf, which has an option for setting up an SMB/Windows 95/NT Printer (see Figure 10.3). Other spooling packages have similar setup options. Next you must ensure that you have the script /usr/bin/smbrprint, which comes with most Samba packages, including the one that ships with Red Hat 7.3. The smbrprint script intercepts a normal printer queue's process to send the print file through a utility called smbclient, which can be used to communicate with SMB/CIFS servers. Thus, if smbrprint is called from a print queue's filter, it bypasses part of the normal printing mechanism and initiates an SMB/CIFS print request. Most smart filter packages know how to handle this task.
+
+# # In Sum
+
+Much of the complexity of printing derives from the fact that there are so many options available—there are many different types of printers, as well as differences from one model to another; Linux provides an assortment of printing utilities; and network printing presents an assortment of additional options and challenges. Understanding each of these areas and their interactions can help you create a workable Linux printing system. There's no point in buying an unsupported printer for use in Linux, for instance. Fortunately, each piece of the Linux printing puzzle, from physically connecting a printer to configuring a Linux computer as a print server, is understandable. If you approach the task one step at a time, you can get your Linux system working, and even serve printers to other computers in the process.

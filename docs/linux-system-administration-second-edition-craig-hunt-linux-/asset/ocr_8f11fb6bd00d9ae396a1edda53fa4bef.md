@@ -1,0 +1,19 @@
+Web site or possibly via e-mail. Still, this is a step in the right direction. For more information on PGP, see its international home page at http://www.pgpi.org/.
+
+There is a GNU version of PGP available that is gaining popularity in the Linux world. GNUpg, also referred to as GPG, is compatible with the existing PGP. For more information on GNUpg or to download a copy to try, go to http://www.gnupg.org/.
+
+# ### Checksum
+
+A checksum is another type of file signature that is usually used for validation when files are transferred by means that are considered unreliable, for instance from disk to tape. It is valuable as a security check as well. The checksum is computed from the binary bytes of the file, creating a "fingerprint" of sorts. When the file is transferred, a new checksum is computed and compared with the saved fingerprint. This method is not foolproof. A knowledgeable cracker will simply pad the file to obtain the appropriate checksum value. Like other methods, however, it is better than nothing. For more information about creating a checksum, see the cksum man or info page.
+
+# ### Back Door
+
+A *back door* is code added to a program to allow unauthorized access to the host system. Take, for example, a program that has been altered to e-mail information about the person running the program to some mail account whenever the program is run. Very few users look at the size of binary files to see whether the program has been changed. Fewer still check beyond that if the sizes match. Even worse is that some programmers-for-hire include back doors in the programs they write as a matter of course. Once there is any negative interaction between the programmer and the client, the programmer exploits the back door and gets revenge. In this case, the only way to find the offensive code is to wade through the source code. Typically, if the code works, it isn't looked at until it requires some updating, so the programmer has plenty of time to play spy.
+
+There is little if any defense against a back door if it is inserted by someone doing software development for your company. If you believe that a coder has inserted a back door in a product, you can have another programmer look at the code, but beyond that, you have to depend upon your normal security watches to catch his or her entry onto the system. With a system that uses a package manager like the Red Hat Package Manager (RPM) or Debian's Package Management System, you can run a command to verify that a package as a whole has not been changed and output codes indicating any changes to individual files. Using this information, you can determine whether files on your system and their attributes have been changed and how.
+
+# ### Trusted Host
+
+One of the most talked-about vulnerabilities in Linux involves the *trusted host* files. Trusted host files allow users to log in without a password, because their logins and host machine names are included in the appropriate files: */etc/hosts.equiv* and *.rhosts* in the user's home directory. The commands that rely on these files are referred to as the *r-commands* and include *rlogin*, *rsh*, *rcp*, and *rexec*. Most Linux system administrators simply disable these commands and replace them with Secure Shell (SSH).
+
+SSH is a client/server package that encrypts all outgoing data from either direction, thus creating an encrypted tunnel. The client side sends a request to the server (*ssh*), and the server sends back a public host key and a public server key. The client attempts to verify the public host key by locating it in either */etc/ssh_known_hosts* or the *.ssh/known_hosts* file in the user's home directory on the client. If the client is able to verify the public host key, it generates a 256-bit random number,

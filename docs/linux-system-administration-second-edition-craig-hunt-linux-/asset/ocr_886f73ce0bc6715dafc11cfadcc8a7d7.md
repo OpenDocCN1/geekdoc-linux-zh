@@ -1,0 +1,20 @@
+Even if you use a distribution that favors one desktop environment, you can use another. With most distributions, doing so is merely a matter of installing the environment from the distribution's CD-ROM and selecting it from a menu on the XDM login screen. In the event that the XDM doesn't provide this feature (as the original XDM doesn't), you can start the environment by placing an appropriate command in the ~/.xsession or equivalent file. For instance, to start KDE, the command is startkde; for GNOME, it's gnome-session. It's possible for one user of a system to use one desktop environment and for somebody else to use another.
+
+# ### Mixing Desktop Environment Components
+
+Although most desktop environments come with a wide array of utilities that integrate with one another to a greater or lesser extent, it's usually not necessary to run these tools within their parent environments. You can run KDE's kscd CD-ROM player from within GNOME, for instance—or when you're not running any desktop environment at all. You can use this fact to your advantage, picking the best parts of each environment. The drawback is that mixing components in this way reduces their interoperability. Programs from two environments might not share a common address–book file, for example, whereas two matched programs could share this file.
+
+One further drawback to mixing components in this way, or to keeping two or more environments installed for the convenience of your users, is that the disk-space requirements can be substantial. Each environment is likely to consume hundreds of megabytes of disk space, although you might be able to get by with less for a very minimal installation. If you want to use just a handful of components, you may be able to install them in just a few megabytes.
+
+# ### X Applications
+
+X applications use X to display information and to accept input from the user. They rely on the window manager that the user selects and the widget set that the programmer selects. In some cases, applications share settings or can interact with desktop environments. Usually, though, X applications don't rely on desktop environments.
+
+> > **Note**Occasionally, you'll see a program referred to as "a KDE program" or "a GNOME program."
+With the exception of a few utilities that are integral to these environments, this does *not* mean that the program relies upon the specified desktop environment to run. It does most likely mean that the program uses the underlying widget set of the desktop environment, and it may mean that the program can use settings from and interact with other programs in the desktop environment. If you see an appealing "KDE program" but run GNOME, go ahead and try the program. Chances are it will work, although you may need to install libraries or desktop environment components to use the program.
+
+On rare occasions, you may find that an X application doesn't function well with a particular window manager or with some other component you have installed, such as a specific X server. If an application's windows don't move around or stack in the way you expect, you might want to try another window manager, at least for diagnostic purposes. If the problem goes away, you may consider switching window managers permanently; or you can look for an update to the program or window manager; or you can contact the authors of the program and window manager to report a bug.
+
+A few programs (particularly those based on the Motif widget set) can't display graphics properly at 24-bit color depth with some video boards when using XFree86 3.3.x. A handful of these programs also have problems at 32-bit color depth. If you have such problems, you may be able to correct them by dropping down to 16-bit color depth. An upgrade to your X server may also help;
+
+343

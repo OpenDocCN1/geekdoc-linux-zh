@@ -1,0 +1,17 @@
+support for multiple processors and disk subsystems. These items can make for a huge performance gain in specific situations and almost none in other situations.
+
+# Symmetric Multiprocessing
+
+One way to add computing power to a computer is to add additional processors to a motherboard that supports Symmetric Multiprocessing (SMP). SMP allows you to share the processor's workload across up to 16 processors in a single computer. In practice, because of limitations of the x86 architecture, actual implementation has not exceeded eight processors. Still, that's enough to significantly speed up programs written to support SMP or systems that run multiple CPU-intensive programs. Only multithreaded programs will truly benefit from SMP. Multithreading, also simply referred to as threading, is the process of cloning processes to split the workload within a program into separate processes that can be routed to separate processors in an SMP system. Basically, the rule is: processes and kernel threads are distributed among processors; user-space threads are not. If you notice that your single processor is idle much of the time because of a slow disk drive, the system probably won't benefit much from additional processing power. If your system has many simultaneously executing processes, and CPU load is very high, then you are likely to see increased system performance with SMP. Since SCSI disk drives process multiple commands without tying up the CPU, you can see significant gain when using multiple processors. The Linux make command, used to compile kernels and other software packages, has a -j parameter that allows it to take advantage of SMP and significantly speed up the process of building a kernel. The syntax is shown below:
+
+```
+make [modules | zImage | bzImages] MAKE="make -jX"
+```
+
+(X is the maximum number of processes.) The distribution of the workload is not, by definition, symmetrical since some specific functions may be assigned to a specific processor rather than spread across all processors within the system. Be that as it may, you can see extremely significant performance gains when adding up to three additional processors; beyond four processors, however, the performance gains diminish. Adding a second processor does not usually double the speed of the process compared to a single processor. It allows for portions of that process or an entirely separate process to be handled by the second processor, thereby giving a performance gain. However, if the process has not been designed to spread the workload among multiple processors, there may be no gain at all.
+
+# Linux Clusters
+
+Clustering is the process of coordinating the workload for a given project among several independent computer systems, an alternative to the sharing of processors within one computer that we just discussed. One example of clustering is Linux Virtual Server (LVS) clustering, as supported in the Linux kernel and implemented by, among other things, Red Hat's Piranha environment. Figure 2.1 illustrates the basic idea behind an LVS cluster. Essentially, the LVS router (there are two in Figure 2.1 to avoid a single point of failure) interfaces between the Internet and a group of identically configured servers. For example, the real servers in Figure 2.1 could all be configured as identical Web servers. Instead of running a heavy Web server off just one computer, then, LVS spreads the work across several computers. Provided the LVS router has fast enough network interfaces, the result is an improvement in speed and reliability.
+
+29
