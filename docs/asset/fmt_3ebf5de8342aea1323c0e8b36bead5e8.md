@@ -1,0 +1,73 @@
+
+# LDAP 配置
+
+## 配置 LDAP 服务器：`/etc/ldap/slapd.conf`
+
+你使用 `/etc/ldap/slapd.conf` 文件配置 LDAP 服务器，在该文件中你会找到加载架构（schemas）、访问访问控制、数据库目录和密码的条目。该文件有详细的注释，大多数选项都有默认设置，尽管你必须为其中几个选项输入设置。首先，你需要指定你的后缀和根域名。此处显示了默认设置：
+
+```
+suffix "dc=my-domain,dc=com"
+rootdn "cn=Manager,dc=my-domain,dc=com"
+```
+
+在下一个示例中，后缀是 `mytrek`，对应 `mytrek.com`。`rootdn` 保持不变。
+
+```
+suffix "dc=mytrek,dc=com"
+rootdn "cn=Manager,dc=mytrek,dc=com"
+```
+
+接下来，你必须指定一个密码 `rootpw`。明文和加密版本都有条目可用，且两者都已注释。移除其中一个的注释即可。在下面的示例中，使用了明文密码选项 `secret`：
+
+```
+rootpw secret
+# {crypt}ijFYNsctByG
+```
+
+对于加密密码，你可以先使用 `slpasswd` 创建加密版本，如下所示。这将为密码生成一个文本加密字符串。然后将生成的加密字符串复制到 `rootpw` 条目。在 `GNOME` 中，你可以简单地从终端复制并粘贴，在文本编辑器（辅助工具）中编辑 `/etc/ldap/slapd.conf`。你也可以将加密字符串重定向到文件并在以后读取。默认使用 SSH 加密。
+
+```
+# slpasswd
+New password:
+Re-enter new password:
+(SHA)0a+szaAwEl1K57Y8AOd5uMUlvfCUCg5
+```
+
+此时 `rootpw` 密码条目应该如下：
+
+```
+rootpw {SHA}0a+szaAwEl1K57Y8AOd5uMUlvfCUCg5
+```
+
+使用你在 `slapd` 提示处输入的密码来访问你的 LDAP 目录。配置文件还列出了将将使用的架构。架构通过 `include` 指令包含：
+
+```
+/etc/ldap/schema/core.schema
+/etc/ldap/schema/cosine.schema
+/etc/ldap/schema/cosine.schema
+/etc/ldap/schema/nis.schema
+```
+
+注意：LDAP 是指向 X.500 目录服务的协议，即 OSI 服务。
+
+LDAP 目录以客户端/服务器的形式实现；使用 LDAP 客户端访问管理 LDAP 数据库的 LDAP 服务器。Ubuntu 使用 OpenLDAP，它是 LDAP 的开源版本（参见 `www.openldap.org`）。OpenLDAP 提供了一个 LDAP 服务器 `slapd`、一个 LDAP 复制服务器 `slurpd`、一个 LDAP 客户端以及 LDAP 工具程序。此包还会选择并安装 `ld-auth-client`、`libpam-ldap` 和 `libnss-ldap` 包。对于 LDAP 服务器，请选择 `slapd` 包。如果你正在运行 Postfix 邮件服务器，可能想要使用 `postfix`。
+
+在安装 `ld-auth-config` 时，系统会提示你输入 LDAP 服务器的 URI、搜索基（search base）的区分名称以及要使用的版本。随后系统会提示你指定系统管理员是否具有 LDAP 服务器的管理员权限，以及 LDAP 数据库是否需要登录。然后指定 root 的 LDAP 账户和 LDAP root 账户密码。
+
+有关 Ubuntu 上 LDAP 服务器的文档，请查看 `https://help.ubuntu.com` 中对应发行版的 OpenLDAP Server 条目。
+
+## LDAP 配置文件
+
+所有 LDAP 配置文件都存储在 `/etc/ldap` 目录下。这些包括 `slapd.conf`（服务器配置文件）和 `ldap.conf`（LDAP 客户端和工具配置）。要启用 LDAP，你必须手动使用 `slapd.conf`，并将后缀 `suffix` 和 `rootdn` 条目中的域值 `dc` 更改为你自己的网络域名地址。这是由 LDAP 服务器提供的网络。
+
+要启用 LDAP 客户端和工具，你必须在 `ldap.conf` 文件的 `BASE` 选项中指定正确的地址，并在 `URI` 选项中指定服务器地址（域名或 IP 地址）。对于客户端来说，这些你在安装 `ld-auth-config` 包时输入的信息。你也可以直接编辑 `ldap.conf` 文件。查看 `ldap.conf` 条目以获取 LDAP 选项的详细说明。
+
+如果你安装了 LDAP 服务器，可以使用 `slapd` 脚本启动、停止和重启 LDAP 服务：
+
+```
+sudo /etc/init.d/slapd start
+```
+
+你也可以通过在 `services-admin` 工具中检查 LDAP 服务器条目，让系统启动时自动启动 LDAP 服务器：选择 `System | Administration | Services`（管理 | 服务）。
+
+提示：请记住 `ldap.conf` 和 `etc/ldap/ldap.conf` 文件不是同一个文件。`ldap.conf` 用于配置命名服务切换（NSS）和 PAM 支持的 LDAP，而 `etc/ldap/ldap.conf` 则用于所有 LDAP 客户端。
