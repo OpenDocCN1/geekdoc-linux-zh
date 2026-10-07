@@ -1,0 +1,11 @@
+# Implementing Cybercrime Detection Techniques on Windows and *nix Appendix A 209
+
+to system and implementation to implementation, our general coverage of logging facilities and operation remains applicable to many (if not most) boundary devices in wide use.
+
+Add-software products that can monitor and analyze firewall logs are available. For example, firelogd is a daemon that monitors Linux firewall logs. Fwanalog is a script that parses and summarizes firewall log files on UNIX and Linux systems. Stonylake Firewall Reporter is a server application that runs on Windows and Linux, and provides more than 150 reports to help in data analysis. ZoneLogAnalyzer imports the logs from ZoneAlarm firewalls into an easily queried database. Web Trends makes a Firewall Suite that processes log files from Check Point, Cisco, Microsoft ISA Server firewalls, and others.
+
+Logging is only one of the ways in which firewalls and other boundary devices can provide information about the activity and traffic they track. Firewalls (and other boundary devices) do indeed create log files, where all kinds of data may be written and stored for the long term. But these devices also support various types of other outputs, some of which can be important:
+
++   - Alarms These systems can be instructed to issue high-priority messages in various formats should particularly suspicious activities or events occur. Many such systems can send e-mail messages to specific respondents and even page designated telephone numbers, in addition to logging information when specified events occur. This functionality permits systems to provide immediate responses from responsible individuals. Because routers, firewalls, and other boundary devices may be subjected to ping floods or other denial-of-service (DoS) attacks, and because they may witness failed login attempts that likewise signal that attacks have commenced, immediate action is essential in responding to such events.
+
++   - Alerts Some types of traffic activity are less obviously symptomatic of attack but should be looked into nonetheless. This explains why many boundary systems can also issue alerts when particular conditions occur. Although these alerts may also result in e-mail or pager calls, they are usually less urgent than outright alarms.

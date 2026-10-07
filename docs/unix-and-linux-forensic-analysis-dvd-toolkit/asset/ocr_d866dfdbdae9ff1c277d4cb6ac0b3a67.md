@@ -1,0 +1,11 @@
+# Chapter 3 • Live Response: Data Collection
+
+In my example, I attached a 250 GB SATA drive with a write blocker and showed up in the Drive List as “PHYSICALDRIVE2 – WDC WD2500KS–00MJB0 USB Device.” Obviously, the device information will change based on what type of media I am using, however, the steps remain the same. Simply highlight your device, and click Finish.
+
+The next pop-up is labeled, “Create Image”, and in the last minute before the acquisition starts. At the top of the pop up window, the device you selected in the previous windows should be displayed, with a white box labeled, “Image Destination,” and two check boxes below labeled, “Verify images after they are created,” and “Create directory listings of files in the image after they are created.” Just as in other example, to maintain the integrity of the image you are acquiring, the MD5 sum needs to be generated and documented. This feature is enabled by default (the “Verify” check has been selected), so be sure to leave it alone.
+
+To add the destination media, simply click on the Add button, and select the type of image you want. FTK Imager gives the option of creating a raw image, a SMART image, or an EnCase image. Since, for the most part, SMART images are only able to be opened by SMART, and EnCase images are only to be opened by EnCase, best practice suggests that the investigator choose the default, “Raw (dd).”This will allow the image to be opened with whichever forensic program the investigator decides to use.
+
+The next screen asks you for the Image destination folder, and provides a standard Windows explorer browse button. Click on the browse button and navigate to the destination media, and to any folder which may have been created to house the image.
+
+It is important for the investigator to understand the “Rule of Space.” In recent years, hard drives have become large and cheap. For example, I worked on a case in which I purchased several 500 GB external drives for $119 each at my local Comp USA. I took 3 terabytes of storage with me to the customer location, because
