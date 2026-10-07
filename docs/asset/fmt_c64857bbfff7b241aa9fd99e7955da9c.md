@@ -1,0 +1,61 @@
+
+```
+<Location /printers>
+Order Allow,Deny
+Allow from localhost
+Allow from 192.168.1.101
+</Location>
+```
+
+`/printers` 表示此容器引用所有本地打印机。或者，你可以通过指定 `/printers/printer-name`（其中 `printer-name` 是打印机名称）来按打印机控制访问，或者通过指定 `/printers/path.pdf`（其中 `path.pdf` 是打印机使用的 PDF 文件完整路径，第 561 页）来控制访问。
+
+`Order Deny,Allow` 指令默认允许访问，仅拒绝 `Deny` 指令中指定的客户端访问。`Order Allow,Deny` 指令默认打印请求，并允许来自指定地址的请求。你可以在 `Allow from` 和 `Deny from` 指令中使用包含通配符在内的域名以及带有通配符或子网掩码的 IP 范围。这些指令的工作方式与在 Apache 中相同。更多信息请参阅第 931 页的“Order”。
+
+使用 `Order Deny,Allow` 指令时，`Deny from` 指定了 CUPS 不接受连接的唯一 IP 地址。当你使用 `Order Allow,Deny` 指令时，`Allow from` 指定了 CUPS 接受连接的唯一 IP 地址。
+
+## 从 Windows 打印
+
+本节解释了如何从 Windows 机器使用 Linux CUPS 服务器上的打印机。CUPS 更容易管理，并且可以比使用 Samba 从 Windows 打印更安全。
+
+## 使用 CUPS 打印
+
+现代版本的 Windows（2000 及更高版本）支持 IPP，因此可以直接与 CUPS 通信。要使用此功能，你必须在 Linux 服务器上配置 CUPS 以允许 IPP 打印；你还需要在 Windows 系统上创建一个新的打印机，使其指向 Linux 打印服务器的 IP 地址。
+
+首先设置 `/etc/cups/cupsd.conf` 文件以允许来自客户端的网络打印，如第 565 页“共享 CUPS 打印机”部分所说明。设置 CUPS 允许从 Windows 机器打印与设置允许从 Linux 客户端系统打印完全相同。如有必要，请按照第 54 页的说明打开防火墙。
+
+从 Windows XP，进入控制面板→打印机和传真，并点击“添加打印机”。在介绍窗口中点击“下一步”，选择网络打印机或连接到另一台电脑的打印机。点击“下一步”。选择连接到互联网或家庭或办公室网络上的打印机并输入以下内容：
+
+```
+$ grep -i listen /etc/cups/cupsd.conf
+# 只监听来自本地机器的连接
+Listen localhost:631
+Listen /var/run/cups/cups.sock
+```
+
+要允许其他系统连接到本地系统的 CUPS 服务器，你必须指示 CUPS 绑定到其他系统可以访问的 IP 地址。对于运行在 192.168.0.12:631 上的 CUPS 服务器，以下指令是合适的：
+
+```
+Listen 192.168.0.12:631
+```
+
+当此指令放在其他 `Listen` 指令之后时，将导致 CUPS 监听 IP 地址 192.168.0.12 的端口 631。当你更改 `cupsd.conf` 时，需要调用 `cups init` 来重启 cups 守护进程（第 549 页）。
+
+`cupsd.conf` 中的某些指令使用 `@LOCAL` 宏，该宏是 CUPS 内部的并用于指定本地系统。该宏接受来自任何解析为本地系统的地址的通信。
+
+一旦重启 `cupsd`，远程系统就可以使用 `Listen` 指令指定的 IP 地址和端口号在本地系统的打印机上打印。如果服务器运行着防火墙，你需要允许远程系统通过防火墙连接；请参见第 549 页。
+
+或者，你可以使用 CUPS 的访问控制列表仅允许选定的机器连接到本地打印机。访问控制列表定义在 `<Location>` 容器内部（等效内容请参第 918 页）。以下示例仅允许 IP 地址为 192.168.1.101 的系统和本地系统打印到打印机：
+
+```
+<Location /printers>
+Order Allow,Deny
+Allow from localhost
+Allow from 192.168.1.101
+</Location>
+```
+
+`/printers` 表示此容器引用所有本地打印机。或者，你可以通过指定 `/printers/printer-name`（其中 `printer-name` 是打印机名称）来按打印机控制访问，或者通过指定 `/printers/path.pdf`（其中 `path.pdf` 是打印机使用的 PDF 文件完整路径，第 561 页）来控制访问。
+
+`Order Deny,Allow` 指令默认允许访问，仅拒绝 `Deny` 指令中指定的客户端访问。`Order Allow,Deny` 指令默认打印请求，并允许来自指定地址的请求。你可以在 `Allow from` 和 `Deny from` 指令中使用包含通配符在内的域名以及带有通配符或子网掩码的 IP 范围。这些指令的工作方式与在 Apache 中相同。更多信息请参阅第 931 页的“Order”。
+
+使用 `Order Deny,Allow` 指令时，`Deny from` 指定了 CUPS 不接受连接的唯一 IP 地址。当你使用 `Order Allow,Deny` 指令时，`Allow from` 指定了 CUPS 接受连接的唯一 IP 地址。
