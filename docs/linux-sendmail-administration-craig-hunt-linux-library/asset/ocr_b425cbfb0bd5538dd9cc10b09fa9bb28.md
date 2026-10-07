@@ -1,0 +1,7 @@
+# Using Sendmail Databases
+
+Mention Sendmail configuration to a group of Linux administrators. The first thing that most of them will think of is a large sendmail.cf file filled with terse configuration commands that are difficult to read. Some think of an m4 macro control file built from a complex configuration language that has hundreds of options. A very few think of database-files. Yet database files play an important role in Sendmail configuration—a bigger role for the average system administrator than either the sendmail.cf or the macro configuration-files.
+
+The reason that the databases play such a big role for the average administrator is not that the databases are more important than the other files; they’re not. The reason is that many administrators use the sendmail.cf provided by the Linux distribution vendor and never change it. Or they build a custom configuration when they install Sendmail and never change that. Then they use the Sendmail databases for day-to-day configuration changes and to control the way in which Sendmail processes mail.
+
+Sendmail uses several databases. In this chapter you'll learn about all of them. I use the term "databases" loosely. Some of the files described here are flat files; others are true databases. Regardless of their structure, all of these files are used to control the operation of Sendmail. Understanding the role of the databases and using them to your advantage

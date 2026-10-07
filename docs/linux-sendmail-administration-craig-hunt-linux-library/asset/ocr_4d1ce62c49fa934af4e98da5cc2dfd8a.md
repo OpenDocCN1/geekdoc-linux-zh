@@ -1,0 +1,13 @@
+any user in the specified domain is sent to the recipient defined by the virtusertable database. Any hostname used as a key in the virtusertable database must also be defined in class w or class {Host}. A hostname can be added to class w with the LOCAL_DOMAIN macro. Hostnames can be added to the {VirtHost} class using the VIRTUSER_DOMAIN macro. The {VirtHost} can be loaded from a file using the VIRTUSER_DOMAIN_FILE macro.
+
+Some features are important in the fight against spam because they help you control what mail server will deliver or forward on delivery. These are accept_unqualified_senders, accept_unresolvable_domains, accept_db, blacklist_recipients, and dnsbl1. All of these are covered in Chapter 11, “Stopping Spam,” and in the “DOMAIN” section of this appendix.
+
+The always_add_domain macro makes Sendmail add the hostname to all locally delivered mail, even to those pieces of mail that would normally have a username as an address. The bestmx_is_local feature accepts mail to a host that lists the local host as its preferred MX server if the mail was local. If this feature is not used, mail bound for a remote host is sent directly to the remote host even if MX records list the local host as its preferred MX server. The bestmx_is_local feature should not be used if you use a wildcard MX record for your domain.
+
+The use_cw_file and the use_ct_file illustrate how define commands affect delivery. Both of these features use a file. The file can be set by a define command. If a define is used to modify a value used by a FEATURE, the define be included in the macro configuration file before the FEATURE.
+
+The redirect feature handles mail for users who no longer read mail at your site. When properly configured, it returns an error to the server providing them with the user’s e-mail address. Configuring the redirect feature is covered in Chapter 9.
+
+There are three features that select optional programs for the local and prog mailers. local_procmail1 selects procmail as the local mailer. Provide the path to procmail as the argument in the FEATURE command. The local_smtp feature selects mail1. local, a mailer provided by the Sendmail distribution, Restricted Shell (smsh) as the prog mailer. The smsh provides improved security over /bin/sh, which is normally used as the prog mailer. Provide the path to smsh as the argument in the FEATURE command.
+
+The FEATURE commands discussed in this section and the define macros previously used are to define the m4 source files. The next few sections describe the purpose and structure of the OSTYPE, DOMAIN, and MAILER source files that are built with define and FEATURE commands.

@@ -1,0 +1,15 @@
+There are three levels of security used to defend against these problems:
+
++   - Secure the system, which in Sendmail includes securing the hardware and the operating system software
+- Secure the server, which in the context of this book means securing the Sendmail server
+- Secure the communications, which includes securing the messages sent between systems
+
+This chapter covered all three of the topics listed above. The topics become increasingly complex as you move down the list and through the chapter. The easiest way to attack this complexity is to realize that the more complex topics, such as STARTTLS, are as important as the basic topics. If you master the first topic and secure the system, you have completed 99 percent of the important security work for a Sendmail server. Most of the security vulnerabilities of your server lie in the system as a whole, not just in Sendmail. The single most important thing you can do to secure your server is to keep the software updated by applying security fixes when they become available.
+
+The security problems in Sendmail do not to be configuration problems. Sendmail ships with security buttoned up pretty tight. Learning the different security parameters is helpful in understanding how the system works, but it is unlikely you tighten the security of these parameters. Most changes to the default settings actually weaken security—for example, to support relaying. Sendmail security problems tend to be bugs, and the best way to handle these bugs is to apply the fixes as soon as they become available.
+
+Encryption sounds good. It sounds like it should fix all of your problems. In reality it doesn't. To be truly useful, mail needs to be able to come from anywhere and go anywhere. You need be able to talk to people and systems you can't really trust. Encryption mail has its place, but it can never be the total solution and it can never take the place of good security system. A root compromise of your server gives the intruder access to your private keys, just like it gives the access to everything else on the system. Nothing can replace good system administration.
+
+This chapter completes a book that has attempted to balance the complex details of Sendmail with a realistic expectation of what you actually need to know. We started with the protocols and architecture used to build an e-mail system with Sendmail. We learned the m4 language, using it to build a simple configuration, and just as importantly, to read the configuration delivered with a Linux system. Finally, we refined our configuration with advanced features.
+
+I believe that the time we have spent together will give you insights into Sendmail that will make you a better Sendmail administrator. I enjoyed writing this book for you. I hope that you enjoyed reading it, and that you will benefit from doing so.

@@ -1,0 +1,15 @@
+# Sendmail Security Protocols
+
+Sendmail implements the AUTH protocol and the STARTTLS protocol, but it depends on Linux for TLS and SASL. We saw this dependency in Chapter 3, “Running Sendmail,” when we attempted to install the RPM version of Sendmail 8.11 on a Linux system that did not have SSL or SASL installed. RPM complained that Sendmail 8.11 depended on openssl and libsasl and neither was provided. It is the convergence of cryptographic support in the operating system and Sendmail that makes it possible for your server to secure e-mail.
+
+The Sendmail security protocols ensure the authenticity of MTAs and the integrity of e-mail in the network. To accomplish these tasks, the protocols use cryptography to authenticate and secure SMTP communications. This isn’t a book about cryptography; however, some cryptographic concepts are essential for understanding the Sendmail security protocols.
+
+# Encryption and Cryptography
+
+There are two basic types of cryptography: secret key, which is also called symmetric cryptography, and public key, which is sometimes asymmetric cryptography. Symmetric cryptography is easy to understand. Cooperating systems use the same key and the same algorithm to encrypt and decrypt data. The problem with symmetric cryptography is that a prior agreement must be reached among all participating systems about the key and the algorithm to be used. The secret key in a secret key system is far from being a secret because every system must have a copy of the key. The more systems sharing the secret, the greater the possibility that it will be compromised.
+
+Public cryptography is a much more interesting system. It uses two keys—a public key that can be available to everyone and a private key that does not need to be shared with anyone. When the public key is used to encrypt a message, the message can be decrypted only with the private key. Thus, anyone can encrypt a message for the target system using the public key, but only the target system can decrypt and read the message using its private key. Importantly, only messages encrypted with the private key can be decrypted with the public key. This elegant system is not without complexity. Two things are required to make it work:
+
+Authentication In a secret cryptography system, the fact that a message is properly encrypted means that it must have come from a trusted system that has the secret key. A public key is different. Because the public key is available to everyone, a method for authenticating the source of an encrypted message is needed. Messages are authenticated by a digital signature. A digital signature is produced by running a cryptographic checksum using the content of the message as the data for the checksum and the private key of the source of the message for the encryption. Since the digital signature was produced with the source’s private key, it can only be
+
+![](bbox=[0.925, 0.575, 0.996, 0.677])

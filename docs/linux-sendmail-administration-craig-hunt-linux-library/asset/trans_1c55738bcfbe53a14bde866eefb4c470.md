@@ -1,0 +1,207 @@
+
+
+# sendmail.cf 中的 AliasFile 选项 - CANONIFY_DOMAIN 命令 (m4)
+
+sendmail.cf 中的 AliasFile 选项, 418
+
+- ALIAS_FILE 变量，127, 132, 150
+- sendmail.cf 中的 AliasWait 选项, 418
+- allmasquerade 功能, 252, 376, 388
+- sendmail.cf 中的 AllowBagusHELO 选项, 418
+- always_add_domain 功能, 129–130, 132, 377, 381, 390
+- 下载 RPM 软件匿名 FTP, 64–65
+- 反垃圾邮件规则，定义, 311
+- APOP 命令 (POP), 329
+- APPEND 命令 (IMAP), 27
+- 应用程序媒体类型 (MIME), 16
+- m4 宏的参数，引号字符串, 96
+- mailer 定义中的 Arg (V) 字段, 209, 211
+- 作为数据库，定义, 197
+- ASCII，电子邮件支持, 19
+- 非对称加密, 343
+- 音频媒体类型 (MIME), 16
+- AUTH DIGEST-MD5, 22
+- SMTP 的 AUTH 扩展, 344
+- AUTH 协议, 342
+- 认证服务器 (ident), 300
+- AUTHENTICATE 命令 (IMAP4), 26
+- 认证，343–344, 继中的认证，344–350, 349–350
+- 认证客户端, 
+- authid (认证身份), 347
+- sendmail.cf 中的 AuthMechanisms 选项, 418
+- sendmail.cf 中的 AuthOptions 选项, 418
+- sendmail.cf 中的 AutoRebuildAliases 选项, 418
+
+## B
+
+- 后台守护进程，作为启动 sendmail, 398
+- 备份邮件交换服务器, 34
+- base64 编码, 19
+- bestmx_is_local 功能, 377, 381, 390
+- 二进制编码, 19
+- BIND 软件, 74
+- bitomain 数据库, 380
+- bitomain 功能, 143, 144, 177, 377
+- .BITNET 伪域名, 125–126
+- BITNET_RELAY 变量，125–126, 265, 386
+- blacklist_recipients 功能, 130–131, 132, 158–159, 377, 388
+- sendmail.cf 中的 BlankSub 选项, 418
+- 在 BSD-Linux 系统上运行 Sendmail, 53
+- sendmail.cf 文件数据的缓冲区, 93
+- 错误修复, 326
+- Build 命令，用于编译 sendmail, 72–73
+- cf/cf 目录中的构建脚本, 78–88
+
+## C
+
+- C.., 命令, 188
+- C[| 命令, 188
+- C (定义类) 命令, 182, 186–190, 215
+- sendmail.cf 中的 CACERTFile 选项, 418
+- sendmail.cf 中的 CACERTfPath 选项, 418
+- Caldera, 54. 另另 System-v Linux
+- cannon 命令, 290
+- canonify 规则, 44, 220, 222, 223, 228, 243, 280
+- CANONIFY_DOMAIN 命令 (m4) 362, 390
+
+## CANONIFY_DOMAIN_FILE 命令 (m4) - 注释 437
+
+- CANONIFY_DOMAIN_FILE 命令 (m4), 362, 390
+- CAPABILITY 命令 (IMAP4), 26
+- 大写敏感性, 153, 173, 195
+- 证书，350 自签名, 352
+- 证书颁发机构定位，352 以及公钥加密, 350
+- cf 目录结构, 22–91
+- cf/cf 目录，85–88 内容, 86
+- cf/cf 目录，构建脚本, 87–88
+- cf/domain 目录, 85
+- cf/feature 目录, 90
+- cf/hack 目录, 83–84
+- cf/m4 命令, 90–91
+- cf/mailer 目录, 89
+- cf/ostype 目录, 88–89
+- cf/sh 目录, 84
+- cfsiteconfig, 84
+- cf .file 扩展, 86
+- cfhead.m4 文件, 92
+- cf.m4 文件, 91
+- 处理更改, 117
+- mailer 定义中的 Charset (C) 字段, 210
+- CHECK 命令 (IMAP4), 27
+- sendmail.file 中的 CheckAliases 选项, 418
+- check_mail 规则集, 222, 223
+- sendmial.file 中的 CheckpointInterval 选项, 418
+- check_recpt 规则集, 222, 223
+- check_relay 规则集, 222, 223
+- hckconfig, 用于启用 sendmail, 58
+- E 类, 118
+- M 类, 252
+- R 类, 146, 191, 302, 303
+- t 类中的用户, 202
+- 类变量 O, 188
+- 类变量 P, 187–188
+- 类变量，416–417 从文件加载, 190–191 在模式匹配中, 229
+- 向 w 类添加值, 187
+- 147- 失败的测试, 147–148
+- 类变量，从文件加载, 115–116
+- sendmail 中的类，186 设置和查看, 287–288
+- sendmail.cf 中的 ClassFactor 选项, 418
+- ClassTest 规则集, 230
+- RPM 软件后的清理, 69–71
+- 客户端认证, 347–349
+- 客户端邮件，38 阻塞中继引起的问题, 302
+- 用于配置的属性框, 38–39, 95
+- 作为客户端，49 client-only.mc 配置文件, 262
+- client_addr 变量，放置值, 308
+- sendmail.cf 中的 ClientFile 选项, 419
+- sendmail.cf 中的 ClientKeyFile 选项, 419
+- sendmail.cf 中的 ClientPortOptions, 
+- CLOSE 命令 (IMAP4), 27, 29
+- sendmail.cf 中的 ColonAddr 选项, 419
+- 测试 Sendmail 的命令行选项, 269–280
+- -bv 选项, 270–271
+- hoststat 命令, 273–286
+- mailq 命令, 276–273
+- verbose 选项, 271–273 m4 语言中的注释, 94
+- sendmail 的兼容性
+
+- 438 Red Hat sendmail 的兼容性
+- 251 别名，sendmail.file 中的行, 182
+- Sendmail 的兼容性, 75–76
+- 72–73 编译 Sendmail
+- 检查选项, 141
+- D (定义类) 命令, 185–186
+- m4 语言中的，110 在模式匹配中, 231
+- procmail 配方, 317
+- AUTH_MECHANMS 参数, 345
+- 126, 132 AUTO_REBUILD 变量
+- BINDIR
+- 351 CLIENT_CERT 参数
+- 351 CLIENT_KEY 参数
+- 336–337 CONNECTION_RATE_THROTTLE
+- 142 CR_FILE 变量
+- 115, 146 CW_FILE 变量
+- 127, 132 DEF_PROBE_INTERFACES
+- 128 BINDIR
+- 113–132 FORWARD_PATH 变量
+- 273, 274 HOST_STATUS 目录
+- 244 错误代码
+- 88 多个 sendmail 脚本
+- 59 强制
+- 96 sendmail.cf 中的行
+- 394 LDAP_DEFAULT
+- 139 MAP 数据库
+- 335–336 MAX_DAEMON_CHILD 参数
+- 137 MAX_HEADERS_LENGTH 变量
+- 337 MAX_MESSAGE_SIZE
+- 351 SERVER_CERT 参数
+- 351 SERVER_KEY 参数
+- 126, 132 TO_CONNECT 变量
+- 202 TRUSTED_USERS 参数
+- 127, 132 TRY_NULL_LIST 变量
+- 142, 154 USER_DB 变量
+- 319 sendmail.cf 中的 ConnectionSize 
+- 419 sendmail.cf 中的 ConnectionTimeout
+- 419 sendmail.cf 中的 ConnectionRateThrottle
+- 419 sendmail.cf 中的 ContentTo
+- 19–20 Content-Transfer-Encoding header
+- 16–19 ContentType: header
+- 419 sendmail.cf 中的 ControlSocketName
+- 27 COPY 命令 (IMAP4)
+- 109 m4 语言中的注释
+- 284 别名
+- 26 CREATE 命令 (IMAP4)
+- 343–344 加密
+- 32 直接投递邮件
+- 366 定义目录
+- 210 mailer 定义中的 (D) 字段
+- 244 丢弃 mailer
+- 98 配置文件中的丢弃文本
+- 92, 94, 88, 362, 365 divert 命令 (m4)
+- 92, 94, 362, 365 dnl 命令 (m4)
+- 399 D (定义类)
+
+## D (定义类)
+
+- 182–186 D (定义类) 命令
+- 51 sendmail 的守护进程模式
+- 88 DAEMON 变量
+- 362, 394 DAEMON_OPTIONS (m4)
+- 420 sendmail.cf 中的 DataBufferSize 选项
+- 4 DATA 命令 (SMTP)
+- 14 Date: header
+- 420 sendmail.cf 中的 DeadLetterDrop 选项
+- 61 Debian 软件包
+- 293–399 调试级别
+- 424 sendmail.cf 中的 DoubleBounceAddress 选项
+- 346 digest-MD5 认证
+- 343 数字签名
+- 32 直接投递邮件
+- 366 定义目录
+- 210 mailer 定义中的 (D) 字段
+- 244 丢弃 mailer
+- 98 配置文件中的丢弃文本
+- 92, 94, 88, 362, 365 divert 命令 (m4)
+- 92, 94, 362, 365 dnl 命令 (m4)
+- 399 D (定义类)
+
