@@ -1,0 +1,15 @@
+The letters “pwd” stand for “print working directory.” Again, a command’s name or function has been cut down to a few easy-to-type characters. (You will often see the term *current directory* used in place of *working directory*.)
+
+You might be wondering what “working directory” or “being in a directory” really means. It simply means that Linux commands, by default, perform their actions in your working directory. For instance, when you run `ls`, they show only the files in your working directory. If you want to create or remove files, they will be created or removed in your working directory. You can change your working directory with the `cd` command, as you’ll see in a moment.
+
+# ## Absolute and Relative Filenames
+
+If you specify only the name of a file, Linux looks for that file in your working directory. For example, `more myfile` lets you read the contents of the file **myfile**. But **myfile** must be in your current working directory or the `more` command can’t find it.
+
+Sometimes you want to specify a file that isn’t in your current directory. In this case, you must then specify the name of the directory the file is in, as well as the name of the file itself. If, for example, your current directory has a subdirectory called **novel1** which contains a file called **chapter_1**, you could type `more novel1/chapter_1` which tells `more` that it should look in the subdirectory **novel1** for the file **chapter_1**. This is called a *relative filename*. You are specifying the location of **chapter_1** *relative* to where you are now, in the subdirectory **novel1**, which in turn is found in your current directory. If you have changed your working directory, the relative filename will no longer work.
+
+Two special directory specifications are `“.”` and `“..”`. The single period `“.”` always stands for the directory you are currently in, and `“..”` stands for the parent directory of your current directory. (You will see how `“.”` and `“..”` are used later in this chapter.) Any filename that includes `“.”` or `“..”` is, by definition, a relative filename.
+
+A filename that is valid from any location is called an *absolute filename*. Absolute filenames always begin with `/`, signifying the root directory. So if you specify a filename as `/home/fido/novel1/chapter_1`, there is no doubt as to where the file is located. Every file on your system has a unique absolute filename. You can use the absolute filename to figure out what Linux is doing when you specify a filename. In the example just mentioned, Linux will start in the root directory `/` and look for a subdirectory called **home**. Linux makes `/home` the current directory temporarily and looks for a directory called **fido**, then makes that current, looks for **novel1** and makes that current. Once in **novel1**, Linux looks for a file or directory called **chapter_1**. You can read the absolute filename like a road map, telling you how to navigate the Linux file system.
+
+![](bbox=[0.836, 0.447, 0.979, 0.59])

@@ -1,0 +1,243 @@
+
+
+## Echoblaster 论坛 #2
++49-7142-21235
+V32b 比特海姆 (Bietigheim)，巴登-符腾堡州 (BW)，德国。
+
+## FORMEL-Box
++49-4191-2846
+16.8 ZYX 卡尔滕基兴 (Kaltenkirchen)，石勒苏益格-荷尔斯泰因州 (SHL)，德国。
+
+## Fifis Inn 论坛
++49-89-5701353
+14.4-19.2 慕尼黑，德国。
+
+## Fractal Zone 论坛 /Maass
++49-721-863066
+16.8 ZYX 卡尔斯鲁厄 (Karlsruhe)，巴登-符腾堡州 (BW)，德国。
+
+## 银河档案 (Galaktische Archive)
++43-2228303804
+16.8 ZYX 维也纳，奥地利。Fidonet 2:310/77 (19:00-7:00)
+
+## Galway 在线
++353-91-27454
+14.4k V32b 戈尔韦 (Galway)，爱尔兰。
+
+## Gunship 论坛
++46-31-693306
+14.4k HST DS 哥德堡 (Gothenburg)，瑞典。
+
+## Hipposoft /M. Junius
++49-241-875090
+14.4 HST 亚琛 (Aachen)，北莱茵-威斯特法伦州 (NRW)，德国。
+
+## Le Lion
++33-72089879
+HST 14.4/V32bis 里昂 (Lyon)，法国 Pascal Valette。
+
+## Linux 服务器 /Braukmann
++49-441-592963
+16.8 ZYX 奥尔登堡 (Oldenburg)，下萨克森州 (NDS)，德国。
+
+## Linux 支持 - 大洋洲 (Linux-Support-Oz)
++61-2-4188750
+V.32bis 14.4k 悉尼，新南威尔士州 (NSW)，澳大利亚。
+
+## Linux服务器 / P. Berger
++49-711-756275
+16.8 HST 斯图加特 (Stuttgart)，巴登-符腾堡州 (BW)，德国。
+
+## Logical Solutions
+- 403 299-9900 至 9911。2400 AB，加拿大。
+- 403 299-9912, 299-9913。14.4k AB，加拿大。
+- 403 299-9914 至 9917。16.8k V.32bis AB，加拿大。
+
+## MM’s 游戏盒 (Spielebox)
+- +49-5323-3515。14.4 ZYX 克劳斯特哈尔茨菲尔德 (Clausthal-Zfd.)，下萨克森州 (NDS)，德国。
+- +49-5323-3516。16.8 ZYX 克劳斯特哈尔茨菲尔德 (Clausthal-Zfd.)，下萨克森州 (NDS)，德国。
+- +49-5323-3540。9600 克劳斯特哈尔茨菲尔德 (Clausthal-Zfd.)，下萨克森州 (NDS)，德国。
+
+## MUGNET 国际 - Cistron 论坛
++31-1720-42580
+38.4k 阿尔芬 (Alphen a/d Rijn)，荷兰。
+
+## Magic 论坛
+403-569-2882
+14.4k HST/Telebit/MNP 卡尔加里 (Calgary)，阿尔伯塔省 (AB)，加拿大。互联网/Usenet
+
+## Modula 论坛
+- +33-1 4043 0124。HST 14.4 V.32bis 巴黎，法国。
+- +33-1 4530 1248。HST 14.4 V.32bis 巴黎，法国。
+
+## Nemesís’ 地牢 (Dungeon)
++353-1-324755 或 326900
+14.4k V32bis 都柏林，爱尔兰。
+
+## On the Beach (海滩上)
++44-273-600996
+14.4k/16.8k 布赖顿 (Brighton)，英国。Fidonet 2:441/122
+
+## Pats System
++27-12-3332049
+14.4k V.32bis/HST 比勒陀利亚 (Pretoria)，南非。
+
+## 公有领域宝箱 (Public Domain Kiste)
++49-30-6866250
+16.8 ZYX 柏林 (BLN)，德国。Fidonet 2:2403/17
+
+## Radio Free Nyongwa (自由 Nyongwa 广播)
+514-524-0829
+V.32bis ZyXEL 蒙特利尔 (Montreal)，魁北克省 (QC)，加拿大。USENET，Fidonet
+
+## Rising Sun 论坛 (旭日论坛)
++49-7147-3845
+16.8 ZYX 萨克森海姆 (Sachsenheim)，巴登-符腾堡州 (BW)，德国。Fidonet 2:2407/4
+
+## STDIN 论坛
++33-72375139
+V.32bis 里昂 (Lyon)，法国 Laurent Cas。
+
+![Image](img/e8e6b47ac20475e23d48b4c476f5d891_1070_0.png)
+
+## Synapse
+819-246-2344, 819-561-5268
+加蒂诺 (Gatineau)，魁北克省 (QC)，加拿大。RIME->SYNAPSE
+
+## The Controversy (争议)
+(65) 560-6040
+14.4k V.32bis/HST 新加坡。
+
+## The Field of Inverse Chaos (逆混沌领域)
++358-506-1836
+14.4k V32bis/HST 赫尔辛基 (Helsinki)，芬兰。
+
+## The Purple Tentacle (紫色触手)
++44-734-590990
+HST/V32bis 雷丁 (Reading)，英国。Fidonet 2:252/305
+
+## The Windsr Download
+(519) 973-9330
+V32bis 14.4 安大略省 (ON)，加拿大。
+
+## Thunderball Cave (雷球洞穴)
+472567018
+挪威。
+
+## UB-HOFF /A. Hoffmann
++49-203-584155
+19.2 ZYX+ 杜伊斯堡 (Duisburg)，德国。
+
+## V.A.L.I.S.
+403-478-1281
+14.4k V.32bis 埃德蒙顿 (Edmonton)，阿尔伯塔省 (AB)，加拿大。USENET
+
+## bakunin.north.de
++49-421-870532
+14.4 D 2800 不来梅 (Bremen)，不来梅市 (HB)，德国。
+
+## nonsolosoftware
+- +39 51 432904。ZyXEL 19.2k 意大利：Fidonet 2:332/417
+- +39 51 6140772。V.32bis, V.42bis 意大利。Fidonet 2:332/407
+
+## r-node
+416-249-5366
+2400 多伦多 (Toronto)，安大略省 (ON)，加拿大。USENET
+
+# Usenet 新闻组
+
+Usenet 是一个供互联网用户使用的讨论组（称为*新闻组*）的集合。每天有超过 9,000 个新闻组，并产生超过 100MB 的流量。在所有这些新闻组（涵盖所有可能的话题）中，有几个是专门针对 Linux 的。
+
+如果您能够访问定期下载新闻组的站点，就可以通过一种称为*新闻阅读器*的特殊软件来访问 Usenet 新闻组。或者，大多数在线服务，如 CompuServe、美国在线 (America Online) 和 Delphi 也提供访问 Usenet 的服务。一些 BBS 也提供有限的新闻组访问权限。
+
+Usenet 新闻组分为三类：主要新闻组，对所有 Usenet 用户开放；分发范围有限的本地新闻组；以及可能未被所有新闻服务器处理的替代新闻组。对 Linux 用户感兴趣的主要新闻组是
+
+| 组名 | 描述 |
+| :--- | :--- |
+| comp.os.linux.admin | 安装和管理 Linux 系统 |
+| comp.os.linux.advocacy | Linux 系统的支持者 |
+| comp.os.linux.announce | 对 Linux 社区重要的公告（受审核） |
+| comp.os.linux.answers | 问题的解答 |
+| comp.os.linux.development | Linux 的持续开发工作 |
+| comp.os.linux.development.apps | Linux 应用程序的持续开发工作 |
+| comp.os.linux.development.system | Linux 操作系统的持续开发工作 |
+| comp.os.linux.hardware | Linux 与硬件相关的问题 |
+| comp.os.linux.help | 关于 Linux 的问题和建议 |
+| comp.os.linux.misc | 其他组未涵盖的 Linux 特定主题 |
+| comp.os.linux.networking | 使 Linux 系统正常进行网络通信 |
+| comp.os.linux.setup | Linux 的设置和安装问题 |
+
+除非系统管理员因某些原因将其过滤掉，否则这些新闻组应该在所有 Usenet 站点均可用。
+
+其他新闻组往往经常变化，主要是因为它们要么是区域性的，要么充斥着观点非常强烈的用户，这些用户可能会在一段时间后失去兴趣。.alt（替代）新闻组在这方面尤为糟糕。在本书撰写时，只有一个 .alt 新闻组在运行：
+
+alt.uu.comp.os.linux.questions
+
+此外还有区域性新闻组，它们通常分布不广，或者拥有可能使用非英语语言的特定议题。一些由 Usenet 提供的区域性新闻组示例包括
+
+- dc.org.linux-users
+- de.comp.os.linux
+- fr.comp.os.linux
+- tn.linux
+
+如果您可以访问 Usenet 新闻组，建议定期扫描新闻组的添加和删除，以检查是否有新的 Linux 新闻组或已合并的现有组。提供访问 Usenet 服务的大多数在线服务都维护着所有活跃新闻组的列表，可以快速搜索。
+
+这些 Linux 新闻组中的大多数流量涉及人们在安装、配置或使用操作系统时遇到的问题。通常，会有大量有价值的信息通过新闻组传递，因此请定期检查。处理特定主题（称为线程）的最有趣消息会被收集并通过 FTP 站点存储以供访问。
+
+# Linux 的商业供应商
+
+本附录包含
+
+- Debian Linux 发行版 1038
+- Yggdrasil 即插即用 Linux CD-ROM 和 Linux 圣经 1038
+- 来自 Nascent 的 Linux CD-ROM 1039
+- Unifix 1.02 CD-ROM 1039
+- Fintronic Linux 系统 1039
+- InfoMagic 开发者资源 CD-ROM 套件 1040
+- Linux 季刊 CD-ROM 1040
+- Linux 系统实验室 1040
+- Sequoia International Motif 开发包 1041
+- Takelap Systems Ltd. 1041
+- Trans-America Linux Plus BSD CD-ROM 1041
+- Caldera OpenLinux 1041
+
+# 附录 B
+
+本附录列出了所有销售 Linux 发行版的商业供应商。请参阅附录 A“Linux FTP 站点和新闻组”，了解免费获取 Linux 的 FTP 站点列表。从商业供应商处获取 Linux 的优势在于，您可以获得打包在一个包中的大量软件，而不必自己动手。您也可以从《Linux 期刊》（月刊）获取这些供应商的列表：
+
+*Linux 期刊*
+
+P.O. Box 85867
+
+西雅图，华盛顿州 (WA) 98145-1867
+
+电话：(206) 527-3385
+
+传真：(206) 527-2806
+
+`Linux Distribution-HOWTO` 文件包含关于将软件包捆绑销售的 Linux 供应商的最新信息。此列表由 Matt Welsh (mdw@sunsite.unc.edu) 维护。该 HOWTO 文件可以在 tsx-11.mit.edu 的 `/pub/linux/docs/HOWTO/` Distribution-howto 中找到。
+
+## Debian Linux 发行版
+
+Debian Linux 协会
+
+Station 11
+
+P.O. Box 3121
+
+西拉法叶 (West Lafayette)，印第安纳州 (IN) 47906
+
+测试版可供公众在 `sunsite.unc.edu` 的目录 `/pub/Linux/distributions/debian` 中获取。
+
+## Yggdrasil 即插即用 Linux CD-ROM 和 Linux 圣经
+
+Yggdrasil 计算股份有限公司
+
+4880 Stevens Creek Blvd., Suite 205
+
+圣何塞 (San Jose)，加利福尼亚州 (CA) 95129-1034
+
+免费电话：(800) 261-6630
+
+电话：(408) 261-6630
+

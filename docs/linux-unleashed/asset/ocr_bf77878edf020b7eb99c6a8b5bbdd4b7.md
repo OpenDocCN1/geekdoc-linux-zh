@@ -1,0 +1,13 @@
+Your system fails to find the SCSI devices and you get messages such as scsi : 0 hosts or scsi\*d : type: when the system boots\-The autoprobe routines on the controller cards rely on the system BIOS autoprobe and can’t boot properly. This is particularly prevalent with these SCSI adapters: Adaptec 152x, Adaptec 151x, Adaptec AIC-6260, Adaptec AIC-6360, Future Domain 1680, Future Domain TMC-950, Future Domain TMC-8xx, Trantor T128, Trantor T128F, Trantor T228F, Seagate ST01, Seagate ST02, and Western Digital 7000. Check that your BIOS is enabled and not conflicting with any other peripheral BIOSs (such as on some adapter cards). If the BIOS is properly enabled, find the board’s “signature” by running DOS’ DEBUG command to check whether the board is responding. For example, use the DEBUG command d=c800:0 to see whether the board replies with an acknowledgment (assuming you have set the controller card to use address 0xc8000; if not, replace the DEBUG command with the proper address). If the card doesn’t respond, check the address settings.
+
+Sometimes the SCSI system locks up completely\-There are many possible reasons, including a problem with the host adapter. Check the host adapter with any diagnostics that came with the board. Try a different SCSI cable to see whether that is the problem. If the lockups seem to occur when multiple devices are in use at the same time, there is probably a firmware problem. Contact the manufacturer to see whether upgrades are available that would correct the problem. Finally, check the disk drives to ensure that there are no bad blocks that could affect the device files, buffers, or swap space.
+
+# # Summary
+
+SCSI has a reputation for being difficult to work with, but in fact, it is one of the easiest and most versatile systems available. After you get used to the nomenclature, SCSI offers many useful features to the Linux user. Indeed, most veteran UNIX people prefer working with SCSI because it is easy to use with the UNIX kernel and the same applies to Linux. From here, you may want to learn more about the following topics:
+
+Shell programming and how you can use it to make your experience with bash more powerful is discussed in Chapter 14, “Shell Programming.”
+
+Setting up an Internet server with your Linux system is discussed in Chapter 47, “Setting up an Internet Site.”
+
+Using source code control systems to maintain previous versions of your files is discussed in Chapter 56, “Source Code Control.”

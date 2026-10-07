@@ -1,0 +1,13 @@
+Snap question: What is the most widely used TCP/IP and Internet service? If you answered FTP, you're right. (If you didn't choose FTP, this may come as a bit of a surprise. The fact is, FTP remains the most widely used service; although the World Wide Web is quickly catching up.) FTP's popularity is easy to figure: The FTP software is supplied with every version of UNIX and Linux; it's easy to install, configure, and use; and it gives users access to a wealth of information with very little effort. Lately, the popularity of the World Wide Web has made a different interface to FTP available: the Web browser. Most browsers such as Netscape Navigator allow you to use it for file transfers to FTP sites.
+
+If all you want to use FTP for is connecting to another machine and transferring files, then you don't have to do much more than enable the FTP service on your system. Much more interesting to many users is turning your Linux machine into an FTP site, where others can connect and obtain files you make available. That's the primary focus of this chapter—setting up an FTP site on your Linux machine. We'll begin, though, with a quick look at using FTP and the way FTP runs on TCP. This information should help you understand how FTP works and what it does with TCP/IP.
+
+# ## What Is FTP?
+
+The File Transfer Protocol (FTP) is one protocol in the TCP/IP family used to transfer files between machines running TCP/IP. (FTP-like programs are also available for some other protocols, too.) The File Transfer Protocol allows you to transfer files back and forth and manage directories. FTP is not designed to allow you access to another machine to execute programs, but it is the best utility for file manipulation. To use FTP, both ends of a connection must be running a program that provides FTP services. The end that starts the connection (the client) calls the other end (the server) and establishes the FTP protocol through a set of handshaking instructions.
+
+Usually, when you connect to a remote system via FTP, you must log in. This means you must be a valid user, with a username and password for that remote machine. Because it is impossible to provide logins for everyone who wants to access a machine that enables anyone to gain access, many systems use "anonymous FTP" instead. Anonymous FTP enables anyone to log in to the system with the login name of "ftp" or "anonymous" with either no password or with an email address for their local system as the password.
+
+# ## Using FTP
+
+Using FTP to connect to a remote site is easy. You have access to the remote machine either through the Internet (directly or through a service provider) or through a local area

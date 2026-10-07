@@ -1,0 +1,11 @@
+There is documentation available for ConfigFX86 and fx86config, usually placed in /usr/X386/bin with the executable file. Some versions of Linux and XFree86 don't supply the documents, though. The documentation is often supplied in multiple formats. There is an ASCII version called ConfigFX86.txt and a PostScript version called ConfigFX86.ps (or the fx86config versions).
+
+When you run either ConfigFX86 or fx86config, you are shown some general information, then prompted for the information you gathered earlier about your system. In most cases, you are shown a list of supported values and asked to choose one. Following through these choices in order provides the utility with the proper information to build your Xconfig file.
+
+The xf86config utility, for example, asks for your mouse type, whether you want to enable special features for the mouse (such as the middle button on a three-button mouse), the device the mouse is attached to, horizontal and vertical sync ranges of your monitor, a name for your monitor, the chipset used by your video card, the server to run, the location of the file linked to the server, the amount of RAM installed on your video card, whether you want a clockchip setting, and the resolutions the video card supports in order. After you have answered all the questions, xf86config asks whether the utility should create the XF86Config file.
+
+After the XF86Config or Xconfig file is created using the script, you should resist the temptation to start up X immediately. Instead, take the time to examine the file manually to prevent any chance of damage to your hardware from an incorrect setting. The following section on manually configuring the Xconfig or XF86Config file explains all the settings. After you're sure everything is fine, launch X with the command startx.
+
+# ## The Xconfig and XF86Config Files in Detail
+
+If you are manually entering your configuration information into the Xconfig or XF86Config files, you need to know how the files are laid out and how to enter your specific details. All versions of XFree86 have at least one sample configuration file, usually called Xconfig.sg or XF86Config.sg located in the 1ib directory. You should use this file as a template for creating your own configuration file. Copy the example file to a new file without the .eg extension and make the changes described as follows.

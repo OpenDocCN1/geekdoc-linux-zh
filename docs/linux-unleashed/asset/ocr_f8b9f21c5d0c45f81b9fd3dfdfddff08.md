@@ -1,0 +1,113 @@
+<> (angle brackets)
+
+# SYMBOLS
+
++      - **<> (angle brackets), commands, 134**
+   - **\* (asterisk) wildcards, 138**
+   - bash, 209-211
+   - pdksh, 228
+   - tcsh, 245-246
+   - **' (back quotation marks), shell programming, 268**
+   - **\\ (backslash), 444, 508**
+   - shell programming, 268
+   - vi editor, 305
+   - **^ (caret), abbreviation for Ctrl key, 228**
+   - **: (colon), vi editor, 305**
+   - **{ } (curly braces)**
+   - commands, 134
+   - geqg preprocessor, 336
+   - TeX formatting, 353
+   - **- (dash)**
+   - command options, 128
+   - filenames, 151
+   - **$ (dollar sign)**
+   - accessing shell variables, 265
+   - Perl programming, 506
+   - shell prompt, 111, 120
+   - **. (dot) command, 263**
+   - filenames, 151
+   - pdksh, 240
+   - **\\\ (double backslash) characters, Perl programming, 508**
+   - **>> (double greater than) symbol, commands, 133**
+   - **“ ” (double quotation marks)**
+   - shell programming, 267
+   - Tcl (ToolCommandLanguage), 529-530
+   - **... (ellipsis)**
+   - bash wildcard, 211
+   - commands, 134
+   - pdksh wildcard, 228
+   - tcsh wildcard, 246
+   - **¡ (exclamation point)**
+   - UUCP addresses, 695
+   - vi editor, 305
+
++      - **/ (forward slash)**
+   - directories, 153
+   - vi editor, 305, 309
+   - **> (greater than) symbol**
+   - commands, 132-133
+   - output redirection, *see* output redirection
+   - **< (less than) symbol, *see* input redirection**
+   - **% (percent sign)**
+   - shell prompt, 111
+   - tcsh prompt, 251
+   - TeX formatting, 348
+   - **| (pipe) character**
+   - commands, 130-131
+   - pdksh shell, 234
+   - tcsh shell, 250
+   - **# (pound sign)**
+   - shell prompt, 111
+   - Tcl programming, 531, 533
+   - **? (question mark)**
+   - bash wildcard, 211
+   - pdksh wildcard, 228
+   - printers, 594
+   - tcsh wildcard, 246
+   - vi editor, 310
+   - wildcards, 138
+   - **“ (single quotation marks)**
+   - Perl programming, 508
+   - shell programming, 267-268
+   - **[ ] (square brackets)**
+   - commands, 133
+   - geqg preprocessor, 336
+   - TeX formatting, 353
+   - **_ (underscore), filenames, 151**
+   - **32-bit Windows API**
+   - **(Win32), 953**
+   - **80386 CPU, 6**
+
++      - **a characters (*Perl* programming), 508**
+   - **a command (*vi* editor), 305**
+
++      - a option (*ls* command), 127
+   - **-a option (*ps* command), 614**
+   - **-a switch (*tar* program), 760**
+   - **<A> tag (*hyperlinks*), 872**
+   - **abort command**
+   - chat program (*PPP*), 673
+   - printers, 593
+   - **abort function (*ST/X* Debugger), 564**
+   - **absolute filenames, 155-156**
+   - **absolute path references, 873**
+   - **absolute setting of permissions, 182**
+   - **abstract keyword (*gopherdlocal.conf* file), 819**
+   - **accept function**
+   - lpd daemon, 587
+   - ST/X (*SmaIlTalk*), 562
+   - **access, restricting (*passwords*), 624**
+   - **access keyword (*gopherdlocal.conf* file), 820-821**
+   - **access rights (*kill* command), 617**
+   - **access times (*UUCP*), changing, 692-693**
+   - **access.conf (*Apache* Web servers), 846**
+   - **access.conf-dst file, configuring Web servers, 839-840**
+   - **AccessConfig variable (*httpd.conf*), 837**
+   - **AccessFileName variable (*srm.conf*), 838**
+   - **accessing**
+   - cron utility, 764
+   - RCS (*Revision Control System*), 910
+   - **accounting log file (*printers*), 590**
+   - **accounts, *see* logins**
+   - **acm (*GNU*), 187**
+   - **action sections (*inittab* files), 602**

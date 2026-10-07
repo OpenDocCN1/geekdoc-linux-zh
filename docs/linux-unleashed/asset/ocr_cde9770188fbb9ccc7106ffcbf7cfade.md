@@ -1,0 +1,13 @@
+Soon, many programmers were working on Linux, and as the challenge and excitement of producing a growing UNIX workalike caught on, Linux grew at a remarkable rate. It continues to grow as programmers adapt features and programs that were originally written as commercial UNIX products to Linux. New versions of Linux or its utilities are appearing at an astounding rate. It is not unusual to see a new release every week, even. As the number of developers working on Linux grew, the entire UNIX workalike operating system was eventually completed, if not perfected, and now includes all the tools you will find in a commercial UNIX product.
+
+To avoid any charges for Linux whatsoever, the Linux developers do not use any code from other UNIX systems. There are no licensing fees involved with the Linux operating system and part of its mandate is to be made freely available. Some companies have undertaken the task of assembling and testing versions of Linux, which they package on a CD-ROM for a (usually) minimal price.
+
+# What Linux Can Do for You
+
+Why should you bother with Linux? That’s a fair question and one that is difficult to answer. If you’re curious about UNIX or other operating systems, then Linux gives you a great environment to experiment with at a very reasonable—if not free—cost. If you need more power from your hardware than Windows or DOS gives you, then Linux is the operating system that can give it to you. If you need a robust, reliable server for your company Internet or World Wide Web services, Linux can do that just fine and very inexpensively. But, if you don’t want to learn something new, don’t want to leverage your existing hardware, and like the frequent crashes involved with Windows, then forget about Linux!
+
+# Learning UNIX Through Linux
+
+Let’s get one thing clear right from the start. Even though Linux is not called UNIX, it is a complete UNIX implementation. It conforms to many of the same standards as off-the-shelf, genuine, dyed-in-the-wool UNIX (in fact, better than many commercial UNIX versions), and it would be very difficult for even a veteran UNIX user to know whether they were working with Linux or UNIX without using tools that specify the identity of the system. Why isn’t Linux called UNIX? Copyright reasons.
+
+Because Linux is UNIX in all but name, it’s a great way to learn UNIX. Not only can Linux run on most PCs that are sitting around your basement (try that with most commercial UNIX versions today; most of them need a Pentium or fast 80486), it is a fraction of the cost of a full-blown UNIX. Anything you learn with Linux is directly transferable to a

@@ -1,0 +1,112 @@
+
+
+或者，如果您重命名了 sendmail.m4 文件以反映您的站点名称，则可以替换为您的站点名称（换句话说，如果您创建了一个名为 tcp1.m4 的文件，则应在命令中指定 tcp1.cf）。
+
+文件处理完成后，将其复制到 /etc 目录（这是文件通常存放的位置），并使用以下命令启动 sendmail：
+
+```
+/usr/lib/sendmail -bd -q1h
+```
+
+或者重新启动您的机器（因为 sendmail 通常是从 rc 启动文件中启动的）。确切的文件路径可能在您的系统中有所不同，因此请检查这些配置文件的存储位置。
+
+## 使用 sendmail 8 版本
+
+大多数 Linux 系统提供的新版本 sendmail 是 8 版本。如果您没有看到 6 或 7 版本，请不要担心：它们从未存在过。sendmail 系统直接从 5.X 版本跳到了 8 版本。（sendmail 8 版本的重要新增功能之一是反垃圾邮件过滤器，它可以帮您删除垃圾邮件。如果您收到大量垃圾邮件，仅这一项功能就值得您花精力进行升级！）
+
+在很大程度上，sendmail 8 版本的配置细节与其他版本的 sendmail 相似。其中一个变化是包含四种不同的 UUCP 邮件例程。根据以下特性，请选择四种 UUCP 版本之一：
+
+- uucp-old（同“uucp”）经典的 UUCP，使用“bang”式地址，且每次只能向一个地址发送（当指定多个收件人时，会发送重复的消息）。仅当您需要真正与旧式 UUCP 系统保持兼容时，才应使用此版本。
+- uucp-new（原称“suucp”）与 UUCP 相同，但提供 rmail 命令以允许设置多个收件人。此版本相比 uucp-old 并无太大改进。
+- uucp-dom 允许使用域名式寻址。可能与您需要连接的某些系统不兼容。
+- uucp-udom 结合 uucp-new 和 uucp-dom，提供两者的最佳特性。允许使用“bang”式和 DNS 式地址，并正确处理消息头。
+
+无论您选择哪个版本的 UUCP，它都应复制或链接到 Linux 系统上常规的 UUCP 二进制文件。
+
+## smail
+
+smail 邮件系统在大多数操作上与 sendmail 系统相似，尽管配置过程不同。在某些方面，smail 比 sendmail 更容易操作，且对于较小的系统是一个不错的选择。如果您选择使用 smail 作为邮件传输代理，您将需要对配置文件进行一些手动修改，因为可用的自动化或脚本例程很少。
+
+smail 系统拥有许多选项和配置细节，其中大多数从未被使用过。我们将重点介绍大多数 Linux 用户需要的主要控制参数，并基本上忽略那些在实际情况中极少使用（如果曾使用过）的参数。有关本章中跳过的选项和配置控制的其他信息，请参阅 man 手册页或 smail 文档。我们将本章的重点放在展示如何快速轻松地启动并运行 smail，以处理大多数 Linux 系统会遇到的情况。
+
+### 设置 smail
+
+smail 系统需要存在几个链接，以便 smail 能够正确执行。两个最重要的链接指向文件 `/usr/bin/rmail` 和 `/usr/lib/sendmail`（有时位于 `/usr/sbin/sendmail`，具体取决于 Linux 版本）。这些链接是必要的，因为大多数用户邮件应用程序将发出的邮件发送给 rmail 或 sendmail（取决于邮件软件），而这必须重定向到 smail。链接允许此重定向在不改变用户邮件应用程序的情况下透明发生。
+
+您应该验证 rmail 和 sendmail 文件是否已链接到 smail，如果没有，则建立链接。通常建立的链接是符号链接，将在目录列表中显示为类似这样的条目：
+
+```
+lrwxrwxrwx 1 root root 6 Sep 16:35 file1 -> file2
+```
+
+箭头（->）表示存在符号链接。（有关链接和符号链接的更多信息，请参见第 8 章，“使用文件系统。”）检查 rmail 和 sendmail 二进制文件的这些符号链接。如果符号链接尚不存在，请使用以下命令创建它们：
+
+```
+ln -s /usr/local/bin/smail /usr/bin/rmail
+ln -s /usr/local/bin/smail /usr/lib/sendmail
+```
+
+当然，您应将 smail、sendmail 和 rmail 在系统中有效的目录路径名替换为相应内容。创建链接后，通过显示目录并查找前面提到的符号链接表示法来验证其存在。
+
+如果邮件有可能通过 SMTP 通道进入或离开您的系统，您还应建立 smail 程序与 SMTP 系统之间的链接。使用以下命令：
+
+```
+ln -s /usr/local/bin/smail /usr/sbin/smtpd
+```
+
+来设置链接（替换为您系统的相应路径）。接下来，必须允许通过 TCP 配置文件启用 SMTP 服务。这是通过设置 /etc/services 文件以特别允许 SMTP 连接来实现的。/etc/services 文件中有一行看起来像这样：
+
+```
+smtp 25/tcp # Simple Mail Transfer Protocol
+```
+
+您应验证该行未被注释掉（由第一个字符为井号表示）。这允许建立作为 TCP 端口 25（默认值）的 SMTP 链接。
+
+如果您打算将 smail 保留为守护进程（随系统启动自动启动），请确保在 rc 文件（如 rc.inet2）中启动了 smail 守护进程。smail 守护进程的常规命令行如下所示：
+
+```
+/usr/local/bin/smail -bd -q15m
+```
+
+-bd 选项会开启 smail 的守护进程操作，而 -q15m 则告知 smail 每十五分钟处理一次消息。如果您希望更频繁地投递邮件，请更改 rc 文件中的值。或者，如果您希望减少邮件处理频率以缓解高负载系统，请增加该值。
+
+如果您决定不运行 smail 守护进程，并希望每当邮件到达时由 inetd 生成它，请注释掉 rc 文件（通常是 rc.inet2）中的守护进程行。您不能同时运行 smail 的守护进程模式和生成模式。接下来，您应修改 /etc/inetd.conf 文件，使其包含如下的条目：
+
+```
+smtp stream tcp nowait root /usr/sbin/smtpd smtpd
+```
+
+此命令要正常功能，必须有 smtpd 和 smail 程序之间的符号链接。
+
+smail 所需的配置文件更改取决于您用于获取邮件的连接系统。换句话说，如果您使用 UUCP（这是最容易设置的）或网络上的 TCP 连接，配置将有所变化。我们可以分别查看每个配置过程。如果您允许通过两种方法传输邮件，您可以同时遵循两者。
+
+## 为 UUCP 配置 smail
+
+配置 smail 系统以用于 UUCP 传入和传出邮件消息非常简单。您需要编辑默认的 smail 配置文件，通常存储为 /usr/lib/smail/config。某些版本的 smail 包含诸如 config.sample 之类的示例配置文件，位于同一目录中。您可以将其中任何一个作为 UUCP 修改的模板。
+
+使用任何 ASCII 编辑器编辑 /usr/lib/smail/config（您发行版中的路径可能不同）。需要进行四处更改。这些更改针对以下变量：
+
+- visible_domain: 您的站点所属的域名
+- visible_name: 您站点的完整域名
+- uucp_name: 您站点的基于 UUCP 的名称（通常与 visible_name 相同）
+- smart_host: UUCP 主机的名称
+
+/usr/lib/smail/config 文件中的每个参数都使用相同的 variable=value 格式。任何行中等号的两侧都不应有空格。文件中的注释以井号开头。
+
+### 设置本地域名
+
+从设置本地机器的域名开始。找到 /usr/lib/smail/config 文件中定义 visible_domain 变量的行，通常看起来类似于这样：
+
+```
+# Our domain name
+visible_domain=tpci
+```
+
+visible_domain 变量设置您站点所属的域名，通常是完全限定域名以及任何可能生效的别名。smail 使用此字段来确定邮件的收件人是否为本地用户。smail 系统获取邮件并提取收件人地址，将其与本地机器名称（来自 hostname 命令）和 visible_domain 变量中指定的所有值进行比较。如果匹配这些名称中的任何一个，则邮件是发给本地收件人的。如果未匹配，则邮件会被路由到外部。
+
+如果本地域名有多个有效值，这些值用冒号分隔，如下例所示：
+
+```
+visible_domain=tpci:tpci.com:tpci.UUCP
+```
+

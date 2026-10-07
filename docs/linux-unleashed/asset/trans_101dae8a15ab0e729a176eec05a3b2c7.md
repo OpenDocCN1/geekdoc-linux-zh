@@ -1,0 +1,93 @@
+
+如果你的站点在 UUCP 映射表中已正确注册，也请将域名 "uucp" 添加到有效值列表中。在此示例中，我们属于 tpci 域（来自完整域名 tpci.com）以及 uucp：
+
+```text
+visible_domain=tpci:tpci.com:uucp
+```
+
+如有需要，你可以在 `visible_domain` 行中列本地域名的几种变体，以应对拼写错误。
+
+## 为传出邮件设置本地域
+
+当消息需要路由出本地机器时，`smail` 系统会将本地机器的完整域名作为路由信息的一部分附加在邮件上。本地机器的完整名称在 `/usr/lib/smail/config` 文件中涉及 `visible_domain` 变量的行中定义。该行看起来可能如下所示：
+
+```text
+# Our domain name for outgoing mail
+visible_name=tpci.com
+```
+
+一般规则是，`visible_domain` 的值必须是主机名与 `visible_domains` 变量中给出的某个域名的组合；否则，`smail` 系统可能会将作为从你的站点发出的邮件的回复而发出的传入邮件退回，将其视为无法识别。
+
+`visible_name` 的值通常是你拥有完整限定域名（如果有的话）或者存在于其他路由表中的域名。
+
+## 备用 UUCP 名称
+
+`/usr/lib/smail/config` 文件有时包含一个名为 `uucp_name` 的变量条目。只要变量 `visible_domain` 和 `visible_name` 已正确填写，此变量通常是可选的。当由 hostname 命令返回的系统名称不是注册在 UUCP 映射表中的名称时，会使用 `uucp_name` 变量。例如，你的 UUCP 映射名称可能是 "darkstar"，但你可能出于各种原因将机器名称更改为 "vader"。可以使用 `uucp_name` 变量来修正此更改，而无需更新 UUCP 映射表。
+
+要为 `uucp_name` 变量设置值，请查找（或创建，如果尚不存在）定义该变量的行。通常，这些行看起来像这样：
+
+```text
+# UUCP mapping name
+uucp_name=tpci.com
+```
+
+如果你的名称已正确注册为 `visible_name` 变量中设置的值，你只需在 `uucp_name` 变量中重复该值即可，不会产生不良后果。如果你的站点名称已更改，请输入正确的值。
+
+## 设置 UUCP 智能主机
+
+一些系统使用另一台机器作为智能主机，该主机负责处理与其他网络之间的消息路由。如果你正在使用智能主机，应将它的名称放在 `/usr/lib/smail/config` 文件中 `smart_host` 变量旁边。在文件中查找类似于这些行的条目：
+
+```text
+# Smart host
+smart_host=merlin
+```
+在这种情况下，`smail` 会将发往其他网络的所有邮件转发到机器 `merlin`（基于 `smart_host` 和 `visible_name` 变量，全解析域名为 `merlin.tpci.com`）。然后，该机器可以负责将邮件路由出网络。`smart_host` 字段中给出的任何机器名称都必须可通过 UUCP 访问，这意味着具有相应的 UUCP 配置条目。（更多信息参见第 39 章“UUCP”。）
+
+## 配置 smail 使用 TCP
+
+如果你打算使用网络连接传输邮件，则需要对 `/usr/lib/smail/config` 文件进行修改，以指定连接类型和主机名。配置邮件系统用于网络的方法有多种，包括使用 NFS（网络文件系统）让所有机器共享单个配置文件，使用 POP（邮局协议）或 IMAP（交互式邮件访问协议）在中心站点处理邮件，以及将每台机器设置为独立的邮件处理器。所有这些方法的配置过程大致相同，区别在于配置文件是位于网络中的每台机器上，还是位于由其他机器通过 NFS 或 SMTP 访问的单一机器上。
+
+通过建立本地域名来开始配置过程，使用 `visible_domain` 和 `visible_name` 变量。这些变量已在前面关于配置 `smail` 用于 UUCP 的章节中详细讨论过，因此我们将限制解释为展示这两个变量的最终示例。这些变量定义的示例看起来像这样：
+
+```text
+# Our domain name
+visible_domain=tpci.com
+# Our domain name for outgoing mail
+visible_name=tpci.com
+```
+这设置了本地域名和域名解析名称。`visible_domain` 的条目由 smail 使用，以附加到所有传出邮件包中（而不是使用由 hostname 命令生成的任何名称）。`visible_domain` 和 `visible_name` 通常相同。
+
+下一个配置步骤是设置处理网络外消息的智能主机名称。如果你不使用智能主机，或者你的机器本身处理网络连接，则无需输入这些值。设置智能主机所涉及的变量是 `smart_path` 和 `smart_transport`。`smart_path` 设置智能主机的主机名（必须能从 `visible_domain` 中给出的域名解析）。`smart_transport` 指定用于连接到智能主机的协议类型。由于大多数智能主机至少通过 SMTP 进行邮件通信，因此这是最常用的值，如 `/usr/lib/smail/config` 文件中的此摘录所示：
+
+```text
+# smart host routing
+# smart host name
+smart_host=merlin
+# communications protocol to smart host
+smart_transport=smtp
+```
+`smart_transport` 的值 "smtp"（仅限小写字母）用于标识 SMTP 连接协议。
+
+## 修改 smail 的行为
+
+前面提到的配置文件和过程适用于大多数 Linux 系统，许多系统无需执行除已涵盖内容之外的进一步操作。然而，如本章前面所述，smail 中的三个组件（路由器、director、传输）可以进一步配置以修改其行为。这可以帮助你微调或修改你的 smail 安装，以满足特定的网络需求。我们真正需要详细研究的组件只有路由器，因为 director 和传输在典型的 Linux 安装中很少需要定制。
+
+在大多数情况下，每个 smail 组件的行为由位于 smail 配置目录（通常为 `/usr/lib/smail`）中的一个文件（或几个文件）处理。许多示例配置文件可从 Linux 发行版 CD-ROM 和 FTP 站点获取，展示了不同的配置，获取其中一个示例文件并根据你的主机特定细节进行修改，比从头开始构建文件更容易。选项和细节的数量随 smail 版本的变化而变化，因此请检查你是否有完整的版本。
+
+smail 的路由器组件负责解析目标地址、将消息路由到下一个邮件主机进行进一步转发，以及确定应使用哪种传输来发送消息。路由器组件执行多项任务，首先确定消息是针对本地机器还是远程机器（使用在 /usr/lib/smail/config 中定义的变量值）。如果消息是针对本地机器，消息会移交给 director。
+
+如果消息是针对远程机器，则消息的地址会被提供给路由器驱动程序，以确定应将该消息转发到哪个主机。路由器驱动程序在 routers 文件（通常为 /usr/lib/smail/routers）中指定。该文件包含路由器驱动程序的名称，每个驱动程序（按 routers 文件中呈现的顺序）都被给予消息目标地址，以查看它们是否有关于发送消息所需的特定路由的信息。
+
+在大多数情况下，你无需指定默认配置之外的其他路由器。默认设置按顺序使用以下路由器步骤：
+
+-   使用 gethostbyaddr 库调用直接通过点分四组 IP 地址进行解析
+-   使用 gethostbyname 库调用通过符号名称进行解析
+-   使用 pathalias 数据库进行解析（在文件 /usr/lib/smail/paths 中给出——参见下文）
+-   对于 UUCP 地址，解析以查看目标是否为 UUCP 邻居
+-   当其他名称解析方法失败时，路由到智能主机（如果存在）
+
+这些默认路由适用于大多数系统，但如果你的系统未正确配置以处理 UUCP，你应该注释掉 UUCP 路由器（否则，你会收到大量错误消息）。如果你不打算使用 UUCP 进行邮件传输，你也应该注释掉此路由器行以简化整个 smail 系统。
+
+还需要处理另外两种常见情况。如果你已连接到互联网，则存在一个问题，即 smail 的路由器不识别 MX 记录格式。为了正确支持互联网邮件，请注释掉默认路由器，并改用 BIND 路由器。（如果你的 Linux 版本不支持 BIND，你可以从 FTP 和 BBS 站点获取并链接到更新版本。）
+
+如果你同时使用 SLIP/PPP 和 UUCP 连接，可能会遇到 smail 等待连接时间过长的问题。为了简化此类安装，请重新排列路由器检查顺序，使在检查解析器路由器之前先检查 paths 文件。在许多情况下，由于 UUCP 比通过 SLIP/PPP 线路的 SMTP 更有效且更快，你可以完全禁用基于解析器的路由器。

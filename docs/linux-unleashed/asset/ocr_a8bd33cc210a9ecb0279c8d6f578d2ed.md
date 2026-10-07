@@ -1,0 +1,11 @@
+# # Upgrading and Installing New Kernel Software
+
+Linux is a dynamic operating system. There are new releases of the kernel, or parts of the operating system that can be linked into the kernel, which are periodically made available to users. Whether you want to upgrade to the new releases is up to you and usually depends on the features or bug fixes that the new release offers. You will probably have to relink the kernel when new software is added, unless it is loaded as a utility or device driver.
+
+You should avoid upgrading your system with every new release, however, for a couple of reasons. The most common problem with constant upgrades is that you may be stuck with a new software package that causes backward compatibility problems with your existing system or has a major problem with it that was not patched before the new software was released. This can cause you no end of trouble. Most new releases of software wipe out existing configuration information, so you have to reconfigure the packages that are being installed from scratch.
+
+Also, the frequency with which new releases are made available is so high that you can spend more time simply loading and recompiling kernels and utilities than actually using the system. This becomes tiresome after a while. Since most major releases of the Linux operating system are available, the number of changes to the system are usually quite small, so you should read the release notes carefully to ensure that the release is worth the installation time and trouble
+
+The best advice is to upgrade only once or twice a year, and only when there is a new feature or enhancement to your system that will make a significant difference to the way you use Linux. It’s tempting to always have the latest and newest version of the operating system, but there is a lot to be said for having a stable, functioning operating system, too.
+
+If you do upgrade to a new release, bear in mind that you don’t have to upgrade everything. The last few Linux releases have changed only about 5 percent of the operating system with each new major package upgrade. Instead of replacing the entire system, just install those parts that will have a definite effect, such as the kernel, compilers and their libraries, and frequently used utilities. This saves time and reconfiguration.
