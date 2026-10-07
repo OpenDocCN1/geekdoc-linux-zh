@@ -1,0 +1,326 @@
+
+## system resources management 993
+
+- sublevel number (Linux kernel), 793
+- sysrq.txt, 787
+- subnet masks. See netmasks
+- system calls, 696
+- subnets, 394
+- system initialization table, 212
+- subqueries, SQL databases, 563-564
+- system logging, ftppass file, 602-603
+- subscriptions file, 664
+- system management, monitoring tools, 240
+- sudo command, 267-268, 272
+- console-based, 241-243
+- suid permissions, 160-161
+- disk quotas, 246
+- Summary window (Evolution), 651
+- free utility, 245
+- superblocks, 277
+- graphical monitoring tools, 244-246
+- superusers, 126, 161-162, 251-252
+- KDE, 248
+- bootups, 165
+- kill command, 243
+- creating users, 162-163
+- priority scheduling, 243-245
+- disabling privileges with restricted shells, 268-269
+- System Message Block. See SMB
+- elevation of privileges, 252
+- System Monitor
+- granting privileges to regular users, 265
+- Graph view, 249
+- su command, 266-267
+- List view, 248
+- sudo command, 266-268
+- system recovery
+- inheriting, 266
+- booting
+- from generic boot floppy, 352
+- shutdowns, 164
+- GRUB (Grand Unified Bootloader), 352
+- from Rescue CD, 351
+- SuSE Linux RPM, 235
+- from installation disk, 353-354
+- swap partitions, 71
+- Master Boot Record, 350-351
+- SWAT, configuring Samba, 428-436
+- references, 355-356
+- switchdisk command, 197-198
+- rescue mode, 353-354
+- switches
+- system resources management, 227
+- command line (Perl). See command line switches (Perl)
+- monitoring tools. See monitoring tools
+- between CUPS and LPRng, 380-382
+- RPM (Red Hat Package Manager) 229-234
+- gcc, 707
+- command line clients, 229-234
+- extracting files from, 235
+- symbolic debugging, gdb tool, 355
+- graphical clients, 229-234
+- symbolic links, 88
+- group categories, 234
+- Symmetric Multi-Processing. See SMP
+- Linux software, 235
+- sync command, 314
+- synchronization file systems, 314-133
+- Package Management, 238-240
+- sysconfig directory, 131-133
+- software features, 228
+- sysctl command, 810
+- source files, 235-238
+- syslog command, 602
+- UNIX software, 235
+
+## system users
+
+- system users, 253
+- sysv filing system kernel module, 276
+- SysVInit Editor, 221
+- multicasting, 395
+- network classes, 390-392
+- Unicast addresses, 395
+- IP masquerading, 392
+- networks
+
+## T
+
+- t (%t variable (LogFormat directive), 335
+- t /usr/local/bind option (named component), 477
+- t option, http command, 511
+- Tab Window Manager (twm), 198
+- initializing devices, 399-401
+- network devices, 395-399
+- subnets, 394
+- ports, 393
+- security, 439-440
+- tcsh shell, 146, 716
+- tables
+- creating, 564
+- importing text files into, 563
+- creating, 556-557
+- inserting data into tables, 557
+- retrieving data from tables, 558-560
+- expressions, 740
+- file operators, 742-744
+- logical operators, 744
+- string comparison, 740
+- checking, 774
+- tape drives, 333-334
+- tar command, 151-152, 354, 605
+- technical updates, Red Hat Linux, 22-23
+- net command, 141, 223-902
+- terminal clients, 170
+- displaying emacs editor, 155
+- launching with xterm client, 720
+- terminating connections, 489
+- file restoration, 336
+- incremental, 335
+- compressing streams, 343-344
+- copying files, 343
+- sending streams, 343-344
+- tarballs, 239
+- test-line option, fact, 107
+- testing file systems, 304-305
+- blank image files, 304
+- dump2fs command, 306
+- read-only-partitions, 308-309
+- Taylor, David, 849
+- TCL (Tool Control Language), 725
+- TCP (Transport Control Protocol), 389
+- TCP/IP (Transport Control Protocol)/Internet Protocol, 389
+- test command, 426
+- text, editing, 138
+- text editors, 152-153
+- broadcasting, 395
+- limitations, 392
+- line wrapping, 162
+- vi, 153-154
+- text files, importing into, 563
+- text-based client interface (FTP), 617-618
+- text-based console logins, 136-137
+- port directory, 129
+- The Perl Web, 783
+- thinktop command, 364
+- threads, newsgroups, 661
+- thppd Web server, 546
+- time, 111
+- date command, 112
+- hwclock command, 112-113
+- redhat-config-date client, 113-114
+- time command, priority scheduling, 244
+- time field, command, 611
+- time hashed pool method, news server article, 667
+- Time To Live (TTL) field, 463
+- Time Zone Selection box, 77
+- time zones, selecting for Red Linux installation, 77-78
+- timer parameter, in.conf file, 666
+- TiVo, 859
+- /tmp directory, 129, 135
+- Token Ring NICs, 396
+- Tool Control Language. See TCL
+- top command, graphical monitoring, 244-245
+- Torvalds, Linus, 786, 794
+- Tosatti, Marcelo, 794
+- touch command, 156
+- Tower of Hanoi backups, 320
+- tr command, 720
+- transactions, FTP, 616
+- TransGaming Technologies, 892
+- Transport Control Protocol. See TCP
+- Transport Control Protocol/Internet Protocol. See TCP/IP
+- tree command, 127-128
+- triggers, SQL databases, 754
+- Tripwire, 440-441
+- Trojan, Erik W., 22
+- troubleshooting, 22
+
+## DNS
+
+- BIND, 474-476
+- delegation problems, 472-473
+- resources, 472
+- reverse lookup problems, 473
+- serial numbers, 473-474
+- tools, 474
+- zone file names, 474
+- hardware, 37
+- CPUs, 39-40
+- memory, 39
+- modems, 37
+- motherboards, 38-39
+- SMP, 39-40
+- USBs, 37-38
+- Internet connections, 496-497
+- post-installation configuration rules, 121-122
+- printers, 386
+- all-in-one devices, 386
+- USB, 386-387
+- TSIG (Transaction Signature) mechanism, configur-, 481
+- TTL (Time To Live) field, 463
+- TTY field, command, 611
+- tune2fs command, 314
+
+## tuning
+
+- disks, 311-313
+- file systems, 313-315
+- kernel, 809-810
+- tracer command, 891
+
+## U
+
+- system users, 253
+- sysv filing system kernel module, 276
+- SysVInit Editor, 221
+- multicasting, 395
+- network classes, 390-392
+- Unicast addresses, 395
+- IP masquerading, 392
+- networks
+- system users, 253
+- UDP (Universal Datagram Protocol), 389
+- fs kernel module, 276
+- UIDs (User IDs), 253
+- umask command, 605
+- umount command, 428
+- os system module, 276
+- uname -r command, 793
+- undeleting files
+- update option, 702
+- Upgrade option, Red Linux installation, 17
+- drives, 332
+- legacy printers and, 386
+- scanners, 863-864
+- Ext2fs, 347-348
+- Midnight-Command, 348
+- mk2fs command -S option, 348
+- Unicast addresses, 395
+- Universal Datagram Protocol. See UDP
+- backup levels, 328
+- Common UNIX Printing System. See CUPS
+- security considerations for DNS, 476-477
+- unconditional statement, 767-768
+- unmount command, 296-297
+- unmounting shares, 428
+- moderated, 660
+- news readers, 673
+- GNOME program, 675-776
+- KNode, 677
+- Mozilla, 677-698
+- PINE, 674
+- Wiki, 679
+- full newsfeed, 661
+- leaf node, 661-662
+- local, 662-673
+- Perl references, 782
+- posting to, 660, 779-780
+- RFC (Request for Comments), 660
+- slrn, 673-674
+- threads, 661
+- user accounts, 251-253
+- adding, 258-260
+- changing attributes, 259
+- creating, 78-80
+- disabling, 258
+- /etc/passwd file, 251
+- Fetchmail, 640-642
+- GIDs, 253
+- locking, 259
+- logical users, 253
+- permissions, 253-254
+
+## /usr directory 997
+
+- references, 273
+- FTP, 585-586
+- removing, 258
+- granting privileges, 265
+- standard users, 253
+- su command, 266-267
+- UIDs, 253
+- sudo command, 267-268
+- user authentication, Apache server, 523-525
+- User directive, 517
+- command-line tools, 256-257
+- managing, 254-256
+- User IDs (UIDs), 253
+- home directory, 258
+- user information, ftpaccess file, 598
+- IDs, 253
+- banners command, 598-599
+- installing Red Hat Linux, 30
+- email command, 601
+- logical, 253
+- message command, 599-601
+- login process, 269-270
+- readme command, 602
+- management tools, 257-259
+- User Mount Tool, mounting file systems, 299-300
+- adding users with useradd command, 258-260
+- shell programs, 725
+- adding users with useradd-G, 258
+- changing attributes with usermod command, 259
+- USER variable, 147
+- /usr/sbin directory (BIND 9), 459
+- home directories, 258
+- useradd, 256-258
+- useradd command, 126, 293
+- locking with passwd command, 259
+- userdel command, 163, 258
+- userinfo, 273
+- UserDir, 518
+- ac command, 260
+- last command, 261
+- w command, 260
+- PAM (Pluggable Authentication Module), 264
+- umount command, 299
+- username, 142
+- changing in batches, 265
+- userpasswd command, 273
+- users, 251-253, 257
+- safe combinations, 265
+- security policies, 261-264
+- stereotypes, 254

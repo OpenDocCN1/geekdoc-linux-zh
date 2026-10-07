@@ -1,0 +1,33 @@
+# Wireless
+
+http://www.ieee.org—The Institute of Electrical and Electronics Engineers (IEEE) Web site.
+
+http://www.mozillaquest.com/Network_02/Wireless_Network_Technology_03_Story_01.html—Wireless networking with Red Hat 7.2
+
+http://crl.cs.uiuc.edu/doc/wireless_redhat.html—Wireless networking using Red Hat Linux at the Computing Research Laboratory (CRL), the information technology support group for the Department of Computer Science at the University of Illinois at Urbana-Champaign
+
+http://www.sorgonet.com/network/wirelessnap/—Building a wireless network using an access point, using Red Hat 8.0
+
+# Security
+
+http://www.redhat.com/docs/manuals/linux/RHL-7.3-Manual/custom-guide/ch-gnomelikkit.html—Red Hat's guide to basic firewall configuration.
+
+http://www.insecure.org/nmap/—This site contains information on nmap.
+
+http://www.securityfocus.com/—The Security Focus Web site.
+
+http://www.psionic.com/abacus/portsentry/—Has information on PortSentry.
+
+http://www.tripwire.com—Has information on TripWire.
+
+# Books
+
+Sams Teach Yourself TCP/IP Network Administration in 21 Days, Sams Publishing, ISBN: 0-672-31250-6
+
+TCP/IP Network Administration, O'Reilly Publishing, ISBN: 1-56592-322-7
+
+Practical Networking, Que Publishing, ISBN: 0-7897-2252-6
+
+Samba Unleashed, Sams Publishing, ISBN: 0-672-31862-8
+
+The DHCP Handbook, Sams Publishing, ISBN: 0-672-32327-3

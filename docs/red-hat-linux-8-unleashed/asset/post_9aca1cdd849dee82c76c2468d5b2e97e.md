@@ -1,0 +1,365 @@
+
+988
+
+security
+
+# Server option
+
+- wireless networking, 436-437
+- Fetchmail, 640
+- WWW Security FAQ Web site, 522
+- Red Hat Linux installation, 17
+- Security Focus Web site, 444
+- server parameter (innd.conf) file, 666
+- sed command, 153
+- Server Side Includes (SSI), 537
+- select statement, 749-750
+  - * directives, 538-542
+  - SELECT statement, retrieving data from tables, 558-560
+  - * enabling, 538
+- send command, 617
+- ServerAdmin directive, 517
+- sending
+- ServerLayout component (XF86Config file), 170-171
+- ServerName directive, 518, 533
+- ServerRoot directive, 516
+- email
+- binary files, 654-632
+- MDA, 632
+- servers
+- MTAs, 628-642
+  - * Apache, 16. See also Apache server
+- MUA, 632
+- DHCP
+- configuring, 416-417
+- installing, 415
+- tar stars, 343-344
+- FTP, 581-582
+- Sendmail, 676-778
+- SMTP, 628-629
+- Sendmail, 630
+- administration commands, 610-615
+- command, 657
+- allowing/denying connection to, 609-610
+- configuration, 633-634
+- anonymous, 582, 587-589, 594
+- authenticated. 582
+- creating sendmail.cf file, 636
+- delivery intervals, 636-636
+- Bsdftpd-ssl, 583
+- forwarding mail, 637
+- configuration, 587
+- mail relaying, 636-637
+- masquerading, 634
+- ProFTPpd, 583
+- operation, 633-634
+- vsftpd, 582-583, 590-593
+- rejecting mail, 637-638
+- wu-ftpd, 582-583, 589-593
+- smart hosts, 635
+- gpm (general purpose mouse), 138-139
+- sensors command, 110-111, 123
+- came, 467, 472
+- Serial Line Internet Protocol. See SLIP
+- name servers (domains), 449-450
+- serial numbers (slave servers), troubleshooting, 473-474
+- configuration of, 459-467
+- serial-port modems, configuration, 104-106
+- /etc/resolv.conf file, 409
+- Server class, Red Hat Linux installation, 34
+- example of a real domain, 468-472
+- master, 450
+- Autopartition button, 68
+- named, 483
+- Disk Druid deiton, 69
+- resolver software, 450
+- slave, 450
+- server layout, 170
+- starting, 467
+
+# shell scripts 989
+
+- news servers, 661
+  - full news feed, 661
+- leaf node, 666-662
+- local, 662-673
+- NFS configuration, 419-920
+- Web. See Web servers
+- XFree86, 99
+- Xvnc, 903
+- service command, Apache server, 353
+- Service Configuration tool, 221
+- services
+  - kudzu, 87-88
+  - managing, 210
+  - boot loading mechanism, 210-211
+  - controlling boot services, 218-222
+  - print, 361-364
+  - references, 226
+  - runlevels, 209, 212
+  - start command, 222-223
+  - stop command, 222-223
+  - name, 450-451
+  - PCMCIA, 116
+  - printing, 758
+  - troubleshooting, 224-225
+  - services daemon, 362
+  - session block. See printing
+  - setup command, 364
+  - setup script, 226
+  - disk command, 289-290
+  - sftp command, 616
+  - sh shell, 716
+  - shadow passwords, 263-264, 585-586
+  - Shell module, 771
+  - shell scripts, 145, 715-716. See also
+  - automating tasks, 728
+  - conditional statements, 750
+  - case, 752-754
+  - if, 750
+  - executing, 721-723
+  - ext statement, 754
+  - expressions, 734-735
+  - bash, 735
+  - file operators, 738-739, 742-744
+  - logical operators, 739-740, 744
+  - numbers, 737-742
+  - pdksh, 735
+  - strings, 735-736, 740
+  - tscoh, 740
+  - functions, 754-755
+  - iteration statements, 743
+  - for, 745-746
+  - repeat, 749
+  - select, 749-750
+  - shift, 750
+  - until, 748
+  - while, 746
+  - myenv, 722
+  - positional parameters, 727-728
+  - prefdm, 192
+  - common commands, 617-618
+  - ftp command, 618-621
+  - help commands, 618
+  - VMware, 896-898
+  - WinLin, 899-900
+- set directive, 542
+- setfont command, 139
+- set command, 91
+- seterial command, 106, 123
+
+# shell scripts
+
+- rsh, 716
+- references, 756
+- sash, 716
+- special characters, 731-732
+- searching, 149-150
+- backslash (\), 734
+- sh, 716
+- backtick (), 734
+- tcsh, 146, 165
+- double quotes (""), 732-733
+- zsh, 146, 716
+- single quotes (\'), 733
+- shift statement, 750
+- storing for system-wide access, 723-724
+- shortcuts, cd command, 149
+- tcsh, 146, 744
+- showikey command, 91
+- variables, 725-726
+- shutdowns, 84-85, 164
+- accessing values, 726
+- gpm server, 139
+- accessing with positional parameters, 728
+- assigning values to, 726
+- shutdown command, 85, 146, 606
+- built-in, 730-731
+- bootops, 139
+- maintaining unexpanded variables, 733-734
+- keyboard function, 139
+- resolving in strings with embedded spaces, 732-733
+- Simple Mail Transport Protocol. SMTP
+- single quotes ('') in shell scripts, 733-734
+- retrieving with positional parameters, 728
+- sites. See Web sites
+- vncserver, 903
+- Skolnick, Cliff, 504
+- writing, 721
+- slave name servers, 450
+
+# SHELL variable, 147
+
+- shells, 131, 145, 715-716. See also shell scripts
+- SLIP (Serial Line Internet Protocol), 44
+- ash, 716
+- slrn program, news readers, 673-674
+- ash.static, 716
+- smf, 663
+- bash (Bourne Again Shell), 146, 716
+- small businesses, 20-21
+- bsh, 716
+- small enterprises, backup strategies, 327
+- command line, 716-717
+- small offices, backup strategies, 327
+- background processing, 720
+- smart gateways, 399
+- pattern-matching, 718
+- smart hosts, sendmail, 653
+- piping data, 719-720
+- SMB (System Message Block), 279, 374-375
+- compressing files, 151-152
+- smb.conf, 364, 427
+- csh, 716
+- smbclient command, 364, 427
+- defined, 137
+- smbmount command, 364
+- environment variables, 146-149
+- file management, 150-151
+- ksh, 146, 716
+- smstatus command, 427
+- SMP (Symmetric Multi-Processing), 39-40
+- navigation, 149-150
+- pdksh, 716
+- smpeg command, 873
+- Perl, 771-772
+- SMTP (Simple Mail Protocol), 77, 628-629
+- restricted, 268-269
+- navigator command, 713
+- sndconfig command, 100-103, 123, 873
+- SOA (Start of Authority records (zone files)), 464-465
+- backup command, 342
+- Amanda, 341
+- cdbackup command, 338-340
+- cmp command, 336-337
+- dd command, 340
+- flexbackup command, 342
+- tar command, 334-336
+- CheckInstall, 128
+- devices, 18-19
+- management, RPM (Red Hat Package Management)
+- line clients, 229-234
+- extracting files, from 235
+- graphical clients, 229-234
+- group categories, 234
+- Linux software, 225
+- overview, 227
+- software features, 228
+- packages, 144-145
+- Red Hat Linux installation, 56
+- selection for Red Hat installation, 80-81
+- solid-state drives, 332
+- sort command, 583
+- cards, 102-104, 849-850
+- device configuration, 100-101
+- kernel modules, 101-102
+- formats, 851-852
+- Sound Recorder, 850
+- source code (Apache server), downloading, 507
+- source code listings. See listings
+- source command, 149
+- source files, RPM, 235-238
+- sox command, 851, 873
+- spam, package, 673
+- Spamassassin, 643-644
+- special variables (Perl), 762-763
+- specifications, RRs (Resource Records), 463
+- speed, databases, 661
+- splint command, 705-706, 713
+- split DNS, 482-483
+- spoofing attacks (DNS), 476
+- spreadsheet capabilities, 821
+- SQL (structured query language), 555
+- databases, 555-556
+- creating tables, 556-557
+- inserting data into tables, 557-588
+- procedural languages, 564
+- retrieving data from tables, 555-860
+- subqueries, 563-564
+- triggers, 564
+- tables, creating, 564
+- Squirrelmail, 644
+- ssh
+- client, 140
+- database access, 574-575
+- directory, 140
+- -X option, 246
+
+# SSI (Server Side Includes), 537
+
+- INSERT, 557-558
+  - directives, 538
+  - config, 539-540
+  - echo, 540
+  - exec, 541
+  - lastmod, 541
+  - fsize, 541
+  - include, 541
+  - printenv, 542
+  - set, 542
+  - enabling, 538
+  - order, 523
+- REVOKE
+- MySQL, 569
+- PostgreSQL, 573
+- SELECT, 558-560
+- material command, 105
+  - Status field, ftppromo command, 611
+- status option (/etc/rc.dc/dinit/httpd script), 582
+- status parameter (inndconf file), 666
+- Stein, Lincoln, 522
+- stereotypes, user, 254
+- still cameras
+  - standard users, 253
+- start command, starting services, 222-223
+- Start of Authority records (zone files),
+- 464-465
+- start option (/etc/rc.dc/dinit/httpd script), 511
+- starting
+  - handheld, 860-862
+- Web cams, 860-861
+- Apache server, 510-512
+- BIND 9, 467
+- boot loading process, 210-211
+- GLMP, 865
+- lpd daemon, 361-362
+- PPP connection, 489
+- server deams (Samba), 426
+- services, 222-223
+- VMware sessions, 896-898
+- WinLin sessions, 899-900
+- Wine, 882
+- X Window System, 192
+- display managers, 192-195
+- startx command, 191, 196
+- stop command, 222-223
+- stop option (/etc/rc.dc/dinit/httpd script), 582
+- stopping. See also stating
+- PPP connections, 491
+- services, 222-223
+- storage.conf file (INN), 664, 667-668
+- shell shell scripts for system-wide access, 723-724
+- streaming audio, 852-853
+- strings
+- compared, 735-736
+- constants (Perl), 765-766
+- expressions, 740-741
+- replacing with output, 734
+- strip prefix command, 607
+- strip prefix command, 607
+  - Stronghold Web server, 547
+- structured query language. See SQL
+- su command, 272
+- granting users privileges, 266-267
+- root account and, 162
+- syntax, 266
+- subdirectories, XFree86, 169-170
+- subdomains, 449
+- startx command, 195-721
+- statements
+  - conditional. See conditional statements, Perl
+  - else, 542
+- GRANT
+- MySQL, 568
+- PostgreSQL, 573
+- if, 542

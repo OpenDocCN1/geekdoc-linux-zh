@@ -1,0 +1,232 @@
+
+## Symbols
+
+- & (ampersand), 731
+- * (asterisk), 731
+- # (bang line), 724
+- && (compound pattern operator), 724
+- $ (dollar sign), 731
+- " (double quotes), 732-733
+- = (equal) operator, 764
+- ? (question mark), 731
+- ! (logical NOT operator), 764
+- ! operator, 764
+- () (parentheses operator), 764
+- # (pound sign), 731
+- ' (single quotes), 733
+- ! (string comparison operator), 764
+- = (string comparison operator), 764
+- * (wildcard character), 610
+- 100BaseT NICs, 396
+- 10BaseT NICs, 396
+
+## A
+
+- a command line switch (Perl), 772
+- a2p command, 781
+- a2p5 command, 363
+- AbiWord (GNOME Office), 820
+- ac command, 260, 272
+- Accelerated Graphics Port. See AGP
+- access 
+  - Apache server, 522-523
+  - access restrictions, 523-525
+  - authentication, 523-525
+  - combining host-based and user-based protection, 525-526
+- access databases
+  - - GUI, 575
+  - SSH, 574-575
+  - Web, 576
+  - ftpasswd file, 595
+  - autroup command, 595
+  - class command, 595-596
+  - deny command, 596
+  - guestgroup, 596-597
+  - guestuser command, 597
+  - limit command, 597
+  - loginfails command, 598
+  - Linux files with Windows, 422
+  - smb share, 427
+  - system, storing shell scripts, 723-724
+  - variables with positional parameters, 726-728
+- Access Control Lists. See ACLs
+- access definition, readers.conf file, 669
+- access file options, 637-638
+- Accessories menu commands, Archiving Tool, 348
+- accounts
+  - - elevation of privileges, 252
+  - superuser, 252
+  - user, 251-253
+  - adding, 258-260
+  - changing attributes, 259
+  - creating, 78-80
+  - disabling, 258
+  - /etc/passwd file, 251
+  - Fetchmail, 640-642
+  - GIDs, 253
+  - locking, 259
+  - logical users, 253
+  - permissions, 253-254
+  - references, 273
+  - removing, 258
+  - standard users, 253
+  - UIDs, 253
+- ACID compliance, 562-563
+  - - atomicity, 562
+  - consistency rules, 562
+  - durability, 563
+  - isolation, 563
+- acl command, 478
+- ACLs (Access Control Lists), 478
+- active file, 670-671
+- Add a New Print Queue configuration dialog, 366
+- add option (cvs command), 703
+- Add Partition dialog box, 70
+- add-on postfix command, 608
+- add-prefix command, 607
+- address-based virtual hosting (Apache), 532-533
+- AddressBook application, 836
+- addresses
+  - - DNS, blackholding, 480
+  - TCP/IP
+  - broadcasting, 395
+  - limitations, 392
+  - multicasting, 395
+  - network classes, 390-392
+  - Unicast addresses, 258
+  - adducer command, 258
+  - administration commands, FTP servers, 861
+- ftppoint, 612
+- freepstart, 614
+- ftpshut, 612-614
+- ftpwo, 611-612
+- xferlog, 614-615
+- administrative functions, rpm command, 229
+- adsl-start command, 495
+- adsl-stop command, 496
+- Advanced Bash-Scripting Guide, 918
+- Advanced Linux Sound Architecture. See ALSA
+- Advanced Power Management. See APM
+- applications, 929
+- afio command, backups, 342
+- graphic interface configuration, 543-546
+- agety command, 498
+- installing, 505
+- agety line-monitoring application, 497
+- In command, 508
+- AGP (Accelerated Graphics Port), 98
+- installing from RPM, 505-508
+- AIFF files, 851
+- installs manually, 507-508
+- Albanowski, Kenneth, 827
+- alias command, 605-606
+- modules, 526-532
+- aliases, forwarding list, 637
+- redhat-config-services, 514-515
+- All switch (Options), 520
+- runtime server settings, 515-516
+- allow directive, 522-523
+- .htaccess files, 519-521
+- allowOverrides directive, 521
+- httpd.conf file, 516-518
+- ALSA (Advanced Linux Sound), 100, 849
+- MPMs (multi-processing modules), 19
+- Amanda backups, 341
+- service command, 513
+- Software Foundation, 504
+- source code, downloading, 507
+- starting and stopping, 510
+- manually, 510-511
+- permissions, 587
+- virtual hosting, 532
+- address-based, 532-533
+- name-based virtual hosts, 533-534
+- Apache Group site, 504
+- Web sites, 504
+- APM (Advanced Power Management), configuration-108-111
+- apm command, 109, 122
+- applications
+- asterisk (*), 731
+- Samba, 422
+- AT&T vnciewer, 247
+- accessing smb shares, 227
+- configuring, 423-433
+- atomicity, ACID compliance, 562
+- connection status, 427
+- attachments (email), 654-655
+- installing from source code, 422
+- BinHex, 655
+- installing with RPMs, 222
+- mounting shares, 427-428
+- security, 442
+- server daemon, starting, 426
+- unmounting shares, 428
+- attacks (DNS), 476
+- attributes, user accounts, 259
+- AU files, 851
+- virus scanners, 644
+- aomix command, 850, 873
+- Win32, launching in Wine, 890-891
+- authenticated servers, FTP, 582
+- X-Chat, 681
+- authentication
+- applications, line-monitoring, 497
+- de definition
+- apropos command, 143, 150
+- definition, readers.conf file, 668
+- apt, 240
+- authoritative name servers, 449
+- ar command, 704-705, 712
+- autocf command, 712
+- archives
+  - C/C++ macros, 501
+  - creating, 336-337
+- AutoConfig switch (AllowOverrides directive), 521
+- dd command, 340
+- autogroup command, 595
+- automating tasks with shell scripts, 728-730
+- with cpio command, 337
+- autodount daemon, mounting file systems, 300
+- with tar command, 336
+- autopartition button (Serve install), 68
+- Archiving Tool, 338-339
+- auxiliary driver disks, Red Hat Linux installation, 45-46
+- arithmetic operators (Perl), 764-765
+- ark commands, backups, 338
+- awk command, 758
+- arrays
+- assigning, 259
+- binary files
+- backups, 355-356
+- best practices, 327
+- badblocks command, 315
+- daily, 329-330
+- backup, 324-325
+- balsa command, 657
+- frequency, 326
+- bang line (#1), 724
+- FTP, 594
+- banners, 598-599
+- background, 329-330
+- bash, 144, 724
+- bash shell, 716, 735
+- hardware options, 331
+- beep codes, BIOS, 210
+- removable storage media, 331-333
+- Behlendorf, Bob, 504
+- tape drives, 333-334
+- Linux kernel, 796
+- bfis system kernel module, 796
+- Master Boot Record, 350-351
+- biff command, 657
+- media options, 331
+- bin command, 617
+- network storage, 333
+- /bin directory, 128-129
+- removable, 331-333
+- binary emulation, 910-911
+- tape drives, 333-334
+- binary files, sending email, 654-655
+- mirroring data, 330-331
+- RAID arrays, 330-331
+- How can we make this index more useful? Email us at indexes@sampublishing.com

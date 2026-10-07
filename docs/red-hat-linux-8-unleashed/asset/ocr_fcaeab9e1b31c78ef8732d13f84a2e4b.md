@@ -1,0 +1,13 @@
+> When you've learned how to use the command line with Red Hat Linux, you'll be comfortable with a UNIX command line. This chapter, then, can provide the foundation information you need to work with other UNIX operating systems, such as FreeBSD.
+
+There are two types of users on a Linux system: normal users (the section "Basic Linux User Skills") and the root operator, also known as the superuser. At big computing installations, one or more system administrators might have root access or superuser power on the system (perhaps for one-time tasks). Normal users rarely, ever interact with the root operator.
+
+However, if you use Red Hat Linux on your PC or notebook as a standalone workstation, you will be both a user and the root operator. Root access is required to perform nearly all system and hardware configuration. This might be one of the primary reasons that some new users hold the view that Linux requires a steep learning curve. Red Hat, Inc., has put a lot of effort into making system administration easier for new users by improving graphical administration utilities. Because of the way Linux is designed, however, you must become comfortable working with the command line and doing some root-level work, especially if using Linux on a standalone PC.
+
+# Working with the Red Hat Linux File System
+
+Red Hat Linux uses a file system, or layout of hierarchical directories similar to that used by other UNIX variants (such as Mac OS X). Nearly all Linux distributions use a similar structure, and Linux distribution vendors have generally agreed on the naming and location of critical files and directories.
+
+The effort to build a consensus regarding the Linux directory structure began in 1993 with the Filesystem Hierarchy Standard (FHS), a draft proposal that addressed only Linux issues, but also BSD. Red Hat has stated that it is committed to stay compliant with the FHS, which specifies the location and names of files and directories. For more FHS, see the link in the References section at the end of this chapter.
+
+The universal layout of directories and file locations for Linux is extremely helpful for those creating distributions, packaging applications, and crafting system administration utilities. For example, knowing that the useradd command is in usr/sbin directory can simplify the creation of administrative shell scripts designed to be used by system administrators. This information can also help you if you use other UNIX operating systems or other Linux distributions, and need to troubleshoot software installation, or plan the addition of major software packages onto your Red Hat system.

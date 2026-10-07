@@ -1,0 +1,334 @@
+
+# N
+
+- name servers (domains), 449-450
+- configuration of, 459-467
+- /etc/resolv.conf file 409
+- example of a real domain, 468
+- registering the domain, 471-472
+- reverse zones and zone naming, 470-471
+- zone introduction to named.conf, 468-470
+- master, 450
+- named, 483
+- resolver software, 450
+- slave, 450
+- starting, 466
+- name-based virtual hosts (Apache), 533-534
+- named -u nobody -g nogroup command, 477
+- named component (BIND 9), 459
+- figuring
+- logging, 466
+- resolver software configuration, 467
+- zone files, 463-465
+- configuring of, 460-463
+- security of, 476, 478
+- starting, 467
+- named name server, 483
+- names
+- file extensions, 507
+- resolution, 445, 451-454
+- services, 450-451
+- namespace structure, domains, 448-450
+- nameHost directive, 533
+- NAS (Network Attached Storage), 333
+- NAT (Network Address Translation), 392
+- Nautilus browser, 625-626
+- navigation
+- cd command, 149
+- shell, 149-150
+- ncffs file system kernel module, 376
+- ne operator (string comparison operator, 764
+- neat, 499
+- nedit command, 153
+- NetGear, 375-376
+- netmasks, 391, 394
+- netstat command command, 402-407
+- Network Address Translation (NAT), 392
+- Network Attached Storage. See NAS
+- Network Configuration dialog box, 493
+- Network Configuration tool, 499
+- Network File System. See NFS
+- Network Interface Cards (NICs), 395
+- 10BaseT, 396
+- 100BaseT, 396
+- Fiber Optic, 396-397
+- gabit Ethernet, 396-397
+- Token Ring, 396
+- wireless, 397
+- Network News Transfer Protocol (NNTP), 661
+- networks
+- addressing. See addresses
+- backup storage, 333
+- classes (TCP/IP), 390-392
+- configuration, 74-75
+- command line tools tools, 402-407
+- configuration files, 407-410
+- graphical tools, 410
+- devices
+- bridges, 399
+- cables, 397-398
+- hubs, 398
+- initializing, 399-401
+- Network Interface Cards (NICs), 395-397
+- routers, 399
+- security, 441-442
+- file systems, 278-279
+- host settings, 409-410
+- installing Red Hat Linux, 62-683
+- printers
+- configuration, 375-376
+- creating, 371-374
+- SMB (session message block printing), 374-375
+- references, 443-444
+- security, 437, 444
+- devices, 441-442
+- DHCP,
+- lokkit utility, 437-439
+- NFS, 442
+- passwords, 439
+- Samba,
+- TCP/IP, 439-440
+- Tripwire, 440-441
+- subnets, 394
+- wireless, 433
+- advantages of, 435
+- cellular, 434-435
+- IEEE 802.11 Standard, 435-436
+- protocols, 435-436
+- Red Hat Linux support, 433-434
+- security, 436
+- valid frequencies, 436
+- news server management
+- Internet News Package. See INN
+- news readers, 673
+- Node program, 677
+- Program for Internet News and Email), 674
+- slrn program, 673
+- news servers
+- full newsfeed, 661
+- leaf node, 662
+- local, 662
+- newsgroups. See newgroups
+- NNTP (Network News Transfer Protocol), 661
+- overview, 659-660
+- references, 688
+- news.daily, 663
+- newsfeeds, 664
+- newsgroups, 660, 670-671
+- INN (Internet News Package), 662
+- active file, 670-671
+- cleanfeed package, 673
+- configuration, 665
+- history file, 671
+- incoming.conf, 667
+- innd.conf file, 665-666
+- installation, 664-665
+- newgroups file, 670-671
+- program file, 663-664
+- readers.conf, 668-880
+- running, 672
+- running daemon, 673-811
+- storage.conf, 667-668
+- Linux support, 922-923
+- MIME (Multipurpose Internet Extensions), 660
+- moderated, 660
+- news readers, 673
+- GNOME program, 675-676
+- Node program, 677
+- Mozilla, 677-679
+- Program for Internet News), 674
+- slrn program, 673-674
+- TWiki, 679
+- news servers, 661
+- full newsfeed, 661
+- leaf node, 661-662
+- local, 662-673
+- NNTP (Network News Transfer Protocol), 661
+- Perl references, 782
+- postings, 660, 779-780
+- RFC (Request for Comments), 660
+- threads, 661
+- newusers command, 265, 272
+# Open RPM 975
+- next looping construct (Perl), 770
+- NFS (Network File System), 44, 215, 278, 418
+- configuring, 419-420
+- installing, 418
+- rpc.mount program, 418
+- rpc.nfsd program, 418
+- rpc.portmapper program, 418
+- security, 442
+- nfs file system kernel module, 276
+- nice command, priority scheduling, 244
+- NICs (Network Interface Cards), 395
+- 10BaseT, 396
+- 100BaseT, 396
+- Fiber Optical, 396-397
+- Gigabit Ethernet, 396-397
+- Token Ring, 396
+- wireless, 397
+- nmap command, 235
+- NmapFE, 247, 390
+- nprpd file, 663
+- nnprd.track file, 664
+- NNTP (Network News Transfer Protocol), 661
+- tntpeget file, 663
+- tntpsend file, 663
+- tntpsend ctl file, 664
+- aoatime (mount command), 385
+- noatun command, 873
+- noatun viewer, 857
+- nohub command, 139
+- None switch (Options directive), 520
+- NS records (zone files), 465
+- sudate utility, 483
+- tpbmm-progs command, 874
+- tntysv command, 97, 122, 219-220, 285
+- numbers, compared, 737-742
+- NVIDIA display drivers, installation, 870-871
+# O
+- O option (gcc compiler), 707
+- ob superblock, 308
+- object-oriented languages, compared to procedural languages, 695
+- objects, 694
+- OCR (optical character recognition), 829
+- ODBC (Open Database Connectivity), 815, 839
+- OMDR (On Demand Mail Relay), 628
+- Office (GNOME), 819-823
+- office suites, 814, 835-837. See also applications; productivity applications
+- fax client software, 833-835
+- GNOME Office, 819-823
+- KOffice, 823
+- Organizer, 826
+- Spread, 825
+- Word, 823-824
+- OpenOffice.org, 814-815
+- configuration, 816-818
+- history, 816
+- installation, 816-818
+- productivity applications, 815-819
+- Web sites, 819
+- personal digital displays, 829-832
+- Design tools, 832-833
+- Ogg-Vorbis file, 851
+- OK, 638
+- oldcdrom, 660
+- On Demand Mail Relay. See OMDR
+- Open Database. See ODBC
+- open schools, 21
+- Open Sound System. See OSS
+- OpenCalc (OpenOffice), 815
+- OpenDraw (OpenOffice), 815
+- Open RPM, 235
+- How we make this index more useful? Email us at indexex@sampublishing.com
+# OpenOffice.org, 814-815
+- configuration, 816-818
+- history, 816
+- installation, 816-818
+- productivity applications, 815-819
+- Web sites, 819
+- operating systems
+- kernels. See kernels
+- starting sessions, 896-898
+- order statement, 523
+- ordered mode, data handling, 282
+- organization parameter, 665
+- OSS (Open Sound System), 849
+- outbound command, 603
+- output
+- redirection, 716-719
+- replacing strings with, 734
+- ovdb_recover file, 663
+- ovdb_upgrade file, 663
+- overloading functions (C++), 695
+- overwrite command, 604
+- ovmethod parameter, 665
+# P
+- p) variable (LogFormat directive), 835
+- p option gcc compiler, 707
+- smbtatus command, 427
+- PA-RISC processor, 907
+- Package Group Selection dialog box, 80-81
+- Package Management, 238-240
+- packages, 22
+- documentation, 144-145
+- lm_sensors, 110
+- rpm command, 229
+- rpm command, 234-235
+- 80-81
+- VMW, 895-898
+- Pollard, Keith, 14
+- PAM (Pluggable Authentication Module)
+- guides, list of, 264
+- overview, 264
+- Pan program, 675-686
+- pap command, 364
+- Parallel Port Protocol. See PLIP
+- parameters
+- innd.conf file, 665-666
+- positional parameters, 727-732
+- parted command, 291
+- partitions, 277-288
+- m2kfs command, 292-293
+- mkfs.ext3 command, 293-294
+- mktreisfs command, 294
+- file systems
+- creating, 286-291, 302
+- mounting, 302-303
+- mounting on running systems, 308-398
+- Perl 977
+- Red Hat Linux installation, 46-47, S6-S9
+- pcmcia.img, 60
+- hosting file systems on separate partitions, 48-49
+- pcregroup, 781
+- PDAs (personal digital assistants), 827-828
+- schemes, 47-48
+- PDFs (Portable Document Format), 364
+- swap partitions, 71
+- partition tables
+- pedantic option, gcc compiler, 707
+- copying, 350-351
+- periodic full backups, 329
+- creating, fdisk command, 287-288
+- Peripheral Component Interface. See PCI
+- passive command, 592
+- Perl, 759-791
+- passwd command, 160, 258, 272
+- command line switches, 772-775
+- passwd file, 131
+- command-line processing, 781
+- passwd.ntmp file, 664
+- conditional statements
+- password utilities, 903
+- if/else, 766-767
+- passwords, 142
+- unless, 767-768
+- changing in batches, 265
+- CPAN, 775-778
+- files, 261-263
+- data structures, 761
+- MySQL root user, setting, 566
+- documentation sources, 775
+- physical security, 439
+- looping, 668
+- root,ing, 78-80
+- do ... until construct, 770
+- safe combinations, 261
+- do ... while construct, 770
+- security policies, 261
+- for construct, 768
+- shadow passwords, 263-264, 585-586
+- foreach construct, 768-769
+- usernames, 142
+- last construct, 770
+- pasting text, 138
+- next construct, 770
+- patch command, 758, 796-797
+- until construct, 769
+- patch directory, 796
+- while construct, 769
+- patch-kernel script, 796
+- modules, 775-778
+- patched kernels, 792-793
+- one line code, 780-781
+- patching Linux kernel versions, 795

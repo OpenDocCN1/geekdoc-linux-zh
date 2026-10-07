@@ -1,0 +1,3 @@
+http://www.tld.org/HOWTO/LILO-crash-rescue-HOWTO.html—This HOWTO describes how to use floppy-based recovery disks, but the general techniques are universal. The techniques covered include checking the integrity of the target filesystem. It's a little thin in content, but it is notable for its related URL links.
+
+http://www.backupcentral.com/amanda.html—This is the Amanda chapter of UNIX Backup and Recovery available online; the site features a search tool for the chapter.
