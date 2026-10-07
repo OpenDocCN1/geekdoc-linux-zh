@@ -1,0 +1,274 @@
+
+## 654 tar utility – troubleshooting
+
+- local, 372–374
+- remote, 372
+- features of, 369–372
+- for floppy disk access, 323
+- sample operation of, 372
+- tarballs, 34
+- compiling, 251–253
+- installing, 248–249
+- task priority, 114–115
+- displaying, 279
+- in performance, 283–284
+
+## TCP/IP (Transmission Control Protocol/Internet Protocol), 499
+- addresses in, 502–505, 519
+- DHCP in, 508–510
+- hardware configuration in, 506–508
+- in installation, 48, 49
+- manual configuration in, 510–516
+- ports in, 505
+- testing in, 516–517
+- stacks in, 500–502, 531
+- TCP/IP network accounts, 170
+- TCP protocol in, 230
+- TCP Wrappers, 230–233
+- tcp program, 231
+- tcpchk file, 232, 607
+- tcpmatch utility, 233, 607
+- technical support, 94–95
+- for configuration, 95–96
+- for development, 96
+- for Web, 96–97
+
+## Telephony Support option, 259
+- telnet command, 353–554
+- telnet command, 122
+- telnet file, 234
+- telnet program, 532–572
+- terminal programs, 404
+- terminals, 403–405
+- get program for, 405–407
+- root access to, 14
+- virtual, 15, 205
+- --test option, 241
+- test releases, 257
+
+## testing,
+- nbackups, 384
+- fetchmail, 595–596
+- kernels, 264–265
+- modem connections, 412
+- network connections, 121
+- TCP/IP setup, 516–517
+
+## Textinfo documentation system, 93
+- text-based installation, 45
+- text-based tools for RPMs, 243–244
+- text-mode systems, 409–412, 410–421
+- text-processing tools, 473–474
+- thermal wax printers, 431
+- Third Extended Filesystem (ext3), 305–307
+- third-party tools
+- for backups, 379–382, 380–382
+- for disaster recovery, 390–392
+- 32-bit filesystems, 306
+- threats, security, 204
+- threats in Bash commands, 102
+- directories, 227
+
+## time
+- setting, 124–125
+- TIME columns for processes, 78
+- Time selection, 48
+- time zones, 48–49
+- timeout parameter in lilo, 136
+- time value in security, 203
+- time utility, 155, 136
+- time (top-level domains), 502–503
+- /tmp directory, 48, 62–63
+- /tmp partition, 216
+- Token Ring networks, 506
+- top command, 82, 114, 278–279
+- top-level domains, 60–63
+- top-level domains (IDs), 502
+- top subcommand, 441
+- top Linux, 26, 257
+- trace utility, 122–123, 282–283
+- track option in record, 361
+- traditional systems, 303–304
+- Transmission Control Protocol/Internet Protocol, 349, 350
+- line application, 236
+- trees, process, 112
+- Trojan horses, 197
+- troubleshooting, 605–606
+- filesystems, 618–620
+- kernel compilation, 616–618
+- login, 613–615
+- miscellaneous problems, 622–625
+- network problems, 615–616
+- startup problems, 159–161
+- techniques, 606–608
+- tail option, 361
+- trust, importance of, 13
+- trusted hosts, 198–199, 521
+- trim command, 556
+- TTY devices, 15
+- TTY field for processes, 78
+- true group, 187
+- tunefs utility, 117, 287, 341
+- TurboLinux distribution, 268
+- 2GB Maximum Memory option, 294
+- wm (window manager), 295
+- type codes, 335
+- type command, 556
+
+## Universal Coordinated Time (UTC), 48–49
+- Universal Disk Format (UDF) filesystem, 311
+- Universal Host Controller Interface (UHCI), 398
+- Universal Serial Bus, See USB (Universal Serial Bus) devices and parts
+- Unix Filesystem (UFS), 311
+- "Unknown Host" message, 615–616
+- unlinking files, 111
+- unmounting filesystems, 118, 320–322
+- unpacking kernel payloads, 255
+- unreachable destinations, 383
+- "Unrecognized option -q", 618
+- unrecognized, 361
+- unresolved dependencies, 52
+- Unresolved dependencies screen, 252
+- shareable data in FHS, 441
+- up subcommand, 147
+- -update command with tar, 370
+- dating and upgrading
+- kernel compilation for, 254, 617
+- operating systems, 265
+- import of, 265–267
+- locating, 267–269
+- for performance, 296–297
+- software, 7
+- training files, for, 467–469
+- uptime command, 126–127
+- URLs (Uniform Resource Locators), 502
+- USB controller support, 398
+- USB (Universal Serial Bus) devices and parts, 396
+- screens, 401–402
+- for high-capacity removable disks, 324
+- maps for, 401
+- modems, 408
+- printers, 425, 432–433, 450–451
+- support for, 397–398, 399
+- for tape backups, 352–353
+- dub directory, 401
+- USB Support menu, 261, 397, 399
+- User Account Creation screen, 176–178, 178
+- User accounts, see User and user accounts
+- User Accounts module, 178
+- User Accounts option, 176, 180
+- User Accounts screen, 180–182
+- user-based security, 204
+- User command, 576
+- user groups, 608
+- User Groups Linuxconf module, 190, 190
+- User Groups screen, 190, 191
+
+## U
+
+- -u conditional expression, 464
+- -u option
+- in dump, 364
+- in ililo, 139
+- in renice, 284
+- in ulimit, 118
+- in usermod, 181
+- -U option
+- in rpm, 240, 243
+- in usermod, 182
+- UDF (Universal Disk Format) filesystem, 311
+- UID (User ID), 72
+- Universal Host Controller Interface (UHCI), 398
+- UFS (Unix Filesystem), 311
+- uid option, 315
+- ulimit command, 118
+- umask command, 126
+- umount command, 118, 320–322
+- UDS definition, 309
+- uname command, 126
+- user-ids (User ID), 502
+- user-UIDs, 556
+- unattended backups, 347–348
+- unbuffered devices, 71
+- unclose option, 361
+- deleting files, 391–392
+- --zip qualifier, 371
+- directory sections, 771
+- Uniform Resource Locators (URLs), 502
+
+## user IDs (UIDs)
+- mapping, 520
+- User Information module, 178
+- User Information screen, 180, 182, 184
+- user initialization files, 161–163
+- user option in mount, 314, 326–327
+- user private groups, 186
+- usermod command, 107, 180–182
+- vm directory, 284
+- vmware process, 278, 279
+- VMware tool, 279
+- VNC (Virtual Network Computing) server, 541
+- vulnerability, assessing, 204
+
+## V
+
+- v command in fdisk, 333, 335
+- -v option
+- in awk, 379
+- grep, 110
+- im mkfs, 336
+- -V option in rpm, 240
+- var/ directory, 58, 63
+- variables
+- environment, 98–99, 462
+- in scripts, 459, 461–463, 469
+- --verbose option
+- in mkdir, 68
+- in rmdir, 68
+- --verbose qualifier with tar, 371
+
+## w command in fdisk, 333, 335
+- -w conditional expression, 464
+- -w permission, 108, 214–215
+- Web, technical support and security, 96–97
+- Web pages for updates and security, 269
+- Web servers, 532
+- wheel group, 187
+- while loops, 470, 472
+- widget sets, 563, 565
+- widgets, 101
+- window managers
+- role of, 559–560, 561
+- setting, 561–563, 562
+- tuning, 295
+- window class, 534–535
+- window managers, 559–560
+- window managers, 561–563
+- virtual consoles, 544–545
+- virtual desktops, 560
+- Virtual Filesystem (VFS), 56, 304
+- virtual machines, 279
+- virtual memory, 284–286
+- Virtual Network Computing (VNC) server, 541
+- virtual terminals, 15, 405
+
+## W
+- video cards
+- in Red Hat Installation, 40
+- in workstation installation, 53–54, 53
+- X Window System, 348–549
+- Free86.3 support for, 545
+- video hardware in performance, 276
+- video RAM, 222
+- virtual consoles, 544–545
+- virtual desktops, 560
+- Virtual Filesystem (VFS), 56, 304
+- virtual machines, 279
+- virtual memory, 284–286
+- Virtual Network Computing (VNC) server, 541
+- virtual terminals, 15, 405
+- vm directory, 284
+- vmware process, 278, 279
+- VMware tool, 279
+- VNC (Virtual Network Computing) server, 541
+- vulnerability, assessing, 204

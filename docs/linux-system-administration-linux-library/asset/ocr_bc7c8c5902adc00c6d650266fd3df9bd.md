@@ -1,0 +1,13 @@
+# 436 Chapter 13 Printers and the Spooling Subsystem
+
+When a print spooler such as LPRng is called with a filename or stream as an argument, it examines the print entry for the specified printer. If the appropriate stanza specifies a filter, lpd sends the document or stream through that filter, thereby producing output in the proper format. The printer will not print properly if a file does not understand. There are numerous file formats for printing: straight text, Postscript, image files of various types, and so on. The print filter decides what to do with each file type—whether to send it directly to the printer, process it through Ghostscript, or process it through some other program.
+
+With a plain text file, for example, the magic filter has nothing to do. If it receives a Postscript file, however, the magic filter for a Postscript printer would call Ghostscript to translate the file for printing. Three packages that provide these filters (used by Red Hat), APSfilter (used by most distributions and discussed in this chapter), and magicfilter. You must ensure that any program called by your filter, like Ghostscript, is on the system as well. If you stick with the default printer tools used by your distribution, this should be adequate. If you adjust your print filter configuration, though, you'll need to carefully review your documentation to learn what it requires.
+
+# The LPRng Print Spooler
+
+LPRng is a modern re-implementation of the old lpd printing system. LPRng includes equivalents to most of the lpd tools and utilities, although some of the details differ. Most of the information presented here about LPRng also applies to the older lpd system.
+
+Both LPRng and the original lpd system are built around the line printer daemon, lpd. This is the program that monitors print requests and kicks off the appropriate subprogram to accomplish the desired task. The Line Daemon Protocol is defined in Request For Comment (RFC) 1179. The term lpd is used to refer to both the daemon itself and more broadly to the set of programs used to perform the various functions associated with a print spool. These include the lpd, 1pr, 1pq, 1pc, and 1prm programs. The most important is the daemon itself, lpd, which provides the spooling functionality.
+
+> NOTE It is important to distinguish between the original lpd package and the lpd program. The former indicates a specific set of programs with a particular history. The latter indicates a program of a particular name, versions of which come with both the original lpd package and the newer LPRng. Much of the following discussion of lpd refers to the program, not the specific package; this discussion applies to both the original lpd package and the new LPRng package.

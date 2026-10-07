@@ -1,0 +1,13 @@
+Coda This is an advanced network filesystem that supports features omitted from NFS. These features include better security (including encryption) and improved caching. The Linux kernel includes Coda client support, and separate packages are needed to run a Coda server. The main Coda homepage is at http://www.coda.cs.cmu.edu/. Coda's filesystem type code is coda.
+
+SMB/CIFS The Server Message Block (SMB) protocol, which has been renamed the Core Internet Filesystem (CIFS), is the means of network file sharing among Microsoft OS. The Linux kernel includes SMB/CIFS client support, so you can mount SMB/CIFS shares. You can configure your Linux computer as an SMB/CIFS server using the Samba package (http://www.samba.org/). The filesystem type code for SMB/CIFS shares is smbfs.
+
+NCP The NetWare Core Protocol (NCP) is NetWare's file sharing protocol. With SMB/CIFS, Linux includes basic NCP client support in the kernel, and you can add server packages to turn Linux into an NCP server. NCP's filesystem type code is npcs.
+
+It's important to recognize that the network filesystem is completely independent of the filesystems used on both the server and client for disk access. Consider a Linux computer that's running Samba, sharing files for a Windows system. The server makes available using the SMB/CIFS network filesystem. Locally, these files may be stored on any filesystem that Linux supports—ext2fs, ISO-9660, ReiserFS, FAT, or anything else. These filesystems all look identical to the client, except where the underlying filesystem has a limitation that extrudes itself, such as 8.3 filename limits when Linux uses mdos driver access FAT, or the read-only nature of ISO-9660 or BFS. Likewise, if Linux uses NFS to mount a remote filesystem, it's unimportant that the server is using ext2fs, FFS, HFS+, or anything else. This characteristic means means that you can give a computer access to filesystems it cannot natively understand, when Linux accesses HFS+ from a Macintosh running an NFS server, or when Windows Me accesses JFS through a Linux system using SMB/CIFS.
+
+Chapter 15, “TCP/IP Linux Networking,” covers filesystem configuration in more detail.
+
+# Accessing Filesystems
+
+The preceding discussion outlines the major filesystems available for the 2.2.x and 2.4.x Linux kernels. Actually using these filesystems requires practical knowledge of several Linux commands and configuration files. The most important of these in day-to-day operations are the commands used to mount and unmount filesystems. Some additional

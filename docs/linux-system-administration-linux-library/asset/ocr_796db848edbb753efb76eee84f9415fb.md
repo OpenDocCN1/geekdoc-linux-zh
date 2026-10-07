@@ -1,0 +1,9 @@
+will have detected it, and the information about it will be displayed. The monitor information will be displayed also. Now you must choose what you want to accomplish in the area of X configuration. You can customize X configuration, set up the system to use a graphical login screen instead of the usual command-line line, or skip X configuration entirely. For this example, select Test This Config. If you see a box asking whether or not you read it, click the OK button.
+
+# Tying Up Loose Ends
+
+Next you will be greeted with the message that your Red Hat installation is complete. Remove any floppy or CD-ROM still in your drive and reboot the system. Remember if you skipped the LILO installation, you must put your boot disk into the floppy drive. After your computer finishes powering up, you'll see the boot: prompt. Enter a boot label corresponding to the operating system that you wish to work in. The default boot label for your Red Hat system will be linux. If you specified any other boot labels during the installation, you may boot them by typing the label at the boot: prompt. If you press the Enter key alone, the default boot entry will be booted. If you do nothing, LILO will pause for the specified timeout period (5 seconds by default) and then will boot the boot entry. When your system is booted, you'll be greeted with a login prompt. Enjoy.
+
+# In Sum
+
+In this chapter we saw how to implement disk caching, RAID, and clustering using Linux. We took a look at the most popular Linux distributions and the hallmark features of each. We discussed hardware configuration, and if you were following along, you have now installed a Linux server and a Linux workstation. In the next chapter we will get into the internals of the Linux operating system, discussing the history and features of the ext2 filesystem developed for Linux.

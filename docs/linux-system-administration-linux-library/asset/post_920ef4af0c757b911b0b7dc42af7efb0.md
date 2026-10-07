@@ -1,0 +1,566 @@
+
+## 638 - -i option, 240 - interface entry in xinetd.conf
+
+- in rpm, 240, 243–244
+- in tune2fs, 287
+- I/O Device Support option, 259
+- IDE/ATAPI interface, 352–353, 358, 362–363
+- IDEs (Integrated Desktop Environments), 295
+- IEEE 1394 (FireWire) support option, 239
+- if statement, 469, 472, 485
+- ifconfig command, 120–121, 511–512
+- ifup script, 508
+- --ignore doesnt option, 246
+- --fail-on-non-empty option, 68
+- image= line in lilo.conf, 237
+- images
+- in CD-R operations, 359
+- disk, 134, 138
+- image text, 277
+- IMAP (Internet Message Access Protocol), 570
+- configuring, 558–592–593
+- operation of, 576–578
+- imprint patterns, 428
+- fimpd. daemon, 230
+- inshd daemon, 374, 376, 388
+- incompatibilities in packages, 243
+- inconsistent filesystems, in, 208, 303, 322
+- incremental backups, 344–345, 365
+- incremental dumps, 364
+- Individual Packages Selection screen, 51, 51
+- inetd (Internet Services Daemon)
+- in security, 226–230
+- for super servers, 533–535
+- inetd.conf file
+- for POP and IMAP servers, 589–590
+- sample, 226–230
+- for super servers, 533–535
+- xinetd.conf, 233–234
+- inetconvert script, 234
+- info pages, 92–94
+- init command, 113
+- itd.directory
+- for killing processes, 84
+- log file for, 162
+- ipd, 437
+- for run levels, 164
+- nit program, 78–79, 130, 143, 614
+- initialization files, user, 161–163
+- initialization scripts
+- in Debian model, 148–154
+- in Red Hat Model, 143–148
+- writing, 475–487
+- initrd data, 134, 138
+- inittab
+- in Debian, 148–151
+- for getty programs, 405–406
+- for run levels, 621
+- sample, 143–147
+- ink-jet printers, 429
+- ink refill kits, 429
+- INN (Internet News), 532
+- --inode option in is, 66
+- inodes
+- displaying, 115
+- dump, 363
+- in22, 58, 39
+- information in, 59–60
+- Input Core support option, 260
+- input/output performance, 276
+- input stream, 99
+- insmod command
+- problems with, 624
+- for RAID, 31
+- Install dialog box, 245
+- install disks, 387
+- INSTALL files
+- in performance, 295
+- troubleshooting, 606
+- Install Options screen, 46
+- Install Packages To Satisfy Dependencies option, 52
+- Installation Method screen, 45
+- installing
+- application software, 6
+- binary packages
+- Deban, 245–247
+- RPMs, 240–245, 244
+- tarballs, 249
+- kernels, 262–264
+- Linux
+- benchmarks in, 19–20
+- in Debian Linux, 39
+- distribution selection in, 33–40
+- hardware selection in, 20–33
+- OpenLinux, 37
+- Red Hat. See Red Hat distribution
+- SUSE Linux, 38
+- operating system, 6
+- ith tarballs, 252
+- Integrated Desktop Environments (IDEs), 295
+- integrity of filesystems, 288, 303, 322, 340–341
+- interactive processes, 73–74
+- interface entry in xineted.conf, 536
+
+## interfaces - Keyboard section in XF86Config 639
+
+## J
+
+- 511–512
+- activating, for printers, 431–433
+- for tape backups, 352–353
+- internal models, 402–408
+- Internet Message Access Protocol (IMAP), 570
+- configuring, 589–596, 592–593
+- operation of, 576–578
+- Internet News (INN), 532
+- Internet servers
+- available, 330–533, 537
+- super servers, 533–537
+- Internet Service Providers (ISPs)
+- fetchmail for, 591–593
+- for modem connections, 412
+- Internet Services Daemon (inet)
+- in security, 226–228
+- for super servers, 533–535
+- interpreted languages, 458
+- available, 619–620
+- in Red Hat installation, 40
+- for serial devices, 402–403
+- interrupts file, 619–620
+- intrusion detection, 235–237
+- inis text, 277
+- IP addresses, 502–505, 319
+- IP chains, 218–225, 219
+- IP routing tables, 122
+- ipchains-restore file, 221
+- ipchains-save file, 221
+- ipfwadmk package, 218
+- IPv6, 504
+- IrDA (Infrared) Support option, 260
+- rit parameter in setserial, 400
+- IRQs
+- available, 619–620
+- in Red Hat installation, 40
+- for serial devices, 402–403
+- system option, 260
+- ISO-960 (filesystem), 304, 359
+- is command, 110
+- ISPs (Internet Service Providers)
+- fetchmail for, 591–593
+- for modem connections, 412
+- issue file, 148, 485
+- issue.net file, 148, 488
+- j in ipchains, 220
+- Jaz drives, 354
+- JFS (Journaled Filesystem), 306–307
+- job control, 73
+- jobs utility, 73
+- Journaled Filesystem (JFS), 306–307
+- journaling filesystems, 305–307
+- jumps in scripts, 460
+
+## K
+
+- conditional expression, 463
+- K Desktop Environment (KDE), 52, 278, 565
+- in fetchmail, 595
+- kernel param, 289
+- K utility, 382
+- KDE (K Desktop Environment), 52, 278, 565
+- KDE Task Manager, 280–281
+- KDM (K Display Manager), 553
+- Kernel option, 261
+- kernel image in boot process, 130
+- kernel panics, 161
+- kernel spawning, 285
+- compiling, 253
+- configuration options, 255–256
+- process of, 262
+- purpose of, 253–254
+- troubleshooting, 616–618
+- with upgrading, 617
+- configuring, 7
+- distributes, 34
+- installing, 262–264
+- loading problems, 612–613
+- new, 610–611
+- patching, 254–255
+- optimizing, 253, 292–294
+- for printers, 449–455
+- in Red Hat distribution, 35–36
+- serial support in, 397, 398
+- testing, 264–265
+- version numbers for, 257
+- Keyboard section in XF86Config, 546
+
+## keywords with man pages
+
+- keywords with man pages, 89
+- Fax program, 423, 424
+- kill command, 83, 113
+- killall command, 114
+- killing processes, 113–114
+- Kernel, Olaf, 36
+- logd file, 192
+- news reader, 532
+- known_hosts file, 199
+- Configuration dialog box, 416, 416
+- PPP utility, 415–416
+- kswap file, 283
+- kzu utility, 34, 35
+- kwm window manager, 560, 561
+- Light Modulated Direct Write (LIDW) method, 355
+- LI message, 609
+- LILO (Linux Loader)
+- floppers for, 139–140
+- boot process, 130–131, 136–273
+- global sec, 36–137
+- passwords for, 142
+- per-image section, 137–138
+- removing Boot Record, 612
+- running, 138–139
+- workstation-class installations, 42
+- filo.conf file, 263–264, 611
+- boot kernel in, 610
+- for disk parameters, 159
+- global section in, 136–137
+- for kernel, 612–613
+- per-image section, 137–138
+- sample, 132–136
+- in security, 202–203
+- for serial-port controls, 407–408
+- LILO messages, 159–161, 608–618
+- LIMOW (Light Modulated Direct Over-Write), 355
+- L command in fdisk, 332
+- conditional expression, 464
+- L message, 609
+- in change, 208
+- in crontab, 489
+- in fdisk, 116
+- in grep, 110
+- in ls, 65
+- in mkfs, 336
+- in rpm, 241
+- in usermod, 181
+- in dptkg, 246
+- in ipchains, 221
+- in usermod, 182
+- label-entry in lilo.conf, 264
+- laptop computers in X Window System, 549
+- last printers, 429–430, 430
+- last command, 105
+- last lines in printing, 111
+- Last Password Change Field, 170
+- launch facilities, window managers, 560
+- conditional expression, 465
+- less command, 92, 110
+- less than signs (+) in conditional expression, 465
+- level up
+- in dump, 364
+- in ntsys, 154
+- LI message, 159–161, 609
+- /lib directory, 62
+- line printer daemon (lpd), 431, 436
+- initialization script for, 476–481
+- for pooling, 436
+- line printers, 438
+- line test, 277
+- linear option in lilo.conf, 136, 159
+- linking computers, 404–405
+- links
+- creating, 161
+- in with ls, 68–70
+- Neighborhood browser, 530, 331
+- Linux Compatibility HOWTO, 92
+- Linux Corporate Consulting company, 96
+- Linux Consulting company, 96
+- Linux Documentation Project site, 606
+- Linux File System Standard (FSNDST), 33, 55
+- Linux Loader. See LILO (Linux Loader)
+- linux file, 581
+- Linux Printing Support Database, 32
+- Linux-to-Linux printing, 451–452
+- Linux Virtual Server (LVS) clustering, 26–27, 27
+- Linux Wizard (LIZARD) program, 37
+- LinuxCare support programs, 96
+- Linuxconf utility, 9–10, 11
+- for DHCP, 508, 309
+
+## keywords with man pages
+
+- keywords with man pages, 89
+- Fax program, 423, 424
+- kill command, 83, 113
+- killall command, 114
+- killing processes, 113–114
+- Kernel, Olaf, 36
+- logd file, 192
+- news reader, 532
+- known_hosts file, 199
+- Configuration dialog box, 416, 416
+- PPP utility, 415–416
+- kswap file, 283
+- kzu utility, 34, 35
+- kwm window manager, 560, 561
+- Light Modulated Direct Write (LIDW) method, 355
+- LI message, 609
+- LILO (Linux Loader)
+- floppers for, 139–140
+- boot process, 130–131, 136–273
+- global sec, 36–137
+- passwords for, 142
+- per-image section, 137–138
+- removing Boot Record, 612
+- running, 138–139
+- workstation-class installations, 42
+- filo.conf file, 263–264, 611
+- boot kernel in, 610
+- for disk parameters, 159
+- global section in, 136–137
+- for kernel, 612–613
+- per-image section, 137–138
+- sample, 132–136
+- in security, 202–203
+- for serial-port controls, 407–408
+- LILO messages, 159–161, 608–618
+- LIMOW (Light Modulated Direct Over-Write), 355
+- L command in fdisk, 332
+- conditional expression, 464
+- L message, 609
+- in change, 208
+- in crontab, 489
+- in fdisk, 116
+- in grep, 110
+- in ls, 65
+- in mkfs, 336
+- in rpm, 241
+- in usermod, 181
+- in dptkg, 246
+- in ipchains, 221
+- in usermod, 182
+- label-entry in lilo.conf, 264
+- laptop computers in X Window System, 549
+- last printers, 429–430, 430
+- last command, 105
+- last lines in printing, 111
+- Last Password Change Field, 170
+- launch facilities, window managers, 560
+- conditional expression, 465
+- less command, 92, 110
+- less than signs (+) in conditional expression, 465
+- level up
+- in dump, 364
+- in ntsys, 154
+- LI message, 159–161, 609
+- /lib directory, 62
+- line printer daemon (lpd), 431, 436
+- initialization script for, 476–481
+- for pooling, 436
+- line printers, 438
+- line test, 277
+- linear option in lilo.conf, 136, 159
+- linking computers, 404–405
+- links
+- creating, 161
+- in with ls, 68–70
+- Neighborhood browser, 530, 331
+- Linux Compatibility HOWTO, 92
+- Linux Corporate Consulting company, 96
+- Linux Consulting company, 96
+- Linux Documentation Project site, 606
+- Linux File System Standard (FSNDST), 33, 55
+- Linux Loader. See LILO (Linux Loader)
+- linux file, 581
+- Linux Printing Support Database, 32
+- Linux-to-Linux printing, 451–452
+- Linux Virtual Server (LVS) clustering, 26–27, 27
+- Linux Wizard (LIZARD) program, 37
+- LinuxCare support programs, 96
+- Linuxconf utility, 9–10, 11
+- for DHCP, 508, 309
+
+## keywords with man pages
+
+- keywords with man pages, 89
+- Fax program, 423, 424
+- kill command, 83, 113
+- killall command, 114
+- killing processes, 113–114
+- Kernel, Olaf, 36
+- logd file, 192
+- news reader, 532
+- known_hosts file, 199
+- Configuration dialog box, 416, 416
+- PPP utility, 415–416
+- kswap file, 283
+- kzu utility, 34, 35
+- kwm window manager, 560, 561
+- Light Modulated Direct Write (LIDW) method, 355
+- LI message, 609
+- LILO (Linux Loader)
+- floppers for, 139–140
+- boot process, 130–131, 136–273
+- global sec, 36–137
+- passwords for, 142
+- per-image section, 137–138
+- removing Boot Record, 612
+- running, 138–139
+- workstation-class installations, 42
+- filo.conf file, 263–264, 611
+- boot kernel in, 610
+- for disk parameters, 159
+- global section in, 136–137
+- for kernel, 612–613
+- per-image section, 137–138
+- sample, 132–136
+- in security, 202–203
+- for serial-port controls, 407–408
+- LILO messages, 159–161, 608–618
+- LIMOW (Light Modulated Direct Over-Write), 355
+- L command in fdisk, 332
+- conditional expression, 464
+- L message, 609
+- in change, 208
+- in crontab, 489
+- in fdisk, 116
+- in grep, 110
+- in ls, 65
+- in mkfs, 336
+- in rpm, 241
+- in usermod, 181
+- in dptkg, 246
+- in ipchains, 221
+- in usermod, 182
+- label-entry in lilo.conf, 264
+- laptop computers in X Window System, 549
+- last printers, 429–430, 430
+- last command, 105
+- last lines in printing, 111
+- Last Password Change Field, 170
+- launch facilities, window managers, 560
+- conditional expression, 465
+- less command, 92, 110
+- less than signs (+) in conditional expression, 465
+- level up
+- in dump, 364
+- in ntsys, 154
+- LI message, 159–161, 609
+- /lib directory, 62
+- line printer daemon (lpd), 431, 436
+- initialization script for, 476–481
+- for pooling, 436
+- line printers, 438
+- line test, 277
+- linear option in lilo.conf, 136, 159
+- linking computers, 404–405
+- links
+- creating, 161
+- in with ls, 68–70
+- Neighborhood browser, 530, 331
+- Linux Compatibility HOWTO, 92
+- Linux Corporate Consulting company, 96
+- Linux Consulting company, 96
+- Linux Documentation Project site, 606
+- Linux File System Standard (FSNDST), 33, 55
+- Linux Loader. See LILO (Linux Loader)
+- linux file, 581
+- Linux Printing Support Database, 32
+- Linux-to-Linux printing, 451–452
+- Linux Virtual Server (LVS) clustering, 26–27, 27
+- Linux Wizard (LIZARD) program, 37
+- LinuxCare support programs, 96
+- Linuxconf utility, 9–10, 11
+- for DHCP, 508, 309
+
+## keywords with man pages
+
+- keywords with man pages, 89
+- Fax program, 423, 424
+- kill command, 83, 113
+- killall command, 114
+- killing processes, 113–114
+- Kernel, Olaf, 36
+- logd file, 192
+- news reader, 532
+- known_hosts file, 199
+- Configuration dialog box, 416, 416
+- PPP utility, 415–416
+- kswap file, 283
+- kzu utility, 34, 35
+- kwm window manager, 560, 561
+- Light Modulated Direct Write (LIDW) method, 355
+- LI message, 609
+- LILO (Linux Loader)
+- floppers for, 139–140
+- boot process, 130–131, 136–273
+- global sec, 36–137
+- passwords for, 142
+- per-image section, 137–138
+- removing Boot Record, 612
+- running, 138–139
+- workstation-class installations, 42
+- filo.conf file, 263–264, 611
+- boot kernel in, 610
+- for disk parameters, 159
+- global section in, 136–137
+- for kernel, 612–613
+- per-image section, 137–138
+- sample, 132–136
+- in security, 202–203
+- for serial-port controls, 407–408
+- LILO messages, 159–161, 608–618
+- LIMOW (Light Modulated Direct Over-Write), 355
+- L command in fdisk, 332
+- conditional expression, 464
+- L message, 609
+- in change, 208
+- in crontab, 489
+- in fdisk, 116
+- in grep, 110
+- in ls, 65
+- in mkfs, 336
+- in rpm, 241
+- in usermod, 181
+- in dptkg, 246
+- in ipchains, 221
+- in usermod, 182
+- label-entry in lilo.conf, 264
+- laptop computers in X Window System, 549
+- last printers, 429–430, 430
+- last command, 105
+- last lines in printing, 111
+- Last Password Change Field, 170
+- launch facilities, window managers, 560
+- conditional expression, 465
+- less command, 92, 110
+- less than signs (+) in conditional expression, 465
+- level up
+- in dump, 364
+- in ntsys, 154
+- LI message, 159–161, 609
+- /lib directory, 62
+- line printer daemon (lpd), 431, 436
+- initialization script for, 476–481
+- for pooling, 436
+- line printers, 438
+- line test, 277
+- linear option in lilo.conf, 136, 159
+- linking computers, 404–405
+- links
+- creating, 161
+- in with ls, 68–70
+- Neighborhood browser, 530, 331
+- Linux Compatibility HOWTO, 92
+- Linux Corporate Consulting company, 96
+- Linux Consulting company, 96
+- Linux Documentation Project site, 606
+- Linux File System Standard (FSNDST), 33, 55
+- Linux Loader. See LILO (Linux Loader)
+- linux file, 581
+- Linux Printing Support Database, 32
+- Linux-to-Linux printing, 451–452
+- Linux Virtual Server (LVS) clustering, 26–27, 27
+- Linux Wizard (LIZARD) program, 37
+- LinuxCare support programs, 96
+- Linuxconf utility, 9–10, 11
+- for DHCP, 508, 309

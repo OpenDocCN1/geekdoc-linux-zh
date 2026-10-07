@@ -1,0 +1,7 @@
+# # Installing Linux
+
+Linux system administrators often find themselves at the transition point between some other operating system and Linux. In the process, they are called on to make hardware recommendations, install Linux on servers and workstations, and set these systems up for use. These systems may be installed via a CD-ROM, from a hard disk, or across a network (using NFS, FTP, HTTP, or some other protocol). Sometimes they are installed individually and sometimes in batch. Sometimes as an administrator you aren't transitioning but developing a plan for a Linux-based network of servers and workstations and implementing that plan. Whatever the case, the information in this chapter will help you along along your way. To achieve the perfect system, you need to have both optimized operating system and application software and state-of-the-art hardware. In this chapter, we'll look at hardware performance issues that affect your system as well as the installation and initial configuration of the very capable Linux operating system onto a server and workstation.
+
+# # Benchmarks
+
+Although many claims are made about what hardware works most efficiently, it is very difficult to compare the performance of differently configured systems. There are many benchmarking tools available for Linux; these provide ratings that are easier to compare, but even with these you must ensure that you're comparing systems that differ only in the item being compared. This controlled comparison is not always possible but is preferable

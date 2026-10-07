@@ -1,0 +1,13 @@
+# The Linux Boot Process
+
+131
+
+This general boot process can be affected by various factors within the same distribution. For instance, the steps above assume the system has only one bootable kernel image. That's probably the case when you first install, but you might also have a bootable kernel installed with another operating system, like Windows, or a different distribution of Linux. Later, if you install a different version of the kernel and compile it, you'll have to configure LILO to see it. As you'll see later in the chapter, there are a number of parameters that you can specify in the LILO boot prompt, but let's take a closer look at the Master Boot Record.
+
+![](bbox=[0.896, 0.125, 0.959, 0.246])
+
+# The Master Boot Record
+
+The Master Boot Record (MBR) plays a crucial role in the bootup process. Located on the first disk drive, in the sector of the first cylinder of track 0 and head 0 (this whole track is generally reserved for boot programs), it is a special area on your hard drive that is automatically loaded by your BIOS. Since the BIOS is loaded on electronically erasable read-only memory (EEPROM) chip, which is generally not reprogrammed at the user/administrator level, the MBR is the earliest point at which a configured Linux Loader can take control of the boot process. Figure 5.1 shows a drive with its MBR and five partitions. These of three (/dev/hda1 through /dev/hda3) are primary partitions that are pointed to, and two (/dev/hda5 and /dev/hda6) are logical partitions that reside within an extended partition (/dev/hda4). This baroque arrangement is the result of early limitations on the number of partitions in the PC's partition table and is further discussed in Chapter 10. Linux uses the Second Extended Filesystem (ext2fs), which is also detailed in Chapter 10. Basically, the filesystem is structure imposed on each partition for the purpose of organizing files. It is the underlying framework through which the data is added.
+
+As you can see in Figure 5.1, the MBR contains program code (LILO), a 64-byte partition table identifying four primary partitions, and a 2-byte magic number used to determine whether or not the sector is really a boot. Since a sector is 512 bytes long and LILO must share this space, LILO is limited in size to 446 bytes. In order to accommodate this restriction, the boot loader has been split into two phases. The first phase uses LILO in the MBR to locate the second-stage boot loader, which is almost always located in /boot/boot.b on the drive that contains the root Linux filesystem or the /boot partition if it is separate from the root partition. This second-stage boot loader then gets copied into the MBR over the first-stage boot loader to continue the boot process.

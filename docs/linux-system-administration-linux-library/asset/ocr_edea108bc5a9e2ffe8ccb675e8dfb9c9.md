@@ -1,0 +1,15 @@
+# Chapter 1 The Basics of System Administration
+
+capabilities into a single interface. IBM has its smart utility; Solaris uses the admintool, and Red Hat Linux has Linuxconf. A product of the Linuxconf is designed to perform many administrative duties. Few tools handle many different types of configuration tasks as the Linuxconf utility. Linuxconf is used to manage user accounts, network and Domain Name Server configuration, PPP setup, mail server and client configuration, Samba, NFS, Apache configuration, and filesystem setup. The main screen of Linuxconf is shown as Figure 1.1.
+
+Linuxconf has a command-line mode, a character-cell mode (the same style as the installation program), an X-based mode, and a Web-based mode. We'll demonstrate Linuxconf's many uses in various chapters throughout the book.
+
+# Special-Purpose Shell Scripts
+
+Many repetitive day-to-day functions, whether simple or complex, are accomplished by a specially designed shell script. A shell script is a list of commands bathed together in a file so they can be executed on demand. As Linux system administrators, we have written many, many scripts, and you will as well. Chapter 14, "Making Your Job Easier with Scripts," is dedicated to this topic.
+
+# System Logbook
+
+To maintain some semblance of sanity, you need to keep your network—and your administrative—organized. Many system administrators, at least the ones who have learned from prior mistakes, keep a journal of the overall network configuration and the operating system and software configurations for each computer. The lack of such preparation makes an unexpected reinstall a painful experience. If you ever need to use your backup tapes to reinstall a system, time will be a critical factor, since few users understand the time involved in such a procedure. You can minimize the time required by knowing exactly what you set up on that system. A journal of each change you made to the system is invaluable at this point. You must keep the journal just as loyal as you the backups, because it is the combination of the two that will allow you to reinstall and reconfigure quickly and efficiently.
+
+We recommend that you buy several blank log books to be used exclusively for journal-keeping. The hard-backed composition books used for college English classes are particularly good. These are available in many grocery stores and in any office supply store. The books one for each computer, or in a really large network, for each class of computer. The books are cheap, and keeping one system's journal separate from another system's journal makes it much easier to keep track. Think about what separation makes in your system. If you can keep different categories of notes in different colors, it makes it easier to find an entry that you need to reference. For instance, red might denote major system

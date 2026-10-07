@@ -1,0 +1,15 @@
+# The Linux Printing Process 433
+
+facts have made USB devices increasingly popular, and not just for printers—keyboards, mice, scanners, tape backup devices, modems, digital cameras, and more are available in USB form. Among printers, USB is most common in low-end and mid-range ink-jet printers, and particularly those marketed for Macintosh users. (Current Macintosches lack both parallel and RS-232 serial ports.)
+
+From a Linux perspective, the main drawback to USB is that USB is still new enough that Linux's support for USB is immature. In fact, USB support in the 2.2.x Linux kernel series is essentially nonexistent. The 2.4.x kernels do include USB support, but distributions at the start of 2001 (including Red Hat 7.0) don't use 2.4.x kernels by default. Many distributions, however, include a back-port of the 2.4.x USB support to their 2.2.x kernels. This is true of Red Hat 7.0. The end result is that you can use a USB printer but you may need to update your kernel or choose an appropriate distribution. Because USB printers are comparatively untested under Linux, you may also encounter problems because of the immature drivers.
+
+# Networked Printers
+
+The term networked printer refers to a printer attached to a computer accessible via the network or a printer that has a built-in network card and is assigned its IP address. The latter is sometimes called an Ethernet printer. (Note that a parallel, RS-232 serial, or USB printer may become a networked printer by attaching it to a print server.) A networked printer is print via the same prntcap file and requires less configuration than other connection types, since Linux can print to any networked printer that supports the LPD protocol (and most do). You must set up a prntcap on any other computers on the network that need access to a networked printer.
+
+# The Linux Printing Process
+
+Printing under Linux begins with a process called print spooling. A print spooler is a program that accepts print jobs (requests for a certain document to be printed) from a program or network interface, stores them in a spool queue, and then sends them to a printer at one time. Print spooling is a critical system when a second or subsequent print job might be sent before the first job has been completed. The print spooler holds these jobs and allows an administrator to manage them. Typically, this management includes deleting jobs, reordering jobs, or restarting the printer or queue. The most common printing software package for Linux has historically been the line daemon or lpd package, which was borrowed from BSD's 2 Package. Other print spoolers include LPRng and CUPS. Red Hat and Calder are two distributions that use LPRng by default. Debian gives a choice of 1pd or LPRng. Many others use 1pd. Both systems are similar in practice, and this chapter emphasizes their way of doing things.
+
+![](bbox=[0.895, 0.535, 0.975, 0.63])
