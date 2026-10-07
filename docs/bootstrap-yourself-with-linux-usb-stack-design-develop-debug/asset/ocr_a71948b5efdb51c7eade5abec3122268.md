@@ -1,0 +1,5 @@
+Figure 1.8 shows how fast the open-source Linux platform is penetrating the market. This growth makes it essential to study a successful interconnect such as USB's subsystem on Linux. The subsequent chapters of this book detail each component of the Linux USB stack.
+
+# SUMMARY
+
+Originally, Linux was used predominantly as a host operating system in PCs or servers. Now the Linux market is expanding exponentially in the embedded arena with the introduction of open platforms conquering different products. USB functionality is an essential part of these products, which makes Linux USB an interesting topic to explore. Both USB and Linux USB have taken a long path to reach this successful stage. The Linux USB stack is mature and being used in most of the embedded Linux products. The chapters of this book dissect the Linux USB stack to enable enthusiasts to have an understanding before jumping in to any activity on Linux USB.

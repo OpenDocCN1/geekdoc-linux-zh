@@ -1,0 +1,12 @@
+# Chapter 19 Test Using Linux USB
+
+| Table 19.1 Test Case Scenarios of usbst Module (Continued) |
+| Test Scenario | Test Description |
+| Test Case 13: Set and clear operations | This test scenario tests an endpoint's HALT feature of the host controller. Internally, the test uses usb_clear_halt and usb_control_msg to perform these tests. If your hardware doesn't support halting endpoints, you can skip this test. |
+| Test Case 14: Request vendor-specific control | This test scenario sends EP messages by varying the size of the control message by the values the user application indicates. Internally, the test uses usb_control_msg to perform these control requests. The control message uses USB's compliance-vendor-specific control parameter, such as 05b,05c. |
+| Test Case 15: Write ISO data by N entries | This test scenario writes to an ISO endpoint of the device for N times as specified by the user application. Internally, the test queues ISOs using usb_submit_urb with various sizes. This test is useful for verifying ISO endpoint and functionalities. |
+| Test Case 16: Read ISO data by N entries | This test scenario reads from an ISO endpoint of the device for N times as specified by the user application. Internally, the test queues ISOs using usb_submit_urb with various sizes. This test is useful for verifying ISO endpoint and functionalities. |
+
+The usbst module is part of the Linux framework's miscellaneous section that you can configure through the menconfig option USB testing driver. The kernel module usbst.ko is created after a successful build. The usbst kernel driver builds and supports predefined USB devices that are part of struct usbst_driver. The test driver also provides provision to indicate the device through module parameters. The module parameters vendor and product of the usbst module allow you to indicate the vendor ID and product ID of the device. You should remove the standard driver of your device before installing the usbst module. The following terminal activates how to load a generic USB device with the usbst module. You should remember that you should have super rights when you load the driver. root@rajaram-laptop:~ modprobe usbst vendor=0xAAAA product=0xBBBB
+
+Once the driver is loaded properly for the device, you are ready to perform the test scenarios detailed in Table 19.1 from the user space. Remember that your device firmware needs tweaks to support and respond to the test request. The Linux USB has two user space software files—testusb.c and test.sh—that can

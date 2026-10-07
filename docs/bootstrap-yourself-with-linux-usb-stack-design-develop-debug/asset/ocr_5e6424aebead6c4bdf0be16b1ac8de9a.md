@@ -1,0 +1,1 @@
+enhance your understanding. The former source file is a simple General Purpose Input/Output (GPIO) VBUS sensing driver for the B peripheral. The reference from the Linux-USB Web site provides additional information on OTG; check out http://www.linux-usb.org/gadget/h2-otg.html.
