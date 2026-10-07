@@ -1,0 +1,13 @@
+# Preface
+
+You will also need Internet access to use the book's Companion Web Site that is an integral part of this book.
+
+# HOW THIS BOOK IS ORGANIZED
+
+Don't just read this book! It's an interactive workbook, and the way to use it to interact with and with your computer as you work your way through it. Each chapter has one or more Labs, and each Lab has one or more Exercises for you to do. The Exercises are written as a series of questions for you to answer, typically after running some commands on your computer. The answers to all the Exercise questions are given at the end of each Lab, along with an explanation of the concept being developed. Even if you are able to answer a question, you should always check the answer before going on to the next one because there is often explanatory material with the answer that you will need in order to answer the next question. Put a bookmark by the answers so you can get to them easily while working through the questions.
+
+At the end of each Lab there is a set of Self-Review Questions that you can use to check if you are on the right track in mastering the material. The answers to these questions are given in Appendix A. There are additional practice questions for each chapter at the companion Web site for this book.
+
+After the first chapter, which deals with setting up your computer, the remainder of the book introduces the KornShell programming constructs in what is intended to be a logical sequence of steps. This way of organizing the material was chosen for pedagogical reasons, but it has one characteristic you should be aware of: Some of the earlier material you has things that you would do differently if you knew the material that comes later on. The goal has to keep the focus on the part of the language you are learning rather than to introduce extraneous material in order to make each exercise a completely realistic task. The later chapters in the book will give you more realistic problems and solutions to work with.
+
+Appendix B is an alphabetical reference guide to all of the KornShell's built-in commands, extracted from the definitive reference book on the KornShell, "The New KornShell Command and Programming Language" by Morris I. Bolsky and David G. Korn (Prentice-Hall, 1995). The book you are holding tries to cover as much of the KornShell as possible, but there are parts of the language that just don't fit into an introductory workbook. If you find that you want to learn more when you finish this book,

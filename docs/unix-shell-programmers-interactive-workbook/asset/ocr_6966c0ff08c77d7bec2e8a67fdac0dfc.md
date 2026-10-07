@@ -1,0 +1,17 @@
+1. Confidentiality. The Software contains confidential trade secret information belonging to Licensor, and you may use the software only pursuant to the terms of your Governing Agreement, if, any, and the license set forth herein. In addition, you may not disclose the Software to any third party.
+
+2. Limited Liability. IN NO EVENT WILL THE Licensor's LIABILITY UNDER, ARISING OUT OF OR RELATING TO THIS AGREEMENT EXCEED THE AMOUNT PAID TO LICENSOR FOR THE SOFTWARE. LICENSOR SHALL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, HAVE CAUSED AND ON ANY THEORY OF LIABILITY, REGARDLESS OF OR WHETHER LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. WITHOUT LIMITING THE FOREGOING, LICENSOR WILL NOT BE LIABLE FOR LOST PROFITS, LOSS OF DATA, OR COSTS OF COVER.
+
+3. Limited Warranty. LICENSOR WARRANTS THAT SOFTWARE WILL BE FREE FROM DEFECTS IN MATERIALS AND WORKMANSHIP UNDER NORMAL USE FOR A PERIOD OF THIRTY (30 DAYS) FROM THE DATE OF RECEIPT. THIS WARRANTY IS VOID IF FAILURE OF THE SOFTWARE HAS RESULTED FROM MISAPPLICATION. ANY REPLACEMENT SOFTWARE WILL BE WARRANTED FOR A PERIOD OF THIRTY (30 DAYS) FROM THE DATE OF RECEIPT OF SUCH REPLACEMENT SOFTWARE. THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS". LICENSOR DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+4. Exceptions. SOME STATES DO NOT AGREE TO THE LIMITATION OF INCIDENTAL DAMAGES ON HOW LONG AN IMPLIED WARRANTY LAST, SO THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. This agreement gives you specific legal rights, and you may also have other rights from state to state.
+
+5. Government Rights. The Software and accompanying documentation are deemed to be "commercial software" and commercial computer software documentation, respectively, pursuant to FAR Section 227.7202 and FAR Section 22.1212, any use, modification, reproduction release, performance, display or disclosure of the Software and accompanying documentation by the U.S. Government shall be governed solely by terms of this Agreement and shall be prohibited to the extent expressly permitted by terms of Agreement.
+
+6. Export Restrictions. You may not download, export, or re-export the Software (a) into or a national or resident of Cuba, Iraq, Libya, Kosovo, North Korea, Iran, Syria or any other country to which the United States Treasury Department's list of Specially Designated Nations or the U.S. Commerce Department's Table of Deny Orders. By installing or using the Software, you are representing and warranting that you are not located in, under the control of, as national of any country or on such list.
+
+7. General. This License is governed by the laws of the United States and the State of California, without reference to conflict of laws principles. The parties agree that the United Nations Convention on the International Sale of Goods shall not apply to this License. If any provision of this Agreement is held invalid, the remainder of this License shall continue in full force and effect.
+
+8. More Information. If you have any questions concerning this Agreement, or if you desire to contact Licensor for any reason, please contact: CBT Systems USA Ltd., 1005 Hamilton, Menlo Park, California 94025, Attn: Chief Officer.
+
+IF YOU DO NOT AGREE WITH THE ABOVE TERMS AND CONDITIONS, SO NOT INSTALL THE SOFTWARE AND RETURN IT TO THE LICENSOR.
