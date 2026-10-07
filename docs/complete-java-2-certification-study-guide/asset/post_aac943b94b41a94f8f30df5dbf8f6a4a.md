@@ -1,0 +1,332 @@
+
+# ObjectOutputStream class – ports and sockets
+
+ObjectOutputStream class, 332–334, 443
+objects
+- defined, 505
+- exceptions with, 148–150
+- invoking, 179–180
+- purpose of, 176–178
+- comparing, 49–50
+- equality of, 504
+- formatting, 296
+- references to
+    - in argument passing, 22
+    - casting, 115–120, 116–118
+    - converting, 112–115, 113–114
+    - defined, 504
+    - initializing, 21
+
+# P
+
+- pack method, 364
+- package keyword, 4
+- package mode, 73
+- packages, 505
+- pane components, 387–389, 389
+- PanelDemo class, 366–367
+- panel, 366–367
+- serializable, 445–447
+- streams. see streams
+- octal literals, 10
+- operands, promotion of, 49, 49
+- operators
+    - parenthesis(
+        - for cast operator, 42–43
+        - for catch blocks, 140
+    - parseXXX methods, 265
+    - parse text, 291
+    - parsing arguments
+        - for anonymous classes, 191
+        - by reference and value, 22–24
+    - arithmetic, 43–49, 45
+    - assignment, 61–62
+    - bitwise, 52–56
+    - comparison, 49–52, 56–57
+    - conditional, 60–61
+    - evaluation order of, 39
+    - exam examples, 64
+    - overloading, 46, 174
+    - overflow, 38–39
+- paths
+    - for classes, 19
+    - in trees, 382
+- Pattern class, 291
+- peek method, 271
+- percent signs (%)
+    - in formatting, 295–297
+    - for modulo, 45–46, 85
+    - precedence of, 38
+- review questions, 65–77
+- summary, 62–64
+- short-circuit logic, 58–80
+- unary, 40–43
+- option panes, 391–392, 392
+- PI constant, 253
+- PipedInputStream class, 323
+- PipedOutputStream class, 323
+- PipedReader class, 329
+- PipedWriter class, 329
+- PLAININ_MESSAGES, 391
+- plus sign (+) OR operator
+    - bitwise, 52–56
+    - Boolean, 56–57
+    - short-circuit, 58–60
+- order
+    - of notifications, 233–234
+    - of operators, 62
+    - ordinal comparison constructors, 50
+    - orientation property, 390
+- out-of-bounds array indexes, 144–145
+- OutputStream class, 323
+- OutputStreamWriter class, 329
+- overflow, 44, 183
+    - for addition, 46–48
+    - for assignment, 61–62
+    - for incrementing, 40–41
+    - for plus operator, 41
+    - precedence of, 38
+    - in regular expressions, 293
+    - for string concatenation, 46–47, 260
+- overloading, 173
+- methods
+    - constructors, 182–183
+    - defined, 505
+    - invoking, 174–175
+    - purpose of, 173–174
+    - operators, 46, 174
+    - overriding methods, 175–176
+- Point class, 272
+- Point3D class, 194
+- policies for layout managers, 401
+- pop method, 271
+- port numbers, 437, 505
+- ports and sockets, 437
+    - access in, 78–79, 79
+
+# position of components – remote interfaces
+
+position of components
+    - GridLayout manager for, 424–427, 425–427
+    - in layout managers, 399–400
+- post-increment and post-decrement operators, 40, 505
+- postconditions for assertions, 151–152, 505
+- pow method, 254
+- practice exam, 476–497
+- pre-increment and pre-decrement operators, 40, 505
+- precedence of operators, 38–39
+- preconditions for assertions, 151–152, 505
+- preferred size
+    - for components, 401
+    - defined, 505
+    - in GUI design, 468–469
+    - preferredProperty, 389
+- previous method, 414–415
+- primitive data types, 7–9
+    - conversions with, 103
+    - arithmetic motion, 108–109
+    - assignment, 103–107, 104–106
+    - casting, 109–112
+    - method call, 107–108
+    - defined, 505
+- random-access file methods for, 320
+    - references to
+        - printStackTraceTrace method, 141, 147
+- PrintStream class, 297–298, 357
+- PrintWriter class, 330
+- priorities, thread, 219, 465–466, 505
+- private access modifier, 74–75, 505
+- project assignment in developer's example, 352–353, 351
+- promotion, 47, 49, 108–109
+- prompts in GUI design, 471–472, 471
+- properties, 505
+- protected access modifier, 76–78, 506
+- protocols, 436–437, 506
+- Prototype class, 390
+- public access modifier, 74, 506
+- push method, 271
+- PushbackInputStream stream class, 327
+- PushbackReader class, 330
+- put method, 275
+    - precedence of, 39
+    - in regular expressions, 293
+- QUESTION_MAGES, 391
+
+# R
+
+- radio buttons, 371, 372
+- RadioDemo class, 371
+- random method, 254
+- RandomAccessFile class, 317–320
+- ranges
+    - of data types, 8–9
+    - in regular expressions, 292
+    - reuse in object-oriented implementation, 170–171
+- read method
+    - inInDataStream, 323
+    - in FileInputStream, 321–322
+    - in RandomAccessFile, 319–320
+    - in Reader, 329
+    - readers, 327–330
+- readExternal method
+    - in Account, 337–446
+    - in Externalizable, 336, 445
+    - reading mode in file opening, 317–318
+- readObject method, 333, 335–338, 444–444, 444
+- readStringBuffer method, 333, 443
+- ready threads, 218–218
+- rebind method, 456–457, 459
+- Rectangle class, 176–179–180
+- recurse method, 316
+- display method, 176
+- references
+    - comparing, 522
+    - elvers, 112–115, 113–114
+    - defined, 506
+    - initializing, 21
+    - assigning arguments by, 22–24
+    - to primitives, 23
+    - regional values for text, 274, 297
+    - regions in Border layout manager, 405–411, 406, 408–409, 411–412
+    - regular expressions, 291–293
+    - relationships in object-oriented implementation, 177
+- RELATIVE feature, 431–432
+- reliable protocols, 436–437, 506
+- REMAINDER feature, 431–432
+- remainder operator, 45–46
+- remote classes for RMI, 455
+- remote control, object streams for, 447–452
+- Remote interface, 454
+- remote interfaces, 454, 506
+- remote references, 452–453, 453, 506
+- RemoteException class, 454
+
+# Remote Method Invocation – shift operators
+
+Remote Method Invocation. See RMI (Remote Method Invocation facility), 452
+remote references, 452–453, 453, 506
+RemoteException class, 454
+remove method
+    - in Collection, 269
+    - in Iterator, 270
+    - in List, 271
+    - removeFirst method, 271
+    - removeLast method, 271
+- renameTo method, 315
+- renderers in Spring, 379
+- replace method, 257–258
+- reserveCopy method, 151–152
+- reserved words, 5–6, 306
+- resizing GUI design, 468–470, 469–770
+- resume method, 222
+- retainAll method, 269
+- reverse method,
+    - in Account, 337
+    - in Collections, 278
+    - with Flow layout manager, 403
+    - operations, 49, 49
+- run method
+    - in Service, 442, 449–450
+    - for threads, 215–217
+- Runnable interface, 216
+- running threads, 217–218
+- runtime envelope of assertions, 141–145, 306
+- runtime exceptions, 305
+- Runtime class, 144, 147
+
+# S
+
+- Action class, 388–389
+- SampleTree class, 385–387
+- Scanner class, 291–293
+- scanning text, 299–303
+- schedulers, thread, 214–215
+- scroll bars, 372–373, 376
+- Scrollable interface, 382
+- ScrollBar class, 372–373
+- searching arrays, 278–279
+- seek method, 318
+- seekFromCurrent method, 319
+- seekFromEnd method, 319
+- Seeking Lock state, 227–228
+- selection statements, 137–138
+- switch/else constructs, 138
+- switch constructs, 139
+- Serializable interface, 334–335
+- serializable objects, 445–447
+- serialization, 443–444, 444
+    - in file, 332–338, 334
+    - of streams, 443–444, 444
+- server class, 448–449
+- server sockets, 440–443
+- servers's exam, 335
+- ServerSocket class, 442, 440–441
+- Set interface, 272–274, 506
+- setBackground method, 362
+- setBounds method, 401, 433
+- setCharAt method, 259
+- setEnabled method, 363
+- setFocus method, 363
+- setForeground method, 362
+- setInvisible method, 364
+- setLayout method, 433
+- setLength method, 259
+- setLocation method, 362
+- setPriority method, 219
+- setSize method, 362, 399
+- setValue method, 378–380
+- size
+    - of arrays, 12
+    - of components, 399–401, 400, 427–431
+    - in GUI design, 468–470, 469–470
+    - size method, 269
+    - sketing in GUI design, 359–361, 360–361
+- skip method, 232
+- sleep method, 222
+- sleeping threads, 217, 218, 222, 223
+- Socket class, 436
+- socket, 436
+    - client, 437–440, 438–439
+    - and ports, 437
+    - server, 440–443
+    - summary, 459
+    - in TCP, 436–437
+- sort method, 278–279
+- SortedMap interface, 277
+- Sorted interface, 273
+- sorting arrays, 278–279
+- sortRandoms method, 274
+- source files, 4–8
+- South region in Border layout method, 405–411, 406, 409, 412
+- special characters, 10
+- split method, 293
+- sqrt method, 254
+- square brackets ([]) for arrays, 12
+- in regular expressions, 292
+- Stack class, 271
+- stack for processes, 24
+- stack traces, 141–142
+- standardized features in GUI design, 468
+- start method, 214–217
+- startsMethod, 257
+- statements in loops, 133–134
+- states of threads, 217–218, 218
+- static features, 806
+- static import facility, 16–17, 86–87
+- static initializers, 85–506
+- static inner classes, 187–188
+- static modifier, 82–85
+- static variables, 20
+- static lines, 406–406
+- stop method, 217
+- StrangeSync class, 238–239
+- streams, 332–338, 334
+- chapter review lab, 460
+- high-level, 323–327, 325
+- low-level, 321–323
+- for remote, 447–452
+- vs. RMI, 467
+- serializable objects in, 445–447
+- serialization of, 443–444, 444
+- socket for, .77 seconds sockets
+- summary, 459
