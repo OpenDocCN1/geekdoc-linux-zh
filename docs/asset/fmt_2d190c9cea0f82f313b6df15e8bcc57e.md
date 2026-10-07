@@ -1,0 +1,215 @@
+
+如果你使用的终端无法显示小写字母，请开启 `ifcase`。
+
+## tail 869
+
+| 命令 | 描述 |
+|---|---|
+| tail | 显示文件的最后部分（尾） |
+
+语法：`tail [options] [file-list]`
+
+### 总结
+
+`tail` 显示文件的最后部分或末尾。它从你在命令行上指定的一个或多个文件或从标准输入获取输入。
+
+### 参数
+
+`file-list` 包含 `tail` 显示的文件路径名。如果你指定了多个文件，`tail` 会在显示文件行之前先显示每个文件的文件名。如果你没有指定任何文件，`tail` 将从标准输入获取输入。
+
+### 选项
+
+- `--bytes=[+]n[u]]`: 按字节（字符）计数。`n` 是可选的非零整数。`u` 是可选的测量单位，可以是 `b`（512 字节块）、`k`（1024 字节或 1KB 块）或 `m`（1MB 块）。如果你包含了测量单位，`tail` 将按该单位的字节计数。你可以在 `n` 前加一个加号 `+` 让 `tail` 从文件开始计数而不是从末尾计数。即使你从开始计数，`tail` 实用仍然计数到末尾，因此 `+10` 会导致 `tail` 显示从第十行到文件的最后一行。
+- `--follow`: 在复制文件的最后一行后，`tail` 进入无限循环。如果文件增大，它将等待并从文件中复制额外的行。这对于跟踪在后台运行并将输出到文件的进程进度有用。`tail` 将继续到末尾，即使你从开始计数，因此 `+10` 会导致 `tail` 显示从第十行到文件的最后一行。
+- `--quiet`: 抑制输出。
+- `--help`: 显示帮助信息。
+
+-: 如果你使用的终端无法显示小写字母，请开启此。
+
+## tar 872
+
+| 命令 | 描述 |
+|---|---|
+| tar | 从存档中存储或检索文件 |
+
+语法：`tar [options] [file-list]`
+
+### 总结
+
+`tar`（磁带存档）实用可以创建、添加、列出和从存档检索文件。存档通常存储在磁带上。
+
+### 选项
+
+仅使用以下选项之一指示你想要的操作类型。你可以通过跟随一个或多个修饰符来影响选项的操作。
+
+- `--append`: 将 `file-list` 写入存档的末尾。它保留存档中已存在的文件，存档中可能存在文件的副本。当 `tar` 提取文件时，文件的最后一个副本将位于磁盘上。
+- `--create`: 此选项获取命令行给出的 `file-list` 并文件存储在新存档中。如果存档已存在，在创建新存档之前会将其删除。如果 `file-list` 参数是一个目录，`tar` 会递归地将文件复制到目录。以下命令将你系统上的所有文件复制到存档。如果没有 `-f` 选项，存档将在 `/dev/rm0` 创建。
+- `--extract` 或 `--get`: 从存档中提取 `file-list` 并写入磁盘。任何同名的现有文件将被覆盖。如果没有 `file-list`，存档中的所有文件都将被提取。如果 `file-list` 包含目录，`tar` 将提取该目录及其下面的所有文件。`tar` 实用试图保持所有者、修改时间、访问权限与原始文件相同。如果 `tar` 多次读取同一个文件，后来的版本将覆盖之前的版本。
+- `--list`: 目录。没有 `file-list` 时产生存档中所有文件的目录。有了 `file-list`，它每当在存档中出现一次时，就会显示 `file-list` 中每个文件的名称。你可以将此选项与 `--verbose` 选项（见）一起使用，显示存档中每个文件的详细信息。
+- `--update`: 如果 `file-list` 中的文件不在存档中，或者它们自那以后已修改过，则将它们最后写入存档。由于这需要额外的检查，当你使用此选项时，`tar` 运行得较慢。
+- `--help`: 显示选项和修饰符的完整列表，并带有每个简短描述。
+
+### 注意事项
+
+如果你以交互方式使用 shell（例如，使用你的登录 shell），`bash`、`tsh` 和 `zsh` 会保留对标准输入的所有控制权。这意味着 `stty` 提供的许多选项似乎不起作用。例如，`stty–echo` 命令在 `zsh` 下似乎不起作用。
+
+```bash
+% stty–echo
+% date
+Tue Jul 15 15:36 1997
+```
+
+此外，虽然在交互式使用 `bash` 时 `stty–echo` 有效，但 `stty–echo` 并不总是有效。你仍然可以使用这些选项来影响脚本和其他工具。
+
+```bash
+$ cat testit
+#!/bin/zsh
+stty–echo
+echo -n "Enter a value: "
+read a
+echo "You entered: $a"
+stty echo
+$ testit
+Enter a value: You entered: this is a value
+```
+
+在上面的示例中，在 `Enter the value:` 提示符处输入的内容不会在输入时显示。然而，该值保留在变量中，并通过 `echo "You entered: $a"` 显示。
+
+你可以更改特殊字符的值，例如 `kill` 和 `erase`。`stty` 实用影响连接到标准输入的终端。你可以通过将输入重定向到 `stty` 来查看或更改当前终端以外的终端特性。参考以下命令语法：
+
+```bash
+stty [arguments] < /dev/ttyxx
+```
+
+`tyxx` 是目标终端的文件名。只有当你拥有该设备文件或你是超级用户时，你才能更改终端的特性。
+
+## 示例
+
+第一个示例显示了不带任何参数的 `stty`，列出了几个终端操作参数。（你的系统可能会显示更多或不同的参数。）`erase =` 之后的字符是 `868 stty erase` 键。字符前的 `^` 表示 `CONTROL` 键。该示例显示将 `erase` 键设置为 `CONTROL-H`。
+
+如果 `stty` 不显示 `erase` 字符，则它被设置为默认值 `DELETE`。如果你看不到 `kill` 字符，它被设置为默认值 `^U`。
+
+```bash
+$ stty
+speed 9600 baud; line = 0;
+erase = ^H;
+```
+
+接下来，`ek` 参数将 `erase` 和 `line kill` 键恢复为默认值：
+
+```bash
+$ stty ek
+```
+
+下一个显示验证了更改。`stty` 实用不显示 `erase` 字符或 `line kill` 字符，表明它们都被设置为默认值。
+
+```bash
+$ stty
+speed 9600 baud; line = 0;
+```
+
+下一个示例将 `erase` 键设置为 `CONTROL-H`：
+
+```bash
+$ stty erase CONTROL-V CONTROL-H
+$ stty
+speed 9600 baud; line = 0;
+erase = ^H; kill = ^X;
+```
+
+下面，`stty` 将 `line kill` 键设置为 `CONTROL-X`。这次用户输入了一个脱字符 `^` 后跟一个 `x` 来表示 `CONTROL-X`。你可以使用小写或大写字母。
+
+```bash
+$ stty ^A
+$ stty
+speed 9600 baud; line = 0;
+erase = ^H; kill = ^X;
+```
+
+下面，`stty` 转换 `TAB`，以便向终端发送相应数量的空格（`SPACE`）代替 `TAB`。如果终端不自动扩展 `TAB`，请使用此命令。
+
+```bash
+$ stty -tabs
+```
+
+如果你登录后终端上出现的所有内容都是大写字母，执行以下命令然后检查 `CAPS LOCK` 键。如果已设置，请将其关闭。
+
+```bash
+$ STTY -LCASE
+```
+
+如果你使用的终端无法显示小写字母，请开启 `ifcase`。
+
+## stty 867
+
+- `-tabs`: 将每个 `TAB` 字符作为 `TAB` 字符传输到终端。当关闭 `tabs` 功能 (`-tabs`) 时，系统会将每个 `TAB` 字符转换为相应数量的空格（`SPACES`），并将这些空格传输到终端 (`-tab3`)。
+
+## 作业控制参数
+
+### 注意事项
+
+如果你以交互方式使用 shell（例如，使用你的登录 shell），`bash`、`tsh` 和 `zsh` 会保留对标准输入的所有控制权。这意味着 `stty` 提供的许多选项似乎不起作用。例如，`stty–echo` 命令在 `zsh` 下似乎不起作用。
+
+```bash
+% stty–echo
+% date
+Tue Jul 15 15:36 1997
+```
+
+此外，虽然在交互式使用 `bash` 时 `stty–echo` 有效，但 `stty–echo` 并不总是有效。你仍然可以使用这些选项来影响脚本和其他工具。
+
+```bash
+$ cat testit
+#!/bin/zsh
+stty–echo
+echo -n "Enter a value: "
+read a
+echo "You entered: $a"
+stty echo
+$ testit
+Enter a value: You entered: this is a value
+```
+
+在上面的示例中，在 `Enter the value:` 提示符处输入的内容不会在输入时显示。然而，该值保留在变量中，并通过 `echo "You entered: $a"` 显示。
+
+你可以更改特殊字符的值，例如 `kill` 和 `erase`。`stty` 实用影响连接到标准输入的终端。你可以通过将输入重定向到 `stty` 来查看或更改当前终端以外的终端特性。参考以下命令语法：
+
+```bash
+stty [arguments] < /dev/ttyxx
+```
+
+`tyxx` 是目标终端的文件名。只有当你拥有该设备文件或你是超级用户时，你才能更改终端的特性。
+
+## 示例
+
+第一个示例显示了不带任何参数的 `stty`，列出了几个终端操作参数。（你的系统可能会显示更多或不同的参数。）`erase =` 之后的字符是 `868 stty erase` 键。字符前的 `^` 表示 `CONTROL` 键。该示例显示将 `erase` 键设置为 `CONTROL-H`。
+
+如果 `stty` 不显示 `erase` 字符，则它被设置为默认值 `DELETE`。如果你看不到 `kill` 字符，它被设置为默认值 `^U`。
+
+```bash
+$ stty
+speed 9600 baud; line = 0;
+erase = ^H;
+```
+
+接下来，`ek` 参数将 `erase` 和 `line kill` 键恢复为默认值：
+
+```bash
+$ stty ek
+```
+
+下一个显示验证了更改。`stty` 实用不显示 `erase` 字符或 `line kill` 字符，表明它们都被设置为默认值。
+
+```bash
+$ stty
+speed 9600 baud; line = 0;
+```
+
+下一个示例将 `erase` 键设置为 `CONTROL-H`：
+
+```bash
+$ stty erase CONTROL-V CONTROL-H
+$ stty
+speed 9600 baud; line = 0;
+erase = ^H; kill = ^X;
+```
