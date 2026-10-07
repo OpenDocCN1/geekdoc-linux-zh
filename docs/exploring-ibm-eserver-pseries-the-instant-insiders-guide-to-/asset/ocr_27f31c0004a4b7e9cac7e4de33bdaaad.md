@@ -1,0 +1,11 @@
+# 204 Exploring IBM @serverSeries
+
+running AIX 5L, these capabilities work just as they do on a pSeries SMP server without LPAR, but LPAR running Linux will lack those functions. On the other hand, the reason for running Linux in some LPARs is to have compatibility with the Linux applications the user requires and, presumably, those applications will run fine without the AIX 5L capabilities.
+
+AIX 5L v5.2 enhances LPAR with the ability to add or remove processors, memory, or adapters to a partition without rebooting the LPAR or the system. In order to assign resources to LPARs running AIX 5L.1 or Linux, the partition must be restarted (static LPAR). Also, the dynamic LPAR capability provided by AIX 5L v5.2 works with processor and memory CuOD (Capacity Upgrade on Demand) to allow newly activated processors or memory to be assigned immediately to the appropriate LPARs and to allow dynamic processor sparring.
+
+Local partitioning offers the user many advantages. For example, an application or set of applications can run in a specific logical partitioning, guaranteeing the availability of the assigned resources for that workload. Since different applications can run in each LPAR, one possible scenario is to have a production LPAR running the tested version of an application, while in another LPAR there is a test system running a new version of the application. Another example is to run regional workloads in the region being supported. All of these use scenarios provide cost-effectiveness advantages in systems management and physical space, since a single system is being used where previously the alternative solution was to run multiple smaller systems.
+
+# AIX 5L—An Executive Overview
+
+The UNIX operating system was originally developed by AT&T's Bell Labs in 1969. Over the years, it has continuously been enhanced by various independent organizations (both academic and business), often in a unstructured way. These independent efforts have resulted in a very powerful, somewhat cryptic, often awkward, and usually flexible operating system. The UNIX operating system became popular for several reasons. First, AT&T licensed the operating system to many different computer manufacturers, which offered the UNIX operating system for their computers rather than choosing to write their own operating sys-

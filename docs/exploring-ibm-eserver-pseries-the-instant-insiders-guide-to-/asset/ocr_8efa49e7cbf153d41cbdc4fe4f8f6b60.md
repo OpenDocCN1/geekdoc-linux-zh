@@ -1,0 +1,13 @@
+# IBM @server pSeries—An Overview 117
+
+the PCI slot capacity for users to configure for their particular system environments.
+
+Serial ports transfer bytes (one bit at a time) using the asynchronous communications protocol at a rate of 38.4 Kbps. They can be used to connect devices such as printers, plotters, external modems, and ASCII terminals. The parallel port uses a 25-pin D-shell connector and transfers bytes of information one bit at a time, or eight bits in “parallel.” This port is an implementation of a widely used industry standard for attaching a printer. Ethernet ports provide industry-standard LAN attachment, and the HMC ports are used when the Hardware Management Console is required for clustering or LPAR. The keyboard and mouse ports provide for the attachment of the Enhanced Keyboard and the three-button mouse.
+
+# Graphics
+
+Images presented on a computer’s display are used to present information to the user. pSeries servers support two-dimensional graphics, which are adequate for graphical user interfaces (GUIs) and for Internet access. As has stated earlier, many users of pSeries systems will actually be working at a PC attached to LAN to the server. Even for 2D graphics, the quality of images can directly affect the user's productivity, effectiveness, and enjoyment during a work session. Graphics image quality becomes even more important to workstation users in computer-aided design applications that depend on 3D graphics capability. Let’s take a closer look at 3D graphics, remembering that this discussion applies only to the pSeries 630, the pSeries 640, and the RS/6000 Models 150, 170, and 270.
+
+Two hardware elements work together to generate computer graphics: the display (sometimes referred to as a “monitor”) and the graphics adapter (often calls a “graphics accelerator”). Most readers are familiar with displays used on their PCs and generally know that they come in different sizes and can display images with different degrees of resolution. They know, too, that the larger display and the higher its resolution capability, the more expensive it is likely to be.
+
+The ability to display graphics at high performance (for rapidly moving images) and with a large range of colors depends even more on the graphics adapter. Graphics adapters are circuit boards that convert the bits and bytes inside the computer system to the electrical signals that are used by the display to create the image you see. The images

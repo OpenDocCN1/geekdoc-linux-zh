@@ -1,0 +1,13 @@
+# 246 Exploring IBM @serverSeries
+
+tem, this is the only adapter needed. The TCP/IP functions furnished with the AIX 5L operating system and the AIX 5L link/X.25 product provide the necessary programming to support the TCP/IP protocol.
+
+At the central location, the pSeries 670 is in constant communication with all remote locations. It collects the summary information needed by headquarters to consolidate all remote location activity. In our example, one communications is used for each remote location. This means that the central pSeries system must have at least three X.25 interfaces, so the 4-Port Multiprotocol Communications Controller (#2947) is a logical choice. At the central site there is one modem for each communications line, for a total of three.
+
+With communications configuration, the distributed pSeries systems can work together in many ways. First of all, the AIX 5L mail facilities are fully available, allowing any user to, for example, send a document to any other user attached to the distributed network. Further, the basic networking utilities included with the AIX 5L operating system allow users attached to the central p670 to sign on to remote p610 systems just if the users were physically attached to those systems. This can be specially convenient if a user of the central system provides technical support to other nodes, because he she can now directly sign on any pSeries system in the network. These utilities also allow users to execute commands and run application programs on any pSeries system in the network or to freely exchange files between systems. Further, application programs can interact directly with other application programs to provide information to users without the users having to know where the needed information is located.
+
+When least one of the pSeries systems in the network has the NetView product, more tools are provided to manage the network. Special messages called Simple Network Management Protocol (SNMP) Traps can be sent by any pSeries system (or any other open system) reporting the popular SNMP to report problems to NetView. Once a problem is detected, the Tivoli Framework provides tools with which to diagnose and fix the problem.
+
+# pSeries and zSeries Distributed Network
+
+In some cases, it is desirable to distribute pSeries systems while having a zSeries or System/390 (S/390) computer system at the central or headquarters location. The larger zSeries computers can provide more

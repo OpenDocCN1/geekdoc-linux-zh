@@ -1,0 +1,13 @@
+# 290 Exploring IBM@serverSeries
+
+or working on tasks that do not involve the computer. Also, it is desirable to put any paper that is frequently referenced during a computer session at the same distance and orientation as the computer screen. A clip-type holder used by typists to hold documents works well for this.
+
+Another contributor to eye fatigue commonly found in offices is improper lighting. The amount of glare by windows can be reduced by positioning the display at right angles to any window. Curtains or horizontal blinds can also be used to direct light away from the screen. Diffused office lighting will provide fewer “hot spots” and tend to provide the most uniform light and soften harsh shadows, or lower intensity bulbs or dimmer switches may be installed. To reduce the glare in the user’s environment, pSeries displays and terminals have antiglare screens.
+
+# Workstation Comfort
+
+The workstation furniture being used can also affect productivity. For this reason, attention should be given to the details of the user’s workstation, that is, the chair and desk and table to be used. A properly designed chair can reduce back problems and make the user more comfortable and productive. An improperly designed chair can lead to reduced alertness and shorter concentration spans. Users may not even realize they are uncomfortable as they unconsciously seek a more comfortable position.
+
+Once the user is seated, his or her relationship with the computer display and keyboard will affect comfort and thus productivity, so the computer display should be positioned properly. The top of the computer display should be positioned at 10 degrees below eye level, the center of the display at 20 degrees below eye level and 14 to 22 inches away. A tilt/swivel stand under the terminal or display allows the user to adjust the display screen angle as desired. Users should avoid using bifocal lenses, which make them tilt their heads back when reading the screens. This can lead to discomfort in the back and shoulders.
+
+The keyboard should also be in a comfortable position. pSeries systems and associated terminals all provide separate keyboards attached by a flexible cable, which allows the user to position the keyboard as desired. The keyboard height should allow the elbow to be bent at 90 degrees used during typing. Finally, provide sufficient desk space for documents used during the computer session.

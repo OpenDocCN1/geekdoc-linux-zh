@@ -1,0 +1,218 @@
+
+# 314 Exploring IBM pSeries
+
+- POWER2 and POWER3 micro-processors, 83, 88–89, 90
+- POWER2 Super Chip (P2SC), 81
+- POWER4 and POWER++ micro-processors, 63, 88, 91–94
+- PowerPC RS64 microprocessor, 86–88
+- programmed I/O, 86
+- remote I/O (RIO) subsystem, 24–45, 53, 94, 95
+- RISC Single Chip (RSC), 86
+- speculative superscalar out-of-order design, 91–93
+- superscalar implementation, 84, 87, 88
+- system clock, 23, 86, 88
+- zero-cycle branches, 84
+- processor clock, 27
+- Processor Capacity Upgrade on Demand, 66–67
+- processor-to-memory bus, 18, 19
+- productivity improvement, 28
+- programmed I/O, 86
+- Programmer Hierarchical Interactive Graphics System (PHIGS), 220
+- programming language, 193
+- program sharing on LAN, 251–252
+- project team for pSeries, 263
+- proprietary structures, 3–4
+- protocols, 158–162
+- protocol tunneling technique, 249–250
+- pSeries and zSeries distributed network, 246–248
+- distributed network, 245–246
+- pSeries family, vii–5. Also AIX 5L; application programs; business and pSeries; communications;
+- Entry pSeries and RS/6000 servers; hardware architecture;
+- High-end pSeries servers; LPAR (logical partitioning); memory; Midrange pSeries servers; operating systems; options and peripherals; performance; processor; storage
+- 801 project (IBM), xx
+- Advanced Interactive eExecutive (AIX), xx, 199, 205, 206
+- application environments and, xx
+- application programs for, xx, xx
+- Application Service Providers (ASPs) users of, xx, 13
+- availability of, xx, xx
+- Berkeley Distribution 4 (BSD), xx
+- capacity required, questions for, choosing pSeries, vii–xx–xx
+- commercial users of, xx, 2–3
+- critical component of your system and, xx
+- GNU Project, xx
+- growth of business and, xx
+- high-performance computing (HPC) users of, xx–ii, 2
+- history of, xx–xx
+- IBM Server Cluster 1600, 5, 12, 34–46, 71–73
+- Internet Service Providers (ISPs) users of, xx, 12–13
+- O/arch architecture direction, 6
+- model numbers, 5
+- multiuser environment, xx–xx, xx, 201
+- naming conventions, 5, 123–124
+- open-systems design, 5–6, 17
+- Peripheral Component Interconnect (PCI)/Industrial Standard Architecture (ISA) bus, 5–6
+- personal computer (PC) family vs., xx–xx, 2
+- price factor, xx
+- questions for choosing pSeries, xx–xx
+- reliability of, xx, xx
+- robustness of, xx
+- RS/6000 computers and, xx, 1, 6
+- selecting pSeries, xx–xx
+- server farms and, xx, 36
+- systems over, 5–14
+- technical and scientific users of, xx–xx, 2–3
+
+# Index 315
+
+- Web site for, xix
+- workloads and, xxvii
+- SSP (Parallel System Support Programs for AIX, 12)
+- PTX (Performance System Toolbox) of AIX 5L, 228
+- publication, 187. See also software
+- Redundant Arrays of Inexpensive Disks (RAID) technology, 136–138
+- relative performance (rPerf), 6, 7, 8, 9
+- reliability of pSeries family, xxvi, xxvi. See also RAS (reliability, availability, serviceability) functions
+- Reliable Scalable Cluster Technology, 230
+- QIC (Quarter-Inch Serpentine) format, 148
+- quality improvement, 284
+- Quarter-Inch Serpentine (QIC) format, 148
+- questions for pSeries, xxvi–xxvii
+- Quiet Touch Keyboard, 121, 185–186
+- Remote Async Nodes (RANs), 162–162
+- remote I/O (RIO) subsystem, 27, 44–45, 53, 95, renting, 286
+- rent-to-own (capital lease), 286
+- resolution of display (monitor), 117, 119
+- resources and local partitioning (LPAR), 97
+- rack-mount units, 10, 11, 122
+- RAID 0 (starting), 136, 137, 155
+- RAID 1 (mirroring), 137, 138, 155, 156
+- RAID 5 (with distributed parity), 137, 138, 155, 156
+- RAID 10 (starting and mirroring), 138
+- RAID (Redundant Arrays of Inexpensive Disks) technology, 136–138
+- RAM (Random Access Memory), 97. See also main
+- RANs (Remote Async Nodes), 162–162
+- RAS (reliability, availability, serviceability functions)
+- RIO (Remote I/O subsystem), 27, 44–45, 53, 95,
+- RISC (Reduced Instruction Set Computing), xx-xi, 1, 2, 80. See also processor
+- RISC Chip (RPC), 86
+- RISC Technology Personal Computer (IBM RT), xx-xi, 1, 80
+- robustness of pSeries family, routers, 172–173, 253, 254
+- rPerf (relative performance), 6, 7, 8, 9
+- pSeries family
+- RS/6000 Models 150, 170, 270, and 850 memory expansion options, 124–125, 126
+- Entry pSeries and RS6000 servers, 18, 20, 24, 29–30, 34, 37, 40–41
+- High-end pSeries servers, 70–71
+- Midrange pSeries servers, 46–49, 50, 59
+- “read-ahead” and Small Computer System Interface (SCSI), 109
+- read/write, 106, 107, 114
+- records, 196
+- Red Hot, 240
+- Reduced Instruction Set Computing (RISC), xx-xi, 1, 2, 80. See also processor
+- performance of, 4, 8
+- specific of, 37–42, 117
+- RS/6000 System Attachment Adapter (#8396), 170
+- RISC (Single RISC Chip), 86
+- RT PC (RISC Technology Personal Computer), xx-xi, 1, 80
+- runtime execution for Java 2, 219
+- S/3900 ESCON Channel Adapter (#2751), 169–170
+- SANs (storage area networks), 138–143. See also storage
+
+# 316 Exploring IBM pSeries
+
+- 105 TotalStorage Server (ESS) “Shark,” 142–143
+- Fibre Channel Servers, 139–142, 170–171, booting, with 230
+- Fibre Channel (FCS), 6, 112, 139, open system, and pSeries family support of, 113
+- SCM (supply chain management), 198
+- SCSI Adapter Cards, 153–155
+- SCSI I/O adapters, 152–153
+- disk storage, 108–112
+- loop-configurations (SSA), 111, 112
+- “read-ahead” function, and 109
+- Serial Storage Architecture (SSA), 110–112
+- Ultra-SCSI options, 152–157
+- Serial RAID Plus SAS Adapter (#6230), 136–157
+- SSA Fibre-Optic Extender (7133 8851), 157
+- Dual-Channel Ultra-SCSI Adapter (#2498), 134, 155
+- PCI 4-Channel Ultra-SCSI Adapter (#6203), 154, 155
+- PCI Single-End Ultra-SCSI Adapter (#6206), 154
+- Universal Digital Ultra-SCSI Adapter (VHDCI), 154
+- SDLC (Synchronous Data Link), 159–160
+- Secure Socket Layer (SSL), 171, 226, security, 291–293
+- AIX 5L enhancements, 213–214, 232–233
+- backups, 214, 291–292
+- loss prevention, 291, 292
+- maintenance, 282, 293
+- theft prevention, 292, 293
+- warranties, 292, 293
+- selecting pSeries, questions for, xxvi–xxvii. See also and pSeries
+- serial ports, 117
+- Serial Storage Architecture (SSA), 110–112
+- Serial System Architecture (SSA) adapters, 156–157
+- server farm and High-end pSeries servers, 72–73
+- with pSeries family, xxiii
+- node, 251
+- service, 292–293
+- service processor, 18, 20
+- shell scripts, 218, 219
+- Single UNIX Specification (Spec 1170), 232, 236
+- single-user systems, 201
+- 32-bit or 64-bit architectures, 194, 235–236
+- for iSeries and pSeries, 4, 191, 240
+- Small Computer Interface, 22, 24
+
+# Index 317
+
+- SMIT (Systems Management Interface Tool), 208, 213, 214–215
+- SMP (symmetric multiplexing) systems overview of, 104–105, 202–203
+- peries family, xxiv–xxv, 9–10
+- speculative superscalar out-of-order design, 91–93
+- 105 TotalStorage 2-inch tape9 (Web server), 78, 226
+- switch, 170
+- SNA (Systems Network Architecture), 159–160, 247–248
+- SNMP (Simple Network Management Protocol), 223, 246, 187–195
+- operating systems 32-bit vs. 64-bit architectures, 194, 235–236
+- compatibility, 192–195
+- application layer, 188, 189, 192–193
+- compiling programs, 193, 219
+- device drivers layer, 187, 191–192, 282
+- object-code compatibility, 193–194
+- open system and, 194
+- port, 94
+- programming language, 193
+- licensing, 286
+- upward compatibility, 194
+- user’s view of, 188, 189
+- Solaris (Sun Microsystems), xxii, 238
+- source-code compatibility, 193, 194
+- Source Code Control System, 218
+- Spaceball 3D Interface (#8442), 184
+- space costs, 283
+- Spec 1170 (Single Unix Specification), 232, 236
+- SPECbase (compiler directives limited), 76
+- SPECfp2000 (floating-point mathematics), 6, 7, 8, 74–76
+- SPECint2000 (integer arithmetic), 6, 7, 8, 74, 73–76
+- SSA Fast-Cache (#6235), 134
+- SSA (Serial Storage Architecture), 110–112
+- SSA (Serial System Architecture) adapters, 156–167
+- SSL (Secure Socket Layer), 171, 226
+- standard ports, 116–117
+- start bit, 159
+- static kernel, 207
+- static LPAR, 95, 97, 204
+- stop bit, 159
+- storage, 105–113, 131–151. See also DLT (digital linear tape) options; external disk systems; external tape systems; hardware architecture; internal tape storage; optical disk storage; SANs (storage area networks); SCSI (Small Computer System Interface) disk storage;
+- TotalStorage 2-inch tape Libraries
+- average latency of the drive, 107
+- seek time, 107
+- CD-ROMs, 106, 114–115
+- data transfer rate, 107, 109–110
+- disk (Direct Access Storage Devices, DASD storage), 106–108
+- diskette storage, 106, 115
+- DVD-RAMs, 106
+- DVD-ROMs, 115
+- Fibre Channel Arbitrated Loop (FC-AL), 112–113, 139
+- internal disk drives, 132, 133
+- nonvolatile storage, 105–110
+- optical storage, 114–115
+- read/write heads, 106, 107, 114
+- Storage Area Networks (SANs), 113

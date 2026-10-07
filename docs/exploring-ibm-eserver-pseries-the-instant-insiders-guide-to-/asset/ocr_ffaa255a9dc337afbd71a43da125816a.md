@@ -1,0 +1,11 @@
+# pSeries and Your Environment 269
+
+Many times, the decision between pSeries and zSeries systems will be based on the current situation. For instance, if a zSeries or S/390 computer is already in place, it may be natural to expand with zSeries systems. On the other hand, if the UNIX operating system is being used today, it probably makes sense to migrate those applications to a pSeries system, which can easily interface with zSeries servers as required. The decision may become a matter of philosophy. For more information about the zSeries family, read Exploring IBM eServer zSeries and S/390 Servers by Jim Hoskins and Bob Frank (Maximum Press).
+
+# When Should a pSeries System Be Considered?
+
+As is evident from the foregoing discussions, there is no magic formula for selecting a particular type of computer. There are complex and interrelated factors to be considered—application software, operating system, and IT skills, existing equipment, workload, number of users, and so. If the appropriate application software is available for the UNIX environment, then there is probably a pSeries model that will handle the workload and number of users. In addition, the scalability of processing and storage capacity of individual pSeries models (and the software compatibility across the pSeries family) are designed to accommodate increased workloads as business grows. Finally, the support of pSeries and AIX 5L for open-systems standards and a broad range of communications options can help users incorporate pSeries systems into environments with other types of computers.
+
+# Choosing pSeries Configurations
+
+Even after the question of application software and operating system has been settled, selecting the proper pSeries hardware and software components to meet a company's specific needs can still be confusing. The pSeries system model, disk storage and I/O adapter features, peripherals such as tape drives, operating system, and supporting software must be selected. We looked at a few guiding principles during the introduction of the book, but to aid in this activity, let's examine three hypothetical business scenarios and outfit them with the appropriate pSeries configurations. These admittedly simplified examples of a small,

@@ -1,0 +1,148 @@
+
+# Index
+
+- 2D (two-dimensional) graphics accelerators, 175–176
+- capability in pSeries family, 117
+- 2 Gigabit Fibre Adapter for the 64-bit PCI Bus (#6228), 171
+- 2 Gigabit Fibre PCI-X Adapter (#6239), 171
+- 2-Port/100/1000/Base-TX Ethernet PCI-X Adapter (#5706), 165, 166
+- 2-Port Gigabit Ethernet Adapter (#5707), 165, 167
+- 2-Port Multiprotocol PCI Adapter (#2962), 169
+- 3d geometry (BLSurf), 178, 179
+- 3d (three-dimensional) graphics accelerators, 176–178
+- AIX 5 support, capability in pSeries family, xxii, 2–117–121
+- displays (mon), 174–175
+- 4-mm Tape Options, 147
+- 8-Port Asynchronous Adapter EIA-232–RS-AAE, PCI Bus (#2943), 162, 256
+- 10/100/1000-Base-T PCI Adapter (#2975), 164–165
+- 10/100/1000-Base-T Ethernet Adapter (#5701), 165, 166
+- 100 Mbps Ethernet PCI II Adapter (#4962), 163, 169
+- 20/90 4-mm Internal Tape Drive (#6158, #6185), 146
+- 32-bit vs. 64-bit architectures, 194, 235–236, 237
+- 60/15 GB 16-bit 8-mm Internal Tape Drive (#6134), 146–147
+- 64-bit vs. 32-bit architectures, 194, 235–236, 237
+- 80/160 GB 8-mm Internal Tape Drive with VX Technology (#6120, #6169), 146
+- 128-Port Asynchronous Controller, PCI Bus (#2944), 162–162
+- 801 project (IBM), xx
+- 2104 SCSI Expandable Storage Plus (EXP Plus), 133–134, 138, 258
+- 2105 TotalEnterprise Enterprise Server (ESS) “Shark,” 142–143
+- 3494 TotalStorage Virtual Tape Models B10 and B20 (3494 Tape Library Dataservers), 167
+- 3552 TotalStorage FaST Channel Storage Servers, 139–142, 170–171
+- 3995 Optical Library Dataservers, 145
+- 427 Multi-Function Printer, 180–181
+- 6400 Printer family, 180–181
+- 7133 TotalStorage Serial Disk System, 134–135, 138
+- 7204 External Disk Drive, 135
+- 7205 Model 440/550 Digital Line Tape Drive, 149
+- 7206 External Tape Drive Model Model VX2, 220, 147
+- 7207 Model 122 External 3-inch Cartridge Tape Drive, 148
+- 7208 Model 345 External 8-mm Tape Drive, 149
+- 7210 External DVD-RAM Drive, 145
+- 7212 Model 102 TotalStorage Drive En, 136
+- 7316 Model TF2 Rack-mounted Panel Console, 182–183
+- 7332 4-mm Tape Autoloader, 148
+
+A
+- ACF (Automotive Capacity Facility), 151
+- adapters (features), 123. *See also* options and peripherals
+- Adobe Acrobat Reader, 225
+- Advanced Interactive Executive. See AIX
+- Open Group impact on, 208, 222, 232, 236
+- Advanced Serial Raid Adapter (#6230), 134
+- open system 3–4, 205, 208–234 overview of xx, xx–xxii, 3, 204–208 password management, 214, 233 PCs and, 208
+- Advanced Serial Raid Plus SAS Adapter (#623), 208, 211, 220
+- Performance Aide v3.1, 228 performance analysis tools, 228 Performance Toolbox (PTX), 228 physical partitions, 217
+- Advanced Fibre-Optic Extender (7133 Feature 8851), 157
+- security enhancements, 213–214, static kernel, 207 structure of 207, summary, 237
+- Advanced Optical Extender, 135 AIX 4.3, 199
+- AIX 5L, 204–237. See also development (AIX 5L); communications support (AIX 5L); Internet software (operating systems; management (AIX 5L); user interfaces/services (AIX 5L); 64-bit capability (LP64), 234–237 Windows7 graphical user interface (GUI), 201, 220
+- application programs, for 3–4 binary compatibility of vxx Bonus Pack, 225, 226–230 communications functions, 208 desktop user interface, 211–212, 219, 223 disk management, 216–218 distributed communications support, 246
+- SVR4 affinity tools, 194 UNIX and, 204–205 UNIX source-code compatibility, 194 user interface-, 207–208
+- Web-based System Manager, 208, 214–215, 226, 234 Web Download Pack, 226, 230–231, 232
+- Welcome Center, 239 Workload Manager (WLM), 66, 203, 227–228
+- AIX (Advanced Interactive Executive), xxi, 199, 206. See AIX 5L
+- AIX Developer Kit, Java 2 Technology Edition, Version 1.3.1, 226 AIX Fast Connect for POWER Version 3, 221–224
+- AIX Realtime Interface Processors (ARTIC) adapters, 169 AIX Tools for Linux Applications, 229
+- AIWindows7 graphical user interface (GUI), 208, 211, 220 All-Points-Addressable (APA) image, 118
+- Distributed Computing Environment (DCE) projects, 221–222, 223 Distributed File System (DFS), 222 dynamic kernel, 207 evolution of, 205–206, 208
+- Expansion Pack, 224, 225, 231–232 installed to, 190, 207
+- file system, 217, 211–223, 223,, 2111112 2
+- JFS file system, 208, 213–234 “large support, 218
+- Linux, tools, 19,, 211–211–222, 239
+- Logical Volume Manager (LVM), 217 login, 214, 233 mirroring, 214, 219, 2 19 of
+- Network Install Manager (NIM), 234
+- American Optometric Association (AOA), 289
+- American Standard Code for Information (ASCII), 222
+- ANSI X, ,,,,, ,,,,,,      ------ 222
+- community, 211
+- displays, 174, 290
+
+A
+- ACF (Automotive Capacity Facility), 151
+- adapters (features), 123. *See also* options and peripherals
+- Adobe Acrobat Reader, 225
+- Advanced Interactive Executive. See AIX
+- Open Group impact on, 208, 222, 232, 236
+- Advanced Serial Raid Adapter (#6230), 134
+- open system 3–4, 205, 208–234 overview of xx, xx–xxii, 3, 204–208 password management, 214, 233 PCs and, 208
+- Advanced Serial Raid Plus SAS Adapter (#623), 208, 211, 220
+- Performance Aide v3.1, 228 performance analysis tools, 228 Performance Toolbox (PTX), 228 physical partitions, 217
+- Advanced Fibre-Optic Extender (7133 Feature 8851), 157
+- security enhancements, 213–214, static kernel, 207 structure of 207, summary, 237
+- Advanced Optical Extender, 135 AIX 4.3, 199
+- AIX 5L, 204–237. See also development (AIX 5L); communications support (AIX 5L); Internet software (operating systems; management (AIX 5L); user interfaces/services (AIX 5L); 64-bit capability (LP64), 234–237 Windows7 graphical user interface (GUI), 201, 220
+- application programs, for 3–4 binary compatibility of vxx Bonus Pack, 225, 226–230 communications functions, 208 desktop user interface, 211–212, 219, 223 disk management, 216–218 distributed communications support, 246
+- SVR4 affinity tools, 194 UNIX and, 204–205 UNIX source-code compatibility, 194 user interface-, 207–208
+- Web-based System Manager, 208, 214–215, 226, 234 Web Download Pack, 226, 230–231, 232
+- Welcome Center, 239 Workload Manager (WLM), 66, 203, 227–228
+- AIX (Advanced Interactive Executive), xxi, 199, 206. See AIX 5L
+- AIX Developer Kit, Java 2 Technology Edition, Version 1.3.1, 226 AIX Fast Connect for POWER Version 3, 221–224
+- AIX Realtime Interface Processors (ARTIC) adapters, 169 AIX Tools for Linux Applications, 229
+- AIWindows7 graphical user interface (GUI), 208, 211, 220 All-Points-Addressable (APA) image, 118
+- Distributed Computing Environment (DCE) projects, 221–222, 223 Distributed File System (DFS), 222 dynamic kernel, 207 evolution of, 205–206, 208
+- Expansion Pack, 224, 225, 231–232 installed to, 190, 207
+- file system, 217, 211–223, 223,, 211112 2
+- JFS file system, 208, 213–234 “large support, 218
+- Linux, tools, 19,, 211–211–222, 239
+- Logical Volume Manager (LVM), 217 login, 214, 233 mirroring, 214, 219, 2
+- Network Install Manager (NIM), 234
+- American Optometric Association (AOA), 289
+- American Standard Code for Information (ASCII), 222
+- ANSI X, ,,,,,,,, 222
+- community, 211
+- displays, 174, 290
+
+A
+- ACF (Automotive Capacity Facility), 151
+- adapters (features), 123. *See also* options and peripherals
+- Adobe Acrobat Reader, 225
+- Advanced Interactive Executive. See AIX
+- Open Group impact on, 208, 222, 232, 236
+- Advanced Serial Raid Adapter (#6230), 134
+- open system 3–4, 205, 208–234 overview of xx, xx–xxii, 3, 204–208 password management, 214, 233 PCs and, 208
+- Advanced Serial Raid Plus SAS Adapter (#623), 208, 211, 220
+- Performance Aide v3.1, 228 performance analysis tools, 228 Performance Toolbox (PTX), 228 physical partitions, 217
+- Advanced Fibre-Optic Extender (7133 Feature 8851), 157
+- security enhancements, 213–214, static kernel, 207 structure of 207, summary, 237
+- Advanced Optical Extender, 135 AIX 4.3, 199
+- AIX 5L, 204–237. See also development (AIX 5L); communications support (AIX 5L); Internet software (operating systems; management (AIX 5L); user interfaces/services (AIX 5L); 64-bit capability (LP64), 234–237 Windows7 graphical user interface (GUI), 201, 220
+- application programs, for 3–4 binary compatibility of vxx Bonus Pack, 225, 226–230 communications functions, 208 desktop user interface, 211–212, 219, 223 disk management, 216–218 distributed communications support, 246
+- SVR4 affinity tools, 194 UNIX and, 204–205 UNIX source-code compatibility, 194 user interface-, 207–208
+- Web-based System Manager, 208, 214–215, 226, 234 Web Download Pack, 226, 230–231, 232
+- Welcome Center, 239 Workload Manager (WLM), 66, 203, 227–228
+- AIX (Advanced Interactive Executive), xxi, 199, 206. See AIX 5L
+- AIX Developer Kit, Java 2 Technology Edition, Version 1.3.1, 226 AIX Fast Connect for POWER Version 3, 221–224
+- AIX Realtime Interface Processors (ARTIC) adapters, 169 AIX Tools for Linux Applications, 229
+- AIWindows7 graphical user interface (GUI), 208, 211, 220 All-Points-Addressable (APA) image, 118
+- Distributed Computing Environment (DCE) projects, 221–222, 223 Distributed File System (DFS), 222 dynamic kernel, 207 evolution of, 205–206, 208
+- Expansion Pack, 224, 225, 231–232 installed to, 190, 207
+- file system, 217, 211–223, 223,, 211112 2
+- JFS file system, 208, 213–234 “large support, 218
+- Linux, tools, 19,, 211–211–222, 239
+- Logical Volume Manager (LVM), 217 login, 214, 233 mirroring, 214, 219, 2
+- Network Install Manager (NIM), 234
+- American Optometric Association (AOA), 289
+- American Standard Code for Information (ASCII), 222
+- ANSI X,  ,,,,,,,, 222
+- community, 211
+- displays, 174, 290
