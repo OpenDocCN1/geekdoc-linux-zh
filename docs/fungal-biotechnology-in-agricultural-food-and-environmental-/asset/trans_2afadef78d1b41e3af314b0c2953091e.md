@@ -1,0 +1,99 @@
+
+
+第9 届植物-微生物相互作用国际会议，麦迪逊，摘要 605
+
+Hirocha H, Mayo A, Yamazaki M, Takeda S, Abe K, Hirocha R
+Agrawal GW, Watanabe T, Sugimoto K, Sasaki T, Murata K
+Tanaka K, Okamoto Y, Yamashita A, and Kim J
+(2001). Khush GS, Br DS, Hardy B, 等. 遗传学 IV。具有 MLO 蛋白的叶基因，用于调节 Haar Room 内的发育，Laurent R, Roth R, 和 WD PJM。Agroastilation 是一种促进 Avr3C 诱导和 Av4C 诱导坏死的竞争分析的工具。
+
+Hassault S. 亚洲水稻抗性、需求与产量。在：Teng PC, MJ Berge, Henri FT, Jbent Tanaka K, VH Lee, Hardies SR, 以及 Diversity in Rice 亚洲：社会经济与生物学分析。论文：
+
+Huang L and Gill BS (2001). 一种 RGA 类机制可检测水稻中所有叶源细菌抗性基因。
+
+Huang N, Angeles ER, Domingo J, Jagapanty G, Singh S, Zhang Kamaravelli B, Bennett and Gill K (1997). 表达对 BSR 和 P.Cell 抗性的转基因小鼠。Cell Genit Gen 95: 667–674。
+
+Huang J, Roelle S, Park C and Wang Q (2002). 《科学》，植物生物学，295: 664–675。
+
+Hulbert SH, Richter AT, Adelson JE, and Bennett J (1990). 通过玉米对抗旱基因进行遗传图谱绘制和表征。Proc Natl Acad USA 97: 8532–8538。
+
+生物学信息 (2002)。http://biab.org。
+
+Ishikawa JK, KH and Shathraj U (1999). 大麦 M 基因座位点的环境：导致对粉霉病（*Blumeria graminis sp. hordei*）感病以及对稻瘟病菌（*Magnaporthe oryzae*）感病的突变。Pl Phyt 11: 1.
+
+Jones T and Harvey B (2008). 差异表达显示技术与 cDNA-APFLs 在鉴定差异表达基因方面的比较。Fund Appl Microbiol 13(2):206–215。
+
+Kachro P, Ahuja M, Leong S, and Chato BB (1999). 水稻基因组 DNA 序列的结构与进化。Kamonos S, West V, Vheeswara AG, Goat KE, and Govern F (1998). 识别效应蛋白诱导烟草（*Nicotiana benthamnnanophthora infestans*）的抗性。Plant Cell 11(1): 1–9。
+
+Kamerh J, Richards M, Rome T, Bolmer K and Rahman R (2015). 小麦 L1 和 L2 基因非依赖变异的多等位基因图谱。突变 Pea 81: 73–83。
+
+Kang S, Lee MH, Park J (2001). 稻瘟病菌（*Magnaporthe oryzae*）中 Pot3 基因插入导致的价值籽粒。Plant Molecular Biology 18: 255–263。
+
+Kessi V, Park I and Michelmore RW (1994). 通过 RFLP 和 RAD 标记创建的生菜（*Lactuca sativa*）详细遗传连锁图谱的分析。Genetics 136(4):1435–1446。
+
+Khush GS (2001). 绿色革命；未来的道路。Reviews Gen 27(10):815–822。
+
+Khush GS and Br DS (2001). 来自孟德尔的功能基因遗传学：在 Khush GS, Br DS, Hardy B, 等. 遗传学 IV。科学出版社：pp. 3–25。
+
+Cline A, Jan F, Stephenson B, and Klimaugh A (1997). 图大麦锈病抗性基因 Rpl 的基因进化以及使用水稻作为解释器；相关性值。Plant Mol 31(5):127–189。
+
+Mc CM, Lee SH, Kim J, Kim JH, Choi Y, Yoon W, Moon BC Kim J, Jung SC, Park-Lee SY, Lee J, and Choi MO (2002)，一种涉及几丁结合蛋白因子和几丁酸酶的分子植物基因与防御Science 297(5586):551–5。
+
+Kim MC, Martinez P, Ellis C, Miller J, Devote A, Yoon H Park JM, Kim S, and Schubert-Lee P (2002). 水稻白病可能影响大麦对赤霉素样受体蛋白激酶在疾病中的响应。Nature 416(6879):477–490 在 Kraep E, Song Y, W-Yuan D, Souter MC, 和 Kent Kend 下。MLO 途径可能影响疾病中对 ley 受体蛋白激酶及其激酶相关蛋白磷酸酸酶的响应。Plant Phyt
+
+Cole C, Williams PR, SR and Ortson TC (2012). 连接控制对野生小麦（*Brassica rustica sp. cepestris*）抗性的基因图谱以及小麦病（*Magnaporthe tritici* 和 *Magnaporthe oryzae*）的比较。Nature 45(1):22–27。
+
+Skowski EP, Erava RY, Ryder DR, and Potter RH (2002). 小麦抗性和断裂点的转基因图谱绘制。Journal of Plant Sci 31:407–414。
+
+Krysan PJ, Young IC, and Summer MR (1999). T.D.N. 作为大麦中的一种交性突变。Plant Cell 11:2283–2290 Ku
+
+Barton M, Robertson U, and Nicholas KH (2001). 受损的 MLO 途径可能影响对粉霉菌（*Blumeria graminis sp. hordei*，Teicolo: Clodosopsis tritici）及其毒素的响应。Phyt
+
+Lakshari DA, Delris J, Mukiller K, NHath G, Chen F, Hyang SW, and By DS (2009). 小麦基因和对条瘟病（*P. striiformis*）抗性的防御位点图谱绘制。Proc Natl Acad USA 106(34):13951–13956。
+
+der Lee T, Robold A, Testa A, Van Lloet JK, and Gers F (2005). 通过序列分析选择的连锁长度多态性扩增的致病疫霉（*Phytophthora infestans*）中基因表达分析。Genetics 157:9489–956。
+
+Leino M, Pierre L, Duarte DA, Yoon S, Tasaki D, Kramer K (2014). 镰刀锈菌（*Fusarium graminearum*）引起的抗性快速重组。Top Appl Genet 102:353–362。
+
+Li WR, Sun Y, Liu J, Chen P, Hebert S, and Gill (2009). 小麦中新型酸性几丁酶的分离与鉴定。Top Appl 98:226–233。
+
+Link AJ, Eng J, Schietz DM, Carnace M, Yates B (1999)。 使用质谱法分析的蛋白质复合物。Nat Biotechnol 17:676–682。
+
+Luder R, Rivers S, Malen D, Teifner R, Mnik S, 和 Fisher D (2000)。 被重组介导的抗性位点。Genetics 108(4):1269–1273。
+
+Mach C, Rice D, Fisher D, Mnik S, 和 Fisher D (2000)。 被重组介导的抗性位点。Genetics 108(4):1269–1273。 (注：此处原文似乎有重复或错误，已按逻辑翻译)
+
+Kang S, Lee MH, Park J (2001). Pot3 基因插入稻瘟病菌（*Magnaporthe oryzae*）导致的价值。Plant Molecular Biology 18: 255–263。
+
+Kessi V, Park I and Michelmore RW (1994). 通过 RFLP 和 RAD 标记创建的生菜详细遗传连锁图谱分析。Genetics 136(4):1435–1446。
+
+Khush GS (2001). 绿色革命；未来的道路。Reviews Gen 27(10):815–822。
+
+Khush GS and Br DS (2001). 来自孟德尔的功能基因遗传学：在 Khush GS, Br DS, Hardy B, 等. 遗传学 IV。科学出版社：pp. 3–25。
+
+Cline A, Jan F, Stephenson B, and Klimaugh A (1997). 图大麦锈病抗性基因 Rpl 的基因进化以及使用水稻作为解释器；相关性值。Plant Mol 31(5):127–189。
+
+Mc CM, Lee SH, Kim J, Kim JH, Choi Y, Yoon W, Moon BC Kim J, Jung SC, Park-Lee SY, Lee J, and Choi MO (2002)，一种涉及几丁结合蛋白因子和几丁酸酶的分子植物基因与细胞防御Science 297(5586):551–555。
+
+Kim MC, Martinez P, Ellis C, Miller J, Devote A, Yoon H Park JM, Kim S, and Schubert-Lee P (2002). 水稻白病可能影响大麦对赤霉素样受体蛋白激酶在疾病中的响应。Nature 416(6879):477–490 在 Kraep E, Song Y, W-Yuan D, Souter MC, 和 Kent Kend 下。MLO 途径可能影响疾病中对 ley 受体蛋白激酶及其激酶相关蛋白磷酸酸酶的响应。Plant Phyt
+
+Cole C, Williams PR, SR and Ortson TC (2012). 连接控制对野生小麦（*Brassica rustica sp. cepestris*）抗性的基因图谱以及小麦病（*Magnaporthe tritici* 和 *Magnaporthe oryzae*）的比较。Nature 45(1):22–27。
+
+Skowski EP, Erava RY, Ryder DR, and Potter RH (2002). 小麦抗性和断裂点的转基因图谱绘制。Journal of Plant Sci 31:407–414。
+
+Krysan PJ, Young IC, and Summer MR (1999). T.D.N. 作为大麦中的一种交性突变。Plant Cell 11:2283–2290。
+
+Barton M, Robertson U, and Nicholas KH (2001). 受损的 MLO 途径可能影响对粉霉菌（*Blumeria graminis sp. hordei*，Teicolo: Clodosopsis tritici）及其毒素的响应。Phyt
+
+Lakshari DA, Delris J, Mukiller K, NHath G, Chen F, Hyang SW, and By DS (2009). 小麦基因和对条瘟病（*P. striiformis*）抗性的防御位点图谱绘制。Proc Natl Acad USA 106(34):13951–13956。
+
+der Lee T, Robold A, Testa A, Van Lloet JK, and Gers F (2005). 通过序列分析选择的连锁长度多态性扩增的致病疫霉（*Phytophthora infestans*）中基因表达分析。Genetics 157:9489–956。
+
+Leino M, Pierre L, Duarte DA, Yoon S, Tasaki D, Kramer K (2014). 镰刀锈菌（*Fusarium graminearum*）引起的抗性快速重组。Top Appl Genet 102:353–362。
+
+Li WR, Sun Y, Liu J, Chen P, Hebert S, and Gill (2009). 小麦中新型酸性几丁酶的分离与鉴定。Top Appl 98:226–233。
+
+Link AJ, Eng J, Schietz DM, Carnace M, Yates B (1999). 使用质谱法分析的蛋白质复合物。Nat Biotechnol 17:676–682。
+
+Luder R, Rivers S, Mnik S, 和 Fisher D (2000). 被重组介导的抗性位点。Genetics 108(4):1269–1273。
+
