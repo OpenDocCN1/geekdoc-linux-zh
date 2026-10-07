@@ -1,0 +1,262 @@
+- - '#'
+  - 执法与取证检查人员的 Linux 入门指南：作为数字取证平台的 Linux 初学者指南
+- - '#'
+  - XII. Linux 支持
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '##'
+  - 关于 GNU/Linux 中的 "GNU"
+- - '##'
+  - 为什么要学习 Linux？
+- - '##'
+  - GUI 工具在哪里？
+- - '##'
+  - 练习题 – 新与旧
+- - '#'
+  - 本文档中使用的惯例
+- - '#'
+  - III. Linux 启动序列（简化版）
+- - '##'
+  - 系统初始化
+- - '##'
+  - 运行级别 (Runlevel)
+- - '###'
+  - 这些是 Slackware 的默认运行级别：
+- - '####'
+  - 0 = halt
+- - '####'
+  - 1 = 单用户模式
+- - '####'
+  - 2 = 未使用（但与运行级别 3 相同）
+- - '####'
+  - 3 = 多用户模式（Slack 默认运行级别）
+- - '####'
+  - 4 = 带有 KDM/GDM/XDM 的 X11（会话管理器）
+- - '####'
+  - 5 = 未使用（但与运行级别 3 相同）
+- - '####'
+  - 6 = reboot
+- - '####'
+  - 默认运行级别。（不要设置为 0 或 6）
+- - '##'
+  - IV. 基础 Linux 命令
+- - '##'
+  - 更多实用命令
+- - '##'
+  - 命令行数学
+- - '###'
+  - bc – 基础计算器***
+- - '##'
+  - Bash Shell 算术扩展
+- - '#'
+  - v.4.33 Linux 作为数字取证平台的全方位入门指南
+- - '##'
+  - 文件属性
+- - '##'
+  - Linux 作为数字取证平台的全方位入门指南
+- - '##'
+  - 元字符
+- - '##'
+  - 命令提示
+- - '##'
+  - V. 使用 Vi 进行编辑
+- - '##'
+  - Vi 的乐趣
+- - '##'
+  - Vi 命令总结
+- - '##'
+  - 配置工作站
+- - '##'
+  - 配置“rc”（启动）服务
+- - '##'
+  - Start networking daemons
+- - '##'
+  - 'Start the OpenSSH SSH daemon:'
+- - '###'
+  - /etc/rc.d/rc.yp
+- - '##'
+  - Start NIS (Network Information Service)
+- - '###'
+  - NIS 提供全网络范围的主机名、用户名和其他信息数据库的发布。
+- - '###'
+  - 在配置 NIS 后，你将需要取消脚本中你运行的部分。
+- - '###'
+  - 注意：有关设置 NIS 的详细信息，请参阅 /usr/doc/yp-tools, /usr/doc/ypbind, /usr/doc/yperv, 以及 /usr/doc/NIS-HOWTO.
+- - '##'
+  - 基于主机的访问控制
+- - '##'
+  - 'The comsat daemon notifies the user of new mail when biff is set to y:'
+- - '###'
+  - 'services: systems'
+- - '###'
+  - hosts.deny
+- - '#'
+  - v.4.33 作为数字取证平台的 Linux 全方位新手入门指南
+- - '##'
+  - 作为数字取证平台的 Linux 全方位新手入门指南
+- - '##'
+  - 定义变量
+- - '##'
+  - 启用 TCP Sync Cookie 保护
+- - '##'
+  - 禁用 ICMP 重定向接受
+- - '##'
+  - 不发送重定向消息
+- - '##'
+  - 将默认策略设置为 DROP
+- - '##'
+  - 清空旧规则
+- - '##'
+  - 允许环回流量
+- - '##'
+  - 允许已建立连接包及其相关的包
+- - '##'
+  - 允许所有出站包
+- - '##'
+  - 允许来自互联网的入站 ssh
+- - '##'
+  - 更新操作系统
+- - '#'
+  - Linux 作为数字取证平台的全面入门指南
+- - '##'
+  - 使用 slackpkg
+- - '###'
+  - Slackware64-14.2
+- - '###'
+  - USE MIRRORS.SLACKWARE.COM (DO NOT USE FTP - ONLY FINDS A NEARBY MIRROR)
+- - '###'
+  - AUSTRALIA (AU)
+- - '###'
+  - http://ftp.cc.swin.edu.au/slackware/slackware64-14.2/
+- - '###'
+  - http://ftp.iinet.net.au/pub/slackware/slackware64-14.2/
+- - '###'
+  - http://mirror.aernet.edu.au/pub/slackware/slackware64-14.2/
+- - '###'
+  - 自动升级内核包不是一个好主意（而且你需要在后运行 "lilo”）
+- - '##'
+  - 安装和更新“外部”源
+- - '##'
+  - 从源码编译
+- - '##'
+  - 使用发行包
+- - '###'
+  - software
+- - '###'
+  - 这是你将找到软件包描述的地方
+- - '###'
+  - 你正在安装的软件包的描述
+- - '###'
+  - 构建软件包 – SlackBuilds
+- - '###'
+  - sbtools (类似于 ports 的 SlackBuild 接口)
+- - '###'
+  - 使用自动化工具包 sbtools
+- - '##'
+  - 关于包管理的一个说明。
+- - '###'
+  - 系统上安装的所有软件包完整列表维护在 `/var/log/packages` 中。你可以浏览该目录来查看你安装了哪些内容。
+- - '#'
+  - VII. Linux 与取证
+- - '##'
+  - 证据获取
+- - '##'
+  - 分析组织
+- - '##'
+  - 检查物理介质
+- - '##'
+  - 媒体哈希
+- - '##'
+  - 使用 dd 收集取证镜像
+- - '##'
+  - libewf 和 ewacquire
+- - '###'
+  - 取证信息
+- - '###'
+  - EWF 信息
+- - '###'
+  - 媒体信息
+- - '###'
+  - 摘要哈值
+- - '##'
+  - 介质错误 - ddrescue
+- - '###'
+  - Copying non-tried blocks...
+- - '###'
+  - Pass 1 (forwards)
+- - '###'
+  - current_pos status/size
+- - '##'
+  - 跨网络镜像
+- - '##'
+  - 跨网络 - dd
+- - '##'
+  - 跨网络 - dc3
+- - '##'
+  - 跨网络 - ewquirestream
+- - '##'
+  - 远程传输 – 其他选项
+- - '##'
+  - 准备磁盘
+- - '##'
+  - 结语
+- - '##'
+  - 挂载证据
+- - '##'
+  - 镜像结构
+- - '##'
+  - losetup
+- - '##'
+  - 使用 kpartx 挂载多分区
+- - '##'
+  - 使用 ewmount 挂载 EWF 文件
+- - '##'
+  - 反病毒 – 使用 ClamAV 扫描系统
+- - '##'
+  - 命令行上的基础审查
+- - '##'
+  - 查看文件在取证镜像的所有区域搜索文本
+- - '#'
+  - VIII. 高级（入门）取证
+- - '##'
+  - 强力命令行
+- - '##'
+  - 使用 DD 进行数据刻 (Data Carving)
+- - '##'
+  - 使用 DD 取回分区
+- - '##'
+  - 重建目标文件系统 (Linux)
+- - '##'
+  - 进阶分析的分层策略
+- - '##'
+  - Sleuth Kit
+- - '###'
+  - 安装 Sleuth Kit
+- - '###'
+  - Sleuth Kit 练习
+- - '###'
+  - 'Sleuth Kit 练习 #1A - 删除文件的识别与恢复 (ext2)'
+- - '###'
+  - METADATA INFORMATION / CONTENT INFORMATION
+- - '###'
+  - 'Sleuth Kit 练习 #1B – 删除文件的识别与恢复 (ext4)'
+- - '###'
+  - 'Direct Blocks: 物理搜索与分配状态 (ext2)'
+- - '###'
+  - Sleuth Kit 练习 3 – 未分配空间的提取与检查
+- - '###'
+  - 原始文件系统中的块：
+- - '###'
+  - 'Sleuth Kit 练习 #5 – NTFS 检查：ADS'
+- - '###'
+  - 'Sleuth Kit 练习 #6 物理字符串搜索与分配状态 (NTFS)'
+- - '###'
+  - BANNER FILE NOT PROVIDED (-b option)
+- - '###'
+  - 'BULK_EXTRACTOR-Version: 1.5.5 ($Rev: 10844 $)'
+- - '###'
+  - 'Feature-Recorder: find'
+- - '###'
+  - 'Filename: NTFS_Pract_2017'

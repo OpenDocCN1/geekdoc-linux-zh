@@ -1,0 +1,11 @@
+# A Comprehensive Beginner's Guide to run Linux as a Digital Forensic Platform
+
+![](bbox=[0.403, 0.126, 0.668, 0.311])
+
+# Sleuth Kit Exercise #1B – Deleted File Identification and Recovery (ext4)
+
+The previous exercise is a good primer for learning how to run TSK against a forensic image and identify and extract files. We use an older image of an ext2 file system because it allows us to run the full course of identification and extraction tools provided by TSK. We can do this because ext2 files that are deleted still have enough information in their associated file metadata (“inode” for ext file systems) to be able to recover the file. As you will see in the coming pages, this has changed for the ext4 file system. As it has been made clear in the past, this is not meant to be an education on file systems in general. Rather, the purpose here is to highlight the tools and how you can expect different output based on the file system being used. We also want to ensure that the limitations of our tools are known. Whether you were to learn TSK on an ext2 file system, you might expect it to work in exactly the same way as ext4. This is not the case, and this exercise illustrates that it is one of the primary reasons why the ab1_3 image was added to our problem.
+
+Now we are going to roughly replicate the same analysis as the previous exercise, this time examining an ext4 file system in the ab1_3 image. We'll be brief in the explanation of the commands, which are largely the same as those we ran in exercise 1A. Review the exercise and make sure you are familiar with the commands proceeding here. The files being recovered are the same, but their placement differs from the ab1_2 image.
+
+Start by changing into the ab1_3 directory we created for our image files, run img_stat to see the split file support and run mmls to identify the partitions. When using TSK on split images, we only need to provide the first image file in the set (the same rule holds for EWF files – you only provide the first name in the set):
