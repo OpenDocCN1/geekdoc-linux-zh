@@ -1,0 +1,11 @@
+# Turnstles and Priority Inheritance
+
+the pool (pool_size), number of active rows in the tsm_chunk array (active), a link to the pool of turnstiles, and an array of pointers to turnstiles (tsm_chunk[])—these are the active turnstiles.
+
+The tsm_mutex lock is used to protect tstile_mod only when other turnstile functions do not need to acquire tsm_mutex.
+
+The turnstile itself contains a forward link to other turnstiles on the list or to a structure with priority inheritance information (pirec). These data items are of the same union in the structure definition. Thus, a free turnstile will have the forward link, and a used turnstile will contain the pirec structure. Each turnstile has a unique ID, ts_id, that encodes row and column information used to locate the turnstile in the tsm_chunk[] array. tsm_chunk[] is actually implemented as a two-dimensional array, as we will see in a minute.
+
+Additionally, in each turnstile is an array with two sleep queues (ts_sleep). For RW locks, readers and writers are kept on separate queues. For mutex locks, one sleep queue is used. Other links that bind it all on a synchronization object, and a pointer from the kthread to the pirec structure if the priority of the kernel thread was changed by priority inversion. The benefit of field points back to the kernel thread that is the recipient (beneficiary) of a better priority because of inheritance. ts_flags specifies whether the turnstile is free or active, and ts_lock is a dispatcher-style lock used by the mutex to synchronize access to the turnstile.
+
+The kernel creates a small pool of turnstiles at boot time and allocates a turnstile from the pool when a thread needs to block on a mutex or RW lock. The tstile_init() function is called from the startup code during boot to initialize a set of turnstiles with which to get started. The allocation is done in chunks of 128 turnstiles, each chunk (column) attached off a different index in the tsm_chunk[] array (the row). The row/column combination serves as the turnstile ID, determines the placement of the turnstile in the array of active turnstiles, and is established each chunk is initialized. Figure 3.14 provides the big picture.

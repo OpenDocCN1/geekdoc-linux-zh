@@ -1,0 +1,13 @@
+Once the thread selection has been made and the thread dequeued, the code returns to disp(), which calls disp_ratify() to ensure that the selected thread was, in fact, the best candidate to run next. The fine-grained locking used within the dispatcher routines allows for simultaneous changes to be made to the queues and the queue state for this reason, a select-and-ratify algorithm was chosen for implementation. The select phase of the algorithm now completed, disp_ratify() is entered to complete the ratify phase. The ratify code simply compares the priority of the selected thread to the disp_maxrunpri value. If the selected thread priority is greater than maxrunpri, the selection is ratified and If not, we reenter the code loop to find the best runnable. If a higher-priority thread appears on the queue when disp_ratify() executes, the selected thread is placed back on the dispatch queue with a call to selectfrontdq() and disp_ratify() returns NULL to disp().
+
+If a thread is not found on the kernel preempt queue, the per-processor queue disp_maxrunpri is tested. A value of -1 means that nothing is in the queue. In that, the code searches the queues of the other processors on the system, beginning with the disp_getwork() code, which finds a processor with the highest-priority thread. Then, the code uses the disp_getbest() and disp_ratify() functions previously described.
+
+If the current processor's disp_maxrunpri indicates runnable threads, the first thread from the highest priority queue is removed, the queue data is updated (disp_runnable, dq_nrncount, disp_qactmap, disp_max_unbound_pri, disp_maxrunpri), the selection is ratified, and disp() returns the thread pointer to swch().
+
+If no work is found on any of the dispatch queues, the processor's idle thread is selected by setting the thread pointer to the cpu_idle_thread, referenced from the processor's cpu structure. The pointer to the idle thread is returned to the swch().
+
+Back in swch(), with a thread pointer for the thread (or idle thread), the kernel resume() code is called to handle the switching of the thread on the processor. resume() is implemented in assembly language because the process of context switching requires low-level contact with processor hardware, for two reasons: to save the hardware context of the thread being switched off, and to set up the hardware registers and other context information so the new thread can begin execution.
+
+# 9.3 The Kernel Sleep/Wakeup Facility
+
+The typical lifetime of a kernel thread includes not only execution time on a processor but also time spent waiting for requested resources to become available. An

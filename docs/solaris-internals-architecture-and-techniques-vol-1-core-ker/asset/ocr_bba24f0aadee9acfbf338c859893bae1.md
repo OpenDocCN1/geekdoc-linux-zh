@@ -1,0 +1,15 @@
++   ts_preempt, rt_preempt — Called when a kernel thread needs to be preempted and must be placed on a dispatch queue. A TS thread interrupted in kernel mode is given a SYS class priority so it returns to execution quickly. Preemption is discussed in more detail shortly.
+
++   ts_setrun, rt_setrun — Set a kernel thread runnable, typically called when a thread is removed from a sleep queue. Place the thread on a dispatch queue. For TS threads, readjust the global dispatch priority if the thread has been waiting (sleeping) in anordinate amount.
+
++   ts_sleep — Prepare a thread for sleep. Set the thread's priority of wait time or if a kernel priority is requested (the thread's t_kpri_reg flag). A kernel priority (SYS class priority) is set if the thread is holding an exclusive lock on a memory page or an RW write lock.
+
++   ts_tick, rt_tick — Tick processing for the thread, called from the clock interrupt handler (see “System Clocks and Timers” in Chapter 1). CPU execution for TS and IA classes is detected in the scheduling-specific data structure linked to the kernel thread, ts_timeleft in the tsproc structure is decremented in the ts_tick function for an executing thread that is not running at a SYS class priority. TS and IA classes will have their priority elevated for a short time by getting a SYS class priority. A thread's execution time for threads running in the SYS class is not tracked because SYS classes, by definition, run until they voluntarily surrender the processor.
+
+The ts_timeleft value is used to determine if the thread has used up its CPU quantum. If it has, the thread's priority is recalculated and the thread is placed on the appropriate dispatch queue. If it has not, a check is made to determine if a higher-priority thread is waiting for a processor; if that condition is true, then the code simply returns, leaving the thread to continue on the processor. The kernel also tells for a scheduler activation, known as preemption control, in the tick handler; that topic is discussed shortly.
+
+The rt_tick handler for RT classes is similar. If an RT class does not have an infinite time quantum and has used its allotted CPU time or if a thread with a higher priority is sitting on a dispatch queue, the RT class is forced to surrender the CPU. Preemption control is not implemented for RT threads.
+
++   ts_wakeup, rt_wakeup — Called when a thread is coming from a sleep queue and must be placed on a dispatch queue. TS/IA class threads at a SYS priority are placed on the appropriate queue; otherwise, the priority is recalculated before queue placement. RT class threads are simply placed on a queue.
+
++   ts_donice, rt_donice, sys_donice — Called when a nice(1) command is issued on the thread to alter the priority. Adjust the priority according to the nice value for TS/IA threads. nice(1) is not supported for RT and SYS

@@ -1,0 +1,470 @@
+
+# Index
+
+651
+
+- exitclass 352
+- fork 352
+- forklet 352
+- getclinfo 351
+- getclpi 351
+- glob 355
+- parmsget 352
+- parmin 351
+- parmsout 351
+- parmsset 352
+- preempt 354
+- setrun 354
+- sleep 354
+- swapin 353
+- swapout 353
+- swapri 353
+- tick 354
+- trap 353
+- wakeup 354
+- yield 355
+- classes 343, 348
+- parameters 345
+- sclass structure 349
+- CSCI 26, 494, 514
+- SDLC 9
+- Section Header Table 264
+- See also kernel synchronization priorities 63
+- See also thread, kernel 14
+- See Direct Memory Access
+- Seek 513
+- seg kmem 220, 221
+- seg_map statistics 553
+- segkp segment 289
+- segmap 206
+- segmap_fault() 550
+- segmap_getmap() 550
+- segmap_pagecreate() 550, 582
+- segmap_pageunlock() 550
+- segmap_release() 550, 582
+- segment (ELF file) 264
+- segment (memory) 20
+- description 127
+- drivers 9, 143
+- seg_dev 145
+- seg_drv 146
+- seg_kmem 145, 212
+- seg_kp 145, 212
+- seg_lock 146
+- seg_map 145, 212, 582
+- seg_mapdev 146
+- seg_mdi 146
+- seg_nf 146, 212
+- seg_spt 145
+- seg_sx 146
+- seg_vn 145, 549
+- kernel segment 206
+- kernel segment driver methods
+- segkm_checkprot() 216
+- segkm_create() 216
+- segkm_getmap() 216
+- segkm_setprot() 216
+- seg_map segment 212, 549
+- segkp segment 289
+- segmentation violation 141
+- SEGP_FAULT() 145
+- sgevn_create() 144, 148
+- sgevn_fault() 149
+- select() 485
+- select(3C) 475
+- select-and-ratify algorithm 396
+- SEM_NEMS_MAX 453
+- sem_open(3R) 452, 453
+- SEM_VALUE_MAX 453
+- sema_sobj_ops 71, 101
+- semaphor value 436
+- semaphores 68
+- interfaces 452
+- kernel 68
+- kernel functions 99
+- limits (tuneables)
+- semmaem 439
+- semmap 437
+- semmn 437
+- semmns 438
+- semmnu 438
+- semmsl 438
+- semomp 438
+- semume 438
+- semusz 439
+- semvx 439
+- P and V operations 99
+- posIX 421, 452
+- System V 18
+- semget(2) 436, 440
+- semid_ds 440
+- semmap 425
+- sequential consistency model 66
+- SIGTSTP 338
+- session 338
+- SIGTTIN 339
+- session leader 340
+- SIGTTO 339
+- set_anoninfo() 156
+- SIGVTALRM 56
+- setfacl 522
+- SIGWAITOR 408
+- settimer(2) 147
+- SIGXCPU 56, 325
+- setprot() 147
+- SIGXFSZ 325
+- Shared libraries 147
+- SIGTTIN 339
+- Shared Mapped Files 150
+- single kernel image 61
+- sixtyfour(64) limits (tuneables)
+- 64-bit applications 5
+- 64-bit data types 5
+- 64-bit Device Support 507
+- 64-bit File Application 506
+- 64-bit kernel 8
+- 64-bit support 5
+- 64-bit binaries 4
+- POSIX 452
+- System V 18
+- Shared Memory Multiprocessor 507
+- shared memory 4
+- sharing 126
+- slab allocator 2, 217
+- slab_create 230
+- slab_destroy 230
+- slab_traper 166
+- slab_size 229
+- siblings (process) 271
+- SHM_SHARE_MMU 203
+- si_pc 166
+- si_traper 166
+- segmap_fault() 550
+- segmap_getmap() 550
+- segmap_pagecreate() 550, 582
+- segmap_pageunlock() 550
+- segmap_release() 550, 582
+- segment (ELF file) 264
+- segment (memory) 20
+- description 127
+- drivers 9, 143
+- seg_dev 145
+- seg_drv 146
+- seg_kmem 145, 212
+- seg_kp 145, 212
+- seg_lock 146
+- seg_map 145, 212, 582
+- seg_mapdev 146
+- seg_mdi 146
+- seg_nf 146, 212
+- seg_spt 145
+- seg_sx 146
+- seg_vn 145, 549
+- kernel segment 206
+- kernel segment driver methods
+- segkm_checkprot() 216
+- segkm_create() 216
+- segkm_getmap() 216
+- segkm_setprot() 216
+- seg_map segment 212, 549
+- segkp segment 289
+- segmentation violation 141
+- SEGP_FAULT() 145
+- sgevn_create() 144, 148
+- sgevn_fault() 149
+- select() 485
+- select(3C) 475
+- select-and-ratify algorithm 396
+- SEM_NEMS_MAX 453
+- sem_open(3R) 452, 453
+- SEM_VALUE_MAX 453
+- sema_sobj_ops 71, 101
+- semaphor value 436
+- semaphores 68
+- interfaces 452
+- kernel 68
+- kernel functions 99
+- semmaem 439
+- semmap 437
+- semmn 437
+- semmns 438
+- semmnu 438
+- semmsl 438
+- semomp 438
+- semume 438
+- semusz 439
+- semvx 439
+- posIX 421, 452
+- semget(2) 436, 440
+- semid_ds 440
+- semmap 425
+
+### 63
+- sequential consistency model 66
+- SIGTSTP 338
+- session 338
+- SIGTTIN 339
+- session leader 340
+- SIGTTO 339
+- set_anoninfo() 156
+- SIGVTALRM 56
+- setfacl 522
+- SIGWAITOR 408
+- settimer(2) 147
+- SIGXCPU 56, 325
+- setprot() 147
+- SIGXFSZ 325
+- Shared libraries 147
+- SIGTTIN 339
+- Shared Mapped Files 150
+- single kernel image 61
+- sixtyfour(64) limits (tuneables)
+- 64-bit applications 5
+- 64-bit data types 5
+- 64-bit Device Support 507
+- 64-bit File Application 506
+- 64-bit kernel 8
+- 64-bit support 5
+- 64-bit binaries 4
+- POSIX 452
+- System V 18
+- semget(2) 436, 440
+- semid_ds 440
+- semmap 425
+
+### Shared Memory
+- 4
+- sharing 126
+- slab allocator 2, 217
+- slab_create 230
+- slab_destroy 230
+- slab_traper 166
+- slab_size 229
+- siblings (process) 271
+- SHM_SHARE_MMU 203
+- si_pc 166
+- si_traper 166
+- asynchronous 331
+- dispositions 320
+- sleeping for I/O 17
+- generation 327
+- implementation 325
+- slowscan 180, 187
+- originating traps 334
+- sigaction(2) 304, 329
+- siginfo 328
+- sigallstack(2) 331
+- notifyify 333
+- sigsend(2) 321
+- softswap 353
+- sigtoproc() 333
+- software context (process) 258
+- synchronous 320
+- Software-initiated traps 32
+- Solaris 2.0, 5
+- SIGCHLD 325
+- Solaris 2.1 6
+- SIGCLD 271, 298
+- SIGDANDER 158
+- Solaris 2.2 6
+- SIGIO 493
+- Solaris 2.3 6
+- SIGKILL 271
+- Solaris 7 RW lock 82
+- SIGSEGV 139, 141, 502
+- Solaris 8 128, 185
+- SIGTRAP 165
+- Solaris Kernel Architecture 11
+- Solaris Resource Manager 9
+
+### 653
+- Solstice DiskSuite (SDS) 494, 566
+- SPARC register management 32
+- SPARC V7 132
+- SPARC V9 132
+- SPCCenter 2000 133, 206
+- Sparse Files 528
+- spepecs 24, 515
+- spin locks 72
+- stack 20, 131, 134, 185, 205, 210
+- STACK (resource limit) 278
+- standard I/O 479
+- clearerr() 481
+- close() 481
+- feof() 481
+- ferror() 481
+- fflush() 481
+- getc() 481
+- getpos() 481
+- gets() 481
+- fileno() 481
+- flockfile() 481
+- fopen() 481
+- printf() 481
+- putc() 481
+- futs() 482
+- read() 482
+- freopen() 482
+- fscanf() 482
+- seek() 482
+- fsetpos() 482
+- trylockfile() 482
+- unlockfile() 482
+- fwrite() 482
+- getc() 482
+- getc_unlocked() 482
+- getw() 482
+- close() 482
+- popen() 482
+- putc() 482
+- rewind() 482
+- setbuf() 482
+- setvbuf() 482
+- ungetc() 482
+- stat() 485
+- static linking 263
+- stderr 259
+- stdin 259
+- stdout 259
+- Stripe 529
+- Sun UNIX 0.7 6
+- sun4 64-bit kernel address space 206
+- SunOS 1.0 4, 6
+- SunOS 2 4
+- SunOS 2.0 6, 531, 565
+- SunOS 4.0 6, 183
+- SunOS 4.1 4, 6
+- SunOS 4.1.3 6
+- SunOS 4.x binary compatibility 35
+- SunOS 5.0 5
+- superblock 569, 576
+- SuperARC 201
+- SVR3 5
+- SVR4 5
+- swap 168, 237
+- swap device 599
+- Swap Space 158, 236
+- swapctl() 162
+- swapfs 158, 189
+- swapfs_getpage() 159
+- swapfs_getv() 159
+- swapmin 164
+- swapwsfree 164
+- swapout() 147
+- Swapped out 157
+- swapping 128, 190
+- swch() 382, 393
+- symmetric multiprocessing 8
+- Symmetric multiprocessor 60
+- sync() 147
+- sysdef 592
+- sysent table 44
+- System Calls 22, 44
+- system files 11
+- /etc/name_to_system 44
+- /etc/system 592
+- System priorities 345
+- System V file 567
+- System V IPC 18
+- System V Message Queues 18
+- System V Shared Memory 18
+- System V Semaphores See also shared memory
+- t_pre_sys 285
+- t_preempt 284
+- t_pri 285, 369
+- t_proc_flag 284
+- t_procp 285
+- t_release_all() 96
+- t_scheduler 284
+- t_sig 285, 333
+- t_squeue 285
+- t_stack 283
+- t_state 284
+- t_sysnum 285
+- t_wchan 285
+- thread_reaper 301
+- thttlefree 187
+- thundering herd problem 77
+- TICK register 316
+- time(4)
+- Time-of-Day Clock 57
+- timeout(9F)47
+- timeshare scheduling class 17
+- data structure fields 372
+- priorities 345
+- tmpfs 24, 515
+- TNF Trace Buffers 210
+- Total Store Ordering (TSO) 67
+- TP_MSACCT 203
+- TPC-C 203
+- TPC-D 203
+- Translation Lookahead Buffer (TLB) 193, 195, 197, 206, 208, 209
+- effectiveness 201
+- misses 201
+- performance 201
+- translation software buffer (TSB) 196, 206, 208, 209
+
+### 655
+- Translation Lookahead Buffer (TLB) 193, 195, 197, 206, 208, 209
+- Trap Analysis 36
+- Trap Levels 32
+- Traps 24, 29
+- TRAP 165
+- TSB (TTE) 195
+- TSB translation entries 196, 206, 208, 209
+- TSB-buffer 196, 206, 208, 209
+- TCP sockets 7
+- TCP/IP 11
+- test-and-set instruction 63
+- THR_BOUND 261
+- thread_create(T) 260, 261
+- thread_setconcurrency(T) 261
+- thread creation 010
+- thread_create() 90, 94, 369
+- thread stacks 205
+- thread, kernel 260
+- description 283
+- Two-Level Model 15
+- t_affinitycnt 283
+- t_astflag 300, 286, 286
+- t_bind_cpu 284
+- t_bound_cpu 283
+- t_cid 285
+- t_cdata 285
+- t_clfuncs 285
+- t_cpu 285
+- t_cred 285
+- t_disp_queue 285
+- t_disp_time 285
+- t_epri 285
+- t_epri (kernel thread) 96
+- t_epri field (kernel thread) 91
+- t_hold 285
+- t_kpri_req 83, 87, 285
+- t_lockp 285
+- t_lwp 285
+- t_oldpls 285
+- t_post_syscall 293, 286, 286
+- t_trapreat 286
+- t_tick() 375, 379
+- t_qexp 359
+- t_update() 378, 379
+- ts_globpri 358
+- ts_lwait 360
+- ts_quantum 359
+- ts_sleep() 376, 404
+- ts_slepret 359
+- timeshare scheduling class 17
+- data structure fields 372
+- priorities 345
+- tmpfs 24, 515
+- TNF Trace Buffers 210
+- Total Store Ordering (TSO) 67
+- TP_MSACCT 203
+- TPC-C 203
+- TPC-D 203
+- Translation Lookahead Buffer (TLB) 193, 195, 197, 206, 208, 209
+- effectiveness 201
+- misses 201
+- performance 201
+- translation software buffer (TSB) 196, 206, 208, 209
