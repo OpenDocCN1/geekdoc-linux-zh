@@ -1,0 +1,302 @@
+
+- 兆 (megabytes), 254
+  - 缓存, 276
+- 元标签 (meta tags), 341–342
+  - 速度, 6, 20
+  - 故障排除, 29
+  - USB, 11. 参见 标准架构 (ISA)
+  - 容量, 221
+- 模块 (modules), 299
+  - 挂载 (mount), 160, 172
+- mpoint point, 173
+- 挂载共享 (Mounting Shares), 210
+- `mpg123`, 46
+- 多视图 (Multi views), 298
+
+## L
+
+- 局域网 (LANs (Local Area Networks)), 71, 72, 73, 99, 115, 116, 133, 135, 199, 201. 参见 局域网
+  - 高速连接及相关协议, 184
+- Linux 内内核模块, 110–111
+- LinuxConf, 140, 194
+- lo
+- 局域网 (Local area networks), 71, 72, 73, 99, 115, 116, 132, 136, 199, 201. 参见 局域网 (LANs (Local Area Networks))
+- `LOCAL_INTERFACE_1` 参数, 378
+- 本地主服务器, 818
+- 本地打印缓存目录 (local spool directory), 179
+- 本地颜色域 (local colordomain), 133
+- `LOCALNET-1` 参数, 378
+- LocalTalk, 77, 215
+- 锁文件 (lock file), 20
+- 日志 (log files), 350, 352–355
+- 回环地址 (loopback address), 123
+- `LOOPBACK` 结构, 399
+- `LOOPBACK_INTERFACE` 参数, 378
+
+## N
+
+- 名称绑定协议 (Name Binding Protocol (NBP)), 217
+- 名称资源 (name resource), 190, 195
+- `NAMERSERVER-1` 参数, 378
+- `NAMERSERVER-2` 参数, 378
+- 国家科学基金会 (National Science Foundation), 117
+- CSA (国家超算应用中心 (National Center for Supercomputing Applications)), 286
+- ettalalk, 239, 216, 228, 294, 301
+- afpond.default, 221
+- Apple 分区 (Apple Volumes), 221
+- asun, 216, 218, 220
+- `atalkconf`, 221
+  - 配置, 220
+  - 设定 (figuration), 220
+  - 文档, 216
+- papdf, 221
+- 市域网 (Metropolitan area networks), 71
+- 微软 (Microsoft), 50, 90, 85, 188
+- 微软 Frontier, 294
+- 微软 Windows (Microsoft Windows), 30, 159
+- 微软 Windows 95/98/NT, 95, 96
+- 微软 Windows 95/98, 77, 78, 189
+- 微软 NT (Microsoft NT), 189, 130
+- 微型计算机 (minicom), 305
+- 微型计算机 (mincomputers), 375
+- 分钟字段 (minute field), 321
+- mdktr, 173
+- 模式 (mode), 152
+- sodern, 5, 122, 132
+  - 自动应答, 34
+  - 线缆, 260–261
+  - 载波检测, 34
+  - 命令, 21
+  - 具有 Linux 性, 20
+  - 设备名称, 372
+  - 拨号音, 36
+  - 外部, 8, 11, 14
+  - 流量控制, 192
+  - 硬件, 7
+  - instelling-12
+  - 内部, 8, 93
+  - 灯光, 34
+  - 笔记本电脑, 12
+  - 并行, 11
+
+## M
+
+- Mac OS, 96
+- MAC 地址, 97, 98, 102
+- 苹果 (Macintosh), 48, 50, 77, 83, 99, 137, 159, 215, 216, 219, 220, 221
+- 苹果打印机 (Macintosh printers), 216
+- PC 卡, 15
+- 即插即用 (Plug and Play), 10
+  - 协议, 6
+  - 拨号, 222
+  - 软件, 8
+- 网络文件系统 (Network File System (NFS)), 120, 139, 140, 159, 160, 162, 167, 170, 171, 275, 300, 306, 314
+- 网络信息服务 (Network Information Service (NIS)), 139
+- 网络邻 (Network Neighborhood), 197
+  - 网络接口, 273
+  - 网络接口卡 (network interface card (NIC)), 99
+- 网络协议, 195
+- 新闻组 (Newsgroups), 55
+- NFS_SERVER, 名称, 117
+- nfs, 175, 183, 215
+- nnfs, 166
+- `NFS_PORT` 参数, 380
+- nnid, 192, 193
+- noauto 设定, 366
+- nooxec 设定, 366
+- nosid 设定, 366
+- 笔记本电脑, 122
+- 诺 unfortunately (Novell), 95
+  - 开放, 60
+  - 开放通道, 263
+  - 开放协议, 7, 118, 86, 89, 90, 95, 120, 185
+  - OS 基础, 84
+  - 数据链路层 (Data Link Layer), 89, 90, 95, 120, 121
+  - 链路层 (link layers), 119, 121
+  - 主机到传输层 (Host-to-Transport Layer), 120, 121
+  - 互联网层 (Internet Layer), 20, 84, 85, 86
+  - 网络访问层 (Network Access Layer), 120
+  - 网络层 (Network Layer), 89
+  - 物理层 (Physical Layer), 89, 95, 119, 121
+  - 表示层 (Presentation Layer), 88, 120
+  - 会话层 (Session Layer), 88, 120
+  - 传输层 (Transport Layer), 89
+  - 传输层级 (Transport layers), 120
+- 包管理器 (Package Manager), 303
+- 包丢失 (pack loss), 336
+- 数据包嗅器 (packet sniffers), 70, 344–345
+- 数据包交换 (packet switching), 60, 71–81
+- 数据包 (packets), 69, 95
+- 帕罗奥托研究中心 (Palo Alto Research Center (PARC)), 76, 77
+- 密码认证协议 (Password Authentication Protocol (PAP)), 5, 24
+- 用户 (of users), 257
+- PC 卡, 12
+- PCI, 99, 111 参见 内部互连 (PCI)
+- PCI 卡, 263, 274
+- PCMC 接口, 12, 98
+- PDF 文件, 49
+- 点对点协议 (peer-to-peer protocols), 76, 78, 82, 83, 89
+- 友好域名 (people-friendly domain names), 126
+- 外围组件互连 (Peripheral Component Interconnect (PCI)), 10
+- perl, 392
+- 权限, 35, 138, 141, 142, 143, 144, 147, 151, 159, 167
+  - 常用, 150
+  - 默认值, 150
+  - 目录列表 (Directory Listing), 144
+  - 执行器 (Executor), 145
+  - 数值模式 (numeric mode), 147
+  - 读取, 142
+  - 设置组 ID (Set Group ID (GUID)), 142
+  - 设置用户 ID (Set User ID (SUID)), 142
+  - 符号代码 (Symbolic code), 144, 150
+  - 写入 (Write), 142, 145
+- mping, 113, 129, 130, 334–337
+- 即插即用 (Pug and Play (PnP)), 10, 30
+- 插入器 (Plugger), 49
+- 点对点协议 (Point-to-Point Protocol (PPP)), 3–5, 37, 121
+- POP, 50, 51, 53
+- 端口映射 (portmap), 165
+- pp0, 37, 40
+- ppd, 27
+- 主组 (Primary group), 139, 140, 143
+- 打印机过滤器 (printer filter), 179
+- 打印机, 175
+  - 添加, 178
+  - 默认打印协议, 176
+  - lnp, 176
+- Postscript 打印机 (Postscript Printer), 178
+  - 共享, 175, 183, 191
+- 打印工具 (printintool), 177
+- PRIVPROPERTIES, 379
+- 私有协议栈 (pro own stack), 356
+- 协议独立性 (protocol independence), 96
+- 协议栈 (protocol stack), 86, 87, 95, 7, 68
+  - 开放、专有 (open, proprietary), 7
+  - 开放、公共 (open, public), 7
+- 代理服务器 (proxy servers), 227–279, 340–360–361
+- PS/2 端口, 31
+- pf, 219
+- 公共协议, 7
+- put 命令, 309, 310
+- pwd 命令,
+
+## Q
+
+- 退出命令 (quit command), 600, 309, 310
+
+## R
+
+- 随机存存储器 (RAM (Random Access Memory)), 275, 276
+- 实时音频 (Real Audio), 50
+- 红链 (Red Hot), 4, 106, 165, 193, 194, 220, 2, 108
+- 红帽 Linux (Red Hat Linux (cont.), 288–291, 294, 296, 305, 339–340, 351, 370
+- 环形网络 (ring network), 74
+- RJ-45 插座, 98
+- RJ-45 连接, 99, 100, 104
+- Robert Metcalfe, 73
+- 根用户 (root), 140, 175
+- 根用户外壳 (RootShell), 362
+- 路由器 (routers), 69, 70, 102, 125, 268, 270
+- 路由表 (routing tables), 104
+- rpcci, 180
+- rpc.lock, 165
+- rpc.stat, 165
+- rm 文件, 48, 49
+- rm 包, 165
+- 宗教顾问委员会 (RSAC (Religious Advisory Council)), 341
+- 运行表管理 (Running Table Management), 367
+- rstat, 163
+
+## S
+
+- Samba, 78, 83, 139, 160, 185, 187, 189, 190, 191, 192, 193, 196, 197, 200, 201, 202, 215, 216, 275, 294, 301, 315
+- Slackware, 192
+- SMB, 215
+- smbid, 192, 193
+- 调制解调器, 8
+- Squid, 280
+- SSL (Secure Lockers (), 298
+- 标准 802.3, 94
+- 星型网络, 73, 102
+- 星际大战角色, 127
+- StarOffice, 161
+- 状态 (status), 160
+- su, 169
+- 子网地址 (subnets addresses), 331
+- 子网 (subnets), 142
+- SUIDs, 142, 211, 356–366
+- 超用户 (superusers), 304–305
+- 超用户 (superuser), 140, 175
+- 使用 (use), 102
+- 符号链接 (symbolic links), 299
+- syslog.conf, 353–355
+- 同步 (sync), 369
+- SecurityFocus, 362
+- 安全 (security), 70, 84, 359
+- 权限, 347–381
+- 高速连接, 253, 255–256
+- 内域网及, 292, 294, 299, 347–381
+- 安全你的系统 (securing your system), 366–368
+- 风险理解 (risks, understanding), 348–349
+- 串口端口 (serial port), 11, 14, 20
+- 冲突 (conflicts), 31
+- serf.com, 290
+- 服务器 (server), 78, 79, 160, 175, 173, 174
+  - 备份 (backup), 313
+  - 基础描述 (basic description of), 270
+  - 创建 (creating), 271–272, 313–314
+  - 消息块 (message blocks), 92, 184, 185, 186, 188, 190, 196
+  - 工作 (working), 337–338
+- ServerAdmin, 296
+- ServerName, 296
+- 芝麻街角色 (Sesame Street characters), 127
+- 共享级认证 (Share-level authentication), 186, 187
+- 共享 (Shares), 186
+- 共享 Windows资源 (sharing Windows resources), 170, 180
+- 签名 (signature), 51
+- Shockwave, 50
+- 简单邮件传输协议 (Simple Mail Transfer Protocol (SMTP)), 120
+- smb-ed 文件, 205
+- sbmbount, 142
+- `SMTP_SERVER` 参数, 378
+- OKS_PARAMETER, 380
+- `SSH_LOCAL_PORTS` 参数, 380
+- `SSH_REMOTE_PORTS`, 380
+
+## T
+
+- TCP/IP, 89, 90, 95, 115, 116, 118, 119, 121, 123, 126, 131, 298, 334–337
+- 传输控制协议 (Transmission Control Protocol (TCP)), 120
+- 木木马 (trojans), 349
+- 故障排除 (troubleshooting), 29, 325–336
+- 非屏蔽双线 (unshielded twisted pair), 96, 97, 98, 105
+- 上传速度, 58, 252, 253
+- URLs, 57, 254
+- 新闻组 (Usenet groups), 44
+- 用户数据报协议 (User Datagram Protocol (UDP)), 120
+- 用户账户 (user accounts), 130, 140
+- 用户 ID (user ID), 139, 140
+- useradd, 142, 211, 356–366
+- 用户级认证 (User-level authentication), 186, 187
+- 超用户 (superusers), 304–305
+- 超用户 (superuser), 140, 175
+- 使用 (use), 102
+- 符号链接 (symbolic links), 299
+- syslog.conf, 353–355
+- 同步 (sync), 369
+- SecurityFocus, 362
+- 安全 (security), 70, 84, 359
+- 权限, 347–381
+- 高速连接, 253, 255–256
+- 内域网及, 292, 294, 299, 347–381
+- 安全你的系统 (securing your system), 366–368
+- 风险理解 (risks, understanding), 348–349
+- 串口端口 (serial port), 11, 14, 20
+- 冲突 (conflicts), 31
+- serf.com, 290
+- 服务器 (server), 78, 79, 160, 175, 173, 174
+  - 备份 (backup), 313
+  - 基础描述 (basic description of), 270
+  - 创建 (creating), 271–272, 313–314
+  - 消息块 (message blocks), 92, 184, 185, 186, 188, 190, 196
+  - 工作 (working), 337–338
