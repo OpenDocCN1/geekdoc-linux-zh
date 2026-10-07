@@ -1,0 +1,3 @@
++   The access.conf file contains information about security settings for your Web server. It defines which hosts can access files and what configuration information can be overridden.
+
+The next chapter explores the configuration of the Netscape FastTrack Server. Netscape FastTrack Server for OpenLinux runs on any Linux system. It provides secure connections for Internet commerce and graphical administration that will seem very simple and straightforward, especially after the information you learned in this chapter about the features that a strong Web server can offer.

@@ -1,0 +1,107 @@
+
+
+# Linux Web 服务器工具包
+
+当你启动 Linux 系统并配置 Linux 内的网络时，`/etc/rc.d/local` 文件中的命令将根据配置文件中的执行执行。
+
+# 测试你的网络连接
+
+在深入尝试使用 Web 浏览器之前，你也可以尝试一些简单的测试，查看网络配置是否准确。关于设置网络的更多信息（包括设置高速连接），见第 6 章。
+
+要尝试这些测试，请前往字符模式屏幕或图形系统内的命令行提示符。`ping` 命令简单地向计算机发送数据包并接收返回的确认包，而不交换数据。如果你能访问另一台计算机，说明基础网络功能正常。首先，尝试如下命令对你自己的机器执行 `ping`：
+
+```
+$ ping localhost
+PING sah.venture.com (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=2.0 ms
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=2.2 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=2.1 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=1.5 ms
+
+- venture ping statistics
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.1/1.4/2.0 ms
+```
+
+按下 Ctrl+C  ping 命令。`localhost` 是每个 UNIX 系统都有的特殊主机；通过此命令，你正在 ping 自己。这在多任务操作系统中可以让你从一个进程连接到另一个进程。如果 ping `localhost` 正常，说明你的网络部分工作正常。
+
+接下来，尝试使用该机器的 IP 地址 ping 网络上的另一台机器，如下：
+
+```
+$ ping 208.142.216.118
+PING 208.142.216.118 (208.142.216.118): 56 data bytes
+64 bytes from 208.142.216.118: icmp_seq=0 ttl=92 time=61.3 ms
+64 bytes from 208.142.216.118: icmp_seq=1 ttl=92 time=31.2 ms
+64 bytes from 208.142.216.118: icmp_seq=2 ttl=92 time=42.0 ms
+64 bytes from 208.142.216.118: icmp_seq=3 ttl=92 time=34.4 ms
+
+- 208.142.216.118 ping statistics
+8 packets transmitted, 8 packets received, 0% packet loss
+round-trip min/avg/max = 29.4/51.7/105.0 ms
+```
+
+# 第 5 章：安装 Linux
+
+如果这有效，说明你的网络设备已正确设置以访问本地网络。现在使用域名名尝试相同的操作，如下：
+
+```
+$ ping www.infovision.com
+PING www.infovision.com (208.142.216.118): 56 data bytes
+64 bytes from 208.142.216.118: icmp_seq=0 ttl=92 time=32.1 ms
+64 bytes from 208.142.216.118: icmp_seq=1 ttl=92 time=34.1 ms
+64 bytes from 208.142.216.118: icmp_seq=2 ttl=92 time=42.0 ms
+64 bytes from 208.142.216.118: icmp_seq=3 ttl=92 time=42.9 ms
+
+- infovision.com ping statistics
+8 packets transmitted, 8 packets received, 0% packet loss
+round-trip min/avg/max = 31.9/54.7/121.6 ms
+```
+
+如果这同样有效，要么该机器列在你的 `/etc/hosts` 文件中（你无法在安装期间设置），要么你的名称服务器提供了 IP 地址。
+
+最后一步是 ping 互联网上的计算机，首先使用 IP 地址，然后使用主机名。当然，这前提是你拥有互联网连接。这些互联网测试在第 7 章中有更详细的介绍。
+
+# 排除网络故障
+
+如果上一节的测试不起作用，问题通常在表 5-4 提到的配置文件中。使用文本编辑器检查这些文件的正确 IP 地址——或者更好是使用下一节描述的配置工具——通常会解决问题。
+
+网络可能极其复杂。严重问题可能源于此处未列出的各种来源。就此，我将列出几个问题，以显示你可以寻找什么的内容。完全的故障排除超出了本书的范围，尽管后面的章节中会针对 Web 服务器涵盖更多内容。你的 ISP 专家通常值得花钱来以最短的停机时间修复故障的网络错误。网络错误的一些可能原因包括：
+
+-   你正在使用多个子网，且网络地址和子掩码地址设置错误。
+-   你在网络上使用了多个不同的协议，它们之间正在相互干扰。
+-   你没有通知管理主名称服务器的人添加你选择的主机名。
+-   你没有使用分配给你的、在主网关路由器表中为你录入的 IP 地址。
+-   名称服务器 IP 地址是错误的，所以只有 IP 地址的 ping 有效。
+
+# Linux Web 服务器工具包
+
+路由配置错误。查看 `route` 命令的输出，或使用以下命令在网络脚本中查找路由命令：
+egrep route /etc/sysconfig/network-scripts/*
+
+互联网又崩溃了几个小时……
+
+# 修改你的网络配置
+
+如果你不想通过编辑文本文件来用新配置更新网络配置，有几个命令用于更新某些网络：`ifconfig` 工具和 `route` 工具。这些命令使用配置文件中的信息，无论是在启动期间还是 LISA 更新系统时。学习这些命令对于你以后参与设置网站和管理你的系统网络将非常有帮助。
+
+这里提到的两个工具都应该仅供 root 用户使用。如果其他用户可以使用它们，将带来安全风险。你可以从在线文档中学习这些工具的所有选项和用法（例如输入 `man ifconfig`）。
+
+# IFCONFIG 工具
+
+`ifconfig` 工具（接口配置）用于查看或配置 Linux 内核使用的网络接口。使用 `ifconfig` 是为了告诉 Linux 内核如何处理数据包、向何处发送信息等。
+
+系统上的每个网络接口都有独立的配置，并关联 IP 地址和网络流量。例如，如果你有一个安装了两块网卡的系统，它可以作为两个网络之间的网关。每块网卡都是一个独立的网络接口。每个网卡都有不同的 IP 地址和不同的特性，决定了如何处理网络流量，包括在两个网络之间路由数据包的过程。
+
+通过输入不带任何选项的 `ifconfig` 命令，可以看到系统中配置的网络接口，如下：
+
+```
+$ ifconfig
+
+```
+Link encap:Local Loopback
+inet addr:127.0.0.1 Bcast:127.255.255.255 Mask:255.0.0.0
+UP BROADCAST LOOPBACK RUNNING MTU:2000 Metric:1
+RX packets:0 errors:0 dropped:0 overflows:0
+type packets:13776 errors:0 dropped:0 overflows:0
+```
+

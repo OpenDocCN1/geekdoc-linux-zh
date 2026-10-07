@@ -1,0 +1,315 @@
+
+# Linux Web Server Toolkit
+
+- Filesystem Hierarchy Standard (FHS), 45
+- fill-in forms, 249, 250
+- find command, reviewing log files, 367
+- finger personal information service, gateways for, 407, 408
+- FIPS DOS program, 110, 113-115
+- Firewall Toolkit, 36
+- firewalls, 35-36, 427
+- learning more about, 431-432
+- refining, 431
+- #flatmod command, 253
+- FlexEd author tool, 225
+- footers, adding to every document in
+- FastTrack, 351
+- Ford Motor Company Web site, example of a site map, 18
+- form data, formatting as e-mail, 402-403
+- <FORM> tag, 256
+- METHOD option of, 270
+- FormGate database gateway, 406
+- FormMail e-mail gateway, 403
+- see HTML forms
+- forward slash (/), indicating the root of the filesystem, 74
+- forward order, creating, 349-350
+- frame-relay technology, 177
+- cards for support, 197-198
+- cost of, 179
+- Framemaker authoring tool, 225
+- free-distribution licenses, 31
+- free software, 29, 31
+- Free Software Foundation, 29
+- freeware, 31
+- Friesenhahn, Bob, 38
+- Front Page authoring tool, 225
+- #fsize command, 253
+- FTP, 66, 67, 375, 376
+- making files available for download, 379
+- setting up, 378-379
+- site administration, 379-380
+- FTP servers, anonymous login to, 377-388
+- FTP site, setting up, 377
+- ftpaccess file, 379-380
+- full backups, 450
+- full-service ISPs, 187
+- full-time connection to the Internet, 169
+- fully qualified name (FQDN), 106
+- functions, writing for FastTrack Server, 417
+- fwm window manager, 86
+- FWAIS database gateway, 405
+
+G
+- gateways, 106, 379-401
+- caching documents, 277-288
+- dfor databases, 404-406
+- for e-mail, 401-404
+- Generate Key, 322, 333
+- Generate Report, 340-342
+- geographic boundaries, Internet's effect on, 207
+- GET command, 306
+- GET Group Data, 229
+- GET method, 270
+- gathering data sent using, 275
+- using for non-form-based scripts, 271
+- GET request, removing special characters from, 274-275
+- getstats, 368-370
+- GIF format mapped graphics, 237
+- GIF formats, 237
+- Gmap Image Navigator package, 38
+- GMT (Greenwich Mean Time), 128
+- gnu c compiler, 418
+- Gnu General Public License (GPL), 29-30
+- Gnu info pages, gateway for 408
+- Gopher, 66, 376, 385-386
+
+# Index
+
+- gophkt2html, 21
+- .gov extension, 64
+- government agencies
+- tracking the number of visitors from, 360
+- Web sites sponsored by, 12-23
+- GPL (Gnu General Public License), 29-30
+- GPL software, 31
+- graphical default desktop of OpenLinux, 86
+- graphical setup utility, starting, 131
+- graphics- adding to Web, 237-239
+- displaying links as, 242
+- placement modifiers for, 238
+- placement of huge, 14
+- grep command
+- searching for patterns in log files, 366-367
+- searching the output of the ps command, 151
+- groups, 77
+- adding users, 268
+- creating, 328
+- deleting, 77
+- editing, 328-329
+- managing, 77
+- removing, 328
+- /groups file, 77
+- GSQL database gateway, 406
+- gwstat program, 370, 371
+- gwstats, 37
+
+# H
+
+- <H1> tag, 227
+- hackers, tracking with statistics, 364
+- handlers, 412, 416
+- hard disks
+- defragmenting, 110-113
+- gathering installation information, 103
+- partitions on, 108-109
+- preparing for installation, 108-115
+- setting up during installation, 121-131
+- sizing, 98-99
+- hardware
+- gathering installation information, 102-108
+- identifying during installation, 118-121
+- supported by Linux, 101-102
+- hardware parameters, 100-101
+- hardware requirements, evaluating for installation, 97-108
+- Harmony Central Web site, 10, 12
+- hash mark (#), referring to a link within a document, 243
+- <HEAD>
+- headers, sending back to the browser, 276
+- headings in HTML, 230-231
+- server-side extensions, 38
+- hidden interface element, HTML tag for, 257
+- hidden fields in forms, 256-266
+- hits setting preferences for, 338-340
+- using, 356-357
+- HOME environment variable, 91
+- /home/http/html directory, 164-165
+- /home subdirectory, 75
+- host-based firewall, 430
+- /host.conf file, 199
+- /hostname file, 141
+- hostnames, 106, 107
+- accessing FastTrack Server, 160
+- entering during installation, 126-127
+- resolving, 64
+- hosts file, 65, 141
+- host, URL for, 210
+- Metal authoring tool, 224
+- parameter with the <A> tag, 239, 244
+- .htaccess file in Apache, 281
+- HTML, 219
+- text areas in, 264-265
+- text entry in, 258-259
+- frames, 319
+- modes in word processors, 220
+- pages, creating, 19-21, 226
+- generating automatically, 439
+- guidelines on, 14
+- viewing existing, 225-226
+- headings in, 230-231
+- lists in, 231-238
+- marking text in, 229-230
+- origins of, 219-220
+- pre, language, 251
+- specifying file locations, 240
+- tools for creating, 224-225
+- writing in, 220-254
+- HTML Analyzer, 442-443
+- HTML conversion tools, 336
+- /html directory, 164-165
+- HTML tags. See tags
+- HTML validation buffer, 442
+- HTML validation tools, 36-37, 439-443
+- <html> tag, 227
+- html2, 251
+- html validation tool, 441
+- HTTP, 54, 61, 68
+- daemon, 53
+- browsers for reading, 68
+- organization of, 22-23
+- format, converting files to, 20-251
+- sending back to the browser, 276-277
+- HTTP_ACCEPT environment variable, 273
+- HTTP_REFER environment variable, 273
+- HTTP_USER_AGENT environment variable, 272, 273
+- httpd config, 152
+- changing default settings, 292-294
+- directives in, 282
+- buttons on, 266-267
+- check boxes in, 260
+- creating, 255-269
+- displaying interface elements in, 255-256, 257
+- drop-down selection lists, 262-264
+- example of, 267-269
+- fill-in, 249, 250
+- hidden fields in, 265-266
+- list of interface elements available for, 257-258
+- radio buttons in, 260-262
+- selection menus in, 262-264
+- soliciting e-mail with, 381
+- Hughes, Kevin, 368
+- <Hx> tags, 230
+- HyperMail e-mail gateway, 403
+- hypertext links, examples of, 241-242
+- Hypertext Markup Language. See HTML
+- <<html> tag, 229
+- Icon Editor, 89
+- graphics, assigning to files, 89
+- IDE hard drives, compared to SCSI, 99
+- ifconfig command, 145-146
+- diagnosing problems with PPP, 195
+- image placement tag, 221
+- Integrated Services Digital Network. See ISDN
+- Interface Configuration. See ifconfig command
+- <IMG> tag, 238, 244
+- interface elements, displaying in forms, 255-256, 257
+- immature Users page, 233
+- Internal Revenue Service. See IRS Web
+- International Characters page, 350-351
+- international visitors, tracking at Web, 358-359
+- Import Users, 330-331
+- Internet, 59. See also
+- advertising on, 209-211
+- effect on geographic boundaries, 207
+- integration of, 39
+- impressions, advertising charges
+- incremental backups, 450
+- index.html file, 164
+- index directive, 298, 301
+- inetd superserver, 70-71
+- a level playing field, 208
+- routing packets on, 198-199
+- secure transactions over, 10
+- speed of interchange on, 206
+- inetd superserver, sample configuration, 71
+- gateway, 408
+- magic, URL for, 50
+- information, providing on Web sites, 7-9
+- choosing the type, 167-184
+- costs associated with maintaining, 181, 182-183
+- costs associated with obtaining, 180, 181-183
+- initialization information, 151
+- initialization scripts, 45-46
+- initialization costs of, 182-183
+- initialization parameters, 101
+- making, 192-198
+- going costs, 184
+- options for, 169
+- sharing with a company, 186
+- speed and stability of, 179-180
+- technologies for connecting to, 173-184
+- Install a New Netscape FastTrack button, 314, 316
+- Install Certificate page, 332
+- installation default, 126
+- of Linux distributions, 45
+- disk image, checking for the latest, 116
+- Internet Protocol (IP), 61
+- protocols for exchanging information between systems, 66-68
+- layers of, 68-69
+- servers, 59
+- installation floppy disk, creating, 116
+- installation program, starting, 115-117
+- install.img file, 116
+- instances of an object definition, 394
+- Internet Service Providers. See ISPs
+- InterNIC, 61
+- limitations of, 393
+- database gateway, 406
+- as an object-oriented language, 397
+- interpreted languages, compiled to, 392
+- Java Development Kit (JDK), 394, 397
+- intranets, 107
+- Java interpreter, enabling on the FastTrack URL, 56
+- page of FastTrack Server, 335
+- IP, 61
+- Java Virtual Machine, 391-392
+- IP addresses, 61, 105, 107
+- JavaScript, 393, 394
+- for accessing Netscape FastTrack server, 160
+- learning more about, 395-396
+- limitations of, 393
+- acquiring, 190
+- JDK (Java Development Kit), 394
+- Domain Name Server, 127
+- joe editor, 153
+- identifying the class of, 61-62
+- mapping, 64
+- ipwadm utility, 62
+- KeepAlive directive, 288
+- IPv6 Standard, 62
+- Kernel Module Manager, 119-121
+- IRC gateways, 408
+- kernel modules, loading for your hardware, 119-121
+- kernel updates, frequency of, 52
+- kernel versions, 51-52
+- kernels, 30. See also Linux kernel
+- ISDN, 178, 180
+- ISDN connections, 197
+- ispell program, 438-439
+- making, 99
+- ISPs, 61
+- keyboard reader attacks, 422-423
+- choosing a, 184-190
+- Keyboard section of XF86Config, 137
+- colocating a Web server at, 171-173
+- cost of, 189-190
+- different types of, 185-187
+- factors for selecting, 187-190
+- monthly fees, 181
+- language directives, 300
+- providing domain names, 170
+- LanguagePriority, 300
+- start-up fees, 181
+- "last updated" date, 21
+- latency, 53
+- storing Web pages on, 169-171
+- technologies for connecting to, 173-184

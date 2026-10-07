@@ -1,0 +1,3 @@
++   Because of security concerns about running unknown programs, Java programs run in a browser can't access most system resources. Java programs run in a nonbrowser environment (a Java Virtual Machine) don't have that limitation.
+
++   In the next chapter, you'll learn more about using scripts and other mechanisms as gateways to provide many types of data via your Web site. The chapter also discusses various tools that you can create for your own specialized needs.
