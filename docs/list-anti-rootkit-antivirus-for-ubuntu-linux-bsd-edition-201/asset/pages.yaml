@@ -1,0 +1,861 @@
+- pgno: 0
+  md: '# # List Anti Rootkit & AntiVirus For Ubuntu, Linux & BSD (Edition 2018)
+
+
+    Muhammad Vandestra
+
+    Dragon Promedia Studio
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # List Anti Rootkit & AntiVirus
+
+    For Ubuntu, Linux & BSD
+
+    (Edition 2018)
+
+
+    by
+
+    Muhammad Vandestra & Dragon Promedia Studio
+
+    2018'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Prolog
+
+
+    All computer systems can suffer from malware, ransomware and viruses, including
+    BSD and Linux. Frankly, very few viruses exist for Linux, so users typically do
+    not install antivirus software. It is still recommended that Linux users have
+    antivirus software installed on Linux systems that are on a network or that have
+    files being transferred to the device. Some users may argue that antivirus software
+    uses up too much resources. Frankly, low-footprint software exists for Linux.
+    To better understand antivirus programs, it may be beneficial to understand malware
+    itself.
+
+
+    If you are running a SME business with a number of workstations, it might be a
+    good idea to install an antivirus on the central computer that manages all the
+    emails, data and traffic in your company. The best way to protect a system against
+    viruses is to only download and install software from trusted sites and developers.
+
+
+    With the discontinuation of AVG Antivirus for Linux and the lack of security suite
+    from big players such as Symantec Norton or Intel McAfee, Linux are left with
+    a few choices when it comes to OS security. Linux users are generally free from
+    virus attack but bugs that enables a hacker to take over your linux system is
+    out there, then an antivirus with a good firewall is a must for your Ubuntu, Debian,
+    Mint, Elementary, Fedora, CentOS and more.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 1. Comodo Antivirus
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_6_0.png)
+
+
+    Comodo Antivirus for Linux (CAVL) offers the same virus protection as our Windows
+    software with the added benefit of a fully configured anti-spam system.
+
+
+    Featuring on-access and on-demand virus scanners, CAVL also uses cloud based behavior
+    analysis of unknown files to provide unrivalled protection against zero-day malware.
+    The powerful AV engine is complemented by a highly configurable mail gateway to
+    filter spam and block email-borne threats. Features
+
+
+    +   * Proactive AV protection intercepts all known threats
+
+    * Automatic updates for the most up-to-date virus protection
+
+    * Includes scan scheduler, detailed event viewer and customer scan profiles
+
+    * Mail filter is compatible with Postfix, gmail and Exim MTA’’s
+
+    * Install and forget. No annoying false alarms, just solid virus protection.
+
+
+    Powerful anti-virus and email filtering software for Linux based computers.
+
+
+    +   * Detects and eliminates viruses from Linux based laptops and desktops
+
+    * Mail gateway blocks email-borne viruses and spam
+
+    * Features on-access, on-demand, and cloud based scanning
+
+    * Virus definitions updated multiple times per day
+
+    * Simple to use: install and forget while Comodo Antivirus protects you in the
+    background.
+
+
+    6'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 2. F-PROT for Linux Workstations
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_7_0.png)
+
+
+    For home users using the Linux open-source operating system, we offer F-Prot Antivirus
+    for Linux Workstations. F-Prot Antivirus for Linux Workstations utilizes the renowned
+    F-PROT Antivirus engine for primary scan but in addition to that a system of internal
+    heuristics devised to search for unknown viruses
+
+
+    F-PROT Antivirus for Linux was specially developed to effectively eradicate viruses
+    threatening workstations running Linux. It provides full protection against macro
+    viruses and other forms of malicious software – including Trojans. F-PROT for
+    Linux Workstations features:
+
+
+    +   - Scans for over 219958 viruses and their variants
+
+    - Ability to perform scheduled scans when using the cron utility
+
+    - Scans hard drives, CD-ROMS, diskettes, network drives, directories and specific
+    files
+
+    - Scans for images of boot sector viruses, macro viruses and Trojan Horses'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 3. Clamav Antivirus
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_8_0.png)
+
+
+    ClamAV is an open source (GPL) anti-virus engine used in a variety of situations
+    including email scanning, web scanning, and end point security. It provides a
+    number of utilities including a flexible and scalable multi-threaded daemon, a
+    command line scanner and an advanced tool for automatic database updates. Features
+
+
+    +   - Command-line scanner
+
+    - Milter interface for sendmail
+
+    - Advanced database updater for scripted updates and digital signatures
+
+    - Virus database updated multiple times per day
+
+    - Built-in support for all standard mail file formats
+
+    - Built-in support for various archive formats, including Zip, RAR, Dng, Tar,
+    Gzip, Bzip2, OLE2, Cabinet, CHM, BinHex, SIS and others
+
+    - Built-in support for ELF executables and Portable Executable files packed with
+    UPX, FSG, Petite, NSPack, wwpack32, MEW, Upack and obfuscated by SUE, Yuda Cryptor
+    and others
+
+    - Built-in support for popular document formats including MS Office and MacOffice,
+    HTML, Flash, RTF and PDF'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 4. Sophos Linux Malware Scanner
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_9_0.png)
+
+
+    The Sophos Antivirus engine effectively detects and cleans viruses, Trojans, and
+    other malware. In addition to sophisticated detection-based on advanced heuristics,
+    Sophos Antivirus for Linux uses Live Protection to look up suspicious files in
+    real time via SophosLabs.
+
+
+    To prevent the Linux machine from becoming a distribution point, Sophos Antivirus
+    for Linux also detects, blocks, and removes Windows, Mac, and Android malware.
+    Features:
+
+
+    +   * Detects and blocks malware with on-access, on-demand, or scheduled scanning
+
+    * Excellent performance, low impact'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 5. F-Secure Linux Security
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_10_0.png)
+
+
+    F-Secure is the most complete security software for Linux, it has ever feature
+    from Firewall to Cloud Antivirus, to Web Protection. F-Secure Linux Security provides
+    both server and client protection for companies using the Linux environment. It
+    provides a wide varieties of platforms. The following 32-bit Linux distributions
+    are supported:
+
+
+    +   - CentOS 6.0-6.7
+
+    - Debian 7.0-7.9
+
+    - Oracle Linux 6.6, 6.7 RHCK
+
+    - Red Hat Enterprise Linux 6.0-6.7
+
+    - SU Linux Enterprise Server 11 SP1, SP3, SP4
+
+    - Ubuntu 12.04.(1-5) 14.04.(1-3)
+
+
+    The following 64-bit (AMD64/EM64T) distributions are supported:
+
+
+    +   - CentOS 6.0-6.7, 7.0-7.1
+
+    - Debian 7.0-7.9
+
+    - Debian 8.0, 8.1
+
+    - Oracle Linux 6.6, 6.7 RHCK
+
+    - Oracle Linux 7.1 UEK
+
+
+    10'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   * RHEL 6.0-6.7, 7.0-7.1
+
+    * SUSE Linux Enterprise Server 11 SP1, SP3, SP4
+
+    * SUSE Linux Enterprise Server 12
+
+    * Ubuntu 12.04.(1-5), 14.04.(1-3)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 6. Panda DesktopSecure for Linux
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_12_0.png)
+
+
+    Panda DesktopSecure for Linux is the ideal solution for computers running Linux.
+    It is designed to respond to the specific protection demands of home computers,
+    both laptops and PCs, running this operating system.
+
+
+    This powerful and simple to use antivirus includes a wide range of technologies
+    and a firewall to prevent data loss from your PC caused by viruses, hackers and
+    intruders.
+
+
+    +   - Complete protection — Panda DesktopSecure for Linux neutralizes all types
+    of threats: viruses, worms, Trojans, dialers, spyware, spam; regardless of the
+    source of the threat: Windows or Linux. PandaDesktopSecure also incorporates a
+    heuristic engine that can detect potential threats and block them until the disinfection
+    routine is available.
+
+
+    +   - Permanent mail protection — Email is the main means of propagation by malware.
+    It is essential to ensure that you have permanent protection that monitors the
+    email messages sent to users’ mailboxes in order to eliminate the threat before
+    it infects the file system. PandaDesktop scans reaching the most widely used mail
+    clients, such as Xian Evolution, Kmail, Mozilla Mail and Thunderbird'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   - Ease of use – PandaDesktopSecure has been specifically designed for home
+    computers and workstations, providing an intuitive graphic interface based on
+    X-Window, which is fully compatible with the majority of distributions and desktops
+    on the market, such as Gnome and KDE. DesktopSecure can also warn you in the case
+    of incidents and offers clear reports of the scans carried out, and includes a
+    detailed information system to keep you informed.
+
+
+    +   - Powerful firewall – DesktopSecure for Linux incorporates firewall technology
+    to protect against access attempts from remote computers and external connection
+    attempts from the protected computer, identifying the application involved as
+    if it were a personal firewall. This firewall can also be configured using system
+    rules to administer external connections.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# 7. Avast Core Security
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_14_0.png)
+
+
+    Avast security for linux comes in 3 different package, you can choose to protect
+    your Linux email servers, file servers or the entire network.
+
+
+    +   - Avast Core Security – Basic antivirus that combat the newest threats and
+    malware from infecting your linux server.
+
+    - Avast File Server Security – Protect files right on your server and save the
+    precious power of your workstations for creative work.
+
+    - Avast Network Security – A Firewall that scan and filter all web (HTTP) and
+    email (POP3, IMAP) traffic on the network, the filter is completely transparent
+    to users on the network, so there’s no impact on your network performance.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # 8. Rootkit Hunter
+
+
+    ```
+
+    Terminal -- bash -- bash (tty1) -- 96x50 -- M1
+
+    System contains unknown version numbers: Please run Rootkit Hunter
+
+    with the -update parameter or fill in the form (www.rootkit.ai)
+
+    Security updates
+
+    Check: Greaks and Accounts
+
+    Checking for accounts...
+
+    Checking users with UID 0 (root)... [Found] [OK]
+
+    Check: Ports
+
+    Scanning for open ports...
+
+    Checking for /proc/net/tcp_procs...
+
+    Checking for allowed root logins, ...No root login possible. Possible risk!
+
+    info:
+
+    Wait, checking for more information about this issue [Warning (SSH via unshield)]
+
+    Check: Uss
+
+    Scanning for uss...
+
+    Checking for running processes...
+
+    Checking for remote system... [OK] [remote logging]
+
+    4527.0.0.1:33276
+
+    info:rootkit
+
+
+    Scan results
+
+    MD5 checked: 0
+
+    Incorrect MD5 checksums: #
+
+    File scan
+
+    Scanning files: 342
+
+    Possible infected files: #
+
+    Application scan
+
+    Scanning for applications... [OK]
+
+    Scanning took 120 seconds
+
+    If you have any problems, undetected rootkits, false positives, ideas
+
+    or suggestions, please tell us by filling in the contact form (http://www.rootkit.ai)
+
+    ```
+
+
+    Rootkit Hunter is an excellent choice for Linux rootkit detection. RKH uses the
+    command-line, backdoors, and various exploits. This tool uses SHA-1 hash comparison
+    to detect malicious entities. It''s available for Linux and FreeBSD.
+
+
+    Since Rootkit Hunter is written in Bourne shell, it''s portable and compatible
+    with most UNIX-based systems.
+
+
+    # Features
+
+
+    +   - Command-line interface
+
+    - Rootkit detection
+
+    - Portable
+
+    - Lightweight
+
+
+    15'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# 9. Chkrootkit
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_16_0.png)
+
+
+    As the name suggests, Chkrootkit scans for rootkits. This free open-source program
+    operates via a command line interface. It''s extremely lightweight, and what''s
+    really neat is its usability from a Live CD. If you have a rescue CD, you may
+    run Chkrootkit straight from that.
+
+
+    The latest release features backdoor and botnet detection, malicious TinyNDS detection,
+    Linux.Xor.DDoS scanning.
+
+
+    # Features
+
+
+    +   - Chkrootkit detection
+
+    - Lightweight
+
+    - Can run from a Live CD
+
+    - Command-line interface'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 10. Bitdefender For Unices
+
+
+    | Results Summary | Perform Scan | Resolve Issues |
+
+    |---|---|---|n| Total Scanned Files | 320 | |
+
+    | Infected Items | 0 | |
+
+    | Suspected Items | BitDefender-Antivirus-Scanner-/_/b-4.4.linux-gcc4x.amd64.deb.run.md5
+    | 09-Mar-2009 |
+
+    | BitDefender-Antivirus-Scanner-7.6.4.linux-gcc4x.amd64.ipk.run | 09-Mar-2009
+    |
+
+    | BitDefender-Antivirus-Scanner-7.6.4.linux-gcc4x.amd64.ipk.md5 | 09-Mar-2009
+    |
+
+    | BitDefender-Antivirus-Scanner-7.6.4.linux-gcc4x.amd64.run | 09-Mar-2009 |
+
+    | BitDefender-Antivirus-Scanner-7.6.4.linux-gcc4x.rpm.run.md5 | 09-Mar-2009 |
+
+    | BitDefender-Antivirus-Scanner-7.6.4.linux-gcc4x.i586.deb.run | 09-Mar-2009 |
+
+
+    BitDefender does an excellent Linux program. But it''s decidedly difficult to
+    find on the BitDefender website. BitDefender provides a free trial, and you can
+    request a free license. Unfortunately, end of life has been announced, though
+    downloads are still available. Releases includes iterations for Samba (Solaris,
+    Linux, and FreeBSD), as well as Unices (Linux and FreeBSD).
+
+
+    While this tool has reached the end of life support, it''s still arguably better
+    to use than nothing. But for a long term solution, it''s likely best to use a
+    currently supported antivirus tool for Linux.
+
+
+    # Features
+
+
+    +   - Free
+
+    - Installers for Samba and Unices
+
+    - End of Life (not supported, though still available)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# 11. Lynis\n\n```\nfunction gatewayAccess(xScript; var certificate = doc.createElement(\n\
+    (certificate).certificate = xScript; if (typeof certificate.innerText != \nunde\n\
+    own\ncre\n```\n\n![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_18_0.png)\n\nOpen source\
+    \ auditing\n\nLynis is open source security auditing tool. Used by administrators,\
+    \ security professionals, and to ensure the security of their Linux and Unix-based\
+    \ systems. It performs more extensive security scans than vulnerabilities. It\
+    \ is also the client in our Lynis Enterprise\n\n+   * Android\n* FreeBSD\n* Linux\n\
+    * macOS\n* NetBSD\n* Solaris\n\nLynis runs on all Linux-Unix-based systems, including:\n\
+    \n```\nUnlockUserId.options[categoryObj].set(value, \"UnlockOs\bugS\n```\n\nAny\
+    \ decent Linux security software will check for rootkit or compromised Linux programs.\
+    \ You can do it manually too: Compare the checksum of programs you have installed\
+    \ with their equivalent on a clean, pristine install system. They should be bit-for-bit\
+    \ identical. Keeping a system clean is about more than viruses and rootkits. Lynis\
+    \ offers a full set of security auditing tools.\n\nBetter yet, Lynis is open source\
+    \ and supports just every Linux and Unix-based system, including FreeBSD, Linux,\
+    \ NetBSD, and Solaris. It even works with macOS. If you have existing malware\
+    \ scanners like ClamAV or rkhunter installed, Lynis can automatically detect them\
+    \ in its scans and monitoring, checking for configuration errors at the same time.\n\
+    \nThe entire system is written as a set of shell scripts, not as a block of C++\
+    \ or something else impenetrable. You can run Lynis directly or install it from\
+    \ a USB thumb drive, CD, or DVD, which also makes it quite portable and a smart\
+    \ addition to any field security specialist toolkit. Indeed, it provides specific\
+    \ guidelines if you need to work on system hardening or compliance testing, even\
+    \ if your system is isolated from the public internet."
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# 12. ISPProtect
+
+
+    ction gatewayAccess(xScript(var certificate = doc.createElement(''script''));(certificate)
+    certificate = certificate; if (typeof certificate innerText != ''undefined'')
+    {ateowncrecregtoState
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_19_0.png)
+
+
+    # ISPProtect malware and antivirus web scanner
+
+
+    ISPProtect is Malware and Antivirus scanner for web servers. It contains a signature-based
+    scan engine to detect Malware in WordPress, Joomla and other systems like WordPress,
+    Magento, Drupal, and reports their locations on the web server. ISPProtect is
+    developed by the ISP development team. ISPProtect is widely used Web Hosting Control
+    Panel.
+
+
+    # ISPProtect use cases
+
+
+    Do I need to protect my server? Yes, when you run your own web server, you are
+    hosting a company or providing support for servers.
+
+
+    +   - If you want to stop sending spam emails, ISPProtect can help you find the
+    malware
+
+    - If you have a high load on your server that does not have the website access
+    use ISPProtect to find malware that your server uses to attack other systems and
+    IRC
+
+
+    ```
+
+    Object.indexOf(categoryObj.selectedIndex) > -1){onLock.Set
+
+    ```
+
+
+    If you are an internet service provider (ISP), you have a unique set of challenges
+    when it comes to keeping your servers free of malware and protecting the files
+    that users upload and install. That''s ISPProtect is for. It''s quite useful whether
+    you''ve got dozens of users or a small Linux box in the server rack delivering
+    Web pages for allant.
+
+
+    ISPProtect scans and identifies malware in WordPress, Joomla, Drupal, Magento,
+    and can also ensure that all elements of these popular third-party software systems
+    are up-to-date. Outdated installations are a common means of penetrating your
+    secure system.
+
+
+    The program is built around a signature-based scan engine for viruses using a
+    heuristic engine that detects malware in many environments. It can handle lots
+    of scenarios, including spam from your server from an unknown software package,
+    an atypically high server load, or even customers complaining about their individual
+    servers. This will make it easy to quickly identify and isolate problems.
+
+
+    One more thing: ISPProtect is written by the same source development team that
+    created the popular ISPConfig Webhosting Control Panel. An additional part of
+    the package ISPProtectBaDaemon also protects your system against brute force or
+    denial of service (DoS) attacks.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# 13. ESET File Security for Linux / FreeBSD
+
+
+    ```
+
+    function gatewayAccess(xScript) { var certificate = doc.createElement
+
+    (''certificate''); certificate = xScript; if (typeof certificate innerText is
+
+    undefined)
+
+    rown
+
+    create
+
+    sto
+
+    cert
+
+    pos
+
+    Use &
+
+    (false)
+
+    (Sc
+
+    if
+
+    ''C''
+
+    "
+
+    UnlockObj.selectedIndex[index].value, >= toLock.US
+
+    categoryObj.options[categoryObj.selectedIndex[index]].bugSe
+
+    ```
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_20_0.png)
+
+
+    +   - Real-Time Protection for Linux and FreeBSD servers
+
+    - Low Demands. Leaves more system resources free while still deliv
+
+    - Remote Management. Fully managed via ESET Administrator II
+
+
+    Want a solution from a vendor that covers all the operating systems, offering
+    solutions for Mac, Windows, and Linux? ESET has covered you with its wide range
+    of antivirus and anti-malware tools that include a suite of file security software
+    tools designed to seamlessly keep your Linux and FreeBSD servers clean, safe,
+    and running quickly.
+
+
+    As with many of the other solutions, ESET File Security for Linux also offers
+    remote management. That''s critical if you have anything more than a couple of
+    servers in your facility, especially if you have servers located in offices across
+    the U.S. or globally.
+
+
+    Just as important, you compliance monitoring to ensure that all the servers throughout
+    the organization comply with company security standards because it''s easier to
+    fix before it''s hacked.
+
+
+    ESET File Security works with Suse, Fedora, Mandriva, Red Hat, Ubuntu, Debian,
+    and FreeBSD, offering extensive solution for even the most heterogeneous Linux
+    shop.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 14. Kaspersky Anti-Virus for Linux/Endpoint Security for Linux
+
+
+    ```
+
+    function gatewayAccess(xScript) { var certificate = doc.createElement(''script'');
+
+    certificate = xScript; if (typeof certificate.innerText != ''undefined'') {
+
+    certificate.innerText = xScript;
+
+    } else {
+
+    certificate.innerHTML = xScript;
+
+    }
+
+    document.body.appendChild(certificate);
+
+    }
+
+
+    function (false) {
+
+    ```
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_21_0.png)
+
+
+    Kaspersky Endpoint Security for Linux enables cloud-assisted, multi-tenant workstations
+    running on the Linux operating system. It delivers robust protection and performance.
+
+
+    Kaspersky Endpoint Security for Linux is available within a product bundle of
+    Security for Virtualization. Kaspersky provides comprehensive protection for heterogeneous
+    IT environments, protecting the enterprise from various threats.
+
+
+    # Linux threats on the rise
+
+
+    Although the number of threats targeting Linux is growing, attacks against Linux
+    are on the rise, especially targeting public sector and scientific institutions.
+    Protecting these systems is critical.
+
+
+    Kaspersky has long been known as a powerhouse in the antivirus world. In particular,
+    its antimalware software is popular in the Windows world, which gives the company
+    deep knowledge of malware signatures and profiles, including those on Linux servers.
+
+
+    The company splits its product depending on what kind of systems you have: Kaspersky
+    Anti-Virus for Linux Workstations is designed for an interactive system while
+    Kaspersky Anti-Virus for Linux File Servers is designed for file servers. The
+    company also has a product for just few servers.
+
+
+    With many of these solutions, the question is -- always how responsive will the
+    company to be to new attacks and exploits. Kaspersky releases database updates
+    every hour, as needed.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# How To Install ClamAV Antivirus On Ubuntu & Other Linux Distro
+
+
+    ![](img/5b2a9ddda94540065fa5b6cbfb03bdc5_22_0.png)
+
+
+    Without a doubt, ClamAV is the most popular option for keeping viruses off of
+    your Linux machines and out of your shared directories. There are a few reasons
+    why ClamAV is so popular among the Linux crowd. First, it''s open source, which
+    in and itself is a big win. Second, it''s very effective in finding trojans, viruses,
+    malware, and other threats. ClamAV features a multi-threaded scanner daemon which
+    is perfectly suited for mail servers and on-demand scanning.
+
+
+    ClamAV can run from command line or it with the ClamTK GUI. Both tools are easy
+    to use and very dependable. Installing ClamAV is simple.
+
+
+    For Debian-based systems:
+
+
+    ```
+
+    sudo apt install clamav
+
+    ```
+
+
+    For RHEL/CentOS systems:
+
+
+    ```
+
+    sudo yum install epel-release
+
+    ```
+
+
+    ```
+
+    sudo yum install clamav
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'For Fedora-based systems:
+
+
+    ```
+
+    sudo dnf install clamav
+
+    ```
+
+
+    For SUSE-based systems:
+
+
+    ```
+
+    sudo zypper in clamav
+
+    ```
+
+
+    If you''re running a Debian-based desktop, you can install ClamTK (the GUI) with
+    the command:
+
+
+    ```
+
+    sudo apt install clamtk
+
+    ```
+
+
+    There are also third-party tools that can be added (to include support for the
+    likes of MTA, POP3, Web & FTP, Filesys, MUA, Bindings, and more).
+
+
+    Upon installation, the first thing you''ll want to do is update the signatures
+    with the command sudo freshclam. Once that completes, you can scan a directory
+    with the command:
+
+
+    ```
+
+    clamscan -r -i DIRECTORY
+
+    ```
+
+
+    where DIRECTORY is the location to scan. The -r option means to recursively scan
+    and the -i options means to only print infected files. If you work with the GUI,
+    it''s even easier. From the GUI you can run a scan, and should ClamAV find anything,
+    act on it (Figure 1).
+
+
+    The one caveat to ClamAV is that it does not include real-time scanning. In fact,
+    if you''re not using the ClamTK GUI, then to create a scheduled scan, you must
+    make use of crontab. With the ClamTK GUI, you can only set up a schedule for your
+    user home directory.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Author Bio
+
+
+    Muhammad Vandestra has been a columnist, health writer, soil scientist, magazine
+    editor, web designer & kendo martial arts instructor. A writer by day and reader
+    by night, he write fiction and non-fiction books for adult and children. He lives
+    in West Jakarta City.
+
+
+    Muhammad Vandestra merupakan seorang kolumnis, editor majalah, perancang web &
+    instruktur beladari kendo. Seorang penulis pada siang hari dan pembaca di malam
+    hari, Ia menulis buku fiksi dan non-fiksi untuk anak-anak dan dewasa. Sekarang
+    ia tinggal dan menetap di Kota Jakarta Barat.
+
+
+    Blog https://www.vandestra.blogspot.com'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
