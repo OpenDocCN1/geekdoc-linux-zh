@@ -1,0 +1,32 @@
+
+`MPI_IRECV(buf, count, datatype, source, tag, request, ierror)`
+
+`<type> buf(*)`
+
+`integer count, datatype, source, tag, comm, request, ierror`
+
+`MPI_WAIT(request, status, ierror)`
+
+`integer request, status(MPI_STATUS_SIZE), ierror`
+
+`MPI_TEST(request, flag, status, ierror)`
+
+`logical flag`
+
+`integer request, status(MPI_STATUS_SIZE), ierror`
+
+`MPI_WAITALL(count, array_of_requests, array_of_statuses)`
+
+`integer count, array_of_requests(*), array_of_statuses(MPI_STATUS_SIZE,*), ierror`
+
+`MPI_WIN_CREATE(base, size, disp_unit, info, comm, win, ierror)`
+
+`<type> base(*)`
+
+`integer(kind=MPI_ADDRESS_KIND) size`
+
+`integer disp_unit, info, comm, win, ierror`
+
+`MPI_WIN_FREE(win, ierror)`
+
+`integer win, ierror`
