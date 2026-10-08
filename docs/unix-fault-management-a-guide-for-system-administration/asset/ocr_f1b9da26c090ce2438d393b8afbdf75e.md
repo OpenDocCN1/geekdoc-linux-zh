@@ -1,0 +1,3 @@
+be running the wrong version of the service. Compare the version of the service on a working system with that on a system where the service is failing. To check the version of a service such as FTP, type what ftppd.
+
+A service may exist on the system, but it may not be running because of security reasons. If a service is not being started, check whether the optional file /var/adm/inetd.sec is being used. This file can be used to deny or allow access to each network service. If the user is authorized, make sure that this file is not configured to deny access. Some services have their own specific security files. For example, FTP denies access to local accounts listed in /etc/ftpusers.

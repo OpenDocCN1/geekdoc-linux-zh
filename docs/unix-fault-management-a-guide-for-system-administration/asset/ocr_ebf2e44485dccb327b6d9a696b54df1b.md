@@ -1,0 +1,11 @@
+# # Enterprise Management
+
+Much of this book is focused on tools for monitoring a single UNIX system. You may, however, be responsible for monitoring tens or hundreds of systems. Also, it is likely that you are managing a heterogeneous environment in which it is important to monitor heterogeneous systems consistently. For example, a company may have decided to migrate from UNIX to NT, but does not want to replace their UNIX applications, such as SAP. The company may choose to keep a portion of the application (e.g.. the database server) on UNIX, while moving the application servers to NT. Using consistent tools for monitoring different platforms can make your job easier. Standards such as SNMP are especially important for this type of environment.
+
+This chapter focuses on some of the issues that arise if you are managing multiple systems. This includes issues with monitoring systems across an enterprise. A section on using event correlation tools discusses how you can reduce the volume of messages that can be generated in an enterprise environment. We'll look at some issues with monitoring multiple systems, including clusters. There may also be cross-platform monitoring issues for systems in a heterogeneous environment. And finally, since no single tool will solve all of your monitoring needs, we'll look at some of the tools that can be used together for this purpose.
+
+# ## Monitoring Across an Enterprise
+
+There are problems with trying to manage a large number of systems. Typically, an IT department will be responsible for managing multiple systems, most likely on multiple platforms. Big companies have a large number of systems that need to be managed.
+
+Keeping track of multiple systems on multiple platforms can be a complex task. Some companies want to implement a lights-out environment, in which operators are not required at every computing location in the enterprise. Other companies require the availability of systems 24 hours a day, 7 days a week. Most companies also have a disaster recovery plan to protect their critical data and application resources. These are some of the issues you must deal with when managing an enterprise of computer systems and applications.

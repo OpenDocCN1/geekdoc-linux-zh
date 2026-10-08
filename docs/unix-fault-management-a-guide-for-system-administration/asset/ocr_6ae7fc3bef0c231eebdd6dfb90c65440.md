@@ -1,0 +1,7 @@
+# **Figure 3.1 IT/O main windows.**
+
+![](bbox=[0.07, 0.12, 0.92, 0.58])
+
+IT/O comes with predefined monitors and templates. Templates are used to configure monitors, to define message conditions, and to match patterns on received events. Templates also define Event Browser message text, severity levels, message groups, instructions, and actions. Monitors are predefined for e-mail, CPU utilization, swap utilization, and filestem utilization, among other things. Log file templates monitor system log files for system errors, su (switch user) events, logins, logouts, and kernel messages. Templates and message conditions can be modified so that the operator gets paged under certain conditions.
+
+Many other tools plug into IT/O to provide additional monitoring and management capabilities. IT/O has add-on modules for the managed node, called SMART Plug-Ins (SPIs). These modules provide customized knowledge of databases and applications via templates and monitors. For example, SPIs are available for SAP R/3, Baan, Oracle, and Informix. ClusterView is an HP OpenView application that provides monitoring of high availability clusters. Combined with the ability to do network and system monitoring, IT/O can provide a consistent interface for monitoring all of your components.

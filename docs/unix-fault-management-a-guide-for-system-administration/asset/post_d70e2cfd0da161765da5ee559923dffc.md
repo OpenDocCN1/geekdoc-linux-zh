@@ -1,0 +1,366 @@
+
+## F
+- Fault management categories, 4–11
+- defined, 3–4
+- disk monitoring, 101
+- events, 3–4
+- future trends, 261–3
+- Faults, 3
+- database monitoring, 213–14
+- defined, 6
+- external service failure/loss, 8–9
+- peripheral failure, 8
+- software failure, 7
+- system hardware failure, 6–7
+- system monitoring, 43
+- FCS, 335
+- FDDI, 335
+- FDDI status commands, network monitoring, 148–9
+- File I/O, disk monitoring, 122
+- Firewall, 335
+- Fixed-size buffer caches, 128
+- Fsck command, disk monitoring, 102–4
+- FTP, 159–60
+
+## G
+- GlancePlus, 84–6
+- application monitoring, 207–9
+- defined, 335
+- disk monitoring, 124–5
+- network monitoring, 168–70
+- system monitoring, 84–6
+- GlancePlus Pak 2000, 73
+- database monitoring, 233–5
+- event monitoring tools, 73
+- IT/Operations, 21
+- system monitoring, 73
+- HA ATM, network monitoring, 150
+- HA Observatory, 78
+- HARAYMON, disk monitoring, 117–18
+- Hardware event severity levels, disk monitoring, 114
+- Host Resources MIB, 285–9
+- HP Cluster MIB, 298–300
+- HP Predictive Support, 77–8
+- HP-UNIX MIB, 294–8
+
+## I
+- ICMP, 335
+- Ifconfig command, network monitoring, 152
+- Informix Private Database MIB
+  - database monitoring, 225
+  - standards, 319–24
+- Inode, 335
+- Instrumentation
+  - application monitoring
+    - described, 183–4
+    - DMI, 185
+    - pstat, 185–8
+    - SNMP, 184–5
+  - disk monitoring
+    - described, 107–8
+    - Desktop Management Interface (DMI), 109–10
+    - Simple Network Management Protocol (SNMP), 108–9
+  - system monitoring
+    - described, 54
+    - DMI (Desktop Management Interface), 56
+    - MIB (Management Information Base), 54
+    - MIB-II, 54–5
+    - SNMP, 54–5
+- Interconnect and router manager, network monitoring, 164–5
+- Ioscan command, 45
+  - disk monitoring, 105
+  - network monitoring, 142
+  - system monitoring, 45
+- Iostat command, 45–6
+- IP, 335
+- IP address, 335
+- Ipcs command, 46
+- ISO, 335
+- IT Masters MasterCell, 255–7
+- IT/Operations (IT/O), 12, 13, 71–3, 257
+  - Application Bank, 16, 21
+  - Application Desktop, 72
+  - application monitoring, 188–9
+  - components, monitored, 16–18
+  - defined, 335
+  - described, 16
+  - developer’s kit, 19–20
+  - diagnostic capabilities, 21
+  - disk monitoring, 118–19
+  - enterprise management, 258–9, 259–60
+  - GlancePlus Pak 2000, 21
+  - Message Browser, 16, 18–19, 72
+  - Message Groups, 16, 72
+  - monitor discovery and configuration, 19
+  - monitoring features, 18–19
+  - multiplatform support, 17
+  - network monitoring, 138–9
+  - Node Bank, 16, 18, 72
+  - notification methods, 20–1
+  - opcom API, 20
+  - SMART Plug-Ins (SPIs), 17
+  - web site, 21
+
+## J
+- JFS, 335
+
+## K
+- Kernel, 335
+
+## L
+- LAN Emulation, 335
+- Lanadmin command, network monitoring, 143–5
+- Lanscan command, network monitoring, 143
+- Linkloop command, network monitoring, 145
+- Logical I/O, disk monitoring, 122
+- Lvdisplay command, disk monitoring, 105–6
+- LVM, 336
+
+## M
+- MAC, 336
+- Mailstats command, system monitoring, 46
+- Managed node, 336
+- Management Information Base (MIB), 54, 264–8, 336
+- Management Information Format (MIF), 324–5, 336
+- Management station, 336
+- Mb/ps, 336
+- MC/LackManager, 336
+- MCSE, 336
+- MC/ServiceGuard, 6, 59–62
+  - application monitoring, 189–90
+  - database monitoring, 225–7
+  - defined, 336
+  - network monitoring, 147–8
+  - notification methods, 15
+- MC/ServiceGuard MIB, 300–2
+- MeasureWare, 81–3
+  - application monitoring, 202–7
+  - components, monitored, 39
+  - defined, 336
+  - described, 38–9
+  - developer's kit, 41
+  - diagnostic capabilities, 41
+  - disk monitoring, 123–4
+  - monitor discovery and configuration, 40–1
+  - monitoring features, 39–40
+  - network monitoring, 148, 167–8
+  - notification methods, 41
+  - web site, 41
+- Memory and swap contention, detecting, 94
+- Memory fault recovery case study
+  - described, 97
+  - fixing failure and restoring service, 98–9
+  - memory board failure, 98
+  - setting up monitoring and reconfiguration, 98
+  - verifying configuration, 97–8
+- Memory utilization, 81
+- MERIT, 336
+- MIB-II, 54–5
+  - defined, 336
+  - standards, 268–73
+- Monitoring frameworks
+  - BMC PATROL, 34–8
+  - components, monitored, 13
+  - described, 12–13, 13–16
+  - developer's kits, 14
+  - diagnostic capabilities, 15–16
+  - enterprise management frameworks, 12–13
+  - Event Monitoring Service (EMS), 24–31
+  - HP IT/Operations, 12, 13
+  - IT/Operations, 16–21
+  - MeasureWare, 38–41
+  - monitor discovery and configuration, 13–14
+  - monitoring features, 13
+  - notification methods, 14–15
+  - PLATINUM ProVision, 31–4
+  - Tivoli Management Environment (TME), 12, 13
+  - Unicenter TNG, 12, 13, 22–4
+- MPI, 336
+- MTU, 336
+- Multiple system, See Enterprise management
+
+## N
+- NetManager, 336
+- NetMetrix, 336
+- NetMetrix Site Manager, network monitoring, 167
+- Netstat, network monitoring, 163–4
+- Netstat command, network monitoring, 153–6
+- Netti command, network monitoring, 156–7
+- NetView, 336
+- Network General Sniffer Pro, network monitoring, 172
+- Network monitoring
+  - avoiding network problems, 175
+  - cable failures, See subhead: network interface card and cable failures
+  - commands and tools
+    - arp command, 152–3
+    - ATM status commands, 149–50
+    - described, 142, 148
+    - FDDI status commands, 148–9
+    - ifconfig command, 152
+    - ioscan command, 142
+    - lanadmin command, 143–5
+    - lanscan command, 143
+    - linkloop command, 145
+    - netstat command, 153–6
+    - netti command, 156–7
+    - ping command, 151–2
+    - X.25 status commands, 149
+  - components, 134–5
+  - graphical network status monitors
+    - described, 135
+    - Enterprise SyMON, 139–40
+    - IT/Operations (IT/O), 138–9
+    - Network Node Manager (NNetM), 135–8
+    - Unicenter TNG, 139
+  - links, using additional products to monitor network
+    - EMS HA Monitors, 146
+    - MC/ServiceGuard, 147–8
+    - MeasureWare, 148
+  - link-specific commands
+    - ATM status commands, 149–50
+    - described, 148
+    - FDDI status commands, 148–9
+    - HA ATM, 150
+    - X.25 status commands, 149
+  - network hosts
+    - described, 162–3
+    - interconnect and router manager, 164–5
+    - netstat, 163–4
+    - Network Node Manager (NNetM), 163
+  - network interface card and cable failures
+    - commands and tools, 142–5
+    - described, 140–1
+    - links, using additional products to monitor network, 146–8
+    - link-specific commands, 148–50
+    - SNMP instrumentation, 141–2
+  - network problems
+    - avoiding, 175
+    - recovering from, 175–6
+    - isolating the fault, 176
+    - network and lower layers, 176–7
+    - transport and higher layers, 177–8
+  - network services
+    - described, 156
+    - DHCIP/BOOTP servers, 158–9
+    - DNS/NIS name servers, 159
+    - FTP, 159–60
+    - NFS, 160–2
+    - remote connectivity, 162
+    - web servers, 162
+  - networking and transport protocols
+    - commands and tools, 151–7
+    - described, 150–1
+    - SNMP instrumentation, 151
+  - performance data, collecting network
+    - BMC PATROL, 171–2
+    - described, 165
+    - GlancePlus, 168–70
+    - MeasureWare, 167–8
+    - NetMetrix Site Manager, 167
+    - Network General Sniffer Pro, 172
+    - PerfView, 170–1
+    - RMON instrumentation, 165–7
+    - RMON-II instrumentation, 165–7
+  - performance data, using network
+    - avoiding performance issues, 173
+    - congestion, detecting network, 174–5
+    - described, 173
+    - overloaded network servers, detecting, 173–4
+    - recovering from network problems, 175–6
+      - isolating the fault, 176
+      - network and lower layers, 176–7
+      - transport and higher layers, 177–8
+- Network Node Manager (NNetM), 57–9
+  - defined, 337
+  - enterprise management, 258–9, 260
+  - network monitoring, 135–8, 163
+- Network Services MIB, 302–4
+- NFS
+  - defined, 336
+  - network monitoring, 160–2
+- NIS, 337
+- Notification methods
+  - BMC PATROL, 37
+  - described, 14–15
+  - DMI notification, 15
+  - Event Monitoring Service (EMS), 30
+  - IT/Operations, 20–1
+  - MC/ServiceGuard, 15
+  - MeasureWare, 41
+  - paging, 14
+  - PLATINUM ProVision, 33–4
+  - SNMP traps, 15
+  - Unicenter TNG, 24
+
+## O
+- OID, 337
+- OmniGuard/IT A, 75
+- OpenView Event Correlation Services (ECS), 253–4
+- Oracle Enterprise Manager MIB, 314–16
+- Oracle Enterprise Manager (OEM), database monitoring, 221–4
+- Oracle Management Pak, database monitoring, 235–6
+- Oracle MultiProtocol Interchange MIB, 316–18
+- Oracle Names, 337
+- Oracle Names MIB, 312–14
+- Oracle Network Listener, 337
+- Oracle Network Listener MIB, 310–12
+- Oracle Private Database MIB, 307–10
+- Oracle Private MIBs, database monitoring, 224–5
+- Oracle Trace, database monitoring, 230–2
+- Oracle VS tables, database monitoring, 232–3
+- OSI, 337
+- Overloaded network servers, detecting, 173–4
+- Paging, 81
+- Performance data, collecting
+  - BMC PATROL, 171–2
+  - BMC PATROL for UNIX, 89–91
+  - buffer cache queue length, 81
+  - Candle, 91
+  - context switches, 81
+  - CPU run queue length, 81
+  - CPU utilization, 81
+  - described, 80–1, 165
+  - system monitoring
+    - BMC PATROL for UNIX, 89–91
+    - buffer cache queue length, 81
+    - Candle, 91
+    - context switches, 81
+    - CPU run queue length, 81
+    - CPU utilization, 81
+    - described, 80–1
+    - GlancePlus, 84–6
+    - MeasureWare, 81–3
+    - memory utilization, 81
+    - paging, 81
+    - PerfView, 86–9
+    - swapping, 81
+    - virtual memory I/O, 122
+  - Performance issues, avoiding
+    - database monitoring, 243–4
+
+## P
+- Package, 337
+- Passwords, 74
+- Performance data, collecting
+  - disk monitoring
+    - block I/O, 122
+    - BMC PATROL, 126–7
+    - described, 122
+    - file I/O, 122
+    - GlancePlus, 124–5
+    - logical I/O, 122
+    - MeasureWare, 123–4
+    - PerfView, 125–6
+    - physical I/O, 122
+    - raw I/O, 122
+    - virtual memory I/O, 122
+  - GlancePlus, 84–6, 168–70
+  - MeasureWare, 81–3, 167–8
+  - memory utilization, 81
+  - NetMetrix Site Manager, 167
+  - Network General Sniffer Pro, 172
+  - physical I/O, 122
+  - raw I/O, 122
+  - RMON instrumentation, 165–7
+  - RMON-II instrumentation, 165–7
+  - swapping, 81

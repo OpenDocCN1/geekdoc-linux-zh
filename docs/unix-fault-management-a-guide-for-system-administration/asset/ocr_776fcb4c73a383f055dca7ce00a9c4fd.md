@@ -1,0 +1,11 @@
+# **UNIX Futures**
+
+**S**ystem vendors will be making various fault management improvements over the next few years. Systems themselves are becoming more resilient. More monitors are being written to detect events, and system vendors are providing facilities to make troubleshooting and recovering from problems easier. This chapter describes some of the capabilities being added by the two key UNIX server providers, Sun and Hewlett-Packard.
+
+# ### **Future Trends in Fault Management**
+
+More recovery and repair capabilities are being built into servers. Server providers are making efforts to reduce the failure rates of individual hardware components. Currently, on many servers, the loss of a processor causes the system to fail. In the future, the capability to detect a problem, de-allocate the processor, and continue operations with reduced performance will be standard on multiprocessor systems. The problem will still be reported, so that a repair can be made at a later time. You will also be able to add and remove all the key server components, such as CPU, memory, and I/O, without bringing down the system.
+
+Because systems will no longer fail in these situations, your ability to obtain individual component failure events will become more important than ever. Otherwise, you may have difficulty realizing that something has gone wrong—until it's too late.
+
+Sun and Hewlett-Packard both have high availability cluster products that are continuing to be enhanced. High availability products provide automatic recovery from some problems and give you more time to repair the original faults. Today, with its Mission Critical Server Suites, HP provides a 99.95-percent uptime guarantee. This equates to less than five hours of downtime each year. By the end of 2000, HP intends to provide a 99.999-percent uptime guarantee, as part of its 5 nines: 5 minutes High Availability (HA) program. HP plans to accomplish this goal by partnering with key application providers and by improving the detection and recovery of the HP-UX operating system. The application, database, and network will also be included in the HA guarantee.

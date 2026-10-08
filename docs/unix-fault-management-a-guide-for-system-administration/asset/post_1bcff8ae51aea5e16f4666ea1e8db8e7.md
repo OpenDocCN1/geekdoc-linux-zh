@@ -1,0 +1,265 @@
+
+## Listing A-3 Continued
+
+- [4] nlHostOutPkts
+- [5] nlHostInOctets
+- [6] nlHostOutOctets
+- [7] nlHostOutMacNonUnicastPkts
+- [8] nlHostCreateTime
+- [15] nlMatrix
+  - [1] nlMatrixControlTable
+    - [1] nlMatrixControlEntry
+      - [1] nlMatrixControlIndex*
+      - [2] nlMatrixControlDataSource
+      - [3] nlMatrixControlNlDroppedFrames
+      - [4] nlMatrixControlNlInserts
+      - [5] nlMatrixControlNlDeletes
+      - [6] nlMatrixControlNlMaxDesiredEntries
+      - [7] nlMatrixControlAlDroppedFrames
+      - [8] nlMatrixControlAlInserts
+      - [9] nlMatrixControlAlDeletes
+      - [10] nlMatrixControlAlMaxDesiredEntries
+      - [11] nlMatrixControlOwner
+      - [12] nlMatrixControlStatus
+  - [2] nlMatrixSDTable
+    - [1] nlMatrixSDEntry
+      - [1] nlMatrixSDTimeMark*
+      - [2] nlMatrixSDSourceAddress
+      - [3] nlMatrixSDDestAddress
+      - [4] nlMatrixSDPkts
+      - [5] nlMatrixSDOctets
+      - [6] nlMatrixSDCreateTime
+  - [3] nlMatrixDSTable
+    - [1] nlMatrixDSEntry
+      - [1] nlMatrixDSTimeMark*
+      - [2] nlMatrixDSSourceAddress
+      - [3] nlMatrixDSDestAddress
+      - [4] nlMatrixDSPkts
+      - [5] nlMatrixDSOctets
+      - [6] nlMatrixDSCreateTime
+  - [4] nlMatrixTopNControlTable
+    - [1] nlMatrixTopNControlEntry
+      - [1] nlMatrixTopNControlIndex*
+      - [2] nlMatrixTopNControlMatrixIndex
+      - [3] nlMatrixTopNControlRateBase
+      - [4] nlMatrixTopNControlTimeRemaining
+      - [5] nlMatrixTopNControlGeneratedReports
+      - [6] nlMatrixTopNControlDuration
+      - [7] nlMatrixTopNControlRequestedSize
+      - [8] nlMatrixTopNControlGrantedSize
+      - [9] nlMatrixTopNControlStartTime
+      - [10] nlMatrixTopNControlOwner
+      - [11] nlMatrixTopNControlStatus
+  - [5] nlMatrixTopNTable
+    - [1] nlMatrixTopNEntry
+      - [1] nlMatrixTopNIndex*
+      - [2] nlMatrixTopNProtocolDirLocalIndex
+      - [3] nlMatrixTopNSourceAddress
+      - [4] nlMatrixTopNDestAddress
+      - [5] nlMatrixTopNPktRate
+      - [6] nlMatrixTopNReversePktRate
+      - [7] nlMatrixTopNOctetRate
+      - [8] nlMatrixTopNReverseOctetRate
+- [16] alHost
+  - [1] alHostTable
+    - [1] alHostEntry
+      - [1] alHostTimeMark*
+      - [2] alHostInPkts
+      - [3] alHostOutPkts
+      - [4] alHostInOctets
+      - [5] alHostOutOctets
+      - [6] alHostCreateTime
+- [17] alMatrix
+  - [1] alMatrixSDTable
+    - [1] alMatrixSDEntry
+      - [1] alMatrixSDTimeMark*
+      - [2] alMatrixSDPkts
+      - [3] alMatrixSDOctets
+      - [4] alMatrixSDCreateTime
+  - [2] alMatrixDSTable
+    - [1] alMatrixDSEntry
+      - [1] alMatrixDSTimeMark*
+      - [2] alMatrixDSPkts
+      - [3] alMatrixDSOctets
+      - [4] alMatrixDSCreateTime
+  - [3] alMatrixTopNControlTable
+    - [1] alMatrixTopNControlEntry
+      - [1] alMatrixTopNControlIndex*
+      - [2] alMatrixTopNControlMatrixIndex
+      - [3] alMatrixTopNControlRateBase
+      - [4] alMatrixTopNControlTimeRemaining
+      - [5] alMatrixTopNControlGeneratedReports
+      - [6] alMatrixTopNControlDuration
+      - [7] alMatrixTopNControlRequestedSize
+      - [8] alMatrixTopNControlGrantedSize
+      - [9] alMatrixTopNControlStartTime
+      - [10] alMatrixTopNControlOwner
+      - [11] alMatrixTopNControlStatus
+  - [4] alMatrixTopNTable
+    - [1] alMatrixTopNEntry
+      - [1] alMatrixTopNIndex*
+      - [2] alMatrixTopNProtocolDirLocalIndex
+      - [3] alMatrixTopNSourceAddress
+      - [4] alMatrixTopNDestAddress
+      - [5] alMatrixTopNAppProtocolDirLocalIndex
+      - [6] alMatrixTopNPktRate
+      - [7] alMatrixTopNReversePktRate
+      - [8] alMatrixTopNOctetRate
+      - [9] alMatrixTopNReverseOctetRate
+- [18] usrHistory
+  - [1] usrHistoryControlTable
+    - [1] usrHistoryControlEntry
+      - [1] usrHistoryControlIndex*
+      - [2] usrHistoryControlObjects
+      - [3] usrHistoryControlBucketsRequested
+      - [4] usrHistoryControlBucketsGranted
+      - [5] usrHistoryControlInterval
+      - [6] usrHistoryControlOwner
+      - [7] usrHistoryControlStatus
+  - [2] usrHistoryObjectTable
+    - [1] usrHistoryObjectEntry
+      - [1] usrHistoryObjectIndex*
+      - [2] usrHistoryObjectVariable
+      - [3] usrHistoryObjectSampleType
+      - [3] usrHistoryTable
+    - [1] usrHistoryEntry
+      - [1] usrHistorySampleIndex*
+      - [2] usrHistoryIntervalStart
+      - [3] usrHistoryIntervalEnd
+      - [4] usrHistoryAbsValue
+      - [5] usrHistoryValStatus
+- [19] probeConfig
+  - [1] probeCapabilities
+  - [2] probeSoftwareRev
+  - [3] probeHardwareRev
+  - [4] probeDateTime
+  - [5] probeResetControl
+  - [6] probeDownloadFile
+  - [7] probeDownloadTFTPServer
+  - [8] probeDownloadAction
+  - [9] probeDownloadStatus
+  - [10] serialConfigTable
+    - [1] serialConfigEntry
+      - [1] serialMode
+      - [2] serialProtocol
+      - [3] serialTimeout
+      - [4] serialModemInitString
+      - [5] serialModemHangUpString
+      - [6] serialModemConnectResp
+      - [7] serialModemNoConnectResp
+      - [8] serialDialoutTimeout
+      - [9] serialStatus
+  - [11] netConfigTable
+    - [1] netConfigEntry
+      - [1] netConfigIPAddress
+      - [2] netConfigSubnetMask
+      - [3] netConfigStatus
+  - [12] netDefaultGateway
+  - [13] trapDestTable
+    - [1] trapDestEntry
+      - [1] trapDestIndex*
+      - [2] trapDestCommunity
+      - [3] trapDestProtocol
+      - [4] trapDestAddress
+      - [5] trapDestOwner
+      - [6] trapDestStatus
+  - [14] serialConnectionTable
+    - [1] serialConnectionEntry
+      - [1] serialConnectIndex*
+      - [2] serialConnectDestIpAddress
+      - [3] serialConnectType
+      - [4] serialConnectDialString
+      - [5] serialConnectSwitchConnectSeq
+      - [6] serialConnectSwitchDisconnectSeq
+      - [7] serialConnectSwitchResetSeq
+      - [8] serialConnectOwner
+      - [9] serialConnectStatus
+- [20] rmonConformance
+  - [1] rmon2MIBCompliances
+    - [1] rmon2MIBCompliance
+    - [2] rmon2MIBApplicationLayerCompliance
+  - [2] rmon2MIBGroups
+    - [1] protocolDirectoryGroup
+    - [2] protocolDistributionGroup
+    - [3] addressMapGroup
+    - [4] nlHostGroup
+    - [5] nlMatrixGroup
+    - [6] alHostGroup
+    - [7] alMatrixGroup
+    - [8] usrHistoryGroup
+    - [9] probeInformationGroup
+    - [10] probeConfigurationGroup
+    - [11] rmon1EnhancementGroup
+    - [12] rmon1EthernetEnhancementGroup
+    - [13] rmon1TokenRingEnhancementGroup
+
+### Monitoring Notes
+
+If you intend to write your own SNMP application, the numeric root OID of the RMON MIB is 1.3.6.1.2.1.16. RMON II is an extension of this MIB.
+
+The protocol directory lists all the protocols that the monitor supports. A monitor can add more protocols, but the extensibility is limited.
+
+The protocol distribution group shows per-protocol statistics for the amount of data and packets being sent on a LAN segment. From this information, you can calculate the bandwidth utilization per protocol and, hopefully, isolate a troublesome application.
+
+The address mappings group is used to map a network address to the station address to which it is bound. The network layer host group then shows the amount of traffic for each network address. The network layer matrix group shows network traffic statistics between pairs of network addresses. You can also see the top traffic producers.
+
+The application layer host shows network traffic statistics for a particular network address, broken down by protocol. Similarly, the application layer matrix shows this information for traffic between a pair of network addresses.
+
+### Host Resources MIB
+
+The Host Resources MIB is a proposed IETF standard for representing host information. This MIB requires the implementation of portions of the MIB-II. The Host Resources MIB includes information such as the current and maximum number of processes on a system and the system uptime. This MIB may be used to represent information about a computer system or about a device, such as a network printer.
+
+#### MIB Definition
+
+Listing A-4 shows the complete specification for the Host Resources MIB, as defined in RFC 1514.
+
+#### Listing A-4 Host Resources MIB specification.
+
+- mib_2
+  - [25] host
+    - [1] hrSystem
+      - [1] hrSystemUptime
+      - [2] hrSystemDate
+      - [3] hrSystemInitialLoadDevice
+      - [4] hrSystemInitialLoadParameters
+      - [5] hrSystemNumUsers
+      - [6] hrSystemProcesses
+      - [7] hrSystemMaxProcesses
+    - [2] hrStorage
+      - [1] hrStorageTypes
+        - [1] hrStorageOther
+        - [2] hrStorageRam
+        - [3] hrStorageVirtualMemory
+        - [4] hrStorageFixedDisk
+        - [5] hrStorageRemovableDisk
+        - [6] hrStorageFloppyDisk
+        - [7] hrStorageCompactDisc
+        - [8] hrStorageRamDisk
+      - [2] hrMemorySize
+      - [3] hrStorageTable
+        - [1] hrStorageEntry
+          - [1] hrStorageIndex*
+          - [2] hrStorageType
+          - [3] hrStorageDescr
+          - [4] hrStorageAllocationUnits
+          - [5] hrStorageSize
+          - [6] hrStorageUsed
+          - [7] hrStorageAllocationFailures
+    - [3] hrDevice
+      - [1] hrDeviceTypes
+        - [1] hrDeviceOther
+        - [2] hrDeviceUnknown
+        - [3] hrDeviceProcessor
+        - [4] hrDeviceNetwork
+        - [5] hrDevicePrinter
+        - [6] hrDeviceDiskStorage
+        - [10] hrDeviceVideo
+        - [11] hrDeviceAudio
+        - [12] hrDeviceCoprocessor
+        - [13] hrDeviceKeyboard
+        - [14] hrDeviceModem
+        - [15] hrDeviceParallelPort
+        - [16] hrDevicePointing
+        - [17] hrDeviceSerialPort
+        - [18] hrDeviceTape
+        - [19] hrDeviceClock
