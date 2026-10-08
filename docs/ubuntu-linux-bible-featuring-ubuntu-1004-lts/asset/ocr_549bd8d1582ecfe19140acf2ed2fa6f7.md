@@ -1,0 +1,15 @@
+# Part II: Ubuntu Desktop Users
+
+called bcm43xx-fwcutter to extract the different firmware files from the driver and copy them into /lib/firmware before you can use this version of the card. If you have this version of the card, you can download the latest version of this utility from the page at http://developer-.berlios.de/project/showfiles.php?group_id=4547.
+
+As mentioned previously, these are examples of the types of problems that you may encounter when working with a Windows driver, driver wireless hardware, and the ndisswapper package. Many people worry about the quality of open source code, but I think that the quality of Windows drivers is just as suspect. However, as my grandfather used to say, "A dysfunctional driver in the hand is worth several projects that you might develop in the bush" (or something like that).
+
+# Tip
+
+The ndisswapper developers provide as much online as they can via the resources listed at http://sourceforge.org/apps/mediwiki/ndisswapper/index.php?html. If the people there cannot solve your problem and you absolutely need to use a specific piece of "Windows-only" wireless hardware with your Linux system, a company called Linuxant (www.linuxant.com) provides an excellent piece of software called DriverLoader that is very similar to the ndisswapper package. The Linuxant folks offer for selected soft modem cards (modem cards that do everything in software, a traditional pain for Linux users). You can download a 30-day trial of the DriverLoader software to test it with your specific hardware, and also have the benefit of Linuxant's support personnel and extensive user community when diagnosing and resolving problems.
+
+# Summary
+
+This chapter explored one of the most liberating and empowering features of computing today, wireless networking. Wireless networking is not only convenient from the standpoint of having cables around your house, but also enables people to do real work from their laptops, moving from conference room to conference room, office to office, and even city to city without having to plug their machines in and laboriously reconnect and synchronize with a given network.
+
+The next chapter moves into territory that is the traditional bugoo of Linux systems—how to compile your own software on an Ubuntu system. Ubuntu systems do not include a compilation environment in their default installations because not everyone needs them, but more importantly, because Ubuntu repositories provide a great selection of software that you rarely have to do (unless you are a developer). The need to roll your own versions of applications on Linux systems is a traditional part of the FUD (Fear, Uncertainty, Doubt) Linux detractors use to support their claims that Linux is hard to use and only for nerds. This is not true at all. Not only is building your own applications commonplace nowadays, but package management software like apt-get, aptitude, and Synaptic makes it easy to build tools and a powerful IDE if you need them.

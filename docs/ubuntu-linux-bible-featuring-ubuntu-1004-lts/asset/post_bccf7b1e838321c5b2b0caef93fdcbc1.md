@@ -1,0 +1,46 @@
+
+# Part II: Ubuntu for Desktop Users
+
+connect laptops, phones, and PDAs to the Internet in libraries, coffee shops, hotels, and many other public places. Wireless networking provides an excellent mechanism for connecting networks of computers that are located in inaccessible locations or in existing structures running new or additional cabling is a problem. Excluding security concerns, wireless networks can prevent the need to drill holes through Mount Vernon, the Vatican, or the Louvre.
+
+As used in this chapter, wireless networking refers to technology that enables a computer to communicate using standard network protocols, but without network cabling. Most, wireless networks are local area networks (LANs) whose members use industry standards such as Institute of Electrical and Electronics Engineers (IEEE) 802.11 to communicate. The 802.11 standard was released in 1997 and defines the frequencies, data rates, and media methods used to communicate between the participants in a wireless network. Subsequent standards define a potentially bewildering variety of 802.11X standards, which will discuss a bit later in this section.
+
+Regardless of the frequency and speed at which participants communicate, there are two basic types of wireless networks: ad hoc wireless networks and managed wireless networks. The characteristics of each (and their differences):
+
+- **Ad hoc networks:** Also referred to as *peer-to-peer* wireless networks, these consist of some number of computers, each of which has a wireless networking interface card and communicate directly with all of the other wireless computers on that network. This enables them to share files and printers, but will not provide access or Internet resources unless one (or more) of the computers is connected to those other network resources and is configured to serve as a gateway, bridge, or router to the other network(s). Acronym fans may see ad hoc networks referred to as IBSS (Basic Service Sets).
+
+- **Managed networks:** Also referred to as infrastructure wireless networks, these use an access point (sometimes referred to as a *base station*) to manage communication between multiple wireless computers, acting like a hub or switch for the wireless network. An access point is also typically connected to a wired network such as the Internet and serves the bridge or gateway between the wireless and wired networks. Access points are traditionally dedicated hardware devices (sometimes referred to as a HAP, hardware access point), such as Apple's Airports or devices from companies such as DLink, SysNet, Cisco, and others, which can also be software solutions (referred to as SAPs, software applications that run on a computer that is equipped with both wired and wireless network connections). Acronym fans may see networks referred to as a BSS (Basic Service Set; N computers and one access point) or ESS (Extended Service Set; N access points and N computers forming one subnet).
+
+Large areas that require wireless coverage can accomplish this by providing multiple access points and supporting roaming, which is the ability of a user's connection to transfer from one access point to another. This is usually invisible to the user, although some access points require words or authentication when moving between access points. Many networking hardware ## Chapter 22: Going Wireless
+
+vendors provide specialized hardware known as extension points that amplify the signal and therefore extend the range of an existing access point. Whether or not hardware access points support roaming or extension points is dependent on the hardware manufacturer. As with most networking hardware, a good rule of thumb is buying all of your network hardware from the same vendor increases your chances for compatibility.
+
+Agreement between the low-level wireless networking standards that the computers in your network use is the most important aspect of setting up a successful wireless network. If the computers and access points cannot communicate in the first place, you aren't going to be setting up of anything. Although IEEE 802.11 is a published standard for wireless communication, several different 802.11 protocols and associated standards exist, not all of which are compatible with each other. The following is a current list of popular 802.11 standards, communication speeds, and compatibility promises:
+
+- 802.11a: A standard for 802.11 communications using the regulated 5.0 GHz (GigHertz) frequency, offering maximum communication speeds of 25 to 54 Mbps (megabits per second). It is not compatible with any other 802.11 standard.
+
+- 802.11b: A standard for 802.11 communications using the unregulated 2.4 GHz frequency, offering maximum communication speeds of 5 to 11 Mbps. The 802.11b standard is forward-compatible with the 802.11g and popular 802.11 standards.
+
+Some vendors offer wireless cards known as dual-band cards, which support both 802.11a and 802.11b, operating in the frequency range and with communications dictated by the type of connection that they establish.
+
+- 802.11g: A standard for 802.11 communications using the unregulated 2.4 GHz frequency, offering maximum communication speeds of 25 to 54 Mbps. The 802.11g standard is backward-compatible with the 802.11b standard and forward-compatible with the 802.11n standard.
+
+- 802.11n: A standard for 802.11 communications using the unregulated 2.4 GHz frequency, offering maximum communication speeds of 100 to 300 Mbps. The 802.11n is designed to be backward-compatible with the 802.11b and 802.11g standards.
+
+Trying to get the jump on the competition, many hardware vendors released “802.11n hardware”—you will see many wireless cards advertised as Draft-N to recognize the fact that they adhere to any version of the standard. If you have these a good rule of thumb for compatibility between supposed 802.11n devices is “buy everything from the same vendor.” Most vendors' hardware will, after all, work with their other hardware. Worst case, you have only one vendor to
+
+Many wireless cards are advertised as 802.11 b/g or 802.11 g cards because they can communicate with all of these networks. When using cards that support all of these standards, the speed of your connection is determined by the speed/type of the access point that they establish a connection. # Part II: Ubuntu for Desktop Users
+
+Wireless networks also support a variety of security solutions, ranging from network names to encryption mechanisms. The most common of these are the following:
+
+All these security measures can be used together, in any combination, or separately. WEP and WPA provide security for the packets that are being transmitted, but typing in a 128-bit key each time you configure a new wireless interface is both error-prone and incredibly tedious. Many sites, use MAC and SSID/ESS to establish connections, and then protected packets using standard communication layer. The Network Manager and the Ubuntu applet make it relatively easy to use a wireless interface from a variety of locations, and are discussed in detail in Chapter 21. However, we about here, there are other alternatives. One extremely impressive alternative to the Network Manager is the wic package, which is discussed in the next section. ## Chapter 22: Going Wireless
+
+If no Linux driver is available for your wireless card, all is not lost. Thanks to the cleverness of the folks in the open source community, a kernel module and related utilities called wrapper. The Network Manager is a fine piece of software that usually works—however, when it doesn't, it is a total PITA (I'm not referring to the popular Eastern branch). As a replacement for the Network Manager and related apps, Wicd conflicts with the Network Manager, and only one of these connection management packages can be installed on a system at a time. Luckily, as discussed in the next section, installing Wicd on a system where the Network Manager is installed will automatically purge the Network Manager for you. No fuss, no muss.
+
+Using systems that have both wired and wireless interfaces is quite common. Even though specifications such as 802.11g and 802.11n provide high speeds, they can't match the speed of Ethernet connections. It's, therefore, a shame not to use your wired connection whenever possible. However, it's tough to travel and get work done while dragging hundreds of miles of cable—the convenience and flexibility of wireless access far outweigh the performance that it provides. The next sections explain how to install, use, and configure Wicd to meet your needs. It's really a great application, which I use on all of my laptop systems (and any desktops with wired and wireless network interfaces) rather than the Network Manager. # Installing Wicd
+
+Ubuntu systems are currently committed to the Network Manager and related applets, so in order to install Wicd, you will first have to modify the list of sources that provide repositories from which your Ubuntu systems can install software. You can do this using Ubuntu's Software Sources application, or by directly modifying your /etc/apt/sources.list file. You will need to add the following entry in any of these locations:
+
+```
+deb http://apt.wicd.net lucid extras
+```

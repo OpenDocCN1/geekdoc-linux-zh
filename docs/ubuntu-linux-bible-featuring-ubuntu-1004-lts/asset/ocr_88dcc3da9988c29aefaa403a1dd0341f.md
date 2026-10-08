@@ -1,0 +1,7 @@
+# Summary
+
+This chapter has discussed common types of office software that you may need to use to complete your move to Ubuntu Linux. Linux often gets a bad rap in the press for not having a rich set of application software — as this book shows, that is entirely false. Not only is a good selection of powerful office software available for Linux, but the open nature of Linux gives you many alternatives in the packages that you want to use — and all at the same low, low price, which is $0.00 thanks to the hard work and time spent by the open source community and the folks who bring you Ubuntu Linux.
+
+This chapter began by discussing OpenOffice.org Calc, the powerful spreadsheet component of the OpenOffice.org Office suite that is installed by default on Ubuntu desktop systems. The chapter concluded by discussing OpenOffice.org Imp, which is a powerful software package for creating, working with, and managing presentations, which is another part of the OpenOffice suite of office applications.
+
+Now that we've explored creating documents, spreadsheets, and presentations, the next chapter discusses the software that enables you to create and convert various types of graphics files on Ubuntu desktop systems.
