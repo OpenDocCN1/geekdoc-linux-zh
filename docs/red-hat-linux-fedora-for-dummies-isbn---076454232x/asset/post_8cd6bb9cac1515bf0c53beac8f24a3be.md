@@ -1,0 +1,365 @@
+
+# Linux
+
+- architectures, 15
+- development history, 12–13
+- distributions, 13
+- flavors, 13
+- HOWTOS, 296
+- mailing lists, 297
+- memory requirements, 324
+- newsgroups, 297
+- partitions, 36–39
+- processing capabilities, 15
+- resources, 296
+- symmetric multiprocessing, 15
+- Unix, 12
+- versions, 2
+
+- Linux Documentation Project (LDP), 296
+- *Linux Journal*, 298
+- Linux kernel headers, 190
+- *Linux Security Toolkit*, David A. Bandel, 308
+- Linux User Groups (LUGs), 68, 298
+- listing directories, 330
+- local area network. See LAN
+- locating modems, 73–75
+- Lock Screen feature, 127
+
+- logging out
+  - GNOME, 63, 127–128
+  - X Window System, 128
+- login, 54–55
+- Login Screen utility, 318
+- logs, 261–262, 314, 320
+- Logviewer utility, 261–262
+- Logwatch log-alert system, 261–262
+- loopback interface, 107, 272, 275
+- `ls` command, 330
+- LUGs (Linux User Groups), 68, 298
+- `lynx` web browser, 15
+
+# M
+
+- Macromedia
+  - Flash Player, 146–147
+  - Shockwave, 147
+- Mail Transport Agent Switcher utility, 320
+- mailing lists, 297
+- manuals, 296
+- masquerading, 212
+
+- Massachusetts Institute of Technology (MIT), 58
+- maximizing windows, 123
+- memory
+  - color depth, 60
+  - RAM (Random Access Memory), 322, 324
+  - swap space, 52
+  - VMware virtual computers, 324
+- memory stick, 343–344
+
+- message about delaying eth0 configuration, 274
+- microprocessor, 322
+- Microsoft
+  - Media Server (MMS), 159
+  - Office, 167
+  - Word, 178–180
+- MIME types, 128–129
+- minimizing windows, 123
+- MIT (Massachusetts Institute of Technology), 58
+- `mkbootdisk` command, 303
+- `mkdir` command, 334
+- MMS (Microsoft Media Server), 159
+- `/mnt/cdrom/RedHat/RPMS` directory, 346
+
+- modems
+  - cable modem, 77–84
+  - DSL modem, 85–88
+  - external, 69
+  - internal, 69
+  - locating, 73–75
+  - WinModems, 70
+
+- modes
+  - graphical mode, 53–54
+  - non-graphical mode, 53–54
+  - single-user mode, 53–54
+- monitors
+  - color depth, 60
+  - defined, 323
+  - display settings, 57–60
+  - limitations of older monitors, 58
+  - multiscanning, 58
+  - overdriving, 58
+- `more` command, 272
+- mount points, 52
+- mounting file system, 341–342
+- mouse, 322
+
+- Mouse utility, 318
+- moving
+  - directories, 135, 335
+  - files, 135, 335
+  - windows, 122
+- Mozilla web browser
+  - bandwidth requirements, 15
+  - help, 143
+  - history, 145
+  - plug-ins, 145–148
+  - preferences, 144–145
+  - proxy firewalls, 145
+  - starting, 144
+  - version number, 147
+- XMS (X MultiMedia System) audio player, 157–158
+- MP3 streams, 158
+- MPlayer, 158, 160–162
+- MPlayer audio and video player, 15
+- multimedia tools
+  - bundled with Red Hat Linux 10, 14
+  - MPlayer audio and video player, 15
+  - RealPlayer (RealNetworks), 15
+  - XMS player, 15
+- multiscanning (monitors), 58
+- music
+  - CD burners, 152–154
+  - CD Player, 150
+  - cdparanoia, 151–152
+  - sources, creating, 280–281
+  - XMS (X MultiMedia System) audio player, 155
+- `mv` command, 335
+
+# N
+
+- name server, 42
+- naming
+  - directories, 330
+  - files, 328
+- NAT (network address translation), 212–213
+- NAT rules, 107
+- Nautilus
+  - Burn/// Utility, 152–153
+  - File Manager, 134–137
+  - installing packages, 349
+
+- Navigator web browser, 143
+- netfilter/iptables filtering software, 16
+- Netfilter/iptables firewall, 104–106
+- netmasks, 42
+- Netscape
+  - Communicator, 143–144
+  - Mozilla, 144
+  - Navigator, 143
+- `netstat` command, 274
+- network adapters, 270–274
+- network address translation (NAT), 212–213
+- network bridges, 82
+- network configuration, 39–43
+- Network Configuration Utility
+  - DNS service, 99–100
+  - Ethernet NIC, 95–97
+  - starting, 94
+  - wireless NIC, 97–99
+- Network Device Control utility, 319
+- network interface card. See NIC
+- network services
+  - defined, 14
+  - hackers, 244
+  - reducing, 244–245
+  - removing, 244–245
+- Network Time Protocol (NTP)
+  - server, 48, 306
+- Network utility, 318
+- networked printers, 226
+- networks. See LAN (local area network); wired networks; wireless networks
+- New menu (OpenOffice), 167
+- newsgroups, 297
+- NFS Server Configuration utility, 319
+- NIC (network interface card)
+  - configuring, 90–99
+  - cost, 90
+  - Ethernet NIC, 95–97
+  - make and model, 323
+  - troubleshooting, 270–274
+  - wireless NIC, 91–95, 97–99, 270–271
+- `nmap` command, 313
+- Nmap port scanning tool, 313–314
+- non-authoritative name servers (DNS), 231
+- non-graphical mode, 53–54
+
+- non-networked printers, 226
+- Norton Ghost 2003, 18–19
+- Notepad, 174–175
+- NT boot record, 41
+- NTFS (NT File System)
+  - defragmenting, 20–21
+  - finding, 19
+  - Norton Ghost 2003, 19
+  - resizing, 18, 25–29
+- NTP (Network Time Protocol)
+  - server, 48, 306
+- `ntpd` / `date` command, 306
+
+# O
+
+- Ogg Vorbis streams, 15, 155–158
+- open source code, 12
+- OpenOffice
+  - Calc spreadsheet program, 164–165
+  - cost, 163
+  - Draw program, 164, 166
+  - features, 14, 164
+  - help, 168–169
+  - HTML editor, 218
+  - Impress presentation program, 164–165
+  - licenses, 163
+  - menus, 167–168
+  - Microsoft Office, 167
+  - personal model, 167
+  - printing, 169–170
+  - spell checker, 168
+  - starting, 166–167
+  - workstation model, 167
+  - Writer word processor, 164
+- OpenSSH
+  - benefits of using, 16, 246, 309
+  - configuring an OpenSSH server, 248–250
+  - connecting to a Secure Shell server, 246
+  - public-key cryptography, 250–253
+  - Secure Copy (scp), 247
+  - Secure FTP (sftp), 247–248
+  - `ssh-agent`, 253
+  - tunneling across a network, 247–248
+  - wireless networks, 309
+- `output` command, 272
+- overdriving, 58
+
+# P
+
+- packages
+  - Apache web server, 217–218
+  - configuration files, 347
+  - defined, 345
+  - displaying installed packages, 347–348
+  - installing, 346, 348–351
+  - package groups, 46
+  - querying, 347
+  - removing, 346–347, 350–352
+  - Samba file server, 220
+  - SSL module, 256
+  - upgrading, 346, 351
+  - verifying, 347
+- PAM (Pluggable Authentication Module), 62
+- Panel (GNOME), 118, 124–126
+- panels
+  - adding, 126
+  - deleting, 126
+  - hiding, 127
+- parallel processing, 15
+- PartitionMagic, 19, 25–29
+
+- partitions
+  - defined, 17
+  - defragmenting, 18, 20–21
+  - FAT (File Allocation Table), 18–19
+  - FIPS (First nondestructive Interactive Partition Splitting), 18, 22–25
+  - Linux, 36–39
+  - mount points, 52
+  - Norton Ghost 2003, 19
+  - NT boot record, 41
+  - NTFS (NT File System), 18–19
+  - PartitionMagic, 19, 25–29
+  - partitioning hard drive, 18–19
+  - resizing, 22, 24–29
+  - secondary partition, 17
+  - swap space, 52
+- `passwd` command, 63, 299
+
+- passwords
+  - bad passwords, 312–313
+  - character requirements, 44
+  - choosing, 44, 62
+  - entering, 62
+  - forgotten, 298–300
+  - Pluggable Authentication Module (PAM), 62
+  - root password, 44–45, 299–300
+
+- PC cards, 69
+- PDA, 141–142
+- Penguin symbol, 13
+- permissions, 337–340
+- personal desktop installation, 33
+- personal workstations, 14–15
+- physical security, 263–264
+- pilot-link utility, 141
+- `ping` command, 276–277
+- playing
+  - audio streams, 289
+  - CDs, 150
+  - DVDs, 159–160
+  - games, 175
+  - MMS streams, 159
+  - MP3 streams, 158
+  - Ogg Vorbis streams, 156–158
+  - RealAudio streams, 159
+  - playlists, 160
+- Plex86, 195
+- Pluggable Authentication Module (PAM), 62
+- plug-ins (Mozilla Web browser)
+  - Acrobat (Adobe), 147
+  - defined, 145
+  - downloading, 146
+  - Flash Player (Macromedia), 146–147
+  - installing, 146–147
+  - Java (Sun Microsystems), 148
+  - RealPlayer (RealAudio), 148
+  - Shockwave (Macromedia), 147
+- plug-ins (Windows plug-ins), 183–186
+- point-to-point protocol (ppp) service, 68
+- ports, 106
+- Postfix MTA, 320
+- PPP dialer utility, 75–76
+- PPP (point-to-point protocol) service, 68
+- preparing hard drive for Red Hat Linux installation, 18
+- presentations, 164–165
+- preventive security measures
+  - log files, 261–262
+  - reducing or removing services, 244–245
+  - Secure Shell client, 245–253
+  - Secure Sockets Layer (SSL), 253–261
+  - updating Red Hat Linux packages, 240–244
+- Print Manager utility, 319
+- print servers, 225–229
+- `printconf-gui` printer configuration utility, 169
+- printers
+  - networked, 226
+  - non-networked, 226
+  - types, 227
+- printing
+  - GNOME Print Manager, 170
+  - OpenOffice, 169–170
+  - Printing Notification Icon, 319
+  - Printing utility, 318
+- Prism Access, 68
+- private keys, 256–257
+- private networks. See also wired networks; wireless networks
+  - connecting devices, 200
+  - designed, 199
+  - DNS servers, 99–100
+  - Ethernet adapter, 270
+  - Ethernet hub/switch, 269
+  - firewalls, 212–213
+  - flat network, 200
+  - Internet gateway, 200–201, 205–211
+  - manually starting and stopping, 101
+  - NIC configuration, 90–99
+  - streaming, 290–291
+  - subnets, 200
+  - troubleshooting, 268–277, 302
+- VMware, 188
+- `/proc` directory, 273
+- processing capabilities, 15
+- productivity tools. See OpenOffice
+- program utility, 176
+- programming, 15
+- proprietary software, 12
+- proxy firewalls, 145, 161

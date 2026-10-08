@@ -1,0 +1,59 @@
+6. **Enter your password when you're prompted.**
+OpenSSH looks for public keys by default in the `authorized_keys` file in the `.ssh` directory (in your home directory).
+
+7. **Use these commands to copy the public key into the `authorized_keys` file (remember that you should still be in your home directory):**
+
+```
+```
+cat id_dsa.pub >> .ssh/authorized_keys
+```
+```
+
+The `cat` command “concatenates” the contents of `id_dsa.pub` to the Linux standard output (that's generally your console, which is the GNOME Terminal, in this case). The double greater-than symbols (>>) append the standard output to the `authorized_keys` file in the `.ssh` directory. No preexisting keys are disturbed.
+
+The `authorized_keys` file must have the right permissions. (See Appendix B for more information about file permissions.) In this case, loose permissions sink ships, and OpenSSH doesn't work with, for example, read-/write-/execute group permissions.
+
+8. **Ensure the correct permissions:**
+
+```
+```
+chmod 644 .ssh/authorized_keys
+```
+```
+
+9. **Make sure that the OpenSSH server configuration allows key exchange. These options should be set in the `/etc/ssh/sshd_config` file:**
+
+```
+```
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile    .ssh/authorized_keys
+```
+```
+
+10. **Restart the `sshd` daemon if you make any changes to the `sshd_config` file:**
+
+```
+```
+/etc/init.d/sshd restart
+```
+```
+
+# ### *Connecting to the remote computer by using key exchange*
+
+Ready to use the key exchange authentication system? From the host (local) computer, try these steps:
+
++   1. **Log in to your user account on the local computer.**
+For example, log in as the user `rod` on `cancun`.
+
++   2. **Open a GNOME Terminal session.**
+
++   3. **Log in to the remote machine:**
+
+```
+```
+ssh cancun
+```
+```
+
++   4. **Enter the pass phrase you used to encrypt your private key.**

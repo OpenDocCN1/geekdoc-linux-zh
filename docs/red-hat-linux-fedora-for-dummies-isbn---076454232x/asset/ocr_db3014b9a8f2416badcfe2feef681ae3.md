@@ -1,0 +1,3 @@
+You should also set the GNOME (or KDE) screen lock unless you want to log out every time you leave your desk. Choose GNOME Menu\textsuperscript{\textdagger}Preferences\textsuperscript{\textdagger}Screensaver and then select the Lock Screen After option. Select the amount time to wait before locking your screen and then click the Close button.
+
++   ✏ **Boring consistency:** Good long-term security depends on consistency. Making your backups, reading security logs, and performing other, similar tasks all depend on your maintaining interest. It’s just like staying in shape: You can’t be good for a while and then forget about your exercise routine.

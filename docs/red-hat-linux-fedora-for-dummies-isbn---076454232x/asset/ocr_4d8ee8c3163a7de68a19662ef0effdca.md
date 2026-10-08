@@ -1,0 +1,35 @@
++   9. When you see the Press any key message, do so again.
+
+You're getting good at this! A description of the drive and a series of messages flash by. Then FIPS finds the free space in the first partition.
+
+10. When you're asked whether you want to make a backup copy of sectors, press y for yes.
+
+The screen asks whether a floppy disk is in drive A.
+
+11. Place a formatted floppy disk in drive A and press y.
+
+A message similar to Writing file a:/rootboot.000 appears, followed by other messages and then the message Use cursor key to choose the cylinder, enter to continue.
+
+Three columns appear on the screen: Old Partition, Cylinder, and New Partition. The Old Partition number is the number of megabytes in the main partition of your hard drive. The New Partition number is the number of megabytes in the new partition that you're making for the Red Hat Linux operating system.
+
++   12. Press the left- and right-arrow keys to change the numbers in the Old Partition and New Partition fields to create the space you need for both the Windows operating system and Linux.
+
+See Chapter 3 for installation requirements.
+
++   13. When you have the correct amount of hard drive space in each field, press the Enter key.
+
+The partition table is displayed again, showing you the new partition that has been created for the Linux operating system. This new partition is probably Partition 2; your C: drive is probably Partition 1.
+
+You also see a message at the bottom of the screen asking whether you want to continue or make changes.
+
++   14. If you're satisfied with the size of your partitions, press c to continue (if you aren't satisfied, press r, which takes you back to Step 12).
+
+Many more messages about your hard drive flash by. A message then appears, stating that the system is ready to write the new partition scheme to disk and asking whether you want to proceed.
+
++   15. Press y to make FIPS write the new partition information to the hard drive.
+
+The partitioning process begins.
+
+If you press n, FIPS exits without changing anything on your hard drive, leaving your hard drive exactly the way it was after you defragmented it.
+
+![](bbox=[0.11, 0.81, 0.21, 0.92])

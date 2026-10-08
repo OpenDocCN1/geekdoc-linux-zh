@@ -1,0 +1,7 @@
+✓ **Use NAT for outgoing connections:** Create a NAT rule to make all connections originating on the private network appear to be coming from the Internet gateway. All private network machines have their source addresses and port numbers changed to that of the gateway.
+
+The network address translation isn’t necessary if your Internet connection device (telephone, DSL, or cable modem) performs NAT. However, by providing a NAT filtering rule, you ensure that your Internet gateway works with any connection device — whether or not it performs NAT. NAT also prevents external access to your private network.
+
+✓ **Allow incoming SSH connections:** Secure Shell (SSH) is a protocol for encrypting network connections. SSH provides a reasonably secure system for connecting to your private network from the Internet. We configure the firewall to allow SSH connections into our firewall.
+
+The firewall on the Internet gateway is similar to the firewall we describe in Chapter 8, except that you add IP forwarding and NAT. IP forwarding allows packets from the private network to pass through the firewall and on to the Internet. In this case, NAT makes all Internet-bound traffic appear to be coming from the firewall or gateway and prevents incoming packets from being forwarded into your private network.
