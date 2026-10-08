@@ -1,0 +1,9 @@
+# CHAPTER 2 | Basic Components of Linux Security
+
+# CHAPTER SUMMARY
+
+Linux security starts with the kernel. The modularity of the Linux kernel means that it is more robust. Many modular options affect security. To that end, you need to choose whether to accept the kernel as customized for your distribution or to customize and compile the kernel yourself. Linux security continues with the boot process. Good security prevents unauthorized users from booting from a live CD and selecting administrative options from the GRUB or LILO boot loaders. Beyond the basic operating system, you should keep active services to a minimum. If possible, don't install the GUI.
+
+Linux security is enhanced by local and network authentication databases. File ownership and permissions start with discretionary access controls, enhanced by access control lists. Administrative permissions can be configured in /etc/sudoers file and through the PolicyKit. Firewalls start with the iptables net filter command. Firewalls can be enhanced on TCP Wrapper services, configured through extended internet server services, and through options on many other services. Mandatory access control systems such as SELinux and AppArmor add another layer of control, protecting your system even if there is a security breach. With the availability of SSH, there is no reason to use clear-text protocols such as Telnet.
+
+With respect to security, you may need to pick and choose whether to download a security update. Some security updates may not apply to all configurations. Chapter 11 discusses various factors with respect to security. Virtualization adds another dimension to security. It makes it more cost effective to set up bastion hosts. Finally, if you understand the differences between Linux distributions, you can make better decisions when it comes to choosing security options for the network.

@@ -1,0 +1,9 @@
+# Detecting and Responding to Security Breaches
+
+SO FAR, THIS BOOK HAS COVERED myriad security issues. You've looked at a variety of access controls, from standard read, write, and execute permissions through detailed options associated with Security Enhanced Linux (SELinux). Previous chapters have described how to keep services to a minimum, along with the dangers associated with a variety of services.
+
+With that information in mind, you should know how to audit a system to identify baseline performance parameters; deviations may be causes for concern. You'll be able to identify user access through commands and log files. In addition, sensible policies can keep users within secure limits. But not all users are highly knowledgeable about computers, so you should monitor Linux user accounts for potentially risky behavior.
+
+You need to be ready if there is a problem. With appropriate forensic analysis tools, you may need to recover data from RAM while a compromised system is still running. To that end, different kinds of portable media such as live CDs are available. Some are suitable for compromised systems, others for test systems. Care is required, especially if such data may be used as evidence in official investigations.
+
+Once dynamic data is recovered and a system is powered down, then you should handle static data. There are appropriate ways to copy hard drives without changing any data on those hard drives. Investigations can then proceed with the copied drives. Once investigations are complete, you should consider sharing the results with the open source community. In general, corporate secrets can be preserved and you can get the credit for finding a security flaw if you do share appropriate results from any investigation.

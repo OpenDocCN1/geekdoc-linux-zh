@@ -1,0 +1,13 @@
+# The Fundamentals of Linux Information Security
+
+The most secure systems are never connected to a network. Such systems are kept in secure facilities, with access limited to qualified personnel who are up to date with the latest security developments. Their ethical standards have been verified with background checks rivaling those performed by national intelligence agencies. They're well paid. They're immune to temptations put forth by competitors and enemies. They're not prone to sloppy administration. And curiosity does not motivate them to seek out data that they should not have access.
+
+Of course, standards do not reflect reality. Users need network and Internet connections. True physical security can be expensive. Overloaded administrators do not always keep up with the speed in software and security issues. High-level background checks may prevent security professionals from starting work for months. Humans may be enticed by temptations put forth by competitors and enemies. And the curiosity that makes for good systems administrators may tempt them professionals to see they can crash a system.
+
+While this book does not address how administrators are motivated, it does describe tools that can help the responsible administrator maximize the security of Linux platforms and applications.
+
+To some extent, information security on Linux systems is different from information security on Microsoft or Apple systems. As an administrator, you'll take many of the same steps as you would to set bastions, manage users, encrypt filesystems, configure servers, customize applications, and work with intrusion prevention and detection systems. The Linux paradigm is different in some ways. However, with Linux, you have no choice for certain security controls. For example, if you want to set mandatory access control, you have to choose between Security Enhanced Linux (SELinux) and Application Armor (AppArmor).
+
+The basic procedures of server security should always be familiar to: servers in locked rooms, password security with Basic Input/Output System (BIOS) and Unified Extensible Firmware Interface (UEFI) menus, network security for the Intelligent Platform Management Interface (IPMI), physical access limited to authorized users, and so on. However, server security is especially important in the Linux context. One reason is that it is trivial to boot a fully functional version of Linux from CD/DVD or USB media with full administrative privileges to a system.
+
+> NOTE While the terms "file system" and "filesystem" are used interchangeably in Linux, this book uses the term "filesystem".

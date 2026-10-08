@@ -1,0 +1,285 @@
+
+# Index
+
+## A
+
+- Acceptable use policy, 199–199
+- Access control lists (ACLs), 39–140–142, 262
+- Access controls, 39
+- Access vector cache (AVC), 201
+- Access vectors, 201
+- Access Verification module, 13
+- access.log file in CUPS, 365
+- Account behavior, 225–426
+- Account module, 103
+- ACLs. See Access control lists
+- ACPI. See Advanced Configuration and Power Interface
+- Active Detection module, 12
+- Administrative login alerts, 425
+- Administrative privileges hierarchy, 60, 94–99, 111
+- Administrator security, 454
+- Administrators updates, 44–45
+- Adobe applications, 321–322
+- Advanced Configuration and Power Interface
+- Advanced encryption standard (AES), 128
+- Advanced Intrusion Detection Environment (AIDE), 373, 374, 397–399
+- AFS tokens. See Filesystem protocols
+- AH protocol. See Authentication Header protocol
+- A-1-C triad, 360
+- Alarm, 79
+- Alert and log audit, 11, 116
+- el log, message priority, 362
+- Amaya browser, 171
+- Anaconda installation program, 353
+- Andrew Filesystem (AFS) tokens, 235
+- Antivirus systems, 324–327
+- Apache, 22, 47, 252–259, 330–366
+- Apache Web server, 322–323, 381–382
+- API. See Cryptographic application programming interface
+- APIA. See Automatic private IP addressing
+- apparmor_status_command, 210
+- Application Armor (AppArmor), 176, 201, 210–214, 464
+- Application developers, 334
+- Application security, 320–324
+- Applications categories, 46
+- apt–commands, 335, 337–338, 346
+- apt-cache command, 154
+- apt-get command, 154, 159
+- Aptitude tool, 151, 152
+- apt-mirror command, 343
+- aquota.group file, 138
+- aquota.user file, 138
+- Architecture of kernels, 284–285
+- Asterisk private branch exchange (PBX), 273–275, 280
+- at service, 198
+- Attacks, 195–198
+- auth module, 101, 103
+- Authentication, 110, 134, 234
+- Authentication audits, 13
+- Authentication Configuration tool, 38
+- Authentication Header (AH) protocol, 238
+- Authentication scripts, 392
+- Authenticity, 9
+- Authorization audit, 101–102
+- Automated configuration, 339–343
+- Automatic private IP addressing (APIPA), 187
+- Automatic Red Hat, 340
+- Automatic Ubuntu updates, 339–340
+- Availability, 9
+- AVC. See Access vector cache
+- AVG anti-malware tools, 325
+- Awareness mapping, 14
+
+## B
+
+- Backporting, 288, 323
+- BackTrack, 414, 435
+- Backup Domain Controller (BDC), 227
+- Balsa, 172
+- Banner file, 182–183
+- Bare metal virtualization, 46, 63
+- Baseboard management controller (BMC), 75
+- Baseline Linux system updating, 358–361
+- Baseline system identification, 369–372
+- Baseline updates, 455
+- Basic Input/Output System (BIOS), 4
+- Basic security best practices, 79–80
+- Bastion hosts, 188
+- Bastion server, 147–156, 161, 94
+- BDC: Sec Backup Domain Controller
+- Berkeley Internet Name Domain (BIND), 48, 264, 266–267
+- Berkeley Standard Distribution (BSD), 325
+- Beta tests, 463
+- Binary editor, 91
+- Binary kernel, 31
+- Biometric controls, 55
+- BIOS. See Basic Input/Output System
+- Black market audit, 15
+- Black-hat hacker, 5
+- Blade, 56
+- Blocking IP addresses, 190
+- Bluetooth connections, 200
+- BMC. See Baseboard management controller
+- /boot/ filesystems, 118, 120
+- Boot hardware lockdown, 64, 80
+- Boot loaders lockdown, 64–73
+- Boot metus security, 75
+- Boot process security, 33–35
+- /boot/grub.gr.conf, 73
+- Bootloader, 307
+- Bootstrap Protocol (BOOTP), 388
+- Breach confirmation, 436
+- Bridge network, 155
+- Broadcasts, 305
+- Browsers, 171
+- BSD. See Berkeley Standard Distribution
+- Bug reports, 327–331
+- Bugs, 455
+- Bugzilla, 228, 442
+- Build packages, 158
+- Business environment audit, 15
+- Business grounding, 15
+- Caldera Systems, 6
+- Canonical, 344, 452–453
+- Canonical (Ubuntu) distribution, 19, 22
+- Canonical Landscape, 344–345
+- CentOS, 314, 317–319
+- Certificate authority (CA), 260–261
+- Certified Information Systems Security Professional (CISSP), 17
+- Chain of trust, 59
+- Challenge-Handshake Authentication Protocol
+- Challenge-response authentication mechanism (CRAM), 269
+- Chaos, 435
+- chconf commands, 202
+- chgrp command, 130
+- chkconfig command, 160, 161
+- chinod command, 131–132
+- chown command, 130
+- chroot jail, 136, 168
+- CIA triad, 5–7, 360
+- CIFS. See Common Internet File System
+- CISSP. See Certified Information Systems Security Protocol
+- ck- commands, 108
+- ClamAntiVirus (ClamAV) system, 325
+- Clear-text access, 245–247
+- Clear-text communication, 42
+- Cobbler project, 346
+- Commercial security test tools, 409–412
+- Commercial update managers, 343–345
+- Common Internet File System (CIFS), 227–233
+- Common Unit Printing System (CUIPS), 47, 95, 187, 232–277–280, 365
+- Common Vulnerabilities and Exposures (CVE) list, 320
+- Competitive security (COMSEC) channel. 10
+- Competitive Intelligence Scouting module, 15
+- Compliance, 10
+- Components testing, 462–463
+- Compromised data, 439–440
+- Compromised systems, 428–430, 336
+- Computer Allied Investigative Environment (CAINE), 431, 435
+- COMSEC channel. See Communications security channel
+- CA. See Certificate authority
+- Confidentiality, 7–8, 13, 78
+- CAINE. See Computer Allied Investigative Environment
+- Configuration categories, 46
+- Configuration for Linux kernel, 32
+- Configuration menu, 194
+- Configuration Verification module, 14
+- Conformity to security policies, 453–454
+- Console-based Security tool, 192
+- Containment process, 16
+- Continuity, 16
+- Corporate support, 451–453
+- Costs of security, 23–24
+- Crackers, 5
+- CRAM, See Challenge-response authentication mechanism
+- cron script, 102
+- cron service, 197
+- Cryptographic application interface (API), 302
+- cryptsetup command, 128–129
+- Custom-only DNS server, 64, 294
+- Custom Linux kernels, 31–33
+- CUPS. See Common Printing System
+- CVE list, See Vulnerabilities and Exposures
+- Cyrus, 48
+
+## D
+
+- Demilitarized zone (DMZ), 147–148
+- Demilitarized zone (DMZ) firewall, 193–194
+- Denial of service (DoS) attacks, 188–198, 274, 309
+- Denial of service issues, 9
+- Dependencies, 153, 159
+- Dependency hell, 53
+- Desktop applications, 458
+- Developers, 156–158
+- Device drivers in the Linux kernel, 298–300
+- DHCP: Dynamic host configuration
+- Dictionary attacks, 190–191
+- Digital certificates, 260
+- Digital Evidence & Forensic Toolkit (DEFT), 331
+- Digital Millennium Copyright Act (DMCA), 459
+- Direct address storage (DAS), 450
+- Disaster recovery, 440–441
+- Disclosure audit, 15
+- Discovery scripts for nmap, 392
+- Discretionary access controls, 39, 129
+- Discrimination audit, 15
+- Disk encryption, 58
+- Disk images, 437
+- Distribution release, 457
+- Distribution security, 317–320
+- Distribution-related applications, 457–458
+- Distributions, 46–48, 334
+- Distributions-specific kernels, 21, 290–291
+- djbdns. See Daniel J. Bernstein's DNS
+- DMCA. See Digital Millennium Copyright Act
+- DMZ. Demilitarized zone
+- DNS servers, 264–267, 259
+- Damn Vulnerable Linux (DVL)
+- Daniel J. Bernstein's DNS (djbdns), 48
+- DAS. See Direct address storage
+- dbus system, 107
+- dd command, 429, 437, 440
+- dd_reuse command, 432, 440
+- Deactivation of services, 159–160
+- Debian Package Manager, 47
+- debug commands, 395
+- debug log message priority, 362
+- debug-address, 386
+- Default nmap scripts, 292
+- Default permissions, 133
+- Default Rsys configuration, 367
+- Default runlevel, 35
+- Default services, 158–165
+- Default wireless hardware, 199
+- Definitions audits, 11
+- Definitions phase, 13
+- DEFT. See Digital Evidence & Forensic Toolkit
+- DEFT Linux, 435
+
+## E
+
+- ecryptfs. See Enterprise cryptographic filesystem
+- ecryptfs option, 127
+- edquota command, 138–139
+- Education of users, 423
+- Electromagnetic output, 196–197
+- Electronic Frontier Foundation (EFF), 60
+- Egal encryption scheme, 125
+- E-mail access, 423, 454
+- E-mail clients, 172, 246–247
+- emerg log message priority, 362
+- Encapsulating Security Payload (ESP) protocol, 238
+- Encrypted directories, 127–128
+- Encrypted files, 124–126, 439
+- Encrypted partitions and volumes, 128–129
+- Encrypted entries, 123–124, 143–222
+- Enterprise cryptographic filesystem (eCryptfs), 127
+- Enumeration, 13
+- EPEL: See Extra Packages for Enterprise Linux
+- Epiphany browser, 171
+- er log message priority, 362
+- er.log file in CUPS, 365
+- Escalation audit, 16
+- ESP protocol, See Encapsulating Security Payload protocol
+- /etc/sources.list configuration file, 337
+- /etc/fstab, 76
+- /etc/group, 86
+- /etc/shadow, 87–88
+- /etc/init configuration file, 150
+- /etc/ld.conf, 66
+- /etc/login/defs file, 88, 89
+- /etc/passwd.file, 85
+- /etc/services file, 77, 177–179
+- /etc/shadow, 86, 87
+- /etc/sudoers configuration file, 96–98
+- /etc/yum.conf configuration file, 336
+- Evidence principles, 439
+- Executable files, 426
+- Ext4, 46
+- Exposure Verification module, 15
+- extext2 filesystem format, 122
+- extext3 filesystem format, 122
+- extext4 filesystem format, 122
+- Extended internet super server, 166–167, 373
+- File Transfer Protocol (FTP)
