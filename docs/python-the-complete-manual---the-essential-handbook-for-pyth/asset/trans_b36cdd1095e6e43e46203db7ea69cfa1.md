@@ -1,0 +1,180 @@
+
+
+# 使用 Python 构建 Android 应用
+
+# 介绍 Python
+
+整个游戏逻辑。我们专门将其设计为 `FloatLayout` 的子类，因为这种特殊的布局能够根据其自身的位置和大小对其子组件进行定位和缩放——无论我们在哪里运行它或如何调整窗口大小，它都能正确地放置所有的游戏对象。
+
+小组件画布（canvas），我们在这里可以使用它来绘制每个小组件形状：
+
+可以设置的不同属性，例如矩形的 `pos` 和 `size`，你可以在线查看 Kivy 文档以了解所有不同的可能性。最大的优势是，尽管我们仍然声明了简单的 canvas 指令，但 kv 语言足以检测到我们引用了哪些 Kivy 属性，并在它们更新时（小组件移动或调整大小时）自动跟踪它们。移动以跟随这个！
+
+```
+<Player>
+canvas:
+    Color:
+        rgba: 1, 1, 1, 1
+    Rectangle:
+        pos: self.pos
+        size: self.size
+```
+
+接下来，我们可以使用 Kivy 的图形指令在我们的小组件上绘制各种形状。我们将演示简单的矩形以显示它们的位置，尽管你可能还会喜欢研究更多高级的选项。在 Python 文件中，我们可以通过在任何小组件的画布上声明来使用任何指令，如图 03 所示。
+
+```
+<Ball>
+canvas:
+    Color:
+        rgb: 1, 0.55, 0
+    Rectangle:
+        pos: self.pos
+        size: self.size
+```
+
+![](img/c72194f2c3aec198936695a665a5167c_32_0.png)
+
+这将绘制一个与玩家实例化瞬间的位置和大小相同的红色矩形——不幸的是，这产生了一个问题：绘制是静态的。当我们之后移动玩家小组件时，红色矩形将留在原处，而小组件在其实际位置上将是不可见的。
+
+```python
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.modalview import ModalView
+```
+
+```
+<Block>
+canvas:
+    Color:
+        rgb: self.colour
+    # 我们上面预定义的属性
+    Rectangle:
+        pos: self.pos
+        size: self.size
+```
+
+```python
+if __name__ == '__main__':
+    # 在 Android 编译期间使用
+pass
+```
+
+我们可以通过保留对画布指令的引用并反复更新它们的属性来跟踪玩家以修复这个问题，但有一个更简单的方法来实现这一切——我们可以使用上次介绍的 Kivy 语言。它有一套特殊的绘图语法。
+
+```
+Rectangle:
+    pos: [self.x, self.y, self.width, self.height]
+```
+
+```python
+class BreakoutApp(App):
+    pass
+
+BreakoutApp().run()
+```
+
+画布声明是特殊的，除非我们可以编写任何画布指令会引起混淆，画布不是一个小组件，像 `Line` 这样的图形指令也不是。它有一套画布特有的语法。指令具有所有
+
+![](img/c72194f2c3aec198936695a665a5167c_32_1.png)
+
+```python
+from kivy.properties import ListProperty, NumericProperty, ObjectProperty, StringProperty
+```
+
+# 介绍 Python
+
+# 使用 Python 构建 Android 应用
+
+```python
+class Game(FloatLayout):
+    def __init__(self, **kwargs):
+        # 将包含一切
+        self.blocks = ListProperty([])
+        super(Game, self).__init__(**kwargs)
+        self.player = ObjectProperty()
+        # Game 的实例
+        self.ball = ObjectProperty()
+        with self.canvas:
+            Color(1, 0, 1)
+            # rect(0, 1, r, g, b, a -> 红色
+        def add_block(self, block):
+            self.blocks.append(block)
+            add_widget(block)
+```
+
+```python
+class Player(Widget): # 一个移动的挡板
+    position = NumericProperty(0.5)
+    direction = StringProperty('none')
+    classclass Ball(Widget): # 一个弹跳球
+        # 用于定位的 _pos_hints
+        pos_hint_x = NumericProperty(0.5)
+        pos_hint_y = NumericProperty(0.3)
+        proper_size = NumericProperty(0.8)
+        velocity = ListProperty([0.1, 0.5])
+```
+
+![](img/c72194f2c3aec198936695a665a5167c_33_0.png)
+
+你可能注意到，我们有一个 Block 的 'Color' 指令之一来清除其属性。这意味着我们可以随时更改该属性以更新块的颜色，或者在这种情况下，给每个块赋予一个随机颜色（图 04）。
+
+现在每个小组件都有了图形表示，让我们学习如何放置它们，以便启动应用程序并在屏幕上真正看到一些东西。
+
+在这里创建我们想要的小组件，然后使用 `add_widget` 将其添加到图形中。我们在屏幕上的根小组件是 `Game` 的实例，每个块都被添加以进行显示。
+
+唯一的新点是，每个 `Block` 都被赋予了 `pos_hint`。所有小组件都有这个特殊属性，它被像我们的 `Game` 这样的布局用于以设置它们相对于布局的比例的位置。
+
+字典用于处理各种参数，但在这种情况下，'X' 给 y 和 Block 的位置是相对于宽度和高度的比例分数。
+
+现在你可以运行应用程序，并在显示在屏幕上之前向 `Game` 添加 50 个块。每个块都应该有三种随机颜色之一，并在网格中定位，但你现在会注意到它们的大小没有手动设置，因此它们重叠了。我们可以通过设置它们的 `size_hint` 属性来修复这个问题——让我们看看
+
+```python
+class Block(Widget): # 每个要消除的彩色块
+    colour = ListProperty([1, 0, 0])
+```
+
+图 03
+
+```python
+from kivy.graphics.context_instructions import Color
+from kivy.graphics.vertex_instructions import Rectangle
+
+class Game(FloatLayout):
+    def setup_blocks(self):
+        for y_jump in range(5):
+            for x_jump in range(10):
+                block = Block(pos_hint={
+                    'x': 0.05 + 0.09*x_jump,
+                    'y': 0.05 + 0.18*y_jump
+                })
+```
+
+# 使用 Python 构建 Android 应用
+
+# 介绍 Python
+
+这些用于与触摸或鼠标输入的函数在检测到输入时会自动调用，你可以根据触摸做出任何喜欢的操作。
+
+```python
+if scancode == 275:
+    self.direction = 'right'
+elif scancode == 276:
+    self.direction = 'left'
+else:
+    self.direction = 'none'
+```
+
+现在我们必须添加游戏机制。对于这样的游戏，通常希望每秒运行多次更新函数，更新小组件
+
+```python
+def on_key_up(self, args):
+    self.direction = 'none'
+```
+
+```python
+def update(self, dt):
+    dir = {'right': 1, 'left': -1}
+    self.position.x += (50 * dt * dir[self.direction])
+```
+
