@@ -1,0 +1,4 @@
+# # CHAPTER 1
+## The Essence of UNIX
+
+**case** ► Dominion Consulting specializes in management systems for large hotels and resorts. Dominion’s founders, Eli Addison and Carmen Scott, recognize the need for an in-house computer system that lets their employees work as a team. UNIX is an operating system designed for collaborative development of software, allowing people to work together and share information in controlled ways. Dominion has offered you a position as a UNIX system trainee. Your managers want you to understand the basics of operating systems in general, and UNIX in particular. They ask you to log on to UNIX and learn how to use some basic commands.

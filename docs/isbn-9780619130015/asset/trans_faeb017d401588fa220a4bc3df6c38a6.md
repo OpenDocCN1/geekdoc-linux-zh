@@ -1,0 +1,269 @@
+
+
+仅当条件（hours > 40）为假时，才会打印“继续工作”的消息。下面是一个使用代码块的示例：
+
+```c
+if(hours>40)
+{
+    printf("Go home.\n");
+    printf("You deserve it.");
+}
+else
+{
+    printf("Keep working.\n");
+    printf("Stop playing with the computer.");
+}
+```
+
+## 练习 C 语言 if-else 语句：
+
+- 1. 使用你选择的编辑器创建文件 `radius.c`。输入以下 C 代码：
+
+```c
+/* This program calculates the area of a circle */
+#include <stdio.h>
+int main()
+{
+    float radius = 50, area;
+    area = 3.14159 * radius * radius;
+    if (area > 100)
+        printf("The area, %f, is too large.\n", area);
+    else
+        printf("The area, %f, is within limits.\n",
+        area);
+}
+```
+
+- 2. 保存文件并退出编辑器。
+
+- 3. 输入 `gcc -o radius radius.c` 并按**Enter**键来编译程序。如果看到错误消息，请编辑文件并修正你的错误。
+
+- 4. 输入 `./radius` 并按**Enter**键来执行程序。
+
+## 使用 C 语言循环
+
+C 语言中的循环类似于你在 shell 脚本和 Perl 程序中使用过的循环。C 提供了三种循环机制：for 循环、while 循环和 do-while 循环。当你知道如何控制循环执行的次数时，使用 for 循环是最好的选择。如果不清楚循环应该执行多少次，则应使用 while 或 do-while 循环。
+
+下面是一个 for 循环的示例：
+
+```c
+for (count = 0; count < 100; count++)
+    printf("Hello\n");
+```
+
+这个循环意味着消息“Hello”将被打印 100 次。在单词“for”之后是一组包含三个参数的括号。这些参数由分号分隔。
+
+第一个参数是初始化。变量 count 被用来追踪循环运行的次数。初始化是一个语句，它在第一次循环之前执行。在上面的例子中，初始化将数字 0 存储到 count 中。
+
+第二个参数是测试条件。for 循环只要测试条件为真就继续执行。它在每次循环迭代之前进行评估。如果条件为真，则执行该次迭代。否则，循环终止。在示例中，只要 count 小于 100，循环就会执行。
+
+第三个参数是更新操作。它在每次迭代结束时执行。在示例中，循环对变量 count 进行自增。
+
+这段程序片段展示了 while 循环的示例：
+
+```c
+x=0;
+while (x++ < 100)
+    printf("x is equal to %d\n", x);
+```
+
+只要 x 小于 100，这个循环就会重复执行。下一个示例说明了 do-while 循环，它与 while 循环非常相似。
+
+```c
+x=0;
+do
+    printf("x is equal to %d\n", x);
+while (x++ < 100);
+```
+
+while 循环和 do-while 循环的区别在于，while 循环在每次迭代之前测试其条件，而 do-while 循环在每次迭代之后测试其条件。
+
+## 练习使用 C 语言循环：
+
+- 1. 使用你选择的编辑器创建文件 **rain.c**。输入以下 C 代码：
+
+```c
+/* rain.c  */
+#include <stdio.h>
+int main()
+{
+    int rain, total_rain = 0;
+    for (rain = 0; rain < 10; rain++)
+    {
+        printf("We have had %d inches of rain.\n", rain);
+        total_rain = total_rain + rain;
+    }
+    printf("We have had a total/");
+    printf("/ of %d inches of rain.\n", total_rain);
+}
+```
+
+- 2. 保存文件并退出编辑器。
+
+- 3. 编译程序并将可执行代码存储在一个名为 rain 的文件中。
+
+- 4. 运行程序。你的屏幕应与图 10-4 类似。
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_395_0.png)
+
+## 定义函数
+
+当你定义一个函数时，你声明了函数的名称，并创建了构成函数代码块的代码行。你还必须声明函数返回的数据类型（如果有）。下面是一个示例。
+
+```c
+void message()
+{
+    printf("Greetings from the function message.");
+    printf("Have a nice day.");
+}
+```
+
+单词“void”表示此函数不返回值。该函数的名称是 message。名称后面跟着一对括号。这个函数中只有两条语句，都是 printf。该函数可能在一个完整的程序中显示为：
+
+```c
+#include <stdio.h>
+
+void message();
+int main()
+{
+    message();
+}
+
+void message()
+{
+	printf("Greetings from the function message.\n");
+	printf("Have a nice day.\n");
+}
+```
+
+在 include 语句下方的这一行：
+
+```c
+void message();
+```
+
+被称为函数原型。它在函数的代码完全定义之前，告知编译器关于该函数的信息。单词“void”意味着此函数不返回任何数据。C 语言中的 Void 函数类似于 Fortran 中的子程序或 Pascal 中的过程。它们只是执行某些任务的代码模块。
+
+在函数原型之后是函数 main。Main 只包含一行，内容为：
+
+```c
+message();
+```
+
+这是一个函数调用。通过在程序的期望位置放置函数名称、一对括号和分号来调用函数。这会使程序的执行流转到该函数。当程序从函数返回时，它会继续执行函数调用之后的下一条语句。
+
+在 main 之后是函数 message 的定义。程序的输出如图 10-5 所示。
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_396_0.png)
+
+## 使用函数参数
+
+有时需要将信息传递给函数。传递给函数的值称为参数。参数存储在特殊的自动变量中。
+
+下面是一个示例。
+
+```c
+void print_square(int val)
+{
+    printf("\nThe square is %d", val*val);
+}
+```
+
+此函数接受一个 int 类型的参数。当它接收到参数时，函数将该参数存储在变量 val 中。printf 语句使表达式 val*val 的值被打印出来。下面是一个使用该函数的完整程序：
+
+```c
+#include <stdio.h>
+void print_square(int val);
+
+main()
+{
+    int num = 5;
+    print_square(num);
+}
+
+void print_square(int val)
+{
+    printf("\nThe square is %d\n", val*val);
+}
+```
+
+程序的输出如图 10-6 所示。
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_397_0.png)
+
+图 10-6：函数参数的演示
+
+## 使用函数返回值
+
+除了接受参数外，函数还可以返回一个值。这意味着你可以将函数调用作为算术运算和赋值的一部分。例如，假设你有一个名为 `triple` 的函数。它被设计为接受一个 int 参数并返回该值乘以三的结果。你可以像这样使用函数调用：
+
+```c
+y = triple(x);
+```
+
+该函数接收 `x` 中的值，将其三倍，然后返回该值。上面的语句将返回值存储在一个名为 `y` 的变量中。`triple` 函数可能如下所示：
+
+```c
+int triple(int num)
+{
+	return(num * 3);
+}
+```
+
+该函数被定义为 int 类型函数。这意味着它返回一个 int 值。你可以在程序中任何期望 int 值的地方放置对该函数的调用。该函数接受单个参数，该参数也是 int 类型。在函数中，参数存储在变量 `num` 中。函数的代码块中只有一行：
+
+```c
+return(num*3);
+```
+
+这是 return 语句。它用于将值返回到程序的调用部分。在此示例中，返回的是 `num * 3` 的值。下一个示例程序演示了该函数：
+
+```c
+#include <stdio.h>
+int triple(int num);
+int main()
+{
+	int x = 6, y;
+	y = triple(x);
+	printf("%d tripled is %d\n", x, y);
+}
+int triple(int num)
+{
+	return (num * 3);
+}
+```
+
+程序的输出如图 10-7 所示。
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_399_0.png)
+
+图 10-7：程序返回值的演示
+
+## 练习编写接受参数并返回值的函数：
+
+- 使用你选择的编辑器创建文件 `absolute.c`。输入以下代码：
+
+```c
+#include <stdio.h>
+int absolute(int num);
+int main()
+{
+    int x = -12, y;
+    y = absolute(x);
+    printf("The absolute value of %d is %d\n", x, y);
+}
+int absolute(int num)
+{
+    if (num < 0)
+        return (-num);
+    else
+        return (num);
+}
+```
+
+- 保存文件并退出编辑器。
+
+- 编译程序并将可执行代码保存在名为 `absolute` 的文件中。
+
+- 运行程序。你的屏幕应与图 10-8 类似。
+
