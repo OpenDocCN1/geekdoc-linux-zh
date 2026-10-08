@@ -1,0 +1,15 @@
+# 11.2.4 Beyond the Basics with TCPDump
+
+You should now have a feel for the basic syntax of TCPDump, including some of the options, the syntax, and TCPDump expressions. The amount of troubleshooting and diagnosis that can be accomplished with even a basic grasp of TCPDump syntax makes it an essential tool for anyone managing networked computers. However, even a basic knowledge of TCPDump is sometimes insufficient to examine some problems successfully. To examine more difficult problems, you may find that you need to go beyond the basics of TCPDump.
+
+Going beyond the basics of TCPDump requires deeper understanding of the protocols themselves. Knowing the flags of TCP or the types of ICMP can help to narrow the focus to only the packets of interest. Although this information and knowing how to use it with TCPDump is not mandatory, having the ability to call on the information at any time is valuable to say the least. Take time to familiarize yourself with TCPDump’s more involved syntax. It costs nothing but time to test a packet-filtering expression to see how it works under various network conditions.
+
+# 11.3 Using TCPDump to Capture Specific Protocols
+
+In this section, I’ll give some examples that show you how to capture various forms of network traffic for monitoring purposes. Included among the examples, you’ll see what a DNS query looks like through TCPDump, some ICMP (ping) examples, and various TCP- and UDP-based protocols. After you see how normal traffic looks, I’ll then show you some of the fun stuff. Specifically, I’ll show what some types of attacks look like through TCPDump so that you might be able to quickly detect these when coming into (or out of) your network.
+
+Throughout this section, I’ll be using a few different programs to generate traffic for TCPDump to capture. My primary tool for TCP-related captures will be telnet. I’ll use telnet to generate traffic and mirror what the real protocol (or close to it) does in the real world. Generation of DNS queries will be accomplished using both the **dig** command and the **host** command. The **ping** and **traceroute** commands will be used. Finally, the **hping2** command will be used to generate ICMP traffic as well as other interesting packets, especially in the attack section. With the exception of hping2, all of these programs are installed on most major Linux distributions.
+
+# 11.3.1 Using TCPDump in the Real World
+
+So far in this chapter, you’ve seen a number of examples for using TCPDump to capture various types of traffic. These examples were given to show the usage of TCPDump in relation to expressions and other options. Now it’s time to give you real-life examples of using TCPDump to capture specific types of traffic. The situations in which you might use these examples will vary, but I’ll try to give some clue as to why you might use a given example,

@@ -1,0 +1,407 @@
+
+# Index
+
+## P
+
+- Point-to-Point Tunneling Protocol. See PPTP
+- police, 513–514, 517
+- policies
+  - default policies
+    - defining, 277
+    - packet-filtering firewalls, 210–212
+    - rules, 189
+  - deny-everything-by-default policies, 286
+  - FORWARD policy, 277–278
+- policy, 525–543
+  - disposal, 538–539
+  - email, 530–531
+  - laptop, 535–538
+  - ownership, 542
+  - web server, 532–533
+- POP (Post Office Protocol), 152, 299–300. Also see popclient; popserver
+  - email
+    - retrieving, 302
+    - sending, 303
+  - POP servers for remote clients, 306
+  - pop3s (SSL-wrapped pop3), 153
+  - popclient password fix, 154–156
+  - pops, 599
+  - popserver, adding encryption, 152–154
+- pornography
+  - policy, 527–528
+  - repository for, 139
+- portmap, 120–122
+  - supports TCP Wrappers, 93
+- port mode (FTP), 315
+- port type qualifiers (TCPDump), 435
+- port-mode FTP data channels, 315–317
+- ports. Also see netstat; services
+  - cracker, 590
+  - insecure services on, 23
+  - in use, listing, 82, 84, 86–87
+  - monitoring, 351–357, 368
+  - numbers, 285
+  - open, 23
+  - scans
+    - problems with, 286
+    - responding to, 221–222
+  - service ports, 201–203
+  - unprivileged ports, 202
+  - unnecessary, 23
+- ports program
+  - using, 82
+- Portsentry, 351–357
+- Post Office Protocol. See POP
+- postfix, a sendmail alternative, 123
+  - downloading, 600
+- PostgreSQL database, 606
+- posting news (Usenet), 308
+- postmaster, reporting incidents to, 412
+- POSTROUTING chain
+  - mangle table, 245
+  - nat table, 243
+- Post Office Protocol. See POP
+- PPP, 141. Also see SSH
+- preexisting rules
+  - removing, 276–277
+- PREROUTING chain
+  - mangle table, 244
+  - nat table, 243
+- Presentation layer (OSI model), 189
+- primitives (TCPDump), 437
+- printing service, 179
+- print manual, 383
+- priorities, 32–34
+- private network services, 232–233
+- probes, 217
+- problem reporting policy, 542
+- problem sites, blocking, 215, 335–336
+- process, running cracker. See analyzing cracker
+- processes
+  - programs
+    - finding cracker’s, 466–467
+    - monitoring, 378–381
+- product updates. See updates
+- programs
+  - configuration, 28
+  - insecure, 28
+  - writing secure, 602
+- Promiscuous mode, 577–578, 579, 581
+  - detecting, 393–396
+- Promiscuous processes, finding, 397–398
+- prosecution, 519–520
+  - preparing, 517–518
+- protocol qualifiers (TCPDump), 437
+- proxy. See Squid
+- PSH flag, 198
+- ps, Trojan Horse in, 415
+- public network services, 232–233
+
+## Q
+
+- qualifiers (TCPDump)
+  - direction qualifiers, 436–437
+  - primitives, 437
+  - protocol qualifiers, 437
+  - type qualifiers, 435–436
+- query lookup requests, 291
+- QUEUE target, 242
+- QuickTime, 323–324
+
+## R
+
+- illegal addresses, 214–215
+- incoming packets, limiting, 215
+- problem sites, blocking, 215
+- source address spoofing, 214–215
+- remote source port filtering, 217
+- removing pre-existing rules, 276–277
+- repairing damage, 479–500
+- reporting incidents
+  - advantages of, 410
+  - denial-of-service attacks, 411
+  - incident types, 411–412
+  - information to include, 413–414
+  - online resources, 414
+  - where to report incidents, 412–413
+- Reaseau IP Europe (RIPE), 413
+- resource limits, 528
+- resources, 32–34
+  - mailing lists, 586
+  - New Groups, 589
+  - URLs
+    - general tools, 601
+    - security sites, 590
+    - security tools, 592
+    - specifications, 603
+  - vendors (See updates, distribution)
+- responding
+  - to intrusion detection, 407–409
+  - to port scans, 221–222
+- RETURN target, 242
+- rexec, 94
+- RFC 1094, NFS, 603–604
+- RFC 1813, NFS version, 603–604
+- RIPE (Reaseau IP Europe), 413
+- Rings of Security, 59
+  - lacking, 565
+- Ritz. See cracker
+- rlogin, 94
+- robots, spam, spoofing, 134
+- root, 412
+  - disabling FTP access, 140
+- root password. See password, critical, who gets?
+- rootkit checkers, See Chkrootkit
+- routers
+  - border routes, 207
+  - compared to firewalls, 187
+  - source address spoofing, 282
+  - routing packets, 201
+- rp filter, 276
+- RPM
+  - detecting compromise, 494–496
+- rsh, 94–95, 146–147
+  - detecting problems, 363–364
+- RST flag, 198
+- RTSP (Real-Time Streaming Protocol), 323
+
+## S
+
+- rate of transmission, 141
+- rcp, 94
+- re-prompting for a password, 42–43
+- reading Usenet news, 308
+- RealAudio, 323–324
+- RealVideo, 323–324
+- recent break-ins, 567–584
+- receiving email
+  - IMAP clients, 302–304
+  - POP clients, 303
+  - SMTP servers, 301–302, 304–306
+- recovering, 465–477
+  - from a break-in, 491–493
+- Red Hat 7.3, 60–63
+  - hardening, 59, 60–63
+  - promiscuous bug in, 395
+  - updates and patches. See updates, Red Hat
+- REDIRECT, 241
+- redirect messages, 255, 275
+- REDIRECT nat table target extensions, 267
+- referring URL, vulnerability, in, 32
+- regaining control after break-in, 465–477
+- registration
+  - IP addresses, 284
+  - multicast registration, 283
+- REJECT target, 242, 252
+- rejecting
+  - packets, 213
+- relaying
+  - mail, controlled, 133
+  - sendmail, 134–136
+  - spam, 133
+- relaying mail through external gateway SMTP servers, 300–301
+- remote client
+  - AUTH clients, 297
+  - DNS lookups, 293–295
+  - outgoing client access to remote FTP servers
+    - outgoing FTP requests over control channels, 315
+    - passive-mode FTP data channels, 315–317
+    - port-mode FTP data channels, 315
+- remote clients
+  - email, 306–307
+  - hosting Usenet nest servers for, 308–309
+  - remote site access, 310
+  - SSH server access, 312–313
+- remote destination address filtering, 230–231
+- remote destination port filtering, 231
+- remote network time servers, 329–330
+- remote sites, accessing, 203–205, 310, 319–321
+- remote source address filtering, 213
+- rules
+  - blocking directed broadcasts, 283
+  - chain commands on, 248
+  - default policies, 279
+  - packet-filtering rules, 270–271
+- packets
+  - disallowing, 282
+  - dropping, 283–284
+  - logging, 282
+- preexisting rules
+  - removing, 276–277
+- rule checking, bypassing, 279–281
+- telnet connections, 259
+- running process, cracker. See analyzing cracker programs
+
+## T
+
+- SAINT (Network security auditor/scanner), 598
+- Sam, 156–174
+  - which interface to bind, 66–67, 163
+- samin file system integrity checker, 391
+- SARA (Security Auditor's Research Assistant), 597
+- SATAN (Security Administrator's Tool for Analyzing Networks), 597
+- Satan. See Microsoft (just kidding)
+- scan for problems, how to, 598
+- scanner
+  - ports program, 82
+  - scanning, 382–402
+  - stealth, 570–571
+- scans
+  - incoming packets, 217
+  - general port scans, 218
+  - responding to port scans, 221–222
+  - stealth scans, 218–220
+  - service port targets, 219–220
+- screen locking programs, defeating, 113
+- scripts
+  - shell startup, 58
+- Secondary Heuristic Analysis for Defensive Online Warfare. *See* Shadow
+- Secret Service, 515–516
+- secure CGI, 602
+- secure, linux, 33
+- Secure Message Transport Protocol. *See* SMTP
+- Secure Network Address Translation. *See* SNAT
+- secure programs, writing, 602
+- Secure Shell. *See* SSH
+- Secure Socket Layer (SSL), 320–321
+- securing systems. *See* Adaptive Firewalls; PortSentry; Arpwatch
+- security
+  - patches (*See* updates)
+  - understanding Linux, 12
+  - vendor, 565–566
+  - Windows, 33–34, 565
+- Security Focus, 590
+- security tools. *See* tools, security
+- Seifried, Kurt, 590
+- sending email, 300
+  - as SMTP clients and receiving as IMAP clients, 303–304
+  - as SMTP clients and receiving as POP clients, 303
+  - as SMTP clients and receiving as SMTP servers, 304–305
+  - as SMTP servers and receiving as SMTP servers, 305–306
+- sendmail (sends and receives all e-mail), 101, 122–138. *Also see* e-mail; postfix
+  - 8.12.4, 101
+  - 8.9.3 (minimum rev.), 101
+  - account guessing, 572–573
+  - additional security, 123–124
+  - alternative, postfix, 123
+  - blocking attacks, 521–522
+  - blocking spam, 133–134
+  - relaying, 134–136
+  - resisting, DoS attacks, 103–106
+  - security, 124–125
+  - options, 129
+  - too many children, 128
+  - updates (*See* updates, sendmail)
+  - vulnerability
+    - EXPn, 128
+    - telling version, 128–129
+    - too many children, 128
+    - VRFY, 127
+    - without root, 600
+    - relaying, 133
+  - sendmail.com/, 102, 606
+  - sendmail.net/, 102, 606
+  - sendmail.org/, 102, 606
+- Sentinel (file system integrity checker), 392
+- serial number, Pentium III, 574
+- server
+  - DNS (*See* DNS)
+  - mail (*See* sendmail)
+  - web (*See* Apache)
+- service port targets, 219–220
+- service ports, 201–203
+- services, 201–203. *See also* netstat; ports; TCP (Transmission Control Protocol)
+  - AUTH user identification service, 296–298
+  - choosing which services to run, 233
+  - listing running, 82, 84, 86–87
+  - network (See ports)
+  - network-based services, 201–203
+  - nonsecure local services, protecting, 233
+  - protecting on assigned unprivileged ports, 285–286
+    - local TCP services, 286–288
+    - local UDP services, 288–289
+  - public versus private, 232–233
+  - separate systems, 109
+  - Usenet news services
+    - news servers, hosting, 308–309
+    - NNTP, 307–308
+    - peer news feeds, 309
+    - reading and posting news, 308
+- Session layer (OSI model), 189
+- setup, 58–60
+- SHADOW (Secondary Heuristic Analysis for Defensive Online Warfare), 598
+- shadowed password, 36
+- shaft DDoS program, 575
+- shell startup scripts, 58
+- shopping cart vulnerability, 28, 30–31
+- signature, attack detection. See Snort
+- Simple Network Management Protocol. See SNMP
+- simulator
+  - CyberProtect, 612
+- single user, password. See lilo, password
+- Slackware, 59
+  - updates and patches (See updates, Slackware)
+- smtp, 101
+- smashing stack. See buffer overflow
+- SMB, 156
+- SMTP (Secure Message Transport Protocol), 299–300
+  - conversations, capturing with TCPDump, 443–445
+  - email, 300
+  - receiving as local SMTP servers, 301–302
+  - relaying mail through external gateway SMTP servers, 300–301
+  - sending as SMTP clients and receiving as IMAP clients, 303–304
+  - sending as SMTP clients and receiving as POP clients, 303
+  - sending as SMTP clients and receiving as SMTP servers, 304–305
+  - sending as SMTP servers and receiving as SMTP servers, 305–306
+  - sending to any external mail servers, 301
+- snurff attacks, 333
+- SNAT (Source Network Address Translation), 241, 243–244
+  - nat table target extensions, 265–266
+- sniffers, 415, 429–431
+  - ARPWatch, 431, 458–460
+  - automatic, 60
+  - Crickct, 416
+  - Ethereal, 369–370
+  - MRTG, 416
+  - ntop, 416
+  - placement of, 417
+  - sniffi, 596
+- Snort, 416, 431, 453
+  - alerts, 457
+  - configuring, 454–456
+  - downloading, 453
+  - installing, 453–454
+  - Swatch, 457
+  - testing, 456–457
+- switches/hubs, 416–417
+- TCPDump, 372–375, 415–416, 431–432, 595
+  - abnormal packet activity, 446–447
+  - command-line options, 433–434
+  - DNS queries, capturing, 445
+  - downloading, 432
+  - expressions, 435–437
+  - FTP conversations, capturing, 445
+  - HTTP conversations, capturing, 439–444
+  - ICMP pings, capturing, 446
+  - installing, 432
+  - LAND attacks, 450–451
+  - normal scan (nmap) attacks, 447–449
+  - recording traffic with, 451–453
+  - SMTP conversations, capturing, 443–445
+  - Smurf attacks, 449
+  - SSH conversations, capturing, 445
+  - Xmas Tree attacks, 450
+- sniffing
+  - network, detecting, 396
+  - sniffit, downloading, 596
+  - sniffit.rug.ac.be/~coder/sniffit/sniffit.html, 596
+- SNMP (Simple Network Management Protocol), 91–92
+- Snort (an attack signature detector), 416, 431, 453, 598
+  - alerts, 457
+  - configuring, 454–455
+  - downloading, 453
+  - installing, 453–454
+  - Swatch, 457
+  - testing, 456–457
+- software updates. See updates
+- source addresses

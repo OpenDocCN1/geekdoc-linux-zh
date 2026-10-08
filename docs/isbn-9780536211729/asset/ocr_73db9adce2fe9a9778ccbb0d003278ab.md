@@ -1,0 +1,15 @@
+# 3.1 NFS, mountd, and portmap
+
+![](bbox=[0.065, 0.121, 0.932, 0.198])
+
+NFS stands for Network File System. It allows a client system to “mount” an NFS server system’s remote file systems as if they were directly on the client system. Samba and AppleTalk have more recently created similar facilities. NFS is a powerful capability. Unfortunately, there have been numerous security problems, some of them unsolvable with incompatible protocol changes. Because of this, it is recommended that it not be used at all except on private secure networks, protected from insecure networks, such as the Internet.
+
+Please review “Turn Off mountd, and portmap” on page 92 and “Switch NFS to Run over TCP” on page 93, where many of the problems have been covered in-depth. What are the problems and under what conditions can they be worked around?
+
++   1. UDP is insecure because it can be spoofed. This can be resolved by protecting the network of NFS systems (servers and clients) from unsecured networks via properly configured firewall and ensuring that only trusted systems running operating systems can attach to the network. This firewall will need to know which IP addresses on interfaces and reject packets received on a different interface than the “real” system with IP address. If the routing system is running Linux (with at least a 2.2 kernel), a firewall is not even necessary as the kernel offers Source Address Verification. This feature enables the kernel to block packets with spoofed source addresses coming from the wrong interface.
+
++   2. All systems on this network need to be secured against untrustworthy people having root access. This is to prevent crackers who have physical or network access to your Linux and UNIX boxes simply spoofing from an “inside” system. For Windows and Macs, simple password protection is needed, protection against physical access to them by the untrustworthy will increase security. This is due to having a different security model than Linux (Many people have many closed source operating systems to be significantly less than Linux).
+
++   3. Systems need to be protected against a rogue booting his own operating system off floppy, CD-ROM, or obtaining single-user mode boot disk. This is discussed starting in “Booting the Intruder’s Floppy or CD-ROM” on page 114. Because of NFS’s design, the NFS server will be compromised by the boot process.
+
++   4. Understand that NFS was created at a time when all computers were big and expensive, only trusted SysAdmins had root access, and systems were kept in locked rooms with very limited access. Anyone with root access can alter her client box to obtain any NFS access offered to any client on the network by a given NFS server. This is done simply by altering the client system’s IP address and using so to gain the privileges of whichever account is offered access by the NFS server.

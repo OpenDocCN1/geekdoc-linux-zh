@@ -1,0 +1,45 @@
+```
+`/usr/local/bin/snort -c /etc/snort/snort.conf -D`
+```
+
+Snort will start again and this time fork off into the background, returning you to the shell prompt.
+
+There is, of course, much more to Snort configuration than merely getting it running with the default options and rulesets. For more information on specific Snort configurations, refer to the Snort documentation.
+
+# ### 11.4.3 Testing Snort
+
+With Snort now running in the background, you could assume that it’s running perfectly fine and that log entries will be placed into `/var/log/snort` for you. However, I’m not one to assume things, especially about computer security. Therefore, to test the Snort installation I’ll use the handy hping2 tool to craft a packet or two and fire them toward the host running Snort.
+
+In this case, I’m just looking for verification that Snort is running and monitoring something. The default rules look for bad packets, so crafting one of those should be trivial with hping2. From another host on the network (192.168.1.10), I ran the following hping2 command toward the host running Snort (192.168.1.2):
+
+```
+`hping2 -X 192.168.1.2`
+```
+
+The `-X` option causes an Xmas scan to be run. Looking in `/var/log/snort` on the host running Snort reveals the alert file has received some information and there is also a new directory called 192.168.1.10, which was the source of the test packets. Inside that directory are files corresponding to the packets I sent, the contents of which are shown here:
+
+```
+```
+[**] BAD-TRAFFIC tcp port 0 traffic [**]
+06/07-16:19:00.712543 192.168.1.10:1984 -> 192.168.1.2:0
+TCP TTL:64 TOS:0x0 ID:48557 Iplen:20 DgmLen:40
+*2***** Seq: 0xED1609B Ack: 0x13E89C5 Win: 0x200 TcpLen: 20
+=================================================================
+[**] BAD-TRAFFIC tcp port 0 traffic [**]
+06/07-16:19:00.712610 192.168.1.2:0 -> 192.168.1.10:1984
+TCP TTL:64 TOS:0x0 ID:10034 Iplen:20 DgmLen:40 DF
+***A*R** Seq: 0x0 Ack: 0xED1609B Win: 0x0 TcpLen: 20
+=================================================================
+```
+```
+
+As you can see from the output, Snort has captured what it believes to be (correctly so) bad TCP packets. The alert log file `/var/log/snort/alert` also contains information that is especially useful for sorting the alerts. Here are the log entries from the alert log file that correspond to the previously shown entries from the specific host file:
+
+```
+```
+[**] [1:524:8] BAD-TRAFFIC tcp port 0 traffic [**]
+[Classification: Misc activity] [Priority: 3]
+06/07-16:19:00.712543 192.168.1.10:1984 -> 192.168.1.2:0
+TCP TTL:64 TOS:0x0 ID:48557 Iplen:20 DgmLen:40
+```
+```

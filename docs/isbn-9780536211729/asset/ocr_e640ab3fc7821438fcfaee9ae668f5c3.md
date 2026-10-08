@@ -1,0 +1,15 @@
+# LIMITING INCOMING PACKETS TO SELECTED REMOTE HOSTS
+
+You might want to accept certain kinds of ruling incoming packets from only specific external sites or individuals. In these cases, the firewall rules will define either specific IP addresses or a limited range of IP addresses that these packets will be accepted from.
+
+The first class of incoming packets is from remote servers responding to your requests. Although some services, such as web or FTP services, can be expected to be coming from anywhere, other services will legitimately be coming from only your ISP or specially chosen hosts. Examples of servers that are probably offered only through your ISP are POP mail service, domain name service (DNS) name server responders, and possible dynamic IP address assignments.
+
+The second class of incoming packets is from remote clients accessing services offered from your site. Again, although some incoming connections, such as connections to your web server, can be expected to be coming from anywhere, other local services will be offered to only a few trusted users or friends. Examples of restricted local services might be ssh and ping.
+
+
+
+Incoming packets based on the destination is not much of an issue. Under normal operation, your network interface card ignores regular packets that aren't addressed to it. The exception is broadcast packets, which are broadcast to all hosts on the network.
+
+Address 255.255.255.255 is the general broadcast destination. It refers to all hosts on the immediate physical network segment, and it is called a limited broadcast. A broadcast address can be defined more explicitly as the highest address in a given subset of IP addresses. For example, if your ISP's network is .0 with a 24-bit subnet mask and your IP address is 192.168.10.30, you would see broadcast packets addressed to 192.168.10.255. On the other hand, if you have a total of four addresses, network for two hosts, and the broadcast. For example, consider the network 10.3.7.4/30. In this network, 10.3.7.4 is the network address, the two hosts would be 10.3.7.5 and 10.3.7.6, and the broadcast would be 10.3.7.7. This /30 configuration type is typically used between routers, though the actual addresses may vary. The only way to know what the broadcast address will be for a given subnet is to know an IP address within the subnet and the subnet mask. These types of broadcasts are directed correct subnets and are delivered to all hosts on the network.
+
+Broadcast-to-destination broadcast from 0.0.0.0 is similar to point-to-point packets coming from the broadcast source address mentioned earlier, in the section "Source Address Spoofing and Illegal Addresses." Here, broadcast packets are directed to source address 0.0.0.0 rather than to the destination address, 255.255.255.255. In this case, there is little question about the packet's intent. This is an attempt to identify your system as a Linux machine. For historical reasons, networking code derived from BSD Unix returns an ICMP Type 3 error message in response to 0.0.0.0 being used as the broad-

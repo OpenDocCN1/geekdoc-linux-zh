@@ -1,0 +1,17 @@
+who has compromised the user's account. The SysAdmin can copy and save log files that the cracker might not have destroyed and offer them to you for analysis or analyze them for you. (He may not want to hand them over to you, a complete stranger.)
+
+# ## 14.11 Other SysAdmins: Do They Care?
+
+When you trace a cracker to a particular system, what assistance might you get from that system's SysAdmin? Based on my experience, that varies. The size and type of company matters little. Certainly, how busy the SysAdmins are and company policy plays a large part in the help received. Your attitude, method of approach, and preparedness will be a big factor as will the seriousness of the intrusion, the severity of any crime committed, their liability, and risk of bad publicity.
+
+As you know, tracing computer records tends to be time-consuming, and the SysAdmins you are asking for the help of probably already are overworked and will be on unpaid overtime for this. Treating this as two professionals solving a common problem usually works well. There tends to be professional courtesy between SysAdmins, just as there is between police officers in different police forces. Additionally, egos can be involved as well. You will want to be diplomatic, easygoing, nonconfrontational, and nonjudgmental but "matter of fact" and firm too.
+
+Only if you are not seeing results should you resort to the use of pressure. Remember that the most effective pressure is the threat of undesired attention. A threat of bringing in a police force (if the situation warrants it) and the media should be most effective. So too might "I'm sure hoping that we do not have to bother management over this" with the implied risk of someone getting fired. (Working with various police forces is discussed in "Having the Cracker Crack Rocks" on page 513.)
+
+In the United States, the offending system's state police force probably has jurisdiction as does the FBI and the county Sheriff's Department or county Police Department. If they are inside the city limits of a city or town, that police department also has jurisdiction. Try 'em all until one gets interested. Be persistent.
+
+For the best effect, ask Telephone Information for the number of the FBI (U.S. government's Federal Bureau of Investigation) in the nearest large city, call them, and ask for the name of an agent who investigates computer crime. Let us assume that her name is Special Agent Scully.
+
+Do explain to the SysAdmin or her boss, the MIS director, or even the appropriate VP (typically the Chief Financial Officer) how you really *do not* want to involve the FBI but if you cannot make any headway you will have to give a call to Special Agent Scully in the FBI's [city location] office. Showing that you already have a name shows that you already have contacted said police agency and have a working relationship with them.
+
+You might want to have talked with said Special Agent Scully prior to using her name and explain to her that you traced a cracker attempt (or success) to such and such a computer at Pentacorp. Thus, if your target actually has the courage to contact Scully, she will discover that you really have been in contact. Special Agent Scully might be

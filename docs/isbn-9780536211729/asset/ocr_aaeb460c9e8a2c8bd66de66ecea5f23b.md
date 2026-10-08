@@ -1,0 +1,15 @@
+# The IP
+
+mask. This is useful for conservation of addresses because it enables the network administrator to customize the size of the network based on need and convenience than on the class boundaries. Jumping to the example with two routers that communicate solely with each other, using CIDR a network administrator can create a network of just two hosts with the resulting subnet mask 255.255.255.252.
+
+I'll carry that example a little further. The two routers only need to talk to each other within this network so that they can run traffic between two different IP networks. The network administrator assigns one router the address 192.168.0.1 and the other router 192.168.0.2 and gives both a subnet mask of 255.255.255.252. Given that subnet mask, there are two available IP addresses with which a host could be masked. The network address for this logical network is 192.168.0.0 and the broadcast address is now use the remainder of the 192.168.0 network, following CIDR rules, for others.
+
+You'll frequently see notation referred to as a /NN with NN being the number of bits to be masked. For example, a Class C has 24 bits for the number portion of the address, which means that it could be referred to as a /24. A Class B would be /16 and a Class A would be /8. Going back to the two-router example, the CIDR notation for this address is /30 bits of the address are consumed by the subnet.
+
+Why is subnetting important? The simple answer is that subnet defines the largest possible broadcast space for the network. Within a subnet a host can send broadcast to all hosts in that subnet. In practice, broadcasts are limited by physical limitations than the logical limitations presented by subnet masks. You can connect only many devices to a switch before you may (I repeat), start to perform performance degradation and would likely divide the network into smaller logical sections. Without subnetting we would have a very large, flat address space, which would be much slower than the hierarchical addressing currently used.
+
+
+
+There are times when an IP packet is larger than the maximum allowed size for the physical medium on which it is traveling. This maximum allowed size is known as the Maximum Transmission Unit, or MTU. If an IP packet is larger than the MTU for the medium, the data will need to be split into smaller chunks before being transmitted. For Ethernet, the MTU is 1500 bytes. The process of splitting an IP packet into smaller pieces is called fragmentation.
+
+Fragmentation is handled at the IP layer of the OSI model and is transparent to higher layer protocols such as TCP and UDP. As an administrator, you should be careful about fragmentation as it can affect application performance if one of the fragments of a large segment gets lost. In addition, as a system administrator, you should understand fragmentation because it has been a path for attack in the past. Realize, however, that any intermediary router or other devices within the communication path may cause fragmentation and you may not even know it.

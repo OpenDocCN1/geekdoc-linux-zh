@@ -1,0 +1,107 @@
+# Index
+
++   - imaps (SSL-wrapped imap), 153, 599
+- impersonating, See spoofing
+- incidents, reporting
+  - advantages of, 410
+  - denial-of-service attacks, 411
+  - incident types, 411–412
+  - information to include, 413–414
+  - online resources, 414
+  - where to report incidents, 412–413
+- incoming Destination Unreachable messages, 331
+- incoming packets
+  - denial-of-service attacks, 411
+  - areas of consideration, 228
+  - buffer overflows, 227
+  - fragmentation bombs, 226–227
+  - ICMP redirect bombs, 227–228
+  - ping flooding, 224
+  - Ping of Death, 224–225
+  - Smurf attacks, 332, 449
+  - TCP SYN flooding, 222–224
+  - UDP flooding, 225
+- filtering
+  - incoming TCP connection-state filtering, 217
+  - local destination address filtering, 216
+  - local destination port filtering, 217
+  - remote source address filtering, 213–215
+  - remote source port filtering, 217
+  - source-routed packets, 229
+- iptables, 242
+- limiting to selected remote sites, 215
+- probes, 217
+- scans, 217
+  - general port scans, 218
+  - responding to port scans, 221–222
+  - stealth scans, 220
+  - targeted port scans, 218–220
+- incoming TCP connection-state filtering, 217
+- inetd, 96
+- Trojan, 474–475
+- inetd.conf, 61
+- inetdconvert, 61
+- ingreslock, 573
+- initialization
+  - firewalls, 273–274
+  - defining default policies, 277–278
+  - kernel-monitoring support, 275–276
+  - loopback interfaces, 277–278
+  - pre-existing rules, removing, 276–277
+  - rule checking, bypassing, 279–281
+  - source address spoofing, 281–285
+  - stealth scans, 279
+  - symbolic constants, 274
+  - TCP state flags, 279–280
+
++   - innd, 180–181
+- insecure programs, 28
+- installation
+  - firewalls, 336–339
+  - Snort, 453–454
+  - TCPDump, 432
+- Instant Messenger (IM), 531–532
+- integrity checking. See file system integrity checking
+- integrity of filesystems, 422–423
+- Internet Assigned Numbers Authority. See IANA
+- Internet Control Message Protocol. See ICMP
+- Internet Message Access Protocol. See IMAP
+- Internet Protocol. See IP
+- Internet Security Systems. See ISS
+- Internet services, enabling, 290, 296–298. See also DNS (Domain Name System)
+- Internetworking with TCP/IP Vol. I, II, and III (book), 614
+- interpreting log files, 481–488
+- intruder. See cracker
+- intrusion, configuration to prepare for, 109–113
+- Intrusion detection, 403–405, 415, 429–431
+  - ARPWach, 431, 458–460
+  - Chkrootkit, 417–418
+  - downloading, 418
+  - limitations, 420–421
+  - responding to infections, 419–421
+  - running, 418–419
+  - security, 421–422
+  - system binaries, 421–422
+  - when to use, 422
+- filesystems, 406–407, 422–423
+- incident reporting, 409–410
+  - advantages of, 410
+  - denial-of-service attacks, 411
+  - incident types, 411–412
+  - information to include, 413–414
+  - online resources, 414
+  - where to report incidents, 412–413
+- log monitoring, 423–425
+- network analysis tools, 415–417
+  - ARPWach, 417
+  - Cricket, 416
+  - MRTG, 416
+  - ntop, 416
+  - sniffer placement, 417
+  - Snort, 416
+- switches/hubs, 416–417
+- TCPDump, 415–416
+- penetration testing
+  - Hping2, 427
+  - Nessus, 428
+  - Nikto, 427–428

@@ -1,0 +1,15 @@
+> We have come a long way since *The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage* of 1989 where a SysAdmin for some UNIX systems at Lawrence Berkeley Labs (that did classified nuclear research) had extreme difficulty in getting anyone to care that a foreign spy was trying to break into classified government systems.
+
+The amount of help varies tremendously between jurisdictions and even between different offices of the same agency, such as the FBI. My rule is to contact “the boys and girls with guns” only if there has been thousands of dollars of damage or more than a few days' worth of cleanup work for the SysAdmin as a result of the intrusion, and only if you have good evidence. Even then, other than scaring the cracker, the odds are against making the cracker's life miserable.
+
+# 15.1.1 FBI
+
+The FBI now investigates all computer crime involving interstate commerce (which means involving any computer which has received e-mail or other traffic from computers across state boundaries). Based on reported experiences of other SysAdmins, it generally appears that the FBI will conduct a major investigation of ordinary crimes against a commercial or private entity only if there is substantial dollar loss.
+
+This is likely due to limited budgets rather than desire. I suspect that the minimum loss to get their interest can vary between $3,000 and $25,000. Damage thresholds to trigger an investigation are less for cases involving viruses that could become widespread, banks, espionage, and, of course, high-visibility cases. The FBI will be especially interested in attacks on banks, airlines, or U.S. government agencies, or crackers trying to get classified data.
+
+Even within the FBI, different field offices have different policies on what they investigate and differing levels of ability and interest. The policy of the Atlanta, Georgia, office seems to be to consider cracker incidents where there has been substantial dollar loss to the victim beyond lost time of its employees. The author is aware of a case where the FBI's Atlanta office investigated the theft of a laptop computer containing proprietary data, even though the hardware was not especially valuable.
+
+Understand that the FBI's job is to collect information for the U.S. Justice Department to get convictions. At the start of a federal case, the FBI will discuss the case with Justice and will continue only if Justice believes a prosecution and conviction are possible. Just as a salesman is judged on sales and an engineer is judged on completed projects, the FBI and Justice Department people are rated by their convictions.
+
+Recently, a client of mine received an unexpected visit from an FBI Special Agent out of the Atlanta office. It seems that one of their other consultants, whom I shall call Professor Moriarty, had a copy of a virus that was traced to damage at a university. Moriarty claimed that he had it only “for study,” including the source. Because he previously had extorted money from my client to release notes he already had billed it to write, I suspect his plans included more than just study.

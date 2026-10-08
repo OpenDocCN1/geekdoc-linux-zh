@@ -1,0 +1,16 @@
+making nonsecurity computer improvements. Later, they learn the sad reality—recovering from a security breach commonly ten times as much as having implemented security before the break-in would have cost—and then they must spend the money to implement the security. "ten times the cost" figure represents only the direct cost. It does not account for market opportunities, for delayed products, for loss of customers who have heard about the security breach and went elsewhere, and for costs to customers and employees who simply could not access your site and e-mail during recovery. It does not account for lost investors or for other consequences of bad publicity, and most certainly does not account for the damage done to an IT professional's career.
+
+What can be done to resolve insufficient resources and misplaced priorities? Spend an hour or two a working session on a skunk works^12project. Demonstrate a Linux Firewall, web server, or VPN. How easy is it to update Linux software when patches come in, to use SSH and GPG, to crack most passwords, or attack a Wi-Fi wireless network. Do scans of your network from your home system using nmap with the (-O flag) to show how your network is. Install Snort and Portentry outside your firewall (if any) to show how much your network is attacked.
+
+Talk with colleagues to find accounts of problems and relay them to your management. Have a good consultant, or other trusted outside source, a security audit of your company and recommend improvements. Never give up. Never surrender.^13 Giving leads to procrastination and results in compromised systems. That is the dark side of The Force. Force pointing is a popular game over a major problem.
+
+Misplaced priorities can also mean using Microsoft because "We are a Microsoft shop," disregarding that it may not have sufficient security for servers accessible from the Internet.
+
+A Microsoft Corp. Vice President^8 recently told a U.S. federal court that sharing information on vulnerabilities with competitors could damage national security and even threaten the U.S. war effort in Afghanistan. He later acknowledged that some Microsoft code was so flawed it could not be disclosed safely.
+
+The amazing statements and candid admissions were some of Jim Alchin's testimony during his two days in court before Judge Kollar-Kotelly, who is hearing the case in which nine states and the District of Columbia are seeking stricter penalties for Microsoft's illegal antitrust behavior.
+
++   12. A skunk works project is one completed without management approval or knowledge. It is done as a pilot project to demonstrate the feasibility of something that the engineers think is very important but which management will fund. After demonstrating a working prototype, often funding can be obtained. We have launched a number of important projects this way.
+The term "skunk works" comes from Lockheed's elite design group, in complete secrecy designed the U2, the SR-71, and other highly classified aircraft. This elite design group was headed for many years by the legendary Kelley Johnson.
+
++   13. Thanks "Galaxy Quest." Wiehoff
