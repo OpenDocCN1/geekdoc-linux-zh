@@ -1,0 +1,1 @@
+-size anum[] true if the file is anum blocks long (512 bytes per block). If you follow anum with a c, the size is in bytes.

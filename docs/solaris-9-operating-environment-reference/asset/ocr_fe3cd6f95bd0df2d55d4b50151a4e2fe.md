@@ -1,0 +1,1 @@
+In dynamic mode only, force a fatal error if any relocations against nonwritable, allocatable sections remain.

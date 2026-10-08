@@ -1,0 +1,1 @@
+Once the terminal type is known, tset sets the terminal driver mode. This process normally involves sending an initialization sequence to the terminal, the single

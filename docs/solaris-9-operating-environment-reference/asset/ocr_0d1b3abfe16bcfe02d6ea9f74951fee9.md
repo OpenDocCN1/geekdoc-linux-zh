@@ -1,0 +1,1 @@
+The following example uses the whatis command to list all of the manual pages for the command.

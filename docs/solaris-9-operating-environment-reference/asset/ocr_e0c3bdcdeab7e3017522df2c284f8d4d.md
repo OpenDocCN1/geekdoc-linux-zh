@@ -1,0 +1,1 @@
++   -c Check that the single input file is ordered as specified by the arguments and the collation sequence of the current locale. Set the exit code, and produce no output unless the file is out of sequence.

@@ -1,0 +1,43 @@
+# genlayoutouttbl 425
+
++   * active_directional
+* active_shape_editing
+* AL, ALGORITHM_BASIC
+* ALGORITHM_IMPLICIT
+* AN
+* BN
+* check_mode
+* context
+* CONTEXT_LTR
+* CONTEXT_RTL
+* CS
+* EN
+* END
+* ES
+* ET
+* FALSE
+* FILE_CODE_REPRESENTATION
+* implicit_algorithm
+* keep
+* L
+* LAYOUT_ATTRIBUTES
+* LAYOUT_BIDI_CHAR_TYPE_DATA
+* LAYOUT_SHAPE_DATA
+* LRE
+* LRO
+* MODE_EDIT
+* MODE_STREAM
+* NSM
+* national_numerals
+* numerals
+* NUMERALS_CONTEXTUAL
+* NUMERALS_NATIONAL
+* NUMERALS_NOMINAL
+* ON
+* orientation
+* ORIENTION_CONTEXTUAL
+* ORIENTION_LTR
+* ORIENTION_RTL
+* ORIENTION_TTBLR
+* ORIENTION_TTBRBL
+* PDF
