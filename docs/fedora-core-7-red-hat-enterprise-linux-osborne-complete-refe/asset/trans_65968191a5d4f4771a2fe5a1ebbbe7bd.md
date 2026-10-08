@@ -1,0 +1,352 @@
+
+## G
+
+- 组名，用于指定 `sudo` 命令，572
+- `-group` 选项，与 `find` 命令配合使用，260
+- `groupadd` 和 `groupdel` 命令，使用方法，611
+- `groupmod` 命令，使用方法，611
+- 用户组 (groups)
+  - 添加、修改和删除，610–611
+  - 更改文件所属组，614–615
+  - 管理，609–611
+  - 使用 system-config-users 进行管理，610
+  - 文件和目录的所属组，614
+- `GROUPTS`  shell 变量，说明，232
+- `growisofs` dvd+rw 工具，使用方法，691–692
+- GRUB (Grand Unified Bootloader)
+  - 重启后显示，46–47
+  - 特性，597–600
+  - 安装，43
+  - 重新安装，50
+  - 使用方法，767–768
+  - `grub.conf` 文件，示例，600
+- GStreamer 框架
+  - 特性，299–300
+  - MP5 兼容性，301
+  - 多媒体系统选择器组件，300
+  - 插件，81–82, 300
+- GNOME 中的 `gtkrc` 文件，说明，166
+- GTK 内核配置工具，使用方法，762
+- GTK+ 组件集，与 GNOME 应用程序配合使用，143–144
+- 图形用户界面 (GUI)
+  - 强制退出，57
+  - 从命令行启动，66
+- 基于图形界面的 Fedora 工具，访问方法，90
+- `gunzip` 实用程序，用于解压缩文件，652
+- `gv` 文档查看器，说明，284
+- `gvim` 桌面编辑器
+  - 说明，288
+  - 作为 Vim 的替代工具使用，294
+- `gzip` 实用程序
+  - 用于压缩文件，272–273
+  - 选项，273
+  - 与压缩文件配合使用，270–271, 652
+
+## H
+
+- `\h` shell 提示符代码，说明，237
+- HAL (Hardware Abstract Layer，硬件抽象层)
+  - 配置，733
+  - 管理可移动设备，674
+  - 用途，732
+  - 与 udev 的关系，670
+- HAL 呼叫机制 (callsouts)，使用方法，737
+- HAL 连接，与打印机配合使用，96
+- HAL 守护进程，使用方法，733
+- HAL 存储策略，说明，735
+- `halt` 命令，用于关机，49, 59
+- `halt` 文件，内容，451
+- 硬盘分区，创建，710
+- 硬盘，为 Linux 配置，33
+- 硬盘名称，确定 NTFS 分区的名称，116
+- 硬盘分区
+  - 手动挂载，684
+  - 分离用于 RAID 设备，715–716
+- 硬盘
+  - LVM 示例，700–703
+  - 分区，685
+  - 使用 `fdisk` 命令进行分区，686–687
+  - 前缀，670
+- 硬链接 (hard links)
+  - 删除，265
+  - 支持，263
+- 硬件抽象层 (Hardware Abstract Layer, HAL)，管理可移动设备，674
+- 硬件配置，向 Fedora 项目组注册，48
+- 硬件检测，安装，39
+- 硬件设备，安装，720
+- 硬件 RAID 支持，可用性，705–706
+- 硬件要求，Linux 安装所需，32
+- 硬件虚拟化，实现方法，771–772
+- HDTV 接收，使用 PCHDTV 视频卡进行，309
+- KDE 应用程序的头文件，系统 KDE 目录，192
+- KDE 中的帮助中心，特性，181
+- 帮助资源
+  - 应用程序文档，73
+  - 上下文敏感帮助，73
+  - Info 页面，75
+  - Man 页面，73
+- 隐藏文件，在 Konqueror 中显示，184
+- GRUB 中的 `hiddenmenu` 选项，使用方法，598
+- 隐藏窗格 (Hiding pane)，在 KDE 面板 (Kicker) 中使用，181
+- HINFO 记录，使用方法，846
+- `HISTCMD` shell 变量，说明，232
+- `HISTFILE` 系统环境变量，说明，232–233
+- 历史事件，在 BASH (Bourne again) shell 中编辑，200–201
+- 历史列表，在 BASH (Bourne again) shell 中保留，197
+- BASH (Bourne again) shell 中的 `history` 实用程序，使用方法，198–200
+- `HISTSAVE` 变量，在 BASH (Bourne again) shell 中配置，201
+- `HISTSIZE` 系统环境变量
+  - 在 BASH (Bourne again) shell 中配置，201
+  - 说明，232
+- `/home` 目录
+  - 内容，663–664, 666
+  - 功能，253
+  - 列出其中的配置文件，245
+  - 列出其中的文件，253–254
+  - 定位其路径名，234–235
+  - 名称，250
+  - 搜索，239
+- `HOME` shell 变量
+  - 说明，232
+  - 使用方法，234–235
+- 主机名，在电子邮件地址中的格式，524–525
+- 主机名，与 @ (at) 符号配合使用，197
+- host 网络工具，特性，345
+- `HOSTFILE` 系统环境变量，说明，232
+- `HOSTNAME` shell 变量，说明，232
+- 主机名 (hostnames)
+  - 在电子邮件地址中的使用，524–525
+  - 在 URL 地址中的使用，324
+- 主机 (hosts)
+  - 添加主体 (principals)，418
+  - 在主机之间复制文件，412–413
+  - IP 伪装，447
+  - 在 Sendmail 中的伪装，538–539
+  - 接收加密的 IPsec 传输，400
+- 主机面板 (Hosts panel)，与 system-config-network 工具配合使用，123–124
+- 具有共享目录的主机，列出，9
+- `hosts.allow` 文件，内容，472
+- `hosts.conf` 文件，与 DNS (域名服务) 的关系，812–813
+- `HOSTTYPE` 系统环境变量，说明，232–233
+- 热插拔设备，说明，252
+- `htaccess` 文件，与 Apache Web 服务器配合使用，492
+- httpd 访问选项，在 Squid 代理服务器中的排序，518
+- HTTP/1.1 协议，与 Apache 虚拟主机配合使用，503
+- httpd 守护进程，调用 Apache Web 服务器，492
+- httpd 服务脚本，使用方法，461–462
+- `httpd.conf` 配置文件，内容，492
+- Hyperdex 数据库，组件，323
+
+## I
+
+- `IN-ADDR.ARPA` 反向映射格式，在 IPv4 中使用，850–851
+- include 目录，与 GNOME 配合使用，166
+- `Indexes` 指令，与 Apache Web 服务器配合使用，497
+- InfiniBand，支持，134–135
+- info 页面，访问方法，75
+- Informix 数据库管理系统
+  - 特性，286–287
+  - 网站，285
+- `Inherits` 变量，与 vivid 配合使用，130
+- init 脚本函数，说明，462
+- `Init1`...`Init9` 变量，与 vivid 配合使用，130
+- `initab`，其中的运行级别 (runlevels)，580
+- 初始化文件
+  - 使用，248
+  - 与 shell 参数变量配合使用，234
+- `initrd.img` 文件，从中启动，35
+- `initab` 文件，组件，741
+- INN (NetKit News) 新闻服务器
+  - 配置文件，559–560
+  - 特性，559
+  - 实现，561
+  - `inn.conf` 文件，560
+  - 存储格式，560
+  - 其中概要 (overviews) 的支持，560–561
+  - 网站，558
+- INPUT 链
+  - 定义用户链，443
+  - 内核使用，423
+  - 与 IPTables 配合使用，427
+- 输入设备，显示，742
+- `INCTRPC` 系统环境变量，说明，233
+- `ifdown` 脚本，使用方法，816
+- `IFS` 系统环境变量，说明，232
+- if-then 命令，使用 `fi` 关键字，221
+- `ifup` 脚本，使用方法，816
+- `ignoreoff` 特性，使用方法，230
+- `IGNOREEOF` 系统环境变量，说明，232
+- IKE (IPsec Key Exchange，IPsec 密钥交换) 协议，使用方法，401
+- 图像文件，为 Fedora 安装下载，28。另见 DVD 发行版镜像；ISO 发行版镜像
+- IMAP (Internet Mail Access Protocol，互联网邮件访问协议)，功能，544–545
+- IMAP 和 POP 服务器，可用性，546
+- 即时通讯工具 (AOL)，特性，347
+- 整数比较，功能，220
+- 完整性检查 (integrity checks)
+  - 工具，367
+  - 使用，111, 356–357
+- 接口配置脚本
+  - 保存的网络配置，128–129
+  - 使用方法，816
+- Internet Cache Protocol (ICP，互联网缓存协议)，与 Squid 代理服务器配合使用，519
+- Internet Control Message Protocol (ICMP，互联网控制消息协议) 数据包，使用方法，427–428
+- Internet Mail Access Protocol (IMAP，互联网邮件访问协议)，功能，544–545
+- Internet Mail Consortium，网站，309
+- Internet Protocol Security (IPsec，互联网协议安全)
+  - 说明及网站，112
+  - 特性，113
+- Internet Relay Chat (IRC，互联网中继聊天)，特性，347
+- 互联网资源，通过 URL 访问，324
+- Internet Security Protocol (IPsec)。参见 IPsec (Internet Security Protocol)
+- Internet 区域，区域文件，846–865
+- 插值字符串，在 Apache 中的支持，505–506
+- 入侵检测 (intrusion detection)
+  - 工具，367
+  - 使用，111
+- I/O 架构，InfiniBand 作为 I/O 架构，134–135
+- `iostat` 命令，使用方法，595
+- IP 地址
+  - 与 Apache Web 服务器，506
+  - 使用 `ifconfig` 命令分配，817–818
+  - 与完全限定域名的关联，825
+  - 在 `/etc/hosts` 文件中输入，826
+  - 获取方法，120–121, 802–804
+  - 指定，404
+  - 指定方法，426
+  - 为 DNS 转换，825–828
+  - 在无线连接中使用静态 IP 地址，128
+- IP 别名，操作，824
+- IP 转发，开启，447
+- IP 伪装 (IP masquerading)。另见 伪装 (masquerading)
+  - 实现方法，445–446
+  - 本地网络，446
+  - NAT 主机，446
+  - 选定规则，447
+- IP Payload Compression Protocol (IPComp，IP 载荷压缩协议)，与 IPsec 的关系，396
+- IP 欺骗 (IP spoofing)，保护私有网络免受其攻击，440–441
+- IP 虚拟域名，与 DNS (域名系统) 的关系，856–857
+- `IP4.ARPA` 反向映射格式，在 DNS 中使用，851–852
+- `IP6.INT` 反向映射格式，在 DNS 中使用，852
+- `iptables`，支持，437
+- `iptables` 包，与 Netfilter 防火墙配合使用，421
+- 基于 IP 的虚拟主机，在 Apache 上实现，503
+- IPComp (IP Payload Compression Protocol，IP 载荷压缩协议)，与 IPsec 的关系，396
+- iPod 设备，与 GNOME 应用程序的兼容性，301
+- IPsec (Internet Security Protocol，互联网协议安全)。另见 安全性 (security)
+  - 使用 racoon (IKE) 配置，401–403
+  - 使用 system-config-network 配置，397–398
+  - 说明及网站，112
+  - 特性，113
+  - 网络穿越，403
+  - 概述，395
+  - 资源，396
+  - 设置 VPN，128
+- IPsec 连接
+  - 使用 `setkey` 配置，399–401
+  - 设置安全的双向传输，400–401
+- IPsec 密钥交换 (IKE) 协议，使用方法，401
+- IPsec 密钥，实现方法，401
+- IPsec 模式，概述，396
+- IPsec 数据包，传递，403
+- IPsec 协议，说明，396
+- IPsec 安全数据库，概述，397
+- IPsec 工具，可用性，397
+- IPsec 传输，主机接收，400
+- IPsec 隧道模式，与 VPN 配合使用，403–404
+- Iptables
+  - 启用以传递 IPsec 数据包，403
+  - 选项，424–426
+  - 支持，434
+  - 目标 (targets)，422
+  - 与连接跟踪模块配合使用，430–431
+  - 使用 FORWARD 和 INPUT 链，427
+- Iptables 命令
+  - 链名称，422
+  - 功能，424
+  - 与 Netfilter 防火墙配合使用，420–422
+- IP-tables 文件，为防火墙加载，134
+- iptables 选项，列表，442–443
+- Iptables 包，内容，421
+- Iptables 规则
+  - 应用，426
+  - 保存，436–437
+  - 使用方法，434–435
+  - 使用取反 (inverse)，426
+- Iptables 脚本，示例，437–445
+  - `/etc/rc.d/init.iptables`，435–436
+  - `/etc/sysconfig/iptables`，434–435
+  - `/etc/sysconfig/iptables-config`，435–436
+  - 特性，433–434
+- `iptables-config`，配置参数，435
+- IPv4，与 LAN 编址配合使用，829–830。IPv4。另见 DHCP
+- IPv4 客户机主机
+  - IPv4 地址，实现，826。另见 动态 IPv4 地址
+- IPv4 和 IPv6
+  - 共存方法，808
+  - 支持，44, 794
+- IPv4 CIDR 编址，概述，801–802
+- IPv4 CIDR 网络掩码，形式，800
+- IPv4 示例 Iptables 脚本，437–445
+- IPv4 `IN-ADDR.ARPA` 反向映射格式，使用方法，850–851
+- IPv4 localhost 反向映射，在 DNS 中使用，853
+- IPv4 `named.conf` 示例，838–839
+- IPv4 网络地址，组件，797
+- IPv4 私有网络，与 LAN 编址的关系，828
+- IPv4 保留地址，概述，803–804
+- IPv6
+  - 优势，796
+  - 支持，119
+- IPv6 编址
+  - 格式，805–806
+  - 实现，826
+  - 接口标识符，806
+  - 类型，806–808
+- IPv6 CIDR 编址，概述，802
+- IPv6 localhost 反向映射，在 DNS 中使用，853–854
+- IPv6 `named.conf` 示例，839–840
+- IPv6 私有网络，与 LAN 编址的关系，828–829
+- IPv6 路由器，Linux 作为路由器，871
+- IPv6 有状态自动配置，使用 DHCPv6 执行，870–871
+- IPv6 无状态自动配置任务
+  - 生成完整地址，867
+  - 生成本地地址，867
+  - 路由器重编号，867–868
+- IPv6 区域文件示例，850
+- IRC (Internet Relay Chat，互联网中继聊天)，特性，347
+- `ismod` 命令，用于加载模块，747
+- ISO 发行版镜像，下载方法，635–636。另见 图像文件
+- ISO 镜像
+  - 下载，103
+  - 与 Fedora 安装配合使用，28
+- ISP 连接，为 Sendmail 工作站配置，541
+- `iwconfig` Wireless Tool
+  - 说明，131
+  - 特性，131–132
+  - 使用的参数，132
+- `iwl list` Wireless Tool
+  - 说明，131
+  - 特性，133
+- `iwi priv` Wireless Tool
+  - 说明，131
+  - 特性，132
+- `iwspy` Wireless Tool
+  - 说明，131
+  - 特性，133
+
+## J
+
+- Jakarta 项目，网站，332
+- Java 2 SDK (Software Development Kit，软件开发工具包)，特性，332
+- Java 应用程序
+  - 可用性，332
+  - 下载方法，83–84
+  - Web 应用程序，330
+- Java Runtime Environment (JRE)
+  - 为 Mozilla/Firefox 启用，331
+  - 安装，331
+- BASH (Bourne again) shell 中的作业管理操作，执行，211
+- Bash (Bourne again) shell 中的作业通知，实现方法，212–213
+- `jobs` 命令
+  - 与 `ps` 命令对比，214
+  - 与 `lftp` 客户端配合使用，341
+

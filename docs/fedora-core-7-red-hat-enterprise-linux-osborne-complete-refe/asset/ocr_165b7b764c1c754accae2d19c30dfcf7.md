@@ -1,0 +1,13 @@
+# # Network Firewalls: Netfilter
+
+Most systems currently connected to the Internet are open to attempts by outside users to gain unauthorized access. Outside users can try to gain access directly by setting up an illegal connection, by intercepting valid communications from users remotely connected to the system, or by pretending to be a valid user. Firewalls, encryption, and authentication procedures are ways of protecting against such attacks. A firewall prevents any direct unauthorized attempts at access, *encryption* protects transmissions from authorized remote users, and *authentication* verifies that a user requesting access has the right to do so.
+
+The current Linux kernel incorporates support for firewalls using the Netfilter (IPtables) packet filtering package (the previous version, IP Chains, is used on older kernel versions). To implement a firewall, you simply provide a series of rules to govern what kind of access you want to allow on your system. If that system is also a gateway for a private network, the system’s firewall capability can effectively help protect the network from outside attacks.
+
+> **NOTE**  *You can set up basic Netfilter firewall protection with the system-config-securitylevel tool (Firewall on the System | Administration menu). This tool will generate a basic set of IPtables rules to protect your system and network (see Chapter 5).*
+
+To provide protection for remote communications, transmission can be simply encrypted. For Linux systems, you can use the Secure Shell (SSH) suite of programs to encrypt any transmissions, to prevent them from being read by anyone else (see Chapter 19). Kerberos authentication provides another level of security whereby individual services can be protected, allowing use of a service only to users who are cleared for access (see Chapter 19). Outside users may also try to gain unauthorized access through any Internet services you may be hosting, such as a Web site. In such a case, you can set up a proxy to protect your site from attack. For Linux systems, use Squid proxy software to set up a proxy to protect your Web server (see Chapter 24). Table 20-1 lists several network security applications commonly used on Linux.
+
+# ## Firewalls: IPtables, NAT, and ip6tables
+
+A good foundation for your network’s security is to set up a Linux system to operate as a firewall for your network, protecting it from unauthorized access. You can use a firewall to implement either packet filtering or proxies. *Packet filtering* is simply the process of deciding

@@ -1,0 +1,194 @@
+
+
+在 /etc/selinux 配置目录中，即 /etc/selinux/targeted。例如，targeted 策略的策略文件为：
+
+```
+/etc/selinux/targeted/policy/policy.20
+```
+
+包含接口文件的 targeted 开发文件安装在 /usr/share/selinux 目录下：
+
+```
+/usr/share/selinux/targeted
+```
+
+您可以使用这些开发文件创建自己的策略模块，然后将其加载。
+
+## SELinux 配置
+
+通用 SELinux 服务器设置的配置在 /etc/selinux/config 目录中进行。目前只有两个需要设置的项：状态和策略。您将 SELINUX 变量设置为状态（例如 enforcing 或 permissive），将 SELINUXTYPE 变量设置为您所需的策略类型。这些对应于 Securitylevel-config 中的 SELinux 设置（disabled 和 enforcing），以及要使用的策略（例如 targeted）。下面是一个示例配置文件：
+
+```
+# This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+#    enforcing - SELinux security policy is enforced.
+#    permissive - SELinux prints warnings instead of enforcing.
+#    disabled - SELinux is fully disabled.
+SELINUX=permissive
+# SELINUXTYPE= type of policy in use. Possible values are:
+#    targeted - Only targeted network daemons are protected.
+#    strict - Full SELinux protection.
+SELINUXTYPE=targeted
+```
+
+## SELinux 策略规则
+
+策略规则可以由类型（类型强制）或 RBAC（基于角色的访问控制）语句组成，并加上安全级别（多级安全）。类型语句可以是类型或属性声明，或者是转换、变更或断言规则。RBAC 语句可以是角色声明或支配/允许角色。安全级别指定一个对应于允许访问级别的数字。策略配置可能很困难，需要使用广泛且复杂的规则。因此，许多规则使用 M4 宏在 .te 文件中实现，这些文件进而生成适当的规则（Sendmail 以类似的方式使用 M4 宏）。您会在 SELinux 参考策略源代码包中的文件找到这些规则，您需要下载并安装它。参考策略包是 selinux-policy，位于 Fedora 的 RPMS 源代码仓库中。请参阅下一节关于 SELinux 配置文件的内容。
+
+### 类型和角色声明
+
+类型声明以关键字 type 开头，后跟类型名称（标识符）以及任何可选的属性或别名。类型名称将带有 t 后缀。标准类型定义包括用于文件等对象的定义。以下是一个用于任何文件的默认类型，具有 file_type 和 sysadmfile 属性：
+
+```
+type file_t, file_type, sysadmfile;
+```
+
+root 将有自己的类型声明。
+
+```
+type root_t, file_type, sysadmfile;
+```
+
+诸如 boot 目录等专用目录也将有自己的类型。
+
+```
+type boot_t, file_type, sysadmfile;
+```
+
+为特定目标（如 Amanda 服务器）设置了更专门的规则。以下示例是 amanda_t 对象（Amanda 备份服务器使用的对象）的通用类型定义，如 targeted 策略的 src/program/amanda.te 文件中所列：
+
+```
+type amanda_t, domain, privlog, auth, nscd_client_domain ;
+```
+
+角色声明确定了可以访问特定类型对象的角色。这些规则以关键字 **role** 开头，后跟角色和与该角色相关联的对象。在此示例中，amanda 对象（amanda_t）可由具有 system 角色（system_r）的用户或进程访问。
+
+```
+role system_r types amanda_t;
+```
+
+为可执行文件提供了更具体的类型声明，例如针对 Amanda 服务器（amanda_exec_t）的声明。这将 Amanda 可执行文件定义为系统管理控制的可执行文件。
+
+```
+type amanda_exec_t, file_type, sysadmfile, exec_type;
+```
+
+相关的配置文件通常有自己的规则。
+
+```
+type amanda_config_t, file_type, sysadmfile;
+```
+
+在 targeted 策略中，创建了一个通用的、不受限制的类型，用户和系统角色可以访问该类型，从而获得对系统的完整、无限制访问。更具体的规则将限制对某些目标（如 Web 服务器）的访问。
+
+```
+type unconfined_t, domain, privuser, privhome, privrole, privowner, admin, auth_write, fs_domain, privmem;
+role system_r types unconfined_t;
+role user_r types unconfined_t;
+role sysadm_r types unconfined_t;
+```
+
+还为用户主目录中创建的文件设置了类型。
+
+```
+type user_home_t, file_type, sysadmfile, home_type;
+type user_home_dir_t, file_type, sysadmfile, home_dir_type;
+```
+
+## 文件上下文
+
+文件上下文将特定文件与安全上下文关联。首先列出文件或文件，多个文件用正则表达式表示。然后指定角色、类型和安全级别。以下操作为 /etc 目录（配置文件）中的所有文件创建安全上下文。这些文件可被 system 用户（system_u）访问，是 etc_t 类型的对象，安全级别为 0，即 s0。
+
+```
+/etc(/.*)?                  system_u:object_r:etc_t:s0
+```
+
+某些文件可以属于其他类型；例如，**resolve.conf** 配置文件属于 net_conf 类型。
+
+```
+/etc/resolve\\.conf\.*    --    system_u:object_r:net_conf_t:s0
+```
+
+某些服务将为其配置文件拥有自己的安全上下文。
+
+```
+/etc/amanda(/.*)?              system_u:object_r:amanda_config_t:s0
+```
+
+文件上下文位于策略 contexts 目录中的 **file_contexts** 文件中，例如 /etc/selinux/targeted/contexts/files/file_contexts。用于创建或修改策略的版本位于策略模块活动目录中，例如 **targeted/modules/active/file_contexts**。
+
+## 用户角色
+
+用户角色定义了用户可以承担的角色。此类规则以关键字 **user** 开头，后跟用户名，然后是关键字 **roles**，最后是它可以使用。您会在 selinux 参考策略源代码文件中找到这些规则。以下示例是 system_u 用户的定义：
+
+```
+user system_u roles system_r;
+```
+
+如果用户可以拥有多个角色，则它们在括号中列出。以下是 targeted 策略中标准用户角色的定义，允许用户承担系统管理角色：
+
+```
+user user_u roles { user_r sysadm_r system_r };
+```
+
+strict 策略仅列出 user_r 角色。
+
+```
+user user_u roles { user_r };
+```
+
+## 访问向量规则：allow
+
+访问向量规则用于定义对象和进程的权限。**allow** 关键字后跟对象或进程类型，然后是它可以访问或被访问的类型以及使用的权限。以下示例允许 amanda_t 域中的进程搜索 Amanda 配置目录（任何 amanda_config_t 类型的目录）：
+
+```
+allow amanda_t amanda_config_t:dir search;
+```
+
+以下示例允许 Amanda 读取用户主目录中的文件：
+
+```
+allow amanda_t user_home_type:file { getattr read };
+```
+
+下一个示例允许 Amanda 读取、搜索和写入 Amanda 数据目录中的文件：
+
+```
+allow amanda_t amanda_data_t:dir { read search write };
+```
+
+## 角色允许规则
+
+角色也可以使用允许规则。虽然它们可用于域和对象，但通常用于控制角色转换，指定一个角色是否可以转换到另一个角色。这些规则列在 rbac 配置文件中。以下条目允许用户转换到系统管理员角色：
+
+```
+allow user_r sysadm_r;
+```
+
+## 转换和向量规则宏
+
+类型转换规则设置用于创建对象的规则的转换类型。转换规则还需要相应的访问向量规则来启用对象或进程的权限。代替创建单独的规则，使用宏来生成所需的规则。以下示例使用 file_type_auto_trans 宏为主目录中的用户文件设置转换和访问规则：
+
+```
+file_type_auto_trans(privhome, user_home_dir_t, user_home_t)
+```
+
+下一个示例为创建进程设置 Amanda 进程转换和访问规则：
+
+```
+domain_auto_trans(inetd_t, amanda_inetd_exec_t, amanda_t)
+```
+
+## 约束规则
+
+可以对进程（如转换）施加进一步的限制，以确保更高的安全性。这些通过在 constraints 文件中的约束定义来实现。约束规则通常应用于转换操作，例如要求在进程转换中，用户身份保持不变，或者进程 1 在具有 privuser 属性的域中，进程 2 在具有 userdomain 属性的域中。字符 u、t 和 r 分别指代用户（user）、类型（type）和角色（role）。
+
+```
+constrain process transition
+   ( u1 == u2 or ( t1 == privuser and t2 == userdomain ) )
+```
+
+## SELinux 策略配置文件
+
+配置文件通常使用 .te 和 .fc 文件进行更改。这些文件在 /usr/share/selinux 的模块头中缺失。如果您正在添加模块，需要为其创建 .te 和 .fc 文件。然后您可以按照下一节所述创建模块并将其添加。
+

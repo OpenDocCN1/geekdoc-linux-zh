@@ -1,0 +1,18 @@
+# **gconfig (gkc)**
+
+The GTK kernel configuration tool (gkc) is invoked with the **gconfig** option. This uses a GNOME-based interface that is similar to qconfig (**xconfig**). The gkc tool opens a Linux Kernel Configuration window with expandable submenus like those for qconf. Many categories are organized into a few major headings, with many now included under the Device Drivers menu. The Load and Save buttons and File menu entries can be used to save the configuration or to copy it to a file. Single, Split, and Full view buttons let you display menus in one window, in a display panel with another panel containing an expandable tree to select entries, or as a single expandable tree of entries. The Expand button will expand all headings and subheadings, whereas Collapse will let you expand only those you want displayed. Use the down and side triangles for each entry to expand or collapse subtentent.  
+Clicking an entry opens a window that lists different features you can include. Entries are arranged in columns listing the option, its actual name, its range (yes, module, or no), and its data (yes, no, or module status). Entries in the Options menu let you determine what columns to display: Name for the actual module name; Range for the selectable yes, no, and module entries; and Data for the option status, titled as Value.
+
+The Range entries are titled N, M, and Y and are used to select whether not to include an option (N), to load it as a module (M), or to compile it directly into the kernel (Y). Entries that you can select will display an underscore. Clicking the underscore will change its entry to Y for module or direct kernel inclusion, and N for no inclusion. The Value column will show which is currently selected.
+
+The Options column will include a status showing whether the option is included directly (check mark), included as a module (line mark), or not included at all (empty). To quickly select or deselect an entry, double-click the option name in the Options field. You will see its check box checked, lined (module), or empty. Corresponding N, M, and Y entries for no inclusion, module, or kernel inclusion are selected. The default preference for either module or direct kernel inclusion for that option is selected automatically. You can change it manually if you wish.
+
+# **xconfig (qconf)**
+
+The **xconfig** option invokes the qconf tool, which is based on KDE QT libraries. KDE has to first be installed. The qconf tool opens a Linux Kernel Configuration window listing the different configuration categories. It has a slightly simpler interface, without the expand or collapse buttons or the columns for module and source status.
+
+# ## Important Kernel Configuration Features
+
+The **xconfig**, **menuconfig**, and **gconfig** tools provide excellent context-sensitive help for each entry. To the right of each entry is a Help button. Click it to display a detailed explanation of what that feature does and why you would include it either directly or as a module, or even exclude it. When you are in doubt about a feature, always use the Help button to learn exactly what it does and why you would want to use it. Many of the key features are described here. The primary category for a feature is listed in parentheses.
+
+> *Tip*  *As a rule, features in continual use, such as network and file system support, should be compiled directly into the kernel. Features that could easily change, such as sound cards, or features used less frequently should be compiled as modules. Otherwise, your kernel image file may become too large and slower to run.*

@@ -1,0 +1,17 @@
+# # File Systems
+
+Although all the files in your Linux system are connected into one overall directory tree, parts of that tree may reside on different storage devices such as hard drives or CD-ROMs. Files on a particular storage device are organized into what is referred to as a *file system*. A file system is a formatted device, with its own tree of directories and files. Your Linux directory tree may encompass several file systems, each on different storage devices. On a hard drive with several partitions, you would have a file system for each partition. The files themselves are organized into one seamless tree of directories, beginning from the root directory. For example, if you attach a CD-ROM to your system, a pathname will lead directly from the root directory on your hard disk partition's file system to the files in the CD-ROM file system.
+
+> **TIP** *With Linux you can mount file systems of different types, including those created by other operating systems, including Windows, IBM OS, Unix, and SGI. Within Linux a variety of file systems are supported, including several journaling systems like ReiserFS and ext3.*
+
+A file system has its files organized into its own directory tree. You can think of this as a *subtree* that must be attached to the main directory tree. The tree remains separate from your system's directory tree until you specifically connect it. For example, a floppy disk with Linux files has its own tree of directories. You need to attach this subtree to the main tree on your hard drive partition. Until they are attached, you cannot access the files on your floppy disk.
+
+# # Filesystem Hierarchy Standard
+
+Linux organizes its files and directories into one overall interconnected tree, beginning from the root directory and extending down to system and user directories. The organization and layout for the system directories are determined by the Filesystem Hierarchy Standard (FHS). The FHS provides a standardized layout that all Linux distributions should follow in setting up their system directories. For example, there must be a */etc* directory to hold configuration files and a */dev* directory for device files. You can find out more about FHS, including the official documentation, at [www.pathname.com/fhs](http://www.pathname.com/fhs/). Linux distributions, developers, and administrators all follow the FHS to provide a consistent organization to the Linux file system.
+
+Linux uses a number of specifically named directories for specialized administrative tasks. All these directories are at the very top level of your main Linux file system, the file system root directory, represented by a single slash, */*. For example, the */dev* directory holds device files, and the */home* directory holds the user home directories and all their user files. You have access to these directories and files only as the system administrator (though users normally have read-only access). You need to log in as the root user, placing yourself in a special root user administrative directory called */root*. From here, you can access any directory on the Linux file system, both administrative and user.
+
+# ## Root Directory: /
+
+The subdirectories held in the root directory, */*, are listed in Table 30-1, along with other useful subdirectories. Directories that you may commonly access as an administrator are the

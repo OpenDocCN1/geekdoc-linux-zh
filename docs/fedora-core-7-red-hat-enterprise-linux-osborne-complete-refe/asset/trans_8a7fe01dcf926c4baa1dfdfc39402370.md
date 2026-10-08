@@ -1,0 +1,77 @@
+
+## NAT 重定向：透明代理
+
+NAT 表可用于实现各种类型的包重定向，这个过程对用户是透明的。重定向通常用于实现透明代理。包的重定向通过 REDIRECT 目标来实现。借助透明代理，接收到的数据包可以自动重定向到代理服务器。例如，到达 Web 服务端口（80）的数据包可以被重定向到 Squid 代理服务端口（通常为 3128）。这涉及使用 PREROUTING 链上的 REDIRECT 目标来重定向数据包的命令：
+
+```bash
+# iptables -t nat -A PREROUTING -i eth1 --dport 80 -j REDIRECT --to-port 3128
+```
+
+## 包修改：Mangle 表
+
+*包修改* 表用于实际修改包信息。专门应用于此表的规则通常旨在控制包的常规行为，如路由、连接大小和优先级。实际上修改包（而不仅仅是重定向或停止它）的规则只能在 mangle 表中使用。例如，TOS 目标可以直接在 mangle 表中用于修改服务类型（Type of Service）字段，从而改变包的优先级。TCPMSS 目标可以设置为控制连接的大小。ECN 目标允许你绕过 ECN 黑洞，而 DSCP 目标允许你更改 DSCP 位。诸如 ROUTE 扩展等几个扩展会修改包，在这种情况下是重写其目的地，而不仅仅是重定向它。
+
+mangle 表使用 `-t mangle` 选项来指定。使用以下命令查看 mangle 表中列出的链：
+
+```bash
+iptables -t mangle -L
+```
+
+此处展示了几个 mangle 表目标：
+
+| 目标 | 描述 |
+| :--- | :--- |
+| TOS | 修改服务类型字段以管理包的优先级。 |
+| TCPMSS | 修改连接允许的数据包大小，以实现更大的传输。 |
+| ECN | 移除 ECN 黑洞信息。 |
+| DSCP | 更改 DSCP 位。 |
+| ROUTE | 扩展目标，用于修改包中的目的地信息。 |
+
+> **注意** iptables 软件包旨在具有可扩展性，允许轻松添加自定义目标。这涉及对内核打补丁并重新构建内核。有关更多详细信息及扩展目标列表，请参阅 www.netfilter.org。
+
+## Iptables 脚本
+
+虽然你可以从 shell 命令行输入 iptables 规则，但当你关闭系统时，这些命令将会丢失。在 Fedora 和 Red Hat 上，你可以利用内置的支持来保存和读取 iptables 规则，使用 iptables 服务脚本。
+
+或者，你也可以自行管理该过程，将其保存到你选择的文件中。无论哪种情况，你很可能都需要将 iptables 规则放入一个可以直接执行的脚本中。这样，你就可以编辑和管理一套复杂的规则，添加注释并保持它们的顺序。
+
+> **注意** 在 Red Hat 二进制文件中，内核中的 iptables 支持默认是启用的。如果你重新编译内核，请确保开启了数据包过滤支持。在 2.4 内核中检查“Networking Options”，在 2.6 内核中在“Device Drivers”下检查“Networking Support/Networking Options”。
+
+## Red Hat 和 Fedora 的 Iptables 支持
+
+Red Hat 通过多种脚本和配置文件，将 iptables 支持作为其系统配置的一部分提供（见表 20-7）。当你安装 iptables 的 RPM 软件包时，会安装一个 iptables 服务脚本，该脚本使用 `/etc/sysconfig/iptables` 文件来读取和保存 iptables 命令。如果你已设置系统启动时自动运行 iptables，系统将检查该文件是否存在且不为空。如果是，iptables 将自动读取其中包含的 iptables 命令。这有助于更顺畅地将 iptables 集成到系统设置过程中。
+
+## Iptables 规则：/etc/sysconfig/iptables 和 system-config-security-level
+
+`/etc/sysconfig/iptables` 脚本由 **system-config-securitylevel** 自动生成，该工具在安装过程中运行。当你首次启动系统时，`/etc/sysconfig/iptables` 文件将包含你在运行 **system-config-securitylevel** 时选择的配置所对应的 iptables 规则。如果你再次运行 **system-config-securitylevel** 并更改配置，`/etc/sysconfig/iptables` 文件将被新的 iptables 规则覆盖。你可以通过“System | Administration”菜单中的“Firewall”项来访问 **system-config-securitylevel**。
+
+你可以通过简单地删除 `/etc/sysconfig/iptables` 文件来绕过这种自动 iptables 设置。（运行 **system-config-securitylevel** 并点击“Disable”按钮也会产生相同效果。）请确保首先备份该文件，以防其中包含重要命令。虽然可以直接编辑 `/etc/sysconfig/iptables` 文件并输入 iptables 命令，但不推荐这样做。相反，你应该将此文件视为保存你的 iptables 命令的最终安装版本。
+
+| 脚本和工具 | 描述 |
+| :--- | :--- |
+| `/etc/sysconfig/iptables` | Red Hat iptables 脚本，用于创建 iptables 规则。 |
+| `/etc/sysconfig/iptables.save` | Red Hat iptables 备份脚本，用于创建 iptables 规则。当使用 save 选项生成新的 iptables 文件时，这是原始 iptables 的副本。 |
+| `/etc/sysconfig/iptables-config` | `/etc/rc.d/init.d/iptables` 服务脚本的配置文件，包含 shell 变量定义。 |
+| `/etc/rc.d/init.d/iptables` | Red Hat iptables 服务脚本，用于管理 `/etc/sysconfig/iptables` 中的 iptables 规则。 |
+| **system-config-securitylevel** | Red Hat 和 Fedora 工具，用于为 `/etc/sysconfig/iptables` 创建基本的 iptables 防火墙规则。 |
+
+**表 20-7** Red Hat Fedora Iptables 脚本和工具
+
+## Iptables 服务脚本：/etc/rc.d/init.d/iptables 和 /etc/sysconfig/iptables-config
+
+你应该将 Red Hat Fedora 提供的 iptables 服务脚本视为一个多功能的管理工具，而不是服务启动脚本。该脚本使用 service 命令可能会令人困惑。iptables 脚本仅管理 iptables 规则，刷新、添加或报告它们。它不会启动或停止 iptables 服务。如果 Netfilter 未运行，你需要指定在系统启动时将其启动。为此，你可以使用 `system-config-services`（“Server Settings”窗口中的“Services”），然后从服务列表中选择 iptables。
+
+iptables 服务脚本使用几个预定义的 shell 参数来指定模块以及启动和停止选项。默认定义放置在 iptables 服务脚本内，而相应的自定义定义位于一个名为 `/etc/sysconfig/iptables-config` 的特殊文件中。在这里，系统管理员可以设置选项，例如加载哪些模块或在停止 iptables 时是否保存规则，而无需直接编辑 iptables 服务脚本。对于 IPv6，请使用 `ip6tables-config`。表 20-8 列出了当前的 iptables 参数。每次使用 iptables 服务脚本启动 iptables 时，它将加载 `iptables-config` 中列出的 `IPTABLES_MODULES` 指定的模块。
+
+服务脚本 `/etc/rc.d/init.d/iptables` 支持几个选项来管理你的规则。`status` 选项显示当前所有规则的列表。`stop` 选项将清除当前规则。与 `stop` 和 `status` 不同，`start` 和 `save` 选项直接绑定到 `/etc/sysconfig/iptables` 文件。`start` 选项将清除当前 iptables 规则并添加 `/etc/sysconfig/iptables` 文件中的规则。`save` 选项将当前规则保存到 `/etc/sysconfig/iptables` 文件。请记住，`stop` 和 `status` 操作作用于当前的 iptables 规则，无论这些规则是从文件加载的还是手动添加的。
+
+| 参数 | 描述 |
+| :--- | :--- |
+| `IPTABLES_MODULES` | 要加载的 iptables 模块列表。默认为空。 |
+| `IPTABLES_MODULES_UNLOAD` | 默认为 yes；设置为 yes 时，在服务脚本启动和停止操作时卸载模块。 |
+| `IPTABLES_SAVE_ON_STOP` | 默认为 no；如果设置为 yes，当服务脚本停止防火墙时将保存所有规则。 |
+| `IPTABLES_SAVE_ON_RESTART` | 默认为 no；如果设置为 yes，当服务脚本重启防火墙时将保存所有规则。 |
+| `IPTABLES_SAVE_COUNTERS` | 默认为 no；如果设置为 yes，且启用了停止或重启时保存规则，则保存计数器。 |
+| `IPTABLES_STATUS_NUMERIC` | 默认为 yes；如果设置为 yes，将以数字形式显示地址和端口。 |
+
+**表 20-8** iptables-config 配置参数

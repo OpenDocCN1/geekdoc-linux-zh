@@ -1,0 +1,17 @@
+password in a keyring, which itself can be password protected. This allows repeated access without have to always enter the password.
+
+# ### Using Removable Devices and Media
+
+Fedora now supports removable devices and media like digital cameras, PDAs, card readers, and even USB printers. These devices are handled automatically with an appropriate device interface set up on the fly when needed. Such hotplugged devices are identified, and where appropriate, their icons will appear in the file manager window. For example, when you connect a USB drive to your system, it will be detected and displayed as storage device with its own file system. If you copied any files to the disk, be sure to unmount it first before removing it (right-click and select Unmount Volume).
+
+Digital cameras are also automatically detected. Photo applications like gThumb will be able to access the photos on your digital camera.
+
+> **TIP** Fedora cannot play MP3, DVD, or DivX files as installed. You need to download and install supporting tools and libraries from either **rpm.livna.org/fedora** or **freshrpms.net**.
+
+DVD and CD discs are also treated like removable devices, with an icon for a disc automatically displayed when you put one in your CD/DVD drive. You can then double-click the CD/DVD disc icon to open a file manager window for it, displaying its contents. For media discs, such as music CDs, your system is configured to play the appropriate application. Music CDs will start up the CD player, which will let you play the music. For DVDs, however, you will need to download and install supporting video codecs, libraries, and applications from **freshrpms.net** or **rpm.livna.org**, both of which are Fedora Yum-supported repositories. Once you have configured Yum to use them, you can use Pirut to download to install them. DivX support must also be downloaded and installed separately ([labs.divx.com/DivXLinuxCodec](http://labs.divx.com/DivXLinuxCodec)).
+
+To set the preferences for how removable media are treated, you use the Removable Drives and Media Preferences tool, accessible with the Removable Drives and Media entry in the System | Preferences | Hardware menu. This displays the Removable Drives and Media Preferences window with six panels: for storage devices, multimedia devices, cameras, PDAs, Printers and Scanners, and Input devices. Certain settings are already set. Removable and hotplugged media will be automatically mounted. This includes floppy disks and data CD/DVDs. Blank CDs can be configured to be opened for burning by Nautilus.
+
+On the multimedia panel, there are settings for audio CDs, video DVDs, and portable music players (see Figure 3-8). Audio CDs and video CDs will be played by the Totem player. There is currently no default for music players. Digital cameras will use gThumb to import photos. You can change any of the default applications used for these actions, as well as turn off default operations, such as automatically mounting or playing Audio CDs. Keep in mind that Totem will not play commercial DVDs. You would have to install a DVD-enabled player for commercial discs such as PowerDVD or the MPlayer, Xine, or Totem-zine players available on **freshrpms.net**. Once you have installed your DVD player, you can then use the Drives and Removable Media tool to have the DVD movie automatically start up in your selected player.
+
+> **TIP** Fedora now treats all devices as if they were hotplugged, automatically generating device interfaces even for fixed devices like hard disks.

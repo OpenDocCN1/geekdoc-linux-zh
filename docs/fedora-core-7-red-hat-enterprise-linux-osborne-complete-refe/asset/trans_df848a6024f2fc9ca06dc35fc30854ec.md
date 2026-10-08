@@ -1,0 +1,108 @@
+
+
+Samba 还提供了一个专用的 Samba 密码 PAM 模块，`pam_smbpass.so`。使用此模块，你可以为 Samba 密码提供 PAM 身份验证支持，从而允许在 PAM 控制的网络中使用 Windows 主机。该模块可用于 PAM **samba** 文件中的身份验证和密码管理。PAM **samba** 文件中的以下条目将实现使用 Samba 密码数据库进行 PAM 身份验证和密码管理：
+
+```
+auth required pam_smbpass.so nodelay
+password required pam_smbpass.so nodelay
+```
+
+请确保在 **smb.conf** 文件中启用 PAM：
+
+```
+obey pam restrictions = yes
+```
+
+### Samba 密码：smbpasswd
+
+在用户级安全性模式下，Windows 客户端对 Samba 服务器资源的访问仅允许给该客户端上的用户。Windows 客户端上的每个用户在 Samba 服务器上必须拥有相应的账户。用户登录其 Windows 账户后，在访问 Samba 共享或打印机时，必须使用为访问 Samba 服务器指定的 Windows 账户名进行登录。用于访问 Samba 服务器的用户名和密码必须在 Samba 密码数据库中注册。
+
+注意：如果你使用的是旧版的 smbpasswd 文件，可以使用 `mkssmbpasswd.sh` 脚本生成一个包含 `/etc/passwd` 文件中列出的所有用户的 smbpasswd 文件。将 passwd 文件的内容管道传输到 `mkssmbpasswd.sh`，然后使用重定向 (`>`) 来创建文件。
+
+### 添加和更改密码
+
+使用 `smbpasswd` 命令来添加或随后更改密码。要为特定用户添加或更改密码，使用 `smbpasswd` 命令并加上用户名：
+
+```bash
+# smbpasswd dylan
+New SMB Password: new-password
+Repeat New SMB Password: new-password
+```
+
+用户可以使用 `smbpasswd` 更改自己的密码。以下示例展示了如何使用 `smbpasswd` 更改你的 Samba 密码。如果用户没有 Samba 密码，该用户只需按 ENTER 键即可。
+
+```bash
+$ smbpasswd
+Old SMB password: old-password
+New SMB Password: new-password
+Repeat New SMB Password: new-password
+```
+
+如果你希望不使用密码，可以使用带有 `-n` 选项的 smbpasswd。**smb.conf** 文件中的 **null passwords** 选项必须设置为 yes。
+
+注意：如果你使用的是旧版的 smbpaswords 文件，请确保 Samba 配置为使用加密密码。将 **encrypt passwords** 选项设置为 **yes** 并指定 SMB 密码文件。
+
+## 管理 Samba 用户：smbpasswd 和 pdbedit
+
+管理 Samba 用户最简单的方法是使用 system-config-samba 工具。点击“偏好设置”以选择 Samba 用户。在此窗口中，你可以添加、编辑或删除 Samba 用户。在 SWAT 工具中，你应使用“密码”面板。
+
+要管理用户，你可以使用 `smbpasswd` 命令或 `pdbedit` 工具。`smbpasswd` 命令配合 `-a` 选项可添加用户，配合 `-x` 选项可移除用户。
+
+```
+smbpasswd -a aleina
+```
+
+要启用或禁用用户，请分别使用 `-e` 和 `-d` 选项。
+
+smbpasswd 命令适用于旧版 smbpsswd 文件或新版 ttdbsam 后端数据库文件。如果你只针对 ttdbsam 后端数据库文件，可以使用 `pdbedit` 作为替代。要添加用户，使用 `-a` 选项；要移除用户，使用 `-x` 选项。
+
+```
+pdbedit -a larisa
+```
+
+这是一个命令行工具，具有添加和移除用户的选项，以及更改密码和设置主目录等功能。你还可以将用户条目导入或导出到其他后端数据库。
+
+`pdbedit` 命令允许你显示有关用户的更多信息。要显示后端数据库中的用户，可以使用 `-L` 选项。添加 `-v` 选项以获取详细信息。要查看特定用户，请加上用户名。
+
+```
+pdbedit -Lv richard
+```
+
+对于域策略，如最小密码长度或重试次数，请使用 `-P` 选项。
+
+```
+pdbedit -P
+```
+
+使用 `-i` 和 `-e` 选项可以导入和导出数据库条目。以下命令将从旧的 `smbpasswd` 文件导入条目到新的 `tdbsam` 后端数据库。
+
+```
+pdbedit -i smbpasswd -e tdbsam
+```
+
+如果你的系统正在使用启用 LDAP 的 Samba 数据库，请使用 smbldap 工具来管理用户和组。
+
+## 使用 system-config-samba 配置 Samba
+
+system-config-samba 工具提供了一种简单的方式来配置你的 Samba 服务器，添加 Samba 用户并指定 Samba 共享。它还会自动将 Linux 系统上的所有打印机配置为 Samba 共享打印机，使你可以从连接的 Windows 系统使用它们。你可以从系统设置菜单中的服务器设置菜单中的 Samba 条目启动 system-config-samba。system-config-samba 工具将列出你的服务器所有共享。你可以使用顶部的按钮来管理你的共享，添加新的或删除现有的。如果删除，实际目录不会被移除；它们只是失去作为共享目录的状态。
+
+### 使用 system-config-samba 进行服务器配置
+
+要配置你的 Samba 服务器，请从偏好设置菜单中选择服务器设置。这将打开一个带有两个面板的窗口：基本和安全。在基本面板上，你输入 Samba 服务器的工作组名称。这将与你所有 Windows 系统使用的工作组名称相同。例如，如果你的 Windows 系统使用 WORKGROUP 作为组名，则在此处输入 WORKGROUP。描述是你希望在 Windows 系统中显示的 Samba 服务器名称。在安全面板上，你指定身份验证模式、密码加密选项以及来宾账户的名称，外加身份验证服务器。
+
+- 如后文详细解释，身份验证模式指定访问级别，可以是用户、共享、服务器或域。用户级访问通过用户密码限制访问，而共享访问则向任何来宾开放。
+- 通常，你应选择加密密码，而不是以明文形式通过网络传输它们。
+- 来宾用户是用于允许访问你希望向任何用户开放而无需提供密码的共享或打印机的账户名称。弹出式菜单将列出你当前的所有用户，默认选中 nobody。
+
+### 使用 system-config-samba 添加 Samba 用户
+
+使用 system-config-samba，你可以轻松添加用户和共享。用户级访问将 Windows 用户限制为那些在 Samba 服务器上被分配了相应账户的用户。Samba 维护自己的用户密码列表。要为用户提供 Samba 访问权限，你需要将该用户注册为 Samba 用户，并给予其一个 Samba 密码。从偏好设置菜单中选择 Samba 用户以打开 Samba 用户窗口，点击添加用户按钮。在此处输入 Unix 用户名、Windows 用户名和 Samba 密码。还有一个额外的方框用于确认 Samba 密码。Unix 用户名是一个弹出式窗口，列出了你 Samba 服务器上的所有用户。
+
+### 使用 system-config-samba 指定 Samba 共享
+
+点击“添加”以添加共享，或从文件菜单中选择“添加共享”。在基本面板上，你可以输入要在 Samba 服务器上共享的目录，指定完整路径名。浏览按钮允许你搜索和选择目录。你还可以将权限设置为只读或读写。在访问面板上，你可以限制某些用户的访问或允许所有用户访问。你系统上的所有 Samba 用户将列出并带有复选框，你可以选择要授予访问权限的用户。
+
+## Samba smb.conf 配置文件
+
+你使用位于 `/etc/samba` 目录中的 `smb.conf` 文件来配置 Samba 守护进程。该文件分为两个基本部分：一个用于全局选项，另一个用于共享服务。共享服务，也称为 *shares*，可以是文件空间服务（由客户端用作其本地文件系统的扩展）或可打印服务（由客户端用于访问运行服务器的宿主上的打印服务）。文件空间服务是一个目录，客户端被赋予访问该目录的权限；他们可以使用其中的空间作为本地文件系统的扩展。可打印服务提供客户端对打印服务（如由 Samba 服务器管理的打印机）的访问。
+

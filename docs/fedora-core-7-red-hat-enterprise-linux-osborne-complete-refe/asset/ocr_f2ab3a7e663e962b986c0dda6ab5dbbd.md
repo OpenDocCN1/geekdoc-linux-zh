@@ -1,0 +1,17 @@
+# Fedora Administrative Tools
+
+On Fedora, administration is handled by a set of separate specialized administrative tools developed and supported by Fedora, such as those for user management and display configuration (see Table 4-1). To access the GUI-based Fedora tools, you log in as the root user to the GNOME desktop and select the main menu. System administrative tools are listed on the System Administration menu included in the main menu. Here you will find tools to set the time and date, manage users, configure printers, and update software. Users & Groups lets you create and modify users and groups. Printing lets you install and reconfigure printers. All tools provide very intuitive GUI interfaces that are easy to use. In the System Administration menu, tools are identified by simple descriptive terms, whereas their actual names normally begin with the term *system-config*. For example, the printer configuration tool is listed as Printing, but its actual name is *system-config-printer*. You can separately invoke any tool by entering its name in a terminal window.
+
+> NOTE Many configuration tasks can also be handled on a command line, invoking programs directly. To use the command line, open a terminal window by selecting the Terminal entry in the Applications | System Tools menu. This opens a terminal window with a command line prompt. Commands like *rpm* and *make* discussed later will require a terminal window.
+
+# Editing Configuration Files Directly
+
+Though the administrative tools will handle all configuration settings for you, there may be times when you need to make changes by directly editing configuration files. These are usually text files in the /etc directory or dot files in a user home directory, like *bash_profile*. To change any of these files, you will need administrative access, requiring you to first log in as the *root* user.
+
+You can use any standard editor such as Vi or Emacs to edit these files, though one of the easiest ways to edit them is to use the Gedit editor on the GNOME desktop. Select Text Editor from the Accessories menu. This opens a Gedit window. Click Open to open a file browser where you can move through the file system to locate the file you want to edit.
+
+> CAUTION Be careful when editing your configuration files. Editing mistakes can corrupt your configurations. It is advisable to make a backup of any configuration files you are working on first, before making major changes to the original.
+
+Gedit will let you edit several files at once, opening a tabbed pane for each. You can use Gedit to edit any text file, including ones you create yourself. In Figure 4-1 three configuration files are opened: *bash_profile*, */boot/grub/grub.conf*, and */etc/fstab*. The *bash_profile* file configures your login shell, */etc/fstab* lists all your file systems and how they are mounted, and */boot/grub/grub.conf* is the configuration file for your Grub boot loader.
+
+Dot files like *bash_profile* have to be chosen from the file manager window. First configure the file manager to display dot files by opening the Preferences dialog (select Preferences in the Edit menu of any file manager window) and then check the Show Hidden Files entry and close the dialog. Then choose Restore Default Settings in the View menu. This displays the dot files in your file manager window. Double-click to open one in Gedit.

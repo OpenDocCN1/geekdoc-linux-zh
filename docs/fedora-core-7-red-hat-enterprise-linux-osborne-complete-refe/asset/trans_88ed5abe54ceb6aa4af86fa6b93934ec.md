@@ -1,0 +1,110 @@
+
+
+## 控制 Shell 操作
+
+BASH shell 具有若干特性，这些特性允许你控制不同 shell 操作的方式。例如，设置 **noclobber** 特性可以防止重定向覆盖文件。你可以像切换开关一样使用 **set** 命令来开启或关闭这些特性。**set** 命令接受两个参数：一个指定开启或关闭的选项，以及该特性的名称。要开启某个特性，你使用 *-o* 选项；要关闭某个特性，你使用 *+o* 选项。其基本形式如下：
+
+```
+$ set -o feature            开启该特性
+$ set +o feature            关闭该特性
+```
+
+三个最常用的特性是 **ignoreeof**、**noclobber** 和 **noglob**。表 9-2 列出了这些不同的特性，以及 **set** 命令。设置 **ignoreeof** 会启用一个特性，防止你通过 CTRL-D 注销用户 shell。CTRL-D 不仅用于从用户 shell 注销，还用于结束直接输入到标准输入的用户输入。CTRL-D 常用于邮件程序或诸如 **cat** 这样的实用工具。在这种情况下，你很容易误输入额外的 CTRL-D 并意外注销自己。**ignoreeof** 特性可以防止这种意外注销。在接下来的示例中，使用 **set** 命令和 *-o* 选项开启了 **ignoreeof** 特性。用户现在只能通过输入 **logout** 命令来注销。
+
+```
+$ set -o ignoreeof
+$ CTRL-d
+Use exit to logout
+$
+```
+
+| 特性 | 描述 |
+|---|---|
+| $ set -+o feature | BASH shell 的特性通过 set 命令开启和关闭；-o 开启特性，+o 关闭特性。<br>`$ set -o noclobber`<br>`$ set +o noclobber set noclobber off` |
+| ignoreeof | 禁用 CTRL-D 注销 |
+| noclobber | 不通过重定向覆盖文件 |
+| noglob | 禁用用于文件名扩展的特殊字符：`*`、`?`、`~` 和 `[]` |
+
+**表 9-2** BASH Shell 特殊特性
+
+## 环境变量与子 Shell：export
+
+当你登录到你的账户时，Linux 会生成你的用户 shell。在此 shell 中，你可以执行命令并声明变量。你还可以创建和执行 shell 脚本。然而，当你执行 shell 脚本时，系统会生成一个子 shell。此时你拥有两个 shell，一个是登录 shell，另一个是为脚本生成的 shell。在脚本 shell 中，你可以执行另一个 shell 脚本，该脚本拥有自己的 shell。当脚本执行完毕后，其 shell 终止，你回到执行它的 shell。从某种意义上说，你可以拥有许多嵌套在彼此中的 shell。你在 shell 中定义的变量是局部的。如果你在 shell 脚本中定义一个变量，那么当脚本运行时，该变量是在脚本的 shell 中定义的，并且是局部的。其他 shell 无法引用该变量。从某种意义上说，该变量隐藏在其 shell 内部。
+
+你可以在所有类型的 shell 中定义环境变量，包括 BASH shell、Z shell 和 TCSH shell。然而，BASH shell 中实现环境变量的策略与 TCSH shell 不同。在 BASH shell 中，环境变量是被导出的。也就是说，每个子 shell 中都会制作环境变量的一个副本。例如，如果 EDITOR 变量被导出，则会在每个子 shell 中自动为你定义一个副本。另一方面，在 TCSH shell 中，环境变量只定义一次，并且可以被任何子 shell 直接引用。
+
+在 BASH shell 中，环境变量可以被视为具有附加功能的常规变量。要创建环境变量，你需要对已经定义的变量应用 export 命令。export 命令指示系统为每个生成的新 shell 定义该变量的一个副本。每个新 shell 都将拥有该环境变量的一个副本。这个过程称为导出变量。认为导出的环境变量是全局变量是一种错误。新 shell 永远无法引用其自身的变量。相反，为该新 shell 生成了带有其值的变量副本。
+
+> 注意 你可以认为导出的变量是将其值导出到 shell，而不是导出到自身。如果你熟悉编程结构，可以将导出的变量视为一种“值传递”形式。
+
+## 使用 Shell 参数配置你的 Shell
+
+当你登录到你的账户时，系统会为你生成一个 shell。这个 shell 被称为你的登录 shell 或用户 shell。当你执行脚本时，你正在生成用户 shell 的子 shell。你可以在用户 shell 中定义变量，也可以定义能被你生成的任何子 shell 引用的环境变量。
+
+当你登录时，Linux 会为你的登录 shell 设置某些参数。这些参数可以表现为变量或特性。有关如何设置特性的说明，请参阅前一节“控制 Shell 操作”。Linux 保留了一组预定义变量供 shell 和系统使用。这些变量被赋予系统值，实际上是在设置参数。Linux 设置了参数 shell 变量，你可以使用它们来配置用户 shell。许多这些参数 shell 变量在你登录时由系统定义。一些参数 shell 变量由 shell 自动设置，其他则由初始化脚本设置，稍后描述。某些 shell 变量直接由 shell 设置，其他仅由 shell 使用。这些其他变量中的许多是特定于应用程序的，用于邮件、历史或编辑等任务。从功能上讲，最好将它们视为系统级变量，因为它们用于配置整个系统，设置诸如系统上可执行命令的位置或允许的历史命令数量等值。见表 9-3 获取 shell 为 shell 特定任务设置的 shell 变量列表；表 9-4 列出了 shell 用于支持其他应用程序的变量。
+
+| Shell 变量 | 描述 |
+| :--- | :--- |
+| BASH | 保存 BASH 命令的完整路径名 |
+| BASH_VERSION | 显示当前 BASH 版本号 |
+| GROUPS | 用户所属的组 |
+| HISTCMD | 历史列表中当前命令的编号 |
+| HOME | 用户主目录的路径名 |
+| HOSTNAME | 主机名 |
+| HOSTTYPE | 显示主机运行的机器类型 |
+| OLDPWD | 之前的工作目录 |
+| OSTYPE | 正在使用的操作系统 |
+| PATH | 用于搜索可执行命令的目录路径名列表 |
+| PPID | shell 的父 shell 的进程 ID |
+| PWD | 用户的工作目录 |
+| RANDOM | 被引用时生成随机数 |
+| SHLVL | 当前 shell 级别，即调用的 shell 数量 |
+| UID | 当前用户的用户 ID |
+
+表 9-3 由 Shell 设置的 Shell 变量
+
+| Shell 变量 | 描述 |
+| :--- | :--- |
+| BASH_VERSION | 显示当前 BASH 版本号 |
+| CDPATH | cd 命令的搜索路径 |
+| EXINIT | Ex/Vi 编辑器的初始化命令 |
+| FCEDIT | 历史 fc 命令使用的编辑器。 |
+| GROUPS | 用户所属的组 |
+| HISTFILE | 历史文件的路径名 |
+| HISTSIZE | 允许用于历史的命令数量 |
+| HISTFILESIZE | 历史文件的行数大小 |
+| HISTCMD | 历史列表中当前命令的编号 |
+| HOME | 用户主目录的路径名 |
+| HOSTFILE | 设置 hosts 文件的名称，如果不是 /etc/hosts |
+| IFS | 字段分隔符符号 |
+| IGNOREEOF | 如果未设置，EOF 字符将关闭 shell。可以设置为忽略接受关闭 shell 的 EOF 字符之前忽略的 EOF 字符数量（默认为 10） |
+
+| Shell 变量 | 描述 |
+|---|---|
+| INPUTRC | 为 Readline（命令行）设置 **inputrc** 配置文件。默认是当前目录，**~/.inputrc**。Red Hat 和 Fedora 将其设置为 `/etc/inputrc` |
+| KDEDIR | KDE 桌面的路径名位置 |
+| LOGNAME | 登录名称 |
+| MAIL | 邮件实用工具检查接收消息的特定邮件文件名，如果未设置 MAILPATH |
+| MAILCHECK | 检查接收邮件的时间间隔 |
+| MAILPATH | 邮件要检查的接收消息邮件文件列表 |
+| HOSTTYPE | Linux 平台，如 i686、x86_64 或 ppc |
+| PROMPT_COMMAND | 在每次提示符之前执行的命令，将结果作为提示符的一部分集成 |
+| HISTFILE | 历史文件的路径名 |
+| PS1 | 主要 shell 提示符 |
+| PS2 | 次要 shell 提示符 |
+| QTDIR | Qt 库的位置（用于 KDE） |
+| SHELL | 正在使用的 shell 类型的程序路径名 |
+| TERM | 终端类型 |
+| TMOUT | shell 保持活跃等待输入的时间 |
+| USER | 用户名 |
+| UID | 真实用户 ID（数字） |
+| EUID | 有效用户 ID（数字）。这通常与 UID 相同，但当用户更改 ID 时可能不同，例如使用 **su** 命令，该命令允许用户成为有效 root 用户。 |
+
+**表 9-4** Shell 使用的系统环境变量
+
+这些系统变量名称使用一组保留关键字。你不应该将这些关键字用作你自定义变量名称。系统 shell 变量均使用大写字母指定，便于识别。Shell 特性变量使用小写字母。例如，关键字 `HOME` 被系统用于定义 `HOME` 变量。`HOME` 是一个特殊的环境变量，保存用户主目录的路径名。另一方面，关键字 `noclobber` 用于设置 `noclobber` 特性的开启或关闭。
+
+## Shell 参数变量
+
+许多在你登录时由系统自动定义并赋初值的 shell 参数变量可以根据需要进行更改。然而，一些参数变量的值不应更改。例如，`HOME` 变量保存的
+

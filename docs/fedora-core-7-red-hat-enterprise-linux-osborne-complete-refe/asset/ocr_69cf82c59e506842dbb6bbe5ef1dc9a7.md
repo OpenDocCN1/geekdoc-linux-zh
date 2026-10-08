@@ -1,0 +1,17 @@
+restored when you start up again. If you just want to lock your desktop, you can select the Lock Screen entry on the main menu and your screen saver will appear. To access a locked desktop, click on the screen and a box appears prompting you for your login password. When you enter the password, your desktop reappears.
+
+> *NOTE*  *You can use the Create New menus to create new folders or files on the desktop, as well as links for applications and devices.*
+
+# KDE Desktop Operations
+
+Initially the Trash icon is shown on the left side. The Trash icon operates like the Recycle Bin in Windows or the trash can on the Mac. Drag items to it to hold them for deletion. You can use the floppy and DVD/CD-ROM icons to mount, unmount, and display the contents of CD-ROMS and floppy disks. The DVD/CD-ROM icons will appear as disks are inserted and mounted, disappearing when ejected. Your home directory is accessed initially from the Home directory in the main menu. To place this folder on the desktop, right-click on the menu entry and select Add to Desktop from the pop-up menu. You also have the option to display the Home directory on your panel by selecting Add to Panel. A home directory icon then appears permanently on your desktop.
+
+The KDE panel displayed across the bottom of the screen initially shows small buttons for the KDE main menu, the Web browser, office tools, and a clock, as well as buttons for virtual desktops, among others. The desktop supports drag-and-drop operations. For example, to print a document, drag it to the Printer icon. You can place any directories on the desktop by simply dragging them from a file manager window to the desktop. A small menu will appear with options to copy or link the folder. To just create an icon on the desktop for the same folder, select the link entry.
+
+The desktop also supports copy-and-paste operations, holding text you copied from one application in a desktop clipboard that you then use to paste to another application. You can even copy and paste from a Konsole window. For example, you can copy a Web address from a Web page and then paste it into a e-mail message or a word processing document. This feature is supported by the Klipper utility located on the panel.
+
+You can create new directories on the desktop by right-clicking anywhere on the desktop and selecting Create New and then Directory from the pop-up menu. All items that appear on the desktop are located in the **Desktop** directory in your home directory. There you can find the **Trash** directory, along with any others you place on the desktop. You can also create simple text files and HTML files using the same menu.
+
+# Accessing System Resources from the File Manager
+
+You can access system resources, including network shares, user directories, or storage media like CD-ROMS, from any file manager window (see Figure 7-2). Some of these resources can be opened directly, like the Trash and CD-ROM icons on your desktop, or the Home directory entry in the main menu. To open an initial file manager window, select the Home Directory entry in the main menu. Then click the system icon on the lower-left side of the file manager window. Icons are displayed that you can use to access various system resources such as storage media, remote hosts, Samba network shares, and your trash folder. You will see icons labeled Home Folder, Remote Places, Storage Media, and Trash. You can also access

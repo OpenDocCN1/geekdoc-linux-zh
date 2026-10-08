@@ -1,0 +1,100 @@
+
+## 全局配置
+
+标准的 Apache 配置包含三个部分：全局设置（Global Settings）、服务器设置（Server Settings）和虚拟主机（Virtual Hosts）。全局设置用于控制 Web 服务器的基本运行和性能。在此处，您可以设置配置文件的存放位置、进程 ID 文件、计时器、所使用的 MPM 模块的设置，以及需要加载的 Apache 模块。
+
+**ServerTokens** 指令可以防止泄露服务器正在使用的任何可选模块。**ServerRoot** 指令指定了 Web 服务器的配置、错误和日志文件的存放位置。在 Fedora 中，这是 `/etc/httpd`，该目录还将包含您的错误和日志文件，以及服务器模块。此服务器根目录随后将用作其他目录条目的前缀。
+
+```
+ServerRoot /etc/httpd
+```
+
+服务器的进程 ID (PID) 文件通常是通过 **PidFile** 设置位于 `/etc/httpd/run/httpd.pid`。
+
+```
+PidFile run/httpd.pid
+```
+
+连接和请求的计时由 **Timeout**、**KeepAlive**、**MaxKeepAlive** 和 **KeepAliveTimeout** 指令处理。**Timeout** 是 Web 服务器使发送或接收请求超时的秒数。**KeepAlive** 允许持久连接，即允许客户端在同一连接上发起多个请求。此功能默认是关闭的。**KeepKeepAliveRequests** 设置持久连接上的最大请求数。**KeepAliveTimeout** 是保持与给定客户端的连接打开以接收该客户端更多请求的时间。
+
+**Listen** 指令将服务器绑定到特定的端口或 IP 地址。默认情况下是端口 80。
+
+```
+Listen 80
+```
+
+## 模块
+
+Apache Web 服务器的许多功能和灵活性来自于使用模块来扩展其功能。Apache 是通过一组核心指令实现的。可以创建包含其他指令定义的模块。这些模块可以被加载到 Apache 中，从而允许您为服务器使用这些指令。Apache 发行版中附带了一组标准模块，尽管您可以下载其他模块，甚至可以创建自己的模块。例如，**mod_autoindex** 模块包含了自动索引目录的指令（如下节所述）。**mod_mime** 模块包含了 MIME 类型和处理器指令。使用 **LoadModule** 指令加载模块。您可以在大多数标准模块的 httpd.conf 配置文件中找到 LoadModule 指令。
+
+```
+LoadModule mime_module modules/mod_mime.so
+```
+
+**LoadModule** 接受模块名称及其位置作为参数。模块存储在 `/etc/httpd/modules` 目录中，这里通过 `modules/` 前缀进行引用。
+
+不同模块的配置文件位于 `/etc/httpd/conf.d` 目录中。这些文件也使用 **Include** 指令加载。以下命令会插入 `/etc/httpd/conf.d` 目录中的所有配置文件（即扩展名为 .conf 的文件）。
+
+```
+Include conf.d/*.conf
+```
+
+Apache 包中提供的 **apxs** 应用程序可用于构建 Apache 扩展模块。使用 **apxs** 应用程序，您可以编译用 C 语言编写的 Apache 模块源代码，并创建可以使用 **LoadModule** 指令加载的动态共享对象。**apxs** 应用程序要求 **mod_so** 模块是您的 Apache 应用程序的一部分。它包含大量选项，例如使用 -n 指定模块名称，使用 -a 在 httpd.conf 文件中为其添加条目，以及使用 -i 将模块安装到您的 Web 服务器上。
+
+您可以在 Apache 网站 httpd.apache.org 以及位于您的网站根目录中的 Apache 手册中找到 Apache Web 配置指令的完整列表。在许多系统中，这位于由发行版设置的网站默认目录（即 /var/www/manual）中的 manual 子目录中。
+
+## MPM 配置
+
+MPM 预派生（prefork）和工作（worker）模块的配置设置使您能够根据工作负载需求定制 Apache Web 服务器。对于一个在轻负载下运行的标准 Web 服务器，默认条目已经设置好了。您可以针对不同的需求修改这些设置。
+
+Fedora 有条件地配置了 Unix 和 Linux 系统中常见的两个 MPM 模块：prefork 和 worker。prefork 模块支持每个进程一个线程，这保持了对旧系统和模块的兼容性。worker 模块支持每个进程多个线程，从而对系统资源施加较低的负载。它们共享一些相同的指令，例如 **StartServer** 和 **MaxRequestsPerChild**。您可以通过设置 `/etc/sysconfig/httpd` 文件中的 HTTPD 选项来决定使用 httpd 服务脚本加载哪个模块。默认加载 prefork 模块。
+
+Apache 运行单个父进程以及处理请求所需的尽可能多的子进程。MPM 模块的配置重点在于应该有多少个进程可用。prefork 模块将列出服务器数量，因为每个服务器都会启动一个进程；worker 将控制线程，因为它为每个进程使用线程。**StartServer** 指令列出两个模块要启动的服务器进程数量。通常，prefork 的这个数值会比 worker 大。
+
+在 prefork 模块中，您需要为备用服务器设置最小值和最大值。**MaxClients** 设置可以启动的最大服务器数，**ServerLimit** 设置允许的服务器数量。**MaxRequestsPerChild** 设置每个服务器允许的最大请求数。
+
+在 worker 模块中，**MaxClients** 也设置最大客户端线程数，**ThreadsPerChild** 设置每个服务器的线程数。**MaxRequestsPerChild** 限制每个服务器的最大请求数。还会配置备用线程限制。这些指令充当 Web 服务器访问的一种节流器，控制保持可用的进程数量并限制可使用的资源。在 Fedora 的 prefork 配置中，**StartServer** 数值设置为 8，最小备用数为 5，最大备用数为 20。这意味着最初将启动 8 个服务器进程等待请求，以及 5 个备用进程。当不再使用服务器进程时，它们将被终止，直到这些备用进程的数量少于 20。可以启动的最大服务器进程数为 256。每个服务器进程的最大连接数设置为 4,000。
+
+在 worker MPM 中，最初只启动 2 个服务器进程。备用线程设置为 25 和 75。最大线程数设置为 150，每个子进程的线程数为 25。
+
+## 服务器设置
+
+某些指令用于配置服务器的整体操作。这些指令位于 httpd.conf 配置文件的中间部分，直接在标有“服务器设置”的章节下方。一些指令需要路径名，而另一些只需要用 on 和 off 关键字打开或关闭。默认的 httpd.conf 文件已经包含了这些指令。其中一些是以前面的 # 符号注释掉的。您可以通过移除 # 符号来激活一个指令。许多条目前面都有解释其用途的注释。
+
+以下是使用 **ServerAdmin** 指令设置用户发送行政事务邮件地址的一个示例。您将 `you@your.address` 条目替换为您想要用来接收系统管理邮件的地址。默认情况下，这设置为 root@localhost。
+
+```
+# ServerAdmin: Your address, where problems should be e-mailed.
+ServerAdmin you@your.address
+```
+
+Web 服务器通常使用端口 80，这是 Apache 的默认值。如果您想使用不同的端口，请使用 **Port** 指令指定它。
+
+```
+Port 80
+```
+
+**ServerName** 指令包含您 Web 服务器的主机名。指定主机名对于避免不必要的 DNS 查找失败从而挂起服务器非常重要。请注意该条目前面的 # 注释。只需移除 # 并输入您的 Web 服务器的主机名来代替 `new.host.name`。如果您使用的端口不是 80，请确保将其附加到主机名之后，例如 **turtle.mytrek.com:80**。这是原始的默认条目：
+
+```
+# ServerName allows you to set a hostname which is sent
+# back to clients for your server if it's different than the
+# one the program would get (i.e. use
+# "www" instead of the host's real name).
+
+#ServerName new.host.name:80
+```
+
+修改后的 **ServerName** 条目将如下所示：
+
+```
+ServerName turtle.mytrek.com
+```
+
+当接收针对服务器系统的 URL 请求时（例如针对系统本地文件的请求），**UseCanonicalName** 指令将使用 **ServerName** 和 **Port** 指令生成主机 URL 服务器名称。当该指令关闭时，它只会使用客户端请求提供的名称。如果 Web 服务器由一个名称引用但使用另一个名称（例如使用 **www.mytrek.com** 引用 **turtle.mytrek.com**），这可能会造成混淆。将 **UseCanonicalName** 设置为 on 可以解决此问题，生成正确的本地 URL。
+
+在 Fedora 系统中，已经为标准 Web 服务器安装创建条目，使用 `/var/www` 作为您的网站目录。您可以通过更改相应的指令将您的网站定制为自己的需求。**DocumentRoot** 指令决定了您 Web 页面的主目录。
+
+```
+DocumentRoot /var/www/html
+```

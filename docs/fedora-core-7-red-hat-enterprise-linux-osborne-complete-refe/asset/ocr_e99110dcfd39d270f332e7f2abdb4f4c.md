@@ -1,0 +1,17 @@
+projects, including libraries, tools, frameworks, engines, and server applications. Tomcat is an open source implementation of the Java Servlet and JavaServer Pages specifications. Tomcat is designed for use in Apache servers. JMeter is a Java desktop tool to test performance of server resources, such as servlets and CGI scripts. Velocity is a template engine that provides easy access to Java objects. Watchdog is a tool that checks the compatibility of servlet containers. Struts, Cactus, and Tapestry are Java frameworks, established methods for developing Java Web applications.
+
+# ## Linux Apache Installations
+
+Your Linux distribution will normally provide you with the option of installing the Apache Web server during the initial installation of your Linux system. All the necessary directories and configuration files are automatically generated for you. Then, whenever you run Linux, your system is already a fully-functional Web site. Every time you start your system, the Web server will also start up, running continuously. On most distributions, the directory reserved for your Web site data files is */var/www/html*. Place your Web pages in this directory or in any subdirectories. Your system is already configured to operate as a Web server. All you need to do is perform any needed network server configurations, and then designate the files and directories open to remote users. You needn't do anything else. Once your Web site is connected to a network, remote users can access it.
+
+The Web server normally sets up your Web site in the */var/www* directory. It also sets up several directories for managing the site. The */var/www/cgi-bin* directory holds the CGI scripts, and */var/www/html/manual* holds the Apache manual in HTML format. You can use your browser to examine it. Your Web pages are to be placed in the */var/www/html* directory. Place your Web site home page there. Your configuration files are located in a different directory, */etc/httpd/conf*. Table 23-2 lists the various Apache Web server directories and configuration files.
+
+# ## Apache Multiprocessing Modules: MPM
+
+Apache now uses a new architecture that uses multiprocessing modules (MPMs), which are designed to customize Apache to different operating systems, as well as handle certain multiprocessing operations. For the main MPM, a Linux system would use either the prefork or worker MPM, whereas Windows would use the mpm_winnt MPM. The prefork is a standard MPM module designed to be compatible with older Unix and Linux systems, particularly those that do not support threading. It is the module loaded by default by Fedora. The worker MPM implements threading for Apache server processes, a feature supported by the Native POSIX Thread Libraries (NPTL) that are part of Red Hat and Fedora. You can configure the workload parameters for both in the Apache configuration file, */etc/httpd/conf/httpd.conf*.
+
+Many directives that once resided in the Apache core are now placed in respective modules and MPMs. With this modular design, several directives have been dropped, such as ServerType. Configuration files for these module are located in the */etc/httpd/conf.d* directory.
+
+# ## Starting and Stopping the Web Server
+
+On most systems, Apache is installed as a stand-alone server, continually running. As noted in Chapter 21, in the discussion of init scripts, your system automatically starts up the Web server daemon, invoking it whenever you start your system. A service script for the Web
