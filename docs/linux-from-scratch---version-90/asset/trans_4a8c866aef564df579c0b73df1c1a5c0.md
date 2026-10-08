@@ -1,0 +1,155 @@
+
+
+## 6.9.2. 配置 Glibc
+
+### 6.9.2.1. 添加 nsswitch.conf
+
+需要创建 /etc/nsswitch.conf 文件，因为 Glibc 的默认设置在网络环境中工作并不良好。
+
+运行以下命令创建新文件 /etc/nsswitch.conf：
+
+```
+cat > /etc/nsswitch.conf << "EOF"
+# Begin /etc/nsswitch.conf
+
+passwd: files
+group: files
+shadow: files
+
+hosts: files dns
+networks: files
+
+protocols: files
+services: files
+ethers: files
+rpc: files
+
+# End /etc/nsswitch.conf
+EOF
+```
+
+### 6.9.2.2. 添加时区数据
+
+使用以下命令安装并设置时区：
+
+```
+tar -xf ../../tzdata2019b.tar.gz
+
+ZONEINFO=/usr/share/zoneinfo
+mdir -pV $ZONEINFO/(posix,right)
+```
+
+```bash
+for tz in etcetera southamerica north america europe africa antarctica \
+asia australia backward pacificnew systemv; do
+ zic -L /dev/null -d $ZONEINFO ${tz}
+ zic -L /dev/null -d $ZONEINFO/posix ${tz}
+ zic -L leapseconds -d $ZONEINFO/right ${tz}
+done
+```
+
+```bash
+cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
+zic -d $ZONEINFO -p America/New_York
+unset ZONEINFO
+```
+
+### zic 命令的含义：
+
+```
+zic -L /dev/null
+```
+
+这会创建正时间时区，不包含任何闰秒。惯例上将这些同时放在 zoneinfo 和 zoneinfo/posix 中。有必要将 POSIX 时区放在 zoneinfo 中，否则各种测试套件将报告错误。在空间紧张且你不打算更新时区的嵌入系统中，通过不使用 posix 目录可以节省 1.9MB 空间，但某些应用程序或测试套件可能会导致失败。
+
+```
+zic -L leapseconds
+```
+
+这会创建包含闰秒的右时间时区。在空间紧张且你不打算更新时区，或者不在乎准确时间的嵌入系统中，可以通过省略 right 目录节省 1.9MB 空间。
+
+```
+zic -P
+```
+
+这会创建 posixrules 文件。我们使用纽约时间是因为 POSIX 要求夏令时规则必须与美国规则一致。
+
+确定本地时区的一种方法是运行以下脚本：
+
+```
+tzselect
+```
+
+在回答了几个关于位置的问题后，脚本将输出时区的名称（例如 America/Edmonton）。/usr/share/zoneinfo 中还列出了其他可能的时区，如 Canada/Eastern 或 EST5EDT，这些没有被脚本识别，但是可以被识别的。
+
+然后运行以下命令创建 /etc/localtime 文件：
+
+```
+ln -sf /usr/share/zoneinfo/<xxx> /etc/localtime
+```
+
+将 <xxx> 替换为选择的时区名称（例如 Canada/Eastern）。
+
+## 6.9.2. 配置动态加载器
+
+默认情况下，动态加载器 (/lib/ld-linux.so.2) 会在 /lib 和 /usr/lib 中搜索程序运行时所需的动态库。然而，如果位于 /lib 和 /usr/lib 之外的目录中存在库，则必须将它们添加到 /etc/ld.so.conf 文件中，动态加载器才能找到它们。常见的包含额外库的目录是 /usr/local/lib 和 /opt/lib，因此将它们添加到动态加载器的搜索路径。
+
+运行以下命令创建新文件 /etc/ld.so.conf：
+
+```
+cat > /etc/ld.so.conf << "EOF"
+# Begin /etc/ld.so.conf
+usr/local/lib
+opt/lib
+EOF
+```
+
+## Linux Scratch - 版本 9.0
+
+如果需要，动态加载器还可以搜索目录并包含在那里找到的内容。通常，该目录中的文件每行指定一个库路径。要添加此功能，运行以下命令：
+
+```bash
+cat >> /etc/ld.so.conf << "EOF"
+# 添加一个包含目录
+include /etc/ld.so.conf/*.conf
+EOF
+mkdir -pv /etc/ld.so.conf.d
+```
+
+## 6.9.3. Glibc 的内容
+
+- **已安装程序：** catch2g, gencat, getconf, getent, iconv, iconconfig, ldconfig, ldd, ldlibc4, locale, localedef, makedb, mtrace, nscd, preloaded_module, plld, sln, sotrs, sprof, tzselect, xtrace, zdump, and zic
+- **已安装库：** ld-2.30.so, libBrokenLocale.{a,so}, libSegFault.{a,so}, liban.{a,so}, ld.{a,so}, lib_shared.{a.so}, libcrypt.{a.so}, libld.{a.so}, libga.{a.so}, libm.{a.so}, libmcheck.{a.so}, libmemessage.{a.so}, libmnec.{a.so}, libinsn.{a.so}, libinsns_compat.{a,so}, libnsns_d.{a.so}, libnsns_file.{a.so}, libnsns.{a.so}, libprofile.{a.so}, libthread.{a.so}, libthread_db.{a.so}, libutil.{a.so}, libnonshared.{a.so}, librt.{a.so} 
+- **已安装目录：** 见下文
+- **目录描述：** 见下文
+
+## Linux From Scratch - 版本 9.0
+
+- pcprofiledump: 转储 PC 生成的信息
+- pldd: 列出运行进程使用的共享对象
+- sln: 静态链接的 In
+- truss: 跟踪指定命令的共享库调用
+- sprof: 读取并显示共享对象分析数据
+- tzselect: 询问用户位置并报告相应的时区
+- xtrace: 通过打印当前执行的函数来跟踪程序的执行
+- zdump: 时区转储程序
+- zic: 时区编译器
+- ld-2.30.so: 库执行文件的辅助程序
+- libBrokenLocale: Glibc 内部使用的一种粗略破解方法，用于让损坏的程序（例如 Motif 应用程序）运行。更多信息请参见注释 glibc-2.30/locale/broken_cur_max.c
+- libSegFault: 分段信号处理器，被 catch 使用
+- libanl: 异步名称查找库
+- libcc: 主 C 库
+- libld: 动态链接接口库
+- libg: 不包含任何函数的虚拟库。以前是 g++ 的运行时库
+- libm: 数学库
+- libmcheck: 链接时开启内存分配检查
+- libmemusage: memusage 使用以帮助收集程序的内存使用信息
+- libnsl: 网络服务库
+- libnss: 名称服务切换库，包含解析主机名、用户名、组名、别名、服务、协议等函数
+- libpcprofile: 可以预加载以供 PC 分析可执行文件
+- libthread: POSIX 线程库
+- libresolv: 包含用于创建、发送和解释到 Internet 域名服务器数据包的函数
+- librt: 包含 POSIX.1 实时扩展指定的大部分接口
+- libthread_db: 包含对构建多线程程序调试器有函数
+- libutil: 包含许多不同 Unix 工具中使用的“标准”函数代码
+
