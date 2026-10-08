@@ -1,0 +1,9 @@
++   * [Ctrl+z]—This command suspends the process you are currently running and returns you to a command prompt. This is the keystroke sequence I used to break out of the vi editor in the previous example.
+
+Now that you are more familiar with your current environment, let’s recap what we’ve learned about shells. Shells are important, but if you know one, you can usually perform the same commands from shell to shell and have the same functionality with little variance. This book’s content is based on the fact that you may not be able to select your shell, most if not all of the content will apply to any Unix system you may be working with. Remember, as you become a more advanced user, shell selection will become more important.
+
+# Summary
+
+You should now feel comfortable working within your environment. You can log in and log out, and you should understand the simple concepts surrounding the login and logout processes. You should also know how to run these processes in both a text-based and a graphical environment.
+
+In Lesson 1, “Getting Started,” you learned how to get started with Unix, but it does not stop here—it has only begun. Before continuing, make sure you know how to log in and log out of your system as well as how to access the shell prompt and issue basic commands. In this chapter, you logged in, opened a prompt, and logged out. Armed with this knowledge, let’s move to Lesson 2, “Getting Help.” In Lesson 2, we dig into the built-in help system for Unix, a place where new users should before quitting or admitting defeat. Believe it or not, the Unix help system is very helpful. We before go on to Lesson 2, make sure you have mastered this lesson, because you will need to apply it to each subsequent lesson as we move forward in the text.

@@ -1,0 +1,9 @@
+What's the Problem? This lesson talks about getting or finding help for Unix. It does not cover how to solve any technical problems you may have, which is usually a job for a help desk technician. This chapter revolves around how to get assistance when learning Unix, not how to fix it if it is broken, which is beyond the scope of this text.
+
+# # Finding Help in Unix
+
+It should come as absolutely no surprise that products such as Microsoft Windows have built-in help systems; perhaps you have even used them. Most common computer operating systems do detail help systems built right into them. Unix is no different, and although it seems to have been around as long if not longer than many other operating systems, it also has as detailed help system as any.
+
+Unix was created without a thought to being user friendly; it was built for power, functionality, flexibility, and control. Because Unix is generally a command-line--driven system, there is commonly no mouse to point and click; therefore it doesn't know where to find it. However, the joke is on us: Once you know how to use the Unix help system, you only need to go to a shell prompt and type the correct command to access it. You don't need to point and click unless you are navigating in an X Window System environment.
+
+If you know how to access the built-in help system in Unix, it can help you perform just about any command known in the system. You should be aware, that each version of Unix has its own version or form of help, and these forms may not be identical. For instance, SuSE Linux and Red Hat Linux have commands that do not match. This does not mean that the commands are not similar or that they will perform the same

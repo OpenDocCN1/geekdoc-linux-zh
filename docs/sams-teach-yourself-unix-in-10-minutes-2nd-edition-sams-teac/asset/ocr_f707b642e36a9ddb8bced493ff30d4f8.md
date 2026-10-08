@@ -1,0 +1,11 @@
+# Getting Help
+
+As just mentioned, you will eventually need some form of help in your Unix journey. Not all of your issues will be addressed in the man pages, but many of them will be. Help comes in different forms. For example, you may need help with a command as ls. The ls command is used to list the names of files that are found in your current directory. In the man pages, you may see the syntax on the use of ls but not necessarily understand what you need to do with. In other words, your problems may run deeper than the help provided in a man page. This is where time, practice, reading and learning save the day. The man pages are only for your reference; they will not do anything for you unless you are able to understand what they say and perform the appropriate actions.
+
+Why use man pages instead of the Internet or any other resource? To answer this question, remember the purpose of the man page: It's there to help you, not to do the work for you. All the information you need for the command syntax is found within man page. If you want to look for further suggestions on use, then that's a different story. But why look outside the box when you have the answer inside the box? Check the man page before you move to any other resources.
+
+In addition, there is no definitive source for Unix information on the Internet. There are scattered resources that can help you if you know the specific vendor of the product you are using (SuSE, AIX, SCO ACE, and so forth) and the vendor provides support documentation. You may also find some information if you are a master at searching the Internet, but chances that this information will be secondhand at best. Because Unix users have always relied upon the system's own internals for assistance, man pages are the best-known resource for you as a Unix student. These pages are anywhere Unix unless the files or links to them are damaged and in need of repair. To review, benefits of man pages include the following:
+
++   - Man pages are the quickest source for complete information on how to use the commands on your system.
+
++   - Man pages provide information on what programs do and how to use them.

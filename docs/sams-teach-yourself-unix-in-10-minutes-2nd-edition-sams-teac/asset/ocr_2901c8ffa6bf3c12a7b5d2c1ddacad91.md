@@ -1,0 +1,8 @@
+# # LESSON 2
+# Getting Help
+
+In this lesson we will cover how to help get help. Many times you will find yourself looking at a Unix console or computer screen and feeling a little clueless. This lesson will teach you how to handle those moments.
+
+As more and more features are added to today's high-speed computer networks, these networks are becoming increasingly complex. In turn, as networks and systems evolve, develop, and become more complicated, additional help and knowledge are needed in many areas, especially when it comes to the infamously cryptic Unix. Some people would say that the sheer beauty of this situation is that few users know that Unix comes with its own built-in help system that, if used properly, actually teach you Unix. Now that you have learned to log in and connect to a Unix system, this chapter will focus on one of the most common things you will do as we progress through the rest of the book: getting help when needed, but it will also make sure that you know other ways to help yourself needed. This chapter will not only cover how to use the built-in help system, but will also make sure that you know other ways to help yourself in time of need.
+
+Make no mistake, learning Unix is not impossible, and if you take the right steps to learn it, it can be grasped. The help system and other forms of assistance are there for you when you forget things or want to learn new commands or explore the system further. In this lesson, we will cover a number of ways that you can find help in Unix. These include using the man pages and other forms of Unix help as well as online resources and other resources you may be able to access as you learn Unix.

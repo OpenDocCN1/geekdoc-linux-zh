@@ -1,0 +1,3 @@
++   * **Online Resources**—The Linux Documentation Project provides an excellent starting point when wading through the mountains of Linux information online. Remember, even though the information is specifically for Linux, most of it applies to other Unix variations as well. The *comp.unix.*.* newsgroups are also extremely useful for hard-to-find answers.
+
++   * **The Graphical KDE Help System**—KDE provides excellent built-in help for most of its applications. Simply select Contents from the Help menu that is located in each application.

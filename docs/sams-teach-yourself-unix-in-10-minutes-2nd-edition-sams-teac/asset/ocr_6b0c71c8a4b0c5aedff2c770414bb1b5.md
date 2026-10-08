@@ -1,0 +1,3 @@
++   - Aliases are a very powerful feature of Unix shells. They enable you to rename commands, or cause commands to always use certain options when you issue them.
+
++   - Dot files are everywhere. Many programs use text files containing configuration information for control purposes. These files almost universally have filenames, which start with a . character. They are the place to look for automating settings to your shell, and for configuring options for the windowing system.
