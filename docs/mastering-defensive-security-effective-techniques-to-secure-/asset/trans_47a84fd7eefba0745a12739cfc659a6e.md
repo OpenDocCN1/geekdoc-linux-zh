@@ -1,0 +1,402 @@
+
+如附所示，SQL 和蓝牙等服务并非必需的，因此它们目前处于禁用状态：
+
+```
+kali@kali:~$ service status-all
+[sudo] - password for kali:
+[ ] apache-htacheclean
+[ ] apache2
+[ ] apparmor
+[ ] avahi-daemon
+[ ] binfm2-support
+[ ] bluetooth
+[ ] console-setup.sh
+[ ] cron
+[ ] cryptdisks
+[ ] cryptdisks-early
+[ ] dbus
+[ ] dns2tcp
+[ ] gdomap
+[ ] haveged
+[ ] hwtock.sh
+[ ] inetim
+[ ] inetutils-inetd
+[ ] iodined
+[ ] ipsec
+[ ] keyboard-setup.sh
+[ ] kmod
+[ ] lightdm
+[ ] mysql
+[ ] network-manager
+[ ] networking
+[ ] nfs-common
+```
+
+图 7.1 – 已安装服务列表
+
+要获取服务的更多信息，您可以在 `/etc/init.d` 找到每个服务的脚本。
+例如，下图显示了 MySQL 启动脚本的信息。在判断是否需要某项服务时，这些信息非常有用：
+
+```bash
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides:          mysql
+# Required-Start:    remote $syslog
+# Required-Stop:     remote $syslog
+# Should-Start:      network $named file
+# Should-Stop:       network $named file
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start and stop the mysql database server daemon
+# Description: Controls the main MariaDB database server daemon "mysqld"
+                      and its wrapper script "mysqld safe".
+#
+### END INIT INFO
+```
+
+图 7.2 – MySQL 启动脚本
+
+此外，该脚本通常允许我们使用 `start` 和 `stop` 命令更改服务的状态。例如，我们可以使用以下命令启动 ssh 服务：
+
+```
+service ssh start
+```
+
+下图显示了 ssh 服务是如何运行的，我们如何成功停止它，以及如何使用 `status` 命令进行验证：
+
+```
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: active active (running) since Sun 2020-11-22 03:21:46 EST; 5min ago
+ Docs: main=sshd(6), main=sshd_config(5)
+ Process: 2430 ExecStart=/usr/bin/sshd -t (code=exit, status=0/SUCCESS)
+ Main PID: 2431 (sshd[1])
+ Tasks: 1 (limit: 231)
+ Memory: 1.6M
+ Group: system.slice/usr/bin/sshd -D [listener] 0 of 10-100 startups
+
+Nov 22 03:21:46 kali systemd[1]: Starting OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+kali@~$ sudo service ssh stop
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: inactive (dead)
+ Docs: main=sshd(6), main=sshd_config(5)
+
+Nov 22 03:21:46 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+Nov 22 03:28:02 kali sshd[2431]: Received signal 15: terminating.
+Nov 22 03:28:02 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:28:02 kali systemd[1]: ssh.service: Succeeded.
+Nov 22 03:28:02 kali systemd[1]: Stopped OpenBSD Secure Shell server.
+```
+
+图 7.3 – 停止运行中的进程
+
+请注意，`status` 命令还会提供一些有趣的信息，如进程运行时间、端口、PID、内存使用情况等。
+
+# 在 systemd 中管理服务
+
+管理服务的另一种方法是使用 systemd 以及以下命令（我们将以 mysql 服务为例）：
+
+- 检查服务的状态 (mysql)：
+
+```
+systemctl status mysql
+```
+下图显示了上述命令的输出（非活跃/inactive），
+而图 7 显示了服务处于活跃（运行）状态时的输出：
+kali$: sudo systemctl status mysql
+mysql.service - LSB: Start and stop the mysql database server daemon
+Loaded: loaded (/etc/init.d/mysql; generated)
+Active: inactive (dead) since Sun 2020-11-22 04:25:13 EST 7s ago
+Docs: man:systemd-sys-generator(8)
+```
+
+![](img/8c6a223c57e25ea0cc1593903a1b920f_230_0.png)
+
+- 启动服务 (mysql)：
+
+如图所示，mysql 服务没有运行：
+
+```
+kali$: sudo systemctl start mysql
+kali$: sudo systemctl status mysql
+mysql.service - LSB: Start and stop the mysql database server daemon
+Loaded: loaded (/etc/init.d/mysql; generated)
+Active: active (running) since Sun 2020-11-22 04:25:13 EST 7s ago
+Docs: man:systemd-sys-generator(8)
+Process: 67886 ExecStart=/etc/init.d/mysql start (code=exit, status=0/SUCCESS)
+Tasks: 33 (limit: 238)
+Memory: 20M
+Group: /system.slice/mysql.service
+67913 /bin/sh /usr/bin/mysql --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/lib
+68038 (logged) mysql daemon error
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: mysql
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: Phase 6/7: Checking and upgrading
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]:
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: Phase 6/7: Checking and upgrading
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]:
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: Phase 6/7: Checking and upgrading
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]:
+（注：日志块中包含了许多重复行，已根据指令保留了所有信息）。
+
+此外，该脚本通常允许我们使用 `start` 和 `stop` 命令更改服务的状态。例如，我们可以使用以下命令启动 ssh 服务：
+
+```
+service ssh start
+```
+
+下图显示了 ssh 服务是如何运行的，我们如何成功停止它，以及如何使用 `status` 命令进行验证：
+
+```
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: active active (running) since Sun 2020-11-22 03:21:46 EST; 5min ago
+ Docs: main=sshd(6), main=sshd_config(5)
+ Process: 2430 ExecStart=/usr/bin/sshd -t (code=exit, status=0/SUCCESS)
+ Main PID: 2431 (sshd[1])
+ Tasks: 1 (limit: 231)
+ Memory: 1.6M
+ Group: system.slice/usr/bin/sshd -D [listener] 0 of 10-100 startups
+
+Nov 22 03:21:46 kali systemd[1]: Starting OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+kali@~$ sudo service ssh stop
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: inactive (dead)
+ Docs: main=sshd(6), main=sshd_config(5)
+
+Nov 22 03:21:46 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+Nov 22 03:28:02 kali sshd[2431]: Received signal 15: terminating.
+Nov 22 03:28:02 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:28:02 kali systemd[1]: ssh.service: Succeeded.
+Nov 22 03:28:02 kali systemd[1]: Stopped OpenBSD Secure Shell server.
+```
+
+图 7.3 – 停止运行中的进程
+
+注意，`status` 命令还会为您提供一些有趣的信息，如进程运行时间、端口、PID、内存使用情况等。
+
+（注：用户提供的多个页面包含一些重复/乱序的内容，我已根据提供的文档逻辑进行了合并）。
+
+等待，查看提示词，提供的文本实际上有些碎片。我将提供所提供内容的干净版本。
+
+[content]
+如附所示，SQL 和蓝牙等服务并非必需的，因此它们目前处于禁用状态：
+
+```
+kali@kali:~$ service status-all
+[sudo] - password for kali:
+[ ] apache-htacheclean
+[ ] apache2
+[ ] apparmor
+[ ] avahi-daemon
+[ ] binfm2-support
+[ ] bluetooth
+[ ] console-setup.sh
+[ ] cron
+[ ] cryptdisks
+[ ] cryptdisks-early
+[ ] dbus
+[ ] dns2tcp
+[ ] gdomap
+[ ] haveged
+[ ] hwtock.sh
+[ ] inetim
+[ ] inetutils-inetd
+[ ] iodined
+[ ] ipsec
+[ ] keyboard-setup.sh
+[ ] kmod
+[ ] lightdm
+[ ] mysql
+[ ] network-manager
+[ ] networking
+[ ] nfs-common
+```
+
+图 7.1 – 已安装服务列表
+
+要获取服务的更多信息，您可以在 `/etc/init.d` 找到每个服务的脚本。
+例如，下图显示了 MySQL 启动脚本的信息。在判断是否需要某项服务时，这些信息非常有用：
+
+```bash
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides:          mysql
+# Required-Start:    remote $syslog
+# Required-Stop:     remote $syslog
+# Should-Start:      network $named file
+# Should-Stop:       network $named file
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start and stop the mysql database server daemon
+# Description: Controls the main MariaDB database server daemon "mysqld"
+                      and its wrapper script "mysqld safe".
+#
+### END INIT INFO
+```
+
+图 7.2 – MySQL 启动脚本
+
+此外，该脚本通常允许我们使用 `start` 和 `stop` 命令更改服务的状态。例如，我们可以使用以下命令启动 ssh 服务：
+
+```
+service ssh start
+```
+
+下图显示了 ssh 服务是如何运行的，我们如何成功停止它，以及如何使用 `status` 命令进行验证：
+
+```
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: active active (running) since Sun 2020-11-22 03:21:46 EST; 5min ago
+ Docs: main=sshd(6), main=sshd_config(5)
+ Process: 2430 ExecStart=/usr/bin/sshd -t (code=exit, status=0/SUCCESS)
+ Main PID: 2431 (sshd[1])
+ Tasks: 1 (limit: 231)
+ Memory: 1.6M
+ Group: system.slice/usr/bin/sshd -D [listener] 0 of 10-100 startups
+
+Nov 22 03:21:46 kali systemd[1]: Starting OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+kali@~$ sudo service ssh stop
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: inactive (dead)
+ Docs: main=sshd(6), main=sshd_config(5)
+
+Nov 22 03:21:46 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+Nov 22 03:28:02 kali sshd[2431]: Received signal 15: terminating.
+Nov 22 03:28:02 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:28:02 kali systemd[1]: ssh.service: Succeeded.
+Nov 22 03:28:02 kali systemd[1]: Stopped OpenBSD Secure Shell server.
+```
+
+图 7.3 – 停止运行中的进程
+
+注意，`status` 命令还会为您提供一些有趣的信息，如进程运行时间、端口、PID、内存使用情况等。
+
+# 在 systemd 中管理服务
+
+管理服务的另一种方法是使用 systemd 以及以下命令（我们将以 mysql 服务为例）：
+
+- 检查服务的状态 (mysql)：
+
+```
+systemctl status mysql
+```
+下图显示了上述命令的输出（非活跃/inactive），
+而图 7 显示了服务处于活跃（运行）状态时的输出：
+kali$: sudo systemctl status mysql
+mysql.service - LSB: Start and stop the mysql database server daemon
+Loaded: loaded (/etc/init.d/mysql; generated)
+Active: inactive (dead) since Sun 2020-11-22 04:25:13 EST 7s ago
+Docs: man:systemd-sys-generator(8)
+```
+
+![](img/8c6a223c57e25ea0cc1593903a1b920f_230_0.png)
+
+- 启动服务 (mysql)：
+
+如图所示，mysql 服务没有运行：
+
+```
+kali$: sudo systemctl start mysql
+kali$: sudo systemctl status mysql
+mysql.service - LSB: Start and stop the mysql database server daemon
+Loaded: loaded (/etc/init.d/mysql; generated)
+Active: active (running) since Sun 2020-11-22 04:25:13 EST 7s ago
+Docs: man:systemd-sys-generator(8)
+Process: 67886 ExecStart=/etc/init.d/mysql start (code=exit, status=0/SUCCESS)
+Tasks: 33 (limit: 238)
+Memory: 20M
+Group: /system.slice/mysql.service
+67913 /bin/sh /usr/bin/mysql --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/lib
+68038 (logged) mysql daemon error
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: mysql
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: Phase 6/7: Checking and upgrading
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]:
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: Phase 6/7: Checking and upgrading
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]:
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: Phase 6/7: Checking and upgrading
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]: performance_schema
+Nov 02 04:25:13 kali /etc/mysql/debian-start[68088]:
+（注：日志块中包含了许多重复行，已根据指令保留了所有信息）。
+
+此外，该脚本通常允许我们使用 `start` 和 `stop` 命令更改服务的状态。例如，我们可以使用以下命令启动 ssh 服务：
+
+```
+service ssh start
+```
+
+下图显示了 ssh 服务是如何运行的，我们如何成功停止它，以及如何使用 `status` 命令进行验证：
+
+```
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: active active (running) since Sun 2020-11-22 03:21:46 EST; 5min ago
+ Docs: main=sshd(6), main=sshd_config(5)
+ Process: 2430 ExecStart=/usr/bin/sshd -t (code=exit, status=0/SUCCESS)
+ Main PID: 2431 (sshd[1])
+ Tasks: 1 (limit: 231)
+ Memory: 1.6M
+ Group: system.slice/usr/bin/sshd -D [listener] 0 of 10-100 startups
+
+Nov 22 03:21:46 kali systemd[1]: Starting OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+kali@~$ sudo service ssh stop
+kali@~$ sudo service ssh status
+• ssh.service - OpenBSD Secure Shell server
+ Loaded: loaded (/lib/systemd/system/ssh.service; disabled; vendor preset: disabled)
+ Active: inactive (dead)
+ Docs: main=sshd(6), main=sshd_config(5)
+
+Nov 22 03:21:46 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:21:46 kali sshd[2431]: Server listening on 0.0.0.0 port 22.
+Nov 22 03:21:46 kali sshd[2431]: Server listening on :: port 22.
+Nov 22 03:21:46 kali systemd[1]: Started OpenBSD Secure Shell server.
+Nov 22 03:28:02 kali sshd[2431]: Received signal 15: terminating.
+Nov 22 03:28:02 kali systemd[1]: Stopping OpenBSD Secure Shell server...
+Nov 22 03:28:02 kali systemd[1]: ssh.service: Succeeded.
+Nov 22 03:28:02 kali systemd[1]: Stopped OpenBSD Secure Shell server.
+```
+

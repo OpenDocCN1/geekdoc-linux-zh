@@ -1,0 +1,344 @@
+
+# Index
+
+## A
+
+- access
+- controlling, to Kubelet 323
+- controlling, to Kubernetes API 323
+- restricting, to etcd 324
+- access control
+- about 310
+- dealing with 165, 166
+- defensive techniques 166
+- best practices 283
+- Advanced RISC Machines (ARM) 394
+- Advanced Threat Protection (ATP) 58, 177
+- Alibaba Website Threat Inspector 331
+- access control lists (ACLs)
+- AlienVault Inspector 331
+- alpha feature
+- about 221
+- avoiding, in production 324
+- Amazon CloudWatch 327
+- managing 222
+- Amazon Inspector 331
+- removing 222, 224
+- Amazon Web Services (AWS) 317
+- annualized rate of occurrence (ARO) 63
+- viewing 221
+- antivirus solutions 195
+- Apache 204
+- access points 301
+- account aggregation 451
+- account creation 451
+- Active Directory (AD)
+- about 86, 158
+- AppDynamics 328, 329
+- application control 197
+- application programming interface (API)
+- security, applying on 190-192
+- about 335, 396, 455
+- securing 321
+- Acunetix 102
+- Armitage
+- Adafruit 312
+- about 407
+- ad fraud 452
+- exploring 410
+- ad blocker 135
+- features 411, 612
+- Advanced Interactive eXutive (AIX) 406
+- installing 408-410
+- advanced persistent threats (APTs)
+- used, for launching attack 413
+- about 165, 232
+- artificial intelligence (AI) 386
+- ATMEL 57
+- audit-ready 98
+- audits
+- about 121
+- creating 97
+- data management, during 99-101
+- exploring 97
+- external cybersecurity audits 98, 99
+- internal cybersecurity audits 97, 98
+- managing 97
+- triggering, factor 104
+- authenticated test
+- credentials 373
+- auto-expiring badges 283
+- automated attacks
+- account aggregation 451
+- account creation 451
+- ad fraud 452
+- CAPTCHA defeat 452
+- card cracking 452
+- carding 453
+- cashing out 453
+- credential cracking 453
+- credential stuffing 453
+- denial of inventory 453, 454
+- denial-of-service (DOS) 454
+- expediting 454
+- fingerprinting 454
+- footprinting 455
+- scalping 455
+- scraping 455
+- skewing 455
+- sniping 455
+- spamming 456
+- token cracking 456
+- types 451
+- vulnerability scanning 456
+- automated internet monitoring system
+- with Raspberry Pi 465, 466
+- automated internet speed monitor 466
+- automation
+- benefits 450
+- risks, of ignoring 451
+- AutoPatcher 186
+- Autopsy 160-162, 437
+- Azure Security Center 732
+
+## B
+
+- backups 198
+- BadUSB MITM attack 53
+- baiting
+- about 135
+- examples 135
+- Bash Bunny
+- about 50
+- URL 50
+- basic forensics 459
+- BeautifulSoup 461
+- Berkeley Standard Distribution (BSD) 406
+- beta feature
+- avoiding, in production 324
+- Binwalk 162, 163
+- Biometric Access Control 64
+- BitLocker
+- configuring 200
+- blacklist command
+- reference link 323
+- blue teams
+- versus red teams 39
+- Bluetooth
+- about 295
+- security vulnerabilities 296
+- Bluetooth Low Energy (BLE) 295
+- Bluetooth, security vulnerabilities reference link 296
+- Business Impact Analysis (BIA)
+- about 96
+- availability 72
+- concepts 69
+- creating 69
+- creators 73
+- critical systems, identification 69
+- mean time between failures (MTBF) 71
+- mean time to repair (MTTR) 71
+- mission essential functions 69
+- recovery point objective (RPO) 70, 71
+- recovery time objective (RTO) 69
+- single points of failure, 73
+- Bravix 237
+- Bring Your Own Device (BYOD) 129, 441
+- brute-force attacks 19
+- brute forcing web applications
+- passwords 359-362
+- results, analyzing 363
+- buffer overflow 39
+- bug bounty programs
+- about 369
+- references 369
+- bulk-extractor 163, 164
+- Bulletin Board Systems (BBSes) 264
+- BurpApp 129
+- Burp Suite
+- about 371
+- setting up, on Kali 351, 352
+- using 350
+- versions 350
+- Burp Suite, versions
+- community edition 350
+- Enterprise editions 350
+- Professional editions 350
+- Business Continuity Planning (BCP)
+- about 73, 85, 470
+- Business Impact Analysis (BIA) 74
+- communications 67-69
+- employee safety 75
+- maintaining 76, 77
+- reference link 470
+- reviewing 76
+- risk assessment 74
+- scope and objectives 74
+- testing 76
+- updating 76, 77
+
+## C
+
+- CallStranger 250
+- CAPTCHA defeat 452
+- card cracking 452
+- carding 453
+- Cascading Style Sheets (CSS) 336
+- cashing out 453
+- chains
+- about 225
+- default policy, modifying 227
+- forward chains 226
+- input chains 225
+- output chains 225
+- change management 187
+- chief executive officer (CEO) 99
+- chief financial officer (CFO) 95
+- chief information security officer (CISO) 89
+- CIRCLean about 305
+- reference link 305
+- Cisco 328
+- clean desk policy 284
+- clickbait 135
+- client-facing systems 198
+- client regulations 93
+- client vulnerabilities 45
+- cloud applications 316
+- secure deployment 316
+- cloud models
+- about 316
+- Infrastructure as a Service (IaaS) 317
+- Platform as a Service (PaaS) 317
+- Software as a Service (SaaS) 316
+- cloud-native security 322
+- cloud providers 322
+- cloud security testing 326
+- code audits 103
+- cold boot attack 431, 432
+- command-and-control (C&C) 387
+- command-line interface (CLI) 186
+- Command Shell 406
+- comma-separated values (CSV) 392
+- Common Vulnerabilities and Exposures (CVEs) 39, 242, 336, 371
+- Completely Automated Turing test to Humans Apart (CAPTCHA) 339, 452
+- compliance achieving 94
+- current, reviewing 96
+- plan, creating 95
+- requirement, aligning with cybersecurity policies 96
+- team, creating 96
+- comprehensive checklist 177
+- compromised passwords brute-force attacks 19
+- Computer-Aided Environment (CAINE) about 437
+- Computer Incident Response Center (CIRCL) 305
+- content management system (CMS) 336
+- continuous monitoring (CM) 381
+- Control flow guard (CFG) 181
+- controls 106
+- country regions 92
+- Cowrie 307
+- credential cracking 453
+- credential stuffing 453
+- critical systems identification 69
+- critical update 188
+- cryptodance 247
+- enforcing 91
+- distributing 89, 90
+- socializing 90, 91
+- updating 89
+- reference link 293
+- CVE vulnerabilities
+- cyber attack 237
+- access, gaining 238
+- access, maintaining 238
+- reconnaissance 237
+- tracks covering 238
+- tracks deleting 238
+- cybersecurity about 4
+- Enterprise Cybersecurity Maturity Model (ECM) 477
+- ISO 27001 standard 477
+- MITRE ATT&CK matrix 477
+- NIST framework 477
+- OWASP top 10 web application security risks 476
+- cyberattack, denial-of-service attack 9, 10
+- DNS attacks 11, 12
+- DNS cache poisoning 13, 14
+- DNS router attack 12
+- DNS tunneling 14, 15
+- domain, hijacking and redirection 134
+- malware 7, 8
+- man-in-the-middle attacks 9, 12
+- social engineering 8
+- types 6
+- teardrop attack 10
+- zero-day exploits 11
+- cybersecurity audit, types
+- code audits 103
+- data-handling audit 101
+- IAM audit 101
+- network audit 102
+- password compliance audits 104
+- physical access audit 102, 103
+- policy audit 101
+- systems audit 101
+- cybersecurity automation with Raspberry Pi 463
+- innovation 474
+- international validation 474
+- updated literature and content 474
+- validated and managed by experts 474
+- de-cyber threat or digital attack maps 472, 473
+- password-related tools 476
+- tools 475
+- cybersecurity hardware
+- creating, with IoT-enabled devices 300
+- Cybersecurity Maturity Model (CMM) advantages 109
+- applying 104
+- characteristics 105
+- goals 105
+- results, analyzing 107, 108
+- structure 106
+- Cybersecurity Maturity Model (CMM), structure
+- domains 106
+- maturity levels 106, 107
+- Cybersecurity & Infrastructure Security Agency (CISA) 447
+- cybersecurity policies about 84, 85, 122
+- compliance requirement aligning with 96
+- creating 84
+- design and management 471
+- cybersecurity procedures about 86
+- creating 62
+- design and management 471
+- cybersecurity risks assessing 62
+- identifying 61, 62
+- managing 60, 61
+- monitoring 65
+- responses 64, 65
+- cybersecurity risks, assessment qualitative analysis 63, 64
+- quantitative analysis 62, 63
+- cybersecurity systems improving 168
+- cybersecurity templates about 470
+- Business Continuity Plan (BCP) 470
+- Disaster Recovery Plan (DRP) 471
+- risk management 471
+- cybersecurity tools tools automating, with Python 456
+- web resources 475
+- cybersecurity triad about 4, 5
+- availability 6
+- confidentiality 5
+- integrity 5
+- cybersecurity vulnerabilities and threats 38
+
+## D
+
+- Damn Vulnerable Web Application (DWWA) about 42
+- installing, on Kali Linux 342-346
+- leveraging 342
+- SQL injection attack on 352-358
+- data at rest securing 199
+- data at rest securing 318
+- database engines, hardening references 326
+- database services hardening 325
+- Data Execution Prevention (DEP) 181
+- data exposure checking, with Google hacking (dorks) 339-341
+- data-handling audit 101
+- data in transit securing 318-320
+- data in use securing 320, 321
