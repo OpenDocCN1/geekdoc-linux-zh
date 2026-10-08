@@ -1,0 +1,7 @@
+# Configuration and administration 4
+
+Adapting a LINUX system to user-specific hardware and requirements, also known as configuration, involves a series of completely different aspects. In this chapter, we present the most important configuration alternatives for each major area not addressed in a separate section of this book.
+
+Many things can be configured by the system administrator for all users of the system as well as by each user individually. This option is a great advantage over single-user systems such as DOS or OS/2 where a configuration generally applies to the entire system, independently of whether other users of the computer will be affected or not. Who has not been annoyed more than once by misadjusted colours under Windows or absurdly disarranged icons under OS/2?
+
+However, before you begin with the configuration of your system, please read 11.5 of the Revision Control System and Chapter 5 on Emacs first, so that you will not only be able to implement the modifications but also have the opportunity to document changes made in a way which can be traced back. The possibility of easy tracing of changes is an advantage over DOS and Windows systems, where every program changes system-wide settings in the files CONFIG.SYS and AUTOEXEC.BAT, and in Windows' * .INI files. Do not throw away this possibility by making hasty changes before you learn more about the Revision Control System. Even if you don't want to use RCS you may want to keep some notes in a ChangeLog file.

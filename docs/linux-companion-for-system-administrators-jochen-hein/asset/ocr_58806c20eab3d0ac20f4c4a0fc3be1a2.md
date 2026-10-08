@@ -1,0 +1,9 @@
+# # LINUX – operating system of the future?
+
+World domination. Fast Linus Torvalds
+
+LINUX – in the narrow sense of the word - is 'merely' an operating system, meaning the part of a computer system's software that controls the hardware. The operating system is the system component that gives application software (such as word processing programs or news readers) access to the hardware facilities (such as printers, CD-ROM drives, and so on). Other operating systems which control widely used PC hardware are, for example, OS/2, Novell NetWare, SCO, and Windows NT or Windows 2000. DOS and Windows must also be considered as operating systems; however, since these systems allow application programs direct access to the hardware, there are reasonable doubts as to whether they should be put on the same level as the other systems mentioned above.
+
+In a wider sense of the word, LINUX stands for something more. Usually, LINUX means a system that offers a comprehensive collection of UNIX tools and various application programs; one would typically think of such a collection when talking about a LINUX distribution. Differently emphasized distributions are put together by various parties, as they are tailored to the requirements of a user or user group; their bandwidth from distributions that assemble only the commonly needed tools on a few floppy disks (for example XLINUX) to distributions of several hundred megabytes in size, which provide a complete development environment and a large number of 'free' application programs (for example the Debian distribution).
+
+These and other distributions are made available via ftp servers, but can also be obtained on other media (floppy disks, CD-ROMs, tapes). Given the extent of the distributions, buying a CD is probably a better idea than spending a lot of time (even a day or more) downloading the software via ftp or modem.

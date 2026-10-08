@@ -1,0 +1,313 @@
+
+# 558 INDEX
+
+- tbackup 225
+- tob 222-5
+- backup systems 17, 20-27
+- alias and options 203-4
+- choosing directories/files 211, 213
+- and configuration files 212
+- emergency diskettes 206
+- and file class 211
+- find command 266-7
+- full backups 213-14
+- incremental backups 213-14
+- and installed programs 213
+- and networks 210
+- RAID technology 18 207-8
+- restoring backup data 17, 206
+- strategies 211-14
+- and user data 212
+- and partition files 212-13
+- Gaaduer, Karsten 325
+- pathname command 217-2
+- shell 146, 147-8, 248-9
+- and see also programs
+- batch command 285, 286
+- bdb 177
+- Berkeley Internet Name Domain (BIND) 477, 479
+- bin directory 15, 19
+- binary files/programs 303
+- BIND (Berkeley Internet Name Domain) 477, 479
+- BIOS (Basic Input/Output System) 43-7
+- BIOS (Basic Input/Output System) emulator-350
+- configuration files 351-5
+- debbugging 355
+- diskette drives 359-60
+- error detection support 355
+- hard disk access 359-60
+- input devices 358
+- installation 350-1
+- key combinations 356
+- keyboard user 358
+- and memory 357-8
+- mouse driver 358
+- network access 360-4
+- output devices 359
+- permissions 355
+- ports 360
+- starting 356
+- usage 356-7
+- Bochs CPU emulator 369
+- boot directory 19-20
+- boot flag 46
+- boot loaders 46-63
+- chos 60-1
+- grub 48, 54-60
+- lilo 20, 47, 48-54, 79
+- loadlin 41, 62-7
+- parameters for 47
+- syslinux 47, 62-3
+- BOOTOFF program 354
+- BOOTON program 354
+- boot protocol 387, 503-8
+- bootpd program 504-5
+- bootstrapping 43
+- Borland integrated development environment 333
+- Bourne shell 145, 304
+- brace expression 311
+- branches 342, 345-6
+- break command 315
+- nbridges 380
+- broadcast addresses 387-8, 389
+- browsers 333
+- BSD systems 16, 118-20
+- buffers 154
+- C programming language 323
+- type types 378-81
+- dache directory 36
+- calculations in shell programs 311-112
+- Caldera, 462
+- canonical name (cname) 489
+- case branch 313-14
+- CD-ROM backup media 210-11
+- CD-ROM distributions 1
+- CD-Wr backup media 210-11
+- C (Common Desktop Environment) 182, 188, 195
+- CHAP (Cryptographic Handshake Authentication Protocol) 501, 514
+- character sets 117, 230-1, 235
+- converting 241-2
+- ISO-Latin character 224
+- sorting order 236, 301
+- and see also; National Language Support (NLS)
+- character strings 303
+- chat script 511-13
+- chos (Choose-OS) boot loader 60-1
+- Christians, Tom 145, 305
+- CIFS (Common Internet File System) 448
+- cname 489
+- command line 'too long' error 273-4
+- command substitution 311
+
+# INDEX 559
+
+- at 285-6
+- basename 271-2
+- batch 285, 286
+- break 315
+- crontab 286-9
+- dangerous commands 204-5
+- dirname 272
+- env 302
+- find 265-8
+- gettext 238-9
+- of fwwm 192-3
+- of GNU programs 328
+- of grub (Grub Unified Bootloader) 54-7
+- hardware configuration 81-2
+- kernel configuration 15-16, 78-80
+- kernel modules 371, 82-5
+- and networks 381-2
+- reconfiguring 81
+- grep 273
+- hostname 411
+- ident 339, 346
+- inasmod 83, 371
+- install 324-6
+- kernel command Line parameters, 47
+- locate 268-9
+- options 85
+- periodic execution of 286-9
+- ps 319
+- of lilo 49-52
+- of name servers 115, 479-82
+- of printing 116-22
+- of shared libraries 127-9
+- sysystem configuration 86-107, 139-3
+- rdiff 337-8
+- shutdown 74-5
+- starting automatically 284-9
+- startx 186-6
+- traceroute 523-4
+- uniz 301-2
+- until 315
+- updatedb 268-9
+- where2 270
+- which 270
+- while 315
+- of systems log 222-6
+- of tob package 223-4
+- user login 128-39
+- user-related 143-7
+- of Windows emulator 366-7
+- xfree86 21-2, 185-90
+- errors in networks 522-3
+- xargs 273, 274
+- ypcat 499
+- ymatch 499
+- pywych 500
+- control structures 312-18
+- copying directory trees 217-18
+- cpio program 219
+- crashes 17, 116, 205
+- Credential Grant 93
+- crontab command 286-9
+- Common Desktop Environment (CDE) 182, 188, 195
+- Common Internet File System (CIFS) 448
+- compilation
+- compressed files 275
+- compressed kernels 63-4
+- Concurrent Versions 334, 342, 347
+- Cryptographic Handshake Authentication (CHAP) 511, 514
+- csh 145, 147, 251, 305
+- currency 237-8
+- curses library 260
+- cut command 277
+- cvs (Concurrent Versions) 334, 342, 347
+- zeranski, Jörg 541
+- configuration 77-149
+- of BIOS emulator 351-5
+- with boot protocol 503-7
+- dangerous commands 204-5
+
+# INDEX 560
+
+- architecture-independent 31-2, 409
+- non-sharable data 17
+- sorting 236, 301
+- static data 16
+- user data 14, 35, 37
+- database-termcap 141
+- date and time 236
+- debugging 253, 355, 369
+- deleting files 204
+- deleting lines 301
+- device activation 382-5
+- device drivers 78, 82, 381
+- device files 201, 110
+- device support in networks 381-2
+- DHCP (Dhcp) Host Configuration 504, 507
+- dictionaries 277-80, 333
+- dig program 420
+- bin 15, 19
+- boot 19-20
+- etc 15, 21-2
+- home 22-3, 25, 88
+- lib 23, 36, 143
+- mnt 23
+- opt 24
+- proc 25
+- root 19, 25, 104
+- sbin 19, 25-6, 31
+- tmp 18, 26-7
+- user root 104
+- directory trees 107, 443
+- dired mode 172-4
+- dirname command 272
+- disk errors 207-8
+- diskette drives 107, 353-4, 659
+- debian 1, 8-9
+- distributions of Linux 3-10
+- documentation 3, 6, 78
+- Emac tutorial 153-4, 159-60
+- installation routines 3-4, 5, 7-9
+- Linux Document Protocol (LDP)
+- man/directory 20, 33, 36, 142, 258
+- online 32-3
+- texinfo system 142
+- domain codes 403, 411
+- Berkeley Internet Name 477, 479
+- Domain Name Service 414-15, 197, 479
+- Fully Qualified Domain Name 413
+- see name servers
+- DOS file systems 107-8
+- DOS partitions 353-4
+- downloading BIOS emulator 350
+- drive drive letters 107, 353-4, 366
+- dntree program 300
+- dwtm window manager 195
+- dump program 220-1
+- dwips program 259
+- dynamic links 302
+- ediff mode 279-80
+- Emacs clones 151, 153, 251
+- vi clones 251, 331, 537-40
+- joe 149, 252-3
+- pico 253
+- sed 296-300
+- EEPROMS 43-4
+- elisp 152, 161-4
+- elm mail reader 254
+- emacs Editor, 149, 151-80
+- abbrev-mode 178-9
+- abbreviation tables 332
+- ange-ftp 174-5
+- auto-fill-mode 177-8
+- auto-save function 158
+- automatic indentation 331
+- bbb 177
+- call/command line options 560
+- configuration 148-9, 151, 160-8
+- dired mode 272-4
+- ediff 279-80
+- emerge 279-80
+- fundamental-mode 171
+- GNU Emacs 151, 152, 168
+- gnus 277, 256
+- information sources 179-80
+- keyboard combinations 157-9
+- keyboard mapping 168-70
+- as a mail reader 255-6
+- menus 155-6
+- mode line 155
+- modes 156, 170-9
+- origins 151
+- outline-mode 175-6
+- programming features of 292, 331-3
+- psagl 177
+- regions 154
+- remote computer file processing 174-5
+- start-up 156-7
+- text-mode 142
+- versions of 152
+- file systems 205-6
+- etags program 332
+- Ethernet protocol 363, 378, 383, 529
+- Extended-2 file system 205
+- Fait, 67
+- FHS see File System Standard (FHS)
+- field separators 291-2
+- file locks 341-2
+- file management 15, 264-7
+- identifying file types 270-1
+- is file path 497-8
+- path names 272
+- remote computer file transfer 432, 437-9, 441-2
+- renaming files 273
+- see Also Version Control;
+- search patterns
+- file name extension 307-9
+- file names 246-7, 271-2, 273, 318
+- file program 270-1
+- file System Hierarchy Standard (FHS)
+- on BSD systems 16
+- further development 40
+- swap files/partitions 18
+- autofs 450-1
+- automounter 111, 448-50
+- Common Internal File System (CIFS) 448
+- configuration 107-16
+- DOS file systems 107-8
+- Extended-2 22, 205
+- full file systems 116
+- journaled file systems 116

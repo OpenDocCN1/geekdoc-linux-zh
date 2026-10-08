@@ -1,0 +1,140 @@
+
+# LIST OF IMPORTANT RFCs
+
+- [rfc1094] NFS: Network File System Protocol specification, Sun Microsystems, Inc., March 1989.
+- [rfc1112] Host extensions for IP multicasting, S. Deering, August 1989.
+- [rfc1122] Requirements for Internet hosts – communication layers, R. Braden, 10/01/1989.
+- [rfc1123] Requirements for Internet hosts – application and support, R. Braden, 10/01/1989.
+- [rfc1144] Compressing TCP/IP headers for low-speed serial links, V. Jacobson, February 1990.
+- [rfc1157] Simple Network Management Protocol (SNMP), J. Case, M. Schoff, May 1990.
+- [rfc1178] Choosing a name for your computer, D. Libes, August 1990.
+- [rfc1183] New DNS definitions, C. Everhart, L. Mamakos, October 1990.
+- [rfc1258] BSD login, B. Kantor, September 1991.
+- [rfc1282] BSD login, B. Kantor, December 1991.
+- [rfc1301] Multicast Transport Protocol, S. Armstrong, K. Marzullo, February 1992.
+- [rfc1305] Network Time Protocol (v3), D. Mills, 04/09/1992.
+- [rfc1311] Introduction to RFC Notes, J. Postel, March 1992.
+- [rfc1340] ASSIGNED NUMBERS, J. Reynolds, J. Postel, February 1993.
+- [rfc1413] Identification Protocol, M. Johns, August 1993.
+- [rfc1436] The Internet Protocol (distributed search and retrieval), F. Ankaria, P. Lindner, D. Torrey, 03/18/1993.
+- [rfc1441] Introduction to version 2 of the Internet Network Management Framework, J. Case, K. McCilly, S. Wallach, April 1993.
+- [rfc1442] Structure of Management Information for version 2 of the Simple Network Management Protocol (SNMPv2), J. Case, K. McCilly, S. Wallach, April 1993.
+- [rfc1443] Textual Conventions for version 2 of the Simple Network Management Protocol (SNMPv2), J. Case, K. McCilly, S. Wallach, April 1993.
+- [rfc1444] Conformance Statements for version 2 of the Simple Network Management Protocol (SNMPv2), J. Case, K. McCilly, S. Wallach, April 1993.
+- [rfc1445] Administrative Model for version 2 of the Simple Network Management Protocol (SNMPv2), J. Galvin, K. McCilly, April 1993.
+- [rfc1446] Security Protocols for version 2 of the Simple Network Management Protocol (SNMPv2), J. Galvin, K. McCilly, April 1993.
+- [rfc1447] Party MIB for version 2 of the Simple Network Management Protocol (SNMPv2), J. Galvin, K. McCilly, April 1993.
+- [rfc1448] Protocol Operations for version 2 of the Simple Network Management Protocol (SNMPv2), J. Case, K. McCilly, S. Wallach, April 1993.
+- [rfc1450] Management Information Base for version 2 of the Simple Network Management Protocol (SNMPv2), J. Case, K. McCilly, S. Wallach, April 1993.
+- [rfc1458] Requirements for Multicast Protocols, R. Braudes, S. Zabele, May 1993.
+- [rfc1470] RFC on a Network Tool Catalog: Tools for Monitoring and Debugging TCP/IP Internets and Interconnected Devices, R. Enger, J. Reynolds, 06/25/1993.
+- [rfc1497] ROOT Vendor Information Extensions, J. Reynolds, August 1993.
+- [rfc1519] Classless Inter-Domain Routing (CIDR): an Address Assignment and Aggregation Strategy, V. Fuller, T. Li, J. Yu, K. Varadhanan, 09/24/1993.
+- [rfc1518] An Architecture for IP Address Allocation with CIDR, Y. Rekh, T. Li, 09/24/1993.
+- [rfc1523] The text-enriched MIME Content-type N. Borenstein, September 1993.
+- [rfc1524] A User Agent Configuration Mechanism For Multimedia Mail Format Information, N. Borestein, September 1993.
+- [rfc1531] Dynamic Host Configuration Protocol, R. Droms, October 1993.
+- [rfc1536] Common DNS Implementation Errors and Suggested Fixes, A. Kumar, J. Postel, C. Neuman, P. Danzig, S. Miller, October 1993.
+- [rfc1542] Clarifications and Extensions for the Bootstrap Protocol, W. Wimer, October 1993.
+- [rfc1602] Internet Engineering Steering Group. Revision 2, Internet Board, March 1994.
+- [rfc1627] Network Architecture Harmful (Some Practices Shouldn't be Codified), E. Fair, D. Crocker, July 1994, obsolete by [rfc1918].
+- [rfc1630] Universal Resource Identifiers in WWW: A Unifying Syntax for Names and Objects on the Wide Web, T. Berners-Lee, 06/09/1994.
+- [rfc1635] How to Use Anonymous FTP, P. Deutsch, A. Marine, 05/25/1994.
+- [rfc1661] The Point-to-Point Protocol (PPP), W. Simpson, July 1994.
+- [rfc1739] A Primer On Internet and TCP/IP Tools, G. Kessler, S. Shepard, December 1994.
+- [rfc1769] Simple Network Time Protocol (SNTP), D. Mills, 03/17/1995.
+- [rfc1866] Hypertext Markup Language – 2.0, T. Berners-Lee, D. Connolly, 11/03/1995.
+- [rfc1912] Common DNS Operational Configuration Errors, D. Barr, February 1996.
+- [rfc1918] Address Allocation for Private Internets, Y. Rekter, B. Moskowitz, D. Groot, E. Lear, February 1996.
+- [rfc1983] Internet Users' Glossary, G. Malkin, August 1996.
+- [rfc2007] Catalogue of Network Training Materials, J. Foster, M. Isaacs, M. Prior, October 1996.
+- [rfc2015] MIME Security with Good Privacy (PGP), M. Elkins, October 1996.
+- [rfc2045] Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, N. Freed, N. Borenstein, November 1996.
+- [rfc2046] Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, N. Freed, N. Borenstein, November 1996.
+- [rfc2047] MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text, K. Moore, November 1996.
+- [rfc2048] Multipurpose Internet Mail Extension (MIME) Part Four: Registration Procedures, N. Freed, J. Kllens, J. Postel, November 1996.
+- [rfc2049] Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples, N. Freed, N. Borenstein, November 1996.
+- [rfc2060] INTERNET MESSAGE ACCESS PROTOCOL – 4 rev1, M. Crispin, December 1996.
+- [rfc2068] Hypertext Transfer Protocol – HTTP/1.1, R. Fielding, J. Gettysys, J. Mogul, H. Frystyk, T. Berners-Lee, January 1997.
+- [rfc2083] PNG (Portable Network Graphics) Specification, T. Boutell, January 1997.
+- [rfc2100] The Naming of Hosts, J. Ashworth, April 1997.
+- [rfc2131] Dynamic Host Configuration Protocol, R. Drom, March 1997.
+- [rfc2132] DHCP Options and BOOTP Vendor Extensions, S. Alexander, R. Drom, March 1997.
+- [rfc2151] A Primer on Internet and TCP/IP Tools and Utilities, G. Kessler, S. Shepard, June 1997.
+- [rfc2182] Selection and Operation of Secondary DNS Servers, R. Elz, R. Bush, S. Bradner, M. Patton, July 1997.
+- [rfc2200] INTERNET OFFICIAL PROTOCOL STANDARDS, J. Postel, June 1997.
+
+# Index
+
+- A paper formats 257, 259-60
+- A records 488
+- [abbrev-mode 178-9
+- abbreviation tables 332
+- accented characters in file names 246-7
+- access control see permissions
+- account directory 35
+- account management 93-4
+- Address Resolution Protocol (ARP) 388, 394-5
+- adduser program 290
+- of anonymous FTP servers 457-9
+- network administration 521-36
+- afio program 219-20
+- AfterStep 195
+- agetty program 130-1
+- Alo, Ahmed V. 290
+- aliases 201-4, 413-14
+- Allen, Joseph H. 149
+- allberger, Werner 68
+- amanda system 222
+- anacron program 289
+- age-ftp mode 174-5
+- anonymous FTP servers 453-9
+- Anvin, H. Peter 62, 121
+- application packages see software
+- applications
+- architecture-independent data 31-2, 409
+- archives 215-18
+- see also backup systems
+- arithmetic operations 293
+- ARP (Address Resolution Protocol) 388, 394-5
+- ASCII character set 230-1
+- ashb shell 250
+- associative arrays 294-5
+- at command 285-6
+- Athena Widgets interface 182
+- authentication of Internet connection
+- automounter 331, 514-15
+- auto-fill-mode 177-8
+- auto-save function 158
+- aofs file system 450-1
+- automatic indentation 331
+- automounter 111, 448-50
+- AWK programming language 290-6
+- arithmetic operations 293
+- associative arrays 294-and Emacs editors 292
+- field servers 291-2
+- function blocks 290,
+- internal functions 293
+- internal variables 292-3
+- output commands 293
+- regular expressions 290
+- awk tool 274
+- backup media 208-11
+- CD-ROM 210-11
+- CD-RW 210-11
+- floppy disks 208-9
+- loptical disks 211
+- number of media sets 214
+- QIC-ode streamers 209
+- removable disks 211
+- WORMS 211
+- backup programs 214-26
+- afio 219-20
+- amanda 222
+- cpio 219
+- ndump 220-1
+- high-level 221-6
+- xBackup 225-6
+- Linux Linux Backup Utility 221
+- low-level 214-21
+- tar: 215-18
