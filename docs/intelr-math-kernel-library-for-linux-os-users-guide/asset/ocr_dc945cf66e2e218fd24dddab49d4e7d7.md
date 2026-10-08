@@ -1,0 +1,3 @@
+# Directory Structure in Detail
+
+The information in the tables below shows a detailed structure of the Intel MKL architecture-specific directories. For the list of additional interface libraries that can be generated in these directories using makefiles in the interfaces directory, see Using Language-Specific Interfaces with Intel® MKL. For the contents of subdirectories in the doc directory, see Contents of the Documentation Directory. benchmarks directory, see LINPACK and MP LINPACK Benchmarks. Note that in MKL 10.2, libraries that provided link line compatibility with the Intel MKL versions 9.x and were removed.
