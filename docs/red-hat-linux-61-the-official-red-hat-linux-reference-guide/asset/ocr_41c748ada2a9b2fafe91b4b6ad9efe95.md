@@ -1,0 +1,1 @@
+Various variables in /proc/sys/dev/cdrom, as autoclose and checkmedia, can be used to control the system's CD-ROM. Use the echo command to enable or disable these features.
