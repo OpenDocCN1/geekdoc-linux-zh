@@ -1,0 +1,3 @@
+Installing Your Target Systems Throughout this book, we will focus on two target systems, Metasplioitable 2, a purposely vulnerable Linux system and Windows 7. To download and install Metasplioitable 2, click go to [https://sourceforge.net/projects/metasplioitable/](https://sourceforge.net/projects/metasplioitable/) . Once it has been downloaded it, simply follow the instructions above for Kali to install your Metasplioitable 2. The login for Metasplioitable 2 is username: *msfadmin* and password: *msfadmin 44 | Page*
+
+![](bbox=[0.13, 0.33, 0.58, 0.65])

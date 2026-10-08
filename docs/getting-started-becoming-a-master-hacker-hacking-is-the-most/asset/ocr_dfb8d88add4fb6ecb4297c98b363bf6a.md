@@ -1,0 +1,9 @@
+hardened. This field has grown rapidly over the last decade and continues to grow.
+
+**Bug Bounty Hunting** One of the newest areas of hacking is known as bug bounty hunting.
+
+**Corporations, organizations, and websites are now offering rewards (bounties) to hackers who can find vulnerabilities (bugs) in their software before the general public becomes aware of them. Some of these bounties are as large as $1** million. Many of the largest organizations in the United States now offer bug bounties, including Microsoft, Google, Facebook and the U.S. Department of Defense. In 2019, it was announced that an Argentinian teenager, Santiago Lopez, was the first bug bounty hunter to earn $1 million.
+
+**Zero-Day Developer** Probably at the top of the hacker pyramid are the zero-
+
+Zero-day exploits are exploits or day developers Some hackers develop zero-days and hacks that have never seen before then sell them to cyber crime gangs or national hence the information security espionage agencies such as NSA (the U.S. National industry has had zero days to respond Security Administration) or GCHQ (British’s with defenses. Zero-days are the Government Communications Headquarters). These “Holy Grail” of hackers zero-day exploits can sell for millions of dollars as they enable national espionage agencies to spy on their adversaries and their own citizens. There are even companies who specialize in developing and selling zero-days such as Germany’s Gamma Group, France’s Zupen, IsraeI’s NSO Group, or Italy’s Hacking Team. In addition, the EternalBlue exploit that was stolen from the NSA in 2017 and became a critical element of such ransomware as WannaCry and Petya (both

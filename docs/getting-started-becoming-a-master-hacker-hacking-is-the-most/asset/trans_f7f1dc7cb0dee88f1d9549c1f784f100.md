@@ -1,0 +1,84 @@
+
+
+值得注意的是，大多数在线数据库已不再容易受到这种简单攻击的影响，但仍有一些数据库存在此风险。有关更高级的 SQL 注入技术，例如盲注 SQL 注入，请参阅我的下一本书《黑客入门：成为大师级黑客 2》。
+
+WordPress 是全球最流行的用于开发网站的 CMS。我们的工具 wpscan 在识别这些站点的漏洞、枚举用户以及暴力破解密码方面表现出色。
+
+## 练习
+
+- 1. 使用 Google 黑客技术查找可能存在 SQL 注入漏洞的网站。
+- 2. 使用 OWASP-ZAP 确定您在上一步骤中找到的网站是否容易受到 SQL 注入攻击。
+- 3. 使用 Google 黑客技术查找 WordPress 网站。
+- 4. 使用 Google 黑客技术查找 WordPress 备份中的信息泄露。
+- 5. 使用 wpscan 搜索您在上一步骤中识别的 WordPress 网站中的漏洞。
+- 6. 当您在站点中发现漏洞时，通过搜索 wpvulnsdb.com 或 packetstormsecurity.com 获取更多信息以及可能的利用代码。
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_459_0.png)
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_459_1.png)
+
+## 第 13 章
+
+### 规避杀毒软件和 Shellcode 检测
+
+*大师级 OTW*
+
+当我们像在第 9 章中使用 Metasploit 那样利用目标时，你很可能会遇到目标系统上正在运行的防病毒程序。几乎没有目标系统没有安装防病毒应用。因此，我们需要研究如何规避此类保护。
+
+通常，避免 AV 检测的最佳方法是使用内存损坏漏洞利用，将载荷直接加载到内存中，而从不写入硬盘。这就是我们使用永恒之蓝（EternBlue）漏洞利用时所做的。不幸的是，并非每次漏洞利用都能做到这一点。
+
+在过去，第 9 章中提到的 Metasploit 的 msfvenom 模块能够创建可规避 AV 检测的载荷，但 AV 开发人员并没有坐以待毙。这些软件公司很快开发了检测几乎任何由 msfvenom 开发的载荷的技术，但并非所有载荷都能被检测（最近，某个国家实施的某些高级持续性威胁（APT）恶意软件通过 shikata-ga-nai 编码器有效地规避了 AV 检测）。这意味着，为了合理地成功规避防病毒软件的检测，我们需要借助其他软件来帮助我们重新编码载荷。
+
+### Metasploit 的新规避模块
+
+认识到 msfvenom 在规避 AV 检测方面的局限性后，Metasploit 的开发人员启动了一个新项目，以帮助规避防病毒软件。当 Rapid7 在 2018 年 10 月发布 Metasploit 5 时，其中包含两个新的规避模块。对于 Metasploit 来说，这是一个突破，因为已经有很长时间没有新的模块类型出现了。
+
+新模块发布时，它们在规避 Windows 10 中的 Windows Defender 方面非常有效。不幸的是，在攻击者和防御者之间持续进行的博弈中，微软人员很快添加了对这些由新模块开发的载荷的检测。尽管如此，我们必须感谢 Rapid7 在这个关键问题上投入了时间和精力（有关 Metasploit 新规避模块的更多信息，请阅读 [Metasploit Basics for Hackers Part 24: The New Evasion Modules in Metasploit 5](https://www.hackers-arise.com/post/2019/03/27/metasploit-basics-for-hackers-part-24-the-new-evasion-modules-in-metasploit-5)）。
+
+### 防病毒软件如何工作
+
+在我们开始制作不可检测的载荷之前，我们需要了解防病毒软件的工作原理。大多数 AV 软件可以通过将已知恶意软件的签名（代码片段和其他特征）与进入系统的软件进行比较来检测恶意代码（有关防病毒软件工作原理的更多信息，请访问 [Evading AV: Anatomy of a ClamAV](https://www.hackers-arise.com/single-post/2016-10-28/Evading-AV-Anatomy-of-a-ClamAV)）。虽然一些软件开发商已开始使用启发式技术（检测已知的恶意行为），但由于需要大量的 CPU 周期来纳入这种方法，这在 AV 应用中尚未普及。使用启发式技术的结果是扫描速度变慢和系统滞后。
+
+值得注意的是，并非所有 AV 软件都是一样的。并非每个 AV 应用都能捕获所有已知恶意软件。VirusBulletin 是一家独立的 AV 软件测试实验室。根据他们的结果，商业 AV 软件能够检测约 60-98% 的已知恶意软件。
+
+大多数主要 AV 软件开发商的结果都集中在 95% 左右。即使如此，95% 的检测率意味着每 20 个已知恶意软件中就有 1 个会未被这些应用检测到。当然，零日漏洞——定义上是未知的恶意软件——很可能会绕过**所有**这些应用。
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_462_0.png)
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_462_1.png)
+
+这一观点至关重要，因为要攻破目标，你并不一定需要对**所有** AV 应用都不可检测。你只需要不被目标使用的 AV 软件检测到。如果你知道目标使用的 AV 软件，你可以专注于使你的载荷不被该特定应用检测到（参考我关于[如何使用 Recon-ng 确定目标 AV 软件](https://www.hackers-arise.com/single-post/2016-05-23/How-to-Use-Reconng-to-Determine-the-Targets-AV-SoftWare-1/)的文章，了解如何使用 recon-ng 确定目标的 AV 软件）。
+
+### 制作不可检测载荷的工具
+
+在可用于创建能够逃避（AV）软件检测的载荷/shellcode 的工具中，例如 veilevasion ([https://www.hackers-arise.com/evading-av-with-veilevasion](https://www.hackers-arise.com/evading-av-with-veilevasion)) 或 shellter ([https://www.hackers-arise.com/evading-av-with-shellter](https://www.hackers-arise.com/evading-av-with-shellter))，OWASP-ZSC（**Z**ero-day **S**hell**C**ode，零日 Shellcode）可能是最通用的。OWASP-ZSC 是 OWASP 项目（那个享有盛名的 Open Web Application Security 项目，拥有 OWASP Top 10 和 OWASP-ZAP 等成果的一部分）的一个项目，它仍在继续开发，但具有一些此类类别中某些其他应用所没有的有用功能。在本章中，我将尝试演示 OWASP-ZSC 的一些最重要功能，以及如何使用它们创建 shellcode/载荷，使其不被目标机器上的防病毒软件检测到。
+
+### 什么是 Shellcode？
+
+Shellcode 只是一组指令（代码），当执行到正在运行的应用程序（例如 SMB，就像 EternBlue 那样）或其他易受攻击的服务时，它会赋予攻击者对系统的控制权。这种代码是用汇编语言编写的（有关汇编语言的更多信息，请参见 [Reverse Engineering Malware Part 2: Assembler Language Basics](https://www.hackers-arise.com/single-post/2017-02-27/Reverse-Engineering-Malware-Part-2-Assembler-Language-Basics)）。
+
+当执行基于堆栈或堆的缓冲区溢出时，shellcode 随后被注入，通常通过命令 shell 等方式赋予攻击者控制目标系统的能力（因此得名）。
+
+每当有新的 shellcode 可用时，防病毒软件开发人员（如果他们希望在这个行业中保持相关性的话）就有责任开发签名或其他方法来检测恶意内容。作为黑客/渗透测试人员，我们需要不断更改我们的 shellcode 以规避防病毒软件，保持隐蔽性和有效性。OWASP-ZSC 是我们可以用来创建、编码和混淆 shellcode 的另一个工具，以使其不被目标机器上的防病毒软件检测到。
+
+```bash
+root@kali-2019:~# git clone https://github.com/zscproject/OWASP-ZSC
+Cloning into 'OWASP-ZSC'...
+remote: Enumerating objects: 2395, done.
+remote: Total 2395 (delta 0), reused 0 (delta 0), pack-reused 2395
+Receiving objects: 100% (2395/2395), 3.29 MiB | 7.30 MiB/s, done.
+Resolving deltas: 100% (1553/1553), done.
+
+Building Commandline
+Copying Files
+
+Now you can remove this folder
+files copied in /usr/share/owasp_zsc.
+to run zcr shellcoder please use "zsc" command line
+
+| Visit https://www.owasp.org/index.php/OWASP_ZSC_Tool_Project --- |
+root@kali-2019:~/OWASP-ZSC#
+```
+
+让我们看看如何使用 OWASP-ZSC 来构建、编码和混淆我们的 shellcode。
+
+### 下载和安装 OWASP-ZSC
+

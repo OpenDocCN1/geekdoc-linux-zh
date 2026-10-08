@@ -1,0 +1,126 @@
+
+
+恭喜！你已准备好踏上一段“千里之行”的旅程。请对自己保持耐心，你不可能一夜之间就成为黑客大师，但你已经在这段旅程中迈出了至关重要的第一步。
+
+# 5
+
+## 被动侦察
+
+***“仔细且专注地”倾听你的敌人；他们会告诉你击败他们所需的一切信息*** **《黑客大师》**
+
+**许多踏上成为黑客大师之路的人**往往低估了信息收集或侦察的必要性。这些新手（我并非用这个词来贬低，而是作为一种描述。我们所有人最初都是新手）急于直接攻击目标系统。而黑客大师明白，他们对目标了解得越多，成功的可能性就越大。正如我在第 3 章关于“黑客流程”中提到的，侦察工作可能占据整个项目时间的 90%，在某些情况下甚至可能耗时数月。
+
+本章将重点讨论如何从公开可用的来源收集关于目标的信息。这些技术通常被称为“被动侦察”，因为黑客在不与目标进行交互的情况下收集信息。有些人也将其称为开源情报（OSINT）。所有信息均来自已收集关于目标信息的第三方来源。
+
+你在这一阶段收集的信息取决于目标。如果目标是网站，你希望尽可能了解该网站背后的技术。如果目标是域名，你希望尽可能了解该域名的情况。如果目标是一个人，你希望尽可能多地了解此人的信息。
+
+由于不可能包含所有的被动侦察技术，我们将仅在此列举其中几种：
+- 1. Google 黑客攻击
+- 2. Netcraft
+- 3. Shodan
+- 4. DNS
+- 5. p0F
+
+如需获取更多被动侦察技术，请访问 www.hackers-arise.com/osint。
+
+### 黑客攻击 Google
+
+众所周知，Google 运营着地球上使用最广泛的互联网搜索引擎。Google 爬取几乎每个网站中的每一个网页，并构建了一个包含其收集的所有信息的庞大数据库。大多数人随后使用 Google 的数据库，通过**关键词**搜索与其查询主题相关的文章。然后，Google 根据其算法（PageRank 算法，以 Google 联合创始人之一 Larry Page 命名）检索最相关的网站，该算法会对文章进行优先级排序。
+
+很少有人知道的是，Google 拥有特定的关键词和操作符，可以帮助你从这个非凡的数据库中提取精确信息。作为黑客，Google 数据库可能提供有关潜在目标的信息，这些信息可能极具价值，甚至包括密码。
+
+让我们来看一下其中一些关键词及其功能。
+
+**Google 黑客攻击关键词** 请注意，**Google 的关键词需要在关键词和搜索词之间加一个冒号(:)**，例如 *intitle:hackers-arise*。
+
+虽然远非详尽无遗，但以下是一些使用更广泛的 Google 关键词：
+
+**allinanchor**
+如果你使用 allinanchor 关键词，Google 会将你的搜索限制在锚点（anchor）中包含你寻找的**所有**术语的网页上。
+
+**allintext**
+如果你使用 allintext 关键词，Google 会将你的搜索限制在页面文本中包含你指定的**所有**搜索术语的页面上。
+
+**allintitle**
+如果你使用 allintitle 关键词，Google 会将你的搜索限制在页面标题中包含你指定的**所有**搜索术语的页面上。
+
+**allinurl**
+如果你使用 allinurl 关键词，Google 会将你的搜索限制在页面 URL 中包含你指定的**所有**搜索术语的页面上。
+
+**filetype**
+如果你使用 filetype 关键词，Google 会将你的搜索限制在拥有你指定文件类型的页面上。例如，要搜索 Adobe PDF 文件，你可以使用 `filetype:pdf`。
+
+**inanchor**
+如果你使用 inanchor 关键词，Google 会将你的搜索限制在页面锚点中包含你指定搜索术语的页面上。
+
+**intext**
+如果你使用 intext 关键词，Google 会将你的搜索限制在页面文本中包含你指定搜索术语的页面上。
+
+**intitle**
+如果你使用 intitle 关键词，Google 会将你的搜索限制在页面标题中包含你指定搜索术语的页面上。
+
+**inurl**
+如果你使用 inurl 关键词，Google 会将你的搜索限制在页面 URL 中包含你指定搜索术语的页面上。
+
+**link**
+当你使用 link 关键词后跟 URL 时，Google 会显示所有链接回指定 URL 的网站。
+
+**site**
+如果你使用 site 关键词，Google 会将你的搜索限制在你指定的网站或域名上。
+
+### Google 黑客攻击示例
+
+让我们看看一些示例，了解如何使用 Google 黑客攻击技术查找相关的网站和文件。
+
+你知道，许多公司将重要的财务和其他信息存储在 Excel 文件中。我们可以使用一个简单的 Google 黑客攻击技巧来查找 Excel 文件类型，“.xls”或“.xlsx”。
+
+```
+filetype:xls
+```
+
+我们可以更有选择性地行动，结合 Google 关键词，在政府网站（通过使用关键词 **site** 和顶级域名 **.gov**）中寻找 URL 中包含“contact”（联系）一词的 Excel 文件。这将产生包含政府机构联系人列表的网页，对于社会工程学来说可能是一个潜在的宝库（有关“社会工程学”，请参阅第 17 章）。
+
+```
+filetype:xls site:.gov inurl:contact
+```
+
+**搜索结果示例：**
+
+- Web
+- Images
+- Videos
+- Maps
+- Books
+- More
+- Search tools
+
+约 377 个结果（0.27 秒）
+
+1. **[XL9] HRD Contact - Mass.Gov**
+   www.mass.gov/anf/docs/hrld/modules/hrld-contact.xls
+   > Massachusetts > A, B, C, 1, Telephone: 2, 3, (617) 727-3555 (HRD Main Office), 4, 1-800-392-6178 (Toll Free Number), 5, (617) 878-9762 (TTY), 6, 7, Fax Number: View unit Fax ...
+
+2. **[XL9] 2015 Agency Contact Directory - Oregon.gov**
+   www.oregon.gov/...2015%20Agency%20Contact%20Directory...
+   > Oregon > A, B, C, D, E, F, G, 1, Agency, Name, E-mail Address, Title, Phone, Address, City/ State/Zip, 2, Accountancy, State Board of, Prittoni, Martin ...
+
+3. **[XL8] District Preschool Contact.xls**
+   education.ky.gov/educational/pre/.../District%20Preschool%20Contact...
+   > A, B, C, D, E, F, G, H, I, J, K, 1, DISTRICT, RTC, Preschool Coordinator Name, Street Address, City, Zip Code, Email Address, Phone Number, Fax.
+
+4. **[XL5] H1N1 Supplemental Contact Follow-up Form - State of ...**
+   www.cdph.ca.gov/.../Supplement...
+   > California Department of Public Health > A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, 1, Total number of household, intimate and daycare/childcare contacts since the case's first day of symptom onset ...
+
+5. **[XL5] National School Lunch Program Public Contact List**
+   www.doe.in.gov/sites/default/files/.../nslp-public-contact-list.xls
+   > Indiana > A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, 1, TYPE, CONO, CONA, CDPB, NAME, PUBPRIV, SALU, FIRSTNME, LASTNME, TITLE, ADDRESSEE, ADDR1 ...
+
+6. **[XL5] CACFP Public Contact List - Indiana Department of Educ...**
+   www.doe.in.gov/sites/default/files/.../cacfp-public-contact-list.xls
+   > Indiana > A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, 1, TYPE, CONO, CONA, SPONSORBR, SPONSORNME, PUBPRIV, SALU, FIRSTNME, LASTNME, TITLE ...
+
+7. **[XL5] Contact List.xls**
+   ftp://ftp.cdc.gov/.../...
+   > United States Centers for Disease Control and Prevention > A, B, C, D, E, F, G, H, I, J, K, L, 1, Report of Verified Case of Tuberculosis Training Contact List of Participants, Observers, and Facility <Insert Date>, 2, Course ...
+
