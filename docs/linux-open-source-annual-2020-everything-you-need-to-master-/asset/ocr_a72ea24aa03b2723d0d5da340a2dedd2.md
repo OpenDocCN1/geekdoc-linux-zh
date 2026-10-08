@@ -1,0 +1,11 @@
+# # BEWARE OF THE RANSOMWARE
+
+**Jonni Bidwell** knows how not to do a lot of things, including how not to pay ransoms and how not to be fooled by social engineering scams...
+
+![](bbox=[0.0, 0.32, 0.99, 0.75])
+
+We’re still patiently waiting for the year of the **Linux** desktop, but one sign that Linux has become **mainstream** is that it is now actively targeted by malware pushers. Perhaps not to the same extent as Windows, and perhaps those miscreants are more interested in hijacking servers than desktops, but peddling the old “Linux doesn’t get viruses” line does not make for credible journalism. *(don’t use the J word!–Ed)*
+
+Linux servers can be compromised all the time. It’s a little too easy for your run-of-the-mill script kiddie to find their favourite exploit in Metasploit, find some vulnerable servers via **shodan.io** and create havoc. Attacking desktop Linux is a little more delicate, but that’s not to say it doesn’t happen. Rogue websites may serve drive-by downloads, bona fide websites may get hacked or a long-standing bug in the kernel may be discovered. All of which might spell the end for your data.
+
+A much greater threat, however, is social engineering. This is pretty much operating system agnostic – it relies on weaknesses in human nature rather than in software – so there’ll be few tips that will help you even if you use some other OS. A well-crafted email can trick a weary mark into opening the wrong kind of file, disclosing their password (or other personal information) or even wiring money to a stranger. Some of these scams are easy to spot, but others are not. Over the last five years, cyber-criminals (who promise not to use this prefix too much) have cottoned on to the fact that people care about their files, so a popular MO is to encrypt them and hold them to ransom. Victims are ‘invited’ to pay, usually by cryptocurrency, for a decryption key, but often this is never provided. Sometimes ransomware is ill thought-out, and boffins can reverse-engineer whatever encryption was used and provide free decryption tools. But you shouldn’t count on this. Instead heed our guide – be strong, be vigilant and behave.

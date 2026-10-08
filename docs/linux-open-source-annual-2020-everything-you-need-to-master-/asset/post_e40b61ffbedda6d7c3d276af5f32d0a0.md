@@ -1,0 +1,115 @@
+
+## Get Docking
+
+Docker Compose isn't shipped via the repo we added earlier, so grab it straight from GitHub:
+
+```
+curl -L https://github.com/docker/compose/releases/download/$(curl -Ls https://servercow.de/docker-compose/latest.php)/docker-compose-$(uname -s)-$(uname -m) > docker-compose && sudo mv docker-compose /usr/local/bin/ && sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Alternatively, if you don't like all that dollar sign wobble just visit https://github.com/docker/compose/releases and grab whatever is the latest release. Then move the binary to /usr/local/. Now we can almost clone the mailcow-dockerized git repo, which we'll put in the /opt directory. This needs to be done as root (we'll prefix commands run as root with sudo $), so run:
+
+```
+sudo -i
+cd /opt
+git clone https://github.com/mailcow/mailcow-dockerized
+```
+
+Then we must check the output of umask, it should be 0022 (so our files can be read by regular users). If it's not then make matters into your own hands with `umask 0022`. Now we can clone the repo with:
+
+![](img/7a0a282248f9658f0c87e55744c797b6_76_0.png)
+
+And then we begin the configuration:
+
+```
+cd mailcow-dockerized
+./generate_config.sh
+```
+
+You'll be asked for the domain name (FQDN) of your mail server and your timezone. If you just want to experiment, you can make up a domain and add it to your hosts file. For example, we used mail.lxf.mail.net and changed the 127.0.0.1 line in /etc/hosts to:
+
+```
+127.0.0.1 localhost mail.lxf.mail.net
+```
+
+Now peruse the configuration file with:
+
+```
+nano mailcow.conf
+
+# If we're just playing with a made-up hostname, you'll want to set
+SKIP_LETS_ENCRYPT=y
+```
+
+otherwise the set-up process will try and obtain a certificate for a non-existent domain, which will fail miserably. Now we grab the manifold images that constitute Mailcow-dockerized (which will take a couple of minutes even on a fast machine), and bring them up:
+
+```
+docker-compose pull
+docker-compose up -d
+```
+
+> Holy mailcow Batman, it works!
+
+Log in with the default credentials, then change them as quick as you can.
+
+### Getting Docker
+
+"To install Docker on Ubuntu 18.04 you can use the snap from the Software Centre or add the Docker repo"
+
+You should see lots of satisfying debug output. If (like us) you were already running a webserver (or any other service that uses ports required by Mailcow, do check the prerequisites doc mentioned earlier) then this command will fail over. Mailcow's web service can happily work via a reverse proxy, or you could just shut your webserver down. Hopefully it all works out; then you can visit your Mailcow install at the address specified and configure everything to your liking. When you're done just run `docker-compose stop` from the Mailcow directory. BFX
+
+![](img/7a0a282248f9658f0c87e55744c797b6_76_1.png)
+
+![](img/7a0a282248f9658f0c87e55744c797b6_77_0.png)
+
+## Taming the Cloud
+
+Tiger Computing’s **Keith Edmunds** reveals how Kubernetes can be used to build a secure, resilient and scalable Linux infrastructure.
+
+![](img/7a0a282248f9658f0c87e55744c797b6_77_1.png)
+
+When you want to use Linux to provide services to a business, those services will need to be secure, resilient and scalable.
+
+Nice words, but what do we mean by them?
+
+'Secure' means that users can access the data they require, be that read-only access or write access. At the same time, no data is exposed to any party that’s not authorised to see it. Security is deceptive: you can think you have everything protected only to find out later that there are holes. Designing in security from the start of a project is far easier than trying to retrofit it later.
+
+'Reslient' means your services tolerate failures within the infrastructure. A failure might be a server disk controller that can no longer access any disks, rendering the data unreachable. Or the failure might be a network switch that no longer enables two or more systems to communicate. In this context, a “single point of failure” or SPOF is a failure that adversely affects service availability. A resilient infrastructure is one with no SPOFs.
+
+'Scalable' describes the ability of systems to handle spikes of demand gracefully. It also dictates how easily changes may be made to systems. For example, adding a new user, increasing the storage capacity or moving an infrastructure from Amazon Web Services to Google Cloud – or even moving it in-house.
+
+As soon as our infrastructure expands beyond one server, there are lots of options for increasing the security, resilience and scalability. We’ll look at how these problems have been solved traditionally, and what new technology is available that changes the face of big application computing.
+
+To understand what's possible today, it's helpful to look at how technology projects have been traditionally implemented. Back in the old days – that is, more than 10 years ago – businesses would buy or lease hardware to run all the components of their applications. Even relatively simple applications, such as a WordPress website, have multiple components. In the case of WordPress, a MySQL database is needed along with a web server, such as Apache, and a way of handling PHP code. So, they’d build a server, set up Apache, PHP and MySQL, install WordPress and off they’d go.
+
+By and large, that worked. It worked well enough that there are still a huge number of servers configured in exactly that way today. But it wasn’t perfect, and two of the bigger problems were resilience and scalability.
+
+Lack of resilience meant that any significant issue on the server would result in a loss of service. Clearly a catastrophic failure would mean no website, but there was also no room to carry out scheduled maintenance without impacting the website. Even installing and activating a routine security update for Apache would necessitate a few seconds’ outage for the website.
+
+The resilience problem was largely solved by building ‘high availability clusters’. The principle was to have two servers running the website, configured such that the failure of either one didn’t result in the website being down. The service being provided was resilient even if the individual servers were not.
+
+### The Slashdot effect
+
+The scalability problem is a bit trickier. Let’s say your WordPress site gets 1,000 visitors a month. One day, your business is mentioned on Radio 4 or breakfast TV. Suddenly, you get more than a month’s worth of visitors in 20 minutes. We’ve all heard stories of websites ‘crashing’, and that’s typically why: a lack of scalability.
+
+The two servers that helped with resilience could manage a higher workload than one server alone could, but that’s still limited. You’d be paying for two servers 100 per cent of the time and most of the time both were working perfectly. It’s likely that one alone could run your site. Then John Humphrys mentions your business on *Today* and you’d need 10 servers to handle the load – but only for a few hours.
+
+The better solution to both the resilience and scalability problem was cloud computing. Set up a server instance or two – the little servers that run your applications – on Amazon Web Services (AWS) or Google Cloud, and if one of the instances failed for some reason, it would automatically be restarted. Set up auto-scaling correctly and when Mr Humphrys causes the workload on your web server instances to rapidly rise, additional server instances are automatically started to share the workload. Later, as interest dies down, those additional instances are stopped, and you only pay for what you use. Perfect… or is it?
+
+Whilst the cloud solution is much more flexible than the traditional standalone server, there are still issues. Straight off the running cloud instances isn’t straightforward. Developing for the cloud has challenges too: the laptop your developers are using may be similar to the cloud instance, but it’s not the same. If you commit to AWS, migrating to Google Cloud is a complex undertaking. And suppose, for whatever reason, you simply don’t want to hand over your computing to Amazon, Google or Microsoft?
+
+Containers have emerged as a means to wrap applications with all of their dependencies into a single package that can be run anywhere. Containers, such as Docker, can run on your developers’ laptops in the same way they run on your cloud instances, but managing a fleet of containers becomes increasingly challenging as the number of containers grows.
+
+The answer is container orchestration. This is a significant shift in focus. Before, we made sure we had enough servers, be they physical or virtual, to ensure we could service the workload. Using the cloud providers’ autoscaling helped, but we were still dealing with instances. We had to configure load balancers, firewalls, commit to AWS, migrating to Google Cloud is a complex undertaking. And suppose, for whatever reason, you simply don’t want to hand over your computing to Amazon, Google or Microsoft?
+
+### Abstract Clouds
+
+Part of the power of Kubernetes is the abstraction it offers. From a developer’s perspective, they develop the application to run in a Docker container. Docker doesn’t care whether it’s running on Windows, Linux or some other operating system. That same Docker container can be taken from the developer’s MacBook and run under Kubernetes without any modification.
+
+The Kubernetes installation itself can be a single machine. Of course, a lot of the benefits of Kubernetes won’t be available: there will be no auto-scaling; there’s an obvious single point of failure; and so on. As a proof of concept in a test environment, though, it works.
+
+Once you’re ready for production, you can run in-house or on a Cloud provider such as AWS or Google Cloud. The Cloud providers have some built-in services that assist in running Kubernetes, but none of them hard requirements. If you want to move between Google, Amazon and your own infrastructure, you set up Kubernetes and move across. None of your applications have to change in any way. And where is Linux? Kubernetes runs on Linux, but the operating system is invisible to the applications. This is a significant step in the maturity and usability of IT infrastructures.
+
+![](img/7a0a282248f9658f0c87e55744c797b6_78_0.png)
+
+Continuous integration and continuous deployment can work well with Kubernetes. Here’s an overview of Jenkins being used to build and deploy a Java application.

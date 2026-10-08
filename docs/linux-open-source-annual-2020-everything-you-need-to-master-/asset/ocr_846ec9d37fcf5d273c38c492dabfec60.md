@@ -1,0 +1,47 @@
+# # Unique features
+
+What makes these particular email clients stand out from the crowd?
+
+Linux machines fitted with either 8 or 16GB of RAM are unlikely to be affected by the memory footprint of the always-open email applications. However, for low-spec or older machines that have limited hardware resources, Claws Mail is the perfect solution. Not only does it require far fewer resources than its peers, it’s also feature rich, supporting both POP and IMAP accounts. In addition to extensive filtering capabilities, it also enables you to create coloured labels when sorting messages. Setting up new accounts is also straightforward in all the clients tested here.
+
+Apart from emails, you can also use Evolution to schedule appointments and track your tasks list. Together with KMail, both programs are especially conscious of users’ privacy and provide easy means to sign, encrypt and decrypt messages. The import wizard on KMail supports a large number of applications that the tool can import from, such as Evolution, Thunderbird and Outlook Express. If you’re on an KDE system, you must install the akonadi-import-package to access the feature.
+
+Like the others, MailSpring also supports creating multiple accounts. Even the free version provides limited access to some of its Pro features such as delivery notification, which produces a pop-up as soon as emails are delivered to the recipient’s mail box. For important messages that require urgent replies, the application can inform you if no one has replied to your message within the specified time period. You can also receive a summary of messages sent and received, as well as track whether recipients actually open your emails, and whether they click a link in the message body, by clicking Activity on the sidebar.
+
+![](bbox=[0.53, 0.1, 0.93, 0.28])
+
+When reading emails with Thunderbird, if you double-click a message, it opens in a separate tab. Unless you close such tabs after reading the mail, Thunderbird will keep them open indefinitely. Unlike the other tools that require add-ons to protect you from phishing attacks, Thunderbird natively offers this feature. Like its brother Firefox, Thunderbird features a vast array of add-ons that can be used to extend its functionality. You can also configure it to block HTML messages, if you find them a nuisance.
+
+# **VERDICT**
+
+| CLAWS MAIL | 7/10 | MAILSPRING | 10/10 |
+|---|---|---|---|
+| EVOLUTION | 7/10 | THUNDERBIRD | 8/10 |
+| KMAIL | 7/10 | | |
+
+> MailSpring takes the lead because of some innovative offerings out of the box.
+
+# # Filter and search
+
+Just like Hogwarts sorting hat!
+
+Mail now offers users’ 15GB mailboxes. Yahoo similarly offers 1TB of storage space for your messages and attachments. While this is much appreciated, the downside to the vast storage space is that people no longer delete emails. Most email services now enable you to archive mails, or perform a similar function such that the Inbox is reserved only for important messages. This inevitably leads to massive mailboxes that hold tens of thousands of message over the years.
+
+As you subscribe to more mailing lists and add more contacts, your mail client should make it possible for you to perform filtering operations to automatically sort the different messages into dedicated folders, or apply labels for easy identification. Just as important is the search capabilities, because looking for one particular email from your father from several years ago, when he routinely sends several in a day, can be a daunting ask.
+
+All the clients enable you to create different filters for each configured account. You can set these applications to perform a number of operations such as moving mail to specified folders and applying labels based on different conditions such as from, to, header, BCC, subject, size, attachments, and so on.
+
+When searching for messages, MailSpring provides instantaneous results, offering matching suggestions even as you type in the search box. You can also use advanced GMail-style search queries with the tool, such as ‘in:unread’, etc. Claws Mail can also quit slow when connecting to your existing mail account which already has thousands of messages. The search, although fast, lags behind Thunderbird and MailSpring.
+
+![](bbox=[0.53, 0.59, 0.93, 0.77])
+
+> Despite being on a par with all the other three in terms of speed, KMail’s ‘find messages’ feature is disappointingly unintuitive.
+
+# **VERDICT**
+
+| CLAWS MAIL | 9/10 | MAILSPRING | 10/10 |
+|---|---|---|---|
+| EVOLUTION | 9/10 | THUNDERBIRD | 9/10 |
+| KMAIL | 8/10 | | |
+
+> While all the tools are fairly fast when searching, MailSpring has the edge.

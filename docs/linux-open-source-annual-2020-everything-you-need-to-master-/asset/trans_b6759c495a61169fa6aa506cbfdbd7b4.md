@@ -1,0 +1,53 @@
+
+# FOSS
+
+在 gog.com 上免费获取。新特性（更多 bug 修复）正在不断添加中，因此请关注项目的 GitHub 仓库 [https://github.com/scummvm/scummvm](https://github.com/scummvm/scummvm)。
+
+2002 年，LucasArts 向 ScummVM 团队发送了停止侵权通知书（cease and desist letter），但最终（整个过程大约花了四年时间）双方达成了一项协议，该项目得以继续。此后，引擎重新实现开始被认定为非侵权活动，与版权持有者的进一步讨论也大多积极友好。Revolution Software 和 Adventure Soft 甚至提供了源代码，以帮助支持其游戏所使用的引擎。*Myst* 三部曲 25 周年纪念版的三分之二由 ScummVM 驱动（*Myst III* 由 ResidualVM 驱动，该引擎重新实现了其 Sprite 引擎，以及 GrimE，这是用于 *The Curse of Monkey Island* 和 *Grim Fandango* 的 SCUMM 继任者）。你可以点击 [www.pcgamer.com/how-scummvm-is-keeping-adventure-games-alive-one-old-game-at-a-time](www.pcgamer.com/how-scummvm-is-keeping-adventure-games-alive-one-old-game-at-a-time) 阅读更多关于 ScummVM 的信息。
+
+正如你可能想象的，重新分发商业游戏资源通常是非法的。上一页旁边的方框详细介绍了这一点，但简单来说，*我*想避免从随机网站下载任何东西。回到 2018 年 7 月，流行的模拟器网站 LoveROMS 和 LoveRETRO 成为了任天堂发起的、可能非常昂贵的诉讼的接收方。在这些法律行动的压力下，知名的 EmuParadise ([www.emuparadise.me](www.emuparadise.me)) 从其网站上移除了所有下载链接。
+
+许多游戏被称为“遗弃软件”（abandonware），这意味着它们不再由原始制造商销售或支持。不过，这个术语并不提供法律保护：版权持有者可能务实，选择不去追究侵权问题，如果足够多的人礼貌请求，他们甚至可能免费提供这些游戏。或者，他们也可能像任天堂那样，专门设立一个页面来详细说明如果你不尊重其财产，他们将如何严厉打击你（[www.nintendo.com/corp/legal.jsp](www.nintendo.com/corp/legal.jsp)）。
+
+# 香料必须流动（The spice must flow）
+
+对于 *OpenRA*——经典 *Command and Conquer* (CnC) 引擎的重新实现——情况则更为悦耳动听。为了庆祝原版 *Command and Conquer*（在某些圈子里被称为 *Tiberian Dawn*）发布 12 周年，EA 在 2007 年将原始 ISO 作为免费软件发布。为了庆祝下一个周年纪念日（同时也为了配合 *Red Alert 3* 的发布），EA 在 2008 年将原始 *Red Alert* 和 *Tiberian Sun* 的 ISO 作为免费软件发布。EA 不再托管这些文件，并声明他们很高兴其他人能重新分发它们。因此，如果你没有原始安装介质，*OpenRA* 可以查找并下载玩这三个标题所需的所有文件（音乐和视频过场动画除外）。
+
+在 *OpenRA* 的术语中，引擎复兴的游戏被称为 *mods*（模组）。*OpenRA* 项目采纳了新的打包格式，你可以直接从 [www.openra.net](www.openra.net) 下载官方模组的 *AppImages*。这些下载有两种版本：稳定版和测试版（playtest）。后者是最新引擎开发的预览版，因此可能不如前者稳定。
+
+除了官方模组外，还有一些社区提供的内容（参见 [www.moddb.com/games/openra/mods](www.moddb.com/games/openra/mods)）。目前正在开展工作，将 *OpenRA* 引擎与其支持的“官方”CnC 模组解耦，使其可以用作通用的实时战略引擎。该项目已经提供了地图编辑器和 *Source Development Kit*（SDK）等实用工具，以帮助新兴开发者构建他们脑海中充满战争色彩的游戏。读者可能还记得 90 年代晚期的 *Krush Kill n' Destroy* 游戏。战争题材的读者可能会很高兴地得知，正在使用 *OpenRA* 引擎复兴那些核战后的作品。
+
+另一个相关项目是 *CnCNet*，自 2009 年以来一直存在。他们提供启动器，使 CnC 系列（包括所有扩展和模组）能够以粉丝记忆中的方式游玩，并额外支持联网对战。最近，它在 GDI（针对较新版本的 Windows）和 OpenGL（针对 Wine 用户）中重新实现了 CnC 的 DirectDraw 渲染器。CnCNet 支持免费发布的标题，以及 *Tiberian Sun*（*OpenRA* 正在为此努力）、*Red Alert 2* 和 *Yuri's Revenge*。免费的 CnC 标题提供了 Linux 软件包（适用于 Fedora、Debian、Ubuntu 以及开源的 Arch 及其衍生版）。这些只是脚本，用于设置合适的 *Wine* 前缀并下载游戏文件和 CnCNet 启动器。
+
+CnCNet 支持的其他标题只能通过 EA 的 Origin 平台作为 *Command and Conquer Ultimate Collection* 的一部分获取（价格为 25 英镑），但让 *Wine* 和 Origin 良好协作可能有点棘手。对于这类游戏，你或许最好寻找光盘介质，CnCNet 启动器非常乐意与之配合使用。
+
+最初的 Westwood Online 服务器在 2005 年过渡到了由社区运营、EA 赞助的 XWIS 服务器，该服务器至今仍然活跃。较新的 CnC 标题运行在 GameSpy 服务器上，并于 2014 年关闭。这次关闭影响了大量游戏，其中许多转移到了其他网络。CnC 标题转移到了 C&C:Online ([https://cnc-online.net](https://cnc-online.net))，在那里它们今天依然生机勃勃。
+
+# 直到明日（Till it be Morrow）
+
+*Morrowind* 是 Bethesda 备受赞誉的 *Elder Scrolls*（上古卷轴）RPG 系列的第三部作品，于 2002 年发布。其广阔的开放世界由 Gamebryo 引擎驱动，该引擎已被 *OpenMW* 重新实现。
+
+![](img/7a0a282248f9658f0c87e55744c797b6_145_0.png)
+
+> 1995 年的 *Discworld*（碟形世界）游戏（由 Eric Idle 配音）可以通过 *ScummVM* 复活。
+
+![](img/7a0a282248f9658f0c87e55744c797b6_146_0.png)
+
+除了解决长期存在的 bug（*Morrowind* 在 2003 年收到了最后一个官方补丁），该引擎还添加了新特性，当然，这也使得游戏可以在 Linux 上原生运行。需要原始游戏资源，但这没问题，因为你可以从 **gog.com** 以 13 美元的价格获得 *Morrowind* 的无 DRM 副本（全价年度游戏版）。它经常有特别优惠，所以如果资金不足，请将其加入你的愿望清单。
+
+*OpenMW* 通过能够渲染远处的地形（在原始游戏中增加绘制距离会严重降低性能）、使用 TrueType 字体以及支持与 FFMPEG 兼容的所有多媒体格式来现代化原始游戏。原始 *Morrowind* 的一些第三方模组可以在 *OpenMW* 上工作，但这目前并不是项目的严格目标。许多模组依赖于原始引擎中的 bug 或对未记录怪癖的假设。
+
+*OpenMW* 还附带 *OpenMW-CS*，这使得用户可以创建自己的资源：角色、地图、任务……应有尽有。这使得雄心勃勃的用户可以基于 *OpenMW* 构建完整的游戏。熟练的 3D 建模师可以使用 *Blender* 创建龙和地下迷宫装饰物的模型，然后使用 NIF（许多其他游戏使用的专有格式）或 OSG（*OpenMW* 自己的开放格式）插件进行导出。
+
+还有许多我们没有机会讨论的开源游戏引擎（如果有人不在写这篇文章时全都花在玩 *Red Alert* 上，我们也许就能讨论更多了 – 编者注）。请查看 **https://osgamedclones.com** 上的令人印象深刻的列表。但为了怀旧之名，我们想提一下 Freeserf（**https://github.com/freeserf/freeserf**），它允许你（再次使用原始数据文件）游玩 1993 年的经典中世纪王国模拟器 *The Settlers*。读者们，如果你发现自己年轻时通过开源魔法复活了任何经典游戏，请告诉我们（*只是别让 Jonni 知道，因为他正被像素化的事物和陈旧的笑话分心* – 编者注）。
+
+# 它能运行 DOOM 吗？
+
+在各种从未打算运行 *Doom* 的硬件上运行共享ware 经典 *Doom* 已经成为一种传统（例如参见 **www.gamesradar.com/12-things-that-prove-that-doom-will-run-on-literally-anything**）。然而，这些滑稽行为大多是通过 *Doom* 引擎的许多重新实现来实现的，id Software 在 1997 年发布了其源代码（可在 **https://github.com/id-Software/DOOM** 获取）。
+
+最早的移植版本之一是 *GLDoom*，它给 *Doom* 带来了 OpenGL 支持，但这仅限于 DOS 环境。*Boom* 彻底改革了 *Doom* 引擎，修复了许多 bug 和怪癖，并去除了在（当时）现代硬件上不再合理的限制。*Boom* 最初并非开源，但其代码于 1999 年发布，由此诞生了 Linux 版的 *LxDoom* 和 Windows 版的 *PrBoom*。这两个项目最终合并，统一为 *PrBoom*。*PrBoom* 随后被移植到许多平台。
+
+还有许多其他 *Doom* 克隆，其中一些添加了新的先进特性，但有些人珍视原版。对于这些人，有 *Chocolate Doom*（参见 **LXF226**）。它尽可能真实地重现了 DOS 体验，甚至重新实现了后来被修复的 bug。这意味着可以播放原始演示，小恶魔一如既往地愚蠢，而原始关卡依赖的轻微伪影也被忠实地重现。
+
+![](img/7a0a282248f9658f0c87e55744c797b6_146_1.png)
+

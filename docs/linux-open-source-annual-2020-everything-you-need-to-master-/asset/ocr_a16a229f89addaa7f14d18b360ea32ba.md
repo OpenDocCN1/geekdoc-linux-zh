@@ -1,0 +1,49 @@
+# ## User experience
+
+# They all look alike, but do they all behave the same too?
+
+Productivity applications is a term that gets thrown around quite a bit nowadays. Until the 1980s, the world was still getting by on typewriters or pen and paper, but with the introduction of office suites, the oldest productivity applications changed how we use the computer at home and work. It’s no surprise, then, that there are very few jobs in the world today that don’t require basic skills with office software.
+
+While the suites all provide similar functionality in one or two component applications, they are distinct enough in their workflow that switching between them may involve quite a bit of learning before you’re comfortable using them for everyday use.
+
+If you’re only interested in a single office component, such as a spreadsheet or word processor, then refer to the Also Consider section at the end of this month’s Roundup for some recommendations.
+
+# Google Docs 8/10
+
+It has the distinction of being the only online office suite featured in this Roundup. But to be fair, OnlyOffice too provides a cloud-based solution. While originally the suite worked best on the Chrome browser, you won’t find any performance issues or missing features when using it on alternative such as Firefox.
+
+The vast number of templates for each of the component applications is the biggest USP for Google Docs. Its easy integration with Google to perform searches, and integrating results, or sharing files with other users with a single click, is also a bonus. If you frequently have to collaborate with users, you’re regularly on the move and can’t afford to leave urgent files behind, the use of Google Drive as the storage provides great luxury, in that you can access your work from anywhere – as long as there’s an available internet connection.
+
+![](bbox=[0.35, 0.48, 0.65, 0.59])
+
+# Calligra Suite 7/10
+
+There’s little wrong with Calligra itself, but you may struggle with its esoteric workflow. For instance, you can’t insert any shape into a presentation or document without accessing the Add Shapes docker. Indeed, the whole process of switching between dockers to access elements and features that are easily accessible on the alternate suites from the toolbar itself, is inexplicable and unintuitive.
+
+We don’t generally condemn the different style of working, but easy availability of documentation becomes quite important for such applications. While plenty of documentation exists for some of its component applications such as Sheets and Stage, it’s not accessible from within the app itself.
+
+But if you’re willing to put in the time to master its style of working, or are using old machines, you’ll appreciate Calligra’s ability to function on low-spec systems.
+
+![](bbox=[0.68, 0.48, 0.94, 0.59])
+
+# ## Help and support
+
+# Who can you turn to, when you can’t tell if you’re coming or going?
+
+Judging by the nature of work that these programs perform, you’d think they’re fairly easy to use. While this is true for the most part, especially for the straightforward offerings of Google Docs, the other applications may require some guidance. Such as when you’re trying to figure out how to install plugins on WPS Writer, or if there are even any on offer!
+
+While all the applications are cross-platform, WPS Writer’s Linux edition doesn’t get the same attention as its Microsoft counterpart. This is why you may find solutions to certain problems in the official documentation that don’t apply to the Linux edition. For instance, the official Help will tell you how to use the Mail Merge feature, but it isn’t even available on Linux.
+
+There isn’t much documentation on OnlyOffice’s website, beyond instructions covering installation and basic usage, but you’ll find far more useful information from within the program itself. Depending on the application you’re running, clicking File>Help presents a categorised list, and there’s also a search bar if you’re looking for something specific.
+
+In contrast, Calligra’s documentation is non-existent. Launching the handbook from within the program drops you to a KDE handbook page that doesn’t exist. When you do finally manage to track down some documentation on KDE.Userbase, all it lists is a few isolated features. Thankfully, you can tap the user community for advice and assistance on the official forum boards.
+
+LibreOffice boasts of detailed user guides, accessible from within each of the component applications. In addition to its thorough documentation guides, the project also has a Q&A website called Ask LibreOffice.
+
+# VERDICT
+
+CALLIGRA SUITE 4/10  ONLYOFFICE 8/10
+GOOGLE DOCS 8/10  WPS OFFICE 4/10
+LIBREOFFICE 10/10
+
+Office suites are unlikely to attract new users if there aren’t any help files to help acclimatise them.
