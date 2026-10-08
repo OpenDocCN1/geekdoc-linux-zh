@@ -1,0 +1,405 @@
+
+## B
+- Windows Media, 157–161
+- Bass Boost, 158–159
+- Headphone Virtualization, 161
+- Loudness Equalization, 161
+- Room Correction, 159–161
+- Virtual Surround, 159
+- Audio Devices and Sound Themes, 248, 249
+- Authenticode, 350
+- AutoAdminLogon, 240–242
+- AutoComplete
+  - IE, 358–359
+  - usernames, 364–365
+- automated management, Enterprise edition, 5
+- automatic logon, 240–242
+- Automatic Memory Dump, 196
+- Automatic Repair, 42, 44
+- automatic tree expansion, 123
+- autoPlay, 228
+- Autoruns, 242, 244–245
+- auto-start programs
+  - logon process, 242–247
+  - System Configuration, 244–245
+  - Task Manager, 242–244
+- auto-tuning, network connection, 302–303
+- Available MBBytes, 191
+- Axence, 339–340
+- POST, 205, 206, 208
+- Quick Boot, 208–209
+- RAM, 208–209, 270
+- SSD, 286
+- system boot, 205–209
+- bcdedit.exe. See Boot Configuration Data Editor
+- benchmarking, 200–203
+- biometrics, 216
+- BIOS. See basic input/output system
+- BitLocker Drive Encryption, 8, 26–27, 221, 332–335
+- BitLocker To Go, 8, 334–335
+- bitmaps, 118
+- Block Level Backup Engine Service, 221
+- Block The connection, 344
+- blue screens, 196–197
+- Bluetooth Support Service, 221
+- Boot Configuration Data Editor (bcdedit.exe), 210, 212, 213
+- Boot Execute tab, Autoruns, 245
+- boot file optimization, system boot, 236–237
+- boot from VHD, 7
+- Boot Sequence Setup, 207
+- Boot to Desktop, 66
+- BranchCache, 8, 221
+
+## B
+- background
+  - desktop, 102–106
+  - Start screen, 68–70
+- themes
+  - images, 112–113
+  - RSS, 113–115
+- Background Intelligent Transfer, 220
+- backups
+  - file access timestamp, 255–256
+  - hard drives, 286
+  - image, 44–46
+- backward compatibility, 252–253
+- Base Filtering Engine, 221
+- basic input/output system (BIOS)
+  - changing drive boot order, 206–208
+  - clearing last user logon, lock screen, 57–58
+
+## C
+- ClearQAM, 168, 172
+- Client for Microsoft Networks, 305
+- Clock icon, removing, 86–87
+- CNG Key Isolation, 221
+- colors
+  - interface, 112
+  - lock screen, 63
+  - Start screen, 68–70
+  - video, Media Player, 168
+- COM+ Event System, 221
+- COM+ System Application, 221
+- Combine When Taskbar Is Full, 82
+- command prompt
+  - backup image, 44–45
+  - Boot Configuration Data Editor, 212
+  - file access timestamp, 256
+  - file system, 252
+  - legacy filename creation, 254
+  - memory, 257
+  - Start screen, 252, 254, 256, 257, 329
+  - System Recovery Console, 44
+- compliance, 5
+- cache
+  - BranchCache, 8, 221
+  - Memory Cache Faults/sec, 188
+  - Windows Font Cache Service, 231
+- cache, NTFS, 256
+- Cache Bytes Peak, 188
+- CCleaner, 371
+- CDM, 233
+- Certificate Propagation, 221
+- charms, 32–35
+- Check Spelling, 153
+- Chrome, 298–299
+- classic desktop, 36–37
+- Classic Shell, 77
+- classic Start menu, restoring, 77–78
+- classic taskbar, 82
+- clean install, 18–21
+- computer accounts
+  - passwords, 317–319
+  - security, 317–323
+- Computer Browser, 221
+- Computer Management, 318–320
+- Computer Policies, 89
+- Consolidate Free Space, 282
+- Content view, 138
+- context menus, File Explorer, 130–133
+- ContextMenuHandlers, 131
+- cookies, 359–363
+- CPU section, Resource Monitor, 180–182
+- CPUs. See processors
+- Crash Dump Analysis, 197
+- Credential Manager, 221, 371–372
+- Crossfading, 167
+- Cryptographic Services, 221
+- Customize Taskbar Icon Sizes, 85
+- Customize.org, 105
+
+## D
+- DCOM Server Process Launcher, 222
+- DDR2 memory, 268
+- DDR3 memory, 268
+- Decor8, 69–70
+- DefaultColorSet, 63
+- DefaultPassword, 241
+- defragmenter, 279–283
+- Delete Browsing History, 358
+- DeskModder, 118
+- desktop
+  - background, 102–106
+  - Boot to Desktop, 66
+  - classic, 36–37
+  - gadgets, 102–106, 152
+  - icons, 93–101
+    - adjusting size, 96–98
+    - Drop Shadow effect, 94–95
+    - removing all, 94
+    - replacing, 99–101
+    - shortcut arrow, 98–99
+  - remote client, 6
+  - Remote Desktop
+    - Configuration, 227
+    - Remote Desktop Services, 227
+    - remote host, 7
+  - Use Drop Shadows For Icon Labels On The Desktop, 94, 261
+- Desktop Icon Settings, 96
+- Details pane, File Explorer, 123–124
+- Details view
+  - folder views, 137–139
+  - Media Player, 163
+- DeviantArt, 105, 118
+- Device Association Service, 222
+- device drivers, 215
+- Device Install Service, 222
+- Device Manager, 215–217
+- Device Setup Manager, 222
+- DHCPC Client, 222
+- Diagnostic Policy, 222
+- Diagnostic Service Host, 222
+- Diagnostic System Host, 222
+- Direct3D, 59
+- DirectAccess, 8, 225
+- DirectDraw, 59
+- Disk Cleanup, 369–371
+- Disk Defragmenter, 280–281
+- Disk Read Bytes/sec, 190
+- Disk section, Resource Monitor, 183–184
+- Disk Write Bytes/sec, 190
+- Diskkeeper, 283
+- DiskPart, 13–14
+- Distributed Link Tracking Client, 222
+- Distributed Transaction Coordinator, 222
+- DLLs, 226
+- DNS Client, 222
+- Dolby Pro Logic, 159
+- domain join, 7
+- download acceleration, 299–302
+- Download Accelerator Plus, 300
+- Drive Options, 20
+- Drivers tab, Autoruns, 245
+- Drop Shadow effect, 94–95
+- dual-booting, 11, 21–22
+- DWM interface, 118
+- DWORD, 56–57, 63, 294–295
+
+## E
+- EaseUS Disk Copy Home Edition, 287
+- EasyBCD, 213
+- editions
+  - comparison, 3–8
+  - RAM, 12
+  - selection, 3–10
+- EFS. See Encrypting File System
+- Encrypting File System (EFS), 222, 329
+- encryption, 7, 8, 328–335.
+  - *See also* BitLocker Drive Encryption
+  - Temporary Internet Files, 363–364
+- Enhancements Settings, 157
+- Enhancements tab, 158, 160
+- Enterprise edition, 5, 11, 25–27
+- enterprise search scopes, 8
+- ESET Online Virus Scan, 354
+- Event Viewer, 193–196
+- exploit, 338
+- Explorer tab, Autoruns, 245
+- ExtendedUIHoverTime, 83
+- Extensible Authentication Protocol, 223
+
+## F
+- Fade Or Slide Menus Into View, 260
+- Fade Or Slide ToolTips Into View, 260
+- Fade Out Menu Items After Clicking, 260
+- Family Safety, 223
+- FAT32, 252
+- Favorite Links, 122, 123
+- Fax, 223
+- Feed Properties, 152
+- Feed Subscription box, 151
+- file access timestamp, 255–256
+- File and Printer Sharing for Microsoft Networks, 305
+- file associations, File Explorer, 129–130
+- file browsing and access, Windows Explorer, 251–257
+- File Explorer, 36
+  - BitLocker To Go, 334
+  - context menus, 130–133
+  - Details pane, 123–124
+  - file associations, 129–130
+  - fine-tuning, 121–142
+  - folder icons, 135
+  - Folder Options, 262
+  - folders, 134–140
+  - fonts, 218–219
+  - hidden files, 140–142
+  - images, 135
+  - libraries, 133–134
+  - Navigation pane, 122–123
+  - Preview pane, 124
+  - ribbon, 128–129
+  - Search, 124–128
+  - Task Manager, 199
+  - touch support, 117
+  - View tab, 114
+  - views, 117
+  - Windows Search, 262
+- File History Service, 223
+- file system
+  - EFS, 222, 329
+  - encryption, editions, 7
+  - NTFS, 252–257
+  - Run As Administrator, 252
+  - USB flash drive, 13
+- Find Partial Matches, 126
+- Firefox, 296–298
+- firewall, 26, 231, 341–346
+
+## F
+- FireWire, 216
+- first-party cookies, 360–363
+- FlashGet Classic, 300
+- Flat-rate, Room Calibration Wizard, 160–161
+- Folder Options, 141, 262, 275
+- folders
+  - File Explorer, 134–140
+  - icons, 135
+  - permissions, 372–374
+  - templates, 135–137
+  - views, 137–139
+- Font download, IE security zone, 350
+- fonts, 116, 217–220, 231
+- Frag Shield, 283
+- Free Download Manager, 299–302
+- fsutil behavior set disable8dot3, 254
+- fsutil behavior set memoryusage, 257
+- Full Version package, 4
+- Fully Clean The Drive, 49
+- Function Discovery Provider Host, 223
+- Function Discovery Resource Publication, 223
+
+## G
+- gadgets, 102–106
+- General tab, Properties, 329
+- GetRight, 300
+- Google AdSense, 361–362
+- Google Chrome, 298–299
+- gpedit.msc, 61, 89, 334
+- graphic equalizer, 168
+- graphics card, 201, 257–261
+- GRC .com, 338
+- Group Policy, 7, 59, 332
+- Group Policy Client, 223
+- Group Policy Editor, 89–92
+
+## H
+- hard drives. *See also* solid state hard drives
+  - backups, 286
+  - defragmenter, 279–283
+  - paging files, 279
+  - temporary files, 369–371
+  - USB, 25
+  - Windows Experience Index, 201
+- hardware
+  - BitLocker Drive Encryption, 332
+  - monitoring
+    - blue screens, 196–197
+    - Event Viewer, 193–196
+    - Performance Monitor, 185–191
+    - Reliability Monitor, 191–193
+    - Resource Monitor, 180–185
+    - system analysis, 179–200
+    - Task Manager, 197–200
+  - system boot, 215–217
+- Hardware and Sound, 157–158, 248
+- Headphone Virtualization, 161
+- Health Key and Certificate Management, 223
+- hidden files, 140–142, 143
+- Histogram, 188–189
+- history deletion, 359–361
+- HKEY_CLASSES_ROOT, 129, 131
+- HKEY_CURRENT USER, 247
+- HKEY_USERS, 247
+- HomeGroup, 7, 164
+- HomeGroup Listener, 223
+- HomeGroup Provider, 223
+- homepages, 148–149
+- hot corner, 87
+- HTTP, 232, 294
+- HTTP/1.1 RFC standards, 293
+- Human Interface Device Access, 223
+- Hyper-V, 7, 21
+
+## I
+- *images*, *Still Image Acquisition Events*, 228
+- IconArchive, 100
+- IconFinder, 100
+- icons
+  - desktop, 93–101
+    - adjusting size, 96–98
+    - Drop Shadow effect, 94–95
+    - Recycle Bin, 95
+    - replacing, 99–101
+    - shortcut arrow, 98–99
+  - users, 95–96
+  - folder views, size, 137
+  - folders, 135
+  - interface, 117
+  - notification area, 86–87
+  - taskbar, 82–83
+  - locations, 80
+- ICS. *See* Internet Connection Sharing
+- IE. *See* Internet Explorer
+- ieSpell, 153
+- I-FAAST, 283
+- IFRAME, 350
+- IKE and AuthIP IPsec Keying Modules, 223
+- illustro skin set, 104
+- images
+  - background, themes, 112–113
+  - backups, 44–46
+  - File Explorer, 135
+  - lock screen, 54–55, 61–63
+  - passwords, lock screen, 64–65
+  - PNG, 118
+  - System Image Recovery, 42, 44
+  - WIA, 231
+- *import*, 210
+- Inactive Sessions, 187
+- Inbound Rules, 343–345
+- Include local directory path when uploading files to a server, 350
+- Indexing Options, 126, 263
+- indexing services, 126–128, 262–265
+- inheritance, 372
+- InitialKeyboardIndicators, 61
+- InPrivate Browsing, 366–367
+- installation, 11–27
+  - ActiveX Installer, 220
+  - clean install, 18–21
+  - Device Install Service, 222
+  - media, 11–16
+  - Media Center, 168
+  - partitions, 20, 23
+  - product key, 18–19
+  - RAM, 269–270
+  - regional settings, 19
+  - Remove Everything And Reinstall Windows, 48
+  - 64-bit, 11, 12
+  - source files, 14–15
+  - 32-bit, 11, 12
+  - upgrade, 17–18
+  - USB flash drive, 13–16
+  - VHD, 23–24
+  - Windows 7, 21–22
+  - Windows All-User Install Agent, 230
+  - Windows Installer, 231

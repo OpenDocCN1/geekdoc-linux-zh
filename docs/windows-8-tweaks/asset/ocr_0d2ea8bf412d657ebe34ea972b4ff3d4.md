@@ -1,0 +1,3 @@
+I went over how to speed up your web browser and download files faster. Then, I showed you how to optimize the system components that you need to browse the web and the network.
+
+The next part of *Windows 8 Tweaks* covers securing your computer. Windows 8 has a lot of new security features that help protect your computer better than ever before. The next few chapters show you how to use those new features as well as many additional security tweaks that will help make spyware, adware, and hackers a distant memory.

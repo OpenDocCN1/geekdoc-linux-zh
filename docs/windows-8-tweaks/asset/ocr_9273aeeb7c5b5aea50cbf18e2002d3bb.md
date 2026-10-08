@@ -1,0 +1,13 @@
+So far, I have talked only about firewalls that block incoming attacks from the Internet. Firewalls can also block traffic originating from your computer going out to the Internet. Why would you want to do that? What if someone installed a key logger on your computer that sends all your information to a remote computer for him to use? Or how about a media player that sends a history of everything that you played to a server for tracking purposes? With a two-way firewall, you can block outgoing traffic that you haven't authorized.
+
+Firewalls can be a very powerful security device. In Windows 8, a firewall configured properly can completely eliminate one way an attacker may try to gain access to your computer. The next section shows you how you can use the new and improved firewall in Windows 8 to block incoming attacks and prevent unwanted applications from sending information out.
+
+# Using the Windows 8 Firewall
+
+The firewall included in Windows 8 is much more advanced than previous Windows firewalls. Microsoft actually calls it “Windows Firewall with Advanced Security.” Its three different location profiles enable you to customize your firewall rules based on where your computer is. If it is in a public place, you can impose very strict firewall rules, whereas if you are in a corporate domain at work or on a private network at home, you can use less strict security options. In addition to location profiles, the firewall’s complex rule structure allows you maximum flexibility to create specific openings in your firewall to permit application or service-related network traffic. Most importantly, Windows Firewall has to block outgoing traffic as well.
+
+The upgrades to Windows Firewall really make it a very powerful security solution that was once provided only by advanced third-party firewall software. The next two sections guide you through the basics of using the advanced firewall configuration tool and enabling the outbound firewall.
+
+# Configuring Windows Firewall
+
+The Network and Sharing Center is where you configure all the network-related settings on your Windows 8 PC. You can also access the Windows Firewall from the Network and Sharing Center, but only the basic controls are exposed. Instead, the best way to manage the Windows Firewall is through the Windows Firewall with Advanced Security Management Console. Open the Start screen, type **wf.msc**, and press Enter. When the Windows Firewall with Advanced Security window loads, you will see the complexity and the power of the new firewall. Maybe it was a good idea Microsoft decided to hide this from inexperienced users after all. On the main screen you see a list of the profiles, as shown in Figure 19-3.
