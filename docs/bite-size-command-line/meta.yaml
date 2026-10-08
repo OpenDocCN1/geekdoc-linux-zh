@@ -1,0 +1,156 @@
+groups: []
+pages:
+- img_proc: false
+  md: '# # Bite Size Command Line
+
+
+    By Julia Evans
+
+
+    ![](bbox=[0.019, 0.407, 0.199, 0.647])
+
+
+    awk
+
+
+    ![](bbox=[0.211, 0.491, 0.378, 0.712])
+
+
+    tar
+
+
+    ![](bbox=[0.407, 0.504, 0.599, 0.773])
+
+
+    grep
+
+
+    ![](bbox=[0.604, 0.456, 0.852, 0.695])
+
+
+    sort
+
+
+    ![](bbox=[0.866, 0.316, 0.985, 0.647])
+
+
+    less
+
+
+    ![](bbox=[0.031, 0.703, 0.231, 0.901])
+
+
+    kill
+
+
+    ![](bbox=[0.262, 0.745, 0.466, 0.923])
+
+
+    xargs
+
+
+    ![](bbox=[0.55, 0.758, 0.745, 0.908])
+
+
+    bash
+
+
+    ![](bbox=[0.778, 0.682, 0.977, 0.955])
+
+
+    sed'
+  merge: -1
+  pgno: 0
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 1
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 2
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 3
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 4
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 5
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 6
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 7
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 8
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 9
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 10
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 11
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 12
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 13
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 14
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 15
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 16
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 17
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 18
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 19
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 20
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 21
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 22
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 23
+toc: []

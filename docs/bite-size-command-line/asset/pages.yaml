@@ -1,0 +1,1357 @@
+- pgno: 0
+  md: '# # Bite Size Command Line
+
+
+    By Julia Evans'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'This zine explains some of the most useful Unix command line tools in 1 page
+    each.
+
+
+    ![](img/5f5d02ddabdd2009c88fde2963d57414_1_0.png)
+
+
+    ![](img/5f5d02ddabdd2009c88fde2963d57414_1_1.png)
+
+
+    Even if you''ve used the command before, I might have a new trick or two for you
+    ❤'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table of contents
+
+
+    BSD≠GNU.........4 bash tricks.....10-11 misc commands...17
+
+
+    grep................5 disk usage......12 head&tail........18
+
+
+    find................6 tar................13 less................19
+
+
+    xargs................7 ps................14 kill................20
+
+
+    awk................8 top................15 cat................21
+
+
+    sed................9 sort&uniq......16 lsof................22'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'For almost all these tools, there are at least 2 versions:
+
+
+    +   1. The BSD version (on BSDs & Mac OS)
+
+
+    +   2. The GNU version (on Linux)
+
+
+    All of the examples in this zine were tested on Linux. Some things (like sed -i)
+    are different on Mac. Be careful when writing cross-platform scripts!
+
+
+    You can install the GNU versions on Mac with `brew install coreutils`.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # grep
+
+
+    grep lets you search
+
+    files for text
+
+
+    use if you want
+
+    regexps like ".*"
+
+    work. otherwise you
+
+    need to use ".\t"
+
+
+    recursive! Search
+
+    all the files in
+
+    directory.
+
+
+    $ grep bananas foo.txt
+
+
+    Here are some of my
+
+    favourite grep command
+
+    line arguments!
+
+
+    invert match: find
+
+    all lines that don''t
+
+    match
+
+
+    only print the
+
+    matching part of
+
+    the line (not the
+
+    whole line)
+
+
+    - case insensitive
+
+
+    only show the
+
+    filenames of the files
+
+    that matched
+
+
+    search binaries:
+
+    treat binary data
+
+    like it''s text instead
+
+    nof ignoring it!
+
+
+    Show context for your
+
+    search.
+
+    $ grep -A 3 foo
+
+    will show 3 lines of
+
+    context after a match
+
+
+    don''t treat the match
+
+    string as a regex
+
+    eg $ grep -F ...
+
+
+    grep alternatives
+
+    ack aggrep
+
+    (better for searching code!)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# # find\n\nfind searches a\ndirectory for files\n\n-name [/iname]\ncase insensitive\n\
+    the filename! eg\n-name '*.txt'\n\n-type [TYPE]\nf: regular file\nl: symlink\n\
+    d: directory\n+ more!\n\nfind /tmp -type d -print\ndirectory which files action\
+    \ to do\nto search with the files\nhere are my favourite\find arguments!\n\n-path\
+    \ /-ipath\nsearch the full path !\n-path '/home/*.go'\n\n-maxdepth NUM\nonly descend\
+    \ NUM levels\nwhen searching a directory\n\n-size O\nfind empty files!\nUseful\
+    \ to find files you\ncreated by accident\n\n-print0\nprint null-separated names\n\
+    Use with xargs -O!\n\nlocate\nThe locate command\nsearches a database of\nefile\
+    \ on your system.\ngood: faster than find\nbad: cannot get out of date\n$sudo\
+    \ updatedb\nupdates the database\n\n-exec COMMAND\naction: run COMMAND on\nvery\
+    \ file found\n\n-delete\naction: delete all files found"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# xargs
+
+
+    xargs takes white space separated strings from stdin and converts them into command-line
+    arguments
+
+
+    ```
+
+    $ echo "/home/tmp" | xargs ls
+
+    will run ls /home/tmp
+
+    ```
+
+
+    this is useful when you want to run the same command on a list of files!
+
+
+    +   - delete (xargs rm)
+
+    - combine (xargs cat)
+
+    - search (xargs grep)
+
+    - replace (xargs sed)
+
+
+    how to replace "foo" with "bar" in all .txt files:
+
+
+    ```
+
+    find . -name ''*.txt'' | xargs sed -i s/foo/bar/g
+
+    ```
+
+
+    how to lint every Python file in your Git repo:
+
+
+    ```
+
+    git ls-files | grep .py | xargs pep8
+
+    ```
+
+
+    if there are spaces in your filenames "my day.txt" xargs will think it''s 2 files
+    "my" and "day.txt",
+
+
+    fix it like this:
+
+
+    ```
+
+    find -print0 | xargs -O COMMAND
+
+    ```
+
+
+    more useful xargs options makes xargs run a separate process max-args for each
+    input:
+
+
+    ```
+
+    capital P -P max-procs is the max number of parallel processes xargs will start
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# awk
+
+
+    awk is a tiny programming language for manipulating columns of data
+
+
+    basic awk program structure
+
+
+    extract a column of text with awk
+
+
+    I only know how to do 2 things with awk but it''s still useful!
+
+
+    ```
+
+    BEGIN {...}
+
+    CONDITION {action}
+
+    CONDITION {action}
+
+    END {...}
+
+    ```
+
+
+    ```
+
+    awk -F, ''{print $5}''
+
+    ```
+
+
+    column single separator quotes? 5th column
+
+
+    this is 99% of what I do with awk
+
+
+    action on lines matching CONDITION
+
+
+    SO MANY unix commands print columns of text (ps! Is!!)
+
+
+    awk program example: sum the numbers in the 3rd column
+
+
+    awk program example: print every line over 80 characters
+
+
+    so being able to get the column you want with awk is GREAT
+
+
+    ```
+
+    { s += $3 };nEND {print s}
+
+    ```
+
+
+    ```
+
+    length($0) > 80
+
+    ```
+
+
+    action
+
+
+    at the end, print the sum!
+
+
+    condition (there''s an implicit {print} as the action)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# # sed\n\nsed is most often used for replacing text in a file\n\n$ sed s/cat/dog/g\
+    \ file.txt\n be a regular expression\n\nchange a file in place with -i\n\nsome\
+    \ more sed incantations...\n\nsed -n 12 p\nprint 12th line\n\nin GNU sed it's\
+    \ -i\nin BSD sed, -i SUFFIX\nconfuses me every time\n\n-i suppresses output so\
+    \ only what you print with 'p' gets printed\n\nsed 5d\ndelete 5th line\n\nsed\
+    \ s+/cat+/dog/+\nuse as a character regex delimiter\n\nsed 6\ndouble space a file\
+    \ (good for long error lines)\n\nsed /cat/d\ndelete lines matching /cat/\n\nway\
+    \ easier than escaping / is like s/cat//dog//\n\nsed '/cat/a dog'\nappend 'dog'\
+    \ after lines containing 'cat'\n\nsed -n 5,30 p\nprint lines 5-30\n\nsed -n s/cat/dog/p\n\
+    only print changed lines\n\nsed 'i17 panda'\ninsert 'panda' on line 17"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# bash tricks\n\n* ctrl + r *\n\nsearch your history!\n\n★ magical braces★\n\
+    $ convert file.{jpg.png}\nexpands to\n\n!!\nands to the last\ncommand run\n$ sudo\
+    \ !!\n\nI use this ♥ constantly ♥\nto rerun commands\n\n$ convert file.jpg file.png\n\
+    {1..5} expands to 1 2 3 4 5\n(for i in {1..100}...)\n\ncommands that start\nwith\
+    \ a space don't go\nin your history. good if\nthere's a \U0001F512 password \U0001F512\
+    \n\nloops\nfor i in *.png\ndo\nconvert $i $i.jpg\ndone\n\n$() \ngives the output\
+    \ of a\ncommand\n\n$ touch file-$(date -I)\n↑\ncreate a file named\nfile-2018-05-25\n\
+    \nmore keyboard shortcuts\nctrl a beginning of line\nctrl e end of line\ncctrl+l\
+    \ clear the screen\n\n+ lots more emacs\nshortcuts too!\n\n![](img/5f5d02ddabdd2009c88fde2963d57414_9_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# more bash tricks
+
+
+    cd -
+
+    changes to the directory you were last in
+
+    npushd & popd let you keep a stack
+
+
+    ctrl+z
+
+    suspends (SIGTSTP)
+
+    the running program
+
+
+    bg
+
+    starts suspended program & backgrounds it (use ''after'' ctrl+z)
+
+
+    fg
+
+    brings backgrounded/suspended program to the foreground
+
+
+    ♡ shellcheck ♡
+
+    shell script linter! helps spot common mistakes.
+
+
+    <()>
+
+    process substitution
+
+    treat process output like a file (no more temp files!)\eg:
+
+    $diff <(ls) <(ls -a)
+
+
+    fc
+
+    "fix command"
+
+    open the last command you ran in an editor
+
+    then run the edited version
+
+
+    type
+
+    tells you if something is a builtin, program, or alias
+
+    try running type on
+
+    (time ping pushd) (they''re all different types)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# disk usage
+
+
+    du
+
+    tells you how much disk
+
+    space files /directories take up
+
+
+    * df.
+
+    tells you how much free space each
+
+    partition has. -h for human-readable sizes
+
+
+    summary: total
+
+    size of all files in
+
+    directory
+
+    -h human readable
+
+    sizes
+
+
+    | Filesystem | Size | Used Avail Use% Mounted on |
+
+    | /dev/sda3 | 18G | G | 2.5G | 86% / |
+
+    | udev | 483M | 4.0K | 483M | 1% /dev |
+
+    | tmpfs | 99M | 1.4M | 97M | 2% /run |
+
+    | /dev/sda4 | 167G | 157G | 9.9G | 95% /home |
+
+
+    df -i
+
+    instead of % disk free,
+
+    report how many inodes
+
+    are used/ free on each
+
+    partition
+
+
+    ncdu
+
+    see what''s using disk space
+
+    navigate with arrow keys
+
+
+    iostat
+
+    get statistics about
+
+    disk reads / writes
+
+    interval to report
+
+
+    +   17.5 GiB [####] /music
+
+    3.2 GiB [##] /pictures
+
+    5.7 MiB [#] /text
+
+    2.0 MiB [] /file.pdf
+
+
+    +   iostat 5
+
+    Device: kB_read/s kB_wrtn/s
+
+    sda 2190.21 652.87
+
+    sdb 6.00 0.00
+
+
+    running out of
+
+    inodes is VERY
+
+    ANNOY - you can''t
+
+    create new files!'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# tar
+
+
+    13
+
+
+    The .tar file format combines many files into one file.
+
+
+    a.txt dir/c.txt
+
+
+    .tar files aren''t compressed by themselves. Usually you gzip them: .tar.gz or
+    .tgz!
+
+
+    Usually when you use the ''tar'' command, you''ll run some incantation
+
+    To unpack a tar.gz, use:
+
+
+    +   - tar -xzf file.tar.gz=
+
+
+    [Drawing of characters asking about xzf? saying learn]
+
+
+    -x is for extract into the current directory by default (change with -C)
+
+
+    -c is for create
+
+    makes a new tar file!
+
+
+    -t is for list
+
+    lists the contents of a tar archive
+
+
+    tar can compress / decompress
+
+    -Z gzip format (.gz)
+
+    -j bzip2 format (.bz2)
+
+    -J xz format (.xz)
+
+    & more! see the man page :)
+
+
+    putting it together
+
+    list contents of a .tar.bz2:
+
+    $tar -tjvf file.tar.bz2 verbose
+
+    create a .tar.gz
+
+    $tar -czf file.tar.gz dir/files to go in the archive
+
+
+    -f is for file
+
+    Which tar file to create or unpack'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# ps
+
+
+    # 14
+
+
+    ps
+
+    ps shows which processes are running
+
+    I usually run ps like this:
+
+
+    wchan
+
+    is for wide. ps auxwww
+
+    will show all the command
+
+    line args for each process
+
+
+    you can choose which columns
+
+    to show with ps (ps -eo ...)
+
+    One cool column is ''wchan'' which
+
+    tells you the name of the
+
+    kernel function if the process
+
+    is sleeping
+
+    try it:
+
+
+    ```
+
+    $ ps aux
+
+    a+ttx
+
+    u means include together
+
+    username column show all
+
+    process
+
+    ps -ef works too)
+
+    ```
+
+
+    e
+
+    is for environment. ps auxe
+
+    will show the environment vars:
+
+
+    ```
+
+    $ ps -eo user,pid,wchan,cmd
+
+    ```
+
+
+    # ★ process state ★
+
+
+    f
+
+    is for "forest" ツ. ps auxf
+
+    Will show you an ASCII art
+
+    process tree:
+
+
+    ps has 3 different sets
+
+    of command line arguments 💔
+
+
+    Here''s what the letters in
+
+    ''s STATE column mean:
+
+
+    +   1. UNIX (1 dash)
+
+    2. BSD (no dash)
+
+    3. GNU (2 dashes)
+
+
+    +   R: running
+
+    S/D: asleep
+
+    Z: zombie
+
+    I: multithreaded
+
+    t+: in the foreground
+
+
+    you can write monotrites like:
+
+    $ ps f -f
+
+    full format
+
+    (UNIX)
+
+
+    pstree can display
+
+    a process tree too'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# top\n\n15\n\n# top\n\na live-updating summary of the top users of your system's\
+    \ resources\n\n> who's using all memory\n\n> chrome obv\n\nlet's explain some\
+    \ numbers in top!\n\n# load average\n\n3 numbers that roughly reflect demand for\
+    \ your CPUs on the system in the last 1, 5, and 15 minutes\n\nif it's higher than\
+    \ the * of CPUs you have, that's often bad\n\n# memory\n\n4 numbers:\n\ntotal\
+    \ / free / used / cached\n\nOne perhaps unexpected thing: total is not free +\
+    \ used!\n\ntotal = free + used + cached filesystem cache\n\n# % CPU\n\n![](img/5f5d02ddabdd2009c88fde2963d57414_14_0.png)\n\
+    \nthis column is given as of % of a single core. If you have 4 cores, this can\
+    \ go up to 400 %!\n\n# RES\n\nthis column is the \"resident set size\" aka how\
+    \ much RAM your process is using.\n\nSHR is how much of the RES is shared with\
+    \ other processes\n\n# htop\n\na prettier & more interactive version of top ★\n\
+    \n```\n1 [## ] 10% \n2 [#### ] 20% \n3 [### ] 5% \n4 [##### ] used cached 5% \n\
+    mem [####################] 4176\nswp [##] 2/256\n```"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# sort & uniq
+
+
+    sort sorts
+
+    its input
+
+    $n sort names.txt
+
+    the default sort is alphabetical.
+
+
+    sort -n numeric sort
+
+    | ''sort -order'' | ''sort -n'' order |
+
+    | 12 | 12 |
+
+    | 15000 | 48 |
+
+    | 48 | 96 |
+
+    | 6020 | 6020 |
+
+    | 96 | 15000 |
+
+
+    sort -h: human sort
+
+    | ''sort -n'' order | ''sort -h'' order |
+
+    | 15 6 | 45 K |
+
+    | 30 M | 30 M |
+
+    | 45 K | 15 G |
+
+    | 200 G | 200 G |
+
+
+    useful example:
+
+    du-sh * sort -h
+
+
+    +   uniq removes duplicates
+
+    a notice there
+
+    b are still 2
+
+    b=> ''a''s! uniq
+
+    a only unifies
+
+    c adjacent
+
+    matching lines
+
+
+    sort + uniq = =
+
+    Pipe something to
+
+    ''sort | uniq'' and you''ll
+
+    get a deduplicated list
+
+    of lines! sort -u does the
+
+    same thing.
+
+
+    +   - a sort -u = =
+
+    b b
+
+    - or sort uniq
+
+
+    uniq -c
+
+    counts each line it saw.
+
+    Recipe: get the top 10 most
+
+    common lines in a file:
+
+    $ foo.txt
+
+    uniq -c
+
+    sort -n
+
+    tail -n 10
+
+
+    ![](img/5f5d02ddabdd2009c88fde2963d57414_15_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# misc commands ❤
+
+
+    | rlwrap |
+
+    adds history & ctrl support to REPLs that don''t already have them (rlwrap stands
+    for readline)
+
+    $ rlwrap python |
+
+
+    | watch |
+
+    rerun a command every 2 seconds |
+
+
+    | pv |
+
+    "pipe viewer", gives you stats on data going through a pipe |
+
+
+    | file |
+
+    figures out what kind of file (png? pdf?) a file is |
+
+
+    | cal |
+
+    a tiny calendar ♡ |
+
+
+    | ts |
+
+    add a timestamp in front of every input line |
+
+
+    | ncdu |
+
+    figure out what''s using all your disk space |
+
+
+    | diff |
+
+    diff 2 files. Run with ''-U 8'' for context. |
+
+
+    | comm |
+
+    find lines 2 sorted files have in common |
+
+
+    | column |
+
+    format input into columns |
+
+
+    | xsel/ xclip |
+
+    copy/paste from system clipboard. (pbcopy /pbpaste on Mac) |'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# head & tail
+
+
+    # head
+
+
+    shows you the first+
+
+    10 lines of a file
+
+
+    if you pipe a program''s output
+
+    to head, the program will
+
+    stop after printing 10 lines
+
+    (it gets sent SIGPIPE)
+
+
+    # tail
+
+
+    tail shows the last 10 lines!
+
+
+    ```
+
+    tail -f FILE
+
+    ```
+
+
+    will follow:
+
+
+    print any new lines added to
+
+    t end of FILE. Super useful
+
+    for log files!
+
+
+    # -n NUM
+
+
+    -n NUM (either head or tail)
+
+    will change the #n lines shown
+
+
+    head -n -NUM show all
+
+    tail -n +NUM but the
+
+    last / first
+
+    NUM lines
+
+
+    # -c NUM
+
+
+    show the first /last NUM
+
+    bytes of the file
+
+
+    head -c k
+
+
+    will show the first
+
+    1024 bytes
+
+
+    # tail --retry
+
+
+    keep trying to open
+
+    file if it''s inaccessible
+
+
+    # tail --pid PID
+
+
+    stop when process PID
+
+    stops running (with -f)
+
+
+    # tail --follow=name
+
+
+    Usually tail -f will follow
+
+    a file descriptor.
+
+
+    tail --follow=name FILENAME
+
+    will keep following the same
+
+    name, eg if the file
+
+    descriptor is rotated.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# less\n\n19\n\nless is a pager\nthat means it lets you\\view (not edit) text\
+    \ files\nor piped in text\nman uses your pager\n(usually less) to display\nman\
+    \ pages\n\n+   many vim shortcuts\nwork in less\n/ search\nn/N next / prev match\n\
+    j/k down /up a line\nm/' mark/return to line\ng/G beginning/end of file\n(gg in\
+    \ vim)\n\nless -r\ndisplays bash escape\ncodes as colours\ntry ls --color less\
+    \ -r\nwith -r without -r\na.txt\na.txt.gz\red,bold\nESCCOM ESC\nCOL;31ma.txt.gz\n\
+    ESCCOM\n\n# q quit\n\n# F\n\n# +\n\nV< lowercase\nedit file in your $EDITOR\n\n\
+    press F to keep reading\nfrom the file as it's\nupdated (like tail -f)\npress\
+    \ Ctrl+C to stop\nreading updates\n\n+ runs a command when\nless starts\nless\
+    \ +F : follow updates\nless +G : start at\nend of file\nless +20% : start 20%\n\
+    into file\nless +foo : search for 'foo'\nright away\n\narrow keys, Home/End,\n\
+    PgUp, Pg Dn work in less"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# # Kill
+
+
+    20
+
+
+    kill doesn''t just kill programs
+
+
+    Which signal kill sends
+
+
+    # kill -l lists all signals
+
+
+    ![](img/5f5d02ddabdd2009c88fde2963d57414_19_0.png)
+
+
+    | name | num |
+
+    |---|---|
+
+    | kill | SIGTERM 15 |
+
+    | kill -9 | SIGKILL 9 |
+
+    | kill -KILL | | |
+
+    | kill -HUP | SIGHUP 1 |
+
+    | kill -STOP | SIGSTOP 19 |
+
+
+    +   1 HUP 2 INT 3 QUIT 4 ILL
+
+    5 TRAP 6 ABRT 7 BUS 8 FPE
+
+    9 KILL 10 USR 11 SEGV 12 USR
+
+    13 PIPE 14 ALRM 15 TERM 16 SIGFLT
+
+    17 CHILD 18 CONT 19 STOP 20 TTSP
+
+    21 TINT 22 TTO 23 URG 24 XCPU
+
+    25 XFS 26 VTLARM 27 PROF 28 WINCH
+
+    29 POLL 30 PWR 31 SYS
+
+
+    kill -SIGNAL PID name or number
+
+
+    # # pgrep
+
+
+    # # pkill
+
+
+    # killall -SIGNAL NAME
+
+
+    signals all processes called NAME for example
+
+    $ killall firefox
+
+
+    prints PIDs of matching running programs
+
+
+    same as pgrep, but signals PIDs found. ex:
+
+
+    useful flags:
+
+
+    pgrep matches firefox firebird
+
+    NOT bash firefox.sh
+
+
+    pkill -f firefox
+
+
+    +   -w wait for all signaled processes to die
+
+
+    To search the whole command line (eg bash firefox.sh)
+
+    use pgrep -f
+
+
+    +   -i ask before signalling
+
+
+    ![](img/5f5d02ddabdd2009c88fde2963d57414_19_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# cat & friends
+
+
+    cat concatenates files
+
+
+    ```
+
+    $ cat myfile.txt
+
+    prints contents of myfile.txt
+
+    ```
+
+
+    ```
+
+    $ cat *.txt
+
+    prints all .txt files put together!
+
+    ```
+
+
+    you can use cat as an EXTREELY BASIC text editor:
+
+
+    +   - Run $ cat > file.txt
+
+    - type the contents (don''t make mistakes)
+
+    - press ctrl+d to finish
+
+
+    ```
+
+    cat -n
+
+    ```
+
+
+    prints out the file with line numbers!
+
+
+    +   1. Once upon a midnight...
+
+    2. Over many a quaint.
+
+    3. While I nodded, nearly
+
+
+    # zcat
+
+
+    cats a gzipped file!
+
+    Actually just a 1-line shell script that runs ''zip -cd'', but easier to remember.
+
+
+    # tee
+
+
+    ''tee file.txt'' will write its stdin to both stdout and file.txt
+
+
+    ```
+
+    stdin -> tee a.txt -> stdout
+
+    a.txt
+
+    ```
+
+
+    how to redirect to a file owned by root
+
+
+    ```
+
+    $ sudo echo "hi" >> x.txt
+
+    ```
+
+
+    this will open x.txt as your user, not as root, so it fails!
+
+    $ echo "hi" | sudo tee -a x.txt will open x.txt as root :)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# lsof
+
+
+    # lsof
+
+
+    stands for list open files
+
+
+    somebody has that file open WHO IS IT??
+
+    I can tell you!
+
+
+    lsof
+
+
+    # what lsof tells you
+
+
+    for each open file:
+
+
+    +   - pid
+
+    - file type (regular? directory? FIFO? socket?)
+
+    - file descriptor (FD column)
+
+    - user
+
+    - filename /socket address
+
+
+    # -p PID
+
+
+    list the files PID has open
+
+
+    # lsof /some /dir
+
+
+    list just the open files in lsome /dir
+
+
+    # -i
+
+
+    list open network sockets (sockets are files!)
+
+
+    +   examples:
+
+    -i -n -p -n & -p "do not resolve"
+
+    -i: 8080 host names /ports/ (also -Pni)
+
+    -i: TCP
+
+    -i -s TCP:LISTEN
+
+
+    # find deleted files
+
+
+    ```
+
+    $lsof | grep deleted
+
+    ```
+
+
+    Will show you deleted files!
+
+    You can recover open deleted files from
+
+
+    ```
+
+    /proc/<pid>/fd/<fd> +
+
+    process that opened the file
+
+    ```
+
+
+    # netstat
+
+
+    another way to list open sockets on Linux is:
+
+
+    +   netstat -tunapl
+
+    tuna, please!
+
+
+    On Mac netstat has different args.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# more useful tools
+
+
+    +   - make
+
+    - jq
+
+    - nohup
+
+    - disown
+
+    - cut/paste
+
+    - sponge
+
+    - xxd
+
+    - hexdump
+
+    - objdump
+
+    - strings
+
+
+    +   - screen
+
+    - tmux
+
+    - date
+
+    - entr
+
+    - seq
+
+    - join
+
+
+    +   - diff -U
+
+    - vipe
+
+    - image magick
+
+    - fish
+
+    - ranger
+
+    - chronic
+
+
+    +   parallel:
+
+    - GNU parallel
+
+    - pigz/pixz
+
+    - sort --parallel'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'love this?
+
+    find more awesome zines at
+
+    → jvns.ca/zines ←'
+  merge: -1
+  img_proc: true
