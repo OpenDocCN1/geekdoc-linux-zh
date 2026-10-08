@@ -1,0 +1,7 @@
+# ## Memory Report Screen Description
+
+The *Memory Report* Screen shown in Figure 13-5 provides information on several types of memory management events. The statistics shown are in the form of counts, not percentages. You may want to look at these counts for a mostly idle system and then observe what takes place as the load on the system is incrementally increased. My experience has been that many more memory bottlenecks occur than CPU bottlenecks, so you may find this screen revealing.
+
+![](bbox=[0.15, 0.36, 0.93, 0.84])
+
+Figure 13-5 HP GlancePlus/UX *Memory Report* Screen Shot

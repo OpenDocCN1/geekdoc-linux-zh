@@ -1,0 +1,11 @@
+At the end of the chapter, I also provide manual pages for many of the commands used in this chapter. Much of what takes place in system administration can only be covered at a cursory level in a user book, and the manual pages provide additional detail but still won’t make you a system administration expert.
+
+The examples in this chapter were performed on Solaris, HP-UX, AIX, and Linux systems; however, the commands and files are similar from one system to another, so you should be able to relate the information in this chapter to your UNIX variant.
+
+Most UNIX variants come with a system administration tool. This tool provides a menu-driven way of performing common system administration tasks such as managing the following: users and groups; disks and file systems; networking; printers; and so on. There is no widely used standard for such management tools, so they are different for each UNIX variant. These tools usually require superuser access to run, because the user has control over the most important and critical aspects of the system. Some of these tools allow users other than superuser to perform a subset of tasks as defined by superuser. I do not cover system administration tools, because they are peculiar to the UNIX variant on which they run and are used mostly by the system administrator. I’ll cover many of the files used by system administrators and some of the more commonly used unintrusive commands. Some of the following sections also appear in other chapters.
+
+# ## Check Processes with ps
+
+![](bbox=[0.04, 0.75, 0.12, 0.83])
+
+To find the answer to “What is my system doing?,” use **ps -ef**. This command provides information about every running process on your system. If, for instance, you want to know whether NFS is running, you simply type **ps -ef** and look for NFS daemons. Although **ps** tells you every process that is running on your system, it doesn’t provide a good summary of the level of system resources being consumed. I would guess that **ps** is the most often issued system administration

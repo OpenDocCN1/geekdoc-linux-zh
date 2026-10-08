@@ -1,0 +1,11 @@
+The packet-switching technology was a success and became known as ARPANet. A few enterprising students developed a way to conduct online conferences, and eventually people recognized the power of online communication.
+
+In the 1970s, ARPA supported the development of protocols, or rules, for transferring data between different computer networks. These internetworking or internet protocols enabled the development of the Internet. The end of the 1970s saw the establishment of links between ARPANet and similar networks in other countries. The net- working “web” began encompassing the globe.
+
+Expansion of the Internet began at a phenomenal rate in the 1980s. Universities and colleges, government agencies, and research companies began to connect to this worldwide network.
+
+The 1990s saw the invention of the Internet browser, which fac- ilitated explosive growth. Now the data could be displayed in more cre- ative formats, and the Internet began drawing the interest of more than hobbyists and researchers. Data transfer speeds increased, and com- mercial internetworking services emerged with speeds comparable to the government system. By mid-1994, the U.S. government removed itself from the day-to-day operations over the Internet.
+
+The Internet is more than information displayed on a browser. It is a network that carries a variety of data. The World Wide Web, or Web, is the fastest growing part of the Internet. It is an Internet facility that links documents locally and remotely and was developed at the European Center for Nuclear Research (CERN) in Geneva for sharing nuclear physics research information. Its origins lie in a proposal by Tim Berners-Lee in 1989. Soon after, in 1991, the first command- line browser was introduced, followed by the Viola X Window browser in 1993, which provided the first graphical capability for the Web. In the same year, CERN introduced its Macintosh browser and the National Center for Supercomputing Applications (NCSA) intro- duced the X Window version of Mosaic. Soon afterwards, Netscape brought its browser to market, followed by Microsoft.
+
+Browsers allowed the graphical representation and formatting of data that, for the first time, gave the Internet mass appeal.

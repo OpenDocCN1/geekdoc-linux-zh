@@ -1,0 +1,139 @@
+
+## About the CD
+
+  本CD-ROM中包含许多UNIX变体的优秀试用软件。CD-ROM上的性能软件是GlancePlus的60天试用版。GlancePlus在本书的性能章节中已有介绍。在大多数系统上，您需要拥有root权限才能安装这些工具。
+
+  CD-ROM上有一个README文件，提供了加载试用软件的详细说明。该README文件包含以下七个部分：
+
+- 1. 安装试用软件并从CD-ROM打印文档
+    - 1.1 交互式安装
+    - 1.2 批处理安装
+- 2. 停止和重启安装的性能工具
+- 3. 从您的系统中移除试用软件
+- 4. 可打印文档信息
+- 5. HP GlancePlus 概述
+- 6. 产品版本信息
+- 7. 获取帮助的地方（电话号码、传真号码和电子邮件地址）
+
+  任何系统都不应缺少像CD-ROM上那样的良好多供应商性能工具。我希望您在安装中发现这些工具有用。
+
+## Technical Support
+
+  Prentice Hall 不为该软件提供技术支持。然而，如果介质有问题，您可以通过电子邮件通知我们问题，以获取替换副本：
+
+disc_exchange@prenhall.com
+
+## UNIX User’s Handbook vi
+
+### Modes and Notations in vi
+
+| Mode or Notation | Description |
+| :--- | :--- |
+| Command Mode | 在命令模式下，您正在发出移动光标或删除文本等命令，而不是插入或更改文本。您可以通过发出如 `i`（插入）或 `a`（追加）等插入模式命令切换到插入模式。 |
+| Insert Mode | 当更改或插入超过一个字符的文本时，您处于插入模式。您可以通过按 Esc 键切换回命令模式。 |
+| `:` (colon commands) | 以 `:` 开头的命令通过按 Return 键完成。 |
+| control (^) commands | 当命令使用 Control (^) 键时，您按住 Control 键，然后按下构成命令的下一个键。例如，`^g` 表示按住 Control 键然后按 g 以获取正在编辑的文件的状态。 |
+| file | 许多命令要求您指定文件名。例如，在命令 `vi file` 中，您将希望编辑的文件名替代 `file`。 |
+| char | 许多命令要求您指定单个字符。例如，在命令 `tchar` 中，您将搜索的字符替代 `char`。 |
+| cursor command | 许多命令要求您指定要执行的光标移动命令。例如，在命令 `d<cursor command>` 中，您用希望执行的命令替代 `<cursor command>`。 |
+| string | 许多命令要求您指定一个字符串。例如，在命令 `/<string>` 中，您用希望搜索的字符串替代 `<string>`。 |
+
+### Starting a vi Session
+
+| Command | Description |
+| :--- | :--- |
+| `vi file` | 编辑 `file`。 |
+| `vi -r file` | 在崩溃后编辑 `file` 的最后一个保存版本。 |
+| `vi -R file` | 以只读模式编辑 `file`。 |
+| `vi +n file` | 编辑 `file` 并将光标置于第 n 行。 |
+| `vi + file` | 编辑 `file` 并将光标置于最后一行。 |
+| `vi file1 file2 file3 ...` | 从 `file1` 编辑到 `file3`，在保存 `file1` 的更改后，您可以输入 `:n` 移动到 `file2`。 |
+| `vi +/<string> file` | 编辑 `file` 并将光标置于包含 `<string>` 的行开头。 |
+
+### Cursor Control Commands in vi
+
+| Command | Cursor Movement |
+| :--- | :--- |
+| `h` 或 `^h` | 向左移动一个字符。 |
+| `j` 或 `^j` 或 `^n` | 向下移动一行。 |
+| `k` 或 `^p` | 向上移动一行。 |
+| `l` 或空格 | 向右移动一个字符。 |
+| `G` | 转到文件的最后一行。 |
+| `nG` | 转到第 n 行。 |
+| `G$` | 转到文件的最后一个字符。 |
+| `1G` | 转到文件的第一行。 |
+| `w` | 转到下一个单词的开头。 |
+| `W` | 转到下一个单词的开头，忽略标点。 |
+| `b` | 转到上一个单词的开头。 |
+| `B` | 转到上一个单词的开头，忽略标点。 |
+| `L` | 转到屏幕的最后一行。 |
+| `M` | 转到屏幕的中间行。 |
+| `H` | 转到屏幕的第一行。 |
+| `e` | 移动到下一个单词的末尾。 |
+| `E` | 移动到下一个单词的末尾，忽略标点。 |
+| `(` | 转到句子的开头。 |
+| `)` | 转到句子的末尾。 |
+| `{` | 转到段落的开头。 |
+| `}` | 转到下一个段落的开头。 |
+| `0` 或 `\` | 转到当前行的第一列。 |
+| `n\` | 转到当前行的第 n 列。 |
+| `^` | 转到当前行的第一个非空白字符。 |
+| `$` | 转到当前行的最后一个字符。 |
+| `+` 或 Return | 转到下一行的第一个字符。 |
+| `-` | 转到上一行的第一个非空白字符。 |
+
+### Adding Text in vi
+
+| Command | Insertion Action |
+| :--- | :--- |
+| `a` | 在光标后追加新文本。 |
+| `A` | 在当前行末尾后追加新文本。 |
+| `i` | 在光标前插入新文本。 |
+| `I` | 在当前行开头前插入新文本。 |
+| `o` | 在当前行下方打开一行并插入。 |
+| `O` | 在当前行上方打开一行并插入。 |
+| `:r file` | 读取 `file` 并在当前行后插入。 |
+| `:nr file` | 读取 `file` 并在第 n 行后插入。 |
+| `Esc` | 返回命令模式。 |
+| `^V char` | 在插入时忽略 `char` 的特殊含义。这用于插入特殊字符。 |
+
+### Deleting Text in vi
+
+| Command | Deletion Action |
+| :--- | :--- |
+| `x` | 删除光标处的字符。也可以在 `x` 前加数字以指定要删除的字符数。 |
+| `nx` | 从当前字符开始删除 n 个字符。 |
+| `X` | 删除前一个字符。也可以在 `X` 前加数字以指定要删除的前一个字符数。 |
+| `nX` | 删除前 n 个字符。 |
+| `dw` | 删除到下一个单词的开头。 |
+| `ndw` | 从当前单词开始删除接下来的 n 个单词。 |
+| `dG` | 删除行直到文件末尾。 |
+| `dd` | 删除整行。 |
+| `ndd` | 从当前行开始删除 n 行。 |
+| `db` | 删除前一个单词。 |
+| `ndb` | 从当前单词开始删除前 n 个单词。 |
+| `:n,md` | 删除第 n 行到第 m 行。 |
+| `D` 或 `d$` | 从光标删除到行末尾。 |
+
+## DATE DUE
+
+| | | |
+|---|---|---|
+| | | |
+
+## Commonly Used Redirection Forms
+
+| Command or Assignment | Example | Description |
+| :--- | :--- | :--- |
+| `<` | `wc -l < .login` | 标准输入重定向：执行 **wc**（字数统计）并列出 **.login** 中的行数（**-l**） |
+| `>` | `ps -ef > /tmp/processes` | 标准输出重定向：执行 **ps** 并将输出发送到文件 **/tmp/processes** |
+| `>>` | `ps -ef >> /tmp/processes` | 追加标准输出：执行 **ps** 并将输出追加到文件 **/tmp/processes** 的末尾 |
+| `>!` | `ps -ef >! /tmp/processes` | 追加输出重定向并覆盖 **noclobber**：即使 **/tmp/processes** 存在也写入覆盖 |
+| `>>!` | `ps -ef >>! /tmp/processes` | 追加标准输出并覆盖 **noclobber**：追加到 **/tmp/processes** 的末尾 |
+| `\|` (pipe) | `ps \| wc -l` | 运行 **ps** 并将其结果作为 **wc** 的输入 |
+| **0** - 标准输入 | | |
+| **1** - 标准输出 | | |
+| **2** - 标准错误 | `cat program 2> errors` | 将文件 **program** **cat** 到标准输出，并将错误重定向到文件 **errors** |
+| | `cat program 2>> errors` | 将文件 **program** **cat** 到标准输出，并将错误追加到文件 **errors** |
+| | `find / -name '*.c' -print > cprograms 2>errors` | **find** 系统中所有以 **.c** 结尾的文件，将文件列表放在当前工作目录中的 **cprograms**，并将所有错误（文件描述符 2）发送到当前工作目录中的文件 **errors** |
+| | `find / -name '*.c' -print > cprograms 2>&1` | **find** 系统中所有以 **.c** 结尾的文件，将文件列表放在当前工作目录中的 **cprograms**，并将所有错误（文件描述符 2）发送到与文件描述符 1（**cprograms**）相同的位置 |

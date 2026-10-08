@@ -1,0 +1,13 @@
+The GUI layers provide increasingly richer ease-of-use functions in a progressive series of layers that buffer the end user from the “user-hostile,” character-based interface of the operating system layer.
+
+# The X Window System
+
+The X Window System consists of the following:
+
++   - Xlib - Low-level library for programming window manipulation; graphics capabilities such as line drawing and text placement; controlling display output, mouse, and keyboard input; and application network transparency.
+- Xt Intrinsics - Higher-level library for programming widgets and gadgets (graphical controls components like menus, scrollbars, and push buttons).
+- Display servers - Hardware-specific programs, one per display, that manage the graphical input and output.
+- Interclient communication conventions (ICCC) - A manual specifying standards for how X client programs should communicate with each other.
+- Configuration files - One configuration file that specifies the default session to start (**sys.x11start**) and another specifying values for resources used to shape the X environment (**sys.Xdefaults**).
+
+Through these mechanisms, X provides the standard upon which the graphical part of the network-oriented, client/server, distributed computing paradigm is based. A knowledge of **Xlib** and the **Xt** Intrinsics is important for programming in X and for programming at the Motif level. For system administrators, however, as long as the display servers work and X client applications are ICC-compliant, you shouldn’t need to delve into the X layer. CDE enables you to view X pretty much as part of “all that underlying technological infrastructure stuff” and focus on developing appropriate configurations of CDE to meet your users’ work context.
