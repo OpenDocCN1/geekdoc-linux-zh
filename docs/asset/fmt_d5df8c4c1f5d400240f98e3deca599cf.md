@@ -1,0 +1,62 @@
+
+描述代价函数的几何结构对于确保学习算法的收敛至关重要。例如，最终结果基于两个假设（11 和 12），这两个假设总结了最终收敛区域内代价函数的几何结构。这比局部搜索要困难得多，在局部搜索中参数向量可以探索代价函数的每一个方面。
+
+信息几何提供了描述代价函数全局几何结构的元素。可以将代价函数表示为密度。一个例子是线性回归 `$f(x) = w^Tx + \epsilon$`，其中 `$\epsilon$` 代表高斯噪声。对于 `$f(x|w)$`，费斯尔信息成为高斯模型的一部分：
+
+```
+$p(y|w) = C \exp\left(-\frac{(y-w^Tx)^2}{2\sigma^2}\right)$
+```
+
+(16)
+
+最优参数通过最小化 `$p(z,w)$` 与真值 `$p(z)$` 之间的 Kullback-Leibler 散度找到。这等同于方程 1 中均方误差的优化：
+
+```
+$E_{z \sim p(z)} \left[(p(z) - p^*(z))^2\right] = \text{Constant}$
+```
+
+(17)
+
+核心思想是使用某种反映了分布 `$p(z|w)$` 相对于参数 `$w$` 接近程度的东西来定义参数空间 `$w$`。对于多层结构，可以使用层来实现函数。新的距离对应于参数空间的几何结构，以表示这些权重向量的复杂度。
+
+分布 `$p(z|w)$` 和 `$p(z|w+\delta w)$` 之间的无穷小距离可以定义为：
+
+```
+$D(w + \delta w) \approx J(w)^T \delta w \delta w$
+```
+
+(18)
+
+其中 `$J(w)$` 是费斯尔信息矩阵：
+
+```
+$J(w) = \int p(z) \nabla_w \log p(z|w) \nabla_w \log p(z|w)^T dz$
+```
+
+(19)
+
+费斯尔信息矩阵的行列式 `$J(w)$` 是参数 `$w$` 的光滑函数。因此，参数空间由*黎曼域*组成，其中 `$J(w)$` 为正，这些域由 `|J(w)|=0` 的临界面分隔。
+
+# 自然梯度
+
+自然梯度（参见《NEUROMORPHICS AND INFORMATION GEOMETRY》）旨在到达这样的黎曼域。自然梯度 `$\nabla_w C(w)$` 在欧几里得空间中使用最陡下降方向。黎曼流形上的最陡下降与欧几里得空间不同。它定义为
+
+# 临界子空间与收敛
+
+考虑一个具有两个全连接层和 `$n$` 个隐藏单元的网络。权重空间包含隐藏单元所有参数的部分，并被临界子空间限定。景观包含多个方向，在这些方向上无法检测代价的一阶变化。随机梯度下降会卡在这些极平坦的区域，因为 `$C(w)$` 为零。为了避免这种情况，应该使用自然梯度分量来选择每个样本 `$z_t$`，这进入了一个更有趣的领域。两者都揭示了对称结构（Fukumi and Amari, 2000）。重复实验（《STATISTICAL MECHANICS OF ON-LINE LEARNING AND GENERALIZATION》）为在线算法的对称性属性带来了新的见解。自然梯度方程 21 在此背景下的表现异常（Bayard and Amari, 1999）。在线算法由于计算需求在世纪初就被引入了。今天，在线算法为大规模学习问题提供了显著的性能。当系统不断适应时，在线算法也是必要的，且可以在通用梯度下降算法的框架下被理解。自然信息提供了关于在线算法在局部解附近性能准确性的分析。二阶在线算法提供了渐近最优的速度。
+
+# 讨论
+
+在线算法在搜索阶段的行为尚不为人知。信息几何将搜索描绘为由立方约束分隔的黎曼流形系。这为所有在线算法提供了实质性的保证。在线梯度可以克服随机选择过程引入的噪声。统计力学方法为这些主题带来了新的见解。结果可能是极大提高在线学习的先驱。
+
+# 阅读地图：人工神经网络中的学习
+
+参考文献
+
+- Dennis, J., and Schubert, R., 1983, Numerical Methods for Unconstrained Optimization and Nonlinear, Englewood Cliffs: Prentice Hall.
+
+- Lee, I., and Amari, S., 2000, Local minima and plateaus in structural characteristics of neural networks, Neural Networks, 13:317–320.
+
+- Le, C., Bottou, L., and Gall, G., and Saul, R., 1998, Efficient backpropagation of Neural Networks, Lecture Notes in Computer Science 1524: New York: Springer-Verlag.
+
+- Ljung, J., and Söderberg, S., 1983, Adaptive Filter Prediction Theory, Prentice Hall.
