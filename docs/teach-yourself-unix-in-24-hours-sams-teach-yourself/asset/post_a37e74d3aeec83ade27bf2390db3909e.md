@@ -1,0 +1,337 @@
+
+## more program
+
+more program
+
+- entering commands, 142
+- man command, 141
+- viewing large files, 139-143
+- etc/passwd file, 142-143
+- More prompt commands, 141
+- Motif, 5
+
+## motion commands
+- emacs editor, 289
+- vi editor, 219-220
+
+## moving
+- files (mv command), 118-119
+- sentences and paragraphs (vi editor), 260-270
+
+- -command, 268
+- / command, 268
+- / command, 268
+
+- mput command (ftp program), 484
+- MS-DOS Interface, 2
+- msh (shell command), 327
+- -time n flag (find command), 398-400
+
+- multiple flags (du command), 81
+- multichoise system, 2
+- Multis, 3
+- multitasking, 2
+- multiuser systems, 5-6
+- mv
+
+- directories, renames, 120
+- files
+  - moving, 118-119
+  - renaming, 119-120
+
+## N
+- n character (C programming language), 511
+- man command (vi editor), 236, 240
+- man command, 141
+- emacs editor, 296
+- vi editor, 232-234
+- -n flag (pr command), 388
+- cat program (nine files), 153-154
+- grep command, 172-174
+- pr command, 388
+- sort command, 151-152
+- -n flag (mask command), 408-409
+- -n format (head command), 134
+- Rename command, 141
+- -name flag (find command), 399-400
+- -name pattern flag (find command), 398
+- NAME variable (environment variables), 316
+- named command, 294, 303
+- naming directories, 115
+- National Library in Venice, 460
+- file system, 58
+- gopher program, 455-458
+- Netscape (Navigator)
+- command, 431
+- customizing (General Preferences), 435-440
+- Appearance tab, 437
+- Fonts, 438
+- Helpers tab, 439
+- Images, 439
+- starting, 427-431
+- local files, specifying (command line), 430-431
+- troubleshooting, 428
+- URLs, specifying (command line), 429-430
+- What's new? 429
+- X Window System, 427
+- -n flag (test command), 352
+- net directory, 49
+- net command, 445
+- Netscape, 462
+- Bookmark menu, 431
+- customizing, 437-440
+- customizing (General Preferences)
+- Appearance tab, 437
+- Fonts, 438
+- Helpers tab, 439
+- Images, 439
+- starting, 427-431
+- local files, specifying (command line), 430-431
+- troubleshooting, 428
+- URLs, specifying (command line), 429-430
+- What's new? 429
+- X Window System, 427
+- networks (multimedia), 29
+- newmail, 319
+- newsgroups, 467, 478
+- hierarchies, 467
+- rn program, 468
+- group alias, 469-470
+- INT variable, 469
+- start up, 470-471
+- starting options, 468
+- SHELL environment, 474
+- r program (newsgroups)
+- command, 474
+- reading articles, 472-475
+- unsubscribing from newsgroups, 471-472
+- tpin program, 475-476
+- next search command (vi editor), 232-234
+- next-file command (vi editor), 240
+- nf command, 141
+- WF variable (awk command), 191
+- 190, 191
+- -bp path-matching option, 156
+- command flag, 155
+- default settings, 156
+- numbering lines, 153-157
+- quotation marks, 157
+- = flag, 156-157
+- noninteractive deletes, 320
+- Norton Utilities, 123
+- notation (aliases), 340
+- = equal, 193
+- egrep command, 175
+- gopher program, 458
+- math notes, 36
+- regular expressions, 167
+- RPN, 36
+- WR variable (awk command), 191
+- ns command, 141
+- -nt flag (test command), 354
+- local characters, 144
+- awk command (NR variable), 191
+- numbering lines (files), 153-154
+- cat program, 153-154
+- l command, 153-157
+- vi editor, 255-257
+
+## PRINTER environment variable 559
+
+- numeric systems, 38
+- numeric computing, sums, 193
+- numeric comparisons (test command), 352
+- numeric equivalents (permissions), 100
+- numeric permissions strings, calculating, 102-104
+- numeric repeat repeats (vi editor), 253-255
+- moving (vi editor), 266-270
+- ( command, 268
+- ) command, 268
+- / command, 268
+- / command, 270
+- tightness limits (fmt command), 273-274
+- pipelines, 134-135, 144
+- cat program, 138
+- re-routing with tee command, 196-197
+- plus sign (vi editor), 234
+- -Pn flag (lp command), 384
+- pointers (C programming language), 524-526
+- postfix fixers, 38-39
+- postfix notices, 36
+- passed command, 25
+- password entry, 124-125
+- password works, 6
+- changed (passed command), 25
+- choosing, 26-27
+- initial, 23
+- PATH variable, 55
+- variables, pathnames, absence of /pattern command, 141
+- -Pr flag (pr command), 384
+- -f flag, 385
+- print jobs, 387-391
+- comparing directory contents, 389-390
+- O command (vi editor), 215-216
+- o command (vi editor), 214-215
+- -O flag (test command), 354
+- oo character (C programming language), 268
+- open command (ftp command), 484
+- Open Desktop, 6
+- Windows, operating systems (CT), 31
+- binary systems, 516
+- bitwise operators, 514
+- unary systems, 515
+- -of flag (test command), 354
+- redirecting, 146
+- standard output, 151
+- output (Sun Systems), 131-132
+- file, 51
+- system, 50
+- PDP-7, 11
+- percent sign (%), 24
+- permission strings, 74-75
+- perms, 92-93
+- absolute values, 98
+- binary conversion, 99
+- binary elements, 100
+- concentric circles of, 98
+- default (um command), 106-107
+- header information, adding, 389
+- two-column mode, 388
+- preference lists, 52, 61
+- prefixes, adding with sed command, 184
+- print command, 188-189
+- -print flag (test command), 398
+- job name, 395
+- print jobs, 388
+- two-column mode, 388
+- from print queues, 397
+- print queue, 385-386
+- limiting output, 392-393
+- print requests, 394
+- resubmitting, 393-394
+- printer status, checking, 393
+- removing print jobs, 393
+- -p command (mails), 48
+- -P flag lpr command, 388
+- -p flag mkdir command, 10
+- printer, 57
+- configuration files, /etc/
+- capfile, 380-381
+- PRINTER environment variable, 383-385
+- paragraphs assigning to UNIX commands (vi editor), 272-273
+- modifying (chmod command), 96-98
+- numeric equivalents, 100-103
+- numeric strings, calculating, 102-104
+- parts, 88
+- setting new (chmod command), 98-102
+- pipe (|) command, 134-135
+
+![](img/f32f6f53c1292ebafcd2b4ff01b1c9_564_0.png)
+
+## printers script
+
+- script (finding local printers), 380-383
+- awk script, creating, 381-382
+- PRINTER event variable, 383
+- rehash command, 382
+- printf function (C programming language), 511
+- printing files, 384-387
+- aliases, print queue, 385-386, 391-394
+- specifying printers, 384-385
+- procedural libraries, 47
+- processes, 379
+- errant processes, 377
+- running in background, 365-368
+- & symbol (meaning) automatically, 367
+- files, processes, 366
+- input/output, 367
+- job ID, 365
+- c command, stopping, 362-365
+- fg command, 362-364
+- screen-oriented programs, 363-364
+- terminating (kill command), 374-377
+- hang signal (SIGHUP), 376
+- kill signal (SIGKILL), 376
+- logging out, 377
+- specifying signals to kill command, 374-375
+- tracking (ps command), 368-374
+- -ax flag, 373
+- BSD-style flags, 368-369
+- status values, 371
+- -sf flag, 372
+- zombie process, 371
+- wedged processes, 375
+- zombies, 378
+
+## see also jobs
+
+- programming languages, 5
+- programs
+  - archie, see archive program
+  - cat
+    - -nf flag, 153-154
+    - numbering file, 153-154
+    - pipelines, 138
+    - -s flag, 136-137
+    - -v flag, 136
+    - 139-139
+    - ftp, see ftp program
+    - -n format (pr command), 134
+  - pipelines, 134-135
+  - entering commands, 142
+  - etc/passwd file, 142-143
+  - viewing large files, 139-143
+  - tail, view, 139
+  - vi editor, 200
+  - colon commands, 236-240
+  - control-commands, 207-209
+  - cursor keys, 205-208
+  - deleting text, 229-230
+  - insert mode, 213-214
+  - insertion, 219-220
+  - saving files, 218-220
+  - searching, 229-234
+  - starting options, 234-236
+  - SHELL environment, 274
+  - text, 210-220
+  - TERM variable, set, 203-204
+  - unknown-type message, 205
+  - viewing files, 229-230
+  - wq command, 229
+  - -wc flag, 147-149
+  - setprompt, 339-340
+  - values, 338
+  - protocols, 467-478
+  - Internet, 426-427
+  - ps command, 306-374
+  - -ag flag, 372-373
+  - -ax flag, 373
+  - flags (BSD-style), 368-369
+  - Sequential workout output, 374
+  - Sun workload output, 374
+  - -uf flag, 372
+  - punctuation in commands, sequencing, 170-171
+
+## P
+- put command (ftp program), 484
+- pwd command, 508
+- ftp command, 484-4
+
+## Q
+- q command (vi editor), 220, 237
+- q command, 141
+- emacs editor, 296
+- q' command (vi editor), 220, 237
+- Queensland University of Technology, 461
+- query-reference file (emacs editor), 294-296
+- options, 208
+- question mark (filename wildcards), 162-164
+- echo command, 162
+- limit number of matches, 162-164
+- queuing systems (printing), 391-394
+- limit output, 392-393
+- matible queue, 391-392
+- print requests, 394
+- resubmitting, 393-394
+- printer status, checking, 393
+- removing print jobs, 393
