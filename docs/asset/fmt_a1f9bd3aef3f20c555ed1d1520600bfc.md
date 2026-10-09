@@ -1,0 +1,46 @@
+
+Based on the new contents of the `hello` file (`ls: cannot access ‘nonexistent’: No such file or directory`), what can you surmise about the function of `?>`? `'> Here, `2` is a file descriptor for standard error.
+
+# Task 3:
+
+Sometimes, you want to redirect both output and error to the same place. In ye olden days, you would have to do something ugly like this: `ls foo > bar 2>&1`
+
+However, modern versions of `Bash` have an easy-to-use shortcut: `ls foo >& bar`
+
+# Task 4:
+
+We've talked about redirecting output, but what about input? To learn about that, run the following commands:
+
+```
+cat < hello
+
+read foo << "foo"
+
+echo $foo
+```
+
+```
+cat << END-OF-FILE > goodbye
+
+hello
+
+goodbye
+
+END-OF-FILE
+
+cat goodbye
+```
+
+In short: `<` redirects input from a file name, `<<` starts a here document, and `<<<` redirects input from another command.
+
+# Task 5:
+
+You can also create your own file descriptors. Observe:
+
+- `exec 3> foo`
+- `echo "Hello World" >&3`
+- `cat foo`
+- `exec 3>&-`
+- `echo "fail" >&3`
+
+What this is doing is opening file descriptor `3` (for both reading and writing), with the file `foo`, and sending output to that. The fourth line then closes the file descriptor, causing the last `echo` command to fail.
