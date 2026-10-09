@@ -1,0 +1,297 @@
+
+## 第8章：游戏和交互环境中的非图形技术
+
+```cpp
+13d_polygon_ivertex *
+swap_iv =
+&(((*target->polygons[polygon_idx]->ivertices))
+[target->polygons[polygon_idx]->next_index()]);
+for(i=0; i<numv/2; i++) {
+*swap_iv = *((*target->polygons[polygon_idx]->ivertices))[i];
+(*(*target->polygons[polygon_idx]->ivertices))[i] =
+(*(*target->polygons[polygon_idx]->ivertices))[numv-1 - i];
+(*(*target->polygons[polygon_idx]->ivertices))[numv-1 - i] =
+*swap_iv;
+
+// don't swap the tex coords (i.e. swap them back)
+if(fp_texcoord) {
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[numv-1 - i]))
+->tex_coord =
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[i]))
+->tex_coord;
+
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[i]))
+->tex_coord =
+((13d_polygon_ivertex_textured *)swap_iv)->tex_coord;
+}
+
+if(fp_texcoord) {
+((13d_polygon_ivertex_textured *)swap_iv)->tex_coord =
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[0 ]))
+->tex_coord;
+for(i=0; i<numv-1; i++) {
+
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[i ]))
+->tex_coord =
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[i+1 ]))
+->tex_coord;
+
+((13d_polygon_ivertex_textured *)
+( & (*(*target->polygons[polygon_idx]->ivertices))[i ]))->tex_coord =
+((13d_polygon_ivertex_textured *)swap_iv)->tex_coord;
+}
+
+target->polygons[polygon_idx]->ivertices->num_items =
+target->polygons[polygon_idx]->ivertices->num_items - 1;
+
+p->texture = new 13d_texture;
+p->texture->tex_data = mesh->tex_data;
+p->texture->owns_tex_data = false;
+
+// no texture coord file found, so assign default tex coordinates
+if(!fp_texcoord)
+p->texture->0 = (**(target->polygons[polygon_idx]->vlist))
+[(** (target->polygons[polygon_idx]->ivertices))[0].ivertext);
+p->texture->u = (**(target->polygons[polygon_idx]->vlist))
+[(** (target->polygons[polygon_idx]->ivertices))[1].ivertext);
+p->texture->v = (**(target->polygons[polygon_idx]->vlist))
+[(** (target->polygons[polygon_idx]->ivertices))
+[p->ivertices->num_items - 1].ivertext);
+
+p->assign_tex_coords_from_tex_space(*p->texture);
+}
+
+target->polygons[polygon_idx]->compute_center();
+target->polygons[polygon_idx]->compute_sfcmormal();
+
+p->plane.align_with_point_normal(p->center.original, normalized(p->sfcmormal.original -
+p->center.original));
+
+}
+
+target->num_xforms = 2;
+
+orientation.set(
+float_to_13d_real(xaxis_x),
+float_to_13d_real(yaxis_x),
+float_to_13d_real(zaxis_x),
+int_to_13d_real(0),
+float_to_13d_real(xaxis_y),
+float_to_13d_real(yaxis_y),
+float_to_13d_real(zaxis_y),
+int_to_13d_real(0),
+float_to_13d_real(xaxis_z),
+float_to_13d_real(yaxis_z),
+float_to_13d_real(zaxis_z),
+int_to_13d_real(0),
+int_to_13d_real(0),
+int_to_13d_real(0),
+int_to_13d_real(0),
+int_to_13d_real(1));
+
+target->modeling_xforms[0] =
+orientation;
+
+position.set(int_to_13d_real(1),
+int_to_13d_real(0),
+int_to_13d_real(0),
+float_to_13d_real(posx),
+int_to_13d_real(0),
+int_to_13d_real(1),
+int_to_13d_real(0),
+float_to_13d_real(posy),
+int_to_13d_real(0),
+int_to_13d_real(0),
+float_to_13d_real(posz),
+int_to_13d_real(0),
+int_to_13d_real(0),
+int_to_13d_real(1));
+
+target->modeling_xforms[1] = position;
+target->modeling_xform = target->modeling_xforms[1] |
+target->modeling_xforms[0];
+}
+
+if(fp) fclose(fp);
+if(fp_texcoord) fclose(fp_texcoord);
+}
+
+void update( I3d_object *target) {
+I3d_object_clipable_boundable_collidable *obj;
+obj = dynamic_cast<I3d_object_clipable_boundable_collidable *> (target);
+
+I3d_plugin_videoscape_mesh_seeker *mesh;
+mesh = (I3d_plugin_videoscape_mesh_seeker *)target->plugin_data;
+
+I3d_point pos;
+I3d_vector move;
+
+pos.set(target->modeling_xform.a[0][3],
+        target->modeling_xform.a[1][3],
+        target->modeling_xform.a[2][3],
+        target->modeling_xform.a[3][3]);
+
+if(mesh->movement_state == NONE) {
+    I3d_vector rot;
+    rot.set(target->modeling_xform.a[0][0],
+            target->modeling_xform.a[1][0],
+            target->modeling_xform.a[2][0],
+            target->modeling_xform.a[3][0]);
+    target->modeling_xform =
+    target->modeling_xform | I3d_mat_rot(rot, mesh->turning_velocity);
+} else if(mesh->movement_state == AROUND_VUP) {
+    I3d_vector rot;
+    rot.set(target->modeling_xform.a[0][1],
+            target->modeling_xform.a[1][1],
+            target->modeling_xform.a[2][1],
+            target->modeling_xform.a[3][1]);
+    target->modeling_xform =
+    target->modeling_xform | I3d_mat_rot(rot, mesh->turning_velocity);
+} else if(mesh->movement_state == AROUND_VFW) {
+    I3d_vector rot;
+    rot.set(target->modeling_xform.a[0][2],
+            target->modeling_xform.a[1][2],
+            target->modeling_xform.a[2][2],
+            target->modeling_xform.a[3][2]);
+    target->modeling_xform =
+    target->modeling_xform | I3d_mat_rot(rot, mesh->turning_velocity);
+} else if(mesh->movement_state == ALONG_VFW) {
+    move.set(target->modeling_xform.a[0][0],
+             target->modeling_xform.a[1][0],
+             target->modeling_xform.a[2][0],
+             target->modeling_xform.a[3][0]);
+    move.set( I3d_mulir(mesh->moving_velocity, move.X_),
+              I3d_mulir(mesh->moving_velocity, move.Y_),
+              I3d_mulir(mesh->moving_velocity, move.Z_),
+              int_to_I3d_real(0));
+} else if(mesh->movement_state == ALONG_VRI) {
+    move.set(0,0,0,0);
+    move_set(target->model_ing_xform->a[0][1],
+           target->model_ing_xform->a[1][1],
+           target->model_ing_xform->a[2][1],
+           target->model_ing_xform->a[3][1]);
+    move_set(13d_mulrr(mesh->moving_velocity, move_X),
+           13d_mulrr(mesh->moving_velocity, move_Y),
+           13d_mulrr(mesh->moving_velocity, move_Z),
+           int_to_13d_real(0));
+} else if (mesh->movement_state == ALONG_VUP) {
+    move_set(0.0, 0.0, 0.0);
+    move_set(target->model_ing_xform->a[0][2],
+             target->model_ing_xform->a[1][2],
+             target->model_ing_xform->a[2][2],
+             target->model_ing_xform->a[3][2]);
+    move_set(13d_mulrr(mesh->moving_velocity, move_X),
+             13d_mulrr(mesh->moving_velocity, move_Y),
+             13d_mulrr(mesh->moving_velocity, move_Z),
+             int_to_13d_real(0));
+}
+
+13d_polygon_3d node *n;
+13d_sector *sector;
+sector = dynamic_cast<13d_sector *> (target->parent);
+
+sector->reset();
+
+int some_collision_occurred = 1;
+
+pos = pos + move;
+obj->new_position = pos;
+
+obj->prevent_collision = 1;
+13d_real explosion_factor = int_to_13d_real(0.1);
+
+while(some_collision_occurred) {
+    some_collision_occurred = 0;
+
+    n = sector->noncullcd_polygon_nodes;
+    while(n) {
+        13d_polygon_3d_collidable *poly3;
+
+        poly3 = dynamic_cast<13d_polygon_3d_collidable *> (n->polygon);
+        if(poly3 &&
+           !(dynamic_cast<13d_polygon_3d_portal *> (n->polygon)))
+        {
+            while(obj->detect_collision_with(poly3)) {
+                pos =
+                     obj->new_position =
+                     obj->new_position + obj->bounce * explosion_factor;
+                some_collision_occurred = 1;
+                explosion_factor = 13d_mulrr(explosion_factor,2);
+            }
+        }
+
+        n=n->next;
+    }
+
+for(int iobj=0; iobj<sector->objects->num_items; iobj++) {
+if ( *sector->objects][iobj] != target ) {
+
+13d_object_clipable_boundable *obj2;
+
+obj2= dynamic_cast<13d_object_clipable_boundable *>
+
+(\ *sector->objects][iobj] ) ;
+
+if(obj2) {
+
+if(obj2->detect_collision_with(obj2)) {
+
+pos=
+obj->new_position =
+obj->new_position + obj->bounce * explosion_factor;
+some_collision_occurred = l;
+explosion_factor = 13d_mwri (explosion_factor, 2 );
+}
+}
+}
+}
+
+target->model_ing_xform_a[0] [3] = pos_a[0];
+target->model_ing_xform_a[1] [3] = pos_a[1];
+target->model_ing_xform_a[2] [3] = pos_a[2];
+target->model_ing_xform_a[3] [3] = pos_a[3];
+
+obj->prevent_collision = 0;
+
+n = sector->nonculled_polygon_nodes;
+
+while(n) {
+
+13d_polygon_3d_portal_colidable *portal;
+
+portal = dynamic_cast<13d_polygon_3d_portal_collidable *>(n->polygon);
+if(portal) {
+if (obj2->detect_collision_with(portal) == 1) {
+
+printf("CROSSING PORTAL INTO %p", portal->connected_sector);
+
+}
+
+target->parent = portal->connected_sector;
+
+int idx; for(idx=0; idx<sector->objects->num_items; idx++) { if(*sector->objects][idx] == target) {
+int idx2;
+for(idx2=idx; idx2<sector->objects->num_items-l; idx2++) {
+
+*sector->objects][idx2] = (*sector->objects][idx2+1];
+}
+
+*sector->objects][idx2] = NULL;
+break;
+}
+}
+sector->objects->num_items--;
+
+sector = portal->connected_sector;
+sector->objects->next_index();
+
+(*sector->objects][sector->objects->num_items-1] =
+
+dynamic_cast<13d_object_clipable_boundable *>(target) 1;
+```

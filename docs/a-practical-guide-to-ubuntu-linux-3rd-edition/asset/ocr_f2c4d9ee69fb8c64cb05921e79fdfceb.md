@@ -1,0 +1,31 @@
+You can correct such mistakes in several ways: erase one character at a time, back up a word at a time, or back up to the beginning of the command line in one step. After you press RETURN, it is too late to correct a mistake: At that point, you must either wait for the command to run to completion or abort execution of the program (page 151).
+
+# ## ERASING A CHARACTER
+
+While entering characters from the keyboard, you can back up and erase a mistake by pressing the *erase key* once for each character you want to delete. The erase key backs over as many characters as you wish. It does not, in general, back up past the beginning of the line.
+
+The default erase key is BACKSPACE. If this key does not work, try pressing DEL or CONTROL-H. If these keys do not work, give the following stty¹ command to set the erase and line kill (see “Deleting a Line”) keys to their default values:
+
+```
+```
+$ stty ek
+```
+```
+
+# ## DELETING A WORD
+
+You can delete a word you entered by pressing CONTROL-W. A word is any sequence of characters that does not contain a SPACE or TAB. When you press CONTROL-W, the cursor moves left to the beginning of the current word (as you are entering a word) or the previous word (when you have just entered a SPACE or TAB), removing the word.
+
+# ## CONTROL-Z SUSPENDS A PROGRAM
+
+> > tip Although it is not a way of correcting a mistake, you may press the suspend key (typically CONTROL-Z) by mistake and wonder what happened. If you see a message containing the word Stopped, you have just stopped your job using job control (page 255). If you give the command fg to continue your job in the foreground, you should return to where you were before you pressed the suspend key. For more information refer to “bg: Sends a Job to the Background” on page 309.
+
+# ## DELETING A LINE
+
+Any time before you press RETURN, you can delete the line you are entering by pressing the *(line)* kill key. When you press this key, the cursor moves to the left, erasing characters as it goes, back to the beginning of the line. The default line kill key is CONTROL-U. If this key does not work, try CONTROL-X. If these keys do not work, give the stty command described under “Erasing a Character.”
+
+# ## ABORTING EXECUTION
+
+Sometimes you may want to terminate a running program. For example, you may want to stop a program that is performing a lengthy task such as displaying the
+
+1. The command stty is an abbreviation for set teletypewriter, the first terminal UNIX was run on. Today stty is commonly thought of as meaning set terminal.

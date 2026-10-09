@@ -1,0 +1,17 @@
+uninstall, and configuration processes for thousands of software packages.
+
+We discuss packages in Chapter 15 and ports in Chapter 16.
+
+# **Customizable Builds**
+
+FreeBSD provides a painless upgrade procedure, but it also lets you precisely customize the operating system for your hardware. Companies like Apple do exactly this, but they control both the hardware and the software; FreeBSD pulls off the same trick on commodity hardware.
+
+# **Advanced Filesystems**
+
+A *filesystem* is how information is stored on the physical disk—it’s what maps the file *My Resume* to a series of zeros and ones on a hard drive. FreeBSD includes two well-supported filesystems, UFS (Chapter 11) and ZFS (Chapter 12). UFS has been around for multiple decades and is highly damage-resistant. ZFS is younger but includes features such as network replication and self-healing.
+
+# ## Who Should Use FreeBSD?
+
+While FreeBSD can be used as a powerful desktop or development machine, its history shows a strong bias toward network services: web, mail, file, and ancillary applications. FreeBSD is most famous for its strengths as an internet server, and it’s an excellent choice as an underlying platform for any network service. If major firms such as Netflix count on FreeBSD to provide reliable service, it will work as well for you.
+
+If you’re thinking of running FreeBSD (or any Unix) on your desktop, you’ll need to understand how your computer works. FreeBSD is not your best choice if you need point-and-click simplicity. If that’s your goal, get a Mac so you can use the power of Unix when you need it and not worry about it the rest of the time. If you want to learn

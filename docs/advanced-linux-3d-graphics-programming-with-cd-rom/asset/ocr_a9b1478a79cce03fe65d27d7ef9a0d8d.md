@@ -1,0 +1,3 @@
+![](bbox=[0.21, 0.12, 0.74, 0.59])
+
++   6. This level will have a single room that contains all of the objects. Create a box called Room01 which contains the floor and ample space above it (for instance, 6 meters). Assign it the Room class with the Attributes plug-in. To make it easier to see inside of the room I always set the room object to a material which has an opacity of 10% or so: select the room object, click on the material editor button, set the opacity to 10, and click the **Assign material to selection** button.

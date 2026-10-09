@@ -1,0 +1,143 @@
+
+
+# Dav
+
+`Dav` 指令用于启用或禁用 `mod_dav` 模块。如果您希望在目录容器中 **使用** WebDAV 功能，必须将其设置为 `On`。
+
+-   **语法：** `Dav On | Off`
+-   **上下文：** 目录
+
+# DavLockDB
+
+`DavLockDB` 指令设置锁数据库文件的完全限定路径名。
+
+-   **语法：** `DavLockDB filename`
+-   **上下文：** 服务器配置，虚拟主机
+
+# DavMinTimeout
+
+`DavMinTimeout` 指令设置资源锁的最小超时间隔（以秒为单位）。默认值确保服务器不会因任何超时问题而自动锁定 WebDAV 客户端。
+
+-   **语法：** `DavMinTimeout seconds`
+-   **默认设置：** `DavMinTimeout 0`
+-   **上下文：** 目录
+
+# DavDepthInfinity
+
+`DavDepthInfinity` 指令启用将 Depth 头设置为无穷大的 PROPFIND 请求。推荐默认设置。
+
+-   **语法：** `DavDepthInfinity On | Off`
+-   **默认设置：** `DavDepthInfinity Off`
+-   **上下文：** 目录
+
+# Web 站点管理
+
+管理 Web 站点涉及诸如管理虚拟 Web 站点、控制对您的 Web 站点的访问、监控和分析访问及错误日志、在必要时将流量重定向到不同的 URL、设置代理服务，以及通常只需执行运行完美 Web 站点所必需的一切操作等任务。本部分专门介绍所有这些任务。
+
+![](img/e11fcbd2818a3495ac70085e5d8d1c26_187_0.png)
+
+## 本部分包含
+
+-   **第 6 章**
+    托管虚拟 Web 站点
+-   **第 7 章**
+    验证和授权 Web 站点访问者
+-   **第 8 章**
+    监控对 Apache 的访问
+-   **第 9 章**
+    重写您的 URL
+-   **第 10 章**
+    设置代理服务器
+-   **第 11 章**
+    运行完美的 Web 站点
+
+# 托管虚拟 Web 站点
+
+![](img/e11fcbd2818a3495ac70085e5d8d1c26_189_0.png)
+
+Apache 可以从单台服务器提供多个 Web 站点。例如，一家 Web 托管公司可能有一台运行 Apache 的单台 Web 服务器机器，它为数百个客户端 Web 站点提供服务。此类系统拥有一个主主机名和许多 IP 别名或虚拟主机名。通过这种虚拟主机提供的 Web 站点称为 **虚拟 Web 站点**。Apache 对虚拟 Web 站点（称为虚拟主机）的支持非常令人印象深刻。本章讨论如何创建各种类型的虚拟主机以及如何使用各种技术进行管理。
+
+## 了解 Apache 的虚拟托管功能
+
+当您在 Internet 主机上设置 Apache 时，它可以响应针对该主机的 HTTP 请求。例如，如果您在一台名为 `server1.domain.com` 的主机上设置 Apache，Apache 将为主机服务 HTTP 请求。然而，如果您设置 DNS 记录，使得另外两个主机名（例如 `www.mycompany-domain.com` 和 `www.friendscompany-domain.com`）指向同一台机器，您可以让 Apache 将这些两个域作为虚拟 Web 站点提供服务。在这种情况下，`www.mycompany-domain.com` 被视为主 Web 主机名（主服务器），其余的将被视为虚拟 Web 站点或虚拟主机。
+
+Apache 允许虚拟主机从主服务器继承配置，这使得在大型安装中，某些内容可以共享，从而使得虚拟主机配置易于管理。例如，如果您决定只拥有一个中央 CGI 库，并允许虚拟主机使用存储在那里的脚本，您无需在每个虚拟主机容器中创建 `ScriptAlias` 指令。只需在主服务器配置中使用一个即可。每个虚拟主机都可以使用该别名，就好像它是其自身的一部分一样。
+
+**本章简介**
+
+-   了解两种类型的虚拟主机
+-   创建基于 IP 的虚拟主机
+-   创建基于名称的虚拟主机
+-   为虚拟主机配置 DNS
+-   使用自己的用户和组权限运行虚拟 Web 站点
+-   使用 `mod_perl` 在单个 Apache 服务器上管理大量虚拟主机
+-   使用 `makesite` 脚本简化创建新虚拟主机的过程
+-   使用 `mod_v2h` 和 MySQL 数据库管理虚拟主机
+
+Apache 的配置文件 httpd.conf 使用 `<VirtualHost>` 容器将虚拟主机配置与主服务器配置分开。例如，请查看列表 6-1 中的 httpd.conf 文件。
+
+## 列表 6-1: httpd.conf
+
+```
+# httpd.conf file
+
+ServerName main.server.com
+Port 80
+ServerAdmin mainguy@server.com
+DocumentRoot "/www/main/htdocs"
+
+ScriptAlias /cgi-bin/ "/www/main/cgi-bin/"
+Alias /images/ "/www/main/htdocs/images/"
+
+<VirtualHost 192.168.1.100>
+ServerName vhost1.server.com
+ServerAdmin vhost1_guy@vhost1.server.com
+DocumentRoot "/www/vhost1/htdocs"
+ScriptAlias /cgi-bin/ "/www/vhost1/cgi-bin/"
+</VirtualHost>
+
+<VirtualHost 192.168.1.110>
+ServerName vhost2.server.com
+ServerAdmin vhost2_guy@vhost2.server.com
+DocumentRoot "/www/vhost2/htdocs"
+ScriptAlias /cgi-bin/ "/www/vhost2/cgi-bin/"
+Alias /images/ "/www/vhost2/htdocs/images/"
+</VirtualHost>
+```
+
+列表 6-1 显示了两个称为 vhost1.server.com 和 vhost2.server.com 的虚拟 Web 站点，它们定义在各自的 `<VirtualHost>` 容器中。包含在每个 `<VirtualHost>` 容器中的所有指令仅适用于其服务的虚拟主机。因此，当 Web 浏览器请求 http://vhost1.server.com/index.html 时，Apache Web 服务器会在 /www/vhost1/htdocs 目录中查找 index.html 页面。类似地，当 Web 浏览器请求 http://vhost2.server.com/cgi-bin/hello.pl 时，脚本将从 /www/vhost2/cgi-bin 目录运行。
+
+然而，主服务器配置中的许多指令（即 `<VirtualHost>` 容器外的任何指令）仍然适用于未覆盖它们的虚拟主机。例如，列表 6-1 中的 vhost1.server.com 没有针对 /images/ 目录别名的 Alias 指令。因此，当 Web 浏览器请求 http://vhost1.server.com/images/prett_y_pic.gif 文件时，图片是从 /www/main/htdocs/images 目录提供的。由于 vhost2.server.com 用自己的 /images/ 别名覆盖了主配置，类似的请求是从 /www/vhost2/htdocs/images 目录提供的。
+
+# 设置虚拟主机
+
+使用 Apache 创建虚拟 Web 站点有三种方法，如下列表所述：
+
+-   **基于名称：** 基于名称的虚拟 Web 站点非常常见。此类配置要求将多个主机名指向单个系统。您可以在 DNS 中创建多个 CNAME 或 A 记录以指向单个主机。由于此方法在 Apache 配置中不使用 IP 地址，因此如果您更改 Web 服务器的 IP 地址，很容易迁移。
+-   **基于 IP：** 此方法在 Apache 配置中需要 IP 地址，因此当需要更改 IP 地址时，很容易迁移。
+-   **多个主服务器：** 此方法涉及使用多个主要 Web 服务器配置。只有当您必须为每个虚拟主机保持单独的配置文件时，才推荐此方法。这是最不推荐的方法，很少使用。
+
+## 基于名称的虚拟主机
+
+创建虚拟主机的此方法是最推荐的。它只需要一个 IP 地址即可托管数百个虚拟 Web 站点。
+
+> **注意**
+> 基于名称的虚拟托管中您可能遇到的唯一问题是，此方法不适用于不支持 HTTP 1.1 协议的 Web 浏览器。只有非常早期的 Web 浏览器，如 Microsoft IE 1.x 或 Netscape Navigator 1.x，不支持 HTTP 1.1。因此，这真的不再是一个大问题。大多数人使用的是 3.x 或更高版本的 Web 浏览器，这些浏览器与基于名称的虚拟托管技术兼容。
+
+例如，假设您拥有 IP 地址 192.168.1.100，并希望在同一服务器上托管 vhost1.domain.com 和 vhost2.domain.com。您可以按如下方式操作：
+
+1.  首先，在您的 DNS 服务器上创建适当的 DNS 记录，将 vhost1.domain.com 和 vhost2.domain.com 指向 192.168.1.100。有关详细信息，请参阅“为虚拟主机配置 DNS”部分。
+2.  在 httpd.conf 文件中创建类似于以下内容的配置段。
+
+```
+NameVirtualHost 192.168.1.100
+
+<VirtualHost 192.168.1.100>
+    ServerName vhost1.domain.com
+    ServerAdmin someone@vhost1.domain.com
+    DocumentRoot "/www/vhost1/htmldocs"
+
+    #
+    # 您需要的任何其他指令都可以放在这里
+```
+

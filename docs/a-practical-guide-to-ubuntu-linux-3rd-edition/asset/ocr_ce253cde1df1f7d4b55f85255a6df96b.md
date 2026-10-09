@@ -1,0 +1,23 @@
++   **component architecture** A notion in object-oriented programming where “components” of a program are completely generic. Instead of having a specialized set of methods and fields, they have generic methods through which the component can advertise the functionality it supports to the system into which it is loaded. This strategy enables completely dynamic loading of objects. JavaBeans is an example of a component architecture.FOLDOC
+
++   **concatenate** See *catenate* on page 1139.
+
++   **condition code** See *exit status* on page 1147.
+
++   **connection-oriented protocol** A type of transport layer data communication service that allows a host to send data in a continuous stream to another host. The transport service guarantees that all data will be delivered to the other end in the same order as sent and without duplication. Communication proceeds through three well-defined phases: connection establishment, data transfer, and connection release. The most common example is *TCP* (page 1176).
++   
++   Also called *connection-based protocol* and *stream-oriented protocol*. Contrast with *connectionless protocol* and *datagram* (page 1144).FOLDOC
+
++   **connectionless protocol** The data communication method in which communication occurs between hosts with no previous setup. Packets sent between two hosts may take different routes. There is no guarantee that packets will arrive as transmitted or even that they will arrive at the destination at all. *UDP* (page 1178) is a connectionless protocol. Also called *packet switching*. Contrast with *circuit switching* and *connection-oriented protocol*.FOLDOC
+
++   **console** The main system terminal, usually directly connected to the computer and the one that receives system error messages. Also *system console* and *console terminal*.
+
++   **console terminal** See *console*.
+
++   **control character** A character that is not a graphic character, such as a letter, number, or punctuation mark. Such characters are called control characters because they frequently act to control a peripheral device. RETURN and FORMFEED are control characters that control a terminal or printer.
++   
++   The word CONTROL is shown in this book in **THIS FONT** because it is a key that appears on most terminal keyboards. Control characters are represented by ASCII codes less than 32 (decimal). See also *nonprinting character* on page 1162.
+
++   **control structure** A statement used to change the order of execution of commands in a shell script or other program. Each shell provides control structures (for example, *if* and *while*) as well as other commands that alter the order of execution (for example, *exe*.) Also *control flow commands*.
+
++   **cookie** Data stored on a client system by a server. The client system browser sends the cookie back to the server each time it accesses that server. For example, a catalog shopping service may store a cookie on your system when you place your first

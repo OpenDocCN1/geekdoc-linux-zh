@@ -1,0 +1,9 @@
+While every precaution has been taken in the preparation of this book, the publisher assumes no responsibility for errors or omissions, or for damages resulting from the use of the information contained herein.
+
+# AN ULTIMATE GUIDE TO KALI LINUX FOR BEGINNERS
+
+**First edition. November 5, 2021.**
+
+Copyright © 2021 Ansh Goyal.
+
+Written by Ansh Goyal.

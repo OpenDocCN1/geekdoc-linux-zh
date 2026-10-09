@@ -1,0 +1,224 @@
+
+输入`apropos word`搜索与`word...`相关的命令。
+
+正在从`App6`读取符号...完成。
+
+```
+[New LWP 4704]
+[New LWP 4707]
+New LWP 4705]
+[New LWP 4703]
+[New LWP 4706]
+[New LWP 4708]
+[启用 libthread 线程调试]
+```
+
+使用主机线程`db "lib/x86_64-linux-gnu/libthread_db.so1"`。
+
+核心由`"...App6"`生成。
+
+> 程序终止，信号`SIGSEGV`，段错误。
+
+`# 0x00000000004001b8 in procF ()`
+
+[当前线程是`1 (Thread 0x7f9f1e6de8700 [LWP 4704])`
+
+2. 在文件中设置断点以捕获某些命令的内存输出：
+
+```
+(gdb) set logging on App6.log
+正在将输出拷贝到 App6.log。
+```
+
+3. 列出线程：
+
+| Id | Target Id | Frame |
+|---|---|---|
+| * 1 | Thread 0x7f9f1e6de870 (LWP 4704) | 0x0000000000401b8 in `procF ()` |
+| 2 | Thread 0x7f9f1e55e70 (LWP 4707) | 0x0000000000441ab0 in `nanosleep ()` |
+| 3 | Thread 0x7f9f1e65e700 (LWP 4705) | 0x0000000000441ab0 in `nanosleep ()` |
+| 4 | Thread 0xec2880 (LWP 4703) | 0x0000000000441ab0 in `nanosleep ()` |
+| 5 | Thread 0x7f9f1e5d6700 (LWP 4706) | 0x0000000000441ab0 in `nanosleep ()` |
+| 6 | Thread 0x7f9f1e4de4700 (LWP 4708) | 0x0000000000441ab0 in `nanosleep ()` |
+
+4. 如果我们尝试打印栈轨迹，将得到无限的帧，所以我们退出：
+
+```
+(gdb) bt
+#0 0x0000000000410bb8 in procF ()
+#1 0x0000000000410c5 in procF ()
+#2 0x0000000000410c5 in procF ()
+#3 0x0000000000410c5 in procF ()
+#4 0x0000000000410c5 in procF ()
+#5 0x0000000000410c5 in procF ()
+#6 0x0000000000410c5 in procF ()
+#7 0x0000000000410c5 in procF ()
+#8 0x0000000000410c5 in procF ()
+#9 0x0000000000410c5 in procF ()
+#10 0x0000000000410c5 in procF ()
+#11 0x0000000000410c5 in procF ()
+#12 0x0000000000410c5 in procF ()
+#13 0x0000000000410c5 in procF ()
+#14 0x0000000000410c5 in procF ()
+#15 0x0000000000410c5 in procF ()
+#16 0x0000000000410c5 in procF ()
+#17 0x0000000000410c5 in procF ()
+#18 0x0000000000410c5 in procF ()
+#19 0x0000000000410c5 in procF ()
+#20 0x0000000000410c5 in procF ()
+#21 0x0000000000410c5 in procF ()
+#22 0x0000000000410c5 in procF ()
+#23 0x0000000000410c5 in procF ()
+#24 0x0000000000410c5 in procF ()
+#25 0x0000000000410c5 in procF ()
+#26 0x0000000000410c5 in procF ()
+#27 0x0000000000410c5 in procF ()
+#28 0x0000000000410c5 in procF ()
+#29 0x0000000000410c5 in procF ()
+#30 0x0000000000410c5 in procF ()
+#31 0x0000000000410c5 in procF ()
+#32 0x0000000000410c5 in procF ()
+#33 0x0000000000410c5 in procF ()
+#34 0x0000000000410c5 in procF ()
+#35 0x0000000000410c5 in procF ()
+#36 0x0000000000410c5 in procF ()
+#37 0x0000000000410c5 in procF ()
+#38 0x0000000000410c5 in procF ()
+#39 0x0000000000410c5 in procF ()
+#40 0x0000000000410c5 in procF ()
+#41 0x0000000000410c5 in procF ()
+#42 0x0000000000410c5 in procF ()
+#43 0x0000000000410c5 in procF ()
+#44 0x0000000000410c5 in procF ()
+#45 0x0000000000410c5 in procF ()
+#46 0x0000000000410c5 in procF ()
+#47 0x0000000000410c5 in procF ()
+#48 0x0000000000410c5 in procF ()
+#49 0x0000000000410c5 in procF ()
+#50 0x0000000000410c5 in procF ()
+#51 0x0000000000410c5 in procF ()
+#52 0x0000000000410c5 in procF ()
+#53 0x0000000000410c5 in procF ()
+#54 0x0000000000410c5 in procF ()
+#55 0x0000000000410c5 in procF ()
+#56 0x0000000000410c5 in procF ()
+
+--Type <RET> for more, q to quit, c to continue without paging--
+#57 0x0000000000410c5 in procF ()
+#58 0x0000000000410c5 in procF ()
+#59 0x0000000000410c5 in procF ()
+#60 0x0000000000410c5 in procF ()
+#61 0x0000000000410c5 in procF ()
+#62 0x0000000000410c5 in procF ()
+#63 0x0000000000410c5 in procF ()
+#64 0x0000000000410c5 in procF ()
+#65 0x0000000000410c5 in procF ()
+#66 0x0000000000410c5 in procF ()
+#67 0x0000000000410c5 in procF ()
+#68 0x0000000000410c5 in procF ()
+#69 0x0000000000410c5 in procF ()
+#70 0x0000000000410c5 in procF ()
+#71 0x0000000000410c5 in procF ()
+#72 0x0000000000410c5 in procF ()
+#73 0x0000000000410c5 in procF ()
+#74 0x0000000000410c5 in procF ()
+#75 0x0000000000410c5 in procF ()
+#76 0x0000000000410c5 in procF ()
+#77 0x0000000000410c5 in procF ()
+#78 0x0000000000410c5 in procF ()
+#79 0x0000000000410c5 in procF ()
+#80 0x0000000000410c5 in procF ()
+#81 0x0000000000410c5 in procF ()
+#82 0x0000000000410c5 in procF ()
+#83 0x0000000000410c5 in procF ()
+#84 0x0000000000410c5 in procF ()
+#85 0x0000000000410c5 in procF ()
+#86 0x0000000000410c5 in procF ()
+#87 0x0000000000410c5 in procF ()
+#88 0x0000000000410c5 in procF ()
+#89 0x0000000000410c5 in procF ()
+#90 0x0000000000410c5 in procF ()
+#91 0x0000000000410c5 in procF ()
+#92 0x0000000000410c5 in procF ()
+#93 0x0000000000410c5 in procF ()
+#94 0x0000000000410c5 in procF ()
+#95 0x0000000000410c5 in procF ()
+#96 0x0000000000410c5 in procF ()
+#97 0x0000000000410c5 in procF ()
+#98 0x0000000000410c5 in procF ()
+#99 0x0000000000410c5 in procF ()
+#100 0x0000000000410c5 in procF ()
+#101 0x0000000000410c5 in procF ()
+#102 0x0000000000410c5 in procF ()
+#103 0x0000000000410c5 in procF ()
+#104 0x0000000000410c5 in procF ()
+#105 0x0000000000410c5 in procF ()
+#106 0x0000000000410c5 in procF ()
+#107 0x0000000000410c5 in procF ()
+#108 0x0000000000410c5 in procF ()
+#109 0x0000000000410c5 in procF ()
+#110 0x0000000000410c5 in procF ()
+#111 0x0000000000410c5 in procF ()
+#112 0x0000000000410c5 in procF ()
+#113 0x0000000000410c5 in procF ()
+#114 0x0000000000410c5 in procF ()
+#115 0x0000000000410c5 in procF ()
+#116 0x0000000000410c5 in procF ()
+#117 0x0000000000410c5 in procF ()
+#118 0x0000000000410c5 in procF ()
+#119 0x0000000000410c5 in procF ()
+
+Note: 看起来是一个栈溢出。
+```
+
+5. 根据栈指针和边界检查内存：
+
+```
+(gdb) x/10gx 0x00000000004001b8
+```
+
+由于您提供的文本包含大量的十六进制地址、内存布局描述以及调试器（`GDB`）的输出指令，这些内容属于底层技术数据和代码逻辑。根据您的注意事项，“内联代码和代码块不需要翻译”，且这类底层调试信息通常保持原样以确保技术可读性。以下是针对其中描述性文本的中文翻译：
+
+```
+[12] 0x000400d0-0x000400d4 at 0x00040c38:.tss ALLOC
+[13] 0x000400d4-0x000400d8 at 0x00040bc8:.preinit_array ALLOC LOAD DATA HAS_CONTENTS
+[14] 0x000400e0-0x000400e4 at 0x00040b30:.init_array ALLOC LOAD DATA HAS_CONTENTS
+[15] 0x000400f0-0x000400f4 at 0x00040c00:.fini_array ALLOC LOAD DATA HAS_CONTENTS
+[16] 0x00040100-0x00040104 at 0x00040c50:.init_array ALLOC LOAD DATA HAS_CONTENTS
+[17] 0x00040110-0x00040114 at 0x000400e8:.get_alloc LOAD DATA HAS_CONTENTS
+[18] 0x00040120-0x00040124 at 0x00040f60:.get_plt_all ALLOC DATA HAS_CONTENTS
+[19] 0x00040130-0x00040134 at 0x00040c30:.data_alloc ALLOC DATA HAS_CONTENTS
+[20] 0x00040140-0x00040144 at 0x00040cc0:.data_alloc ALLOC LOAD DATA HAS_CONTENTS
+[21] 0x00040150-0x00040154 at 0x00040d40:.lib_10_utlas ALLOC DATA HAS_CONTENTS
+[22] 0x00040240-0x00040244 at 0x00042418:.lib_atexit ALLOC LOAD DATA HAS_CONTENTS
+[23] 0x00040248-0x0004024c at 0x00042528:.bc_all ALLOC DATA HAS_CONTENTS
+[24] 0x00040250-0x00040254 at 0x000423f0:.lib_freers_ptr ALLOC DATA HAS_CONTENTS
+[25] 0x00000000-0x00000008 at 0x00041410:.comment_ready READY HAS_CONTENTS
+[26] 0x00000000-0x00000020 at 0x00041450:.debug_arrays READY HAS_CONTENTS
+[27] 0x00000000-0x00000020 at 0x00041470:.debug_ready READY HAS_CONTENTS
+[28] 0x00000000-0x00000078 at 0x00041f1d:.debug_abbrev READY HAS_CONTENTS
+[29] 0x00000000-0x00000020 at 0x0004a2b0:.debug_str READY HAS_CONTENTS
+[30] 0x00000000-0x00000020 at 0x00010836:.debug_line READY HAS_CONTENTS
+[31] 0x00000000-0x00000020 at 0x000406c9:.debug_loc READY HAS_CONTENTS
+[32] 0x00000000-0x00000020 at 0x000401f0:.debug_arrays READY HAS_CONTENTS
+```
+
+核心文件：`/home/coredump/x64/apps/core.App`，类型为`elf64-x86_64`。
+
+```
+0x00000000-0x00000020 at 0x00040040:.ready READY HAS_CONTENTS
+0x00000000-0x00000020 at 0x00040524:.reg_474 HAS_CONTENTS
+0x00000000-0x00000020 at 0x00040528:.reg_475 HAS_CONTENTS
+0x00000000-0x00000020 at 0x00040710:.core.siginfo/4704 HAS_CONTENTS
+0x00000000-0x00000020 at 0x00040758:.note.linuxcore.siginfo HAS_CONTENTS
+0x00000000-0x00000140 at 0x00040748:.auxv HAS_CONTENTS
+0x00000000-0x00000100 at 0x00040100:.note.linuxcore.file/474 HAS_CONTENTS
+0x00000000-0x00000100 at 0x00040140:.note.linuxcore.file HAS_CONTENTS
+0x00000000-0x00000200 at 0x00040200:.reg_472 HAS_CONTENTS
+0x00000000-0x00000200 at 0x00040240:.reg_473 HAS_CONTENTS
+0x00000000-0x00000340 at 0x00040340:.reg_474 HAS_CONTENTS
+0x00000000-0x00000340 at 0x000403c0:.reg_xstate HAS_CONTENTS
+0x00000000-0x000007f8 at 0x000407f8:.reg_474 HAS_CONTENTS
+0x00000000-0x00000200 at 0x000401c7:.reg_474 HAS_CONTENTS
+0x00000000-0x00000200 at 0x00040200:.reg_475 HAS_CONTENTS
+```

@@ -1,0 +1,246 @@
+
+## R
+- RAID
+  - introduction to, 181–182
+  - ESS, disk RAID levels in, 641
+  - HACMP/SCSI-2 configuration, 610
+  - and Storage Area Network (SAN), 182–183
+- Recovery
+  - See problem analysis/recovery
+- Red Hat Package Manager (RPM), 6
+- RedBooks, IBM
+  - See IBM RedBooks/manuals
+- Regatta (p690) processor, 46–47, 47–48
+- Remote procedure calls (in DCE), 520–521
+- Resource Monitoring and Control (RM&C) subsystem, 8
+- Restarting/Shutdown, 126
+- RISC (Reduced Instruction Set Computer) in POWER processors, 41–42
+- Run queues (in AIX 5L kernel), 55
+- Runtime configuration, AIX
+  - assigning the console, 135
+  - broadcast messages (to all users), 140
+  - checklist, 147
+  - default documentation language, 144–145
+  - dump device, dedicated, 142
+  - floating user licenses, 140
+  - hang detection, system, 145
+  - internet/documentation services (SMIT web_configd), 143
+  - language environment setting, 137
+  - number of licensed users, 139
+  - OS characteristics, setting (via SMIT), 137–138
+  - pseudo-TTYs (PTYs), configuring, 145–146
+  - remote reboot facility, 145
+  - SMIT panel for, 155
+  - stopping the system (SMIT FastPath), 134
+  - system logs (ErrLog, Alog), 141
+  - time settings, 136–137
+  - user interface, changing, 143–144
+
+## S
+- SAR command (statistical data), 569–570
+- Scalable Parallel (SP) architecture, 45–46
+- Scheduling and dispatching (AIX 5L kernel), 54–55
+- SCSI interfaces
+  - ODM fast SCSI, 161
+  - fast/wide SCSI, 162
+  - SCSI-1, SCSI-2, 161
+  - single-ended, differential SCSI, 161
+  - ultra SCSI (various), 162
+  - wide SCSI, 162
+
+- Security
+  - access control lists (ACLs), 506–508, 522–523
+  - AIX 5L enhancements, 10
+  - in Andrew File System (AFS), 332
+  - Apache HTTP Server, access control in, 394–395
+  - auditing subsystem, 512–516
+  - authentication in a Display manager, 418
+  - authentication methods, alternative, 499–503
+    - checkpoint, 517
+    - configuring the client, 502–503
+    - configuring the server, 502
+    - custom authentication methods, adding, 500–501
+  - in distributed Computing Environment (DCE), 522–523, 528, 530–531
+  - in DSMII (Distributed Systems Management), 72
+  - file access, controlling, 504–508
+    - file permissions, basic, 504–505
+  - group-writable logging directory, dangers of, 398
+  - information forces, for, 517
+  - Kerberos, 507, 501
+  - network access, controlling, 504
+  - NIS public key authorization, 323
+  - passwords (See passwords)
+  - in pSeries 690 (Regatta) processors, 47
+  - Secure Attention Key (PSA/KCB), 512
+  - secure position, Micro Channel key switch, 120
+  - Secure S Commanders, 306
+  - Secure Sockets Layer, Apache support of, 397
+  - Security Associations (SAs), 506
+  - security policy, defining, 496
+  - in Sendmail configuration examples, 376–378
+  - set-ID and set-GID, 505–506
+  - "split horizon" DNS Sendmail configuration, 377
+  - superuser access, controlling, 503–504
+  - swatch (The Simple WATCHer), 516
+  - in TCP/IP, 305–307
+  - Trusted Computer Base (TCB), 508–512
+  - the umask, 505
+  - X11 access control, 420–421
+  - See also encryption; problem analysis/recovery; user environment, managing
+
+- Self-test
+  - Micro-Channel machines, built in (BIST), 121–122
+  - PCI-bus machines, power-on (POST), 122
+
+- Sendmail
+  - introduction to, 369–370
+  - address rules/rule sets in, 371–372
+  - aliases database, 374
+  - alternative mail hosts, testing, 385
+  - Bellmail and procmail, 380–381
+  - checklist, 388
+  - client configuration, 378
+  - cosmats daemon, 388
+  - configuration example: Wine University, 376–378
+  - configuration with M4, 373
+  - databases in, 373–374
+  - debugging addressing and headers, 382–384
+  - delivery agents, local (bellmail, procmail), 380–381
+  - fallback configuration, 380
+  - fallback hosts, caveat regarding, 380
+  - file configuration and data, 370
+  - gateway configuration, 379
+  - how mail is sent, 384
+  - hub configuration, 378–379
+  - IMAP (Internet Message Access Protocol), 381–382
+  - mail logs for, 376
+  - mail queues, managing, 387–388
+  - mailer delivery section, 372–373
+  - options and definitions, Sendmail files, 371
+  - POP (Post Office Protocol), 381
+  - rule sets, testing, 386–387
+  - spoke configuration, 378
+  - starting and stopping, 375
+  - testing via -v verbose flag, 384–385
+  - See also mail
+
+- Serial Line Internet Protocol (SLIP), 293, 294–296
+  - introduction to, 293
+  - dedicated SLIP, 294–296
+  - nondedicated SLIP, 296
+
+- Server Processor Error Log, checking, 588
+- Service Processor (pSeries, RS/6000 machines), 119–120
+- Shark. See Enterprise Storage Server (ESS)
+- Shutdown/restarting, 126
+- Signals, synchronous/asynchronous (AIX 5L kernel), 53–54
+- Simple Mail Transfer protocol SMTP (SMTP RFC 821), 383
+- SMIT FastPath
+  - adding a logical volume (mklv), 210, 211
+  - in AIX alternate disk installation, 96–97
+  - broadcast messaging with (smit wall), 140
+  - command syntax and application submenu, 69–70
+  - console assistant using (smit ccons), 135
+  - copying tapes (smit tcopy), 556
+  - creating filesystem image (smit mkssysb), 542, 549–551
+  - DCE directory service image, creating (smit mksdcer), 531–532
+  - DCE master cell directory server, configuring (smit mkdcesrv), 530–531, 532
+  - DCE security server, defining (smit mkdcesecsrv), 520
+  - DFS aggregate fileset, creating (smitf mklfsdf), 344–345
+  - DFS aggregates, formatting/exporting (mkfsagr), 342–343
+  - DFS(DCE client configuration (mkkdcldent), 341–342
+  - DFS File Server Machine (smitye mksdfsrv), 340–341
+  - DFS System Control Machine (smitye mkfsscn), 339, 340
+  - documentation language, default (smit chdclan), 144–145
+  - Ethernet adapter, configuring (smit chgent), 8, 279
+  - exporting files (smit mknxexp), 315
+  - FFDl device attributes, changing (smit chfdg), 282
+  - filesystem backup (smit backupfsys), 548
+  - flying user licenses (smit netfs_server), 140
+  - hang detection using (smit s1), 145
+  - installing RPM (smit install_latest), 359
+  - Internet services (smit web_configure), 143
+  - kernel characteristics, altering (smit chlisys), 137–139
+  - kernel routing, adding routes to (smit mkroute), 288
+  - licensed users, showing (smit chlicense), 139
+  - logical volume size, increasing (extendlv), 212
+  - logical volumes, mirroring (smit mkmirror), 210
+  - lpd daemon, starting (smkitab_lpd), 246, 247
+  - mounting files (smit mknfsmnt), 317
+  - NIS client, adding (smit mkclient), 322
+  - NIS master, adding (smit mkmaster), 322
+  - NIS slave, adding (smit mkslave), 322
+  - PPP authentication (smit pppap, pppchap), 297
+  - PPP/IP addresses, setting (smit pppip), 297, 298
+  - print clients, adding (smithostslpd), 246
+  - PTYs, allocating (smit srvpty), 145–146
+  - reboot management, remote (smit reboots), 145
+  - SLIP network interface panel (smit mknit), 295
+  - SLIP/PPP serial port, adding (smit maktty), 293, 294
+  - stopping the system with, 134
+  - system dumps using (smit sdump), 142
+  - system logs, managing (smi logs), 141
+  - tape block size, changing (smit chgtpe), 170
+  - TCP/IP interface, configuring (smit chinet, liconfig), 301
+  - TCP/IP subsystem configuring (smit configtcp), 292
+  - user interface, changing (smit dltconfg), 141–142
+  - volume group, adding (smit mkvg, extdevg), 199
+  - See also SMIT (System Management Interface Tool)
+
+## SMIT (System Management Interface Tool)
+- introduction to, 62–63
+- add a user panel, 449
+- 'add volume group' panel, 199
+- 'change/show user characteristics' panel, 451–452
+- changing tape block size with (chdev), 170
+- COMMIT option (in AIX 5L installation), 84–85
+- customizing (menu panels), 70–71
+- database files in, 71
+- distributed (DSMIT), 73–74
+- example: removing paging/0 paging space, 67–68
+- FastPath (See SMIT FastPath)
+- floating user license panel, 139
+- help messages, 66
+- interp/documentation services (smi web_configure), 142
+- job scheduling using, 64–66
+- keys, 66, 67
+- language environment panel, 137
+- licensed user panel (smi chances), 139
+- log file, 66–68
+- main screen display (CDE), 64
+- main screen display (SMITTY/ANSII), 64, 65
+- 'mirror logical volume' panel, 210
+- modifying TCP/IP static routes using, 302–303
+- OS characteristics panel, 138
+- print server/print queue configuration panels, 246–248
+- printer configuration panels, 238–243
+- remove a user panel, 453
+- runtime settings, defining (See runtime configuration, AIX)
+- script file, 68–69
+- special field symbols, 66
+- system dump panel, 142
+- system environments panel, 135
+- system logs panel, 141
+- See also Distributed Systems Management (DSMIT); SMITTY
+
+## SMITTY
+- main screen display (SMITTY/ANSII), 64, 65
+- smitary_Install_commit, importance of, 105–106
+- smitary update-all, use of, 106
+- See also SMIT (System Management Interface Tool)
+
+- Sniffers, use of, 306, 308
+- Sparse files, 544
+- Static gating, 6
+- Stopping the system
+  - shutdown, reboot commands, 126
+  - using SMIT FastPath, 134
+
+## Storage, general
+- introduction and discussion, 632–633
+- storage attachment types (SCSI, SSA, iSCSI), 633–634
+- See also Backup; disks/disk management; Enterprise Storage Server (ESS); Network Attached Storage (NAS); Trivio; Storage Area Network (SAN); tape systems
+
+## Storage Area Network (SAN)
+- introduction to, 635
+- arbitrated loop physical addresses (AL_P5), 636

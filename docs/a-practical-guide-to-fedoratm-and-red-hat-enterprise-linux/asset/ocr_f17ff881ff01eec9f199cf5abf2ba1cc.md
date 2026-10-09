@@ -1,0 +1,15 @@
+shared experiences as I wrote this book. Mark, your comments and direction are invaluable; this book would not exist without your help. Thank you, Mark T.
+
+The production people at Prentice Hall are wonderful to work with: Julie Nahl, Full-Service Production Manager, worked with me day by day during production of this book providing help and keeping everything on track, while John Fuller, Managing Editor, kept the large view in focus. Thanks to Stephanie Geels, Copyeditor, and Andrea Fox, Proofreader, who made each page sparkle and found the mistakes the author left behind.
+
+Thanks also to the folks at Prentice Hall who helped bring this book to life, especially Kim Boedighaimer, Editorial Assistant, who attended to the many details involved in publishing this book; Heather Fox, Publicist; Stephane Nakib, Marketing Manager; Dan Scherf, Media Developer; Sandra Schroeder, Design Manager; Chuti Prasertsith, Cover Designer; and everyone else who worked behind the scenes to make this book come into being.
+
+I am also indebted to Denis Howe, Editor of The Free On-Line Dictionary of Computing (FOLDOC). Denis has graciously permitted me to use entries from his compilation. Be sure to visit www.foldoc.org to look at this dictionary.
+
+A big “thank you” to the folks who read through the drafts of the book and made comments that caused me to refocus parts of the book where things were not clear or were left out altogether:
+
+Nicklos See, Instructor, Bismarck State College; Eugene Murray, Chair, School of Information Technology, IIT Technical Institute; Doug Hughes, D. E. Shaw Research, LLC.; Carl Drapper; Max Sobell, Carve Systems; Rahul Sundaram, Fedora contributor; Robert P. J. Day; Tony Godfrey, TT Technical Institute, Strongsville, Ohio; Susan Lauber, Lauber System Solutions, Inc.; Sam Sobell, Student, UCLA; Ankur Sinha, Fedora project volunteer; Professor Maria Ripoll; David A. Lane, long-time Linux user and systems architect; Pete Travis, Fedora Documentation Project; Rickard Kørkkö, Orc Group; Jennifer Davis, Senior Production Engineer at Yahoo; Matthew Miller, Fedora Project at Red Hat, Inc.; Jiri Popelka, Red Hat, Inc.; Thomas Woerner, Red Hat, Inc.; Ben Whaley, Co-author of the UNIX and Linux System Administration Handbook.
+
+Thanks also to the following people who helped with my previous Linux books, which provided a foundation for this book:
+
+Richard Woodbury, Site Reliability Engineer, Google, whose knowledge of IPv6 proved invaluable; Lennart Poettinger, Red Hat, Inc; George Vish II, Senior Education Consultant, Hewlett-Packard; Garth Snyder; Nathan Handler; Dick Seabook, Professor Emeritus, Anne Arundel Community College; Chris Karr, Audacious Software; Scott McCrea, Instructor, IIT Technical Schools; John Tong, Ubuntu Developer, Forums Council Member; Andy Lester, author of Land the Tech Job You Love: Why Skill and Luck Are Not Enough; Scott James Remnant, Ubuntu Development Manager and Desktop Team Leader; David Chisnall, Swansea University; Scott Mann, Aztek Networks; Thomas Achtemichuk, Mansueto Ventures; Daniel R. Arfstien, Pro/Engineer

@@ -1,0 +1,3304 @@
+- pgno: 0
+  md: '# Bodhi
+
+    Linux in
+
+    24 Hours
+
+
+    Patrick Valtin'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# EX-LIBRIS
+
+
+    ![](img/aa479e16c3ea23572f6197ce6302aaf6_1_0.png)
+
+
+    RONALD A. JAVITCH
+
+    RARE BOOK COLLECTION.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Bodhi Linux
+
+    in 24 Hours
+
+
+    Patrick Valtin
+
+
+    Copyright 2014 IT Researches
+
+
+    Amazon.com
+
+    Bought From Internet
+
+    June 2014'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# **Table of Contents**
+
+
+    +   **1 Introduction**
+
+    +   1.1 About this guide
+
+    +   1.2 What is Bodhi Linux?
+
+    +   1.3 What you need to know about Bodhi Linux before you begin
+
+    +   1.4 Installing Bodhi Linux
+
+
+    +   **2 First steps with Bodhi**
+
+    +   2.1 Preliminary housekeeping tasks
+
+    +   2.2 Some initial tweaks
+
+    +   2.3 Installing some applications: Firefox and Flash
+
+    +   2.4 Installing Nautilus and Gnome Terminal
+
+    +   2.5 Application Launchers
+
+    +   2.6 Using Nautilus and Gnome Terminal
+
+    +   2.7 Running Nautilus as Superuser
+
+    +   2.8 Customizing the Nautilus Icon
+
+    +   2.9 Hidden files
+
+
+    +   **3 Turbocharge your Desktop**
+
+    +   3.1 A first look at shelves and iBars
+
+    +   3.2 Hiding desktop launchers
+
+    +   3.3 A second shelf
+
+    +   3.4 A popup shelf
+
+    +   3.5 The Places gadget
+
+    +   3.6 Run Everything
+
+    +   3.7 Edge bindings
+
+    +   3.8 Key bindings
+
+
+    +   **4 Beef up your System**
+
+    +   4.1 Office applications
+
+    +   4.2 Media players
+
+    +   4.3 Photo applications
+
+    +   4.4 Dropbox
+
+    +   4.5 Osmo personal organizer'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '+   4.6 Skype
+
+    +   4.7 Osmo Audio Recorder
+
+    +   4.8 elDeb and Chrome
+
+    +   4.9 Get-iPlayer
+
+    +   4.10 Other applications
+
+    +   4.11 Uninstalling applications
+
+    +   5. More power to your desktop
+
+    +   5.1 Update your iBar
+
+    +   5.2 An iBar on the desktop
+
+    +   5.3 The Favorites menu
+
+    +   5.4 Applications name display
+
+    +   5.5 Startup applications
+
+    +   5.6 Virtual desktops
+
+    +   5.7 Different shelves for different desktops
+
+    +   5.8 GTK Themes
+
+    +   5.9 Profiles
+
+    +   5.10 E17 themes
+
+    +   5.11 Starting afresh
+
+    +   6. Maintain and replicate your system
+
+    +   6.1 Aliases
+
+    +   6.2 Updating your system
+
+    +   6.3 Cleaning your system
+
+    +   6.4 Backing up with Remastersys
+
+    +   6.5 Unetbootin
+
+    +   6.6 Running Bodhi Linux from a USB drive
+
+    +   6.7 Future versions of Bodhi Linux
+
+    +   6.8 Conclusion
+
+    +   Quick Start Guide to this Bodhi Linux installation'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # 1 Introduction
+
+
+    # ## 1.1 About this guide
+
+
+    This guide describes how to install the Bodhi Linux operating system on your computer,
+    how to customize it, and how to install the software applications you will want
+    to use (web browser, email client, office applications, photo software, media
+    player, etc). It is a practical step-by-step guide rather than an academic description
+    of the Bodhi system, but at relevant points it will give links to explanatory
+    material on the web.
+
+
+    It grew out of notes prepared for a University of the Third Age (U3A) computer
+    group in the UK, some of whose members wished to migrate to Linux from Windows
+    following Microsoft’s decision to cease supporting Windows XP. I hope, though,
+    that it will prove useful to a wider audience, including existing Linux users
+    who are coming to Bodhi for the first time.
+
+
+    Bodhi Linux is highly customizable and can be tweaked in numerous ways. However,
+    a step-by-step guide such as this is necessarily prescriptive, so that by following
+    it you end up with a very specific desktop profile. Don’t worry about that. The
+    point is that having learnt how to create and save that profile, you are then
+    in a position to set up your own profile, either by playing around with what you’ve
+    already produced or by starting a fresh. And if you mess things up you can easily
+    restore your saved profile. And as for the various applications that you will
+    be installing as you work through this guide, they can be easily removed and replaced
+    with alternatives.
+
+
+    I should emphasize that this is not an official Bodhi Linux publication, and that
+    I have no connection of any kind with the Bodhi Linux developers. Like Bodhi itself
+    (and indeed most Linux products), it is given away free of charge. However, if
+    you find it helpful and, more importantly, if you like Bodhi and continue to use
+    it, I would encourage you to make a donation to Bodhi Linux to support its further
+    development. The donate link is on the Bodhi Linux home page at www.bodhilinux.com.
+
+
+    # ## 1.2 What is Bodhi Linux?
+
+
+    Bodhi (rhymes with Jodie) is what’s known as a Linux distribution or ‘distro’,
+    meaning a variant of Linux packaged with a window manager or desktop. All variants
+    of Linux are built on the same essential Linux ‘kernel’, so they all share a common
+    core. Probably the most popular variant is Ubuntu, and it is from this that Bodhi
+    Linux is derived. There are a number of different desktops (i.e. window managers
+    with added extras) that are available for Linux, and the one that is packaged
+    with the standard Ubuntu distro is called Unity. Bodhi Linux, however, uses instead
+    the Enlightenment window manager, or E17 for short (17 being its current version
+    number).
+
+
+    Enlightenment can be used with other distros, and it has become a firm favourite
+    with many Linux users (including, obviously, me), as it is agile, elegant, and
+    very customizable.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'However, it is only Bodhi Linux that puts Enlightenment at the heart of its
+    design philosophy. Enlightenment''s disadvantage is that it is so customizable
+    that the user is faced with quite a learning curve, but Bodhi''s Help system -
+    ''Tibodhi Guide to Enlightenment'' - provides excellent guidance. And hopefully
+    this step-by-step guide will enable you get to grips with it.
+
+
+    Although Bodhi is based on and is very close to Ubuntu, it is not Ubuntu. In particular,
+    it does not have the same software repository. Again, its repository is based
+    on the Ubuntu repository, but it is kept more up-to-date, meaning that the Bodhi
+    developers try to provide the latest releases of the various software applications
+    that you are going to want to install.
+
+
+    Bodhi Linux is currently at version 2, the latest release being 2.4.
+
+
+    **Further reading:** If you want to read a little more about Bodhi and its Enlightenment
+    window manager, go to the introductory section of the Bodhi Guide. You can find
+    it at the Bodhi website (www.bodhilinux.com) - at the home page, move the mouse
+    pointer over ''Documentation'', choose ''Enlightenment Guide'', then ''Introduction''.
+
+
+    # ## 1.3 What you need to know about Bodhi Linux before you begin
+
+
+    Fortunately, you don''t need to know much about Linux itself in order to use Bodhi
+    and its Enlightenment desktop, and what you do need to know can be picked up along
+    the way. However, there are a couple of concepts used by Enlightenment that I
+    need to introduce you to right now. These are '' and ''. I mention them here because
+    you will meet them while you are installing Bodhi on your computer.
+
+
+    +   - **E17 Themes:** These control the appearance of the desktop, including the
+    background, the fonts, and the various gadgets such as the clock. For examples
+    of some of the themes that are available, go to the Bodhi website (http://www.bodhilinux.com/),
+    mouse over ''Resources'', choose ''Art Wiki'', then choose ''Enlightenment''.
+
+
+    +   - **Profiles:** These control everything about the desktop, including the
+    theme you have chosen, the positioning of its elements, what modules are loaded,
+    and any key bindings and mouse bindings that you may have set. Profiles are very
+    powerful because they store all your customizations, it means that you can try
+    different profiles, with different themes and customizations, secure in the knowledge
+    that you can at any time return to your original saved profile. Bodhi comes with
+    a number of standard profiles from which you can choose, to suit your particular
+    hardware and preferences.
+
+
+    +   - **GTK Themes:** Also called ''themes'', these are not part of Enlightenment,
+    but I mention them here so that you don''t confuse them later with E17 themes.
+    GTK themes control the appearance of the windows within applications run, i.e.
+    their colour schemes and the look of common elements such as scroll bars. For
+    examples, go to the Art Wiki on the Bodhi website and choose GTK themes.
+
+
+    **Note:** I won''t be cluttering up this guide with explanations of terms such
+    as GTK. If you would like to know what they mean, search the web, if necessary
+    including ''linux'' or ''ubuntu'' in your search phrase.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 1.4 Installing Bodhi Linux
+
+
+    The first step is to create a CD with the Bodhi Linux system on it. For this you
+    will need a blank recordable CD and a computer able to write to it. Assuming you
+    have these, work through the following steps:
+
+
+    +   1) Go to the Bodhi Linux website (http://www.bodhilinux.com) where you will
+    see two download links at the right, one for 32 bit and the other for 64 bit computers.
+    I suggest you choose 32 bit, which will work on all computers. (Even if your computer
+    is a modern 64-bit machine, there is little to gain from choosing the 64-bit option.)
+
+
+    +   2) The next screen presents you with two further download options, one for
+    PAE computers and the second for non-PAE. Again, non-PAE will work on all machines.
+    However, in this case it’s worth installing the PAE version if your computer will
+    take it, and the chances are it will. All post-2004 computers support PAE, as
+    will the majority of post-1995 machines. So click on the top (pae) download button,
+    and after a few seconds your download will start. It will be a .iso file, meaning
+    that it is an optical disk image. The Bodhi ISO image is small enough to fit on
+    a CD rather than a DVD.
+
+
+    +   3) You will have noticed that below the Bodhi download button is one labelled
+    ‘sum’. This leads to a further download that will enable you to check that there
+    are no errors in your downloaded ISO image. I’ve never had any errors in such
+    images, but if you want to check, there are some free Windows utilities you can
+    use with md5sum downloads – search the Web for ‘md5sum on Windows’.
+
+
+    +   4) Now burn your ISO file to a CD. In Windows 7, if you double-click on your
+    ISO, the Windows Disk Image Burner program should open, and you can burn your
+    image with this. Otherwise you can use one of the free CD burning programs that
+    are available for Windows (and indeed for Linux). I use CDBurnerXP, which runs
+    on Windows XP as well as Vista and 7, and is available at https://cdburnerxp.se/.
+    When you run CDBurnerXP, one of its options is to burn an ISO image. Simply insert
+    a blank recordable CD in the drive, choose this option, browse to the Bodhi ISO
+    file that you’ve saved, and click the Burn disc button. After a few minutes your
+    CD will be ready.
+
+
+    +   5) Now comes the moment of truth. Boot up the computer on which you wish to
+    install Bodhi, and immediately hold down the F12 key until the boot menu opens.
+    Insert your CD into the optical drive, and select the option on the menu to boot
+    from this. (If F12 doesn’t take you to the boot menu, check your computer’s manual
+    for the method to use. Note that a list of the keys you can use at startup should
+    appear on the screen as soon as the computer fires up.)
+
+
+    +   6) After a second or two the disc start-up menu will appear. Choose the top
+    option to run the live system. The Bodhi splash screen will appear for several
+    seconds, and then the screen will grow dark, and nothing will seem to be happening
+    for perhaps a minute, other than the sound of the CD drive working. And then,
+    it all’s well, a menu of profile choices will appear. Breathe a sigh of relief!
+
+
+    +   7) If after a couple of minutes nothing happens, and the disc has stopped
+    working, it means'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'that all is not well. If your computer is old, the chances are that it is a
+    non-PAE machine, in which case you will have to download the non-PAE version of
+    Bodhi. If, after you''ve done this, Bodhi still won''t run, it means that Linux
+    has encountered some hardware incompatibility. A common problem encountered on
+    old laptops is to do with ACPI, and to overcome this you will have to turn ACPI
+    off; when the disc start-up menu appears (step 6), press the Tab key to show the
+    start-up options, and at the end of this list add the command acpi-off. You should
+    also of course check the md5sum (step 3 above).
+
+
+    8) Choose the Composite profile, click Next, and then at the next screen choose
+    any theme that takes your fancy, then click Next again. The Enlightenment desktop
+    will appear, with a panel at the left (called a ) with various gadgets on it,
+    and on the desktop itself will be more gadgets, including a clock. Don''t worry
+    about any of these for the moment.
+
+
+    9) On the live system the network gadget does not run automatically (it does on
+    the installed system), and to connect to the Internet you will have to start it
+    manually. To do so, open the main menu (by clicking anywhere on the desktop or
+    by clicking the topmost icon on the shelf) and choose ''Run Everything'' 1. At
+    its dialog box type the first few letters of network. The blue network applet
+    will appear in the dialog box and will be highlighted, and you can now Enter to
+    run it. A network icon will appear on the shelf. If you have a wired network (i.e.
+    if your computer is linked by cable to your router), a connection will be established
+    immediately; if you are connecting wirelessly, you should click on the icon, select
+    your router, and enter its password.
+
+
+    Further reading. For more information on connecting to the Internet, go to the
+    relevant part of Bodhi''s Help system. Click anywhere on the desktop to open the
+    Main menu, choose Bodhi Linux then Quick Start, then click on the first item,
+    ''Connecting to the Internet''.
+
+
+    10) IF YOU WISH, YOU CAN TRY OUT BODHI AT THIS POINT TO MAKE SURE YOU ARE HAPPY
+    WITH IT BEFORE YOU INSTALL IT ON YOUR HARD DISK. TO RUN, THE WEB BROWSER THAT
+    HAS BEEN INCLUDED ON THE CD (MIDORI), CLICK THE SECOND ICON DOWN FROM THE TOP
+    OF THE SHELF.
+
+
+    11) WHEN YOU ARE READY TO INSTALL BODHI LINUX ON YOUR COMPUTER, DOUBLE-CLICK THE
+    INSTALL BODHI ICON. AFTER SOME SECONDS THE LANGUAGE SELECTION DIALOG BOX OPENS
+    - CHOOSE THE APPROPRIATE OPTION AND CLICK CONTINUE. PRESS CONTINUE AT THE NEXT
+    SCREEN (WHICH IS A HARDWARE CHECK - DON''T WORRY IF THE INTERNET CONNECTION IS
+    CROSSED OUT), THEN AT THE NEXT DIALOG BOX CLICK YES TO UNMOUNT PARTITIONS. NEXT,
+    YOU HAVE TO DECIDE WHETHER YOU WANT TO KEEP YOUR EXISTING OPERATING SYSTEM ALONGSIDE
+    BODHI ON YOUR SYSTEM. IF YOU DON''T, CLICK THE BOX TO REPLACE MICROSOFT WINDOWS
+    THEN CLICK CONTINUE. AT THE NEXT SCREEN CLICK YOUR LOCATION ON THE MAP, AND AFTER
+    THAT ACCEPT THE APPROPRIATE KEYBOARD LAYOUT (YOU CAN PROBABLY GO WITH THE DEFAULT
+    OFFERING). NEXT, YOU MUST ENTER YOUR NAME, THEN THE USERNAME YOU WANT TO GIVE
+    YOUR COMPUTER (LEAVE IT AT Bodhi132 IF YOU WISH) AND A PASSWORD. CHOOSE ''LOG
+    IN AUTOMATICALLY'' (UNLESS YOUR COMPUTER IS TO BE USED IN A WORKPLACE SETTING),
+    THEN CLICK CONTINUE. FINALLY, WHEN THE COMPUTER HAS FINISHED INSTALLING THE SYSTEM
+    (IT TAKES QUITE A WHILE), YOU CAN CLICK RESTART.
+
+
+    12) After it reboots, at the Profile dialog box, choose the Composite profile
+    again, then at the'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Theme dialog box choose ''Bodhi-Theme'', if that theme is listed, otherwise
+    choose another. (The selection of themes available on the installation disc varies
+    from one release of Bodhi Linux to another. I will be basing the description in
+    the first part of this guide on Bodhi-Theme, and if it is not available on your
+    installation disc, don''t worry : you will be installing it shortly). That completes
+    the first part of your work - you have installed Bodhi Linux successfully.
+
+
+    Notice that the network icon has automatically appeared on the shelf. If you have
+    a wired connection to your router, this will have been activated. If you are connecting
+    wirelessly you should click the network icon to select your router and enter its
+    password.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 2.1 Preliminary housekeeping tasks
+
+
+    There are a few rather tedious tasks to perform before you get to the fun bit
+    of making everything look and behave the way you want it and installing the software
+    applications you will want to use. First off, you need to update your system.
+    You must be connected to the Internet for this to work.
+
+
+    +   1) Left-click anywhere on the desktop to open the Main menu, then choose Applications,
+    then System Tools, then Terminology. A terminal window opens, into which you can
+    type Linux commands.
+
+
+    > Note: In future I will write such a sequence like this as `menu > Applications
+    > System Tools > Terminology`. If the desktop is not visible because you have
+    a maximized window open, you can instead open the Main menu by clicking the top
+    icon on the panel, or alternatively by pressing the Menu key on the keyboard (this
+    key is usually on the bottom row, near the spacebar). Each menu in a sequence
+    like this opens to the right of the previous one, sometimes disappearing off the
+    right of the screen. If this happens, simply move the mouse pointer to the right
+    edge of the screen and the menus will shift to the left
+
+
+    +   2) The first thing you should do is synchronize the package index stored on
+    your system with the online software repository. Type `sudo apt-get update` into
+    the terminal, press Enter, then when asked enter your password. The updating will
+    now take place.
+
+
+    +   3) Next you must upgrade your system with the latest versions of the software
+    that''s stored on it. Enter `sudo apt-get dist-upgrade`, and when asked say `y`
+    to continue, press `y`.
+
+
+    +   4) Type in your password whenever you want to make an administrative change
+    to your system or to install software as a bit of a pain, so your next job is
+    to disable this requirement. (But DON''T do this in a workplace setting or if
+    people you don''t entirely trust are going to use your computer. Without this
+    requirement they can wreck your system!)
+
+
+    A) IN THE TERMINAL, ENTER `GEDIT /LEAFPAD / ETC /SUDOERS`. AFTER ENTERING YOUR
+    PASSWORD, THE SUDOERS FILE (WHICH IS IN THE ETC DIRECTORY) WILL APPEAR IN LEAFPAD
+    (A TEXT EDITOR).
+
+
+    B) SCROLL DOWN TO THE BOTTOM OF THIS FILE AND TYPE IN THE FOLLOWING TWO LINES:
+
+
+    ```
+
+    # Turn off requirement for password
+
+
+    bodhi32 ALL=(ALL) NOPASSWD: ALL
+
+    ```
+
+
+    THE FIRST LINE IS A COMMENT (COMMENTS START WITH A #), AND IS NOT ESSENTIAL. THE
+    SECOND LINE MUST BE COPIED IN EXACTLY, WITH WHATEVER YOU ENTERED AS YOUR USERNAME
+    REPLACING ''BODHI32''. (YOUR USERNAME APPEARS AT THE TOP OF THE TERMINAL WINDOW,
+    BEFORE THE (_) SYMBOL.) NOTE THE SPACES IN THIS COMMAND - THERE''S A SPACE AFTER
+    THE USERNAME; A SPACE BETWEEN (ALL) AND NOPASSWD; AND A SPACE BEFORE THE FINAL
+    ALL.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "+   C) Open LEAFPAD'S File menu and click Save. Note that this change won't\
+    \ take effect until you reboot the computer.\n+   D) Close leafpad.\n\n+   5)\
+    \ While you have Terminology open, you should install a small piece of software\
+    \ that is needed to support the download of some of the applications you will\
+    \ be meeting later. Enter:\n+   `sudo apt-get install python-gpgme`\n+   \n+ \
+    \  The installer will check whether you have Gpgme on your system, and if not\
+    \ it will install it. (When it asks for confirmation, press Y.) When the installation\
+    \ is finished, close the terminal.\n\n+   6) You may like to check that the NOPASSWD\
+    \ change you made at step 4 above has worked by rebooting your computer. To do\
+    \ this, click the power switch symbol at the bottom of the shelf and choose Reboot.\
+    \ Hopefully your computer will restart without any nasty messages appearing. However,\
+    \ if you didn't correctly enter the command to turn off the password requirement,\
+    \ it will give some kind of warning, and you should edit the sudoers file in the\
+    \ manner described in (4) above and correct your mistake.\n+   \n+   Note: In\
+    \ Linux it is possible to work almost entirely from the 'command line', i.e. by\
+    \ entering commands in a terminal as you did above, including installing software\
+    \ using the 'apt-get install' command. Whenever possible we will avoid the command\
+    \ line by using graphical alternatives, i.e. we use interfaces invoking windows\
+    \ and dialog boxes. But if you want to know more about the commands used above,\
+    \ search for the Web for them. (E.g. search for 'linux sudo' and 'linux apt-get.')\
+    \ If you want to know more about linux commands generally and the use of the command\
+    \ line, go to http://linuxcommand.org/man_pages/php.\n\n# 2.2 Some initial tweaks\n\
+    \nNow you are going to make a few changes to the look and feel of your system.\
+    \ There will be many more changes to make later on.\n\n+   1) First, if you are\
+    \ a Brit, set your system to British English. Click anywhere on the desktop to\
+    \ open the Main menu, then choose Settings > All > Language > Language Settings.\
+    \ (Remember: if the final menu in this long sequence has disappeared off the right\
+    \ of the screen, simply move the mouse pointer to the edge of the screen to bring\
+    \ it into view.) At the Language Settings dialog box that opens, highlight 'British\
+    \ English' and click Apply, and then Close.\n\n+   2) Next, you will probably\
+    \ want to make its windows behave like those of Microsoft Windows. Go to Main\
+    \ menu > Settings > All > Windows > Windows Focus. In the Focus Settings dialog\
+    \ box choose the top option ('Click Window to Focus'), then click OK.\n\n+   3)\
+    \ If Bodhi-Theme was not available when you selected the theme at the end of the\
+    \ last chapter, install it now. Go to the Bodhi Linux website (www.bodhinux.com),\
+    \ highlight 'Resources' and choose 'Art Wiki', then, under 'Themes', click on\
+    \ 'Enlightenment', and choose"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'the second (green and white) theme down on the left (called `bodhi_e17_bodhi`).
+    At the next installation screen, choose Install Now. The installation will take
+    about a couple of minutes, so be patient! When it''s finished, you should apply
+    this theme (Main menu > Settings > Theme).
+
+
+    +   4) Another change you will probably want to make is to set the font used in
+    the menu system to make it easier for older eyes to read. (These notes were written
+    for retired people in the U3A!)
+
+    +   Click on the desktop to open the Main menu, then choose Settings > All > Look
+    > Fonts. Then, at the Font Settings dialog box:
+
+    +       a) Click Advanced.
+
+    +       b) Click Menu item in the Font Class column, then Enable Font Class at
+    the foot of this column.
+
+    +       c) Choose Nimbus Sans in the Font column, then Bold in the Style column,
+    then scroll down to 12 pixels in the Size column and click that.
+
+    +       d) Click Apply, then click anywhere on the desktop to see how your menu
+    looks.
+
+    +       If you are happy with its appearance, fine, otherwise try something different.
+    Leave the dialog box open for the next exercise.
+
+
+    +   5) Now to change the font used in the title bar of windows. To see how the
+    font used in title bars looks at the moment, open Leafpad (Main menu > Applications
+    > Accessories > Leafpad, and observe what''s displayed (Untitled) in the top orange
+    area. To change this font, back at the Font Settings dialog box click Title bar
+    in the Font Classes column, then click Enable Font Class, then Ubuntu in the Font
+    column, Bold in the Style column, and 12 pixels in the Size column. Click Apply,
+    and observe how the font used in the Leafpad title bar changes. Close Leafpad
+    and the Font Settings dialog box if you''re happy with these changes, otherwise
+    try a different font.
+
+
+    +   6) A further tweak you might like to make at this point is to turn off the
+    bouncy effect that is part of the Composite profile (you may have observed this
+    effect when opening or closing dialog boxes above). Open the Main menu and choose
+    Settings > All > Look > Composite, then at the Composite Settings dialog box,
+    in the Default style section, scroll down and highlight the final option labelled
+    "". Click on OK. (Of course, you may like the bouncy effect, or you might want
+    to try other effects, in which case you can ignore this step. Don''t let your
+    personal preferences cramp your style!)
+
+
+    You''ll have realised by now that there is a mind-bogglingly huge number of settings
+    that you can apply to your Enlightenment desktop and its various components, and
+    we''ll explore more of these later. For now, we''ll complete this initial foray
+    into the possibilities by altering by changing the desktop wallpaper. As with
+    Microsoft Windows, you can choose for your wallpaper almost any picture, including
+    one of your own photos, but let''s stick with what the Bodhi website has to offer.
+
+
+    +   7) a) Open the Midori web browser (click the second icon from the top on the
+    shelf), and type the Bodhi website address (www.bodhilinux.com) into the address
+    bar. Mouse over'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'Resources (centre top of the page) and choose Art Wiki.
+
+
+    b) At the next screen choose Wallpapers, and then browse through what''s on offer
+    and pick one that matches your theme (Bodhi-Theme). This is a green theme with
+    orange highlights, and I suggest the first (green) offering in the Animated Wallpapers
+    section. Otherwise go to the Official section and choose a green theme from there.
+
+
+    c) Click on your choice, and you will be taken to a larger image of the wallpaper.
+    Right-click on it and choose the ‘Save Image As’ option, then, choose ‘Save’ at
+    the next dialog box, enter a filename of your choice, and click Save.
+
+
+    d) Now you must set this image as your wallpaper. Minimize Midori, then click
+    on the desktop for the Main menu and choose Settings > Wallpaper. At the Wallpaper
+    Settings dialog box, click ‘Picture...’ (towards the top). You should see the
+    image that you’ve just saved in the list, so highlight it, click Use, then, at
+    the Import Settings dialog box, make sure that ‘Fill’ is highlighted and click
+    OK. You are returned to the Wallpaper Settings dialog box, where you can click
+    OK. Your chosen wallpaper should now be decorating the desktop.
+
+
+    8) At this point you may want to alter the appearance of the clock. Right-click
+    on it, mouse over ‘Clock’ and choose ‘Settings’. then at the Clock Settings dialog
+    box choose Analog, deselect Seconds, and then OK. An analogue clock appears on
+    the desktop. You can resize this (by right-clicking on it again) and choosing
+    ‘Begin move/resize’. Or you may prefer to keep the clock digital, as I do, but
+    resized and located at a different spot on the desktop.
+
+
+    # 2.3 Installing some applications: Firefox and Flash
+
+
+    Part of Bodhi’s design philosophy is to package on the installation CD a minimal
+    system that will run on any hardware, however old and underpowered, and to leave
+    it to the user to beef it up with whatever additional software he requires. Thus
+    Midori is a very lightweight web browser that will run well on any hardware, and
+    the Enlightement file manager (EFM) is also very lightweight and fast. It is likely,
+    however, that you will want more substantial and capable products, as well as
+    your choice of office software, media players, photo and graphics software, and
+    some additional utilities. You will be adding all these in due course, but for
+    now let’s restrict things to an alternative web browser, an alternative file manager,
+    and an alternative terminal.
+
+
+    To compensate for the paucity of software on the installation CD, the Bodhi website
+    provides an excellent ‘AppCenter’ with a comprehensive range of good software
+    that can be readily downloaded. To view this, open Midori again (or if you have
+    minimized it you should click on its minimized icon which you will see a little
+    way down from the top of the shelf). Return to the Bodhi home page (www.bodhilinux.com),
+    mouse over Resources again, and this time choose AppCenter from the list.
+
+
+    It’s worth spending some time perusing what’s on offer at the AppCenter, but for
+    now we’ll concentrate on web browsers and the Flash plugin. Flash enables you
+    to play videos in your browser, including those from YouTube and so on, for people
+    living in the UK, BBC iPlayer. Probably the most popular of the browsers on offer
+    is Firefox, and it’s the one I generally use.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'Unfortunately Firefox doesn’t always play iPlayer programmes, in particular
+    radio programmes, so when visiting iPlayer I prefer to use Google Chrome (not
+    Chromium), which is better behaved in this respect. (Flash is built into Chrome,
+    whereas it is only a plugin for Firefox.)
+
+
+    If you are going to download and use Firefox, and I suggest you do (as it has
+    SEVERAL ADVANTAGES OVER CHROME, INCLUDING BETTER VIDEO DOWNLOAD FACILITIES), then
+    download FLASH PLAYER FIRST. To get to Flash, go down to the INTERNET SECTION
+    OF THE APP CENTER AND CHOOSE BROADER PLUGINS. YOU WILL SEE FLASH LISTED ON THE
+    NEXT SCREEN, AND YOU SHOULD CLICK ON IT. AT THE NEXT SCREEN, CLICK ‘INSTALL NOW’,
+    AND, AFTER QUITE A LONG DELAY WHILE NOTHING SEEMS TO BE HAPPENING, THE DOWNLOAD
+    WILL TAKE PLACE FOLLOWED BY THE AUTOMATIC INSTALLATION OF THE PACKAGE.
+
+
+    INSTALL FIREFOX SIMILARLY, BY RETURNING TO THE MAIN APP CENTER SCREEN AND CHOOSING
+    WEB BROWSERS IN THE INTERNET SECTION. EVENTUALLY THE DOWNLOAD AND INSTALLATION
+    WILL BE COMPLETE, AND YOU CAN CHOOSE MIDORI. FROM NOW ON WE WILL BE USING FIREFOX.
+    (I’LL COVER THE INSTALLATION OF CHROME IN CHAPTER 4.) START FIREFOX NOW:
+
+
+    +   1) Go to MAIN MENU > APPLICATIONS > INTERNET. You should see FIREFOX WEB BROWSER
+    LISTED. IF IT ISN’T, IT MEANS THAT FOR SOME REASON ENLIGHTENMENT HAS NOT UPDATED
+    ITS MENUS WITH ITS LATEST ADDITION. IF THIS HAPPENS, OPEN THE MAIN MENU AGAIN
+    AND CHOOSE ENLIGHTENMENT > RESTART. THIS WILL UPDATE ALL ENLIGHTENMENT MENUS AND
+    GADGETS. (VERY OCCASIONALLY GADGET ICONS MAY GO MISSING FROM SHELVES, AND RESTARTING
+    ENLIGHTENMENT WILL PUT THIS RIGHT.)
+
+
+    +   2) RUN FIREFOX. You may notice that it takes slightly longer than Midori to
+    load; this is because it is a more heavyweight product, with more features. Open
+    the TOOLS menu; choose ADD-ONS, then PLUGINS. You should see Flash listed there.
+
+
+    +   3) Now click ‘GET ADD-ONS’. A page will load, showing some of the add-ons
+    that are available for Firefox. Towards the bottom right of this page there is
+    a link ‘BROWSE ALL ADD-ONS’. Click this. The first page of many pages appears,
+    listing some add-ons. The add-on we want to install is called Flash Video Downloader.
+    Start typing this into the search box at the top right of the page, then click
+    on the link that appears. At the download page that opens for this add-on, click
+    the ‘ADD TO FIREFOX’ button, then at the next dialogue box click ‘Install Now’.
+
+
+    +   4) After this add-on installs, you will be invited to restart Firefox, but
+    don’t do so yet. Instead type ‘LUXION’ into the search box. Then click the Luxion
+    link that appears. Again add this to Firefox. After this rather add-on has installed,
+    you will be invited to restart Firefox—do so now; and then click on the ADD-ONS
+    tab and choose EXTENSIONS. You will see that Flash Video Downloader and Luxion
+    have been added to your system. This means that you can now download YouTube videos
+    (for example).'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '5) With **FLASH VIDEO DOWNLOADER** INSTALLED, the LARGE ARROW THAT HAS APPEARED
+    AT THE RIGHT OF THE ADDRESS BAR WILL TURN BLUE WHEN YOU PLAY A DOWNLOADABLE VIDEO.
+    THIS MEANS YOU CAN CLICK ON IT TO DOWNLOAD THE VIDEO.
+
+
+    **WARNING:** FIREFOX IS SET TO SAVE ANY DOWNLOADS TO THE DOWNLOADS FOLDER IN YOUR
+    HOME DIRECTORY. THAT FOLDER DOES NOT YET EXIST, BUT YOU WILL BE CREATING IT SHORTLY,
+    IN SECTION 2.6.
+
+
+    **NOTE:** ‘DIRECTORY’ AND ‘FOLDER’ MEAN THE SAME THING.
+
+
+    6) With **LUCIFOX** INSTALLED, A “LUCIFOX” ITEM IS ADDED TO THE TOOLS MENU, AND
+    FROM HERE YOU CAN ACCESS THE **LUCIFOX** MANUAL AS WELL AS THE **CATALOGUE BROWSER**.
+    NOTE THAT WHEN YOU DOWNLOAD AN EPUB BOOK, IT WILL APPEAR IN THE LUCIFOX WINDOW
+    BUT IT WON’T BE SAVED TO YOUR HARD DISK. TO SAVE IT, YOU SHOULD RIGHT-CLICK ANYWHERE
+    ON THE TEXT OF THE BOOK AND CHOOSE SAVE AS.
+
+
+    **NOTE:** IT’S EASY TO REMOVE OR DISABLE ANY OF THESE ADD-ONS, SHOULD YOU SO WISH.
+    OPEN FIREFOX’S TOOLS MENU, CHOOSE ADD-ONS TO OPEN THE ADD-ONS MANAGER, THEN CHOOSE
+    EXTENSIONS AND SELECT THOSE YOU WANT TO DISABLE.
+
+
+    7) Try out some of this now. Go to **YouTube**, and pick a video to play. If you
+    don’t hear any sound, it means that you will have to adjust the speaker volume:
+    click on the loudspeaker gadget in the lower part of the shelf and drag up the
+    two sliders. Observe that the download arrow to the right of the address bar has
+    turned blue.
+
+
+    8) Now go to the **Bodhi Linux** website (www.bodhilinux.com) and bookmark it
+    (by opening the Bookmarks menu and choosing Bookmark). Now mouse over **Resources**
+    and choose **AppCenter**. We are going to install an email client, so go to the
+    Internet section of **AppCenter** and click on Email. Three email clients are
+    listed, and the choice is yours. I suggest Thunderbird, which is a companion to
+    **Firefox**. Make your choice, and at the next screen click on Install Now. The
+    Launch Application dialog box opens, asking you to tell Firefox how to handle
+    this AppCenter task. You need to tell it once only, and do so proceed as follows:
+
+
+    +   - a) Click Choose, and at the next screen click on File System.
+
+    +   - b) Scroll down to the ‘usr’ directory and double-click it.
+
+    +   - c) Double-click the bin directory.
+
+    +   - d) Scroll down to ‘apturl’ and click on it.
+
+    +   - e) Click OK.
+
+    +   - f) The Launch Application dialog box reappears, with apturl as the chosen
+    application.
+
+    +   - g) Tick the box to the left of Remember my choice for all links, then click
+    OK.
+
+
+    Thunderbird (or whichever email client you chose) will now be installed. It will
+    of course need to be configured for your particular email account, and for help
+    with this you can use Thunderbird’s own help system: run **Thunderbird**, open
+    the Help menu, choose Help Contents, then choose Automatic Account Configuration.
+
+
+    **Note:** in future I will write instructions like those given in steps (a) to
+    (d) simply as ‘Navigate to /usr/bin/apturl’ (The first ‘/’ indicates the root
+    (File System) directory. Linux, like the Internet, uses forward slashes to denote
+    directories. Windows, per se, uses backslashes.)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# ## 2.4 Installing Nautilus and Gnome Terminal\n\nThere is only one widely-used\
+    \ file manager for Windows, namely, Windows Explorer. With Linux, however, you\
+    \ are spoilt for choice. As always when choosing software, you have to strike\
+    \ a balance between power and ease of use, and that balance will vary from person\
+    \ to person, depending on your needs. The Enlightenment File Manager (EFM) that\
+    \ comes with Bodhi Linux is lightweight, good-looking, and easy enough to use,\
+    \ but it is lacking in features. Many Bodhi Linux users prefer to use something\
+    \ more capable, such as PeManFM or SpaceFM. The latter is very powerful but rather\
+    \ daunting, and is too complex for beginners, but PeManFM would be a good choice.\n\
+    \nMy personal favourite is Nautilus, which combines good features with ease of\
+    \ use, and you need Nautilus on your system if you install Dropbox from the Bodhi\
+    \ software repository (more on this later). Nautilus has the slight disadvantage\
+    \ that it is designed to run on the Gnome desktop, which means that it has to\
+    \ be configured to run properly on Enlightenment.\n\nTo make full use of Nautilus's\
+    \ features, you also need to install Gnome Terminal - which is a good choice anyway,\
+    \ as it has more features than Terminology. (Terminology is the terminal that\
+    \ comes with Bodhi Linux - you used it in Section 2.1, when you carried out the\
+    \ preliminary housekeeping tasks.)\n\nIf, after using Nautilus and Gnome Terminal,\
+    \ you decide that they are not for you, then you can easily uninstall them and\
+    \ switch to alternatives. And if you are installing Bodhi Linux on an old, slow\
+    \ computer, you may decide to stick with the lightweight Enlightenment File Manager\
+    \ and Terminology, but in this case you should be aware that some of the features\
+    \ which Nautilus provides and which are described below will not be available\
+    \ to you.\n\n**Note:** The rest of this chapter is devoted to Nautilus and Terminal.\
+    \ You don't need to work through all the features described here, and I've marked\
+    \ those that are optional which you can return to later. This is especially true\
+    \ of the final section of the chapter (2.7), which is for advanced users only\
+    \ and can be omitted entirely by everyone else.\n\nYou can't download Nautilus\
+    \ and Gnome Terminal from the AppCenter, instead you must use the Synaptic package\
+    \ manager, which gives you access to the entire software repository of some 35,000\
+    \ packages.\n\n+   1) Go to **Main menu > Applications > Preferences** and run\
+    \ **Synaptic Package Manager**.\n+   \n+   2) When Synaptic opens, you will see\
+    \ that there is a toolbar at the top with a 'Quick Filter' box and the right of\
+    \ it a 'Search' icon. You can use either of these to search for packages: 'Quick\
+    \ Filter' is easiest and fast; 'Search' will find all packages which include your\
+    \ search term in their accompanying description. You can normally use Quick Filter.\n\
+    \n+   3) Type *nautilus* in the **Quick Filter** box, a list of things is displayed\
+    \ with 'nautilus' at the top. Click the box to the left of it then click **'Mark\
+    \ for Installation'**. \n+   4) The next dialog box tells you that a number of\
+    \ dependencies will be installed with it (These include Brasero, which is a useful\
+    \ CD/DVD burning program - you will find it at"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'Main menu > Applications > Sound & Video after the installation is finished.)
+    Click Mark.
+
+
+    +   5) Click on the ''nautilus-open-terminal'' box, and then Mark for installation.
+    This utility will integrate Nautilus with Terminal.
+
+
+    +   6) Now type terminal in the Quick Filter box. A list of terminals appears.
+    (If for any reason this list doesn''t appear, use the Search icon in the toolbar.)
+    Click the box to the left of ''gnome-terminal'' then click Mark for installation,
+    then Mark.
+
+
+    +   7) Click Apply (on the toolbar), then, at the Summary dialog box, click Apply
+    again.
+
+
+    +   8) After Nautilus, Nautilus-open-terminal, Gnome-terminal, and all their dependencies
+    have been downloaded and installed (a job that will take a minute or two), click
+    the ''Automatically close'' option in the Changes Applied box, then close Synaptic.
+
+
+    Nautilus will appear in the (Accessories menu (Main > Applications > Accessories)
+    under the name Files, and Gnome Terminal will appear there too. (Restart Enlightenment
+    if for any reason they are not there: Main menu > Enlightenment > Restart.)
+
+
+    Run Nautilus now (from the Accessories menu), and something ghastly happens: it
+    opens in its own (blue) desktop, which you are unable to close!
+
+
+    Update: I understand that ins problem is to be fixed shortly. If your version
+    of Nautilus does not invoke the blue screen, you can ignore the instructions below
+    and proceed to Section 2.6.
+
+
+    THE SOLUTION IS TO KILL IT:
+
+
+    +   1) PRESS WIN + SPACE (I.E. HOLD DOWN THE WINDOWS KEY, USUALLY TOWARDS THE
+    BOTTOM LEFT OF THE KEYBOARD, AND TAP THE SPACEBAR). IF YOU HAVE AN OLD COMPUTER
+    WHICH DOESN''T HAVE A WIN KEY, PRESS ALT + ESCAPE INSTEAD. THE RUN EVERYTHING
+    DIALOG BOX OPENS.
+
+
+    +   2) TYPE KILLALL NAUTILUS INTO THIS DIALOG BOX AND PRESS ENTER. NAUTILUS AND
+    THE OFFENDING BLUE BACKGROUND WILL DISAPPEAR.
+
+
+    The problem is that Nautilus has been configured to run on a different desktop,
+    and we need to edit its launcher. We''ll do that in the next section.
+
+
+    Note: You can use the killall command in this way to close any application that
+    is misbehaving and refusing to close. However, you should normally type killall
+    -9 followed by the application name. The ''-9'' ensures that all processes (and
+    there may be more than one) involved in running the application are killed.
+
+
+    # 2.5 APPLICATION LAUNCHERS
+
+
+    These are central to the Enlightenment window management system. They control,
+    amongst other things, which menu (if any) lists an application, and how it runs,
+    and they can also be used to control whether or not an application appears as
+    an icon on the desktop. Application launchers are also known as desktop configuration
+    files, and they have the extension ''.desktop''. Thus the Nautilus'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'LAUNCHER HAS THE FILENAME ''NAUTILUS.DESKTOP''. We are going to edit it now,
+    not directly but by a nifty tool that Enlightenment provides.
+
+
+    +   1) RUN NAUTILUS AGAIN (MAIN MENU > APPLICATIONS > ACCESSORIES > FILES), AND
+    DON''T WORRY ABOUT THE BLUE WINDOW THAT IS DISPLAYED BEHIND IT. (Don''t worry
+    either about the long-winded way you have to navigate through the menu system
+    to launch Nautilus. Soon we''ll be turbocharging your desktop, and then tasks
+    like this will be accomplished with just a single click!)
+
+
+    +   2) RIGHT-CLICK ON THE TITLE BAR SO THAT THE CONTEXT MENU OPENS, AND THEN MOVE
+    THE MOUSE POINTER OVER THE TOP OPTION (''Nautilus'') AND CHOOSE ''Edit Icon''.
+
+
+    +   3) AT THE DESKTOP ENTRY EDITOR THAT OPENS, IN THE BASIC TAB, CHANGE THE NAME
+    TO NAUTILUS, THEN CHANGE THE ENTRY IN THE APPLICATION BOX TO READ: nautilus %U
+    -no-desktop (that''s a space and two dashes in front of ''no'' and one dash between
+    ''no'' and ''desktop'').
+
+
+    +   4) Click OK, then close Nautilus and kill the blue desktop behind it (by pressing
+    Win + space to Run Everything, then entering killall nautilus).
+
+
+    +   5) Now run Nautilus again, and all should be well.
+
+
+    YOU WILL LEARN MORE ABOUT APPLICATION LAUNCHERS IN THE NEXT SECTION.
+
+
+    # ## 2.6 Using Nautilus and Gnome Terminal
+
+
+    In this section you will gain some familiarity with Nautilus and the Linux file
+    system. You will create the folders you are going to need in your Home Directory.
+    You will also be using Gnome Terminal, and we begin by customizing its appearance.
+
+
+    # ### Customizing Terminal
+
+
+    +   1) Open Gnome Terminal (MAIN MENU > APPLICATIONS > ACCESSORIES > TERMINAL).
+
+
+    +   2) The colour scheme that greets you can be improved, and to do this you should
+    open the Edit menu and choose ''Profile Preferences''.
+
+
+    +   3) AT THE DIALOG BOX, CLICK THE COLOURS TAB.
+
+
+    +   4) IN THE COLOURS DIALOG BOX, UNTICK THE ''USE COLOURS FROM SYSTEM THEME''
+    BOX. THEN AT ''BUILT-IN SCHEMES'' BOX CHOOSE ''WHITE ON BLACK''.
+
+
+    +   5) Click Close, and you will be returned to the Terminal window, which should
+    now be much easier on the eye. If you are happy with the change, close the Terminal.
+    Otherwise return to ''Profile Preferences'' and make some more tweaks.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# ## Using Nautilus\n\nNow run Nautilus in the usual way (i.e., from the menu\
+    \ system). It will open in your home directory, with a single folder (called Desktop)\
+    \ displayed, and also the Wallpaper file that you downloaded earlier. The Home\
+    \ directory is where you store all your personal files.\n\n+   1.  Start by maximizing\
+    \ Nautilus, then open the Desktop folder (by double-clicking it). You will see\
+    \ that it’s empty. However, if we copy any desktop launchers into this folder,\
+    \ then they will show up as icons on the Desktop. Let’s copy our Nautilus Desktop\
+    \ file here now.\n\n+   2.  Press the F3 key to open another pane in Nautilus,\
+    \ then click on File System in the sidebar (at the left). Now navigate to /usr/share/Applications\
+    \ (i.e., double-click the usr folder, then at the next screen double-click the\
+    \ share folder, then double-click the Applications folder. Icons showing the files\
+    \ in this folder will appear. These files are all Applications launchers, and\
+    \ you could if you wished launch an application from here, by double-clicking\
+    \ its icon. You could also edit the launcher from this screen.\n\n+   3.  You\
+    \ will probably need to return to this directory in the future, so the changes\
+    \ that you will remember the route to it are pretty slim, so let’s bookmark it:\
+    \ open the Bookmarks menu and click Add Bookmark. The Applications directory is\
+    \ added to the top of the sidebar, where it can be accessed with a single click.\n\
+    \n+   4.  Let’s examine our Nautilus launcher. Right-click on an empty space between\
+    \ the icons and choose ‘Open in Terminal’ from the context menu. (Alternatively\
+    \ you can choose this option from the File menu.) Terminal opens in the /usr/share/Applications\
+    \ directory.\n\n+   5.  Maximize Terminal, then enter the command `ls`. A listing\
+    \ of the files in this directory appears, with ‘Nautilus.Desktop’ among them.\n\
+    \n+   6) To edit this file:\n+   \n+       A) Drag over its filename with the\
+    \ mouse so that it is highlighted, then right-click anywhere within the Terminal\
+    \ window and choose Copy from the context menu.\n+       B) Type in the command\
+    \ `gksuudo leafpad` followed by a space, then right-click again within the Terminal\
+    \ window and choose Paste. The filename will be added to the end of the command.\n\
+    +       C) Press Enter, and the contents of the Desktop file will appear in Leafpad.\n\
+    \n+   7) You can see in Leafad the changes you made in the last section: a few\
+    \ lines down there is the command ‘Exec=nautilus %U --no-desktop’. The lower entries\
+    \ in this file are not relevant to Enlightenment and can be ignored, though you\
+    \ might like to comment them out. To do so, simply insert a # at the start of\
+    \ each line so that they read:"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\n# [DESKTOP ACTION WINDOW] \n# Name=\"Open a New Window \n# Exec=NAUTILUS\
+    \ \n# OnlyShown=Unity;\n```\n\n8) Open the file menu and choose save, then close\
+    \ leafpad. You are returned to the terminal window, which you can close.\n\n9)\
+    \ You should still have your Desktop folder open in the other pane in Nautilus\
+    \ (see steps 1 and 2 above), so let's copy our Nautilus desktop file into it:\n\
+    \nA) In the Applications pane, scroll down to the Nautilus icon and right-click\
+    \ on it.\n\nB) At the context menu, choose “Copy” to “then” Other pane.” The file\
+    \ will appear in the other pane, i.e. in your Desktop folder.\n\nC) Minimize Nautilus,\
+    \ and you will see that its icon is now present on your desktop. Now you can run\
+    \ Nautilus simply by double-clicking it.\n\n# Creating your home directory folders\n\
+    \nNow create the folders you'll need to organize all the data files that you will\
+    \ gradually accumulate in your Home directory. You will certainly need one for\
+    \ downloads and another for documents, and you will probably need ones for photos\
+    \ and other media files. Let's create the first two of these folders now.\n\n\
+    1) Restore the Nautilus window (by clicking its minimize icon on the shelf), then\
+    \ click on Home in the sidebar so that one of its panes is showing the contents\
+    \ of your Home directory.\n\n2) Right-click on an empty part of this pane and\
+    \ choose \"Create New Folder\" from the context menu. Enter Documents as its name.\n\
+    \n3) Repeat this step, this time entering Downloads as the name.\n\n4) Go to the\
+    \ other pane and click on Home to open the Home directory, and double-click your\
+    \ new Downloads folder to open it.\n\n5) You now have the Downloads folder open\
+    \ in one pane and the Wallpaper file that you downloaded earlier visible in the\
+    \ other. Right-click on the Wallpaper file, and choose “Move to” from the context\
+    \ menu. “Then” Other pane.” The file is moved to Downloads, which is where it\
+    \ rightly belongs.\n\n6) Close the pane showing the Downloads folder by clicking\
+    \ on it and pressing F3, then create in your Home directory the other folders\
+    \ you are likely to need. These might be “Movies,” “Pictures,” “Audio,” as well\
+    \ as others. The choice is yours.\n\nNote: The remaining steps in this section\
+    \ (7 to 10) are optional and can be ignored."
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '+   7) You can if you wish customize the icons of your various folders. If
+    you are going to do this, it’s best to Bookmark the location of the icons folder
+    first:
+
+
+    +   a) Click File System in the side bar and navigate to /Icons/Share/Icons/Mac-OS9X/Apps.
+
+
+    +   b) Bookmark this folder. By opening the Bookmark menu and choosing “Add Bookmark”,
+    it will appear in the side pane labelled ‘Apps’.
+
+
+    +   c) To change this name to something more meaningful, open the Bookmarks menu
+    again and choose “Edit Bookmarks”, then change its name to e.g. ReMix Icons.
+
+
+    +   8) To change the icon of the Documents folder, click on Home in the sidebar
+    to return to your Home folder, then right-click the Documents folder icon and
+    choose ‘Properties’ from the context menu. Then click its icon in the Properties
+    dialog box, and you are taken to the Select Custom Icon dialog box. Click on ‘ReMix
+    Icons’ (or whatever name you gave your new bookmark) in the sidebar, and you will
+    be taken to the list of ReMix icons.
+
+
+    +   9) Move down through this list by pressing the down-arrow key; each icon will
+    be displayed in turn at the right. When you find one you like (try GEDIT.png,
+    for instance), click Open, then close the Properties dialog box.
+
+
+    +   10) Your other folders can be assigned icons in a similar way.
+
+
+    # Setting Nautilus’s Views and Preferences [Optional]
+
+
+    You will sometimes wish to change the way Nautilus displays its file listings.
+    To demonstrate the possibilities, click on File System in the sidebar to show
+    the root directory. The various view options are listed at the foot of the View
+    menu, but you can instead cycle through the possibilities by pressing Ctrl + 1
+    (i.e. hold down the Ctrl key and tap 1), Ctrl + 2, and Ctrl + 3. If you settle
+    on Ctrl + 2 (list view) for this directory, Nautilus will remember this and automatically
+    switch to this view whenever you return here. The same is true for other directories.
+
+
+    You can change the global appearance and behaviour of Nautilus at the File Management
+    Preferences dialog box:
+
+
+    +   1) To get to this, open the Edit menu, and choose Preferences.
+
+
+    +   2) Once you’ve right try is at the Views tab, in the ‘Icon Views Default’
+    section - set the Default Zoom Level to 66%.
+
+
+    +   3) Then in the Behaviour tab, tick the box for ‘Include A Delete Command that
+    bypasses the Rubbish Bin’. (Note: that that any files deleted with this command
+    might not be retrievable should you change your mind later.)
+
+
+    +   4) Click Close when you’ve finished, and check out your changes.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# SEARCHING FOR FOLDERS AND FILES [OPTIONAL]
+
+
+    Nautilus has a handy Search facility, accessed via the Search icon at the right
+    of the toolbar. The main thing to remember is to start your search at the directory
+    in which the sought folder or file lies. Thus if you are seeking a document or
+    data file that''s somewhere in your Home directory, you should start at that directory;
+    if, however, it is somewhere within the root file system, you should start your
+    search at the root directory. If, you should click ''File System'' in the sidebar
+    before you click ''Search''.
+
+
+    TRY THIS NOW, BY SEARCHING FOR ALL .DESKTOP FILES IN YOUR FILE SYSTEM.
+
+
+    +   1) Run Nautilus, and click ''File System'' in the sidebar.
+
+    +   2) Click ''Search'', and enter DESKTOP in the Search field. After a while
+    all the desktop files will appear, listed with their locations.
+
+
+    Notice that when the search begins, a toolbar opens below the Search field. If
+    you click the green ~ symbol at the right, a box opens that allows you to specify
+    the file type. It is set to ''Any''; but if you click on its arrow, you are taken
+    to a range of common types, and if you click on ''Other Type'' a huge range of
+    possibilities appears. You''ll use this feature in your next search.
+
+
+    Search for all pictures in your Home directory:
+
+
+    +   1) Click ''Home'' in the sidebar.
+
+    +   2) Click ''Search'', then enter a dummy term in the Search field, such as
+    123.
+
+    +   3) When the search begins, click the green ~ symbol, then choose ''Picture''
+    in the File Type box.
+
+    +   4) In the Search field, delete the dummy term and type instead a single space.
+    This acts as a wildcard, causing Nautilus to search for all filenames.
+
+    +   5) Click the Reload button, and Nautilus will perform the search, locating
+    the wallpaper picture you downloaded earlier.
+
+
+    # CONNECTING TO OTHER COMPUTERS ON YOUR NETWORK [OPTIONAL]
+
+
+    Nautilus makes accessing other (Windows) computers connected to your network particularly
+    easy. Simply click on ''Browse Network'' in the sidebar, and after a few seconds
+    the name of any computer which is connected and switched on should show up, and
+    you should have immediate access to the public folders on its file system. (If
+    this access is denied, you will need to go to that computer and check its sharing
+    options at the Network and Sharing Center of the Control Panel. You should also
+    right-click on the Public ''Documents'' folder and select Properties, then the
+    Sharing tab, and check the entries here.)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# SAFELY REMOVING USB MEMORY STICKS
+
+
+    LINUX WILL READ YOUR USB MEMORY STICKS (PEN DRIVES) JUST AS HAPPILY AS WINDOWS
+    WILL. IF YOU INSERT A USB STICK (OR ANY OTHER STORAGE DEVICE) IN A USB PORT OF
+    YOUR COMPUTER, ITS ICON WILL APPEAR AT THE TOP OF THE NAUTILUS SIDEBAR, AND YOU
+    CAN ACCESS ITS CONTENTS BY CLICKING THIS.
+
+
+    TO SAFELY REMOVE THE USB STICK FROM YOUR COMPUTER, YOU SHOULD RIGHT-CLICK ITS
+    ICON IN THE NAUTILUS SIDEBAR AND CHOOSE THE EJECT OPTION FROM THE CONTEXT MENU.
+
+
+    # SETTING NAUTILUS AND TERMINAL AS DEFAULT APPLICATIONS
+
+
+    OUR FINAL TASK IN THIS SECTION IS TO SET NAUTILUS AS THE DEFAULT FILE MANAGER,
+    AND GNOME TERMINAL AS THE DEFAULT TERMINAL.
+
+
+    +   1) GO TO MAIN MENU > SETTINGS > ALL > APPS > DEFAULT APPLICATIONS.
+
+
+    +   2) AT THE DIALOG BOX THAT OPENS, THE DEFAULT BROWSER SHOULD ALREADY BE SET
+    TO FIREFOX, BUT YOU WILL NEED TO HIGHLIGHT FILE IN THE LEFT PANE THEN SCROLL DOWN
+    TO AND HIGHLIGHT NAUTILUS IN THE RIGHT PANE, THEN CLICK APPLY.
+
+
+    +   3) THEN HIGHLIGHT TERMINAL IN THE LEFT PANE AND TERMINAL IN THE RIGHT PANE,
+    AND APPLY.
+
+
+    +   4) CLICK CLOSE.
+
+
+    THE REST OF THIS CHAPTER COVERS MORE ADVANCED TOPICS AND CAN BE OMITTED OR RETURNED
+    TO LATER. SO YOU CAN NOW IF YOU WISH JUMP TO CHAPTER 3, *TURBOCHARGE YOUR DESKTOP*.
+
+
+    # 2.7 RUNNING NAUTILUS AS SUPERUSER
+
+
+    SOMETIMES, AS IN THE NEXT SECTION, IT''S HANDY TO RUN NAUTILUS AS A ‘SUPERUSER’
+    WITH ADMINISTRATIVE PRIVILEGES, AS THIS ALLOWS YOU TO MAKE CHANGES TO PROTECTED
+    SYSTEM DIRECTORIES. TO DO SO, YOU MUST RUN NAUTILUS AS ‘ROOT’. NEEDLESS TO SAY,
+    YOU MUST TAKE GREAT CARE WHEN RUNNING NAUTILUS THIS WAY, AS YOU COULD WRECK YOUR
+    SYSTEM.
+
+
+    THE MOST CONVENIENT WAY TO RUN NAUTILUS AS SUPERUSER WILL BE VIA THE MENU SYSTEM,
+    AND TO SET THIS UP YOU MUST CREATE A PERSONAL APPLICATION LAUNCHER FOR IT.
+
+
+    +   1) GO TO MAIN MENU > SETTINGS > ALL > APPS > PERSONAL APPLICATION LAUNCHERS.
+
+
+    +   2) AT THE PERSONAL APPLICATION LAUNCHER DIALOG BOX CLICK ADD.
+
+
+    +   3) AT THE NEXT DIALOG BOX TYPE Nautilus as Root IN THE NAME FIELD
+
+
+    +   4) TYPE gksudo "nautilus %U --no-desktop" IN THE APPLICATION FIELD (NOTE THE
+    QUOTE MARKS - THEY ARE ESSENTIAL.)
+
+
+    +   4) CLICK THE GENERAL TAB AND IN THE CATEGORIES FIELD TYPE Utility... THIS
+    TELLS ENLIGHTENMENT'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'where to locate this launcher''s entry in the menu system.
+
+
+    +   5) Click **Apply**, then **Close**.
+
+
+    Now go to **Main Menu > Applications > Accessories**, where you will see that
+    ''**Nautilus as Root**'' has been added to the menu. Click on this entry and Nautilus
+    will run, though it is not quite the same Nautilus as before. For example, the
+    bookmarks you created earlier have disappeared, and if you had set any preferences
+    (in *Edit > Preferences*) these will have gone too. It is in fact a different
+    instance of Nautilus.
+
+
+    The (**ROOT**) terminal that you can run from here will also be a different instance
+    of Terminal, with different preferences. Test this out now:
+
+
+    +   1) Right-click on an empty space in the Nautilus window, and choose ''**Open
+    in Terminal**''. Terminal as **Root** opens, but with awkward colours.
+
+
+    +   2) To fix these colours, open Terminal''s *Edit menu* and choose ''**Profile
+    Preferences**''. Open the *Colours* tab, then untick the ''**Use colours from
+    system theme**'' box. At ''**Built-in scheme**'', choose **Custom**. Now set the
+    background colour to something like dark red; this will serve as a warning when
+    you are in this instance of Terminal that you are in superuser mode.
+
+
+    +   3) Click **Close**, then close Terminal but keep Nautilus as **Root** open
+    in preparation for the next section.
+
+
+    # 2.8 Customizing the Nautilus Icon
+
+
+    It should be an easy task to replace the rather dull-looking icon that''s been
+    assigned to Nautilus, but there appear to be two missing icons folders in the
+    **Enlightenment** file system that prevents us doing so. Furthermore, these folders
+    are in a protected part of the system, which means we can''t create them by running
+    Nautilus in the normal way, instead we must run it as **Root**.
+
+
+    +   1) If Nautilus as **Root** is not already open, open it now (*Main menu >
+    Accessories > Nautilus as Root*).
+
+
+    +   2) Navigate to `/usr/local/share`, right-click on an empty part of the folder
+    window and choose ''**Create new Folder**''. Enter `icons` as the name.
+
+
+    +   3) Navigate to `/usr/share/enlightenment` and create an `icons` folder here
+    too.
+
+
+    +   4) Having created the two missing folders, you can close Nautilus as **Root**.
+    Instead you should now run it normally (by double-clicking its icon on the desktop).
+
+
+    To change its icon, proceed as follows:
+
+
+    +   1) Right-click on the orange Nautilus title bar and choose **Nautilus > Edit
+    Icon**.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'THE DESKTOP ENTRY EDITOR OPENS.
+
+
+    +   2) OPEN THE ICON TAB, THEN CLICK ON THE ICON ITSELF. A NEW DIALOG BOX OPENS
+    WHICH
+
+    +   ALLOWS YOU TO NAVIGATE TO YOUR CHOSEN ICON.
+
+
+    +   3) CLICK ON ROOT IN THE LEFT PANE, THEN IN THE RIGHT PANE NAVIGATE TO
+
+    +   `/USR/SHARE/ICONS/MAXO-REMIX/APPS`
+
+
+    +   4) SCROLL DOWN TO `NAUTILUS.PNG` AND CLICK OK.
+
+
+    +   5) BACK AT THE DESK ENTRY EDITOR CLICK APPLY.
+
+
+    +   6) CLOSE NAUTILUS.
+
+
+    THE ICON ON THE DESKTOP SHOULD HAVE CHANGED TO A MORE PLEASING IMAGE.
+
+
+    # ## 2.9 HIDDEN FILES
+
+
+    JUST AS MOST OF THE STUFF IN THE UNIVERSE IS INVISIBLE DARK MATTER, SO THE MAJORITY
+    OF
+
+    DIRECTORIES AND FILES IN YOUR Home DIRECTORY ARE HIDDEN. TO SEE THESE, DOUBLE-CLICK
+
+    YOUR NEW DESKTOP ICON TO RUN NAUTILUS, THEN PRESS Ctrl + H OR OPEN THE VIEW MENU
+
+    AND CLICK ''SHOW HIDDEN FILES''. YOU WILL SEE THAT THERE ARE QUITE A FEW HIDDEN
+
+    FOLDERS IN YOUR Home DIRECTORY, AND THERE WILL BE MANY MORE WHEN YOU''VE FINISHED
+
+    INSTALLING THE VARIOUS APPLICATIONS IN THE NEXT CHAPTER. NOTICE THAT THESE HIDDEN
+
+    FILES AND DIRECTORIES ARE ALL PREFIXED WITH A `.`
+
+
+    PERSONAL APPLICATION LAUNCHERS ARE STORED IN THIS HIDDEN PART OF YOUR Home
+
+    DIRECTORY, IN THE `LOCAL/SHARE/APPLICATIONS` FOLDER. HAVE A LOOK AT IT:
+
+
+    +   1) NAVIGATE TO THAT FOLDER NOW, AND OPEN TERMINAL.
+
+
+    +   2) ENTER `LS` TO LIST THE FILES IN THE FOLDER. ONE OF THEM IS
+
+    +   `NAUTILUS_AS_ROOT.DESKTOP`.
+
+
+    +   3) ENTER `leafpad Nautilus_as Root.desktop` (REMEMBER YOU CAN COPY-AND-PASTE
+    THE FILENAME
+
+    +   INTO THIS COMMAND).
+
+
+    +   4) THE TEXT OF THE LAUNCHER SHOULD BE DISPLAYED.
+
+
+    +   5) CLOSE LEAFPAD, AND CLOSE TERMINAL.
+
+
+    +   6) IN NAUTILUS, RETURN TO YOUR Home DIRECTORY (BY CLICKING HOME IN THE TOOLBAR),
+
+    +   AND PRESS Ctrl + H AGAIN TO TURN OFF THE HIDDEN FILES VIEW.
+
+
+    +   7) FINALLY CLOSE NAUTILUS.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 3 TURBOCHARGE YOUR DESKTOP
+
+
+    If you have got heartily sick of navigating through endless choices in the menu
+    system, then this chapter is for you. By the end of it you should have an appreciation
+    of the full flexibility and speed of the Enhanced Windows desktop system. For
+    you will have set it up to run applications and change settings by just one or
+    two clicks of the mouse. You will even have speeded up and simplified the way
+    you use the mouse to maximize, minimize, close and otherwise manipulate windows.
+    The pain of accurately settling on those tiny buttons at the right of the title
+    bar will be a thing of the past!
+
+
+    You will achieve all this by setting up and populating shelves and iBars, and
+    by setting up deco bindings. Other topics covered here include using Run Everything,
+    loading modules (including the Places Module), and using gadgets. This will prepare
+    your desktop environment for the next chapter, where you will be downloading the
+    applications you need to handle office work, manipulate photos, play media files,
+    and so on.
+
+
+    > Hint: You will be opening a number of windows and dialog boxes as you work through
+    this guide. If one of these extends off the edge of the screen and you want to
+    bring it into view, hold down the Alt key while dragging it with the mouse. (Of
+    course, if the window has a visible title bar you can instead drag on that.)
+
+
+    # 3.1 A FIRST LOOK AT SHELVES AND I BARS
+
+
+    We''ll begin by customizing the existing shelf at the left of your desktop.
+
+
+    +   1) Right-click on an empty area of the shelf and choose the first option in
+    the context menu, ''Contents''.
+
+    +   2) The Shelf Contents dialog box opens, listing the available gadgets. (There
+    are more gadgets than these and you will discover how to load them shortly.)
+
+    +   3) Make sure that the following three gadgets are selected: ''Settings'',
+    ''Everything Starter'', and ''iBar''. (To select a gadget, highlight it and click
+    ''Add Gadget''.)
+
+    +   4) Deselect any other selected gadgets, by highlighting them and clicking
+    ''Remove Gadget''. (Some of these, like the Mixer and SysTray, you will shortly
+    be adding to another shelf.)
+
+    +   5) You will be left with just three icons on your shelf, namely ''iBar'' (which
+    is currently housing Mitori), ''Settings'', and ''Run Everything''. Close the
+    dialog box.
+
+    +   6) Now right-click the Mitori icon on the shelf, mouse over ''iBar'' then
+    choose ''Contents''. The iBar Applications dialog box opens. You may want to make
+    it bigger by dragging on its top or bottom borders.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '+   7) FOLLOWING THE PROCEDURE DESCRIBED IN (3) ABOVE, ADD THE FOLLOWING APPLICATIONS
+    TO THE iBAR: FIREFOX, NAUTILUS, SYNAPTIC, TERMINAL, AND THUNDERBIRD. REMOVE MIDORI.
+
+
+    +   8) CLICK ON THE ORDER TAB (AT THE TOP OF THE BOX), AND MOVE FIREFOX AND SYNAPTIC
+    DOWN IN THE LIST SO THAT THE ORDER READS: NAUTILUS, TERMINAL, FIREFOX, THUNDERBIRD,
+    SYNAPTIC.
+
+
+    +   9) CLICK APPLY, AND THEN CLOSE. YOUR iBAR SHOULD NOW CONTAIN ICONS FOR THESE
+    FIVE APPLICATIONS.
+
+
+    +   10) RIGHT-CLICK ON AN EMPTY AREA OF THE SHELF AGAIN, AND CHOOSE ‘SETTINGS’
+    FROM THE MENU. THE SHELF SETTINGS DIALOG BOX OPENS.
+
+
+    +   11) AT THE ‘STACKING’ TAB, CHOOSE ‘BELOW WINDOWS’ (THIS ENSURES THAT THE SHELF
+    WILL NOT BE VISIBLE IF YOU WANT TO RUN AN APPLICATION FULL-SCREEN.)
+
+
+    +   12) CLICK ON ‘POSITION’, AND AT THIS TAB CHOOSE THE SECOND OPTION AT THE LEFT
+    (I.E. THE ONE WITH THE SHELF ALONG THE LEFT EDGE OF THE SCREEN, AT THE TOP).
+
+
+    +   13) AT THE ‘SIZE’ TAB, LEAVE THE SIZE AT 40 PIXELS, BUT SELECT ‘SHRINK TO
+    CONTENT WIDTH’.
+
+
+    +   14) CLICK THE RIGHT ARROW TO REACH THE ‘STYLE’ TAB, AND HERE YOU SHOULD SELECT
+    ‘INVISIBLE’.
+
+
+    +   15) CLICK APPLY, AND THEN CLOSE.
+
+
+    THE ICONS ON YOUR SHELF SHOULD NOW BE CLUSTERED AT THE LEFT EDGE OF THE SCREEN,
+    AT THE TOP, AND THE SHELF ITSELF SHOULD BE INVISIBLE. AND NOW YOU CAN ACCESS ALL
+    THE GADGETS AND APPLICATIONS PLACED ON IT WITH A SINGLE CLICK. ONE OF THESE –
+    THE SETTINGS GADGET – YOU’LL BE USING IN THE NEXT SECTION.
+
+
+    **NOTE:** THE SYSTEM (POWER SWITCH) GADGET IS NO LONGER ON THE SHELF. SO TO SWITCH
+    OFF YOUR COMPUTER, YOU’LL EITHER HAVE TO PRESS THE COMPUTER’S POWER BUTTON OR
+    USE THE MENU SYSTEM (MAIN MENU > SYSTEM > POWER OFF). LATER IN THIS CHAPTER YOU
+    WILL BE CREATING A KEY BINDING TO SWITCH OFF.
+
+
+    # ### 3.2 HIDING DESKTOP LAUNCHERS
+
+
+    SINCE YOU CAN NOW LAUNCH NAUTILUS WITH A SINGLE CLICK ON ITS iBAR ICON, THERE’S
+    NO POINT HAVING ITS LAUNCHER ON THE DESKTOP AS WELL. INDEED, AS WE’LL SEE LATER,
+    THERE’S NO POINT HAVING ANY SUCH LAUNCHERS ON THE DESKTOP, AS WE CAN PUT iBARS
+    THERE INSTEAD.
+
+
+    To hide desktop launchers:
+
+
+    +   1) CLICK THE SETTINGS GADGET ON THE PANEL. THE SETTINGS WINDOW OPENS, WHICH
+    YOU MAY WANT TO MAXIMIZE. NOW, ALL THE DIFFERENT SETTINGS POSSIBILITIES THAT YOU'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'previously had to access by wading through the menu system are at hand.
+
+
+    +   2) Desktop icons are controlled by the EnLightenment file manager, and to
+    get to its Settings you will have to click on the arrow at the top-right of the
+    Settings window to scroll sideways to files. Choose ''File Manager'', then, at
+    the Fileman Settings dialog box, click on the Display tab and turn off ''Icons
+    on Desktop''.
+
+    +   Apply, and then Close, and close the Settings window.
+
+
+    # 3.3 A second shelf
+
+
+    We''ll put the Systray and Mixer gadgets on a second shelf, which again we''ll
+    locate at the left of the screen, but at the bottom. Systray requires that this
+    shelf is visible.
+
+
+    +   1) Go to Main menu > Settings > Shelves, and at the Shelf Settings dialog
+    box click Add.
+
+    +   2) Give your new shelf a meaningful name so that you can identify it later
+    (e.g. ''Bottom'').
+
+    +   3) The Shelf Contents dialog opens, where you should add the Mixer and Systray
+    gadgets. Click Close, and you are returned to the Shelf Settings dialog box.
+
+    +   4) Highlight your shelf (''Bottom''), and click ''Settings''. The Shelf Settings
+    dialog box opens, and at the various tabs make sure the following settings: Stacking
+    - ''Below Windows''; Position - ''Fourth down'' (i.e. left edge, to the bottom);
+    Size - make sure ''Shrink to Content Width'' is selected; Style - leave it as
+    ''Default''.
+
+    +   5) Click Apply, then Close, and then close the Shelf Settings dialog box.
+
+
+    To change the order of the gadgets on this shelf (so that the Mixer is at the
+    bottom, below Systray), right-click on the Mixer and choose ''Begin Moving Gadgets''.
+    You can now drag the gadgets to the desired position. Right-click Mixer again
+    and choose ''Stop Moving Gadgets''.
+
+
+    Hint: If an application is open and maximized, so that it fills the desktop apart
+    from the narrow strip at the left reserved for your shelves, you can click the
+    exposed part of the desktop between the two shelves to open the EnLightenment
+    menu system.
+
+
+    # 3.4 A popup shelf
+
+
+    Now you''ll create a shelf which will be tucked away at the bottom of the screen,
+    hidden from view until you mouse over it.
+
+
+    +   1) If you have a laptop it will be helpful to unclutch the battery gadget''
+    on this shelf, but its module is not part of the base (Composer profile. To rectify
+    this, go to Main menu > Settings > Modules. The Module Settings dialog box appears.
+
+    +   Where you should click on the System tab, highlight ''Battery'', and click
+    Load.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'THEN CLICK CLOSE.'',
+
+
+    2) NOW GO TO MAIN MENU > SETTINGS > SHELVES, AND ADD A NEW SHELF WHICH YOU CAN
+    CALL ''POPUP''. AT THE SHELF SETTINGS DIALOG BOX YOU SHOULD HIGHLIGHT ''POPUP''
+    AND CLICK ''CONTENTS''. THE SHELF CONTENTS DIALOG BOX OPENS.
+
+
+    3) HERE YOU SHOULD ADD THE BATTERY GADGET (IF YOU LOADED THIS IN STEP 1) AND THE
+    TASKS GADGET, THEN CLICK CLOSE.
+
+
+    4) BACK AT THE SHELF SETTINGS DIALOG BOX, MAKE SURE ''POPUP'' IS STILL HIGHLIGHTED
+    AND CLICK ''SETTINGS''. MAKE THE SETTINGS FOR THIS SHELF AS FOLLOWS: Stacking=''Above
+    Everything''; Position=‘Fifth Down on the Left, ie at the Foot of the Screen,
+    to the Left; Size =‘Shrink to Content’; Width=''；Style=''Invisible''; Auto Hide=''Auto-hide
+    the Shelf''.
+
+
+    5) CLICK APPLY, THEN CLOSE, THEN CLOSE THE SHELF SETTINGS DIALOG BOX. THE TOP
+    EDGE OF YOUR NEW SHELF SHOULD BE VISIBLE AT THE BOTTOM LEFT OF THE SCREEN, AND
+    YOU CAN REVEAL IT BY MOVING THE MOUSE POINTER DOWN TO IT.
+
+
+    Note: If you added the Battery Gadget at Step 5 above, it may also have been added
+    to your first (top) shelf. If it has, simply right-click on it, mouse over ''Battery''
+    in the context menu, and click ''Remove''.
+
+
+    6) NOW OPEN ONE OR TWO APPLICATIONS (E.G. TERMINAL AND NAUTILUS). THEIR ICONS
+    WILL APPEAR IN YOUR NEW POPUP SHELF (MOVE THE MOUSE TO THE SHELF TO CHECK THIS).
+    MINIMIZE THEM, AND THEY WILL BE DOCKED THERE. AS IN WINDOWS, YOU CAN CLICK ON
+    THE DOCKED ICON IN THIS SHELF TO RESTORE THE APPLICATION''S WINDOW.
+
+
+    THIS COMPLETES WHAT WE NEED TO COVER IN THIS CHAPTER ON SHELVES AND IBARS. IN
+    CHAPTER 5 YOU WILL BE PUTTING ON I BAR OR TWO ON THE DESKTOP, AND YOU WILL EXPLORE
+    THE POSSIBILITY OF VIRTUAL DESKTOPS WITH DIFFERENT SHELVES AND IBARS POPULATED
+    WITH DIFFERENT APPLICATIONS AND GADGETS.
+
+
+    IF YOU WANT TO ADD MORE GADGETS TO YOUR SHELVES, FEEL FREE TO DO SO, GLANCE THROUGH
+    THE LIST OF MODULES FIRST (MAIN MENU > SETTINGS > MODULES) TO SEE IF THERE ARE
+    ANY WHICH YOU FANCY WHICH ARE NOT YET LOADED. LOAD THEM, AND THEY BECOME AVAILABLE
+    IN THE SHELF CONTENTS DIALOG BOX.
+
+
+    # 3.5 THE PLACES GADGET
+
+
+    I FIND THIS GADGET USEFUL, BUT LOCATED ON THE DESKTOP RATHER THAN ON A SHELF.
+
+
+    1) GO TO MAIN MENU > SETTINGS > MODULES. THE MODULE SETTINGS DIALOG BOX OPENS.
+    CLICK ON THE FILES TAB, HIGHLIGHT ''PLACES'', AND CLICK LOAD AND THEN CLOSE.
+
+
+    2) NOW GO TO MAIN MENU > SETTINGS > GADGETS, AND AT THE DESKTOP GADGETS DIALOG
+    BOX HIGHLIGHT ''BACKGROUND'', THEN CLICK ''CONFIGURE LAYER''.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '3) Scroll down to ''Places'' and highlight it. Click ''Add Gadget'', then close,
+    then close again.
+
+
+    4) The Places gadget should have appeared on the desktop in a movable box. Drag
+    this box to a suitable location. Then pull down the bottom border an inch or two
+    to give plenty of room to house the details of any storage devices such as USB
+    sticks that you might plug in.
+
+
+    5) Right-click on the Places box when you''ve finished moving and resizing, and
+    the movable box disappears. Right-click again on the gadget, and mouse over ''Places''
+    then ''Appearance'' and click ''Plain''. The border around the gadget disappears.
+
+
+    6) If you didn''t install Nautilus in Chapter 3 but opted instead to use the Enlightenment
+    file manager (EFM), you can ignore this step and the next. Right-click on filesystem,
+    mouse over ''Places'' and click ''Settings''. The Places Settings dialog box opens.
+
+
+    7) Here you should click ''Use a custom file manager'' and enter Nautilus—no desktop
+    in the box (that''s two dashes before the ''no''). Click Apply then close.
+
+
+    8) Test your new desktop gadget: click the Home icon (top right of the gadget),
+    and Nautilus will run in your home directory; close it then click on the hard
+    disk icon, and Nautilus will run in the Root directory; close Nautilus.
+
+
+    9) If you insert a USB memory stick into your computer, its icon will show up
+    on this gadget, with details of its capacity; if you click on its icon, Nautilus
+    will open in the drive''s root directory.
+
+
+    # ## 3.6 Run Everything
+
+
+    You can see that iBars offer a great way to launch applications with a single
+    click, but what about the various Settings utilities with their dialog boxes that
+    you''ve been making use of, which must be launched from deep within the menu system?
+    Even using the Settings gadget to reach these dialog boxes takes quite a bit of
+    navigating. The solution is to use the ''Run Everything'' module.
+
+
+    You can launch Run Everything by clicking its icon in the first iStrip (if you''ve
+    set up its leaf on a white background). You can also run it directly by pressing
+    Alt + Esc (i.e. hold down the Alt key and press Escape), or Win + Space (i.e.
+    hold down the Windows key and press the spacebar), or by selecting it from the
+    Main menu.
+
+
+    1) Click the Run Everything icon now. Its dialog box opens, with tabs listed along
+    the bottom labelled ''All'', ''Applications'', ''Windows'', ''Execute'', and two
+    other ones (''Settings'' and ''Plugins'') which you can''t see until you click
+    along to them. Click each tab in turn, and you will see how Run Everything organizes
+    the programs on your computer.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '2) If you know the name of a program, the easiest way to run it is not via
+    these tabs but simply by typing the first few letters of the program''s name into
+    this dialog box. For instance to run Terminal, you could type the first two or
+    three letters of TERMINAL and press Enter.
+
+
+    You''ll be using Run Everything in the exercises in the remainder of this chapter.
+    Note that in these exercises I will simply instruct you to ''Run Everything'',
+    meaning that you should either click on the Run Everything icon on the shelf,
+    or press Alt - Esc, or press Win - Space, or select it from the Main menu.
+
+
+    Further reading: Go to the **Booh Guide to Enlightenment** (Main menu -> Booh
+    Linux -> Quick Start, mouse over ''Enlightenment'' and choose ''Booh Guide''),
+    and read the ''Everything Module'' section. To prepare for the next exercises
+    you should also read the ''Bindings'' section.
+
+
+    # 3.7 Edge Bindings
+
+
+    Edge bindings specify the actions that occur when you click the mouse on different
+    parts of the screen edge. To set these up:
+
+
+    +   1) Run Everything, and type the first three letters of *edge bindings*. The
+    Edge Bindings icon is highlighted. Press Enter, and the Edge Bindings Settings
+    dialog box opens.
+
+
+    +   2) Click **Add**, and you are taken to the Edge Binding Sequence dialog box.
+    You''ll begin by creating a binding for the top right corner of the screen, so
+    click the brown box at this corner.
+
+
+    +   3) Click *clickable edge*, then click **Apply**.
+
+
+    +   4) You now have to assign an action to this binding. In the right-hand action
+    pane, scroll down to the ''Window : Actions'' section (about two thirds of the
+    way through the huge list of possibilities) and highlight ''Close''.
+
+
+    +   5) Click **Apply**. Now, whenever you click on the top-right corner of the
+    screen, the currently-focused window will close. This is equivalent to clicking
+    the ''x'' button at the top right corner of the title bar. (Those tiny title bar
+    buttons are fiddly, zipping the mouse up to the top right of the screen is much
+    easier).
+
+
+    +   6) Click **Add** again, and now, in the Edge Binding Sequence dialog box,
+    click on the top edge of the picture of the screen. The Clickable Edge option
+    should have been automatically selected, so click **Apply**.
+
+
+    +   7) In the right pane scroll down to the ''Window : State'' section, highlight
+    ''Maximize'', then click **Apply**. Now, whenever you click on the top edge of
+    the screen, the currently-focused window will be maximized. This is equivalent
+    to, but easier than, clicking the ''+'' button at the right of the title bar.
+    Note that to unmaximize the window, simply click the top edge of the screen again.
+
+
+    +   8) Click **Add** again, click the bottom edge in the ''Edge Binding Sequence''
+    box, then'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "APPLY.\n\n+   9) **Highlight** *‘Iconic Mode Toggle’* (IN THE ‘Window : State’\
+    \ SECTION) AND CLICK APPLY. NOW, WHATEVER YOU CLICK THE BOTTOM EDGE OF THE SCREEN,\
+    \ THE CURRENTLY-FOCUSED WINDOW WILL BE MINIMIZED. THIS EQUIVALENT TO CLICKING\
+    \ THE ‘↓’ BUTTON ON THE TITLE BAR.\n\n+   10) NOW YOU SHOULD CREATE BINDINGS TO\
+    \ CARRY OUT OTHER ACTIONS THAT CAN’T CURRENTLY BE DONE BY MOUSE CLICKS. I SUGGEST\
+    \ THE FOLLOWING:\n+   \n+   A) TOP-LEFT EDGE - ‘**Fullscreen** Mode Toggle’ (IN\
+    \ THE ‘Window : State’ SECTION). CLICKING HERE WILL SWITCH TO FULLSCREEN. CLICKING\
+    \ AGAIN WILL RESTORE.\n+   \n+   B) LEFT EDGE - ‘**Maximize** Left’ (IN THE ‘Window\
+    \ : State’ SECTION).\n+   \n+   C) RIGHT EDGE - ‘**Maximize** Right’ (IN ‘Window\
+    \ : State’). THIS BINDING AND THE LAST ARE INVALUABLE WHEN YOU WANT TO OPEN TWO\
+    \ WINDOWS SIDE-BY-SIDE.\n+   \n+   D) BOTTOM-RIGHT EDGE - ‘**Show The Desktop**’\
+    \ (IN THE ‘Desktop’ SECTION, AT THE TOP OF THE RIGHT PANE). THIS WILL MINIMIZE\
+    \ ALL OPEN WINDOWS AND SHOW THE DESKTOP.\n+   \n+   E) THAT LEAVES THE BOTTOM-LEFT\
+    \ CORNER WITHOUT A BINDING. I WILL BE SUGGESTING ONE FOR THIS LATER.\n\n+   11)\
+    \ NOW OPEN AN APPLICATION AND TEST THESE BINDINGS WITH ITS WINDOW. NOTE THAT FOR\
+    \ MOST OF THESE BINDINGS A SECOND CLICK WILL RESTORE THE WINDOW TO ITS PREVIOUS\
+    \ STATE.\n\n**Note:** YOU DON’T NEED TO MINIMIZE AN APPLICATION TO HIDE IT FROM\
+    \ VIEW. INSTEAD YOU CAN DOUBLE- CLICK ITS TITLE BAR TO ROLL UP ITS WINDOW BENEATH\
+    \ THE BAR. DOUBLE-CLICKING THE BAR AGAIN WILL UNROLL IT. TRY IT.\n\n# 3.8 Key\
+    \ bindings\n\nLet’s now create some key bindings. The procedure is similar to\
+    \ that described in the last section.\n\n+   1) Run *Everything* and in the **Run\
+    \ Everything** dialog box type the first few letters of *key bindings*. The ‘Key\
+    \ Bindings’ icon will be highlighted; press **Enter** and the **Key Bindings**\
+    \ Settings dialog box will open.\n\n+   2) If you click on any item in the (long)\
+    \ list in the left pane, the action to which it is bound will be highlighted in\
+    \ the right ‘Action’ pane. For example, if you click on ‘Menu’ (which denotes\
+    \ the Menu key), ‘Show Main Menu’ will be highlighted at the right. It’s worth\
+    \ spending a few minutes exploring the many key combinations for which bindings\
+    \ already exist. For example, Win + Left (i.e. the Windows key with the left-arrow\
+    \ key) will **Maximize Left**, and Win + Right will maximize right.\n\n+   **Note:**\
+    \ When setting up key bindings of your own, you should avoid key combinations\
+    \ that are used by applications. For example, Ctrl + s is often used to save,\
+    \ and Ctrl + c and Ctrl + a are used for copy and paste. Win (Windows key) combinations\
+    \ are not used elsewhere and so are good choices.\n\n+   3) Let’s set up a key\
+    \ binding now. Click **Add**, and you are invited to press a key combination."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'Press Win + m (i.e. hold down the Windows key and tap m).
+
+
+    4) In the right ''Action'' pane, scroll down to the ''Window : State'' section
+    and highlight ''Maximize Vertically''. Click Apply, and the binding is set.
+
+
+    5) To test your binding, click Win + m now. The Key Bindings Settings dialog box
+    should be maximized vertically, making it much easier to use. Henceforth, if a
+    dialog box such as this is too cramped vertically, you can press Win + m to instantly
+    enlarge it.
+
+
+    6) Press Add again to create another binding. Press Win + End, and in the right
+    Action pane scroll down to the ''System'' section and highlight ''Power Off Now''.
+    Then click Apply. Now, when you want to turn off your computer, simply press Win
+    + End.
+
+
+    7) If you don''t have volume control keys on your keyboard and you would like
+    some, set Win + up (i.e. Windows key with the up-arrow key) and Win + down as
+    the ''Increase Volume'' and ''Decrease Volume'' respectively. You will find these
+    actions in the ''Mixer'' section of the Action pane. To test these keys, open
+    Firefox and play some video material, e.g. from YouTube.
+
+
+    8) Click Close to exit. As you continue using Bodhi, other key combinations will
+    occur to you, and Run Everything makes it really easy to return to the Key Bindings
+    dialog box.
+
+
+    If, having reached the end of this chapter, you wish to turn off your computer,
+    remember your shortcut: press Win + End.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# 4. Beef up your System\n\nBy the time you reach the end of this chapter you\
+    \ will have installed most of the applications you are likely to need. If you\
+    \ are new to Linux, the problem will be which out of the many possibilities should\
+    \ you choose? Sometimes the choice will be clear-cut, and in many cases there\
+    \ will be a Linux version of favourite software that you previously ran under\
+    \ Windows.\n\nVLC, for example, is the standard public domain (i.e. free) media\
+    \ player, both in Windows and Linux, and LibreOffice is the standard public domain\
+    \ office suite for both Windows and Linux. Other choices are not so clear-cut,\
+    \ and some that I suggest may not be the best for you. And if your computer is\
+    \ old and underpowered, this will limit your choices to lightweight applications.\n\
+    \nYour best policy is to try out one or two alternatives; it's easy enough to\
+    \ uninstall those you don't want and install others. (As in Windows, there may\
+    \ be some baggage left behind when you uninstall applications; you will learn\
+    \ how to remove this and tidy up your system in Chapter 6.)\n\nWhenever possible,\
+    \ you should install applications from the Bodhi AppCenter rather than Synaptic.\
+    \ To uninstall applications, use Synaptic.\n\n# 4.1 Office applications\n\nMicrosoft\
+    \ products, including Microsoft Office, do not work in Linux, however, makes a\
+    \ good replacement, and it is used in a number of schools, government offices,\
+    \ and businesses (though usually on Windows computers). Its Writer instead of\
+    \ Word, Calc instead of Excel, Impress instead of PowerPoint, and Base instead\
+    \ of Access. It also includes Draw, a drawing program. I can read any documents\
+    \ saved in Microsoft Office format, and it can export documents to that format.\
+    \ I'm using LibreOffice Writer (running under Bodhi Linux) to write this book.\n\
+    \nOf course, if your only requirements office-wise is to produce the occasional\
+    \ letter, there is not much point installing something as heavyweight as LibreOffice.\
+    \ The Abiword word processing package would be much more appropriate.\n\nCups\
+    \ is the printing package used by applications that offer a Print option, and\
+    \ if you are going to want to print from your computer you will need to install\
+    \ this.\n\nLibreOffice and Cups must be installed from AppCenter; otherwise you\
+    \ will not download all the components needed to run them. Abiword can be installed\
+    \ either from AppCenter or Synaptic.\n\n+   1) Go to the Bodhi Linux website (www.bodhilinux.com)\
+    \ and navigate to the AppCenter.  \n+   2) In the Office section choose 'Office\
+    \ Suite' and then LibreOffice. Click 'Install Now'. The installation will take\
+    \ a minute or two. If you choose to install Abiword instead of LibreOffice,"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'you will find it in the Office section under ''Word Processor''.
+
+
+    +   3) To install Cups, return to the AppCenter and from the Office section choose
+    ''Printing and Scanning'', then Printing, and click ''Install Now''.
+
+
+    +   4) LibreOffice and Cups will have been added to your menu system, the former
+    at Main menu > Applications > Office and the latter at Main menu > Applications
+    > Preferences. Note that you will not see Cups listed by name, instead it will
+    be called ''Printing''.
+
+
+    You can now install your printer:
+
+
+    +   1) Make sure your printer is switched on and connected either directly to
+    your computer or to the network. For example, it could be connected to a Windows
+    computer which is itself connected to the network.
+
+
+    +   2) Run ''Printing'' either from the menu system or via Run Everything (type
+    the first few letters of printing and press Enter). The Printing window opens,
+    where you can click Add to add your printer.
+
+
+    +   3) The Select Devices dialog box opens, where you can choose the appropriate
+    option. For example, if the printer is connected to another Windows computer on
+    the network, select ''Network Printer'' and then ''Windows Printer via SAMBA''.
+    Then click Browse and double-click the entries that appear (e.g. WORKGROUP, then
+    the name of the Windows computer). Your printer should appear in the dialog box:
+    highlight it and click OK.
+
+
+    +   4) Click Forward, then select your printer''s make from the list that appears,
+    then Forward again and choose the model. Choose the recommended driver, click
+    Forward, then Apply.
+
+
+    +   5) You are invited to print a test page. Assuming this is satisfactory, click
+    OK, then close the Printing window.
+
+
+    +   6) Now run LibreOffice Writer (or Abiword), open the File menu, and choose
+    Print. You should see your printer highlighted in the Printer dialog box. If so,
+    all''s well and you can click Cancel, then close Writer.
+
+
+    # 4.2 Media players
+
+
+    VLC is the standard application for playing media files, especially video files,
+    as it handles many different file types and is able to convert between one type
+    and another, should you wish to do this. If you wish to play DVDs, you will need
+    to download also a plugin called ''VLC'' and this plugin are both available at
+    the AppCenter (the latter under the listing ''DVD Playback).
+
+
+    Besides movies, VLC can be used for playing music and other audio files, though
+    you may find it more convenient to use a dedicated audio player such as Audacious
+    for this.
+
+
+    You should download these applications now from the AppCenter, where you will
+    find them in the Multimedia section under the headings ''Video Player'', ''Codes'',
+    and ''Audio Player''.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '(You may of course wish to download one or more of the alternatives on offer.
+    Or you can stick with my recommendations are try others later.)
+
+
+    **Note:** You can speed up the installation of multiple packages if, after downloading
+    the first package, you choose \u201cQuick install\u201d instead of \u201cInstall
+    Now\u201d at the installation page. This bypasses the \u201csudo apt-get update\u201d
+    which synchronizes the database of file news on your computer with the repository
+    database. Having synchronized this for the first package, there is no need to
+    synchronize again for the rest.
+
+
+    # ### 4.3 Photo applications
+
+
+    If all you want to do is to view your photos, perhaps as a slide show, together
+    with some very basic editing facilities, then Mirage is a very user-friendly choice.
+    For more editing options as well as photo management capabilities, you might like
+    to try Shotwell, either as an alternative to Mirage or in addition to it. Or perhaps
+    you wish to install alongside Mirage a drawing package that can handle photos,
+    in which case try Pinta. If, however, you want a really powerful photo editor
+    along the lines Photoshop, try Gimp.
+
+
+    Install one or more of these now from the Graphics section of AppCenter.
+
+
+    # ### 4.4 Dropbox
+
+
+    Dropbox allows you to store important files in a secure location on the Internet.
+    If you have Nautilus on your system, I suggest you install it using Synaptic,
+    otherwise install it from the AppCenter (you will find it under Cloud, in the
+    Internet section), though note that this will only install part of Dropbox. To
+    install the remainder:
+
+
+    +   1) Go to Main menu > Applications > Internet > Dropbox.
+
+
+    [2] If, at the dialog box that opens, a message appears warning you that python-gpgme
+    is not installed, close the dialog box and install this utility now. (You will
+    not see this warning if you installed it as part of the initial exercises in Chapter
+    2.) When the installation of python-gpgme is complete, run Dropbox again, and
+    at this time there should be no warning.]
+
+
+    +   3) Click OK at the dialog box. The full Dropbox package will now be installed,
+    and you will be taken to the Dropbox Setup dialog box where you can open a Dropbox
+    account. Note that you are allowed 2 Gb of free Dropbox storage, and once you
+    have opened an account you can add to that free storage by recommending Dropbox
+    to others.
+
+
+    If you don\u2019t want to open an account right now, close the dialog box.
+
+
+    # ### 4.5 Osmo personal organizer
+
+
+    If you want a calendar/diary, contacts list, notepad, and to-do list in one handy
+    package, then I think Osmo is good choice. You won\u2019t find it in the AppCenter,
+    instead you will have to download it from Synaptic (type *osmo* into Quick Filter
+    and click its box when the list of its appears, then Apply). After Osmo installs,
+    there are a number of settings I recommend you'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "make:\n\n1) Run Osmo (you will find it the Applications > Office menu); when\
+    \ it opens you will see tabs for the various modules across the top and a toolbar\
+    \ below them.\n\n2) NOTICE THAT THE Osmo ICON APPEARS IN THE Systray ON YOUR BOTTOM\
+    \ SHELF. YOU CAN REVEAL/HIDE Osmo BY CLICKING HERE, SO THERE IS NO NEED TO USE\
+    \ THE TITLE BAR'S MINIMIZE OR CLOSE BUTTONS. IF YOU SHOULD WISH TO CLOSE IT, RIGHT-CLICK\
+    \ ITS ICON IN THE Systray AND CHOOSE Quit.\n\n3) SINCE THE TITLE BAR BUTTONS ARE\
+    \ UNNECESSARY, IT'S A GOOD IDEA TO GET RID OF THE TITLE BAR, AS THIS WILL DECUTTERER\
+    \ THINGS AND INCREASE Osmo'S WORKING AREA. TO DO THIS, RIGHT-CLICK THE TITLE BAR,\
+    \ MOUSE OVER Window, MOUSE OVER BORDER, THEN CLICK 'Select Border Style', HIGHLIGHT\
+    \ 'Borderless', CLICK THE 'Remember This Border' BOX, THEN CLICK OK.\n\n4) NOW\
+    \ CLICK THE LEFT EDGE OF THE SCREEN TO LEFT-MAXIMIZE Osmo. IF YOU NOW QUIT Osmo\
+    \ (BY RIGHT-CLICKING ITS Systray ICON) AND OPEN IT AGAIN, YOU WILL SEE THAT ALL\
+    \ THESE SETTINGS HAVE BEEN REMEMBERED BY THE SYSTEM.\n\nHINT: YOU CAN IF YOU WISH\
+    \ RESTORE THE TITLE BAR AND BORDER LATER BY OPENING Osmo AND PRESSING CtrI.+ALT+W\
+    \ TO DISPLAY THE TITLE BAR MENU. THEN YOU CAN REPEAT THE STEPS IN (3) ABOVE, THIS\
+    \ TIME CHOOSING THE DEFAULT STYLE.\n\nTHERE IS QUIT A LOT TO Osmo, AND YOU SHOULD\
+    \ SPEND SOME TIME EXPLORING THE PREFERENCES FOR EACH OF ITS MODULES TO SET IT\
+    \ UP THE WAY YOU WANT. I USE Osmo FOR KEEPING NOTES ABOUT LINUX, ENLIGHTENMENT,\
+    \ AND THE VARIOUS APPLICATIONS THAT I USE. I'VE CATEGORIZED THESE NOTES BY TOPIC,\
+    \ WHICH MAKES FOR EASY RETRIEVAL.\n\nOsmo HAS BEEN DESIGNED FOR USE WITH THE MOUSE,\
+    \ BUT IF YOU PREFER TO USE THE KEYBOARD THERE ARE KEY BINDINGS FOR EVERYTHING.\
+    \ TO SEE THEM, CLICK THE 'ABOUT' ICON AT THE RIGHT OF THE TOOLBAR, THEN CHOOSE\
+    \ 'Key Shortcuts'.\n\n# 4.6 Skype\n\nIF YOU HAVE A WEBCAM AND YOU WANT Skype ON\
+    \ YOUR SYSTEM, YOU MUST INSTALL IT FROM THE AppCenter (IN THE 'Internet' SECTION,\
+    \ 'Communication'). OTHERWISE YOU MAY HAVE PROBLEMS GETTING THE SOUND WORKING.\n\
+    \nONCE YOU'VE INSTALLED Skype, YOU WILL FIND IT AT Main Menu > Applications >\
+    \ Internet. WHEN YOU RUN IT, YOU ARE ASKED TO EITHER SIGN IN IF YOU HAVE A Skype\
+    \ ACCOUNT, OR TO CREATE A NEW ACCOUNT. THIS DONE, THE MAIN Skype SCREEN WILL OPEN.\
+    \ THE FIRST THING YOU SHOULD DO IS CHECK YOUR WEBCAM SETTINGS:\n\n+   1) CLICK\
+    \ THE MENU ICON (THE BUTTON AT THE BOTTOM LEFT), THEN CHOOSE Options > Video Devices,\
+    \ AND CHECK THAT THE CAMERA IS SELECTED AND WORKING.\n+   \n+   2) CHOOSE 'Sound\
+    \ Devices' AND THEN, IF YOUR DEVICE IS NOT SHOWN IN THE 'Microphone'"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'FIELD, CLICK THE ARROW AT THE RIGHT OF THIS FIELD AND CHOOSE YOUR DEVICE FROM
+    THE LIST. IF YOU ARE USING A USB WEBCAM, CHOOSE THE FIRST USB CAMERA OPTION.
+
+
+    +   3) NOW CLICK ON ‘MAKE A TEST SOUND’ (YOU MAY NEED TO INCREASE THE SPEAKER
+    VOLUME), THEN CLICK ‘MAKE A TEST CALL’. ASSUMING EVERYTHING WORKS, YOU ARE GOOD
+    TO GO.
+
+
+    # 4.7 OSMOMA AUDIO RECORDER
+
+
+    THIS ALLOWS YOU TO RECORD ANYTHING THAT’S PLAYED THROUGH THE SPEAKERS OF YOUR
+    COMPUTER, INCLUDING RADIO PROGRAMMES. YOU WON’T FIND THIS APPLICATION IN APPCENTER
+    OR SYNAPTIC, INSTEAD YOU WILL HAVE TO INSTALL IT FROM A PPA.
+
+
+    PPAs ARE UNOFFICIAL REPOSITORIES FOR SPECIFIC PACKAGES, AND THEY CANNOT NECESSARILY
+    BE TRUSTED. SO IF INSTALLING FROM A PPA, YOU DO SO AT YOUR OWN RISK; HAVING SAID
+    THAT, I HAVE NOT EXPERIENCED ANY PROBLEMS WITH THE PPA’S REFERRED TO IN THIS GUIDE.
+
+
+    OSMOMA AUDIO RECORDER IS DESCRIBED AT HTTP://IT’SF OSS.COM/RECORD-STREAMING-AUDIO...
+    . TO INSTALL IT, YOU MUST OPEN TERMINAL AND ENTER THE FOLLOWING COMMANDS:
+
+
+    ```
+
+    ```bash
+
+    SUDO ADD-APT-REPOSITORY PPA:OSMOMA/AUDIO-RECORDER
+
+    SUDO APT-GET UPDATE
+
+    SUDO APT-GET INSTALL AUDIO-RECORDER
+
+    ```
+
+    ```
+
+
+    (THESE COMMANDS ARE GIVEN ON THE ABOVE WEB PAGE, AND YOU MAY FIND IT EASIEST TO
+    COPY AND PASTE THEM FROM THERE INTO TERMINAL.)
+
+
+    AUDIO RECORDER CAN RECORD IN A NUMBER OF FILE FORMATS, BUT NOT MP3. IF YOU WANT
+    TO ADD MP3 CAPABILITY TO IT, YOU MUST ALSO INSTALL A PLUGIN CALLED ‘10-PLUGINS-UGLY’
+    (USE SYNAPTIC FOR THIS).
+
+
+    TO TEST AUDIO RECORDER, RUN IT (YOU WILL FIND IT AT APPLICATIONS > SOUND & VIDEO),
+    AND WHEN IT OPENS:
+
+
+    +   1) IN THE FORMAT FIELD SELECT A SUITABLE FORMAT (E.G. MP3 IF YOU HAVE DOWNLOADED
+    THE ABOVE GSTREAMER PLUGIN).
+
+
+    +   2) PLAY SOME AUDIO CONTENT THROUGH YOUR COMPUTER AND PRESS THE START RECORDING
+    BUTTON. A BLUE AUDIO VISUALISATION BAR SHOULD APPEAR ALONGSIDE THE RECORDING BUTTON,
+    SHOWING THAT THE AUDIO IS BEING RECORDED.
+
+
+    +   3) PRESS STOP RECORDING, AND THE RECORDED FILE WILL BE SAVED IN THE AUDIO
+    FOLDER. (THIS FOLDER WILL HAVE BEEN CREATED DURING THE INSTALLATION; IF IT WASN’T
+    ALREADY PRESENT IN YOUR HOME DIRECTORY.)
+
+
+    +   4) TEST THE RECORDING BY OPENING AUDACIOUS (IF YOU INSTALLED IT IN SECTION
+    4.2), ADDING THE NEW FILE TO ITS PLAYLIST, THEN PLAYING IT. ALTERNATIVELY YOU
+    CAN PLAY IT IN VLC.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Note that if you mute the speakers (using the Mute option in the Mixer gadget),
+    there will be no sound for Audio Recorder to record. To record something without
+    having to listen to it, e.g. a radio programme that you want to play back later
+    in the car, cut the speakers by inserting a headphone jack into the computer''s
+    headphone socket.
+
+
+    Note also the commands that you can use in the Timer section of Audio Recorder.
+    The # symbol''s comment out commands, so delete the # preceding any command you
+    want to activate. If you make a change in this section, you must click the Save
+    button for it to take effect.
+
+
+    Note also the Add button alongside the File field. You should only click this
+    if you want to append your recording the previously-recorded file recorded.
+
+
+    # 4.8 eDeB and Chrome
+
+
+    If you live in the UK and you wish to watch or listen to programs on BBC iPlayer,
+    it''s best to use the Google Chrome web browser. Unfortunately you can''t download
+    this from AppCenter or Synaptic, instead you have to download it as a .deb file.
+
+
+    The easiest way to handle .deb files is to use the eDeB package installer. This
+    is included in Version 2.4 of Bodhi (you will find it in Main menu > Applications
+    > System Tools), but if you happen to be running an earlier version of Bodhi you
+    will first have to download it from Synaptic (search for eDeB in the Filter field.)
+
+
+    Assuming you have eDeB on your system, you can download and install Chrome:
+
+
+    +   1) Open Firefox and search for Google Chrome. The first hit should be the
+    official Google Chrome web page, with a blue ''Download Chrome'' button towards
+    the top.
+
+
+    +   2) Click this button, and at the next screen accept the ''32 bit .deb (for
+    Debian/Ubuntu)'' option. Click Accept and Install.
+
+
+    +   3) At the next dialog box click Ok to save the file. A message will appear
+    showing that it is in your downloads (i.e. in your Downloads folder).
+
+
+    +   4) Go to Main menu > Applications > System Tools and run eDeB. Click the ''Select
+    .deb file'' button.
+
+
+    +   5) At the next screen click the Downloads folder, then highlight the google-chrome_deb
+    file and click Ok.
+
+
+    +   6) At the next screen you will have to wait 30 seconds or so while eDeB downloads
+    the package information. Then click Ok.
+
+
+    +   7) You are invited to run Checks before installing, so click the Checks button.
+    Hopefully this will confirm that you are cleared to go.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "+   8) CLICK OK AND THEN CLICK INSTALL.\n+   \n+   9) ENTER YOUR PASSWORD,\
+    \ AND CLICK OK. THE INSTALLATION WILL TAKE PLACE, AND AFTER\n+   A WHILE A MESSAGE\
+    \ WILL APPEAR WARNING THAT THERE ARE MISSING DEPENDENCIES.\n+   \n+   10) THE\
+    \ GREAT THING ABOUT eDEB IS THAT IT WILL RESOLVE SUCH PROBLEMS FOR YOU. CLICK\n\
+    +   'INSTALL MISSING DEPENDENCIES', CLICK GRAB, THEN ENTER YOUR PASSWORD AND CLICK\n\
+    +   OK.\n+   \n+   11) WHEN eDEB HAS FINISHED INSTALLING EVERYTHING YOU CAN CLICK\
+    \ DONE, THEN CLOSE\n+   IT.\n+   \n+   YOU CAN NOW, IF YOU WISH, RUN GOOGLE CHROME\
+    \ (MAIN MENU > APPLICATIONS >\n+   INTERNET). AT THE INITIAL WELCOME SCREEN, UNCHECK\
+    \ THE BOX THAT INVITES YOU TO MAKE\n+   CHROME THE DEFAULT BROWSER, THEN CLICK\
+    \ START.\n\n# 4.9  GET+PLAYER\n\nIF YOU WANT TO DOWNLOAD MATERIAL FROM BBC iPLAYER\
+    \ IN MP4 FORMAT (FOR TV\nPROGRAMMES) OR MP3 FORMAT (FOR RADIO PROGRAMMES), SO\
+    \ THAT YOU CAN PLAY THEM\nWITHOUT RESTRICTION ON ANY DEVICE THAT SUPPORTS THOSE\
+    \ FORMATS, THEN Get+iPLAYER\nIS A MUST. IT IS A COMMAND-LINE PROGRAM, MEANING\
+    \ THAT TO USE IT YOU HAVE TO ENTER\nCOMMANDS IN TERMINAL. DON'T BE PUT OFF BY\
+    \ THIS, AS THE COMMANDS ARE QUITE SIMPLE\n(OR THEY WILL BE WHEN WE'VE TWEAKED\
+    \ THINGS A LITTLE - BUT MORE ON THIS LATER).\n\nYOU HAVE TO DOWNLOAD Get+iPLAYER\
+    \ FROM A PPA, AND TO DO THIS YOU SHOULD ENTER\nTHE FOLLOWING SEQUENCE OF COMMANDS\
+    \ INTO TERMINAL:\n\n```\nSUDO  ADD-APT-REPOSITORY PPA:JON-HEDGERS/GET+PLAYER\n\
+    SUDO APT-GET UPDATE\nSUDO APT-GET INSTALL GET+iPLAYER\n```\n\nTO USE Get+iPLAYER\
+    \ TO DOWNLOAD A TV PROGRAMME:\n\n+   1) USE Nautilus TO NAVIGATE TO THE FOLDER\
+    \ WHERE YOU WANT THE PROGRAMME TO BE\n+   STORED, THEN RIGHT-CLICK ON AN EMPTY\
+    \ PART OF THE FOLDER PANE AND CHOOSE 'OPEN\n+   TERMINAL'.\n+   \n+   2) AT TERMINAL,\
+    \ ENTER GET+iPLAYER \"PROGRAMME NAME\". YOU CAN USE EITHER AN\n+   UNDERSCORE\
+    \ OR A HYPHEN BETWEEN 'GET' AND 'iPLAYER', AND YOU MUST OBVIOUSLY\n+   REPLACE\
+    \ PROGRAMME NAME WITH THE NAME OF THE PROGRAMME YOU'RE SEEKING, AND\n+   YOU SHOULD\
+    \ INCLUDE THE QUOTE MARKS. IF, FOR EXAMPLE, YOU TYPE RAILWAY HERE, A LIST OF ALL\n\
+    +   PROGRAMMES WITH 'RAILWAY' IN THE NAME WILL APPEAR.\n+   \n+   3) EACH OF THE\
+    \ HITS WILL BE NUMBERED. SAY THE ONE YOU WANT IS NUMBERED #456, YOU SHOULD NOW\n\
+    +   ENTER GET+iPLAYER -GET #456. (THAT'S TWO DASHES BEFORE THE 'GET'). Get+iPLAYER\
+    \ WILL PROCEED TO\n+   DOWNLOAD PROGRAMME 456 INTO THE FOLDER YOU OPENED IN STEP\
+    \ (1). DEPENDING ON THE DURATION"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'of the programme, this will take quite a while, and you will need to occupy
+    yourself with something else while this carries on in the background.
+
+
+    +   4) When it''s finished, you can play the programme with a media player such
+    as VLC.
+
+
+    RADIO PROGRAMMES CAN BE DOWNLOADED IN A SIMILAR WAY, THE ONLY DIFFERENCE BEING
+    THAT AT STEP (3) YOU SHOULD ENTER `GET-PLAYER` RUNE `RADIO "PROGRAMNAME"` .
+
+
+    > *Note: Unlike TV programmes, radio programmes downloaded with a player will
+    have two or three minutes of unwanted material: from the previous programme at
+    the start as well as material from the next programme at the end. This is a nuisance
+    if you are downloading programmes to listen to in the car. What I do is to use
+    the Chrome web browser to play these programmes, and Audio Recorder to record
+    them from the correct starting point.*
+
+
+    OPTIONS SUCH AS `-GET` AND `-TYPE` THAT YOU CAN ADD TO A COMMAND ARE CALLED ARGUMENTS
+    OR SWITCHES. THERE ARE MANY ARGUMENTS THAT YOU CAN USE WITH `GET-PLAYER`, AND
+    FOR FULLER INSTRUCTIONS THAN ARE POSSIBLE HERE YOU SHOULD SEARCH THE WEB FOR `GET-PLAYER
+    INSTRUCTIONS`.
+
+
+    NOTE THE `-HELP` ARGUMENT: THIS WILL LIST ALL THE ARGUMENTS THAT ARE AVAILABLE
+    FOR A COMMAND TOGETHER WITH A BRIEF EXPLANATION OF EACH. SO TO LIST ALL THE ARGUMENTS
+    THAT YOU CAN USE WITH `GET-PLAYER`, ENTER `GET-PLAYER -HELP` IN TERMINAL.
+
+
+    # ### 4.10 Other applications
+
+
+    There will of course be other applications that you will want on your computer.
+    The best place to see popular choices is AppCenter, where you will find games,
+    educational software, communication software, and much else besides. Here are
+    a few suggestions.
+
+
+    +   1) If you want to read documents in PDF format, you will need a suitable reader.
+    There is Adobe PDF reader, or you might prefer Evince, which will read documents
+    in various formats. Look for PDF readers in the Office section of AppCenter.
+
+
+    +   2) If you want to edit audio files, you will want Audacity, available at the
+    AppCenter.
+
+
+    +   3) If you want to connect your computer to a projector to give a presentation,
+    or perhaps to a TV, you will need to use xrandr. This comes with the Bpodii system,
+    but it is a command line utility, meaning that you have to configure it using
+    Appropriate Terminal commands. However, a friendly graphical front-end is available,
+    which allows you instead to make configuration choices from a menu. This front-end
+    is called aRandR, and you can download it from Synaptic. After downloading, it
+    will show up in your Preferences menu.
+
+
+    > *Note: To use aRandR*
+
+
+    +   a) Connect your computer to the projector and switch everything on.
+
+
+    +   b) Run aRandR, open the Outputs menu, and match the resolution of your computer
+    (LVDS) with that of the projector (probably VGA1).
+
+
+    +   c) Click Apply.
+
+
+    +   4) If you are into eBooks, you will probably want Calibre, available at the
+    AppCenter.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '5) It is even possible to run a number of Windows applications using a Windows
+    emulator such as Wine (available at the AppCenter). You can see a list of what
+    will run flawlessly under Wine (mostly games) by visiting Wine HQ at http://appdb.winehq.org/.
+    If you are into e-books, it’s worth noting that Adobe Digital Editions will also
+    run under Wine. However, you should be aware that Wine is a hefty package which
+    will add a lot of baggage to your system.
+
+
+    # 4.11 Uninstalling applications
+
+
+    Anything that you have installed from AppCenter or Synaptic can be uninstalled
+    by running Synaptic, searching for the application’s name, and ticking its box.
+    (The box will be coloured rather than blank if the application is installed on
+    your system.) Choose ‘Mark for Complete Removal’ from the menu then click Apply.
+    The application and its dependencies will be removed.
+
+
+    In spite of this, there will be unwanted files left on your system, and you can
+    clear these out by opening Terminal and entering the following command:
+
+
+    ```
+
+    sudo apt-get autoremove
+
+    ```
+
+
+    You will already have accumulated some clutter on your system, so it’s worth running
+    this command now.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# 5 More power to your desktop
+
+
+    In this chapter you''ll organize your desktop and its menus so that the applications
+    you installed in the last chapter are at your fingertips, you''ll learn about
+    virtual desktops, you''ll apply a GTK theme to your application windows, and you''ll
+    try different E17 themes. Then you''ll practise what you''ve learned by creating
+    a new profile.
+
+
+    # 5.1 Update your iBar
+
+
+    Let''s begin by updating your iBar to reflect the applications you added in the
+    last chapter.
+
+
+    +   Right-click on the iBar area of the shelf, mouse over iBar, and choose Contents.
+
+
+    +   In the iBar Applications dialog box, you might want add LibreOffice (choose
+    the first LibreOffice entry) and Osmo, and I suggest you remove Synaptic (you''ll
+    be adding this to the Favorites menu shortly). If you don''t want these, choose
+    a few other applications you are likely to frequently use.
+
+
+    +   Click the Order tab, change the order to what you want, and click OK.
+
+
+    Your iBar will be updated with these changes.
+
+
+    # 5.2 An iBar on the desktop
+
+
+    If you followed the suggestions made in the last chapter, you will have added
+    a number of media applications to your system. You might find it helpful to group
+    these on another iBar.
+
+
+    +   Go to Main menu > Settings > Gadgets. The Desktop Gadgets dialog box opens,
+    where you should highlight ''Background'' then click ''Configure Layer''.
+
+
+    +   The list of gadgets appears. Highlight iBar and click Close, then Close again.
+    The iBar appears on your desktop, with a white border. It also contains the application
+    icons from your original iBar; we''ll change these shortly.
+
+
+    +   Use the mouse to move your new iBar to a suitable location on the desktop,
+    and drag on one of its vertical borders to widen it. (You will refine these adjustments
+    shortly.)
+
+
+    +   Right-click on the iBar, then mouse over ''iBar'' and choose ''Settings''.
+
+
+    +   In the iBar Settings dialog box click Add, then enter a suitable name for
+    the source. You might call it media. Click OK.
+
+
+    +   Highlight the name of your new source in the Source list, and click Setup.
+    The iBar Applications dialog box will appear. (If this dialog box is rather small
+    and cramped, remember the key binding you set up in Chapter 3 to rectify this:
+    press Win + m to maximize it vertically.)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '7) Remove the application icons that are currently populating this iBar (by
+    clicking in turn the orange buttons and ‘Remove’), and add the media applications
+    you have installed: Audacious, Audio Recorder, and VLC. You might wish to add
+    the Braser o disc burning program here too.
+
+
+    8) Click the Order tab, and put these in the order you want, then click OK, and
+    OK again. The icons for the packages you selected will appear in your new iBar.
+
+
+    9) Right-click on one of these icons, mouse over ‘iBar’, then choose ‘Begin move/resize’.
+    You can now drag on a vertical border to make it fit snugly around the icons,
+    and you can move it to the exact position you want on the desktop. When you’ve
+    finished right-click again.
+
+
+    10) Your new iBar has a border round it. To remove this, right-click on it again,
+    mouse over ‘iBar’, mouse over ‘Appearance’, then choose ‘Plain’.
+
+
+    You can if you wish set up further iBars on your desktop by repeating this process.
+
+
+    It’s possible that the gadgets on your shelf have become rearranged as a result
+    of making changes like this. Remember that you can re-order them by right-clicking
+    on them and choosing ‘Begin moving gadgets’. Right-click again when you’re finished
+    and choose ‘Stop moving gadgets’.
+
+
+    Note: if later on you want to modify the contents of this second iBar, right-click
+    one of its icons then mouse over ‘Settings (cst Contents)’ and highlight this
+    iBar’s name (media) in the list. Then choose ‘Setup.’ (Choosing ‘Settings’ instead
+    of ‘Settings’ will modify the default iBar on the shelf instead.)
+
+
+    # 5.3 The Favorites menu
+
+
+    Now let’s set up the Favorites menu. This will allow you to access favourite applications
+    by right-clicking anywhere on the desktop.
+
+
+    1) Click the Settings icon (top shelf), then maximize the Settings window that
+    appears (by clicking the top of the screen – remember your mouse bindings!).
+
+
+    2) Click Apps, then click ‘Favourite Applications’. The Favourite Applications
+    dialog box opens. You may want to use your Win + m key-binding to maximize this
+    box vertically.
+
+
+    3) You should add Synaptic, together any other applications that you want immediately
+    to hand, apart from those that can be run from the shelf iBar.
+
+
+    4) Click the Order tab and set this, then click OK.
+
+
+    5) Leave the Settings window open in readiness for the next section, but test
+    your new menu by right-clicking on the exposed desktop area below the shelf.
+
+
+    # 5.4 Applications name display
+
+
+    The application names that appear in the menu system are rather long, as they
+    not only give the name but also, beside it in brackets, the application type.
+    For example: Synaptic Package'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'Manager appears as ''Synaptic Package Manager (Package Manager)''. This is
+    fine when you''re new to Linux, but later on it gets a little irksome. You can
+    change this at the Settings window:
+
+
+    +   1) Click on Menus, then Menu Settings.
+
+
+    +   2) At the Menu Settings dialog box, turn off Generic, then press OK. Leave
+    the Settings window open, but test what you''ve done by right-clicking the desktop
+    below the shell. The generic (bracketed) comments should have disappeared.
+
+
+    # 5.5 Startup applications
+
+
+    You may want some applications to run automatically when you start up your computer,
+    so that they are effortlessly and immediately available. For example, I like to
+    run Osmo this way. Any personal application launchers that you set up can also
+    be run automatically at startup. For instance, I have set up a launcher to execute
+    a command which turns off the touchpad on my laptop at startup (I use a mouse).
+
+
+    To set startup applications:
+
+
+    +   1) At the Settings window, choose Apps, then ''Startup Applications''.
+
+
+    +   2) At the Startup Applications dialog box, click Applications, then, if you
+    wish, choose one or two applications. Click OK.
+
+
+    You will of course have to restart your computer to test this. Otherwise leave
+    the Settings window open for the next section.
+
+
+    # 5.6 Virtual desktops
+
+
+    You have available to you not one but five desktops, and more can be added if
+    you wish. At the moment these virtual desktops are identical, with the same wallpaper,
+    shelves, and iBars, but this can changed, so that you could have one desktop where
+    your media applications are grouped, for example, and another for your photo applications.
+    Even better, you could have one desktop set up for the way you want to work, and
+    another for your partner. In my case, I could have this guide at 1) my writing
+    on one desktop, and then in for that I need to refer to, like dialog boxes, opens
+    in the other.
+
+
+    Let''s set up something along these lines now.
+
+
+    +   1) At the Settings window click Screen, then Virtual Desktops. The Virtual
+    Desktops Settings dialog box opens. Here you can see that you have five identical
+    desktops; you can increase or decrease this number, and you can stack them vertically
+    as well as horizontally.
+
+
+    +   2) Let''s simplify things by reducing the number of desktops to two: drag
+    the bottom slider to the left until ''2'' appears as the number.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '3) Now click on the second desktop, change the Name to something meaningful,
+    then click Set. You are taken to the Wallpaper Settings dialog box. Click on ‘Use
+    Theme Wallpaper’ (or, preferably, grab another wallpaper, e.g. by using Firefox
+    to download one from the Bodhi Linux website).
+
+
+    4) Click OK, then OK again. Back at the Virtual Desktops Settings dialog box,
+    click on the first desktop and give it a meaningful name. Click OK, then Close
+    to return to the Settings window.
+
+
+    5) Click the Flip Animation tab, and set this to Off. Click Apply, then Close.
+
+
+    6) To go to the second desktop, press Alt + F2, and to return to the first press
+    Alt + F1. If you have a third desktop, Alt + F3 will switch to that, Alt + F4
+    to the fourth, and so on. An easier way to switch between desktops is to put the
+    Pager gadget on a shelf or on the desktop and to click on that. You can also switch
+    between your two desktops by pressing Ctrl + Alt + right-arrow key.
+
+
+    But to make switching really easy, let’s set up an edge binding:
+
+
+    1) Go to the Edge Bindings dialog box (via Run Everything).
+
+
+    2) Click Add. choose the bottom left corner, then Clickable Edge, then Apply.
+
+
+    3) With ‘Bottom Left Edge’ highlighted in the left pane, choose ‘Flip Desktop
+    Linearly...’ in the right pane.
+
+
+    4) The three dots at the end of this command indicate that a further bit of information,
+    an ‘action parameter’, is required - in this case a parameter stating how many
+    desktops to flip. Type ‘1’ in the Action Parameters box, then click Apply.
+
+
+    5) Test this binding by clicking the bottom-left corner of the screen. Each repeated
+    click will switch between desktops.
+
+
+    # 5.7 Different shelves for different desktops
+
+
+    To create a different shelf on the second desktop we need first to modify the
+    settings of the existing shelf so that it only shows on the first desktop:
+
+
+    1) Right-click on one of the icons of the top shelf, mouse over ‘Shelf’, and choose
+    Settings.
+
+
+    2) At the Shelf Settings dialog box, keep clicking on the right arrow until you
+    reach ‘Desktop’. Click ‘Show on specified Desktops’, highlight the name of the
+    first desktop, and click OK.
+
+
+    3) Press Alt + F2 to check that it has disappeared from the second desktop.
+
+
+    Now let’s add a shelf to this second desktop:'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '+   1) Go to Main menu > Settings > Shelves, and click Add.
+
+
+    2) Give your new shelf a meaningful name, e.g. the name you gave your second desktop.
+    Click OK.
+
+
+    3) Now, at the Shelf Contents dialog box, add some gadgets. These might include
+    the Everything Starcher as well as the iBar. Click Close.
+
+
+    4) The iBar on this shelf is filled with the icons from the default iBar. To change
+    this, right-click on it, mouse over ''iBar'', and choose Settings. Now click Add
+    to add another source, and give it suitable name. Click OK.
+
+
+    5) Highlight this name in the list of sources, then click Setup. Press Win+m if
+    you wish to vertically maximize the dialog box, then remove the applications that
+    are on it already and add some others. Then click the Order tab to adjust the
+    order, then click OK, and OK a second time to close these dialog boxes.
+
+
+    6) Now right-click on your new shelf, mouse over its name, and choose Settings.
+    Make these settings: Stacking - ''Below Windows''; Position - Right, at the top;
+    Style - ''Invisible''; Desktop - ''Show on specified desk'' and the name of your
+    second desktop. Click OK.
+
+
+    You now have two desktops with different shelves. Note that the desktop gadgets
+    (the clock, desktop iBar, and Places gadget) are the same on both.
+
+
+    # 5.8 GTK Themes
+
+
+    These are application themes, and they allow you to customize the appearance of
+    the windows within which applications run. This is a very straightforward task,
+    as it is simply a matter of downloading and trying out some themes.
+
+
+    +   1) Open Firefox and go to the Bodhi home page (http://www.bodhilinux.com/)
+    and navigate to Resources > Art Wiki > GTK Themes.
+
+
+    2) Go down to bodhi_gtk_countryy_oak (fifth down on the right) and click on it.
+    You are taken to the installation page for this theme.
+
+
+    3) It’s best to do a sudo apt-get update before beginning the installation, and
+    an easy way to do this is to click the link on the line below the heading ''Before
+    Starting''. After a few seconds you will be asked if you want to install a small
+    update program. Accept this.
+
+
+    4) Now click on ''Install Now'', and a dialog box opens asking you to confirm
+    the installation. Do so. (If Firefox misbehaves at this point and doesn’t display
+    the box, restart it and try again.)
+
+
+    5) Now go back to the theme gallery and click on the eighth theme down on the
+    right, bodhi_gtk_gold. At its install page, click on ''Install Now'', then at
+    the dialog box click ''Install'' again.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '6) Return once more to the theme gallery, and click on the next theme down,
+    `bodhi_gtk_kiwi`. Install this.
+
+
+    7) Leave Firefox open and maximized. Click the Settings gadget on your toolbar,
+    and, at the Settings window, click Look and then Application Theme. The Application
+    Theme Settings dialog box opens. Now minimize the settings window so that you
+    can see as much as possible of the Firefox window.
+
+
+    8) Highlight *Kiwi* in the Theme Settings dialog box and click *Apply*. The Firefox
+    window will adopt a different colour scheme, and it will have different scrollbars.
+
+
+    9) Now try the E17-GTK theme (this is the ‘Gold’ theme we downloaded at (5) above).
+
+
+    10) Try others as well and pick the one you like and which matches the E17 theme
+    which you applied in Chapter 2 (Bodhi-Theme). One of my favourites is Country
+    Oak.
+
+
+    You can if you wish change the icons used with your application theme. I will
+    not be covering this here. But you can find alternative icon sets at the Bodhi
+    Art Wiki, and you can apply them by clicking on the `loons` tab at the Application
+    Themes Settings dialog box (7 above).
+
+
+    # 5.9  Profiles
+
+
+    You have made many changes to the Compositing profile that you chose when you
+    first installed Bodhi Linux. All of these settings have been stored in this profile.
+    They include the theme you selected, the shelves you set up, and any edge and
+    key bindings you created. If you now apply a different profile, it will have none
+    of these settings (though it will keep the contents of your *ibar* and your System,
+    and also your *Favourites* menu).
+
+
+    This does not mean that you have lost all those settings that you laboriously
+    created. By returning to the Compositing profile, your desktop will returned to
+    its previous state, with all its settings in place.
+
+
+    In the next section you are going to make some radical changes to your Compositing
+    profile that you may not want to keep. How then can you return to your profile
+    as it is now? The answer is to save it as a new profile under a different name,
+    and then return to that new profile. So let''s save your profile now.
+
+
+    1) Go to the Profile Selector dialog box. To do this, Run Everything, then type
+    the first few letters of *profile* and press *Enter*.
+
+
+    2) At this dialog box click *Add*. Then enter a name for your profile - something
+    like *Mycompositing* will do.
+
+
+    3) Click *OK*, then *Close*. Your profile, with its theme, wallpaper, shelves,
+    bindings, and other settings, is stored.
+
+
+    Note that you are *not* using your new profile. The Compositing profile is still
+    selected at the'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'dialog box. Any changes you make now will be stored in that. It also means
+    that if you want to make changes to your new profile, you must first select it
+    here.
+
+
+    **Further reading:** Go to the Profiles section of the Bodhi Guide to Enlightenment
+
+
+    # 5.10  E17 themes
+
+
+    You have a few E17 themes already installed on your computer, and more are available
+    at the Bodhi Art Wiki. To see them, open the Bodhi home page, click on ''Resources'',
+    then ''Art Wiki'', then ''Enlightenment Themes''. The install procedure is the
+    same as for GTK themes above.
+
+
+    Many more themes (about 80, in fact) are available in the Bodhi repository, and
+    I suggest you try one of these now:
+
+
+    +   1) Open Synaptic and type ''bodhi-theme'' into Quick Filter. A long list appears,
+    but only those denoted as version 2.0 or higher will work properly with the latest
+    (v.2) of Bodhi Linux. However, with a simple tweak it is easy to make others work.
+
+
+    +   2) Find the Crema theme (i.e. *bodhi-theme-crema* - if you can''t spot it
+    type the name into Quick Filter) and install it. This is an old (version 0.5)
+    theme, so you will have to tweak it.
+
+
+    +   3) Close Synaptic when the installation is complete, then click the Settings
+    gadget on the shelf to open the Settings dialog box. In preparation for the next
+    step, click ''Wallpaper'' (in the Look menu), click ''Use Theme Wallpaper'' then
+    click OK.
+
+
+    +   4) Now click ''Theme'' (in the Look menu): the Theme Selector dialog box opens.
+    The themes stored on your computer are shown here, including the A-crema theme
+    that you have just downloaded. Highlight this, then click Apply. Your theme is
+    changed, and your desktop is transformed.
+
+
+    +   5) Now click the ''Advanced'' button in the Theme Selector dialog box. In
+    the left pane (''Theme Categories'') scroll down to and click on ''widgets''.
+    It is the widgets part of A-crema that will not work with version 2 of Bodhi,
+    so we need to use instead the widgets from another theme.
+
+
+    +   6) With ''widgets'' highlighted, click ''Bodhi-Theme'' in the ''Themes'' panel,
+    then click the ''Assign'' button (at the left, below the Theme Categories panel.
+    We could if we wished change other elements of our new theme in the same way.
+
+
+    +   7) Let''s also change ''modules/everything''. (This is to improve the appearance
+    of the Run Everything dialog box.) Highlight ''modules/everything'' in the ''Theme
+    Categories'' panel, then highlight ''A-Egypt'' in the ''Themes'' panel, then click
+    ''Assign.
+
+
+    +   8) Click ''Apply'', then Close, then close the Settings Dialog box.
+
+
+    +   9) The appearance of your desktop has been transformed. The gadgets look different,
+    and if you click on the desktop to open the menus you will see that they look
+    different too. (If some'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "of the icons are missing from the shelves, restart Enlightenment.)\n\n+   10)\
+    \ Run Everything, then type in the first few letters of *application theme* to\
+    \ open the Application Theme Settings dialog box. Observe that this looks exactly\
+    \ the same as before you applied the Crema theme: this is because you are using\
+    \ the Bodhi\\-Theme widgets.\n\n+   11) Now you need to choose a GTK theme that\
+    \ matches your Crema theme. In the dialog box you have just opened, highlight\
+    \ the Country Oak theme and click OK. To inspect the appearance of this theme\
+    \ open an application - Osmo is a good choice.\n\n+   12) YOU MAY WANT TO ADJUST\
+    \ SOME OF THE FONTS TO SUIT YOUR NEW THEME. TO DO SO, RUN EVERYTHING AND ENTER\
+    \ *font*, AND AT THE FONT SETTINGS DIALOG BOX CLICK ADVANCED.\n+   \n+       a)\
+    \ Highlight 'Menu Item' in the Font Classes pane and make sure 'Enable Font Class'\
+    \ is selected.\n+       b) Select 'Nimbus Sans' as the font, 'Bold' as the *style*,\
+    \ and '14 pixels' as the size.\n+       c) Highlight 'Menu Title', check 'Enable\
+    \ Font Class', and make these same selections (Nimbus Sans, Bold, 14 pixels).\n\
+    +       d) Highlight 'Title Bar' and select 'Ubuntu' as the font, 'Bold' as the\
+    \ *style*, and '14 pixels' as the size. Click Apply and observe how the title\
+    \ bar of the dialog box now looks, then Close it.\n\n+   13) Click on the desktop\
+    \ to *observe* how the menus now look.\n\n+   14) A final change you might make\
+    \ is to the clock gadget on your new desktop. If this is digital, change it to\
+    \ analog now, observe how it looks, and resize and move it as necessary.\n\nAll\
+    \ these changes have been stored in the Compositing profile. If you wish to restore\
+    \ your Mycompositing profile, highlight it at the Profile Selector dialog box\
+    \ and click *Apply*.\n\n# 5.11 Starting afresh\n\nThis completes our exploration\
+    \ of the Enlightenment desktop. There are more tweaks you could make, but to include\
+    \ these would make this guide far too long. Your time would be better spent consolidating\
+    \ what you've learned by starting afresh with a different profile and *customizing*\
+    \ it to create your own personal desktop. Remember that at any time you can return\
+    \ to the profile you have already set up, by opening the Profile Selector and\
+    \ applying either Compositing (to return to your profile with the Crema theme)\
+    \ or Mycompositing (to return to your earlier profile with the Bodhi\\-Theme theme).\n\
+    \nTo apply and customize another profile:\n\n+   1) Return to the Profile Selector\
+    \ dialog box and select the Laptop/Netbook profile. (You could of course select\
+    \ some other profile from the list; this will give you a different selection of\
+    \ gadgets on the shelf.) A new desktop appears with a different shelf (across\
+    \ the top) and a different theme. All your old desktop settings have gone - shelf,\
+    \ mouse and key bindings."
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'everything. Your iBar, however, has been retained (it is located on a pop-up
+    shelf at the bottom of the screen), and of course you still have the menu system,
+    including your Favorites menu.
+
+
+    2) Before you make any changes to this profile, it might be worth adding the Run
+    Everything gadget to the shelf: right-click a blank area of the shelf, choose
+    Contents, then, at the Shelf Contents dialog box, add that gadget. It might be
+    helpful as well to remove the Start gadget, as this uses the same icon as Run
+    Everything.
+
+
+    3) Now go to the Theme Selector dialog box (via Run Everything) and try one or
+    two of the themes available there. If you don''t fancy any of these, visit the
+    Art Wiki at the Bodhi website and install one of those. When you''ve found one
+    you like and applied it, start customizing the shelf. You will want different
+    gadgets on it, and you may want it at a different position, and you may want to
+    shrink it to fit the content.
+
+
+    4) Decide what gadgets, if any, you want on the desktop. You may want to move
+    the clock there, and you may want the Places gadget there.
+
+
+    5) Apply an appropriate GTK theme, then change fonts as necessary to make e.g.
+    the menus easier to read. Apply a different wallpaper.
+
+
+    6) Create edge bindings and key bindings to make life easier.
+
+
+    When you''ve finished perfecting your masterpiece, return to your Mycompositing
+    profile to compare my suggested desktop with yours. Hopefully you''ll prefer yours!'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# 6 *Maintain and replicate your system*
+
+
+    This final chapter covers tasks that you should carry out periodically to freshen
+    up your system. These tasks are not onerous, and will involve only a few minutes
+    of your time.
+
+
+    We also discuss how to replicate your system on an optical disk or USB stick,
+    so that it can be run on other computers and even installed on them.
+
+
+    # 6.1 Aliases
+
+
+    One or two of these maintenance tasks involve entering some long-winded commands
+    into Terminal, like `sudo apt-get dist-upgrade` to upgrade any out-of-date software.
+    This is a pain to type and an even bigger pain to remember. Wouldn''t it be nice
+    to be able to type simply `upgrade` instead? By setting up aliases we can do just
+    that.
+
+
+    Aliases are stored in the .bashrc file in your home directory. To create some,
+    you must open this file in Leafpad.
+
+
+    **Hint:** Before setting up an alias, you should first check that your proposed
+    word isn''t an existing command. Do this by entering it in Terminal; if the response
+    is `command not found`, you''re good to go.
+
+
+    +   1) Open Terminal, then enter `gksudo leafpad .bashrc`. (Note the `.` at the
+    start of the filename: this is a hidden file.)
+
+
+    +   2) With this file displayed in Leafpad, scroll down almost to the bottom of
+    it, and after the section headed `# some more ls aliases` insert the following:
+
+
+    ```
+
+    `# My aliases`
+
+    `alias leaf=''gksudo leafpad''`
+
+    `alias upgrade=''sudo apt-get dist-upgrade''`
+
+    `alias upgrade=''sudo apt-get dist-upgrade -y''`
+
+    `alias remove=''sudo apt-get autoremove''`
+
+    ```
+
+
+    (Note the `-''y''` at the end of the third command. This bypasses the need to
+    type `''y''` when, after running the `dist-upgrade` command, you are asked to
+    confirm that you want to replace any out-of-date files.)
+
+
+    If you installed Get-i-Player in the Chapter 4, you may want to add to this list
+    the following alias:
+
+
+    ```
+
+    `alias get=''get-i-player''`
+
+    ```
+
+
+    +   3) Save the file, close Leafpad, and close Terminal.
+
+
+    To activate these aliases, you need to reboot the computer. Do so now, as you
+    will be trying some of them in the next section.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 6.2 Updating your system
+
+
+    You should update your system every month or so, to keep everything on it up to
+    date. With the aliases you set up above in place, this is very easy:
+
+
+    +   1) Open Terminal, and enter update. The database on your system will synchronized
+    with the repository.
+
+
+    +   2) Enter upgrade. Any out-of-date files on your system will be upgraded to
+    the latest versions.
+
+
+    +   3) When this finished, it might be worth getting rid of any accumulated junk
+    on your system. Then remove, then press ''y'' at the prompt.
+
+
+    # 6.3 Cleaning your system
+
+
+    Once every few months you should carry out a thorough clean of your system. This
+    can be done using an application called Bleachbit. Bleachbit is not on your system,
+    but you can install it from Synaptic. Do so now.
+
+
+    When the installation is finished, two entries will have been added to the System
+    Tools section of your menu system:
+
+
+    +   - ''Bleachbit'', which cleans user files.
+
+    +   - ''Bleachbit as root'', which cleans system files.
+
+
+    +   1) Run Bleachbit now (Main menu > Applications > System Tools, or use Run
+    Everything). Its window opens, with various categories of file to clean listed
+    at the left. Select them all except the following:
+
+
+    +   - The Deep scan options (these are slow);
+
+    +   - Passwords (in the Firefox section);
+
+    +   - Free disk space, Localizations, and Memory in the System section (the first
+    two are slow, and Memory is experimental).
+
+
+    +   2) Click Preview, and a (long) list of files to be deleted appears.
+
+
+    +   3) Click Clean, and in moments the job is done.
+
+
+    ''Bleachbit as root'' is used in the same way.
+
+
+    # 6.4 Backing up with Remastersys
+
+
+    You should of course keep backups of important documents and photos on an external
+    storage device or on Dropbox. Nautilus, with its twin panes and ''Copy to other
+    pane'' facility, makes this easy.
+
+
+    Backing up your entire system is another matter. however, and one way to do this
+    is to use a'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'program called . This allows you to create an image (ISO file) of your system,
+    including all your customizations and, if you wish, your documents, photos, and
+    other data files, which you can then install on an optical disc (a recordable
+    DVD) or on a USB memory stick (pen drive). With this DVD or USB stick you can
+    run, and if necessary install, your system on any computer.
+
+
+    Remastersys is on your system, and it can be run from Terminal, but it will make
+    life easier in the future if you set up a personal application launcher for it.
+
+
+    +   1) Run Eversthang and enter the first four letters of *personal*. The Personal
+    Application Launcher dialog box opens.
+
+    +   2) Click Add to add a personal launcher; then at the Desktop Entry Editor
+    type **Remastersys** in the Name field, and in the *Application* field *remastersys-gtk*.
+
+    +   3) If you want to set up an icon for your launcher, click on the Icon tab,
+    then click on the icon box and navigate to: /usr/share/icons/MaXo-ReMix/apps,
+    then scroll through the list for a suitable icon. Click OK.
+
+
+    +   4) At the General tab, type REMASTERSYS IN THE GENERIC NAME'' field, and SYSTEM
+    IN CATEGORIES.
+
+    +   5) At the Options tab, make sure that ''Show in Menus'' is selected. The other
+    two options should not be selected.
+
+    +   6) Click Apply; Then Close. Remastersys will appear in the menu System, under
+    System Tools (if it doesn''t, restart Enlightenment).
+
+
+    BEFORE BACKING UP YOUR SYSTEM WITH REMASTERSYS, YOU SHOULD FIRST RUN BLEACHBIT
+    AND BLEACHBIT AS ROOT TO REMOVE UNNECESSARY FILES. YOU SHOULD INCLUDE THE ''FREE
+    DISK SPACE'' OPTION TO MAKE THE IMAGE AS COMPACT AS POSSIBLE. (THIS WILL TAKE
+    A LONG TIME TO EXECUTE, AS IT INVOLVES SHUFFLING FILES AROUND ON THE HARD DISK.)
+
+
+    THE INSTRUCTIONS FOR USING REMASTERSYS TO CREATE AN IMAGE OF YOUR SYSTEM ARE AS
+    FOLLOWS:
+
+
+    +   1) Close all open applications, run Remastersys, and at its dialog box choose
+    the Settings tab. Here you can enter any files or directories you wish to exclude
+    from your image. For example, if you wish to exclude your Movies and your Pictures
+    folders, you would enter /home/bobhj32/Movies:/home/bobhj32/Pictures (replacing
+    **bobhj32** by your username).
+
+    +   2) Click the Actions tab, close all open windows (apart from the Remastersys
+    window) and click Backup. Remastersys will then set to work creating the ISO image
+    of your system, a process that will take about an hour.
+
+
+    The ISO file will be located in the /home/remastersysy directory. To see it, run
+    Nautilus, click the box at the left of the toolbar (to the left of ''Home'' -
+    the box is marked with a small left-'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'pointing arrow), click ‘home’ (not ‘Home’), then navigate to remastersys >
+    remastersys. (In other words, the ISO is in the /home/remastersys/remastersys
+    folder.)
+
+
+    This size of this file, if you have excluded any personal data files that you
+    might have added to your system such as photos, music, or other documents, is
+    probably around 1 GB (gigabyte). (That includes all the applications you’ve added
+    to your system.) This will result in an installed size of rather more than 2 GB.
+
+
+    You can now install this image on a recordable DVD using (which you will find
+    in the Sound & Video section of the menu system). Alternatively you can install
+    it on a USB memory stick – which may be your best option, as a USB stick can hold
+    a much bigger images than a DVD, and you can change or add to the files stored
+    on it. (Note, though, that an older computer may not be able to boot from a USB
+    stick – see Section 6.6 below.)
+
+
+    # 6.5 UNETBOOTIN
+
+
+    To install your ISO image on a USB stick you need to an application called . This
+    is not on your system, so run Synaptic to install it. Like Remastersys, Unetbootin
+    will appear in the System Tools section of the menu system.
+
+
+    +   1) Before running it, you should insert the USB stick in a USB port, and you
+    should mount it. (To mount it, simply click on its icon in the Places gadget so
+    that Nautilus opens it, then close Nautilus. Alternatively, open your Nautilus
+    in the normal way and click on the USB stick in its left pane.)
+
+    +   2) Run Unetbootin, and at its dialog box select the DiskImage option (at the
+    bottom left). Then browse to the ISO you saved in the last section - the browse
+    button is to the right. When the Browse dialog box opens, click the up-arrow at
+    the top, double-click ‘home’ in the list, then ‘remastersys’, then ‘remastersys’
+    again.
+
+    +   3) If you think you’ll want to add files later to the USB system that you
+    are about to create, then you must allocate space for this. The amount is limited
+    by the capacity of your USB stick. For a 4 GB USB stick, you will have to limit
+    yourself to around 1500 MB.
+
+    +   4) Click OK, and an image of your system will be installed on your USB stick.
+    This process will take several minutes.
+
+
+    # 6.6 Running Bodhi Linux from a USB drive
+
+
+    The copy of your system that you’ve installed on the USB stick can be run on any
+    computer that will boot from a USB drive. To try this on your computer:
+
+
+    +   1) Switch off.
+
+    +   2) Make sure the USB stick is inserted in a USB port.
+
+    +   3) Switch on, and while the computer starts up hold down the F12 key. A boot
+    up menu'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'should appear. (This assumes your computer uses F12 to do this - a list of
+    keys you can use at startup should appear on the screen when the computer fires
+    up.)
+
+
+    4) One of the options should be to boot up from the USB drive. If that option
+    is not there, then you can''t boot up from the drive. In that case you have to
+    write your ISO image to a **DVD** (using Brasero) and boot from that.
+
+
+    *Hint:* You can check whether your computer has this option prior to creating
+    an installable USB stick by carrying out the above steps with *any* USB stick
+    inserted in the USB port.
+
+
+    5) If the USB option is present, select ‘Boot from the Live System’. Your computer
+    will run your Bodhi system and after a few moments your desktop will appear.
+
+
+    6) Some of the icons are probably missing from the shelf. This always seems to
+    happen the first time you use a USB installation. The solution is to *Restart
+    Enlightenment* (Main menu > Enlightenment > Restart), which will fix the problem.
+
+
+    7) When running Bodhi from a USB drive or optical disc, it does not automatically
+    connect to the Internet. To connect, Run Everything and type the first letters
+    of *network*. Press Enter, and the *network* applet will run. Click on its icon
+    (bottom shelf), choose your network from the list, and enter the password.
+
+
+    8) You are now able to use the system in exactly the same way as if you were *running*
+    it from the hard disk, including being able to save files to it (assuming you
+    allocated space for this in the previous exercise).
+
+
+    9) You can also easily access the files on the computer''s hard disk, using the
+    Places gadget on the desktop (assuming you put that there in an earlier exercise).
+    You will notice that several drives appear on this gadget, including the hard
+    disk. Click on the hard disk icon to reveal its contents in Nautilus.
+
+
+    10) You can if you wish use this USB stick to install your Bodhi system on the
+    computer''s hard drive. You might want to do this if the hard drive on your computer
+    has become corrupted, or if you want to install your Bodhi system on another computer.
+    To do this, Run Everything and type in the first few letters of *Install RELEASE*.
+    If the Install RELEASE applet is present on your USB stick, its icon will appear
+    in the dialog box and you can press Enter to run it. You can try this now if you
+    like - abort the install process by selecting *Quit* at the first dialog box.
+
+
+    *Note:* If *Install RELEASE* is not present on your USB stick, you can download
+    it from `http://packages.bodhinux.com/bodhi/tools/testing/ubuntuquirky`. Choose
+    the download called `ubuntuquirky-frontend-gtk_3.12.17-1386.deb`. As this is a
+    `.deb` file, you must install it using the *eDeb* utility, as described in Section
+    4.8.
+
+
+    11) To power down, press *Win - End* in the usual way - all the shortcuts you
+    set up earlier are available.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# 6.7 Future versions of Bodhi Linux
+
+
+    Like Windows, distros such as Ubuntu and Bodhi Linux bring out new versions every
+    couple of years or so. The next major Ubuntu release is scheduled for April 2014,
+    and the new Bodhi release (version 3.0) will come out a month or two after that.
+
+
+    You will not be able to update your existing Bodhi installation to version 3,
+    instead you will have to do a fresh install - i.e. you will have to download the
+    new disc image, install it on your computer, and repeat everything you have done
+    in this guide. The good news is that there is no urgency about this: version 2
+    of Bodhi will be supported for a further couple of years.
+
+
+    When you do make the switch, you must obviously back up all your important data
+    files first, as the hard disk on your computer will be reformatted. It might also
+    be a good idea to back up your entire system onto an external hard disk or a (large)
+    USB stick, as described above, just in case you need to run it again for any reason.
+
+
+    After that, minor revisions to the Bodhi distro will be released about three times
+    a year, but these will be automatically incorporated into your installation when
+    you do a sudo apt-get dist-upgrade.
+
+
+    # 6.8 Conclusion
+
+
+    We’ve reached the end this guide. You will have realized that there is much more
+    to Bodhi and the Enlightenment desktop than is covered here, and as for Linux
+    itself I’ve barely scratched the surface. Probably the best way to find out more
+    about Linux is to search the web, including ‘ubuntu’ in your search phrase and
+    sometimes ‘linux’. There are many guides available there. And as for Bodhi and
+    Enlightenment, your main source of help will be the Bodhi website, especially
+    the Forum and the Documentation Wiki.
+
+
+    I’ve replicated the customized Bodhi that’s described in this book, with all its
+    tweaks and applications, on the computers of several acquaintances, and if you
+    become a Bodhi convert you might do the same (using the USB stick or DVD you created
+    in the last section). If so, you might find it useful to provide them with the
+    Quick Start Guide below.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# Quick Start Guide to this Bodhi Linux installation\n\nAll the applications\
+    \ on this computer can be accessed via the menu system, which you can open by\
+    \ pointing the mouse at any exposed area of the desktop and clicking left.\n\n\
+    This installation includes a number of shortcuts to make life easier:\n\n+   -\
+    \ Frequently-used applications such as the web browser are located on the shelf\
+    \ at the left. Simply click on the appropriate icon to run these.\n+   - Other\
+    \ favourite applications can be found on the Favorites menu, which is reached\
+    \ by pointing the mouse at a blank area of the desktop and clicking right.\n+\
+    \   - Keyboard shortcuts, such as Win + End to shut down the computer (i.e. hold\
+    \ down the Windows key and tap End).\n\n+   - Mouse actions to manipulate windows:\n\
+    +   \t- Click the top-right corner of the screen to close the current (focused)\
+    \ window.\n+   \t- Click the top edge of the screen to maximize the window (click\
+    \ again to undo this).\n+   \t- Click the bottom edge of the screen to minimize\
+    \ the window.\n+   \t- Click the top left corner to set the window fullscreen\
+    \ (click again to undo).\n+   \t- Click the left edge of the screen to left-maximize\
+    \ the window (click again to undo).\n+   \t- Click the right edge of the screen\
+    \ to right-maximize the window (click again to undo).\n+   \t- Click the bottom-right\
+    \ corner of the screen to show the desktop.\n\nThe Nautilus file manager is included\
+    \ in this installation. Its icon is located at the top of the shelf. When Nautilus\
+    \ opens, you can press the F3 key to display a second pane; this simplifies the\
+    \ task of copying or moving files from one location to another (right-click the\
+    \ file and choose e.g. Copy to other pane). Nautilus also makes it easy to access\
+    \ other computers connected to your network - Choose Browse network in its left\
+    \ pane.\n\nThe applications installed on this system include Firefox web browser,\
+    \ Thunderbird email client, LibreOffice office suite (the Linux alternative to\
+    \ Microsoft Office), Osmo personal information manager (calendar, diary, notes,\
+    \ contacts, todo list), VLC video player, Audacious music player, an audio recorder,\
+    \ Mirage for photos, as well as Skype and Dropbox. You can add others by visiting\
+    \ the AppCenter at the Bodhi Linux website (http://appcenter.bodhilinux.com/).\
+    \ If a package that you want isn’t listed here, search for it using the Synaptic\
+    \ Package Manager (on the Favorites menu).\n\nThe terminal is the second icon\
+    \ down on the shelf. Use this to enter any commands; in particular the commands\
+    \ to keep your system and its software up to date. To keep things easy, these\
+    \ commands have been simplified on this system, so all you have to do is:\n\n\
+    +   1) Enter update to synchronize your system file index with the on-line database\
+    \ (you must be connected to the Internet for this and the next command to work)."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '+   2) Then enter *upgrade* to replace any out-of-date system files.
+
+
+    To learn more about the Bodhi Linux system, including how to access the Internet,
+    click anywhere on the desktop to open the menu system, then highlight ‘Bodhi Linux’
+    and choose Quick Start.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true

@@ -1,0 +1,13 @@
+what if your Condor pool includes nondedicated (desktop) machines as well? You could specify a *requirements* expression in your submit description file to require that jobs run only on machines that actually do have access to a common, shared file system. Or, you could request in the submit description file that Condor transfer your job's data files using the Condor File Transfer mechanism.
+
+When Condor finds a machine willing to execute your job, it can create a temporary subdirectory for your job on the execute machine. The Condor File Transfer mechanism will then send via TCP the job executable(s) and input files from the submitting machine into this temporary directory on the execute machine. After the input files have been transferred, the execute machine will start running the job with the temporary directory as the job's current working directory. When the job completes or is kicked off, Condor File Transfer will automatically send back to the submit machine any output files created or modified by the job. After the files have been sent back successfully, the temporary working directory on the execute machine is deleted.
+
+Condor's File Transfer mechanism has several features to ensure data integrity in a nondedicated environment. For instance, transfers of multiple files are performed atomically.
+
+Condor File Transfer behavior is specified at job submission time using the submit description file and *condor_submit*. Along with all the other job submit description parameters, you can use the following File Transfer commands in the submit description file:
+
+**transfer_input_files** = < *file1*, *file2*, *file*... >: Use this parameter to list all the files that should be transferred into the working directory for the job before the job is started.
+
+**transfer_output_files** = < *file1*, *file2*, *file*... >: Use this parameter to explicitly list which output files to transfer back from the temporary working directory on the execute machine to the submit machine. Most of the time, however, there is no need to use this parameter. If *transfer_output_files* is not specified, Condor will automatically transfer in the job's temporary working directory all files that have been modified or created by the job.
+
+**transfer_files** = < *ONEXIT* | *ALWAYS* | *NEVER* >: If *transfer_files* is set to *ONEXIT*, Condor will transfer the job's output files back to the submitting machine only when the job completes (exits). Specifying *ALWAYS* tells Condor to transfer back the output files when the job completes *or* when Condor kicks off the job (preempts) from a machine prior to job completion. The *ALWAYS* option

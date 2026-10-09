@@ -1,0 +1,5 @@
++   ✦ **Close all running programs.** The more programs you’re running, the less memory is available to other programs. Installers also typically update files and programs; if you keep other programs running, installation may not work properly.
+
++   ✦ **Reference the ReadMe:** Please refer to the ReadMe file located at the root of the CD-ROM for the latest product information at the time of publication.
+
+If you still have trouble with the CD, please call the Hungry Minds Customer Care phone number: (800) 762-2974. Outside the United States, call 1 (317) 572-3994. You can also contact Hungry Minds Customer Service by e-mail at techsupdum@hungryminds.com. Hungry Minds will provide technical support only for installation and other general quality control items; for technical support on the applications themselves, consult the program’s vendor or author.

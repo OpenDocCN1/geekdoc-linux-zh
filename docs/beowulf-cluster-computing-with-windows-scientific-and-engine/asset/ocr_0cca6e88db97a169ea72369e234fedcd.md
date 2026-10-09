@@ -1,0 +1,3 @@
++   J. L. Traef? R. Hempel, H. Ritzdoff, and F. Zimmermann. Flattening on the fly: Efficient handling of MPI derived datatypes. Number 1697 in Lecture Notes in Computer Science, pages 109\u0013116. Berlin, Germany / Heidelberg, Germany / London, UK / etc., 1999. Springer-Verlag.
+
++   Omer Zaki, Ewing Lusk, William Gropp, and Deborah Swider. Toward scalable performance visualization with Jumps hot. High Performance Computing Applications, 13(2):277\u0013288, Fall 1999.

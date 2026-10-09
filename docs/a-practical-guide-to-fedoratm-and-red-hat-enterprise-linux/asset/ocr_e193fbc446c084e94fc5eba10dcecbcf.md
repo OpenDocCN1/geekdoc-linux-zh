@@ -1,0 +1,3 @@
+# **A Practical Guide to Fedora™ and Red Hat® Enterprise Linux®**
+
+SEVENTH EDITION

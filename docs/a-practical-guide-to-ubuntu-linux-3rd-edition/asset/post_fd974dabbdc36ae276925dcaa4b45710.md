@@ -1,0 +1,178 @@
+
+## Do not modify apache2.conf
+
+通常，在配置 Apache 时，您不会修改 **apache2.conf**；相反，您会修改在 Include 指令（第 906 页）中指定的文件。您还可以使用第 905 页中描述的配置工具。这种设置允许 Apache 的更新更改 **apache2.conf** 而不影响服务器。
+
+`<IfModule>` 容器（第 916 页）允许您使用相同的 **apache2.conf** 文件搭配不同的多处理模块（MPMs，第 947 页）。只有当指定模块加载时，Apache 才会执行 `<IfModule>` 容器中的指令。**apache2.conf** 文件包含两个 `<IfModule>` 容器，根据加载的模块（**prefork** 或 **worker**）以不同方式配置 Apache。Ubuntu 预装了效率更高的 **worker** MPM。
+
+```text
+## Server-Pool Size Regulation (MPM specific)
+...
+<IfModule mpm_prefork_module>
+    StartServers           5
+    MinSpareServers        5
+    MaxSpareServers       10
+    MaxClients           150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_worker_module>
+    StartServers             2
+    MinSpareThreads         25
+    MaxSpareThreads         75
+    ThreadsPerChild          64
+    MaxClients             150
+    MaxRequestsPerChild    0
+</IfModule>
+```
+
+有关更多信息，请参阅第 947 页的“多处理模块 (MPMs)”。
+
+### User
+
+**User** 指令使 Apache 以由名为 **APACHE_RUN_USER** 的变量指定的用户身份运行。
+
+```text
+User ${APACHE_RUN_USER}
+```
+
+在 */etc/apache2/envvars* 文件中，**APACHE_RUN_USER** 变量被赋值为 **www-data**：
+
+```text
+export APACHE_RUN_USER=www-data
+```
+
+### TypesConfig
+
+**TypesConfig** 指令指定定义 Apache 用于内容协商（第 935 页）的 *MIME* 类型（第 1160 页）的文件。它用于将文件名扩展名与 MIME 类型匹配（例如，将 *.png* 与 image/png 匹配）。
+
+```text
+TypesConfig /etc/mime.types
+```
+
+### DefaultType
+
+定义 Apache 在无法确定类型时发送的内容类型。
+
+```text
+DefaultType text/plain
+```
+
+### Modules
+
+为了避免在 apache2.conf 文件中有大量的 LoadModule 指令（第 928 页），Ubuntu 在该文件中放入以下 Include 指令：
+
+```text
+Include /etc/apache2/mods-enabled/*.load
+Include /etc/apache2/mods-enabled/*.conf
+```
+
+这些指令包含 mods-enabled 目录中的所有 *.load 和 *.conf 文件。有关如何启用模块的更多信息，请参见第 905 页关于 a2enmod 的讨论。
+
+apache2.conf 文件中还有许多其他指令；文件中的注释提供了关于它们功能的指南。在开始使用 Apache 时，这里没有什么需要更改的。
+
+## The Ubuntu default CONFIGURATION FILE
+
+本节重点介绍了 Ubuntu 默认配置文件中的一些重要特性，该文件位于 /etc/apache2/sites-available 目录中。
+
+### ServerAdmin 和 ServerName
+
+在出厂设置的 Ubuntu Linux 中，ServerAdmin 指令设置为 webmaster@localhost。添加一个 ServerName 指令，并按照 ServerAdmin（第 912 页）和 ServerName（第 912 页）下的建议将 ServerAdmin 更改为有用的值。
+
+### DocumentRoot
+
+DocumentRoot 指令（第 913 页）显示如下：
+
+```text
+DocumentRoot /var/www/
+```
+
+只有当您希望将内容放在 /var/www 目录以外的其他地方时，才修改此指令。
+
+### <Directory>
+
+以下 <Directory> 容器（第 915 页）为整个本地文件系统（由 / 指定）设置了一个限制性环境：
+
+```text
+<Directory />
+Options FollowSymlinks
+AllowOverride None
+</Directory>
+```
+
+Options 指令（第 928 页）允许 Apache 跟随符号链接，但禁止许多选项。AllowOverride 指令（第 930 页）使 Apache 不处理 .htaccess 文件中的指令。如果您想要，必须显式启用限制较少的选项，但请注意，这样做可能会暴露根文件系统并危及系统安全。
+
+接下来，另一个 <Directory> 容器为 Document-Root（/var/www）设置限制较少的选项。default 中的代码夹杂着许多注释。如果没有注释，它看起来像这样：
+
+```text
+<Directory /var/www/>
+Options Indexes FollowSymlinks MultiViews
+AllowOverride None
+Order allow,deny
+allow from all
+</Directory>
+```
+
+Options 指令中的 Indexes 选项允许 Apache 显示目录列表。`Order`（第 931 页）和 `Allow`（第 930 页）指令结合允许来自所有客户端的请求。该容器比前一个容器限制稍少，尽管它仍不允许 Apache 遵循 .htaccess 文件中的指令。
+
+## ADVANCED CONFIGURATION
+
+本节描述如何配置 Apache 的一些高级功能。
+
+### REDIRECTS
+
+Apache 可以通过要求客户端请求不同的 URI 来响应对某个 URI 的请求。这种响应被称为*重定向*。重定向之所以有效，是因为重定向是 HTTP 实现的一部分：Apache 发送适当的响应代码和新 URI，合规的浏览器请求新位置。
+
+Redirect 指令可以建立显式重定向，当网站移动时将客户端发送到不同的页面。或者，当用户在浏览器中输入目录的 URI 但省略尾随斜杠时，Apache 可以自动将客户端重定向到以斜杠结尾的相同 URI。
+
+`ServerName` 指令（第 912 页），它建立服务器名称，以及 `UseCanonicalName` 指令（第 922 页），在服务器具有多个名称并需要执行自动重定向时都非常重要。例如，假设名为 *zach.example.com* 且别名为 *www.example.com* 的服务器将 `ServerName` 设置为 *www.example.com*。当客户端指定目录的 URI 但省略尾随斜杠（*zach.example.com/dir/*）时，Apache 必须执行重定向以确定所请求目录的 URI。当 `UseCanonicalName` 设置为 `On` 时，Apache 使用 `ServerName` 的值并返回 *www.example.com/dir/*。当 `UseCanonicalName` 设置为 `Off` 时，Apache 使用传入请求中的名称并返回 *zach.example.com/dir/*。
+
+### CONTENT NEGOTIATION
+
+Apache 可以服务同一页面的多个版本，使用客户端的偏好来确定要发送哪个版本。Apache 用于确定要发送哪个页面（文件）版本的过程称为*内容协商*。Apache 支持两种内容协商方法：MultiViews 搜索和类型映射，它们可以协同工作。
+
+### TYPE MAPS
+
+来自 *apache2.conf* 的以下 `AddHandler` 指令告诉 Apache 使用任何以 .var 结尾的文件名作为类型映射：
+
+```text
+AddHandler type-map var
+```
+
+要查看类型映射如何工作，请在 /var/www 中创建以下文件：
+
+```text
+$ cat /var/www/index.html.en
+<html><body><h1>Hello</h1></body></html>
+$ cat /var/www/index.html.fr
+<html><body><h1>Bonjour</h1></body></html>
+```
+
+```text
+$ cat /var/www/index.html.var
+URI: index.html.en
+Content-Language: en
+Content-type: text/html; charset=ISO-8859-1
+
+URI: index.html.fr
+Content-Language: fr
+Content-type: text/html; charset=ISO-8859-1
+```
+
+如果浏览器首选语言设置为英语（en），当您浏览到 http://localhost/index.html.var 时，它将显示 **Hello** 页面。如果浏览器首选语言设置为法语（fr），它将显示 **Bonjour** 页面。（当 MultiViews 选项开启时（默认情况如此），当您浏览到 http://localhost 时，浏览器会显示正确的页面。参见下一节。）您可以通过从菜单栏选择 **Edit > Preferences**，点击 **Advanced** 图标，然后选择 **General** 标签，最后从 **Languages** 框中点击 **Choose** 来更改 Firefox 中的默认语言。如果需要，从 **Select a language to add** 组合框中选择一种语言，然后将首选语言移到列表顶部。在示例中，**charset** 分配并非必要。但是，如果您正在使用不同的编码（如英语、俄语和韩语）发送页面，它们会很有帮助。
+
+类型映射用于的不仅是选择不同的语言。与前面的示例匹配 **Content-Language** 不同，映射可以匹配 **Content-type**，并根据浏览器偏好的设置发送 jpeg 或 png 图像。
+
+### MultiViews
+
+当您将 MultiViews 选项设置在目录上时，如果请求的资源不存在，Apache 会尝试提供正确的页面。**sites-avaiable/default** 文件中的以下行将 MultiViews 设置在文档根（ /）上：
+
+```text
+<Directory /var/www/>
+    Options Indexes FollowSymlinks MultiViews
+...
+```
+
+要查看 MultiViews 如何工作，请删除您在前面部分创建的 /var/www/index.html.var 类型映射文件。现在浏览到 http://localhost。会显示正确的语言页面，但为什么？
+
+当浏览器向 Apache 发送对目录的请求时，Apache 会在该目录中查找名为 **index.html** 的文件。在示例中，Apache 找不到该文件。如果启用了 MultiViews（默认如此），Apache 会查找名为 **index.html**.* 的文件。

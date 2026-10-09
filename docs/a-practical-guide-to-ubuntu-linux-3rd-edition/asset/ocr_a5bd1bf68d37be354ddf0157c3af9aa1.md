@@ -1,0 +1,15 @@
+occupies the whole workspace; click the same button (now displaying a square in place of the up arrow) on the titlebar of a maximized window to restore the window to its former size. You can also double-click the titlebar to maximize and restore a window. Clicking the close button closes the window and usually terminates the program running in it. To reposition the window, left-click the titlebar and drag the window to the desired location.
+
++   **Window Operations menu**  The Window Operations menu contains operations that you most commonly need to perform on any window. Right-click either the titlebar or the Window List applet (page 121) to display this menu. You can use this menu to move a window to another workspace, keep the window on top of or below other windows, and cause the window to always be visible on the displayed workspace.
+
++   **Toolbar**  A *toolbar* (Figure 4-16, preceding page) usually appears near the top of a window and contains icons, text, applets, menus, and more. Many kinds of toolbars exist. The titlebar is not a toolbar; rather, it is part of the window decorations placed there by the window manager (page 155).
+
+# CHANGING THE INPUT FOCUS (WINDOW CYCLING)
+
+The window with the input focus is the one that receives keyboard characters and commands you type. In addition to using the Window List applet (page 121), you can change which window on the displayed workspace has the input focus by using the keyboard; this process is called *window cycling*. When you press ALT-TAB, GNOME displays in the center of the workspace a box that holds icons representing the programs running in the windows in the workspace. It also shifts the input focus to the window that was active just before the currently active window, making it easy to switch back and forth between two windows. When you hold ALT and press TAB multiple times, the focus moves from window to window. Holding ALT and SHIFT and repeatedly pressing TAB cycles in the other direction. See page 153 for more information on the input focus.
+
+# CUTTING AND PASTING OBJECTS USING THE CLIPBOARD
+
+There are two similar ways to cut/copy and paste objects and text on the desktop and both within and between windows. In the first method, you use the clipboard, technically called the *copy buffer*, to copy or move objects or text. To do so, you explicitly copy an object or text to the buffer and then paste it somewhere else. Applications that follow the user interface guidelines use CONTROL-X to cut, CONTROL-C to copy, and CONTROL-V to paste. Application context menus frequently provide these same options.
+
+You may not be familiar with the second method to copy and paste text—using the *selection* or *primary* buffer, which always contains the text you most recently selected (highlighted). You cannot use this method to copy objects. Clicking the middle mouse button (click the scroll wheel on a mouse that has one) pastes the contents of the

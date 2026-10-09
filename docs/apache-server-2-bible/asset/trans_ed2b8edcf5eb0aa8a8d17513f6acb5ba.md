@@ -1,0 +1,173 @@
+
+
+-   `ProtectedTicketTable`、`ProtectedTicketUserTable` 和 `ProtectedTicketSecretTable` 键用于告诉模块在数据库中使用哪些票据和用户表以及需要哪些字段。
+-   `ProtectedTicketPasswordStyle` 设置加密类型。您有三种选择：传统的 Unix 风格单向哈希加密（即 `crypt()`）、明文（不推荐）或 MD5。
+
+6.  接下来添加以下配置行：
+
+```
+PerlSetVar ProtectedTicketExpires 30
+PerlSetVar ProtectedTicketLogoutURI /protected/index.html
+PerlSetVar ProtectedTicketLoginHandler /protected/login
+PerlSetVar ProtectedTicketIdleTimeout 15
+PerlSetVar ProtectedPath /
+PerlSetVar ProtectedDomain .domain_name
+PerlSetVar ProtectedSecure 1
+PerlSetVar ProtectedLoginScript /protected/loginform
+```
+
+以下列表说明了上述配置的作用：
+
+-   `ProtectedTicketExpires` 键设置会话（票据）的过期时间（以分钟为单位）。
+-   `ProtectedTicketLogoutURI` 键设置用户注销后显示的 URL。
+-   `ProtectedTicketLoginHandler` 设置登录处理程序的路径，该路径必须对应于一个 `<Location>` 容器，如后文所述。
+-   `ProtectedTicketIdleTimeout` 设置会话允许空闲的分钟数。
+-   `ProtectedPath` 设置 cookie 的路径。默认值 `/` 确保 cookie 随所有请求返回。您可以通过将 `/` 更改为 `/protected`（或您正在保护的任何位置）来限制 cookie 仅用于受保护区域。
+-   `ProtectedDomain` 设置 cookie 的域名。前面的点号确保 cookie 发送到同一域名中的所有 Web 主机。例如，将此设置为 `.mobilac.com` 将允许在 `web1.Mobilac.com` 或 `web2.Mobilac.com` 中查看该 cookie。您也可以通过在此处指定完全限定主机名来将 cookie 限制为单个主机。
+-   `ProtectedSecure` 设置为 1 以确保 cookie 的安全性。
+-   `ProtectedLoginScript` 设置登录表单的位置，该表单由模块生成。
+
+7.  现在，您需要按照以下方式为 `/protected` 目录创建一个 `<Location>` 容器：
+
+```
+<Location /protected>
+    AuthType Apache::AuthTicket
+    AuthName Protected
+    PerlAuthHandler Apache::AuthTicket->authenticate
+    PerlAuthzHandler Apache::AuthTicket->authorize
+    require valid-user
+</Location>
+```
+
+在此，Apache 被要求需要有效的用户凭证，这些凭证将由 `Apache::AuthTicket` 模块进行身份验证。
+
+8.  现在，您需要按照以下方式为模块的登录屏幕、登录脚本和注销功能设置处理程序：
+
+```
+<Location /protectedloginform>
+    AuthType Apache::AuthTicket
+    AuthName Protected
+    SetHandler perl-script
+    PerlHandler Apache::AuthTicket->login_screen
+</Location>
+
+<Location /protectedlogin>
+    AuthType Apache::AuthTicket
+    AuthName Protected
+    SetHandler perl-script
+    PerlHandler Apache::AuthTicket->login
+</Location>
+
+<Location /protected/logout>
+    AuthType Apache::AuthTicket
+    AuthName Protected
+    SetHandler perl-script
+    PerlHandler Apache::AuthTicket->logout
+</Location>
+```
+
+9.  创建上述配置后，请确保您已至少向 `wwwusers` 表添加了一个用户。有关如何在数据库中管理用户的详细信息，请参阅本章前面“在任意 RDBM 中管理用户和组”部分。
+
+10. 使用 `/usr/local/apache/bin/apachectl restart` 命令重启 Apache Web 服务器。
+
+11. 为确保看到 cookie，请将 Web 浏览器设置为提示接收 cookie。对于 Netscape Navigator，您可以使用“编辑” > “偏好” > “高级” > “Cookie” 选项勾选“在存储 cookie 前警告我”。对于 Microsoft IE，您必须使用“工具” > “Internet 选项” > “安全” > “自定义级别” > “Cookie” > “提示”选项。
+
+12. 现在访问 `http://your_server_name/protected/` 目录，您应该会看到一个要求输入用户名和密码的 Web 表单。输入一个有效用户名和一个无效密码，Web 表单应仅仅重新显示自身。现在输入一个有效的用户名/密码对，您的 Web 浏览器将询问您的许可以存储 cookie。下面显示了一个示例会话（票据）cookie：
+
+```
+Cookie Name: Apache::AuthTicket_Protected
+Cookie Domain: nitec.com
+Path: /
+Expires: End of session
+Secure: Yes
+Data: expires:988390493:version:::user:kabir2:hash:bf5ac94173071cde94489ef79f24b158::time:988389593
+```
+
+13. 允许 Web 浏览器存储该 cookie，您就应该能够访问受限的 Web 部分。
+
+14. 接下来，您应该验证 `tickets` 表中是否有新的票据。您可以登录到数据库服务器并查看 `tickets` 表的内容。例如，在运行 MySQL 服务器的 Linux 系统上，我在通过 `mysql -u httpd -p auth` 命令登录到 MySQL 后，可以运行 `select * from tickets` 命令。示例输出如下所示：
+
+```
+mysql> select * from tickets;
++--------------------------------+----------+
+| ticket_hash                   | ts       |
++--------------------------------+----------+
+| 145e12ad47da87791ace99036e35357d | 988393278 |
+| 6e115d1679b8a78f9b0a6f92898e1cd6 | 988393401 |
++--------------------------------+----------+
+2 rows in set (0.00 sec)
+```
+
+在此，MySQL 报告当前有会话连接到 Web 服务器。
+
+15. 您可以通过删除存储在该表中的 `tickets` 来强制 Web 浏览器重新登录。例如，在数据库服务器上发出 `delete from tickets` 命令将删除 `tickets` 表中的所有记录，并强制每个人都重新登录。
+
+## 第 8 章
+
+### 本章内容
+
+-   监控 Apache 状态
+-   启用日志记录
+-   自定义日志记录
+-   归档日志
+-   跟踪用户
+-   分析日志文件
+-   维护日志文件
+
+## 监控对 Apache 的访问
+
+您是否曾好奇谁在访问您的网站？或者您的 Apache 服务器在您的系统上的表现如何？监控、记录和分析 Apache 服务器可以为您提供大量信息，这些信息对于 Web 服务器的顺畅系统管理至关重要，并且还可以帮助您的网站的市场推广方面。在本章中，我将向您展示如何监控和记录 Apache 服务器上的信息，以满足您的了解需求。
+
+除其他事项外，在本章中，我将向您展示如何：
+
+-   快速访问 Apache 服务器配置
+-   监控正在运行的 Apache 服务器的状态
+-   以 CLF 和自定义格式创建日志文件
+-   使用第三方应用程序分析日志文件
+
+### 监控 Apache
+
+Apache 允许您通过 Web 监控两种非常有价值的信息：
+
+-   **服务器配置信息：** 这些信息是静态的，但能够快速访问运行中服务器的配置信息非常有用，当您想要了解服务器上安装了哪些模块时尤其如此。
+-   **服务器状态：** 这些信息不断变化。使用 Apache 基于 Web 的服务器状态监控功能，您可以监控诸如服务器运行时间、处理的总请求数、总数据传输量、子进程状态和系统资源使用率等信息。
+
+我将在以下各部分讨论这两种类型的信息。
+
+### 使用 mod_info 访问配置信息
+
+可以通过 `mod_info` 模块访问系统配置信息。该模块提供了服务器配置的综合概述，包括配置文件中所有已安装的模块和指令。该模块包含在 `mod_info.c` 文件中。默认情况下未将其编译到服务器中。您必须使用 `configure` 脚本的 `--enable-info` 选项进行编译。例如：
+
+```
+./configure --prefix=/usr/local/apache \
+            --with-mpm=prefork \
+            --enable-info
+```
+
+此命令配置 Apache 安装在 `/usr/local/apache` 目录，配置源代码作为预派生服务器运行，并启用 `mod_info` 模块。运行 `make` 和 `make install` 以编译并安装新构建的 Apache 服务器。
+
+安装此模块到服务器后，您可以通过向 `httpd.conf` 文件添加以下配置来通过 Web 查看服务器配置信息：
+
+```
+<Location /server-info>
+    SetHandler server-info
+    Order deny,allow
+    Deny from all
+    Allow from 127.0.0.1 .domain.com
+</Location>
+```
+
+这允许本地主机（`127.0.0.1`）和您域名下的每个主机访问服务器信息。不要忘记用您的顶级域名替换 `.domain.com`。例如，如果您的网站是 `www.nitec.com`，您需要添加：
+
+```
+Allow from 127.0.0.1 .nitec.com
+```
+
+域名前的点号允许域内的任何主机访问服务器信息。但是，如果您希望将此限制为单个名为 `sysadmin.domain.com` 的主机，请将 Allow from 行更改为：
+
+```
+Allow from 127.0.0.1 sysadmin.domain.com
+```
+
+在服务器配置并重启后，可以通过从本地主机访问 `http://localhost/server-info` 来获取服务器信息（即，在服务器本身上运行诸如 lynx 这样的 Web 浏览器）。
+

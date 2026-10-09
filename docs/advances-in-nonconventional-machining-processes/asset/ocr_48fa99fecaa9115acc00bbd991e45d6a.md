@@ -1,0 +1,14 @@
+thereby subsequently lowering the MRR. This problem of particle accumulation was solved by creating an intermittent pattern of blocking the abrasive flow and passing a high velocity pressurized jet for that duration. This was achieved by installing a 100 Hz Solenoid valve which helped in creating this alternate pattern of abrasive and high pressure jet of air [20]. This helped in removing the accumulated abrasives at the bottom. It was found in the research that for a sample shot study of 500, the hole depth was increased from 440μm to 740 μm with an open/closing time of 10/40 milli seconds.
+
+# Submerged Jet Conditions
+
+With the advancement of the AJM, large amount of technical and economical advantages came, however its environmental aspects also came into effect like noise created during the process. To look into this aspect a submerged AWJM was taken into consideration [21]. This somehow resulted in the lowering of the kinetic energy of the particles before reaching the machining surface. This also resulted in the reduction in the drag force on the jet thus leading to less diffraction of the jet along the diameter of nozzle [22]. This also gave the idea of having less dust in the environment during the machining as was seen in the conventional methods thereby leading to some medical effects like lungs damage. It was found that a reduction of up to 61% was obtained when using the glycerin as liquid for submerging accompanied with 42% with liquid polymer and 36% with water [23]. There was a considerable increase in the nozzle life when the liquid was mixed with abrasive slurry and only jet of high velocity was directed on to the workpiece. The only drawback was the substantially low velocity of the particle.
+
+# APPLICATIONS
+
+Abrasive jet machining has found a lot of its applications with some advantages accompanied with some drawbacks. This section discusses about some of those advantages and also some drawbacks of it. its application in the areas like tribology is analyzed. Some merits are enlisted blow:
+
+The study shows the advancement of the AJM from macro to Micro scale thus giving it a boundless application in various areas and industry. Also, its large application has been seen to machine
+
++   - It has found not only its technical aspects but also its environmental aspects that could lead to better machining ability and environment possibilities thus leading to the better process flexibility.
++   - There has been a lot of improvements in the surface properties like grain refinement, hardening of the material as an effect of plastic deformation during

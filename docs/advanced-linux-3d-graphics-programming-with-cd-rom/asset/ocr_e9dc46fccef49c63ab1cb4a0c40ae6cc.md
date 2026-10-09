@@ -1,0 +1,11 @@
+a tile at different elevations, the geometry within the tile would need to slope upwards or downwards, so that the tiles match up seamlessly on the edges.
+
+# ## Generating Fractal Landscapes
+
+Height field data for landscapes can also be generated algorithmically. Perhaps the best known class of algorithms for generating such data are the fractal algorithms. Fractal landscape algorithms fundamentally work by starting with a single, undivided polygon. The polygon is then divided into smaller polygons, which adds new vertices. The new vertices are first positioned at the average height of their neighboring vertices, then are additionally randomly displaced up or down. We recursively repeat the subdivision, with the important property that the amount of random displacement gets smaller and smaller as we divide further and further. This means that the first few coarse levels of subdivision establish large-scale hills and valleys; increasing subdivision leads to finer and finer surface details. The exact reason this works is because the random displacements simulate Brownian motion in two dimensions, creating a surface with fractal dimension [PEIT92]. Fractal dimension means that the surface has a fractional dimension between 2D and 3D (hence the term fractal) and appears self-similar. The specific factor by which the amount of displacement is reduced for each recursive subdivision depends on this fractal property, and for square polygons is $sqrt(1/{2}^{2h})$, where $h$ is the level of recursion. See [PEIT92] for the derivation and an extremely broad introduction to the field of fractals and chaos theory.
+
+You can program a fractal landscape generator without too much difficulty based on the previous description. Also, Blender has a fractal subdivision option which you can use to experiment. To try this in Blender, add a plane and remain in EditMode. Then type w, and select Subdivide Fractal to subdivide all selected vertices in a fractal manner. By repeating this process, you can create more and more fractal landscape detail. Blender, however, only allows you to access and export the data as a polygonal mesh, not as a 2D height field.
+
+![](bbox=[0.14, 0.65, 0.59, 0.89])
+
+*Figure 7-24: A Blender mesh subdivided in a fractal manner.*

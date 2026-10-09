@@ -1,0 +1,17 @@
+# 14 Chapter 1 : Basic Linux 3D Graphics Concepts
+
+Choosing the factories essentially means customizing, at run time, all customizable behavior, which then takes effect for the duration of the program. In particular, the I3d factory manager manages three factories:
+
++   1. A screen factory, producing objects corresponding to the abstract interface `I3d_screen`. Class `I3d_screen` represents the physical output device—a window under X11, a full-screen hardware-accelerated window using Mesa, or even a DIBSection under Microsoft Windows.
+
++   2. A rasterizer implementation factory, producing objects corresponding to the abstract interface `I3d_rasterizer_2d_imp`. Class `I3d_rasterizer_2d_imp` represents a particular implementation of 2D rasterizer concepts. We use the term “rasterizer” to denote a software interface to a rasterizer implementation. A rasterizer implementation is a particular hardware or software component that draws 2D graphics primitives (triangles, lines, dots) into a frame buffer. Two important types of rasterizer implementations are software rasterizer implementations, which write directly into an off-screen buffer, and hardware rasterizer implementations, which use specialized, faster functions for hardware-accelerated pixel operations.
+
++   3. A dispatcher factory, producing objects corresponding to the abstract interface `I3d_dispatcher`. Class `I3d_dispatcher` represents a generalized event dispatcher in a particular operating system environment. Under X, the dispatcher intercepts X events within a window’s event loop and passes them on transparently to our application. Using hardware acceleration with Mesa, the dispatcher works within the event framework provided by Mesa and GLUT, again forwarding events in a transparent way to our application. Under another operating system, the dispatcher would need to call any OS-specific routines necessary to capture and forward events.
+
+All of these factories represent system-specific information: the output device, the rasterizer implementation, and the event dispatcher. Therefore, by choosing the factories, we are essentially dynamically configuring the program to use the desired run-time environment. In our case, the factory manager simply asks the user which factories should be used, but more sophisticated solutions are also possible. We could, for instance, have an auto-detect routine that searches for the existence of particular hardware, and that, depending on whether or not it finds it, configures the factory to create the appropriate software component accordingly.
+
+# Step 2. Declare a Pipeline Subclass
+
+The second step in writing an I3d application is to declare a pipeline subclass. A pipeline is simply a sequence of operations on data. The main loop in a game or graphics program is typically called the pipeline. Therefore, the pipeline contains, directly or indirectly, your application’s main data and functionality.
+
+We say “directly or indirectly” because the pipeline might do nothing other than create another object, to which it then delegates the main program’s responsibility. In such a case, the pipeline is not directly responsible for the application’s data and functionality, but instead merely serves as an interface between the dispatcher and the object actually doing the real work.

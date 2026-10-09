@@ -1,0 +1,47 @@
+# ## RUNNING A PERL PROGRAM
+
+There are several ways you can run a program written in Perl. The -e option enables you to enter a program on the command line:
+
+```
+$ perl -e 'print "Hi there.\n"'
+Hi there.
+```
+
+The -e option is a good option for testing Perl syntax and running brief, one-shot programs. This option requires that the Perl program appear as a single argument on the command line. The program must immediately follow this option—it is an argument to this option. An easy way to write this type of program is to enclose the program within single quotation marks.
+
+Because Perl is a member of the class of utilities that take input from a file or standard input (page 248), you can give the command perl and enter the program terminated by CONTROL-D (end of file). Perl reads the program from standard input:
+
+```
+$ perl
+print "Hi there.\n";
+CONTROL-D
+Hi there.
+```
+
+The preceding techniques are useful for quick, one-off command-line programs but are not helpful for running more complex programs. Most of the time, a Perl program is stored in a text file. Although not required, the file typically has a filename extension of .pl. Following is the same simple program used in the previous examples stored in a file:
+
+```
+$ cat simple.pl
+print "Hi there.\n";
+```
+
+You can run this program by specifying its name as an argument to Perl:
+
+```
+$ perl simple.pl
+Hi there.
+```
+
+Most commonly and similarly to most shell scripts, the file containing the Perl program is executable. In the following example, chmod (page 300) makes the simple2.pl file executable. As explained on page 302, the #! at the start of the first line of the file instructs the shell to pass the rest of the file to /usr/bin/perl for execution.
+
+```
+$ chmod 755 simple2.pl
+$ cat simple2.pl
+#!/usr/bin/perl -w
+print "Hi there.\n";
+
+$ ./simple2.pl
+Hi there.
+```
+
+In this example, the simple2.pl program is executed as ./simple2.pl because the working directory is not in the user's PATH (page 319). The -w option tells Perl to issue warning messages when it identifies potential errors in the code.

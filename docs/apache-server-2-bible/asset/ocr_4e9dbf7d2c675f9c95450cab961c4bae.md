@@ -1,0 +1,9 @@
+# Table 14-1
+**Comparing CGI, Server API, and FastCGI**
+
+| Feature | CGI | Server API | FastCGI |
+| :--- | :--- | :--- | :--- |
+| Programming language dependency | Language independent. CGI applications can be written in almost any programming language (usually C/C++). | Applications have to be written in a language supported by the vendor API programming language. | Language independent. Like CGI, FastCGI applications can be written in any programming language. |
+| Process isolation | Applications separate processes; buggy applications cannot crash the Web server or access the server’s private internal state and compromise security. Bugs in the core server can corrupt applications. | Feature not supported. Because the FastCGI applications run in the server’s address space, buggy applications can corrupt the core server. | A buggy application cannot crash or corrupt the core server or other applications. |
+| Type of standard | Open standard. Some form of CGI has been implemented on every Web server. | Proprietary. Coding your application to a particular API locks you into a particular vendor’s server. | Nonproprietary, proposed open standard. Support is under development for other Web servers, including commercial servers from Microsoft and Netscape. Apache currently supports FastCGI as a third-party module. |
+| Platform dependency | Platform independent. CGI is not tied to any particular server architecture (single-threaded, multithreaded, threaded, and so on). | Tie-in to server architecture. API applications have to share the same architecture as the server. If the Web server is multi-threaded, the application has to be thread safe. If the Web server has single-threaded processes, multithreaded applications don’t gain any performance advantage. | Platform independent. The FastCGI is not tied to any particular server architecture. Any Web server can implement the FastCGI interface. |

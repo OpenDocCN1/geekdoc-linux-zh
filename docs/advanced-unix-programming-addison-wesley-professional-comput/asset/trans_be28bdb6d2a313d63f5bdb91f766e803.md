@@ -1,0 +1,250 @@
+
+**图 7.2** 记录链表。
+
+```c
+ec_neg1( pid = fork( ) );
+if (pid == 0)
+    process1( );
+else {
+    process2( );
+    ec_neg1( waitpid(pid, NULL, 0) );
+}
+exit(EXIT_SUCCESS);
+
+EC_CLEANUP_BGN
+    exit(EXIT_FAILURE);
+EC_CLEANUP_END
+}
+```
+
+对于数据，process1 在写入头记录后，只需从 1000 开始倒数：
+
+```c
+#define DBNAME "termdb"
+
+static void process1(void)
+{
+    int dbfd, data;
+    struct rec r;
+
+    ec_neg1( dbfd = open(DBNAME, O_CREAT | O_TRUNC | O_RDWR, PERM_FILE) );
+    memest(&r, 0, sizeof(r));
+    ec_false( writerec(dbfd, &r, 0) );
+    for (data = 1000; data >= 0; data--)
+        ec_false( store(dbfd, data) );
+    ec_neg1( close(dbfd) );
+    exit(EXIT_SUCCESS);
+
+EC_CLEANUP_BGN
+    exit(EXIT_FAILURE);
+EC_CLEANUP_END
+}
+```
+
+为了使 I/O 操作简便，有两个函数：`write_rec` 在指定偏移量处写入一个记录，而 `read_rec` 从偏移量读取一个记录。它们都将部分写入或读取或文件末尾视为错误：
+
+```c
+bool read_rec(int dbfd, struct rec *r, off_t off)
+{
+    ssize_t nread;
+
+    if ((nread = pread(dbfd, r, sizeof(struct rec), off)) == sizeof(struct rec))
+        return true;
+    if (nread != -1)
+        errno = EIO;
+    EC_FAIL
+    return false;
+
+    EC_CLEANUP_BGN
+    return false;
+    EC_CLEANUP_END
+}
+
+bool write_rec(int dbfd, struct rec *r, off_t off)
+{
+    ssize_t nwrote;
+
+    if ((nwrote = pwrite(dbfd, r, sizeof(struct rec), off)) == sizeof(struct rec))
+        return true;
+    if (nwrote != -1)
+        errno = EIO;
+    EC_FAIL
+    return false;
+
+    EC_CLEANUP_BGN
+    return false;
+    EC_CLEANUP_END
+}
+```
+
+我们几乎可以同样轻松地直接使用 `pwrite` 和 `pread`，但错误检查有点复杂，因此将它们封装起来是有意义的。
+
+函数 `store`（由进程 1 调用）负责保持链表有序。注意，它不试图最小化 I/O 操作：
+
+```c
+bool store(int dbfd, int data)
+{
+    struct rec r, rnew;
+    off_t end, prev;
+
+    ec_neg1( end = lseek( dbfd, 0, SEEK_END) );
+    prev = 0;
+    ec_false( read_rec( dbfd, &r, prev) );
+    while ( r.r_next != 0) {
+        ec_false( read_rec( dbfd, &r, r.r_next) );
+        if (r.r_data > data)
+            break;
+        prev = r.r_next;
+    }
+    ec_false( read_rec( dbfd, &r, prev) );
+    rnew.r_next = r.r_next;
+    r.r_next = end;
+    ec_false( write_rec( dbfd, &r, prev) );
+    rnew.r_data = data;
+    usleep(1); /* give up CPU */
+    ec_false( write_rec( dbfd, &rnew, end) );
+    return true;
+
+    EC_CLEANUP_BGN
+    return false;
+    EC_CLEANUP_END
+}
+```
+
+花点时间研究 `store`，它的逻辑就应该变得清晰了。注意，它正确处理了新记录位于开头或末尾的情况。在末尾附近对 `usleep`（睡眠 1 微秒）的调用只是为了放弃 CPU，让其他进程运行一小会儿。这在复杂的程序中是自然发生的，但我必须在这个简单的程序中强制实现，因为我即将展示的另一个进程需要并发运行。
+
+这是检查文件完整性的 process2：
+
+```c
+static void process2(void)
+{
+    int try, dbfd;
+    struct rec r1, r2;
+
+    for ( try = 0; try < 10; try++)
+        if ((dbfd = open( DBNAME, O_RDWR) ) == -1) {
+            if (errno == ENOENT) {
+                continue;
+            }
+            else
+                EC_FAIL
+        }
+    ec_neg1( dbfd );
+    for (try = 0; try < 100; try++) {
+        ec_false( read_rec(dbfd, &r1, 0) );
+        while (r1.r_next != 0) {
+            ec_false( read_rec(dbfd, &r2, r1.r_next) );
+            if (r1.r_data > r2.r_data) {
+                printf("Found sorting error (try %d)\n", try);
+                break;
+            }
+            r1 = r2;
+        }
+    }
+    ec_neg1( close(dbfd) );
+    return;
+
+    EC_CLEANUP_BGN
+    exit(EXIT_FAILURE);
+    EC_CLEANUP_END
+}
+```
+
+我尝试多次打开数据库，因为进程 1 可能需要一段时间才能被调度并完成其 open 调用。然后我反复（100 次）遍历链表，查找诸如记录缺失或数据顺序错误等错误。
+
+果然，当我运行程序时，得到了以下结果：
+
+```text
+ERROR: 0: process2 [/aup/c7/f1.c:107] readrec(dbfd, &r2, rl.r_next)
+        1: readrec [/aup/c7/f1.c:17] 0
+        *** EIO (5: "I/O error") ***
+```
+
+这个特定错误发生的原因在于，`store` 即将写入数据库末尾的新记录在进程 2 查找时尚未写入。
+
+现在我们有一个无法工作的应用程序，这算不上什么伟大成就，但我们的应用程序具体来说是因为两个进程正在访问同一个文件，其中一个发现数据不一致而无法工作。它们需要某种协调。
+
+那么，你有动力看看这一节是关于什么的吗？
+
+## 7.11.2 将信号量用作文件锁
+
+修复上一节示例的明显方法是使用信号量来防止进程 2 看到不一致的文件。使用 7.9.2 节中的 SimpleSem 接口，我们可以这样定义一个全局变量：
+
+```c
+static struct SimpleSem *sem;
+```
+
+每个进程独立地打开信号量，使用类似下面这一行的代码：
+
+```c
+ec_null( sem = SimpleSemOpen("sem"))
+```
+
+此外，process1 最初会递增信号量，以表明数据库是一致的：
+
+```c
+ec_false( SimpleSemPost(sem))
+```
+
+`store` 中的关键行是那些就地更新记录并在末尾存储新记录的代码：
+
+```c
+ec_false( SimpleSemWait(sem))
+ec_false( readrec(dbfd, &r, prev))
+rnew.r_next = r.r_next;
+r.r_next = end;
+ec_false( writerec(dbfd, &r, prev))
+rnew.r_data = data;
+usleep(1); /* give up CPU */
+ec_false( writerec(dbfd, &rnew, end))
+ec_false( SimpleSemPost(sem))
+```
+
+process2 中的关键行是那些遍历链表的代码：
+
+```c
+for (try = 0; try < 100; try++) {
+    ec_false( SimpleSemWait(sem))
+    ec_false( readrec(dbfd, &r1, 0))
+    while (r1.r_next != 0) {
+        ec_false( readrec(dbfd, &r2, r1.r_next))
+        if (r1.r_data > r2.r_data) {
+            printf("Found sorting error (try %d)\n", try);
+            break;
+        }
+        r1 = r2;
+    }
+}
+ec_false( SimpleSemPost(sem))
+```
+
+经过这些更改，应用程序完美运行。（除了 FreeBSD 和 Darwin，其中 System V 信号量实现有误，如 7.9.1 节所述。）
+
+使用信号量作为文件锁的主要问题是，对于任意文件，并不清楚信号量名称应该是什么。对于具有少量固定文件名的应用程序，这不是问题，但临时处理文件会非常麻烦。我们必须发明一种机制将文件名映射到信号量名称。更糟糕的是，有时只需要锁定文件的一部分，这意味着不同部分需要不同的信号量。最后，管理信号量——打开、关闭以及清理遗留的信号量——非常令人头疼。
+
+## 7.11.3 lockf 系统调用
+
+使用信号量锁定文件的麻烦其实无关紧要，因为 UNIX 有一个特殊的系统调用用于锁定文件的某一部分：
+
+```c
+lockf—lock section of file
+
+#include <unistd.h>
+
+int lockf(          /* file descriptor */
+int fd,
+int op,             /* operation */
+off_t len           /* length of section */
+);
+/* Returns 0 on success or -1 on error (sets errno) */
+```
+
+文件描述符必须打开用于写入（*O_WRONLY* 或 *O_RDWR*）。
+
+要锁定或解锁的区域是从当前文件偏移量（由 *read*、*write* 或 *lseek* 设置）开始，向前或向后延伸 *len* 字节（如果 *len* 为负，则向后）。在向后锁定的情况下，当前偏移量处的字节不属于该区域。在向前的情况下，可以锁定尚未存在的字节，因为文件还没有那么大。如果 *len* 为零，区域将从当前偏移量延伸到文件末尾，即使文件在增长。因此，要锁定整个文件，只需确保偏移量为零，并使用零长度。
+
+如果要锁定的区域与已锁定的区域重叠，这两个区域将合并。如果部分解锁了一个已锁定的区域，该锁定区域会变小，并可能被分割成两个不连续的区域。
+
+进程在文件上拥有的所有锁，当该进程打开该文件的*任何*文件描述符被关闭时都会释放，即使关闭的文件描述符是独立获取的（即，通过不同的 *open* 调用获得），与传递给 *lockf* 的那个不同[^12]。由此可知，当进程终止时，所有锁都会释放，因为
+
+[^12]: 摘自 FreeBSD 手册页：“此接口遵循 System V 和 IEEE Std 1003.1-1988 (*POSIX I*) 那套完全愚蠢的语义，它要求当该进程关闭该文件的任何文件描述符时，移除与该文件相关的所有锁。这种语义意味着应用程序必须意识到子程序库可能访问的任何文件。例如，如果一个更新密码文件的应用程序在更新期间锁定了密码文件数据库，然后调用 *getpwnam*(3) 来获取记录，锁将会丢失，因为 *getpwnam*(3) 打开、读取并关闭了密码数据库。” 基于 BSD 的系统有一个更好的调用 *flock*，但它是非标准的。

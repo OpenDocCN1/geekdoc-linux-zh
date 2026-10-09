@@ -1,0 +1,9 @@
+We’ll see examples of UCL-style configuration throughout this book. You don’t need to know the details of UCL at this time, merely that UCL is a thing in FreeBSD.
+
+# # FreeBSD Hardware
+
+FreeBSD supports a whole bunch of hardware, including different architectures and devices designed for each architecture. One of the Project’s goals is to support the most widely available hardware, and that list of hardware includes far more than the “personal computer.” Today’s fully supported *Tier 1* hardware includes 32-bit and 64-bit versions of the Intel-style processor.
+
+Most modern hardware uses 64-bit extensions to Intel’s classic 32-bit architecture. These *extensions* were created by AMD, and so the platform is called `amd64`. Most hardware built in the last decade uses the `amd64` standard. While `amd64` hardware will boot both 32-bit and 64-bit versions of FreeBSD, the 32-bit version contains a bunch of workarounds to support the hardware’s features and expanded address space. Run 64-bit FreeBSD on 64-bit hardware.
+
+The traditional 32-bit IBM-compatible PC dominated computing for decades. FreeBSD supports that hardware with the `i386` platform.¹ Use the `i386` version of FreeBSD only on pure 32-bit hardware. FreeBSD offers limited support for a few other hardware platforms, calling them *Tier 2 architectures*. Some of these are increasingly popular, such as ARM. FreeBSD supports both 32-bit and 64-bit ARM CPUs with the `arm` and `arm64` platforms. Support for 64-bit ARM hardware is improving rapidly, and you can expect ARM64 to become a Tier 1 platform soon. Other hardware platforms are on their way out and have been demoted to Tier 2 before being removed from the source tree. Additionally, you can run FreeBSD on PowerPC (`ppc`) and 64-bit Sparc (`sparc64`) hardware, which never made it up to Tier 1. Temporary breakage of bleeding-edge FreeBSD is acceptable on Tier 2 platforms. Tier 2 platforms might or might not have packages available.

@@ -1,0 +1,346 @@
+
+## Index
+
+### E
+
+- error messages, 218
+- CGI (Common Gateway Interface) scripts, 63, 352, 353, 360, 361
+- custom, 62-63, 317
+- e-mailing, 41, 68
+- form processing messages, 352, 353, 360, 361
+- PHP: Hypertext Preprocessor messages, customizing, 430
+- PHP: Hypertext Preprocessor messages, storing in `php_errormsg` variable, 435
+- SSI (Server-Side Include) parse errors, 382-384
+- error_append_string directive, 430
+- ErrorDocument directive, 62-63, 259, 317
+- error_dir directive, 48, 230, 515
+- error_log directive, 430
+- error_log_file, 577
+- error_prepend_string directive, 430
+- error_reporting directive, 430-431
+- Ethernut card, 602
+- configuration access, disabling, 702
+- fast EtherNet, 610-611
+- hub, 611
+- switch, 610, 611
+- eval() function, 518
+- Eval Log facility, 577
+- exclamation mark (!) CLF (Common Log Format) absent server marker, 227
+- conditional statement prefix, 63, 64
+- logical operator, 395-396
+- variable operator, 108
+- exclamation mark, equals sign (!=) comparison operator, 394, 396
+- exec() function, 518-519, 529-530
+- exec command, 385-390, 540-541
+- exec_cgi1.shtml file, 387
+- exec_cgi2.shtml file, 388-389
+- exec_cmd.shtml file, 389-390
+- Executable directive, 139-140
+- ExpressType directive, 140-141
+- ExpressDefault directive, 141
+- export command, 471
+- exports script, 657
+- exports file, 656-657
+- ext2 file system, optimizing, 602-606, 647-650. See also file system
+- ExtendedStatus directive, 217
+- extension directive, 431
+- extensions_dir directive, 432
+- ExternalAppJasc directive, 415-416
+- ExtFilterDefine directive, 123
+- ExtFilterOptions directive, 124
+
+### F
+
+- f (backslash, lowercase f) regular expression meta character, 710
+- FancyIndexing directive, 134
+- FastCGI
+  - application server, dedicated, 403
+  - applications, distributed, 401, 402-403
+  - applications, local, 414
+  - applications, loading, 404, 416
+  - applications, remote, 402-403, 404, 415-416
+  - cache memory use, 401-402, 408
+  - CGI (Common Gateway Interface), migrating from, 408-413
+  - CGI (Common Gateway Interface) compared, 399-401, 402
+  - connection persistence, 399, 401, 402, 408
+  - database connectivity, 633, 635
+  - described, 399
+  - directives, 414-416
+  - environment variables, working with, 415
+  - filtering, 408
+  - httpd.conf settings, 416-419
+  - initialization code, 406
+  - listen queue depth, 414
+  - mod_perl module, versus, 633-635
+  - multithreading, 401-402, 407
+  - platform dependency, 400
+  - port settings, 415
+  - processes, 401, 402, 414, 415
+  - programming language dependency, 400
+  - response processing, 404-407
+  - request looping, 406-407
+  - restart delay, 414
+  - routines, 406
+  - scalability, 402-403
+  - scripts, 403
+  - Server API (Application Program Interface) compared, 400-401, 402
+  - socket setup, 415, 416
+  - Software Development Kit (on the CD), 408-409
+  - speed, 402
+  - utility, 311, 614, 648
+  - variables, working with, 328
+  - Web server role, 405-406
+- FastCGI Web site, 409, 417
+- FastScriptIpdI directive, 415, 416
+- FastScriptDir request handler, 417
+- FCGI module (on the CD), 411-412, 721
+- FCGI_AcceptIpdI, routine, 406-407
+- kernel process is over, 1-3
+- file handle management, 155, 607-608
+- file system
+  - backups prior to making changes in, 604, 649
+  - benchmarking, 654-656
+  - block reserving, 606, 650
+  - block size, optimizing, 603, 648
+  - ext2 file system, optimizing, 602-606, 647-650
+  - ext3 file system, 632
+  - file immutable flag, protecting, 702
+  - fsck check, 605, 650
+  - journaling systems, 651-656
+  - kernel response to errors in, in controlling, 655, 650
+  - mount count, 605, 650
+  - mounting, 635-654, 671
+  - nfci, 660
+  - RAM (Random Access Memory), 668-671
+  - memory-based, 668-671
+  - rebuilding, 603, 648
+  - repairing, 606, 651
+  - security, 687
+  - transaction-based, 651
+  - unmounting, 659
+- File Transfer Protocol proxy server
+  - See FTP proxy server
+  - file_mx command, 636
+  - files> container, 57, 58, 78-79
+  - filesMatch() container, 57, 79
+  - files, I/O (input/output), 9, 70, 118-121, 121-122, 124, 408
+  - FindProxyForURL() method, 286
+  - FindProxyForURL function, 284-287, 288, 290
+  - firewall, 275, 497, 509-510, 702. See also security
+  - Fire Channel disk, 596. See also hard drive
+  - flash command, 391
+  - flush() function, 432
+  - flush privileges command, 189
+  - followSymbolics directive, 617
+  - fontsici.cgi script, 411
+  - fontsiz.fcg! script, 413
+  - foo|bar regular expression meta character, 710
+
+### G
+
+- ForceType directive, 127, 417
+- foreach command, 346
+- form processing using CGI (Common Gateway Interface)
+  - configuration file, gateway, 352, 356
+  - configuration file, locating Web form in, 352, 353, 356-357, 360
+  - data storage, 350, 352, 353
+  - error message generation, 352, 353, 360, 361
+  - management, centralizing, 350, 364
+  - module loading, 352, 353, 355-356
+  - multiple forms using single script, 349
+  - object creation, 352, 353, 356
+  - templates, 356, 357-358, 360, 362
+  - thank you message display, 352, 358, 361, 362-363
+  - user data validation, 352, 353, 358-360, 361
+  - user redirection, 361-362
+- form processing via PHP: HyperText Preprocessor, 441-444
+- form.php script, 442
+- formmail, 382, 384, 385, 393
+- formmail.pl file (on the CD), 382, 384
+- fractal.net Web site, 178, 620
+- fsck utility, 605, 650
+- fsize command, 391
+- FTP (File Transfer Protocol) proxy server, 269, 623
+- functions
+  - crypt( ), 114, 116, 184
+  - eval( ), 518
+  - exec( ), 518-519, 529-530
+  - FindFirstOrDir( ), 281-287, 288-292
+  - flush( ), 432
+  - include( ), 432, 439-441, 450
+  - include_once( ), 440-441
+  - isset( ), 452
+  - join( ), 347
+  - lcs( ), 346, 347
+  - rcmd function calls, 664
+  - require( ), 432, 441
+  - require_once( ), 441
+  - session_destroy( ), 447
+  - session_register( ), 444, 446
+  - session_start( ), 444-445, 446
+  - show_challenge( ), 453
+  - split( ), 348
+  - system( ), 518-519, 529-530
+  - tolower( ), 248
+  - toupper( ), 248
+  - ucfirst( ), 346
+
+### H
+
+- GATEWAY_INTERFACE variable, 329
+- GDBM files, 112-113
+- GET requests, 72, 122, 323-326, 327
+- GID (Group ID) names, 40
+- GPL (GNU Public License), 10
+- grant command, 198-199
+- greater than sign ( > ) operator, 394
+- greetings.pl script, 344-345, 503
+- grep utility, 50, 51
+- group directive, 40, 53, 342-503
+- groupanim command, 504
+- GROUP_TABLE variable, 206
+- Growing online, 681
+- GUI (graphical user interface), 6, 581
+  - multiple sector mode, 600-601, 646
+  - NFS (Network File System) server, sharing drive space with, 656-664
+  - performance, optimizing, 598-602, 646-647
+  - RAID (Redundant Array of Independent Disks), 598, 642, 659
+  - reliability, 597
+  - SAN (Storage Area Network), 598, 643
+  - SCSI (Small Computer System Interface), 596, 597, 598, 643-644
+  - settings, checking, 599-600
+  - type, choosing, 597-598
+  - UltraDMA mode, 647
+  - UltraMA55, 596
+  - Web networks, configuring for, 643-647
+  - Web server, 598
+- HARD_SERVER_LIMIT setting, 24-26
+- HARD_THREAD_LIMIT setting, 24-26
+- httpd_limit, 599, 602, 644-647
+- Header: 3.9, tar.gz file, 358
+- header( ) method, 247, 525
+- HeaderName directive, 125
+- help.php script, 436
+- hexadecimal numbers, 328
+- hidden-mus, 611
+- highperformance.conf file, 29, 576
+- hiperfame-sto config file, 29
+- history of Apache, 5
+- host, virtual, See virtual host
+- host log file, 221
+- HostMinConnects directive, 48, 87-88, 236, 614
+- .htaccess file, 47, 59, 187-188, 508-509
+- httpd utility, 28
+- htdocs directory, 28. See also document root directive
+- HTML (HyperText Markup Language)
+  - anchor creation via SSI (Server-Side Include), 388-389
+  - CGI (Common Gateway Interface) script, context creation via, 315, 347-349, 525
+  - CGI (Common Gateway Interface) script, 315, 347-349, 525
+  - directory index HTML, 681, 685, 690, 691
+  - forms, 326
+  - hidden tags, security considerations, 520-527
+  - INPUT entities, 327
+  - JSP (Java Server Pages), embedding in, 488
+  - PHP: Hypertext Preprocessor
+    - code, embedding in HTML file, 422, 427
+    - Hypertext Preprocessor page, including HTML file in, 439-441
+  - standards, developing, 312
+  - HTTP::Template module (on the CD), 356, 321
+- htpasswd utility, 29, 184, 186
+- HTTP (Hypertext Protocol)
+  - authentication, 6, 29, 87, 182-183, 501
+  - browser support considerations when using virtual hosts, 161
+  - CGI (Common Gateway Interface) handler, 228
+  - cookies, 323
+  - data-encoding scheme, 328
+  - DELETE method, enabling/disabling, 306
+  - directives, applying to, 88-89
+  - disabling, 22
+  - document expiration, 139-141
+  - environment variables, working with, 107-109, 333, 334
+  - GET requests, 72, 122, 323-326, 327
+  - metaheader options, 141-142
+  - PHP: Hypertext Preprocessor, suppressing content-type header in, 436
+  - POST requests, 72, 122, 194, 326-327
+  - PUT method using for intranet Web publishing, 308-310
+  - requests, associating CGI (Common Gateway Interface) scripts with, 122
+  - requests, authentication blocking by type, 194
+  - requests, CGI (Common Gateway Interface) handling of, 122, 333, 334
+  - requests, custom environment variables based on, 107-109
+  - requests, distributing via hardware load balancer, 640-642
+  - requests, distributing via round-robin DNS (Domain Name Service), 639-640
+  - requests, expression matching in, 107-109
+  - requests, limiting, 89-90
+  - requests, mage tokens for, 108
+  - requests, magic ID, 106, 109
+  - responses header, working with, 23, 137-142, 244-245, 246
+  - status codes, 147, 705-708
+  - Tomcat, disabling default HTTP file serve, 483-484
+  - URL (Uniform Resource Locator) rewrite rules, working with response header in, 244-245, 246, 262, 264
+  - User-Agent header, 107-108
+  - version 1.1 support, 5-6
+- HTTP_ACCEPT variable, 330
+- HTTP_ACCEPT_CHARSET variable, 330
+- HTTP_ACCEPT_ENCODING variable, 330
+- HTTP_ACCEPT_LANGUAGE variable, 331
+- httpd-analyze log analysis tool, 323
+- HTTP_CONNECTION variable, 332
+- HTTP_COOKIE variable, 241
+- httpd.script, 59, 51, 52, 63, 69
+- httpd_2.0.4.tar.gz file, 18
+- httpd_2.3b3.win32.exe file, 18
+- httpd_100.conf file, 164
+- httpd_101.conf file, 165
+- httpd_3030.conf file, 632
+- httpd.conf file, see also specific directives
+  - Apache:AuthnBBi settings, 202
+  - Apache:SSL settings, 560-561
+  - CGI (Common Gateway Interface) settings, 329, 336, 337, 338, 356
+  - configuration sections, 35-36
+  - container scope entries, 58
+  - defined, 6, 31-35
+  - DNS (Domain Name Service) settings, 614
+  - editing, 6
+  - FastCGI settings, 416-419
+  - hassock-based authentication settings, 187
+  - ISAPI (Internet Server API) extensions settings, 587-588
+  - members-only Web page settings, 186
+  - mod_asis settings, 138
+  - mod_auth_mysql settings, 200
+  - mod_backhand settings, 626
+  - mod_cache settings, 620
+  - mod_perl settings, 456-457, 461, 464-465, 467, 585
+  - mod_url settings, 309-310
+  - mod_sql settings, 556-558
+  - mod_status settings, 217-218
+  - path separator characters, 579
+  - PHP: Hypertext Preprocessor settings, 426, 427-428, 451, 587
+  - proxy server settings, 270, 275, 632
+  - pub-based publishing settings, 307-308
+  - section delimiters, 35
+  - SetHandler settings, 457
+  - SSI (Server-Side Include) settings, 379
+  - SSL (Secure Socket Layer) settings, 556-558
+  - Tomcat settings, 479-482, 484
+  - URL (Uniform Resource Locator) rewrite settings, 254
+  - virtual host settings, 160-161, 163-164, 170-171, 173-175, 177
+  - Windows installations of Apache, 577, 578, 579, 580
+- HTTPD::ApacheAdmin module, 204
+- httpd-studio file, 29
+- httpd.template file, 175
+- HTTPD::Tools module, 204
+- HTTPD::UserAdmin module, 204
+- httpd_version -win32-no-src -number, 581
+- HTTP_FORWARDED variable, 241
+- HTTP_HOST variable, 241, 330
+- HTTP_PROXY_CONNECTION variable, 241
+- HTTP_PROXY_VARIABLE, 241, 331
+- HTTPS (Secure Hypertext Transfer Protocol), 550, 555, 556, 565
+- httpsd.conf file, 560
+- httpd.pem certificate, 560
+- HTTP_USER_AGENT variable, 241, 331
+- hub, Ehrner, 611
+- Hudson, Tim J., 551
+- Hugh Minda contact information, 722
+- Hypertext Transfer Protocol. See HTTP
+- hyphen (-) logic null token marker, 221

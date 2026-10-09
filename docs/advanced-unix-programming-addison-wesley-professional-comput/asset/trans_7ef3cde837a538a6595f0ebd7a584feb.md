@@ -1,0 +1,196 @@
+
+
+我们可以用两个信号量而不是一个来修复程序：一个用于写共享内存前必须锁定的信号量 W，以及一个用于读取的信号量 R。父进程在写入前等待 W，完成后发布 R。子进程在读取前等待 R，完成后发布 W。为了开始运行，W 初始化为 1（已发布），R 保持为 0。以下是修改后的代码（`getaddr` 仍然没有改变）：
+
+```c
+int main(void)
+{
+    pid_t pid;
+
+    ec_false( SimpleSemRemove("shmexsem") );
+    if ((pid = fork()) == 0) {
+        struct SimpleSem *semR, *semW;
+        int *p, n;
+
+        ec_null( semR = SimpleSemOpen("shmexsemR") );
+        ec_null( semW = SimpleSemOpen("shmexsemW") );
+        ec_null( p = getaddr() );
+        while (true) {
+            ec_false( SimpleSemWait(semR) );
+            n = *p;
+            ec_false( SimpleSemPost(semW) );
+            if (n == 99)
+                break;
+            printf("child saw %d\n", n);
+        }
+        printf("child is done\n");
+        ec_false( SimpleSemClose(semR) );
+        ec_false( SimpleSemClose(semW) );
+    }
+    else {
+        struct SimpleSem *semR, *semW;
+        int *p, i;
+
+        ec_null( semR = SimpleSemOpen("shmexsemR") );
+        ec_null( semW = SimpleSemOpen("shmexsemW") );
+        ec_null( p = getaddr() );
+        *p = 0;
+
+        ec_false( SimpleSemPost(semW) );
+        for (i = 1; i < 4; i++) {
+            ec_false( SimpleSemWait(semW) );
+            *p = i;
+            ec_false( SimpleSemPost(semR) );
+            sleep(1);
+        }
+        ec_false( SimpleSemWait(semW) );
+        *p = 99;
+        ec_false( SimpleSemPost(semR) );
+        ec_false( SimpleSemClose(semR) );
+        ec_false( SimpleSemClose(semW) );
+    }
+    exit(EXIT_SUCCESS);
+
+EC_CLEANUP_BGN
+    exit(EXIT_FAILURE);
+EC_CLEANUP_END
+}
+```
+
+请注意，子进程不再使用 `prev` 来判断共享内存何时发生变化，因为现在只有当有变化时它才会获得 `semR`。这高效多了！
+
+## 7.13.3 使用 System V 共享内存实现 SMI
+
+现在让我们扩展前一节中的想法，使用共享内存和信号量来实现 SMI 函数，这些函数我们已经用 FIFO（第 7.3.3 节）和消息（第 7.5.3 节和第 7.7.2 节）实现过。
+
+服务器和每个客户端将使用一个独立的共享内存段来接收消息，外加两个信号量，正如我在之前的例子中解释的那样。因此，如果有两个客户端，将会有三个共享内存段和六个信号量。采用这种方法，没有消息队列——每个段每次只持有一条消息，并且只有在接收方处理完并发布写信号量（$W$）之前，新的消息无法写入。由于每个客户端只能以服务器处理它的速度运行，所以这种设计并不是最好的，但它足以展示共享内存是如何使用的，而这也是我们的目标。
+
+图 7.3 展示了服务器和两个客户端。共享内存段 `mem-server` 由所有三个进程共享；段 `mem-1` 由 client1 和服务器共享；段 `mem-2` 由 client2 和服务器共享。这三个进程中的每一个都可以访问位于共享内存中的消息，而这些消息始终不需要移动。
+
+在介绍 System V 共享内存的 SMI 实现时，我们假设你熟悉本章前面各节中的 FIFO 和消息队列实现，因此我们不会解释已经解释过的细节。
+
+回想一下，SMI 函数是专门设计为允许就地处理消息的；发送和接收操作被分为“getaddr”和“release”函数。在早期的实现中，这种好处并不是很明显，但在这一实现中它会体现出来。
+
+![](img/41b4c8f6d6a5c349eee321a301703d97_511_0.png)
+
+图 7.3 服务器与两个客户端共享内存。
+
+我们将利用 System V 信号量的一个特性，为每个共享内存段使用包含两个信号量的一个信号量集。信号量 0 是读信号量，1 是写信号量。以下是针对这些数字以及在此之上进行 `semwait` 和 `sempost` 操作的宏：
+
+```c
+#define SEMI_READ    0
+#define SEMI_WRITE   1
+#define SEMI_POST    1
+#define SEMI_WAIT    -1
+```
+
+给定一个信号量，函数 `op_semi` 对其进行操作。例如，要发布某个段的写信号量，您执行：
+
+```c
+ec_negl( op_semi(semid_receiver, SEMI_WRITE, SEMI_POST) )
+```
+
+这里是 `op_semi` 的代码：
+
+```c
+static int op_semi(int semid, int sem_num, int sem_op)
+{
+   struct sembuf sbuf;
+   int r;
+
+   sbuf.sem_num = sem_num;
+   sbuf.sem_op = sem_op;
+   sbuf.sem_flg = 0;
+   ec_negl( r = semop(semid, &sbuf, 1) );
+   return r;
+
+EC_CLEANUP_BGN
+   return -1;
+EC_CLEANUP_END
+}
+```
+
+还有一个方便的函数来初始化信号量：
+
+```c
+static int init_semi(int semid)
+{
+    union semun arg;
+    int r;
+
+    arg.val = 0;
+    semctl(semid, SEMI_WRITE, SETVAL, arg);
+    semctl(semid, SEMI_READ, SETVAL, arg);
+    /* Following call will set 0 time, allowing clients to proceed. */
+    ec_negl( r = op_semi(semid, SEMI_WRITE, SEMI_POST) );
+    return r;
+
+EC_CLEANUP_BGN
+    return -1;
+EC_CLEANUP_END
+}
+```
+
+这是 SMI 使用的 SMIQ 类型背后的内部数据结构：
+
+```c
+typedef struct {
+    SMIENTITY sq_entity;      /* entity */
+    int sq_semID_server;      /* server sem */
+    int sq_semID_client;      /* client sem (client only) */
+    int sq_shmID_server;      /* server shm ID */
+    int sq_shmID_client;      /* client shm ID (client only) */
+    struct smi_msg *msg_server; /* ptr to server shm */
+    struct smi_msg *msg_client; /* ptr to client shm (client only) */
+    char sq_name[SERVER_NAME_MAX]; /* server name */
+    struct client_id sq_client; /* client identification (server only) */
+} SMIQ_SHM;
+```
+
+客户端使用几乎整个结构，但服务器只使用其中的一些成员。客户端存储：
+
+- 它的实体（SMI_CLIENT）和服务器名称
+- 它自己和服务器的信号量集 ID（每个包含 2 个信号量）
+- 它自己和服务器的共享内存段 ID
+- 指向它自己和服务器段的指针（来自 shmact）
+
+服务器存储：
+
+- 它的实体（`SMI_SERVER`）和名称。
+- 它的信号量集 ID（2 个信号量）。
+- 它的共享内存段 ID。
+- 指向其段的指针。
+- 传递给 `smi_send_getaddr` 的 `client_id`，以便它可以在随后的 `smi_send_release` 中使用它。这就是它知道要发送给哪个客户端的方式。在此用途下以及消息中，`client_id` 结构体的 `c_id` 成员是共享内存标识符，而 `c_id2` 成员是信号量集标识符。（参见下文 `smi_send_getaddr_shm` 的代码，查看这些成员是在哪里设置的。）
+
+服务器不存储任何客户端的信号量集或共享内存信息，因为有很多客户端。这些信息可以轻易地通过来自客户端的传入消息传递，类似于 System V 消息队列 SMI 实现（第 7.5.3 节）中消息队列 ID 在消息中传递的方式。我们很快就会看到细节。
+
+基于对如何使用该结构的描述，`smi_open_shm` 的代码应该是可以理解的：
+
+```c
+SMI_Q *smi_open_shm(const char *name, SMIENTITY entity, size_t msgsize)
+{
+    SMI_SHM *p = NULL;
+    char shmname[FILNAME_MAX];
+    int i;
+    key_t key;
+
+    ec_null( p = alloc(1, sizeof(SMI_Q)) );
+    p->sq_entity = entity;
+    if (strlen(name) >= SERVER_NAME_MAX) {
+        errno = ENAMETOOLONG;
+        EC_FAIL
+    }
+    strcpy(p->sq_name, name);
+    mkshm_name_server(p, shmname, sizeof(shmname));
+    (void)close(open(shmname, O_WRONLY | O_CREAT, 0));
+    ec_negl( key = ftok(shmname, 1) );
+    if (p->sq_entity == SMI_SERVER)
+        if ((p->sq_sem_id_server = semget(key, 2, PERM_FILE)) != -1)
+            (void)semctl(p->sq_sem_id_server, IPC_RMID, NULL);
+    ec_negl( p->sq_sem_id_server = semget(key, 2,
+        PERM_FILE | IPC_CREAT) );
+    p->sq_sem_id_client = -1;
+    if ((p->sq_shm_id_server = shmget(key, 0, PERM_FILE)) != -1)
+        (void)shmctl(p->sq_shm_id_server, IPC_RMID, NULL);
+```
+

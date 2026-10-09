@@ -1,0 +1,16 @@
++   * **Tip boxes** highlight ways you can save time by doing something differently or situations when it may be useful or just interesting to have additional information.
++   * **Security boxes** point out places where you can make a system more secure. The **security appendix** presents a quick background in system security issues.
++   * Concepts are illustrated by **practical examples** throughout the book.
++   * **Chapter summaries** review the important points covered in each chapter.
++   * **Review exercises** are included at the end of each chapter for readers who want to further hone their skills. Answers to even-numbered exercises can be found at www.sobell.com.
++   * The **glossary** defines more than 500 commonly encountered terms.
++   * The chapters that cover servers include **JumpStart** sections that get you off to a quick start using clients and setting up servers. Once a server is up and running, you can test and modify its configuration as explained in the rest of each of these chapters.
++   * This book provides resources for **finding software** on the Internet. It also explains how to **download** and **install** software using Synaptic, **aptitude**, the Ubuntu Software Center window, and BitTorrent. It details controlling automatic updates using the Update Manager window.
++   * This book describes in detail many important **GNU tools**, including the GNOME desktop, the Nautilus File Browser, the **parted**, **palimpse**, and **gparted** partition editors, the **gzip** compression utility, and many command-line utilities that come from the GNU project.
++   * Pointers throughout the text provide help in obtaining **online documentation** from many sources, including the local system, the Ubuntu Web site, and other locations on the Internet.
++   * Many **useful URLs** point to Web sites where you can obtain software, security programs and information, and more.
++   * The multiple **comprehensive indexes** help you locate topics quickly and easily.
+
+# # KEY TOPICS COVERED IN THIS BOOK
+
+This book contains a lot of information. This section distills and summarizes its contents. In addition, “Details” (starting on page xlvii) describes what each chapter covers. Finally, the table of contents provides more detail. This book:

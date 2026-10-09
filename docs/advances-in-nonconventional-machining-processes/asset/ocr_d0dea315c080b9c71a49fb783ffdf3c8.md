@@ -1,0 +1,13 @@
+speed [6]. Han et al. conducted a study in which they designed a new transistor pulse generator for pulse generation which was able to produce 24 times greater MRR [7]. A research was also carried out, in which, an effect of EDM capacitance was seen on the impedance thus leading to high machining properties [8]. A lower energy, dissipated at the tool and workpiece interface, was also implemented during the surface finishing time to get higher surface finish using some semiconductor-based switching circuit [9].
+
+Some experiments showed that the shape change of pulse generator, being used for machining, had a significant effect on the various machining characteristics. It was shown that energy density had a large effect on the tool wear rate (TWR) [10]. Short pulse duration often was used for high precision machining. The surface morphology was found to be of higher value when using a uniform discharge of energy. It was also found that less arcing effect occurred if uniform shape of pulse for discharge machining was used [11].
+
+**Table 1. Various Reviews for Wire EDM.**
+
+| S.No. | Author | Work Material | Input Parameters | Result |
+| --- | --- | --- | --- | --- |
+| 1 | Bhatia et al. [12] | High carbon high chromium steel | Pulse on time(125-131µs), pulse off time(34-48 µs), wire tension(1-3), max. current(210-230A). | Effect of pulse off time was found significant on SR. Model developed had an error of 3.93%. |
+| 2 | Tlekar et al. [13] | Aluminium and Mild Steel | Pulse on time(25-39 µs), pulse off time(6-10µs), current(1-3A), wire feed rate(75-85mm/s). | SR was effected by pulse on time and current. For Kerf width Wire feed had significant effect. |
+| 3 | Brajesh et al. [14] | AISI D3 Steel | Pulse on time(18-24 µs), pulse off time(51-59µs), peak current(180-200A), wire feed rate (4-6mm/min). | SR was effected |
+| 4 | Selvakumar et al. [15] | 5083 Aluminium Alloy | Pulse on time(0.5-0 µs), pulse off time(14-38µs), peak current(20-100A), wire tension (420-660g). | Cutting speed was independent of the wire tension, surface roughness (Ra) was independent of pulse off time and tension in wire. |
+| 5 | Azhiri et al. [16] | Al/SiC | Pulse on time(106-126 µs), pulse off time(60-40µs), discharge current(70-230A),gap voltage(60-20V). | Cutting velocity and surface roughness were effected by pulse on time and current. Grey rational analysis were performed to optimize these two also. |

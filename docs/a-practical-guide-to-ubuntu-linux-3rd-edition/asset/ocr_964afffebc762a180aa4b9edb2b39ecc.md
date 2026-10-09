@@ -1,0 +1,41 @@
++   - system-config-printer: Configuring a Printer 550
++       - Configuration Selections 550
++       - Setting Up a Remote Printer 552
++   - JumpStart II: Setting Up a Local or Remote Printer Using the CUPS Web Interface 555
++   - Traditional UNIX Printing 558
++       - Configuring Printers 560
++           - The CUPS Web Interface 560
++           - CUPS on the Command Line 561
++           - Sharing CUPS Printers 565
++   - Printing from Windows 566
++       - Printing Using CUPS 566
++       - Printing Using Samba 567
++   - Printing to Windows 568
++   - Chapter Summary 568
++   - Exercises 569
++   - Advanced Exercises 569
+
+# CHAPTER 15: BUILDING A LINUX KERNEL 571
+
++   - Prerequisites 572
++   - Downloading the Kernel Source Code 573
++       - aptitude: Downloading and Installing the Kernel Source Code 573
++       - git: Obtaining the Latest Kernel Source Code 574
++       - /usr/src/linux: The Working Directory 575
++   - Read the Documentation 575
++   - Configuring and Compiling the Linux Kernel 575
++       - .config: Configures the Kernel 575
++       - Customizing a Kernel 577
++       - Cleaning the Source Tree 579
++       - Compiling a Kernel Image File and Loadable Modules 579
++       - Using Loadable Kernel Modules 580
++   - Installing the Kernel, Modules, and Associated Files 582
++   - Rebooting 583
++   - GRUB: The Linux Boot Loader 583
++       - Configuring GRUB 584
++           - update-grub: Updates the grub.cfg File 587
++           - grub-install: Installs the MBR and GRUB Files 589
++   - dmesg: Displays Kernel Messages 589
++   - Chapter Summary 590
++   - Exercises 590
++   - Advanced Exercises 591

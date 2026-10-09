@@ -1,0 +1,13 @@
+superimposed on the spindle of conventional machining process, the cutting forces and tool wear rate were reduced by 20% to 30% as tool periodically lifted from workpiece or job [13].
+
+Muhammad et al. discussed about hybrid machining technique in which ultrasonic assisted turning and hot machining technique were used in combination to machine titanium alloys. As a result, cutting forces was reduced and surface roughness was improved drastically in titanium alloys. In hot ultrasonic assisted turning, 50% excess improvement was noticed in surface roughness [14].
+
+Kumar et al. proposed vibration assisted machining in cutting hard and brittle material. Vibration can be given to tools, workpiece and working medium. During ultrasonic assisted turning, the process parameters improved like 40% to 45% reduction in cutting forces and average cutting forces dropped to 40% as compared to conventional machining. Tool wear rate was reduced, and surface roughness was improved in the workpiece [15].
+
+Bhosale et al. invented the effect of process parameters on alumina-zirconia ceramic composite on material removal rate, tool wear rate and surface topography. The process was analysed through the effect of amplitude, slurry of abrasive particles with carrying fluid etc. The research showed that tool wear rate tends to increase when hard and coarse abrasive was used. High tool wear rate occurred when boron carbide abrasive is utilized as compared to silicon carbide abrasive for similar machining conditions. The study concluded that slurry concentration has less effect on tool wear rate while amplitude increases surface roughness [16].
+
+Silberschmidta et al. performed the experiment on ultrasonic assisted turning in which a combination of cutting parameters were tried on machines for different materials like copper, alloys etc. The cutting forces reduced during machining and surface roughness improved due to on ultrasonic assisted turning. The result obtained, for inconel 718, was better than conventional turning for surface roughness. The Ra value in case of conventional turning was 1.179-micron meter as compared to 0.505-micron meter in case of ultrasonic assisted turning [17].
+
+Goswami and Chakraborty utilized two techniques for parametric optimization of ultrasonic machining processes. These were gravitational research and firework logarithmetic. Authors developed the best optimal results like high material rate as compared to gravitational research [18].
+
+Agarwal investigated the ultrasonic machining of glass material. The study focused on mechanisms of material removal and material removal rate. It showed that as grit size increases, material removal rate also increases. The shocking force

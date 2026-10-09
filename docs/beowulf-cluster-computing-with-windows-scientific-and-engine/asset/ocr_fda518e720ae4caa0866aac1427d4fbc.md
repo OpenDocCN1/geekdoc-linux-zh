@@ -1,0 +1,11 @@
+unique to it. For example, if the name is `\\WIN2KSERVER\\PUBLIC\incisedw2k\chap13.doc`, the redirector recognizes it and claims the string `\\WIN2KSERVER\\PUBLIC` as its own. The MUP driver caches this information and thereafter sends requests beginning with that string directly to the redirector, skipping the polling operation. The MUP driver’s cache has a timeout feature, so after a period of inactivity, a string’s association with a particular redirector expires. If more than one redirector claims a particular resource, the MUP driver uses the registry’s ProviderOrder value’s list of loaded redirectors to determine which redirector takes precedence.
+
+# 6.3.3 Domain Name System
+
+Domain Name System (DNS) is a standard by which Internet names (such as www.microsoft.com) are translated to their corresponding IP addresses. A network application that wants to resolve a DNS name to an IP address sends a DNS lookup request using the TCP/IP protocol to a DNS server. DNS servers implement a distributed database of name/IP address pairs that are used to perform translations, and each server maintains the translations for a particular zone. Describing the details of DNS is outside the scope of this book, but DNS is the foundation of naming in Windows 2000 and hence is the primary Windows 2000 name resolution protocol.
+
+The Windows 2000 DNS server is implemented as a Win32 service (\\Winnt\\System32\\Dns.exe) that is included in server versions of Windows 2000. Standard DNS server implementation relies on a text file as the translation database, but the Windows 2000 DNS server can be configured to store zone information in Active Directory.
+
+# 6.4 Protocol Drivers
+
+Networking API drivers must take API requests and translate them into low-level network protocol requests for transmission across the network. The API drivers rely on transport protocol drivers in kernel mode to do the actual translation. Separating APIs from underlying protocols gives the networking architecture the flexibility of letting each API use a number of different protocols. The protocol drivers that Windows 2000 includes are Data Link Control (DLC), NetBEUI, TCP/IP, and NWLink, although other protocols might be present as options, such as the AppleTalk protocol installed with Services For Macintosh on Windows 2000 servers.

@@ -1,0 +1,11 @@
+before you enable this, however! Securelevel 3 makes it impossible to change your firewall without disrupting your connection. Are you 100 percent certain that none of your customers will ever call in to say, “Here’s a check. Now give me more servers!?”
+
+# ## What Won’t Securelevels and File Flags Accomplish?
+
+Consider a case where someone compromises a CGI script on your web server, uses that to bootstrap into a shell, and then uses the shell to bootstrap himself into root access.
+
+If you’ve set the securelevel accordingly, perhaps this attacker will become frustrated because not only can’t she replace your kernel with her specially compiled one, she also can’t even load a kernel module. No problem—she can still replace assorted system programs with trojaned versions so that the next time you log in, your new version of *login(1)* sends your password to an anonymous web-based mailbox or to an internet newsgroup.
+
+So, to protect your key files, you run around doing `chflags schg -R /bin/*`, `chflags schg -R /usr/lib`, and so on. Fine. If you forget one file—say, something obscure like `/etc/rc.bsdextended`—your intruder can edit that file to include `chflags -R noschg /`. She can then reboot your system late at night when you might not notice. How often do you sit down and exhaustively audit your `/etc/rc` files?
+
+You think that your system is safe, with every file completely protected. But what about `/usr/local/etc/rc.d`, the local program startup directory? The system boot process tries to execute any executable file in this directory that contains a line starting with #`PROVIDE` (see Chapter 17 for why). Your intruder could therefore do a lot of damage by placing a simple shell script there. After all, `/etc/rc` raises the securelevel at the end of the boot process. What if she were to create a shell script that kills the running `/etc/rc` before it could raise the securelevel and then she turned around and ran his own `/var/.hidden/rc.rootkit` to finish bringing the system up?

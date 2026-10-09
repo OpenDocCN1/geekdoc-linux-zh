@@ -1,0 +1,15 @@
+# Apache: The Beginning
+
+Here is a bit of Apache history. In the early days of the Web, the National Center for Super Computing Applications (NCSA) created a Web server that became the number one Web server in early 1995. However, the primary developer of the NCSA Web server left NCSA about the same time, and the server project began to stall. In the meantime, people who were using the NCSA Web server began to exchange their own patches for the server and soon realized that a forum to manage the patches was necessary. The Apache Group was born. The group used the NCSA Web server code and gave birth to a new Web server called Apache. Originally derived from the core code of the NCSA Web server and a bunch of patches, the Apache server is now the talk of the Web server community. In three short years, it acquired the lead server role in the market.
+
+The very first version (0.6.2) of publicly distributed Apache was released in April 1995. The 1.0 version was released on December 1, 1995. The Apache Group has expanded and incorporated as a nonprofit group. The group operates entirely via the Internet. However, the development of the Apache server is not limited in any way by the group. Anyone who has the know-how to participate in the development of the server or its component modules is welcome to do so, although the group is the final authority on what gets included in the standard distribution of what is known as the Apache Web server. This allows literally thousands of developers around the world to come up with new features, bug fixes, ports to new platforms, and more. When new code is submitted to the Apache Group, the group members investigate the details, perform tests, and do quality control checks. If they are satisfied, the code is integrated into the main Apache distribution.
+
+# The Apache Feature List
+
+One of the greatest features that Apache offers is that it runs on virtually all widely used computer platforms. At the beginning, Apache used to be primarily a Unix-based Web server, but that is no longer true. Apache not only runs on most (if not all) flavors of Unix, but it also runs on Windows 2000/NT/9x and many other desktop and server-class operating systems such as Amiga OS 3.x and OS/2.
+
+Apache offers many other features including fancy directory indexing; directory aliasing; content negotiations; configurable HTTP error reporting; SetUID execution of CGI Programs; resource management for child processes; server-side image maps; URL rewriting; URL spell checking; and online manuals.
+
+The other major features of Apache are:
+
++   ◆ **Support for the latest HTTP 1.1 protocol:** Apache is one of the first Web servers to integrate the HTTP 1.1 protocol. It is fully compliant with the new HTTP 1.1 standard and at the same time it is backward compatible with HTTP 1.0. Apache is ready for all the great things that the new protocol has to offer.

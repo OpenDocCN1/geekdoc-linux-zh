@@ -1,0 +1,29 @@
+# METHODS
+
+Following is a list of the types of information that nsswitch.conf controls searches for (*method* in the syntax shown on the previous page). For each type of information, you can specify one or more of the following methods:²
+
++   *   **files** Searches local files such as /etc/passwd and /etc/hosts
++   *   **nis** Searches the NIS database; yp is an alias for nis
++   *   **dns** Queries the DNS (hosts queries only)
++   *   **compat** ± syntax in passwd, group, and shadow files (page 477)
+
+# SEARCH ORDER
+
+The information provided by two or more methods may overlap: For example, both **files** and **nis** may provide password information for the same user. With overlapping information, you need to consider which method you want to be authoritative (take precedence) and then place that method at the left of the list of methods.
+
+The default nsswitch.conf file lists methods without actions, assuming no overlap (which is normal). In this case, the order is not critical: When one method fails, the system goes to the next one and all that is lost is a little time. Order becomes critical when you use actions between methods or when overlapping entries differ.
+
+The first of the following lines from nsswitch.conf causes the system to search for password information in /etc/passwd and, if that fails, to use NIS to find the information. If the user you are looking for is listed in both places, the information in the local file is used and is considered authoritative. The second line uses NIS to find an IP address given a hostname; if that fails, it searches /etc/hosts; if that fails, it checks with DNS to find the information.
+
+```
+passwd files nis
+hosts nis files dns
+```
+
+# ACTION ITEMS
+
+Each method can optionally be followed by an action item that specifies what to do if the method succeeds or fails. An action item has the following format:
+
+> ![[!]STATUS=action]
+
+where the opening and closing square brackets are part of the format and do not indicate that the contents are optional; STATUS (uppercase by convention) is the status being tested for; and *action* is the action to be taken if *STATUS* matches the status returned by the preceding method. The leading exclamation point (!) is optional and negates the status.

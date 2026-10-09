@@ -1,0 +1,11 @@
+“when I mount an SMB filesystem, the operating system crashes.” Trivial problems like a missing man page reference might not seem worth your time to report, but every reference in every man page is there because someone thought it was worth including. So what’s a bug report, and what isn’t?
+
+A bug report isn’t where you say that you have a problem. A bug report is where you prove that FreeBSD has a problem. Yes, I said prove. It’s not that FreeBSD is innocent until proven guilty, but for you to submit a bug report, you must substantiate your claim. Bugs filed without evidence will be closed with terse replies, like “not a bug” or “useless report.” The proper venue to cry for help is a search engine, followed by a mailing list or the FreeBSD forums.
+
+Any variation on “I don’t know what I’m doing” doesn’t belong in a bug report. This includes “FreeBSD doesn’t work the way I think it should” or “something bad happens when I do something dumb.” If you start your new hobby of free climbing with a master-rated sheer cliff face, fall, and break your fool neck, the hospital kind of has to take you in. If you yank out a new hard drive halfway through running newsfs(8) and complain about filesystem corruption, the FreeBSD folks will dismiss your bug.
+
+Bugs can be about system inconsistencies. Every network interface, API, and system call has a man page. If you try to call up the man page for a system call and don’t get a match, that’s a bug. If you’re reading source code and find a place where the documentation doesn’t match the code, that’s a bug. If you can make a program (or the whole system) reproducibly crash, that’s a bug.
+
+You can also file bugs to submit improvements to the FreeBSD Project. The key word here is improvement, not wish. An improvement needs actual code attached to the bug, along with how you’ve tested your code and any related information, such as specifications and standards. If you file enough of these, you might be invited to become a committer.
+
+Bugs are collaborative. By filing a bug, you’re indicating a willingness to work with the FreeBSD developers to resolve your issue. This might mean applying a patch, trying a different approach, or running

@@ -1,0 +1,197 @@
+
+纹理；在光照图的较暗区域，我们看到的原始纹理较少甚至完全没有。这正是所需的照明效果。
+
+接下来，例程 `draw_polygon_texture_lightmapped` 的其余部分再次绘制相同的策略多边形，这次使用光照图作为纹理。首先，我们在表面缓存中查找光照图数据，必要时通过 OpenGL 调用创建它。然后，我们恢复每个顶点的原始光照图纹理坐标，这些坐标在第一次纹理坐标重新计算时已保存。最后，我们像在执行 `draw_polygon_textured` 例程时那样绘制多边形，利用多边形平面执行反向投影，以获得 Mesa 进行透视正确纹理映射所需的投影前坐标。
+
+## 示例程序：lightmap
+
+本章中的最后一个示例程序展示了光照映射和纹理映射的结合使用。我们还看到了光照图中实际光照强度计算的实现，这是通过之前讨论的漫反射方程来实现的。
+
+程序 `lightmap` 显示了一组静态的金字塔对象，初始时均为暗色。您可以使用类 `l3d_pipeline_world` 提供的标准导航键在场景中飞行。按下 `p` 键可在当前相机位置放置一个点光源。这会导致计算场景中每个光照图的每个光元的照度。然后，我们通过重置表面缓存来重新加载所有光照图。因此，我们可以立即看到光照效果。您可以在场景中放置任意数量的光源。程序不存储光源本身；只存储其对光照图的影响。
+
+该程序实际上同时显示光照映射和纹理映射。使用空白纹理时更容易看到光照映射的效果，这是默认设置。若要查看带有真实纹理的光照映射，请在程序目录中输入 `cp test_ppm.colored test.ppm`。这将把一张彩色图像复制到文件 `test.ppm` 中，该文件是程序使用的纹理文件。然后像往常一样运行程序。若要返回到空白纹理图像，请输入 `cp test_ppm.white test.ppm`。
+
+![](img/a19d4e8b1d7eb6387691dc6c865430e6_167_0.png)
+
+*图 2.49：示例程序 `lightmap` 的输出。*
+
+### 列表 2-23：`shapes.h`，示例程序 `lightmap` 中光照映射金字塔对象的声明
+
+```cpp
+#include "../lib/geom/object/object3d.h"
+#include "../lib/geom/polygon/p3_tex.h"
+#include "../lib/geom/texture/texture.h"
+#include "../lib/geom/texture/texture1d.h"
+
+class pyramid : public l3d_object {
+   public:
+      pyramid(l3d_texture_loader *l, l3d_surface_cache *scache);
+      virtual ~pyramid(void);
+};
+```
+
+### 列表 2-24：`shapes.cc`，示例程序 `lightmap` 中光照映射金字塔对象的实现
+
+```cpp
+#include "shapes.h"
+
+#include <stdlib.h>
+#include <string.h>
+
+pyramid::pyramid(l3d_texture_loader *l, l3d_surface_cache *scache) :
+   l3d_object(4)
+{
+   (*vertices)[0].original.set(float_to_l3d_real(0.),float_to_l3d_real(0.),float_to_l3d_real(0.),
+                              float_to_l3d_real(1.));
+   (*vertices)[1].original.set(float_to_l3d_real(50.),float_to_l3d_real(0.),float_to_l3d_real(0.),
+                              float_to_l3d_real(1.));
+   (*vertices)[2].original.set(float_to_l3d_real(0.),float_to_l3d_real(50.),float_to_l3d_real(0.),
+                              float_to_l3d_real(1.));
+   (*vertices)[3].original.set(float_to_l3d_real(0.),float_to_l3d_real(0.),float_to_l3d_real(50.),
+                              float_to_l3d_real(1.));
+
+   l3d_polygon_3d_textured_lightmapped *p;
+   int pi;
+
+   pi = polygons.next_index();
+   polygons[pi] = p = new l3d_polygon_3d_textured_lightmapped(3, scache);
+   polygons[pi]->vlist = &vertices;
+   (*(polygons[pi]->vertices))[polygons[pi]->ivertices.next_index()][].ivertex=0;
+   (*(polygons[pi]->vertices))[polygons[pi]->ivertices.next_index()][].ivertex=1;
+   (*(polygons[pi]->vertices))[polygons[pi]->ivertices.next_index()][].ivertex=3;
+   l->load("test.pgm");
+   p->texture = new l3d_texture;
+   p->texture->tex_data = new l3d_texture_data;
+   p->texture->tex_data->width = l->width;
+   p->texture->tex_data->height = l->height;
+   p->texture->tex_data->data = l->data;
+   p->texture->owns_tex_data = true;
+   p->texture->x0 = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[0].ivertex);
+   p->texture->w0 = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[1].ivertex);
+   p->texture->x1 = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[2].ivertex);
+   polygons[pi]->compute_center();
+   polygons[pi]->compute_sfnormal();
+   p->assign_tex_coords_from_tex_space(*p->texture);
+   p->compute_surface_orientation_and_size();
+   p->plane_align_with_point_normal(*p->center.original, normalized(p->sfnormal.original -
+                                   p->center.original));
+
+   pi = polygons.next_index();
+   polygons[pi] = p = new l3d_polygon_3d_textured_lightmapped(3, scache);
+   polygons[pi]->vlist = &vertices;
+   (*(polygons[pi]->ivertices))[0].ivertex = 2;
+   (*(polygons[pi]->ivertices))[1].ivertex = 3;
+   (*(polygons[pi]->ivertices))[2].ivertex = 1;
+
+   p->texture = new l3d_texture;
+   p->texture->tex_data = new l3d_texture_data;
+   p->texture->tex_data->width = l->width;
+   p->texture->tex_data->height = l->height;
+   p->texture->tex_data->data = l->data;
+   p->texture->owns_tex_data = true;
+
+   p->texture->u0 = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[0].ivertex);
+   p->texture->uU = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[1].ivertex);
+   p->texture->uV = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[2].ivertex);
+
+   polygons[pi]->compute_center();
+   polygons[pi]->compute_sfnormal();
+   p->assign_tex_coords_from_tex_space(*p->texture);
+   p->compute_surface_orientation_and_size();
+   p->plane_align_with_point_normal(p->center.original, normalized(p->sfnormal.original - p->center.original));
+
+   pi = polygons.next_index();
+   polygons[pi] = p = new l3d_polygon_3d_textured_lightmapped(3, scache);
+   polygons[pi]->vlist = &vertices;
+   (*(polygons[pi]->ivertices))[0].ivertex = 0;
+   (*(polygons[pi]->ivertices))[1].ivertex = 2;
+   (*(polygons[pi]->ivertices))[2].ivertex = 1;
+
+   p->texture = new l3d_texture;
+   p->texture->tex_data = new l3d_texture_data;
+   p->texture->tex_data->width = l->width;
+   p->texture->tex_data->height = l->height;
+   p->texture->tex_data->data = l->data;
+   p->texture->owns_tex_data = true;
+
+   p->texture->u0 = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[0].ivertex);
+   p->texture->uU = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[1].ivertex);
+   p->texture->uV = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[2].ivertex);
+
+   polygons[pi]->compute_center();
+   polygons[pi]->compute_sfnormal();
+   p->assign_tex_coords_from_tex_space(*p->texture);
+   p->compute_surface_orientation_and_size();
+   p->plane_align_with_point_normal(p->center.original, normalized(p->sfnormal.original - p->center.original));
+
+   pi = polygons.next_index();
+   polygons[pi] = p = new l3d_polygon_3d_textured_lightmapped(3, scache);
+   polygons[pi]->vlist = &vertices;
+   (*(polygons[pi]->ivertices))[0].ivertex = 1;
+   (*(polygons[pi]->ivertices))[1].ivertex = 3;
+   (*(polygons[pi]->ivertices))[2].ivertex = 0;
+
+   p->texture = new l3d_texture;
+   p->texture->tex_data = new l3d_texture_data;
+   p->texture->tex_data->width = l->width;
+   p->texture->tex_data->height = l->height;
+   p->texture->tex_data->data = l->data;
+   p->texture->owns_tex_data = true;
+
+   p->texture->u0 = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[0].ivertex);
+   p->texture->uU = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[1].ivertex);
+   p->texture->uV = (*(polygons[pi]->vlist))((*(polygons[pi]->ivertices))[2].ivertex);
+
+   polygons[pi]->compute_center();
+   polygons[pi]->compute_sfnormal();
+   p->assign_tex_coords_from_tex_space(*p->texture);
+   p->compute_surface_orientation_and_size();
+   p->plane_align_with_point_normal(p->center.original, normalized(p->sfnormal.original - p->center.original));
+
+   num_xforms = 1;
+   modeling_xforms[0].set(
+      float_to_l3d_real(1.), float_to_l3d_real(0.), float_to_l3d_real(0.), float_to_l3d_real(0.),
+      float_to_l3d_real(0.), float_to_l3d_real(1.), float_to_l3d_real(0.), float_to_l3d_real(0.),
+      float_to_l3d_real(0.), float_to_l3d_real(0.), float_to_l3d_real(1.), float_to_l3d_real(0.),
+      float_to_l3d_real(0.), float_to_l3d_real(0.), float_to_l3d_real(0.), float_to_l3d_real(1.) );
+
+   modeling_xform = modeling_xforms[0];
+}
+
+pyramid::~pyramid(void) {
+   for(register int i=0; i<polygons.num_items; i++) { delete polygons[i]; }
+}
+```
+
+### 列表 2-25：main.cc，示例程序 lightmap 的主程序文件
+
+```cpp
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <math.h>
+#include <stdarg.h>
+
+#include "../lib/geom/object/object3d.h"
+#include "../lib/tool_2d/screen.h"
+#include "../lib/tool_os/64dispatch.h"
+#include "../lib/raster/rasterize.h"
+#include "../lib/tool_2d/screeninfo.h"
+#include "../lib/geom/world/world3d.h"
+#include "../lib/system/fact0.2.h"
+#include "../lib/geom/texture/texture.h"
+#include "../lib/geom/texture/l3d_ppm.h"
+#include "../lib/pipeline/l3d_pipeline.h"
+
+#include "shapes.h"
+
+class my_pipeline : public l3d_pipeline_world {
+public:
+   my_pipeline(l3d_world *w) :
+      l3d_pipeline_world(w) {}
+   void key_event(int ch);
+};
+
+class my_world :
+```
+

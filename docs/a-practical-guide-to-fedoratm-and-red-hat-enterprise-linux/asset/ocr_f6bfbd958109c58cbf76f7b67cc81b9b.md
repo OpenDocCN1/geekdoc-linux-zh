@@ -1,0 +1,15 @@
+Sending and receiving email require three pieces of software. At each end, there is a client, called an MUA (mail user agent), which is a bridge between a user and the mail system. Common MUAs are Evolution, KMail, Thunderbird, mutt, and Outlook. When you send an email, the MUA hands it to an MTA (mail transfer agent, such as exim4 or sendmail), which transfers it to the destination server. At the destination, an MDA (mail delivery agent, such as procmail) puts the mail in the recipient's mailbox file. On Linux systems, the MUA on the receiving system either reads the mailbox file or retrieves mail from a remote MUA or MTA, such as an ISP's SMTP (Simple Mail Transfer Protocol) server, using POP (Post Office Protocol) or IMAP (Internet Message Access Protocol).
+
+Most Linux MUAs expect a local MTA such as sendmail to deliver outgoing email. On some systems, including those with a dial-up connection to the Internet, the MTA sends email to an ISP's mail server. Because most MTAs use SMTP (Simple Mail Transfer Protocol) to deliver email, they are often referred to as SMTP servers.
+
+# You do not need to set up sendmail to send and receive email
+
+> Most MUAs can use POP or IMAP to receive email from an ISP's server. These protocols do not require an MTA such as sendmail. As a consequence, you do not need to install or configure sendmail (or another MTA) to receive email. Although you still need SMTP to send email, the SMTP server can be at a remote location, such as your ISP. Thus you might not need to concern yourself with it either.
+
+In the default Fedora setup, the sendmail MTA uses procmail as the local MDA. In turn, procmail writes email to the end of the recipient's mailbox file. You can also use procmail to sort email according to a set of rules, either on a per-user basis or globally. The global filtering function is useful for systemwide filtering to detect spam and for other tasks, but the per-user feature is largely superfluous on a modern system. Traditional UNIX MUAs were simple programs that could not filter mail and thus delegated this function to MDAs such as procmail. Modern MUAs, by contrast, incorporate this functionality. Although by default RHEL uses postfix as the MTA, this chapter explains how to set up sendmail as the MTA.
+
+# INTRODUCTION TO sendmail
+
+When the network that was to evolve into the Internet was first set up, it connected a few computers, each serving a large number of users and running several services. Each computer was capable of sending and receiving email and had a unique hostname, which was used as a destination for email.
+
+Today the Internet has a large number of transient clients. Because these clients do not have fixed IP addresses or hostnames, they cannot receive email directly. Users on these systems usually maintain an account on an email server run by their employer or an ISP, and they collect email from this account using POP or IMAP. Unless you own a domain that you want to receive email, you will not need to set up sendmail to receive mail from nonlocal systems.

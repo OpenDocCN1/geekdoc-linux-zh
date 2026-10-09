@@ -1,0 +1,283 @@
+
+- /etc/hosts.allow file, 456–462
+  - example, 462
+- /etc/hosts.equiv file, 321
+- /etc/hosts.lpd file, 322
+- /etc/inetd.conf file, 509–510
+- /etc/jail.conf file, 568, 569–573, 574
+- /etc/localtime file, 322
+- /etc/locate.rc file, 323
+- /etc/login.*, 323
+- /etc/login.access file, 185
+- /etc/login.conf file, 188, 189
+  - environment settings, 190–191
+- /etc/mail/aliases file, 503–504
+- /etc/mail/mailer.conf file, 500
+- /etc/make.conf file, 324–325, 375, 439, 448–449
+  - for poudriere, 387–388
+  - and single ports, 376
+  - WRKDIRPREFIX option, 380
+- /etc/master.passwd file, 173–174
+  - editing, 176–178
+- /etc/motd file, 325
+- /etc/mtree directory, 325
+- /etc/netstart shell script, 54, 326
+- /etc/network.subr shell script, 326
+- /etc/newsyslog.conf file, 553
+  - sample entry, 557
+- /etc/newsyslog.conf.d/ directory, 553
+- /etc/nsd.conf file, 326
+- /etc/nssm.conf file, 311
+  - keywords, 311–313
+  - options, 314–315
+- /etc/nsswitch.conf file, 151, 507
+- /etc/ntpd.conf file, 505–506
+- /etc/opie*, 326–327
+- /etc/pam.d/*, 327
+- /etc/passwd file, 173–174
+- /etc/pcard_ether script, 327
+- /etc/periodic.conf file, 327–328, 355
+- /etc/pf.conf file, 328, 465–467
+- /etc/pf.os file, 328
+- /etc/phones file, 328
+- /etc/pkg file, 356
+- /etc/pkg/FreeBSD.conf file, 356–357
+- /etc/printcap file, 329, 517–518
+- /etc/profile file, 329
+- /etc/protocols file, 126, 329
+- /etc/pwd.db file, 173–174, 329
+- /etc/rc*, 329–330
+- /etc/rc script, 62–63, 71–74, 380, 539
+  - debugging custom, 405
+  - ordering, 402–403
+  - providers, 404–405
+  - REQUIRE statement in, 405
+  - and securelevel, 197
+  - service(8) command, 71–73
+- /etc/rc.conf file, 62, 145–146, 568
+  - changing from command line, 63–64
+  - cloned_interfaces, 164
+  - to enable sshd at boot, 492
+  - frozen with schg, 198
+  - ifconfig statements in, 148
+  - for jail, 574
+- /etc/rc.conf.d/ file, 64–71
+  - console options, 69–70
+  - to enable blacklistd, 471
+  - filesystem options, 65–66
+  - kern_securelevel_enable, 195
+  - network daemons, 66–67
+  - network options, 67–68
+  - network routing options, 68–69
+  - startup options, 64–65
+- /etc/rc.d/sendmail script, 503
+- /etc/rc.subr file, 404
+- /etc/regdomain.xml file, 330
+- /etc/remote file, 79–80, 330
+- /etc/resolv.conf file, 152, 153
+- /etc/rpc, 330
+- /etc/sc.d/localpkg, 405
+- /etc/security/ directory, 330
+- /etc/services file, 138–139
+- /etc/shells file, 179
+- /etc/skel file, 331
+- /etc/snmpd.config file, 560
+- /etc/spwd.db file, 173–174
+- /etc/src.conf file, 331, 439, 448–449
+  - SVN-UPDATE, 437
+- /etc/ssh, 331
+- /etc/ssh/sshd.config file, 473, 494
+- /etc/ssl/ directory, 331
+- /etc/ssl/openssl.cnf file, 477
+- /etc/sysctl.conf file, 160
+- /etc/syslog.conf file, 548
+  - comparison operators, 549
+  - space or tabs, 551
+- /etc/syslog.d/ directory, 548
+- /etc/termcap, 332
+- /etc/termcap.small, 332
+- /etc/ttys file, 332, 584
+  - console entry, 585
+  - format, 584–585
+- /etc/unbound/, 332
+- /etc/wall_cmos_clock file, 332
+- /etc/zfs/ directory, 333
+- Ethernet, 125, 140–142
+  - speed, 141
+- evaluations, in queries, 348–349
+- exec.clean option, for jail(8), 570
+- exec.stop command, 571
+- exports, mounting, 309
+- EXT filesystem, 283
+- Extensible Firmware Interface (EFI), 20
+- extracommands command, 73
+- extract mode, for tar, 90
+- extracted files, permissions for, 91
+- ezjail, 581
+
+# F
+
+- failover, 163
+- fallback brand, sysctls to set, 418
+- FAQ (Frequently Asked Questions), 7–8, 9
+- Fast EtherChannel (FEC), 163
+- Fast File System (FFS), xxiv, 232–233
+  - for kernel, 114
+- FAT (MS-DOS), 283
+- FAT32, formatting media, 286
+- FAULTED pool state, 275
+- faults, bottleneck analysis with vmstat(8), 531
+- FCODES variable, 323
+- fdesc(5), 301
+- fdisk(8), 215
+- FETCH_RETRY option, 344
+- FETCH_TIMEOUT option, 344
+- FFS. See Fast File System (FFS)
+- file-backed filesystems, and /etc/fstab, 294
+- file descriptor filesystem, 301
+- file flags, 192–194
+  - limitations, 197
+  - setting and viewing, 194
+- files, xlviii
+  - aliases for, disabling, 237
+  - autoupdate unchanged, 447
+  - backups to, 90
+  - checking for obsolete, 444–445
+  - copying over SSH, 498–499
+  - corrupted, 354, 372
+  - customization, 16
+  - default, 16–17
+  - filesystems in, 293–294
+  - installing on new disks, 253–254
+  - moving to new dataset, 262–263
+  - ownership, 183–184
+    - in CI FS, 315
+    - tftpd and, 519
+- filesystem table, 209–210
+- filesystems, xliii, 20–25. See also foreign filesystems
+  - coherence, 88
+  - dirty, 244–245
+  - on encrypted devices, 597–598
+  - encryption, 22–23
+  - file-backed, and /etc/fstab, 294
+  - in files, 293–294
+  - jailed access to part, 564
+  - lesser-known, 300–301
+  - memory, 288–292
+  - mount(8) to view mounted, 210–211
+  - mounting and unmounting, 233–237
+  - problems, 66
+  - selecting, 34
+  - size for, 243
+  - user mounting of, 284
+    - viewing current settings, 241–242
+- FILESYSTEMS provider, 404
+- FILESYSTEMS variable, 323
+- find(1) program, 244
+- finding
+  - man pages, 5
+  - packages, 340–342
+  - snapshots, 244
+- firewall, 67, 465
+  - blacklisted(8) and, 470
+  - NFS and, 308
+- flags, for log rotation, 556
+- flash drives, foreign filesystems for, 284
+- flash (.img) format, 26
+- floppy disk drive, 102–103
+- fonts, on console, 69
+- Force 4K Sectors option, 39
+- foreign filesystems, 281-315
+  - and permissions, 283-284
+  - for removable media, 284-288
+  - supported, 282-283
+- fortune(6), 511
+- forums, 2, 8
+  - old information, 336
+  - posting to, 14
+  - searching, 11
+- fragments, 249
+  - in FFS, 232
+  - PF and, 466
+- frame, 127-128
+- free memory, 535-536
+- FreeBSD. See also upgrading FreeBSD
+  - basics, xxiv-xxvii
+  - birth of, xxvi-xxvii
+  - development, xxvii-xxxix
+  - getting, 25-26
+  - problem-solving resources, 9-11
+  - resources for troubleshooting, 601-602
+  - security announcements, 170-171
+  - shrinking, 448-449
+  - and SNMP, 557-562
+  - strenghts, xlii-xliii
+  - support model, 426
+  - testing, 426-427
+  - versions, 26, 422-427
+    - FreeBSD-current, 422-423
+    - FreeBSD-stable, 423-425
+    - snapshots, 425
+    - which to use, 427
+  - who should use, xliii-xliv
+- FreeBSD attitude, 2
+- freebsd-boot partition, 36
+- FreeBSD community, 613-614
+  - reasons for volunteers, 615
+  - ways of supporting, 615-616
+- FreeBSD Foundation, 9
+- FreeBSD fringe, 583-598
+  - cloudy FreeBSD, 586-587
+  - diskless farm configuration, 592-594
+  - diskless FreeBSD, 587-594
+  - storage encryption, 595-598
+  - terminals, 584-586
+- FreeBSD Journal, 9
+- FreeBSD mirrors, 26, 27
+- FreeBSD Porter's Handbook, 393
+- FreeBSD Project
+  - leadership, 614
+  - submitting improvements to, 600
+- FreeBSD-specific time, 555
+  - freebsd-update cron command, 434
+  - freebsd-update install command, 433-434
+  - freebsd-update rollback command, 434
+  - freebsd-update upgrade command, 431
+  - freebsd-update(8), 428, 579
+    - running, 430-434
+- FreeBSD.conf file, 390
+- FREEBSD_HOST variable, 383
+- FREEBSD_ID option, for mergemaster, 447
+- FreeBSD.org website, 7-8
+- FreeNAS, xl
+- Frequently Asked Questions (FAQ), 7–8, 9
+- FreshPorts, 9, 342
+- fsck(8) program, 52, 246–248, 608
+  - background, 247–248
+  - -y flag, 247
+- fsdn(8) program, 247
+- fstyp(8) program, 284
+- ftpd(8) daemon, 321
+  - and user login, 179
+- full dump, 610
+- fully qualified domain name, 67
+
+# G
+
+- GBDE (GEOM-Based Disk Encryption), 22, 65, 595–596
+- GELI, 22, 65, 596, 597
+- geli init, 597
+- GENERIC file, 109, 438
+- GENERIC install, 105
+- GENERIC kernel, 420
+  - building, 439–440
+- GENERIC.hints file, 109
+- GEOM, 204–208
+  - autoconfiguration, 205
+  - control programs, 207–208
+  - device nodes and stacks, 208
+  - journaling, 238, 240–241
+  - labels, 214
+  - vs. volume managers, 206
+  - withering, 214
+- GEOM classes, 205

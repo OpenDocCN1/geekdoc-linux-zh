@@ -1,0 +1,11 @@
+same memory for a filesystem task? The kernel becomes confused, and the results will not please you.
+
+Unix-like kernels designed for a single processor declare that the kernel is nonpreemptive and can't be interrupted. This simplifies kernel management because everything becomes completely deterministic: when a part of the kernel allocates memory, it can count on that memory being unchanged when it executes the next instruction. No other part of the kernel will alter that chunk of memory. When the computer could do only one thing at a time, this was a safe assumption. Start doing many things at once, however, and this assumption blows apart.
+
+# SMP: The First Try
+
+The first implementation of SMP support in FreeBSD was very simple minded. Processes were scattered between the CPUs, achieving a rough balance, and there was a lock on the kernel. Before a CPU would try to run the kernel, it would check to see whether the lock was available. If the lock was free, the CPU held the lock and ran the kernel. If the lock wasn't free, the CPU knew that the kernel was being run elsewhere and went on to handle something else. This lock was called the *Big Giant Lock* (*BGL*), or later just *Giant*. Under this system, the kernel could know that data wouldn't change from under it. Essentially, Giant guaranteed that the kernel would run on only one CPU, just as it always had.
+
+This strategy worked kind of adequately for two CPUs. You could run a medium-level database and a web server on a twin-CPU machine and feel confident that the CPU wouldn't be your bottleneck. If one CPU was busy serving web pages, the other would be free to answer database queries. But if you had an eight-CPU machine, you were in trouble; the system would spend a lot of time just waiting for Giant to become available!
+
+This simplistic SMP technique is neither efficient nor scalable. The standard textbooks on SMP rarely mention this method because it's so clunky. Some other SMP-handling methods are worse, however. For

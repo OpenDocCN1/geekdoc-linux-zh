@@ -1,0 +1,100 @@
+
+## GLOSSARY
+
+1167
+
+**printable character**
+One of the graphic characters: a letter, number, or punctuation mark. Contrast with a nonprintable, or **CONTROL**, character. Also *printing character*.
+
+**private address space**
+IANA (page 1153) has reserved three blocks of IP addresses for private internets or LANs:
+
+- 10.0.0.0 - 10.255.255.255
+- 172.16.0.0 - 172.31.255.255
+- 192.168.0.0 - 192.168.255.255
+
+You can use these addresses without coordinating with anyone outside of your LAN (you do not have to register the system name or address). Systems using these IP addresses cannot communicate directly with hosts using the global address space but must go through a gateway. Because private addresses have no global meaning, routing information is not stored by DNSs and most ISPs reject privately addressed packets. Make sure that your router is set up not to forward these packets onto the Internet.
+
+**privileged port**
+A *port* (page 1165) with a number less than 1024. On Linux and other UNIX-like systems, only a process running with **root** privileges can bind to a privileged port. Any user on Windows 98 and earlier Windows systems can bind to any port. Also *reserved port*.
+
+**procedure**
+A sequence of instructions for performing a particular task. Most programming languages, including machine languages, enable a programmer to define procedures that allow the procedure code to be called from multiple places. Also *subroutine*.
+
+**process**
+The execution of a command by Linux. See “Processes” on page 328.
+
+**profile file**
+A startup file in a user's home directory that the Bourne Again or Z Shell executes when you log in. The TC Shell executes *.login* instead. You can use the .profile file to run commands, set variables, and define functions.
+
+**program**
+A sequence of executable computer instructions contained in a file. Linux utilities, applications, and shell scripts are all programs. Whenever you run a command that is not built into a shell, you are executing a program.
+
+**PROM**
+Programmable readonly memory. A kind of nonvolatile storage. *ROM* (page 1169) that can be written to using a PROM programmer.
+
+**prompt**
+A cue from a program, usually displayed on the screen, indicating that it is waiting for input. The shell displays a prompt, as do some of the interactive utilities, such as *mail*. By default the Bourne Again and Z Shells use a dollar sign ($) as a prompt, and the TC Shell uses a percent sign (%).
+
+**protocol**
+A set of formal rules describing how to transmit data, especially across a network. Low-level protocols define the electrical and physical standards, bit and byte ordering, and transmission, error detection, and correction of the bit stream. High-level protocols deal with data formatting, including message syntax, terminal-to-computer dialog, character sets, and sequencing of messages.
+
+**proxy**
+A service that is authorized to act for a system while not being part of that system. See also *proxy gateway* and *proxy server*.
+
+**proxy gateway**
+A computer that separates clients (such as browsers) from the Internet, working as a trusted agent that accesses the Internet on their behalf. A proxy gateway passes a request for data from an Internet service, such as HTTP from a browser/client, to a remote server. The data that the server returns goes back through the proxy gateway to the requesting service. A proxy gateway should be transparent to the user.
+
+A proxy gateway often runs on a *firewall* (page 1148) system and acts as a barrier to malicious users. It hides the IP addresses of the local computers inside the firewall from Internet users outside the firewall.
+
+You can configure browsers, such as Mozilla/Firefox and Netscape, to use a different proxy gateway or to use no proxy for each URL access method including FTP, netnews, SNMP, HTTPS, and HTTP. See also *proxy*.
+
+**proxy server**
+A *proxy gateway* that usually includes a *cache* (page 1139) that holds frequently used Web pages so that the next request for that page is available locally (and therefore more quickly). The terms proxy server and proxy gateway are frequently interchanged so that the use of cache does not rest exclusively with the proxy server. See also *proxy*.
+
+**Python**
+A simple, high-level, interpreted, object-oriented, interactive language that bridges the gap between C and shell programming. Suitable for rapid prototyping or as an extension language for C applications, Python supports packages, modules, classes, user-defined exceptions, a good C interface, and dynamic loading of C modules. It has no arbitrary restrictions. For more information, see www.python.org.
+
+*FOXCRC*
+
+**quote**
+When you quote a character, you take away any special meaning that it has in the current context. You can quote a character by preceding it with a backslash. When you are interacting with the shell, you can also quote a character by surrounding it with single quotation marks. For example, the command *echo* \* or *echo* \`*`\` displays *. The command *echo* * displays a list of the files in the working directory. See *ambiguous file reference* (page 1134), *metacharacter* (page 1159), *regular character* (page 1168), *regular expression* (page 1168), and *special character* (page 1173). See also *escape* on page 1147.
+
+**radio button**
+In a GUI, one of a group of buttons similar to those used to select the station on a car radio. Radio buttons within a group are mutually exclusive; only one button can be selected at a time.
+
+**RAID**
+Redundant *array* of inexpensive/independent disks. Two or more (hard) disk drives used in combination to improve fault tolerance and performance. RAID can be implemented in hardware or software.
+
+**RAM**
+Random access memory. A kind of volatile storage. A data storage device for which the order of access to different locations does not affect the speed of access. Contrast with a hard disk or tape drive, which provides quicker access to sequential data because accessing a nonsequential location requires physical movement of the storage medium and/or read/write head rather than just electronic switching. Contrast with *nonvolatile storage* (page 1163). Also *memory*.
+
+*FOXCRC*
+
+**RAM disk**
+RAM that is made to look like a floppy diskette or hard disk. A RAM disk is frequently used as part of the *boot* (page 1138) process.
+
+**RAS**
+Remote access server. In a network, a computer that provides access to remote users via analog modem or ISDN connections. RAS includes the dial-up protocols and access control (authentication). It may be a regular fileserver with remote access software or a proprietary system, such as Shiva's LANRover. The modems may be internal or external to the device.
+
+**RDF**
+Resource Description Framework. Being developed by W3C (the main standards body for the World Wide Web), a standard that specifies a mechanism for encoding and transferring *metadata* (page 1159). RDF does not specify what the metadata should or can be. It can integrate many kinds of applications and data, using XML as an interchange syntax. Examples of the data that can be integrated include library catalogs and worldwide directories; syndication and aggregation of news, software, and content; and collections of music and photographs. Go to www.w3.org/RDF for more information.
+
+**redirection**
+The process of directing standard input for a program to come from a file rather than from the keyboard. Also, directing standard output or standard error to go to a file rather than to the screen.
+
+**reentrant**
+Code that can have multiple simultaneous, interleaved, or nested invocations that do not interfere with one another. Noninterference is important for parallel processing, recursive programming, and interrupt handling.
+
+It is usually easy to arrange for multiple invocations (that is, calls to a subroutine) to share one copy of the code and any readonly data. For the code to be reentrant, however, each invocation must use its own copy of any modifiable data (or synchronized access to shared data). This goal is most often achieved by using a stack and allocating local variables in a new stack frame for each invocation. Alternatively, the caller may pass in a pointer to a block of memory that that invocation can use (usually for output), or the code may allocate some memory on a heap, especially if the data must survive after the routine returns.
+
+Reentrant code is often found in system software, such as operating systems and teleprocessing monitors. It is also a crucial component of multithreaded programs, where the term *thread-safe* is often used instead of reentrant.[1]PUBLIC
+
+**regular character**
+A character that always represents itself in an ambiguous file reference or another type of regular expression. Contrast with *special character*.
+
+**regular expression**
+A string—composed of letters, numbers, and special symbols—that defines one or more strings. See Appendix A.
+
+**relative pathname**
+A pathname that starts from the working directory. Contrast with *absolute pathname* (page 1134).

@@ -1,0 +1,11 @@
+Geometrically, you can understand this non-linearity by examining Figure 2-36. When a polygon is tilted away from the projection plane—which is essentially our computer screen—a movement of one pixel on the screen corresponds to a non-constant movement on the polygon in 3D. This non-linearity is a fundamental property of the perspective projection process and causes (or indeed, *is*) the foreshortening which we observe in ordinary visual perception.
+
+![](bbox=[0.14, 0.22, 0.86, 0.57])
+
+A further observation about Equation 2-32 is that the numerator and denominator of each term, taken separately, are indeed linear with respect to $x_{\mathrm{P}}$ and $y_{\mathrm{P}}$; it is the result, dividing numerator by denominator, which is non-linear.
+
+Linearity of an equation with respect to $x_{\mathrm{P}}$ and $y_{\mathrm{P}}$ (and therefore, also with respect to $x_{\mathrm{S}}$ and $y_{\mathrm{S}}$) is important because it allows us to compute the value at a particular screen location based on the value at a previous screen location. We used the same idea when developing the incremental algorithm for line drawing: the value for the next pixel could be calculated from the value of the current pixel. With regard to the texture mapping equations, this means that we can compute an initial value for the numerator and denominator based on the starting values of $x_{\mathrm{P}}$ and $y_{\mathrm{P}}$ for the first pixel of the texture mapped polygon we are drawing. Then, we can incrementally compute the numerator and denominator (requiring just one addition operation) for all other pixels in the polygon. We must perform the division, however, to obtain the *u* and *v* coordinates.
+
+# ## Step 5: Map Texture Coordinates to Integer Indices and Draw
+
+After computing the $(u,v)$ coordinates from the screen coordinates with the equation from the previous section, we map the real-valued $(u,v)$ coordinates to integer indices within the 2D texture map image. The coordinates *u* and *v* each go from 0 to 1, with the convention that the texture

@@ -1,0 +1,205 @@
+
+
+该函数对列表进行两次遍历。第一次仅统计路径所需的总空间（循环中的 +1 是为斜杠预留的），第二次则构建路径字符串。
+
+最后一个路径处理函数会释放链表，通常应在调用 `get_pathlist` 之后调用：
+
+```c
+static void free_pathlist(struct pathlist_node **head)
+{
+    struct pathlist_node *p, *p_next;
+
+    for (p = *head; p != NULL; p = p_next) {
+        p_next = p->c_next;
+        free(p);
+    }
+    *head = NULL;
+}
+```
+
+我们使用 `p_next` 变量来保存指向下一个节点的指针，因为一旦调用 `free`，`p` 本身就会变得无效。
+
+下面是一些测试代码，用于构建图 3.4 中所示的列表：
+
+```c
+struct pathlist_node *head = NULL;
+char *path;
+
+cr_false( push_pathlist(&head, "grandchild"))
+cr_false( push_pathlist(&head, "child"))
+cr_false( push_pathlist(&head, "parent"))
+cr_null( path = get_pathlist(head) );
+free_pathlist(&head);
+printf("%s\n", path);
+free(path);
+```
+
+输出结果如下：
+
+/parent/child/grandchild
+
+以这种方式处理路径的一个非常便利的特点是，我们不必像在第 3.4.2 节中调用标准 `getcwd` 函数那样预先分配路径的空间。
+
+现在，我们准备实现 `getcwdx`，这是 `getcwd` 的我们的版本，它沿树向上遍历，每当识别出一个子项的名称时，就在每一级调用一次 `push_pathlist`，直到到达根目录为止。首先是一个宏，通过测试设备 ID 和 i 节点号来判断两个 stat 结构是否代表同一个 i 节点：
+
+```c
+#define SAME_INODE(s1, s2)  ((s1).st_dev == (s2).st_dev &&\
+                             (s1).st_ino == (s2).st_ino)
+```
+
+我们将在这个 getcwdx 函数中两次使用该宏：
+
+```c
+char *getcwdx(void)
+{
+    struct stat stat_child, stat_parent, stat_entry;
+    DIR *sp = NULL;
+    struct dirent *dp;
+    struct pathlist_node *head = NULL;
+    int dirfd = -1, rtn;
+    char *path = NULL;
+
+    ec_neg1( dirfd = open(".", O_RDONLY) )
+    ec_neg1( lstat(".", &stat_child) )
+    while (true) {
+        ec_neg1( lstat("..", &stat_parent) )
+
+        /* change to parent and detect root */
+        if (((rtn = chdir("..")) == -1 && errno == ENOENT) ||
+            SAME_INODE(stat_child, stat_parent)) {
+            if (head == NULL)
+                ec_false( push_pathlist(&head, ".") )
+                ec_null( path = get_pathlist(head) )
+                EC_CLEANUP
+        }
+        ec_neg1( rtn )
+
+        /* read directory looking for child */
+        ec_null( sp = opendir(".") )
+        while (errno = 0, (dp = readdir(sp)) != NULL) {
+            ec_neg1( lstat(dp->d_name, &stat_entry) )
+            if (SAME_INODE(stat_child, stat_entry)) {
+                ec_false( push_pathlist(&head, dp->d_name) )
+                break;
+            }
+        }
+
+        if (dp == NULL) {
+            if (errno == 0)
+                errno = ENOENT;
+            EC_FAIL
+        }
+        stat_child = stat_parent;
+    }
+    EC_CLEANUP_BGN
+    if (sp != NULL)
+        (void)closedir(sp);
+    if (dirfd != -1) {
+        (void)fcdir(dirfd);
+        (void)close(dirfd);
+    }
+    free_pathlist(&head);
+    return path;
+    EC_CLEANUP_END
+}
+```
+
+关于该函数的一些说明：
+
+- 我们使用 open/fchdir 技术来获取和重置当前目录，因为该函数在遍历树时会改变当前目录。
+- 在循环中，`stat_child` 对应我们要尝试获取其条目名称的子项，`stat_entry` 对应从 `readdir` 调用中获取的每个条目，`stat_parent` 对应父目录，当我们向上移动时，它成为子目录。
+- 测试到达根目录的方法在本节开头已解释：要么 `chdir` 失败，要么它没有让我们移动到任何地方。
+- 如果我们到达根目录时列表仍为空，我们就向栈中压入一个空名称，这样路径名就会显示为 `/`。
+- 在 `readdir` 循环中，我们本可以跳过非目录条目，但这其实并非必要，因为 `SAME_INODE` 测试同样快速且准确。
+
+最后，这里有一个小程序，使其成为一个像标准 pwd 命令一样行为的命令：
+
+```c
+int main(void)
+{
+    char *path;
+    ec_null( path = getcwd() )
+    printf("%s\n", path);
+    free(path);
+    exit(EXIT_SUCCESS);
+
+    EC_CLEANUP_BGN
+    exit(EXIT_FAILURE);
+    EC_CLEANUP_END
+}
+```
+
+## 3.6.5 实现 ftw（向下遍历树）
+
+有一个标准库函数 ftw（“文件树遍历”），我不在此具体描述它，它提供了一种通用方法来递归处理目录树中的条目。你给它一个函数指针，它对遇到的每个对象调用该函数，但对我们来说，使用本章所学内容实现自己的树遍历函数更有趣。
+
+首先要澄清的是，目录结构是否真的是一棵树，因为我们的递归算法依赖于这一点。如果存在循环，我们的程序可能会卡住；如果同一个目录被链接了两次（通过除 . 和 .. 以外的条目），我们可能会访问同一个目录（及其子树）多次。有两种需要思考的问题类型：
+
+1.  符号链接指向目录的情况很常见，这至少创建了两个链接，因为每个目录也被硬链接。也没有任何机制防止符号链接创建循环。
+2.  在某些系统上，超级用户可以创建到目录的第二个硬链接，使用 link 系统调用。这种情况几乎从未发生过，但这是我们的程序可能会遇到的可能性。
+
+问题 1 可以通过简单地不遵循任何符号链接轻松解决。我们暂时忽略问题 2，尽管本章末尾的练习 3.5 涉及它。因此，对于我们的目的而言，由硬链接形成的树确实是一棵树。
+
+我们希望我们的程序 au1s（是第 3.5.3 节中展示的程序的扩展）表现得有点像 ls，即 `-R` 参数使其递归，而 `-d` 参数告诉它仅列出目录的信息，而不是该目录内容的信息。如果没有这两个参数中的任何一个，它的行为与之前的 au1s 相同。
+
+带有 `-R` 参数时，au1s（像 ls 一样）首先列出到目录的路径以及该级别的所有条目，包括目录，然后对每个目录递归执行相同操作，如下例所示：
+
+```text
+$ au1s -R /aup/common
+
+/aup/common:
+-rwxr-xr-x    1 root     root        1145 Oct  2 10:21 makefile
+-rwxr-xr-x    1 root     root         171 Aug 23 10:41 logf.h
+-rwxr-xr-x    1 root     root        1076 Aug 26 15:24 logf.c
+drwxr-xr-x    1 root     root         4096 Oct  2 12:20 cf
+-rwxr-xr-x    1 root     root         245 Aug 26 15:29 notes.txt
+
+/aup/common/cf:
+-rwxr-xr-x    1 root     root        1348 Oct  3 13:52 cf-ec.c-ec_push.htm
+-rwxr-xr-x    1 root     root         576 Oct  3 13:52 cf-ec.c-ec_print.htm
+-rwxr-xr-x    1 root    root      450 Oct  3 13:52 cf-ec.c-ec_reinit.htm
+-rwxr-xr-x    1 root    root      120 Oct  3 13:52 cf-ec.c-ec_warn.htm
+```
+
+当我们查看代码时就会发现，对于每一级（一个 readdir 循环），有两次遍历。在第一次遍历中，我们打印“stat”信息，然后在第二次遍历中，对于每个目录，我们递归，在该目录中执行第一次遍历，等等。
+
+使用传递给程序中每个函数的结构体来表示遍历信息很方便，而不是使用全局变量或长长的参数列表：
+
+```c
+typedef enum (SHOW_PATH, SHOW_INFO) SHOW_OP;
+
+struct traverse_info {
+    bool ti_recursive;                /* -R option? */
+    char *ti_name;                    /* current entry */
+    struct stat ti_stat;              /* stat for ti_name */
+    bool (*ti_fcn)(struct traverse_info *, SHOW_OP); /* callback fcn */
+};
+```
+
+以下是我们要使用的回调函数：
+
+```c
+static bool show_stat(struct traverse_info *p, SHOW_OP op)
+{
+    switch (op) {
+    case SHOW_PATH:
+        ec_falsel( print_cwd(false) )
+        break;
+    case SHOW_INFO:
+        ls_long(&p->ti_stat, p->ti_name);
+    }
+    return true;
+
+    BC_CLEANUP_BGN
+    return false;
+    BC_CLEANUP_END
+}
+```
+
+`show_stat` 在 `op` 设置为 `SHOW_PATH` 时被调用以打印路径名标题，在设置为 `SHOW_INFO` 时打印详细行。`ls_long` 来自第 3.5.3 节，而 `print_cwd` 与我们在第 3.4.2 节中展示的示例代码几乎相同：
+
+```c
+static bool print_cwd(bool cleanup)
+{
+    char *cwd;
+```

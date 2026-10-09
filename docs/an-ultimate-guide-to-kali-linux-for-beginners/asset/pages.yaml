@@ -1,0 +1,835 @@
+- pgno: 0
+  md: '# An Ultimate Guide to Kali Linux for Beginners
+
+
+    Ansh Goyal
+
+
+    Published by HackTechHub, 2021.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'While every precaution has been taken in the preparation of this book, the
+    publisher assumes no responsibility for errors or omissions, or for damages resulting
+    from the use of the information contained herein.
+
+
+    # AN ULTIMATE GUIDE TO KALI LINUX FOR BEGINNERS
+
+
+    **First edition. November 5, 2021.**
+
+
+    Copyright © 2021 Ansh Goyal.
+
+
+    Written by Ansh Goyal.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table of Contents
+
+
+    +   - Title Page
+
+    +   - Copyright Page
+
+    +   - Disclaimer
+
+    +   - About The Author
+
+    +   - FREE GIFT
+
+    +   - FAQs
+
+    +   - Setting Up Linux
+
+    +   - Linux Commands
+
+    +   - Sign up for Ansh Goyal''s Mailing List'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Disclaimer\n\nThis eBook contents are for informational and study purposes\
+    \ only. The HackTechHub makes no claims, promises, or guarantees about the accuracy,\
+    \ completeness, or adequacy of the contents of this eBook and no legal liability\
+    \ or other responsibility is accepted by HackTechHub for any errors, omissions,\
+    \ or statements on this eBook. The methods described within this eBook are the\
+    \ Ansh Goyal’s own thoughts. They are not intended to be a definitive set of instructions\
+    \ for the topics. You may discover there are several methods and resources to\
+    \ accomplish the same end result. If you wish to apply any concepts, principles\
+    \ or ideas contained in this eBook, you are completely responsible for your actions.\
+    \  \nHackTechHub or Author May Not Guarantee That You Would Achieve the Goal Definitely,\
+    \ It’s Just a Guide to Help in Achieving. No part of this eBook may be reproduced\
+    \ or transmitted in any form or by any means, electronic or mechanical, including\
+    \ photocopying, recording or by any information storage and retrieval system,\
+    \ without written permission from the HackTechHub."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# *About The Author*
+
+
+    My Name is Ansh I am an App Developer, Game Developer, Web Developer, Ethical
+    Hacker, Graphic Designer, Penetration Tester, WordPress Website Developer. I am
+    Increasing My Skills day by day. I also Teach On Various Online Course Creation
+    Platforms like Udemy, Skillshare, Teachable, etc.
+
+
+    I have authored the best-selling title on Google Play “An Ultimate Guide to Online
+    Course Creation” & “An Ultimate Guide to Website Development”.
+
+
+    Teaching over 14000+ Students from over 150+ countries and 40+ Languages, I can
+    guarantee that you would learn something new definitely after reading my books.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# FREE GIFT
+
+
+    You Will Get a Chance to Win $200 of Goodies.
+
+
+    Steps to Avail the Benefit are at the last page of the book.
+
+
+    See you at the end of the book!'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# FAQs
+
+
+    # Why Linux & Not Windows or Mac?
+
+
+    Windows and Mac are the lease chosen operating system when one has to choose an
+    operating system which can handle multiple shell tasks and has less bugs in comparison
+    to other operating systems. Linux system has the highest root privilege which
+    is required to perform certain pen testing and ethical hacking related tasks.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Why Kali Linux?
+
+
+    Kali Linux is the most loved choice when opting for penetration testing and ethical
+    hacking. Because of the ease of doing work and the availability of pre-installed
+    tools available in Kali Linux, which makes it an ideal choice for ethical hacking
+    and pen testing.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# I use Windows or Mac OS; will I have to install Kali Linux OS instead?
+
+
+    Absolutely NO! There is no need to delete your files from Windows and Mac OS and
+    install a new Kali Linux, you can use Kali Linux in your existing Windows or Mac
+    OS easily and reliably, that’s one feature of Linux OS over other operating systems.
+
+
+    # What are the requirements to apply the information from this book?
+
+
+    Well, if you want to learn things effectively and for long period of time, you
+    should perform practical on your own device. There are basic system requirements,
+    a PC, an internet connection & determination to jump into the world of Kali Linux.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'I am new to Kali Linux; how will I get started in it?
+
+
+    Well, that''s why we are here. Let''s get started!'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# **What are VMs?**
+
+
+    VMs are great. There are many upsides with using them. One of the beings, able
+    to run multiple Operating Systems (OSs) at the same time. You can have your host
+    machine "untouched", and then only interact with the guest VMs. Another is when
+    something is going right, take a snapshot. When something goes wrong, revert back.
+
+
+    Virtual Box is free and open source and is best option to create a Virtual Machine.
+
+
+    Download Virtual Box on your PC (Windows or Mac) by going to https://www.virtualbox.org/wiki/Downloads
+
+
+    Choose which host are you on, windows host or Mac host (OSX).
+
+
+    Now, Install the program into your computer just like a usual setup you install
+    on your PC.
+
+
+    After installing, go back to https://www.virtualbox.org/wiki/Downloads and look
+    for **6.X.X Oracle VM VirtualBox Extension** and download the extensions pack
+    written
+
+
+    After downloading, double click the downloaded file and install the extensions
+    into your Kali Linux.
+
+
+    These extensions are very crucial for the smooth working of Kali Linux.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# INSTALLING KALI LINUX
+
+
+    There are many ways of installing Kali Linux into Virtual Box. The simplest way
+    to do this is using the pre-installed image file.
+
+
+    Download the latest Kali Linux image file by going to https://www.kali.org/get-kali/#kali-virtual-machines
+    Select your system hardware (64 bit or 32 bit). And click on download button on
+    the “Virtual Box” Panel.
+
+
+    This will download a file with extension “ova”.
+
+
+    After the download is complete, double click the downloaded file and it will open
+    up into the virtual box.
+
+
+    A window will pop up looking like this:
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_11_0.png)
+
+
+    Click on the “Import” Button, then “Agree” and then, it will start importing the
+    Installed Kali Linux into your virtual box. After the'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'import is complete, you need to setup a few things. Go to settings of the imported
+    Virtual Machine.
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_12_0.png)
+
+
+    Click on System and increase the base memory to about half of the system memory.
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_12_1.png)
+
+
+    Now, go to “Processor” tab and increase the processors to about of your system
+    capacity. This is essential for Kali Linux to function without any glitches.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_13_0.png)
+
+
+    Apply other changes as shown in the images above. These changes may vary according
+    to the processor of your computer. Apply other setting according to the images
+    below:'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_14_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_15_0.png)
+
+
+    Now, you have successfully installed Kali Linux into your Virtual Box as a Virtual
+    Machine.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# **Setting Up Linux**
+
+
+    If you want to be a serious penetration tester or ethical hacker, then you would
+    have to master the Linux commands lines as they are the basic requirements in
+    starting an attack.
+
+
+    Terminal, as the name suggest, is an application which interfaces with the system
+    with help of command lines. Unlike Windows or Mac OS, Linux don’t offer graphical
+    user interface with icons and panels to perform various tasks like copying a file,
+    deleting a file & even creating a file or script.
+
+
+    Terminal offers the commanding interface to type such commands which we will discuss
+    in the next sections.
+
+
+    If you are a window user, then you might know that window also has its own terminal
+    named as CMD (Command Prompt). The terminal in Linux is somewhere same as that.
+
+
+    So, first of all fire up your Kali Linux by clicking “Start” in the Virtual Box.
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_16_0.png)
+
+
+    After, it gets it will ask for the username and password.
+
+
+    By default, the username and password are “kali” and “kali” respectively. Click
+    login after that.
+
+
+    Now the Kali desktop interface will open up.
+
+
+    To make your Kali Linux future proof, you need to install the Guest Addition Tools.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'Follow Step by Step to Install Guest Addition Tools.
+
+
+    Click on devices tab of the Virtual Box and click on “Insert Guest Additions CD
+    Image...”
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_17_0.png)
+
+
+    Now a CD icon will appear on the desktop. Double click on it and note the path
+    of the folder.
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_17_1.png)
+
+
+    In our context, it’s “/media/cdrom0/”
+
+
+    Open the terminal by clicking the icon as below.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_18_0.png)
+
+
+    In the terminal, write the following command and hit enter.
+
+
+    ```
+
+    ```
+
+    cd /media/cdrom/
+
+    ```
+
+    ```
+
+
+    Now Type the following command and hit enter.
+
+
+    ```
+
+    ```
+
+    sudo sh VBoxLinuxAdditions.run
+
+    ```
+
+    ```
+
+
+    It will now ask for the sudo password for kali, type “kali” from the keyboard.
+    It will not show the password you are typing but you have to confidently type
+    “kali” from the keyboard and press enter.
+
+
+    A few commands processes will appear, if it asks for “yes or no”, type “y” and
+    press enter.
+
+
+    The Virtual Box Linux additions will now be installed successfully on your Kali
+    Linux Machine.
+
+
+    Now, restart your Kali Linux, either by entering the command “reboot” in terminal
+    or using the power icon in kali.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_19_0.png)
+
+
+    Now enter the username and password as “kali” and “kali” respectively, as described
+    previously.
+
+
+    The Kali is now setup to be used. You might have noticed that we have used some
+    commands like “cd”, “sh”, “sudo” previously. These are the basic commands which
+    are appended to perform tasks in terminal. Let’s discuss some commands in the
+    next section.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Linux Commands
+
+
+    We will be discussing some of the basic commands which are required to get started
+    in Kali Linux.
+
+
+    +   1. cd
+
+
+    This command is used to change directory in the terminal. This is used with the
+    path of the directory, for example, Changing current directory to the desktop
+    directory, we would use
+
+    cd Desktop/
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_20_0.png)
+
+
+    For going one directory back, use the command
+
+    cd ..'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_21_0.png)
+
+
+    2. pwd
+
+
+    This command is used to print working directory where the terminal is running.
+    You just need to type in pwd and press enter.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_22_0.png)
+
+
+    By default, when we open terminal using the terminal icon, it is opened in “/home/kali”
+    directory. So, writing pwd outputs “/home/kali”.
+
+
+    Try changing the directory to “Desktop/” and print the working directory.
+
+
+    +   3. ls
+
+
+    This command is to list the folders and files inside the current working directory.
+    This command can be used standalone. Type in “ls” and press enter, it would output
+    the folders and files inside the directory, your terminal is running in.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_23_0.png)
+
+
+    As, we are currently running terminal in the directory “/home/kali/”, which contains
+    Desktop, Documents & other folders.
+
+
+    Try going to other directories using the “cd” command and printing the working
+    directory.
+
+
+    You can also type in
+
+
+    ```
+
+    cd /
+
+    ```
+
+
+    This will change the active directory to the main directory where system files
+    are located.
+
+
+    There are multiple ways of doing this,
+
+
+    First,
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_23_1.png)
+
+
+    Second,'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_24_0.png)
+
+
+    You can have a look at the output. There are multiple folders such as bin, dev,
+    home, etc.
+
+
+    The “home” folder contains the crucial user folder which is “kali”
+
+
+    You can go back to the kali directory by typing in “cd /home/kali/”. This will
+    change the working directory to the default directory which opens up when you
+    start terminal.
+
+
+    If you want to know about each of the folder that the “/” folder is containing,
+    have a look at this https://www.linux.com/training-tutorials/linux-filesystem-explained/.
+
+
+    +   4. clear
+
+
+    This is a simple command which clears out everything that is displaying on the
+    terminal. There might be clutter around inside the terminal which could require
+    you to close and re-open the terminal, but typing the clear command will simply
+    clears out text stuff.
+
+
+    +   5. sudo
+
+
+    This is the most crucial command in Kali terminal. This command provides you the
+    root privilege or we can say that you are acquired with super user access. You
+    might have heard about the super user (SU box), if you ever tried to root (jailbreak)
+    your android device (not recommended though).'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'There are certain tools in the kali which require the root privilege to work,
+    else they will output “bash, command not found” or “run this command with root
+    access”. To provide such tools, root privilege we have to append them with “sudo”.
+    You also have to enter the password “kali” after that, same as we have done before
+    in installing virtual box guest addition tools. We will be discussing more about
+    sudo in the next command.
+
+
+    6. ifconfig
+
+
+    This command is used to display the active network adapters which are running
+    inside your Kali. Try entering the following command and press enter.
+
+
+    ifconfig
+
+
+    You might receive an error saying “bash, command not found”. This is because,
+    the “ifconfig” command requires the root privilege at least once. Try entering
+    the command
+
+
+    sudo ifconfig
+
+
+    This will display some IP addresses and MAC addresses. These IP and MAC addresses
+    are very crucial in the wireless attacks and performing remote execution attacks
+    such as MSF venom, beef, etc. If you want to perform the wireless attacks or want
+    to crack the wireless router password, you may read our ultimate guide to wireless
+    attacks in Kali.
+
+
+    As we are now having the root access, but do we need to enter the sudo each time
+    we enter any command which require sudo or root access.
+
+
+    Well, the answer is NO!
+
+
+    You can turn to the root mode and type as many root commands as you want without
+    writing sudo before each command. This can be achieved by typing the command'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '```
+
+    sudo su
+
+    ```
+
+
+    This will enter you into the root privileged directory which is root directory.
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_26_0.png)
+
+
+    Now, you can run any number of root commands with typing in sudo each time. For
+    exiting the root mode, type
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    and press enter. It will return back to normal user mode.
+
+
+    +   7.  touch
+
+
+    This command is used to create a file in the active directory.
+
+    Let''s create a file named “newfile”. For this enter the command
+
+
+    ```
+
+    cd Desktop/
+
+    (Changing active directory to Desktop)
+
+    touch newfile
+
+    ```
+
+
+    This will create an empty file name newfile on the Desktop.
+
+    Double click on the file and see whether it is empty or not. It would definitely
+    be empty currently.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "![](img/d05aeb75f1c36187913c3b410abf92b1_27_0.png)\n\n+   8. nano\n\nThis command\
+    \ is used to edit a file using a terminal editor. This is not as same as text\
+    \ editor but it is a handy command when editing root level files which couldn't\
+    \ be edited using the normal text editor.  \nEnter the command  \nnano newfile\
+    \  \nThis will open a terminal editor. Type in “Hello World” text there."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_28_0.png)
+
+
+    After typing this, press “Ctrl O” with keyboard, then press “Enter” key. And finally
+    press “Ctrl X”. These key combinations will take you out of the terminal editor
+    by saving whatever you have typed in.
+
+
+    “nano” command can be used directly to create a file also without the need to
+    use “touch” command.
+
+
+    To create a file with nano command, enter
+
+
+    ```
+
+    nano anotherfile
+
+    ```
+
+
+    This will create a new file with name “anotherfile”, but you have to enter something
+    and then save that file for the file to be appear on the active directory.
+
+
+    Type in “Hello There” and press “Ctrl O” then “Enter Key” then “Ctrl X”. This
+    will save the file and the file will appear in the active directory.
+
+
+    Here’s our two files we created with the methods above.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "![](img/d05aeb75f1c36187913c3b410abf92b1_29_0.png)\n\nTry double clicking then\
+    \ on your desktop and see whether every file has text that we wrote.\n\n+   9.\
+    \ echo\n\nThis command is used to enter any text or code into the specified file.\
+    \ This works same as nano terminal editor works.\n\nLet’s create a new file name\
+    \ “file1” and insert the text “Have a Great Day” into the “file1” using the “echo”\
+    \ command.\n\n```\n(kali@kali)-[~/Desktop]\n$ touch file1\n\n(kali@kali)-[~/Desktop]\n\
+    $ echo Have a Great Day > file1\n\n(kali@kali)-[~/Desktop]\n$ \n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'This will create a file named “file1” and insert “Have a Great Day” into it.
+
+
+    +   10. cat
+
+
+    This command is used to display the content of a file into the terminal.
+
+
+    We have created 3 files till yet.
+
+
+    Let’s display the content of each of them with this command.
+
+
+    To do so, type the following commands and press enter after each command.
+
+
+    ```
+
+    cat newfile
+
+    cat anotherfile
+
+    cat file1
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '```
+
+    (kali@kali)-[~/Desktop]
+
+    $ cat newfile
+
+    Hello World
+
+
+    (kali@kali)-[~/Desktop]
+
+    $ cat anotherfile
+
+    Hello There
+
+
+    (kali@kali)-[~/Desktop]
+
+    $ cat file1
+
+    Have a Great Day
+
+
+    (kali@kali)-[~/Desktop]
+
+    $
+
+    ```
+
+
+    Here, each of them is showing the content that we have typed in them before.
+
+
+    +   11. mkdir
+
+
+    This command is used to make a new folder (directory) in any place.
+
+
+    Let''s make a folder by typing the following command and press enter.
+
+
+    ```
+
+    mkdir NewFolder
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '![](img/d05aeb75f1c36187913c3b410abf92b1_32_0.png)
+
+
+    This will create a new folder named “NewFolder” in the active directory and the
+    icon will be displayed in the active directory (Desktop in our context).
+
+
+    +   12. rm
+
+
+    This command is used to remove files or directory from the active directory.
+
+
+    The command to remove files and folder are a bit different.
+
+
+    +   a.) For removing the files, type the below command and hit enter.
+
+
+    ```
+
+    ```bash
+
+    rm newfile
+
+    ```
+
+    ```
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_32_1.png)
+
+
+    This command will remove the file named “newfile” which we have created in the
+    previous section. Similar ly, you can delete'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "other files in different directories, but make sure you DO NOT REMOVE ANYTHING\
+    \ IN THE “/” or system files folders.\n\nb.) For removing folders, type the below\
+    \ command and hit enter.\n    rm NewFolder -r\n\n![](img/d05aeb75f1c36187913c3b410abf92b1_33_0.png)\n\
+    \nThis command will remove the folder named “NewFolder” from the desktop.\n  \
+    \  There is one thing which you should be aware of that, while writing the commands\
+    \ make sure that you check the case of the letter, whether they are upper case\
+    \ or lower case because Linux distros matter a lot on the case of the file.\n\
+    \    For example, “Newfolder” and “NewFolder” are completely different things\
+    \ when entering command in the terminal. You might get “rm: cannot remove 'Newfolder':\
+    \ No such file or directory”. So, make sure you type all the letters carefully.\n\
+    \    You have now learnt the basics of Kali Linux and how to apply them in your\
+    \ future journey as an Ethical Hacker, Penetration Tester or Security Analyst.\n\
+    \    If you want to continue your journey, you can read our next level books on\
+    \ the Linux systems and Ethical Hacking."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Keep Learning
+
+    Stay Safe!'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# FREE eGift Redemption Procedure
+
+
+    Visit: https://techbhole.com/hacktechhub-egift-redemption-guidelines/
+
+
+    After, you follow all the steps mentioned in the link, you will receive the goodies.
+
+
+    For any query, contact at: hacktechhub@gmail.com'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Don''t miss out!
+
+
+    Click the button below and you can sign up to receive emails whenever Ansh Goyal
+    publishes a new book. There''s no charge and no obligation.
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_36_0.png)
+
+
+    https://books2read.com/r/B-A-EPYJ-LJETB
+
+
+    ![](img/d05aeb75f1c36187913c3b410abf92b1_36_1.png)
+
+
+    Connecting independent readers to independent writers.'
+  merge: -1
+  img_proc: true

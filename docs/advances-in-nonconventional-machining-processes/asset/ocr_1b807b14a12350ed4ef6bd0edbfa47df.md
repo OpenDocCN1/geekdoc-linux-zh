@@ -1,0 +1,9 @@
+AI & robotics technology will free the manufacturer issues related to untrained workers. Hence, entrepreneurs can concentrate on further modernization of industries and scaling their industry to greater heights. Apart from the numerous opportunities in adopting emerging technologies like AI, there are some challenges too for industrialists.The AI and robotics technology into the manufacturing industry would necessitate a huge capital investment for startups and existing manufacturers. But the return on investment will be high because smart machines will begin to take care of daily activities, companies will incur a considerably lower operating cost. AI’s proponents claim that technology is only an evolutionary form of automation, a predictable result of the Fourth Industrial Revolution. AI may be efficient at creating things, improving them, and making them cheaper. But there is no replacement for human ingenuity in dealing with the unanticipated changes in tastes and demands.
+
+**Keywords:** Artificial intelligence, Data, Manufacturing, Machine learning, Robotics.
+
+# INTRODUCTION
+
+Artificial intelligence (AI) is a technology that accentuates the formation of smart and intelligent machines that work and respond like individuals. The machines or smart computer with the capability to accomplish intellectual roles such as observing, learning, decision making, reasoning, and solving problems are called artificial intelligence computers or machines. Whereas, the robotics is a field in artificial intelligence which deals in creating smart and intelligent robots using deep learning technology. Robotics technology is a field of artificial intelligence, which is comprised of all the Engineering fields such as mechanical, electrical and computer engineering for planning, designing, assembly, development and application of AI-based robots as shown in Fig. (1)
+
+![](bbox=[0.17, 0.59, 0.8, 0.82])

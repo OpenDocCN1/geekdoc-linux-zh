@@ -1,0 +1,18621 @@
+# AIX 5L 管理
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+本书献给我的
+妻子 Robin
+和女孩们
+Andrea 和 Ana
+
+# 作者简介
+
+Randall K. Michael 是一位认证的 AIX 专家，他在科技领域工作 25 年，专注于计算机系统支持；他在过去十年还一直担任 UNIX 系统管理员，专注于 AIX。Randall 拥有阿拉巴马大学工程学院计算机科学理学学士学位，数学辅修。他广泛的基础经验源于与从事导弹系统研发、汽车电子及控制系统设计、开发和制造、计算机辅助设计（机械和电子）、计算机辅助制造、电信、医院计算机支持、金融、无线通信和饮料制造的企业合作。Randall 曾为克莱斯勒汽车公司、IBM、BellSouth、Egleston 儿童医院、Equifax 和 Glenway Electronics 等公司担任系统管理员。多年来，Randall 主要以合同咨询顾问的身份工作。他目前为位于佐治亚州亚特兰大的可口可乐企业公司（Coca-Cola Enterprises, Incorporated）工作。
+
+# 合作作者简介
+
+Terry Greenlee 自 1992 年起一直是一名独立的 AIX 顾问。他于 1994 年创立了圣何塞 AIX 用户组，并担任主席直至 1999 年。可通过 Terry.Greenlee@AIXadm.org 联系 Terry。
+
+Charles Ritter 是一名 UNIX 系统管理员和信息技术顾问，专门从事 IBM 的 AIX 操作系统。Charles 在业内有八年经验，曾为顶级系统供应商和财富 500 强公司工作，包括日立数据系统（Hitachi Data Systems）、共享医疗系统（Shared Medical Systems）和嘉信理财（Charles Schwab）。可通过 critter@aixadm.com 联系他。
+
+Sander W. Sklar 是斯坦福大学信息技术系统与服务的 UNIX 系统管理员，也是 IBM 认证的 AIX 系统管理专家。
+
+Todd Smith 是一位拥有 20 多年数据处理领域经验的 IBM 认证 AIX 专家。他曾在 Ciba-Vison 担任程序员/分析师；在可口可乐企业公司担任 iSeries (AS/400) 和 iSeries (RS/6000) 平台的系统管理员；以及担任企业 UNIX 架构经理。他目前拥有 A. Todd Smith Consulting (www.a to dds mith.com)。
+
+Joey Nelson 是 Avallant, Inc.（前身为 CLAM Associates）的高级教育专家，专门从事 AIX 和 HACMP 教学。他在硬件/软件支持和计算机培训方面有 30 多年的计算机经验。他目前被认证为 AIX 高级技术专家和 Cisco 认证网络 associate。可通过 joey@avallant.com 联系他。
+
+Sandy Larson 是 Avallant, Inc. HACMP 项目的高级技术作家。自 1998 年以来，她一直在 Avallant 编写 HACMP 和其他高可用性产品的文档。可通过 sandy@avallant.com 联系她。
+
+Roger Fisher 是 Avallant, Inc. 的高级教育专家，专门从事 AIX 和 HACMP 培训。他在硬件/软件支持和计算机培训方面有 30 多年的计算机经验。可通过 rfisher@avallant.com 联系他。
+
+Judy Campise 是 Avallant, Inc. 的文档经理。她加入 Avallant 已有九年，自 2.1 版本以来，她记录了 HACMP 的每个发布版本。可通过 judyc@avallant.com 联系她。
+
+Julia Malkin 是 Avallant, Inc. HACMP 项目的技术作家。自 2000 年以来，她一直在编写 HACMP 的文档。可通过 jmalkin@avallant.com 联系她。
+
+# 技术审阅者简介
+
+Frances Au 目前是 INTRIA-HP 的高级技术分析师。自 1995 年以来，她一直从事 UNIX 系统管理工作。除了她在遗留系统方面的广泛知识外，她还对以下 UNIX 平台拥有深入的操作知识：AIX、HP-UX 和 SUN Solaris。在业余时间，她喜欢阅读和旅行。
+
+
+
+
+# 欲了解此标题的更多信息，请点击此处。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 致谢
+
+我为这部作品汇编的知识，基于我多年来合作的计算机专业人士的综合支持以及本书贡献者的天赋。
+
+每一位贡献者都是 AIX 专家，我想逐一感谢他们。Terry Greenlee 不仅是一位贡献者，还是我的技术审查员。Terry 对细节的关注让我羡慕不已，是他让这本书成为了今天的样子。Francis Au 是另一位技术审查员，他为许多章节提供了宝贵的见解。我也很想感谢与我共事的 Todd Smith，他是我的性能专家。IBM 将 Todd 的磁盘调优称为“Todd Tuned”（托德调优）。我要感谢来自 IBM 的 Kim Tran，他在本书中展示了卓越的在网络方面的知识。Charles Ritter 是另一位 AIX 系统管理人才，他为网络和通信领域提供了杰出的见解。来自斯坦福大学的 Sander Sklar 是让安全对我们所有人来说都变得简单的那位人物。此外，我想感谢 James DeRoest 为本书奠定了基石。我也必须感谢 McGraw-Hill 的编辑 Franny Kelly 和 Emma Acker，以及参与本书工作的整个专业团队。我需要感谢 Waterside Production 的 Carole McLendon，感谢她在整个项目中的付出。
+
+在 IBM 方面，我想感谢 Steven Michael，我在亚特兰大的 IBM p690 (Regatta) 研讨会上认识了他。Chris 是 IBM 的项目经理，他与奥斯汀 AIX 开发部的联系给了我所需的支持，我要感谢他允许我查询我的 IBM 联系人。在我完成本书写作期间，这些伙伴让我紧跟操作系统和硬件的变化。我想认可我当地的 IBM 代表：Linda Yeatman、Anna Price、Kyle Kirkman、Stuart Bailey、David Nation、Earl Mayfield Jr.、Dan Hale、Steve McGill、Jake Fredrick、Sean Mea、John Rafferty、Michael Cohn 和 Richard Covington。每当需要时他们总是就在身边，在我需要帮助或有问题时提供了极大的帮助。
+
+我要特别感谢 Jack Renfro，他在 1990 年让我接触了我的第一台 RS/6000。Jack 让我进入了克莱斯勒汽车公司的研发 CAD/CAM 支持组，并做了我多年的导师。我真心感激 Jack 教给我的所有事情，尤其是让我去处理那些*简易*项目。我从最优秀的人那里学到了知识！
+
+最后，如果 *Morm 和 Gene* 没有帮我挂起墙上的招牌，这本书就不会由我写成了。感谢他们给我机会在阿拉巴马大学工程完成我的计算机科学本科教育。
+
+# 第一部分
+# 系统管理任务与工具
+
+- 1 引言
+- 2 DocSearch 与在线手册页
+
+
+![](img/82f851021955589d82b22750fb3b1646_17_0.png)
+
+# 第 1 章
+## 引言
+
+![](img/82f851021955589d82b22750fb3b1646_17_1.png)
+
+在近过去，UNIX 主要存在于研究机构和大学生的尘土飞扬的大楼里。在这些环境中，UNIX 被用作一种可以被构建以滿足研究社区需求的程序员工具。它不需要易用，只需要低成本并提供标准的公共接口来支持研究合作和工具构建。UNIX 开放、基于标准的事实使其成为开放系统运动的先驱。
+
+低成本 RISC 处理器的普及将 UNIX 带入了桌面。开放系统、开源和右尺寸（right sizing）运动将 UNIX 带入了商业玻璃屋。时刻已到。UNIX 剪了头发，穿上了西装，并与从桌面到大型机的传统操作系统正面交锋。厂商和标准团体正争相定义和实施 UNIX 系统管理和维护工具，以满足这个不断变化的多样化用户群体的需求。他们成功了吗？嗯，即使在现在，通用的企业管理“控制台”也不能适用于*一切*和*每个人*。
+
+UNIX 系统管理领域的早期产品只是一组封装在各种用户界面中的命令。由于采用了管理和独立及分布式 UNIX 环境的新方法和协议，其中许多工具受到了传统 UNIX 系统管理员群体的强烈批评。这是好事还是坏事，还有待观察。
+
+开放软件基金会 (OSF) 在 1993 年末对其分布式管理环境 (DME) 技术进行了艰难的斗争，但它从未问世。Tivoli、Hewlett-Packard 和其他人接受了挑战，现在提供了强大的多厂商 OS 和网络管理工具。它们具有互操作性吗？销售宣传册和 CD-ROM 演示 certainly 表明它们不仅具有互操作性，还符合所有最新的标准规范。还记得标准吗？每个人都有一套。与其花费大量时间来验证标准问题，最好的时间利用方式是对每个产品进行测试并投票使用辛苦赚来的钱。既然你在读这本书，我可以安全地假设，关于开发完美系统管理工具的工作仍有待完成。
+
+与任何多厂商操作系统一样，UNIX 需要特别的关注，以确保资源在用户群之间公平分配，并确保这些资源免受入侵或故障。作为系统管理员，我们的工作是确保这些要求得到满足。我们怎么做？请继续阅读！
+
+# AIX 和 UNIX
+
+AIX 是 UNIX 吗？在很多方面，它可能被称为传统 UNIX 系统有很大不同。什么定义了 UNIX？大多数厂商的 UNIX 产品，包括 AIX，都通过了系统 V 接口定义 (SViD) 测试，符合 POSIX，并获得了 X/Open 认证。这使它们成为 UNIX 吗？在你回答之前，请记住：MVS，然后是 OS/390，现在是 zSeries 都获得了 X/Open 认证。在 AIX 中发现的大多数差异
+
+
+
+涉及系统管理。正如你可能预期的那样，在抱怨或赞扬 UNIX 的发展时，系统管理员们的声音最大。
+
+AIX 提供了 BSD 和 System V 功能的非常稳固的混合体。来自这两种环境的用户都会发现很容易在这里找到归属感。衡量操作系统的标准在于它是否提供了一个能够辅助而非阻碍你进行有意义工作的环境。它还必须与其他架构具有互操作性。按照这个定义，AIX 表现得非常好。
+
+至于 UNIX 的未来走向，人们只能希望厂商社区能认真维持 UNIX 统一的外观和感觉。由 HP、Sun、IBM、SCO、USL 和 Univel 发起的通用开放软件环境（COSE）联盟是一个正确的步骤。还有其他一些厂商联盟，我们也已经看到诸如通用桌面环境（CDE）等接口变成了现实。
+
+## AIX 5L 版本的新特性
+
+从 AIX 5L 开始，AIX 与其他 UNIX 版本之间的共性更加紧密。总体而言，AIX 正在缓慢地向 System V 方向靠拢，IBM 通过引入 Linux 亲和性到 AIX 5L 和 AIX 4.3.3 中，拥抱了开源运动。接下来的章节将展示 AIX 5L 中的一些新特性和增强功能。
+
+### Linux 亲和性
+
+IBM 已将 Linux 引入支持领域，并纳入 AIX。借助 AIX 5L 以及维护级别为 8 的 AIX 4.3.3，你可以运行 Linux 应用程序、工具和实用程序，并在你的 AIX POWER 机器上获得与 Linux 相同的外观和感觉，支持 KDE-2 和 GNOME。你可以在 AIX 上运行原生 Linux 程序，也可以将你的 Linux 应用程序源代码移植到 AIX 并重新编译该应用程序以创建新的 AIX 应用程序。通过重新编译应用程序源代码，你可以为你的 Linux 应用程序增加 AIX 的可靠性和可扩展性。这允许你在小型 Linux 和 Intel 服务器上启动电子商务，并使用 AIX 扩展你的基础设施。
+
+有三种机制支持 Linux 亲和性。首先是 AIX Linux 应用程序工具箱。第二种机制是通过应用程序编程接口（API）代码，第三种是在 AIX 上重新编译 Linux 源代码。让我们逐一查看这些机制。另外，请访问 IBM Redbook 网站上的“在 AIX 上运行 Linux 应用程序”文档，地址为 http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246033.pdf
+
+#### AIX Linux 应用程序工具箱
+
+AIX Linux 应用程序工具箱包含大量原生 Linux 应用程序、工具和实用程序。GNU 和 Linux 应用开发工具允许你为 AIX 开发新应用程序。你还有两个新的桌面环境选项。除了命令行、X 和 CDE 之外，现在还可以拥有 GNOME 和 KDE-2。Linux 用户还享有使用 Red Hat 软件包管理器（RPM）安装软件的便利，这整体上为 Linux 用户提供了一个熟悉的工作环境。
+
+#### Linux API
+
+应用程序编程接口（API）程序和头文件与 Linux 兼容。因此，这不是一个环境或额外的软件层，而是一个真正的 API。在 AIX 上为 Linux 新开发的 API 正由 IBM 和其他开发人员持续开发。你的应用程序作为原生 AIX 应用程序运行。
+
+#### RPM 格式
+
+借助 AIX 上的 Red Hat 软件包管理器（RPM），你可以使用在 POWER 平台上的 Linux 中熟悉的 **rpm** 命令来安装原生 Linux 应用程序。你还可以使用 IBM 的新安装向导 geninstall 安装 RPM 格式的 Linux 程序。使用安装向导，你可以安装 AIX **installp** 包以及以下任何一种软件包格式：
+
+- InstallShield 多平台（ISMP）
+- Red Hat 软件包管理器（RPM）
+- 统一设备接口（UDI）
+
+#### 在桌面上运行 KDE-2 或 GNOME
+
+AIX 中的 Linux 亲和性带来了 KDE-2 和 GNOME 桌面环境。对于你的 Linux 用户来说，它们提供了 Linux 的外观和感觉，以及 AIX 和 pSeries 和 RS/6000 平台的可扩展性和可靠性。桌面可以通过几条命令轻松更改，因此每个人都可以工作在一个熟悉且舒适的环境中。
+
+#### 新的卷组特性
+
+现在你可以拥有一个只读卷组。这是一个重要的新特性，为只读和静态环境的数据保护工作增添了内容。此外，卷组标识符（VGID）的长度已从 16 个字符增加到 32 个字符。这与物理卷标识符（PVID）的字符长度相符。卷组级别还添加了热备（Hot Spare）功能。
+
+#### JFS2 文件系统
+
+需要巨大的文件系统吗？增强型日志文件系统，即 JFS2，让你倍感幸运。使用 JFS2，你可以拥有一个最大为 4 PB（PB）的文件系统（4PB 限制是理论限制。实际测试的文件系统大小为 1 TB，但这不是令人惊讶的部分。你还可以创建最大为 4PB 的文件，1 TB 是测试的文件大小。另外，使用 JFS2 你不必担心 i-nodes，因为它们现在是动态分配的。JFS2 支持 32 位内核，但使用 64 位内核你会看到性能提升。
+
+### 热点管理
+
+**migratep** 命令是后来者，它允许你将存储管理细化到逻辑分区级别。磁盘上有热点吗？将热点磁盘分区移动到不太活跃的磁盘！使用 **migratep** 命令，你可以控制特定逻辑分区的准确位置。为了找到热点，你使用 -e 选项通过 **lvinstat** 命令打开统计功能。
+
+**打开统计收集：**
+
+```
+# lvinstat -e -v rootvg
+```
+
+**关闭统计收集：**
+
+```
+# lvinstat -d -v rootvg
+```
+
+**按 LV 查看 VG 统计信息：**
+
+```
+# lvinstat -v rootvg
+```
+
+**按 LP 查看 LV 统计信息：**
+
+```
+# lvinstat -l nd3
+```
+
+### 32 位和 64 位内核支持
+
+当你安装 AIX 5L 时，你可以选择 32 位或 64 位内核。在大多数情况下，这个选择并不是一个关键决策。32 位和 64 位内核都支持 64 位应用程序。两个内核还支持新的 JFS2 文件系统，它允许使用大型文件系统。那么为什么要做这个决定呢？事实证明，JFS2 在 64 位内核下具有更好的性能。使用 64 位内核还可以支持多达 96GB 的内存。
+
+如果你正在运行 64 位应用程序，使用（或计划使用）JFS2，或者需要 96GB 的内存，你应该安装 64 位内核。另一方面，对于 32 位应用程序，使用 32 位内核可能会获得更好的性能。
+
+**bootinfo -y** 命令显示你的系统是否支持 32 位或 64 位。自 RS/6000 H70 以来的机器都是 64 位的。
+
+**bootinfo -K** 命令直接以 32 或 64 的整数值返回你系统当前的内核模式信息。
+
+**swmon -P <进程 _ID>** 命令显示当前运行的进程是 32 位还是 64 位，以及它是否是多线程的。该信息在 **64-bit** 和 **Mthrd** 列中找到。
+
+如果你的系统当前运行在 32 位模式，并且你想切换到 64 位模式，请键入以下命令，前提是你已经安装了 **bos.mp64** 文件集。
+
+```
+# ln -sf /usr/lib/boot/unix_64 /unix
+# ln -sf /usr/lib/boot/unix_64 /usr/lib/boot/unix
+# bootboot -ak /usr/lib/boot/unix_64
+# shutdown -fr
+```
+
+系统重新启动后，系统将切换到 64 位模式。
+
+## 资源监控和控制（RMC）子系统
+
+新增了一个名为资源监控和控制（RMC）的新子系统。该子系统类似于可扩展并行服务器中使用的可靠可扩展集群技术（RSCT）。它允许对预定义和创建的任务和事件进行系统监控。有 84 个预定义条件，你可以设置阈值级别以响应触发级别。触发响应会在事件超过阈值时通知你。你通过基于 Web 的系统管理器（WebSM）来设置 RMC。
+
+## AIX 现在支持 UNIX System V 打印
+
+这是 IBM 的一项集中化工作。System V 打印相比“经典” AIX 打印机子系统有许多优势。例如，使用 System V 你支持表单，并且可以限制用户社区对打印机的访问并使用标准 PostScript 过滤器。然而，同一时间只能有一个打印机子系统处于活动状态，但你可以在 System V 和经典 AIX 打印机子系统之间轻松切换。
+
+## 系统挂起检测
+
+系统挂起检测功能允许你在系统处于极端负载情况时定义操作。新增了一个名为 shaedmon 的守护进程，它监控系统运行进程的能力，并在超过阈值时采取指定的操作。操作包括：
+
+- 在错误报告中记录错误。
+- 向系统控制台发送警告消息。
+- 自动重启系统。
+- 执行命令。
+- 在系统控制台上启动恢复会话登录。
+
+## 动态 CPU 取消分配
+
+这个新特性是 Project eLiza 的一部分，这是 IBM 的一项持续努力，旨在生产 *自愈* 机器等。动态 CPU 取消分配增强了
+
+
+通过动态将故障 CPU 下线，以确保 SMP 机器的可用性。此功能默认未启用。配置此选项至少需要三个 CPU。
+
+要启用 CPU 释放功能，您可以使用 AIX 系统管理接口工具 (SMIT) 或此处所示的命令：
+
+```
+# chdev -l sys0 -a cpuguard='enable'
+```
+
+完成配置更改后，您可以使用以下命令验证是否已启用该功能：
+
+```
+# lsattr -El sys0
+```
+
+从 AIX 4.3.3 开始，您还可以选择在命令行上动态释放 CPU。这对于可扩展性测试非常有用。使用逻辑 CPU 号来释放 CPU，逻辑 CPU 号是 0 到 n-1 之间的整数。n 的值是系统中的 CPU 总数。要释放编号为 3 的 CPU，请使用以下命令：
+
+```
+# cpu_deallocate 3
+```
+
+然后，您可以使用以下命令验证处理器是否已下线：
+
+```
+# lsattr -El proc3
+```
+
+## 动态管理分页空间
+
+AIX 5L 新增了一项功能，允许使用 `chps -d` 命令在无需重新启动系统的情况下动态减少分页空间的大小。此前，您必须先禁用目标分页空间，使其在下一次系统重启时不处于活动状态，然后重新启动系统，移除分页空间，并添加一个您所需大小的新分页空间。随着 `swapon` 命令的加入，现在可以动态释放分页空间并将其下线，因此不再需要上述漫长的过程。
+
+## 新的 swapon 命令
+
+`swapon` 命令由 `/usr/sbin/shrinkps` shell 脚本调用，用于动态停用活动的分页空间。也可以在命令行上使用 `swapon` 命令。要使 `swapon` 命令正常工作，有两个要求。分页空间必须当前处于活动状态，并且必须使用 `swapon` 命令激活。第二个要求是系统必须拥有足够的剩余分页空间以正常运行。要释放一个或多个分页空间，请使用以下命令：
+
+```
+# swapon paging_device [paging_device]
+```
+
+**示例：**
+
+`# swapoff paging00 paging03`
+
+在此示例中，`paging00` 和 `paging03` 分页空间被停用。
+
+## 即时缩小分页空间
+
+您可以使用以下 `chps` 命令结构即时缩小分页空间的大小：
+
+```
+# chps -d Decrement_LVs [-a yes|no] paging_space
+```
+
+其中 `Decrement_LVs` 是逻辑分区的移除数量，`-a yes|no` 指定是否在下一次系统重启时激活此分页空间。
+
+以下命令将 `paging01` 分页空间缩小四个逻辑分区，并在每次后续重启时激活该分页空间：
+
+`# chps -d 4 -a yes paging01`
+
+此命令调用 `/usr/sbin/shrinkps` shell 脚本，从而完成之前繁琐的分页空间缩小步骤，且无需重新启动系统。
+
+## Web 系统管理器 (WebSM)
+
+Web 系统管理器在 AIX 5L 中得到了大量增强。现在 WebSM 可以管理的范围比 SMIT 更广。例如，System V 打印只能从命令行或通过 WebSM 进行管理。此外，WebSM 还内置了工作负载管理器 (Workload Manager)，允许您跨系统限制资源以平衡工作负载，并确保应用程序保持在预定义的限额之内。然而，与 SMIT 不同，WebSM 没有日志记录，因此您无法进行审计跟踪。
+
+您还可以将 WebSM 启用为客户端/服务器环境。在此环境中，您可以从远程浏览器管理系统。要将 WebSM 启用为客户端/服务器应用程序，请输入以下命令：
+
+`# /usr/websm/bin/wsmserver -enable`
+
+## 性能和安全增强
+
+AIX 5L 增加了两款新的性能工具：`truss` 和 `alstat`。`truss` 命令允许进行系统调用跟踪，而 `alstat` 允许查看内存偏移量。其他性能命令也新增了功能，例如 `vmstat`，它通过 -4 开关添加了时间戳。
+
+在安全方面，原生 Kerberos System V 成为标准，并且提供了 IP 密钥加密安全、PKCS 支持以及 IBM Secure Way Directory。
+
+## 主动和被动死网关检测
+
+借助死网关检测，如果主要适配器网关无法访问，系统将执行适配器交换或适配器故障转移，并切换到备份网关。此配置至少需要两张网络适配器卡。死网关检测可以通过两种方式进行配置：主动式和被动式。被动式使用 TCP/IP 和 ARP，而主动式使用丢失的 ping 包来检测死网关。
+
+## 适用于 AIX 的 Jabber 即时通讯
+
+除了 Linux 亲和性之外，IBM 还增加了对适用于 AIX 的 Jabber 即时通讯器的支持。Jabber 允许您在内部网或互联网上设置即时通讯。这使得您能够发送和接收实时消息，并接收其他活跃用户的通知。
+
+## 系统管理活动
+
+如果您是 UNIX 系统管理的新手，您可能正在思考系统管理员究竟负责什么。UNIX 系统管理涉及一系列多样化的技能，涵盖从系统安装和配置到终端用户支持的全方位内容。大型 UNIX 环境可能由一组管理员管理，每人负责某个特定子系统。研究人员可能只需要处理桌面上的 UNIX 工作站。无论是单独工作还是作为团队的一部分，管理员都必须对整体的 UNIX 系统管理活动有总体了解，以确保其负责领域与构成 UNIX 操作系统的所有子系统无缝协作。在桌面环境中，这种责任通常扩展到本地系统之外的网络和其他构成分布式环境的供应商平台。
+
+本书中的文本按照逻辑组织，以反映 AIX 管理主题和组件，便于快速定位相关内容。各章节包含详细的内容描述、示例和图表。在适当的地方，同时提供 AIX 系统管理接口工具 (SMIT)、Web 系统管理器 (WebSM) 和命令行选项。命令示例以 shell 提示符字符 (#) 标记，以区别于其他项目符号，并提醒读者大多数配置活动是以超级用户权限执行的。
+
+```
+# command
+```
+
+每章最后以一个检查清单主题列表结束，涵盖关键点和信息。DocSearch 是 AIX 及相关应用的在线手册界面。本教程旨在作为指向 AIX 印刷版和 DocSearch 文档中更具体信息的指南。它还基于 RS/6000 和 pSeries 硬件以及 AIX 操作系统的实践经验提供了一些见解。
+
+## 系统管理任务和工具
+
+本书第一部分概述了系统管理职责，并识别了基础参考和管理工具。描述了 AIX 帮助系统 DocSearch 的特性。
+
+## 系统架构
+
+第二部分描述了 RS/6000 和 pSeries 硬件的发展历史和架构。提供了 AIX 内核的概述，以说明操作系统原理，这有助于您理解后续章节中介绍的配置和管理问题。
+
+## 系统安装和管理
+
+第三部分描述了 AIX 管理工具，包括系统管理接口工具 (SMIT) 和 Web 系统管理器 (WebSM)，可用于管理 AIX 操作系统的大多数方面。
+
+随后讨论将转向安装和管理 AIX 操作系统所需的步骤。接着概述了 AIX 启动过程和运行。
+
+## 系统配置和自定义
+
+第四部分将带您进入操作系统已安装且必须根据应用环境需求进行自定义的阶段。这包括运行时配置、设备配置，以及对对象数据管理器 (ODM) 及其用于存储和管理系统配置数据方式的描述。在主题切换到磁盘子系统和逻辑卷管理器 (LVM) 之前，讨论了磁带解决方案，包括向系统添加磁盘驱动器的步骤。我们在第四部分以终端、调制解调器以及 AIX 和 System V 打印子系统结束。
+
+## 网络配置和自定义
+
+第五部分的章节描述了如何使系统能够通过多种网络架构和拓扑结构进行访问。TCP/IP、UUCP 和 SNA 均被详细涵盖。
+
+## 网络文件系统
+
+第六部分转向基于网络的文件系统，这些文件系统提供了在分布式环境中共享信息的底层架构。这些章节概述了多种常见的文件系统架构、其特性和实现要求，以及促进 UNIX 和 Windows 系统之间文件共享的机制，包括网络文件系统 (NFS)、分布式文件系统 (DFS) 和桌面文件系统 Samba。
+
+
+
+
+
+# 第 1 章：简介
+
+## Linux 亲和性
+
+第七部分涵盖 AIX 上的 Linux 亲和性。这包括在 AIX 上运行本地 Linux 应用程序的详细信息，以及重新编译 AIX 上的 Linux 源代码以创建新的 AIX 应用程序的能力。
+
+## 分布式服务
+
+第八部分涵盖一系列分布式服务。这些包括配置电子邮件、网络新闻和 Web 服务器/浏览器。X11 管理得到了详细的阐述。Web 主题包括工作组协作工具以及使用安全服务器创建 DMZ 的方法，并附带了一些 XML 的内容。
+
+## 用户和资源管理
+
+第九部分帮助系统管理员管理用户帐户。本节概述了如何管理用户环境、进程管理以及系统计帐的使用，并介绍了简化帐户管理和报告的方法。
+
+## 安全性
+
+第十部分讨论了如何实现 DCE 和 Kerberos，以在大型联网环境中保护并授权主体。还讨论了受保护的计算机基础（TCB）以及 COPS、Crack 和 Trip Wire 等安全工具。
+
+## 系统恢复与调优
+
+在第十一部分中，您将了解当夜间出现问题时该怎么办。这展示了如何保持您的 pSeries 和 RS/6000 机器运行顺畅高效。解释了备份策略和政策。审查了系统监控工具、问题分析以及恢复技术。
+
+## 高级分布式架构
+
+第十二部分是关于高可用性集群多处理（HACMP）以及集群技术和实施考虑事项。将向您展示如何构建和配置 HACMP 集群，测试故障切换能力，并保持集群平稳运行。
+
+## SAN、NAS 和 iSCSI 整合存储
+
+第十三部分向您介绍了存储区域网络（SAN）、网络附加存储（NAS）以及 iSCSI 协议。每个存储概念都进行了讨论，并对每项技术给出了详细的描述。您将学习如何使用 TotalStorage StorWatch Specialist 将存储添加到企业存储服务器（ESS，也被称为 Shark），以及在服务器之间移动存储。我们还将介绍 TotalStorage StorWatch Expert 的数据收集功能。
+
+# 检查清单
+
+以下是系统管理任务和工具重点的检查清单：
+
+- 定义并实施 UNIX 系统管理和管理工具。
+- 定义 AIX。
+- 定义 UNIX。
+- 您可以为 OSF/1 操作系统的应用环境规范添加 AIX 命令和库。
+- 识别 AIX 5L，并列出 AIX 与其他 UNIX 版本之间存在大量共同点的原因。
+- 识别 UNIX 系统管理多样化的技能集。
+- 您可以在 AIX 上运行本地 Linux 程序。
+- 您可以将 Linux 应用程序源代码带到 AIX。
+- 重新编译应用程序以创建新的 AIX 应用程序。
+
+# 第 2 章
+
+## DocSearch 和在线手册页：从系统获取帮助
+
+![](img/82f851021955589d82b22750fb3b1646_29_0.png)
+
+从 AIX 版本 4.3 开始，IBM 用基于 Web 浏览器的文档库服务（或称 DocSearch）取代了 InfoExplorer。该服务由两部分组成——文档库和一个基于 Web 的搜索引擎。
+
+在命令行上，`docsearch` 命令在 Web 浏览器窗口中启动应用程序。因此，正如您可以想象的那样，只要具有网络访问权限和本地 Web 浏览器，就可以在任何外部机器上查看文档库服务。对于新的 AIX 用户和系统管理员来说，掌握帮助系统是早期的障碍之一；关于文档位置和访问机制的混淆是主要问题。AIX DocSearch Web 浏览器文档系统是一个强大的在线辅助搜索和检索工具。当您大喊“救命！”时，DocSearch 是您的在线救援者。
+
+### AIX 帮助
+
+与其他任何 UNIX 版本一样，AIX 也有在线手册页。`man` 命令搜索有关命令和文件的参考信息。然而，IBM 已付出了巨大努力，提供了一个易于使用和直观的大型文档库和搜索服务。基础文档库包含几乎任何主题的信息，但还有扩展文档文件集，用于用户和管理员指南、AIX 技术参考以及可选项安装的应用开发工具。IBM 还在 IBM 网站（www.ibm.com/servers/aix/library）上提供了相同的在线文档。因此，如果您磁盘空间有限且拥有 Web 访问权限，可以跳过安装文档库服务。
+
+### DocSearch 概述
+
+文档库服务提供了搜索、阅读和打印在线 HTML 文档的功能。要启动 DocSearch 系统，请在命令行输入 `docsearch`，或在公共桌面环境（CDE）中点击帮助图标，然后从图标列表中 select 文档库。这两种技术都会在 Web 浏览器窗口中启动文档搜索服务（使用此服务需要 X 环境）。DocSearch 是注册在文档服务器上的所有卷的全局系统库。通过点击浏览器窗口中的超文本链接并深入文档块，或者通过执行关键字或模式搜索来显示文档库中注册的所有相关信息的匹配列表，可以阅读这些文档。搜索可以是简单的短语搜索，也可以使用逻辑运算符进行高级搜索。
+
+### DocSearch 安装
+
+文档库服务在 AIX 5L 中默认安装，但如果您从之前的 AIX 版本或发布版本迁移升级到 5L，则可能会遇到一些 DocSearch 问题。截至本文撰写时，IBM 列出了 **常见** 的 22 个 DocSearch 问题。这些问题从缺失或未设置的*环境*变量到不当的 Web 服务器配置，以及介于两者之间的许多小问题都有涉及。安装和使用该服务很直接，但安装过程很脆弱，必须完成所有步骤文档库服务才能正常工作。
+
+### 安装 Netscape 浏览器
+
+Netscape 是首选的 Web 浏览器，也是搜索服务中首先安装的一个组件。Netscape 浏览器软件可以在 AIX 5L Expansion Pack 或 AIX 4.3.3 Bonus Pack CD-ROM 上找到；它也可以从 `http://www.netscape.com` 下载。然而，Netscape 网站不提供 SMIT 和**install** 命令所需的**备份文件格式**（**bff**），因此您将不得不使用 Netscape 提供的安装 shell 脚本。通过 **smitx install_all** SMIT 快速路径、**installp** 命令或 Netscape 为下载文件提供的安装 shell 脚本，为适当的语言环境安装所有 Netscape 包。此时没有需要配置的内容。
+
+### 安装 Web 服务器
+
+Web 服务器软件是使搜索服务得以运行的机制。IBM 代码基于 Apache Web Server 代码，但任何能够处理 CGI 的 Web 服务器都可以工作。在本书中，我们将使用 IBM HTTP Server 包，它实际上只是隐姓埋名的 Apache。IBM HTTP Server 软件位于 AIX 5L Expansion Pack CD-ROM 上，但在基础操作系统（BOS）的新安装过程中默认安装。根据 Web 服务器代码的版本，您将安装三个文件集之一。对于 1999 年 11 月之前发布的任何 AIX 操作系统，HTTP Web 服务器代码版本为 1.3.2 或更低版本；最新版本为 AIX 4.3.3 的 1.3.6.0 和 AIX 5L 版本 5.1 的 1.3.12.2。为您的特定版本安装以下文件集：
+
+- **版本 1.3.3.2** (AIX 4.3.3 之前)
+
+```text
+http_server.base.core
+http_server.base.source
+http_server.modules.ssl
+```
+
+- **版本 1.3.6.0** (AIX 4.3.3)
+
+```text
+http_server.admin
+http_server.base.rte
+http_server.base.source
+```
+
+- **版本 1.3.12.2** (AIX 5L 版本 5.1)
+
+```text
+http_server.base.rte
+http_server.base.source
+http_server.html.en_US
+http_server.man.en_US
+```
+
+
+
+
+
+## CD-ROM 上的 DocSearch 和 man 页面
+
+你可以从已挂载的 CD-ROM 上运行 DocSearch 和 man 页面，但不推荐这种方法。响应时间可能无法接受；而且由于磁盘空间相对非常便宜，这种方法很少被使用，因为所需的文档可能跨越多个 CD-ROM 卷。除了响应缓慢的问题外，CD-ROM 必须始终处于挂载状态，文档服务才能正常工作。对专用 CD-ROM 光驱的要求可能足以成为将文档加载到本地硬盘上的理由。
+
+如果你的系统中尚未拥有 **inadm** 用户和 **inadm** 组，你需要为文档搜索服务在系统中定义一个新的 **inadm** 用户和组。首先，创建一个名为 **inadm** 的组，然后创建一个名为 **inadm** 的新用户。**inadm** 用户应以其 **inadm** 组作为主组。确保语言环境变量设置为正确的值，对于美国英语为 **en_US**。
+
+```bash
+echo $LANG
+```
+
+使用以下 SMIT 快速路径来更改语言变量：
+
+```bash
+smitty chlang
+```
+
+要启动这个专用的 CD-ROM 配置，你首先需要创建一个 CD-ROM 文件系统以挂载该 CD-ROM。CD-ROM 文件系统的访问方式与标准文件系统相同，但它是只读挂载的。一如既往，在创建文件系统时需要指定三个元素：设备名称、挂载点以及是否在系统重启时自动挂载该文件系统。创建此文件系统有三种方法。
+
+### 命令行
+
+```bash
+# crfs -v cdrfs -p ro -d /dev/cd -m /infocd -A yes
+```
+
+### SMIT 快速路径
+
+```bash
+# smitty crcdrfs
+```
+
+### 基于 Web 的系统管理
+
+```bash
+# wsm
+```
+
+创建 CD-ROM 文件系统后，你需要使用 **mount infocd** 将 CD-ROM 挂载到系统上（假设挂载点是 **/infocd**）。下一步是运行位于基础文档 CD-ROM 上的链接程序。首先，更改目录到 CD-ROM 挂载点——在本例中是 **/infocd**，然后运行 **linkbased** 命令。
+
+```bash
+# mount /infocd
+# cd /infocd
+# ./linkbased
+```
+
+**linkbased** 命令将创建指向 CD-ROM 上文档的系统符号链接。在这种情况下，DocSearch 和 **man** 页面的基本操作与将文档加载到本地硬盘上时相同。但是，响应时间可能非常差。
+
+当你放弃使用 CD-ROM 并希望将文档安装在服务器磁盘上时，你首先需要移除所有先前创建的符号链接。IBM 考虑到了这一点，并创建了一个取消链接程序。要断开所有链接，请运行 **unlinkbased** 命令并移除 CD-ROM 文件系统。
+
+```bash
+# mount /infocd
+# cd /infocd
+# ./unlinkbased
+# umount /infocd
+# rmfs [-r] /infocd
+```
+
+> 注意 **rmfs** 命令上的 -r 开关将移除挂载点或目录。
+
+## 固定磁盘上的 DocSearch
+
+为了获得最佳性能，整个文档搜索服务库应安装在文档服务器本地的固定磁盘上。NFS 安装也能工作，但可用性则取决于 NFS 服务器。额外的复杂性层是不推荐的。你也可以安装 DocSearch 核心并让文档 CD-ROM 保持挂载状态，如前一节所述。这种方法可能极慢，具体取决于 CD-ROM 的速度，我们都知道 IBM 以拥有最新最快的 CD-ROM 驱动器而闻名，但服务器确实跑得很热！你还可以通过 NFS 挂载 CD-ROM 以获得更差的性能。接下来，我们将展示如何在 AIX 4.3.3 和 5L 版本 5.1 上安装 DocSearch。
+
+## 在 AIX 4.3.3 上安装 DocSearch
+
+如果 **inadm** 用户和组尚不存在，你首先需要在系统中为文档搜索服务定义一个新的用户和组。首先，创建一个名为 **inadm** 的组，然后创建一个名为 **inadm** 的新用户。**inadm** 用户应以其 **inadm** 组作为主组。确保语言环境变量设置为正确的值，对于美国英语为 **en_US**。
+
+```bash
+# echo $LANG
+```
+
+使用以下 SMIT 快速路径来更改语言变量：
+
+```bash
+# smitty chlang
+```
+
+接下来，安装以下文件集。在每种情况下，都列出了所在的 CD-ROM 以及具体的文件集。
+
+### AIX 4.3.3 CD-ROM #1
+
+```text
+bos.docsearch.rte
+bos.docsearch.client.Dt
+bos.docsearch.client.com
+bos.html.en_US.topnav.navigate
+bos.msg.en_US.docsearch.client.Dt
+bos.msg.en_US.docsearch.client.com
+```
+
+> **注意** 如果你的系统没有运行 CDE，则可以省略 `.Dt` 文件集。
+
+### AIX 4.3.3 CD-ROM #2
+
+```text
+IMNSearch.bld.all
+IMNSearch.rte.all
+```
+
+### AIX 4.3.3 基础文档 CD-ROM
+
+```text
+X11.html.en_US.all
+bos.html.en_US.all
+```
+
+### AIX 4.3.3 附加包 CD-ROM，第 1 卷
+
+```text
+Netscape.communicator.com
+Netscape.communicator.plugins
+```
+
+可选安装包括 AIX 4.3.3 扩展文档 CD。AIX 4.3.3 的扩展文档 CD-ROM 包含用户和管理员指南、AIX 技术参考以及编程指南。如果你需要这些扩展文档，你可以仅安装你需要的单个组件。并不需要 CD-ROM 的全部内容。
+
+基础文档 CD-ROM 的安装可能需要相当长的时间，特别是如果你有一台较旧的 Micro Channel 机器，配备低速的 2X CD-ROM 驱动器；在这种情况下，安装可能需要几个小时才能完成。当所有这些文件集安装完成后，你可以进入下一步，配置 Web 服务器。
+
+在配置 Web 服务器之前，你首先需要停止任何 **httpd** 进程：
+
+```bash
+# ps -ef | grep httpd
+# kill <httpd 进程 ID>
+```
+
+接下来，你需要停止服务器上的 IMNSearch 进程：
+
+```bash
+# ps -ef | grep -i imm
+# immss -stop immhelp
+```
+
+此外，如果 /etc/inittab 文件中包含 **httpdlite** 条目，请确保使用冒号 (:) 将其注释掉。
+
+**注意** *etc/inittab* 文件使用冒号 (`:`) 而不是井号 (`#`) 来作为注释。
+
+现在你可以使用 SMIT 配置 Web 服务器了。首先，输入
+
+```bash
+# smitty web_configure
+```
+
+然后按照以下步骤操作：
+
+1. 选择 Change Documentation And Search Server。
+2. 按 ENTER。
+3. 按 F4 选择 Local。
+4. 按 ENTER。
+5. 按 F4 选择 IBM HTTP Web Server In Default Location。
+6. 按 ENTER。
+7. 所有字段应自动填充，如下面的示例所示。
+
+```text
+**IBM HTTP Server Version 1.3.3.2**
+DEFAULT_BROWSER = netscape
+DOCUMENTATION_SERVER_MACHINE_NAME = yogi
+DOCUMENTATION_SERVER_PORT = 80
+CGI_DIRECTORY = /usr/ppc/HTTPServer/share/cgi-bin
+DOCUMENT_DIRECTORY = /usr/HTTPServer/share/htdocs
+```
+
+```text
+**IBM HTTP Server Version 1.3.6.0 and Later**
+DEFAULT_BROWSER = netscape
+DOCUMENTATION_SERVER_MACHINE_NAME = yogi
+DOCUMENTATION_SERVER_PORT = 80
+CGI_DIRECTORY = /usr/HTTPServer/cgi-bin
+DOCUMENT_DIRECTORY = /usr/HTTPServer/htdocs
+```
+
+安装已完成。
+
+## 在 AIX 5L 上安装 DocSearch
+
+默认情况下，DocSearch 库搜索服务作为 BOS 的一部分安装在 AIX 5L 上。这对 IBM 来说是新的；在 AIX 5L 之前，我们需要四处寻找所需的文件，而且很容易遗漏一两个文件。如果你从以前的 AIX 版本或发行版进行了 *迁移升级*，你在让文档搜索服务再次工作时可能会遇到一些问题。对于这些问题的每一个，我发现花一小时卸载并重新安装所有东西最终是节省时间的。
+
+如果你的系统中尚未定义 **inadm** 用户和组，你需要为文档搜索服务在系统中定义一个新的用户和组。首先，创建一个名为 **inadm** 的组，然后创建一个名为 **inadm** 的新用户。**inadm**
+
+
+
+用户的主要组应为 **imnadm** 组。确保语言环境变量设置为正确值，美国英语为 **en_US**。
+
+```bash
+# echo $LANG
+```
+
+使用以下 SMIT 快速路径更改语言变量：
+
+```bash
+# smitty clang
+```
+
+如果您想知道在 AIX 5L 5.1 版本上应安装什么，DocSearch 是使用 5.1 介质上找到的以下文件集安装的。
+
+## AIX 5.1 CD-ROM Volume 1
+
+- bos.docsearch.client.Dt
+- bos.docsearch.client.com
+- bos.docsearch.rte
+- bos.msg.en_US.docsearch.client.Dt
+- bos.msg.en_US.docsearch.client.com
+- IMNSearch.bld.DBCS
+- IMNSearch.bld.SBCS
+- IMNSearch.msg.en_US.rte.com
+- IMNSearch.rte.DBCS
+- IMNSearch.rte.SBCS
+- IMNSearch.rte.client
+- IMNSearch.rte.com
+- IMNSearch.rte.server
+- bos.man.en_US.cmdds
+
+> **注**：如果您的系统没有运行 CDE，您可以省略所有 `*.Dt` 文件集以节省空间。
+
+## AIX 5.1 Expansion Pack CD-ROM
+
+- http_server.base.rte
+- http_server.base.source
+- Netscape.communicator.com
+- Netscape.communicator.us
+
+## AIX 5.1 Base Documentation CD-ROM
+
+- bos.html.en_US.cmdd.cmdd1
+- bos.html.en_US.cmdd.cmdd2
+- bos.html.en_US.cmdd.cmdd3
+- bos.html.en_US.cmdd.cmdd4
+- bos.html.en_US.cmdd.cmdd5
+- bos.html.en_US.cmdd.cmdd6
+- bos.html.en_US.files.files_ref
+- bos.html.en_US.manage_gds.install
+- bos.html.en_US.manage_gds.manage_bos
+- bos.html.en_US.manage_gds.manage_commo
+- bos.html.en_US.manage_gds.printers
+- bos.html.en_US.prog_gds.prog_bos
+- bos.html.en_US.prog_gds.prog_commo
+- bos.html.en_US.techref.base
+- bos.html.en_US.techref.commo
+- bos.html.en_US.topenav.navigate
+- bos.html.en_US.user_gds.user_bos
+- bos.html.en_US.user_gds.user_commo
+- damit.html.en_US_damitgd
+- peragent.html.en_US.usergd
+
+上述文件集列表包括随 AIX 5L 5.1 版本提供的所有可用文档。安装所有这些文件集后，您即可开始配置 Web 服务器。
+
+在配置 Web 服务器之前，您首先需要停止任何 **httpd** 进程：
+
+```bash
+# ps -ef | grep httpd
+# kill <httpd Process ID>
+```
+
+接下来，您需要在服务器上停止 IMNSearch 进程：
+
+```bash
+# ps -ef | grep -i imm
+# imnss -stop imnhel p
+```
+
+此外，如果 **/etc/inittab** 文件中存在 **httpd**lite 的条目，请确保使用冒号 (:) 将其注释掉。
+
+> **注**：**/etc/inittab** 文件使用冒号 (:) 而不是井号 (#) 进行注释。
+
+要配置 Web 服务器，请运行以下命令：
+
+```bash
+# smitty web_configure
+```
+
+1. 选择 [Change Documentation and Search Server](https://example.org/placeholder)（更改文档和搜索服务器）。
+2. 按 ENTER。
+3. 按 F4 选择 [Local](https://example.org/placeholder)（本地）。
+4. 按 ENTER。
+5. 按 F4 选择 [IBM HTTP Web Server In Default Location](https://example.org/placeholder)（默认位置的 IBM HTTP Web Server）。
+6. 按 ENTER。
+
+所有字段都应自动填充，如下例所示。
+
+## IBM HTTP Web Server Version 1.3.12.2
+
+```bash
+DEFAULT_BROWSER = netscape
+DOCUMENTATION_SERVER_MACHINE_NAME = yogi
+DOCUMENTATION_SERVER_PORT = 80
+CGI_DIRECTORY = /usr/HTTPServer/cgi-bin
+DOCUMENT_DIRECTORY = /usr/HTTPServer/htdocs
+```
+
+作为最后一步，**/etc/inittab** 文件需要有一个条目，以便在系统重启时启动 Web 服务器。要检查 **/etc/inittab** 文件以确保 Web 服务器有条目，请输入以下任一命令：
+
+```bash
+# lsitab ih:ishtpd
+```
+
+或
+
+```bash
+# grep ihshtpd /etc/inittab
+```
+
+如果未找到 Web 服务器条目，请插入以下行以在启动时重启服务器：
+
+```bash
+# mkitab ihshtpd:2:wait:/usr/HTTPServer/bin/httpd >/dev/console 2>&1 # HTTP Server
+```
+
+如果您从 4.3.3 迁移到 5.1.0，由于产品的 **oslevel** 特定性，您需要遵循此过程才能使 DocSearch 正常工作。
+
+安装已完成。
+
+## 使用 DOCSEARCH
+
+DocSearch 必须从图形环境（如 X Window System 或 CDE）中执行。访问文档库服务只需将 Web 浏览器指向服务器上的文档目录即可。
+
+在文档服务器上，您可以在 X 环境中输入 **docsearch**，浏览器将打开，并显示列出与文档库服务注册的每本书的可折叠树。对于具有 Web 浏览器的本地用户和远程用户，文档服务器的 URL 应如下所示：
+
+```bash
+http://<Server-Hostname>/cgi-bin/ds_form
+```
+
+其中 `<Server-Hostname>` 是文档 Web 服务器的主机名或 IP 地址。
+
+如果您没有本地 Web 浏览器，或者您有到远程文档服务器的 telnet 会话，则需要允许远程系统访问您的 X 环境，并将显示导出回您的本地机器：
+
+```bash
+# xhost <remote_machine>
+```
+
+或
+
+```bash
+# xhost +
+```
+
+以允许所有机器在本地拥有 X 访问权限。
+
+```bash
+# export DISPLAY=<local_hostname_or_IP_address>:0.0
+# docsearch &
+```
+
+打开的 DocSearch 窗口如 AIX 4.3.3 的图 2-1 和 AIX 5L 的图 2-2 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_39_0.png)
+
+**图 2-1. AIX 4.3.3 DocSearch 主窗口**
+
+![](img/82f851021955589d82b22750fb3b1646_40_0.png)
+
+## Documentation Library
+
+文档库由服务器上所有已注册的文档索引组成。可以搜索库内容，或者在线打开并查看每本单独的书籍。库的所有组件（搜索引擎除外）都是作为基础操作系统的一部分安装的。如果要将系统配置为服务器，则必须手动安装搜索引擎和文档。客户端可以通过 Web 浏览器远程访问文档服务器库。
+
+### 搜索
+
+当您发出 **docsearch** 命令或将 Web 浏览器指向文档服务器时，会看到一个列出可折叠树的浏览器窗口，以及顶部的“Search For”（搜索）字段。顶部还有四个选项卡，分别指向 Books（书籍）、Commands（命令）、Tasks/Topics（任务/主题）和 Other（其他，将显示编程和用户指南）。
+
+要执行搜索，您可以在“Search For”字段中输入感兴趣的关键词并按 ENTER 键。此时，另一个浏览器窗口会打开，显示匹配搜索条件的文章超链接列表。
+
+### 简单搜索
+
+搜索可以是简单的单词或短语匹配，也可以使用 AND、OR 和 NOT 逻辑搜索运算符创建复杂的逻辑搜索。简单搜索如图 2-3 和图 2-4 所示。
+
+简单搜索针对短语或模式有三种选项：
+
+- PHRASE，所有单词按顺序
+- ALL of these words，任意顺序
+- One or MORE of these words，任意顺序
+
+### 高级搜索
+
+高级搜索使用逻辑运算符 AND、OR 和 NOT 执行，如图 2-5 和图 2-6 所示。
+
+逻辑 AND 运算符指定匹配所有单词。逻辑 OR 运算符指定匹配任意单词。NOT 逻辑运算符指定匹配除 NOT 否定的单词以外的所有单词。所有这些逻辑运算符可以混合使用，以实现非常具体的搜索。高级搜索还允许您指定要在单个页面上显示的结果数量。
+
+![](img/82f851021955589d82b22750fb3b1646_41_0.png)
+
+图 2-3. 使用短语进行简单搜索
+
+![](img/82f851021955589d82b22750fb3b1646_42_0.png)
+
+图 2-4. 简单搜索的结果
+
+![](img/82f851021955589d82b22750fb3b1646_42_1.png)
+
+图 2-5. 使用逻辑运算符的高级搜索
+
+![](img/82f851021955589d82b22750fb3b1646_43_0.png)
+
+**图 2-6.** 使用逻辑运算符的高级搜索
+
+### 注册文档以进行在线搜索
+
+在文档服务器上的文档可以被搜索或查看之前，必须发生两件事：每个文档和文档索引必须创建或安装在 DocSearch 服务器上，并且文档和文档索引必须注册到库服务。有两种方法可以将文档注册到服务器。大多数 AIX 应用程序具有为文档服务器预建的索引，并随应用程序自动安装。或者，您可以以手动方式让服务器了解文档，即在服务器上手动创建文档索引，然后手动注册索引。索引会创建压缩版本
+
+文档，或一组文档。这个新创建的索引文件（而非原始 HTML 文件）才是 DocSearch 将进行搜索和显示的对象。
+
+本节将概述注册文档以及创建文档库服务所需索引的步骤。
+
+1. 以 HTML 格式创建文档。
+2. 创建文档的索引。
+3. 在文档服务器上注册新的索引。
+
+索引注册完成后，它们将在 Web 浏览器中显示，准备进行搜索和查看。您可以在在线文档库服务章节“*AIX 5L Version 5.1 General Programming Concepts: Writing and Debugging Programs*”（*AIX 5L 版本 5.1 通用编程概念：编写和调试程序*）中找到这些操作各步骤的详细指南。编写文档的应用程序开发人员会发现该章节对于在编写 **installp** 软件包时创建自动安装索引特别有价值。您还可以将公司的文档注册到在线文档库中。这种灵活性使 DocSearch 成为一个宝贵的全企业文档搜索引擎。
+
+## 常见的 DocSearch 和 man 页面问题
+
+在使用 DocSearch 时，您可能会遇到一个或多个错误。这是最常见的五大问题列表。
+
+**问题 1** 最常见的问题之一是域名解析。您可能需要编辑 `/etc/hosts` 文件，并在短主机名后直接添加一个句点 (.)。例如，
+
+`10.10.10.2 booboo.`
+
+**问题 2** 在 5.1 迁移安装后，您输入 **man ls**，发现没有错误提示或数据输出。您遇到了 DocSearch 显示的某种怪癖。首先确保该命令的文件已安装。以下命令将产生这些文件的目录列表：
+
+```
+# lsipp -f bos.man.en_US.cmbs
+```
+
+这应该显示已安装的 **bos.man.en_US.cmbs** 软件组中的文件。
+
+如果您随后进入 **/usr/share/man/info/en_US** 目录并运行递归长列表 (**ls -Rl * | more**) 查看目录内容，发现大多数文件为空，则存在问题。您需要安装/重新安装以下文件以纠正此问题：
+
+- bos.html.en_US.topnav.navigate - 顶级导航
+- bos.html.en_US.nav - 在线导航
+- bos.html.en_US.cmbs.cmdbal - AIX 命令参考 1
+- bos.html_en_US.cmds.cmda2 - AIX 命令参考 2
+- bos.html_en_US.cmds.cmda3 - AIX 命令参考 3
+- bos.html_en_US.cmds.cmda4 - AIX 命令参考 4
+- bos.html_en_US.cmds.cmda5 - AIX 命令参考 5
+- bos.html_en_US.cmds.cmda6 - AIX 命令参考 6
+
+**问题 3**
+
+您收到以下错误消息：*“Error: Can’t open display: XYZ.”*（错误：无法打开显示：XYZ。）。这意味着您试图打开由 DISPLAY 变量定义的窗口，但该变量定义错误，未设置变量，或者您没有权限使用此显示设备。请依次执行以下命令：
+
+```
+# xhost -<remote_hostname_or_IP_address>
+# export DISPLAY=<local_hostname_or_IP_address>:0.0
+# docsearch &
+```
+
+**问题 4**
+
+CDE 帮助子面板上没有 DocSearch 图标。您已安装 DocSearch，但 CDE 尚未发现新图标。您需要重启工作区管理器以发现新图标。在屏幕的空白处右击。这将弹出工作区菜单。在菜单中，左击“重启工作区管理器”，然后在弹出的对话框中单击“确定”。或者，您可以注销并重新登录到系统。
+
+**问题 5**
+
+DocSearch 正在启动，您收到一条消息称找不到文档服务器。在 AIX 5L 版本 5.1 中，必须手动编辑 *httpd.conf* 文件以定义文档服务器。
+
+```
+# vi /usr/HTTPServer/conf/httpd.conf
+```
+
+在文件中搜索 *ServerName* 变量。取消该行的注释，并输入文档服务器的完全限定主机名：
+
+*ServerName* yogi.mydomain.com
+
+## man 页面
+
+man 页面提供关于 AIX 命令、文件、库子例程和系统调用的参考文档。**man** 命令不会执行 DocSearch 提供的同种类模式搜索，因此您需要确切知道正在查找信息的命令或文件名。**man** 命令的语法如下。
+
+```
+# man { command | file | subroutine | system call }
+```
+
+例如，
+
+```
+# man man
+```
+
+将显示 **man** 命令的在线文档。**man** 命令按以下顺序搜索并显示文档：
+
+- 在 `/usr/share/man` 目录结构中的任何 **nroff** 目录 (**man?**)。
+- 在 `/usr/share/man` 目录结构中的格式化版本目录 (**cat?**)。
+- 如果上述两项搜索失败，则搜索超文本 (DocSearch) 数据库。
+- 超文本文档位于 `/usr/share/man/info` 目录结构中。
+
+## 在 AIX 4.3.3 和 5L 版本 5.1 上安装 man 页面
+
+如果系统只需要 man 页面，那么 DocSearch 可能对来说功能过剩。要在 4.3.3 和 5L 上安装 man 页面，必须安装以下所有软件组：
+
+- bos.html.en_US.topnav.navigate - 顶级导航
+- bos.html.en_US.nav - 在线导航
+- bos.html.en_US.cmds.cmddal - AIX 命令参考 1
+- bos.html.en_US.cmds.cmsd2 - AIX 命令参考 2
+- bos.html.en_US.cmds.cmsd3 - AIX 命令参考 3
+- bos.html.en_US.cmds.cmsd4 - AIX 命令参考 4
+- bos.html.en_US.cmds.cmsd5 - AIX 命令参考 5
+- bos.html.en_US.cmds.cmsd6 - AIX 命令参考 6
+
+## 使用 man 页面
+
+**man** 命令可以访问存储在 DocSearch 中的信息。调用时，**man** 将首先搜索 `/usr/man/cat?` 目录，然后搜索 `/usr/man/man?`，最后，如果已安装 DocSearch 数据，则搜索 DocSearch 数据。命令 **man** 和 **catman** 将 man 页面第 1、2 和 8 节映射到 DocSearch 命令文档，将第 2 和 3 节映射到 DocSearch 子例程文档，将第 4、5 和 7 节映射到 DocSearch 文件文档。您需要定期执行 **catman -w** 以保持 **arprofs** 和 **whatis** 命令的数据库为最新状态。
+
+```
+# catman -w
+```
+
+不时地，您可能需要添加自己的自定义 man 页面信息。这可能是一个解释计费策略、备份支持、本地开发软件等的帮助文件。将本地 man 页面与供应商提供的帮助分开存放是个好主意。这样可以防止它们在安装、维护和升级活动中被覆盖。本地 man 页面常用的位置路径是 /usr/man/man1 和 /usr/local/man/man7。环境变量 MANPATH 可以在 /etc/environment 中设置以包含您的本地 man 页面路径。用户也可以使用 MANPATH 来支持他们自己的 man 目录。
+
+以下是一些本地 man 页面存储库：
+
+- /usr/man/man1
+- /usr/local/man/man?
+- /usr/local/cat/cat?
+
+在创建新的 man 页面时，您可以使用现有的 man 页面作为模板。尽量保持一种通用风格，以便您的用户知道预期看到什么。每个 man 页面应包括：一个标识主题或命令的名称部分，一个描述命令及参数选项和格式的综合描述部分，一个描述主题的描述部分，一个详述参数和值信息的选项部分，以及一个关于已知错误的部分。在 man 页面末尾，可以考虑包含一个“另请参阅”部分以指示相关信息，以及一个可选的作者部分以标识作者姓名和地址。
+
+以下是 man 页面风格的示例：
+
+```
+mycommand(1)
+NAME
+    mycommand - Does just what I want to do.
+SYNOPSIS
+    mycommand [will|wont] work
+    mycommand is always used as a last resort. It can
+    be expected either to work or to fail. mycommand
+    contains no surprises at all.
+OPTIONS
+    will     Completes the work at hand.
+    wont     Take a vacation.
+BUGS
+    mycommand is always error free!
+SEE ALSO
+    myprogram(1), myshell(1)
+AUTHOR
+    Me. Who did you think it was?
+```
+
+您可以在 man 页面中包含 *nroff* 标签以控制显示格式。包含这些标签后，可以使用 *nroff* 对其进行测试（见表 2-1）。
+
+```
+# nroff -man mycommand.1 | more
+Here is a sample man page with tags inserted:
+.TH mycommand 1
+```
+
+
+
+
+.SH NAME
+mycommand \- 执行我想要做的操作。
+.SH SYNOPSIS
+mycommand [will|wont] work
+.SH DESCRIPTION
+.B mycommand
+通常作为最后的手段使用。它可能成功，也可能失败。
+.B mycommand
+完全没有任何意外情况。
+.SH OPTIONS
+.TP 3
+Will
+完成手头的任务。
+.TP 3
+wont
+去度假。
+.SH BUGS
+.B mycommand
+永远没有错误！
+.SH SEE ALSO
+myprogram(1), myshell(1)
+.SH AUTHOR
+.B 我。
+你以为是谁？
+
+| 标签 | 用途 |
+| --- | --- |
+| `.TH <name> <num>` | 手册页名称和章节号 |
+| `.SH <section>` | 标识一个子章节 |
+| `.B <text>` | 粗体或高亮文本 |
+| `.I <text>` | 斜体文本 |
+| `.PP` | 段落块 |
+| `.TP <num>` | 段落缩进 <num> 个空格，除了第一行 |
+| 表 2-1。 | nroff 标签示例 |
+
+记得定期运行 `catman -w` 命令，以保持 `apropos` 和 `whatis` 数据最新。在运行 `catman -w` 命令前后都运行 `man -k print` 命令，以查看其效果。您可能希望将其添加到根用户的 cron 表中。
+
+```
+## catman -w
+```
+
+## DocSearch
+
+以下列表是对一些 DocSearch 文件和命令的参考。
+
+| DocSearch 文件/命令 | 定义 |
+| --- | --- |
+| /usr/bin/docsearch | docsearch 命令 |
+| /usr/lib/nls/msg/$LANG/docsearch.cat | docsearch 消息目录 |
+| /usr/bin/defaultbrowser | defaultbrowser 命令 |
+| /usr/share/man/info | 超文本文档 |
+| /usr/share/man/info/$LANG | 已安装的 docsearch 文件集 |
+| mount -v cdrfs -r /dev/cd0 /infod | 挂载到 CD-ROM |
+
+## man 页
+
+以下是一些 man 页文件和命令的定义。
+
+| man 页文件/命令 | 定义 |
+| --- | --- |
+| /usr/man/cat? | 格式化文本；优先搜索 |
+| /usr/man/man? | nroff 格式；次要搜索 |
+| catman -w | 更新 whatis 数据库以供 apropos 命令使用 |
+
+## 检查清单
+
+以下是文档库服务和联机 man 页关键要点的检查清单。
+
+- 要启动文档库服务（DocSearch），请在命令行中输入 `docsearch`，或者在通用桌面环境（CDE）中，点击帮助图标，然后从图标列表中选择“文档库”。
+- 本地或远程用户也可以使用 Web 浏览器通过以下 URL 访问文档库服务：
+  ```
+  http://<Server-Hostname>/cgi-bin/ds_form
+  ```
+- 其中 `<Server-Hostname>` 是文档 Web 服务器的主机名或 IP 地址。
+- 您可以从挂载的 CD-ROM 运行 DocSearch 和 man 页，但不推荐此方法，因为响应时间可能无法接受，并且必须始终挂载 CD-ROM 才能使文档服务正常工作。
+- 为了获得最佳性能，应将整个文档搜索服务库安装在文档服务器本地的固定磁盘上。
+- 要在 AIX 4.3.3 上安装 DocSearch，如果它们尚不存在，您需要定义 **innadm** 用户和组，并确保语言环境变量设置为正确的值。
+- 默认情况下，DocSearch 库搜索服务作为 AIX 5L 中 BOS 的一部分进行安装。然而，如果您从以前的 AIX 版本或发行版进行了*迁移升级*，您可能在重新启用文档搜索服务时会遇到一些问题，并且可能希望卸载并重新安装 DocSearch 系统。
+- 在主要的 DocSearch 浏览器窗口中，要执行搜索，请在“Search For”字段中输入感兴趣的主题，然后按 ENTER 键。您的搜索可以是简单的单词或短语匹配，或者您可以使用 AND、OR 和 NOT 逻辑搜索运算符创建复杂的逻辑搜索。
+- 您可能会遇到 DocSearch 域名注册问题。如果是这样，请编辑 `/etc/hosts` 文件，并在短主机名后面直接添加一个句点 (.)。
+- 要显示有关 AIX 命令、文件、库子例程和系统调用的参考文档，请使用 **man** 命令。
+
+![](img/82f851021955589d82b22750fb3b1646_51_0.png)
+
+# 第二部分
+
+系统与系统架构
+
+- 3 POWER 处理器和系统
+- 4 AIX 5L 内核
+
+此页故意留空。
+
+![](img/82f851021955589d82b22750fb3b1646_53_0.png)
+
+# 第 3 章
+
+# POWER 处理器和系统
+
+![](img/82f851021955589d82b22750fb3b1646_53_1.png)
+
+版权所有 2002 麦格劳-希尔公司。点击此处查看使用条款。
+
+随着世界各地的 IBM 开发团队努力工作以超越所有竞争对手，你可以肯定这些新芯片具备了新的功能。新的处理器技术有四个主要进展：
+
+- 铜技术
+- 绝缘体上的硅
+- 低 $k$ 介电质
+- 0.18 微米及更小线宽的技术
+
+所有这些进展都很重要，我将逐一介绍。
+
+## 铜技术
+
+铜技术允许处理器运行得更快、更冷。基本思想是使用铜线/迹线代替电路板上这类迹线的铝。使用铜线/迹线时，电流流动时的电阻更小。电阻越高，热量越多，因为电流流动受到限制。电阻较低时，电流流动受到的限制较少，因此部件运行温度较低。结果是能够在更小的空间内集成更多组件，这反过来减少了信号延迟，结果是时钟速度更快，某些处理器运行频率达到 1.3 GHz。（等你读到这篇文章时，速度还会更快！）
+
+## 绝缘体上的硅
+
+“绝缘体上的硅”这句话听起来很奇怪，违背了正常的思维。如何让脆弱的硅晶圆在绝缘体上工作？好吧，IBM 已经想出了一种在绝缘体上制造芯片的工艺。结果是非常凉爽的芯片，这意味着你需要更少的冷却风扇，而且可以把冰箱留在家。当设备运行得更冷时，你可以将更多、更冷的芯片更紧密地放置在一起。通过这种组合，你实现了更高的晶体管密度和更高的 CPU 时钟速度。
+
+## 低 K 介电质
+
+$Low~k$ 介电质指的是芯片内迹线之间的电容。如果你不知道什么是电容器，它们是电视内部那些大的圆形组件。电容器由两个极板和一种介电质（绝缘体）组成。当电流通过极板时，电荷会在介电质中的极板之间积聚。当你将两根导线/迹线靠近在一起并使电流通过导线时，你就具备了制作电容器的组件，导线之间的空气间隙就是介电质。介电质保持电荷能力的度量称为 $dielectric~constant~(k)$（介电常数）。介电常数较高的材料储存的电荷较高。因此，我们需要集成电路中的极低 $low~k$ 介电质。
+
+当线宽缩小到 0.18 微米及更小时，集成电路内的迹线尽可能紧密地放置，以便在芯片内集成更多内容。当迹线靠得太近时，会出现电容耦合的可能性，这是由于介电质（在这种情况下是空气，一种绝缘体）中积聚的电荷导致的迹线（极板）之间的“泄漏”现象。其效果是原本应该保留在一根迹线上的信号会泄漏到其他迹线上，导致信号混合在一起。这种效果在集成电路中是行不通的。因此，IBM 提出了一种利用低 k 介电质芯片技术保护迹线免受这种泄漏效应影响的方法。实际上，这种新的芯片技术类似于在迹线之间放置屏蔽层。你可以将其类比为有线电视接线中的编织线屏蔽层，其中中心导体是迹线，编织线是屏蔽层。再次，结果是更快的时钟速度。当然，我极大地简化了这个概念。
+
+## 小（0.18 微米及更小）迹线
+
+我们一直在谈论如今芯片内的电路如何不断变小。凭借 IBM 与其业务合作伙伴取得的所有技术进步，难怪芯片中的单条迹线可以是 0.18 微米及更小。迹线如此之小，以至于宽度只有几个原子。硅在进一步缩小迹线宽度方面无法走得更远，但我们尚未达到下限。在近期内，你将听到更多关于通过化学或电气操作结合的生物电路的更多信息。这才是真正的微小！
+
+## POWER 处理器的历史
+
+随着处理器速度以我阅读相关 IBM 公告信的速度两倍、三倍地增长，为规划目的保持透视是很困难的。做出决策的唯一方法是很好地了解可用的系统架构和发展方向。这条建议适用于新旧设备。即使你拥有很大的预算，在规划额外资源时也不要忽视旧的处理器型号或二手设备市场。在我们的环境中，我们将一些旧系统用作“沙盒”。它们可用于非关键支持服务，如果损坏可以低成本轻松更换。无需维护合同！只需在架子上放几个，以备你需要时使用。鉴于此，让我们概述一下 POWER 架构并考虑其历史。一想到将最先进的 POWER 系统的细节写成文字，我就感到不寒而栗，因为这些细节很可能在墨水未干之前就会变成化石，即使我按时完成了我的副本截止期限！
+
+## POWER1
+
+第一个精简指令集计算机（RISC）是 1975 年在 IBM 的 T.J. Watson 研究中心作为电话交换研究的副产品开发的。处理器
+
+
+
+一款名为 801 的架构，实现了一套由 120 条指令组成的精简指令集，这些指令在硬件中融合，并且每个时钟周期执行一条指令。IBM PC RT 于 1986 年首次商用，其基础正是 801 核心。为了提高性能，801 项目组开始研究每个时钟周期处理多条指令的方法，以减少分支和内存操作期间的执行等待时间。这项工作促成了第二代三处理器架构，被称为 AMERICA。1986 年，AMERICA 项目被转移到 IBM 奥斯汀开发实验室。奥斯汀团队将 AMERICA 演变为后来被称为 RISC 的架构，最终发展为我们今天熟知的增强型精简指令集（POWER）架构。
+
+与 AMERICA 类似，POWER 架构将三个独立的功能单元结合成一个超标量配置，具备每个时钟周期执行多条指令的能力，这使得 IBM 重新诠释了 RISC 缩写，即 Reduced Instruction Set Cycles（精简指令周期）。POWER 指令集增加了一些分量，扩展至 184 条指令；这种变化可能是合理的。POWER 三核心处理器结构复杂，由独立的分支、整数和浮点单元组成，通过来自独立指令和数据缓存的 4 字宽 I/O 路径进行数据馈送。缓存可以在 20 到 30 MHz 的频率下，每个时钟周期派遣最多 4 条指令。IBM 于 1990 年 2 月开始交付 POWER RISC System/6000 产品线。您可能仍在运行早期的 200、300 或 500 系列系统。我在工作中仍然保留并使用一台旧的 230 型号。
+
+## POWER2
+
+POWER 架构开发的下一个阶段将额外的整数和浮点单元整合到一个定制的八芯片设计中，该设计被命名为 POWER2。POWER2 架构基于现有的 POWER 指令集，以保持向上兼容性。它还包含一组利用更宽数据路径以及新设计中可用的额外处理器和寄存器优势的新指令。
+
+通过使用诸如 FMA（浮点乘法加）等复合指令，该复杂结构能够在 50 到 80 MHz 的频率下每个时钟周期执行 8 条指令，但与当今的 CPU 相比，这仍然显得缓慢。
+
+八芯片 POWER2 复杂结构安装在一个多芯片模块（MCM）集合中，其中包括指令缓存单元（ICU）、定点单元（FXU）、浮点单元（FPU）、四个数据缓存单元（DCU）以及存储控制单元（SCU）。ICU 处理存储在指令缓存中的指令，并将非 ICU 指令派遣给 FXU 和 FPU。FXU 和 FPU 各自包含两个执行单元，负责执行所有数值数据处理。
+
+DCU 管理四路组相联、双端口的数据缓存。SCU 负责仲裁进出处理器复杂结构的通信。SCU 仲裁处理器、内存和 SIO 总线之间的通信。这包括编程 I/O 和 DMA 处理。更快的处理器数量更多、数据路径更宽意味着可以更高地消耗数据速率，因此根据配置，数据缓存大小被增加至 128K 或 256K。指令缓存为 32K。由于缓存变大，增加二级（L2）缓存以改善处理器缓存与内存之间的 I/O 性能就变得合情合理。L2 缓存存储最近使用内存的快照，其大小范围从较小系统中的 256K 到大型 RISC System/6000 中的 2MB。IBM 于 1993 年 9 月宣布其 POWER2 系统。首批机器包括运行频率为 55 MHz 的 Model 58H、66 MHz 的 590 以及达到 71.7 MHz 的 990。三年后的 1996 年 10 月，RS/6000 Model 595 面世。这台机器是首个整合单芯片版本 POWER2（称为 P2SC，即 POWER2 超级芯片）处理器的机器，其运行频率为 135 MHz。最快的 POWER2 运行频率为 160 MHz，可在一些较旧的 RS/6000 SP Thin 节点和 397 工作站中找到。
+
+## PowerPC
+
+1991 年，随着 POWER2 工作进展顺利，IBM 启动了一项联合开发计划，旨在将 POWER 架构整合为一种高性能、低成本且可大批量生产的单芯片设计。该芯片需与其他 POWER 架构保持二进制兼容，支持 64 位扩展，并具备多处理能力。目标应用涵盖从掌上电脑（PDA）和打印机到个人计算机及多处理器超级计算机。由 IBM、Motorola 和 Apple Computer 组成的 PowerOpen 开发联盟于 1993 年 9 月宣布成立，标志着 POWER 架构第三代——PowerPC 的问世。
+
+PowerPC 架构最显著的特性是扩展至 64 位寻址，并支持动态切换至 32 位模式以实现向后兼容。现有的 POWER 二进制文件可以在 PowerPC 上执行，但在针对新指令集重新编译之前，运行速度会较慢。为了简化和精简指令集，复杂的 POWER 指令被移除。为了更好地利用新芯片架构的特性，增加了单精度系统、缓存管理、锁定操作以及对对称多处理（SMP）的支持。
+
+PowerPC 架构在其演变过程中由多种微处理器配置所代表。在低端，PowerPC 601 模型基于类似于原始 POWER 实现的三处理器配置。601 处理器是一种桥接架构，支持除两条特权指令外的所有非特权 POWER 指令。
+
+额外的定点单元、更大的数据和指令缓存以及嵌入式二级缓存控制器，使这些处理器能够达到每个时钟周期 5 条指令的峰值。尽管 PowerPC 处理器系列中的架构和指令集略有不同，但定义了一个通用硬件参考平台（CHR P）以促进跨平台软件开发。
+
+PowerPC 多年来持续发展成熟。较新的处理器，如 603、604 和 604e，是当时最快的 PowerPC 处理器。非常常见的 43P 桌面机器使用 604e 处理器，速度为 332 MHz 和 375 MHz。最快的由 PowerPC 驱动的型号是四路 F50，运行频率为 375 MHz。
+
+## RS64 演进
+
+向前迈进，IBM 通过引入 RS64 将 POWER 架构带入 64 位世界。该处理器拥有 64KB 的 L1 数据缓存、64KB 的 L1 指令缓存以及 4MB 的 L2 缓存。数学应用程序最能从新的 RS64 内部结构中获益，其中包括一个浮点单元、一个加载/存储单元和两个整数单元。该处理器运行频率仅为 125 MHz，但性能良好。
+
+RS64 发布时扩展了 SMP 容量。机器被构建以支持 4 路、8 路和 12 路 SMP 配置。随着这些机器的到来，内存和磁盘支持也随之增加，这在数据库因业务需求变得越来越大时显得尤为迫切。
+
+改进一直持续到 1997 年，直至 1998 年 9 月 RS64II 的发布。通过重新设计，配备四路 8MB L2 缓存，RS64II 的时钟频率为 262 MHz。L1 指令和数据缓存保持 64kB 不变。该处理器随后采用新的铜互连技术再次重新设计，使其在 1999 年秋季发布时时钟频率提升至 450 MHz。L1 指令和数据缓存的大小均翻倍至 128kB。随着 RS64III 的出现，系统支持多达 24 个处理器。
+
+IBM 对这个处理器设计仍未尽兴。随着绝缘体上硅（SOI）技术的引入，RS64 架构的另一次重新设计在 2000 年秋季将时钟频率提升至 600 MHz。这标志着 RS64IV 处理器的诞生。最新的添加包括 16MB 的 L2 缓存和高达 750 MHz 的时钟频率。
+
+## POWER4
+
+在我们的行业中，我们时常听到有关各种事物“下一代”的说法。这是当下的炒作热点。对于 IBM 而言，POWER4 复杂结构构成了 IBM“下一代”的基础模块。处理能力的增长极其激进，而 IBM 将实现这一目标。在不久的将来，您会在附近的商店买到一台可以放在桌面上的 AIX 机器，它能够在同一台桌面机器的不同分区内同时运行八个不同版本的 AIX 和 Linux。这就是 IBM 的下一代计算，而 POWER4 复杂结构在其成功中将发挥巨大作用。
+
+POWER4 复杂结构由多个 POWER4 微处理器以及一个内部存储子系统组成，该子系统互连每个微处理器以形成一个完整的 SMP 子系统。当前版本包含两个 64 位 POWER4 微处理器，以及一个集成的微处理器接口控制单元、1.4MB 的 L2 缓存、使用合并逻辑 DRAM（MLD）芯片的 L3 缓存和一个内存控制器芯片。MLD 拥有 32MB 的 L3 缓存。
+
+POWER4 复杂结构提供 2 路、4 路和 8 路 SMP 模块。在大型机型中，例如 p661 和 p690，四个 POWER4 处理器被合并到多芯片模块（MCM）中。为了填满一台 32 路的 p690，需要四个 MCM。
+
+内部来看，每个 POWER4 芯片包含多个微处理器。当前的 POWER4 拥有两个微处理器，但 IBM 在未来几年有着非常雄心勃勃的计划。计划是接下来发布一个包含四个微处理器的版本，随后是包含八个的版本。
+
+
+
+目标是五年内在一个包含 32 个处理器的封装中实现 1 TFLOPS 的算力。这非常有雄心！
+
+芯片内部还包含一个二级缓存（L2 cache），它通过核心接口单元（CIU）连接到两个处理器。L2 缓存拥有三个 L2 缓存控制器，分别对应 L2 缓存的三个段。一条 32 位宽度的总线将 L2 缓存段连接到复合体中的每个微处理器。保持所有组件的高度紧密耦合以降低内存延迟。令人惊叹的是，实现了一个织物控制器（fabric controller）来控制总线网络。该织物控制器为处理器复合体内部提供点对点路由。
+
+有两个 L1 数据缓存。一个是 64KB 的直接映射指令缓存，另一个是 L1 数据缓存，现在容量为 32KB。每个 L2 缓存段的大小为 480KB，使得 L2 缓存总容量达到 1.44MB。
+
+请注意 POWER4 带来的颠覆性变化。在未来几年，搭载 POWER4 的机器将从高端 p690 系列逐渐普及到中端系统，并最终进入台式机市场。能够使用 LPAR 即时将你的机器划分为多个 AIX 和 Linux 机器将是一件美妙的事情。这将为“沙盒”（sandbox）一词带来全新的含义。
+
+以上是对 POWER 系列微处理器的高层概述。POWER 系列的变化将非常迅速，你需要密切关注 IBM Redbooks Online 网站，网址为：
+
+http://www.redbooks.ibm.com
+
+## SP
+
+可扩展并行（SP）产品线代表了 IBM 架构的另一面。单个 SP 复合体由 2 到 512 个通过称为 SP 交换机的网络织物互联的独立节点组成。每个系统都是一个独立的 RS/6000 或 pSeries，拥有自己的内存、I/O 适配器和 AIX 操作系统副本。断开网络共享磁盘后，每个 SP 节点与其关联节点之间不共享任何资源。单个 SP 机架可以包含 2-16 个节点，且可能混合使用瘦型、宽型或高型节点类型，以及一些外部 pSeries 机器。瘦型节点占用 1/2 个机位，因此你可以将两个瘦型节点并排放置。宽型节点占用一个完整的系统机位。高型节点占用两个完整的系统机位。瘦型、宽型和高型节点中的处理器从旧的多通道（microchannel）架构到最新的 pSeries 系统各不相同。节点之间的通信由高性能交换机（HPS）的网络织物促进。
+
+最新的 SP 节点选择是双路或四路 SMP 机器，使用最新的 64 位铜工艺，运行频率为 375 MHz 及以上。这些机器支持最高 8GB 的内存，并拥有四个内部 72GB 驱动器以及十个可用的 PCI 适配器插槽。
+
+HPS 实现了间接直通（cut-through）交换架构，减少了数据包缓冲需求并限制了通信死锁问题。来自每个节点的消息数据包在包头中包含路由信息，并且在穿越交换机前往目标节点时可以经由多条路径移动。HPS 由每个机架中的一个交换机板组成，连接每个节点中的八元适配器板，并提供 16 路连接。每个机架中的一个节点可以配置为仅用于与其他 SP 机架互连的交换机专用节点。跨越交换机的 I/O 速率将随所用协议的变化而变化。SP 交换机的速度正在提升到 1 GHz 以上。
+
+## 代号 REGATTA：p690
+
+目前圈内的坏小子是 p690，又名 Regatta，它是一款 8 路到 32 路的 S/39 服务器，在许多方面对 UNIX 而言都是全新的。p690 的算力是其前身 p680 的两倍。Regatta 内部集成了市场上最新的高端技术增强功能。模块化设计的基本组件包括用于处理器和内存的中央电子复合体（CEC）、I/O 抽屉，以及包含内置电池备用电源的电源系统。
+
+CEC 目前最多可处理 16 个 POWER4 芯片，每个芯片包含两个共享 L2 缓存的微处理器。这些 SMP POWER4 子系统集成封装在一个多芯片模块（MCM）中，每个 MCM 包含四个 POWER4 芯片。每个 POWER4 芯片可以包含 2 或 4 个处理器，很快每个芯片将搭载 8、16 或 32 个微处理器，以便在大约五年内实现 1 TFLOPS 的算力。
+
+在电源层级上，通过冗余电源和电池备份消除了单点故障，以确保系统保持运行，从而能够有序地进行紧急关机。
+
+低端 Regatta（LER）系统也已经上市。这些 LER 机器是 IBM 迄今为止提供的最新产品。每台都是 1-4 路对称多处理（SMP）UNIX 服务器，采用桌面型或高密度（4U x 24”深度）机架安装外形规格。这两款新型号的架构基于 1 GHz 64 位 POWER4 处理器，并配备 32MB 三级缓存（L3 Cache）。最低配置包括单个 1 GHz Power4 处理器（可扩展至 4 路）、512MB ECC DDR（双数据率）内存（可扩展至 16 GB）以及一个 18.2GB 10K RPM 内部磁盘驱动器。
+
+## LPAR
+
+回顾行之有效的方法，IBM 从大型机世界（或他们所说的 zSeries 机器）中借鉴了一些组件。现在，你可以在 p690 机器中实现真正的逻辑分区（LPAR）。LPAR 允许你将机器划分为最多 16 个逻辑分区。每个独立的分区都有自己的一组资源。例如，你可以将处理器、内存和特定的 I/O 端口分配给特定的 LPAR，而竞争系统甚至不允许在组件级别进行分区。你甚至可以创建一个只有一个微处理器的 LPAR，请记住，这些微处理器被封装在双路、四路和八路的 POWER4 芯片中。
+
+要构建一个 LPAR，你需要选择要包含的资源。你可以选择特定的处理器、PCI 插槽和确切的内存量。没有要求这些资源必须在物理上连接到同一硬件或同一系统中，但很多时候它们确实是这样的。无论 CPU、内存和 PCI 插槽连接在何处，都可以分配给任何 LPAR。
+
+LPAR 是 UNIX 世界针对开发/测试/生产困境的一种新方法。当然，IBM 自 20 世纪 70 年代的 S/370 大型机（现在称为 zSeries）以来一直致力于逻辑分区。现在，你只需要购买几台 p690，就可以为开发人员划分和裁剪出沙盒，同时配备两台用于快速测试的测试机，而可以同时运行 20 个应用服务器。随着 POWER4 进入中端和台式机市场，你将看到 LPAR 也随之推广。
+
+### 项目 eLiza
+
+项目 eLiza 是 IBM 的一项持续努力，旨在生产能够自我配置、自我诊断和自我修复的机器。p690 内置了项目 eLiza 的许多方面。例如，Regatta 具有动态 CPU 资源回收功能，可以将发生故障的微处理器离线，而无需导致整个系统宕机。在内存领域，p690 可以将故障的内存 DIMM 离线，而不会影响内存内容的完整性。IBM 之所以能做到这一点，是因为内存采用 RAID-5 类型的配置，内存内容在所有内存 DIMM 之间分布并带有奇偶校验。这只是 IBM 推进项目 eLiza 方向的两个例子。
+
+由于电子商务环境日益复杂，包括拥有庞大用户负载的大型系统，IBM 启动了项目 eLiza。项目 eLiza 有四个旨在实现的目标：
+
+- **自我配置** 增加即插即用能力、按需容量升级、无线系统管理以及用于轻松自定义的设置向导。
+- **自我优化** 允许系统动态分配资源、即时创建 LPAR，以及通过自我管理性能监控系统允许机器动态自我优化。
+- **自我修复** 允许系统使用 Chipkill 内存技术、调用回家（call-home）功能、高级集群、多路径 I/O 和 ECC 缓存内存来检测并纠正问题，以最大化系统可用性。
+- **自我保护** 使用 SSL、LDAP、Kerberos、数字证书、加密等安全技术来最大化数据和系统完整性。
+
+这些进步不仅仅是“未来的愿景”，而是一项已经产生实效的全公司范围倡议。
+
+### p690 的系统管理
+
+pSeries 690 由用于 pSeries 的 IBM 硬件维护控制台（HMC）进行管理。HMC 最初随 p690 推出，用于管理系统和配置 LPAR，它有一个 GUI 接口系统，运行在 32 位 Intel 平台上的 Linux 上。我倾向于
+
+
+将 HMC 视为 SP 的控制工作站，以及企业存储服务器（ESS）的 Windows NT 和 Linux 控制台。
+
+从 HMC 中，你可以管理以下任务：
+
+- **系统管理安全**：允许在安全网络连接上进行远程控制
+- **分区管理**：一种创建、管理、激活和删除 LPAR 的机制
+- **系统配置**：允许进行中等水平类型的配置和故障排除
+- **用户**：管理用户环境
+- **软件维护**：允许安装和维护软件及可移动媒体
+- **库存侦察**：保持系统范围内微代码级别的库存记录
+- **服务代理**：提供自动问题通知和呼叫回家功能
+- **服务焦点**：提供对系统的服务访问
+- **问题确定**：用于查看问题日志和诊断
+
+我们可以写整本书关于 pSeries 690。但我不需要这样做，因为有一本优秀的红皮书叫做*IBM eServer pSeries 690 系统手册*，你可以下载其 HTML 或 PDF 格式用于打印。该书的 ID 编号为 SC24-7040-00，可以在以下 URL 中找到：
+
+```
+http://www.redbooks.ibm.com
+```
+
+### pSERIES 机器
+
+pSeries 机器是 RS/6000 的替代品。就像 RS/6000 机器系列一样，pSeries 机器分为三类系统。从低端开始是入门级桌面和机架安装型号。中型系统为应用服务器带来了巨大的性能提升。在服务器集群的高端是我们在前一部分中介绍的 p680 和 p690 机器。还有 Cluster 1600 机器。这些机器允许通过高速 SP 交换机进行互连，并运行 RNSP 作为通信协议。pSeries 的列表如表 3-1 所示。
+
+目前很难找到更多的新型 RS/6000 型号，因为它们正在停产。使用 pSeries 机器，你拥有广泛的处理器和内存选项可供选择。表 3-2 显示了截至本文撰写时在 IBM 网站上可用的当前处理器列表。更新、更快的 CPU 将会陆续推出，所以要留意升级。
+
+| pSeries | 610 | 620 | 630 | 640 | 660 | 670 | 680 | 690 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 型号 | 6C1 | 6F0 | 6C4 | B80 | 6H0 | 670 | S85 | 690 |
+| 型号 | 6E1 | 6F1 | 6E4 | 6H1 | 6H1 | 671 | | |
+| 型号 | | | | | 6M1 | | | |
+
+表 3-1. IBM pSeries 型号
+
+> 注意：6C4 和 6E4 机器是首批低端 Regatta（LER）机器，于 2002 年第三季度推出。
+
+### 兼容性
+
+考虑到 POWER 产品线中可用的各种芯片、系统和指令架构，人们可能会担心混合环境中的应用兼容性。好消息是，旧的二进制文件很可能可以在新架构上运行。例外情况可能包括诸如在 AIX 操作系统版本之间发生变化的设备驱动程序等。如果你的所有机器都运行相同的版本，这个问题应该会减少。
+
+我知道记住单一供应商架构的所有细节是很困难的，所以采用一种滑动窗口视角来看待计算世界。在脑海中保留一点旧有、当前和未来计算技术。这将使你避免重蹈昨天的采购和实施错误，或者至少让你能对这些错误做出新的诠释。嘿，你有大预算，所以你负担得起一点模糊处理。购买很多非常快的机器，没有人会看出区别。至少 IBM 会喜欢你。
+
+| 处理器类型 | 时钟频率 |
+| :--- | :--- |
+| 32-bit 604e | 250 MHz |
+| 32-bit 604e | 375 MHz |
+| 64-bit POWER3 II | 333 MHz |
+| 64-bit POWER3 II | 375 MHz |
+| 64-bit POWER3 II | 400 MHz |
+| 64-bit POWER3 II | 450 MHz |
+| 64-bit RS64 III | 450 MHz |
+| 64-bit RS64 III | 500 MHz |
+| 64-bit RS64 IV | 600 MHz |
+| 64-bit RS64 IV | 668 MHz |
+| 64-bit RS64 IV | 750 MHz |
+| 64-bit RS64 IV | 1.1 GHz |
+| 64-bit RS64 IV | 1.3 GHz |
+
+表 3-2. 可用的 POWER 处理器
+
+### 检查清单
+
+以下是 POWER 处理器和系统关键要点的检查清单：
+
+- 识别新处理器技术的主要进步
+- 定义 POWER2 架构
+- 识别 p690，也称为 Regatta
+- 使用 pSeries 机器作为 RS/6000 的替代品
+- 开发混合环境中的应用兼容性
+- 在 IBM Hardware Maintenance Console for pSeries 或 HMC 上管理 pSeries 690
+
+## 第 4 章
+
+## *AIX 5L 内核*
+
+还记得在 AIX V3 下“进程”是 AIX 中不可分割的可调度工作单元的美好日子吗？每个进程按优先级整齐地排列在串行运行队列中，等待轮替使用 CPU。有父进程、子进程、孙进程，每一代进程都产生下一代。所有成员都是同一个幸福的大 init 家庭的一部分。就像大多数家庭一样，家庭成员之间往往难以沟通或共享他们的财产。当你让他们沟通或共享时，每个人都会试图同时说话或抢占资源。你不得不强硬的介入，诉诸于锁和信号量来保持每个人的秩序。进程的生命可能很艰难，但它简单且易于理解。
+
+然后，AIX V4 引入了多处理。AIX 开发人员决定加快进程城市的生活节奏。他们不只是让所有进程等待一个 CPU，而是增加了跨多个 CPU 调度的功能。更多的 CPU 意味着工作完成得更快。他们还将进程结构分解为称为线程的组件。每个线程是一个可调度工作单元。多个线程可以在多个 CPU 上同时执行。这些新功能提高了系统吞吐量，但它们并非没有额外的复杂性和一些开销。
+
+随着 AIX 5L 的到来，出现了可扩展的 64 位内核，它能够支持在 64 位硬件上运行的非常大的应用程序工作负载。64 位内核的可扩展性主要源于更大的内核地址空间。内核支持 64 位和 32 位应用程序。
+
+### 内核架构
+
+AIX 内核从根本上始于 System V.2 内核。然而，System V 架构仅代表 AIX 的根源，而非其全部。AIX 内核设计包括许多使其区别于其他基于 SVR4 的内核的功能和扩展。AIX V3 在 1990 年 POWER 架构进入市场时引入了其中大部分功能。如今，经过多年的发展，从 POWER 2 和 POWER 3 发展到当前的 POWER 4 处理器。随着 POWER 4 芯片的引入，IBM 计划随着 POWER 4 芯片新版本的发布，处理能力将大幅增加。这一早期版本在同一封装中包含双处理器，每个处理器都有自己独立的 L1、L2 和 RAM 缓存。下一个版本将包含四个处理器，后续版本将在每个封装中包含八个处理器。目标是在单个 4 英寸见方的 32 个处理器封装中实现 Teraflop 的处理能力。
+
+AIX 内核的进展与硬件的进展保持一致。我们从一个 32 位内核开始 AIX。然后特定进程的地址空间限制在 $2^{32}$ 字节（4GB）。随着 64 位内核的出现，带来了数量级的巨大地址空间，达到多 TB 范围。64 位应用程序在理论上可以寻址 $2^{64}$ 字节的数据；然而，AIX 目前限制在更实际的 $2^{50}$ 字节范围内。这种扩展地址空间最大的影响是在数学应用程序上。现在长整型是 64 位，但整型仍然是 32 位。借助 64 位长整型，应用程序可以在相同的时间段内进行两倍的计算。
+
+然而，拥有 64 位内核和 64 位机器并不直接意味着应用程序性能的改进。应用程序本身也必须支持 64 位架构，并且可能需要在 64 位机器上重新编译才能利用该环境。64 位架构的优点包括包含 64 位数据类型、可以将更大的文件映射到内存、可以映射更多的文件到内存，以及进程可以访问非常大的地址空间。对 64 位计算的支持始于 AIX 版本 4.3。
+
+除了大容量内存，AIX 内核还可以扩展到支持大量运行中的进程和打开的文件。这一成就通过消除其他 UNIX 内核中常见的硬编码表大小限制（如 MAXPROC）来实现。对象数据管理器（ODM）的加入消除了许多大型设备和配置表，改进了操作系统对配置信息的访问，并启用动态系统配置更新。AIX 内核是可动态扩展的，这意味着可以在运行中的系统上添加或更改新的设备驱动程序和其他系统扩展，而无需重建内核或重启系统。此外，可以使用 `cfgmgr` 命令更新 ODM 信息，将新设备插入到运行中的系统并立即使其可用。
+
+```
+# cfgmgr   # Update ODM information
+```
+
+### 线程与进程
+
+随着 AIX 版本 4 的引入，多线程进程随之而来。任何系统活动都需要一个进程来执行该活动。这些活动包括程序、数据库、Shell 脚本和其他系统进程。运行系统中的每个进程由一个或多个线程组成。线程提供了在进程内重叠、多路复用和并行化操作的机制。进程结构被分离为可调度组件和全局资源。线程是纯粹的实体，共享诸如地址空间等全局资源。
+
+进程的特性和线程的特性在构成上有所不同。为了更清楚地看到这一点，请参考表 4-1。
+
+正如表 4-1 所示，线程控制通过运行队列的方式，而进程负责包含有关正在执行的作业的一切。多个线程允许系统同时处理来自多个用户进程的请求。线程的优点在于，它们可以在不通过 fork 和 exec 系统调用创建多个进程的额外开销的情况下服务多个请求。由于进程包含信息，而线程控制流程，每个进程成为全局的，每个线程可以拥有自己的优先级，如果你仔细想想，这是一个很好的概念。总体效果是一个多层多线程环境，与单线程环境相比，性能可以提高多达九倍。
+
+### 信号
+
+信号在进程级别定义，但在线程级别处理。每个线程都有一个本地信号掩码。同步信号被传递给引起异常的任意线程
+
+
+
+
+## 4. 进程与线程属性
+
+| 进程属性 | 线程属性 |
+| :--- | :--- |
+| 进程 ID (pid) | 线程 ID (tid) |
+| 父进程 ID (ppid) | 堆栈 (Stack) |
+| 用户 ID (uid) | 调度策略 |
+| 组 ID (gid) | 调度优先级 |
+| 当前工作目录 (cwd) | 待处理信号 |
+| 进程环境变量 | 阻塞信号 |
+| 进程统计信息 | 线程特定数据 |
+| 信号处理动作 |  |
+| 文件描述符 |  |
+
+例外情况。诸如 `kill(2)` 等异步信号只会投递到进程中的一个线程。该信号将投递给已针对特定信号号发起 `sigwait(3)` 的线程，或者投递给未阻塞该信号的线程。在进程级别禁用信号以保护线程中的关键代码段可能无法按预期工作，因为信号可能会投递到在另一处理器上执行的线程。
+
+AIX 锁度量机制用于维护在多处理器上运行的线程之间的缓存一致性。如果通过 `bosboot` 选项启用了此功能，则可以使用 `lockstat` 命令查询系统的锁状态。由于 AIX 内核了解其 UP（单处理器）与 MP（多处理器）运行模式状态，因此在 UP 环境中会忽略 MP 特定的锁请求，以缩短代码路径。应用程序开发人员随后可以为 MP 环境编写软件，同时这些软件也在 UP 配置下得到支持。
+
+```bash
+# bosboot -a -L  <---------- 创建带有 MP 锁支持的启动映像
+# lockstat -a  <------ 显示系统锁使用统计信息
+```
+
+## 调度与分发
+
+现在可能已经很明显，为了支持线程，必须对 AIX 调度器进行修改。作为可分发的单元，线程被分配一个从 0 到 127 的优先级。每个级别由一个运行队列表示。调度器定期扫描运行队列，并根据那些未以固定优先级运行的任务的处理器使用历史重新计算优先级。请注意，一些影响队列优先级的功能（如 `nice`）仍然作用于整个进程，而不是单个线程。
+
+AIX 分发器必须经过修改，以便于线程分配给可用处理器。当线程绑定到某个处理器时（即所谓的处理器亲和性），最高优先级的线程可能不是下一个可分发的线程。如果线程可以被分发到其上次运行的同一处理器，系统会经历更少的缓存未命中。相反，如果线程可以被调度到任何可用处理器上，则整体处理器利用率会得到改善。AIX 分发器实现了所谓的 **机会性亲和性**。如果该处理器可用，将尝试让线程在其上次运行的同一处理器上运行。`bindprocessor()` 例程可用于程序员希望为代码段强制实施处理器亲和性的情况。
+
+```bash
+# bindprocessor <proc-id> <processor> — 将进程绑定到处理器
+```
+
+`bootinfo` 命令可用于早期的 AIX 4 到 AIX 5 系统中，以确定平台是否具备 MP 能力。请注意，从 AIX 4.2 版本开始，包含但不支持 `bootinfo`。
+
+```bash
+# bootinfo -z — 显示当前平台的 MP 能力
+```
+
+除了通用的线程支持外，还有三种调度选项可用：SCHED_RR、SCHED_FIFO 和 SCHED_OTHER。SCHED_RR 强制执行严格的轮询调度，SCHED_FIFO 使用固定优先级的先进先出（FIFO）排序。SCHED_FIFO 不支持抢占且不进行时间片划分。在 SCHED_FIFO 调度器下运行时，线程必须阻塞或让出处理器。第三个选项 SCHED_OTHER 代表标准的 AIX 调度算法，其中任务优先级随 CPU 使用率而降低。
+
+## 运行队列
+
+在 AIX 4.3.3 及更高版本中，系统中的每个 CPU 都有自己的一组运行队列。对于 AIX 5L，额外增加了一组全局运行队列。在 AIX 4 版本中，系统有 128 个运行队列，指定为 0–127。在 SMP（对称多处理）机器上，每个处理器都有自己的一组运行队列。在每个处理器上设置运行队列使得调度器更容易找到下一个允许运行的线程。调度器扫描位掩码以确定在单个运行队列中哪些位被设置为就绪状态，这与巨大的全局运行队列不同。
+
+在 AIX 5L 中，每个处理器的运行队列数量从 127 个增加到 255 个。此外，AIX 5L 增加了一个全局运行队列，可以将固定优先级线程指向系统中的任何处理器。若要所有固定优先级进程使用全局运行队列，必须使用 `schedtune` 命令将 GLOBAL 属性设置为 1。
+
+## 线程运行的 CPU 时间片
+
+由于 AIX 5L 使用 SCHED_OTHER 调度策略，讨论将遵循此路径。在此调度策略下，正在运行的线程可以使用完整的 CPU 时间片。默认情况下，一个时间片为 10 毫秒。并非所有线程都有机会使用完整的时间片，因为中断可能会导致线程被放置到运行队列的尾部。中断可能是由时钟中断引起的，也可能源自其他来源，如磁盘 I/O 或网络适配器流量。线程被中断的原因是中断始终具有高于运行中线程的优先级。
+
+线程如何进入运行队列是一个复杂的算法，它会对最近刚运行过的线程施加惩罚。该公式对当前运行的线程在每个时钟滴答时重新计算：
+
+```text
+优先级值 = 基础优先级 + Nice 值 + 基于近期 CPU 使用率的 CPU 惩罚
+```
+
+其中：
+- 基础优先级 = 40 (PUSER)
+- Nice 值 = 20 (默认)
+
+```text
+CPU 惩罚 = CPU 使用率 * R （其中 R 默认为 0.5）
+```
+
+所有进程的 CPU 使用率每秒计算一次。CPU 惩罚在每个时钟滴答时计算，默认为 10 毫秒。当线程刚退出 CPU 时，会受到惩罚。经过所有这些计算，实际上确实完成了一些工作。受惩罚的线程会逐渐回到运行队列的前端，并获得更多的 CPU 时间。与 SCHED_RR 或 SCHED_FIFO 相比，使用 SCHED_OTHER 调度策略的整体吞吐量要高得多。
+
+## 更多关于内核的内容
+
+在本章中，我们涵盖了 AIX 5L 内核的基础知识。在亚特兰大举行的上一次 AIX 5L 和 NUMA-Q 会议上，我参加了一个关于 AIX 5L 内核内部结构的演示。讨论的强度处于非常详细的水平，讲义大约有 60 页八号字体。内核的内容远不止本章所介绍的内容。关于内核的具体细节，请参阅 IBM Redbook 网站。在这里，你可以找到一些优秀的 Redpieces 和白皮，它们详细介绍了 AIX 5L 内核的各种内部组件。
+
+```text
+http://www.redbooks.ibm.com
+```
+
+## 检查清单
+
+以下是内核要点的检查清单：
+
+- AIX 5L 提供了一个可扩展的 64 位内核，能够支持在 64 位硬件上执行的大型应用程序工作负载。
+- 64 位内核的可扩展性主要源于更大的内核地址空间。
+- AIX 内核是动态可扩展的，这意味着可以在运行的系统上添加或更改新的设备驱动程序和其他系统扩展，而无需重新构建内核或重启系统。
+- 可以将新设备插入到运行中的系统中，并通过使用 `cfgmgr` 命令更新 ODM 信息，使其立即可用。
+- 任何系统活动都需要一个进程运行以执行该活动。运行系统中的每个进程由一个或多个线程组成。线程提供了在进程内重叠、多路复用和并行化操作的手段。
+- 多个线程允许系统同时处理来自多个用户进程的请求。
+- AIX 锁度量机制用于维护在多处理器上运行的线程之间的缓存一致性。如果通过 `bosboot` 选项启用了此功能，则可以使用 `lockstat` 命令查询系统的锁状态。
+- 在 AIX 4.3.3 及更高版本中，系统中的每个 CPU 都有自己的一组运行队列。在 AIX 4 版本中，系统每个处理器有 128 个运行队列，指定为 0–127。AIX 5L 每个处理器有 255 个运行队列。
+- 对于 AIX 5L，增加了一组全局运行队列，可以将固定优先级线程指向系统中的任何处理器。
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_72_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_73_0.png)
+
+# 系统安装与管理
+
++ 5 系统管理工具
++ 6 AIX 安装与维护
++ 7 AIX 系统启动与关闭
+
+![](img/82f851021955589d82b22750fb3b1646_73_1.png)
+
+此页故意留白。
+
+![](img/82f851021955589d82b22750fb3b1646_75_0.png)
+
+## 第 5 章
+
+## 系统管理工具
+
+版权 2002 归 The McGraw-Hill Companies, Inc. 所有。点击此处查看使用条款。
+
+### SMIT
+
+在系统管理方面，UNIX 有着不良的声誉。大多数传统的 UNIX 管理工具都是出于必要性的产物，由感到沮丧的系统程序员和系统管理员构建而成。从历史上看，UNIX 的开发工作主要集中在支持这种“自行构建”方法论的设计组件上——Perl 和 Tcl/Tk 就是典型的例子。
+
+在生产型企业中，UNIX 必须符合大型机操作系统标志性的管理政策和实践。在这些环境中，临时性工具开发往往是不可接受的。需要新一代 UNIX 开发工具，提供对分布式异构资源的集中控制。这些工具必须与现有的传统工具集互操作。开放软件基金会（OSF）努力制定其分布式管理环境（DME）规范；不幸的是，DME 并未像其他 OSF 技术（如 DCE）那样获得广泛的认可。
+
+与其等待在跨平台系统管理策略上达成整体共识，许多供应商开始尝试使用自己的 UNIX 管理工具来探路。这些工具中的大多数将图形界面与传统 UNIX 命令集成在一起，以简化系统安装、配置和管理任务。在本章中，我们将讨论其中三种工具：AIX 系统管理接口工具（SMIT）、AIX 分布式 SMIT（DSMIT）和 AIX 基于 Web 的系统管理器（WebSM）。
+
+AIX 的基础系统管理工具称为系统管理接口工具（SMIT）。SMIT 是一个交互式接口，提供了完整的管理人员工具箱，可用于执行系统管理活动，如安装软件、配置设备、管理用户账户、执行系统备份、安排作业以及诊断问题。SMIT 使用菜单驱动界面，简化和降低了许多系统管理活动的复杂性。SMIT 并不限制或取代通过命令行访问系统管理功能；相反，它在菜单驱动界面的背后使用相同的命令。然而，并非所有可能的命令和参数组合都可以在 SMIT 下使用。命令和参数的选择基于完成给定管理任务的最常见方式。由于 SMIT 使用用户输入来构建和执行命令，因此您必须具有运行 SMIT 所执行命令的权限。
+
+对于初学者管理员来说，SMIT 通过使用面向任务的对话框简化了系统管理。新用户通过遍历 SMIT 的子菜单层次结构即可专注于特定任务。特定任务的菜单选项通过描述性字段标题和上下文帮助进行标识。错误检查例程验证参数类型和范围。
+
+高级管理员可能会发现，对于许多管理任务，SMIT 比命令行提供了更快的接口。对于一些具有多种开关选项的配置命令，这一点尤其如此。使用 SMIT 时，会创建两个文件，即 *smit.script* 和 *smit.log* 文件。SMIT 脚本功能可用于辅助创建复杂的管理脚本，并且日志功能会记录在系统上执行的任务以及命令执行时的日期/时间。
+
+使用 SMIT 管理 AIX 的选择权在您手中。随着您对 SMIT 和 AIX 环境的经验增加，您可能会发现您更喜欢使用 SMIT 进行某些管理活动，而使用命令行进行其他活动。无论您是喜欢还是讨厌它，SMIT 都将长期存在。
+
+### 使用 SMIT
+
+通过在命令行执行 **smit** 命令（用于 Motif 界面）或 **smitty** 命令（用于 ANSI 界面）来启动 SMIT。默认情况下，SMIT 将进入顶级系统管理菜单。要在特定任务子菜单中进入 SMIT，您可以提供 SMIT FastPath 名称作为参数。
+
+```bash
+# smit
+# smit user
+```
+
+SMIT 允许您在不更改操作系统的情况下利用其所有功能进行试运行。使用 *-X* 标志调用 **smit** 来测试其功能并了解其运行方式。SMIT 会将本应执行的命令记录在 *$HOME/smit.script* 文件中。
+
+```bash
+# smit -X
+```
+
+您还可以在 SMIT 内使用 *F6* 键，在提交更新之前显示其将调用的实际 AIX 命令和参数。这种检查 SMIT 将执行的命令的能力，让新的 AIX 系统管理员在命令语法和结构上占有优势。
+
+### smit 与 smitty 显示
+
+SMIT 提供 ASCII 和基于 Motif 的用户界面。在由 X11 或 CDE 管理的显示器上，默认启动 Motif 界面，并采用点击操作感。Motif 显示通过使用按钮、滑块栏和子菜单面板增强了操作环境。使用 **smitty** 或 **smit -C** 命令（参见图 5-1 中的 Motif 显示和图 5-2 中的 ANSI 屏幕）启动 SMIT ASCII 界面。
+
+```text
+# smit <— SMIT X11 界面
+# smitty <— SMIT ASCII 界面
+# smit -C <— SMIT ASCII 界面
+```
+
+每个 SMIT 面板分为三个部分。在面板顶部，显示任务标题和说明。屏幕中间包含菜单选择或输入字段。在字段集中的位置由“top”（顶部）、“more”（更多）和“bottom”（底部）指示。在每个面板的底部，以四列形式列出一组有效的功能键。SMIT 通过使用输入字段左右两侧显示的字段标记字符和按钮来标记输入字段类型和选择列表，如图 5-3 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_78_0.png)
+
+**图 5-1。** CDE 中的 SMIT 主屏幕
+
+![](img/82f851021955589d82b22750fb3b1646_79_0.png)
+
+**图 5-2。** ANSI 中的 smitty 主屏幕
+
+![](img/82f851021955589d82b22750fb3b1646_79_1.png)
+
+**图 5-3。** 用于安排作业的 SMIT 屏幕
+
+注意图 5-3 中使用的特殊符号。在屏幕左侧，我们有一个 *，指定此字段需要一个值。在右侧，我们有更多符号：#、+ 和 /。表 5-1 列出了 SMIT 面板中使用的每个字段符号。了解 SMIT 面板的特殊符号将让您确切知道 SMIT 期望看到什么以执行给定任务。
+
+#### SMIT 按键
+
+SMIT 还有一套按键用于您在 SMIT 面板中时。某些按键仅在 ANSI 或 Motif 显示模式下可用（参见表 5-2）。
+
+#### SMIT 帮助和消息
+
+您可以按 F1 键从任何菜单调用 SMIT 帮助。请注意，消息目录是国家标准语言（NLS）目录，因此取决于 sLANG 环境变量的设置。
+
+#### SMIT 日志文件
+
+SMIT 在用户的 $HOME 目录中创建名为 smit.log 的每个 SMIT 会话的审计日志。日志文件通过对象类 ID、面板序列号、标题和 FastPath 名称指示会话期间遍历的 SMIT 子菜单路径。每个新的 SMIT 会话都会追加到现有日志文件中。请注意随时间监控日志文件的大小。可以使用 smit -l <PathName> 选项设置日志文件的位置。可以使用 smit -vt 增加日志详细程度。
+
+```bash
+# smit -l /tmp/smit.log -vt   使用 /tmp 存放日志文件
+```
+
+**表 5-1.** SMIT 面板中使用的特殊符号
+
+| 符号 | 含义 |
+|:---|:---|
+| * | 此字段需要一个值。 |
+| # | 此字段需要一个数值。 |
+| X | 此字段需要一个十六进制值。 |
+| + | 可以使用 F4（或 ESC-d）为此字段提供弹出列表。 |
+| [] | 可以输入该字段。 |
+| < > | 显示的数据大于字段显示。 < 和 > 指示溢出方向。 |
+| / | 此字段需要一个文件/目录路径名。 |
+| ? | 输入的任何值都不会显示。 |
+
+
+
+
+## SMIT 脚本文件
+
+除了日志文件外，SMIT 还会将会话期间调用的 AIX 命令追加到本地的 `/home/smit.script` 文件中。该脚本文件的信息可用于创建复杂的管理脚本或审查之前会话中调用的命令。例如，假设你使用 SMIT 配置一组 64 个 TTY 设备中的第一个。编辑 `/home/smit.script` 文件，为剩余设备重复 `mdev` 命令 62 次，并按需修改每个设备的名称和属性。可以从命令行执行该脚本文件，以完成剩余设备的定义。使用 `smit -s <PathName>` 选项可以在主目录以外的位置创建脚本文件。
+
+```
+# smit -s /tmp/smit.script   在 /tmp 中创建脚本文件
+```
+
+例如，`smit.script` 中涉及移除 `paging00` 分页空间的条目如下：
+
+```
+#       [Jul 26 2001, 22:43:50]
+#
+rm_lv -f 'paging00'
+#
+#       [Jul 26 2001, 22:44:23]
+#
+lsvg -o|lsvg -i -l
+#
+#   [Jul 26 2001, 22:44:57]
+#
+rmlv -f '10g1v00'
+#
+#   [Jul 26 2001, 22:47:20]
+#
+chdev -1 sys0 -a maxuproc='128'
+#
+```
+
+如你所见，在 7 月 26 日，我们做的事情远不止移除 `paging00` 分页空间。我们先是移除了 `paging00` 分页空间，然后继续显示所有当前活动逻辑卷的列表，移除 `loglv00` 逻辑卷，并将每个用户的最大进程数设置为 128。当你想要创建 shell 脚本以自动化系统变更和重新配置时，`smitscript` 文件极具价值。
+
+### SMIT 快速路径
+
+SMIT 允许你绕过对话框和菜单屏幕，通过使用快速路径名称直接进入任务（参见表 5-3）。快速路径名称是特定 SMIT 面板的标识符。快速路径名称作为 `$HOME/smit.log` 信息的一部分被记录下来。快速路径名称作为 **smit** 命令的参数，用于直接进入任务面板。
+
+```
+# smit nfs ⟵ 访问 SMIT NFS 管理
+```
+
+记住所有的快速路径名称和管理命令可能是一项真正的挑战。幸运的是，AIX 开发者为快速路径和命令名称实现了一条易记的规则。四个前缀 **ls, mk, ch, 和 rm** 附加在根任务名称列表中的 **make, change** 和 **remove** 操作系统对象之后。例如，要创建一个 TTY 设备，其快速路径或命令名称为 **mkitty**。
+
+#### 快速路径与命令操作及对象
+
+AIX 管理命令由两部分组成：操作后跟操作对象，如下所示：
+
+| 操作 | 对象 |
+| :--- | :--- |
+| mk, ls, ch, rm | dev, user, fs, vg, pv, tty, cd, tape 等 |
+
+将操作与对象结合，在大多数情况下将生成直接的 SMIT 快速路径，如表 5-3 所示。
+
+对于大多数其他具有低级子菜单的系统管理任务，都可以使用更多的 SMIT 快速路径选项。例如，如果你想要直接跳转到向系统添加用户，SMIT 快速路径为 **smitty mkuser**。
+
+| 任务 | SMIT 快速路径 |
+| :--- | :--- |
+| 软件安装和维护 | install |
+| 软件许可证管理 | licenses |
+| 设备管理 | dev |
+| 系统存储管理（物理和逻辑存储） | storage |
+| 日志文件系统管理 | jfs |
+| 逻辑卷管理 | lvm |
+| NFS 管理 | nfs |
+| 安全管理 | security |
+| 用户管理 | user 或 users |
+| 通信应用和服务 | commo |
+| TCP/IP 管理 | tcpip |
+| 打印队列管理 | spooler |
+| 问题确定 | problem |
+| 系统诊断 | diag |
+| 性能和资源调度 | performance |
+| 系统环境 | system |
+| 进程和子系统 | src |
+
+### 自定义 SMIT
+
+SMIT 由一系列分层菜单面板、NLS 消息目录、命令接口以及日志和脚本设施组成。这些组件集成为管理操作系统和系统资源提供了无缝的界面。有三种类型的 SMIT 显示面板用于管理用户与管理任务之间的交互：菜单、选择器和对话框。菜单面板显示管理任务选项。选择器面板（参见表 5-4）提供一系列值，你必须在选择后才能继续执行管理任务。你可以选择一个或多个。对话框面板提供输入字段，用于指定命令参数和值。
+
+| 类型 | 功能 |
+| :--- | :--- |
+| 菜单 | 任务选项列表 |
+| 选择器 | 在进行之前请求额外输入 |
+| 对话框 | 请求命令参数和选项的值 |
+
+SMIT 对象通过 ODM 生成设施生成，然后存储在设计数据库中的文件中。默认情况下，它们位于 `/usr/lib/ibmpg/objects` 目录。SMIT 数据库默认由以下文件组成：
+
+- sm_menu_opt
+- sm_menu_opt.vc
+- sm_name_hdr
+- sm_name_hdr.vc
+- sm_cmd_hdr
+- sm_cmd_hdr.vc
+- sm_cmd_opt
+- sm_cmd_opt.vc
+
+这八个文件应始终一起维护，包括保存和恢复。在对 ODM（关于 ODM 的更多信息请参见第 9 章）和 SMIT 架构变得熟悉后，你可以使用 ODM 命令来自定义 SMIT。当使用详细跟踪选项 `-vt` 调用 SMIT 时，SMIT 对象类名称和对象标识符将列在 SMIT 日志文件中。
+
+## smit -vt - SMIT 详细跟踪
+
+## 基于 Web 的系统管理器
+
+对于那些喜欢系统管理工具稍微炫一点的人，基于 Web 的系统管理器（WebSM）是你的首选工具。WebSM 为 AIX 5L 提供了一套全面的系统管理工具。由于采用鼠标驱动、点击、拖放式的基于 Web 的桌面环境，WebSM 使用起来很直观。它比 SMIT 更丰富多彩，并阻止你深陷于 AIX 命令行的泥沼中。AIX 5L 严重依赖于 WebSM，似乎在某些未来的 AIX 版本中，一些新功能可能仅通过 WebSM 提供。管理对象和相关任务以具有 Web 浏览器外观和感觉的图标形式显示（参见图 5-4）。要执行操作，请双击所需对象。如果需要额外信息，将显示 WebSM 对话框面板以获取配置信息。
+
+WebSM 的 AIX 5L 版本能够管理 Power 和 IA-64 硬件上的众多 AIX 5L 主机。此外，WebSM 5L 版本的新功能包括通过最初为 IBM RS/6000 SP 框架创建的资源和监控控制（RMC）软件对系统事件进行动态监控。现在，你不需要编写所有这些 shell 脚本来监控系统是否存在文件系统已满等问题。
+
+WebSM 可以以独立或客户机/服务器模式运行。在独立模式下，WebSM 管理本地 AIX 系统。在客户机/服务器模式下，WebSM 可以从远程 PC 或使用图形用户
+
+
+
+图 5-4. 基于 Web 的系统管理器主窗口
+
+在此环境中，远程管理的 AIX 系统是*服务器*，而执行管理操作的系统是*客户端*。WebSM 已在 Netscape Navigator 和 Microsoft Internet Explorer 上进行过测试。
+
+WebSM 可以在任何使用 Java 1.3 及*更高版本*的启用 Java 的浏览器所在的操作系统平台上运行。截至目前，WebSM 仅在 AIX 5L 版本 5.0 和 5.1 以及 Microsoft Windows NT、98、ME 和 2000 上进行了测试。
+
+WebSM 可以从 AIX 通用桌面环境（CDE）应用程序管理器 System_Admin 窗口或通过使用 *wsm* 命令在命令行中启动。
+
+## 分布式系统管理
+
+分布式系统管理工具似乎来来去去。分布式 SMIT 作为 IBM 系统管理产品的一部分提供，这些产品提供了用于管理分布式 UNIX 平台的 SMIT 界面。在 SystemView 与 Tivoli 的 Tivoli 管理环境（TME）宣布合并后，对 DsMIT 的引用开始消失。
+
+### DSMIT
+
+分布式系统管理接口（DSMIT）作为独立产品安装在 AIX V3.2.5 和 AIX V4 上。在功能上，它与单系统 SMIT 相同，但它更进一步，允许对多种厂商的 UNIX 产品进行远程管理，包括以下产品：
+
+- AIX 3.2.5，AIX V4
+- Sun OS 4.1.3
+- Solaris 2.3，Solaris 2.4
+- HP-UX 9.0
+
+正如您可能料到的那样，DSMIT 被划分为客户端（被管理系统）和服务器（管理系统）。由 DSMIT 管理的机器被分组到域中。域内机器子集称为工作集合。表 5-5 展示了系统的分解以及存储在 /usr/share/DSMIT 目录中的各种配置信息。
+
+| 文件 | 用途 |
+|---|---|
+| domains | 客户端组 |
+| dsmitos | 管理的操作系统 |
+| clients | 被管理的主机 |
+| security/v5srvtab | 主体密钥 |
+| security/admin.cfg | 管理员密钥 |
+| security/managing.cfg | 管理系统密钥 |
+| security/managed.cfg | 被管理系统密钥 |
+| security/dsmit.ptr | DSMIT 配置文件服务器 |
+
+表 5-5. /usr/share/DSMIT
+
+正如您可能想象的那样，在分布式管理环境中，安全是一个关键问题。DSMIT 使用 MIT Kerberos V5 安全服务来验证 DSMIT 服务器和客户端。使用商用掩码数据设施（CMDF）和消息认证码（MAC）协议来确保数据完整性并防止消息篡改。这很好的一点是，一旦您向 Kerberos 验证自己为系统管理员，您就不需要登录将要管理的每个系统。
+
+DSMIT 允许您选择用于管理功能的系统组。当需要执行更新时，您可以选择将命令一次性发送到组中的所有机器（并发模式），或一次一台（顺序模式）。在后一种情况下，如果更新出现问题，您可以退出。为了让事情变得容易或困惑（取决于您的观点），可以设置一个 shell 环境变量，以指示当用户或管理员输入 **SMIT** 时应运行 DSMIT。
+
+```
+SMIT=d      # 调用 DSMIT 而不是 SMIT
+```
+
+关于我们将讨论的 DSMIT 内容大约就是这些，因为人们正在押注 Tivoli 的替代品。以下部分介绍了 OSF 的分布式管理环境（DME）规范，以让您了解 Tivoli 系统管理技术的背景。Tivoli 是 DME 规范的主要技术提供商之一。
+
+### DME 历史
+
+在 20 世纪 90 年代初，开放软件基金会定义了一个名为分布式管理环境（DME）的分布式系统管理标准。DME 技术规范定义了一组统一和一致的工具和服务，可用于管理独立的和分布式的异构系统、应用程序和网络。
+
+DME 将一系列选定的厂商管理技术组合到一个基于三层模型的一致框架中。最底层支持单主机管理活动。第二层提供分布式环境中的单元命名和安全管理。顶层涵盖通过基于 Motif 的 GUI 接口进行的企业级管理。DME 例程使用 DCE、SNMP 和 OSI CMIP 与受管对象通信。表 5-6 列出了开发实体选择的各种 DME 技术。
+
+DME 技术请求（RFT）最初于 1990 年 7 月发布。经过 OSF 慕尼黑开发部的评估，1991 年 9 月做出了选择。所选技术经历了一段集成测试期，在此期间，代码快照向感兴趣方开放。DME 许可费已设定，首次代码发布计划在 1993 年第四季度。
+
+| 厂商 | 技术选择 |
+|---|---|
+| IBM | Data Engine, System Resource Controller |
+| MIT Project Athena | Palladium Print Services |
+| Tivoli | WizDOM 面向对象的框架 |
+| Banyan | Network Logger |
+| HP | Open View Network Management Server |
+| | Software Distribution/Installation Utils |
+| | Network License Manager |
+| Groupe Bull | Consolidated Management API |
+| Gradient | PC Ally and Client Lib for Net License Server |
+| | PC Agent and Event Components |
+
+表 5-6. DME 技术选择
+
+## SMIT
+
+- `smit` Motif 接口
+- `smit -C`、`smitty` TTY 接口
+- `smit -X` 禁止更新，测试驾驶 SMIT
+- `F6-key` 显示 SMIT 将执行的命令
+- `smit <fast-path-name>` 显示 SMIT 子菜单
+- `$HOME/smit.log` SMIT 事务日志
+- `$HOME/smit.script` SMIT 命令日志
+- `/usr/lib/objrepos/` SMIT ODM 面板数据库 sm_xxxx_xx
+- DsMIT 分布式 SMIT
+- `SMIT=d` 调用 DSMIT 而不是 SMIT
+
+## WSM
+
+- `wsm` 启动基于 Web 的系统管理器接口
+
+## 检查清单
+
+以下是系统管理要点的检查清单：
+
+- ☐ 使用 `smit` 命令执行系统管理接口工具或 SMIT（AIX 的基础系统管理工具），以获得 Motif 接口，或使用 `smitty` 命令以获得 ANSI 接口。
+- ☐ 在 SMIT 中按 F6 键，在提交更新前显示将调用的实际 AIX 命令和参数。
+- ☐ 通过按 F1 键从任何菜单调用 SMIT 帮助。
+- ☐ SMIT 创建每个 SMIT 会话的审计日志，命名为用户 `$HOME` 目录中的 `smit.log`。
+- ☐ SMIT 将会话期间调用的 AIX 命令追加到本地 `$HOME/smit.script` 文件。
+- ☐ 您可以使用 `smit.script` 文件创建 shell 脚本来自动化系统更改和重新配置。
+- ☐ 您可以通过使用 FastPath 名称直接进入任务，从而绕过 SMIT 对话框和菜单屏幕。
+- ☐ 通过在根任务名称后附加四个前缀之一 **ls**、**mk**、**ch** 和 **rm**，可以记住 FastPath 命令名称，这些前缀对应于操作系统的 **list**、**make**、**change** 和 **remove** 对象。
+- ☐ SMIT 使用三种类型的显示面板（菜单、选择器和对话框）来管理用户与管理任务之间的对话。
+- ☐ SMIT 对象存储在指定数据库的八个文件中，默认位于 `/usr/lib/objrepos` 目录。这八个文件应始终一起维护，包括保存和恢复。
+- ☐ AIX 5L 的基于 Web 的系统管理器（WSM）提供鼠标驱动的、点击和拖放系统管理工具。
+- ☐ 从 AIX 通用桌面环境（CDE）应用程序管理器 System_Admin 窗口或通过命令行使用 **wsm** 命令启动 WebSM。
+- ☐ 在客户端/服务器模式下，WSM 可以从远程 PC 或使用图形用户界面的另一个 AIX 系统管理 AIX 系统。
+- ☐ 分布式 SMIT（DSMIT）比 SMIT 更进一步，允许对多个厂商的 UNIX 产品进行远程管理。
+- ☐ 当您使用 DSMIT 进行更新时，可以选择将命令一次性发送到组中的所有机器（并发模式），或一次一台（顺序模式）。
+
+
+
+
+![image](img/82f851021955589d82b22750fb3b1646_91_0.png)
+
+## 第 6 章
+
+### AIX 安装与维护
+
+版权 2002 归麦格劳-希尔公司所有（The McGraw-Hill Companies, Inc.）。点击此处查看使用条款。
+
+第 77 页
+
+众所周知，IBM 以在每个新版本中更改维护和实施程序而闻名。IBM 可能会否认这一点，但我升级系统已经很长时间了，这正是我的经验之谈。每次安装 AIX 时，我都建议你*仔细*遵循安装指南，即使你觉得自己闭着眼睛都能搞定。（特别是，请阅读发行说明！）根据经验，我可以告诉你，偷工减料可能会带来灾难性的后果。遵循适合你环境的安装路径，你就能将意外情况降到最低。我们的起点是将现有环境与安装和维护过程隔离开来。
+
+除了程序变更，你会发现，与其他所有操作系统供应商一样，IBM 也屈服于许可压力，现在在 AIX 5L 中要求你在 AIX 系统上安装新软件时接受电子许可协议。这些许可协议可以设置为自动接受，不应给非交互安装带来问题（参见本章后面“完全覆盖”章节中的 `ACCEPT_LICENSE`）。仅需安装产品即暗示接受许可协议的日子已经一去不复返了。
+
+截至本文撰写之时，AIX 5L 版本 5.1 是当前发布的版本。AIX 5L 版本 5.2 预计于 2002 年第三季度发布，随后的版本 5.3 和 5.4 大约每年在第三季度或第四季度发布。我建议保持接近当前发布的版本，只要这对你的环境来说是舒适的。保持最新能让你在遇到问题或故障时获得 IBM 的最佳支持（AIX 支持电话是 1-800-CALL-AIX）。本章将重点介绍 AIX 5L 版本 5.1 级别的安装和维护功能。还请研读 IBM 出版物 *AIX 5L Version 5.1 Installation Guide*（SC23-4374），可在 <http://www.redbooks.ibm.com> 找到。
+
+## 安装与维护规划
+
+在全新的计算机上安装全新的操作系统或应用程序，就像在干净的画布上作画一样。你不受保留或适应任何现有范式的束缚。你有自由从零开始规划你的环境。规划是这里的关键词。应配置操作系统和生产文档文件系统，以从磁盘空间中获得最佳性能。始终努力实现一种配置，以促进未来的产品升级并允许轻松的维护任务。保留磁盘空间用于非根卷组，以容纳你的用户和本地生产文件系统。如果你要安装多台机器，考虑安装一个系统作为参考系统，然后可以通过网络安装管理器（NIM）系统映像或 mksysb 进行克隆。还有其他不太复杂的 `mkssysb` 映像安装方法，你可能需要研究一下，例如，备用磁盘安装（参见本章后面“备用磁盘安装程序”章节）。利用安装指南规划部分提供的工作表。规划表格是良好的参考集，当你在未来某个时间需要回顾你的安装计划时。
+
+以下是一些安装注意事项。
+
+- **内存**：AIX 5L 版本 5.1 的基础内存要求是 64MB 的 RAM。
+- **安装介质**：除了预安装之外，IBM 提供的唯一选项是 CD-ROM。网络安装管理器（NIM）也可以通过令牌环、以太网和 FDDI 可用。
+- **BOS 磁盘空间**：所需的磁盘空间因环境而异，差异巨大。我始终建议至少保留 4GB（9GB 更好！）的未镜像磁盘空间，然后对 rootvg 进行镜像。在生产系统上*不*对根卷组进行镜像简直太愚蠢了。
+- **许可产品磁盘空间**：你想安装什么？查看随软件提供的文档，并将需求增加 50%。磁盘空间很便宜！
+- **分页空间**：分页空间要求因系统上运行的应用程序而异。如果你正在运行数据库，则创建几个“*大型*”分页空间，*所有*都在 rootvg 中，大小大致相等。在这里，“*大型*”是一个相对术语。通常，总分页空间应从两倍实际内存开始，即使对于具有大量 RAM 的系统也是如此。如果你正在运行带有 Oracle 的 SAP，供应商希望有几十 GB 的分页空间，以防万一（他们没说以防什么！）。
+  > **注意**：绝不要在单个磁盘上放置多于一个分页空间！
+
+由于 VMM 使用轮询技术使用分页空间，它均匀地使用系统的所有分页空间。如果你在单个磁盘上有多个分页空间，你可能会过度使用这个单一磁盘，从而违背轮询技术的目的。
+
+- **/tmp 空间**：以防万一，从至少 100MB 的 /tmp 空间开始。
+- **为本地用户和生产文件系统创建单独的卷组**：保留 *rootvg* 用于操作系统，并将应用程序和其他 *共享* 数据放在非 rootvg 磁盘上。
+- **参考系统和网络安装管理器**：如果你要安装大量系统或想要设置标准，考虑使用网络安装管理器（NIM）设置一个参考机器。使用 NIM 可以大大简化和精简网络上的重复安装，无论是本地还是全球范围。
+
+### 网络参数
+
+与你的网络管理员讨论适合你系统的最佳网络选项；无论这是一台新机器还是旧机器，网络管理员可能有一些你不知道的新设备。在设置网络选项时考虑一切因素。大多数站点至少可以处理 100MB 全双工。在可能的情况下，不要将以太网卡或路由器端口配置为*自动协商*，这意味着它将根据网络更改网络设置。一个常见问题发生在 CISCO 路由器设置为 10/100 *半*双工自动协商时。适配器会切换到 100MB，但它无法自动协商到*全*双工。结果是系统性能非常差。
+
+### AIX 5L 的机器支持
+
+在 AIX 5L，版本 5.1 之后，将不再支持微通道体系结构（MCA）和 POWERPC 参考平台（PReP）。从 AIX 5L，版本 5.2 开始（定于 2002 年第四季度 GA），将不再支持以下机器类型列表中的 MCA 型号：
+
+- 7006, 7007, 7008, 7009, 7010, 7011, 7012, 7013, 7015, 7030, 和 7202.
+
+以下基于 PReP 的系统，在以下机器类型列表中指定，从 AIX 5L，版本 5.2 开始将不再受支持：
+
+- 6015, 6042, 6050, 6070, 7020, 7024, 7025, 7026, 7043, 7247, 7248, 7249, 和 7317.
+
+不幸的是，这个列表包括流行的 43-P 型号。
+
+以下 SP 节点（所有基于 MCA）在 AIX 5L，版本 5.2 中不再受支持：
+
+- 2001, 2002, 2003, 2004, R PQ (66MHz Wide 59H), 2005, 2006, 2007, 2008, 2009, 2022.
+
+以下 PCI 适配器（由功能代码指定）从 AIX 5L，版本 5.2 开始不再受支持：
+
+- 2408, 2409, 2638, 2648, 2657, 2837, 2854, 2855, 2856, 8242.
+
+以下 ISA 适配器（由功能代码指定）从 AIX 5L，版本 5.2 开始不再受支持：
+
+- 2647, 2701, 2931, 2932, 2933, 2961, 2971, 2981, 8240, 8241.
+
+在开始你的 AIX 5L 安装之前，仔细检查机器类型和适配器功能代码以确认兼容性。
+
+## 产品打包
+
+首先，AIX 5L 操作系统通过 CD-ROM 发行。为了简化安装和维护过程，并更准确地将产品按预期的服务配置分组，软件被分组为产品、包、捆绑和文件集。在最底层，文件集标识提供特定功能的软件。文件集是用于维护目的的最小可安装和可更新单元。你会非常熟悉文件集。分组以提供共同服务的文件集称为包，例如组成 BOS 网络的文件集合。许可产品代表在安装介质上作为一组分发的包的集合。针对特定服务配置组合的包、文件集和相关维护组称为捆绑。示例包括 AIX 5L 上的 App-Dev、CDE、GNOME、KDE、Client、Server 或 Device 配置。你可以使用 SMIT 创建自己的自定义捆绑，以捕获特定的应用程序级别，或按你认为最初应该分组的方式对文件集和包进行分组。
+
+### 软件打包的三个层次
+
+- **文件集**：特定功能软件集
+- **包**：共同功能文件集
+- **捆绑**：文件集、包和维护的组
+
+已安装软件产品有三个部分：
+
+- **usr 部分**：包含产品中可以由相同硬件架构的机器共享的部分
+- **root 部分**：包含产品中不能共享的部分。root 部分是特定于特定机器的
+- **share 部分**：包含可以与其它机器共享的产品部分；此部分软件在任何方面都不是机器依赖的
+
+在安装软件且 SMIT 中执行 commit 过程时，你会看到 usr、root 和 share 的提及。
+
+## 支持信息
+
+在全面投入之前，阅读任何与产品相关的 README 文件。联系 IBM 支持代表，了解你的操作系统版本、发布和修改的最新维护级别（ML）补丁集，并询问正在安装的任何发布级别规划信息。在你联系 IBM 服务代表或软件制造商之前，确保你有 AIX 版本和发布编号、你的服务修改级别、你的机器序列号和型号、以及你的客户编号。要识别现有系统的版本和发布编号，请使用 oslevel 命令。oslevel 命令通过使用安装在系统上的文件集子集来报告当前操作系统级别。oslevel -q 命令将显示任何已安装的基本迁移升级。如果 oslevel 仅显示 4.3.2.0 且 -q 选项显示 4.3.3.0 存在，则
+
+
+
+# 选择安装方法
+
+AIX 可以通过三种方法之一进行安装：完全覆盖安装、保留安装或迁移安装。完全覆盖安装用于在计算机上安装新的 AIX 系统，或者在不保留任何先前安装数据的情况下覆盖操作系统的旧版本。保留安装会尝试通过仅覆盖 `/`、`/usr`、`/var` 和 `/tmp` 文件系统，来保留根卷组 (rootvg) 中现有的用户目录。正如我将在本章后文解释的那样，一种更安全策略是将用户或本地数据存储在不属于 rootvg 的文件系统中。迁移安装选项用于保留根卷组布局和系统配置文件。这是 AIX 5L 版本 5.1 的默认安装选项。
+
+无论使用哪种安装方法，你都需要确保拥有一个良好的 **mksysb**（或 **sysback**、**rootvg**）备份映像。如果你有一个高度定制的系统，可能需要回溯并检索字体文件或其他内容。在我的经历中，字体文件是在迁移升级过程中唯一丢失的东西。拥有备份磁带可以让你非常轻松地将丢失的文件还原到指定位置。
+
+对于从失败的安装或升级中简单恢复，应考虑使用备用磁盘安装工具。备用磁盘安装 (Alternate Disk Install) 允许你将 **rootvg** 克隆到一组备用磁盘。此技术可以为从失败的迁移中恢复提供一种简便方法（参见本章后文的“使用备用磁盘安装”）。
+
+# APPLY 和 COMMIT
+
+在为新软件安装或维护现有系统之前，你需要为安装期间或安装后可能出现问题制定一种回退策略。AIX 的默认行为是使用 **COMMIT**（提交）选项而不是 **APPLY**（应用）状态来向系统添加新软件和维护。 **APPLY** 选项会保留一个历史文件以及被软件更新替换的每个对象的备份副本。如果你对更新结果不满意，可以 **REJECT**（拒绝）文件集并恢复先前版本。使用 **SMIT** 安装软件更新时，将 **COMMIT Software?**（提交软件？）选项设置为“否”，将 **Save Replaced?**（保存被替换内容？）选项设置为“是”。这两个 **SMIT** 选项是互斥的，意味着它们必须具有相反的值。命令行选项如下：
+
+```
+#   installp -qa -d /usr/sys/install.images -X all    APPLY updates
+#   installp -rB -X all                  REJECT updates
+```
+
+一旦对更新感到满意，你可以 **COMMIT**（提交）更新以移除先前版本的备份副本。
+
+```
+#   installp -c -g -X all              COMMIT updates
+
+or
+
+#   smitty install_commit              SMIT FastPath
+```
+
+使用 **APPLY** 选项安装的注意事项是，需要额外的磁盘空间来保存旧版本。如果没有多余的磁盘空间，你必须使用 **COMMIT** 来安装产品。此选项可以节省磁盘空间，但它不提供简单的回退机制。在使用 **COMMIT** 安装之前，请对根卷组文件系统做完整备份。如果出现问题，你可以恢复备份。
+
+```
+# installp -qa -d /cdrom/usr/sys/inst.images -C -N all
+```
+
+在必须移除已提交 lpp 的情况下，可以调用 installp 命令的 deinstall 功能。此 `-u` 选项将移除产品文件、相关维护以及重要产品数据 (VPD)，无论产品安装状态如何。
+
+```
+# installp -u fileset_name   Remove software
+```
+
+与所有 **installp** 命令选项一样，首先添加 **-p** 选项以*预览*结果总是一个好习惯！例如：
+
+```
+# installp -up fileset_name 1>/tmp/output 2>&1
+# view /tmp/output
+```
+
+# 即时文件系统扩展
+
+为确保有足够的文件系统空间，你可以选择在安装期间自动增加文件系统大小。不幸的是，此过程有时会过度分配文件系统空间，导致安装结束时浪费磁盘空间。如果卷组中没有可用的逻辑分区增量，自动文件系统扩展还可能导致安装中止。在大多数情况下，最好预先计算更新所需的空间，并在开始安装过程之前手动分配空间。请记住，一旦文件系统被过度分配，很难缩小它，但鉴于当今生产的磁盘容量很大，这通常不是大问题。
+
+```
+# installp -qa -d /cdrom/usr/sys/inst.images -X all
+# installp -qa -d /cdrom/usr/sys/inst.images all   Auto expansion
+
+# No auto expansion
+```
+
+# 系统状态
+
+在安装新的产品发行版或维护补丁时，请限制系统上的活动。对于某些产品，这涉及关闭正在更新的应用程序并停止任何相关的子系统和子服务器。如果是由系统...
+
+
+
+
+## 资源控制器 (SRC)
+
+使用 `stopsrc` 命令来停止子系统。例如：
+
+```bash
+# stopsrc -g tcip  # 停止 TCP/IP 子系统组
+```
+
+在更新操作系统或一组产品时，通过关闭到维护模式来降低系统活动通常更为方便。这将停止所有应用程序和子系统，并限制除系统控制台外对系统的访问。
+
+```bash
+# shutdown -m  # 关闭到维护模式
+```
+
+如果不需要维护模式，你可以通过创建一个 `/etc/nologin` 文件来临时禁止非 root 用户的登录访问。每当非 root 用户尝试登录时，`/etc/nologin` 文件的内容都会显示出来。例如：
+
+```text
+由于系统维护活动，登录访问暂时被禁止。请在上午 7:30 之后重试。
+```
+
+`/etc/nologin` 文件可以是一个空文件。禁止非 root 登录的是 `/etc/nologin` 文件的*存在本身*，而不是文件的*内容*。如果 `/etc/nologin` 文件存在，它将在启动过程的第三阶段作为正常部分从系统中移除。请记住，如果你已经禁用了系统的远程 root 登录（这是强烈推荐的做法），那么当 `/etc/nologin` 文件存在时，你必须在控制台上才能登录系统！如果你不需要重启机器，请别忘了移除该文件，否则在你的维护窗口完成后，所有用户将继续被锁定在外。
+
+### 更新现有的 AIX 系统
+
+如果你将用户文件系统和本地产品数据保留在非 rootvg 卷组中，那么向现有 AIX 系统安装升级或维护会容易得多。在安装升级或维护之前，可以导出非 rootvg 卷组，从而保护它们免受更新问题的影响。
+
+> **注意** 在导出卷组之前，记录逻辑卷的所有 `/dev` 设备的所有权关系至关重要。非 root 用户（如 db2adm）拥有逻辑卷的 `/dev` 设备是很常见的。当你导入逻辑卷时，所有的 `/dev` 逻辑卷都将归 root 所有。为了记录所有权关系，请运行命令 `ls -l /dev > /usr/local/etc/dev.lst`。
+
+导入卷组后，你需要手动或通过脚本恢复所有权关系。
+
+在卸载所有文件系统后，你可以使用以下命令导出卷组：
+
+```bash
+# exportvg <VGname>
+```
+
+更新完成后，可以使用以下命令将卷组重新导入系统：
+
+```bash
+# importvg -y <VGname> <PhysicalVolume>
+```
+
+例如：
+
+```bash
+# importvg -y appvg hdisk10
+# mount -a
+```
+
+如果你需要为此卷组导入指定卷组*主设备号*（major number），例如在 HACMP 集群中，你可以添加 `-V major_number` 命令参数，如下例所示：
+
+```bash
+# importvg -V 46 -y appvg hdisk10
+```
+
+上述命令指定 46 是 **appvg** 卷组的主设备号。
+
+要找到系统上下一个可用的主设备号，请使用以下命令：
+
+```bash
+# lsvlmajor
+```
+
+如果你的系统处于 HACMP 集群中，你必须保持设备主设备号的一致性，以便两台机器都知道每个共享卷组的主设备号是什么。
+
+> **说明** 对于多物理卷（multi-pv）卷组，在使用 `importvg` 命令时，你只需指定卷组中的一个磁盘即可。
+
+执行升级有两种方式。如果 AIX 的版本和修订号保持不变，而你正打算进行新的修改和修复级别（例如，你当前在 4.3.2.0，想要升级到 4.3.3.0），则存在一种快速升级路径。仅在这种情况下，你只需停止所有应用程序，锁定所有用户，导出所有非 rootvg 卷组，然后运行 `smitty update_all`。如果你有可用的磁盘空间，你可能希望使用 APPLY（应用）更新而不是使用 COMMIT（提交）。使用 APPLY，如果你希望更新未按预期工作，你有能力拒绝这些更新。此方法仅在 AIX 的版本和修订号保持不变时有效。但是，如果你要使用 APPLY 安装选项，你必须首先 COMMIT 系统中当前的所有内容。在命令行上，运行命令 `smitty install_commit`。接受所有默认值并按两次 ENTER。一旦之前 APPLY 的所有文件都处于 COMMIT 状态，你就可以继续升级了。
+
+如果你要升级到新的 AIX 版本或发行版（例如，如果你要从 AIX 4.3.3.0 升级到 AIX 版本 5.1.0.0），则必须使用新的安装 CD-ROM 将系统引导到维护模式。在这种情况下，你正在同时升级版本和发行版级别。如果你要升级到不同的版本，例如从 5.1.0.0 升级到 5.2.0.0，你也必须从安装 CD-ROM 引导。
+
+- 如果你拥有 PCI 总线机器，请从安装介质启动（对于 IBM 发布的 AIX 5.1，CD-ROM 是唯一选项）。将 CD-ROM 插入驱动器，如有必要打开电源，并在键盘初始化且发出蜂鸣声后立即按下相应的功能键（参见第 7 章）。
+  > **说明** 并非所有机器都支持服务模式的启动列表（参见附录 A）。
+
+- 如果你拥有一台带有钥匙开关的微通道（Micro Channel）机器，请将钥匙转到服务位置，将 CD-ROM 插入驱动器，重启或打开电源，并按照提示识别控制台并选择语言和安装方法。
+
+在开始迁移安装之前，运行 `bootinfo -b` 命令以查找最后一个启动设备，并记下 `hdisk#` 以便日后参考。在开始保留安装（preservation install）之前，记录安装过程将使用的每个物理卷的位置、布局和空间。首先显示物理卷名称。
+
+```bash
+# lsvg
+hdisk0        00008a3d84178021        rootvg
+hdisk1        00008a3d1384358b        rootvg
+hdisk2        00008a3d1382b3f9        appvg
+hdisk3        00008a3d1382b821        appvg
+hdisk4        00008a3d1382bb65        appvg
+hdisk5        00008a3d1382beac        appvg
+hdisk6        00008a3d1382ce16        appvg
+hdisk7        00008a3d1382c512        appvg
+```
+
+对于每个物理卷，显示位置信息。
+
+```bash
+# lsdev -C -l hdisk0
+hdisk0 Available 10-60-00-80,0 16 Bit SCSI Disk Drive
+```
+
+使用 `df` 和 `lsvg` 来统计构成根文件系统和根卷组的已用和空闲空间。
+
+```bash
+# df -v / /usr /tmp /var
+Filesystem Total KB used    free     Sused iused ifree    tused Mounted
+/dev/hd4      32768     29796  2972    90%     1864  6328    22%      
+/dev/hd2      499712   456704 43008  91%      17428 107490 13%  /usr
+/dev/hd3      323584    21968 30216  6%      103  83137   0%   /tmp
+/dev/hd9var 1048576    227520 821056  21%    1635 260509 0%   /var
+```
+
+```bash
+# lsvg rootvg
+VOLUME GROUP:     rootvg            VG IDENTIFIER:   000b8a3bd3105eb23
+VG STATE:              active          PP SIZE:       16 megarbyte(s)
+VG PERMISSION:        read/write      TOTAL PPs:     1084 (17344 megarbytes)
+MAX LVs:          256               FREE PPs:      710 (11360 megarbytes)
+LVs:               9                 USED PPs:      374 (5984 megarbytes)
+OPEN LVs:             8                 QUORUM:          1
+TOTAL PVs:         2                 VG DESCRIPTORS:  1
+STALE PVs:         0                 STALE PPs:         0
+ACTIVE PVs:         2                 AUTO ON:         yes
+MAX PPs per PV:  1016                MAX PVs:           32
+LVG size:         128 kilobyte(s)    AUTO SYNC:       no
+HOT SPARE:          no
+```
+
+### 克隆 AIX 系统
+
+当你在*相同*的硬件（完全相同的硬件！）上克隆 AIX 系统时，你只需使用可引导的备份映像 *mkssysb* 即可。要将系统克隆到*不同*的硬件，你必须遵循特殊程序并从 IBM 提供的安装介质启动。使用 *mkssysb* 磁带在不同硬件上启动的问题在于，备份磁带上没有针对不同硬件架构所需的所有驱动程序。为了解决这个小小的问题，我们使用安装 CD-ROM 启动，同时将新的 *mkssysb* 磁带放在磁带驱动器中。当我们到达选项菜单时，我们选择 **Start Maintenance Mode For System Recovery**（为维护模式启动以进行系统恢复），然后在列表底部选择 **Install From A System Backup**（从系统备份安装）。然后菜单会提示你选择装有 *mkssysb* 磁带的磁带驱动器。系统将从磁带安装系统，并使用 CD-ROM 获取特定机器的适当驱动程序和文件集。这相当于在 CD 驱动器中插入基础操作系统 CD-ROM 并运行 *smitty* *cfgmgr*，以自动向系统添加驱动程序。
+
+## 安装 AIX
+
+如果你正在安装全新的 *pSeries* 或 *RISC System/6000*，基础操作系统（BOS）和部分产品运行时环境可能已预安装在系统中。请注意，预安装的系统并不代表完整的产品或维护集。在将系统配置为可用之前，你必須完成剩余产品和维护的安装。
+
+如果你将在控制台使用串行连接的 TTY，请在 TTY 上使用以下设置：
+
+- 9600 bps
+- 8,1,none
+- 24 × 80 显示
+
+
+
+
+- 自动 LF 关闭
+- 行尾换行开启
+- 新行 CR
+
+按照以下十个步骤安装 AIX：
+
+1. 完成安装规划。
+2. 打开所有连接的设备。
+3. 将钥匙开关（如果存在）设置为 Service（服务）位置。
+4. 插入安装介质或 **mksysb** 可启动磁带（可能需要先加电）。
+5. 打开系统电源。（别担心，你有充足的时间！）
+6. 仅适用于 PCI 总线系统：在键盘初始化完成后且发出蜂鸣声后**立即**按下你机型对应的功能键（通常是 F5）。
+7. 当被提示时，选择控制台和*安装*语言。
+
+![](img/82f851021955589d82b22750fb3b1646_104_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_104_1.png)
+
+88 帮助 ?
+>> 选择 [1]:
+
+8. 当显示“Welcome To Base Operating System Installation And Maintenance”（欢迎使用基本操作系统安装与维护）屏幕时，你必须决定是继续执行默认安装设置，还是在继续之前验证和/或修改设置。随时输入 88 可显示帮助信息。
+
+```text
+Welcome to Base Operating System
+Installation and Maintenance
+
+Type the number of your choice and press Enter. Choice is indicated by >>>.
+>>> 1 Start Install Now with Default Settings
+    2 Change/Show Installation Settings and Install
+    3 Start Maintenance Mode for System Recovery
+
+
+88 Help ?
+99 Previous Menu
+>>> Choice [1]: _
+```
+
+安装修改包括
+
+- **安装方法**
+    - 新建并完全覆盖安装
+    - 保留安装
+    - 迁移安装
+- **主要语言环境** 美国英语为 en_US
+
+```text
+Installation and Settings
+
+Either type 0 and press Enter to install with current settings, or type the
+number of the setting you want to change and press Enter
+
+1 System Settings:
+  Method of Installation....... Preservation
+  Disk Where You Want to Install....... hdisk0
+
+2 Primary Language Environment Settings (AFTER Install):
+  Cultural Convention....... English (United States)
+  Language............. English (United States)
+  Keyboard............ English (United States)
+  Keyboard Type.......... Default
+
+3 Advanced Options
+
+>>> 0 Install with the current settings listed above
+```
+
+```text
+88 Help ?
+99 Previous Menu
+>>> Choice [0]: _
+
+WARNING: Base Operating System Installation will
+destroy or impair recovery of SOME data on the
+destination disk hdisk0.
+```
+
+- **安装磁盘** 通常是 *hdisk0*，可能还有 *hdisk1*。（请指定 rootvg 中的所有磁盘，即使是镜像驱动器！）使用 `lsdev -C -l hdisk*` 命令查找磁盘的实际位置代码非常重要。请注意，旧系统中的 *hdisk0* 在从安装磁盘启动后可能变为 *hdisk2*。
+- **文件系统大小** 如果分配过大，有一个选项可以调整逻辑卷的大小以实现精确匹配。
+- **可信计算基础** 开启高级系统安全性。如果不重新安装 AIX，就无法移除 TCB；且 TCB 只能在系统初始安装时安装到系统中。TCB 会对关键系统文件执行校验和，以确保它们未被入侵。
+
+9. 将钥匙（如果存在）转回正常位置。
+
+10. 安装完成后，系统将重启并显示 SMIT Installation Assistant 屏幕。SMIT Installation Assistant 将帮助你完成系统配置。这将包括设置日期和时间、设置 root 密码、设置网络接口等。每次系统启动时，只要未选择 Tasks Completed—Exit To AIX Login 来表明配置更改已完成，Installation Assistant 都会显示出来。
+
+![](img/82f851021955589d82b22750fb3b1646_106_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_107_0.png)
+
+## 完全覆盖
+
+完全覆盖执行的操作正如名称所示：它覆盖目标磁盘上的所有内容。使用此方法在新机器上安装 AIX 5L，或完全覆盖现有系统。如果存在图形适配器，BOS 安装将自动安装所有运行时文件集以及系统中已安装硬件所需的任何其他文件集。
+
+您会注意到，在安装继续之前，现在必须接受电子许可证协议。拒绝接受许可证协议将取消安装。如果您正在使用修改过的 bosinst.data 文件进行无人值守安装，则需要将 control\_flow 子句中的 ACCEPT\_LICENSES 字段设置为接受许可证，以防止在首次系统重启时出现用户提示。
+
+在首次系统重启时，如果您有图形控制台，将显示配置助理；如果您有 ASCII 控制台，将显示安装助理。安装和配置助理用于相同目的，即自定义新安装的操作系统。这些是 SMIT 面板，将引导您设置以下项目：
+
+- 设置系统日期、时间和时区
+- 设置 root 密码
+- 管理系统存储和页面交换空间
+- 配置网络通信 (TCP/IP)
+- 配置 Web 服务器以在浏览器中运行基于 Web 的系统管理器
+- 配置联机文档库服务
+
+最后一个选项是退出配置助理。当您退出配置助理或安装助理时，“首次启动”标志会被清除，并且这些屏幕在随后的任何重启中都不会出现。如果您需要再次访问这两个配置工具之一，可以在命令行输入 *install\_assist* 或 *configassist*。
+
+## 迁移升级
+
+迁移升级是到达 AIX 5.1（包括版本 3.2.5 和任何版本的 AIX 4）的默认安装路径。您可以从任何先前版本的 AIX 直接升级到 5.1。迁移安装会查看系统当前拥有的所有文件集，并确定哪些文件集需要更新和替换。以下文件集会自动安装或更新：
+
+- BOS 命令
+- BOS 库
+- BOS curses 和 termcap
+- BOS 网络
+- BOS 目录、文件和符号链接
+- 消息
+- X11R3
+- X11R4
+- X11 字体
+
+迁移过程包括以下四个步骤：
+
+1. 完成安装前提条件
+2. 准备系统进行操作系统升级
+3. 使用安装介质启动进入维护模式
+4. 首次重启后完成 BOS 安装
+
+前提条件包括连接所有外部设备并确保每个设备已通电。确保 root 用户的主要身份验证方法为 SYSTEM。要检查此项，请执行以下命令：
+
+```bash
+luser -a authl root
+```
+
+该命令应返回以下内容：
+
+```text
+root authl=SYSTEM
+```
+
+如果得到其他任何响应，请使用以下命令更改该值：
+
+```bash
+chuser authl=SYSTEM root
+```
+
+确保所有用户都登出系统，创建一个 `/etc/nologin` 文件来禁用所有非 root 登录是个好主意。在文件中放入一条消息，例如*系统正在停机升级 . . . 请稍后再试 . . . .*
+
+系统必须至少有 64MB 的 RAM。您可以使用以下任一命令列出实际内存：
+
+```bash
+bootinfo -r
+lsattr -Ei sys0 | grep realmem
+```
+
+这两个命令都以千字节为单位列出内存。
+
+运行系统备份，最好生成一个 `mksysb` 或 `sysback` 映像。在升级过程中，您可能会丢失一两个想要的文件，而备份磁带可以省去很多麻烦。我曾经丢失的唯一文件是一个应用程序的特殊字体文件，很容易从磁带中恢复。
+
+前提条件完成后，我们需要为安装准备系统。首先，如果系统正在运行，请将其关机。如果系统有钥匙，请将钥匙转到服务位置。单词“Service”或示意图或扳手符号指示服务钥匙位置。打开所有外部设备，并允许所有外部磁盘驱动器有足够的时间启动旋转，设备完成自检。
+
+接下来，我们可以从安装介质启动，对于 AIX 5.1 而言是 CD-ROM。插入 CD-ROM 并打开系统电源（您可能需要先打开系统电源再插入 CD-ROM——您有充足的时间完成这两件事）。如果您有一台 PCI 总线机器（没有钥匙开关！），则在*蜂鸣声响起后*键盘初始化完成后，立即按下合适的功能键（通常是 F5）。按下功能键会指示系统启动进入维护模式。几分钟后，您会在 LED 显示中看到 `c31`。在控制台上，输入 `1` 或按 `F1` 然后按 `ENTER` 来定义控制台。接下来，系统会要求您为*安装*选择一种语言。
+
+> 注意
+> 安装语言和生产语言可以不同。
+
+然后我们会到达欢迎屏幕。始终选择 **Change/Show Installation Settings**（更改/显示安装设置）以验证安装磁盘和语言环境。当一切看起来都没问题时，输入 0（零）然后按 `ENTER` 以开始安装。如果系统有钥匙开关，您可以在安装完成前的任何时间将其转回“Normal”（正常）位置。
+
+## 安装 ML 补丁
+
+安装完成后，请务必安装最新的维护级别 (ML) 补丁。您可以从 IBM 下载这些补丁，或致电 1-800-CALL-AIX 订购最新的光盘版补丁集。使用 SMIT FastPath `smitty update_all` 安装最新的 ML 文件集并再次重启系统。您准备就绪！
+
+
+
+
+
+## 保留安装
+
+保留安装适用于您只想保存用户定义的文件系统和 /home 文件系统，而不像迁移安装那样保存系统配置的场景。保留安装还会保留页面和转储设备。保留安装将完全覆盖 /usr、/var、/tmp 和 /（根）文件系统。如果您在 /usr/local 目录下有任何内容，您可能需要特别关注该目录。AIX 5L 默认会在 /usr/local/apache/dsdocs 中安装链接，并在 /usr/local/LUM/en/5L 中创建两个文件。如果您没有为 /usr/local 创建单独的文件系统，建议在升级前将此目录结构设为单独的文件系统。
+
+## 使用备用磁盘安装
+
+如果您的环境与我的类似，那么您是没有任何停机时间的！甚至重启都变得按需进行。我猜“按需”是指当应用程序和数据库开始出错的时候。由于我们的环境由业务驱动，而我们对业务没有控制权，使用备用磁盘安装可以极大地简化维护流程和系统升级，前提是该 AIX 升级不是新版本或版本，因为新版本需要从安装介质启动进入维护模式。
+
+备用磁盘安装是一个非常好的工具，允许您在实时系统上进行系统升级和维护，并将其安装到不同的磁盘集上，而不中断服务。备用磁盘安装的要求是，当前根卷组（rootvg）中必须有相同数量的磁盘作为专用备用磁盘。首先将这些备用磁盘添加到 rootvg 卷组中，然后您可以克隆系统到备用磁盘作为备份，或者在系统克隆到备用磁盘的同时进行维护升级，所有操作可在一个过程中完成。当过程完成后，系统的启动列表会自动更改，以便在下次系统重启时启动到备用磁盘上的新环境中。让我们来设置它。
+
+## 备用磁盘安装流程
+
+系统中必须安装 bos.alt_disk_install 文件集。我们将查看使用备用磁盘安装的两个选项。第一个是备用 mksysb 磁盘安装，接下来我们将查看备用磁盘 rootvg 克隆。
+
+备用 mksysb 安装允许将另一个系统上创建的 mksysb 镜像安装到目标系统的备用 rootvg 磁盘上。执行命令如下：
+
+```
+# alt_disk_install -d /dev/rmt0 hdisk1
+```
+
+这假设 mksysb 磁带已装入 /dev/rmt0 磁带驱动器，且 hdisk1 是您的备用 rootvg 磁盘。此时系统将包含两个根卷组，原始的 rootvg 和一个名为 altinst_rootvg 的第二个卷组。此过程完成后，系统的启动列表会自动更改，以便在下次系统重启时启动到新的 altinst_rootvg 磁盘。此时，altinst_rootvg 将成为 rootvg，而原始的 rootvg 将被称为 old_rootvg。您可以在操作前后使用 lsvp 命令查看此转换。若要回到原始的 rootvg，只需更改启动列表并重启系统即可。
+
+您也可以使用 SMIT 快速路径 smitty alt_mksysb 执行相同的任务，如图 6-1 所示。
+
+我们还可以将 rootvg 克隆到另一个磁盘或磁盘集。此过程称为备用磁盘 rootvg 克隆。将根卷组克隆到备用磁盘或磁盘集有一些很好的优点。您可以只需克隆 rootvg，随时拥有一个在线备份副本，以备不时之需。
+
+您还可以克隆 rootvg，同时在该系统上安装维护升级。那么，下次重启时，您将在新的维护级别上运行，并且可以通过更改启动列表并重启系统来测试它，从而能够“回到过去”。有两个命令选项，分别对应这两项任务。
+
+若要仅克隆 rootvg 以获取备份副本，请发出以下命令：
+
+```
+# alt_disk_install -C hdisk1
+```
+
+假设 hdisk1 是您的备用磁盘。
+
+若要克隆 rootvg 并安装维护更新，请发出以下命令：
+
+```
+# alt_disk_install -C -F update_all -l /dev/cd0 hdisk1
+```
+
+假设 /dev/cd0 包含维护更新，且 hdisk1 是您的备用磁盘。
+
+![](img/82f851021955589d82b22750fb3b1646_111_0.png)
+
+**图 6-1.** 备用 mksysb 磁盘安装的 SMIT 快速路径
+
+SMIT 快速路径是 smitty alt_clone，如图 6-2 所示。
+
+如果要删除您的备用 rootvg，*不要*使用 exportvg 命令。相反，请使用命令
+
+```
+# alt_disk_install -X
+```
+
+此命令从 ODM 中删除备用磁盘定义 altinst_rootvg。如果您导出了卷组，则必须在下次系统重启前创建一个新的 /etc/filesystems 文件。
+
+也许需要补充说明的是，尽管 hdisk0 上的 rootvg 中的 ODM 已删除 altinst_rootvg，但 hdisk1 上的克隆镜像依然完好无损，并且仍然可以通过更改启动列表从该镜像启动。要查看 hdisk1 的详细信息，请运行以下命令：
+
+```
+# lqueryvg -Atp hdisk1
+```
+
+![](img/82f851021955589d82b22750fb3b1646_112_0.png)
+
+## 将 AIX 系统克隆到新硬件
+
+我们正在接收大量新机器升级。我们大多数 H-50 及以下型号的 RS/6000 机器正被 H-80 RS/6000 或 6H1 pSeries 机器取代（其中一些机器具有相同的 CPU）。每次系统切换都需要使用克隆流程迁移到不同的硬件。一旦您掌握了该流程，这其实非常简单且容易操作。
+
+您首先要做的是在当前机器上运行一个新的 mksysb。确保所有应用程序已停止。关闭所有数据库。让所有用户退出系统，然后通过创建 /etc/nologin 文件将所有非 root 用户锁定。我想您明白了：在运行 mksysb 备份之前，我们需要一个完全空闲的系统。您还应该使用以下流程从 mksysb 磁盘中提取一个文件，以确保备份是有效的。此流程假设使用的是 rmt0 磁带驱动器。从 mksysb 磁带中恢复单个文件需要非卷绕磁带模式（/dev/rmt0.1）。这可能很耗时，因此也可以同时向非 rootvg 或 NFS 文件系统创建在线 mksysb 备份会有所帮助。如果使用此方法，请确保两个系统的 root 用户都能写入大文件，并且文件系统启用了大文件支持。将新创建的 mksysb 磁带插入磁带驱动器，并运行以下命令：
+
+- `# tctl -f /dev/rmt0 rewind` 卷绕磁带
+- `# tctl -f /dev/rmt0.1 f3` 快进 3 个记录（/dev/rmt0.1 = 非卷绕）
+- `# restore -xvpf /dev/rmt0.1 .etc/hosts` 从磁盘中提取 /etc/hosts 文件
+
+**注意** 不要忘记点号。如果您省略了 .etc/hosts 前面的点，文件将不会被安装。
+
+如果此流程成功，那么我们很可能有一个良好的备份。唯一能真正知道您是否拥有良好 mksysb 备份的方法就是恢复系统！接下来的步骤将指导您完成克隆过程：
+
+1.  将当前 AIX 发行版 CD-ROM（与执行 mksysb 备份时相同的 AIX 版本）插入 CD-ROM 驱动器。
+2.  将 mksysb 磁带插入磁带驱动器。
+3.  关闭系统电源。
+4.  确保所有外部设备（如果有）已通电。
+5.  将钥匙模式开关（如果存在）转到“服务”位置（Micro Channel 机器）。
+6.  开启电源。
+7.  （如果您有钥匙模式开关，请跳此步骤。）就在键盘初始化且发出蜂鸣声时（仅限 PCI 总线机器），按相应的功能键，通常是 F5。这表示您希望 PCI 总线机器进入服务模式。
+8.  几分钟后，系统会提示您通过输入 1 并按 ENTER 来定义控制台。
+9.  在下一个提示处，选择“Start Maintenance Mode For System Recovery”（启动系统恢复维护模式）。
+10. 然后选择“Install From A System Backup”（从系统备份安装）。
+11. 下一个选项允许您指向包含 mksysb 磁带的磁带驱动器。
+12. 此时，系统会读取磁带头信息，一两分钟后您将获得开始恢复或“Change/Show The Installation Settings”（更改/显示安装设置）的选项。始终选择“更改/显示”选项以验证系统是否打算按照您的预期进行操作。验证安装磁盘和语言环境。
+13. 然后开始恢复。如果存在钥匙模式开关，您可以随时将其转回正常位置。
+14. 安装完成后，系统将自动从安装 CD-ROM 获取新硬件所需的新驱动程序和文件集。
+15. 接下来，从 IBM 为您的 AIX 版本安装最新的维护级别补丁。即使您之前已在旧硬件上安装了维护级别补丁，您也需要再次经过此过程。从命令行输入 smitty update_all，指向维护级别补丁介质，并按两次 ENTER。安装维护级别补丁后需要再次重启。
+
+## 安装许可程序产品 (LPP)
+
+使用 SMIT 安装快速路径或使用 installp 命令可以管理许可程序产品 (LPP) 的安装。使用 SMIT 更容易，因为它会提醒您执行安装或更新相关的所有选项。您还可以预览安装并同时创建自己的捆绑列表。以预览模式运行 installp 会将重要详细信息输出到标准错误。
+
+```
+# installp -Xqap -d /cdrom/usr/sys/inst.images all
+```
+
+前面的命令会将标准错误和标准输出发送到屏幕，因此让我们使用以下命令将此输出保存到 /tmp/output 文件：
+
+```
+# installp -Xqap -d /cdrom/usr/sys/inst.images all 1>/tmp/output 2>&1
+```
+
+现在我们可以 cat /tmp/output 文件，并将该文件修剪为列表中 SUCCESS 下发现的所需文件集的简单列表。给新的列表文件起一个像 /tmp/ 这样的名字
+
+
+
+
+# ## ifor 许可
+
+许可系统的正式名称是 LUM，但我仍将其称为 ifor/LS。每次安装新的 LPP 应用程序时，您都需要处理许可问题。例如 AIX 的 C 和 C++。这两款产品的安装光盘上都带有许可文件，但您必须通过 ifor/LS 服务器注册许可。
+
+第一步是确保安装了许可文件集。如果没有，当您找不到许可文件时，情况将会显而易见。请务必查阅安装文档，了解安装和授权产品的步骤以及许可证文件的完整路径。
+
+LUM（许可更新管理）需要几个基本文件集，还有几个可选文件集可用：
+
+### 基本部分
+
+```
+ifor_ls.base.cli
+ifor_ls.mag_en_US.base.cli
+```
+
+### 可选文件集
+
+```
+ifor_ls.compat.cli
+ifor_ls.html.en_US.base.cli
+ifor_ls.java.gui
+ifor_ls.mag_en_US.compat.cli
+ifor_ls.mag_en_US.java.gui
+```
+
+配置许可服务器有两种选项。如果您正在运行 CDE，请打开一个窗口并输入 **icfg**，一两分钟后会出现一个图形用户界面（由于 Java 速度较慢）。对于 ASCII 显示，请使用命令 **icfg -script**。这两个命令询问相同的问题。只需按照提示操作，并将您的产品与新配置的许可服务器进行注册。许可有五种类型：节点锁定（node-lock）、并发节点锁定（concurrent node-lock）、并发使用（concurrent-use）、单次使用（use-once）和复合（compound）。
+
+## 节点锁定许可
+
+*节点锁定* 许可是特定于机器的。在节点锁定许可环境中，每台机器必须拥有自己唯一的许可密钥。对于此选项，许可应用程序运行的*位置*很重要；因此，除非 NFS 客户端拥有节点锁定许可，否则*无法*通过 NFS 挂载的文件系统执行。然而，如果 NFS 服务器拥有节点锁定许可，那么除非也进行本地许可，否则任何 NFS 客户端都无法运行许可产品。
+
+## 并发节点锁定许可
+
+*并发节点锁定* 许可允许固定数量的并发用户在同一台机器上同时执行许可产品。与节点锁定许可一样，同样适用 NFS 客户端限制。
+
+## 并发使用许可
+
+*并发使用* 许可允许许可在*网络*内浮动，因此适用于每个 NFS 客户端。一个或多个许可服务器控制整个网络中对应用程序的访问。
+
+## 单次使用许可
+
+*单次使用* 许可一旦使用即被耗尽。一次，仅此而已！
+
+## 复合许可
+
+*复合* 许可包含一个密码，允许您根据需求创建更多许可。这种类型的许可主要用于许可再分发。
+
+## 使用 lppchk 验证安装
+
+在新安装或维护级别升级（以及定期）之后，您应该从命令行运行 **lppchk -v**，以验证系统的所有文件集是否都正确安装。如果运行此命令并收到关于 **BROKEN**（损坏）或 **OBSOLETE**（过时）文件集的消息，则需要进一步调查以确定原因。**OBSOLETE** 状态通常是因为安装了混合版本的 AIX 文件集。**BROKEN** 文件集可能表明存在严重问题，您可能需要卸载并重新安装应用程序文件集。
+
+# 安装非 LPP 产品
+
+最好将*本地*、*公共领域*和*供应商*产品与 BOS 目录分开。这样可以确保它们不会被 BOS 升级和安装所破坏。一种常见做法是创建一个名为 `/usr/local` 的本地产品文件系统。在 `/usr/local` 内，创建*子目录* *bin*、*lib*、*etc* 和 *src*。如有必要，可以将这些目录添加到默认命令 PATH 中，并从 BOS 目录创建符号链接。
+
+# 移除已安装的软件
+
+当系统中不再需要某个应用程序时，可以通过 SMIT *软件维护实用程序*将其移除。使用 SMIT 是最简单的方法。需要注意的是每个文件集的先决条件软件。我建议*永远*不要将“移除先决条件软件”选项设置为“是”。如果有备份磁带，您可能不得不用备份磁带重新安装整个系统。*对于“移除先决条件软件”始终选择“否”，这样如果出现任何类型的错误，您可以逐个移除文件集。这是一个简单的过程，因为 SMIT 会告知每个具有先决条件依赖关系的文件集，您可以独立确定系统是否因正在移除的软件以外的其他原因需要这些文件集。*
+
+要移除已安装软件，只需从命令行运行 smit 或 smitty（用于 ASCII）。选择第一个选项“软件安装与维护”。接下来，选择第三个选项“软件维护与实用程序”。下一个面板中的第三个选项是“移除已安装软件”。SMIT 面板将停留在软件名称提示符处。按 F4 键以获取系统中所有已安装软件的列表，或者，如果您知道文件集名称，请在输入字段中输入文件集名称。
+
+> 注意 第三个选项是“移除依赖软件？”，默认为“否”。将此字段设置为“是”时请谨慎！
+
+始终从将“仅预览？”选项设置为“是”开始，查看 SMIT 程序将对您的系统执行哪些操作。主要是要非常小心地从系统中移除软件。
+
+# 应用维护级别 (ML) 补丁
+
+系统维护的首要且最重要的规则：“如果没坏，别修它！”要是能这么简单就好了。AIX 操作系统和产品集由大量子系统组成。每个子系统包含数百或数千个组件。在这个并不完美的世界中，许多这些对象中会出现问题。尽量保持最新版本。有时 ML 发布并不按计划进行，例如 AIX 4.3.3 的 ML 7。ML 8 紧随其后，而截至今日，ML 9 是 AIX 4.3.3 的最后一个 ML 版本。
+
+所有操作系统和应用程序供应商都在尽力降低产品错误率。这是一项非常艰巨的任务，在共享库环境中变得更加复杂。想想有多少命令和子系统依赖于 libc.a！IBM 通过将修复程序按文件集打包到维护级别中，解决了旧的选择性修复策略中遇到的问题。
+
+AIX 5L 维护策略将预备和核心依赖修复程序按文件集打包在一起。文件集是最小的可更新单元，代表特定功能。维护级别每年发布三到四次。AIX 5L 还提供安装选项。最值得注意的是标志 -V，用于调整状态消息的详细信息级别；-u，为已提交（COMMITTED）的产品提供目录功能；-L，指示哪些产品已经安装；以及 -g，自动安装、提交或拒绝先决条件软件（-g 可能很危险！）。首选的 ML 安装方法是 smitty update_all，或者如果您有备用 rootvg 磁盘，则使用 smitty alt_clone。
+
+安装维护产品的规则与前面关于安装程序产品部分中描述的规则相同。对于分布式环境，您可能希望将维护集复制到磁盘，以便从安装服务器访问。您还可以选择构建一个可从网络安装服务器访问的参考系统映像。
+
+---
+
+**关于前面页面缺失上下文的说明：**
+提供的 OCR 文本从 `[PAGE 115]` 的句中间开始。以下部分重建了所提供文本开头的流程，纠正了 OCR 错误（如 `mylist` 上下文、`LUN` 改为 `LUM`、`current use` 改为 `concurrent use`、`ASCLL` 改为 `ASCII`、`COMMITED` 改为 `COMMITTED`），并合并了跨页内容。
+
+mylist。切除任何您不需要的文件集，包括设备（大多数设备已在迁移期间安装）。现在使用您的新列表文件预览安装。
+
+```
+# installp -Xqgp -d /cdrom/usr/sys/inst.images -f /tmp/myfile 1>/tmp/output 2>&1
+```
+
+接下来查看 /tmp/output 文件以获取详细信息。当安装预览没有错误时，您可以移除 -p 选项并真正运行安装。
+
+要安装光盘上的所有内容，您可以运行以下命令：
+
+```
+# installp -qga -d /cdrom/usr/sys/inst.images -X all
+```
+
+产品和维护通常安装到 LPP 目录 /usr/lpp。为每个产品、包和文件集创建单独的子目录。
+
+安装光盘的内容可以通过从 SMIT“软件安装与维护”菜单中选择“列出软件和相关”，或者通过执行带有 -l 选项的 installp 来查看。
+
+如果一个或多个应用程序将在多台机器上安装，您可能希望将安装光盘的内容复制到磁盘，以便与安装服务器一起使用。从 smitty bffcreate FastPath 菜单中选择“复制软件到硬盘以备将来安装”。您也可以使用 bffcreate 命令将软件更新复制到磁盘。
+
+```
+# bffcreate -qiv -d '/dev/rmt0' -t '/usr/sys/inst.images' -X all
+# smitty maintain_software
+```
+
+将 /usr/sys/inst.images 设置为与 / 不同的文件系统是一个很好的做法，这样如果需要以后可以恢复磁盘空间。文件系统仍可挂载在 /usr/sys/inst.images 上。只需确保不要将其挂载在您需要保留的文件上（见本章后面“创建新的可引导介质和备份”部分的末尾）。
+
+要安装介质上的所有软件，请使用 install_all FastPath 名称调用 SMIT。您将提示输入介质类型，安装将使用默认选项进行。如果您想要选择其他更新选项或安装介质上更新的一个子集，请使用 install_latest FastPath 启动 SMIT。使用 F4 键列出介质上可用的产品。可以使用 F7 键标记单个条目以进行安装。
+
+```
+# smit install_latest
+```
+
+在前面的安装计划部分中，我讨论了带 COMMIT 安装并自动扩展文件系统的利弊。同样的论点也适用于产品和维护更新。如果您有额外的磁盘空间可用，选择不进行 COMMIT 并允许文件系统扩展将使安装更顺畅。
+
+在安装和更新过程中，SMIT 和 installp 命令会显示进度信息。SMIT 会将此信息记录到 $HOME/smit.log 文件中。如果 installp 是从命令行调用的，您可能希望将其输出（包括标准错误和标准输出）重定向到文件。安装完成后，验证更新的状态。
+
+# ## ifor 许可
+
+许可系统的正式名称是 LUM，但我仍将其称为 ifor/LS。每次安装新的 LPP 应用程序时，您都需要处理许可问题。例如 AIX 的 C 和 C++。这两款产品的安装光盘上都带有许可文件，但您必须通过 ifor/LS 服务器注册许可。
+
+第一步是确保安装了许可文件集。如果没有，当您找不到许可文件时，情况将会显而易见。请务必查阅安装文档，了解安装和授权产品的步骤以及许可证文件的完整路径。
+
+LUM（许可更新管理）需要几个基本文件集，还有几个可选文件集可用：
+
+### 基本部分
+
+```
+ifor_ls.base.cli
+ifor_ls.mag_en_US.base.cli
+```
+
+### 可选文件集
+
+```
+ifor_ls.compat.cli
+ifor_ls.html.en_US.base.cli
+ifor_ls.java.gui
+ifor_ls.mag_en_US.compat.cli
+ifor_ls.mag_en_US.java.gui
+```
+
+配置许可服务器有两种选项。如果您正在运行 CDE，请打开一个窗口并输入 **icfg**，一两分钟后会出现一个图形用户界面（由于 Java 速度较慢）。对于 ASCII 显示，请使用命令 **icfg -script**。这两个命令询问相同的问题。只需按照提示操作，并将您的产品与新配置的许可服务器进行注册。许可有五种类型：节点锁定（node-lock）、并发节点锁定（concurrent node-lock）、并发使用（concurrent-use）、单次使用（use-once）和复合（compound）。
+
+## 节点锁定许可
+
+*节点锁定* 许可是特定于机器的。在节点锁定许可环境中，每台机器必须拥有自己唯一的许可密钥。对于此选项，许可应用程序运行的*位置*很重要；因此，除非 NFS 客户端拥有节点锁定许可，否则*无法*通过 NFS 挂载的文件系统执行。然而，如果 NFS 服务器拥有节点锁定许可，那么除非也进行本地许可，否则任何 NFS 客户端都无法运行许可产品。
+
+## 并发节点锁定许可
+
+*并发节点锁定* 许可允许固定数量的并发用户在同一台机器上同时执行许可产品。与节点锁定许可一样，同样适用 NFS 客户端限制。
+
+## 并发使用许可
+
+*并发使用* 许可允许许可在*网络*内浮动，因此适用于每个 NFS 客户端。一个或多个许可服务器控制整个网络中对应用程序的访问。
+
+## 单次使用许可
+
+*单次使用* 许可一旦使用即被耗尽。一次，仅此而已！
+
+## 复合许可
+
+*复合* 许可包含一个密码，允许您根据需求创建更多许可。这种类型的许可主要用于许可再分发。
+
+## 使用 lppchk 验证安装
+
+在新安装或维护级别升级（以及定期）之后，您应该从命令行运行 **lppchk -v**，以验证系统的所有文件集是否都正确安装。如果运行此命令并收到关于 **BROKEN**（损坏）或 **OBSOLETE**（过时）文件集的消息，则需要进一步调查以确定原因。**OBSOLETE** 状态通常是因为安装了混合版本的 AIX 文件集。**BROKEN** 文件集可能表明存在严重问题，您可能需要卸载并重新安装应用程序文件集。
+
+# 安装非 LPP 产品
+
+最好将*本地*、*公共领域*和*供应商*产品与 BOS 目录分开。这样可以确保它们不会被 BOS 升级和安装所破坏。一种常见做法是创建一个名为 `/usr/local` 的本地产品文件系统。在 `/usr/local` 内，创建*子目录* *bin*、*lib*、*etc* 和 *src*。如有必要，可以将这些目录添加到默认命令 PATH 中，并从 BOS 目录创建符号链接。
+
+# 移除已安装的软件
+
+当系统中不再需要某个应用程序时，可以通过 SMIT *软件维护实用程序*将其移除。使用 SMIT 是最简单的方法。需要注意的是每个文件集的先决条件软件。我建议*永远*不要将“移除先决条件软件”选项设置为“是”。如果有备份磁带，您可能不得不用备份磁带重新安装整个系统。*对于“移除先决条件软件”始终选择“否”，这样如果出现任何类型的错误，您可以逐个移除文件集。这是一个简单的过程，因为 SMIT 会告知每个具有先决条件依赖关系的文件集，您可以独立确定系统是否因正在移除的软件以外的其他原因需要这些文件集。*
+
+要移除已安装软件，只需从命令行运行 smit 或 smitty（用于 ASCII）。选择第一个选项“软件安装与维护”。接下来，选择第三个选项“软件维护与实用程序”。下一个面板中的第三个选项是“移除已安装软件”。SMIT 面板将停留在软件名称提示符处。按 F4 键以获取系统中所有已安装软件的列表，或者，如果您知道文件集名称，请在输入字段中输入文件集名称。
+
+> 注意 第三个选项是“移除依赖软件？”，默认为“否”。将此字段设置为“是”时请谨慎！
+
+始终从将“仅预览？”选项设置为“是”开始，查看 SMIT 程序将对您的系统执行哪些操作。主要是要非常小心地从系统中移除软件。
+
+# 应用维护级别 (ML) 补丁
+
+系统维护的首要且最重要的规则：“如果没坏，别修它！”要是能这么简单就好了。AIX 操作系统和产品集由大量子系统组成。每个子系统包含数百或数千个组件。在这个并不完美的世界中，许多这些对象中会出现问题。尽量保持最新版本。有时 ML 发布并不按计划进行，例如 AIX 4.3.3 的 ML 7。ML 8 紧随其后，而截至今日，ML 9 是 AIX 4.3.3 的最后一个 ML 版本。
+
+所有操作系统和应用程序供应商都在尽力降低产品错误率。这是一项非常艰巨的任务，在共享库环境中变得更加复杂。想想有多少命令和子系统依赖于 libc.a！IBM 通过将修复程序按文件集打包到维护级别中，解决了旧的选择性修复策略中遇到的问题。
+
+AIX 5L 维护策略将预备和核心依赖修复程序按文件集打包在一起。文件集是最小的可更新单元，代表特定功能。维护级别每年发布三到四次。AIX 5L 还提供安装选项。最值得注意的是标志 -V，用于调整状态消息的详细信息级别；-u，为已提交（COMMITTED）的产品提供目录功能；-L，指示哪些产品已经安装；以及 -g，自动安装、提交或拒绝先决条件软件（-g 可能很危险！）。首选的 ML 安装方法是 smitty update_all，或者如果您有备用 rootvg 磁盘，则使用 smitty alt_clone。
+
+安装维护产品的规则与前面关于安装程序产品部分中描述的规则相同。对于分布式环境，您可能希望将维护集复制到磁盘，以便从安装服务器访问。您还可以选择构建一个可从网络安装服务器访问的参考系统映像。
+
+
+
+
+
+在开始更新之前，请仔细阅读维护文档。通过运行 `smitty list_media` 或使用带有 `-I` 或 `-A` 选项的 `installp`，可能会显示维护级别的简短描述或关于介质的补充信息。
+
+```bash
+# installp -iq -d /dev/cd0 all  # 显示补充信息
+# installp -qA -d /dev/cd0 all  # 显示 APAR 信息
+```
+
+## 应用与提交
+
+对于安装，您有两种选择。您可以仅将 ML（维护级别）安装为 *已应用* 状态，从而保留旧文件的备份副本。然而，首先提交系统中现有的所有内容至关重要！
+
+在安装新的 ML 之前，请始终运行以下命令：
+
+```bash
+# smitty install_commit
+```
+
+保持 filesel 的默认值 *ALL* 不变，然后按两次 *ENTER*。*提交* 过程会移除已应用产品的旧副本，并为您释放一些 /usr 文件系统空间，虽然可能不多。
+
+现在，您可以安装 ML 补丁集并重新启动系统——是的，您*必须*重新启动！
+
+```bash
+# smitty update_all
+```
+
+由于默认设置为 *提交*，您必须手动设置选项以将 ML 包以 *已应用* 状态安装。
+
+- 选择 **COMMIT Software Updates**（提交软件更新）？ | No（否）
+- 选择 **SAVED Replaced Files**（保存被替换的文件）？ | Yes（是）
+
+这两个选项是互斥的，必须具有相反的值。
+
+## 测试期
+
+*测试*？为什么要*测试*？您以前听说过吗？每当您要安装一个新的 ML 时，请获取一个*测试*/开发机器，并将 ML 补丁以已应用状态安装。然后对其进行数周的*测试*。这应该给您时间发现软件更新中的任何明显 bug。当然，这可能不是 bug；它可能是一个功能！仅仅将代码放在机器上几周并不构成“经过测试”。您必须运行系统及其所有应用程序，以确保一切不仅工作正常，而且不会引起额外的系统负载或问题。
+
+## 为什么 `smitty install_commit` 如此重要
+
+在安装任何以已应用状态安装的软件之前，您应该始终*提交*已安装的所有内容。我们最初使用已应用状态的原因是为了拥有一种撤销由新应用的软件造成的混乱的方法。
+
+为了干净利落地撤销，我们只需使用 SMIT 软件维护实用工具拒绝更新。但是，如果您还有其他软件处于已应用状态，并且您需要拒绝更新，且您执行了此操作，可能会导致系统处于非常不稳定的状态。我曾看到一个人在一次混乱的升级后拒绝了*所有*更新，而他之前没有提交系统中的所有内容。结果很糟糕！他删除了操作系统和应用更新的大部分，并将系统回滚了两年！不用说，备份磁带被召回了，他更新了简历。在将新软件安装为已应用状态之前，请始终运行以下命令：
+
+```bash
+# smitty install_commit
+```
+
+## 使用 smitty update_all
+
+IBM 推荐用于安装 ML 补丁更新的方法是使用 **smitty update_all**。使用此方法时，系统会查询需要更新的已安装文件集，并自动安装每一个。我建议首先使用 **smitty install_commit** 提交所有内容，然后使用 **smitty update_all** 将新更新以已应用状态安装。如果遇到问题，则拒绝更新并返回旧代码。这是保住工作的一种简单方法。
+
+## 安装单个 APAR 和 PTF
+
+安装单个 APAR 和 PTF 的方式与安装单个文件集相同。将安装 CD-ROM 放入光驱并运行 **smitty install_latest**。然后按 F4 键获取安装 CD-ROM 上的文件集列表。F7 键选择每个文件集，按 ENTER 键执行安装。为了以防万一，您始终应该将 APAR 和 PTF 以已应用状态安装。
+
+## 拒绝更新
+
+如果更新后出现波动，只要您遵循我们的流程，就可以轻松撤销。安装最新 ML 后发现新问题后，您应该做的第一件事是致电 IBM AIX 支持热线 1-800-CALL-AIX，让他们在拒绝任何更新之前帮助您调试问题。
+
+如果 IBM 无法修复该问题，您最后的行动是拒绝更新。如果，我是说*如果*您在更新系统之前提交了所有软件，我们只需拒绝新更新，旧版本就会恢复到位。如果您之前没有提交所有内容，您可能仍然可以恢复，但您必须精挑细选想要拒绝的确切文件集。这种挑选可能是一场噩梦，您最好还是召回备份磁带，以防万一。
+
+要拒绝更新，请在命令行输入 **smitty software_maintenance**。选择第二个选项：拒绝已应用的软件更新。系统将提示输入软件名称。您有两个选项：按 F4 键获取列表并使用 F7 键选择要拒绝的每个软件组件，或者直接输入 ALL 以拒绝所有处于已应用状态的软件。
+
+## 安装后及维护任务
+
+在安装或维护过程完成后，在使系统可供使用之前，仍有一些收尾工作要做。新安装需要设置默认的系统和环境变量。如果您是在现有系统上进行覆盖安装，则需要恢复以前的环境。产品更新或维护在提交或拒绝更新之前需要测试。最后，创建新的独立介质并对新系统进行全新备份。干净的快照可以作为安装额外机器的参考点，或者作为未来出现问题时的回退方案。
+
+## 审查安装/更新状态
+
+使用 smitty installp 菜单中的“列出所有已应用但未提交的软件”或从命令行调用 lslpp 来审查软件产品和维护更新的状态。
+
+```bash
+# lslpp -h bos.rte
+```
+
+显示 LPP 历史记录
+
+```text
+Fileset Level Action Status Date Time
+Path: /usr/lib/objrepos
+bos.rte
+5.1.0.0 COMMIT COMPLETE 07/26/01 17:52:34
+Path: /etc/objrepos
+bos.rte
+5.1.0.0 COMMIT COMPLETE 07/26/01 17:52:34
+```
+
+LPP 软件可能处于以下状态之一：
+
+- **APPLY** 正在应用该文件集。
+- **COMMIT** 正在提交该文件集。
+- **REJECT** 正在拒绝已应用的该文件集。
+- **DEINSTALL** 正在从系统中移除该文件集。
+- **CLEANUP** 在 APPLY 或 COMMIT 失败后进行文件集清理。
+
+如果更新出现问题，请调用清理并重新安装。LPP 清理可以通过 smitty cleanup 或 installp -C 选项执行。使用 SMIT 或 `installp` 命令进行的安装在发生故障时通常会自动执行任何清理操作。
+
+```bash
+# smitty cleanup
+# installp -C <Fileset>
+```
+
+## 恢复您的环境
+
+设置默认系统环境是迄今为止描述的安装路径的最后一步。这包括设置或验证默认语言、时区、控制台类型、授权用户数量和虚拟终端数量。IBM 友好地提供了一个 SMIT 快速路径，涉及每个这些变量。以 root 权限调用 SMIT 系统快速路径。
+
+```bash
+# smitty system
+```
+
+在联网环境中，您还需要设置网络接口地址和特性。
+
+设置 root 账户密码。默认安装没有提供 root 的密码。我还需要多说吗？
+
+从以前的系统恢复任何配置表，并重新导入作为初步安装计划一部分导出的任何卷组。
+
+```bash
+# importvg -V <VGname> -V <MajorNumber> <PhysicalVolume>
+```
+
+您也可以使用 SMIT 快速路径 `smitty importvg`，如果需要，请记得恢复逻辑卷设备的权限。如果省略主号，系统会自动分配。如果您正在运行 HACMP 且服务器共享同一磁盘(s)，则需要提供主号。
+
+## 创建新的可启动介质和备份
+
+接下来，确保您拥有多个反映新系统安装和维护级别的独立可启动介质副本。注意我说的是*多个副本*。我必须承认，因为只有一些关键数据的单个副本而吃过不止一次亏。使用 `mksysb` 命令在磁带上创建新 rootvg 的备份映像。这些磁带可用于从磁盘故障中恢复，也可用于安装额外的机器。首先使用 `mkszfile` 命令创建 /image.data 文件。该文件包含关于 rootvg 中文件系统的描述性信息。编辑此文件，使其仅包含您希望在参考集中包含的那些文件系统。使用以下步骤创建备份和可启动映像。从独立磁带启动时，将执行 AIX 安装/维护 shell，引导您完成恢复过程。
+
+要创建可启动备份磁带：
+
+1. `# mkszfile` 创建一个新的 /image.data 文件
+2. `# tctl -f /dev/rmt0 rewind` 倒带
+
+
+
+
+
+3. `# mksysb /dev/rmt0` 创建备份。
+4. `# chdev -l rmt0 -a block_size=<blocksize>` 重置磁带块大小。
+
+# 分布式系统安装
+
+如果安装或更新单个系统还不是足够的问题，那么想象一下在多系统环境中反复执行这一过程吧！在许多情况下，这些系统既代表磁盘配置，也代表非磁盘配置。
+
+# NFS 安装支持
+
+在具有现有 AIX 系统的网络环境中，将产品和维护映像复制到文件系统 `/inst.images`。通过 NFS 将此文件系统导出到每个远程站点。此方法需要在每台机器上重复安装过程。它提供了在每个系统上自定义更新的能力。
+
+# 创建参考系统
+
+为了减少更新多个磁盘系统所需的时间和精力，可以创建一个单一的参考系统映像，以便在每台机器上进行克隆。
+
+1. 更新并调整一个代表基础配置的系统。
+2. 将您不想备份的文件系统列表放入 `/etc/exclude.rootvg` 文件中，并使用 `-i` 和 `-e` 选项运行 `mksysb`。
+
+   ```bash
+   # echo /inst.images >> /etc/exclude.rootvg
+   # mksysb -i -e /inst.images/image_name
+   ```
+
+3. 在非网络环境中，将 `mksysb` 输出定向到可移动媒体。如果可用的网络访问，则将输出映像定向到文件系统 `/inst.images`。
+4. 在支持 NFS 和 TCP/IP 的网络环境中创建网络安装管理器。
+
+# 网络安装管理器 (NIM)
+
+网络安装管理器（NIM）促进了分布式网络环境中所有参与 AIX 机器软件安装和维护的中心化管理。这作为介绍词怎么样？NIM 还可以远程自定义、启动并在每个 NIM 管理的工作站上运行诊断。NIM 基于 IP，使用 BOOTP、TFTP 和 NFS 协议向每个 NIM 客户端分发引导映像和软件。NIM 可用于任何支持 TCP/IP 协议的网络，并支持中央服务器上的多种网络接口类型。正如你可能猜到的那样，NIM 是一个非常复杂的工具，但有一个 Easy Setup SMIT 选项，它使用最常见的配置进行设置，即 `smitty nim_config.env`。Easy Setup 非常好，但对于新手来说，我们需要添加更多细节来入门。
+
+1. 首先，在运行 `smitty nim_config.env` 之前创建 `/tftpboot` 文件系统。
+   要创建 `/tftpboot` 文件系统并安装 NIM 软件，请使用以下命令序列：
+
+   ```bash
+   # mkivs -y 'lv' rootvg 1
+   # crfs -v jfs -d lv -m /tftpboot -A yes
+   # mount /tftpboot
+   # chfs -a size=120000 /tftpboot
+   # df -k /tftpboot
+   # installp -qaX -d <device> bos.sysmgt.nim.master
+   bos.sysmgt.nim.spot
+   # smitty nim_config.env
+   ```
+
+2. 使用上述命令序列创建 `/tftpboot` 文件系统并安装 NIM 文件集。
+
+   ![](img/82f851021955589d82b22750fb3b1646_124_0.png)
+
+3. 使用 `smitty nim_config.env` 从 CD-ROM 配置 NIM 主节点。
+
+   ![](img/82f851021955589d82b22750fb3b1646_125_0.png)
+
+4. 使用 `smitty nim_mac` 定义客户端机器。
+5. 使用 `smitty nim_res` 创建 `mksysb` 映像并定义 `mksysb` 资源。
+6. 使用 `smitty nim_bosinst` 从 `mksysb` 映像安装独立客户端。
+7. 启动客户端。
+
+   ![](img/82f851021955589d82b22750fb3b1646_125_1.png)
+
+NIM 环境由两种系统类型组成：NIM 主节点和一个或多个 NIM 客户端。NIM 主节点集中协调网络中所有 NIM 客户端的管理功能。主服务器必须是一个独立的工作站，具有足够的存储资源，为所有受管客户端提供引导映像和共享产品对象树（SPOT）。NIM 主服务器必须安装 NIM 运行所需的 AIX 网络和管理员（spmgr）文件集。每组客户端只有一个 NIM 主节点。NIM 客户端可以是任何无盘、无状态和独立工作站的混合，只要它们与 NIM 主节点有网络连接即可。
+
+NIM 支持三种类型的客户端：
+
+- **独立（Stand-alone）**：具有本地 AIX 和 LPP 副本的机器
+- **无盘（Diskless）**：网络文件系统、分页和转储；用于网络引导的引导 ROM
+- **无状态（Stateless）**：网络文件系统；本地分页和转储；用于网络引导的引导 ROM；性能优于无盘配置
+
+组成 NIM 支持的 AIX 文件集打包在 `bos.sysmg` 中。`bos.sysmg.nim.master` 文件集用于构建 NIM 主服务器。`bos.sysmg.nim.client` 文件集安装在每个独立的 NIM 客户端上。文件集 `bos.sysmg.nim.spot` 用于为 NIM 无盘和无状态客户端类型创建 SPOT 文件集。
+
+NIM 主节点将识别每个受管客户端和网络类型所需的信息作为对象存储在 ODM 数据库中。这就是管理 NIM 环境时大部分难点所在。提供了用于列出、更新和验证 NIM ODM 对象及关系的命令；但在实践中，处理 ODM 并不像操作人类可读的表那样简单直接。NIM 主节点必须维护将机器对象链接到网络对象、网络对象链接到网络对象（路由）以及机器对象链接到机器对象的关系。用于更新和验证 NIM ODM 对象及关系的常用 NIM 命令包括 `nim`、`nimconfig`、`nimrelclient` 和 `lsnim`。
+
+我的建议是使用 SMIT 来配置和管理 NIM；你可以使用基于 Web 的系统管理器，但它是一个 java 资源消耗大户，使用速度非常慢。SMIT 面板在提醒你所有必须与 NIM 对象关联的属性方面做得好得多，以确保维持正确的对象间关系。尽管可以使用 `lsnim` 快速检查 ODM 内容，但其余操作请使用 SMIT。在以下关于设置 NIM 环境的讲解中，我将使用 SMIT。
+
+# 信息和支持
+
+- 1-800-CALL-AIX
+- 1-800-IBM-4FAX
+- 1-800-237-5511
+
+# 问题支持
+
+| 命令 | 描述 |
+|---|---|
+| `IBMink.advantis.com` | Internet 远程终端 `IBMLink` |
+
+# 维护级别和历史
+
+| 命令 | 描述 |
+|---|---|
+| `oslevel` | AIX `3.2.4+` 版本和发行级别 |
+| `uname -v -r` | 显示版本和发行级别 |
+| `lslpp -a -h <product>` | 列出维护历史 |
+
+# 打包
+
+| 命令 | 描述 |
+|---|---|
+| 文件集 (Fileset) | 特定功能软件集 |
+| 包 (Package) | 通用功能文件集 |
+| 授权产品 (Licensed product) | 发行包集合 |
+| 捆绑 (Bundle) | 文件集、包和维护的分组 |
+
+# 备份 rootvg
+
+| 命令 | 描述 |
+|---|---|
+| `mksysbfile` | 为 `mksysb` 创建 image.data 文件 |
+| `mksysb /dev/rmt0/<t>` | 将 rootvg 备份到磁带 |
+
+# 维护安装
+
+| 命令 | 描述 |
+|---|---|
+| `smit install` | 基本安装面板 |
+| `smit install_latest` | 选择性安装面板 |
+| `smit install_all` | 安装所有产品 |
+| `bfbcreate -qv -d <media> -f <disk-path>` | 将维护复制到磁盘 |
+| `installp -qa -d <media-path> -X all` | 应用 (APPLY) 更新 |
+| `installp -r8 -X all` | 拒绝 (REJECT) 更新 |
+| `installp -c -g -X all` | 提交 (COMMIT) 更新 |
+| `installp -u <fileset>` | 卸载 (DEINSTALL) 文件集 |
+| `installp -C <fileset>` | 清理 (CLEAN UP) 失败的安装 |
+
+# NIM 相关
+
+| 命令 | 描述 |
+|---|---|
+| `smit nimconfig` | 配置并启动 NIM 主节点 |
+| `smit nim_mknet` | 创建 NIM 网络对象 |
+| `smit nim_mkroute` | 定义 NIM 网络路由 |
+| `smit nim_mkmac` | 创建客户端网络对象 |
+| `smit nim_mkres` | 创建 lpp_source |
+| `smit nim_alloc` | 创建 bos.inst 资源 |
+| `lsnim` | 列出 NIM 定义的对象 |
+| `bootinfo -q` | 检查 IPL ROM 仿真 |
+| `bosboot -r` | 创建 IPL ROM 媒体 |
+| `smit nim_alloc` | 在客户端创建 bos_inst 资源 |
+| `smit nim_perms` | 设置主节点推送权限 |
+| `smit nim_mac_op` | 选择客户端和资源 |
+| `smit nim_mkgrp` | 创建 NIM 客户端组 |
+| `smit bos_inst` | 推送安装独立客户端 |
+| `smit nim_install` | 从客户端拉取安装 |
+| `smit dksl_init` | 初始化无盘客户端 |
+| `smit nim_mac_op lpchck` | 验证安装 |
+| `smit nim_backup_db` | 备份 NIM 配置 |
+| `smit nim_restore_db` | 恢复 NIM 配置 |
+| `smit nim_client_op` | 远程操作 NIM 客户端 |
+| `smit nim_unconfig` | 取消配置 NIM 主节点 |
+
+# 检查清单
+
+以下是安装和维护要点的检查清单：
+
+- 每次安装 AIX 时，请仔细遵循安装指南。
+- 配置操作系统和生产文件系统，以从磁盘空间中获得最佳性能。
+- 如果您正在安装全新的 P-Series 或 RISC System/6000，请预安装基础操作系统（BOS）和产品运行时环境的一部分。
+- 通过使用 SMIT 安装快速路径（FastPath）或使用 `installp` 命令来管理授权程序产品（LPP）的安装。
+- 监控非 LPP 产品的安装。
+- 当系统不再需要某个应用程序时，您可以通过 SMIT 软件维护实用程序将其移除。
+- 应用维护级别（ML）补丁。
+- 为新安装设置默认的系统和环境变量。
+- 识别分布式系统安装步骤。
+- 识别 DocSearch 关键字。
+- 识别软件安装/维护信息和支持程序。
+
+
+
+
+# 第 7 章
+
+# AIX 系统启动与关闭
+
+每次您开启 pSeries、RS/6000 或基于 Itanium 的系统电源时，都会执行一系列复杂的系统检查和初始化任务。这些活动的唯一外部迹象是控制台或前面板 LED 显示屏上滚动的数字。这种系统启动过程即您可能熟悉的**硬件初始化阶段，随后是 AIX 内核初始化阶段**。IBM 将硬件阶段称为**只读存储程序加载（ROS IPL）**或**只读存储器 IPL（ROM IPL）**。在随后的讨论中，如果您觉得混淆，可以互换使用 ROM 和 ROS。您可能会发现，在许多 IBM 文档中，IPL 和 boot 这两个术语经常互换使用。由于 IPL 让人联想到 370/390 MVS 或 VM 架构，而 *boot* 在 UNIX 领域更为常见，因此在本章的其余部分中，我倾向于使用 boot。
+
+对于系统管理员来说，熟悉系统单位盖下方在启动时发生的事件序列是很重要的。理解系统启动控制流将有助于您在出现硬件和配置问题时进行诊断。请注意，我说的是，“当这些问题发生时”。
+
+## 系统启动
+
+AIX 可以通过以下三种方式之一启动：
+
+1. 正常启动
+2. 独立启动
+3. 网络启动
+
+正常启动是从本地磁盘或一组本地磁盘进行启动。系统使用运行时内核进行初始化。将钥匙模式开关设置为正常位置（如果存在），并启动机器。启动完成后，恢复多用户正常操作模式。独立启动与正常启动类似，但系统使用单用户维护、安装或诊断模式内核启动。系统从本地磁盘、CD-ROM 或磁带启动。将钥匙模式开关设置为服务位置（如果存在）。如果您的机器没有钥匙模式开关，您必须在键盘初始化并发出蜂鸣声后立即按下相应的功能键（通常是 F5 或 F6）。独立启动用于安装软件或执行维护或诊断（请参阅紧随其后的“独立启动”部分）。在网络启动中，引导信息和内核由基于网络的文件服务器提供。ROS 广播引导请求数据包以定位引导服务器。来自服务器的响应数据包指示如何从服务器加载引导映像。引导内核和文件系统通过 TFTP 从服务器复制。请注意，较旧的 Micro Channel 系统上的网络启动可能需要 IPL ROM 仿真。一旦加载了引导内核和文件系统，通常在这三种模式下都会遵循相同的步骤来初始化运行时 AIX 内核。假设系统配置正确，正常启动和网络启动在开机后无需额外干预即可将 AIX 提升至多用户模式，例外情况是用于安装或维护目的的启动。启动事件序列在本书稍后的“启动事件序列”部分中概述。
+
+## 独立启动
+
+如果系统出现问题，或者在需要进行 AIX 安装或维护时，您可能需要在独立模式下启动系统。在独立模式下，系统运行引导内核，并提供对磁盘上的卷组（volume groups）和文件系统的最低限度访问权限。在独立模式下启动系统将有助于恢复损坏的系统配置文件和文件系统。
+
+以下是独立启动过程：
+
+- 如果是 Micro Channel 机器，请将系统钥匙设置为服务位置。
+- 对于 PCI 总线机器，请按下适用于您的型号的功能键，通常是 F5 或 F6（在 ASCII 终端上可能是 5 或 6）。
+- 插入包含引导映像的 CD-ROM 或磁带，并打开系统电源。
+- 在提示时，选择控制台显示。
+- 选择“启动系统恢复的维护模式”（Start Maintenance Mode For System Recovery）。
+- 选择“访问根卷组”（Access A Root Volume Group）。
+- 选择卷组编号。
+- 选择“访问此卷组并启动 Shell”（Access This Volume Group and Start A Shell）。
+
+## 创建可启动介质
+
+为了启动 AIX，必须在启动设备列表中指定的一个或多个启动设备上可用的引导映像或引导内核。该启动列表存储在非易失性系统 RAM（NVRAM）中。R05 引导代码将尝试访问列表中的每个设备，直到找到有效的启动设备以加载引导映像。机器将使用启动列表中找到的第一个引导映像进行启动。
+
+启动设备的特性以及引导映像在该设备上的位置和大小由引导记录（boot record）描述。引导记录可以添加到引导映像的开头，或者对于磁盘设备，引导记录被写入磁盘的第一个扇区。引导映像和文件系统可以压缩也可以不压缩，以节省空间并提高访问速度。
+
+### 配置 Micro Channel 机器上的 Bootlist
+
+在系统启动时，R05 引导代码将尝试访问存储在 NVRAM 中的启动设备列表中的引导设备。通过调用 `bootlist` 命令可以定制或恢复启动列表。以下是一些示例：
+
+```bash
+# bootlist -m normal -o
+# bootlist -m normal hdisk0 hdisk1
+```
+
+```bash
+# bootlist -m normal ent0 bserver=128.95.132.1\
+gateway=128.95.135.100 client=128.95.135.10 cd0
+# bootlist -m normal hdisk0 hdisk1
+```
+
+**注意** 当引导服务器和客户端位于同一子网时，网关可以标识为 `gateway="."`。
+
+分别为正常启动、服务启动和先前启动维护不同的列表。表 7-1 列出了有效的 AIX 5L 启动设备类型。这些设备类型的设备驱动程序在 NVRAM 中可用。
+
+### 配置 PCI 总线机器上的 Boot-List
+
+并非所有 PCI 总线机器都支持设置服务模式启动列表。要检查您的 PCI 总线系统是否支持设置服务模式启动列表，请运行以下命令：
+
+```bash
+# bootlist -m service -o
+# bootlist -m service -o cd0 rmt0 hdisk0
+```
+
+如果您收到以下错误消息，则您的机器不支持此 bootlist 命令选项：
+
+```bash
+bootlist: Invalid mode (service) for this model
+```
+
+您可以使用三种方法来设置启动列表。`bootlist` 命令是最简单的方法。您也可以在初始启动过程中按 F1 键使用系统管理服务（SMS）程序。`diag` 工具（它是 `bos.rte.diag` 包的一部分）也有一个选项来设置启动列表。
+
+较旧的 RS/6000 机器支持设置服务模式启动列表，它们有两个独立的启动列表：默认列表和自定义列表。默认启动列表用于正常启动。当您在键盘初始化并发出蜂鸣声后立即按下 F5 或 F6 时，将使用此默认启动列表。自定义启动列表是使用 `bootlist` 命令、`diag` 工具或启动期间的 SMS 菜单创建的设备列表。其他所有 PCI 总线机器都有一个额外的定制化服务启动列表。您使用带有 `-m service` 选项的 `bootlist` 命令设置此启动列表。设置服务启动列表后，您在启动过程中使用 F5 和 F6 功能键。使用 F5 使用默认的服务启动列表，使用 F6 从定制的服务启动列表启动。您还会发现不同型号之间存在一些差异。一如既往，请参考您特定型号的用户指南。您可以在以下网址在线找到此信息：
+
+```
+http://www.ibm.com/servers/eserver/pseries/library/hardware_docs/
+```
+
+## 服务处理器
+
+在 Series 及更新的 RS/6000 型号中，有一个额外的处理器被称为*服务处理器*（Service Processor）。实际上，服务处理器是固件，不属于 AIX 操作系统的一部分。服务处理器的目的是持续监测系统故障并允许系统重新配置。服务处理器提供以下功能：
+
+- 从本地或远程 ASCII 终端访问
+- 双支持的控制台镜像
+- 控制菜单呼叫故障报告，又称 Call Home
+- 远程开机
+- 电力故障后的无人值守启动
+- 远程关机/重启
+- 与系统处理器的相互监视
+- 可更新的控制固件
+- 扩展的进度和错误指示器
+
+服务处理器菜单提供以下顶级选项：
+
+### 主菜单
+
+1. 服务处理器设置菜单
+2. 系统电源控制菜单
+3. 系统信息菜单
+4. 语言选择菜单
+5. 呼叫入/呼叫出设置菜单
+6. 设置系统名称
+99. 退出菜单
+
+要访问服务菜单，请打开系统电源并按两次 ENTER，或者您可以通过 `diag` 命令访问大多数功能。
+
+当您最初打开带有服务处理器的系统电源时，它不会自动启动。您首先需要按两次 ENTER 才能访问服务
+
+
+
+处理器菜单。从菜单中选择选项 2，即系统电源控制菜单，然后选择“启动系统”。此步骤之后，引导过程与其他任何系统相同。
+
+服务处理器还有其他选项。您可以设置“自动调用”功能，该功能会在检测到系统故障时自动拨号联系 IBM 支持。
+
+## 引导事件序列
+
+启动 AIX 机器时会发生什么？引导过程中会经历五个基本步骤：
+
+- 1. POST——硬件进行检查和初始化。
+- 2. 使用引导列表定位引导逻辑卷（BLV）。
+- 3. 加载 BLV，并将控制权传递给内核。
+- 4. 使用 `cfgr` 命令的不同选项配置系统设备。
+- 5. 启动 init 进程（PID = 1），并处理 `/etc/initab` 文件。
+
+## 进入维护模式
+
+进入维护模式有几种方式，具体流程取决于您想要完成的任务。运行文件系统检查或某些网络适配器重新配置需要在本地磁盘引导级别进入维护模式。对于主要系统诊断，您需要使用随系统提供的诊断 CD-ROM 启动并进入维护模式。若要克隆系统或将系统升级到更新的 AIX 版本或发行版，您需要使用安装介质启动系统。
+
+### 微通道机器上的钥匙开关
+
+所有微通道 RS/6000 机器都有一个具有三个开关位置的钥匙开关。*normal*（正常）位置用于正常的多用户操作。*secure*（安全）位置用于锁定运行中的系统，或禁用断电系统的启动。如果系统正在运行，您可以将钥匙开关置于安全位置，并通过禁用重置和电源按钮来防止意外重启系统。如果在系统通电时钥匙开关位于安全位置，则引导过程会在 LED 代码 200 处快速停止。在将钥匙开关移至正常或服务位置之前，系统无法启动。
+
+*service*（服务）位置用于将系统启动到维护/诊断模式，并解锁防止您打开机箱以访问某些型号硬件的内部锁。如果您没有系统钥匙，您就无法升级操作系统、打开机箱以处理硬件或在系统上运行诊断。如果您丢失了钥匙，唯一的选项是拨打 1-800-IBM-SERV 联系 IBM 支持，并让 CE（现场工程师）到场更换整个组件。顺便说一下，更换钥匙开关并不便宜！
+
+## 在 PCI 总线机器上进入维护模式
+
+PCI 总线 pSeries 和 RS/6000 机器没有钥匙开关。您通过使用适合您型号的功能键在 PCI 总线机器上进入维护模式。控制引导过程的功能键是 F1，用于进入系统管理服务（SMS）。在 SMS 中，您可以更改系统引导列表，控制其他引导选项，并查询硬件配置。功能键 F5 和 F6 控制以维护模式启动。（并非所有 RS/6000 机器都支持服务模式引导列表；参见附录 A。）
+
+关键在于时机。合适的功能键必须在键盘初始化完成并发出蜂鸣声后、屏幕图标消失前按下。对于具有节能监视器的机器，这种时机把握存在问题，这些监视器会关机以保护屏幕并节省电力。如果您使用的是这种监视器，不要等待屏幕点亮和图标出现。一旦发出蜂鸣声，请立即从图形控制台开始按下 F1、F5 或 F6 键，或从 tty 控制台按下 1、5 或 6 键（不要按随后的 ENTER 键）。如果您错过了时机窗口，则必须重启系统并重新开始。
+
+## AIX 引导过程
+
+AIX 中的引导过程是一个广泛且复杂的过程。所有硬件都会进行检查和初始化。系统首先执行加电自检（POST）。接下来定位引导映像。然后搜索引导列表中的有效引导映像。根逻辑卷（RLV）被加载到内存中，并在 RAMDISK 上挂载根文件系统以创建 RAM 磁盘。配置管理器（cfmgr）执行不同的引导阶段，最后启动 init 进程并处理 /etc/initab 文件。
+
+根据系统重置计数的值，执行两种类型的引导之一：冷启动和热启动。
+
+## 内置自检-BIST
+
+BIST 适用于较旧的微通道机器。每次计算机开机时都会启动冷启动。如果型号配备了板卡上序列器（OCS），OCS 会对处理器复合体执行内置自检（BIST）。OCS 从 ROM 中提取种子和签名模式，以测试和验证每个处理器组件。种子模式被发送到驻留在每个处理器芯片上的公共片上处理器（COP）。测试结果与签名数据进行比较。BIST 执行以下功能：
+
+- 1. 初始化和测试 COP 及嵌入式芯片内存
+- 2. 测试 AC/DC 逻辑
+- 3. 为 ROS IPL 初始化和重置硬件
+
+当在运行中的系统上按下重置按钮或通过软件控制发起时，会发生热启动。例如，在运行时执行 **reboot** 命令会导致热启动。在热启动期间，会绕过 BIST 阶段。处理器内存、缓存和寄存器被重置，系统分支到 ROS 中的热启动入口点。
+
+## 加电自检—POST
+
+当机器通电时，硬件会被验证，系统硬件会被初始化。这种硬件检查和初始化过程称为加电自检（POST），是启动 PCI 总线机器的第一项任务。在 POST 过程中，我们初始化内存、键盘、通信和音频。在此过程中，您会看到图标出现在屏幕上。这是引导序列中的同一部分，此时您需要按相应的功能键以激活不同的引导列表。
+
+## ROS 初始化
+
+在 POST 处理之后，引导代码被定位并加载。引导扇区的前 512 字节包含引导代码。引导代码在引导过程中被加载到 RAM 中。引导序列的这一部分由存储在固件中的系统只读存储（ROS）控制。当硬件事件触发系统重置时，会调用 ROS 初始化过程。通常，这发生在您打开系统或按下重置按钮时。在发生硬件故障或机器检查时也会发生重置。由于您可以在 pSeries 或 RS/6000 平台上运行其他操作系统，因此系统 ROS 不是 AIX 的一部分，因为您可能正在运行 Linux。系统 ROS 只是让硬件“活”起来。
+
+## 引导启动
+
+POST 之后，系统 ROS 加载引导代码；此代码接管引导过程的控制权。在启动 AIX 时，引导代码接下来在引导列表中定位引导映像，即引导逻辑卷（BLV），并将 BLV 加载到内存中。BLV 是经过压缩的，因此通常被称为引导映像。在正常操作下，BLV 驻留在本地硬盘上。在 NIM 引导序列中，BLV 通过网络加载。网络可以是本地局域网（LAN）或远程广域网（WAN）。在此时，控制权传递给 BLV，AIX 内核接管引导过程的控制。
+
+## AIX 内核引导控制
+
+BLV 包含四个组件：AIX 内核、精简版 ODM、**rc.boot** 文件以及所有必需的引导命令。AIX 内核管理内存、进程和设备，从 BLV 加载。
+
+AIX 内核首先创建一个带有挂载点 **/**、**/usr** 和 **/var** 的 RAM 文件系统。/etc、/dev 和 /mnt 目录是根 “/” 文件系统中的子目录。此时根卷组尚不可访问，AIX 内核
+
+
+
+仍然使用 RAM 中加载的 BLV。在下一步中，内核启动 **init** 进程（PID = 1），该进程从 BLV 中获取。此时，**init** 进程接管启动流程的控制权。
+
+## 获取内核控制的步骤
+
+- 从 NVRAM 检索启动设备列表。
+- 从列表中定位启动设备。
+- 加载并验证启动记录。
+- 将启动镜像加载到保留的 RAM 中。
+- 将控制权传递给启动内核。
+
+## init 进程的启动序列
+
+**init** 进程现在控制着启动流程。**init** 进程通过调用带有 **1**、**2** 和 **3** 作为命令参数的 **rc.boot** 命令来执行启动流程的三个阶段。这三个阶段中的每一个都承担特定的职责。第一阶段初始化硬件以使系统启动。第二阶段将文件系统挂载为 RAMFS，即 RAM 文件系统。第三阶段完成硬件配置并启动 init 进程，随后读取并处理 /etc/inittab 文件。
+
+## rc.boot 的第 1 阶段
+
+第一个 **rc.boot** 阶段是通过命令 **rc.boot 1** 进行的。此第一阶段仅初始化使系统启动所需的设备，但在第一阶段并未配置所有设备。执行 **restbase** 命令并将 BLV 中的 ODM 复制到 RAM 文件系统中。如果 **restbase** 无错误完成，LED 显示屏将显示 510。如果 **restbase** 命令失败，LED 显示屏将显示 548。在下一步中，配置管理器（**cfmgr**）为阶段 1 运行，**cfmgr -f**。**cfmgr** 命令查询 ODM 中 Only\_Rules 类的对象，并执行 Phase 1 语句块下的任何内容。此步骤仅配置使系统启动所需的设备。
+
+## rc.boot 的第 2 阶段
+
+**init** 进程接下来通过执行 **rc.boot 2** 启动 **rc.boot** 阶段 2。在此启动阶段，LED 显示屏将显示 551。在此第二阶段，根卷组（rootvg）使用 **ipl\_varyon** 命令变为联机状态。如果 **ipl\_varyon** 命令成功完成，LED 显示屏将显示 517。如果 **ipl\_varyon** 命令失败，则 LED 代码将显示 552、554 或 556，并且系统停止。如果 **ipl\_varyon** 命令成功，则对根文件系统执行文件系统检查（**fsck**），根文件系统是 **hd4** 逻辑卷。如果 **fsck** 失败，LED 显示屏将显示 555。文件系统检查成功后，/dev/hd4 逻辑卷被挂载到 RAM 根文件系统上。如果挂载失败，LED 显示屏将显示 557，并且系统停止。此 LED 代码通常表示 JFS 日志损坏。
+
+接下来，按顺序对 **hd2**（/usr）、**hd9var**（/var）和分页（**hd6**）执行文件系统检查和挂载。如果 **hd2** 挂载失败，LED 显示屏将显示 518，启动流程结束，并且系统停止。当 /var 文件系统被挂载时，**copycore** 命令检查系统以查看自上次重新启动以来是否发生过系统转储。如果发现系统转储，**copycore** 命令将转储从 **hd6**（分页空间）复制到 `/var/adm/ras`。如果文件系统空间不足，系统将提示将转储复制到磁带设备。但是，可以**配置**系统，以便此操作不会停止启动流程来提示输入转储磁带（参见 **sysdumpdev** 命令）。此时分页空间 **hd6** 已准备好进行挂载。
+
+在 **rc.boot** 阶段 1，即 **rc.boot 1** 中，使系统启动所需的所有基础设备都在 RAM 文件系统的 ODM 中进行了配置。我们需要将这些设备配置复制到磁盘上。`cp /tmp/mnt/etc/objrepos` 命令将 ODM 数据复制到磁盘。此时，ODM 的两个副本，**hd4** 和 **hd5**，已同步。
+
+到目前为止，还没有控制台可用以查看启动进度，只有 LED 显示代码。所有的启动信息都已写入一个特殊的启动日志文件。要查看系统启动日志，必须使用 **alog** 命令。
+
+```
+# alog -t boot -o
+```
+
+使用此命令，您可以查看完整的启动流程日志。
+
+到目前为止，这一切都是在 RAM 文件系统中完成的。在 AIX 5L 中，对 RAM 文件系统的访问方式发生了变化。要访问 RAM 文件系统，会添加前缀 /.../，例如，访问 RAM 文件系统中的 /usr 挂载点时使用 /.../usr。
+
+不再需要 RAM 文件系统，因此内核将 BLV 中的 **init** 替换为 / 中的 **init**（**hd4** 逻辑卷已挂载为根文件系统），然后从内存中清除 RAMDISK。
+
+## rc.boot 的第 3 阶段
+
+在此最后一步中，启动 */etc/init*，并且 **init** 遍历 /etc/inittab 文件并执行我们启动的运行级别中的每个条目，默认值指定在 /etc/inittab 文件的第一行中。AIX 中的默认运行级别是运行级别 2。在处理 /etc/inittab 文件期间，LED 显示屏将显示 553。在处理 /etc/inittab 文件时，**rc.boot** 第三次被调用（**rc.boot 3**）。
+
+在 **rc.boot** 阶段 3 中，对 /tmp 文件系统运行 **fsck** 并将其挂载。接下来使用 **syncvg rootvg** 同步根卷组。在 **rc.boot 3** 的最后部分，再次执行 **cfmgr** 命令，并配置系统中在 **rc.boot** 阶段 1 中被跳过的所有剩余设备。对于正常启动，**cfmgr** 带有 **-p2** 开关运行，用于配置管理器阶段 2。对于服务启动，**cfmgr** 命令带有 **-p3** 开关运行，用于配置管理器阶段 3。根据提供给 **cfmgr** 命令的开关，ODM 会查询 **Config_Rules** ODM 类。对于 **cfmgr -p2**，执行 **phase2=2** 语句块下的方法。对于 **cfmgr -p3**，执行 **phase3=3** 语句块下的方法。方法执行后，**rc.boot** 阶段 1 中被跳过的所有剩余系统设备都会得到配置。
+
+系统控制台在下一步中通过 `cfgcon` 命令定义并激活。与控制台定义相关联的 LED 显示值有四种可能。如果控制台未配置或存在多个 `tty` 定义，则显示 c31，并显示一个菜单供您定义控制台。如果控制台被确定为低功能终端，iff（图形），LED 显示屏将显示 c32。如果控制台被确定为 tty，Lflf 将显示 c33，如果控制台是文件，则显示 c34。
+
+如果您的系统设置为使用通用桌面环境（CDE），则 CDE 将启动，您将看到图形化启动。您也可以配置 CDE，使启动流程不是图形化的，但操作模式是图形化的。这是我始终配置运行 CDE 的机器的方式。我这样运行 CDE，是因为我曾遇到机器行为异常，由于各种原因图形化启动未能开始。为了解决这个问题，我只是配置 CDE 仅在登录提示符处启动，并采用 ANSI2 启动。
+
+最后一步是同步 BLV 中的 ODM 与根文件系统 /etc/objrepos 中的 ODM。`savebase` 命令完成此任务。
+
+我们还有几个步骤。启动 `syncd` 守护进程，并将内存中的所有数据写入磁盘。接下来启动 `errpt` 守护进程。这是写入系统错误日志的进程。在此之后，除非系统崩溃，否则您将不再看到任何 LED 显示，然后您会看到闪烁的 888！
+
+如果系统存在 `/etc/nologin` 文件，则将其从系统中删除。这是一个用于锁定所有非 root 用户访问系统的好工具。如果您忘记删除 `/etc/nologin` 文件，系统会为您删除。但是，如果您正在进行维护，可能希望保持用户被锁定状态，因此请记得在重新启动后创建另一个文件。如果硬件配置已更改或与 ODM 不同步，则您将在启动期间看到一条消息，要求运行 `diag -a`。您可以将其运行在正在运行且处于活动状态的系统上，因为这只是清理 ODM。
+
+控制台上的最后一条消息是 System Initialization Complete。此时，`rc.boot 3` 结束执行，并处理 `/etc/inittab` 文件的其余部分。
+
+## 使用 MPFCG 命令选项在多处理器机器上进行快速启动
+
+在具有大量内存和众多设备的大型多处理器机器上启动可能需要很长时间。我有一对 J-50，在一个 HACMP 集群中约有 350 个 SSA 磁盘。进行快速启动需要 45 分钟，而这甚至没有计算启动 HACMP 控制的应用程序所需的时间。如果没有设置快速启动，时间将翻倍。IBM 了解这一点，并提供了 `mpfcg` 命令。（`mpcfg` 命令仅适用于具有 Micro Channel I/O 的多处理器机器。）为了使多处理器系统始终快速启动（相对而言），请向 `/etc/inittab` 文件添加以下命令：
+
+```
+fastboot:2:once:/usr/sbin/mpcfg -cf 11 1 1 >/dev/console2>&1 # Fast boot
+```
+
+
+
+
+
+或者从命令行，你可以运行以下命令：
+
+```
+# mpcfg -cf 111 (那是十一个空格加一)
+```
+
+`mpcfg` 命令仅对下一次重启有效，因此我在系统的 `/etc/inittab` 文件中创建了一个条目。
+
+## 停止系统
+
+就像生活中的一切事物一样，运行终将结束，但业务永远不会停止。要重启系统，你可以使用 `shutdown` 或 `reboot` 命令来优雅地停止服务和系统。首先停止所有的数据库和应用程序！在 AIX 中，你可以创建一个名为 `/etc/rc.shutdown` 的文件。如果你有希望在系统关闭或重启前总是停止的应用程序，请将命令或脚本名称放入此文件。但是，如果 `/etc/rc.shutdown` 中的任何命令返回非零退出码，关闭操作将被中止！这是一个优雅关闭系统的不错工具，但哪怕是一个小故障或非零退出码，都会导致系统中止关闭并继续运行。这可能会引发一些问题，尤其是对于自动重启而言。最终你可能会得到一个部分停止且无法使用的应用程序。所以请谨慎操作！不过，你可以在 `rc.shutdown` 脚本的末尾添加一个 `exit 0`。
+
+`shutdown` 命令支持许多标志以控制如何关闭系统。默认情况下，它将警告用户，等待一分钟，终止活跃进程，同步文件系统，并停止 CPU。你可以通过使用 `-r` 标志或调用 `reboot` 命令来指示系统在关闭后立即重启。
+
+```
+# shutdown -m +5 # 在 5 分钟内将系统停止到单用户模式
+# shutdown -r # 关闭并重启
+# shutdown now # 立即关闭而不重启
+# shutdown -r # 立即重启
+# shutdown -Fr # 立即重启而不向用户发出任何警告
+# shutdown -r now # 立即重启并向用户发出警告
+# shutdown -k # 避免关闭系统
+```
+
+## 故障排除
+
+RS/6000 在开机上电自检 (POST) 期间非常擅长检查其硬件。在系统上电期间记录 LED 信息将有助于你调试硬件问题。如果系统启动成功，请首先检查错误报告！如果你怀疑存在硬件问题或系统无法启动，请使用 `Rseries` 或 `RS/6000` 诊断程序来帮助确定故障。诊断程序可以独立运行，也可以使用 `diag` 命令以并发模式在线运行 AIX。对于并发模式操作，作为超级用户输入 `diag` 命令并遵循菜单说明。独立模式类似于前面描述的从磁带或 CD-ROM 启动。
+
+1. 将系统开关设置在服务位置（如果存在）。
+2. 插入包含启动映像的 CD-ROM 光盘或磁带，并给系统上电。
+3. 根据提示选择控制台显示。
+4. 选择用于系统恢复的启动维护模式 (Start Maintenance Mode for System Recovery)。
+5. 选择访问高级维护模式功能 (Access Advanced Maintenance Mode Functions)。
+
+## 基于安腾的系统启动
+
+AIX 5L 新增了一项功能，即支持在基于安腾 (Itanium) 的机器上运行，这些机器采用 64 位 Intel 处理器。POWER 系统和基于安腾的机器之间的启动过程存在四个差异。
+
+1. POWER 系统上的只读存储器 (ROS) 被通用的 PC BIOS 和可扩展固件接口 (EFI) 所取代，后者在系统固件和操作系统之间提供通用标准接口。这一新标准是由 Intel 创建的。
+2. POWER 系统上的固件提供系统管理服务 (SMS)，并为你提供多种更改启动设备列表的方法。基于安腾的系统允许你通过 EFI 启动管理器来更改启动设备列表。你还可以在启动过程中使用设置工具菜单来更改硬件配置。
+3. POWER 系统使用启动逻辑卷 (BLV) 或启动映像，并由 ROS 控制加载 RAM 文件系统。在基于安腾的系统中，启动磁盘包含两个分区。物理卷分区包含 `rootvg` 和 BLV，而 EFI 系统分区是一个小的“引导加载程序扇区”，其中包含引导加载程序 `boot.efi`。`boot.efi` 程序将 BLV 加载到 RAM 磁盘中。
+4. 大多数 POWER 机器都有一个 LED 显示屏，用于显示启动过程的进度。基于安腾的系统没有（至少目前还没有）LED 显示屏。相反，所有消息都发送到系统控制台。
+
+关于基于安腾的系统启动过程以及可扩展固件接口 (EFI) 的更多信息，请访问以下 Intel 网站：
+
+`http://www.intel.com/design/itanium/index.htm`
+
+你还应该阅读 Redbook《AIX 5L Differences Guide》第 5.1 版，SG24-5765。你可以从以下 IBM 网站下载该 Redbook 的 PDF 或 HTML 格式版本：
+
+```
+http://redbook.ibm.com/redbooks/SB245765.html
+```
+
+## 检查清单
+
+以下是关于系统启动和停止的关键要点检查清单：
+
+- AIX 可以通过 3 种方式之一启动：正常启动、独立启动、网络启动
+- 要将系统启动到独立模式以进行 AIX 安装或系统维护，请将系统开关（如果存在）设置在服务位置，或在键盘初始化后立即按 F5 或 F6。
+- 运行 bootlist 命令以定制或恢复存储在 NVRAM 中的启动设备列表。
+- 在基于安腾的系统中，使用 EFI 启动管理器更改启动设备列表。
+- 在具有服务处理器且固件持续监控系统故障并允许系统重新配置的型号上：要访问服务菜单，请打开系统电源并按两次 ENTER，或使用 diag 命令访问大多数服务功能。
+- 要进行主要系统诊断，你需要使用随系统提供的诊断 CD-ROM 进入维护模式。
+- 要克隆系统或将系统升级到更新版本的 AIX 或发布版，你需要使用安装介质启动系统。
+- 要查看系统写入所有启动信息的特殊启动日志文件，请使用 `alog -t boot -o` 命令。
+- 要配置 CDE 使启动模式不为图形模式但操作模式为图形模式，请配置 CDE 仅在登录提示符处启动。
+- 要配置具有 Micro Channel I/O 的多处理器机器以使用快速启动，请在 `/etc/inittab` 文件中使用 `mpfsg` 命令使更改永久生效，或从命令行运行该命令仅影响下一次启动。
+- 在停止所有数据库和应用程序后，使用 `shutdown` 或 `reboot` 命令优雅地使服务和系统离线。
+- 如果你有希望在系统关闭或重启前总是停止的应用程序，请将命令或脚本名称放入 `/etc/rc.shutdown` 文件。
+- 要在关闭后立即重启系统，请使用 `shutdown -r` 命令或 `reboot` 关闭系统。
+- 如果你怀疑存在硬件问题或系统无法启动，请使用 `diag` 命令配合 pSeries 或 RS/6000 诊断程序来帮助确定故障。
+
+![](img/82f851021955589d82b22750fb3b1646_144_0.png)
+
+# 第四部分
+
+# 系统配置与定制
+
+- 8 AIX 运行时配置
+- 9 AIX 设备配置管理器 (cfmgr) 和对象数据管理器 (ODM)
+- 10 磁带系统
+- 11 AIX 逻辑卷管理器 (LVM)
+- 12 打印机和打印子系统
+
+# 第 8 章
+
+# AIX 运行时配置
+
+这里有一个简短而精妙的章节，介绍如何定义你的运行时设置。除了一项任务外，所有任务都可以通过单个 SMIT 环境屏幕完成。我之所以将其作为独立章节，是因为管理员在完成安装或升级后，经常忘记处理其中一些或全部步骤。在一个漫长安装日结束时，选择“任务完成——退出到 AIX”实在太有诱惑力了。一周后，我们站在那里挠着头，试图弄清楚为什么无法再运行一个进程，或者为什么系统上似乎只有两个活动许可证。
+
+将此作为独立章节的另一个原因是，大多数粗略的系统调优都可以从这些屏幕完成——例如设置最大 I/O 缓冲区以及分页操作。在混合工作负载环境中，这些数字中的一点点变化可能会对系统吞吐量产生巨大影响。
+
+## 系统环境
+
+要到达 SMIT 全面的运行时设置面板（见图 8-1），请输入 SMIT FastPath smit system。
+
+```
+# smit system
+```
+
+## 停止系统
+
+系统环境面板中的第一个选择是停止系统的选项。如果你不习惯使用命令行选项，可以使用 SMIT FastPath smit shutdown（参见下图）。你可以输入一条消息发送给所有用户，选择重启选项，并设置关闭或重启前的时间延迟。
+
+```
+# smit shutdown
+```
+
+![](img/82f851021955589d82b22750fb3b1646_148_0.png)
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_149_0.png)
+
+## 分配控制台
+
+下一个菜单选项允许你分配或重新分配系统控制台设备，如下面插图所示。没错，在安装期间，当终端连接到串行端口时，它工作得很正常。然后，你没有重置控制台支持就拔掉了线缆。在操作 pSeries 或 RS/6000 机器时，你不需要将终端连接到其中，但你可能希望将控制台输出重定向到另一个设备或文件。你可以通过 SMIT 快速路径 `smit chcons` 来执行控制台分配。
+
+```bash
+# smit chcons
+```
+
+![](img/82f851021955589d82b22750fb3b1646_150_0.png)
+
+## 时间设置
+
+两个本应在安装过程结束时处理的简单设置是时间和语言设置（参见图 8-2）。啊哈！现在你知道为什么邮件头中的时间戳有时区偏差了。你可以通过调用 SMIT 快速路径 `smit chtz_date` 来设置正确的日期和时区。
+
+![](img/82f851021955589d82b22750fb3b1646_150_1.png)
+
+图 8-2. 更改/显示日期和时间
+
+```bash
+# smit chtz_date
+```
+
+## 语言环境
+
+很可能，你在安装期间设置了正确的语言，但你知道你可以向该集合中添加其他语言吗？AIX 允许你配置一个语言环境层次结构（参见图 8-3）。这在多语言社区中可能很有用。你还可以使用 SMIT 将消息和平面文件翻译成新的基础语言。
+
+```bash
+# smit mlang
+```
+
+## 设置操作系统特性
+
+仅从 SMIT 的一个面板中（参见图 8-4），你就可以改变 AIX 内核特性，涵盖大多数关键子系统，包括虚拟内存管理器、调度器和分发器。这是一个对系统造成破坏的绝佳屏幕。使用 SMIT 快速路径 `smit chgsys` 打开 AIX 的潘多拉魔盒。
+
+```bash
+# smit chgsys
+```
+
+![](img/82f851021955589d82b22750fb3b1646_151_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_152_0.png)
+
+**图 8-4. 更改/显示操作系统特性 SMIT 面板**
+
+在此面板上进行系统更改时请小心。一次只更改一项；如果更改没有帮助，就恢复原样！在此 SMIT 面板中进行的某些更改可能需要重启才能设置或重置值。
+
+面板中的第一项是每个用户允许的最大进程数。也许这就是为什么你无法再启动一个进程的原因。将这个参数设置得过大或过小都有利弊。设置得过大可能会导致你在遇到失控进程（即不断 fork 自身新副本的进程）时陷入困境。似乎每年都有新一批程序员喜欢尝试紧密的 `fork(0)` 和 `exec(0)` 循环。将最大进程数设置得过低意味着当你尝试启动那个多出来的进程时会感到沮丧。
+
+列表中的下一项是块 I/O 缓冲区缓存中的最大页数。此设置用作块特殊文件的 I/O 缓冲区。基本上，它模拟了 BSD 或 System V 缓冲区缓存。系统不会大量使用它，但它会占用实际内存。
+
+下一项控制可用于网络 MBUFS 的固定实际内存量。同样，这是另一个占用实际内存的参数。要启用 MBUF 统计信息的收集，你需要更改 `/etc/rc.net` 文件底部的以下条目（将 `extendednetstats` 的值从 0 更改为 1）。
+
+```bash
+/usr/sbin/no -o extendednetstats=1 > /dev/null 2>&1
+```
+
+如果系统正在收集 MBUF 统计信息，你可以使用 `netstat -m` 命令来查看在增大该值之前是否即将耗尽 MBUF。
+
+对于无人值守的系统，你可能希望将系统崩溃后自动重启的开关设置为 true，以维持系统可用性。
+
+如果你经常使用 `iostat` 命令来检查磁盘 I/O 速率统计信息，你会希望将“磁盘 I/O 历史”保持为 true。开销并不那么大，但你可以选择将其关闭，直到你想要进行 I/O 监控时再开启。
+
+接下来的两个条目控制待处理 I/O 的高水位线和低水位线。这些参数会对系统吞吐量产生巨大影响，并且主要针对机器执行的工作类型进行调整。当写入文件的进程达到其待处理 I/O 的高水位线时，该进程会被挂起，直到 I/O 队列降至或低于低水位线。这可以防止大型数据库负载进程阻碍尝试打开电子邮件收件箱的用户。相反，你可以设置这些参数以有利于大型写入者，从而加快构建大型文件的速度。
+
+跳到倒数第三个条目，启用完整核心转储（Enable Full CORE Dump）：在调试应用程序时，如果你需要查看内核结构和空间之外的内存位置，这可能很重要。注意，启用此功能将导致大型程序核心转储文件，这可能需要受影响的文件系统中有更多的空间，并且需要调整用户限制。这与下一节“转储设备”中详细介绍的系统转储无关。
+
+此面板中还有其他选项，你可能想进一步调查。
+
+## 许可用户数
+
+回到系统环境面板。选择“更改/显示许可用户数”或运行 SMIT 快速路径 `smit chlilense` 来更改许可用户数，如下面插图所示。默认值为两用户许可证且没有浮动许可证。这可能也是你无法再启动一个应用程序实例的另一个原因。
+
+```bash
+# smit chlilense
+```
+
+![](img/82f851021955589d82b22750fb3b1646_153_0.png)
+
+## 管理浮动用户许可证
+
+此选项允许你为特定版本的 AIX（包括 4.1、4.2、4.3 和 5L）添加浮动用户许可证（参见图 8-5）。你必须提供用户许可证的 AIX 级别以及你要添加到系统中的浮动用户许可证数量。要直接访问，请使用 SMIT 快速路径 `smit netls_server`。
+
+```bash
+# smit netls_server
+```
+
+## 向所有用户广播消息
+
+你可以使用 SMIT 快速路径 `smit wall` 命令（参见插图）向所有登录用户广播消息，该命令执行的功能与 `wall` 命令本身相同。你需要明白，只有登录到 AIX 的用户才能看到消息。如果用户登录到应用程序而不是操作系统，则无法通过 `wall` 接收消息。如果用户正在 X Window System 环境中运行，还必须有一个打开的窗口。
+
+```bash
+# smitty wall
+```
+
+![](img/82f851021955589d82b22750fb3b1646_154_0.png)
+
+**图 8-5. 管理 AIX 浮动用户许可证 SMIT 面板**
+
+![](img/82f851021955589d82b22750fb3b1646_155_0.png)
+
+## 系统日志
+
+系统错误日志（ErrLog）是一个非常好的设施，用于跟踪系统硬件和应用程序问题。不幸的是，它是 AIX 中最容易被忽视的功能之一。如果没有积极的清理工作，错误日志 `/var/adm/err/errlog` 通常缺乏导致系统问题的关键历史信息。应定期监控该日志，以扫描间歇性系统问题。伴随的 `alog` 屏幕用于控制由 `alog` 命令产生的日志。该命令与其他命令输出配合使用，通过管道传输到 `alog` 标准输入。你可以从 SMIT 快速路径 `smit logs` 管理系统日志，如图 8-6 所示。
+
+```bash
+# smit logs
+```
+
+![](img/82f851021955589d82b22750fb3b1646_155_1.png)
+
+图 8-6. 管理系统日志 SMIT 面板
+
+## 转储设备
+
+与日志屏幕一样，系统转储菜单（参见图 8-7）对于管理问题信息至关重要。默认情况下，AIX 4.3 和 5L 使用 `/dev/hd6` 分页空间作为主要转储设备。在大多数大型环境中，应定义一个专用的转储设备，而不是分页空间。在以前的版本中，拥有镜像分页空间并发生转储的系统存在问题。在内核恐慌时，关于使用镜像的哪一面作为转储设备产生了困惑。此问题已在 AIX 4.3.3 的 ML 6 中得到修正。然而，拥有专用转储设备的主要原因是允许在系统转储后自动重启，从而保留转储图像，而无需将其保存到磁带或禁用分页设备。
+
+通过 SMIT 快速路径 `smit dump` 访问 SMIT 转储菜单。
+
+```bash
+# smit dump
+```
+
+![](img/82f851021955589d82b22750fb3b1646_156_0.png)
+
+**图 8-7. 系统转储 SMIT 面板**
+
+
+
+
+
+## 互联网和文档服务
+
+在使用 DocSearch（文档搜索服务）、Netscape 或搜索服务器之前，必须配置访问机制（参见图 8-8）。使用 SMIIT FastPath `smit_web_configure` 是配置所有这些设置的最快捷方式。通常，除了“搜索/Web 服务器”之外，你可以接受默认值。按 F4 或 ESC-4 键，你可以查看已安装的产品列表。请参阅你的文档以了解如何设置这些服务，并阅读第 2 章了解关于设置 DocSearch 的详细信息。此外，还有一个用于基于 Web 的系统管理器（WebSM）的条目。
+
+```
+# smit_web_configure
+```
+
+## 更改系统用户界面
+
+根据服务器上安装的软件，用户界面至少有三种选择。我安装了通用桌面环境（CDE），以及所有的 Linux 桌面（KDE 和 GNome）。你可以使用 SMIIT FastPath `smit dtconfig` 在启动时选择 ASCII、CDE 或带 ASCII 的 CDE。
+
+![](img/82f851021955589d82b22750fb3b1646_157_0.png)
+
+**图 8-8.** 互联网和文档服务 SMIIT 面板
+
+Linux 选项目前不可作为 SMIT 或 WebSM 选项使用。有关 Linux 与 AIX 5L 的亲和性信息，请参见第 21 章。
+
+```
+# smit dtconfig
+```
+
+![](img/82f851021955589d82b22750fb3b1646_158_0.png)
+
+## 默认文档语言
+
+你可以使用 SMIT FastPath **smit chdoclang** 更改默认文档语言（参见图 8-9）。并非所有语言都支持库搜索功能。在使用某种语言之前，必须先安装该语言的区域设置（locale）。对于文档服务器，你不仅要安装语言区域设置，还必须安装为该特定语言编写的文档。
+
+![](img/82f851021955589d82b22750fb3b1646_158_1.png)
+
+![](img/82f851021955589d82b22750fb3b1646_158_2.png)
+
+```
+# smit chdoclang
+```
+
+## 管理远程重启功能
+
+如果你愿意，可以远程重启你的系统，如下面的插图所示。由于在我的环境中这是一种安全违规，所以我从不使用此功能。但是，它确实有适用的场合。如果你正在进行需要重启的远程安装和更新，那么这个功能可以节省大量时间。远程重启功能通过使用 SMIT FastPath **smit rrb tty** 激活。一旦你为此目的激活了一个端口，你就不能再将其用于其他任何用途。
+
+```
+# smit rrb tty
+```
+
+![](img/82f851021955589d82b22750fb3b1646_159_0.png)
+
+## 管理系统挂起检测
+
+这是 AIX 5L 的新功能。如果你的系统*挂起*（hangs），此功能使你能够采取某种措施。默认情况下，它不会执行任何操作。由你指定希望机器采取的纠正措施。可以使用 Shell 脚本来指示系统如何对系统挂起条件做出反应。这是 IBM *自愈* Project eLiza 战略的一部分，该战略是一项正在进行中的开发努力。使用 SMIT FastPath **smit shd** 设置挂起检测，如图 8-10 所示。
+
+```
+# smit shd
+```
+
+## PTY
+
+在 AIX 4 或 5L 下，AT&T 风格的伪终端（PTYs）不会自动分配。正如下一幅插图所示，必须为 AT&T 和 BSD 风格设备指定 PTY 的数量。这是无法启动额外 X11 应用程序的可能原因。使用 SMIT FastPath **smit chptpy** 更改 PTY 的数量。
+
+![](img/82f851021955589d82b22750fb3b1646_160_0.png)
+
+```
+# smit chptpy
+```
+
+![](img/82f851021955589d82b22750fb3b1646_160_1.png)
+
+## 检查清单
+
+以下是 AIX 运行时配置中要点的检查清单：
+
+- 如果你不习惯使用命令行选项，你可以使用 SMIIT FastPath `smit shutdown` 来停止系统并向所有用户发送消息。
+- 通过调用 SMIT FastPath `smit chtz_date` 设置正确的日期和时区。
+- 你可以使用 `smit mlang` 命令向集合中添加更多语言。
+- 你可以使用 SMIT FastPath `smit chgsys` 更改 AIX 内核特性，例如每个用户允许的最大进程数、块 I/O 缓冲区中的最大页面数、可用于网络 MBUFFS 的固定实内存量，以及其他内存和调度器子系统。在此面板上对系统进行更改时要小心！
+- 要更改授权用户数量，请运行 SMIT FastPath `smit chlicense`。
+- 你可以使用 SMIT FastPath `smit wall` 命令向所有已登录用户广播消息。
+- 定期监视 `/var/adm/ras/errlog` 日志文件，并使用 `errpt` 命令扫描间歇性系统问题。
+- 从 SMIT FastPath `smit logs` 管理系统日志。
+- 在大多数大型环境中，你应该定义一个专用的转储设备作为主要转储设备，而不是使用 AIX 4.3 和 5L 默认的 `/dev/hd6` 交换空间。使用 SMIT FastPath `smit dump` 访问 SMIT 转储菜单。
+- 根据服务器上安装的软件，用户界面至少有三种选择。你可以使用 SMIT FastPath `smit dtconfig` 在启动时选择 ASCII、CDE 或带 ASCII 的 CDE。
+- 要激活远程重启功能，请使用 SMIT FastPath `smit rrb tty`。
+- 在 AIX 5L 中，使用 SMIT FastPath `smit shd` 设置挂起检测，以确定系统如何对挂起条件做出反应。
+
+![](img/82f851021955589d82b22750fb3b1646_162_0.png)
+
+# 第 9 章
+
+AIX 设备配置管理器（*cfgmgr*）和对象数据管理器（ODM）
+
+![](img/82f851021955589d82b22750fb3b1646_163_0.png)
+
+与许多传统 UNIX 系统不同，AIX 支持动态设备配置和管理。在大多数情况下，你可以将外部设备连接到运行中的系统，配置设备属性，并开始使用新设备。无需重建内核！无需重启系统！其工作原理是，AIX 允许向运行中的内核动态加载内核扩展和设备驱动程序，并通过对象数据管理器（ODM）进行动态设备配置。如果你经常使用 AIX，那么有必要对 ODM 的结构和操作有良好的理解。由于设备管理和 ODM 紧密耦合，因此通过概述 ODM 的功能特性来开始讨论设备是有意义的。
+
+## ODM 概述
+
+最初，只有 UNIX 系统配置表。它们被发送到 BSD 和 System V 的大众中，将所有管理纳入共同的框架。但随后，工作站增多并繁荣起来。配置表变得庞大且笨重。从这种解析表格的泥潭中，预言了一种新教义，它将减少登录处理和密码更新期间的等待和苦恼。它被称为 dbm，而且很有效。dbm 例程将大型配置表简化为键值对数据库。数据库中的条目通过一次或两次文件 I/O 检索，而 dbm 数据库表示为索引文件 *.dir* 和数据文件 *.pag*。dbm 数据库的一个常见示例是密码文件 passwd.dir 和 passwd.pag。
+
+IBM 决定通过引入一个名为对象数据管理器（ODM）的层次化面向对象数据库，将 dbm 教义更进一步，用于配置数据。ODM 将多个标准配置表集中到一个单一的管理结构中，并具有更新验证。AIX 命令和内核例程使用类似 SQL 的语义访问 ODM 对象。
+
+## ODM 组件
+
+ODM 由对象类数据库组成，例如磁带类。在每个对象类中有一个对象列表，例如 4 mm 和 8 mm 磁带驱动器。每个对象类中的每个对象都有一套对象描述符，用于描述该特定对象，例如每个磁带驱动器的磁带块大小和 SCSI ID。对象描述符的示例包括 uniquekey（tape/scsi/4mm4gb）、attribute（block_size）、默认值（1024）和可能的值（0-16777215,1）。对象描述符通常被称为对象的属性。
+
+ODM 的每个组件——对象类、对象和对象描述符——都有一个或多个命令，用于控制添加、删除、更改或查询该组件。
+
+
+
+
+
+要添加或删除对象类，我们使用 `odmcreate` 和 `odmdrop` 命令。`odmdrop` 命令是一个极其危险的命令！`odmdrop` 命令会删除整个对象类，并可能导致系统变得无用——例如，没有磁带驱动器，或者更糟糕的是，没有磁盘！
+
+要在对象类内添加、修改、删除和查询对象，我们使用 `odmadd`、`odmchange`、`odmdelete` 和 `odmget` 命令。大多数情况下，你都会使用（我希望是这样！）`odmget` 命令。使用 `odmget` 来查询数据库中的预定义对象或自定义对象。
+
+要查看显示对象单个属性的对象描述符，请使用 `odmshow` 命令。`odmshow` 命令允许你查看对象类是如何组装起来的。
+
+以下是一些便捷的 `odmget` 命令列表：
+
+| 便捷的 odmget 命令 | 功能 |
+|---|---|
+| `odmget -g name=hdisk0 CdVv` | 描述 hdisk0 的 ODM 对象 |
+| `odmget -g name=hdisk0 CuAt` | 存储 hdisk0 的 PV ID 的 ODM 对象 |
+| `odmget -g type=osdisk PdVv` | 描述预定义磁盘类型 osdisk 的 ODM 对象 |
+| `odmget -g types=ssclO CdVv` | 附加到父设备 scsi0 的 CdVv 的 ODM 对象 |
+
+你还可以在 `odmget` 命令中使用 like 运算符：
+
+```
+odmget -g "name like hdisk?" CdVv
+```
+
+所有 ODM 自定义磁盘用途
+
+## ODM 数据库
+
+ODM 数据库管理系统中的几乎所有内容。ODM 管理与系统上所有设备相关的数据，系统中的一些软件，系统资源控制器、错误日志记录和系统转储设施、SMT 菜单、网络安装管理器（NIM）以及 TCP/IP 的配置。然而，ODM 并不管理打印队列、文件系统（文件系统由逻辑卷管理器——LVM 控制）、系统安全性或用户及用户密码。所有这些组件都由 `/etc` 和 `/etc/security` 下的文件控制。
+
+对象类作为标准 UNIX 文件实现，位于代表 ODM 数据库的目录中。AIX 版本 4 和 5L 使用三个默认的 ODM 目录。`/etc/objrepos` 目录保存所有自定义设备，或已在系统中发现并配置的设备。`/usr/lib/objrepos` 目录包含所有预定义的设备对象类，即支持但当前未安装或未激活在系统上的设备，以及应用 LPP 更新时的相关数据。`/usr/share/lib/objrepos` 目录保存每个 LPP 的共享部分，以及软件 Vital Product Data (SWVPD) 使用的四个对象类，分别是 lpp、history、inventory 和 product。这也允许无盘、无数据和其他工作站。ODMID 环境变量定义了用作默认 ODM 数据库目录的目录路径。`/etc/environment` 文件将默认 ODMID 路径设置为 `/etc/objrepos`。可以操作 `ODMDIR` 环境变量来指定自定义应用程序数据库。
+
+`/etc/objrepos` 默认对象类目录
+
+CDiagAtt, CDiagAtt.vc, CDiagDev, Config_Rules, CuAt,
+CuAt, CuDep, CuDv, CuDvDr, CuPath,
+CuPath.vc, CuPathAt, CuPathAt.vc, CuVPD, CuVars,
+DSMOptions, DSMOptions.vc, DSMenu, FRUB, FRUs,
+MenuGoal, PDiagAtt, PDiagAt.vc, PDiagDev, PDiagDev.vc,
+PDiagRes, PDiagRes.vc, PDiagTask, PDiagTask.vc, PdAt,
+PdAt.vc, PdAXId, PdAXId.vc, PdCn, PdDv,
+PdDv.vc, SRCextheth, SRCnotify, SRCcodmlock, SRCSusbvr,
+SRCSusbys, SWservAt, SWservAt.vc, TMinput, config.lock,
+crypto_module, crypto_module.vc, diag_lock, diag_log.lock, ermitify,
+history, history.vc, inventory, inventory.vc, lpp,
+lpp.vc, nim_attr, nim_attr.vc, nim_object, nim_object.vc,
+nim_paddrr, nim_paddrr.vc, pmmi_data, product, product.vc
+
+`/usr/lib/objrepos` 额外的 ODM 目录
+
+CC, CC.vc, DSMOptions, DSMOptions.vc, DSMenu,
+FONT, FONT.vc, GAI, GAI.vc, KEYBOARD,
+KEYBOARD.vc, MESSAGES, MESSAGES.vc, PDiagAtt, PDiagAt.vc,
+PDiagDev, PDiagDev.vc, PDiagRes, PDiagRes.vc, PDiagTask,
+PDiagTask.vc, PdAt, PdAt.vc, PdAXId, PdAXId.vc,
+PdCn, PdDv, PdDv.vc, XINPUT, XINPUT.vc,
+crypto_module, crypto_module.vc, fix, fix.vc, fix.lock,
+history, history.vc, inventory, inventory.vc, lag,
+lag.vc, lpp, lpp.vc, product, product.vc,
+sm_cmd_hdr, sm_cmd_hdr.vc, sm_cmd_opt, sm_cmd_opt.vc, sm_menu_opt,
+sm_menu_opt.vc, sm_name_hdr, sm_name_hdr.vc, vendor, vendor.vc
+
+## 对象与对象类
+
+ODM 对象是构成对象类的数据项。对象属性映射到代表对象类定义的 C 语言结构体，格式为 stanza（节）格式。对象类定义描述了组成对象的描述符-值对。对象类可以使用特殊的链接描述符与其他对象类进行关系连接。
+
+最初，对象类定义被构造成一个由 `*.cre` 扩展名标识的 ASCII 文本文件。该描述文件由 `odmcreate` 命令读取以创建对象类。结果是一个空的对象类和一个 `*.h` 头文件，应用程序可以使用该头文件来填充和操作对象类中的成员。作为示例，请考虑音乐商店库存对象类的通用属性，例如 `inventory.cre` 文件：
+
+```c
+class Inventory {
+    char item[20];
+    char description[80];
+    char color[20];
+    short unit_number;
+    char manufacturer[20];
+    long quantity;
+    long unit_price;
+    method order_more;
+}
+```
+
+要将新的对象类 Inventory 添加到 ODM，我们使用 `odmcreate` 命令。
+
+```
+# odmcreate inventory.cre
+```
+
+下一步是向 Inventory 对象类中添加一些数据。我们再次创建一个 ANSI 文本文件来存储条目，然后使用 `odmadd` 命令来填充 Inventory 对象类。
+
+对于 Inventory 对象成员，我们创建以下文本文件：
+
+### Inventory
+
+```ini
+item       = "Drum_Sticks"
+description = "Rudimental drum sticks, plastic tip."
+color      = "black"
+unit_number = 293
+manufacturer = "Prehistoric Logs"
+quantity   = 20
+unit_price = 2050
+order_more = /usr/local/bin/check_inventory
+```
+
+让我们将上述数据保存到一个名为 NewInventory 的文件中。为了使用 NewInventory 文件中存储的数据来填充 Inventory 对象类，我们使用 `odmadd` 命令。
+
+```
+# odmadd NewInventory
+```
+
+要查询 Inventory 对象类，我们可以使用 `odmget` 命令。要查询 ODM Inventory 对象类中 color=black 的记录，我们使用以下命令：
+
+```
+# odmget -q color=black Inventory
+```
+
+该命令将返回此处列出的 stanza 格式输出。
+
+### Inventory
+
+```
+item = "Drum_Sticks"
+description = "Drum Sticks - Plastic tip"
+color = "black"
+unit_number = 293
+manufacturer = "Prehistoric Logs"
+quantity = 20
+unit_price = 2050
+order_more = "/usr/local/bin/check_inventory"
+```
+
+要将数量从 20 更改为 50，我们需要提取对象并将其存储在一个文件中。我们可以使用前面的命令并将输出重定向到一个文件，然后编辑该文件。
+
+```
+odmget -q quantity=20 Inventory > /tmp/Inventory.out
+```
+
+现在，我们只需编辑 `/tmp/Inventory.out` 文件，将 quantity stanza 从 20 更改为 50，并保存文件。
+
+接下来，我们使用 `odmdelete` 命令删除旧记录。
+
+```
+odmdelete -q quantity=20 -o Inventory
+```
+
+现在我们可以使用 `odmadd` 命令添加修改后的记录。
+
+```
+odmadd /tmp/Inventory.out
+```
+
+要验证数量确实已更改，我们可以再次使用 `odmget` 命令查询 `Inventory` 对象类。
+
+```
+odmget -q quantity=50 Inventory
+```
+
+输出显示我们的更改已按预期完成。
+
+### Inventory
+
+```
+item = "Drum_Sticks"
+description = "Drum Sticks - Plastic tip"
+color = "black"
+unit_number = 293
+manufacturer = "Prehistoric Logs"
+quantity = 50
+unit_price = 2050
+order_more = "/usr/local/bin/check_inventory"
+```
+
+最后，让我们删除我们创建的 `Inventory` 对象类。要删除对象类，我们使用 `odmdrop` 命令。
+
+> **注意** 在使用 `odmdrop` 命令时，请务必清楚你正在做什么！如果你犯错，很容易使系统变得不可用。
+
+```
+odmdrop -o Inventory
+```
+
+对象类定义可以指定方法描述符。方法定义了一个将由 `odm_run_method` 例程调用的程序。该方法更新对象的状态。在上面的示例中，该方法将检查库存，并在库存耗尽时更改状态。对象类中的每个对象都可以指定唯一的方法程序。方法表示为以空字符结尾的 255 个字符的字符串。可以在方法后添加 & 符号以实现异步执行。
+
+## 命令和库接口
+
+用户和应用程序通过命令和库例程操作 ODM 数据。表 9-1 中的命令和库例程列表将让你了解对 ODM 数据允许的操作类型。
+
+## 设备配置
+
+设备接口定义和配置属性作为对象存储在 ODM 数据库中。每次系统启动时，`cfgmgr` 命令都会遍历 I/O 总线并识别系统中存在的所有设备。设备位置和类型信息存储在 ODM 中，并运行相关的配置规则和初始化方法以使设备可用（参见第 7 章）。
+
+配置管理器也可以在运行中的系统上通过 SMIT 设备菜单或通过在命令行执行 `cfgmgr`、`mkdev`、`chdev` 或 `rmdev` 来调用。当系统正在运行且可用时，会调用在启动时首选的相同动态设备配置活动。此功能允许你在无需系统重启的情况下使新设备可用。表 9-2 中的命令是一些直接作用于 ODM 的更常见命令。
+
+## 预定义和自定义设备
+
+设备配置信息分为预定义对象类和自定义对象类。预定义对象类信息代表默认配置信息
+
+
+
+
+# AIX 5L 中的新 ODM 类 (CuOD)
+
+AIX 5L 引入了若干项需要新 ODM 控制的技术，因此 IBM 创建了一个新的 ODM 类 **CuOD**，即定制化按需（On-Demand）对象类。IBM 的新功能之一是动态 CPU 分配。**CuOD** 类允许你订购一台带有额外 CPU 容量的新 pSeries 机器，并且可以即时动态分配这些新 CPU。处理器通过目标系统的特征代码（FC）进行订购。基本上，你只是在订购一台带有额外 CPU 的系统，并具备在稍后日期激活这些额外 CPU 的能力，从而降低了前期成本，并且不会一次性将所有额外算力分配给用户和应用程序。那些按 CPU 时间收费的机构会喜欢这个功能。
+
+同一技术理念的另一部分是动态 CPU 取消分配，它可以将故障 CPU 离线并停止服务，而不会导致系统宕机。内存技术，包括内存芯片保护（Memory ChipKill）、位散射（Bit Scattering）和位引导（Bit Steering），是内存子系统中类似 RAID 5 的技术的一部分。如果内存 DIMM 发生故障，系统将自动禁用对该芯片的访问，系统将继续运行。这是一个硬件特性，不属于 **CuOD** ODM 类。
+
+既然提到了新事物，从 AIX 5L 版本 5.2 开始的逻辑分区（LPAR）允许你在单台机器内创建 1–16 个逻辑系统。这些逻辑系统分区对外部世界而言被视为独立系统，可以作为独立系统进行管理。IBM 允许你通过为逻辑系统指定确切的处理器数量和内存来创建这些 LPAR，并允许不同的操作系统（AIX 和 Linux）版本在同一台机器内运行。这对开发环境来说是一个惊人的突破工具！当他们需要一个沙盒来试验时，只需即时创建一个即可。
+
+ODM 类 CuOD 负责使这些技术中的一部分得以工作的动态机制；当然，还需要 POWER 4 处理器。
+
+> **注意：POWER 4 CPU 芯片实际上是单芯片上的双路 SMP，可以独立控制！**
+
+## ODM 对象类的示例
+
+一个特殊的对象类，预定义连接（**Pd**Cn），定义了设备类和子类的层级结构。设备属性作为独立的属性对象类维护。表 9-3 展示了 AIX 对象类的示例。
+
+你可以使用 **odmshow** 命令显示对象类定义。
+
+```
+# odmshow <ObjectClassName>
+```
+
+表 9-4 到 9-7 代表了预定义和定制化的设备描述符及属性描述符，让你大致了解设备信息是如何表示和链接的。
+
+### 表 9-3. AIX 对象类的示例
+
+| 类对象 | 对象类内容 |
+|---|---|
+| PdDy | AIX 支持的预定义设备 |
+| PdAt | 预定义设备属性 |
+| PdCn | 预定义设备子类连接 |
+| CuDy | 连接到系统的定制化设备 |
+| CuDvDr | 定制化设备驱动 |
+| CuAt | 定制化设备属性 |
+| CuDep | 定制设备依赖项 |
+| CuVPD | 定制化关键产品数据 |
+| Config_Rules | 配置规则集 |
+
+### 表 9-4. PdDv 描述符
+
+| 描述符名称 | 描述符定义 |
+|---|---|
+| Type | 设备类型 |
+| Class | 设备类 |
+| Subclass | 设备子类 |
+| Prefix | 前缀名称 |
+| Devid | 设备 ID |
+| Base | 基设备标志 |
+| has_vpd | VPD 标志 |
+| Detectable | 设备可检测标志 |
+| Chgstatus | 变更状态标志 |
+| bus_ext | 总线扩展器 |
+| Fru | FRU 标志 |
+| Led | LED 值 |
+| Setno | 集编号 |
+| Msgno | 消息编号 |
+| Catalog | 目录编号 |
+| DvDr | 设备驱动名称 |
+| Define | 定义方法 |
+| Configure | 配置方法 |
+| Change | 变更方法 |
+| Unconfigure | 取消配置方法 |
+| Undefine | 取消定义方法 |
+| Start | 启动方法 |
+| Stop | 停止方法 |
+| inventory_only | 仅清单标志 |
+| Uniquetype | 唯一类型 |
+
+### 表 9-5. PdAt 预定义属性描述符
+
+| 描述符名称 | 描述符定义 |
+|---|---|
+| Uniquetype | 唯一类型 |
+| Attribute | 属性名称 |
+| Deftl | 默认值 |
+| Values | 属性值 |
+| Width | 宽度 |
+| Type | 类型标志 |
+| Generic | 通用标志 |
+| Rep | 代表性标志 |
+| nls_index | NLS 索引 |
+
+### 表 9-6. (CuDv) 定制化设备描述符
+
+| 描述符名称 | 描述符定义 |
+| :--- | :--- |
+| Name | 设备名称 |
+| Status | 设备状态标志 |
+| Cngstatus | 变更状态标志 |
+| Dldins | 设备驱动实例 |
+| Location | 位置代码 |
+| Parent | 父设备 |
+| Connwhere | 连接位置 |
+
+### 表 9-7. (CuAt) 定制化属性描述符
+
+| 描述符名称 | 描述符定义 |
+| :--- | :--- |
+| Name | 设备名称 |
+| Attribute | 属性名称 |
+| Value | 属性值 |
+| Type | 属性类型 |
+| Generic | 通用标志 |
+| Rep | 代表性标志 |
+| nls_index | NLS 索引 |
+
+## 设备状态
+
+**cfgmgr** 例程负责使用配置规则集更新定制化设备信息。**cfgmgr** 调用每个连接设备指定的方法并更新设备状态。设备方法完成后，设备被设置为三种状态之一：已定义、已停止或可用，如表 9-8 所示。
+
+## 启动设备
+
+代表设备配置信息的小型 ODM 数据库作为 AIX 启动镜像的一部分维护。可以使用 **savebase** 命令从主 ODM 数据库更新此信息。同样，可以通过调用 **restbase** 命令将启动镜像中的 ODM 信息恢复到主 ODM 数据库（参见第 7 章）。
+
+```
+# savebase     将主 ODM 定制化设备数据保存到启动镜像
+# restbase     将定制化 ODM 数据从启动镜像恢复到主 ODM 数据库
+```
+
+[PAGE 170 内容如下]
+
+### 表 9-1. ODM 命令和库子程序
+
+| 库例程 | 命令 | 用途 |
+| --- | --- | --- |
+| odm.set_path | | 设置 ODM 数据库位置（ODMDIR 代表 shell 环境变量） |
+| | RESTBASE | 从启动镜像检索定制对象并存储到 ODM |
+| | SAVEBASE | 将 ODM 定制对象存储到启动镜像 |
+| odm.rm_class | ODMDROP | 移除一个对象类 |
+| | ODMSHOW | 显示对象类定义 |
+| odm.create_class | ODMCREATE | 创建空的对象类，并为应用程序关联 C 头文件 |
+| odm.add_obj | ODMADD | 向对象类添加一个对象 |
+| odm.change_obj | ODMCHANGE | 修改对象属性 |
+| odm.rm_obj | ODMDELETE | 从对象类中删除对象 |
+| odm.get_obj | ODMGET | 以 odmdat 格式检索对象 |
+| odm.get_by_id | | 通过其 ID 检索对象 |
+| odm.rm_by_id | | 通过其 ID 移除对象 |
+| odm.get_first | | 检索符合标准的第一个对象 |
+| odm.get_next | | 检索符合标准的下一个对象 |
+| odm.get_list | | 检索符合标准的对象列表 |
+| odm.mount_class | | 检索类符号结构 |
+| odm.open_class | | 打开一个对象类 |
+| odm.free_list | | 释放分配给 odm.get_list 的内存 |
+| odm.run_method | | 执行与对象关联的方法 |
+| odm.close_class | | 关闭对象类 |
+| odm.err_msg | | 检索错误消息字符串 |
+| odm.lock | | 锁定对象以进行更新 |
+| odm.unlock | | 解除对象锁定 |
+| odm.initialize | | 初始化 ODM 会话 |
+| odm.terminate | | 终止 ODM 会话 |
+
+### 表 9-2. 最常用的 ODM 命令
+
+| 命令 | 操作 |
+| --- | --- |
+| # smitty devices | SMIT 快速路径 |
+| # mkdev -I tty 0 | 添加 TTY 设备 |
+| # lsdv -C -s ascii -H | 列出现有 SCSI 设备 |
+| # chdev -l rmt 0 -a block_size = 0 | 更改磁带块大小 |
+| # leattr -D -l rmt 0 | 列出磁带属性 |
+| # rmdev -I rmt 0 | 关闭磁带设备但保留定义 |
+| # rmdev -l rmt 0 -d | 移除磁带设备 |
+| # cfcmgr | 更新 ODM 和内核 |
+
+适用于 AIX 支持的所有设备。定制化对象类代表系统中实际存在的设备。
+
+```json
+/etc/objrepos/Pdbxx ODM 预定义属性、连接和设备：
+```
+
+| PdBt | PDCn | PDCv |
+|---|---|---|
+
+| /etc/objrepos/Cuxxx | ODM 定制化属性、依赖项、设备驱动和关键产品数据： | |
+
+| CuAt | CuDP | CuDv | CuDvDr | CuVPD | Config_Rules | CuOD (5L 新增) | |
+
+| /usr/share/lib/objrepos | 软件关键产品数据 (SWVPD) 的组件 | |
+
+| lpp | history | inventory | product | |
+
+设备对象类层次结构链接到子类。例如，7207 和 3590 磁带设备代表 **tape** 对象类下的子类。**tape** 对象类反过来是 **SCSI** 对象类的子类。此层级强制配置关系。
+
+- 必须配置父对象类信息后才能配置子子类。
+- 如果存在子子类，则不能修改父对象类信息。
+- 如果存在子子类，则不能移除父对象类。
+
+
+
+
+
+
+## 设备状态
+
+| 设备状态 | 状态定义 |
+| :--- | :--- |
+| 已定义 | 设备已定义但不可用 |
+| 已停止 | 设备已配置但不可用 |
+| 可用 | 设备已配置且可用 |
+
+表 9-8. 设备状态
+
+## 小型计算机系统接口
+
+pSeries 和 RISC System /6000 最常见的设备接口是小型计算机系统接口 (SCSI)。SCSI 标准定义了一种通用接口和命令协议，可以支持大多数类型的设备。设备以菊花链方式连接到主机适配器。总链长度不能超过适配器类型允许的最大距离。
+
+### SCSI-1 和 SCSI-2
+
+RISC System /6000 同时支持 SCSI-1 和 SCSI-2 适配器及设备。SCSI-1 和 SCSI-2 设备可以在任一类型的适配器上混合使用；但是，到设备的吞吐量将受限于 SCSI-1 的速度。**cfmgr** 在配置 SCSI 设备时查询设备类型并记录 SCSI 类型。这消除了设备驱动程序需要不断查询 SCSI 类型以确定是否支持扩展 SCSI-2 命令的需求。SCSI-1 支持提供高达每秒 4 兆字节的传输速率。SCSI-2 快速 SCSI 模式将同步传输速率扩展到每秒 10 兆字节。SCSI-2 信号控制也比 SCSI-1 快两到三倍。单个 SCSI-1 或 SCSI-2 总线上最多可以有 8 个设备。
+
+### 单端式和差分 SCSI
+
+单端式 SCSI 连接的总距离限制为 6 米。每根线的逻辑电平基于与公共地的电压差。差分 SCSI 连接可达 25 米。差分连接上的逻辑电平基于两个信号线之间的电位差。
+
+单端式连接在某些 RS /6000-9XX 系统中可能是一个实际问题。早期 9XX 机架中的 SCSI 线缆管理臂大约占用了总共 6 米线缆长度中的 4.75 米。可以使用单端式 SCSI 到差分 SCSI 适配器的转换来解决此问题。
+
+### 快速 SCSI
+
+SCSI Fast-20 最多支持 8 个设备，但单端式的线缆长度仅为 3 米。快速差分 SCSI 可达 25 米的线缆长度，最大总线速度为 20MB/秒。
+
+### 宽 SCSI
+
+如果“宽”一词没有出现在“Wide”之前，那么它是指窄型的。宽 SCSI 规范具有 16 位总线宽度，而普通总线为 8 位。宽 SCSI 有时允许在 SCSI 总线上放置多达 16 个设备，而不是仅 8 个，但请查看您硬件的设备规格。
+
+### 快速和宽 SCSI
+
+快速和宽 SCSI 最多可以有 16 个设备，线缆长度在差分模式下最长可达 25 米，但单端式仅为 3 米。总线速度可达 20MB/秒。
+
+### 超高速 SCSI
+
+超高速 SCSI 将总线速度加倍至 40MB/秒，但在 3 米短线缆上最大设备数量减少到 4 个。
+
+### 超宽高速、宽型和窄型 Ultra-2、Ultra-3 以及 Ultra-320 SCSI
+
+是的，还有更多。超宽高速 SCSI 最大总线速度为 40 MB/秒，25 米线缆上可连接 16 个设备。Ultra-2 SCSI 具有 8 位总线，最大总线速度为 40MB/秒，并允许在 25 米线缆上连接最多 8 个设备。宽型 Ultra-2 将总线速度加倍至 40MB/秒，具有 16 位宽总线，并支持多达 16 个设备。Ultra-3 SCSI 也称为 Ultra160 SCSI。Ultra-3 SCSI 再次将总线速度加倍，这次在 16 位宽总线上达到 160MB/秒。支持多达 16 个设备，最大线缆长度为 12 米。Ultra-320 SCSI 将总线速度提升至 320 MB/秒，支持多达 16 个设备。总线宽度为 16 位，最大线缆长度为 12 米。
+
+### 线缆和适配器
+
+请非常小心您的 SCSI 线缆长度。当线缆超过特定 SCSI 类型的最大线缆长度时，就会开始发生奇怪的事情。最常见的设备操作错误来源于在同一总线上混合不同类型的 SCSI 设备，并且忘记测量所有 SCSI 线缆。请始终从 SCSI 终端到 SCSI 终端测量线缆，这引出了另一个要点。SCSI 总线必须终止！在较新的设备和大多数内部 SCSI 适配器中，终止器是内部安装的。
+
+如果您正在运行 HACMP 并使用外部 SCSI 磁盘作为共享磁盘，请记住双尾连接您的 SCSI 总线。当您双尾连接总线时，请从 SCSI 适配器中移除所有内部 SCSI 终止器。然后，在 SCSI 总线电缆上，在线缆上添加一个双尾连接器，并在外部电缆上终止总线。使用外部 SCSI 终止，您不必担心故障系统导致整个 HACMP 集群宕机。您还需要更改其中一个适配器的 SCSI 地址，但这一点将在下一节中介绍。
+
+### SCSI 寻址
+
+每个 SCSI 字符串支持 8 或 16 个地址（0–7 或 0–16），这些地址必须在设备和适配器之间分配。一些设备控制器支持使用逻辑单元号 (LUN) 从单个 SCSI ID 访问多个设备——例如 SCSI RAID 5 磁盘阵列。在大多数情况下，您可能只有 7 或 15 个地址可以分配给 SCSI 链上的设备。SCSI 适配器需要一个地址——通常是 SCSI ID 7。SCSI 链上的仲裁从较高的地址数字开始，因此对具有较大 SCSI ID 的设备提供更好的响应。设备 SCSI ID 通常可以通过设备框架或外壳上的跳线或选择器轮进行选择。
+
+- SCSI 地址格式为
+    - **AB**：两位数的 SCSI 地址，其中 A 代表 SCSI ID，B 代表逻辑单元号
+
+设备由位置码标识。使用 `lsdev` 命令验证位置码是否与实际硬件插槽和接口匹配。
+
+- 设备位置码如下：
+    - **AA-BB-CC-DD**
+    - 其中
+        - **AA** = 抽屉位置或平面板
+        - **BB** = I/O 总线和插槽
+        - **CC** = 适配器连接器编号
+        - **DD** = SCSI ID 或端口编号
+
+### SCSI 通过 IP (iSCSI)
+
+这是什么？是的，SCSI 通过 IP，即 iSCSI，已成为网络附加存储 (NAS) 的标准。NAS 最常见的用途是文件共享。iSCSI 标准允许 SCSI 设备在 IP 网络上通信。通常，iSCSI 在千兆 IP 网络中实现。如果你仔细想想，NAS 不过是增强版的 NFS！当只需要少数几台机器访问相同数据时，它是具有成本效益且优秀的解决方案。对于较大的环境，存储区域网络 (SAN) 更为合适。通过从单一机器中移除 I/O 并将流量转移到网络，可以将访问共享数据的时间减少十倍于传统 NFS 挂载。当然，您的网络需要能够处理这些流量，对于较重的流量需求，应考虑使用 SAN。第 29 章将更多关于 SAN 和 NAS 的内容。
+
+## 使用 SMITTY CFGMGR 自动配置系统
+
+如果您在系统中安装了不在预定义或自定义 ODM 对象类中的新设备，您可以做一个小窍门。我们只是让系统直接从操作系统 CD-ROM 获取设备驱动程序和其他设备信息。在任何类型的升级之后运行此过程也是个好主意。
+
+插入您当前 OS 级别的基础操作系统 CD-ROM，并使用 oslevel 命令查询系统。将 CD 插入驱动器后，执行以下命令：
+
+```
+# smitty cfgmgr
+```
+
+当菜单弹出时，按 F4 键选择**安装设备**，通常是 /dev/cd0。然后按两次 ENTER 键，系统将自动加载所需的任何设备代码并更新 ODM。这是一个非常有用且万无一失的工具！请记住重新应用您的 ML 代码更新，以防任何设备代码已更新。
+
+## 更新产品拓扑软盘
+
+每次添加新设备时，更新随系统提供的拓扑软盘是个好主意。这些软盘由 IBM 服务和支持代表用来记录您的系统配置。对于拥有大量机器的站点，这些特别有用。更新软盘后，使用随更新软盘提供的信封和地址标签将副本发送给 IBM 硬件支持。
+
+以下是拓扑更新程序：
+
+1. 关闭系统。
+2. 将钥匙开关设置为服务位置。
+3. 启动系统。
+4. 在**诊断操作说明**显示界面，按 ENTER。
+5. 在**功能选择**菜单中，选择**服务辅助**选项。
+6. 在**服务辅助选择**菜单中，选择**产品拓扑**选项。
+7. 按照显示说明操作。当提示*“您是否有尚未加载的更新软盘？”*时，回答“是”并插入
+
+
+
+产品拓扑更新软盘。按照说明更新产品拓扑系统软盘。如果显示 FC 和 MES 更新屏幕，请按 F7 键提交更新。
+
+8.  反复按 F3 键以退出所有诊断菜单。
+9.  将钥匙开关重置到正常位置（如果存在）。
+10. 重新启动系统。
+
+## 检查清单
+
+以下是 AIX 设备配置管理器（AIX Device Configuration Manager）和对象数据管理器（Object Data Manager）要点的检查清单：
+
+- IBM 的对象数据管理器（ODM）是一个分层面向对象的配置数据库管理器。
+- 要添加、更改、删除和查询对象类中的对象，请使用 `odmadd`、`odmchange`、`odmdelete` 和 `odmget` 命令。
+- 可以使用 `/etc/environment` 文件中的 `ODMDIR` 环境变量来操作用作默认 ODM 数据库目录的目录路径 `/etc/objrepos`。
+- 要向 ODM 添加新的对象类，请使用 `odmcreate` 命令。
+- 要向新的对象类添加数据，请使用 `odmadd` 命令。
+- 设备交错定义和配置属性作为对象存储在 ODM 数据库中，您可以通过在命令行执行 `cfgmgr`、`mkdev`、`chdev` 或 `rmdev` 来在运行中的系统上调用配置管理器，以便无需重新启动系统即可使新设备可用。
+- 您可以使用 AIX 5L 中的新动态 CPU 分配功能，在 pSeries 机器上动态即时分配额外的 CPU 容量。
+- 您可以使用动态 CPU 解除分配功能，在不关闭系统的情况下将故障 CPU 设置为离线状态。
+- 在 AIX 5L 版本 5.2 中，借助逻辑分区（LPAR），您可以在一台机器上创建 1-16 个逻辑系统，每个逻辑系统分区都被视为并管理为一个独立的系统。
+- 可以使用 `savebase` 命令从主 ODM 数据库更新小型设备配置 ODM 数据库（该数据库作为 AIX 启动映像的一部分进行维护）。
+- 如果在 RISC System/6000 上混合使用 SCSI-1 和 SCSI-2 适配器及设备，则到设备的吞吐量将受到较慢的 SCSI-1 4 MB/Sec 速度的限制。
+- 将单端 SCSI 链路的总距离限制为 6 米，将差分 SCSI 链路的总距离限制为 25 米。
+- 将单端 SCSI Fast-20 链路限制为 3 米电缆长度，将快速差分 SCSI 限制为 25 米。
+- 必须对 SCSI 总线进行终端匹配。
+- 为链路上的每个设备分配唯一的 SCSI 地址，并为受益于更快响应的设备使用较高的地址编号。
+- 若要轻松在系统中安装未包含在预定义或自定义 ODM 对象类中的新设备，请插入当前操作系统级别的底本操作系统 CD-ROM，然后运行 `smitty cfgmgr` 命令，按 `F4` 并选择安装设备，再按两次 `ENTER`。
+- 每次添加新设备时，都要更新拓扑盘，并使用提供的邮件器将副本发送给 IBM。
+
+![](img/82f851021955589d82b22750fb3b1646_181_0.png)
+
+# 第 10 章
+
+# *磁带系统*
+
+磁带由于具有大容量存储、低成本和长存储寿命（通常超过两年），多年来一直是首选的辅助存储介质。RS/6000 和 pSeries 机器支持大多数类型的磁带驱动器，IBM 一直在致力于增加存储容量。
+
+在我们查看各个设备类型和磁带格式的特性之前，回顾一下通用磁带特性会很有帮助。了解数据如何在物理介质上表示，将有助于您更好地利用该资源。
+
+## 物理特性
+
+磁带的早期用途是在德国磁性录音机（magnetophon）中。该设备使用掺杂氧化铁的塑料磁带。后来，美国尝试了涂有氧化铁的纸带。随后出现了乙酸纤维素，最终是聚合物基磁带。氧化物涂层的厚度、颗粒密度以及磁带表面上的颗粒分布决定了可以编码的信号强度。更厚和更密集的氧化物层可以提高信号强度，但会降低音频磁带的高频响应。如果涂层太薄，可能会发生渗印现象。渗印是指记录在盘上磁带层之间的磁性信号传输。磁带厚度和基材也决定了传输摩擦、介质耐用性和保质期。数据级磁带采用的氧化物涂层比标准音频磁带更厚、密度更大，通常价格也更贵。随着数字音频磁带（DAT）的出现，这一点正在发生一些变化，DAT 的涂层比其他音频磁带更密集。同样的关系也适用于数据和视频 8 毫米磁带。高质量的录像带可能在您的 8 毫米磁带驱动器中工作，但我不建议这样做！我是吃了亏才学到的教训！
+
+在过去几年里，我们也看到了机械传输和磁头技术的改进。螺旋扫描磁头正在取代数字录音中的固定磁头配置（参见插图）。螺旋扫描磁头在磁带经过磁头表面时旋转。这降低了磁带从卷轴移动到卷轴时的传输速度要求。数据斜向写入磁带表面。当我们下一节讨论块大小时，这是一个需要记住的重要点。
+
+![](img/82f851021955589d82b22750fb3b1646_183_0.png)
+
+## 数据格式
+
+数据以块的形式记录在磁带上。每个数据块与下一个块之间由记录间间隙分隔。磁带上的文件由磁带标记或文件标记分隔。一个磁带标记表示磁带开头（BOT）。两个连续的磁带标记表示磁带结尾（EOT）。BOT 之后可能跟随一个称为磁带标签的特殊文件。标签指示卷名称、大小以及在多卷集合中的序列号。
+
+块可以是固定长度或可变长度（参见以下插图）。
+
+固定块格式意味着数据以大小相同的块进行读取和写入。数据必须以块大小的倍数从介质读取并写入介质。可变块格式则由应用程序决定每个数据块的长度。在使用可变格式时，请求读取的数据量如果超过下一个磁带块中可用的数据量，将会导致短读（short read）。此功能对于支持短读的 `dd` 等命令很有用，但对于容错性较差的命令（如 `tar`、`cpio`、`pax`、`backup` 和 `restore`）是不利的。好消息是，在使用可变块大小情况下，可以使用 `dd` 命令采用过大的块大小来为 `tar`、`cpio`、`backup` 和 `restore` 缓冲输入。
+
+```bash
+# dd if=/dev/rmt0.1 ibs=64k obs=512 | restore -xvf-
+# dd if=/dev/rmt0.1 ibs=64k obs=5120 | tar -xvBf-
+# dd if=/dev/rmt0.1 ibs=64k obs=5120 | cpio -ivB
+# dd if=/dev/rmt0.1 ibs=64k obs=5120 | pax -rf-
+```
+
+![](img/82f851021955589d82b22750fb3b1646_183_1.png)
+
+## 块大小
+
+块大小是一个重要考虑因素，它将影响总介质容量以及在设备上读取或写入数据所需的时间。较大的块大小减少了记录间间隙的数量，并更好地利用了磁带。块大小还应反映设备写入的物理块大小。例如，8 毫米磁带驱动器斜向在磁带宽度上每块写入 1024 字节。如果定义给 AIX 的设备块大小固定为 512 字节块，那么设备将写出 512 字节的数据，并在物理 1024 字节块中填充剩余的 512 字节。这实际上将介质容量减少了一半，并且恢复将花费两倍的时间。当在 AIX 中为示例 8 毫米设备定义可变长度块时，大于 1024 的块大小将填满磁带上的每个物理块。如果应用程序使用的块大小不是 1024 的倍数，那么写入的最后一个物理块将被填充。
+
+块大小取决于应用程序。选择不当的块大小可能会阻碍读取备份介质的能力并导致可移植性问题。IBM 的 `mkssysb` 脚本将可启动系统备份磁带的前三个映像（boot、bosinst 和 toc）的块大小更改为 512 字节，然后在将 rootvg 卷组备份到第四个映像之前恢复之前的块大小。`savevg` 命令是 `mkssysb` 脚本的符号链接，在备份非 rootvg 卷组时不会更改磁带设备块大小或创建 boot、bosinst 和 toc 映像。
+您可以使用 `chdev` 命令或通过 SMIT 更改定义给 AIX 的磁带设备的默认块大小，如下面列表所示。请记住，这不会更改设备使用的物理块大小！
+
+```bash
+# chdev -l rmt0 -a "block_size=0"                 可变块大小
+# chdev -l rmt0 -a "block_size=512"              固定 512 字节块大小
+# chdev -l rmt0 -a "block_size=1024"             固定 1024 字节块大小
+```
+
+或者您可以使用 SMIT FastPath `smit chtgtpe`。
+
+```bash
+# dd if=/dev/rmt0.1 ibs=64k obs=512 | restore -xvb
+# dd if=/dev/rmt0.1 ibs=64k obs=5120 | tar -xvBf-
+# dd if=/dev/rmt0.1 ibs=64k obs=5120 | cpio -iVB
+```
+
+如果可移植性是一个问题，您可能希望定义 0 作为默认块大小，这表示可变块大小。字节排序和 ASCII/EBCDIC 转换可以通过 `dd` 命令的 `conv` 选项来处理。
+
+```bash
+# dd if=/dev/rmt0 conv=swab                      交换字节对
+# dd if=/dev/rmt0 conv=ascii                    将 EBCDIC 转换为 ASCII
+# dd if=/dev/rmt0 ibs=512 obs=1024 conv=sync    填充块
+```
+
+表 10-1 提供了一些使用 `tar` 将数据从 RS/6000 或 pSeries 机器移动到下列供应商类型之一的提示。
+
+
+
+
+
+## 设备名称
+
+除了块大小之外，你还必须了解与设备特殊文件名相关的隐式磁带 I/OCTL 操作。设备特殊文件名与一个唯一的主设备号相关联，该主设备号用于识别磁带设备在设备开关表中的驱动程序位置。每个设备唯一的小设备号标识了磁带设备驱动程序中对应于各种密度和磁带控制操作的入口点。如果你熟悉其他 UNIX 磁带系统，你会知道几乎每个人都使用自己独立的方案来命名设备特殊文件。表 10-2 代表了 AIX 默认的设备名称以及对应的控制操作和密度。
+
+| 供应商 | 提示 |
+|---|---|
+| DEC | 没问题。请检查磁带类型/密度是否兼容。 |
+| Sun | Sun 默认使用 512 字节的块。在 RS/6000 上，请将块大小设置为 512，或者在使用 `dd conv=sync` 填充块时读取 Sun 磁带。 |
+| HP | 没问题。请检查磁带类型/密度是否兼容。 |
+| SGI | 使用 `dd conv=swab` 交换字节对。 |
+
+表 10-1. 使用 tar 进行 RS/6000 和 pSeries 磁带转换
+
+高密度和低密度值取决于设备。请查阅有关设备特性的供应商文档。
+
+请仔细阅读 `rmt` man 页中关于 BOT（卷首）、EOF（文件结尾）和 EOT（卷尾）在读取和写入时如何处理的信息。如果你没有选择符合应用程序要求的正确设备名称，你可能会大吃一惊。对于九轨磁带驱动器上的 EOT 处理，这一点尤为突出。UNIX 通常不会在到达 EOT 之前检测到它。如果在 EOT 处磁带定位不当，可能会导致应用程序将磁带拉出卷盘末端。如果你经常这样做，在运维人员中你将很难交到朋友。
+
+| 文件名 | 关闭时卷绕 | 打开时保留 | 密度 |
+|---|---|---|---|
+| /dev/rmt*.* | 是 | 否 | 高 |
+| /dev/rmt*.1 | 否 | 否 | 高 |
+| /dev/rmt*.2 | 是 | 是 | 高 |
+| /dev/rmt*.3 | 否 | 是 | 高 |
+| /dev/rmt*.4 | 是 | 否 | 低 |
+| /dev/rmt*.5 | 否 | 否 | 低 |
+| /dev/rmt*.6 | 是 | 是 | 低 |
+| /dev/rmt*.7 | 否 | 是 | 低 |
+
+表 10-2. 磁带设备名称的隐式选项
+
+## 磁带定位
+
+磁带设备驱动程序支持一套相对标准的 **ioctl** 操作，用于控制磁带定位。这些操作可以从本地命令行、远程或通过程序调用。本地和远程定位分别由 **tctl** 和 **mt** 命令处理。如果你熟悉其他 UNIX 平台上的 **mt** 命令，现在 **mt** 和 **tctl** 都由同一个硬链接运行时支持，可以通过执行命令 **what /usr/bin/mt** 来验证这一点。
+
+```
+# tctl -f /dev/rmt0 rewind                    卷绕 rmt0 磁带驱动器
+# tctl -f /dev/rmt0 offline                   卷绕并弹出 rmt0 磁带驱动器
+# mt -f /dev/rmt0 rewind                       卷绕 rmt0 磁带驱动器
+# mt -f /dev/rmt0 offline                      卷绕并弹出 rmt0 磁带驱动器
+```
+
+对于远程操作，请注意 AIX 的 **ioctl** 调用号不一定与远程系统中的号一一对应（参见表 10-3）。你可以通过创建一个 **mt** 的包装器来修复映射问题，将命令行参数重映射为远程系统使用的参数。
+
+| AIX | ioctl 编号 | 远程 | ioctl 编号 | 备注 |
+| --- | --- | --- | --- | --- |
+| STOFFL | 5 | MTOFFL | 6 | 卷绕并卸载磁带 |
+| STREW | 6 | MTREW | 5 | 卷绕磁带 |
+| STERASE | 7 | MTERASE | 9 | 擦除磁带 |
+| STRETEEN | 8 | MTRETEEN | 8 | 保留磁带 |
+| STWEOF | 10 | MTWEOF | 0 | 写入文件结尾标记 |
+| STFSF | 11 | MTFSF | 1 | 前向跳过文件 |
+| STRSF | 12 | MTBSF | 2 | 后向跳过文件 |
+| STFSR | 13 | MTFSR | 3 | 前向跳过记录 |
+| STRSR | 14 | MTBSR | 4 | 后向跳过记录 |
+| N/A | N/A | MTNOP | 7 | 空操作 |
+| N/A | N/A | MTEOM | 10 | 介质结尾 |
+| N/A | N/A | MTNBSF | 11 | 后向跳过至文件开头 |
+
+表 10-3. AIX 到 UNIX 的 ioctl 映射
+
+在进行磁带操作时，请注意你当前的位置。在每个程序 **read()** 或 **write()** 操作之后，磁带头位于下一块的开头或空白区域的开头。磁带标记被完全视为文件，因此当在磁带上从文件跳到文件时，必须考虑这些标记。
+
+## 权限
+
+限制对磁带设备的访问在许多 UNIX 系统中往往是个问题。设备特殊文件通常被设置为对所有人 **可读/可写**。在没有额外的磁带分配软件的情况下，你可以使用以下算法轻松创建自己的驱动器预留应用程序：
+
+1.  检查空闲设备（即不存在设备锁定文件）。如果所有设备都在使用中，则退出。如果没有，则继续。
+2.  分支并生成一个新的 shell。等待进程退出以释放设备。
+3.  为选定的设备创建一个锁定文件。
+4.  设置权限和所有权给请求者。
+
+以下是默认的设备权限：
+
+```
+# ls -1 /dev/rmt*
+
+crw-rw-rw- 1 root system 19, 0 Feb 17 23:58 /dev/rmt0
+crw-rw-rw- 1 root system 19, 1 Feb 17 22:58 /dev/rmt0.1
+crw-rw-rw- 1 root system 19, 2 Jul 26 2001 /dev/rmt0.2
+crw-rw-rw- 1 root system 19, 3 Jul 26 2001 /dev/rmt0.3
+crw-rw-rw- 1 root system 19, 4 Jul 26 2001 /dev/rmt0.4
+crw-rw-rw- 1 root system 19, 5 Jul 26 2001 /dev/rmt0.5
+crw-rw-rw- 1 root system 19, 6 Jul 26 2001 /dev/rmt0.6
+crw-rw-rw- 1 root system 19, 7 Jul 26 2001 /dev/rmt0.7
+```
+
+## 磁带工具
+
+AIX 提供有限的一组磁带实用程序。以下命令支持磁带操作：
+
+- **dd** 读取/写入可变块大小并执行数据转换
+- **tcopy** 显示磁带目录或将磁带复制到另一盘磁带
+- **tar, cpio, pax, backup/restore** 归档；可能使用磁带作为介质
+- **rdump, zrestore** 远程归档和恢复；可能使用磁带作为介质
+
+## 线性开放磁带 (LTO) ULTRIUM 磁带驱动器
+
+1997 年，IBM、HP 和 Seagate 组成了一个联盟，旨在制定一种新的开放磁带标准。Ultranium 是 IBM 推出的首款 LTO 产品。使用 Ultranium LTO，你获得每盘磁带 100GB 的高容量和 10–20 MB/秒的高性能。
+
+LTO 磁带驱动器使用开放的工业标准，与 DLT 相比，其可靠性有所提高，容量增加了 250%，性能提升了 250%。由于 LTO 是一种开放格式，存在多个介质和驱动器制造商，且卡匣可以互换。目前正有四个世代的 LTO Ultrium 磁带驱动器正在研发中，如表 10-4 所示。
+
+有关所有磁带卡匣、磁带驱动器和磁带库规格的完整列表，请参阅 IBM 网站 `http://www.storage.ibm.com/ssg.html`。从这个网页中，选择 TotalStorage Solutions 产品指南以查看 PDF 文件。
+
+**IBM 的四种 LTO Ultrium 选项**
+
+- Ultrium 磁带驱动器——型号 3580-L11 和 3580-H11
+- Ultrium 磁带自动加载器——型号 3581-L17 和 3581-H17
+- Ultrium 可扩展磁带库——型号 3583
+- UltraScalable 磁带库——型号 3584 L32 或 D32
+
+你可以在 `http://www.ibm.com/storage/lto` 上获取更多关于这些 IBM 产品的信息。
+
+LTO Ultrium 可扩展磁带库和 UltraScalable 磁带库的新功能是通过内部 SAN 数据网关模块提供对内部光纤通道（Native Fibre Channel）连接的支持。
+
+Ultranium LTO 产品系列的高端是 IBM UltraScalable 磁带库 3584-L32。该机器使用独占的多路径架构，支持多达 12 个逻辑库分区，支持原生光纤通道和 SCSI LTO 驱动器，具备自动校准功能，拥有双拾取器机器人系统，支持冗余电源，并可容纳 141 到 281 个 Ultrium 磁带卡匣。
+
+LTO Ultrium 可扩展磁带库支持使用 StorWatch Expert ETL 的增强管理功能，这是一种不同于在企业存储服务器（ESS，又名 Shark）上使用的 StorWatch 版本。StorWatch Expert ETL 通过 Web 浏览器提供远程管理能力，允许通过网络处理所有操作员控制面板功能，包括微代码下载。此功能还支持通过 SNMP 监控磁带库。
+
+LTO Ultrium 连接支持以下操作系统：
+
+- AIX 4.3.2 或更高版本
+- OS/400 V4R4 或更高版本
+- Microsoft Windows NT 4.0 及服务包 6
+- Microsoft Windows 2000 版本 2195 或更高版本
+- Sun Solaris 2.6, Solaris 7 和 Solaris 8
+- HP-UX 11.0
+
+大多数备份软件都支持 LTO Ultrium 磁带系统，但 IBM 推荐 Tivoli 存储管理器（TSM）。
+
+## IBM 3494 企业磁带库
+
+IBM 3494 企业磁带库是许多大型企业中备份和恢复的主力。3494 可以存储超过 6000 个磁带卡匣，并支持多达 76 个 Magstar 磁带驱动器。3494 磁带库的一个优点是它可以扩展到多达 16 个库框架，从而可以存储多达 748TB 的数据。
+
+磁带库基本框架包含 3494 磁带子系统的“大脑”。控制机制是一台运行 OS/2 的 PC，它运行磁带和机器人子系统。每个磁带库基本框架由磁带子系统（支持 IBM 3590 和 3490E 磁带库）、库管理器、单指或双指磁带卡匣存取器、沿框架正面和背面分布的卡匣存储单元以及可选的 I/O 站组成。
+
+有三种类型的扩展框架选项用于扩展 3494 磁带库的容量：
+
+- **磁带驱动器扩展框架** 这种框架用于提供额外的磁带驱动器和卡匣单元。三种类型的驱动器框架允许在根据具体需求选择磁带驱动器技术时具有灵活性。
+
+
+
+
+
+### 磁带存储框架
+这种扩展框架用于添加额外的磁带存储单元。每个存储框架最多支持 400 个额外的磁带盒。
+
+### 高可用性框架
+这种框架添加了额外的库管理器和第二个磁带存取器，每个磁带存取器在库的两端均安装了单抓手或双抓手。拥有第二个库管理器可在主库管理器或磁带存取器发生故障的不幸情况下，提供无缝的服务连续性，以确保系统持续运行。通过启用双活动存取器功能，两个磁带存取器可以同时运行。
+
+您可以组合不同型号的 Enterprise Tape Library（企业磁带库），以支持多达 16 个框架，这些框架可容纳超过 6000 个磁带盒以及高达 748TB 的数据。
+
+## LINUX TAPE 支持
+
+IBM 对 Linux 开源平台的支持已扩展到磁带系统。这项支持为基于 32 位 Intel 的平台（从 Red Hat Linux 版本 7.1 开始）生成了 IBM Linux 磁带驱动程序。新的磁带子系统驱动程序增加了扩展的磁带操作功能，包括更好的错误恢复以及针对 IBM 磁带产品系列的磁带工具集。以下是 Linux 支持的磁带驱动器、自动装载器和磁带系统列表。
+
+- Ultrium 外部磁带驱动器——型号 3580
+- Ultrium 磁带自动装载器——型号 3581
+- IBM Enterprise Tape Drive（IBM 企业磁带驱动器）——型号 3590 以及 E11/B11 和 E1A/E1B 磁带系统
+- IBM Enterprise Tape Library（IBM 企业磁带库）——型号 3494
+- Ultrium 可扩展磁带库——型号 3583
+- UltraScalable 磁带库——3584
+
+## PUBLIC DOMAIN TAPE TOOLS（公共领域磁带工具）
+
+许多公共领域和商业软件包可供下载，如表 10-5 所示，当然，商业软件包是需要付费的。您可以在网上搜索软件产品，但有两个有用的软件可以在以下网址找到：
+
+```
+http://www.stokely.com/unix/sysadm/resources/backup.html
+http://www.rootvg.net/
+```
+
+## CHECKLIST（检查清单）
+
+以下是磁带系统关键点的检查清单：
+
+- 数据以块的形式记录在磁带上。每个数据块与其下一个块之间由一个记录间间隙分隔。
+- 磁带上的文件由磁带标记或文件标记分隔。一个磁带标记表示磁带的开头（BOT）。连续的两个磁带标记表示磁带的结尾（EOT）。
+- BOT 之后可能跟随一个名为 tape label（磁带标签）的特殊文件。该标签指示卷名、大小以及在多卷集中的序列号。
+- 为了最大化磁带使用效率并最小化恢复时间，使用 `chef` 命令更改磁带设备的 AIX 默认块大小，使其与设备的物理块大小相匹配。
+- 如果可移植性是一个问题，请定义默认的块大小为 0，这表示可变块大小。
+- 设备特殊文件名与一个唯一的主设备号相关联，该主设备号标识设备开关表中磁带设备驱动程序的位置。
+- 分别使用 `tctl` 和 `rmt` 命令处理本地和远程定位。
+- 由于设备特殊文件通常被设置为所有用户可读写，如果您希望在没有额外磁带分配软件的情况下限制对磁带驱动器的访问，您可以轻松地创建自己的驱动器保留应用程序。
+- 使用 **tcopy** 命令显示磁带目录或将磁带复制到磁带。
+- 标准的 **tar**、**cpio**、**pax**、**backup/restore**（备份/恢复）命令可以使用磁带作为介质。
+- 远程归档和恢复命令 **rdump**、**restore** 可以使用磁带作为介质。
+
+# CHAPTER 11（第 11 章）
+
+## AIX Logical Volume Manager (LVM)（AIX 逻辑卷管理器）
+
+![](img/82f851021955589d82b22750fb3b1646_193_0.png)
+![](img/82f851021955589d82b22750fb3b1646_193_1.png)
+
+既然您正在阅读本书，毫无疑问您将会管理 AIX 系统。本书中最重要的章节就是这一章。透彻理解存储硬件、逻辑卷管理器（LVM）及其组件对于有效的 AIX 系统管理至关重要。我希望本章从硬件组件开始，然后深入逻辑卷管理器（LVM）的组件以及我们使用的术语。
+
+## DISK EVOLUTION（磁盘演进）
+
+您的文件系统是半满还是半空？无论您向系统中投入多少磁盘空间，它们总是半满的，并且增长迅速！典型的 AIX 5L 安装（安装了 DocSearch）基础安装约为 2.75 吉字节（GB）。对于所有额外组件，一个更有效的尺寸是非镜像空间约为 4GB。（始终对*根卷组*进行镜像）如果您像我一样在计算机系统领域待了很长时间，您可能还记得当时 IBM PC/XT 上 10MB 的硬盘似乎像您永远也用不完的存储一样多。如今，IBM pSeries 机器配备 32GB 和 72GB 的硬盘，而 128GB 和 256GB 的硬盘正迅速到来。
+
+## DISKS ARE DOUBLING EVERY SIX MONTHS（磁盘容量每六个月翻倍）
+
+正如我在上一节所述，IBM pSeries 机器正配备 32GB 和 72GB 的驱动器进行发货。磁盘容量的翻倍仅在六个月内就发生了！当然，这项磁盘技术已经酝酿多年。这种演进之所以可能，是因为两个主要因素：磁盘磁头变得更小，且盘片技术不断变得更好。磁盘磁头变得像电路板上看到的表面贴装电子元件一样小。
+
+20 世纪 80 年代的磁头大小如您的指甲，但磁盘驱动器仅能容纳约 10MB 的数据。越来越小的磁头允许磁盘盘片具有更细的粒度。磁盘盘片技术正在向更好的盘片材料转变，许多公司正在对塑料磁盘驱动器进行研究和开发。塑料盘片涂有磁性底材，赋予塑料磁性。随着这些新技术的完善，磁盘驱动器在保持相同占地面积的同时，容量每六个月翻一番。
+
+## DISK HARDWARE（磁盘硬件）
+
+工作站和个人计算机磁盘驱动器主要是集成盘片电子（IDE）驱动器或小型计算机系统接口（SCSI）驱动器。IDE 驱动器将所有控制器功能集成到磁盘外壳中。SCSI 驱动器也在磁盘组件中集成控制器功能，但需要更复杂的 I/O 总线适配器卡。IBM pSeries 和 RISC System/6000 支持内部 SCSI 磁盘，以及用于连接外部单端、差分、快速、窄、宽 SCSI、SCSI-2 和 Ultra-SCSI 磁盘设备的 Micro Channel 或 PCI 适配器（取决于型号）。然而，您在 pSeries 机器上看不到 IDE 驱动器，只有 SCSI、SSA、ESS（The Shark）和光学存储。
+
+请留意固态存储！您可能已经注意到，过去几年内存价格大幅下降。研究人员正在努力利用这种相同的技术开发固态磁盘设备。一些公司已经提供这些“磁盘驱动器”，但要使其成为主流还需要做一些工作。当然，这些芯片在机器关闭时不会丢失您的数据！这种技术是一种可动态更新的非易失性随机访问存储器（NVRAM）类型。
+
+### Serial Storage Architecture (SSA)（串行存储架构）
+
+连接磁盘设备的近期选项是 IBM 的串行存储架构（SSA）。SSA 使用循环配置将设备连接到一个或多个 pSeries 或 RS/6000 计算机。循环架构类似于令牌环或双环 FDDI，循环可以中断，流量将通过剩余的链路重新路由，从而允许您在运行的系统上向 SSA 循环添加磁盘。它提供了机器到设备连接中的容错性，这是 SCSI 或 IDE 类型连接所不具备的。SSA 配置也不需要像 SCSI 配置中那样要求的总线仲裁协议。SSA 支持主机和磁盘设备之间并发的全双工 80 MB/sec I/O。此功能称为空间复用。
+
+#### Using diag to Troubleshoot SSA Disks（使用 diag 排查 SSA 磁盘问题）
+
+diag 设施用于排查 SSA 子系统。最有价值的任务是验证 SSA 循环。鉴于循环的可视化表示，排查 SSA 子系统非常容易。在命令行中，输入 **diag**。此命令将启动系统查询，然后显示一个屏幕。按 **ENTER** 键继续执行 **diag**，或按 **F3** 键退出。在下一个面板中，使用 **箭头** 键向下移动并选择 **Task Selection（任务选择）**。向下翻页 **Task Selection** 列表，接近底部 SSA 磁盘工具所在的位置。其中一个选项是 **Loop Verification（循环验证）**。选择要验证的 SSA 循环并按 **ENTER**。输出将根据 SSA 循环的配置而有所不同，但断开或打开的循环会通过特定的磁盘标记突出显示。
+
+### RAID
+
+独立磁盘冗余阵列（RAID）通过使用数据镜像和条带技术为存储支持带来额外的容错性。除了数据容错和可用性外，RAID 还可以通过将访问分散到多个磁盘设备上来最大化读取 I/O 性能，从而使更多的磁盘主轴参与读取和写入数据。
+
+
+
+
+从本质上讲，RAID（冗余阵列独立磁盘）是由一组驱动器（条带或条带集）组成的，这些驱动器通过专用的总线、处理器和缓存存储器结构连接起来，以将文件数据分布到集合中的所有驱动器上。执行的镜像或条带化类型由 RAID 级别 0–5 指定。RAID 级别 0 用于在没有奇偶校验恢复支持的情况下将数据条带化地分布在磁盘上。RAID 级别 1 就是我们熟知的镜像。RAID 级别 2 是一项最初由 Thinking Machines, Inc. 获得专利的技术。在 RAID 2 配置中，数据按位或字节条带化地分布在多个驱动器上，并包含可用于在任一单个驱动器发生故障时重建数据的奇偶校验信息。与 RAID 2 类似，RAID 级别 3 同步地将数据条带化地分布在所有驱动器上，但它使用单个驱动器来存储条带集的奇偶校验信息。RAID 级别 4 像 RAID 级别 2 和 3 一样进行数据条带化并记录奇偶校验。它与其他两者的区别在于，数据可以在条带集中的驱动器之间异步读取，从而改善了并发读取访问。由于写入必须同步进行，因此只有在集合中的所有驱动器都更新完毕后，I/O 操作才算完成。RAID 级别 5 与前面三种类似，唯一的区别在于奇偶校验数据。奇偶校验数据在驱动器集中进行条带化分布，从而消除了单个奇偶校验驱动器故障带来的问题。
+
+在我合作过的许多公司中，使用的是 RAID 0+1，通常被称为 RAID 10。使用 RAID 10 通过采用 RAID 级别 0 的条带化磁盘，并使用 RAID 级别 1 技术对其进行镜像，从而提高了性能和可靠性。我通常看到的 RAID 0+1 配置是使用 SSA 7133 驱动器完成的。各种 RAID 级别概述见表 11-1。
+
+## RAID 与存储区域网络（SAN）？
+
+配置企业存储服务器（ESS，通常被称为“The Shark”）的方式可能与您预期的略有不同。为该机器划分区域并配置的所有磁盘，都会对系统中连接的每个光纤通道适配器呈现一次。举例来说，如果您有 10 块磁盘，从 hdisk10 到 hdisk19，并且有 4 个光纤通道适配器，您将看到每块磁盘出现 4 次！这看起来可能非常令人困惑，但系统实际上会将这些多个磁盘转换为所谓的 V-Path（虚拟路径）。
+
+| 级别 | 描述 |
+| :--- | :--- |
+| RAID 0 | 条带化数据，无奇偶校验 |
+| RAID 1 | 镜像数据 |
+| RAID 2 | 带奇偶校验的条带化数据 |
+| RAID 3 | 带奇偶校验驱动器的条带化数据 |
+| RAID 4 | 带奇偶校验和异步读取访问的条带化数据 |
+| RAID 5 | 带条带化奇偶校验的条带化数据 |
+
+表 11-1. RAID 级别
+
+V-Path 是系统可以看到磁盘驱动器的虚拟路径。因此，当您创建逻辑卷的卷组时，您需要使用 V-Path 定义来指定磁盘。使磁盘实现“RAID”功能的技巧在于，我们通过负载均衡软件将每个逻辑卷条带化地分布在所有光纤通道适配器上。对于同一个内部 RAID 级别 5 阵列，四条路径带来的性能提升巨大。ESS 内部使用 RAID 级别 5，因此这种配置性能非常出色！您也可以在 Shark 中使用 JBOD（Just a Bunch of Disks，即一堆磁盘），但在磁盘故障时您将失去自动恢复功能。有关存储区域网络的更多信息，请参见第 29 章。
+
+## 固定磁盘架构
+
+磁盘本身是由多个像唱片一样堆叠在轴上的盘片组成的（参见图 11-1）。每个盘片都涂有一层磁性基底。一个或多个电磁头可以在盘片上从外缘到内缘前后移动。磁头对围绕盘片表面格式化在圆形磁道上的磁性粒子的极化做出反应。磁头由磁盘控制器电路定位，该电路接收来自操作系统的指令。
+
+大多数磁盘出厂时已预先格式化了坏扇区映射。如果您必须格式化磁盘，请调用 **diag** 命令或将系统重启到单用户维护模式。从 **diag** 功能选择中选择 **Task Selection**（任务选择），然后选择 **Media Format**（介质格式化）和 **Media Certify**（介质认证）。
+
+```
+# diag
+```
+
+-   功能选择
+-   任务选择（诊断、高级诊断、服务辅助工具等。）
+-   服务辅助工具
+-   格式化介质
+-   认证介质
+
+![](img/82f851021955589d82b22750fb3b1646_197_0.png)
+
+磁盘上的格式化空间由扇区或块组成。扇区大小因制造商和型号而异，可能是固定的，也可能是可变的。磁道由在每个盘片上排列成圆形的扇区组成。盘片上堆叠的磁道构成一个柱面。如今所有这些大容量磁盘都是技术发展的结果，该技术极大地减小了在盘片上运行的磁头尺寸。如果您打开一个磁盘驱动器（仅对故障磁盘这样做！）并从头臂上取下磁头，您会看到磁头只是一个微小的斑点。在这项新技术出现之前，磁头的大小大约是小拇指指甲那么大。
+
+## 磁盘安装
+
+若要向系统添加新的 SCSI 磁盘，请将该磁盘插入系统单元背面的某个 SCSI 适配器上。最好在系统断电的情况下进行此操作，但如果您的磁盘和子系统支持热插拔，则可以在在线状态下进行。单个 SCSI 适配器可以菊花链连接多个 SCSI 设备。链中的每个磁盘必须代表一个唯一的 SCSI ID 和逻辑单元号（LUN）。SCSI ID 可通过驱动器组件或外壳上的跳线或开关进行选择。旧式 SCSI 驱动器的 SCSI ID 范围从 0 到 7，而宽体和 Ultra SCSI 的范围从 0–15，其中 7 通常分配给适配器。系统启动时，新磁盘会自动识别并记录在 RDS 和 ODM 数据库中。您可以通过调用 **cfmgrp** 或使用 **mkdev** 命令在线更新设备信息。新磁盘被分配下一个可用的 **hdisk<nn>** 标签。
+
+```
+# mkdev -c disk -s scsi -t oadisk -p scsi2 -w 8,0,0 -l hdisk10 -a pv=yes
+# cfmgr -v1 scsi2
+(或)
+# cfmgr -v
+(或)
+# smitty cfmgr
+# lsvg
+# lsdev -Cc disk
+```
+
+使用此处显示的 **lsvg** 和 **lsdev** 命令以确保磁盘具有 PVID 并处于可用状态。
+
+## 管理物理卷
+
+AIX 中的物理磁盘卷被命名为 **hdisk#**，其中 # 是从 0（零）开始的整数。磁盘由配置管理器检测、配置并命名，使用 **cfmgrp** 命令。磁盘的实际名称取决于其在系统中的物理安装位置，因为 **cfmgrp** 会遍历总线，并在找到每个磁盘时分配 hdisk 编号。在大多数系统中，**cfmgr** 会以并行模式遍历总线，但您可以向 **cfmgr** 命令添加 -s 标志以指定串行模式来覆盖此方法。
+
+有一些技巧会影响 hdisk 编号的分配，您在某个时候可能需要使用它们。例如 HASCMP 集群系统（有关更多详细信息请参见第 28 章），在这种情况下，确保共享磁盘的 hdisk 编号同步至关重要。使 hdisk 编号同步的一种方法是每次只打开一个外部磁盘集，并运行 **cfmgr** 多次，每个磁盘集开启时运行一次。诀窍是在处理过程的每一步中，在每台机器上复制相应的操作。
+
+程序大致如下：
+
+1.  停止两个系统上的所有应用程序。
+2.  移除所有您想要同步且不在 rootvg 中的磁盘的 hdisk 定义。对每个磁盘使用 **rmdex -hdisk#** 命令。对共享磁盘集群中的所有系统重复此操作。
+3.  运行 **lssp** 命令以确保所有磁盘已移除。
+4.  关闭所有您希望 hdisk 编号同步的磁盘。
+5.  打开第一组磁盘。这些磁盘将获得最低的 hdisk 编号。
+6.  在每个系统上运行 **cfmgr -v**。如果您知道磁盘的父适配器，可以执行 **cfmgr -vl *adapter*** 命令。
+7.  运行 **lssp** 以确保磁盘在每个系统上的编号符合您的要求，并确保磁盘编号同步。您需要参考 PVID 以确保所有系统上的 PVID 和 hdisk 编号匹配。
+8.  对其余磁盘集重复步骤 5、6 和 7。
+
+## 更简单的磁盘重命名方法
+
+如果前一节让您感到困惑，请尝试本节的练习。场景如下：我们在 scsi1 控制器上有三个名为 hdisk2、hdisk3 和 hdisk4 的磁盘。我们需要移除这些磁盘，并将它们作为 hdisk10、hdisk12 和 hdisk14 重新添加回系统。
+
+第一步是列出系统内的磁盘位置：
+
+```
+# lsdev -Cc disk
+
+  hdisk0  Available  04-B0-00-0,0  Other SCSI Disk Drive
+  hdisk1  Available  04-B0-00-1,0  Other SCSI Disk Drive
+  hdisk2  Available  04-03-00-8,0  Other SCSI Disk Drive
+  hdisk3  Available  04-03-00-9,0  Other SCSI Disk Drive
+  hdisk4  Available  04-03-00-10,0  Other SCSI Disk Drive
+```
+
+
+
+接下来，我们需要列出系统中适配器的位置：
+
+```bash
+# lsdev -Cc adapter | grep scsi
+
+  scsi0  Available  04-B0  Wide SCSI I/O Controller
+  scsi1  Available  04-03  Wide SCSI I/O Controller
+```
+
+现在，我们需要列出涉及此磁盘重新分配的卷组：
+
+```bash
+# lspv
+
+  hdisk0    000400434b33e6eb    rootvg
+  hdisk1    000400434a771e22    rootvg
+  hdisk2    000400439e42cd74    appvg
+  hdisk3    000400439a5def f0    appvg
+  hdisk4    000400439ae07e9    appvg
+```
+
+在进行任何更改之前，我们首先需要使目标卷组不可用：
+
+```bash
+# varyoffvg appvg
+```
+
+> 有关更多详细信息，请参阅本章稍后的“开启和关闭卷组”部分。
+
+现在，我们可以移除 **scsi1 (2@8,0 3@8,0 4@0,0)** 上的目标设备。在命令提示符下，输入以下命令序列。基本上，这就像在命令行上编写一个 shell 脚本：
+
+```bash
+# for N in 2 3 4
+> do
+> rmdev -dl hdisk$N
+> done
+```
+
+> **注意** 不要输入大于号（>），因为它们是提示符。每行结束后按下 ENTER 键。
+
+预览用于以新名称添加设备的命令：
+
+```bash
+# for NA in 10@8,0 12@9,0 14@10,0
+> do
+> N=$(echo $NA | awk -F@ '{print $1}')
+> A=$(echo $NA | awk -F@ '{print $2}')
+> echo "mkdev -c disk -s scsi -t oadisk -p scsi1 -w $A -l hdisk$N -a pv=yes"
+> done
+```
+
+预览输出将显示这些命令：
+
+```bash
+mkdev -c disk -s scsi -t oadisk -p scsi1 -w 8,0 -l hdisk10 -a pv=yes
+mkdev -c disk -s scsi -t oadisk -p scsi1 -w 9,0 -l hdisk12 -a pv=yes
+mkdev -c disk -s scsi -t oadisk -p scsi1 -w 10,0 -l hdisk14 -a pv=yes
+```
+
+现在移除 **echo** 围绕在 **mkdev** 命令周围的部分，以实际执行这些命令：
+
+```bash
+# for NA in 10@8,0 12@9,0 14@10,0
+> do
+> N=$(echo $NA | awk -F@ '{print $1}')
+> A=$(echo $NA | awk -F@ '{print $2}')
+> mkdev -c disk -s scsi -t oadisk -p scsi1 -w $A -l hdisk$N -a pv=yes
+> done
+```
+
+结果输出如下，显示我们新的 hdisk 编号：
+
+```bash
+hdisk10 Available
+hdisk12 Available
+hdisk14 Available
+```
+
+列出新的设备名称：
+
+```bash
+# lsdev -Cc disk
+
+hdisk0 Available 04-B0-00-0,0 Other SCSI Disk Drive
+hdisk1 Available 04-B0-00-1,0 Other SCSI Disk Drive
+hdisk10 Available 04-03-00-8,0 Other SCSI Disk Drive
+hdisk12 Available 04-03-00-9,0 Other SCSI Disk Drive
+hdisk14 Available 04-03-00-10,0 Other SCSI Disk Drive
+```
+
+列出 hdisk 编号、PVID 以及关联的卷组：
+
+```bash
+# lsvg
+
+hdisk0 0004040434b32e6eb rootvg
+hdisk1 0004040434a781e22 rootvg
+hdisk10 0004040439e42cd74 appvg
+hdisk12 0004040439a5def0 appvg
+hdisk14 0004040439a5e07e9 appvg
+```
+
+请注意，卷组中的物理磁盘是通过 PVID 而不是 hdisk 编号来识别的。我们在将其开启之前不需要再次导入卷组。
+
+```bash
+# lqueryvg -Atp hdisk10
+
+Max LVs:              256
+PP Size:              25
+Free PPs:             504
+LV count:             3
+PV count:             3
+Total VGDAs:          3
+Conc allowed:         0
+MAX PPs per PV:       1016
+MAX PVs:              32
+Conc Autovar:         0
+Varied on:            0
+Logical:
+      000400439a5df5d2.1   lv1ac1 1
+      000400439a5df5d2.2   lcg1v00 1
+      000400439a5df5d2.3   lv01 1
+Physical:
+      000400439a5d5eff 1    0
+      000400439a5e07e9 1    0
+      000400439e42cd74 1    0
+Total PPs:            813
+```
+
+通过再次开启 **appvg** 来使卷组可用：
+
+```bash
+# varyonvg appvg     在这种情况下无需 importvg
+```
+
+## 配置热备盘
+
+在此热备示例中，**appvg** 从 hdisk1 镜像到 hdisk2，而 hdisk3 和 hdisk4 将作为热备盘：
+
+```bash
+# lsvg appvg
+VOLUME GROUP:   appvg                  VG IDENTIFIER: 0000224800004900000000000ebab4a5fe2
+VG STATE:       active                PP SIZE:        32 megabyte(s)
+VG PERMISSION:  read/write            TOTAL PPs:      2184 (69888 megabytes)
+MAX LVs:        256                   FREE PPs:       2184 (69888 megabytes)
+LVs:            0                     USED PPs:       1092 (34944 megabytes)
+OPEN LVs:       0                     QUORUM:         1
+TOTAL PVs:      4                    VG DESCRIPTORS: 3
+STALE PVs:      0                    STALE PPs:      0
+ACTIVE PVs:     4                    AUTO ON:        yes
+MAX PPs per PV:  1016         MAX PVs:              32
+LTG size:        128 kilobyte(s)  AUTO SYNC:          no
+HOT SPARE:       no
+```
+
+检查与磁盘关联的卷组：
+
+```bash
+# lsvpv
+hdisk0        0000468644af1894        rootvg
+hdisk1        00003095a330a867        appvg
+hdisk2        00003095a330baa8        appvg
+hdisk3        00003095a330bca2        appvg
+hdisk4        00003095a330c825        appvg
+```
+
+**chpv** 命令有一个 **-h** 标志，用于设置物理卷的特征和分配权限，使其可以作为热备盘使用。对于非镜像逻辑卷，**-h** 标志没有效果。**-h** 标志可以接受 **y** 或 **n** 作为参数，以将磁盘添加至或从热备池中移除。
+
+设置热备盘：
+
+```bash
+# chpv -h 'y' hdisk3 hdisk4    # -h [y|n]
+```
+
+检查热备盘：
+
+```bash
+# for N in a867 baa8 bca2 c825
+> do
+> lquerypv -g 000022480004a900000000bab4aeefe2 -P 00003095a330$N -S
+> done
+0
+0
+32
+32
+```
+
+> **注意** 不要输入大于号（>）；这些是提示符。
+
+与 **chpv** 命令类似，**chvg** 命令使用 **-h** 标志来设置卷组的备用特征，该卷组由 VolumeGroup 参数指定。**-h** 标志有四个可用的参数：
+
+-   **y**    允许从故障磁盘分区到单个热备盘的自动迁移。
+-   **Y**    允许故障磁盘的自动迁移，并且可以迁移到整个热备池。这与一对一的分区迁移不同。
+-   **n**    禁止故障磁盘迁移。这是默认设置。
+-   **r**    从卷组的热备池中移除所有磁盘。
+
+接下来，我们将为卷组启用热备：
+
+```bash
+# chvg -h 'y' -s 'y' appvg
+```
+
+我们在上一个命令中使用 **s** 标志来同步镜像。
+
+查看卷组的变化：
+
+```bash
+# lsvg appvg
+VOLUME GROUP:      appvg      VG IDENTIFIER:
+000022488000004900000000ebab4ae6f2
+VG STATE:          active     PP SIZE:      32 megabyte(s)
+VG PERMISSION:     read/write TOTAL PPs:    2184 (69888 megabytes)
+MAX LVs:           256        FREE PPs:     2184 (69888 megabytes)
+LVs:               0          USED PPs:     1092 (34944 megabytes)
+OPEN LVs:          0          QUORUM:       1
+TOTAL PVs:         4          VG DESCRIPTORS: 3
+STALE PVs:         0          STALE PPs:    0
+ACTIVE PVs:        4          AUTO ON:      yes
+MAX PPs per PV:    1016      MAX PVs:      32
+LTTG size:         128 kilobyte(s) AUTO SYNC:    yes
+HOT SPARE:         yes (one to one)
+```
+
+检查错误：
+
+```bash
+# errpt | head -3
+IDENTIFIER TIMESTAMP  T C RESOURCE_NAME  DESCRIPTION
+A60F45A8 0127191502 I O RMCDaemon The daemon is started.
+7F88E76D 0127184302 P S console SOFTWARE PROGRAM ERROR
+```
+
+检查守护进程：
+
+```bash
+# lssrc -s ctrmc
+Subsystem     Group         PID   Status
+ctrmc         rstart        13934 active
+```
+
+检查进程树：
+
+```bash
+# pstree -p 13934
++- 00001 root /etc/init
+|+- 03150 root /usr/sbin/srcmstr
+\-+- 13934 root [3]/usr/sbin/rscd/bin/rscmd -c
+```
+
+或者直接使用 AIX ps 命令：
+
+```bash
+# ps -ef | grep rscmd
+root 13934 3150 0 10:02:00 - 0:00 /usr/sbin/rscd/bin/rscmd -c
+```
+
+如果你喜欢使用 **pstree** 免费软件，你可以从以下任一 URL 获取源代码：
+
+```
+http://freshmeat.net/projects/pstree/
+ftp://ftp.thp.Uni-Duisburg.DE/pub/source/
+```
+
+## 介绍 LVM
+
+如果你计划使用 AIX，你*必须*学习并理解逻辑卷管理器（LVM）及其工作原理。我想从 LVM 的组成开始。我们从最大的结构开始，即一个或多个磁盘组合在一起形成一个*卷组 (VG)*。在 VG 中，我们创建*逻辑卷 (LVs)*。LV 由*逻辑分区 (LPs)* 组成，这些逻辑分区映射到称为*物理分区 (PPs)* 的实际磁盘分区。在 LV 之上，我们可以创建*文件系统*，它们具有挂载点或目录。我们也可以有*原始逻辑卷*，它们只是没有挂载点的 LV，通过其原始设备名称访问。数据库喜欢使用原始 LV，但是将原始 LV 与高可用性集群多处理（HACMP）配对是大忌！有关 HACMP 的详细信息，请参阅第 28 章。
+
+LVM 由以下组件组成：
+
+-   卷组 (VGs)
+-   物理卷 (PVs)
+-   逻辑卷 (LVs)
+-   逻辑分区 (LPs)
+-   物理分区 (PPs)
+
+注意每个组件的缩写：VG、PV、LV、LP 和 PP。你会经常看到这些缩写，所以请学习每个缩写。如果你理解上述五个 LVM 组件的概念以及它们如何相互关联，你就已经掌握了。我们将逐一介绍这些组件，并解释它们如何相互关联。
+
+一个*物理分区* (*PP*) 是一部分磁盘空间，可用于*逻辑卷 (LVs)*。通常，逻辑卷用于文件系统和页面空间。传统的遗留 UNIX 系统将分区限制在单个磁盘上的连续空间中，因此单个文件系统不能大于单个磁盘上可用的连续空间的大小。然而，AIX 使用*逻辑卷 (LVs)* 的概念映射到物理磁盘空间。逻辑卷由*逻辑分区* (*LPs*) 到驻留在同一*卷组 (VG)* 中的*一个或多个物理磁盘*上的*物理分区 (PPs)* 的映射表示。
+
+每个物理磁盘最多可包含 1016 个物理分区（PPs），大小从 1 到 256 兆字节，按 2 的幂次递增。从 AIX 4.3 开始，你可以增加 PP 的数量，但你会减少 VG 的最大磁盘数量。存在寻址的数学限制，要求这种取舍。默认
+
+
+
+物理分区的尺寸为 4MB。然而，PP（物理分区）的大小取决于磁盘的大小。同一卷组（VG）内的所有 PP 大小相同。一个逻辑分区可以映射到一个到三个物理分区，这被称为镜像。逻辑卷（LV）是在单个卷组（VG）内从逻辑分区中分配的。
+
+## LVM 组件
+
+逻辑卷管理器（LVM）由一个组件层级组成，从最小的单位称为物理/逻辑分区（PP 和 LP），到最大的卷组（VG）。LVM 组件描述在以下五个条目中。
+
+- 1. *物理卷（PV）* 是单个磁盘存储设备。PV 可以是单个磁盘驱动器，也可以是单个 RAID 多磁盘阵列。作为一个 *示例*，如果我创建一个八磁盘 RAID 级别 5 的 SSA 磁盘阵列，它向系统呈现为单个 hdisk<#>，例如 hdisk5。未包含在阵列中的独立磁盘也向系统呈现为单个 hdisk<#>，例如 hdisk1。*因此，物理卷（PV）正是你所期望的*，即物理存储硬件的一个组成部分。磁盘可以内部连接到机器中，也可以作为外部硬件组件连接。
+
+- 2. *卷组（VG）* 是一个或多个 *物理卷*（PV）的集合。所有 PV 加在一起构成了 VG 的总大小。作为一个 *示例*，如果我创建一个 VG，比如我将其命名为 *appvg*，并使用十个 32GB 的独立磁盘驱动器，那么 VG 的总大小为 **320GB**。VG 是 AIX 可分配的最大存储单位。在 VG 内部，我们创建较小的结构，如逻辑卷（LV）和文件系统，这些将在后面讨论。VG 的一个优点是它可以从一台机器移动到另一台机器，并 *导入* 到驻留 VG 中。由于 VG 由 PV 组成，我们将 VG 划分为 *物理分区*（PP），它们是 VG 内最小的测量单位。
+
+- 3. *物理分区*（PP）是 PV，即物理卷的一个小块。PP 是存储的基本构建块单位。因此，PV 被划分为大小相等的存储块，称为 PP，即物理分区。PP 的大小被称为 *PP 大小*。默认的 PP 大小为 4MB。*然而*，这个默认值是在 4GB 磁盘成为标准时创建的，而现在我们随机器配备的磁盘容量巨大。同一 VG 内的所有 PP 大小相同，且无法动态更改 PP 大小。由于 VG 被划分为大小相等的 PP，因此有 PP 的标准最大数量，为 **1016**。对于较大的磁盘驱动器和磁盘阵列，你有两个选择：1）将卷组的 PP 大小增加到 4MB 以上，以 2 的幂递增，这是你 *不能* 在线完成的。第二个选项是为每个 PV 分配更多的 PP，这是你**可以**在线完成的。PP 的最大数量按 **1016** 的倍数扩展。由于 VG 有 PP 的最大数量，每次你将每个 PV 的最大 PP 数量加倍时，就会将 VG 内的最大 PP 数量减半。我们将在本章后面更详细地涵盖此主题，请继续阅读。
+
+- 4. *逻辑分区（LP）是磁盘驱动器上物理分区（PP）的映射*。LP 以连续单元分配。但是，每个 LP 映射到的 PP 可以是同一 VG，即卷组内的任何 PP。这是 AIX 中允许文件系统跨越多个磁盘的机制。
+
+- 5. *逻辑卷（LV）是同一卷组（VG）内一个或多个逻辑分区（LP）的集合*。每个 LP 映射到的 PP 可以是同一 VG 内的任何 PP。这种 LP 映射允许磁盘空间以连续磁盘空间的形式向系统呈现，实际上连续的是 LP 映射。在这些逻辑卷之上，我们可以构建可通过挂载点或目录访问的文件系统。组成逻辑卷的每个逻辑分区（LP）都与 PP 大小相同（默认 4MB）；它们是一回事，每个 LP 映射到一个 PP。
+
+## 组装 LVM
+
+每个 VG 由 1 到 32 个物理磁盘组成，对于普通 VG，而对于 *大卷组* 则是 128 个磁盘。分区映射、卷管理和接口通过一个称为逻辑卷管理器或 LVM 的伪设备驱动器和管理器实现。LVM 包含的内容很多，所以让我们慢慢来，我希望还没有让你感到困惑。查看图 11-2 和 11-3，看看 LVM 组件是如何组合在一起的。
+
+通过使用逻辑到物理分区的映射抽象，AIX 能够在不中断服务的情况下动态增加卷组、逻辑卷以及最终文件系统的大小！在支持 LVM 之前，你被迫将文件系统备份到磁盘或磁带，销毁数据结构，使用新的分配大小重建结构，并恢复备份。LVM 允许你在线 *动态* 管理磁盘空间，而不是要求数小时的文件系统停机，对于分页空间，你还可以在 AIX 5L 中在线减少分页空间卷的大小！
+
+![](img/82f851021955589d82b22750fb3b1646_207_0.png)
+
+图 11-2. PV 到 VG 到 LV 的映射
+
+![](img/82f851021955589d82b22750fb3b1646_208_0.png)
+
+定制逻辑分区映射可以优化文件系统放置。繁忙的文件系统应位于物理磁盘的中心（称为盘内策略），并将数据分散到多个物理磁盘或 PV 中。LVM 还支持镜像，使逻辑卷的副本可用于并发读取访问。镜像还提高了数据可用性。
+
+AIX 4.3 LVM 及更高版本支持 RAID 0 条带化。你可能已经知道，条带化是一种机制，允许你将文件或文件系统的​​数据块均匀分布到多个磁盘上，以提高 I/O 性能。在创建逻辑卷时指定条带化。使用条带化卷时有一些限制。物理分区必须在包含在条带集中的磁盘之间均匀分配。你不能将其他 LV 功能（如镜像）与条带化结合使用（RAID 0+1 在 SSA 配置中完成，并与 LVM 分离），而且你不能在创建后移动条带化 LV。在设置为条带化配置之前，请先做好功课。条带化 LV 不喜欢被取消条带化，但你可以通过创建新的 LV 并运行 `migratepv` 命令将数据移动到新区域来实现。AIX 5L 的一项新功能是镜像写入一致性选项（关闭、活动或被动）。
+
+## 热点管理
+
+5L 新增的功能是进行 *热点管理* 的能力。通过热点管理，你可以在磁盘之间移动单个热点 LP，当然是在同一 VG 内。热点管理是一个非常有用的工具，用于微调卷组内的磁盘性能。将单个 LP 从一个磁盘移动到另一个磁盘的能力仅可在 AIX 5L 中获得，并相对于其他操作系统在磁盘调整方面具有巨大优势。
+
+以下是 AIX 5L 热点管理的工作原理。当一个磁盘上的一个或多个逻辑分区具有如此多的磁盘 I/O 活动，导致系统性能下降时，就存在热点问题。AIX 5L 提供了两个新命令，**lvmstat** 和 **migratepp**，使你能够识别并解决每个逻辑卷中的热点问题。
+
+### 收集统计信息
+
+在你能够监控热点之前，你必须使用 **lvmstat** 命令启用统计信息的收集。
+
+```
+# lvmstat -e -v rootvg
+```
+
+上面的命令将为 rootvg 卷组启用统计信息收集。你还可以使用 -l 标志并指定逻辑卷名称来启用单个逻辑卷的统计信息收集，如下面的命令所示：
+
+```
+# lvmstat -e -l hd2
+```
+
+默认情况下，统计信息收集是关闭的。在卷组级别启用统计信息允许你监控卷组中的所有逻辑卷，而不仅仅是单个逻辑卷。
+
+**lvmstat** 命令将在逻辑卷级别生成报告。**lvmstat** 命令生成的第一个报告显示自上次系统重启以来的统计信息。后续报告显示自上一次报告以来的统计信息。参见此处列出的 **lvmstat** 输出：
+
+```
+# lvmstat -v rootvg
+Logical Volume     iocnt    Kb_read    Kb_wrt    Kb/s
+hd2                 9358    21548      25520     0.01
+hd0var              6098     538       23714     0.00
+hd4                 4418    1908       15980     0.00
+hd8                 3261       0       13044     0.00
+lvscrips            2073    3044       1244      0.00
+hd3                  170     112         616     0.00
+hdc                118      456          16     0.00
+hd10opt              93      324          68     0.00
+lv00                 30       35           8     0.00
+hdi                  11        8           8     0.00
+hd5                   0        0           0     0.00
+```
+
+如你所见，报告是按活动量降序生成的。此 rootvg 卷组的输出显示了每个逻辑卷的 I/O 活动，包括 I/O 请求数（iocnt）、读取的数据 KB（Kb_read）、写入的数据 KB（Kb_wrt）以及每秒传输的数据 KB（Kbps）。如果指定了 -l 标志，则统计信息针对逻辑分区的物理分区
+
+
+
+卷已命名。出于报告目的，每个逻辑分区的镜像副本被视为独立的。这种独立性允许您针对热点区域微调镜像。
+
+**lvmstat** 还支持按时间间隔（以秒为单位）进行报告。每个间隔都会生成一份独立的报告。该系列中的第一份报告包含自卷组最近一次变更后收集统计数据以来的信息，而随后的每份报告则包含自上一次报告以来的统计数据。count 参数允许您指定要报告多少个分区（如果使用了 `-l` 标志来指定单个逻辑卷）或要报告多少个逻辑卷（如果使用了 `-v` 标志来指定一个卷组）。如果 count 为 5，则对于逻辑卷（`-l`）将报告最繁忙的五个分区，或者对于卷组（`-v`）将报告最繁忙的五个逻辑卷。例如，要显示 rootvg 卷组中排名前三个的逻辑卷，请使用以下命令：
+
+```
+# lvmstat -v rootvg -c 3
+Logical Volume   iocnt  Kb_read  Kb_writn  Kbps
+hd2              6982   23016    25920     0.01
+hd9var           6258    564     24366     0.00
+hd4              4536   1960     16412     0.00
+```
+
+要显示 hd2 逻辑卷中排名前十分区，请使用以下命令：
+
+```
+lvmstat -l hd2 -c 10
+Log_part    mirror   iocnt  Kb_read  Kb_writn  Kbps
+5           1        1207    652      8084      0.00
+1           1        1047    72       1116      0.00
+107         1         754    508      2520      0.00
+9           1         427    156      2796      0.00
+55          1         412    348      1328      0.00
+23          1         401    304      1304      0.00
+37          1         392    296      1276      0.00
+57          1         376    228      1276      0.00
+11          1         334     76      1260      0.00
+15          1         245    440       552      0.00
+```
+
+要连续每五秒显示一次 hd2 逻辑卷的报告，请运行以下命令：
+
+```
+# lvmstat -l hd2 5
+```
+
+要每五秒显示十份报告，请运行以下命令：
+
+```
+# lvmstat -l hd2 5 10
+```
+
+要重置 rootvg 卷组的所有统计计数器，请运行以下命令：
+
+```
+# lvmstat -v rootvg -C
+```
+
+要禁用 rootvg 卷组的统计收集，请使用以下命令：
+
+```
+# lvmstat -d rootvg
+```
+
+## 迁移物理分区
+
+使用 **lvmstat** 命令的输出，识别热点逻辑分区（LP）非常容易。这些高负载的 LP 会脱颖而出，并列出在报告输出的顶部。如果您有一个磁盘包含多个热点 LP，并且希望将负载在可用磁盘之间进行平衡，您可以使用 **migrate** 命令在磁盘之间移动 LP。
+
+**migrate** 命令使用逻辑分区号（`LPNumber`）、逻辑卷名（`LVName`）、逻辑卷副本号（`CopyNumber`），以及如果 LV 是镜像的，则还使用目标物理卷（`DestPV`）和物理分区号（`PPartNumber`）来控制副本服务的用法。**migrate** 命令的语法如下所列：
+
+```
+migrate   LVName/LPNumber[/CopyNumber]  DestPV[/PPartNumber]
+```
+
+如果指定了目标 **PPartNumber**，则使用该值；否则，将使用逻辑卷的重新生成策略生成目标 **PPartNumber**。对于镜像 LV，LP 的第一个镜像副本将被移动。如果您想指定要迁移哪个 LP 副本——您肯定需要这样做——您必须使用 1、2 或 3 作为 **migrate** 命令的 **CopyNumber** 参数。以下是一些使用 **migrate** 命令的手册页示例：
+
+1. 要移动逻辑卷 iv00 的第一个逻辑分区到 hdisk1，请键入
+    ```
+    # migrate lp iv00/1 hdisk1
+    ```
+2. 要移动逻辑卷 hd2 第三个逻辑分区的第二个镜像副本到 hdisk5，请键入
+    ```
+    # migrate lp hd2/3/2 hdisk5
+    ```
+3. 要移动逻辑卷 testlv 第二十五个逻辑分区的第三个镜像副本到 hdisk7 的一百号分区，请键入
+    ```
+    # migrate lp testlv/25/3 hdisk7/100
+    ```
+
+AIX 5L 的这些新功能包含在标准的 **bos.rte.lvm** 文件集中。此 LVM 文件集还包含一些其他可供您研究的新命令：
+
+- 中间级命令，使用热备迁移丢失的磁盘并同步过期分区
+  - `/usr/sbin/hotspare`
+- 报告 VG 或 LV 的状态
+  - `/usr/sbin/lvmstat`
+- 允许在磁盘之间重新定位 LP
+  - `/usr/sbin/migratelgp`
+- 直接从 VGDA 读取数据
+  - `/usr/sbin/readvgda`
+- 减小分页空间的大小
+  - `/usr/sbin/shrinkpg`
+
+AIX 4.3.3 **bos.rte.lvm** 文件中缺失的一个文件集是 **/usr/sbin/updatedlv** 命令。
+
+# 配置卷组
+
+为了让新磁盘可供 LVM 使用，该磁盘必须被指定为物理卷，并被分配一个物理卷标识符（PVID）。在较旧的 AIX 版本中，PVID 是一个 16 位十六进制数，而在 AIX 5L 中是一个 32 位十六进制数。AIX 4.3 和 AIX 5L 都通过 **lspv** 命令仅显示 16 位数字。**lsattr -El hdisk0** 命令将在 AIX 5L 和 AIX 4.3.3（安装维修级别 8 及以上时）显示 32 位 PVID。值得注意的是，所有额外的 16 个字符都是“0”。使用以下命令在新磁盘上创建 PVID：
+
+```
+# chdev -l hdisk<n> -a pv=yes
+```
+
+您可以使用 **lsdev** 列出系统上的物理磁盘：
+
+```
+# lsdev -C -c disk
+hdisk0  Available  00-00-05-00  4.2  GB  SCSI  Disk  Drive
+hdisk1  Available  00-00-05-10  4.2  GB  SCSI  Disk  Drive
+hdisk2  Available  00-00-30  Other  SCSI  Disk  Drive
+hdisk3  Available  00-04-00-40  Other  SCSI  Disk  Drive
+hdisk4  Available  00-04-00-50  Other  SCSI  Disk  Drive
+hdisk5  Available  00-04-00-00  Other  SCSI  Disk  Drive
+hdisk6  Available  00-04-00-10  Other  SCSI  Disk  Drive
+hdisk7  Available  00-04-20  Other  SCSI  Disk  Drive
+```
+
+要列出与这些磁盘相关的 PVID，请使用 **lspv** 命令：
+
+```
+# lspv
+hdisk0  000008870001c7e1  rootvg
+hdisk1  00001508fce5bbee  rootvg
+hdisk2  0000406c0c388efc4  vg00
+hdisk3  000015082c65e92df  vg00
+hdisk4  0000150837cc1a85  vg01
+hdisk5  000015082c28f5c7  vg01
+hdisk6  000015082c2931f5  vg01
+hdisk7  000015082c296d8f  vg01
+```
+
+要将新磁盘添加到新卷组或现有卷组中，请使用 **SMIT** 或 `mkvg` 和 `extendvg` 命令（见图 11-4）：
+
+```
+# mkvg -f -y vg10 hdisk10 hdisk11  # 使用 hdisk10 和 hdisk11 创建卷组 vg10
+# extendvg -f rootvg hdisk8  # 将 hdisk8 添加到 rootvg 卷组
+
+# smit mkvg
+```
+
+每个卷组都会分配一个卷组标识符（VGID）。在较旧的 AIX 版本中，VGID 是一个十六位的十六进制数，而在 AIX 5L 中是一个 32 位的十六进制数。系统中的每个 VGID 都由 `/etc/vg` 目录中的一个条目表示。
+
+```
+# ls /etc/vg
+vg00012560841690B0   vg0001256084A8C772
+vg00012560841690B00000000000000000
+```
+
+![](img/82f851021955589d82b22750fb3b1646_213_0.png)
+
+要显示系统中现有卷组的配置，请使用 **lsvg** 命令：
+
+```
+# lsvg # 列出卷组
+rootvg
+vg01
+vg02
+vg03
+
+# lsvg -l rootvg # 列出 rootvg 卷组的内容
+
+rootvg:
+LV NAME TYPE LPs PPs PVs LV STATE MOUNT POINT
+hd5 boot 2 2 1 closed/syncd N/A
+hd6 paging 84 84 1 open/syncd N/A
+hd8 jfsLog 1 1 1 open/syncd N/A
+hd4 jfs 8 8 1 open/syncd /
+hd2 jfs 296 296 2 open/syncd /usr
+hd9var jfs 13 13 2 open/syncd /var
+hd3 jfs 26 26 1 open/syncd /tmp
+hd1 jfs 1 1 1 open/syncd /home
+hd10opt jfs 156 156 2 open/syncd /opt
+lvcscripts jfs 25 25 1 open/syncd /scripts
+lv00 jfs 10 10 1 open/syncd /storix
+
+# lsvg -P rootvg # 列出根卷组中的物理卷
+
+rootvg:
+PV_NAME PV STATE TOTAL PPs FREE PPs FREE DISTRIBUTION
+hdisk0 active 479 0 .00..0000..00
+hdisk1 active 479 336 96...48..00..96..96
+```
+
+## 法定人数
+
+卷组中的每个物理卷都标记有卷组描述符区域（VGDA）和卷组状态区域（VGBA）。VGDA 和 VGBA 是卷组中最重要的组件！VGDA 包含组成卷组的所有逻辑卷、物理卷和分区的标识符。VGBA 是一个位图，用于指示磁盘上哪些物理分区是过期的，需要同步更新。
+
+当使用 **varyonvg** 命令或 SMIT 激活卷组时，LVM 在联机之前会验证它是否能访问至少 51% 的 VGDA 和 VGBA 副本。这种多数称为 *法定人数*（quorum），是 LVM 为确保数据完整性所必需的。任何不可用的物理卷都会被报告。系统管理员必须决定是否在设备不可访问时继续操作。如果法定多数是
+
+
+
+未建立卷组时，它不会被激活。然而，信不信由你，你可以使用 `varyonvg` 命令的 `-f` 开关强制将其设置为在线状态。
+
+```
+# varyonvg <VGname> # Vary a volume group online
+# varyonvg -f <VGname> # Force vary on a volume group
+```
+
+你可以使用 `varyoffvg` 命令或通过 SMIT 使卷组离线。请注意，必须终止对卷组中所有逻辑卷的访问。卷组中的所有文件系统必须卸载，且任何分页空间不得处于活动状态。
+
+```
+# varyoffvg <VGname>
+# smit varyoffvg
+```
+
+为了维护目的移除或替换卷组中的物理卷，请使用 SMIT 或 `chpv` 命令。
+
+```
+# reducevg <VGname> <PVname> # Remove the disk from VG
+# rmdev -dl hdisk<x> # Remove the hdisk definition
+```
+
+替换磁盘...
+
+```
+# cfgrw -v # Let the system discover the disk
+# lscpu # Find the newly found disk and write down the hdisk #
+# chdev -l hdisk<x> -a pv=yes # Create a PVID for the new hdisk
+# extendvg <VGname> <hdisk<x>> # Add the new disk into the volume group
+```
+
+> **注意** 当你从卷组中移除所有物理卷时，该卷组将从系统中删除（`reducevg` 命令）。
+
+整个卷组可以作为单一单元从一个系统迁移到另一个系统。当卷组被导出时，指向它的所有引用都将从 ODM 中移除。当卷组在新系统上被导入时，所有设备表、特殊文件和 `/etc/filesystem` 条目都会自动添加到 ODM 中。你可以在同一系统上导出和导入卷组，以重新同步 VGDA 和 ODM 信息。
+
+```
+# exportvg <VGname>
+# importvg <VGname> <PVname>
+```
+
+## 根卷组—rootvg
+
+AIX 使用一个名为 `rootvg` 的特殊卷组来存放操作系统的根文件系统和默认分页区。为本地用户和应用文件系统使用独立的卷组是一个好主意。这样，你可以在系统激活时在不同系统间导出和导入这些卷组，并在操作系统升级前后迁移文件组。每次 AIX BOS 安装都会销毁 `rootvg` 的全部或部分。
+
+### rootvg 的镜像
+
+如果你不对根卷组进行镜像，那么你就存在单点故障。务必对 `rootvg` 进行镜像！我见过太多不必要的系统重建，就是因为 `rootvg` 没有进行镜像。对 `rootvg` 进行镜像是一个简单的过程，包括以下步骤，我们将把 `rootvg` 镜像到一个名为 `hdisk1` 的新磁盘：
+
+1. 将 `hdisk1` 添加到 `rootvg` 以进行镜像：
+   ```bash
+   # extendvg rootvg hdisk1
+   ```
+2. 如果所有 `rootvg` 逻辑卷都创建得当，请使用此命令：
+   ```bash
+   # mirrorvg rootvg # This command will do it all if no errors occur
+   ```
+3. 或者（如果遇到问题的话）手动镜像 `rootvg`，但不要镜像转储设备（例如中的 `lv00`）：
+   ```bash
+   # lsvg # To make sure there are two drives in rootvg
+   # lsvg -l rootvg # To see if anything is mirrored already
+   # lsvg rootvg # To check available space
+   ```
+4. 镜像每个逻辑卷：
+   ```bash
+   # for N in $(lsvg -l rootvg | grep synced | awk '{print $1}' | grep -v lvol0)
+   > do
+   > echo $N
+   > mklvcopy $N 2
+   > done
+   ```
+5. 同步卷组：
+   ```bash
+   # syncvg -v rootvg
+   # lsvg -l rootvg
+   ```
+6. 配置启动设备：
+   ```bash
+   # ipl_varyon -i
+   PNAME        BOOT DEVICE     PVID             VOLUME GROUP ID
+   hdisk0         NO             0000104735ac2310     000010472822f021
+   hdisk1         YES            000010472822e532     000010472822f021
+
+   # bosboot -a -d /dev/hdisk0
+
+   bosboot: Boot image is 6955 512 byte blocks.
+
+   # ipl_varyon -i
+   ```
+
+| PVNAME | BOOT DEVICE | PVID | VOLUME GROUP ID |
+|---|---|---|---|
+| hdisk0 | YES | 0001047375ac2330 | 00010472822f021 |
+| hdisk1 | YES | 00010472822e2532 | 00010472822f021 |
+
+```
+# chvg -a'y' -Q'n' -x'n' rootvg ◄── A quorum of disks required = no
+# bootlist -m normal -o
+hdisk1
+# bootlist -m normal hdisk0 hdisk1
+# bootlist -m normal -o
+hdisk0
+hdisk1
+# lsvg rootvg | grep -i QUORUM
+OPEN LVs: 14 QUORUM: 1
+```
+
+`mirrorvg` 命令在幕后为你执行了所有的 `mklvcopy` 命令。由于禁用了磁盘仲裁（quorum），我们必须重启系统以使更改生效。
+
+```
+# shutdown -r now
+```
+
+## 添加卷组
+
+正如我们之前讨论的，卷组由一个或多个磁盘（或物理卷）组成。创建新卷组时，我们有两个选项：普通卷组和大型卷组。大型卷组将最大逻辑分区数从 256 扩展到 512。表 11-2 和 11-3 显示了普通卷组和大型卷组限制之间的区别。
+
+| VG 中磁盘的最大数量 | 每个磁盘的最大分区数 |
+|---|---|
+| 1 | 32512 |
+| 2 | 16256 |
+| 4 | 8128 |
+| 8 | 4096 |
+| 16 | 2032 |
+| 32 | 1016 |
+
+**表 11-2. 普通卷组限制**
+
+| VG 中磁盘的最大数量 | 每个磁盘的最大分区数 |
+|---|---|
+| 1 | 130048 |
+| 2 | 65024 |
+| 4 | 32512 |
+| 8 | 16256 |
+| 16 | 8128 |
+| 32 | 4096 |
+| 64 | 2032 |
+| 128 | 1016 |
+
+**表 11-3. 大型卷组限制**
+
+要指定大型卷组，请在 `mkvg` 命令中添加 `-B` 开关。如果省略 `-B` 开关，卷组将是普通卷组。要指定磁盘数量和每个磁盘的最大分区数，使用 t 因子。t 因子是 1016 的倍数。每当 t 因子增加一级，物理分区的数量就会翻倍，但卷组中允许的最大磁盘数会减半。
+
+要使用 `hdisk4` 创建一个名为 `appvg` 的普通卷组，其 PP 大小为 16MB 且最多可包含 16 个磁盘，请执行以下命令：
+
+```
+# mkvg -s 16 -t2 -y appvg hdisk4
+```
+
+`-s 16` 指定了 16MB 的 PP 大小，`-t2` 指定了 t 因子为 2。`-y` 开关指定卷组名称为 `appvg`。在表 11-2 中，我们可以看到在这个普通卷组中，每个磁盘最多可以有 16256 个分区，且最多可以有 16 个磁盘。
+
+要创建一个名为 `bigappvg` 的大型卷组，最多可包含 16 个磁盘和每个磁盘 8128 个分区，并使用 `hdisk5` 到 `hdisk10`，请执行以下命令：
+
+```
+# mkvg -B -t8 -y bigappvg hdisk5 hdisk6 hdisk7 hdisk8 hdisk9 hdisk10
+```
+
+我们还可以使用以下命令将普通 `appvg` 卷组更改为大型卷组：
+
+```
+# chvg -B appvg
+```
+
+## 导入和导出卷组
+
+卷组的一个好处是它们具有可移植性。你可以在一台机器上导出卷组，将磁盘召回到另一个系统，然后导入该卷组。导出和导入卷组的两个命令分别是 `exportvg` 和 `importvg`。导出卷组时，你会将其完全从 ODM 中移除；导入卷组时，你会将其添加到 ODM 中。作为一个例子，我们希望在另一台机器上使用我们的 **bigappvg** 卷组。以下命令将导出卷组并导入卷组。
+
+在机器 *A* 上：
+
+```
+# exportvg bigappvg
+```
+
+在机器 *B* 上：
+
+```
+# importvg -y bigappvg hdisk5
+```
+
+之前的例子中假设了很多内容。你需要使用卷组中其中一个磁盘的 *PVID* 作为目标磁盘集，该集包含导出的 VG。（还记得 *VGDA* 吗？）在这个例子中，我们通过检查 *lspv* 命令的输出发现 *PVID* 位于 *hdisk5* 上。卷组还有一个在系统中唯一的 *主设备号*（major number）。要在系统中找到下一个可用的主设备号，请执行以下命令：
+
+```
+# lvlsmajor
+```
+
+要指定主设备号，使用 *-V* 开关。在我的机器上，下一个可用的主设备号是 *27*。因此我们将 **importvg** 命令更改为使用主设备号 *27*：
+
+```
+# importvg -V 27 -y bigappvg hdisk5
+```
+
+> **注意** 如果从 **importvg** 命令中省略 *-V* 开关，系统将分配下一个可用的主设备号。
+
+## 卷组的激活与停用
+
+在访问卷组之前，必须将其激活（vary on）。此外，在导出卷组之前，必须将其停用（vary off）。用于激活和停用卷组的命令是 **varyonvg** 和 **varyoffvg**。要停用并激活 **bigappvg** 卷组，我们使用以下命令：
+
+```
+# varyoffvg bigappvg
+# varyonvg bigappvg
+```
+
+## 使用 reorgvg 重组卷组
+
+**reorgvg** 命令用于重组卷组内的 *PP* 分配。这种重组旨在满足卷组中每个 *LV* 的 *盘内策略*（intradisk policy）（关于 *策略* 的详细信息请参阅本章后面的“配置逻辑卷”部分）。为了成功完成 **reorgvg** 命令，卷组中必须至少有一个空闲的 *PP*。使用 **reorgvg** 命令时，你可以指定想要重组的 *VG* 中的各个 *LV*；否则，*VG* 中的所有 *LV* 都将被重组。
+
+
+
+
+
+作为一个示例，我们希望重新组织 **bigappvg** 卷组中的 **dat01**、**dat02** 和 **idx01**：
+
+```
+# reorgvg bigappvg dat01 dat02 idx01
+```
+
+若要仅重新组织 **bigappvg** 卷组中位于 **hdisk5** 上的所有逻辑卷，可以使用以下复合命令：
+
+```
+# echo "hdisk5" | reorgvg -i bigappvg dat01 dat02 idx01
+```
+
+## HACMP 与卷组同步
+
+本节内容稍微超前了一些。HACMP 是 High Availability Cluster Multi-Processing（高可用性集群多处理）的缩写。HACMP 用于通过在主机器故障时将故障转移到备用机器，从而使应用程序服务器具备容错能力。为此，承载应用程序或任何需要高可用性的磁盘必须在集群中的机器之间共享。通常，这些磁盘通过双尾（twin-tailed）方式连接两台机器，且控制机器必须导入并激活该卷组（VG）。发生故障时，备用机器必须导入共享卷组，将其激活，并在新节点上启动应用程序。
+
+问题在于，当你对卷组进行更改时，另一台机器可能不知道这些更改。为了同步卷组，我们需要仅在主要节点上取消激活该卷组，并在备用节点上导入卷组。在此过程之后，卷组将从备用节点取消激活，并在主要节点上激活该卷组。
+
+> **注意** 默认情况下，所有原始设备都归 **root** 用户和 **system** 组所有。
+
+**importvg** 命令还有一个 **-L** 选项，用于让系统了解已知卷组发生的更改。以下流程将完成与导出和导入卷组相同的任务。
+
+- 主要节点：`varyingvg -b -u bigappvg`
+- 备用节点：`importvg -L bigappvg hdisk10`
+- 主要节点：`varyingvg bigappvg`
+
+## 配置逻辑卷
+
+为了利用卷组中可用的磁盘空间，你需要创建一个逻辑卷。逻辑卷类似于其他 UNIX 系统中的分区，但提供了一些重要的增强功能。在分配文件系统或分页区域空间之前，应当充分理解逻辑卷的结构和功能。换句话说，你应该能够确定以下内容：
+
+- 逻辑卷类型
+- 以逻辑分区为单位的大小
+- 盘间分区布局（相对于盘内策略）
+- 写入调度策略
+- 盘内分区布局（相对于盘间策略）
+- 是否进行镜像
+- 是否进行条带化
+
+### 逻辑卷类型
+
+LVM 基本上以相同的方式管理所有逻辑卷类型。在定义某些其他属性时，逻辑卷可能需要特殊考虑。例如，你可能希望将分页逻辑卷放置在磁盘的中心以减少磁头移动。AIX 使用五种逻辑卷类型：
+
+- **文件系统**：保存文件系统数据和元数据
+- **日志**：保存 JFS 元数据更新日志
+- **分页**：分页区域
+- **启动逻辑卷**：启动块和 RAM 文件系统代码
+- **转储区域**：保存紧急转储（panic dumps）
+
+### 逻辑卷大小
+
+当你创建新的逻辑卷或向现有逻辑卷添加空间时，你将以逻辑分区（LP）为单位进行操作。例如，如果你接受默认的 4 兆字节分区大小，那么 512 兆字节的逻辑卷将需要 128 个逻辑分区（512 MB 逻辑卷除以 4 MB 逻辑分区大小等于 128 个逻辑分区）。创建逻辑卷时，你可以定义可用于该逻辑卷的最大逻辑分区数（默认为 512）。该值限制了此逻辑卷在卷组内可增长的大小。如果日后需要更多的逻辑卷空间，可以增加最大限制。
+
+你可能注意到，当你将卷组中物理卷所代表的分区数量相加时，总格式化空间中有 7% 到 10% 的空间丢失了。这是由于 LVM 管理卷组所需的额外空间开销造成的。还记得前面章节中描述的 VGDA 和 VGS A 结构吗？
+
+### 盘间策略
+
+盘间布局策略决定了可用于分配逻辑卷分区的物理磁盘范围。盘间策略可以是最小或最大，并附带一个范围限制，用于管理可用的物理磁盘数量。
+
+- **最小**：提供最高的可用性。所有分区都分配在单个物理卷上。对于镜像逻辑卷，第一份副本将分配在单个物理磁盘上。除非选择了 Strict 选项，否则第二份副本可以分配在多个物理卷上，直至达到范围限制。
+- **最大**：提供最佳性能。逻辑卷中的每个逻辑分区将按照顺序分配在多达范围限制数量的物理卷上。如果一个物理磁盘发生故障，则整个逻辑卷将不可用。
+
+### 盘内策略
+
+盘内布局策略（见图 11-5）定义了分区将在物理磁盘内的哪里分配。可以选择五个区域之一：内缘、内中、中心、外中和外缘。内缘和外缘具有最慢的寻道时间。平均寻道时间向磁盘中心减少，那里是磁盘的“最佳位置”。
+
+![](img/82f851021955589d82b22750fb3b1646_222_0.png)
+
+**图 11-5. 盘内策略**
+
+使用 `lsvg` 命令显示现有逻辑卷的布局和空闲分区的数量：
+
+```
+# lsvg rootvg
+VOLUME GROUP:   rootvg
+VG STATE: active
+VG PERMISSION: read/write
+MAX LVs: 256
+LVs: 11
+OPEN LVs: 10
+TOTAL PVs: 2
+STALE PVs: 0
+ACTIVE PVs: 2
+MAX PPs per PV: 1016
+LTT size: 128 kilobyte(s)
+HOT SPARE: no
+VG IDENTIFIER: 00012560841630b0
+PP SIZE: 4 megabyte(s)
+TOTAL PPR: 558 (3832 megabytes)
+FREE PPR: 136 (1344 megabytes)
+USED PPR: 622 (2488 megabytes)
+QUORUM: 2
+VG DESCRIPRTS: 3
+STALE PPR: 0
+AUTO ON: yes
+MAX PPR: 32
+AUTO SYNC: no
+```
+
+```
+# lsvg -l rootvg
+rootvg:
+LV NAME TYPE LPPS PPR PPR LV STATE MOUNT POINT
+hd5 boot 2 2 1 closed/syncd N/A
+hd6 paging 84 84 1 open/syncd N/A
+hd8 jfslog 1 1 1 open/syncd N/A
+hd4 jfs 8 8 1 open/syncd /
+hd2 jfs 296 296 2 open/syncd /usr
+hd9var jfs 13 13 2 open/syncd /var
+hd3 jfs 26 26 1 open/syncd /tmp
+hd1 jfs 1 1 1 open/syncd /home
+hd10opt jfs 156 156 2 open/syncd /opt
+lsvscripts jfs 25 25 1 open/syncd /scripts
+lv00 jfs 10 10 1 open/syncd /storix
+```
+
+### 镜像
+
+对于高访问量的文件系统，镜像提供了一种机制，可提高可用性（维护主逻辑卷的副本）和访问时间（到数据的多条路径）。你可以选择在需要更高可用性和容错级别的环境中保留两个镜像副本。最多可以有三个镜像副本。
+
+读取镜像逻辑卷时，如果主路径忙，读操作可以由镜像满足。对限制在单个物理磁盘上的逻辑卷的写入是顺序的。如果镜像占用多个物理磁盘，写入调度可以是顺序或并行。
+
+- **顺序写入**：写入按发生的顺序排列。每个写入操作依次调度到每个副本，并在两个更新都完成时返回。
+- **并行写入**：写入同时调度到多个磁盘。写入在最长写入完成后返回。
+
+创建逻辑卷时可以请求多于一份副本来创建镜像（见图 11-6）。要对现有逻辑卷进行镜像，请使用 SMIT FastPath `smitky mkvlcopy`。
+
+```
+# smit mkvlcopy
+```
+
+启动 SMIT 并选择要镜像的逻辑卷
+
+## 添加逻辑卷
+
+在为新的逻辑卷选择卷放置特性后，可以使用 SMIT FastPath `smitky mklv` 创建它（见图 11-7）。
+
+```
+# smitty mklv
+```
+
+## 逻辑卷映射
+
+若要查看逻辑卷（LV）如何映射到物理分区（PP），可以使用 `lslv -m <LVname>`。从输出中，你可以看到每个逻辑分区如何映射到物理分区，以及物理分区位于哪个磁盘驱动器上。对于镜像逻辑卷，单个逻辑分区映射到两个或三个物理分区，最好是在不同的物理卷上！
+
+![](img/82f851021955589d82b22750fb3b1646_224_0.png)
+
+**图 11-6. SMIT“镜像逻辑卷”面板**
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_225_0.png)
+
+## 原始逻辑卷
+
+数据库应用以需要原始逻辑卷而闻名。原始逻辑卷是未拥有文件系统的逻辑卷。交换空间（Paging space）也是一种原始逻辑卷。对原始逻辑卷的访问是通过 `/dev/r*` 中的原始设备进行的。这些原始设备中的每一个都是字符特殊文件，大多数磁盘设备都关联有多个原始设备。应用程序通常设置指向每个原始设备的软链接以便访问。
+
+## 原始 LV 设备和链接的文件所有权
+
+如果您忘记更改文件所有权和组，在为 DBA 添加原始逻辑卷时可能会遇到麻烦。我的 DBAs 需要所有原始设备都归 dba 用户和 dba 组所有。默认情况下，所有原始设备都归 root 用户和 system 组所有。
+
+## 原始逻辑卷与异步 I/O
+
+现在您正在自找麻烦！如果您对异步 I/O 有需求，那么永远不要使用原始逻辑卷。相反，应选择 JFS 文件系统。组合使用原始 LV 和异步 I/O 的问题在于，异步 I/O 正在运行并将数据越过围栏交给操作系统存储到磁盘。所有这些未写入的数据都缓存在缓冲区中，因此得名为“异步 I/O”。如果机器故障，则缓存缓冲区中的所有数据将永久丢失，最终导致数据库损坏！然而，如果您在 JFS 文件系统上使用异步 I/O 且系统故障，您应该永远不会丢失任何数据。这是因为 JFS 文件系统有其日志记录（journal log），当机器重启时，它将知道重放日志记录以完成磁盘写入。在 HACMP 集群中，异步 I/O 和原始逻辑卷的组合是一个特别大的问题。如果机器检测到问题，它可能会触发死亡开关（dead-man switch），并且立即发出 `halt -q` 命令。请记住，当需要异步 I/O 时，始终使用 JFS 或 FS2 文件系统（详见本章稍后的“文件系统（JFS 和 JFS2）”部分）。
+
+## 增加逻辑卷的大小
+
+在 AIX 中，您可以使用 `extendlv` 命令或通过 SMIT 快速路径 `smitty extendlv` 在线增加逻辑卷的大小。
+
+要为 `hd9var` 逻辑卷添加五个逻辑分区，请发出以下命令：
+
+```bash
+# extendlv hd9var 5
+# 这是通过 chfs 命令为您完成的
+```
+
+重要的是要注意，`extendlv` 命令不会自动使目标逻辑卷上的 JFS 或 JFS2 文件系统能够使用这些新空间。`chfs` 命令可以用一条命令添加所需的分区并扩展文件系统：
+
+```bash
+chfs -a size=SIZE_IN_512_BYTE_BLOCKS MOUNT_POINT
+```
+
+## 减小逻辑卷的大小
+
+这是 AIX 中的一个问题。可以使用不受支持的命令 `freelvlvdu` 和其他不受支持的 LV 命令来移除逻辑分区，以构建所需的 LV 映射文件。这些命令用于 `rm_lv` 脚本中，以移除所有逻辑分区从而删除整个逻辑卷。
+
+这个过程超出了本章的范围，但我相信总有一天某人可以编写一个 **reducelv** 包装脚本使其变得有用。另一个问题是，当您在想要减小的逻辑卷上拥有文件系统时。据我所知，没有支持或不受支持的命令来处理这种情况。所以请不要尝试，除非您有一个可以破坏的系统。*风险自负*，更多细节请阅读 Redbooks 和 IBM 出版的 **AIX Logical Volume Manager from A to Z: Troubleshooting and Commands**：http://www.redbooks.ibm.com/ pubs/ pdfs/ rebooks/ sg245433.pdf。
+
+## 使用 defragfs 对文件系统执行碎片整理
+
+**defraglv** 命令尝试为文件系统获取更连续的 PP（物理分区）。如果您的文件系统由散布在磁盘上的 PP 组成，您会看到一些好处，但通常可以忽略不计。要对 `/bigdata01` 文件系统执行碎片整理，请发出以下命令：
+
+```bash
+# defragfs /bigdata01
+```
+
+## syncvdam 命令
+
+**syncvdam** 命令同步或重建逻辑卷控制块（LVCB）、ODM 中的设备配置数据库以及指定卷组中每个物理卷上的卷组描述符区域。
+
+请记住，如果您在正在运行原始逻辑卷的系统上运行此命令，`/dev/*r*` 目录中的所有原始设备都将归 **root** 用户和 **system** 组所有！如果您在原始逻辑卷上运行数据库，请记得返回并根据情况更改原始设备的文件所有权。
+
+> **注意** 在 AIX 4.3 中，IBM 为 **syncvdam** 命令添加了 *-P* 标志，用于保留逻辑卷原始设备的所有权和权限。始终使用 *-P* 标志以保留原始设备设置！
+
+很少需要运行此命令，但如果出于某种原因设备配置数据库变得不一致，您可以运行以下命令：
+
+```bash
+# syncvdam -v -P rootvg
+# (或)
+# syncvdam -v -P rootvg lvol1 lvol2 hdl
+```
+
+## 文件系统（JFS 和 JFS2）
+
+逻辑卷最常见的用途是容纳文件系统。*文件系统* 是支持 UNIX 目录和文件树的结构。文件系统树以顶部的根目录开始，子目录分支从根向下延伸。
+
+树中的每个目录级别都可以包含文件和目录。组成文件系统的主要结构是超级块（super block）、inode 和数据块。
+
+AIX 5L 中逻辑卷管理器（LVM）的新增强功能包括 64 位 JFS2 文件系统，这是基于 Itanium 的机器上唯一可用的文件系统。JFS2 文件系统是一种扩展的 IFS 文件系统，支持 1 太字节（TB）的文件和 4 拍字节（PB）的文件系统！4PB 文件系统是一个理论尺寸，因为据我所知，从未有人购买过 4PB 的磁盘驱动器连接到一台机器，但数学计算是成立的。JFS2 中的另一个增强功能是动态 inode 分配。
+
+需要注意的是，某些 C 编译器仍然对文件大小有 2GB 的限制。您需要学习正确的编译器标志（-D_LARGE_FILES）以从编译后的代码中启用大文件访问。
+
+### 超级块
+
+超级块描述了逻辑卷内文件系统的整体结构。它包含文件系统名称、大小、指向 inode 和空闲块列表的指针等。超级块用于在操作期间跟踪文件系统状态。超级块信息还用于验证文件系统的完整性，作为启动过程的一部分或在发生故障时。
+
+文件系统内的每个目录和文件都由一个 inode 表示。inode 可以被视为索引条目。每个 inode 从 1 顺序编号，直到文件系统中定义的 inode 最大数量。AIX 5L 中新增的 JFS2 文件系统会动态分配所需的 inode。inode 标识其代表的文件或目录的属性：
+
+- 文件模式
+- 文件类型
+- 所有者的 UID 和 GID
+- 日期和时间戳
+- 链接数
+- 指向数据块的指针
+- 字节大小
+- 块大小
+
+### Inodes
+
+为文件系统创建的 inode 数量基于文件系统的大小。原生 AIX V5 JFS 文件系统允许对分配的 inode 数量进行有限控制。这意味着对于包含少量超大文件的文件系统（例如数据库），会浪费更多空间。分配的 inode 数量不再直接固定在分配的文件系统块数量上。要创建的 inode 数量是在文件系统创建时使用每个 inode 的字节数（NBPI）选项进行控制的。该值按 NBPI 指定的文件系统字节数分配一个 inode。NBPI 值是 2 的幂次倍数，范围从 512 到 16,384。要减少文件系统的 inode 数量，请选择较大的 NBPI 值。为了获得更多 inode，请选择较小的值。请注意，您不能更改现有文件系统的 NBPI 值。
+
+AIX 5L 中新增的是 JFS2 文件系统，其 inode 是动态分配的，而不是在文件系统创建时创建。
+
+可以使用 `istat` 命令显示特定 inode 的信息：
+
+```bash
+# istat 25 /dev/hd6
+inode 25 on device 10/8     File
+Protection: rw-r-r-- Group: 0 (system)
+Owner: 0 (root)             Group: 0 (system)
+Link count: 1       Length 4005898 bytes
+Last updated:   Thu Nov 22 07:20:23 2001
+Last modified:  Thu Nov 22 07:20:23 2001
+Last accessed:  Thu Nov 22 07:19:58 2001
+Block pointers (hexadecimal):
+58       60       68       70       82       8a       92       9a
+```
+
+要查找特定文件的 inode，请使用 `istat filename`。
+
+要查找与 inode 号关联的文件名，请在 `find` 命令中使用 `-inum` 标志：
+
+```bash
+# find /home -xdev -inum 25 -print
+/home/rmichael../forward
+```
+
+### 数据块
+
+数据块用于在文件系统中存储实际的文件数据。每个 inode 包含 13 个数据块地址槽。前八个地址槽指向文件的前八个文件数据块。第九个地址指向内核中的 inode 结构。当文件打开时，磁盘 inode 信息会复制到该结构中。第十到第十三个地址指向间接数据块，这些块用于寻址大文件的数据块。每个间接块支持 1024 个地址。由于文件寻址限制在 32 位，因此不使用三级间接引用。
+
+### 碎片
+
+AIX V4 JFS 引入了类似 BSD 的磁盘碎片。碎片是基于完整的 4KB 块大小的 2 的幂次划分的小文件系统块。碎片大小在文件系统创建时定义，可以是 512 字节、1KB、2KB 和 4KB（默认值）。单个文件系统可以指定不同的碎片大小。
+
+
+
+
+碎片大小按文件系统逐一指定。你可以为支持小文件的文件系统定义较小的碎片大小，并为以大文件为主的文件系统定义较大的碎片大小。碎片提供了一种利用部分填充的 4KB 块中剩余未分配空间的方法。只有在拥有大量小文件时，才有理由更改碎片大小。
+
+使用碎片也有一些限制和缺点。首先，碎片仅在 inode 直接块中受支持。IFS inode 有八个直接块地址。第九个用于间接寻址。inode 直接块地址的高半字节（nibble）用于存储该块的碎片比率。因此，碎片仅支持高达 32KB 的文件大小。大于 32KB 的文件使用完整的 4KB 块大小。请注意，大文件在前 32KB 不使用碎片，而在剩余部分使用完整的块大小。此外，你也许已经猜到，使用较小的碎片大小会增加整体文件系统空间的碎片化程度。为了解决这个问题，我们使用 **defrags** 命令对文件系统进行碎片整理：
+
+```
+# defrags /usr                    整理 /usr 文件系统碎片
+# defrags -r /usr               报告 /usr 碎片状态
+```
+
+```
+运行 defrags 之前的统计数据：
+空闲碎片数量 43107
+已分配碎片数量 199581
+小于一个块的空闲空间数量 0
+短空闲空间中的空闲碎片数量 0
+运行 defrags 之后的统计数据
+小于一个块的空闲空间数量 0
+短空闲空间中的空闲碎片数量 0
+其他统计数据：
+移动的碎片数量 2285
+逻辑块移动数量 2285
+分配尝试次数 635
+精确匹配次数 136
+```
+
+## 压缩
+
+JFS 压缩是一个可安装的 BOS 文件集选项。压缩支持在文件系统创建时按文件系统逐一选择。AIX 在逻辑块级别而非文件级别应用压缩。这提高了随机 I/O 性能，因为无需解压缩整个文件。压缩也仅应用于常规文件和长符号链接。
+
+空间分配对于压缩文件系统可能是一个问题。压缩后文件实际占用空间难以预估。为避免过度分配问题，AIX 为未压缩文件分配完整的块需求。其假设是压缩后的文件不会比原始文件更大。
+
+对于常规文件，你可以使用标准的 **compress** 命令，其压缩率最高可达 50%。我更喜欢使用 **gzip** 进行文件压缩。**gzip** 命令有九个压缩级别，0–9，其中 9 的压缩率最高。根据文件不同，你通常可以获得大约 70% 的压缩率。请尝试对一个大文件执行此命令：
+
+```
+# gzip -9 my_huge_file
+```
+
+## 大文件
+
+AIX 5L 支持标准 JFS 文件系统最高 64GB 的文件，以及 JFS-2 文件系统最高 1TB 的文件大小。AIX 5L 的文件系统限制是标准 JFS 为 64GB，JFS2 高达 4 PB（Petabytes，拍字节）。感谢 64 位寻址。
+
+## 虚拟文件系统
+
+AIX 5L 提供了一种通用文件系统接口，称为虚拟文件系统（VFS），使其能够支持多种文件系统类型。VFS 是对底层物理文件系统挂载结构、inode 和操作的一种抽象。
+
+底层物理文件系统在 VFS 中由一个通用挂载结构和一组允许在物理文件系统中执行的操作（称为 **vfsops**）来表示。VFS 使用 **vnodes** 和 **gnodes** 的配对抽象来引用底层文件系统 inode 结构。一个或多个 vnode 结构引用一个 gnode，该 gnode 链接到真实的 inode。VFS 使用名为 **vnodeops** 的 vnode 操作对底层 inode 进行操作。VFS 支持的文件系统类型定义在 */etc/vfs* 中：
+
+```
+defaultvfs jfs nfs
+#
+cdcrfs      5   none none
+procfs      6   none none
+jfs         3   none /sbin/helpers/v3fshe
+lper
+jfs2        0   /sbin/helpers/jfs2  none
+nfs         2   /sbin/helpers/nfsmthelp  none remount
+sfs         16  none none
+nfs3        18  /sbin/helpers/nfsmthelp  none remount
+cache       17  /sbin/helpers/cfmnthelp  none remount
+autofs      19  /sbin/helpers/aufsmthelp  none
+dfs         7   /sbin/helpers/dfsmnt
+helper none
+```
+
+## 日志文件系统配置
+
+AIX 的原生文件系统是一种基于日志的文件系统，称为日志文件系统（JFS）。像 JFS 这样的基于日志的文件系统通过维护循环更新日志来改善恢复过程。发生故障时，重放 JFS 日志以恢复文件系统状态。文件系统日志恢复比对整个文件系统执行完整的 **fsck** 遍历快数小时。AIX 提供 **fsck** 以辅助灾难恢复；然而，它不作为标准启动过程的一部分被调用。
+
+创建 JFS 或 JFS2 文件系统时，如果尚不存在，还会创建一个*日志逻辑卷*。一个卷组内的日志逻辑卷可以支持多个文件系统。
+
+使用 SMIT 快速路径或 **crfs** 和 **chfs** 创建或更新 JFS 文件系统。可以在现有的空逻辑卷中创建新的 JFS 文件系统，或者构建新的逻辑卷来容纳新文件系统（见图 11-8）。指定文件系统大小时请务必小心！文件系统块大小为 512 字节。表 11-4 提供了一般经验法则。
+
+**默认逻辑分区大小**
+
+如果这还不够清楚，那就不是 UNIX，肯定也不是 AIX。
+
+```
+# crfs -v jfs -G uservgl -m /u4 -a size=1048576
+# smitty crjfs
+```
+
+![](img/82f851021955589d82b22750fb3b1646_232_0.png)
+
+图 11-8. SMIT “添加日志文件系统” 面板
+
+| **块大小** | **操作** |
+|---|---|
+| 512 | 更新新或现有文件系统大小 |
+| 1024 | 报告文件系统使用的 AIX 命令。通常是 **-k 标志 (-df -k)** |
+| 512–4096 | AIX 碎片大小 |
+| 4096* | 管理逻辑卷的逻辑分区 |
+
+文件系统属性记录在 ODM 自定义数据库和 /etc/filesystems 文件中。不要编辑 /etc/filesystems 文件。请使用 SMIT 或基于 Web 的系统管理（wsm）。
+
+```
+/:
+    dev = /dev/hd4
+    vfs = jfs
+    log = /dev/hd8
+    mount = automatic
+    check = false
+    type = bootfs
+    vol = root
+    free = true
+/home:
+    dev = /dev/hd1
+    vfs = jfs
+    log = /dev/hd8
+    mount = true
+    check = true
+    vol = /home
+    account = true
+    free = false
+    quota = userquota
+/usr:
+    dev = /dev/hd2
+    vfs = jfs
+    log = /dev/hd8
+    mount = automatic
+    check = false
+    type = bootfs
+    vol = /usr
+    free = false
+/var:
+    dev = /dev/hd9var
+    vfs = jfs
+    log = /dev/hd8
+    mount = automatic
+    check = false
+    type = bootfs
+    vol = /var
+    free = false
+/tmp:
+    dev = /dev/hd3
+    vfs = jfs
+    log = /dev/hd8
+    mount = automatic
+    check = false
+    vol = /tmp
+    free = false
+/mnt:
+    dev = /dev/hd7
+    vol = "spare"
+    mount = false
+    check = false
+    free = false
+    vfs = jfs
+    log = /dev/hd8
+```
+
+你可以使用 **rmfs** 命令移除文件系统：
+
+```
+# rmfs /n5
+# smitty rmjfs
+```
+
+> **注意** rmfs 命令会同时移除文件系统和逻辑卷。
+
+## 大文件系统（JFS-2）
+
+在 AIX 5L 中，IBM 引入了增强型日志文件系统（JFS-2）。JFS-2 文件系统基于标准 JFS。新的 JFS-2 文件系统是基于 Itanium 的系统上的标准文件系统。JFS-2 使用扩展基础分配，这是一种同时寻址多个磁盘块地址的方式。其结果是支持高达 1TB 的巨大文件和高达 4 PB 的文件系统的高性能文件系统。JFS-2 文件系统内的 inode 是动态分配的，因此你不再需要担心 inode 耗尽。必须在创建时指定 JFS-2 文件系统。你不能动态更改文件系统。将文件系统从 JFS 更改为 JFS-2 的正确方法是备份 JFS 文件系统，创建一个新的 JFS-2 文件系统，并在新的 JFS-2 文件系统中恢复 JFS 数据。
+
+## 挂载和卸载文件系统
+
+通过挂载文件系统到挂载点来使文件系统数据可访问。挂载点是之前已挂载的文件系统（如根文件系统）中的一个目录。你可能认为这是一个先有鸡还是先有蛋的问题；然而，启动过程处理了挂载根文件系统的特殊情况。挂载点通常是一个空目录，但这并非必要条件。如果你在已填充内容的目录上挂载文件系统，之前的子目录树不会受损，但在文件系统卸载之前将无法访问（见图 11-9）。
+
+![](img/82f851021955589d82b22750fb3b1646_235_0.png)
+
+
+
+
+
+文件系统可以使用 `mount` 和 `umount` 命令进行挂载或卸载：
+
+```
+# mount /dev/hd5      /dev/hd5 on /n5
+# umount /n6            Unmount filesystem /n6
+```
+
+或者通过使用 SMIT：
+
+```
+# smit mountfs
+```
+
+无法卸载繁忙的文件系统。如果任何应用程序打开了文件系统中的文件或目录，该文件系统即处于繁忙状态。这可能是由正在执行进程或当前目录路径位于该文件系统内的用户引起的。使用如 `fuser` 和公共领域的 `lsof` 命令等工具来识别哪些进程和用户打开了文件：
+
+```
+# fuser -u /dev/hd1    AIX open file lister
+/dev/hd1: 32605c(deroest) 43100c(deroest) 47029(root)
+```
+
+```
+# lsof /dev/hd1    Public domain program to list open files
+COMMAND   PID USER FD    TYPE DEVICE    SIZE/OFF   INODE/NAME
+kah       32605 deroest  cwd      VDIR 10, 8 1536     18 /home (//dev/hd1)
+axisterm  43100 deroest  cwd      VDIR 10, 8 1536     18 /home (//dev/hd1)
+ksh       47029 root       63u  VRBG  10, 8 2678    78 /home (//dev/hd1)
+```
+
+哪些文件系统在启动时自动挂载，由 `/etc/filesystems` 文件中每个文件系统条目的 `mount=automatic` 或 `mount=true` 参数指定。要将某个文件系统更改为在系统重启时自动挂载，请使用 `smit chfs` 或 `chfs -A yes filesystem` 命令。
+
+通过在 `/etc/filesystems` 中为组添加 `type=<name>` 参数，文件系统也可以标识为一个组。这由 `chfs -u groupname filesystem` 指定。然后可以使用组名通过单条命令挂载或卸载该组中的所有文件系统：
+
+```
+# mount -t nfs    Mount all filesystems in /etc/filesystems with type=nfs
+```
+
+要显示当前已挂载的文件系统及其状态，请使用 `df` 和 `mount` 命令：
+
+```
+# df -k
+Filesystem     1024-blocks    Free    Used    %Used    Mounted on
+/dev/hd4                      32768    15772     52%     1727     11%  /
+/dev/hd2                    1212416    27084     98%     37319     13%  /usr
+/dev/hd9var                  52240    26812     50%      580      5%  /var
+/dev/hdl                   106496     99872      7%       139      1%  /tmp
+/dev/hd1                       4096     3916      5%        25     3%  /home
+```
+
+| 文件系统 | 1024-块 | 可用 | 已用 | 使用率 | 挂载点 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| /dev/hd4 | 32768 | 15772 | 52% | 1727 | 11% / |
+| /dev/hd2 | 1212416 | 27084 | 98% | 37319 | 13% /usr |
+| /dev/hd9var | 52240 | 26812 | 50% | 580 | 5% /var |
+| /dev/hdl | 106496 | 99872 | 7% | 139 | 1% /tmp |
+| /dev/hd1 | 4096 | 3916 | 5% | 25 | 3% /home |
+| /proc | - | - | - | - | /proc |
+| /dev/hd10pt | 638976 | 22388 | 9% | 15603 | 10% /opt |
+| /dev/lvscripts | 102400 | 75296 | 27% | 651 | 3% /scripts |
+| /dev/lv0 | 40960 | 30612 | 26% | 72 | 1% /storix |
+
+```
+# mount
+node mounted over vfs date options
+---- --- ------------ - ------ ---------- ----------
+/dev/hd4 / jfs Nov 25 11:33 rw,log=/dev/hd8
+/dev/hd2 /usr jfs Nov 25 11:33 rw,log=/dev/hd8
+/dev/hd9var /var jfs Nov 25 11:34 rw,log=/dev/hdd
+/dev/hd3 /tmp jfs Nov 25 11:34 rw,log=/dev/hdd
+/dev/hd1 /home jfs Nov 25 11:34 rw,log=/dev/hd8
+/proc /proc procfs Nov 25 11:34 rw
+/dev/hd10opt /opt jfs Nov 25 11:34 rw,log=/dev/hd8
+/dev/lvscripts /scripts jfs Nov 25 11:34 rw,log=/dev/hd8
+/dev/lv0 /storix jfs Nov 25 11:34 rw,log=/dev/hd8
+```
+
+### 卸载文件系统时的问题
+
+如果您无法卸载文件系统，则说明它正在被使用。即使某人切换到您想要卸载的文件系统的目录，该文件系统也处于使用中，无法卸载。我还看到当人们试图从驱动器中取出 CD-ROM 时，由于 CD-ROM 已挂载，因此舱门无法打开，他们对此感到困惑。
+
+如果您需要立即卸载一个正在使用的文件系统，可以使用带有 `-k`（kill，杀死）开关选项的 `fuser` 命令。例如，如果您想要卸载 `/data01` 但它处于繁忙状态，请尝试以下命令：
+
+```
+# fuser -k /data01
+# mount /data01
+```
+
+### 增加文件系统的大小
+
+可以在运行时使用 SMIT FastPath `smit chfs` 或 `chfs` 命令来增加文件系统的大小。要将 `/home` 文件系统的大小增加到 40960 个 512 字节块，请发出以下命令：
+
+```
+# chfs -a size=40960 /home
+```
+
+> **注意** **size** 参数的数值不需要精确。系统会向上舍入到下一个分区大小。
+
+要为 `/home` 文件系统添加 40MB，请发出以下命令：
+
+```
+# chfs -a size=+81920 /home
+```
+
+### 缩小文件系统的大小
+
+如上所述，可以使用 SMIT 在运行时增加文件系统、逻辑卷或卷组的大小。缩小文件系统的大小需要采用传统方法：备份文件系统、重新创建它并恢复备份。如果您正在调整像 `/usr` 这样的操作系统文件系统的大小，情况会变得更加棘手。让我们以 `/usr` 为例，因为它是最坏的情况。
+
+- 1. 导出任何非 rootvg 卷组。这样更安心。
+  ```
+  # exportvg <VGname>
+  ```
+- 2. 调用 `mksfzfile` 创建当前文件系统属性的 `image.data` 映射文件：
+  ```
+  # mksfzfile
+  ```
+- 3. 使用 `mksysb` 创建 rootvg 备份。
+  ```
+  # mksysb /dev/rmt0
+  ```
+- 4. 从独立介质重新启动系统，在本例中由 AIX 5L 安装光盘 #1 组成。
+- 5. 在 *Welcome To Base Operating System Installation And Maintenance* 菜单中选择 *Change/Show Installation Settings And Install*。
+- 6. 将 *Shrink Filesystems* 选项切换为 Yes。然后系统会提示您选择新的大小。请注意，更改文件系统大小将覆盖步骤 2 中创建的映射。确保保留足够的空间来恢复您的备份映像！
+- 7. 插入 `mksysb` 备份介质并选择 *Continue with choices indicated above*。
+- 8. 恢复完成后重新启动系统，并导入在步骤 1 中导出的非 rootvg 文件系统。
+  ```
+  # importvg <VGname>
+  ```
+
+有关备份和恢复方法的更多信息，请参见第 25 章。
+
+## 页面交换空间
+
+页面交换（swap）空间由 AIX 使用以支持虚拟内存服务。当可用内存变得低或耗尽时，AIX 根据最近最少使用算法将数据页从主内存存储移动到页面交换区域。操作系统维护虚拟内存使用量的阈值。当超过阈值时，向所有进程发送 SIGDANGER 信号。如果超过第二个阈值（称为杀死级别），则操作系统向最大的内存占用者发送 SIGKILL 信号。此过程持续进行，直到内存使用率低于阈值水平。
+
+为了避免发生此类问题，您需要确保有足够的页面交换空间可用。具体数量将取决于您的系统使用概况。您的工作负载所需的平均工作集大小是多少？运行大量具有大工作集的进程的多服务器系统可能需要两倍于可用物理内存的页面交换空间。单用户工作站可能需要的很少，这取决于可用的物理内存和磁盘。页面交换空间以页面交换逻辑卷的形式分配。您可以将页面交换空间拆分为位于不同物理磁盘上的独立逻辑卷，以提高页面交换性能。始终将页面交换分区限制为每块物理磁盘一个！
+
+### 页面交换空间最佳实践
+
+页面交换空间是磁盘存储，当系统物理内存不足时用于临时存储内存页。有些人可能会将页面交换空间称为 *swap* 空间。页面交换空间是一个 LV 属性设置为 paging 的逻辑卷。我们将这种类型的逻辑卷称为页面交换卷逻辑卷（或简称为页面交换空间）。所有页面交换空间都由虚拟内存管理器（VMM）控制。为了使进程运行，它必须加载到物理内存中，但并非所有驻留在内存中的进程都是活动的。VMM 始终扫描内存中内存最旧且使用最少进程。当物理内存不足时，VMM 会将这个使用最少的内存页 *分页换出* 到磁盘上的页面交换空间。当再次需要此页框时，VMM 会将其 *分页换入* 并使其再次准备就绪运行。
+
+VMM 将所有地址空间划分为 256MB 连续虚拟内存地址空间的段。每个这些虚拟内存段进一步划分为 4096 字节的 *页*，或 4KB 页框。您经常会听到 *页错误* 这个术语。页错误可以是新页错误或重页错误。当内存中需要的页尚未引用或近期未被引用时，会发生新页错误。当最近引用的页在内存中未找到时，会发生重页错误，这通常是因为它已被分页换出到磁盘页面交换空间。
+
+首先要记住的是，页面交换空间是用于非活动进程存储区域。页面交换空间 *不是* 物理内存的替代品！系统中活动的进程越多，系统需要的物理内存就越多。如果机器内存太少，它将达到一个不断进行分页换入换出的点，这种状态称为 *抖动*（thrashing）。抖动是一个 VMM 试图通过分页换出来在物理内存中腾出空间的过程，而当进程刚被分页换出时，它立即又被需要，VMM 又将页框分页换入内存。此过程不断重复，机器没有完成任何工作。增加更多页面交换空间不能解决这个问题。唯一的解决方案是增加更多物理内存。抖动的另一个问题是，最终您的机器
+
+
+将会崩溃！你正在耗尽分页空间的第一个迹象是一堆奇怪的错误，例如：
+
+```
+Fork failure - not enough memory available
+Fork function not allowed. Not enough memory available
+fork() system call failed
+Unable to fork, too many processes
+ksh: cannot fork not enough swap space
+INIT: Paging space is low
+Not enough memory
+```
+
+## 添加分页空间
+
+分页空间的需求取决于系统中实际内存的容量。在 BOS 安装过程中，分页空间会自动创建；然而，这对于执行繁重的工作来说总是远远不够的。如果实际内存大于或等于 64MB（AIX5L 的最小值），系统将创建一个等于实际内存加 16MB 的单个分页空间。这不够用！实际所需的分页空间量取决于你运行的应用程序以及系统中实际内存的数量。任何数据库（DB2、Oracle 或 Sybase）都需要大量的内存和分页空间。在我们的 SAP 系统中，内存最低要求为 4GB，而分页空间需求高达数十 GB！在设置分页空间之前，你需要对应用程序的需求进行一些研究。
+
+有两个命令可以显示系统中的实际内存量。两个命令都报告驻留内存，单位为千字节：
+
+```
+lsattr -El sys0 | grep realmem
+bootinfo -r
+```
+
+你需要监控系统如何使用权页空间，以确定是否拥有足够的空间。你可以使用 **lspfs -a** 命令监控每个分页空间，并使用 **lspfs -s** 命令获取所有分页空间的汇总信息。默认的系统分页逻辑卷是 hd6。每个额外的分页空间逻辑卷将被分配为 paging00、paging01，等等。
+
+以下是分页空间最佳实践清单：
+
+1.  每个分页空间的大小应尽可能接近。VMM 使用轮询技术来尝试平衡分页空间的使用。
+2.  不建议在单个磁盘上放置多个分页空间！将每个分页空间放在单独的磁盘上有助于最大限度地减少磁盘 I/O 瓶颈，并确保用于分页空间大小的轮询技术不会失效。然而，你的分页空间应该像镜像根卷组一样进行镜像。
+3.  切勿将分页空间扩展以跨越多个磁盘。由于 VMM 使用轮询技术，磁盘活动将不平衡。
+4.  始终将分页空间逻辑卷放置在磁盘活动最低的磁盘上。你绝不希望系统分页空间和应用程序争夺磁盘 I/O；分页空间将始终获胜，而应用程序将遭受巨大损失。
+5.  将分页空间放置在位于不同磁盘适配器或控制器上的磁盘上。使用多个磁盘控制器将为你提供更佳的吞吐量并提高性能。
+
+要向系统中添加分页空间，你可以使用 **smitty mkps** SMIT FastPath 或 **mkps** 命令。你也可以使用 **smitty chps** SMIT FastPath 或 **chps** 命令更改当前的分页空间分配。分页空间以逻辑分区（LP）为单位分配。以下命令将在 rootvg 卷组中的 hdisk1 上创建一个 8 个 LP 的分页空间，并且将*立即激活*以及在*所有后续系统重启*时激活：
+
+```
+mkps -a -n -s8 rootvg hdisk1
+```
+
+你也可以使用 SMIT 来添加分页空间，如图 11-10 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_241_0.png)
+
+## 激活和停用分页空间
+
+为了使用分页空间，它必须被激活。所有分页空间都定义在 `/etc/swapon` 文件中。你可以使用 **swapon** 命令动态激活分页空间。要激活 *paging03* 分页空间，请执行以下命令：
+
+```
+swapon /dev/paging03
+```
+
+要一次激活所有分页空间，请执行以下命令：
+
+```
+swapon -a
+```
+
+AIX 5L 新增的功能是 swapoff 命令。**swapoff** 命令允许你在系统运行期间停用分页空间！在以前的 AIX 版本中，我们必须将分页空间设置为在系统重启时不激活，然后重启系统。IBM 正越来越接近零停机时间！
+
+要停用 paging03 分页空间，请执行以下命令：
+
+```
+swapoff /dev/paging03
+```
+
+## 移除活动的分页空间
+
+在从系统中移除分页空间之前，必须按照前一部分所示停用该分页空间。要从系统中移除 **paging03** 分页空间，请执行以下命令：
+
+```
+swapoff /dev/paging03
+rmps paging03
+```
+
+## 减小活动分页空间的大小
+
+AIX 5L 新增的功能还包括在运行系统中的分页空间减小其大小（见表 11-5）。IBM 为 chpfs 命令添加了另一个开关，-d。此命令将执行 shrinkps shell 脚本，该脚本会为你处理所有额外的繁琐步骤。如果你想查看该 shell 脚本，它位于 `/usr/sbin/shrinkps`。**SMIT FastPath 为 smitty chps**。
+
+要将 **paging03** 分页空间的大小减少两个逻辑分区，请执行以下命令：
+
+```
+chpfs -d2 paging03
+```
+
+## 卷维护
+
+除了缩小现有文件系统或分页区域大小的情况外，AIX LVM 以及 JFS 和 JFS-2 系统使磁盘管理变得轻而易举。那些“除此之外”的情况仍然需要做一些工作。
+
+## 移动文件系统
+
+你可能希望在系统中移动文件系统的原因有很多。你总是希望将重度使用的文件系统分离到单独的磁盘上。一个很好的例子是将数据库中的索引和数据分离。只要有足够的空闲磁盘空间，文件系统就可以在机器内部移动。如果你的磁盘空间不足，请遵循本章中“增加文件系统大小”部分描述的步骤。
+
+| 命令 | 描述 |
+| :--- | :--- |
+| mkps | 添加额外的分页空间 |
+| rmps | 移除非活动分页空间 |
+| chps | 更改分页空间的属性 |
+| lps | 显示分页空间统计信息 |
+| swapoff | 在运行系统中停用分页空间 |
+| swapon | 激活分页空间 |
+| chps -s | 增加分页空间的大小 |
+| chps -d | 在运行系统中动态减小分页空间的大小 |
+| shrinkps | chps -d 执行的用于缩小分页空间的 Shell 脚本 |
+| svmon | 获取虚拟内存使用情况的快照。属于 perfagent.tools 文件集的一部分 |
+| topas | IBM 的 top/monitor 克隆 |
+| vmstat | 报告虚拟内存统计信息 |
+| sar | 系统活动报告 |
+| iostat | i 节点的状态 |
+| slstclean | 移除内核或库内存中当前未使用的模块 |
+| ps | 显示进程的当前状态 |
+
+表 11-5. 分页空间实用命令
+
+## 在同一个卷组内移动逻辑卷
+
+要将文件系统逻辑卷迁移到同一卷组内的另一个物理卷，请使用 **migratepv** 命令或 **smitty migratepv** SMIT FastPath。
+
+- 使用 lslv 识别当前逻辑卷位置并生成物理磁盘映射。
+- 使用 **migratepv -l** 命令将逻辑卷移动到新位置。
+
+例如，要将 rootvg 中 hdisk1 上的 paging03 分页空间移动到 hdisk2，请执行以下命令：
+
+```
+# migratepv -l paging03 hdisk1 hdisk2
+```
+
+## 在卷组之间移动逻辑卷
+
+要将逻辑卷移动到不同的卷组，我们使用复制 LV 命令，**cplv**。例如，要将 dat01 LV 从 rootvg 移动到 appvg，请执行以下三个命令：
+
+```
+# cplv -v appvg -y new01 dat01
+# chlv -n old01 dat01
+# chlv -n dat01 new01
+```
+
+## 移动卷组
+
+你还可以使用 **exportvg** 和 **importvg** 命令或 **SMIT vg** FastPath 将卷组从一个系统移动到另一个系统。
+
+1.  卸载所有文件系统，并停用包含在要移动的卷组中的任何分页区域。
+2.  使用 **exportvg** 导出卷组。
+3.  将包含卷组的物理磁盘移至新系统，并运行 **cfgrmgr** 以检测和配置磁盘。
+4.  在新系统上使用 **importvg** 导入卷组。所有表引用将自动更新。
+5.  在新系统上挂载文件系统并激活分页空间。
+
+## 故障排除
+
+解决磁盘硬件、LVM 和文件系统问题通常需要深入了解导致问题的事件历史。对于硬件问题：
+
+- 使用 **errpt** 命令检查错误日志。
+- 检查电缆。
+- 检查 SCSI 终端器。
+- 检查 SCSI ID 跳线或开关设置。
+- 验证 SSA 环路。
+- 从独立 CD-ROM 或运行 **diag** 程序进行诊断。
+
+对于与 LVM 相关的问题，请尝试通过导出问题卷组随后导入来重新同步 ODM 和配置表条目。你可以使用 **lslv** 显示逻辑卷属性和映射来缩小问题区域。如果文件系统已损坏，请使该文件系统离线并运行 **fsck** 命令，该命令将遍历文件系统结构并识别问题条目或
+
+
+
+链。偶尔，与卷组相关的 ODM 更新可能会中止，导致卷组处于锁定状态。要解锁卷组，请以卷组名称作为参数执行 **getlodvm**/**putlodvm** 序列。
+
+```
+# chvg -u rootvg
+```
+
+### 检查清单
+
+以下是关于*存储硬件*和*逻辑卷管理器*要点的检查清单：
+
+- □ 使用 **diag** 命令来故障排除 IBM *串行存储架构* (SSA) 子系统。
+- □ 物理卷 (PV) 是一个单独的磁盘存储部件。PV 可以是单个磁盘驱动器，也可以是单个 **RAID** 多磁盘阵列。
+- □ 卷组 (VG) 是一个或多个物理卷 (PV) 的集合。
+- □ 物理分区 (PP) 是 PV 或物理卷的一小块。PP 是存储的基本构建单元。
+- □ 逻辑分区 (LP) 是磁盘驱动器上物理分区 (PP) 的映射。
+- □ 逻辑卷 (LV) 是同一卷组 (VG) 中一个或多个逻辑分区 (LP) 的集合。
+- □ 繁忙的文件系统应位于物理磁盘的中心（称为*盘内策略*），并将数据分散到多个物理磁盘或 PV 中。
+- □ AIX 5L 提供热点管理功能，能够识别出 I/O 活动过多从而降低系统性能的逻辑分区，并将单个 LP 从一个磁盘移动到另一个磁盘。
+- □ 使用 **lvmstat** 命令启用统计信息的收集，以便进行热点监控。
+
+![](img/82f851021955589d82b22750fb3b1646_246_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_247_0.png)
+
+## 第 12 章
+
+### *打印机和打印子系统*
+
+![](img/82f851021955589d82b22750fb3b1646_247_1.png)
+
+AIX 5L 新增了对 System V 打印机服务的支持。为了支持 System V，IBM 在 AIX 操作系统中添加了新用户（lp 用户）和新 lp 组。
+
+IBM 在 AIX 5L 中使用的 System V 版本是 System V 打印子系统的第 4 版（SRV4）。您可以在 POWER 系统上运行经典 AIX 或 System V 打印机子系统。您必须选择其中一个，因为它们不能同时运行，但您可以在 AIX 和 SRV4 之间切换。对于基于 Itanium 的系统，经典 AIX 打印机子系统不可用。默认的打印机子系统是 System V SRV4 版本。在 POWER 系统上，AIX 和 SRV4 子系统均可用，但 AIX 打印机子系统是默认的。AIX 的长期目标是使 System V 成为所有平台的默认打印子系统。在我们深入研究 System V 打印机子系统之前，有必要回顾一下 AIX 打印。
+
+经典 AIX 打印机子系统提供了一套丰富的命令和配置选项，远远超出了许多其他 UNIX 实现提供的打印功能。在开发 AIX 打印机子系统时，它是结合 System V 和 BSD 标准创建的。然后，IBM 添加了一些仅在 AIX 中可用的独特功能。由于 AIX 打印机子系统是结合多种标准设计的，因此大多数 System V 和 BSD 命令都已提供，所以可以轻松地过渡到 AIX。如果您熟悉传统的 BSD 或 System V 打印环境，您会发现 AIX 打印子系统不仅与这些环境具有互操作性，而且还存在一些重大差异。
+
+AIX 中的打印子系统由旨在满足大多数网络环境中分布式打印技术需求的命令组成。大多数这些命令提供用户界面级别与 BSD、System V 和旧版 AIX 的兼容性支持。熟悉 BSD 打印命令的用户在使用 AIX 系统打印文件时，能够使用相同的命令和选项。System V 命令也是如此。更棒的是，AIX 还提供了另一个命令 enq，它可以完成其他命令所能执行的绝大多数任务。
+
+从 AIX 4 开始，通用暂存器配置简化为两个步骤。您定义代表连接到系统的打印机设备的打印机型号。接下来，您添加打印队列以保存等待输出到设备的文件。使用 SMIT 或 WebSM 可以在一步中完成所有这些操作。这两个管理界面都会引导您完成添加打印机和打印队列的步骤。这将在下面的章节中详细介绍。
+
+### 打印作业的数据流
+
+每次您提交*本地打印*作业时，该作业都会经过一个队列，就像站在排成一列的人一样。用户和应用程序使用以下命令之一提交打印作业：`qprt`、`lp`、`lpr` 或 `enq`。无论使用哪个命令，作业都由 `enq` 命令提交给暂存器。`enq` 命令负责处理作业。因此，前面列出的许多命令都会被翻译为带有适当命令参数的 `enq` 命令。`enq` 命令创建一个作业描述文件（JDF），并向 `qdaemon` 发送通知，表明已提交了一个新作业。
+
+`qdaemon` 做您预期的事情：它始终运行以管理队列。`qdaemon` 在启动时从 `/etc/inittab` 文件启动。此外，`qdaemon` 受系统资源控制器（SRC）控制，因此您可以随时使用以下命令手动启动、停止和刷新 `qdaemon`：
+
+```c
+# startsrc -s qdaemon
+# refresh -s qdaemon
+# stopsrc -s qdaemon
+```
+
+`qdaemon` 通过维护所有已定义队列的列表来维护打印队列，并负责监控队列中的新打印作业。当提交新作业时，如果打印机资源当前可用，`qdaemon` 将尝试处理该作业。如果资源不可用，作业将被排队，`qdaemon` 稍后尝试打印该作业。
+
+经典 AIX 打印机子系统的排队系统具有特定的流程。每次提交新作业时，都会遵循以下八个步骤：
+
+1. 无论使用哪个打印命令，都会调用 `enq` 命令，该命令检查队列名称的有效性，并确保命令参数正确。如果一切都通过测试，作业将继续；如果发现任何问题，作业将被拒绝，用户将收到错误消息。
+2. 接下来，`/var/spool/lpd/qdir` 目录接收到一个条目以识别新的打印作业。某些命令选项允许制作打印文件的副本，如果您想捕获文件的某个时间点快照，这是一个好主意。如果需要制作源文件的副本，则文件副本将放置在 `/var/spool/lpd/qdaemon` 目录中。
+3. 此时，`qdaemon` 被通知在 `/var/spool/lpd/qdir` 目录中存在一个新作业。
+4. 当作业到达队列顶部，或队伍的前面时，`qdaemon` 读取 `/etc/qconf/qconf` 文件以获取队列的描述。`/etc/qconfig` 文件包含系统中每个队列的描述。
+5. 当队列开始处理作业时，`qdaemon` 向 `/var/spool/lpd/stat` 文件发送更新，显示该作业处于活动状态。
+6. 该队列的 `backend` 程序由 `qdaemon` 启动，并接收作业的.FileName 和打印选项，这些内容被转换成一个命令行语句。
+7. Backend 将所有部分组装在一起。带有属性的文件被组装成一个数据流，该数据流存储在 `/var/spool/lpd/pio/@local` 目录中的虚拟打印机定义中。
+8. 最后，由 backend 程序将数据流发送到打印机设备驱动程序进行打印。
+
+如果文件被*暂存*，该文件的一个副本将保留在 `/var/spool/qdaemon` 目录中，直到作业完成打印。这确保暂时存储到打印机的文件与您发出打印命令时相同。这允许您修改或编辑原始文件。这不会影响打印机输出。
+
+然而，当文件被*排队*时，原始文件的指针放置在 `/var/spool/lpd/qdir` 目录中。如果在文件打印之前修改了原始文件，则会打印*更新后*的文件。
+
+> **注意：** 在 `/var` 文件系统中的所有这些暂存可能会填满该文件系统。因此，请密切关注 `/var`，以确保不会用完文件系统空间。
+
+### 重要文件及其作用
+
+在经典 AIX 打印子系统中使用六个文件。每个文件都有保持队列流动的责任。有关详细信息，请参见表 12-1。
+
+**表 12-1. 打印文件和目录**
+
+| 文件或目录 | 功能 |
+| :--- | :--- |
+| /etc/qconfig | 描述每个队列可用的队列和设备配置的队列配置文件。 |
+| /var/spool/* | 包含由守护程序和程序使用的暂存目录和文件的目录。 |
+| /var/spool/qdaemon | 包含已暂存文件副本的目录。 |
+| /var/spool/lpd/stat/* | 包含打印作业状态信息的目录。 |
+| /var/spool/lpd/qdir/* | 包含队列请求和排队文件信息的目录。 |
+| /var/spool/lpd/pio/@local | 包含虚拟打印机定义的目录。这是打印机属性和数据流类型属性的合并点。 |
+
+
+
+
+## 什么是 qdaemon？
+
+qdaemon 负责调度作业并管理队列。它在系统启动时通过 `/etc/inittab` 文件中的 `startsrc` 命令启动，并且可以使用系统资源控制器（SRC）在命令行上通过 `startsrc`、`stopsrc` 和 `refresh` 命令进行启动、停止和刷新操作。
+
+qdaemon 使用 `/etc/qconfig` 文件来控制其活动。`/etc/qconfig` 文件以 stanza（节）格式包含系统中每个已定义队列的队列定义。`/etc/qconfig` 文件中的每个 stanza 控制打印队列的不同方面，例如定义指向特定打印机的队列设备、后端程序以及可用于打印队列的管理选项。
+
+为了处理每个打印请求，qdaemon 会调用 `/etc/qconfig` 中目标打印队列 stanza 中指定的后端程序。使用两种后端程序。对于本地打印作业，即发送至本地连接打印机的作业，使用 `/usr/lib/lpd/piobe` 后端程序。对于远程打印机，使用 `/usr/lib/lpd/remback` 后端程序。
+
+后端程序通过设置打印机属性使打印机准备好打印。如果启用了页眉和页脚页，后端程序也会打印它们。
+
+`/etc/qconfig` 文件是用于自定义队列的机制。每个条目都采用 stanza 格式，主要有两种类型的 stanza。第一种是队列 stanza，以队列名称开头。每个队列 stanza 最长可达 20 个字符，并且必须以冒号结尾。队列 stanza 指向该队列的打印机设备。系统的默认打印队列被定义为 `/etc/qconfig` 文件中的第一个条目。当使用 SMIT 或 WebSM 设置默认队列时，所做的唯一操作就是将队列 stanza 移动到文件顶部。
+
+### 我的机器上的 /etc/qconfig Stanzas 文件列表
+
+```text
+hp4:
+      device = lp0
+
+lp0:
+      file = /dev/lp0
+      header = never
+      trailer = never
+      access = both
+      backend = /usr/lib/lpd/piobe
+
+hp4-ps:
+      device = lp0
+
+lp0:
+      file = /dev/lp0
+      header = never
+      trailer = never
+      access = both
+      backend = /usr/lib/lpd/piobe
+
+hp4-gl:
+      device = lp0
+
+lp0:
+      file = /dev/lp0
+      header = never
+      trailer = never
+      access = both
+      backend = /usr/lib/lpd/piobe
+```
+
+任何用户都可以定义一个默认打印机，以覆盖 `/etc/qconfig` 文件中的第一个条目。用于定义不同默认打印机的环境变量是——你猜对了——PRINTER。每位希望定义默认打印机的用户都必须设置此变量。在 `.profile` 中添加条目是最简单的方法。要定义 `hp4-ps` 打印队列为默认队列，请输入以下命令：
+
+```bash
+# export PRINTER=hp4-ps
+```
+
+## 配置 AIX 打印机
+
+首先要查看的是 SMIT 菜单。使用 SMIT 快速路径 `smit spooler` 是一个不错的起点（见图 12-1）。
+
+可以通过选择 SMIT 选项 `Add A Print Queue`（添加打印队列）从 SMIT 面板中添加打印机。SMIT 将显示一个面板，从中选择打印机连接类型（见图 12-2）。
+
+在此示例中，您将选择一个本地连接的打印机，因此从 `Add A Print Queue` 面板中选择 `Local`（本地）。这将打开下一个 SMIT 面板；选择 `Printer Type IBM`（打印机类型 IBM），如图 12-3 所示。
+
+下一个 SMIT 面板是预定义的 IBM 打印机驱动程序列表，这些驱动程序被定义为打印机型号（见图 12-4）。如果未在安装介质中安装您所选打印机型号的相应软件，系统将提示您插入安装介质以安装打印机驱动程序，然后才能继续配置打印机，如图 12-5 所示。然而，如果在安装打印机驱动程序期间未选择 `List`（列表）选项，系统将安装安装介质上的所有打印机型号，这将极大地浪费磁盘空间！在此示例中，选择 `IBM 4039 Laser Printer`（IBM 4039 激光打印机）。
+
+接下来，系统会提示输入 `Printer Interface Selection`（打印机接口选择），如图 12-6 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_253_0.png)
+
+图 12-1。Print Spooling（打印调度）SMIT 面板
+
+该 SMIT 面板之后是 **Parent Interface Selection**（父接口选择）面板，如图 12-7 所示。
+
+现在显示了最后一个 SMIT 面板，**Add a Print Queue**（添加打印队列）。在此面板中，您添加要添加的打印队列名称。对于 IBM 4039 打印机，有两种打印队列选项：PCL 和 PostScript。我正在添加两种类型打印的队列，如图 12-8 所示。
+
+输入打印队列名称并点击 **OK**（确定）后，SMIT 将创建打印队列并将队列设置为启用状态。
+
+![](img/82f851021955589d82b22750fb3b1646_254_0.png)
+
+图 12-2。Add A Print Queue SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_254_1.png)
+
+图 12-3。Select Printer Type SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_255_0.png)
+
+图 12-4。Select Printer Model SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_255_1.png)
+
+图 12-5。Printer Support Not Installed SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_256_0.png)
+
+图 12-6。Printer Interface Selection SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_256_1.png)
+
+图 12-7。Parent Interface Selection SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_257_0.png)
+
+**图 12-8。Add A Print Queue SMIT 面板**
+
+您还可以使用 `wsm` 命令通过基于 Web 的系统管理器（Web-Based System Manager）配置打印机。主 WebSM 打印机窗口如图 12-9 所示。
+
+## LPD 守护进程
+
+来自基于 TCP/IP 网络的传入打印请求由 `/usr/sbin/lpd` 守护进程管理。`lpd` 守护进程管理来自网络传入的作业请求，并将其存入适当的队列，以便 `qdaemon` 随后进行处理。与 `qdaemon` 类似，`lpd` 守护进程是一个子系统，可以通过将其添加到 `/etc/inittab` 中作为系统启动和关闭处理的一部分启动，或者根据需要从命令行启动。`/var/spool/lpd/stat/pid` 文件包含当前运行的 `lpd` 守护进程的 PID。
+
+```bash
+# startsrc -s lpd    # 启动 lpd 守护进程
+# refresh -s lpd     # 刷新 lpd 守护进程
+# stopsrc -s lpd     # 停止 lpd 守护进程
+```
+
+![](img/82f851021955589d82b22750fb3b1646_258_0.png)
+
+图 12-9。Web-Based System Manager 打印机管理窗口
+
+为了控制哪些远程系统可以与 lpd 通信并访问您的本地队列，您必须将每个远程系统的主机名添加到 /etc/hosts.lpd 文件中。hosts.lpd 文件中的一个加号（+）字符表示任何远程系统都可以访问您的本地队列。
+
+以下是 /etc/hosts.lpd 的一个示例：
+
+```text
+# /etc/hosts.lpd
+
+# This file, along with the /etc/hosts.equiv file, defines which foreign
+# hosts are permitted to remotely print on your host. To allow a user
+# from another host to print on your host, that foreign hostname must be
+# in this file or in /etc/hosts.equiv. The lpd daemon searches
+# /etc/hosts.equiv before this file, so the definitions in it take
+# precedence.
+#
+# The format of this file is as follows:
+#
+# [!-]hostname
+#
+# The hostname can be preceded by a '-' character to deny access. If you
+# are using NIS, the hostname may be in the form:
+#
+# +@netgroup
+# -@netgroup
+#
+# where "netgroup" is an NIS netgroup defined in the netgroup map. The
+# '+' form allows access to any host in the netgroup, while the '-' form
+# denies access to any host in the netgroup.
+#
+# Lines beginning with a '#' character and blank lines are ignored.
+#
+# Examples:
+#
+# host
+# -host
+# +@group
+# -@group
+wilma
+dino
+booboo
+banbam
+daffy@mydomain.com
+```
+
+与远程 `lpr` 守护进程的通信由 **writersrv** 子系统处理。如果遇到问题，无法与响应其他网络服务的远程系统通信，请确保 **writersrv** 子系统正在运行并且正在监听套接字。
+
+```bash
+# lsarc -s writersrv    # 验证子系统是否处于活动状态
+# ps -ef | grep writesrv # 验证进程是否正在运行
+# netstat -a | grep writersrv # 验证套接字连接是否正在监听
+```
+
+## 配置打印服务器
+
+既然您的机器现在已有一个本地打印机连接到一个打印队列，将此服务器变成打印服务器的过程就很容易了。在打印服务器端需要做的唯一事情是将客户端机器添加到 `/etc/hosts.lp` 文件中，并启动 `lpd` 守护进程。您可以将条目以主机名的形式添加到 `/etc/hosts.lp` 文件中，也可以使用 IP 地址。我倾向于不硬编码任何 IP 地址
+
+
+任何事物。始终建议使用主机名，因为机器的 IP 地址可能会在某个时间点发生变化。
+
+将客户端机器添加到 `/etc/hosts.lpd` 文件并启动 `lpd` 守护进程的最简单方法是通过 SMIT。用于将主机添加到 `/etc/hosts.lpd` 文件的 SMIT FastPath 是 `smit mkhostslpd`，在打印服务器端执行（参见插图）。
+
+![](img/82f851021955589d82b22750fb3b1646_260_0.png)
+
+打印服务器上的最后一步是启动 `lpd` 守护进程。使用 SMIT 是首选方法，因为 SMIT 将在 `/etc/inittab` 文件中创建必要的条目，以便在后续系统重启时自动启动该守护进程。由于 `lpd` 守护进程受系统资源控制器 (SRC) 控制，您也可以使用以下命令手动启动、停止和刷新 `lpd` 守护进程。
+
+```
+# startsrc -s lpd
+# stopsrc -s lpd
+# refresh -s lpd
+```
+
+用于启动 `lpd` 守护进程并由 SMIT 在 `/etc/inittab` 中添加条目的 SMIT FastPath `smit mkkitab_lpd` 如图 12-10 所示。
+
+### 添加远程打印队列
+
+在客户端，我们需要定义远程打印队列。对于远程打印队列，我们使用与定义本地打印队列相同的许多技术。主要区别在于我们将 **Printer Attachment Type**（打印机连接类型）选择为 **Remote**（远程），而不是 **Local**（本地）。我们还在客户端定义打印服务器。在图 12-11 中，选择了远程打印机连接。
+
+选择 **Remote**（远程）将显示下一个面板，您可以在其中定义如果要为此远程打印机使用的任何过滤类型。对于大多数配置，**Standard Processing**（标准处理）即可完成所需的工作。过滤面板如图 12-12 所示。
+
+我选择了 **Standard Processing**（标准处理），这使得 SMIT 面板出现以定义远程队列，如图 12-13 所示。值得注意的是，AIX 不仅支持 AIX 的远程排队，还支持 BSD 和 System V 打印子系统。要选择不同的打印子系统，请选择 **Type Of Spooler On The Remote System**（远程系统上的打印后台程序类型）行旁边的 **List**（列表）按钮。
+
+![](img/82f851021955589d82b22750fb3b1646_261_0.png)
+
+图 12-10。启动打印服务器子系统 SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_261_1.png)
+
+图 12-11。打印机连接类型 SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_262_0.png)
+
+图 12-12。远程打印类型 SMIT 面板
+
+![](img/82f851021955589d82b22750fb3b1646_262_1.png)
+
+图 12-13。添加标准远程打印队列 SMIT 面板
+
+## HP JetDirect
+
+HP JetDirect 打印机被广泛使用，本节简要概述了在此环境中配置这些打印机所需的步骤。第一步是确保 JetDirect 卡上的驱动程序已安装在*本地* AIX 机器上。要检查文件集，请输入以下命令：
+
+```
+# lslpp -l printers.hpJetDirect.attach
+```
+
+响应应类似于以下输出：
+
+| Fileset Level State Description |
+| :--- |
+| ------------------------------------------------------------ |
+| Path: /usr/lib/objrepos |
+| printers.hpJetDirect.attach 5.1.0.0 COMMITTED Hewlett-Packard JetDirect |
+| Network Printer Attachment |
+
+如果您的系统上未安装 `printers.hpJetDirect.attach` 文件集，则需要从当前操作系统级别的 AIX 安装介质进行安装。使用 SMIT FastPath `smit installp`。
+
+下一步是配置远程打印机。您可以使用 WebSM 或 SMIT 来配置远程队列。要使用 WebSM，在命令提示符下输入 `wsm` 并选择 **Printers**（打印机）。在 **Printer Queues**（打印机队列）窗口中，使用菜单选项填写所有打印机信息，并确保选择 HP JetDirect 连接。
+
+对于 SMIT，使用 FastPath `smit mkip`。使用 **Printer Queues**（打印机队列）菜单通过选择 hpJetDirect，然后选择正在安装的打印机型号来配置打印机。如果您未看到列出的确切打印机，您可能能够在安装 CD-ROM 上找到驱动程序。如果您找不到确切的打印机，请不要惊慌。只需选择一个类似的型号，打印机就能正常工作。当然，如果打印机在预定义列表中但未在您的系统上安装，系统将提示您安装驱动程序。
+
+在下一个面板中，请选择 **Do NOT Make This System A BOOTP/TFTP Server**（不要将此系统设为 BOOTP/TFTP 服务器）。在 Add A Print Queue（添加打印队列）面板中，填写新打印机的队列名称。您可以输入任何或所有打印队列类型：PCL、PostScript 和 HP-GL/2。然后填写 JetDirect 卡的主机名。对于远程打印队列，必须使用主机名而不是 IP 地址，因为系统会将设备名称截断为 IP 地址的第一八位组，导致同一子网上的两台打印机出现设备名称冲突。现在您可以开始操作了。
+
+## 自定义后端
+
+您可能希望使用自己的自定义 shell 脚本和程序作为队列后端。如果您的后端应用程序需要访问由 `qdaemon` 处理的变量和数据，则在 `/usr/lib/libq.da` 中提供了一套例程库，允许您与排队系统的元素进行通信。通常，您的后端程序应写入标准输出。
+
+## 自定义横幅页
+
+如果您要为本地队列使用页眉和/或页脚页，您可以自定义其格式，以匹配环境中其他系统使用的格式。爆发页（burst pages）的格式模板存储在 `/usr/lpd/pio/burst` 目录中。对于每个格式模板，使用文件名前缀 `H` 表示页眉定义，`T` 表示页脚。提供了 ASCII、绘图仪和 PostScript 横幅的示例定义。模板由程序、文本和变量部分组成。变量以百分号 (%) 为前缀，如表 12-2 所示。
+
+以下是 H.ascii 横幅的一个示例：
+
+```
+* ******************************************************************************
+*
+******************************************************************************
+H
+* ******************************************************************************
+*                                                                           *
+* ******************************************************************************
+*
+******************************************************************************
+
+tt tt
+
+tp tp
+
+tq tq
+
+th hh
+
+ts ts
+
+td ====> td <====
+
+
+******************************************************************************
+* ******************************************************************************
+*                                                                           *
+******************************************************************************
+
+ta
+
+tA
+```
+
+您可能希望将此目录中自己的自定义横幅定义添加进来。使用现有的页眉或页脚页作为模板。您可以通过 SMIT FastPath `smit chpq` 更新相关的队列条目。
+
+请记住节约纸张。仅在需要时使用爆发页。您还可以通过分组指定单个页眉和/或页脚页将用于特定用户的所有排队文件。鼓励用户进行回收利用，并在打印机和绘图仪附近设置回收箱。
+
+| Variable | Meaning |
+| :--- | :--- |
+| %A | 格式化标志值 |
+| %U | 横幅用户名 |
+| %H | 机器名称 |
+| %P | 打印时间 |
+| %Q | 排队时间 |
+| %S | 提交用户名 |
+| %T | 标题 |
+| %% | 百分号的转义符 |
+
+**表 12-2。** 横幅模板变量
+
+## 测试和修改打印机配置
+
+您可以使用与测试硬件接口和驱动程序相同的工具来测试虚拟打印机、队列、队列设备和打印设备的组合。使用 /usr/bin/cat 或 /usr/bin/lptest 命令时，只需使用虚拟打印机、队列或队列设备名称即可。
+
+```
+# cat [FileName] | lp
+# lptest [Columns] [Lines] | lp
+```
+
+不言而喻，您必须像最终用户那样验证 AIX 打印子系统的操作。基于用户社区使用的环境，制定一组简短的打印命令和选项测试套件，以在每次做出更改时验证子系统。根据用户群体的不同，您可能需要测试所有 AIX、BSD 和 System V 命令。
+
+当您显示或修改配置时，请记住 AIX 使用双字符命令和 SMIT FastPath 前缀方案，并带有代表虚拟打印机（`vprt`）、打印队列（`pq`）和打印设备（`prt`）的独特后缀。这些前缀通常是 `mk`（添加）、`ls`（列出）、`ch`（更改）和 `rm`（删除）组件。例如，创建、列出、修改和删除打印队列的 FastPath 名称分别是 `mkpq`、`lspq`、`chpq` 和 `rmpq`。虽然并不总是如此，但您可能会发现这是一个有用的规则，可以减少您在 DocSearch 中花费的时间。在某些情况下，您需要先删除条目然后重新添加，以进行所需的修改。
+
+## 管理 AIX 打印机
+
+AIX 中的队列管理和管理任务可以通过一个命令 /usr/bin/enq 来处理。AIX 提供了 enq 的包装程序，可能更容易记住，但在大多数情况下它们使用相同的选项。一旦您掌握了选项集，它
+
+
+使用 **enq** 可能更容易。如果您熟悉 BSD 或 System V 打印管理命令，可以在 AIX 环境中使用这些命令，以在异构环境中保持一致性。为了便于讨论，我们将重点介绍 **enq** 及其包装器对应程序。您可以使用 SMIT 和 WebSM 执行这些功能。用于管理队列的 SMIT FastPath 是 **smit pmanage**。队列子系统的基本管理职责包括启动和停止访问、列出队列作业及状态、提升队列中作业的优先级、从队列中删除作业以及在队列之间移动作业。`enq` 命令及其相关的包装程序可以利用表 12-3 中列出的选项，将上述每项任务的操作范围聚焦于所有作业或队列、特定队列、特定用户或特定作业。
+
+## 启动和停止队列及打印机
+
+有时您可能需要停止某个队列，原因可能是设备故障，或者是为了在接受更多打印请求之前清除积压的作业。使用 **disable**、**qadm** 或 **enq** 命令来操纵队列或设备的可用性。请注意，这些命令对远程队列没有影响。若要阻止 **qdaemon** 向队列发送更多作业并让当前队列中的作业完成打印，请使用：
+
+```
+# qadm -D <queue_name>
+# enq -D P <queue_name>
+# disable <queue_name>
+```
+
+若要阻止 **qdaemon** 将更多作业加入队列并终止当前正在打印的作业，请使用：
+
+```
+# qadm -K <queue_name>
+# enq -K P <queue_name>
+# disable -c <queue_name>
+```
+
+若要使队列和打印机重新联机，请使用：
+
+```
+# qadm -U <queue_name>
+# enq -U <queue_name>
+# enable <queue_name>
+```
+
+| 选项 | 作用范围 |
+| :--- | :--- |
+| -A | 所有队列 |
+| -P printer | 特定打印机 |
+| -u user | 特定用户 |
+| -# number | 特定作业 |
+| -L | 长格式输出 |
+| -j | 报告作业编号 |
+
+表 12-3. enq 命令选项
+
+## 列出打印作业
+
+为了操纵队列子系统中的作业或查看其状态，您需要显示每个队列的内容。这可以通过 qchk、enq 和 lpstat 命令完成。所有这些命令具有相似的显示格式。若要列出所有队列中的打印作业，请输入以下其中一个命令：
+
+```
+# qchk -A
+# enq -A
+# lpstat
+```
+
+若要列出特定打印机队列中的作业，请使用：
+
+```
+# qchk -P <queue_name>
+# enq -q -P <queue_name>
+```
+
+```
+Queue Dev Status Job Files User PP Bks Cp Rank
+------------------------------------------------------------
+hp4 lp0 DOWN
+35 smit.script root 40 1 1
+QUEUED
+36 payroll.rpt izar 20 1 2
+QUEUED
+```
+
+显示结果将按队列和设备、状态、作业编号、文件名、提交用户、已打印百分比、以块为单位的大小、副本数量以及优先级列出作业。您可以利用这些字段中的信息来操纵队列中的作业。状态字段提供了关于队列、设备以及当前作业状态的反馈（见表 12-4）。
+
+| 状态 | 状态描述 |
+| :--- | :--- |
+| READY | 打印机正在接受打印请求 |
+| DOWN | 打印机离线 |
+| UNKNOWN | 打印机状态未知 |
+| QPR_WAIT | 打印机正在等待操作员响应 |
+| DEV_WAIT | 打印机未就绪 |
+| RUNNING | 打印作业正在排队或打印中 |
+| QUEUED | 打印作业已就绪，等待打印 |
+
+**表 12-4. 打印机状态**
+
+## 更改优先级
+
+有时特殊情况要求您更改队列中作业的优先级，以覆盖默认的排队规则。您可能希望推迟打印一个大作业，或者某位不耐烦的用户正倚着您的肩膀，露出那种“我昨天就需要这个”的神情。若要更改作业在队列中的位置，请使用 qpri 或 enq 命令。若要提升作业的优先级，请为其分配一个较高的数值。您无法更改远程队列中作业的优先级。一旦优先级被更改，您应该看到该作业相对于队列中其他作业的位置变化值反映在 rank 字段中。
+
+```
+# qpri  -a[JobNumber] -a[Priority]
+# enq   -P <queue_name> - # [JobNumber] -a [Priority]
+```
+
+## 删除打印作业
+
+若要删除队列中的打印作业，请使用 qcan、enq 或 cancel 命令。如果您想删除的作业正在打印中，您必须先停止打印机，然后再删除该作业：
+
+```
+# qcan -P[Printer] -x[JobNumber]
+# enq   -P[Printer]  -x[JobNumber]
+# cancel JobNumber [QueueName]
+```
+
+如果情况要求您删除队列中的所有作业，请使用 -X 标志。
+
+```
+# qcan -P[Printer] -X
+# enq  -P[Printer] -X
+```
+
+## 在队列中保持作业
+
+有时您只想暂时保留打印作业，稍后再释放出来进行打印。qhold 命令用于在队列中暂时保留打印作业。该命令也用于释放队列中的打印作业以进行打印。
+
+假设您想保留队列中编号为 1555 的打印作业。由于打印作业编号是唯一的，因此您无需指定队列名称。以下命令将保留作业编号 1555：
+
+```
+# qhold  -P<Printer> -#1555
+# enq    -P<Printer> -h -#1555
+```
+
+编号为 1555 的打印作业的状态将切换为 HELD。
+
+若要释放队列中编号为 1555 的打印作业以进行打印，请使用以下命令：
+
+```
+# qhold -P<Printer> -r -#1555
+# enq   -P<Printer> -p -#1555
+```
+
+您还可以使用 SMIT FastPath smit qhld。
+
+## 在队列之间移动作业
+
+有时，队列可能会挂起或因某种原因不可用。您可以使用 **qmov** 命令在队列之间移动打印作业。**-m** 命令参数指定将作业移动到哪个队列。同样，仅使用作业编号，我们可以使用命令对单个打印作业执行操作。如果我有一个作业编号为 1557 的作业，它当前排在 hp9-ps 打印队列中，而我想将此作业移动到 f13hp4-ps 打印队列中，那么我发出以下命令来完成该任务：
+
+```
+# qmov -mf1hp4-ps -#1557 -P9p9-ps
+# echo '-Q'f1hp4-ps'' -#'1557' -P'ph-p9'
+```
+
+现在，该作业已排在 f13hp4-ps 打印队列中。
+
+## 保持打印机处于打印状态！
+
+如果您拥有大量远程打印机且网络带宽较小，可能会遇到打印队列进入 DOWN 状态的情况。通常，队列停止工作是由于通信超时造成的。我曾在一家医院工作，那里在各地的分院诊所拥有数百台远程打印机。如果我没有编写一个 shell 脚本来查询打印队列，我会花一整天时间忙于保持打印队列正常运行，而不是做任何有意义的工作。
+
+为了解决 DOWN 打印队列问题，您可以在 shell 脚本中加入以下代码，并使用 cron 表条目每 15 分钟执行一次该脚本：
+
+```
+QDOWN=$(eq -A | tail -3 | grep DOWN | awk '{print $1}' )
+[[ $QDOWN = '' ]] && exit 0
+for q in $(echo $QDOWN)
+do
+qadm -U $Q
+done
+```
+
+如果您有一台打印机无法联机，那么要么打印机已关闭，要么网络连接已断开（尝试 ping 远程打印服务器），要么打印机和/或打印服务器可能需要重新启动，要么 qdaemond 和 lpdd 守护程序可能未在运行。如果您与开发人员合作，有时他们会无意中打印二进制文件而不是源代码，这会消耗大量纸张并可能导致打印队列停止工作。
+
+采取主动措施可以阻止大量来电，并腾出您的时间去处理更有趣的工作。
+
+## 高可用性打印队列
+
+对于高可用性领域，因系统故障导致打印作业丢失是不可接受的。不仅人员会提交打印作业，而且许多应用程序会花费大量时间对数据进行排序和计算，然后将其发送到打印机。丢失其中一个这样的打印作业是一个重大的不便，甚至可能对整体业务产生重大的负面影响。
+
+对于这些情况，您的业务可能需要考虑高可用性打印队列。要实现这一点，您需要一个 HACMP 集群，该集群至少有两个节点（有关 HACMP 的更多信息，请参见第 28 章）。任何*直接*连接到集群节点的打印机在系统故障时将变得不可用。然而，将打印机连接到 LAN 可以轻松解决不可用性问题。
+
+将打印机连接到 LAN 至少有四种可能的方式：
+
+- 1. 将打印机连接到*远程* RS/6000 或 pSeries 机器。该远程机器必须运行 **lpd** 守护程序。使用这种方法将使打印机对整个集群可用，但打印服务器故障会导致打印机对整个集群不可用。
+- 2. 将打印机连接到 LAN 上的终端服务器。某些终端服务器，如 IBM 7318 Network Server，可以连接串行和并行设备，例如打印机和终端。
+- 3. 使用集成 LAN 适配器的打印机。这种方法允许您将打印机直接连接到 LAN。
+- 4. 使用内部或外部 HP JetDirect 打印服务器将打印机直接连接到 LAN。这类似于第三种选项。
+
+一旦打印机连接到 LAN，真正的乐趣才开始。高可用性打印队列的主要要求是正确放置 spooling 目录。技巧是将 spooling 目录放置在集群中的*共享*磁盘上，因为内部 spooling 目录在节点故障时将变得不可用。使用共享磁盘方案允许集群中的备用服务器拥有相同的磁盘服务视图，从而保存打印作业。
+
+下一步是将 spooling 目录 `/var/spool/qdaemon` 和 `/var/spool/lpd/qdir` 移动到共享磁盘上，而不是内部磁盘上。最好的方法是创建两个文件系统，其挂载点在 spooler *目录*上。这些新的文件系统*不能* reside 在 rootvg 中。选择一个由集群中的节点共享的卷组，并将这些新文件系统的挂载放在 HACMP 的控制之下。
+
+在此配置中，如果集群中的某个节点发生故障，集群中存活的某个节点将接管共享磁盘，激活共享磁盘，验证磁盘状态是否稳定，挂载 spooling 文件系统，重启 **qdaemon**，并打印作业。
+
+## ASCII 终端打印机
+
+许多 ASCII 终端支持辅助串行端口或并行端口，用于屏幕打印以及从连接的计算机打印。从远程计算机路由打印作业
+
+
+
+
+向终端的辅助端口输出需要发送特殊的字符序列以启用和禁用与终端辅助串行或并行端口的连接。具体的控制字符序列因终端而异，并可在给定终端类型的 terminfo 数据库条目中进行配置。请查阅终端文档以了解具体的序列。一些终端还包括暂时忽略控制字符序列的功能，以支持向打印机发送非 ASCII 数据。请注意，这需要数据流中*不*包含透明模式开/关字符序列。透明模式开/关序列可以与 AUX 端口开/关序列一起包含在 terminfo 中。
+
+## termfo AUX 打印变量
+
+![](img/82f851021955589d82b22750fb3b1646_271_0.png)
+
+### 配置串行 TTY 打印机：
+
+- 1. 配置 TTY 端口信息。
+- 2. 更新 terminfo 中针对该 TTY 类型的 AUX 端口开/关控制序列。
+- 3. 使用 **smit mkpq** 为 ASCII 类型创建虚拟打印机和打印队列。
+
+拨号调制解调器端口可能支持多种不同的终端类型。为了识别拨号打印机连接的打印机 terminfo 数据，请设置 `PIOTERM` 环境变量以识别终端 terminfo 类型：
+
+```
+$ set PIOTERM=[Terminal-Type]; export PIOTERM
+```
+
+## 直通模式
+
+存在一些公共领域应用程序，它们会将 **vt100** 辅助端口序列发送到远程终端或终端仿真程序。这些大多数程序使用以下算法：
+
+- 1. 保存 TTY 状态。
+- 2. 将 TTY 设置为原始模式。
+- 3. 发送启动辅助序列。
+- 4. 发送文件。
+- 5. 发送停止辅助序列。
+- 6. 恢复 TTY 状态。
+
+许多用于个人计算机的终端仿真软件包支持 **vt100** 直通模式序列。这些包括用于直接连接和拨号访问的 **kermit** 以及用于 TCP/IP 的 NCSA telnet。
+
+## X 工作站打印机
+
+从 AIX 5L 开始，IBM 不再支持 X 工作站。我有几台 X 工作站，在安装 AIX 5L 后我给 IBM 支持打电话时，他们首先说 X 工作站不再受支持，但我坚持了下去，结果你猜怎么着？你可以将 X 工作站文件加载到 AIX 4.2.1–4.3.3 分发版中，它们在 AIX 5L 上运行正常，尽管在技术上不受支持。X 工作站代码自 AIX 4.2.1 以来尚未修改。你需要安装三个文件集：
+
+```
+X11.x_st_mgr.rte
+X11.x_st_mgr.compat
+X11.msg.$LANG.x_st_mgr.rte
+```
+
+其中 $LANG 是你系统上安装的语言环境。对于美国英语，语言环境是 en_US。
+
+此外，如果你通过迁移路径安装了 AIX 5L，并且之前已经安装并配置了 X 工作站，你需要卸载并重新安装 X 工作站管理器文件集，并重新配置每个 X 工作站。先检查功能，但你很可能会发现你的 X 工作站不再正常工作。在卸载和重新安装文件集之前，进入 SMIT 保存当前配置是个好主意。
+
+X-Station 文件集支持打印到连接到 IBM X 工作站的打印机。你也许还可以使用 lpd 或为 ASCII 终端描述的直通模式打印技术来支持打印到其他厂商的 X 终端。使用 IBM X 工作站管理器时，使用 SMIT FastPath `smit mknvirprt` 命令将 X 工作站附着的打印机定义到队列子系统中。
+
+```
+# smit mknvirprt
+```
+
+从 SMIT 菜单中选择选项 3，**Printer Attached To X-Station**，并提供 X 工作站名称。
+
+系统将要求你提供接口类型、X 工作站型号、打印机波特率、奇偶校验、每字符位数、启动/停止位和打印机型号。这与添加标准本地连接打印机的过程非常相似。请参阅前面关于打印设备和队列设备及队列的章节。
+
+用于 IBM X 工作站打印的后端程序是 /usr/lpp/x_st_mgr/bin/lpx，它是一个 shell 脚本。SMIT 生成的 /etc/xconfig 文件中的段落应如下所示：
+
+```
+*
+* Xstation Queue Device
+*
+plab1:
+       discipline = cfis
+       up = TRUE
+       device = plab1
+plbd:
+       file = false
+       header = never
+       trailer = never
+       backend = lpx plbl -s 19200,n,8,1
+```
+
+## 在大型环境中何时添加打印机
+
+在拥有大量全天候活动的打印机的大型环境中，问题是找到一个合适的时间来添加打印机，而不会干扰到打印机的数据流。问题是，当向系统添加新的打印队列时，qdaemon 必须创建一个新的 qconfig.bin 文件，这是 /etc/qconfig 文件的二进制版本。有时，编译新的 config.bin 文件所需的这短暂时间会导致环境中的一些打印机故障。
+
+为了避免这个问题，请在打印队列活动最少的时间段内添加打印机。我们的使用 shell 脚本添加打印机，因此我们可以在非高峰时段安排此事件。我们将所有需要添加的新打印机列在一个数据文件中，shell 脚本通过循环读取该文件。我建议你对每个远程打印服务器执行 ping 操作，以确保其在网络上通信。此外，检查 mkque 命令的返回码，并发送通知以表明队列创建失败的任何错误。
+
+## 配置和使用 System V 打印机子系统
+
+默认情况下，经典的 AIX 和 System V 打印机子系统都会随 AIX 5L 一起安装。AIX 打印机子系统是通过结合 System V 和 BSD 打印标准的功能创建的。在这些标准之上，IBM 添加了一些 AIX 打印子系统独有的功能。这些添加的独有功能使得 AIX 打印子系统对传统标准的兼容性较差。当 IBM 开始开发 AIX 5L 时，设计人员希望打印机子系统能够符合传统标准，因此选择了 System V，因为它是大多数 UNIX 变体的主要标准。两种打印机子系统都有优点，但 IBM 的长期目标是完全过渡到 System V 打印子系统，当然，经典的 AIX 打印子系统将作为选项存在多年。在即将推出的 AIX 5L 版本中，你将看到增加了更多 System V 功能，但经典的 AIX 打印子系统将保持不变。
+
+### System V 优势
+
+对于熟悉除 AIX 以外的 UNIX 变体的系统管理员来说，System V 打印子系统提供了易于管理的打印功能。由于经典的 AIX 打印机子系统是专有的，许多为其他
+
+### System V 打印管理
+
+命令行是两个打印机子系统的主要接口。在经典的 AIX 打印子系统中，你可以使用 SMIT 和 WebSM 以及命令行来管理打印机。在 System V 打印中，只有 WebSM 可用于图形化打印管理，但命令行是大多数系统管理员的主要接口。IBM 计划通过后续的 AIX 5L 版本扩展 System V 打印子系统的管理功能。
+
+在基于 Itanium 的系统上，仅支持 System V 打印机子系统，并且它是作为 BOS 安装的一部分安装的。在 POWER 系统上，AIX 5L 默认支持并安装两种打印子系统。
+
+默认安装的 System V 文件集包括以下内容：
+
+- `bos.msg.en_US.evprint` [System V 打印子系统消息]
+- `bos.sprint.fonts` [System V 打印字体]
+- `bos.sprint.hpnp` [System V 惠普]
+- `bos.sprint.ps` [System V 打印 Postscript]
+- `bos.sprint.rte` [System V 打印子系统]
+- `bos.terminfo.evprint.data` [System V 打印机终端]
+
+### 在打印机子系统之间切换
+
+由于在任何时刻只有一个打印机子系统可以处于活动状态，因此你有一种机制来在它们之间切换。有三种方法进行切换：SMIT、WebSM 和 switch.pr 命令。要检查当前活动的打印机子系统，你可以使用 SMIT、WebSM 或 `switch.pr -d` 命令。使用命令行在子系统之间切换时，使用以下命令之一：
+
+- `# switch.pr -s AIX`     切换到 AIX 打印机子系统
+- `# switch.pr -s SystemV`  切换到 System V 打印机子系统
+
+可选地，你可以使用 SMIT FastPath `smit chprsubsystem` 或 `smit spooller` 来查看打印暂存特性。你还可以使用基于 Web 的系统
+
+
+管理器（WebSM）用于在子系统之间进行切换。在任何情况下，都会执行 **switch.pr** 命令。
+
+在子系统之间进行切换涉及八个步骤。要从 AIX 打印子系统切换到 System V 子系统，请使用 **switch.pr** 命令。
+
+- 检查当前是否有活动的打印任务。如果有打印活动正在进行，**switch.pr** 命令将退出并显示以下错误消息：
+
+所有打印任务必须终止。
+
+- 停止以下 AIX 打印守护进程：lpd、qdaemon 和 writersrv。
+- 修改 /etc/inittab 文件，以便在后续所有重新启动时仅启动 System V 打印子系统守护进程。
+- 清除控制 AIX 打印子系统的 SMIT 菜单。然而，有些菜单项并未被移除，但如果您尝试使用它们，将收到错误消息。
+- 修改 WebSM，使其仅使用 System V 插件。
+- 将锁定文件从 AIX 更改为 System V。
+- 将所有链接从 AIX 更改为 System V。
+- 启动 System V 打印子系统守护进程 lpsched。
+
+要从 System V 打印子系统切换到 AIX 子系统，请使用 **switch.pr** 命令。
+
+- 检查当前是否有活动的打印任务。如果有打印活动正在进行，**switch.pr** 命令将退出并显示以下错误消息：
+
+所有打印任务必须终止。
+
+- 使用 lpsut 命令停止 System V 打印守护进程 lpsched。
+- 修改 /etc/inittab 文件，以便在后续所有重新启动时仅启动 AIX 打印子系统守护进程。
+- 启用控制 AIX 打印子系统的 SMIT 菜单。
+- 修改 WebSM，使其仅使用 AIX 插件。
+- 将锁定文件从 System V 更改为 AIX。
+- 将所有链接从 System V 更改为 AIX。
+- 启动 AIX 打印子系统守护进程 lpd、qdaemon 和 writersrv。
+
+打印机子系统切换完成后，任何被禁用的打印机或打印队列将保持禁用状态，直到您启用所有打印队列。此外，如果用户在 System V 控制下尝试使用 qprt 或 enq 命令提交打印任务，将显示以下错误消息：
+
+Cannot awaken qdaemon (requested accepted anyway)
+
+当（如果）AIX 打印机子系统重新建立时，该任务将被打印。
+
+## AIX 和 System V 常用打印命令
+
+以下命令在两个打印子系统中均可用：
+
+- **cancel**   取消打印任务
+- **disable**   禁用打印队列
+- **enable**   启用打印队列
+- **lp**   将打印请求发送到行式打印机
+- **lpr**   将打印任务放入指定队列
+- **lprm**   从打印队列中移除打印任务
+- **lpsubmit**   提交打印任务
+- **lpstat**   显示所有打印队列的状态信息
+
+这些命令由两个打印子系统共享，但不同子系统间的命令选项和行为有所不同。有两个目录链接到 `/usr/bin` 目录，其中 `/usr/aix/bin` 用于 AIX 打印子系统，`/usr/sysv/bin` 用于 System V 打印子系统。
+
+在查看这些命令的手册页时，请注意每个手册页都包含有关两个打印子系统的信息。请阅读上述每个共享命令的手册页。
+
+## System V 打印过程
+
+`lpssd` 守护进程控制 System V 打印。如果 System V 打印子系统处于活动状态，该守护进程将在启动过程中被启动。`lpssd` 守护进程不受系统资源控制器（SRC）的控制，因此您*不能*使用 `startsrc`、`refresh` 或 `stopsrc` 命令来控制此守护进程。但是，您可以使用 `lpshut` 命令停止 `lpssd` 守护进程，并使用 `/usr/lib/lp/lpssd` 命令重启 `lpssd` 守护进程。
+
+使用 `lp` 或 `lpr` 命令提交任务。用户可以将任务发送到特定打印机或打印机类别，并添加属性以控制打印任务的处理和打印方式。
+
+当 `lpssd` 守护进程接收到打印任务时，它首先检查是否允许该任务打印。正如前文所述，System V 打印具有控制哪些用户可以在任何打印机上打印的功能。此审查过程称为*作业筛选*。`lpssd` 守护进程会筛选作业，以查看打印机是否能够按要求打印该作业，包括任务类型以及在提交任务时提供的属性。打印机配置文件和来自 `terminfo` 数据库的数据将用于做出此决定。
+
+打印机配置文件包含有关每台打印机的信息，包括设备名称、横幅和换页设置、接口脚本的路径、`terminfo` 数据库中列出的打印机类型以及打印机接受的内容类型。
+
+terminfo 数据库描述了每种不同打印机类型的特征。这些数据库信息被 **lpssd** 守护进程用于作业筛选过程。然后，使用 terminfo 数据库中的相同信息初始化打印机。
+
+如果作业在作业筛选过程中未被拒绝，**lpssd** 守护进程将为该作业分配一个唯一 ID。在打印暂存区目录中创建描述打印任务的*a* 个*请求文件*。每个打印作业 ID 由两部分组成：打印机名称和唯一 ID 编号。打印机有时会分为*类别*。使用打印机类别，用户可以向一类打印机提交打印任务，任务将排入该类别中能够打印该任务的第一台打印机。如果在集中位置拥有一个打印机池，这样效率更高。
+
+System V 打印机子系统使用两种类型的过滤器来执行三个不同的功能。第一个过滤器功能用于转换文件内容，这可能包括添加回车和换行或字符映射。第二个过滤器功能用于解析特殊的用户请求打印模式，例如反转页面顺序或在横向和纵向模式之间切换。第三个过滤器用于检测打印机故障。两种类型的过滤器是*慢速*和*快速*过滤器。慢速过滤器由 **lpssd** 守护进程直接在后台运行以进行文件转换。由于文件转换产生的高开销，慢速过滤器在后台运行。快速过滤器直接作用于打印机。快速过滤器直接控制打印机，在某些情况下像慢速过滤器一样运行文件转换。快速过滤器由接口程序执行，但接口程序受 **lpssd** 守护进程控制。**lpssd** 守护进程可能会使用几种不同过滤器的组合以获得所需结果。
+
+当打印任务到达打印队列的顶端时，**lpssd** 守护进程将打印任务的控制权移交给为该特定打印机定义的接口程序。接口程序只是一个 shell 脚本，然后直接控制打印机。接口程序随后使用 terminfo 数据库信息初始化打印机，然后使用快速过滤器打印横幅页（如果定义了横幅页），最后使用快速过滤器打印指定数量的文件副本。
+
+### System V 打印术语
+
+System V 打印子系统的术语让 AIX 专家感到困惑。例如，至少有三种不同的*类型*。有*打印机类型*、*接口类型*和*内容类型*。请参阅表 12-5。*打印机类型*将打印机指向 terminfo 数据库中的条目。使用 **lpadmin** 命令来设置打印机类型。有两种默认的打印机类型：postscript（PS）和 standard。指定打印机类型的语法是
+
+```
+# lpadmin -T (PS, standard) .
+```
+
+*接口类型*只是指向特定打印机使用的接口程序的指针。
+
+| 术语 | 术语描述 | 术语示例 |
+| :--- | :--- | :--- |
+| 打印机类型 | 打印机 terminfo 条目 | PS, Standard |
+| 接口类型 | 接口程序 | /usr/lib/lp/mode/ps, Standard |
+| 内容类型 | 允许的文件类型 | {postscript, Standard} |
+| 类别 | 打印机组 | floor2 |
+| System V 打印机 | 打印队列 | 12hp2-ps |
+| 打印机设备 | 打印机设备驱动程序 | /dev/lp05 |
+
+**表 12-5. System V 打印术语**
+
+*内容类型*指定打印机可以处理打印的数据或文件类型。因此，内容类型可以指定 postscript 或标准文本。一些打印机可以处理多种内容类型。指定内容类型的命令语法是
+
+```
+# lpadmin -I {PS, standard} .
+```
+
+*类别*指一组打印机。如果用户向打印类别提交任务，则该类别中能够处理该任务的第一台打印机将打印该任务。将打印机添加到打印机类别的语法是
+
+```
+# lpadmin -c <print_class_name> .
+```
+
+*System V 打印机*指打印队列。定义打印机的语法是
+
+```
+# lpadmin -p <queue_name> .
+```
+
+*打印机设备*指打印机使用的设备驱动程序。将系统设备（如 */dev/lp01*）关联到设备驱动程序的语法是
+
+```
+# lpadmin -p <queue_name> -v <system_device_name> .
+```
+
+### 添加 System V 本地打印机
+
+添加 System V 打印机是一个两步过程。首先创建打印机*设备*。这是一个系统设备。然后创建 System V 打印机。可以使用 *lsdev* 命令显示设备。要显示当前*已定义*的打印机（列在 ODM 定制数据库中），请使用 *以下* 命令：
+
+```
+# lsdev -Cc printer
+lp0 Available 00-00-0P-00 Hewlett-Packard LaserJet 4,4M
+```
+
+
+
+要显示 *支持的* 打印机设备列表（这些设备列在 ODM 预定义数据库中），请使用以下命令：
+
+```
+# lsdev -Pc printer
+...
+printer opp    parall0  Other parallel printer
+printer osp    rs232    Other serial printer
+printer osp    rs422    Other serial printer
+printer hp1j-4 parall1  Hewlett-Packard LaserJet 4,4M
+printer hp1j-4 rs232    Hewlett-Packard LaserJet 4,4M
+printer hp1j-4 rs422    Hewlett-Packard Laserjet 4,4M
+...
+```
+
+*lsdev* 命令的输出会有所不同，具体取决于已配置的打印机数量以及系统中安装了哪些打印机驱动程序。您可以忽略 *printer* 设备属性，因为它们不用于通过 AIX 或 System V 子系统打印。如果打印机设备驱动程序当前未安装在您的系统上，您可以使用 SMIT *FastPath smit install_package* 进行安装。要安装单个打印机设备，您可以通过输入正斜杠 / 并输入要添加的打印机的搜索模式来搜索安装 CD-ROM。通常，打印机驱动程序和打印机型号之间不需要精确匹配。例如，您可以为大多数 HP 打印机使用 HP Laserjet II 打印机驱动程序。精确匹配可能会提供额外功能，因此我总是尝试将驱动程序与打印机型号匹配。
+
+安装打印机驱动程序后，您可以继续将 System V 打印机添加到系统。启用打印机有三个步骤。使用 **lpadmin** 命令来添加打印机：
+
+```
+# mkdev -c printer -t hp4V -s parall1 -p ppae0 -w p
+# lpadmin -p hp4V -v /dev/lp0 -d "Hewlett-Packard LaserJet 4,4M"
+```
+
+将 System V 打印机添加到系统后，您需要使用 **accept** 命令允许打印机接受打印请求：
+
+```
+# accept hp4V
+```
+
+最后一步是使用 **enable** 命令启用新的打印队列：
+
+```
+# enable hp4V
+```
+
+如果您更喜欢使用 *printer wizard*（打印机向导），可以使用基于 Web 的系统管理器 WebSM。使用 **wsm** 命令启动 WebSM。在主屏幕左侧，选择 *Printers (System V)*。然后选择 **Standard Overview And Tasks**。在屏幕中间，选择 **New Printer** 并填写每个字段，打印机向导将为您完成所有操作，包括允许打印机接受请求和启用队列。图 12-14 显示了 WebSM 的 System V 打印机子系统菜单。
+
+![](img/82f851021955589d82b22750fb3b1646_280_0.png)
+
+图 12-14. WebSM 的主 System V 打印机窗口
+
+## 添加网络 System V 打印机
+
+添加网络打印机比添加本地打印机多几个步骤。您需要执行以下大部分步骤：
+
+- 注册每个远程系统。
+- 允许或拒绝用户访问。
+- 设置远程系统的参数。
+- 配置远程客户端。
+- 在远程客户端上定义打印队列。
+
+要将远程系统与 System V 打印服务注册，请使用以下命令语法：
+
+```
+# lpsystem [-T timeout] [-r retry_attempts] <system_name>
+```
+
+要在远程客户端上定义打印队列，请使用以下命令语法：
+
+```
+# lpadmin -p <client_printer_name> -s <remote_pr_server>:<remote_pr_queue>
+```
+
+在此步骤之后，请务必在远程客户端上 **accept** 和 **enable** 打印队列。
+
+要授予或拒绝用户对远程打印机的访问权限，请使用以下命令语法：
+
+```
+# lpadmin -p <printer> -u allow:AIX_user_list
+# lpadmin -p <printer> -u deny:AIX_user_list
+# lpsstat -p -l             The lpched daemon must be running!
+```
+
+## 管理 System V 打印机
+
+有很多用于 System V 打印机管理命令可执行任何任务。**lpadmin** 命令可以在选择适当的命令参数时完成大多数您想要执行的任务。所有 System V 管理命令都列在表 12-6 中。
+
+| System V 命令 | 执行职责 |
+| :--- | :--- |
+| accept | 允许打印机接受指定目的地的打印请求。目的地可以是打印机或打印机类。 |
+| reject | 停止向指定目的地的所有打印排队。 |
+| enable | 通过允许队列打印由 **lp** 命令排队的请求来激活指定的打印队列。对于远程打印队列，**enable** 命令将仅允许将请求传输到远程打印服务器。 |
+| disable | 禁止在指定队列上打印所有打印请求。 |
+| lpadmin | 允许您添加、删除和更改打印机，以及设置默认目的地、设置警报并定义远程打印机。 |
+| lpfilters | 用于添加、删除、更改和列出与 **lp** 打印服务一起使用的过滤器。 |
+| lpforms | 用于提供预印表格的管理。 |
+| lpmove | 提供在打印机和队列之间移动打印请求的机制。 |
+| lpsched | System V 打印服务的主控制。 |
+| lpshut | 停止 System V 打印服务。 |
+| lpsystem | 向 System V 打印服务定义网络参数。 |
+| lpusers | 设置用户提交作业的排队优先级限制。 |
+
+**表 12-6.** System V 打印服务管理命令
+
+## 在 System V 打印服务中使用表格
+
+在 System V 打印服务中使用表格有七个可能的步骤。这些是将表格注册到打印服务、为打印作业请求表格、提醒用户将表格装入打印机、装入表格、取出表格、控制谁可以访问表格以及显示状态信息。这些步骤在以下各节中详述。
+
+### 将表格注册到打印服务
+
+表格需要一个表格定义文件，该文件描述该表格。页数、字符间距、页面长度和宽度等需要定义。创建表格定义后，使用以下语法将其注册到 System V 打印服务：
+
+```
+# lpforms -f <form_name> -F <form_definition_file>
+```
+
+### 请求表格以提交打印作业
+
+用户可以使用 lp -f 命令请求特定表格，语法如下：
+
+```
+# lp -f <form_name> -d <printer> <file_to_print>
+```
+
+前面的命令将打印作业排入队列，但在作业打印之前必须装入表格。
+
+### 提醒某人装入表格
+
+在作业可以在指定表格上打印之前，必须装入表格。这通常由操作员或打印服务管理员执行。要设置打印服务以在用户请求表格时通知打印服务操作员，请使用以下语法：
+
+```
+# lpforms -f <form_name> -A <alert_type> [-Q number] [-w interval]
+```
+
+其中：
+
+- **-f form_name** 是特定表格的名称。
+- **-A alert_type** 可以是邮件、写入控制台、运行 shell_script、静默以停止消息或无警报。
+- **-Q number** 在指定数量的表格请求排入队列时开始警报。默认值为一个。
+- **-w interval** 定义重新发送警报之间的分钟数。默认值为零。
+
+### 装入表格的步骤
+
+需要以下五个步骤来让打印服务知道表格已装入：
+
+1. 使用 **disable `<print_queue>`** 命令禁用打印队列。
+2. 将表格装入打印机。
+3. 使用以下命令语法告知打印服务表格已装入并准备好打印：
+   `# lpadmin -P <printer> -M -f <form_name>`
+4. 如有必要，对齐表格。
+5. 使用 **enable `<print_queue>`** 命令启用打印机。
+
+### 从打印机取出表格
+
+从打印机取出表格并通知打印服务表格不再装入的必要四个步骤如下：
+
+1. 使用 **disable `<print_queue>`** 命令禁用打印机。
+2. 从打印机取出表格。
+3. 使用以下命令语法告知打印服务表格不再可用：
+   `# lpadmin -p <print_queue> -M -f none`
+4. 使用 **enable `<print_queue>`** 命令重新启用打印队列。
+
+### 限制对表格的访问
+
+如果您想限制谁可以在昂贵的预印表格上打印，可以使用以下命令：
+
+```
+# lpforms -f <form_name> -u allow:AIX_user_list
+# lpforms -f <form_name> -u deny:AIX_user_list
+```
+
+其中 **AIX_user_list** 是由逗号分隔的 AIX 用户列表。
+
+### 收集表格信息
+
+以下命令用于收集有关特定表格的信息：
+
+```
+# lpforms -f <form_name> -l
+```
+
+此命令的输出会有所不同，具体取决于运行该命令的人。**root** 或 **lp** 用户将看到包括用户允许和拒绝列表在内的完整信息。
+
+
+以及对齐模式。任何其他执行该命令的用户都将只能查看表单定义文件中的信息。
+
+# 检查清单
+
+以下是打印功能关键点的检查清单：
+
+- 每次提交本地打印任务时，任务都会经过一个队列。用户和应用程序使用以下命令之一提交打印任务：`qp`、`rpr`、`lp` 或 `enq`。
+- `qdaemon` 通过维护所有已定义队列的列表来维护打印队列，并负责监控队列中的新打印任务。
+- 如果文件被暂存（spooled），该文件的副本将保留在 `/var/spool/qdaemon` 中，直到打印任务完成。这允许您在不影响打印机输出的情况下修改或编辑原始文件。
+- 当文件进入队列时，指向原始文件的指针会被放置在 `/var/spool/lpd/gd12` 目录中。如果在文件打印前原始文件被更改，则打印的是更新后的文件。
+- 任何用户都可以定义一个默认打印机，该打印机将覆盖 `/etc/qconfig` 文件中的第一项。使用 PRINTER 环境变量来定义不同的默认打印机。每个希望定义默认打印机的用户都必须设置此变量。
+- 您可以使用 SMIT FastPath `smi spooler` 启动 AIX 打印机配置。
+- 来自基于 TCP/IP 网络的传入打印请求由 `/usr/sbin/lpd` 守护进程管理。
+- 要将连接了本地打印机并附加到打印队列的机器配置为打印服务器，请将客户端机器添加到 `/etc/hosts.lpd` 文件中，并启动 `lpd` 守护进程。
+- 要从远程客户端使用打印机服务器，您必须定义远程打印队列。
+- 您可以自定义本地队列的页眉和/或页尾页。突发页（burst pages）的格式模板存储在 `/usr/lpd/pio/burst` 目录中。
+- AIX 中的队列管理和管理任务可以通过 `/usr/bin/enq` 命令处理。
+- 用于管理队列的 SMIT FastPath 是 `smi qmanage`。
+- 使用 `disable`、`qadm` 或 `enq` 命令来操纵本地队列或设备的可用性。这些命令对远程队列没有影响。
+- 要显示排队系统的内容，请使用 cqhk、enq 和 lpstat 命令。
+- 要更改队列中任务的优先级，请使用 qpri 或 enq 命令。要提升任务的优先级，请给它一个较高的数字。您不能更改远程队列中任务的优先级。
+- 要从队列中移除打印任务，请使用 qcan、enq 或 cancel 命令。
+- 使用 qmove 命令在队列之间移动打印任务。
+- 如果您的环境要求打印资源具有高可用性，请考虑高可用打印队列。要实现这一点，您需要一个拥有至少两个节点 HACMP 集群。
+- 从 AIX 5L 开始，IBM 不再支持 X 工作站。您可以从 AIX 4.2.1–4.3.3 发行版中加载 X 工作站文件集，它们在 AIX 5L 上运行良好，尽管在技术上不受支持。
+- 默认情况下，AIX 5L 安装了经典 AIX 和 System V 打印机子系统。
+- 在任何时候只有一个打印机子系统可以处于活动状态。您可以使用三种方法之一在它们之间切换：SMIT、WebSM 和 switch_ptr 命令。
+- lpsched 守护进程控制 System V 打印。如果 System V 打印子系统处于活动状态，此守护进程会在启动过程中启动。lpsched 守护进程不受系统资源控制器（SRC）的控制。
+- 添加 System V 打印机是一个两步过程。首先创建打印机系统设备。然后创建 System V 打印机。
+- 将 System V 打印机添加到系统后，您需要使用 accept 命令允许打印机接受打印请求；使用 enable 命令启用新的打印队列。
+- 要添加网络 System V 打印机，您必须注册每个远程系统，允许或拒绝用户访问，设置远程系统的参数，配置远程客户端，并在远程客户端上定义打印队列。
+- 您可以使用 lpadmin 命令执行大多数 System V 打印机管理任务。
+- 使用 System V 打印服务的表单步骤包括：将表单注册到打印服务、为打印任务请求表单、提醒用户在打印机中装载表单、装载表单、卸载表单、控制谁可以访问表单以及显示状态信息。
+
+![](img/82f851021955589d82b22750fb3b1646_286_0.png)
+
+# 第五部分
+
+# 网络配置和定制
+
+## 13 TCP/IP
+
+![](img/82f851021955589d82b22750fb3b1646_289_0.png)
+
+# 第 13 章
+
+*TCP/IP*
+
+![](img/82f851021955589d82b22750fb3b1646_289_1.png)
+
+如今，几乎每个企业都需要从其他系统或互联网访问信息，无论是用于客户服务、销售、营销还是数据分析。计算机系统连接并与其他系统通信至关重要。TCP/IP 提供了系统连接网络并相互通信的基本功能。本章将概述 TCP/IP 网络模型及其协议，以及如何配置和管理 AIX 5L 上的 TCP/IP。如果您已经熟悉这些概念，可以跳过本章后面关于配置的部分。
+
+## TCP/IP 网络模型
+
+TCP/IP 和 OSI 模型之间很难建立一对一的映射。TCP/IP 将 OSI 模型中定义的许多功能整合到较少数量的层中。与其试图定义 TCP/IP 到 OSI 的映射，不如呈现 TCP/IP 协议套件的模型更与本文讨论相关（见表 13-1）。TCP/IP 的每一层都有自己的协议和服务集合。较高的层设计用于使用较低层的服务。
+
+接口层包括网络接口和协议。它与物理网络接口相连。它使用适用的协议通过特定的硬件网卡发送 IP 数据包，例如在以太网网络上使用 IEEE 802.3 协议。
+
+互联网层负责在网络上传送和路由数据包。该层由多个协议组成。IP（互联网协议）版本 4 和 6 是最重要的协议。IPv4 和 IPv6 是无连接协议，提供数据包转发、分片和路由功能。
+
+互联网层中还有其他几个协议，其目的是协助 IP 协议功能。ARP 协议处理 IP 版本 4 中 IP 地址和硬件地址之间的转换，而 NDP 协议为 IP 版本 6 执行此功能。ICMP 和 ICMPv6 也是该层的一部分，分别用于发送 IPv4 和 IPv6 的错误和控制消息。
+
+传输层处理系统之间的通信。它由传输控制协议（TCP）和用户数据报协议（UDP）组成。TCP 确保数据包可靠传输，而 UDP 提供从一系统到另一系统传递数据报的更简单服务，但没有保证传输。TCP 中的可靠传输通常以牺牲数据包吞吐量率为代价。
+
+应用层实现用户接口。客户端/服务器协议通常定义在应用层。常见的应用级服务包括 Telnet、文件传输协议（FTP）、简单邮件传输协议（SMTP）、网络文件系统（NFS）和 X11 窗口系统。
+
+| | 应用层 | Telnet, SMTP, FTP | TFTP, SNMP | X11 | RPC | NFS |
+|---|---|---|---|---|---|---|
+| | 传输层 | | TCP | UDP | | |
+| | 互联网层 | | IGMP, ICMP, IPv4, ARP, RARP | | | ICMPv6, IPv6, NDP |
+| | 接口层 | | | | | 以太网, 令牌环, FDDI, SCCC, HiPPI |
+
+**表 13-1.** TCP/IP 架构堆栈
+
+## 网络设备与接口
+
+TCP/IP 运行在不同的网络适配器上。AIX 5L 支持令牌环、以太网、EtherChannel、FDDI、ATM 和串行链路上的 IP。对于每个网络适配器，都会自动创建一个对应的网络接口，ATM 除外。ATM 设备可以拥有多个接口。因此，需要显式添加接口。更多信息，请参见本章后面的“网络接口配置”。
+
+要在 AIX 系统中显示现有的网络接口，请使用以下命令：
+
+```
+# 1dev -Cc if
+```
+
+AIX 网络接口的命名约定如表 13-2 所示。在这些接口中，以太网使用最为广泛，因为它的实现相对容易且部署成本低。随着千兆以太网和 EtherChannel 的普及，以太网可以解决传统上由 ATM 和 FDDI 通过设计来解决的带宽或可用性问题。令牌环仍在一些遗留网络中使用。然而，由于传输速度为 16 Mbit/秒，令牌环不太可能用于新网络。以下章节将概述每种常见网络接口的属性以及电缆和支持硬件。有关高性能并行接口（HiPPI）和光纤通道标准等其他高速选项的技术和支持信息，请参阅 IBM 的网站。
+
+| 设备类型 | 设备名称 | 接口名称 |
+| :--- | :---: | :---: |
+| 异步传输模式 (ATM) | atm# | atf# |
+| 以太网 (IEEE 802.3) | ent# | etf# |
+| 以太网 (标准, 版本 2) | ent# | ent# |
+| 光纤分布式数据接口 (FDDI) | fddi# | if# |
+| 环回 | N/A | lo# |
+| 串行线 | N/A | sl# |
+
+**表 13-2.** 网络设备和接口命名约定
+
+
+
+
+## 13. 网络设备与接口命名约定
+
+| 设备类型 | 设备名称 | 接口名称 |
+| :--- | :--- | :--- |
+| 令牌环 | tok# | tr# |
+| 虚拟 IP 地址 (VIPA) | N/A | vi# |
+
+符号 # 表示设备或接口的索引号。
+
+### 以太网 (Ethernet)
+
+以太网由施乐公司（Xerox）在 20 世纪 80 年代初开发，由于其成本较低，目前拥有最大的 TCP/IP 安装基础。它是一种基于广播的协议，使用冲突检测和避免机制来调节网络流量。载波监听多路访问/冲突检测（CSMA/CD）协议允许任何系统在线路空闲时开始传输，但如果检测到冲突，则要求后退并等待一段伪随机时间。如果在重传后再次检测到冲突，系统将等待一段随机时间后再重试。
+
+以太网常见的网络拓扑结构是*总线型*和*星型*。在*总线型*拓扑中，系统使用 T 型连接器连接到以太网网段。网段的两端使用 50 欧姆终端器进行终结。*星型*拓扑（如图 13-1 所示）在当今的环境中更为常见，其中系统使用 RJ-45 连接器（用于铜线）或 SC 连接器（用于光纤电缆）以点对点方式连接到集线器或交换机。
+
+![](img/82f851021955589d82b22750fb3b1646_292_0.png)
+
+pSeries 支持 10 和 100 Mb/sec，以及千兆以太网适配器。IBM 10/100 以太网 TX PCI 适配器支持连接到 100BaseTX 和 10BaseT 网络。它支持使用 RJ-45 连接器的全双工和半双工模式。10/100/1000 BaseT 以太网 PCI 卡提供高达 1000 Mb/sec 的传输速度。在 10 或 100 Mb/sec 的速度下，它支持全双工和半双工模式；而在 1000 Mb/sec 的速度下，它仅支持全双工模式。千兆-SX 适配器使用 SC 连接器通过 50 和 62.5 微米电缆连接 1000BaseSX 网络。千兆-SX 只能在单双工模式下工作。有关以太网介质的详细信息，请参见表 13-3。10 吉比特以太网（IEEE 802.3ae）标准的目标是在 2002 年下半年获得 IEEE 批准，并且有制造商已经推出了他们的 10 吉比特以太网适配器，用于有限的服务器测试。
+
+通过 SMIT FastPath `smit chgenet` 配置你的以太网适配器（参见图 13-2）。你可能需要增加 TRANSMIT 缓冲区的值。该值代表用于传出数据包的缓冲区队列。取值范围可能是 20 到 150。
+
+```
+# smit chgenet
+```
+
+### EtherChannel
+
+EtherChannel 是由 Cisco Systems 创建的一种技术，可用于将多个以太网适配器聚合在一起，以增加带宽或在适配器故障时提供备份。一个通道可以由两到八个适配器组成，并且对于系统的上层而言，它将表现为单个网络接口。提供三种模式。标准模式使用目标 IP 地址来选择用于发送流量的适配器。这在流量被发送到许多不同 IP 地址时很有用。轮询模式将在通道中的适配器之间交替发送数据包。在 netif 备份模式下，每次只有一个适配器处于活动状态；但如果活动适配器发生故障，另一个将接管。
+
+**表 13-3. 以太网介质**
+
+| 类型 | 介质 | 电缆 | 最大长度 | 节点数 | 拓扑 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 10Base5 | 粗缆* | RG 11 | 500 m | 100/网段 | 总线 |
+| 10Base2 | 细缆* | RG 58 | 185 m | 30/网段 | 总线 |
+| 10BaseT | 双绞线 | UPT Cat 3 | 100 m | 16/网段 | 星型 |
+| 100BaseT | 双绞线 | UPT Cat 5 | 100 m | † | 星型 |
+| 1000BaseT | 双绞线 | UPT Cat 5 | 100 m | † | 星型 |
+| 1000BaseSX | 光纤 | 62.5 微米 | 260 m | † | 星型 |
+
+\* 收发器间距 2.3 米，网段长度为 23.4 米的倍数。  
+† 收发器。间距 5 米。  
+‡ 受交换机端口数量限制
+
+![](img/82f851021955589d82b22750fb3b1646_294_0.png)
+
+**图 13-2. SMIT 以太网适配器面板**
+
+为了使用 EtherChannel，要求以太网适配器所使用的交换机也支持 EtherChannel 技术。使用以下命令配置 EtherChannel（参见图 13-3）：
+
+```
+# smit etherchannel
+```
+
+![](img/82f851021955589d82b22750fb3b1646_294_1.png)
+
+**图 13-3. SMIT 添加 EtherChannel 面板**
+
+### 令牌环 (Token Ring)
+
+令牌环最初由 IBM 开发，后来被 IEEE 采用为规范 802.5。令牌环协议使用令牌传递机制来调节环路上的流量。环路上的某个工作站必须在将数据传输到环路上之前获得令牌的控制权。当数据正在环路上传输时，其他工作站无法获得令牌。双环拓扑将提供一定程度的容错能力。如果环路断开，则使用双路径来形成一个新的环路。令牌环支持 4 或 16 Mb/sec 的带宽。在高端方面，令牌环可以维持约 12 Mb/sec 的吞吐量。图 13-4 说明了这种环路拓扑。
+
+适用于 pSeries 和 RS/6000 的 IBM 令牌环 PCI 适配器卡支持 4 和 16 Mb/sec，可为半双工或全双工。若要修改令牌环适配器的属性，请使用 SMIT FastPath `smit chgtok`。
+
+### 光纤分布式数据接口 (FDDI)
+
+光纤分布式数据接口（FDDI），即 ANSI X3T9.5，是一种类似于令牌环的令牌传递协议，但它是使用光纤环路实现的。FDDI 及其铜缆基础近亲，铜缆分布式数据接口（CDDI），支持 100 Mb/sec 的数据速率。FDDI 被设计用于网络骨干。由于每个节点的成本较高，其被接受的速度相对较慢。
+
+与令牌环类似，FDDI 在连接到环路的所有站上进行分布式控制。每个站从一个邻居接收令牌或数据帧，如果它不是接收者，则将其传递给下一个邻居。FDDI 规范中的介质访问控制（MAC）层支持对令牌处理时间的调整，以反映通常通过环路传输的数据类型。低时间值提供更好的交互式响应，而高值更适合移动大块数据。
+
+pSeries 和 RS/6000 支持单环和双环拓扑。单挂接站（SAS）用于单环配置。双挂接站（DAS）适配器提供了支持主环和次环拓扑的能力。在此配置中，次环支持与主环方向相反的数据流。这允许在环路分段的事件发生时形成一个故障切换环。请注意，次环仅可用于容错，不能用作独立的网络。
+
+建议每个环使用 62.5/125 微米多模光纤。只要将信号损失降至最低，你就可以使用其他流行的光纤尺寸。FDDI 集中器可以以星形环拓扑中的叶节点形式连接。光纤分配面板可以放置在配线间中，类似于令牌环 MAU。
+
+若要更改 FDDI 设备的属性，请使用 SMIT FastPath `smiit cfgfddi` 并参见图 13-5。
+
+![](img/82f851021955589d82b22750fb3b1646_295_0.png)
+
+**图 13-4. 令牌环网络**
+
+### 异步传输模式 (ATM)
+
+异步传输模式（ATM）是一种全双工电路交换协议，支持参与 ATM 组件之间的端到端连接。ATM 系统将 TCP/IP 数据包（在 ATM 中称为协议数据单元或 PDU）分割成 53 字节的数据单元（cell），以便在 ATM 网络上传输。每个数据单元在一对称为虚路径标识符（VPI）和虚通道标识符（VCI）的报头字段中标识源和下一跳。定义源和接收者之间路径的 VPI、VCI 集合的总和定义了虚电路。ATM 交换机将共享相同下一跳目的地的数据单元捆绑在一起。数据单元在虚电路的接收端被重新组装成 PDU。RFC 1577 定义了支持 ATM 上的 TCP/IP 的规范。
+
+AIX 5L 支持以 25、100、155 和 622 Mb/sec 速度运行的 ATM 适配器，通过单模或多模光纤连接到 ATM 交换机。每个适配器最多支持 1024 个交换或永久虚电路。可以使用具有多千兆位交换背板的交换机将多个适配器连接在一起。交换机之间的通信使用一个或多个以 155 和 622 Mb/sec 运行的适配器来处理。
+
+![](img/82f851021955589d82b22750fb3b1646_296_0.png)
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_297_0.png)
+
+若要查看或修改 ATM 卡的属性，请使用 SMIT FastPath `smit chg_atm` 并参考图 13-6。
+
+## 寻址
+
+网络中的每台计算机必须通过唯一的标识符来识别。TCP/IP 使用两种不同类型的地址：硬件地址和 IP 地址。
+
+### 硬件寻址（MAC 地址）
+
+制造商将唯一的硬件地址编码到他们生产的每个适配器中。你可能认为这应该能够满足网络唯一性要求，那么为什么还需要 IP 地址呢？硬件地址对于不同类型的网络适配器具有不同的格式。以太网硬件地址仅对以太网适配器有意义，但无法用于与网络其他部分的 ATM 适配器进行通信。这些数字即使以十六进制表示，也很难记忆。
+
+### IPv4 寻址
+
+IP 版本 4 是互联网协议的传统版本。这是互联网和大多数私有网络中常用的协议。IPv4 地址是一个 32 位数字，表示为四个由点分隔的 8 位字段，称为八位组。每个八位组是 0 到 255 之间的整数，使得完整的地址范围为 0.0.0.0 到 255.255.255.255。该地址分为两部分，分别表示网络地址和该网络上的主机地址。历史上，IP 地址空间被分为三类：A 类、B 类和 C 类。A 类由所有首位为 0 的地址组成。在 A 类地址中，第一个八位组表示网络地址，最后三个八位组表示主机地址。B 类范围内地址的前两位是 10。在 B 类地址中，前两个八位组表示网络地址，最后两个八位组表示主机地址。C 类地址以三位 110 开头。它们的前三个八位组表示网络地址，最后一个八位组表示主机地址。在此方案下，拥有许多主机的大型组织可能被分配 A 类地址，而小型组织可以使用 C 类（参见表 13-4）。有关 IP 地址定义的完整描述，请参见 RFC 1166，“Internet Numbers”。
+
+## 子网掩码和子网划分
+
+子网划分允许组织将其被分配的地址范围进行细分。例如，如果拥有多个部门的大型组织被分配了一个 A 类地址，该组织可能希望细分该 A 类网络地址，并为每个部门分配一个 B 类大小的地址。这需要一种机制，让路由器和主机知道地址中有多少位指示子网地址，多少位指示主机地址。这种机制称为子网掩码。子网掩码通常写成点分十进制地址，例如 255.255.0.0。对于子网掩码中每一位设为 1 的位，地址中对应的位属于网络地址部分。对于子网掩码中每一位设为 0 的位，地址中对应的位属于主机地址部分。
+
+一种称为无类别域间路由（CIDR）的新术语扩展了简单的 A、B 和 C 类网络的概念。CIDR 定义了从 /1 到 /30 的整数前缀，可用于分配任意大小的地址块，而不是总是沿着 A、B 或 C 类边界分配地址。
+
+| 类别 | 地址 | 主机数 | 地址范围 |
+| :--- | :--- | :--- | :--- |
+| A | N.H.H.H | 16M* | 0.0.0.0-127.255.255.255 |
+| B | N.N.H.H | 64K* | 128.0.0.0-191.255.255.255 |
+| C | N.N.N.H | 254* | 192.0.0.0-223.255.255.255 |
+
+N = 网络地址；H = 主机地址。
+*主机地址和网络地址 0 和 255 是保留的。
+网络地址 127 是保留的。
+
+**表 13-4. IP 地址类别**
+
+这导致浪费的地址减少，路由效率提高。有关完整说明，请参见 RFC 1878。
+
+公共 IP 地址块是从互联网服务提供商（ISP）获得的，ISP 已从其上游注册机构获取了这些地址。这些公共 IP 地址必须是唯一的，以便不会与世界上任何其他地址冲突。管理互联网协议号码和注册的详细信息可在以下本地站点找到：
+
+| 站点 | 区域 |
+| :--- | :--- |
+| http://www.arin.net/ | 南美洲和北美洲、加勒比地区以及撒哈拉以南非洲 |
+| http://www.ripe.net/ | 欧洲、中东和非洲 |
+| http://www.apnic.net/ | 亚太地区 |
+
+您可能不需要为站点中的所有主机配备公共 IP 地址。只有直接连接到互联网的主机才需要唯一的全局地址。一种常见计划是在网关或防火墙上配置公共 IP 地址，以便为您的内部私有 IP 网络提供网络地址转换（NAT）。互联网数字分配机构（IANA）保留了三个私有 IPv4 地址范围，供所有企业用于其内部网络管理。这一私有 IP 空间提供了保护措施，在保护内部网络的同时节省互联网公共 IP 空间中的地址。
+
+| 私有 IP 范围 | CIDR | 地址数 |
+| :--- | :--- | :--- |
+| 10.0.0.0-10.255.255.255 | 10/8 | 16,000,000 |
+| 172.16.0.0-172.31.255.255 | 172.16/12 | 1,024,000 |
+| 192.168.0.0-192.168.255.255 | 192.168/16 | 64,000 |
+
+## ARP
+
+ARP（地址解析协议）用于执行 IPv4 地址与硬件地址之间的转换。由于网络适配器仅理解硬件地址，即使数据包的最终目的地由其 IP 地址标识，接收数据包的下个适配器（即下一跳）的硬件地址也必须包含在该数据包中。ARP 负责处理这种转换。AIX 5L 系统维护一个 ARP 缓存，其中包含所有直接连接网络上的系统从 IP 地址到硬件地址的映射。在发送 IP 数据包时，一旦知道下一跳的 IP 地址，AIX 5L 将检查其 ARP 缓存以确定是否已存在该 IP 地址的映射。如果没有，它将发送一个 ARP 请求。ARP 请求是硬件层广播包，包含系统需要其 MAC 地址的 IP 地址。本地网络上的每台系统将接收该请求并检查该请求是否针对其 IP 地址。配置了该 IP 地址的系统将向请求者发送一个包含其硬件地址的 ARP 响应。请求者将该条目添加到其 ARP 缓存中，现在就可以发送其数据包了。
+
+### IPv6 寻址
+
+IP 版本 6 是互联网协议的新版本。目前，它主要用于实验目的，要么在私有网络上，要么在一个称为骨干网的全局网络上。然而，其受欢迎程度正在增加，并开始在生产网络上使用。
+
+IPv6 地址是一个 128 位数字，表示为十八个由冒号分隔的 16 位十六进制字段。允许使用简写语法，在地址中仅一次用“::”表示多个相邻的零字段，并省略每个字段内前导的不重要零。
+
+接口具有多个 IPv6 地址很常见——例如，一个仅在本地网络链路上有效的地址和一个全局地址。这个概念称为地址范围。
+
+IPv6 还定义了两种用于与 IPv4 兼容的地址类型。第一种类型的前缀为 0:0:0:0:0:ffff::/96。地址的最后 32 位将是 IPv4 地址。这种地址类型仅用于以 IPv6 格式表示 IPv4 地址，称为 IPv4 映射地址。另一种类型的前缀为 0:0:0:0:0:0::/96。最后 32 位再次是 IPv4 地址。这被称为 IPv4 兼容地址，用于 IPv6 自动隧道。自动隧道用于必须通过 IPv4 网络向其他 IPv6 节点发送数据的 IPv6 节点。如果两个系统都具有 IPv4 兼容地址，发送方可以将数据包发送到接收方的 IPv4 兼容地址，数据包将自动封装在 IPv4 数据包中，从而可以通过 IPv4 网络发送。
+
+有关 IPv6 寻址的更多详情，请参见 RFC 2373。
+
+### NDP
+
+邻居发现协议（NDP）是 ARP 的 IPv6 替代品。它执行 ARP 在 IPv4 中执行的功能，并增加了一些更多功能。
+
+将 IPv6 地址映射到硬件地址的基本功能是使用邻居请求和邻居通告包完成的。这些包非常类似于 ARP 请求和响应。NDP 还使用其他两种类型的包，称为路由器请求和路由器通告。路由器请求由主机广播到本地链路上的所有路由器。路由器以路由器通告进行响应，其中可以包含主机应使用的前缀信息以及该路由器能够路由到的目的地。有关 NDP 的更多信息，请参见 RFC 2461。
+
+### IPv6 自动配置
+
+IPv6 的一个重要特性是它允许对主机上的地址进行自动配置。IPv6 使用每个网络适配器的硬件地址来推导出一个 64 位标识符。由于每种媒体类型的硬件地址在全球范围内是唯一的，因此这个 64 位标识符在其网络链路上将是唯一的。然后，该 64 位标识符可用于创建链路本地地址。一旦每个接口都配置了链路
+
+
+本地地址，系统便能够在本地网络上发送流量。它现在可以在每个本地网络上发送路由器请求，并接收路由器通告，告知其应使用哪些前缀来配置站点本地地址和全局地址。这使得无需手动配置每个主机即可将新主机添加到网络中。所有路由器都需要进行特殊配置。
+
+在 AIX 5L 上，可以使用 **autoconf** 命令来配置带有链路本地 IPv6 地址的接口。当在主机上运行时，**nwdp-host** 守护程序会发送路由器请求数据包，并处理接收到的任何路由器通告。应在 IPv6 路由器上运行 **nwdp-router** 守护程序，以使其发送路由器通告。**nwdp-router** 可以配置为让路由器通告其所在网络的正确前缀和路由器。
+
+## 别名（Aliasing）
+
+网络接口可以关联多个地址，这被称为别名。接口可以同时将多个 IPv4 地址与多个 IPv6 地址关联在一起。在对网络进行编号时，别名可能非常有用；在过渡期间，保留旧地址的同时将新地址分配给接口可能是理想的做法。在使用 IPv6 时，接口通常具有不同作用域的多个地址，例如链路本地地址和全局地址。
+
+在 AIX 5L 上，使用 SMIT FastPath **smit inetalias** 来配置别名。
+
+## VIPA
+
+虚拟 IP 地址（VIPA）是一个未与特定物理网络适配器关联的地址。VIPA 可用于即使网络接口宕机，网络通信仍需继续的场景。AIX 5L 允许管理员配置一个名为 **vio0** 的接口并为其分配地址。除非应用程序显式绑定到其他地址，否则该地址将用作任何发送数据包的默认源地址。使用此机制，如果用于发送流量的接口被禁用，只要仍存在允许流量到达目的地的路由，通信就可以使用不同的接口继续进行。使用 VIPA 要求网络中的相邻路由器被配置为能够将响应路由回正确的主机。这可以通过手动配置路由器，或者在具有 VIPA 的主机上运行 **gated** 应用程序来实现。当配置为使用 OSPF 协议时，**gated** 会自动向相邻路由器通告关于 VIPA 的信息。
+
+# 网络路由
+
+在 IP 路由中，发送数据包的系统不需要了解每个目的地在网络中的完整位置信息。相反，它只需要知道下一个跳（next hop）以便使数据包更接近其目的地。下一个跳的系统负责知道接下来将数据包发送到哪里。
+
+管理路由有两种不同的方式。路由信息可以通过查询路由器从点 A 到点 B 的路径来动态确定，或者通过系统管理员配置的静态路由来实现。静态路由在小网络中效果很好，但随着网络规模变大，它们变得越来越难以管理。
+
+通常，使用专用路由器在网络之间路由 IP 流量，而 AIX 5L 系统仅作为发送者而非转发器来处理 IP 路由。AIX 和其他 UNIX 系统具备作为 IP 路由器运行的能力；但在需要路由中等至大量 IP 流量的网络配置中，专用路由器能提供最佳性能。
+
+## 内核路由表
+
+所有路由，无论是静态的还是动态的，都存储在内核路由表中。在 AIX 5L 中，可以使用 `netstat -r` 命令显示路由表。路由表中的每个条目由目的地、网关和接口组成，以及某些辅助信息。目的地可以是一个单一的主机地址、一个网络地址，或者一个称为*默认*（default）的特殊目的地，该目的地将匹配任何之前未被主机或网络地址匹配到的地址。当 IP 层准备发送数据包时，它会在路由表中查找其试图发送到的地址。如果它找到了到该主机地址、包含该主机的网络或默认路由的路由，它将使用该路由的网关字段作为下一跳，并使用该路由的接口字段作为发送数据包的网卡。AIX 5L 有两个独立的路由表，一个用于 IPv4 地址，另一个用于 IPv6 地址。
+
+## 静态路由
+
+系统管理员可以使用 *route*、*chgdev* 或 SMIT FastPath *smii* *m*ctrl*ke* 向内核路由表中添加路由。在简单的网络配置中，这效果很好。例如，如果只有一个网关连接网络与所有外部网络，那么网络上的每个主机只需要两条路由——一条用于本地网络上的系统，另一条允许它们到达任何其他目的地的默认路由。在 AIX 5L 上，当该网络上的接口被配置时，会为每个直接连接的网络自动添加一条路由——因此，在这种情况下，管理员只需要在每个主机上添加一条默认路由。
+
+## 动态路由
+
+也可以使用动态路由来管理内核路由表。诸如 *gated* 和 *routed* 等应用程序运行路由协议，与相邻路由器交换信息，然后根据它们学到的信息将正确的路由添加到内核路由表中。虽然动态路由在首次配置时需要一些努力，但它相对于静态路由有几个优势。首先，对于拥有许多路由器的大型或复杂网络，它节省了管理员跟踪使用哪个路由器到达哪些网络的麻烦。另一个优势是，如果路由器宕机，它可以动态调整。在这种情况下，相邻路由器会调整其路由表，使用到达目的地的替代路径。
+
+AIX 5L 使用 routed 或 gated 应用程序支持 RIP 协议。gated 还支持 RIPng、EGP、BGP 和 BGP4+、HELLO、OSPF、IS-IS 和路由器发现协议。
+
+## 多路径路由和死网关检测
+
+AIX 5L 版本为路由子系统增加了两项增强功能。第一项是多路径路由，它允许内核表拥有到同一目的地的多条路由。这允许在同一个子网的多个网络接口之间或多个网关之间对出站流量进行负载均衡。如果到某个目的地存在多条路由，AIX 5L 将以轮询方式在这些路由之间交替使用。另一项增强功能是死网关检测，它允许管理员指定到某个目的地的“备份”路由，如果该目的地的主路由器变得不可达，则使用这些路由。AIX 5L 会根据配置，通过主动发送探针或被动使用现有网络连接来检测主路由器是否可达。如果某个目的地的主要路由器变得不可达，内核路由表将调整为使用该目的地的备份路由（如果存在）。这允许主机系统检测并调整第一跳路由器的丢失，而无需在每个主机上运行路由协议。
+
+# 域名系统
+
+IP 地址足以用于在网络上发送和接收数据包或数据报。然而，对于人类来说，IP 地址不如符号化名称直观且易于记忆。对于小型网络，IP 地址和符号化名称之间的交叉引用保存在网络上每台机器的 /etc/hosts 文件中。对于大型网络，TCP/IP 应用程序使用域名系统（DNS），这是一个客户端/服务器应用程序，具有用于将 IP 地址映射到名称的分布式数据库。负责构建请求的软件部分称为解析器（resolver）。管理和处理请求的部分称为名称服务器守护程序（named）。
+
+## 域名
+
+DNS 中的计算机和组织通过域名进行标识。域名是由点分隔的名称元组，表示其所属名称空间的管理层次结构。域名通常表示为两到四级。请注意，子域名与 IP 数字八位位组之间没有隐含的映射关系！
+
+格式：hostname.subdomain.subdomain.topdomain
+
+示例：techsupport.services.ibm.com
+
+
+
+
+
+## 名称服务器
+
+名称服务器是负责在其区域权限内为其他主机解析名称至 IP 地址的主机。每个区域可以有一个以上的名称服务器。实际控制名称解析的服务器进程被称为 **named**。它监听两个知名端口：UDP 端口 53 和 TCP 端口 53。为了提高名称解析过程的性能并减少网络流量，所有名称服务器都会缓存从远程名称服务器接收到的查询数据。
+
+AIX 5L 附带了 Berkeley Internet Name Domain (BIND) 的编译版本，包括版本 4 和版本 8。BIND4 和 BIND8 的配置存在差异，但总体流程相似。您也可以考虑从互联网软件联盟（Internet Software Consortium）获取源代码并自行编译 BIND9，获取网址如下：
+
+```
+http://www.isoc.org/products/BIND/
+```
+
+安装和配置 **named** 过程 straightforward（直截了当/简单明了），但这超出了本章的范围。更多详情，请查阅 **AIX** 命令参考手册第 4 卷，或使用 DoSearch 关键字 **named8** 和 **named4**。这些文档还将列出示例配置文件和 **awk** 脚本的位置。
+
+## 主机名
+
+主机名是一种特殊的符号名称，因为无论系统中有多少网络接口适配器，每个系统只有一个主机名。如果您的系统中安装了多个网络适配器，每个网络接口都可以关联一个符号名称，但您的系统只有一个主机名，它关联于主网络接口。
+
+要在 AIX 上显示或临时修改主机名，请使用命令 **hostname**。要永久更改主机名，请使用 SMIT 快速路径 **smit mks hostname**。主机名不仅会被写入当前运行系统的内存，还会写入 ODM 配置数据库，以便在下次系统重启时使用。
+
+## 名称解析过程
+
+应用程序通过两个库例程 `gethostbyname()` 和 `gethostbyaddr()` 解析名称和 IP 地址。这些例程是名为 *resolver* 的名称转换库的一部分。
+
+AIX 上解析器子例程使用的默认过程取决于系统配置。如果存在 `/etc/resolv.conf` 文件，解析器将假定局域网中存在名称服务器；否则，它将假定不存在名称服务器。如果没有名称服务器，解析器使用 `/etc/hosts` 文件来解析请求。如果有名称服务器，它首先查询列表中第一个名称服务器上的 DNS 数据库。如果在超时期间未收到响应，则尝试第二个名称服务器。如果该查询失败，解析器随后将检查 `/etc/hosts` 文件。
+
+以下是 `/etc/resolv.conf` 的示例：
+
+```bash
+# cat /etc/resolv.conf
+domain        mcgraw-hill.com       ; 使用分号作为注释
+nameserver    123.145.100.1         ; 名称服务器1
+nameserver    123.145.100.2         ; 名称服务器2
+```
+
+默认顺序可以被文件 `/etc/irs.conf` 或 `/etc/netcvs.conf` 中指定的顺序或环境变量 NSORDER 覆盖。优先级顺序为：NSORDER、/etc/netcvs.conf，然后是 /etc/irs.conf。
+
+## TCP/IP 子系统
+
+TCP/IP 守护进程在 AIX 下作为子系统运行。这意味着它们受系统资源控制器（SRC）的控制。由主 TCP/IP 守护进程 *inetd* 控制的守护进程，例如 *ftpd*，被称为子服务器（subservers）。子服务器在 `/etc/inetd.conf` 文件中启用，并由 *inetd* 根据需要启动。与 TCP/IP 组关联的所有子系统都应从 `/etc/rc.tcpip` 脚本中启动。该脚本中的 start() 函数将使用 `startsrc -s` 命令启动每个已取消注释的子系统。切勿使用 `startsrc -g` 命令启动所有 TCP/IP 子系统。以下是一些有用的 SRC 命令：
+
+```bash
+# lssrc -T              # 列出所有 inetd 子服务器
+# lssrc -t ftp          # 列出 ftp 子服务器的状态
+# lssrc -g tcpip        # 列出所有 TCP/IP 子系统
+# stopsrc -g tcpip      # 停止所有 TCP/IP 子系统
+# startsrc -s inetd     # 逐个启动子系统
+# refresh -s inetd      # 使守护进程重新读取配置文件
+```
+
+TCP/IP 子系统的进一步配置可以通过以下 SMIT 快速路径 **conftgcp** 面板上列出的菜单项完成：
+
+```
+# smit conftgcp
+* 主机名
+* 静态路由
+* 网络接口
+* 名称解析
+* 客户端网络服务
+* 服务器网络服务
+* 管理打印服务器
+* 选择 BSD 风格的 rc 配置
+* 启动已配置的 TCP/IP 守护进程
+* 停止 TCP/IP 守护进程
+* 身份验证配置
+```
+
+## 主守护进程 inetd
+
+一些 TCP/IP 服务守护进程并非持续运行，而是可以在提出服务请求时启动，并在服务完成后关闭。*inetd* 守护进程支持此功能。
+
+*inetd* 的配置位于 /etc/inetd.conf 和 /etc/services 文件中。/etc/inetd.conf 文件中的条目指示服务名称和启动信息。/etc/service 文件列出服务名称、是否使用 TCP 和/或 UDP 协议，以及与服务关联的知名端口号。每当这些文件中的任何一个做出更新时，您需要刷新 *inetd*。这可以通过 **SRC refresh** 命令或向 *inetd* 进程发送挂起信号（hangup signal）来完成。请注意，某些守护进程要求 **portmap** 守护进程正在运行。
+
+```bash
+# refresh inetd
+# kill -HUP <inetd-pid>
+```
+
+## 其他网络守护进程
+
+并非所有 TCP/IP 服务器守护进程都在 *inetd* 的控制下运行。您也可以选择将 *inetd* 子服务器作为独立守护进程运行，以处理高流量负载。这消除了为每个服务请求重启守护进程的开销。使用 /etc/inittab 中的条目或从本地的 /etc/rc.tcpip 文件来启动独立的服务守护进程。
+
+## 启动配置
+
+TCP/IP 子系统通常通过 /etc/inittab 中的条目在系统启动时启动。/etc/rc.net 和 /etc/rc.tcpip 配置文件包含用于启用网络接口、设置主机名、设置默认路由、启动 **inetd** 等的条目。如果您不想启动某些 TCP/IP 子系统，请在 `/etc/rc.tcpip` 中注释掉该子系统的条目。
+
+## DHCP
+
+动态主机配置协议（DHCP）是一种允许自动配置网络主机的协议。传统上，每个系统必须由管理员使用网络管理员提供的 IP 地址和其他信息进行手动配置。随着网络规模变大，这种手动配置变得越来越困难且容易出错。DHCP 允许在网络的一个位置（即 DHCP 服务器）管理整个网络的配置参数。然后，网络上的所有主机都可以作为 DHCP 客户端，从服务器获取其配置信息。
+
+AIX 5L 的 DHCP 实现由两个应用程序空间守护进程组成；**dhcpd** 是客户端守护进程，**dhcpasd** 是服务器守护进程。可以在同一网络上配置多个 DHCP 服务器以实现冗余。大多数操作系统都附带 DHCP 客户端，许多系统也附带 DHCP 服务器，因此 AIX 5L 可以在异构网络中充当 DHCP 服务器，或在采用不同 DHCP 服务器的网络中充当 DHCP 客户端。
+
+## SLIP 和 PPP
+
+AIX 使用串行线路互联网协议（SLIP）和点对点协议（PPP）支持通过拨号线路传输 TCP/IP。这些协议使用的硬件包括标准串行端口、调制解调器和交换线路。SLIP 是在串行线路上对 IP 数据包进行帧定界的非常简单的协议。它不支持数据包寻址或类型字段、数据压缩或可靠性。一条链路一次只能支持一种协议。必须手动启动 SLIP 链路。
+
+PPP 比 SLIP 更进一步，包括用于链路控制的链路控制协议（LCP）以及支持同时使用多种协议的一组网络控制协议（NCP）。此外，PPP 还具有更强的封装和加密功能（CHAP）。
+
+要为 SLIP/PPP 设置串行端口，请使用 SMIT 快速路径 **smit tty**（参见图 13-7）。在大多数情况下，您希望使用 9600 位/秒或更高的线路输入速度。如果串行端口仅用于拨出，请将 LOGIN 状态设置为 **DISABLE**。对于拨入支持，请使用 **ENABLE**。对于拨入和拨出，请使用 **SHARE**。
+
+```bash
+# smit tty
+
+# mkdev -c tty -t tty -s rs232 -p s81 -w s2 -s speed:38400
+```
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_308_0.png)
+
+**图 13-7.** SMIT 添加 TTY 面板
+
+SLIP 和 PPP 遵循标准的 TCP/IP 寻址和路由规范。在以下关于 SLIP 支持的讨论中，配置要求已划分为用于专用 SLIP 链路的要求和用于临时 SLILOGIN 连接的要求。
+
+## 专用 SLIP
+
+专用 SLIP 链路是两台具有相同 IP 地址和域名地址系统之间的连接。由于这种类型的链路不被多个系统和用户共用，支持它的基础设施复杂度较低。AIX **slattach** 命令用于建立客户端和服务器连接的 SLIP 链路。命令选项包括要使用的 TTY 设备、线路速度以及用于建立 SLIP 登录会话的 Hayes 类型拨号字符串。拨号字符串取决于调制解调器，并设置为用于拨出或用于入站连接的自动应答。拨号字符串的格式与 UUCP 使用的格式相同，例如：
+
+```
+ATZ OK ATDT123-4567 CONNECT
+1. **          来自调制解调器的空值
+2. ATZ         向调制解调器发送重置命令
+3. OK          来自调制解调器的响应
+4. ATDT...     向调制解调器发送拨号命令
+5. CONNECT     连接字符串
+6. **          完成
+```
+
+![](img/82f851021955589d82b22750fb3b1646_309_0.png)
+
+对于 SLIP 链路的客户端或服务器端，通过调用 SMIT FastPath smit mkinet 并选择“添加串行线路互联网网络接口”来配置接口地址（见图 13-8）。
+
+```
+# smit_mkinetial
+# mkdev -c if -S SL -t sl -w sl1 -a netaddr='192.168.1.10' \
+-a dest='192.168.1.15' -a netmask='255.255.255.0' \
+-a state='up' -a ttyport='tty1'
+# slattach tty1 38400 "ATHO OK \pATDT1234567 CONNECT"
+# slattach tty1 < < < < < < < < < < 来自应答节点
+```
+
+你也可以将 SLIP 驱动程序加载到内核中，并使用 strload 和 ifconfig 命令从命令行控制接口特性。请确保你还在适当的服务表中为每个要使用的 IP 地址添加了域名。
+
+```
+# ifconfig sl[n] [options] < < < < < < < < < < 设置 SLIP 接口特性
+# strinfo -m | grep "\slip\|" < < < < < < < < < < < < < < 检查 SLIP 内核扩展是否已加载
+# strload -m /usr/lib/drivers/slip < < < < < < < < < < < < 加载 SLIP 内核扩展
+```
+
+在将接收入站连接的系统中，使用带有 tty 选项的 slattach 命令启动 SLIP。系统将在此 TTY 端口上监听 SLIP 请求。
+
+```
+# slattach tty[n]
+```
+
+# AIX 5L 管理
+
+在客户端拨出系统中，启动 slattach。请注意，你可以在命令行中包含波特率和拨号字符串。
+
+```
+# slattach tty[n] 19200 "ATZ OK ATDT123-4567 CONNECT*"
+```
+
+连接建立后，你可以使用 ifconfig 控制 SLIP 接口。
+
+```
+# ifconfig sl0
+查询 sl0 接口
+sl0: flags=10<POINTOPOINT,NOTRAILERS>
+inet 140.142.22.38 --> 140.142.22.39 netmask 0xffffff00
+```
+
+要禁用 SLIP 连接，请向 slattach 进程发送挂断（HUP）信号。不要使用 -9（KILL），因为这可能导致系统恐慌。
+
+## 非专用 SLIP
+
+SLILOGIN 配置用于接口上的临时 SLIP 连接，这些连接可能由多个用户共享。这种类型的链路还可以支持为每个用户提供不同的 IP 和域名地址对。
+
+在服务器端（拨入支持），为每个拨入用户创建 AIX 用户账户，shell 为 /usr/sbin/slogin。你需要登录这些账户中的每一个并重置密码，或者从 /etc/security/passwd 中删除 ADMCHG 标志以移除首次登录时的密码更改提示。
+
+接下来，编辑 /etc/sliplogin.hosts 文件以设置每个用户连接要使用的 IP 地址。你还需要在适当的 name-service 文件中为每个 IP 地址添加域名，例如：
+
+```
+# format:    user  server-slip-ip  caller-slip-ip  hex subnet mask  options
+fred  7.9.8.1       7.9.8.2       0xffffff00  normal
+fred  7.9.8.3       7.9.8.4       0xffffff00  normal
+Jenny 7.9.8.1       7.9.8.2       0xffffffff  normal
+```
+
+更新 /etc/uucp/Devices 以包含拨出连接的选项。此条目可由 SLIP 和 UUCP 共同使用。
+
+```
+Direct tty0 - 19200 direct
+```
+
+确保 /etc/slip.login 和 /etc/slip.logout 文件存在且内核扩展已加载。
+
+```
+# ifconfig sl[n] [options]                       设置 SLIP 接口特性
+# strinfo -m | grep "slip/"                       检查 SLIP 内核扩展是否已加载
+# strload -m /usr/lib/drivers/slip                加载 SLIP 内核扩展
+```
+
+在连接的客户端端，你需要在名称解析表中添加 IP 和域名地址，并如上所述更新 /etc/uucp/Devices 中的 TTY 选项。使用 slipcall 命令开始连接。
+
+```
+# slipcall [number] [tty] [baud] [user name] [password]
+```
+
+## PPP
+
+点对点协议（PPP）超越了 SLIP 使用的简单封装协议。PPP 中使用的链路控制协议（LCP）可以封装和复用多协议数据报。PPP 还提供了额外的会话协商选项、链路级错误检测、压缩和身份验证。
+
+PPP 是由系统资源控制器管理的子系统。主要 PPP 控制守护进程 pppcontrol 作为子进程启动，并负责加载 PPP 内核扩展。每个 PPP 连接都会启动一个 ppptad 订阅者。ppptach 绑定 PPP 和 TTY STREAM。PPP 子系统的配置信息存储在 `/etc/ppp` 目录中。
+
+PPP 使用 PAP（密码认证协议）和 CHAP（挑战握手认证协议）作为客户端机器向服务器机器进行身份验证的方法。两者的区别在于，在 PAP 中，客户端名称和密码（共享密钥）以明文发送，而在 CHAP 中，共享密钥不以明文发送。相反，服务器发送一个挑战，客户端必须通过对挑战和共享密钥生成哈希值并将其发送到服务器来证明其知道该密钥。服务器也生成自己的哈希值，并与从客户端接收到的值进行比较。
+
+要配置 PPP 子系统，首先调用 SMIT FastPath smitppp。第一步将是配置 LCP（见图 13-9）。你需要为 LCP 选择一个子系统名称。这可以是任何文本字符串。它与任何 TCP 名称服务条目无关。接下来，定义 LCP 支持的最大服务器（入站连接）、客户端（出站连接）和按需（检测到网络流量时启动的会话）连接数。你可以通过定义子系统支持的最大 IP 接口和异步高级数据链路控制（HDLC）附件数量来限制服务器、客户端和按需连接的混合使用。
+
+```
+# smit pppicp
+```
+
+一旦定义了 LCP 子系统，你需要设置建立 PPP 连接时要使用的 IP 地址。调用 SMIT FastPath smit pppip（见图 13-10）。确定本地机器的 IP 地址、分配地址的基础 IP 号、要分配的地址数量以及子网掩码。
+
+```
+# smit pppip
+```
+
+如果你选择使用身份验证来建立连接，请调用 SMIT FastPath smit ppppap 或 smit ppchap。添加每个允许建立 PPP 连接的用户、机器和密码。这些值以明文形式存储在 /etc/ppp/ppp-secrets 文件中。请验证权限限制对该文件的访问。
+
+完成配置后，你可以使用 SMIT 或 startrc -p spp 命令启动 PPP 子系统。
+
+```
+# startrc -p spp    # 启动 PPP 子系统
+```
+
+![](img/82f851021955589d82b22750fb3b1646_312_0.png)
+
+图 13-9. SMIT 链路配置面板
+
+要启动客户端 PPP 连接，请使用 **pppdial** 命令。客户端会话 ChatFiles（登录脚本）示例位于 /etc/ppp 目录中。ChatFile 格式遵循 UUCP 使用的约定。
+
+```
+# pppdial -f {ChatFile}
+```
+
+![](img/82f851021955589d82b22750fb3b1646_312_1.png)
+
+图 13-10. SMIT PPP IP 配置面板
+
+
+
+
+## 规划
+
+无论您是 TCP/IP 的新手，还是在网络技术领域经验丰富的“大法师”，安装或升级网络基础设施都需要周密的规划和大量的前期工作。在开始配置网络之前进行仔细规划至关重要。需要多少不同的网络？每个网络将有多少台主机？请确保为未来的扩展留出空间——虽然目前每个子网容纳 30 台主机可能足够了，但几年之后这种情况还会维持吗？您会使用 DNS 还是 `/etc/hosts` 文件？使用 DHCP 还是手动配置主机？您是否拥有足够范围的全球 IP 地址，还是应该使用本地地址配合网络地址转换（NAT）？您的网络硬件是否有足够的带宽来处理预期的负载？您应该使用路由协议还是静态路由就足够了？
+
+所有这些问题的答案将取决于多种因素，例如网络规模、网络用途、是否有高可用性要求、网络变更的频率以及未来的扩展计划。在一个小型且静态的网络中，使用 `/etc/hosts` 文件和手动配置可能是合适的。而在一个大型、复杂且经常添加新主机的网络中，DNS 和 DHCP 将为管理员节省大量的时间和精力。如果您有高可用性要求，使用冗余硬件以及路由协议和死网关检测、EtherChannel 等功能，可以帮助确保关键资源始终可用。归根结底，现在的少量规划可以节省将来的大量时间和金钱。请确保在采购硬件和开始配置之前，充分考虑并设计以满足网络的所有需求。
+
+## TCP/IP 配置
+
+既然您已经熟悉了一些重要的 TCP/IP 网络概念和方面，以下章节将描述如何在 AIX 上配置 TCP/IP。这将使您的系统能够与同一网络或互联网上的其他系统进行连接和通信。
+
+AIX 提供了不同的工具来配置 TCP/IP 的不同方面：系统管理接口工具（SMIT）、基于 Web 的系统管理器（WebSM）以及命令行接口（CLI）命令。要调用 SMIT，请输入 `smit`。在非图形窗口中调用的 `smit` 与调用 `smitty` 相同。要调用基于 Web 的系统管理器，请输入 `wsm`。基于 Web 的系统管理器是一个使用 Java 实现的 GUI。在本章中，我们将使用 `smit` 作为配置工具。值得注意的是，如果您使用配置工具（如 `smit` 或 `wsm`）来配置 TCP/IP，配置数据将写入 ODM 配置数据库，并在系统重启后保持持久性。像 `ifconfig` 和 `route` 这样的命令仅更改当前正在运行的系统，并且在重启后不会保留。
+
+## 配置 TCP/IP
+
+SMI™ FastPath `smit tcpip` 用于 TCP/IP 配置。选择 **最小配置与启动** 来配置主要网络接口、主机名、IP 地址、域名、子网、默认名称服务器、默认网关，以及是否为默认网关选择死网关检测（参见图 13-11）。您还可以指定是否在 /etc/rc.tcpip 文件中启动 TCP/IP 守护进程。SMI 将使用适当的信息更新配置文件，如 /etc/hosts、/etc/resolv.conf 等。
+
+```text
+# smit tcpip
+* Minimum Configuration & Startup ---------------------------- FastPath mktcpip
+* Further Configuration ---------------------------------------- FastPath conftogtcp
+* Use DHCP for TCPIP Configuration & Startup -------------------- FastPath uscdhcp
+* IPv6 Configuration ------------------------------------------- FastPath configtcp6
+* Quality of Service Configuration & Startup -------------------- FastPath configqos
+* Configure IP Security (IPv4) --------------------------------- FastPath ipsec4
+* Configure IP Security (IPv6) --------------------------------- FastPath ipsec6
+```
+
+对于简单配置，这可能就是设置您的系统连接到网络所需的全部步骤。然而，如果您需要通过多个网络接口与多个网络通信，或使用不同的路由以获得更好的吞吐量等，以下章节将提供额外的配置步骤。
+
+![](img/82f851021955589d82b22750fb3b1646_314_0.png)
+
+图 13-11. 最小配置与启动
+
+## 网络接口配置
+
+如前一节所述，如果您使用“最小配置与启动” SMIT 面板配置 TCP/IP，默认接口已经为您配置好。可以使用 SMIT FastPath `smit chinet` 或通过 `ifconfig` 命令来配置额外的网络接口。如果需要更改网络配置，也可以使用相同的命令来更改适配器的地址或掩码。请注意，如果使用 `ifconfig` 命令，您的修改仅对当前正在运行的系统实例有效。换句话说，除非您在 /etc/rc.net 启动脚本中添加一个 `ifconfig` 条目，否则在系统重启后不会保持持久性。然而，这不是推荐的方法，因为根据执行顺序的不同，可能会得到意外结果。
+
+可以使用 SMIT 或从命令行使用 `ifconfig` 命令来启用或关闭适配器接口以进行维护或测试。请注意，这将中断对目标接口的服务，并可能影响依赖的应用程序。
+
+```bash
+# ifconfig en0 up
+# ifconfig en0 down
+# ifconfig en0 detach
+```
+
+以下是使用 `ifconfig` 将地址 123.145.100.18 分配给标准网络接口的示例，子网掩码为 0xffffff00，广播地址为 123.145.100.255。
+
+```bash
+# ifconfig en0 123.145.100.18 netmask 0xffffff00 broadcast 123.145.100.255
+```
+
+## arp 命令
+
+`arp` 命令可用于在 AIX 5L 中查看和配置 ARP 表。`arp -a` 将显示 ARP 表中的所有条目。对于已发送 ARP 请求但尚未收到回复的地址，将显示未完成的条目。通常，不需要手动编辑 ARP 表；但在少数特殊情况下可能需要——例如，如果网络上的某个系统不响应 ARP 请求，或者网络中的适配器已被替换，需要删除旧的 ARP 条目。
+
+```bash
+# arp -a
+```
+
+## autoconf6 命令
+
+运行 `autoconf6` 命令是配置系统使用 IPv6 协议的第一步。IPv6 要求每个网络接口都有一个链路本地地址，用于与本地网络链路上的路由器和其他主机通信。`autoconf6` 自动为每个已配置 IPv4 地址的接口生成并分配链路本地地址。此外，它将创建 `sit0` 接口，该接口用于自动隧道。`sit0` 接口将使用第一个已配置的 IPv4 接口的 IPv4 地址创建，除非使用 `autoconf` 的 `-m` 标志指定了不同的接口。
+
+### ndpd-host 命令
+
+`ndpd-host` 守护进程处理 IPv6 主机的非内核邻居发现协议（Neighbor Discovery Protocol）功能。它发送路由器请求并处理收到的路由器通告。它应该从 `/etc/rc.tcpip` 脚本在 IPv6 主机上启动。
+
+### ndpd-router 命令
+
+`ndpd-router` 守护进程应在作为 IPv6 路由器的系统上运行。它处理路由器通告的发送，并且可以使用 RIPng 路由协议与其他路由器交换路由信息。该守护进程应从 `/etc/rc.tcpip` 脚本在 IPv6 路由器上启动。
+
+`/etc/gateway6` 文件用于配置 `ndpd-router` 守护进程。该行
+
+```plain
+rtdv = y
+```
+
+将使 `ndpd-router` 发送路由器通告，在许多情况下这是唯一的必要配置。其他指令控制通告发送在哪些接口上，以及通告的一些特性，还有 RIPng 的行为。
+
+## 路由配置
+
+内核路由表可以通过两种方式修改：`route` 命令或 SMIT 面板。路由 SMIT 面板的快捷方式是 `smit route`。重要的是要注意，SMIT 面板将修改 ODM 数据库中的路由信息，导致更改在重启后保持持久，而 `route` 命令仅对当前正在运行的系统进行更改。
+
+![](img/82f851021955589d82b22750fb3b1646_316_0.png)
+
+### 使用 SMIT 修改静态路由
+
+路由 SMIT 面板提供四个选项。“列出所有路由”将显示当前在内核路由表中的路由，但不会显示 ODM 数据库中的路由信息。“添加静态路由” SMIT 面板允许在系统添加默认路由的“最小配置与启动” SMIT 面板之后，向系统添加额外的静态路由。此面板允许指定路由的几个特性，例如目的地类型，可以是“主机”或“网络”。目的地地址是此路由允许的主机或网络的 IP 地址或符号名称。
+
+
+需要到达的系统。**网关地址** 指定了用于到达目标主机或网络的下一跳网关的 IP 地址或符号名称。**开销** 字段被 **死网关检测** 功能使用。**网络掩码** 字段指定了用于此路由的网络掩码。**网络接口** 字段用于指定发往目标网络的流量应从哪个网络接口发送出去。**启用主动死网关检测** 字段确定是否向此网关发送周期性探测以判断其是否已宕机。仅当已为此目标指定了备份路由时，此功能才实用。最后，**这是否是一条本地（接口）路由？** 字段允许管理员添加指向本地网络链路的路由。基础 ADX 5.1 在应用最新维护级别之前没有最后一个字段。
+
+路由 SMIT 面板提供的第三个选项是 **删除静态路由**。此面板允许指定 **目标类型**、**目标地址**、**网关地址** 和 **网络掩码**。这将删除当前内核路由表和 ODM 数据库中的路由。
+
+路由 SMIT 面板给出的最后一个选项是 **刷新路由表**。这将删除运行中系统路由表上的所有条目，但不包括接口路由。它不会从 ODM 配置数据库中删除路由。
+
+有一个单独的 SMIT 面板用于修改 IPv6 路由表。可以通过 **FastPath smit route6** 访问该面板。该面板提供与 IPv4 面板相同的四个选项。每个选项中可设置的参数与 IPv4 面板几乎相同，只是网络掩码被替换为前缀长度。
+
+## route 命令
+
+也可以使用 **route** 命令来修改当前路由表。以下是添加路由所使用的语法示例：
+
+```
+route add -net 10.1.1.0 10.2.0.1 -netmask 255.255.255.0
+```
+
+此命令通过网关 10.2.0.1 添加指向网络 10.1.1.0 的路由。要删除该路由，需将子命令 **add** 替换为 **delete**。要使用 **route** 命令添加和删除 IPv6 路由，必须使用标志 **-inet6**。
+
+## 动态路由
+
+ADX 5L 包含两个可用于动态路由的路由守护进程。**routed** 守护进程是两者中简单得多的一个，但它仅运行 RIP 路由协议，该协议存在一些局限性。**gated** 守护进程支持许多路由协议；但结果是，由于其灵活性更强，配置起来需要更多的努力。绝不应同时运行 **routed** 和 **gated** 守护进程。应从 `/etc/rc.tcpip` 脚本中作为系统资源启动 **routed** 守护进程，并可通过 SMIT **FastPath smit routed** 或以下 **chrtcp** 命令进行配置：
+
+```
+# /usr/sbin/chrtcp -a routed -f supply='yes'
+# grep /routed /etc/rc.tcpip  # 配置 routed 以便在下次重启时启动
+start /usr/sbin/routed "$rc_running" -s  # 查看新条目的外观
+```
+
+可选的 -s 标志使 routed 守护进程不仅接收，还发送有关其路由的信息。当 routed 启动时，它将在其连接的每个网络上发送 RIP 数据包。以此方式，它可以通知所有相邻路由器它可达的网络。当接收到 RIP 数据包时，它可以添加有关邻居可达路由的路由表条目，并随后发送 RIP 数据包以通知其他邻居这些路由。除了通告直接可达网络的路由外，还可以配置 routed 以通告有关其他路由的信息。`/etc/gateways` 文件用于此目的。该文件的格式为
+
+```
+(( net | host ) name1 gateway name2 metric { passive | active | external })
+```
+
+如果 `/etc/gateways` 中列出的网关交换 RIP 信息，则应将其标记为 active（主动）。如果没有，则应将其标记为 passive（被动）。`external` 关键字用于通知 `routed` 该路由将通过其他手段添加到内核路由表中，且 `routed` 不应安装任何通往该目的地的其他路由。`routed` 不会发送任何关于外部路由的 RIP 信息。
+
+与 `routed` 类似，`gated` 守护进程也应从 `/etc/rc.tcpip` 脚本启动，并可通过 SMIT FastPath `smit gated` 或以下 `chrtcp` 命令进行配置：
+
+```
+# /usr/sbin/chrtcp -S -d routed       这将停止并取消配置 routed
+# /usr/sbin/chrtcp -S -a gated       这将在当前及下次重启时启动 gated
+```
+
+`gated` 守护进程使用 `/etc/gated.conf` 文件进行配置。由于 `gated` 支持如此多的协议，因此有许多可配置的选项，甚至可以为单独描述 `gated` 编写一整本书。`/etc/gated.conf` 文件本身包含大量关于文件格式的信息，并为不同的路由协议提供了示例段落。
+
+## 网络选项
+
+网络选项用于调整 AIX 5L 上 TCP/IP 的各种行为。它们使用网络选项命令 `no` 进行设置和显示。重要的是要注意，使用 `no` 设置的选项不会存储在系统的 ODM 数据库中，因此它们不具有持久性。如果管理员希望每次重启都设置某个选项，必须将其添加到系统的配置文件中，例如 `/etc/rc.net`。
+
+一些网络选项被称为加载时选项。这些选项在网络内核扩展加载时生效。在此之后更改它们没有效果。更改这些选项的唯一方法是修改 `/etc/rc.net` 文件，使这些选项在文件开头更改。其他运行时选项应始终在 `/etc/rc.net` 文件的末尾更改，因为其中许多选项在此内核扩展加载后不可用。阅读 IBM 的 *Performance Management Guide* 中的“Network Tunable Parameters”（网络可调参数）章节，以完整了解 100 多个网络选项。
+
+- `# no -a` - 显示所有网络选项及其当前值
+- `# no -o <option name>` - 显示单个网络选项及其当前值
+- `# no -o <option name>=<value>` - 设置网络选项的值
+- `# no -d <option name>` - 将网络选项设置为其默认值
+
+### 网络安全
+
+网络安全是一个已撰写了许多书籍的主题，足以填满几卷书的内容来讨论该主题。本节并不打算把你变成网络安全专家。相反，它旨在简要概述在管理网络时应考虑的一些问题，以及 AIX 5L 提供的一些不同类型的网络安全特性。
+
+有人会说网络安全是一个矛盾的词——如果你把计算机放到网络上，它就不再安全了。在某种程度上，这是真的。不存在绝对安全的网络。然而，通过意识到一些问题并采取一些相当简单的步骤，你可以为环境选择适当的网络安全级别，并大大降低风险。
+
+### 网络可信计算基
+
+AIX 支持一组称为可信计算基（TCB）的访问控制和审计设施。TCB 系统还包括网络支持，并被称为网络可信计算基（NTCB）。除了 TCB 用户认证机制外，NTCB 还提供连接认证、安全会话、对网络配置文件和事件的审计，以及增强安全性的 TCP/IP 操作模式。
+
+连接认证通过定义允许连接到本地系统的远程主机地址来提供。可以为每个网络接口定义安全级别，以限制在给定接口上可以执行的活动。
+
+通过使用可信路径、可信 shell (tsh) 和安全注意键 (SAK) 来强制实施安全会话。可信路径和 shell 限制了可以利用终端会话的应用程序。SAK 建立了安全会话所需的环境。
+
+AIX 审计系统记录权限变化、修改时间、校验和以及网络事件。
+
+可以使用 **securetcpip** 命令启用完整的安全特性集。**securetcpip** 禁用不可信命令，并限制对未在指定安全级别配置的接口的访问。Berkeley r 命令，**rsh**、**rcp** 和 **rlogin** 与 **ftp** 一起被禁用。**ftp**、**telnet** 和 **rwee** 命令提供额外的安全检查。一旦调用 **securetcpip** 命令，必须重新安装 **tpie** 文件以恢复标准操作。接口安全级别基于 RFC 1038 中描述的 IP 安全选项。
+
+
+
+
+## IP 安全
+
+IP 安全是 IETF 的标准功能，在 AIX 5L 中实现，用于在 IP 层提供安全性。IP 安全用于创建虚拟专用网络（VPN），即使在不可靠的网络上也能允许系统之间进行安全通信。由于其在 IP 层运行，IP 安全是透明的，并且不需要对应用程序进行任何更改。IP 安全可以提供三种服务：身份验证、完整性和加密。身份验证用于验证参与网络通信的主机的身份。完整性确保数据在传输过程中未被修改。加密通过隐藏数据内容来提供隐私保护，在数据通过网络传输时起到作用。
+
+身份验证头（AH）协议用于提供身份验证和完整性，而封装安全有效载荷（ESP）协议提供加密。在不需要加密数据的情况下，可以单独使用 AH；或者当需要所有三种类型的保护时，可以与 ESP 一起使用。
+
+安全关联（SA）用于指定何时应使用 IP 安全。SA 指定了应用于特定类型流量的安全参数，如目标地址、算法、密钥和密钥生命周期。
+
+AIX 5L 支持两种管理 SA 的方法。IKE 隧道用于安全地交换密钥并动态创建 SA。手动隧道使用静态密钥，并提供给那些不支持 IKE 标准的系统以实现互操作性。有关 AH 和 ESP 协议的更多详细信息，请参阅 RFC 2402 和 2406。
+
+## 安全的 r 命令
+
+需要注意的是，传统上，在使用 `telnet`、`ftp` 和 `rlogin` 等命令时，密码是以明文形式通过网络传输的，这使得任何拥有网络嗅探器的人都可以拦截它们。这造成了一个明显的安全漏洞。在 AIX 5L 中，`rlogin`、`rcp`、`rsh`、`telnet` 和 `ftp` 命令（统称为 r 命令）得到了增强，允许使用不在网络上传输明文密码的身份验证方法。所使用的身份验证方法可以在系统范围内配置，并提供三种选择：标准 AIX、Kerberos V.5 以及使用传统基于密码方法的 AIX（允许使用网络嗅探器发送密码）。当使用 Kerberos V.5 身份验证时，系统会从安全服务器获取 Kerberos V.5 票证。这将是一组为建立连接的目标服务器加密的凭据。然后，服务器可以解密该票证并验证用户身份，而无需使用密码。Kerberos V.4 身份验证非常相似，但仅支持 `rsh` 和 `rcp`，仅提供向后兼容。
+
+可接受的配置方法及其尝试顺序使用 `lsauthent` 和 `chauthent` 命令进行配置。
+
+## 传统安全措施
+
+还有一些传统措施可以帮助您保护环境安全。首先是明智地使用 `$HOME/.rhosts` 和 `/etc/hosts.equiv` 文件。使用这些文件允许在不要求密码的情况下使用 Berkeley r 命令。这消除了通过 Net 明文传输的密码，并限制了使用 PTY 嗅探程序可能造成的损害。诚然，如果这些文件被攻陷，它们可能会带来严重的安全漏洞。在使用这些文件时必须小心。基本上，这些文件列出了允许无密码执行 r 命令的主机和用户名。
+
+通过为 inetd 实现包装程序，可以按服务级别实现连接身份验证。包装程序根据访问表验证并记录连接系统的地址。可通过 cert.org 匿名 FTP 获取的 tcppd 程序就是此类应用程序的一个例子。tcppd 系统控制按服务类别以及单个服务的访问。
+
+## 安全信息
+
+位于卡内基梅隆大学的计算机应急响应团队（CERT）跟踪并分发供应商安全信息。CERT 定期在 comp.security.announce Usenet 组上发布信息。他们还支持一个包含安全相关文档的匿名 FTP 站点。另一个与安全相关的 Usenet 讨论组是 alt.security.general。
+
+## TCP/IP 故障排除
+
+AIX 5L 提供了一些工具，用于网络故障排除和调试。其中最重要的是数据包跟踪工具 iptrace 和 tcppdump。这两个工具执行类似的功能，但它们的语法和输出格式不同。这两个工具都提供方法来过滤跟踪，以便只跟踪指定的数据包。这大大减少了跟踪的大小。tcppdump 命令在内核中进行过滤，而 iptrace 必须将每个数据包复制到用户空间并在应用程序内进行过滤。因此，在繁忙网络上跟踪数据包时，tcppdump 可能是更好的选择，因为它不太可能丢失数据包。
+
+tracroute 命令是 AIX 5L 中包含的另一个有用的调试工具。它可以用于诊断网络连接问题。该命令将显示数据包在前往目标主机途中经过的每个路由器的名称或 IP 地址。如果主机本应可达但实际不可达，tracroute 允许管理员查看哪个路由器是最后接收数据包的。问题在于，要么该路由器未正确将数据包转发到下一跳，要么下一跳已宕机或未正常工作（例如，ipforwarding 可能被禁用）。在两台主机之间有很多路由器的情况下，tracroute 可以帮助确定网络中哪里正在发生路由问题。
+
+简单的 **ping** 命令也可用于调试网络问题。如果使用 **ping** 命令并指定目的地的 IP 地址而不是名称，这就是一种简单的网络连通性测试。
+
+**netstat** 命令可用于显示给定工作站或主机的接口统计信息和连接状态。**-a** 选项将显示系统上的所有服务器连接，包括端口号。因此，例如，如果**telnet**到特定主机无法工作，请检查**netstat -a**是否显示 Telnet 端口上处于 TCP 监听状态的连接。如果没有，可能需要修改 `/etc/inetd.conf` 或 `/etc/rc.tcpip` 以确保正确的服务器应用程序已启动。
+
+## 嗅探器
+
+对于中大型网络，拥有一个方便可用的嗅探器是一个好工具。嗅探器是一种连接到网络以分析数据包流量的专用计算机。这些系统紧凑，因此可以带到任何地方，并且经过调校以跟上数据包速率。可以过滤并记录数据包类型，以提供随时间的统计数据。对于预算有限的用户，有适用于工作站和个人计算机的软件包提供许多相同的功能。
+
+## 检查清单
+
+以下是 TCP/IP 关键要点的检查清单：
+
+- □ 定义 TCP/IP。
+- □ 识别 TCP/IP 网络模型的分层。
+- □ 识别网络设备和管理程序。
+- □ 识别 TCP/IP 使用的不同地址类型。
+- □ 管理路由。
+- □ 通过使用域名系统 (DNS) 获取 IP 地址和名称之间的映射来管理 TCP/IP 应用程序。
+- □ 识别 TCP/IP 守护进程如何在 AIX 下作为子系统运行。
+- □ 定义动态主机配置协议 (DHCP)。
+- □ 定义简单网络管理协议 (SNMP)。
+- □ 展示 AIX 如何使用串行线路互联网协议 (SLIP) 和点对点协议 (PPP) 支持拨号线路上的 TCP/IP。
+
+![](img/82f851021955589d82b22750fb3b1646_323_0.png)
+
+# 第六部分
+
+# 网络文件系统
+
+- 14 网络文件系统：NFS、NIS 和 NIS+
+- 15 分布式文件系统
+
+![](img/82f851021955589d82b22750fb3b1646_323_1.png)
+
+
+
+
+# 第 14 章
+
+# 网络文件系统：NFS、NIS 和 NIS+
+
+![](img/82f851021955589d82b22750fb3b1646_325_0.png)
+
+UNIX 系统对不同类型文件系统的支持是通过称为虚拟文件系统（VFS）的开放接口实现的。虚拟文件系统为物理文件系统实现提供了抽象层，因此为不同的文件系统（如 JFS 和 NFS）提供了一致的接口，并且无论底层文件系统如何，都能提供一致的目录视图。
+
+VFS 支持的文件系统体系结构在 `/etc/vfs` 文件中指定：
+
+```
+# name vfs_number mount_helper filesystem_helper
+$defaultvfs jfs nfs
+#
+cdfs 5 none none
+procrs 6 none none
+jfs 3 none /sbin/helpers/v3fsahelper
+jfs2 0 /sbin/helpers/jfs2 none
+dfs 7 /sbin/helpers/nfsmnthelp none remote
+nfs 2 /sbin/helpers/nfsmnthelp none remote
+nfs3 18 /sbin/helpers/nfsmnthelp none remote
+cachefs 17 /sbin/helpers/cfsmnthelp none remote
+autofs 19 /sbin/helpers/aufmnthelp none
+afs 4 none none
+```
+
+### 网络文件系统
+
+由 Sun 开发的 NFS 基于客户端/服务器体系结构，使应用程序能够与网络机器之间共享的文件和目录进行无缝互操作，而无需考虑其所在位置。NFS 使用远程过程调用（RPC）来支持具有不同硬件体系结构的系统之间的文件系统操作，并使用外部数据表示（XDR）语言在系统之间通信不同的数据格式（见插图）。
+
+![](img/82f851021955589d82b22750fb3b1646_326_0.png)
+
+AIX 同时支持 NFS 版本 3 和 NFS 版本 2。支持这两个版本的 NFS 使 AIX 能够与 NFS 版本 2 的客户端和服务器保持向后兼容。除了支持 UDP 作为传输层外，AIX 4.2.1 及更高版本还支持 TCP。事实上，自 AIX 4.3 以来，TCP 就是默认的传输协议。你可以使用 `mount` 命令的 **vers** 和 **proto** 选项来指定使用哪个版本的 NFS 或哪个传输协议。本章稍后将会详细讨论这一点。
+
+### 配置 NFS
+
+AIX 提供 NFS 服务器和 NFS 客户端软件包。这些软件包会自动安装在系统中，但必须采取措施启动守护进程。你可以使用以下任一方法启动 NFS 守护进程：
+
+- `wsm` 命令（基于 Web 的系统管理器，WebSM）
+- SMIT 快速路径 `smit mknfs`
+- `mknfs` 命令
+
+这些方法中的任何一种都会在 `/etc/inittab` 文件中放置一个条目，以执行 `/etc/rc.nfs` 脚本启动 NFS 守护进程。
+
+```
+rcnfss::23456789:wait::/etc/rc.nfs > /dev/console 2>&1 # Start NFS Daemon
+```
+
+`/etc/rc.nfs` 脚本首先启动 NFS 块 I/O `biord` 守护进程。如果存在 `/etc/exports` 文件，则在启动 `nfsd` 和 `rpc.mountd` 守护进程之前，使用 **exports -a** 导出该文件。`/etc/rc.nfs` 脚本最后启动 `rpc.statd` 和 `rpc.lockd` 守护进程。`/etc/rc.nfs` 脚本还包含启动 NIS 和 HANFS 子系统及子服务器的条目。
+
+可以通过在 `/etc/vfs` 中定义 **defaultvfs** 将 NFS 设置为默认的远程文件系统类型。取消注释 `/etc/vfs` 表格中的以下行。
+
+```
+## defaultvfs jfs nfs
+# nfs 2 /etc/helpers/nfsmnthelp none remote
+```
+
+NFS 还可以由 AIX `srcmstr` 作为子系统进行管理。因此，可以使用 `startsrc` 和 `stopsrc` 命令将 NFS 守护进程作为一组启动或停止。NFS 操作也可以通过 SMIT 快速路径 `smit nfs` 子菜单进行管理，并且像 `mkfsexp` 这样的 NFS 配置脚本将立即以及在系统启动时启动所有必要的子系统。
+
+```
+# lssrc -g nfs
+# startsrc -g nfs
+# stopsrc -g nfs
+```
+
+列出 NFS 子系统中的守护进程
+
+启动 NFS 子系统
+
+停止 NFS 子系统
+
+### NFS 服务器
+
+NFS 服务器被设计为无状态系统。这应该能够消除在服务器或客户端故障时需要支持恢复操作的需求。事实证明，这并不完全属实。NFS 使用 UDP 作为传输，我们都知道 UDP 不保证数据包传输或数据包顺序。为了克服 UDP 的缺陷，NFS 服务器必须维护最近的 RPC 握手状态的易失性缓存，以避免重复、乱序或丢失的 I/O 操作数据包。这也意味着服务器必须跟踪它正在与谁通信。为了使 **nfsd** 守护进程保持无状态，使用了额外的守护进程来跟踪机器连接、RPC 状态和文件锁。IBM 的高可用性网络文件系统（HANFS）利用易失性缓存状态和锁守护进程信息来支持备份 NFS 服务器。
+
+为了确保文件完整性，NFS 服务器使用直通缓存，强制文件更新立即写入磁盘。为了性能，维护了数据完整性。在某些体系结构中，当数据完整性不是问题时，可以使用异步写入支持来提高读取性能。
+
+### NFS 服务器守护进程
+
+NFS 服务器依赖多个守护进程来管理分布式文件系统服务。来自多个客户端的 I/O 请求通过 **nfsd** 的多个线程进行多路复用。**nfsd** 守护进程管理文件 I/O 操作。**nfsd** 线程的数量是自调节的，并根据客户端对服务器的请求创建。
+
+**rpc.mountd** 守护进程由服务器用于管理和跟踪客户端挂载请求。客户端和服务器之间的最近 RPC 操作由 **rpc.statd** 守护进程缓存。服务器通过 **rpc.lockd** 守护进程支持 Sysv 建议文件记录和记录锁定。
+
+NFS 服务器守护进程如表 14-1 所示。由于 NFS 基于 RPC，NFS 服务器守护进程必须向 **portmap** 守护进程注册自己。**portmap** 守护进程维护特定机器上可用的 RPC 应用程序集合。每个应用程序表示为应用程序名称、版本和端口号的元组。服务器将其应用程序数据注册到 **portmap** 守护进程。客户端应用程序查询 **portmap** 守护进程以了解与已知的服务器应用程序名称和版本关联的端口号。**portmap** 监听列在 `/etc/services` 中的知名端口号，从而避免了确定 **portmap** 端口号是什么的“先有鸡还是先有蛋”问题。
+
+| 守护进程 | 用途 |
+| :--- | :--- |
+| nfsd | NFS 服务器守护进程 |
+| portmap | RPC 程序到端口管理器 |
+| rpc.mountd | NFS 挂载管理器 |
+| rpc.statd | RPC 状态管理器 |
+| rpc.lockd | NFS 锁管理器 |
+| rpc.pcnfsd | PC 认证服务 |
+
+**表 14-1.** NFS 服务器守护进程
+
+**nfsd**、**rpc.lockd**、**rpc.mountd** 和 **rpc.statd** NFS 服务器守护进程在 `/etc/rc.nfs` 脚本中启动，而其他 NFS 服务器守护进程由 **inetd** 超级守护进程控制。
+
+### 导出服务器文件系统
+
+可用于远程挂载的每个文件系统或目录都由服务器 `/etc/exports` 文件中的条目标识。除了目录路径名称外，`/etc/exports` 条目还控制允许哪些机器名称拥有 root 权限和写入访问权限。如果未为远程 NFS 客户端启用 NFS root 访问权限，则服务器的 root UID 将映射为默认 UID -2 (4294967294)，用户名为 **nobody**。这限制了远程机器上超级用户 UID 的访问权限。
+
+`/etc/exports` 文件是一个平面 ASCII 文本文件，可以使用你喜欢的编辑器手动编辑，或者使用 SMIT 快速路径 **smit mknfsexp** 进行维护（见图 14-1）。
+
+![](img/82f851021955589d82b22750fb3b1646_329_0.png)
+
+**图 14-1.** 向导出列表添加目录的 SMIT 面板
+
+对 **/etc/exports** 文件的手动更新必须通过调用 **/usr/sbin/exportfs** 命令让服务器守护进程知晓。
+以下是 **/etc/exports** 的一个示例：
+
+```
+/var/spool/lpd/pio/@local -ro
+/scripts -root=bambam:dino:wilma,access=bambam:dino:wilma
+```
+
+```
+# /usr/sbin/exportfs -a <————— **导出 /etc/exports 文件中的所有条目**
+```
+
+### PC-NFS
+
+PC-NFS 是一个用于 PC 挂载由 NFS 服务器导出的文件系统并向 NFS 服务器请求网络地址和主机名的程序。如果 **rpc.pcnfsd** 守护进程在 NFS 服务器上运行，PC 还可以访问认证和打印 spooling 服务。
+
+要启动 **rpc.pcnfsd** 守护进程，请取消注释 **/etc/inetd.conf** 文件中的以下行：
+
+```
+pcnfsd **sunrpc_udp udp wait root /usr/sbin/rpc.pcnfsd pcnfs 150001 1-2**
+```
+
+### NFS 客户端
+
+为了提高性能，NFS 客户端实现了客户端数据缓存。这要求多个 NFS 客户端和服务器之间维持一定级别的缓存一致性。使用时间戳过期机制，允许客户端在缓存信息变得陈旧时更新缓存信息。
+每个客户端运行多线程 NFS **biOd** 块 I/O 守护进程。创建的线程数量取决于工作负载。NFS 客户端还运行 **portmap** 守护进程。通过查询 **portmap** 守护进程来识别 RPC 服务并将端口连接到 NFS 服务器。
+NFS RPC 机制允许在服务器故障时阻止客户端应用程序。当恢复对服务器的访问时，I/O 操作继续。提供了重试限制，以便在长期服务器故障的情况下，客户端应用程序不会永远等待。Sun 还添加了 **hard** 和 **soft** 挂载选项，以便在服务器访问被阻塞时中断客户端。只需要两个 NFS 客户端守护进程：
+
+```
+biOd <————— **NFS 块 I/O 守护进程**
+portmap <————— **RPC 程序到端口管理器**
+```
+
+### 导入文件系统
+
+导入（**mount**）网络文件系统有三种不同方式：预定义、显式和自动。
+
+
+
+
+## 预定义挂载
+
+*预定义*挂载是指将 NFS 文件系统定义配置为 `/etc/filesystems` 文件中的段（stanza）。该段类似于本地文件系统定义，并额外列出了 `nodename` = 参数中的远程主机名。`dev` = 参数定义了要在远程机器上挂载的目录路径。您可以使用 `options` = 参数指定挂载选项。例如，除其他选项外，若要为该挂载条目指定使用 NFS 版本 3 和传输协议 UDP，请在 *options* 属性的参数列表末尾添加 `vers`=3、`proto`=udp。如果您未指定版本或协议，`mount` 命令将首先尝试使用 TCP 的 3 版本，然后是使用 UDP 的 3 版本，接着是使用 TCP 的 2 版本，最后尝试使用 UDP 的 2 版本。`/etc/filesystems` 条目可以直接编辑，也可以使用 SMIT FastPath *smit* mnkfmnt 进行管理（参见图 14-2）。默认情况下，`mount` 命令会尝试挂载以下条目：
+
+```
+# smit mnkfsmnt
+```
+
+![](img/82f851021955589d82b22750fb3b1646_331_0.png)
+
+以下是一个 /etc/filesystems NFS 段（stanza）的示例：
+
+```
+/usr/local/common:
+    dev    = "/usr/local/common"
+    vfs    = nfs
+    nodename = yogi
+    mount  = false
+    type   = nfsfile
+    options = bg,hard,intr
+    account = false
+
+/usr/sys/instd.images:
+    dev    = "/usr/sys/instd.images"
+    vfs    = nfs
+    nodename = bambam
+    mount  = false
+    type   = nfsfile
+    options = bg,hard,intr
+    account = false
+
+/usr/share/man:
+    dev    = "/usr/share/man"
+    vfs    = nfs
+    nodename = dino
+    mount  = false
+    type   = nfsfile
+    options = bg,hard,intr
+    account = false
+
+/sapmnt/help:
+    dev    = "/sapmnt/help"
+    vfs    = nfs
+    nodename = sapprod1
+    mount  = false
+    type   = nfsfile
+    options = ro,bg,hard,intr
+    account = false
+```
+
+可以在段定义中添加 type = nfsfile 参数，以将 NFS 文件系统识别为 nfsfile 组。这样，可以使用 mount 和 umount 命令的 -t 选项将它们作为一组进行挂载或取消挂载。
+
+```
+# mount -t nfsfile
+# umount -t nfsfile
+```
+
+## 显式挂载
+
+*显式挂载*用于短期挂载文件或目录，且无需在系统重启后保持持久化。对于此类挂载，请在命令行上使用带有所有所需挂载选项的 **mount** 命令。例如，若要使用后台模式、NFS 版本 3、传输协议 **tcp** 以及最多重试三次的挂载选项，将主机 **lobo** 上的 `/tmp/STUFF` 挂载到 `/tmp/lobo`，请发出以下命令行：
+
+```
+# mount -n lobo -o "bg,vers=3,proto=tcp,retry=3" /tmp/STUFF /tmp/lobo
+```
+
+另一种选择是使用以下命令调用 NFS 挂载默认值：
+
+```
+# mount lobo:/tmp/STUFF /tmp/lobo
+```
+
+## 自动挂载
+
+*AutoFS* 控制*自动*挂载。在程序或用户尝试访问挂载点之前，自动挂载没有显式挂载。关于 AutoFS 的详细信息请参阅本章稍后的内容。
+
+## CacheFS
+
+缓存文件系统（Cache File System）允许在 NFS 客户端系统上为 NFS 文件系统提供缓存，以提高慢速网络上客户端的性能。文件在首次访问时会被存储在缓存中。随后的请求可以在 CacheFS 本地访问，而无需通过网络。CacheFS 会定期检查缓存中文件的修改时间与之前修改时间的比较。如果修改时间**不同**，缓存中的文件数据将被刷新，并从文件系统检索更新的数据。
+
+使用 SMIT FastPath **smit cachefs** 进行 CacheFS 的管理和挂载。
+
+## AutoFS
+
+AutoFS 包括一个内核扩展、**automountd** 守护进程以及 **automount** 命令。当程序或用户访问 NFS 文件系统时，AutoFS 会将其挂载。**automount** 命令用于将 AutoFS *map*（映射）文件加载到 AutoFS 内核扩展中，该文件包含本地目录到服务器目录的映射信息。当用户访问映射文件中列出的本地目录时，内核扩展会向 **automountd** 守护进程发送挂载请求，以挂载该目录（如果当前未挂载）。如果在适当的时间间隔内（默认五分钟）未访问该文件系统，**automount** 守护进程将卸载该文件系统。
+
+可以使用 AIX 的 **sremfs** 命令 **startrsc** 和 **stoptrsc** 来管理 **automountd** 守护进程。
+
+```
+# starttrsc -G autofs  # 启动 AutoFS 子系统
+# stoptrsc -g autofs   # 停止 AutoFS 子系统
+```
+
+## 网络信息服务：NIS 和 NIS+
+
+Sun 开发了命名服务，最初将其称为黄页（Yellow Pages，YP）。由于 YP 是英国电信的注册商标，Sun 被迫将该服务重命名为网络信息服务。顾名思义，网络信息服务（NIS）旨在集中管理网络中系统和用户的信息，以简化系统管理。
+
+NIS 采用客户端/服务器模型实现。其组件包括服务器、客户端、映射（maps）以及一组管理工具。NIS 的设计假设是针对小型网络，其中大部分配置数据是静态的；网络信息由系统管理员管理。在当今的计算环境中，出现了去中心化管理和适应组织层级结构的需求。NIS+ 的开发旨在解决这些问题以及 NIS 中的安全问题。请注意，NIS+ 是 NIS 的替代方案。在类似概念中存在许多术语差异，并且 NIS+ 还具有许多新功能。
+
+以下各节概述了 NIS 和 NIS+ 的组件及其配置方法。
+
+### NIS
+
+NIS 使用域（domains）来组织系统，这些域通过 NIS 服务共享一组配置数据。一个 NIS 域由一个主服务器、零个或多个从服务器以及一组客户端机器组成。您需要为每个相应的 NIS 应用程序安装 **bos.net.nisserver** 或 **bos.net.nis.client** 文件集。以下 NIS 讨论中的所有 SMIT FastPath 面板都可以通过主 NIS 配置 SMIT FastPath **smit yp** 访问。
+
+一个 NIS 域中有一个主服务器，其中维护着主要的映射。从服务器从主服务器获取 NIS 映射的副本。从服务器可以像主服务器一样响应客户端请求，从而提高信息的可用性。如果主服务器正在运行 **ypupdated** 守护进程，或者主服务器停止并重新启动，或者在主服务器上调用了 **yppush** 命令，从服务器可以自动获取更新的映射。主服务器和从服务器都运行 **ypserv** 守护进程以处理客户端对映射中包含信息的请求。主服务器还运行 **ypasswd** 守护进程来处理用户的密码更改请求。
+
+NIS 客户端构成了 NIS 名称空间中大多数主机。一个 NIS 客户端运行 **ypbind** 守护进程以定位最近的 NIS 服务器，并查询服务器以获取 IP 地址或用户数据等信息。
+
+### NIS 域
+
+域定义了可供服务器使用的管理控制区域。属于某个域的系统共享一组常见的配置和网络信息，例如用户、组、主机名和 IP 地址。必须在域中的所有系统上设置域名。使用以下 **chypdom** 命令在此时及下次重启时定义域名：
+
+```
+# chypdom -B <DomainName>
+```
+
+若要显示 NIS 域名，请使用不带参数的 **domainname** 命令。
+
+```
+# domainname
+```
+
+### NIS 映射
+
+NIS 映射由标准文本文件构建，例如 */etc/passwd*、*/etc/group*、*/etc/hosts*，在主服务器上使用 **makedbm** 命令转换为 DBM 数据库格式。本质上，映射记录是一个键值对。NIS 提供了一个 *makefile*（制作文件），即 */var/yp/Makefile*，当调用 **make all** 时，它运行 **makedbm** 来创建默认的 NIS 映射。总体上，NIS 映射构成了 NIS 数据库。NIS 数据库可以使用 **ypxfr** 命令传输到另一个域。在使用这些方法创建或传输任何映射之前，必须在目标 NIS 服务器上创建 */var/yp/<DomainName>* 子目录。
+
+| 文件 | 映射 | 文件 | 映射 |
+| :--- | :--- | :--- | :--- |
+| */etc/passwd* | passwd.byname | */etc/services* | services.byname |
+| | passwd.byuid | */etc/protocols* | protocols.bynumber |
+| */etc/group* | group.byname | */etc/group* | protocols.byname |
+| | group.bygid | */etc/netgroup* | netgroup |
+| */etc/hosts* | hosts.byaddr | */etc/hosts* | netgroup.byhost |
+| | hosts.byname | | netgroup.byuser |
+| */etc/ethers* | ethers.byaddr | */etc/publickey* | publickey.byname |
+| | ethers.byname | */etc/bootparams* | bootparams |
+| */etc/networks* | networks.byaddr | */etc/aliases* | mail.aliases |
+| | networks.byname | */etc/aliases* | mail.byaddr |
+| */etc/rpc* | rpc.bynumber | */etc/netmasks* | netmasks.byaddr |
+| *master&slave* | ypservers | *passwd&group* | netid.byname |
+
+**ypservers** 映射是一个特殊的映射，其中包含域中主服务器和从服务器的名称。客户端使用 **ypservers** 映射来查找最近可用的服务器。主服务器引用它以确定从服务器的名称，以提示获取 NIS 映射的更新副本。
+
+
+
+
+NIS netgroup 文件 /etc/netgroup 定义了在整个网络范围内用于身份验证的组，这些组在登录、rlogin、远程挂载和远程 shell 过程中被识别。/etc/netgroup 文件用于构建 netgroup、byuser 和 netgroup.byhost 映射。netgroup 定义文件 /etc/netgroup 识别每个 netgroup 名称，后跟参与者的元组。每个元组都用括号括起来，并识别 netgroup 参与者的机器、用户和域名。
+
+/etc/netgroup 的格式如下：
+
+```
+netgroupname1 (host,user,domain) (host,user,domain)
+netgroupname2 (host,user,domain) (host,user,domain)
+```
+
+## NIS 服务器和客户端配置
+
+要创建 NIS 主服务器、从服务器或客户端，请分别在使用 **smit chypdom** 定义域名后，调用 SMIT FastPath **smit mkmaster**、**smit mkslave** 或 **smit mkclient**。对于早于 AIX 4.3.3 ML9 的 AIX 版本，你可能还需要在 /var/yp/ 中手动创建用于映射文件的域名子目录。
+
+以下是每个主服务器、从服务器和客户端面板的 SMIT 选项快速列表。
+
+```
+# smit mkmaster <-—将此主机配置为 NIS 主服务器
+   将从服务器使用的主机 (HOSTS that will be slave servers)             [slave1,slave2]
+   域中现有的映射 (MAPs) 是否可以被覆盖？  yes
+   创建主服务器时出错是否退出 (EXIT)？     yes
+   启动 (START) yppasswd 守护进程？                     no
+   启动 (START) ypupdated 守护进程？                    no
+   启动 (START) ypbind 守护进程？                       yes
+   现在、系统重启时或两者都启动 (START) 主服务器？                    both
+
+# smit mkslave <-—将此主机配置为 NIS 从服务器
+   主服务器的 (HOSTNAME of the master server)               [Master]
+   域中现有的映射 (MAPs) 是否可以被覆盖？  yes
+   现在、系统重启时或两者都启动 (START) 从服务器？                    both
+   遇到错误时是否退出 (Quit)？                 Yes
+
+# smit mkclient <-—将此主机配置为 NIS 客户端
+   现在、系统重启时或两者都启动 (START) NIS 客户端？                          both
+   NIS 服务器 - 如果此子网中没有 NIS 服务器则必需 (NIS server - required if there are no NIS servers on this subnet)     [ ]
+```
+
+要停止、启动或检查 NIS 客户端 **ypbind** 守护进程的状态，请运行以下命令：
+
+```
+# lssrc -s ypbind <- 将显示处于活动状态或不可操作
+# stopsrc -s ypbind <- 在需要时停止 ypbind 客户端
+# startsrc -s ypbind <- 在需要时重启 ypbind 客户端
+```
+
+要停止、启动或检查 NIS 服务器 **ypserv** 守护进程的状态，请在目标主服务器或从服务器上，使用 **ypserv** 和 -s 选项的参数运行相同的 **lssrc**、**stopsrc** 和 **startsrc** 命令。管理 NIS 环境时有用的其他命令包括 **ypwhich**、**ypcat**、**ypmatch**、**ypservers** 和 **yppasswd**（如果已启用）。
+
+## 公钥身份验证
+
+NFS 身份验证通过使用 DES 公钥服务来实现。NIS 域中的每个用户必须在 */etc/pubkeykey* 文件中拥有自己的公钥和私钥加密键条目。系统管理员使用 **newkey** 命令在文件中定义新的用户条目。用户使用 **chkey** 命令更新他们的公钥。然后，*/etc/pubkeykey* 文件被 NIS 映射到 */var/yp/pubkeykey.byname*。用户在文件中的条目由它们的 Net 名称标识。
+
+```
+# newkey -u username <- 创建用户公钥条目
+# newkey -h hostname <- 创建 root 公钥条目
+# cd /var/yp; make pubkeykey <- 构建 NIS pubkeykey byname
+```
+
+**keyserv** 守护进程加密公钥并将它们作为私钥存储在 */etc/keystore* 文件中。一个单独的文件 */.rootkey* 用于保存超级用户的私钥。这避免了在系统崩溃后重启系统时私钥被清除干净所带来的问题。要初始化 keyserv 服务器，请调用以下 SMIT FastPath **smit mckeyeserv** 或 **/usr/yp/ypkckeyeserv** 命令。
+
+```
+# smit mckeyeserv <- 启动 keyserv 守护进程
+# /usr/sbin/mckeyeserv -B <- 可选的命令行方法
+```
+
+**keylogin** 命令用于解密存储在 **keyserv** 服务器中用于安全 RPC 操作的用户密钥。可以将 **keylogin** 添加到默认系统登录配置文件中。访问带有 */etc/exports* 和 */etc/streams* 中 **-secuse** 选项标记的文件系统*必需*有一个 **keyserv** 条目。请注意，此机制需要参与机器之间的时钟同步。系统时间用于创建和使存储在服务器中的密钥过期。默认的 secure NFS 过期时间为 30 分钟。
+
+## 启动 NIS 服务
+
+与 NFS 一样，NIS 在 AIX 中作为子系统进行管理。NIS 守护进程使用 SRC **startsrc** 和 **stopsrc** 命令启动。*/etc/rc.nfs* 脚本包含在启动 NFS 之前启动 NIS 服务的代码。
+
+```
+# startsrc -g nis <- 启动 NIS
+# stopsrc -g nis <- 停止 NIS
+```
+
+AIX 5L 管理
+
+NIS 守护进程如下：
+
+- ypserve NIS 服务器守护进程
+- ypbind NIS 服务器绑定管理器
+- ypasswdd NIS passwd 更新守护进程
+- ypupdated 由 inetid 调用的 NIS 映射更新
+- keyserver 公钥服务器守护进程
+- portmap RPC 程序到端口管理器
+
+## Automounter
+
+**automount** 守护进程可以在大型 NIS 网络中运行，以简化 NFS 文件系统访问。每当打开文件系统中的文件或目录时，**automount** 守护进程会自动挂载该文件系统。与 **automount** 文件系统相关的文件和目录存储在 NIS 映射中。**automount** 守护进程分叉子进程，这些子进程表现为监控文件系统的 NFS 客户端，利用映射中的信息。守护进程卸载在过去五分钟内未访问的文件系统。主 **automount** 映射文件是 `auto.master`。
+
+```
+# /usr/sbin/automount
+```
+
+## NIS+
+
+NIS+ 不是对 NIS 的增强，而是替代了 NIS。NIS+ 的设计旨在解决 NIS 的几个不足之处，例如满足管理和复杂大型网络的需求、分散网络管理任务以及提供网络安全。你仍然需要安装 `bos.net.nis` 服务器和客户端文件集作为 NIS+ `bos.net.nisplus` 文件集的先决条件。
+
+NIS+ 命名空间可以组织为层次化域。从概念上讲，你可以将 NIS+ 命名空间视为类似于 UNIX 文件系统结构，其中有一个根目录及其下方的子目录。在 NIS+ 中，根目录称为根域，而子目录称为子域。子域的级别深度取决于你组织的大小和复杂性。子域可以自主管理；但是，客户端可以访问同一根域下其他子域中的信息。
+
+NIS+ 的另一个区别是，域的信息存储在 NIS+ 关系数据库表中，而不是像 NIS 那样的映射中。你必须使用 NIS+ 提供的一组管理命令来查看和更新这些表。这些表保存在目录 `/var/nis/data` 中。表的更新不需要重新制作表，并且增量传播到副本服务器。
+
+NIS+ 包含用于安全的身份验证和授权。为了访问称为 NIS+ 对象的信息，用户、主机或进程（称为 NIS+ 主体）必须使用 DES（数据加密标准）进行身份验证。在身份验证过程之后，主体被归类到对象的授权类中（**owner、group、world** 或 **nobody**）。在每个类中，都有权限指定可以对 NIS+ 对象执行的操作。这些操作包括读取、**修改**、**创建** 和 **销毁**。
+
+NIS+ 提供 NIS 兼容性模式，允许 NIS+ 服务器响应来自 NIS 客户端的请求。除了域名之外，NIS 客户端不需要任何更改。
+
+## NIS+ 服务器和客户端配置
+
+要创建 NIS+ 主服务器和客户端，请调用 SMIT FastPath **smit nisp_config**，你将看到以下菜单结构，它与 NIS 配置中的 **smit yp** 面板非常相似：
+
+- 更改此主机的 NIS+ 域名
+- 将此主机配置为 NIS+ 主服务器
+- 填充根主服务器表
+- 在服务器上创建客户端凭据
+- 将此主机配置为 NIS+ 客户端
+- 从此主机移除 NIS+ 服务器配置
+- 从此主机移除 NIS+ 客户端配置
+
+AIX 还提供设置脚本来设置 NIS+：**nismaster**、**nispopulate** 和 **nisclient**。
+
+**nisserver** 脚本允许你设置根主服务器、非根主服务器和副本 NIS+ 服务器，具有 2 级安全性（DES）。此脚本为新建域创建 NIS+ 目录和默认系统表，但不会用信息填充它们。你必须使用 **nispopulate** 脚本用文件或 NIS 映射填充表。这些默认表是：auto_master、auto_home、ethers、group、hosts、networks、passwd、protocol、services、rpc、netmasks、bootparams、netgroup、aliases 和 shadow。要初始化 NIS+ 客户端，你可以使用 **nisclient** 脚本，该脚本也可用于为主机或用户创建凭据。在客户端初始化过程中被修改的文件作为 **files.no_nisplus** 备份。在客户端初始化期间通常修改的文件包括：/etc/defaultdomain、/etc/nsswitch.conf、/etc/inet/hosts，以及如果存在的 /var/nn/NIS.COLD_START。
+
+下表列出了用于管理不同 NIS+ 组件的常见 NIS+ 命令。
+
+| 命令 | 描述 |
+| :-- | :-- |
+| niscat | 显示 NIS+ 表的对象属性 |
+| nisls | 显示 NIS+ 表的内容 |
+| nismdir | 从命名空间中移除 NIS+ 对象 |
+| nismrm | 从命名空间中移除 NIS+ 目录和子目录 |
+| rpc.nisd | NIS+ 守护进程；提供 NIS+ 服务 |
+| nisinit | 初始化工作站作为 NIS+ 客户端 |
+
+
+
+
+
+| 命令 | 描述 |
+| :--- | :--- |
+| nis_cachemgr | 启动 NIS+ 缓存管理守护进程 |
+| nisshowcache | 显示共享缓存文件的内容 |
+| nisping | Ping 副本并提示更新 |
+| nislog | 显示事务日志的内容 |
+| nisgridm | 创建、删除 NIS+ 组，并对 NIS+ 组执行其他管理操作 |
+| nisdefaults | 显示命名空间中当前生效的七个默认值 |
+| nisaddent | 根据相应的 /etc 文件或 NIS 映射创建 NIS+ 表 |
+
+## 启动 NIS+ 服务
+
+与 NIS 类似，NIS+ 作为 AIX 下的一个子系统进行管理。NIS+ 守护进程使用 SRC startsrc 和 stopsrc 命令启动。/etc/rc.nfs 脚本中包含启动 NIS+ 服务的步骤。
+
+```
+# startsrc -g nisplus  # 启动 NIS+
+# stopsrc -g nisplus  # 停止 NIS+
+```
+
+NIS+ 守护进程如下：
+
+```
+rpc.nisd                    NIS+ 服务器守护进程
+rpc.nispasswd               NIS+ 密码更新守护进程
+nis_cachemgr                NIS+ 缓存管理守护进程
+```
+
+## 故障排除
+
+像 NFS 和 NIS 这样复杂的分布式服务，当出现混乱时会带来真正的调试难题！根据与问题相关的症状和错误消息，开始检查系统的每个组件。有关网络问题调试的详细信息，请参阅第 13 章。
+
+通过列出并验证服务器已知的当前客户机挂载集来开始故障排除。客户机挂载列表记录在 /etc/rmtab 中，并使用 showmount 命令显示。
+
+```
+# showmount -a
+asimov:/usr/local/gnu
+asimov:/usr/local/bin
+asimov:/usr/local/lib
+softy:n0
+softy:n1
+```
+
+**showmount** 命令还可用于验证 /etc/xtab 文件中记录的已导出目录列表。此信息应与 /etc/exports 中的条目相匹配。如果数据不匹配，请调用 **exportfs -a** 以刷新 /etc/xtab。
+
+```
+# showmount -e
+/usr/lpp/info/En_US alph, lisa
+/n1    softy
+/n0    softy
+/usr/local/gnu   asimov
+/usr/local/lib    asimov
+/usr/local/bin    asimov
+```
+
+可以使用 nfsstat 命令重置和显示 NFS I/O 统计数据。统计数据包括服务器和客户的 RPC 和 NFS 调用次数及成功率。检查是否存在大量超时和重传。您可能需要使用 chnfs 命令增加服务器和客户端上的 nfsd 和 biod 线程数量。
+
+“Application Not Registered”之类的 RPC 错误与 portmap 守护进程相关。检查 portmap 守护进程是否在本机和远程系统上运行。您还可以使用 rpcinfo -p -hostname 命令验证由本地和远程 portmap 守护进程维护的应用程序、版本、协议和端口数据。
+
+验证 ncmstsr 守护进程是否了解当前 NFS 和 NIS 子系统及子服务器的状态。如果 NRC 环境紊乱，就会出现异常行为。可以使用 lssrc 命令显示子系统和子服务器状态。
+
+```
+# lssrc -g nfs
+```
+
+| 子系统 | 组 | PID | 状态 |
+| :--- | :--- | :--- | :--- |
+| biod | nfs | 9034 | active |
+| nfsd | nfs | 9296 | active |
+| rpc.mountd | nfs | 9554 | active |
+| rpc.statd | nfs | 10580 | active |
+| rpc.lockd | nfs | 10838 | active |
+
+由于对于大型 NFS 环境，客户端/服务器响应时间的微小差异可能会迅速累积，因此您可能需要密切监控系统之间的流量。您可以轻松地使用网络嗅探器或通过使用 nfswatch 等公共领域软件包来收集统计数据。
+
+要显示和设置内核中的 NFS 选项，请使用 nfsd 命令；nfsd -a 显示可配置的 NFS 选项及其当前值。
+
+## 高可用性服务器
+
+如果您与 IBM 打交道多年，肯定听说过“可靠性、可用性和可服务性”（RAS）。为了在玻璃屋环境中保持竞争力，UNIX 必须提供与 MVS 等操作系统标志性的 7×24 可用性相同的级别。X 终端和无磁盘工作站在部门计算环境中的普及意味着，有大批用户依赖这些 R5/6000 和 pSeries 服务器在他们需要时随时准备就绪。
+
+和每个人一样，我讨厌任何系统中断。每当系统或服务消失时，我都希望尽快恢复该服务。系统恢复得越快，我就越满意。高可用系统应该能够承受单点故障，并在服务恢复过渡期间仅施加所需的最少延迟。有关高可用服务器的更多信息，请参阅第 28 章 HACMP。
+
+### 高可用性网络文件系统
+
+NFS 的一个问题是，当 NFS 服务器宕机时，依赖服务器文件系统的所有应用程序和工作站也会随之停止工作。高可用性网络文件系统（HANFS）提供了对标准 NFS 服务的扩展，允许第二台 pServer 或 RS/6000 机器在主要 NFS 服务器故障时作为备份 NFS 服务器。可以配置 HANFS，使得每台机器都可以为不同的文件系统充当主 NFS 服务器，同时为另一台充当备份服务器，主要要求是系统共享到外部 SSA 磁盘的物理连接和额外的网络适配器（参见图示）。请注意，共享磁盘卷组仅在主 NFS 服务器上联机，并且不支持内部磁盘。
+
+![](img/82f851021955589d82b22750fb3b1646_342_0.png)
+
+HANFS 利用服务器的 RPC 缓存信息和日志文件系统（JFS）日志，以便在备份系统上启用 NFS 服务器恢复。主服务器的 NFS RPC 缓存信息记录在 JFS 日志中，并由备份服务器读取以重建缓存。
+
+在正常运行期间，HANFS 服务器定期交换心跳消息。当主 NFS 服务器故障时，备份服务器接管卷组并检查其一致性。它根据存储在 JFS 日志中的信息重建重复缓存，并开始模拟故障服务器的网络 IP 地址。然后，通过阻止 `rpc.lockd` 守护进程接受新的锁，同时让 `rpc.statd` 守护进程请求所有 NFS 客户端重新获取其锁，从而重新同步 NFS 锁。经过宽限期后，`rpc.lockd` 守护进程开始接受新的锁请求。除了通知重新获取文件系统锁之外，远程 NFS 客户端仅在完成服务器恢复程序期间经历短暂的延迟。服务器故障后的恢复时间大约在 30 到 300 秒之间。
+
+HANFS 还支持一旦问题故障得到修正且系统重新联机后，主服务器的自动重新整合。基本上，上一段中描述的过程是反向进行的，服务器们恢复执行它们原来的工作。请注意，利用 HANFS 服务不需要对标准 NFS 客户端软件进行任何更改。HANFS 可以很好地与您的 Sun、HP、DEC 和其他标准（此处需加盐看待）NFS 客户端和服务器配合工作。
+
+## 检查清单
+
+以下是网络文件系统：NFS、NIS 和 NIS+ 关键要点的检查清单：
+
+- 定义虚拟文件系统（VFS）。
+- 识别 NFS 基础所基于的客户端/服务器架构。
+- 定义 NFS 服务器并确定其设计。
+- 通过使用 NFS 客户端实施客户端数据缓存来提高性能。
+- 通过使用网络信息服务 NIS 集中网络中关于系统和用户的信息，简化系统管理。
+- 通过列出并验证服务器已知的当前客户机挂载集来开始故障排除。
+- 使用高可用性网络文件系统（HANFS）提供对标准 NFS 服务的扩展，允许第二台 RS/6000 或 pSeries 在主要 NFS 服务器故障时充当备份 NFS 服务器。
+- 在所有操作系统组件之间共享 NFS 服务器的 CPU 周期和内存。
+
+
+
+
+
+## 第 15 章
+
+### 分布式文件系统
+
+20 世纪 80 年代末，开放软件基金会（OSF）寻求一种基于网络的文件系统架构，以克服 Sun NFS 的一些固有局限性。该文件系统必须是有状态的（stateful），以便在分布式环境中更好地支持访问控制和锁定。为了改进性能和可用性，期望在缓存、复制和克隆方面有所改进。需要一个集中管理的目录结构，以在参与系统之间强制执行通用的文件系统视图，同时又不限制灵活性和访问。Andrew 文件系统（AFS）架构的所有这些特征都具备。因此，OSF 选择了 Transarc 公司的 AFS V4 作为其分布式计算环境（DCE）分布式文件系统（DFS）技术的基础。
+
+从概念上讲，DFS 是增强版的 AFS。主要差异涉及 DFS 与其他 DCE 服务的紧密集成，以及底层 DCE 本地文件系统（LFS）。与 AFS 通常使用的守护进程相比，DFS 需要更多的支持守护进程，更不用说与 NFS 相比了。熟悉 AFS 的用户可以很容易地适应 DFS 的语义。系统管理员需要多做一些功课，以配置和激活 DFS 所依赖的所有 DCE 服务，并管理 DFS 环境本身。本章的意图是提供 AIX DFS 的粗略概述。对 AIX DFS 和 AIX DCE 主题的适当处理本身就需要整整一本书。我希望至少能让你入门。首先，这里有一点历史背景。
+
+### Andrew 文件系统
+
+为了施加额外的认证和管理级别并提高 NFS 的可扩展性，卡内基梅隆大学开发了 Andrew 文件系统（AFS）。AFS，现在是 Transarc 公司的产品，使用名为 Rx 的远程过程调用机制来支持客户端/服务器交互。AFS 使用 Kerberos V4 认证系统来验证客户端对远程文件系统的访问。AFS 引入了单元（cell）的概念，该概念定义了共享空间中文件系统的管理域。通过使用公共根树 `/afs` 来提供共享文件系统空间的一致视图。每个单元的子树遵循根目录，使用单元名称 `/afs/cellname/*`。请注意，NFS 对挂载点或命名没有限制。AFS 单元由名为 CellServDB 的数据库识别。
+
+通过使用访问控制列表（ACL），AFS 的安全性得到进一步加强。ACL 扩展了标准 UNIX 文件权限，以提供更细粒度的访问权限。AFS 使用前四个 UNIX 权限位来定义读取、查找、插入、写入、删除、锁定和管理员（r/wlida）权限。请注意，AFS ACL 仅适用于文件系统目录级别。AFS 还使用 UserList 来定义访问权限和映射。用户通过 **klog** 命令获得 AFS 共享文件空间的访问权限，该命令为他们授予一个用于访问的 Kerberos 票据。他们可以通过 **unlog** 命令释放其权限。在 AFS 下，标准路径不再用于访问服务器上的文件。
+
+分布式文件系统的另一个重要增强功能是 AFS 将逻辑文件系统结构与用于容纳文件系统的磁盘块分离。AFS 卷可以包含一个或多个文件系统层次结构。卷由分区组成，分区是标识为特殊名称 /vicep[n] (N=a, b, c, . . . ) 的磁盘块集合。AFS 还使用回调机制来提高客户端缓存一致性，该机制使已被修改的数据块失效。AFS 还支持发行版级别的文件系统复制。
+
+### 通用并行文件系统
+
+AIX 的通用并行文件系统（GPFS）是一个共享磁盘文件系统。它于 1998 年以虚拟共享磁盘（VSD）的名称作为软件模拟存储区域网络发布。GPFS 基本上是一个并行磁盘文件系统，保证集群内所有节点都能访问整个文件系统，允许多个节点同时写入单个条带化文件。这可以为并行和顺序程序带来重大益处。GPFS 分发到集群中的所有节点，为 AIX 和虚拟文件系统提供扩展的内核接口。来自应用程序的 AIX 系统调用被翻译为 GPFS，GPFS 使用本地资源或将其传输到一个像文件系统一样使用缓冲区和 I/O 管理完成任务的守护进程。GPFS 的主要环境是高度可扩展的 RS/6000 SP，具有高速交换网络和共享并直接连接磁盘的 HACMP 集群。许多高性能计算设施使用 GPFS 在大型并行计算工作区中进行临时存储。现在，DFS 提供了内核扩展，使 GPFS 数据能够被导出。根据 DFS 一致性协议，文件系统只能从一个节点导出，而 NFS 可以从多个节点导出相同的 NFS 数据，从而可能提供更高的吞吐量。
+
+### 分布式文件服务
+
+分布式文件服务（DFS）是一个分布式文件系统，它将 AFS 提供的特性与其他 OSF DCE 服务结合，组成一个紧密集成的客户端/服务器计算环境。DFS 依赖于其他 DCE 服务来协调通信、访问控制和同步。这些服务包括 DCE 远程过程调用（RPC）、DCE 安全服务、DCE Global（原文如此，推测指 DCE 全局服务或特定模块，此处保留原文用词习惯或译作全局服务，但根据上下文 DCE Globall 可能是拼写错误，通常指 DCE 目录或其他全局服务，此处直译或意译）以及 DCE 目录服务，还有 DCE 分布式时间服务。在开始使用 DFS 之前，必须配置并启动这些 DCE 服务器。IBM 的 DCE V3.1 和 DFS V3.1 现在单独销售，并附带了为同步 AIX 和 Solaris 发行版所需的细微打包更改。表 15-1 分解了 DFS 文件集，以显示一些打包更改。
+
+> 注意 本章中有多处引用“文件集”（Licensed Program Products，如表 15-1 所示）和“filessets”（DFS 本地文件系统的组件）。这种混淆仅在本章中存在。
+
+| 应用程序 | DFS V3.1 | DCE/DFS V2.2 |
+| :--- | :--- | :--- |
+| DFS 客户端服务 | dfs.client | dce.client.dfs.rt |
+| DFS 服务器 | dfs.server | dce.dfs.server.rt |
+| 带本地文件系统的增强版 DFS | dfs.server | dce.edfs.rt |
+| NFS 到 DFS 认证网关 | dfs.nfsauth | dce.dfsrts.rt |
+| DFS GPFS for AIX 支持 | dfs.gpfs.rt | N/A |
+| DFS 存储管理运行时 | dfs.srm.rt | N/A |
+| DFS 隐私级别保护功能 | dfs.priv | dce.priv |
+| DFS HTML 文档 | dfs.html.en_US | dce.doc.en_US.html |
+
+### 访问控制
+
+称为 DCE 单元的管理域委托访问控制。单元中的主体（Principals）基于 MIT Kerberos v5 通过 DCE 安全服务进行身份验证。不幸的是，AFS Kerberos v4 安全服务和基于 DCE Kerberos v5 的安全服务不能互操作，这使得从 AFS 迁移到 DFS 有点麻烦。DFS 使用 ACL，并且适用于目录和文件。DFS 修改标准 UNIX 文件权限位以支持读取、写入、执行、控制、插入和删除权限（rwxcid）。使用标准命令（如 `ls -l`）查看时，UNIX 权限位反映 ACL 权限。DFS 用户在 DCE 环境中具有唯一且全局的身份标识，因此消除了 UID 和 GID 冲突的问题。
+
+### 文件系统结构
+
+DFS 共享文件系统树也类似于 AFS，即通过下一层由单元名称分隔来标识公共根。DFS 共享根命名为 "/..."，单元子树随后为 "/.../cellname"。简写字符串 "/:" 和 "/::" 分别表示本地单元和根文件。客户端只需挂载 "/::" 级别的 DFS 空间，即可访问单元空间中由 DFS 文件服务器导出的所有文件系统。以下比较了指向同一相对主目录文件 /home/username/.kshrc 的 AIX 和 DFS 路径语法。
+
+| AIX | DFS |
+| :--- | :--- |
+| /home/username/.kshrc | /.../cellname//s/home/username/.kshrc |
+| /:;fs/home/username/.kshrc | /::home/username/.kshrc |
+
+
+
+
+
+DFS 文件系统挂载点的概念类似于 UNIX 文件系统或 NFS 挂载点。然而，DFS 不是使用目录作为挂载点，而是使用对象作为挂载接口。要挂载 DFS 文件系统，请使用 **its crmount** 命令。
+
+```
+# fts crmount -dir [PathName] -fileset [FilesetName | FilesetID]
+```
+
+作为最终用户，您将无法区分挂载点目录和挂载点对象。使用 **its lsmount** 命令来查看某个目录是否用作文件集（fileset）的挂载点。
+
+```
+# fts lsmount -dir /::/fs/home
+```
+
+DFS 是一个带缓存的文件系统。经常访问的文件和目录会被缓存在客户端的内存或磁盘上。通过完整的令牌传递机制（包括用于同步共享文件元数据访问的回调）来维持客户端缓存的一致性。DFS 服务器控制文件访问令牌的权利，客户端在修改数据之前必须获取这些令牌。DFS 还支持计划内和释放（手动）文件系统复制。
+
+您还可以从 DFS 文件服务器导出 AIX CD-ROM 文件系统。导出的 CD-ROM 文件系统可以挂载到 DFS 文件空间中，并从 DFS 客户端机器上访问。
+
+## 本地文件系统
+
+为了充分利用 DFS 服务并利用户体控制列表（ACL），必须使用 DCE 本地文件系统（LFS）作为 DFS 的底层物理文件系统。LFS 架构以及类似于 UNIX 磁盘分区的 *aggregate*（聚合）概念和类似于相关文件和目录集合的 *filesets*（文件集）概念。LFS 目录被称为容器，它们包含其他容器（子目录）和 LFS 对象，即通常所说的文件。
+
+LFS 是一个基于日志的文件系统，类似于 AIX 日志文件系统（JFS）。所有文件系统元数据更新都被分组并作为原子事务记录日志。针对单个对象的一组事务也被分组到一个等价类中，以方便恢复。事务等价类确保在系统恢复期间，要么应用所有更新，要么一个都不应用。
+
+DFS 文件集可以在 LFS 聚合之间移动，同时通过称为文件集克隆的程序保持在线访问。分区中必须有可用空间来构建文件集的副本。克隆的文件集被标记为“只读”，并通过写时复制（copy-on-write）程序保持最新状态，直到移动完成。文件集也可以进行复制。可以将其类比为通过网络在计算机之间进行的克隆。克隆和复制以及日志记录和动态聚合大小调整提供了一种高度可用的文件系统架构，管理起来相当容易。
+
+表 15-2 是本地文件系统与非 LFS（日志文件系统）的比较。
+
+| 本地文件系统 | 非 LFS (日志文件系统) |
+| :--- | :--- |
+| 为每个文件集提供 rw/ro 备份 | 仅限 rw 文件集 |
+| 每个聚合支持多个文件集 | 每个聚合支持一个文件集 (JFS) |
+| DCE ACL | |
+
+**表 15-2.** DFS 本地文件系统与 DFS 非 LFS 对比
+
+## VFS 兼容性
+
+任何经过增强以支持 DCE VFS+ 的虚拟文件系统 (VFS) 都可以通过 DFS 文件服务器进行导出。DFS 还提供 NFS/DFS 认证网关，以便为 NFS 客户端提供 DFS 文件系统访问权限。NFS 客户端在操作导出的文件系统中的 DFS ACL 时可能会遇到困难，因为它没有获取 DCE 上下文的途径。以下是您可以设置的默认 ACL，以开放这种安全暴露：
+
+```
+# acl_edit /.../[PathName] -m any_other:rxwcid
+# acl_edit /.../[PathName] -ic -m any_other:rxwcid
+# acl_edit /.../[PathName] -io -m any_other:rxwcid
+# acl_edit /.../[PathName]/[EachFile] -m any_other:rxwcid
+```
+
+NFS 到 DFS 认证网关代表 NFS 客户端维护 DCE 凭据，以满足 ACL 权限限制。要使用此功能，请安装 `dfs.nfsauth.rte` 和 `dfs.nfsauth.sm` 文件集。AFS 和 NFS 也可以在 DFS 文件服务器上独立使用。鉴于这些功能，您应该能够轻松地将 DCE DFS 集成到现有的 NFS 和 AFS 环境中。
+
+## DFS 组件
+
+如前所述，DFS 需要多个服务器来协调单元内的文件系统活动。这些服务器可以分布在若干机器上，在某些情况下还可以复制，或者也可以在单台计算机上运行。除非您运行的是非常小的单元，否则我不建议后者。DFS 服务器集群包括：
+
+-   **系统控制机器 (SCM)** 负责存储和分发管理列表。这些列表决定了哪些主体（用户和机器）可以向 DFS 服务器发出请求。由 SCM 管理的服务器组被称为其 *domain*（域）。在任何其他 DFS 服务器配置之前，必须配置 SCM。由 SCM 管理的管理列表存储在 /opt/dfsclocal/var/dfs 中。运行在 SCM 上的两个服务器进程是 **boss server** 和 **ups server**。**boss server** 进程是基本的 overserver 服务器，运行在所有 DFS 机器上。**upserver** 进程将管理列表分发到其他 DFS 机器。
+-   二进制分发机器将 `/usr/1pp/dce/bin` 可执行文件分发给单元中架构相同（CPU/OS）的其他服务器机器。二进制分发机器运行与 SCM 相同的 **upserver** 进程。在这种情况下，**upserver** 分发 DFS 二进制文件。您还可以使用二进制分发机器分发非 DFS 二进制文件。
+-   文件集数据库机器 (FLDB) 运行 **fileserv** 进程，负责维护单元内所有可用文件集的信息。所有 DFS 文件服务器必须向 FLDB 注册它们的文件集。FLDB 将路径名映射到关联的文件服务器，并使 DFS 客户端能够获取此信息。由于 FLDB 本质上是一个目录名称服务器，因此运行多个 FLDB 系统是个好主意。实施奇数数量的 FLDB 服务器，因为机器会投票决定谁是主服务器，谁是次要服务器。主服务器是 RW（读写）。次要服务器是 RO（只读）副本。如果其中一个服务器宕机，网络 IP 地址最低的服务器投票权重更大。与其他服务器一样，FLDB 也运行 **bosserv** 和 **upclient**。
+-   文件服务器机器运行文件集导出器 **fxd**，使文件集可供 DFS 客户端访问。AIX 文件集可以包括 **1fs**、非 **1fs** 和 CD-ROM 类型。除了 **fxd** 之外，文件服务器还运行文件集服务器 **fileserv**、目录和安全进程 **dfsbind**，以及 **upclient** 以接收管理列表和二进制文件。拥有文件集权限的主体和组列在 `admin.ft` 管理列表中。每个文件服务器都关联一个令牌 *manager*（管理器）来跟踪元数据的访问。一种称为私有文件服务器的特殊服务器可以由希望导出自己文件集的工作区用户运行。这是独立于 SCM 处理的。
+-   文件集复制机器管理域内的文件集复制。它主要负责处理计划内的复制。副本提高了域内关键文件集的可用性。
+-   备份数据库机器 (BDM) 管理所有需要备份服务的文件集族的转储计划。备份数据库机器与磁带协调器交互以访问转储设备。这是一个关键资源，因此您应该运行不止一个 BDM。**bakserv** 进程负责在 BDM 上维护备份信息。您猜对了：还有一个 **bosserv** 和一个 **upclient**。
+-   磁带协调器机器 (TCM) 控制物理连接的转储设备，并使其可供 BDM 使用。TCM 实际上可能与 BDM 运行在同一台计算机上。例如，这将节省一个 **bosserv** 和一个 **upclient**。
+-   DFS 客户端访问由 DFS 文件服务器导出的文件集。客户端联系 FLDB 以查找导出所需文件集的 DFS 文件服务器。每个客户端
+
+
+`dfsd` 运行于客户端并管理本地缓存，同时与 DFS 文件服务器同步缓存。客户端还会运行 `dfbind` 进程，该进程与 DCE 单元目录服务、安全服务以及 FLDB 进行交互，以将路径名称解析到具体的文件服务器。
+
+- 聚合（Aggregates）类似于 UNIX 分区。每个聚合可以包含多个文件集（Filesets）。在 AIX 中，聚合是使用 `newaggr` 命令格式化为 DCE LFS 的逻辑卷。
+- 文件集是在 DCE/DFS 下作为整体管理的相关文件和目录的集合。DCE 配额在文件集级别应用。每个文件集由文件集名称和 ID 号标识。文件集 ID 号是由两个逗号分隔的两个正整数。DFS 中的配额在文件集级别以 1K 为增量应用。文件集可以是读写（RW）、只读（RO）或备份类型。备份文件集是活动文件集的克隆（快照），用于备份目的。
+- 本地文件系统（LFS）是一种基于日志的文件系统，支持 DFS 下的所有功能。这包括 DCE ACL、复制、配额以及每个聚合中的多个文件集。
+
+## 安装与配置
+
+本讨论假设您已经安装并配置了 DCE 服务（详见第 24 章）。最低要求，您需要一个 DCE 单元目录服务器（Cell Directory Server）、一个 DCE 安全服务器（Security Server）以及三个分布式时间服务器（Distributed Time Servers）。每个 DFS 客户端或服务器还必须配置为 DCE 客户端或服务器。如果看到消息“Cannot configure DFS components until a CDS clerk (cds_cl) is configured”（在配置 CDS 管理员 (cds_cl) 之前无法配置 DFS 组件），这是 DCE 未正常工作的第一个迹象。第 24 章涵盖了安装 DCE 和 DFS 文件集之前以及日常维护所需的重要细节和系统注意事项。除了之前表 15-1 中显示的一个或多个 DFS 文件集外，您还需要安装以下 DCE 客户端：
+
+- `dce.client.rte`：DCE 客户端
+- `dce.client.sm1`：DCE SMIT 客户端工具
+- `dce.msg.en_US.client.rte`：DCE 基础类消息
+- `dce.msg.en_US.client.sm1`：DCE SMIT 基础消息
+
+安装所需的 DCE 和 DFS 文件集后，您可以通过调用 `mkdcserver` 快速路径（FastPath）使用 SMIT 来配置基础 DFS 服务器。虽然存在用于管理 DFS 的命令行工具，但它们的详细说明超出了本章的范围。大多数关于 DCE 和 DFS 的 AIX 在线文档都可以通过 SMIT 帮助或 SMIT 中的 F1 键访问。
+
+在配置每项服务时，您偶尔会被提示输入 DCE 单元管理员密码。这应该是在您安装和配置基础 DCE 服务时设置的（请参阅第 24 章以获取帮助）。DFS 的 SMIT（或 SMITTY）面板组织成了一个菜单树层次结构。以下列表说明了本章中用于配置 DFS 的各种 SMIT 面板所对应的 SMIT 快速路径。
+
+### 快速路径 - 面板菜单树
+
+```text
+none      # 系统管理
+commo     # 通信应用程序和服务
+dce       # DCE (分布式计算环境)
+mkdce     # 配置 DCE/DFS
+mkdcesrv  # 配置 DCE/DFS 服务器
+mkdfsasm  # DFS (分布式文件服务) 系统控制机
+mkdfsldb  # DFS 文件集数据库机
+mkdfssrv  # DFS 文件服务器机
+mkdfssrepv # DFS 文件集复制服务器机
+mkdfsbkdb # DFS 备份数据库机
+mkdcclient # 配置 DCE/DFS 客户端
+dfsadmin  # DFS (分布式文件服务) 管理
+dfifs     # 添加/删除 JFS 文件系统
+dfscdrom  # 添加/删除 CDROM 文件系统
+dfslas    # 添加/删除 NFS 聚合和文件集
+mkdfsagg  # 从本机导出和创建聚合
+mkdff     # 在本机的聚合上创建文件集
+dfs_acl   # DFS LFS 目录和文件的 ACLs (访问控制列表)
+dfsnfs    # NFS 到 DFS 认证网关管理
+```
+
+### 系统控制机 (System Control Machine)
+
+首先要做的是配置一个或多个 SCM（系统控制机）。每个 SCM 将控制单元中的一个独立域。从 SMIT 菜单列表中选中“DFS (分布式文件服务) 系统控制机”，或使用快速路径 `mkdfsasm`。如果在此机器上尚未配置 DCE 客户端，则只需输入单元名称；输入该机器的主机名，选中 *Start Components And Clean Up At System Restart*（在系统重启时启动组件并清理）中的“是”，选中 *MASTER SECURITY*（主安全）服务器，选中 *Synchronize Clock*（同步时钟）中的“是”，并输入时间服务器的主机名。在验证单元管理员账户名称正确后，按 ENTER，并在提示时输入单元管理员密码。将与 `user` 和 `bosserver` 一起启动最小的 DCE 客户端。图 15-2 突出了以下 SMITTY 面板中所需的此重要信息：
+
+```text
+# smitty mkdfsasm
+```
+
+### 文件集数据库机 (Fileset Database Machine)
+
+现在在同一台机器上配置文件集数据库 (FLDB)。多个 FLDB 可以提高可用性并分担客户端请求的工作负载，但对于初学者来说会带来重大的配置困扰。从 SMIT 菜单列表中选中 "DFS Fileset Database Machine"（DFS 文件集数据库机），或使用 `mkdfsldb` 快速路径。如果希望此机器维护自己的管理列表，DFS 系统 CONTROL 机器标识字段应保持空白。如果此机器被配置为 SCM，则此字段将被忽略。“用于管理文件集的组”是您可以添加其他组来管理此机器的地方，除了 `admin.lt.` 中列出的用于管理所有机器的主体和组。在验证单元管理员账户名称正确后，按 ENTER，并在提示时输入 cell_admin 密码。必要时，将与 `fileserv` 和 `bosserver` 一起启动最小的 DCE 客户端。以下 SMITTY 面板看起来与图 15-1 完全相同，只是底部多了两个字段。
+
+```text
+# smitty mkdfsfldb
+
+DFS 文件集数据库机的快速路径
+```
+
+### 文件服务器机 (File Server Machine)
+
+需要一个或多个 DFS 文件服务器来导出 DFS 聚合和文件集。从 SMIT 菜单列表中选中 DFS 文件服务器机选项，或使用快速路径 `mkdfssrv`。在验证信息和单元管理员账户名称正确后，按 ENTER，并在提示时输入单元管理员密码。必要时，将与 `fserver`、`fx4`、`dfsdind` 和 `bosserver` 一起启动最小的 DCE 客户端。您应该接受以下 SMITTY 面板（见图 15-2）中的所有默认设置：
+
+```text
+# smit mkdfssrv
+    DFS 文件服务器机的快速路径
+```
+
+![](img/82f851021955589d82b22750fb3b1646_354_0.png)
+
+**图 15-1. SMITTY DFS 系统控制机 (smitty mkdfscsm)**
+
+### 启动 DFS 客户端
+
+此时，您可能希望在本地机器上启动一个 DFS 客户端，以帮助验证您将要创建的以下文件集的结果。使用 SMIT 快速路径 `mkdcclient`，但如果该机器上已经运行基础 DCE 客户端，请为“要配置的客户端”选择 `dfs_cl`。在没有配置 DCE 客户端的远程 DFS 客户端机器上，您可以同时选择 `all_cl` 和 `dfs_cl`。使用以下命令，在提示时选择 Full（完整），然后参考图 15-3，并接受以下 SMITTY 面板中所有未高亮显示的默认值：
+
+```text
+# smitty mkdcclient                     到完整 DCE/DFS 客户端配置的快速路径
+```
+
+您现在应该能够使用以下 df 命令看到 DFS 共享根目录：
+
+```text
+# df /...
+文件系统      512-块     空闲  使用%  inode使用数  inode使用%  挂载点
+DFS          18000000 18000000   0%      0    0% /...
+```
+
+### 创建和导出聚合
+
+创建一个聚合逻辑卷来容纳 LFS 文件。使用 `mklv` 命令在目标卷组中创建一个类型为 `lfs` 的逻辑卷。这种 lfs 类型...
+
+![](img/82f851021955589d82b22750fb3b1646_356_0.png)
+
+**图 15-3. SMITTY 完整 DCE/DFS 客户端配置 (smitty mkdcclient)**
+
+
+
+
+该定义指示 \textbf{mklv} 命令创建一个 Episode 文件系统，但这仅仅是聚合处理的一小部分。以下命令将创建一个名为 \texttt{lvlfso1}、类型为 lfis、包含 100 个逻辑分区且经过镜像处理的逻辑卷（-c 2）：
+
+```
+# mklv -yA lvlfso1 -t lfis -c 2 VolumeGroupName 100
+```
+
+使用 SMIT 快速路径 \textbf{mkdlsaggr} 来格式化和导出该聚合。你可能还希望调整聚合的块大小，以匹配文件系统预期用途。例如，对于将存放许多小文件的文件系统，请使用较小的块大小。此 SMIT 处理将运行 \textbf{newaggr} 和 \textbf{mkdlsfsls}，其标准输出会列出它们的命令行参数。使用以下命令，在提示是否 INITIALIZE 设备时选择“是”，并参考图 15-4 了解有关命名、格式化和导出聚合的详细信息：
+
+```
+# smitty mkdlsaggr    # 从本地机器导出聚合的快速路径
+```
+
+对于每个新聚合，会在 /opt/deco local/var/dss/dfstab 文件中放置一条行条目。使用以下 df 命令以查看已挂载用于导出的新设备：
+
+```
+# df /dev/lvlfso1
+Filesystem ... Mounted on
+/dev/lvlfso1 ... /opt/deco local/var/dss/aggra/lfso1
+```
+
+![](img/82f851021955589d82b22750fb3b1646_357_0.png)
+
+**图 15-4。** SMITTY 从本地机器导出一个聚合 (smitty mkdlsaggr)
+
+### 创建和挂载文件集
+
+现在你已准备好在您的新聚合中创建根文件集。创建的这个第一个文件集必须命名为 root.dfs。使用 SMIT 快速路径 **mkdfst** 作为 **mkfilesys.dfs** 脚本的接口，如果该文件集尚未创建，文件集名称 **root.dfs** 将默认显示。在运行以下命令并在 AGGREGATE 字段中按 F4 键以辅助选择此前导出的 **lfso1** 时，请参考图 15-5。不要为此第一个 root.dfs 文件集定义挂载点。默认情况下它将是 ./:/fs。
+
+```
+# smitty mkdfst
+#    在本地机器的聚合中创建文件集的快速路径
+```
+
+让我们继续之前检查一下这个新的 **root.dfs** 文件集。按下 ENTER 键在 **lfso1** 聚合中创建 **root.dfs** 文件集后，在下一次 Cache Manager 刷新之前它将不可用。在以下示例中，我们可以使用 **ls** 命令显示在手动使用 cm 命令刷新 Cache Manager 或等待下一次计划刷新之前，./:/fs 并不存在。
+
+```
+# ls ./:/fs
+ls: 0653-341 The file ./:/fs does not exist.
+
+# cm check
+cm check
+#    使用 checkfilesets 选项刷新 Cache Manager
+All backup filesets checked.
+
+# ls ./:/fs
+#    在 Cache Manager 刷新后检查挂载点
+ls: ./:/fs: The file access permissions do not allow the specified action.
+```
+
+![](img/82f851021955589d82b22750fb3b1646_358_0.png)
+
+**图 15-5. SMITTY 在本地机器的聚合中创建文件集 (smitty mkdfst)**
+
+现在挂载点已存在，我们只需要访问它的权限。在你尝试创建目录或文件或挂载更多文件集之前，使用以下示例中的命令检查、身份验证并更改权限：
+
+```
+# ls -ld ./:/fs            <-- 检查原始权限
+drwx------  2 140 103    256 may 27 16:50 ./:/fs/
+
+# dce_login cell_admin    <-- 登录为 Cell Administrator（如需要则再次登录）
+# klist | grep Prin       <-- 检查确认你现在是 cell_admin
+# chmod 777 ./:/fs        <-- 更改权限为打开的读写访问
+
+# ls -ld ./:/fs           <-- 查看新权限
+drwxrwxrwx 2 140 103    256 may 27 16:50 ./:/fs/
+```
+
+你可以从 SMIT dssfls 面板或 **mkfilesys.dfs** 脚本导出新创建的聚合并创建文件集。除了使聚合和文件集对客户端可用外，该脚本还将把导出器注册到 FLDB 中。请注意，导出聚合会使其中包含的所有文件集对客户端可用。一旦文件集被导出，就可以使用 **fts crmount** 进行挂载。让我们使用以下命令创建并挂载 home.dfs 文件集：
+
+```
+# mkfilesys.dfs -file_system_type lfs -fileset home.dfs \
+        -aggregate_name lfs01 -mount_point ./:/Eg/home
+# fts delmount -dir ./:/Eg/home    <-- 卸载
+# fts crmount -dir ./:/Eg/home -fileset home.dfs    <-- 重新挂载
+```
+
+文件集的默认权限是 rwx------ (700)。挂载后，你可能希望使用 **acl_edit** 修改这些权限。此外，请验证文件集配额是否足够。分别使用 **fts lsquota** 和 **fts setquota** 检查和设置文件集配额。
+
+```
+# acl_edit ./:/Eg/home -l    <-- 列出文件集的所有 ACL 对象
+# acl_edit ./:/Eg/home -m group_obj:rxwoid:other_obj:rx    <-- 修改
+# fts lsquota -path [PathName]    <-- 检查配额
+# fts setquota -path [PathName] -size [KB]    <-- 设置配额
+```
+
+### 文件集复制服务器机器
+
+复制服务器（**repserver**）存储只读文件集副本，跟踪复制数据的当前状态，并在复制站点更新它们。从 SMIT 菜单列表中选择 **DFS Fileset Replication Server Machine**，或者调用 SMIT **mkdfsrep_srv** 快速路径，并在请求时提供 cell_admin 密码。这是启动系统中复制服务器所需的全部操作。
+
+```
+# smitty mkdfsrep_srv    <-- 到文件集复制服务器的快速路径
+```
+
+### 备份数据库机器
+
+为了执行定期的 DFS 备份，请创建一个或多个 DFS 备份数据库机器。你可以从 SMIT 菜单列表中选择 **DFS Backup Database Machine**，或者调用 SMIT `mkdfsdkbd` 快速路径。完成 SMIT 信息和选项执行后，系统将被配置为运行 **bakservr** 进程。
+
+```
+# smitty mkdfsdkbd    # 到备份数据库机器的快速路径
+```
+
+### 安装验证
+
+在配置 DFS 服务机器完成后，使用以下 `lsdce` 和 `lsdfs` 命令从每个参与系统验证配置：
+
+```
+# lsdce -r
+
+Component Summary for Host: rs250
+
+    Component         Configuration State  Running State
+    Security client   Configured           Running
+    RPC               Configured           Running
+    Directory client  Configured           Running
+```
+
+```
+# lsdfs -r
+
+Component Summary for Host: rs250
+
+    Component                             Configuration State  Running State
+    DFS client                            Configured
+    dfsd                                  Configured           Running
+    dfsbind *                             Configured           Running
+    DFS File server                       Configured           Running
+    fxd                                   Configured           Running
+    dfsbind *                             Configured           Running
+    boseserver *                          Configured           Running
+    ftseserver                            Configured           Running
+    DFS System Control Machine            Configured           Running
+    upserver                              Configured           Running
+    boseserver *                          Configured           Running
+    DFS Fileset Database                  Configured           Running
+    elserverserver *                      Configured           Running
+    bosserver *                           Configured           Running
+
+* - 表示被多个组件使用的守护进程。
+```
+
+接下来，使用以下 `fts` 和 `dfsexport` 命令验证聚合、文件集和导出：
+
+```
+# fts lsaggr -server rs250
+
+There is 1 aggregate on the server rs250 (rs250.mcgraw-hill.com):
+```
+
+```
+lfs01 (/dev/lvfs01): id=1 (LFS)
+
+# fts lfs -fileset root.dfs
+
+root.dfs 0,1 RW LFS       states 0x10010005 On-line
+rs250.mcgraw-hill.com, aggregate lfs01 (ID 1)
+Parent 0,0   Clone 0,2   Backup 0,3
+llBack 0,0   llFwd 0,0    Version 0,1
+Infinite alloc limit;    9 K alloc usage
+5000 K quota limit;       9 K quota usage
+Creation Mon May 27 16:50:48 2002
+Last Update Mon May 27 16:50:48 2002
+ll reads, 0 writes in 36779 seconds since Mon May 27 16:50:48 2002
+0.000299084 reads per second; 0 writes per second.
+```
+
+```
+root.dfs
+    readWrite   ID 0,1 valid
+    readOnly    ID 0,2 invalid
+    backup      ID 0,3 invalid
+number of sites: 1
+    server    flags   aggr   siteAge  principal  owner
+rs250.mcgraw-hill.com  RW  lfs01  0:00:00  hosts/rs250  <nil>
+```
+
+```
+# dfsexport
+Aggregate  Device  Name   Type  Aggr  ID  Non-LFS  fileset ID
+/dev/lvfs01    lfs01   lfs    1
+```
+
+## 操作和管理
+
+我们已经介绍了一些用于管理 DFS 的命令。每个 DFS 命令都支持足够的选项和参数，其排列组合远超出一章所能涵盖的范围。表 15-3 列出了带有简短描述的基本命令，而以下命令行帮助语法将提供大多数这些命令可用选项的简要列表。
+
+```
+# CommandName help [option]  # 显示命令帮助
+# CommandName option -help  # 便捷的替代帮助
+```
+
+
+
+
+
+## DFS 管理命令
+
+| 命令 | 描述 |
+|---|---|
+| mkdfs | 创建 DFS 组件 |
+| rmdfs | 删除 DFS 组件 |
+| lsd | 列出 DFS 组件 |
+| bak | 管理备份系统 |
+| bos | 访问 Bosserver |
+| cm | 缓存管理器控制 |
+| dfsexport | 导出聚合和文件集 |
+| fts | 管理文件集 |
+| growaggr | 扩展聚合 |
+| newaggr | 创建聚合 |
+| salvage | 检查 LSF 完整性 |
+| scout | 监控导出器 |
+
+### 启动 DFS
+
+所有 DCE 和 DFS 服务都可以在系统启动时通过 `/etc/inittab` 文件启动。`clean_up.dce` 脚本应始终在任何其他 DCE 服务之前运行。然后，`rc.dce` 脚本应启动在任何剩余的 DCE 或 DFS 服务之前。DFS V3.1 提供了一个专用的 SMIT 面板，用于向 `/etc/inittab` 添加所有所需的条目，除了必须手动添加的 `dceunxd`（`dceunxd` 在第 24 章中有详细说明）。不幸的是，当前版本配置 `clean_up.dce` 脚本以错误的顺序启动。因此，在修复此问题之前，请使用 SMIT 快速路径 `mkdceinitab` 并选择您希望开机启动的服务。只需确保使用下面的 `grep` 命令检查生成的 `/etc/inittab` 条目并编辑文件以更正顺序。重启后使用 `who-d` 命令检查每个 `/etc/inittab` 条目的返回代码（重启项将不会显示）。
+
+```
+# smit mkdceinitab ←— 快速路径以启动 DCE 和 DFS 服务
+# grep -e dce -e dfs /etc/inittab
+cleanupdce:2:wait::/usr/bin/clean_up.dce
+rcdce:2:wait::/opt/dcelocal/etc/rc.dce all
+dceunxd:2:respawn::/usr/bin/dceunxd -l 60 -d 1 >/dev/console 2>&1
+rcdfsnfs:2:wait:/opt/dcelocal/etc/rc.dfsnfs
+```
+
+```
+# who -d | grep -e dce -e dfs -e clean
+.. May 29 23:53 0:09 1994 id=cleanup term=0 exit=0
+.. May 29 23:56 0:09 1996 id=rcdce term=0 exit=0
+.. May 30 00:00 0:09 13756 id=rcdfsnterm=0 exit=0
+```
+
+### 访问控制列表
+
+关于 DCE ACL 的几点说明：它们的工作方式与您处理标准 UNIX 权限时的预期略有不同。ACL 应用于容器和对象。DFS 容器是包含对象（文件）或其他容器的目录。默认情况下，目录和文件继承其所在目录的容器 ACL。您可以使用 `acl_edit` 命令为用户、组和其他人设置特定的 ACL。ACL 的一个很好的地方在于属主用户可以设置它们。作为系统管理员，您只需要担心确保通用安全所必需的系统默认 ACL。请记住，ACL 仅适用于 LFS 文件集。
+
+ACL 与对象类型 **mask_obj**、**user_obj**、**group_obj** 和 **other_obj** 相关联。**mask_obj** 条目用于过滤可通过对象类型授予的最大权限集。它不能用于增加或扩展权限（参见表 15-4 和 15-5）。
+
+```
+$ acl_edit [PathName] -m [ACL_obj:rxwccd] 修改 ACL
+$ acl_edit [PathName] -l -1 列出 ACL
+```
+
+**any_other** 条目用于未通过本地单元验证的用户。
+
+**表 15-4. ACL 权限和默认值**
+
+| 标记 | 描述 |
+| :--- | :--- |
+| r | 启用读取 |
+| w | 启用写入 |
+| x | 可执行或目录可访问 |
+| c | 控制访问 |
+| i | 插入：在目录中创建新文件 |
+| d | 删除：从目录中删除文件 |
+| io | 初始对象：文件创建的默认目录 ACL |
+| ic | 初始容器：文件创建的默认子目录 ACL |
+
+**表 15-5. ACL 对象类型和效果**
+
+| 类型 | 效果 |
+| --- | --- |
+| user_obj | 拥有该对象的用户 |
+| user | 来自本地单元的“用户名”用户 |
+| foreign_user | 来自外部单元“单元名”的“用户名”用户 |
+| group_obj | 拥有该对象的组的成员 |
+| group | 来自本地单元的“组名”组 |
+| foreign_group | 来自外部单元“单元名”的“组名”组 |
+| other_obj | 本地单元中不匹配任何前序条目的用户 |
+| foreign_other | 外部单元“单元名”中不匹配任何前序条目的用户 |
+| any_other | 任何外部单元中不匹配任何前序条目的用户 |
+| mask_obj | 可设置的最大权限掩码，group_obj 和 other_obj 除外 |
+
+### 文件集复制
+
+当可用性要求不允许网络挂载时，DFS 复制是跨多台机器管理常见文件系统树的实用工具。复制的文件集应是一组不经常修改的文件。适合复制的候选项包括操作系统命令和应用二进制文件。副本是从 RW 主副本创建的。每个副本文件集都是 RO。副本要么按计划的间隔更新，要么在手动调用的释放时更新。要创建副本，请先在具有文件集主副本的机器上设置复制信息和站点列表。
+
+```
+# fts ssetrepinfo [-release | -scheduled] ← 源副本类型
+# fts addsite ←— 源站点列表更新
+```
+
+在目标机器上，首先创建一个足够大的聚合来容纳副本，并更新站点列表。
+
+```
+# fts addsite ←—— 客户端站点列表更新
+```
+
+如果您选择了计划复制，则文件集将在您指定的间隔内复制。对于释放副本，您可以使用 `fts release` 选项手动启动复制。
+
+```
+# fts release ←— 手动复制
+```
+
+请注意，复制通过使文件集的多个副本对客户端可用来提高可用性。除非指定 RW，否则客户端缓存管理器在获取挂载点时将选择 RO 副本。
+
+### DFS 备份
+
+DFS 拥有自己的备份系统，用于跟踪磁带、转储日期、备份集以及其他类型的文件集恢复信息。由于存在如 ACL 等 DFS 特定元数据，您无法使用标准 UNIX 转储命令执行转储。可以使用标准 UNIX 工具备份挂载在本地系统上的非 LFS 文件集，因为非 LFS 文件集没有 ACL。**请注意，您可以在 DFS 环境中使用标准 UNIX 工具创建诸如 tar 和 cpio 之类的归档；但是，归档中不存储任何 ACL 信息。**
+
+DFS 转储过程从对活动文件系统（称为 *clone* 克隆）的快照开始。克隆不是数据的副本，而是构成创建克隆时文件系统的数据块的一组指针。在克隆被遍历以进行备份时，用户可以继续积极使用该文件系统。这消除了在正在更新的情况下 inode 可能无效的背活动文件系统的问题。
+
+```
+# fts clone -fileset [FilesetID]                  ←——————— 克隆文件集
+# bak dump -family [FilesetFamily] -tcid [DevID]   ←—————— 启动转储
+```
+
+**bak** 命令用于配置、转储和跟踪转储状态。DFS 备份支持完全转储和增量转储。DFS **bak 命令是另一个最好留给更广泛的文档来介绍其众多选项的命令。运行 **bak help 查看所有选项。**
+
+### 检查表
+
+以下是分布式文件系统的要点检查表：
+
+- 定义 DFS。
+- 识别 DFS 组件。
+- 获取 DCE 单元目录服务器、DCE 安全服务器和三个分布式时间服务器。
+- 将每个 DFS 客户端或服务器配置为 DCE 客户端或服务器。
+- 识别 DFS 命令。
+- 在系统启动时从 `/etc/inittab` 文件启动所有 DCE 和 DFS 服务。
+- 将 ACL 应用于容器和对象。
+- 定义 DFS 复制。
+- 由于存在如 ACL 等 DFS 特定元数据，您无法使用标准 UNIX 转储命令执行转储。
+
+![](img/82f851021955589d82b22750fb3b1646_366_0.png)
+
+## 第七部分
+
+### Linux 亲和力
+
+16 AIX 上的 Linux 亲和力
+
+![](img/82f851021955589d82b22750fb3b1646_367_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_367_1.png)
+
+
+
+
+
+# 第 16 章
+## AIX 中的 Linux 亲和性
+
+IBM 通过增加在高度可扩展的 AIX 操作系统上运行许多 Linux 应用程序的功能，拥抱了开源和 GNU 运动。适用于 Linux 应用程序的 AIX 工具箱（AIX Toolbox for Linux Applications）是一组软件，可运行在安装在 IBM pSeries 和 RS/6000 型号上的 AIX 4.3.3 和 AIX 5L 系统上。Linux 应用程序开发人员使用适用于 Linux 应用程序的 AIX 工具箱感到非常舒适。这些工具易于使用 RPM 格式安装。随着软件开发和开发工具的加入，IBM 在 Linux 和 AIX 应用程序之间引入了一种大胆的亲和性。在大多数情况下，在 AIX 平台上重建你的 Linux 应用程序很容易。
+
+### 在 AIX 5L 上运行 Linux 应用程序
+
+IBM 采用两阶段方法将 Linux 亲和性引入 AIX。第一阶段随适用于 Linux 应用程序的 AIX 工具箱的发布而来，该工具箱随 AIX 4.3.3 维护级别 8 一起发布。第二阶段是在每个后续 AIX 5L 版本中提供额外的应用程序接口（API）和头文件。这些额外的 API 允许你将 Linux 源代码迁移到 AIX 5L 机器上，并重新编译该程序以创建 AIX 应用程序。每个重新编译的 Linux 应用程序都被视为 AIX 5L 应用程序，并附带 AIX 提供的额外可靠性、可用性和可扩展性。
+
+你可以在以下 URL 处获取最新的安装程序并下载最新版本的工具箱软件包：
+
+`http://www.ibm.com/servers/aix/products/aixos/linux/`
+
+有一本名为《在 AIX 上运行 Linux 应用程序》的出色 IBM Redbook，详细介绍了安装 Linux 工具箱以及在 AIX 上编译和运行 Linux 代码的内容。这本 Redbook 可以在此 URL 处下载，用于以 HTML 或 PDF 格式打印：
+
+`http://www.redbooks.ibm.com/redbooks/SG246033.html`
+
+### 适用于 Linux 应用程序的 AIX 工具箱内容
+
+你不仅可以在 AIX 上编译 Linux 应用程序，还可以从适用于 Linux 的 AIX 工具箱安装大量 Linux 本地应用程序。你可以更改用户界面以运行 GNOME 和 KDE，而不是 CDE 或命令行。CD-ROM 上驻留的本地 Linux 应用程序列表太大，无法在此处涵盖；表 16-1 给出了一个示例。
+
+表 16-1 中的列表显示了适用于 Linux 的 AIX 工具箱中的一些工具和程序。在下一节中，我们将介绍如何在 AIX 机器上安装工具箱。
+
+### 安装适用于 Linux 应用程序的 AIX 工具箱
+
+在安装工具箱之前，你必须确保有足够的磁盘空间用于安装。与使用 SMIT 或 installp 不同，在安装工具箱时，你没有选项可以在安装过程中自动扩展文件系统。在 AIX 5L 上，工具箱安装在 `/opt` 文件系统中。表 16-2 显示了工具箱各种组件的空间需求。
+
+| 软件包 | AIX 平台 | 描述 |
+| :--- | :--- | :--- |
+| bison | Power/IA-64 | GNU 解析器生成器 |
+| cdrecord | Power/IA-64 | 命令行 CD/DVD 录制程序 |
+| cvs | Power/IA-64 | 一个版本控制系统 |
+| emacs | Power | emacs 编辑器 |
+| enscript | Power/IA-64 | ASCII 到 PostScript 转换器 |
+| flex | Power/IA-64 | 创建模式识别扫描器的工具 |
+| gcc | Power | GNU gcc C 编译器 |
+| g++ | Power | GNU gcc C++ 编译器 |
+| gbd | Power | GNU gcc 调试工具 |
+| ghostscript | Power | PostScript 解释器和渲染器 |
+| gnome | Power | GNOME GUI 桌面环境 |
+| gnuplot | Power/IA-64 | 用于绘制数学表达式和数据 |
+| jabber | Power | 即时消息系统 |
+| kde | Power | K 桌面环境 |
+| lsof | Power | 列出打开的文件 |
+| php | Power/IA-64 | PHP 脚本语言 |
+| python | Power/IA-64 | 交互式面向对象编程语言 |
+| rpm | Power/IA-64 | Red Hat 软件包管理工具 |
+| samba | Power/IA-64 | Samba 客户端和服务器软件包 |
+| sudo | Power/IA-64 | 允许为定义用户限制 root 访问权限 |
+| tk | Power/IA-64 | 带有共享库的 tk 工具包 |
+| wget | Power/IA-64 | 使用 FTP 和 HTTP 协议检索文件 |
+| xfig | Power | 绘制矢量图形的工具 |
+| zsh | Power | 基于 ksh 并带有增强功能的 Shell |
+
+表 16-1. AIX Linux 工具箱简短列表
+
+表 16-2 中列出的空间需求可能会随着新版本的工具箱发布而扩展。如果你想将你的桌面更改为 GNOME 或 KDE，请确保已安装三个额外的 AIX 文件集：X11.adt.lib、X11.apps.xdm 和 X11.samples.apps.clients。检查这些已安装文件集的最快速度是使用 `lslpp -L` 命令。
+
+```
+# lslpp -L X11.adt.lib X11.apps.xdm X11.samples.apps.clients
+```
+
+如果列出的任何产品缺失，你需要从 AIX 安装介质安装软件包。别忘了如果已进行更改，需重新安装当前维护级别的补丁集。维护级别代码通过使用 SMIT 快速路径 smitty update_all 进行安装。
+
+在下一个屏幕上，系统会提示你维护代码的位置；例如，如果它位于插入 /dev/cd0 的 CD-ROM 上，则输入设备名称。如果代码位于 /usr/sys/inst.images 中，则输入系统路径。如果你不想提交软件更新，而是以应用状态安装补丁集，请遵循此程序：在 SMIT 面板中将“提交软件更新？”字段设置为 No，并将“保存被替换的文件？”字段设置为 Yes。然后按两次 ENTER 键以安装软件。
+
+### Red Hat 软件包管理器 (RPM)
+
+在安装完整的适用于 Linux 的 AIX 工具箱之前，你必须先安装 Red Hat 软件包管理器（RPM）。该文件集必须使用 installp、SMIT 或 WebSM 作为传统 AIX 文件集进行安装。最快速的方法是在命令行使用 installp。首先，更改目录到 CD-ROM 挂载点，例如 /cdrom。在这种情况下，你需要更改目录到安装目录 /cdrom/INSTALLP/ppc。使用以下 installp 命令：
+
+```bash
+# cd /cdrom/INSTALLP/ppc
+# installp -qacXg -d . rpm.rte
+```
+
+或者使用 SMIT 快速路径 smitty install_latest
+
+在第一个 SMIT 屏幕上，系统会提示你待安装代码的位置。如果你的 CD-ROM 已挂载为 /cdrom，请使用路径 /cdrom/INSTALLP/ppc。你可以将“待更新软件”字段保留为 _update_all，因为 RPM 软件包是该目录中唯一的文件集。
+
+由于安装将查询系统有关当前系统中已安装共享库的信息，因此此安装将花费几分钟。如果你想下载最新的 *rpm_rte* 文件集，请前往以下 FTP 站点：
+
+`ftp://ftp.software.ibm.com/aix/Freeware/aixtoolbox/INSTALL#ppc`
+
+如果需要用户 ID，它是 *anonymous*；如果需要密码，则它是你的电子邮件地址。下载方法是二进制。你也可以从该网站获取预构建 RPM 软件包的最新版本。
+
+工具箱的手册页目录位于 /opt/Freeware/man。要将此路径添加到 MANPATH 变量，请使用以下语法：
+
+```
+# export MANPATH=$MANPATH:/opt/Freeware/man
+```
+
+或者，你可以将此 MANPATH 添加到你的 $HOME/.profile 或位于 /etc/profile 中的系统配置文件。
+
+### 安装工具箱基础文件集
+
+既然 RPM 已就位，我们可以安装其余的软件包。第一步是查看哪些软件包已安装在系统上。以下 RPM 命令将为你提供已安装的软件包列表：
+
+```
+# rpm -qa
+```
+
+此时，你很可能只会看到三个 RPM 软件包。在安装其余的软件包之前，请确保你提供了足够的磁盘空间；空间需求在前面表 16-2 中列出。要安装所有基础 RPM 软件包，请执行以下步骤：
+
+```
+# cd /cdrom/exinstall/ppc
+# rpm -hiv */*
+```
+
+或者
+
+```
+# rpm -hiv base/*/ deskop*/ kde*/ gnom*/
+```
+
+上述命令安装所有 RPM 软件包。ezinstall 软件包包括 base、gnome.apps、kde2.all、kde2.opt、desktop.base、gnome.base 和 kde2.base。如果你不打算将桌面更改为 KDE 或 GNOME，那么你可以通过仅安装 **base** ezinstall 软件包来节省大量磁盘空间。
+
+### 安装工具箱实用程序和程序
+
+在上一节中，我们只安装了工具箱基础文件集。要安装其余的工具箱 Linux 实用程序和程序，请使用以下命令之一：
+
+```
+# cd /cdrom/RPMS/ppc
+```
+
+对于 AIX 5L
+
+
+或
+
+```
+# cd /cdrom/RPMS/ppc-4.3.3       针对 AIX 4.3.3
+```
+
+现在，您已处于包含您*AIX*版本的所有程序和实用工具的目录中。若要安装*所有*内容，请执行以下命令：
+
+```
+# rpm -hiv *
+```
+
+然而，如果您想安装单个程序和实用工具，可以使用以下技术。
+
+若要安装所有*apache*文件集，请执行以下命令：
+
+```
+# rpm -hiv apache*
+```
+
+若要安装*emacs*和*samba*的所有文件集，请执行以下命令：
+
+```
+# rpm -hiv emacs* samba*
+```
+
+您还可以安装在该目录中找到的单个文件集。若要安装*gzip*程序，请执行以下命令：
+
+```
+# rpm -hiv gzip-1.2.4a-5.aix4.3.ppc.rpm
+```
+
+在大多数情况下，您还可以安装为 PowerPC (ppc) Linux 找到的其他 RPM 包。CD-ROM 上的每个程序和实用工具都有一个相关的 man 手册页。因此，如果您有任何问题，man 手册页中有很多文档。
+
+# 桌面环境
+
+在 Linux 应用程序 AIX 工具箱中，您可以将桌面环境更改为 KDE 或 GNOME，两者都是标准的 Linux 桌面。通过更换桌面的功能，任何熟悉 Linux 的用户都能感觉宾至如归。
+
+**GNOME 桌面** GNOME 桌面环境设计为可在任何类 UNIX 操作系统上运行。GNOME 桌面提供一个易于使用的基于 Windows 的用户环境，并配有丰富的应用程序、库和工具集。GNOME 项目还制作了 GNOME 办公套件，包含一系列办公程序。
+
+安装 GNOME 后（使用 Red Hat 包管理器 (RPM)），您需要遵循以下步骤开始使用 GNOME。第一步是编辑您的*$HOME*目录中的*.xinitrc*文件。如果您没有该文件，请使用以下命令将默认文件复制到您的*$HOME*目录：
+
+```
+# cp /usr/lpp/X11/defaults/xinitrc $HOME/.xinitrc
+```
+
+第二步是编辑*$HOME/.xinitrc*文件。删除文件的最后三行，内容如下所示：
+
+```
+xsetroot -solid grey60
+aixterm -80x25+0-0 &
+exec mwm -multiscreen -xrm "ShowFeedback: -quit"
+```
+
+用以下行替换这三行：
+
+```
+exec /usr/bin/gnome-session
+```
+
+如果您的默认桌面环境是 CDE，请从**CDE 桌面登录面板**中选择**命令行登录**作为登录类型。在命令行中，输入以下命令：
+
+```
+# xinit -- -T        # 这仅适用于低功能终端 (lft)
+```
+
+要在允许访问的远程 X 服务器上启动您的桌面，请使用以下命令：
+
+```
+# DISPLAY=X_SERVER_IP_ADDRESS:0
+# export DISPLAY
+# startx
+```
+
+有关使用和配置 GNOME 的更多信息，请参阅 man 手册页：
+
+```
+# man gnome
+```
+
+还请参阅以下 URL 的 GNOME 和 GNU 网站：
+
+```
+http://www.gnome.org/
+http://www.gnu.org/
+```
+
+# KDE 桌面
+
+与 GNOME 类似，K 桌面环境 (KDE) 是一个面向所有类 UNIX 操作系统的免费桌面环境。该桌面的外观和感觉与您所见 Mac OS、Windows 95/97 以及（在一定程度上）通用桌面环境 (CDE) 的桌面相似。KDE 安装附带一套出色的办公应用程序，称为 KOffice 套件。该办公套件将文字处理、电子表格和演示文稿程序组合到一个单一软件包中。
+
+KDE 使用 Red Hat 包管理器 (RPM) 进行安装，所有工具箱工具和应用程序的安装方式相同。安装 KDE 桌面后，有两种方法可以启动它。您可以从命令行启动 KDE，或者编辑`/etc/inittab`文件以将 KDE 设置为默认用户界面。
+
+从命令行，编辑`$HOME`/`.xinitrc`文件，将以下代码块添加到文件中，以替换文件的最后三行：
+
+```
+[ -z "$SESSION" ] && SESSION=failsafe
+case $SESSION in
+    kde)
+        export PATH=/opt/freeware/kde/bin:$PATH
+        exec /opt/freeware/kde/bin/startkde ;;
+    CDE)
+        exec /usr/dt/bin/Xsession ;;
+    gnome)
+        exec /opt/freeware/bin/gnome-session ;;
+    failsafe*)
+        aixterm -geometry 80x35+0-0 -ls &
+        exec mwm ;;
+esac
+```
+
+如果您的系统正在运行 CDE，请从桌面登录面板中选择命令行登录作为登录类型。然后输入以下命令：
+
+```
+# export SESSION=kde
+# xinit -- -T # 这只适用于低功能终端 (lft)。
+```
+
+第二种选择是从显示管理器启动 KDE。首先，终止系统中的任何 CDE 会话，确保当前没有用户正在使用这些会话，然后启动 KDE 显示管理器 (kdm)。使用以下两条命令：
+
+```
+# ps -ef | grep dlogin | grep -v grep | awk '{print $2}' | xargs kill -9
+# /opt/freeware/kde/bin/kdm
+```
+
+如果您希望系统在每次重启时都使用 KDE，请按照以下方法替换 /etc/inittab 文件中的 dt 条目。
+
+删除此条目：
+
+```
+dt:2:wait:/etc/rc.dt
+```
+
+添加此条目：
+
+```
+kdm:2:wait:/opt/freeware/kde/bin/kdm
+```
+
+现在，每次系统重启时，KDE 都是默认桌面环境。有关 KDE 的更多信息，请访问以下 URL。
+
+```
+http://www.kde.org/
+```
+
+## AIX 即时通讯
+
+Linux 应用程序 AIX 工具包附带 Jabber。Jabber 是一个即时消息程序，类似于 Yahoo! 信使、AOL 即时消息、MSN 即时消息和 ICQ。Jabber 的不同之处在于它扩展到了无线通信、Internet 基础设施和嵌入式系统。
+
+Jabber 是一个基于 XML 的开源系统和协议，能够启用登录用户之间的实时通信，并可用于通知您当前登录的其他即时消息用户。Jabber 项目由 Jeremie Miller 于 1998 年启动。Jabber.org 项目继续由约十几位主要贡献者以及更多进行测试和新客户端代码编写的成员维持。
+
+Jabber 服务器软件采用 Jabber 开源许可证授权。Jabber 客户端由各种客户端软件包的供应商授权。有关授权详情，请参阅文档。
+
+Jabber 软件安装在 `/opt/freeware/jabber` 目录中。要启动 Jabber 服务器，请使用以下命令：
+
+```
+# /opt/freeware/jabber/jabberd -h host.domain.name &
+```
+
+您还可以编辑 `jabber.xml` 文件，并在 `chost>` 部分将 `<localhost>` 更改为您机器的完全限定主机名。通过在 `jabber.xml` 文件中添加本地主机名，您可以避免使用 `-h` 参数在命令行上指定名称。要在故障排除时查看调试输出，启动 Jabber 守护进程时使用 `-D` 开关。
+
+我必须把使用 Jabber 的细节留给您。Jabber 的文档可以在以下 URL 找到：
+
+```
+http://docs.jabber.org/
+```
+
+# AIX 与 Linux 的强亲和力
+
+IBM 进军 Linux 和 System V 世界表明了对 UNIX 整体采取了更广泛的途径。在 AIX 5L 中，作为另一个例子，System V 打印机子系统可作为经典 AIX 打印机子系统的替代。Linux 亲和力也是 IBM 计划在成为每个市场主要玩家这一目标中的自然进展。电子商务的演变促使了这种向信息分享和通信更集中平台的初步推动。在当前阶段，IBM 已承认 Linux 进入主流，并拥抱向开源和 GNU 世界的运动。
+
+借助 AIX 5L，IBM 扩展了 Linux 亲和力以包括 Linux 应用程序源兼容性。这些努力扩展了新兴的 Linux 标准，允许在 AIX 上部署 Linux 应用程序。所有这些努力都允许 Linux 程序轻松重新编译为原生 AIX 应用程序。
+
+AIX 与 Linux 亲和力的主题太广，无法指望在一本书的一章中完全覆盖。`http://www.redbooks.ibm.com/` 上的 Redbooks 提供了 AIX 下可用的 Linux 工具的最新信息。列表不断扩大，欢迎您将所有 Linux 源代码带到您的 AIX 机器上，并将每个 Linux 程序变为原生 AIX 应用程序。
+
+我希望我能在这一章中更深入地讨论，但有关此主题最完整和最新的信息可在 IBM 网站上找到。请参阅本章中介绍的每个 URL，以更全面地了解在 AIX 4.3.3 和 AIX 5L 上重新编译和运行 Linux 应用程序，以及配置您的 AIX 机器使用 KDE 和 GNOME 桌面。
+
+
+
+
+
+# 检查清单
+
+以下是 AIX 上 Linux 关键要点的检查清单：
+
+- 你可以在 AIX 上编译 Linux 应用程序，还可以从 AIX Linux 工具箱安装大量 Linux 原生应用程序。你可以更改用户界面，运行 GNOME 和 KDE，而不是 CDE 或命令行。
+- 在安装完整的 AIX Linux 工具箱之前，你必须先安装 Red Hat 包管理器（RPM）。这些文件集必须使用 `installp`、SMIT 或 WebSM 作为传统的 AIX 文件集进行安装。
+- 安装 RPM 后，使用命令 `rpm -qu` 检查系统中已安装了哪些软件包。
+- 在安装 AIX Linux 工具箱之前，你必须确保有足够的磁盘空间用于安装。与使用 SMIT 或 `installp` 时不同，在安装工具箱时，你没有在运行时自动扩展文件系统的选项。
+- 如果你不打算将桌面更改为 KDE 或 GNOME，那么通过仅安装基础 `ezinstall` 包而不安装 `gnome.apps`、`kde2.all`、`kde2.opt`、`desktop.base`、`gnome.base` 和 `kde2.base`，你可以节省大量磁盘空间。
+- 如果你使用 RPM 安装 GNOME 软件包，在使用 GNOME 之前，你需要编辑 $HOME 目录中的 `.xinitrc` 文件，删除最后 3 行，并用 `exec /usr/bin/gnome-session` 替换它们。
+- 如果你安装 KDE 桌面，启动它有两种方式。你可以从命令行启动 KDE，或者编辑 `/etc/initab` 文件将 KDE 设置为默认用户界面。
+- AIX Linux 工具箱附带 Jabber，这是一个即时消息程序，类似于 Yahoo! Messenger、AOL Instant Messenger、MSN Instant Messenger 和 ICQ。
+
+# 第八部分
+
+# 分布式服务
+
+- 17 邮件和 Sendmail
+- 18 Apache Web 服务
+- 19 X11 管理
+
+此页有意留白。
+
+# 第 17 章
+
+# 邮件和 Sendmail
+
+电子邮件是 Internet 上最受欢迎的功能之一。对于企业用户来说，电子邮件通常被视为信息技术部门最关键的服务。如果备份服务器故障，可能有人会注意到；如果电子邮件系统故障，每个人都会立刻注意到。本章将回顾电子邮件在 Internet 上的传输方式，描述可用于 AIX 的电子邮件软件和服务，并解释如何配置、调试和使用这些软件。
+
+电子邮件系统（或 e-mail 系统）在概念上（如果不在物理上）分为三个组件：邮件用户代理（MUA）、邮件投递代理（MDA）和邮件传输代理（MTA）。
+
+```
+/bin/mail 或 /usr/ucb/mail ◄— 邮件用户代理  
+/usr/bin/bellmail ◄— 邮件投递代理  
+/usr/sbin/sendmail ◄— 邮件传输代理
+```
+
+网络上的几乎所有主机都需要实现这些功能。即使是没有最终用户的专用系统，如果服务器及其应用程序使用电子邮件在网络通信，也需要它们。MTA 配置部分强调了邮件传输的多功能性。我们将考察五种关键的 MTA 角色：轮辐、客户端、网关和回退服务器。除了传统的 MUA、MDA 和 MTA 外，许多网络环境还支持额外的邮件远程投递协议；最常见的是邮政协议（POP）和互联网消息访问协议（IMAP）。本章的配置示例中会提到这些主机。
+
+## 邮件传输代理
+
+邮件传输代理负责接收和投递邮件。至少，MTA 必须能够从 MUA 和网络接受邮件，解析地址，并将消息投递到本地用户邮箱或远程 MTA。更好的 MTA 能够检测电子邮件循环，在同一站点同时路由给多个收件人的单条邮件消息，支持隐私，并将问题邮件路由到站点邮件管理员。常见的 MTA 包括 sendmail、qmail、smail 和 exim。以下部分涵盖 sendmail 的配置和管理；sendmail 是 IBM 随基础 AIX 操作系统提供的 MTA。
+
+## 邮件用户代理
+
+邮件用户代理提供电子邮件系统的用户界面。MUA 向用户展示收到的邮件以阅读和归档。由 MUA 管理用于撰写、转发或回复邮件的编辑器功能。ATT 和 BSD 邮件程序是经典的 UNIX 命令行 MUA，用于发送和接收邮件。对于许多最终用户，像 Netscape Navigator、Pine 或 Ximian Evolution 这样的全屏和图形用户界面已经取代了这些工具的日常使用。除了直观的界面外，这些 GUI 通常直接支持邮件投递协议，如 POP 和 IMAP。然而，命令行 MUA 仍然很重要，即使是在最终用户拥有高级图形界面的环境中，因为它们可以轻松地用于 shell 脚本来自动化系统报告。命令行工具对于调试 MTA 配置问题也很有用。
+
+在以下部分中，提到 MUA 时，假设基本的 UCB 邮件功能和选项。该程序的默认配置选项通过 `/usr/lib/Mail1.rc` 文件定义。每个用户可以在本地 `$HOME/.mailrc` 文件中重置选项，以覆盖全局默认设置。以下是一个 MUA 配置文件：
+
+```
+# /usr/lib/Mail.rc
+# 选项
+set ask askok dot save keep crt
+# 不显示以下头行
+ignore Received Message-Id Resent-Message-Id
+ignore Status Mail-From Return-Path Via
+```
+
+## 邮件投递代理和协议
+
+虽然 **sendmail** 会队列邮件以便投递并将邮件路由到其他系统，但它实际上并不将邮件投递给最终用户。对于这项任务，**sendmail** 依赖于*邮件投递代理（MDA）*。使用外部程序进行投递支持在支持遗留系统和演进变化方面提供了更大的灵活性。通过这种方式，**sendmail** 支持 UUCP 用户（遗留系统）和 **procmail** 用户（一种支持更大用户自定义的新投递代理）。虽然不包含在 AIX 基础操作系统中，但 **procmail** 由 IBM 免费提供在*第 16 章*中详述的 *AIX Linux 应用程序工具箱* CD-ROM 上。在 *sendmail* 配置文件中，MDA 被称为 **MAILER**，而 **mailutil** 是本地投递的默认 MDA。
+
+额外的远程邮件投递协议，POP 和 IMAP，已经变得非常流行。这些协议使邮件用户有可能从网络上的任何计算机访问他们的邮箱，无论硬件架构或操作系统如何。它们之间的区别在于如何处理邮箱：POP 实现分布式邮箱，从中央服务器拉取新消息；IMAP 实现对中央邮箱的远程访问。IMAP 使中央邮箱对用户可用，并在中心位置保留已读和未读消息。POP 通常允许用户将新消息下载到他/她当时正在使用的任何计算机上，而不再能从其他任何计算机获取。因此，IMAP 在开放式校园环境中更受欢迎。POP 和 IMAP 守护进程随最新版本的 AIX 基础操作系统一起分发。
+
+## SENDMAIL 组件
+
+AIX 上的标准 MTA 是 **sendmail**（截至 AIX 5.1 版本为 8.11 版）。**sendmail** 程序最初由加州大学伯克利分校的 Eric Allman 在 20 世纪 70 年代编写。当时，UCB 的网络是异构且不断演进的，可能所有地方都是如此。这种演进使 **sendmail** 充满了在这种环境中投递邮件的功能，这些功能增加了配置 **sendmail** 的复杂性。幸运的是，简单邮件传输协议（SMTP）已出现并成为 Internet 标准，使许多这些功能过时。**sendmail** MTA 可能仍然是今天使用最普遍的 MTA。`/etc/mail/sendmail.cf` 文件是配置数据的主要位置。
+
+### Sendmail 文件
+
+**sendmail** MTA 使用以下文件进行配置和数据管理：
+
+- `/etc/mail/sendmail.cf` ◄——— Sendmail 配置文件
+- `/etc/mail/aliases` ◄——— 邮件别名
+- `/etc/mail/aliases.db` ◄——— 编译后的别名文件
+- `/etc/mail/sendmail.pid` ◄——— sendmail 守护进程的 PID
+- `/etc/sendmail.pid` ◄——— 指向 sendmail.pid 文件的链接
+- `/etc/mail/statistics` ◄——— 邮件统计
+
+**sendmail** 配置文件，`/etc/mail/sendmail.cf`，包含了 **sendmail** 投递电子邮件所需的大部分选项和规则。`sendmail.cf` 文件维护三组配置数据：
+
+- 选项、变量和参数
+- 地址重写规则集
+- 邮件器标识和投递
+
+AIX V5 提供了一个样板 `sendmail.cf` 文件，如果你的电子邮件环境不复杂，只需少量修改即可使用。这里说的“复杂”是指你有多个到其他网络的邮件网关或 MTA 层次结构。如果你的服务器直接连接到 Internet，你不应该使用此默认配置，因为它允许随意中继。具体的配置示例将在后面的部分中介绍。
+
+在 `sendmail.cf` 文件中，命令和定义从第 1 列开始。注释以数字符号（#）开始。空白行被忽略。由于使用了大量特殊字符，在添加如 DECNETS ":" 节点分隔符等地址类型时需要小心。使用一组预定义的字符符号来表示新符号、类、选项、宏或规则的定义。在宏或变量名使用前使用美元符号（$）表示变量或宏的值。问号（?）表示布尔测试。在以下讨论中，我将定义 `sendmail.cf` 文件各部分中使用的符号并提供示例。
+
+
+
+
+## 选项与定义部分
+
+sendmail.cf 文件的第一部分用于标识运行时选项和变量。这些内容包括主机或域名定义、名称服务邮件交换支持状态、消息优先级等。选项符号如下。“D” 从文本或内置变量定义一个符号：
+
+DSfoo.Bar.com ◄ 定义子域名作为变量 S
+
+“C” 从一个列表定义一个类：
+
+CFhost1 host2 host3 ◄ 定义主机列表作为变量 F
+
+“F” 从文件定义一个类：
+
+FF/usr/local/lib/hosts ◄ 从 hosts 文件获取列表 F
+
+“H” 定义头部格式：
+
+H?p?Return-Path: <$g> ◄ 定义 return-path 格式
+
+“O” 设置 sendmail 运行时选项：
+
+OA/etc/aliases ◄ 定义别名文件路径
+
+OK ALL ◄ 支持所有名称服务邮件交换记录和主机表查找
+
+“T” 设置受信任用户：
+
+Tusername1 username2  允许调用 sendmail 并伪装成其他用户的受信任用户
+
+“P” 设置消息优先级：
+
+Ppriority=100  如果找到 precedence:header 字段，则指示投递优先级。Pjunk=100 负数在出错时不退回邮件
+
+## 地址规则部分
+
+sendmail 守护进程使用规则集来解析邮件头部的地址行，以确定如何投递邮件消息。每个规则集由三部分组成：左侧（LHS）、右侧（RHS）和可选的注释（C）。任意两部分之间用制表符分隔。通常，如果地址匹配 LHS 规则，则对地址应用 RHS 规则。按顺序应用规则集，直到发生失败为止。可以定义任意数量的规则集（参见表 17-1 和 17-2）。
+
+| 规则 | 描述 |
+|---|---|
+| 3 | 首先应用，负责将地址规范化为内部形式。 |
+| 2 | 重写收件人地址。 |
+| 1 | 重写发件人地址。 |
+| 0 | 最后应用，确定投递。地址必须解析为 (mailer, host, user) 元组。 |
+| 4 | 将规范的内部形式最终重写为外部形式。 |
+
+表 17-1. 默认 sendmail.cf 规则集
+
+为了投递邮件消息，规则集必须解析为 (mailer, host, user) 元组。以下示例展示了一个七部分解析域名字符串的规则集：
+
+```
+S7
+#Domain addressing (up to 6 level)
+RS+BS-.S-.S-.S-.S-. S$2.S3.S4.S5.S6.S7
+RS+BS-.S-.S-.S-.S-. S$2.S3.S4.S5.S6
+RS+BS-.S-.S-.S-.    S$2.S3.S4.S5
+RS+BS-.S-.S-.       S$2.S3.S4
+RS+BS-.S-.          S$2.S3
+RS+BS-.             S$2
+```
+
+## 邮件器投递部分
+
+sendmail.cf 文件的最后一部分标识用于投递邮件消息的邮件器。每个邮件器由名称、用于将消息传输到邮件器的程序、程序标志集、发送和接收规则以及参数集来标识。邮件器标识格式如下：
+
+```
+M<mailer> P=<prog> F=<flags> S=<send-rule> R=<receive-rule> A=<arguments>
+```
+
+以下是本地和 X.400 RFC 987 邮件器定义的示例：
+
+```
+Mlocal, P=/bin/bellmail, F=lsDFMm, S=10, R=20, A=mail Su
+M987gateway, P=/usr/lpp/osimf/etc/x400mailer, F=9BPUlmn5C, S=15, R=25,
+A=gateway -f/etc/x400gw.cfg $\$us
+```
+
+sendmail 程序从 /etc/sendmail.cf 表的编译版本访问配置文件信息。要编译数据库的新版本，请使用带有 -bz 标志的 sendmail。
+
+```
+# /usr/lib/sendmail -bz
+```
+
+## 使用 m4 进行配置
+
+sendmail 的开发者还设计了一种配置 sendmail 的方法，即 m4 宏。虽然 sendmail 允许在规则编写方面几乎无限灵活，但在实践中，大多数安装都反复使用相同的少数规则。bos.net.cfp.adv 文件集包含了这些常见配置的存储库，以 m4 宏的形式保存，允许邮件管理员在构建 sendmail.cf 文件时简单地包含预定义的代码。要遵循此方法，首先编辑位于 /usr/samples/tcpip/sendmail/cf 目录中的 sendmail.mc 文件，添加您希望使用的功能和规则。然后只需编译该文件。
+
+```
+# m4 sendmail.mc > sendmail.cf
+```
+
+实际上，IBM 在创建默认 sendmail.cf 时使用了这种方法，文件中也有相应注释说明。这种方法的优点是 sendmail.mc 文件的简洁性。虽然 sendmail.cf 文件可能长达 20 页，但相关的 sendmail.mc 文件通常不到 20 行。m4 方法允许多个管理员维护邮件系统，而无需每个人都去研究 20 页的配置。m4 方法甚至支持本地规则集。所有已定义的 m4 宏的文档位于 /usr/samples/tcpip/sendmail/README。
+
+## Sendmail 数据库
+
+sendmail 配置文件在使用资源文件路由和寻址邮件消息时使用。其中一些重要的包括
+
+```
+/etc/mail/aliases
+/etc/mail/local-host-names
+/etc/mail/relayer table
+```
+
+![](img/82f851021955589d82b22750fb3b1646_388_0.png)
+
+## 别名数据库
+
+**sendmail 别名**数据库提供了一种机制，当邮件地址为别名时，将邮件转发给一个或多个用户。特别是，您希望为站点管理员（postmaster）和 MAILER-DAEMON ID 设置别名。postmaster 账户是整个网络用于请求站点邮件帮助和信息的一个标准。而 **MAILER-DAEMON** 账户由 **sendmail** 用于路由问题邮件。以下是 `/etc/aliases` 的一个示例：
+
+```
+##
+# Aliases in this file will NOT be expanded in the header from
+# Mail, but WILL be visible over networks or from /bin/mail.
+#
+#      >>>>>>>>>> The program "sendmail-bi" must be run after
+#       >> NOTE >> updating this file before any changes
+#      <<<<<<<<<<  show through to sendmail.
+##
+
+# Alias for mailer daemon
+MAILER-DAEMON:root
+#
+# The following alias is required by the new mail protocol, RFC 822
+postmaster:root
+#
+# Aliases to handle mail to msgs and news
+msgs: "/usr/ucb/msgs -s"
+nobody: "/cat>/dev/null"
+#
+# Alias for uucp maintenance
+uucplist:root
+#
+### These are local aliases ###
+trouble:    root
+root: derost
+```
+
+**sendmail** 从 `/etc/aliases` 表的 **dbm** 版本访问别名信息。要编译 `/etc/aliases` 表的新版本，请使用 `/usr/lib/sendmail-bi`。
+
+![](img/82f851021955589d82b22750fb3b1646_388_1.png)
+
+## 启动和停止 Sendmail
+
+IBM 附带了一个可工作的配置文件的 **sendmail**。虽然此配置足以在网络上将 **sendmail** 作为独立系统启动，但如果服务器直接连接到 Internet，则强烈不建议使用。*不要*在未禁用邮件任意中继的情况下，在直接连接到 Internet 的系统上使用此配置。任意中继将被希望以您的费用发送大量垃圾邮件的第三方利用。
+
+**sendmail** 程序作为子系统由 `/etc/rc.tcpip` 脚本调用。AIX **sendmail** 在启动时会自动编译 `/etc/mail/aliases` 和 `/etc/mail/sendmail.cf` 文件。如果您运行的是非 IBM 提供的 **sendmail**，您可能需要在启动过程中强制编译这些文件。
+
+如果在 **sendmail** 运行时更新任何配置信息，请通过发出 SRC **refresh** 命令或向守护进程发送 SIGHUP 来刷新 **sendmail** 子系统。
+
+```
+# refrersh -s sendmail
+# kill -1 `head -1 /etc/sendmail.pid'
+```
+
+**sendmail** 的基本启动标志应作为守护进程调用 **sendmail**，并指定推迟消息的邮件队列扫描之间的分钟数。这些标志是 **-bd** 和 **-q<time>**。 
+
+```
+# /usr/lib/sendmail -bd -q30m   # 启动并每 30 分钟扫描一次邮件队列
+```
+
+要停止 **sendmail** 守护进程，请使用 SRC **stopsrc** 命令或向守护进程发送 SIGABORT。 
+
+```
+# stopsrc -s sendmail
+# kill -6 `head -1 /etc/sendmail.pid'
+```
+
+要重新启动已停止的服务器，请使用 SRC **startsrc** 命令。（请注意，使用 **startsrc** 启动 **sendmail** 需要额外的参数。） 
+
+```
+# startsrc -s sendmail '-a-bd -q30m'
+```
+
+要检查 **sendmail** 守护进程的状态，请使用 SRC **lssrc** 命令。 
+
+```
+# lssrc -s sendmail
+```
+
+| LHS 符号 | RHS 符号 |
+|---|---|
+| S* | 匹配 0 个或多个符号 | $n | 使用 LHS 中的第 n 个符号 |
+| S+ | 匹配 1 个或多个符号 | S>n | 调用规则集 n |
+| S- | 精确匹配 1 个符号 | #mailer | 解析到邮件器 |
+| S=X | 匹配类 X 中的任意符号 | $@host | 向邮件器指定主机 |
+| S-X | 匹配不在 X 中的任意符号 | $:user | 向邮件器指定用户 |
+|  |  | $[host$] | 从解析器获取主机 |
+|  |  | $@ | 终止规则集 |
+|  |  | $: | 终止当前规则 |
+
+表 17-2. 规则集符号
+
+
+
+
+## 邮件日志
+
+记录 sendmail 活动日志是个好主意。这些日志对于诊断问题、识别缓慢的邮件循环以及追踪来自远程站点的连接非常有帮助。请注意，sendmail 使用 syslogd 记录活动。根据 `/etc/sysconfig/syslog.conf` 的默认设置，日志文件位置是 `/var/spool/mqueue/syslog` 文件。以下是 syslog 的一个摘录示例：
+
+```
+Aug 9 13:19:01 daffy sendmail[146022]: AA146022:
+message-<id=<9j08092018.AA05836 @mx1.cac.washington.edu>
+Aug 9 13:19:01 daffy sendmail[146022]: AA146022:
+from=<MAILER-DAEMON@U.WASHINGTON.EDU, size=1731, class=0,
+received from mx1.cac.washington.edu [140.142.32.1]
+Aug 9 13:19:02 daffy sendmail[51047]: AA146022:
+to=<deroest@daffy.cac.washington.edu>, delay=00:00:02, stat=Sent
+```
+
+由于日志文件增长迅速，你需要定期关闭并归档它。此过程可以通过 cron 和 `/usr/lib/smdemon.cleanscript` 来处理。该脚本会关闭 syslog 文件并将其复制到 `log.<n>` 文件进行归档。默认的 root crontab 包含一条针对 smdemon.cleanscript 的条目。然而，该条目被注释掉了。移除注释并替换 crontab 以激活日志文件清理：
+
+```
+45 23 * * * ulimit 5000; /usr/lib/smdemon.cleanscript > /dev/null
+```
+
+## 配置示例
+
+本节演示了各种 sendmail 配置，以满足网络中几台计算机上的特定角色。场景如下：
+
+Wine 大学希望为所有员工和学生提供电子邮件服务。校园被划分为不同的系，并且各系拥有许多自己的计算资源。大学希望每个人都拥有形如 user@wine.edu 的电子邮件地址。这些用户将通过 IMAP 协议远程访问他们的邮箱。此政策的唯一例外是计算机科学与工程专业。计算机科学家们已争取到运行他们自己的邮件服务器，并拥有形如 user@cse.wine.edu 的电子邮件地址。出于安全原因，校园网络上的任何服务器都不能直接连接到互联网，除了 gateway.wine.edu 之外；所有邮件服务器都必须通过网关系统中继出站邮件。Wine 的姊妹大学 Whiskey 已同意作为 wine.edu 域的备用邮件主机。图 17-1 详细说明了此网络拓扑。
+
+校园网络上的主机使用以下 DNS 配置：
+
+```
+192.168.100.3	english.wine.edu
+192.168.100.4	biology.wine.edu
+192.168.100.5	cse.wine.edu
+192.168.100.6   hub.wine.edu
+192.168.200.10  gateway.wine.edu
+wine.edu        MX    10   hub.wine.edu
+```
+
+互联网上的主机只能看到以下内容：
+
+```
+10.10.100.10      mail.wine.edu
+10.10.100.11      smtp.whiskey.edu
+wine.edu          MX    10   mail.wine.edu
+wine.edu          MX    20   smtp.whiskey.edu
+```
+
+这种“分裂视野” DNS 配置可以防止互联网邮件主机尝试向 `hub.wine.edu` 投递邮件，或者了解 wine.edu 防火墙后任何系统的存在。两所学校都专门使用 **sendmail** 和 AIX。
+
+![](img/82f851021955589d82b22750fb3b1646_391_0.png)
+
+**图 17-1. 网络拓扑**
+
+在本例中，10.x.x.x 范围的地址被用来代表真实的互联网可路由 IP 地址。实际上，这些地址也是私有的。请务必使用由你的互联网服务提供商分配的正确 IP 地址。
+
+### 分支配置
+
+我所说的“分支”，非常类似于客户端配置，不同之处在于它将接收来自远程主机——即邮件中心的邮件。之所以称之为分支，是因为它依赖于邮件中心将所有出站邮件中继到网关。可以简单地配置两个中心，并允许 `cse.wine.edu` 直接将邮件转发到网关。但是，你可能不想那样做，原因有二：它会给网关增加额外的负载，因为发往 `wine.edu` 用户的邮件会被路由回中心，而且网络安全防火墙的配置可能不允许这样做。
+
+在 `sendmail.cf` 文件中定义智能主机：
+
+```
+DS.hub.wine.edu
+```
+
+### 客户端配置
+
+客户端系统不从远程系统接收任何邮件。如果邮件是发给本地用户的，**sendmail** 会调用 MDA 进行投递。否则，它会被中继到智能主机进行投递。在此配置中，运行 **sendmail** 守护进程是不必要的；邮件用户代理会根据具体情况启动 **sendmail**。仍然需要一个可用的 `sendmail.cf`。当系统上的用户或应用希望向网络上的其他主机发送通知消息，但不希望接收回复或希望本地接收回复时，此配置非常有用。
+
+在 `sendmail.cf` 中定义智能主机：
+
+```
+DS.hub.wine.edu
+```
+
+在 `sendmail.cf` 中注释掉以下规则：
+
+```
+#$S* < @ $* .S=m. > $* $@esmtp $0 $2.$3. $: $1 < @ $2.$3. > $4
+```
+
+### 中心配置
+
+邮件中心接受来自其域内任何主机的邮件投递。它验证用户并本地暂存邮件给他们。唯一的例外是 `cse.wine.edu` 上的用户；他们的邮件会被中继到 `cse.wine.edu` 邮件服务器。对于所有其他域，邮件中心将邮件转发到网关进行最终投递。
+
+中心启用对 `/etc/mail/local-host-names` 的支持：
+
+```
+Fw/etc/mail/local-host-names
+```
+
+此文件包含应遵循本地投递规则的主机名称，在本例中为 **biology.wine.edu** 和 **english.wine.edu**。请注意，**cse.wine.edu** 被明确排除在此列表之外。然后，中心将 DM 设置为伪装为主机 **wine.edu**。
+
+```
+DMwine.edu
+```
+
+并定义网关作为中继主机：
+
+```
+DSgateway.wine.edu
+```
+
+将所有出站邮件通过 hub.wine.edu 中继可以减少与不受信任主机保持的直接连接数量。它还提供了集中归档所有电子邮件的机会，正如站点的审计策略可能要求的那样。最后，中心运行 IMAP 守护进程（**imapd**），以便用户可以访问他们的邮箱。如果用户在 /etc/passwd 中定义（或在 NIS 等映射中）并且主目录在中心系统上可用，并且 **imapd** 在 /etc/inetd.conf 文件中启用，那么这将开箱即用。
+
+### 网关配置
+
+网关服务器中继邮件。对于 **wine.edu** 域中的主机，它将邮件中继到 hub.wine.edu。对于所有其他主机，它将邮件中继到具有最佳可用 MX 记录的主机。分裂视野 DNS 确保网关将 hub.wine.edu 识别为 wine 域的最佳 MX。互联网上的所有其他主机都将 gateway.wine.edu 识别为最佳主机。通过强制所有发往 **wine.edu** 域的互联网邮件通过网关中继，漏洞数量被最小化，从而可以更快速地应用安全补丁。目前大多数商业防火墙都支持此网关功能。
+
+为了避免在默认 **AIX sendmail.cf** 中定义的开放中继，使用以下 m4 宏在 **gateway.mc** 中构建一个新配置：
+
+```
+# cat gateway.mc
+divert(-1)
+include('/usr/samples/tcpip/sendmail/m4/cf.m4')dnl
+OSTYPE('aixsample')dnl
+DOMAIN('generic')dnl
+undefine('UUCP_RELAY')dnl
+undefine('BITNET_RELAY')dnl
+MAILER(Local)dnl
+MAILER(smtp)dnl
+```
+
+要创建一个新的 **sendmail.cf**，只需发出以下命令：
+
+```
+# m4 gateway.m4 > sendmail.cf
+```
+
+最后，在生成的 **sendmail.cf** 中添加对中继的支持：
+
+```
+CRwine.edu cse.wine.edu
+```
+
+### 备用配置
+
+备用服务器必须运行 **sendmail** 守护进程以接受来自远程系统的邮件。它可能具有几种功能：一个邮件域的备用服务器，另一个域的网关服务器。要使系统作为备用接收邮件，只需将备用域添加到 `sendmail.cf` 的 R 类，验证服务器在 DNS 中列为该域的低优先级 MX 主机，并重启 **sendmail**。如果主机 `smtp.whiskey.edu` 是 `wine.edu` 的备用邮件主机，那里的管理员应在 `sendmail.cf` 中添加以下内容。`gateway.mc` 创建了一个很好的基础配置。
+
+```
+CRwhiskey.edu cse.wine.edu wine.edu
+```
+
+> **注意** 当提供此服务的服务器不是本地管理时，备用主机的使用存在争议。为此系统选择的具体配置选项会影响接收到的消息是否被正确转发、重写和排队。如果备用服务器配置不一致，可能会导致邮件丢失。
+
+## 投递代理和协议
+
+一旦邮件主机接收到消息，它必须被投递、传输或排队。如果用户是本地的，邮件将被投递到他们的本地 spool。已投递到本地用户邮件 spool 的邮件，随后可以通过 MUA 或远程投递协议供用户访问。如果用户是远程的，消息将被路由到最佳可用的邮件交换主机，或排队以供稍后传输。
+
+### MDA：bellmail 和 procmail
+
+AIX 的默认本地投递代理是 **bellmail**。它通过将消息附加到用户邮件 spool 的末尾来投递新邮件，通常位于 `/var/spool/mail/userid` 文件中。邮件用户代理将读取此文件并将保存的消息传输到用户的主目录，通常在一个名为 `mbox` 的文件中。未读消息保留在邮件 spool 中。邮件 spool 和 `mbox` 文件可能会变得相当大。重要的是为 `/var` 和 `/home` 文件系统规划足够的磁盘空间来容纳这些。
+
+**bellmail** 的一个流行替代或补充方案是 **procmail**，它是一个可以按发件人、收件人、内容或其他标准对传入邮件进行排序的过滤 MDA。**procmail** 程序甚至可以进行垃圾邮件过滤。这些排序后的邮件随后可以定向到不同的投递位置，甚至是远程位置。配置 **procmail**
+
+
+
+
+## POP
+
+分布式邮件问题的最古老且最知名的解决方案之一是邮局协议（POP）版本 3，定义于 RFC 1725。POP 客户端连接到 POP 服务器，后者是接收邮件的存储库。客户端将用户收件箱的全部内容下载到客户端机器上。随后，收件箱在本地客户端上进行处理。对于使用快速连接且仅从一个客户端运行的用户来说，POP 运行效果非常好。如果你从多个客户端进行操作，那么你仍然面临收件箱文件夹在机器之间分散的问题。AIX 基础操作系统包含一个基本的 POP 守护程序，用于支持 POP 版本 3。它由 `inetd` 运行，只需取消注释 `/etc/inetd.conf` 中的条目即可启用：
+
+```
+# pop3          stream   tcp  nowait  root  /usr/sbin/pop3d pop3d
+```
+
+这些守护程序将为本地定义的用户提供 POP 邮件服务。POP 使用密码进行身份验证，尽管较新的实现利用了 Kerberos 安全服务。你应该不难找到针对几乎所有操作系统的更高级的公共领域、共享软件和供应商提供的 POP 实现。这包括 POP3 客户端和服务器。
+
+## IMAP
+
+互联网消息访问协议（IMAP），定义于 RFC 2060，解决了从多个分布式邮件客户端访问邮箱时集中处理邮箱的问题。互联网消息支持协议（IMSP）扩展了 IMAP 协议，以包含地址簿的管理和多个 IMAP 服务器的集群功能。完整的解决方案需要一个友好的基于 IMAP 的用户代理，这在大多数主流操作系统中均可用。**一个 imap 守护程序**也包含在 AIX 基础操作系统中。要为在本地 `/etc/passwd` 文件中定义的远程用户启用 IMAP 支持，请取消注释 `/etc/inetd.conf` 中相应的条目。
+
+```
+# imap2 stream tcp nowait root /usr/sbin/imapd imapd
+```
+
+IMAP 被设计为 POP 的后续方案，以解决共享访问、资源本地化以及通过低带宽连接访问远程邮件服务器的问题。IMAP 是一种类似于 NNTP 的客户端/服务器协议。IMAP 协议由邮件用户代理使用，用于在客户端和服务器之间传输邮件头信息或单个邮件消息。目标文件夹可以位于本地客户端或邮件服务器上。这使得 IMAP 非常适合于低带宽连接，例如拨号访问。IMAP 可用于将完整邮箱从服务器传输到客户端，以模拟 POP 服务。其他 IMAP 功能包括搜索邮箱中的文本字符串、访问新闻服务器以及管理 MIME（多用途互联网邮件扩展）附件。MIME 用于通过八位数据的七位编码将多媒体文件附加到邮件消息中。IMAP 新闻支持提供了一种在单一客户端下整合用户邮件和新闻界面的方法。名为 C-client 的 IMAP API 库用于将 IMAP 支持集成到现有的邮件用户代理中。IMAP 服务器和 C-client 软件可从华盛顿大学获得。基于 IMAP 的邮件用户代理可从多个公共和供应商来源获取。
+
+## MAIL CLIENTS
+
+多家 Web 浏览器和桌面邮件供应商正在向其电子邮件套件中添加 IMAP 协议——其中最值得注意的是 Netscape Communicator。
+
+### /usr/bin/mail
+
+AIX 5 取消了两种不同的邮件用户代理，现在仅使用一种：UCB 邮件程序。如果在没有命令行参数的情况下调用，这个简单的 MUA 将读取用户的邮件 spool 并显示一些消息头信息：发件人、日期、时间、大小和消息主题。一系列单字母命令允许用户阅读、删除和撰写消息。在 **?** 提示符下输入 **help** 可以查看这些选项的列表。
+
+### Netscape Communicator
+
+AIX 5 附带 Netscape Communicator 版本 4.7。除了 Web 浏览器外，该捆绑软件还包含一个 GUI 邮件客户端。该客户端支持 IMAP、POP 3 和 movemail（本地 UNIX 邮箱格式）。从 GUI 中，可以阅读、删除、撰写和组织邮件及邮件文件夹。
+
+### Pine
+
+Pine 提供了一个简单的热键菜单界面，用于处理本地投递和 IMAP 管理的邮箱。本地邮件队列支持允许 Pine 在非 IMAP 环境中工作，就像其他流行的邮件用户代理一样。屏幕消息管理功能可以在不打断正在进行的工作的情况下，让用户了解新邮件的到达和系统警告。Pine 菜单层次结构包括地址簿管理、邮件和新闻文件夹列表、排序后的消息索引、消息撰写和配置。系统中到处都有在线帮助可用。消息撰写得到了一个名为 Pico 的基本编辑工具和一个集成拼写检查器的辅助。
+
+尽管 Pine 的目标是提供基本的“主食”电子邮件处理界面，但它还包括一些针对高级用户的复杂功能：
+- 自定义选择文本编辑器和拼写检查器
+- 自定义排序消息索引
+- 标记消息以进行批量操作
+- 定制消息头显示
+- 管理 MIME 附件
+
+这些只是 Pine 中可用的众多高级功能中的几个。
+
+### DEBUGGING
+
+可以在邮件投递过程的多个阶段调试邮件配置。**sendmail** 和 **mail** 都具有有用的内置功能，用于提供详细输出和交互式会话。此外，**sendmail** 程序还可以用于交互式测试规则集。
+
+### 寻址和头部
+
+为了使邮件消息从用户 A 传递到用户 B，必须使用 MTA 能够理解的寻址机制。根据第 13 章关于域名空间的讨论，你可能认为这是一个简单的问题。然而，涉及其他寻址协议的其他网络的电子邮件网关可能会使地址解析问题变得像人工智能一样复杂。
+
+最常见的 UNIX 邮件格式包括互联网域寻址和 UUCP 寻址。
+
+```
+user@domain-address 	←────────Internet address
+host!...!destination/user ←────────UUCP address
+```
+
+每种邮件消息都附带两种类型的邮件头部，它们定义了消息的属性。简单邮件传输协议（SMTP RFC 821）提供了一种命令语法，MTA 使用它来协商从一个 MTA 到下一个 MTA 的邮件传输。以下示例包含一个 SMTP 头部：
+
+```
+HELLO smtp.whiskey.edu 	←──────Introduce yourself to the MTA
+MAIL From: raphael@english.whiskey.edu 	←─Indicate the originator
+RCPT To: rachel@wine.edu 	←─────Announce the recipients
+DATA 	←──────Supply the data of the e-mail message
+QUIT 	←──────Exit
+```
+
+第二种邮件头部类型是 RFC 822 头部。它被 MTA 和 MUA 共同使用。RFC 822 头部标识邮件消息所经过的路径、日期、发件人、收件人、主题等。
+
+```
+Received: from gateway.wine.edu
+          by hub.wine.edu id AA03037;
+          Sun, 10 Nov 02 15:07 PST
+Received: from smtp.whiskey.edu
+          by mail.wine.edu id AA10255;
+          Sun, 10 Nov 02 15:04 PST
+Received: from english.whiskey.edu
+          by smtp.whiskey.edu id AA12242;
+          Sun, 10 Nov 02 15:01 PST
+Date: Sun, 10 Nov 02 14:59:10 PST
+From: raphael@english.whiskey.edu
+To: rachel@wine.edu
+Subject: Meeting Wednesday
+
+Raphael:
+
+I enjoyed that seminar last Wednesday. What was
+the name of that professor who kept falling asleep?
+Raphael
+```
+
+received 行的顺序指示了邮件消息所经过的 MTA 路径。此路径可用于调试路由问题和环路。
+
+### 邮件的发送方式
+
+当用户撰写邮件消息时，MUA 会在消息末尾附加一个由空行分隔的头部信封。然后，MUA 将消息交给 **sendmail** MTA。一个新的 **sendmail** 守护程序被 fork 出来处理新消息。它将每个与邮件消息相关的地址通过地址转换规则集进行处理。规则集解析地址行并确定消息目的地是本地还是远程。如果消息 destined 给远程站点，可能会查询命名服务以确定是否请求了远程站点的首选邮件交换站点（命名服务 MX 记录）。如果远程站点正在运行 **sendmail** MTA，则消息使用上述 SMTP 协议传输到远程站点。在远程站点，**sendmail** 再次通过规则集运行这些地址，以确定收件人是本地还是远程。如果收件人是本地的，头部将被重写，并且消息将被 spool 到收件人的收件箱中。
+
+### 详细的 /usr/bin/mail 会话
+
+测试 **sendmail** 最简单的方法是使用 /usr/bin/mail 的 -v 详细标志。它提供了关于 MTA 之间交互的反馈。以下示例还使用了 -s 选项来包含主题行：
+
+
+
+
+
+```
+$ echo 'Happy birthday Judith!' | mail -v -s "Birthday" judith@wine.edu
+judith@wine... Connecting to wine.edu via esmtp...
+220 AixADM.org ESMTP Sendmail AIX5.1.8/11.0/8.11.0; Sat, 8 Jun 2002
+>>> EHLO McGraw-Hill.com
+250-wine.edu Hello McGraw-Hill.com (may be forged), pleased to meet you
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-SIZE
+250-DSN
+250-ONEX
+250-ETRN
+250-XUSR
+250 HELP
+>>> MAIL From:<terry@McGraw-Hill.com> SIZE=57
+250 2.1.0 <terry@McGraw-Hill.com>... Sender ok
+>>> RCPT To:judith@wine.edu
+250 2.1.5 <judith@wine.edu>... Recipient ok
+>>> DATA
+354 Enter mail, end with "." on a line by itself
+>>> .
+250 2.0.0 g59ZWdN15290 Message accepted for delivery
+judith@wine... Sent <g59ZWdN15290 Message accepted for delivery>
+Closing connection to wine.edu.
+>>> QUIT
+221 2.0.0 wine.edu closing connection
+```
+
+## 测试备用邮件主机
+
+可以指定一个备用主机来接收和处理测试消息。这在检查备用邮件主机的正确配置时特别有用。备用邮件主机通过一种形式为 `user@host.domain@another.host.altdom` 的电子邮件地址指定。以下是基于 `/usr/bin/mail` 的另一个示例：
+
+```
+# /usr/bin/mail -v bart@wine.edu@smtp.whiskey.edu
+Subject: help
+<Enter a subject here or enter
+Sidewow Bob did it!
+<Enter a message or just enter
+.
+<Enter "." indicates the end of message
+Cc:
+<Enter to bypass Cc
+```
+
+为了使此功能正常工作，消息必须源自接收端 MTA 已知的邮件主机。这是因为大多数邮件主机被配置为拒绝来自反向查找失败的主机的连接。实现此结果的另一种方法是直接 `telnet` 到邮件主机的 `sendmail` 端口，并通过交互式 SMTP 会话与服务器进行通信。
+
+### 测试 Sendmail 规则集
+
+通过调用带有 *-bt* 标志的 **sendmail** 来测试规则集。**sendmail** 程序会提示输入要调用的规则集和目标地址。每两个规则集编号之间用逗号分隔。
+
+```
+# sendmail -bt -C/etc/mail/sendmail.cf
+ADDRESS TEST MODE (ruleset 3 NOT automatically invoked)
+Enter <ruleset> <address>
+> 2,4,0 user.name@node.dept.wine.edu
+2       input: user . name @ node . dept . wine . edu
+        returns: user . name @ node . dept . wine . edu
+final   input: user . name @ node . dept . wine . edu
+final   returns: user . name @ node . dept . wine . edu
+parse   input: user . name @ node . dept . wine . edu
+Parse0  input: user . name @ node . dept . wine . edu
+Parse0  returns: user . name @ node . dept . wine . edu
+ParseLocal
+ParseLocal        input: user . name @ node . dept . wine . edu
+ParseLocal        returns: user . name @ node . dept . wine . edu
+ParseI
+ParseI    input: user . name @ node . dept . wine . edu
+ParseI    returns: $@ local $: user . name @ node . dept . wine . edu
+parse       returns: $@ local $: user . name @ node . dept . wine . edu
+> /quit
+```
+
+**sendmail** 命令支持多种调试和跟踪级别。它们可以使用启动选项 *-d<n-m>,<n-m>* 激活，其中 **nn** 和 **mm** 定义调试和跟踪级别。由于输出可能 *非常冗长*，建议将输出重定向到文件中。IBM AIX 的 **sendmail** 守护进程仅支持值为 21;<n-m>，其中 <n-m> 可以是任何正整数。如果你正在运行当前的 **sendmail** 副本，请参考源代码了解调试和跟踪值。
+
+```
+# /usr/lib/sendmail -bd -q30m -d21.1
+```
+
+定期检查日志、邮件队列和统计文件，以查找停滞的邮件或循环。你可以使用 **mailq** 命令列出待交付队列。
+
+```
+# mailq
+---Q-ID---*----* ---Q-Time---- Sender/Recipient----
+g592gDN15290^ 5 Sat Jun 8 18:04 terry judith@wine.edu
+```
+
+以下 **ls** 命令列出了排在 */var/spool/mqueue/* 目录下的文件：
+
+```
+# ls -l /var/spool/mqueue
+total 2
+-rw-------   1 root    system        5 Jun 08 18:04 df592gDNDN15290
+-rw-------   1 root    system      481 Jun 08 18:04 qf592gDN15290
+-rw-------   1 root    system        0 Jun 08 18:04 xfg592gDN15290
+```
+
+| QID | 队列文件类型 |
+| --- | --- |
+| d | 消息数据文件 |
+| l | 锁定文件 |
+| n | 备份文件 |
+| q | 控制文件 |
+| t | 临时文件 |
+| x | 转录文件 |
+
+**表 17-3. 邮件队列文件类型**
+
+邮件队列中的文件由 QID 标识。QID 的第一个字符指定队列文件的类型。表 17-3 列出了文件类型。
+
+可以使用 */usr/lib/mailstats* 命令检查 */etc/mail/statistics* 文件。如果 *statistics* 文件不存在，你需要使用 *touch* 命令创建它。
+
+```
+$ mailstats
+Statistics from Sat Jun   8 20:51:29 PDT 2002
+M msgsfr bytes_from msqsto bytes_to msgsrej msgsdia Mailer
+3  18      18K    0      0K     0      0 local
+5  0      0K     18     18K    0      0 esmtp
+------------------------------------------------------------
+T  18     18K    18     18K    0      0
+C  18     18      18         0      0
+```
+
+要以程序可读的格式输出相同信息并重置 *statistics* 文件，请使用以下 *-p* 选项：
+
+```
+$ mailstats -p
+1023594689 1023594773
+3  18      18        0      0      0      0 local
+5  0      0         18     18       0      0 esmtp
+T  18     18        18           0      0
+C  18     18        0            0      0
+```
+
+## 管理邮件队列
+
+作为管理员，我们的责任是在邮件到达时通知用户，并催迫他们清除旧的无用邮件。由于后者做起来相当困难，我将先讨论较容易的部分：在邮件到达时通知用户。
+
+当 **comsat** 守护进程被 **sendmail** 提示时，它会通知用户有新邮件等待。此功能由默认 `/etc/profile` 中定义的 MAIL 和 MAILMSG 变量支持。
+
+```
+MAIL=/var/spool/mail/$LOGNAME
+MAILMSG="[YOU HAVE NEW MAIL]"
+```
+
+![](img/82f851021955589d82b22750fb3b1646_402_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_402_1.png)
+
+**comsat** 守护进程还必须在 `/etc/inetd.conf` 中定义并取消注释。
+
+```
+comsat dgram  upd  wait  root  /usr/sbin/comsat  comsat
+```
+
+在登录时通知用户有邮件等待也是一个好主意。这可以通过检查每种 shell 的默认登录脚本中的邮件来实现。有关设置系统范围的默认登录脚本的详细信息，请参见第 20 章。以下是创建新用户帐户之前添加到默认用户 `/etc/security/.profile` 中的登录邮件检查示例：
+
+```
+if [ -s ""$MAIL" ]
+    then echo "$MAILMSG"
+fi
+```
+
+如果不对用户社区采取强制手段，就很难鼓励用户跟上接收的邮件。最好的策略是使用定期提醒，并使用诸如 **du** 等磁盘利用率命令来跟踪队列使用情况。
+
+```
+# du -sk /var/spool/mail/
+# du -sk /var/spool/mail/*
+```
+
+![](img/82f851021955589d82b22750fb3b1646_402_2.png)
+
+![](img/82f851021955589d82b22750fb3b1646_402_3.png)
+
+### 检查清单
+
+以下是有关邮件和 Sendmail 要点的检查清单：
+
+- ☐ 识别电子邮件或 **电子邮件** 系统的组件。
+- ☐ 识别 **sendmail** 组件。
+- ☐ 不要在对直接连接到互联网的系统上使用 IBM 工作配置，除非禁用邮件的非限制性中继。
+- ☐ 保留 **sendmail** 活动的日志。
+- ☐ 识别满足网络上多台计算机特定角色的各种 **sendmail** 配置。
+- ☐ 识别投递代理和协议。
+- ☐ 识别邮件客户端。
+- ☐ 定义 **调试**。
+- ☐ 在邮件到达时通知用户，并催迫他们清除旧的无用邮件。
+
+# 第 18 章
+
+## Apache Web 服务
+
+![](img/82f851021955589d82b22750fb3b1646_403_0.png)
+
+IBM 随基础操作系统提供 Apache HTTP Server。尽管 AIX 下可以运行其他几个 Web 服务器，但 Apache 如今已成为互联网标准。服务器的工作是提供访问多媒体数据和通用互联网服务的公共接口。它通过超文本传输协议 (HTTP) 和超文本标记语言 (HTML) 的组合来实现这一点。驻留在服务器上的 HTML 数据页面通过 HTTP 传输到 Web 客户端。Web 服务器负责维护对受保护信息的访问控制，并与 Web 客户端协商安全通道。
+
+HTTP 实现类似于互联网邮件协议 SMTP，它是一个由命令/响应驱动的协议，在同一个双向套接字连接上发送命令、数据和错误代码。它还依赖 MIME 编码文档来克服自设的字符集限制。这些简单的设计选择有助于快速实施、广泛部署以及平台的普遍流行。除了简单的 HTML 之外，HTTP 的功能已通过伴随技术（如编程语言 JavaScript 和 Java）的使用得到扩展。可扩展标记语言 (XML) 和可扩展样式表语言 XSL 也在通过区分数据和呈现元素来改变互联网的互操作性。
+
+### Apache 服务器配置
+
+AIX 包含一个基于 Web 的配置系统，可以从默认服务器 Web 页面访问。这些配置实用程序由监听网络端口 8008 的 **httpd** 守护进程的一个额外实例运行。此服务器实例必须手动启动：
+
+```
+# /usr/HTTPServer/bin/httpd -f /usr/HTTPServer/conf/admin.conf
+```
+
+此配置工具使用 Java 和 JavaScript 进行用户交互，可用于快速安装简单的服务器配置。然而，它所需的长软件和网络依赖链使其难以依赖。强烈建议有能力的 Web 管理员真正理解 Apache 配置的细节。
+
+IBM 提供的二进制发行版将 Apache 安装到 /usr/HTTPServer，并将这些资源组织到子目录中（参见表 18-1）。
+
+### 指令配置
+
+Apache 包含丰富的配置选项，通过“指令”来控制，这些指令设置全局或局部值。示例 18-1 包含 **httpd.conf** 文件中前几条指令的列表。Apache 历史上将配置分为三个文件：**srm.conf、access.conf 和 httpd.conf**。包含在这三个文件中的指令和数据现在合并到 **httpd.conf** 中。对 **srm.conf** 和 **access.conf** 的支持默认通过设置 **AccessConfig** 和 **ResourceConfig** 指令为 /dev/null 来禁用（任意数量的任意命名的配置文件可能
+
+
+
+
+| 目录 | 内容 |
+|---|---|
+| *conf*/ | 配置文件 |
+| *ssl*/ | 安全套接字层密钥和证书 |
+| *bin*/ | 可执行二进制文件 |
+| *libexec*/ | 动态共享对象模块 |
+| *cgi-bin*/ | CGI 脚本的默认位置 |
+| *htdocs*/ | HTML 内容 |
+| *proxy*/ | 代理请求缓存 |
+| *logs*/ | 日志文件 |
+| *icons*/ | 图像库 |
+| *man*/ | 手册页 |
+| *adm/docs*/ | 基于 Web 的管理文档 |
+| *apache/src*/ | Apache 源代码 |
+| *include*/ | Apache C 头文件 |
+| *example_module*/ | 一个示例模块 |
+
+**表 18-1. Apache HTTP 服务器目录结构**
+
+通过 *Include* 指令添加）。Apache HTTP 服务器文档提供了可用指令的完整参考。
+
+## 示例 18-1
+
+```
+##
+## httpd.conf -- Apache HTTP 服务器配置文件
+##
+
+# 这是主服务器配置文件。请参阅 URL
+http://www.apache.org/
+# 获取说明。
+
+# 如果您不确定，请勿仅阅读这里的说明而不理解其含义，
+# 请咨询在线文档。已发出警告。
+
+# 最初由 Rob McCool 编写
+
+# 这两个指令用于将三个配置文件合并为一个。
+# 三个配置文件是遗留设置，并非必需。
+
+AccessConfig /dev/null
+ResourceConfig /dev/null
+```
+
+多个指令控制其他指令的作用域（例如 `<Location>`、`<Directory>` 和 `<VirtualServer>`）。在这些标签内遇到的指令限定在关联的命名空间内，少数服务器级指令除外。
+
+## 服务器级指令
+
+服务器级配置选项影响整个服务器的服务器标识、网络配置、文件位置、进程控制和资源使用。Apache 旨在以高可靠性和安全性处理大量 HTTP 流量。预分叉和自过期进程对于实现可靠性至关重要。启动时，父 httpd 进程将绑定并监听网络套接字，并根据某些服务器级指令预分叉多个子进程以响应请求。请求将被跟踪，经过一段时间后，子进程将过期，父进程将生成新的子进程。预分叉使服务器能够快速响应多个请求，而过期有助于限制可能导致服务器失效的内存泄漏潜力。示例 18-2 列出了许多控制此行为的服务器级配置指令。大多数这些指令名称在描述其用途时很有效。
+
+```
+示例 18-2
+
+# ServerRoot: 存放服务器配置、错误和日志文件的目录。
+ServerRoot /usr/HTTPServer
+
+# ServerType 是 inetd 或 standalone。
+ServerType standalone
+
+# Port: standalone 监听的端口。对于 1024 以下的端口，
+# 最初需要以 root 身份运行 httpd。
+Port 80
+
+# Listen: 仅当服务器将监听 1 个以上的端口时才需要
+# Listen 指令。
+#Listen 80
+
+# HostNameLookups: 记录客户端的名称还是仅记录其 IP 号
+HostNameLookups off
+
+# User/Group: 用于运行 httpd 的用户/组名称（或 #数字）。
+User nobody
+Group nobody
+
+# ServerAdmin: 您的地址，服务器问题应通过电子邮件发送到的地址。
+ServerAdmin you@your.address
+
+# PidFile: 服务器应记录其 pid 的文件
+PidFile /usr/HTTPServer/logs/httpd.pid
+
+# ScoreBoardFile: 用于存储内部服务器进程信息的文件。
+ScoreBoardFile /usr/HTTPServer/logs/httpd.scoreboard
+
+# ServerName 允许您设置一个主机名，如果它与程序获取的主机名
+# 不同（即使用 "www" 而不是主机实际名称），则将其发送回客户端。
+#ServerName new.host.name
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 15
+MinSpareServers 5
+MaxSpareServers 10
+StartServers 5
+MaxClients 150
+MaxRequestsPerChild 10000
+#Listen 3000
+#Listen 12.34.56.78:80
+```
+
+## 模块化扩展
+
+Apache 的模块化设计允许扩展基础功能，在需要时提供新的逻辑和指令。这也有助于管理 httpd 守护进程可能巨大的内存需求。模块实现为动态共享对象，在运行时通过 `dlopen()` 系统调用链接到进程内存空间。甚至 Apache 核心也可以在运行时链接。由于 DSO 在父进程和所有子进程之间共享，因此只需要足够的内存来加载每个模块的一个实例。示例 18-3 包含在 httpd.conf 文件中使用的常见 Apache 模块的选择。
+
+### 示例 18-3
+
+```
+#LoadModule proxy_module   libexec/libproxy.so
+LoadModule userdir_module   libexec/mod_userdir.so
+LoadModule alias_module   libexec/mod_alias.so
+LoadModule rewrite_module   libexec/mod_rewrite.so
+LoadModule access_module   libexec/mod_access.so
+LoadModule auth_module   libexec/mod_auth.so
+#AddModule mod_proxy.c
+AddModule mod_userdir.c
+AddModule mod_alias.c
+AddModule mod_rewrite.c
+AddModule mod_access.c
+AddModule mod_auth.c
+```
+
+LoadModule 将额外代码插入 httpd 的可寻址内存空间。AddModule 使模块中定义的指令对服务器可用。在调用 AddModule 之前，新模块不可用。务必将所有对模块定义指令的引用放在相关的 LoadModule 和 AddModule 行之后。可以使用 include/ 子目录中的头文件以及 apxs 程序在运行时编译和安装额外模块。
+
+## 访问控制
+
+数据传输之后，访问控制可能是 Web 服务器最重要的功能。访问控制主要根据位置和身份限制 Web 客户端和 Web 页面发布者的功能。在示例 18-4 中，访问控制首先在一个作用域中受到严格限制，然后在另一个作用域中放宽，以满足管理目标。一个指令作用域可以是另一个作用域的子集，这实际上覆盖了统一资源标识符（URI）树中某些分支的前者。
+
+### 示例 18-4
+
+```
+DocumentRoot /usr/HTTPServer/htdocs/en_US/
+<Directory />
+Options FollowSymLinks
+AllowOverride none
+</Directory>
+<Directory /usr/HTTPServer/htdocs/en_US>
+Options Indexes FollowSymLinks
+AuthType basic
+AuthName "Web Server Access Control"
+AuthUserFile conf/UsersAndPasswords
+Require valid-user
+</Directory>
+```
+
+第一个 `Directory` 块为默认文档根设置默认访问规则：允许发布者将对象从文件系统映射到服务器识别的 URI 空间；然而，他们无法通过 .htaccess 文件覆盖任何后续访问控制。第二个 `Directory` 块为整个文档树启用基本用户身份验证。`AuthUserFile` 指令定义用户数据库文件位置。
+
+简单的 `AuthUserFile` 数据库是用户 ID 和哈希密码的冒号分隔文本文件，类似于 UNIX `/etc/passwd` 文件。在拥有大量用户的服务器上，搜索此文件可能会成为性能问题。可以使用 `AuthDBUserFile` 指令来加速此过程。`htpasswd` 和 `dbmmanage` 实用程序用于填充相应的用户文件。
+
+这两种授权方案提供的安全保护最少，因为密码以“明文”形式通过网络传输，任何能够嗅探网络连接的人都可以读取。在实施 Web 站点的基本身份验证方案时，请记住这一点；至少确保服务器位于防火墙外部，并在网络上与敏感系统隔离。为了更严重的安全性，请使用 Secure Sockets Layer (SSL) 协议，Apache HTTP 服务器也支持该协议。
+
+还可以根据用户逻辑所在的 host（主机）或 network（网络）限制访问。这通过 Order、Allow 和 Deny 指令实现。例如：
+
+```
+Order deny, allow
+Allow from 10.10.120.0/24
+Deny from cse.froth.edu
+```
+
+此示例将 Deny 指令的优先级置于 Allow 指令之上，然后明确允许来自 10.10.120 网络的用户的连接，并拒绝来自 cse.froth.edu 的用户。这些指令通常限定于特定的目录树或虚拟主机。
+
+## URI 映射指令
+
+当设置文档根时，这隐含了以 DocumentRoot 目录为根的主机有效 URI 树；DocumentRoot 目录下的任何有效文件或目录都成为有效 URI 的一部分。然而，通常希望将其他文件和目录映射到此空间中。两个这样的映射指令是 Alias 和 ScriptAlias。启用别名只是将一个有效子树映射到另一个空间。像 Indexes 和 FollowSymLinks 这样的可选指令仍然需要为新目录激活，才能使这些功能正常工作（参见示例 18-5）。
+
+### 示例 18-5
+
+```
+<Directory /usr/local/myhtdocs/>
+Options Indexes
+AllowOverride none
+</Directory>
+Alias        /mydocs/    /usr/local/myhtdocs/
+```
+
+## MIME 类型
+
+Web 是一项多媒体服务，能够容纳任意数据格式。由于 HTTP 协议的设计，许多数据类型在转换到另一格式之前无法传输。这是通过使用 MIME 格式头实现的。MIME 允许 Web 服务器将文档转换为 HTTP 和 Web 客户端支持的格式，并使 Web 客户端将其转换回原始格式，所有这些都无需 Web 客户端用户输入。许多数据类型（如 GIF 图像）的转换和显示通常直接由浏览器支持。当浏览器遇到它不支持的 MIME 类型时，它依赖于辅助应用程序来显示或以其他方式处理数据。Apache 使用 mime.types 文件来确定要发送给请求数据的客户端的 MIME 类型头，以便客户端知道如何格式化数据。可以通过编辑此文件或通过在 httpd.conf 文件中使用 AddType 指令来添加额外类型。
+
+
+
+
+## 支持程序
+
+Apache 包含许多额外的程序来支持 Web 管理员。这些二进制文件安装在服务器根目录下的 **bin/** 子目录中。其中最重要的是 **apachectl**，它用于控制 **httpd** 守护进程的手动停止和启动，以及验证 **httpd.conf** 配置文件。可以通过以下命令停止和启动 Apache：
+
+```bash
+# /usr/HTTPServer/bin/apachectl stop
+# /usr/HTTPServer/bin/apachectl start
+```
+
+此外，在对配置文件进行修改后，验证这些更改是一个好主意：
+
+```bash
+# /usr/HTTPServer/bin/apachectl configtest
+```
+
+错误的配置文件会阻止正在运行的服务器重启，从而导致在研究和更正错误时产生非预期的停机时间。在成功验证后，可以安全地重启正在运行的服务器：
+
+```bash
+# /usr/HTTPServer/bin/apachectl restart
+```
+
+**rotatelogs** 程序是另一个有用的工具。顾名思义，它有助于管理可能非常庞大的 Web 日志。使用此程序最常见的方法是从 **httpd.conf** 文件内部调用它。如何执行此操作的细节将在本章后面的“管理日志”部分中讨论。
+
+## 虚拟服务器配置
+
+*虚拟主机*是 Apache 的一个流行功能，允许管理员从一台服务器上运行多个 Web 站点。虚拟主机有两种类型：基于名称和基于 IP 地址。基于 IP 的虚拟主机需要每个主机有一个独立的 IP 地址。这通常可以通过在一个物理网络接口上使用 IP 别名来实现。相比之下，基于名称的虚拟主机可以共享一个 IP 地址；这些主机的所有 DNS 记录都指向同一个 IP 地址。基于名称的虚拟主机依赖于客户端发送一个 HTTP/1.1 头部来标识其试图联系的主机名称。大多数浏览器现在支持 HTTP/1.1，这使得基于名称的虚拟主机成为一个可行且实用的选择。例外情况是安全服务器；安全服务器需要匹配的反向 DNS 查找。示例 18-6 展示了一个基于名称的虚拟主机配置。基于 IP 的虚拟主机示例出现在下一节。
+
+### 示例 18-6
+
+```apache
+NameVirtualHost *
+<VirtualHost *>
+    ServerName accounting.wine.edu
+    DocumentRoot /var/data/accounting.wine.edu
+</VirtualHost>
+<Directory /var/data/accounting.wine.edu>
+    Options Indexes
+    AllowOverride no
+</Directory>
+<VirtualHost *>
+    ServerName chemistry.wine.edu
+    DocumentRoot          /var/data/chemistry.wine.edu
+</VirtualHost>
+```
+
+## 安全服务器配置
+
+Apache 通过 `mod_ibm_ssl` DSO 模块支持安全套接字层（Secure Sockets Layer）协议，该模块随 `http_server.ssl.128` 文件集一起安装。安全服务器需要一个将呈现给浏览器客户端的证书。如果证书由浏览器认可的证书颁发机构（CA）签名，则会协商一个安全会话密钥，并由服务器发送请求的数据。如果证书不被认可，系统会提示用户如何继续。`ADX 5L` 包含用于生成密钥、自签名证书和证书颁发机构请求的 `ikayman`。`ikayman` 程序是用 Java 编写的 `X` 桌面应用程序。要生成自签名证书，首先创建一个初始个人密钥数据库（默认为 `key.kdb`），并指定将运行安全服务器的系统的主机名。然后点击自签名证书图标。完成该步骤后，创建一个基于 IP 的虚拟主机，并使用 `KeyFile` 指令引用 `key.kdb` 文件（参见示例 18-7）。
+
+### 示例 18-7
+
+```apache
+LoadModule mod_ibm_ssl             libexec/mod_ibm_ssl_128.so
+AddModule  mod_ibm_ssl.c
+Listen 443
+<VirtualHost 10.10.120.25:443>
+    ServerName secure.wine.edu
+    DocumentRoot /secure/document/location
+    Options Indexes
+    SSLEnable
+    KeyFile    /usr/HTTPServer/ssl/keys/server.kdb
+</VirtualHost>
+```
+
+使用不安全的 HTTP URL 连接到安全服务器是一个常见的错误。连接会成功且没有错误，但数据是未知 MIME 类型。浏览器通常会尝试保存数据，而不会报告任何错误。如果安全虚拟服务器正在监听 443 端口，这个 URL 将不会返回预期的数据：`http://secure.wine.edu:443`。
+
+正确的格式是 `https://secure.wine.edu:443`。
+
+## 管理日志
+
+Apache 日志分为两种类型：错误日志和访问日志。错误日志以不同的详细程度记录服务器内部事件。用于命名错误日志和定义消息级别的指令分别是 `ErrorLog` 和 `LogLevel`。访问日志记录对 Web 守护进程所做的每个请求，并具有控制记录数据类型、格式和位置的配置选项。`LogFormat` 指令定义了一个模板，类似于 C 语言的 `printf` 函数。模板用双引号包围，并包含预定义的标记，例如表示主机名的 `%h` 和表示用户 ID 的 `%u`。完整的自定义日志格式标记列表请参阅 HTTPServer 文档。模板定义之后是一个可选的第二个参数，即日志格式名称或别名。别名格式允许管理员定义多个访问日志。
+
+> **注意：** 组可写的日志目录可能是一个安全风险。日志目录的所有者应该是启动守护进程的用户，并且只有该用户应该能够写入该目录。
+
+访问日志通过 `CustomLog` 指令定义（参见示例 18-9）。`CustomLog` 指令不仅可以记录到文件，还可以指定管道和程序来处理数据。Apache 自带的 `logrotate` 程序就用于此目的，它旨在限制日志允许变得多大。注意，`logrotate` 可以从命令行、`httpd.conf` 文件或 `crontab` 中调用，默认情况下每天截断日志。
+
+### 示例 18-9
+
+```apache
+# ErrorLog: The location of the error log file. If this does not start
+# with //, ServerRoot is prepended to it.
+ErrorLog /usr/HTTPServer/logs/error_log
+
+# LogLevel: Control the number of messages logged to the error_log.
+# Possible values include: debug, info, notice, warn, error, crit,
+# alert, emerg.
+LogLevel warn
+
+# The following directives define some format nicknames for use with
+# a CustomLog directive (see below).
+
+LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %b" common
+LogFormat "%(Referer)l -> %U" referer
+LogFormat "%(User-agent)l" agent
+
+CustomLog /usr/HTTPServer/logs/access_log common
+CustomLog /usr/HTTPServer/logs/referer_log referer
+CustomLog "|/usr/HTTPServer/bin/logrotate ->/usr/HTTPServer/logs/agent_log" agent
+```
+
+> **注意：** 使用 `rm` 截断日志文件可能会产生意想不到的结果。如果另一个进程打开了该文件，文件大小将变为零，但数据块不会被释放。最终，这一过程可能会不可见地填满文件系统。手动截断日志应使用 `# > LogFile`。
+
+## 创建 Web 内容
+
+配置 Web 服务器是运行 Web 站点的第一步。第二步是创建有用且有意义的内容。Apache 文档根目录中的默认内容是由 Apache 组和 IBM 编写的文档。
+
+创建内容的选项与配置 Apache 的选项一样多，甚至更多。首先是包含 HTML 的简单文件。HTML 以直观的方式共享静态信息非常有用。当要显示的数据是动态的时，必须使用服务器端包含、通用网关接口（CGI）、Java、JavaScript 或其他服务器端语言扩展。这里只能简略提及 Web 内容的话题，但以下章节部分应为您提供一个基本框架，以确定哪些是可能的。
+
+### HTML 文档
+
+通过创建一个超文本文档作为您服务的焦点来开始。这个文档称为主页，可以使用标准编辑器创建。该文档的格式、链接和程序特性使用超文本标记语言（HTML）进行指定。HTML 标签是嵌入在文档文本中的特殊 ASCII 字符序列。HTML 标签具有三种基本形式之一：
+
+```html
+<tag-name> text </tag-name>
+<tag-name attribute-name=arg> text </tag-name>
+<tag-name>
+```
+
+HTML 标签不区分大小写；因此，`<TITLE>` 等同于 `<title>`。表 18-2 列出了一部分 HTML 标签。
+
+基本的 HTML 文档将包含一个标题、一个或多个标题、文本段落，以及可选的程序接口，如链接、列表、图像或输入/输出字段。标题字段标识文档的目的，通常由大多数浏览器单独显示，与文档分开。这意味着你希望使用文档正文中的标题来呼应标题信息。提供六个级别的标题字段。文档中的文本由段落标签包含。如果你想在段落中进行自定义格式化，必须使用额外的标签来遵循该格式化。通常，换行和空格会被忽略。
+
+构建和测试 HTML 文档非常容易。使用你选择的编辑器创建一个文档，并将其保存为扩展名为 .html 的文件（.html 扩展名是一种约定，而非要求。）使用 Netscape 或 Mosaic 等浏览器的“打开本地”或“打开文件”选项在屏幕上显示该文档。重复该过程，直到文档经过润色并符合你的期望。使用几种不同的浏览器查看你的文档以验证其具有一致的外观和感觉是个好主意。你可以通过使用 WYSIWYG HTML 编辑器或工具包使事情变得更加简单。这些工具将在编辑过程中验证和/或显示 HTML 信息。示例 18-10 显示了测试页 test.html 的 HTML 代码。
+
+
+
+
+## 表 18-2. 示例 HTML 标签
+
+| 标签功能 | 开始字段 | 结束字段 |
+| :--- | :--- | :--- |
+| 标题 | `<TITLE>` | `</TITLE>` |
+| 一级标题 | `<H1>` | `</H1>` |
+| 段落 | `<P>` | |
+| 换行 | `<BR>` | |
+| 预格式文本 | `<PRE>` | `</PRE>` |
+| 锚点/链接 | `<A HREF=pathname>` | `</A>` |
+| 列表： | | |
+| 有序列表 | `<OL>` | `</OL>` |
+| 无序列表 | `<UL>` | `</UL>` |
+| 列表项 | `<LI>` | `</LI>` |
+| 定义列表 | `<DL>` | `</DL>` |
+| 术语项 | `<DT>` | `</DT>` |
+| 定义项 | `<DD>` | `</DD>` |
+| 图像 | | |
+| `<IMG SRC=image-uri>` | | |
+| 文本样式： | | |
+| 粗体 | `<B>` | `</B>` |
+| 斜体 | `<I>` | `</I>` |
+| 打字机字体 | `<TT>` | `</TT>` |
+
+## 示例 18-10
+
+```html
+<HTML>
+<TITLE>AIX 5L: Apache HTTP Server test page</TITLE>
+<BODY BACKGROUND="/images/bigblue.jpg">
+  <H1>test 1</H1>
+  <H2>test 2</H2>
+  <H3>test 3</H3>
+  <IMG SRC=foo.gif> A picture of foo.
+  <BR>
+  Take a look around but <I>don't stay too long.</I>
+  <P>
+  <B>Please send</B><A HREF=address.html>money!</A>
+  <P>
+</BODY>
+</HTML>
+```
+
+# 动态数据
+
+HTML 本身只是由 Web 浏览器显示的静态数据，但存在几种用于使 Web 更具动态性的有用标准。标准对于客户端处理更为重要，其中动态元素在浏览器上执行。基本的服务器端动态数据方法是服务器端包含（SSI）和通用网关接口（CGI）脚本。此外，作为服务器端标准，许多高级语言扩展也已涌现。
+
+## 服务器端包含
+
+服务器端包含（SSI）语法由国家超级计算应用中心（National Center for Supercomputing Applications）定义，并且在 NCSA httpd 中提供了支持。该服务器已不再受到开发者的支持，但现在许多由商业维护的 Web 服务器（包括 Apache）中均可用 SSI 功能。
+
+```html
+<!--#echo var="hello world" -->
+if, else, elif
+<!--#if expr "$HTTP_USER_AGENT" -->
+<B>output something</B>
+<!--#endif -->
+<!--#include file="footer.html" -->
+```
+
+## 通用网关接口
+
+CGI 是另一种用于提供动态 Web 内容的早期方法，由 NCSA 开发，如今被广泛使用。HTML 表单将数据传递给服务器，服务器使用相关的 CGI 脚本处理数据并返回另一个 HTML 页面。
+
+```html
+<html><title>script.cgi</title><body>
+<form method="post" action="script.cgi">
+<select name="instance_name">
+<option selected>opt1
+<option> opt2
+</select>
+<input type="submit" value="submit">
+</form></body></html>
+```
+
+以下是 `script.cgi` 可能呈现的示例：
+
+```bash
+#!/bin/ksh
+read myline;
+echo "Content-type: text/html\n"
+echo "<HTML><TITLE>script.cgi</TITLE><BODY>"
+```
+
+```bash
+echo `You chose: `  
+echo `$myline | awk -F'=' '{print $2}'`  
+echo `</BODY></HTML>`
+```
+
+最后，Options 指令必须在适当的 URI 范围内启用 ExecCGI。由于 CGI 脚本可能存在安全漏洞的风险，应极其谨慎地使用 CGI 脚本。
+
+## 服务器语言扩展
+
+Apache 的模块化性质催生了庞大的服务器语言扩展产业。其中最流行的是 PHP、mod perl 和 Java 服务器页面（JSP）。服务器语言扩展允许程序员拥有几乎无限的灵活性来生成内容、与用户交互以及修改 HTTP 服务器本身的功能。
+
+### JavaScript
+
+JavaScript 是一种用于分布式编程逻辑的解释型语言。JavaScript 由 Web 服务器发送并在客户端浏览器上执行。由于 JavaScript 由浏览器解释执行，它不太适合计算密集型编程任务。然而，它因用于简单操作而在互联网上被广泛使用。
+
+可以使用 `<SCRIPT>` 标签将 JavaScript 完全嵌入 HTML 文档中（参见示例 18-11）。开发不需要 JDK，只需要支持 Java 的浏览器。对于 Java 之前的时期的浏览器，你需要隐藏脚本，以免混淆浏览器。你可以通过使用示例 18-12 中所示的标签来隐藏 JavaScript。同样，读者可参考书籍和在线教程以获取有关 JavaScript 编程的更多信息。
+
+#### 示例 18-11
+
+```html
+<HTML>  
+<TITLE> JavaScript Example</TITLE>  
+<SCRIPT LANGUAGE="JavaScript">  
+  
+function hello Web() { 
+  document.write('Hello World Wide Web') 
+}  
+</SCRIPT>  
+<BODY>  
+  
+....HTML STUFF...  
+<SCRIPT>  
+  
+helloWeb() 
+</SCRIPT>  
+</BODY>  
+</HTML>
+```
+
+#### 示例 18-12
+
+```html
+<SCRIPT LANGUAGE="JavaScript"> <!-- [Start hiding.] document.write('Hello World Wide Web') // [Stop hiding.] </SCRIPT>
+```
+
+在 Web 环境中，支持 Java 的浏览器充当 applet 和用户之间的中间件。这些浏览器包含许多预定义的类和对象，你可以引用它们以获取关于页面、历史记录和引用 URL 的详细信息。预定义的类包括
+
+- **Window** 窗口属性（对于框架为多个）
+- **Location** 当前 URL 属性
+- **History** 访问过的 URI 属性
+- **Document** 当前文档属性
+
+在构建你的 Java 或 JavaScript 增强 Web 页面时，请记住浏览器是如何加载页面的。如果你引用了多个 applet，请尽量保持它们小巧。在 applet 传输到客户端期间，按顺序加载页面，以保持观众的兴趣。这对于慢速调制解调器连接尤为重要。这里的建议是将 JavaScript 条目放在 HTML 文档的顶部。这将限制在脚本完成加载之前用户点击页面时发生的干扰。
+
+### Java
+
+用于动态 Web 数据的另一个高级选项是 Java applet。Java 是一种功能完整的编程语言，通过字节码编译和虚拟机架构的使用承诺了跨平台兼容性。以下是一个简单的 Java applet 示例。
+
+```java
+import java.applet.Applet;
+import java.awt.Graphics;
+public class HelloWorld extends Applet {
+    public void paint (Graphics g) {
+        g.drawString ("Hello World!", 150, 25);
+    }
+}
+```
+
+Java 是一种编译型语言，但它并不编译为特定于机器架构的形式。它被编译为字节码。这种设计使 Java 能够声称跨平台的优势；相同的字节码可以在任何支持 Java 虚拟机的系统上运行。JVM 负责将字节码转换为特定于机器的形式。要将示例编译为字节码，必须安装 **javac**。
+
+```bash
+# /usr/java130/bin/javac HelloWorld.java
+```
+
+此命令的输出应是一个 HelloWorld.class 文件，可以从 Web 页面中调用，如下面的示例所示：
+
+```html
+<HTML><HEAD> <TITLE>Hello World as a Java Applet</TITLE></HEAD> <BODY>Java applet HelloWorld says: <APPLET CODE="HelloWorld.class" WIDTH=150 HEIGHT=25></APPLET> </BODY></HTML>
+```
+
+Applet 并未获得广泛的流行，部分原因是早期的性能问题，部分原因是缺乏对 Java 虚拟机的通用支持。Applet 可能在相对同质的大型企业计算环境中最为流行。
+
+## XML 和样式表
+
+XML 是描述结构化数据的标准。XML 标签定义数据元素之间的关系，而不说明如何呈现数据。要有效地在 Web 上使用 XML 显示内容，必须单独描述如何显示数据。XSLT 填补了这一角色。XSLT 在概念上类似于层叠样式表：它描述如何显示数据。由于只有较新的浏览器能够解析 XML 并将 XSLT 规则应用于数据树，如果要支持较旧的浏览器，服务器必须执行解析。示例 18-13 显示了一个包含机构信息的 XML 文档。只使用三个标签，标签名称是任意的，但具有描述性。
+
+### 示例 18-13
+
+```xml
+<institution id="schools"> <name>Wine <dept>English</dept> <dept>Science</dept> <dept>Theater</dept> <name>Whiskey <dept>Literature</dept> <dept>Math</dept> <dept>Science</dept> </name></institution>
+```
+
+
+
+
+## 网络浏览器与辅助应用程序
+
+AIX 自带 Netscape Communicator，与任何浏览器一样，它依赖 Web 服务器发送的 MIME 类型头来正确显示图像和其他非文本数据。浏览器通过内部处理或浏览器插件来处理许多常见的 MIME 数据类型。当浏览器无法通过内部处理或插件处理某种 MIME 类型时，浏览器通常会询问用户如何处理该数据。
+
+## 检查清单
+
+以下是 Apache Web 服务关键点的检查清单：
+
+- 配置 Web 服务器。
+- 定义 DSO 模块。
+- 定义访问控制。
+- 定义虚拟服务器。
+- 定义配置指令的作用域。
+- 定义 HTML 标签。
+- 识别使 Web 更动态的标准。
+- 包含服务器端语法。
+- 通过使用 CGI 提供动态 Web 内容。
+- 通过使用服务器语言扩展生成内容、与用户交互，并修改 HTTP 服务器本身的功能。
+- 创建有用且意义明确的 Web 内容。
+
+![](img/82f851021955589d82b22750fb3b1646_420_0.png)
+
+# 第 19 章
+
+# X11 管理
+
+![](img/82f851021955589d82b22750fb3b1646_421_0.png)
+
+UNIX 显示系统的首选方案通常简称为 X。其正式名称为 X Window System（X 窗口系统）第 11 版，通常称为 X11。AIX 5L 现在提供多种图形用户界面（GUI），使显示更加丰富多彩，即使不能提高生产力。随着 KDE 和 GNOME 等基于 Linux 的桌面环境的引入，默认的公共桌面环境（CDE）可能不再如此普遍。在深入了解这些桌面环境之前，我将考察 X 的背景和工作机制，以及 IBM 的移植版本，即 AIXwindows。欢迎来到 X11 的世界。
+
+![](img/82f851021955589d82b22750fb3b1646_422_0.png)
+
+## 概述
+
+X 窗口系统是由麻省理工学院的一组供应商和研究人员共同开发的，它们统称为 MIT X 联盟。该联盟成立于 1988 年，旨在从 MIT 计算机系和 Athena 项目开发的 X10 演变出窗口系统。一个新的独立 X 联盟成立于 1993 年，现隶属于开放组（The Open Group），以继续 X 的开发工作。
+
+X11 使用客户端/服务器协议来呈现显示窗口。客户端部分是需要显示的图形应用程序，而服务器部分则是渲染这些图形的应用程序。GUI 小部件和工具包库由应用程序链接，并通过远程过程调用操作网络或本地连接的显示器。有关 X11、X 联盟成员资格、免费可用的源代码以及其他开源工作的更多信息，可从以下网站获取：
+
+- http://www.x.org/
+- ftp://ftp.x.org/
+- http://www.xfree86.org/
+- ftp://ftp.xfree86.org/
+
+## 组件
+
+X11 环境的基本组件包括：X-server，它控制显示；窗口管理器，它管理显示对象并集成鼠标和键盘；用于显示美观文本字符串的字体库；用于添加按钮和指针等内容的 widget 库；以及一组 X-client，它们为您提供从弹跳球到图形编辑器的所有内容。基本 X 组件的名称如下：
+
+- **X**：X 窗口系统控制本地显示设备
+- **mwm**、**dtwm**：显示环境的窗口管理器
+- **aixterm**、**xterm**：使用 PTY 设备的仿真终端
+- **xrdp**：X 资源管理器，如颜色映射、字体路径和客户端属性
+- **xdm**、**xdmlogin**：管理本地和远程 X-server 访问的显示管理器
+
+AIXwindows 包含在 AIX 基础操作系统中并随之安装。它基于 X1R6 代码库构建，包含前面列出的所有基本 X 组件，包括广泛的 X-client 和库集合。当前版本的 AIXwindows 已移除 X11R4 字体和命令。支持传统 X11R5 应用程序的兼容库仍随 AIX 5L 一起提供，但对 X11R3 和 X11R4 的支持最后一次随 AIX 4.3.3 提供。
+
+从标准 MIT 目录位置到表 19-1 中列出的各个 AIX 子目录和文件目标提供了符号链接。
+
+使用以下 `ls -l` 命令列出已安装的 X11 文件（参见本章末尾的列表）：
+
+```bash
+$ ls -i -1 "*X*"   # X 必须大写
+```
+
+| 符号链接 | AIX 存储目标 | 注释 |
+| :--- | :--- | :--- |
+| `/bin` | `/usr/bin` | 根链接 |
+| `/lib` | `/usr/lib` | 根链接 |
+| `/usr/bin/X11` | `/usr/lpp/X11/bin` | 可执行文件 |
+| `/usr/lib/X11` | `/usr/lib/X11/lib/X11` | 库、默认设置和字体 |
+| `/usr/include/X11` | `/usr/lpp/X11/include/X11` | 包含文件和位图 |
+| `/usr/lib/libX*.a` | `/usr/lpp/X11/lib/RE/libX*.a` | 工具和 widget 库 |
+| `/usr/lib/libX*.a` | `/opt/freeware/lib/libX*.a` | 工具和 widget 库 |
+
+**表 19-1. AIX 符号链接和目标**
+
+### Linux 应用程序
+
+新的基于 Linux 的开源应用程序，如 KDE 窗口和显示管理器 **kwin** 和 **kwm**，以 RPM 二进制文件形式打包，并安装在 `/opt/freeware` 目录中。图 19-1 显示了正在工作的 KDE 应用程序。这些应用程序中的许多都有 AIXwindows 的对应版本，并且功能相似。在我们继续的过程中，我将包含对这些新应用程序的引用，但请注意，这些应用程序由 IBM 以“按现状”提供。有关 AIX 4.3.3 和 AIX 5L 的开源二进制文件和源代码的更多信息，请参见第 16 章并访问以下 IBM 网站：
+
+`http://www.ibm.com/servers/aix/products/aixos/linux/download.html`
+
+### 管理
+
+以下各节描述了 X11 功能在桌面环境支持方面的应用，以便为初涉 X 的系统管理员建立基本理解。AIXwindows 是 X 的稳定实现，具有完全集成和可配置的公共桌面环境（CDE），包括开发工具和示例。由于大多数核心 AIX 程序员习惯于这种 IBM 集成，本章的重点将是 CDE 桌面以及与桌面相关的通用基本 X11 功能。如需更深入的信息，请在您喜爱的搜索引擎中搜索“x.window.system.administration”。
+
+![](img/82f851021955589d82b22750fb3b1646_424_0.png)
+
+**图 19-1. AIX 5L 上的 K 桌面环境**
+
+### Xinit 和应用默认设置
+
+**startx** 脚本是更复杂的 **xinit** 程序的前端，该程序会在需要时启动 X-server 和第一个 X-client。当 **startx** 运行时，它首先以搜索环境文件 $XINITRC、$HOME/.xinitrc 或 $XINIT 在默认系统位置中的相同方式搜索 **xserverrc**。不同客户端应用程序所需的所有 X11 应用默认资源文件位于各个 **app-defaults** 或 **app-custom** 目录中。这些应用默认设置可以被用户 **$HOME/.Xdefaults** 文件中的自定义设置覆盖。X11 资源包括前景色和背景色、字体、行为等。以下是一些 AIX 5L 中这些文件位置列表：
+
+- `/usr/lpp/X11/app-defaults/` ：*系统 xserverrc 和 xinitrc*
+- `/usr/lib/X11/app-defaults/` ：*X11 应用默认设置*
+- `/usr/dt/app-defaults/` ：*CDE 应用默认设置*
+- `/opt/freeware/lib/X11/app-defaults/` ：*开源应用默认设置*
+- `/opt/freeware/kde/share/apps/kdisplay/app-defaults/` ：*KDE 应用默认设置*
+- `/usr/lib/X11/app-custom/` ：*自定义资源默认设置*
+
+### 字体
+
+AIXwindows 的默认字体位于 `/usr/lpp/X11/lib/X11/fonts` 目录中。符号链接 `/usr/lib/X11` 提供了使用标准 X11 字体路径的访问。位图分发格式（*.bdf*）和服务器正常格式（*.snf*）是 X11R4 格式的字体。AIXwindows 的 X11R6 分发使用可移植编译字体（*.pcf*）格式。pcf 字体占用空间更少，并且可以在不同的机器架构上读取。转换程序 **bdftopcf** 可用于在格式之间互换。
+
+`/usr/lib/X11/fonts` 目录以及每个子目录都包含 **index**（**fonts.dir**）和 **alias**（**fonts.alias**）文件，X-client 和服务器都会引用这些文件来定位特定的字体文件。alias 文件随每个字体文件集安装，而 index 文件在安装期间由 **mkfontdir** 命令创建或手动创建。
+
+**fonts.dir** 文件将压缩的字体文件映射到逻辑名称。**fonts.alias** 文件用于使用短别名引用长的逻辑字体名称。逻辑字体名称由字体属性创建，其中包括：**foundry**（制造厂）、**font family**（字体族）、**weight**（权重）、**slant**（倾斜）、**width**（宽度）、**style**（样式）、**pixels**（像素）、**points**（点数）、**horizontal dpi**（水平 dpi）、**vertical dpi**（垂直 dpi）、**spacing**（间距）、**average width**（平均宽度）、**owner**（所有者）和 **code set**（字符集）。
+
+
+
+
+## fonts.dir 中的逻辑名称映射示例
+
+*字体文件及其逻辑名称*
+
+| 字体文件 | 逻辑名称 |
+| :-------- | :----------- |
+| 7x13.pcf.Z | misc-fixed-medium-r-normal--13-120-75-75-c-70-iso8859-1 |
+| 7x14.pcf.Z | misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1 |
+| clr8x12.pcf.Z | schumacher-clean-medium-r-normal--12-120-75-75-c-80-iso8859-1 |
+| 6x9.pcf.Z | misc-fixed-medium-r-normal--9-90-75-75-c-60-iso8859-1 |
+| clr8x13.pcf.Z | schumacher-clean-medium-r-normal--13-130-75-75-c-80-iso8859-1 |
+| clr8x10.pcf.Z | schumacher-clean-medium-r-normal--10-110-75-75-c-80-iso8859-1 |
+| 5x7.pcf.Z | misc-fixed-medium-r-normal--7-70-75-75-c-50-iso8859-1 |
+| clr8x16.pcf.Z | schumacher-clean-medium-r-normal--16-160-75-75-c-80-iso8859-1 |
+
+在添加新的字体文件后，若要重新构建 misc 字体的目录索引，请运行以下命令：
+
+```
+# mkfontdir /usr/lib/X11/fonts/misc
+```
+
+你必须手动编辑 `/usr/lib/X11/fonts/misc/fonts.alias` 文件以添加新的别名。
+
+## fonts.alias 中的别名映射
+
+*别名及其逻辑名称*
+
+| 别名 | 逻辑名称 |
+| :---- | :----------- |
+| fixed | misc-fixed-medium-r-semi-condensed--13-120-75-75-c-60-iso8859-1 |
+| variable | -helvetica-bold-r-normal-*-120-*-***-iso8859-1 |
+| 5x7 | misc-fixed-medium-r-normal--7-70-75-75-c-50-iso8859-1 |
+| 5x8 | misc-fixed-medium-r-normal--8-80-75-75-c-50-iso8859-1 |
+| 6x9 | misc-fixed-medium-r-normal--9-90-75-75-c-60-iso8859-1 |
+| 6x10 | misc-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1 |
+| 6x12 | misc-fixed-medium-r-x-semi-condensed--12-110-75-75-c-60-iso8859-1 |
+| 6x13 | misc-fixed-medium-r-semi-condensed--13-120-75-75-c-60-iso8859-1 |
+
+## 窗口管理器
+
+顾名思义，你使用窗口管理器来动态排列显示器上窗口和对象的布局。它为边框和标题装饰赋予风格，使所有显示的对象具有统一的外观和感觉，如图 19-2 所示。窗口管理器允许你在屏幕上点击并拖动对象，上下调整窗口顺序，并自定义下拉菜单。如果没有窗口管理器，你无法操纵或移动重叠的对象，也无法更改它们的大小。通过在不使用窗口管理器的情况下运行 `xterm`，你可以很容易地看到自己对窗口管理器的依赖程度有多大。如果启动另一个 `xterm`，它将覆盖并阻挡对第一个 `xterm` 的访问。表 19-2 列出了 AIX 5L 附带的窗口管理器。我将简要介绍 Motif 风格的窗口管理器，作为桌面管理的一个基本示例。
+
+![](img/82f851021955589d82b22750fb3b1646_427_0.png)
+
+图 19-2. AIX 5L 上配有 Sawfish 窗口管理器的 GNOME 桌面
+
+### Motif
+
+Motif 窗口管理器（**mwm**）是大多数 AIX 用户从所有早期 AIXwindows 版本中熟悉的。由 **mwm** 使用的默认配置文件是 `/usr/lib/X11/system.mwmrc`。你本地的副本是 `$HOME/.mwmrc`。
+
+| 二进制文件 | 默认配置文件 | 安装文件集 | 描述 |
+| :----- | :------------------------- | :-------------- | :---------- |
+| **mwm** | /usr/lib/X11/system.mwmrc | X11.motif.mwm | Motif 窗口管理器 |
+| **dtwm** | /usr/dt/config/C/sys.dtwmrc | X11.Dt.lite | CDE 窗口管理器 |
+| **kwin** | 未记录 | kdebase*ppc.rpm | KDE 窗口管理器 |
+| **sawfish** | 未记录 | sawfish*ppc.rpm | GNOME 窗口管理器 |
+
+表 19-2. AIX 5L 的窗口管理器
+
+在下面的示例中，我定义了一个名为 *RootMenu* 的主菜单，当鼠标按钮 1 被按下或按 SHIFT-ESC 组合键且光标位于根窗口上时，将显示该菜单。我还可以从菜单中重新启动或退出 *mwm*，或者选择名为 *Applications* 的子菜单。从 *Applications* 菜单中，我可以启动一个 *xterm* 窗口。
+
+```
+# SAMPLE .mmrc
+# 菜单和功能
+Menu RootMenu
+{
+"Root Menu"        f.title
+no-label           f.separator
+"Apps"             f.menu Applications
+"Restart?"         f.restart
+"Exit mwm"         f.quit_mwm
+}
+Menu Applications
+{
+"Applications"     f.title
+no-label           f.separator
+"Xterm"            f.exec "xterm -fg white -bg steelblue &"
+}
+# 按键和按钮绑定
+Keys DefaultKeyBindings
+{
+Shift<Key>Escape_root         f.menu RootMenu
+}
+Buttons DefaultButtonBindings
+{
+<Btn1Down>    root            f.menu RootMenu
+}
+```
+
+CDE 窗口管理器的资源基本上是 *mwm* 资源，因此简短的示例是合适的。我指定使用图标盒，定义使用浅蓝色背景上的黑色文字的菜单，并将 *rom14* 设置为我的默认字体。将以下几行添加到你的示例 $HOME/.Xdefaults 文件中：
+
+```
+*mwm*useIconBox: true
+*mwm*menu*foreground: black
+*mwm*menu*background: lightblue
+*mwm*fontList: rom14
+```
+
+图 19-3 显示了启动 X 服务器 (*startx*) 和 Motif 窗口管理器 (*mwm*) 后此示例应有的样子。有关启动 X 的更多详细信息，请参阅后续章节。
+
+![](img/82f851021955589d82b22750fb3b1646_429_0.png)
+
+图 19-3. AIX 5L 上的 Motif 窗口管理器 RootMenu 示例
+
+## 用户配置文件
+
+窗口管理器通常在你的 X 启动配置文件中最后启动。根据特定的窗口管理器，它可能在前台或后台启动。最后启动窗口管理器允许你配置环境，以便在退出窗口管理器时可以退出 X 服务器。如果你使用 startx 命令或从 xdm 显示管理器启动 X 会话，则窗口管理器或桌面环境通常是你 $HOME/.xinitrc 文件中的最后一项。X 显示管理器 (xdm) 是 AIX 5L 附带的唯一默认执行你的 $HOME/.xinitrc 文件的显示管理器。将以下几行添加到你的 $HOME/.xinitrc 文件的末尾，并取消注释你想从 xdm 登录启动的桌面。当显示管理器运行时，startx 命令会存在问题。
+
+```
+#exec /opt/freeware/kde/bin/startkde  # 用于 KDE 桌面
+#exec /opt/freeware/bin/gnome-session  # 用于 GNOME 桌面
+#exec /usr/dt/bin/Xsession  # 用于 CDE 桌面
+```
+
+```
+# 对于 MWM，请取消注释以下行。
+#xsetroot -solid grey60
+#xterm -geometry 80x24+0+0 -fg white -bg black -name MWM_Session &
+#exec mwm -multiscreen -xrm "ShowFeedback: -quit"
+```
+
+像所有行为规范的 X 客户端一样，窗口管理器提供了一种机制，允许用户通过资源文件自定义其会话的外观、交互和行为。与在 $HOME/.Xdefaults 文件中定义的 X 资源信息一起使用的启动配置文件可以进行修改，以根据你的需求定制窗口管理器。我通常使用风格管理器来控制桌面的外观和感觉，并认为维护个人 Xdefaults 文件对于我的工作方式来说很麻烦。但如果你感兴趣，互联网上有大量的文档和示例文件。只需搜索 xdefaults 即可。
+
+twmrc 配置文件通常允许你定义绑定到鼠标按钮或按键以激活的操作和菜单。虽然每个窗口管理器的格式不同，但它们倾向于遵循以下格式：
+
+- LABEL/'TITLE', FUNCTION ← 定义菜单和操作
+- KEY/BUTTON, CONTEXT, FUNCTION ← 将按键/按钮绑定到操作
+
+上下文描述了按钮或按键操作何时处于活动状态。例如，你可能希望仅当光标位于根窗口上时，才使用按钮显示菜单。窗口管理器功能通过在配置文件中定义 *function_name* 来调用。表 19-3 列出了常见的功能名称。有关更多详细信息，请阅读 twmrc 的手册页。
+
+| 功能 | 目的 |
+| :------- | :------- |
+| `f.exec` | 启动命令或 shell 脚本 |
+| `f.kill` | 终止选定的客户端 |
+| `f.menu` | 显示菜单 |
+| `f.title` | 显示菜单标题 |
+| `f.separator` | 在菜单中显示分隔线 |
+| `f.raise` | 将客户端置于前面 |
+| `f.resize` | 调整客户端大小 |
+| `f.move` | 移动客户端 |
+| `f.minimize` | 将客户端最小化为图标 |
+| `f.maximize` | 恢复图标为打开的客户端 |
+| `f.restart` | 重新启动窗口管理器 |
+
+**表 19-3.** 窗口管理器功能
+
+
+
+
+
+## 显示管理器
+
+身份验证在任何分布式客户端/服务器环境中都非常重要。X 显示管理器提供了一种基于用户的协议，用于控制对 X11 会话登录的访问。在许多 X11 环境中，一种不幸的常见做法是使用 **xhost** 命令来禁用对显示的访问控制。**xhost** 命令仅在**主机**层面进行身份验证。这意味着任何登录到该主机的用户都能通过 **xhost** 访问你的 X 服务器。
+
+显示管理器已经拥有了一种更好的访问控制机制，称为 MIT-MAGIC-COOKIE-1，它通过文件访问权限得到保护。显示管理器会将一个随机的 128 位代码（魔数 Cookie）写入你的 `$HOME/.Xauthority` 文件，并将此数字分享给你的 X 服务器。随后，X 客户端必须在连接服务器时出示此代码，向服务器进行身份验证。这个魔数 Cookie 通过 `xauth` 命令与网络中的其他机器共享。一种更简单的方法是使用安全 Shell（SSH）将你的 `$HOME/.Xauthority` 文件推送到需要它的机器的 `$HOME` 目录。如果你使用 NFS 或 NDS 等分布式文件系统作为家庭目录，则该文件已经可以被 X 客户端访问。
+
+表 19-4 列出了随 AIX 5L 提供的三种显示管理器。**xdm** 和 **dtlogin** 都具有登录身份验证方法，如果系统要求，它们会强制用户更改密码。不幸的是，它们都有一些配置任务，以允许使用非默认桌面。如今，**kdm**（如下所示插图）拥有简单的配置任务，以允许不同的桌面；默认情况下，它配置为支持 KDE、GNOME、CDE、failsafe 和 `xterm`。
+
+![](img/82f851021955589d82b22750fb3b1646_431_0.png)
+
+**kdm** 的一个主要问题是，它目前没有任何机制来强制用户在系统要求时更改密码。这必须在未来的版本中解决，**kdm** 才能取代 **dtlogin** 或 **xdm**。 **dtlogin** 显示管理器会忽略 `$HOME/.xinitrc` 文件，这使得用户难以将其配置为 CDE 以外的桌面。因此，只剩下可靠的 xdm 作为唯一可以推荐给所有新 AIX 5L 桌面的显示管理器。
+
+| 二进制文件 | 配置目录 | 安装文件集 | 描述 |
+|---|---|---|---|
+| xdm | /usr/lpp/X11/lib/X11/xdm/ | X11.apps.xdm | X 显示管理器 |
+| dtlogin | /usr/dt/config/ | X11.Dt.lite | CDE 显示管理器 |
+| kdm | /opt/freeware/kde/share/config/kdm | kdebase*ppc.rpm | KDE 显示管理器 |
+
+表 19-4. AIX 5L 的显示管理器
+
+此插图展示了 xdm 的登录 GUI。
+
+![](img/82f851021955589d82b22750fb3b1646_432_0.png)
+
+### 显示管理器配置
+
+正在使用的显示管理器在其各自的配置目录中存储了类似的配置文件（参见表 19-4）。
+
+xdm-config 文件必须添加 `DisplayManager*userPath` 定义，否则 xdm 将使用硬编码的 PATH 变量覆盖 /etc/environment 文件中的变量，而大多数系统管理员正是在该文件中定义它的。用户仍然可以通过其 $HOME/.xinitrc 或 $HOME/.profile 文件覆盖或添加路径。请在 xdm-config 文件的现有定义中添加以下行：
+
+```
+DisplayManager*userPath : /bin:/usr/ucb:/usr/dt/bin:/usr/local/bin:\
+/opt/Freeware/bin:/opt/Freeware/kde/bin
+```
+
+我没有添加 /bin/X11，因为 xdm 默认会在 PATH 变量的末尾添加 /usr/lpp/X11/bin。请记住，/bin/X11 是 /usr/lpp/X11/bin 的符号链接。
+
+Xservers 文件定义了在哪里强制显示显示管理器的登录 GUI。你可能希望注释掉默认的最后一行，该行强制在本地控制台上显示界面，特别是当它没有图形适配器显示时。你还可以通过在 Xservers 文件中添加以下行，来强制登录 GUI 显示在不支持 X 显示管理器控制协议（XDMCP）的 X 服务器上：
+
+```
+<hostname_of_xterminal>:0 foreign /usr/lpp/X11/bin/X -T -force
+```
+
+*xaccess* 文件可以限制哪些主机可以直接或间接访问登录 GUI。若要仅限制 *MyXterminal* 对显示管理器的访问，请注释掉以下两行以星号 (*) 开头的行，并在 *Xservers* 文件中添加两行 *MyXterminal* 行以替换它们：
+
+```
+#* ---------------------------------- Grant service to all
+MyXterminal_DomainName
+#*    CHOOSER  BROADCAST  ------- Any indirect host can get a chooser
+MyXterminal_DomainName                CHOOSER  BROADCAST
+```
+
+显示管理器调用 *Xsession* 文件来设置桌面环境和资源。*dtlogin* 显示管理器将 *Xsession* 文件视为可执行脚本，并将其存储在 /usr/dt/bin/Xsession，与配置文件的位置不同。*xdm* 和 *kdm* 显示管理器提供加载 /etc/profile、*$HOME/.profile* 和 *$HOME/.login* 文件的功能，而 *dtlogin* 不提供从 *Xsession* 文件加载 /etc/profile 的功能，仅有一个来自 *$HOME/.dprofile* 的钩子，当 DTSOURCEPROFILE 为 true 时，允许用户加载他们自己的 *.profile* 或 *.login* 文件。如果你选择 CDE 作为桌面，*kdm* 显示管理器的 *Xsession* 文件会在调用 /usr/dt/bin/Xsession 脚本之前加载配置文件。
+
+## 启动和停止显示管理器
+
+三种显示管理器都可以通过 /etc/inittab 文件中的条目在系统启动时启动，或者从命令行启动。既然你是通过这种方式启动你使用的那个显示管理器的，如果需要，你可以通过简单地终止在相应的 xdm-pid 文件中找到的 PID 来停止它。我喜欢在 /etc/inittab 文件中为每个显示管理器保留一行，但在系统启动时，只取消注释我使用的那一个。我的条目看起来像这样：
+
+```
+xdm:2:wait:/usr/lpp/X11/bin/xdm        # Starts XDM as daemon
+kdm:2:wait:/opt/freeware/kde/bin/kdm   # Starts KDM as daemon
+dt:2:wait:/etc/rc.dt                   # Starts dtlogin as daemon
+dt_nogb:2:wait:/etc/rc.dtd             # Starts dtlogin as system resource
+```
+
+要在系统启动启动了你首选的显示管理器之后停止它们，请使用以下命令之一：
+
+```
+# kill -term $(cat /usr/lpp/X11/lib/X11/xdm/xdm-pid) --- Stops xdm
+# kill -term $(cat /opt/freeware/kde/share/config/kdm/xdm-pid) - Stops kdm
+# kill -term $(cat /var/dt/Xpids) --- Stops dtlogin
+```
+
+如果你更改了配置文件，请使用以下命令刷新显示管理器：
+
+```
+# kill -HUP <PID>
+```
+
+若要手动从命令行启动显示管理器，请使用以下命令之一：
+
+```
+# /usr/lpp/X11/bin/xdm <- Starts xdm
+# /opt/freeware/kde/bin/kdm <- Starts kdm
+# /usr/bin/dtlogin -daemon <- Starts dtlogin
+```
+
+如果你像 /etc/inittab 文件那样使用 /etc/rc.dt 从命令行启动 dtlogin，那么脚本会测试系统是否正在启动；如果没有，它将以系统资源控制器（srcmstr）启动 dtlogin。因此，如果你想以系统资源的方式启动和停止 dtlogin，请使用以下命令：
+
+```
+# startsrc -s dtsrc <- Starts dtlogin as a system resource
+# lssrc -s dtsrc <- Lists the status (active or inactive)
+# refresh -s dtsrc <- Makes dtlogin reread the configuration files
+# stopsrc -s dtsrc <- Stops dtlogin as a system resource
+```
+
+dtlogin 的另一个自定义功能是 dtconfig 脚本和 SMIT 面板，用于使用 mkitab 和 rmibtab 命令添加或删除 inittab 条目。以下是使用 dtconfig 命令的四种可选方法：
+
+```
+# smit dtconfig <- SMIT fast path to dtconfig
+# dtconfig -e <- Enable dtlogin on next reboot
+# dtconfig -enograph <- Enable dtlogin as system resource
+# dtconfig -d <- Disable dtlogin on next reboot
+```
+
+## 访问控制
+
+到现在为止，你应该已经猜出所有这些显示管理器都是增强型的 xdm 服务器。这给了我们 /dev/xdm 设备，可以在 /etc/security/user 文件中定义为有效的 tty，以帮助限制用户仅通过显示管理器进行访问。如果你还禁用了登录，用户将只能从运行在本地图形控制台上的显示管理器登录。请注意，如果 rshd 在系统上处于活动状态，用户可能仍然具有 hosts、.equiv 和 .rhosts 访问权限。若要限制用户仅通过显示管理器登录进行远程访问，请禁用 rshd 访问（此处未解释）并运行以下 chuser 命令：
+
+```
+# chuser tysm=' /dev/xdm/MyXTerminal_0' terry
+```
+
+阅读 /usr/lpp/X11/lib/X11/xdm/README 以获取更多详细信息。要查看远程 shell 资源的状况，请运行以下 lssrc 命令：
+
+
+
+
+
+## lsrc -t shell
+
+| 服务 | 命令 | 描述 | 状态 |
+| --- | --- | --- | --- |
+| shell | /usr/sbin/rshd | rshd | active |
+
+如果此资源处于活动状态，用户可能仍能够使用 rsh 命令来绕过显示管理器的限制。在大多数开发环境中，需要 rsh 访问权限，尽管你可能希望所有运行在可信且安全服务器上的桌面都禁用 rsh。这些桌面随后可能被信任用于大型开发环境。
+
+## 桌面环境
+
+每个人都喜欢直观且在所有使用的应用程序中具有一致外观和感觉的软件。没有人喜欢花时间阅读手册。我们都希望能够安装应用程序并立即开始使用。这意味着每个应用程序必须以用户熟悉的方式表现并与用户交互。只有当操作环境提供可以轻松纳入新软件产品中的应用接口规范时，才能实现这种能力，使它们即使在由不同供应商开发的情况下也能表现出相似的特性。对于开发者来说，在您的产品中成功实现统一外观和感觉的正确途径是通过软件供应商之间的规范协议。为了实现这一理念，一组供应商于1993年在Unisum聚集在一起并成立了通用开放软件环境（COSE）。COSE倡议提出通过成员供应商之间的技术共享来协助开发开放系统标准。COSE工作的重点大部分在于用户界面基础设施。这最终导致了一套基于Hewlett-Packard、IBM、OSE、Novell和SunSoft的窗口和对象技术的规范，称为通用桌面环境（CDE）。
+
+商业UNIX供应商迅速采用来自The Open Group（X/Open）的这一新产品，该产品具有合理且价格适中的许可证，作为其默认桌面或作为选项出售。然后Linux出现了，用户希望有一种免费的开源桌面解决方案。如今，开源桌面和窗口管理器的数量远超我们的想象。KDE和GNOME这两个强大的桌面现在已作为AIX 4.3.3和AIX 5L的免费选项包含在内。
+
+PLIG Ltd拥有一个非常棒的网站，提供了有关过去和现在的桌面及窗口管理器的丰富信息，地址如下：
+
+```
+http://www.plig.org/xwinman/
+```
+
+## 桌面组件
+
+显示管理器在您的X-server显示上呈现登录GUI，并如显示管理器章节所述验证您的身份。然后，会话管理器将您最后运行的应用程序和窗口环境恢复到您的显示中。
+
+窗口管理器便于操作多个工作区，并管理您的窗口和菜单布局。样式管理器提供了为每个工作区定制字体、颜色和墙纸的手段。文件、应用程序和帮助管理器构成了与UNIX文件系统、命令和应用程序集的接口。这些工具通过使用主面板启动器来访问。
+
+### 会话管理器
+
+会话管理器负责在登录处理完成后设置用户的桌面环境。会话管理器可以恢复用户的初始桌面配置，称为主会话（home session），或者会话管理器在上次注销时保存的运行中桌面的快照，称为当前会话（current session）。此选项可以在CDE的样式管理器-启动（key）图标中配置（见图19-4）。用户可以选择主会话或当前会话，或者在注销时被询问。从同一个启动面板中选择“设置主会话”以创建主会话快照子目录。主会话和当前桌面会话的环境和资源存储在$HOME/.dt/sessions/子目录中，如表19-5所示。用户还可以选择让会话管理器在登录和注销时执行应用程序和脚本，方法是将命令字符串放在sessionstart和sessionexit文件中。
+
+| 位置和文件名 | 描述 |
+| --- | --- |
+| $HOME/.dt/sessions/<current, home>/.dt.resources | X资源 |
+| $HOME/.dt/sessions/<current, home>/.dt.session | 正在运行的应用程序 |
+| $HOME/.dt/sessions/<current, home>/.dt.settings | 桌面定制 |
+| $HOME/.dt/sessions/<current, home>/dtxxxx | 应用程序状态 |
+| $HOME/.dt/sessions/sessionstart | 启动后运行 |
+| $HOME/.dt/sessions/sessionexit | 注销时运行 |
+| $HOME/.dt/errlog | 错误消息 |
+
+**表19-5. 会话管理器文件**
+
+### 文件和应用程序管理器
+
+CDE文件和应用程序管理器协同工作，为UNIX文件系统提供图形界面。这些工具协助您导航目录、管理文件并使用文件和文件夹、单击范式访问应用程序。文件和应用程序作为对象表示和操作。这意味着每个对象都有关联的名称、类型和行为。类型和行为属性可以包括可执行路径、传递的参数、提示和关联文件。通过类型和行为进行对象链接是文件和应用程序管理器协同工作的方式。例如，C语言源文件可以被标记为一种类型，当从文件管理器中点击它时会自动调用pex源代码编辑器。CDE对象功能还扩展到拖放行为和按对象类型关联特定图标。图19-4显示了Mail子面板的Install图标，我从应用程序管理器中拖放了Calculator图标。
+
+### 主面板
+
+现在登录处理已完成，桌面资源已恢复，CDE主面板将显示在屏幕上。这个面板基本上是一个应用程序启动器。点击主面板上显示的图标将展开选择抽屉、打开菜单并启动应用程序。与其他CDE服务一样，主面板显示可以个性化以支持特定的应用程序集和用户偏好。组成主面板的属性存储在带有_.fcp后缀的数据库文件中，并存储在_ .dc/types/fcp.dynamic/c/子目录中。不要担心文件是如何创建的，因为CDE在您从应用程序管理器拖放程序图标到Install图标并复制到主面板后会自动创建它们（见图19-4）。
+
+![](img/82f851021955589d82b22750fb3b1646_437_0.png)
+
+**图19-4.** 通用桌面环境应用程序和样式管理器
+
+除了启动其他CDE工具和UNIX应用程序外，CDE主面板还提供访问打印机子系统的接口。点击打印机图标会滑出一个抽屉，允许您访问打印管理器和默认打印机。一旦识别出打印机和队列，点击其图标将访问该打印机。
+
+### 样式管理器
+
+CDE*样式管理器*的工作是让您在定制桌面时更轻松。它可以主面板启动，并提供一个良好的*GUI*接口来执行诸如设置颜色、字体、墙纸、键盘布局和屏幕保护程序，以及配置窗口管理器选项等操作。它大大简化了X资源定制（见图19-4）。样式管理器还用于为会话管理器设置您的登录会话偏好。*样式管理器*资源存储在`DtStyle`文件中。
+
+### 窗口管理器
+
+窗口管理器，有时也称为工作区管理器，管理桌面上的窗口、菜单和按键绑定。CDE的`dtwm`窗口管理器设计基于Motif*窗口管理器*（`mwm`）。`dtwm`的配置语法与`mwm`非常相似。将`/usr/dt/config/C/SYS.dtwmrc`文件复制到`$HOME/.dt/dtwmrc`作为您个人窗口管理器*鼠标按钮激活*菜单的起始文件。让我们将*xterm*命令添加到中间鼠标按钮。编辑您新的`$HOME/.dt/dtwmrc`文件，并在现有的`DtButtonBindings`描述组中添加下一行：
+
+```text
+<Btn2Down>    root  f.menu     DtMid$RootMenu
+```
+
+现在回到文件顶部，并在`DtRootMenu`描述组之后添加以下新菜单：
+
+```text
+Menu DtMid$RootMenu
+{
+    "Middle Menu"    f.title
+    no-label         f.separator
+    "Local Xterm"    f.exec "xterm -fn 10x20 -title `hostname`"
+}
+```
+
+从右侧鼠标*工作区*菜单点击*重启工作区管理器*，然后测试您的新中间鼠标按钮“*本地Xterm*”应用程序。
+
+### 帮助管理器
+
+帮助管理器（见图19-4中的*帮助视图*）提供了一个超文本帮助和文档环境。信息按卷和子主题分层组织。您使用索引和搜索工具导航文档。关键在于该系统表现得就像您期望从其他桌面帮助界面看到的那样。
+
+
+
+
+## 桌面摘要
+
+如以下插图所示，所有桌面均可进行定制，其中 KDE 面板是一个例子，但在定制的便捷性方面，通用桌面环境 (CDE) 似乎领先几年。我经常设置新用户，并享受他们惊讶的表情，当我开始指点点击、打开窗口、编辑 `.dprofile` 然后是 `.xinitrc`，在将他们最喜欢的世界上最好的 X 计算器拖到主面板之前，先复制一个自定义的 `.twmrc` 文件，同时我说：“好了，都设置完毕了。” 请记住，在注销前对所有新配置做一个快照。
+
+![](img/82f851021955589d82b22750fb3b1646_439_0.png)
+
+## IBM X 工作站管理
+
+大多数软件 X 服务器解决方案和第三方 X 终端都开箱即用地支持 XDMCP，因此上述细节和配置应该就足够了。本节仅适用于 IBM X 工作站型号 120 到 160。IBM 不再在 AIX 5L 中支持这些硬件。然而，随 AIX 4.3 和 AIX 4.2 提供的 IBM X 工作站管理器软件版本应该可以正常工作。我能够在 AIX 5L 上安装以下文件，但无法保证效果：
+
+```
+X11.x_st_mgr.rte    4.2.1.0
+X11.x_st_mgr.compat  4.2.0.0
+X11.msg_en_US.x_st_mgr.rte    4.3.0.0
+```
+
+X 工作站提供了一种有效的替代方案，用于提供配备齐全磁盘工作站作为 X Window 平台。使用一个或多个工作站作为服务器，X 工作站提供了完整的基于 X Window 工作站的所有功能。X 工作站还减少了系统管理员和最终用户的管理麻烦。
+
+大多数环境支持来自不同供应商的众多 X 工作站，将其作为一组从中心服务器在 **xdm** 下进行管理是有用的。对于 X 工作站 120，在 EPROM 级别 +1.5 并使用版本 1.3 或更高版本的 IBM X 工作站管理器，所有型号的 IBM X 工作站都可以与其他 X 工作站管理器一起通过 **xdm** 获得支持。
+
+### 配置与启动
+
+当打开电源开关时，X 工作站执行上电自检 (POST)。一旦 POST 通过，它将可选地发送或广播一个引导请求数据包，以尝试找到引导服务器。一旦建立联系，接收到的信息决定了 X 工作站和服务器的 IP 地址以及引导配置文件的名称。由于此信息可以配置到 X 工作站中，您可能选择绕过 bootp 步骤以进行正常操作。要将地址信息配置到 X 工作站中，请在 POST 完成后按下 F12 键访问网络配置菜单。这些配置屏幕允许您设置终端、服务器和网卡的 IP 地址标识符，并禁用 bootp 过程。类似的信息可以配置为令牌环连接。型号 130、150 和 160 还支持通过 SLIP 在串行链路上使用 IP。要配置型号 130、150 或 160 以支持串行 TTY 连接，请在 POST 完成后按下 F11 键。
+
+一旦联系到引导服务器，X 工作站将从服务器通过 **tftp** 传输引导文件 `/usr/lpp/x_st_mgr/bin/bootfile` 的副本。下载的引导文件和配置文件告知 X 工作站应从服务器请求哪些字体、键盘映射、rgb 数据库和服务器代码。在引导和 tftp 步骤期间，X 工作站显示器提供有关终端/服务器数据包交换的一些诊断信息。两行感兴趣的信息是
+
+```
+BOOTP    0000 0000 0000 0000
+TFTP     0000 0000 0000 0000 0000
+```
+
+第一组数字表示从 X 工作站发送的数据包数量。第二组表示从服务器接收的数据包数量。第三组是接收到的坏数据包的计数。第四组显示已发生的超时次数。TFTP 行中的第五组显示该事务的最终错误代码。在 POST 完成后，您可以通过按下 CTRL-BREAK 访问进一步的诊断和测试信息。
+
+## AIX X 工作站管理器配置
+
+再次提醒，IBM 不支持在 AIX 5L 上使用 X 工作站管理器。AIX X 工作站管理器程序为 IBM X 工作站提供引导服务。一旦安装了 X 工作站管理器，请使用以下 **grep** 命令验证其服务是否在正确的配置文件中定义：
+
+```
+# grep x_st_mgr /etc/rc.tcpip
+/usr/lpp/x_st_mgr/bin/x_st_mgrd -b/usr/lpp/x_st_mgr/bin/x_st_mgrd.cf -s x_st_mgr
+# grep -e bootp -e x_st_mgr /etc/services
+bootps   67/udp   # bootp server port
+bootpc   68/udp   # bootp client port
+x_st_mgrd 7000/tcp # ibm X terminal
+# grep bootps /etc/inetd.conf
+bootps dgram udp wait root /etc/bootpd bootpd /etc/bootptab
+```
+
+然后，您可以通过 SMIT 设备菜单中的 X 工作站选择来定义网络类型、引导文件和引导文件目录。您还可以指定服务器是主服务器还是从服务器。如果可能，支持两个引导服务器是个好主意。然后可以配置 X 工作站，使其在启动时依次尝试每个服务器。
+
+```
+# smit x_config   <-----Configure X Station Manager
+```
+
+## X 工作站管理器的 x_st_mgrd.cf 配置文件
+
+```
+xam.foo.edu DISPLAY=xam.foo.edu:0; export DISPLAY;\\
+XSTARTUP=xam.foo.edu; export XSTARTUP;\\
+LANG=En_US; export LANG;\\
+/usr/lpp/x_st_mgr/bin/xlclient\\
+-ky /usr/lpp/X11/defaults/xmodmap/En_US\\
+-l keyboard\\
+-S 5\\
+-m /usr/lpp/X11/bin/xmodmap\\
+-a "/usr/lpp/X11/bin/xiterm -fm Rom14 -geometry 80x25+0+0"\\
+-W -e/usr/lpp/x_st_mgr/bin/login"
+```
+
+## X 工作站管理器的引导文件
+
+```
+/usr/lpp/x_st_mgr/ntis/keymap
+/usr/lpp/x_st_mgr/ntis/msg
+/usr/lpp/x_st_mgr/bin/xl1xor3.out
+/usr/lib/X11/fonts/,usr/lib/X11/fonts/ibmB50
+/usr/lpp/x_st_mgr/bin/rgb.txt
+```
+
+一旦定义了网络类型，就可以定义所支持的每个 X 工作站。您需要识别每个 X 工作站的网络类型、适配器的硬件地址、是否使用 xdm 服务以及要启动的初始应用程序。您还可以通过 SMIT 打印机/绘图仪菜单为配备打印机的 X 工作站定义本地打印机支持。
+
+## X11 LPP 文件集
+
+| 文件集 | 描述 |
+|---|---|
+| X11.Dt_ToolTalk | AIX CDE ToolTalk 支持 |
+| X11.Dt.bitmaps | AIX CDE 位图 |
+| X11.Dt.helpinfo | AIX CDE 帮助文件和卷 |
+| X11.Dt.helpman | AIX CDE 最小帮助文件 |
+| X11.Dt.helprun | AIX CDE 运行时帮助 |
+| X11.Dt.lib | AIX CDE 运行时库 |
+| X11.Dt.rte | AIX 通用桌面环境 (CDE) 1.0 |
+| X11.adt.bitmaps | AIXwindows 应用程序开发工具套件位图文件 |
+| X11.adt.ext | AIXwindows X 扩展应用程序开发工具套件 |
+| X11.adt.imake | AIXwindows 应用程序开发工具套件 imake |
+| X11.adt.include | AIXwindows 应用程序开发工具套件包含文件 |
+| X11.adt.lib | AIXwindows 应用程序开发工具套件库 |
+| X11.adt.motif | AIXwindows 应用程序开发工具套件 Motif |
+| X11.apps.alterm | AIXwindows aterm 应用程序 |
+| X11.apps.clients | AIXwindows 客户端应用程序 |
+| X11.apps.config | AIXwindows 配置应用程序 |
+| X11.apps.custom | AIXwindows 定制工具 |
+| X11.apps.mswm | AIXwindows mswm 应用程序 |
+| X11.apps.pm | AIXwindows 电源管理图形实用程序 |
+| X11.apps.rte | AIXwindows 运行时配置应用程序 |
+| X11.apps.util | AIXwindows 实用程序应用程序 |
+| X11.apps.xdm | AIXwindows xdm 应用程序 |
+| X11.apps.xterm | AIXwindows xterm 应用程序 |
+| X11.base.common | AIXwindows 运行时公共目录 |
+| X11.base.lib | AIXwindows 运行时库 |
+| X11.base.rte | AIXwindows 运行时环境 |
+| X11.base.smt | AIXwindows 共享内存传输 |
+| X11.compat.lib.X11R5 | AIXwindows X11R5 兼容库 |
+| X11.fnt.coreX4 | AIXwindows X 联盟字体 |
+| X11.fnt.defaultFonts | AIXwindows 默认字体 |
+| X11.fnt.isol | AIXwindows Latin I 字体 |
+| X11.fnt.util | AIXwindows 字体实用程序 |
+| X11.help_en_US.Dt.helpinfo | AIX CDE 帮助文件和卷 |
+| X11.lcc_en_US.Dt.rte | CDE 语言环境配置 |
+| X11.lcc_en_US.base.lib | AIXwindows 客户端语言环境配置 |
+| X11.lcc_en_US.base.rte | AIXwindows 语言环境配置 |
+| X11.man_en_US.Dt.adt | AIX CDE 工具套件手册页 |
+| X11.man_en_US.Dt.rte | AIX CDE 手册页 |
+| X11.motif.lib | AIXwindows Motif 库 |
+| X11.motif.mem | AIXwindows Motif 窗口管理器 |
+| X11.msg_en_US.Dt.helpman | AIX CDE 最小帮助文件 |
+
+
+
+
+
+| 文件/路径 | 描述 |
+|---|---|
+| X11.msg_en_US.Dt.rte | AIX CDE 消息 |
+| X11.msg_en_US.adt.ext | AIXwindows X 扩展消息 |
+| X11.msg_en_US.adt.imake | AIXwindows Imake 消息 |
+| X11.msg_en_US.apps.aixterm | AIXwindows aixterm 消息 |
+| X11.msg_en_US.apps.clients | AIXwindows 客户端应用程序消息 |
+| X11.msg_en_US.apps.config | AIXwindows 配置应用程序消息 |
+| X11.msg_en_US.apps.custom | AIXwindows 定制工具消息 |
+| X11.msg_en_US.apps.pm | AIXwindows 电源管理 GUI 消息 |
+| X11.msg_en_US.apps.rte | AIXwindows 运行时配置消息 |
+| X11.msg_en_US.apps.xdm | AIXwindows xdm 消息 |
+| X11.msg_en_US.base.common | AIXwindows 通用消息 |
+| X11.msg_en_US.base.rte | AIXwindows 运行环境消息 |
+| X11.msg_en_US.fnr.util | AIXwindows 字体实用程序消息 |
+| X11.msg_en_US.motif.lib | AIXwindows Motif 库消息 |
+| X11.msg_en_US.motif.mwm | AIXwindows Motif 窗口管理器消息 |
+| X11.msg_en_US.vsm.rte | 可视化系统管理帮助与消息 |
+| X11.msg_en_US.x.st_mgr.rte | X 工作站管理器 |
+| X11.samples.apps.Clients | AIXwindows 示例 X 协会客户端 |
+| X11.samples.common | AIXwindows 示例的 Imakefile 结构 |
+| X11.samples.lib.Core | AIXwindows 示例 X 协会核心库 |
+| X11.vfb | AIXwindows 虚拟帧缓冲软件 |
+| X11.vsm.lib | 可视化系统管理库 |
+| X11.x_st_mgr.compat | X 工作站管理器兼容性 |
+| X11.x_st_mgr.rte | X 工作站管理器运行环境 |
+| box.rte.X11 | AIXwindows 设备支持 |
+| devices.*.X11 | AIXwindows 图形适配器软件 |
+| devices.*.X11.com | AIXwindows 图形适配器通用软件 |
+
+## 检查清单
+
+以下是 X11 管理中的关键点检查清单。
+
+- 识别完整的 X Window System，Version 11。
+- 使用 X11 客户端/服务器协议呈现显示窗口。
+- 识别 X11 环境的基本组件。
+- 描述与桌面环境支持相关的 X11 功能。
+- 启动和停止显示管理器。
+- 定义通用桌面环境 (CDE)。
+- 识别桌面组件。
+- 定制桌面。
+- 识别完整的 IBM X 工作站管理环境。
+
+![](img/82f851021955589d82b22750fb3b1646_444_0.png)
+
+## 第九部分
+
+## 管理用户和资源
+
+- 20 管理用户环境
+- 21 进程管理
+- 22 系统会计
+
+此页故意留白。
+
+## 第 20 章
+
+管理用户环境
+
+![](img/82f851021955589d82b22750fb3b1646_447_0.png)
+
+“用户”是一个四字母单词！如果你管理多用户系统且未注意定义默认环境策略或简化账户管理，你的词汇表中很可能还有许多其他四字母单词。大量的用户群可能会让系统管理员将时间花在诸如添加和过期账户、设置密码、协调主目录、修复 UID 冲突等琐碎任务上……列表还在继续，请求也在增加。只需记住，正是用户让我们有工作可做！
+
+默认环境策略可以被看作是一份关于基本服务和资源的契约。无论是正式陈述还是隐含的，你的用户群都假设有一定程度的支持。如果道路的基本规则被正式陈述和记录，你的用户和用户支持社区将会减少困惑。传播此类信息的一个简单方法是将其作为 man 页面或帮助文件提供。你还可以提供一个默认策略声明作为 `msg` 文件，在用户首次登录系统时显示。
+
+首先，你需要定义策略是什么以及它们将如何实施。建立账户的要求是什么？账户提供哪些基本资源？默认 shell 环境是什么样子的？账户的有效期是多长？
+
+资源策略必须考虑这些基本因素：
+
+- 物理资源
+- 资源限制
+- 账户访问权限
+- 账户环境
+
+### 物理资源
+
+让我们从确保不承诺超过我们能提供的东西开始。你的用户群的工作负载特征是什么？为了支持预期的用户总数和预期的并发用户会话，需要多少磁盘、磁带、内存和 CPU 资源？在现有环境中，通过筛选旧的会计信息，你可以构建一个相当好的配置文件。对你的应用程序组合进行基准测试也是有价值的。将系统推向极限。压力测试 CPU、分页和 I/O 子系统。这将让你对负载激增时期预期会发生什么有一个感觉。
+
+#### 用户文件系统
+
+在确定你能提供的资源级别之后，以可以在软件控制下轻松管理的方式构建物理资源。如果你的用户群在不断变化，你可能希望将用户 `/home` 文件系统与操作系统的其余部分隔离开来。这将使这些文件系统与操作系统升级和维护隔离开来。在不同的物理磁盘和卷组上设置用户文件系统。如果情况需要，这将便于在机器之间移动它们。使用用户文件系统挂载点的命名约定，使其易于记忆和识别。一种可能的方法是使用 `/home< number> - < scheme on ADX>`。在分布式或集群环境中，你可能可以使用拥有该文件系统的机器名称的首字母后跟一个整数。不要太长！
+
+为了减少在多个用户文件系统中管理用户主目录的影响，使用符号链接将每个文件系统中的顶级用户目录链接到通用的 `/home` 目录。无论特定用户的主目录物理位于何处，都可以通过 `/home/< user name>` 路径访问。在 `/etc/passwd` 文件中，也指定主目录字段的符号链接路径名称。这将允许你在用户文件系统中移动用户目录以平衡使用率，而无需每个用户学习新的主目录路径。
+
+```
+# In -a /etc/stimp y /home/stimp y
+stimp y!: :1234: 30: Stimp son_ Cat: /home/stimp y: bin / ksh
+```
+
+你还需要确定用户文件系统的大小。如果很少使用大文件，则可能更倾向于多个小文件系统。小文件系统（小于 1GB）会减少备份和恢复时间。它们可以轻松移动，并将你的用户访问社区分区，使得文件系统灾难不会影响你的整个用户群。
+
+如果你没有大量分布式用户群，那么默认的 /home 文件系统就足够了。取决于用户在其主目录中执行的操作和存储的内容，/home 可能会迅速增长，特别是在开发和生产支持环境中。偶尔，用户社区需要审查存储在 /home 中的内容是合适的。如你所知，大多数计算机用户是“松鼠”，必须保留所有内容的备份副本，但他们通常更频繁地使用 /home 进行此存储。当然，磁盘空间很便宜，因此你可能只希望将 /home 变成一个巨大的文件系统，让用户拥有他们想要的所有磁盘空间。这种需求因环境而异。
+
+### UID 空间和组
+
+用户账户名称实际上是 UNIX 下识别用户的人类便利性事项。AIX 操作系统通过一个称为 UID 的无符号长整数来识别特定用户。UID 映射到 /etc/passwd 文件中的用户名称。其他 UNIX 系统使用 UID，但可能以其他整数格式表示。
+
+将你的用户 UID 空间与系统守护进程的管理账户使用的 UID 隔离开来是个好主意。这简化了为会计和安全应用程序识别特权账户的任务。选择一个数字，如 1000，来定义你的用户 UID 空间的底部用于分配。UID 的一致性极其
+
+
+在用户拥有多个机器账户的环境中，这一点尤为重要。一些示例包括 HACMP 集群（HACMP 代表 High Availability Cluster Multi-Processing；详情参见第 28 章）；在分布式环境中，或者如果您正在使用网络文件系统（NFS），您必须确保 UID 在所有系统中保持一致。*这里的一致*是指，如果用户 “stimpoy” 在主机 A 上是 UID 1234，那么在系统中的其他任何地方，都应为 stimpoy 保留相同的 UID。如果在集群、分布式和 NFS 环境中，相同的 UID 代表不同的用户，可能会出现所有权和权限问题。请记住，操作系统通过 UID 而不是用户名来识别用户。
+
+在定义 UID 空间时，规划组 ID (GID) 空间也是一个好主意。组提供了在用户之间共享信息的粗粒度机制。文件和目录权限为所有用户（world）、组（group）和所有者（owner）提供读取、写入和执行权限。AIX 和其他 UNIX 版本假定使用有限的组集合来实现访问权限。需要决定的是，您是否希望为特定的工作组或协作者实施其他 GID 集合。如果您的用户基数较小，这可以相对容易地完成。对于大量用户，管理 GID 集合可能是一项艰巨的任务。
+
+## /etc/group 和 /etc/security/group 文件
+
+所有 GID 映射都维护在 `/etc/group` 和 `/etc/security/group` 文件中。`/etc/group` 文件列出了每个组名称和 GID，后跟成员列表或用户名。`/etc/security/group` 文件为 `/etc/group` 文件中的每个组名称包含一个段落，指示该组是否允许由除 root 以外的用户进行管理，并通过用户名称识别管理员。组及其相关属性通过 SMIT 或 WebSM 进行管理，或者通过此处列出的一系列组管理命令进行管理：
+
+```text
+mkgroup        - 创建新组
+chgrp         - 更改组属性
+lsgr          - 列出组及其属性
+chggrpm       - 更改组的管理员或成员
+setgrps       - 重置用户当前的组集
+newgrp        - 为会话设置组 ID
+rmgr          - 删除组
+```
+
+下面是一些示例。第一个文件是 `/etc/group` 的示例；第二个文件是 `/etc/security/group` 的示例。
+
+### /etc/group 文件示例
+
+```text
+system::0:root,ops
+daemon::1::
+bin::2:root,bin
+sys::3:root,bin,sys
+adm::4:bin,adm,kenn,root
+user:!:5:uucp
+mail:!:6:
+security:!:7:root
+cron:!:8:root
+staff:!:10:root,ren,stimpy,daffy,huey,dewey
+user:!:30:luge,acadmus,gw9neira,bungi
+```
+
+### /etc/security/group 文件示例
+
+```text
+system:
+     admin = true
+daemon:
+     admin = true
+bin:
+     admin = true
+sys:
+     admin = true
+adm:
+     admin = true
+uucp:
+     admin = true
+mail:
+     admin = true
+security:
+     admin = true
+cron:
+     admin = true
+staff:
+     admin = false
+     adma = ren,stimpy
+user:
+     admin = false
+```
+
+## 资源限制
+
+您打算给每个用户多少份额？如何确保每个用户都不超过其公平份额？通过对应用组合进行剖析并估计并发用户数，您将得到一些大致数值。AIX 提供了通过操作系统控制对每个用户可用的系统资源份额实施限制的功能。可以基于每个进程定义 CPU、内存和磁盘利用率的上限。每个用户的并发进程总数由内核配置参数封顶。聚合文件系统使用情况可以通过在用户和组级别激活磁盘配额来管理。
+
+### /etc/security/limits 文件
+
+内核使用 `setrlimit()`、`getrlimit()` 和 `vlimit()` 系统调用管理每个进程的限制。每个进程都有一个相关的 rlimit 结构，该结构指示每种资源类型的软限和硬限。rlimit 结构定义在 `/usr/include/sys/resource.h` 中。系统和用户的默认及资源限制在 `/etc/security/limits` 文件中指定。系统中定义的每个用户都由一个以用户名为标识的段落表示。对于没有覆盖用户段落下参数的每个用户，系统默认值是有效的。当进程超过指定的任一限制时，它将被终止。请查看这里的 `/etc/security/limits` 示例文件：
+
+#### /etc/security/limits 文件示例
+
+```text
+*
+* 尺寸以 512 字节块为单位，CPU 时间以秒为单位
+* fsize - 软文件块数
+* core - 软核心文件块数
+* cpu - 软每进程 CPU 时间限制（秒）
+* data - 软数据段块数
+* stack - 软栈段块数
+* rss - 软实际内存使用量（块）
+* fsize_hard - 硬文件块数
+* core_hard - 硬核心文件块数
+* cpu_hard - 硬每进程 CPU 时间限制（秒）
+* data_hard - 硬数据段块数
+* stack_hard - 硬栈段块数
+* rss_hard - 硬实际内存使用量（块）
+*
+* 下表包含如果未显式定义硬值时的默认硬值：
+*
+* 属性       值
+* =========       =========
+* fsize_hard      设置为 fsize
+* cpu_hard        设置为 cpu
+* core_hard       -1
+* data_hard       -1
+* stack_hard      -1
+* rss_hard        -1
+*
+* 注意：值为 -1 意味着“无限制”
+*
+
+default:
+		fsize = 2097151
+		core = 2048
+		cpu = -1
+		data = 262144
+		rss = 65536
+		stack = 65536
+
+root:
+daemon:
+bin:
+sys:
+adm:
+uucp:
+guest:
+nobody:
+lpd:
+stmpy:
+		fsize_hard = 10240
+		cpu_hard = 3600
+muucp:
+```
+
+内核根据内核配置参数 `maxproc` 限制每个用户的最小进程数。默认值 40 表示给定用户最多可以并发运行 40 个进程。通过多次登录系统不会超过此值。可以使用 SMIT、WebSM 或 `chdev` 命令更改 `maxproc` 的值（见图 20-1 中的 SMIT 面板）。
+
+```text
+# chdev -l sys0 -a maxproc=80
+# smit chgys
+```
+
+![](img/82f851021955589d82b22750fb3b1646_454_0.png)
+
+**图 20-1.** 更改/显示操作系统特性 SMIT 面板
+
+磁盘配额限制用户或组在参与配额的文件系统中可能消耗的最大块数。AIX 的磁盘配额实现基于 BSD 配额。系统管理员使用 **edquota** 命令设置用户和组的配额限制。磁盘块和 i-nodes 的配额限制由三个参数指定：软限制、硬限制和宽限期。用户可以在默认的一周宽限期内超过软限制。当宽限期结束时，软限制变为硬限制。
+
+软限制的值指示用户或组开始收到软限制已超出的警告，并且硬限制即将接近的时间点。警告在登录时以及每次超出指定限制的关闭时提供。硬限制指定用户或组将不再能够分配额外磁盘空间或 i-nodes 的时间点。宽限期定义了一个时间段，在此期间用户或组必须将使用率降低到软限制值以下。如果在使用率未降低的情况下宽限期结束，软限制将作为硬限制强制执行。
+
+要在文件系统中实施磁盘配额，请使用 **chfs** 命令编辑与文件系统名称关联的 */etc/filesystems* 中的段落条目。在段落中添加参数 `quota=<userquota>,<groupquota>`。userquota 和 groupquota 值指示要强制执行的配额类型。每个用户或组的配额限制记录在名为 quota.user 或 quota.group 的顶级目录中的文件中。您可以通过在文件系统段落中包含 `userquota=<pathname>` 和 `groupquota=<pathname>` 参数来覆盖这些文件名。
+
+使用以下命令将段落条目添加到 /etc/filesystems：
+
+```text
+# chfs -a 'quota=userquota' -a 'userquota=/home1/user.quota' /home1
+```
+
+使用以下 **more** 命令检查 /etc/filesystems 段落：
+
+```text
+# more /etc/filesystems
+/home1:
+    dev = /dev/lv43
+    vfs = jfs
+    log = /dev/loglv00
+    mount = true
+    check = true
+    options = rw
+    quota = userquota
+    userquota = /home1/user.quota
+```
+
+如果文件系统中不存在配额限制文件，您可以使用 **touch** 创建它们。
+
+```text
+# touch /home1/quota.user
+```
+
+使用 edquota 命令为系统中的某个用户创建用户配额。这些值可以作为模板用于设置系统中其他用户的限制。edquota 命令将调用由环境变量 EDITOR 指定的默认编辑器，并显示配额值以供更新。
+
+```text
+# edquota stimpys
+Quotas for user stimpys:
+/home1: blocks in use: 50, limits (soft = 80, hard = 100)
+    inodes in use: 11, limits (soft = 120, hard = 150)
+/home2: blocks in use: 0, limits (soft = 80, hard = 100)
+    inodes in use: 0, limits (soft = 120, hard = 150)
+```
+
+设置默认用户的软限制和硬限制后，调用 `edquota -p <default-user> <new-user>` 为系统中的每个额外用户克隆默认限制。
+
+```text
+# edquota -p stimpys ren
+```
+
+
+
+
+要启用配额系统，请执行 **quotaon** 命令。作为夜间系统维护的一部分，请通过运行 **quotacheck** 命令更新配额文件中的信息。可以使用 `-a` 标志来指示 *所有* 配额文件系统。以下是配额更新命令：
+
+```bash
+# quotaoff -a      <---- 关闭所有文件系统的配额
+# quotacheck -a    <---- 更新所有文件系统的配额信息
+# quotaon -a       <---- 开启所有文件系统的配额
+```
+
+分别使用 **quota** 和 **repquota** 命令可以显示用户或汇总的配额限制，如下所示：
+
+```bash
+# quota ren
+用户 ren (uid 4084) 的磁盘配额：
+文件系统 块配额 限制 宽限期 文件配额 限制 宽限期
+/home1 11836* 5120 6144 none 363 1000 2000
+```
+
+```bash
+# repquota -u -a
+用户 块限制 文件限制
+已用 软限制 硬限制 宽限期 已用 软限制 硬限制 宽限期
+root -- 31448 0 0 0 700 0 0
+bin -- 57700 0 0 0 2037 0 0
+sys -- 4 0 0 0 1 0 0
+bi1bro -- 16 0 0 0 4 0 0
+```
+
+## 用户账户访问权限
+
+谁获得账户，他们可以保留多久？访问和过期策略对于小型工作组来说可能看起来无关紧要；然而，歧义越少越好。如果将这些策略正式化并公开，还可以避免法律层面的影响。如果在大型用户群系统中明确定义了过期策略，就可以轻松自动化地实现账户过期和清理。AIX 提供了一套机制用于使账户过期并执行清理维护工作。通过提供这两种功能，AIX 允许你实施宽限期，即在账户过期与其实际从系统中移除之间的时间段。这可以纳入最后使用策略中。
+
+## 用户账户环境
+
+系统将向新用户呈现什么样的面貌？作为系统管理员，您负责为每个新账户设置默认环境。您希望在环境参数上保持一定程度的控制，但也希望允许用户自由定制自己的工作空间。Shell、编辑器、终端定义等属于信仰问题，最好留给信仰者！您无法阻止所有人自伤。您也不想打开水闸，导致支持超出能力的 Shell 环境数量。您可以提供一个简单、模块化的登录环境，当冒险的用户进行 Shell 实验失败时，可以简化恢复过程。
+
+首先，为所有用户定义默认的环境变量。环境变量是 `name=value` 对，由 Shell 和命令读取以设置值或确定行为。例如，环境变量 EDITOR 指示应用程序应调用哪个编辑器。环境变量可能是命令或 Shell 特定的，并且可以由最终用户修改。表 20-1 列出了常见环境变量的列表。
+
+要查看环境变量的当前值，使用 echo 或 print，并在变量名前加美元符号，如下所示：
+
+```bash
+# echo $MANPATH
+# print $MANPATH
+```
+
+### /etc/environment 和 /etc/profile 文件
+
+AIX 提供两个文件用于设置系统默认环境变量。/etc/environment 文件包含由 `exec()` 系统调用为每个进程设置的默认变量。/etc/profile 文件包含用户登录系统时将调用的环境变量和命令集。这些文件的内容在本地 Shell 启动文件之前读取，最好保持非 Shell 特定的特性。AIX 提供的 /etc/environment 和 /etc/profile 文件为定制自己的默认设置提供了良好的基础。此处查看默认的 /etc/environment 文件。
+
+| 变量 | 用途 |
+| :--- | :--- |
+| `PATH` | 搜索命令和文件的目录路径列表 |
+| `LIBPATH` | 用于绑定的库路径列表 |
+| `MANPATH` | 搜索 man 页文件的目录路径列表 |
+| `PAGER` | 默认全屏幕分页器 |
+| `EDITOR` | 默认编辑器 |
+| `TZ` | 时区 |
+| `TERM` | 终端类型 |
+| `MAIL` | 传入邮件路径 |
+| `MAILMSG` | 新邮件到达时的消息文本提示 |
+| `LANG` | NLS 生效的本地名称 |
+| `LOCPATH` | 包含本地文件的目录 |
+| `NLSPATH` | NLS 目录的完整路径 |
+| `USER` | 用户名 |
+| `LOGNAME` | 用户名 |
+| `HOME` | 主目录路径 |
+
+表 20-1. 常见环境变量
+
+### 默认系统 /etc/environment 文件
+
+```bash
+@(#)18                1.21 src/bos/etc/environment/environment, cmdsh, bos430, 9737A,430 5/13/94 15:09:03
+# IBM_PROLOG_BEGIN_TAG
+# This is an automatically generated prolog.
+# bos430 src/bos/etc/environment/environment 1.21
+# Licensed Materials - Property of IBM
+# (C) COPYRIGHT International Business Machines Corp. 1989,1994
+# All Rights Reserved
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+# IBM_PROLOG_END_TAG
+# COMPONENT_NAME: (CMDSH) Shell related commands
+# ORIGINS: 27
+# (C) COPYRIGHT International Business Machines Corp. 1989, 1994
+# All Rights Reserved
+# Licensed Materials - Property of IBM
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+############################################################
+# System wide environment file. This file should only contain
+# 1. comment lines which have a # in the first column,
+# 2. blank lines, and
+# 3. Lines in the form name=value.
+#
+# WARNING: This file is only for establishing environment variables.
+# Execution of commands from this file or any lines other than
+# specified above may cause failure of the initialization process.
+#
+# Searching the current directory last is usually a BIG time saver.
+
+# If /usr/ucb is at the beginning of the PATH the BSD version of
+# commands will be found.
+
+PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/local/bin
+TZ=EST5EDT
+LANG=en_US
+LOCPATH=/usr/lib/locale
+NLSPATH=/usr/lib/locale/msg/$l:$N:/usr/lib/locale/msg/$l:AN.cat
+LC_FASTMSG=true
+MANPATH=/opt/freeware/man
+
+# ODM routines use ODMDIR to determine which objects to operate on
+# the default is /etc/objrepos - this is where the device objects
+# reside, which are required for hardware configuration.
+ODMDIR=/etc/objrepos
+DOCUMENT_SERVER_MACHINE_NAME=saptst1
+DOCUMENT_SERVER_PORT=80
+CSI_DIRECTORY=/usr/HTTPServer/cgi-bin
+DOCUMENT_DIRECTORY=/usr/HTTPServer/htdocs
+DEFAULT_BROWSER=netscape
+# IMNSearch DBCS environment variables
+IMQCONFIGSV=/etc/IMNSearch
+IMQCONFIGCLI=/etc/IMNSearch/dbcs/help
+ITECONFIGSV=/etc/IMNSearch/clients
+ITECONFIGCLI=/etc/IMNSearch/clients
+ITE_DOC_SEARCH_INSTANCE=search
+```
+
+### 默认 /etc/profile 文件
+
+```bash
+# @(#)27  1.20 src/bos/etc/profile/profile, cmdsh, bos430, 977A4_A30 8/9/94
+# 12:01:38
+# IBM_PROLOG_BEGIN_TAG
+# This is an automatically generated prolog.
+#
+# bos430 src/bos/etc/profile/profile 1.20
+#
+# Licensed Materials - Property of IBM
+#
+# (C) COPYRIGHT International Business Machines Corp. 1989,1994
+# All Rights Reserved
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# IBM_PROLOG_END_TAG
+# COMPONENT_NAME: (CMDSH) Shell related commands
+#
+# FUNCTIONS:
+#
+# ORIGINS: 3, 26, 27
+#
+# (C) COPYRIGHT International Business Machines Corp. 1989, 1994
+# All Rights Reserved
+# Licensed Materials - Property of IBM
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+###############################################################
+#
+# System wide profile. All variables set here may be overridden by
+# a user's personal .profile file in their HOME directory. However,
+# all commands here will be executed at login regardless.
+
+trap "" 1 2 3
+readonly LOGNAME
+
+# Automatic logout, include in export line if uncommented
+# TMOUT=120
+
+# System Added Path
+PATH=$PATH:/usr/local/sbin:/usr/local/netscape
+
+# The MAILMSG will be printed by the shell every MAILCHECK seconds
+# (default 600) if there is mail in the MAIL system mailbox.
+MAIL=/usr/spool/mail/$LOGNAME
+MAILMSG="YOU HAVE NEW MAIL"
+
+# If termdef command returns terminal type (i.e. a non NULL value),
+# set TERM to the returned value, else set TERM to default lft.
+TERM_DEFAULT=lft
+TERM=`termdef`
+TERM=${TERM:-$TERM_DEFAULT}
+
+# If LC_MESSAGES is set to "C$lft" and TERM is not set to "lft",
+# unset LC_MESSAGES.
+if [ "$LC_MESSAGES" = "C$lft" -a "$TERM" != "lft" ] then
+        unset LC_MESSAGES
+fi
+
+export LOGNAME MAIL MAILMSG TERM
+trap 1 2 3
+```
+
+### /etc/security/environment 文件
+
+单个用户的环境变量也可以在 /etc/security/environment 文件中定义。此文件包含系统中每个用户的段落，通过用户标识
+
+
+
+名称，后跟一系列环境变量及其对应的值。环境变量=值的对之间以逗号分隔。指定为 **usenv** 的变量将在登录时设置。为了保护环境变量不被非特权应用程序重置，请使用 **syse**v 指定。
+
+### /etc/security/environ 文件段
+
+```
+stumpy:
+    usenv = "TNESC=35,PAGER=/bin/more,EDITOR=/bin/vi"
+    syse = "HOME=/home/stumpy"
+```
+
+接下来，定义默认 shell 和 shell 环境变量。默认 shell 和启动文件由 /usr/lib/mkuser/mkuser.sys 脚本和 /usr/lib/security/mkuser.default 文件设置。**mkuser.sys** 脚本读取 **mkuser.default** 文件，创建主目录，设置权限，并将默认 shell 启动文件从 **/etc/security** 复制到新的主目录。**mkuser.sys** 脚本在 SMIT 或命令行执行 **mkuser** 命令以添加新账户时每次都会被调用。
+
+### /usr/lib/security/mkuser.default 文件列表
+
+```
+user:
+    pgrp = staff
+    groups = staff
+    shell = /usr/bin/ksh
+    home = /home/$USER
+admin:
+    pgrp = system
+    groups = system
+    shell = /usr/bin/ksh
+    home = /home/$USER
+```
+
+### Shell 启动文件
+
+```
+sh    $HOME/.profile
+ksh   $HOME/.profile, $HOME/.kshrc (if indicated by ENV)
+csh, tcsh    $HOME/.login, $HOME/.cshrc, $HOME/.logout
+```
+
+**mkuser.sys** 的默认行为是将完整的 shell 启动文件复制到用户的主目录中。如果您决定稍后更改默认 shell 环境的一部分，这可能会成为一个问题。您需要在不破坏用户添加的任何自定义设置的情况下，将更改合并到每个用户的启动文件中。
+
+### /etc/security/login.cfg 文件
+
+即使使用如此简单的方案，我们中的许多人也不希望支持由用户构建的每一种 shell。您可以通过在 /etc/security/login.cfg 文件中指定 shell 路径来限制系统支持的 shell。编辑 **us**h:
+
+文件段，并在 shells= 参数后列出每个受支持 shell 的路径名，名称之间以逗号分隔。
+
+## /etc/security/login.cfg 支持的 Shells
+
+使用：
+
+```
+shells =/bin/sh,/bin/bash,/bin/csh,/bin/ksh,/bin/tsh,/bin/ksh93,
+/usr/bin/sh,/usr/bin/bash,/usr/bin/csh,/usr/bin/ksh,/usr/bin/tsh,
+/usr/bin/ksh93,/usr/bin/tucp/uucico,/usr/sbin/sliplogin,/usr/sbin/snappd
+```
+
+/etc/security/login.cfg 文件还定义了默认登录提示和密码配置文件。与这些设施相关的文件段将在第 23 章中讨论。
+
+# 管理用户账户
+
+系统管理员无法逃避来自活跃用户社区的不断涌入的账户管理请求。好消息是，AIX 通过提供一套工具来自动处理用户账户的添加、更新和删除，这些工具负责更新所有适当的表和文件系统。虽然这仍然不完美，但比手动操作要好得多！
+
+## 添加用户账户
+
+要将新用户添加到系统，请从命令行或通过使用 SMIT 或 WebSM 执行 **mkuser** 命令。由于涉及的参数较多，除非您接受系统默认值，否则建议使用 SMIT 或 WebSM。如果您要添加大量用户，可以使用 SMIT 添加第一个用户，然后在 *smit.script* 文件中为每个后续要创建的账户复制 **mkuser** 命令。图 20-2 显示了用于添加用户的 SMIT 面板。
+
+```
+# smit mkuser
+```
+
+对于大多数普通用户账户，您可以选择用户名并接受提供的默认值。表 20-2 列出了可用于配置账户资源的选项字段。有关主要和次要身份验证方法以及密码支持的更多信息，请参阅第 23 章。
+
+## 更新用户账户
+
+您可以通过从命令行或使用 SMIT 和 WebSM 调用 **chuser** 命令来修改现有用户账户。在大多数情况下，只更改少量字段，因此从命令行使用 **chuser** 并不涉及大量参数。在某些情况下，您也可以直接使用编辑器更新系统账户表。应小心确保文件段格式和权限不受损害。作为系统管理员，您需要学习如何通过命令行和脚本管理大量
+
+![](img/82f851021955589d82b22750fb3b1646_463_0.png)
+
+| 字段 | 用途 |
+|---|---|
+| USERNAME | 最多八个字符；不允许使用大写或特殊字符 |
+| User ID | 唯一整数；如果您在多个系统上使用唯一 UID，可能需要修改 |
+| ADMINISTRATIVE user | 管理权限 |
+| PRIMARY group | 登录时的默认组 |
+| Group SET | 其他组成员身份 |
+| ADMINISTRATIVE groups | 用户是这些组的管理员 |
+
+**表 20-2.**  *mkuser* 字段
+
+| 字段 | 用途 |
+| --- | --- |
+| Another user can SU TO USER? | 是/否 |
+| SU GROUPS | 哪些组可以 su 到该用户？ |
+| HOME directory | 主目录路径 /home/<user_name> |
+| Initial PROGRAM | 登录 shell 程序，例如 /bin/ksh |
+| User INFORMATION | 用户全名、电话等，用于 /etc/passwd 文件中的 GE COS 字段 |
+| EXPIRATION date | 账户将在该日期过期 |
+| Is this user ACCOUNT LOCKED? | 用户是否被限制登录？ |
+| User can LOGIN? | 用户是否可以使用 login 访问系统？ |
+| User can LOGIN REMOTELY? | 用户是否可以使用 login 远程访问系统？ |
+| Allowed LOGIN TIMES | 限制访问时间 |
+| Number of FAILED LOGINs | 用户账户被锁定前的登录失败次数。[0] 表示从不锁定。 |
+| Login AUTHENTICATION GRAMMAR | 身份验证方法 |
+| Valid TTYs | 可用于登录到此 UID 的 TTY 端口 |
+| Days to WARN USER before password expires | 在密码过期前警告用户的天数 |
+| Password CHECK METHODS | 验证正确密码的规则 |
+| Password DICTIONARY FILES | 用于验证密码的单词字典 |
+| NUMBER OF PASSWORDS | 重用前的密码数量 |
+| WEEKS before password reuse | 重用相同密码前的时间 |
+| Weeks between password EXPIRATION and LOCKOUT | 过期后限制访问前的时间 |
+| Password MAX AGE | 要求更改密码前的最大时间 |
+| Password MIN AGE | 更改密码前的最短时间 |
+| Password MIN LENGTH | 密码可以有多短 |
+| Password MIN ALPHA | 字母字符的最小数量 |
+| Password MIN OTHER | 非字母字符的最小数量 |
+| Password MAX REPEATED | 允许的最大重复字符 |
+| Password MIN DIFFERENT | 所需的最小不同字符数 |
+| Password REGISTRY | 身份验证机制 |
+| Soft FILE size | 可由用户更改的软资源限制 |
+| Soft CPU time | 软 CPU 限制 |
+| Soft DATA segment | 软 DATA 段限制 |
+| Soft STACK size | 软 STACK 大小限制 |
+| Soft CORE file size | 设置 CORE 文件大小的软限制 |
+
+# 表 20-2.   **mkuser** 字段（续）
+
+| 字段 | 用途 |
+| :--- | :--- |
+| Soft physical MEMORY | 设置软 MEMORY 限制 |
+| Hard FILE size | 用户的硬资源限制 |
+| Hard CPU time | 硬 CPU 时间限制 |
+| Hard DATA segment | 硬 DATA 段限制 |
+| Hard STACK size | 硬 STACK 大小限制 |
+| Hard CORE fie size | 硬 CORE 文件大小限制 |
+| Hard physical MEMORY | 物理内存限制的硬设置 |
+| File creation MASK | 用户的默认 umask |
+| AUDIT Classes | 代表此 UID 的审计类别 |
+| TRUSTED PATH | 受信任路径状态 |
+| PRIMARY authentication method | 用于验证此用户到系统的身份验证程序；默认 SYSTEM 代表标准用户名和密码 |
+| SECONDARY authentication method | 次要身份验证程序；如果失败，不会拒绝访问 |
+
+表 20-2. *mkuser 字段（续）*
+
+用户，否则当您需要管理大型环境时就会迷失方向。
+
+关于更改用户的 SMIT 面板，请参阅图 20-3 和 20-4。
+
+```
+# smit chuser
+```
+
+图 20-3 中的 SMIT 面板提示输入要更改的用户名。单击列表按钮可显示系统中定义的所有用户的列表。当您输入或选择
+
+![](img/82f851021955589d82b22750fb3b1646_465_0.png)
+
+图 20-3. 更改/显示用户特征名称请求 SMIT 面板
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_466_0.png)
+
+选择列表中的用户后，您将被呈现图 20-4 中所示的 SMIT 面板。在此面板中，您可以更改 SMIT 中的特定用户属性。
+
+您可以使用 `luser` 命令在命令行中列出当前定义的用户属性集，如下所示：
+
+```
+# luser stimpv
+```
+
+```
+stimpv id=17742 pgrp=uadmin groups=uadmin,staff,printq,ecotools
+```
+
+home=/home/stimpy shell=/usr/bin/ksh gecos=Stimpy - AIX System Admin login=true active=true rlogin=true daemon=true admin=false eugroups=ALL admgroups= tpath=nsok ttya=ALL expires=0 auth1=SYSTEM auth2=pad_method usage=22 registry=files SYSTEM=compare logintries= loginretries=5 pwdwarn=49 account_locked=false minage=0 maxage=7 maxexpired=-1 minalpha=3 minother=1 mindiff=0 maxrepeat=2 minlen=6 histexpire=0 histsize=8 pwdchecks= dictionlist= fsize=-1 cpu=-1 datas=-1 stack=-1 core=2048 rss=-1 time_last_login=1021398808 time_last_unsuccessful_login=1021141628 tty_last_login=/dev/pts/4 tty_last_unsuccessful_login=/dev/pts/4 host_last_login=10.10.10.10 host_last_unsuccessful_login=167.105.28.110 unsuccessful_login_count=0 roles=
+
+## 移除用户账户
+
+要从系统中移除用户，请使用 **rmuser** 命令。可以从命令行调用，也可以使用 SMIT 和 WebSM。 **rmuser** 命令负责将用户从系统表中移除。您也可以选择保留 `/etc/security/passwd` 文件中的用户数据。从系统中移除用户的 SMIT 面板如图 20-5 所示。
+
+```
+# rmuser -p stimpy
+# smit rmuser
+```
+
+若要自动化从系统中移除账户的过程，您可以使用 cron 运行一个夜间进程，该进程查找已过期的账户并调用 **rmuser**。有关使用 cron 的详细信息，请参见第 21 章。
+
+![](img/82f851021955589d82b22750fb3b1646_467_0.png)
+
+图 20-5. 从系统中移除用户的 SMIT 面板
+
+## 限制访问
+
+如果需要限制特定用户访问系统，您可以根据情况通过多种机制拒绝访问。将 **LOGIN User** 和 **User Can LOGIN** 字段设置为 false 可以限制登录访问。您还可以通过重置 **EXPIRATION** 字段中的日期来限制访问。最简单的方法是 **LOCK**（锁定）该账户。如果您希望向用户发送有关账户状态的告知信息，可以创建一个脚本或程序，将该信息写入 `stdout`，并将程序名称添加到该用户的 **Initial PROGRAM** 字段中。用户在登录时提供用户名和密码后，该信息将被显示，用户将被注销。使用 `chuser` 命令启用所需的访问限制级别。
+
+# 密码文件
+
+AIX 账户管理工具创建的所有信息最终都作为条目存储在多个用户账户支持表中。我在前面的章节中讨论了其中一些文件提供的结构。还有三个其他文件主要负责向操作系统和应用集标识账户。这些是 */etc/passwd*、*/etc/security/passwd* 和 */etc/security/user* 文件。
+
+## /etc/passwd 文件
+
+*/etc/passwd* 文件使用大多数 UNIX 系统上可用的标准密码文件格式，唯一的例外是使用影子密码文件。影子密码支持将加密的密码从可被所有人读取的 */etc/passwd* 文件中移除，并将其放入另一个具有受限访问权限的文件中。在 */etc/passwd* 中的密码字段中插入占位符，即感叹号 (!)。*/etc/passwd* 文件中的字段以冒号分隔，如下所示。
+
+## /etc/passwd 文件示例
+
+```
+# USER NAME:UID:GID:GECOS:HOME DIRECTORY:SHELL
+root::1:0:0:System O overseer::/bin/ksh
+daemon::1:1:1::/etc:
+bin::2:2:2::/bin:
+sys::3:3:3:/usr/sys:
+adm::4:4:4:/usr/adm:
+uucp::5:5:5:/usr/lib:/usr/uucp:
+stimpy::1:4084:30:Stimpyson Cat::/home/stimpy::/bin/ksh
+```
+
+必须解析用户信息的 AIX 命令和应用程序通过使用如 **getpwnam**() 这样的库调用来查询 */etc/passwd*。解析大型密码文件可能导致命令响应时间出现显著延迟。 **mkpasswd** 命令用于创建带索引的安全文件。这些索引被库子程序 getpwnam, getpwpid, getuserrattr, 和 putuserattr 使用。其结果是对于拥有大量用户基础的系统，性能显著提升。索引在 /usr/include/usersec.h 文件中定义。默认情况下，创建以下索引：
+
+```
+/etc/passwd.nm.idx <— 使用用户名作为键的 /etc/passwd 索引
+/etc/passwd.id.idx <— 使用用户 ID 作为键的 /etc/passwd 索引
+/etc/security/passwd.idx <— 带索引的 /etc/security/passwd 文件
+/etc/security/lastlog.idx <— 带索引的 /etc/security/lastlog 文件
+```
+
+以下是一些使用 mkpasswd 命令的示例：
+
+### 创建并启用安全文件的带索引读取
+
+```
+# mkpasswd -f
+```
+
+### 仅为 /etc/security/passwd 文件创建并启用带索引读取
+
+```
+# mkpasswd /etc/security/passwd.idx
+```
+
+### 检查，如有必要则重建所有索引
+
+```
+# mkpasswd -c
+```
+
+### 删除所有索引
+
+```
+# mkpasswd -d
+```
+
+## /etc/security/passwd 文件
+
+影子密码支持由 /etc/security/passwd 文件提供。每个用户账户由一个用户名存根表示。该存根包含加密的密码、上次更新时间和更新标志。更新标志包含 null 值或以下之一：
+
+- **ADMIN** 仅 root 可以更改此密码。
+- **ADMCHG** 安全组的成员重置了此密码，因此必须在下次登录时更改。
+- **NOCHECK** 对于此账户，不执行 /etc/security/user 文件中设置的任何限制。
+
+### /etc/security/passwd 存根示例
+
+```
+stumpy:
+    password = dWe3assEf2u0J6
+    lastupdate = 722287867
+    flags = NOCHECK
+```
+
+## /etc/security/user 文件
+
+/etc/security/user 文件包含为用户定义的扩展属性。每个用户由一个用户名存根标识，随后跟随每个属性及其值。在文件中的头部注释之后，有一个默认存根。每个用户条目可以通过指定本地值来覆盖默认属性。参见以下示例：
+
+```
+default:
+admin = false
+login = true
+su = true
+daemon = true
+rlogin = true
+sugroups = ALL
+ttys = ALL
+auth1 = SYSTEM
+auth2 = NONE
+tpath = nosak
+umask = 022
+expires = 0
+stimpy:
+login = false
+rlogin = false
+```
+
+## 给 Group 和 Passwd 文件加盐（补充）
+
+在大型环境中，可能需要在所有新安装中同步系统的应用程序的 user 和 group 空间。这意味着在安装 TXSeries、MQSeries 和 freeware.Isolfrte 应用程序之前，必须定义 mqm、cics 和 kmem 组，以及 cics 和 mqm 用户 ID 号。当应用程序安装时，如果用户和组尚不存在，它们将创建用户和组，并产生不同的结果。解决方案是从 AIX 5L 基础安装 CD 创建一个最小安装镜像，然后添加（或加盐）企业可能需要的所有未来组和用户 ID 列表。可以使用自己的脚本通过原生命令添加组和用户来对该镜像进行加盐，或者如果没有 ID 冲突，系统也可以从控制工作站拉取主文件。以下是您可能希望从主库工作站拉取或推送的一些文件列表：
+
+```
+/etc/passwd
+/etc/passwd.nm.idx
+/etc/passwd.id.idx
+/etc/group
+/etc/security/passwd
+/etc/security/passwd.idx
+/etc/security/group
+/etc/security/user
+/etc/security/login.cfg
+/etc/security/
+/etc/resolv.conf
+/etc/netsvc.conf
+```
+
+## 检查清单
+
+以下是“管理用户环境”中要点的检查清单。
+
+- 定义默认环境策略。
+- 简化账户管理。
+- 识别物理资源。
+- 管理 UID 空间和组。
+- 识别资源限制。
+- 定义用户账户访问权限。
+- 为每个新账户设置默认环境。
+- 管理用户账户。
+- 识别密码文件。
+- 在所有新安装中同步系统的应用程序的 user 和 group 空间。
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_472_0.png)
+
+# 第 21 章
+进程管理
+
+在 AIX 下运行的一组进程类似于家谱中的世代。*父进程* 衍生出 *子* 进程。进程出生，履行职责，然后消亡。进程 ID 1，即 **init**，是所有进程世代追溯其起源的曾祖父级进程。像一位慈爱的祖父一样，**init** 接收那些失去父进程的孤儿进程。每个进程都有机会在 CPU 上执行。就像小孩子一样，它们需要调度器的指导，以确保每个人都能公平地分配到 CPU 资源。系统管理员是进程宇宙的总监督者，掌握着所有进程生死的最终控制权。一位仁慈且明察秋毫的系统管理员将学习 AIX 世界中进程生存的法则，以便他能平静、安宁地开展自己的工作。
+
+## 进程属性
+
+一个进程由正在执行的程序及其地址空间组成。每个进程都由一个称为 *进程标识符*（PID）的正整数命名。PID 是内核进程表中的向量索引。PID 是唯一的，并且以某种随机方式分配。进程表条目指向 *每进程* 内核数据结构。在 /usr/include/sys/proc.h 中定义的 *proc* 数据结构进而定义了与进程相关联的属性值。全局 AIX 进程表可以支持每个用户最多 131,073 个进程。你可以使用 SMIT 快速路径 smitty system，然后选择“更改/显示操作系统特性”来设置每个用户允许的最大进程数。选项列表中的第一项是“每个用户允许的最大进程数”。按下 F4 时，会显示有效范围。在大多数系统环境中，值为 200 到 2000 是足够的，但并非所有环境都相同。你选择的值将取决于系统运行的应用程序和数据库。
+
+以下是一些可观察到的进程属性的简要示例：
+
+- 进程标识符
+- 进程组标识符
+- 进程父标识符
+- 进程所有者
+- 有效用户和组以及真实用户和组标识符
+- 优先级
+- 控制终端
+- 地址空间
+- 页数大小
+- 分页统计
+- 资源利用率
+- 进程状态
+
+### 显示进程属性
+
+当你需要查看系统中的进程时，**ps** 命令是你的好朋友。**ps** 命令的选项非常多，和许多 AIX 命令一样，你可以使用 System V 或 BSD 命令开关。当命令行参数前面带有连字符（-）时，使用 System V **ps** 命令；否则，使用 BSD 格式。你也可以使用 SMIT 和基于 Web 的系统管理器（WBM）来调用 **ps**，但你会发现从命令行使用 **ps** 更快。
+
+**ps -eLk SYSV** 命令使用以下格式显示进程：
+
+```text
+F       S  UID  PID  PPID  C  PRI  NI  ADDR  SZ   WCHAN  TTY     TIME     CMD
+103     A  0     0     0    120 16    --    2412  12         -  6:51  swapper
+200003  A  0     1     0    60  20   142a  836   -          -  1:13  init
+103     A  0     516   0    120 255   --    2613  8         *    775:05 wait
+103     A  0     1032  0    0   37    --    1028  64         -  21:01 g11
+103     A  0     129   0    0   16    --    1229  16   6ae819  -    0:00 lmched
+46201   A  0     2608  0    0   60   20   2472  16   0c46b3   0:00 lvmbd
+40401   A  0     2672  1    0   60   20   134c  572  14b774   0:00 kerdsmon
+240001  A  0     2919  1    0   60   20   1b4d  780  -          0:00 rcmsmt
+40103   A  0     3128  1    0   39   --    1f2f  16   -          0:00 loServer
+241001  A  0     3392  1    0   60   20   663   320  309eb298  5:06 synccd
+```
+
+**ps auxww** BSD 命令使用以下格式显示进程：
+
+```text
+USER     PID   %CPU  %MEM   SZ    RSS   TTY  STAT   STIME      TIME     COMMAND
+root     516    98.8   8.0    8   10520   -  A     Feb 04   788:38 wait
+root     22036  0.6    1.0    1512  1424   -  A     4:24:01    0:18   /usr/db2/bin/db2terr
+root     1032   0.2    8.0    64   10576   -  A     Feb 04   21:03 g11
+root     1      0.1    8.0    12   10524   -  A     Feb 04   6:51   swapper
+root     3392   0.1    0.0    320  240     -  A     Feb 04   5:06   /usr/lib/sysv/rc/synccd 60
+root     1      0.0    0.0    836  288     -  A     Feb 04   1:13   /etc/init
+root     13936  0.0    0.0    1372 344     -  A     Feb 04   1:00   /usr/db2/bin/db2login
+root     17098  0.0    0.0    2484 2016  pty8/A  A   Feb 04   0:54   dswm
+root     5160   0.0    1.0    1368 1212   -  A     Feb 04   0:27   /usr/sbin/asmcpd
+```
+
+COMMAND 和 CMD 列代表在进程地址空间中运行的程序。你可能已经注意到前面 **ps auxww** 命令输出中 PID 为 (516) 的 COMMAND。这个 PID 始终是**第一个等待**（或 **kproc**）进程。当给定时间片没有线程可运行时，**wait** 进程会收集 CPU 时间。这并不可怕。每个 CPU 都会分配一个 **wait** 进程，以便调度器有地方放置空闲时间。由于 AIX 操作系统必须始终在*做点什么*，如果 CPU 处于空闲状态，**wait** 进程只是保持时钟滴答作响。**wait** 进程是 AIX 5L 中用于替代在 AIX 4.3.3 及更早版本的进程表中看到的 **kproc** 进程的进程。
+
+### 进程标识符
+
+除了其 PID，每个进程还记录其父进程的整数 ID 及其组成员身份，即父进程标识符（PPID）和进程组标识符（PGID）。进程组是一个或多个进程的集合。组领导者的 PGID 等于其 PID，每个成员的 PGID 与领导者匹配。除非通过 setgrp() 调用重置，进程会继承其父进程的 PGID。进程组提供了一种机制，可以使用 PGID 向组内所有进程发送信号。这消除了需要知道每个成员 PID 的必要性。PID、PPID 和 PGID 是系统管理员用于控制进程行为的主要句柄。
+
+一个由 Fred Hutch 编写的名为 ps-tree 的 GNU 工具会在文本终端屏幕上图形化地映射进程关系。他最新的 ps-tree 源代码可以在 Gerhard Mercator 大学的 GNU 公共许可证下获取。从 ps-tree.c 版本 2.17 开始在源代码中添加了一个修复，使代码与 AIX 5L 兼容。
+
+- [http://freshmeat.net/projects/ps-tree/](http://freshmeat.net/projects/ps-tree/)
+- [ftp://ftp.thp.Uni-Duisburg.DE/pub/source/](ftp://ftp.thp.Uni-Duisburg.DE/pub/source/)
+
+### 有效和真实 UID 及 GID
+
+进程与拥有用户标识符（UID）和组标识符（GID）相关联。UID 和 GID 命名空间作为系统账户管理的一部分进行维护，并记录在 /etc/passwd 和 /etc/group 文件中（参见第 22 章）。真实 UID 和真实 GID 数字用于识别进程所有者，以用于计费目的和进程控制。每个进程都分配有一个有效 UID（EUID）和一个有效 GID（EGID），代表在其生命周期内该进程可用的权限和特权。
+
+### 控制终端
+
+除系统守护进程外的进程通常与控制终端相关联。控制终端代表标准输入、输出和错误通道的默认设备，以及通过键盘控制字符发送信号的通道。控制字符到信号的映射是用户可自定义的，并记录在 termio 结构中。控制终端在 ps 的 TTY 列中标识。
+
+你可以使用 chcons 命令将系统控制台重新分配给不同的 TTY、伪终端或文件；但是，重定向不会在下一次系统重启前生效。此外，如果需要，你可以使用 portmir 命令镜像控制台、tty 或伪终端。有关 chcons 和 portmir 命令以及 mirord 守护程序的详细信息，可以在 man 手册页和 DocSearch 文档库中找到。控制台分配和 tty 端口镜像有两个 SMIT 快速路径：
+
+```bash
+# smitty console
+# smitty portmir
+```
+
+
+
+
+## 资源利用与优先级
+
+AIX 使用基于优先级的运行队列集来在活跃进程之间分配 CPU 资源。优先级值范围为 0 到 127，每个值由一个运行队列表示。编号较低的队列比编号较高的队列更频繁地被调度。运行队列级别中的进程以轮询方式调度。每个进程的队列优先级由其短期 CPU 使用量（0 到 +100）、nice 值（0 到 40）以及最小用户进程级别（40）的总和计算得出。频繁执行的进程优先级值会增加，而等待执行的进程优先级值会降低。优先级值超过 120 的进程仅在系统中没有其他进程需要 CPU 资源时才会执行。进程的短期 CPU 使用量、优先级和 nice 值在使用 `SYSV ps -l` 选项时，分别在 PRI、C 和 NI 字段中显示。
+
+Nice 值是一个整数，表示进程间粗略的优先级差异。AIX 同时支持 **BSD** nice 值范围 20 到 -20 和 **SYSV** 范围 0 到 39。*数值越大，优先级越低。* 这两个值范围被映射，使得 **BSD -20** 对应于最高优先级的 **SYSV 0**，而 **BSD 20** 对应于最低优先级的 **SYSV 39**。
+
+新进程继承父进程的 nice 值。Nice 值可以在进程生命周期内动态更改。进程的所有者 UID 可以降低进程的 nice 值。只有超级用户才能提高 nice 优先级。启动进程时可以使用 **nice** 命令从命令行设置 nice 值。
+
+```
+# nice -n <value> <command>
+```
+
+进程所有者和超级用户可以通过使用 **renice** 命令来修改现有进程的 nice 值。
+
+```
+# renice <value> -p <PID>
+```
+
+请注意，**BSD %CPU** 字段表示进程在其生命周期中使用的 CPU 资源百分比。你可能会看到短命进程的 `%CPU` 数值急剧升高到非常高的水平。识别 CPU 密集型进程或失控进程的更好指标是 **TIME** 列。使用 **ps -efl** 命令时，请特别关注 **PRI** 和 **NI** 列。**PRI** 值越小，进程优先级越高。普通进程的优先级通常在 60 左右。由 **NI** 指定的 nice 值用于调整进程优先级。Nice 设置越高，进程优先级越低。默认的 nice 值为 20。
+
+## 进程状态
+
+调度器以如此高的频率分配 CPU 时间片，使得所有进程似乎同时在执行。实际上，它们是逐个调度的，除非是多处理器系统。当进程未在 CPU 上执行时，它可能正在等待资源或锁、在事件上睡眠、被挂起，或者正在经过某些分发或调度状态。进程状态作为 proc 结构信息的一部分进行维护。进程状态由 ps aux 命令在 STAT 列中显示（参见表 21-1）。当使用 BSD I 或 SYSV -l 标志时（ps l 或 ps -l），标记为等待的进程可以在 WCHAN 列中查看。WCHAN 列标识了正在等待的事件的地址。
+
+| STAT 值 | 含义 |
+| :--- | :--- |
+| A | 活动 |
+| O | 不存在 |
+| S | 睡眠 |
+| W | 等待 |
+| R | 运行 |
+| I | 中间态 |
+| Z | 已取消 |
+| T | 停止 |
+| K | 可用内核进程 |
+| X | 增长中 |
+
+**表 21-1。** ps 命令显示的进程状态
+
+## 列出占用 CPU 最多的进程
+
+有几种技术可以发现谁在占用系统资源。在 AIX 4.3.3 和 5L 中，IBM 添加了 topas 程序，它拥有一套不错的监控工具，其中包括一个显示 CPU 使用率最高的用户的工具。此外，如果你喜欢 freeware 监控程序，你会发现它仍然可以在 UCLA 网站上获取。
+
+几个 ps 命令就能以极低的负载完成这项工作。我喜欢在我的 $HOME/.kshrc 文件中为这些命令设置别名，以便随时可用。以下两个命令都能产生预期结果：
+
+```
+alias topprocs="ps aux | tail +2 | sort -k 1.15,1.19nr | head -n 15"
+alias top15="ps -ef | grep -v STIME | sort +3 -r | head -n 15"
+```
+
+要查看不属于当前用户 ID 的占用 CPU 最多的前 15 个进程（按降序排列），输入以下命令：
+
+```
+# ps -ef | egrep -v "STIME| $LOGNAME" | sort +3 -r | head -n 15
+```
+
+## 将内核线程绑定到处理器
+
+bindprocessor 命令允许你将内核线程绑定到特定处理器，或从特定处理器解除绑定，或者列出所有可用处理器。你需要理解的是，实际进程未被绑定，而是内核线程被绑定。
+
+在内核线程绑定到特定处理器后，它们将始终被调度在该绑定处理器上运行。你可以稍后使用 `-u` 命令开关解除内核线程的绑定。
+
+`bindprocessor` 命令仅适用于多处理器机器。可用的命令开关包括：
+
+- `-q` 显示所有可用处理器
+- `-u` 解除指定进程线程的绑定
+
+要将 PID 为 12345 的进程线程绑定到处理器 2，我们可以使用以下命令：
+
+```bash
+# bindprocessor 12345 2
+```
+
+要显示每个进程绑定的 CPU（BND）（如果有），运行以下命令：
+
+```bash
+# ps -e -F comm,pid,user,thcount,bnd | more
+```
+
+要稍后解除 PID 12345 线程的绑定，使用以下命令：
+
+```bash
+# bindprocessor -u 12345
+```
+
+# 使用基于 Web 的系统管理器管理进程
+
+基于 Web 的系统管理器允许你以图形方式管理进程。从主导航屏幕中，选择 **Processes**。在下一个窗口中，你有两个选项来控制和查看进程，即 **All Processes and Overview And Tasks**，如图 21-1 所示。
+
+从图 21-1 中的窗口，你可以更改进程优先级、删除进程并列出占用 CPU 最多的前 10 个进程。一如既往，**wsm** 是一个值得拥有的有趣工具。
+
+![](img/82f851021955589d82b22750fb3b1646_480_0.png)
+
+**图 21-1。** 基于 Web 的系统管理器进程概览与任务
+
+# 父进程与子进程继承
+
+父进程通过调用 **fork()** 系统调用创建新的子进程。内核为子进程保留一个空闲的 PID，并将与父进程相关的属性数据复制到子进程的 `proc` 结构中。子进程是父进程的克隆，直到子进程、父进程或具有特权的权限通过系统调用修改子进程的属性为止。修改子进程 `proc` 属性的最常见方法是通过 **exec()** 系统调用调用新程序。
+
+# 控制进程
+
+在前面的章节“资源利用与优先级”中，我讨论了使用 nice 和 renice 命令来控制进程的调度优先级。当进程管理需要更强硬的手段时该怎么办？如果你真的需要摆脱一个进程，你就使用 kill 命令！
+
+命令名称“kill”听起来比实际上要可怕得多。kill 所做的是向进程发送指定信号。该信号并不一定导致进程终止。请注意，kill 是某些 shell（例如 /bin/csh）的内置命令。shell 版本的 kill 和 /usr/bin/kill 的行为可能不同。
+
+```
+# kill [-Signal] [PID PID PID ...]
+```
+
+PID 的值范围决定 kill 向哪里发送指定信号。如果 PID 整数为正，信号将发送给具有该 PID 值的进程。如果 PID 值为零（0），信号将发送给所有具有发送者相同进程组 ID（PGID）的进程。如果 PID 值为负一（-1），信号将发送给所有具有发送者有效用户 ID（EUID）的进程。具有 ID 为零或一的进程不会收到信号。
+
+- **PID > 0** 向指定的 PID 整数发送信号
+- **PID = 0** 向 PGID 等于发送者的 PIDs 发送信号
+- **PID = -1** 向所有 EUID 等于发送者的 PIDs 发送信号
+- **PID < -1** 向所有 PGID 等于指定绝对整数的 PIDs 发送信号
+
+如果你想向除了发送进程之外的所有你的进程发送信号，请使用 `killall` 命令。当然，如果你以 root 身份登录，那么 `killall` 命令将终止所有进程，除了维持系统运行所必需的最基本进程。其他的一切都将被丢弃。
+
+```
+# killall [-signal]
+```
+
+要显示支持的信号集，请使用 `kill` 命令的 `-l` 参数：
+
+```
+# /bin/kill -l
+1) HUP       14) ALRM      27) MSG       40) bad trap  53) bad trap
+2) INT       15) TERM      28) WINCH     41) bad trap  54) bad trap
+3) QUIT      16) URG       29) PWR       42) bad trap  55) bad trap
+4) ILL       17) STOP      30) USR1      43) bad trap  56) bad trap
+5) TRAP      18) TSTP      31) USR2      44) bad trap  57) bad trap
+6) ABRT      19) CONT      32) PROF      45) bad trap  58) bad trap
+7) EMT       20) CHLD      33) DANGER    46) bad trap  59) CPUFAIL
+8) FPE       21) TTIN      34) VTALRM    47) bad trap  60) GRAFT
+9) KILL      22) TTOU      35) MIGRATE   48) bad trap  61) RETRACT
+10) BUS      23) TTOU      36) PRE       49) bad trap  62) SOUND
+11) SEGV     24) XCPU      37) bad trap  50) bad trap  63) SAK
+12) SYS      25) XFSZ      38) bad trap  51) bad trap
+13) PIPE     26) bad trap  39) bad trap  52) bad trap
+```
+
+AIX 信号基于 SYSV 实现；然而，一些 BSD 信号已映射到其 SYSV 对应项，并且 BSD 信号系统调用是可用的。在编写或移植使用 BSD 信号和调用的程序时，请注意，信号在被捕获后不会自动重置。必须在信号处理例程中明确将其重置为所需行为。你还可以在 shell 脚本中编写捕获退出信号的能力。你可以 **trap** 除 **kill -9** 之外的任何信号。
+
+## 一般原则
+
+使用 `kill -9` 信号来终止进程似乎是一种常见的做法。我建议将此作为最后手段，仅在首先尝试 HUP（`kill -1`）和 ABRT（`kill -6`）无效后使用。后两个信号允许进程优雅地终止。在
+
+
+
+
+
+## 忽略挂起信号
+
+在“ABRT”（核心转储）的情况下，会生成一个可用于调试的核心文件。`kill -9` 信号基本上试图在允许任何清理活动的情况下将进程从进程表中强行移除。
+
+- `kill -1 <PID>` 首先尝试 HUP
+- `kill -6 <PID>` 然后尝试 ABRT
+- `kill -9 <PID>` 如果其他都失败了，使用 KILL
+
+偶尔，用户可能会尝试一些巧妙的 C 代码，其中包含类似以下的语句：
+
+```
+while(1) fork();
+```
+
+我并不是暗示这是有意为之，但停止它可能很棘手。新进程创建的速度与你杀死它们的速度一样快。你可以尝试的一个小技巧是按 PGID（进程组 ID）杀死它们。使用 SYSV `ps` 命令的格式化输出 (`-o`) 选项来显示 PGID。然后向负 PGID 发送信号。
+
+```
+# ps -e -o pgid,ppid,pid,ruser,comm=XYZ | grep -i xyz
+```
+
+| PGID | PPID | PID | RUSER | XYZ |
+| :--- | :--- | :--- | :--- | :--- |
+| 6968 | 1 | 6968 | root | xyzdaemons |
+| 6968 | 6968 | 7224 | root | xyz001 |
+| 6968 | 6968 | 7482 | root | xyz002 |
+| 6968 | 6968 | 7740 | root | xyz003 |
+| 6968 | 6968 | 8004 | root | xyz004 |
+| 6968 | 6968 | 8264 | root | xyz005 |
+| 6968 | 6968 | 8520 | root | xyz006 |
+
+```
+# kill -6 -6968 # 6968 来自 PGID 列
+```
+
+一个常见的问题是，在登录 shell 的命令行中以后台方式或作为守护进程启动命令，结果发现当你注销时命令退出了。这是因为当你的终端连接断开时，会向进程发送挂起 (HUP) 信号。你可以使用 `nohup` 命令指定这些命令要忽略 HUP 信号。
+
+- `nohup <command> &` 忽略挂起的后台进程
+
+## /proc 文件系统
+
+AIX 5L 新增了对 /proc 文件系统的支持。/proc 文件系统是一个伪文件系统，用于将进程和内核数据结构映射到进程文件。在 AIX 5L 之前，这类信息是被隐藏的，但现在它开放出来供窥探，因此在任何时候都必须极度谨慎！这里永远不是存储信息或尝试修复任何问题的地方。
+
+你可以使用 `df` 命令或 `mount` 命令查看 /proc 伪文件系统的统计信息。
+
+```
+# df -k
+Filesystem   1024-blocks  Free 6used  Iused 6Iused Mounted on
+/dev/hd4       32768  3972  8% 1783  13% /
+/dev/hd2      1212416 37544 97% 97689  13% /usr
+/dev/hd9var    53248 25328 53% 596  5% /var
+/dev/hd3       106496  99768  7% 168  1% /tmp
+/dev/hd1        4096  3904  5% 42  5% /home
+/dev/hd10opt   638976  22388 97% 15603  10% /opt
+/proc           -     -     -     -     - /proc
+
+# mount
+node       mounted     mounted over   vfs    date      options
+---------------------------------------------
+/dev/hd4        /                     jfs     Feb 04 10:55 rw log=/dev/hd8
+/dev/hd2        /usr                  jfs     Feb 04 10:55 rw log=/dev/hd8
+/dev/hd9var     /var                  jfs     Feb 04 10:55 rw log=/dev/hd8
+/dev/hd3        /tmp                  jfs     Feb 04 10:55 rw log=/dev/hd8
+/dev/hd1        /home                 jfs     Feb 04 10:56 rw log=/dev/hd8
+/dev/hd10opt    /opt                  jfs     Feb 04 10:56 rw log=/dev/hd8
+/proc                     /proc      Feb 04 10:56 rw
+```
+
+请注意，在 `df` 和 `mount` 中，/proc 文件系统实际上没有统计信息。这个伪文件系统没有大小、使用百分比或 inode。在 `mount` 命令输出中，/proc 的文件系统类型是 `procs`，而不是 `jfs` 文件系统。/etc/vfs 文件中关于 `procs` 的条目如下所示：
+
+```
+# lsvfs procs
+procs       6           none     none
+```
+
+系统中的每个进程都在 /proc 中分配了一个目录，名称等于该进程的 PID。在这些进程目录下的每个目录中都有多个文件和子目录，它们与进程的相应内部控制数据结构相关联。其中大多数（但并非全部）文件是只读的，但有些可供进程控制使用并可以写入。用于操作这些文件的工具是标准 C 语言子例程 `open()`、`read()`、`write()` 和 `close()`。可以在 /usr/include/sys/ procs.h 文件中找到每个数据结构的描述。/proc 中的所有文件都属于 PID 所有者，这一事实允许普通用户仅访问他们拥有的进程。
+
+为了展示 /proc 文件系统的结构，让我们看看我机器上的一个特定进程。我当前正在运行 docsearch。我机器上 docsearch 命令的 PID 是 19898。使用 `ls -l` 命令显示目录的内容。
+
+```
+# ls -l /proc/19898
+```
+
+total 0
+-rw------- 1 root system 0 Feb 16 14:42 as
+-rw------- 1 root system 128 Feb 16 14:42 cred
+-rw------- 1 root system 0 Feb 16 14:42 cti
+dr-xr-xr-x 1 root system 0 Feb 16 14:42 lwp
+-rw------- 1 root system 0 Feb 16 14:42 map
+dr-x------ 1 root system 0 Feb 16 14:42 object
+-rw-r--r-- 1 root system 448 Feb 16 14:42 psinfo
+-rw------- 1 root system 1024 Feb 16 14:42 sigact
+-rw------- 1 root system 1520 Feb 16 14:42 status
+-r--r--r-- 1 root system 0 Feb 16 14:42 systm
+
+随着该进程的执行，有很多进程信息在不断变化。如表 21-2 所示，这些伪文件中的每一个都有特定的功能。object 目录包含与进程地址空间中映射的文件相对应的文件。深入查看 /proc 结构，`ls -l /proc/19898/object` 命令输出如下：
+
+```
+# ls -l /proc/19898/object
+```
+
+total 14504
+-r-xr-xr-x 4 bin bin 240404 Apr 08 2001 a.out
+-r-r-xr-xr-x 2 bin bin 6411106 Jul 30 2001 jfs:10.5.2071
+-r-r-r-r-r-- 1 bin bin 118685 Apr 08 2001 jfs:10.5.2179
+-r-r-xr-xr-x 4 bin bin 240404 Apr 08 2001 jfs:10.5.4207
+-r-r-xr-xr-x 1 bin bin 11059 Apr 08 2001 jfs:10.5.4372
+-r-r-r-r-r-- 1 bin bin 377654 Apr 08 2001 jfs:10.5.4438
+-r-rw-f-r-- 1 bin bin 14342 Apr 08 2001 jfs:10.5.8459
+
+a.out 文件是 C 语言可执行二进制文件，代表进程源自的程序。lwp 目录包含进程中正在运行的每个内核线程的子目录。IBM 使用术语 “lwp” 来表示轻量级进程；它的含义与 AIX 文档中使用的术语 “线程”相同。每个 lwp 子目录的名称都是与该进程关联的线程 ID (TID)。我的 docsearch 进程
+
+| 伪文件 | 功能 |
+| :--- | :--- |
+| as | 允许访问进程的地址空间。你可以读取和写入属于该进程的内存 |
+| cred | 显示与进程关联的凭据 |
+| cti | 允许你控制进程，例如停止和恢复进程 |
+| lwp (directory) | 包含进程的内核线程信息 |
+| map | 允许访问进程的虚拟地址映射 |
+| object (directory) | 包含映射文件名 |
+| psinfo | 包含由 `ps` 命令提供的相同信息 |
+| sigact | 显示与该进程相关的所有信号的当前状态 |
+| status | 包含进程状态信息，如地址和堆大小 |
+| systm | 显示可供该进程使用的系统调用 |
+
+**表 21-2.** /proc/<PID> 中伪文件的功能
+
+只有一个线程 ID 29059，可以通过以下命令在进程表中看到：
+
+```
+# ps -mo THREAD -p 19898
+
+USER PID PPID TID ST CFPRI SC WCHAN F TT RND COMMAND
+root 19898 15518 - A 0 76 1 - 200001 pt8/2 0 /usr/bin/docssearch
+- - 29059 S 0 76 1 - 10400 - - 0 -
+```
+
+在 /proc/19898/lwp/29059 目录中，我们有以下三个文件：
+
+```
+# ls -l /proc/19898/lwp/29059
+
+total 0
+-rw------- 1 root system 0 Feb 16 16:08 lwpctl
+-r-x-r-r-r- 1 root system 120 Feb 16 16:08 lwpinfo
+-r------- 1 root system 1200 Feb 16 16:08 lwpstatus
+```
+
+lwpctl、lwpinfo 和 lwpstatus 文件包含控制线程所需的所有线程特定信息。它们的内容类似于我们在示例中 /proc/19898 目录中的文件中找到的信息。使用凭据信息，我们可以提供一个从这些文件中检索数据的更好示例。我们使用 `od`（八进制转储）命令显示 /proc/19898/cred 文件的内容，如下所示：
+
+```
+# ls -l /proc/19898/cred
+
+-rw------- 1 root system 128 Feb 16 16:29 /proc/19898/cred
+```
+
+现在对 /proc/19898/cred 文件执行八进制转储：
+
+```
+# od -x /proc/19898/cred
+
+0000000 0000 0000 0000 0000 0000 0000 0000
+```
+
+
+
+
+
+0000160 0000 0000 0000 0007 0000 0000 0000 0000
+0000200 0000 0000 0000 0002 0000 0000 0000 0003
+0000220 0000 0000 0000 0007 0000 0000 0000 0000
+0000240 0000 0000 0000 000a 0000 0000 0000 000b
+0000260
+
+在最左侧列中，显示了文件的八进制字节偏移量。其他所有信息均为文件内容的十六进制表示。
+
+如需了解 /proc 文件系统的更多信息，请参阅 IBM Redbook sg245765《AIX 5L Differences Guide Version 5.1 Edition》。所有 pSeries 和 UNIX Redbook 的索引都可以在以下网址找到：http://publib-b.boulder.ibm.com/Redbooks.nsf/Portals/UNIXRedbooks。
+
+《AIX 5L Differences Guide Version 5.1 Edition》Redbook 位于以下网址：http://www.redbooks.ibm.com/pubs/pdf/redbooks/sg245765.pdf。
+
+## 计划任务（CRON）
+
+UNIX cron 实用程序提供了一种基本手段，用于安排任务在一天中的特定时间或定期执行。cron 任务可用于执行常规的系统清理任务，如同步磁盘写入、清理 /tmp 以及运行计费程序。这类周期性任务可以通过使用 crontab 进行定制。crontab 是一份包含指定运行时间的命令和脚本列表，将由 cron 以所有者的 EUID 身份调用。在命令执行后，cron 任务会通过电子邮件向拥有者报告任何错误或输出信息。此外，cron 会将错误记录到日志文件 /var/adm/cron/log 中，如果启用了 AIX 审计功能，还会生成审计记录。
+
+### crontab
+
+要创建一个 crontab，请使用您喜欢的编辑器创建一个具有以下格式的表格：
+
+- 分钟
+- 小时
+- 日期
+- 月份
+- 星期几
+- 命令
+
+表 21-3 列出了每个条目有效值。
+
+每个与时间相关的字段都可以表示为逗号分隔列表、连字符 (-) 分隔的范围，或者星号 (*)，可用于表示所有可能的时间。例如，如果我想每半小时在系统控制台上显示运行时间统计信息，我将向我的 crontab 文件添加以下行。
+
+```
+0,30 * * * * /bin/uptime > /dev/console 2>&1
+```
+
+| 字段 | 有效值 | 备注 |
+| :--- | :--- | :--- |
+| 分钟 | 0-59 | 0 = 整点 |
+| 小时 | 0-23 | 0 = 午夜 |
+| 日期 | 1-31 | |
+| 月份 | 1-12 | |
+| 星期几 | 0-6 | 周日 = 0，周六 = 6 |
+| 命令 | 要执行文件的完整路径名 | |
+
+**表 21-3.** 有效的 Crontab 值
+
+一旦您按照喜好定制了 *crontab* 文件，请通过调用 **crontab** 命令将其交给 *cron* 守护进程。
+
+```
+# crontab <YourCrontabFile>
+# crontab -e # 作为 cron 表拥有者
+```
+
+所有 crontab 都存储在 /var/spool/cron/crontabs 目录下，以拥有者用户名命名。下列列表来自 **adm** 用户的 crontab，该用户 crontab 用于收集系统统计信息：
+
+```
+#====================================================================
+# SYSTEM ACTIVITY REPORTS
+# 8am-5pm activity reports every 20 mins during weekdays.
+# activity reports every an hour on Saturday and Sunday.
+# 6am-7am activity reports every an hour during weekdays.
+# Daily summary prepared at 18:05.
+#====================================================================
+0 8-17 * * 1-5 /usr/lib/sa/sa1 1200 3 &
+0 * * * 0,6 /usr/lib/sa/sa1 &
+0 18-7 * * 1-5 /usr/lib/sa/sa1 &
+5 18 * * 1-5 /usr/lib/sa/sa2 -B 8:00 -e 18:01 -i 3600 -ubwcyagm &
+#====================================================================
+# PROCESS ACCOUNTING:
+# runacct at 11:10 every night
+# dodisk at 11:00 every night
+# ckpackt every hour on the hour
+# monthly accounting 4:15 the first of every month
+#====================================================================
+#10 23 * * 0-6 /usr/lib/sacct/runacct 2>/usr/adm/sacct/nite/saccterr > /dev/null
+#0 23 * * 0-6 /usr/lib/sacct/dodisk > /dev/null 2>&1
+#0 * * * * /usr/lib/sacct/ckpackt > /dev/null 2>&1
+#15 4 1 * * /usr/lib/sacct/monacct > /dev/null 2>&1
+#====================================================================
+```
+
+除非系统管理员通过在 /usr/adm/cron/{cron.allow,cron.deny} 文件中逐行列出用户名来强制限制可以使用 cron 服务的用户，否则任何用户都可以创建 crontab 文件。每当用户尝试创建或编辑 cron 表时，cron 守护进程在调用用户的 crontab 文件之前会检查这些文件的授权。默认情况下允许所有用户访问。
+
+请注意！如果您创建了 /var/adm/cron/cron.deny 文件，则该文件的优先级高于 cron.allow 文件。此外，如果存在 cron.allow 文件但未为 root 用户创建条目，则即使是 root 也无法编辑 cron 表！
+
+### 临时任务
+
+假设您想在非工作时间运行任务，但不想为此创建 crontab 条目。这可能是一次性的运行。您可以使用 *at* 和 *batch* 命令来实现。请注意，*batch* 只是一个调用 *at* 的脚本。执行 *at* 并指定时间和命令输入流。作业流会被复制到 /usr/spool/cron/at/jobs 目录。当时间到来时，cron 将在指定时间执行作业流。
+
+使用 *at* 运行任务的授权由 /usr/adm/cron/{at.allow,at.deny} 文件中的用户名列出进行控制，这与 crontab 的情况类似。默认情况下允许所有用户访问。
+
+```
+# at <time> input <Ctrl-D>           # 在 <time> 启动一个任务
+# echo "shutdown -Fr" | at 11 pm     # 在下一个周六晚上 11:00 重启系统
+# atq <username>                     # 不要忘记 echo，否则系统
+# at -r jobnumber                    # 将从当前 shell 立即重启
+                                     # 删除一个任务
+```
+
+如果需要更复杂的批处理调度系统，您可以使用打印机子系统创建一个“批处理队列”。
+
+### 管理 cron 活动
+
+在活跃的批处理环境中，您可能希望对 cron 调度设置一些限制。/usr/adm/cron/queuedefs 文件可以配置为限制每种事件类型的并发任务数量，设置默认的 nice 值，并设置重试限制。事件控制按行列在 queuedefs 文件中。这里列出了 queuedefs 文件的一个示例：
+
+```
+# cron values for each queue of batch jobs:
+#    queue.xxjxxnxx
+#
+# queues:
+# a - sh jobs       d - sync event
+# b - batch jobs    e - ksh jobs
+# c - cron event          f - csh jobs
+# xxj - maximum number of jobs in this queue (default 100)
+# xxn - nice value at which these jobs will run at (default 2)
+# xxw - wait time till next execution attempt (default 60 seconds)
+#
+#
+# here is an example of a low priority (nice 20), 50 entry batch queue
+# b.50j20n60w
+```
+
+queue.defs 文件随附时为空。所有事件类型的默认值（如表 21-4 所示）支持在 nice 值为 2 的情况下运行 100 个并发任务，重试限制为 60 秒。这是一个简单的 queue.defs 条目：
+
+`c.2j2n90w` — 两个 crontab 任务，nice 值为 2，每 90 秒重试一次
+
+## 系统资源控制器
+
+AIX 提供了一种机制，用于控制和作为一个单元集体功能的一组程序。该机制称为 *System Resource Controller*（SRC，系统资源控制器）。SRC 提供简单的命令接口，以显示状态、刷新、启动和停止作为单一实体的系统服务。这些接口降低了管理组成特定服务的所有守护程序和程序的运营和管理复杂性。
+
+组成 SRC 服务单元的 program 集合称为子系统。组成子系统的守护程序称为 sub-servers（子服务器）。子系统可以按其提供的整体服务进行分组，并识别为子系统组。例如，**fpfd** 守护程序是 **inetsd** 子系统的 sub-server（子服务器）。**inetsd** 子系统是 TCP/IP 子系统组的成员。SRC 允许操作员或管理员在 sub-server、子系统或子系统组级别上操作服务。
+
+**表 21-4.**
+queue.defs 事件类型
+
+| 类型 | 事件类别 |
+| :--- | :--- |
+| a | at 事件 |
+| b | 批处理事件 |
+| c | crontab 事件 |
+| d | 同步事件 |
+| e | ksh 事件 |
+| f | csh 事件 |
+
+
+
+
+
+## SRC 组件
+
+总体而言，SRC 由 srcmstr 守护进程提供。srcmstr 守护进程在系统启动时通过 /etc/inittab 文件中的条目启动。
+
+```
+srcmstr:23456789:repassw:/usr/sbin/srcmstr    # 系统资源控制器
+```
+
+srcmstr 守护进程根据 ODM 对象类 /etc/objrepos/(SRCobjsysy_SRCNotify) 中的定义识别子系统组件。子系统和子服务（subserver）的配置信息通过使用 [mk.ch.rm]ssys 和 [mk.ch.rm]ssver 命令进行管理。在大多数情况下，子系统和子服务在每个产品安装时就已经预定义好了，因此你几乎不需要在这个层级进行操作。
+
+一旦子系统组、子系统或子服务（subservet）配置到 ODM 中，就可以使用以下命令进行操作：
+
+- **startsrc** 启动子系统
+- **stopsrc** 停止子系统
+- **refresh** 重新启动或刷新子系统
+- **trace -a, trcon, troff, 和 trestop** 开启/关闭子系统的跟踪
+- **lsrsrc** 显示子系统状态
+
+在 srcmstr 加载后，可以在系统启动时通过调用 startsrec 命令来启动子系统，该命令可以作为启动脚本的一部分或直接通过 /etc/initab 执行。一些 SRC 命令示例包括：
+
+- **# startsrec -g tcip** 启动 TCPIP 子系统组
+- **# refresh -g nfs** 刷新 NFS 子系统组
+- **# stopsrc -s qdaem** 停止 qdaemon 子服务
+
+要显示所有已定义子系统的状态，请使用 lsrc 命令。请注意，也可以通过使用 smitty subsys 和 smitty subservlet SMIIT 快速路径或通过基于 Web 的系统管理器来调用子服务（subservet）控制。
+
+```
+$ lsrsrc -a
+
+Subsystem      Group    PID    Status
+syslog          ras      3670   active
+sendmail        mail     4144   active
+portmap         portmap  3878   active
+inetd           tcip     4388   active
+xntpd           tcip     4644   active
+snmpd           tcip     5160   active
+dpid2           tcip     4904   active
+hostmibd        tcip     5418   active
+qdaemon         spooler  7224   active
+writeserv       spooler  7484   active
+dtsrc                 9550   active
+ctsrc           rcst     11106  active
+IBM_ERRM        rcst_rm  11876  active
+i4lmd           iforls   12128  active
+IBM_AuditRM     rcst_rm  11362  active
+bioc            nfs            active
+nfsd            nfs            active
+rpc_statd       nfs            active
+rpc_lockd       nfs            active
+rpc_mountd      nfs            active
+lpd             spooler        active
+clvm                     inactive
+gated           tcpip          inactive
+named           tcpip          inactive
+routed          tcpip          inactive
+rwhod           tcpip          inactive
+iptrace         tcpip          inactive
+timed           tcpip          inactive
+dhcpd           tcpip          inactive
+dhcpsd          tcpip          inactive
+dhcprd          tcpip          inactive
+ndpd-host       tcpip          inactive
+ndpd-router     tcpip          inactive
+tftpd           tcpip          inactive
+mro                        inactive
+mrou            tcpip          inactive
+rvpd            qos            inactive
+policyd         qos            inactive
+ilb             iforl          inactive
+glb             iforl          inactive
+i4lmd           iforl          inactive
+i4glb           iforl          inactive
+i4gd            iforl          inactive
+wsremeserve     tcpip          inactive
+ppcontrol       uucp           inactive
+pxed            tcpip          inactive
+bind            tcpip          inactive
+ypserv          typ            inactive
+ypupdated       typ            inactive
+ypasswd         typ            inactive
+dfcp            tcpip          inactive
+i4cmmgr         iforl          inactive
+seclldapntd     seclad         inactive
+automountd      autofs         inoperative
+keyserv         keyserv        inoperative
+ypbind          yp             inoperative
+nis_cachemgr    nisplus        inoperative
+rpc.nisd        nisplus        inoperative
+rpc.nispassword nisplus        inoperative
+```
+
+## 检查清单
+
+以下是进程管理的关键要点检查清单：
+
+- 一个进程由正在执行的程序及其地址空间组成。每个进程由一个称为进程标识符（PID）的正整数命名。
+- 你可以使用 SMIT 快速路径 **smitty system** 并选择“更改/显示操作系统特性”来设置每个用户的最大进程数。
+- 使用 **ps** 命令查看在系统上运行的进程。
+- nice 值是一个整数，表示进程之间的粗略优先级差异。数字越*大*，优先级越*低*。
+- 只有超级用户才能提高 nice 优先级。在启动进程时，可以使用 **nice** 命令从命令行设置 nice 值。
+- 进程所有者和超级用户可以使用 **renice** 命令修改现有进程的 nice 值。
+
+![](img/82f851021955589d82b22750fb3b1646_493_0.png)
+
+## 第 22 章
+
+## 系统会计
+
+让我看看……那是 12 个 CPU 上 22 分钟的时间，3GB 的磁盘空间，以及 3 小时的连接时间。那是现金还是支票？生活中没有什么东西是免费的！尤其是如果你在一个大型高性能计算机设施上处理数字时更是如此。即使你不对系统资源进行分摊费用，定期监控利用率也是一个好主意。通过收集会计数据，你可以获得系统使用情况的合理概况。哪些是主要的资源消耗者？你多久需要那额外的 10GB 磁盘空间？也许你需要向上级部门证明资源的需求。
+
+AIX 会计系统采用 System V 风格。然而，有一组标准的 BSD 会计系统管理命令被附加到了 System V 环境中。编写自己的会计程序和脚本的站点会发现，AIX 提供了有助于将现有系统从其他 UNIX 环境移植过来的工具和会计数据格式。对于不那么愿意折腾的用户，AIX 提供了管理系统会计数据所需的所有命令和脚本。会计系统基于一组三个组件：
+
+- 数据收集
+- 管理和报告命令
+- 定期数据管理脚本
+
+当启用会计时，数据收集会自动进行。管理和命令使您可以启动和停止会计系统，管理数据文件，并生成报告。定期数据管理脚本由 cron 调用（参见后面部分，“Crontab 条目”），以自动关闭数据并生成一般摘要信息。
+
+### 数据收集
+
+数据收集从系统会计开启时开始，在关闭时停止。AIX 采样并记录系统中每个用户的进程使用率和会话数据。收集的信息代表连接时间、进程资源、命令、磁盘使用率和打印队列利用率。
+
+### 连接时间
+
+连接时间数据累积在 `/var/adm/wtmp` 和 `/etc/utmp` 文件中。每次登录 AIX 时，登录过程都会向 `wtmp` 和 `utmp` 写入一条记录。数据指示用户名、日期、时间、端口和连接地址。`init` 进程在你退出系统时写入类似的记录。这些数据代表你与系统的连接持续时间。
+
+rsh 和 X11 客户端的组合可能会绕过存在 X11 使用环境中的连接数据会计。`xterm` 终端仿真客户端提供了一个标志，指示是否应写入 /etc/utmp 记录。xterm 终端仿真也有损坏 /etc/utmp 文件的历史记录。你可能希望使用一个封装命令，强制远程客户端应用程序的用户遵守连接会计。
+
+wtmp 和 utmp 文件中的损坏或错误可以通过使用 fwtmp 命令将目标二进制文件转换为临时 ASCII 文件，手动编辑可疑条目，然后将临时文件转换回二进制目标文件来修复。新文件将覆盖在此编辑过程中记录的连接数据。
+
+```
+# last -f /var/adm/wtmp | more # ← 查找问题数据字段
+# /usr/sbin/acct/fwtmp < /var/adm/wtmp > temp.file ← 创建 ASCII 文件
+# vi temp.file ← 编辑问题字段
+# /usr/sbin/acct/fwtmp -ic < temp.file > wtmp.new ← 创建二进制文件
+# last -f wtmp.new | more ← 查看修正后的字段
+# cp -pi wtmp.new /var/adm/wtmp ← 覆盖到问题目标
+```
+
+### 进程资源使用
+
+操作系统为每个运行的进程记录的资源利用率信息在进程退出时记录在 /var/adm/pacct 文件中。对于未退出的进程不记录任何信息。进程会计记录指示 UID、GID、用户名、经过的墙钟时间、CPU 时间、内存使用、字符 I/O 总量和磁盘块 I/O 总量。
+
+### 命令使用
+
+进程数据的一个良好副作用是命令和应用程序使用的审计跟踪。此数据提供了应用程序使用的概况，并可能有助于跟踪安全问题。请注意，经验丰富的黑客在离开现场之前往往会修正会计信息。有关安全审计详情，请参阅第 23 章。
+
+### 磁盘使用
+
+您可以定期收集系统的磁盘使用信息并将其存储在 /var/adm/dfm 文件中。使用 findfs 脚本收集磁盘使用数据可能会给系统带来负载，因此请在非高峰时段安排 cron 任务。DIX 根据用户在文件系统中拥有的文件以及他们可能创建的文件链接，将磁盘使用数据分配给用户。文件的用量统计在拥有该文件链接的用户之间均匀分配。
+
+通过磁盘配额系统，还可以跟踪磁盘使用情况并限制用户和/或组的使用限制。有关磁盘配额系统的详细信息，请参阅第 20 章。
+
+
+
+
+## 打印使用情况
+
+**enq** 命令和 **qdaemon** 进程会记录打印队列系统的利用率统计信息。**enq** 命令会为每个它处理的打印作业写入一条记录。该记录指示打印作业的所有者、作业编号和文件名。当文件被打印时，**qdaemon** 会写入另一条记录，其中包含上述信息以及已打印的页数。对于 PostScript 队列，有公有领域的后端可以提供用于 PostScript 转换和属性的计量记录。
+
+## 计量文件
+
+计量记录存储于位于 `/var/adm` 目录中的一组文件中。表 22-1 列出了文件及收集的数据。
+
+## 计量配置
+
+如果 *startup* 脚本在 *adm* 用户账户下运行，并且先于其他任何用户运行（参见本章“启动和停止计量”一节），计量系统将在需要时创建大多数数据收集文件。但情况并非总是如此，因此你需要知道如何手动更改或创建这些文件。这应以 *adm* 权限执行，但可能需要以 **root** 身份执行以纠正文件所有权。在浏览本配置部分时，请确保 *bos.acct* 文件集已安装。有关安装缺失文件集的详细信息，请参阅第 6 章。
+
+```
+# ls1pp -1 bos.acct
+```
+
+## 设置收集文件
+
+即使我记得从 *adm* 用户 shell 正确启动计量系统，我通常仍需要修复或创建至少一个数据收集文件（表 22-1）。最常见的需要修复的问题是收集进程数据的 *pacct* 文件的权限。触及文件名或运行 *nulladm* 可以创建缺失的文件存根。
+
+| 文件名 | 收集的数据 |
+| :--- | :--- |
+| **pacct** | 活动进程数据 |
+| *$pacct_.cmd* | 每日活动进程数据 (ruacct) |
+| **qacct** | 打印使用数据 |
+| **utmp** | 连接会话数据 |
+| **dtmp** | 磁盘使用数据 |
+| **wtmp** | 活动进程数据 |
+
+表 22-1. 计量记录列表
+
+`nulladm` 命令会将提供的参数创建或覆盖为零长度文件，并设置正确的权限。
+
+```
+# touch /var/adm/pacct
+# chown adm /var/adm/pacct
+# chgrp adm /var/adm/pacct
+# chmod 644 /var/adm/pacct
+```
+
+或者
+
+```
+# /usr/sbin/acct/nulladm /var/adm/pacct
+```
+
+要收集打印使用数据的 `pacct` 文件必须手动创建（参见本章后文“打印计量 (/etc/qconfig)”一节）。
+
+## 标识班次
+
+配置 `/etc/acct/holidays` 文件以反映你的主要时间段班次和预定假日。文件中第一个非注释行必须指示年份以及主要班次的开始和结束时间。随后的行指示每年计划内每个假日的日期和说明。每个假日条目指示：
+
+- 一年中的整数日
+- 三字符月份名称
+- 月份中的整数日
+- 文本字符串假日说明
+
+你可能只需更新第一个非注释行的年份并注释掉所有假日行，以防止 `runacct` crontab 作业（参见本章后文“Crontab 条目”一节）报告该文件已过期。一个很好的假日计划来源是美国人事管理办公室发布的网页（http://www.opm.gov/fedhol/）。你的 `/etc/acct/holidays` 文件可能类似以下内容：
+
+```
+* Prime/Nonprime Table for AIX Accounting System
+*
+* Curr Prime Non-Prime
+* Year Start Start
+*
+ 1990 0800 1700 * The year in this line must be updated
+*
+* Day of Calendar Company
+* Year Date Holiday
+ 1 Jan 1 New Year's Day
+ 50 Feb 19 Washington's Birthday (Obsvd.)
+```
+
+```
+148 May 28 Memorial Day (Obsvd.)
+185 Jul 4 Independence Day
+246 Sep 3 Labor Day
+326 Nov 22 Thanksgiving Day
+327 Nov 23 Day after Thanksgiving
+359 Dec 25 Christmas Day
+365 Dec 31 New Years Eve
+```
+
+## 磁盘计量 (/etc/filesystems)
+
+可以通过更改文件系统会计属性，将文件系统的磁盘计量切换为 *true* 或 *false*。使用 **chfs** 命令将每个打算监控的文件系统的 *account* 部分设置为 *true*。不要直接编辑 /etc/filesystems 文件。*lsfs* 命令列出每个文件系统的特性，最后一列通常在标准终端上换行，是 *account* 部分。
+
+```
+# lsfs
+# chfs -a account=true /home
+# lsfs /home
+```
+
+## 打印计量 (/etc/qconfig)
+
+如果在 /etc/qconfig 文件中每个队列段的 *accfile* 参数中指定了计量收集文件，则可以保存打印使用记录。你可能还需要先使用以下 **nulladm** 命令创建目标收集文件（有关详细信息，参见本章后文“设置收集文件”一节）。
+
+```
+# ls -l /var/adm/qacct
+# nulladm /var/adm/qacct
+# 这将覆盖任何现有文件
+```
+
+使用以下 **chque** 命令将此部分添加到 /etc/qconfig 并刷新 **qdaemon**。
+
+```
+# chque -q 'qname' -a 'accfile = /var/adm/qacct'
+```
+
+## 报告目录
+
+在 /var/adm/acct 目录中手动创建 *nite*、*fiscal* 和 *sum* 报告子目录，并将所有权设为 **adm**。
+
+```
+# su - adm
+# cd /var/adm/acct
+# mkdir nite fiscal sum
+```
+
+如果你遗漏此步骤，在计量系统启动后，`/var/adm/pacct` 数据文件将保持为空。参见 `adm` cron 表中 `runacct` 行上指定的错误文件 `/usr/adm/acct/accterr`，以获取详细错误信息。
+
+## Crontab 条目
+
+移除 `adm` crontab 中的注释。使用 `crontab -e` 命令编辑 crontab。
+
+```
+# su - adm
+# crontab -e
+```
+
+`adm` crontab 应如下所示：
+
+```
+#============================================================================
+#		SYSTEM ACTIVITY REPORTS
+# Sam-5pm activity reports every 20 mins during weekdays.
+# Activity reports every hour on Saturday and Sunday.
+# 6pm-7am activity reports every hour during weekdays.
+# Daily summary prepared at 18:05.
+#===============================================
+0 &17 * * 1-5 /usr/lib/aa/sa1 1200 3 &
+0 * * * 0,6 /usr/lib/aa/sa1 k
+0 18-7 * * 1-5 /usr/lib/aa/sa1 k
+5 18 * * 1-5 /usr/lib/aa/sa2 -8 & 00 -e 18:01 -i 3600 -u bwcqagwm &
+#===============
+# PROCESS ACCOUNTING:
+# dodisk at 11:00 nightly will run disksgs and acctdisk.
+# runacct at 11:10 nightly to process connect, fee, disk, printer and system accounting data.
+# cpacct every hour checks the size of /var/adm/pacct, free space in /var and will turn off accounting if limits are exceeded.
+# monacct Monthly accounting at 4:15 the first of every month.
+#===============================================
+0 23 * * 0-6 /usr/lib/acct/dodisk >/dev/null 2>1
+10 23 * * 0-6 /usr/lib/acct/runacct 2>/usr/adm/acct/nite/accterr >/dev/null
+5 * * * /usr/lib/acct/cpacct >/dev/null 2>1
+15 4 1 * * /usr/lib/acct/monacct >/dev/null 2>1
+#===============================================
+```
+
+如果你更改 `runacct` 使其每周仅运行一到两次，那么也需更改 `dodisk`。`/var` 文件系统会占用更多空间。`runacct` 的一个明显影响是 `/var/adm/wtmp` 文件将被重置。我总是在 $HOME/.xshrc 文件中添加 alias="last -f /var/adm/acct/nite/wtmp"，以便可以轻松检查来自前一个 wtmp 文件的用户连接。有关 `crontab` 的详细信息，请参阅第 20 章。
+
+## 工作单位费用
+
+**chargefee** 脚本可用于将系统中每个用户的工作单位条目添加到 `/var/adm/fee` 文件中。这些数据稍后由 **actmerge** 程序与其他计量文件合并以生成报告，而 **fee** 文件则由权限允许读取。**chargefee** 命令可以整合到系统计量脚本中以实现费用收回系统。要在 `/var/adm/fee` 文件中为指定用户名追加五个单位，请输入
+
+```
+# /usr/sbin/acct/chargefee username 5
+```
+
+## 计量命令
+
+正如我在引言中提到的，AIX 提供 System V 计量命令和一部分 BSD 命令。这些命令使你能显示、管理、生成报告以及从收集的计量信息中记录收费。
+
+## 启动和停止计量
+
+启动和停止计量系统的主要命令是 **accton**。前端 shell 脚本 **turnacct** 提供了更具逻辑性的语法，带有简单的 on 和 off 参数。提供了启动脚本以在启动时启动计量系统，通过 **actwtmp** 命令将启动数据附加到 `/var/adm/wtmp`，运行 **turnacct** on 命令，然后执行 **remove** 命令以清理前一个会话文件。在 sadc 虚拟记录命令行之后，将以下两行添加到 `/etc/rc` 脚本中：
+
+```
+# Start Process Accounting
+/usr/bin/su - adm -c /usr/sbin/acct/startup
+```
+
+现在取消同一文件中此 sadc 虚拟记录命令行的注释或添加该行：
+
+```
+/usr/bin/su - adm -c "/usr/lib/sa/sadc /usr/adm/sa/sa'$(date +%m%d)' +8d"
+```
+
+请注意，`/usr/adm` 是指向 `/var/adm` 的向后兼容链接。
+
+`shutacct` 脚本由系统 `shutdown` 脚本调用，用于通过 `actwtmp` 命令将关机数据附加到 `/var/adm/wtmp`，并使用 `turnacct` off 关闭计量。
+
+通过调用 **turnacct** 或 **accton** 命令手动启动计量系统。
+
+```
+# su - adm
+# /usr/sbin/acct/turnacct on
+```
+
+
+
+
+# 显示统计数据
+
+随时都可以通过命令行对系统进行“把脉”，或者回顾账户统计历史。你还可以将标准输出重定向到文件，从而创建临时（ad hoc）报告。使用 **sa** 命令可以显示存储在 `/var/adm/pacct` 中的数据的通用摘要。**sa** 命令支持许多标志，可用于过滤和限制输出。其中两个最实用的标志是 **-m** 标志，它按用户进行摘要；以及 **-s** 标志，它按命令进行摘要。** -s** 标志还可以用于将摘要合并到现有的历史文件中。
+
+```sh
+# sa -m
+
+root     766    0.75cpu   77743653tio    11532k*sec
+daemon     8    0.02cpu    663334tio    848k*sec
+adm        75    0.07cpu    1242340tio    747k*sec
+cps        36    0.29cpu    3810811tio    7740k*sec
+nobody      15    0.14cpu    4890509tio    26791k*sec
+```
+
+```sh
+# sa -s | head -7
+
+900   17008.96re    1.28cpu    98167avio     6k
+6       0.39re     0.39cpu   10289152avio    3k   egrep
+6      2060.74re    0.23cpu    471744avio     5k   xterm
+3       0.15re     0.13cpu    1566208avio    33k   da_rslt
+17     2850.94re    0.13cpu    51509avio     3k   ksh
+47      2944.44re    0.07cpu    44984avio     3k   other
+30       0.07re     0.03cpu    13452avio     3k   awk
+```
+
+可以使用 BSD 的 `ac` 和 `last` 命令来显示连接历史记录。`ac` 命令可以按天或按 `/var/adm/wtmp` 文件涵盖的时间区间来汇总连接时长。`last` 命令可用于显示所有用户或单个用户的登录时间。
+
+```sh
+# /usr/sbin/acct/ac -p | awk '{print $1 " " $2}'
+duan e 0.46
+deroest 264.16
+don n 487.54
+n oyd 9961.55
+```
+
+```sh
+# /usr/sbin/acct/ac -d
+Sep 01 total 269.68
+Sep 02 total 613.75
+Sep 03 total 914.32
+```
+
+```sh
+# last -4
+cps pts/92 xtreme.sar.washi Fri Sep 17 10:41 still logged in
+don pts/82 tiab1.bnn.washin Fri Sep 17 10:07 still logged in
+kenn pts/75 192.168.90.125 Fri Sep 17 10:00 - 10:22 (00:21)
+davldw pts/56 redy.aal.washing Fri Sep 17 08:23 still logged in
+```
+
+可以使用 BSD 的 `lastcomm` 命令生成详尽的命令使用情况信息。与 `ac` 一样，该命令也支持大量标志来过滤输出。请注意，调用该命令时也会消耗大量的系统资源！
+
+```sh
+# lastcomm | sed 's/  */ /g'
+acctwtmp S root --- 0.02 secs Fri Sep 17 23:44
+httpd F nobody --- 0.05 secs Fri Sep 17 13:50
+tftpd S root --- 0.69 secs Fri Sep 17 11:28
+tftpd F nobody --- 0.01 secs Fri Sep 17 11:28
+nfssrv S root --- 0.01 secs Fri Sep 17 23:44
+ksh F root pts/0 --- 0.01 secs Fri Sep 17 23:44
+whoami S root pts/0 --- 0.03 secs Fri Sep 17 23:44
+termdef S root pts/0 --- 0.03 secs Fri Sep 17 23:44
+sh S adm pts/1 0.28 secs Fri Sep 17 22:02
+```
+
+# 摘要报告
+
+`runacct` 和 `monacct` 命令会定期生成一组标准报告。这些命令应由 adm crontab 运行。摘要和报告记录在以下目录中：
+
+| 目录 | 描述 |
+| :--- | :--- |
+| `/var/adm/acct/nite` | runacct 使用的每日文件 |
+| `/var/adm/acct/sum` | runacct 创建的每日摘要 |
+| `/var/adm/acct/fiscal` | monacct 创建的每月摘要 |
+
+报告和数据文件包括：
+
+- `nite/accterr` ←— runacct cron/tac 作业的错误日志（ASCII）
+- `nite/active` ←— runacct 的进度报告（ASCII）
+- `nite/active` [mndd] ←— runacct 的上一次进度报告（ASCII）
+- `nite/cms` ←— prdaily 使用的命令总摘要（ASCII）
+- `nite/ctmp` ←— 连接会话记录（ASCII）
+- `nite/dacct` ←— 每个用户的每日使用记录（tacct）
+- `nite/dayacct` ←— 全天会计记录总计（tacct）
+- `nite/daycms` ←— prdaily 使用的每日命令摘要（ASCII）
+- `nite/lastdate` ←— 限制 runacct 每天只运行一次（ASCII）
+- `nite/linuse` ←— 会话记录（ASCII）
+- `nite/oxtmp` ←— 上一次系统的 wxtmp 数据（tacct）
+- `nite/reboots` ←— 会计期间的会话报告（ASCII）
+- `nite/statefile` ←— runacct 的过程入口点（ASCII）
+- `nite/wtmperror` ←— runacct 的 wxtmp/lix 错误消息（ASCII）
+
+- `sum/cms` ←— 每月清除前的命令摘要（tacct）
+- `sum/cmsprev` ←— 更新前的命令摘要（tacct）
+- `sum/daycms` ←— 每日命令摘要（tacct）
+- `sum/logilog` ←— 每个已使用 ID 的最后一条记录（ASCII）
+- `sum/xrpt` [mndd] ←— prdaily 命令的输出（ASCII）
+- `sum/tacct` ←— 清除前的总期间会计数据（tacct）
+
+- `fiscal/cms` [mm] ←— 会计命令摘要（tacct）
+- `fiscal/fiscrpt` [mm] ←— 会计总报告（ASCII）
+- `fiscal/tacct` [mm] ←— 会计总会计摘要（tacct）
+
+# 性能工具
+
+以下是随 Accounting Services 附带的一些有助于评估性能的工具，以及它们使用方法的简短示例。
+
+`vstat` 命令报告有关内核线程、内存、磁盘 I/O、陷阱和处理器活动的信息。AIX 5L 等新版本的命令行选项增加了面向 I/O 的输出，每行包含三个新字段和一个时间戳。要查看两个具有新 AIX 5L 参数的五秒钟系统切片摘要，请输入
+
+```sh
+# vstat -It 5 2
+```
+
+`timex` 命令将显示命令的已耗时、用户时间和系统执行时间。命令行选项允许生成类似 `sar` 命令数据项的系统活动总报告。要显示由 `ps -ef` 命令产生的系统活动，请输入
+
+```sh
+# timex -s ps -ef > /dev/null
+```
+
+`iostat` 命令报告处理器统计信息以及所有系统输入和输出设备统计信息。随 AIX 5L 提供的新命令行选项增加了新的适配器和系统吞吐量标题字段及报告。在此命令收集数据之前，必须将 `sys0` 的 `iostat` 属性设置为 `true`。使用 `lsattr` 和 `chdev` 命令来列出和更改此属性。
+
+```sh
+# lsattr -El sys0 -a iostat      # Check the iostat attribute
+# chdev -l sys0 -a iostat=true   # Change the iostat attribute
+```
+
+使用以下命令行在复制一个大文件到跨越这三个测试驱动器的目标文件系统 `/fatest` 时，从这三个测试驱动器收集 I/O 性能数据。
+
+```sh
+# echo "/bin/cp . /largefile /fatest\n/usr/sbin/umount /fatest" > a.out
+# iostat -d hdisk2 hdisk3 hdisk4 5 > /tmp/iostat.out &
+# timed.sh a.out
+# jobs          # To see what background jobs to stop
+# kill %1       # To kill the background iostat command
+```
+
+卸载文件系统可确保测试数据已完全写入目标驱动器，并且 `timex` 命令将为您提供一个参考标尺。请不要在此示例中使用、测试或卸载生产文件系统。
+
+`sar` 命令特别擅长从对称多处理器系统收集 CPU 统计信息。它调用 `sadc` 命令，并访问已由会计系统和 adm crontab 激活的许多数据收集文件。实际上，`/usr/lib/sa/sa/sa2` 是一个为 `sar` 配置的包装脚本，设置为由 adm crontab 每天运行一次（参见本章中“Cronat 条目”部分）。要创建一个临时报告，该报告可作为 ASCII 输入文件用于电子表格，以说明第四号 CPU 当天的性能（该报告将追踪全天内 `%usr`、`%sys`、`%wio` 和 `%idle` 的变化），请输入
+
+```sh
+# sar -P 4 > /tmp/cpu4_data.txt
+```
+
+# 定期清理
+
+开启系统计就像打开水闸一样。在活跃的多服务器系统上，会计可能会生成大量数据，这些数据必须作为常规清理活动的一部分进行过滤和归档。adm cron 表中指定的默认会计程序会定期关闭并重命名会计文件，以协助管理数据。系统管理员负责实施归档旧数据文件并清理它们的程序。应该保存哪些信息以便后世参考？你可以采取保守的方法，保存所有报告和数据文件；或者你可以不计后果，创建 cron 表脚本每天删除旧报告和数据文件。适度的做法可能建议
+
+
+
+定期压缩并归档摘要文件，同时保留前一天的数据文件在线副本，以供短期历史查询。
+
+## 检查清单
+
+以下是系统核算的关键点检查清单：
+
+- AIX 系统核算系统基于数据采集、管理和报告命令，以及周期性数据管理脚本。它提供了基于系统核算数据管理所需的所有命令和脚本。
+- 数据采集在系统核算开启时开始，在关闭时停止。收集的信息代表连接时间、进程资源、命令、磁盘使用情况以及打印队列利用率。
+- 连接时间数据累积在 `/var/adm/wtmp` 和 `/etc/utmp` 文件中。
+- **rsh** 和 X11 客户端的组合可能会绕过使用 X11 环境中的连接数据核算。
+- 操作系统运行的每个进程的资源利用率信息在进程退出时记录在 `/var/adm/pacct` 文件中。不会记录未退出的进程信息。
+- 进程数据还提供命令和应用使用的审计跟踪，这有助于分析应用使用情况，并可能有助于跟踪安全问题。然而，经验丰富的黑客倾向于在离开现场前修复核算信息。
+- 你可以定期收集系统的磁盘使用情况信息，并将其存储在与 `/var/adm/dtmp` 文件中。
+- **enq** 命令和 **qdaemon** 进程记录打印队列系统利用率统计信息。
+- 核算记录存储在一组位于 `/var/adm` 目录中的文件中。
+- 如果 `startup` 脚本由 **adm** 用户账户在任何其他用户运行之前运行，核算系统将创建大多数数据采集文件。
+- 如果你必须手动更改或创建核算系统数据文件，请以 **adm** 权限执行此操作。你可能需要使用 **root** 权限来修正文件所有权。
+- 手动配置核算文件时，配置 `/etc/acct/holidays` 文件以反映你的主要班次和计划假日。文件中的第一个未注释行必须指示年份以及主要班次的开始和结束时间。后续行指示全年计划中每个假期的日期和描述。
+- 手动配置磁盘核算时，通过更改该文件系统属性来切换文件系统磁盘核算为 true 或 false。使用 chfs 命令将 account stanza 设置为 true 以监控每个文件系统的账户。不要直接编辑 /etc/filesystems 文件。
+- 手动创建核算文件时，在 /var/adm/acct 目录中创建拥有 adm 所有权的 nite、fiscal 和 sum 报告子目录，否则在核算系统启动后 /var/adm/pacct 数据文件将保持为空。
+- 启动和停止核算系统的主要命令是 accton。
+- 提供了启动脚本以在启动时启动核算系统。
+- shutacct 脚本从系统关闭脚本中调用，以将关闭数据附加到 /var/adm/wtmp。
+- 使用 turnacct 或 accton 命令手动停止系统核算。
+- 你可以使用 sa 命令显示存储在 /var/adm/pacct 中的数据摘要。
+- 使用 BSD ac 和 last 命令显示连接历史。
+- 标准报告集通过 runacct 和 monacct 命令按间隔生成。这些命令应由 adm crontab 运行。
+- vmstat 命令报告关于内核线程、内存、磁盘 I/O、陷阱和处理器活动的信息。
+- timee 命令将显示命令的经过时间、用户时间和系统执行时间。
+- iostat 命令报告处理器统计信息和所有系统输入/输出设备统计信息。
+- sar 命令还收集对称多处理系统的 CPU 统计信息。
+- 在 adm crontab 中指定的默认核算程序定期关闭并重命名核算文件，以协助数据管理。系统管理员必须实施程序来归档和清理旧的数据文件。
+
+# 第X部分
+
+# 安全性
+
+- 23 审计与安全性
+- 24 分布式计算环境
+
+# 第23章
+
+## 审计与安全性
+
+![](img/82f851021955589d82b22750fb3b1646_509_0.png)
+![](img/82f851021955589d82b22750fb3b1646_509_1.png)
+
+互联网的惊人增长和计算机数量的增加改变了许多人经营业务和生活方式。很少有人会否认过去十年技术爆发所带来的巨大好处。不幸的是，这些巨大好处伴随着同样沉重的负担：世界充满了新的和有价值目标，供计算机黑客和其他希望破坏公司基础设施的人利用。对计算机安全性的需求从未如此之大，而提供该安全的责任完全落在系统管理员肩上。
+
+## 什么是安全性？
+
+“安全性”这个词对不同的人往往意味着不同的东西：用户可能期望他在计算机上创建的电子邮件和文件对未授权人员保持私密。如果存储在数据库中的客户信息被盗取或损坏，企业可能会被摧毁。如果关键系统因拒绝服务攻击而变得不可用，依赖该系统的所有人都会受到影响。
+
+对于系统管理员来说，上述任何问题都构成安全违规。需要主动措施来确保尽可能多的场景被考虑、规划和保护。
+
+## 定义安全策略
+
+虽然最安全的计算机是断电并锁在银行金库中的那一台，但这台计算机可能没有实用的目的。在采取如此激烈的措施之前，考虑定义和实施正式安全策略的好处。通过公开一些简单规则并通过 AIX 提供的审计和控制来强制执行这些规则，你可以保护自己免受大多数攻击。
+
+在定义此安全策略时，理解保护与易用性之间的权衡很重要。过于严格的限制可能会阻碍系统使用，导致用户寻找绕过策略的“捷径”。确保策略分发给用户社区，并且用户理解他们在保持系统和数据安全方面的角色。在开发安全策略时，至少考虑以下几点：
+
+- 用户隐私
+- 系统完整性
+- 可用性和授权访问
+- 易用性
+- 审计和问责
+
+## 密码
+
+根据**系统管理、网络和安全 (SANS) 学院**，默认和弱密码构成了最常见安全漏洞之一。没有什么比限制性密码策略更不受欢迎于用户。不幸的是，没有严格的控制，人们通常会使用简单的、容易猜到的单词，这些单词无法匹敌密码破解程序的能力。
+
+什么才是好密码？它必须容易记住，但不应该是词典中找到的单词，也不应基于容易发现的个人信息。密码应频繁更改；但如果用户被迫过于频繁地更改密码，他们通常会退而求其次使用较弱的密码，从而违背最初的安全目标。
+
+这些问题中的一部分只能通过公开宣传密码政策和教育用户社区关于弱密码的危险来解决。幸运的是，ADX 5L 提供了一些工具和功能，有助于解决其中一些问题并强制执行你定义的策略。
+
+## /etc/passwd 和 /etc/security/passwd
+
+所有基于 UNIX 的操作系统都在文件 `/etc/passwd` 中存储用户账户信息。系统中的每个用户账户由该文件中的一行表示，各个字段用冒号分隔。字段代表：
+
+- 用户名
+- 用户的加密密码
+- 用户标识号 (UID)
+- 用户的主要组标识号 (GID)
+- 用户的全名
+- 用户的家庭目录
+- 用户的 shell
+
+如上摘自 `/etc/passwd` 文件的片段所示，几个字段可能为空：
+
+```text
+root::!::0:0:::/bin/ksh
+daemon::!:1::1::/etc
+...
+jdoe::!:210:1:John Doe:/home/jdoe:/usr/bin/ksh
+jane::!:211:1:Jane Plain:/home/jane:/usr/bin/ksh
+```
+
+敏锐的读者会注意到，第二字段本应包含用户的加密密码，却包含了一个星号或感叹号。原因是关于 UNIX 密码方案最大问题之一的解决方案。
+
+
+
+
+`/etc/passwd` 文件必须对所有系统用户可读；这是系统上的程序获取用户信息（包括用户名和主目录）的方式。
+
+```bash
+# ls -l /etc/passwd
+-rw-r--r-- 1 root security 989 Apr 21 11:24 /etc/passwd
+```
+
+尽管文件中存储的密码是经过加密的，但该加密是通过一种算法完成的，如今借助计算机的强大算力很容易被破解。AIX 通过将占位字符放入密码字段，并将实际的加密密码存储在另一个仅 root 可读的文件中来解决此问题。该文件是 `/etc/security/passwd`。
+
+```bash
+# ls -l /etc/security/passwd
+-rw------- 1 root security 508 Apr 21 11:24 /etc/security/passwd
+```
+
+上述用户账户在此文件中的条目如下：
+
+```text
+root:
+    password = m1lnz0ois8rdw
+    lastupdate = 1015529254
+    flags =
+
+daemon:
+    password = *
+    ...
+
+jdoe:
+    password = LW94qd/8zKd.c
+    lastupdate = 1019416125
+    flags =
+
+jane:
+    password = QVvyzV3vkSwcY
+    lastupdate = 1019416076
+    flags = ADMCHG
+```
+
+上述 `/etc/security/passwd` 摘录中有几个值得注意的地方：
+
+- daemon 账户的密码是一个星号。由于任何密码的加密值都不可能是一个星号，因此该账户有一个无法输入且永远无法登录的密码（尽管 root 可以 su 到该账户）。
+- **jane** 显示了 ADMCHG 标志。该标志表示用户 **jane** 最近一次的密码更改是由 root 执行的，因此 **jane** 在下一次登录时必须立即输入新密码。包括 root 在内的任何人都不应知道用户的未加密密码。
+
+## 密码限制与老化
+
+用户很少愿意使用强密码，而且他们通常不喜欢在一生中更改密码超过一次。这些倾向违反了账户安全的黄金法则。幸运的是，AIX 提供了一种机制，既可以强制用户更改密码，也可以指导他们创建强密码。
+
+表 23-1 列出了可用于强制执行用户密码质量以及必须更改密码频率的选项。这些选项可以在创建账户时按用户设置（SMIT 快速路径 mksuser），或在之后任意时间点通过 SMIT 快速路径 passwdattrs 进行设置。也可以通过编辑 `/etc/security/user` 文件中的以下字段，在系统范围内进行设置。表 23-1 显示了这些用户属性到 SMIT 选项的快速映射。请使用 SMIT 帮助查看每个属性的完整描述。
+
+| 用户属性 | SMIT mksuser 或 passwdattrs 选项 |
+|---|---|
+| pwdwarntime | 在密码过期前提醒用户的天数 |
+| pwdchecks | 密码检查方法 |
+| dictionary | 密码字典文件 |
+| histsize | 密码重用前的数量 |
+| histexpire | 密码重用前的周数 |
+| maxexpired | 密码过期与锁定之间的周数 |
+| maxage | 密码最大有效时长 |
+| minage | 密码最小有效时长 |
+| minlen | 密码最小长度 |
+| minalpha | 密码最小字母字符数 |
+| minother | 密码最小其他字符数 |
+| maxrepeats | 密码最大重复字符数 |
+| mindiff | 密码最小不同字符数 |
+
+表 23-1. 用户属性到 SMIT 选项的映射
+
+## 替代身份验证方法
+
+除了标准的本地用户名/密码组合外，还存在许多其他用于验证用户身份的方法。其中一些方法旨在提高登录过程的安全性，而其他方法的目标则是为分布在不同网络上的多个系统创建通用的身份验证服务。AIX 5L 提供了多种设施，以整合这些替代身份验证方案。
+
+### 添加自定义身份验证方法
+
+文件 `/usr/lib/security/methods.cfg` 包含一个被注释掉的文本块（默认情况下），允许系统管理员定义替代身份验证方法：
+
+```text
+auth_method:
+    program = /any/program
+```
+
+通过在 `program` 行中指定自定义身份验证程序的路径，管理员可以启用该程序来验证用户。最常见的用途是 NIS 和 DCE（已在 AIX 5L 中的此文件中存在）。以下是一个简单的 auth_method 示例，它要求用户输入一个秘密单词。如果用户输入正确的单词，程序以零代码退出。如果未输入正确的单词，程序以非零代码退出。
+
+```bash
+#!/bin/ksh -
+# trivial alternate auth_method
+
+read secret "Who goes there? "
+if [ $secret = "itisme" ]; then
+  exit 0
+else
+  exit 1
+fi
+```
+
+如果将上述程序保存为 `/usr/local/auth/whogoesthere`，则应向 `/usr/lib/security/methods.cfg` 添加以下片段：
+
+```text
+whogoesthere:
+   program = /usr/local/auth/whogoesthere
+```
+
+要使用新的身份验证方法，必须在 `/etc/security/user` 文件中指定。如果列在默认片段中，新方法将适用于所有用户：
+
+```text
+default:
+  auth1 = SYSTEM,whogoesthere
+  auth2 = NONE
+```
+
+当用户 **nancy** 尝试登录时，她将会看到：
+
+```text
+login: nancy
+nancy's Password: <nancy's password>
+Who goes there? Idontknow
+3004-007 You entered an invalid login name or password.
+```
+
+如果她随后输入正确的秘密单词，登录过程将继续成功进行。
+
+### Kerberos
+
+Kerberos 是由 MIT 设计并在 AIX 5L for POWER V5.1 扩展包 CD 中由 IBM 提供的系统名称。Kerberos 是一种网络身份验证协议，旨在通过使用对称密钥加密技术为客户端/服务器应用程序提供强大的身份验证。
+
+在“Kerberos 化”的环境中，假设除了身份验证服务器本身外，所有系统和应用都是不可信任的。用户从身份验证服务器获取称为*票据*的身份验证凭据，并将该票据呈现给其他系统和应用。通过使用此系统，用户在网络上密码的传输被降至最低。票据仅在有限时间内有效，因此即使它被捕获并破解，也不包含对试图入侵系统的人可能有用的信息。
+
+Kerberos 需要大量的设置才能发挥作用，并且任何希望使用此身份验证方法的应用程序都必须编写以支持 Kerberos。Kerberos 被广泛用作分布式计算环境（DCE）和 Andrew 文件系统（AFS）以及 IBM SP 系统的身份验证方法。
+
+### 安装 Kerberos
+
+AIX 5L 包含的 Kerberos 实现称为“IBM 网络身份验证服务”，可在 AIX 5L for POWER V5.1 扩展包的卷一中找到。每个使用 Kerberos 身份验证的系统必须安装 filesel **krb5.client.rte**。该 filesel 包含 Kerberos 库和用户命令。在被指定为密钥分发中心（KDC）的系统上，以及任何“从属”KDC 上，还必须安装 **krb5.server.rte** filesel。
+
+请注意，上述 filesel 将命令安装到 `/usr/krb5/bin` 和 `/usr/krb5/sbin`。这样做是为了避免与已安装到标准位置中的命令混合并可能导致覆盖。这些命令也用于 DCE，但属于不兼容的实现。因此，如果你想要使用网络身份验证服务，请确保 `/usr/krb5` 目录在 *PATH* 中位于 `/usr/bin` 和 `/usr/sbin` 之前。此外，由于 Kerberos 高度依赖于所有客户端和服务器系统准确的时间同步，建议使用 *ntpd* 或 *timed* 以确保正确的时钟设置。
+
+### 配置服务器
+
+要配置主 KDC 和 Kerberos 管理服务器，请使用命令 `/usr/sbin/config.krb5`，并带有以下标志和参数：
+
+| 标志 | 示例参数 | 含义 |
+|---|---|---|
+| -s | none | 表示配置是针对服务器的。 |
+| -d | domain.tld | 指定包含此区域的 DNS 域。 |
+| -r | REALM.DOMAIN.TLD | 指定正在定义的 Kerberos 区域的名称。 |
+| -S | hostname.domain.tld | 指定正在配置的主机的完全限定域名。目前不支持。 |
+
+因此，要在名为 **kdc.srv** 的主机上设置 KDC 和管理服务器，该主机位于 `osborne.com` 域中，区域为 BOOKS.OSBORNE.COM，请执行以下命令：
+
+```bash
+# /usr/sbin/config.krb5 -S -d osborne.com \
+         -r BOOKS.OSBORNE.COM
+```
+
+Kerberos 配置中最容易被忽视的部分是同步系统时钟。对于本示例，以下 **setclock** 命令就足够了，但对于企业解决方案，你可能需要对此进行更多思考：
+
+```bash
+# setclock timeserver.osborne.com
+                              # 同步系统时钟
+```
+
+### 配置客户端
+
+每个客户端必须配置为 Kerberos 区域的成员；这也是通过 **config.krb5** 命令完成的，并带有以下标志和参数：
+
+| 标志 | 示例参数 | 含义 |
+|---|---|---|
+| -C | none | 表示配置是针对客户端的。 |
+| -c | hostname.domain.tld | 指定区域 KDC 的完全限定域名。 |
+| -d | domain.tld | 指定包含此区域的 DNS 域。 |
+| -r | REALM.DOMAIN.TLD | 指定 Kerberos 区域。 |
+| -S | domain.tld | 指定区域管理服务器的完全限定域名。 |
+
+因此，要配置客户端以使用前一节中定义的 Kerberos 区域，请执行以下命令：
+
+```bash
+# /usr/sbin/config.krb5 -C -c kdc.srv.osborne.com \
+          -d osborne.com -r BOOKS.OSBORNE.COM \
+          -S kdc.srv.osborne.com
+
+# setclock timeserver.osborne.com
+                              # 同步系统时钟
+```
+
+
+
+
+现在让我们使用以下命令在 KDC 上创建主机密钥、主机密钥表文件和一个用户：
+
+```bash
+# kinit admin/admin  <------------------ 以 admin 账户进行身份验证
+# kadmin              <---- 启动 kadmin 交互 shell
+kadmin:  list_principals
+kadmin:  add_principal -randkey -clearpolicy host/kdcsrv.osborne.com
+kadmin:  ktadd host/kdcsrv.osborne.com
+kadmin:  add_principal UserName
+kadmin:  exit
+```
+
+现在从客户端和 KDC 服务器测试你新的 UserName 主体。
+
+```bash
+# kinit UserName  <-------------------- 以新的 UserName 主体进行身份验证
+# klist            <------ 列出你的新 Kerberos 票据
+```
+
+## 附加信息
+
+前面的章节仅简要介绍了网络认证服务的部署。实现 Kerberos 需要大量的规划和资源，以确保系统的安全性、可靠性和可扩展性。幸运的是，IBM 提供了广泛的文档，格式包括 PDF 和 HTML，位于文件集 krb5.doc.en_US 中，也可以在扩展包 CD-ROM 中找到。另一个出色的信息源是 M.I.T. Kerberos 网站，位于 http://web.mit.edu/kerberos/www/。
+
+## 控制超级用户访问
+
+必须谨慎对待 root 密码、其使用方式以及谁可以访问它。通常，root 不应直接登录到系统；拥有超级用户账户访问权限的用户应先登录自己的账户，然后使用 su 命令变为 root。这样，所有尝试变为 root 的操作，无论成功或失败，都会被记录到 /var/adm/sulog。为了阻止通过直接网络登录 root 账户，请运行以下命令
+
+```bash
+# chuser rlogin='false' root
+```
+
+AIX 通过定义可以使用 su 命令切换到特定账户的组，以及拒绝允许使用 su 切换到特定账户，从而提供额外的保护。这些控制在 /etc/security/user 文件中按每个用户设置：
+
+```yaml
+root:
+    sgroups = system,security
+```
+
+前面的片段说明，只有通过 **su** 命令切换到 root 的 system 或 security 组成员才允许。
+
+## 保护网络访问
+
+保护网络访问或许是确保安全受保护的计算环境的最重要部分。大量的安全违规事件是由于网络服务配置不当或应用设计不良导致的。因此，务必确保系统的网络“足迹”尽可能狭窄且安全。
+
+与各网络协议、服务和应用相关的安全问题在涉及网络的章节中详细阐述。简而言之，网络安全有三条基本规则：
+
+- 如果运行中的服务不是必需的，请将其禁用。
+- 限制对剩余服务的访问，以便只有需要连接的系统和网络能够连接。
+- 如果某个应用使用不安全的协议进行通信，应替换为安全的替代方案。
+
+有关详细信息，请参阅本书中关于网络的章节以及本章末尾列出的资源。
+
+## 保护文件访问
+
+AIX 5L，如同所有基于 UNIX 的操作系统一样，使用权限来确定谁可以读取、修改和执行系统中的对象（普通文件、目录和特殊设备文件）。权限可以分别为对象的拥有者、列在 /etc/group 中的组的成员以及所有其他用户（“其他”）单独设置。
+
+### 基本文件权限
+
+传统的或基本的文件访问权限是通过使用 **chmod** 命令分配的权限。用户可以使用 **chmod** 修改其拥有的任何文件的权限。权限可以使用八进制或符号表示法来指定。
+
+```bash
+$ chmod 640 a_file
+```
+
+```bash
+$ ls -l a_file
+-rw-r-----  1 jdoe   staff    0 Apr 20 14:54 a_file
+```
+
+在上面的例子中，文件的权限设置为例：拥有者 jdoe 可读可写（第一位的 "6"），staff 组成员只读（第二位的 "4"），其他用户无访问权限（第三位的 "0"）。
+
+使用符号模式设置相同的权限：
+
+```bash
+$ chmod u+rw,g+r,o-rwx a_file
+```
+
+### umask
+
+使用 umask 命令（通常在用户的 shell 配置文件中）、通过 SMIT 快速路径 mkuser（在创建账户时）或通过 SMIT 快速路径 chuser（修改现有账户）可以设置用户账户创建的文件和目录的默认权限。
+
+```bash
+# smit chuser
+...
+文件创建 UMASK                       [22]
+```
+
+请注意，umask 值是从默认权限中移除（而不是减去！）的，默认权限对于新创建的目录为 777，对于新创建的文件为 666。因此，umask 值为 022 的结果为
+
+```bash
+$ umask 022
+
+$ mkdir a_new_directory ; ls -ld a_new_directory
+drwxr-xr-x  2 jdoe staff     512 Apr 20 15:26 a_new_directory
+
+$ touch a_new_file ; ls -l a_new_file
+-rw-r--r--  1 jdoe staff     0 Apr 20 15:26 a_new_file
+```
+
+### Set-UID 和 Set-GID
+
+root 用户还可以将文件或目录设置为 set-UID 或 set-GID。通常，当执行文件时，它以运行该程序用户的 UID 和 GID 运行。然而，当文件被设置为 set-UID 时，程序将以文件拥有者的有效用户 ID 运行。
+
+在 AIX 中，只有编译过的程序才能被设置为 set-UID 或 set-GID；如果这些权限应用于 shell 脚本，出于安全原因，在执行 shell 脚本时它们会被忽略。
+
+在 /tmp 中创建 /usr/bin/ksh 的副本，并将该副本的拥有者设置为 "root"。
+
+```bash
+# cp /usr/bin/ksh /tmp/ksh
+# chown root /tmp/ksh
+# ls -l /tmp/ksh
+-r-xr-xr-x  1 root      system     243374 Apr 20 15:10 /tmp/ksh
+```
+
+用户 **jdoe** 通过 `/tmp/ksh` shell 运行 `id` 命令。由于该 shell 对所有用户（"other"）可执行，因此命令成功并打印 **jdoe** 的 UID 和 GID。
+
+```bash
+# su - jdoe
+$ /tmp/ksh -c "id"
+uid=210 (jdoe) gid=1 (staff)
+```
+
+然后，root 用户将 `/tmp/ksh` 的权限更改为 set-UID。
+
+```bash
+# exit
+# chmod u+s /tmp/ksh
+# ls -l /tmp/ksh
+-r-rsr-x 1 root system 243374 Apr 20 15:10 /tmp/ksh
+```
+
+用户 **jdoe** 再次通过 `/tmp/ksh` shell 执行 `id` 命令。由于该 shell 现在设置为 set-UID root，使用该 shell 的任何用户都具有 root 的有效 UID。
+
+```bash
+# su - jdoe
+$ /tmp/ksh -c "id"
+uid=210 (jdoe) gid=1 (staff) euid=0 (root)
+```
+
+此示例说明了 set-UID 和 set-GID 程序的固有危险性。在设置程序这些模式时应极其谨慎。完成此示例后，请确保删除 `/tmp/ksh` 副本。
+
+```bash
+# rm /tmp/ksh
+```
+
+## 访问控制列表 (ACLs)
+
+除了基本访问权限外，AIX 5L 提供了一种更精细的方法，即使用访问控制列表（ACL）。使用三个命令来显示和操作访问控制列表：
+
+| 命令 | 描述 |
+| :---- | :---- |
+| `aclget` | 打印指定文件上设置的 ACL |
+| `acledit` | 在由环境变量 EDITOR 指定的编辑器中编辑 ACL |
+| `aclput` | 将 ACL 分配给指定文件，从标准输入或单独的文件读取 |
+
+要确定文件是否有关联的 ACL，可以使用 `aclget` 显示信息，或使用带有 **-e** 标志的 `ls` 命令，该命令将在基本权限右侧显示一个附加字段。如果该字段包含加号 (+)，则表示该文件已设置 ACL。
+
+## 设置 ACL
+
+ACL 由三个部分组成：属性、基本权限和扩展权限：
+
+```bash
+$ aclget /home/datafile
+attributes:
+base permissions
+    owner(dJoe): rw-
+    group(staff): r--
+    others: ---
+extended permissions
+    disabled
+```
+
+前面的 ACL 是为使用 **umask** 为 022 创建且未分配任何扩展权限的文件创建的。
+
+**属性** ACL 的属性部分详细说明了文件上的任何特殊模式，例如 set-UID (SUID)、set-GID (SGID) 或“粘滞位” (SVTX)。这些模式应使用带有符号表示法的 **chmod** 命令设置（原因将在本节稍后解释）。
+
+**基本权限** 基本权限部分显示设置在该文件上的标准权限，也是通过 **chmod** 命令或根据用户的 **umask** 值设置的。
+
+**扩展权限** 扩展权限部分包含访问控制条目 (ACE) 的列表。一个 ACE 由三个字段组成：关键字、符号表示法的权限以及该 ACE 适用的用户和/或组列表。关键字是 **permit**、**deny** 或 **specify** 之一。
+
+```bash
+$ aclget /home/datafile
+...
+extended permissions
+enabled
+specify    rw-    u:jane
+specify    rw-    g:payadmin
+deny       rw-    u:fred
+permit     r--    g:payroll
+```
+
+扩展权限部分的上面几行指定
+
+- 扩展权限已启用（注意“enabled”一词必须如所示出现，否则 ACL 不会激活）。
+- 用户 **jane** 可以读取和写入该文件。
+- **payadmin** 组的任何成员都可以读取和写入该文件。
+- 用户 **fred** 不能读取或写入该文件，即使他是 **staff** 或 **payadmin** 组的成员。
+- **payroll** 组的任何成员都可以读取该文件。
+
+
+
+
+508 AIX 5L 系统管理
+
+## 使用访问控制列表时的注意事项
+
+在系统中使用访问控制列表（ACL）之前，有几点重要事项需要注意：
+
+- ACL没有标准规范。因此，AIX 5L中ACL的实现与其他基于UNIX的操作系统（包括Sun Solaris和HP-UX）以及AFS文件系统中使用的ACL不同。
+- 只有当NFS服务器是AIX时，NFS挂载的文件系统才会遵循ACL。
+- 如果文件设置了ACL，后续使用八进制表示法的chmod命令将禁用该ACL。然后必须通过acledit命令重新设置ACL。因此，对于可能设置了ACL的文件，在chmod命令中仅使用符号表示法。
+- 了解您正在使用的备份程序是否支持ACL至关重要；如果不支持，从该程序恢复的文件将移除其ACL。与mkssys一起使用的backup和restore命令支持ACL，而tar、pax和cpio不支持。
+
+## 可信计算基础
+
+持续监控系统的文件和目录，以查找不熟悉的程序、错误的权限以及对重要文件的未授权更改，几乎是一项不可能完成的任务。幸运的是，AIX 5L集成了一个名为可信计算基础（Trusted Computing Base，TCB）的安全系统，帮助您自动执行关键任务，确保没有可能导致系统被破坏的意外情况。
+
+TCB的组件协同工作，用于监控和报告系统软件变更，并提供一个可信的命令子集，其完整性可以在不可信的计算环境中被依赖。
+
+## TCB安装
+
+可信计算基础只能在操作系统新安装期间安装。安装后或迁移升级期间不能安装。此限制很重要，因为它确保TCB监控的所有程序和文件都未被修改。
+
+要检查系统是否安装了可信计算基础，请以root用户执行/usr/bin/tcbck。如果TCB已安装，将打印使用说明。如果未安装，将显示以下错误消息：
+
+```
+3001-101 The Trusted Computing Base is not enabled on this machine.
+```
+
+若要启用可信计算基础，必须重新安装并将“Install Trusted Computing Base”选项设置为YES。
+
+```
+No checking is being performed.
+```
+
+## TCB配置
+
+可信计算基础的配置文件是/etc/security/sysck.cfg。对于每个可信项，sysck.cfg中有一个包含应用程序或文件各种属性的节（stanza）。
+
+```
+# cat /etc/security/sysck.cfg
+...
+/usr/bin/ps:
+   owner = bin
+   group = system
+   mode = TCB,SGID,555
+   type = FILE
+   class = apply,inventory,boe.rte.control
+   size = 64506
+   checksum = '02845  63'
+```
+
+前面的节是针对/usr/bin/ps命令的。对于此命令，TCB将监控所有者和组、权限以及文件大小。它还将计算校验和，以确保程序未被替换为具有相同大小和属性的其他文件。
+
+默认情况下，TCB配置中包含超过4000个程序和文件。您可能根据自己的特定安全需求，将自己的文件添加到其中，并更改或删除任何预定义的节。
+
+## 使用TCB
+
+通过/usr/bin/tcbck命令访问可信计算基础。通过tcbck，可以将项添加到TCB进行监控；可以更改对象的属性；可以从TCB中移除项；并且，最重要的是，可以运行检查和查找不一致及问题。
+
+下表详细列出了可以在TCB监控下的项中指定或检查的属性和选项。
+
+| 属性 | 描述 |
+| :--- | :--- |
+| aol | 文件的访问控制列表（ACL）。如果这与实际文件ACL不匹配，tcbck将设置文件的ACL为此值。 |
+| checksum | 通过sum -r命令生成的文件校验和。 |
+| class | 此条目所属的类。 |
+| group | 文件组的GID或名称。如果这与实际文件不匹配，tcbck将设置文件组为此值。 |
+| links | 指向文件的硬链接列表。如果指定的链接不存在，tcbck将创建它们。 |
+| mode | 包含文件权限和特殊模式（SUID, SGID, SVTX, 和 TCB）的逗号分隔列表。如果这与实际文件的值不匹配，文件模式将更改。 |
+| owner | 文件所有者的UID或名称。如果这与实际文件不匹配，tcbck将设置文件所有者为此值。 |
+| program | 用于检查此文件条目的程序的路径、名称和标志。如果程序以非零代码退出，tcbck将为此条目打印错误，但不会采取进一步行动。 |
+| size | 文件大小。 |
+| source | 文件的源。如果指定，tcbck将用指定的项复制正在检查的文件。 |
+| symlinks | 指向此文件的符号链接列表。如果指定的链接不存在，tcbck将创建它们。 |
+| target | 仅用于sysck.cfg中是符号链接的条目；包含条目链接来源的文件作为值。 |
+| type | 条目的类型；可以是FILE, DIRECTORY, FIFO, BLK_DEV, CHAR_DEV, 或 MPX_DEV之一。 |
+
+## 检查问题
+
+要执行TCB扫描，请执行命令/usr/sbin/tcbck并带有以下参数之一：
+
+- -n 报告问题但不采取行动
+- -l 报告问题并提示用户采取建议的纠正措施
+- -y 报告问题并自动采取纠正措施
+- -p 静默纠正问题，不报告问题或采取的操作
+
+您还必须指定要检查的文件的路径和名称、要检查的类名、/etc/security/sysck.cfg文件中的所有条目，或系统上的所有文件。请注意，后两个选项可能需要大量时间。
+
+以下示例显示了每种类型检查的语法和结果。
+
+### 示例 1
+
+要检查/usr/sbin/backup命令的所有属性，而不修复任何问题，请执行
+
+```
+# /usr/bin/tcbck -n /usr/sbin/backup
+3001-024 The file /usr/sbin/backup has the wrong file owner.
+3001-023 The file /usr/sbin/backup has the wrong file mode.
+```
+
+该命令的输出表明/usr/sbin/backup的权限和所有权不正确。
+
+### 示例 2
+
+要静默修复/usr/sbin/backup程序中的问题，请运行命令
+
+```
+# /usr/bin/tcbck -p /usr/sbin/backup
+```
+
+前面的命令将重置/usr/sbin/backup的所有权和权限为/etc/security/sysck.cfg文件中指示的值，但不会报告任何问题或采取的纠正措施。
+
+### 示例 3
+
+要检查TCB配置中包含的所有文件的所有属性，并对发现的每个不一致项进行提示，请执行命令
+
+```
+# /usr/bin/tcbck -t ALL
+
+3001-024 The file /usr/bin/df has the wrong file owner.
+
+3001-073 Change the file owner for /usr/bin/df? (yes, no) yes
+
+3001-031 The link from the file /usr/sbin/lvfs
+
+to /usr/sbin/chvfs does not exist.
+
+3001-066 Create the link for /usr/sbin/chvfs? (yes, no) yes
+```
+
+在前面的示例中，**tcbck**报告了**df**和**lvfs**命令的问题，并询问用户是否应修复这些问题。
+
+## 更改TCB
+
+将文件添加到TCB进行监控也是使用**tcbck**命令完成的。例如，在安装OpenSSH后，系统管理员希望将服务器和客户端程序都添加到TCB中。
+
+```
+# ls -l /usr/local/bin/ssh /usr/local/bin/sshd
+
+-rws--x-x 1 root system 1032156 Mar 07 09:34 /usr/local/bin/ssh
+
+-rwxr-xr-x 1 root system 1028207 Mar 07 09:34 /usr/local/bin/sshd
+
+# /usr/bin/tcbck -a /usr/local/bin/ssh checksum owner group mode size type
+
+class=local
+
+# /usr/bin/tcbck -a /usr/local/bin/sshd checksum owner group mode size type
+
+class=local
+```
+
+前面的命令将**ssh**和**sshd**添加到`/etc/security/sysck.cfg`文件中；指示应监控校验和、所有权、权限、文件大小和类型；并指定两个文件都应添加到TCB类**local**中。以下两个节被添加到`/etc/security/sysck.cfg`中：
+
+```
+/usr/local/bin/ssh:
+    class = local
+    checksum = "64052 1008 "
+    group = system
+    mode = SUID,rwx--x-x
+    owner = root
+    size = 1032156
+    type = FILE
+
+/usr/local/bin/sshd:
+    class = local
+    checksum = "12079 1005 "
+    group = system
+```
+
+
+
+
+
+## 安全注意键
+
+可信计算基（TCB）的安全注意键（SAK）功能可确保用户在通过串行连接终端登录系统时，只能使用可信命令。请注意，SAK 不适用于通过网络建立的会话。
+
+要配置 SAK，root 用户必须修改 `/etc/security/login.cfg` 文件，并在 SAK 需要可用的每个 TTY 端口的配置项中添加 `sak_enabled=true`。完成此操作后，已获得 SAK 使用权限并通过该 TTY 登录的用户可以通过输入按键组合 CTRL-X CTRL-R 来调用可信通信路径。该按键组合应在输入用户名和密码之前输入。
+
+用户调用 SAK 并按照常规方式登录系统后，系统将不再启动常规 shell，而是为该用户启动可信 shell（tsh）。可信 shell 在语法上与 Korn shell（ksh）相似，但有几个关键区别：
+
+- 只能执行可信程序（即被 TCB 标记为可信的程序）。
+- 不支持函数和别名定义。
+- 无法重新定义 IFS 和 PATH 环境变量。
+- 不可用历史记录机制。
+- 仅执行 `/etc/tsh.profile` 配置文件；用户主目录中的 shell 配置脚本不会被运行。
+
+## 审计子系统
+
+在讨论安全性时，仅仅定期检查是否有人忘记了锁门往往是不够的。更好的做法是主动接收门被打开的通知。AIX 5L 包含一个审计子系统，可以跟踪和记录任意数量的预定义或自定义系统活动。通过启用审计功能，您可以轻松监控广泛的安全相关事件。请注意，默认情况下，审计功能是禁用的。与审计相关的日志文件可能会迅速增长，且审计过程产生的开销会对系统性能产生轻微但可测量的影响。
+
+### 审计类别
+
+AIX 审计子系统提供四个可监控和记录的通用类别。
+
+### 事件
+
+*事件* 是一种系统活动，通常定义在系统调用级别。每次执行命令时，都会发起若干系统调用。这些系统调用中的每一个都对应一个事件，并会被审计过程记录。事件的名称、导致该事件的命令、执行命令的用户、日期和时间，以及该事件的成功或失败状态都将记录在日志中。
+
+### 类
+
+*类* 简单来说就是事件的分组。一个类可以包含一个或多个事件，将相关事件分组有助于简化审计日志的管理和解释。请注意，AIX 限制为 31 个类（加上包含所有系统事件的 ALL 类）。
+
+### 对象
+
+*对象* 即文件。当特定文件被定义为受审计对象时，所有对该文件的读取、写入和执行尝试都将被记录。
+
+### 用户
+
+*用户类别* 定义了针对特定用户账户要审计的具体事件和类。可以根据用户对可信程度的感知来增加或减少记录的事件数量。
+
+### BIN 模式与 STREAM 模式
+
+审计子系统可以以两种模式运行：BIN 模式或 STREAM 模式。每种模式都有其优势，如果需要也可以同时使用两者。
+
+BIN 模式（二进制模式）将审计数据发送到两个交替使用的“bin”中，并以紧凑的二进制格式将其数据写入文件 `/audit/trail`。它最适合长期存储审计记录。
+
+要将此文件转换为可读格式，必须运行 **auditpr** 命令：
+
+```sh
+# /usr/sbin/auditpr < /audit/trail
+```
+
+STREAM 模式将审计记录写入文件 `/audit/stream.out`，并在生成时处理审计信息。此文件为纯文本格式，可以边写边读。但请注意，每次重启审计时，该文件都会被擦除。因此，STREAM 模式最适合实时监控受审计事件。
+
+### 审计配置
+
+审计子系统的所有配置文件都位于 `/etc/security/audit` 目录中。
+
+```sh
+# ls -l /etc/security/audit
+total 56
+-rw-r----- 1 root audit     37 Sep 30 1997 bincmds
+-rw-rw---- 1 root audit   2116 Nov 06 16:37 config
+-rw-rw---- 1 root audit  12236 Nov 06 22:00 events
+-rw-rw---- 1 root audit    340 Sep 30 1997 objects
+-rw-r----- 1 root audit     54 Sep 30 1997 streamcmds
+```
+
+`/etc/security/audit/config` 文件由若干部分组成（stanzas），每个部分定义了审计子系统行为的一个方面。start 部分设置了启动审计时运行的模式——BIN、STREAM 或两者：
+
+```ini
+start:
+  binmode = on
+  streammode = off
+```
+
+接下来的两个部分定义了这两种模式的位置和其他行为。对于 BIN 模式，可以定义两个 bin 的名称和位置以及输出文件。STREAM 部分仅包含包含审计流处理命令的文件的位置。
+
+```ini
+bin:
+  trail = /audit/trail
+  bin1 = /audit/bin1
+  bin2 = /audit/bin2
+  binnsize = 10240
+  cmds = /etc/security/audit/bincmds
+
+stream:
+  cmds = /etc/security/audit/streamcmds
+```
+
+各种类别在下一个部分中详细列出。默认情况下，以下格式定义了十个类别；您可以自由修改这些现有类别或添加自己的类别。
+
+```ini
+classes:
+  general = USER_SU, PASSWORD_Change, FILE_Unlink, FILE_Link, FILE_Rename, FS_Chdir, FS_Chroot, PORT_Locked, PORT_Change, FS_Mkdir, FS_Rmdir
+```
+
+最后一部分 `users` 包含要审计的用户名称，以及为这些用户审计的具体类别。
+
+```ini
+users:
+  root = general
+```
+
+可以通过手动将它们添加到该文件，或在 SMIT 的 **mkuser** 或 **chuser** 屏幕的相应字段中选择要监控的审计类别，来选择要审计的用户：
+
+```sh
+# smit chuser
+    AUDIT classes                    [general,objects,files] *
+```
+
+分配给文件的审计类别必须在 `/etc/security/audit/objects` 文件中定义。该文件中的每个部分列出了要审计的对象名称、要审计的操作（读取、写入和/或执行）以及与该操作相关的事件。
+
+```ini
+/etc/security/passwd:
+    r = "S_PASSWD_READ"
+    w = "S_PASSWD_WRITE"
+```
+
+### 启动和停止审计
+
+审计子系统由 `/usr/sbin/audit` 命令控制。完成必要的配置后，执行此命令：
+
+```sh
+# /usr/sbin/audit start
+```
+
+上述命令将启动系统审计。如果请求以 STREAM 模式进行审计，请注意，`/audit/stream.out` 文件中的任何先前数据都将被清除。如果您希望在每次系统启动时都激活审计功能，IBM 建议将 **audit start** 命令放在 `/etc/rc.file` 中，以便在启动过程的早期阶段监控事件。
+
+要查询审计子系统的状态，请运行以下命令：
+
+```sh
+# /usr/sbin/audit query
+```
+
+如果审计未处于活动状态，将打印以下信息：
+
+```
+auditing off
+    bin processing off
+    audit events:
+            none
+    audit objects:
+            none
+```
+
+如果审计处于活动状态，将显示审计进程的 PID，以及正在监控的事件、类别和对象的列表。要停止审计，请执行以下命令：
+
+```sh
+# audit shutdown
+```
+
+应将此命令添加到您的 /etc/rc.shutdown 脚本中，以确保审计过程正常终止。可以通过将 off 和 on 指定为 audit 命令的参数来暂停和重启审计。
+
+## 附加安全工具
+
+AIX 拥有大量开源和免费软件工具。这些工具有助于保护您的系统并确保其中存储的数据完整性。以下几个更流行的工具在下面的章节中列出。
+
+请注意，虽然列表中许多工具都提供编译好的、随时可安装的格式，但尽可能从源代码构建程序是一项好的策略。
+
+### John the Ripper
+
+保护系统最重要的一项措施之一就是帮助用户养成好的密码习惯。用户可能不希望得到这种帮助，但他们必须理解这种必要性，并理解创建强密码以保护其账户的重要性。
+
+John the Ripper 是一款密码破解工具。它以加密密码列表作为输入，试图确定其未加密的值。如果 John the Ripper 能够确定用户的密码，那么该密码可能强度不高。
+
+John the Ripper 的主页是 http://www.openwall.com/john/。可以从该网站下载 John 的最新版本的源代码形式，或从 http://www.build.de/pub/ 下载编译好的 LPP 格式。
+
+### Swatch
+
+Swatch，即“简易监视器”，是一个 Perl 应用程序，它持续监控日志文件，查找配置文件定义的模式。当检测到该模式时，swatch 可以执行多种操作，例如执行程序或将检测到的错误电子邮件到指定地址。Swatch 自动化了不断阅读日志文件、从噪音中分离重要条目的繁琐过程。
+
+Swatch 可从 http://eta.cs.colorado.edu/~swatch/ 下载。它需要 Perl，AIX 5L 已包含 Perl。
+
+### Tripwire
+
+Tripwire 是一款文件完整性监控工具，提供免费版和商业版。除了 TCB 提供的功能外，Tripwire 还提供许多其他功能和报告能力。它还适用于多种平台，因此是异构数据中心的绝佳解决方案。商业版提供集中配置、监控和报告。有关 Tripwire 的更多信息，请访问 http://www.tripwire.com/。关于在 AIX 上构建 Tripwire 免费版的说明可参见 IBM eServer
+
+
+
+开发人员领域网站 `http://www.ibm.com/servers/aixd/pseries.html` 的“教程”部分。
+
+## 信息来源
+
+有许多免费的信息来源可以帮助您了解最新的安全漏洞动态。IBM 会向邮件列表发布安全公告和补丁通知，您可以访问网页 `http://techsupport.services.ibm.com/server/listserv/` 进行订阅。
+
+SANS 研究所与 FBI 合作，在 `http://www.sans.org/top20.htm` 上维护了一份 20 个最关键互联网安全漏洞的列表。许多漏洞存在于所有 UNIX 系统中，而不仅仅是 AIX，遵循所提供的指南将大大降低您系统的风险暴露。
+
+IBM 红书（Redbooks）网站 `http://www.redbooks.ibm.com/` 有几本关于 AIX 系统安全的书籍。这些指南是极佳资源，有助于深入理解使系统尽可能安全可用的工具和设施。
+
+## 检查清单
+
+以下是审计和安全要点检查清单：
+
+- 定义安全。
+- 经常更改密码。
+- 识别替代身份验证方法。
+- 控制超级用户访问权限。
+- 保护网络访问。
+- 保护文件访问。
+- 识别 TCB 的组件。
+- 使用 TCB 监控并报告系统上软件的变更。
+- 使用 TCB 提供一组可信命令子集，其完整性可在不可信的计算机环境中被依赖。
+- 监控一系列与安全相关的事件。
+- 识别所有可用于 AIX 的开源和免费软件工具。
+- 识别所有可以帮助您了解最新安全漏洞动态的免费信息来源。
+
+![](img/82f851021955589d82b22750fb3b1646_532_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_533_0.png)
+
+## 第 24 章
+
+## 分布式计算环境 (DCE)
+
+CE 站点正在各地涌现。在过去几年中，DCE 技术已经成熟。大多数供应商操作系统中广泛使用 DCE 进行开放分布式安全便是这一事实的见证。DCE 的新兴流行源于我们身处的高度分布式计算世界的基础设施需求。DCE 可能没有所有答案，但它是将遗留计算环境与较新的分布式技术绑定在单一安全和通信框架下的最佳方案。
+
+1990 年 5 月，开放软件基金会 (OSF) 发布了 DCE 规范，该规范基于惠普 (Hewlett-Packard)、数字设备公司 (Digital Equipment Corporation)、西门子尼克斯多夫 (Siemens Nixdorf)、麻省理工学院 (MIT)、太阳公司 (Sun)、Transarc 和微软 (Microsoft) 提供的供应商技术（见表 24-1）。DCE 基本上是一组远程过程调用 (RPC) 钩子、例程和服务器，便于在异构系统网络中开发分布式服务。DCE 提供了将分布式应用程序绑定到底层操作系统和网络服务的粘合层。
+
+在顶层，DCE 定义了一个称为单元（cells）的去中心化管理域层次结构（参见下文插图）。单元标识 DCE 服务和对象的管理域，用于命名、安全和目的。单元在全球 DCE 命名空间中是层次化的，并基于信任级别进行互操作。表 24-2 列出了我们将详细说明的 DCE 组件列表。
+
+![](img/82f851021955589d82b22750fb3b1646_534_0.png)
+
+### DCE RPC
+
+在最低层，DCE 客户端和服务器通过远程过程调用 (RPC) 进行通信。提供了一种接口定义语言 (IDL)，用于将 DCE 接口构建到应用程序中，从而向程序员隐藏 RPC 的复杂性和架构依赖性。`idl` 编译器生成一种称为桩（stub）的依赖语言的接口，该接口可以集成到目标应用程序的客户端和服务器软件中。桩在命名空间中具有唯一标识，并负责维护客户端/服务器上下文和状态信息（参见下文插图）。
+
+| 供应商 | 技术 |
+| --- | --- |
+| HP/DEC | 远程过程调用 (RPC) |
+| DEC | 内容多线程架构 (CMA) |
+| | 分布式时间服务 (DECCTS) |
+| | 分布式命名服务 (DECDNS) |
+| Siemens Nixdorf | X.500 (DIR.X) 目录服务 |
+| MIT Project Athena | 安全 (Kerberos) |
+| Microsoft/Sun/HP | PC 集成服务 |
+| Transarc | 分布式文件系统 (DFS) |
+| Transarc/HP | 无磁盘服务 |
+
+**表 24-1. DCE 技术选择**
+
+要查看 `idl` 命令选项列表，请运行以下命令：
+
+```bash
+# /usr/bin/idl -config
+```
+
+![](img/82f851021955589d82b22750fb3b1646_535_0.png)
+
+| DCE 组件 | 描述 |
+| --- | --- |
+| 远程过程调用 | 用于构建分布式服务的例程 |
+| 目录服务 | 全局和单元命名服务 |
+| 安全服务 | 身份验证、授权和访问控制服务 |
+| 分布式时间服务 | 单元时间同步服务 |
+| 线程服务 | 用于多路复用 RPC 接口的 POSIX 线程服务 |
+| 分布式文件系统 | 基于 AFS 的分布式文件服务 |
+
+**表 24-2. DCE 组件**
+
+### 单元目录服务
+
+单元内部和单元之间的对象通过向目录命名服务 (DNS) 发出查询来定位和识别。DCE 全局 DNS 基于 X.500 和 X/Open 目录服务 (XDS) API。带有单元的命名服务基于互联网 DNS 和单元目录服务 (CDS)。DCE 对象可以包括人员、组织、系统、资源、服务等。目录服务是层次化和去中心化的，以支持全球和本地单元命名空间。复制和缓存用于保证本地访问性能水平。
+
+全局目录服务 (GDS)、单元目录服务 (CDS) 和互联网域名服务 (DNS) 的语法可能有点令人困惑。以下语法示例说明了 GDS 和 DNS 使用的命名约定。`.` 和 `..` 符号代表 GDS 和 DNS 根级别。`/..../CellName` 和 `./..` 符号代表本地单元根。
+
+```text
+GDS X.500    C=[Country]/O=[Organization]/OU=[Org Unit]/CN=[Common Name]
+             /../C=US/O=University of Washington/ \\
+             OU=Computing & Communications/CN=DekRest
+```
+
+```text
+DNS          /..../CellName]/[SubClass]
+             /..../cac.washington.edu/sec/principal/deroest
+             /../sec/principal/deroest
+```
+
+DCE 目录服务中真正的绑定单元是一个称为通用唯一标识符 (UUID) 的 128 位数字。命名空间中的每个 RPC 接口都由一个 UUID 表示。目录服务为 DCE 应用程序提供对象名称到 UUID 的映射。`uuidgen` 实用工具用于为新接口创建 UUID。
+
+### 安全服务
+
+DCE 安全服务基于 Kerberos 版本 5。加密机制使用私有密钥或安全密钥，而非公共密钥。私有密钥是单元中身份验证和授权的第一级。为每个账户/密码生成密钥，并存储在主服务器的密钥表中。主安全服务器在密钥登录时检查私有密钥。一旦用户通过验证，安全服务器将颁发会话密钥（票据），供客户端请求每个服务时使用。安全服务器使用密钥嵌套加密来分发会话密钥。票据还可以包含权限授权证书 (PAC)。PAC 描述了客户端针对特定服务的授权级别。票据交换交互可能相当令人困惑。您可以在第 23 章中找到关于 Kerberos 票据传递的简短描述。
+
+使用访问控制列表 (ACL) 提供更细粒度的访问控制。ACL 可以与任何对象关联。它们类似于标准 UNIX 权限，但提供额外的访问控制级别。ACL 可以由最终用户和系统管理员在用户或组级别定义。ACL 基本上是一个说明谁可以对对象执行什么操作的列表。ACL 还代表了另一层复杂性
+
+
+超出初始安全授权和访问控制的范围。你需要仔细考虑如何为您的单元定义 ACL（访问控制列表）和组。
+
+## 分布式时间服务
+
+DCE 的分布式时间服务（DTS）相当直观。时间服务实现为服务器层次结构，以同步单元内的计时。在顶层，时间提供者从标准机构或硬件设备获取标准化时间。全局时间服务器将时间参考从提供者分发到单元中的客户端和服务器。如果单元包含多个局域网（LAN），每个 LAN 可能需要一个本地时间服务器。单元内的所有节点通过时间抄录员同步本地系统时间。抄录员通过时间信使从服务器获取参考时间。
+
+DCE 时间标准基于协调世界时（UTC）。与格林尼治平均时间（GMT）一样，UTC 基于 0 度经度。时区通过向 UTC 时间添加正或负的时间差分因子（TDF）来计算。UTC 格式化为具有 100 纳秒分辨率的 128 位时间戳。DTS 协议与网络时间协议（NTP）互操作。时钟校正例程管理机器和单元之间的偏差、通信延迟和闰秒。
+
+## 线程
+
+线程支持 DCE 客户端和服务器之间的并行性和流水线处理。线程可以被视为单个任务或控制流。线程共享进程地址空间，并且不一定需要特殊的进程间通信（IPC）机制来共享数据。提供了实现进程线程之间的同步和锁定以及管理调度的设施。
+
+## 分布式文件服务
+
+数据共享由分布式文件服务（DFS，参见第 15 章）促进，该服务源自 Transarc 和卡内基梅隆大学开发的 Andrew 文件系统（AFS）技术。DFS 和 AFS 之间的主要差异涉及 DFS 与其他 DCE 服务的集成以及底层的 DCE 本地文件系统（LFS）架构。LFS 是一个动态的、基于日志的文件系统，与 AIX 日志文件系统（JFS）非常相似。LFS 结构也紧密映射到 AFS 构造。例如，DFS 文件系统树类似于 AFS，即通过单元格名称分隔的下一级来识别公共根。DFS 共享根命名为 `/.`，单元格子目录紧随其后，如 `/.<cellname>`。使用令牌传递机制和 POSIX 语义来调解更新和锁定，从而保持本地和远程访问透明性。通过复制和本地缓存保持高水平的文件系统可用性。DFS 支持计划性和释放型文件系统复制。DFS 可以导出任何经过增强以支持 DCE VFS 扩展的虚拟文件系统（VFS）。
+
+表 24-3 应该有助于解释使用 DCE 时的一些基本术语。
+
+| 术语 | 描述 |
+|---|---|
+| 绑定 | 客户端与服务器建立联系的过程。 |
+| 单元 | 作为单元管理的节点和资源的集合。 |
+| 客户端 | 请求服务的实体。 |
+| 抄录员 | 类似于客户端但具有自主性；抄录员用于维护目的。 |
+| 信使 | 代表抄录员从全局服务器请求时间信息。 |
+| 本地 DTS | 单元内某个局域网的时间服务器。 |
+| 全局 DTS | 单元的时间服务器。 |
+| 提供者 DTS | 为 DTS 服务器获取标准化时间信息。 |
+| 主体 | 参与 DCE 安全服务安全交互的任何实体。 |
+| 服务器 | 服务提供商。 |
+| UUID | 通用唯一标识符；唯一标识所有 DCE 实体的位字符串。 |
+
+## DCE 版本
+
+开放软件基金会（OSF）早在 1991 年发布了 DCE V1.0。直到最近，版本 1 的第三次发布 DCE V1.0.3 仍是大多数供应商产品的基准，包括 AIX V3。DCE V1.1 于 1994 年 11 月上市。DCE V1.1 解决了用户针对先前代码库提出的许多投诉。具体而言，V1.1 减少了管理 DCE 的许多复杂性。引入了单一的管理员接口 `decp`；它简化了繁琐的命令行接口。DCE 主守护进程 `deed` 提供对 DCE 服务的远程管理访问。单元别名允许您更改或以不同名称引用您的单元，而无需完全重建。分层单元管理在 DCE V1.2 中实现。添加了新的编程功能，包括扩展注册表属性（`statchschema`）和通用安全服务应用程序编程接口（GSS-API）。使用扩展注册表属性，您可以将 DCE 和遗留安全系统映射在一起以支持单点登录；例如，您可以将 DCE 主体映射到 MVS RACF 2.2 身份。
+
+IBM 当前的 DCE V3.1 和以前的 DCE V2.2 都基于 OSF DCE 1.2.2 发布。DCE V3.1 和 DFS V3.1 现在分开销售，并伴随细微的包装更改，这些更改是同步 IBM 的 AIX 和 Solaris 发行版所必需的。这些包括新的 `decp` 增强功能、DFS 改进和 IDL C++ 支持。
+
+## AIX 和 DCE
+
+应用程序和操作系统网络之间的 DCE 层比人们想象的要厚！然而，您并不需要在单元中的每个节点上都具备全套 DCE 服务。IBM 已打包 DCE，以便您可以将 DCE 层仅设置为每个节点所需的厚度。例如，每个 DCE 客户端不需要全套目录服务代码。客户端只需要足够的例程集来联系目录服务器。表 24-4 分解 DCE 文件集以显示包装更改。
+
+AIX 的 DCE 基础服务提供 RPC、CDS、DTS 和 SS 功能的 DCE 客户端支持。DCE 基础服务可以集成到 AIX 身份验证服务中。基础中的其他组件包括文档；SMT 接口；以及使用 API、X/Open 目录服务（XDS）和抽象数据操作（XOM）进行目录服务访问。
+
+DCE 安全服务是独立于标准 AIX 安全功能的安全服务。该产品包含 DCE 安全服务器 `secd` 和数据库管理工具。通过安全服务器进行身份验证要求客户端用户调用 DCE 登录设施 `dce_login`。通过安全服务器进行身份验证是创建用于访问其他 DCE 服务并满足 DFS 中 ACL 权限的 DCE 上下文所必需的。如 DCE 概述中所述，这些安全功能基于 Kerberos V5 身份验证算法。
+
+DCE 目录服务由 AIX DCE 目录服务提供。DCE DNS 与 Bind DNS 和 X.500 协议均互操作。服务器由单元目录服务器（CDS）和全局目录代理（GDA）组成。CDS 管理单元内资源的数据库。GDA 在单元之间通信以访问全局资源。
+
+表 24-5 列出了具有相关服务的不同 DCE 守护进程。
+
+表 24-6 列出了您需要熟悉的一些 DCE 命令。
+
+### 表 24-4. DCE V3.1 与 V2.2 文件集
+
+| 应用程序 | DCE V3.1 | DCE V2.2 |
+| :--- | :--- | :--- |
+| DCE 基础服务 | dce_client.* | dce_client_core.* |
+| DCE 安全服务 | dce_security.* | dce_security.* |
+| DCE 单元目录服务 | dce_cds.* | dce_cds.* |
+| 在线文档 | dce_doc.* | dce_doc* |
+| 消息传递 | dce_msg.* | dce_msgs* |
+| DCE 线程库 | dce_client_dce_pthreads | dce_pthreads.* |
+| DCE X.500 API 库 | dce_xdsm.* | dce_xdsmod.* |
+| 面向应用开发者的 DCE | dce_tools.* | dce_tools.* |
+| DCE 系统管理 | dce_sysmgmt.* | dce_sysmgmt.* |
+| 分布式文件服务（参见第 15 章） | dls.* | dce_dls* |
+
+### 表 24-5. AIX DCE 客户端和服务器
+
+| 服务 | 守护进程 | 描述 |
+|---|---|---|
+| SS | **secd** | 安全服务器 |
+|  | **dced** | 客户端安全/rpc 服务器 |
+|  | **dceumind** | DCE/AIX 安全集成器 |
+| CDS | **cdsd** | 单元目录服务器 |
+|  | **cdsadv** | CDS 广告发布器——帮助客户端访问 CDS |
+|  | **cdsclerk** | CDS 客户端和服务器之间的接口 |
+|  | **gdad** | 全局目录代理——跨单元访问 |
+| DTS | **dtsd** | DTS 客户端/服务器 |
+| DFS | **dfs** | 参见第 15 章中的客户端/服务器列表 |
+
+### 表 24-6. AIX DCE 管理命令
+
+| 命令 | 描述 |
+|---|---|
+| **mkdce** | DCE 配置设置脚本 |
+| **lsdce** | DCE 脚本显示状态 |
+| **rmdce** | DCE 配置删除脚本 |
+| **dcecp** (交互) | 用于管理任务对象的 DCE 控制程序 |
+| **rpcgp** (交互) | 用于端点映射和 RPC 应用程序的 RPC 控制程序 |
+| **cdscp** (交互) | 管理名称空间的 CDS 控制程序 |
+| **dts cp** (交互) | 时间服务管理 |
+| **rgy_edit** (交互) | 安全服务器管理 |
+| **uuidgen** | 创建通用唯一标识符 |
+| **rmxcred** | 删除过时的凭证 |
+| **chpssite** | 更新 `pe_site` 文件 |
+| **rc.dce** | DCE 服务的启动脚本 |
+| **dce.clean** | DCE 服务的关闭脚本 |
+| **passwd_import** | 从 AIX 组和密码文件填充注册表 |
+| **passwd_export** | 从注册表创建 AIX 组和密码文件 |
+| **cdsl** | CDS 递归列表 |
+| **cdsdel** | CDS 递归删除 |
+| **sec_create_db** | 初始化安全数据库 |
+| **dfs** | 参见第 15 章 |
+
+
+
+
+## DCE 规划
+
+在深入安装流程之前，仔细规划整个 DCE 单元拓扑至关重要。一旦配置投入生产环境，变更将极其困难。即使是像单元名称这样简单的设置也不易更改，尽管新的、不受支持的单元别名命令提供了一些替代方案。
+
+## 单元拓扑
+
+首先，预测未来几年的预期用户增长量。您应考虑用户数、计算机、应用程序和管理组的增加。如果预期快速增长，明智的做法是初始时设置的数量与组织中的管理角色对应的单元数量相匹配。将作为整体运行、共享资源并拥有共同认证基础的用户和系统组进行合并。请记住，标识单元中所有用户、计算机和服务的主要名称空间必须具有唯一性。网络拓扑也可能决定单元边界的划分。尽量避开局域网中的单点故障以及客户端与关键服务之间的网络瓶颈。与将所有内容放入一个单元相比，多个单元在长期扩展性上可能表现得更好。单元层次结构有助于管理多个单元。
+
+确定单元布局后，选择独特的单元名称，以有助于标识工作组并简化单元间通信。请记住单元间（X.509）和单元内（DNS）标识所用的格式。如果您已有代表组织部门的现有互联网 DNS 域名，可以考虑将它们用作单元名称。将每个 DNS 域级别映射到一个 X.500 级别。如果您将与组织外部的现有单元一起工作，可能需要遵循外部环境中使用的单元命名约定。请谨慎选择！
+
+## 服务器拓扑
+
+现在决定如何在单元中分配 DCE 服务器。此处的决策将基于计算机和网络硬件拓扑。每种服务器类型都可以与其他 DCE 服务器共存于同一台计算机上，或者驻留在专用系统上。如果硬件成本允许，后者更为优选。还应考虑复制服务器以提高可用性。可用性与性能之间需要权衡。更多的副本意味着更多的时间用于同步和检查点副本。DCE 支持服务器之间两种类型的用户空间复制：立即复制和 skulk 复制。每次主服务器更新时都会发生立即复制。使用 skulk 复制进行定期更新。还可以通过配置文件对服务器访问进行优先级设置。默认配置文件作为基础安装和配置的一部分创建。您可以自定义自己的服务器配置文件，但这意味着需要手动输入 UUID 信息。建议部署奇数个副本，以简化服务器投票以确定主从角色。
+
+最小 DCE 配置需要以下三个服务器：
+
+- 安全服务器
+- 单元目录服务器
+- 分布式时间服务器
+
+使用硬密钥程序来设计您的安全服务器环境。这意味着，专用一台机器并将其锁在机房中！如果您计划使用 DFS 在单元内共享数据，请参阅第 15 章以获取规划、安装和管理的详细信息。
+
+## 主体与安全
+
+单元中的每个用户、计算机和服务都被标识为一个主体（principal），并关联一个 UUID 编号。随着单元中主体数量的增加，为每种主体类型分配 UUID 范围将使角色识别更容易。您还应尽早考虑定义额外的组以简化访问控制。
+
+在开始安装流程之前，选择一个单元管理员 ID 和密码。该账户将用于管理 DCE 安全服务和注册表。如果在管理功能中使用明文管理员密码，也可以限制 DCE 管理员账户在特定机器或安全子网中的使用。
+
+还需要决定如何保持 AIX 和 DCE 安全信息同步。用户密码信息必须添加到本地 AIX 数据库以及 DCE 安全注册表中。为了批量更新任一数据库，可以使用 `passwd_export` 和 `passwd_import` 工具。安装 DCE 后，调用 `passwd_import` 读取现有的 AIX 密码信息并初始化 DCE 注册表。`passwd_export` 工具从注册表读取并创建 AIX 密码文件。
+
+为了在登录时将 DCE 集成到 AIX 认证过程中，必须使用 `deucnixd` 服务。这将避免用户在登录到 AIX 后专门调用 `dee_login`。
+
+## 测试单元
+
+建立一个测试单元来验证和压力测试您的 DCE 配置是一个非常好的主意。测试单元也是新的 DCE 系统程序员、管理员、操作员和最终用户的绝佳学习工具。如果可以负担得起机器成本，请在部署生产系统后保留测试单元。它将为您提供尝试新配置的机会，而不会干扰生产服务，并有助于调整和调试。使用测试单元检查分阶段迁移和实施的互操作性。
+
+## DCE 安装与配置
+
+从新安装的 AIX 5L 开始，/opt 目录现在是一个文件系统。AIX 4.3.3 系统管理员可能希望为此创建专门用于 IBM 提供的 Linux 相关应用程序的文件系统，或为 AIX 5L 迁移做准备。请注意，DCE 安装会创建一个指向 /usr/ppc/dce 的符号链接 /opt/dcellocal。尽管 DCE 安装到 /usr、/var 和 /etc 文件系统/目录中，但应用程序预期 DCELOCAL=/opt/dcellocal，如 /etc/rc.dce 启动脚本中设置的那样。
+
+IBM 文档建议为 /var/dce 和 /var/dce/directory（或 CDS）创建独立的 30MB 文件系统，以保护它们免受 /var 填满的影响。如果在一台机器上运行多个 DCE 服务，应将 /var/dce 的大小加倍并仔细监控其可能的扩展需求。您需要定期清理该文件系统中的过期凭证、日志和审计文件，因此考虑将这些维护任务添加到 cron 中。
+
+参阅第 6 章以获取关于安装将在单元中每台计算机上使用的 AIX DCE 包的说明。仅安装每台机器上计划支持的服务所需的 DCE 包。
+
+您可能希望通过定义 RPC_UNSUPORTED_NETIFS 变量来限制哪些网络接口可以绑定到 CDS 和端点映射。这是一个非常有价值的工具，如果实施不当可能会极具破坏性。如果默认未设置此变量，RPC 将通过所有网络接口绑定。要禁用 RPC 绑定到网络接口 en2 和 en3，从而仍允许绑定到 en0 和 en1，请在登录以配置或启动 DCE 之前，将以下行添加到 /etc/environment 文件：
+
+```
+RPC_UNSUPORTED_NETIFS=en2, en3
+```
+
+现在这些接口将不会进行 RPC 绑定
+
+使用以下 rpcp 命令在 DCE 配置完成后显示所有映射元素：
+
+```
+# rpcp show mapping
+```
+
+分两步配置 DCE。首先配置并启动基础单元服务：主安全服务器、单元目录服务器和时间服务器。在这些服务配置并启动后，配置额外的 DCE 服务和副本服务器。使用 SMIT FastPath smit dce 或 mkdce 来配置这些服务并注册单元名称。请注意，如果配置期间发生故障或您希望进行修改，您需要完全移除该服务。可以通过在 SMIT 中选择“Unconfigure”选项（图 24-1）或调用 rdce 来移除服务。使用 lsdce 命令验证配置状态。
+
+```
+# smit dce 
+# mkdce [options]
+# lsdce [options]
+# rdce [options]
+```
+
+- SMIT DCE 配置（图 24-1）
+- 创建 DCE 客户端和服务器
+- 列出 DCE 服务
+- 移除 DCE 服务
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_544_0.png)
+
+## 图 24-1。SMIT DCE 面板
+
+### 安全服务
+
+首先使用 SMIT 快速路径 `smit mkdcescrv` 定义主安全服务器。当被提示时，从列表中选择 `"primary"`。系统将要求你定义单元名称、安全服务器主机名、单元管理员账户，以及是否启用或禁用基于证书的登录。在此处保留默认值 NO，因为定义 *受托配置文件（Entrusted Profile）* 超出了本章的范围。选择你将用于主体（principals）的起始和最大 UID 范围。完成后，SMIT 将在该机器上启动 `decd` 和 `secd` 守护进程（参见图 24-2）。
+
+```
+# smit mkdcescrv `←`—Create security server
+```
+
+### 目录服务
+
+通过调用 SMIT 快速路径 `smit mkcdssrv` 来配置主单元目录服务器。系统将提示你输入前一部分中配置的单元名称和安全服务器名称。验证其他 DCE 字段是否正确，并为 CDS 选择主机名。完成后，主 CDS 服务器（**cdsd**）、CDS 客户端（**cdsadc**）和 CDS 职员（**cdsclerk**）将启动。SMIT 还将为 CDS 创建初始清账处（clearinghouse）（参见图 24-3）。
+
+```
+# smit mkcdsserv Create cell directory server
+```
+
+### 分布式时间服务
+
+接下来，通过执行 SMIT 快速路径 **smit mkdtsrv** 为基础单元创建一个分布式时间服务器。系统将提示你为这台机器选择 DTS 类型。注意，DTS 服务器不能与另一个 DTS 服务器或客户端共存。如果 DTS 位于与安全服务器不同的子网中，这会抑制广播，请输入安全服务器主机名。完成后，该主机将配置为 CDS 客户端，并且 DTS（本地或全局）时间服务（**dtsd**）将启动（参见图 24-4）。
+
+```
+# smit mkdtserv Create distributed time server
+```
+
+![](img/82f851021955589d82b22750fb3b1646_545_0.png)
+
+**图 24-3。** SMIT DCE SDS 面板
+
+![](img/82f851021955589d82b22750fb3b1646_546_1.png)
+
+**图 24-4。** SMIT DCE DTS 面板
+
+### 客户端和服务器
+
+现在你已准备好配置额外的服务器副本、其他 DCE 服务器（如 DFS，见第 15 章）以及 DCE 客户端。可以创建具有完全管理员权限或本地管理员权限的客户端。在后一种情况下，单元管理员没有对本地客户端的 root 访问权限，且本地客户端没有单元管理员权限。在这种情况下，DCE 客户端设置是一个两步过程。首先，管理员部分在具有单元管理员访问权限的单元机器上执行。本地部分随后在本地客户机器上执行。如果选择完全访问权限，两个步骤都可以在本地机器上完成。调用 SMIT 快速路径 smit mkdceclient 来创建 DCE 客户端。注意，如果你未选择 all\_cl 代表所有客户端，那么你创建的第一个客户端应该是安全服务器客户端进程（参见图 24-5 和 24-6）。
+
+```bash
+# smit mkdceclient
+```
+
+### 验证 DCE 配置
+
+在完成 DCE 客户端和服务器机器的配置后，从每个参与系统中验证配置。运行 lsdce 命令。
+
+```bash
+# lsdce -r
+Gathering component state information...
+```
+
+| 主机 rs253 的组件摘要 | | |
+| --- | --- | --- |
+| 组件 | 配置状态 | 运行状态 |
+| 安全主服务器 | 已配置 | 正在运行 |
+| 安全客户端 | 已配置 | 正在运行 |
+| RPC | 已配置 | 正在运行 |
+| 初始目录服务器 | 已配置 | 正在运行 |
+| 目录客户端 | 已配置 | 正在运行 |
+| DTS 全局服务器 | 已配置 | 正在运行 |
+
+使用 dcecp 列出你在单元中配置的主机：
+
+```bash
+# dcecp -c host catalog
+/.../mcgraw-hill/hosts/rs250
+/.../mcgraw-hill/hosts/rs253
+```
+
+你还可以使用 dcecp 目录选项来列出单元中配置的其他主体和资源。
+
+![](img/82f851021955589d82b22750fb3b1646_548_0.png)
+
+SMIT DCE 客户端类型面板
+
+![](img/82f851021955589d82b22750fb3b1646_548_1.png)
+
+SMIT DCE 客户端面板
+
+### 账户配置
+
+继续配置机器以允许 DCE 身份验证登录，通过以下命令将 DCE 注册表与本地 AIX 用户数据库同步：
+
+```
+# dce_login cell_admin ←————You must log in as your defined administrator
+# klist | grep Principal ←——Check to see if you are really cell_admin
+# passwd_import ←————Answer "no" to all the questions
+```
+
+没有用户或组标识冲突的用户现在拥有 DCE 注册表账户。你可以使用以下命令行和交互式 dcecp 命令来列出、查看、启用这些账户以及设置密码：
+
+```
+# dcecp -c account catalog ←———Lists all the accounts
+# dcecp -c account show UserName ←——Lists the details of an account
+# dcecp ←——————Starts the interactive mode needed to modify accounts
+dcecp> account modify UserName -actvalid yes ←———Enables an account
+dcecp> account modify UserName -password T3mP ←———Sets temporary password
+```
+
+此时，系统上的任何用户都应该能够使用以下命令获取作为新 UserName 主体的 Kerberos 身份验证：
+
+```
+# dce_login UserName ←——This authenticates you
+# klist ←————This will display your Kerberos ticket information
+```
+
+这可能就是你应用程序所需的全部身份验证，但本节其余部分描述了如何配置系统，以便用户通过单个 AIX/DCE 登录进程通过 telnet 登录并获取身份验证。对此最常见的需求是访问分布式文件服务（Distributed File Service）。此单次登录进程的其他应用超出了本章的范围。
+
+在 DCE 服务启动后，在 /etc/inittab 中于启动时启动 dceunixd 守护进程。这必须在允许单次 AIX/DCE 登录（telnet, rexe, 和 rlogin）的服务器或客户端上运行。否则，用户将不得不在使用 dce_login 获取其身份验证票证。以下 mkinitab 命令将 dceunixd 添加到 /etc/inittab 文件：
+
+```
+# mkinitab -i rcdev \
+*dceunixd:2:respawn:/bin/dceunixd -l 60 -d 1 >/dev/console 2>&1*
+```
+
+dceunixd 守护进程必须在没有 DCE 上下文的情况下启动，因此最简单的方法是在此时重启系统。
+
+从 AIX 4.3.3 开始，以下 DCE 身份验证方法已包含在 /usr/lib/security/methods.cfg 文件中，且 /etc/security/login.cfg 中的 auth_method 节不再受支持。使用以下 **tail** 命令检查 methods.cfg 文件：
+
+```
+# tail /usr/lib/security/methods.cfg
+DCE:
+    program = /usr/lib/security/DCE
+```
+
+编辑 /etc/security/user 以设置默认用户 **SYSTEM** 节，或使用 **chuser** 命令为此特定用户更改此节。
+
+```
+# vi /etc/security/user
+default:
+    SYSTEM = "DCE OR DCE[UNAVAIL] AND compat"
+
+or
+
+# chuser SYSTEM='DCE OR DCE[UNAVAIL] AND compat' user_name
+```
+
+现在你应该能够使用之前通过 **dcecp** 命令启用的账户 **UserName** **telnet** 到该服务器，并使用 **klist** 查看你新的 Kerberos 票证。如果 **dceuxnid** 没有运行，登录时你会收到以下错误消息：
+
+```
+3004-007 You entered an invalid name of password.
+```
+
+## DCE 实现注意事项
+
+在大多数情况下，你希望使用复制服务器，并为 CDS 和安全服务器专门分配单独的机器。如果你的名称空间很大，例如 100,000 个主体或更多，这些服务器将需要大的内存空间。服务器名称空间的大部分必须驻留在虚拟内存中，这意味着 RAM 和交换空间。你可以通过在副本服务器之间分配 CDS 名称空间来减少主服务器上的一些内存占用。这样，你的主 CDS 服务器就不会因不常访问的数据而变得臃肿。CDS 和安全服务器的资源消耗随名称空间的大小线性增长。好消息是，即使对于大的名称空间，数据访问概况也相对平坦。数据库大小似乎并不会对查询产生不利影响。获取你的 AIX DCE 版本的最新补丁程序。一些补丁有助于减少 CDS 和安全服务器的内存需求，并增加名称空间的大小限制。
+
+在确定服务器机器配置时，请记住 DCE 在副本之间随机选择系统。这意味着你的整体吞吐量将受最慢服务器的影响。你还需要注意在复制检查点期间发生的服务中断。你可以调整检查点的频率，以限制主要使用时间段内的服务中断。请注意，CDS 服务器是基于缓存的，而不是基于有效性的。这意味着副本之间的数据可能会变得不一致。这对……
+
+
+频繁变化的数据。在确定检查点频率以及决定在 CDS 中存储哪些信息时，你需要记住这一点。
+在构建应用程序和配置环境时，尽量减少对 CDS 的查询频率。每次应用程序需要服务地址时，都会引用 CDS。例如，在 DCE 登录时必须获取安全服务器的位置。在编写应用程序时，如果可行，可以缓存服务器地址，而不是在每次访问时都进行查询。你还可以向你的 DCE 客户端分发 `pg_site` 文件。该文件列出了常用服务器（如安全服务器）的地址。客户端会先在站点文件中查找地址，然后再去查询 CDS。这将减轻你的 CDS 服务器的负载，但要求你保持站点文件的更新。
+
+## 驱动 DCE
+
+许多大型企业应用程序至少需要一个本地 RPC 配置环境，例如 IBM WebSphere Enterprise Edition 中的 TXSeries 部分以及 HP 的 MeasureWare 和 OpenView。有些应用程序甚至随附所需的精简 DCE 客户端产品及其自定义配置脚本。需要记住的重要一点是，应用程序通常决定了你对 DCE 的需求。当你开始看到越来越多的应用程序迫使你进入 DCE 领域时，你就可能需要认真考虑你的发展方向了。或者，你可能只感兴趣于作为本地或企业安全层的 Kerberos。请记住，Kerberos 版本 5 随 AIX 4.3.3 和 AIX 5L 的 Bonus Pack 一起提供，在你开始测试 DCE 及其所有相关事项之前，最好仔细研究一下它。有关 Kerberos 的更多信息，请参阅第 23 章。
+
+## 检查清单
+
+以下是分布式计算环境 (DCE) 中关键要点的检查清单：
+
+- 定义 DCE 技术。
+- 识别 DCE 层。
+- 在安装过程深入之前，规划好整体的 DCE 单元拓扑结构。
+- 安装和配置 DCE。
+- 使用复制服务器，并为 CDS 和安全服务器指定独立的机器。
+- 将 DCE 用于大型企业应用程序。
+
+![](img/82f851021955589d82b22750fb3b1646_552_0.png)
+
+# 第十一部分
+
+## 系统恢复与调优
+
+- 25 备份和复制实用工具
+- 26 系统监控与调优
+- 27 问题分析与恢复
+
+# 第 25 章
+
+## 备份和复制实用工具
+
+你的时间和数据对你来说价值几何？有多少次你删除了认为不需要的文件，结果一周后发现其中包含了一些重要信息？即使维护得再精细的系统，也会面临磁盘故障。定期的系统备份计划将显著减少与数据丢失问题相关的成本和挫败感。相信我，你会睡得更安稳！
+
+机器上的数据可以决定一家企业的成败，有些公司甚至因为灾难恢复失败而倒闭。停机对贵组织造成的损失有多大？你甚至知道吗？我怀疑许多系统管理员无法给出停机成本的现实数字。停机成本的真实数字必须由业务经理确定，而不是系统管理员。业务经理可以通过分析端到端的业务成本来确定总成本数字。例如，如果系统停机，业务可能不得不采用不同的薪资等级或方法，而且停机还会增加因计算机系统瘫痪而无法追踪的互联网销售额损失和材料成本的损失。停机总成本每小时轻松超过 1,000,000 美元，或者每秒 5000 美元！
+
+## AIX 5L 包含的工具
+
+AIX 随操作系统提供了许多执行系统备份、恢复和复制服务的机制。在接下来的章节中，将介绍 AIX 5L 下可用的众多服务。
+
+## 可启动系统映像：mksysb
+
+mksysb 是你的朋友！mksysb 命令，其名称意为“创建系统备份”，用于创建 rootvg 卷组的一个可启动系统映像。注意，我指的是 rootvg！如果你的系统有比 rootvg 更多的卷组，那么你必须考虑额外的备份步骤（参见下文对 savevg 和 rstvg 命令的讨论）。所有 rootvg 文件系统都必须处于挂载状态，才能包含在 mksysb 备份中。mksysb 命令可以在灾难性故障时救你于水火，并让你在非常短的时间内恢复运行。本章稍后“创建可启动操作系统映像：mksysb”部分详细介绍了 mksysb 的使用方法。
+
+## 保存和恢复卷组：savevg 和 rstvg
+
+savevg 相当于针对非 rootvg 卷组的 mksysb。实际上，savevg 命令是 mksysb 命令的一个符号链接。savevg 命令使用 rstvg 命令，以易于恢复的格式保存整个卷组及其结构。有关 savevg 和 rstvg 命令的完整细节，请参阅本章稍后“使用 savevg 处理非根卷组”部分。
+
+## backup 和 restore 设施命令
+
+IBM 还将 backup 和 restore 设施添加到 AIX，允许你按文件名或 i-node 进行备份。**backup** 工具是使用轮换备份计划备份文件系统的常用方法。该命令易于使用，与系统上某些其他方法相比，数据恢复更容易。本章稍后“备份计划和轮换”部分详细介绍了 backup 命令的使用。
+
+## mkcd 命令
+
+**mkcd** 命令从 AIX 4.3.3 开始成为新功能。使用 **mkcd** 命令进行系统备份的要求相当广泛。首先，你必须有足够的磁盘空间来保存 CD-ROM 或 DVD 的内容，CD-ROM 为 645MB，DVD 为 8.8GB。此外，IBM 使用一种专有的 DVD 外壳，其写保护孔呈角度倾斜。当我购买的 DVD 无法写入时，我才艰难地发现这是因为驱动器坚持认为它们是写保护的。所以请留意，你必须从 IBM 渠道购买 DVD。有关 **mkcd** 命令的更多详细信息，请参阅本章稍后的“可写入 CD 和 DVD 驱动器的要求”。
+
+## tar 命令
+
+**tar** 命令与 UNIX 一样历史悠久。*Tar（名称意为磁带归档）* 是一个非常灵活的工具。这是使用最广泛的归档工具，因为它易于使用和直观，且故障率较低。本章稍后的“网络备份”部分提供了更多关于使用 **tar** 命令的信息。
+
+## cpio 命令
+
+使用 **cpio** 进行的备份是系统中较难恢复的备份之一，除非知道确切的命令参数。**cpio** 命令代表*复制输入/输出*。我主要在使用 **cpio** 在机器内移动数据时使用它。本章稍后的“其他备份实用工具”部分展示了 **cpio** 命令的一些更常见用途。
+
+## pax 命令
+
+**pax** 工具现在在 AIX 5L 下支持大于 2GB 的文件，但 **tar** 和 **cpio** 不支持。IBM 现在使用 **pax** 与 **snap** 命令结合来收集 IBM 支持所需的系统信息。**pax** 的好处在于它可以读取 **tar** 和 **cpio** 归档。有关使用 **pax** 命令的更多详细信息，请参阅本章稍后的“其他备份实用工具”。
+
+## dd 命令
+
+**dd** 命令在字节级别处理数据。该命令具有其他任何系统命令都无法完成的转换功能。dd 命令更常见的用途之一是转换 EBCDIC 和 ASCII 格式。dd 命令还允许你设置块大小，使其成为处理原始数据的宝贵工具。有关使用 dd 命令的更多信息，请参阅本章稍后的“网络备份”。
+
+## 使用 rdump 和 restore 进行网络备份
+
+rdump 和 restore 命令允许你使用另一台机器上的远程磁带驱动器执行本地备份。如果你的工作环境和我的一样，有很多没有磁带驱动器的小型 AIX 工作站，而且你不想花钱购买网络备份解决方案或磁带驱动器的许可证，那么 rdump 和 restore 就非常有用。你可以获得廉价且易于恢复的可靠备份。有关详细信息，请参阅本章稍后的“网络备份”。
+
+## 稀疏文件
+
+*稀疏文件* 的长度大于其包含的数据，以预留空间供未来数据使用。由于 cp、mv、tar 和 cpio 命令可能无法保留稀疏分配，因此这些文件难以操作和归档。backup、restore 和 pax 命令被记录为能够保留稀疏性或主动使文件变为稀疏。
+
+## 备份策略
+
+在定义备份策略时，必须对执行备份的时间和成本与所需的数据恢复级别之间进行权衡。对于单用户工作站，工作站所有者对何时进行备份以保护关键数据有一个很好的概念。即使在单用户环境中，养成定期执行备份的纪律也是一个好主意。大型多服务器系统具有非常动态的文件更新特征，这使得按需执行备份变得困难。必须仔细考虑实施满足大型且多样化用户群体需求的备份策略。
+
+以下是一些重要的备份策略考量因素：
+
+- 备份哪些文件系统以及备份频率
+- 在文件系统挂载或未挂载状态下进行备份
+- 完整备份和增量备份计划
+- 文件系统大小
+- 媒体类型
+- 媒体轮换计划
+- 备份验证计划
+- 异地存储
+
+
+
+
+
+## 是什么以及何时执行
+
+随着存储价格创下历史新低并不断下跌，人们很容易就会无节制地向存储瓶颈处堆砌磁盘。问题在于，最终你会把所有时间都花在这些不断增多的磁盘的备份上。厂商不希望你停止购买磁盘，因此你需要更认真地审视哪些文件系统实际上需要备份。
+
+根卷组（Root volume group）中的文件系统，如 `/usr` 和 `/`，通常具有静态性质，并且可能在多台机器上复制。因此，与包含用户主目录和工作区域的动态文件系统相比，它们可能不需要那么频繁地进行转储（dumping）。
+
+## 已挂载或未挂载
+
+为确保数据完整性，在备份期间文件系统应被同步（synched）并卸载。在需要 7×24 小时可用性的环境中，用户可能会发现这种流程难以接受。你可以在文件系统已挂载并使用期间执行备份；然而，你可能会面临在备份过程中错过正在更新的数据块的风险。许多机构，包括我所在的机构，都在对在线（live）文件系统进行转储。就绝大多数情况而言，我们并没有遇到过太多问题。作为一个规则，如果可能避免的话，不要对在线文件系统进行备份并不是一种好的做法。有一些商业备份软件包在对在线文件系统执行备份时，会对每个文件执行校验和（checksum）操作，以确保数据完整性。高级文件系统，如 DFS（第 15 章）和企业存储服务器（ESS，见第 29 章，更常被称为 Shark），允许你复制或镜像一个文件系统，将副本离线，然后再对其进行备份。高文件系统可用性要求意味着，要么你花多一点钱购买冗余存储，要么就只能祈祷希望遗漏的数据块不属于你。
+
+## 完全备份与增量备份
+
+时间和金钱总是决策因素，因此每天运行完全文件系统备份是不实际的。有两种类型的增量备份策略。第一种方法是每周运行一次完全备份，很可能在周日；然后在剩下的几天里，只备份自前一天以来的更改。这种方法的优点是备份运行速度非常快；另一方面，恢复过程涉及大量磁带。此外，如果其中一盘磁带出现问题，你在恢复剩余磁带时也会遇到困难。
+
+第二种方法仍然在每周周日使用完全备份。然而，在剩下的几天里，增量备份运行将备份自上次完全备份以来发生的所有更改，而不仅仅是前一天的更改。使用这种方法，恢复工作大大简化，因为你只需要完全备份磁带和最后一个增量备份磁带。随着一周的进行，随着数据被更新，备份时间会越来越长；到一周结束时，如果许多数据发生了变化，备份时间可能与完全备份差不多长。
+
+大多数 UNIX 备份命令使用一组转储级别（dump levels），0–9，来实现完全/增量备份功能。级别 0 的转储代表完全转储。级别 1–9 是增量转储，代表针对之前小于或等于该级别（less-than or equal-to）转储级别的文件系统更改。
+
+- 级别 0 完全转储
+- 级别 1–9 增量转储
+
+许多备份选项既可以通过基于 Web 的系统管理器（Web-Based System Manager，通过输入 wsm 命令启动），也可以通过使用 SMIT 获得。WebBSM 的顶层备份和恢复窗口如图 25-1 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_560_0.png)
+
+## 备份调度和轮换
+
+你可以使用许多策略在完全转储和增量转储之间进行轮换，以优化介质利用率和转储实际耗时（wall clock time）。这里的权衡在于介质利用率和复杂性。简单地说，日常的级别 1 备份可以跟在每周的级别 0 完全备份之后。当请求恢复操作时，先查询级别 0，然后查询最近的级别 1。简单，但不够优雅。
+
+为了优化介质利用率和转储时间，可以使用像 *汉诺塔* 序列这样的较复杂轮换策略之一。我必须承认，自从在计算机基础课程中被迫研究该算法以来，我一直讨厌 *汉诺塔* 序列。尽管如此，它提供了一种非常好的轮换机制，并节省了磁带。
+
+*汉诺塔* 序列涉及每个文件系统的新一轮级别 0 转储，随后是五个级别的 1–9 序列。每个文件系统使用四组级别 1 的磁带。级别 2–9 的磁带被重复使用，并假设级别 2–9 可以装在一盘磁带上。
+
+### 汉诺塔转储级别序列
+
+*汉诺塔* 使用以下备份类型用于转储级别序列。
+
+| 备份类型 | 备份级别编号序列 |
+| :--- | :--- |
+| 完全 | 0 |
+| 增量 | 3 2 5 4 7 6 9 8 |
+
+可以通过使用 `/etc/dumpdates` 文件来跟踪复杂的备份序列。`dumpdates` 文件记录文件系统、备份级别和时间戳。`backup` 和 `rdump` 命令提供的 `-u` 标志将在每次运行备份时更新该时间戳。
+
+```bash
+# cat /etc/dumpdates
+/dev/rhd1    Fri Feb 22 02:10:56 2002
+/dev/rhd2     1 Mon Feb 25 02:04:25 2002
+/dev/rhd2     0 Sun Feb 24 03:23:12 2002
+/dev/rhd2swar    0 Sat Feb 23 02:30:59 2002
+/dev/rhd4     1 Mon Feb 25 02:00:04 2002
+/dev/rhd2swar    1 Mon Feb 25 02:04:09 2002
+/dev/rlv00    0 Sun Feb 24 04:24:41 2002
+/dev/rlv00    1 Mon Feb 25 02:17:25 2002
+```
+
+可以使用 `cron` 自动执行转储级别序列。
+
+以下是备份级别的 `crontab`：
+
+```
+0 2 * * 1 /usr/sbin/backup -0 -u -f /dev/rmt0 /home
+0 2 * * 2 /usr/sbin/backup -3 -u -f /dev/rmt0 /home
+0 2 * * 3 /usr/sbin/backup -2 -u -f /dev/rmt0 /home
+0 2 * * 4 /usr/sbin/backup -5 -u -f /dev/rmt0 /home
+0 2 * * 5 /usr/sbin/backup -4 -u -f /dev/rmt0 /home
+0 2 * * 6 /usr/sbin/backup -7 -u -f /dev/rmt0 /home
+0 2 * * 7 /usr/sbin/backup -6 -u -f /dev/rmt0 /home
+```
+
+你还可以使用 SMIT 或 WebSM，即 **wsm**，来执行备份。用于文件系统备份的 SMIT FastPath，smitty **backfilesys**，如图 25-2 所示。
+
+## 灾难恢复与验证
+
+由此可知，在保护你的文件系统的同时，你也希望保护备份本身。首先，你应该定期进行备份集测试，通过执行恢复操作。验证备份介质是否良好且数据是否有效。这将消除备份坏数据的问题。
+
+定期将整套备份介质轮换到异地。灾难的范围可以从文件级别到建筑物和城市级别。定期让介质通过物理清洗和验证检查。这将包括对备份设备进行定期维护和清洗。
+
+![](img/82f851021955589d82b22750fb3b1646_562_0.png)
+
+## 备份介质
+
+选择适合你环境的备份介质。我想我们都同意，使用软盘备份 500 MB 的文件系统空间是毫无意义的。在权衡介质成本、传输速率和存储容量时必须仔细考虑。较大的机构可能选择光盘存储或机械手磁带库（robotic jukeboxes）。有关各种磁带介质特性的信息，请参见第 7 章。
+
+## 可写 CD 和 DVD 驱动器的要求
+
+AIX 5L 的新功能是能够备份数据到 DVD 或 CD-ROM 驱动器。问题是驱动器不作为文件系统类型的数据写入处理。你知道，你可以在 CD 阅读器中挂载 CD-ROM，并读取盘上的数据，就好像它是一个典型的文件系统一样。CD-ROM 和 DVD 写入器并不那么直观易用。你必须拥有实际定义的硬盘空间才能使用 CD 写入器。对于 CD-ROM，你需要 645MB，对于 DVD，你需要 8.8GB 的文件系统空间。默认文件系统是 `/mksd`。当你制作映像时，它存储在 `/mksd` 文件系统中，然后这个新创建的映像被复制到光学介质上。
+
+只有 CHRP 处理器系统允许从 DVD 设备启动。然而，任何机器类型——RSPC、R56K 或 CHRP 系统——都可以创建备份映像。对于基于 Itanium 的系统，在一台机器上执行的备份可能或不可以在另一台系统上安装，因为 IBM 无法控制 Itanium 平台中种类繁多的设备和设备驱动程序。
+
+## 备份文件系统
+
+AIX 的 **backup** 和 **restore** 命令与其 BSD **dump** 和 **restore** 对应项类似。**backup** 命令可用于转储整个文件系统，并支持按名称备份以转储子目录树。以下示例演示了文件系统完全转储和按名称备份子目录树：
+
+```
+# backup -0 -u -f /dev/rmt0.1 /usr
+# find /usr/local -print | backup -i -f /dev/rmt0.1
+```
+
+## 创建可引导操作系统映像：mksysb
+
+为备份 AIX rootvg 文件系统，考虑使用 `mksysb` 命令。`mksysb` 命令为每个根文件系统创建具有文件系统描述的备份文件格式映像，可用于从独立维护系统恢复。调用 `mksfsfile` 命令创建一个描述 rootvg 文件系统的新 `/image.data` 文件，或者只是为 `mksysb` 命令添加 `-i` 标志以...
+
+
+完成相同的任务。你可以编辑 `/image.data` 文件，使其仅包含用于恢复目的的那些文件系统。运行 **mkxsysb** 命令以创建备份镜像。
+
+要在 rmt0 磁带设备上创建根卷组的可启动备份副本并创建新的 /image.data 文件，请使用以下语法：
+
+```
+# mkxsysb -i /dev/rmt0
+```
+
+要创建一个完整的可启动系统镜像，其中包含磁盘映射文件，请使用以下命令语法：
+
+```
+# mkxsysb -m /dev/rmt0
+```
+
+要创建一个新的 /image.data 文件并排除 /etc/exclude.rootvg 文件中列出的文件，请使用以下语法：
+
+```
+# mkxsysb -i -e /dev/rmt0
+```
+
+你还可以通过 SMIT 或 WebSM（**wsm**）执行 **mkxsysb** 系统镜像备份。SMIT FastPath **smit mkxsysb** 如图 25-3 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_564_0.png)
+
+图 25-3. SMIT FastPath smit mkxsysb
+
+## **从 mkcvsb 系统备份中提取单个文件**
+
+有时，你可能想从 **mkcvsb** 系统镜像磁带上提取一些单个文件。由于 **mkcvsb** 不是直接的备份磁带，因此有一个过程需要从 **mkcvsb** 磁带上获取文件。假设你想使用 */dev/rmt0* 磁带驱动器从磁带上提取 */etc/hosts* 文件，并将它恢复到 */tmp* 文件系统中。请遵循以下步骤：
+
+```
+# cd /tmp
+# mt -f /dev/rmt0 rewind
+# tctl -f /dev/rmt0.1 f 3
+# restore -xqxft /dev/rmt0.1 /etc/hosts
+# mt -f /dev/rmt0 offline
+```
+
+![](img/82f851021955589d82b22750fb3b1646_565_0.png)
+
+在此过程中有几点需要注意。在第一步中，我将目录更改为 */tmp*。**mkcvsb** 命令通过相对路径备份所有文件。这意味着 */etc/hosts* 被备份为 */.etc/hosts*。“*”（点）表示归档文件是使用相对路径备份的，并允许我将文件恢复到 */tmp* 中。在下一步中，我只是回绕磁带。此过程的第三步至关重要。首先，请注意在指定 **tctl** 命令中的磁带设备时，我使用的是 */dev/rmt0.1*。最后的 *.1* 指定磁带设备不执行回绕。命令下一部分的 **f 3** 将快进磁带 *三个磁带记录*，这是 **mkcvsb** 磁带上数据实际所在的位置。由于指定了不回绕选项，**rmt0.1**，**restore** 命令现在可以从磁带上提取 */etc/hosts* 文件。此恢复过程的结果是，*/etc/hosts* 文件从 **mkcvsb** 磁带上提取并放置在 */tmp/etc/hosts* 中。你也可以通过以根目录 */* 为当前目录启动 **restore** 命令，将文件恢复回 */etc*。
+
+## **对非根卷组使用 savevg**
+
+使用 **savevg** 执行与 **mkcvsb** 为根卷组（rootvg）执行的全卷组备份相同类型的备份。事实上，**mkcvsb** shell 脚本调用 **savevg** 来执行其 rootvg 备份。要对名为 *appvg* 的卷组进行备份到磁带驱动器，请使用以下命令语法。
+
+```
+# savevg -i -f /dev/rmt0 appvg
+```
+
+此命令创建一个新的 */tmp/vgdata/appvg/appvg.data* 文件，然后将整个 *appvg* 卷组备份到 */dev/rmt0* 磁带设备。你还可以通过 SMIT FastPath **savevg** 执行 **savevg**，如图 25-4 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_566_0.png)
+
+## TIVOLI 存储管理器 (TSM)
+
+Tivoli Storage Manager (TSM) 远超本书的范围。然而，我想在这里提到它，因为大多数运行 AIX 的大型机构都使用 TSM 作为主要的备份和灾难恢复工具。IBM 在全球各地的站点提供大量不同的课程，涉及在企业管理中使用 TSM 的不同方面。要获取美国境内 IBM 培训站点和课程列表，请访问以下网站：
+
+http://www.ibm.com/training/us
+http://www.tivoli.com/
+
+下一个网站提供了一些非常好的 Red Books，可以免费下载和打印：
+
+http://ibm.com/redbooks
+
+## IBM 的 SYSBACK 实用程序
+
+如果 Tivoli Storage Manager 对你的站点来说过于繁重，那么 SysBack 可能是你的答案。与 TSM 相比，SysBack 的许可证价格相当便宜。SysBack 实用程序允许你执行文件系统的网络备份，并创建可网络启动的系统镜像，其性能类似于 mkssys 可启动系统镜像。从 SysBack 镜像恢复系统的一个好处是，通过网络恢复的速度比运行磁带要快得多。SysBack 包含详细的文档，设置和使用相对容易。你可以使用 shell 脚本或 Maestro 等调度工具来执行备份。
+
+## 恢复文件和文件系统
+
+restore 命令的选项与 **backup** 使用的选项类似。如果你无法记住要恢复的特定文件的路径名，可以使用 `-T` 标志输出来磁带上的文件索引。你还可以使用 `-i` 标志在交互式模式下运行 **restore**，用于文件系统 i-node 转储。这允许你在存储在磁带上的目录之间移动，就像在磁盘上的目录中移动一样。
+
+```
+# restore -T -E /dev/rmt0.1 <----------------- 显示媒体索引
+# restore -r -E /dev/rmt0.1 <----------------- 恢复完整文件系统
+# restore -E /dev/rmt0.1 -xdv bin <---------- 恢复 bin 目录中的文件
+# restore -i -E /dev/rmt0.1 <---------------- 从 i-node 备份开始交互式恢复
+```
+
+你还可以使用 Web-Based System Manager 或 SMIT 执行大多数恢复操作。恢复文件系统的 SMIT FastPath，**smitty restfilsys**，如图 25-5 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_568_0.png)
+
+**图 25-5。** **SMIT FastPath smitty restfileSYS**
+
+## 其他备份实用程序
+
+**tar**、**pax** 和 **cpio** 实用程序可用于可移植性问题。使用 **pax**、**tar** 或 **cpio** 允许你在系统之间复制文件和目录树，同时保留 UID 和权限。在某些情况下，**tar** 不会跨多个卷。在 **tar** 不可用的 SySV UNIX 机器上使用 **cpio**。
+
+```
+# tar -cvf /dev/rmt0.1 ./source                     复制到磁带
+# tar -xvf /dev/rmt0.1                              恢复 tar 归档
+# find . -print | cpio -ov > /dev/rmt0                复制到磁带
+# cpio -idmv < /dev/rmt0.1                           恢复 cpio 归档
+```
+
+如果有足够的磁盘空间，你可以使用 **cplv** 命令复制逻辑卷。这种机制可用于创建文件系统副本用于备份，同时保持主要副本在线。
+
+```
+# cplv -e <ExistingLV> <SourceLV>                    复制逻辑卷
+```
+
+正如我之前所说，**pax** 现在支持大于 2GB 的文件。以下是 **pax** 的一些典型用途：
+
+- 将整个目录结构从一个目录复制到另一个目录：
+
+```
+# pax -rw /my_original_dir /my_new_directory
+```
+
+- 将当前目录复制到 `/dev/rmt0` 磁带驱动器：
+
+```bash
+# pax -w -f /dev/rmt0
+```
+
+- 提取 `/dev/rmt0` 磁带驱动器上的 pax 归档：
+
+```bash
+# pax -r -f /dev/rmt0
+```
+
+- 列出 `/dev/rmt0` 磁带驱动器上的 pax 归档的内容：
+
+```bash
+# pax -f /dev/rmt0
+```
+
+pax 实用程序还有许多其他命令选项。有关 pax 的更多信息，请参考 man 页和 DocSearch。
+
+## 网络备份
+
+关于使用网络将远程工作站备份到配备大容量磁带驱动器的机器呢？你可以通过使用 rdump 和 restore 命令来实现。rdump 和 restore 都非常类似于前文描述的 backup 和 restore 命令。它们共享许多相同的标志和参数。主要区别在于它们使用 -f 标志的 remote_host:device 参数，该参数指定配备备份设备的机器的主机名。理解这一点很重要：rdump 和 restore 都仅支持按 i-node 进行备份。这意味着所有文件都具有相对路径，因此 Mike 的主目录不能恢复为 /home/mike；你必须 cd 到 /home 并将其恢复为 ../mike。随 AIX 5L 提供的 restore IBM 文档仍然显示恢复 /home/mike 的错误示例，因此不要被它混淆。
+
+```
+#  umount  /home                                          # 如果你想要 /home 的干净备份
+#  rdump -u -0 -f yogi:/dev/rmt0 /home                  # 这里，/home 必须是一个文件系统
+#  restore -f yogi:/dev/rmt0 -t                          # 列出磁带内容
+#  cd  /home                                               # 你可能需要先 umount /home
+#  restore -f yogi:/dev/rmt0 -x . /mike/file2             # 恢复 Mike 的文件
+#  restore -i -f yogi:/dev/rmt0                             # 从交互式 shell 恢复
+#  restore -x -f yogi:/dev/rmt0                              # 恢复当前目录中的所有文件
+```
+
+另一种基于网络的选项是使用远程 shell 命令 rsh 与本地备份或复制命令之一。你可以将 rsh 与管道和重定向结合使用，以获得与使用 rdump 和 restore 类似的结果。
+
+```
+#  tar cvf - ./home | rsh judy "dd of=/dev/rmt0 obs=1024"
+#  rsh judy "dd if=/dev/rmt0 ibs=1024" | ( cd /home; tar xvf - )
+```
+
+在这两种情况下，如果你不希望远程系统提示输入密码，请在远程用户 ID 的 $HOME 目录中创建一个 .rhosts 文件。
+
+
+
+
+
+用于远程 shell。在 `.rhosts` 文件的每一行中，输入允许在不提供密码的情况下连接的机器名称和用户 ID。
+
+## 验证备份是否成功
+
+确保备份成功的唯一真实方法是实际将数据恢复到系统中。有些人喜欢列出磁带的内容列表。如果你使用 shell 脚本来运行备份，那么*务必*检查备份命令的*返回代码*（由 `$?` 指定）！如果*返回代码*不是 0，则备份*未*成功。我喜欢使用的一种技术是在启动备份之前在系统上创建一个临时文件。备份完成后，删除该临时文件，将磁带倒带，然后将临时文件恢复到系统中。使用这种方法可以确保磁带是好的，并且可以从中提取数据。当然，这并不是一次完整的数据恢复，但这比内容列表要好。如果任何备份或恢复操作失败，你*务必*检查错误日志（*errpt*），查看是否存在任何 `rmt` 错误。
+
+## 制作磁带副本
+
+`tcopy` 命令用于制作磁带的副本。源磁带必须具有正常的 EOF 双磁带标记以指定磁带的结尾。EOF 标记告诉 `tcopy` 命令停止复制。`tcopy` 命令将源和目标磁带设备作为命令行参数。例如，要从流式磁带设备 `/dev/rmt0` 复制到磁带设备 `/dev/rmt4`，请使用以下命令：
+
+```
+# tcopy /dev/rmt0 /dev/rmt4
+```
+
+如果命令行上仅指定了源磁带设备，那么 `tcopy` 命令将打印有关磁带记录大小和磁带文件的信息。如果该磁带为空或已满，在 `tcopy` 到达磁带的物理尽头之前，你无法获得磁带或命令行。
+
+## 磁带上有什么？
+
+你是否曾经遇到过一张备份磁带，而你完全不知道它是如何创建的？这是一个典型的问题，但有一种方法可以确定不仅是归档格式，还可以确定创建磁带时使用的磁带驱动器块大小。
+
+第一步是使用 `lsattr` 命令保存当前的磁带块大小：
+
+```
+# lsattr -El rmt0 | grep block_size
+```
+
+此命令假设磁带驱动器是 /dev/rmt0。输出中的第二列是当前磁带驱动器的块大小。如果它是 0，则磁带设置为可变长度，这是我们此过程所希望的。如果 block_size 不是零，请记下该值以便将来参考。要将块大小设置为可变长度，请发出以下命令：
+
+```
+# chdev -l rmt0 -a block_size=0
+```
+
+假设磁带驱动器是 /dev/rmt0。下一步是从磁带上提取前 128K 个块的数据。为此，使用 dd 命令并将块大小设置为 128K：
+
+```
+# dd if=/dev/rmt0 bs=128k of=/tmp/tape.out count=1
+```
+
+使用我们创建的输出文件 /tmp/tape.out，我们可以通过对该文件进行长列出来确定创建磁带时使用的块大小。文件大小即为磁带块大小：
+
+```
+# ls -l /tmp/tape.out
+-rw-r--r--  1 root    system    1024  Feb 21 10:08 tape.out
+```
+
+在此示例中，磁带块大小为 1024。要查找磁带上数据的格式——例如 tar、backup 或 cpio——请使用 file 命令。
+
+```
+# file /tmp/tape.out
+tape.out:        tar archive
+```
+
+该归档是一个 tar 归档，并且是使用 1024 的磁带块大小备份的。
+
+如果你之前更改了磁带块大小为可变长度，现在可以使用以下命令将其更改为所需的磁带密度：
+
+```
+# chdev -l rmt0 -a block_size=new_value
+```
+
+## 检查清单
+
+以下是系统备份关键点的检查清单：
+
+- **mkssys** 命令用于创建根卷组 rootvg 的可启动系统映像。但是，此命令不会备份系统中可能存在其他卷组。
+- 对于非 rootvg 卷组，使用 **savevg** 命令保存整个卷组及其结构，其格式可以轻松地通过 **restvg** 命令进行恢复。
+- 使用 **backup** 和 **restore** 功能按文件名或按 i 节点进行备份。
+- 即使在单用户环境中，养成*定期执行备份*的习惯也是一个好主意。
+- 在创建备份策略时，你必须考虑的一些事项包括：要备份哪些文件系统以及备份频率，是备份整个文件系统还是已挂载或未挂载的文件系统，全量和增量备份时间表，媒体类型和媒体轮换时间表，基于网络的备份的带宽考虑，备份程序和格式，以及恢复程序。
+- 根卷组文件系统，例如 `/usr` 和 `/`，性质上往往是静态的，并且可能在许多机器上复制。因此，它们可能不需要像动态文件系统（如包含用户主目录和工作区的文件系统）那样频繁地转储。
+- 为保证数据完整性，应在备份期间同步并卸载文件系统。如果你的环境要求 7x24 小时正常运行时间，你可以在文件系统已挂载并正在使用时执行备份，但这存在错过备份期间正在进行的数据块更新的风险。
+- 有效的全量/增量备份策略是每周运行一次全量备份，并在其他天运行增量备份，以备份自上次全量备份以来发生变化的所有内容。
+- 复杂的备份序列可以通过使用 `/etc/dumpdates` 文件来跟踪。*dumpdates* 文件记录文件系统、备份级别和时间戳。
+- 通过执行恢复操作定期测试你的备份集。验证备份媒体是好的，并且数据是有效的。
+- 定期将全套备份媒体轮转到场外。
+- 定期通过物理清洁和验证检查使媒体循环。这包括备份设备的定期维护和清洁。
+- AIX 5L 增加了将数据备份到 DVD 或 CD-ROM 驱动器的能力。但是，对于 CD-ROM，你需要 645MB 可用的实际文件系统空间；对于 DVD，你需要 8.8GB 的文件系统空间。
+- 当可移植性是一个问题时，可以使用 `tar`、`pax` 和 `cpio` 实用程序。`pax`、`tar` 或 `cpio` 中的任何一个都允许你在系统之间复制文件和目录树，同时保留 UID 和权限。
+- 在 `tar` 不可用的 SYSV UNIX 机器上使用 `cpio`。
+- 如果你有剩余磁盘空间，可以使用 `cpio` 命令复制逻辑卷。这种机制可用于创建文件系统副本用于备份，同时保留主副本在线。
+- 你可以使用 `rdump` 和 `restore` 命令通过网络将远程工作站备份到配备大容量磁带驱动器的机器上，这些命令类似于 `backup` 和 `restore` 命令。
+- 你还可以使用远程 shell 命令 `rsh` 和本地备份或复制命令之一来执行基于网络的备份。
+- 使用 `tcopy` 命令制作磁带的副本。
+
+![](img/82f851021955589d82b22750fb3b1646_574_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_575_0.png)
+
+# 第 26 章
+
+## 系统监控与调优
+
+性能监控和调优可能是比其他任何短语都更能让系统管理员疯狂的短语。试图弄清楚为什么系统突然表现不佳并不是一项特别愉快的任务。有太多不同的地方可以开始查找问题：你可以问自己“我需要更多的内存吗？”或者“我需要更多的处理器功率吗？”或者“我的磁盘驱动器是否工作得太辛苦？”幸运的是，AIX 5L 有许多工具可供我们使用，以帮助我们回答这些问题。
+
+## 了解你的工作负载
+
+了解你的工作负载是作为 AIX 系统管理员最重要的职责之一。我们的意思是，你比任何人都更了解系统、其硬件配置以及正在其上运行的应用程序。因此，你有责任了解在一天中的特定时间正在发生哪些事件，这些事件可能会影响系统的性能。例如，假设你在分销行业工作，你有一个系统正在运行某种仓库或库存控制软件。合乎逻辑的假设是，系统会在早晨和晚上更忙，因为分销卡车在配送路线开始时离开仓库，并在结束时返回。在一天中的其他时间，系统可能不会承受那么重的工作负载。
+
+## AIX 操作系统特性
+
+我们可以最容易监控和调节的基本操作系统特性是 CPU 负载、系统内存、磁盘输入和输出，以及系统连接的网络。
+
+## CPU 调度
+
+CPU 调度指的是分配系统中进程优先级的行为。完成这一过程的过程可以简单到使用 **nice** 命令来提高或降低单个进程的优先级，也可以复杂到使用 **schedtune** 命令来调整 CPU 调度器本身。在 AIX 4.3.3 的服务级别 2 中，并在 AIX5L 中继续，IBM 引入了一种新的性能调优功能，称为工作负载管理器。这允许采用基于策略的资源管理方法。使用工作负载管理器，类似的任务被分组为类，并且系统资源的优先级被分配给这些类。如果你有兴趣采用这种方法来调整系统性能，IBM 就这个主题有一本红皮书，*AIX 5L Workload Manager* (*WLM*)。这本红皮书的目录编号是 SG245977，可以在 http://www.redbooks.ibm.com/ 在线获取。
+
+
+
+
+## 虚拟内存管理
+
+虚拟内存管理器的作用是管理物理内存页框的分配，并解决程序对当前不在物理内存中或尚不存在的虚拟内存页的引用（例如，当进程首次引用其数据段的一个页面时）。在任一给定时间点，正在使用的虚拟内存量很容易超过系统上的物理内存量。当这种情况发生时，虚拟内存管理器会将多余的内存页存储到磁盘上。将这些内存页写入磁盘并从磁盘读取它们的操作称为*分页*。虚拟内存管理器处理两种类型的内存页：计算内存和文件内存。计算内存用于存放工作存储（例如 2 + 2 = 4）以及可执行程序段（例如 shell 脚本）。文件内存用于存放存储在磁盘上的文件数据。
+
+### vmstat 命令
+
+要查看虚拟内存统计信息，请使用 **vmstat** 命令。若要指示 **vmstat** 以两秒为间隔对系统进行快照，并重复五次，请输入以下命令：
+
+```
+# vmstat 2 5
+```
+
+```
+kthr  memory        page          faults     cpu
+------------ ----------- ------------- ------------
+r b avm fre re pi po fr er  in sy  cs us sy id wa
+1 3 113726  124  0  14  6 151  600  0 521 5553 816  13  7 57
+0 3 113643  346  0  14 208  690  0 585 2201 866  16  9 2 73
+0 3 113659  135  0  2  108  323  0 516 1563 797  25  7 2 66
+0 2 113661  122  0  3  120  375  0 527 1622 871  13  7 2 9
+0 3 113662  128  0  10  3 134  432  0 644 1434 948   7  4 67
+```
+
+**vmstat** 命令的输出分为以下几个部分：
+
+- **kthr** 采样间隔内每秒的内核线程状态变化
+  - **r** 被放入运行队列的内核线程数量
+  - **b** 被放入等待队列的内核线程数量（等待资源或 I/O）
+- **memory** 关于虚拟内存和物理内存使用情况的信息
+  - **avm** 活动虚拟内存页
+  - **fre** 空闲列表的大小
+- **page** 关于页面错误和分页活动的信息。这些数值是采样间隔内的平均值，单位为每秒。
+  - **re** 已回收。自 AIX 版本 4 起，不再支持回收
+  - **pi** 换入页面数
+  - **po** 换出页面数
+  - **fr** 由页面置换算法释放的页面数
+  - **sr** 由页面置换算法扫描的页面数
+
+> **注意** 当 fr 与 sr 的比率较高时，页面被视为过度承诺。什么才算高比率将取决于具体的应用程序和/或工作负载。
+
+- **cy** 时钟算法每秒的周期数。虚拟内存管理器使用一种称为时钟算法的技术来选择要替换的页面。该技术利用每个页面的引用位作为指示哪些页面最近被使用（引用）的依据。
+- **faults** 采样间隔内每秒的中断和陷阱率平均值
+  - **in** 设备中断
+  - **sy** 系统调用
+  - **cs** 内核线程上下文切换
+- **cpu** CPU 时间使用百分比的详细分解
+  - **us** 用户时间
+  - **sy** 系统时间
+  - **id** CPU 空闲时间
+  - **wa** 系统有未完成的磁盘或 NFS I/O 请求期间的 CPU 空闲时间（I/O 等待）
+
+### vmtune 命令
+
+内存管理算法试图将空闲列表的大小和由持久段页占据的物理内存百分比保持在指定范围内。可以使用 vmtune 命令更改这些界限，该命令只能由 root 用户运行。由此工具所做的更改将持续有效直至系统下次重启。要确定 vmtune 命令是否已安装并可用，请运行以下命令：
+
+```
+$ ls1pp -lI bos.adt.samples
+```
+
+> **注意** vmtune 命令位于 samples 目录中，因为它非常依赖于 VMM 的实现。随操作系统每次发行版本附带的 VMM 代码都是专门为该版本的 VMM 定制的。
+
+**vmtune** 命令位于 /usr/examples/kernel1 目录中。不带选项运行 **vmtune** 命令将显示当前配置，如下所示：
+
+```
+vmtune: current values:
+
+-p -P -r -R -f -F -N -W
+minperm maxperm minngaged maxngaged minfree maxfree pd_pages maxrandwrt
+52190 20760 2 8 120 128 524288 0
+
+-M -k -c -b -B -I -d
+maxpin npswarm npskill numclust numfsbufs hd_buf_cnt lvm_bufcnt i_rubucket defps
+
+209581 4096 1024 1 93 96 9 131072 1
+
+-e -n -S
+sync_release_iIlcock nokillroot v_ipinhm strict_maxperm
+0 0 0
+
+number of valid memory pages = 261976 maxperm=79.7% of real memory
+maximum pinnable=80.0% of real memory minperm=19.9% of real memory
+number of file memory pages = 19772 numpers=7.5% of real memory
+```
+
+请记住，使用 **vmtune** 所做的更改仅在系统下次重启前有效。如果您希望这些更改永久生效，则需要在 /etc/initab 中放置一条 **vmtune** 命令。
+
+## 磁盘 I/O
+
+磁盘输入和输出管理可能是一个非常令人沮丧的过程。随着磁盘驱动技术的发展，磁盘驱动的存储容量每六个月就可能翻一番。然而，仅仅因为现在我们可以在过去只能存储 36 吉字节数据的地方存储 72 吉字节数据，并不意味着我们一定希望这样，或者至少我们需要谨慎对待数据存储的位置。磁盘 I/O 管理的目标是将数据分散到多个磁盘上，以便每个磁盘被访问的时间量相等。这是我们希望持续监控的事情，以确保高使用频率的文件不会驻留在同一个物理磁盘上。
+
+在管理磁盘 I/O 时，理解我们的磁盘布局策略非常重要。我们如何配置磁盘将对我们的 I/O 性能产生巨大影响。如果我们使用 RAID 5 磁盘，则数据将自动跨多个磁盘条带化，从而改进读取访问。然而，在 RAID 5 配置中，写入访问存在轻微的性能下降，因为在实际完成写入之前必须计算奇偶校验位。在 RAID 1 配置中，AIX 会自动在镜像磁盘之间平衡读取请求。同样，如果该逻辑卷启用了镜像写入一致性，那么在写入访问时也会有轻微的性能损失，因为必须在存储操作完成之前同步镜像。
+
+在存储区域网络中，例如 IBM 企业存储服务器或 EMC Symmetrix，存储系统本身具有自动调谐磁盘 I/O 的软件。
+
+### iostat 命令
+
+诊断磁盘 I/O 问题时，更实用的命令之一是 **iostat** 命令。系统自上次重启以来维护磁盘活动的历史记录，而 **iostat** 命令用于报告该历史。
+
+> **警告** 如果运行 **iostat** 命令并看到消息“Disk history since boot not available”（自启动以来的磁盘历史不可用），这表明磁盘活动历史未被保留。要更改此设置，请输入以下命令：
+> # chdev -l sys0 -a iostat=true
+
+一旦系统被配置为保留 **iostat** 历史，一个典型的 **iostat** 报告将如下所示：
+
+```
+tty: tin tout avg-cpu: %user %sys %idle %iowait
+0.0 1.3 0.2 0.6 98.9 0.3
+
+Disks: %tm_act KBps tps KB_read KB_writn
+hdisk0 0.0 0.3 0.0 29753 48076
+hdisk1 0.1 0.1 0.0 11971 26460
+hdisk2 0.2 0.8 0.1 91200 108355
+cd0 0.0 0.0 0.0 0 0
+```
+
+从该报告中，我们可以看到系统大部分时间处于空闲状态。只要我们看到某个磁盘在“% Time Active”（活跃时间百分比）列中的值大于 50，我们可能就需要开始考虑将该磁盘上的一些数据迁移到其他磁盘。要找出给定磁盘上有哪些数据，请针对该磁盘运行 **lsvg** 命令。这将显示驻留在该磁盘上的所有逻辑卷。
+
+### 网络性能
+
+有时，据我们所知，系统各方面运行看似正常，但最终用户仍然抱怨性能不佳。这些时刻正是我们希望将网络视为可能罪魁祸首的时候。在大多数中型到大型组织中，部门内有一个专门负责网络管理的独立小组是很常见的。在我曾合作过的公司里，任何未解决的性能问题归咎于网络的情况并不罕见。典型的场景包括一位困惑的系统管理员将问题抛给网络小组，并评论道：“网络性能很差。”经过一段时间后，他们会把问题抛回来，并评论道：“网络没问题，您的服务器一定有问题。”如果您确实怀疑存在网络问题，请记录您看到的确切现象，这些现象使您怀疑网络，并将这些信息提供给网络小组，以协助他们确定真正的问题所在。
+
+
+
+
+
+## no 命令
+
+在 AIX 网络中，有一个非常重要的命令需要了解，即网络选项命令，或 **no** 命令。随着越来越多的网络升级为千兆以太网，以及高性能的 100 兆位以太网网络，为了适应其“巨型帧”，将 TCP 发送和接收空间设置为 65535 变得至关重要。每当修改 TCP 发送或接收空间参数时，请记住必须刷新 **inetd** 守护进程才能使更改生效。设置这些参数的示例如下：
+
+```
+# no -O tcp_sendspace=65535
+# no -O tcp_receivespace=65535
+# refresh -s inetd
+0513-095 The request for subsystem refresh was completed successfully.
+```
+
+有关 **no** 命令所有可用选项的详细说明，请参阅随 AIX 5L 副本附带的《AIX 5L 版本 5.1 命令参考手册》。
+
+## netstat 命令
+
+传统上，**network**（网络）统计信息，即 **netstat**，命令更常用于故障排除，而非性能监控。不过，它也可用于确定网络上的流量大小，以判断性能问题是否由网络拥塞引起。要查看系统中所有已配置接口的统计信息，请输入以下命令：
+
+```
+# netstat -I
+```
+
+| Name  | Mtu   | Network    | Address      | Ipkts | Ierrs | Opkts | Oerrs | Coll |
+|-------|-------|------------|--------------|-------|-------|-------|-------|------|
+| lo0   | 16896 | link#1     |              | 144834| 0     | 144946| 0     | 0    |
+| lo0   | 16896 | 127        | localhost    | 144834| 0     | 144946| 0     | 0    |
+| lo0   | 16896 | ::1        |              | 144834| 0     | 144946| 0     | 0    |
+| en0   | 1500  | link#2     | 8:0:5:a:d2:a5| 0     | 0     | 112   | 0     | 0    |
+| en0   | 1500  | 1.2.3      | Lazarus      | 0     | 0     | 112   | 0     | 0    |
+
+- **Name** 网络接口的名称。在我们的示例系统中，只配置了两个网络接口：lo0（回环设备）和 en0（一块 10MB 以太网卡）
+- **MTU** 接口的最大传输单元（Maximum Transmission Unit）大小
+- **Network** 接口所连接的网络
+- **Address** 适配器的硬件地址和名称。如果指定了 **-n** 标志，此处将显示接口的 IP 地址而不是名称
+- **Ipkts** 接口上接收（输入）的数据包数量
+- **Ierrs** 接口的接收错误数量
+- **Opkts** 发送到接口（输出）的数据包数量
+- **Oerrs** 接口的发送错误数量
+- **Coll** 接口的冲突数量
+
+从这份报告中可以看出，该系统网络流量并不大，因为几乎所有流量似乎都经过了回环接口。
+
+# AIX 调优工具
+
+到目前为止，我们已经讨论了一些工具，它们可以提供系统当前正在做什么的快照。这些工具非常适合应对糟糕的情况并进行修正，也就是通常所说的“救火”，但我们的目标是主动预防，而非被动反应。我们需要能够了解系统的走向，并能在性能退化到用户社区察觉之前，预先判断并做出相应的更改。为了做到这一点，我们需要一些工具来帮助我们记录和分析趋势。
+
+## 传统 UNIX 工具
+
+我们已经讨论了许多传统的 UNIX 工具，例如 *vmstat*、*vmtune*、*iostat* 和 *netstat*。无需做太多工作，就可以轻松创建一个脚本，由 *cron* 定期运行，将这些命令收集的数据存储到一个文件中，供系统管理员进行趋势分析时查阅。只需确保安排一个任务来清理文件中的旧条目；我们不希望文件系统被性能数据填满！
+
+## topas 命令
+
+另一种传统工具 *topas* 命令，它捕获了与上述命令大部分相同的数据，并将其格式化为一个易于使用的屏幕。不带选项运行 *topas* 会产生以下屏幕：
+
+![](img/82f851021955589d82b22750fb3b1646_582_0.png)
+
+在这里，在一个屏幕上，我们可以看到所有需要关注的内容：CPU 性能、网络接口、磁盘 I/O、NFS I/O，以及系统中运行的最大进程。该屏幕每两秒自动刷新一次，直到您退出 **topas**。虽然 **topas** 是一个很好的工具，但再次强调，它只是系统当前状态的快照；它无法帮助我们寻找系统中的趋势。
+
+## sar 命令
+
+**sar** 命令用于收集关于 CPU 使用率的统计数据。**sar** 的一个良好特性是，它可以分解多处理器系统中每个处理器的统计信息。本章前面，我们讨论了使用 **vmstat** 命令来查看被系统、用户、空闲和等待时间消耗的 CPU 时间百分比。在使用 **vmstat** 报告此信息时，我们看的是系统中所有处理器的平均值。使用 **sar**，我们可以按处理器分解这些数字，如下例所示：
+
+```
+# sar -u -P ALL 1 5
+
+AIX Lazarus 1 5 000031037500 04/20/02
+
+13:33:42 cpu user %sys %wio %idle
+13:33:43 0 0 0 0 100
+1 0 0 0 100
+2 0 0 0 100
+3 0 0 0 100
+- 0 0 0 100
+13:33:44 0 2 66 0 32
+1 0 1 0 99
+2 0 0 0 100
+3 0 1 0 99
+- 0 17 0 82
+13:33:45 0 1 52 44 3
+1 0 1 0 99
+2 0 4 0 96
+3 0 0 0 100
+- 0 14 11 74
+13:33:46 0 0 8 91 1
+1 0 0 0 100
+2 0 0 0 100
+3 0 1 0 99
+- 0 2 23 75
+13:33:47 0 0 7 93 0
+1 0 0 0 100
+2 0 1 0 99
+3 0 0 0 100
+- 0 2 23 75
+Average 0 1 27 46 27
+1 0 0 0 100
+2 0 1 0 99
+3 0 0 0 100
+- 0 7 11 81
+```
+
+使用 `-u` 和 `-P` 标志的组合，配合 `ALL` 处理器关键字，我们获得了按处理器统计的数据，采样间隔为一秒，重复五次。我们应当熟悉的另外两个重要标志是 `-o` 和 `-f` 标志。`-o` 标志用于将 `sar` 数据输出到二进制文件，而 `-f` 标志用于从该文件读取。利用这两个标志，我们可以将 `sar` 数据传输到另一个系统并在该处进行报告，从而最小化对被分析系统的性能影响。
+
+如果我们查看文件 `/var/spool/cron/crontabs/adm`，我们会发现已经创建了条目以允许 `/usr/lib/sa/sa1` 和 `/usr/lib/sa/sa2` 收集性能数据，但它们被注释掉了。这两个程序是 `sar` 的特殊版本，经过修改以由 `cron` 守护进程运行。有关配置系统计费和 `sar` 的完整详细信息，请参见第 28 章。
+
+## 性能诊断工具
+
+性能诊断工具（PDT）是 AIX 中可选项安装的工具，用于收集性能和配置信息，并尝试识别潜在问题。它通过文件集 `bos.perf.diag.tool` 安装。安装后，通过运行命令 `/usr/sbin/perf/diag_tool/pdt_config` 激活。该命令会导致在 `adm` crontab 文件中放置适当的条目，使工具开始定期收集数据。默认情况下，PDT 会在系统上保留大约一个月的性能数据，并每天向 `adm` 用户发送电子邮件报告。此报告分为五个部分：Header（页眉）、Alerts（警报）、Upward And Downward Trends（上升趋势和下降趋势）、System Health（系统健康）和 Summary（摘要）。以下是一个 PDT 报告的示例：
+
+```
+Performance Diagnostic Facility 1.0
+
+Report printed: Wed Apr 17 17:54:50 2002
+
+Host name: Lazarus
+Range of analysis includes measurements
+from: Hour 12 on Tuesday, April 16th, 2002
+to: Hour 17 on Wednesday, April 17th, 2002
+
+Notice: To disable/modify/enable collection or reporting
+execute the pdt_config script as root
+------------------- Alerts ------------------------
+
+### I/O CONFIGURATION
+
+- Note: volume hdisk1 has 872 MB available for allocation
+while volume hdisk0 has 148 MB available
+- Physical volume hdisk2 is unavailable; (in no volume group)
+
+### PAGING CONFIGURATION
+
+- Physical Volume hdisk2 (type: SCSI) has no paging space defined
+- Paging space paging00 on volume group rootvg is fragmented
+- Paging space paging01 on volume group uservg is fragmented
+
+### I/O BALANCE
+
+- Phys. volume hdisk2 is not busy
+volume hdisk2, mean util. = 0.00 %
+
+### PROCESSES
+
+- First appearance of 20642 (cpubound) on top-3 cpu list
+(cpu % = 24.10)
+- First appearance of 20106 (eatmem) on top-3 memory list
+(Memory % = 8.00)
+
+### FILE SYSTEMS
+
+- File system hd2 (/usr) is nearly full at 100 %
+
+### NETWORK
+
+- Host ah0000e appears to be unreachable.
+(ping loss % = 100) and has been for the past 4 days
+
+------------------- Upward Trends ------------------------
+
+### FILES
+
+- File (or directory) /usr/adm/avgm SIZE is increasing
+now, 20 KB and increasing an avg. of 2163 bytes/day
+- File (or directory) /var/adm/rag/ SIZE is increasing
+now, 677 KB and increasing an avg. of 11909 bytes/day
+
+### FILE SYSTEMS
+
+- File system hd9var (/var) is growing
+now, 17.00 % full, and growing an avg. of 0.38 %/day
+- File system lvo0 (/usr/vice/cache) is growing
+now, 51.00 % full, and growing an avg. of 4.64 %/day
+At this rate, lvo0 will be full in about 9 days
+```
+
+
+
+
+## 页面空间
+- 页面空间 hd6 的使用率正在增长，当前为 81.60 MB，平均每天增长 2.69 MB
+按照此速度，hd6 将在大约 29 天内填满
+
+## 错误
+- 软件错误；距离下一次出错的时间为 0.958 天
+
+## 向下趋势
+
+### 进程
+- 进程 13906 (maker4X.e) 的 CPU 使用率正在下降，当前为 1.20%，平均每天下降 0.68%
+- 进程 13906 (maker4X.e) 的内存使用率正在下降，当前为 13.00，平均每天下降 0.98%
+
+### 文件
+- 文件（或目录）/tmp/ 的大小正在减少
+
+### 文件系统
+- 文件系统 hd3 (/tmp) 正在收缩
+
+## 系统健康状况
+
+### 系统健康状况
+- 当前进程状态细分：
+  - 75.00 [ 100.0 % ] : 活动
+  - 0.40 [ 0.5 % ] : 交换
+  - 75.00 = 总计
+  - [基于 1 个由 10 个 2 秒样本组成的测量值]
+
+## 摘要
+这是一份严重程度级别为 3 的报告
+在严重程度级别大于 3 时没有更多详细信息
+
+可以使用 **pdt_config** 工具来修改与收集并报告的问题严重程度相关的选项，以及报告的电子邮件接收者。默认情况下，*adm* 用户的 crontab 中将放置以下条目：
+
+```
+0 9 * * 1-5 /usr/sbin/perf/diag_tool/Driver_daily
+0 10 * * 1-5 /usr/sbin/perf/diag_tool/Driver_daily2
+0 21 * * * /usr/sbin/perf/diag_tool/Driver_offweekly
+```
+
+cron 作业 **Driver_daily** 负责数据收集，而 **Driver_daily2** 负责报告。**Driver_offweekly** cron 作业负责数据保留，默认为 35 天。这些脚本的调度更改可以直接通过 *cron* 处理，而保留期可以通过更改 `/var/perf/cfg/diag_tool/retention.list` 文件中的值来修改。PDT 报告的所有阈值都在 /var/perf/cfg/diag_tool/.thresholds 文件中指定。PDT 监控增长的文件系统列表位于 /var/perf/cfg/diag_tool/.files。默认情况下，监控以下文件系统：
+
+- /usr/adm/wtmp
+- /var/spool/qdaemon/
+- /var/adm/ras/
+- /tmp/
+
+PDT 能够跟踪在 /var/perf/cfg/diag_tool/.nodes 文件中列出的主机的平均 ping 延迟。需要注意的是，启用 PDT 时默认不会创建此文件，系统管理员必须手动创建它。文件格式非常简单，每行一个主机名。
+
+关于 PDT 的最后一点说明：如果您希望按需运行 PDT 报告，而不是等待计划好的 cron 作业，只需执行脚本 /usr/sbin/perf/diag_tool/pdt_report，并传递您想要报告的错误严重程度编号（1、2 或 3）。以这种方式运行报告绝不会影响正常调度的报告。
+
+## AIX 性能工具箱
+
+AIX 性能工具箱（PTX）是来自 IBM 的独立授权程序产品。因此，它必须单独购买。它是一个功能强大的性能监控和收集工具，可根据个别系统需求进行高度配置。
+
+除了其自身的一套用于记录、回放和绘制几乎可以想象到的每种性能指标图表的工具外，它还有工具可以将数据导出到通用文件中，这些文件可以导入到您选择的工具中，例如电子表格。PTX 分为两个主要组件：PTX agent（代理）xmserverd，用于在单个主机上收集数据；以及 PTX manager（管理器）xmperf，用于接收数据并管理显示图表。由于这种两层架构，您可以轻松配置一个 PTX 管理器来处理许多系统的性能报告。
+
+### PTX 代理
+
+在受监控主机上运行的 PTX 代理是 xmserverd 守护进程。该守护进程通过 PTX 管理器提供主机的实时监视，以及本地性能指标的记录。xmserverd 监控和记录的指标通过 xmserverd.cf 文件控制，通常位于 /etc/perf/ 中。配置文件的示例如下：
+
+```
+retain 8 1
+frequency 600000
+start 0-6 00 00 0-6 23 50
+CPU/gluser
+CPU/gikern
+CPU/giwait
+CPU/gidle
+Proc/runque
+Proc/swpque
+Proc/pswitch
+Mem/Real/$free
+Mem/Real/$comp
+Mem/Virt/pagein
+Mem/Virt/pageout
+Mem/Virt/pgpggin
+Mem/Virt/pgpgout
+PagSp/totalseed
+LAN/ent0/framesout
+LAN/ent0/framesin
+LAN/ent0/xmitdrops
+LAN/ent0/recvdrops
+LAN/ent0/xmitque
+Disk/hdisk0/busy
+Disk/hdisk1/busy
+Disk/hdisk2/busy
+Disk/hdisk3/busy
+Disk/hdisk4/busy
+Disk/hdisk5/busy
+```
+
+此示例中的 retain 行配置为保留八天的性能数据，每天一个文件。下一行 frequency 设置每隔 600,000 毫秒（即每 10 分钟）捕获一次数据。start 行用于指示 xmserverd 何时收集数据，在此示例中，是从周日（第 0 天）到周六（第 6 天），从午夜到 23:50。文件中的所有剩余行都是要收集的性能指标。这些指标收集在名为 aizo 的文件中，位于 /etc/perf。根据 retain 行中的这个示例，我们可以预期在 /etc/perf 中看到名为 aiz.o.1（今天）到 aiz.o.8（一周前）的文件。
+
+在安装代理期间，xmserverd 守护进程被配置为 inetd 守护进程，并在 /etc/inetd.conf 中添加了相应的行。为了使 xmserverd 在系统启动时自动启动，应在 /etc/rc.tcpip 末尾添加以下行：
+
+```
+/usr/bin/sleep 10
+/usr/bin/xmpexe
+```
+
+sleep 命令是必要的，以便允许其他所有 TCP/IP 进程完成初始化，而 xmpexe 命令用于初始化 xmserverd 守护进程。初始化后，xmserverd 守护进程将按照配置文件中 frequency 和 start 行的设置重新生成自身。
+
+### PTX 管理器
+
+PTX 管理器 **xmperf** 是一个基于 X Window 的图形化程序。`xmperf` 程序用于定义监控环境，以监督本地系统和远程系统的性能。每个监控环境由多个控制台组成。控制台在显示器上显示为图形窗口。控制台反过来包含一个或多个仪表，每个仪表可以显示一个或多个被监视的值。有两种类型的仪表：记录仪表和状态仪表。记录仪表用于显示一段时间内的值。这并不意味着值存储在磁盘上的某个位置，只是它们显示随时间的变化。另一方面，状态仪表不显示任何历史，只显示当前测量值。这两种类型的仪表都可以配置为以下图形样式：
+
+- 记录图形：
+  - 线图
+  - 面积图
+  - 天际线图
+  - 柱状图
+- 状态图形：
+  - 状态条
+  - 状态灯
+  - 饼图
+  - 速度计
+
+为了演示这一点，这里有一个示例控制台：
+
+![](img/82f851021955589d82b22750fb3b1646_589_0.png)
+
+在这里，我们看到相同的数据，即 CPU 利用率，以三种不同的仪表样式显示：左上角为饼图，右上角为柱状图，底部为线图。仪表和控制台的配置保存在 `xmperf.cf` 文件中，位于用户的 `/home` 目录中。通过将该配置存储在 `/home` 目录中，不同的管理员可以按照他们喜欢的风格查看仪表，或者他们可能在查看完全不同的系统。
+
+有关 AIX 性能工具箱的更多信息，请参阅 AIX 5L 文档 CD 中包含的《AIX 性能工具箱指南和参考》。
+
+## AIX 监控工具
+
+监控工具用于在出现需要关注的情况时提醒系统管理员。这些工具可以是执行各种定期检查的简单脚本，也可以是能够监控整个企业的复杂打包软件。虽然系统管理员可以编写脚本来监控各种情况，但建议不要采取这种方法，因为随着系统的变化，这些脚本需要持续维护，而且遗漏某些问题的可能性很大。相反，我们将查看一些可用的打包软件，以协助监控系统。我们将查看的两个包都是基于 X Window 的图形显示。这使得只需 glance 即可查看系统状态非常容易。
+
+## Tivoli NetView
+
+Tivoli NetView 是基于简单网络管理协议（SNMP）的图形监控工具。SNMP 背后的概念非常简单。一旦系统上发生事件，它便会向负责监控 SNMP 的系统发送 TCP/IP 警报。您经常会听到这种监控系统被称为企业控制台，因为它具有跨整个企业查看系统的能力。SNMP 是一种用于发送警报的几乎通用的协议；AIX、SUN、Windows 以及几乎任何其他操作系统都可以生成 SNMP 警报，许多类型的硬件，如网络路由器，也可以生成 SNMP 警报。SNMP 警报通常被称为*陷阱*（trap）。
+
+使用 NetView 时，当接收到陷阱时，它会通过一组称为规则集的过滤器，以确定要采取的操作。使用 GUI 编程接口，可以设置动作来执行脚本或命令以尝试纠正问题，将代表系统的图标颜色从绿色变为红色，甚至可以向系统管理员发送文本寻呼以提醒其注意该情况。有关处理陷阱的 GUI 编程接口的示例，请参见以下插图：
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_591_0.png)
+
+在此处，我们可以看到两个不同的陷阱（traps）正在被比对以寻求匹配，如果匹配成功，则会执行脚本并将该事件标记为已解决。陷阱可以由多种类型的事件生成，例如磁盘驱动器故障，或者由内部自定义编写的脚本生成。许多打包应用程序，如 Oracle 数据库，也具备生成 SNMP 陷阱的能力。
+
+在依赖 NetView 等软件包时，我们需要牢记以下几点。首先，如果我们依赖此产品在我们事件发生时通知我们，我们需要另一种方法，以便在 NetView 本身出现问题时也能得到通知。这意味着我们可能希望将 NetView 部署在由 HACMP 保护的系统上，从而赋予 NetView 应用一定的高可用性能力。另一件需要牢记的是，如果我们依赖 NetView 内部的寻呼守护进程通过文本寻呼（text pages）向我们发出警报，我们需要密切关注 rvpagerd 进程，这就是寻呼守护进程。调制解调器离线并需要断电重启的情况并不罕见，这会导致寻呼守护进程终止运行。下面是一个监控此进程并使用备用路径发送文本寻呼的脚本示例。在此示例中，文本寻呼机还可以通过互联网接收电子邮件，因此我们将使用 mail 程序将电子邮件路由到寻呼机：
+
+```ksh
+#!/bin/ksh
+ps -ef|grep nvpager|grep -v grep
+RC=$?
+if [ [ $SRC -ne 0 ] ]
+then
+print nvpager has died on `hostname`\mail -s "ALERT"
+4045551212@messaging.some-telecom.com
+fi
+```
+
+然后，可以通过 **cron** 调度该脚本定期运行，以检查寻呼守护进程的状态，并在其终止运行时向相关人员发出警报。如果寻呼守护进程已终止，请检查 **/usr/OV/logs/nvpagerd.alog** 文件。如果你看到关于调制解调器无响应的消息，只需将调制解调器断电后再重新接通，然后运行 **/usr/OV/bin/nvstop** 和 **/usr/bin/nvstart** 这两个命令来重启 NetView 和寻呼守护进程。
+
+使用 NetView 等产品的优势之一，在于它与其他 Tivoli 软件包的集成度之高。Tivoli 还生产用于处理数据备份和恢复（Tivoli Storage Manager）以及作业调度（Tivoli Workload Scheduler）的软件，这些软件都能集成到由 NetView 监控的 SNMP 框架中。虽然 Tivoli 显然不是唯一生产此类集成软件包的公司，但 IBM 与其关系非常紧密，并且对 AIX 以及 pSeries 和 RS/6000 服务器有更深的理解。有关 Tivoli NetView 的更多信息，请联系你的 IBM 销售代表，或访问 http://www.tivoli.com/ 查看。此外，在 http://www.redbooks.ibm.com/ 上还可以找到许多关于 NetView 的 RedBooks 资源。
+
+## Big Brother
+
+另一种辅助系统监控的图形化工具是 Big Brother。Big Brother 作为监控工具具有若干优势，其中最值得一提的就是价格。Big Brother 供非商业使用免费，商业使用也极为便宜。执行实际监控功能的 Big Brother 服务器可以驻留在基于 AIX 或 NT 的主机上。它以 HTML 格式提供其信息显示屏，这意味着系统管理员可以在网络上的任何位置检查服务器状态。此外，HTML 显示屏提供深层访问功能，且为只读显示屏，因此非技术人员，甚至可能是经理，也可以打开它们进行查看。下面是一个顶级 Big Brother 显示屏的示例，显示了对几台服务器上若干功能进行监控的情况：
+
+![](img/82f851021955589d82b22750fb3b1646_593_0.png)
+
+在这里，我们看到三台服务器正在接受连通性、CPU 利用率、磁盘利用率、DNS 守护进程和 FTP 守护进程的监控。请注意 Rico 服务器磁盘利用率下方的黄色注意标记。单击该标记会调出以下屏幕：
+
+![](img/82f851021955589d82b22750fb3b1646_593_1.png)
+
+现在我们可以查看 Rico 上受监控文件系统的详细列表，以及哪一个正在引起注意。根据底部的消息，我们还可以看到，在过去四天内状态没有发生变化。
+
+与 NetView 类似，Big Brother 也具备发送文本寻呼的能力。Big Brother 唯一的缺点是安装和配置可能是一项庞大工程。Big Brother 以源代码形式发布，这意味着下载代码后必须对其进行编译。此外，Big Brother 需要 Web 服务器来显示状态页面，因此在尝试安装过程之前，应确保已部署并正常运行一个 Web 服务器。幸运的是，Apache Web 服务器在 AIX 上免费提供。
+
+有关 Big Brother 的更多信息，请查看 `http://www.b44.com/`。另外，在 `http://www.deacdat.net/` 上也有大量关于 Big Brother 的有用信息。
+
+以下是本章使用的术语和命令的简要说明：
+
+## CPU 调优
+
+| 命令 | 描述 |
+| :--- | :--- |
+| nice | 用于更改进程优先级的命令 |
+| sar | 用于收集、报告和保存系统活动信息的命令 |
+| schedtune | 设置 CPU 调度程序和虚拟内存管理器处理参数的命令 |
+| 工作负载管理器 (WLM) | 一种工具，赋予系统管理员更多的控制权，以决定 CPU 调度程序和虚拟内存管理器 (VMM) 如何将资源分配给进程 |
+
+## 内存调优
+
+| 命令 | 描述 |
+| :--- | :--- |
+| 虚拟内存管理器 (VMM) | 管理实存页面的分配，并解析对当前不在实存中的虚存页面的引用 |
+| vmstat | 用于报告虚拟内存统计信息的命令 |
+| vmtune | 用于更改虚拟内存管理器操作参数的命令 |
+
+## 磁盘调优
+
+| 命令 | 描述 |
+| :--- | :--- |
+| iostat | 用于报告整个系统输入/输出统计信息的命令 |
+| lspv -l | 用于显示特定磁盘上存储的逻辑卷的命令 |
+
+## 网络调优
+
+| 命令 | 描述 |
+| :--- | :--- |
+| netstat | 用于报告网络统计信息的命令 |
+| no | 用于设置网络选项的命令 |
+
+## 性能监控
+
+| 命令 | 描述 |
+| :--- | :--- |
+| 性能诊断工具 (PDT) | 自动识别性能问题的工具 |
+| AIX 性能工具箱 (PTX) | 用于收集和报告性能数据的图形工具集 |
+| xmpeek | 用于生成 xmserverd 守护进程的命令 |
+| xmperf | 用于监控和管理本地及远程系统性能的命令 |
+| xmserverd | 性能工具箱数据收集守护进程 |
+
+## 术语表
+
+- **Big Brother**：基于 Web 的系统与网络监控器
+- **NetView**：用于监控和报告系统与网络的图形工具
+- **SNMP**：简单网络管理协议
+- **Trap**：通过 SNMP 发送的事件警报
+
+## 检查清单
+
+以下是系统监控和调优关键要点的检查清单：
+
+- 作为 AIX 系统管理员，识别你的工作负载。
+- 监控并调整 CPU 负载、系统内存、磁盘输入/输出以及系统所连接的网络，将其作为 AIX 操作系统的基本特性。
+- 识别 AIX 调优工具。
+- 识别 AIX 监控工具。
+
+![](img/82f851021955589d82b22750fb3b1646_596_0.png)
+
+# 第 27 章
+
+## 问题分析与恢复
+
+![](img/82f851021955589d82b22750fb3b1646_597_0.png)
+
+你是否曾怀疑在你的 RS/6000 正面外壳后面是否潜伏着一个小鬼？时不时地，你会瞥见两颗圆溜溜的小眼睛正从软盘插槽里向外窥视。你惊愕地回头再看，除了某个磁带或软盘灯在闪烁外，并无异样。你紧张地耸耸肩，继续启动你一直拖延到最后一刻才处理的高优先级应用程序。就在时间线的关键时刻，你注意到房间里有一种诡异的闪烁。心中涌起一股不祥的预感，你看向前面板，就在那里：令人胆寒的 888 闪烁。你手指颤抖地按下 Reset 按钮，盯着每次触碰后跳动的发光数字。你的运气依然不佳，转储 LED 显示为 0C5。系统转储尝试并失败。你关闭电源，停顿片刻擦去额头的汗水，然后重新通电启动。数字在 LED 窗口上舞动。你听到的那种恶意咯咯笑声是怎么回事？不可能吧。你告诉自己，这不过是加班时间太久，或者咖啡喝得有点多而已。你双眼布满血丝，畏缩于 LED 的眩光，然后在脑海中指向：888, 888, 888... 遗憾的是，你在某些 PowerPC 型号上无法享受同样的乐趣；它们没有 LED（叹气）！
+
+挺恐怖的，不是吗？唯一缺少的就是“那是一个黑暗而暴风雨的夜晚。”
+
+别误会我的意思，我并不是暗示系统故障和恐慌在 POWER 或 PowerPC 系统上特别常见。然而，故障确实会发生，而且通常发生在最不合时宜的时刻。诀窍在于，在小鬼开始折磨你的理智之前，确保你已经完成了系统日志记录和恢复的作业。
+
+## 备份与可启动媒体
+
+备份。如果你没有备份，那么本节其余的信息对你没什么太大帮助。我惊讶地收到许多用户的电话，他们正指望发生奇迹，能够恢复坏掉的磁盘，尽管他们从未花时间进行备份。关于系统备份的详细信息，请参阅第 25 章。
+
+接下来，确保你有多份独立的、反映新系统安装和维护级别的可启动媒体副本。注意，我说的是*多份*副本。我必须承认，我曾多次因为只有一份关键数据副本而吃过亏。使用 *mksysb* 命令在磁带上创建新 rootvg 的备份映像。这些磁带可用于从磁盘故障中恢复，也可用于安装额外的机器。当从独立磁带启动时，将执行 AIX 安装/维护 shell。这将引导你完成恢复过程。
+
+### 创建根卷组的备份副本
+
+```bash
+# tctl -f /dev/rmt0 rewind
+# Rewind tape
+```
+
+在 *tctl* 命令中使用 *-f* 标志来指定使用哪个磁带驱动器。
+
+```bash
+# mksysb -i -X /dev/rmt0
+# Create backup
+```
+
+
+
+
+
+请注意 `mksysb` 命令中的 `-i` 标志；它将自动调用 `mksysfile` 命令来生成 `/image.data` 文件。该文件包含在恢复过程中使用的卷组、逻辑卷、物理卷、文件系统和分页空间的信息。`-X` 标志用于允许在必要时扩展 `/tmp` 文件系统。此文件系统用于存放用于制作可启动磁带的引导映像。如果你不希望 `/tmp` 文件系统自动扩展，请运行以下命令以查看引导映像需要在 `/tmp` 中占用的空间：
+
+```
+# bosboot -qa
+```
+
+`bosboot` 命令中的 `-qa` 标志用于查询完整引导映像所需的多少空间。如果你不希望将某些文件或目录包含在备份中，请在 `/etc/exclude.rootvg` 文件中列出它们，并在 `mksysb` 命令中包含 `-e` 标志。
+
+务必在创建介质后对其进行测试。这样做能让你放心，并让你熟悉恢复过程。
+
+## 从 mksysb 恢复
+
+在开始恢复过程之前，请通过 `bootlist` 命令或 **系统管理服务 (SMS)** 菜单确保磁带驱动器确实位于启动列表中。然后按照以下步骤操作：
+
+1. 将系统钥匙转到服务位置（如果存在）。
+2. 插入 mksysb 磁带。
+3. 给系统上电。
+4. 根据提示，选择控制台显示器。
+5. 选择主要语言。
+6. 选择 **Start Maintenance Mode For System Recovery**（启动系统恢复维护模式）。
+7. 选择 **Access Advanced Maintenance Mode Functions**（访问高级维护模式功能）。
+8. 选择 **Install From A System Backup**（从系统备份安装）。
+9. 选择正确的磁带设备，恢复将开始。
+
+## 从 SysBack 备份恢复
+
+如果你足够幸运，已经安装了 IBM 的 System Backup and Recovery for AIX 许可程序，那么在如何处理恢复方面你会拥有更多选择。这些选择的许多方面将由你使用 SysBack 进行备份的方式决定，例如：你是备份到磁带，还是将备份映像放在网络上的另一台服务器上？为了这个示例的目的，假设你创建了一个安装映像备份到磁带上。就像从 **mkssysb** 磁带恢复一样，在按照以下步骤操作之前，请确保磁带设备在启动列表中：
+
+- 将系统钥匙转到服务位置（如果存在）。
+- 插入 SysBack 磁带。
+- 给系统上电。
+- 根据提示，选择控制台显示器。
+- 在 **Main**（主）菜单中，选择 **Change Volume Group And Logical Volume Information**（更改卷组和逻辑卷信息）。
+- 选择 **Select Physical Volumes For Volume Groups**（为卷组选择物理卷）并选择正确的物理卷。
+- 选择 **Change Logical Volume Information**（更改逻辑卷信息）并输入每个逻辑卷的正确副本数。
+- 选择 **Select Physical Volumes For Logical Volumes**（为逻辑卷选择物理卷）并选择你希望每个逻辑卷及其副本驻留在哪些物理卷上。
+- 按 **ESC** 键返回到 **Main**（主）菜单。
+- 选择 **Install The System With Current Settings**（使用当前设置安装系统），恢复将开始。
+
+## LED 状态信息
+
+如果你的计算机前面板没有 LED，请去喝杯咖啡，然后跳至“检查服务处理器错误日志”部分。
+
+故事总是始于 LED 前面板上令人恐惧的闪烁 888。在决定放弃并按下电源开关之前，请按复位按钮以循环查看四个停机状态号码。这些号码指示当前的系统状态、停机原因和转储状态。记下它们。你在后续的分析过程中会用到它们。这是每次按下复位按钮时列出的代码序列。
+
+```
+888 - bbb - eee - ddd
+```
+
+LED 显示上 888 后的第一个数字（在示例中由 bbb 表示）指示硬件内置自测试（BIST）状态。在大多数情况下，BIST 状态将显示为 102，这表明 BIST 在系统复位后已启动。其他值可能指示硬件问题。下一个数字（由 ee 表示）指示系统停机的原因（参见表 27-1）。
+
+| 代码 | 含义 |
+| :--- | :--- |
+| 20x | 机器检查 |
+| 300 | 存储中断：处理器 |
+| 32x | 存储中断：I/O 通道控制器 |
+| 38x | 存储中断：串行链路适配器 |
+| 400 | 存储中断：指令 |
+| 500 | 外部中断：DMA，总线错误 |
+| 52x | 外部中断：IOCC 检查/超时 |
+| 53x | 外部中断：IOCC 超时 |
+| 700 | 程序中断 |
+| 800 | 浮点不可用 |
+
+**表 27-1. LED 停机原因代码**
+
+序列中的最后一个数字（由 ddd 表示）指示与故障相关的任何转储的状态（参见表 27-2）。
+
+关于 LED 错误代码的最后一点说明：如果你在面板上看到超过三位数的代码，你需要参考该特定型号 RS/6000 或 rSeries 机器的服务指南，因为这些代码及应采取的相应操作是特定于型号的。
+
+| 代码 | 含义 |
+| :--- | :--- |
+| 0C0 | 转储成功 |
+| 0C2 | 用户转储进行中 |
+| 0C4 | 部分转储成功 |
+| 0C5 | 无法访问转储设备 |
+| 0C6 | 提示选择次要转储设备 |
+| 0C7 | 远程转储进行中 |
+| 0C8 | 未定义转储设备 |
+| 0C9 | 转储进行中 |
+
+**表 27-2. LED 转储状态代码**
+
+## 检查服务处理器错误日志
+
+每当发生固件相关问题时，服务处理器都会记录该日志。要查看此日志，系统必须处于断电状态。从系统控制台或连接到 S1 或 S2 端口的 ASCII 终端，快速按两次 ENTER 键。如果设置了服务处理器密码，系统将提示你输入。验证后，将显示以下菜单：
+
+通用用户菜单 (GENERAL USER MENU)
+
+1. 给系统上电 (Power-on System)
+2. 给系统断电 (Power-off System)
+3. 读取上次系统启动的 VPD 映像 (Read VPD Image from Last System Boot)
+4. 读取上次系统启动的进度指示器 (Read Progress Indicators from Last System Boot)
+5. 读取服务处理器错误日志 (Read Service Processor Error Logs)
+6. 读取系统 POST 错误 (Read System POST Errors)
+99. 退出菜单 (Exit from Menus)
+
+选择选项 5 以查看服务处理器错误日志，这将显示如下所示的屏幕：
+
+```
+Error Log
+1.  11/30/99  19:41:56  Service Processor Firmware Failure
+     B1004999
+
+Enter error number for more details.
+Press Return to continue, or 'x' to return to menu.
+Press "C" to clear error log, any other key to continue. >
+```
+
+需要注意的重要一点是，服务处理器错误日志中的所有时间和日期均为协调世界时（UTC），也称为格林尼治平均时间（GMT）。输入错误编号后，系统将显示九个字的系统参考代码（SRC）数据，例如：
+
+```
+Detail: 6005
+SRC
+--------------------------------------------------------------------------------
+word11:B1004999 word12:0110005D word13:00000000
+word14:00000000 word15:00001111 word16:00000000
+word17:B1004AAA word18:01140055 word19:4AF1E909
+B1004999
+
+Press Return to continue, or 'x' to return to menu.
+```
+
+如果你在此屏幕上按 ENTER，NVRAM 的内容将从地址 0000 开始转储，每次转储 320 字节。
+
+## 系统错误报告中有什么？
+
+每当操作系统模块检测到错误时，**erodaemon** 会通过 `/dev/error` 特殊设备文件收到通知，并将信息写入错误日志。通过 **erprt** 命令访问此信息。在不带标志的情况下输入 **erprt** 命令，将生成以下汇总错误报告：
+
+| 标识符 | 时间戳 | T C | 资源名称 | 描述 |
+| :--- | :--- | :--- | :--- | :--- |
+| EAA3D429 | 0430145602 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145602 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145602 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| EAA3D429 | 0430145402 | U S | LVDD | 物理分区标记为过时 |
+| 08A49C99 | 0430145402 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145402 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145302 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145302 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145302 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145302 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145302 | T H | scsi0 | SCSI 总线错误 |
+| 08A49C99 | 0430145302 | T H | scsi0 | SCSI 总线错误 |
+| 2BFA76F6 | 0430144802 | T S | SYSPROC | 用户关机 |
+| 9BCEFDEE | 0430145402 | T O | erodaemon | 错误日志已开启 |
+| 192AC071 | 0430144602 | T O | erodaemon | 错误日志已关闭 |
+
+在这里，我们可以看到每个条目的唯一标识符、发生日期和时间、事件类型（待处理、性能、永久、临时、未知或信息类）、事件类别（硬件、软件、信息类或未确定）、记录该事件的资源以及事件的简要描述。了解事件时间戳采用 MMDDDhhmmYY 格式是有帮助的。从这里的汇总报告中，我们可以看到在 2002 年 4 月 30 日 14:53，当系统启动到 **bus 0** 时发生了一些事情，这似乎导致许多逻辑卷被标记为过时。为了深入挖掘并获取更多关于正在发生什么的信息，请使用带有 **-a** 标志的 **erprt** 命令显示所有条目的详细信息，或使用带有 **-a** 和 **-i [identifier]** 标志的命令获取特定错误 ID 的具体信息。
+
+
+
+
+
+## 使用我们前面的摘要报告
+
+如果输入 `erpt -aj EAA3D429`，我们将得到以下详细报告：
+
+```
+------------------------------------------------------------------
+LABEL:		LVM_SA_STALEPP
+IDENTIFIER:	EAA3D429
+
+Date/Time:	Tue Apr 30 14:57:51 EDT
+Sequence Number: 97
+Machine Id:	00001037500
+Node Id:	Lazarus
+Class:	S
+Type:	UMNN
+Resource Name: LVDD
+
+Description
+PHYSICAL PARTITION MARKED STALE
+
+Detail Data
+PHYSICAL VOLUME DEVICE MAJOR/MINOR
+0000 0000
+PHYSICAL PARTITION NUMBER (DECIMAL)
+306
+LOGICAL VOLUME DEVICE MAJOR/MINOR
+000A 0005
+SENSE DATA
+0000 3103 0000 7500 0000 00EC FD8B 82D3 0000 0000 0000 0000 0000 0000 0000
+------------------------------------------------------------------
+```
+
+在详细报告中，我们可以看到诸如物理卷和逻辑卷的主设备号和次设备号等被标记为陈旧（stale）的信息。这个特定示例是通过在系统关机时拔掉其中一个（镜像）磁盘而产生的，因此当系统重新启动时，该物理卷上的每个逻辑卷都同时被标记为陈旧。
+
+# AIX 错误日志记录设施
+
+AIX 提供了多个命令来帮助我们管理错误日志。其中最简单的是 `erlogger` 命令。该命令用于将操作员消息记录到错误报告中。根据我们前面的示例，我们可以执行以下命令来创建一条我们已更换磁盘驱动器的条目：
+
+```
+# erlogger 'disk drive replaced'
+```
+
+下一次我们运行 `erpt -l | head -4` 命令时，我们将看到以下四行：
+
+```
+IDENTIFIER  TIMESTAMP  T C  RESOURCE_NAME  DESCRIPTION
+AA8A5241  0430185102  T O  OPERATOR  OPERATOR NOTIFICATION
+EAA3D429  0430145602 U S LVDD PHYSICAL PARTITION MARKED STALE
+EAA3D429  0430145502 U S LVDD PHYSICAL PARTITION MARKED STALE
+```
+
+在摘要报告中，我们只能看到记录了一个操作员通知事件。通过执行 `erpt -aj AA8A5241`，我们可以看到实际记录的消息：
+
+```
+LABEL: CFMSG
+IDENTIFIER: AA8A5241
+
+Date/Time: Tue Apr 30 18:51:39 EDT
+Sequence Number: 115
+Machine Id: 000011037500
+Node Id: Lazarus
+Class: O
+Type: TEMP
+Resource Name: OPERATOR
+
+Description
+OPERATOR NOTIFICATION
+
+User Causes
+ERLOGGER COMMAND
+
+Recommended Actions
+REVIEW DETAILED DATA
+
+Detail Data
+MESSAGE FROM ERLOGGER COMMAND
+Disk drive replaced
+```
+
+在管理错误日志的另一个有用命令是 `errclear` 命令，它用于清理日志中的旧条目。要清除日志中所有超过七天的条目，请输入以下命令：
+
+```
+# errclear 7
+```
+
+# 系统内存转储
+
+当系统故障发生时，所选内核地址区域的自动转储会被记录在由主转储表定义的转储设备上。主转储设备是用于保存转储的专用存储区域。可以定义需要操作员干预的共享备用设备。默认的主转储设备是 /dev/hd6，默认的备用设备是 /dev/sysdump1。使用 `sysdumpdev` 命令或使用 SMIT 快速路径 `smit dump` 来定义和管理转储设备。请确保你的转储设备已分配，并且足够大以容纳至少一个完整转储。
+
+```
+# sysdumpdev -L    # List current dump status
+# sysdumpdev -l    # List primary dump device location
+# sysdumpdev -P    # Assign dump device
+# sysdumpdev -e    # Estimate the size needed to dump
+# smit dump        # SMIT FastPath to System Dump
+```
+
+以下命令将为镜像根卷组创建并配置两个专用转储设备（主设备和备用设备）（切勿镜像转储设备！）：
+
+```
+# mklv -y hd7 -t sysdump -x 5 rootvg 2 hdisk0    # This hd7 will be 2 partitions
+# mklv -y hd71 -t sysdump -x 5 rootvg 2 hdisk1   # The x limits the size
+# sysdumpdev -P /dev/hd7                          # Assign primary dump device
+# sysdumpdev -S /dev/hd71                         # Use /dev/hd71 for secondary
+# sysdumpdev -K                                   # Always allow system dump
+# sysdumpdev -D /var/adm/ras                      # Set forced copy flag to FALSE
+# chdev -l sys0 -a autorestart=true               # Enable auto REBOOT after crash
+```
+
+如果转储设备已配置，你可以使用 `sysdumpstart` 命令、使用 SMIT 或将钥匙转到服务位置并按一次重置按钮来强制系统恐慌转储。在没有钥匙或重置按钮的 PCI 机器（6015–7248）上，尝试 CTRL-ALT-NUMLOCK 1，或者如果可能，只需按重置按钮。大型机器都有不同的方法，因此在尝试之前请查阅你机器的硬件指南。记住，你只有一次机会获得良好的系统转储，如果做错了，系统可能会直接重新启动。
+
+虽然可以查询驻留在主转储区域中的内核转储，但将它们复制到 AIX 文件系统或可移动介质类型上是好的做法。你可以使用 SMIT 或以下 `snap` 和 `tar` 命令来管理转储文件，以获取系统快照并释放转储区域，以解决你未来潜伏的问题。
+
+```
+# snap -gfkx -d /tmp/snap
+# tar cvf /dev/rmt0 /tmp/snap
+```
+
+在这个示例中，我们使用 `snap` 命令来检查系统环境。-g 标志用于收集授权程序信息，-f 标志收集文件系统信息，-k 标志收集内核信息，-x 标志从主转储设备收集信息。在 `snap` 将此信息复制到 /tmp/snap 下的各个子目录，并将 /unix 和转储的压缩镜像存储到 /tmp/snap/dump 目录后，我们在检查转储设备的镜像之前将信息 `tar` 到磁带上。
+
+# 系统日志
+
+`syslogd` 守护进程通过由使用 `syslog` 子程序的应用程序创建的 `datagram` 套接字接收消息。`syslogd` 守护进程将传入消息重定向到文件或 /etc/syslog.conf 文件中描述的条目所指示的其他系统。每当 `syslogd` 启动或接收到 HUP 信号时，都会读取此文件。由于 syslog 的应用特定性，AIX 提供了一个 /etc/syslog.conf 示例模板，必须根据你的应用程序需求进行配置。/etc/syslog.conf 中的每一行都包含由分号分隔的消息选择器，后跟一个指示消息发送位置的字段。传入消息指定一个代表其中一个选择器的设备代码。（请参阅 /usr/include/sys/syslog.h 查看代码和选择器的列表。）在以下示例中，邮件消息发送到另一台名为 daffy 的系统上的中心存储库；所有调试消息发送到 /var/adm/debug.log；内核关键和紧急消息发送到 /var/adm/kernel.log；警报消息发送到 ops 用户 ID。debug.log 文件的大小限制为 100K，并且保存有四个前一个文件 debug.log.0 到 debug.log.3。kernel.log 文件也保存有四个前一个文件，但它们的大小没有限制；相反，它们每天轮换一次。
+
+```
+/**********Example /etc/syslog.conf*********/
+
+mail @daffy
+*.debug /var/adm/debug.log rotate size 100k files 4
+kern.crit;kern.emerg /var/adm/kernel.log rotate time 1d
+*.alert ops
+```
+
+请记住，对于实时调试，你始终可以使用系统跟踪来获取更精细的细节。
+
+```
+# trcon      # Start trace
+# trcstop    # Stop trace
+# trcrpt     # Generate trace report
+```
+
+# AIX 内核结构
+
+有了错误日志和 LED 状态信息，我们准备好检查转储了。首先，让我们为了解 AIX 内核的特征打下一些基础。AIX 基于可抢占的内核。内核被分为可固定区域和可分页区域。内核的可固定低区域包含中断处理程序、内核文本和数据区域、进程表以及页映射。可分页内核区域包括文件表；v 节点、g 节点和 i 节点结构；以及内核扩展。重要的是要记住，可分页内核区域中的活动和服务是同步的，而可固定区域的活动是异步的。例如，外部 I/O 中断可能在发起请求的进程完成其时间片并被换出后很久由可固定区域处理。中断分为处理器中断和外部中断类别。所有 I/O 类型中断都复用为一个外部中断。外部中断包括 I/O 总线和系统板设备。外部中断是唯一可以被屏蔽的中断类别。处理器中断包括系统重置、机器检查、存储、程序、对齐、浮点和 SVC 中断。
+
+
+
+
+
+内存地址基于 32 位（POWER）或 64 位（PowerPC）有效地址和一个 24 位段地址。有效地址的前四个最高位表示十六个段寄存器中的一个。有效地址剩余的 28 位与 24 位段地址一起使用，用于指示虚拟内存中的一个位置。
+
+内核和应用地址空间非常相似。出于调试目的，理解内核区域的一般布局非常重要。内核边界的精确地址将取决于您正在运行的 AIX 版本。
+
+## V5.1.0 的内核符号和地址
+
+![](img/82f851021955589d82b22750fb3b1646_608_0.png)
+
+在分析转储（dump）时，生成一份完整的内核符号和地址列表是个好主意。请对与转储关联的内核对象文件使用 **nm** 命令。
+
+```
+# nm -vFxE /unix
+```
+
+在此示例中，我们使用 -v 标志按值对符号进行排序，而不是按字母顺序。-f 标志指定完整输出，而 -x 标志提供符号的十六进制值。
+
+## AIX 5L 中 crash 命令被 kdb 取代
+
+**kdb** 命令取代了早期 AIX 版本中的 **crash** 命令。内核调试器（**kdb**）命令是一个交互式实用程序，用于检查操作系统映像或运行中的内核。它解释并格式化系统中的控制结构，并为检查转储提供杂项功能。如需查看 **kdb** 可用子命令的完整列表，请参阅 *KDB 内核调试器的子命令* 和 *kdb 命令章节*，这些内容位于 *AIX5L 内核扩展和设备支持编程概念* 中，可通过 docsearch 获取。
+
+## 使用 diag 进行硬件诊断
+
+RS/6000 和 pSeries 机器在开机自检（BIST）期间非常擅长检查其硬件。在系统开机时跟踪 LED 信息将有助于您调试硬件问题。如果您怀疑存在硬件问题或系统无法启动，请使用诊断程序来帮助确定故障。诊断程序可以从 CD 以独立模式运行，或者使用 **diag** 命令在 AIX 在线时以并发模式运行。对于并发模式操作，请以超级用户身份输入 **diag** 命令并遵循菜单说明。
+
+## 寻求帮助
+
+一旦您确定存在软件或硬件问题，请在联系 IBM 支持之前收集所有相关的日志、转储和 LED 信息。您可能还想运行 **snap**、**lslpp -hc***<i>*filename</i>* 或 **pmprmr** 命令，以获取系统维护级别和配置的快照。
+
+如果您可以网络访问 IBMLink 或 Support Line 站点，您可以自行查看问题和 servicedb。如果您无法通过网络访问这些站点，IBM 会通过 CD-ROM 提供 IBMLink 链接和 servicedb 的定期快照。现在您已准备好联系 IBM 支持。以下是 IBM 支持部的联系电话和 IBMLink 的 Web 站点：
+
+- 1-800-CALL-AIX（软件支持）
+- 1-800-IBM-SERV（硬件支持）
+- `http://www.ibm.link.ibm.com/`
+
+## 操作系统补丁
+
+IBM 现在将 AIX 4.1 到 AIX 5L 的补丁打包为针对不同维护版本的干净 **gzip** 文件。这些补丁的主要访问入口是 `http://techsupport.services.ibm.com`。使用以下 **instfix** 和 **oslevel** 命令来显示您当前的维护级别，并参考这些 IBM 站点以获取更多详细信息和下载：
+
+```
+# instfix -i | grep AIX_ML
+# oslevel -r
+http://techsupport.services.ibm.com/rs6k/ml_fix.html
+http://techsupport.services.ibm.com/rs6k/fixdb.html
+http://techsupport.services.ibm.com/servers/aix.CAPaRdB
+```
+
+IBM 可能只会继续为 AIX 4 提供 FixDist 支持。FixDist 是一个 FTP 接口，允许用户从 IBM 的匿名 FTP 服务器选择和获取维护补丁。您可以按 PTF 和 APAR 号选择维护补丁。FixDist 会确保该集合中包含所有必需的补丁。随后可以使用名为 TapeGen 的配套工具将这些补丁堆叠到 SMIT 可以读取的磁带上。如果您维护大量无法访问网络安装服务的机器，这将非常有用。这些工具以及关于如何下载和使用它们的文档可在以下 IBM 站点找到：
+
+```
+http://techsupport.services.ibm.com/rs6k/tools_FixDist.html
+ftp://service.boulder.ibm.com/aix/tools/fixdist/fixdist.html
+```
+
+如果您可以访问 Usenet 新闻服务，请查看 comp.unix.aix 讨论组和存档。最好的帮助信息来自现场使用 AIX 的同业。IBM 支持人员和开发人员也关注这些组，可能会提供帮助。
+
+将阅读必需文本作为作业的一部分总是一个好的行动计划。请查看 *RISC System/6000 诊断程序：操作员指南*，SA23-2631-05；以及 *RISC System/6000 问题解决指南*，SC23-2204-02。
+
+## 检查清单
+
+以下是问题分析和恢复要点的检查清单：
+
+- 执行系统备份。
+- 确保您拥有多份独立的可启动介质副本，反映新系统的安装和维护级别。
+- 确保您的计算机前面板上有 LEDs。
+- 检查服务处理器错误日志。
+- 识别系统错误报告中的内容。
+- 确保已分配转储设备且其容量足够大，至少能容纳一个完整转储。
+- 识别系统日志中的内容。
+- 识别 AIX 内核结构。
+- 内核调试器（kdb）命令。
+- 使用 diag 命令运行诊断程序，可以从 CD 以独立模式运行，或在 AIX 在线时以并发模式运行。
+
+![](img/82f851021955589d82b22750fb3b1646_611_0.png)
+
+## 第十二部分
+
+## 高可用性
+
+28 HACMP 和集群
+
+![](img/82f851021955589d82b22750fb3b1646_611_1.png)
+
+![](img/82f851021955589d82b22750fb3b1646_613_0.png)
+
+## 第 28 章
+
+## HACMP 和集群
+
+适用于 AIX 的高可用集群多处理（HACMP）是 IBM 的 AIX 集群软件，它将多个 IBM server pSeries 或 IBM RS/6000 服务器链接成高可用性集群。HACMP 自动检测系统或网络故障，并通过将故障切换（failover）到恢复处理器并尽可能减少对最终用户时间的损失，从而消除单点故障。
+
+## 概述
+
+在深入讲解 HACMP 的工作原理及其使用方法之前，我们将首先简要概述关键概念。（本章的部分内容受 IBM 版权保护，并经 IBM 许可引用。）
+
+### 容错与高可用性
+
+直到最近，在 UNIX 领域实现高可用性的唯一途径是通过容错技术。容错依赖于专用硬件来检测硬件故障，并立即切换到冗余硬件组件。虽然这种切换看似无缝且提供不间断服务，但成本高昂，因为冗余组件并不执行处理。更重要的是，容错模型并未解决软件故障，而软件故障是当今停机时间最常见的原因。
+
+高可用性不将可用性视为一系列复制的物理组件，而是视为一组协作以保证基本服务的系统级共享资源。高可用性将软件与行业标准硬件相结合，通过在系统、组件或应用程序故障时快速恢复基本服务来最大限度地减少停机时间。虽然并非即时，但服务恢复迅速，通常不到一分钟。
+
+因此，容错与高可用性之间的区别在于：容错环境中没有服务中断，而高可用性环境中只有最小的服务中断。高可用性系统是能够忍受短暂中断（如果发生故障）但必须快速恢复的应用程序的优秀解决方案。某些行业的应用程序对时间敏感程度极高，甚至无法忍受几秒钟的停机时间。然而，大多数行业可以忍受其数据库不可用的小型时间段。对于这些行业，由 HACMP 控制的集群可以在没有完全冗余成本的情况下提供必要的服务连续性。
+
+### HACMP
+
+IBM 在 AIX 上用于集群的工具是高可用集群多处理软件，即 HACMP。HACMP 软件确保持关键应用程序及其支持组件可用于处理。
+
+HACMP 涵盖多个产品：高可用子系统（HAS）是 AIX 的基础集群软件，可被称为“HACMP 经典版”；增强可扩展性（HACMP/ES）使用 IBM 的可靠可扩展集群技术
+
+
+(RSCT) 功能以扩展基础集群能力：结合 HAS 或 HACMP/ES 的并发资源管理器 (CRM) 允许并发资源访问；高可用地理集群 (HAGEO) 为分布在地理位置相距甚远的不同站点中的集群节点提供高可用性，有助于灾难恢复。
+
+## 规划集群
+
+高可用性规划始于确定哪些资源需要高度可用，然后绘制一张良好的集群架构草图，尽可能多地解决潜在故障点。
+
+### 您需要保护什么？
+（“必需” 与 “良好”）
+
+所以，您想要构建一个集群。您的老板指派您使您的站点“高度可用”。正如千里之行始于举足重要的一步，集群的构建也是如此。
+
+首先，列出运行在您系统上的所有应用程序。然后，标明每个进程是“必需”（对您的业务运营至关重要）还是“良好”。您可以通过问自己“当此进程无法运行时，我会损失多少钱？”来评估每个进程的重要性。这可以迅速缩小真正关键应用程序的列表。在制作此列表时，识别每个关键进程所需的任何支持进程。
+
+接下来，列出您当前的硬件，包括服务器、磁盘和网络连接。现在是制作当前站点初始架构图的好时机，如下面的示例图所示：
+
+![](img/82f851021955589d82b22750fb3b1646_615_0.png)
+
+此时，您应该对哪些资源需要高度可用有了相当清晰的了解。现在，您需要继续考虑如何使其高度可用。写下关于在发生故障时，您希望每个应用程序发生什么的简短陈述。它应该迁移到哪个服务器？应维护哪个 IP 地址？当原始服务器恢复正常服务时会发生什么？确定这些期望的行为将有助于确定适合您环境的正确集群配置。
+
+### 您需要什么硬件？
+
+现在是确定实施集群所需硬件的时候。一个基本的集群至少包含两个节点（服务器）、一个 IP 网络和一个串行（非 IP）网络。如果您希望数据挂载到运行应用程序的当前服务器，您可能需要使用共享磁盘。集群可能需要更多节点以应对更复杂的故障切换条件；HACMP 集群最多可以有 8 个节点（HACMP Classic）或 32 个节点（HACMP/ES）。开始思考您的站点可能存在哪些*单点故障* (SPOF)。通过为所有可能故障的组件提供备份，您可以消除或最大限度地减少停机时间：如果一个节点故障，您有另一个节点接管；如果关键适配器卡故障，您有备份；如果网络故障，您有另一个网络可用。您甚至可以走到设立远程站点这一步，以便在主要站点因灾难而不可达时进行迁移。您可能无法消除*所有*单点故障——毕竟，您有一个需要遵守的预算——但您可以最小化或消除最明显的故障点。
+
+绘制拟议安装图的图形是个好主意，因为这可以帮助您可视化项目，如图 28-1 所示。在您完成初始绘图后，继续检查它，您可能会对遗漏的单点故障感到惊讶。不断添加到您的图中，直到达到配置在变得高度可用后应呈现的样子。这里显示的高度可用系统有两个服务器，每个服务器都有两个接口（服务和备用）连接到 IP 网络，以及两个磁盘适配器连接到共享磁盘。此外，服务器通过 RS-232 串行网络电缆物理连接。
+
+## HACMP 工作原理
+
+HACMP 实际上做什么？本节介绍 HACMP 的基本功能及其如何工作以保持集群资源高度可用。这里介绍的一些功能在本章后面有更详细的描述。
+
+### 资源和资源组策略
+
+任何高可用性产品的核心理念是使业务关键应用程序即使在网络适配器、网络或节点故障的情况下也能对用户可用。这是通过将关键应用程序及其依赖的资源分组为一个称为*资源组*的实体来实现的。资源组可以包含诸如应用程序本身、用户运行或访问应用程序时连接的 IP 地址、应用程序用于存储数据的卷组、以及必须挂载的 JFS 和 NFS 文件系统（对于 NFS，无论是导出还是挂载）等资源。在 HACMP 集群中，HACMP 在节点故障或其他预定义条件下将资源组移动到另一个集群节点。这种*故障切换* (failover) 操作允许资源在接管节点上继续运行。当故障节点修复并重新加入集群时，原始“所有者”节点可能重新获取其资源，或者资源可能保留在接管节点上，具体取决于您指定的资源组策略。
+
+![](img/82f851021955589d82b22750fb3b1646_617_0.png)
+
+**图 28-1。** 可视化您的项目
+
+资源组策略确定 HACMP 如何对节点故障或节点重新加入做出反应。HACMP 当前支持的默认资源组策略是*级联* (cascading)、*轮转* (rotating) 和*并发* (concurrent)，定义如下。
+
+### 级联
+
+在*级联*资源组中（参见图 28-2），指定一个节点为主节点；其他集群节点被视为次级节点。默认情况下，资源组始终驻留在资源组的主节点上。当主节点故障时，可用的次级节点临时接管故障节点的资源，关键应用程序在次级节点上重新启动，包括用户重新连接应用程序所需的所有资源。
+
+当故障节点修复并重新加入集群时，次级（接管）节点释放资源，主节点重新获取它们。次级节点返回其作为资源组备用节点的角色。级联配置还支持*无回落的级联* (cascading without fallback)，允许您安排主节点的重集成。
+
+### 轮转
+
+在*轮转*资源组中（参见图 28-3），没有主节点的概念。采用轮转策略时，最先加入集群的节点获取资源组并启动高可用应用程序。轮转资源组定义中指定的所有其余节点作为该资源组的备用节点加入集群。如果当前拥有资源组的节点故障，有序列表中的第一个备用节点获取轮转资源组，包括其对应的 IP 地址，并启动关键应用程序。
+
+![](img/82f851021955589d82b22750fb3b1646_618_0.png)
+
+**图 28-2。** 级联资源组
+
+当故障节点修复并重新加入集群时，资源组保留在其接管节点上；故障节点作为备用节点加入，准备在持有资源组的节点故障时接管该资源组。图 28-3 展示了这一点。
+
+### 并发
+
+并发访问资源组被多个节点同时共享。所有并发访问资源组的节点在加入集群时都获取该资源组。节点之间没有优先级，没有故障切换或回落——因此服务没有中断。
+
+并发资源组中包含的唯一资源是包含原始逻辑卷的卷组、原始磁盘以及使用这些磁盘的应用服务器。定义这些逻辑存储实体的设备必须支持并发访问。更多信息，请参阅设备和 HACMP 的手册。
+
+### 基本集群配置选项
+
+高可用性的另一个考虑因素是您的基本配置选择。集群配置的基本两种类型是备用 (standby) 和接管 (takeover)。
+
+备用配置是传统的冗余硬件配置，其中一个或多个备用节点处于空闲状态，等待服务器节点离开集群。
+
+在接管配置中，所有集群节点都有益工作，每个节点处理集群负载的一部分。没有备用节点。接管配置比备用配置更有效地利用硬件资源，因为没有空闲处理。然而，在节点分离后性能可能会下降，因为剩余节点的负载增加。两个级联资源组故障切换，且两者都可以在接管节点上运行，被称为相互接管 (mutual takeover)。
+
+使用并发访问的接管配置能高效利用硬件，并且在故障切换期间最大限度地减少服务中断，因为接管节点不需要获取故障节点释放的资源——接管节点已经共享资源的所有权。
+
+根据您的硬件和选择的资源组类型，这些配置可以有许多变体。配置选项在 HACMP 手册中有详细描述。
+
+### 集群管理器
+
+HACMP 集群中的每个活动节点都有一个运行中的集群管理器，它与运行在其他集群节点上的集群管理器进行通信。使用称为 keepalives（或心跳）的 UDP 数据包，HACMP 监控所有配置的网络适配器、网络和节点的状态。缺失的 keepalives 会导致集群管理器启动问题排查，以调查发生的故障类型。问题排查的结果会触发一系列主要和次要事件。主要事件由集群管理器调用；次要事件由主要事件调用。
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_620_0.png)
+
+## 图 28-3. 资源组旋转
+
+## 事件脚本
+
+每当集群管理器检测到故障，或者有节点加入或离开集群时，集群管理器都会调用事件脚本。事件脚本控制所有操作，直到集群恢复正常状态。这些操作包括调用其他脚本，以及在节点离开或加入集群时释放或获取资源。
+
+### 故障时发生什么
+
+基本的 HACMP 系统（HAS）能够防止网络适配器、网络或节点故障。HACMP/ES 提供针对本地网络故障和应用错误的额外保护。HACMP/ES 还具有更复杂的基于策略的故障切换行为；例如，在发生故障时，可以将资源引导至当时处理器负载最低的节点，并且只移动受影响的资源组，而不是不加选择地移动节点上的所有资源组。这些高级故障切换策略使 HACMP/ES 比基本的 HACMP 拥有更多的功能性和灵活性。
+
+尽管 HACMP 和 HACMP/ES 是两个截然不同的产品，但它们的大部分基本功能是相同的。主要区别在于所使用的监控方法以及 HACMP/ES 提供的额外可配置功能。集群活动的监控在 HACMP 中由集群管理器（clstrmgr）处理，而在 HACMP/ES 中则由拓扑服务（topsvc）和组服务（grpsvc）处理。
+
+所有配备 HACMP 和 HACMP/ES 4.4.1 及更早版本的集群都配置了服务适配器、备用适配器和启动适配器。从 4.5 版本开始，HACMP/ES 集群可以配置为 IP 别名，在这种情况下不使用备用适配器。IP 别名仅使用服务适配器和启动适配器，启动适配器具有固定的地址。
+
+让我们讨论一下如何检测受保护资源的每个故障，以及 HACMP 如何响应此类故障。
+
+### 网络适配器故障
+
+当发生网络适配器故障时，故障通过服务适配器或备用适配器上的保活数据包（keep-alive packets）中断来检测。如果故障发生在服务适配器上，集群管理器会导致执行 `swap_adapter` 事件。`swap_adapter` 事件将分配给服务适配器的 IP 地址与同一节点上分配给备用适配器的 IP 地址进行交换。这强制使服务适配器的 IP 地址现在位于备用适配器上。故障适配器现在被分配了备用适配器的地址，并且执行 `fail_standby` 事件。如果故障适配器再次变为可用，则执行 `join_standby` 事件，使集群恢复正常状态。
+
+如果在备用适配器上检测到故障，除了执行 `fail_standby` 事件外，不采取其他措施。`fail_standby` 事件的结果将显示在控制台并记录日志。（日志文件和故障排除将在后续章节中讨论。）
+
+### 网络故障
+
+无论是基于 TCP/IP 的网络还是基于非 IP 的串行网络，HACMP 都能区分网络故障和节点故障。如果 IP 网络上发生故障，首先检测到的是与特定 IP 网络相关联的服务适配器和备用适配器上的保活中断。在经过指定时长的故障排查后，执行 `network_down` 事件。消息将显示在控制台并记录日志。在 HACMP Classic 中，除非配置了额外的预事件和后事件处理，否则不采取其他措施；集群管理器继续监控故障网络，如果其恢复服务，则执行 `network_up` 事件，并在控制台显示并记录日志。在 HACMP/ES 中，当确定故障局限于拥有已分配 IP 资源的节点时，即确定发生了本地网络故障，*选择性故障切换* 功能仅将受影响的资源组移动到一个存活的节点上。
+
+### 节点故障
+
+当所有配置的网络上的保活丢失时，检测到节点故障。故障首先在最快速的 IP 网络上作为 `network_down` 事件被检测到。例如，在一个双节点集群中，集群管理器试图通过基于 TCP/IP 的消息包通知运行在另一个集群节点上的集群管理器，表示发生了 `network_down` 事件。此消息包必须得到确认。当故障节点未对网络 down 消息包做出响应时，剩余节点会将故障升级为 `node_down` 事件。
+
+集群中可用接管节点上的集群管理器执行 `node_down` 事件。`node_down` 事件调用 `node_down_rex` 事件，接管节点获取故障节点的所有资源，并在本地启动应用程序。
+
+任何导致应用程序停止或启动的事件都需要用户重新建立与应用程序的连接。
+
+### HACMP/ES 中的高级故障切换行为
+
+在 4.1 和 4.5 版本中，HACMP/ES 增强了更复杂的策略以处理故障。其中一些在此处描述。
+
+#### 选择性故障切换
+
+*选择性故障切换* 是 HACMP/ES 自动启动的一项功能，它试图将有单个资源故障影响的一个或多个资源组选择性地移动到集群中的另一个节点，而不是移动所有资源组。
+
+HACMP/ES 在应用程序、服务适配器、通信链路和卷组故障的情况下利用选择性故障切换。例如，在应用程序故障的情况下，如果配置了应用程序监视器，应用程序监视器会通知集群管理器应用程序已故障，从而导致仅受影响的资源组故障切换到另一个节点。在卷组故障的情况下，AIX 错误标签 `LVM_SA_QUORCLOSE` 的出现（针对属于资源组中某个卷组的特定 *hdisk*）表明卷组在集群中的某个节点上已离线。这会导致受影响的资源组进行选择性故障切换。
+
+#### 移动资源组和选择接管节点的前瞻性
+
+在 HACMP/ES 4.4.1 之前的版本中，当一个节点尝试在故障切换期间获取另一个正在释放的资源组时，如果指定的接管节点上没有可用的备用适配器，获取过程将失败。从 HACMP/ES 4.4.1 及更高版本开始，确定 *接管节点* 的计算方式已从 *最高优先级节点* 修改为 *具有可用备用或启动适配器的最高优先级节点*。
+
+如果资源组参与节点列表中没有节点有可用的备用或启动适配器，资源组将保持离线状态。此结果在 `/tmp/hacmp_out` 日志文件的 *事件摘要* 中清楚地表明。要实时查看此日志文件，请发出以下命令：
+
+```bash
+# tail -f /tmp/hacmp.out
+```
+
+#### 动态节点优先级策略
+
+*动态节点优先级* 允许您使用系统资源（如“*最低 CPU 负载*”）来选择接管节点。启用此选项后，*接管节点列表* 的顺序由事件发生时刻的集群状态决定，如所选 `RSCT` *资源变量* 所测量的那样。您可以为不同的组设置不同的策略，或为多个组设置相同的策略。默认的节点优先级策略是节点列表的顺序。
+
+预配置了三种策略：最高空闲内存百分比、空闲时间最长的节点以及最不忙的磁盘。您可以使用 **图 A 动态节点优先级策略** SMIT 界面来设置这些，该界面通过 FastPath `smitty cm_def_npp_menu` 到达。
+
+## 创建集群：硬件设置
+
+以下各节提供了为您的 HACMP 集群设置哪些硬件的概述。
+
+### 节点
+
+由于您需要多个适配器以确保关键进程的可用性，最大的限制因素之一是服务器中可用的 I/O 插槽数量。您还需要确保您的节点有足够的内存和处理能力，以便正确运行所有关键进程，*除了*它们当前的工作负载外。保留
+
+
+
+请注意，由于只有在故障转移状态下节点才会运行这种高负载任务，因此在资源故障并导致故障转移发生之前，该节点缺乏高可用性所需处理能力这一点可能并不明显。
+
+## 磁盘和卷组
+
+在集群环境中，应用程序会从故障节点迁移到存活节点。
+由于您希望应用程序仅使用最新的数据，因此需要在节点之间共享磁盘子系统。
+这可以通过 SCSI-2、SSA 或 RAID 技术实现。请参阅以下图表以了解各种线缆连接方式。
+SCSI-2 每条总线最多支持 4 个启动器，这将集群中的节点数量限制为最多 4 个。
+SSA 配置每个环路的节点数量*从 2 到 8 个*不等。
+IBM Shark 可以支持多达 32 个节点共享同一个卷组。
+
+以下是一个使用特殊“Y”型线缆在外部总线上设置终止器的 SCSI-2“双尾”配置：
+
+![](img/82f851021955589d82b22750fb3b1646_624_0.png)
+
+以下是一个使用串行线缆连接成环路的 SSA 配置：
+
+![](img/82f851021955589d82b22750fb3b1646_624_1.png)
+
+此配置展示了使用 SCSI-2 的 RAID（RAID 也支持 SSA 和 FIBRE 连接）：
+
+![](img/82f851021955589d82b22750fb3b1646_624_2.png)
+
+以下是让磁盘硬件为 HACMP 做好准备的基本步骤：
+
+1. 首先，设置共享磁盘。ODM（对象数据管理器）要求为所有配置的设备提供唯一名称。根据设计，确定将驻留在共享磁盘上的卷组、逻辑卷和文件系统。为所有逻辑卷（包括*共享 jfs 日志*）分配唯一且富有含义的名称。
+2. 如果将使用 NFS，请选择卷组的主设备号。在每台服务器上运行 **lvmf major** 以确定所有系统中一个共同的未使用值。使用 *-V* 选项创建卷组时，将主设备号分配给该卷组。
+3. 确保卷组的自动*varyon*设置为 *no*，以便由 HACMP 而非 AIX 启动过程来控制卷组的 varyon。然后创建卷组中的所有逻辑卷。
+4. 在创建任何文件系统之前，在 *jfslog* 逻辑卷上运行 *logform* 命令。然后在先前定义的逻辑卷上创建每个文件系统。
+5. 最后，varyoff 卷组并运行 **importvg -V** <major number> >**Y** <volume group name> **hdiskx** 以在其他节点上获取卷组定义。
+6. 导入后，运行 **chvg -a n**（卷组名称）将自动 varyon 设置更改为 *no*。
+7. 在下一台服务器上运行 *varyoff* 和 **importvg**，直到所有集群节点都具有相同的卷组定义。
+
+通过简单地将对卷组的 *varyonvg* 应用到节点并挂载文件系统，可以检查共享文件系统的正常运行。
+如果此测试没有任何错误，则卸载文件系统并 *varyoffvg* 卷组。
+当所有节点成功通过此测试时，即可开始设置网络。
+
+## 网络
+
+HACMP 使用两个不同的网络来消除单点故障（SPOF）。
+公共 IP 网络将客户端连接到服务器节点。
+私有“串行”网络由集群节点用于验证和排查网络/节点问题。
+使用传统 IP 地址接管的两个节点集群需要六个 IP 地址和两个子网。
+每个节点需要一个引导地址（AIX 存储在 ODM 中并在启动 AIX 时最初分配给适配器的地址）、一个服务地址（当节点处于活动状态时，客户端通常知道的地址）和一个备用地址（如果服务适配器故障时使用的备份“备胎”）。
+在此配置中，引导地址和服务地址必须位于*相同*的子网上，而备用适配器必须位于*不同*的子网上，以确保数据包在特定的适配器上发送和接收。
+
+请注意，在 HACMP/ES 4.5 版本中，相同的两节点集群可以使用 IP 别名来提高故障转移时的性能。
+在这种情况下，配置要求引导地址（每对地址位于单独的子网）和一个不同于引导地址子网的服务地址。（不使用备用适配器。）
+因此，别名网络配置需要六个地址和三个子网。
+
+请参阅图 28-4 中的图表，了解使用以太网适配器的典型非别名 IP 网络。
+注意它们连接到同一个物理网络；这使得适配器之间的故障转移对客户端系统而言是透明的。
+这是一个具有每个节点一个服务地址和一个备用地址的以太网网络设计。
+下方的网络线缆是 RS232 串行网络。
+
+串行网络确保如果 IP 网络故障，节点不会变成孤立状态。
+传统上，RS232 被用作节点之间的点对点串行连接，用于集群消息传递。
+如果 RS-232 端口不可用，可以使用目标模式 SCSI（TMSCSI）或目标模式 SSA（TMSSA）。
+目标模式功能已通过 TMSSA 设备驱动程序扩展到 SSA。
+
+# 为 HACMP 调整 AIX
+
+为了确保 AIX 在 HACMP 集群中按预期工作，必须修改几个默认的 AIX 设置和文件。
+此外，可以调整某些 AIX 设置以获得更好的性能。
+
+![](img/82f851021955589d82b22750fb3b1646_626_0.png)
+
+## 更改默认的 AIX 设置
+
+以下是一些必须更改以运行 HACMP 的 AIX 设置。
+
+### 网络选项设置
+
+HACMP/ES 要求将 `nonlocsscroute`、`bcasting`、`ipscroutesend`、`ipscroutercv` 和 `ipscrouteforward` 网络选项设置为 1；这会在 `clstrmgrES` 初始化过程中自动更改。
+
+### /etc/rc.net 文件
+
+默认情况下，AIX 5.1 NFS 客户端不响应广播地址的 ping。
+因此，对于使用 NFS 的任何客户端，需要编辑 `/etc/rc.net` 文件，将网络选项 bcasting 设置为 1。
+
+### 在 /etc/hosts 和 /.rhosts 文件中放置 IP 地址
+
+集群中每个节点上的 `/etc/hosts` 文件必须包含所有集群节点的所有服务、备用和引导适配器的 IP 地址和一个“IP 标签”。
+IP 标签是与 IP 地址关联的名称。
+这些标签的命名约定可能包括 AIX 接口名称（如 `node1ent0`），也可能标识适配器功能（如 `node1svc`、`node1boot` 等）。
+以下是服务适配器和备用适配器的 `/etc/hosts` 文件条目示例：
+
+```
+100.100.50.1   node1svc
+100.100.51.1   node1stb
+```
+
+每个集群节点上的 `/.rhosts` 文件必须列出所有节点的主机名以及服务和引导适配器的 IP 标签。（如果使用 Kerberos 安全，则不需要这样做。）
+
+### 调整 I/O 节奏控制
+
+默认情况下，AIX 安装时高水位线和低水位线均设置为零，这会禁用 I/O 节奏控制。
+为了让 HACMP 集群在大型磁盘写入期间正确运行，必须启用 I/O 节奏控制。
+虽然最高效的高水位线和低水位线因系统而异，但初始的高水位线为 33 和低水位线为 24 是一个良好的起点。
+这些设置仅略微减少写入时间，并能一致地产生来自 HACMP 软件的正确故障转移行为。
+
+### 为 HACMP 进一步调整
+
+集群节点有时会遇到极端的性能问题，例如大型 I/O 传输、过多的错误日志或缺乏内存。
+当这种情况发生时，集群管理器可能会因 CPU 时间不足而“饥饿”。
+运行优先级高于集群管理器的行为不当的应用程序也可能导致此问题。
+
+正确设置调整参数有助于避免此类性能问题。
+建议首先调整 AIX I/O 节奏控制的高、低水位线以及 AIX *syncd* 频率速率。
+然后，如果证明需要进一步调整，可以调整某些 HACMP 网络调整参数，例如每种网络的故障检测率和宽限期。
+有关这些任务的完整信息，请参阅 HACMP 手册。
+
+## 创建集群：定义和配置资源
+
+在配置集群拓扑结构之后，您需要配置高可用资源。
+规划和配置资源需要仔细思考和实施。
+
+许多资源类型及其单独的配置说明在 HACMP 手册中有详细讨论。
+
+### 同步集群
+
+同步集群是将包含在本地节点上的整个集群信息发送到远程节点。
+在定义或更改集群的节点、磁盘、网络或适配器配置后，必须同步集群*拓扑结构*。
+在定义或更改集群的资源配置后，必须同步集群*资源*。
+
+在同步过程中，会运行集群验证实用程序；*clverify* 检查配置是否有效，并针对任何无效或缺失的配置信息呈现错误或警告消息。
+此验证确保 AIX 环境能够支持集群配置，并且所有节点就集群拓扑结构、网络配置以及 HACMP 资源的所有权和接管达成一致。
+除了 HACMP 自动运行的检查外，您还可以添加自己的自定义验证检查。
+在进行更改时，或者在首次配置 HACMP 时，请始终从同一个节点进行操作，并从同一个节点执行同步。
+如果您在一个节点上进行了更改，而从不同的节点执行同步，您刚刚做的更改将被覆盖。
+
+### 传统 IP 地址接管和通过 IP 别名的 IPAT
+
+传统 IP 地址接管（IPAT）在所有 HACMP Classic 版本以及 4.5 版本之前的 HACMP/ES 中，将一个节点上适配器的 IP 地址移动到另一个节点
+
+到另一节点上的适配器，以防第一个节点上的适配器发生故障。IPAT（IP 地址接管）确保放置在 HACMP/ES 资源组中的 IP 标签可通过其 IP 地址访问，无论该 IP 标签当前位于哪个物理网络适配器上。请记住，IP 标签是对应于 IP 地址的名称，且所有集群 IP 地址及其对应标签都在 /etc/hosts 文件中定义。被定义为 HACMP/ES 资源组中资源的是 IP 标签。
+
+结合传统的 IPAT，您可以配置 *硬编码地址接管*（HWTAT），以确保目标适配器上的 ARP 缓存映射是正确的。然而，移动 IP 地址 *以及* 硬件地址所需的时间比仅移动 IP 地址要长得多。
+
+在 4.5 版本中，仅在 HACMP/ES 中，您还可以使用 AIX 5L 5.1 的 IP 别名网络功能在特定类型的网络上配置 IPAT。将 IP 别名定义为适配器允许在同一网络接口上创建多个 IP 标签和地址。通过 IP 别名进行的 IPAT 利用了某些类型网络（以太网、令牌环、FDDI 和 SP Switch I 和 2）上可用的免费 ARP（Gratuitous ARP）功能。与带有 HWTAT 的标准 IPAT 相比，通过 IP 别名进行的 IPAT 速度更快，并且简化了网络配置，因为您只需要服务地址和引导地址，而不需要备用适配器。在通过 IP 别名进行 IPAT 时，接管的节点上的引导 IP 标签永远不会从该适配器上移除。相反，服务 IP 标签作为该适配器上的地址被添加（并移除）。与传统的 IPAT 不同，这允许单个引导适配器支持放置在其上的多个作为别名的服务 IP 标签。因此，单个适配器可以同时承载多个资源组。
+
+以下是双节点集群在通过 IP 别名进行 IPAT 时的行为描述。如果节点 A 发生故障，节点 B 将获取节点 A 的服务 IP 标签和 IP 地址。该服务标签作为别名放置在节点 B 的相应适配器上，而节点 B 适配器上已有的其他标签保持不变。因此，节点 B 上的适配器现在可以处理指向节点 A 服务地址的客户端请求。稍后，当节点 A 重启时，它会使用其引导地址启动，并尝试通过请求节点 B 释放节点 A 的服务地址来使用其服务地址重新集成到集群中。
+
+当节点 B 释放所请求的服务地址时，节点 B 上服务标签和 IP 地址的别名被删除，节点 A 重新获取它并重新集成到集群中。
+
+因此，配置带有通过 IP 别名进行 IPAT 的资源组的关键优势在于，在故障转移时，可以将多个服务 IP 标签作为别名放置在同一引导适配器上。与传统 IPAT 相比，这种配置提高了资源的可用性，因为单个具有单一物理接口（引导适配器）的节点可以处理包含多个服务 IP 标签的资源组。
+
+在规划通过 IP 别名进行 IPAT 时，请记住以下几点：
+
+-   与传统 IP 地址接管配置不同，在通过 IP 别名进行 IPAT 时，服务地址必须定义在与集群节点上定义的所有引导地址不同的子网中。此要求使 HACMP/ES 能够符合 AIX 5L 5.1 的 IP 路由剥离功能，该功能允许对同一子网有多个路由。
+-   如果您已配置通过 IP 别名进行 IPAT，则为了启用 NFS 交叉挂载，可能需要在集群节点之间添加静态路由。
+-   尽管通过 IP 别名进行 IPAT 功能允许在引导适配器上拥有多个服务 IP 标签，但每个额外的服务 IP 标签都会消耗该适配器的一部分带宽。因此，需要仔细规划，以便不同的资源组故障转移场景不会使单个适配器过载。
+
+有关通过 IP 别名进行 IPAT 如何工作以及如何配置 IP 别名的完整信息，请参阅 HACMP/ES 4.5 手册。
+
+## 选择资源组策略
+
+HACMP 的主要目的是确保关键资源对您的系统和最终用户可用。这些资源——例如，IP 地址、应用程序服务器、文件系统和通信链接——被放置在资源组中，如果在发生故障时，这些资源组可以由另一个集群节点接管。
+
+在故障转移期间，不同的资源组类型处理方式不同。根据多种因素，包括您的环境中可以容忍的中断时间以及您是否希望特定资源驻留在特定机器上，您将选择配置轮转式、级联式或并发资源组。
+
+### 为什么要使用轮转式资源组？
+
+如果避免与故障回退相关的停机时间至关重要，并希望将资源分散在集群中，轮转式策略可能是最佳选择。在节点重新集成期间，应用程序可用性不会受到干扰，因为重新集成的节点仅作为备用节点重新加入集群，而不尝试重新获取其资源。
+
+请注意，轮转式资源组需要备用节点，并且您需要配置 IP 地址接管。
+
+在 HACMP 4.5 版本中，新的通过 IP 别名进行 IPAT 的功能允许单个适配器承载多个服务地址。这为配置资源组和故障转移策略选择提供了更多的灵活性。有关 IP 别名的更多信息，请参阅 HACMP 4.5 手册和本章前面关于 IPAT 的部分。
+
+### 为什么要使用级联式资源组？
+
+如果指定关键应用程序的优选节点至关重要，级联配置可能是最佳资源组选择——前提是可以接受标准级联配置故障转移后服务出现的小幅中断。如果您强烈希望某个集群节点拥有资源组，例如，如果您希望处理能力最高的集群节点控制关键应用程序，那么请使用级联式资源组。
+
+在级联式资源组中，当节点发生故障时，其资源由优先级次高的可用节点接管，并在优选节点再次可用时返回给该节点，除了无回退的级联配置，该配置允许您调度主节点重新集成。然而，当故障节点重新集成到集群并取回其“自己的”资源时，应用程序可用性始终会暂时中断。
+
+级联配置不需要 IP 地址接管。
+
+### 无回退的级联属性
+
+级联式资源组具有一个无回退的级联（CWOF）属性，允许您改变传统的级联行为。当 CWOF 设置为 true 时，所有节点在重新回到集群中时不会重新获取其资源组。因此，它类似于轮转式资源组，但无需 IP 地址接管。
+
+使用将 CWOF 设置为 true 的级联式资源组可以避免由故障回退引起的服务中断。然而，如果没有 IPAT，在某些条件下，CWOF 资源组可能会在单个节点上“聚集”（与通常能适当分布的轮转组不同）。如果您使用 CWOF，必须做好准备有时手动重新分配聚集的资源组。有关 CWOF 的更多信息，请参阅 HACMP 手册。
+
+### 非激活接管属性
+
+非激活接管是一个属性，允许您微调节点对级联式资源组的初始获取。如果非激活接管设置为 true，则资源组中第一个加入集群的节点将获取该资源组，无论该节点的指定优先级如何。这可以迅速启动资源组，但当最高优先级节点加入并获取其资源时可能会造成中断。如果非激活接管为 false（默认设置），则每个加入集群的节点仅获取被指定为最高优先级节点的相应资源组。
+
+### 为什么要使用并发资源组？
+
+如果保持持续的共享访问且没有因故障转移或回退而丢失时间至关重要，您可能希望选择并发配置。
+
+并发访问资源组由多个节点同时共享。所有并发访问资源组的节点在加入集群时都会获取该资源组。节点之间没有优先级，没有故障转移或回退——因此没有服务中断。
+
+要定义并发配置，必须安装并发资源管理器（CRM）软件，并且应用程序必须支持并发访问。
+
+
+
+
+## HACMP 集群管理
+
+本节提供了一份任务列表，用于启动和停止集群服务、维护共享的 LVM 组件、执行动态更改以及监控集群。
+这里描述了一个 HACMP 系统的以下管理任务：
+
+- 启动和停止集群服务
+- 使用 C-SPOC 维护共享的 LVM 组件
+- 动态重新配置
+- 监控集群活动
+
+### 启动集群
+
+您可以在每个集群节点上启动 HACMP，或者使用集群单一控制点（C-SPOC）工具，该工具会在您指定的*所有*节点上启动（或停止）集群服务。
+
+启动集群服务会启动 HACMP 守护进程，以启用集群节点之间所需的协调，并触发执行某些获取高可用资源的 HACMP 脚本。在启动集群服务之前，您必须充分了解由此引发的节点交互及其对系统可用性的影响。
+
+要在单个节点上启动 HACMP，您可以输入 `smitty clstart` 或使用 **Start Cluster Services** SMIT 菜单。您有以下几种集群启动选项：
+
+- 立即启动
+- 在系统重启时启动
+- 立即启动*并且*在系统重启时启动（同时选择两个选项）
+- 启动并重新获取在集群被迫停止后手动更改或脱机的资源
+
+> **注意** 在系统重启时启动 HACMP 时，HACMP 在 `/etc/inittab` 中的条目*必须*是该启动文件中的最后一项，因为它会接管系统资源的控制权。
+
+### 停止集群
+
+停止集群服务会在节点上停止启用集群节点之间所需协调的 HACMP 守护进程，并可能根据您执行的关闭类型触发或不触发额外的 HACMP 脚本执行。在停止集群服务之前，您必须充分了解由此引发的节点交互及其对系统可用性的影响。下面简要说明何时可能需要关闭集群以及不同的集群关闭选项。
+
+### 何时停止集群服务
+
+在执行以下任务之前，您必须停止集群服务：
+
+- 进行任何硬件和部分软件更改
+- 关闭或重启集群中的节点
+- 更改集群名称、节点名称或适配器名称
+
+### 集群关闭选项
+
+要在单个集群节点上停止集群服务，您输入 `smitty clstop` 或使用 **Stop Cluster Services** SMIT 菜单。当停止集群服务时，您必须决定何时停止（立即、系统重启时或两者皆有）。您还必须决定如何处理由您从集群中移除的节点所拥有的资源。为此，您有以下选项：
+
+- 在*正常停止*中，HACMP 软件将关闭其应用程序并释放其资源。其他节点*不会*接管被停止节点的资源。
+- 在*带接管的正常停止*中，HACMP 软件将关闭其应用程序并释放其资源。存活的节点将接管这些资源。这也称为*故意故障转移*。
+- 在*强制停止*中，HACMP 立即关闭。正在关闭的节点保留对所有其资源的控制权。不需要 HACMP 守护进程的应用程序将继续运行。通常，您使用强制选项，以便停止集群管理器不会中断用户和客户端。由于*强制*关闭后节点上没有运行集群代理，故障将不被检测。这适用于磁盘和适配器等硬件资源，以及任何受监控的应用程序。如果任何定义给 HACMP 的资源受到干扰，应在重启集群服务之前将其恢复到先前状态。
+
+如果您使用 AIX 关闭命令，HACMP 服务将以强制选项停止。如果您希望资源被接管，请在执行 AIX 关闭之前使用带接管的正常停止选项停止 HACMP。
+
+### 集群单一控制点 (C-SPOC)
+
+HACMP 提供集群单一控制点（C-SPOC）工具，简化了共享 LVM 组件的维护。C-SPOC 命令在集群环境中提供了与在单个节点上工作的标准 AIX 命令相当的*功能*。例如，C-SPOC 工具包含一个名为 `cllv` 的命令，该命令提供与 AIX `cllv` 命令类似的功能。（C-SPOC 命令调用 AIX 命令。）通过自动化重复性任务，C-SPOC 消除了潜在的错误来源并加快了流程。您可以使用 C-SPOC 执行以下 LVM 维护任务：
+
+- 创建、导入、扩展、缩减、镜像和非镜像共享和并发卷组。
+- 同步卷组镜像。
+- 列出所有活动的共享或并发卷组。
+- 显示共享（或并发）卷组的特性。
+- 创建逻辑卷、复制逻辑卷以及移除逻辑卷的副本。
+- 按卷组列出所有共享逻辑卷。
+- 更改或查看共享逻辑卷的特性（名称、大小）。
+- 移除共享逻辑卷。
+- 创建、列出、更改和移除共享文件系统。
+- 添加、替换和移除物理卷。
+
+> **注意** C-SPOC 命令仅操作定义为 HACMP 资源组一部分的共享和并发 LVM 组件。
+
+当您执行 C-SPOC 命令时，该工具确定在哪个节点上执行操作，然后在该节点上执行所需的命令。通常，C-SPOC 在拥有 LVM 组件（使其处于 varied on 状态）的节点上执行命令。但是，您可以使用 C-SPOC 命令（在命令行上，而不是从 SMIT）在您当前未在集群任何节点上激活的 LVM 组件上执行操作。在这种情况下，C-SPOC 根据 HACMP 资源组的指定，确定当 LVM 组件激活时哪个节点将拥有该 LVM 组件，并在该节点上执行操作。使用 C-SPOC 简化了所有任务所需的步骤。此外，您无需停止和重启集群服务即可执行这些任务。
+
+### 动态重新配置和资源组管理
+
+当您配置 HACMP 集群时，配置数据存储在 ODM 中的 HACMP 特定对象类中。AIX ODM 对象类存储在默认系统配置目录（DCD）中，即 `/etc/objrepos`。您可以在集群运行时（动态重新配置）对集群拓扑和集群资源进行某些更改。
+
+#### 动态集群重新配置 (DARE)
+
+在集群启动时，HACMP 将 HACMP 特定的 ODM 类复制到称为活动配置目录（ACD）的单独目录中。在集群运行期间，HACMP 守护进程、脚本和工具引用存储在 ACD 中的 ODM 数据。
+
+如果本地节点上的集群管理器正在运行时，您同步集群拓扑或集群资源定义，此操作将触发动态重新配置（DARE）事件。在动态重新配置事件中，所有集群节点上的默认配置目录（DCD）中的 ODM 数据会被更新，ACD 中的 ODM 数据会被新的配置数据覆盖。HACMP 守护进程会被刷新，以便新配置成为当前活动配置。
+
+您可以在活动集群中对集群拓扑和资源进行许多动态更改，例如添加或移除节点和适配器、更改网络调整参数、交换适配器卡、从资源组中添加或移除资源，以及对多种类型资源的配置进行更改。
+
+一些更改需要停止集群，例如更改集群名称或更改节点名称。有关确切哪些任务可以动态执行、哪些不能的详细信息，请参阅 HACMP 手册。
+
+#### DARE 资源迁移
+
+此外，您可以使用 DARE 资源迁移工具将资源组移动到集群的其他节点，以在特定集群节点上执行系统维护。DARE 资源迁移允许您在不停止集群服务的情况下更改级联或路由资源组的当前状态（在线或脱机）或位置。您可以从命令行和通过 SMIT 执行 DARE 资源迁移。
+
+您还可以动态禁用资源组，防止它们在重新集成期间被获取。这种禁用选项允许在特定情况下“交换”资源。
+
+## 监控 HACMP 集群的工具
+
+在设计上，集群中组件的故障由 HACMP 自动处理，但仍需意识到所有此类事件。您可以使用几种工具来检查 HACMP 集群的状态，包括该集群内的节点、网络和资源组，以及在节点上运行的守护进程。HACMP 提供以下工具来监控集群：
+
+- HAVView 工具扩展了 Tivoli NetView 服务，使您可以从单个节点跨网络监控 HACMP 集群和集群组件。
+- 使用 Tivoli 进行集群监控，使您可以监控集群和集群组件，并且（在 4.5 版中）还可以通过 Tivoli 框架控制台执行集群管理任务。
+- clstat（`/usr/sbin/clstat` 工具，或 X 版本的 `xlclstat`）使用 HACMP 集群信息程序（clinfo）API 来获取和显示关键集群组件的状态——集群本身、其节点、网络接口和资源组——并且可以在 X 窗口、ASCII 显示或（在 4.5 版中）Web 浏览器中查看。clinfo 守护进程是基于简单网络管理协议（SNMP）的集群监控器。
+
+
+
+
+
+-   *应用程序监控* 允许你监控特定的应用程序和进程，并在检测到进程死亡或其他应用程序故障时定义采取的操作。
+-   *应用程序可用性分析* 工具用于测量在 HACMP/ES 4.5 版本中定义了应用程序服务器的应用程序的正常运行时间统计信息。
+-   *显示集群服务* SMIT 屏幕显示 HACMP 守护进程的状态。
+-   *显示网络模块* SMIT 屏幕显示特定网络的属性。
+-   日志文件允许你跟踪集群事件和历史记录：`/usr/esadm/cluster.log` 文件跟踪集群事件；`/tmp/hacmp.out` 文件记录配置脚本执行时生成的输出；`/usr/es/sbin/cluster/history/cluster.mmmddyyyy` 文件记录每日集群历史；`/tmp/cspoc.log` 文件记录在集群节点上执行的 C-SPOC 命令的状态。
+-   *自定义寻呼机通知* 工具可以配置为在响应集群事件时发出自定义寻呼机呼叫。
+
+## 故障排除
+
+HACMP 和 AIX 都提供了实用工具，有助于确定 HACMP 集群及其内部资源的状态。使用特定命令，你可以收集有关卷组或网络的信息；检查日志文件有助于你在集群事件发生后追踪资源的行为。对 HACMP 系统的深入了解对于有效的故障排除至关重要；你必须熟悉正常集群的特征，并在检查集群组件时密切关注任何偏离正常状态的情况。
+
+以下章节简要概述了 HACMP 内置的一些故障排除辅助工具。有关更多详细信息，请参阅 HACMP 手册，特别是*故障排除指南*。
+
+### 错误处理
+
+HACMP 的事件脚本中内置了许多错误处理例程。用户自定义的脚本应在自定义脚本内处理所有常见错误。然而，如果事件脚本未能在规定时间内完成，控制台将显示消息“In configuration too long…”。这可能是正常的，因为集群故障转移可能需要超过六分钟，这也可能是故障转移存在问题的最初迹象。此时，了解你的集群配置最为重要。你对集群了解得越深入，就越能快速找到并修复问题。首先应检查的是错误日志。
+
+在版本 4.5 中，你可以通过 SMIT 更改默认的六分钟间隔，以避免不必要地收到“configuration too long”消息。
+
+### 错误日志
+
+在故障排除中最常用的日志是 `/tmp/hacmp.out` 日志。它包含在该节点上运行的所有事件脚本的详细输出。这些信息补充并扩展了 `/usr/es/ladm/cluster.log` 文件中的信息。
+
+报告的资源组获取失败（由命令返回的非零退出码指示的失败）记录在 `/tmp/hacmp.out` 中，并且每个顶级事件的列表末尾会写入摘要。
+
+检查此日志非常重要，有助于识别集群中的问题。使用 `tail -f /tmp/hacmp.out` 进行实时查看，或使用 `vi` 检查日志文件以快速定位 ERROR 位置。你可能需要扫描错误条件之前的页面，以查看是否有其他条件导致了该错误。例如，如果文件系统未挂载，进一步检查可能表明卷组未激活（varyon）。这可能是由于卷组上的 VGDA 与尝试激活该卷组的系统上的 ODM 副本之间存在差异所致。因此，你需要排除的不是文件系统问题，而是卷组问题。
+
+`/usr/adm/cluster.log` 包含由集群管理器调用的事件脚本的良好概览。请记住，除非发生事件（即某事物发生故障），否则集群管理器不会启动事件脚本。
+
+在 HACMP/ES 中，拓扑服务和组服务有额外的日志文件，有助于故障排除网络问题。有关详细信息，请参阅 HACMP/ES 手册。
+
+### 事件摘要
+
+仅在 HACMP/ES 中，事件摘要出现在 `hacmp.out` 日志中每个事件详细输出的末尾。获取集群近期发生事件快速概览的好方法是使用“显示事件摘要”选项，它会编译并显示来自 `hacmp.out` 日志文件的所有事件摘要。此外，资源组位置和状态信息显示在屏幕底部，反映了 `clfndres` 命令的输出。摘要显示每天更新一次，包含当天的事件摘要。
+
+要查看节点上的事件摘要编译列表或将事件摘要保存到指定文件，请导航到 SMIT 中的集群系统管理下的“显示事件摘要”选项，或使用 FastPath `smity cm_dsp evs`。
+
+请注意，在 HACMP/ES 4.4.1 中，可以在 `hacmp.out` 文件中看到事件摘要。“显示事件摘要”功能是在版本 4.5 中添加的。
+
+### 看门狗开关
+
+在 HACMP Classic 中，一个计时器确保保持活动信号（心跳）得到及时处理。如果未能及时处理，则在不存在错误条件的情况下可能会导致虚假故障转移。此计时器称为看门狗开关。看门狗开关是 HACMP 启动时加载的内核扩展。计时器的持续时间由公式 *最慢 IP 网络的时间减去一秒* 决定。如果看门狗开关触发，内核将崩溃并发生系统转储，这由 LED 上闪烁的 888 指示。如果发生这种情况，你应该调查为什么集群管理器未获得处理器时间来处理保持活动信号。这是 AIX 调优发挥作用的地方，以最小化集群管理器未获得处理器时间的可能性。
+
+### 分区集群
+
+如果集群管理器失去与其他集群管理器的通信——即所有网络、IP 和串行通信都丢失——你可能会遇到“分区”集群。也就是说，节点 A 认为节点 B 已死亡，反之亦然。这是一种非常严重的状况，因为每个节点都被编程为在另一个节点故障时执行某些操作。HACMP/ES 允许使用全局网络来防止此问题。有关如何避免集群分区或在发生分区时如何处理，请参阅 HACMP 手册。
+
+## HACMP 中的其他功能
+
+除了之前描述的集群配置、动态重新配置、监控、问题确定和 AIX 调优功能外，HACMP 还有许多其他功能，我们将在此简要介绍其中一些。
+
+### 事件自定义
+
+HACMP 系统是事件驱动的。*事件*是集群内状态的变化。当集群管理器检测到集群状态变化时，它执行指定的脚本以处理事件并启动任何用户定义的自定义处理。
+
+HACMP 在此领域赋予用户相当的自定义权限。我们在此列出一些示例；有关更多详细信息，请参阅 HACMP 用户手册。
+
+#### 自定义预事件、事件和后事件脚本
+
+你可以为在 HACMPEvent ODM 类中定义的每个事件定义多个前事件和后事件。
+
+事件的自定义可以包括在事件处理之前和之后通知系统管理员，以及用于事件处理前后其他操作的用户定义命令或脚本。
+
+#### 自定义用户定义事件
+
+仅在 HACMP/ES 中，用户可以添加自己的事件。要定义自定义集群事件脚本，请编写该事件的自己的脚本，然后使用 SMIT 中**集群自定义修改**下的**定义自定义集群事件**菜单，或 **smit cladd_eventdialog** FastPath 将其添加到集群配置中。
+
+### 事件恢复和重试
+
+你可以指定一个脚本或 AIX 命令来执行，以尝试从集群事件命令失败中恢复。如果恢复命令成功且重试次数大于零，则重新运行集群事件命令。传递给此命令的参数是事件名称和传递给事件命令的参数。
+
+你还可以指定运行恢复命令的次数。如果指定了恢复命令，请将恢复计数器字段设置为 1 或更大。
+
+### 自定义事件持续时间
+
+在 HACMP 4.5 中，你可以使用 SMIT 自定义允许集群事件完成的时间段，在此之前 HACMP 会为其发出系统警告。在 HACMP 4.5 之前，超时时段默认设置为六分钟，并且只能使用命令行更改。如果集群事件持续超过六分钟，HACMP 每 30 秒自动发出一次 `config_too_long` 警告消息，该消息记录在 `/tmp/hacmp.out` 文件中。
+
+### 自动错误通知
+
+HACMP 在 AIX 错误通知功能的基础上，提供了一种自动开启特定故障预指定错误通知方式的手段。这可以通过 SMIT 界面一步完成，节省了通常花费在手动定义每个通知方式上的时间和精力。对于以下设备，预定义的通知方式会自动在集群中的所有节点上启用：
+
+-   rootvg 卷组中的所有磁盘
+-   HACMP 卷组、并发卷组和文件系统中的所有磁盘。（为了避免单点故障，JFS 日志必须包含在 HACMP 卷组中。）
+-   定义为 HACMP 资源的所有磁盘
+-   SP 交换机适配器
+
+### 自定义寻呼机通知
+
+你可以通过 SMIT 界面定义一种通知方式，以在响应集群事件时发出自定义寻呼机呼叫。在版本 4.5 中，在配置寻呼机通知方式后，你可以发送一条测试消息以确认配置是否正确。
+
+你可以为不同的事件配置任意数量的通知方式，并带有不同的文本消息和要拨打的电话号码。只要相关测试消息包含足够的信息以响应触发寻呼机的所有可能事件，同一通知方式就可以用于几种不同的事件。
+
+
+
+
+
+## NFS 功能
+
+扩展的 NFS 功能此前仅包含在 HANFS 产品中，现已添加到基础 HACMP 架构中，并包含在 HAS 和 HACMP/ES 产品中，允许您执行以下操作：
+
+- 利用可靠的 NFS 服务器功能，以保留锁和 dupcache（仅限 2 节点集群）。
+- 指定用于 NFS 挂载的网络。
+- 在目录级别定义 NFS 导出和挂载。
+- 指定 NFS 导出目录和文件系统的导出选项。
+
+## 高可用打印队列
+
+在发生故障转移时，当前排在队列中的打印任务可以保存并转移到幸存节点。打印暂存系统由两个目录组成：`/var/spool/qdaemon` 和 `/var/spool/lpd/qdir`。其中一个目录包含包含每个任务数据（内容）的文件。另一个目录包含与打印任务本身相关的信息文件。当任务排队时，这两个目录中都会有文件。在发生故障转移时，这些目录通常不会发生故障转移，从而导致打印任务丢失。
+
+在 HACMP/ES 中，插件 `cluster.es.plugins.printserver` 提供了启动和停止打印服务器进程的脚本、一个验证配置文件存在并存储在共享文件系统中的脚本，以及由 HACMP/ES 的监控功能调用来检查打印服务器进程生命周期的脚本。您还可以将所有打印服务目录结构移动到共享磁盘，以便即使在使用经典版 HACMP 时，排队任务也始终可用。
+
+## 高可用广域网通信链路
+
+从 4.5 版本开始，HACMP 可以为三种类型的通信链路提供高可用性：
+
+- 通过 LAN 适配器配置的 SNA
+- 通过 X.25 的 SNA
+- 纯 X.25
+
+在较早的 HACMP 版本中，用户只能配置 SNA-over-LAN。（这些链路被称为 CS/AIX 通信链路。）对其他协议的支持此前通过附加产品 HAWAN 提供。
+
+LAN 适配器是以太网、令牌环和 FDDI 适配器；这些适配器作为 HACMP 集群拓扑的一部分进行配置。
+
+X.25 适配器通常（但并非总是）用于 WAN 连接。它们作为连接不同机器（从大型机到哑终端）的手段。由于 X.25 网络的使用方式，这些适配器被视为一类*不*包含在集群拓扑中且*不*由标准 HACMP 拓扑管理方法控制的不同类别设备。这意味着不使用心跳来监控 X.25 适配器状态，也不在 HACMP 中定义 X.25 特定网络。相反，HACMP 守护进程 **clcommnlinkd** 取代了心跳。此守护进程监控 `x25status` 命令的输出，以确保链路仍然连接到网络。
+
+在 HACMP 中使通信链路具有高可用性涉及以下一般步骤：在操作系统（AIX）中定义通信适配器和链路，然后在 HACMP 中定义适配器和链路，最后将定义的通信链路作为资源添加到 HACMP 资源组中。这些步骤中的每一步都必须仔细思考和实施；在将通信链路添加到集群资源组之前，应在 HACMP 外部充分测试该通信链路。有关完整信息和说明，请参阅 HACMP 用户手册。
+
+### 高可用工作负载管理器类
+
+AIX 工作负载管理器（WLM）是随 AIX 4.3.3 及更高版本提供的系统管理资源。WLM 允许用户为不同的进程和应用程序设置 CPU 时间、物理内存使用和磁盘 I/O 带宽的目标和限制；这提供了在峰值负载下对关键系统资源使用的更好控制。从 4.5 版本开始，HACMP 允许您在 HACMP 资源组中配置 WLM 类，从而使 WLM 的启动、停止和主动配置可以由集群控制。
+
+有关如何设置和使用工作负载管理器的完整信息，请参阅 AIX 5L 工作负载管理器（WLM）红皮书（`http://www.ibm.com/redbooks/`）。有关在 HACMP 集群中使 WLM 类具有高可用资源的完整信息，请参阅 HACMP 用户手册。
+
+### 高可用磁带驱动器
+
+HACMP 4.5 允许您配置高可用磁带驱动器。要使磁带驱动器具有高可用性，您首先将其定义为资源，包括指定启动和停止脚本，然后将该资源添加到集群资源组中。示例脚本位于 `/usr/(/es/)/sbin/clusterc/samples/tape` 目录中。这些示例脚本显式地倒带磁带驱动器。
+
+将资源添加到资源组后，验证配置是否正确，然后将共享磁带资源同步到集群中的所有节点。
+
+### 仿真工具
+
+HACMP 包含用于运行集群事件仿真和测试错误通知方法的功能。
+
+### 事件仿真
+
+HACMP 事件仿真器是一个实用程序，它通过运行产生输出但不影响集群配置或状态的事件脚本来仿真集群事件和动态重新配置事件。事件仿真器遵循集群管理器在特定事件下使用的相同过程，但它不执行任何会更改集群管理器状态的命令；因此，它允许您测试集群对特定事件的反应，就好像该事件实际发生一样。您可以通过 SMIT 或命令行运行事件仿真器。
+
+> 注意 事件仿真器要求集群 SMUX 对等守护进程（clsmuxpd）和集群信息程序（clinfo）在您的集群上运行。
+
+### 错误仿真
+
+HACMP 提供用于测试错误通知方法的实用程序。在使用 AIX 错误通知设施添加一个或多个错误通知方法后，您可以通过仿真错误来测试方法。通过向 AIX 错误设备文件（/dev/error）插入错误，您会促使 AIX 错误守护进程运行适当预指定的通知方法。这允许您确定预定义的操作是否执行，而无需实际导致错误发生。
+
+仿真完成后，您可以键入 erpt 命令查看错误日志，以确保仿真已执行。错误日志条目具有资源名称 EMULATOR 或用户在创建错误通知对象过程中在资源名称字段中指定的名称。然后您可以确定指定的通知方法是否已执行。
+
+### 更多信息
+
+有关 HACMP 和其他高可用性产品的更多信息和最新手册，请参阅以下 IBM 网页：
+
+- http://www.ibm.com/servers/aix/products/ibmwa/high_avail_network/hacmp.html
+- http://www.ibm.com/servers/eserver/pseries/library/hacmp_docs.html
+
+### 检查清单
+
+以下是关于 HACMP 和集群关键点的检查清单：
+
+- 展示 HACMP 的工作原理及如何使用它。
+- 规划集群。
+- HACMP 实际做什么？
+- 设置硬件以创建集群。
+- 为 HACMP 调整 AIX。
+- 定义和配置资源以创建集群。
+- 同步集群。
+- 定义传统 IP 地址接管（IPAT）。
+- 选择资源组策略。
+- 确定 HACMP 系统的管理任务。
+
+# 第十三部分
+
+存储区域网络和网络附加存储
+
+## 第 29 章 SAN、NAS 和 iSCSI 整合存储
+
+此页有意留白。
+
+# 第 29 章
+
+## SAN、NAS 和 iSCSI 整合存储
+
+如今存储的关键概念是更小、更密集和更快。在四十多年的磁盘存储历史中，有一个常数保持不变。读取或写入磁盘上数据的速率仍然取决于磁盘磁片的旋转速度。没有电子元件、适配器或驱动程序可以克服盘速困境。然而，通过使磁片更小、更密集，同时使磁片旋转得更快，IBM 取得了非凡的成果。截至撰写本文时，盘速已达到 15,000 RPM，单个磁盘驱动器的存储容量高达 200GB 和 200GB，预计很快将有 400GB 驱动器。除了这些磁盘存储方面的进步外，许多磁盘子系统中可用大型写入缓存增强了写入性能，预读缓存增强了顺序数据读取性能。然而，预读缓存对随机磁盘读取没有帮助。
+
+在另一端是微型驱动器，其大小约为美国硬币（quarter）大小。目前，这些驱动器的存储容量约为 1GB。这些微型驱动器正在进入市场，以取代数码相机和摄像机的闪存卡。
+
+但是，在所有这些小尺寸下增加存储容量的关键是什么？嗯，实际上有两个关键因素在起作用。第一个是驱动头技术的进步，采用了巨磁阻（Giant Magneto-Resistive）技术头。这些新的驱动头由分层的金属磁性材料涂层制成，能够读取和写入每平方英寸高达 40GB 的数据。第二个进步领域是用于涂覆磁盘磁片的材料。IBM 及其商业合作伙伴的最新突破使磁盘磁片更密集，能够每平方英寸存储更多数据。
+
+有了这种组合，你怎么会输呢？
+
+将这些进步与过去进行比较。例如，1956 年最大的磁盘驱动器是 5MB。但这并不是令人惊讶的部分，这个 5MB 的磁盘驱动器长达三英尺，重达 200 磅以上！那是 IBM 客户工程师（CE）可以开车到你的车间，在磁盘驱动器有机会停止旋转之前就修复它的日子。那些日子！
+
+撇开这些不谈，让我们看看最新的存储技术。如果你最近没有注意到，存储正在从服务器迁移到网络。每台服务器拥有自己的专用附件磁盘存储的旧方法已经消失。新的概念是不再有浪费的专用存储分配给单个服务器。新的存储范式是拥有由供应商/操作系统无关的网络存储管理器管理的存储池。这种被称为企业数据管理的趋势旨在将数据整合到一个与跨各种服务器和操作系统的共享数据更兼容的环境中。
+
+### 存储整合
+
+数据整合涉及一些新技术来处理业务所需的所有相同数据的副本。生产数据是黄金，因此必须不惜一切代价保护它。这就是第一份副本发挥作用的地方，即备份副本。典型的系统通常包括生成分裂镜像备份。这就是黄金数据同步到数据的备份副本，该副本是镜像。然后拆分镜像，以便现在静态的特定时间点备份副本可以复制到磁带进行异地存储。不同的车间对备份副本有不同的处理选项
+
+
+直至下一次备份完成。一些机构希望将远程站点的副本重新同步到彼此几分钟之内，以防不测。
+
+然而，开发/测试组的情况如何？他们需要一份“真实”数据的副本来进行测试，因此就有了第三份副本。接着是审计组，他们希望在对生产数据运行报告时使用正常工作时间！当生产系统因响应缓慢而出现状况时，你就获得了为报告目的保留另一份生产数据副本的特权。现在，该生产数据的存储需求在规模上翻了四倍，但原始数据并未增长。我想你已经明白了由此产生的存储问题。
+
+所有人都在谈论这种“数据爆炸！”我并没有看到数据爆炸，而是看到相同数据的副本数量在爆炸！随着UNIX在市场份额上增长了78%，这种数据的整合看起来越来越有利。随着重点从服务器转移，新的流行术语包括：灾难恢复、数据安全性、数据可用性和数据管理。你可能会惊讶地发现，在整合环境中存储管理要容易得多。随新型存储产品提供的工具易于使用且速度很快，但它们确实削弱了系统管理员正常拥有完全控制能力的优势。现在，所有变更都需要提交变更请求，包括“即时”分配更多磁盘空间。
+
+当今系统具有多主机对存储的附件能力，任何主机理论上都可以访问存储池的任何部分。这是当今存储制造商的主要关注点。为了处理多主机连接的存储，数据流的控制已从服务器转移到构成存储子系统的控制器和适配器。在服务器端，操作系统仍将磁盘表示为本地磁盘。
+
+## 存储连接类型
+
+大多数UNIX存储通过SCSI连接附件到系统，但与其他市场上的一些协议相比，SCSI速度较慢。一些UNIX供应商偏好SCSI；另一些则更愿意使用串行存储架构（SSA）磁盘子系统。还有一些人喜欢使用光纤通道或仲裁环。然后我们迎来了存储连接领域的新成员：iSCSI。iSCSI是什么？我们将探讨这个概念以及其他概念。我们真的需要逐一查看这些概念。
+
+### SCSI
+
+如果你接触过硬件，你肯定了解SCSI协议设备和连接要求。SCSI速度正在提高，但它们仍受限于SCSI链路上最慢设备的速度。现在SCSI速度达到640 MB/秒，但电缆长度仅限于八米。
+
+### SSA
+
+IBM实施了串行存储架构（SSA）磁盘子系统，作为获得多路径高速磁盘性能的手段。SSA的工作方式如下：你有IBM型号7133磁盘存储托盘或抽屉。每个7133最多可容纳16个SSA磁盘。在服务器上，SSA适配器有两个*环*，每个环有两个适配器连接。大多数SSA适配器可以支持两个独立的环。每个SSA环有两条双向高速路径，速度高达100 MB/秒。该SSA子系统具有多种磁盘配置，包括JBOD（一堆磁盘）以及RAID 1、3、5和1+0。根据磁盘布局和配置，SSA磁盘拥有迄今为止最快的吞吐量。
+
+### iSCSI
+
+使用iSCSI，你有一个正在兴起的协议，其标准正由互联网工程任务组（IETF）敲定。iSCSI协议正是你期望的那样，即在IP网络上的SCSI协议。基本上，SCSI信息作为数据包通过IP网络发送；在目的地，IP数据包头部被移除，内容作为正常的SCSI协议流量发送到存储设备。结果是能够使用TCP/IP协议通过网络发送SCSI块I/O协议数据。
+
+由于此SCSI存储流量现在在IP网络上传输，你可能需要一个独立的、仅用于iSCSI IP流量的网络。iSCSI的一些好处包括距离延伸、连接简便以及标准的TCP/IP传输协议。密切关注此协议，它可能会席卷全球！
+
+## 网络附加存储（NAS）
+
+网络附加存储（NAS）使用IP局域网（LAN）访问远程存储。SAN与NAS的不同之处在于，SAN使用通过光纤通道交换机、路由器、网桥和指导器连接的存储网络，作为一个“存储区域网络”，完全独立于IP网络；但NAS使用网络上的*存储设备*。我听到过的描述NAS的最佳术语是“打了激素的NFS。”NAS的理念是通过IP LAN网络进行文件共享。数据通过LAN使用TCP/IP协议在服务器和NAS之间传输。这允许使用LAN作为结构进行任意到任意连接。
+
+数据使用常见的网络访问协议进行访问，例如UNIX服务器使用NFS，Windows系统使用CIFS。使用此技术，你还可以使用如Tivoli Storage Manager（TSM）等工具将磁带库从服务器中分离出来。这允许共享磁带设备，并提供更好的投资回报。
+
+然而，你不能只是把一些磁盘驱动器扔到网络上就期望有任何通信发生。必须内置一些智能来管理数据通信和存储。因此，NAS系统包括一个服务器，该服务器拥有操作系统并连接存储，使其成为存储服务器或网络设备，而不是网络基础设施的一部分。NAS与另一方面SAN和iSCSI之间的关键区别在于，客户端到NAS的I/O是使用*文件I/O*完成的，而iSCSI和SAN中使用的是*块I/O*操作。文件I/O意味着唯一已知的是文件名，但不知道文件*存储*在哪里。只有远程NAS内部服务器知道文件的位置。表29-1对比了NAS和SAN。
+
+| 存储 | I/O 类型 | 特性 |
+| --- | --- | --- |
+| NAS | 文件 I/O | 使用现有的TCP/IP LAN基础设施作为传输机制 |
+| SAN | 块 I/O | 使用光纤通道，一种利用光纤上的串行SCSI协议的传输机制 |
+
+表29-1. NAS与SAN
+
+使用NAS，你不仅可以从网络访问存储，而且通过设置NAS网关，你还可以连接到使用光纤通道的SAN。这是网络存储的未来趋势。NAS的一些好处包括实施简便（NAS使用现有的LAN网络）、可扩展的池化存储以及异构文件共享。
+
+## 存储区域网络（SAN）
+
+存储区域网络（SAN）是一个集中式存储阵列，在其中你移除大部分本地主机存储管理，转而支持集中式存储管理。SAN拥有专门用于SAN流量的高性能网络。其好处包括磁盘存储容量的整合（服务器和存储可以放置在不同位置，提供更好的跨平台存储利用率），降低整体存储成本，更好地控制存储资源，以及降低管理基础设施的成本。所有这些都为企业整体带来了更大的灵活性，使其能够根据需要动态地向SAN环境中的任何服务器分配存储。这种方法与“一个服务器对应一个存储设备”的概念形成对比，后者会导致磁盘空间浪费，因为存储无法共享。
+
+SAN的另一个巨大好处是延伸和远程存储能力，允许设置远程镜像站点。哇！灾难恢复测试变得更容易了；我们只需要一个远程站点进行镜像。好吧，在我们深入之前，让我们先看看SAN的组成部分。
+
+### 三种类型的SAN拓扑
+
+为了满足不同的应用程序要求，SAN可以配置为三种拓扑之一，以及一些组合。对于两节点配置，可以使用*点对点*拓扑。对于双路径、多节点配置，可以使用*仲裁环*。为了获得最大灵活性，可以构建*SAN结构*。
+
+### 点对点
+
+当恰好有两个节点时，可以使用*点对点拓扑*。这是最简单的形式的SAN拓扑，它提供了两个节点之间的完整带宽。然而，它不允许对SAN进行任何扩展。
+
+
+
+
+# 光纤信道仲裁环路
+
+在*光纤信道仲裁环路*（*FC_AL*）中，节点/端口（服务器和存储节点及器件）被配置为环路结构，使用集线器或交换机，其外观与令牌环配置非常相似。环路内的通信是通过一个节点发起与另一个节点的链接来实现的，数据帧在环路中沿一个方向传输。随着环路中添加更多节点，环中每个节点可用的带宽会减少，因为节点共享环路的带宽。
+
+我们之所以称其为“仲裁环路”，是因为节点在希望与环路内其他节点通信时，必须对环路访问权进行仲裁。当节点赢得仲裁后，它可以与另一个节点建立通信链接，并控制环路，直到另一个节点赢得仲裁接管环路控制权。当通信完成时，链接断开，环路可供建立新的通信链接。为了使此配置正常工作，需要使用一组协议来控制环路间通信。这些协议必须包括以下机制：
+
+- 分配环内的节点或端口地址
+- 将新节点/端口添加到环路中
+- 开启仲裁以获得环路访问权
+- 在环路内两个节点之间打开通信链接
+- 在节点完成交谈后关闭通信链接
+- 实施一项策略，使环内所有节点都有公平的机会获得环路访问权
+
+如您所见，这是一种棘手的方式，如果环内的节点相距甚远，由于通信延迟，它可能会很慢。因此，在大型环境中，这不是最佳选择。
+
+环路有两种类型。*专用环路*仅与其他专用节点和环路通信，并且不连接到存储区域网络（SAN）结构。*公共环路*允许与 SAN 结构通信，从而扩展环路。*公共环路物理端口*由其地址的两个高字节定义。如果它们为零，则为专用环路。如果它们非零（正整数），则为公共环路。使用公共仲裁环路的一个例子是允许 SAN 结构访问一组磁带设备，这些设备必须位于公共环路上。当涉及 SAN 结构时，您需要小心确保公共环路和专用环路保持分离。
+
+寻址是在端口级别进行的。端口地址为 24 位，具有寻址总计 127 个端口的能力。这些被称为*仲裁环路物理地址*（*AL_PAs*）。环路优先级由地址的数值决定；编号较小的地址具有更高的优先级，因此，正如预期的那样，磁盘阵列将具有较低的地址。当环路中的两个节点通信时，首先必须进行*端口登录*。端口登录不过是尝试建立通信链接的两个节点之间的信息交换。一旦完成此操作，两个节点之间就可以打开通信链接，并可以维持，直到另一个节点赢得仲裁以获取环路控制权。
+
+# 光纤信道交换结构
+
+光纤信道交换结构（FC_SW）由 ANSI 技术委员会 X3T11 定义的一个或多个光纤信道互连组件组成。该 ANSI 标准最初用于光纤，但拼写从*光纤*改为法语拼写*光纤*（fibre），因为它现在既使用光纤电缆也使用铜缆。然而，企业存储服务器（ESS）上的光纤信道始终基于光纤而非铜缆。
+
+我们首先想要审视的是光纤信道交换机和光纤信道路由器。我见过这些术语互换使用，在某种意义上这是合理的。目前，它们都是多协议光纤信道组件，使用 100 MB/秒进行内部传输和千兆位外部数据帧传输。光纤和铜缆都可以使用千兆传输，但铜缆有 30 米的电缆长度限制，而光纤有 10 公里的限制。与共享带宽的仲裁环路不同，在光纤信道交换结构中，随着添加更多设备，带宽实际上*增加*。这是因为这些是多协议设备，随着添加设备，随着端口路径的增加而增加带宽。
+
+光纤信道交换结构中的寻址是使用简单名称服务器（SNS）进行的。这是必要的，因为两种寻址方案必须共存：24 位端口地址和 64 位全球端口名称（WWPN）地址。64 位 WWPN 类似于网络 MAC 地址，并在设备制造时分配或烧录。交换机分配两层端口地址。驻留在交换机内的 SNS 为您跟踪此两层寻址。端口地址分为三个部分：*域*、*区域*和*端口*。域是交换机的地址，有 239 个可能值（256 减去一些开销地址），因此您可以在 SAN 结构中有 239 个交换机。区域用于指向设备上一个或多个端口的组以及到公共仲裁环路的端口。因此每个多协议设备都有不同的区域号，总计 256 个区域。地址的端口部分指设备上的实际端口。当将所有这些相乘时，你得到的最大端口数等于 15,663,104 个端口地址。在典型的光纤信道 SAN 结构安装中，这应该足够了。
+
+与仲裁环路场景一样，节点之间必须发生登录。在光纤信道交换结构的情况下，必须发生*结构登录*。这也打开了节点间通信的链接。当节点发起结构登录时，它使用全零的端口地址，从而向交换机中的 SNS 发出信号，使用域、区域和端口寻址方案分配地址。至少你不必跟踪所有这些。公共地址在访问结构时经历相同的过程，但使用环路地址来分配端口地址。此时，地址被输入 SNS 数据库。
+
+连接时，使用与 IP 网络相同的交换和路由过程。在这种情况下，读取帧报文的目的地部分，并将帧报文通过结构路由到正确的目标节点。注意，交换机需要具有缓冲机制和到目的地的备用路径。这不仅提高了性能，还避免了丢弃*帧报文*。还要注意所使用的路由机制。大多数交换机使用在 IEEE 802.1 标准中定义的*生成树*来确定采取的路由。这是为了确保当帧报文采取不同路径时，节点之间的传输中的报文不会乱序。生成树方法执行动态路由确定，并打开和关闭（或锁定）某些路由，从而通过强制所有报文采取相同的路径来保持帧报文的顺序。这还提高了整个 SAN 结构的性能。也可以定义静态路由；如果静态路由中断，将通过结构确定并使用新的动态路由。结构的另一个优点是可以动态添加和移除设备。这种动态功能通过设备状态变更通知的过程实现，包括设备离线。
+
+## 区域划分
+
+*区域划分*用于限制对结构中区域的访问，可以将其视为私有虚拟网络。既然我们在本书中讨论的是 ADX 环境，假设你知道不应混合 UNIX 和 Windows 环境是合理的！这是许多问题的根源。我们可以使用区域划分在 SAN 结构中分离 UNIX 和 Windows 系统。你必须将 Windows 组件划分为区域，因为 Windows 会将其看到的存储空间全部据为己有，在每个磁盘上写入头部或标签信息。*重大问题！*
+
+从另一个意义上说，我们也希望隔离我们的 ADX 环境。我们希望机器之间以及生产环境和测试环境之间有分离。我们可以通过分割镜像或将备份划分为区域来制作备份。因此，如您所见，*区域划分*是保持结构中所有事物有序的有力工具，但区域划分通常不会如此极端。区域内的设备只能与同一区域内的其他设备通信。然而，设备可以属于多个区域。我们可以通过硬件或软件区域划分来划分结构。硬件区域划分通过在端口地址级别或物理端口级别授予或拒绝访问权限起作用。这可以包括任何端口设备或设备组。硬件区域划分在路由级别通过过滤过程完成，对性能影响较小。软件区域划分使用交换机中的 SNS 实现相同结果。在 SNS 内，你可以在设备或端口级别进行区域划分，从而获得某种程度上的更大灵活性。区域内的任何设备可以属于其他区域或区域成员，因此此过程可能会变得相当复杂，在进行*跨区域划分*时必须仔细考虑。
+
+软件区域划分存在安全顾虑，必须考虑结构所使用的硬件和软件的每个方面。特别是，必须考虑设备绕过 SNS 区域划分表并通过新的硬件发现技术直接与设备连接的能力。因此，建议仅使用硬件区域划分。当然，随着这些产品
+
+
+
+成熟后，这一安全隐患应得到解决，并且随着软件分区的灵活性增强，它将成为首选方法。保护存储设备免受未授权访问的另一种方法是逻辑单元号（LUN）掩蔽。LUN 不过是一个逻辑磁盘。当节点请求访问存储设备时，通过 LUN 来实现。存储设备可以接受或拒绝对该逻辑磁盘的请求。访问控制列表由用户定义，但通过设备控制访问程序进行维护。在本章后续部分，当我们讨论用于 IBM 企业存储服务器（也称为“鲨鱼”）的 StorW@rk 专家时，你将会看到这一点。大多数机构使用一个大区域和 LUN 掩蔽来进行隔离。
+
+## 当 Fabric 填满时
+
+随着基础设施的扩展，你需要扩展 Fabric 以容纳新设备。（记住那个新的 ERP 项目！）添加更多光纤通道交换机是最简单的方法，且具有许多优势。添加更多交换机被称为交换机级联。你可以动态地向 Fabric 添加交换机，而无需关闭任何电源，但必须极端谨慎，因此请仔细遵循制造商的说明。随着交换机级联，带宽因增加了交换机间链路（ISLs）而增加，并且由于更多交换机意味着更多设备端口，Fabric 的高可用性也得以延长。有时你只需要在 Fabric 中增加距离，而交换机级联可以让这变得轻而易举。随着你添加交换机，最终会在整个 Fabric 中形成一个分布式名称服务器，这增加了 Fabric 本身的容错性。然而，你仍然受到 Fabric 中总共 239 个交换机的限制。请注意，在扩展 SAN Fabric 时，不要通过 Fabric 创建流量瓶颈，也不要超过最大跳数。最大跳数会根据 Fabric 中使用的硬件和软件而变化。
+
+## SAN 企业存储管理标准
+
+在 SAN 硬件供应商混杂的情况下，你希望每个公司不要各行其是。如果是这样，你将在 SAN、LAN 和 WAN，实际上在整个企业中看到不兼容性。好消息是，供应商正在努力制定一些 SAN 硬件、软件和控制机制的标准，以使所有部分作为一个 cohesive 单元协同工作。被称为存储网络管理工作组（SNMWG）的供应商团体正在努力制定关于整个 SAN 环境（延伸到应用程序级别）的管理和可靠性行业标准，在应用程序级别也必须有 API 标准。
+
+SAN 基础设施的管理涉及将所有可用工具整合到一个管理应用程序中。这必须涵盖数据、存储和网络管理，你需要将 SAN 视为一个实体。我们都听说过数据是决定企业成败的驱动因素，而服务质量（QoS）始终是讨论的核心。因此，数据质量必须得到维护，否则我们都只能回家了，这并不令人惊讶。SAN 的集中管理通常通过某种控制工作站使用中央 SAN 管理工具来实现。由于服务器和数据副本的爆炸式增长，这是必须的。现在，一名系统管理员预计要管理三太字节的数据。自动化是实现这一目标的关键，而 SAN 管理工具提供了这一点。我们不希望一次只管理一台服务器！
+
+SAN 管理工具必须能够处理以下所有 SAN 组件：
+
+- SAN 资源
+- SAN 数据
+- SAN 元素
+- SAN 网络
+- SAN fabric 性能监控/修正
+- SAN 错误监控/修正
+
+行业标准正专注于这些元素的组合。我们经常听到与管理 SAN 元素相关的 *入站* 和 *出站* 术语。入站指的是 SAN fabric 内部元素之间的内部通信。这种通信使用 SCSI 外围服务（SES）协议，也称为 SCSI-3 外围服务。这完全在 SAN 内部，没有任何 LAN 连接。其他入站标准正在开发中。出站指的是使用 TCP/IP 的 SAN 内部外部通信。这通常使用简单网络管理协议（SNMP）和管理信息库（MIB）完成。这两个都是大多数 LAN 和 WAN 供应商支持的广泛使用的协议。这两种方法都为 SAN 内部提供了监控路径。
+
+# Tivoli SANergy
+
+SAN 的另一个方面是机器之间文件共享的能力。通过文件共享，你可以更好地控制并整合数据。IBM 使用 Tivoli *SANergy* 来实现这一目的。Tivoli SANergy 的一些好处包括以 SAN 速度进行文件共享、无 LAN 和无服务器的数据移动以及异构文件共享。关于安装、配置和使用 SANergy 的详细信息，我推荐以下 Redbook：*Tivoli SANergy 实用指南*，`http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg245146.pdf`。
+
+# 企业存储服务器（ESS）别名“鲨鱼”
+
+企业存储服务器（ESS），代号为 Shark，是一个集成的存储设备，由两台紧密耦合的 RS/6000 或 pSeries 机器组成，具有完全故障转移能力。内部存储使用 SSA 磁盘子系统，这些子系统以环状连接。磁盘可以配置为 RAID 5 或非 RAID，后者称为 JBOD（一堆磁盘）。截至本文撰写时，仅支持 RAID 5。然而，在下个版本中将增加对 RAID 0+1 的支持。有些人称之为 RAID 10，但确实没有这样的标准。RAID 0+1 将增加更多选项以获取更快的 I/O 能力。当你的负载主要是读取和顺序操作时，RAID 5 将比 JBOD 表现得更好，因为数据在所有驱动器中条纹化，这意味着有更多的盘片和读/写头在工作。这允许并行执行更多 I/O。当添加 RAID 0+1 时，你也会看到写能力的巨大提升。参见表 29-2，其中描述了不同的 RAID 级别。
+
+当服务器到 Shark 有多条路径时，LVM 的锁定机制存在潜在问题。以下是可能发生的示例：在我同事和我意识到卷组未配置为“大”卷组之前，我们使用 shell 脚本添加了大量逻辑卷列表。因此，我们只输入了命令在运行中更改 VG，`chvg -B <vg_name>`，预期当 VG 锁获得空闲时，它会更改 VG 的特性，但它却搞砸了！锁在单条路径上，所以命令只是走了另一条路径，并试图在创建 LV 的同时将 VG 更改为大卷组。你知道我们必须做什么：停止 LV 创建脚本，删除所有先前配置的 LV，将 VG 变为大 VG，并重新启动 LV 创建脚本。我再也没这么干过！因此，LVM 需要在 VG 锁期间更好地控制多路径。奥斯汀开发中心已经意识到这一点，并正在寻找解决方案。
+
+ESS 允许存储整合和高性能数据解决方案。ESS 支持所有主要平台，包括 UNIX、Windows 和大型机。ESS 的另一个巨大优势在于灾难恢复和数据可用性领域。ESS 设计没有单点故障，并允许故障转移服务，从而消除了停机时间。
+
+## 表 29-2. 磁盘 RAID 级别
+
+| 级别 | 描述 |
+| :--- | :--- |
+| RAID 0 | 无故障容错的磁盘条带化 |
+| RAID 1 | 具有双工和故障容错的磁盘镜像 |
+| RAID 2 | 使用算法进行错误校正的磁盘条带化 |
+| RAID 3 | 在单个磁盘上具有奇偶校验信息的磁盘条带化 |
+| RAID 4 | 具有大数据块和预留一个磁盘用于奇偶校验的磁盘条带化 |
+| RAID 5 | 奇偶校验信息均匀分布在各驱动器中的磁盘条带化 |
+| RAID 0+1 | RAID 0 阵列的磁盘镜像。最高数据传输性能 |
+
+
+
+
+## ESS 的发展历程
+
+第一台 ESS 于 1999 年第一季度推出。这是 IBM 在企业存储领域迈出的重要一步。这款“鲨鱼”（Shark）的第一个型号是 2105 型 E10/E20。其存储容量从令人印象深刻的 42GB 到 11.2TB，使用的是 9GB 和 18GB 的 10,000 RPM 硬盘，或者是 7,500 RPM 的 36GB 硬盘。该型号配备 6GB 存储缓存，提供适用于使用以下连接类型的 S/390 和开放系统的版本：
+
+- ESCON
+- Ultra SCSI
+- FICON（使用网桥）
+- Fibre Channel（使用网桥）
+
+1999 年第一季度提供的唯一复制服务是并发复制（concurrent copy），该服务维护数据的镜像副本。1999 年第三季度，IBM 将 E10/E20 型号升级为 F10/F20，通过紧密耦合集群增加了一对四路 RS/6000 型号 H70 机器的性能。现有的“鲨鱼”接收了新的机器模型进行了“大脑移植”，缓存也升级为 8GB 或 16GB 的可选配置。通过这种升级，客户的性能最高可提升 50%。
+
+2000 年第一季度，复制服务扩展至包含针对 S/390 的 FlashCopy。原生 Fibre Channel 被引入，提供直接连接或 Fabric 连接两种选项。2000 年第二季度稍晚时候，复制服务再次扩展，包含针对开放系统的 FlashCopy，并将 PPRC 纳入其中。
+
+2001 年第一季度，IBM 通过 MDdata 和 INRANGE 模型交换机和路由器增加了原生 FICON，支持直接连接或 Fabric 连接。添加了长波和短波 Fibre Channel 及 FICON 主机适配器，以及增强型 ESCON 主机适配器。缓存最大升级为 24GB，并引入了 CLI（客户机接口）。2001 年第四季度，发布了 73GB 10,000 RPM 硬盘，使单台 ESS 的存储容量增加至 22TB。授权内部代码（LIC）得到升级，允许在“鲨鱼”内部的不同阵列中混合使用不同尺寸的硬盘。此外，结合 AIX Linux 应用工具箱，增加了额外的 Linux 支持，包含新的 AIX 应用程序接口（APIs），使得重新编译并使用这些 APIs 的 Linux 应用无需引用自己的库。
+
+2002 年第二季度，IBM 推出了 15,000 RPM 硬盘，尺寸分别为 18GB、36GB 和 72GB。对等远程复制（Peer-to-Peer Remote Copy，PPRC）的距离限制得到扩展，并且发布了针对 Tru64 Unix 的复制服务命令行接口（CLI）。
+
+下一代 ESS 拥有六路 668 MHz pSeries 690 型号 6H1 的“大脑”。你明白了吗？这款 pSeries 690 拥有六个处理器，运行时钟速度为 668 MHz。支持高达 32GB 的缓存，非易失性存储（NVS）写入缓存已增至 2GB。
+
+这款“鲨鱼”最有趣的部分在于，即将发布的版本中，RAID 0+1 支持将被添加到 RAID 5 磁盘配置选项中。对 ESS 进行增强后产生了两方面的结果。对于大量存储需求，性能最高可提升两倍。如果你的存储需求并未使当前型号承受压力，那么这个数值不会那么显著。我猜测这个型号将被命名为 G10/G20，因为之前的型号是 E 和 F，但我可能猜错了。
+
+## 主机总线适配器
+
+服务器与 ESS 之间的通信通过*主机总线适配器（HBAs）*完成。你有四种 HBA 适配器选择：ESCON、FICON、Fibre Channel 或 SCSI。每个服务器可以拥有分布在各主机适配器槽位中的多个连接。这不仅在你失去某个 HBA 槽位时提高了服务器的可用性，还将 I/O 分散到所有适配器上。如果在服务器上安装*Data Path Optimizer / Subsystem Device Driver（数据路径优化器/子系统设备驱动程序）*，系统将自动完成此操作。除了 Fibre Channel 最多支持 8 个双端口 HBA 外，最多可安装 16 个 HBA。
+
+## 数据路径优化器 / 子系统设备驱动程序（SDD）
+
+针对开放系统环境的数据路径优化器 / 子系统设备驱动程序（SDD），启用服务器到目标 LUN 组的多个 Fibre Channel 和 SCSI 路径。SDD 在所有可用的 HBA 路径上优化工作负载。这通过允许对相同数据进行并行访问来平衡负载，从而改善服务器 I/O。SDD 是一个伪设备驱动程序，驻留在服务器上，并提供以下功能：
+
+- 跨多路径的动态 I/O 负载均衡
+- 增强数据可用性
+- 多路径环境中的故障转移保护
+
+SDD 在协议栈中增加了另一层，并通过路径监控和数据流及负载均衡的选择提供动态路径保护，从而消除服务器与 ESS 之间的数据流瓶颈。
+
+SDD 支持 AIX 跟踪。SDD 的**跟踪** ID 为 2F8，其使用方式如下：
+
+**启动 SDD 跟踪**
+
+```
+# trace -a -j 2F8
+```
+
+**停止跟踪**
+
+```
+# tracstop
+```
+
+**读取跟踪报告**
+
+```
+# trcrpt | more
+```
+
+AIX 跟踪功能需要 **bos.symgt.trace** 文件集。
+
+SDD 提供一组 **datapath** 命令，用于显示适配器和设备的状态，以及设置路径条件。**datapath** 命令如表 29-3 所示。
+
+SDD 仅与 SDD **vpath** 设备协同工作。有关安装和配置说明，请参阅产品文档。
+
+| 命令 | 描述 |
+| :--- | :--- |
+| datapath query adapter | 显示适配器信息 |
+| datapath query adapdata | 显示适配器的性能信息 |
+| datapath query device | 显示设备信息 |
+| datapath query devstats | 显示设备的性能信息 |
+| datapath set adapter | 设置连接到此适配器的设备路径为在线或离线 |
+| datapath set device | 设置设备路径为在线或离线 |
+
+**表 29-3.** Datapath 命令
+
+## ESS 配置
+
+我想先提出一点警告。在处理“鲨鱼”时，你随时都可能陷入困境。每个人都需要从 IBM 下载“Jesse”的文档。Jesse Adams III 撰写了这份文档，以帮助那些遇到各种配置奇怪问题的现场工程师。该文档名为“Data Path Optimizer on an ESS—Installation Procedures / Potential Gotchas”（ESS 上的数据路径优化器——安装步骤/潜在陷阱）。你可以下载此文档并打印 PDF 格式版本。如果你阅读此文档并在终端旁保留一份硬拷贝，你会节省大量时间和精力。你可以从以下 URL 下载并打印 Jesse 的文档：
+
+```
+ftp://ftp.software.ibm.com/storage/subsystem/tools/sddqpo-v120.pdf
+```
+
+一旦收到你的 ESS，安装硬件，启动存储系统，并看到闪烁的指示灯，你就准备好观看 CE（客户工程师）开始配置“鲨鱼”了。你可能会惊讶地发现，最初并不需要大量的配置。你确实需要配置网络、串行和存储通信；配置 StorWatch Master Console（StorWatch 主控台）；进行呼叫回家和远程支持；并覆盖 CE 将要求你提供配置信息的任何选项。
+
+首先检查的事项之一是授权内部代码（LIC）的版本。确保你处于最新、最稳定的代码版本。你可以将 LIC 视为一种系统微代码。LIC 控制 Web 浏览器的外观、磁盘驱动器配置能力以及你在与 ESS 交互时看到的其他一切内容。
+
+ESS 由两台以紧密耦合集群配置运行的 RS/6000 或 pSeries 机器组成。数据存储在安装在集群节点中的缓存中。写入磁盘的数据存储在*对面*集群节点的 NVS（非易失性存储）中。两个集群节点中的每一个都拥有高性能缓存，可配置为 3GB、4GB、8GB、16GB 或 32GB 的同步动态 RAM（SDRAM），提供单比特和双比特错误检测。ESS 通过双电源、双冷却风扇、双电池备份和双机器控制实现完全冗余。通信通过主机总线适配器（HBAs）处理到服务器，通过设备适配器（DAs）对处理到磁盘存储。集群配置允许在集群节点发生故障时进行故障转移。在这种情况下，ESS 采取纠正措施并将控制权转移到集群中幸存的节点。结果是服务无中断且无数据丢失。
+
+ESS 支持在 8 包中混合使用不同尺寸的硬盘（intermix）。这些 8 包必须成对添加到 ESS 中。所有 ESS 型号都支持 Intermix，并提供许多不同的配置选项。
+
+ESS 需要仔细的配置规划。花时间规划数据布局并仔细考虑 LUN 大小极其重要。LUN 可以配置为几乎任何你想要使用的大小。根据你的应用程序和平台，这个决策会有所不同。开始配置的基本步骤如下：
+
+- 绘制一张地图，表示你希望 ESS 布局的逻辑视图。
+- 使用逻辑视图映射到 ESS 内的物理设备。
+- 确保你已做好功课，以了解当前和未来存储需求所需的存储容量。
+- 记录你的布局，以便在使用 StorWatch Specialist（StorWatch 专业人员）配置 ESS 时易于理解。
+
+让我们继续看看 StorWatch Specialist 和 Expert（专家）能做什么。
+
+## ESS StorWatch Specialist
+
+ESS StorWatch Specialist 是一个基于 Web 浏览器的界面，用于配置和控制 ESS。实际上，你可以从单个 Specialist 会话中控制许多“鲨鱼”。StorWatch Specialist 的功能及其外观完全取决于 LIC。如果你使用的是较低版本的授权内部代码，你可能无法执行某些选项。例如，在同一 ESS 内混合使用不同尺寸硬盘的能力。使用 ESS Specialist，你可以执行以下任务：
+
+- 显示 ESS 的状态
+- 监控 ESS 错误日志
+- 创建和修改 RAID 和 JBOD（一堆磁盘）秩
+- 显示授权内部代码（LIC）的版本级别
+
+
+
+- 在各级授权层级创建用户
+- 向主机添加并重新分配磁盘卷
+- 显示和修改 ESS 配置
+- 配置 SCSI 和光纤主机端口
+- 更改和显示通信设置
+
+ESS 专家主 Web 面板如图 29-1 所示。
+
+## 配置 Call-Home（远程支持）功能
+
+你可能不希望半夜接到电话。但是，你或许需要唤醒一些 IBM 支持人员。ESS 的 call-home 功能允许自动通知 IBM 服务部门。随后，IBM 支持团队可以远程登录以访问和维护 ESS。您还可以设置电子邮件通知。典型的 call-home 电子邮件示例如下。
+
+**来自带有故障磁盘的 Call-Home 的示例电子邮件通知**
+
+```
+From: root@yogi_bear.na.cave.ibm 05/07/2002 09:55:20 AM
+To: rmichael1@booboo.na.cave.ibm
+cc:
+Subject:
+```
+
+```text
+# Begin of call home record...... ......= BEGIN OF FILE (2480)
+# Product Manufacturer ID and Date..... .... 0752642001
+# Business/Company Name.............. .....= DINO-RocRoc Enterprises
+# Product Machine type and model number.= 2105P20
+# Product serial number............. . 7520220
+# Call back expander port ID.......... 1
+# Outside line prefix...... ...... .. .. .. .. . 9,
+# Customer voice phone number....... .. .. .. .. .. 5552321212
+# Customer offshift voice phone number. =
+LTC level of local complex ... .. .. . 1.3.3.37
+LTC level of remote complex .... .. . 1.3.3.37
+# Reporting Cluser Number......... . 1
+# Record type.............. . 1
+# Report time/date stamp... .. .. .. . 05/07/02 09:55:18 EDT
+# Host system type(s).......... .. .. . eacon, fibre
+# Level_CPSS information.. ... ... ... shsrz/86.CPSS/engr/build/sint0821
+# Possible FRUs to replace:
+#
+#
+# Engineering FRU Likely FRU Location
+# FRU Name Name to fix Description
+rsDM0202 36.4GB 10K DDM 100% RI-U1-W3-D2
+#
+# Additional Information
+#
+# Engineering FRU Name .. . . . rsDM0202
+# Part Number............ . 18P2199
+Primary Failing Unit .... = 2105-P20 75-20220
+Reporting Unit .......... = 2105-P20 75-20220
+#
+# Problem ID........... .. .. . 42
+ESC.... .. .. .. .. .. .. .. .. .. . R100
+SPN.................... .. . 10265
+# Problem Status..... ... . PENDING
+# Description............ .. . SSA subsystem detected error
+# Additional Message .... . NONE
+# Failing Cluster...... . 1
+# Reporting Cluster....... . 1
+Failing Resource .... .. .. . rsDM0202
+# First Occurrence......... .. . True May 7 09:54:28 2002
+Last Occurrence.. ... ... . True May 7 09:54:28 2002
+# Failure Count............ . 1
+# Re-presentation Interval .. . 28800
+# Remaining Presentations.. . 0
+# Isolation Procedure ..... . NONE
+# Failure Actions ........... = 0000 "PERFORM PROBLEM DETERMINATION PROCEDURES"
+# Probable Cause .......... = 6310 "DASD DEVICE"
+# Failure Cause ........... = 6310 "DISK DRIVE"
+# User ActionB ............ = FFFF "NONE"
+# End of record Flag ...... = END OF FILE
+```
+
+从这封电子邮件中可以看到，发生了磁盘故障。FRU 名称是 rsDDM002，这是一个 36.4GB、转速为 10,000 RPM 的磁盘驱动器。故障驱动器的位置也被确定为 R1-U1-W3-D2，部件号为 18P2I99。
+
+这讲述了整个故事；现在只需要一名客户工程师（CE）来更换驱动器。这也是自动进行的。磁盘会被订购并发送到你所在的站点。CE 会在差不多的时间出现并更换驱动器，或者他/她可能会打电话预约。无论如何，如果 ESS 检测到问题，你总会知道。
+
+## 建立 LUN 并存储分配给特定主机
+
+既然你已经在 ESS 中仔细规划了存储布局，那么你就可以开始为特定主机配置存储了。这里的“主机”不一定是实际的主机；它可能只是你定义为主机的占位符，这也是配置 ESS 的另一个好处。第一步是进入存储分配面板，如图 29-2 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_662_0.png)
+
+接下来，点击图 29-2 中 ESS 存储分配面板右下角的**Open System Storage**按钮。下一个出现的屏幕包含 ESS 集群中当前已分配存储的所有信息。要向存储池中添加更多存储（这是我们的任务），请点击**Open Systems Storage**面板底部的**Add Volumes**按钮，如图 29-3 所示。
+
+Open Systems Storage 面板显示了 ESS 的当前配置和连接以及连接到每个主机的 LUN。你也可以在这里修改主机/存储连接，正如你将在**将一个 AIX 服务器的存储“连接”移动到另一个**一节中看到的那样。我们的任务是添加更多存储，所以让我们继续。在 ESS Specialist Open Systems Storage 面板中，你需要点击面板左下角的**Add Volumes**按钮。此选项会将你带到一个 ESS 存储分配的图形视图。如可以在图 29-4 右上角的图例中看到，绿色区域是未分配的存储。
+
+我已经选择了我要使用的存储，所以我要指出面板中一些关注的条目。要添加存储，你*必须*选择一个或多个主机来连接新的存储。对于首次配置，我设置了一个虚拟占位符主机或多个主机。然后，当我创建新存储时，我选择虚拟占位符*以及*我希望连接存储的实际主机。使用这种方法允许我在不丢失 LUN 上每个主机定义的情况下，将存储从一个主机断开并连接到另一个主机。由于这只是一个占位符，所以请使虚拟主机名称能够描述存储的用途。一个示例是 VG 和主机名称的组合。
+
+![](img/82f851021955589d82b22750fb3b1646_663_0.png)
+
+**图 29-3.** ESS Specialist Open System Storage 面板
+
+![](img/82f851021955589d82b22750fb3b1646_664_0.png)
+
+**图 29-4. ESS Specialist 添加卷（1 of 2）**
+
+选择主机后，下一步是要高亮显示你想要使用的存储阵列。这是大家看到你出色的存储规划的地方。要选择多个阵列，只需按住 CTRL 键并点击你想选择的每个阵列。我已经选择了 ESS 中所有的 A 循环阵列，如图 29-4 所示。
+
+当你点击**Next（下一步）**，你将进入**Add Volumes (2 of 2)**面板，如图 29-5 所示。现在你需要做出一些实际的配置决策。
+
+在我们的规划中，你为该组存储确定了 LUN 大小。在我的演示中，我喜欢使用 64GB 的 LUN 大小。我想添加 32 个 LUN，每个 LUN 的大小为 64GB，但仍有一个主要决定要做。你是希望按顺序添加 LUN，还是将 LUN 分散到所有阵列更有意义？这个决定取决于你在做什么。在这个例子中，我希望将分区分散到所有阵列中。在面板底部，你可以看到一个名为**Volume Placement（卷放置）**的框。我选择了第二个选项，将卷分散到所有阵列中。
+
+![](img/82f851021955589d82b22750fb3b1646_665_0.png)
+
+**图 29-5. ESS Specialist 添加卷（面板 2 of 2）**
+
+当你对选择满意时，点击面板底部的**Perform Configuration Update（执行配置更新）**按钮。下一个面板，如图示所示，给出了配置任务完成的估计时间。
+
+点击**Yes（是）**以继续配置。在执行配置时，ESS 以百分比形式提供进度状态。
+
+在此期间，ESS 正在设置格式化磁盘集所需的所有指针。实际的格式化可能需要数小时，具体取决于正在配置多少存储。当配置更新完成后，你会看到另一个面板告诉你任务已完成，但格式化仍在继续。
+
+点击**OK**后，你再次看到**Add Storage (2 of 2)**面板，如图 29-6 所示。不过，这次你可以在**New Volumes（新卷）**框的右侧看到新的存储分配。每个新的 64GB LUN 都列在这个框中。
+
+要退出图 29-6 中的面板，请点击**Cancel Configuration Update（取消配置更新）**。这将带你回到**Storage Allocation（存储分配）**。
+
+
+
+
+
+![](img/82f851021955589d82b22750fb3b1646_666_0.png)
+
+**图 29-6**。ESS Specialist Add Storage (2 of 2) 面板，显示 LUN 分配更新状态
+
+若要检查格式化状态，请在 **Modify Volume Assignments** 面板上点击 **Refresh Status** 按钮，如图 29-7 所示。
+
+在第一列的 **Volume** 下方，你会看到每个正在格式化的卷的百分比。请注意，除了最后一个条目外，其他都是 30GB 的 LUN。我稍早一些开始了这些卷的格式化，它们仍在进行中。如果在短时间内创建多个卷，可能会导致大量的 ESS 活动，这对于 ESS 的性能来说并不是问题。然而，如果有一组卷锁定了磁盘，那么配置提交将会被拒绝。别担心！这种情况会在一两分钟内解除。当我在短时间内配置大量小 LUN 时，通常会遇到这个问题。只需等待几分钟然后重试即可。
+
+关于在 ESS 中配置新卷的内容就讲到这里。这些面板的外观和界面风格会随时间变化，特别是因为 IBM 已经发布了一个免费的 MES 来用新的 Linux Master Consoles 替换所有 Windows NT ESS Master Consoles。使用新控制台时，你既可以使用串行通信，也可以使用 TCP/IP 通信。通过串行链路，ESS 在与 Linux Master Console 通信时不再依赖 TCP/IP 网络。
+
+![](img/82f851021955589d82b22750fb3b1646_667_0.png)
+
+## 将存储“连接”从一个 AIX 服务器迁移到另一个服务器
+
+这里指的不是物理连接，而是通过存储区域网络的连接。这里是一个典型的场景示例。你需要将一个应用程序和数据库从一个服务器迁移到另一个服务器进行测试或 QA。这并不是什么高深技术。具体步骤如下所示。
+
+### 场景
+
+ESS 中的磁盘当前连接到主机 **yogi**。管理层的一项决定要求 QA 团队在一台更小、成本更低的机器（名为 **booboo**）上测试应用程序负载。存在两个卷组，分别名为 **appvg** 和 **dbvg**。**appvg** 卷组包含日志文件系统，而 **dbvg** 仅包含原始逻辑卷。任务是将应用程序和数据库从 **yogi** 迁移到 **booboo**。
+
+### 在 **yogi** 上
+
+第一步是将 **yogi** 上的当前配置保存到一个文件中。执行以下命令：
+
+```bash
+# datapath query device > /tmp/data-path-query-\[${HOST}\].mmdydy
+# lsvgcfg > /tmp/lsvgcfg-\[${HOST}\].mmdydy
+```
+
+经常运行这些命令可以为你节省大量时间，因为当你需要在同一主机上重新配置存储时，可以直接使用这些配置。
+
+现在我们可以从 yogi 上移除 appvg 和 dbvg 卷组。首先，卸载与 appvg 卷组关联的所有文件系统。要获取需要卸载的文件系统列表，请输入以下命令。
+
+```bash
+# lsvg -l appvg | grep open | grep -v N/A | awk '{print $7}'
+```
+
+对于列出的每个挂载点，使用 umount 命令卸载每个文件系统。如果你在卸载文件系统时遇到问题，说明该文件系统正在被使用。使用 fuser 命令查找活动的来源。如果有用户位于文件系统中的任何位置，或者有使用该文件系统的活动进程，你将无法卸载它，直到活动停止。对每个有已挂载文件系统的卷组重复此步骤。
+
+对于包含原始逻辑卷的 dbvg 卷组，请确保所有逻辑卷都已关闭。你可以使用以下命令检查 LV 状态：
+
+```bash
+# lsvg -l dbvg
+```
+
+你希望第六列中显示的 LV 状态为 closed/synced。如果卷组中的 LV 没有关闭，那么数据库必须是活动的。停止数据库并再次查看状态。
+
+当所有目标文件系统都已卸载且原始逻辑卷已关闭后，你就可以使用 varyoffvg 命令使 appvg 和 dbvg 卷组离线。
+
+```bash
+# varyoffvg appvg
+# varyoffvg dbvg
+```
+
+接下来使用 exportvg 命令从 yogi 导出卷组。
+
+```bash
+# exportvg appvg
+# exportvg dbvg
+```
+
+此时，yogi 与 appvg 和 dbvg 的关联不再存在。然而，hdisk 和 vpath 定义仍然存在于 yogi 的 ODM 中。为了清理系统并删除这些 ODM 条目，请运行以下命令：
+
+#### 移除所有旧的 vpath 定义
+
+```bash
+# lsvp | grep vpath | grep None | awk '{print $1}' | xargs rmdve -dl
+```
+
+#### 移除所有旧的 hdisk 定义
+
+```bash
+# lsvp | grep hdisk | grep None | awk '{print $1}' | xargs rmdve -dl
+```
+
+### 在 ESS 上
+
+进入 Storage Allocation，如图 29-10 所示。从该面板中，你可以对输出进行排序。在 Host Name 列标题上方的下拉菜单中，选择 First，以首先按此列排序。在 **Volume** 列标题上方的下拉菜单中，从下拉列表中选择 **Second**。接下来点击 **Perform Sort**。现在卷将按主机和 ESS 卷分组。使用这种方法可以更轻松地找到与每个主机关联的 LUN。
+
+从这个列表中，选择 *所有* 仅属于 **appvg** 和 **dbvg** 卷组且仍分配给 **yogi** 的 LUN。这时你会看到文档记录的重要性。对于多个 LUN，按住 CTRL 键。
+
+> **CAUTION**
+> 记住，你是负责此事的碳基生命！ESS Specialist 假设你确切知道自己在做什么。它不会执行任何检查，你指定的操作将会执行！如果你犯了错误，并指示 ESS Specialist 从当前正在运行的生产数据库中分离 LUN，它将会分离这些磁盘。没有任何检查！这时你会看到许多人从隔间里探出头来，说“我刚刚丢失了生产数据库”。给明智之人的建议：仔细检查你要连接或分离的 LUN。
+
+当你确定选中了完整的 **appvg** 和 **dbvg** 卷组 LUN 集合后，滚动到屏幕底部的 **Action** 框。选择以下选项：
+
+```text
+Unassign selected Volume(s) from target hosts
+```
+
+现在移动到底部的 **Target Hosts** 框，选择 **yogi**。根据你的配置，你可能遇到目标主机上每个 HBA 的多个条目。如果你正在使用多路径，请选择所有条目。
+
+然后点击 **Perform Configuration Update**。
+
+此时，所有磁盘已从 **yogi** 断开连接。现在是时候配置到 **booboo** 的连接了。
+
+再次在同一个 ESS Specialist **Storage Allocation** 面板上，通过高亮显示每个 LUN，选择你刚刚从 **yogi** 断开的那组 LUN。在左下角的 **Actions** 框中，点击以下选择：
+
+```text
+Assign selected Volume(s) to target hosts
+```
+
+当做出此选择时，可用的主机将列在右下角的 **Target Hosts** 框中。从这个列表中，高亮显示 **booboo**。如果 **booboo** 定义了多个 HBA，且你希望利用多路径，请为每个路径选择所有适用项。现在点击 **Perform Configuration Update**。
+
+现在我们在 Shark（指管理界面）上完成了。切换到一个 **booboo** 终端会话。
+
+### 在 Booboo 上
+
+在 booboo 上，你必须发现并配置新存储。第一步是运行配置管理器。不要仅仅输入 **cfgmgr** 并直接运行。你希望以 **serial mode**（串行模式）发现磁盘，因此使用以下命令：
+
+```bash
+# cfgmgr -S -v
+```
+
+**-S** 表示按顺序遍历总线，而不是并行模式，而 **-v** 允许你在详细模式下查看发生了什么。配置管理器完成后，你可以运行 `lspv` 来查看所有新的 hdisk 和 vpaths。每个新的 hdisk 和 vpath 都将显示没有 PVID 和没有卷组分配。
+
+要导入 `appvg` 和 `dbvg` 卷组，我们需要知道 ESS 中的磁盘序列号。要获取磁盘序列号，请查看我们在开始之前生成的来自 `yogi` 的 `datapath query device` 输出。在 `yogi` 的输出中，你需要查找每个卷组中 *一个* 磁盘的序列号。
+
+要在 booboo 上找到具有相同序列号的本地 hdisk，请运行以下命令：
+
+```bash
+# lspvCfg  |  grep <serial number>
+```
+
+对你拥有的每个序列号重复此命令。记住，你只需要每个卷组中的一个 hdisk 即可导入该卷组。
+
+使用这些新获得的 hdisk 编号，你可以使用以下命令导入 `appvg` 和 `dbvg` 卷组。
+
+#### 假设 hdisk10 属于 appvg
+
+```bash
+# importvg -y appvg hdisk10
+```
+
+如果你需要指定 VG 的主设备号，请使用 `-V` 命令选项，后跟你需要使用的具体主设备号。否则，你可以省略它，系统会使用下一个可用的编号。
+
+#### 假设 hdisk15 属于 dbvg 且主设备号是 32
+
+```bash
+# importvg -y dbvg -V 32 hdisk15
+```
+
+两个卷组都导入后，运行以下命令以确保卷组已导入并在线（varied online）：
+
+```bash
+# lsvg -o
+rootvg
+appvg
+dbvg
+```
+
+目前一切顺利。如果你再次运行 `lspv` 命令，你应该能看到 hdisk 和 vpaths。然而，vpath 定义显示 PVID 为 none，卷组为 None。
+
+下一个任务是使用以下 hdisk-to-vpath 命令将基于 hdisk 的卷组转换为基于 vpath 的卷组：
+
+```bash
+# hd2vp appvg
+# hd2vp dbvg
+```
+
+此时，`lspv` 命令显示每个 vpath 都有 PVID 和 VG 分配，而所有 hdisk 的 PVID 均为 none，卷组为 None。
+
+
+
+
+
+运行 `df` 命令，以确保所有的 **apvgs** 文件系统都已挂载。除了 **dvg** 中的原始逻辑卷外，所有项目都应处于 varied on 和挂载状态。在将系统移交给 QA 团队进行测试之前，请验证一切正常。
+
+## 复制服务
+
+使用 ESS，您可以为开放系统提供两种复制服务，并为 zSeries 机器提供第三种解决方案。对于开放系统，您可以使用 FlashCopy 和点对点远程复制（PRC）。FlashCopy 是本地复制服务解决方案，而 PRC 允许扩展灾难恢复功能。扩展远程复制（XRC）是 zSeries 机器的灾难恢复解决方案。
+
+### Flash Copy
+
+使用 FlashCopy，您可以创建时间点备份副本。重要的是要知道，FlashCopy 生成的是*精确的磁盘副本*。进行 FlashCopy 有两种方式。第一种方法使用*no-copy*（不复制）选项。no-copy 选项设置逻辑指针以创建 FlashCopy 数据的位图。创建过程大约需要 3–6 秒，即可准备好闪接副本（flashed copy）。这是创建用于磁带归档的时间点备份副本的最常见方式。
+
+第二种 FlashCopy 选项是实际复制数据。当位图完成时，数据再次在 3–6 秒内可用。然而，在后台中，复制过程在 ESS 内部进行，独立于服务器。在复制进行期间，原始数据的任何更改都会导致复制过程收到中断信号，在数据更改发生在原始数据之前，将原始数据复制到闪接副本中，从而保持时间点的数据完整性。后台实际数据复制可能需要数小时才能完成，因此您需要在 ESS 规划工作中考虑这一点。
+
+FlashCopy 可用于创建备份、开发、测试以及对生产数据运行报告所需的大量数据图像。这是大家所谈论的“数据爆炸”的一部分。您可以将 FlashCopy 磁盘集从一个服务器分离，并将该 FlashCopy 附加到一个或多个其他服务器，但要小心。
+
+我想警告您一个使用 FlashCopy 图像时常见的错误。要理解这个错误，您需要记住 FlashCopy 做什么。FlashCopy 创建一个*完全相同的磁盘副本*，甚至包括 PVID。因此，*切勿将闪接副本导入拥有原始磁盘组“已附加”的同一系统*！这很可怕！
+
+以下是可能发生的情况：您创建了一个数据库的 FlashCopy。现在，您拥有当前已附加的数据库主副本，以及一个当前未由任何主机拥有或附加的数据库第二个副本。然后，由于某种愚蠢的原因，您被要求将该副本附加并导入到与主副本附加相同的主机上。您需要理解，您可能在六个月前就创建了这个 FlashCopy，并且从未清理它，现在您需要额外的存储空间！当您重新配置 ESS，将 FlashCopy 磁盘指向与主副本相同的主机时（只需要 PVID 相同），并运行配置管理器（cfgrnr）时，您就完蛋了！您甚至不需要导入卷组，因为系统会读取每个磁盘的 FlashCopy PVID，然后说，嘿，你属于这个已经 varied on 的卷组；然后砰的一声！您用 FlashCopy 磁盘上的任何数据*覆盖*了生产数据。现在您只有一堆垃圾。除了恢复一切，您什么都做不了。大多数情况下这是不可恢复的。
+
+这个覆盖问题不是 ESS 或 LIC 的错。这是 AIX 配置管理器*允许在同一系统内存在重复 PVID* 的问题。需要修改配置管理器，以便在发现重复 PVID 时立即停止。IBM 奥斯汀开发团队知道这个问题，并且正在开发一个修复方案。
+
+要创建 FlashCopy，您需要在 StorWatch Specialist 的**复制服务**部分设置一个任务。目前，FlashCopy 仅支持在同一个 LSS 内进行，LSS 由构成设备适配器（DA）对的磁盘阵列组组成。在 LIC 的下一个版本中，这个 LSS 要求将改变。
+
+**创建 Flash Copy 任务** 在您可以进行 FlashCopy 之前，您需要创建一个任务。创建任务的好处是，您可以挑选并选择之前创建的任务列表，并将所有小任务组合成一个大任务。然后，要运行所有任务，您只需要启动一个任务。
+
+要创建 FlashCopy 任务，您只需要在**复制服务**菜单中进行一些指向和点击。现在让我们创建一个简单的 FlashCopy。从主要的 ESS Specialist 面板中，选择**复制服务**。这将弹出主要的**复制服务**面板。接下来点击**卷（Volumes）**。使用此面板中的下拉菜单，选择您要为 FlashCopy 设置的磁盘集。正如您在图 29-8 和图 29-9 中所见，所选的磁盘集取决于您如何布局 ESS。
+
+在图 29-8 中，FlashCopy 正在同一个阵列中配置。然而，这会根据 ESS 的布局而有所不同。在图 29-9 中，FlashCopy 正在单独的阵列中设置。只要磁盘在同一个 LSS 中，这就无关紧要。您首先使用鼠标左键选择*源（source）* LUN，使用鼠标右键选择*目标（target）* LUN。源将高亮显示为蓝色，目标则高亮显示为红色。在这种情况下，我只选择一个 LUN，但您可以根据 ESS 布局选择更多。当您再次点击右键时，您会看到图 29-10 中所示的任务向导面板。
+
+点击**建立 FlashCopy 对（Establish A FlashCopy Pair）**，然后点击**下一步（Next）**。下一步是给出新任务的名字和描述。
+
+当您点击**保存（Save）**时，FlashCopy 任务被保存，您会看到任务面板，在那里您可以查看所有之前定义的任务，如图 29-11 所示。现在这是有趣的部分。在您创建所有 FlashCopy 对之后，您有一堆单独的 FlashCopy 任务。每个任务执行单个 LSS 中数据的单独 FlashCopy，但如果它们都是同一整体数据的一部分，那么您可以通过将它们分组，将所有小的 FlashCopy 任务合并为一个大任务。要将任务分组在一起，按住**CTRL** 键并点击每个任务以高亮显示您要分组的整个任务组。在单独任务被高亮显示时，点击**组（Group）**。然后您将看到任务如图 29-12 所示合并为一个任务。
+
+![](img/82f851021955589d82b22750fb3b1646_673_0.png)
+
+图 29-8. ESS 复制服务卷 PANE1，FlashCopy 在同一个阵列中
+
+![](img/82f851021955589d82b22750fb3b1646_673_1.png)
+
+图 29-9. ESS 复制服务卷面板，FlashCopy 在单独的阵列中
+
+![](img/82f851021955589d82b22750fb3b1646_674_0.png)
+
+图 29-10. 复制服务任务向导功能面板
+
+![](img/82f851021955589d82b22750fb3b1646_674_1.png)
+
+图 29-11. 复制服务任务面板
+
+![](img/82f851021955589d82b22750fb3b1646_675_0.png)
+
+如果您需要取消任务的分组，只需高亮显示任务并点击**取消分组（Ungroup）**。要查看任务定义，请高亮显示任务并点击面板右下角的信息面板按钮。
+
+**信息面板** 显示所选任务的详细信息。在这里，您可以验证是否为每个 FlashCopy 对选择了正确的 LUN。
+
+要执行 FlashCopy 任务，您可以从 EES 复制服务面板运行任务，或使用命令行界面（CLI）创建 shell 脚本，使用 cron 表条目或其他调度程序从远程机器调度该任务。
+
+## 点对点远程复制（PPRC）
+
+点对点远程复制（PPRC）是一种硬件解决方案，允许您在远程站点的另一个 ESS 中保持同步的数据副本，这个过程称为影子镜像。当对主要生产副本进行更新时，数据的远程副本会被影子镜像以保持两个副本同步。PPRC 是使用 StorWatch Specialist Web 界面设置的。主 ESS 和远程 ESS 机器通过 ESCON 连接相连。PPRC 的配置方式与 FlashCopy 类似。您可以使用 ESS Specialist Web 界面或命令行界面（CLI）来启动和管理 PPRC 功能。
+
+
+
+
+
+## 扩展远程复制（XRC）
+
+扩展远程复制（XRC）是硬件和软件的结合，为 zSeries 机器提供灾难恢复解决方案。XRC 在超长距离的灾难恢复中提供了最高级别的可用性，并允许在 zSeries 系统之间进行磁盘迁移和工作负载转移。
+
+## ESS 专家
+
+ESS TotalStorage 软件的另一个重要组件是 ESS 专家。ESS 专家是一个独立的软件包，需要单独购买，但它是性能、容量和资产管理方面的宝贵工具。借助 ESS 专家的信息收集能力，您可以发现所有存储系统，并通过名称、序列号和型号进行识别。您还可以跟踪每个集群中的微代码级别。使用 ESS 专家，利用 Expert 软件收集的过去趋势进行容量规划变得轻而易举。
+
+收集的性能数据允许您查看磁盘利用率、读/写命中率、读/写响应时间，以及每个阵列的 I/O 请求。利用这些信息，存储网络管理员可以就在哪里增加磁盘空间做出明智的决策，并展示峰值高磁盘利用率趋势。使用 ESS 专家，您还可以编译所有收集数据的报告。我强烈推荐的一本 IBM 红皮书是 *IBM StorWatch 专家实用指南*，您可以在以下 URL 下载并打印：
+
+http://www.redbooks.ibm.com/pubs/pdf/sg246102.pdf
+
+要开始使用，您需要登录到 StorWatch 专家，它位于服务器上，而不是 ESS 本身上。登录屏幕如图 29-13 所示。
+
+![](img/82f851021955589d82b22750fb3b1646_677_0.png)
+
+图 29-13. ESS 专家登录屏幕
+
+使用 ESS 专家需要有效的用户 ID 和密码。登录时，第一个屏幕是介绍，如图 29-14 所示。面板左侧有一个导航树，可直接访问 StorWatch 专家中的任何功能。
+
+![](img/82f851021955589d82b22750fb3b1646_677_1.png)
+
+图 29-14. ESS 专家介绍面板
+
+如图 29-14 所示，三个最常用的功能（包括用于容量和性能的数据收集，以及性能数据准备）通过超链接直接从此页面提供。
+
+需要关注的一些功能包括如图 29-14 所示的 ESS 当前状态。在左侧导航面板中，点击 **管理 ESS** 文件夹。
+
+要设置计划以收集 ESS 数据，请点击 **管理资产** 文件夹。此面板允许您创建、编辑、查看和删除数据收集，并查看在存储服务器上收集的数据。如果点击 **查看最近数据** 超链接，您将看到图 29-15 所示的面板。
+
+![](img/82f851021955589d82b22750fb3b1646_678_0.png)
+
+**图 29-15.** ESS 专家查看最近数据面板
+
+在图 29-16 所示的面板上，我有两个条目可供选择。当您点击 **昵称/序列号** 列中的超链接时，您将看到类似图 29-17 所示的面板。这显示了关于磁盘利用率的最近收集数据。
+
+![](img/82f851021955589d82b22750fb3b1646_679_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_679_1.png)
+
+您还可以查看存储服务器的报告。有三种报告选项。报告分为 **磁盘利用率摘要**、**磁盘<>缓存摘要** 和 **缓存报告摘要**。**磁盘利用率摘要** 如图 29-17 所示。
+
+我要向您展示的 StorWatch 专家的最后部分是数据库摘要。StorWatch 专家使用内部 DB2 数据库。由于此数据库可能会增长，您需要密切关注 DB2 数据库的状态。在数据库管理文件夹下，点击监控数据库文件夹。这将显示图 29-18 所示的面板。
+
+![](img/82f851021955589d82b22750fb3b1646_680_0.png)
+
+图 29-18. ESS 监控数据库面板
+
+如图 29-18 所示，我仍有足够的空间可供扩展。请注意面板右侧，您可以为警告和临界值设置阈值限制。
+
+ESS 专家的内容比我在这里能涵盖的要多得多，但您可以随意尝试而不会造成任何伤害。
+
+由于在一本书的一章中不可能完全涵盖网络存储，我想向您展示一份可从 IBM 下载和打印的 PDF 格式红皮书列表。新的红皮书层出不穷，请密切关注 IBM 红皮书网站上的新书。
+
+*IBM RedBook 网站*
+
+http://www.redbooks.ibm.com.
+
+*使用 pSeries 的 SAN 实用指南*
+
+http://www.redbooks.ibm.com/puba/pdf/redbooks/sg246050.pdf
+
+*IBM TotalStorage 企业存储服务器：在您环境中实施 ESS*
+
+http://www.redbooks.ibm.com/puba/pdf/redbooks/sg245420.pdf
+
+*适用于 IBM ESS 的开放系统的容错存储多路径和集群解决方案*
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246295.pdf
+
+- 将主机引入 SAN 网络
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246411.pdf
+
+- IP 存储网络：IBM NAS 和 iSCSI 解决方案
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246240.pdf
+
+- SAN 距离解决方案简介
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246408.pdf
+
+- IBM StorWatch 专家实用指南
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246102.pdf
+
+- 特色介绍 IBM 2109 的 IBM SAN 生存指南
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246127.pdf
+
+- IBM SAN 生存指南
+
+- http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg246143.pdf
+
+## 检查清单
+
+以下是 SAN、NAS 和 iSCSI 统一存储要点的检查清单：
+
+- 定义数据整合及其涉及的内容。
+- 识别网络附加存储（NAS）如何使用 IP 局域网（LAN）访问远程存储。
+- 定义存储区域网络（SAN）。
+- 您可以使用分区来限制对网络中区域的访问，并作为虚拟专用网络。
+- 定义企业存储服务器（ESS）。
+- 您可以通过主机总线适配器（HBA）监控服务器和 ESS 之间的通信。
+
+![](img/82f851021955589d82b22750fb3b1646_682_0.png)
+
+# 附录
+
+![](img/82f851021955589d82b22750fb3b1646_683_0.png)
+
+并非所有 RS/6000 型号都支持使用 **bootlist** 命令。支持设置服务模式引导列表的旧款 RS/6000 机器有两个独立的引导列表：默认和自定义。默认引导列表用于正常引导。当您刚初始化键盘并发出蜂鸣声后立即在图形终端上按下 F5 或 F6，或在 tty 终端上按下 5 或 6 时，将使用此默认引导列表。自定义引导列表是使用 **bootlist** 命令、**diag** 设施或在引导期间通过 SMS 菜单创建的设备列表。
+
+所有其他 PCI-Bus 机器都有一个额外的自定义服务引导列表。您使用带有 **-m service** 选项的 **bootlist** 命令来设置此引导列表。设置好服务引导列表后，您在引导过程中使用 F5 和 F6 功能键。使用 F5 采用默认服务引导列表；使用 F6 从自定义服务引导列表引导。您在不同型号中会看到一些差异。一如既往地，请参考您特定型号的用户指南。您可以在以下 URL 在线找到此信息：
+
+www.ibm.com/servers/eserver/pseries/library/hardware_docs/
+
+## 索引
+
+- **A**
+    - **A**
+        - **A**
+            - 访问控制列表
+                - 注意事项，508
+                - 命令，506
+            - 在 DCE 安全服务中，523-523, 525
+            - 设置，507
+        - 计费。参见系统计费
+        - 管理/管理，通用
+            - 简介，4, 62
+            - 活动，概述，11-13
+        - AIX DCE 管理命令，526
+        - 检查清单，14, 75-76
+        - 另请参阅管理下列出的主题
+        - AIX 4.33
+        - AIX 5L，通用
+            - DoSearch 主窗口，25
+            - 在其上安装 DoSearch，19-21
+            - 在其上安装手册页，32
+        - AIX 和 Linux（参见 LINUX (various)）
+        - AIX 和 UNIX，4-5
+        - AIX 帮助，16
+        - AIX 内核
+            - 引导（参见 AIX 5L 引导）
+            - 克隆（参见克隆 AIX 系统）
+            - CPU 解除分配，动态，8-9
+            - CPU 调度，562
+            - 死网关检测（主动，被动），11
+            - 热点管理，7
+            - 安装（参见 AIX 5L 安装）
+            - Jabber 即时消息，11
+            - JFS2 文件系统（参见 JFS2 (Enhanced Journaled Filesystem)）
+            - KDE-2, GNOME 桌面环境，6
+            - 内核（参见 AIX 5L 内核）
+            - 运行 Linux API，6
+    - 对其支持，80
+    - 网络性能，检查，566-568
+    - 分页空间，管理（参见分页空间）
+    - 性能增强
+        - (iruss, alstat)，10
+    - 产品打包，80-81
+    - 只读卷组，6
+    - 资源监控和控制（RMC）
+        - 子系统，8
+    - 安全增强，10
+    - 其中统计收集，6
+    - 系统挂起检测功能，8
+    - UNIX System V 打印支持，8
+    - 升级（参见 AIX 系统升级/升级）
+    - 基于 Web 的系统管理器（WebSM），10, 71-72
+    - 虚拟内存管理器，563-565
+    - 另请参阅 AIX 5L 内核；管理/管理，通用；管理（下列主题）；问题分析/恢复；调优；AIX X11 窗口系统
+- **AIX 5L 内核**
+    - 32 位和 64 位内核支持，7-8
+    - AIX 内核引导控制，122-123
+    - 更改（使用 SMT OS 面板），135-137
+    - 其中的 CPU 时间片，55-56
+    - 内核架构/结构，52-53, 593-594
+    - 内核线程，绑定到处理器，464-465
+    - 锁测试，缓存一致性，54
+    - 多处理，可扩展性，52
+    - 其中的多线程和进程，53, 54
+    - 运行队列，55
+
+
+
+
+## B
+
+- 备份
+    - 备份介质，可启动，108–109, 117, 584–585
+    - 备份介质，选择，549
+    - 备份计划和轮换，546
+    - 备份磁带，556–557
+    - 可启动系统映像 (mksysb)，542, 549–551
+    - 检查表，557–559
+    - 复制磁带 (cpcopy)，556
+    - cpio（输入/输出复制）命令，543
+    - dd 命令，543–544
+    - DFS 备份系统，351
+    - 灾难恢复/验证，548
+    - 分布式文件系统 (DFS)，337, 346
+    - DVD，CD-ROM 驱动器，要求，549
+    - 提取单个文件（从 mksysb 备份），551
+    - 文件/文件系统，恢复，553–554
+    - 完全和增量备份，545–546
+    - mkkd 命令 (CD-ROM/DVD)，543
+    - 挂载与卸载，545
+    - 网络备份 (rdump, restore 命令)，544, 555–556
+    - 非根卷组 (savevg)，551–552
+    - px 命令，543
+    - px 实用程序，554–555
+    - 稀疏文件，544
+    - 针对的策略，544–545
+    - Sysback 实用程序，553
+    - 系统备份，简介，542
+    - 磁带归档，识别，556–557
+    - tar（磁带归档）命令，543, 554
+    - Tivoli 存储管理器 (TSM)，552–553
+    - 汉诺塔存储转储级别序列，546–547
+    - 验证，556
+    - 卷组，保存/恢复，542
+    - 另见 问题分析/恢复
+- Bellami，380–381
+- 大哥哥 (Big Brother)，578–580
+- BIST（内置自测试，Micro-Channel 机器），121–122
+- 可启动系统映像 (mksysb)，542, 549–551
+- 启动，AIX 5L
+    - AIX 内核启动 (boot)，122–123
+    - 启动设备类型，118
+    - 启动过程，简介，116
+    - 可启动备份介质，108–109, 117, 584–585
+    - bootlist，配置 (Micro-Channel, PCI-总线)，117–119
+    - bootstart 启动，121
+    - 检查表，128
+    - 冷启动与热启动，121–122
+    - MP 机器上的快速启动 (MPCFG 命令)，125–126
+    - init 进程启动序列 (rc.boot, 128, 123–125
+    - Itanium 架构系统重启，127–128
+    - 维护模式，进入 (PCI-总线机器)，121
+    - Micro-Channel 机器，键开关打开，120
+    - 网络启动，116–117
+    - 正常启动，116
+    - 开机自检 (POST)，122
+    - 远程重启设施，145
+    - ROM IPL（只读存储器初始程序加载），116
+    - ROS IPL（只读存储初始程序加载），116, 122
+    - 运行时配置远程重启设施，143
+    - 事件序列，120
+    - 服务处理器（系列，RS/6000 机器），119–120
+    - 关机/重启，126
+    - 独立启动，116, 117
+    - 停止系统 (shutdown, reboot 命令)，126
+    - 故障排除，126–127
+
+## C
+
+- Linux on AIX，364
+- 逻辑卷 (LVs)，231
+- Mail 和 Sendmail，388
+- 监控和调整，AIX，581
+- 网络文件系统，NFS 和 NFSv3，151
+- 功耗处理器和 x 系统，50
+- 打印机，270–271
+- 问题分析/恢复，396
+- 进程管理，478
+- 运行时配置，AIX，147
+- 系统记账，491–492
+- 系统管理任务与工具，15
+- 系统启动/关机，128
+- 系统管理，75–76
+- 磁带系统，177
+- TCP/IP，308–309
+- 用户环境，管理，457
+- X11 系统管理，429
+- CHRP（通用硬件参考平台），43
+- 类别：无类别域间路由 (CIDR)，284–285
+- 克隆 AIX 系统
+    - 替代磁盘根克隆，97
+    - 相同与不同硬件，89
+    - 到新硬件，98–100
+- 集群。另见 高可用性集群多处理 (HACMP)
+- 通用桌面环境 (CDE)，5
+- 通用网关接口 (CGI)，401–402
+- 通用开放服务/应用程序 (COS)，421
+- 复合许可证，103
+- 计算机应急响应组 (CERT)，307
+- 并发使用/一次性许可证，103
+- CPU
+    - AIX 5L 内核，其中的 CPU 时间片，55–56
+    - CPU 占用者，159, 464
+    - CPU 调度，565
+    - 其中的动态释放，8–9
+    - 使用/罚分计算，56
+
+## C
+
+- 网络文件系统中的 CacheFS，319
+- CD-ROM 文件系统，创建（用于 DoS 搜索），18
+- 单元目录服务 (CDS)，522
+- 检查表
+    - AIX 内核，57
+    - AIX 运行时配置，147
+    - Apache HTTP 服务器，405
+    - 审计和安全，517
+    - 备份，557–559
+    - 磁盘/磁盘管理，231
+    - 分布式计算环境 (DCE)，537
+    - 分布式文件系统，351
+    - 文档库和 man 页，36
+    - HACMP 和集群，628
+    - 安装和维护，114
+
+## D
+
+- DATA 存储。另见 迁移实用程序，621
+- 磁盘存储。另见 备份；磁盘/磁盘管理；企业存储服务器 (ESS)；网络附加存储 (NAS)；存储；通用；存储区域网络 (SAN)；磁带系统；Tivoli
+- 死网关检测
+    - 主动，被动，11
+    - TCP/IP，289
+- 设备配置，动态。另见 对象数据管理器 (ODM)
+- 磁盘/磁盘管理
+    - 检查表，231
+    - 文件系统碎片整理 (defragfs)，213
+    - dse 演进，180
+    - dse 硬件，重新读取 (HACMP)，611
+    - dse 子系统共享 (HACMP)，610
+    - dse 调整，相关命令，580
+    - 磁盘硬件 (IDE, SCSI)，180-181
+    - 动态磁盘空间管理，566-586
+    - 文件系统挂载/卸载，221-223
+    - 文件系统大小，增加/减少，222-224
+    - 固定磁盘架构，183-184
+    - 热备用，配置，188-191
+    - 热点管理，194-195
+    - Io stat 命令，56
+    - 逻辑分区 (LPs)，描述，191, 193
+    - 逻辑分区，迁移，197-198
+    - 逻辑卷（另见 逻辑卷 (LVs)）
+    - 分页空间（另见 分页空间）
+    - 物理磁盘卷，管理 (iskdisk)，184-185
+    - 物理分区 (PPs)，描述，191, 192
+    - 物理卷标识符 (PVID)，198
+    - 物理卷 (PVs)，描述，191, 192
+    - 法定人数，200-201
+    - RAID，简介，181-182
+    - RAID 和存储区域网络 (SAN)，182-183
+    - 重命名磁盘，185-188
+    - SCSI 磁盘，添加，184
+    - 串行存储架构 (SSA)，181
+    - 统计数据，收集 (iostat)，195-197
+    - 同步卷组（和 HACMP），206
+    - 故障排除，230-231
+    - V-Path，182-183
+    - 卷组 vary off/vary on，205
+    - 卷组（另见 卷组 (VGs)）
+    - 另见 文件；文件系统；JFS2（增强型日志文件系统）
+- 分布式计算环境 (DCE)
+    - 简介和概述，520-521
+    - 其中的账户配置，535-536
+    - 和 AIX，524-526
+    - AIX DCE 管理命令，525
+    - AIX DCE 客户端和服务器（守护进程），526
+    - 其中的基本术语，524
+    - 单元目录服务 (CDS)，522
+    - 其中的单元拓扑，527
+    - 检查表，537
+    - 客户端服务器副本，配置，533, 534
+    - DCE 基础服务 (AIX)，525
+    - DCE 配置，验证，533
+    - DCE V3.1, 2.2 文件集，525
+    - 其中的分布式文件服务 (DFS)，523-524
+    - 其中的分布式时间服务 (DTS)，523
+    - 分布式时间服务 (DTS)，创建，531, 532
+    - 全局目录服务 (GDS)，522
+    - 实施考虑，536-537
+    - 安装和配置，529-530
+    - 主单元目录服务器，配置，530-531, 532
+    - 需求，驱动因素，537
+    - 并行/流水线，线程支持，523
+    - 其中的密码，528
+    - 其中的远程过程调用 (RPCs)，520-521
+    - 安全服务，定义 (smit mkecdserver)，530, 531
+    - 其中的安全服务，522-523, 525
+    - 其中的服务器拓扑，527
+    - 其中的测试单元，528
+    - 通用唯一标识符 (UUID)，522, 527, 528
+    - 版本，524
+- 分布式文件服务
+    - DFS 与 AFS，521
+    - 在分布式计算环境 (DCE) 中，523
+    - 其中的特性和文件集，333-334
+    - 另见 分布式文件系统 (DFS)
+- 分布式文件系统 (DFS)
+    - 简介，332
+    - 其中的访问控制列表 (ACLs)，334, 349-350
+    - 聚合，创建和导出，342-343
+    - 其中的聚合和 filesdels，338
+    - Andrew 文件系统 (AFS)，332-333, 523
+    - 备份数据库机器 (BDM)，332, 346
+    - 其中的备份文件系统，351
+    - 二进制分发机器，337
+    - 观察者，其中的用户/对等进程，336-337, 338, 339
+    - 检查表，351
+    - 客户端，DFS，337-338
+    - DFS 和 LFS，AFS，543
+    - DFS 组件，描述，336-338
+    - 其中的分布式文件服务，333-334
+
+
+
+
+## 文件服务器机器，337, 340–341  
+“文件集”与“filesets”，333  
+## 文件集数据库机器（FLDB），337, 340  
+## 文件集复制，350  
+## 文件集复制共享机器（reserver），337, 345  
+## 文件集，创建/挂载，344–345  
+## 文件集，描述，338  
+## 文件系统结构，334–335  
+## 通用并行文件系统（GPFS），333  
+## 安装与配置，338–339  
+## 安装验证，346–347  
+## 本地文件系统（LFS），描述，335  
+## 本地与非本地文件（日志记录）系统，336  
+## 从 NFS 到 DFS 的认证网关，336  
+## 操作与管理，相关命令，347–348  
+## 启动 DFS，348–349  
+## 启动 DFS 客户端，341–342  
+## 系统控制机器（SCMs），336–337, 339, 340  
+## 磁带协调器机器，337  
+## 虚拟文件系统（VFS）兼容性，336  
+*另见文件/文件系统*
+
+### 分布式管理环境（DME）
+- 历史，74
+- 与开放软件联合会（OSF），4, 62, 74
+- 技术选型，74
+
+### 分布式系统管理（DSM/IT）
+- 简介，72
+- 功能描述，72–74
+- 安全注意事项，72
+*另见 SMIT*
+
+### DocSearch 时间服务（在 DCE 中），523
+#### DocSearch 安装
+- 从 CD-ROM 安装，18–19
+- 从固定磁盘安装，19
+- 在 AIX 4.3.3 上安装，19–21
+- 在 AIX 5.1 上安装，21–24
+- 迁移升级，相关问题，16–17
+#### DocSearch 使用
+- 高级搜索，27, 28–29
+- AIX 4.3.3 主窗口，25
+- AIX 5.1 主窗口，26
+- 常见的 DocSearch/man 页问题，30–31
+- DocSearch 关键字，35
+- 文件/命令，35
+- 概览，16, 24–28
+- 注册文档以供搜索，29–30
+- 简单搜索，27, 28
+*另见 man 页*
+
+文档库服务。参见 DocSearch
+
+域名解析协议（TCP/IP），290
+
+动态主机配置协议（DHCP），295
+
+# E
+
+e-LiZA 项目（IBM），47
+
+加密，AUX，5L
+
+IP 密钥，10
+
+*另见密码；安全*
+
+### 企业存储服务器（ESS）
+- 简介，640–641
+- 将存储分配给特定主机，648–652
+- 远程支持/呼叫回家（典型电子邮件），646–648
+- 检查清单，667
+- 配置，644–645
+- 数据路径优化器/子系统设备驱动（SSDD），643–644
+- 数据路径命令，654
+- 磁盘 RAID 级别，641
+- ESS 专家工具，662–667
+- 扩展内存拷贝（XRC），662
+- FlashCopy 拷贝，657–661
+- 起源（历史说明），642–643
+- 主机总线适配器（HBA），643
+- 适用于该系统的 IBM Redbooks，666–667
+- LUNs，建立（及存储分配），648–652
+- 将存储移至另一台 AIX 服务器（booboo 机器），653–657
+- 对等远程拷贝（PPRC），661
+- StarTech 专家工具，645–646
+
+错误，系统。参见问题分析/恢复
+
+### 以太网
+- 以太网适配器，配置，279, 280
+- 以太网介质（10BaseT 等），279
+- 拓扑结构，278
+
+# F
+
+光纤分布式数据接口（FDDI），281–282
+
+虚通道
+- 在存储区域网络（SAN）中，636–638
+
+### 文件/文件系统
+- 备份（*参见*备份）
+- CD-ROM 文件，为 DocSearch 创建，18
+- 数据库文件，SMIT，71
+- DocSearch 文件/命令，35
+- 文件系统大小，限制，6–7
+- 文件系统大小，动态扩展，85
+- 文件集，定义，80–81
+- 文件系统大小，增加/减少，223–224
+- JFS2 文件系统（参见 JFS2 增强日志文件系统）
+- JFS 日志文件，SMIT，66–68
+- man 页文件/命令，18–19
+- 挂载，221–223
+- 空间（参见分页空间）
+- 分页空间、打印空间和目录，236
+- 恢复（restore 命令），353–354
+- 脚本文件，SMIT，68–69
+- 用户文件系统，管理，434–435
+- 虚拟文件系统（NFS），312
+*另见磁盘/磁盘管理；分布式文件系统（DFS）；逻辑卷（LVM）；网络文件系统（NFS）；网络信息服务（NIS）；进程管理；安全；用户环境；管理*
+
+FixDist，395
+
+FlashCopy（ESS），657–661
+
+# G
+
+### 通用并行文件系统（GPFS）
+- 简介，333
+*另见分布式文件系统（DFS)*
+
+全局目录服务（GDS），322
+
+GNOME 桌面，412–413, 417
+
+GNOme 桌面环境，6, 360–361
+
+# H
+
+挂起检测，系统，8
+
+硬件，数据存储
+*参见磁盘/磁盘管理；磁带系统*
+
+### 高可用性集群多处理（HACMP）
+- 简介，600
+- AIX 设置，修改（网络选项，/.rc.net，613，功能），626
+- 级联资源组，603, 604, 616–617
+- 检查清单，628
+- 集群配置，备用与接管，605
+- 集群管理器，605
+- 集群关机选项，619
+- 集群单点控制（C-SPOC），619–620
+- 集群，资源规划，601–602
+- 集群，停止/启动，617–618
+- 集群，同步，614
+- 并发访问资源组，605, 617
+- 自定义电源通知，625
+- 自定义事件，624–625
+- DARE 资源迁移实用程序，621
+- 死人开关，623–625
+- 磁盘硬件，读取程序，611
+- 磁盘子系统共享，典型配置，610
+- 动态集群重新配置（DARE），620–621
+- 动态节点优先级策略，609
+- 仿真工具，627–628
+- 错误仿真，628
+- 错误日志，623
+- 错误通知，自动，625
+- 事件脚本，605
+- 事件摘要，623
+- 故障转移操作，602
+- 故障回切属性，级联而无此属性，617
+- 容错资源，高可用性，600
+- I/O 调优，613
+- IP 地址接管（IPAT）和 IP 别名，614–616
+- IP 地址，在 etc/hosts，/hosts] 中规划，613
+- 前瞻，609
+- 监控 HACMP 集群，621–622
+- 产品适配器故障，607
+- 网络组，608
+- 网络（公共 IP，私有串行），611–612
+- 节点故障，608
+- 模式，处理能力要求，609–610
+- 非别名网络，典型配置，612
+- 分区集群，625
+- 点队列，高可用性，626
+- 被纳入其中的产品，600–601
+- 拟议安装，可视化，602, 603
+- 资源池组，603, 616
+- 资源组，简介，602–603
+- 旋转资源组，603, 606, 616
+- 选择性故障转移，608–609
+- 单点故障（SPOF），602, 603 以及同步卷组，206
+- 接管属性，非活动，617
+- 磁带驱动器，高可用性，627
+- 故障排除，622
+- 针对 HACMP 调优 AIX，612–614
+- 与 UNIX 组，436
+- WAN 通信链路，高可用性，626
+- 工作负荷管理器类，高可用性，627
+
+
+
+
+# 索引
+
+## H
+
+- **高可用性网络文件系统（HANFS）**
+    - 功能描述，328–329
+    - *另见* 网络信息服务（NIS）
+- **HMC（硬件维护控制台）**，47–48
+    - 热点管理，7
+- **HTML 文档**
+    - 创建，399–400
+    - 其中的示例标签，400
+
+## I
+
+- **IBM**
+    - 3494 企业磁带库，175–176
+    - AMERICA/RIOS 架构
+        - 开发，42
+        - 帮助，相关资源，95
+    - HMC（硬件维护控制台），46–48
+    - HTTP Server 软件包，17
+    - eLiza 项目，47
+    - 在 IBM 的 RISC 开发，41–42
+    - Secure Way 目录，10
+    - *另见* IBM RedBooks/手册；*Power* 处理器
+- **IBM RedBooks/手册**
+    - AIX 5L 差异指南 5.1 版，472
+    - AIX 5L 5.1 版安装指南（SC23-4373），78
+    - *AIX 逻辑卷管理器 A 到 Z：故障排除与命令*，213
+    - ESS 上的数据路径优化器 – *安装程序/潜在陷阱*，644
+    - 适用于 ESS、SAN 和存储的，669–670
+    - NetView RedBooks，570
+    - *z/OS、S/390、MVS/ESA 实用指南*，640
+    - RedBook WebSM，5、45、56、213
+        - 在 AIX 上运行 Linux 应用程序，356、363
+    - StorWitch Expert Hards-ON 用户指南，667
+        - TotalStorage 解决方案产品指南，174
+- **Ifp/LU（LUM）许可**，102–103
+- **映像**
+    - 可启动系统映像（mkxib），542、549–551
+- **IMAP（互联网消息访问协议）**，381–382
+- **创建 imadmin 用户/组**，18、19、21–22
+- **安装**
+    - AIX 5L，78
+        - 简介，78
+    - 使用备用磁盘安装，96–98
+    - 备用磁盘 rootvg 克隆，97
+    - APARs 和 PTFs，安装，106
+    - APPLY 选项，84–85
+    - 应用 rs，提交，105
+    - 备份策略，重要性，84
+    - 基本安装，考量与规划，75–80
+    - 创建可启动备份介质，108–109
+    - BOS 磁盘空间，79
+    - 克隆到新硬件，99–100
+    - COMMIT 选项（SMIT），84–85
+    - 完整概述，93–94
+    - 复合许可证，103
+    - 并发节点/许可证，102
+    - 并发使用/一次性使用许可证，103
+    - 设置默认系统环境，108
+    - 分布式系统安装（NIFS），109
+    - 分布式系统安装（NIM），79、109–112、113
+    - 文件系统扩展（即时），85
+    - filesets，定义，80–81
+    - Ifp/LU（LUM）许可，102–103
+    - 信息与支持，112–114
+    - 选择安装方法，84
+    - 许可程序产品（LPP），100–103、107
+    - 机器支持，80
+    - 维护级别分析（instfix），82
+    - 维护级别补丁，简介，104–105
+    - 确定维护级别/状态，84–85
+    - 内存要求，基础，79
+    - 迁移升级，94–95
+    - 镜像，重要性，79
+    - 设置网络参数，80
+    - 节点-LPP 许可证，102
+    - 非 LPP 产品，安装，103
+    - 抑制非 root 登录访问（/etc/nologin 文件），85–86
+    - OS 和机器数据，显示（uname），82
+    - 分页空间要求，79
+    - 安装后：审查安装/更新状态，106–107
+    - 保留安装，96
+    - 产品打包，80–81
+    - 重复更新，106–107
+    - 移除已安装软件，103–104
+    - 恢复您的环境，108
+    - 审查安装/更新状态，107
+    - smitty install_commit，简介，105–106
+    - smitty update，使用 all，106
+    - 软件打包，级别，81
+    - 支持信息，81–83
+    - 期间系统状态，85–86
+    - （新机器）十步程序，90–93
+    - 测试期，105
+    - 为其设置 TTY，89–90
+    - 拒绝更新，106–107
+    - 更新/升级现有系统，78、86–89
+
+## L
+
+- **许可证**
+    - 并发节点锁许可证，102
+    - 并发使用/一次性许可证，103
+    - Ifp/LU（LUM）许可，102–103
+    - LPP 软件状态，107
+    - 节点锁许可证，102
+    - 一次性使用许可证，103
+    - *另见* 许可证
+- **Linux，通用**
+    - LINUX 应用程序的 AIX 工具箱，5–6
+    - Linux 与 AIX 的亲和性，简介，5
+    - Linux APIs 与 AIX，6
+    - LINUX 磁带支持，176
+    - 在 AIX 中安装原生 Linux 应用程序，6
+    - Red Hat 软件包管理器（RPM），6
+    - *另见* Linux 与 AIX 的亲和性
+- **Linux 与 AIX 的亲和性**
+    - 简介，5、6、356、363
+
+## J
+
+- **jabber 即时通讯**，11
+- **AIX 的 jabber 即时通讯**，362–363
+- **Java**，403–404
+- **JavaScript**，402–403
+- **JFS2（增强型日志文件系统）**
+    - 默认逻辑页大小，218
+    - 其中的动态模式分配，215
+    - 记录文件系统属性（ODM 数据库），219–220
+    - 其中的大文件支持，6–7、39、220–221
+    - 日志逻辑卷，218
+    - 逻辑卷管理器（LVM），64 位
+    - JFS2 支持，214
+    - *另见* 文件系统；磁盘/磁盘管理；逻辑卷（LVs）
+- **John the Ripper（密码破解工具）**，516
+
+## K
+
+- **K 桌面环境（DE）**，361–362
+- **KDE（替换 crash 命令）**，694
+- **KDE-2 桌面环境**，594
+- **Kerberos**
+    - 简介，501
+    - Kerberos System V，10、306、522
+- **内核 AIX 5L**。见 AIX 5L 内核
+
+## L
+
+- **LED 状态信息**，586–587
+- **安装许可程序产品（LPP）**
+    - 简介，109–112、117
+    - 复合许可证，103
+- **JFS、JFS2 文件系统**（见 JFS2 [增强型日志文件系统]）
+- **创建日志逻辑卷**，218
+- **逻辑卷管理器（LVM）**
+    - 简介，191–192
+    - LV 到 PV 映射，193、194
+    - LVM 组件，192–193
+    - 映射/映射关系，210
+    - 镜像，209–210
+    - 移动（在卷组之间），230
+    - 移动（在同一卷组内），229
+    - PV 到 LV 映射，193
+    - 原始 LV 和异步 I/O，212
+    - 原始 LV 设备/链接的所有权，212
+    - 顺序 vs. 并行写入，209–210
+    - 大小，增加/减少（extendlv, reduce lv），212–213
+    - 大小 vs. 分区大小，207
+    - 子卷，214
+    - 同步/重建 LV 控制块（LVCB），213
+    - 在 AIX 中的类型，207
+    - 虚拟文件系统，217
+    - *另见* 磁盘/磁盘管理
+- **登录，非 root**
+    - 抑制（/etc/nologin 文件），85–86
+- **日志/记录**
+    - Apache Server，其中的错误日志/访问日志，398
+    - 错误记录设施，AIX（errlogger 命令），590–591
+    - 组可写日志目录的危险性，398
+    - 日志文件，SMIT，66–68
+    - 日志轮转程序，396
+    - Sendmail，其邮件日志，376
+    - 服务器处理器错误日志，检查，588
+    - SMIT 日志文件，66–68
+    - SMIT 系统日志面板，139
+    - 系统日志（syslogd 守护进程），592–593
+    - 截断日志文件，相关注意事项，398
+- **LPAR**
+    - 逻辑分区
+    - 创建逻辑系统分区，157–158
+    - 在 POWER 处理器中，45、46–47
+- **LTO Ultrium 磁带驱动器**，174–175
+
+## M
+
+- **邮件**
+    - 检查清单，388
+    - 调试寻址和标题，383–384
+    - 电子邮件，简介，368
+    - 邮件客户端：/usr/bin/mail，382
+    - 邮件投递代理和协议，369
+    - 邮件传输代理，368
+    - 邮件用户代理，368–369
+    - NetScape Communicator，382
+    - Pine，383
+    - RFC 822 标题，384
+    - SMTP 协议（SMTP RFC 821），383
+    - *另见* Sendmail
+- **维护模式**
+    - 进入（PCI 总线机器），121
+    - *另见* ML（维护级别）补丁
+- **手册页**
+    - 在 CD-ROM 上，18–19
+    - 常见的 DocSearch/手册页问题，30–31
+    - 文件/命令，18–19
+    - 在 AIX 4.3.3、5L 上安装，32
+    - 使用 man 命令，31–32
+    - 其中的 roff 标签，33、34
+    - 使用，32–35
+    - *另见* DocSearch
+- **管理**。见 分布式管理环境（DME）、分布式系统管理（DSM7）；网络安装管理器（NIM）；对象数据管理器（ODM）；问题分析恢复；安全性；SMIT（各种）；系统记账；管理用户环境；基于 Web 的系统管理器（WebSM）
+- **内存**
+    - AIX 5L，虚拟内存管理，563–565
+    - 内存要求，基础（AIX 5L），79
+    - 内存调优，相关命令，580
+    - ROM IFL（只读内存初始程序加载），116
+    - 系统内存转储，591–592
+    - 虚拟内存管理器（VMM），225
+    - 虚拟内存统计（vmstat 命令），563–564
+    - vmtune 命令，564–565
+    - *另见* 磁盘/磁盘管理；磁带系统
+- **微通道机器**
+    - 内置自测（BIST），121–122
+    - 在其上配置 bootlist，117–118
+    - 在其上进入维护模式，121
+    - 其上的钥匙开关，120
+    - 升级 PCI 总线 vs. 微通道机器，88
+- **MIME 类型**，395
+- **镜像**
+    - 重要性，79
+    - 在转储设备中的使用，140
+
+
+
+
+
+## 索引
+
+-   **维护级别**补丁、APAR 和 PTF 的应用、安装，106
+    -   COMMIT，重要性，104–105
+    -   简介，104–105
+    -   最新文件集，下载和安装，95
+    -   拒绝更新，106–107
+    -   smitty install_comm，重要性，105–106
+    -   smitty update_all，用法，106
+    -   测试期，105
+    -   另见：维护模式
+-   模式，97
+-   另见：TTV 和模式
+-   监控，性能。另见：性能监控
+-   Motif 窗口管理器 (mwm)，413–415
+-   MPcfg 命令，使用（MP 机器）快速启动，125–126
+-   多线程（在 AIX 5L 内核中），53
+
+### 高可用性网络文件系统 (HANFS)，328–329
+-   导入文件系统：自动 / 显式挂载，319
+-   导入文件系统：预定义挂载，317–319
+-   PC-NFS，316
+-   远程调用过程 (RCP)，312
+-   根访问，启用，315
+-   服务器作为无状态系统，314
+-   服务器守护进程，314–315
+-   故障排除，326–327
+-   虚拟文件系统 (VFS)，312
+-   另见：分布式文件系统 (DFS)；文件 / 文件系统；网络信息服务 (NIS)
+
+### 网络信息服务 (NIS)
+-   简介，320
+-   自动挂载器，324
+-   客户端 / 主 / 从，添加，322
+-   守护进程，NIS，323–324
+-   启动守护进程，NIS+，326
+-   域，320–321
+-   映射，321–322
+-   NIS+ 服务器和客户端配置，322–323
+-   NIS ns，NIS+，324–325
+-   公钥授权，323
+-   服务器和客户端配置，325–326
+-   启动，323–324
+-   故障排除，326–327
+-   另见：分布式文件系统 (DFS)；文件 / 文件系统；网络文件系统 (NFS)
+
+-   节点锁授权，102
+-   nroff 标签（在 man 页中），33, 34
+
+### 对象数据管理器 (ODM)
+-   属性描述符，自定义 (C:Att)，160
+-   属性描述符，预定义 (PdAtt)，159
+-   引导设备，160
+-   电缆和适配器，162
+-   常用 ODM 命令，156
+-   组成部件，150–151
+-   开发，150
+-   设备配置 (cfmgr 命令)，158
+-   设备描述符，自定义 (C:Dv)，160
+
+### Unix 设备描述符
+-   Unix 密码文件 /etc/passwd /etc/security/passwd，497–499
+-   Unix 设备描述符，预定义 (PdDev)，159
+-   设备状态，160, 161
+-   库子例程和 ODM 命令，155, 156
+-   创建逻辑系统分区 (LPAR)，157–158
+-   新的 AIX SL 类 (CUOD)，157
+-   对象类，添加/定义，151, 153
+-   对象类，AIX，150
+-   对象类，预定义和自定义，155, 157
+-   对象类，查询/删除，151, 153–154, 155
+-   ODM 数据库，简介，151–152
+-   odmpkg 命令，危险，151, 155
+-   SCSI 接口，161–162
+
+### 开放软件基金会 (OSF)
+-   和分布式管理环境 (DME)，4, 62
+-   和 UNIX 社区，5
+
+## P
+
+-   P690 (REGATTA) 处理器，46–47, 47–48
+
+### 交换空间
+-   简介，224–225
+-   激活/停用，227–228
+-   添加，226–227
+-   相关命令，229
+-   功能描述，225
+-   安装要求，AIX 5L，79
+-   管理交换大小 (swapfd 命令)，9–10
+-   移除交换空间 (SMIT)，67–68
+-   减少空间，228
+-   移除，228
+-   抖动，225–226
+-   虚拟内存管理器 (VMM)，控制，225
+
+### 密码
+-   /etc/passwd 文件，454–455
+-   /etc/security/passwd 文件，455
+-   /etc/security/user 文件，456
+-   在 X11 窗口系统中更改，417
+-   在 DCE 中，528
+-   组和密码文件，加盐，456–457
+-   John the Ripper（密码破解工具），516
+-   通过密码文件限制访问，454
+-   密码限制和老化，499
+
+### PCI 总线机器
+-   在其上配置 bootlist，118–119
+-   POST（加电自检），122
+-   升级（s：Micro Channel 机器），88
+
+### 性能诊断工具 (PDT)，570–573
+
+### 性能监控
+-   Big Brother，578–580
+-   PFX 管理器 (pxperf)，575–576
+-   资源监控和控制 (RMC) 子系统，8
+-   Tivoli NetView，576–578
+-   陷阱 (SNMP 警报)，576
+-   Tripwire（文件完整性监控工具），516–517
+
+另见：AIX 5L，通用；审计子系统；磁盘 / 磁盘管理；管理（各种）密码；安全性；系统记账；调优，AIX
+
+### AIX 性能工具包 (PTX)，573–576
+-   Pine（邮件接口），383
+-   点对点协议 (PPP)，293, 297–298
+-   POP（邮局协议），381
+-   POST（加电自检，PCI 总线），122
+
+### POWER 处理器
+-   简介，41
+-   CHRP（通用硬件参考平台），43
+-   LPAR 逻辑分区在其内部，45, 46–47
+-   P690 (REGATTA)，46–47, 47–48
+-   POWER1，41–42
+-   POWER2，42–43
+-   POWER4，44–45
+-   PowerPC，43
+-   处理器类型 80，46, 48, 49
+-   pSeries 机器，48–49
+-   和 RISC，41–42
+-   RS64 演进（64 位架构），44
+-   可扩展并行 (SP) 架构，45–46
+-   另见：处理器技术
+
+### 打印机，配置
+-   简介和概述，234
+-   添加打印队列 SMIT 面板，238, 240
+-   横幅页，自定义，239–251
+-   检查表，270–271
+-   使用 SMIT 命令配置，238–243
+-   使用 WebSM 配置，243, 244
+-   自定义后端，249
+-   高可用性打印队列 (HACMP)，626
+-   HP JetDirect 打印机，配置，249
+-   lp 守护进程，243–245, 245–246, 247
+-   打印作业数据流，234–237
+-   打印服务器，配置，245–246
+-   打印暂存 SMIT 面板，238
+-   未安装打印机 SMIT 面板，238, 241
+-   打印机 / 打印接口选择 SMIT 面板，238, 239, 242
+-   打印机类型 SMIT 面板，238, 240
+-   打印文件和目录，236
+-   qpaeon，239, 237–238
+-   添加远程打印队列，246–248
+-   选择打印机型号 (IBM 驱动程序) SMIT 面板，238, 241
+-   选择打印机类型 SMIT 面板，238, 240
+-   *另见* 打印机，管理/测试；System V 打印子系统
+
+### 打印机，管理/测试
+-   简介，251
+-   在大型环境中添加打印机，259
+-   ASCII 终端打印机，256–257
+-   高可用性打印机（在 LAN 上），255–256
+-   在队列中保持作业，254
+-   更改作业优先级，254
+-   列出打印作业，253
+-   在队列之间移动作业，255
+-   直通模式，257
+-   记录打印使用情况，482
+-   打印机状态，253
+-   使用 /usr/bin/enq 进行队列管理，251–252
+-   移除打印作业，254
+-   启动/停止队列和打印机，252
+-   当打印队列故障时，255
+-   X-Station 打印机，258–259
+-   *另见* 打印机，配置；System V 打印子系统
+
+### 问题分析/恢复
+-   简介，584
+-   AIX 内核架构/结构，52–53, 593–594
+-   备份和可引导介质，584–585
+-   检查表，596
+-   灾难恢复/验证，548
+-   错误日志设施，AIX (errlogger 守护进程)，590–591
+-   错误日志，错误处理 (HACMP)，622–623
+-   自动错误通知 (HACMP)，625
+-   FixDist，595
+-   硬件诊断（使用 diag），594–595
+-   呼叫帮助，595
+-   KDB（替代 crash 命令），594
+-   LED 状态信息，586–587
+-   从 mksys3 恢复，585
+-   从 sysback 备份恢复，585–586
+-   检查服务器处理器错误日志，588
+-   系统错误报告，内容，589–590
+-   操作系统补丁 (gzip 文件)，595–596
+-   系统日志 (syslogd 守护进程)，592–593
+-   系统内存转储，591–592
+-   故障排除，AIX 5L，126–127
+
+### 进程管理
+-   /proc 文件系统，468–472
+-   运行临时作业，474
+-   检查表，478
+-   控制进程（“kill” 命令），468–469
+-   控制终端，462
+-   列出 CPU 日志前十大，464
+-   管理 cron 活动 (queuefs)，474–475
+-   有效和真实 UID 和 GID，462
+-   挂起 (HUP) 信号，468
+-   将内核线程绑定到处理器，464–465
+-   父子继承，465
+-   进程属性，460–461
+-   进程标识符 (PID)，460, 462
+-   显示进程状态，463–464
+-   资源利用率（基于优先级的运行队列），463
+-   计划进程 (cron, crontab)，472–474
+-   系统资源控制器 (SRC)，475–478
+-   使用 Web 基于的系统管理器，465, 466
+
+### 处理器技术
+-   铜技术，40
+-   低介电常数，40–41
+-   绝缘体上的硅，50
+-   细小引线，41
+-   *另见* POWER 处理器
+
+-   Procmail，380–381
+-   pSeries 机器，另见：POWER 处理器
+-   安装 pTIES，106
+-   PTX 管理器 (xmpfer)，575–576
+
+
+
+
+## R
+- RAID
+  - 简介，181–182
+  - ESS，磁盘 RAID 级别，641
+  - HACMP/SCSI-2 配置，610
+  - 与存储区域网络 (SAN)，182–183
+- 恢复
+  - 参见 问题分析/恢复
+- Red Hat 软件包管理器 (RPM)，6
+- RedBooks, IBM
+  - 参见 IBM RedBooks/手册
+- Regatta (p690) 处理器，46–47, 47–48
+- 远程过程调用 (在 DCE 中)，520–521
+- 资源监控与控制 (RM&C) 子系统，8
+- 重启/关机，126
+- RISC (精简指令集计算机) 在 POWER 处理器中，41–42
+- 运行队列 (在 AIX 5L 内核中)，55
+- 运行时配置，AIX
+  - 分配控制台，135
+  - 广播消息 (向所有用户)，140
+  - 检查清单，147
+  - 默认文档语言，144–145
+  - 转储设备，专用，142
+  - 浮动用户许可证，140
+  - 挂起检测，系统，145
+  - 互联网/文档服务 (SMIT web_configd)，143
+  - 语言环境设置，137
+  - 授权用户数量，139
+  - OS 特性，设置 (通过 SMIT)，137–138
+  - 伪终端 (PTYs)，配置，145–146
+  - 远程重启设施，145
+  - SMIT 面板，155
+  - 停止系统 (SMIT FastPath)，134
+  - 系统日志 (ErrLog, Alog)，141
+  - 时间设置，136–137
+  - 用户界面，更改，143–144
+
+## S
+- SAR 命令 (统计数据)，569–570
+- 可扩展并行 (SP) 架构，45–46
+- 调度和分发 (AIX 5L 内核)，54–55
+- SCSI 接口
+  - ODM 快速 SCSI，161
+  - 快速/宽 SCSI，162
+  - SCSI-1, SCSI-2，161
+  - 单端，差分 SCSI，161
+  - 超高速 SCSI (各种)，162
+  - 宽 SCSI，162
+
+- 安全性
+  - 访问控制列表 (ACLs)，506–508, 522–523
+  - AIX 5L 增强功能，10
+  - 在 Andrew 文件系统 (AFS) 中，332
+  - Apache HTTP 服务器，访问控制，394–395
+  - 审计子系统，512–516
+  - 显示管理器中的身份验证，418
+  - 身份验证方法，替代方案，499–503
+    - 检查点，517
+    - 配置客户端，502–503
+    - 配置服务器，502
+    - 添加自定义身份验证方法，500–501
+  - 在分布式计算环境 (DCE) 中，522–523, 528, 530–531
+  - 在 DSMII (分布式系统管理) 中，72
+  - 文件访问，控制，504–508
+    - 文件权限，基本，504–505
+  - 组可写日志目录，危险，398
+  - 面向信息力，517
+  - Kerberos，507, 501
+  - 网络访问，控制，504
+  - NIS 公钥授权，323
+  - 密码 (参见 密码)
+  - 在 pSeries 690 (Regatta) 处理器中，47
+  - 安全注意键 (PSA/KCB)，512
+  - 安全位置，微通道密钥开关，120
+  - Secure S 命令器，306
+  - 安全套接层，Apache 支持，397
+  - 安全关联 (SAs)，506
+  - 安全策略，定义，496
+  - 在 Sendmail 配置示例中，376–378
+  - set-ID 和 set-GID，505–506
+  - “分割视界” DNS Sendmail 配置，377
+  - 超级用户访问，控制，503–504
+  - swatch (简单的 WATCHer)，516
+  - 在 TCP/IP 中，305–307
+  - 可信计算机基础 (TCB)，508–512
+  - umask，505
+  - X11 访问控制，420–421
+  - 另参见 加密；问题分析/恢复；用户环境管理
+
+- 自测试
+  - 微通道机器，内置 (BIST)，121–122
+  - PCI 总线机器，上电 (POST)，122
+
+- Sendmail
+  - 简介，369–370
+  - 地址规则/规则集，371–372
+  - 别名数据库，374
+  - 测试替代邮件主机，385
+  - Bellmail 和 procmail，380–381
+  - 检查清单，388
+  - 客户端配置，378
+  - cosmats 守护进程，388
+  - 配置示例：Wine 大学，376–378
+  - 使用 M4 配置，373
+  - 数据库，373–374
+  - 调试寻址和标头，382–384
+  - 投递代理，本地 (bellmail, procmail)，380–381
+  - 回退配置，380
+  - 回退主机，注意事项，380
+  - 文件配置和数据，370
+  - 网关配置，379
+  - 邮件发送方式，384
+  - 中心配置，378–379
+  - IMAP (互联网消息访问协议)，381–382
+  - 邮件日志，376
+  - 邮件队列，管理，387–388
+  - mailer 投递部分，372–373
+  - 选项和定义，Sendmail 文件，371
+  - POP (邮局协议)，381
+  - 规则集，测试，386–387
+  - 分支配置，378
+  - 启动和停止，375
+  - 通过 -v 详细标志测试，384–385
+  - 另参见 邮件
+
+- 串行线互联网协议 (SLIP)，293, 294–296
+  - 简介，293
+  - 专用 SLIP，294–296
+  - 非专用 SLIP，296
+
+- 服务器处理器错误日志，检查，588
+- 服务处理器 (pSeries, RS/6000 机器)，119–120
+- Shark. 参见 企业存储服务器 (ESS)
+- 关机/重启，126
+- 信号，同步/异步 (AIX 5L 内核)，53–54
+- 简单邮件传输协议 SMTP (SMTP RFC 821)，383
+- SMIT FastPath
+  - 添加逻辑卷 (mklv)，210, 211
+  - 在 AIX 备用磁盘安装中，96–97
+  - 广播消息 (smit wall)，140
+  - 命令语法和应用子菜单，69–70
+  - 使用控制台助手 (smit ccons)，135
+  - 复制磁带 (smit tcopy)，556
+  - 创建文件系统映像 (smit mkssysb)，542, 549–551
+  - DCE 目录服务映像，创建 (smit mksdcer)，531–532
+  - DCE 主单元目录服务器，配置 (smit mkdcesrv)，530–531, 532
+  - DCE 安全服务器，定义 (smit mkdcesecsrv)，520
+  - DFS 聚合文件集，创建 (smitf mklfsdf)，344–345
+  - DFS 聚合，格式化/导出 (mkfsagr)，342–343
+  - DFS(DCE 客户端配置 (mkkdcldent)，341–342
+  - DFS 文件服务器机器 (smitye mksdfsrv)，340–341
+  - DFS 系统控制机器 (smitye mkfsscn)，339, 340
+  - 文档语言，默认 (smit chdclan)，144–145
+  - 以太网适配器，配置 (smit chgent)，8, 279
+  - 导出文件 (smit mknxexp)，315
+  - FFDl 设备属性，更改 (smit chfdg)，282
+  - 文件系统备份 (smit backupfsys)，548
+  - 浮动用户许可证 (smit netfs_server)，140
+  - 使用挂起检测 (smit s1)，145
+  - 安装 RPM (smit install_latest)，359
+  - 互联网服务 (smit web_configure)，143
+  - 内核特性，更改 (smit chlisys)，137–139
+  - 内核路由，添加路由 (smit mkroute)，288
+  - 授权用户，显示 (smit chlicense)，139
+  - 逻辑卷大小，增加 (extendlv)，212
+  - 逻辑卷，镜像 (smit mkmirror)，210
+  - lpd 守护进程，启动 (smkitab_lpd)，246, 247
+  - 挂载文件 (smit mknfsmnt)，317
+  - NIS 客户端，添加 (smit mkclient)，322
+  - NIS 主服务器，添加 (smit mkmaster)，322
+  - NIS 从服务器，添加 (smit mkslave)，322
+  - PPP 身份验证 (smit pppap, pppchap)，297
+  - PPP/IP 地址，设置 (smit pppip)，297, 298
+  - 打印客户端，添加 (smithostslpd)，246
+  - PTYs，分配 (smit srvpty)，145–146
+  - 重启管理，远程 (smit reboots)，145
+  - SLIP 网络接口面板 (smit mknit)，295
+  - SLIP/PPP 串行端口，添加 (smit maktty)，293, 294
+  - 停止系统，134
+  - 使用系统转储 (smit sdump)，142
+  - 系统日志，管理 (smi logs)，141
+  - 磁带块大小，更改 (smit chgtpe)，170
+  - TCP/IP 接口，配置 (smit chinet, liconfig)，301
+  - TCP/IP 子系统配置 (smit configtcp)，292
+  - 用户界面，更改 (smit dltconfg)，141–142
+  - 卷组，添加 (smit mkvg, extdevg)，199
+  - 另参见 SMIT (系统管理接口工具)
+
+## SMIT (系统管理接口工具)
+- 简介，62–63
+- 添加用户面板，449
+- ‘添加卷组’ 面板，199
+- ‘更改/显示用户特性’ 面板，451–452
+- 使用 (chdev) 更改磁带块大小，170
+- COMMIT 选项 (在 AIX 5L 安装中)，84–85
+- 自定义 (菜单面板)，70–71
+- 数据库文件，71
+- 分布式 (DSMIT)，73–74
+- 示例：移除分页/0 分页空间，67–68
+- FastPath (参见 SMIT FastPath)
+- 浮动用户许可证面板，139
+- 帮助消息，66
+- 互联网/文档服务 (smi web_configure)，142
+- 使用作业调度，64–66
+- 键，66, 67
+- 语言环境面板，137
+- 授权用户面板 (smi chances)，139
+- 日志文件，66–68
+- 主屏幕显示 (CDE)，64
+- 主屏幕显示 (SMITTY/ANSI)，64, 65
+- ‘镜像逻辑卷’ 面板，210
+- 使用它修改 TCP/IP 静态路由，302–303
+- OS 特性面板，138
+- 打印服务器/打印队列配置面板，246–248
+- 打印机配置面板，238–243
+- 移除用户面板，453
+- 定义运行时设置 (参见 运行时配置，AIX)
+- 脚本文件，68–69
+- 特殊字段符号，66
+- 系统转储面板，142
+- 系统环境面板，135
+- 系统日志面板，141
+- 另参见 分布式系统管理 (DSMIT)；SMITTY
+
+## SMITTY
+- 主屏幕显示 (SMITTY/ANSI)，64, 65
+- smitary_Install_commit，重要性，105–106
+- smitary update-all，使用，106
+- 另参见 SMIT (系统管理接口工具)
+
+- 嗅探器，使用，306, 308
+- 稀疏文件，544
+- 静态门控，6
+- 停止系统
+  - 关机、重启命令，126
+  - 使用 SMIT FastPath，134
+
+## 通用存储
+- 简介和讨论，632–633
+- 存储连接类型 (SCSI, SSA, iSCSI)，633–634
+- 另参见 备份；磁盘/磁盘管理；企业存储服务器 (ESS)；网络附加存储 (NAS)；Trivio；存储区域网络 (SAN)；磁带系统
+
+## 存储区域网络 (SAN)
+- 简介，635
+- 仲裁环路物理地址 (AL_P5)，636
+
+
+
+-   企业存储管理标准，639–640
+-   光纤信道仲裁环（FC_AL），636–637
+-   光纤信道交换网（FC_SW），637–638
+-   光纤信道交换机，添加，639
+-   其中的逻辑单元编号（LUN），639
+-   其中的点对点拓扑，639
+-   公共环路与私有环路的对比，636
+-   与 RAID，182–183
+-   Tivoli SANergy，640
+-   分区，638–639
+
+-   StorWatch 专业人员（ESS），645–646
+-   Swatch（The Simple WATCHer），516
+-   SysBack 实用程序，553
+-   系统会计
+    1. 介绍，480
+    2. 会计命令，486–490
+    3. 会计配置，482–486
+    4. 会计文件的位置，482
+    5. 检查清单，491–492
+    6. 集合文件的设置，482–483
+    7. 连接时间的累积，480–481
+    8. crontab 条目，485
+    9. 磁盘会计，480–482
+    10. 数据收集（/etc/filesystems），484
+    11. 磁盘使用率，481
+    12. 显示统计信息，487–488
+    13. 清理工作，490–491
+    14. 性能工具（vmstat, time, iostat, sar），489–490
+    15. 打印会计（/etc/qconfig），484
+    16. 打印使用率，482
+    17. 进程资源使用情况，481
+    18. 报告目录，484–485
+    19. 班次，识别，483–484
+    20. 启动/停止会计（accmon），486–487
+    21. 生成摘要报告，488–489
+    22. 工作单元列表，486
+
+-   系统错误报告，内容，589–590
+-   系统管理接口工具，参见 SMIT
+-   系统资源控制器（SRC），475–478
+-   System V 打印子系统
+    -   介绍，259
+    -   添加本地打印机，264–266
+    -   添加网络打印机，266–267
+    -   优点，259–260
+    -   常见的打印命令，AIX 和 System V，262
+    -   基于 Ianium 的系统，260
+    -   其中的打印机管理，267
+    -   打印服务管理
+        -   命令，267
+        -   其中的打印术语，263–264
+        -   其中的打印过程（pspd）守护进程，262–263
+        -   System V 和 AIX 子系统之间的切换，260–261
+    -   switch_prt 命令，使用，260–261
+    -   系统管理，260
+    -   使用表单，268–269
+    -   另请参见：配置打印机；管理/测试打印机
+
+## T
+
+-   磁带系统
+    -   AIX 到 UNIX ioc1 映射，172
+    -   块大小，170
+    -   检查清单，177
+    -   复制磁带（copyfi），556
+    -   数据格式，169
+    -   映射设备名称选项，171–172
+    -   高可用性磁带机（HACMP），627
+    -   IBM 3494 磁带库，175–176
+    -   LINUX 磁带支持，176
+    -   LTO 超级磁带机，174–175
+    -   权限，173
+    -   物理特性，168–169
+    -   识别磁带归档，556–557
+    -   使用 tar 进行磁带转换，170–171
+    -   磁带定位，172–173
+    -   公共领域磁带工具，176–177
+    -   磁带及实用程序，173
+-   TCB（可信计算机基），508–512
+-   TCP/IP
+    -   地址解析协议（ARP），285, 301
+    -   寻址，硬件（MAC 地址），283
+    -   寻址，IPv4，283–284
+    -   寻址，IPv6，286
+    -   别名，287
+    -   应用层，276, 277
+    -   异步传输模式（ATM），282–283
+    -   认证头部（AH）协议，306
+    -   autoconf 命令（IPv6 协议），301–302
+    -   自动配置，IPv6，286–287
+    -   检查清单，308–309
+    -   无类别域间路由（CIDR），284–285
+    -   配置，介绍，299
+    -   配置，网络接口，301
+    -   死网关检测，289, 303
+    -   DOMAIN 域名解析协议，290
+    -   域名，语法及管理，289–290
+    -   动态主机配置协议（DHC），293
+    -   动态路由，303–304
+    -   封装安全负载（ESP）协议，306
+    -   Etherchannel，279–280
+    -   以太网，278–280
+    -   光纤分布式数据接口（FDDI），281–282
+    -   主机名，290
+    -   接口层，276
+    -   互联网层，276
+    -   获取 IP 地址，285
+    -   IP 安全（IP 标准），306
+    -   内核路由，281
+    -   修改内核路由表，302
+    -   主守护进程 inetd，292
+    -   最小配置和启动，300–301
+    -   多路径路由，289
+    -   名称服务器，290
+    -   名称解析过程，291
+    -   nddp 主机，nldd 指针命令，302
+    -   邻居发现协议（NDP），286
+    -   网络掩码，284
+    -   网络地址转换（NAT），285
+    -   网络守护进程，292
+    -   网络设备，AIX 命名约定，277–278
+    -   显示网络接口，277
+    -   网络模型协议套件，276
+    -   网络选项（加载时，运行时），304–305
+    -   网络路由，介绍，287–288
+    -   规划，网络基础设施，299
+    -   点对点协议（PPP），293, 297–298
+    -   PPP 认证（slit pppap, PPPchap），297
+    -   设置 PPP IP 地址（slit pppip），297, 298
+    -   配置公共 IP 地址，285
+    -   安全的 / 命令，299
+    -   安全关联（SAs），306
+    -   安全信息（CERT），307
+    -   传统安全措施，307
+    -   串行线路互联网协议（SLIP），293, 294–296
+    -   添加串行端口（slit mkpty），293, 294
+    -   嗅探器的使用，308
+    -   启动配置，292–293
+    -   静态、动态路由，288–289
+    -   修改静态路由（通过 SINIT），302–303
+    -   子网划分，284
+    -   子系统，守护进程，291–292
+    -   令牌环网，281
+    -   传输层，276–277
+    -   故障排除，307–308
+    -   可信计算机基（TCB），305
+    -   虚拟 IP 地址（VIPA），287
+-   时间片，CPU（在 AIX 5L 内核中），55–56
+-   Tivoli
+    -   IBM RedBook: A Practical Guide to Tivoli SANergy，640
+    -   Tivoli NetView，576–578
+    -   Tivoli SANergy，640
+    -   Tivoli 存储管理器（TSM），552–553
+-   令牌环网，281
+-   Linux 工具箱（AIX）。参见 Linux，通用；Linux 与 AIX 的亲和性
+-   topos 命令（系统快照），568–569
+-   汉诺塔，546–547
+-   陷阱（SNMP 警报），576
+-   Tripwire（文件完整性监控工具），516–517
+-   故障排除，AIX 5L。参见 问题分析、恢复、安全
+-   可信计算机基（TCB），305
+-   调优，511–512
+    -   更改，511–512
+    -   安装，配置，508–509
+    -   问题检查，510–511
+    -   使用，509–510
+-   TTY
+    -   配置伪 TTY（PTY），145–146
+-   调优，AIX
+    -   介绍，568
+    -   Big Brother，578–580
+    -   检查清单，581
+    -   CPU 调优，命令，580
+    -   磁盘调优，命令，580
+    -   内存调优，命令，580
+    -   网络调优，命令，580
+    -   性能诊断工具（PDT），573–575
+    -   性能监控，命令，584–585
+    -   AIX 性能工具箱（PTX），573–576
+    -   sar 命令（统计数据），569–570
+    -   Tivoli NetView，576–578
+    -   topos 命令（系统快照），568–569
+    -   另请参见 性能监控
+
+## U
+
+-   Ultrium LTO 磁带机，174–175
+-   统一设备接口（UDI），6
+-   通用唯一标识符（UUID），522, 527, 528
+-   UNIX，通用
+    -   Aix 7S Unix，5
+    -   密码文件（/support, /passwd, /etc/security/passwd），497, 499
+    -   Aix 中的 System V 打印支持，8
+    -   更新/升级 Aix 系统
+    -   建立 /dev 设备所有权，86
+    -   注意事项，78
+    -   HACMP 机器，其中的设备编号一致性，87
+    -   PCI 总线 7S。微通道机器，88
+    -   关于新版本和修订版的相同问题，87–89
+    -   卷组，86–87
+    -   用户环境，管理
+        -   /etc/group 文件，436–437
+        -   /etc/passwd 文件，436–437
+        -   /etc/security/environ 文件，446–447
+        -   /etc/security/group 文件，436, 437
+        -   /etc/security/limits 文件，438–439
+        -   /etc/security/login.cfg 文件，447–448
+        -   /etc/security/passwd 文件，455
+        -   /etc/security/user 文件，456
+        -   /usr/lib/security/mksuser.default 文件，447
+        -   介绍，434
+        -   添加用户帐户，448, 449–451
+        -   检查清单，457
+        -   默认 /etc/profile 文件，444, 445–446
+        -   默认系统 /etc/environment 文件，443–445
+        -   磁盘配额，440–442
+        -   环境变量，443
+        -   高可用性集群
+        -   其中的多处理器（HACMP），436
+        -   最大进程数（maxproc），439–440
+        -   移除用户帐户，453
+        -   资源限制，介绍，437
+        -   限制访问：密码文件，454
+        -   为组和密码文件加盐，456–457
+        -   Shell 启动文件，447
+        -   UID 空间和组，435–436
+        -   更新用户帐户，448, 451–453
+        -   用户帐户访问权限/环境，442–443
+        -   用户文件系统，434–435
+    -   另请参见 安全
+
+## V
+
+-   V-Path，182–183
+-   虚拟文件系统（VFS）
+    -   其支持的文件系统架构，312
+    -   另请参见 分布式文件系统（DFS）；文件/文件系统；网络文件系统（NFS）；网络信息服务（NIS）
+-   虚拟 IP 地址（ViPA），287
+-   虚拟内存管理
+    -   内存调优，命令，580
+    -   虚拟内存管理器（vMM），225
+        -   虚拟内存统计（vmtstat 命令），563–564
+        -   vmtune 命令，564–565
+-   卷组（VGs）
+    -   添加，199, 203–204
+    -   配置，198–200
+    -   描述，192
+    -   导入/导出，204–205
+    -   移动，230
+    -   rootvg，51
+    -   （savevg），511–552
+    -   只读，6
+    -   重组，205–206
+    -   rootvg
+        -   镜像，202–203
+        -   大小限制（普通，大型），203–204
+        -   同步（和 HACMP），206
+        -   卷组描述符区域（VGDA），200
+        -   卷组标识符（VGID），199
+        -   卷组状态区域（VGSA），200
+    -   另请参见 磁盘/磁盘管理
+
+## W
+
+-   基于 Web 的系统管理器（WebSM）
+    -   介绍，10, 71–72
+    -   备份和还原主窗口，546
+    -   在配置打印机中，10, 243
+    -   主 System V 打印机窗口，266
+    -   主窗口，72
+    -   在打印机子系统之间切换，260–261
+    -   另请参见 Apache HTTP 服务器
+-   安装 Web 服务器软件，17
+-   万维网
+    -   另请参见 Apache HTTP 服务器；基于 Web 的系统管理器（WebSM）
+
+
+
+
+
+## X
+
+- X11 窗口系统，422–423
+    - 引言与概述，408
+    - 其中的访问控制，420–421
+    - X 显示管理器中的身份验证，418
+    - CDE 主面板，423–424
+    - 检查清单，429
+    - 与通用开放软件环境（COSE）的关联，421
+    - 组件，409
+    - 通过 CDE 定制桌面，425
+    - 显示管理器配置，418–419
+    - 显示管理器启动/停止，419–420
+    - 显示管理器，类型，417–418
+    - 文件与应用管理器，422–423
+    - 字体，处理，411–412
+    - Gnome 桌面，412–413, 417
+    - 帮助管理器，424
+    - LINUX 应用程序与 KDE 窗口，410
+    - MIT-MAGIC-COOKIE-1，417
+    - Motif 窗口管理器 (mwm)，413–415
+    - kdm 中的密码更改，417
+    - 会话管理器，功能/文件，422
+    - 样式管理器，424
+    - 符号链接与目标，409
+    - 用户配置文件，415–416
+    - 窗口管理器功能，416
+    - 其中的窗口管理器，412–413
+    - 窗口（工作区）管理器，424
+    - X 站管理，425–426
+    - X 站启动，426–427
+    - X 站管理器配置，427–429
+    - X-Station 加电自检 (POST)，426
+    - xinit 与应用默认值，411
+    - XSLT，406
+
+## Z
+
+- 分区
+    - 在存储区域网络 (SAN) 中，638–639
+
+## 国际联系方式
+
+### 澳大利亚
+McGraw-Hill 澳大利亚有限公司
+电话 +61-2-9415-9899
+传真 +61-2-9415-5687
+http://www.mcgraw-hill.com.au
+books_it_sydney@mcgraw-hill.com
+
+### 新加坡（服务亚洲地区）
+McGraw-Hill 图书公司
+电话 +65-863-1580
+传真 +65-862-3354
+http://www.mcgraw-hill.com.sg
+mghasia@mcgraw-hill.com
+
+### 加拿大
+McGraw-Hill Ryerson 有限公司
+电话 +905-430-5000
+传真 +905-430-3020
+http://www.mcgrawhill.ca
+
+### 南非
+McGraw-Hill 南非
+电话 +27-11-622-7512
+传真 +27-11-622-9045
+robyn_swanepoel@mcgraw-hill.com
+
+### 希腊、中东、北非
+McGraw-Hill 希腊
+电话 +30-1-656-0990-3-4
+传真 +30-1-654-5525
+
+### 英国与欧洲（不包括南欧）
+McGraw-Hill 欧洲教育
+电话 +44-1-628-502500
+传真 +44-1-628-770224
+http://www.mcgraw-hill.co.uk
+computing_neurope@mcgraw-hill.com
+
+### 墨西哥（亦服务拉丁美洲）
+McGraw-Hill Interamericana 出版股份有限公司
+电话 +525-117-1583
+传真 +525-117-1589
+http://www.mcgraw-hill.com.mx
+fernando_castellanos@mcgraw-hill.com
+
+### 美国/墨西哥其他所有地区联系：
+Osborne/McGraw-Hill
+电话 +1-510-549-6600
+传真 +1-510-883-7600
+http://www.osborne.com
+omg_international@mcgraw-hill.com
+

@@ -1,0 +1,11 @@
+program that requests memory in a manner the kernel doesn't support, you're out of luck. The way your kernel investigates some hardware during the boot sequence defines how the hardware behaves, so you have to control that. Some devices identify themselves in a friendly manner, while others lock up if you dare to ask them what they're for.
+
+The kernel and any modules included with FreeBSD are files in the directory /boot/kernel. Third-party kernel modules go in /boot/modules. Files elsewhere in the system are not part of the kernel. Nonkernel files are collectively called the userland, meaning they're intended for users even if they use kernel facilities.
+
+Since a kernel is just a set of files, you can have alternative kernels on hand for special situations. On systems where you've built your own kernel, you will find /boot/kernel.old, a directory containing the kernel that was installed before your current kernel. I habitually copy the kernel installed with the system into /boot/kernel.install. You can also create your own special kernels. The FreeBSD team makes configuring and installing kernels as simple as possible. The simplest and best-supported way to alter a kernel is through the sysctl interface.
+
+# Kernel State: sysctl
+
+The sysctl(8) program allows you to peek at the values used by the kernel and, in some cases, to set them. Just to make things more confusing, these values are also sometimes known as *sysctls*. The sysctl interface is a powerful feature because, in many cases, it will let you solve performance issues without rebuilding the kernel or reconfiguring an application. Unfortunately, this power also gives you the ability to sweep the legs out from under a running program and make your users really, really unhappy.
+
+The sysctl(8) program handles all sysctl operations. Throughout this book, I'll point out how particular sysctls change system behavior, but first, you need to understand sysctls in general. Start by grabbing all the human-visible sysctls on your system and saving them to a file so you can study them easily.

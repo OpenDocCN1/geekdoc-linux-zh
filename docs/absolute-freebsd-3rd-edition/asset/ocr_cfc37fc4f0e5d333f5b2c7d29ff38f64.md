@@ -1,0 +1,17 @@
+and arranging the inputs and outputs as you like, you can make a Unix system behave in any manner that amuses you. Eventually, you’ll feel positively hoggied if you can’t just run a command’s output through `sort -rnk 6 | less`.
+
+# ## Everything Is a File
+
+You can’t be around Unix for very long before hearing that everything is a file. Programs, account information, and system configuration are all stored in files. Unix has no Windows-style registry; if you back up the files, you have the whole system.
+
+What’s more, the system identifies system hardware as files! Your CD-ROM drive is a file, `/dev/cd0`. Serial ports appear as files like `/dev/cua0`. Even virtual devices, such as packet sniffers and partitions on hard drives, are files.
+
+When you have a problem, keep this fact in mind. Everything is a file, or is in a file, somewhere on your system. All you have to do is find it!
+
+# ## Notes on the Third Edition
+
+*Absolute BSD* (No Starch Press, 2002) was my first technology book and was written when the various BSD operating systems had more in common than they wanted to admit. The second edition, *Absolute FreeBSD* (No Starch Press, 2007), came out after the BSDs had diverged, and detailed FreeBSD’s advances in the previous five years. With another decade of growth, FreeBSD has evolved to compete with the best commercial operating systems. You’ll find multiple top-tier filesystems. Disk management has changed to accommodate new partitioning methods. Virtualization is now a thing, and FreeBSD supports it as either a client or a host.
+
+This growth has driven changes in this book.
+
+We won’t discuss configuring mail, DNS, or web servers. You have more software choices for these tasks than ever before. Entire books have been written about those choices and how to use them. I’ve written

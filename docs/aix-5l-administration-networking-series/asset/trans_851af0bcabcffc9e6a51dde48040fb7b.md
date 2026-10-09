@@ -1,0 +1,215 @@
+
+
+```
+$ echo 'Happy birthday Judith!' | mail -v -s "Birthday" judith@wine.edu
+judith@wine... Connecting to wine.edu via esmtp...
+220 AixADM.org ESMTP Sendmail AIX5.1.8/11.0/8.11.0; Sat, 8 Jun 2002
+>>> EHLO McGraw-Hill.com
+250-wine.edu Hello McGraw-Hill.com (may be forged), pleased to meet you
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-SIZE
+250-DSN
+250-ONEX
+250-ETRN
+250-XUSR
+250 HELP
+>>> MAIL From:<terry@McGraw-Hill.com> SIZE=57
+250 2.1.0 <terry@McGraw-Hill.com>... Sender ok
+>>> RCPT To:judith@wine.edu
+250 2.1.5 <judith@wine.edu>... Recipient ok
+>>> DATA
+354 Enter mail, end with "." on a line by itself
+>>> .
+250 2.0.0 g59ZWdN15290 Message accepted for delivery
+judith@wine... Sent <g59ZWdN15290 Message accepted for delivery>
+Closing connection to wine.edu.
+>>> QUIT
+221 2.0.0 wine.edu closing connection
+```
+
+## 测试备用邮件主机
+
+可以指定一个备用主机来接收和处理测试消息。这在检查备用邮件主机的正确配置时特别有用。备用邮件主机通过一种形式为 `user@host.domain@another.host.altdom` 的电子邮件地址指定。以下是基于 `/usr/bin/mail` 的另一个示例：
+
+```
+# /usr/bin/mail -v bart@wine.edu@smtp.whiskey.edu
+Subject: help
+<Enter a subject here or enter
+Sidewow Bob did it!
+<Enter a message or just enter
+.
+<Enter "." indicates the end of message
+Cc:
+<Enter to bypass Cc
+```
+
+为了使此功能正常工作，消息必须源自接收端 MTA 已知的邮件主机。这是因为大多数邮件主机被配置为拒绝来自反向查找失败的主机的连接。实现此结果的另一种方法是直接 `telnet` 到邮件主机的 `sendmail` 端口，并通过交互式 SMTP 会话与服务器进行通信。
+
+### 测试 Sendmail 规则集
+
+通过调用带有 *-bt* 标志的 **sendmail** 来测试规则集。**sendmail** 程序会提示输入要调用的规则集和目标地址。每两个规则集编号之间用逗号分隔。
+
+```
+# sendmail -bt -C/etc/mail/sendmail.cf
+ADDRESS TEST MODE (ruleset 3 NOT automatically invoked)
+Enter <ruleset> <address>
+> 2,4,0 user.name@node.dept.wine.edu
+2       input: user . name @ node . dept . wine . edu
+        returns: user . name @ node . dept . wine . edu
+final   input: user . name @ node . dept . wine . edu
+final   returns: user . name @ node . dept . wine . edu
+parse   input: user . name @ node . dept . wine . edu
+Parse0  input: user . name @ node . dept . wine . edu
+Parse0  returns: user . name @ node . dept . wine . edu
+ParseLocal
+ParseLocal        input: user . name @ node . dept . wine . edu
+ParseLocal        returns: user . name @ node . dept . wine . edu
+ParseI
+ParseI    input: user . name @ node . dept . wine . edu
+ParseI    returns: $@ local $: user . name @ node . dept . wine . edu
+parse       returns: $@ local $: user . name @ node . dept . wine . edu
+> /quit
+```
+
+**sendmail** 命令支持多种调试和跟踪级别。它们可以使用启动选项 *-d<n-m>,<n-m>* 激活，其中 **nn** 和 **mm** 定义调试和跟踪级别。由于输出可能 *非常冗长*，建议将输出重定向到文件中。IBM AIX 的 **sendmail** 守护进程仅支持值为 21;<n-m>，其中 <n-m> 可以是任何正整数。如果你正在运行当前的 **sendmail** 副本，请参考源代码了解调试和跟踪值。
+
+```
+# /usr/lib/sendmail -bd -q30m -d21.1
+```
+
+定期检查日志、邮件队列和统计文件，以查找停滞的邮件或循环。你可以使用 **mailq** 命令列出待交付队列。
+
+```
+# mailq
+---Q-ID---*----* ---Q-Time---- Sender/Recipient----
+g592gDN15290^ 5 Sat Jun 8 18:04 terry judith@wine.edu
+```
+
+以下 **ls** 命令列出了排在 */var/spool/mqueue/* 目录下的文件：
+
+```
+# ls -l /var/spool/mqueue
+total 2
+-rw-------   1 root    system        5 Jun 08 18:04 df592gDNDN15290
+-rw-------   1 root    system      481 Jun 08 18:04 qf592gDN15290
+-rw-------   1 root    system        0 Jun 08 18:04 xfg592gDN15290
+```
+
+| QID | 队列文件类型 |
+| --- | --- |
+| d | 消息数据文件 |
+| l | 锁定文件 |
+| n | 备份文件 |
+| q | 控制文件 |
+| t | 临时文件 |
+| x | 转录文件 |
+
+**表 17-3. 邮件队列文件类型**
+
+邮件队列中的文件由 QID 标识。QID 的第一个字符指定队列文件的类型。表 17-3 列出了文件类型。
+
+可以使用 */usr/lib/mailstats* 命令检查 */etc/mail/statistics* 文件。如果 *statistics* 文件不存在，你需要使用 *touch* 命令创建它。
+
+```
+$ mailstats
+Statistics from Sat Jun   8 20:51:29 PDT 2002
+M msgsfr bytes_from msqsto bytes_to msgsrej msgsdia Mailer
+3  18      18K    0      0K     0      0 local
+5  0      0K     18     18K    0      0 esmtp
+------------------------------------------------------------
+T  18     18K    18     18K    0      0
+C  18     18      18         0      0
+```
+
+要以程序可读的格式输出相同信息并重置 *statistics* 文件，请使用以下 *-p* 选项：
+
+```
+$ mailstats -p
+1023594689 1023594773
+3  18      18        0      0      0      0 local
+5  0      0         18     18       0      0 esmtp
+T  18     18        18           0      0
+C  18     18        0            0      0
+```
+
+## 管理邮件队列
+
+作为管理员，我们的责任是在邮件到达时通知用户，并催迫他们清除旧的无用邮件。由于后者做起来相当困难，我将先讨论较容易的部分：在邮件到达时通知用户。
+
+当 **comsat** 守护进程被 **sendmail** 提示时，它会通知用户有新邮件等待。此功能由默认 `/etc/profile` 中定义的 MAIL 和 MAILMSG 变量支持。
+
+```
+MAIL=/var/spool/mail/$LOGNAME
+MAILMSG="[YOU HAVE NEW MAIL]"
+```
+
+![](img/82f851021955589d82b22750fb3b1646_402_0.png)
+
+![](img/82f851021955589d82b22750fb3b1646_402_1.png)
+
+**comsat** 守护进程还必须在 `/etc/inetd.conf` 中定义并取消注释。
+
+```
+comsat dgram  upd  wait  root  /usr/sbin/comsat  comsat
+```
+
+在登录时通知用户有邮件等待也是一个好主意。这可以通过检查每种 shell 的默认登录脚本中的邮件来实现。有关设置系统范围的默认登录脚本的详细信息，请参见第 20 章。以下是创建新用户帐户之前添加到默认用户 `/etc/security/.profile` 中的登录邮件检查示例：
+
+```
+if [ -s ""$MAIL" ]
+    then echo "$MAILMSG"
+fi
+```
+
+如果不对用户社区采取强制手段，就很难鼓励用户跟上接收的邮件。最好的策略是使用定期提醒，并使用诸如 **du** 等磁盘利用率命令来跟踪队列使用情况。
+
+```
+# du -sk /var/spool/mail/
+# du -sk /var/spool/mail/*
+```
+
+![](img/82f851021955589d82b22750fb3b1646_402_2.png)
+
+![](img/82f851021955589d82b22750fb3b1646_402_3.png)
+
+### 检查清单
+
+以下是有关邮件和 Sendmail 要点的检查清单：
+
+- ☐ 识别电子邮件或 **电子邮件** 系统的组件。
+- ☐ 识别 **sendmail** 组件。
+- ☐ 不要在对直接连接到互联网的系统上使用 IBM 工作配置，除非禁用邮件的非限制性中继。
+- ☐ 保留 **sendmail** 活动的日志。
+- ☐ 识别满足网络上多台计算机特定角色的各种 **sendmail** 配置。
+- ☐ 识别投递代理和协议。
+- ☐ 识别邮件客户端。
+- ☐ 定义 **调试**。
+- ☐ 在邮件到达时通知用户，并催迫他们清除旧的无用邮件。
+
+# 第 18 章
+
+## Apache Web 服务
+
+![](img/82f851021955589d82b22750fb3b1646_403_0.png)
+
+IBM 随基础操作系统提供 Apache HTTP Server。尽管 AIX 下可以运行其他几个 Web 服务器，但 Apache 如今已成为互联网标准。服务器的工作是提供访问多媒体数据和通用互联网服务的公共接口。它通过超文本传输协议 (HTTP) 和超文本标记语言 (HTML) 的组合来实现这一点。驻留在服务器上的 HTML 数据页面通过 HTTP 传输到 Web 客户端。Web 服务器负责维护对受保护信息的访问控制，并与 Web 客户端协商安全通道。
+
+HTTP 实现类似于互联网邮件协议 SMTP，它是一个由命令/响应驱动的协议，在同一个双向套接字连接上发送命令、数据和错误代码。它还依赖 MIME 编码文档来克服自设的字符集限制。这些简单的设计选择有助于快速实施、广泛部署以及平台的普遍流行。除了简单的 HTML 之外，HTTP 的功能已通过伴随技术（如编程语言 JavaScript 和 Java）的使用得到扩展。可扩展标记语言 (XML) 和可扩展样式表语言 XSL 也在通过区分数据和呈现元素来改变互联网的互操作性。
+
+### Apache 服务器配置
+
+AIX 包含一个基于 Web 的配置系统，可以从默认服务器 Web 页面访问。这些配置实用程序由监听网络端口 8008 的 **httpd** 守护进程的一个额外实例运行。此服务器实例必须手动启动：
+
+```
+# /usr/HTTPServer/bin/httpd -f /usr/HTTPServer/conf/admin.conf
+```
+
+此配置工具使用 Java 和 JavaScript 进行用户交互，可用于快速安装简单的服务器配置。然而，它所需的长软件和网络依赖链使其难以依赖。强烈建议有能力的 Web 管理员真正理解 Apache 配置的细节。
+
+IBM 提供的二进制发行版将 Apache 安装到 /usr/HTTPServer，并将这些资源组织到子目录中（参见表 18-1）。
+
+### 指令配置
+
+Apache 包含丰富的配置选项，通过“指令”来控制，这些指令设置全局或局部值。示例 18-1 包含 **httpd.conf** 文件中前几条指令的列表。Apache 历史上将配置分为三个文件：**srm.conf、access.conf 和 httpd.conf**。包含在这三个文件中的指令和数据现在合并到 **httpd.conf** 中。对 **srm.conf** 和 **access.conf** 的支持默认通过设置 **AccessConfig** 和 **ResourceConfig** 指令为 /dev/null 来禁用（任意数量的任意命名的配置文件可能
+

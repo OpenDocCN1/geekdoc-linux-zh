@@ -1,0 +1,7 @@
+Having established the basics of users and groups (and having practiced creating and manipulating some users and groups), it’s natural to examine how they can be used to implement some access policies. In this chapter we examined six strategies of file protection and sharing, starting with some simple scenarios and building up to a situation in which different groups of users require different access rights to the same set of files.
+
+We stressed the advantages of working under a normal user account. We saw how easy it is to make errors when performing regular (seemingly harmless) tasks, and how these errors can cause a lot of damage if you’re working as root. Working under as a normal user account affords us some protection, and so it’s worth avoiding the root wherever possible. We looked at how to carry out administrative tasks in a normal user environment: mounting disks, executing sporadic root commands, and compiling and installing software locally.
+
+Finally, we noted a number of useful commands designed to check users activity on a Linux machine: `who`, `w`, `whoami`, `last`, and `lastb`.
+
+The next chapter will further expand the limits of your Red Hat Linux computer by connecting it to a network and making it fully interoperable with other servers.

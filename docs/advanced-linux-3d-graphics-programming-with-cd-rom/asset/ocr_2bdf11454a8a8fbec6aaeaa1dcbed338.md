@@ -1,0 +1,11 @@
++   - If the absolute value of the distance between a sphere’s center and a plane is greater than the sphere’s radius, the sphere is completely on one side of the plane; the sign of the distance determines which side it is on (inside or outside).
+
++   - If the absolute value of the distance between a sphere’s center and a plane is less than the sphere’s radius, the sphere is partially inside and partially outside the plane; in other words, the sphere intersects the plane.
+
++   - If the absolute value of the distance between a sphere’s center and a plane is exactly equal to the sphere’s radius, then the sphere grazes the plane.
+
+![](bbox=[0.16, 0.39, 0.68, 0.77])
+
+> Figure 4-10: *Checking for intersection between a bounding sphere and a plane.* Given a plane with normalized normal vector \(\langle A,B,C\rangle\), and a sphere with radius *r* and center at \((cx, cy, cz)\), this diagram shows how to classify the position of the sphere with respect to the plane. We evaluate the plane equation with the center point of the sphere, and compare the result to *r*. The value of *r* tells us the position of the sphere with respect to the plane. From top to bottom, the sphere is completely outside of, grazing the outside of, mostly on the outside of, split exactly in half by, mostly inside of, grazing the inside of, or completely inside of the plane.
+
+These facts mean that to check for containment of a bounding sphere in the view frustum, we evaluate the plane equation for each of the frustum’s planes by using the center of the sphere as the \((x,y,z)\) point in the plane equation. The result can be analyzed using the above facts to tell us if the sphere is completely outside, completely inside, or partially inside and partially outside of one individual frustum plane. If the sphere is completely outside of any one frustum plane, it and all of its bounded geometry are completely outside of the entire frustum, and can be eliminated from further processing. If the sphere is completely inside all frustum planes, then it and all of its bounded geometry are completely inside the entire frustum, and should be passed on for further

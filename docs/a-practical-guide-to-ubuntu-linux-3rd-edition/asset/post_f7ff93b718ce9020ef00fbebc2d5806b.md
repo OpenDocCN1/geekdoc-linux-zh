@@ -1,0 +1,293 @@
+
+## Q
+
+- Qemu 9
+- Qmail 715, 1116
+- qnx4 filesystem 506
+- runner daemon 735
+- Qt toolkit 275
+- question mark in extended regular expressions 1096
+- quiescent 445
+- quiet boot parameter 57
+- QUIT signal 152, 1009
+- quota utility 625
+- quotato utility 625
+- quotation marks
+  - see also quoting
+  - around variables 314
+  - around whitespace 315
+  - double 955
+  - in aliases 347
+  - in pathname expansion 364
+  - in Perl 1048
+  - removal of 357
+  - single 160
+- quoting 1167
+  - see also quotation marks
+  - characters 160
+  - let arguments 362
+  - NEWLIE characters using \ 304
+  - parentheses in regular expressions 1094
+  - shell variables using \ 314
+  - special characters in regular expressions 1093, 1093t
+  - trap, arguments to 1010
+
+## R
+
+- radio button 1167
+- RAID 40, 91, 514, 1167
+  - backups, does not replace 599
+  - fake 41
+- RAM 1167
+  - disk 43, 1168
+  - installation requirements 28
+  - swap and 38, 498
+  - testing 79
+- random access memory see RAM
+- random file 490
+- random number generator 490
+- RANDOM variable 1031
+- RAS 1121, 1168
+- raw devices 504
+- raw mode, device 504
+- rc script see init script
+- rc.conf file 438, 445
+- rc.local file 441
+- RC5 encryption 1113
+- rcn.d directory 440-443
+- rcs.conf file 445
+- rc-sysinit task 439
+- Rcs-sysinit.conf file 439
+- RDF 1168
+- read access permission 215
+- read builtin 974, 1003-1005, 1005t, 1005-1006
+- Readline completion commands 342-343
+- Readline Library command editor 340-346
+- Readline variables 344t
+- readiness utility 407
+- readonly builtin 317, 318
+- readonly memory see ROM
+- reboot system 451
+- reboot utility 450
+- recovery mode 445, 445-448
+  - Alternate CD, from 83
+  - from multiuser mode 451
+- rescue mode, versus 83
+- root password 444
+- root privileges 420
+- recovery-mode directory 447
+- recursion, infinite (aliases) 349
+- redirect
+  - see also redirection
+  - and append standard output using >> 249
+  - output of sudo using > 424
+  - output of sudo using tee 425
+  - output using a pipe (|) 170
+  - standard input using < 247-248
+  - standard input/output/error using exec 1007
+  - standard input using > 246-247
+  - standard output using tee 254
+- redirection 15, 245, 1168, see also redirect
+- redirection operators (bash) 299t
+- redundant array of inexpensive disks see RAID
+- reentrant code 1168
+- regular character 1168
+- regular expression 1089, 1168
+  - (<...>) brackets expressions 1094
+  - ampersand in replacement strings 1095
+  - anchors 1092
+  - asterisks 1092, 1092t
+  - brackets 1091, 1091t, 1094
+  - carets 1092
+  - carets and dollar signs 1092t
+  - character class 1140
+  - character classes and bracketed 1097t
+  - characters 1090
+  - delimiters 1090
+  - dollar signs 1092
+  - empty 1094
+  - extended 1095, 1096t, 1097t
+  - pipes 1096
+  - plus signs 1096
+  - question marks 1096
+  - summary 1097
+  - full 1095, 1096t
+  - list operator see character, class
+  - longest match 1093
+  - periods 1091, 1091t
+  - Perl 1073–1079
+  - quoted digits 1095
+  - quoted parentheses 1094
+  - quoting special characters 1093, 1093t
+  - replacement strings 1094, 1098t
+  - rules 1093
+  - simple strings 1090, 1090t
+  - special characters 1090, 1093, 1097t
+  - summary 1097
+- reiserfs filesystem 506
+- relational operators 1018
+- relative pathnames 206, 242, 1168
+- relaying, authenticated mail 736
+- release, upgrading 74
+- releases, Ubuntu 31
+- religious statue, miniature see icon
+- reoad utility 435
+- remainder operators 1020, 1022
+- remapping mouse buttons 274
+- remote
+  - access security 1121
+  - computing and local displays 270
+  - filesystem 1169
+  - login 147
+  - procedure call see RPC
+- replacement strings in regular expressions 1094
+- REPLY variable 984, 1004
+- reports, system 608, 621
+- repositories 131, 522, 522–524
+- request for comments see RFC
+- rescue mode versus recovery mode 83
+- rescue versus recovery mode 446
+- reserved ports see privileged ports
+- reset utility 458
+- resolution of display, changing 154
+- resolv.conf file 496, 834, 835
+- resolvconf utility 496, 834, 835
+- RESOLVCONF variable 834
+- resolver 400, 496, 824, 1169
+- Resource Description Framework 1168
+- resource records, DNS 827–830
+- restore 1169
+- restore utility 603–605
+- restricted deletion flag see sticky bit
+- restricted software package category 522
+- return code see exit, status
+- RETURN key 20, 160, 240
+- reverse name resolution, DNS 831–833
+- rxoe utility 404
+- rexecd daemon 404
+- RFC 1169
+- .rhost authentication, OpenSSH 665
+- .rhosts file 391, 1119
+- right-click, mouse 104
+- right-handed mouse 274
+- Ritchie, Dennis 11
+- rm utility 162, 232, 501
+- rmdir utility 210
+- mmdo utility 582
+- rmtab file 790
+- m utility 407
+- room 1169
+- role alias (Apache) 912
+- ROM 1169
+- romfs filesystem 506
+- root
+  - see also root account; root privileges
+  - directory / 35, 37, 200, 205, 213, 466, 1170
+  - domain, DNS 824
+  - filesystem / 1170
+  - login 1170
+  - window 118, 125, 1170
+- root account
+  - see also root privileges
+  - locked 98, 422
+  - password and recovery mode 444
+  - password and sudo 430
+  - prompt 420
+  - unlocking 431
+- /root directory 214
+- root privileges 98, 419–432
+  - see also root account
+  - admin group and 428
+  - gain using gsudo 423
+  - gain using kdesudo 423
+  - gain using su 421, 431
+  - gain using sudo 421–431
+  - gain using various methods 420
+  - graphical programs and 423
+  - PATH and security 432
+  - PC, from a 1116
+  - recovery mode 420
+  - setuid see setup
+  - shell with 424
+- root user see root account
+- rotate files 1170
+- router 638, 1170
+  - network 376, 377
+  - set up using iptables 892–896
+- row 628
+- RPC 406, 1170
+  - display information about portmap using rpcinfo 462–464
+  - portmap daemon 406
+- rpc file 496
+- rpc.gssd daemon 777
+- rpc.idmapd daemon 777
+- rpc.lockd daemon 776
+- rpc.statd daemon 776
+- RPG Program not registered error message 790
+- rpcinfo utility 462–464, 748
+- rquotad daemon 404
+- RSA encryption 1112, 1170
+- rsyslog.conf file 626–627
+- rsyslogd daemon 625–627
+- run 1170
+- Run Application window 103, 286
+- run command scripts 440
+- runlevel 443, 443r, 1170
+  - DEFAULT_RUNLEVEL variable 440, 445
+  - emulation in Upstart 434
+  - event 438
+  - initdefault, and 439
+  - PRELEVEL variable 438
+  - RUNLEVEL variable 438
+  - runlevel utility 444
+- RUNLEVEL variable 438
+- runlevels utility 451
+- run-parts utility 607
+
+## S
+
+- S/Key utility 1120
+- safedri shell script 981
+- Samba 797, 799, 1170
+  - see also Samba parameters
+  - configure using swat 804–807
+  - configure using system-config-samba 800–803
+  - debug nmblookup 818
+  - firewall setup 799
+  - home directories, sharing 814
+  - |homes| share 814
+  - JumpStart: configuring a Samba server using system-config-samba 800
+  - Linux shares, setting up 802
+  - Linux shares, working with from Windows 814
+  - manual configuration 807–814
+  - more information 799
+  - mount utility 816
+  - NBT 1161
+  - net use utility (Windows) 818
+  - net utility 798
+  - net view utility (Windows) 818
+  - NetBIOS 1161
+  - nmbd daemon 798, 818
+  - nmblookup utility 818
+  - parameters see Samba parameters
+  - passwords 799, 803
+  - pdbedit utility 798
+  - ping utility 818
+  - prerequisites 800
+  - printing from Windows 567
+  - share 799, 1171
+  - shared directory 647
+  - SMB 1172
+  - smb.conf file 804, 807–814
+  - smbclient utility 815, 819
+  - smbd daemon 798
+  - smbd init script 800
+  - smbpasswd utility 798, 803
+  - smbstat utility 798
+  - smbtar utility 798
+  - smbtime utility 815
+  - smbusers file 799
+  - swat utility 804–807
+  - system-config-samba utility 800
+  - testparm utility 817
+  - troubleshooting 817

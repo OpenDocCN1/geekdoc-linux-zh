@@ -1,0 +1,13 @@
+is a 0 if globally administered and a 1 if the address designation is locally administered. The sequence of bits of the destination address field is sent least significant bit first.
+
+**Source Address.** The source address is a 48-bit field that indicates the address of the transmitting node. The format of the source address is the same as that of the destination address. The source address is always the individual address and never a group address of the node sending a packet. Therefore, the least significant bit is always 0. Likewise, the broadcast address is never used in this field.
+
+**Type.** The type field is 16 bits in length and designates the message protocol type. This information is used at higher levels of message-handling software and does not affect the actual exchange of data bits across the network. The most significant of the two bytes is sent first, with the least significant bit of each byte of the type field being sent first.
+
+**Data.** The message payload of the packet is included in the data field. The data field is variable length. It may have as few as 46 bytes and as many as 1,500 bytes. Thus, a packet may be as small as 72 bytes or as long as 1,526 bytes. The contents of the data field are passed to higher-level software and do no affect the network transfer control. Data is transmitted least significant bit first.
+
+**Frame Check Sequence.** Error detection for message corruption in transmission is provided by computing a cyclic redundancy check (CRC) for the destination address, source address, type, and data fields. The four-byte CRC value is provided as the last field of the message packet. It is computed by both the transmitting and receiving nodes and compared by the receiving node to determine that the integrity of the packet has been retained in transmission.
+
+# ### 5.2.2 NIC Architecture
+
+The Network Interface Controller accepts message data from the host node processor and presents an encapsulated and encoded version of the data to the physical network medium for transmission. While there have been many different implementations of the Ethernet NIC hardware, with some enhancements, their basic architecture is the same. Figure 5.2 shows a block diagram of the typical Ethernet NIC architecture. The Data Link Layer of the architecture is responsible for constructing the message packet and controlling the logical network interface functions. The Physical Layer is responsible for encoding the message packet in a form that can actually be applied to the transmission medium.

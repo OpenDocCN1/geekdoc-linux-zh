@@ -1,0 +1,16 @@
+![](bbox=[0.12, 0.09, 0.88, 0.15])
+
+# ABSOLUTE
+FREEBSD
+
+THE COMPLETE GUIDE TO FREEBSD
+
+MICHAEL W. LUCAS
+
+![](bbox=[0.12, 0.4, 0.88, 0.87])
+
+# 3RD
+EDITION
+
+no starch
+press

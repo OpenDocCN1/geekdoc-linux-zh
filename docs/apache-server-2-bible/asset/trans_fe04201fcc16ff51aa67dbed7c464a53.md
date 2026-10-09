@@ -1,0 +1,158 @@
+
+
+## 注意
+
+如果你的用户表对 `username` 或 `passwd` 使用了不同的字段名，请务必修改查询语句以反映这些名称。
+
+`$success = mysql_fetch_row($sth)` 语句返回一个名为 `$success` 的数组，如果查询成功，该数组的第一个元素 `$success[0]` 的值应为 `1`。否则，该元素将未定义。
+
+通过使用第一个元素 `$success[0]`，决定是否使用 `show_challenge()` 来显示（或不显示）身份验证质询。
+
+用户通过身份验证后，这个简单的 `auth.php` 脚本除了打印一条消息表明用户已成功通过身份验证外，不做其他任何事情。当然，你可以让脚本执行更多操作。例如，你可以使用 `Header("Location:/path/to/subdirectory");` 将用户重定向到受保护的子目录。
+
+![](img/e11fcbd2818a3495ac70085e5d8d1c26_484_0.png)
+
+# 第 16 章
+## 将 Perl 与 Apache 结合使用
+
+Apache/Perl 集成项目的主要目标之一是将 Perl 编程语言的全部功能引入 Apache 服务器。这导致了 mod_perl 的开发，你可以将 Apache 和 Perl 一起编译并链接，以提供面向对象的 Perl 接口来访问服务器的 C 语言 API。这使 Perl 程序员能够用 Perl 编写 Apache 模块。Apache-Perl 模块可以在请求的处理、头部解析、URI 转换、身份验证、授权、访问、类型检查、修复、日志记录和清理阶段介入。
+
+mod_perl 模块与 Apache 广泛结合使用以创建动态内容。mod_perl 是将 Perl 与 Apache 结合使用的非常高效的方式；你不再需要运行基于 Perl 的 CGI 脚本，这些脚本速度慢、资源消耗大，且通常不适合每秒接收大量并发请求的网站。本章讨论如何编译、安装和配置用于 mod_perl 的 Apache，如何使用 mod_perl 运行旧的 CGI 脚本，以及如何开发 mod_perl 模块以充分利用 Apache API。
+
+### 本章内容
+
+- 编译和安装 mod_perl
+- 通过 mod_perl 运行 CGI 脚本
+- 编写 mod_perl 模块
+- 预加载模块
+- 共享内存
+- 使用 mod_perl 编写数据库应用程序
+
+### 编译和安装 mod_perl
+
+以下是如何在你的系统上下载、编译和安装 mod_perl 的方法：
+
+1. 从 `http://perl.apache.org/dist` 站点或官方镜像站点下载最新版本的 mod_perl 源代码到 `/usr/local/src` 目录。
+
+![](img/e11fcbd2818a3495ac70085e5d8d1c26_485_0.png)
+
+请确保在进行编译之前阅读源发行版中的安装说明和 README 文件。随着 mod_perl 和/或新版本的 Apache 更新，下面讨论的步骤可能会发生变化。
+
+2. 以 **root** 身份使用 `tar xvfz mod_perl-version.tar.gz` 命令解压 *mod_perl* 源发行版。本节假设你将 Apache 源发行版解压到了 `/usr/local/src`。
+
+3. 切换到 `/usr/local/src/mod_perl-version` 目录并运行：
+
+```
+Perl Makefile.PL APACHE_SRC=../apache-version \
+  DO_HTTPD=1 \
+  USE_APACHE=1 \
+  PERL_MARK_WHERE=1 \
+  EVERYTHING=1
+```
+
+别忘了将 `../apache-version` 更改为适当的路径名。
+
+4. 运行 `make && make test && make install` 命令，将 *mod_perl* 库编译、测试并安装到 Apache 源发行版中。
+
+5. 切换到 Apache 源发行版目录并运行 `make install`，以支持 *mod_perl* 的方式编译和安装 Apache。
+
+6. 使用 `/usr/local/apache/bin/apachectl start` 命令启动新编译的 Apache 服务器。如果你已经运行了以前版本的 Apache 服务器，请使用 `/usr/local/apache/bin/apachectl stop` 命令停止它，然后运行 `start` 命令以重新启动具有 *mod_perl* 功能的新服务器。如果你在 Unix 系统上，可以运行 `lynx -dump -head http://localhost/` 命令来转储服务器显示的头部。如果 *mod_perl* 安装正确，你将看到头部信息中的 `mod_perl/version` 信息。
+
+### 使用 *mod_perl* 运行 CGI 脚本
+
+由于 CGI 脚本速度慢且在重负载下占用更多资源，在理想情况下，当 *mod_perl* 在你的系统上工作时，你不会运行 CGI 脚本。然而，现实是系统管理员很忙，移植已经正常运行的东西通常会被忽略，因为其他地方有更重要、更严重的工作等待处理。幸运的是，*mod_perl* 允许你使用名为 `Apache::Registry.pm` 的默认 *mod_perl* 模块来运行你的 CGI 脚本。因此，你可以立即在 *mod_perl* 下运行你的 CGI 脚本。方法如下。
+
+1. 在 `httpd.conf` 文件中，通过添加以下行创建一个名为 `/apps/` 的别名，指向你的 CGI 脚本目录：
+
+```
+Alias /apps/ "/www/mysite/cgi-bin"
+```
+
+请确保将 `/www/mysite/cgi-bin` 更改为你系统上适当的 CGI 脚本目录。
+
+2. 通过在 `httpd.conf` 中添加以下行，告诉 Apache 在启动时加载 `Apache::Registry` 模块：
+
+```
+PerlModule Apache::Registry
+```
+
+3. 通过在 `httpd.conf` 中添加以下配置段，告诉 Apache 对 `/apps/` 目录下的所有脚本通过 `Apache::Registry` 运行：
+
+```apache
+<Location /apps>
+    SetHandler perl-script
+    PerlHandler Apache::Registry
+    Options ExecCGI
+</Location>
+```
+
+4. 使用 `/usr/local/apache/bin/apachectl` restart 命令重启 Apache 服务器。
+
+5. 使用 `http://your_server_name/apps/script_name.` 通过 Web 浏览器访问 CGI 脚本。如果你设置了 `ScriptAlias` 指令将 `/cgi-bin/` 指向 `/www/mysite/cgi-bin`（或你系统上称为 CGI 脚本目录的任何名称），那么你可以使用 `http://your_server_name/cgi-bin/script_name.` 将 CGI 脚本作为“CGI”脚本访问，或者你可以使用 `http://your_server_name/apps/script_name.` 通过 `mod_perl` 访问相同的脚本。后者的优势是不会为每个请求生成一个新的 CGI 进程，从而使其运行更快。注意，`mod_perl` 环境变量可以区分脚本是如何运行的（CGI 或 `mod_perl`）。例如，考虑以下代码段：
+
+```perl
+if ($ENV{MOD_PERL} ne '') {
+    # 作为原生 mod_perl
+    # 模块或 Apache::Registry 运行脚本，
+    # 以 mod_perl 脚本身份运行
+} else {
+    # 通过 mod_cgi 作为
+    # 独立进程运行的 CGI 脚本
+}
+```
+
+上面的条件语句检测脚本是如何运行的。`apps` 目录中的脚本将通过 `Apache::Registry` 模块运行。这意味着你可以通过使用 `--disable-module=cgi` 选项重新编译 Apache，从你的系统中完全移除 `mod_cgi` 模块。
+
+### 不要重造轮子
+
+在你开始为 Web 服务器编写一个很酷的 `mod_perl` 模块之前，请先考虑在 CPAN 上查找现有的可能解决你问题的模块。截至写作本文时，CPAN 上大约有 500 个特定的 `mod_perl` Perl 模块。你可以按以下方式查看 CPAN 上可用的模块：
+
+1. 运行 `perl -MCPAN -e shell` 命令。
+2. 在 `cpan>` 提示符下，输入 `i /Apache/`。你应该会收到所有可用的 Apache 相关模块列表。
+
+### 使用 Apache 的 Perl API 创建 mod_perl 模块
+
+当你在系统上安装 mod_perl 时，你也安装了一个非常强大的 Apache Perl 应用程序接口（API）。通过使用这个 API，你可以开发利用 mod_perl 的“原生”方式的 mod_perl 脚本。虽然你可以使用 mod_perl 运行 CGI 脚本，但它们并非为使用 Perl API 的 mod_perl 设计，因此无法完全利用 mod_perl 的强大功能。以下材料展示了如何开发使用 Apache 的 Perl API 编写的脚本，以充分利用 mod_perl 模块。
+
+原生的 mod_perl 脚本作为一个 Perl 模块编写，具有以下架构：
+
+```perl
+package MODULE_NAME;
+
+sub handler {
+    # 使用 Apache API 提供的请求
+    # 对象做一些有用的事情
+}
+
+sub module_method_1 { # 做某件有用的事 }
+sub module_method_2 { # 做某件有用的事 }
+sub module_method_3 { # 做某件有用的事 }
+...
+sub module_method_N { # 做某件有用的事 }
+
+1;
+```
+
+这里，模块文件以一个包名开始。包名必须与模块文件名匹配。例如，如果你将包（即模块）命名为：
+
+```perl
+package MyModule;
+```
+
+那么你必须将包含此模块的文件命名为 MyModule.pm。通常，Perl 模块文件保存在由 @INC 数组指向的目录列表中的某个子目录中。你可以运行以下命令来查找 @INC 指向哪些目录：
+
+```perl
+perl -le 'print join("\n", @INC)'
+```
+
+你可能会看到类似以下的输出：
+
+```
+/usr/lib/perl5/5.6.0/i386-linux
+/usr/lib/perl5/5.6.0
+/usr/lib/perl5/site_perl/5.6.0/i386-linux
+/usr/lib/perl5/site_perl/5.6.0
+/usr/lib/perl5/site_perl
+.
+```
+

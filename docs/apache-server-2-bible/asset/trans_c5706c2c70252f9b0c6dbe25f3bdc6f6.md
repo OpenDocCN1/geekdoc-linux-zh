@@ -1,0 +1,227 @@
+
+## 表 17-2 Java 安全管理器权限类型
+
+| 权限类型 | 含义 |
+| :--- | :--- |
+| `java.util.PropertyPermission` | 控制对 JVM 属性（如 `java.home`）的读/写访问权限。 |
+| `java.lang.RuntimePermission` | 控制某些系统或运行时功能（如 `exit()` 和 `exec()`）的使用。 |
+| `java.io.FilePermission` | 控制文件和目录的权限。 |
+| `java.net.SocketPermission` | 控制网络套接字的使用。 |
+| `java.net.NetPermission` | 控制多播网络连接的使用。 |
+| `java.lang.reflect.ReflectPermission` | 控制使用反射进行类内省的操作。 |
+| `java.security.SecurityPermission` | 控制对安全方法的访问。 |
+| `java.security.AllPermission` | 允许所有操作，这实际上等同于不使用 Java 安全管理器。 |
+
+Tomcat 的安全策略在 `/var/tomcat/conf/tomcat.policy` 文件中定义。该文件通常使用以下语法来授予权限：
+
+```
+grant codebase code_source {
+    permission_type_class [name [, action_list]];
+};
+```
+
+例如，默认的 `/var/tomcat/conf/tomcat.policy` 文件授予以下权限：
+
+```
+// Example webapp policy
+// By default we grant read access to webapp dir and
+// write to workdir
+grant codebase "file:${tomcat.home}/webapps/examples" {
+    permission java.net.SocketPermission "localhost:1024-",
+        "listen";
+    permission java.util.PropertyPermission "*", "read";
+};
+```
+
+`${tomcat.home}/webapps/examples`（即 `/var/tomcat/webapps/examples`）中的文件被授予权限，可以使用网络套接字在本地主机（localhost）上监听 1024 或更高的端口，并且仅允许对所有 JVM 属性进行读访问。
+
+如果你希望名为 `/var/tomcat/webapps/your_app_name` 的应用程序通过 TCP 端口 389 连接到轻量级目录访问协议（LDAP）服务器，你需要授予以下权限：
+
+```
+grant codeBase "file:${tomcat.home}/webapps/your_app_name" {
+    permission java.net.SocketPermission "localhost:389",
+        "connect";
+    permission java.util.PropertyPermission "*", "read";
+};
+```
+
+默认情况下，Tomcat 的 Java 安全管理器是禁用的。你必须按以下方式启用它：
+
+- 在 `/var/tomcat/conf/server.xml` 文件中，你应该找到以下内容：
+
+```
+<!-- Uncomment out if you have JDK1.2 and want to use policy
+
+    <ContextInterceptor
+        className="org.apache.tomcat.context.PolicyInterceptor" />
+    -->
+```
+
+此默认设置禁用了安全管理器，因此你必须移除注释，使其变为以下内容：
+
+```
+<ContextInterceptor
+    className="org.apache.tomcat.context.PolicyInterceptor" />
+```
+
+- 使用 `-security` 选项重启 Tomcat。例如，运行 `/usr/bin/tomcat -security` 将在启用 Java 安全管理器的情况下重启 Tomcat。
+
+当 Java 安全管理器拦截到违反安全策略的操作时，JVM 会抛出 `AccessControlException` 或 `SecurityException`。
+
+### 为 Servlet 和 JSP 配置 Apache
+
+启动 Tomcat 时，它会创建一个名为 `/var/tomcat/conf/mod_jk.conf-auto` 的配置文件。为了让 Apache 与 Tomcat 进行交互，你需要让 Apache 加载此文件。为此，请修改 `httpd.conf` 并添加以下行：
+
+```
+Include /var/tomcat/conf/mod_jk.conf-auto
+```
+
+自动生成的 `mod_jk.conf-auto` 文件存在一个问题。它指示 Apache 从服务器根目录（由 `httpd.conf` 中的 `ServerRoot` 指令指定）下名为 `libexec` 的子目录中加载 `mod_jk.so` 模块。不幸的是，该目录并不存在，而 `mod_jk.so` 安装在 `/usr/lib/apache` 目录中。因此，你有两个选择：
+
+你可以不通过 `Include` 指令指向 `/var/tomcat/conf/mod_jk.conf-auto` 文件，而是将此文件复制为另一个名称（例如 `mod_jk.conf`），并使用：
+
+```
+Include /var/tomcat/conf/mod_jk.conf
+```
+
+然后，修改 `mod_jk.conf` 文件，将 `LoadModule jk_module libexec/mod_jk.so` 行更改为 `LoadModule jk_module /usr/lib/apache/mod_jk.so`。
+
+或者，你可以简单地在你的 Apache 服务器根目录中创建一个名为 `libexec` 的子目录，并将 `mod_jk.so` 放入其中。在这种情况下，你必须先启动 Tomcat 再启动 Apache，因为 `/var/tomcat/conf/mod_jk.conf-auto` 是每次 Tomcat 启动时生成的。
+
+假设你选择了第一种方法，因为它更易于管理。第一行配置是：
+
+```
+LoadModule jk_module /usr/lib/apache/mod_jk.so
+```
+
+`LoadModule` 指令加载 `mod_jk.so` DSO 模块，使 Apache 能够与 Tomcat 交互。
+
+```
+JkWorkersFile /var/tomcat/conf/workers.properties
+```
+
+此行设置 `JkWorkersFile` 指令，使其指向 `/var/tomcat/conf/workers.properties`。该文件为 `mod_jk` 提供连接不同 Tomcat 实例（也称为工作者/workers）所需的信息。请勿更改此指令。
+
+```
+JkLogFile /var/tomcat/logs/mod_jk.log
+```
+
+此处使用 `JkLogFile` 指令定义日志文件路径。
+
+```
+JkLogLevel error
+```
+
+上述行设置用于记录日志文件中错误的日志级别。可能的日志级别包括 `debug`、`warn`、`error` 和 `emerg`，但 `warn` 应该是你的默认选择。
+
+```
+JkMount /*.jsp ajp12
+JkMount /servlet/* ajp12
+```
+
+上面显示的两行将 `/*.jsp` 和 `/servlet/*` URL 前缀分配给名为 `ajp12` 的 Tomcat 工作者。这意味着任何具有 `<anything>.jsp`（例如，`/foo.jsp`、`/bar.jsp` 或 `/servlet/<anything>`，例如，`/servlet/foo`、`/servlet/bar`）的 URL 请求都将被分配给 `ajp12` 工作者。建议将这两行更改为使用 `ajp13`（更快），如下所示：
+
+```
+JkMount /*.jsp ajp13
+JkMount /servlet/* ajp13
+```
+
+此处显示的指令是典型的 Apache 指令：
+
+```
+Alias /examples "/var/tomcat/webapps/examples"  
+<Directory "/var/tomcat/webapps/examples">  
+    Options Indexes FollowSymLinks  
+</Directory>
+```
+
+创建了一个名为 /examples 的别名，它指向一个名为 /var/tomcat/webapps/examples 的物理目录。该目录容器启用了别名目录中的目录列表和符号链接。
+
+下面显示的下两个指令将 /examples/servlet/* 和 /examples/*.jsp 分配给 Tomcat 工作者 ajp12：
+
+```
+JkMount /examples/servlet/* ajp12  
+JkMount /examples/*.jsp ajp12
+```
+
+如果你愿意，可以将它们更改为 ajp13。因为这只是示例，所以并不关键。
+
+下面显示的一组指令禁用了示例树下的 WEB-INF 和 META-INF 目录的访问权限。这两个目录不应可浏览，因此采取此措施是恰当的：
+
+```
+<Location "/examples/WEB-INF/">  
+    AllowOverride None  
+    deny from all  
+</Location>  
+
+<Location "/examples/META-INF/">  
+    AllowOverride None  
+    deny from all  
+</Location>
+```
+
+下面显示的一组指令创建了与 /examples 完全相同的配置。
+
+```
+Alias /admin "/var/tomcat/webapps/admin"  
+<Directory "/var/tomcat/webapps/admin">  
+    Options Indexes FollowSymLinks  
+</Directory>  
+
+JkMount /admin/servlet/* ajp12  
+JkMount /admin/*.jsp ajp12  
+
+<Location "/admin/WEB-INF/">  
+    AllowOverride None  
+    deny from all  
+</Location>  
+
+<Location "/admin/META-INF/">
+    AllowOverride None
+    deny from all
+</Location>
+```
+
+你可以将 /admin/servlet/* 和 /admin/*.jsp 的工作者更改为 ajp13，以利用这种新的、更快的协议。最后，对 /test 重复相同的配置：
+
+```
+Alias /test /var/tomcat/webapps/test
+<Directory "/var/tomcat/webapps/test">
+  Options Indexes FollowSymLinks
+</Directory>
+
+JkMount /test/servlet/* ajp12
+JkMount /test/*.jsp ajp12
+
+<Location "/test/WEB-INF/*">
+  AllowOverride None
+  deny from all
+</Location>
+
+<Location "/test/META-INF/*">
+  AllowOverride None
+  deny from all
+</Location>
+```
+
+完成修改上述配置并保存 **httpd.conf** 文件后，重启 Apache 服务器。你可以通过使用 http://your_web_server/examples/ 来访问 Servlet 和 JSP 示例。你也可以通过使用 http://your_web_server/admin/ 来访问管理工具。但是，如果你想使用基于 Web 的管理工具查看上下文（即虚拟目录）信息，你必须在 /var/tomcat/conf/tomcat-users.xml 文件中创建一个名为 admin 的用户。此文件如下所示：
+
+```
+<tomcat-users>
+  <user name="tomcat" password="tomcat" roles="tomcat" />
+  <user name="role1" password="tomcat" roles="role1" />
+  <user name="both" password="tomcat" roles="tomcat,role1" />
+</tomcat-users>
+```
+
+在以下示例中，我添加了一个名为 admin 的用户，密码为 mypwd。
+
+```
+<tomcat-users>
+  <user name="tomcat" password="tomcat" roles="tomcat" />
+  <user name="role1" password="tomcat" roles="role1" />
+  <user name="both" password="tomcat" roles="tomcat,role1" />
+  <user name="admin" password="mypwd" roles="admin" />
+</tomcat-users>
+```
+

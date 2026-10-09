@@ -1,0 +1,9 @@
+![](bbox=[0.19, 0.08, 0.93, 0.4])
+
+Emblems   The Emblems tab (Figure 4-20, left) allows you to add and remove emblems associated with the file by placing or removing a tick in the check box next to an emblem. Figure 4-16 on page 123 shows some emblems on file objects. Nautilus displays emblems in both its Icon and List views, although there may not be room for more than one emblem in the List view. Emblems are displayed on the desktop as well. You can also place an emblem on an object by dragging the emblem from the Side pane/Emblems and dropping it on an object in the View pane (page 277) of a File Browser window.
+
+Permissions   The Permissions tab (Figure 4-20, right) allows the owner of a file to change the file’s permissions (page 215) and to change the group (see /etc/group on page 492) the file is associated with to any group the owner is associated with. When running with root privileges, you can also change the owner of the file. The command gksudo nautilus, when given from a terminal emulator window, opens a File Browser window running with root privileges (but read the caution on page 98). Nautilus grays out items you are not allowed to change.
+
+Using the drop-down lists, you can give the owner (called user elsewhere; see the tip about ahome on page 217), group, and others read or read and write permission for a file. Alternatively, you can prohibit the group and others from accessing the file by specifying permissions as None. Put a tick in the check box labeled Execute to give all users permission to execute the file. This tab does not give you as fine-grained control over assigning permissions as chmod (page 216) does.
+
+Permissions for a directory work as explained on page 220. Owner, group, and others can be allowed to list files in a directory, access (read and—with the proper permissions—execute) files, or create and delete files. Group and others permissions

@@ -1,0 +1,29 @@
+> “I currently own one of your books, A Practical Guide to Linux®. I believe this book is one of the most comprehensive and, as the title says, practical guides to Linux I have ever read. I consider myself a novice and I come back to this book over and over again.”
+> 
+> —*Albert J. Nguyen*
+
+> “Thank you for writing a book to help me get away from Windows XP and to never touch Windows Vista. The book is great; I am learning a lot of new concepts and commands. Linux is definitely getting easier to use.”
+> 
+> —*James Moritz*
+
+> “I am so impressed by how Mark Sobell can approach a complex topic in such an understandable manner. His command examples are especially useful in providing a novice (or even an advanced) administrator with a cookbook on how to accomplish real-world tasks on Linux. He is truly an inspired technical writer!”
+> 
+> —*George Vish II*
+> *Senior Education Consultant*
+> *Hewlett-Packard Company*
+
+> “Overall, I think it’s a great, comprehensive Ubuntu book that’ll be a valuable resource for people of all technical levels.”
+> 
+> —*John Dong*
+> *Ubuntu Forum Council Member*
+> *Backports Team Leader*
+
+> “The JumpStart sections really offer a quick way to get things up and running, allowing you to dig into the details of the book later.”
+> 
+> —*Scott Mann*
+> *Aztek Networks*
+
+> “I would so love to be able to use this book to teach a class about not just Ubuntu or Linux but about computers in general. It is thorough and well written with good illustrations that explain important concepts for computer usage.”
+> 
+> —*Nathan Eckenrode*
+> *New York Local Community Team*

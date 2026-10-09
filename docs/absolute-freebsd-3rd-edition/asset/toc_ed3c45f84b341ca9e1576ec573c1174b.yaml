@@ -1,0 +1,4274 @@
+- - '##'
+  - 参考文献
+- - '##'
+  - 索引
+- - '##'
+  - 前言
+- - '##'
+  - 引言
+- - '##'
+  - 参考文献
+- - '###'
+  - FreeBSD 的优势
+- - '####'
+  - 可移植性
+- - '#####'
+  - 性能
+- - '#####'
+  - 简化的软件管理
+- - '#####'
+  - 可定制的安装
+- - '#####'
+  - 高级文件系统
+- - '###'
+  - FreeBSD 的衍生项目
+- - '###'
+  - macOS
+- - '###'
+  - Solaris
+- - '###'
+  - illumos
+- - '###'
+  - AIX
+- - '###'
+  - 可移植性
+- - '###'
+  - 性能
+- - '###'
+  - 简化的软件管理
+- - '###'
+  - 可定制的安装
+- - '###'
+  - 高级文件系统
+- - '###'
+  - 谁应该使用 FreeBSD？
+- - '###'
+  - 谁应该运行其他 BSD？
+- - '###'
+  - 谁应该运行专有操作系统？
+- - '###'
+  - 如何阅读本书
+- - '###'
+  - 你必须知道什么？
+- - '###'
+  - 给新的系统管理员
+- - '###'
+  - 桌面 FreeBSD
+- - '###'
+  - 如何思考 Unix
+- - '###'
+  - 管道
+- - '###'
+  - 小型程序、管道和命令行
+- - '###'
+  - 一切皆文件
+- - '###'
+  - 关于第三版的说明
+- - '###'
+  - 本书内容
+- - '###'
+  - 第 1 章：获取更多帮助
+- - '###'
+  - 第 2 章：安装之前
+- - '###'
+  - 第 3 章：安装
+- - '###'
+  - 第 4 章：启动我！‘引导过程
+- - '###'
+  - 第 5 章：在搞坏其他东西前读这个！（备份与恢复）
+- - '###'
+  - 第 6 章：内核游戏
+- - '###'
+  - 第 7 章：网络
+- - '###'
+  - 第 8 章：配置网络
+- - '###'
+  - 第 9 章：保护您的系统安全
+- - '###'
+  - 第 10 章：磁盘、分区与 GEOM
+- - '###'
+  - 第 11 章：Unix 文件系统
+- - '###'
+  - 第 12 章：Z 文件系统
+- - '###'
+  - 第 13 章：外部文件系统
+- - '###'
+  - 第 14 章：探索 /etc
+- - '###'
+  - 第 15 章：使您的系统实用化
+- - '###'
+  - 第 16 章：使用 Ports 定制软件
+- - '###'
+  - 第 17 章：高级软件管理
+- - '###'
+  - 第 18 章：升级 FreeBSD
+- - '###'
+  - 第 19 章：高级安全功能
+- - '###'
+  - 第 20 章：小型系统服务
+- - '###'
+  - 第 21 章：系统性能与监控
+- - '###'
+  - 第 22 章：Jails
+- - '###'
+  - 第 23 章：FreeBSD 的边缘特性
+- - '###'
+  - 第 24 章：问题报告与恐慌
+- - '##'
+  - '1'
+- - '##'
+  - 获取更多帮助
+- - '###'
+  - 为何不乞求帮助？
+- - '###'
+  - FreeBSD 的态度
+- - '###'
+  - 支持选项
+- - '###'
+  - 手册页
+- - '###'
+  - 手册章节
+- - '###'
+  - 导航手册页
+- - '###'
+  - 查找手册页
+- - '###'
+  - 章节号和 man
+- - '###'
+  - 手册页内容
+- - '###'
+  - FreeBSD.org
+- - '###'
+  - 网络文档
+- - '###'
+  - 邮件列表存档
+- - '###'
+  - 论坛
+- - '####'
+  - 其他网站
+- - '###'
+  - 使用 FreeBSD 问题解决资源
+- - '####'
+  - 检查《手册》和 FAQ
+- - '####'
+  - 检查手册页
+- - '####'
+  - 邮件列表存档和论坛
+- - '####'
+  - 使用你的答案
+- - '####'
+  - 寻求帮助
+- - '####'
+  - 撰写你的消息
+- - '####'
+  - 发送电子邮件
+- - '#####'
+  - 论坛发帖
+- - '#####'
+  - 回复邮件
+- - '#####'
+  - 互联网永存
+- - '##'
+  - '2'
+- - '##'
+  - 安装前准备
+- - '###'
+  - 默认文件
+- - '###'
+  - 使用 UCL 进行配置
+- - '###'
+  - FreeBSD 硬件
+- - '###'
+  - 专有硬件
+- - '###'
+  - 硬件需求
+- - '###'
+  - BIOS 与 EFI
+- - '####'
+  - 磁盘和文件系统
+- - '####'
+  - FreeBSD 文件系统
+- - '###'
+  - 文件系统加密
+- - '###'
+  - 磁盘分区方法
+- - '####'
+  - 使用 UFS 进行分区
+- - '####'
+  - 多个操作系统
+- - '####'
+  - 多个硬盘
+- - '####'
+  - 交换空间
+- - '###'
+  - 获取 FreeBSD
+- - '###'
+  - FreeBSD 版本
+- - '###'
+  - 选择安装映像
+- - '###'
+  - FreeBSD 镜像
+- - '###'
+  - 网络安装
+- - '##'
+  - '3'
+- - '##'
+  - 核心设置
+- - '###'
+  - 发行版选择
+- - '###'
+  - 磁盘分区
+- - '####'
+  - UFS 安装
+- - '####'
+  - ZFS 安装
+- - '###'
+  - 网络和服务配置
+- - '###'
+  - 完成安装
+- - '##'
+  - '4'
+- - '##'
+  - 启动！引导过程
+- - '###'
+  - 递归警告
+- - '###'
+  - 开机
+- - '###'
+  - 统一可扩展固件接口
+- - '###'
+  - 基本输入/输出系统
+- - '###'
+  - 加载器
+- - '###'
+  - 启动多用户 [Enter]
+- - '###'
+  - 在单用户模式下启动 FreeBSD
+- - '###'
+  - 转义到加载器提示符
+- - '###'
+  - 重启
+- - '###'
+  - 单用户模式
+- - '####'
+  - 单用户模式下的磁盘
+- - '####'
+  - 单用户模式下的 UFS
+- - '#####'
+  - fsck -p
+- - '#####'
+  - mount -u rw /
+- - '#####'
+  - mount -a
+- - '#####'
+  - mount /dev/ad0s1a /
+- - '#####'
+  - mount -a -t ufs
+- - '####'
+  - 单用户模式下的 ZFS
+- - '#####'
+  - zfs mount -a
+- - '#####'
+  - zfs set readonly=off zroot/ROOT/default
+- - '####'
+  - 单用户模式下可用的程序
+- - '####'
+  - 单用户模式下的网络
+- - '####'
+  - 单用户模式的用途
+- - '#####'
+  - passwd
+- - '#####'
+  - chmod a-x /usr/local/etc/rc.d/program.sh
+- - '####'
+  - 系统故障与人为失误
+- - '####'
+  - 加载器提示符
+- - '#####'
+  - 查看磁盘
+- - '######'
+  - 加载器变量
+- - '#####'
+  - 重新启动
+- - '#####'
+  - 从加载器启动
+- - '#####'
+  - 加载器配置
+- - '#####'
+  - 启动选项
+- - '#####'
+  - 加载系统默认值
+- - '#####'
+  - ACPI 支持
+- - '#####'
+  - 安全模式
+- - '#####'
+  - 冗长模式
+- - '#####'
+  - 启动消息
+- - '#####'
+  - 多用户启动
+- - '#####'
+  - /etc/rc.conf、/etc/rc.conf.d 和 /etc/defaults/rc.conf
+- - '######'
+  - sysrc(8)
+- - '#######'
+  - sysrc -a
+- - '#######'
+  - sysrc rc_startmsgs=NO
+- - '#######'
+  - sysrc bert=no
+- - '#######'
+  - sysrc -x bert
+- - '#######'
+  - sysrc -af /boot/loader.conf
+- - '######'
+  - /etc/rc.conf.d/
+- - '######'
+  - 启动选项
+- - '#####'
+  - 文件系统选项
+- - '#####'
+  - 杂项网络守护进程
+- - '#####'
+  - 网络选项
+- - '#####'
+  - 网络路由选项
+- - '#####'
+  - 控制台选项
+- - '#####'
+  - 其他选项
+- - '####'
+  - rc.d 启动系统
+- - '#####'
+  - service(8) 命令
+- - '######'
+  - 列出和识别已启用的服务
+- - '#######'
+  - service -e
+- - '######'
+  - 管理服务
+- - '#######'
+  - service name command
+- - '#######'
+  - service sshd describe
+- - '#######'
+  - service sshd restart
+- - '#####'
+  - 系统关机
+- - '#####'
+  - 串行控制台
+- - '######'
+  - 串行协议
+- - '######'
+  - 物理串行控制台设置
+- - '######'
+  - IPMI 串行控制台设置
+- - '######'
+  - BMC 设置
+- - '######'
+  - UEFI/BIOS 串行控制台配置
+- - '#######'
+  - 配置 FreeBSD 的串行控制台
+- - '########'
+  - 控制台选项
+- - '########'
+  - 高级控制台选项
+- - '#######'
+  - grep uart /var/run/dmesg.boot
+- - '#######'
+  - 使用串行控制台
+- - '########'
+  - 物理串行线路
+- - '#########'
+  - tip portname
+- - '#########'
+  - Finger friendly shortcuts
+- - '#########'
+  - tip uart1
+- - '######'
+  - IPMI SOL 连接
+- - '#######'
+  - ipmitool -H bmc -U username -I lanplus sol activate
+- - '#######'
+  - ipmitool -H www-kvm -U bert -I lanplus sol activate
+- - '#####'
+  - 在控制台工作
+- - '##'
+  - '5'
+- - '##'
+  - 系统备份
+- - '###'
+  - 备份磁带
+- - '####'
+  - 磁带驱动器设备节点、回卷与弹出
+- - '####'
+  - $TAPE 变量
+- - '####'
+  - 使用 mt(1) 查看磁带状态
+- - '#####'
+  - mt status
+- - '####'
+  - 其他磁带驱动器命令
+- - '####'
+  - 磁带驱动器特性
+- - '####'
+  - BSD tar(1)
+- - '###'
+  - 文件系统一致性
+- - '###'
+  - tar 模式
+- - '####'
+  - 创建归档
+- - '#####'
+  - tar -c /
+- - '#####'
+  - tar -c /home /var
+- - '####'
+  - 列出归档内容
+- - '#####'
+  - tar -t
+- - '####'
+  - 从备份中提取文件
+- - '#####'
+  - cd /home/mw/lucas
+- - '#####'
+  - tar -x etc
+- - '####'
+  - 验证备份
+- - '####'
+  - 其他 tar 功能
+- - '####'
+  - 使用非默认存储
+- - '#####'
+  - tar -c -f /dev/east0 /
+- - '#####'
+  - tar -cf bookbackup.tar /home/mlucas/af3e/
+- - '####'
+  - 详细输出
+- - '####'
+  - 压缩
+- - '#####'
+  - XZ 压缩
+- - '#####'
+  - bzip 压缩
+- - '#####'
+  - gzip 压缩
+- - '#####'
+  - 原始 Unix 压缩
+- - '#####'
+  - 权限恢复
+- - '###'
+  - 压缩与 FreeBSD TAR
+- - '###'
+  - 还有更多、更多、更多……
+- - '###'
+  - 记录发生了什么
+- - '####'
+  - script /home/mwlucas/debug.txt
+- - '###'
+  - 修复损坏的系统
+- - '##'
+  - '6'
+- - '##'
+  - 内核游戏
+- - '###'
+  - 什么是内核？
+- - '###'
+  - 内核状态：sysctl
+- - '####'
+  - sysctl -o -a > sysctl1.out
+- - '####'
+  - sysctl MIB
+- - '####'
+  - sysctl 值和定义
+- - '#####'
+  - sysctl -d kern.maxfilesperproc
+- - '####'
+  - 查看 sysctls
+- - '#####'
+  - sysctl kern
+- - '#####'
+  - sysctl kern.securelevel
+- - '####'
+  - 更改 sysctls
+- - '#####'
+  - sysctl vfs.usermount=1
+- - '###'
+  - 自动设置 sysctls
+- - '###'
+  - 内核环境
+- - '####'
+  - 查看内核环境
+- - '#####'
+  - kenv
+- - '###'
+  - 向设备驱动程序提供提示
+- - '###'
+  - 测试启动时可调项
+- - '###'
+  - 内核模块
+- - '###'
+  - 查看已加载的模块
+- - '####'
+  - kldstat
+- - '###'
+  - 加载和卸载模块
+- - '####'
+  - kldload /boot/kernel/ipmi.ko
+- - '####'
+  - kldload ipmi
+- - '####'
+  - kldunload ipmi
+- - '####'
+  - kldunload opensolaris
+- - '###'
+  - 启动时加载模块
+- - '###'
+  - 构建你自己的内核
+- - '####'
+  - 准备工作
+- - '####'
+  - 总线与附件
+- - '####'
+  - 备份你的工作内核
+- - '#####'
+  - cp -a /boot/kernel /boot/kernel.good
+- - '####'
+  - 配置文件格式
+- - '#####'
+  - ATA controllers
+- - '####'
+  - 配置文件
+- - '####'
+  - 构建内核
+- - '#####'
+  - cd /usr/src
+- - '#####'
+  - make KERNCONF=MINIMAL buildkernel
+- - '####'
+  - 信任内核
+- - '####'
+  - 启动备用内核
+- - '####'
+  - 自定义内核配置
+- - '#####'
+  - 精简内核
+- - '######'
+  - CPU 类型
+- - '#####'
+  - 核心选项
+- - '######'
+  - 多处理器
+- - '######'
+  - 设备驱动程序
+- - '#####'
+  - 伪设备
+- - '#####'
+  - 可移动硬件
+- - '#####'
+  - 包含配置文件
+- - '#####'
+  - 排错内核构建
+- - '######'
+  - cd /usr/src/sys
+- - '######'
+  - grep -R vesa_unload_ioctl *
+- - '######'
+  - syscons is the default console driver, resembling an SCO console
+- - '#####'
+  - 包含、排除和扩展内核
+- - '######'
+  - NOTES
+- - '######'
+  - 用于 3D 加速的直接渲染模块。
+- - '#####'
+  - 包含与排除
+- - '#####'
+  - 跳过模块
+- - '######'
+  - make MODULES_OVERRIDE='' kernel
+- - '######'
+  - make KERNCONF=VBOX WITHOUT_MODULES=vmm kernel
+- - '##'
+  - '7'
+- - '##'
+  - 网络
+- - '###'
+  - 网络层
+- - '###'
+  - 物理层
+- - '###'
+  - 数据链路：物理协议
+- - '####'
+  - 网络层
+- - '####'
+  - 繁重工作：传输层
+- - '#####'
+  - 'IP # Internet protocol, pseudo protocol number'
+- - '####'
+  - 应用程序
+- - '###'
+  - 实际中的网络
+- - '###'
+  - 获取比特和十六进制
+- - '###'
+  - 按字节
+- - '###'
+  - 网络栈
+- - '###'
+  - IPv4 地址和子网掩码
+- - '###'
+  - 以十进制计算子网掩码
+- - '####'
+  - 表 7-2： 子网掩码和 IP 地址转换
+- - '###'
+  - 不可用的 IP 地址
+- - '###'
+  - 分配 IPv4 地址
+- - '###'
+  - IPv6 地址和子网
+- - '####'
+  - IPv6 基础知识
+- - '####'
+  - 理解 IPv6 地址
+- - '###'
+  - IPv6 子网
+- - '###'
+  - 链路本地地址
+- - '####'
+  - 分配 IPv6 地址
+- - '###'
+  - TCP/IP 基础知识
+- - '####'
+  - ICMP
+- - '####'
+  - UDP
+- - '####'
+  - TCP
+- - '####'
+  - 协议如何组合在一起
+- - '###'
+  - 传输协议端口
+- - '###'
+  - 保留端口
+- - '###'
+  - 理解以太网
+- - '####'
+  - 协议和硬件
+- - '####'
+  - 交换机故障
+- - '####'
+  - 以太网速度
+- - '####'
+  - MAC 地址
+- - '#####'
+  - arp -a
+- - '#####'
+  - ndp -a
+- - '##'
+  - '8'
+- - '##'
+  - 配置网络
+- - '###'
+  - 网络先决条件
+- - '####'
+  - 使用 ifconfig(8) 配置更改
+- - '#####'
+  - ifconfig
+- - '####'
+  - 向接口添加 IP
+- - '#####'
+  - ifconfig 接口名称 inet IP地址 子网掩码
+- - '#####'
+  - ifconfig em0 inet 203.0.113.250 255.255.255.0
+- - '#####'
+  - ifconfig em0 inet 203.0.113.250/24
+- - '#####'
+  - ifconfig em0 inet6 2001:db8::bad:c0de:cafe/64
+- - '#####'
+  - ifconfig em0 inet 203.0.113.250/24 -tso -rxcsun
+- - '####'
+  - 测试您的接口
+- - '#####'
+  - ping 203.0.113.1
+- - '#####'
+  - ping6 2001:db8::1
+- - '####'
+  - 设置默认路由
+- - '#####'
+  - route add default 203.0.113.1
+- - '#####'
+  - route -6 add default 2001:db8::1
+- - '####'
+  - 一个接口上的多个 IP 地址
+- - '#####'
+  - ifconfig em0 inet alias 203.0.113.225/32
+- - '#####'
+  - ifconfig em0 inet6 alias 2001:db8::bad:c0de:caff/64
+- - '#####'
+  - ifconfig fxp0
+- - '####'
+  - 别名和传出连接
+- - '####'
+  - 重命名接口
+- - '#####'
+  - ifconfig em1 name test1
+- - '####'
+  - DHCP
+- - '####'
+  - 重新启动！
+- - '#####'
+  - service netif restart em0
+- - '###'
+  - 域名服务
+- - '####'
+  - 主机/IP 信息来源
+- - '####'
+  - 使用 /etc/hosts 的本地名称
+- - '####'
+  - 配置名称服务
+- - '####'
+  - 本地域名和搜索列表
+- - '####'
+  - 名称服务器列表
+- - '####'
+  - 缓存名称服务器
+- - '#####'
+  - sysrc local_unbound_enable=YES
+- - '#####'
+  - service local_unbound start
+- - '####'
+  - 网络活动
+- - '#####'
+  - 当前网络活动
+- - '######'
+  - netstat -w 5 -d
+- - '#####'
+  - 哪些端口在监听？
+- - '######'
+  - sockstat -4
+- - '#####'
+  - 端口监听详情
+- - '######'
+  - netstat -na -f inet
+- - '####'
+  - 内核中的网络容量
+- - '#####'
+  - netstat -m
+- - '####'
+  - 优化网络性能
+- - '#####'
+  - 优化网络硬件
+- - '####'
+  - 内存使用
+- - '#####'
+  - sysctl kern.ipc.nmbclusters
+- - '####'
+  - 最大传入连接数
+- - '####'
+  - 轮询（Polling）
+- - '#####'
+  - ifconfig em0 polling
+- - '#####'
+  - 其他优化
+- - '####'
+  - 网络适配器团队（Teaming）
+- - '####'
+  - 聚合协议
+- - '####'
+  - 配置 lagg(4)
+- - '####'
+  - 虚拟局域网
+- - '####'
+  - 配置 VLAN 设备
+- - '#####'
+  - ifconfig interface.tag create vlan tag vl andev interface
+- - '#####'
+  - ifconfig em0.2 create vlan 2 vlandev em0
+- - '#####'
+  - ifconfig em0.2 inet 192.0.2.236/28
+- - '#####'
+  - ifconfig em0.2 create vlan 2 vlandev em0 inet 192.0.2.236/28
+- - '#####'
+  - ifconfig em0.2
+- - '####'
+  - 在启动时配置 VLAN
+- - '##'
+  - '9'
+- - '##'
+  - 保护你的系统
+- - '###'
+  - 谁是敌人？
+- - '####'
+  - 脚本小子
+- - '####'
+  - 心怀不满的用户
+- - '####'
+  - 僵尸网络
+- - '####'
+  - 有动机的熟练攻击者
+- - '###'
+  - 黑客、入侵者及相关渣滓
+- - '###'
+  - FreeBSD 安全公告
+- - '###'
+  - 用户安全
+- - '####'
+  - 创建用户账户
+- - '#####'
+  - adduser
+- - '####'
+  - 配置 Adduser：/etc/adduser.conf
+- - '####'
+  - 编辑用户
+- - '####'
+  - 更改密码
+- - '#####'
+  - passwd
+- - '#####'
+  - passwd mwlucas
+- - '####'
+  - 用户管理与 $EDITOR
+- - '#####'
+  - 使用 chpass(1) 更改账户
+- - '####'
+  - 大锤：vipw(8)
+- - '#####'
+  - 用户名
+- - '#####'
+  - 加密密码
+- - '#####'
+  - 用户 ID
+- - '#####'
+  - 组 ID
+- - '#####'
+  - 用户类别
+- - '#####'
+  - 密码过期
+- - '#####'
+  - 账户过期
+- - '#####'
+  - 个人数据
+- - '#####'
+  - 用户主目录
+- - '#####'
+  - 用户 Shell
+- - '####'
+  - 移除用户
+- - '####'
+  - 使用 pw(8) 进行脚本化
+- - '#####'
+  - pw lock xistence
+- - '#####'
+  - pw unlock xistence
+- - '####'
+  - Shell 与 /etc/shells
+- - '####'
+  - root、组和管理
+- - '#####'
+  - root 密码
+- - '######'
+  - su
+- - '######'
+  - id
+- - '######'
+  - 用户组
+- - '######'
+  - id
+- - '#####'
+  - /etc/group
+- - '######'
+  - 更改组成员身份
+- - '####'
+  - 创建组
+- - '####'
+  - 使用组避免 Root
+- - '####'
+  - 系统账户
+- - '####'
+  - 创建管理组
+- - '#####'
+  - ls -l
+- - '#####'
+  - chown dns:dns rndc.key
+- - '#####'
+  - chown dns:dns mwl.io.db
+- - '#####'
+  - ls -l
+- - '#####'
+  - 有趣的默认组
+- - '####'
+  - 调整用户安全性
+- - '#####'
+  - 限制登录能力
+- - '######'
+  - 主机名
+- - '######'
+  - 主机地址和网络
+- - '######'
+  - LOCAL
+- - '######'
+  - ALL 和 ALL EXCEPT
+- - '######'
+  - 将所有内容整合起来
+- - '#####'
+  - 限制系统使用
+- - '######'
+  - 类定义
+- - '######'
+  - cap_mkdb /etc/login.conf
+- - '#####'
+  - 资源限制
+- - '######'
+  - 表 9-2：用于限制资源使用的一些 login.conf 变量
+- - '######'
+  - 当前资源限制和最大资源限制
+- - '######'
+  - 资源核算
+- - '######'
+  - 类环境
+- - '######'
+  - 表 9-3：常见的 login.conf 环境设置
+- - '######'
+  - 密码和登录控制
+- - '#######'
+  - passwd_format
+- - '#######'
+  - mixpasswordcase
+- - '#######'
+  - host.allow, host.deny
+- - '#######'
+  - times.allow
+- - '#######'
+  - times.deny
+- - '######'
+  - 文件标志
+- - '#######'
+  - sappnd, sappend
+- - '#######'
+  - schg
+- - '#######'
+  - sunlnk
+- - '#######'
+  - uappnd
+- - '#######'
+  - uchg
+- - '#######'
+  - unlnk
+- - '#######'
+  - 设置和查看文件标志
+- - '########'
+  - chflags schg /boot/kernel/kernel
+- - '########'
+  - chflags -R schg /bin
+- - '########'
+  - ls -lo log
+- - '########'
+  - ls -lo log
+- - '########'
+  - chflags noschg /boot/kernel/kernel
+- - '######'
+  - 安全级别
+- - '#######'
+  - 安全级别定义
+- - '########'
+  - 安全级别 −1
+- - '########'
+  - 安全级别 0
+- - '########'
+  - 安全级别 1
+- - '########'
+  - 安全级别 2
+- - '########'
+  - 安全级别 3
+- - '########'
+  - 你需要哪种安全级别？
+- - '#######'
+  - 安全级别和文件标志无法实现什么？
+- - '#######'
+  - 与安全级别共存
+- - '########'
+  - sysctl kern.securelevel=3
+- - '####'
+  - 网络目标
+- - '####'
+  - 工作站与服务器安全
+- - '####'
+  - 将所有内容结合在一起
+- - '##'
+  - '10'
+- - '##'
+  - 磁盘、分区和 GEOM
+- - '###'
+  - 磁盘会撒谎
+- - '####'
+  - 设备节点
+- - '####'
+  - 通用访问方法
+- - '#####'
+  - 你拥有哪些磁盘？
+- - '######'
+  - camcontrol devlist
+- - '#####'
+  - 非 CAM 设备
+- - '####'
+  - GEOM 存储架构
+- - '####'
+  - 设备控制程序
+- - '####'
+  - GEOM 自动配置
+- - '####'
+  - GEOM 与卷管理器
+- - '####'
+  - 提供者、消费者和切片器
+- - '####'
+  - GEOM 控制程序
+- - '####'
+  - GEOM 设备节点和堆栈
+- - '####'
+  - 硬盘、分区和方案
+- - '#####'
+  - ls /dev/vtbd0*
+- - '####'
+  - 文件系统表：/etc/fstab
+- - '####'
+  - 当前挂载了什么？
+- - '#####'
+  - mount
+- - '#####'
+  - mount
+- - '####'
+  - 磁盘标签
+- - '####'
+  - 查看标签
+- - '####'
+  - 标签示例
+- - '####'
+  - 磁盘 ID 标签
+- - '####'
+  - GPT GUID 标签
+- - '####'
+  - GPT 标签
+- - '####'
+  - GEOM 标签
+- - '#####'
+  - glabel label da0p1 root
+- - '####'
+  - GEOM 枯萎（Withering）
+- - '####'
+  - gpart(8) 命令
+- - '#####'
+  - 查看分区
+- - '#####'
+  - 其他视图
+- - '#####'
+  - 删除分区
+- - '######'
+  - 删除分区
+- - '#######'
+  - gpart delete -i 2 ada0
+- - '####'
+  - 规划磁盘
+- - '####'
+  - 移除磁盘分区方案
+- - '#####'
+  - gpart destroy da3
+- - '#####'
+  - gpart destroy -f da3
+- - '####'
+  - 分配分区方案
+- - '#####'
+  - gpart create -s gpt da3
+- - '####'
+  - GPT 分区方案
+- - '####'
+  - GPT 设备节点
+- - '####'
+  - GPT 分区类型
+- - '####'
+  - 创建 GPT 分区
+- - '#####'
+  - gpart add -t freebsd-boot -l boot -s 512k da3
+- - '#####'
+  - gpart show -l da3
+- - '#####'
+  - gpart add -a 1m -t freebsd-swap -s 8g -l swap da3
+- - '#####'
+  - gpart add -a 1m -t freebsd-ufs -s 5g -l root da3
+- - '#####'
+  - gpart add -a 1m -t freebsd-ufs -s 5g -l tmp da3
+- - '#####'
+  - gpart add -a 1m -t freebsd-ufs -s 100g -l var da3
+- - '#####'
+  - gpart add -a 1m -t freebsd-ufs -l usr da3
+- - '#####'
+  - 调整 GPT 分区大小
+- - '######'
+  - gpart resize -i 6 -s 100g -a 1m da3
+- - '######'
+  - gpart show da3
+- - '####'
+  - 更改标签和类型
+- - '#####'
+  - gpart modify -i 2 -l rootfs vtd0
+- - '#####'
+  - gpart modify -i 2 -t freebsd-zfs vtd0
+- - '####'
+  - 在旧式硬件上引导
+- - '#####'
+  - gpart bootcode -b /boot/pmbrr da3
+- - '#####'
+  - gpart bootcode -p /boot/gptboot -i 1 da3
+- - '####'
+  - 统一可扩展固件接口（UEFI）和 GPT
+- - '#####'
+  - gpart create -s gpt da0
+- - '#####'
+  - gpart add -t efi -s 800K da0
+- - '#####'
+  - dd if=/boot/boot1.efifat of=/dev/da0p1
+- - '####'
+  - 扩展 GPT 磁盘
+- - '####'
+  - MBR 分区方案
+- - '####'
+  - 什么是主引导记录？
+- - '#####'
+  - BSD 标签
+- - '#####'
+  - MBR 设备节点
+- - '#####'
+  - MBR 和 Disklabel 对齐
+- - '#####'
+  - 创建分片
+- - '######'
+  - gpart destroy -F ada3
+- - '######'
+  - gpart create -s mbr ada3
+- - '######'
+  - gpart add -t freebsd ada3
+- - '######'
+  - gpart show -p ada3
+- - '######'
+  - gpart add -s 150g -t freebsd ada3
+- - '######'
+  - gpart add -s 150g -t freebsd ada3
+- - '######'
+  - gpart add -t freebsd ada3
+- - '######'
+  - 删除分片
+- - '#######'
+  - gpart delete -i 3 ada3
+- - '######'
+  - 激活分片
+- - '#######'
+  - gpart set -a active -i 1 ada3
+- - '#######'
+  - gpart bootcode -b /boot/mbr ada3
+- - '#####'
+  - BSD 标签
+- - '######'
+  - 创建 BSD 标签
+- - '#######'
+  - gpart create -s bsd ada3s1
+- - '#######'
+  - gpart create -n 20 -s bsd ada3s3
+- - '######'
+  - 创建 BSD 标签分区
+- - '#######'
+  - gpart add -t freebsd-ufs -s 5g -a 1m ada3s1
+- - '#######'
+  - gpart show ada3s1
+- - '#######'
+  - gpart add -t freebsd-swap -s 5g -a1m ada3s1
+- - '#######'
+  - gpart add -t freebsd-ufs -s 5g -a1m ada3s1
+- - '#######'
+  - gpart add -t freebsd-ufs -a1m ada3s1
+- - '####'
+  - 分配特定的分区字母
+- - '#####'
+  - gpart add -t freebsd-ufs -a 1m -i 18 ada3s3
+- - '#####'
+  - gpart show -p ada3s3
+- - '##'
+  - '11'
+- - '##'
+  - UNIX 文件系统
+- - '###'
+  - UFS 组件
+- - '####'
+  - 快速文件系统
+- - '####'
+  - UFS 如何使用 FFS
+- - '###'
+  - Vnodes
+- - '###'
+  - 挂载与卸载文件系统
+- - '####'
+  - 挂载标准文件系统
+- - '#####'
+  - mount /media
+- - '#####'
+  - mount -a
+- - '####'
+  - 特殊挂载
+- - '#####'
+  - mount /dev/gpt/db /mnt
+- - '####'
+  - 卸载分区
+- - '#####'
+  - umount /usr
+- - '###'
+  - UFS 挂载选项
+- - '####'
+  - mount -o ro /dev/gpt/home /home
+- - '####'
+  - 只读挂载
+- - '####'
+  - 同步挂载
+- - '####'
+  - 异步挂载
+- - '####'
+  - 组合 Sync 和 Async
+- - '####'
+  - 禁用 Atime
+- - '####'
+  - 禁用执行
+- - '####'
+  - 禁用 Suid
+- - '####'
+  - 禁用聚簇
+- - '####'
+  - 禁用符号链接
+- - '###'
+  - UFS 弹性
+- - '####'
+  - 软更新
+- - '####'
+  - 软更新日志记录
+- - '####'
+  - GEOM 日志记录
+- - '###'
+  - 创建和调整 UFS 文件系统
+- - '####'
+  - newfs /dev/gpt/var
+- - '####'
+  - UFS 标签
+- - '#####'
+  - newfs -L var /dev/ada3s1d
+- - '####'
+  - 块和碎片大小
+- - '#####'
+  - newfs -b 64K -L home /dev/da0s1d
+- - '####'
+  - 使用 GEOM 日志记录
+- - '#####'
+  - gjournal_label da3p5
+- - '#####'
+  - gjournal label da3p5 da3p7
+- - '###'
+  - 调整 UFS
+- - '####'
+  - 查看当前设置
+- - '#####'
+  - tuneufs -p /dev/gpt/var
+- - '####'
+  - 软更新和日志记录
+- - '#####'
+  - tuneefs -j enable /dev/gpt/var
+- - '#####'
+  - tuneefs -j disable /dev/gpt/var
+- - '####'
+  - 最小空闲空间
+- - '#####'
+  - tuneufs -m 5 /dev/gpt/var
+- - '####'
+  - SSD TRIM
+- - '#####'
+  - tuneufs -t enable /dev/gpt/var
+- - '####'
+  - 标记 UFS 文件系统
+- - '#####'
+  - tuneefs -L scratch /dev/ada3s1e
+- - '####'
+  - 扩展 UFS 文件系统
+- - '#####'
+  - growfs /dev/gpt/var
+- - '#####'
+  - growfs -s 80g /dev/gpt/var
+- - '###'
+  - UFS 快照
+- - '####'
+  - 创建和销毁快照
+- - '#####'
+  - cd /home
+- - '#####'
+  - mksnap_ffs .snap/beforeupgrade
+- - '####'
+  - 查找快照
+- - '#####'
+  - find /usr -flags snapshot
+- - '####'
+  - 快照磁盘使用情况
+- - '###'
+  - UFS 恢复和修复
+- - '####'
+  - 系统关闭：同步器
+- - '#####'
+  - 脏文件系统
+- - '#####'
+  - 文件系统检查：fsck(8)
+- - '####'
+  - 手动运行 fsck
+- - '#####'
+  - 信任 fsck(8)
+- - '#####'
+  - 避免使用 fsck -y
+- - '#####'
+  - 后台 fsck
+- - '####'
+  - 强制在脏磁盘上进行读写挂载
+- - '####'
+  - 后台 fsck、fsck -y、前台 fsck，哎呀！
+- - '####'
+  - UFS 空间预留
+- - '####'
+  - 分区有多满？
+- - '####'
+  - $BLOCKSIZE
+- - '#####'
+  - df -H
+- - '#####'
+  - cd $HOME
+- - '#####'
+  - du
+- - '##'
+  - '12'
+- - '##'
+  - Z 文件系统
+- - '###'
+  - du -h -d0 $HOME
+- - '###'
+  - du -h -d1
+- - '###'
+  - 添加新的 UFS 存储
+- - '####'
+  - 磁盘分区
+- - '#####'
+  - gpart destroy -F da3
+- - '#####'
+  - gpart create -s gpt da3
+- - '#####'
+  - gpart add -t freebsd-ufs -l tmp -s 100g da3
+- - '#####'
+  - gpart add -t freebsd-ufs -l postgres -s 500g da3
+- - '#####'
+  - gpart add -t freebsd-ufs -l emergency da3
+- - '#####'
+  - gpart show -lp da3
+- - '#####'
+  - newfs -j /dev/gpt/postgres
+- - '#####'
+  - newfs -j /dev/gpt/tmp
+- - '####'
+  - 配置 /etc/fstab
+- - '####'
+  - 将现有文件安装到新磁盘
+- - '#####'
+  - mount /dev/gpt/postgres /mnt
+- - '#####'
+  - tar cfc - /old/directory . | tar xfC - /tempmount
+- - '#####'
+  - tar cfc - /usr/local/etc/postgres . | tar xfC - /mnt
+- - '#####'
+  - rm -rf /usr/local/etc/postgres
+- - '#####'
+  - mount /mnt
+- - '#####'
+  - mount /usr/local/etc/postgres
+- - '###'
+  - 可堆叠挂载
+- - '##'
+  - '12'
+- - '##'
+  - Z 文件系统
+- - '###'
+  - 数据集
+- - '####'
+  - zfs list
+- - '####'
+  - 数据集属性
+- - '####'
+  - 查看和更改数据集属性
+- - '#####'
+  - zfs set quota=2G zroot/usr/home
+- - '#####'
+  - zfs get mounted zroot/ROOT
+- - '#####'
+  - zfs get -r mounted zroot/ROOT
+- - '####'
+  - 属性继承
+- - '#####'
+  - zfs get compression
+- - '###'
+  - 管理数据集
+- - '####'
+  - 创建数据集
+- - '#####'
+  - zfs create zroot/usr/local
+- - '####'
+  - 销毁和重命名数据集
+- - '#####'
+  - zfs destroy zroot/usr/local
+- - '#####'
+  - zfs rename zroot/usr/local zroot/usr/new-local
+- - '####'
+  - 未挂载的父数据集
+- - '#####'
+  - zfs create -o canmount=off zroot/var/db
+- - '#####'
+  - zfs create zroot/var/db/postgres
+- - '#####'
+  - zfs create zroot/var/db/postgres/data96
+- - '#####'
+  - chown -R postgres:postgres /var/db/postgres
+- - '####'
+  - 将文件移动到新数据集
+- - '#####'
+  - zfs create zroot/usr/local/pgsql-new
+- - '#####'
+  - tar cfC - /usr/local/pgsql . | tar xpfC - /usr/local/pgsql-new
+- - '#####'
+  - mv /usr/local/pgsql /usr/local/pgsql-old
+- - '#####'
+  - zfs rename zroot/usr/local/pgsql-new zroot/usr/local/pgsql
+- - '###'
+  - ZFS 存储池
+- - '####'
+  - zpool list
+- - '####'
+  - 存储池详情
+- - '#####'
+  - zpool status jail
+- - '####'
+  - 存储池属性
+- - '#####'
+  - 查看存储池属性
+- - '######'
+  - zpool get all zroot
+- - '######'
+  - zpool get readonly
+- - '####'
+  - 虚拟设备
+- - '####'
+  - VDEV 类型和冗余
+- - '####'
+  - 条带 VDEV
+- - '####'
+  - 镜像 VDEV
+- - '####'
+  - RAID-Z
+- - '#####'
+  - RAID-Z2
+- - '#####'
+  - RAID-Z3
+- - '#####'
+  - 日志和缓存 VDEV
+- - '#####'
+  - RAID-Z 和存储池
+- - '####'
+  - 管理存储池
+- - '####'
+  - ZFS 和磁盘块大小
+- - '####'
+  - 创建和查看存储池
+- - '####'
+  - 多 VDEV 存储池
+- - '#####'
+  - zpool create poolName vdevtype disks... vdevtype disks...
+- - '#####'
+  - zpool create db raidz gpt/zfs3 gpt/zfs4 gpt/zfs5 raidz gpt/zfs6 gpt/zfs7 gpt/zfs8
+- - '####'
+  - 销毁存储池
+- - '#####'
+  - zpool destroy db
+- - '#####'
+  - 错误与 -f
+- - '######'
+  - zpool create db raidz gpt/zfs3 gpt/zfs4 gpt/zfs5 raidz gpt/zfs6 gpt/zfs7
+- - '###'
+  - 写入时复制（Copy-On-Write）
+- - '###'
+  - 快照
+- - '####'
+  - 创建快照
+- - '#####'
+  - zfs snapshot zroot/usr/home@2018-07-21-13:09:00
+- - '#####'
+  - zfs list -t snapshot
+- - '#####'
+  - zfs list -t snapshot
+- - '#####'
+  - zfs list -t snapshot
+- - '####'
+  - 访问快照
+- - '####'
+  - 销毁快照
+- - '#####'
+  - zfs destroy zroot/usr/home@2017-07-21-13:09:00
+- - '###'
+  - 压缩
+- - '###'
+  - 存储池完整性与修复
+- - '####'
+  - 完整性验证
+- - '#####'
+  - zpool scrub zroot
+- - '#####'
+  - zpool scrub -s zroot
+- - '####'
+  - 修复存储池
+- - '####'
+  - 存储池状态
+- - '#####'
+  - zpool status db
+- - '####'
+  - 重新挂载和卸载驱动器
+- - '#####'
+  - zpool online db 14398195156659397932
+- - '#####'
+  - zpool offline db gpt/zfs6
+- - '####'
+  - 替换驱动器
+- - '#####'
+  - zpool replace db gpt/zfs3 gpt/zfs6
+- - '###'
+  - 引导环境
+- - '####'
+  - 查看启动环境
+- - '#####'
+  - pkg install beadm
+- - '#####'
+  - beadm list
+- - '####'
+  - 创建和访问启动环境
+- - '#####'
+  - freebsd-version
+- - '#####'
+  - beadm create 11.0-p11
+- - '#####'
+  - beadm list
+- - '####'
+  - 激活启动环境
+- - '#####'
+  - beadm activate 11.0-p11
+- - '#####'
+  - beadm list
+- - '####'
+  - 删除启动环境
+- - '#####'
+  - beadm destroy 11.0-p11
+- - '####'
+  - 启动时的启动环境
+- - '####'
+  - 启动环境和应用程序
+- - '##'
+  - '13'
+- - '##'
+  - 外部文件系统
+- - '###'
+  - FreeBSD 挂载命令
+- - '####'
+  - mount /dev/cd0 /media
+- - '####'
+  - mount -t cd9660 /dev/cd0 /media
+- - '####'
+  - mount -t msdosfs -o ro,-gbert,-u /dev/da1 /media
+- - '####'
+  - umount /media
+- - '###'
+  - 支持的外部文件系统
+- - '####'
+  - FAT (MS-DOS)
+- - '####'
+  - ISO 9660
+- - '####'
+  - UDF
+- - '####'
+  - EXT
+- - '####'
+  - 权限和外部文件系统
+- - '#####'
+  - mount -t msdosfs -u xistence -g xistence /dev/da5 /mnt
+- - '###'
+  - 使用可移动媒体
+- - '####'
+  - mount -t msdosfs /dev/da0 /media
+- - '###'
+  - 弹出可移动媒体
+- - '####'
+  - unmount /media
+- - '###'
+  - 可移动媒体和 /etc/fstab
+- - '###'
+  - 格式化 FAT32 介质
+- - '####'
+  - newfs_msdos /dev/da0
+- - '###'
+  - 创建光盘介质
+- - '####'
+  - 创建 ISO
+- - '#####'
+  - mkefs -t cd9660 -o allow-deep-trees,rockridge image.iso source-files
+- - '#####'
+  - mkefs -t cd9660 -o allow-deep-trees,rockridge bert.iso /home/xistence/cdfiles
+- - '####'
+  - 创建 UDF
+- - '#####'
+  - mkisofs -R -J -udf -iso-level 3 -o bert.udf /home/xistence/cdfiles
+- - '###'
+  - 将 ISO 刻录到光盘介质
+- - '####'
+  - cdrecord bert.iso
+- - '####'
+  - cdrecord -dev=cd9 bert.iso
+- - '###'
+  - 将 UDF 刻录到光盘介质
+- - '####'
+  - growisofs -dvd-compat -Z /dev/burner=image.udf
+- - '####'
+  - growisofs -dvd-compat -Z /dev/cd0=bert.udf
+- - '###'
+  - 将映像写入 USB 闪存盘
+- - '####'
+  - dd if=inputfile of=outputdevice bs=1M conv=sync
+- - '####'
+  - dd if=bert.udf of=/dev/da9 bs=1m conv=sync
+- - '###'
+  - 内存文件系统
+- - '####'
+  - tmpfs
+- - '#####'
+  - mount -t tmpfs tmpfs /tmp
+- - '####'
+  - tmpfs 选项
+- - '#####'
+  - mount -o size=1g -t tmpfs tmpfs /tmp
+- - '####'
+  - 启动时的 tmpfs
+- - '####'
+  - 内存磁盘
+- - '#####'
+  - 内存磁盘类型
+- - '####'
+  - 创建和挂载内存磁盘
+- - '#####'
+  - mdms -t -s 48m nd /home/mwlucas/test
+- - '#####'
+  - mdmfs -F diskimage.file md /mnt
+- - '#####'
+  - mdmfs -F diskimage.file md9 /mnt
+- - '####'
+  - 内存磁盘的烦恼
+- - '####'
+  - 关闭内存磁盘
+- - '#####'
+  - umount /mnt
+- - '#####'
+  - mdconfig -d 0 -u 41
+- - '####'
+  - 内存磁盘和 /etc/fstab
+- - '####'
+  - 挂载磁盘镜像
+- - '#####'
+  - mdconfig -a -t vnode -f /home/mwlucas/bert.iso
+- - '#####'
+  - mount -t cd9660 /dev/md0 /mnt
+- - '#####'
+  - mdconfig -l
+- - '#####'
+  - mdconfig -l -u 1
+- - '####'
+  - 文件中的文件系统
+- - '#####'
+  - 创建空文件系统文件
+- - '######'
+  - truncate -s 1G filesystem.file
+- - '######'
+  - ls -l filesystem.file
+- - '######'
+  - du filesystem.file
+- - '#####'
+  - 在文件上创建文件系统
+- - '######'
+  - mdconfig -a -t vnode -f filesystem.file
+- - '######'
+  - newfs -j /dev/md0
+- - '######'
+  - mount /dev/md0 /mnt
+- - '#####'
+  - 基于文件的文件系统与 /etc/fstab
+- - '####'
+  - devfs
+- - '#####'
+  - 启动时的 /dev
+- - '#####'
+  - 设备管理与服务器
+- - '#####'
+  - devfs.conf
+- - '#####'
+  - 全局 devfs 规则
+- - '#####'
+  - devfs 规则集格式
+- - '#####'
+  - 规则集内容
+- - '######'
+  - ls /dev/ada*s*
+- - '#####'
+  - 规则中嵌套规则
+- - '#####'
+  - 使用 devd(8) 进行动态设备管理
+- - '#####'
+  - devd 配置
+- - '###'
+  - 其他文件系统
+- - '###'
+  - 网络文件系统
+- - '####'
+  - NFS 互操作性
+- - '####'
+  - NFS 版本
+- - '###'
+  - 配置 NFS 服务器
+- - '####'
+  - 配置 NFS 导出
+- - '####'
+  - 导出条目
+- - '####'
+  - 可连接的客户端
+- - '#####'
+  - service mountd reload
+- - '####'
+  - NFS 与用户
+- - '####'
+  - 导出多个目录
+- - '####'
+  - 长行
+- - '####'
+  - 限制客户端
+- - '####'
+  - 客户端与导出的组合
+- - '####'
+  - NFS 与防火墙
+- - '####'
+  - 使用 zfs(8) 管理 NFS
+- - '#####'
+  - zfs set sharenfs=on zroot/home
+- - '#####'
+  - zfs set sharenfs="-network 203.0.113.0/24 -maproot=nfsroot" zroot/home
+- - '###'
+  - 启用 NFS 客户端
+- - '###'
+  - 显示可用挂载
+- - '####'
+  - showmount -e storm
+- - '###'
+  - 挂载导出
+- - '####'
+  - mount storm:/usr/home/mwlucas /mnt
+- - '####'
+  - df -h
+- - '###'
+  - NFS 挂载选项
+- - '####'
+  - mount -o soft,intr storm:/usr/home/mwlucas /mnt
+- - '###'
+  - 通用 Internet 文件系统
+- - '####'
+  - 先决条件
+- - '####'
+  - 内核支持
+- - '###'
+  - 配置 CIFS
+- - '####'
+  - nsmb.conf 关键字
+- - '#####'
+  - workgroup=string
+- - '#####'
+  - addr=a.b.c.d
+- - '#####'
+  - nbns=a.b.c.d
+- - '#####'
+  - password=string
+- - '######'
+  - smbutil crypt superSecretPassword
+- - '####'
+  - 示例配置
+- - '####'
+  - CIFS 名称解析
+- - '#####'
+  - smbutil lookup fileserver1
+- - '#####'
+  - 其他 smbutil(1) 功能
+- - '######'
+  - smbutil login //unix@fileserver1
+- - '######'
+  - smbutil view //unix@fileserver1
+- - '######'
+  - smbutil logout //unix@fileserver
+- - '####'
+  - 挂载共享
+- - '#####'
+  - mount_smbfs //username@servername/share /mount/point
+- - '#####'
+  - mount_smbfs //unix@fileserver1/MP3 /home/mwlucas/smbmount
+- - '#####'
+  - 其他 mount_smbfs 选项
+- - '#####'
+  - nsmb.conf 选项
+- - '######'
+  - 独立系统中的唯一密码
+- - '######'
+  - 访问第二个域
+- - '######'
+  - CIFS 文件所有权
+- - '####'
+  - 提供 CIFS 共享
+- - '##'
+  - '14'
+- - '##'
+  - 探索 /ETC
+- - '###'
+  - 不同 Unix 品种中的 /etc
+- - '###'
+  - /etc/adduser.conf
+- - '###'
+  - /etc/aliases
+- - '###'
+  - /etc/amd.map
+- - '###'
+  - /etc/auto_master
+- - '###'
+  - /etc/auto_master
+- - '###'
+  - /etc/blacklistd.conf
+- - '###'
+  - /etc/bluetooth, /etc/bluetooth.device.conf 和 /etc/defaults/bluetooth.device.conf
+- - '###'
+  - /etc/casper
+- - '###'
+  - /etc/crontab 和 /etc/cron.d
+- - '###'
+  - /etc/csh.*
+- - '###'
+  - /etc/ddb.conf
+- - '###'
+  - /etc/devd.conf
+- - '###'
+  - /etc/devfs.conf, /etc/devfs.rules 和 /etc/defaults/devfs.rules
+- - '###'
+  - /etc/dhclient.conf
+- - '###'
+  - /etc/disktab
+- - '###'
+  - /etc/dma/
+- - '###'
+  - /etc/freebsd-update.conf
+- - '###'
+  - /etc/fstab
+- - '###'
+  - /etc/ftp.*
+- - '###'
+  - /etc/group
+- - '###'
+  - /etc/hostid
+- - '###'
+  - /etc/hosts
+- - '###'
+  - /etc/hosts.allow
+- - '###'
+  - /etc/hosts.equiv
+- - '###'
+  - /etc/hosts.lpd
+- - '###'
+  - /etc/inetd.conf
+- - '###'
+  - /etc/libmap.conf
+- - '###'
+  - /etc/localtime
+- - '###'
+  - /etc/locate.rc
+- - '####'
+  - locate locate.rc
+- - '###'
+  - /etc/login.*
+- - '###'
+  - /etc/mail
+- - '###'
+  - /etc/mail.rc
+- - '###'
+  - /etc/mail/mailer.conf
+- - '###'
+  - /etc/make.conf
+- - '####'
+  - CFLAGS
+- - '####'
+  - COPTF_FLAGS
+- - '####'
+  - CXXFLAGS
+- - '###'
+  - /etc/master.passwd
+- - '###'
+  - /etc/motd
+- - '###'
+  - /etc/mtree
+- - '###'
+  - /etc/netconfig
+- - '###'
+  - /etc/netstart
+- - '###'
+  - /etc/network.subr
+- - '###'
+  - /etc/newsyslog.conf
+- - '###'
+  - /etc/nscd.conf
+- - '###'
+  - /etc/nsm b.conf
+- - '###'
+  - /etc/nsswitch.conf
+- - '###'
+  - /etc/ntp/, /etc/ntp.conf
+- - '###'
+  - /etc/opie*
+- - '###'
+  - /etc/pam.d/*
+- - '###'
+  - /etc/passwd
+- - '###'
+  - /etc/pccard_ether
+- - '###'
+  - /etc/periodic.conf 和 /etc/defaults/periodic.conf
+- - '###'
+  - /etc/periodic
+- - '###'
+  - /etc/pf.conf, /etc/pf.os
+- - '###'
+  - /etc/phones
+- - '###'
+  - /etc/portsnap.conf
+- - '###'
+  - /etc/ppp/
+- - '###'
+  - /etc/printcap
+- - '###'
+  - /etc/profile
+- - '###'
+  - /etc/protocols
+- - '###'
+  - /etc/pwd.db
+- - '###'
+  - /etc/rc*
+- - '###'
+  - /etc/regdomain.xml
+- - '###'
+  - /etc/remote
+- - '###'
+  - /etc/resolv.conf
+- - '###'
+  - /etc/rpc
+- - '###'
+  - /etc/security/
+- - '###'
+  - /etc/services
+- - '###'
+  - /etc/shells
+- - '###'
+  - /etc/skel/
+- - '###'
+  - /etc/snmpd.config
+- - '###'
+  - /etc/spwd.db
+- - '###'
+  - /etc/src.conf
+- - '###'
+  - /etc/ssh/
+- - '###'
+  - /etc/ssl/
+- - '###'
+  - /etc/sysctl.conf
+- - '###'
+  - /etc/syslog.conf, /etc/syslog.conf.d/
+- - '###'
+  - /etc/termcap, /etc/termcap.small
+- - '###'
+  - /etc/ttys
+- - '###'
+  - /etc/unbound/
+- - '###'
+  - /etc/wall_cmos_clock
+- - '###'
+  - /etc/zfs/
+- - '##'
+  - '15'
+- - '##'
+  - 让你的系统变得有用
+- - '###'
+  - Ports 和 Packages
+- - '####'
+  - 互联网建议永远存在
+- - '###'
+  - 软件包
+- - '###'
+  - 软件包文件
+- - '###'
+  - 介绍 pkg(8)
+- - '####'
+  - pkg install emacs
+- - '####'
+  - pkg delete emacs
+- - '###'
+  - 安装 pkg(8)
+- - '####'
+  - pkg install dmidecode
+- - '####'
+  - 常见的 pkg 选项
+- - '####'
+  - 配置 pkg(8)
+- - '####'
+  - env DEBUG_LEVEL=4 pkg upgrade
+- - '####'
+  - 查找包
+- - '####'
+  - pkg search apache
+- - '###'
+  - 包搜索选项
+- - '###'
+  - 检查找到的软件包
+- - '####'
+  - pkg search -R apache24
+- - '####'
+  - pkg search -R --raw-format json-compact apache24
+- - '###'
+  - 安装软件
+- - '####'
+  - pkg install apache24
+- - '###'
+  - 获取软件包
+- - '####'
+  - pkg fetch -d apache24
+- - '###'
+  - 下载计时
+- - '###'
+  - 软件包缓存
+- - '###'
+  - 清理缓存
+- - '####'
+  - pkg clean
+- - '###'
+  - 移动缓存
+- - '###'
+  - 软件包信息和自动安装
+- - '####'
+  - pkg info
+- - '####'
+  - pkg info apache24
+- - '###'
+  - 自动软件包
+- - '###'
+  - 查询软件包数据库
+- - '####'
+  - pkg query %n
+- - '####'
+  - pkg query "%n-%v\t%c"
+- - '###'
+  - 查询中的评估
+- - '####'
+  - pkg query -e '%a = 0' %n
+- - '####'
+  - pkg query -e '%a = 0' %n
+- - '####'
+  - = 还是 ==？
+- - '###'
+  - Pkg 命令别名
+- - '###'
+  - 卸载软件包
+- - '####'
+  - pkg delete youtube_dl
+- - '###'
+  - 移除依赖项
+- - '####'
+  - pkg delete trousers
+- - '###'
+  - 自动移除
+- - '####'
+  - pkg autoremove
+- - '###'
+  - 更改软件包数据库
+- - '####'
+  - pkg set -A 0 python27
+- - '####'
+  - pkg autoremove -n
+- - '###'
+  - 锁定软件包
+- - '####'
+  - pkg lock rsync
+- - '####'
+  - pkg lock -l
+- - '####'
+  - pkg unlock rsync
+- - '####'
+  - pkg unlock -a
+- - '###'
+  - 软件包文件
+- - '####'
+  - pkg info -l rsync
+- - '####'
+  - pkg which libp11-kit.so
+- - '###'
+  - 软件包完整性
+- - '####'
+  - 文件损坏
+- - '#####'
+  - pkg check -s rsync
+- - '#####'
+  - pkg unlock -y rsync
+- - '#####'
+  - pkg install -fy rsync
+- - '#####'
+  - pkg lock -y rsync
+- - '####'
+  - 依赖项问题
+- - '#####'
+  - pkg check -d emacs-nox11
+- - '###'
+  - 包维护
+- - '###'
+  - 包网络与环境
+- - '###'
+  - 包仓库
+- - '####'
+  - 仓库配置
+- - '####'
+  - 仓库自定义
+- - '#####'
+  - '"/etc/pkg/",'
+- - '#####'
+  - '"/usr/local/etc/pkg/repos/",'
+- - '#####'
+  - mkdir -p /usr/local/etc/pkg/repos
+- - '####'
+  - 仓库继承
+- - '####'
+  - 包分支
+- - '####'
+  - 欢迎来到频繁变更的世界！
+- - '####'
+  - 升级包
+- - '#####'
+  - pkg upgrade -n
+- - '#####'
+  - pkg upgrade -y
+- - '##'
+  - '16'
+- - '##'
+  - 使用 Ports 定制软件
+- - '###'
+  - 软件构建
+- - '###'
+  - 源代码与软件
+- - '###'
+  - 端口集合
+- - '####'
+  - 端口
+- - '####'
+  - 安装端口树
+- - '#####'
+  - portsnap auto
+- - '####'
+  - 端口树内容
+- - '####'
+  - 端口索引
+- - '####'
+  - 搜索索引
+- - '#####'
+  - cd /usr/ports
+- - '#####'
+  - make search name=net-snmp
+- - '####'
+  - 关键字搜索
+- - '#####'
+  - make quicksearch rdeps=perl5
+- - '#####'
+  - make quicksearch name=apache rdeps=python
+- - '#####'
+  - make quicksearch xname=apache rdeps=python
+- - '#####'
+  - make search name=midnight
+- - '#####'
+  - make quicksearch key=midnight
+- - '####'
+  - 浏览端口集合的其他方法
+- - '####'
+  - 法律限制
+- - '####'
+  - 端口包含什么？
+- - '####'
+  - 安装端口
+- - '#####'
+  - 端口与生产环境
+- - '######'
+  - make install
+- - '#####'
+  - make config
+- - '#####'
+  - make fetch
+- - '#####'
+  - make checksum
+- - '#####'
+  - make depends
+- - '#####'
+  - make extract
+- - '#####'
+  - make patch
+- - '#####'
+  - make configure
+- - '#####'
+  - make build
+- - '#####'
+  - make install
+- - '#####'
+  - 移植自定义选项
+- - '####'
+  - 在命令行上自定义
+- - '#####'
+  - make BATCH=1 install
+- - '#####'
+  - make pretty-print-config
+- - '#####'
+  - make showconfig
+- - '#####'
+  - make WITH=INSULTS pretty-print-config
+- - '#####'
+  - make WITH="INSULTS LDAP" pretty-print-config
+- - '#####'
+  - make WITH=INSULTS WITHOUT="AUDIT NLS" pretty-print-config
+- - '####'
+  - 全局使用自定义设置
+- - '####'
+  - /etc/make.conf 和单个移植
+- - '####'
+  - 设置默认版本
+- - '####'
+  - 前置递归
+- - '####'
+  - 打包的依赖项
+- - '####'
+  - Port 风味（Flavors）
+- - '####'
+  - 构建软件包
+- - '####'
+  - 卸载和重新安装 Ports
+- - '####'
+  - 跟踪 Port 构建状态
+- - '####'
+  - 清理 Ports
+- - '####'
+  - 只读 Ports 树
+- - '####'
+  - 更改安装路径
+- - '####'
+  - 私有软件包仓库
+- - '#####'
+  - Poudrieve 资源
+- - '#####'
+  - 安装和配置 Poudrieve
+- - '######'
+  - pkg install poudriere
+- - '#####'
+  - Poudrieve Jail 创建
+- - '######'
+  - poudriere jail -c -j jailname -v version
+- - '######'
+  - 从网络安装 Jail
+- - '#######'
+  - poudriere jail -c -j amd64-11-1 -v 11.1-RELEASE
+- - '######'
+  - 从介质安装 Jail
+- - '#######'
+  - tar -xf ../FreeBSD-11.0-RELEASE-amd64-disc1.iso usr/freebsd-dist
+- - '#######'
+  - mdconfig -at vnode -f FreeBSD-11.0-RELEASE-amd64-memstick.img
+- - '#######'
+  - gpart show md0
+- - '#######'
+  - mount /dev/md0p3 /mnt
+- - '#######'
+  - poudriere jail -c -j amd64-11-0 -v 11.0-RELEASE -m url=file:///mnt/usr/freebsd-dist/
+- - '######'
+  - 从本地构建安装 Jail
+- - '#######'
+  - poudriere jail -c -j amd64-current -v 12.0-CURRENT -n src=/usr/src
+- - '#####'
+  - 查看 Jails
+- - '######'
+  - 安装 Poudriere 端口树
+- - '#######'
+  - poudriere ports -cp head
+- - '#####'
+  - 配置 Poudriere 端口
+- - '######'
+  - 软件包列表
+- - '#######'
+  - pkg query -e '%a=0' %o
+- - '#####'
+  - Poudriere make.conf
+- - '#####'
+  - 运行 make config
+- - '######'
+  - poudriere options -j amd64-current -p head -f pkglist
+- - '#####'
+  - 运行 Poudriere
+- - '######'
+  - poudriere bulk -j amd64-current -p head -f pkglist
+- - '#####'
+  - 已构建的端口
+- - '######'
+  - 有问题的端口
+- - '#####'
+  - 软件包软件仓库
+- - '#####'
+  - 使用私有软件仓库
+- - '######'
+  - mkdir -p /usr/local/etc/pkg/repos
+- - '######'
+  - pkg install -fy
+- - '#####'
+  - 远程自定义软件仓库
+- - '#####'
+  - 各种大小的 Poudriere
+- - '######'
+  - 小型系统
+- - '######'
+  - 大型系统
+- - '#####'
+  - 更新 Poudriere
+- - '######'
+  - poudriere jail -j amd64-11-1 -u
+- - '######'
+  - poudriere ports -p head -u
+- - '######'
+  - poudriere bulk -j amd64-current -p head -f pkglist
+- - '#####'
+  - 更多 Poudriere
+- - '##'
+  - '17'
+- - '##'
+  - 使用多处理器：SMP
+- - '###'
+  - 内核假设
+- - '###'
+  - SMP：首次尝试
+- - '###'
+  - 当今的对称多处理（SMP）
+- - '####'
+  - SMP 问题：死锁和锁顺序反转
+- - '####'
+  - 处理锁顺序反转
+- - '###'
+  - 处理器和 SMP
+- - '###'
+  - 使用 SMP
+- - '###'
+  - SMP 与 make(1)
+- - '####'
+  - make -j5 all install clean
+- - '###'
+  - 线程、线程，还有更多线程
+- - '###'
+  - 启动和关闭脚本
+- - '###'
+  - rc 脚本排序
+- - '####'
+  - rcorder /etc/rc.d/* /usr/local/etc/rc.d/*
+- - '####'
+  - 典型的 rc 脚本
+- - '#####'
+  - 'PROVIDE: 1 timed'
+- - '#####'
+  - 'REQUIRE: 2 DAEMON'
+- - '#####'
+  - 'BEFORE: 3 LOGIN'
+- - '#####'
+  - 'KEYWORD: 4 nojall shutdown'
+- - '###'
+  - 特殊的 rc 脚本提供程序
+- - '###'
+  - 厂商启动/停止脚本
+- - '###'
+  - 调试自定义 rc 脚本
+- - '####'
+  - /bin/sh -x /etc/rc.d/localpkg start
+- - '##'
+  - 管理共享库
+- - '###'
+  - 共享库版本与文件
+- - '###'
+  - 将共享库附加到程序
+- - '###'
+  - 库目录列表：ldconfig(8)
+- - '####'
+  - ldconfig -r
+- - '###'
+  - 将库目录添加到搜索列表
+- - '###'
+  - /usr/local/lib 与按端口划分的库目录
+- - '####'
+  - ldconfig(8) 与特殊库
+- - '####'
+  - LD_LIBRARY_PATH 和 LD_PRELOAD
+- - '#####'
+  - setenv LD_LIBRARY_PATH /home/mlucas/lib:/tmp/testlibs
+- - '####'
+  - 程序需要什么
+- - '#####'
+  - ldd /usr/local/bin/emacs
+- - '####'
+  - 重映射共享库
+- - '#####'
+  - ldd /usr/local/bin/emacs | grep libGL
+- - '#####'
+  - cd /usr/local/bin
+- - '#####'
+  - ldd emacs | grep libGL
+- - '###'
+  - 运行来自错误操作系统的软件
+- - '####'
+  - 重新编译
+- - '####'
+  - 仿真
+- - '####'
+  - ABI 重新实现
+- - '#####'
+  - 二进制 Branding
+- - '###'
+  - 受支持的 ABI
+- - '###'
+  - 安装和配置 Linuxulator
+- - '####'
+  - pkg search linux_base
+- - '###'
+  - Linuxulator 用户空间
+- - '####'
+  - ls
+- - '###'
+  - linprocs 和 tmpfs
+- - '###'
+  - 测试 Linux 模式
+- - '####'
+  - /usr/compat/linux/bin/sh
+- - '###'
+  - 识别和设置品牌（Brands）
+- - '####'
+  - brandelf /bin/sh
+- - '####'
+  - brandelf /usr/compat/linux/bin/sh
+- - '####'
+  - brandelf -1
+- - '####'
+  - brandelf -t Linux /usr/local/bin/program
+- - '####'
+  - sysctl kern.elf64.fallback_brand=3
+- - '###'
+  - 使用 Linux 模式
+- - '###'
+  - 调试 Linux 模式
+- - '###'
+  - Linux 模式和 truss(1)
+- - '###'
+  - 安装 Linux 软件包
+- - '####'
+  - cd /compat/linux
+- - '####'
+  - tar -xf /home/mwl/supermin-5.1.16-4.el7.x86_64.rpm
+- - '###'
+  - 运行来自错误架构或版本的软件
+- - '##'
+  - '18'
+- - '##'
+  - 升级 FreeBSD
+- - '###'
+  - FreeBSD 版本
+- - '####'
+  - 发行版（Releases）
+- - '####'
+  - FreeBSD-current
+- - '###'
+  - -current 代码冻结期
+- - '###'
+  - FreeBSD-stable
+- - '###'
+  - -STABLE 的稳定性
+- - '###'
+  - 从 -current 合并
+- - '###'
+  - 快照
+- - '###'
+  - FreeBSD 支持模型
+- - '###'
+  - 测试 FreeBSD
+- - '###'
+  - 你应该使用哪个版本？
+- - '###'
+  - 生产环境
+- - '###'
+  - 预发布环境
+- - '###'
+  - 测试
+- - '###'
+  - 开发
+- - '###'
+  - 兴趣爱好
+- - '###'
+  - 升级方法
+- - '###'
+  - 二进制更新
+- - '####'
+  - /etc/freebsd-update.conf
+- - '####'
+  - 运行 freebsd-update(8)
+- - '#####'
+  - 更新到最新的补丁级别
+- - '######'
+  - freebsd-update fetch
+- - '#####'
+  - 更新发布版本
+- - '######'
+  - freebsd-update install
+- - '#####'
+  - 更新发布版本
+- - '######'
+  - freebsd-update -r 11.1-RELEASE upgrade
+- - '######'
+  - freebsd-update install
+- - '######'
+  - reboot
+- - '######'
+  - freebsd-update install
+- - '######'
+  - freebsd-update install
+- - '#####'
+  - 回滚更新
+- - '######'
+  - freebsd-update rollback
+- - '#####'
+  - 安排二进制更新
+- - '#####'
+  - 优化和自定义 FreeBSD Update
+- - '#####'
+  - 通过源代码升级
+- - '###'
+  - CSUP、CVSUP、CVS、SUP 和 CTM？
+- - '####'
+  - 哪些源代码？
+- - '#####'
+  - svnlite info /usr/src
+- - '#####'
+  - svnlite checkout \*svn.freebsd.org/@repository/@branch @locadir
+- - '#####'
+  - svnlite checkout https://svn0.us-east.FreeBSD.org/base/stable/11 /usr/src/
+- - '#####'
+  - ls /usr/src/
+- - '####'
+  - 更新源代码
+- - '#####'
+  - echo 'SVN_UPDATE=yes' >> /etc/src.conf
+- - '#####'
+  - cd /usr/src
+- - '#####'
+  - make update
+- - '###'
+  - 从源码构建 FreeBSD
+- - '###'
+  - 构建 World
+- - '####'
+  - cd /usr/src
+- - '####'
+  - make buildworld
+- - '#####'
+  - 并行 MAKE WORLD
+- - '#####'
+  - 构建、安装和测试内核
+- - '######'
+  - make KERNCONF=THUD kernel
+- - '#####'
+  - 准备安装新世界
+- - '#####'
+  - mergemaster(8)
+- - '######'
+  - mergemaster -fp
+- - '######'
+  - '$FreeBSD: releng/11.1/etc/master.passwd 299 | # $FreeBSD: stable/11/etc/master.passwd
+    29936'
+- - '####'
+  - 安装 World
+- - '#####'
+  - cd /usr/src
+- - '#####'
+  - make installworld
+- - '####'
+  - 过时文件
+- - '#####'
+  - make check-old
+- - '#####'
+  - make delete-old
+- - '#####'
+  - yes | make delete-old
+- - '#####'
+  - make -DBATCH_DELETE_OLD_FILES delete-old
+- - '####'
+  - 过时的共享库
+- - '#####'
+  - make check-old-libs | grep '^/' | tar zcvf -T - -f /root/old-libs.tgz
+- - '#####'
+  - yes | make delete-old-libs
+- - '####'
+  - 重温 mergemaster
+- - '#####'
+  - mergemaster -iU
+- - '###'
+  - 自定义 Mergemaster
+- - '####'
+  - 忽略文件
+- - '####'
+  - 自动安装新文件
+- - '####'
+  - 自动更新未更改的文件
+- - '####'
+  - 自动更新未编辑的文件
+- - '####'
+  - 更新数据库
+- - '####'
+  - 升级与单用户模式
+- - '###'
+  - NFS 和升级
+- - '###'
+  - 缩小 FreeBSD
+- - '###'
+  - 软件包与系统升级
+- - '####'
+  - pkg-static upgrade -f pkg
+- - '####'
+  - pkg upgrade -f
+- - '###'
+  - 更新已安装的 Ports
+- - '##'
+  - '19'
+- - '##'
+  - 高级安全特性
+- - '###'
+  - 非特权用户
+- - '###'
+  - nobody 账户
+- - '###'
+  - 非特权用户示例
+- - '###'
+  - 网络流量控制
+- - '####'
+  - 默认接受与默认拒绝
+- - '#####'
+  - TCP 包装器
+- - '#####'
+  - 配置包装器
+- - '######'
+  - 守护程序名称
+- - '######'
+  - 客户端列表
+- - '######'
+  - 表 19-1：TCP Wrapper 关键字
+- - '######'
+  - ALL 和 ALL EXCEPT 关键字
+- - '#######'
+  - 选项
+- - '#######'
+  - 长规则
+- - '#######'
+  - 日志记录
+- - '#######'
+  - 扭曲
+- - '#######'
+  - 派生
+- - '######'
+  - 封装总结
+- - '####'
+  - 数据包过滤
+- - '#####'
+  - 启用 PF
+- - '#####'
+  - 数据包过滤中的默认允许和默认拒绝
+- - '#####'
+  - 基本数据包过滤和状态检查
+- - '#####'
+  - 配置 PF
+- - '######'
+  - 宏
+- - '######'
+  - 表和选项
+- - '######'
+  - 数据包规范化
+- - '######'
+  - 带宽、转换和重定向
+- - '######'
+  - 小型服务器 PF 规则示例
+- - '#####'
+  - 管理 PF
+- - '######'
+  - 测试规则
+- - '#######'
+  - pfctl -nf /etc/pf.conf
+- - '######'
+  - 激活规则
+- - '#######'
+  - pfctl -f /etc/pf.conf
+- - '######'
+  - 查看规则
+- - '#######'
+  - pfctl -sr
+- - '######'
+  - 删除规则
+- - '#######'
+  - pfctl -Fa
+- - '#####'
+  - Blacklistd(8)
+- - '######'
+  - PF 和 Blacklistd
+- - '######'
+  - 配置 Blacklistd
+- - '#######'
+  - sysrc blacklistd_enable=YES
+- - '######'
+  - /etc/blacklistd.conf
+- - '######'
+  - blacklist.conf 本地规则
+- - '######'
+  - blacklist.conf 远程规则
+- - '######'
+  - 配置 Blacklistd 客户端
+- - '######'
+  - 管理 Blacklistd
+- - '#######'
+  - blacklistctl dump -b
+- - '#######'
+  - blacklistctl dump -br
+- - '######'
+  - 移除黑名单
+- - '#######'
+  - pfctl -a blacklistd/22 -t port22 -T show
+- - '#######'
+  - pfctl -a blacklistd/22 -t port22 -T delete 203.0.113.128/25
+- - '####'
+  - 公钥加密
+- - '#####'
+  - 公钥加密的基础认知
+- - '######'
+  - OpenSSL
+- - '######'
+  - 证书
+- - '#####'
+  - TLS 主机密钥
+- - '######'
+  - openssl genrsa 2048 > host.key
+- - '######'
+  - chown root host.key
+- - '######'
+  - chmod 400 host.key
+- - '#####'
+  - 创建证书请求
+- - '######'
+  - openssl req -new -key host.key -out csr.pem
+- - '#####'
+  - 自己签署证书
+- - '######'
+  - openssl x509 -req -days 365 -in csr.pem -signkey host.key \
+- - '#####'
+  - TLS 技巧：连接到 TLS 保护端口
+- - '######'
+  - openssl s_client -connect www.michaelwlucas.com:443
+- - '#####'
+  - 硬件加密支持
+- - '####'
+  - 全局安全设置
+- - '#####'
+  - 安装时选项
+- - '#####'
+  - 隐藏其他 UID 的进程
+- - '#####'
+  - 隐藏其他 GID 的进程
+- - '#####'
+  - 隐藏受拘束的进程
+- - '#####'
+  - 隐藏消息缓冲区
+- - '#####'
+  - 禁用进程调试
+- - '#####'
+  - 随机化进程 ID
+- - '#####'
+  - 清理 /tmp
+- - '#####'
+  - 禁用 Syslogd 网络
+- - '#####'
+  - 禁用 Sendmail
+- - '#####'
+  - 安全控制台
+- - '#####'
+  - 不可执行堆栈和堆栈保护页
+- - '####'
+  - 运行 mtree(1)
+- - '#####'
+  - mtree -x -i -c -K sha512 -K sha256 -p / -X /home/mwlucas/mtree-exclude > /tmp/mtree.out
+- - '#####'
+  - mtree(1) 输出：规范文件
+- - '#####'
+  - 纪元秒与实际日期
+- - '#####'
+  - 排除文件
+- - '#####'
+  - 保存规范文件
+- - '#####'
+  - 查找系统差异
+- - '######'
+  - mtree -f mtree.suspect -f mtree.good > mtree.differences
+- - '#####'
+  - 监控系统安全
+- - '####'
+  - 包安全
+- - '####'
+  - 如果你被入侵了
+- - '##'
+  - '20'
+- - '##'
+  - 小型系统服务
+- - '###'
+  - 安全外壳（Secure Shell）
+- - '####'
+  - SSH 服务器：sshd(8)
+- - '#####'
+  - nc localhost 22
+- - '####'
+  - SSH 密钥和指纹
+- - '#####'
+  - ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
+- - '####'
+  - 配置 SSH 守护程序
+- - '####'
+  - VersionAddendum FreeBSD-20170902
+- - '####'
+  - 端口 22
+- - '####'
+  - ListenAddress 0.0.0.0
+- - '####'
+  - SyslogFacility AUTH 和 LogLevel INFO
+- - '####'
+  - LoginGraceTime 2m
+- - '####'
+  - PermitRootLogin no
+- - '####'
+  - MaxAuthTries 6
+- - '####'
+  - AllowTcpForwarding yes
+- - '####'
+  - X11Forwarding yes
+- - '####'
+  - Banner /some/path
+- - '####'
+  - Subsystem sftp /usr/lib/openssh/sftp-server
+- - '###'
+  - 管理 SSH 用户访问
+- - '###'
+  - SSH 客户端
+- - '####'
+  - ssh mwl.io
+- - '####'
+  - 通过 SSH 复制文件
+- - '####'
+  - SSH 客户端对于命令行访问来说很完美，但如果你想在两个系统之间传输文件呢？SSH 提供了两种用于跨网络传输文件的工具：scp(1) 和 sftp(1)。
+- - '#####'
+  - scp(1) 是“安全复制”，非常适合传输单个文件
+- - '######'
+  - scp bookbackup.tgz mwlucas@mwl.io:bookbackup-january.tgz
+- - '######'
+  - 'scp bookbackup.tgz mwlucas@mwl.io:'
+- - '######'
+  - scp mwlucas@mwl.io:bookbackup-january.tgz bookbackup.tgz
+- - '######'
+  - scp mwlucas@mwl.io:bookbackup.tgz .
+- - '######'
+  - 'scp bookbackup.tgz mwl.io:'
+- - '#####'
+  - sftp(1) 接受单个参数，即用户名和服务器名称，使用 scp 的远程服务器语法：
+- - '######'
+  - sftp mwlucas@mwl.io
+- - '####'
+  - OPENSsh 密码和密钥
+- - '###'
+  - 电子邮件
+- - '####'
+  - mailwrapper(8)
+- - '####'
+  - Dragonfly Mail Agent
+- - '#####'
+  - Smart Host
+- - '#####'
+  - TCP 端口
+- - '#####'
+  - 假主机名和用户名
+- - '####'
+  - 禁用本地投递
+- - '####'
+  - 安全传输
+- - '#####'
+  - 用户名和密码
+- - '#####'
+  - 启用 DMA
+- - '######'
+  - service sendmail stop
+- - '######'
+  - sysrc sendmail_enable=NONE
+- - '####'
+  - 别名文件与 DMA
+- - '####'
+  - 将邮件从一个用户转发到另一个用户
+- - '#####'
+  - 别名邮件列表
+- - '###'
+  - 网络时间
+- - '####'
+  - 设置时区
+- - '#####'
+  - tzsetup America/Detroit
+- - '####'
+  - 网络时间协议
+- - '#####'
+  - 配置 ntpd(8)
+- - '#####'
+  - 启动时运行 ntpd(8)
+- - '#####'
+  - 即时时间校正
+- - '######'
+  - ntpd -q
+- - '#####'
+  - 时间重分布
+- - '###'
+  - 名称服务切换
+- - '####'
+  - 表 20-1：支持名称服务切换的查找
+- - '####'
+  - inetc
+- - '####'
+  - INETD 安全性
+- - '####'
+  - /etc/inetd.conf
+- - '####'
+  - 配置 inetd 服务器
+- - '#####'
+  - 端口号
+- - '#####'
+  - 网络协议
+- - '#####'
+  - 用户
+- - '#####'
+  - 路径
+- - '#####'
+  - 运行命令
+- - '####'
+  - inetd.conf 配置示例
+- - '####'
+  - 启动 inetd(8)
+- - '#####'
+  - telnet localhost 17
+- - '####'
+  - 更改 inetd 的行为
+- - '#####'
+  - '表 20-2: inetd(8) 标志'
+- - '###'
+  - DHCP
+- - '####'
+  - DHCP 工作原理
+- - '####'
+  - 配置 dhcpd(8)
+- - '#####'
+  - 全局设置
+- - '#####'
+  - 子网设置
+- - '#####'
+  - 管理 dhcpd(8)
+- - '###'
+  - 打印与打印服务器
+- - '####'
+  - /etc/printcap
+- - '####'
+  - 启用 LPD
+- - '####'
+  - TFTP
+- - '#####'
+  - 根目录
+- - '######'
+  - mkdir /var/tftpboot
+- - '######'
+  - ln -s /var/tftpboot /tftpboot
+- - '#####'
+  - tftpd 与文件
+- - '######'
+  - chmod +r /var/tftpboot/filename
+- - '######'
+  - chmod 666 /var/tftpboot/filename
+- - '######'
+  - chmod 777 /var/tftpboot/programname
+- - '#####'
+  - 文件所有权
+- - '#####'
+  - tftpd(8) 配置
+- - '###'
+  - 调度任务
+- - '####'
+  - cron(8)
+- - '####'
+  - 用户 Crontab 与 /etc/crontab
+- - '####'
+  - cron 与环境变量
+- - '####'
+  - Crontab 格式
+- - '####'
+  - 示例 Crontab
+- - '####'
+  - periodic(8)
+- - '##'
+  - '21'
+- - '##'
+  - 系统性能与监控
+- - '###'
+  - 计算机资源
+- - '###'
+  - 什么是正常？
+- - '###'
+  - 检查网络
+- - '####'
+  - sysctl net.inet.tcp.cc
+- - '####'
+  - kldload /boot/kernel/cc_htcp.ko
+- - '####'
+  - sysctl net.inet.tcp.cc.available
+- - '####'
+  - sysctl net.inet.tcp.cc.algorithm=http
+- - '####'
+  - 使用 vmstat(8) 进行通用瓶颈分析
+- - '#####'
+  - vmstat
+- - '####'
+  - 进程
+- - '####'
+  - 内存
+- - '#####'
+  - 换页
+- - '#####'
+  - 磁盘
+- - '#####'
+  - 中断
+- - '#####'
+  - CPU
+- - '####'
+  - 使用 vmstat
+- - '####'
+  - 连续 vmstat
+- - '#####'
+  - vmstat -w 5
+- - '####'
+  - 磁盘 I/O
+- - '####'
+  - gstat -a
+- - '####'
+  - 使用 top(1) 查看 CPU、内存和 I/O
+- - '####'
+  - UFS 和 top(1)
+- - '#####'
+  - PID 值
+- - '#####'
+  - 平均负载
+- - '#####'
+  - 正常运行时间
+- - '#####'
+  - 进程计数
+- - '####'
+  - 进程类型
+- - '####'
+  - 内存
+- - '####'
+  - 交换空间
+- - '####'
+  - ZFS 与 top(1)
+- - '####'
+  - 进程列表
+- - '####'
+  - top(1) 与 I/O
+- - '####'
+  - 跟踪进程
+- - '###'
+  - 分页和交换
+- - '####'
+  - 分页
+- - '####'
+  - 交换
+- - '###'
+  - 性能调优
+- - '####'
+  - sysctl vm.v_free_target
+- - '####'
+  - sysctl hw.pagesize
+- - '####'
+  - 内存使用
+- - '####'
+  - 交换空间的使用
+- - '####'
+  - CPU 使用率
+- - '####'
+  - 重新调度
+- - '####'
+  - 通过“Nice 值”重新确定优先级
+- - '#####'
+  - nice -n 15 make buildworld
+- - '#####'
+  - nice -n -20 make
+- - '#####'
+  - pgrep httpd
+- - '#####'
+  - renice 10 993
+- - '#####'
+  - renice -5 -u mw Lucas
+- - '####'
+  - 状态邮件
+- - '###'
+  - 使用 syslogd 进行日志记录
+- - '####'
+  - 设施
+- - '####'
+  - 级别
+- - '####'
+  - 使用 syslogd(8) 处理消息
+- - '#####'
+  - 通配符
+- - '#####'
+  - 排除信息
+- - '#####'
+  - 比较
+- - '#####'
+  - 本地设施
+- - '####'
+  - 按程序名称记录日志
+- - '####'
+  - 记录到用户会话
+- - '####'
+  - 将日志消息发送到程序
+- - '####'
+  - 记录到日志主机
+- - '####'
+  - 日志记录重叠
+- - '#####'
+  - syslogd 定制
+- - '####'
+  - 允许的日志发送者
+- - '####'
+  - 绑定到单一地址
+- - '####'
+  - 额外的日志套接字
+- - '#####'
+  - 详细日志记录
+- - '####'
+  - 日志文件管理
+- - '#####'
+  - 日志文件路径
+- - '#####'
+  - 所有者和组
+- - '#####'
+  - 权限
+- - '#####'
+  - 计数
+- - '####'
+  - 大小
+- - '####'
+  - 时间
+- - '#####'
+  - ISO 8601 时间格式
+- - '#####'
+  - FreeBSD 特定时间
+- - '####'
+  - 基于大小和时间轮转
+- - '####'
+  - 标志
+- - '#####'
+  - 日志文件格式和压缩
+- - '#####'
+  - 特殊日志文件处理
+- - '#####'
+  - Pidfile
+- - '#####'
+  - 信号
+- - '#####'
+  - 示例 newsyslog.conf 条目
+- - '###'
+  - FreeBSD 和 SNMP
+- - '####'
+  - SNMP 入门
+- - '#####'
+  - SNMP MIB
+- - '#####'
+  - MIB 定义和 MIB 浏览器
+- - '#####'
+  - SNMP 安全性
+- - '#####'
+  - 配置 bsnmpd
+- - '######'
+  - bsnmpd 变量
+- - '######'
+  - Change this!
+- - '######'
+  - Uncomment begemotSnmpdCommunityString.0.2 below that sets the community
+- - '######'
+  - string to enable write access.
+- - '######'
+  - 详细的 bsnmpd 配置
+- - '######'
+  - 加载 bsnmpd 模块
+- - '##'
+  - '22'
+- - '###'
+  - JAILS（监狱容器）
+- - '####'
+  - Jail 基础知识
+- - '#####'
+  - Jail 宿主服务器设置
+- - '######'
+  - Jail 宿主存储
+- - '######'
+  - Jail 网络
+- - '#######'
+  - sockstat -46l
+- - '#####'
+  - syslogd
+- - '#####'
+  - inetd
+- - '#####'
+  - sshd
+- - '#####'
+  - NFS
+- - '#####'
+  - 网络时间协议
+- - '#####'
+  - IP 地址
+- - '#####'
+  - 启动时的 Jails
+- - '####'
+  - Jail 设置
+- - '####'
+  - Jail 用户层
+- - '#####'
+  - tar -xpf base.txz -C /jail/mariadb
+- - '#####'
+  - cd /usr/src
+- - '#####'
+  - make installworld DESTDIR=/jail/mariadb
+- - '#####'
+  - make distribution DESTDIR=/jail/mariadb
+- - '####'
+  - /etc/jail.conf
+- - '####'
+  - 监狱配置参数
+- - '#####'
+  - 监狱内启动
+- - '####'
+  - 监狱默认值
+- - '#####'
+  - jail.conf 变量
+- - '#####'
+  - 作为变量的参数
+- - '####'
+  - 测试和配置监狱
+- - '#####'
+  - jail <path to jail> <jail name> <jail IP> <command>
+- - '#####'
+  - jail /jail/mariadb mariadb 203.0.113.51 /bin/sh
+- - '#####'
+  - ps
+- - '####'
+  - 从宿主机窃取的内容
+- - '####'
+  - 创建 /etc/fstab
+- - '#####'
+  - touch /etc/fstab
+- - '####'
+  - 创建 /etc/rc.conf
+- - '#####'
+  - '**用户账户和 Root 密码**'
+- - '####'
+  - Jail 的启动与停止
+- - '#####'
+  - service jail stop mariadb
+- - '#####'
+  - service jail start mariadb
+- - '#####'
+  - service jail restart
+- - '####'
+  - Jail 依赖关系
+- - '####'
+  - 管理 Jails
+- - '#####'
+  - 查看 Jails 和 Jail ID
+- - '######'
+  - jls
+- - '#####'
+  - Jail 中的进程
+- - '######'
+  - ps -ax
+- - '######'
+  - ps -ax -J test
+- - '######'
+  - pgrep -lf -J mariadb
+- - '######'
+  - pkill -9 -J mariadb sendmail
+- - '######'
+  - ps -ax -o jail | grep 39415
+- - '#####'
+  - '**在 Jails 中运行命令**'
+- - '######'
+  - jexec mariadb ps -ax
+- - '######'
+  - jexec -U xistence mariadb ps
+- - '######'
+  - jexec mariadb adduser
+- - '######'
+  - jexec -U xistence mariadb sh
+- - '######'
+  - jexec -lU xistence mariadb sh
+- - '######'
+  - sysrc -j mariadb mysql_enable=YES
+- - '#####'
+  - '*安装 Jail 软件包*'
+- - '######'
+  - pkg -j mariadb install mariadb101-server
+- - '####'
+  - 更新 Jails（监狱系统）
+- - '#####'
+  - freebsd-update -f /etc/jail-freebsd-update.conf -b /jail/test/ --currently-running
+    `jexec -l test freebsd-version` fetch install
+- - '####'
+  - 更多 Jail 选项
+- - '####'
+  - 将古老的 FreeBSD 关进 Jail
+- - '#####'
+  - tar -C /jail/oldserver -xvpf oldserver.tgz
+- - '####'
+  - 最后的 Jail 备注
+- - '##'
+  - '23'
+- - '#'
+  - FreeBSD 的边缘地带
+- - '###'
+  - 终端
+- - '###'
+  - /etc/ttys 格式
+- - '####'
+  - kill -1 1
+- - '###'
+  - 不安全的控制台
+- - '###'
+  - 管理云端的 FreeBSD
+- - '####'
+  - LibXo
+- - '####'
+  - 通用配置语言
+- - '####'
+  - 无盘 FreeBSD
+- - '#####'
+  - 无盘客户端
+- - '#####'
+  - DHCP 服务器设置
+- - '######'
+  - MAC 地址
+- - '#####'
+  - DHCP 配置：特定无盘主机
+- - '#####'
+  - DHCP 配置：无盘集群
+- - '####'
+  - tftp*d 与引导加载程序
+- - '#####'
+  - cp /boot/pxeboot /tftpboot
+- - '#####'
+  - chmod +r /tftpboot/pxeboot
+- - '####'
+  - 无盘安全
+- - '#####'
+  - NFS 服务器与无盘客户端用户层
+- - '######'
+  - tar -xpf base.txz -C /diskless/1/
+- - '######'
+  - tar -xpf kernel.txz -C /diskless/1/
+- - '######'
+  - cd /usr/src
+- - '######'
+  - make installworld DESTDIR=/diskless/1
+- - '######'
+  - make installkernel DESTDIR=/diskless/1
+- - '######'
+  - make distribution DESTDIR=/diskless/1
+- - '######'
+  - chroot /diskless/1/ passwd
+- - '#####'
+  - 无盘集群配置
+- - '#####'
+  - 配置层次
+- - '#####'
+  - 无盘重新挂载 /etc
+- - '#####'
+  - 完成设置
+- - '######'
+  - chroot /diskless/1
+- - '######'
+  - 安装软件包
+- - '#######'
+  - pkg -c /diskless/l/ install pkg
+- - '#######'
+  - pkg -c /diskless/l/ install sudo
+- - '######'
+  - SSH 密钥
+- - '#######'
+  - mkdir -p /diskless/l/conf/198.51.100.101/etc/ssh
+- - '#######'
+  - cd /diskless/l/conf/198.51.100.101/etc/ssh
+- - '#######'
+  - ssh-keygen -N "" -qt algorithm -f ssh_host_algorithm_key
+- - '#######'
+  - ssh-keygen -N "" -qt dsa -f ssh_host_dsa_key
+- - '####'
+  - 存储加密
+- - '#####'
+  - 生成和使用加密密钥
+- - '######'
+  - dd if=/dev/random of=/media/da0p1.key bs=64 count=1
+- - '######'
+  - geli init -s 4096 -K /media/da0p1.key /dev/da0p1
+- - '######'
+  - geli attach -k /media/da0p1.key /dev/da0p1
+- - '######'
+  - dd if=/dev/random of=/dev/da0p1.eli bs=1m
+- - '######'
+  - newfs /dev/da0p1.eli
+- - '######'
+  - mount /dev/da0p1.eli /mnt
+- - '##'
+  - '24'
+- - '##'
+  - 问题报告与内核恐慌
+- - '###'
+  - 问题报告
+- - '###'
+  - 提交 Bug 之前
+- - '###'
+  - 糟糕的缺陷报告
+- - '###'
+  - 修复
+- - '###'
+  - 提交缺陷
+- - '####'
+  - 提交后
+- - '###'
+  - 系统恐慌（System Panics）
+- - '####'
+  - 识别恐慌
+- - '####'
+  - 应对恐慌
+- - '####'
+  - 准备工作
+- - '####'
+  - 崩溃转储的实际应用
+- - '###'
+  - 串口控制台与恐慌
+- - '####'
+  - 测试崩溃转储
+- - '#####'
+  - sysctl debug.kdb.panic=1
+- - '####'
+  - 崩溃转储类型
+- - '#####'
+  - 文本转储
+- - '#####'
+  - sysrc dbb_enable=YES
+- - '####'
+  - 转储与安全
+- - '#####'
+  - mount -ar
+- - '#####'
+  - /etc/rc.d/dumpdev start
+- - '#####'
+  - command_that_panics_the_system
+- - '##'
+  - 后记
+- - '###'
+  - FreeBSD 社区
+- - '###'
+  - 我们为什么要这样做？
+- - '###'
+  - 你能做什么？
+- - '###'
+  - 如果没有其他办法……
+- - '###'
+  - 完成任务
+- - '###'
+  - 参考文献
+- - '####'
+  - 参考
+- - '####'
+  - 我写的书
+- - '###'
+  - 索引
+- - '####'
+  - 符号和数字
+- - '####'
+  - A
+- - '####'
+  - B
+- - '####'
+  - C
+- - '####'
+  - D
+- - '####'
+  - E
+- - '####'
+  - F
+- - '####'
+  - G
+- - '#####'
+  - geom_eli.ko 内核模块
+- - '#####'
+  - geom_journal 内核模块
+- - '#####'
+  - getty(8) 程序
+- - '#####'
+  - GhostBSD
+- - '#####'
+  - GIIDs 文件
+- - '#####'
+  - git(1)
+- - '#####'
+  - gjournal label 命令
+- - '#####'
+  - 创建 gjournal 提供程序
+- - '#####'
+  - gjournal(8)
+- - '#####'
+  - glabel create 命令
+- - '#####'
+  - glob(3)
+- - '#####'
+  - gmirror(8) 类
+- - '#####'
+  - Google
+- - '#####'
+  - gpart add 命令
+- - '#####'
+  - gpart bootcode 命令
+- - '#####'
+  - gpart create 命令
+- - '#####'
+  - gpart delete 命令
+- - '#####'
+  - gpart destroy 命令
+- - '#####'
+  - gpart modify 命令
+- - '#####'
+  - gpart resize
+- - '#####'
+  - gpart show 命令
+- - '#####'
+  - gpart(8) 命令
+- - '#####'
+  - GPT (GUID 分区表)
+- - '#####'
+  - gptboot(8)
+- - '#####'
+  - gptzfsboot(8)
+- - '#####'
+  - 格林尼治标准时间 (Greenwich Mean Time)
+- - '#####'
+  - 组 ID (GID)
+- - '#####'
+  - 用户组
+- - '#####'
+  - growfs(8) 命令
+- - '#####'
+  - growisofs(1) 命令
+- - '#####'
+  - gstat(8)
+- - '#####'
+  - GUID (全局唯一标识符)，用于 GPT 分区
+- - '#####'
+  - GUID 分区表 (GPT)
+- - '#####'
+  - gvinum(8)
+- - '#####'
+  - gzip 压缩
+- - '####'
+  - H
+- - '#####'
+  - 黑客攻击
+- - '#####'
+  - halt(8) 命令
+- - '#####'
+  - 手册 (Handbook)
+- - '#####'
+  - 硬盘
+- - '#####'
+  - 系统加固选项
+- - '#####'
+  - 硬件
+- - '#####'
+  - 硬件时钟
+- - '#####'
+  - 硬件 MIBs
+- - '#####'
+  - 硬件线程 (hardware threading)
+- - '#####'
+  - 帮助
+- - '#####'
+  - 十六进制数
+- - '#####'
+  - 主目录
+- - '#####'
+  - /home 分区
+- - '#####'
+  - 主机地址
+- - '#####'
+  - “host key has changed”（主机密钥已更改）消息
+- - '#####'
+  - 主机
+- - '#####'
+  - host.allow 选项
+- - '#####'
+  - host.deny 选项
+- - '#####'
+  - Hostess 模块
+- - '#####'
+  - 主机名
+- - '#####'
+  - 热插拔硬件
+- - '#####'
+  - HTML
+- - '#####'
+  - HTTP_PROXY 环境变量
+- - '#####'
+  - 集线器
+- - '#####'
+  - 人为错误，恢复
+- - '#####'
+  - hushlogin 环境变量
+- - '#####'
+  - 超线程 (HyperThreading)
+- - '#####'
+  - 在 FreeBSD 上运行的 hypervisor（虚拟化程序）
+- - '#####'
+  - i386 平台
+- - '#####'
+  - ICMP (互联网控制报文协议)
+- - '#####'
+  - ident 条目
+- - '#####'
+  - ifconfig(8) 命令
+- - '#####'
+  - ignorelogin 环境变量
+- - '#####'
+  - illumos
+- - '#####'
+  - Windows 映像写入器 (Image Writer)
+- - '#####'
+  - 非活动内存
+- - '#####'
+  - INCLUDE_CONFIG_FILE 选项
+- - '#####'
+  - INDEX 文件
+- - '#####'
+  - INET 网络选项，用于内核
+- - '#####'
+  - inet6 关键字
+- - '#####'
+  - inetd(8) 守护进程
+- - '#####'
+  - 无限循环
+- - '#####'
+  - info 日志消息
+- - '#####'
+  - 继承
+- - '#####'
+  - init(8)
+- - '#####'
+  - inodes (索引节点)
+- - '#####'
+  - Unix 输入
+- - '#####'
+  - 输入/输出
+- - '#####'
+  - install clean 命令
+- - '#####'
+  - 安装映像
+- - '#####'
+  - 安装
+- - '#####'
+  - 安装 FreeBSD
+- - '#####'
+  - 整数
+- - '#####'
+  - 完整性检查
+- - '#####'
+  - 智能平台管理接口 (IPMI)
+- - '#####'
+  - 接口
+- - '#####'
+  - 旧数据的互联网可访问性
+- - '#####'
+  - 互联网控制报文协议 (ICMP)
+- - '#####'
+  - 互联网协议 (IP)
+- - '#####'
+  - 可中断的 NFS 挂载
+- - '#####'
+  - 入侵者
+- - '#####'
+  - ioapic 设备
+- - '#####'
+  - iocage
+- - '#####'
+  - iostat(8)
+- - '#####'
+  - IP 地址
+- - '#####'
+  - IP Filter
+- - '#####'
+  - IP (互联网协议)
+- - '#####'
+  - IPFW
+- - '#####'
+  - IPMI (智能平台管理接口)
+- - '#####'
+  - IPMItool
+- - '#####'
+  - IPSEC 网络选项，用于内核
+- - '#####'
+  - IPv4
+- - '#####'
+  - IPv4 地址
+- - '#####'
+  - 仅 IPv4 协议栈
+- - '#####'
+  - IPv6 地址
+- - '#####'
+  - IPv6 网络
+- - '#####'
+  - 仅 IPv6 协议栈
+- - '#####'
+  - ISC DHCP 服务器
+- - '#####'
+  - 日志中的 ISO 8601 时间格式
+- - '#####'
+  - ISO 9660 文件系统
+- - '#####'
+  - IVCSW (非自愿上下文切换)
+- - '####'
+  - J
+- - '#####'
+  - jail ID
+- - '#####'
+  - jails
+- - '#####'
+  - jexec(8) 命令
+- - '#####'
+  - jls(8)
+- - '#####'
+  - 作业控制
+- - '#####'
+  - 作业调度器
+- - '#####'
+  - 日志记录
+- - '#####'
+  - Joy, Bill
+- - '#####'
+  - JSON
+- - '####'
+  - K
+- - '#####'
+  - KeepModifiedMetadata，用于 freebsd update
+- - '#####'
+  - kenv(8)
+- - '#####'
+  - Kerberos 身份验证
+- - '#####'
+  - KERNCONF 变量
+- - '#####'
+  - 内核
+- - '#####'
+  - kernel-dbgg
+- - '#####'
+  - 内核调试器配置实用程序
+- - '#####'
+  - 内核内存
+- - '#####'
+  - 内核模块
+- - '#####'
+  - kern.elf32.fallback_brand sysctl
+- - '#####'
+  - kern.elf32.nxstack sysctl
+- - '#####'
+  - kern.elf64.fallback_brand sysctl
+- - '####'
+  - K
+- - '####'
+  - L
+- - '####'
+  - M
+- - '####'
+  - N
+- - '####'
+  - N
+- - '####'
+  - O
+- - '####'
+  - P
+- - '####'
+  - Q
+- - '####'
+  - Q
+- - '####'
+  - R
+- - '####'
+  - S
+- - '####'
+  - 软件
+- - '####'
+  - SOL（串行-over-LAN），74
+- - '####'
+  - Solaris，x1, 21
+- - '####'
+  - 固态硬盘，TRIM 协议，242–243
+- - '####'
+  - sort(1) 程序，251
+- - '####'
+  - 源代码，336
+- - '####'
+  - 备用硬件，18
+- - '####'
+  - 稀疏文件，293–294
+- - '####'
+  - spawn 选项，用于 TCP 连接，461–462
+- - '####'
+  - 特殊挂载，234
+- - '####'
+  - SRV 记录，357
+- - '####'
+  - ssh-keygen 命令，493, 595
+- - '####'
+  - SSH（安全外壳协议），44, 478, 491–499
+- - '####'
+  - SSL（安全套接字层），478
+- - '####'
+  - 堆栈保护页，485
+- - '####'
+  - 堆栈，不可执行，484–485
+- - '####'
+  - 可堆叠 GEOM 类，205
+- - '####'
+  - 可堆叠挂载，254–255
+- - '####'
+  - 标准错误，xlvii
+- - '####'
+  - 标准输入，xlvii
+- - '####'
+  - 标准输出，xlvii
+- - '####'
+  - STAPE 环境变量，85
+- - '####'
+  - 启动脚本，402–405, 446
+- - '####'
+  - 启动服务，44
+- - '####'
+  - 启动/关机脚本，来自供应商，405
+- - '####'
+  - 有状态检测，464–465
+- - '####'
+  - 有状态协议，138
+- - '####'
+  - 无状态协议，137
+- - '####'
+  - status 命令，73, 86
+- - '####'
+  - status 邮件，545–546
+- - '####'
+  - 存储
+- - '####'
+  - 流协议，138
+- - '####'
+  - 字符串，99
+- - '####'
+  - 条带化 VDEVs（虚拟设备），265
+- - '####'
+  - su(1)（切换用户）命令，179
+- - '####'
+  - 子网，133–136
+- - '####'
+  - Subversion（SVN），435
+- - '####'
+  - Sun Microsystems，xxv, xl
+- - '####'
+  - sunlnk 标志，193
+- - '####'
+  - 超级块，232
+- - '####'
+  - SVN（Subversion），435
+- - '####'
+  - 交换后备内存磁盘，290
+- - '####'
+  - 交换分区，用于崩溃转储，608
+- - '####'
+  - 交换空间，24–25, 37, 39, 536, 540–541, 542
+- - '####'
+  - 交换机
+- - '####'
+  - 符号版本管理，406
+- - '####'
+  - 符号链接，禁用，237
+- - '####'
+  - 对称多处理（SMP），396–401
+- - '####'
+  - SYN 数据包，464
+- - '####'
+  - 同步器，245
+- - '####'
+  - 同步挂载，235
+- - '####'
+  - systcl(8) 程序，97–101
+- - '####'
+  - systcl.out 文件，97
+- - '####'
+  - sysctls
+- - '####'
+  - syslog 协议，级别，547
+- - '####'
+  - syslog 服务器，141
+- - '####'
+  - syslogd(8)，66, 460, 546–553
+- - '####'
+  - sysrc(8)，63–64
+- - '####'
+  - systat(1)，528
+- - '####'
+  - 系统账户，182
+- - '####'
+  - 系统管理员，xlv–xlvi
+- - '####'
+  - 系统备份，84
+- - '####'
+  - 系统调用，419
+- - '####'
+  - 系统时钟，设置，43
+- - '####'
+  - 系统关机，73–74
+- - '####'
+  - 系统状态，top(1) 工具概览，533
+- - '####'
+  - T
+- - '####'
+  - 表格，为 PF 配置，466
+- - '####'
+  - 磁带驱动器，密度，86
+- - '####'
+  - 磁带
+- - '####'
+  - tar(1) 命令，87–92, 254
+- - '####'
+  - tarball，88
+- - '####'
+  - 目标，用于 *Makefile*，362
+- - '####'
+  - Tarsnap，87
+- - '####'
+  - 任务，调度，520–524
+- - '####'
+  - 品尝，205
+- - '####'
+  - TCP/IP 网络协议，123, 124
+- - '####'
+  - TCP 端口 22，494
+- - '####'
+  - TCP 端口，用于 Dragonfly，501
+- - '####'
+  - TCP（传输控制协议），126, 137–138
+- - '####'
+  - TCP 封装器，454, 455–462
+- - '####'
+  - TCP_HHOOK 网络选项，用于内核，114
+- - '####'
+  - TCP_OFFLOAD 网络选项，用于内核，114
+- - '####'
+  - telnet(1)，481, 492
+- - '####'
+  - 模板目录，在 Ports Collection 中，366
+- - '####'
+  - 临时挂载点，用于新分区，253
+- - '####'
+  - term 环境变量，191
+- - '####'
+  - 终端仿真器，79
+- - '####'
+  - 终端服务器，75
+- - '####'
+  - 终端，332, 584–586
+- - '####'
+  - 测试
+- - '####'
+  - 文本编辑器窗口，175
+- - '####'
+  - textdump，610–611
+- - '####'
+  - TFTP（简单文件传输协议），518–520
+- - '####'
+  - tftpd(8)，518
+- - '####'
+  - 线程库，402
+- - '####'
+  - 线程，398, 401–402
+- - '####'
+  - 三次握手，138, 464
+- - '####'
+  - 拇指驱动器
+- - '####'
+  - 分层硬件，17, 18
+- - '####'
+  - “tilde-dot” 断开序列，80
+- - '####'
+  - tilde（~），用于用户主目录，190
+- - '####'
+  - 时间
+- - '####'
+  - 时间服务器，505
+- - '####'
+  - 时间片，397
+- - '####'
+  - 时区，43–44
+- - '####'
+  - 时区文件，430–431
+- - '####'
+  - timecounter，60
+- - '####'
+  - 定时 rc 脚本，404
+- - '####'
+  - times.allow 选项，192
+- - '####'
+  - times.deny 选项，192
+- - '####'
+  - timezone 环境变量，191
+- - '####'
+  - tip(1) 程序，79
+- - '####'
+  - TLS（传输层安全），478
+- - '####'
+  - /tmp，内存，65
+- - '####'
+  - TMPDIR 变量，323
+- - '####'
+  - tmpfs(5) 程序，289
+- - '####'
+  - Tools 目录，在 Ports Collection 中，366
+- - '####'
+  - top(1) 工具，533
+- - '####'
+  - 传输控制协议（TCP），126
+- - '####'
+  - 传输层（OSI 中的），126, 127, 128
+- - '####'
+  - 传输协议，端口，138–139
+- - '####'
+  - SNMP 中的陷阱，558
+- - '####'
+  - TRIM 协议，242–243, 291
+- - '####'
+  - 裁剪内核，112–118
+- - '####'
+  - 故障排除，599–612. 另见 bug 报告
+- - '####'
+  - TrueOS，x1
+- - '####'
+  - truncate(1) 程序，293–294
+- - '####'
+  - 链路聚合，163
+- - '####'
+  - truss(1)，418–419
+- - '####'
+  - tsch shell，46
+- - '####'
+  - tunables，62, 102
+- - '####'
+  - tunefs(8)，241–242, 249
+- - '####'
+  - 教程，8
+- - '####'
+  - twist 选项，用于 TCP 连接，460–461
+- - '####'
+  - typescript 文件，92
+- - '####'
+  - tz 环境变量，505
+- - '####'
+  - tzsetup(8)，504
+- - '####'
+  - U
+- - '####'
+  - upnpd 标志，193
+- - '####'
+  - uart(4) 设备驱动程序，78
+- - '####'
+  - uchg 标志，193
+- - '####'
+  - UCL（通用配置语言），17, 587
+- - '####'
+  - UDF（通用磁盘格式），283
+- - '####'
+  - UDP（用户数据报协议），37, 126, 137
+- - '####'
+  - UEFI（统一可扩展固件接口），50
+- - '####'
+  - UFS（Unix 文件系统），xlui, 20, 231-255
+- - '####'
+  - UFS_DIRHASH 选项，用于内核，114
+- - '####'
+  - UIDs 文件，在 Ports Collection 中，366
+- - '####'
+  - umask 环境变量，191
+- - '####'
+  - umount(8)，282, 285
+- - '####'
+  - UNAVAIL 池状态，275
+- - '####'
+  - 未压缩安装介质，26–27
+- - '####'
+  - 卸载
+- - '####'
+  - 通用配置语言（UCL），17
+- - '####'
+  - 加州大学伯克利分校，xxiv
+- - '####'
+  - Unix，xxv, xlv–xlvi
+- - '####'
+  - Unix 管理员，xlv
+- - '####'
+  - Unix 文件系统（UFS），xliii, 21. 另见 UFS（Unix 文件系统）
+- - '####'
+  - 类 Unix，xlii
+- - '####'
+  - Unix 系统实验室（USL），xxxvi
+- - '####'
+  - UNKNOWN 规则，用于 TCP 封装器，457, 458
+- - '####'
+  - 未挂载的父数据集，262
+- - '####'
+  - 卸载
+- - '####'
+  - 非特权用户，45, 452–453
+- - '####'
+  - 解包，90
+- - '####'
+  - UpdateIfUnmodified 选项，用于 freebsd update，429
+- - '####'
+  - UPDATING 文件
+- - '####'
+  - 更新 FreeBSD，源代码，436
+- - '####'
+  - 升级 FreeBSD，421–450
+- - '####'
+  - USB 驱动器
+- - '####'
+  - V
+- - '####'
+  - W
+- - '####'
+  - X
+- - '####'
+  - Y
+- - '####'
+  - Z
+- - '#'
+  - 保持 FreeBSD 免费，远不止你看到的那样。
+- - '#'
+  - EFF.ORG
+- - '#'
+  - 电子前沿基金会
+- - '#'
+  - 资源
+- - '#'
+  - LINUX BASICS FOR HACKERS
+- - '#'
+  - PRACTICAL BINARY ANALYSIS
+- - '#'
+  - HOW LINUX WORKS, 2ND EDITION
+- - '#'
+  - Linux 编程接口
+- - '#'
+  - FreeBSD® 权威指南
+- - '#'
+  - 作者简介
+- - '#'
+  - 脚注
+- - '#'
+  - 引言
+- - '#'
+  - 第 1 章 获取帮助
+- - '#'
+  - 第 2 章 安装前
+- - '#'
+  - 第 3 章 安装
+- - '#'
+  - 第 4 章 启动！引导过程
+- - '#'
+  - 第 6 章 内核游戏
+- - '#'
+  - 第 7 章 网络
+- - '#'
+  - 第 8 章 配置网络
+- - '#'
+  - 第 9 章 系统安全
+- - '#'
+  - 第 10 章 磁盘、分区与 GEOM
+- - '#'
+  - 第 11 章 UNIX 文件系统
+- - '#'
+  - 第 12 章 Z 文件系统
+- - '#'
+  - 第 13 章 外部文件系统
+- - '#'
+  - 第 14 章 探索 /ETC
+- - '#'
+  - 第 15 章 让你的系统有用
+- - '#'
+  - 第 16 章 使用端口自定义软件
+- - '#'
+  - 第 17 章 高级软件管理
+- - '#'
+  - 第 18 章 升级 FreeBSD
+- - '#'
+  - 第 19 章 高级安全功能
+- - '#'
+  - 第 20 章 小型系统服务
+- - '#'
+  - 第 21 章 系统性能与监控
+- - '#'
+  - 第 22 章 监狱
+- - '#'
+  - 第 23 章 FreeBSD 的边缘
+- - '#'
+  - 第 24 章 问题报告与恐慌
+- - '##'
+  - 后记

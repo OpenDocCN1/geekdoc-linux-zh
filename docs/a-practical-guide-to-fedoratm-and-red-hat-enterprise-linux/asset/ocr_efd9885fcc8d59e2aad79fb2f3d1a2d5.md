@@ -1,0 +1,17 @@
+All modern Ethernet switches have enough bandwidth to communicate simultaneously, in full-duplex mode, with all connected devices. A nonswitched (hub-based) broadcast network can run in only half-duplex mode. Full-duplex Ethernet further improves efficiency by eliminating collisions. Each host on a full-duplex switched network can transmit and receive simultaneously at the speed of the network (e.g., 100 megabits per second) for an effective bandwidth between hosts of twice the speed of the network (e.g., 200 megabits per second), depending on the capacity of the switch.
+
+# Bridge
+
+A network bridge connects multiple network segments at the data link layer (IP layer 2) of the OSI model. A bridge is similar to a repeater or network hub, devices that connect network segments at the physical layer; however, a bridge works by forwarding traffic from one network segment to another only if the destination device specified in the packet is known to be on the remote segment. A bridge does not forward traffic between LAN hosts on the same side of the bridge.
+
+In Ethernet networks, the term bridge formally means a device that behaves according to the IEEE 802.1D standard. Marketing literature frequently refers to this type of device as a network switch.
+
+# Router
+
+A router connects networks at layer 3 of the IP and OSI models (page 291). For example, a router can connect a LAN to a WAN (such as the Internet) or it can connect two LANs. A router determines which path packets should take to travel to a different network and forwards the packets. Routers work at the network layer of the IP and OSI models (layer 3). “Interworking Through Gateways and Routers” on the next page covers routers in more depth.
+
+# VLAN
+
+A VLAN (virtual local area network or virtual LAN) is a logical entity defined in software. It defines a group of hosts that share the same broadcast domain (layer 2). That is, when a host sends out a broadcast packet, such as an ARP packet, it will arrive at all other hosts in the same VLAN. All modern, managed switches, those that have a command line or Web interface, have VLAN capability. A VLAN allows an administrator to group hosts into IP ranges (LANs). VLANs commonly group hosts by department, organization, or security needs. Hosts in the same VLAN communicate with each other using layer 2, and hosts in different VLANs communicate using layer 3. The primary difference between a LAN and a VLAN is that in a LAN (a unmanaged switch), all hosts are in the same broadcast domain, whereas in a VLAN, there can be multiple broadcast domains on a single switch.
+
+Broadcast domains and IP protocol layer 2 segments are effectively the same thing. However, layer 2 can be confused with hosts (network addresses) being in the same IP network. Consider the classic concentrator, a device that sends out all packets on all ports all the time. These ports might include separate networks. For example, some hosts might be in network 10.0.1.0, and others might be in network 192.168.1.0. Ethernet broadcast packets do not know the difference between the networks; these packets go to all hosts regardless of IP address. This setup is sometimes referred to as a collision domain. VLANs enable you to place the hosts in the IP network 10.0.1.0 into one VLAN and the hosts in 192.168.1.0 into another, so the networks do not share

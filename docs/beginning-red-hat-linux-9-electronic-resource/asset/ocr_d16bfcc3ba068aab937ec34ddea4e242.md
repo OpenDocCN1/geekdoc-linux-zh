@@ -1,0 +1,15 @@
+Despite what you may read in the press about 'hackers', the most common causes of data loss are operator error ("finger trouble") and hardware failure. Nevertheless, we should still consider unauthorized access, either locally or, if the machine is connected to some sort of network (LAN or the Internet), remotely, as another potential threat.
+
+# # Hacking
+
+A hacker typically starts their activities by attempting to connect to your system using various TCP port numbers to try and find out where your system is vulnerable. This process is known as probing. Of course, if the hacker is somewhere out there on the Internet, they can probe your system only when you are connected, which is why people with "always on" Internet connections, such as xDSL ("broadband"), need to pay particular attention to security. A secure system will simply ignore incoming probes so the potential hacker has no indication that there is anything using the IP address they picked to probe. (Note that not all probes indicate a threat \- some ISPs also probe ports on their customer's systems.)
+
+If your system does respond to a hacker's probes, their next step will be to identify what software is listening on the ports (for example, a Web server, FTP server, Telnet, and so on) and try to exploit any security vulnerabilities in those programs. If the hacker is successful, they will be able to gain root access to your system, and may install modified versions of standard software that will allow them back in, or to use your system to launch attacks on other systems. Since vulnerabilities in software are found and fixed on a frequent basis, it is important to check regularly for known problems with any of the software you are running and obtain updates as soon as they become available. Fortunately, Red Hat makes this extremely easy through the Red Hat Network and the updateate command. We'll look at this later on in the chapter.
+
+# # Denial of Service
+
+Denial of Service attacks are designed to disrupt legitimate use of computer systems, rather than gain unauthorized access to information. These may be implemented by exploiting bugs in network services so that these services fail (for example, by sending malformed requests to a Web server, causing it to crash), or by overloading networks so that legitimate network traffic is unable to pass.
+
+Hackers sometimes attempt Denial of Service attacks by sending the target system TCP/IP packets with the SYN flag set, as if they were starting up a TCP connection, but never completing the connection. The target system allocates some resources for each incoming connection, so if the hacker sends enough of these SYN packets the target system will eventually exhaust its network resources. This is sometimes called a SYN flood.
+
+If your system is compromised, a hacker may use it to launch a Denial of Service attack on some other system without your knowledge. Coordinated attacks launched against a target system from a number of compromised systems are called distributed denial of service attacks, and these have been known to cause serious problems for the target system, no matter how large they might be.

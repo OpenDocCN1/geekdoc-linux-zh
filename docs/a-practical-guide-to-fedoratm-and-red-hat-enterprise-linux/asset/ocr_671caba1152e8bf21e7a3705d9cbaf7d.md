@@ -1,0 +1,15 @@
+This chapter picks up where Chapter 5 left off. Chapter 27 expands on this chapter, exploring control flow commands and more advanced aspects of programming the Bourne Again Shell. The **bash** home page is at www.gnu.org/software/bash. The **bash** *info* page is a complete Bourne Again Shell reference.
+
+The Bourne Again Shell is a command interpreter and high-level programming language. As a command interpreter, it processes commands you enter on the command line in response to a prompt. When you use the shell as a programming language, it processes commands stored in files called *shell scripts*. Like other languages, shells have variables and control flow commands (e.g., **for loops** and **if** statements).
+
+When you use a shell as a command interpreter, you can customize the environment you work in. You can make the prompt display the name of the working directory, create a function or an alias for **cp** that keeps it from overwriting certain kinds of files, take advantage of keyword variables to change aspects of how the shell works, and so on. You can also write shell scripts that do your bidding—anything from a one-line script that stores a long, complex command to a longer script that runs a set of reports, prints them, and mails you a reminder when the job is done. More complex shell scripts are themselves *programs*; they do not just run other programs. Chapter 27 has some examples of these types of scripts.
+
+Most system shell scripts are written to run under **bash** (*or* **dash**; next page). If you will ever work in single-user mode—when you boot the system or perform system maintenance, administration, or repair work, for example—it is a good idea to become familiar with this shell.
+
+This chapter expands on the interactive features of the shell described in Chapter 5, explains how to create and run simple shell scripts, discusses job control, talks about locale, introduces the basic aspects of shell programming, talks about history and aliases, and describes command-line expansion. Chapter 27 presents some more challenging shell programming problems.
+
+# BACKGROUND
+
+**bash**   The Bourne Again Shell is based on the Bourne Shell (an early UNIX shell; this book refers to it as the *original Bourne Shell* to avoid confusion), which was written by Steve Bourne of AT&T's Bell Laboratories. Over the years the original Bourne Shell has been expanded, but it remains the basic shell provided with many commercial versions of UNIX.
+
+**sh**   Because of its long and successful history, the original Bourne Shell has been used to write many of the shell scripts that help manage UNIX systems. Some of these scripts appear in Linux as Bourne Again Shell scripts. Although the Bourne Again Shell includes many extensions and features not found in the original Bourne Shell, **bash** maintains compatibility with the original Bourne Shell so you can run Bourne Shell scripts under **bash**. On UNIX systems the original Bourne Shell is named **sh**. On Fedora/RHEL systems **sh** is a symbolic link to **bash**, ensuring that scripts that

@@ -1,0 +1,60 @@
+
+Two other techniques for remote access security can be built into a modem (or RAS if it has integrated modems). One is callback: After you dial in, you get a password prompt. Once you type your password, the modem hangs up and calls you back at a phone number it has stored internally. Unfortunately this technique is not foolproof. Some modems have a built-in callback table that holds about ten entries, so this strategy works for small sites with only a few modems. If you use more modems, the RAS software must provide the callback.
+
+The second technique is to use CLID (caller line ID) or ANI (automatic number identification) to decide whether to answer the call. Depending on your wiring and the local phone company, you may or may not be able to use ANI. ANI information is provided before the call, whereas CLID information is provided in tandem with the call.
+
+## VIRUSES AND WORMS
+
+Examples of UNIX/Linux viruses include the Bliss virus/worm released in 1997 and the RST.b virus discovered in December 2001. Both are discussed in detail in articles on the Web. Viruses spread through systems by infecting executable files. In the cases of Bliss and RST.b, the Linux native executable format, ELF, was used as a propagation vector.
+
+Just after 5 PM on November 2, 1988, Robert T. Morris, Jr., a graduate student at Cornell University, released the first big virus onto the Internet. Called an Internet worm, this virus was designed to propagate copies of itself over many machines on the Internet. The worm was a piece of code that exploited four vulnerabilities, including one in **finger**, to force a buffer to overflow on a system. Once the buffer overflowed, the code was able to get a shell and then recompile itself on the remote machine. The worm spread around the Internet very quickly and was not disabled, despite many people’s efforts, for 36 hours.
+
+The chief characteristic of any worm is propagation over a public network, such as the Internet. A virus propagates by infecting executables on the machine, whereas a worm tends to prefer exploiting known security holes in network servers to gain root access and then tries to infect other machines in the same way.
+
+UNIX/Linux file permissions help to inoculate systems against many viruses. Windows NT is resistant for similar reasons. You can easily protect the local system against many viruses and worms by keeping its system patches up-to-date, not executing untrusted binaries from the Internet, limiting PATH (page 319) to include only necessary system directories, and doing as little as possible while working with **root privileges**. You can prevent a disaster in case a virus strikes by backing up your system frequently.
+
+## PHYSICAL SECURITY
+
+Often overlooked as a defense against intrusion, physical security covers access to the computer itself and to the console or terminal attached to the machine. If the machine is unprotected in an unlocked room, there is very little hope for physical security. (A simple example of physical vulnerability is someone walking into the room where the computer is, removing the hard drive from the computer, taking it home, and analyzing it.) You can take certain steps to improve the physical security of a computer.
+
+- Keep servers in a locked room with limited access. A key, a combination, or a swipe card should be required to gain access. Protect windows as well as doors. Maintain a single point of entry. (Safety codes may require multiple exits, but only one must be an entry.)
+- For public machines, use a security system, such as a fiberoptic security system, that can secure a lab full of machines. With such a system, you run a fiberoptic cable through each machine such that the machine cannot be removed (or opened) without cutting the cable. When the cable is cut, an alarm goes off. Some machines—for example, PCs with plastic cases—are much more difficult to secure than others. Although it is not a perfect solution, a fiberoptic security system may improve local security enough to persuade a would-be thief to go somewhere else.
+- Most modern PCs have a BIOS password. You can set the order in which a PC searches for a boot device, preventing the PC from being booted from a floppy disk or CD/DVD. Some BIOSs can prevent the machine from booting altogether without a proper password. The password protects the BIOS from unauthorized modification. Beware, however: Many BIOSs have well-known *back doors* (page 1136). Research this issue if the BIOS password is an important feature for you. In addition, you can blank the BIOS password by setting the clear-CMOS jumper on a PC motherboard; if you are relying on a BIOS password, lock the case.
+- Run only fiberoptic cable between buildings. This strategy is not only more secure but also safer in the event of lightning strikes and is required by many commercial building codes.
+- Maintain logs of who goes in and out of secure areas. Sign-in/out sheets are useful only if everyone uses them. Sometimes a guard is warranted. Often a simple proximity badge or smartcard can tell when anyone has entered or left an area and keep logs of these events, although these can be expensive to procure and install.
+- Anyone who has access to the physical hardware has the keys to the palace. Someone with direct access to a computer system can do such things as swap components and insert boot media, all of which are security threats.
+- Avoid having activated, unused network jacks in public places. Such jacks provide unnecessary risk.
+- Many modern switches can lock a particular switch port so it accepts only traffic from an NIC (network interface card) with a particular hardware address and shuts down the port if another address is seen. However, commonly available programs can enable someone to reset this address.
+- Make periodic security sweeps. Check doors for proper locking. If you must have windows, make sure they are locked or are permanently sealed.
+- Waste receptacles are often a source of information for intruders. Have policies for containment and disposal of sensitive documents.
+- Use a UPS (uninterruptible power supply). Without a clean source of power, your system is vulnerable to corruption.
+
+## SECURITY RESOURCES
+
+Many free and commercial programs can enhance system security. Some of these are listed in Table C-1. Many of these sites have links to other, interesting sites that are worth looking at.
+
+**Table C-1 Security resources**
+
+| Tool | What it does | Where to get it |
+| :--- | :--- | :--- |
+| AIDE | Advanced Intrusion Detection Environment. Similar to tripwire with extensible verification algorithms. | sourceforge.net/projects/aide |
+| bugtraq | A moderated mailing list for the announcement and detailed discussion of all aspects of computer security vulnerabilities. | www.securityfocus.com/archive/1 |
+| CERT | Computer Emergency Response Team. A repository of papers and data about major security events and a list of security tools. | www.cert.org |
+| chkrootkit | Checks for signs of a rootkit indicating that the machine has been compromised. | www.chkrootkit.org |
+| dsniff | Sniffing and network audit tool suite. Free. | monkey.org/~dugsong/dsniff |
+| freefire | Supplies free security solutions and supports developers of free security solutions. | www.freefire.org |
+| fwtk | Firewall toolkit. A set of proxies that can be used to construct a firewall. | www.fwtk.org |
+| GIAC | A security certification and training Web site. | www.giac.org |
+| hping | Multipurpose network auditing and packet analysis tool. Free. | www.hping.org |
+| ISC² | Educates and certifies industry professionals and practitioners under an international standard. | www.isc2.org |
+| John | John the Ripper: a fast, flexible, weak password detector. | www.openwall.com/john |
+| Kerberos | Complete, secure network authentication system. | web.mit.edu/kerberos/www |
+| L6 | Verifies file integrity; similar to tripwire (French and English). | www.pgc.ca/l6.html |
+| Launchpad | Tracks Ubuntu Linux bugs. | bugs.launchpad.net/ubuntu |
+| LIDS | Intrusion detection and active defense system. | www.lids.org |
+| LinuxSecurity.com | A solid news site dedicated to Linux security issues. | www.linuxsecurity.com |
+| LWN.net | Security alert database for all major Linux distributions. | lwn.net/Alerts |
+| Microsoft Security | Microsoft security information. | www.microsoft.com/security |
+| nessus | A plugin-based remote security scanner that can perform more than 370 security checks. Free. | www.nessus.org |
+| netcat | Explores, tests, and diagnoses networks. | freshmeat.net/projects/netcat |
+| nmap | Scans hosts to see which ports are available. It can perform stealth scans, determine operating system type, find open ports, and more. | nmap.org |

@@ -1,0 +1,15 @@
+This chapter starts by providing introductory information about Apache. Following this information is the JumptStart section, which describes the minimal steps needed to get Apache up and running. Next is “Filesystem Layout,” which tells you where the various Apache files are located.
+
+Configuration directives (referred to simply as directives) are a key part of Apache and are discussed starting on page 909. This section includes coverage of contexts and containers, two features/concepts that are critical to understanding Apache. The next section, which starts on page 932, explains the main Apache configuration file, **apache2.conf**, as distributed by Ubuntu. The final pages of the chapter cover virtual hosts, troubleshooting, and modules you can use with Apache, including CGI and SSL.
+
+# INTRODUCTION
+
+Apache is a server that responds to requests from Web browsers, or *clients*, such as Firefox, Netscape, lynx, and Internet Explorer. When you enter the address of a Web page (a *URL*, page 1179) in a Web browser’s location bar, the browser sends a request over the Internet to the (Apache) server at that address. In response, the server sends (serves) the requested content back to the browser. The browser then displays or plays the content, which might be a song, picture, video clip, or other information.
+
+**Content** Aside from add-on modules that can interact with the content, Apache looks only at the type of data it is sending so that it can specify the correct *MIME* (page 1160) type; otherwise it remains oblivious to the content itself. Server administration and content creation are two different aspects of bringing up a Web site. This chapter concentrates on setting up and running an Apache server; it spends little time discussing content creation.
+
+**Modules** Apache, like the Linux kernel, uses external modules to increase load-time flexibility and allow parts of its code to be recompiled without recompiling the whole program. Rather than being part of the Apache binary, modules are stored as separate files that can be loaded when Apache is started.
+
+Apache uses external modules, called dynamic shared objects (DSOs), for basic and advanced functions; there is not much to Apache without these modules. Apache also uses modules to extend its functionality. For example, modules can process scripts written in Perl, PHP, Python, and other languages; use several different methods to authenticate users; facilitate publishing content; and process noncontextual content, such as audio. The list of modules written by the ASF and third-party developers is constantly growing. For more information refer to “Modules” on page 941.
+
+**Setup** The Debian/Ubuntu Apache team provides one of the easiest-to-use Apache setups of any distribution. Most packages that provide a Web interface and that depend on Apache run as installed; typically you do not need to modify the configuration files.

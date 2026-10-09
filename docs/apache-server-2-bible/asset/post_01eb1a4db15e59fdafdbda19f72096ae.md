@@ -1,0 +1,251 @@
+
+## Index
+
+- make release command, 675
+- make xconfig command, 689
+- mapcache script (on the CD), 304–305
+- make ramsfs script, 670
+- Makefile script, 175–178, 666
+- manage user pl command, 206–208
+- manage users pl script, 202
+- MaxClients directive, 39, 94–95
+- max_execution_time directive, 433
+- Maximum Transmission Unit. See MTU
+- MaxKeepAliveRequests directive, 38, 73
+- MaxRequestPerChild directive, 39, 95, 580
+- MaxRepeaServers directive, 102
+- MaxRepeaThreads directive, 39, 95
+- MaxRepeaPerChild directive, 100
+- MD5 (message digest) checkums using, 501, 502
+  - creating, 28, 60–61
+  - Digest authentication using, 109
+  - ENCRYPTION variable, 205
+  - hidden data, protecting using, 520–524
+- MAC (message authentication code)
+  - value generation, 550
+  - performance drag caused by, 60–61
+  - user code, 502
+  - updating, 28
+- mininfo command, 660
+- memory management
+  - cache, assigning file types to, 620–621
+  - cache, checking hard drive subsystem, 600, 645
+  - cache, database connection, 628–630
+  - cache, DNS (Domain Name Service), 167, 639
+  - cache, enabling, 21, 22, 129
+  - cache, FastCGI, 401–402, 408
+  - cache, file handle, 155, 607–608
+  - cache, MySQL, 179
+  - cache, negative, 625–626
+  - cache, optimizing for speed, 600, 620–627
+  - cache, proxy server options, 209, 272–276, 278–279, 621–626
+  - cache, Squid proxy-caching server, 624–625
+  - cache, SSL (Secured Socket Layer) settings, 556, 561
+  - cache, time to live, 556, 561, 625
+  - cache statistics, viewing, 621
+  - CGI (Common Gateway Interface) scripts, 74, 409
+  - displaying total available, 660
+  - DMA (Direct Memory Access), 601–602
+  - GAW (Random Access Memory)-based, 668–671
+  - monitoring, 17, 594
+  - PHP: HyperText Processor, 423, 433–434
+  - process memory usage, controlling, 39, 74, 608
+  - TCP (Transmission Control Protocol) send buffer size, 96
+- memory c script, 410
+- memory limit directive, 433
+- message authentication code. See MAC
+- message digest. See MD5
+- Meta dfiles directive, 142
+- MetaFiles directive, 141
+- META INFO directive, 481
+- Meta suffix directive, 142
+- methods
+  - backend(), 526
+  - DELETE, 306
+  - end_form(), 525
+  - end_html(), 347
+  - find_form(), 525
+  - handler(), 460–461, 462, 464, 525
+  - header(), 347, 525
+  - init(), 630
+  - mysql fetch row(), 449
+  - p(), 347, 348
+  - param(), 345, 464
+  - read_file, 387
+  - send_file, 460
+  - start_form(), 525
+  - start_html(), 347, 348–349, 525
+  - submit(), 525
+  - text field(), 525
+- MIME (Multipurpose Internet Mail Extension)
+  - CGI (Common Gateway Interface), retrieving type in, 330
+  - CGI (Common Gateway Interface) script, associating with type, 118–124
+  - configuration file, 29, 47, 128
+  - content negotiation using type, 129
+  - directives, forcing type with, 127
+  - enabling/disabling, 22
+  - environment variables related to, 330, 333–334
+  - file contents, assigning type by examining, 128
+  - file extension, defining handler for, 125
+  - file extension, defining type for unknown, 47, 61
+  - file extension, forcing type regardless of, 127
+  - file extension, mapping character set to, 124–125
+  - file extension, mapping encoding scheme to, 125
+  - file extension, mapping language to, 125–126
+  - icon, assigning to type, 133–134
+  - magic file, 29, 128
+  - URL (Uniform Resource Locator) rewrite, forcing type in, 245
+- MIME Lite module (on the CD), 721
+- MIME Lite: HTML module (on the CD), 369, 721
+- Mime MagicFile directive, 128
+- MimeMap pl script, 365–368
+- mime types file, 29, 47
+- MimeServers directive, 104
+- MimeSign(s) directive, 39, 95–96
+- minus sign ( ) directive switch, 66, 67
+- mirroring hard drive via RAID (Redundant Array of Inexpensive Disks), 642
+  - Web sites, 278, 311
+- missing php script, 441
+- mk dir command, 45
+- mkfile utility, 655
+- mkscripts command, 654
+- mmap system calls, 155
+- MMapFile directive, 155
+- mod access module, 88, 109
+- mod actions module, 118
+- mod aliases module, 14, 145
+- mod as module, 137, 138
+- mod auth module, 109, 184–190, 195
+- mod auth anon module, 109, 110, 112–114, 116
+- mod auth dbm module, 109, 110, 116
+- mod auth digest module, 109
+- mod_auth_digest module, 195–202
+- mod autoindex module, 131
+- mod backhand module, 626–627
+- mod backhand Web site, 626–627
+- mod cern meta module, 137, 141
+- mod cgi module, 6, 118
+- mod_cgid module, 9
+- mod_dav module, 155–156
+- mod_dir module, 62, 130–131
+- mod_env module, 106
+- mod_expgml module, 151
+- mod_expires module, 137, 139
+- mod_ext_filter module, 118, 122–123
+- mod_fastcgi module, 413–414, 417
+- mod_fcgi module, 620–621
+- mod_file_cache module, 151, 155
+- mod_headers module, 137, 138–139
+- modified_simple.fmpl file, 443
+- modified_form.php script, 443–444
+- mod_imap module, 151, 152–153
+- mod_include module, 118, 378–379
+- mod_info module, 143, 214–216
+- mod_info.c file, 214, 215
+- mod_isapi module, 151, 587–588
+- mod_j module, 469, 472–473
+- mod_jj.conf-auto file, 479–480, 490
+- mod_jj.x module, 480
+- mod_jserv module, 469, 472
+- mod_log_config module, 143, 221–222
+- mod_mime module, 124
+- mod_mime_magic module, 29, 47–48, 124, 128
+- mod_negotiation module, 124, 128–129
+- mod_perl module. See also Perl.
+  - Apache::AuthDBI module, 202
+  - using for authentication, 202
+  - API (Application Program Interface), as, 458
+  - ASP (Active Server Page)
+    - implementation using, 466–467
+  - CGI (Common Gateway Interface) scripts,
+    - running using, 456–457
+  - CGI.pm module, writing
+    - mod_perl script using, 462–464
+  - child processes, 461, 631–633
+  - code, evaluating for unsafe, 460
+  - compiling, 455–456
+  - constants, defining, 460
+  - counters, 460, 461–462
+  - database connectivity, 628–630, 633–635
+  - downloading, 455, 585
+  - FastCGI versus, 633–635
+  - handler methods, 460–461, 462, 464
+  - httpd_conf settings, 455–457, 461, 464–465, 467, 585
+  - installing, 455–456, 585
+  - Java servlets compared, 470
+  - memory management, 463–466
+  - package name, 458
+  - performance, optimizing, 627–633
+  - preloading, 627–628
+  - query string information, accessing, 464
+  - request objects, 462, 464
+  - script writer, 458–464
+  - sound distribution (on the CD), 721
+  - speed, optimizing, 627–633
+  - virtual host configuration, automating using, 171–175
+  - Windows, running mod_perl scripts under, 585–586
+- mod_perl, variables, running under, 585–586
+- mod_php module, 6, 421, 427
+- mod_proxy module, 151, 268, 275, 622
+- mod_put module, 306–307, 309–310
+- mod_put.tar.gz file, 307
+- mod_rewrite module. See also URL (Uniform Resource Locator) Rewriting rules
+  - mod_rewrite module, 144, 249–249
+- mod_selectv module, 106, 107, 224
+- mod_so module, 151, 472
+- mod_spelling module, 144, 148–149
+- mod_ssl module. See also SSL (Secured Socket Layer)
+  - compiling, 555
+  - enabling, 557
+  - enabling/disabling, 551, 555
+  - installing, 555
+  - introducing, 7
+  - OpenSSL, relating to, 543
+  - OpenSSL package needed for, 552
+  - shared module, running as, 556
+- mod_sl module, 226
+- mod_Web Project Web site, 551, 555
+- mod_status module, 143, 216–220
+- ModuleName module, 226
+
+### Modules
+
+- modules, building in, 609
+- Apache modules, 105, 109–117
+  - active, listing, 76, 216
+- Apache executable build-in, 713
+- authentication modules, 105, 109–118
+- condition tests, 64
+- content-type configuration modules, 105, 124–129
+- CPAN (Comprehensive Perl Archive Network) modules, 204, 343, 356, 457
+- custom, testing for availability, 64
+- directory listing modules, 105, 130–137
+- dynamic content generation modules, 105, 117, 377–378
+- extension-related, 105, 106–109
+- extension modules, 28, 431
+- input from other modules, 9
+- loading, dynamic, 75–76
+- loading as DSO (Dynamic Shared Object), 151, 152
+- locating, 204
+- monitoring configuration information, 215–216
+- Perl modules, loading, 460, 461, 586
+- Perl modules, location, 458–459
+- Perl modules, memory management, 463–466
+- Perl modules, preloading, 464–465, 627–628
+- PHP modules, writing, 458–464
+- PHP: HyperText Preprocessor, using with extension modules, 431
+- PHP: HyperText Preprocessor module, building as DSO (Dynamic Shared Object) version, 426
+- PHP: HyperText Preprocessor module, building as static, 425
+- PHP: HyperText Preprocessor module, building as module, locating, specifying, 432
+- response header modules, 105, 137–142
+- security in choice of download source, 500
+- server information modules, 105, 143
+- server logging modules, 105, 143
+- sharing, enabling, 21
+- sources of, 543, 557, 580
+- URL (Uniform Resource Locator) mapping modules, 105, 144–151
+- mod_unique_id module, 106, 109
+- mod_userdir module, 144–145
+- mod_usertrack module, 143, 228–229
+- mod_v2h.tar.gz file, 178
+- mod_v2h module, 178–179

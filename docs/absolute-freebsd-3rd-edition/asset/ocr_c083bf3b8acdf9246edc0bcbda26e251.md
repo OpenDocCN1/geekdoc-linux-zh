@@ -1,0 +1,11 @@
+hardware cryptographic accelerator, GELI takes advantage of it transparently.
+
+I should mention that people lose more data to encryption misconfiguration or lost keys than to laptop theft. When I hear someone say, “I’ve encrypted my whole hard drive!” I have a nearly psychic vision of the future where that same person is saying, “I’ve lost access to everything on my hard drive!” More often than not, I’m correct. Consider carefully whether you really, truly *need* disk encryption. If you do need it, also back your files up. Those government spoaks aren’t going to crack the encryption on your laptop. They’re going to wait for you to decrypt it yourself—and then they’ll break in.
+
+If you want to encrypt your laptop, use the FreeBSD installer to do so. You should still read this section so you understand how the disk encryption works, but if the installer wants to do the work for you, let it. We’ll walk through using GELI to encrypt a disk partition on /dev/dad0, storing the cryptographic keys on the USB storage device mounted on /media. You might find it more sensible to use a filesystem in a file (see Chapter 13) as an encrypted partition. Very few people actually need to encrypt their entire hard drive, and in certain circumstances, doing so might raise suspicions. I have enough trouble explaining to airport security why my computer “looks so weird.” In their minds, a boot prompt that says, Insert cryptographic key and enter cryptographic passphrase is only one step away from This man is a dangerous lunatic who requires a very thorough body cavity search. If you really do need to encrypt certain documents, chances are they total only a few megabytes. That’s a perfect application for a filesystem in a file or a flash drive.
+
+Note that you must load the *geom\_eli.ko* kernel module before working with GELI.
+
+# **Generating and Using a Cryptographic Key**
+
+GELI lets you use a key file and/or a passphrase as cryptographic keys for an encrypted device. We’ll use both. To generate your cryptographic key file, use dd(1) to grab a suitable amount of data from /dev/random and write it to a file. Remember, /media is where our USB device is

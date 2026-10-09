@@ -1,0 +1,15 @@
+Several other operating systems derive from or emulate primordial Unix in one way or another. This list is by no means exhaustive, but I’ll touch on the high points.
+
+# Solaris
+
+The best-known Unix might be Oracle Solaris. Solaris runs on high-end hardware that supports dozens of processors and gobs of disk. (Yes, gobs is a technical term, meaning more than you could possibly ever need, and I know very well that you need more disk than I think you need.) Solaris, especially early versions of Solaris, had strong BSD roots. Many enterprise-level applications run on Solaris. Solaris runs mainly on the SPARC hardware platform manufactured by Sun, which allows Sun to support interesting features, such as hot-swappable memory and mainboards.
+
+The Oracle Corporation acquired Solaris when they bought Sun Microsystems in 2009. Oracle ceased Solaris development in 2016. While there’s still an extensive installed base of Solaris systems and you can still get Solaris from Oracle, as of today, Oracle Solaris has no future.
+
+# illumos
+
+Several years before Oracle purchased Sun Microsystems, Sun open sourced the majority of Solaris and sponsored the OpenSolaris project to improve that codebase. OpenSolaris ran successfully until Oracle shut down source access and reclaimed all of the OpenSolaris resources.
+
+The OpenSolaris code was still available, though. The OpenSolaris community forked OpenSolaris into illumos (http://illumos.org/). If you miss Solaris, you can still use a free, modern, Solaris-like operating system. FreeBSD includes two important features from OpenSolaris, the Zetabyte Filesystem (ZFS) and DTrace, a full-system tracing system.
+
+# AIX

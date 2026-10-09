@@ -1,0 +1,13 @@
+lessons from these older operating systems, and today’s Unices and Unix-like operating systems are remarkably similar.
+
+# **WHY UNIX-LIKE?**
+
+One thing to note is that FreeBSD, Linux, and so on are called *Unix-like* instead of *Unix*. The term *Unix* is a trademark of The Open Group. For an operating system to receive the right to call itself Unix, the vendor must prove that the OS complies with the current version of the Single Unix Specification. While FreeBSD generally meets the standard, continuous testing and recertification cost money, which the FreeBSD Project doesn’t have to spare. Certification as Unix also requires that someone sign a paper stating not only that he or she is responsible for FreeBSD’s conformance to the Single Unix Specification but that he or she will fix any deviations from the standard that are found in the future. FreeBSD’s development model makes this even more difficult—bugs are found and deviations are fixed, but there’s nobody who can sign a piece of paper that guarantees 100 percent standards compliance.
+
+# **FreeBSD’s Strengths**
+
+After all this, what makes FreeBSD unique?
+
+# **Portability**
+
+The FreeBSD Project’s goal is to provide a freely redistributable, stable, and secure operating system that runs on the computer hardware that

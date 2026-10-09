@@ -1,0 +1,15 @@
+password prompt. You would then enter your PIN and the number displayed on the access token. The token has a unique serial number that is stored in a database on the authentication server. The token and the authentication server use this serial number as a means of computing a challenge every 30 to 60 seconds. If the PIN and token number you enter match what they should be as computed by the access server, you are granted access to the system.
+
+# # REMOTE ACCESS SECURITY
+
+Issues and solutions surrounding remote access security overlap with those pertaining to login and host security. Local logins might be secure with simply a username and password, whereas remote logins (all remote access) should be made more secure. Many break-ins can be traced back to reusable passwords. It is a good idea to use an encrypted authentication client, such as *ssh* or *kerberos*. You can also use smartcards for remote access authentication.
+
+Modem pools can also be an entry point into a system. Most people are aware of how easy it is to monitor a network line, but they might take for granted the security of the PSTN (public switched telephone network, also known as POTS—plain old telephone service). You might want to set up an encrypted channel after dialing in to a modem pool. One way to do so is by running *ssh* over PPP (page 292).
+
+There are ways to implement stringent modem authentication policies so unauthorized users cannot use local modems. The most common techniques are PAP (Password Authentication Protocol), CHAP (Challenge Handshake Authentication Protocol), and Radius. PAP and CHAP are relatively weak compared to RADIUS, so the latter has rapidly gained in popularity. Cisco also provides a method of authentication called TACACS/TACACS+ (Terminal Access Controller Access Control System).
+
+*One or more of these authentication techniques are available in a RAS (remote access server)—in a network, a computer that provides network access to remote users via modem.*
+
+Two other techniques for remote access security can be built into a modem (or RAS if it has integrated modems). One is callback: After you dial in, you get a password prompt. Once you type your password, the modem hangs up and calls you back at a phone number it has stored internally. Unfortunately this technique is not foolproof. Some modems have a built-in callback table that holds about ten entries, so this strategy works for small sites with only a few modems. If you use more modems, the RAS software must provide the callback.
+
+The second technique is to use CLID (caller line ID) or ANI (automatic number identification) to decide whether to answer the call. Depending on your wiring and the local phone company, you might not be able to use ANI. ANI information is provided before the call, whereas CLID information is provided in tandem with the call.

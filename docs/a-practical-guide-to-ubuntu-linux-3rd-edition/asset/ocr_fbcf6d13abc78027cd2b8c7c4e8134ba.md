@@ -1,0 +1,33 @@
+Using an absolute pathname, you can list or otherwise work with any file on the local system, assuming you have permission to do so, regardless of the working directory at the time you give the command. For example, Sam can give the following command while working in his home directory to list the files in the `/etc/apt` directory:
+
+```
+$ pwd
+/home/sam
+$ ls /etc/apt
+apt.conf.d       secring.gpg      sources.list.d   trusted.gpg    trusted.gpg.d
+preferences.d     sources.list     trustdb.gpg      trusted.gpg-
+```
+
+# ## ~ (Tilde) in pathnames
+
+In another form of absolute pathname, the shell expands the characters `~/` (a tilde followed by a slash) at the start of a pathname into the pathname of your home directory. Using this shortcut, you can display your .bashrc startup file (page 294) with the following command, no matter which directory is the working directory:
+
+```
+$ less ~/.bashrc
+```
+
+A tilde quickly references paths that start with your or someone else’s home directory. The shell expands a tilde followed by a username at the beginning of a pathname into the pathname of that user’s home directory. For example, assuming he has permission to do so, Max can examine Sam’s .bashrc file with the following command:
+
+```
+$ less ~sam/.bashrc
+```
+
+Refer to “Tilde Expansion” on page 359 for more information.
+
+# ## Relative Pathnames
+
+A *relative pathname* traces a path from the working directory to a file. The pathname is *relative* to the working directory. Any pathname that does not begin with the root directory (represented by /) or a tilde (~) is a relative pathname. Like absolute pathnames, relative pathnames can trace a path through many directories. The simplest relative pathname is a simple filename, which identifies a file in the working directory. The examples in the next sections use absolute and relative pathnames.
+
+# ## Significance of the Working Directory
+
+To access any file in the working directory, you need only a simple filename. To access a file in another directory, you must use a pathname. Typing a long pathname is tedious and increases the chance of making a mistake. This possibility is less likely under a GUI, where you click filenames or icons. You can choose a working directory for any particular task to reduce the need for long pathnames. Your choice of a working directory does not allow you to do anything you could not do otherwise—it just makes some operations easier.

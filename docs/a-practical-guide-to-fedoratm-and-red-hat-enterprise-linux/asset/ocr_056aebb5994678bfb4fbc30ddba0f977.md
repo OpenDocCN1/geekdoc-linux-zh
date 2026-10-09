@@ -1,0 +1,7 @@
+![](bbox=[0.35, 0.09, 0.78, 0.52])
+
+drop-down list. The Properties window initially displays some basic information. Click the tabs at the top of the window to display additional information. Different sets of tabs appear for different types of files. You can modify the settings in this window only if you have permission to do so. This section describes the three tabs most commonly found in Object Properties windows.
+
++   * Basic The Basic tab displays information about the file, including its MIME (page 1261) type, and enables you to select a custom icon for the file and change its name. To change the name of the file, replace the name in the text box labeled **Name**. If the filename is not listed in a text box, you do not have permission to change it. An easy way to change the icon is to open a File Browser window at /usr/share/icons (give the command `nautilus /usr/share/icons` in an Enter a Command window [Alt-F2]). Work your way down through the directories until you find an icon you like (gnome/24x24 has some interesting icons), and then drag and drop it on the icon to the left of Name in the Basic tab.
+
++   * Permissions The Permissions tab (Figure 4-10) allows the owner of a file to change the file's permissions (page 191) and to change the group (see /etc/group on page 506) the file is associated with to any group the owner is associated with. Nautilus grays out items you are not allowed to change.
