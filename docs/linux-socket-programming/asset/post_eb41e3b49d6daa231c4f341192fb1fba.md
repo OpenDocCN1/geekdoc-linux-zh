@@ -1,0 +1,145 @@
+
+![](img/03334662da8fdfb8d95a02f270c522f6_156_0.png)
+
+![](img/03334662da8fdfb8d95a02f270c522f6_156_1.png)
+
+If the number of connections is increasing, there are fewer being terminated than there are being created. If your server does not see a termination within the prescribed time, you can assume that it is serving a connection. At that point, your server doubles the rate of servlet creation (see the second pattern in **Figure 9.1**). This process continues until the number of servlets hits a ceiling or your server reaches the maximum creation frequency (every 5 seconds, perhaps).
+
+Again, suppose your server creates a new servlet every 60 seconds (with a 30-second idle timeout). If the extra servlet does not terminate within the prescribed time, you can cut in half the time delay between creations, thus doubling the frequency. You can repeat this process until the connection rate begins to stabilize.
+
+Finally, when the connections begin to dwindle, the pending connections (if any exist) have more than enough servlets for the queue, and the server begins to see servlet termination. When the extra servlets begin to terminate, you can reset the server’s frequency to normal.
+
+```c
+/***************************************************/
+/*** Chumming connections example	***
+/*** ("servlet-chummer.c" on Web site)	***
+/***************************************************/
+int delay=MAXDELAY;		/* for example, 5 seconds */
+time_t lasttime;
+void sig_child(int signum)
+{
+	wait(0);			/* Acknowledge termination */
+	time(&lasttime);		/* get the time stamp */
+	delay = MAXDELAY;		/* reset chummer back */
+}
+void Chummer(void (*servlet) (void))
+{
+	time(&lasttime);		/* Initialize timestamp */
+	for (;;) {
+		if ( !fork() )		/* first, set the chum */
+			servlet();	/* call the task (must have exit()) */
+		sleep(delay);		/* dream for a while */
+		/* If no child terminated, double frequency */
+		if ( time(0) - times[1] >= delay-1 )
+		if ( delay > MINDELAY )	/* don’t go below min */
+			delay /= 2;	/* double chum frequency */
+	}
+}
+```
+
+This code fragment shows how to track the formation of servlets and test for a load increase by noting the time that the last child terminated. The termination also resets the timer so that the current connection can stabilize and the process can restart.
+
+## Extending Control with a Smart Select
+
+Using processes to manage the flow of connections is an intuitive way to distribute the tasks. Furthermore, placing limits on the number of processes running and preforking the processes ensure that the connections get the attention they require. There is a fundamental problem, however, with all these approaches: the scheduler storm.
+
+## The Scheduler Storm
+
+The scheduler storm presents two problems that expose you to the limits of multitasking and the reasons why single-CPU systems can become overwhelmed. The first problem shows the effect a large process table has on servlets. The second problem affects the preforking concept.
+
+The process table can easily handle a few hundred processes. Depending on memory and swap, theoretically you could have many more. Still, consider the limits: Linux switches between processes every 10ms. This does not include the time delay of unloading old process contexts and loading a new one.
+
+For example, if you had 200 servlets running, each process could wait 2 seconds for a small slice of CPU time on a system that switches tasks every .01 second. If each timeslice could send out 1KB within that small slice, you may see about 200KBps throughput on the 10Mbps LAN connection (about par for TCP/IP). However, each connection gets only 512 bytes per second. This is the primary risk of letting the process table grow without barrier.
+
+The second problem is at the heart of preforking: Several processes all wait for one connection. Your server may have 20 servlets I/O blocked when a connection request arrives. Since all are waiting for a connection, the kernel awakes all 20. The first one gets the connection, while all the rest return to an I/O blocked state. Some programmers call this a *scheduling storm* or a *thundering herd*. In either case, this problem emphasizes the need to minimize the number of waiting servlets and adapting based on the connection load.
+
+**NOTE**
+
+Solving the Thundering Herd in the Kernel
+
+One of the problems with writing a book on an ever-evolving technology like Linux is that the information becomes obsolete very quickly. Linux 2.4 solved the thundering herd problem in the kernel by waking up only one I/O-blocked process.
+
+## Overburdened select()
+
+One solution to these problems is to avoid multitasking altogether. In a previous chapter you read about the I/O multiplexer system calls: *select()* and *poll()*. These system calls could act in a similar manner as several processes.
+
+Instead of 20 servlet processes all waiting for a connection, you could offer one process that waits for a connection. When the connection request arrives, the server places the connection (the client channel) in an I/O list. These system calls wait for any one to send a request or command. The system call returns to your server with the channels that are ready, and your server retrieves and processes the command.
+
+The temptation to skip multitasking altogether and use these multiplexers may lead to some loss in performance. When using a single task to process information, your program or server has to wait for I/O at various times during the life of the process. If you don't take advantage of this downtime, your servers may lose significant opportunities to do other things. For example, if you have ever compiled the kernel, you may find that it compiles in less time if you force multiple jobs with the -j make option. (If you have the memory, two or three jobs per processor cuts the compilation time noticeably.)
+
+## Compromising with a Smart Select
+
+As you create your high-powered, high-demand server, you can use various ways to distribute the load. Two are multitasking and I/O multiplexing. However, if used exclusively, multitasking may lose control of the scheduler and erode precious time to context switching, while I/O multiplexing loses unused CPU bandwidth. An alternative to using either exclusively is a combination of both. Combining the two into a *Smart Select* could help you diminish the disadvantages of each, while giving you their capabilities.
+
+A Smart Select dispatches a few processes. Each process owns a connection channel and a set of open client channels. An I/O multiplexer manages all of the channels. Here is an algorithm for the process:
+
+```c
+/*****...*******************************...*****/
+/*** Smart Select example: each child tries to accept a ***/
+/*** connection. If successful, it adds the connection ***/
+/*** to the select() list.                ***/
+/*** ("smart-select.c" on Web site)              ***/
+/*****...*******************************...*****/
+int sd, maxfd=0;
+fd_set set;
+FD_ZERO(&set);
+/*** Create socket and fork() processes ***/
+/**---In Child---*/
+maxfd = sd;
+FD_SET(sd, &set);
+for (;;) {
+        struct timeval timeout={ 2,0 };         /* 2 seconds */
+        /**--Wait for some action--*/
+if ( select(maxfd+1, &set, 0, 0, &timeout) > 0 )
+{
+        /**--If new connection, connect and add to list--*/
+ if ( FD_ISSET(sd, &set) )
+  {  int client = accept(sd, 0, 0);
+     if ( maxfd < client )
+        maxfd = client;
+     FD_SET(client, &set);
+  }
+        /**--If command/request from client, process--*/
+else
+        /*** Process client's request ***/
+        /*** If client just closed, remove from list ***/
+}
+}
+```
+
+You can use this algorithm to create a few processes—much less than the number you can create in a purely multitasking server— for example, 5–10 servlets. Each servlet, in turn, could support 5–10 connections.
+
+**NOTE**
+
+Select Collision
+
+You may have heard of a BSD problem called *select collision*. The previous algorithm assumes that the select() can wait on several descriptors and wake up only when the descriptors change state. The BSD 4.4 implementation has a limitation that causes all processes blocked in a select() to wake up. It appears that Linux does not have this limitation.
+
+This approach could easily support hundreds of connections without interfering with each other. The balance between the number of tasks and the number of connections helps minimize the impact on the process table. However, having so many connections can lead to problems if you need to track your protocol's state.
+
+You can use this algorithm easily with stateless servers. A stateless connection remembers nothing about previous transactions. This requires all transactions sent to your server to have no relationship with other transactions or each connection to have a single transaction. Also, if your server requires short- to medium-term connections, you can use this approach. Some examples are an HTTP server, a DB query server, and a Web redirector.
+
+## Implementation Problems
+
+As you might have noticed, this approach does have a couple of limitations. First, the primary server cannot balance the number of connections between each servlet. You can add code to place a ceiling on the number of connections:
+
+```c
+/*************************************************************/
+/** Limiting the number of connections to a servlet ***/
+/*************************************************************/
+if ( FD_ISSET(sd, &set) )
+    if ( ceiling < MAXCONNECTIONS )
+    {
+        int client = accept(sd, 0, 0);
+        if ( maxfd < client )
+            maxfd = client;
+        FD_SET(client, &set);
+        ceiling++;
+    }
+```
+
+This approach effectively yields the connection to another servlet. However, the distribution of connections between your servlets may be random.
+
+The other problem is with regard to the context of your connection. When a client connects to your server, unless it is a single-transaction connection, your server passes through different states. For example, state one is login and state two is a session.
+
+The previous code fragment always returns to the point of waiting for and getting some message. If you want to incorporate states, you must track where each connection is. With this information, you

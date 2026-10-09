@@ -1,0 +1,334 @@
+
+### ESRCH
+
+No thread could be found corresponding to that specified by `tchild`.
+
+### EINVAL
+
+The `tchild` thread has been detached.
+
+Another thread is already waiting on termination of `tchild`.
+
+### EDEADLK
+
+The `tchild` argument refers to the calling thread.
+
+### Example
+
+(see `pthread_create()` )
+
+#### pthread_exit()
+
+Explicitly terminates the current thread, returning `retval`. You can use a simple return statement as well.
+
+### Prototype
+
+```c
+#include <pthread.h>
+void pthread_exit(void *retval);
+```
+
+### Return Value
+
+(none)
+
+### Parameter
+
+| Parameter | Description |
+| :--- | :--- |
+| `retval` | The `void*` value to return. Make sure that this value is non-stack memory. |
+
+### Possible Errors
+
+(none)
+
+### Example
+
+(see `pthread_create()` )
+
+#### pthread_detach()
+
+Detaches `tchild` thread from the parent. Normally, you need to join or wait for every process and thread. This call lets you create several threads and ignore them. This is the same as setting the thread's attribute upon creation.
+
+### Prototype
+
+```c
+#include <pthread.h>
+int pthread_detach(thread_t tchild);
+```
+
+### Return Value
+
+A zero if successful. If the thread-create call encountered any errors, the call returns a negative value and sets `errno` to the error.
+
+### Parameter
+
+| Parameter | Description |
+| :--- | :--- |
+| `tchild` | The child thread to detach |
+
+### Possible Errors
+
+| Error | Description |
+| :--- | :--- |
+| `ESRCH` | No thread could be found corresponding to that specified by `tchild` |
+| `EINVAL` | The `tchild` thread has been detached |
+| `EINVAL` | Another thread is already waiting on termination of `tchild` |
+| `EDEADLK` | The `tchild` argument refers to the calling thread |
+
+### Example
+
+```c
+void* child(void *arg)
+{
+    /**** Do something! ****/
+    pthread_exit(arg); /* terminate and return arg */
+}
+int main()
+{
+    pthread_t tchild;
+    if ( pthread_create(&tchild, 0, child, 0) < 0 )
+        perror("Can't create thread!");
+    else
+        pthread_detach(tchild);
+    /**** Do something! ****/
+}
+```
+
+### Locking
+
+The primary advantage of using threads is sharing data memory. Because the threads may try to revise the memory at the same time, you need to lock the memory for exclusive access. This section describes `pthread` calls that you can use (even with clones) to lock memory.
+
+**`pthread_mutex_init()`, `pthread_mutex_destroy()`**
+
+These calls create and destroy mutex semaphore variables. You may not need the initializer because the defined variables are easier and faster to use. The `destroy` call normally frees up any resources. However, the Linux implementation uses no allocated resources, so the call does nothing more than check whether the resource is unlocked.
+
+### Prototype
+
+```c
+#include <pthread.h>
+/*---Predefined mutex settings---*/
+pthread_mutex_t fastmutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t recmutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
+pthread_mutex_t errchkmutex = PTHREAD_ERRORCHECK_MUTEX_INITIALIZER_NP;
+int pthread_mutex_init(pthread_mutex_t *mutex,
+    const pthread_mutexattr_t *mutexattr);
+int pthread_mutex_destroy(pthread_mutex_t *mutex);
+```
+
+### Return Value
+
+Always zero.
+
+### Parameters
+
+- `mutex`: The mutex to create or destroy.
+- `mutexattr`: Any attributes to set. If NULL, the call uses the default setting (`PTHREAD_MUTEX_INITIALIZER`).
+
+### Possible Errors
+
+(none)
+
+**`pthread_mutex_lock()`, `pthread_mutex_trylock()`**
+
+Lock or try to lock a semaphore for entering a critical section. The parameter is simply a variable that acts like a reservation ticket. If another thread tries to lock a reserved spot, it blocks until the reserving thread releases the semaphore.
+
+### Prototype
+
+```c
+#include <pthread.h>
+int pthread_mutex_lock(pthread_mutex_t *mutex);
+int pthread_mutex_trylock(pthread_mutex_t *mutex);
+```
+
+### Return Value
+
+The call returns zero on success and nonzero on error. You can find the exact code in `errno`.
+
+### Parameter
+
+| Parameter | Description |
+| :--- | :--- |
+| `mutex` | The semaphore variable |
+
+### Possible Errors
+
+| Error | Description |
+| :--- | :--- |
+| `EINVAL` | The mutex has not been properly initialized. |
+| `EDEADLK` | (`pthread_mutex_trylock`) The calling thread has already locked the mutex (error-checking mutexes only). |
+| `EBUSY` | (`pthread_mutex_lock`) The calling thread can't acquire because it is currently locked. |
+
+### Example
+
+```c
+pthread_mutex_t mutex = fastmutex;
+...
+if ( pthread_mutex_lock(&mutex) == 0 )
+{
+    /**** work on critical data ****/
+    pthread_mutex_unlock(&mutex);
+}
+```
+
+```c
+pthread_mutex_t mutex = fastmutex;
+...
+/*---Do other processing while waiting for semaphore---*/
+while ( pthread_mutex_trylock(&mutex) != 0  &&  errno == EBUSY )
+{
+    /***** Work on something else while waiting ****/
+}
+/*---Got the semaphore!  Now work on the critical section---*/
+if ( errno != ENOERROR )
+{
+    /**** work on critical data ****/
+    pthread_mutex_unlock(&mutex);
+}
+```
+
+### pthread_mutex_unlock()
+
+Unlock a mutex semaphore.
+
+### Prototype
+
+```c
+#include <pthread.h>
+int pthread_mutex_unlock(pthread_mutex_t *mutex);
+```
+
+### Return Value
+
+The call returns zero on success and nonzero on error. You can find the exact code in `errno`.
+
+### Parameter
+
+| Parameter | Description |
+| :--- | :--- |
+| `mutex` | The semaphore variable |
+
+### Possible Errors
+
+| Error | Description |
+| :--- | :--- |
+| `EINVAL` | The mutex has not been properly initialized. |
+| `EPERM` | The calling thread does not own the mutex (error-checking mutexes only). |
+
+### Example
+
+(see `pthread_mutex_lock()` )
+
+### Signals
+
+When working with tasks, your program may get signals (or asynchronous notifications). This section describes system calls that let you capture and process them.
+
+#### signal()
+
+Register the `sig_fn` routine to answer the `signum` signal. The default behavior is a single shot; the signal handler reverts to the default after getting the first signal. Use `sigaction()` instead if you want to control the behavior more.
+
+### Prototype
+
+```c
+#include <signal.h>
+void (*signal(int sig_num, void (*sig_fn)(int sig_num)))(int sig_num);
+//Or-
+typedef void (*TSigFn)(int sig_num);
+TSigFn signal(int sig_num, TSigFn sig_fn);
+```
+
+### Return Value
+
+A positive value if successful. If the thread-create call encountered any errors, the call returns a negative value and sets `errno` to the error.
+
+### Parameters
+
+| Parameter | Description |
+| :--- | :--- |
+| `sig_num` | The signal number to capture |
+| `sig_fn` | The program routine that the schedule calls |
+
+### Possible Errors
+
+(`errno` not set)
+
+### Example
+
+```c
+void sig_handler(int sig_num)
+{
+    switch( sig_num )
+    {
+        case SIGFPE:
+        ...
+    }
+    ...
+}
+...
+if( signal(SIGFPE, sig_handler) == 0 )
+    perror("signal() failed");
+```
+
+#### sigaction()
+
+Similar to `signal()`, `sigaction()` establishes the receiver of certain signals. Unlike `signal()`, however, this call gives you a lot more control over how the signaling notification behaves. It is also a little more complicated to use.
+
+### Prototype
+
+```c
+#include <signal.h>
+int sigaction(int sig_num, const struct sigaction *sigact,
+               struct sigaction *oldsigact);
+```
+
+### Return Value
+
+Zero upon success; otherwise, nonzero.
+
+### Parameters
+
+| Parameter | Description |
+| :--- | :--- |
+| `signum` | The signal to capture. |
+| `sigact` | The desired behavior and signal handler, using the following structure: |
+| | `struct sigaction` |
+| | `{` |
+| | `    void (*sa_handler)(int);` |
+| | `    sigset_t sa_mask;` |
+| | `    int sa_flags;` |
+| | `    void (*sa_restorer)(void);` |
+| | `};` |
+| `sa_handler` | Signal handler function pointer. |
+| `sa_mask` | The set of signals to block while servicing a signal in the signal handler. |
+| `sa_restorer` | *Obsolete; do not use.* |
+| `sa_flags` | How to handle the signals. You can use the following flags: |
+| | `SA_NOCLDSTOP` If the signal is `SIGCHLD`, ignore cases when the child stops or pauses. |
+| | `SA_ONESHOT` or `SA_RESETHAND` Reset the handler to the default after getting the first signal. |
+| | `SA_RESTART` Try to restart an interrupted system call. Normally, system calls that are interrupted return an `EINTR` error. This option tries to restart the call and avoid `EINTR` errors. |
+| | `SA_NOMASK` or `SA_NODEFER` Allow like signals to interrupt the handler. Normally, if your handler is responding to a particular signal like `SIGCHLD`, the kernel suspends other `SIGCHLD` signals. This can lead to lost signals. Using this option permits your handler to be interrupted. Be careful using this option. |
+| `oldsigact` | A repository of the old behaviors. You can copy the old settings here. |
+
+### Possible Errors
+
+| Error Code | Description |
+| :--- | :--- |
+| `EINVAL` | An invalid signal was specified. This will also be generated if an attempt is made to change the **action** for `SIGKILL` or `SIGSTOP` that cannot be caught. |
+| `EFAULT` | The `sigact` or `oldsigact` parameter points to memory that is not a valid part of the process address space. |
+| `EINTR` | System call was interrupted. |
+
+### Example
+
+```c
+void sig_handler(int signum)
+{
+    switch ( signum )
+    {
+        case SIGCHLD:
+        ...
+    }
+    ... 
+}
+struct sigaction sigact;
+bzero(&sigact, sizeof(sigact));
+sigact.sa_handler = sig_handler; /* set the handler */
+```

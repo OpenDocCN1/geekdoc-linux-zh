@@ -1,0 +1,255 @@
+
+## sigaction()
+
+```c
+sigact.sa_flags = SA_NOCLDSTOP | SA_RESTART; /* set options */
+if ( sigaction(SIGCHLD, &sigact, 0) == 0 )
+    perror("sigaction() failed");
+```
+
+## sigprocmask()
+
+Sets which signals are permitted to interrupt while servicing a signal.
+
+### Prototype
+
+```c
+#include <signal.h>
+int sigprocmask(int how, const sigset_t *sigset, sigset_t *oldsigset);
+```
+
+### Return Value
+
+Nonzero upon error; otherwise, zero.
+
+### Parameters
+
+- `how`: The following are how the interrupting signals are treated while servicing a signal:
+  - `SIG_BLOCK`: The set of blocked signals is the union of the current set and the `sigset` argument.
+  - `SIG_UNBLOCK`: The signals in `sigset` are removed from the current set of blocked signals. It is legal to attempt to unblock a signal that is not blocked.
+  - `SIG_SETMASK`: The set of blocked signals is set to the argument `sigset`.
+- `sigset`: The destination signal-set.
+- `Oldsigset`: If non-NULL, the call places a copy of the old values in here.
+
+### Possible Errors
+
+- `EFAULT`: The `sigset` or `oldsigset` parameter points to memory that is not a valid part of the process address space.
+- `EINTR`: System call was interrupted.
+
+## Files and So On
+
+This section describes a few library and system calls for file management.
+
+### bzero(), memset()
+
+bzero() initializes the specified block to zeros. This call is deprecated, so you might want to use memset() instead.
+
+memset() sets the specified block to val.
+
+### Prototype
+
+```c
+#include <string.h>
+void bzero(void *mem, int bytes);
+void* memset(void *mem, int val, size_t bytes);
+```
+
+### Return Value
+
+bzero() returns no value.
+
+memset() returns the reference mem.
+
+### Parameters
+
+| Parameter | Description |
+|---|---|
+| `mem` | The memory segment to initialize |
+| `val` | The value to fill the segment with |
+| `bytes` | The number of bytes to write (the size of the memory segment) |
+
+### Possible Errors
+
+(none)
+
+### Example
+
+```c
+bzero(&addr, sizeof(addr));
+memset(&addr, 0, sizeof(addr));
+```
+
+## fcntl()
+
+Manipulate the file or socket handle.
+
+### Prototype
+
+```c
+#include <unistd.h>
+#include <fcntl.h>
+int fcntl(int fd, int cmd);
+int fcntl(int fd, int cmd, long arg);
+int fcntl(int fd, int cmd, struct flock *flock);
+```
+
+### Return Value
+
+On error, -1 is returned and errno is set appropriately. For a successful call, the return value depends on the operation:
+
+- `F_DUPFD`: The new descriptor
+- `F_GETFD`: Value of flag
+- `F_GETFL`: Value of flags
+- `F_GETOWN`: Value of descriptor owner
+- `F_GETSIG`: Value of signal sent when read or write becomes possible, or zero for traditional SIGIO behavior
+
+All other commands return zero.
+
+### Parameters
+
+- `fd`: The descriptor to manipulate.
+- `cmd`: The operation to perform. Some operations are duplicates of existing functions. Some operations require an operand (arg or flock). Each operation is grouped into specific functions:
+  - **Duplicate descriptor** (`F_DUPFD`): Same as `dup2(arg, fd)`, this operation replaces `fd` with a copy of the descriptor in `arg`.
+  - **Manipulate close-on-exec** (`F_GETFD`, `F_SETFD`): The kernel does not pass all file descriptors to the exec-child process. With this parameter, you can test or set the close-on-exec.
+  - **Manipulate descriptor flags** (`F_GETFL`, `F_SETFL`): Using these commands, you can get the flags (set by the `open()` system call) of the descriptor. You can only set `O_APPEND`, `O_NONBLOCK`, and `O_ASYNC`.
+  - **Manipulate file locks** (`F_GETLK`, `F_SETLK`, `F_SETLKW`): `GETLK` retrieves the lock structure that currently holds the file. If the file is not locked...
+  - **Determine who owns I/O signals** (`F_GETOWN`, `F_SETOWN`): Return or set the PID of the current owner of the `SIGIO` signal.
+  - **Determine the kind of signal to send** (`F_GETSIG`, `F_SETSIG`): Gets or sets the signal type when more I/O operations can be performed. Default is `SIGIO`.
+- `arg`: The value to set.
+- `flock`: The locking key.
+
+### Possible Errors
+
+- `EACCES`: Operation is prohibited by locks held by other processes.
+- `EAGAIN`: Operation is prohibited because the file has been memory-mapped by another process.
+- `EBADF`: `fd` is not an open file descriptor.
+- `EDEADLK`: It was detected that the specified `F_SETLKW` command would cause a deadlock.
+- `EFAULT`: lock is outside your accessible address space.
+- `EINTR`: For `F_SETLK`, the command was interrupted by a signal. For `F_GETLK` and `F_SETLK`, the command was interrupted by a signal before the lock was checked or acquired—most likely when locking a remote file (locking over NFS), but it can sometimes happen locally.
+- `EINVAL`: For `F_DUPFD`, `arg` is negative or is greater than the maximum allowable value. For `F_SETSIG`, `arg` is not an allowable signal number.
+- `EMFILE`: For `F_DUPFD`, the process already has the maximum number of file descriptors open.
+- `ENOLCK`: Too many segment locks open, lock table is full, or a remote locking protocol failed (locking over NFS, for example).
+- `EPERM`: Attempted to clear the `O_APPEND` flag on a file that has the append-only attribute set.
+
+### Example
+
+```c
+#include <unistd.h>
+#include <fcntl.h>
+...
+printf("PID which owns SIGIO: %d", 
+       fcntl(fd, F_GETOWN));
+
+#include <unistd.h>
+#include <fcntl.h>
+...
+if ( fcntl(fd, F_SETSIG, SIGKILL) != 0 )
+    perror("Can't set signal");
+
+#include <unistd.h>
+#include <fcntl.h>
+...
+if ( (fd_copy = fcntl(fd, F_DUPFD)) < 0 )
+    perror("Can't dup fd");
+```
+
+## pipe()
+
+Creates a pipe that points to itself. Each file descriptor in fd[] coincides with input (fd[0]) and output (fd[1]). If you write to fd[1], you can read the data on fd[0]. Used mostly with fork().
+
+### Prototype
+
+```c
+#include <unistd.h>
+int pipe(fd[2]);
+```
+
+### Return Value
+
+Zero if okay; -1 on error.
+
+### Parameter
+
+- `fd`: An array of two integers to receive the new file descriptor values
+
+### Possible Errors
+
+- `EMFILE`: Too many file descriptors are already in use by the current process.
+- `ENFILE`: The system’s file table is full.
+- `EFAULT`: The process does not own the memory that fd points to (invalid memory reference).
+
+### Example
+
+```c
+int fd[2];
+pipe(fd); /* create pipe */
+```
+
+## poll()
+
+Similar to select(), this call waits on any one of several I/O channels for changes. Instead of using macros for managing and controlling the descriptor list, the programmer uses structure entries.
+
+### Prototype
+
+```c
+#include <sys/poll.h>
+int poll(struct pollfd *ufds, unsigned int nfds, int timeout);
+```
+
+### Return Value
+
+If less than zero, an error occurred; a zero returned means that the call timed out. Otherwise, the call returns the number of descriptor records that changed.
+
+### Parameters
+
+- `ufds`: The following is an array of `pollfd` structures. Each record tracks a different file descriptor.
+
+  ```c
+  struct pollfd{
+      int fd; /* file descriptor */
+      short events; /* requested events */
+      short revents; /* returned events */
+  };
+  ```
+
+  The `fd` field is the file descriptor to check. The `events` and `revents` fields indicate the events to check and the events that occurred, respectively. The bit-values available are as follows:
+  - `POLLIN`: There is data to read.
+  - `POLLPRI`: There is urgent data to read.
+  - `POLLOUT`: Writing now will not block.
+  - `POLLRERR`: Error condition.
+  - `POLLHUP`: Hung up.
+  - `POLLNVAL`: Invalid request: `fd` not open.
+  - `POLLRDNORM`: Normal read (Linux only).
+  - `POLLRDBAND`: Read out-of-band (Linux only).
+  - `POLLWRNORM`: Normal write (Linux only).
+  - `POLLWRBAND`: Write out-of-band (Linux only).
+- `nfds`: The number of records to check during the call.
+- `timeout`: The timeout in milliseconds. If timeout is negative, the call waits forever.
+
+### Possible Errors
+
+- `ENOMEM`: There was no space to allocate file descriptor tables.
+- `EFAULT`: The array given as argument was not contained in the calling program's address space.
+- `EINTR`: A signal occurred before any requested event.
+
+### Example
+
+```c
+int fd_count=0;
+struct pollfd fds[MAXFDS];
+ fds[fd_count].fd = socket(PF_INET, SOCK_STREAM, 0);
+ /*** bind() and listen() socket ***/
+ fds[fd_count++].events = POLLIN;
+for (;;)
+{
+    if ( poll(fds, fd_count, TIMEOUT_MS) > 0 )
+    {
+        int i;
+        if ( (fds[0].revents & POLLIN) != 0 )
+        {
+            fds[fd_count].events = POLLIN | POLLHUP;
+            fds[fd_count++].fd = accept(fds[0].fd, 0, 0);
+        }
+        for ( i = 1; i < fd_count; i++ )
+        {
+```

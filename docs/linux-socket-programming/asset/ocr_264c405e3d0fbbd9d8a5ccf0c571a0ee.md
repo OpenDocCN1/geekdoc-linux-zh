@@ -1,0 +1,35 @@
++   - Informational—Data that can be less than 100% reliable for proper functionality. For example, email, news feeds, advertisements, and Web pages.
+- Temporal—Data that is date/time bound. Unless the program uses the information within a specific time, its importance lessens. For example, weather data, surveillance data, and time.
+- Lossy—Data that can degrade without loss of usefulness. These are typically audio or visual. For example, movies, audio files, photos, and spam (of course).
+
+Prior to choosing the packet type or protocol, try to categorize data according to this list. Also include the additional (or external) constraints of the program. These may be regulatory constraints as well.
+
+# Protocol Fragmentation
+
+Large messages on slow networks can frustrate other users. All networks place a maximum frame size so those large messages don't dominate the network. Keep in mind that the routing host may still carve up, or fragment, large messages that go through a constricted network.
+
+Each protocol has a different likelihood of fragmentation. Since reassembling fragmented messages is part of IP, the reassembly may be transparent to the higher protocols. Certain circumstances, however, may require the packet's wholeness. This is particularly important for network performance. When routers carve up the packet into smaller chunks, the router has to take the time to chop up the message, and the resulting packet overhead increases. By blocking fragmentation, the network drops the packet and returns a message-too-big error to your program.
+
+# Packet Types
+
+The following sections describe each packet, showing its statistics and header definition (if there is one). Each section uses a quick-reference style to help you quickly see the features of each protocol. Use this style to help you choose the right packet for your applications.
+
+# The Raw Packet
+
+A raw packet has direct access to an IP packet and header. It is useful in writing special or custom protocols. Its attributes are listed in Table 3.3.
+
+Table 3.3, Raw Packet Attributes
+
+| | |
+| :--- | :--- |
+| Message Size (bytes) | 65,535 (65,515 max data payload) |
+| Overhead (bytes) | 20–60 |
+| Reliability | Low (network may drop or rearrange packets) |
+| Message Type | Datagram |
+| Throughput | High (low system overhead) |
+| Data Integrity | Low (system does not validate message) |
+| Fragmentation | Yes |
+
+Linux provides the option to work with different layers in the Internet Protocol stack (refer to Chapter 5, "Understanding the Network Layering Model," for a complete definition of the layers and IP stack). The most basic TCP/IP message is the raw IP message. It has no information other than the most basic.
+
+You can use the IP packet itself to create the most basic layer to create your own custom protocols. Access the IP packet by selecting SOCK_RAW in the socket() system. For security, you must have root privileges to run a raw socket program.

@@ -1,0 +1,43 @@
+# # Programming Clients and Servers
+
+Streaming (or TCP) channels match Java's interface the best. Java tries to abstract the details and simplify interfaces. You can easily understand the decisions behind placing support for TCP in the I/O library. Java's approach to creating sockets really reduces the steps to a couple of objects and methods.
+
+# ## Java TCP Clients
+
+For example, if you want a client socket, you just create it:
+
+```
+```
+Socket s = new Socket(String Hostname, int PortNum);
+Socket s = new Socket(InetAddress Addr, int PortNum);
+```
+```
+
+A common implementation may look like the following:
+
+```
+```
+Socket s = new Socket("localhost", 9999);
+```
+```
+
+That's it. You don't have to do anything else to connect to a server. When the JVM creates the object, it assigns a local port number, does the network-byte order conversion, and connects to the server. You can even specify which local network interface and port to use with the following extensions:
+
+```
+```
+Socket s = new Socket(String Hostname, int PortNum,
+    InetAddress localAddr, int localPort);
+Socket s = new Socket(InetAddress Addr, int PortNum,
+    InetAddress localAddr, int localPort);
+```
+```
+
+The InetAddress class converts the hostname or IP address into the binary address. Most of the time, you won't use the InetAddress object directly in the call unless you begin with it. Instead, the constructor that passes Hostname is a more common use. Most programs connect using the information a user provides to the program. This typically is by hostname or IP address.
+
+# **NOTE**
+
+Java's IPv4/IPv6 Support
+
+Java currently and directly supports IPv4 and, according to project Merlin (see java.sun.com), IPv6 support should be available when the operating system supports it. Classes like InetAddress, which manages the names and conversion, should easily adapt to other protocols. Be aware, however, that the version you have may not support it yet. Some interfaces, such as InetAddress.getHostAddress(), need to change to support the extended address and new format.
+
+# ## Sending/Receiving Messages
