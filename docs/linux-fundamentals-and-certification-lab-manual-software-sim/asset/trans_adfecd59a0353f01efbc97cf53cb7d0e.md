@@ -1,0 +1,130 @@
+
+# /etc/samba/smb.conf
+
+/etc/samba/smb.conf 文件是 Samba 套件的配置文件。它包含 Samba 程序的运行时配置。该文件在各节中包含名称/值对信息。
+
+节名称是共享资源的名称。节可以命名为几乎任何名称，但通常命名为描述其共享内容的名称。例如，如果要共享的目录是 /opt/oracle 目录，节名称可能是 **oracle**。
+
+Samba 中的一些特殊节名称，**global**、**homes** 和 **printers**。并非必须使用所有特殊名称。
+
+- **global** 节为所有 Samba 共享提供默认值。这些参数适用于 Samba 服务，而不仅仅是单独的共享。
+- **homes** 节为网络上的各个客户端提供共享。这通常被称为*主空间*。
+- **printers** 节为客户端连接打印机提供信息。Samba 中的共享要么是文件目录，要么是打印机。
+
+以下列出了一个示例 smb.conf 文件列表。该文件仅有两个节——**[global]** 和 **[tmp]**。**[global]** 包含有关通用 Samba 共享属性的信息，而 **[tmp]** 包含有关要共享的目录的信息。
+
+```
+[global]
+  workgroup=linuxplus.com
+  security=user
+  encrypt passwords=yes
+  guest account=guest
+  wins server=192.168.0.21
+  local master=yes
+  os level=99
+  hosts allow=192.168.0. 127.
+  interfaces=eth0
+[tmp]
+  path=/tmp
+  writeable=yes
+```
+
+**[global]** 节包含以下属性：
+
+- **workgroup** Windows 机器在一个工作组内参与网络。Windows 机器可以参与带有工作组的对等网络，或参与带有专用服务器提供域的网络。工作组可以是这两种情况中的任意一种。
+如果你使用 Windows 客户端，可以通过右键单击“我的电脑”图标并选择“属性”来找到计算机的工作组。计算机名称和工作组或域位于“计算机名”选项卡下（图 8-10）。
+
+- **security** 这告诉 Samba 以用户级安全模式运行，并挑战任何正在连接的用户以获取用户 ID 和密码。从 Windows 客户端，将显示一个连接对话框，询问在 Linux Samba 服务器上的账户的 ID 和密码。如果用户是从 Linux 客户端连接，则 Linux 服务器将询问客户端正在使用的账户的密码。在这两种情况下，你必须在 Linux 服务器上有一个账户才能访问 Samba 共享。
+
+- **encrypt** 这告诉 Samba 以加密模式交换密码。出于安全原因，除非该共享是任何人都可以使用的匿名共享，否则应始终使用加密。
+
+## 管理服务
+
+![](img/37f079cee226b270f2e09b37a2e4a05d_236_0.png)
+
+图 8-10  
+Windows 计算机名称  
+和工作组。
+
+启用加密密码要求 Samba 使用其自己的密码文件。  
+如果许多用户需要访问，这将导致管理上的麻烦。
+
+**注意**
+
+如果 Samba 服务器被配置为使用现有用户账户数据库（如 NT 域或 LDAP 服务器）进行身份验证，则管理加密密码会更简单。在这种情况下，仍然需要创建用户和组，但 Samba 服务器上不需要进行密码管理，这将减轻一些管理上的麻烦。通常，旨在仅拥有共享访问权限的用户的密码文件条目指定 /bin/false 作为用户的 shell，防止他们登录到机器，但允许共享访问。
+
+- **guest** Linux 允许使用来宾账户进行访问。该行指示来宾账户名为 guest。来宾账户通常没有分配密码。
+
+- **wins server** WINS 是在 Windows 网络上运行的服务，它提供本地计算机的 IP 地址，使用其计算机名称。这类似于 DNS，但设计为仅适用于 Windows，并且仅使用主机的 Windows 友好名称。
+
+Samba 必须能够访问 WINS 服务器才能参与 Windows 网络。如果网络上已经有 WINS 服务器，请使用 wins server 属性来识别它。如果没有 WINS 服务器，Samba 可以使用属性处理该服务
+
+```
+wins support=yes
+```
+
+这表明 Samba 将充当你网络的 WINS 服务器。
+
+- **local master** Windows 网络需要一个中心位置来记录本地子网上存在哪些机器和工作组。这被称为本地主控。任何 Windows 机器都可以是本地主控浏览器。将 local master 设置为 *yes* 表示 Samba 可以是该机器。
+
+- **os level** Windows 网络上的机器通过广播其存在成为本地主控。Windows 机器的 os level 是硬编码的，使得最先进版本的操作系统成为本地主控。通过将 os level 设置为 99，你击败了每一台 Windows 机器，这使得 Linux Samba 服务器能够成为本地主控。
+
+- **hosts allow** hosts allow 条目设置了哪些 IP 网络被允许访问网络共享。在这种情况下，网络是 **192.168.0.** 和 **127.**。列出的是 IP 地址的网络部分，而不是主机部分。127 网络是本地主机。
+
+- **interfaces** 如果你的 Linux 服务器有一个以上的以太网适配器，你可以指定使用哪个适配器用于 Samba。
+
+下一个节，**[tmp]**，是共享的名称。在 Windows 上，此共享将显示为 Linux 服务器上的目录。图 8-11 显示了 Linux 服务器 Styx，其 tmp 目录被显示。如果 Linux Samba 服务器上有任何可用的打印机，它们也会被显示。
+
+![](img/37f079cee226b270f2e09b37a2e4a05d_237_0.png)
+
+![](img/37f079cee226b270f2e09b37a2e4a05d_237_1.png)
+
+这里使用 **[tmp]** 是因为所有 Linux 安装默认都有一个 /tmp 目录。[tmp] 节还表明用户可以写入该目录。默认是只读。
+
+你最基本的 smb.conf 文件已配置完成。你可以使用 Samba 提供的工具 **testparm** 来测试文件的内容。配置文件中的任何错误都会显示出来。按照显示列表中的说明更正任何错误。
+
+# 创建 Samba 用户
+
+在客户端可以访问我们的共享之前，Samba 密码文件中必须有一个有效的用户 ID 和密码。在此 Samba 安装中，密码文件是 /etc/samba/smbpasswd。该文件包含每个授权用户的用户 ID 和加密的密码字符串。smbpasswd 文件中的条目必须在 Linux 主要的 /etc/passwd 文件中有对应的条目。
+
+要向 smbpasswd 文件添加用户，请使用 *smbpasswd* 命令。要向 Samba 密码文件添加用户 jsmith，请使用 **smbpasswd -a jsmith** 命令。
+
+输入命令后，将要求输入新的 SMB 密码。你必须再次输入密码以确保其正确。如果该用户不存在于 Linux 系统中，将显示错误。以下是一个示例列表，添加了用户 jsmith。图 8-12 显示了生成的 /etc/samba/smbpasswd 文件。
+
+```
+# smbpasswd -a jsmith
+New SMB password:
+Retype new password:
+Added user jsmith.
+#
+```
+
+![](img/37f079cee226b270f2e09b37a2e4a05d_238_0.png)
+
+# 启动 Samba
+
+使用 Samba 只需要启动两个进程——**smbd** 和 **nmbd**。smbd 为客户端提供 SMB/CIFS 服务。这为 Windows 客户端提供文件和打印共享服务。
+
+nmbd 为客户端提供基于 IP 的 NetBIOS 命名服务。基于 IP 的 NetBIOS 命名服务允许 Linux Samba 服务器参与 Windows *网上邻居* 视图。
+
+以下条目执行两项任务。命令 *ps -ef | grep search\_name* 确定 smbd 和 nmbd 是否正在运行。每个条目的第二行启动服务。
+
+```
+# ps -ef | grep smbd
+root 14592 14535 0 08:16 pts/1 00:00:00 grep smbd
+# ps -ef | grep nmbd
+root 14594 14535 0 08:16 pts/1 00:00:00 grep nmbd
+# smbd
+# nmbd
+```
+
+```
+# ps -ef | grep smbd
+root 14596 1 0 08:16 ? 00:00:00 smbd
+root 14600 14535 0 08:16 pts/1 00:00:00 grep smbd
+# ps -ef | grep nmbd
+root 14598 1 0 08:16 ? 00:00:00 nmbd
+root 14602 14535 0 08:16 pts/1 00:00:00 grep nmbd
+#
+```
+
