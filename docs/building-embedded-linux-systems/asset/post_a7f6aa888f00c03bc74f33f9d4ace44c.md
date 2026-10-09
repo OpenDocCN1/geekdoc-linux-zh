@@ -1,0 +1,42 @@
+
+## IEEE1394 (FireWire)
+
+FireWire is a trademark owned by Apple for a technology they designed in the late 1980s and early 1990s. They later submitted their work to the IEEE and it formed the basis of what eventually became IEEE standard 1394. Much like USB, IEEE1394 enables devices to be connected using simple and inexpensive hardware interfaces. Because of their similarities, IEEE1394 and USB often used to be considered together, although it seems that USB has won the popularity contest over time, perhaps also due to the licensing terms involved in using FireWire. Even Apple is now shipping systems without FireWire support, in favor of using high-speed USB 2.0 instead.
+
+In contrast to USB, IEEE1394 connections do not require a root node. Rather, connections can be made either in a daisy-chain fashion or using an IEEE1394 hub. Also, unlike SCSI, connections do not need any termination. It is also possible to connect two or more computers directly using an IEEE1394 link, which isn't really possible with USB. To take advantage of this capability, there is even an Internet RFC (Request For Comment, a form of Internet "standard") specifying how to implement IP over IEEE1394.
+
+Linux's support for IEEE1394 used to be buggy and was certainly incomplete in comparison with other operating systems. IEEE1394 support was completely rewritten in the 2.6 series Linux kernel and is now widely considered to be very good. For further information, visit http://www.linux1394.org.
+
+## InfiniBand
+
+InfiniBand is a high-performance switched fabric interface created as a result of merging two competing designs: Future I/O (HP, IBM) and Next Generation I/O (Intel, Microsoft, and Sun). It is built upon a number (ranging from 1–12 or more) of high-speed, point-to-point and bidirectional serial links, and in some ways is similar to other newer buses such as PCI Express. Maximum data throughput ranges from 2 Gigabits to 96 Gigabits for a 12X (12 bonded serial links) Quad Data Rate (QDR) configuration. Two of InfiniBand's main selling points are its very low end-to-end latency (around 1 microsecond) and its support for performance enhancing optimizations such as RDMA (Remote DMA). These features have encouraged InfiniBand adoption for high-performance computing, especially in supercomputers.
+
+Linux support for InfiniBand comes thanks to Open Fabrics Alliance (OFA), an industry consortium created to address the lack of a standard InfiniBand API. OFA maintains the OpenIB InfiniBand Driver Stack that is shipped with a growing number of Linux distributions. Visit http://www.openfabrics.org for more information.
+
+## GPIB
+
+The General-Purpose Interface Bus (GPIB) has its roots in HP’s HP-IB bus, which was born at the end of the 1960s and is still being used in engineering and scientific applications. In the process of maturing, GPIB became the IEEE488 standard and was revised as late as 1992. Many devices that are used for data acquisition and analysis are, in fact, equipped with a GPIB interface. With the advent of mainstream hardware in this field of application, many GPIB hardware adapters have been made available for such hardware and for PCs in particular.
+
+GPIB devices are connected together using a shielded cable that may have stackable connectors at both ends. Connectors that are "stackable" in the sense that a connector on one end of a cable has the appropriate hardware interface to allow for another connector to be attached to it, which itself allows another connector to be attached. If, for instance, a cable is used to connect a computer to device $A$, the connector attached to $A$ can be used to attach the connector of another cable going from $A$ to device $B$.
+
+Linux support for GPIB is available thanks to the Linux GPIB kernel driver and library maintained at http://linux-gpib.sourceforge.net. The maintainer has stated that he doesn’t currently have any plans to add new features beyond ensuring that the existing library continues to build and run against recent kernels. The package currently provides kernel drivers, a user space library compatible with National Instrument’s own GPIB library, and language bindings for Perl and Python. The package supports hardware from HP, Keithley, National Instruments, and other manufacturers. The complete list of supported hardware is included in the *devices.txt* file found in the package’s sources and on the project’s website.
+
+## I²C
+
+Initially introduced by Philips (now NXP) to enable communication between components inside TV sets, the Inter-Integrated Circuit (I²C) bus can be found in many embedded devices of all sizes and purposes. As with other similar small-scale buses such as SPI and MicroWire, I²C is a simple serial bus that enables the exchange of limited amounts of data among the IC components of an embedded system. There is a broad range of I²C-capable devices on the market, including LCD drivers, EEPROMs, and DSPs. Because of its simplicity and its hardware requirements, I²C can be implemented in both software and hardware.
+
+Connecting devices using I²C requires only two wires, the serial clock line (SCL) with the clock signal and the serial data line (SDA) with the data. All devices on an I²C bus are connected using the same wire pair. The device initiating a transaction on the bus becomes the bus master and communicates with slaves using an addressing scheme. Although I²C supports multiple masters, most implementations have only one master.
+
+The main kernel tree includes support for I²C, a number of devices that use I²C, and the related System Management Bus (SMBus). Due to the heavy use of I²C by hardware monitoring sensor devices, the I²C support pages are hosted on the Linux hardware monitoring project website at `http://www2.lm-sensors.org`. The site includes a number of links, documentation, and the most recent I²C development code. Most importantly, it contains a list of the I²C devices supported, along with the appropriate driver to use for each device.
+
+Apart from the documentation included with the kernel about I²C and the links and documentation available on the hardware sensors website, information regarding the bus and related specification can be obtained from Philips’s website at `http://www.nxp.com/products/interface_control/i2c`.
+
+## I/O
+
+Input and output (I/O) is central to the role of any computerized device. As with other OSes, Linux supports a wide range of I/O devices. The following does not pretend to be a complete run-down of all of them. For such a compilation, you may want to read through the Hardware Compatibility HOWTO available from LDP. Instead, this section will concentrate on the way the different types of I/O devices are supported by Linux, either by the kernel or by user applications.
+
+Some of the I/O devices discussed are supported in two forms by the kernel, first by a native driver that handles the device’s direct connection to the system, and second through the USB layer to which the device may be attached. There are, for instance, PS/2 keyboards and (older) parallel port printers along with USB keyboards and USB printers. Because USB has already been discussed earlier, and an in-depth discussion of Linux’s USB stack would require a lengthy text of its own, we will cover only the support Linux provides to the devices directly attached to the system. Note, however, that USB drivers for similar devices tend to rely on the infrastructure already available in Linux to support the native devices. A USB serial adapter driver, for example, relies on the same facilities as the traditional serial driver, in addition to the USB stack.
+
+### Serial Port
+
+The serial port is arguably every embedded system developer’s best friend (or her worst enemy, depending on her past experience with this ubiquitous interface). Many embedded systems are developed and debugged using an RS232 serial link between the host and the target. Sometimes, PCBs are laid out to accommodate a serial port, but only development versions of the boards ever include the actual connector, while production systems are shipped without it. The simplicity of the RS232 interface has encouraged its widespread use and adoption, even though its bandwidth is rather limited compared to other means of transmission. Note that there are other serial interfaces besides RS232, some of which are less noise-sensitive and therefore more adapted to

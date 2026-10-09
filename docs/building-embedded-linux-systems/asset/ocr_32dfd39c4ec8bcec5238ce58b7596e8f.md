@@ -1,0 +1,15 @@
+# **Softirq Optimization During Interrupt Handling**
+
+Like interrupt service threads, the priorities of the softirqs are also set at 50 by default. Since scheduling of interrupt service threads and softirq threads requires a context switch, the RT patch performs a slight optimization. The interrupt service threads are the most common threads to trigger a softirq. As mentioned earlier, in the mainline kernel, softirqs are performed upon return from an interrupt. The RT patch has a check in the interrupt service routine loop, after the call to the driver’s handler, to see whether there are any pending softirqs on the current CPU that that have the same priority as the interrupt service thread. If so, the interrupt service thread runs the softirq functions and eliminates the need to context switch to the softirq thread.
+
+This optimization makes it slightly advantageous to keep the interrupt service threads at the same priority as the corresponding softirq threads. The main users of this optimization are probably the NIC interrupt service thread matching the softirq-net-rx and softirq-net-tx threads, and the disk drive interrupt service threads matching the softirq-block threads.
+
+But there also comes a risk with letting the interrupt service thread run the function of a softirq. A softirq function must always stay on the CPU it was assigned. So, while the interrupt executes the softirq function, it too must be bounded to the CPU. If a higher-priority process on that CPU preempts the interrupt service thread while it is bound to a single CPU, that interrupt line will no longer run the interrupts handlers until the higher-priority process releases the CPU back to the interrupt service thread. Due to this problem, this feature may either go away, or will most likely be redesigned in the future.
+
+# Softirq Timer Threads
+
+The timer softirq threads are generally the most important for an RT system administrator to understand. These are the threads that control timing events. The softirq-timer thread handles most timeouts in the system, including the networking layer timeouts. Usually, it is not crucial for these to be executed on time, even for RT systems.
+
+The softirq-hrtimer thread is a bit more important. It thread handles the POSIX timer implementations. If your RT application is using POSIX timer calls, such as `timer_create`, you must be aware of the impact of the softirq-hrtimer thread’s priority.
+
+Timing events that happen through the `timer_create` POSIX system call register a function to be called by the hrtimer subsystem, which uses the softirq-hrtimer thread to handle the functions that are registered to it. A high-priority process that expects an interrupt from POSIX timers must be of lower priority than the softirq-hrtimer thread. Otherwise, when the timer goes off, the function to signal the high-priority process may be starved by the high-priority process itself. If this signal is used to inform the high-priority process to stop some sort of loop, the system may hang, because the high-priority process may never give up the CPU.

@@ -1,0 +1,15 @@
+unfortunately, the worst-case latency still remains incompatible with hard real-time requirements.
+
+A simple way to illustrate the limitation this approach raises is with another traffic analogy. Imagine a rather absurd situation in which a single traffic light (the preemption disabling lock) for an entire city (the Linux kernel) blocks all cars (the tasks) each time one crosses an intersection anywhere in town (the exclusive resource). A way to get rid of this restriction is to make the acquisition and release of each exclusive resource truly independent from the others. Not surprisingly, this is a fundamental aspect of the PREEMPT_RT effort, which we will discuss later.
+
+# Strictly Enforced Task Priorities
+
+Even with a fine-grained preemptible kernel, a preempted low-priority task could hold an exclusive resource long enough for a high-priority task requesting the same resource to be delayed catastrophically; after all, it is just a matter of something unexpectedly delaying the low-priority task while it holds the resource. This is an example of priority inversion, discussed earlier. Because exclusive resources are spread all over the Linux kernel, the odds of encountering this priority inversion are pretty high. This issue must be addressed by specific operating system techniques, such as priority inheritance or priority ceiling (http://lwn.net/Articles/178253/), which guarantee that such an inversion would remain short and time-bounded, or would not even happen.
+
+# Handling External Events in a Bounded Time Frame
+
+A real-time application frequently reacts to device interrupts in order to handle normal processing input or receive out-of-band information about the state of the physical world. The latter may be quite important, such as sensors sending critical alerts about hardware overheating or warning the controller for an automated chainsaw about some unexpected obstacle on its course. The longest time needed for the kernel to dispatch a pending interrupt to the appropriate software handler is the worst-case interrupt latency. We definitely want our target platform to have a known, predictable value for this latency before designing any real-time software to run over it.
+
+Unfortunately, the standard Linux kernel may mask external interrupts when entering critical sections, sometimes for an unbounded amount of time. The kernel does this not only to prevent concurrent tasks on the same processor from wrongly accessing some nonshareable resource at the same moment, but also to reduce the opportunity for unrelated activities to disturb the current task. Yet another advantage of cutting down on interrupts is that the kernel does not have to flush and reload its cache as often. On this issue, the standard kernel favors throughput over responsiveness.
+
+In particular, regular subsystems such as the virtual memory management code, the virtual filesystem layer, and the networking stack enforce long critical sections of this sort. The time that elapses without being able to handle any external interrupt usually

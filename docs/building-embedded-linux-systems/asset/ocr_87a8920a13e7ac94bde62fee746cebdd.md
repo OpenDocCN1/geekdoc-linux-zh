@@ -1,0 +1,15 @@
+metadata to list the new blocks occupied by the file, and updating the modification and access times of the file. The filesystem writes the log ahead of performing the modification on the actual data and metadata, and the information about the transaction is deleted from the log only when all of the transaction's operations are complete.
+
+Should the power fail in the middle of modification, the filesystem driver logic will finalize or revert the transaction as a whole once power is back on. The last few writes may be lost, but the filesystem as a whole is uncorrupted.
+
+The journal or log of a journaled filesystem may either be kept on the same storage device as the filesystem data or stored in a separate location. Some journaled filesystems log all modifications to the filesystem content, whereas others log only changes to metadata.
+
+Another distinction that can be made between different types of journaled filesystems is the nature of the transaction log they keep. A physical journal contains verbatim copies of blocks that are later to be written to a permanent location on the storage device, whereas a logical journal contains some information about the changes made to the filesystem in a specialized, usually much more compact form. This distinction is vitally important to builders of embedded devices because a physical journal requires every block of data to be written to the storage device twice (once to the log and once to the permanent location on the storage device). Because the number of writes to flash storage devices is limited, the use of a such a filesystem can severely impact the lifetime of the device. Note that even logical journals engender double writes of information in many cases.
+
+Another way to provide power-down reliability in a filesystem is to use a log-structured filesystem. In a log-structured filesystem, all the data and metadata kept in the filesystem are stored in a log structure that spans the entire storage device. Every write to the filesystem is implemented as a transaction in the log that can be either committed or reverted in an atomic fashion by invalidating previous log entries. (Note that reverting need not involve writing to previous log entries, because revision numbers can be used to mark the current log entries.)
+
+A log-structured filesystem is somewhat similar to a journaled filesystem with a physical journal, with the very important exception that because the log contains the filesystem data itself, there is no double-write penalty.
+
+# ## Compression
+
+A filesystem may automatically compress some or all of the data and metadata before it is written to the storage device and decompress it when read from storage. If supported, compression and decompression happen under the filesystem control and do not require any operation from the application layer, although some implementations allow the filesystem's user to tag specific files on the filesystem in order to recommend or discourage their compression. Most common compressing filesystems compress and decompress each block of data separately, instead of a whole file as a unit.

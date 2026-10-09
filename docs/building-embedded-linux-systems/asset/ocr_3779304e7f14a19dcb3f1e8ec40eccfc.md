@@ -1,0 +1,5 @@
+instance, it is sufficient to know that some information is located in kernel space and other information in user space, and that appropriate functions must be used to properly exchange data between the two.
+
+The virtual memory layout is mostly important in helping you understand and debug your applications. As you can see in Figure 2-6, the kernel occupies a quarter of the virtual address space, starting from address 0xC0000000. This region is also known as “kernel space.” The rest of the address space is occupied by application-specific text, data, and library mappings. This is also known as “user space.” Whereas the kernel is always located above the 0xC0000000 mark for all applications, the applications’ memory maps may differ even on the same system.
+
+To reconstruct a process of the virtual memory map, you need to look at the *maps* file in the process’s pid entry in the /proc filesystem. For more details on how to get this information, see *Understanding the Linux Kernel*.

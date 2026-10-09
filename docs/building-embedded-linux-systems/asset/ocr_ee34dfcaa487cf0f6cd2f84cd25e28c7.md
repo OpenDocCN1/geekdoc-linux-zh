@@ -1,0 +1,15 @@
+# Modem
+
+Embedded systems that use a modem to call a data center are quite common. Alarm systems, bank machines, and remote-monitoring hardware are all examples of embedded systems that need to communicate with a central system to fulfill their primary purposes. The goals are different, but many of these systems still use conventional modems to interface with the POTS (plain old telephone system) to access a remote host. Of course, there are higher speed devices with greater bandwidth available, but since modems work in a wide variety of environments—including very remote locations that don’t have the latest cellular or computer networks—don’t count them out any time soon.
+
+Modems in Linux are seen as serial ports, which is very much the same way they are seen across a variety of operating systems, including Unix. As such, they are accessible through the appropriate /dev serial device entry and are controlled by the same driver as the native serial UARTs, regardless of whether they are internal or external. This support, however, applies only to real modems.
+
+Many newer “modem” devices are actually very low-cost circuits containing little more technology than the most basic sound card. These so called WinModems contain only the bare minimal hardware that make up a modem, and they are capable of providing real modem services only because of software that runs on the operating system. As the name implies, these modems are mainly targeted to systems running Windows. They work fine with that operating system, because their vendors provide the appropriate drivers. With Linux, however, they do not always work, because they don’t contain real modem hardware and the kernel can’t use its serial driver to operate them without additional support.
+
+To provide support for these types of (handicapped) devices, a number of projects have sprung up to develop the necessary software packages. A central authority on these projects is the Linmodems website at http://www.linmodems.org. The site provides documentation, news, and links to the various WinModem support projects. At the time of this writing, however, there is no body of code that provides uniform support for the various WinModems.
+
+Real modem setup and operation are described in the Modem HOWTO from the LDP. Linmodem setup and operation are described in the Linmodem HOWTO from the LDP. Since modems are serial ports, the documentation previously mentioned for serial ports also applies to modems.
+
+# Data Acquisition
+
+Data acquisition (DAQ) is at the basis of any process automation system. Any modern factory or scientific lab is filled with DAQ equipment linked, in one way or another, to computers running data analysis software. Typically, as described earlier, the events occurring in the real world are measured by means of transducers, which convert a

@@ -176,6 +176,7 @@
 +   [Linux 标准基座应用程序构建指南：LSB 2.0 官方指南](docs/building-applications-with-the-linux-standard-base-the-offic/README.md)
 +   [集群化 Linux 系统构建指南 (HP 专业系列)](docs/building-clustered-linux-systems-hp-professional-series/README.md)
 +   [VXLAN BGP EVPN 数据中心构建指南：思科NX-OS视角（网络技术）](docs/building-data-centers-with-vxlan-bgp-evpn-a-cisco-nx-os-pers/README.md)
++   [嵌入式 Linux 系统构建指南](docs/building-embedded-linux-systems/README.md)
 +   [Embedded Linux 嵌入式系统构建指南](docs/building-embedded-systems-with-embedded-linux/README.md)
 +   [全 Linux 邮件服务器解决方案构建指南：虚拟域与用户](docs/building-full-linux-mail-server-solution-with-virtual-domain/README.md)
 +   [构建 Linux 和 OpenBSD 防火墙](docs/building-linux-and-openbsd-firewalls/README.md)

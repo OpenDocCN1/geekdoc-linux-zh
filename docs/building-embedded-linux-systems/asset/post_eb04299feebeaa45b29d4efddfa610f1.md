@@ -1,0 +1,382 @@
+
+## G
+- Unix systems and, 37
+- version considerations, 98, 99
+- xinetd support, 308
+- glibc C library submenus, 110
+- glibc-encrypt, 92
+- glibc-ports C library submenus, 110
+- GNU C Compiler (see gcc)
+- GNU C library (see C library) (see glibc)
+- GNU GPL (General Public License)
+  - Boa and, 318
+  - BusyBox package, 194–199
+  - diet libc licensing, 127
+  - licensing, 18–20
+  - Linux code availability, 10
+  - M-Systems DOC driver, 226
+  - udhcp project, 304
+  - "contamination", 19, 21
+- GNU Mach, 276
+- GNU toolchain, 91–115
+  - BDM/JTAG debuggers and, 43
+  - build overview, 100
+  - component versions, 92–102
+  - Cygwin environment, 38
+  - GCC setup, 102
+  - resources, 102
+  - sharing tools, 101
+  - Unix systems and, 37
+  - using, 112–115
+  - workspace setup, 100–102
+- "GNU’s Not UNIX", 1
+- GPIB (General-Purpose Interface Bus), 71
+- GPL (see GNU GPL)
+- gprof utility, 30, 336, 337, 340
+- graphical interface (X Window System), 77
+- GRUB (GRand Unified bootloader), 274, 276
+  - bootloader image, 227
+  - version considerations, 230
+- GTK widget toolkit, 18
+- GUI development tools, 38
+- gzap command, 166, 255
+
+## H
+- HAL (hardware abstraction layer), 370
+- hard real-time, 7, 353
+- hardware, 55–86
+  - hardware abstraction layer (HAL), 370
+- hardware support
+  - ARM processor, 57, 58
+  - buses and interfaces, 64–72
+  - debugging tools, 43, 348, 349
+  - IBM/Motorola PowerPC, 62
+  - industrial grade networking, 84
+  - input/output, 72
+  - kernel considerations and, 155
+  - kernelpro and, 340
+  - Linux and, 11, 34
+  - MIPS processor, 60
+  - Motorola 68000, 61
+  - networking, 81
+  - processor architectures, 56
+  - storage, 79
+  - SuperH, 63
+  - U-Boot, 277
+  - x86 processor, 58
+- Hartman, Greg Kroah, 187
+- header files, 163
+- headers (Linux kernel), 94, 123
+- hexadecimal format, 288
+- high-availability (hot swap specification), 68
+- high-resolution timers, 407–410
+- Hitachi SuperH (see SuperH processor)
+- home directory, 174
+- host system (GUI configuration name), 92
+- host systems
+  - automatic network configuration, 303
+  - byte ordering considerations, 244
+  - debug setups, 41, 43
+  - defined, 4
+  - development setups, 39–41
+  - GNU toolchain, 98
+  - installing MTD utilities, 217–218
+  - testing connections, 30
+  - types of, 33–39
+- "hot systems", developing Linux systems, 4
+- Hot Swap specification (CompactPCI), 67
+- Hotplug, 188
+- hrtimers design timers, 409
+- HTTP, 320
+  - web content and, 317–320
+
+## I
+- I-pipe (Interrupt Pipeline), 369, 377
+- I/O (input/output)
+  - generic requirements, 43
+  - hardware support, 72
+- I2C (Inter-Integrated Circuit) bus, 71, 72
+- i386 platform
+  - embedded, 199
+  - hardware support, 59
+- IAS (Information Access Service), 82
+- IBM/Motorola PowerPC (see PowerPC)
+- ICE (In-Circuit Emulator), 43
+- iXlink, 92
+  - CF cards and, 231
+  - U-Boot and, 277
+- IDEs (integrated development environments)
+  - Eclipse, 135
+  - using, 30
+- IEEE 1394 (Firewire) standard, 70
+- IEEE 488 (GPIB) standard, 71
+- IEEE 802.11 (wireless) standard, 82
+- IETF standard, 314
+- iminfo command, 293, 294, 297
+- implementation methodology, 27–31
+- In-Circuit Emulator (ICE), 43
+- index.html files, 319
+- inetd super-server, 282, 306–307, 313
+- InfiniBand bus, 70
+- init program
+  - BusyBox init, 204–207
+  - kernel and, 201
+  - Minit, 207
+  - Rootfs and Initramfs, 255
+  - standard System V init, 202, 204
+  - start_kernel() function, 47
+  - system startup component, 47
+- Initial Program Loader (IPL), 227
+- initial RAM disk (initrd), 254
+- initialization (see system initialization)
+- Initramfs (init Ramfs), 253
+- Initramfs filesystem, 255–258
+- initrd (initial RAM disk), 254
+- initrd mechanism, 253, 254
+- installation
+  - bootloader image, 227, 228
+  - distribution considerations, 26
+  - DOS method for DOC, 224
+- embedded tools
+  - gdb, 329
+  - initrd, 307
+  - kernel considerations, 167
+  - MTD utilities, 217–219
+  - rsync utility, 264
+  - strace tool, 334
+  - U-Boot, 285–300
+  - udhcp, 304, 305
+- INSTALL_MOD_PATH variable (make command), 168
+- integrated development environments (see IDEs)
+- Intel (see x86 processors)
+- interfaces
+  - DAQ hardware, 75
+  - hardware support, 68
+- Internet Software Consortium (ISC), 304
+  - inetd super-servers
+    - DHCP and, 279
+    - enabling TFTP service, 282
+- internet super-servers
+  - inetd, 306–307
+  - special daemon, 305
+  - xinetd, 307, 309
+- interpreters
+  - microperl, 132
+  - miniperl, 133
+  - Perl, 131
+  - Python, 134
+- interrupt handlers, 342
+  - threads and, 388
+- interrupt inversions, 389
+- interrupt latency, 342–344, 354
+- Interrupt Pipeline (i-pipe), 369, 377
+- Interrupt requests (IRQs), 389–394
+- Interrupt Service Routine (ISR), 388
+- intrusions, NFS service and, 284
+  - IP addresses, using automatic configuration and, 303
+- iPKG (Isys Package Management System), 267
+- IPL (Initial Program Loader), 227
+- IrDA (Infrared Data Association)
+  - hardware support, 81
+- IrLAP (link access protocol), 82
+- IrLMP (link management protocol), 82
+- IrPHY (physical signaling layer), 82
+- IRQ (interrupt request), 389–394
+- ISC (Internet Software Consortium), 304
+- ISO 11898 standard (CAN), 84
+- ISR (Interrupt Service Routine), 388
+- Isys Package Management System (iPKG), 267
+
+## J
+- J1939 protocol, 84
+- J2ME (Java Micro Edition), 130
+- Japhar project, 131
+- Java programming language
+  - background, 129–131
+  - Eclipse and, 136
+  - Motorola 68000 processors and, 61
+  - PowerPC support, 62
+  - GPL, 18, 21
+  - I/O device support, 72
+  - I2C, 72
+  - importance of, 155–172
+- JVM images, 254
+- installing, 167–169, 183
+- Java Virtual Machine (JVM), 130
+  - Eclipse, installing, 136
+- Kconfig debug, 75
+- layers services, 45
+- modules, building, 166
+- JDK (just-in-time) Java compiler, 131
+- JFS (MTD), 214
+- JFS2 filesystem, 247
+- MontaVista contributions, 15
+- Motorola 68000 processors, 61
+- MTD and, 79, 209–231, 209
+- OS functions, 44
+- automatic creation /dev entries, 186
+- compression, 255
+- erase blocks and, 223
+- features, 251
+- mounting, 211
+- pointer devices and, 76
+- /proc filesystem, 339
+- RAM and, 254, 296
+- root filesystem requirements, 46
+- selecting, 28, 156–161
+- MTD support, 214
+- storage support, 46
+- U-Boot and, 277
+- series, 158
+- system startup component, 47
+- virtual address space, 51
+- watchdog timers, 86
+- jfs2dump utility (MTD), 216
+- jiffies, 371, 398, 407
+- jModbus project, 85
+- jey VM project, 131
+- kernel configuration
+  - building and, 27
+  - CFI flash, 219
+- journaling, supporting filesystem power-downs, 236
+- JTAG debugger, 30, 42
+- just-in-time (JIT) Java compiler, 131
+- considerations, 161–165
+- DOC, 225
+- kernel selection and, 28
+- JVM (Java Virtual Machine), 130
+  - Eclipse, installing, 136
+- MIPS, 60
+- MTD subsystem, 212–215
+
+## K
+- kernel headers, 94
+  - setup, 100
+- Kbuild, 163
+- Kconfig debug, 75
+- KDEvelop (IDE), 332
+- kernel panic
+  - code location, 170
+  - example, 295
+  - MTD and, 214
+- Kegel, Dan, 102
+- kemit utility, 148, 152, 297
+- kermit configuration file, 153
+- kernel
+  - premature exit and, 202
+  - reasons for, 170
+  - sample process, 171
+  - system reboot and, 170
+  - architecture name selection, 162
+  - ATA/IDE support, 80
+  - bootstrapping requirements, 49
+  - building, 29
+- kernel profiling, 340–342
+- kernel Config submenu, 111
+- compiling, 165–167
+- dealing with failure, 169
+- debugging, 30, 42, 63
+- display support, 77
+- kernels
+  - embedding, 157
+  - DOC driver, 77
+  - documentation, 156
+  - filesystem engines, 45
+- ketchup tool, 340
+- kprobes tool, 401
+- kthreadd kernel thread, 389
+- generic requirements, 43
+- keyboards, 76
+- keys, 314
+- Kissme project, 131
+- Kroah-Hartman, Greg, 161
+- ksoftirqd kernel thread, 388, 395
+
+## L
+- Lambacher, Christopher, 134
+- large systems, embedding, 6
+- latency, 354
+- latency tracer, 410–417
+- ld GNU linker, 95
+- ld utility, 182
+- ldd command, 123, 180
+- CFLAGS option (make command)
+  - Makefile example, 114
+  - strace, 334
+  - udebug, 304
+- LDP (Linux Documentation Project), using LILO, 275
+- LD_SHARED variable (configure), 218
+- LD_LIBRARY_PATH environment variable, 198
+- Lehrbaum, Rick, 17
+- LGPL, 18–20
+- lib directory, 180, 182
+- libc library, 400
+- libcrypt (cryptography library), 182, 308, 319
+- libdl (dynamic loading library), 182, 310
+- libgcc (gcc library), 337
+- libm (math library), 182, 308, 310
+- libraries, 177–183
+  - (see also system libraries)
+  - filesystems, choosing, 258–260
+  - installing on root filesystem, 177–182
+  - LGPL and, 18
+  - linking of, 46
+  - stripping, 181
+- “Library Installation Options” uClibc submenu, 127
+- libutil (login routines library), 182, 314
+- licensing, 334
+  - (see also BSD license GNU GPL)
+  - Apache, 320
+  - C-Kermit, 152
+  - diet libc and, 127
+  - distribution considerations, 25
+  - GPL and LGPL, 18–20
+  - inetcid, 306
+  - Linux and, 13
+  - Net-SNMP, 310
+  - thttpd, 318
+  - xinetd, 308
+- LILO (Linux LOader), 274, 275
+  - linking considerations for libraries, 46
+  - diet libc with applications, 129
+  - miniperl and, 133
+  - proprietary applications and, 20
+- Linux, 2, 4–9
+- Linux distributions (see distributions)
+- Linux Documentation Project (LDP), using LILO, 275
+- Linux From Scratch project, 194
+  - Journal resource, 17
+- Linux kernel headers, 94
+  - Buildroot system and, 123
+- Linux Kernel Subset (ELKS) project, 7
+- Linux systems (see systems)
+- Linux Trace Toolkit (see LTT)
+- Linux workstations, 34, 37
+- LNXBIOS, 276
+- LNXDevices.com, 17
+- LNXIPC support, 62
+- LMBench tool, 340
+- lm_sensors package, 86
+- loadsl command, 297
+- loadlin utility (DOS), 276
+- loadsl command, 297
+- lock utility (MTD), 216
+- log files, 318
+- log-structured filesystems, 237
+- logical address (see virtual address)
+- logical journal filesystems, 237
+- loopback constraints, 251
+- Love, Robert, 356, 405
+- lpd printer daemon, 79
+- LTT (Linux Trace Toolkit)
+  - MontaVista contributions, 15
+- LTTng (Linux Trace Toolkit - next generation)
+  - features, 334
+- LNXWorks, 16
+
+## M
+- M-Systems, 227, 276
+  - (see also DOC loadlin utility)
+- M68k processors
+  - architecture overview, 61
+  - kernel architecture name, 162
