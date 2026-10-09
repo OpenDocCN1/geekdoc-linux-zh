@@ -1,0 +1,197 @@
+
+
+# Squid 中的访问控制列表
+
+*Squid* 中的访问控制列表 (ACL) 包含一组条目，用于定义访问系统及其内部所有资源的权限。可以在 `squid.conf` 文件中使用 `acl` 关键字后跟 ACL 名称及其类型来定义 ACL。ACL 可以基于用户、域名、文件扩展名、源或目标 IP 地址、匹配模式的正则表达式、目标端口和协议进行过滤。ACL 中给出的定义可能获得也可能无法获得对服务器的访问权限。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_660_0.png)
+
+```bash
+root@pc:~# nano
+#
+# acl aclname src ip-address/netmask ... (客户端的 IP 地址)
+# acl aclname src addr-addr2/netmask ... (地址范围)
+# acl aclname dst ip-address/netmask ... (URL 主机的 IP 地址)
+# acl aclname myip ip-address/netmask ... (本地套接字 IP 地址)
+#
+# acl aclname arp mac-address ... (xx:xx:xx:xx:xx:xx 表示法)
+# arp ACL 需要特殊的配置选项 --enable-arp-acl。
+# 此外，arp ACL 代码并非适用于所有操作系统。
+# 它适用于 Linux、Solaris、FreeBSD 和一些其他 *BSD 变体。
+# 注意：Squid 只能确定位于同一子网中的客户端的 MAC 地址。
+# 如果客户端位于不同的子网，则 Squid 无法获取其 MAC 地址。
+#
+# acl aclname srchdomain .foo.com ... # 反向查找，客户端 IP
+# acl aclname dstodomain .foo.com ... # URL 中的目标服务器
+# acl aclname srcdom_regex [-i] xxx ... # 匹配客户端名称的正则表达式
+# acl aclname dstdom_regex [-i] xxx ... # 匹配服务器的正则表达式
+# 对于 dstodomain 和 dstdom_regex，如果使用基于 IP 的 URL
+# 并且未找到匹配项，则会尝试反向查找。名称 "none" 被使用
+```
+
+*图 13-20：在 squid.conf 文件中定义的各种 ACL。*
+
+## 语法
+
+ACL 可以根据各种参数进行定义。表列出了定义 ACL 的一些方式。
+
+| **语法** | **描述** |
+| :--- | :--- |
+| acl acl_name src IP address/netmask | 基于 IP 地址和子网掩码识别客户端。 |
+| acl acl_name dst IP address/netmask | 识别 URL 主机的 IP 地址。 |
+| acl acl_name myip IP address/netmask | 识别本地套接字的 IP 地址。 |
+| acl acl_name time {day abbreviations} {start hr:minutes-end hr:minutes} | 指定可以访问代理服务器的日期和时间。 |
+| acl acl_name urlpath_regex words in the URL | 基于指定的关键字指定要拒绝的 URL。 |
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_661_0.png)
+
+## 访问控制运算符
+
+访问控制运算符是用于指定 ACL 允许或拒绝的访问类型的标签。访问控制运算符后跟 *allow*（允许）或 *deny*（拒绝）关键字，然后是 ACL 名称。`squid.conf` 文件提供了许多类型的运算符。下表列出了最常见的访问运算符。
+
+| 运算符 | 用途 |
+| :--- | :--- |
+| `http_access` | 允许或拒绝访问 HTTP 端口。例如，`http_access allow | deny hostname | all` |
+| `icp_access` | 允许或拒绝向缓存发送和接收 ICP 查询。 |
+| `no_cache` | 从缓存中移除匹配的图案。 |
+
+## 如何在代理服务器中实施访问控制
+
+### 操作参考：安装 Squid
+
+要安装 Squid：
+
+1.  以 root 身份登录。
+2.  挂载包含 Squid 的 Linux 安装介质。
+3.  导航到 /media/[介质名称]/Server 目录。
+4.  在命令行中，输入 `rpm -ivh squid-(version).(release).rpm` 以安装 Squid。
+5.  输入 `rpm -qi squid` 以验证 Squid 是否已安装。
+6.  卸载安装介质。
+
+### 操作参考：配置 Squid
+
+要配置 Squid：
+
+1.  以 root 身份登录。
+2.  使用编辑器打开 `/etc/squid/squid.conf` 文件。
+3.  找到 "http_port 3128" 行并取消注释，以指定 squid 守护进程将监听端口 3128 上的请求。
+4.  输入 `cache_dir 缓存位置路径 (最大缓存大小) (第一层最大子目录数) (第二层最大子目录数)` 以指定缓存要求。
+5.  保存并关闭文件。
+6.  输入 `service squid start` 以启动 Squid 服务。
+7.  输入 `chkconfig squid on` 以在系统启动时启用 Squid 服务。
+8.  在可以访问代理服务器的系统上，根据代理服务器的主机和端口修改浏览器设置。
+
+## 操作参考：实施访问策略
+
+要实施访问策略：
+
+1.  以 root 身份登录。
+2.  使用编辑器打开 /etc/squid/squid.conf 文件。
+3.  为 IP 地址范围、域名、小时、天、URL、端口、协议、方法、用户名或浏览器类型定义 ACL。例如，您将使用以下语法为 IP 地址定义 ACL。
+
+    ```
+    acl {acl_name} {acl_type} {MAC_address | IP_address/netmask}
+    ```
+
+4.  添加 `http_access` 语句以允许或拒绝访问特定的 ACL。
+
+    ```
+    http_access allow acl_name
+    http_access deny acl_name
+    ```
+
+5.  保存并关闭文件。
+6.  输入 `service squid restart` 以重启 Squid 服务。
+
+## 操作参考：启用代理身份验证
+
+要启用代理身份验证：
+
+1.  以 root 身份登录。
+2.  使用 vi 编辑器打开 /etc/squid/squid.conf 文件。
+3.  添加 `auth_param` 语句以指定 Squid 应使用的身份验证方案。
+
+    ```
+    auth_param authentication_scheme {authentication_parameter} {setting}
+    ```
+
+4.  定义 ACL 以指定访问网站需要代理授权。
+
+    ```
+    acl acl_name proxy_auth REQUIRED
+    ```
+
+5.  输入 `http_access allow acl_name` 以指定只有经过代理身份验证的用户才能访问网站。
+6.  保存并关闭文件。
+7.  输入 `service squid restart` 以重启 Squid 服务。
+
+# 活动 13-3
+## 配置代理服务器
+
+**开始之前：**
+
+1.  在 srvA 上，您已在 GUI 中以 root 身份登录。
+2.  切换到 CLI（命令行界面）。
+3.  输入 `cd /root` 导航到根目录。
+4.  输入 `yum localinstall /rhelsource/Server/squid-2.6.STABLE21-3.el5.i386.rpm` 开始安装 Squid 软件包。输入 `y` 完成软件包安装。
+5.  清屏终端窗口。
+
+**场景：**
+
+您是组织中一名网络管理员，该组织有不同的团队负责设计、内容开发、在线客户支持和办公室管理。您刚刚安装了一台代理服务器。现在，您需要配置代理服务器，以便设置符合 IT 经理提供的互联网访问策略文档中的指南。指南如下：
+
+-   行政人员仅在工作日午餐时间需要访问互联网；其他员工必须能够随时访问互联网。
+-   不应允许访问色情网站。
+
+管理团队位于 192.168.1.0/255.255.255.0 子网，其他团队位于 192.168.0.0/255.255.255.0 子网。
+
+a.  在标记为 **srvA** 的系统上，使用 *vi* 编辑器打开 `/etc/squid/squid.conf` 文件。
+b.  找到文本 “http_port 3128” 并验证该行未被注释。
+c.  找到内容包含 “#http_access allow our_networks.” 的行。
+d.  按 **O** 切换到插入模式并移动到新行。
+e.  输入
+
+    ```
+    acl myhosts src 192.168.0.0/255.255.255.0
+    ```
+
+    以定义 myhosts ACL。
+f.  输入
+
+    ```
+    acl admin src 192.168.1.0/255.255.255.0
+    ```
+
+    以定义 admin ACL。
+g.  输入
+
+    ```
+    acl lunch time MTWTF 12:00-13:00
+    ```
+
+    以定义用于午餐时间的 ACL。
+h.  输入
+
+    ```
+    http_access allow myhosts
+    ```
+
+    以授予 myhosts ACL 访问权限。
+i.  输入 `http_access allow lunch` 以授予每个人在工作日午餐时间的访问权限。
+j.  输入
+
+    ```
+    http_access deny admin
+    ```
+
+    以拒绝 admin ACL 的访问。
+k.  输入 `visible_hostname srvA.ourglobalcompany.com` 以将 **srvA** 声明为 visible_hostname。
+
+参见 *代码示例 1*。
+
+**代码示例 1**
+
+```
+acl myhosts src 192.168.0.0/255.255.255.0
+```
+

@@ -1,0 +1,188 @@
+
+## securenets 文件
+
+安装守护进程 *ypserv* 和 *ypxfrd* 后，NIS 将监听所有网络。这两个守护进程均通过使用 */var/yp/securenets* 文件来限制用户访问。securenets 文件仅包含守护进程需要响应的 IP 地址范围。默认情况下，如果 securenets 文件为空，则安装守护进程后 NIS 将监听所有网络。您可以向该文件中添加特定的 IP 地址范围，以便守护进程仅响应这些网络。
+
+| 文件 | 映射 | 描述 |
+|:---|:---|:---|
+| /etc/passwd | passwd.byname, passwd.byuid | 将加密密码映射到相应的用户登录名。 |
+| /etc/group | group.byname, group.bygid | 将 GID 映射到组名。 |
+| /etc/services | services.byname, services.bynumber | 将服务描述映射到服务名称。 |
+| /etc/rpc | rpc.byname, rpc.bynumber | 将 RPC 服务编号映射到相应的 RPC 服务名称。 |
+| /etc/protocols | protocols.byname, protocols.bynumber | 将协议编号映射到协议名称。 |
+| /usr/lib/aliases | mail.aliases | 将邮件别名映射到邮件别名名称。 |
+
+## netgroup 文件
+
+netgroup 文件包含网络上的用户组列表及其权限。这有助于在执行远程挂载以及在远程登录和远程 shell 中工作时检查权限。用户组的定义格式如下：
+
+```
+Groupname member1, [member 2....]
+```
+
+其中 *member1* 指的是另一个组名称，它由三个字段组成：主机名、用户名和域名。例如，名为 *systems* 的组定义为 `systems (analytical, cwarden, ourglobalcompany)`，其中 *analytical* 指主机名，*cwarden* 指用户名，*ourglobalcompany* 指域名。如果任何字段留空，则被视为通配符。例如，在定义为 `systems (analytical, -, ourglobalcompany)` 的组中，主机 *analytical* 属于域名 *ourglobalcompany* 中的 *systems* 组，但该组没有用户。
+
+## 关于 NIS 映射的信息
+
+任何 NIS 用户都可以显示关于 NIS 映射的信息。下表列出了用于显示映射的命令。
+
+| 命令 | 功能 |
+|:---|:---|
+| `ypcat map name or its alias` | 列出映射中的值。 |
+| `ypmatch -x` | 列出映射的别名。 |
+| `ypwhich -m` | 列出可用的映射和主服务器名称。 |
+| `yppoll map alias name` | 显示映射的版本号和主服务器。 |
+
+## NIS 服务器
+
+NIS 服务器为网络提供集中的目录和认证服务。在大型 NIS 安装中，通常使用主/从（多个）配置的多个 NIS 服务器。可以显式配置 NIS 服务器，或者客户端可以通过网络广播自动发现 NIS 服务器。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_593_0.png)
+
+## NIS 实用工具
+
+NIS 客户端查询 NIS 服务器以执行用户认证并获取用户信息。NIS 服务由多个实用工具提供支持。
+
+| 实用工具 | 描述 |
+|:---|:---|
+| makedbm | 为 NIS 映射创建数据库文件。 |
+| ypbind | 收集并记录 NIS 域和服务器信息。 |
+| ypcat | 打印指定 NIS 数据库的所有键值。列出映射中的数据。 |
+| ypinit | 构建并安装 NIS 数据库，并初始化 NIS 客户端的 ypservers 列表。 |
+| ypmatch | 在映射中查找特定条目。显示 NIS 映射的键值。 |
+| yppasswd | 更改 NIS 数据库中的密码。 |
+| yppoll | 显示指定的 NIS 映射版本和主服务器。 |
+| yppush | 将数据从 NIS 主服务器传播到 NIS 从服务器。 |
+| ypserv | 将绑定设置到特定服务器。 |
+| ypwhich | 查找客户端使用的 NIS 服务器名称。列出 NIS 服务器的名称和昵称转换表。 |
+| ypXfr | 将数据从 NIS 主服务器传输到 NIS 从服务器。 |
+
+## 如何配置 NIS
+
+### 操作参考：安装 NIS 服务器
+
+要安装 NIS 服务器：
+
+1. 以 root 身份登录。
+2. 挂载包含 NIS 服务器 RPM 的 Linux 安装介质。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_594_0.png)
+
+3. 导航到 /media/[介质名称]/Packages 目录。
+4. 使用以下命令安装 ypserv、yp-tools 和 ypbind 软件包。
+   - `rpm -ivh ypserv*.rpm`
+   - `rpm -ivh yp-tools-*.rpm`
+   - `rpm -ivh ypbind*.rpm`
+5. 验证软件包是否已安装。
+   - `rpm -qi package name`
+
+### 操作参考：配置 NIS 服务器
+
+要配置 NIS 服务器：
+
+1. 将 NIS 域名添加到网络文件中。
+   a. 打开 /etc/sysconfig/network 文件。
+   b. 添加 NISDOMAIN 语句，指定 NIS 域名。
+      - `NISDOMAIN=domain name`
+   c. 保存并关闭文件。
+2. 将 NIS 服务器信息添加到 yp.conf 文件中。
+   a. 打开 /etc/yp.conf 文件。
+   b. 以三种格式之一添加域名：
+      - `domain domain name server server's host name`
+      - `ypserver server's host name`
+      - `domain domain name broadcast`
+   c. 保存并关闭文件。
+3. 重启 portmap 守护进程，以告知 NIS 客户端 NIS 服务器将监听请求的端口。
+   - `service portmap restart`
+4. 输入 `service yppasswdd start` 以启动 yppasswdd 守护进程，并处理来自 NIS 用户的新密码请求。
+5. 启动 `ypserv` 守护进程以启动 NIS 服务器。
+   ```
+   service ypserv start
+   ```
+6. 初始化 NIS 域，为该域创建适当的认证文件。
+   a. 在命令行中，输入 `/usr/lib/yp/ypinit -m`。
+   b. 将显示您在 `yp.conf` 文件中添加的主机名。如有需要，输入其他 NIS 服务器主机名。
+   c. 按 `Ctrl+D`。
+   d. 当提示确认服务器名称时，输入 `y` 并按 Enter。
+7. 启动 `ypbind` 和 `ypxfrd` 守护进程。
+8. 验证守护进程是否在本地主机上运行。
+   ```
+   rpcinfo localhost
+   ```
+9. 创建 NIS 映射，以用户和系统信息更新 NIS 域的认证文件。为此，请导航到 `/var/yp` 目录，然后运行 `make` 实用工具。
+   ```
+   cd /var/yp
+   make
+   ```
+10. 使用 `ypmatch user_name passwd` 命令验证 NIS 用户信息已更新。
+
+### 操作参考：配置 NIS 从服务器
+
+要配置 NIS 从服务器：
+
+1. 验证主 NIS 服务器是否已启动并运行。
+2. 在主 NIS 服务器的 `/var/yp/Makefile` 文件中，将 `NOPUSH` 参数更改为 `false`，以便在从服务器上更新映射。
+   ```
+   NOPUSH=false
+   ```
+3. 在主服务器上，修改 `ypservers` 文件。
+   a. 打开 `/var/yp/ypservers` 文件。
+   b. 在单独的行上添加从服务器名称。
+   c. 保存并关闭文件。
+4. 在从服务器上，以 root 身份登录。
+5. 确保已安装 `ypserv`、`YP-tools` 和 `ypbind` 软件包。
+6. 输入 `/usr/lib/yp/ypinit -s server_host_name` 以配置从服务器。
+7. 启动 `portmap`、`ypserv`、`ypbind`、`ypasswd` 和 `ypxfrd` 守护进程。
+8. 输入 `rpcinfo localhost` 以验证守护进程是否在本地主机上运行。
+
+### 操作参考：手动更新 NIS 文件
+
+要手动更新从服务器上的 NIS 文件：
+
+1. 在 NIS 主服务器上，以 root 身份登录。
+2. 在命令行中，使用带有 `-h` 选项的 `yppush` 命令。
+   ```
+   yppush -h {host_name of slave_server} {map_to_be_updated}
+   ```
+
+### 操作参考：安装 NIS 客户端
+
+要安装 NIS 客户端：
+
+1. 在 Linux 服务器上，以 root 身份登录。
+2. 挂载包含 NIS 客户端 RPM 的 Linux 安装介质。
+3. 导航到 /media/[介质名称]/Packages 目录。
+4. 输入 `rpm -ivh yp-tools-{version}.(.release).rpm` 和 `rpm -ivh ypbind-{version}.(.release).rpm` 以安装 yp-tools 和 ypbind 软件包。
+5. 输入 `rpm -qi` *软件包名称* 以验证软件包是否已安装。
+
+### 操作参考：配置 NIS 客户端
+
+要配置 NIS 客户端：
+
+1. 以 root 身份登录。
+2. 使用 authconfig-tui 实用工具配置 NIS 文件。
+   a. 在命令行中，输入 authconfig-tui 并按 **Enter**。
+   b. 选择 Use NIS 选项。
+   c. 按 **F12** 导航到下一页。
+   d. 在 **Domain** 文本框中，输入 NIS 域名。
+   e. 在 **Server** 文本框中，输入 NIS 服务器名称。
+   f. 按 **F12**。
+3. 修改 nsswitch.conf 文件，指定应使用 NIS 进行登录认证。为此，您可以使用 NIS 提供的模板。
+   a. 打开 `/etc/nsswitch.conf` 文件。
+   b. 指定 NIS 作为所有数据库的首选服务。
+      `service name: nis dns files db`
+   c. 保存并关闭文件。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_596_0.png)
+
+> 除了手动更改 nsswitch.conf 文件外，您还可以使用位于 /usr/share/doc/yp-tools-{version}(.release) 目录中的示例文件覆盖它。
+
+4. 在认证文件中添加一个空字段，以限制添加用户。
+   a. 在 /etc/passwd 文件末尾，添加一个加号，后跟六个冒号。
+      `+:::::::`
+   b. 在 /etc/group 文件末尾，添加一个加号，后跟三个冒号。
+      `+::::`
+   c. 在 /etc/shadow 文件末尾，添加一个加号，后跟八个冒号。
+      `+::::::::::`
+5. 启动 portmap、yppasswdd 和 ypbind 守护进程。
+

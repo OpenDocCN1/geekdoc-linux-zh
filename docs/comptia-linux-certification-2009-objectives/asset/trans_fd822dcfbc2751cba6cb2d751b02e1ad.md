@@ -1,0 +1,111 @@
+
+## 活动 13-2
+维护 Web 服务器
+
+**开始之前：**
+
+1.  在 srvA 上，你已以 root 身份登录到图形界面。
+2.  终端窗口已显示。
+3.  在 `/var/www` 目录中创建一个名为 *german* 的目录。
+4.  将 *german.html* 文件从 `/085039Data/Web_Services` 目录复制到 `/var/www/german` 目录。
+5.  清除终端窗口。
+
+**场景：**
+
+OGC Systems 计划在全球范围内扩展其业务。作为其扩张战略的一部分，公司制定了各种策略以在新市场建立其存在。其中一个计划是为其广泛的客户群托管不同语言的官方网站，以便触达更广泛的受众。网页设计团队设计了客户网站的德语版本，你希望使用现有的 Web 服务器来托管新网站。你还希望确保新网站仅对该指定地区的客户开放访问。
+
+| 你要做什么 | 如何执行 |
+|:--- |:--- |
+| 1. 为 Web 服务器指定别名。 | a. 导航到 `/var/named` 目录。<br> b. 使用 *vi* 编辑器打开 *ogc.forward* 文件。<br> c. 在文件末尾输入 <br> *german IN CNAME srvA* 以添加 CNAME 记录。<br> d. 按 **Esc** 键切换到命令模式。<br> e. 保存并关闭文件。<br> f. 重启 *named* 服务。<br> g. 清除终端窗口。 |
+| 2. 为英语和德语网站添加 VirtualHost 指令。 | a. 使用 vi 编辑器打开 /etc/httpd/conf/httpd.conf 文件。<br> b. 在文件末尾输入 `NameVirtualHost 192.168.0.2` 以指定 Web 服务器的 IP 地址。<br> c. 输入 `<VirtualHost www.ourglobalcompany.com>` 以开始第一个 VirtualHost 指令。<br> d. 输入 `ServerName 192.168.0.2` 以指定服务器的 IP 地址。<br> e. 输入 `DocumentRoot /var/www/html` 以指定存储 HTML 文件的目录。<br> f. 输入 `DirectoryIndex english.html` 以指定该文件。<br> g. 输入 `</VirtualHost>` 以完成 VirtualHost 指令。<br> *参见代码示例 1。* <br> h. 添加一个服务器名称为 `german.ourglobalcompany.com`，文档根目录位置为 `/var/www/german` 的 `VirtualHost` 指令。<br> *参见代码示例 2。* <br> i. 按 **Esc** 键切换到命令模式。<br> j. 保存并关闭文件。<br> k. 重启 httpd 服务。<br> l. 清除终端窗口。 |
+| 3. 创建可以访问你网站的用户。 | a. 导航到 /var/www/html 目录。<br> b. 输入 <br> **httpasswd -mc** <br> **/var/www/html/.htpasswd webuser** <br> 以创建 webuser 用户。<br> c. 输入 **@webuser1** 作为密码。<br> d. 当提示时，重新输入 **@webuser1** <br> e. 观察 webuser 的密码已被添加。<br> f. 输入 **chgrp apache .htpasswd** 以指定 apache 为密码文件的组所有者。<br> g. 输入 **chmod g+r .htpasswd** 以提供密码文件的组读权限。 |
+| 4. 配置 Apache 以对用户进行身份验证。 | a. 使用 vi 编辑器打开 .htaccess 文件。<br> b. 输入 Authname "This is a trusted website." 以指定在身份验证对话框中显示的消息。<br> c. 输入 Authuserfile "/var/www/html/.htpasswd" 以指示包含有权访问网站的用户详情的文件名称。<br> d. 输入 Authtype basic 以指定身份验证类型。<br> e. 输入 require valid-user 以指定所有有效用户都可以访问网站。<br> *参见代码示例 3。* <br> f. 按 Esc 键切换到命令模式。<br> g. 保存并关闭文件。<br> h. 清除终端窗口。 |
+| 5. 检查你是否能够访问网站的英语版本和德语版本。 | a. 输入 **firefox** **http://ourglobalcompany.com** 以在 Firefox Web 浏览器中打开网站。<br> b. 在**需要身份验证**对话框中，在**用户名**文本框中键入 **webuser**，然后按**Tab**键。<br> c. 在**密码**文本框中，键入 **@webuser1**，然后按**Tab**键和**Enter**键。<br> d. 在工具栏上，点击**对此站点从不**以防止 Firefox 提示你保存密码。<br> e. 关闭 Web 浏览器窗口。<br> f. 输入 **firefox** **http://german.ourglobalcompany.com** 以在 Web 浏览器中打开德语网站。<br> g. 观察显示 Our Global Company 德语版本的主页。<br> h. 关闭 Web 浏览器窗口。<br> i. 清除终端窗口。 |
+
+代码示例 1
+
+```
+NameVirtualHost 192.168.0.2
+<VirtualHost www.ourglobalcompany.com>
+ServerName 192.168.0.2
+DocumentRoot /var/www/html
+DirectoryIndex english.html
+</VirtualHost>
+```
+
+代码示例 2
+
+```
+<VirtualHost german.ourglobalcompany.com>
+ServerName 192.168.0.2
+DocumentRoot /var/www/german
+DirectoryIndex german.html
+</VirtualHost>
+```
+
+代码示例 3
+
+```
+Authname "This is a trusted website."
+Authuserfile "/var/www/html/.htpasswd"
+Authtype basic
+require valid-user
+```
+
+## 主题 C
+
+### 在代理服务器中实施访问控制
+
+你已在网络上实施了 Web 服务。现在至关重要的是，只允许授权用户通过服务器访问网站。在本主题中，你将配置一个代理服务器。
+
+根据组织策略，你可能需要向所有员工提供互联网访问。然而，互联网的滥用会影响服务器性能。因此，你可能希望限制用户对某些网站的访问，并借助代理服务器监控使用情况。
+
+### 代理服务器
+
+**定义：**
+
+*代理服务器* 是充当 Web 浏览器和 Web 服务器之间中介的服务器。它包含 Web 服务器的缓存信息，并拦截发送到 Web 服务器的所有请求。代理服务器由主服务器实用程序、执行身份验证的程序和管理工具组成。代理服务器支持通过 HTTP、FTP 和 Gopher 协议传输的数据。
+
+**示例：**
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_657_0.png)
+
+*图 13-16：通过代理服务器发生的数据传输。*
+
+### Squid 服务器
+
+Squid 是一个用于缓存互联网数据的代理服务器。当客户端请求数据时，Squid 接受请求并将其转发到远程服务器（即原始服务器）或另一个代理服务器。Squid 接收数据，将其副本存储在缓存中，然后将其发送到相应的客户端机器。存储在缓存中的数据副本用于在未来满足客户端请求。可以使用轻量级互联网缓存协议（ICP）以分层方式排列缓存。Squid 支持使用 FTP、HTTP、Gopher 和 SSL 协议进行数据传输。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_658_0.png)
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_658_1.png)
+
+Squid Web 服务器被称为 Web 加速器。在这种情况下，除了提供一些静态文档外，它还服务一个或多个动态文档，并且运行得更快，从而优化服务器和网络性能。它保护原始 Web 服务器免受外部数据和无效 URL 的攻击，因为它隐藏了原始 Web 服务器。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_658_2.png)
+
+### ICP
+
+ICP 是一种用于协调和 Web 缓存之间通信的协议。它向代理服务器查询缓存。
+
+### Gopher
+
+Gopher 协议是一种用于从互联网搜索和检索文档的 TCP/IP 应用层协议。
+
+### squid.conf 文件
+
+存储在 /etc/squid 目录中的 squid.conf 文件是用于配置 Squid 的主配置文件。squid 守护程序从 /usr/sbin 目录运行并监听端口 3128。初始化脚本从 /etc/init.d/squid 文件运行。默认情况下，squid.conf 文件包含用于设置服务器参数的标签。
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_659_0.png)
+
+squid.conf 文件中定义了各种参数。每个参数设置为定义服务器功能的一个值。下表描述了某些参数。
+
+| 参数 | 描述 |
+| :--- | :--- |
+| cache_mem | 指定 Squid 将用于缓存流行请求的内存量。默认情况下，它设置为 8 MB。 |
+| maximum_object_size | 指定缓存的最大大小。 |
+| minimum_object_size | 指定缓存的最小大小。 |
+| cache_dir | 指定存储系统和存储缓存文件的目录名称。 |
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_659_1.png)
+
