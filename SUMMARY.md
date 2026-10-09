@@ -46,6 +46,7 @@
 +   [Ad Hoc无线网络：架构与协议 (Prentice Hall 通信工程与新兴技术系列)](docs/ad-hoc-wireless-networks-architectures-and-protocols-prentic/README.md)
 +   [周末在 Windows 桌面上添加 Red Hat Linux（附带 CD-ROM）](docs/add-red-hat-linux-to-your-windows-desktop-in-a-weekend-with-/README.md)
 +   [Webmin Linux系统管理：系统管理与模块开发](docs/addison-wesley-managing-linux-systems-with-webmin-system-adm/README.md)
++   [阿维斯里的交互式 Linux 教程与参考](docs/addison-wesleys-interactive-linux-tutorial-and-reference/README.md)
 +   [企业Linux管理与安全：Red Hat和CentOS 7和8版本](docs/administer-and-secure-enterprise-linux-red-hat-and-centos-ve/README.md)
 +   [企业级 Linux 管理员指南](docs/administrators-guide-to-linux-in-the-enterprise/README.md)
 +   [高级 Bash 脚本编程指南](docs/adv-bsh-scp-gd/README.md)
