@@ -189,6 +189,7 @@
 +   [C 语言入门：Linux 与树莓派上的 C 编程](docs/c-here---programming-in-c-in-linux-and-raspberry-pi/README.md)
 +   [IoT C语言编程：初学者 Linux 计算机运行指南：如何在用户登录时自动运行程序](docs/c-programming-for-iot-computer-run-linux-book-for-beginners-/README.md)
 +   [Linux C 语言实战](docs/c-programming-in-linux/README.md)
++   [《Linux下的C语言编程，第2版》](docs/c-programming-in-linux-2nd-edition/README.md)
 +   [Linux 下 C 语言实战：学习在 Linux 中编程](docs/c-programming-in-linux-learn-how-to-program-in-linux/README.md)
 +   [CADRS：一种用于 LISP 中复杂数据结构设计的系统](docs/cadrs-a-system-for-the-design-of-complex-data-structures-in-/README.md)
 +   [Caldera OpenLinux 与 Netfinity 服务器集成指南](docs/caldera-openlinux-and-netfinity-server-integration-guide/README.md)
