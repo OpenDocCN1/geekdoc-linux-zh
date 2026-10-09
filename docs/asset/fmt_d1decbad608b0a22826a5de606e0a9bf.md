@@ -1,0 +1,22 @@
+
+You should see the numbers 1-5, 3-5, 0-4 (by 2), and 0-5 (by 0.5).
+
+# Task 3:
+
+`exec` is a bit more complicated than the previous two. It has different behaviors depending on whether arguments are passed to it.
+
+If arguments are passed, it executes them as a command (as if the `exec` wasn't there) but replaces the current shell with the new command. In practice, this means any commands in a shell script which come after the `exec` will never be executed (unless `exec` is run in a subshell).
+
+Open a new terminal and run `exec ls`—you will never see the output because the terminal will exit first!
+
+If instead of arguments, `exec` precedes a redirect, then that redirect will apply to the rest of the script/shell. For example, if you open a new terminal and run:
+
+-   `exec > exec.log`
+-   `echo "Where is my echo?"`
+-   `ls nonexistent`
+
+You won't see anything printed from the `echo` statement until you open `exec.log`, but you will see an error message from `ls`. If you run `exec 8> exec.log`, all output and errors will be sent to the log file.
+
+# Notes:
+
+`exec` is commonly used in wrapper scripts. These are scripts which may modify arguments or simplify the running of another program. When used this way, the wrapper script does its processing and then calls the main program with `exec`, meaning it “gets out of the way.” Without `exec`, the wrapper would remain running, taking up resources and potentially confusing a user who wanted to terminate the process.

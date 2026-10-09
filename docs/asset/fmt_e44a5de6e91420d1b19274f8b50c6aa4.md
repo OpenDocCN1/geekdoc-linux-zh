@@ -1,0 +1,40 @@
+
+# LAB 7
+
+## Command Line Basics: Environment Variables, Types, and History
+
+**Lab Objective:**
+
+Learn about Bash environment variables, types, and how to use the shell history.
+
+**Lab Purpose:**
+
+The Bash command shell is pre-installed on millions of Linux computers around the world. Understanding how this shell works is a critical skill for working with Linux.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+### Lab Walkthrough:
+
+#### Task 1
+
+Open the Terminal application, then enter: `echo $PATH`
+
+The `PATH` environment variable lists all locations that Bash will search when you enter a command with a relative path. A relative path example is `bash`, compared to `/bin/bash`, which is an absolute path.
+
+There are other environment variables as well. You can view all of them, and their values, using the `env` command.
+
+#### Task 2
+
+You can add or modify an environment variable with `export`. For example:
+
+```
+export PATH=$(PATH):./
+```
+
+In most cases, this change will disappear when you exit Bash, but the advantage of `export` is that child processes will now be able to see the new/modified variable.

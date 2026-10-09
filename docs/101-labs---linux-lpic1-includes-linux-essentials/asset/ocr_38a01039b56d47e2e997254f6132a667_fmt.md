@@ -1,0 +1,34 @@
+
+# LAB 39
+
+# Linux as a Virtualization Guest
+
+## Lab Objective
+
+Learn how to manage Linux desktops and servers in the context of virtualization.
+
+## Lab Purpose
+
+If you've followed the labs in order, you are probably running this lab in a VM. In addition to desktop virtualization, with the advent of "cloud computing" and IaaS, server virtualization has become a large part of everyday life for a professional Linux administrator.
+
+## Lab Tool
+
+`Ubuntu 18.04` (or another distro of your choice)
+
+## Lab Topology
+
+A single Linux virtual machine running on `VirtualBox`
+
+## Lab Walkthrough
+
+### Task 1
+
+Open the `VirtualBox` Settings for the VM you are using for this lab. If possible, beef up the VM by doing the following (or if you don't have the system resources, then shrink resources assigned to the VM instead):
+
+- Assign additional RAM and an additional processor to the VM
+- Create another virtual disk image and assign it to the VM
+- Assign an additional network adapter to the VM
+
+Now reboot the VM and look to see if you can detect the additional resources. Does the memory show up in `free`? Can you see an extra processor with `lscpu`? Does `lsblk` show another disk? What about the network with `ip link show`?
+
+The point of this exercise is to learn how easy it is to change the resources of a virtualized computer compared with a physical one. The same is true in the server world.

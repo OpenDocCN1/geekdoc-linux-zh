@@ -1,0 +1,38 @@
+
+# LAB 51
+
+## Modify Process Execution Priorities
+
+**Lab Objective:**
+
+Learn how to manage the priority of started and running processes.
+
+**Lab Purpose:**
+
+In this lab, you will learn how to get a running task's priority, change its priority, and set the priority of a task to be run.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+**Lab Walkthrough:**
+
+### Task 1
+
+Open the Terminal and run the following commands:
+
++   `nice -n 19 sleep 10000 &`
++   `ps -l`
++   `sudo renice -n -20 $(pgrep sleep)`
++   `ps -l`
++   `pkill sleep`
+
+What you’ve done here is started a `sleep` process with a “niceness” value of 19. This is the most “nice” a process can be— in other words, the least demanding in terms of priority. Then you changed its priority, with `renice`, to the “meanest” possible value of -20, or the most demanding in terms of priority. The default priority for all user processes is 0, and you must be root to run a process with higher priority. `ps -l` will list your running processes with their priorities.
+
+**Notes:**
+
+You can also use `top` to list and sort processes by their priority values.

@@ -1,0 +1,35 @@
+
+# LAB 65
+
+## Customize and Use the Shell Environment: Aliases and Functions
+
+**Lab Objective:**
+
+Learn about aliases and functions in Bash.
+
+**Lab Purpose:**
+
+In this lab, you will use aliases and functions within Bash to define "shortcuts" which may make your life easier.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+**Lab Walkthrough:**
+
+### Task I
+
+Open the Terminal and run:
+
+```
+alias mkhello="t=\$(mktemp); echo 'Hello World' > \$t; echo \$t; unset t'
+mkhello
+```
+
+You just created an alias that you may wish you'd had in earlier labs. This new `mkhello` command just creates a temporary file with our favorite text in it, then prints the filename for your use.
+
+You likely already have some aliases defined for you—take a look at `grep alias ~/.bashrc`

@@ -1,0 +1,29 @@
+
+# LAB 4
+Open Source Software and Licensing
+
+## Lab Objective
+Learn about open source philosophy and different forms of open source software licensing.
+
+## Lab Purpose
+When working with open source software, particularly in business, it is important to recognize the implications of various licenses and business models.
+
+## Lab Tool
+A device with a web browser
+
+## Lab Topology
+N/A
+
+## Lab Walkthrough
+### Task 1
+Explore `chooselicense.com` and try to answer the following questions:
+- What is the difference between a copyleft license and a permissive license?
+- What are the differences between `GPL`, `BSD`, and `Creative Commons`?
+- Which licenses are compatible with each other when packaging software (and which ones aren't)?
+
+### Task 2
+Next, consider or read about some potential open-source business models. Can you identify how each business/service below monetizes open source software?
+- `Apple`
+- `Canonical`
+- `Mozilla`
+- `MySQL` (`Oracle`)
