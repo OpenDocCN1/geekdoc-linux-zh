@@ -1,0 +1,139 @@
+
+# 101LABS
+
+# Linux LPIC-1
+
+*Includes Linux Essentials*
+
+![](img/64f3c5d0defa97e8b856b229f9322b97_0_0.png)
+
+LEARN • BY • DOING
+
+Paul Browning
+
+---
+
+# 101 Labs
+Linux LPIC-1
+
+Includes Linux Essentials
+
+Paul Browning, LLB (Hons), CCNP, MCSE
+Arturo Norberto Baldo
+
+---
+
+This study guide and/or material is not sponsored by, endorsed by or affiliated with The Linux Professional Institute Inc. Linux, LPIC1 and Ubuntu are trademarks or registered trademarks of Linus Torvalds, Linux Professional Institute Inc. and Canonical Ltd. in the United States and certain other countries. All other trademarks are trademarks of their respective owners.
+
+101 Labs is a registered trademark.
+
+## COPYRIGHT NOTICE
+
+Copyright 2019 Paul Browning, all rights reserved. No portion of this book may be reproduced mechanically, electronically, or by any other means, including photocopying without written permission of the publisher.
+
+https://www.101labs.net
+
+ISBN: 978-0-9928239-1-7
+
+Published by Reality Press Ltd.
+
+## LEGAL NOTICE
+
+The advice in this book is designed to help you achieve the standard of LPIC-1: System Administrator. The LPIC-1 will validate the candidate's ability to perform maintenance tasks on the command line, install and configure a computer running Linux and configure basic networking. Before you carry out more complex operations, it is advisable to seek the advice of experts.
+
+The practical scenarios in this book are meant only to illustrate a technical point and should be used only on your privately owned equipment and never on a live network.
+
+## About the Authors
+
+### Paul Browning
+
+Paul Browning worked as a police officer in the UK for 12 years before changing careers and becoming a helpdesk technician. He passed several IT certifications and began working for Cisco Systems doing WAN support for large enterprise customers.
+
+![](img/64f3c5d0defa97e8b856b229f9322b97_4_0.png)
+
+He started an IT consulting company in 2002 and helped to design, install, configure, and troubleshoot global networks for small to large companies. He started teaching IT courses soon after that and through his classroom courses, online training, and study guides has helped tens of thousands of people pass their IT exams and enjoy successful careers in the IT industry.
+
+In 2006 Paul started the online IT training portal www.howtonetwork.com, which has grown to become one of the leading IT certification websites.
+
+In 2013 Paul moved to Brisbane with his family. In his spare time he plays the guitar, reads, drinks coffee, and practices Brazilian jiu-jitsu.
+
+### Arturo Norberto Baldo
+
+![](img/64f3c5d0defa97e8b856b229f9322b97_4_1.png)
+
+Arturo Norberto Baldo did the technical edit on this book. He is a Linux enthusiast, network engineer at AS26218 and has been a freelance IT consultant since 2012, ISOC and IETF member. He holds too many certifications to list here. He supports technologies including VMware ESXi, Vcenter, Veeam Backup And Replication, Spiceworks, osTicket, Active Directory, Windows Servers, Debian and Ubuntu Servers, Web Hosting Panels, Video surveillance systems: Bosch BVMS, Genetec, Digifort and Mileston and others.
+
+He has worked as a network engineer, systems administrator and security specialist for several large companies. He holds a Bachelor of Technology (B.Tech.) and Master of Technology (M.Tech.). He likes to read and cycle in his spare time.
+
+Digitized by the Internet Archive in 2023 with funding from No Sponsor
+
+https://archive.org/details/isbn_9780992823917
+
+### Table of Contents
+
+- Introduction–101 Labs ·························································· ix
+- LPI–Linux Essentials ·························································· 1
+    - Lab 1 Linux Evolution and Popular Operating Systems ·············································· 3
+    - Lab 2 Major Open Source Applications: Desktop ················································ 5
+    - Lab 3 Major Open Source Applications: Server ················································ 9
+    - Lab 4 Open Source Software and Licensing ················································ 13
+    - Lab 5 ICT Skills and Working in Linux ······················································ 15
+    - Lab 6 Command Line Basics: Syntax and Quoting ··············································· 17
+    - Lab 7 Command Line Basics: Environment Variables, Types, and History ······················· 19
+    - Lab 8 Using the Command Line to Get Help ················································ 21
+    - Lab 9 Using Directories and Listing Files: Files ············································· 23
+    - Lab 10 Using Directories and Listing Files: Directories ···································· 25
+    - Lab 11 Creating, Moving, and Deleting Files ·················································· 27
+    - Lab 12 Archiving Files on the Command Line ················································ 31
+    - Lab 13 Searching and Extracting Data from Files: Pipes and Redirection ····················· 35
+    - Lab 14 Searching and Extracting Data from Files: Regular Expressions ······················· 39
+    - Lab 15 Turning Commands into a Script: Shell Scripting ····································· 41
+    - Lab 16 Turning Commands into a Script: Scripting Practice ································· 43
+    - Lab 17 Choosing an Operating System ···················································· 45
+    - Lab 18 Understanding Computer Hardware ··············································· 47
+    - Lab 19 Where Data is Stored: Processes and Configuration ····································· 49
+    - Lab 20 Where Data is Stored: System Messaging and Logging ································· 51
+    - Lab 21 Your Computer on the Network ··················································· 53
+    - Lab 22 Basic Security and Identifying User Types ·············································· 55
+    - Lab 23 Creating Users and Groups ························································ 59
+    - Lab 24 Managing File Permissions and Ownership ············································· 61
+    - Lab 25 Special Directories and Files ······················································ 63
+- LPC1 Linux Administrator–Exam 101 ····················································· 65
+    - Lab 26 Determine and Configure Hardware Settings: PCI Devices and Peripherals ···················· 67
+    - Lab 27 Determine and Configure Hardware Settings: Filesystems and Storage ······················ 69
+    - Lab 28 Boot the System: Boot Sequence ···················································· 71
+    - Lab 29 Boot the System: SysVInit and Systemd
+    - Lab 30 Change Runlevels / Boot Targets and Shutdown or Reboot System: Runlevels and Boot Targets
+    - Lab 31 Change Runlevels / Boot Targets and Shutdown or Reboot System: Systemd and Processes
+    - Lab 32 Design Hard Disk Layout
+    - Lab 33 Install a Boot Manager
+    - Lab 34 Manage Shared Libraries
+    - Lab 35 Use Debian Package Management: Apt
+    - Lab 36 Use Debian Package Management: Dpkg
+    - Lab 37 Use RPM and YUM Package Management: YUM
+    - Lab 38 Use RPM and YUM Package Management: RPM
+    - Lab 39 Linux as a Virtualization Guest
+    - Lab 40 Work on the Command Line: Commands and Quoting
+    - Lab 41 Work on the Command Line: Environment Variables, Types, and History
+    - Lab 42 Process Text Streams Using Filters
+    - Lab 43 Perform Basic File Management: Files and Directories
+    - Lab 44 Perform Basic File Management: Find and Globbing
+    - Lab 45 Perform Basic File Management: Archiving and Unarchiving
+    - Lab 46 Use Streams, Pipes, and Redirects: Redirection and File Descriptors
+    - Lab 47 Use Streams, Pipes, and Redirects: Pipes
+    - Lab 48 Create, Monitor, and Kill Processes: Foreground and Background Jobs
+    - Lab 49 Create, Monitor, and Kill Processes: Process Monitoring
+    - Lab 50 Create, Monitor, and Kill Processes: Sending Signals
+    - Lab 51 Modify Process Execution Priorities
+    - Lab 52 Search Text Files Using Regular Expressions: Basic Regex
+    - Lab 53 Search Text Files Using Regular Expressions: Extended Regex
+    - Lab 54 Basic File Editing: vi Navigation
+    - Lab 55 Basic File Editing: vi Modes
+    - Lab 56 Create Partitions and Filesystems
+    - Lab 57 Maintain the Integrity of Filesystems
+    - Lab 58 Control Mounting and Unmounting of Filesystems: Manual Mounting
+    - Lab 59 Control Mounting and Unmounting of Filesystems: Automatic Mounting
+    - Lab 60 Manage File Permissions and Ownership: File Permissions
+    - Lab 61 Manage File Permissions and Ownership: Directory Permissions
+    - Lab 62 Create and Change Hard and Symbolic Links
+    - Lab 63 Find System Files and Place Files in the Correct Location

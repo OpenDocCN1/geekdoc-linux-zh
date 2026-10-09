@@ -1,0 +1,19 @@
+**Task 2:**
+Now let's delete (again, *from memory only*) any pre-existing partitions. Type d and answer the prompts until none remain.
+
+Then:
+
++   -   Enter n to add a new partition. This should be a primary partition, number 1, 100M in size. It would be mounted at /boot.
++   -   Repeat this for the swap partition. Make it 4G in size, or double the system RAM. Enter t to change this partition type to 82 (Linux swap). Swap space is "backup RAM" which uses disk as secondary memory if your system runs out of RAM.
++   -   Repeat this for the /var filesystem. Make it 4G in size, or whatever feels right to you based on the disk size.
++   -   Create an extended partition that fills up the rest of the disk. Within this extended partition, you will create partitions for /home and /. 
++   -   Create a partition for the /home filesystem. Make it 4G in size, or whatever feels right to you based on the disk size.
++   -   Repeat this for the / filesystem. It will fill up the rest of the disk.
++   -   Enter a to toggle the bootable flag on partition 1.
++   -   Enter p again to see what your results would be.
++   -   **IMPORTANT:** Enter q to quit without writing the partition table.
+
+In most situations, you probably wouldn't need this many partitions, and if you did, you would instead use Logical Volume Manager (LVM). LVM provides a more flexible way of managing logical volumes rather than partitions. In LVM, you would create a *volume group* consisting of one or more physical volumes (disks), and then create logical volumes on top of that in lieu of partitions.
+
+**Notes:**
+Some systems contain an EFI System Partition. This would show up in `fdisk` as a GPT partition, and in general should not be deleted, especially if you have a dual-booting machine.
