@@ -1,0 +1,225 @@
+
+## 实验 83：系统日志：`Journald`
+
+**实验目标：**
+
+学习如何管理和读取来自 `journald`（Systemd 日志记录器）的数据。
+
+**实验目的：**
+
+在本实验中，你将了解 `journald`，这是 Systemd 的日志系统，正在大多数 Linux 发行版中逐渐取代传统的 `syslog` 变体。
+
+**实验工具：**
+
+Ubuntu 18.04（或你选择的其他发行版）
+
+**实验拓扑：**
+
+单台 Linux 机器或虚拟机
+
+**实验详解：**
+
+### 任务 1
+
+打开两个终端窗口/标签页。
+
+在第一个中，运行：`journalctl -f`
+
+在第二个中，运行：`systemd-cat echo "Hello World"`
+
+现在回到第一个标签页。你友好的信息出现在系统日志中了吗？按 `Ctrl+C` 退出。
+
+`systemd-cat` 是一个便捷的工具，类似于 `logger`，可以直接将输出发送到 `journald` 日志。
+
+### 任务 2
+
+现在查看配置：`cat /etc/systemd/journald.conf`
+
+在默认的 Ubuntu 18.04 系统上，你可能会看到……很多被注释掉的行。这只是默认配置，但仍然可以告诉你很多信息。你可以从 `man journald.conf` 中了解这些选项的含义，该手册页方便地按照配置文件中的顺序排列。
+
+使用任务 1 中的两个标签页，如有必要，请打开第二个标签页。在第一个标签页中运行 `tty`，然后保存它打印出的值以备后用。
+
+在第二个标签页中，以 root 身份编辑 `/etc/systemd/journald.conf`（通过 `sudo` 或 `sudoedit`）。在文件底部添加以下两行：
+
+```text
+ForwardToConsole=yes
+TTYPath=[tty]
+```
+
+... 其中 `[tty]` 是另一个标签页中 `tty` 打印的值。保存并退出编辑器，然后运行：
+
+- `sudo systemctl restart systemd-journald`
+
+- `systemd-cat echo "Hello World"`
+
+现在再次回到第一个标签页。你应该会看到日志直接打印到你的控制台！这对于监控系统日志通常很有用，而无需保持一个进程运行。
+
+### 任务 3
+
+清理：
+
+- 再次编辑 `/etc/systemd/journald.conf` 并删除你添加的两行
+
+- 运行 `sudo systemctl restart systemd-journald`
+
+**备注：**
+
+当持久存储在磁盘上时（这通常是你想要做的，与仅在内存中存储日志相对），`journald` 日志存储在 `/var/log/journal`。然而，如果你尝试读取这些文件，你会很快注意到它们不是你熟悉的文本日志！有点不方便的是，`journald` 以二进制格式存储其日志，只有 systemd 相关工具可以读取。
+
+## 实验 84：邮件传输代理（MTA）基础：别名和转发
+
+**实验目标：**
+
+学习如何执行基本的邮件转发和别名配置。
+
+**实验目的：**
+
+在本实验中，你将使用 Postfix MTA 进行实验，以了解别名和邮件转发。
+
+**实验工具：**
+
+Ubuntu 18.04（或你选择的其他发行版）
+
+**实验拓扑：**
+
+单台 Linux 机器或虚拟机
+
+**实验详解：**
+
+### 任务 1
+
+首先，安装 Postfix：`sudo apt install postfix mailutils`
+
+在 Ubuntu 上，系统会提示你询问如何初始配置 Postfix。选择“仅本地”选项，其他选项保持默认即可。
+
+你已设置了一个仅用于向其他本地用户递送消息的邮件服务器。这意味着在本实验的剩余部分，通常看到电子邮件地址的地方（格式如 `this.com`），你将只会看到用户名。
+
+### 任务 2
+
+现在运行 `cat /etc/aliases`
+
+这是一个用于邮件重定向的全局别名列表。目前该文件可能只有一行，告诉 Postfix 发送给 `postmaster` 的邮件应转给 `root`。
+
+添加你自己的别名：
+
+- `sudo USER=$USER sh -c 'echo "mymail: $USER" >> /etc/aliases'`
+
+- `sudo newaliases`
+
+别名存储在一个数据库中，`newaliases` 会刷新该数据库。现在你可以向 `mymail` 用户发送一条消息，它会被转发给你：`echo "Hello World" | sendmail mymail`
+
+你可能想知道 `sendmail` 在那里做什么。Sendmail 是早期的 Linux MTA 之一，融入了互联网早期的织物中——但这并不是你上面安装的 MTA。由于 Sendmail 在许多年里在 Linux 电子邮件中处于核心地位，大多数主要的开源 MTA，包括 Postfix，都为其提供了一个仿真层。
+
+### 任务 3
+
+现在，确认你收到了发送给 `mymail` 的消息：
+
+- 运行：`mail`
+
+- 你将看到你的收件箱，以文本格式显示。理想情况下，你发送的消息是第一条，但这并不重要。输入 `1` 阅读收件箱中的第一条消息（包括头部，你通常可能看不到——不要被此迷惑）。
+
+- 完成后，输入 `q` 退出。
+
+### 任务 4
+
+除了全局邮件转发外，用户可以通过在其主目录中添加 `.forward` 文件来控制自己的邮件转发。请自己试一试：
+
+- `echo root > ~/.forward`
+
+- `echo "Forwarding enabled" | mail -s "A forwarded message" mymail`
+
+- `mail`
+
+- `sudo mail`
+
+如果你操作正确，第一个 `mail` 命令应该打印“`[username]` 没有邮件”；或者至少显示一个没有你刚才发送的消息的收件箱。`root` 的收件箱应该显示该消息。
+
+### 任务 5
+
+最后，清理：
+
+- `rm ~/.forward`
+
+- `sudo sed -i '/mymail:/d' /etc/aliases`
+
+- `sudo newaliases`
+
+**备注：**
+
+你可能会发现 `mail` 命令的收件箱有点难以导航。当然，这就是人们安装并使用自己的邮件客户端的原因。即使是在 Linux 命令命令行上，你通常也会使用像 `mutt` 或 `alpine` 这样的工具。
+
+## 实验 85：邮件传输代理（MTA）基础：其他 MTA
+
+**实验目标：**
+
+了解其他主要的 MTA，如 Sendmail 和 Exim。
+
+**实验目的：**
+
+在本实验中，你将使用 Postfix（在实验 84 中介绍）以外的 MTA 进行实验。
+
+**实验工具：**
+
+Ubuntu 18.04（或你选择的其他发行版）
+
+**实验拓扑：**
+
+单台 Linux 机器或虚拟机
+
+**实验详解：**
+
+### 任务 1
+
+首先，安装 Exim：`sudo apt install exim4`
+
+与 Postfix 一样，Exim 也有经典 Sendmail 的仿真层。如果你查看像 `newaliases` 或 `mailq` 这样的命令的手册页，你会看到 `exim4` 的手册页。
+
+你可以使用 Exim 做你在实验 84 中做的所有事情，包括别名和使用 `sendmail` 发送邮件。（`mail` 命令实际上是另一个软件包 `mailutils` 的一部分。）
+
+### 任务 2
+
+现在，安装久负盛名的 Sendmail：`sudo apt install sendmail-bin sendmail`
+
+这是经典的 MTA，所以它没有仿真层……尽管它可能会让你觉得有，仅仅因为某些命令的运行时间可能很长。（例如，比较 Sendmail 下和 Postfix 下 `newaliases` 的运行时间。）
+
+### 任务 3
+
+最后，采取本实验中最重要的一步，即移除 Sendmail。Sendmail 因其安全问题而众所周知，因此即使在实验机器上，最好也不要保留超过必要的时间：
+
+- `sudo apt remove sendmail-bin sendmail`
+
+- `sudo apt autoremove`
+
+**备注：**
+
+使用别名可以做的另一件事是将邮件转发到文件，而不是转发到另一个用户。然而，Exim 默认不允许这样做——你需要深入研究配置才能做到这一点。
+
+## 实验 86：管理打印机和打印
+
+**实验目标：**
+
+学习如何使用 CUPS 管理打印任务。
+
+**实验目的：**
+
+在本实验中，你将学习如何使用 CUPS 和 LPD 兼容性接口管理打印队列和任务。
+
+**实验工具：**
+
+Ubuntu 18.04（或你选择的其他发行版）
+
+**实验拓扑：**
+
+单台 Linux 机器或虚拟机
+
+**实验详解：**
+
+### 任务 1
+
+为了消除打印机硬件方面的 variability 及其带来的所有问题（以防你手边没有打印机），本实验将假设打印到 PDF 文件。如果你想打印到真正的打印机，请忽略此步骤。否则，运行 `sudo apt install printer-driver-cups-pdf`（你可能需要运行 `apt-get update --fix-missing` 才能正确安装 `cups-pdf`）。
+
+通过 `ls -l /var/spool/cups` 进行验证——你应该在输出中看到“device for PDF: cups-pdf:”的部分。或者，如果你插入真正的打印机，它应该会被自动检测。（如果没有，那么为了本实验的目的，打印到 PDF 会更容易。）
+
+最后，检查你的文件应该打印到哪里：`grep "OutputFile" /etc/cups/cups-pdf.conf`。
+
+你可能看到类似 `${HOME}/PDF` 的目录，你的“打印”文件最终会出现在那里。如果你愿意，可以更改此设置；如果这样做，请用 `sudo systemctl restart cups` 使其生效

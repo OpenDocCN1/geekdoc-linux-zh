@@ -1,0 +1,35 @@
+
+# LAB 89
+
+## Fundamentals of Internet Protocols: IPv4 and IPv6
+
+### Lab Objective:
+
+Learn how to gather information about IP addressing on a Linux system.
+
+### Lab Purpose:
+
+In this lab, you will examine some common networking principles, namely IPv4, IPv6, and the differences between them, using some Linux command-line tools.
+
+### Lab Tool:
+
+Ubuntu 18.04 (or another distro of your choice)
+
+### Lab Topology:
+
+A single Linux machine, or virtual machine
+
+## Lab Walkthrough:
+
+### Task 1:
+
+In Lab 88, you installed `sipcalc` and used it to gather information on your machine's IP addresses. Now you will use the same tool, but examine its output more closely and compare it with other configurations on your system.
+
+Your system should have at least two IP addresses, one private IPv4 and one link-local IPv6. You may not have both an IPv4 and IPv6 public address, so this lab will use the private ones. Get those as discussed in Lab 88 with: `ip addr show`
+
+Compare the output of:
+
+- `sipcalc -a [IPv4]`
+- `sipcalc -a [IPv6]`
+
+You may be aware that IPv4 and IPv6 have quite a few differences, but even the subnetting output reflects that.

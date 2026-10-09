@@ -1,0 +1,20 @@
+
++   - JavaScript?
+
++   - Perl?
+
++   - Python?
+
++   - PHP?
+
++   - Something else?
+
+If you have any software development experience, you might like to search in Ubuntu Software or another package manager for your favorite language tools. All of these languages and many more are supported on Linux.
+
+# `Task 3:`
+
+Now, you will connect to a remote Linux server. First, use Ubuntu Software to install an application called PuTTY. PuTTY is a graphical version of an SSH/Telnet client, commonly used to connect to remote Linux servers, especially from Windows machines.
+
+Upon running PuTTY, you will be greeted with a connection screen. Type in “towel.blinkenlights.nl”, select Telnet, then click Open:
+
+![](bbox=[0.2, 0.47, 0.86, 0.87])

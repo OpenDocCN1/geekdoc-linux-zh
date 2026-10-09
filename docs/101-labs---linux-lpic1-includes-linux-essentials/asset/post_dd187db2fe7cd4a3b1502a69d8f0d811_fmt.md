@@ -1,0 +1,242 @@
+
+## What you did was set the setgid bit for this directory
+
+What you did was set the `setgid` bit for this directory, which causes files created under it to have the same group ownership as the directory itself. In practice, this is a way to ensure a group of users sharing files doesn't have to worry as much about permissions.
+
+### Task 6
+
+The default permissions for a newly created file can be adjusted with `umask`. This serves to "mask out," at a bit level, permissions that a new file should not have. Run the following:
+
+```bash
+u=$(umask)
+umask 0777
+mkdir bar
+ls -ld bar
+umask $u
+```
+
+The `bar` directory should have no permissions set—you've masked them all out with `umask`.
+
+### Task 6
+
+Finally, clean up with `sudo rm -r foo bar`
+
+### Notes
+
+Another special bit specific to directories is called the sticky bit, which is covered in Lab 25. This bit, set on a world-writable directory, ensures that users can only remove or modify files that they themselves own. This is most useful on `/tmp`.
+
+## LAB 62
+
+## Create and Change Hard and Symbolic Links
+
+**Lab Objective:**
+
+Learn how to create and manage hard links and symbolic links.
+
+**Lab Purpose:**
+
+In this lab, you will work with hard links, symbolic (soft) links, and learn the difference between copying and linking.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+**Lab Walkthrough:**
+
+### Task 1
+
+Open the Terminal and run:
+
+```bash
+touch foo
+ln -sv foo myfoo
+ls -l myfoo
+echo hello > foo
+cat myfoo
+rm myfoo
+ls -l foo
+```
+
+What just happened? You created a symbolic link to a file (`foo`) called `myfoo`. The `ls` output shows this link. A symbolic link is simply a reference to an existing file. This way, you may have multiple references to a single file—edit the original file, and all of the references instantly update, as shown by `cat`.
+
+When you remove the link, the original file still remains. (If you remove the original file while keeping the symlink, you will have what's called a `broken link`, just like on the internet.) This is useful for some system configurations.
+
+### Task 2
+
+Now run:
+
+```bash
+ln -v foo myfoo
+echo goodbye > foo
+cat myfoo
+rm foo
+ls -l myfoo
+cat myfoo
+```
+
+You just created a different type of link, called a `hard link`. Hard links behave similarly to symlinks in the sense that when the original is modified the links follow, and vice versa. However, a hard link keeps its data if the original file is deleted. Hard links also cannot be made across filesystem or partition boundaries, and directories cannot be hard-linked.
+
+### Task 3
+
+Finally, clean up with `rm myfoo`
+
+### Notes
+
+Under the hood, hard links are really acting upon `inodes`. A hard link creates another file pointing to the same inode as the original file. (Symlinks work at a higher level, pointing directly to a file or directory name.) You can see the inode number with `ls -i`, or see how many hard links share a given file's inode in the second column of `ls -l`
+
+## LAB 63
+
+## Find System Files and Place Files in the Correct Location
+
+**Lab Objective:**
+
+Learn how to locate files on a Linux system.
+
+**Lab Purpose:**
+
+In this lab, you will learn multiple ways of locating files on a system, in accordance with the Filesystem Hierarchy Standard (FHS).
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+**Lab Walkthrough:**
+
+### Task 1
+
+In previous labs, you've worked with `find`, a tool which can find files fitting a certain specification and even execute commands on those files. `find` is great for a limited scope, but becomes unwieldy when you don't actually know where a given file is located, because then it has to search the entire filesystem! There's another way. Open the Terminal and run:
+
+```bash
+sudo updatedb
+locate updatedb.conf
+```
+
+As you might guess, `locate` operates from a database which is updated by `updatedb`. The `updatedb` command may take a couple of minutes, but once it's done, every subsequent `locate` will be very fast.
+
+Here, you should have found two files: One is the actual `updatedb` config file, and the other is the man page. You can investigate these now if you like:
+
+```bash
+cat /etc/updatedb.conf
+man 5 updatedb.conf
+```
+
+The `updatedb.conf` file should include a directive to prune paths like `/tmp/` and `/media`, among others. Given what you know about the FHS: Why do you think it's a good idea to prune these paths from the `locate` database? Why is it a good idea to prune filesystem types like `nfs` and `proc`?
+
+### Task 2
+
+Now run:
+
+```bash
+which which
+which locate
+whereis locate
+whereis updatedb
+whereis whereis
+```
+
+`which` shows you the absolute location of a given (relative) command, while `whereis` expands on this by showing other related files like config files, databases, and man pages.
+
+### Notes
+
+Many common Linux tools are fairly complicated C programs; which is one exception. It is a short shell script which, with a bit of practice, you could understand in its entirety. Take a look at the `/bin/which` file and see how much of it makes sense to you!
+
+## LPIC1 Linux Administrator– Exam 102
+
+## LAB 64
+
+## Customize and Use the Shell Environment: User Profiles
+
+**Lab Objective:**
+
+Learn about global and user profiles.
+
+**Lab Purpose:**
+
+In this lab, you will manage shell profiles and learn which files can be used to customize both global profiles and those for specific users.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+**Lab Walkthrough:**
+
+### Task 1
+
+Open your favorite editor via the terminal, and take a look at the following files (some of these files may not exist, that's normal):
+
+- `/etc/profile`
+- `/etc/skel/bash_profile` and/or `~/.bash_profile`
+- `/etc/skel/bash_login` and/or `~/.bash_login`
+- `/etc/skel/profile` and/or `~/.profile`
+- `/etc/bash.bashrc`
+- `/etc/skel/bashrc` and/or `~/.bashrc`
+- `/etc/skel/bash_logout` and/or `~/.bash_logout`
+
+Bash attempts to read the first four files (in preference order) every time you start a `login` shell, while it reads the latter two whenever you start an `interactive` shell. Typically, a login shell is started once per boot, or once per SSH login, while an interactive shell is started every time you open the Terminal application (or a new tab within it)—but, as with all things, there are exceptions. Finally, Bash reads `~/.bash_logout` when a login shell is exited.
+
+You won't necessarily understand everything that's happening in these files right away. The key takeaway is that this is where you can make permanent changes to every aspect of a shell's profile, including environment variables, shell options, and even text and background colors.
+
+### Task 2
+
+Test this theory by adding a simple welcome message. Open `~/.bashrc` in your favorite editor and add the following line at the end of the file:
+
+```bash
+echo "Welcome, $USER! You've successfully modified the .bashrc file!"
+```
+
+Save and quit, exit the terminal, then open a new terminal, and you should be greeted with your message.
+
+Note that this only applies to your user. If you wanted it to apply to a different user, you would have to modify that user's own `.bashrc` file. To apply it to all future users, you would edit `/etc/skel/.bashrc`, or `/etc/bash.bashrc` to apply it to all `current` (and future) users.
+
+### Notes
+
+An interesting environment variable to experiment with is `PS1`. Running `echo $PS1` will print out a confusing mess of special symbols, but simply running `PS1="$` will make it immediately apparent that this, in fact, what defines your prompt!
+
+## LAB 65
+
+## Customize and Use the Shell Environment: Aliases and Functions
+
+**Lab Objective:**
+
+Learn about aliases and functions in Bash.
+
+**Lab Purpose:**
+
+In this lab, you will use aliases and functions within Bash to define "shortcuts" which may make your life easier.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+
+
+## Lab Topology
+
+A single Linux machine, or virtual machine
+
+## Lab Walkthrough
+
+### Task 1
+
+Open the Terminal and run:
+
+```bash
+alias mkhello="t=$(mktemp); echo 'Hello World' > $t; echo $t; unset t"
+mkhello
+```
+
+You just created an alias that you may wish you'd had in earlier labs. This new `mkhello` command just creates a temporary file with our favorite text in it, then prints the filename for your use.
+
+You likely already have some aliases defined for you—take a look at `grep alias ~/.bashrc`

@@ -1,0 +1,10 @@
+
+### Task 3
+
+**Enter:** `info date`
+
+When even `man` isn't enough, sometimes you may need to rely on `info`. `info` is not the most convenient tool for casual browsing, but it provides the most details on any given aspect of a Linux system.
+
+**Notes:**
+
+Using unknown flags, like `--help` and `-h`, could potentially be risky, especially when a command is run as root. Do you understand why?

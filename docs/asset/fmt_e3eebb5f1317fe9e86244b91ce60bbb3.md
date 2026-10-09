@@ -1,0 +1,29 @@
+
+# LAB 54
+
+## Basic File Editing: vi Navigation
+
+### Lab Objective
+Learn how to open, close, and navigate the `vi` editor.
+
+### Lab Purpose
+In this lab, you will learn about one of the classic (but often opaque to new users) Linux text editors, `vi`.
+
+### Lab Tool
+`Ubuntu 18.04` (or another distro of your choice)
+
+### Lab Topology
+A single Linux machine, or virtual machine
+
+### Lab Walkthrough
+`Task 1:`
+
+Open the Terminal and run `vi /etc/passwd`. Assuming you've not run this as root, `vi` should tell you at the bottom that the file is read-only. That's fine, since you won't be making any changes right now. Instead, explore just navigating `vi`:
+
+* Use the `h`, `j`, `k`, and `l` keys, or the arrow keys, to navigate the cursor between characters and lines.
+* Enter `/username`, or `?username`, to search forward and backward, respectively, for your username. Use `n` or `N` to hop to the next/previous match, respectively.
+* Enter `10G` to hop to line 10. Then just enter `G` to hop to the bottom of the file.
+* Finally, type `:q` to quit. Or if you've somehow accidentally made changes, type `:q!` to force quit without saving them. If you are in insert mode press `Esc` first and then `:` when the cursor appears in the bottom left you can press `q!`
+
+### Notes
+The `EDITOR` environment variable defines which editor is used by programs that ask for one, such as `sudoedit`. By default this may be set to `nano`. If you're comfortable enough with `vi`, you may want to change this variable.

@@ -1,0 +1,36 @@
+
+- **Lab 29** Boot the System: SysVInit and Systemd
+- **Lab 30** Change Runlevels / Boot Targets and Shutdown or Reboot System: Runlevels and Boot Targets
+- **Lab 31** Change Runlevels / Boot Targets and Shutdown or Reboot System: Systemd and Processes
+- **Lab 32** Design Hard Disk Layout
+- **Lab 33** Install a Boot Manager
+- **Lab 34** Manage Shared Libraries
+- **Lab 35** Use Debian Package Management: Apt
+- **Lab 36** Use Debian Package Management: Dpkg
+- **Lab 37** Use RPM and YUM Package Management: YUM
+- **Lab 38** Use RPM and YUM Package Management: RPM
+- **Lab 39** Linux as a Virtualization Guest
+- **Lab 40** Work on the Command Line: Commands and Quoting
+- **Lab 41** Work on the Command Line: Environment Variables, Types, and History
+- **Lab 42** Process Text Streams Using Filters
+- **Lab 43** Perform Basic File Management: Files and Directories
+- **Lab 44** Perform Basic File Management: Find and Globbing
+- **Lab 45** Perform Basic File Management: Archiving and Unarchiving
+- **Lab 46** Use Streams, Pipes, and Redirects: Redirection and File Descriptors
+- **Lab 47** Use Streams, Pipes, and Redirects: Pipes
+- **Lab 48** Create, Monitor, and Kill Processes: Foreground and Background Jobs
+- **Lab 49** Create, Monitor, and Kill Processes: Process Monitoring
+- **Lab 50** Create, Monitor, and Kill Processes: Sending Signals
+- **Lab 51** Modify Process Execution Priorities
+- **Lab 52** Search Text Files Using Regular Expressions: Basic Regex
+- **Lab 53** Search Text Files Using Regular Expressions: Extended Regex
+- **Lab 54** Basic File Editing: vi Navigation
+- **Lab 55** Basic File Editing: vi Modes
+- **Lab 56** Create Partitions and Filesystems
+- **Lab 57** Maintain the Integrity of Filesystems
+- **Lab 58** Control Mounting and Unmounting of Filesystems: Manual Mounting
+- **Lab 59** Control Mounting and Unmounting of Filesystems: Automatic Mounting
+- **Lab 60** Manage File Permissions and Ownership: File Permissions
+- **Lab 61** Manage File Permissions and Ownership: Directory Permissions
+- **Lab 62** Create and Change Hard and Symbolic Links
+- **Lab 63** Find System Files and Place Files in the Correct Location

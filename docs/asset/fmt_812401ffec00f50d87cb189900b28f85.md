@@ -1,0 +1,14 @@
+
+Now, enjoy the show!
+
+It goes without saying that this particular Linux server is atypical—however, you will use a very similar process, either in `PuTTY` or on the command line, to connect to any remote Linux server.
+
+# Task 4:
+
+Finally, locate the `Terminal` application. When you launch `Terminal`, it runs a special application called a shell. The default and most common shell is called `Bash`, but there are other options.
+
+In practice, you will most often use the `Terminal` directly rather than a GUI application like `PuTTY`.
+
+# Notes:
+
+Though less important on a modern desktop machine, the shell is a critical feature for managing Linux servers. In future labs, we will dive into the shell.

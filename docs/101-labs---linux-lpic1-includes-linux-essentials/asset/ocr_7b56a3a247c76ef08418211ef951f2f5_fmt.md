@@ -1,0 +1,41 @@
+
+# LAB 24
+
+## Managing File Permissions and Ownership
+
+**Lab Objective:**
+
+Learn how to manipulate file permissions and ownership settings.
+
+**Lab Purpose:**
+
+In this lab, you will learn to use `chmod` and `chown`, as well as view permissions and ownership settings with `ls`.
+
+**Lab Tool:**
+
+Ubuntu 18.04 (or another distro of your choice)
+
+**Lab Topology:**
+
+A single Linux machine, or virtual machine
+
+## Lab Walkthrough
+
+### Task 1
+
+Open the Terminal and run (you may need to add the user `foo` if you removed it on the last lab):
+
+```
+echo "Hello World" > foo
+ls -l foo
+```
+
+Look at the first field; you should see `-rw-r--r--`.
+
+This indicates the user, group, and other permissions. The last nine characters, in groups of three, denote these permissions. In this instance:
+
+*   `rw-` indicates read/write (but not execute) permissions for the user who owns the file
+*   `r--` indicates read-only permissions for the group that owns the file
+*   `r--` indicates read-only permissions for all non-owners, a.k.a. "world"
+
+The first character indicates the type of file. In this case, it is a regular file; directories begin with `d`.
