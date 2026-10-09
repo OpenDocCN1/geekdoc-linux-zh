@@ -1,0 +1,178 @@
+
+向 attr_accessor 方法，以便为所有声明的属性创建读写访问方法。
+
+以下是使用 attr_initialize 方法的方式：
+
+```ruby
+class Student
+  attr_initialize :name, :id, :address
+end
+```
+
+```ruby
+s = Student.new('Erika', 123, '13 Fake St')
+s.address = '13 Wrong Rd'
+puts s.name, s.id, s.address
+```
+
+预期的输出将是：
+
+```text
+Erika
+123
+13 Wrong Rd
+```
+
+# 结论
+
+一旦你熟悉了这些技术，元编程并没有听起来那么复杂。元编程允许你自动化那些容易出错或重复的编程任务。你可以使用它来预生成数据表，自动生成那些无法抽象为函数的样板代码，甚至可以用它来测试你编写自我复制代码的才智。
+
+Ariel Ortiz 是墨西哥蒙特雷理工学院（Tecnologico de Monterrey）墨西哥州分校计算机科学系的教职员工。他教授计算机编程已近二十年。他不太确定自己最喜欢的编程语言是什么，但他认为要么是 Scheme，要么是 Python，要么是 Ruby。可以通过 ariel.ortiz@itesm.mx 联系到他。
+
+> “我宁愿编写生成程序的程序，也不愿编写程序本身。”——Richard Sites
+
+# 资源
+
+Jargon File：www.catb.org/esr/jargon
+
+Lucas Carlson 和 Leonard Richardson 著，O'Reilly Media 于 2006 年出版的《Ruby 食谱》。这本书的第 10 章包含了 16 个关于使用 Ruby 进行反射和元编程的食谱。强烈推荐阅读。
+
+Quine 页面：www.nyx.net/~gthomps/qquine.htm。这个网页包含了多种不同编程语言的 quine（自复制程序）。它甚至包含那些在多种语言中都能工作的 quine。
+
+![](img/526fd434dcfcf1b461b94c24ea170f36_78_0.png)
+
+# 专家已包含。
+
+Paul 在将客户与其所需的服务器进行匹配方面拥有多年的经验。他最喜欢的是那些将卓越性能与长期价值结合在一起的服务器。Rackform ct5vry A411 让他印象深刻，因为它是一个位于单个机架单元中的计算集群，配有四个双核 AMD Opteron 8000 系列处理器和 16 个 DDR2 DIMM 插槽。
+
+而且他知道第二代 AMD Opteron 处理器设计用于提供向四核的无缝升级，而 AMD 的 Direct Connect 架构确保了当前所有八个核心都能以最大效率协同工作。
+
+当你与 Silcon Mechanics 合作时，你获得的不仅仅是一台强大的 AMD 服务器——你还获得了一位像 Paul 这样的专家。
+
+![](img/526fd434dcfcf1b461b94c24ea170f36_78_1.png)
+
+![](img/526fd434dcfcf1b461b94c24ea170f36_78_2.png)
+
+# SILICON MECHANICS
+
+请访问我们的网站 www.siliconmechanics.com
+或拨打免费电话 866-352-1173 联系我们
+
+# 以 HTML 方式阅读源代码
+
+**交叉引用并将源代码转换为 HTML 以便于浏览。** KAMAR SOOMRO
+
+**每个优秀的程序员**迟早都要研究源代码。有时是为了学习新的编码风格。有时是为了了解某样东西是如何工作的。无论原因如何，没有源代码研究，程序员无法工作。研究小型项目的源代码并不困难。你很容易不用正式方法就能做到。然而，当你想要研究大型项目的源代码时，跟踪各种函数、变量及其定义就成了一个巨大的问题。如果人们能找到在线的源代码，那真是幸运——这意味着他们可以使用工具来处理源代码并帮助他们进行研究。这样的工具为研究源代码的人们提供了以前梦想不到的优势和灵活性。LXR（Linux Cross-Reference，Linux 交叉引用）工具就是这样的工具之一。
+
+它最初作为挪威一个通用超文本交叉引用工具的应用测试平台而开发，其旗舰成就是对 Linux 内核源代码进行交叉引用。代码可在 **lxr.inux.org/source** 进行浏览。其他项目位于 **lxr.mozilla.org/seamonkey**，那里可以浏览 Mozilla 源代码，FreeBSD 源代码可在 **fhr.watson.org** 上获取。LXR 使用户能够仅通过单击一次就跳转到函数定义、搜索使用情况等。它还支持电子邮件和超文本链接的索引。
+
+该项目基于标准 Web 技术，因此可以通过任何 Web 浏览器访问。在服务器端，它是使用 Apache 开发的，但应该适用于任何支持 CGI 脚本功能的 Web 浏览器。实际执行所有工作的脚本是使用 Perl 开发的，并严重依赖于 Perl 强大的正则表达式库。
+
+这款软件最好的功能可能是它以 HTML 格式呈现给用户。由于是 HTML 格式，将代码的各个部分链接到其他部分非常容易。它是用 Perl 编写的，因此理论上，它可以在任何拥有 Perl 解释器的操作系统上运行。这个工具真正伟大之处在于它支持多种语言。这意味着无论你的程序是用哪种语言编写的，你仍然可以使用此工具来交叉引用和浏览你的代码。
+
+LXR 实际上相当简单且整洁。用户使用一个名为 genref 的实用程序来生成完整源代码的索引。完成之后，用户通过 Web 浏览器访问一个名为 source 的 Perl 脚本，该脚本读取索引文件并动态生成用于交叉引用源代码的 HTML。然后用户可以按需浏览源代码。
+
+# 安装
+
+一旦你对 LXR 的工作原理和各个配置选项有了一定了解，安装和配置 LXR 就相当简单了。首先，从 **sourceforge.net/projects/lxr** 下载源代码 tarball。在撰写本文时，lxr-0.3 是稳定版本。下载 tarball 后，使用以下命令解压它：
+
+```bash
+bash$ tar -xvf lxr-0.3.tar.gz
+```
+
+解压源代码后，cd 到新建的目录，并使用你选择的文本编辑器打开 Makefile 进行编辑。你需要在这里设置两个变量：INSTALLPREFIX 和 PERLBIN。PERLBIN 指的是 perl/5s 解释器的可执行二进制文件。在我的情况下，它位于 /usr/bin/perl。INSTALLPREFIX 是安装 LXR 的目录。它应该位于可以通过 Web 浏览器访问的位置。在我的系统中，那是 Apache 1.3.33，我选择将其安装在 /var/www/htdocs/lxr 下。因此，我的 Makefile 看起来大致如下：
+
+```makefile
+# 用于安装和配置 LXR 的 Makefile
+
+# 你的 perl/5s 二进制文件的位置
+
+PERLBIN=/usr/bin/perl
+
+# LXR 将安装在这里
+
+INSTALLPREFIX=/var/www/htdocs/lxr
+
+# 配置参数结束
+
+CGISCRIPTS=find ident search diff source
+
+PERLMODULES=SimpleParse.pm Common.pm Config.pm
+
+....
+```
+
+保持 Makefile 的其余部分不变。在控制台输入：
+
+```bash
+bash$ make install
+```
+
+然后 LXR 将安装在指定的目录中。
+
+# 配置
+
+现在，cd 到安装 LXR 的目录（在我的情况下是 /var/www/htdocs/lxr）。那里应该有三个子目录：bin、http 和 source。尽管你要交叉引用的源代码可以放在任何位置，但我更喜欢将其放在 $INSTALLPREFIX/source 子目录下。我将 glibc-2.3.5 和 OpenMOSIX-2.4.26 的源代码放在这里。现在，我们必须生成 LXR 将用于生成交叉引用源代码的索引文件。因此，cd 到包含源代码的目录，并执行 $INSTALLPREFIX/bin 中的 genref 脚本：
+
+```bash
+bash$ /var/www/htdocs/lxr/bin/genref .
+```
+
+末尾的 . 告诉脚本源代码包含在当前目录中。接下来，坐下来享受过程，直到解析完成。完成后，当前目录——包含你的源代码的目录——应该有两个新文件：fileidx 和 xref。当你浏览时，LXR 需要这两个文件来生成交叉引用的源代码。确保其他人对这些文件有读取权限。为此，在仍在源目录时输入以下内容：
+
+```bash
+bash$ ls -l fileidx xref
+```
+
+输出应该是这样的：
+
+```text
+-r--r--r-- 1 nobody root 671744 2006-08-24 05:06 fileidx*
+-r--r--r-- 1 nobody root 8425472 2006-08-24 05:06 xref*
+```
+
+第三个 r 应该已设置。如果没有，你可以执行以下操作来设置：
+
+```bash
+bash$ chmod o+x fileidx xref
+```
+
+现在，是时候配置 LXR 以供使用了。更改目录到 $INSTALLPREFIX/http/（在我的情况下，是 /var/www/htdocs/lxr/http/），并打开 lxr.conf 文件进行编辑。lxr.conf 文件是你需要的最重要的文件。它有几个不同的配置选项。
+
+# 变量
+
+打开文件时看到的第一个是对名为 v 的变量的定义。与编程语言一样，你可以定义自己的变量，并在配置文件稍后使用它们。无论它们在哪里出现，它们都会被替换为它们的值。变量值通过配置文件中的 $variable-name 引用。变量定义遵循以下两种可能的格式之一：
+
+```text
+variable: /variable-identifier, variable-name.
+//{list-of-values/}, /default-value/
+```
+
+或者：
+
+```text
+variable: /variable-identifier, variable-name.
+/{file-containing-list-of-values/}, /default-value/
+```
+
+这些术语的含义如下：
+
+- **variable-identifier**：变量在整个配置文件中使用的名称。
+- **variable-name**：显示给用户的变量的实际名称。
+- **list-of-values**：逗号分隔的待显示值列表。
+- **file-containing-list-of-values**：包含可能值列表的文件。列表中的每个条目占单独一行。用户可以选择其中任意一个。应提供文件的绝对路径。
+- **default-value**：变量的默认值。如果未指定，则自动设置第一个值。
+
+# baseurl
+
+baseurl 是放置 LXR 所需的所有脚本所依据的 URL。它应该可以通过浏览器访问。在我的配置中，它是 http://my-ip/path/<http://localhost/lxr/http/>。确保在末尾加上 /，否则最后一个目录将被忽略。
+
+# HTML 页眉和页脚
+
+当生成源代码的 HTML 时，LXR 可以添加页眉和页脚。在 $INSTALLPREFIX/http/ 目录中提供了示例页眉和页脚。它们分别称为 template-head 和 template-tail。此外，通过修改 template-dir 文件，你还可以更改 LXR 显示文件和目录的方式。可以在 lxr.conf 文件中通过 htmlhead、htmlmail 和 htmlidrop 选项指定这些文件的位置。
+
+# sourceroot
+
+此选项告诉 LXR 在哪里查找实际的源代码。在我的情况下，它是 /var/www/htdocs/lxr/source/glibc-2.3.5。如果你想交叉引用多个项目，你所要做的就是创建一个指定
+
+![](img/526fd434dcfcf1b461b94c24ea170f36_80_0.png)
