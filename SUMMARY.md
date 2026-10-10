@@ -863,6 +863,7 @@
 +   [Linux 命令行与 Shell 脚本圣经（第二版）](docs/linux-command-line-and-shell-scripting-bible-2nd-edition/README.md)
 +   [Linux 命令行与 Shell 脚本圣经（第 3 版）](docs/linux-command-line-and-shell-scripting-bible-3rd-edition/README.md)
 +   [Linux 命令行与 Shell 脚本圣经：第 4 版](docs/linux-command-line-and-shell-scripting-bible-4th-edition/README.md)
++   [Linux 命令行与 Shell 脚本圣经](docs/linux-command-line-and-shell-scripting-bible-5th-edition/README.md)
 +   [Linux 命令行与 Shell 脚本经](docs/linux-command-line-and-shell-scripting-bible-by-richard-blum/README.md)
 +   [Linux 命令行与 Shell 脚本圣经（第二版）](docs/linux-command-line-and-shell-scripting-bible-second-edition/README.md)
 +   [Linux 命令行与 Shell 脚本圣经：全面教程资源](docs/linux-command-line-and-shell-scripting-bible-the-comprehensi/README.md)

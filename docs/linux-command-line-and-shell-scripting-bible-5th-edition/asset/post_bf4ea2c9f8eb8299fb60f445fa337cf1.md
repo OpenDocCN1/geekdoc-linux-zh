@@ -1,0 +1,371 @@
+
+## D
+- display, reading with no, 343-344
+- distributions, Linux, 13-15
+- dcf tools and commands, 190-194, 210-211
+- dollar sign ($), 483
+- $ symbol, 605
+- done command, 316
+- dot (.) character, 416, 484, 512
+- double brackets, 287-288
+- double line spacing, 516-517
+- double parentheses, 286-287
+- do-while statement, 543-544, 657
+- dpkg command, 182, 184
+- -d test condition, 273-274
+- du command, 83-84
+
+## E
+- echo commands, 95-96, 100, 106, 115, 234-235, 422-423, 623
+- echo statement, 305, 317
+- -e comparison, 274-275
+- Edit menu, terminal, 25, 30-31
+- elif statements, 262-264, 628
+- Emacs editor, 210-218
+- empty files, checking for, 277-278
+- ending of line anchor, 483
+- end keyword, 458, 653-654
+- env command, 114-115, 127
+- environment variables, 113-136, 235-237, 566-571, 589-598, 615-622, 640-645
+- equals sign (=), 471-472
+- ERE (POSIX Extended Regular Expression) patterns, 491-495
+- errors, redirecting, 350-351
+- escaping special characters, 481
+- /etc/group file, 147-148
+- /etc/passwd file, 138-139
+- /etc/profile file, 128-130
+- /etc/shadow file, 139-140
+- exec command, 352-355
+- exit command, 99, 106, 253-255
+- exit status, checking, 252-253
+- EXIT trap, 373-374
+- Ex mode, vim editor, 205
+- expensive methods, 101
+- export command, 118-120
+- expr command, 245-247
+- extend command, 214
+- extended (ext) filesystems, 162-163
+- external commands, 104-106, 636-640
+
+## F
+- factorial function, 413-414
+- fdisks program, 166-168
+- fg command, 385
+- field separation characters, 297-298, 455, 528-530
+- file command, 62-63
+- file comparisons, 273-283
+- file date, checking, 282-283
+- file descriptors, 348-350, 355-361
+- file globbing, 51, 298-300
+- File menu, terminal, 24-25, 29-30
+- file permissions, 137-160
+- files. See also specific types
+  - with blank lines, 517-518
+  - checking, 275-276, 278-281
+  - copying, 52-54
+  - creating, 52
+  - deleting, 58-59
+  - editing, 212-214
+  - handling, 52-59
+  - linking, 55-56
+  - listing, 47-51
+  - moving, 57
+  - numbering lines in, 518-519
+  - reading from, 344, 452, 456-457, 474-475, 651, 653
+  - removing, 59
+  - renaming, 57-58
+  - viewing contents of, 62-67
+  - writing to, 473, 651
+- file sharing, 156-158
+- filesystems, 6-7, 40-47, 161-179
+- filesystem commands. See external commands
+- file test operators, 606
+- file types, viewing, 62-63
+- flags, substitution, 459-461, 648
+- flatpak containers, 197-198
+- floating-point arithmetic, 248-252, 577-578
+- flow, changing, 508-512
+- for command, 291-302, 307-308, 310-317
+- foreach command, 607
+- forking, 105-106
+- formats, printing with, 544-547
+- for statement, 544
+- forward slash (/), 482
+- frack command, 173–174
+- fselect widget, 433–434
+- -f test, 275–276
+- functions, 399–420, 552–553, 562, 579–581
+- function files, *sourcing*, 418–419
+- function libraries, *creating*, 553
+- future time, *running scripts at*, 387–395
+
+## G
+- gawk program, 527–554
+  - built-in functions, 547–551
+  - considering patterns, 538–540
+  - features, 556–557
+  - manipulating text with, 453–459
+  - printing with formats, 544–547
+  - quick guide, 652–657
+  - structured commands, 540–544
+  - user-defined functions, 551–553
+  - using, 547–551, 652–654
+  - variables, 527–535, 654–656
+  - working with arrays, 535–538
+- G command, 516–517
+- -G comparison, 281–282
+- gdisk program, 168–170
+- gedit, 224–226
+- get *discipline* function, 631
+- getfacl command, 158, 159
+- getopt command, 333–339
+- global variables, 114–115, 118–120, 133, 408–410
+- GNU Bash shell, 7–9, 37–40, 74–75, 170
+- GNU Network Object Model Environment (GNOME), 11–12, 22–27, 223–226, 442–446
+- graphical environments
+  - *accessing* CLI via, 18, 21–22
+  - *GNOME*, 11–12, 22–27, 223–226, 442–446
+  - *KDE*, 10–11, 28–34, 218–223, 438–442
+  - *Konsole*, 28–34
+  - *writing* scripts for, 421–447
+- grep command, 86–88
+- groups, 147–149, 156–158, 174–179, 281–282
+- * g * substitution flag, 460
+- GUI environment, *Emacs in*, 217–218
+- * gzip * command, 88–89
+
+## H
+- hang-ups, *scripts without*, 380–381
+- hard link, 56
+- hardware management, 6
+- * head * command, 67
+- Help menu, *Konsole*, 34
+- hidden files, 47–48
+- * history * command, 107–109
+- holding space, 504–505
+- SHCME startup files, 130–131
+- HTML tags, *removing*, 523–525
+
+## I
+- i (*insert*) command, 466–468, 649–650
+- IDE drives, 166
+- IFS (*internal field separator*), 297–298, 309–310
+- if statement, 540–542, 604–606
+- if-then-else statements, 260–261, 288–289, 628–630, 657
+- if-then statements, 257–287
+- incline input redirection, 241–242
+- incremental search, 215
+- inheritance, 159
+- initialization, *lsf shell*, 562
+- init process, 5
+- inner loop, 307, 312
+- inode number, 56
+- inode table, 162
+- input, *output and*, 347–351
+- input box widget, 431
+- input redirection, 241–242, 354
+- insert (*i*) command, 466–468, 649–650
+- insert mode, *vis ed*, 205
+- installation, *shell*, 558–559, 584, 610–613
+- installed packages, *listing*, 190–191
+- interactive *shell files*, 131–132, 564–565
+- internal field separator (IFS), 297–298, 309–310
+- intervals, ERR, 493–494
+- ISO image files, 13–14
+
+## J
+- JFS (*Journaled File System*), 163–164
+- job control, 381–385
+- job number, 371
+- job output, *retrieving*, 388–390
+- job queue, 388
+- * jobs * command, 102, 104, 382–384
+- Journaled File System (JFS), 163–164
+- journaling filesystems, 162–164
+
+## K
+- Kate editor, 218, 220-223
+- K Desktop Environment (KDE), 10-11, 28-34, 218-223, 438-442
+- kdialog packages, 438-442
+- kernel, Linux, 4-7
+- kill command, 78-79
+- K menu, 11
+- Konsole terminal emulator, 28-34
+- Korn shell, 9, 611-632. See also ksh93 shell
+- ksh93 shell, 612-632
+- KWrite editor, 218-220
+- login name, 137
+- login shell, 128-131
+- logout files, 565-566, 588-589
+- long listing format, 49-50
+- loop statements, 306-317
+- lsblk -f command, 172
+- ls command, 47-51
+- lsof output, 359-361
+- LV (logical volume), 175, 177-179
+- lvcreate command, 175, 177
+- LVM (Logical Volume Management), 174-179
+
+## L
+- last lines, printing, 519-520
+- layout, 174-175, 422-423
+- l (list) command, 472-473
+- leading lines, blank, 522
+- less command, 65
+- let command, 626
+- libraries, 414-416, 553
+- library file, 415
+- line addressing, 461-464, 648-649
+- line numbers, 471-473, 518-519
+- lines
+  - changing, 468-469, 650
+  - combining, 499-501
+  - deleting, 521-523
+  - listing, 472-473
+  - printing, 470-471, 519-520, 651
+  - links, 55-56
+- Linux console terminal, CLI via, 18-21
+- Linux desktop environment, 9-13
+- Linux distributions, 13-15
+- Linux groups, 147-149
+- Linux kernel, 4-7
+- Linux security system, 137-160, 153-156
+- Linux system, 3-13, 113-160
+- lists, reading, 292-296
+- list (1) command, 472-473
+- $1 variable, 295-296
+- ln command, 55-56
+- local temporary file, 362-363
+- local variables, 116-118, 410-411
+- logical volume (LV), 175, 177-179
+- Logical Volume Management (LVM), 174-179
+- login files, 564, 586-587
+
+## M
+- man bash command, 98-99
+- man command, 39-40
+- man hostname command, 39-40
+- man nano command, 210
+- matching operators, 539, 656
+- mathematical expressions, 539-540, 656
+- mathematical functions, 547-549, 578, 627-628
+- mathematical operators, 245-252, 577-578, 603, 625-628
+- media, mounting, 79-82
+- menu bar, terminal, 24-27, 29-34
+- menu functions, 423-424
+- menu widget, 432-433
+- messages, 234-235, 365-366
+- metacharacter wildcards, 51
+- mkfs command, 59-60, 172
+- mktemp command, 362-364
+- modulo, of value, 254
+- more command, 64-65, 244-245
+- mount command, 80-82, 172
+- mount points, 42
+- mscbox widget, 429, 430
+- multiline commands, sed, 497-503
+  - delete (D), 501-503
+  - next (N), 499-501, 518
+  - print (P), 502-503
+  - substitution (S), 499-501
+- multiple commands, 231-232, 304-305, 456, 653
+- mv command, 57-58
+- M-x command, 215
+
+## N
+- nano editor, 208-210
+- n (next) command, 498-499
+- N (multiline next) command, 499-501, 518
+- negating character classes, 487
+- negating commands, `sed`, 505–508
+- nested statements, 261–264, 306–309
+- network device file, 6
+- `next` (*n*) command, 498–499
+- `nice` command, 385–386
+- nice value, 385–387
+- nodes, 6
+- `nohup` command, 380–381
+- non-incremental search, 215
+- noninteractive shell, 132–133
+- `-nt` comparison, 282–283
+- `null` file, 361
+- numeric comparisons, 267–268
+- numeric line addressing, 461–462
+
+## O
+- objects, checking existence of, 274–275
+- `-o` command line parameter, 614–615
+- `~O` comparison, 281
+- octal mode security settings, 152
+- `od` command, 67–51, 262
+- `od -F` command, 602
+- open file descriptors, listing, 359–361
+- options
+  - `dialog` command, 434–436
+  - `gawk` command, 652
+  - `-s`, 343–344
+  - `sed` command, 647
+  - standardizing, 339–340
+  - working with, 329–339
+  - `zsh` shell, 559–562
+- `optstring` value, 334, 337–339
+- orphan processes, 76
+- outer loop, breaking out of, 312–313
+- output
+  - filtering listing, 50–51
+  - function, 405
+  - input and, 347–351
+  - retrieving job, 388–390
+  - statements for processing, 316–317
+  - suppressing command, 361
+- output redirection, 240–241, 351–353, 515–516
+- ownership, 155–156, 281
+
+## P
+- package management systems, 181–198
+- pages, 40
+- parameters, 70–75, 319–328, 330–332, 406–408, 560
+- parent directories, 60
+- parentheses, 284–287, 513–514
+- parent shell, 96–104
+- partitions, creating, 166
+- partition display (*p*) command, 167–168
+- `passwd` command, 145
+- paste (*p*) command, vim, 206–207
+- `PATH` environment variable, 126–127, 233
+- patterns, `gawk` program, 538–540
+- pattern space, 499, 504
+- `p` (multiline print) command, 502–503
+- `p` (partition display) command, `fdisk`, 167–168
+- `p` (paste) command, vim, 206–207
+- `p` (print) command, `sed`, 470–471, 651
+- pending jobs, listing, 390
+- permanent redirections, 352–353
+- persistent environment variables, 133–134
+- physical volume (PV), 174, 176
+- pipe symbol, `ERE`, 494
+- piping process, 242–245
+- `pkill` command, 79
+- plain text, `BRE`, 479–481
+- plus (+) sign, 492–493
+- positional parameters, 319–320
+- POSIX Basic Regular Expression (BRE) patterns, 479–491
+- POSIX Extended Regular Expression (ERE) patterns, 491–495
+- preselected time, running scripts at, 387–395
+- present working directory, 45
+- `print` command
+  - `gawk` program, 654
+  - `ksh`/`93` shell, 623–624
+- `print` (*p*) command, `sed`, 470–471, 651
+- `printf` command, 114–116, 544–547, 624–625
+- processes, 69–79, 97, 370–372
+- process lists, 99–103
+- programming logic, menu, 424
+- programs, monitoring, 69–79
+- program script, 652, 653
+- program shortcuts, `KDE`, 11
+- `ps` command, 69–75, 101–102, 105
+- `p` substitution flag, 460, 470
+- `PV` (physical volume), 174, 176
+- `pvcreate` command, 174, 176
+- `pwd` command, 45–46, 106

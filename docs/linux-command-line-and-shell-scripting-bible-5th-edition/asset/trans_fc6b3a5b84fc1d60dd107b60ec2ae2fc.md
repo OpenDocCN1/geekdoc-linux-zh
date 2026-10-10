@@ -1,0 +1,170 @@
+
+# 第一部分：Shell 脚本基础
+
+当 `mktemp` 创建临时文件时，它会将完整路径返回给环境变量。然后，你可以将该值用于任何命令中，以引用该临时文件。
+
+```bash
+echo "The temp file is located at: $tmpfile"
+cat $tmpfile
+rm -f $tmpfile
+$ ./test20
+The temp file is located at: /tmp/tmp.Ma3390
+This is a test file.
+This is the second line of the test.
+$
+```
+
+> **警告**
+> 
+> /tmp 目录被称为临时目录，因为 Linux 操作系统会自动删除存储在该目录下的文件。虽然不同的 Linux 系统使用不同的规则来决定临时文件保留的时间，但最少的情况下，每次系统重新启动时，都会清理 /tmp 目录。不要指望你在 /tmp 目录中创建的文件在脚本运行结束后仍然存在！
+
+### 创建临时目录
+
+`-d` 选项告知 `mktemp` 命令创建临时目录而不是文件。然后，你可以将该目录用于任何需要的用途，例如创建额外的临时文件：
+
+```bash
+$ cat test21
+#!/bin/bash
+# using a temporary directory
+
+tmpdir=$(mktemp -d dir.XXXXXX)
+cd $tmpdir
+tmpfile1=$(mktemp temp.XXXXXX)
+tmpfile2=$(mktemp temp.XXXXXX)
+exec 7> $tmpfile1
+exec 8> $tmpfile2
+
+echo "Sending data to directory $tmpdir"
+echo "This is a test line of data for $tmpfile1" >&7
+echo "This is a test line of data for $tmpfile2" >&8
+$ ./test21
+Sending data to directory dir.ouT8S8
+$ ls -al
+total 72
+drwxr-xr-x   3 rich   rich      4096 Jun 21 22:20 ../
+drwxr-xr-x   9 rich   rich      4096 Jun 21 09:44 ../
+drwx------   2 rich   rich      4096 Jun 21 22:20 dir.ouT8S8/
+-rwxr--r--   1 rich   rich       338 Jun 21 22:20 test21
+$ cd dir.ouT8S8
+[dir.ouT8S8]$ ls -al
+total 16
+drwx------    2 rich     rich            4096 Jun 21 22:20 ./
+drwxr-xr-x    3 rich     rich            4096 Jun 21 22:20 ../
+-rw-------    1 rich     rich               44 Jun 21 22:20 temp.N5F306
+-rw-------    1 rich     rich               44 Jun 21 22:20 temp.Sqs1b7
+[dir.out888]$ cat temp.N5F306
+This is a test line of data for temp.N5F306
+[dir.out888]$ cat temp.Sqs1b7
+This is a test line of data for temp.Sqs1b7
+[dir.out888]$
+```
+
+该脚本在当前目录中创建一个目录，并使用 `cd` 命令在创建两个临时文件之前切换到该目录。然后，这两个临时文件被分配给文件描述符，并用于存储脚本的输出。
+
+# 记录日志消息
+
+有时，将输出同时发送到监视器（屏幕）和文件以进行日志记录是有益的。你无需两次重定向输出，而是可以使用特殊的 `tee` 命令。
+
+`tee` 命令就像管道上的 T 型连接器。它同时将 `STDIN` 中的数据发送到两个目标。一个目标是 `STDOUT`。另一个目标是在 `tee` 命令行中指定的文件名：
+
+```bash
+tee filename
+```
+
+由于 `tee` 从 `STDIN` 重定向数据，因此你可以将其与管道命令一起使用，以重定向任何命令的输出：
+
+```bash
+$ date | tee testfile
+Sat Jun 21 18:56:21 EDT 2025
+$ cat testfile
+Sat Jun 21 18:56:21 EDT 2025
+$
+```
+
+输出会显示在 `STDOUT` 上，并写入指定文件。请注意；默认情况下，`tee` 命令每次使用时都会覆盖输出文件：
+
+```bash
+$ who | tee testfile
+rich     pts/0             2025-06-20 18:41 (192.168.1.2)
+$ cat testfile
+rich     pts/0             2025-06-20 18:41 (192.168.1.2)
+$
+```
+
+如果你想将数据追加到文件中，必须使用 `-a` 选项：
+
+```bash
+$ date | tee -a testfile
+Sat Jun 21 18:58:05 EDT 2025
+$ cat testfile
+rich     pts/0             2025-06-21 18:41 (192.168.1.2)
+Sat Jun 21 18:58:05 EDT 2025
+$
+```
+
+使用此技术，你可以将数据保存在文件中，同时在监视器上向用户显示数据：
+
+```bash
+$ cat test22
+#!/bin/bash
+# using the tee command for logging
+
+tempfile=test22file
+
+echo "This is the start of the test" | tee $tempfile
+echo "This is the second line of the test" | tee -a $tempfile
+echo "This is the end of the test" | tee -a $tempfile
+$ ./test22
+This is the start of the test
+This is the second line of the test
+This is the end of the test
+$ cat test22file
+This is the start of the test
+This is the second line of the test
+This is the end of the test
+$
+```
+
+现在，你可以在向用户显示输出的同时保存输出的永久副本。
+
+## 摘要
+
+了解 Bash shell 如何处理输入和输出在创建脚本时可能很有用。你可以操作脚本接收数据的方式以及显示数据的方式，从而将脚本定制为适用于任何环境。你可以将脚本的输入从标准输入（STDIN）重定向到系统上的任何文件。你还可以将脚本的输出从标准输出（STDOUT）重定向到系统上的任何文件。
+
+除了 STDOUT 之外，你还可以通过重定向 STDERR 输出来重定向脚本生成的任何错误消息。这是通过重定向与 STDERR 输出关联的文件描述符来实现的，即文件描述符 2。你可以将 STDERR 输出重定向到与 STDOUT 输出相同的文件，或者重定向到完全独立的文件。这使你能够将正常的脚本消息与脚本生成的任何错误消息分开。
+
+Bash shell 允许你创建自己的文件描述符供脚本使用。你可以创建文件描述符 3 到 8，并将它们分配给你希望的任何输出文件。创建文件描述符后，你可以使用标准重定向符号将任何命令的输出重定向到该文件描述符。
+
+Bash shell 还允许你将输入重定向到文件描述符，提供了一种简单的方法，可以将文件包含的数据读取到你的脚本中。你可以使用 `lsof` 命令显示 shell 中活动的文件描述符。
+
+Linux 系统提供了一个名为 /dev/null 的特殊文件，允许你重定向你不希望出现的输出。Linux 系统会丢弃重定向到 /dev/null 文件的任何内容。你还可以通过将 `/dev/null` 文件的内容重定向到该文件，来生成一个空文件。
+
+`mktemp` 命令是 Bash shell 的一个实用功能，允许你轻松创建临时文件和目录。只需为 `mktemp` 命令指定一个模板，每次调用时它都会根据文件模板格式创建一个唯一的文件。你还可以在 Linux 系统的 `/tmp` 目录中创建临时文件和目录，该目录是一个在系统启动之间不会保留的特殊位置。
+
+`tee` 命令是一种方便的方法，可以将输出同时发送到标准输出和日志文件。这使你可以将脚本中的消息显示在监视器上，同时将其存储在日志文件中。
+
+在第 16 章中，你将看到如何控制和运行你的脚本。Linux 提供了几种除直接从命令行界面提示符运行脚本外的运行方法。你将看到如何安排脚本在特定时间运行，并学习如何在脚本运行时暂停它们。
+
+# 第 16 章
+
+# 脚本控制
+
+## 本章内容
+
+- 处理信号
+- 在后台模式下运行脚本
+- 无挂断运行脚本
+- 控制作业
+- 降低优先级
+- 像时钟一样精确运行
+
+当你开始构建高级脚本时，你可能会想知道如何在你的 Linux 系统上运行和控制它们。到目前为止，本书中我们运行脚本的唯一方式是直接在命令行界面中以实时模式运行。这不是在 Linux 中执行脚本的唯一方法。有许多选项可用于运行你的 shell 脚本。还有控制脚本的选项。各种控制方法包括向脚本发送信号、修改脚本的优先级，以及在脚本运行时切换运行模式。本章检查控制 shell 脚本的各种方式。
+
+## 处理信号
+
+Linux 使用信号与系统上运行的进程通信。第 4 章“更多 Bash Shell 命令”介绍了不同的 Linux 信号以及 Linux 系统如何使用这些信号来停止、启动和终止进程。你可以通过编程脚本在接收到特定信号时执行某些命令，从而控制 shell 脚本的操作。
+
+## 向 Bash shell 发送信号
+
+有 30 多个 Linux 信号可以由系统和应用程序生成。表 16.1 列出了你在编写 shell 脚本时最常遇到的 Linux 系统信号。
+

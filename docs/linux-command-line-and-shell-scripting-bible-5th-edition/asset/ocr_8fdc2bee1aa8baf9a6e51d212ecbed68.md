@@ -1,0 +1,7 @@
+The Debian-based Linux distributions use the **`dpkg`** utility to interface with the package management system from the command line and use the **`apt-cache`** and **`apt-get`** utilities to interface with a common repository to easily download and install new software. A frontend to these utilities is **`apt`**. It provides simple command-line options for working with software packages in the **`dpkg`** format.
+
+The Red Hat–based Linux distributions are based on the **`rpm`** utility but use different frontend tools at the command line. Red Hat, CentOS, Rocky, and Fedora use **`dnf`** for installing and managing software packages. The openSUSE distribution uses **`zypper`** for managing software.
+
+Application containers are a relatively new player in software package management. An application container bundles all the files necessary for an application to run in one installable package. This means the application doesn’t rely on any external dependencies such as library files, and the container bundle can be installed in any Linux distribution and run. Currently the two most popular container packages are **snap**, common in the Ubuntu Linux distribution, and **flatpak**, used in Red Hat Linux environments.
+
+The next chapter takes a look at the various editors available in Linux distributions. As you get ready to start working on shell scripts, it will come in handy to know what editors are available to use.

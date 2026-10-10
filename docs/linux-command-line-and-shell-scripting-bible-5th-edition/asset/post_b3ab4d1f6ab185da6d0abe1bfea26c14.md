@@ -1,0 +1,296 @@
+
+## 脚本编程：ksh93 Shell 脚本编写
+
+在控制码中使用额外的变量。这在尝试打印值表时非常有用。你只需要为第一行定义控制码，然后在同一行列出所有变量：
+
+```bash
+$ test1=10
+$ test2=15
+$ test3=20
+$ test4=25
+$ printf "%d - %d\n" $test1 $test2 $test3 $test4
+10 - 15
+20 - 25
+$ 
+```
+
+`printf` 命令还允许你使用 `date` 命令的格式轻松地将日期和时间值重新格式化为任何格式：
+
+```bash
+$ value1='1/31/25'
+$ print $value1
+1/31/25
+$ printf "%(%)Y\n" $value1
+2025
+$ printf "%(%)A, %(%)d, %(%)Y\n" $value1
+Friday, January 31, 2025
+$ printf "%(%)F\n" $value1
+2025-01-31
+$ 
+```
+
+使用 `%T` 格式控制码能做的事情令人惊叹！
+
+### 在 ksh93 Shell 中进行脚本编程
+
+在很大程度上，在 ksh93 shell 中编写脚本与在 Bash shell 中没什么不同。大多数你的 Bash shell 脚本在 ksh93 shell 环境中应该都能正常工作，而那些不能正常工作的通常只需要一点修改。
+
+如果你专门为 ksh93 shell 编写脚本，有一些额外的东西可以使用，使生活更容易一些。本节介绍了 ksh93 shell 和 Bash shell 之间的主要区别。
+
+#### 数学运算
+
+ksh93 shell 的一个很棒的功能是可以轻松使用数学运算。本节描述了 ksh93 shell 中可用于操纵数字和执行数学运算的功能。
+
+##### 执行计算
+
+数学计算是通过两种方法之一执行的：
+
+- `let` 命令
+- 双括号
+
+`let` 命令允许你将数学运算的结果直接赋值给变量：
+
+```bash
+$ let value1=4*5
+$ echo $value1
+20
+$ 
+```
+
+使用此格式，等号和表达式元素之间不能有任何空格。
+
+或者，你可以将方程放在双引号中，并使用任意数量的空格：
+
+```bash
+$ let value1=" 4 * 3 "
+$ echo $value1
+12
+$ 
+```
+
+ksh93 shell 数学能力中最有用的功能可能是，与 Bash shell 不同，它可以处理浮点数：
+
+```bash
+$ let value1=" 10.5 * 0.5 "
+$ echo $value1
+5.25
+$ 
+```
+
+仅此一项功能就使 ksh93 shell 成为许多 shell 程序员的宠儿。
+
+除了 `let` 命令，你还可以使用双括号方法定义数学运算：
+
+```bash
+$ value1=$(( 4 * 3 ))
+$ echo value1
+12
+$ 
+```
+
+你可以在双括号内执行任何需要的数学运算，既可以使用数字也可以使用变量：
+
+```bash
+$ value1=10.25
+$ value2=$(( $value1 / 10 ))
+$ echo $value2
+1.025
+$ 
+```
+
+如果你尝试执行无效的操作，ksh93 shell 会通过错误消息告知你：
+
+```bash
+$ value1=0
+$ value2=$(( 10.25 / $value1 ))
+ksh93: 10.25 / 0 : divide by zero
+$ 
+```
+
+除了错误消息外，ksh93 shell 还返回非零退出状态以指示操作失败。
+
+### 数学函数
+
+ksh93 shell 包含几个内置的数学函数，你可以将它们用于 shell 脚本中。
+
+ksh93 shell 内置的数学库由以下函数组成：
+
+- `abs (x)`: x 的绝对值。
+- `acos (x)`: x 的反正弦值（以弧度为单位）。
+- `asin (x)`: x 的反正弦值（以弧度为单位）。
+- `atan (x)`: x 的反正切值（以弧度为单位）。
+- `atan2 (y, x)`: y / x 的反正切值。
+- `cos (x)`: x 的余弦值（以弧度为单位）。
+- `cosh (x)`: x 的双曲余弦值（以弧度为单位）。
+- `exp (x)`: x 的指数值。
+- `floor (x)`: 通过向下舍入 x 得到的下一个最低整数值。
+- `fmod (x, y)`: x / y 的浮点余数。
+- `hypot (x, y)`: 直角三角形斜边的长度，其边长为 x 和 y。
+- `int (x)`: x 和 0 之间最近的整数。
+- `log (x)`: x 的自然对数。
+- `pow (b, e)`: b 的 e 次方的结果。
+- `sin (x)`: x 的正弦值（以弧度为单位）。
+- `sinh (x)`: x 的双曲正弦值（以弧度为单位）。
+- `sqrt (x)`: x 的平方根。
+- `tan (x)`: x 的正切值（以弧度为单位）。
+- `tanh (x)`: x 的双曲正切值（以弧度为单位）。
+
+有很多函数供你使用！使用它们就像在你的 shell 脚本代码中包括函数名和参数一样简单：
+
+```bash
+$ cat test1
+#!/bin/ksh93
+# testing the ksh93 math functions
+
+value1=9
+value2=$(( sqrt($value1) ))
+value3=$(( int(10.52) ))
+value4=$(( sin(45) ))
+print "The square root of $value1 is $value2"
+print "The integer part of 10.52 is $value3"
+print "The sine of 45 is $value4"
+$ ./test1
+The square root of 9 is 3
+The integer part of 10.52 is 10
+The sine of 45 is 0.850903524534
+$
+```
+
+如示例所示，ksh93 数学函数也可以与浮点数一起工作。
+
+### 结构化命令
+
+ksh93 shell 实现了你在 Bash shell 中熟悉的所有结构化命令：
+
+- if-then-else 语句
+- for 循环（包括 C 风格）
+- while 循环
+- until 循环
+- select 语句
+- case 语句
+
+这些结构化命令中的每一个都使用与 Bourne shell（因此也是 Bash shell）相同的格式，所以我不再详细讨论这些内容。但是，ksh93 shell 提供了一种更简单的方法，用于在 if-then 语句和 while/until 循环中指定数学运算。以下部分将更详细地介绍这些功能。
+
+#### if-then-else 语句
+
+if 语句使用与 Bash shell 相同的格式（参见第 12 章，“使用结构化命令”）。if 语句的基本格式如下：
+
+```bash
+if command then
+    statements1
+else
+    statements2
+fi
+```
+
+与 Bash shell 一样，ksh93 shell 的 if 语句执行提供的命令，如果它返回零退出状态，则继续执行第一组语句。否则，执行第二组语句。
+
+ksh93 shell 还支持 `elif` 语句，允许你将 if 语句串联起来：
+
+```bash
+if command1 then
+    statements1
+elif command2 then
+    statements2
+fi
+```
+
+ksh93 的 if 语句支持 `test` 命令（参见第 12 章），但它不识别使用单括号的替代 `test` 命令格式。相反，ksh93 shell 支持使用双括号进行数学比较，以及使用双括号进行非数学比较。这是一个数学比较的示例：
+
+```bash
+$ cat test2
+#!/bin/ksh93
+# testing the test command
+value1=10
+value2=20
+if (( $value1 < $value2 )) then
+    print "The value $value1 is less than $value2"
+else
+    print "The value $value1 is greater than $value2"
+fi
+$ ./test2
+The value 19 is less than 20
+$
+```
+
+你还会注意到，类似于 tcsh shell，ksh93 shell 支持在比较数值时使用标准数学运算符。
+
+> **警告**
+> 
+> 需要注意的是，ksh93 shell 不支持 Bash 风格的数值比较器（如 -gt、-lt 和 -eq），这使得转换 Bash 风格的数学脚本有些繁琐。
+
+ksh93 shell 使用与 Bash shell 相同的文件和目录测试，例如用于目录的 -d、用于文件的 -f、用于可读的 -r 和用于可执行的 -x。这是一个使用目录比较符号的示例：
+
+```bash
+$ cat test3
+#!/bin/ksh93
+# testing the non-math comparison
+if [[ -d $HOME ]] && [[ -f $HOME/testing ]] then
+    print "The file exists."
+else
+    print "Sorry, the file doesn't exist."
+fi
+$ ./test3
+Sorry, the file doesn't exist.
+$ touch $HOME/testing
+$ ./test3
+The file exists.
+$
+```
+
+从这个例子中还可以看出，ksh93 shell 支持使用逻辑与（`&&`）符号。它还支持使用逻辑或（`||`）。
+
+#### while 和 until 循环
+
+*while* 和 *until* 循环需要一个条件来确定循环何时必须停止。ksh93 shell 允许你使用与 *if* 语句相同的数学比较器来设置条件：
+
+```bash
+$ cat test4
+#!/bin/ksh93
+# calculating factorials the ksh93 way
+
+value=1
+while (( $value <= 10 ))
+do
+    factorial=1
+    counter=1
+    while (( $counter <= $value ))
+    do
+        factorial=$(( $factorial * $counter ))
+        counter=$(( $counter + 1 ))
+    done
+    print "The factorial of $value is $factorial"
+    value=$(( $value + 1 ))
+done
+$ ./test4
+The factorial of 1 is 1
+The factorial of 2 is 2
+The factorial of 3 is 6
+The factorial of 4 is 24
+The factorial of 5 is 120
+The factorial of 6 is 720
+The factorial of 7 is 5040
+The factorial of 8 is 40320
+The factorial of 9 is 362880
+The factorial of 10 is 3628800
+$
+```
+
+*while* 语句在 shell 脚本中按预期执行。
+
+### 命令重定向
+
+在 ksh93 shell 中，你不能使用反引号（`` ` ``）将命令的输出重定向到变量。相反，你必须使用这种格式：
+
+```bash
+variable=$( command )
+```
+
+这种格式将命令的输出赋值给变量：
+
+```bash
+$ value=$( date )
+$ echo $value1
+Mon Aug 25 19:23:14 EST 2025
+$
+```

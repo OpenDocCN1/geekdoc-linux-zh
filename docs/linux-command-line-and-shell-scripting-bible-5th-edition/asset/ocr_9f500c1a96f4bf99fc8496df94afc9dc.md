@@ -1,0 +1,55 @@
+As long as the test condition is true, the `while` command continues to loop through the commands defined. Within the commands, the variable used in the test condition must be modified, or you'll have an infinite loop. This example uses shell arithmetic to decrease the variable value by 1:
+
+```
+```bash
+var1=$[ $var1 - 1 ]
+```
+```
+
+The `while` loop stops when the test condition is no longer true.
+
+# ### Using multiple test commands
+
+The `while` command allows you to define multiple test commands on the `while` statement line. Only the exit status of the last test command is used to determine when the loop stops. This can cause some interesting results if you're not careful. Here's an example:
+
+```
+```bash
+$ cat test11
+#!/bin/bash
+# testing a multicommand while loop
+
+var1=10
+
+while echo $var1
+    [ $var1 -ge 0 ]
+do
+    echo "This is inside the loop"
+    var1=$[ $var1 - 1 ]
+done
+$ ./test11
+10
+This is inside the loop
+9
+This is inside the loop
+8
+This is inside the loop
+7
+This is inside the loop
+6
+This is inside the loop
+5
+This is inside the loop
+4
+This is inside the loop
+3
+This is inside the loop
+2
+This is inside the loop
+1
+This is inside the loop
+0
+This is inside the loop
+-1
+$
+```
+```

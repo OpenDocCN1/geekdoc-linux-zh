@@ -1,0 +1,226 @@
+
+
+## 第十二章 使用结构化命令
+
+### 本章内容
+
+- 学习 *if-then* 语句
+- 探索 *if-then-else* 语句
+- 嵌套 *ifs*
+- 尝试 *test* 命令
+- 考虑复合测试
+- 使用高级 *if-then* 功能
+- 考虑 *case* 命令
+
+在第十一章“基础脚本构建”中，shell 按照在 shell 脚本中出现顺序处理每个单独的命令。虽然这对于顺序操作来说效果很好，但许多程序需要在脚本中的命令之间进行某种逻辑流控制。
+
+有一整个命令类允许 shell 根据测试条件跳过脚本部分并改变操作流。这些命令通常被称为结构化命令。
+
+Bash shell 中有许多可用的结构化命令，因此我将其分为不同的章节。本章查看 *if-then* 和 *case* 语句。
+
+### 使用 *if-then* 语句
+
+最基本的结构化命令类型是 *if-then* 语句。*if-then* 语句具有以下格式：
+
+```bash
+if command
+then
+commands
+fi
+```
+
+如果您在其他编程语言中使用 *if-then* 语句，这种格式可能会让人有些困惑。在其他编程语言中，*if* 语句后面的对象是一个方程，用于评估 **TRUE** 或 **FALSE** 值。Bash shell 的 *if* 语句并不是这样工作的。
+
+Bash shell 的 *if* 语句运行 *if* 行中定义的命令。如果命令的退出状态（参见第十一章）为 0（命令成功完成），则 *then* 部分列出的命令将被执行。如果命令的退出状态为其他任何值，则 *then* 命令不会被执行，Bash shell 将继续执行脚本中的下一条命令。*fi* 语句标记 *if-then* 语句的结束。
+
+下面是一个简单的示例来说明这个概念：
+
+```bash
+$ cat test1.sh
+#!/bin/bash
+# testing the if statement
+if pwd
+then
+    echo "It worked"
+fi
+$ 
+```
+
+这个脚本在 *if* 行中使用了 *pwd* 命令。如果该命令成功完成，*echo* 语句应显示文本字符串。如果您从命令行运行此脚本，您会得到以下结果：
+
+```bash
+$ ./test1.sh
+/home/christine/scripts
+It worked
+$ 
+```
+
+Shell 执行了 *if* 行中列出的 *pwd* 命令。由于退出状态为 0，它还执行了 *then* 部分中列出的 *echo* 语句。
+
+这里还有另一个示例：
+
+```bash
+$ cat test2.sh
+#!/bin/bash
+# testing an incorrect command
+if IamNotACommand
+then
+    echo "It worked"
+fi
+echo "We are outside the if statement"
+$ ./test2.sh
+./test2.sh: line 3: IamNotACommand: command not found
+We are outside the if statement
+$ 
+```
+
+在这个示例中，我故意在 *if* 语句行中使用了不存在的命令 *IamNotACommand*。由于这是一个不正确的命令，它会产生非 0 的退出状态。因此，Bash shell 跳过了 *then* 部分中的 *echo* 语句。还要注意，在 *if* 语句中运行命令生成的错误消息仍出现在脚本的输出中。有时候您可能不希望出现错误语句。第十五章“呈现数据”讨论了如何避免此类语句。
+
+您可能在一些脚本中看到 *if-then* 语句的替代形式：
+
+```bash
+if command; then
+    commands
+fi
+```
+
+通过在要评估的命令末尾添加分号 (;)，您可以在同一行中包含 *then* 语句，这看起来更接近某些其他编程语言中处理 *if-then* 语句的方式。
+
+*then* 部分中的命令并不限于只有一条。您可以像在 shell 脚本的其他部分中那样列出命令。Bash shell 将这些命令视为一个块，当 *if* 语句行中的命令返回 0 退出状态时执行所有命令，或者当命令返回非 0 退出状态时跳过所有命令：
+
+```bash
+$ cat test3.sh
+#!/bin/bash
+# testing multiple commands in the then block
+
+testuser=christine
+#
+if grep $testuser /etc/passwd
+then
+    echo "This is my first command in the then block."
+    echo "This is my second command in the then block."
+    echo "I can even put in other commands besides echo:"
+    ls /home/$testuser/*.sh
+fi
+echo "We are outside the if statement"
+$
+```
+
+*if* 语句行使用 *grep* 命令搜索 `/etc/passwd` 文件，以查看特定用户名当前是否已用于系统。如果存在具有该登录名称的用户，脚本显示一些文本，然后列出用户 $HOME 目录中的 Bash 脚本：
+
+```bash
+$ ./test3.sh
+christine:x:1001:1001::/home/christine:/bin/bash
+This is my first command in the then block.
+This is my second command in the then block.
+I can even put in other commands besides echo:
+/home/christine/.factorial.sh
+We are outside the if statement
+$
+```
+
+然而，如果您将 *testuser* 变量设置为系统中不存在的用户，*then* 代码块内的任何内容都不会执行：
+
+```bash
+$ cat test3.sh
+#!/bin/bash
+# testing multiple commands in the then block
+```
+
+![](img/0798d50a0e5dbf1265fbda3832b3e015_294_0.png)
+
+```bash
+#  
+   testuser=NoSuchUser
+   #
+   if grep $testuser /etc/passwd
+   then
+         echo "This is my first command in the then block."
+         echo "This is my second command in the then block."
+         echo "I can even put in other commands besides echo:"  
+         ls /home/$testuser/*.sh
+   fi
+   echo "We are outside the if statement"
+   $
+   $ ./test3.sh
+   We are outside the if statement
+   $
+```
+
+这并不那么令人兴奋。如果它能显示一条消息说明系统上找不到该用户名，那就好了。好吧，你可以这样做，使用 *if-then* 语句的另一个功能，见下文讨论。
+
+### 探索 *if-then-else* 语句
+
+在 *if-then* 语句中，对于命令是否成功只有一个选项。如果命令返回非 0 的退出状态代码，Bash shell 只是继续执行脚本中的下一条命令。在这种情况下，能够执行另一组命令会很好。这正是 *if-then-else* 语句的用途。
+
+*if-then-else* 语句在语句中提供了另一组命令：
+
+```bash
+if command
+   then
+         commands
+   else
+         commands
+   fi
+```
+
+当 *if* 语句行中的命令返回 0 的退出状态代码时，*then* 部分列出的命令将执行，就像在普通的 *if-then* 语句中一样。当 *if* 语句行中的命令返回非 0 的退出状态代码时，Bash shell 执行 *else* 部分中的命令。
+
+现在你可以复制并修改测试脚本以包含 *else* 部分：
+
+```bash
+$ cp test3.sh test4.sh
+   $
+   $ nano test4.sh
+   $
+   $ cat test4.sh
+   #!/bin/bash
+   # testing the else section
+   #
+testuser=NoSuchUser
+#  
+if grep $testuser /etc/passwd
+then
+    echo "The script files in the home directory of $testuser are:"
+    ls /home/$testuser/.*.sh
+    echo
+else
+    echo "The user $testuser does not exist on this system."
+    echo
+fi
+echo "We are outside the if statement"
+$ ./test4.sh
+The user NoSuchUser does not exist on this system.
+We are outside the if statement
+$  
+```
+
+这就更用户友好了一些。就像 **then** 部分一样，**else** 部分可以包含多个命令。**fi** 语句标记了 **else** 部分的结束。
+
+### 嵌套 *ifs*
+
+有时，您必须在脚本代码中检查几种情况。对于这些情况，您可以嵌套 *if*-then 语句。
+
+为了检查登录名称不在 */etc/passwd* 文件中但该用户的目录仍然存在，请使用嵌套的 *if*-then 语句。在这种情况下，嵌套的 *if*-then 语句位于主要 *if*-then-*else* 语句的 *else* 代码块内：
+
+```bash
+$ cat test5.sh
+#!/bin/bash
+# testing nested ifs
+#
+testuser=NoSuchUser
+#
+if grep $testuser /etc/passwd
+then
+    echo "The user $testuser account exists on this system."
+    echo
+else
+    echo "The user $testuser does not exist on this system."
+    if ls -d /home/$testuser/
+    then
+        echo "However, $testuser has a directory."
+    fi
+fi
+echo "We are outside the nested if statements."
+```
+
