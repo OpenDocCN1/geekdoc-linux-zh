@@ -1,0 +1,2 @@
++   [Kali Linux：使用 Kali 的入门指南：伦理黑客与基础安全测试概念，预防网络恐怖主义及理解网络安全与黑客基础](README.md)
++   [Kali Linux：使用 Kali 的入门指南：伦理黑客与基础安全测试概念，预防网络恐怖主义及理解网络安全与黑客基础](kali-linux-the-beginners-guide-on-ethical-hacking-with-kali-.md)
