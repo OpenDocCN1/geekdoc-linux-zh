@@ -1,0 +1,19 @@
+min  The minimal number of days that must have passed since the last password change before the password may be changed again.
+
+max  The maximal number of days that a password remains valid without having to be changed. After this time has elapsed the user must change his password.
+
+warn  The number of days before the expiry of the (max) period that the user will be warned about having to change his password. Generally, the warning appears when logging in.
+
+grace  The number of days, counting from the expiry of the (max) period, after which the account will be locked if the user does not change his password. (During the time from the expiry of the (max) period and the expiry of this grace period the user may log in but must immediately change his password.)
+
+lock  The date on which the account will be definitively locked, again in days since 1 January 1970.
+
+Some brief remarks concerning password encryption are in order. You might think that if passwords are encrypted they can also be decrypted again. This would open all of the system's accounts to a clever cracker who manages to obtain a copy of /etc/shadow. However, in reality this is not the case, since password "encryption" is a one-way street. It is impossible to recover the decrypted representation of a Linux password from the "encrypted" form because the method used for encryption prevents this. The only way to "crack" the encryption is by encrypting likely passwords and checking whether they match what is in /etc/shadow.
+
+Let's assume you select the characters of your password from the 95 visible ASCII characters (uppercase and lowercase letters are distinguished). This means that there are 95 different one-character passwords, $95^{2}=9025$ two-character passwords, and so on. With eight characters you are already up to 6.6 quadrillion ($6.6 \cdot 10^{15}$) possibilities. Stipulating that you can trial-encrypt 250,000 passwords per second (not entirely unrealistic on current hardware), this means you would require approximately 841 years to work through all possible passwords.
+
+But do not feel too safe yet. The traditional method (usually called "crypt" or "DES"—the latter because it is based on, but not identical to, the eponymous encryption method^{3}) should no longer be used if you can avoid it. It has the unpleasant property of only looking at the first eight characters of the entered password, and clever crackers can nowadays buy enough disk space to build a pre-encrypted cache of the 50 million (or so) most common passwords. To "crack" a password they only need to search their cache for the encrypted password, which can be done extremely quickly, and read off the corresponding clear-text password.
+
+To make things even more laborious, when a newly entered password is encrypted the system traditionally adds a random element (the so-called "salt") which selects one of 4096 different possibilities for the encrypted password. The main purpose of the salt is to avoid random hits resulting from user X, for some reason or other, getting a peak at the content of /etc/shadow and noting that his encrypted password looks just like that of user Y (hence letting him log into user Y's account using his own clear-text password). For a pleasant side effect, the disk space required for the
+
+> If you must know exactly: The clear-text password is used as the key (k) to crypt a constant string (typically a sequence of zero bytes). A DES key is 56 bits, which just happens to be 8 characters of 7 bits each (as the leftmost bit in each character is ignored). This process is repeated for a total of 25 rounds, with the previous round's output serving as the new input. Strictly speaking the encryption scheme used isn't quite DES but changed in a few places, to make it less feasibly to construct a special password-cracking computer from commercially available DES encryption chips.

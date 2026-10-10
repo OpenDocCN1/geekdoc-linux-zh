@@ -916,6 +916,7 @@
 +   [网络安全 Linux 入门指南 (Pearson IT 安全课程 (ITCC))](docs/linux-essentials-for-cybersecurity-pearson-it-cybersecurity-/README.md)
 +   [黑客与渗透测试人员 Linux 入门指南](docs/linux-essentials-for-hackers-pentesters/README.md)
 +   [黑客与渗透测试人员 Linux 入门指南：Kali Linux 无线攻击、渗透测试、VPN、代理服务器及网络命令基础](docs/linux-essentials-for-hackers-pentesters-kali-linux-basics-fo/README.md)
++   [Linux 入门指南：LPI 基础课程](docs/linux-essentials-the-lpi-introductory-programme/README.md)
 +   [Linux 以太网指南](docs/linux-ethernet-howto/README.md)
 +   [Kali Linux 缓冲区溢出分步指南：Linux 漏洞开发初学者指南](docs/linux-exploit-development-for-beginners-step-by-step-guide-t/README.md)
 +   [Linux 常见问题解答：中级用户指南](docs/linux-faqs-intermediate-users/README.md)

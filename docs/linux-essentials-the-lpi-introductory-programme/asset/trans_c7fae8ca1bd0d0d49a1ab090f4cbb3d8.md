@@ -1,0 +1,445 @@
+
+## 索引
+
+- /dev/urandom，137
+- /dev/zero，137
+- dig，206-209
+  - -short (选项)，207
+  - -trace (选项)，209
+  - -x (选项)，207
+- dirs，75
+- Disney, Walt，36
+- distribution，40
+- DistroWatch，40
+- dmesg，141
+- dpkg，166
+  - --list (选项)，166
+- echo，61, 79, 109, 120, 212, 217
+  - -n (选项)，120
+- Eclipse，39
+- EDITOR (环境变量)，184
+- egrep，97-98, 215-216
+- emacs，97
+- env，122
+- 环境变量
+  - EDITOR，184
+  - LANG，109-110
+  - LC_ALL，109-110
+  - LC_COLLATE，109-110
+  - LOGNAME，215
+  - MANPATH，65
+  - PATH，74, 122-124, 127, 131, 218, 220, 237
+  - TERM，87
+  - TZ，120
+  - VISUAL，184
+- 环境变量，121
+- /etc，138, 159-160
+- /etc/cron.daily，92
+- /etc/fstab，138, 143, 159
+- /etc/group，173, 175, 178-180, 183-185
+- /etc/gshadow，178-179, 184-186, 237
+- /etc/hosts，138
+- /etc/init.d/*，138
+- /etc/inittab，138
+- /etc/issue，138
+- /etc/magic，134
+- /etc/motd，138
+- /etc/mtab，138, 140
+- /etc/network/interfaces，203
+- /etc/passwd，99, 106, 116, 138, 159, 173-176, 178-181, 183-184, 221
+- /etc/rc.d/init.d，138
+- /etc/resolv.conf，204, 207
+- /etc/services，208
+- /etc/shadow，92, 138, 174, 176-178, 180, 182-184, 186, 192, 215, 221
+- /etc/shells，175
+- /etc/skel，180
+- /etc/sysconfig/locate，92
+- /etc/sysconfig/network，203
+- /etc/update.deb，92
+- Ewing, Larry，26
+- Ewing, Marc，40
+- 考试目标，227
+- exit，59, 61, 126
+- export，121-122
+  - -n (选项)，122
+- Fedora，41
+- fgrep，97-98, 124
+- FHS，135
+- file，134
+- find，87-91, 215
+  - -exec (选项)，90
+  - -maxdepth (选项)，214
+  - -name (选项)，215
+  - -ok (选项)，90
+  - -print (选项)，88, 90
+  - -print0 (选项)，90
+- finger，175
+- 固件，19
+- Fox, Brian，58
+- Freax，26
+- free，140, 162, 164
+  - -h (选项)，162
+  - -si (选项)，162
+- 共享软件，34
+- frog.txt，98
+- Gallily, Jean-loup，149
+- Gates, Bill，30
+- gcc，72
+- GNOME，49
+- GNU Emacs，39
+- Google，21, 39
+- gpasswd，185
+  - -a (选项)，185
+  - -a (选项)，185
+  - -d (选项)，185
+- grep，65, 97-99, 102, 107-108, 114, 136, 142, 164, 215, 219
+  - --color (选项)，99
+  - -f (选项)，98
+  - -H (选项)，219
+- groff，65, 67
+- 组，171
+  - 管理，179
+  - 管理员，185
+  - 密码，178-179, 185
+- groupadd，185
+  - -g (选项)，185
+- groupdel，185
+- grouppass，183, 185
+  - -g (选项)，185
+  - -n (选项)，185
+- 组，172
+- gunzip，150, 152
+- gzip，146-147, 149-152, 155, 219
+  - -1 (选项)，150
+  - -6 (选项)，150
+  - -9 (选项)，150
+  - -best (选项)，150
+  - -c (选项)，150
+  - -d (选项)，150-151
+  - -fast (选项)，150
+  - -i (选项)，150
+  - -r (选项)，150
+  - -s (选项)，150-151
+  - -v (选项)，150
+- hash，123
+  - -r (选项)，123
+- head，108-109
+  - -c (选项)，109
+  - -n (选项)，108
+  - -n (n)，108
+- help，61, 64, 123
+- /home，86, 141-142, 148, 175-176
+- 主目录，171
+- -i，213
+- id，172, 174, 194
+  - -6 (选项)，172
+  - -g (选项)，172
+  - -Gn (选项)，172
+  - -n (选项)，172
+  - -u (选项)，172
+- ifconfig，203-205, 210
+  - -a (选项)，205
+- info，67
+- init，138
+- 索引节点号，84
+- ipcalc，222
+- Katz, Phil，149
+- KDE，49
+- 内核模块，137
+- klogd，141
+- Knoppix，43
+- konsole，175
+- Korn, David，58
+- Kraft, Martin F.，42
+- LANG (环境变量)，109-110
+- last，172-173
+- LC_ALL (环境变量)，109-110
+- LC_COLLATE (环境变量)，109-110
+- Lemmke, Ari，26
+- less，66, 87, 103, 106
+- Lessig, Lawrence (Larry)，36
+- /lib，137
+- /lib/modules，137
+- Linux，14, 21
+- linux-0.01.tar.gz，211
+- ln，84-86, 135
+  - -b (选项)，86
+  - -f (选项)，86
+  - -i (选项)，86
+  - -s (选项)，86, 135
+  - -v (选项)，86
+- locate，91-93, 215, 237
+  - -e (选项)，91
+- login，175
+- LOGNAME (环境变量)，215
+- logout，49
+- lost+found，142
+- ls，67, 75-77, 79, 81, 84, 104-105, 107, 114, 123, 136, 160, 174, 188-189, 212-213, 216
+  - -a (选项)，76
+  - -d (选项)，77, 212
+  - -f (选项)，76
+  - -i (选项)，84
+  - -l (选项)，76-77, 174, 189
+  - -p (选项)，76
+  - -u (选项)，105
+- LXDE，50
+- Macintosh，20
+- mail，175
+- man，64-67, 80, 87, 140, 160
+  - -a (选项)，66
+  - -f (选项)，67
+  - -k (选项)，67
+- MANPATH (环境变量)，65
+- manpath，65
+- /media，141
+- /media/cdrom，141
+- /media/dvd，141
+- /media/floppy，141
+- Microsoft，19-20
+- mkdir，77-78, 134-136
+  - -p (选项)，77
+- mkfifo，135
+- mknod，135
+- /mnt，141
+- more，87
+  - -l (选项)，87
+  - -n (number) (选项)，87
+  - -s (选项)，87
+- mount，124, 136
+- MS-DOS，20
+- Murdock, Ian，42
+- mv，83-85, 213, 219
+  - -b (选项)，83
+  - -f (选项)，83
+  - -i (选项)，83
+  - -R (选项)，84, 213
+  - -u (选项)，83
+  - -v (选项)，83
+- netstat，208-209
+  - -r (选项)，209
+  - -s (选项)，209
+- newgrp，178-179
+- nobody，92
+- O'Reilly, Tim，30
+- Olsen, Ken，14
+- 操作系统，19
+- /opt，138–139, 142
+- OS X，19, 21
+- PackageKit，166
+- passwd，174, 181–185, 191–192, 221
+  - -l (选项)，182
+  - -s (选项)，182
+  - -u (选项)，182
+- passwd -m，182
+- passwd -w，182
+- passwd -x，182
+- 密码，171, 174, 176
+  - 更改，182
+  - 组，178–179, 185
+  - 设置，181
+  - 影子密码，174
+  - 影子密码，176
+- paste，115–116
+  - -d (选项)，115
+  - -s (选项)，116
+- PATH (环境变量)，74, 122–124, 127, 131, 218, 220, 237
+- PDP-11，14
+- Perens, Bruce，30
+- Perl，96
+- perl，115
+- Pesis, Jeff，19
+- pico，52
+- ping，205–206, 209
+  - -f (选项)，206
+- ping6，206
+- 管道，106
+- 管道，106
+- popd，75
+- 主组，174
+- /proc，139–140, 142, 162
+  - /proc/cpuinfo，139
+  - /proc/devices，139
+  - /proc/dma，139
+  - /proc/interrupts，139
+  - /proc/iports，139
+  - /proc/kcore，139, 219
+  - /proc/loadavg，139
+  - /proc/meminfo，140
+  - /proc/mounts，140
+  - /proc/scsi，140
+- ps，140, 161–162, 164, 167, 191
+  - ax (选项)，164
+  - l (选项)，161
+  - u (选项)，191
+- 伪设备，137
+- 伪用户，173
+- Puppet，160
+- pushd，75
+- pwd，75, 93
+- Python，96
+- Ramey, Chet，58
+- rar，146
+- Raymond, Eric S.，30
+- Red Hat，40
+- Red Hat Enterprise Linux，40
+- 引用计数，84
+- reset，108
+- 返回值，125
+- Ritchie, Dennis，26, 192
+- rm，61, 83–84, 86, 90, 188, 212–213
+  - -f (选项)，84
+  - -i (选项)，83–84, 213
+  - -r (选项)，84
+  - -v (选项)，84
+- rmdir，78, 212
+  - -p (选项)，78
+- /root，135, 141
+- 根目录，135
+- route，203, 206, 209–210
+- rpm，166
+- Salt，160
+- /sbin，136–137, 139
+- /sbin/init，161
+- Scientific Linux，41
+- set，122
+- Seward, Julian，151
+- shell 脚本，127
+- shell 变量，121
+- Shuttleworth, Mark，43
+- SkoleLinux，43
+- sleep，164
+- slocate，92, 215
+- sort，107, 109–111, 113–114, 117, 124, 129, 141, 217
+  - -b (选项)，111–112
+  - -k (选项)，110
+  - -n (选项)，113
+  - -r (选项)，112
+  - -t (选项)，112
+  - -u (选项)，242
+  - -u，114
+- source，127
+- split，147
+- /srv，141
+- ssh，172
+- Stallman, Richard M.，30, 32
+- 标准通道，102
+- su，158–159, 166, 173, 220–221
+- sudo，159, 166, 220
+  - -i (选项)，159
+- SUSE，41
+- 符号链接，85
+- Synaptic，166
+- /sys，140
+- syslogd，140–141
+- tail，108–109, 217
+  - -c (选项)，109
+  - -f (选项)，109
+  - -n (选项)，108
+  - -v (选项)，108
+- Tanenbaum, Andrew S.，26, 28
+- tar，146–152, 155, 219
+  - -c (选项)，147–148
+  - -f (选项)，147–148
+  - -j (选项)，147
+  - -M (选项)，147
+  - -r (选项)，147
+  - -t (选项)，147–148
+  - -u (选项)，147
+  - -v (选项)，147–148
+  - -x (选项)，147–148
+  - -Z (选项)，147
+  - -z (选项)，147, 219
+- tcl，96
+- tee，106–107, 217
+  - -a (选项)，106
+- TERM (环境变量)，87
+- test，61, 129, 212
+  - -f (选项)，218
+- Thawte，43
+- Thompson, Ken，26
+- /tmp，141, 143, 184, 193, 221
+- top，162, 164, 167
+- Torvalds, Linus，14, 21, 26, 28, 34
+- touch，184
+- type，61, 123
+- TZ (环境变量)，120
+- Ubuntu，43
+- UID，171
+- umask，194
+- uname，172
+  - -r (选项)，172
+- uniq，113
+- Unix，14, 21, 26
+- unset，122
+- unzip，152–155, 219
+  - -d (选项)，153
+  - -h (选项)，154
+  - -hh (选项)，154
+  - -v (选项)，153–154
+  - -x (选项)，154
+- updatedb，91–92, 215
+- uptime，139
+- 用户账户，170
+- 用户数据库，173, 176
+  - 存储在其他位置，176
+- 用户名，171
+- 用户级程序，20
+- useradd，180–181, 183–185, 221
+- userdel，183, 185
+  - -r (选项)，183
+- usermod，183, 185, 221
+- /usr，135, 138–139
+- /usr/bin，61, 135, 139
+- /usr/lib，139
+- /usr/local，139, 141
+- /usr/local/bin，135
+- /usr/sbin，139
+- /usr/share，139
+  - /usr/share/dict/words，99–100
+  - /usr/share/doc，139
+  - /usr/share/doc/ifupdown/examples/network-interfaces.gz，203
+  - /usr/share/file，134
+  - /usr/share/file/magic，134
+  - /usr/share/info，139
+  - /usr/share/man，65, 139
+  - /usr/share/zoninfo，120
+- /usr/src，139
+- 实用工具，20
+- /var，140–141, 143
+- /var/cache/apt，166
+- /var/lib/dpkg，166
+- /var/lib/rpm，166
+- /var/log，140
+- /var/mail，86, 140, 183
+- /var/spool，143
+- /var/spool/cron，140
+- /var/spool/cups，140
+- /var/tmp，141, 143
+- Verisign，43
+- vi，39, 52, 184
+- vigr，184–185
+  - -s (选项)，185
+- vim，54, 97
+- vimtutor，54
+- vipw，184–185, 221
+  - -s (选项)，184
+- VISUAL (环境变量)，184
+- vm.linux，136
+- Volkerding, Patrick，41
+- von Neumann, John，15
+- Watson, Thomas J.，14
+- wc，105, 129, 218
+  - -l (选项)，129
+- whatis，67
+- whereis，123, 218
+- which，123, 218
+- Windows，19–21
+- Xandros，43
+- xargs，90
+  - -0 (选项)，90
+  - -r (选项)，90
+- XFCE，50
+- xterm，124, 175
+- YaST，42, 166
+- Young, Bob，40
+- YUM，166

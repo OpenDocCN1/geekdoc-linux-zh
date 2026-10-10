@@ -1,0 +1,146 @@
+
+
+## 网络诊断工具
+
+`RX bytes:102695538 (97,9 MiB) TX bytes:13169349 (12,5 MiB)`  
+`Interrupt:20 Memory:d7400000-d7420000`
+
+最有趣的部分包括各种地址：
+
+- 输出的第一行包含接口的“硬件”或“MAC 地址”。它由接口制造商分配（在此处，是一个以太网接口）。
+- 第二行包含分配给接口的 IPv4 地址。在最右侧是旧式/冗长表示法的子网掩码。
+- 第三行和第四行指定了各种 IPv6 地址。第四行是计算机自行分配的本地地址，而第三行包含一个理论上可以从互联网访问的子网前缀。
+
+> 如果你仔细看，你会在每个 IPv6 地址的后半部分识别出接口的 MAC 地址。
+
+第五行开头的“up”表示该接口实际处于开启状态。
+
+如果在执行 `ifconfig` 时不带任何参数，它会输出计算机上所有活动网络接口的信息。当给出 `-a` 选项时，它还显示当前不活动的接口。
+
+### ping
+
+你可以使用 `ping` 命令在你的计算机和其他计算机之间进行低层（IP）连接检查。`ping` 使用控制协议 ICMP 向另一台计算机询问“生命迹象”。如果这些指示返回到你的计算机，你就知道 (a) 你的计算机可以发送数据到另一台计算机，并且 (b) 另一台计算机可以发送数据到你的计算机（前者并不一定意味着后者）。
+
+在最简单的情况下，你通过指定想要通信的计算机名称来调用 `ping`：
+
+```bash
+$ ping fritz.box
+PING fritz.box (192.168.178.1) 56(84) bytes of data.
+64 bytes from fritz.box (192.168.178.1): icmp_req=1 ttl=64 time=3.84 ms
+64 bytes from fritz.box (192.168.178.1): icmp_req=2 ttl=64 time=5.09 ms
+64 bytes from fritz.box (192.168.178.1): icmp_req=3 ttl=64 time=3.66 ms
+64 bytes from fritz.box (192.168.178.1): icmp_req=4 ttl=64 time=3.69 ms
+64 bytes from fritz.box (192.168.178.1): icmp_req=5 ttl=64 time=3.54 ms
+--- fritz.box ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 3.543/3.967/5.095/0.575 ms
+```
+
+这里一切正常：所有五个发送的包都已返回，顺序正确，并且传输时间对于本地网络来说是合理的。相反，如果你看到一段时间后出现以下内容：
+
+```bash
+From 192.168.178.130 icmp_seq=1 Destination Host Unreachable
+From 192.168.178.130 icmp_seq=2 Destination Host Unreachable
+From 192.168.178.130 icmp_seq=3 Destination Host Unreachable
+```
+
+那就说明有问题——无法联系目标计算机。
+
+如果你无法连接到互联网上的远程计算机，问题原则上可能位于你和远程计算机之间的任何地方。为了系统地处理，你可以使用以下策略：
+
+- 使用 `ping` 检查你是否可以到达回环接口 `127.0.0.1`。如果不工作，你的计算机出大问题了。
+- 使用 `ping` 检查你是否可以到达你当前正在使用（或你认为正在使用）的访问互联网的网络接口（以太网、WLAN 等）的地址。如果需要，你可以使用类似以下方式找到该地址：
+
+```bash
+$ /sbin/ifconfig eth0
+```
+
+这也应该工作——如果不工作，那么存在本地问题。
+
+- 使用 `ping` 检查你是否可以到达你的本地默认网关。（如果你不知道那个地址，你可以使用 `route` 命令查找它。在以下输出中：
+
+```bash
+$ /sbin/route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref Use Iface
+default        fritz.box       0.0.0.0         UG    0      0 0   eth0
+link-local       *               255.255.0.0     U     1000  0   0 lo
+192.168.178.0    *               255.255.255.0   U     0     0 0 eth0
+```
+
+在 `Destination` 下方的默认条目告诉你该使用什么——在这里是“`ping fritz.box`”。如果不工作并且你收到类似以下消息：
+
+```bash
+Destination Host Unreachable
+```
+
+那么你的本地网络存在问题。如果可以，询问一位正在正常访问互联网的同事，或者尝试另一台计算机。如果那边一切看似正常，那么你的计算机很可能是罪魁祸首。否则——在这种情况下也很可能——该找系统管理员了。
+
+💡 例如，你的默认路由可能不正确，指向了错误的计算机。（当网络配置是手动设置时，这种情况更有可能发生。）这不太可能影响其他计算机的用户，因为它们的配置可能是正确的。
+
+- 如果你确实可以正确到达默认网关，那么问题要么在你的局域网之外，在某个互联网位置（可能不仅超出你的控制范围，甚至超出你管理员的范围），要么在“协议栈”的更高处。例如，你可能可以通过 `ping` 到达远程 web 服务器，但你的（公司？）互联网访问可能不允许直接访问 Web，因为你应该使用“代理服务器”（并且忘记了配置它）。你的系统管理员可以提供帮助。
+
+有时工作有时不工作的网络连接（电缆故障？啮齿动物损坏？）可以使用 `ping -i1` 进行测试。与通常每秒发送一个数据包不同，`ping` 会以尽可能快的速度发送数据。它为每个发送的数据包输出一个点，并为每个接收的数据包输出一个退格字符。如果你在丢失数据包，你会看到越来越长的一串点。
+
+💡 如果你不是 root 而是普通用户，你必须接受两个发送的数据包之间最小间隔为 0.2 秒。只有当你作为管理员时，你才允许洪水攻击网络。
+
+为了检查 IPv6 连接，你必须使用 `ping6` 命令而不是 `ping`：
+
+```bash
+$ ping6 ::1
+```
+
+### dig
+
+`dig` 命令用于测试 DNS 名称解析。除非你另有指定，否则它尝试在命令行给定的名称中找到对应的 IP 地址：
+
+```bash
+$ dig www.linupfront.de
+; <<> DiG 9.8.1-P1 <<> www.linupfront.de
+; global options: +cmd
+; Got answer:
+;->HEADER<- opcode: QUERY, status: NOERROR, id: 34301
+; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0
+; QUESTION SECTION:
+;www.linupfront.de.          IN  A
+; ANSWER SECTION:
+www.linupfront.de.    3600 IN CNAME  s0a.linupfront.de.
+s0a.linupfront.de.    3600 IN A      31.24.175.68
+; Query time: 112 msec
+; SERVER: 127.0.0.1#53(127.0.0.1)
+; WHEN: Thu Mar 1 16:06:06 2012
+; MSG SIZE  rcvd: 69
+```
+
+这个（非常冗长）的输出在“QUESTION SECTION”中告诉我们在寻找 `www.linupfront.de`（尽管我们已经知道这一点）。“ANSWER SECTION”揭示了实际上没有 IP 地址对应于 `www.linupfront.de`，但 `www.linupfront.de` 实际上是名为 `s0a.linupfront.de` 的计算机的“昵称”（一种流行的方法）。然而，`s0a.linupfront.de` 拥有地址 31.24.175.68。最后，最后一个块告诉我们这个响应来自运行在 127.0.0.1 上的 DNS 服务器。
+
+如果在一段时间内没有答案，然后出现类似以下内容：
+
+```bash
+; <<> DiG 9.8.1-P1 <<> www.linupfront.de
+; global options: +cmd
+; connection timed out; no servers could be reached
+```
+
+那么说明问题出在“丹麦的现状”上（意指系统状态糟糕）。要么你 `/etc/resolv.conf` 中的设置不正确，要么名称服务器没有执行其应有的功能。
+
+你可以通过在命令行中提到特定名称服务器来询问它：
+
+```bash
+$ dig www.linupfront.de @fritz.box          # 询问 fritz.box
+```
+
+当然，解析此名称不应涉及昂贵的 DNS 查询（否则你可能会陷入鸡生蛋蛋生鸡的问题）；如有疑问，你总是可以直接指定 IP 地址：
+
+```bash
+$ dig www.linupfront.de @192.168.178.1
+```
+
+如果你熟悉 DNS，你可以使用 `dig` 查找 A 记录以外的 RR 类型。只需在命令行告诉 `dig` 你想要什么：
+
+```bash
+$ dig linupfront.de mx
+```
+
+为了找到给定 IP 地址所属的名称（如果有的话），你必须指定 `-x` 选项：
+
