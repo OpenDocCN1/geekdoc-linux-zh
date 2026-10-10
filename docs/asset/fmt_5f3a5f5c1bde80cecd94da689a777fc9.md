@@ -1,0 +1,162 @@
+
+``` 
+AC_INIT(helloauto/helloauto.c)
+
+AM_CONFIG_HEADER(config.h)
+
+AM_INIT_AUTOMAKE(HelloAuto,1.0)
+
+AM_MAINTAINER_MODE
+
+AM_ACONFIG_INCLUDE(macros)
+
+GNOME_INIT
+
+AC_ISC_POSIX
+
+AC_PROG_CC
+
+AC_HEADER_STDC
+
+AC_ARG_PROGRAM
+
+AC_PROG_CXX
+
+AM_PROG_LIBTOOL
+
+GNOME_COMPILE_WARNINGS
+
+GNOME_X_CHECKS
+
+GNOME_GHTTP_CHECK
+
+ALL_LINGUAS="de en_GB es"
+
+AM_GNU_GETTEXT
+
+AC_SUBST(CFLAGS)
+
+AC_SUBST(CPPFLAGS)
+
+AC_SUBST(LDFLAGS)
+
+AC_OUTPUT([
+
+Makefile
+
+macros/Makefile
+
+helloauto/Makefile
+
+])
+```
+
+## 文本文件
+
+表 20-2 列出了存储在根目录中用于记录系统的多个文本文件。你也可以在包含源代码的子目录中找到这些名称的文件。
+
+### 表 20-2
+一些常见的文档文件
+
+| 文件名 | 内容 |
+| :--- | :--- |
+| AUTHORS | 软件作者姓名的列表。通常会列出电子邮件地址。 |
+| BUGS | 如果代码中存在可能给某人带来很多麻烦的问题，创建此文件并解释该问题是个好主意。 |
+| COPYING | 版权信息。你可以在 GNOME 和 GTK+ 的源代码树中找到多个此类文件。其中一些存在细微差异，因此你可以复制你喜欢的那一个，如果愿意，还可以制作自己的变体。但是，如果你的修改使得软件不再是 GNU 软件，那么你就不能说它是 GNU 软件。 |
+| DEPENDS | 如果编译依赖于此源代码树外部某些事物的先决条件（例如特殊的库），你可以将此文件列出。 |
+| HACKING | 此文件中列出的信息供希望修改源代码并对其进行编译的人使用。它列出了任何必需的特殊工具或程序。通常包含编译说明和警告。 |
+
+## 表格：包含文件及其内容
+
+| 文件名 | 包含内容 |
+| :--- | :--- |
+| INSTALL | 该文件包含安装二进制可执行文件所需的步骤。 |
+| NEWS | 每当发生变更、添加新功能或修复 bug——并且软件经过测试且宣布了新的版本号——这些信息就会列在此文件的顶部。随着每个新版本添加至文件顶部，此文件便成为每个版本的历史日志。 |
+| README | 该文件包含软件的描述。 |
+| TODO | 在任何复杂度的系统中，总有你需要做的事情。该文件包含一个列表，列出你可以（或应该）做的以改进软件的事项。 |
+
+脚本被设置为检查这些文件中的部分。它们不检查内容，因此如果你目前没什么要说的，你只需创建 `AUTHORS`、`ChangeLog`、`NEWS` 和 `README` 的空文件即可。
+
+你并不局限于表格 20-2 中列出的文件名。例如，你可以使用名为 `DESIGN` 或 `ALGORITHM` 的文件来解释软件中某些不太明显的部分背后的工作原理。这些文件因其命名而被识别为文本文件，因为所有大写文件名均视为文本文件。在本文档给出的示例中，有一个名为 `IDGBIBLE` 的文本文件。
+
+此外还有一个名为 `ChangeLog` 的文件，初始为空，或者根本不存在。它保持空的状态，直到软件的首个版本发布之后（或者进入 alpha 阶段，或其他情况）。在此之后，每次更改都根据源文件、日期和程序员进行记录，并附带对所做更改的简要描述。虽然名为 `NEWS` 的文件通常从用户角度记录变更，但 `ChangeLog` 反映的是程序员所做的内部更改。
+
+## acconfig.h 文件
+
+在源码目录中，创建一个名为 `acconfig.h` 的文件。它是用于生成 `config.h` 文件的模板。实际上，程序 `autoheader` 读取 `acconfig.h` 以生成 `config.h.in`。然后，程序 `autoconf` 使用 `config.h.in` 来生成 `config.h`。你的应用程序源代码应该包含的是这个 `config.h` 文件。
+
+尽管 `acconfig.h` 文件具有 `.h` 扩展名，且其语法对于 C 预处理器是正确的，但它并不会直接包含到源文件中。它只包含一系列 `#undef` 语句。对于你希望在 `config.h` 中定义的每个变量，都有一个 `#undef` 语句。你会发现，为了使 make 文件生成成功，其他一些 `#undef` 定义必须存在。以下展示了一个接近最低要求的 `acconfig.h` 文件的内容：
+
+```c
+/* acconfig.h */
+
+#undef ENABLE_NLS
+
+#undef HAVE_CATGETS
+
+#undef HAVE_GETTEXT
+
+#undef HAVE_LC_MESSAGES
+
+#undef HAVE_STPCPY
+
+#undef HAVE_LIBSM
+
+#undef PACKAGE
+
+#undef VERSION
+```
+
+## autogen.sh 脚本
+
+你需要在目录中创建一个名为 `autogen.sh` 的脚本。`macros` 目录中也有一个同名的脚本，但两者截然不同。`macros` 目录中的那个脚本非常详尽，负责执行生成 make 文件的所有详细工作。你在自己目录中创建的脚本进行一些简单的验证，并执行 `macros` 目录中的那个脚本。
+
+```bash
+#!/bin/sh
+
+# Run this to generate all the initial makefiles, etc.
+
+srcdir=`dirname $0`
+
+test -z "$srcdir" && srcdir=.
+
+PKG_NAME="Hello Auto"
+
+(test -f $srcdir/configure.in \
+ && test -f $srcdir/IDGBIBLE \
+ && test -d $srcdir/helloauto) || {
+
+    echo -n "**Error**: Directory \`$srcdir\`
+
+    echo " does not look like the"
+
+    echo " helloauto development directory"
+
+    exit 1
+
+}
+
+. $srcdir/macros/autogen.sh
+```
+
+环境变量 `srcdir` 设置为当前目录。变量 `PKG_NAME` 用于为整个包命名——也就是说，为编译所有子目录中所有源代码后产生的软件命名。有两个 `test` 语句，除了验证脚本正在当前目录运行且当前目录包含正确内容外，没有其它作用。特别地，假定存在名为 `IDGBIBLE` 的文件和名为 `helloauto` 的目录，即表明脚本位于正确的位置。
+
+你的 `autogen.sh` 通过执行 `macros` 子目录中的 `autogen.sh` 结束。这个过程会产生大量输出。文本同时输出到 `stdout` 和 `stderr`。建议你查看这些输出以了解发生了什么；但由于生成的文本量很大，你需要使用以下命令捕获它们以便稍后查看：
+
+```
+autogen.sh < fred 2>&1
+```
+
+如果一切顺利（至少，如果脚本认为一切顺利），打印的最后一行是，“Enter 'make' to compile Hello Auto.”（输入 'make' 以编译 Hello Auto。）
+
+## 主 Makefile.am 文件
+
+你需要在主开发目录中创建一个名为 `Makefile.am` 的文件。该文件由 `autoconf` 用于创建 `Makefile.in`。`Makefile.in` 文件包含完整的 make 文件描述。生成的 `Makefile.in` 包含从头编译和链接整个系统所需的信息。它还包含用于撤销编译和链接操作（`make clean`）、安装之前编译好的软件（`make install`）以及创建发行包（`make dist`）的特殊指令集。此外，`autoconf` 程序会扫描源代码并确定最终 make 文件所需的所有依赖关系（例如，哪个头文件被哪个其他源文件包含）。
+
+`Makefile.am` 文件的具体内容取决于需要包含多少个子目录。在以下示例中，有一个源代码子目录（名为 `helloauto`）和一个包含宏的本地副本的 `macros` 子目录：
+
+```
+SUBDIRS=macros helloauto
+
+EXTRA_DIST=IDGBIBLE
+```
