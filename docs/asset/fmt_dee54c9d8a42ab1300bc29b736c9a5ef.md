@@ -1,0 +1,242 @@
+
+```pascal
+procedure DataChange(Sender: TObject);
+
+procedure UpdateData(Sender: TObject);
+
+procedure CMGetDataLink(var Message: TMessage); message CM_GETDATALINK;
+
+protected
+
+{ Protected declarations }
+
+procedure Loaded; override;
+
+procedure Notification(AComponent: TComponent;
+  Operation: TOperation); override;
+
+procedure Change; override;
+
+procedure Click; override;
+
+procedure CMExit(var Message: TCMExit); message CM_EXIT;
+
+public
+
+{ Public declarations }
+
+constructor Create(AOwner: TComponent); override;
+
+destructor Destroy; override;
+
+function ExecuteAction(Action: TBasicAction): Boolean; override;
+
+function UpdateAction(Action: TBasicAction): Boolean; override;
+
+property Field: TField read GetField;
+
+published
+
+{ Published declarations }
+
+property DataField: string read GetDataField write SetDataField;
+
+property DataSource: TDataSource read GetDataSource write SetDataSource;
+
+end;
+
+procedure Register;
+
+implementation
+
+procedure Register;
+
+begin
+
+  RegisterComponents('ETH', [TETHDBDateTimePicker]);
+
+end;
+
+{ TETHDBDateTimePicker }
+
+constructor TETHDBDateTimePicker.Create(AOwner: TComponent);
+
+begin
+
+inherited Create(AOwner);
+
+ControlStyle := ControlStyle + [csReplicable];
+
+FDataLink := TFieldDataLink.Create;
+
+FDataLink.Control := Self;
+
+FDataLink.OnDataChange := DataChange;
+
+FDataLink.OnUpdateData := UpdateData;
+
+end;
+
+destructor TETHDBDateTimePicker.Destroy;
+
+begin
+
+FDataLink.Free;
+
+FDataLink := nil;
+
+inherited Destroy;
+
+end;
+
+procedure TETHDBDateTimePicker.Loaded;
+
+begin
+
+inherited Loaded;
+
+if (csDesigning in ComponentState) then
+
+DataChange(Self);
+
+end;
+
+procedure TETHDBDateTimePicker.Notification(AComponent: TComponent;
+Operation: TOperation);
+
+begin
+
+inherited Notification(AComponent, Operation);
+
+if (Operation = opRemove) and
+(FDataLink <> nil) and
+(AComponent = DataSource) then
+DataSource := nil;
+
+end;
+
+procedure TETHDBDateTimePicker.CMGetDataLink(var Message: TMessage);
+
+begin
+
+Message.Result := Integer(FDataLink);
+
+end;
+
+procedure TETHDBDateTimePicker.Change;
+
+begin
+
+FDataLink.Edit;
+
+inherited Change;
+
+FDataLink.Modified;
+
+end;
+
+procedure TETHDBDateTimePicker.Click;
+
+begin
+  FDataLink.Edit;
+  inherited Click;
+  FDataLink.Modified;
+end;
+
+function TETHDBDateTimePicker.GetDataSource: TDataSource;
+
+begin
+  Result := FDataLink.DataSource;
+end;
+
+procedure TETHDBDateTimePicker.SetDataSource(const Value: TDataSource);
+
+begin
+  if not (FDataLink.DataSourceFixed and (cLoading in ComponentState)) then
+    FDataLink.DataSource := Value;
+  if Value <> nil then
+    Value.FreeNotification(Self);
+end;
+
+function TETHDBDateTimePicker.GetDataField: string;
+
+begin
+  Result := FDataLink.FieldName;
+end;
+
+procedure TETHDBDateTimePicker.SetDataField(const Value: string);
+
+begin
+  FDataLink.FieldName := Value;
+end;
+
+function TETHDBDateTimePicker.GetField: TField;
+
+begin
+  Result := FDataLink.Field;
+end;
+
+procedure TETHDBDateTimePicker.DataChange(Sender: TObject);
+
+begin
+  if FDataLink.Field <> nil then
+    Date := FDataLink.Field.AsDateTime
+  else
+    Date := Now;
+end;
+
+procedure TETHDBDateTimePicker.UpdateData(Sender: TObject);
+
+begin
+FDataLink.Field.AsDateTime := Date;
+end;
+
+procedure TETHDBDateTimePicker.CMExit(var Message: TCMExit);
+
+begin
+
+try
+FDataLink.UpdateRecord;
+except
+SetFocus;
+raise;
+end;
+
+end;
+
+function TETHDBDateTimePicker.ExecuteAction(Action: TBasicAction): Boolean;
+
+begin
+
+Result := inherited ExecuteAction(Action) or (FDataLink <> nil) and
+FDataLink.ExecuteAction(Action);
+
+end;
+
+function TETHDBDateTimePicker.UpdateAction(Action: TBasicAction): Boolean;
+
+begin
+
+Result := inherited UpdateAction(Action) or (FDataLink <> nil) and
+FDataLink.UpdateAction(Action);
+
+end;
+
+end.
+```
+
+## 示例应用程序
+
+清单 5.4 是一个示例应用程序，它使用了本章讨论过的许多（但并非全部）数据感知组件。如清单 5.4 所示，该应用程序的代码量很少。得益于 VCL/CLX，数据感知组件几乎封装了在应用程序中显示和更新数据集所需的一切。
+
+## 清单 5.4
+
+```pascal
+unit MainForm;
+
+interface
+
+uses
+
+SysUtils, Classes, QGraphics, QControls, QForms, QDialogs, DB, DBClient,
+```
