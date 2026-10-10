@@ -1,0 +1,3 @@
+![](bbox=[0.15, 0.07, 0.85, 0.27])
+
+Once the updates start, be patient big files sometimes look like your system is locked and the first time you do this it can take a while. (You should consider doing this fairly often as there are often updates) When completed, you may see notices, the ones that begin with “W” are only warnings and not a problem. However, if you start seeing ones that begin with “E” and text, read them /check connectivity/ check the source file again. With the new rolling updates, you will also want to run **apt-get dist-upgrade** and this can take a while. Reboot Kali and do the **apt-get update && apt-get upgrade** –y again to be sure you have everything.

@@ -1,0 +1,745 @@
+- pgno: 0
+  md: '# HACKING:
+
+
+    *How to Create Your Own Penetration Testing Lab Using Kali Linux 2016 for Beginners*
+
+
+    # **Gary Mitnick**
+
+
+    © 2016'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'No part of this book may be reproduced or transmitted in any form or by any
+    means, electronic or mechanical, including photocopying, recording, or by any
+    information storage or retrieval system without prior written permission from
+    the author or copyright holder except in the case of brief quotations embodied
+    in reviews.
+
+
+    Although the author has exhaustively researched all sources to ensure the accuracy
+    and completeness of the information contained in this book, we assume no responsibility
+    for errors, inaccuracies, omissions, or any inconsistency herein. Any slights
+    of people or organizations are unintentional. Reader should use their own judgment
+    and/or consult a programming expert for specific applications to their individual
+    needs.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table of Contents
+
+
+    +   - Introduction
+
+    +   - Pre-Flight check List
+
+    +   - BIOS Enable Virtualization
+
+    +   - Virtual Box + Extensions
+
+    +   - Building your Kali Virtual Machine
+
+    +   - Install Kali ISO
+
+    +   - Tweak your Kali VM
+
+    +   - Install Guest Additions
+
+    +   - Resources
+
+    +   - More Course Books'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Introduction
+
+
+    This guidebook is to help you get going with the “The Complete Ethical Hacking
+    Series for beginners” by Gary Mitnick without buying any specialized equipment
+    for penetration testing. As an introduction to penetration testing this will be
+    all you need to get started. As you leave the beginner stages you will probably
+    not be using a Virtual Machine (VM) for your testing purposes. It does not matter
+    what the operating system of your host machine is, if you can get a Virtual Box
+    up and running the steps are all the same. The reason I suggest a Virtual Machine
+    for beginners is that if something goes awry you won’t lose your entire system.
+    (This is safe)
+
+
+    > *This document was done independently with no connections to anyone. The intent
+    is to speed up the Kali installation process in a Virtual Machine.*
+
+
+    Currently there are only 2 ways of obtaining this manuscripot – through amazon
+    and through our mailing list (for free). Regardless of how you obtained this copy
+    I want to thank you and congratulate you for investing in yourself and your computer
+    knowledge.
+
+
+    # Before you begin:
+
+
+    Working with what you already have is fine for the course, however not for real
+    world pen testing outside of it. Most things will work, and by the way some things
+    just WILL NOT.
+
+
+    *Note:* Does internal wireless meet the chip requirements? **STOP Warning:** A
+    VM will show up in Kali as an Ethernet adapter eth0. You can’t do the wireless
+    lectures without an external USB wireless card when using a Virtual Machine. To
+    be redundant I did not say use the internal wireless card in a Virtual Machine.
+    To be able to do the wireless lectures in a VM, do a search for USB wireless adapters
+    for Kali Linux. Here are a couple of sites that talk about what to use:
+
+
+    +   - http://www.blackmoreops.com/2014/01/08/recommended-usb-wireless-cards-kali-linux/
+
+    +   - http://www.aircrack-ng.org/doku.php?id=compatibility_drivers
+
+    +   - http://www.wirelesshack.org/top-kali-linux-compatible-usb-adapters-dongles-2015.html'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# More Course Books
+
+
+    ![](img/5481504809e843668406e46c502c72ab_4_0.png)
+
+
+    https://www.amazon.com/dp/B013JB351K/
+
+
+    ![](img/5481504809e843668406e46c502c72ab_4_1.png)
+
+
+    https://www.amazon.com/dp/B01M15T2GG/'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Pre-Flight check List
+
+
+    Check for and update your BIOS, then Enable Virtualization in your BIOS.
+
+
+    Check your disk space on your current operating system. You need 15% free for
+    your system and then you need additional space for Virtual Box and Kali.
+
+
+    *This is important to CHECK before you begin.*
+
+
+    Hyper-V *cannot* be used for this course. VMware can, but you should know how
+    to use it.
+
+
+    *Note:* If you have enabled Hyper-V, you will have issues when trying to install
+    Kali in Virtual Box and will not be able to see the 64Bit versions of Linux for
+    Virtual Machines you can disable Hyper-V in Windows Features just uncheck anything
+    Hyper-V and reboot your system.
+
+
+    Check the version of your operating system. Is it 64 Bit or 32 Bit? All your downloads
+    should match your system. *(64-bit program is not going work on a 32-bit machines
+    and vise-versa)*
+
+
+    Download Virtual Box & Virtual Box extension - install both before creating your
+    Kali Virtual Machine.
+
+
+    https://www.virtualbox.org/wiki/Downloads
+
+
+    Download the Kali 2016 ISO from https://www.kali.org/downloads/ be sure you have
+    a complete download (some security suites will block this) Before attaching your
+    USB external Wireless card, be sure to get Kali up and working with Virtual Box
+    extensions, guest additiosn and updates installed.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# BIOS Enable Virtualization
+
+
+    Enable Virtualization in the BIOS (if you do not you will not be able to see 64-bit
+    editions and the installation may fail). Enter the BIOS during startup of your
+    physical system. Each system is different so the key to press may be different
+    for your system. I used a Dell laptop so I had to hit F2 on boot up to get into
+    my BIOS. (google search for your system)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_6_0.png)
+
+
+    In this case Virtualization was under the Advanced Tab, you want to make sure
+    that it is enabled **(MOST of the trouble with setting up a VM have been caused
+    by skipping or not doing this part)** Once you have enabled Virtualization you
+    want to save your changes and exit the BIOS. In some systems, it may not say Virtualization
+    but instead say “VT-x”
+
+
+    ![](img/5481504809e843668406e46c502c72ab_6_1.png)
+
+
+    Some systems may need to be powered down completely then restarted for this to
+    take effect. You can check with your system manufacturer or google how to get
+    into your BIOS. You can read about what the BIOS is at https://en.wikipedia.org/wiki/BIOS'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Virtual Box + Extensions
+
+
+    Install the Virtual Box and then install the Virtual Box Extensions. These are
+    basic Windows programs just take the defaults for both Virtual Box & Virtual Box
+    Extensions. If your host system is OS X or Linux, you need to do the same installs
+    but with the Virtual Box editions that match your system. The steps for creating
+    a Virtual Machine are the same.
+
+
+    To avoid any problems when in Windows choose right click & Run as Administrator
+    option (even if you have administrative rights). Be sure you have the version
+    that matches your system OS if you are not in Windows. All downloads can be found
+    at [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+
+
+    You also need to download Kali Linux 2016 ISO file from [https://www.kali.org/downloads/](https://www.kali.org/downloads/)
+    pick the version that matches your system. Install based on your operating system.
+    If you have a 64-bit system, then download the 64-bit versions & 32 bit just use
+    the 32-bit options. If you do not have virtualization available only use the 32-bit
+    downloads for your install.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_7_0.png)
+
+
+    In Windows Run as administrator when finished close and install VBox extensions.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/5481504809e843668406e46c502c72ab_8_0.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_8_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # Building your Kali Virtual Machine
+
+
+    Start Virtual Box (I already have Kali installed here in another VM that’s why
+    you see that icon there we will make a new VM here)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_9_0.png)
+
+
+    Click on “New”. This Starts the Creation of a new VM.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/5481504809e843668406e46c502c72ab_10_0.png)
+
+
+    Give it a name like “Kali” or whatever you want it to be. Then click the drop-down
+    menu by “type” and choose “Linux”
+
+
+    Then choose the “Debian 64bit” (if you have a 64-bit system, and virtualization
+    is on in the BIOS (if you have 32bit system then Debian 32bit option) PRESS next'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/5481504809e843668406e46c502c72ab_11_0.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_11_1.png)
+
+
+    Set your memory size, my machine has 8gig available so I am giving the VM 2 gig.
+    You can type in how much you want to give the VM. I chose 2048. This can be changed
+    later if needed. (Don’t give it to little or it will be slow and too much your
+    host system will be slow)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/5481504809e843668406e46c502c72ab_12_0.png)
+
+
+    Next we will Create a virtual hard disk for Kali. I used 32gig for this example.
+    You can give it more space if you have it. (again check the free space on your
+    actual hard drive)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_12_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'Unless you have other plans take the default and press “Next”.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_13_0.png)
+
+
+    Take the default press “Next”.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/5481504809e843668406e46c502c72ab_14_0.png)
+
+
+    I set this to 32 gig. If you have space to spare, try 64 gig and click create
+    (Do Not take default of 8 Gig change it)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/5481504809e843668406e46c502c72ab_15_0.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_15_1.png)
+
+
+    Under System, under the Acceleration tab, all of the options should be checked
+    (*These might be grayed out if you did not turn on virtualization on in your BIOS*)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'Bridge your adapter (the name of your actual adapter may be different) you
+    want the adapter that your host system is currently getting an i.p address and
+    connecting to the internet.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_16_0.png)
+
+
+    Make your network setting look exactly like this, but with the adapter you have
+    and allow all in the advanced section. Your VM is now prepped, press OK, go to
+    the top of VBox and press START.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_16_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # Install Kali ISO
+
+
+    ![](img/5481504809e843668406e46c502c72ab_17_0.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_17_1.png)
+
+
+    Browse to the 2016 iso
+
+
+    “Select start-up disk” will pop up, browse to the Kali ISO image you downloaded.
+    Use the folder icon to browse to it if you do not see it (hopefully you remember
+    where you put it) press **Start**.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/5481504809e843668406e46c502c72ab_18_0.png)
+
+
+    Use the Install option and you are on your way.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/5481504809e843668406e46c502c72ab_19_0.png)
+
+
+    Select your language and country. I picked American English (select the defaults
+    on the remainder of the *set-up screens for your country etc.*) (incorrect keyboard
+    and you may not be able to log in after)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/5481504809e843668406e46c502c72ab_20_0.png)
+
+
+    The install should begin. This can take time. (*If you did not allow enough disk
+    space, this operation may fail*)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/5481504809e843668406e46c502c72ab_21_0.png)
+
+
+    Here you can call it what you want but for most of the screens, you can take the
+    default and just press continue (*enter key*)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/5481504809e843668406e46c502c72ab_22_0.png)
+
+
+    A domain name is not required, just press continue.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/5481504809e843668406e46c502c72ab_23_0.png)
+
+
+    Set your password, don’t forget it. It is case sensitive, and you will need to
+    verify it on the next screen (important you have the right language already set
+    or you may get in later) Set your time zone (when you boot into Kali make sure
+    your time zone and time are correct), this can prevent some programs from loading
+    correctly like the Tor browser.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# [1] Configure the clock\n\nIf the desired time zone is not listed, then please\
+    \ go back to the step “Choose language” and select a country that uses the desired\
+    \ time zone (the country where you live or are located).\n\nSelect your time zone:\n\
+    \n+   • \n+   Central\n+   Mountain\n+   Pacific\n+   Alaska\n+   (Hawaii)\n+\
+    \   Arizona\n+   East Indiana\n+   Severo\n\n<Go Back>\n\n```\n<Tab> moves: <Space>\
+    \ selects: <Enter> activates buttons\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '![](img/5481504809e843668406e46c502c72ab_25_0.png)
+
+
+    Select the default for this.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '![](img/5481504809e843668406e46c502c72ab_26_0.png)
+
+
+    Press enter.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '![](img/5481504809e843668406e46c502c72ab_27_0.png)
+
+
+    Keep selecting the defaults until you get to “Network Mirror”.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '![](img/5481504809e843668406e46c502c72ab_28_0.png)
+
+
+    Tab over to “Yes” Press enter
+
+
+    The install will begin and will take a while, be patient.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/5481504809e843668406e46c502c72ab_29_0.png)
+
+
+    When it gets close to the end, it will prompt about a network mirror select “No”
+    for this.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '![](img/5481504809e843668406e46c502c72ab_30_0.png)
+
+
+    The installation will continue.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '![](img/5481504809e843668406e46c502c72ab_31_0.png)
+
+
+    You are in a VM do not panic, press “YES”.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_31_1.png)
+
+
+    It is a VM select the second option, and the install will continue. This does
+    not touch your physical hard drive it is going to go on the virtual hard drive
+    you created.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '![](img/5481504809e843668406e46c502c72ab_32_0.png)
+
+
+    You are almost there.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '![](img/5481504809e843668406e46c502c72ab_33_0.png)
+
+
+    Almost done.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_33_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Welcome to KALI in a VM, login as root and use the password you have previously
+    created.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_34_0.png)
+
+
+    Let the games begin. You have gotten this far; next we will tweak the installation
+    and get ready for updates and other internet functionality.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Tweak your Kali VM
+
+
+    There are a few final steps and your Kali VM will be ready to go. Let''s go to
+    the “Terminal” and verify and change some settings.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_35_0.png)
+
+
+    To launch the terminal: press the icon under iceweasel, it looks like a command
+    prompt, and when it opens you see this screen. This is where we are going to verify
+    some settings.
+
+
+    Change the NetworkManager.conf file settings from “false” to “true”.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '![](img/5481504809e843668406e46c502c72ab_36_0.png)
+
+
+    We want to get to the directory that contains the NetwokManager.conf file - from
+    the prompt, change your directory with cd /etc/NetwokManager (case sensitive)
+    your prompt should change to that directory.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_36_1.png)
+
+
+    Once there type in ls and confirm. You will see the “NetwokManager.conf file”
+    (Seen here in white). We then want to edit this file. We are going to use nano
+    (a text editor for this) In the same directory type in nano NetwokManager.confl
+    and press enter (case sensitive)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_36_2.png)
+
+
+    Where it says “managed=false” change to “managed=true”. Then hit Ctrl+O and hit
+    enter to save then Ctrl+X to exit the editor and return to the terminal and see
+    if u can ping google.com'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'Check your source file for the correct repositories for Kali updates and upgrades
+    to the current files can be found here <http://docs.kali.org/general-use/kali-linux-sources-list-repositories>
+    You need all lines of this to match in your source file to avoid duplicates. I
+    just cleaned mine out and pasted the ones in that link in. Let’s check or clean
+    out the file
+
+
+    ```
+
+    ```
+
+    root@kali:~# cd /etc/apt
+
+    root@kali:/etc/apt# ls
+
+    apt.conf.d   preferences.d  sources.list-
+
+    listchanges.conf  sources.list  sources.list.d
+
+    root@kali:/etc/apt#
+
+    ```
+
+    ```
+
+
+    Navigate to cd /etc/apt directory and do an ls to check for the sources.list file
+    again we are going to use nano to check out this file by typing nano sources.list
+
+
+    In this case I took the lines in the link and pasted them into the file and cleaned
+    out the rest. **NOTE: *they do change it now and then*** so you need to check
+    Kali docs at docs.kali.org
+
+
+    ![](img/5481504809e843668406e46c502c72ab_37_0.png)
+
+
+    If they match you are good to go, if not cut and paste into your nano session
+    again Ctrl+O and press enter to save and Ctrl+X to exit.
+
+
+    Time to get updates and/or upgrades. Once we have connectivity and repositories
+    in the source file it’s time to check for updates.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_37_1.png)
+
+
+    Type in apt-get update && apt-get upgrade -y (the -y is answering yes to things
+    that want to install without prompting you to answer for each one)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '![](img/5481504809e843668406e46c502c72ab_38_0.png)
+
+
+    Once the updates start, be patient big files sometimes look like your system is
+    locked and the first time you do this it can take a while. (You should consider
+    doing this fairly often as there are often updates) When completed, you may see
+    notices, the ones that begin with “W” are only warnings and not a problem. However,
+    if you start seeing ones that begin with “E” and text, read them /check connectivity/
+    check the source file again. With the new rolling updates, you will also want
+    to run **apt-get dist-upgrade** and this can take a while. Reboot Kali and do
+    the **apt-get update && apt-get upgrade** –y again to be sure you have everything.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Install Guest Additions
+
+
+    So your VM can use USB devices and other system tools you need to install VBox
+    Guest additions into the Kali VM (Make sure you have updated like above before
+    starting this) There are no optional steps so make sure you can do them successfully
+    before moving on.
+
+
+    To check for linux headers you are looking for the current linux-headers that
+    end in – kali-all-amd64 the version will change over time.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_39_0.png)
+
+
+    This will generate a list (if\u updated correctly) when you type in apt-cache
+    search header \| grep -i linux look for the one ending in –kali-all-amd64
+
+
+    ![](img/5481504809e843668406e46c502c72ab_39_1.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_39_2.png)
+
+
+    Install Linux headers at the time of writing it went to 4.5 this does change so
+    type in the version you see when you do the apt-cache search header \| grep -I
+    linux and install with **apt-get install linux-headers-4.5.0-kali-all-amd64**
+
+
+    When that finishes (just in case) run **apt-get update && apt-get upgrade -y**
+    (there might be nothing to update but it is good to check) then in the terminal
+    type **reboot**'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'Log back into kali click devices click Insert Guest Additions CD image.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_40_0.png)
+
+
+    You should see a graphic of a cd and an option to run and when u click run it
+    will fail.
+
+
+    ![](img/5481504809e843668406e46c502c72ab_40_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '![](img/5481504809e843668406e46c502c72ab_41_0.png)
+
+
+    Just click OK.
+
+
+    Then go back to your terminal navigate to the media you just mounted type in cd
+    /media/cdrom0 then type ls so you can verify the file VBoxLinuxAdditions.run
+
+
+    ![](img/5481504809e843668406e46c502c72ab_41_1.png)
+
+
+    You want to copy this file to your desktop in order to get it to run type in cp
+    VBoxLinuxAdditions.run /root/Desktop (you must remember this is case sensitive)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '![](img/5481504809e843668406e46c502c72ab_42_0.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_42_1.png)
+
+
+    ![](img/5481504809e843668406e46c502c72ab_42_2.png)
+
+
+    Navigate back to root and type in cd Desktop (remember the caps) then ls to verify
+    you see it. Now run the file by typing ./VBoxLinuxAdditions.run (you can copy
+    & paste)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/5481504809e843668406e46c502c72ab_43_0.png)
+
+
+    Your Kali VM is ready to use, ENJOY!'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Resources
+
+
+    VBOX & Guest Additions https://www.virtualbox.org/wiki/Downloads Kali
+
+
+    ISO https://www.kali.org/downloads/
+
+
+    TOR Browser https://www.torproject.org/
+
+
+    Kali Repository for your source file http://docs.kali.org/general-use/kali-linux-sources-list-repositories
+
+
+    Kali Docs http://docs.kali.org/
+
+
+    What is the BIOS https://en.wikipedia.org/wiki/BIOS
+
+
+    # Good to Have:
+
+
+    Home router or a neighbor''s permission for you to study them
+
+
+    Old windows pc to attack or VM with Windows (unpatched to see the ugly)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# More Course Books
+
+
+    ![](img/5481504809e843668406e46c502c72ab_45_0.png)
+
+
+    https://www.amazon.com/dp/B013JB351K/
+
+
+    ![](img/5481504809e843668406e46c502c72ab_45_1.png)
+
+
+    https://www.amazon.com/dp/B01M15T2GG/'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
