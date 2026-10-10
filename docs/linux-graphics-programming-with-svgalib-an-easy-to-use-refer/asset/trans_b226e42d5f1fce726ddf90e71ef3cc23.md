@@ -1,0 +1,239 @@
+
+
+vga_setcolor(1);
+for (y = 75; y < 120; y++)
+{
+    vga_drawline(230, y, 280, y);
+}
+
+/* 当按下任意键时，红色方块会消失。 */
+vga_getch();
+vga_setcolor(0);
+for (y = 75; y < 120; y++)
+{
+    vga_drawline(30, y, 80, y);
+}
+
+/* 下一次按键时，绿色方块会消失。
+   当前活动颜色已经是黑色，所以我们不需要
+   再用另一个 vga_setcolor() 语句来重置它。 */
+vga_getch();
+for (y = 75; y < 120; y++)
+{
+    vga_drawline(130, y, 180, y);
+}
+
+/* 现在是蓝色。我们开心了吗？ */
+vga_getch();
+for (y = 75; y < 120; y++)
+{
+    vga_drawline(230, y, 280, y);
+}
+
+/* 暂停一秒，然后退出。谢天谢地。 */
+sleep(1);
+vga_setmode(TEXT);
+return 0;
+}
+
+如果我们想**一劳永逸**地清除所有内容，而**不**结束程序，只需要使用 **vga_clear()** 即可。这会将整个屏幕重置为颜色 0，通常就是黑色。稍后我们会讨论如何更改与数字关联的颜色，但现在你还得使用默认设置。正如亨利·福特所说，你可以选择任何你想要的颜色，只要它是黑色的。
+
+![](img/2e475714ef8969ed272622c46473d334_76_0.png)
+
+本节的期末考试：使用 **vga_drawline()** 画一个空心三角形。我打赌你能做到！
+
+## 创建你自己的函数
+
+如果在程序开始时，你可以随意设置背景颜色，那该多好啊？或者也许能用一条语句画一个正方形？不幸的是，单靠纯 SVGAlib 你是做不到的。现在，vga*（补充 SVGAlib 的高级绘图函数库）里面充满了这类有趣的功能，但让我们暂时先坚持使用纯 SVGAlib。那么，如何在不编写一堆 vga_drawline() 函数的情况下给屏幕着色呢？答案当然是，创建我们自己的函数。通过一次编写这个过程，你节省的时间就再也不用重复做了。
+
+清单 3.12 包含了一个仅使用纯 SVGAlib 设置背景颜色的示例函数。我们将使用两个新函数来实现：vga_getxdim( ) 和 vga_getydim( )。它们会告诉我们当前屏幕模式的 x 和 y 维度——例如，在屏幕模式 5 (G320x200x256) 下，vga_getxdim( ) 返回的整数值是 320。
+
+现在，给这个新函数起什么名字呢？我不想在前面加上 vga，因为有人可能会混淆，以为这是随 SVGAlib 发行版自带的实际开箱即用的函数。相反，让我们叫它 book_background( )。清单 3.12 展示了我所描述的内容。
+
+**清单 3.12 book_background()。**
+
+```c
+void book_background(int color)
+{
+  int x,
+        y,
+        xmax = vga_getxdim(),
+        ymax = vga_getydim();
+
+  vga_setcolor(color);
+
+  for (y = 0; y < ymax; y++)
+  {
+    for (x = 0; x < xmax; x++)
+    {
+      vga_drawline(0, y, xmax, y);
+    }
+  }
+}
+```
+
+现在你可以一笔勾销地改变你的背景——只需将函数插入你的程序，包含正确的声明，然后就可以开始了！例如，要使背景变为青色，只需使用 **book_background**(3)。清单 3.13 提供了使用该函数的示例。
+
+**清单 3.13 使用 book_background(0)。**
+
+```c
+#include <stdlib.h>
+#include <vga.h>
+
+void book_background(int color);
+
+int main(void)
+{
+int y;
+
+vga_init();
+vga_setmode(G320x200x256);
+
+/* 想要一种可爱的青色吗？ */
+book_background(3);
+
+/* 在这里再画一个那些讨厌的正方形，
+或者画任何你喜欢的东西。 */
+vga_setcolor(2);
+for (y = 75; y < 120; y++)
+{
+vga_drawline(130, y, 180, y);
+}
+
+vga_getch();
+vga_setmode(TEXT);
+return 0;
+}
+
+void book_background(int color)
+{
+int x,
+y,
+xmax = vga_getxdim(),
+ymax = vga_getydim();
+
+vga_setcolor(color);
+
+for (y = 0; y < ymax; y++)
+{
+for (x = 0; x < xmax; x++)
+{
+vga_drawline(0, y, xmax, y);
+}
+}
+}
+```
+
+显然，这样做很慢，尤其是在高分辨率模式下，但它确实展示了创建自己绘图函数的原则。在第 4 章中，我们将对此做得更好，但现阶段，只要你意识到自己有简化程序的能力，就心满意足吧。
+
+确保你做出的任何颜色分配（那些没有紧接着执行绘图函数的）都位于 *book_background()* **之后**，因为一旦执行了该函数，之前的颜色就会丢失。为了说明，清单 3.14 中的代码片段展示了错误的做法。
+
+**清单 3.14 一次浪费的颜色声明。**
+
+```c
+vga_setcolor(8);
+/* 现在的颜色是深灰色 */
+
+book_background(5);
+/* 当前颜色现在是洋红色，同时背景也是洋红色 */
+
+vga_drawline(10, 10, 100, 100);
+/* 惊讶！线条是用洋红色画的，而不是深灰色，
+   导致它不可见。 */
+```
+
+你可以通过在需要颜色的函数之前立即设置颜色来避免这种情况。另一种解决方案是向 **book_background()** 传递第二个参数，该参数说明当前的颜色编号，然后修改 **book_background()** 以将当前颜色重置回其先前的赋值。明白吗？
+
+到此为止，你应该已经成了自制函数的专家。你能想出如何编写并实现 **book_square()** 吗？那么 **book_filledsquare()** 呢？
+
+### Vgagl
+
+在你开始认为 SVGAlib 是留给那些无所事事的大闲人之前，让我们跳到 vgagl 的高速、低阻力函数中。正如你可能记得的，这些函数并不完全是 SVGAlib 本身的一部分；相反，它们是补充 SVGAlib 的第二个共享库的一部分。因此，它们在编译时需要在命令行上添加另一个标志：-lvagagl。
+
+不要害怕混合使用 SVGAlib 和 vgagl 中的函数。程序不必局限于使用其中一个。事实上，vgagl 需要与我们之前使用的相同的 **vga_init()** 和 **vga_setmode()** 语句。然而，请注意，在使用 vgagl 库之前必须对其进行初始化。这是通过 **gl_setcontextvga(int mode)** 命令完成的，它应该紧跟在 **vga_setmode()** 之后。两者都应使用相同的模式号。此外，除了 <vga.h>，你还需要 #include <vgagl.h>。最后，如果你还没发现的话，所有 vgagl 函数都以 gl_ 为前缀。
+
+要使用 vgagl 函数，你 *必须* 使用 `gl_setcontextvga(int mode)` 语句，并且你 *必须* 在编译时将 `-Ivgagl` 标志放在 `-Ivga` **之前**。否则，你将面临一些段错误。最后，`#include <vgagl.h>`。
+
+现在我们准备好大展身手了。
+
+## 快速简便的形状绘制方法
+
+让我们回顾那个带有三个正方形的程序。现在我们将以 vgagl 的方式实现，如清单 3.15 所示，这意味着使用 `gl_fillbox(int x, int y, int w, int h, int c)`。
+
+**清单 3.15 使用 vgagl 绘制三个正方形。**
+
+```c
+#include <stdlib.h>
+#include <vga.h>
+#include <vgagl.h>
+
+int main(void)
+{
+    vga_init();
+    vga_setmode(G320x200x256);
+    gl_setcontextvga(G320x200x256);
+
+    gl_fillbox(30, 85, 50, 45, 4);
+    gl_fillbox(130, 85, 50, 45, 2);
+    gl_fillbox(230, 85, 50, 45, 1);
+
+    vga_getch();
+    vga_setmode(TEXT);
+    return 0;
+}
+```
+
+看，这样干净多了，不是吗？速度也快多了。vgagl 特有的部分以灰色高亮显示。我们需要向 `gl_fillbox()` 提供五个参数：左上角 x 坐标、左上角 y 坐标、宽度、高度和颜色。你这样编译它：
+
+```bash
+gcc -Wall -O3 -o gl_squares gl_squares.c -Ivgagl -Ivga
+```
+
+你可以通过绘制一个大盒子来给背景着色。要给模式 5 的屏幕一个红色背景，你只需要使用 `gl_fillbox(0, 0, 320, 200, 4)`。这绝对比 `book_background()` 棒多了。
+
+让我们用 vgagl 制作一个更有趣的程序。让我们展示 SVGAlib 的所有 256 种标准颜色，以整齐排列的 16×16 方格网格形式显示（当然用 `gl_fillbox()` 制作）。看看清单 3.16，这是我的版本。
+
+> **警告**  
+> *目前，不要尝试在 16 色模式下使用 vgagl。*
+
+**清单 3.16 整齐排列的盒子显示前 256 种标准 SVGA 颜色。**
+
+```c
+#include <stdlib.h>
+#include <vga.h>
+#include <vgagl.h>
+
+int main(void)
+{
+    int x,
+        y,
+        c = 0;
+
+    vga_init();
+    vga_setmode(G320x200x256);
+    gl_setcontextvga(G320x200x256);
+
+    for (y = 2; y < 183; y += 12)
+    {
+        for (x = 2; x < 183; x += 12)
+        {
+            gl_fillbox(x, y, 10, 10, c++);
+        }
+    }
+
+    vga_getch();
+    vga_setmode(TEXT);
+    return 0;
+}
+```
+
+图 3.4 展示了结果应该是怎样的，除了没有颜色。
+
+很酷，对吧？如果你只编译本章的一个程序，我建议就做这一个。你不仅能让朋友印象深刻，还将拥有将其作为未来编程参考的选项。需要某种色调？只要启动你的 256 色调色板选一个即可。
+
+注意颜色的后半部分相当暗。有些人抱怨他们移植到 SVGA**lib** 的程序太暗；他们的颜色并不完全相同
+
+**移植 (Port)**
+
+修改软件以使其能够在不同的操作系统下运行。如果你正在重写 Windows C 程序中针对 SVGA**lib** 的图形部分，你就将该程序移植到了 Linux。无论源和目标如何，这往往说起来容易做起来难。
+

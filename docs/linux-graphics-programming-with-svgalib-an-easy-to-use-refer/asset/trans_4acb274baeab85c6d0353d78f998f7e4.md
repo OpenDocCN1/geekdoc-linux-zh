@@ -1,0 +1,371 @@
+
+
+```c
+void tool5_down();
+void old_tool_up(int tool);
+void draw_eyedropper();
+void freehand(int x, int y, int color);
+void line(int x, int y, int color);
+int mouse_line(int x1, int y1, int x2, int y2, int c);
+void rectangle();
+void circle();
+void eyedropper();
+void flood_fill(int x, int y, int color);
+/* 盒宽 * 盒高 * 每像素15位 */
+char box[11 * 19 * 15];
+int mouse_oldline[1000][53];
+int mouse_oldline_length;
+int a, i, j;
+int color[20];
+int x, y, ox, oy;
+int button;
+bitmap_hdr file;
+int main(int argc, char *argv[])
+{
+  int key,
+      tool = 0,
+      r, g, b;
+  vga_disabledriverreport();
+  vga_init();
+  if ((a = vga_hasmode(G640x480x32K)) == 0)
+  {
+    printf("您的显卡无法处理模式\n        G640x480x32K\n");
+    exit(1);
+  }
+  if (argc > 1)
+  {
+    if ((a = read_lug_file(argv[1], &file)) == 0)
+    {
+      int c[file.xsize * file.ysize];
+      int pair[256], palr[256], palg[256], palb[256];
+      byte *ptr;
+
+      if (file.colors > 256)
+      {
+        quantize(&file, &quantfile, 256);
+        copy_bitmap(&quantfile, &file);
+        freebitmap(&quantfile);
+      }
+
+      vga_setmode(G640x480x256);
+      gl_setcontextga(G640x480x256);
+      vga_screenoff();
+
+      a = 0;
+      for (i = 0, ptr = file.cmap; i < file.colors; i++)
+      {
+        r = (double)*ptr++;
+        palr[a] = r;
+        g = (double)*ptr++;
+        palg[a] = g;
+        b = (double)*ptr++;
+        palb[a] = b;
+        gl_setpalettecolor(i, r>>2, g>>2, b>>2);
+        a++;
+      }
+
+      gl_putbox(0, 0, file.xsize, file.ysize, file.r);
+
+      a = 0;
+      for (i = 0; i < file.ysize; i++)
+      {
+        for (j = 0; j < file.xsize; j++)
+        {
+          c[a] = vga_getpixel(j, i);
+          a++;
+        }
+      }
+
+      vga_setmousesupport(1);
+      vga_setmode(G640x480x32K);
+      gl_setcontextvga(G640x480x32K);
+      vga_screenon();
+
+      prep_screen();
+
+      a = 0;
+      for (i = 0; i < file.ysize; i++)
+      {
+        for (j = 0; j < file.xsize; j++)
+        {
+          gl_setpixelrgb(LEFT + j, TOP + i, palr[c[a]],
+                         palg[c[a]], palb[c[a]]);
+          a++;
+        }
+      }
+    } else {
+      exit(1);
+    }
+  } else {
+    vga_setmousesupport(1);
+    vga_setmode(G640x480x32K);
+    gl_setcontextvga(G640x480x32K);
+    prep_screen();
+  }
+
+  x = ox = 50;
+  y = oy = 50;
+
+  mouse_setposition(x, y);
+
+  gl_getbox(x, y, 11, 19, box);
+  draw_cursor(x, y);
+
+  while (((key = vga_getkey()) != 27) && (key != 81)
+         && (key != 113))
+  {
+    mouse_update();
+    x = mouse_getx();
+    y = mouse_gety();
+    button = mouse_getbutton();
+
+    if ((x != ox) || (y != oy))
+    {
+      move_cursor(x, y, ox, oy);
+      ox = x;
+      oy = y;
+    }
+
+    if (button & MOUSE_LEFTBUTTON)
+    {
+      if ((x >= LEFT) && (x <= RIGHT) && (y >= TOP)
+          && (y <= BOTTOM))
+      /* 我们在绘图区域内 */
+      {
+        switch(tool)
+        {
+
+        case 1:
+          line(x, y, color[19]);
+          break;
+        case 2:
+          rectangle();
+          break;
+        case 3:
+          circle();
+          break;
+        case 4:
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          gl_getpixelrgb(x, y, &r, &g, &b);
+          draw_cursor(x, y);
+          color[19] = gl_rgbcolor(r, g, b);
+          gl_fillbox(16, 426, 28, 28, color[19]);
+          break;
+        case 5:
+          flood_fill(x, y, color[19]);
+          break;
+        default:
+          freehand(x, y, color[19]);
+        }
+      } else if ((x >= 4) && (x < 29) &&
+                 (y >= 75)
+                 && (y < 152)) {
+        /* 我们在左侧工具列中 */
+        if ((y >= 75) && (y <= 100))
+        /* 自由画笔 */
+        {
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          old_tool_up(tool);
+          tool = 0;
+          tool0_down();
+          gl_getbox(x, y, 11, 19, box);
+          draw_cursor(x, y);
+        } else if ((y > 101) && (y < 126))
+        /* 矩形 */
+        {
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          old_tool_up(tool);
+          tool = 2;
+          tool2_down();
+          gl_getbox(x, y, 11, 19, box);
+          draw_cursor(x, y);
+        } else if ((y >= 127) && (y <= 152))
+        /* 吸管工具 */
+        {
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          old_tool_up(tool);
+          tool = 4;
+          tool4_down();
+          gl_getbox(x, y, 11, 19, box);
+          draw_cursor(x, y);
+        }
+      } else if ((x >= 30) && (x < 55) && (y >= 75)
+                 && (y <= 152)) {
+        /* 我们在右侧工具列中 */
+        if ((y >= 75) && (y <= 100))
+        /* 直线 */
+        {
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          old_tool_up(tool);
+          tool = 1;
+          tool1_down();
+          gl_getbox(x, y, 11, 19, box);
+          draw_cursor(x, y);
+        } else if ((y >= 101) && (y <= 126))
+        /* 圆形 */
+        {
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          old_tool_up(tool);
+          tool = 3;
+          tool3_down();
+          gl_getbox(x, y, 11, 19, box);
+          draw_cursor(x, y);
+        } else if ((y >= 127) && (y <= 152))
+        /* 洪水填充 */
+        {
+          vga_waitretrace();
+          gl_putbox(x, y, 11, 19, box);
+          old_tool_up(tool);
+          tool = 5;
+          tool5_down();
+          gl_getbox(x, y, 11, 19, box);
+          draw_cursor(x, y);
+        }
+      }
+      else if ((x >= 9) && (x < 28) && (y > 250)) {
+        /* 我们在左侧调色板列中 */
+        if ((y >= 250) && (y <= 269))
+          /* 颜色 0 */
+          {
+            color[19] = color[0];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 271) && (y <= 290))
+          /* 颜色 2 */
+          {
+            color[19] = color[2];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 292) && (y <= 311))
+          /* 颜色 4 */
+          {
+            color[19] = color[4];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 313) && (y <= 332))
+          /* 颜色 6 */
+          {
+            color[19] = color[6];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 334) && (y <= 353))
+          /* 颜色 8 */
+          {
+            color[19] = color[8];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 355) && (y <= 374))
+          /* 颜色 10 */
+          {
+            color[19] = color[10];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 376) && (y <= 395))
+          /* 颜色 12 */
+          {
+            color[19] = color[12];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          } else if ((y >= 397) && (y <= 416))
+          /* 颜色 14 */
+          {
+            color[19] = color[14];
+            gl_fillbox(16, 426, 28, 28, color[19]);
+          }
+      } else if ((x >= 30) && (x < 49) && (y > 250)) {
+        /* 我们在右侧调色板列中 */
+        if ((y >= 250) && (y <= 269))
+        /* 颜色 1 */
+        {
+          color[19] = color[1];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 271) && (y <= 290))
+        /* 颜色 3 */
+        {
+          color[19] = color[3];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 292) && (y <= 311))
+        /* 颜色 5 */
+        {
+          color[19] = color[5];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 313) && (y <= 332))
+        /* 颜色 7 */
+        {
+          color[19] = color[7];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 334) && (y <= 353))
+        /* 颜色 9 */
+        {
+          color[19] = color[9];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 355) && (y <= 374))
+        /* 颜色 11 */
+        {
+          color[19] = color[11];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 376) && (y <= 395))
+        /* 颜色 13 */
+        {
+          color[19] = color[13];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        } else if ((y >= 397) && (y <= 416))
+        /* 颜色 15 */
+        {
+          color[19] = color[15];
+          gl_fillbox(16, 426, 28, 28, color[19]);
+        }
+      }
+    }
+  }
+
+  vga_setmode(TEXT);
+  return 0;
+}
+
+void prep_screen()
+{
+  for (i = 0; i <= 15; i++)
+  {
+    color[i] = vga_setegacolor(i);
+  }
+
+  color[16] = gl_rgbcolor(235, 235, 235); /* 背景色 */
+  color[17] = gl_rgbcolor(51, 51, 255); /* 菜单栏 */
+  color[18] = gl_rgbcolor(130, 130, 130); /* 深灰色 */
+  color[19] = color[0]; /* 当前颜色 */
+
+  /* 绘制背景 */
+  gl_clearscreen(color[16]);
+
+  /* 绘制菜单栏 */
+  gl_fillbox(0, 0, 640, 20, color[17]);
+  prep_font(color[15]);
+  gl_write(50, 5, "File\0");
+  gl_write(110, 5, "Edit\0");
+
+  /* 绘制工具 */
+  tool0_down();
+  tool1_up();
+  tool2_up();
+  tool3_up();
+  tool4_up();
+  tool5_up();
+
+  /* 绘制调色板 */
+  for (i = 0; i <= 7; i++)
+  {
+    y = (250 + (i * 21));
+    gl_hline(9, (y + 20), 49, color[15]);
+
+    gl_fillbox(9, y, 20, 20, color[i * 2]);
+
+    gl_hline(9, y, 28, color[18]);
+    gl_line(10, (y + 1), 27, color[0]);
+    gl_line(10, (y + 19), 28, color[7]);
+    gl_line(9, (y + 1), 9, (y + 19), color[18]);
+    gl_line(10, (y + 2), 10, (y + 18), color[0]);
+    gl_line(28, (y + 1), 28, (y + 18), color[7]);
+  }
+}
+```
+

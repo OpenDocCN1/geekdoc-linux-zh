@@ -1004,6 +1004,7 @@
 +   [Linux 基础：数据科学家、机器学习工程师及 IT 专业人士实用指南](docs/linux-fundamentals-a-practical-guide-for-data-scientists-mac/README.md)
 +   [Linux+：基础与认证、实验手册及软件模拟工具包](docs/linux-fundamentals-and-certification-lab-manual-software-sim/README.md)
 +   [Linux 游戏编程 (Prima Tech 游戏开发)](docs/linux-game-programming-wcd-prima-techs-game-development/README.md)
++   [Linux 图形编程与 SVGAlib：面向 Linux 图形程序员 的 易用参考](docs/linux-graphics-programming-with-svgalib-an-easy-to-use-refer/README.md)
 +   [Linux 初学者指南：Linux 操作系统与 Linux 命令最佳指南](docs/linux-guide-for-beginners-the-best-guide-to-the-linux-operat/README.md)
 +   [Linux 初学者指南：掌握 Linux 操作系统、核心 Linux 命令并自信高效地探索 Linux 世界的终极指南](docs/linux-guide-for-beginners-the-ultimate-guide-to-mastering-th/README.md)
 +   [Linux 认证指南第 2 版](docs/linux-guide-to-linux-certification-2nd-edition/README.md)
