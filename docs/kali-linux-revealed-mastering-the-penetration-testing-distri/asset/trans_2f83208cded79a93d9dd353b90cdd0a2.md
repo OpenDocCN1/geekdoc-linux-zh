@@ -1,0 +1,154 @@
+
+ponents 是发行版的某种子部分，可以在 APT 的 sources.list 中单独启用）。Origin 和 Description 字段纯粹是提供信息的，它们会原样复制到 Release 文件中。SignWith 字段要求 reprepro 使用列出的标识符对应的 GnuPG 密钥对存储库进行签名（请在此处输入完整的指纹，以确保使用正确的密钥，而不是与短标识符发生冲突的其他密钥）。AlsoAcceptFor 设置不是必需的，但它使得能够处理 Distribution 字段包含此处列出值的 .changes 文件（如果没有此设置，在该字段中只接受发行版的代号）。
+
+完成这些基本配置后，你可以让 reprepro 生成一个空的软件包存储库：
+
+```
+$ reprepro export
+Exporting indices...
+$ find .
+./db
+./db/version
+./db/references.db
+./db/contents.cache.db
+./db/checksums.db
+./db/packages.db
+./db/release.caches.db
+./conf
+./conf/distributions
+./dists
+./dists/offsec-internal
+./dists/offsec-internal/Release.gpg
+./dists/offsec-internal/Release
+./dists/offsec-internal/main
+./dists/offsec-internal/main/source
+./dists/offsec-internal/main/source/Release
+./dists/offsec-internal/main/binary-amd64
+./dists/offsec-internal/main/binary-amd64/Packages.gz
+./dists/offsec-internal/main/binary-amd64/Release
+./dists/offsec-internal/main/binary-i386
+./dists/offsec-internal/main/binary-i386/Packages.gz
+./dists/offsec-internal/main/binary-i386/Release
+./dists/offsec-internal/main/binary-i386/Packages.gz
+./dists/offsec-internal/InRelease
+```
+
+如你所见，reprepro 在 dists 子目录中创建了存储库的元信息。它还初始化了 db 子目录中的内部数据库。
+
+现在是时候添加第一个软件包了。首先，将 offsec-defaults 软件包构建生成的文件（offsec-defaults_1.0.dsc, offsec-defaults_1.0.tar.xz, offsec-defaults_1.0_all.deb, 和 offsec-defaults_1.0_amd64.changes）复制到托管该软件包存储库的服务器上的 /tmp/ 目录，并要求 reprepro 包含该软件包：
+
+```
+$ reprepro include offsec-internal /tmp/offsec-defaults_1.0_amd64.changes
+Exporting indices...
+$ find pool
+pool
+pool/main
+pool/main/o
+pool/main/o/offsec-defaults
+pool/main/o/offsec-defaults/offsec-defaults_1.0.dsc
+pool/main/o/offsec-defaults/offsec-defaults_1.0.tar.xz
+pool/main/o/offsec-defaults/offsec-defaults_1.0_all.deb
+```
+
+如你所见，它将这些文件添加到了 pool 子目录中其专属的软件包池里。
+
+dists 和 pool 目录是你需要通过 HTTP（公开地）提供服务的两个目录，以完成 APT 存储库的设置。它们包含 APT 需要下载的所有文件。
+
+假设你想在名为 pkgrepo.offsec.com 的虚拟主机上托管此内容，你可以创建以下 Apache 配置文件，将其保存为 /etc/apache2/sites-available/pkgrepo.offsec.com.conf，并使用 a2ensite pkgrepo.offsec.com 启用它：
+
+```
+<VirtualHost *:80>
+ServerName pkgrepo.offsec.com
+ServerAdmin repoadmin@offsec.com
+
+ErrorLog /var/log/apache2/pkgrepo.offsec.com-error.log
+CustomLog /var/log/apache2/pkgrepo.offsec.com-access.log "%h %l %u %t %r %>s %0"
+
+DocumentRoot /home/pkgrepo/reprepro
+
+<Directory "/home/pkgrepo/reprepro">
+Options Indexes FollowSymLinks MultiViews
+Require all granted
+AllowOverride All
+</Directory>
+</VirtualHost>
+```
+
+需要在该存储库获取软件包的机器上添加的相应 sources.list 条目看起来像这样：
+
+```
+deb http://pkgrepo.offsec.com offsec-internal main
+
+# 如果你想要访问源代码软件包，请启用下一行
+# deb-src http://pkgrepo.offsec.com offsec-internal main
+```
+
+你的软件包现在已经发布，并且应该对你的网络主机可用。
+
+虽然这是一个冗长的设置过程，但“繁重的工作”已经完成。你可以通过 PXE 启动你的网络机器，借助网络下发的 preseed 文件安装定制版的 Kali Linux 而无需交互，配置 SaltStack 来管理你的配置（并控制 minion！），创建分支定制软件包，并通过你自己的软件包存储库分发这些软件包。这提供了对多个 Kali Linux 安装的中心化管理和企业级控制。简而言之，你现在可以迅速部署为你特定需求预配置的高度安全的 Kali 系统，并依靠 Kali 的（半自动）软件包更新安装保持它们同步。
+
+## 10.4. 总结
+
+Kali Linux 的扩展性超越了桌面，达到中等或大规模部署，甚至企业级水平。在本章中，我们介绍了如何使用 SaltStack 集中管理多个 Kali 安装实例，从而能够快速部署为你特定需求预配置的高度安全的 Kali 系统。我们还揭示了如何利用 Kali 的（半自动）软件包更新安装保持这些系统同步。
+
+我们讨论了软件包分支，它允许你创建自己定制的可分发源软件包。
+
+总之，让我们回顾建立 Salt master 和 minion 的主要步骤，这些步骤允许你对远程主机进行远程控制和配置。
+
+### 总结提示：
+
+- 使用 PXE 从网络启动机器，至少需要一个 TFTP 文件服务器，一个 DHCP/TFTP 服务器（以及用于 debconf preseed 的 web 服务器）。`dnsmasq` 同时处理 DHCP 和 TFTP，而 `apache2` web 服务器在 Kali 上是预装的（但默认禁用）。
+- Debian 安装手册涵盖了为 PXE 启动设置 `isc-dhcp-server` 和 `tftpd-hpa` 的内容：
+  - https://www.debian.org/releases/amd64/ch04s05.html
+- `dnsmasq` 通过 `/etc/dnsmasq.conf` 进行配置。基本配置仅由少数几行关键配置组成：
+
+```
+# 要处理的网络接口
+interface=eth0
+# DHCP 选项
+# 要分配的 IP 范围
+dhcp-range=192.168.101.100,192.168.101.200,12h
+# 通告给客户端的网关
+dhcp-option=option:router,192.168.101.1
+# 通告给客户端的 DNS 服务器
+dhcp-option=option:dns-server,8.8.8.8,8.8.4.4
+# 通告给客户端的启动文件
+dhcp-boot=pxelinux.0
+# TFTP 选项
+enable-tftp
+# 托管待服务文件的目录
+tftp-root=/tftpboot/
+```
+
+- 将 Kali 存档中的 32 位（i386）、64 位（amd64）、标准或图形（gtk）安装启动文件解压到 /tftpboot/ 中。可以在这里找到这些存档：
+  - `http://http.kali.org/dists/kali-rolling/main/installer-amd64/current/images/netboot/gtk/netboot.tar.gz`
+  - `http://http.kali.org/dists/kali-rolling/main/installer-amd64/current/images/netboot/netboot.tar.gz`
+  - `http://http.kali.org/dists/kali-rolling/main/installer-i386/current/images/netboot/gtk/netboot.tar.gz`
+  - `http://http.kali.org/dists/kali-rolling/main/installer-i386/current/images/netboot/netboot.tar.gz`
+
+```
+# mkdir /tftpboot
+# cd /tftpboot
+# wget http://http.kali.org/dists/kali-rolling/main/installer-amd64/current/images/netboot/netboot.tar.gz
+# tar xf netboot.tar.gz
+```
+
+- 可选地修改 `txt.cfg` 以预置参数或自定义超时。参见第 4.3 节，“无人值守安装”[第 91 页]。接下来，你可以利用配置管理工具来管理机器或将远程计算机配置到任何所需状态。
+- SaltStack 是一种集中式配置管理服务：一个 Salt master 管理许多 Salt minion。在可达的服务器上安装 *salt-master* 软件包，在受管主机上安装 *salt-minion*。
+- 编辑 YAML 格式的配置文件 `/etc/salt/minion`，并将 master 键设置为 Salt master 的 DNS 名称（或 IP 地址）。
+- 在 `/etc/salt/minion.id` 中设置 minion 的唯一标识符：
+
+```
+minion# echo kali-scratch >/etc/salt/minion.id
+minion# systemctl enable salt-minion
+minion# systemctl start salt-minion
+```
+
+- 随后将进行密钥交换。在 master 上，接受 minion 的标识密钥。后续连接将是自动的：
+
+```
+master# systemctl enable salt-master
+master# systemctl start salt-master
+master# salt-key --list all
+```
+

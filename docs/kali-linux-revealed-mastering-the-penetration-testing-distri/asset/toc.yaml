@@ -1,0 +1,986 @@
+- - '#'
+  - Kali Linux 揭秘：精通渗透测试发行版
+- - '##'
+  - 前言
+- - '##'
+  - 引言
+- - '#'
+  - KALI LINUX
+- - '##'
+  - 关键词
+- - '##'
+  - 关于 Kali Linux
+- - '##'
+  - 1.3. 目的与用例
+- - '##'
+  - 1.4. 主要 Kali Linux 功能
+- - '##'
+  - 1.5. Kali Linux 策略
+- - '##'
+  - 1.6. 总结
+- - '#'
+  - 开始使用 Kali Linux
+- - '#'
+  - 下载 Kali Linux 镜像
+- - '##'
+  - 2.1.4. 在 DVD-ROM 或 U 盘上复制映像
+- - '###'
+  - 在 OS X/macOS 上创建可引导的 Kali USB 驱动器
+- - '###'
+  - 在 Windows 上创建可引导的 Kali USB 驱动器
+- - '###'
+  - 从命令行创建可引导的 USB 驱动器
+- - '###'
+  - 在 Linux 上创建可引导的 Kali USB 驱动器
+- - '##'
+  - 2.2. 以实时模式启动 Kali ISO 镜像
+- - '###'
+  - 2.2.1. 在实体计算机上
+- - '###'
+  - 2.2.2. 在虚拟机中
+- - '####'
+  - VirtualBox
+- - '####'
+  - VMware
+- - '####'
+  - 预备说明
+- - '###'
+  - 2.2.3. 摘要
+- - '###'
+  - 关键词
+- - '#'
+  - 3 Linux 基础
+- - '##'
+  - 3.1. 什么是 Linux 以及它在做什么？
+- - '###'
+  - 3.1.1. 驱动硬件
+- - '###'
+  - 3.1.2. 统一文件系统
+- - '###'
+  - 3.1.3. 管理进程
+- - '###'
+  - 3.1.4. 权限管理
+- - '##'
+  - 3.2. 命令行
+- - '###'
+  - 3.2.1. 如何获取命令行
+- - '###'
+  - 3.2.2. 命令行基础：浏览目录树和管理文件
+- - '##'
+  - 3.3. 文件系统
+- - '###'
+  - 3.3.1. 文件系统层次标准
+- - '###'
+  - 3.3.2. 用户主目录
+- - '##'
+  - 3.4. 实用命令
+- - '###'
+  - 3.4.1. 显示和修改文本文件
+- - '###'
+  - 3.4.2. 在文件和内部搜索
+- - '###'
+  - 3.4.3. 管理进程
+- - '###'
+  - 3.4.4. 管理权限
+- - '####'
+  - setuid 和 setgid 可执行文件
+- - '####'
+  - 安全
+- - '####'
+  - setgid 目录和粘滞位
+- - '####'
+  - 提示：更改用户和组
+- - '####'
+  - 递归操作
+- - '###'
+  - 3.4.5. 获取系统信息和日志
+- - '###'
+  - 3.4.6. 发现硬件
+- - '###'
+  - 3.5. 摘要
+- - '###'
+  - 关键词
+- - '#'
+  - KALI LINUX 揭秘
+- - '#'
+  - 安装 Kali Linux 4
+- - '##'
+  - 4.2. 在硬盘上逐步安装
+- - '###'
+  - 4.2.1. 普通安装
+- - '####'
+  - 启动并运行安装程序
+- - '####'
+  - 选择语言
+- - '####'
+  - 使用键盘导航
+- - '####'
+  - 选择国家
+- - '####'
+  - 选择键盘布局
+- - '####'
+  - 检测硬件
+- - '####'
+  - 加载组件
+- - '####'
+  - 检测网络硬件
+- - '####'
+  - 配置网络
+- - '#####'
+  - 不使用 DHCP 的配置
+- - '####'
+  - 根用户密码
+- - '####'
+  - 管理员密码
+- - '####'
+  - 配置时钟
+- - '####'
+  - 检测磁盘和其他设备
+- - '####'
+  - 分区
+- - '#####'
+  - 引导分区
+- - '#####'
+  - 接下来，引导式分区工具提供三种分区方法
+- - '######'
+  - 4.10 图 *引导式分区分配*
+- - '######'
+  - 手动分区
+- - '######'
+  - 缩小 Windows 分区
+- - '######'
+  - 复制 Live 镜像
+- - '####'
+  - 配置包管理器 (apt)
+- - '####'
+  - 安装 GRUB 引导加载器
+- - '####'
+  - 完成安装并重启
+- - '###'
+  - 4.2.2. 在完全加密的文件系统上安装
+- - '####'
+  - LVM 简介
+- - '####'
+  - LUKS 简介
+- - '####'
+  - 设置加密分区
+- - '##'
+  - 4.3. 无人值守安装
+- - '###'
+  - 使用加密 LVM 的引导式分区结束
+- - '###'
+  - 4.3.1. 预置答案
+- - '####'
+  - 使用启动参数
+- - '####'
+  - 使用 Initrd 中的预置文件
+- - '####'
+  - 使用启动介质中的预置文件
+- - '####'
+  - 使用从网络加载的预置文件
+- - '###'
+  - 4.3.2. 创建预置文件
+- - '##'
+  - 4.4. ARM 安装
+- - '###'
+  - 特殊情况及更详细的文档
+- - '##'
+  - 4.5. 安装故障排除
+- - '###'
+  - 可以在安装程序 Shell 中执行的操作
+- - '##'
+  - 4.6. 总结
+- - '##'
+  - 关键词
+- - '#'
+  - 第 5 章
+- - '##'
+  - 5.1. 配置网络
+- - '###'
+  - 5.1.1. 在桌面上使用 *NetworkManager*
+- - '###'
+  - 5.1.2. 在命令行中使用 ifupdown
+- - '###'
+  - 5.1.3. 在命令行中使用 *systemd-networkd*
+- - '####'
+  - 示例 5.2 /etc/systemd/network/50-static.network 中的静态配置
+- - '####'
+  - systemctl enable systemd-networkd
+- - '####'
+  - systemctl enable systemd-resolved
+- - '####'
+  - systemctl start systemd-networkd
+- - '####'
+  - systemctl start systemd-resolved
+- - '####'
+  - ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+- - '##'
+  - 5.2. 管理 Unix 用户和 Unix 组
+- - '###'
+  - 5.2.1. 创建用户账户
+- - '###'
+  - 5.2.2. 修改现有账户或密码
+- - '###'
+  - 5.2.3. 禁用账户
+- - '###'
+  - 5.2.4. 管理 Unix 组
+- - '##'
+  - 5.3. 配置服务
+- - '###'
+  - 5.3.1. 配置特定程序
+- - '###'
+  - 5.3.2. 配置 SSH 进行远程登录
+- - '####'
+  - 生成新的 SSH 主机密钥
+- - '####'
+  - passwd
+- - '####'
+  - rm /etc/ssh/ssh_host_*
+- - '####'
+  - dpkg-reconfigure openssh-server
+- - '####'
+  - service ssh restart
+- - '###'
+  - 5.3.3. 配置 PostgreSQL 数据库
+- - '####'
+  - 支持多个 PostgreSQL 版本
+- - '####'
+  - 连接类型和客户端认证
+- - '####'
+  - 创建用户和数据库
+- - '####'
+  - 管理 PostgreSQL 集群
+- - '###'
+  - 5.3.4. 配置 Apache
+- - '####'
+  - 配置虚拟主机
+- - '####'
+  - '*常用指令*'
+- - '####'
+  - 要求身份验证
+- - '#####'
+  - 示例 5.3 要求身份验证的 `.htaccess` 文件
+- - '#####'
+  - htpasswd /etc/apache2/authfiles/htpasswd-private user
+- - '####'
+  - 限制访问
+- - '##'
+  - 5.4. 管理服务
+- - '####'
+  - systemctl status postgresql
+- - '####'
+  - ls -al /etc/systemd/system/multi-user.target.wants/postgresql.service
+- - '####'
+  - systemctl enable postgresql
+- - '####'
+  - ls -al /etc/systemd/system/multi-user.target.wants/postgresql.service
+- - '####'
+  - systemctl status postgresql
+- - '####'
+  - systemctl start postgresql
+- - '####'
+  - systemctl status postgresql
+- - '##'
+  - 5.5. 总结
+- - '###'
+  - 总结要点：
+- - '##'
+  - KALI LINUX REVEALED
+- - '##'
+  - 第 6 章
+- - '###'
+  - 6.1. 文档来源
+- - '####'
+  - 6.1.1. 手册页
+- - '####'
+  - 6.1.2. Info 文档
+- - '####'
+  - 6.1.3. 软件包特定文档
+- - '####'
+  - 6.1.4. 网站
+- - '####'
+  - 6.1.5. docs.kali.org 上的 Kali 文档
+- - '###'
+  - 6.2. Kali Linux 社区
+- - '####'
+  - 6.2.1. forums.kali.org 上的网络论坛
+- - '####'
+  - '6.2.2. Freenode 上的 #kali-linux IRC 频道'
+- - '###'
+  - 6.3. 提交良好的错误报告
+- - '####'
+  - 6.3.1. 通用建议
+- - '#####'
+  - 沟通方式
+- - '#####'
+  - Bug 报告中应包含什么
+- - '#####'
+  - 其他提示
+- - '####'
+  - 6.3.2. 在哪里提交 Bug 报告
+- - '####'
+  - 6.3.3. 如何提交错误报告
+- - '#####'
+  - 软件包来源与错误报告
+- - '######'
+  - 针对 Debian 提交错误前请再次检查
+- - '#####'
+  - 在 Kali 中提交错误报告
+- - '######'
+  - 注册错误跟踪器账户
+- - '######'
+  - 创建报告
+- - '#####'
+  - 在 Debian 中提交错误报告
+- - '######'
+  - 配置 Reportbug
+- - '######'
+  - 使用 Reportbug
+- - '######'
+  - 您如何评估此问题或报告的严重性？
+- - '######'
+  - 示例 6.2 由 reportbug 生成的模板
+- - '###'
+  - 6.4. 摘要
+- - '####'
+  - 摘要技巧：
+- - '####'
+  - 关键词
+- - '#'
+  - KALI LINUX REVEALED（Kali Linux 揭秘）
+- - '#'
+  - 第 7 章
+- - '##'
+  - 保护与监控 Kali Linux
+- - '##'
+  - 7.1. 定义安全策略
+- - '##'
+  - 7.2. 可能的安全措施
+- - '###'
+  - 7.2.1. 在服务器上
+- - '###'
+  - 7.2.2. 在笔记本电脑上
+- - '##'
+  - 7.3. 保护网络服务
+- - '##'
+  - 7.4. 防火墙或包过滤
+- - '###'
+  - 7.4.1. Netfilter 行为
+- - '####'
+  - 图 7.1 Netfilter 规则链的调用方式
+- - '###'
+  - 7.4.2. iptables 和 ip6tables 的语法
+- - '####'
+  - 命令
+- - '####'
+  - 规则
+- - '#####'
+  - 否定条件
+- - '#####'
+  - iptables -A INPUT -s 10.0.1.5 -j DROP
+- - '#####'
+  - iptables -A INPUT -s 31.13.74.0/24 -j DROP
+- - '#####'
+  - iptables -n -L INPUT
+- - '#####'
+  - iptables -A INPUT -m state --state NEW -p tcp --dport 22 -j ACCEPT
+- - '#####'
+  - iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+- - '#####'
+  - iptables -A INPUT -m state --state NEW -p tcp --dport 143 -j ACCEPT
+- - '#####'
+  - iptables -n -L INPUT
+- - '#####'
+  - iptables -n -L INPUT --line-numbers
+- - '#####'
+  - iptables -D INPUT 2
+- - '#####'
+  - iptables -D INPUT 1
+- - '#####'
+  - iptables -n -L INPUT --line-numbers
+- - '###'
+  - 7.4.3. 创建规则
+- - '####'
+  - apt install fwbuilder
+- - '###'
+  - 7.4.4. 在每次启动时安装规则
+- - '##'
+  - 7.5. 监控与日志记录
+- - '###'
+  - 7.5.1. 使用 logcheck 监控日志
+- - '###'
+  - 7.5.2. 实时监控活动
+- - '###'
+  - 7.5.3. 检测更改
+- - '####'
+  - 使用 dpkg --verify 审计软件包
+- - '####'
+  - 什么是文件指纹？
+- - '#####'
+  - dpkg -V
+- - '####'
+  - 监控文件：AIDE
+- - '###'
+  - 7.6. 摘要
+- - '####'
+  - 总结小贴士
+- - '####'
+  - 关键词
+- - '##'
+  - 第 8 章 Debian 软件包管理
+- - '###'
+  - 8.1. 简介 APT
+- - '####'
+  - 8.1.1. APT 和 dpkg 之间的关系
+- - '####'
+  - 8.1.2. 理解 sources.list 文件
+- - '#####'
+  - deb cdrom:[Debian GNU/Linux 2016.1 Kali-rolling - Official Snapshot amd64 LIVE/\
+- - '####'
+  - 8.1.3. Kali 软件仓库
+- - '#####'
+  - Main Kali repository
+- - '#####'
+  - Kali-Rolling 软件仓库
+- - '#####'
+  - Kali-Dev 软件仓库
+- - '#####'
+  - Kali-Bleeding-Edge 软件仓库
+- - '#####'
+  - Kali Bleeding Edge repository
+- - '#####'
+  - Kali Linux 镜像
+- - '##'
+  - 8.2. 基本软件包交互
+- - '###'
+  - 8.2.1. 初始化 APT
+- - '###'
+  - 8.2.2. 安装包
+- - '####'
+  - 使用 dpkg 安装包
+- - '#####'
+  - dpkg -i man-db_2.7.0.2-5_amd64.deb
+- - '#####'
+  - dpkg --unpack man-db_2.7.0-2.5_amd64.deb
+- - '#####'
+  - dpkg --configure man-db
+- - '####'
+  - 使用 APT 安装包
+- - '#####'
+  - apt install kali-linux-gpu
+- - '#####'
+  - apt -o Dpkg::Options::="--force-overwrite" install zsh
+- - '###'
+  - 8.2.3. 升级 Kali Linux
+- - '###'
+  - 8.2.4. 移除和清除软件包
+- - '#####'
+  - dpkg --remove kali-linux-gpu
+- - '#####'
+  - apt install package1 package2-
+- - '#####'
+  - apt remove package1+ package2
+- - '#####'
+  - dpkg -r debian-cd
+- - '#####'
+  - dpkg -P debian-cd
+- - '###'
+  - 8.2.5. 检查软件包
+- - '####'
+  - 查询 `dpkg` 数据库并检查 `.deb` 文件
+- - '####'
+  - 使用 apt-cache 和 apt 查询可用软件包数据库
+- - '#####'
+  - 缓存
+- - '#####'
+  - 替代方案：axi-cache
+- - '###'
+  - 8.2.6. 故障排除
+- - '####'
+  - 处理升级后的问题
+- - '####'
+  - 利用错误报告
+- - '#####'
+  - 降级到可用的版本
+- - '#####'
+  - 处理损坏的维护脚本
+- - '#####'
+  - dpkg 日志文件
+- - '######'
+  - tail /var/log/dpkg.log
+- - '####'
+  - 使用 apt --reinstall 和 aptitude reinstall 重新安装包
+- - '#####'
+  - apt --reinstall install postfix
+- - '#####'
+  - apt install w3af/kali-rolling
+- - '####'
+  - 利用 --force-* 修复损坏的依赖关系
+- - '#####'
+  - apt full-upgrade
+- - '###'
+  - 8.2.7. 前端：aptitude 和 synaptic
+- - '####'
+  - Aptitude
+- - '#####'
+  - aptitude 的文档
+- - '######'
+  - 在命令行界面中使用 aptitude
+- - '#######'
+  - aptitude markauto `~slibs|~sperl`
+- - '######'
+  - 管理推荐、建议和任务
+- - '######'
+  - 更好的求解算法
+- - '######'
+  - Aptitude 的日志
+- - '####'
+  - Synaptic
+- - '##'
+  - 8.3. 高级 APT 配置和使用
+- - '###'
+  - 8.3.1. 配置 APT
+- - '#####'
+  - apt -o Dpkg::Options::="--force-overwrite" install zsh
+- - '###'
+  - 8.3.2. 管理软件包优先级
+- - '####'
+  - Kali-Bleeding-Edge 和 Debian Experimental 的优先级
+- - '###'
+  - 8.3.3. 处理多个发行版
+- - '###'
+  - 8.3.4. 跟踪自动安装的包
+- - '###'
+  - 8.3.5. 利用多架构支持
+- - '####'
+  - 启用多架构
+- - '#####'
+  - dpkg --print-architecture
+- - '#####'
+  - wine
+- - '#####'
+  - dpkg --add-architecture i386
+- - '#####'
+  - dpkg --print-foreign-architectures
+- - '#####'
+  - apt update
+- - '#####'
+  - apt install wine32
+- - '#####'
+  - wine
+- - '#####'
+  - dpkg --remove-architecture i386
+- - '#####'
+  - dpkg --print-foreign-architectures
+- - '####'
+  - 与多架构相关的更改
+- - '###'
+  - 8.3.6. 验证软件包真实性
+- - '#####'
+  - apt-key fingerprint
+- - '##'
+  - 8.4. 软件包参考：深入探讨 Debian 软件包系统
+- - '###'
+  - 8.4.1. The control File
+- - '####'
+  - 'Dependencies: the Depends Field'
+- - '####'
+  - Pre-Depends, a More Demanding Depends
+- - '####'
+  - Recommends, Suggests, and Enhaces Fields
+- - '####'
+  - 'Conflicts: the Conflicts Field'
+- - '####'
+  - 不兼容性：Breaks 字段
+- - '####'
+  - 提供项目：Provides 字段
+- - '#####'
+  - 提供服务
+- - '#####'
+  - 与另一个软件包的互换性
+- - '####'
+  - 替换文件：Replaces 字段
+- - '###'
+  - 8.4.2. 配置脚本
+- - '####'
+  - Automatically added by dh_installdeb
+- - '####'
+  - End automatically added section
+- - '####'
+  - dpkg 数据库
+- - '#####'
+  - 安装和升级脚本序列
+- - '#####'
+  - 软件包移除
+- - '#####'
+  - debconf 工具
+- - '###'
+  - 8.4.3. 校验和、Conffiles
+- - '##'
+  - 8.5. 摘要
+- - '###'
+  - 摘要提示
+- - '###'
+  - 关键词
+- - '##'
+  - KALI LINUX REVEALED
+- - '#'
+  - 高级用法 9
+- - '##'
+  - 9.1. 修改 Kali 软件包
+- - '###'
+  - 9.1.1. 获取源代码
+- - '####'
+  - 从 Git 获取源码
+- - '###'
+  - 9.1.2. 安装构建依赖
+- - '###'
+  - 9.1.3. 进行更改
+- - '####'
+  - 应用补丁
+- - '###'
+  - 9.1.4. 修补上游代码（推断上下文）
+- - '###'
+  - 9.1.5. 调整构建选项
+- - '###'
+  - 9.1.6. 打包新的上游版本
+- - '###'
+  - 9.1.7. 开始构建
+- - '##'
+  - 9.2. 重新编译 Linux 内核
+- - '###'
+  - 重要
+- - '###'
+  - 9.2.1. 简介和先决条件
+- - '####'
+  - apt install build-essential libncurses5-dev fakeroot
+- - '###'
+  - 9.2.2. 获取源代码
+- - '####'
+  - apt install linux-source-4.9
+- - '####'
+  - ls /usr/src
+- - '###'
+  - 9.2.3. 配置内核
+- - '###'
+  - 9.2.4. 编译和构建软件包
+- - '##'
+  - 9.3. 构建自定义 Kali Live ISO 镜像
+- - '###'
+  - 9.3.1. 安装先决条件
+- - '####'
+  - apt install curl git live-build
+- - '####'
+  - git clone git://git.kali.org/live-build-config.git
+- - '####'
+  - cd live-build-config
+- - '####'
+  - ls
+- - '###'
+  - 9.3.2. 使用不同的桌面环境构建 Live 镜像
+- - '####'
+  - ./build.sh --variant kde --verbose
+- - '###'
+  - 9.3.3. 更改已安装包的集合
+- - '###'
+  - 9.3.4. 使用钩子调整镜像内容
+- - '###'
+  - 9.3.5. 在 ISO 镜像或实时文件系统中添加文件
+- - '##'
+  - 9.4. 使用 USB 键为 Live ISO 添加持久性
+- - '###'
+  - 9.4.1. 持久性功能：解释
+- - '###'
+  - 9.4.2. 在 USB 键上设置未加密持久性
+- - '####'
+  - parted /dev/sdb print
+- - '####'
+  - start=$(du -b --block-size=1MB kali-linux-2016.1-amd64.iso | awk '{print $1}')
+- - '####'
+  - echo "Size of image is $start MB"
+- - '####'
+  - parted -a optimal /dev/sdb mkpart primary "${start}MB" 100%
+- - '####'
+  - parted /dev/sdb print
+- - '####'
+  - mkfs.ext4 -L persistence /dev/sdb3
+- - '####'
+  - mount /dev/sdb3 /mnt
+- - '####'
+  - echo " / union" >/mnt/persistence.conf
+- - '####'
+  - ls -l /mnt
+- - '####'
+  - umount /mnt
+- - '###'
+  - 9.4.3. 在 USB 键上设置加密持久性
+- - '####'
+  - cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb3
+- - '####'
+  - cryptsetup luksOpen /dev/sdb3 kali_persistence
+- - '####'
+  - mkfs.ext4 -L persistence /dev/mapper/kali_persistence
+- - '####'
+  - mount /dev/mapper/kali_persistence /mnt
+- - '####'
+  - echo "/ union" >/mnt/persistence.conf
+- - '####'
+  - umount /mnt
+- - '####'
+  - cryptsetup luksClose /dev/mapper/kali_persistence
+- - '###'
+  - 9.4.4. 使用多个持久性存储
+- - '####'
+  - parted /dev/sdb mkpart primary 3000 MB 55%
+- - '####'
+  - parted /dev/sdb mkpart primary 55% 100%
+- - '####'
+  - mkfs.ext4 -L demo /dev/sdb3
+- - '####'
+  - mount /dev/sdb3 /mnt
+- - '####'
+  - echo "/ union" >/mnt/persistence.conf
+- - '####'
+  - umount /mnt
+- - '####'
+  - cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb4
+- - '####'
+  - cryptsetup luksOpen /dev/sdb4 kali_persistence
+- - '####'
+  - mkfs.ext4 -L work /dev/mapper/kali_persistence
+- - '####'
+  - mount /dev/mapper/kali_persistence /mnt
+- - '####'
+  - echo "/ union" >/mnt/persistence.conf
+- - '####'
+  - umount /mnt
+- - '####'
+  - cryptsetup luksClose /dev/mapper/kali_persistence
+- - '###'
+  - 添加核弹密码以增强安全性
+- - '####'
+  - cryptsetup luksAddNuke /dev/sdb4
+- - '##'
+  - 9.5. 总结
+- - '###'
+  - 9.5.1. 修改 Kali 软件包的总结提示
+- - '###'
+  - 9.5.2. 重新编译 Linux 内核的总结提示
+- - '###'
+  - 9.5.3. 构建自定义 Kali Live ISO 镜像的总结提示
+- - '###'
+  - 关键词
+- - '###'
+  - 第 10 章
+- - '####'
+  - 10.1. 通过网络安装 Kali Linux（PXE 启动）
+- - '#####'
+  - 处理哪个网络接口
+- - '#####'
+  - DHCP 选项
+- - '#####'
+  - 分配 IP 地址的范围
+- - '#####'
+  - 通告给客户端的网关
+- - '#####'
+  - 通告给客户端的 DNS 服务器
+- - '#####'
+  - 通告给客户端的引导文件
+- - '#####'
+  - TFTP 选项
+- - '#####'
+  - 托管文件的目录
+- - '#####'
+  - mkdir /tftpboot
+- - '#####'
+  - cd /tftpboot
+- - '#####'
+  - wget http://http.kali.org/dists/kali-rolling/main/installer-amd64/current/images/netboot/netboot.tar.gz
+- - '#####'
+  - tar xf netboot.tar.gz
+- - '#####'
+  - ls -l
+- - '#####'
+  - D-I config version 2.0
+- - '#####'
+  - 搜索 c32 支持库（libcom32, libutil 等）的路径
+- - '####'
+  - 10.2. 利用配置管理
+- - '#####'
+  - 10.2.1. 设置 SaltStack
+- - '#####'
+  - 10.2.2. 在 Minions 上执行命令
+- - '#####'
+  - 10.2.3. Salt States 和其他功能
+- - '####'
+  - 10.3. 扩展和定制 Kali Linux
+- - '#####'
+  - 10.3.1. 分叉 Kali 软件包
+- - '#####'
+  - 10.3.2. 创建配置软件包
+- - '######'
+  - 什么是 Makefile 文件？
+- - '#####'
+  - 10.3.3. 为 APT 创建软件包仓库
+- - '######'
+  - apt install reprepro gnupg
+- - '######'
+  - adduser --system --group pkgrepo
+- - '######'
+  - chown pkgrepo ${tty}
+- - '######'
+  - su - -s /bin/bash pkgrepo
+- - '######'
+  - 如果你想要访问源代码软件包，请启用下一行
+- - '######'
+  - deb-src http://pkgrepo.offsec.com offsec-internal main
+- - '####'
+  - 10.4. 总结
+- - '#####'
+  - 总结提示：
+- - '#####'
+  - 要处理的网络接口
+- - '#####'
+  - DHCP 选项
+- - '#####'
+  - 要分配的 IP 范围
+- - '#####'
+  - 通告给客户端的网关
+- - '#####'
+  - 通告给客户端的 DNS 服务器
+- - '#####'
+  - 通告给客户端的启动文件
+- - '#####'
+  - TFTP 选项
+- - '#####'
+  - 托管待服务文件的目录
+- - '#####'
+  - mkdir /tftpboot
+- - '#####'
+  - cd /tftpboot
+- - '#####'
+  - wget http://http.kali.org/dists/kali-rolling/main/installer-amd64/current/images/netboot/netboot.tar.gz
+- - '#####'
+  - tar xf netboot.tar.gz
+- - '#####'
+  - SaltStack 密钥管理与执行
+- - '#####'
+  - 关键词
+- - '#'
+  - 第 11 章：安全评估入门
+- - '##'
+  - 11.1. 评估中的 Kali Linux
+- - '##'
+  - 11.2. 评估类型
+- - '###'
+  - 11.2.1. 漏洞评估
+- - '####'
+  - 扫描线程
+- - '####'
+  - 发生可能性
+- - '####'
+  - 影响
+- - '####'
+  - 总体风险
+- - '###'
+  - 11.2.2. 合规性渗透测试
+- - '###'
+  - 11.2.3. 传统渗透测试
+- - '###'
+  - 11.2.4. 应用程序评估
+- - '##'
+  - 11.3. 评估的正式化
+- - '##'
+  - 11.4. 攻击类型
+- - '###'
+  - 11.4.1. 拒绝服务
+- - '###'
+  - 11.4.2. 内存损坏
+- - '###'
+  - 11.4.3. Web 漏洞
+- - '###'
+  - 11.4.4. 密码攻击
+- - '###'
+  - 11.4.5. 客户端攻击
+- - '##'
+  - 11.5. 总结
+- - '#'
+  - KALI LINUX 揭秘
+- - '#'
+  - 12 结论：未来之路
+- - '##'
+  - 12.1. 跟上变化
+- - '##'
+  - 12.2. 展示你新获得的知识
+- - '##'
+  - 12.3. 进一步探索
+- - '###'
+  - 12.3.1. 迈向系统管理
+- - '###'
+  - 12.3.2. 迈向渗透测试
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - D
+- - '###'
+  - E
+- - '###'
+  - F
+- - '###'
+  - G
+- - '###'
+  - H
+- - '###'
+  - I
+- - '###'
+  - I (续)
+- - '###'
+  - J
+- - '###'
+  - K
+- - '###'
+  - L
+- - '###'
+  - M
+- - '###'
+  - M (续)
+- - '###'
+  - N
+- - '###'
+  - N (续)
+- - '###'
+  - O
+- - '###'
+  - O (续)
+- - '###'
+  - P
+- - '###'
+  - P (续)
+- - '###'
+  - P (续)
+- - '###'
+  - Q
+- - '###'
+  - R
+- - '###'
+  - S
+- - '###'
+  - T
+- - '###'
+  - U
+- - '###'
+  - V
+- - '###'
+  - W
+- - '###'
+  - X
+- - '###'
+  - Y
+- - '##'
+  - 关于作者

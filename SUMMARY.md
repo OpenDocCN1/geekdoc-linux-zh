@@ -682,6 +682,7 @@
 +   [Kali Linux 官方文档](docs/kali-linux-official-documentation/README.md)
 +   [Kali Linux 入门指南](docs/kali-linux-revealed/README.md)
 +   [Kali Linux 揭秘：精通渗透测试发行版](docs/kali-linux-revealed---mastering-the-penetration-testing-dist/README.md)
++   [Kali Linux 揭秘：精通渗透测试发行版](docs/kali-linux-revealed-mastering-the-penetration-testing-distri/README.md)
 +   [Kali Linux：使用 Kali 的入门指南：伦理黑客与基础安全测试概念，预防网络恐怖主义及理解网络安全与黑客基础](docs/kali-linux-the-beginners-guide-on-ethical-hacking-with-kali-/README.md)
 +   [Kali Linux 初学者无线渗透测试与安全指南](docs/kali-linux-wireless-pentesting-and-security-for-beginners/README.md)
 +   [KDE 2／Qt 编程圣经](docs/kde-2qt-programming-bible/README.md)
