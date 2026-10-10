@@ -661,6 +661,7 @@
 +   [数据库系统概念](docs/isbn-9780619130015/README.md)
 +   [Python 深度学习入门指南](docs/isbn-9780974433943/README.md)
 +   [Python 深度学习实战](docs/isbn-9781423907930/README.md)
++   [敏捷测试](docs/isbn-9781449643973/README.md)
 +   [C 语言编程指南](docs/isbn-9788131701478/README.md)
 +   [Ansible IT基础设施自动化使用指南：网络、Windows、Linux及云运维自动化指引（英文版）](docs/it-infrastructure-automation-using-ansible-guidelines-to-aut/README.md)
 +   [ITIL 中级认证伴读指南：中级 ITIL 服务能力考试](docs/itil-intermediate-certification-companion-study-guide-interm/README.md)

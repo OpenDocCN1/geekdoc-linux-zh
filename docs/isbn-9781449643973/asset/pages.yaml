@@ -1,0 +1,4856 @@
+- pgno: 0
+  md: 'JONES & BARTLETT LEARNING
+
+
+    INFORMATION SYSTEMS SECURITY & ASSURANCE SERIES
+
+
+    # LABORATORY MANUAL TO ACCOMPANY
+
+
+    # Security Strategies in Linux Platforms and Applications
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_0_0.png)
+
+
+    ITT Edition
+
+
+    IS3440'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# LABORATORY MANUAL TO ACCOMPANY
+
+
+    # Security Strategies in Linux Platforms and Applications
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_2_0.png)
+
+
+    vLAB SOLUTIONS
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_2_1.png)
+
+
+    JONES & BARTLETT LEARNING'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# World Headquarters
+
+
+    Jones & Bartlett Learning
+
+    5 Wall Street
+
+    Burlington, MA 01803
+
+    978-443-5000
+
+    info@jblearning.com
+
+    www.jblearning.com
+
+
+    Jones & Bartlett Learning books and products are available through most bookstores
+    and online booksellers. To contact Jones & Bartlett Learning directly, call 800-832-0034,
+    fax 978-443-8000, or visit our website, www.jblearning.com.
+
+
+    > Substantial discounts on bulk quantities of Jones & Bartlett Learning publications
+    are available to corporations, professional associations, and other qualified
+    organizations. For details and specific discount information, contact the special
+    sales department at Jones & Bartlett Learning via the above contact information
+    or send an email to specialsales@jblearning.com.
+
+
+    **Copyright © 2013 by Jones & Bartlett Learning, LLC, an Ascend Learning Company**
+
+
+    All rights reserved. No part of the material protected by this copyright may be
+    reproduced or utilized in any form, electronic or mechanical, including photocopying,
+    recording, or by any information storage and retrieval system, without written
+    permission from the copyright owner.
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. It is sold with the understanding that
+    the publisher is not engaged in rendering legal, accounting, or other professional
+    service. If legal advice or other expert assistance is required, the service of
+    a competent professional person should be sought.
+
+
+    # Production Credits
+
+
+    +   Chief Executive Officer: Ty Field
+
+    +   President: James Homer
+
+    +   SVP, Chief Operating Officer: Don Jones, Jr.
+
+    +   SVP, Chief Technology Officer: Daan Fossett
+
+    +   SVP, Chief Marketing Officer: Alison M. Panderagast
+
+    +   SVP, Curriculum Solutions: Christopher Will
+
+    +   VP, Design and Production: Anne Spencer
+
+    +   VP, Manufacturing and Inventory Control: Theresa Connell
+
+    +   Author: vLab Solutions, LLC, David Kim, President
+
+    +   Editorial Management: Perspectives, Inc., Phil Graham, President
+
+    +   Reprints and Special Projects Manager: Susan Schultz
+
+    +   Associate Production Editor: Tina Chen
+
+    +   Director of Marketing: Alisha Weisman
+
+    +   Associate Marketing Manager: Meagan Norlund
+
+    +   Cover Design: Anne Spencer
+
+    +   Composition: vLab Solutions, LLC
+
+    +   Cover Image: © EricKN/Shutterstock, Inc.
+
+    +   Printing and Binding: Malloy, Inc.
+
+    +   Cover Printing: Malloy, Inc.
+
+
+    ISBN: 978-1-4496-4397-3
+
+    6048
+
+    Printed in the United States of America
+
+    15 14 13 12 11 10 9 8 7 6 5 4 3 2 1'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Table of Contents
+
+
+    | Section | Page # |
+
+    | :--- | :--- |
+
+    | Lab #1 – Install a Core Linux Operating System on a Server... | 3 |
+
+    | Lab #2 – Configure Basic Security Controls on a Fedora Linux Server... | 11
+    |
+
+    | Lab #3 – Apply Hardened User Account Management & Security Controls... | 27
+    |
+
+    | Lab #4 – Apply Hardened Linux File System Security Controls... | 40 |
+
+    | Lab #5 – Apply Hardened Security for Linux Services & Applications... | 51 |
+
+    | Lab #6 – Apply Hardened Security for Controlling Access... | 63 |
+
+    | Lab #7 – Apply Hardened Security for the Linux Kernel... | 73 |
+
+    | Lab #8 – Implement Best Practices for Secure Software Management... | 82 |
+
+    | Lab #9 – Implement Best Practices for Security Logging & Monitoring... | 92
+    |
+
+    | Lab #10 – Define Linux OS & Application Backup & Recovery Procedures... | 102
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Digitized by the Internet Archive
+
+    in 2022 with funding from
+
+    Kahle/Austin Foundation
+
+
+    https://archive.org/details/isbn_9781449643973'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# ## Laboratory #1
+
+
+    # **Lab #1: Install a Core Linux Operating System on a Server**
+
+
+    # **Learning Objectives and Outcomes**
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   - Design a plan for the Linux operating system based upon necessary software
+
+    +   - Design secured partitions within the core Linux server for desired security
+    hardening, performance, and application support
+
+    +   - Understand how a network time server during installation to maintain a synchronized
+    time setting throughout the system
+
+    +   - Create a non-privileged user account for system administration access as
+    a secure alternative to logging in as root user
+
+
+    # **Required Setup and Tools**
+
+
+    This lab does not require the use of the Fedora VM, Fedora ISO, or Mock IT Infrastructure
+    - Cisco core backbone network. In addition, the Instructor VM workstation and
+    Student VM workstations should be physically disconnected from the internal network
+    and be isolated on the classroom dedicated layer 2 switch. This will allow for
+    a shared DHCP server to be used to allocate the IP addresses for the instructor
+    and student workstations. This lab is optional equipment-based or paper-based.
+    The following is required for equipment-based lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that will
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demonstrate the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+    +   C) Students will perform a paper-based lab.
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_6_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #1:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +   a. Microsoft DHCP server for allocating student IP host addresses
+
+    +   b. In this lab we will be building a new Fedora 14 Linux Target VM using the
+    supplied Linux OS Software
+
+
+    +   2. Standard onsite student workstation must have Internet access and the following
+    software applications loaded to perform this lab:
+
+    +   a. VMware Player 3.x
+
+    +   b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # Recommended Procedures
+
+
+    # Paper-Based Lab #1 – Student Steps:
+
+
+    Students should use the install step figures as a reference when writing a summary
+    report for “Securing a Linux server – starting with the install”.
+
+
+    # Deliverables
+
+
+    Upon completion of Lab #1: Install a Core Linux Operating System on a Server,
+    students are required to provide the following deliverables:
+
+
+    +   1. Lab #1 - Submit a summary report and an audit checklist for securing a
+    Linux server – starting with the install. Make the assumption the server will
+    be used as a retailer’s Web Server for an e-commerce web application.
+
+    +   a. Provide an explanation why is it especially important to physically secure
+    Linux computers.
+
+    +   b. Summarize reasons for partitioning as it relates to security and availability.
+
+    +   c. Briefly explain why it may be acceptable to install X window and a graphical
+    user interface with the server and how risks can be mitigated.
+
+    +   d. Provide a recommendation how to maintain synchronization with a Network
+    Time Server
+
+    +   e. Suggest a method for administrators to login to the server and perform
+    administrative tasks. (remote or physical access, accounts to use for login, etc.)
+
+    +   f. Provide an audit checklist Linux administrators could use during the install
+    process.
+
+
+    +   2. Lab #1 – Lab Assessment Questions & Answers'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# **Evaluation Criteria and Rubrics**
+
+
+    The following are the evaluation criteria and rubrics for Lab #1 that the students
+    must perform:
+
+
+    +   1. Was the student able to recognize the importance to physically securing
+    Linux computers?– **[20%]**
+
+    +   2. Was the student able to articulate why secured partitions within the core
+    Linux server establish the basis for security hardening, performance, and application
+    support?– **[20%]**
+
+    +   3. Did the student provide a recommendation to maintain a synchronized time
+    setting throughout the system?– **[20%]**
+
+    +   4. Did the student suggest a server install with no GUI or provide a valid
+    explanation why a GUI should be installed to a server and how to mitigate risks?–
+    **[20%]**
+
+    +   5. Was the student able to understand why it is important to create a non-privileged
+    user account for system administration access as a secure alternative to logging
+    in as root user?– **[20%]**'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Lab #1 – Assessment Worksheet
+
+
+    # Install a Fedora Linux Operating System on a Server
+
+
+    Course Name & Number: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    Student Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    Instructor Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    Lab Due Date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    # Overview
+
+
+    In this lab the students review the install of a Fedora Linux Server that will
+    act as a web server for a fictitious financial institution. The installation process,
+    applying passwords, creating partitions, and system administrator access controls
+    will be part of the operating system configuration requirements.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1.  During the install, the option to sync with a NTP (Network Time Protocol)
+    server was checked. From a security perspective, why is it important for a system
+    to keep accurate time?
+
+
+    +   2.  During the install, a password has been set for the "root" user. What
+    is the "root" user, and when is it appropriate to use this account?'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '3. During the install, X-Window and a Desktop Manager were installed. However,
+    in a production environment it is recommended NOT to run the X-Window environment.
+    Explain the purpose of this recommendation.
+
+
+    4. During the installation process it asks what the options given to create the
+    partition are? Name them.
+
+
+    5. Why is it important to partition a Linux system correctly?
+
+
+    6. What is the significance of the SWAP partition in a Linux system? What different
+    ways can the swap space be configured, and why would you recommend one over the
+    other?'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   7.  What are some of the benefits and features that are available to Linux
+    users by selecting the ext4 file system for the partitioning of a Linux system?
+
+
+    +   8.  How is the passwd file used, and what fields make up its content? Explain.
+
+
+    +   9.  What is the fstab file used for and what fields make up its content? Explain.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '10. Explain the significance of creating separate partitions of the `/var`
+    and `/boot` directories? What is contained within these directories?
+
+
+    11. How would selecting the option "encrypt filesystem" be useful?
+
+
+    12. How can partitioning with Logical Volume Manager (LVM) help as it relates
+    to the CIA Triad of security?'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '13. What security advantages can be realized when selecting the “minimal” software
+    install option ?
+
+
+    14. How could you automate a Fedora install geared for security?
+
+
+    15. What is the purpose of “firstboot” ?'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Laboratory #2
+
+
+    Lab #2: Configure Basic Security Controls on a Fedora Linux Server
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to:
+
+
+    +   * Configure the bootloader with set timeout to 0 and password credential to
+    mitigate tampering with the GRUB loader and the boot sequence of the server
+
+    +   * Enable SELinux on a Fedora Linux Server and set it to “permissive” mode
+
+    +   * Create a student user account and add it to a user group for managing permissions
+    and applying access controls across the system
+
+    +   * Configure user groups with limited sudo access (with password credentials)
+    to log and properly monitor access across the system
+
+    +   * Create iptables set to “on” for runlevels 3 & 5 to enable an internal, host-based
+    IP stateful firewall
+
+    +   * Set restrictions and permissions for user access to files and system log
+    files
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+
+    The following are required for this equipment-based lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+    +   C) Students Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #2:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +       a. Microsoft DHCP server for allocating student IP host addresses
+
+    +       b. A Student and/or Instructor VM workstation
+
+    +       c. Fedora Linux Server Target VM
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this lab:
+
+    +       a. VMware Player 3.x
+
+    +       b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # Recommended Procedures
+
+
+    # Equipment-Based Lab #2 – Student Steps:
+
+
+    Students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.__ , the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+    +   4. Login to the Student VM using the following credentials:
+
+    +   Login ID: “student” (case sensitive)
+
+    +   Password: “ISS316Security” (case sensitive)
+
+    +   5. Open a terminal emulator. From the GNOME Desktop , at the top left side;
+    click on “Applications”-> Systems Tools -> Terminal'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/73be0eef2ceb12f43f3eb92c420134f5_16_0.png)
+
+
+    +   6. Open a terminal emulator. From the GNOME Desktop, at the top left side,
+    click on “Applications”-> Systems Tools -> Terminal'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "![](img/73be0eef2ceb12f43f3eb92c420134f5_17_0.png)\n\n# Harden the Bootloader\
+    \ Program\n\n+   7. Type the command: `su -c 'vi /boot/grub/grub.conf'` and press\
+    \ `\\<enter>`. When prompted, enter the password for root (`ISS316Security`).\n\
+    +   \n+       ```text\n+       [student@TargetFedora01 ~]$ su -c 'vi /boot/grub/grub.conf'\n\
+    +       Password:\n+       ```\n+       \n+       Figure 1 — *Opening grub.conf\
+    \ as the root user*\n+   \n+   8. Verify the grub menu’s timeout is set to `0`.\n\
+    +       \n+       ```text\n+       timeout=0\n+       ```\n+   \n+   9. Exit the\
+    \ file. Hit the `Esc` and `:` keys to enter command mode. At the colon prompt\
+    \ in command mode, type `q` to exit the file.\n+   \n+   10. Enter the grub console.\
+    \ Type the command: `grub` and press `\\<enter>`.\n+   \n+   11. The prompt will\
+    \ appear as `grub>\\`.\n+   \n+   12. Create a md5 password. Type the command:\
+    \ `md5crypt` and then press `\\<enter>`"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '13. Password: `is4l8lab2`
+
+
+    ```
+
+    [student@TargetFedora01 ~]$ grub
+
+    Probing devices to guess BIOS drives. This may take a long time.
+
+
+    GNU GRUB  version 0.97  (640K lower / 3072K upper memory)
+
+
+    [ Minimal BASH-like line editing is supported.  For the first word, TAB
+
+    lists possible command completions.  Anywhere else TAB lists the possible
+
+    completions of a device/filename.]
+
+    grub> md5crypt
+
+    md5crypt
+
+    Password: is4l8lab2
+
+    is4l8lab2
+
+    Encrypted: $1$Wc$jTI0$z9Dj$koaMDAgwneRlGDu0
+
+    gub> ■
+
+    ```
+
+
+    Figure 2 – Entering the grub console
+
+
+    +   14. Write down or copy the hash string. One way to copy the hash string is
+    to highlight the string with the mouse cursor, right click, and select “copy”
+    as shown in the following image.
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_18_0.png)
+
+
+    Figure 3 – Copying the encrypted password string
+
+
+    +   15. Exit the grub console. Type the command: `quit` and press <enter>
+
+
+    +   16. Password protect grub. Type the command: `su -c ''vi /boot/grub/grub.conf''`
+    and press <enter>.
+
+
+    +   17. Press the “i” key to enter INSERT mode.
+
+
+    +   18. Insert the following line just after the line that contains `timeout=0`.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "```\npassword --md5  `your_hash_string`\n`84B845fTlljZQ78Vv9q1dpE5v9IQZg6vBOP`\n\
+    ```\n\nNote: Replace `your_hash_string` above with the actual string that was\
+    \ copied in the earlier step.\n\n```\n# grub.conf generated by anaconda\n#\n#\
+    \ Note that you do not have to rerun grub after making changes to this file\n\
+    # NOTICE:  You have a /boot partition.  This means that\n#           all kernel\
+    \ and initrd paths are relative to /boot/, eg.\n#           root (hd0,0)\n#  \
+    \         kernel /vmlinuz-version ro root=/dev/mapper/vg_targetfedoral1-lv root\n\
+    #           initrd /initrd-[generic-]version.img\n#\n#boot=/dev/sda\ndefault=0\n\
+    timeout=0\npassword --md5 $1$wcjTiOZg9DJ5KoAMDagwwerR1GDUB\nsplashimage=(hd0,0)/grub/splash.xpm.gz\n\
+    hiddenmenu\ntitle Fedora (2.6.35.6-45.fc14.1686)\n        root (hd0,0)\n     \
+    \   kernel /vmlinuz-2.6.35.6-45.fc14.1686 ro root=/dev/mapper/vg_targetfedoral1-lv\
+    \ root rd LVM2=vq_targetfedoral1/lv_root rd LVM_LVM=vg_targetfedoral1/lv_swap\
+    \ rd NO_LUKS rd NO_MD rd NO_DM LANG=en_US.UTF-8 SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc\
+    \ KEYTABLE=us rghb quiet\n        initrd /initramfs-2.6.35.6-45.fc14.1686.img\n\
+    \n-- INSERT --\n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_19_0.png)\n\n\
+    19. Save the changes and exit the file. Hit the escape key to exit from insert\
+    \ mode, then hit the “shift” & “:” keys to enter command mode. At the colon prompt\
+    \ in command mode, type wq to exit and save changes.\n\n20. When the computer\
+    \ boots, it will now require the grub password to make any changes at the grub\
+    \ menu. With the timeout set to 0, the computer will immediately boot into the\
+    \ default kernel without displaying the grub menu.\n\n# Set SELinux to Permissive\
+    \ Mode\n\n21. By default, SELinux will already be enabled and set to “**enforcing**”\
+    \ mode."
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'NOTE: For now, the system should operate in "permissive" mode. Permissive mode
+    will post an alert when a process would have been denied, but will not actually
+    deny anything. In a later unit, SELinux will be set back to "enforcing" mode.
+
+
+    +   22. Edit the SELinux config file. Type the command: `su -c ''vi /etc/selinux/config''`
+    and press <enter>.\n23. Password: ISS316Security\n24. Press the " i " key to enter
+    INSERT mode.\n25. Change SELINUX setting SELINUX=enforcing to SELINUX= permissive
+    .
+
+
+    ```
+
+    # This file controls the state of SELinux on the system.\n# SELINUX= can take
+    one of these three values:\n#       enforcing - SELinux security policy is enforced.\n#       permissive
+    - SELinux prints warnings instead of enforcing.\n#       disabled - SELinux is
+    fully disabled.\nSELINUX=permissive #\n# SELINUXTYPE= type of policy in use. Possible
+    values are:\n#       targeted - Only targeted network daemons are protected.\n#       strict
+    - Full SELinux protection.\nSELINUXTYPE=targeted\n.
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_20_0.png)
+
+
+    +   26. Save the changes and exit the file. Hit the escape key to exit from insert
+    mode, then hit the “shift” & “:” keys to enter command mode. At the colon prompt
+    in command mode, type wq to exit and save changes.\n27. Check SELinux configuration
+    and current mode. Type the command: `sestatus` and press <enter>.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '```
+
+    ```
+
+    [student@TargetFedora01 ~]$ sestatus
+
+    SELinux status:    enabled
+
+    SELinuxfs mount:   /selinux
+
+    Current mode:      enforcing
+
+    Mode from config file: permissive
+
+    Policy version:    24
+
+    Policy from config file: targeted
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_21_0.png)
+
+
+    +   28. The computer''s current status is *enforcing*, but upon reboot, it will
+    read from the configuration file and change over to *permissive* mode.
+
+
+    # Enable the Internal Host-Based IP Stateful Firewall
+
+
+    +   29. Enable firewall to start when entering runlevels 2 - 5. Type the command:
+    `su -c ''chkconfig -level 2345 iptables on''` and press <enter>.
+
+    +   30. Password: ISS316Security
+
+    +   31. Start the firewall. Type the command: `su -c ''service iptables start''`
+
+    +   32. Password: ISS316Security
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 ~]$ su -c ''chkconfig --level 2345 iptables on''
+
+    Password:
+
+    [student@TargetFedora01 ~]$ su -c ''service iptables start''
+
+    Password:      -
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_21_1.png)
+
+
+    +   33. Verify firewall is configure to start in runlevels 2 - 5. Type the command:
+    `chkconfig iptables --list` and press <enter>.
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 ~]$ chkconfig iptables --list
+
+    iptables       0:off     1:off     2:on      3:on      4:on      5:on      6:off
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_21_2.png)
+
+
+    # Provide Limited Sudo Access as Alternative to Logging in as Root User'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '**Note:** Enable and use ''sudo'' instead of logging as the root user as a
+    best practice for system administration access. This task does just that. However,
+    to gain an understanding how users and groups can be restricted using sudo, users
+    with sudo permission will only be granted certain permissions. Permissions not
+    explicitly given by sudo will require root''s password.
+
+
+    +   34. Edit sudoers. Type the command: `su -c ''visudo''` and press <enter>.
+
+
+    +   35. Password: ISS316Security
+
+
+    +   36. Remove comments ( # ) for Cmd_Alias. Use the up & down keys on the keyboard
+    and scroll to locate each of the following lines that begins with:
+
+
+    +   i. # Cmd_Alias NETWORKING \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .
+
+
+    +   ii. # Cmd_Alias SOFTWARE \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .
+
+
+    +   iii. # Cmd_Alias STORAGE \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .
+
+
+    +   iv. # Cmd_Alias DELEGATING \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .
+
+
+    +   v. # Cmd_Alias PROCESSES \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .
+
+
+    +   vi. # Cmd_Alias LOCATE \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .
+
+
+    +   vii. # Cmd_Alias DRIVERS \.
+
+
+    +   a. Place cursor over the # at the beginning of the line.
+
+
+    +   b. Press the ‘x’ key to remove the # .'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "```\n```\n## Networking\nCmd_Alias NETWORKING = /sbin/route, /sbin/ifconfig,\
+    \ /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial,\
+    \ /sbin/iwconfig, /sbin/mii-tool\n\n## Installation and management of software\n\
+    Cmd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum\n\n## Services\n\
+    Cmd_Alias SERVICES = /sbin/service, /sbin/chkconfig\n\n## Updating the locate\
+    \ database\nCmd_Alias LOCATE = /usr/bin/updatedb\n\n## Storage\nCmd_Alias STORAGE\
+    \ = /sbin/fdisk, /sbin/sfdisk, /sbin/parted, /sbin/partprobe, /bin/mount, /bin/umount\n\
+    \n## Delegating permissions\nCmd_Alias DELEGATING = /usr/sbin/visudo, /bin/chown,\
+    \ /bin/chmod, /bin/chgrp\n\n## Processes\nCmd_Alias PROCESSES = /bin/nice, /bin/kill,\
+    \ /usr/bin/kill, /usr/bin/killall\n\n## Drivers\nCmd_Alias DRIVERS = /sbin/modprobe\n\
+    ```\n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_23_0.png)\n\n37. Search for\
+    \ the line that begins with “#%wheel\t\tALL=(ALL)\t\tALL” and change so it appears\
+    \ as\n\n```\n```\n%wheel\t\tALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING,\
+    \ PROCESSES, LOCATE, DRIVERS.\n```\n```\n\n**Note:** Make sure to remove the hash\
+    \ (#) at the beginning of the line. This will allow anyone in the “wheel” group\
+    \ to have the limited sudo access. The student user account will be added to the\
+    \ wheel group in a later lab.\n\n```\n```\n#This will allow anyone in the “wheel”\
+    \ group to have the limited sudo access.\n%wheel\tALL = NETWORKING, SOFTWARE,\
+    \ SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS\n```\n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_23_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   38. Save the changes and exit the file. Hit the `escape` key to exit from
+    insert mode, then hit the `"shift" & ":"` keys to enter command mode. At the colon
+    prompt in command mode, type `wq` to exit and save changes.
+
+
+    # Set the Permissions of a File to be Immutable
+
+
+    +   39. Set immutable flag on file. Type the command: `su -c ''chattr +i /etc/services''`
+    and press `<enter>`.
+
+
+    +   40. Password: ISS316Security
+
+
+    +   41. Verify the immutable flag has been set. Type the command: `lsattr /etc/services`
+    and press `<enter>`.
+
+
+    The results should display something like "----i--------e- /etc/services. The
+    "i" indicates that the immutable flag is enabled. Figure 11 below, shows the sequences
+    of steps.
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_24_0.png)
+
+
+    # Set Special Permissions for a User to Access the Log File
+
+
+    +   42. Set ACL permission on file. Type the command: `su -c ''setfacl -m g:wheel:r
+    /var/log/messages''`
+
+
+    +   43. Password: ISS316Security
+
+
+    +   44. Verify the ACL has been set. Type the command: `getfacl /var/log/messages`
+    and press `<enter>`.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    [student@TargetFedora01 ~]$ su -c ''setfacl -m g:wheel:r /var/log/messages:''
+
+    Password:
+
+    [student@TargetFedora01 ~]$ getfacl /var/log/messages
+
+    getfacl: Removing leading ''/'' from absolute path names
+
+    # file: var/log/messages
+
+    # owner: root
+
+    # group: root
+
+    user::rw-
+
+    group::r--
+
+    group:wheel::r--
+
+    mask::r--
+
+    other::r--
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_25_0.png)
+
+
+    Congratulations, you have just implemented basic security hardening in your Fedora
+    Linux Server
+
+
+    # Deliverables
+
+
+    Upon completion of Lab #2: Configure Basic Security Controls for a Linux Server,
+    students are required to provide the following deliverables:
+
+
+    +   1. Lab #2 – Screen captures of your Fedora Linux Server system hardening configuration:
+
+    +    a. boot/grub/grub.conf file
+
+    +    b. /etc/selinux/config file
+
+    +    c. “chkconfig --list | grep iptables” command
+
+    +    d. getfacl /var/log/messages command
+
+    +    e. lsattr /etc/services command
+
+    +    f. getfacl /var/log/messages command
+
+    +   2. Lab #2 – Lab Assessment Questions & Answers
+
+
+    # Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #2 that the students
+    must perform:
+
+
+    +   1. Was the student able to configure the bootloader with timeout set to 0
+    and password credential to mitigate tampering with the GRUB loader and the boot
+    sequence of the server? – [10%]
+
+    +   2. Was the student able to enable SELinux on a Fedora Linux Server and set
+    it to “permissive” mode? – [10%]'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '+   3.  Was the student able to create a student user account and to add it
+    to a user group for managing permissions and applying access controls across the
+    system? – [20%]
+
+    +   4.  Was the student able to configure user groups with limited sudo access
+    (with password credentials) to log and properly monitor access across the system?
+    – [20%]
+
+    +   5.  Was the student able to create iptables set to "on" for rnelevels 3 &
+    5 to enable an internal, host-based IP stateful firewall? – [20%]
+
+    +   6.  Was the student able to set restrictions and permissions for user access
+    to files and system log files? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Lab #2 – Assessment Worksheet
+
+
+    # Configure Basic Security Controls on a Fedora Linux Server
+
+
+    Course Name & Number: ____________________
+
+
+    Student Name: ____________________
+
+
+    Instructor Name: ____________________
+
+
+    Lab Due Date: ____________________
+
+
+    # Overview
+
+
+    The students are required to submit their lab assessment answers using this Microsoft
+    Word document template. All lab assessment questions listed are for each course’s
+    weekly lab activity. This may be a paper-based activity or an equipment-based
+    lab activity. Lab assessment results and answers are due at the beginning of class
+    the following week. Students are encouraged to perform and submit their lab assessment
+    results immediately upon completion of the lab activity or prior to the due date.
+    During this lab they will properly secure a Linux server system. They will perform
+    steps to secure the bootloader, enable iptables and run SELinux to help lock down
+    the Linux OS. The students will also apply ACLs to directories and files and then
+    check those ACLs and permissions on the system.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. What is GRUB and why is it important to lock it down?
+
+
+    +   2. Discuss the purpose of granting “sudo” access. Why is it a good idea not
+    to login as root user?'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '+   3. If a file is set with the immutable flag, what security controls does
+    this provide for the file?
+
+
+    +   4. Why do you get blank window when trying to edit grub with “vi”?
+
+
+    +   5. How do you know when you login as root?
+
+
+    +   6. What command do you need to use to install vim?
+
+
+    +   7. What is iptables and how does this help harden the Fedora Linux Server?'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '+   8. Why is it important to configure and enable iptables on your Fedora
+    Linux Server?
+
+
+    +   9. What is the difference between the commands `cat` and `less`?
+
+
+    +   10. What is the difference between `setfacl` and `getfacl`? How can "setfacl"
+    help achieve security hardening?'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Laboratory #3
+
+
+    Lab #3: Apply Hardened User Account Management & Security Controls
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   - Configure a password policy by editing the /etc/login.defs file and implementing
+    stringent password security measures on a Fedora Linux Server
+
+    +   - Enforce a password change every 60 days showing a warning 14 days prior
+    to the password’s expiration across the system for all users
+
+    +   - Configure a minimum password length of 8 characters with stringent complexity
+    requirements
+
+    +   - Create users and groups with the proper permissions and restrictions to
+    enforce role-based access controls
+
+    +   - Create a temporary user account that expires in 90 days to enforce the proper
+    principle of least privilege with contractors and temporary workers/consultants
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+    The following is required for this equipment-based lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+    +   C) Students Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #3:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +       a. Microsoft DHCP server for allocating student IP host addresses
+
+    +       b. A Student and/or Instructor VM workstation
+
+    +       c. Fedora Linux Target VM
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this lab:
+
+    +       a. VMware Player 3.x
+
+    +       b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # ## Recommended Procedures
+
+
+    # **Equipment-Based Lab #3 – Student Steps:**
+
+
+    Students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.____ , the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+    +   4. Login to the Student VM using the following credentials:
+
+    +   Login ID: “student” (case sensitive)
+
+    +   Password: “ISS316Security” (case sensitive)
+
+    +   5. From the GNOME Desktop , at the top left side, click on “Applications”->
+    Systems Tools -> Terminal'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "![](img/73be0eef2ceb12f43f3eb92c420134f5_32_0.png)\n\n# Configure Stringent\
+    \ Passwords as Per Policy Requirements\n\n+   6. Open and edit the `/etc/login.defs`\
+    \ file to enforce:\n+       a. a password change every 60 days\n+       b. show\
+    \ a warning 14 days prior to the password expiring\n+       c. Require a minimum\
+    \ password length of 8 characters’\n+       Type the command : `su -c 'vi /etc/login.defs'`\
+    \ and press <enter>.\n\n+   7. Password: ISS316Security\n\n```\n```bash\n[student@TargetFedora01\
+    \ ~]$ su -c ' vi /etc/login.defs '\nPassword: \n```\n```\n\n**Figure 13 – Opening\
+    \ a file in vi as root user**\n\n+   8. Press the “ i “ to enter **INSERT** mode\
+    \ in the vi editor.\n\n+   9. Change Password aging controls as shown in figure\
+    \ below :"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '```
+
+    # Password aging controls:
+
+    #
+
+    #    PASS MAX DAYS  Maximum number of days a password may be used.
+
+    #    PASS MIN DAYS  Minimum number of days allowed between password changes.
+
+    #    PASS MIN LEN   Minimum acceptable password length.
+
+    #    PASS WARN AGE  Number of days warning given before a password expires.
+
+    #
+
+    PASS_MAX_DAYS 60
+
+    PASS_MIN_DAYS 0
+
+    PASS_MIN_LEN 8
+
+    PASS_WARN_AGE 14
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_33_0.png)
+
+
+    +   10.  Save the changes and exit the file. Hit the `escape` key to exit from
+    insert mode, then hit the “shift” & “:” keys to enter command mode. At the colon
+    prompt in command mode, type `wq` to exit and save changes.
+
+
+    # ## Create User Account, Login Credential, and Define Groups
+
+
+    +   11.  Create four user accounts for the administrators. Two accounts for database
+    administrators, and two accounts for the web administrators. Provide the accounts
+    with the `user` names: dbadmin1, dbadmin2, webadmin1 & webadmin2. Use the `useradd`
+    command to create the accounts:
+
+    +       a)  Type the command: `su -c ''useradd dbadmin1''` and press `<enter>`.
+
+    +       b)  Password: `ISS316Security`
+
+    +       c)  Type the command: `su -c ''useradd dbadmin2''` and press `<enter>`.
+
+    +       d)  Password: `ISS316Security`
+
+    +       e)  Type the command: `su -c ''useradd webadmin1''` and press `<enter>`.
+
+    +       f)  Password: `ISS316Security`
+
+    +       g)  Type the command: `su -c ''useradd webadmin2''` and press `<enter>`.
+
+    +       h)  Password: `ISS316Security`
+
+
+    +   12.  Set a password for each of the accounts created: `passwd` (account names).'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '**Note:** If a weak password is chosen, a warning message will appear. However,
+    since the command is run with root privileges the weak password is allowed.
+
+
+    +   13.  Type the command: `su -c ''passwd dbadmin1''` and press <enter>.
+
+    +   14.  Password: ISS316$Security
+
+    +   15.  A prompt will appear for dbadmin''s new password. Enter the password:
+    lab3 and press <enter>
+
+    +   16.  Enter the password lab3 again to confirm. Press enter to complete.
+
+
+    ```
+
+    ```text
+
+    [student@TargetFedora01 ~]$ su -c ''useradd dbadmin1''
+
+    Password:
+
+    [student@TargetFedora01 ~]$ su -c ''passwd dbadmin1''
+
+    Password:
+
+    Changing password for user dbadmin1.
+
+    New password:
+
+    Retype new password:
+
+    passwd: all authentication tokens updated successfully.
+
+    ```
+
+    ```
+
+
+    **Figure 15 – Adding user account and setting password**
+
+
+    +   17.  Force a password change for each user the first time they login.
+
+    +       a)  Type the command: `su -c ''chage -d 0 dbadmin1''` and press <enter>.
+
+    +       b)  Password: ISS316$Security
+
+    +       c)  Type the command: `su -c ''chage -d 0 dbadmin2''` and press <enter>.
+
+    +       d)  Password: ISS316$Security
+
+    +       e)  Type the command: `su -c ''chage -d 0 webadmin1''` and press <enter>.
+
+    +       f)  Password: ISS316$Security
+
+    +       g)  Type the command: `su -c ''chage -d 0 webadmin2''` and press
+
+    +       h)  Password: ISS316$Security
+
+
+    **Note :** After the `-d`, it should be a zero, not the letter `o`.
+
+
+    +   18.  Create two group accounts one named `dba` and another named `web`.
+
+    +       a)  Type the command: `su -c ''groupadd dba''` and press <enter>.
+
+    +       b)  Password: ISS316$Security
+
+    +       c)  Type the command: `su -c ''groupadd web''` and press <enter>.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '```
+
+    [student@TargetFedora01 ~]$ su -c ''groupadd dba''
+
+    Password:
+
+    [student@TargetFedora01 ~]$ su -c ''groupadd web''
+
+    Password:
+
+    d) Password: ISS316Security
+
+    ```
+
+
+    Figure 16 — Adding groups
+
+
+    +   19. Add users `dbadmin1` and `dbadmin2` to the “dba” group.
+
+    +       a) `Type the command: su -c '' usermod -G dba dbadmin1 ''` and press <enter>.
+
+    +       b) `Password: ISS316Security`
+
+    +       c) `Type the command : su -c '' usermod -G dba dbadmin2''` and press <enter>.
+
+    +       d) `Password: ISS316Security`
+
+    +   20. Add users `webadmin1` and `webadmin2` to the “web” group.
+
+    +   21. `Type the command : su -c '' usermod -G web webadmin1 ''` and press <enter>.
+
+    +   22. `Password: ISS316Security`
+
+    +   23. `Type the same command: su -c '' usermod -G web webadmin2 ''` and press
+    <enter>.
+
+    +   24. `Password: ISS316Security`
+
+
+    # Add Student Account to Wheel Group
+
+
+    +   25. Add the student user account to the “wheel” group.
+
+    +   26. `Type the command : su -c '' usermod -G wheel student ''` and press <enter>.
+
+    +   27. `Password: ISS316Security`
+
+
+    > NOTE: *The student will need to be a member of the wheel group to execute and
+    sudo commands from Labs 3 - 10.*
+
+
+    ```
+
+    [student@TargetFedora01 ~]$ su -c '' usermod -G wheel student''
+
+    Password:
+
+    ```
+
+
+    Figure 17 — Adding student to the wheel group'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Create Temporary User Accounts and Set to Automatic Expire in 90 Days
+
+
+    Jane Temp is a contractor assisting in building a Linux online backing infrastructure
+    for only the next 90 days.
+
+
+    +   28. Create temporary user account name. Type the command: `su -c ''useradd
+    jtemp''` and press <enter>.
+
+
+    +   29. Password: ISS316Security
+
+
+    +   30. Set a password for temporary user. Type the command: `su -c ''passwd jtemp''`
+    and press <enter>.
+
+
+    +   31. Password: ISS316Security
+
+
+    +   32. Ensure the user is forced to change the password upon first login. Type
+    the command: `su -c ''chage -d 0 jtemp''` and press <enter>.
+
+
+    +   33. Password: ISS316Security
+
+
+    **Note:** After the `-d` is the number zero. It is not the letter o.
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 ~]$ su -c ''useradd jtemp''
+
+    Password:
+
+    [student@TargetFedora01 ~]$ su -c ''passwd jtemp''
+
+    Password:
+
+    Changing password for user jtemp.
+
+    New password:
+
+    Retype new password:
+
+    passwd: all authentication tokens updated successfully.
+
+    [student@TargetFedora01 ~]$ su -c ''chage -d 0 jtemp''
+
+    Password:
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_36_0.png)
+
+
+    +   34. Set the account to expire in 90 days. Type the command: `su -c ''chage
+    -E 2011-12-31 jtemp''` and press <enter>. When prompted, enter the password for
+    root (ISS316Security).
+
+
+    **Note:** Replace the date in the command with a date that 90 from the day of
+    the lab. If 2011-12-31 is an older date, the user''s account will immediately
+    expire! The date takes the format YYYY-MM-DD. For example, if the desired expiration
+    date is the last day of 2011, the command is entered as shown in figure below.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\n[student@TargetFedora01 ~]$ su -c 'chage -E 2011-12-31 jtemp'\nPassword:\n\
+    [student@TargetFedora01 ~]$ su -c ' chage --list jtemp'\nPassword:\nLast password\
+    \ change                : password must be changed\nPassword expires         \
+    \           : password must be changed\nPassword inactive                   :\
+    \ password must be changed\nAccount expires                     : Dec 31, 2011\n\
+    Minimum number of days between password change    : 0\nMaximum number of days\
+    \ between password change    : 60\nNumber of days of warning before password expires\
+    \ : 14\n[student@TargetFedora01 ~]$ \n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_37_0.png)\n\
+    \n> **Important:** Before completing the final task in this lab, the student account\
+    \ should be a member of the “wheel” group as described in Step 14 of this lab\
+    \ (Lab 3). Failure to do so will prevent the student user account from using any\
+    \ future ‘su -c’ or sudo commands!\n\n# Restrict use of su command\n\n+   35.\
+    \ Open /etc/pam.d/su for editing. Type the command: `su -C 'vi /etc/pam.d/su'`\
+    \ and press `<enter>`.\n\n+   36. Password: ISS316Security\n\n+   37. Press “i”\
+    \ key to enter INSERT mode.\n\n+   38. Locate the line : “#auth required pam_wheel.so\
+    \ use_uid” .\n\n+   39. Remove the hash (#) at the beginning of the line. Place\
+    \ the cursor over the # and press the “x” key. `#auth required pam_wheel.so use_uid`"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '```
+
+    ```bash
+
+    ##PAM-1.0
+
+    auth     sufficient    pam_rootok.so
+
+    # Uncomment the following line to implicitly trust users in the "wheel" group.
+
+    #auth    sufficient    pam_wheel.so trust use_uid
+
+    # Uncomment the following line to require a user to be in the "wheel" group.
+
+    auth     required      pam_wheel.so use_uid
+
+    auth     include       system-auth
+
+    account  sufficient    pam_succeed_if.so uid = 0 use_uid quiet
+
+    account  include       system-auth
+
+    password include       system-auth
+
+    session  include       system-auth
+
+    session  optional      pam_xauth.so
+
+    ```
+
+    ```
+
+
+    # Figure 20 – Locking down use of the su command
+
+
+    40. Save the changes and exit the file. Press the escape key to exit from INSERT
+    mode, then press the “shift” & ":” keys to enter command mode. At the colon prompt
+    in command mode, type wq to exit and save changes.
+
+
+    # Deliverables
+
+
+    Upon completion of Lab #3: Apply Hardened User Account Management & Security Controls,
+    the students are required to provide the following deliverables:
+
+
+    +   1. Lab #3 - Students are to submit screenshots of the following files:
+
+    +      a. Output of the /etc/login.defs file
+
+    +      b. Output of the “groups” command
+
+    +      c. Output of the newly modified /etc/pam.d/su file
+
+    +   2. Lab #3 – Lab Assessment Questions & Answers
+
+
+    # Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #3 that the students
+    must perform:
+
+
+    +   1. Was the student able to configure a password policy by editing the /etc/login.defs
+    file and implementing stringent password security measures on a Fedora Linux Server?
+    – [20%]
+
+    +   2. Was the student able to enforce a password change every 60 days showing
+    a warning 14 days prior to the password’s expiration across the system for all
+    users? – [20%]
+
+    +   3. Was the student able to configure a minimum password length of 8 characters
+    with stringent complexity requirements? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '+   4. Was the student able to create the users and groups with the proper
+    permissions and restrictions to enforce role-based access controls? $-[20\%]$
+
+    +   5. Was the student able to create a temporary user account that expires in
+    90 days to enforce proper principle of least privilege with contractors and temporary
+    workers/consultants? $-[20\%]$'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# Lab #3 – Assessment Worksheet\n\n# Apply Hardened User Account Management\
+    \ & Security Controls\n\nCourse Name & Number: \n_______________________________________________________________\n\
+    \nStudent Name: \n_______________________________________________________________\n\
+    \nInstructor Name: \n_______________________________________________________________\n\
+    \nLab Due Date: \n_______________________________________________________________\n\
+    \n# Overview\n\nThis lab is an extension of the previous equipment-based labs\
+    \ and incorporates security hardening for user accounts, password policies, and\
+    \ creation of temporary user accounts with automatic account and password deletion.\
+    \ In this lab, students will be required to implement and configure security hardening\
+    \ on the Fedora Linux Server. They will use the steps to configure user accounts\
+    \ with a secure password policy definition. Finally, they will also apply stringent\
+    \ password policies for temporary user accounts whose login credentials and passwords\
+    \ will expire in 90 days.\n\n# Lab Assessment Questions & Answers\n\n+   1. What\
+    \ is the significance of creating Groups and adding Users to Groups? Explain.\n\
+    \n+   2. Given a scenario where there are five (5) database administrators that\
+    \ may periodically need access to a given system. Discuss a concept to better\
+    \ manage these administrators’ access permissions."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '+   3. The new web administrator''s account has been set up and a password
+    provided. What is the process to force a password change upon first login?
+
+
+    +   4. What is the purpose of the "su" command? Explain its significance.
+
+
+    +   5. Restricting the use of the ''su'' command can be configured using what
+    mechanism?
+
+
+    +   6. What is the purpose of the login.defs file? Explain the contents and configuration
+    options?
+
+
+    +   7. What is the PASS_MIN_DAYS setting? Why would it be a good idea to set the
+    PASS_MIN_DAYS setting?'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '+   8.  What is the PASS_MAX_DAYS setting? Why would it be a good idea to set
+    the PASS_MAX_DAYS setting?
+
+
+    +   9.  Will changes to the commands /etc/login.defs settings (PASS_MAX_DAYS,
+    PASS_MIN_DAYS and PASS_WARN_AGE) take effect to existing accounts?
+
+
+    +   10. Describe the password and account settings you would configure if you
+    were told that there were a few contractors that needed accounts on the Linux
+    system for the next 14 days.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Laboratory #4
+
+
+    **Lab #4: Apply Hardened Linux File System Security Controls**
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   Mount a file system without execute permissions, so you can safely read the
+    data contained in the disk without executing any unexpected programs
+
+
+    +   Mount a remote file system and configure the system to be mounted at boot
+    time for an automatic network share on a Linux system
+
+
+    +   Set user quotas on disk to protect the availability and security on the Linux
+    system and to prevent users from taking up all the disk drive on the system
+
+
+    +   Edit and modify the /etc/fstab file to manage local and remote NFS shares
+    as well as the necessary disk mounting configurations required
+
+
+    +   Configure and use the repquota command to verify usage of disk space by users
+    and manage quotas
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+
+    The following is required for this equipment-based lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor''s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+
+    +   C) Students Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #4:
+
+
+    +   1.  A Virtualized Server Farm with the following components:
+
+    +       a.  Microsoft DHCP server for allocating student IP host addresses
+
+    +       b.  A Student and/or Instructor VM workstation
+
+    +       c.  Fedora Linux Target VM
+
+    +   2.  Standard onsite student workstation must have the following software applications
+    loaded to perform this Lab:
+
+    +       a.  VMware Player 3.x
+
+    +       b.  Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # Recommended Procedures
+
+
+    # Equipment-Based Lab #4 – Student Steps:
+
+
+    The students should perform the following steps:
+
+
+    +   1.  Connect the student-removable hard drive to your workstation
+
+    +   2.  Boot up the Student VM and Microsoft DHCP VM server to allocate an IP
+    host address
+
+    +   3.  Enable your DOS command prompt and type "ipconfig" and "ping" your allocated
+    IP host address 172.30.0.____ , the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+    +   4.  Login to the Student VM using the following credentials:
+
+    +       Login ID: "student" (case sensitive)
+
+    +       Password: "!SS316Security" (case sensitive)
+
+    +   5.  From the GNOME Desktop , at the top left side, click on "Applications"->
+    Systems Tools -> Terminal
+
+
+    **NOTE:** For proper completion of this lab your Fedora 14 VM will require a **LIVE**
+    Internet connection. Do NOT disconnect the student workstations from the classroom
+    network and Internet connection.
+
+
+    **NOTE:** Before the `sudo & su` commands can execute as excepted, the user account
+    **MUST** be a member of the `wheel group` with the wheel group granted limited
+    sudo access as directed in Lab 3.
+
+
+    # Create Virtual Disk Images & Directories
+
+
+    +   6.  Create directories for virtual image
+
+    +       a)  Type the command: `su -c '' mkdir -p /virtualimages/disk''` and press
+    <enter>'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '+   b) Password: ISS316Security
+
+
+    +   c) Type the command : su -c '' mkdir /archives && mkdir /common '' and press
+    <enter>
+
+
+    +   d) Password: ISS316Security
+
+
+    +   e) Type the command : su -c '' dd if=/dev/zero of=/virtimages/disk/quota-img.img
+    count=300000 '' and press <enter>
+
+
+    +   f) Password: ISS316Security
+
+
+    +   g) Type the command : su -c '' dd if=/dev/zero of=/virtimages/disk/readonly-img.img
+    count=100000 '' and press <enter>
+
+
+    +   h) Type the command: su -c '' mkfs -t ext3 -q /v/irtimages/disk/readonly-img.img
+    -F '' and press <enter>.
+
+
+    +   i) Password: ISS316Security
+
+
+    +   j) Type the command: su -c '' mkfs -t ext3 -q /virtimages/disk/quota-img.img
+    -F '' and press <enter>.
+
+
+    +   k) Password: ISS316Security
+
+
+    +   7. Edit /etc/fstab in vim editor. Type the command: su -c '' vi /etc/fstab
+    '' and press <enter>
+
+
+    +   8. Press the “ i ” to enter INSERT mode.
+
+
+    +   9. Scroll to just after the last line to create a new line.
+
+
+    +   10. Type the following line :
+
+
+    ```
+
+    /virtimages/disk/readonly-img.img /archives ext3 loop,defaults 0 0
+
+    ```
+
+
+    +   11. Create mount point for quota partition . Type the following into a new
+    line:
+
+
+    ```
+
+    virtimages/disk/quota-img.img /common ext3 loop,usrquota,defaults 0 0
+
+    ```
+
+
+    +   12. Save the changes and exit the file. Press the escape key to exit from
+    insert mode, then press the “shift” & “:” keys to enter command mode. At the colon
+    prompt in command mode, type wq to exit.
+
+
+    +   13. Mount the fileSystems. Type the command: sudo mount /archives && sudo
+    mount /common and press <enter>. If prompted, enter the password for the student
+    user account ( ISS316Security ).
+
+
+    +   14. Give permissions to authorized user in /commons
+
+
+    +   a) Type the command: cd /common and press <enter>.
+
+
+    +   b) Type the command: su -c '' mkdir student && chown student:student student
+    -R '' and press <enter>.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '+   c) Password: ISSSecurity
+
+
+    +   15. Give permissions to authorized user in /archives
+
+    +       a) Type the command: cd /archives and press <enter>
+
+    +       b) Type the command: su -c ''mkdir 2011 && chown student:student 2011
+    -R'' and press <enter>.
+
+
+    +   16. Type the command: cd /archives/2011 and press <enter>
+
+
+    +   17. Create and open archive file in vim editor. Type the command : vi financials.txt
+
+
+    +   18. Press the “ i ” key to enter INSERT mode in the vim editor.
+
+
+    +   19. Type the following text in the file :
+
+    +       This file should not change. Ever.
+
+
+    +   20. Save the changes and exit the file. Press the escape key to exit from
+    insert mode, then press the “shift” & “:” keys to enter command mode. At the colon
+    prompt in command mode, type wq to exit .
+
+
+    +   21. Edit /etc/fstab in vim editor . Type the command: su -c '' vi /etc/fstab''
+    and press <enter>.
+
+
+    +   22. Password: ISS316Security
+
+
+    # Mount a File System with Read Only Permissions
+
+
+    +   23. Open the /etc/fstab in vim editor. Type the command: su -c '' vi /etc/fstab
+    '' and press <enter>.
+
+
+    +   24. Press the “ i ” key to enter INSERT mode .
+
+
+    +   25. Add read only permissions (ro) to the /archives fileSystem . Find the
+    line created earlier in Step 5 and add a comma ( , ) and ro after defaults so
+    the line appears as :
+
+    +   /virtimages/disk/readonly-img.img /archives ext3 loop,defaults,ro 0 0
+
+
+    ```
+
+    /virtimages/disk/readonly-img.img /archives ext3 loop,defaults,ro 0 0
+
+    /virtimages/disk/quota-img.img /common ext3 loop,defaults 0 0
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_46_0.png)
+
+
+    +   26. Save the changes and exit the file. Press the escape key to exit from
+    insert mode, then press the “shift” & “:” keys to enter command mode. At the colon
+    prompt in command mode, type wq to exit .
+
+
+    +   27. Remount the /archives partition after changes are made to fstab and saved:
+    Type the command: su -c '' mount -o remount /archives'' and press <enter>.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '28. Password: ISS316Security
+
+
+    29. Navigate to the `/archive/2001` directory. Type the command: `cd /archives/2001`
+    and press `<enter>`.
+
+
+    30. Perform a directory listing and notice the permissions of `financials.txt`.
+    Type the command: `ls -ls financials.txt` and press `<enter>`. Notice the student
+    user & student group has read and write permissions at the file level.
+
+
+    31. Open `financials.txt` for edit in vim editor: Type the Command `vi financials.txt`
+    and press `<enter>`.
+
+
+    32. Press the "i" key to enter INSERT mode.
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_47_0.png)
+
+
+    **Figure 22 – Attempting to edit a file on a Read Only filesystem**
+
+
+    33. View the notice “Warning: Changing a readonly file”.
+
+
+    34. Press the *escape* key to exit from insert mode, then press the “shift” &
+    “:” keys to enter command mode. At the colon prompt in command mode, type `q`
+    to exit.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "35. Attempt to create a file : Type the command : touch test and press <enter>\
+    \ .\n\n36. View the message: touch: cannot touch 'test' : Read-only file system.\n\
+    \n> Note: The archived file system is readable but is safe from the introduction\
+    \ of rootkits ,trojans, viruses and file changes.\n\n# Set User Account Quotas\
+    \ on File System Partitions\n\n+   37. Install quota software. Type the command:\
+    \ sudo yum install quota quotatool -y and press <enter> .\n+   \n+   38. [sudo]\
+    \ password for student: ISS316Security\n+   \n+   39. Initialize the quota database:\
+    \ Type the command: su -c 'quotacheck -cug /common'\n+   \n+   40. Password: ISS316Security\n\
+    +   \n+   41. Turn quotas on: su -c 'quotaon /common' and press <enter> .\n+ \
+    \  \n+   42. Password: ISS316Security\n+   \n+   43. Open user quota settings.\
+    \ Type the command: su -c 'edquota -f /common student'\n+   \n+   44. Password:\
+    \ ISS316Security\n+   \n+   45. Enter INSERT mode. Press the “i” key.\n+   \n\
+    +   46. Set soft limit of 30 megs. Change the 0 (zero) below the first “soft”\
+    \ column to 30.\n+   \n+   47. Set hard limit of 100 megs. Change the 0 (zero)\
+    \ below the first “hard” column to 100.\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_48_0.png)\n\
+    \n![](img/73be0eef2ceb12f43f3eb92c420134f5_48_1.png)\n\n+   48. Save the changes\
+    \ and exit the file. Press the *escape* key to exit from insert mode, then press\
+    \ the “shift” & “:” keys to enter command mode. At the colon prompt in command\
+    \ mode, type wq to exit .\n+   \n+   49. Change directory to student user share:\
+    \ Type the command: cd /common/student and press <enter> .\n+   \n+   50. Create\
+    \ a approx. 100 meg file with random data. Type the command: dd if=/dev/urandom\
+    \ of=test.file bs=9548576 count=1 and press <enter>"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "51.  View a report of the quota limits. *Type the command: su -c 'repquota\
+    \ /common'* and press <enter>.\n\n52.  Password: ISS316Security\n\n53.  View the\
+    \ student user quota. *Type the command: quota* and press <enter>.\n\n```\n[student@TargetFedora01\
+    \ ~]$ cd /common/student\n[student@TargetFedora01 student]$ dd if=/dev/urandom\
+    \ of=test.file2 bs=94588523 count=1\ndd: writing 'test.file2': Disk quota exceeded\n\
+    1+0 records in\n0+0 records out\n98304 bytes (98 kB) copied, 37.7418 s, 2.6 kB/s\n\
+    [student@TargetFedora01 student]$ su -c 'repquota /common'\nPassword:\n***  Report\
+    \ for user quotas on device /dev/loop1\nBlock grace time: 7days; Inode grace time:\
+    \ 7days\n                            Block limits              File limits\nUser\
+    \ used     soft    hard    grace  used soft  hard  grace\n----------------------------------------------------------------------------------------\n\
+    root  --   5663       0       0      4    0     0\nstudent +-   100      30  \
+    \   100   60days   2    0     0\n```\n\nFigure 24 – Viewing user quotas\n\n```\n\
+    [student@TargetFedora01 /]$ quota\nDisk quotas for user student (uid 501):\n \
+    \          Filesystem   blocks   quota     limit   grace   files  quota    limit\
+    \  grace\n/dev/loop1            100*    30        100   6days   2     0     0\n\
+    ```\n\nFigure 25 – Viewing student account quota limits\n\n# Deliverables\n\n\
+    Upon completion of Lab # 4: *Apply Hardened Linux File System Security Controls*\
+    \ students are required to provide the following deliverables:\n\n+   1. Lab #4\
+    \ - Students are to submit screenshots of the following files:\n+       a. Output\
+    \ of the `/etc/fstab` file\n+       b. Output of the `repquota /home`\n+   2.\
+    \ Lab #4 – Assessment Questions & Answers"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# **Evaluation Criteria and Rubrics**
+
+
+    The following are the evaluation criteria and rubrics for Lab #4 that the students
+    must perform:
+
+
+    +   1.  Was the student able to mount a file system without execute permissions,
+    so you can safely read the data contained in the disk without executing any unexpected
+    programs? – [20%]
+
+
+    +   2.  Was the student able to mount a remote file system, and configure the
+    system to be mounted at boot time for an automatic network share on a Linux system?
+    – [20%]
+
+
+    +   3.  Was the student able to set user quotas on disk to protect the availability
+    and security on the Linux system and to prevent users from taking up all the disk
+    drive on the system? – [20%]
+
+
+    +   4.  Was the student able to edit and modify the /etc/fstab file to manage
+    local and remote NFS shares as well as necessary disk mounting configurations
+    required? – [20%]
+
+
+    +   5.  Was the student able to configure and use the repquota command to verify
+    usage of disk space by users and manage quotas? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Lab #4 – Assessment Worksheet
+
+
+    # Apply Hardened Linux File System Security Controls
+
+
+    Course Name & Number: ________________________________
+
+
+    Student Name: ________________________________________
+
+
+    Instructor Name: ______________________________________
+
+
+    Lab Due Date: __________________________________________
+
+
+    # Overview
+
+
+    This lab is an extension of the previous equipment-based labs, and it incorporates
+    security hardening for File Systems and user access to mounted file systems. In
+    this lab, students will be required mount a file system on the Fedora Linux Server
+    that does not have execute permissions. They will also demonstrate how to mount
+    a remote file system and set quotas for users of mounted file systems.
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. Consider a file that has been given permissions 777 (owner-rwx, group-rwx,
+    other-rwx), but returns a “permissions denied” when a user attempts to execute
+    it. Explain the most likely reason.
+
+
+    +   2. You are given a scenario where a web server will need to access PDF documents
+    located on another server within the local area network. These documents are for
+    customers to view their personal account information only. What mounting option
+    would be: /tmp ext4 ro 0 0?'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '3. Describe the process to create a quota hard limit of 2Gigs for a user
+
+
+    4. How do you install quota in Fedora 14?
+
+
+    5. Why do you get error about ‘cannot remount filesystem mounted’?
+
+
+    6. What is the /etc/fstab file for?
+
+
+    7. What is the mount command? Explain.
+
+
+    Copyright © 2013 Jones & Bartlett Learning, LLC, an Ascend Learning Company
+
+
+    www.jblearning.com
+
+
+    All Rights Reserved.
+
+
+    Current Version Date: 10/10/2011
+
+
+    -49-'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '+   8. What is the name of the SW package management utility?
+
+
+    +   9. What is the code name for Fedora 14, and when was it released?
+
+
+    +   10. What is the repquota command in Linux used for? Explain.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# # Laboratory #5
+
+
+    # ## Lab #5: Apply Hardened Security for Linux Services & Applications
+
+
+    ## Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   *   Harden Linux server services when enabling and installing them, and keep
+    a security perspective during configuration
+
+    +   *   Create an Apache Web Server installation and perform basic security configurations
+    to assure that the system has been hardened before hosting a web site
+
+    +   *   Configure and perform basic security for a MySQL database, understanding
+    the ramifications of a default installation and recommending hardening steps for
+    the database instance
+
+    +   *   Install, setup and perform basic security configuration for Sendmail to
+    be able to leverage the built-in messaging capabilities of the Linux System
+
+    +   *   Enable and implement secure SSH for encrypted remote access over the network
+    or across the Internet of a Linux server system
+
+
+    # ## Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+    The following is required for this equipment-based lab:
+
+
+    +   A)  A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+    +   B)  An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+    +   C)  Student Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #5:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +      a. Microsoft DHCP server for allocating student IP host addresses
+
+    +      b. A Student and/or Instructor VM workstation
+
+    +      c. Fedora Linux Target VM with:
+
+    +         i. Apache
+
+    +         ii. MySQL
+
+    +         iii. Sendmail
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this lab:
+
+    +      a. VMware Player 3.x
+
+    +      b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # Recommended Procedures
+
+
+    # Equipment-Based Lab #5 – Student Steps:
+
+
+    The students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.___, the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+    +   4. Login to the Student VM using the following credentials:
+
+    +      Login ID: “student” (case sensitive)
+
+    +      Password: “iSS316Security” (case sensitive)
+
+    +   5. From the GNOME Desktop, at the top left side, click on “Applications”->
+    Systems Tools -> Terminal
+
+
+    > **NOTE:** Before the sudo & su commands can execute as expected, the user account
+    **MUST** be a member of the wheel group with the wheel group granted limited sudo
+    access as directed in **Lab 3**.
+
+
+    > **NOTE:** For proper completion of this lab your Fedora 14 VM will require a
+    LIVE Internet connection. Do **NOT** disconnect the student workstations from
+    the classroom network and Internet connection.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# Install and Configure Basic Security Hardening for a MySQL Database Application\n\
+    \n+   6.  Install MySQL Server. Type the command: `sudo yum groupinstall \"MySQL\
+    \ Database\"` and press <enter>. When prompted, enter the password for the student\
+    \ user account ( ISS316Security ).\n\n```\n```\n[student@TargetFedora01 ~]$ sudo\
+    \ yum groupinstall \"MySQL Database\"\n[sudo] password for student: \n```\n```\n\
+    \nFigure 26 – Using sudo to download and install software\n\n+   7.  The MySQL\
+    \ Database requires dependencies. YUM will ask for permission to continue with\
+    \ the download and install. Type ‘y’ and press <enter>.\n\n```\n```\nTotal download\
+    \ size: 24 M\nInstalled size: 74 M\nIs this ok [y/N]: y \n```\n```\n\nFigure 27\
+    \ – Allowing YUM to download and install\n\n+   8.  Edit the database configuration\
+    \ file and remove symbolic links, add skip-networking to prevent remote access\
+    \ to the database and disallow the ability to load a local data file. Type the\
+    \ command : `su -c 'vi /etc/my.cnf'` and press <enter>.\n\n+   9.  Password: ISS316Security\n\
+    \n+   10. Press the “i” key to enter INSERT mode.\n\n+   11. With the file open\
+    \ for edits, remove the “#” from the symbolic links field and add the line skip-networking\
+    \ at the bottom and add set-variable=local-infile=0 .\n\n```\n```\n[mysqld]\n\
+    datadir=/var/lib/mysql\nsocket=/var/lib/mysql/mysql.sock\nuser=mysql\n# Disabling\
+    \ symbolic-links is recommended to prevent assorted security risks\nsymbolic-links=0\n\
+    skip-networking\nset-variable=local-infile=0\n\n[mysqld_safe]\nlog-error=/var/log/mysqld.log\n\
+    pid-file=/var/run/mysqld/mysqld.pid\n```\n```\n\nFigure 28 – Configure Basic Security\
+    \ Hardening on a MySQL Database Using “my.cnf”"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "+   12. Configure the database server to start automatically only in runlevel\
+    \ 3 . Type the command:\n\n```\nsudo chkconfig --level 3 mysqld on and press <enter>.\n\
+    ```\n\n+   13. [sudo] password for student: ISS316Security\n\n```\n[student@TargetFedora01\
+    \ ~]$ sudo chkconfig mysqld --list\n[sudo] password for student: \nmysqld    \
+    \        0:off   1:off   2:off   3:off   4:off   5:off   6:off\n[student@TargetFedora01\
+    \ ~]$ sudo chkconfig mysqld --level 3 on\n[student@TargetFedora01 ~]$ sudo chkconfig\
+    \ mysqld --list\nmysqld            0:off   1:off   2:off   3:on    4:off   5:off\
+    \   6:off\n[student@TargetFedora01 ~]$ \n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_57_0.png)\n\
+    \n**Note:** Notice when the student password is entered when using the sudo command,\
+    \ subsequent commands in the same session do not require to re enter the password.\n\
+    \n+   14. Start the database server. Type the command: `sudo service mysqld start`\
+    \ and press <enter>.\n\n+   15. [sudo] password for student: ISS316Security\n\n\
+    The first time the MySQL Database is started after a fresh install, a series of\
+    \ informational messages scroll across the screen. Verify, the green “OK” is displayed\
+    \ in the terminal.\n\nPlease report any problems with the `/usr/bin/mysqlbug`\
+    \ script!\n\n```\n[  OK  ]\nStarting mysqld:     [  OK  ]\n[student@TargetFedora01\
+    \ ~]$ \n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_57_1.png)\n\nBy default,\
+    \ no password is set for the database root user. This can be a significant security\
+    \ risk in production environments. Set the MySQL root password by logging in as\
+    \ root. This root account is NOT the same root account used on the Linux server.\
+    \ MySQL also names its administrative account with username `‘root’`.\n\n+   16.\
+    \ Enter the mysql environment. Type the command: `mysql -u root -p` and press\
+    \ <enter> ."
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '17. Enter password: press `<enter>` again without typing a password.
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 ~]$ mysql -u root -p
+
+    Enter password:
+
+    Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+    Your MySQL connection id is 2
+
+    Server version: 5.1.58 Source distribution
+
+
+    Copyright (c) 2000, 2010, Oracle and/or its affiliates. All rights reserved.
+
+    This software comes with ABSOLUTELY NO WARRANTY. This is free software,
+
+    and you are welcome to modify and redistribute it under the GPL v2 license
+
+
+    Type ''help;'' or ''\h'' for help. Type ''\c'' to clear the current input statement.
+
+    mysql> _
+
+    ```
+
+    ```
+
+
+    Figure 31 – Working in the mysql console
+
+
+    18. Set the MySQL root password. Type the command: SET PASSWORD FOR `root@localhost`=PASSWORD(''
+    ISS4I8Security '');
+
+
+    ```
+
+    ```
+
+    mysql> SET PASSWORD FOR root@localhost=PASSWORD(''ISS4I8Security'');
+
+    Query OK, 0 rows affected (0.00 sec)
+
+
+    mysql> quit; _
+
+    ```
+
+    ```
+
+
+    Figure 32 – Setting the MySQL root password
+
+
+    19. Exit the mysql environment. Type the command: *quit*; and press `<enter>`.
+
+
+    # Install and Configure Basic Security Hardening for an Apache Web Server Application
+
+
+    20. Type the command: `sudo yum groupinstall "Web Server" -y` and press `<enter>`.
+
+
+    21. [sudo] password for student: ISS316Security
+
+
+    22. Configure the web server to start in runlevel 3 only. Type the command: `sudo
+    chkconfig --level 3 httpd on` and press `<enter>` .'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '```
+
+    [student@TargetFedora01 ~]$ sudo chkconfig --level 3 httpd on
+
+    [sudo] password for student:
+
+    ```
+
+
+    Figure 33 – Configure Basic Security Hardening on an Apache Web Server
+
+
+    +   23.  Type the command: `sudo service httpd start` and press <enter> to start
+    the web server. (If prompted for a password : ISS316Security )
+
+
+    +   24.  By default, the HTTP “Trace” method is enabled. This method has the potential
+    to leak more information about the server than necessary. Disable the Trace method.
+
+
+    +   25.  Type the command: `su -c ''vi +  /etc/httpd/conf/httpd.conf''` and press
+    <enter>.
+
+
+    +   26.  Password: ISS316Security
+
+
+    +   27.  Press “i” key to enter INSERT mode.
+
+
+    +   28.  Scroll down to begin a new line.
+
+
+    +   29.  Add the following line : `# Disable some HTTP Methods we don''t like`
+
+
+    +   30.  Add another line: TraceEnable  off
+
+
+    ```
+
+    #
+
+    #Disable some HTTP Methods we don''t like
+
+    TraceEnable off
+
+    ```
+
+
+    Figure 34 – Disable Some HTTP Connectivity Methods Using “httpd.conf” Trace Enable
+    Off
+
+
+    +   31.  Type the command: `sudo service httpd configtest` and press <enter> to
+    test for any syntax errors.  If prompted for a password, enter the password for
+    the student user account ( ISS316Security ).  Look for the phrase : Syntax OK
+    .
+
+
+    +   32.  Reload web server configuration file.  Type the command: `sudo service
+    httpd reload` and press <enter>  If prompted for a password, enter the password
+    for the student user account ( ISS316Security).
+
+
+    +   33.  Install telnet.  Type the command : `sudo yum install telnet -y` and
+    press <enter> . If prompted, enter the password for the student account ( ISS316Security
+    ).
+
+
+    +   34.  Telnet to web server port 80.  Type the command: `telnet  localhost  80`
+    and press <enter>
+
+
+    +   35.  Issue command to web server.  Type the command: `TRACE/HTTP/1.0` and
+    press <enter>.  A raw output of HTML is presented.  Verify Method not implemented
+    text is within the HTML .'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Install and Configure the Sendmail Application to Only Relay from Localhost
+
+
+    +   36.  Install Sendmail server. Type the command: `sudo yum install sendmail
+    -y` and press `<enter>`. If prompted for a password, enter the password for the
+    student user ( `ISS316Security` ).
+
+
+    +   37.  Configure Sendmail to start up at run level of 3 . Type the command:
+    `sudo chkconfig sendmail --level 3` and press `<enter>`. If prompted for a password,
+    enter the password for the student user ( `ISS316Security` ).
+
+
+    +   38.  Verify sendmail restricts relaying of mail only though the localhost
+    (127.0.0.1)
+
+
+    +   39.  Verify the line reads as : `DAEMON_OPTIONS(Port=smtp,Addr=127.0.0.1,NAME=mta)
+    dnl`
+
+
+    Type the command: `grep DAEMON /etc/mail/sendmail.me` and press `<enter>`.
+
+
+    # Configure Secure Shell (SSH) Remote Access & Banner Message of the Day
+
+
+    +   40.  Open the sshd_config file in vi editor. Type the command: `su -c '' vi
+    /etc/ssh/sshd_config ''` and press `<enter>`.
+
+
+    +   41.  Password: `ISS316Security`
+
+
+    +   42.  Press the “ i ” key to enter **INSERT** mode .
+
+
+    +   43.  Disable logins with passwords by changing fields to appropriate settings
+    below:
+
+
+    +   44.  Remove the `#` from the line `#PasswordAuthentication no`
+
+
+    +   45.  Add a new line : `UsePam no`
+
+
+    +   46.  Disable root’s ability to login . Replace `#PermitRootLogin yes` with:
+    `PermitRootLogin no`
+
+
+    +   47.  Display a warning banner to everyone that attempts to login : Replace
+    : `#Banner none` with Banner `/etc/motd`
+
+
+    ```
+
+    ```
+
+    # no default banner path
+
+    Banner /etc/motd
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_60_0.png)
+
+
+    +   48.  Save the changes and exit the file. Press the escape key to exit from
+    insert mode, then press the “shift &” keys to enter command mode. At the colon
+    prompt in command mode, type `wq` to exit and save changes.
+
+
+    +   49.  Open `/etc/motd` in vi editor. Type the command: `su -c ''vi /etc/motd
+    ''` and press `<enter>` .
+
+
+    +   50.  Password: `ISS316Security`
+
+
+    +   51.  Press the “ i ” key to enter **INSERT** mode .
+
+
+    +   52.  Add the following line to the file.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'PROPERTY OF FIRST WORLD BANK SAVINGS AND LOAN. AUTHORIZED USERS ONLY!
+
+
+    +   53. Save the changes and exit the file. Hit the escape key to exit from insert
+    mode, then press the "shift" & ":" keys to enter command mode. At the colon prompt
+    in command mode, type wq to exit and save changes.
+
+
+    +   54. Check status of openssh server. Type the command: service sshd status
+    and press <enter>.
+
+
+    +   55. Reload openssh configuration file IF in running state. Type the command:
+    sudo service sshd reload and press <enter> . If prompted, enter the password for
+    the student user (ISS316Security).
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_61_0.png)
+
+
+    # Figure 36 – Status check of the openssh server
+
+
+    +   56. Start openssh server IF NOT in running state. Type the command: sudo service
+    sshd start and press <enter> . When prompted, enter the password for the student
+    user ( ISS316Security ).
+
+
+    +   57. Secure secure access to localhost. Type the command: ssh localhost and
+    press <enter>. If a message appears stating: the authenticity host localhost(127.0.0.1)
+    can''t be established. Are you sure you want to continue connecting (yes/no)?
+    _ , Type ''yes'' to proceed.
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_61_1.png)
+
+
+    # Figure 37 – Verifying Banner message for SSH login'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Deliverables
+
+
+    Upon completion of Lab #5: Apply Hardened Security for Linux Services, students
+    are required to provide the following deliverables:
+
+
+    +   1. Lab #5 - Screenshots of the following files:
+
+    +       a. Output of the /etc/my.cnf file
+
+    +       b. Output of the /etc/httpd/conf/httpd.conf file
+
+    +       c. Output of the /etc/ssh/sshd_config file
+
+    +       d. SSH session MOTD banner
+
+    +   2. Lab #5 – Assessment Questions & Answers
+
+
+    # Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #5 that the students
+    must perform:
+
+
+    +   1. Was the student able to harden Linux server services when enabling and
+    installing them and keep a security perspective during configuration – [20%]
+
+    +   2. Was the student able to create an Apache Web Server installation, and perform
+    basic security configurations to assure that the system has been hardened before
+    hosting a web site – [20%]
+
+    +   3. Was the student able to configure and perform basic security for a MySQL
+    database, understanding the ramifications of a default installation and recommending
+    hardening steps for the database instance – [20%]
+
+    +   4. Was the student able to install, setup and perform basic security configuration
+    for Sendmail to be able to leverage the built-in messaging capabilities of the
+    Linux System – [20%]
+
+    +   5. Was the student capable of enabling and implementing secure SSH for encrypted
+    remote access over the network or across the Internet of a Linux server system
+    – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Lab #5 – Assessment Worksheet
+
+
+    # Apply Hardened Security for Linux Services & Applications
+
+
+    Course Name & Number: _________________________
+
+
+    Student Name: _________________________
+
+
+    Instructor Name: _________________________
+
+
+    Lab Due Date: _________________________
+
+
+    # Overview
+
+
+    This lab is an extension of the previous equipment-based labs, and it incorporates
+    security hardening for Linux services and applications loaded in the physical
+    server. In this lab the students will configure security and hardened services
+    and applications to ensure C-I-A of these services. They will take the steps to
+    configure and secure an Apache web server and MySQL database and the components
+    necessary to security harden the implementation of both. The students will also
+    demonstrate how to use and configure the Sendmail application for secure local
+    messaging and will enable secure, encrypted remote access using Secure Shell (SSH).
+
+
+    # Lab Assessment Questions & Answers
+
+
+    +   1. When configuring services, what Linux directory typically contains server
+    configuration files?
+
+
+    The lab covered some very basic security hardening settings for MySQL Database
+    server and application.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '+   2. What command disables remote access to the MySQL Database? Is this a
+    security hardening best practice?
+
+
+    +   3. What is a Linux runlevel for a specific service or application? What command
+    allows you to define the runlevel uniquely for a service or application?
+
+
+    +   4. What is the Apache Web Server. Review the /etc/httpd/conf/httpd.conf configuration
+    file, and point out a setting that could enhance security.
+
+
+    +   5. OpenSSH is the de facto method to remotely access Linux systems. Explain
+    why the use of telnet is discouraged.
+
+
+    +   6. What are Symbolic links?
+
+
+    +   7. Why is it recommended to disable Symbolic Links in MySQL?'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '+   8. Why would you add the ''skip-networking'' command?
+
+
+    +   9. What two files does sendmail create while processing a message?
+
+
+    +   10. What command can you use locally to find the sendmail''s version number?'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Laboratory #6
+
+
+    # Lab #6: Apply Hardened Security for Controlling Access
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   Review current internal host-based firewall parameters and configuration settings
+    to verify allowed and denied IP communications
+
+
+    +   Configure an internal host-based firewall using iptables and create stringent
+    allow/deny rules for services that may require access to the system over the network
+
+
+    +   Harden the system by enabling TCPWrappers to deny and log unauthorized attempts
+    against services and ports running on the system
+
+
+    +   Secure processes running on the system by using and configuring SELinux to
+    help perform more in-depth layered security
+
+
+    +   Verify configurations of the settings applied by connecting to the Linux server
+    using SSH and connect to other services running on a Linux server
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+
+    The following is required for this hands-on lab:
+
+
+    +   A A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+
+    +   B An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+
+    +   C Students Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #6:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +      1. Microsoft DHCP server for allocating student IP host addresses
+
+    +      2. A Student and/or Instructor VM workstation
+
+    +      3. Fedora Linux Target VM
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this Lab:
+
+    +      1. VMware Player 3.x
+
+    +      2. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # Recommended Procedures
+
+
+    **Equipment-Based Lab #6 – Student Steps:**
+
+    The Instructor will conduct the following demonstration using VMware Player:
+
+
+    +   1. Connect the instructor-removable hard drive to your workstation
+
+    +   2. Boot up the Instructor VM and Microsoft DHCP VM server to allocate an IP
+    host address
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.__, the DHCP server 172.30.0.10, and the IP default gateway
+    router 172.30.0.1
+
+    +   4. Connect your instructor workstation to the LCD projector and show the VMware
+    Player library and how to add, remove and copy VMs to and from the library and
+    the local computer
+
+    +   5. Login to the Student VM using the following credentials:
+
+    +      Login ID: “student” (case sensitive)
+
+    +      Password: “ISS316Security” (case sensitive)
+
+    +   6. From the GNOME Desktop , at the top left side, click on “Applications”->
+    Systems Tools -> Terminal
+
+
+    > **NOTE:** Before the sudo & su commands can execute as expected, the user account
+    MUST be a member of the wheel group with the wheel group granted limited sudo
+    access as directed in Lab 3.
+
+
+    # Configure Stringent Permit & Deny Firewall Rule Sets
+
+
+    +   7. List current firewall rules. Type the command: sudo iptables -L and press<enter>.
+    If prompted for a password, enter the password for the student user ( ISS316Security
+    ).'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "+   8. Flush the firewall rules. Type the command: `sudo iptables  -F`  and\
+    \ press <enter> .  If prompted for a password, enter the password for the student\
+    \ user ( ISS316Security ).\n\n+   9. Verify firewall rules are flushed. Type the\
+    \ command: `sudo  iptables  -l.` and press <enter>.  If prompted for a password,\
+    \ enter the password for the student user ( ISS316Security ).  There should be\
+    \ no firewall rules listed.\n\n+   10. Insert a rule to allow INPUT chains to\
+    \ be added to the firewall rules and allow established connections.\n+   \n+ \
+    \      Type the command:\n+   \n+       `sudo  iptables -I INPUT  -m state  --state\
+    \  ESTABLISHED,RELATED  -j  ACCEPT`  and press <enter>.  If prompted for a password,\
+    \ enter the password for the student user ( ISS316Security ).\n\n+   11. Append\
+    \ a rule to allow http ( web ) access.\n+   \n+       Type the command:\n+   \n\
+    +       `sudo  iptables  -A INPUT  -p tcp  --port  80  -j  ACCEPT`  and press\
+    \ <enter>.  If prompted for a password, enter the password for the student user\
+    \ ( ISS316Security ).\n\n+   12.  Append a rule to allow https ( SSL ) access.\n\
+    +   \n+       Type the command:\n+   \n+       `sudo  iptables  -A  INPUT  -p\
+    \ tcp  --port  443  -j  ACCEPT  and press <enter>.\n\n+   13.  Append a rule to\
+    \ allow access for ssh.\n+   \n+       Type the command:\n+   \n+       `sudo\
+    \  iptables  -A  INPUT  -p tcp  --dport  22  -j  ACCEPT  and press <enter>.\n\n\
+    +   14. Append a rule to allow ICMP pings.\n+   \n+       Type the command : \n\
+    +   \n+       `sudo  iptables  -A  INPUT  -p icmp  -j  ACCEPT  and press <enter>.\n\
+    \n+   15. Append a rule that will deny all other traffic.\n+   \n+       Type\
+    \ the command:\n+   \n+       `sudo  iptables  -A  INPUT  -p all  -j  DROP  and\
+    \ press <enter>.\n\n+   16. Save the newly created rules. Type the command: `sudo\
+    \ service  iptables save  and press <enter>.\n\n+   17. Check one more time that\
+    \ the newly created rules are now listed. Type the command: `sudo iptables  -L.`\
+    \ and  press <enter>.  If prompted for a password, enter the password for the\
+    \ student user ( ISS316Security )."
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Configure TCP Wrappers to Deny and Log All Attempts from Crackers.com
+
+
+    +   18. Open `/etc/hosts.deny` file in `vi` editor. Type the command : `su -c
+    ''vi /etc/hosts.deny''` and press <enter>.
+
+
+    +   19. Password: ISS316Security
+
+
+    +   20. Press the `“i”` key to enter INSERT mode.
+
+
+    +   21. Scroll down and add the following new line to the file. Make sure the
+    new line does NOT begin with a hash (`#`) as those are comments.
+
+
+    ```
+
+    ALL : .crackers.com : severity emerg
+
+    ```
+
+
+    +   22. Save the changes and exit the file. Press the `escape` key to exit from
+    insert mode, then Press the `"shift" & ":"` keys to enter **command** mode. At
+    the colon prompt in command mode, type `wq` to exit and save changes.
+
+
+    +   23. Add another workstation ip address to the host file as `labhost.crackers.com`.
+    Obtain an IP Address from the instructor or a lab partner.
+
+
+    +   24. Open `/etc/hosts` file in `vi` editor. Type the command : `su -c ''vi
+    /etc/hosts''` and press <enter>.
+
+
+    +   25. Password: ISS316Security
+
+
+    +   26. Press the `“i”` key to enter INSERT mode.
+
+
+    +   27. Add a new line in the file such as below:
+
+
+    ```
+
+    <Instructor-Or-Partner-IP-Address> labhost.crackers.com
+
+    ```
+
+
+    > Note: Do not actually type <Instructor-Or-Partner-IP-Address> , instead replace
+    that with the actual IP Address provided.
+
+
+    +   28. Save the changes and exit the file. Press the `escape` key to exit from
+    insert mode, then press the `"shift" & ":"` keys to enter **command** mode. At
+    the colon prompt in command mode, type `wq` to exit and save changes.
+
+
+    +   29. Check openssh server status. Type the command : `sudo service sshd status`
+    and press <enter>.
+
+
+    +   30. IF NOT running, type the command : `sudo service sshd start` and press
+    <enter>.
+
+
+    +   31. Try to SSH remote connect from the workstation host address that you just
+    enabled in the host file and verify that SSH remote access is now being denied
+    to labhost.crackers.com workstation'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "ip host address . Type the command:  `ssh <Instructor-Or-Partner-IP-Address>`\
+    \  and press <enter> .\n\nNote: Do not actually type <Instructor-Or-Partner-IP-Address>\
+    \ , instead replace that with the intended IP Address provided.\n\n# Configure\
+    \ SELinux to Enable Layered Security Solutions\n\n+   32.  Open  `/etc/selinux/config`\
+    \  in vi editor. Type the command:  `su -c 'vi /etc/selinux/config'`  and press\
+    \ <enter> .\n+   33.  Password: ISS316Security\n+   34.  Press the \"i\" key to\
+    \ enter INSERT mode .\n+   35.  Change SELINUX setting from \"permissive\" to\
+    \ \"enforcing\".\n\n```\n# This file controls the state of SELinux on the system.\n\
+    # SELINUX= can take one of these three values:\n#\t\t enforcing - SELinux security\
+    \ policy is enforced.\n#\t\t permissive - SELinux prints warnings instead of enforcing.\n\
+    #\t\t disabled - SELinux is fully disabled.\nSELINUX=enforcing\n# SELINUXTYPE=\
+    \ type of policy in use. Possible values are:\n#\t\t targeted - Only targeted\
+    \ network daemons are protected.\n#\t\t strict - Full SELinux protection.\nSELINUXTYPE=targeted\n\
+    ```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_70_0.png)\n\n+   36.  Save the\
+    \ changes and exit the file. Press the `escape` key to exit from insert mode,\
+    \ then press the \"shift\" & \":\" keys to enter command mode. At the colon prompt\
+    \ in command mode, type  `wq`  to exit and save changes.\n+   37.  Reboot the\
+    \ machine. Type the command:  `su -c 'shutdown -r now'`  and press <enter> .\n\
+    +   38.  Password: ISS316Security\n+   39.  Upon reboot, login as\n+   \t a) \
+    \ User: `student`\n+   \t b)  Password: `ISS316Security`\n+   \t c)  From the\
+    \ GNOME Desktop , at the top left side, click on \"Applications\"-> Systems Tools\
+    \ -> `Terminal`\n+   40.  Check SELinux status.  Type the command:  `sestatus`\
+    \  and press <enter> ."
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'Current mode should be set to “enforcing”.
+
+
+    +   41. Check web server status. Type the command: `sudo service httpd status`
+    and press <enter>.
+
+
+    +   42. IF NOT running, type the command: `sudo service httpd start` and press
+    <enter>. If prompted for a password, enter the password for the student user (
+    ISS316Security ).
+
+
+    +   43. View SELinux settings for web processes protected now by SELinux. Type
+    the command: `ps -ZC httpd` and press <enter>
+
+
+    +   44. The result should show all running processes related to the httpd daemon
+    running under the label `o unconfined_u:system_r:httpd_t:s0`
+
+
+    +   45. View Boolean settings for the web server type. Type the command: `getsebool
+    -a | grep httpd` and press <enter>.
+
+
+    +   46. Modify Boolean settings to allow the http server to send email, execute
+    PHP scripts, and make use of a NFS share.
+
+
+    | Functionality | SELinux Boolean | Fedora 14 Default |
+
+    | Web Server send email | `httpd_can_sendmail` | Off |
+
+    | Web Server can execute PHP & Other Web Scripts | `httpd_built-in_scripting`
+    | On |
+
+    | Web Server can connect to a remote NFS Share | `httpd_use_nfs` | Off |
+
+
+    +   47. Type the command: `su -c ''setsebool -P httpd_can_sendmail 1''` and press
+    <enter> . When prompted, enter the password for root ( ISS316Security ). This
+    may take a few moments to relabel. Do not press any keys until the command prompt
+    returns.
+
+
+    +   48. Type the command: `su -c ''setsebool -P httpd_built-in_scripting 1''`
+    and press <enter> . When prompted, enter the password for root ( ISS316Security
+    ) . This may take a few moments to relabel. Do not press any keys until the command
+    prompt returns.
+
+
+    +   49. Type the command: `su -c ''setsebool -P httpd_use_nfs 1''` and press <enter>
+    . When prompted, enter the password for root ( ISS316Security ) . This may take
+    a few moments to relabel. Do not press any keys until the command prompt returns.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "```\n[student@TargetFedora01 ~]$ su -c 'setsebool -P httpd_can_sendmail 1'\n\
+    Password:\n\n[student@TargetFedora01 ~]$ \n[student@TargetFedora01 ~]$ su -c 'setsebool\
+    \ -P httpd_builtin_scripting 1'\nPassword:\n\n[student@TargetFedora01 ~]$ su -c\
+    \ 'setsebool -P httpd_use_nfs 1'\nPassword:\n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_72_0.png)\n\
+    \n# Deliverables\n\nUpon completion of Lab #6: Apply Hardened Security for Controlling\
+    \ Access, students are required to provide the following deliverables:\n\n+  \
+    \ 1.  Students are to submit screenshots of the following files:\n+       a. \
+    \ Output of the `iptables -L` command\n+       b.  Output of the `/etc/hosts.deny`\n\
+    +       c.  Output of the /etc/selinux/config file\n+   2.  Lab #6 – Lab Assessment\
+    \ Questions & Answers\n\n# Evaluation Criteria and Rubrics\n\nThe following are\
+    \ the evaluation criteria and rubrics for Lab #6 that the students must perform:\n\
+    \n+   1.  Was the student able to review current internal host-based firewall\
+    \ parameters and configuration settings to verify allowed and denied IP communications?\
+    \ – [20%]\n+   2.  Was the student able to configure an internal host-based firewall\
+    \ using iptables and enable stringent allow/deny rules for services that may require\
+    \ remote access to the system? – [20%]\n+   3.  Was the student able to harden\
+    \ the system by enabling TCPWrappers to deny and log unauthorized attempts against\
+    \ services and ports running on the system? – [20%]\n+   4.  Was the student able\
+    \ to secure processes running on the system by using and configuring SELinux to\
+    \ help perform more in-depth layered security? – [20%]\n+   5.  Was the student\
+    \ able to verify configurations of the settings applied by connecting to the Linux\
+    \ server using SSH and connect to other services running on a Linux server? –\
+    \ [20%]"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "# Lab #6 – Assessment Worksheet\nApply Hardened Security for Controlling Access\n\
+    \n**Course Name & Number:**\n\n_____________________________________________________\
+    \ \n\n**Student Name:**\n\n_______________________________________________________\n\
+    \n**Instructor Name:**\n\n_____________________________________________________\n\
+    \n**Lab Due Date:**\n\n_____________________________________________________\n\
+    \n# Overview\n\nThis lab is an extension of the previous equipment-based labs.\
+    \ It continues with the system and security hardening for the Fedora Linux Server\
+    \ and requires the students to first review current host-based, IP firewall services.\
+    \ They will flush the current firewall configuration and will re-configure with\
+    \ stringent permit/deny rule sets. In this lab the students will configure security\
+    \ and hardened services, including a host-based IP firewall, TCPwrappers for unauthorized\
+    \ access controls and logging, and SELinux for implementation of a layered security\
+    \ strategy.\n\n# Lab Assessment Questions & Answers\n\n+   1. Suppose the domain\
+    \ hackers.com is denied for all services in the hosts.deny and the hosts.allow\
+    \ file has the rule ALL: ALL. Will TCPWrappers allow hackers.com access?\n\n+\
+    \   2. How do you enable SELinux?"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '+   3. What are three modes of SELinux? Explain their basic functionality.
+
+
+    +   4. Consider the following firewall rule, and describe what this permits or
+    denies.
+
+
+    +   5. What command would you use to allow all the traffic from the loopback?
+
+
+    +   6. What command would you use to view the network port configuration for the
+    iptables?
+
+
+    +   7. If a service is to allow in one place and to deny in another, what is the
+    outcome?'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '+   8. Is the order of the rules important? If you deny something within the
+    IP network layer, but permit something within the TCP transport layer that uses
+    the IP network layer that you just denied, will your TCP traffic be permitted?
+
+
+    +   9. If one of the files does not exist what happens?
+
+
+    +   10. Are the rules from TCP wrapped services cached?'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Laboratory #7
+
+
+    **Lab #7: Apply Hardened Security for the Linux Kernel**
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   Review and tune the kernel parameters on a Fedora Linux Server for security
+    and monitoring purposes
+
+
+    +   Produce kernel versions and loaded options for a better understanding of how
+    the system is configured and to identify potential security vulnerabilities in
+    the Fedora Linux Server
+
+
+    +   Edit /etc/sysctl.conf file and adjust tcp_syscookies settings to configure
+    secure options for users on a Fedora Linux Server
+
+
+    +   Review and assess the Loaded Kernel Modules (LKM’s) of the target Linux system
+    and provide recommendations on the output and current running configuration
+
+
+    +   Use and interpret the lmod command output and perform security hardening configurations
+    on the Fedora Linux Server
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+
+    The following is required for this hands-on lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+
+    +   C) Student Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #7:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +       a. Microsoft DHCP server for allocating student IP host addresses
+
+    +       b. A Student and/or Instructor VM workstation
+
+    +       c. Fedora Linux Target VM
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this Lab:
+
+    +       a. VMware Player 3.x
+
+    +       b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # ## Recommended Procedures
+
+
+    **Equipment-Based Lab #7 – Student Steps:**
+
+    Students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.\_\_\_ , the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+    +   4. Login to the Student VM using the following credentials:
+
+    +       Login ID: “Student” (case sensitive)
+
+    +       Password: “ISS316Security” (case sensitive)
+
+    +   5. From the GNOME Desktop, at the top left side, click on “Applications”->
+    Systems Tools -> Terminal
+
+
+    **NOTE:** Before the `sudo` & `su` commands can execute as expected, the user
+    account **MUST** be a member of the wheel group with the wheel group granted limited
+    sudo access as directed in **Lab 3**.
+
+
+    # ### Review & Tune the Fedora Linux Server’s Kernel Parameters
+
+
+    +   6. View configured settings for the running kernel. Type the command: `cat
+    /etc/sysctl.conf | less` and press `<enter>`.
+
+    +   7. Press the “q” key to exit and return to the command prompt.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '+   8. Open /etc/sysctl.conf in vi editor. Type the command: su -c '' vi /etc/sysctl.conf
+    '' and press <enter> .
+
+    +   9. Password: ISS316Security
+
+    +   10. Press the " i " key to enter INSERT mode .
+
+    +   11. Add the line at the end of the file : net.ipv4.tcp_syncookies = 1
+
+    +   12. Save the changes and exit the file. Press the escape key to exit from
+    insert mode, then press the "shift" & ":" keys to enter command mode. At the colon
+    prompt in command mode, type wq to exit and save changes.
+
+    +   13. Change kernel setting immediately without a reboot. Type the command:
+    su -c '' echo "1" > /proc/sys/net/ipv4/tcp_syncookies '' and press <enter> to
+    immediately turn on tcp_syncookies without a reboot. When prompted, enter the
+    password for root ( ISS316Security )
+
+    +   14. View current kernel parameter setting. Type the command: cat /proc/sys/net/ipv4/tcp_syncookies
+    and press <enter> . A " 1 " signals the setting is set to "on" with the running
+    kernel.
+
+    +   15. View all available parameters. Type the command: sysctl -a | less and
+    press <enter> . Use the keyboard arrows to scroll up or down the page.
+
+    +   16. Press the " q " key to exit and return to the command prompt.
+
+    +   17. Change kernel parameter with sysctl command. Type the command: su -c ''
+    sysctl -w fs.file-max=100000 '' and press <enter> .
+
+    +   18. Password: ISS316Security
+
+    +   19. This will change the maximum number of files that can be opened at a time
+    by a user.
+
+
+    # Discover Information About the Current Running Kernel
+
+
+    +   20. Find what types of filesystems are supported by the kerneType the command:
+    cat /proc/filesystems and press <enter> .
+
+    +   21. Find what modules the kernel is loading. Type the command: cat /proc/modules
+    and press <enter> .
+
+    +   22. Find what version of the kernel is currently running. Type the command
+    cat /proc/version and press <enter> .
+
+    +   23. Find information regarding the CPU. Type the command: cat /proc/cpuinfo
+    and press <enter> .
+
+    +   24. Find information about processes running in memory. Type the command:
+    cat /proc/meminfo and press <enter> .'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# ## Loadable Kernel Modules (LKM)
+
+
+    +   25. List loaded modules. Type the command `lsmod` and press <enter>
+
+
+    | Module | Size | Used by |
+
+    |:-------|:-------|:----------|
+
+    | fuse | 51432 | 3 |
+
+    | ip6t_REJECT | 3470 | 2 |
+
+    | nf_conntrack_ipv6 | 14441 | 2 |
+
+    | ip6table_filter | 1207 | 1 |
+
+    | ip6_tables | 9929 | 1 ip6table_filter |
+
+    | ipv6 | 229420 | 24 ip6t_REJECT,nf_conntrack_ipv6 |
+
+    | uinput | 5228 | 0 |
+
+    | microcode | 11139 | 0 |
+
+    | vmware_balloon | 5280 | 0 |
+
+    | ppdev | 6808 | 0 |
+
+    | snd_ens1371 | 15976 | 2 |
+
+    | gameport | 7804 | 1 snd_ens1371 |
+
+    | snd_rawmidi | 16580 | 1 snd_ens1371 |
+
+    | snd_ac97_codec | 89730 | 1 snd_ens1371 |
+
+    | parport_pc | 17897 | 0 |
+
+    | parport | 26215 | 2 ppdev,parport_pc |
+
+    | ac97_bus | 922 | 1 snd_ac97_codec |
+
+    | snd_seq | 43447 | 0 |
+
+    | snd_seq_device | 5056 | 2 snd_rawmidi,snd_seq |
+
+    | snd_pcm | 61769 | 2 snd_ens1371,snd_ac97_codec |
+
+    | snd_timer | 15435 | 2 snd_seq,snd_pcm |
+
+    | pcnet32 | 26409 | 0 |
+
+
+    Figure 40 – Listing loaded kernel modules with lsmod command
+
+
+    # ## Remove and Load a Module
+
+
+    **Note:** To remove a module, the command `modprobe -r <module_name>` is used.
+    From the results of the previous step, find a module that has “0” in the Used
+    By column. A zero ( 0 ) is an indication the loaded module currently is not in
+    use and can be removed.
+
+
+    +   26. Remove a loaded module. Type the command: `su -c ''modprobe -r <module_name>''`
+
+
+    +   27. Password: ISS316Security'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '**Note:** Do not type `module_name` in the command. Instead replace that with
+    the name of the module to be removed. For example, if the `send_seq` module is
+    to be removed, the correct command is: `su -c ''modprobe -r snd_seq''`.
+
+
+    +   28. Load a module. Type the command : `su -c ''modprobe <unloaded_module>''`
+    and press <enter> to load the module that was previously removed.
+
+
+    +   29. **Password:** ISS316Security
+
+
+    **Note:** Do not type `unloaded_module` in the command. Instead replace that with
+    the name of the module that was removed in the previous step. For example, if
+    the `send_seq` module is to be loaded, the correct command is: `su -c ''modprobe
+    -r snd_seq''`.
+
+
+    # Deliverables
+
+
+    Upon completion of Lab #7: Apply Hardened Security for the Linux Kernel, students
+    are required to provide the following deliverables:
+
+
+    +   1. Lab #7 - Submit screenshots of the following files:
+
+    +      a. Output of the `/etc/sysctl.conf` file
+
+    +      b. Output of running the command `sysctl -a`
+
+    +      c. Output of `cat /proc/filesystems , /proc/modules, /proc/version, /proc/cpuinfo`
+    and `/proc/meminfo`
+
+    +      d. Output of running `lsmod`
+
+
+    +   2. Lab #7 – Lab Assessment Questions & Answers
+
+
+    # Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #7 that the students
+    must perform:
+
+
+    +   1. Was the student able to review and tune the kernel parameters on a Fedora
+    Linux Server for security and monitoring purposes? – [20%]
+
+
+    +   2. Was the student able to produce kernel versions and loaded options for
+    a better understanding of how the system is configured and to identify potential
+    security vulnerabilities in the Fedora Linux Server? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '+   3. Was the student able to edit /etc/sysctl.conf file and adjust tcp_syncookies
+    settings to configure secure options for users on a Fedora Linux Server? – [20%]
+
+
+    +   4. Was the student able to review and assess the Loaded Kernel Modules (LKM’s)
+    of the target Linux system and provide recommendations on the output and current
+    running configuration? – [20%]
+
+
+    +   5. Was the student able to use and interpret the lmod command output and perform
+    security hardening configurations on the Fedora Linux Server? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# **Lab #7 – Assessment Worksheet**
+
+
+    # **Apply Hardened Security for the Linux Kernel**
+
+
+    Course Name & Number: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    Student Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    Instructor Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    Lab Due Date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    # **_Overview_**
+
+
+    This lab is an extension of the previous equipment-based labs. This lab continues
+    with the system and security hardening for the Fedora Linux Server. In this lab
+    the students need to review and security harden the Linux kernel with security
+    parameters. They will perform steps to view and tune all kernel parameters and
+    discover information regarding the current Loadable Kernel Modules (LKM) and information
+    about the kernel itself. Finally, they will enable and interpret the results of
+    the “lmod” command to perform additional security hardening.
+
+
+    # **_Lab Assessment Questions & Answers_**
+
+
+    +   1. What is the command to view the current Linux Kernel parameters?
+
+
+    +   2. What command can you run to list all the kernels available parameters one
+    screen at a time with the ability to move forward and backwards on the output?'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '+   What is the purpose of enabling syncookies in the Linux Kernel?
+
+
+    +   When you want to enable a Linux Kernel command and enable it immediately without
+    a physical reboot of the system, what command must you enable in front of the
+    command parameter? Explain what the following command will do : echo "1" > /proc/sys/net/ipv4/ip_forward
+
+
+    +   If you wanted to limit the number of files that a user can open simultaneously
+    on the Fedora Linux Server to a maximum of 1, what is the command syntax you need
+    to enable in the Linux Kernel?
+
+
+    +   What is the best way to make a system-wide permanent change to the kernel
+    to enable syncookies?
+
+
+    +   Given a system that has been freshly installed your boss wants you to make
+    sure it is up to date and locked down at the Kernel level. What steps would you
+    take to verify what modules are loaded into the Kernel and how would you go about
+    locking them down?'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '+   8. What would you enable to set the Kernel to debug mode? Why would someone
+    choose to enable this?
+
+
+    +   9. What is the relation between sysctl.conf and the sysctl command?
+
+
+    +   10. If you wanted to modify a kernel parameter without editing the sysctl.conf
+    file would it be possible? If yes, please give the example.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# ## Laboratory #8
+
+
+    # Lab #8: Implement Best Practices for Secure Software Management
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   * Recommend security settings after discovering all installed packages in
+    the kernel to help evaluate the security measures that are necessary
+
+
+    +   * Configure the RPM database to add repositories securely for the distribution
+    of software to persons that do not need access to the system directly, only to
+    download any updates or RPMs
+
+
+    +   * Verify a source tar ball to determine whether the integrity and contents
+    of the package are what you expect before executing or installing it
+
+
+    +   * Use and leverage MD5Sum to verify the integrity of a downloaded software
+    tar ball
+
+
+    +   * Use wget to acquire and install third party software onto the Linux system
+    from the Internet
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+
+    The following is required for this equipment-based lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor’s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+
+    +   C) Students Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #8:
+
+
+    +   1. A **Virtualized Server Farm** with the following components:
+
+    +      a. Microsoft DHCP server for allocating student IP host addresses
+
+    +      b. A Student and/or Instructor VM workstation
+
+    +      c. Fedora Linux Target VM
+
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this lab:
+
+    +      a. VMware Player 3.x
+
+    +      b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # Recommended Procedures
+
+
+    **Equipment-Based Lab #8 – Student Steps:**
+
+
+    Students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.___ , the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+    +   4. Login to the Student VM using the following credentials:
+
+    +      Login ID: “student” (case sensitive)
+
+    +      Password: “ISS316Security” (case sensitive)
+
+    +   5. From the GNOME Desktop , at the top left side, click on “Applications”->
+    Systems Tools -> Terminal
+
+
+    > **NOTE:** For proper completion of this lab your Fedora 14 VM will require a
+    **LIVE** Internet connection. Do **NOT** disconnect the student workstations from
+    the classroom network and Internet connection.
+
+
+    > **NOTE:** Before the sudo & su commands can execute as expected, the user account
+    **MUST** be a member of the wheel group with the wheel group granted limited sudo
+    access as directed in Lab 3.
+
+
+    # Using RPM to Perform Software Management Tasks
+
+
+    +   6. View all files associated with the sendmail package .Type the command:
+    rpm -ql sendmail | less and press <enter> Use the up & down arrow keys to scroll.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '```
+
+    ```
+
+    [student@TargetFedora01 ~]$ rpm -ql sendmail | less
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_87_0.png)
+
+
+    +   7.  Press the "q" key to exit and return to the command prompt.
+
+
+    +   8.  Discover which package the `/bin/ls` executable belongs to. Type the command:
+    `rpm -qf /bin/ls` and press <enter>
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 ~]$ rpm -qf /bin/ls
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_87_1.png)
+
+
+    +   9.  Verify the integrity of files in the httpd package. Type the command:
+    `sudo rpm -V httpd` and press <enter>.
+
+
+    > > **Note:** If no changes have been made to any file belonging to the software
+    package, no output will return. However, if a file has changed, output will be
+    displayed. If the `/etc/httpd/conf/httpd.conf` has been altered as directed in
+    Lab 7, output similar to the following should display :
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 ~]$ sudo rpm -V httpd
+
+    S.5....T.   c /etc/httpd/conf/httpd.conf
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_87_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'Use the table below to determine what type of change has been made to a particular
+    file.
+
+
+    | Flag | Description |
+
+    |---|---|
+
+    | S | Size change |
+
+    | M | Permissions changed |
+
+    | 5 | MD5 Changed |
+
+    | L | Symlink Changed |
+
+    | D | Device changed |
+
+    | U | User change |
+
+    | G | Group change |
+
+    | Missing | File has been deleted for moved |
+
+
+    **Table 1 - Symboll lookup when verifying integrity of packages**
+
+
+    +   10. Search for all installed packages currently installed on the computer.
+    Type the command: `rpm -qa | less` and press <enter>. Use the arrow keys on the
+    keyboard to scroll up or down.
+
+    +   11. Press the “ q ” key to exit and return to the command prompt.
+
+
+    # **Download a Software Application via the Internet & Verify Integrity Using
+    MD5Sum Hashing**
+
+
+    +   12. Install wget software. Type the command: `sudo yum install wget -y` and
+    press <enter>. If prompted for a password, enter the password for the student
+    user (ISS316Security).
+
+    +   13. Download Python source code. Type the command: `wget http://www.python.org/ftp/python/2.6.5/Python-2.6.5.tgz`
+    and press <enter>
+
+
+    ```
+
+    |[student@TargetFedora01 ~]$ wget http://www.python.org/ftp/python/2.6.5/Python-2.6.5.tgz
+
+    ```
+
+
+    **Figure 44 – Downloading source code files from the Internet**
+
+
+    +   14. Open Web Browser. From the GNOME Desktop menu, *click on* “Applications”
+    on the top left menu, then Internet->Firefox to open the Firefox web browser.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '![](img/73be0eef2ceb12f43f3eb92c420134f5_89_0.png)
+
+
+    +   15.  Enter the URL. Type in address bar: `http://www.python.org/download/releases/2.6.5/`
+
+
+    +   16.  Locate and read a checksum. Scroll until the following syntax is located.
+    The particular checksum on the web site for `Python-2.6.5.tgz` should match the
+    downloaded `Python-2.6.5.tgz`.
+
+
+    MD5 checksums and sizes of the released files:
+
+
+    ```
+
+    ```text
+
+    cd04b5b9383c6c1fccdaa991af762cf4   13209175   Python-2.6.5.tgz
+
+    6bef0417e71a1a137ccc5750420fdb3    11095581   Python-2.6.5.tar.bz2
+
+    9cd2c4d23dea7dfcd964449c3008f042   15430656   python-2.6.5.amd64.msi
+
+    0b6bc43c45fb2e3195ec2daf3fad59fc2   15103488   python-2.6.5.msi
+
+    84489bba813fd36b6041b69d4310a86da   20348693   python-2.6.5-macosx10.3-2010-03-24.dmg
+
+    ```
+
+    ```
+
+
+    Figure 46 – List of MD5 checksums located on python.org
+
+
+    +   17.  Verify downloaded checksum. Type the command: `md5sum Python-2.6.5.tgz`
+    and press <enter> and verify the checksum matches that from the Step 15.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Add a Third Party Repository & Modify a File
+
+
+    +   18. Download a public key. Type the command: `wget http://dl.ssl.google.com/linux/linux_signing_key.pub`
+    and press <enter>.
+
+
+    +   19. Verify the signature of a downloaded key. Type the command: `gpg linux_signing_key.pub`
+    and press <enter>.
+
+
+    ```
+
+    [student@TargetFedora01 ~]$ gpg linux_signing_key.pub
+
+    :pub  1024D/7FAC5991  2007-03-08 Google, Inc. Linux Package Signing Key <linux-packages-keymaster@google.com>
+
+    :sub  2048g/C07CB649  2007-03-08
+
+    ```
+
+
+    **Figure 47 – Verifying the signature of key downloaded from the Internet**
+
+
+    +   20. Import a key into rpm database. Type the command `sudo rpm --import linux_signing_key.pub`
+    and press <enter>. If prompted for a password, enter the password for the student
+    user (ISS316Security).
+
+
+    ```
+
+    [student@TargetFedora01 ~]$ sudo rpm --import linux_signing_key.pub
+
+    [sudo] password for student:
+
+    ```
+
+
+    **Figure 48 – Importing a key into the RPM database**
+
+
+    +   21. Change directory to repository files directory. Type the command `cd /etc/yum.repos.d/`
+    and press <enter>.
+
+
+    +   22. Create and open repository file. Type the command: `su -c ''vi google.repo''`
+    and press <enter>.
+
+
+    +   23. Password: ISS316Security
+
+
+    +   24. Press the “ i ” key to enter into INSERT mode .
+
+
+    +   25. Type the content below **exactly** as it appears below .
+
+
+    ```
+
+    [Google]
+
+    name=Google IS418
+
+    baseurl=http://dl.google.com/linux/rpm/stable/i386
+
+    enabled=1
+
+    gpgcheck=1
+
+    gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '+   26. Save the changes and exit the file. Press the escape key to exit from
+    insert mode, then press the “shift” & “;” keys to enter command mode. At the colon
+    prompt in command mode, type `wq` to exit and save changes. If you had to install
+    software published by Google now you have the proper repository for yum installer
+    to check!
+
+
+    # Deliverables
+
+
+    Upon completion of Lab #8: Implement Best Practices for Secure Software Management,
+    students are required to provide the following deliverables:
+
+
+    +   1. Lab #8 - Submit screenshots of the following files:
+
+    +      a. Output of the all rpm commands run for steps 4 through 7
+
+    +      b. Output of the verified MDS of downloaded Python file
+
+    +      c. Output of added repository to /etc/yum.repos.d/google.repo
+
+    +   2. Lab #8 – Lab Assessment Questions & Answers
+
+
+    # Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #8 that the students
+    must perform:
+
+
+    +   1. Was the student able to recommend security settings after discovering all
+    installed packages in the kernel to evaluate what security measures are necessary?
+    – [20%]
+
+    +   2. Was the student able to configure the RPM database to add repositories
+    securely for the distribution of software to persons that do not need access to
+    the system directly, only to download any updates or RPMs? – [20%]
+
+    +   3. Was the student able to verify a source tar ball to determine whether the
+    integrity and contents of the package is what you expect before executing or installing
+    it? – [20%]
+
+    +   4. Was the student able to use and leverage MD5Sum to verify the integrity
+    of a downloaded software tar ball? – [20%]
+
+    +   5. Was the student able to use wget to acquire and install third party software
+    onto the Linux system from the Internet? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Lab #8 – Assessment Worksheet
+
+    Implement Best Practices for Secure Software Management
+
+
+    Course Name & Number: _________________________
+
+
+    Student Name: _________________________
+
+
+    Instructor Name: _________________________
+
+
+    Lab Due Date: _________________________
+
+
+    # **Overview**
+
+
+    In this lab, the students will review all installed software packages and applications
+    in the kernel. From this list, the instructor will demonstrate how to verify the
+    source tar ball for application integrity verification when downloading and installing
+    new applications. They will then properly secure the RPM services in the Fedora
+    Linux Server. Then they will perform steps to discover all installed kernel RPM
+    packages, verify a source tar ball and securely add a third party repository to
+    the RPM database. Use of the MD5Sum for hashing and integrity verification will
+    also be performed. Finally, the students will use “wget” to review and install
+    third-party applications onto the Fedora Linux Server.
+
+
+    # **Lab Assessment Questions & Answers**
+
+
+    +   1. Explain the following command: rpm -qf/bin/ls
+
+
+    +   2. Discuss the purpose of a software repository as it relates to YUM.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: 'Student Lab Manual
+
+
+    3. How can one ensure a downloaded tar ball is legitimate and hasn''t been tampered
+    with?
+
+
+    4. List and explain at least 3 switches available with the tar command that can
+    be useful in extracting and installing a tarball.
+
+
+    5. List and explain at least 3 switches associated with the rpm command that can
+    be leveraged to verify, list and install rpm packages.
+
+
+    6. What security countermeasure can you enable to verify the integrity of downloaded
+    applications or tar balls before you perform the installation?
+
+
+    7. Explain what hashing is and how does this differ from encryption?
+
+
+    Copyright © 2013 Jones & Bartlett Learning, LLC, an Ascend Learning Company
+
+    www.jblearning.com
+
+    All Rights Reserved.
+
+
+    -90-
+
+
+    Current Version Date: 10/10/2011'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '+   8. If you wanted to know which package a certain program belonged to, what
+    command would you run?
+
+
+    +   9. Once you have downloaded an RPM package, what command would you run if
+    you wanted to extract the files to a directory of your choice?
+
+
+    +   10. Where would you find checksum hashes for all installed programs in a Fedora
+    Linux Server?'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Laboratory #9
+
+
+    # Lab #9: Implement Best Practices for Security Logging & Monitoring
+
+
+    # Learning Objectives and Outcomes
+
+
+    Upon completing this lab, students will be able to complete the following tasks:
+
+
+    +   - Configure remote logging in the Fedora Linux Server and send syslogs and
+    other events to a remote host for secure secondary logging
+
+    +   - Search through different log files in Fedora Linux Server to identify where
+    certain types of logs are stored and how often they get recycled
+
+    +   - Install and configure Tripwire file integrity tool so that modifications
+    to important system files is quickly identified and properly logged both locally
+    and remotely
+
+    +   - Install and schedule rkhuntor to run at said interval using the cron subsystem
+    so that a rootkit can be properly and quickly identified if possible
+
+    +   - Configure both automatic searches on log files as well as automatic running
+    of important security applications to properly monitor a Fedora Linux Server for
+    malicious activity
+
+
+    # Required Setup and Tools
+
+
+    This lab does not require the use of the Mock IT Infrastructure - Cisco core backbone
+    network. In addition, the Instructor VM workstation and Student VM workstations
+    should be physically disconnected from the internal network and be isolated on
+    the classroom dedicated layer 2 switch. This will allow for a shared DHCP server
+    to be used to allocate the IP addresses for the instructor and student workstations.
+
+
+    The following is required for this equipment-based lab:
+
+
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting
+    the removable hard drive with the VM server farm connected to the classroom layer
+    2 switch.
+
+    +   B) An instructor workstation (with at least 4 Gig RAM recommended) that shall
+    act as the Instructor''s demo lab workstation. The instructor will display the
+    Instructor workstation on the LCD projector to demo the loading and configuring
+    of the Instructor VM workstation using VMware Player.
+
+    +   C) Students Lab workstations will use their own VM server farm and VM student
+    workstation. VMware Player will be used to run the Student VM and the Target VM.'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #9:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +       a. Microsoft DHCP server for allocating student IP host addresses
+
+    +       b. A Student and/or Instructor VM workstation
+
+    +       c. Fedora Linux Target VM
+
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this lab:
+
+    +       a. VMware Player 3.x
+
+    +       b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # **Recommended Procedures**
+
+
+    # **Equipment-Based Lab #9 – Student Steps:**
+
+
+    Students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+
+    +   3. Enable your DOS command prompt and type “ipconfig” and “ping” your allocated
+    IP host address 172.30.0.__ , the DHCP server 172.30.0.10, and the IP default
+    gateway router 172.30.0.1
+
+
+    +   4. Login to the Student VM using the following credentials:
+
+    +       Login ID: “student” (case sensitive)
+
+    +       Password: “!SS316Security” (case sensitive)
+
+
+    +   5. From the GNOME Desktop , at the top left side, click on “Applications”->
+    Systems Tools -> Terminal
+
+
+    **NOTE:**  For proper completion of this lab your classroom workstation will require
+    a LIVE Internet connection. Do NOT disconnect the student workstations from the
+    classroom network and Internet connection.
+
+
+    **NOTE:**  Before the *sudo* & *su* commands can execute as excepted, the user
+    account **MUST** be a member of the *wheel group* with the *wheel group* granted
+    limited sudo access as directed in **Lab 3**.
+
+
+    # **Configure Remote Logging to an External Logging & Monitoring Server**
+
+
+    +   6. Open /etc/rsyslog.conf in vi editor . Type the command : `su -c ''vi /etc/rsyslog.conf''`'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "+   7. **Password:** ISS316Security\n\n+   8. Press the `:` key to enter **INSERT**\
+    \ mode.\n\n+   9. Locate and uncomment the following lines (Remove the `#`)\n\
+    +   \n+   ```text\n+   # SModLoad imudp.so\n+   # $UDPSPerverRun 514\n+   ```\n\
+    \n+   10. Scroll down and locate the line: `*.* @@remote-host:514`. In the next\
+    \ line below, add a new line: `*.* @<IPAddress-of-instructor-server>:514`\n\n\
+    **Note:** Do not use `<IPAddress-of-instructor-server>`. In its place, use the\
+    \ Instructor's VM IP Address. For example, if the instructor's VM has an IP Address\
+    \ of `172.30.0.40`. The line should appear as : `*.* @@172.30.0.40:514`\n\n+ \
+    \  11. Save the changes and exit the file. Press the `escape` key to exit from\
+    \ insert mode, then press the \"shift\" & `:` keys to enter command mode. At the\
+    \ colon prompt in command mode, type `wq` to exit and save changes.\n\n# Search\
+    \ through the Log files\n\n+   12. Start the openssh server. Type the command:\
+    \ `sudo service sshd start` and press `<enter>`. If prompted, enter the password\
+    \ for student account (**ISS316Security**).\n\n+   13. Secure shell (SSH) to localhost\
+    \ with invalid account. Type the command: `ssh nonexist@localhost` and press `<enter>`.\n\
+    \n**Note:** The account doesn't exist on the server. However, attempt to login\
+    \ anyway as to generate a log record. When prompted with the message “Are you\
+    \ sure you want to continue connecting(yes/no)?”, type: `yes` and press `<enter>`.\
+    \ Next, enter an arbitrary password. After three failed attempts, the connection\
+    \ will be disconnected.\n\n+   14. Read logging info from security log. Type the\
+    \ command: `su -c ' cat /var/log/secure | grep nonexist '` and press `<enter>`.\n\
+    \n+   15. **Password:** ISS316Security\n\n+   16. Find the last installed package\
+    \ or software. Type the command: `su -c ' tail /var/log/yum.log '` and press `<enter>`\n\
+    \n+   17. **Password:** ISS316Security"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '18. Find in the logs whether sshd services were started when the system booted.
+    Type the command: `su -c '' cat /var/log/boot.log | grep sshd''` and press <enter>
+    .
+
+
+    19. Password: ISS316Security
+
+
+    # Install and Configure Tripwire
+
+
+    20. Install Tripwire software. Type the command: `sudo yum install tripwire -y`
+    and press <enter> . If prompted for a password, enter the password for the student
+    user ( ISS316Security ).
+
+
+    21. Configure tripwire. Type the command: `su -c ''tripwire-setup-keyfiles''`
+
+
+    22. Password: ISS316Security
+
+
+    23. Follow the steps to create site and local key file passphrases.
+
+
+    +   a) Enter ''is418lab09'' for the site passphrase
+
+    +   b) Enter ''is418lab09'' for the local passphrase.
+
+
+    **Note:** The process will ask to enter the site and local passphrase to generate
+    encrypted policy and configuration files. When prompted, enter the password created
+    earlier in the process, which is ''is418lab09''
+
+
+    24. Initialize the Tripwire database. Type the command: `su -c ''tripwire --init''`
+    and press <enter> .
+
+
+    25. Password: ISS316Security
+
+
+    26. Please enter your local passphrase : is418lab09
+
+
+    ```
+
+    ```
+
+    [student@TargetFedora01 yum.repos.d]$ su -c ''tripwire --init''
+
+    Password:
+
+    Please enter your local passphrase:
+
+    ```
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_98_0.png)
+
+
+    **Note:** Tripwire will index all files on the computer as specified in the default
+    policy file. There will be several warnings of “No such file or directory.” These
+    warnings can be ignored as the default configuration file used in the lab references
+    many file locations that are not found in Fedora. Upon completion of indexing,
+    a message will appear “The database was successfully generated.”.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '+   27. Force a timestamp change to the `/bin/ls` file. Type the command: `su
+    -c ''touch /bin/ls''` and press `<enter>`.
+
+
+    +   28. Password: ISS316Security
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_99_0.png)
+
+
+    Figure 50 – Changing the timestamp on `/bin/ls` file
+
+
+    +   29. Perform a file integrity check with Tripwire. Type the command: `su -c
+    ''tripwire --check''` and press `<enter>`.
+
+
+    +   30. Password: ISS316Security
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_99_1.png)
+
+
+    Figure 51 – Running the tripwire file integrity checker
+
+
+    > **Note:** Tripwire will now check indexed files as specified in the default
+    policy file. As in the previous step, the “No such file or directory” warnings
+    can be ignored. Once the report is generated, scroll up to view the report results.
+    There should be at a **minimum**, a violation for the modified `/bin/ls` file.
+
+
+    # Install and Schedule rkhunter
+
+
+    +   31. Install rkhunter rootkit checker. Type the command: `sudo yum install
+    rkhunter -y` and press `<enter>`. If prompted for a password, enter the password
+    for the student user (ISS316Security).
+
+
+    +   32. Type the command: `su -c ''rkhunter --update''` and press `<enter>` to
+    ensure the rkhunter software is updated with the latest signatures.. When prompted,
+    enter the password for root (ISS316Security).
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_99_2.png)
+
+
+    Figure 52 – Updating rkhunter database'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '+   33. **Type the command:** `su -c ''vi /etc/rkhunter.conf''` and press<enter>.
+    When prompted, enter the password for root (ISS316Security).
+
+
+    +   34. **Scroll down and locate the line:** `MAIL-ON-WARNING="root"`
+
+
+    +   35. Press the “`i`” key to enter **INSERT mode**.
+
+
+    +   36. Change `MAIL-ON-WARNING="root"` to `MAIL-ON-WARNING="student"`.
+
+
+    +   37. **Save the changes and exit the file.** Press the `escape` key to exit
+    from insert mode, then press the “`shift`” & “`;`” keys to enter command mode.
+    At the colon prompt in command mode, type `wq` to exit and save changes.
+
+
+    +   38. Using the cron scheduler, schedule rkhunter to run every morning at 2:30
+    am.
+
+
+    +   39. Create an empty text file using `vi` editor. **Type the command:** `vi
+    rkhunter.txt` and press <enter>.
+
+
+    +   40. Press the “`i`” key to enter **INSERT mode**.
+
+
+    +   41. Add the following line to the rkhunter.txt file
+
+
+    ```
+
+    30 2 * * * /usr/bin/rkhunter -c -q >/dev/null 2>&1
+
+    ```
+
+
+    +   42. Save the changes and exit the file. Press the `escape` key to exit from
+    insert mode, then press the “`shift`” & “`;`” keys to enter command mode. At the
+    colon prompt in command mode, type `wq` to exit and save changes.
+
+
+    +   43. Schedule the cron job for root user. **Type the command:** `su -c ''crontab
+    rkhunter.txt''` and press <enter>.
+
+
+    +   44. **Password:** ISS316Security
+
+
+    +   45. List installed cron jobs. **Type the command:** `su -c ''crontab -l''`
+    and press<enter>
+
+
+    +   46. **Password:** ISS316Security
+
+
+    +   47. **Type the command:** `su -c ''rkhunter -c''` and press<enter>.
+
+
+    +   48. **Password:** ISS316Security
+
+
+    ```
+
+    [student@TargetFedora01 ~]$ su -c ''crontab rkhunter.txt''
+
+    Password:
+
+    [student@TargetFedora01 ~]$ su -c ''crontab -l''
+
+    Password:
+
+    30 2 * * * /usr/bin/rkhunter -c -q >/dev/null 2>&1
+
+    ```
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_100_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Deliverables
+
+
+    Upon completion of Lab #9: Implement Best Practices for Security Logging & Monitoring,
+    students are required to provide the following deliverables:
+
+
+    +   1.  Students are to submit screenshots of the following files:
+
+    +       a.  Output of the /etc/rsyslogd.conf file
+
+    +       b.  Output of the /var/log/secure, /var/log/yum.log and /var/log/boot
+    log files
+
+    +       c.  Output of successful yum install commands for both tripwire and rkhunter
+
+    +   2.  Lab #9 - Assessment Worksheet with answers to the assessment questions
+
+
+    # Evaluation Criteria and Rubrics
+
+
+    The following are the evaluation criteria and rubrics for Lab #9 that the students
+    must perform:
+
+
+    +   1.  Was the student able to configure remote logging in the Fedora Linux Server
+    and send syslogs and other events to a remote host for secure secondary logging?
+    – [20%]
+
+    +   2.  Was the student able to search through different log files in Fedora Linux
+    Server to identify where certain types of logs are stored and how often they get
+    recycled? – [20%]
+
+    +   3.  Was the student able to install and configure Tripwire file integrity
+    tool so that modifications to important system files is quickly identified and
+    properly logged both locally and remotely? – [20%]
+
+    +   4.  Was the student able to install and schedule rkhunter to run at said interval
+    using the cron subsystem so that a rootkit can be properly and quickly identified
+    if possible? – [20%]
+
+    +   5.  Was the student able to configure both automatic searches on log files
+    as well as automatic running of important security applications to properly monitor
+    a Fedora Linux Server for malicious activity? – [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "# Lab #9 – Assessment Worksheet\n\n# Implement Best Practices for Security\
+    \ Logging & Monitoring\n\nCourse Name & Number: \n\nStudent Name: \n\nInstructor\
+    \ Name: \n\nLab Due Date: \n\n# Overview\n\nIn this lab, students will enable\
+    \ system logging of a Fedora Linux Server for security operations and management\
+    \ of production servers. The instructor will demonstrate how to enable logging\
+    \ with the system log files sent automatically to a remote server on the network.\
+    \ The instructor will also demonstrate use of a third-party file integrity tool\
+    \ called Tripwire, as well as rkhunter on the Fedora Linux Server. Finally, the\
+    \ instructor will demonstrate how to automate searching through large log files\
+    \ using cron.\n\n# Lab Assessment Questions & Answers\n\n+   1. What is the primary\
+    \ place to store log files on a local Linux system and what are recommended procedures\
+    \ for that location?\n\n+   2. Why remote logging to a central server is considered\
+    \ a best practice?"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '+   3. What is the syntax and file you would edit with the necessary entries
+    to send syslogs from your Linux system to a logging server at 172.130.1.254?
+
+
+    +   4. Why is the “Tripwire” application considered a file integrity checker?
+
+
+    +   5. Could rkhunter be considered a file integrity checker? Why or why not.
+
+
+    +   6. How would you check to see that a scheduled recurring cron job was scheduled
+    to run?
+
+
+    +   7. How would you syslog only error conditions or above to a remote logging
+    server listed as 172.130.1.254 when it had to do with cron jobs?'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '8. As a system administrator you notice the logs on your system are starting
+    to take lots of space. You have a remote syslog server with plenty of space but
+    want to minimize the amount of logs on the physical system. What is a manual and
+    an automatic way to do this in Linux?
+
+
+    9. What port does syslog run on and what transport protocol does it use? Why is
+    this important information?
+
+
+    10. Specify a security implication of the Syslog service on a system?'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# Laboratory #10\n\n# Lab #10: Define Linux OS & Application Backup & Recovery\
+    \ Procedures\n\n# Learning Objectives and Outcomes\n\nUpon completing this lab,\
+    \ students will be able to complete the following tasks:\n\n+   - Ensure Linux\
+    \ OS, application, and data availability with documented back-up and recovery\
+    \ procedures\n+   - Configure and perform backups within the Linux operating system\
+    \ as an automated and stable way of enhancing backup and recovery procedures and\
+    \ maximizing system availability\n+   - Encrypt backups in the Linux operating\
+    \ system as they are being performed and for securing data back-ups and storage\n\
+    +   - Restore encrypted backups for full recovery of the Linux OS as per defined\
+    \ recovery time objectives (RTO)\n+   - Backup and restore deleted files using\
+    \ /proc in Linux so that an entire system does not have to be restored in the\
+    \ instance of a deleted or corrupted file\n\n# Required Setup and Tools\n\nThis\
+    \ lab does not require the use of the Mock IT Infrastructure - Cisco core backbone\
+    \ network. In addition, the instructor VM workstation and Student VM workstations\
+    \ should be physically disconnected from the internal network and be isolated\
+    \ on the classroom dedicated layer 2 switch. This will allow for a shared DHCP\
+    \ server to be used to allocate the IP addresses for the instructor and student\
+    \ workstations.\n\nThe following is required for this equipment-based lab:\n\n\
+    +   A) A classroom workstation (with at least 2 Gig RAM) capable of supporting\
+    \ the removable hard drive with the VM server farm connected to the classroom\
+    \ layer 2 switch.\n+   \n+   B) An instructor workstation (with at least 4 Gig\
+    \ RAM recommended) that shall act as the Instructor's demo lab workstation. The\
+    \ instructor will display the Instructor workstation on the LCD projector to demo\
+    \ the loading and configuring of the Instructor VM workstation using VMware Player.\n\
+    +   \n+   C) Students Lab workstations will use their own VM server farm and VM\
+    \ student workstation. VMware Player will be used to run the Student VM and the\
+    \ Target VM."
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'The following summarizes the setup, configuration, and equipment needed to
+    perform Lab #10:
+
+
+    +   1. A Virtualized Server Farm with the following components:
+
+    +       a. Microsoft DHCP server for allocating student IP host addresses
+
+    +       b. A Student and/or Instructor VM workstation
+
+    +       c. Fedora Linux Target VM
+
+
+    +   2. Standard onsite student workstation must have the following software applications
+    loaded to perform this Lab:
+
+    +       a. VMware Player 3.x
+
+    +       b. Microsoft Office 2007 or higher for Lab Assessment Questions & Answers
+
+
+    # **Recommended Procedures**
+
+
+    # **Equipment-Based Lab #10 – Student Steps:**
+
+
+    Students should perform the following steps:
+
+
+    +   1. Connect the student-removable hard drive to your workstation
+
+
+    +   2. Boot up the Student VM and Microsoft DHCP VM server to allocate an IP host
+    address
+
+
+    +   3. Enable your DOS command prompt and type \"ipconfig\" and \"ping\" your
+    allocated IP host address 172.30.0.\_\_\_, the DHCP server 172.30.0.10, and the
+    IP default gateway router 172.30.0.1
+
+
+    +   4. Login to the Student VM using the following credentials:
+
+
+    Login ID: \"student\" (case sensitive)
+
+
+    Password: \"ISS316Security\" (case sensitive)
+
+
+    +   5. From the GNOME Desktop , at the top left side, click on \"Applications\"->
+    Systems Tools -> Terminal
+
+
+    > NOTE: Before the sudo & su commands can execute as expected, the user account
+    MUST be a member of the wheel group with the wheel group granted limited sudo
+    access as directed in Lab 3.
+
+
+    # **Secure a Data File Backup Using Encryption**
+
+
+    +   6. Change to home directory. Type the command: cd and press <enter>.
+
+
+    +   7. View current working directory. Type the command: pwd and press <enter>.
+    /home/student .'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "![](img/73be0eef2ceb12f43f3eb92c420134f5_107_0.png)\n\nFigure 54 – Changing\
+    \ directory to student home\n\n+   Archive and compress the/etc and/var directories\
+    \ for backup. Type the command: `su -c 'tar zcvf lab10.tar.gz /etc /var'` and\
+    \ press <enter> \n\n+   Password: ISS316Security\n\nNote: The directories and\
+    \ files which are backed up will scroll across the screen as they are archived.\
+    \ This may take several minutes. Once complete, a compressed tar archive with\
+    \ the name lab10.tar.gz is created. This file contains the contents of everything\
+    \ in the/etc &/var directories.\n\n+   Type the command: `su -c 'openssl des3\
+    \ -salt -in lab10.tar.gz -out lab10.tar.gz.des3'` and press <enter> to encrypt\
+    \ the file .\n\n+   Password: ISS316Security\n\n+   Create password for the file\
+    \ as lab10\n+   enter des-ede3-cbc encryption password: lab10\n+   Verifying -\
+    \ enter des-ede3-cbc encryption password: lab10\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_107_1.png)\n\
+    \nFigure 55 – Creating a des3 file with openssl\n\n+   Verify the existence of\
+    \ an encrypted file. Type the command: `ls lab10.tar.gz.des3` and press <enter>\
+    \ .\n\nNote: If a “no such file or directory message is displayed, verify the\
+    \ file name has been typed in correctly or repeat the previous step to ensure\
+    \ the encrypted file is created."
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '+   14. Remove the original unencrypted back up file. Type the command: `su
+    -c ''rm -f lab10.tar.gz''` and press `<enter>`.
+
+    +       Password: ISS316Security
+
+
+    # Restore the Data File from the Encrypted Backup
+
+
+    +   15. Track the amount of time it takes you to perform steps #4 - #7 below from
+    start to finish – this represents your recovery time objective (RTO) for this
+    data file recovery
+
+    +   16. Simulate a deleted sendmail configuration fileType the command: `su -c
+    ''mv /etc/mail/sendmail.mc  /tmp/''` and press `<enter>`.
+
+    +   17. Password: ISS316Security
+
+    +   18. Decrypt backup file . Type the command: `su -c ''openssl des3 -d -salt
+    -in lab10.tar.gz.des3 -out  lab10.tar.gz''` and press `<enter>`.
+
+    +   19. Password: ISS316Security
+
+    +   20. enter des-ede3-cbc decryption password: lab10
+
+    +   21. Be patient. It may take a few moments to decrypt the file. Once completed,
+    the command prompt will return.
+
+    +   22. Restore the sendmail configuration file to its appropriate location. Type
+    the command: `su -c ''tar zxvf  lab10.tar.gz  -C /    /etc/mail/sendmail.mc  ''`
+    and press `<enter>`.
+
+    +   23. Password: ISS316Security
+
+    +   24. Verify the /etc/mail/sendmail.mc  has been restored. Type the command:
+    `ls /etc/mail/sendmail.mc  ` and press `<enter>` to .
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_108_0.png)
+
+
+    # Recover a Deleted File Using /proc
+
+
+    +   25. Create and open new file in vi editor. Type the command: `vi  hacked.sh`
+    and press `<enter>` .
+
+    +   26. Press “`i`” key to enter INSERT mode.
+
+    +   27. Enter random data such as “You have been hacked!” in the file.'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '+   28. Save the changes and exit the file. Hit the escape key to exit from
+    insert mode, then hit the \"shift\" & \";\" keys to enter command mode. At the
+    colon prompt in command mode, type `wq` to exit and save changes.
+
+
+    +   29. Type the command: `less hacked.sh` and press <enter> to view the file
+    contents.
+
+
+    +   30. Exit from the less screen: Press the `ctrl + z` keys.
+
+
+    +   31. Delete the `hacked.sh` file created earlier. Type the command: `rm -f
+    hacked.sh` and press <enter>
+
+
+    +   32. Use the `lsof` tool to verify that the file is still being referenced
+    by the `less` command and obtain the process id (PID). Type the command: `lsof
+    | grep hacked` and press <enter>.
+
+
+    **Note:** A line should return with the word ''less'' in the first column. The
+    second column is the process id. Write down the process id as it will be used
+    in the next step. The figure below show the command to obtain the process id of
+    the previously entered less command. In this scenario, the process id is 13922.
+    Your process id will most likely be a different number than what is displayed
+    here.
+
+
+    ```
+
+    [student@TargetFedora01 ~]$ lsof | grep hacked
+
+    less    13922   student   4r REG 253,0   22   142522 /home/student/hacked.sh
+
+    ```
+
+
+    **Figure 57 – listing process/file information with lsof**
+
+
+    +   33. Using the output of the PID and descriptor, locate the file just deleted
+    in memory. Type the command: `cd /proc/<PID>/fd/`.
+
+
+    **Note:** Replace <PID> with the process ID obtained in the previous step. Process
+    Ids (PIDS) are ALWAYS numeric. Do Not type the angle brackets (< >) . For example,
+    if the process id is 13922 the command is: `cd /proc/13922/fd`
+
+
+    +   34. Locate the file descriptor associated with the deleted file. Type the
+    command: `ls -ls` and press <enter> . The correct file descriptor will reference
+    the previous location of the deleted file.
+
+
+    Figure displays file descriptor “4” is the location in memory of the deleted file.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "```\nstudent@TargetFedora01 fd] $ ls -ls\n total 8\n lrwx-... . . 1 student\
+    \ student 64 Sep 30 10:37 0 -> /dev/pts/0\n lrwx-... . . 1 student student 64\
+    \ Sep 30 10:37 0 -> /dev/pts/0\n lr-x-... . . 1 student student 64 Sep 30 10:37\
+    \ 0 -> /dev/pts/0\n lr-x-... . . 1 student student 64 Sep 30 10:37 0 -> /dev/tty\n\
+    \ lr-x-... . . 1 student student 64 Sep 30 10:37 4 -> /home/student/hacked.sh\
+    \ (deleted)\n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_110_0.png)\n\n35.\
+    \ Recover the file by copying the file descriptor to the hard drive : `cp <descriptor>\
+    \ /home/student/hacked.recovered` and press <enter>.\n\n```\n|student@TargetFedora01\
+    \ fd] $ cp 4 /home/student/hacked.recovered\n[student@TargetFedora01 fd] $ cat\
+    \ /home/student/hacked.recovered\nYou have been hacked!\n```\n\n![](img/73be0eef2ceb12f43f3eb92c420134f5_110_1.png)\n\
+    \n> **Note:** Replace <descriptor> with the number found from the previous command\
+    \ as the file descriptor. Using the previous figure as an example, the command\
+    \ is:\n> ```\n> cp 4 /home/student/hacked.recovered .\n> ```\n\n# Deliverables\n\
+    \nUpon completion of Lab #10: Define Linux OS & Application Backup & Recovery\
+    \ Procedures, students are required to provide the following deliverables:\n\n\
+    +   1. Lab #10 – Submit screenshots of the following files:\n+   \ta. Encrypted\
+    \ back-up file of /etc, /var and /home directories\n+   \tb. Output of the move\
+    \ command on Step 6 and restored file in step 9\n+   \tc. Output of the /proc\
+    \ restore of the file hacked.sh\n+   2. Lab #10 – Lab Assessment Questions & Answers\n\
+    \n# Evaluation Criteria and Rubrics\n\nThe following are the evaluation criteria\
+    \ and rubrics for Lab #10 that the students must perform:\n\n+   1. Was the student\
+    \ able to ensure Linux OS, application, and data availability with documented\
+    \ back-up and recovery procedures? – [20%]\n+   2. Was the student able to configure\
+    \ and perform backups within the Linux operating system as an automated and stable\
+    \ way of enhancing backup and recovery procedures and maximizing system availability?\
+    \ – [20%]"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '+   3. Was the student able to encrypt backups in the Linux operating system
+    as they are being performed and for securing data back-ups and storage?– [20%]
+
+
+    +   4. Was the student able to restore encrypted backups for full recovery of
+    the Linux OS with an acceptable recovery time objectives (RTO)?– [20%]
+
+
+    +   5. Was the student able to backup and restore deleted files using /proc in
+    Linux so that an entire system does not have to be restored in the instance of
+    a deleted or corrupted file?– [20%]'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# **Lab #10 – Assessment Worksheet**
+
+
+    # **Define Linux OS & Application Backup & Recovery Procedures**
+
+
+    **Course Name & Number:**
+
+
+    **Student Name:**
+
+
+    **Instructor Name:**
+
+
+    **Lab Due Date:**
+
+
+    # **Overview**
+
+
+    In this lab the students will maximize availability and define a recovery time
+    objective for data file backups and recovery on a production Fedora Linux Server.
+    They will perform backups and restoration of a Linux OS, applications, and data
+    stored in the file systems. They will then perform steps to perform a backup and
+    encrypt it for security hardening using openssl. Finally, the students will then
+    recover an accidentally deleted file using the /proc recovery function.
+
+
+    # **Lab Assessment Questions & Answers**
+
+
+    +   1. Why is encrypting an already compressed file necessary?
+
+
+    +   2. Why is it best practice to encrypt backups?'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '+   3. Why is performing messaging, such as emails, in an encrypted fashion
+    is recommended as part of a secure communications strategy? Explain.
+
+
+    +   4. Explain each of the switches used in the following command: tar zxvf fwbs1.tar.gz
+    etc/mail/sendmail.mc -C /etc/mail
+
+
+    +   5. How is it possible to recover a deleted file from the pseudo filesystem
+    /proc?
+
+
+    +   6. Other than tar what is another type of backup you could run for a Unix
+    system?
+
+
+    +   7. What advantage would there be to using dd to image a system? Name one disadvantage?'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '+   8. If the recovery time objective (RTO) were unacceptable to your organization''s
+    business continuity plan, what could you do to ensure that you achieve the desired
+    RTO for data file, applications, or systems?
+
+
+    +   9. What would be an issue when restoring a tar that was saved onto the local
+    drive under /home/student?
+
+
+    +   10. What is a reason to use the dump commands for backups?'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# LABORATORY MANUAL TO ACCOMPANY
+
+
+    # # Security Strategies
+
+    ## in Linux Platforms and Applications
+
+
+    ![](img/73be0eef2ceb12f43f3eb92c420134f5_123_0.png)
+
+
+    vLab Solutions is a leading designer and developer of performance outcome based,
+    hands-on labs for educational, training, and professional certification requirements.
+    vLab Solutions integrates virtualization for classroom-delivered labs coupled
+    with live hands-on exercises, each with measurable learning outcomes.'
+  merge: -1
+  img_proc: true
