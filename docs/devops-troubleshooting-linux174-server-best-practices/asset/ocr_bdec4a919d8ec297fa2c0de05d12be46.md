@@ -1,0 +1,11 @@
+# ## The Root Kernel Argument
+
+The kernel knows where the root file system is because of the root option passed to it by GRUB. If you were to look in a GRUB configuration file for the line that contains kernel arguments, you might see something like root=/dev/sda2, root=LABEL=/, or root=UUID=528c6527-24bf-42d1-b908-cl75f7b06a0f. In the first example, the kernel is given an explicit disk partition, /dev/sda2. This method of specifying the root device is most common in older systems and has been replaced with either disk labels or UUIDs, because any time a disk is added or repartitioned, it's possible that what was once /dev/sda2 is now /dev/sdb2 or /dev/sda3.
+
+To get around the problem of device names changing around, distributions started labeling partitions with their mount point, so the root partition might be labeled / or root and the /home partition might be labeled home or /home. Then, instead of specifying the device at the root= line, in GRUB you would specify the device label such as root=LABEL=/. That way, if the actual device names changed around, the labels would still remain the same and the kernel would be able to find the root partition.
+
+Labels seemed to solve the problem of device names changing but introduced a different problem—what happens when two partitions are labeled the same? What started happening is that someone would add a second disk to a server that used to be in a different system. This new disk might have its own / or /home label already, and when added to the new system, the kernel might not end up mounting the labels you thought it should. To get around this issue, some distributions started assigning partitions UUIDs (Universal Unique Identifiers). The UUIDs are long strings of characters that are guaranteed to be unique across all disk partitions in the world, so you could add any disk to your system and feel confident that you will never have the same UUID twice. Now instead of specifying a disk label at the boot prompt, you would specify a UUID like root=UUID=528c6527-24bf-42d1-b908-cl75f7b06a0f.
+
+# ## The Root Device Changed
+
+One of the most common reasons a kernel can't mount the root partition is because the root partition it was given has changed. When this happens

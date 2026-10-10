@@ -1,0 +1,11 @@
+re-install GRUB to the MBR, type /sbin/grub-install /dev/sda. Replace /dev/sda with your root partition device (if you are unsure what the device is, type df at this prompt and look to see what device it claims /mnt/sysimage is). From this prompt you can also view the /boot/grub/grub.conf file in case you need to make any custom changes to the options there.
+
+# Disable Splash Screens
+
+Back in the earlier days of Linux, the boot process was a bit more exposed to the average user. When you booted a server, screens full of text scrolled by telling you exactly what the system was doing at any particular moment. Even on server installs, many systems default to hiding a lot of that valuable debug information.
+
+If you’ve gotten past the GRUB prompt but the system gives errors further along in the boot process, you will want to disable any splash screen or other mode that suppresses output so you can see any errors. To do this, go to the GRUB menu that displays your different boot options (you may have to hit Esc or Shift at boot to display this menu), then press E to edit the boot arguments for that specific menu entry. Look for the line that contains all of your kernel boot arguments (it might start with the word linux or kernel) and edit it to remove arguments like quiet and splash. Optionally, you may add the word nosplash to make sure any splash screens are disabled. Now once you exit the editing mode and boot with these new options, you should be able to see debug output as your system boots.
+
+# Can’t Mount the Root File System
+
+Apart from GRUB errors, one of the most common boot problems is from not being able to mount the root file system. After GRUB loads the kernel and initrd file into RAM, the initrd file is expanded into an inittmars temporary root file system in RAM. This file system contains kernel modules and programs the kernel needs to locate and mount the root file system and continue the boot process. To best troubleshoot any problems in which the kernel can’t mount the root file system, it’s important to understand how the kernel knows where the root file system is to begin with.

@@ -346,6 +346,7 @@
 +   [.net Core 3 和 Visual Studio 2019 多平台桌面应用开发：macOS、Linux 和 Windows C# GUI 应用构建指南](docs/developing-multi-platform-desktop-applications-with-net-core/README.md)
 +   [实用无线应用开发指南](docs/developing-practical-wireless-applications/README.md)
 +   [DevOps 故障排除：Linux 服务器最佳实践](docs/devops-troubleshooting-linux-server-best-practices/README.md)
++   [Linux 服务器 DevOps 故障排除最佳实践](docs/devops-troubleshooting-linux174-server-best-practices/README.md)
 +   [Kali Linux 数字取证：通过使用 Kali Linux 进行网络和内存取证提升你的调查技能](docs/digital-forensics-with-kali-linux-enhance-your-investigation/README.md)
 +   [开源工具数字取证：使用开源平台工具对目标系统进行计算机取证：Windows、Mac、Linux、UNIX 等](docs/digital-forensics-with-open-source-tools-using-open-source-p/README.md)
 +   [LibreOffice 2020 探索指南：成为 LibreOffice 专家](docs/discover-libreoffice-2020-become-a-libreoffice-expert/README.md)

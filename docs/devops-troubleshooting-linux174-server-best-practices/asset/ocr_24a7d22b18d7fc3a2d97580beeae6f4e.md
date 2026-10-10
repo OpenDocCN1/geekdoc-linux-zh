@@ -1,0 +1,11 @@
+on the surface. For instance, an ssh session into a server can lag and seem sluggish both when the server is under heavy load or when the network connection is saturated. Nmap (a useful port scanning tool) will report that a port is filtered both if a firewall is blocking it and if there is a router misconfiguration. If you zero in on a past solution too quickly, you can bias yourself and make it much more difficult to find the real problem.
+
+The key is that even when you use past solutions to guide your trouble- shooting process, still be sure to test your hypotheses. If you remember some of the ways you isolated the issue last time, you should be able to prove it with a test much faster this time, and if your test gives different results, be ready to move on to other theories.
+
+# ## Document Your Problems and Solutions
+
+As I've already mentioned, most problems happen more than once. One of the best ways to take advantage of this fact is to document your problems and their solutions. Many places call this process a postmortem. After a problem is resolved, everyone involved gets together and documents what went wrong and what steps everyone performed to isolate the issue along with their results. At the end of the postmortem a root cause is identified and, ideally, further steps are put in place to prevent the problem from happening again.
+
+While postmortems take time out of everyone's busy schedule, there are a lot of reasons they are worth doing. The main reason is that in the event the same symptoms do creep up again, it can be hard to remember every- thing you did the last time to resolve the issue. In the heat of the moment, often all you can remember is that you've seen the issue before. If you can find a matching postmortem, you'll get an immediate list of troubleshoot- ing steps to isolate the issue.
+
+In a team setting, this documentation process makes everyone a better problem solver. The junior members of the team get the benefit of learn- ing from more senior members' experience, and everyone learns new tools and techniques together. What's more, when the solutions to problems are documented, it's easier for junior team members to solve the problem by

@@ -1,0 +1,12 @@
+ALONG WITH DNS, EMAIL is one of the oldest and most widely used services on the Internet. Unlike DNS, most people use email directly and frequently and are aware when there's a problem. No matter what role you have on a DevOps team, if you are responsible for email service in any capacity, whether as the administrator in charge of the email server, the go-to tech guy at an office, a developer adding email support to an application, or just a regular email user yourself, eventually you will have to answer one of the following questions:
+
++   * I sent an email but the recipient didn't get it, what happened?
++   * Someone sent me an email but I didn't get it, what happened?
+
+This chapter will talk about how to troubleshoot email, specifically how to solve problems related to sending and receiving email using SMTP (Send-mail Transfer Protocol). This sort of troubleshooting is related, but different from troubleshooting mailbox retrieval over protocols like POP and IMAP. Even though there are many mail servers out there, troubleshooting ordinary problems with email delivery is the same on all servers. Since IMAP and POP troubleshooting can vary widely depending on their servers, and since the techniques are quite different, this chapter will just stick to SMTP. If you are interested in troubleshooting IMAP or POP problems, I recommend looking at documentation specifically geared for your IMAP or POP server. By the end of the chapter, you should have the techniques and tools to track down (as much as is possible) why an email wasn't delivered.
+
+# Trace an Email Request
+
+Before we dive into how to troubleshoot specific email problems, it's useful to first understand just what happens when you send an email. If you are able to mentally trace an email from your computer to your recipient along with each stop along the way, when there is a problem you can follow the path your email should have taken through each step and better figure out which step failed.
+
+Email systems are set up in many different ways, and if you get email through a large email provider, their systems might be quite complex. The fact is, even with a complex mail provider, the general way that email gets

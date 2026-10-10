@@ -1,0 +1,11 @@
+The point is that this instinct to blame the technology you understand least applies to you the troubleshooter as well as anyone else. You will be a much more effective problem solver if you understand how the system you are troubleshooting works. From the perspective of solving Linux issues, this means having a good understanding of TCP/IP, DNS, Linux processes, programming, and memory management. This book will help explain many of these subjects in the context of troubleshooting, but the fact is they are good subjects to know anyway even outside of troubleshooting.
+
+You'll discover that the more you understand how a system works, the faster you will be able to solve its problems. You will find you can trust your hunches about a problem more. It also will help you avoid wild goose chases. You'll be able to rule out entire categories of root causes without having to perform many tests.
+
+# ## Use the Internet, but Carefully
+
+The Internet can be a very valuable resource when troubleshooting. You probably aren't the first person in the world to see a particular error mes- sage. It's not only likely that someone else has seen the same symptoms as you, there's a good chance in your search you'll find a working solution.
+
+The challenge with using the Internet for your troubleshooting is that you must have a good, clear understanding of the problem before you search on the Internet. If your server is not on the network and you type "server not on network" into a search engine, you probably won't get very helpful results. Once you do some troubleshooting steps on your own to narrow down the issue and have a clearer understanding of the problem, you'll be able to use specific, targeted search queries that very well could help you solve your problem.
+
+I've found the Internet to be most useful when troubleshooting problems that include a very specific error code or phrase. Error codes that describe a specific issue can be handy because they are simple to search for even if you don't understand what the error code means. Usually you'll find a helpful person on a forum or knowledge base that explains what the error code means and what to do when you see it. Error messages in program
