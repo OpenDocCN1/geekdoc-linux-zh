@@ -916,6 +916,7 @@
 +   [黑客与渗透测试人员 Linux 入门指南](docs/linux-essentials-for-hackers-pentesters/README.md)
 +   [黑客与渗透测试人员 Linux 入门指南：Kali Linux 无线攻击、渗透测试、VPN、代理服务器及网络命令基础](docs/linux-essentials-for-hackers-pentesters-kali-linux-basics-fo/README.md)
 +   [Linux 以太网指南](docs/linux-ethernet-howto/README.md)
++   [Kali Linux 缓冲区溢出分步指南：Linux 漏洞开发初学者指南](docs/linux-exploit-development-for-beginners-step-by-step-guide-t/README.md)
 +   [Linux 常见问题解答：中级用户指南](docs/linux-faqs-intermediate-users/README.md)
 +   [Linux 防火墙](docs/linux-firewalls/README.md)
 +   [Linux 防火墙：iptables, psad 和 fwsnort 攻击检测与响应 [图解]](docs/linux-firewalls-attack-detection-and-response-with-iptables-/README.md)
