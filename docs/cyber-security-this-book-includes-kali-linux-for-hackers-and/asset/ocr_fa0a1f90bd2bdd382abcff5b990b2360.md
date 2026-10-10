@@ -1,0 +1,3 @@
+situations where such a motive isn’t monetary, it can be as a way of boasting in their capabilities or merely ideological.
+
+What should matter to you, as a user is that these attackers create complex attack methods daily to steal sensitive information? Regrettably, they are successful in doing things because users haven’t put into place necessary security practices to mitigate their strategies. It may interest you to know that criminal activities generate much money in the world than anything. A recent report indicated that cyber-attack is higher in cost than a natural disaster.

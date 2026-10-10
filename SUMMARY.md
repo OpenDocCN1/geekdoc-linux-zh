@@ -300,6 +300,7 @@
 +   [跨平台游戏开发：Windows、Linux 和 Mac PC 游戏构建指南 (Wordware 游戏开发者库)](docs/cross-platform-game-development-make-pc-games-for-windows-li/README.md)
 +   [CUPS：通用 Unix 打印系统：打印系统与互联网打印协议权威指南（Sam 白皮书）](docs/cups-common-unix-printing-system-common-unix-printing-system/README.md)
 +   [Linux 定制与升级（第二版）](docs/customizing-and-upgrading-linux-second-edition/README.md)
++   [网络安全：本书包含：黑客的 Kali Linux 与黑客基础安全](docs/cyber-security-this-book-includes-kali-linux-for-hackers-and/README.md)
 +   [小型网络网络安全：给适度偏执者的实用指南](docs/cybersecurity-for-small-networks-a-no-nonsense-guide-for-the/README.md)
 +   [Dan Gookin 教授 Microsoft Windows Millennium Edition](docs/dan-gookin-teaches-microsoft-windows-millennium-edition-auth/README.md)
 +   [Darknet：匿名保护初学者指南（渗透测试，Kali Linux）第 1 册](docs/darknet-a-beginners-guide-to-staying-anonymous-penetration-t/README.md)

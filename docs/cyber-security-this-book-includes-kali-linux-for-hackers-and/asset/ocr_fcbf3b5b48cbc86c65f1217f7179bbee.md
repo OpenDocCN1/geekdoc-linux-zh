@@ -1,0 +1,10 @@
+# ## Level 5 Problem
+**Login: level5 Password: Silent night, holy night! Study: Strings in Binaries.**
+
+First, what is a string? It’s a char grouping, as taught in college. In common language, it is a word, a sentence or a text. Whenever we program, we need to use strings to communicate with each other and with the user. Two examples in different languages of strings for the user. Pascal writeln ('Enter a number'); 8 C++ cout >> "Enter a number \n"; Strings are also used to make simple comparisons of words and phrases.
+
+I know all programmers are tired of seeing this, but a basic explanation is important for non-programmers not to get so lost. A comparison example: Test Program; varx : string; beginwriteln ('Enter your password: '); readln ( x ); if x = ' binladen ' then beginwriteln (' Correct Password '); end else beginwriteln (' Incorrect password '); end; end;
+
+In this little program in Pascal, I first send the user a text requesting your password. I read the variable that contains the password and then the comparison: if the string (password) is the same as binladen, I write in that the password is correct, otherwise, type Incorrect password. This is nothing new to anyone. Here, what is interesting to us will be the compiled program and not the source. When we do not use an encryption feature or executables in our compiled program, it leaves most of our strings on display. You can see this using a hexadecimal edit. But there is an easier way, the strings command, which scans any binary file (not just executables) and shows you the strings found. I will compile the code shown earlier in DOS and show the problem step by step. I did the program and tested it.
+
+I typed saddamhussein as a password. It returned incorrect password, so I tested with the default password, binladen. The program returned the correct password. Soon after, I'll type the strings command progtest.exe to try and find the string binladen.
