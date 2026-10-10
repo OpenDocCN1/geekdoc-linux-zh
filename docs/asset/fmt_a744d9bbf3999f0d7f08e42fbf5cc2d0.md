@@ -1,0 +1,341 @@
+
+如果最终用户将 `LANG` 设置为 `en_US`，则程序将在 `bindtextdomain()` 设置的 `/usr/share/locale/` 目录下的 `gtw` 消息目录中查找美国英语翻译文本。
+
+与其直接使用 `printf()` 打印文本消息，不如调用 `gettext()` 函数在当前默认的 `LC_MESSAGES` 语言环境的当前默认消息目录中查找 `MSGID`（默认文本）。如果未找到，该函数将返回 `MSGID` 本身（默认文本）。
+
+请注意，尽管 POSIX 定义了用于 UNIX 的 `catgets()`，但 Linux 还是添加了 `gettext()`。这两种方法的区别在于 `catgets()` 使用数字消息标识符，而 `gettext()` 使用默认文本作为消息标识符。`catgets()` 的缺点在于数字消息标识符容易在应用程序和消息目录之间失去同步。`gettext()` 的文本消息标识符至少如果它们被打乱顺序但未更改，在消息目录中被找到的机会更大。出于显而易见的原因，切勿试图在同一应用程序或同一应用程序系列中同时使用这两种方法。
+
+### 示例 3.1：使用 `gettext()`
+
+```c
+#include <stdio.h>
+#include <locale.h>
+#include <libintl.h>
+
+int
+main(int argc, char *argv[])
+{
+printf("LANG=%s\n", getenv("LANG"));
+
+/* initialize LC_MESSAGES according to
+ * LC_ALL, LC_MESSAGES, or LANG
+ */
+
+setlocale(LC_ALL, "");
+
+printf ("dirname=%s\n",
+bindtextdomain("ghw", "/usr/share/locale/"));
+
+printf("domainname=%s\n", textdomain("ghw"));
+
+/* Look up MSGID in the current default message catalog for the
+ * current LC_MESSAGES locale. If not found, gettext() returns
+ * MSGID itself (the default text).
+ */
+
+printf(gettext("Hello World\n"));
+
+printf(gettext("The value of Open Standards \
+is only evident to Open Minds\n"));
+
+printf(gettext("Good Bye\n"));
+
+exit(0);
+}
+```
+
+## 3.3 PAM
+
+应用程序认证用户的方式有很多种。使用硬编码调用 `getpwnam(3)` 或 `shadow(3)` 的应用程序受到限制，因为它们只能在相应配置的系统上工作。可插拔认证模块（PAM）将认证机制从应用程序中抽象出来，并使本地系统管理员能够选择各个应用程序如何认证用户。示例 3.2 展示了一个使用 `pam_authenticate(3)` 的应用程序。
+
+### 示例 3.2：使用 `pam_authenticate(3)`
+
+```c
+#include <security/pam_appl.h>
+#include <security/pam_misc.h>
+#include <stdio.h>
+
+static struct pam_conv conv = {
+    misc_conv,
+    NULL
+};
+
+int main(int argc, char *argv[]) {
+    pam_handle_t *pamh;
+    int pam_status;
+    char *user;
+
+    pam_status = pam_start("lsb_login", NULL, &conv, &pamh);
+
+    if (pam_status == PAM_SUCCESS)
+        pam_status = pam_authenticate(pamh, 0);
+
+    if (pam_status == PAM_SUCCESS) {
+        pam_get_item(pamh, PAM_USER, (const void **) &user);
+        fprintf(stdout, "Greetings %s\n", user);
+    } else {
+        printf("%s\n", pam_strerror(pamh, pam_status));
+    }
+
+    pam_end(pamh, pam_status);
+}
+```
+
+`pam_start(3)` 调用将应用程序与指定的服务注册。在用户通过 `pam_authenticate(3)` 验证后，应用程序可以安全地信任用户的身份和权限。
+
+## 3.4 JAVA
+
+希望开发兼容不同 `JVM` 的 Java 应用程序的人应遵循 Java API 规范。¹ Java 不是 Linux 或 UNIX 的原生语言，因此不在 `LSB` 的范围内。
+
+使用 Java 本地接口（`JNI`）² 的应用程序确实拥有本地 Linux 对象代码，这些代码可以并且应该符合 `LSB`。`JNI` 对象代码可以获得 `LSB` 认证。
+
+## 3.5 `kill(3)`
+
+向 `kill(3)` 传递进程 ID `-1` 不会影响调用进程。这是在 `2.5.1` 内核中不受欢迎地将调用进程包含在内的实验之后做出的刻意决定。³
+
+## 3.6 `ioctl(3)`
+
+`LSB` 拥有自己对 `ioctl(3)` 的定义，并且不引用 `ISO/IEC 9945`。
+
+## 3.7 IP 信息
+
+随着 `IPv6` 的出现，`gethostbyname(3)` 已被诸如 `getaddrinfo(3)` 和 `getnameinfo(3)` 之类的例程所取代。为了获得更好的兼容性，应使用这些更新的 `IPv6` 函数（示例 3.3）。
+
+### 示例 3.3：使用 `IPv6` 函数
+
+```c
+#include <netdb.h>
+#include <stdio.h>
+int main(int argc, char **argv) {
+struct addrinfo *res, *r;
+struct addrinfo hints;
+struct sockaddr *sa;
+int rc;
+char * proto;
+char hostbuf[NI_MAXHOST];
+char servbuf[NI_MAXSERV];
+bzero(&hints,sizeof(hints));
+hints.ai_family = PF_UNSPEC;
+hints.ai_socktype = SOCK_STREAM;
+hints.ai_flags = AI_CANONNAME;
+if ((rc = getaddrinfo("linuxbase.org", NULL, &hints, &res))) {
+fprintf(stderr, "%s\n", gai_strerror(rc));
+exit(2);
+}
+for (r = res; r; r = r->ai_next) {
+if (r->ai_family == AF_INET6) {
+inet_ntop(AF_INET6, &(((struct sockaddr_in6 *)r->ai_addr)->sin6_addr),
+hostbuf, sizeof(hostbuf));
+proto = "IPv6";
+} else if (r->ai_family == AF_INET) {
+inet_ntop(AF_INET, &((struct sockaddr_in *)r->ai_addr)->sin_addr), hostbuf, sizeof(hostbuf));
+proto = "IPv4*";
+}
+
+printf("getaddrinfo(3): %s address = %s\n", proto, hostbuf);
+
+bzero(hostbuf, sizeof(hostbuf)); /* clear */
+
+if (getnameinfo(r->ai_addr, r->ai_addrlen, hostbuf, sizeof(hostbuf), servbuf, sizeof(servbuf), NI_NAMERESOLVED|NI_NUMERICSERV)){
+printf("getnameinfo(3): could not find IP.");
+} else {
+printf("getnameinfo(3): host = %s\n", hostbuf);
+}
+
+freeaddrinfo(res);
+}
+```
+
+## 3.8 `O_LARGEFILE`
+
+在可用的情况下，`LSB` 允许 Linux 实现通过 `fcntl(3)` 设置 `O_LARGEFILE`。应用程序在需要时应显式设置此标志，并且不应期望运行时默认设置它（示例 3.4）。
+
+### 示例 3.4：使用 `fcntl(3)` 函数的 `O_LARGEFILE`
+
+```c
+#ifdef __USE_LARGEFILE64
+int oflag = fcntl(fd, F_GETFL, 0);
+if (oflag & O_LARGEFILE) {
+debug("O_LARGEFILE was implicitly set"); // BAD
+}
+oflag |= O_LARGEFILE; // GOOD
+fcntl(fd, F_SETFL, oflag);
+#endif
+```
+
+## 3.9 `EISDIR(3)`
+
+如果 `unlink(3)` 的路径参数指定了一个目录，实现可能会返回 `EISDIR` 而不是单一 UNIX 规范中规定的 `EPERM`（示例 3.5）。
+
+### 示例 3.5：`EISDIR`
+
+```c
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <stdio.h>
+
+main() {
+
+    char *newdir = "/tmp/example_dir";
+
+    if (0 != mkdir(newdir, O_CREAT)) {
+        printf("mkdir %s: %s\n", newdir, strerror(errno));
+    }
+
+    if (0 != unlink(newdir)) {
+
+        switch (errno) {
+        case EISDIR:
+            printf("EISDIR: %s is a directory\n", newdir);
+            break;
+        case EPERM:
+            printf("EPERM: operation not permitted for %s\n", newdir);
+            break;
+        default:
+            perror("unlink");
+            break;
+        }
+    }
+}
+```
+
+## 参考文献
+
+- 1. `http://java.sun.com/reference/api/index.html`
+
+- 2. `http://java.sun.com/docs/books/tutorial/native/1.1/concepts/index.html`
+
+- 3. *向每个人发送信号意味着什么？*，Linux Weekly News，2001 年 12 月 20 日 (`http://lwn.net/2001/1220/kernel.php3`)。
+
+## 3.10 `waitpid(3)`
+
+`LSB` 已弃用 `waitid(3)` 的使用。应用程序应按照《单一 UNIX 规范》中指定的 `waitpid(3)` 接口进行调用，但实现无需支持 `X/Open` 系统接口扩展（`XSI`）的 `WCONTINUED` 或 `WIFCONTINUED` 功能（示例 3.6）。
+
+### 3.11 解析命令选项
+
+当函数第三个参数的选项字符串中第一个字符为加号 `“+”` 时，GNU `getopt(3)` 函数会按照《单一 UNIX 规范》第 3 版的规定解析命令行参数。
+
+在尝试保持 `SUSv3` 合规性时，不应使用 GNU 选项字符串标志 `“W;”`（用于启用长选项）、`“-”`（用于对无效选项返回 `‘\1’`）和 `“::”`（用于启用可选标志参数）（示例 3.7）。
+
+### 3.12 `LSB` 禁止事项
+
+本章涉及移植性礼仪。作为一名开放系统开发人员，有些事情是你不应该做的。你应该意识到，确保可移植性的妥协要比针对特定版本进行调优带来的短期好处更大。
+
+#### 3.12.1 `/proc`
+
+`LSB` 仅指定了 `/proc/cpuinfo` 文件及其键值。应用程序不应尝试从 `/proc` 文件系统收集其他数据，因为它是未指定的且不可靠的。
+
+### 示例 3.6：使用 `waitpid(3)`
+
+```c
+#include <assert.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void)
+{
+  int rc, status;
+  pid_t pid;
+
+  pid = fork();
+
+  if (pid < 0) {
+    perror ("fork");
+    exit (1);
+  }
+
+  if (0 == pid) {
+    printf ("\tChild process (pid=%d) running\n", getpid());
+    sleep (10);
+    printf ("\tChild process (pid=%d) terminating\n", getpid());
+    exit (0);
+  }
+
+  printf ("Parent process (pid=%d) waiting for child (pid=%d)\n",
+         getpid(), pid);
+
+  rc = waitpid (pid, &status, 0);
+
+  printf ("Parent process (pid=%d) continuing ", getpid());
+  printf ("after the termination of child (pid=%d).\n", pid);
+  printf ("Status = 00%x  Return Code=%d\n", status, rc);
+
+  if (rc < 0) {
+    perror ("waitpid");
+    exit (2);
+  }
+
+  exit (0);
+}
+```
+
+### 示例 3.7：命令选项
+
+```c
+#include <unistd.h>
+#include <stdio.h>
+
+int
+main (int argc, char **argv)
+{
+    int aflag = 0;
+    int bflag = 0;
+    char *cvalue = NULL;
+    int errflg = 0;
+    int index, c;
+
+    /* the plus sign is required to permanently set
+     * POSIXLY_CORRECT
+     */
+
+    while ((c = getopt (argc, argv, "+abc:")) != -1)
+    switch (c) {
+        case 'a':
+            aflag = 1;
+            break;
+        case 'b':
+            bflag = 1;
+            break;
+        case 'c':
+            cvalue = optarg;
+            break;
+        case ':':
+            fprintf (stderr,
+                "Option -%c requires an operand\n",
+                optopt);
+            errflg++;
+            return 1;
+        case '?':
+            fprintf (stderr, "Unknown option -%c\n", optopt);
+            errflg++;
+            return 1;
+        default:
+            fprintf (stderr, "Hopelessly lost\n");
+            errflg++;
+            break;
+    }
+
+    if (errflg) {
+        fprintf (stderr, "USAGE: %s -a -b -c file", argv[0]);
+        exit(1);
+    }
+    printf ("aflag = %d, bflag = %d, cvalue = %s\n",
+            aflag, bflag, cvalue);
+    for (index = optind; index < argc; index++)
+        printf ("Operand argument %s\n", argv[index]);
+    exit(0);
+}
+```
+
+#### 3.12.2 Berkeley 数据库
+
+Berkeley 数据库（`DB`）^4 是一种由许多 Linux 应用程序使用的主流数据管理引擎；然而，在本书出版之时，`DB` 并未满足 `LSB` 未来的选择标准.^5
+
+^4 Sleepycat Software，Berkeley DB 的制造商（`http://www.sleepycat.com/`）。
+
+^5 `http://www.linuxbase.org/futures/criteria/`
+
+#### 3.12.3 内核
