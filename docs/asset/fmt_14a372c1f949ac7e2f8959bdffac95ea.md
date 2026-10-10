@@ -1,0 +1,369 @@
+
+```c
+bool SimpleSemWait(struct SimpleSem *sem)
+{
+    struct sembuf sop;
+
+    sop.sem_num = 0;
+    sop.sem_op = -1;
+    sop.sem_flg = 0;
+    ec_negl( semop(sem->sm_sm_semId, &sop, 1) );
+    return true;
+
+EC_CLEANUP_BGN
+    return false;
+EC_CLEANUP_END
+}
+
+bool SimpleSemPost(struct SimpleSem *sem)
+{
+    struct sembuf sop;
+
+    sop.sem_num = 0;
+    sop.sem_op = 1;
+    sop.sem_flg = 0;
+    ec_negl( semop(sem->sm_sm_semId, &sop, 1) );
+    return true;
+
+EC_CLEANUP_BGN
+    return false;
+EC_CLEANUP_END
+}
+```
+
+在我们继续之前，我应该提到 System V 信号量的另一个用途：在进程之间传递整数。例如，假设客户端想要将其进程 ID 传递给服务器。它获取对一个信号量的访问权并将其值设置为其进程 ID。然后服务器可以通过查看该值来获取这个数字。由于信号量集可以包含一个信号量数组，因此可以以这种方式传递一个整数数组。
+
+## 7.10 POSIX 信号量
+
+这些信号量系统调用是 POSIX 标准的一部分，尽管是可选的，并且你需要检查 `_POSIX_SEMAPHORES` 特性测试宏来确定它们是否存在（参见第 1.5.4 节和第 7.6.3 节）。截至目前，它们在 FreeBSD、Darwin 或 Linux 中并不存在。
+
+### 7.10.1 命名 POSIX 信号量
+
+POSIX 信号量比 System V 信号量简单得多，也更容易使用。实际上，五个系统调用与上一节中 `SimpleSem` 接口完全对应：
+
+### sem_open—打开命名信号量
+
+```c
+#include <semaphore.h>
+
+sem_t *sem_open(
+    const char *name,    /* POSIX IPC 名称 */
+    int flags            /* 标志（不包括 O_CREATE） */
+);
+/* 成功时返回指向信号量的指针，错误时返回 SEM_FAILED（设置 errno） */
+
+sem_t *sem_open(
+    const char *name,    /* POSIX IPC 名称 */
+    int flags,           /* 标志（包括 O_CREATE） */
+    mode_t perms,        /* 权限 */
+    unsigned value       /* 初始值 */
+);
+/* 成功时返回指向信号量的指针，错误时返回 SEM_FAILED（设置 errno） */
+```
+
+### sem_close—关闭命名信号量
+
+```c
+#include <semaphore.h>
+
+int sem_close(
+    sem_t *sem           /* 信号量 */
+);
+/* 成功时返回 0，错误时返回 -1（设置 errno） */
+```
+
+### sem_unlink—移除命名信号量
+
+```c
+#include <semaphore.h>
+
+int sem_unlink(
+    const char *name     /* POSIX IPC 名称 */
+);
+/* 成功时返回 0，错误时返回 -1（设置 errno） */
+```
+
+### sem_wait—减少信号量
+
+```c
+#include <semaphore.h>
+
+int sem_wait(
+    sem_t *sem           /* 信号量 */
+);
+/* 成功时返回 0，错误时返回 -1（设置 errno） */
+```
+
+### sem_post—增加信号量
+
+```c
+#include <semaphore.h>
+
+int sem_post(
+    sem_t *sem           /* 信号量 */
+);
+/* 成功时返回 0，错误时返回 -1（设置 errno） */
+```
+
+POSIX 信号量是计数信号量，与 System V 变体类似，但仅以 1 为步长。每个 `sem_t` 对象仅代表一个信号量，而不是像 System V 那样的一组信号量。
+
+打开、关闭和解除链接的调用遵循我们在第 7.7.1 节中看到的 POSIX IPC 调用的模式，针对的是 POSIX 消息队列系统调用。特别是，传递给 `sem_open` 的名称必须遵循第 7.6.2 节中讨论的可移植性规则。不出所料，`sem_post` 将 1 加到信号量的值上，而 `sem_wait` 减去 1，如果值已经是零则阻塞。
+
+你在 `sem_open` 中不使用 `O_RDONLY`、`O_WRONLY` 或 `O_RDWR`，因为它们是无意义的——除非 `sem_post` 和 `sem_wait` 都可以使用，否则信号量毫无用处。
+
+我们需要为 System V 所做的那些繁琐的初始化过程已经消失了。我们只需将所需的值（通常是零）传递给 `sem_open`。
+
+当 `sem_open` 失败时，要注意其返回值：它是 `SEM_FAILED`，而不是 `NULL`，后者是其他返回指针的函数的常规失败返回值。
+
+POSIX 信号量的 `SimpleSem` 调用的实现是微不足道的：
+
+```c
+struct SimpleSem *SimpleSemOpen(const char *name)
+{
+    struct SimpleSem *sem = NULL;
+
+    ec_null( sem = malloc(sizeof(struct SimpleSem)) );
+    if ((sem->sm_sem = sem_open(name, O_CREAT, PERM_FILE, 0)) == SEM_FAILED)
+        EC_FAIL;
+    return sem;
+
+EC_CLEANUP_BGN
+    free(sem);
+    return NULL;
+EC_CLEANUP_END
+}
+
+bool SimpleSemClose(struct SimpleSem *sem)
+{
+    ec_neg1( sem_close(sem->sm_sm_sem) );
+    free(sem);
+    return true;
+
+EC_CLEANUP_BGN
+    return false;
+EC_CLEANUP_END
+}
+
+bool SimpleSemRemove(const char *name)
+{
+    if (sem_unlink(name) == -1 && errno != ENOENT)
+        EC_FAIL;
+    return true;
+
+EC_CLEANUP_BGN
+    return false;
+EC_CLEANUP_END
+}
+
+bool SimpleSemPost(struct SimpleSem *sem)
+{
+    ec_neg1( sem_post(sem->sm_sm_sem) );
+    return true;
+
+EC_CLEANUP_BGN
+    return false;
+EC_CLEANUP_END
+}
+
+bool SimpleSemWait(struct SimpleSem *sem)
+{
+    ec_neg1( sem_wait(sem->sm_sm_sem) );
+    return true;
+
+EC_CLEANUP_BGN
+    return false;
+EC_CLEANUP_END
+}
+
+10. 如果你不熟悉这个术语，我查阅的一本词典将其定义为“一套复杂而琐碎的程序”，这简直再合适不过了。
+```
+
+POSIX 信号量有一些我们 `SimpleSem` 接口未使用的额外特性。首先，与 System V 一样，你可以在不修改或不等待的情况下查询信号量的值：
+
+`sem_getvalue`—获取信号量的值
+
+```c
+#include <semaphore.h>
+
+int sem_getvalue(
+       sem_t *restrict sem,      /* 信号量 */
+       int *value)               /* 返回值 */
+;
+
+/* 成功返回 0，出错返回 -1（设置 errno） */
+```
+
+如果在调用 `sem_getvalue` 期间信号量的值大于零，则返回该值。然而，当 `sem_getvalue` 返回时，该值可能已经有所不同，因此实际数值并不是非常有用。如果值为零，则返回等待该信号量的进程数量的负值。如果没有进程在等待，则返回零。
+
+`sem_wait` 有两种变体：其一，`sem_trywait` 是非阻塞的：
+
+`sem_trywait`—如果可能则递减信号量
+
+```c
+#include <semaphore.h>
+
+int sem_trywait(
+       sem_t *sem              /* 信号量 */
+);
+
+/* 成功返回 0，出错返回 -1（设置 errno） */
+```
+
+如果信号量已经为零，`sem_trywait` 会返回 -1 并将 `errno` 设置为 `EAGAIN`。（其他系统调用使用类似 `O_NONBLOCK` 或 `IPC_NOWAIT` 的标志来实现非阻塞；而这里是一个独立的系统调用。）
+
+另一个变体 `sem_timedwait` 在指定时间间隔内如果信号量未变为正值则超时：
+
+`sem_timedwait`—递减信号量
+
+```c
+#include <semaphore.h>
+
+#include <time.h>
+
+int sem_timedwait(
+       sem_t *restrict sem,           /* 信号量 */
+       const struct timespec *time    /* 绝对时间 */
+);
+
+/* 成功返回 0，出错返回 -1（设置 errno） */
+```
+
+传递给 `sem_timedwait` 的时间是一个绝对时间（例如，下午 1:23:17），而不是一个时间间隔（例如，27 秒）。它是与哪个时钟进行比较以及精度如何，取决于是否支持 POSIX 定时器选项。如果支持，则是实时时钟。如果不支持，则使用普通时钟（即 `time` 系统调用所使用的那个时钟）。（有关 `struct timespec` 和 UNIX 时间其他方面的讨论，请参见 1.7 节。）
+
+`sem_timedwait` 是超时选项（`_POSIX_TIMEOUTS`）的一部分，是 SUS3 中新增的特性。
+
+## 7.10.2 非命名 POSIX 信号量
+
+快速回顾：`sem_open`、`sem_close` 和 `sem_unlink` 用于与进程外部存在的命名信号量配合使用，并通过 POSIX IPC 名称进行访问。`sem_open` 获取 `sem_t` 对象的指针，而您从不直接处理该对象。它使用的任何内存都会在调用 `sem_close` 时释放。这些信号量天然支持线程和进程间的工作。
+
+为了使信号量更快，你也可以直接声明一个 `sem_t` 对象：
+
+```c
+sem_t sem;
+```
+
+或者甚至动态分配一个，如下所示：
+
+```c
+sem_t *sem = malloc(sizeof(sem_t));
+```
+
+但如果你自己分配 `sem_t` 对象，则必须调用 `sem_init` 来初始化它：
+
+`sem_init`—初始化非命名信号量
+
+```c
+#include <semaphore.h>
+
+int sem_init(
+    sem_t *sem,       /* 信号量 */
+    int pshared,      /* 是否在进程间共享？ */
+    unsigned value    /* 初始值 */
+);
+
+/* 成功返回 0，出错返回 -1（设置 errno） */
+```
+
+然后调用 `sem_destroy` 来销毁它：
+
+`sem_destroy`—销毁非命名信号量
+
+```c
+#include <semaphore.h>
+
+int sem_destroy(
+    sem_t *sem        /* 信号量 */
+);
+
+/* 成功返回 0，出错返回 -1（设置 errno） */
+```
+
+`sem_destroy` 并不释放 `sem_t` 对象，因为它不知道内存是如何到达那里的（静态声明、`malloc` 等）。你需要自己释放内存（如果适用）。如果信号量是全局分配的或在栈上分配的，当然，你不需要做任何事情；它的生命周期会在适当的时候结束。
+
+`sem_init` 和 `sem_destroy` 是 `sem_open` 和 `sem_close` 的替代品；根据信号量是否为命名，你使用其中一对。其他调用（例如 `sem_post`、`sem_timedwait`）不关心你是如何获取 `sem_t` 指针的。
+
+好的，非命名信号量可能很快，但如果它们位于单个进程的内存中，那有什么用呢？它们非常有用：
+
+- 当你需要计数信号量而不仅仅是只有两种状态的二进制信号量（互斥锁）时，它们可以很好地用于线程间的同步。
+- 如果它们位于共享内存中，它们也可以很好地用于进程间通信，这一点我们稍后会详细介绍。在这种情况下，`sem_init` 的 `pshared` 参数必须为非零。
+
+第一种用途对线程非常重要，一些 UNIX 实现，特别是 Linux 和 FreeBSD（但不是 Darwin），支持它，尽管某些版本完全支持 POSIX 信号量。也就是说，支持 `sem_init`（仅限 `pshared` 为零）和 `sem_destroy`，但不支持 `sem_open` 和 `sem_close`。在这些有限实现中，支持 `sem_post`、`sem_wait`、`sem_trywait` 和 `sem_getvalue`，但不支持 `sem_timedwait`。
+
+关于非命名（内存中）信号量还有一条规则：只能使用传递给 `sem_init` 的实际内存，而不能使用其副本。因此，以下代码是错误的：
+
+```c
+void fcn(sem_t *s)
+{
+    sem_post(*s);
+    ...
+}
+
+void fcn2(void)
+{
+    sem_t sem;
+    sem_init(&sem);
+    fcn(sem);
+    ...
+}
+```
+
+调用 `fcn` 会复制信号量，这违反了规则。相反，程序中所有操作信号量的部分都需要处理原始初始化存储的地址。我将在 7.14.2 节中提供一个位于共享内存中的非命名信号量的示例。
+
+## 7.10.3 对 System V 和 POSIX 信号量的评述
+
+对于进程间通信，System V 信号量系统调用使用起来极其困难且功能臃肿，但它们普遍可用，一旦将困难的部分（主要是初始化）隐藏在如 `SimpleSem` 这样的合理接口之后，情况就会好很多。POSIX 信号量使用起来容易得多，但并非普遍可用。*如果可移植性对你很重要，你就需要使用 System V 系统调用，并且如果你不能在所有地方使用 POSIX 调用，那么在有些地方使用它们也无任何好处。如果可移植性不重要，并且目标 UNIX 系统支持 POSIX 调用，那么显然应该使用 POSIX 调用。*¹¹
+
+对于进程内通信——即线程之间——System V 信号量太笨重且太慢，而非命名、非进程共享的 POSIX 信号量通常在支持 POSIX 线程的地方都可以使用，因此如果你需要的功能超出了互斥锁的范围，就应使用它们。
+
+## 7.10.4 进程共享互斥锁和读写锁
+
+我在 5.17.3 节中引入了互斥锁，用于线程同步，但它们位于进程内的内存中——本质上是以二进制方式使用的内存中、非进程共享的 POSIX 信号量。你还可以创建一个内存中的互斥锁，并在使用 `pthread_mutex_init` 初始化时设置 `PTHREAD_PROCESS_SHARED` 属性，这样它就可以在被不同进程中的线程之间共享。但是，即使支持 POSIX 线程，这个特性也不一定被实现（它是一个独立的子选项），因此可能不可用。
+
+还有 POSIX 线程读写锁，我在第 5 章中完全没有描述。它们类似于互斥锁，但区分读和写（共享和独占），以允许更高的吞吐量。与互斥锁一样，你可以设置 `PTHREAD_PROCESS_SHARED` 属性。（如我们将在下一节所见，读写锁之于互斥锁，正如 `fcntl` 文件锁之于 `lockf` 文件锁 [7.11.3 节和 7.11.4 节]。）
+
+# 7.11 文件锁定
+
+本节解释 UNIX 中文件锁定是如何工作的，以及它有时为何不按你需要的方式工作。
+
+## 7.11.1 一个糟糕的例子
+
+我们喜欢一开始做错事——这为做正确的事提供了动力。
+
+为了引出关于文件锁定的讨论，让我们构建一个示例应用程序，其中一个进程构建文件，而另一个进程读取它。该文件是一个记录链表，每个记录包含一个整数数据和下一个记录的偏移量。链表是排序的，但记录的物理位置按照其创建顺序排列。每个记录的结构为：
+
+```c
+struct rec {
+   int r_data;
+   off_t r_next;
+};
+```
+
+如果我们按 1000、999 和 998 的顺序插入具有这些数据的记录，文件看起来就像图 7.2 所示。第一个记录只是一个头部，指示列表的起始位置。
+
+该示例的主程序启动一个子进程（`process1`）来构建列表，同时父进程（`process2`）使用互斥锁反复对其进行加锁以检查其是否正确形成：
+
+```c
+int main(void)
+{
+   pid_t pid;
+
+**图 7.2** 记录链表。
+
+```c
+ec_neg1( pid = fork( ) );
+
+if (pid == 0)
+    process1( );
+
+else {
+    process2( );
+    ec_neg1( waitpid(pid, NULL, 0) );
+}
+
+exit(EXIT_SUCCESS);
+
+EC_CLEANUP_BGN
+    exit(EXIT_FAILURE);
+EC_CLEANUP_END
+}
+```
