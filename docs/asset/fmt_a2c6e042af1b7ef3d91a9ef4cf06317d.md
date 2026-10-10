@@ -1,0 +1,223 @@
+
+```c
+27:        assert( stack );
+
+28:        assert(stack->index < MAX_STACK_ELEMS );
+
+29:
+
+30:        stack->stack[stack->index++] = elem;
+
+31:        return;
+
+32:    }
+
+33:
+
+34:
+
+35:    int pop( STACK_T *stack )
+
+36:    {
+
+37:        assert( stack );
+
+38:        assert( stack->index > 0 );
+
+39:
+
+40:        return( stack->stack[-stack->index] );
+
+41:    }
+
+42:
+
+43:
+
+44:    void operator( STACK_T *stack, int op )
+
+45:    {
+
+46:        int a, b;
+
+47:
+
+48:        assert( stack );
+
+49:        assert( stack->index > 0 );
+
+50:
+
+51:        a = pop(stack); b = pop(stack);
+
+52:
+
+53:        switch(op ) {
+
+54:
+
+55:            case OP_ADD:
+
+56:                push( stack, (a+b) ); break;
+
+57:
+
+58:            case OP_SUBTRACT:
+    push( stack, (a-b) ); break;
+
+    case OP_MULTIPLY:
+        push( stack, (a*b) ); break;
+
+    case OP_DIVIDE:
+        push( stack, (a/b) ); break;
+
+    default:
+        assert(0); break;
+
+    }
+
+    }
+
+    int main()
+    {
+        STACK_T stack;
+
+        initStack(&stack);
+
+        push(&stack, 2);
+        push(&stack, 5);
+        push(&stack, 2);
+        push(&stack, 3);
+        push(&stack, 5);
+        printf(" Result is %d\n", pop(&stack));
+        return 0;
+    }
+```
+
+# 序言
+
+GNU 调试器（也称为 `GDB`）是一种源码级调试器，提供了在源码级和机器级上调试应用程序的能力。此外，`GDB` 允许对已经运行的应用程序进行调试（通过附加应用程序的进程 ID）以及进行事后调试。你对源码级调试器所期望的所有传统功能在 `GDB` 中均可用，包括多语言和多架构支持。
+
+本章介绍了 `GDB` 并以教程的方式探索了它的功能和能力。
+
+# 为 GDB 编译
+
+在进入 `GDB` 之前，你首先需要知道如何构建应用程序，使其能够被 `GDB` 调试。`-g` 参数告诉编译器在镜像中包含调试信息，`GDB` 可以利用这些信息来理解变量类型（用于数据检查）以及机器指令到源码行的映射。编译示例所示：
+
+```
+# gcc -g testapp.c -o testapp
+```
+
+现在可以通过 `GDB` 成功地调试测试镜像。一个非常需要注意的重要点是，开启优化的情况下进行调试可能会产生奇怪的结果。优化器可能会移动代码或完全删除代码。这会导致优化后的调试会话变得混乱且难以追踪。因此，虽然 `GDB` 仍然可以调试优化过的代码，但调试未优化的镜像要容易得多。
+
+# 使用 GDB
+
+现在是时候深入 `GDB` 并查看其调试 C 应用程序的能力了。在本节中，你将查看使用断点进行 `GDB` 调试的一些常用方法。它演示了使用命令行版本的 `GDB`，尽管也存在 GUI 版本。
+
+在开始之前需要注意的一个重要点是，被调试的程序与 `GDB` 使用相同的终端输入和输出。这符合你的需求。
+
+你可以重定向程序 I/O 的 stdin 和 stdout。你可以在启动 `GDB` 会话时在命令行上重定向输出。你还可以使用 `tty` shell 命令为程序的 stdin 指定一个新的终端。
+
+为了演示 `GDB`，你可以使用列表 30.1 所示源码。该源码代表了一个提供数学运算符的简单栈实现。
+
+## 列表 30.1 GDB 调试会话示例源码（位于光-ROM 的 `/source/ch30/testapp.c`）
+
+```c
+1: #include <stdio.h>
+2: #include <assert.h>
+
+3:
+
+4: #define MAX_STACK_ELEMS 10
+
+5:
+
+6: #define OP_ADD 0
+7: #define OP_SUBTRACT 1
+8: #define OP_MULTIPLY 2
+9: #define OP_DIVIDE 3
+
+10:
+
+11:
+
+12: typedef struct {
+13: int stack[MAX_STACK_ELEMS];
+14: int index;
+```
+15:    } STACK_T;
+16:
+17:
+18:    void initStack( STACK_T *stack )
+19:    {
+20:        assert( stack );
+21:        stack->index = 0;
+22:    }
+23:
+24:
+25:    void push( STACK_T *stack, int elem )
+26:    {
+27:        assert( stack );
+28:        assert(stack->index < MAX_STACK_ELEMS );
+29:
+30:        stack->stack[stack->index++] = elem;
+31:        return;
+32:    }
+33:
+34:
+35:    int pop( STACK_T *stack )
+36:    {
+37:        assert( stack );
+38:        assert( stack->index > 0 );
+39:
+40:        return( stack->stack[-stack->index] );
+41:    }
+42:
+43:
+44:    void operator( STACK_T *stack, int op )
+45:    {
+46:        int a, b;
+47:
+48:        assert( stack );
+49:        assert( stack->index > 0 );
+50:
+51:        a = pop(stack); b = pop(stack);
+52:
+53:        switch(op ) {
+54:
+55:            case OP_ADD:
+56:                push( stack, (a+b) ); break;
+57:
+58:            case OP_SUBTRACT:
+    push( stack, (a-b) ); break;
+
+    case OP_MULTIPLY:
+        push( stack, (a*b) ); break;
+
+    case OP_DIVIDE:
+        push( stack, (a/b) ); break;
+
+    default:
+        assert(0); break;
+
+    }
+
+    }
+
+    int main()
+    {
+        STACK_T stack;
+
+        initStack(&stack);
+
+        push(&stack, 2);
+        push(&stack, 5);
+        push(&stack, 2);
+        push(&stack, 3);
+        push(&stack, 5);
+        printf(" Result is %d\n", pop(&stack));
+        return 0;
+    }
+```
+
+# 序言
