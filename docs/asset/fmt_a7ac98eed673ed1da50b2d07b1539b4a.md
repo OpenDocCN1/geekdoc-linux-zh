@@ -1,0 +1,118 @@
+
+| 字体厂商 | 字体系 | 字重 | 斜体 | 设定宽度 | 附加样式 | 字符集 |
+| --- | --- | --- | --- | --- | --- | --- |
+| adobe | helvetica | 粗体 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | helvetica | 粗体 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | helvetica | 中等 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | helvetica | 中等 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 粗体 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 粗体 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 粗体 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 粗体 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 中等 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 中等 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 中等 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | new century schoolbook | 中等 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | symbol | 中等 | 罗马 | 常规 |  | adobe-font-specific |
+| adobe | times | 粗体 | 罗马 | 常规 |  | iso8859-1 |
+| adobe | times | 中等 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | utopia | 常规 | 斜体 | 常规 |  | iso8859-1 |
+| adobe | utopia | 常规 | 罗马 | 常规 |  | iso8859-1 |
+| b&n | lucida | 粗体 | 斜体 | 常规 | 无衬线 | iso8859-1 |
+| b&n | lucida | 粗体 | 罗马 | 常规 | 无衬线 | iso8859-1 |
+| b&n | lucida | 中等 | 斜体 | 常规 | 无衬线 | iso8859-1 |
+| b&n | lucida | 中等 | 罗马 | 常规 | 无衬线 | iso8859-1 |
+| b&n | lucidabright | 半粗体 | 斜体 | 常规 |  | iso8859-1 |
+| b&n | lucidabright | 半粗体 | 罗马 | 常规 |  | iso8859-1 |
+| b&n | lucidabright | 中等 | 斜体 | 常规 |  | iso8859-1 |
+| b&n | lucidabright | 中等 | 罗马 | 常规 |  | iso8859-1 |
+| bitstream | charter | 中等 | 斜体 | 常规 |  | iso8859-1 |
+| bitstream | charter | 中等 | 罗马 | 常规 |  | iso8859-1 |
+
+#### 字体配置文件
+
+为了使 X 服务器能够使用字体，目录中至少必须包含一个由 `mkfontdir` 创建的 `fonts.dir` 文件。对于可缩放字体，目录还必须包含 `fonts.scale` 文件。此文件被 `mkfontdir` 引用，因此必须在 `fonts.dir` 文件之前创建。如果字体包含 X 服务器默认无法识别的编码，你必须使用 `mkfontdir -e` 创建 `fonts.dir` 文件，这将创建 `fonts.encoding` 文件。你还可以创建一个 `fonts.alias` 文件，以便使用更短的名称引用字体。
+
+你还必须通过指示包含字体的目录的位置来配置 X 服务器。在 XFree86 中，此信息包含在 `XF86Config` 文件（在大多数系统的 `/etc` 目录下）中，形式为 `FontPath` 指令处的一组逗号分隔的路径名。你可以使用 `xset` 命令向此列表添加路径名。在运行字体服务器（例如 `Xfs`）的系统上，如 Red Hat Linux 6.0 及更高版本，此信息在字体服务器的配置文件中提供，例如 `/etc/X11/fs/config`。下表列出了 Linux 系统中常见的配置文件。
+
+##### 字体目录中的配置文件
+
+| 文件名 | 说明 |
+| :--- | :--- |
+| encodings.dir | 列出可用的字符编码。由带有 `-e` 选项的 `mkfontdir` 创建。如果目录中任何字体使用的编码未被 X 服务器默认识别，则需要此文件。 |
+| fonts.alias | 列出冗长字体名称的别名。 |
+| fonts.dir | 列出目录中可用的字体。由 `mkfontdir` 创建。 |
+| fonts.scale | 列出目录中可缩放的字体。手动或通过 `type1inst` 创建。`mkfontdir` 会自动将内容添加到 `fonts.dir` 中。 |
+| Fontmap | 列出当前目录中可用的字体。Ghostscript 需要此文件。 |
+
+### 字母顺序命令参考
+
+本节详细说明了用于以下任务的命令：
+
+- 将字体从一种格式转换为另一种格式（`bdftopcf`、`t1ascii`、`t1binary`、`t1unmac`、`t1asm`、`t1dasm`、`tf2pt1`）
+- 在字体目录中安装字体并创建必要的配置文件，如 `fonts.dir` 和 `fonts.scale`（`mkfontdir`、`mkfdir`、`type1inst`、`xset`、`chkfontpath`）
+- 查看字体信息（`xlsfonts`）
+
+##### bdftopcf
+
+```
+bdftopc[ option ] -o pcf file bdf file
+```
+
+将指定的 BDF 文件（二进制分发格式字体文件）转换为 PCF 文件（X 服务器可使用的便携式编译格式位图字体）。
+
+##### 选项
+
+| 使用此选项 | 执行此操作 |
+|---|---|
+| `-I` | 抑制墨度指标的常规计算 |
+| `-l` | 将字体位顺序设置为最低有效位（LSB）优先 |
+| `-L` | 将字体字节顺序设置为最低有效位优先 |
+| `-m` | 将字体位顺序设置为最高有效位（MSB）优先 |
+| `-M` | 将字体字节顺序设置为最高有效位优先 |
+| `-o filename` | 写入指定的文件名 |
+| `-pn` | 将字体字形填充设置为 n 字节的倍数，其中 n 为 1、2、4 或 8 |
+| `-t` | 尽可能将字体转换为字符单元格字体，也称为终端字体 |
+| `-un` | 设置字体扫描线单位 |
+
+##### chkfontpath
+
+```
+chkfontpath[ option ]
+```
+
+在 Red Hat 6.0 及更高版本系统以及 Red Hat 衍生系统上，此实用程序用于添加、删除或列出可访问 xfs 字体服务器的包含字体的目录。
+
+另见 `xset`。
+
+##### 选项
+
+| 使用此选项 | 执行此操作 |
+| :--- | :--- |
+| `-add directory` | 将指定目录添加到字体路径 |
+| `--help` | 显示可用选项 |
+| `--list directory` | 列出 X 字体服务器可用的目录 |
+| `--remove directory` | 从字体路径中移除指定目录 |
+
+##### mkfontdir
+
+```
+mkfontdir [ option ]
+```
+
+在工作目录中创建一个 `fonts.dir` 文件（如果存在 `fonts.scale` 文件，则包含该文件），列出此目录中可用的有效 Type 1 位图字体。如果同一目录中存在 `fonts.scale` 文件，则其中列出的字体将自动包含在 `fonts.dir` 文件中。
+
+*另见 `type1inst`、`ttmkdir`。*
+
+##### 选项
+
+| 使用此选项 | 执行此操作 |
+| :--- | :--- |
+| `--` | 结束选项 |
+| `-e directory` | 指定包含编码文件的目录 |
+| `-P` | 指定在将编码文件的路径名写入 `encodings.dir` 文件时预置的前缀 |
+| `-r` | 在写入 `encodings.dir` 文件时，保留非绝对编码目录的相对形式 |
+
+#### 示例
+
+| 此命令 | 执行以下操作 |
