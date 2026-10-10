@@ -362,6 +362,7 @@
 +   [绘画学校：完整课程](docs/drawing-school-the-complete-course/README.md)
 +   [Dreamweaver 4 视觉洞察指南](docs/dreamweaver-4-visual-insight/README.md)
 +   [Dreamweaver CS3 入门指南](docs/dreamweaver-cs3-for-dummies/README.md)
++   [Linux 上的 Dspace](docs/dspace-on-linux/README.md)
 +   [简易 Linux 命令：Linux 命令语法示例（简易 Linux 系列）第 1 卷](docs/easy-linux-commands-working-examples-of-linux-command-syntax/README.md)
 +   [Linux 入门指南：全彩图解，即学即做](docs/easy-linux-in-full-colour-see-it-done-do-it-yourself/README.md)
 +   [简易 Linux：初学者 Linux 终极指南](docs/easy-linux-the-ultimate-guide-to-linux-for-beginners/README.md)
