@@ -1,0 +1,241 @@
+
+# DB2(R) Universal Database V8 Windows、UNIX 和 Linux 手册 (IBM Press 系列--信息管理)
+
+![](img/961b0d3b0e157406ef7a293880ab928e_0_0.png)
+
+# Philip K. Gunning
+
+序言由 Craig S. Mullins，BMC Software 技术规划总监提供
+
+Baklarz and Wong
+
+Snow and Phan
+
+Martineau, Sanyal, Gashyna, and Kyprianou
+
+Zikopoulos, Baklarz, deRoos, and Melnyk
+
+Sanders
+
+Visser and Wong
+
+Lawson
+
+Yip, Bradstock, Curtis, Gao, Janmohamed, Liu, and McArthur
+
+Biere
+
+Gunning
+
+Lawson and Yevich
+
+Baklarz and Wong
+
+Sanyal, Martineau, Gashyna, and Kyprianou
+
+Sloan and Hernandez
+
+![](img/961b0d3b0e157406ef7a293880ab928e_4_0.png)
+
+Philip K. Gunning
+
+![](img/961b0d3b0e157406ef7a293880ab928e_4_1.png)
+
+编辑/制作监督：MetroVoice Publishing Services
+
+封面设计总监：Jerry Votta
+
+封面设计：IBM 公司
+
+制造经理：Alexis Heydt-Long
+
+出版商：Jeffrey Pepper
+
+编辑助理：Linda Ramagnano
+
+营销经理：Debby vanDijk
+
+IBM 咨询编辑：Susan Visser
+
+![](img/961b0d3b0e157406ef7a293880ab928e_5_0.png)
+
+Pearson Education LTD.
+
+Pearson Education Australia PTY, Limited
+
+Pearson Education Singapore, Pte. Ltd.
+
+Pearson Education North Asia Ltd.
+
+Pearson Education Canada, Ltd.
+
+Pearson Educación de Mexico, S.A. de C.V.
+
+Pearson Education — Japan
+
+Pearson Education Malaysia, Pte. Ltd.
+
+- 工具指南与异常 137
+- 命令参数 167
+- 命令参数 169
+- 工具指南与异常 170
+
+# 引言 175
+
+# 总结 189
+
+# 自主计算 192
+
+# 在线配置参数 193
+
+- 性能与应用问题 255
+- 最终结果 307
+
+# 总结 321
+
+# 附录 A DB2 目录视图 323
+
+- SYSCAT.ATTRIBUTES 323
+- SYSCAT.BUFFERPOOLPARTITIONS 325
+- SYSCAT.BUFFERPOOLS 325
+- SYSCAT.CASTFUNCTIONS 326
+- SYSCAT.CHECKS 326
+- SYSCAT.COLAUTH 327
+- SYSCAT.COLCHECKS 328
+- SYSCAT.COLDIST 328
+- SYSCAT.COLGROUPDIST 329
+- SYSCAT.COLGROUPDISTCOUNTS 330
+- SYSCAT.COLGROUPS 330
+- SYSCAT.COLOPTIONS 331
+- SYSCAT.COLUMNS 331
+- SYSCAT.COLUSE 337
+- SYSCAT.CONSTDEP 337
+- SYSCAT.DATATYPES 338
+- SYSCAT.DBAUTH 340
+- SYSCAT.DBPARTITIONGROUP 341
+- SYSCAT.DBPARTITIONGROUPS 342
+- SYSCAT.EVENTMONITORS 342
+- SYSCAT.EVENTS 344
+- SYSCAT.EVENTTABLES 344
+- SYSCAT.FULLHIERARCHIES 345
+- SYSCAT.FUNCMAPOPTIONS 346
+- SYSCAT.FUNCMAPPARMOPTIONS 346
+- SYSCAT.FUNCMMAPPINGS 347
+- SYSCAT.HIERARCHIES 347
+- SYSCAT.INDEXAUTH 348
+- SYSCAT.INDEXCOLUSE 348
+- SYSCAT.INDEXDEP 349
+- SYSCAT.INDEXES 350
+- SYSCAT.INDEXEXPLOITRULES 357
+- SYSCAT.INDEXEXTENSIONDEP 358
+SYSCAT.INDEXEXTENSIONMETHODS 358
+SYSCAT.INDEXEXTENSIONPARMS 359
+SYSCAT.INDEXEXTENSIONS 360
+SYSCAT.INDEXOPOPTIONS 360
+SYSCAT.KEYCOLUSE 361
+SYSCAT.NAMEMAPPINGS 361
+SYSCAT.PACKAGEAUTH 362
+SYSCAT.PACKAGEDEP 362
+SYSCAT.PACKAGES 364
+SYSCAT.PARTITIONMAPS 368
+SYSCAT.PASSTHROUTH 368
+SYSCAT.PREDICATESPECS 369
+SYSCAT.PROCPOPTIONS 370
+SYSCAT.REFERENCES 370
+SYSCAT.REVTYPEMAPPINGS 371
+SYSCAT.ROUTINEAUTH 373
+SYSCAT.ROUTINEDEP 374
+SYSCAT.ROUTINEPARMS 374
+SYSCAT.ROUTINES 376
+SYSCAT.SCHEMAAUTH 383
+SYSCAT.SCHEMATA 384
+SYSCAT.SEQUENCEAUTH 385
+SYSCAT.SEQUENCES 385
+SYSCAT.SERVEROPTIONS 387
+SYSCAT.SERVERS 387
+SYSCAT.STATEMENTS 388
+SYSCAT.TABAUTH 388
+SYSCAT.TABCONST 390
+SYSCAT.TABDEP 390
+SYSCAT.TABLES 391
+SYSCAT.TABLESPACES 397
+SYSCAT.TABOPTIONS 398
+SYSCAT.TBSPACEAUTH 398
+SYSCAT.TRANSFORMS 399
+SYSCAT.TRIGDEP 400
+- SYSCAT.TRIGGERS 401
+SYSCAT.TYPEMAPPINGS 402
+SYSCAT.USEROPTIONS 403
+SYSCAT.VIEWS 404
+SYSCAT.WRAPOPTIONS 405
+SYSCAT.WRAPPERS 405
+SYSSTAT.COLDIST 405
+SYSSTAT.COLUMNS 407
+SYSSTAT.INDEXES 409
+SYSSTAT.ROUTINES 414
+SYSSTAT.TABLES 416
+
+- DB2-L 列表服务器 419
+新闻组 (Newsgroup) 419
+时事通讯 (Newsletters) 419
+BITPIPE 419
+数据仓库 (Data Warehousing) 420
+ITWORLD 420
+Sysopt 420
+Tidal Wire 420
+电子杂志 (e-zines) 420
+
+- 网站 420
+计算机协会 (ACM) 数据库事务期刊 420
+电气电子工程师学会 (IEEE) 计算机学会 420
+DB2 在线支持 421
+DB2 Zone 421
+DB-HQ 421
+IBM 红书 (IBM Redbooks) 421
+适用于 Linux、UNIX 和 Windows 的 DB2 UDB v8 主页 421
+
+- 用户组 421
+国际国际 DB2 用户组 421
+
+- 厂商网站 421
+BMC Software 421
+Embaraderoadero 421
+Computer Associates 421
+Candle Corporation 421
+Compuware 421
+Quest 422
+Ventas Software 422
+
+标识符长度限制 423
+
+数值限制 425
+
+字符串限制 425
+
+日期/时间限制 426
+
+数据库管理器限制 426
+
+数据库管理器特定页面大小限制 429
+
+通用注册变量 432
+
+系统环境变量 436
+
+通信变量 438
+
+命令行变量 442
+
+MPP 配置变量 443
+
+SQL 编译器变量 444
+
+性能变量 448
+
+杂项变量 455
+
+# 参考文献 461
+
+# 索引 465
+
+# 前言
