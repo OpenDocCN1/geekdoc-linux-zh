@@ -1,0 +1,336 @@
+
+- Antimon
+- AntiNS
+- AntiPascal
+- AntiPascal II
+- Anto
+- Anxiety.A
+- Anxiety.B
+- AOL
+- AOL.PWSTEAL
+- AOL.Trojan
+- Agiplan
+- AI
+- AIDS II
+- Aircop
+- Akuku
+- Alabama
+- Alameda
+- Albania
+- Alcon
+- Alex
+- Alex-818
+- Alexander
+- Alfo
+- Alfons
+- Alien
+- Armagedon
+- Arriba
+- Arusiek
+- Ash
+- Ash-743
+- Astral_Zeuss
+- ASStroll_Zeuss
+- Astra
+- Astral
+- AT
+- AT II
+- Atas
+- Athens
+- Atom
+- Attention
+- August 16th
+- Avalanche
+- AZEUSS-1
+- Azusa
+- B1
+- Baba.470
+- Baba.700
+- Baboon
+- Baby
+- Back Office
+- Backfont
+- Backform
+- Alphabet
+- Alphastrike
+- Alwasy.2000
+- AM/AccessiV
+- AM/Cross
+- Ambulance
+- Amilia
+- AmiMacro
+- Amoebe
+- AMSE
+- Amstrad
+- ANANAS
+- Anarkia
+- Andryushka
+- Angarsk
+- BAT.Orag
+- BBS-1643
+- Beast
+- Bebe
+- Bebe-486
+- Beer
+- Beijing
+- Beryllium
+- Best Wishes
+- Best Wishes-970
+- Beta
+- Betaboys
+- Better World
+- Beware
+- Bewarebug
+- BFD
+- Big Caibu
+- Big Joke
+- BigMouse
+- BillMe
+- Biological Warfare
+- Bios
+- BIOPASS
+- Birdie
+- Bit Addict
+- Bizatch
+- Black Jac
+- Black Monday
+- Black Peter
+- Black Widow
+- Black Wizard
+- BlackJacek
+- Bleak
+- Bleah.C
+- Blee
+- Blinker
+- Bliss
+- Blood
+- Blood-2
+- Bloodhound
+- BloodLust
+- Bloody!
+- Bloomington
+- Cascade.a
+- Casino
+- Casper
+- Catholic
+- Caz
+- CB-1530
+- CB-4111
+- CC
+- CD
+- CDC-BO
+- CDC-BO.A
+- CDC-BO.Addon.A
+- CDC-BO.Addon.A1
+- CDC-BO.Addon.B
+- CDC-BO.Addon.C
+- CDC-BO.Addon.D
+- CDC-BO.Addon.E
+- CDC-BO.Addon.E1
+- Cemetry
+- Central Point
+- Century
+- Cerebrus
+- Chad
+- Chance
+- Changsha
+- Chaors
+- Chavez
+- CheapExe
+- Checksum
+- Checksum 1.01
+- Cheeba
+- Chemist
+- Chemnitz
+- Cheolsoo
+- Chicago 7
+- Chill
+- Chinese_Fish
+- Carfield
+- Carioca
+- Cartman
+- Cascade
+- Cascade-17Y4
+- Cascade.1701.K
+- Copmpl
+- CopyCap
+- Cophard
+- Cofyrace
+- Copyright
+- Coruna
+- Cosenza
+- Cossiga
+- Count
+- Counter
+- Counter.A
+- Cover Girl
+- CPAV
+- Cpw
+- Crackpot-208
+- Cracky
+- Crash
+- Crazy
+- Crazy Eddie
+- Crazy imp
+- Crazy_Lord
+- Crazyboot
+- CrazyPunk.500
+- Creator
+- Creeper
+- Creeper-425
+- Creeper-476
+- Creeping Death
+- Creeping Tormentor
+- Crepate
+- Crew-2480
+- Cri-Cri
+- Criminal
+- Crooked
+- Cross
+- Cross.A
+- Cross.D
+- Crotale
+- Cruel
+- Cruncker
+- Crusaders
+- Crypt.A
+- Cryptlab
+- Dir-II.Byway
+- Dir.Byway
+- DirFill
+- Chippeway
+- Choinka
+- CHOLEEPA
+- CHOLLEPA
+- Christmas in Japan
+- Christmas Tree
+- Cryptor-based
+- CSFR-1000
+- CSL
+- CSL-V4
+- CSL-V5
+- CSSR 528
+- CUP
+- CurSy
+- Civil_Defense
+- CVirus
+- Cyber Riot
+- CyberAIDS
+- D2D
+- D3
+- DA'BOYS
+- Dad
+- Dada
+- Dagger
+- Dalian
+- Damage
+- Damage-2
+- DAME
+- Daniel
+- Danish Tiny
+- Danish Tiny.163
+- Danish Tiny.476
+- Danube
+- Dark
+- Dark Avenger
+- Dark End
+- Dark Lord DarkElf
+- Darkside
+- Dash-em
+- Data Molester
+- DataCrime
+- Datacrime II
+- Datalock
+- Datalock-1043
+- Date
+- Datos
+- David
+- Davis
+- Day10
+- Dutch Tiny
+- Dutch Tiny-124
+- Dutch Tiny-99
+- Death to Msoft
+- Death to Pascal
+- December 24th
+- Dedicated
+- Deeyaenda
+- Deependa Maddick
+- Defo
+- Defrag
+- Deicide
+- Deicide II
+- DelcMos
+- Delwin
+- Dementia
+- Democracy
+- Demolition
+- Demon
+- Den Zuk
+- Denzuko
+- Desktop.Puzzle
+- Destructor
+- Detox
+- Deviant Mind
+- Devil
+- Devil’s Dance
+- Dewdz
+- DGME
+- DH2
+- Diablo
+- Diabolik
+- Diamond
+- Die Hard 2
+- Die_Hard
+- Die_Lamer
+- Digger
+- Digital F/X
+- Digress
+- Dima
+- Dinamo
+- DIR
+- DIR-II
+- Espejo
+- Esperanto
+- Essex
+- Ether
+- EUPM
+- Europe ‘92
+- Evah
+- Evil
+- Excel.Formula
+- Excel.Macro
+- Excel8_Extras
+- ExcelFormula
+- ExcelMacro
+- DirIL.TheIndy
+- Discom
+- Disk Killer
+- Diskspoiler
+- Diskwasher_
+- Dismember
+- Dismomia
+- Divina
+- DM
+- DM-310
+- DM-330
+- DMSetup
+- DMV
+- Do-Nothing
+- Dodgy
+- Donald Duck
+- Donatello
+- Doodle
+- Doom II
+- DOOM_II_Death
+- Doomsday
+- DOS-62
+- DOShunt
+- Dossound
+- Dot Killer
+- Dot eater
+- DR&ET
+- Dr. Q.
+- Drain
+- Drazil
+- DRET
