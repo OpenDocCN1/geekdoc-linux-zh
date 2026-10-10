@@ -1,0 +1,275 @@
+
+修改文件后，必须重启 Samba 服务以使更改生效。
+
+# `printers.conf` 文件
+
+`printers.conf` 文件存储在 `/etc/cups` 目录，它将网络上的本地打印机集定义为共享资源。打印机列表通过使用 `cups` 守护进程自动生成。它可以被配置为仅允许显式公布的打印机。该文件包含一组指令，定义了被共享打印机的特性。
+
+# 如何配置远程打印
+
+过程参考：安装 Samba
+
+要安装 Samba：
+
+1. 在 GUI 中以 `root` 登录。
+2. 挂载包含最新版本 Samba 包的 Linux 安装 CD-ROM。
+3. 导航到 `/media/(name of the media)/Server` 文件夹。
+4. 选择 `samba [package version].rpm` 和 `perl - Convert -ASN1 - {package version}.rpm` 文件。
+5. 右键点击并选择“用软件安装程序打开”。
+6. 在“正在安装软件包”窗口中，验证已列出两个包并点击“应用”开始安装软件包。
+7. 如果必要，为了安装这两个包，在“无法验证 {package version}”框中，点击“仍然”。
+8. 要完成安装，在“软件已安装”消息框中，点击“确定”。
+
+# 过程参考：使用 Samba 共享打印机
+
+要使用 Samba 共享打印机：
+
+1. 打开 `/etc/samba/smb.conf` 文件。
+2. 定义共享：
+   - `[share name]`
+   - 定义溢出路径：`path = (path to the spool)`
+   - 指定打印机名称：`printer = (printer name)`
+   - 指定是否允许访客：`public = {yes | no}`
+   - 指定打印权限：`printable = {yes | no}`
+   - 如果必要，包含注释：`comment = (Printer Description)`
+3. 保存并关闭文件。
+4. 要验证 `smb.conf` 是否正确，输入 `testconfig /etc/samba/smb.conf`。
+5. 要系统启动时启动服务，输入 `chconfig`。
+6. 要重启服务，输入 `service restart`。
+7. 查看连接打印机的系统的 IP 地址，输入 `ifconfig`。
+8. 从其他 Linux 系统验证你创建的打印机共享。
+
+# 活动 6-5 配置远程打印机
+
+1. 在 `svr` 上，你已在 GUI 中登录。
+2. 双击桌面上的计算机/服务器图标。
+3. 导航到 `resource` 文件夹。
+4. 在服务器文件浏览器中，导航并选择 `perl - Convert -ASN1 - 0.20 - 1.1.noarch.rpm` 和 `samba - 3.0.33 - 3.7.el5i86.rpm` 文件。
+5. 右键点击并选择“用软件安装程序打开”。
+6. 在安装窗口中，验证已列出两个包并点击“应用”开始安装软件包。
+7. 在“软件已安装”消息框中，点击“确定”完成安装。
+8. 关闭服务器文件浏览器窗口。
+9. 选择系统→管理→打印，显示“打印配置-本地”窗口。
+10. 在左侧窗格中，选择“服务器设置”。
+11. 在右侧窗格中，在“基本服务器设置”部分，勾选“共享到此系统的已打印机”。
+12. 点击“应用”。
+13. 关闭“打印配置-本地”窗口。
+14. 选择应用程序→辅助工具→终端在 GUI 中启动终端窗口。
+
+你已经配置了一个本地打印机。由于你有许多文档需要从其他 Linux 系统打印，你决定将该打印机设置为共享，并授予 `smith` 用户账户对其进行远程访问。
+
+1. 修改 `smb.conf` 文件以共享打印机。
+   - a. 要在文本编辑器中打开 `smb.conf` 文件，在终端窗口中输入 `vi /etc/samba/smb.conf`
+   - b. 导航到“共享定义”部分。
+   - c. 导航到打印机部分包含 `browseable` 变量行的开头。
+   - d. 要切换到插入模式，按 `I`。要在当前行之前插入新行，按 `Enter` 然后按 `Tab`。
+   - e. 要移动到上一行，按上箭头键并按 `Tab`。
+   - f. 输入 `printer name = printer`
+   - g. 按下方向键并按两次退格键。
+   - h. 为了使其可以通过浏览器访问，输入 `yes` 并按下方向键。再按两次退格键。
+   - i. 要允许访客账户访问打印机共享，输入 `yes`
+   - j. 要返回命令模式，按 `Esc` 键。保存文件并退出编辑器。
+
+# 添加新的 `smb` 用户并重启 `smb` 服务。
+
+- 要将 `jsmith` 添加到 `smb` 用户列表，输入 `smbpasswd -a jsmith`
+- 要设置空密码，按两次 `Enter`（回车键）。
+- 要查看 Linux 系统的 IP 地址，输入 `ifconfig`
+- 记录下系统的 IP 地址。
+- 要重启 Samba 服务器，输入 `smb restart`
+
+# 访问远程打印机。
+
+- 在 `srvB` 上，以 `root` 身份登录 GUI。
+- 选择 System（系统）→Administration（管理）→Printing（打印）。
+- 要添加打印机，在 `Printer configuration - localhost` 对话框中，点击 `New Printer`（新建打印机）。
+- 在 `New Printer` 对话框中，在 `Printer Name`（打印机名称）文本框中输入 `printer1` 并按 `Tab` 键。
+- 在 `Description`（描述）文本框中输入 `Remote Printer`（远程打印机）并按 `Tab` 键。
+- 在 `Location`（位置）文本框中输入 `Printer on srvA` 并点击 `Forward`（下一步）。
+- 在 `Devices`（设备）列表中，观察到选中了 `LPT #1`。
+- 通过 `SAMBA` 选项选择 `Windows Printer`（Windows 打印机）。
+- 在右窗中，观察到显示 `MYGROUP` 共享。
+- 双击 `MYGROUP` 共享。
+- 在右窗中，观察到显示 `SRVA`。
+- 双击 `SRVA` 共享。
+- 在右窗中，观察到显示打印机。
+- 选择打印机。
+- 观察 `smb` 部分，打印机路径已填充在文本框中。点击 `Forward`（下一步）。
+
+# 选择打印机驱动并将远程打印机设置为默认打印机。
+
+- 在 `Makes`（厂商）列表中，确保选中了 `Generic` 并点击 `Forward`（下一步）。
+- 在 `Models`（型号）列表中，向下滚动并选择 `PostScript Printer`（PostScript 打印机）。
+- c. 在 `Drivers`（驱动程序）列表中，选择 `fomatic: Generic - PostScript-Printer -Postscript.ppd` 并点击 `Forward`（下一步）。
+- d. 在确认页面上，观察到显示消息“Going to create a new printer at smb:/MYGROUP/SRVA/printer”（将在 `smb:/MYGROUP/SRVA/printer` 创建新打印机）。
+- e. 要添加打印机，点击 `Apply`（应用）。
+- f. 观察到 `Remote Printers`（远程打印机）部分添加了一个新打印机 `printer@192.168.0.2`。
+- g. 要将 `printer1` 设置为默认打印机，在左窗中选择 `printer1`，在右窗中点击 `Make Default Printer`（设为默认）。
+- h. 观察到 `printer1` 已设置为默认打印机。
+- i. 关闭 `Printer configuration - localhost` 对话框。
+
+- 5. 在远程打印机上打印 `install.log` 文件。
+  - a. 在桌面上，双击 `root` 的 `Home` 文件夹。
+  - b. 在 `root` 窗口中，双击 `install.log` 文件。
+  - c. 要打印文件，选择 `File`（文件）->`Print`（打印）。
+  - d. 在 `Print`（打印）对话框中，观察到选择了远程打印机 `printer@srvA` 并点击 `Print`（打印）。
+  - e. 切换到 `srvA`。
+  - f. 要启动打印队列中的作业，在任务栏上点击 `Web Browser`（网络浏览器）图标。
+  - g. 要查看打印队列中的作业，在地址栏选择现有地址并输入 `http://localhost:631/jobs`
+  - h. 点击 `Show Active Jobs`（显示活动作业）。
+  - i. 观察到打印队列中显示 `install.log` 文件。
+  - j. 关闭 `Jobs CUPS 1.3.7 - Mozilla Firefox` 窗口和终端窗口。
+  - k. 切换到 `srvB`。
+  - l. 关闭 `gedit` 和 `root` 窗口。
+
+# 第 6 节后续
+
+在本节中，你学习了使用 Linux 打印服务。你配置了本地和远程打印机，使用各种打印命令打印了文件，并管理了打印作业和队列。现在你将能够设置打印机连接并打印文件的备份记录。
+
+- 1. 管理打印队列有什么好处？
+- 2. 本地打印机和网络打印机之间有什么区别？
+
+# 管理软件包
+
+课程时长：2 小时
+
+# 课程目标：
+
+在本节中，你将管理软件包。
+
+你将：
+- 使用 `RPM` 软件包管理器管理软件包。
+- 验证软件包。
+- 升级和刷新软件包。
+- 配置存储库。
+- 使用 `YUM` 软件包管理器管理软件包。
+- 使用 `Debian` 软件包管理器管理软件包。
+- 使用源文件管理软件包。
+
+## 概述
+
+你探索了基本的 Linux 环境，处理了文件并打印了它们。现在，你准备好安装软件包以方便软件的分发和安装。在本节中，你将管理软件包。
+
+你需要在系统上安装软件以有效完成所需任务。为此，你需要了解软件包、软件包管理器以及如何在你的系统中安装它们。除非软件包完全安装，否则软件将无法运行。
+
+本节涵盖了以下 `CompTIA Linux+` `Powered by LPI` 认证对象的全部或部分：
+
+- `Topic A`:
+  - 目标 102.5
+- `Topic D`:
+  - 目标 102.5, 目标 110.3
+- `Topic E`:
+  - 目标 102.5
+- `Topic F`:
+  - 目标 102.4
+
+# 主题 A
+使用 `RPM` 管理软件包
+
+在系统上安装软件将增加计算机的能力，并使你能够执行一组新任务或更快地完成一组常用任务。在安装软件之前，你需要知道如何管理软件包。在这个主题中，你将使用 `RPM` 软件包管理器管理软件包。作为 Linux 专业人员，你需要在系统上安装软件。软件包是一个集合。你需要知道如何将这些软件包添加到系统中。即使一个软件包没有正确安装，软件也将无法工作。因此，有必要了解软件包和软件包管理器。
+
+## 软件包
+
+定义：
+
+**软件包**是一个类、函数或过程集合，可以作为一个单元导入。软件包包含了运行应用程序所需的文件。每个软件包都是专门为特定的 Linux 发行版编译的。
+
+# 软件包管理器
+
+定义：
+
+软件包管理器允许你搜索、升级或删除软件包的工具。它跟踪每个软件包提供的文件。软件包管理器还提供了查询选项来列出已安装的软件包。软件包的命名遵循 `name-version-release.architecture`。`RPM` 和 `YUM`（`Yellow dog Updater`）是软件包器的示例。
+
+# 记录已安装软件包的更改
+
+建议记录对已安装软件包进行的任何更改。这将帮助你解决问题并跟踪之前安装的版本。
+
+# 依赖关系
+
+依赖是目标软件包为了实现功能所依赖的软件包。依赖链可以存在多个级别。例如，软件包 A 只有在软件包 B 之后安装。同样，软件包 B 只有在软件包 C 之后安装。软件包管理器可以获取所需的软件包，节省时间和精力。依赖管理是软件包管理器的主要功能。
+
+> `RPM` 有一些辅助工具，如 `up2date` 和 `yum` 用于管理依赖关系。
+
+# `RPM` 软件包管理器
+
+`RPM` 软件包管理器（`RPM`）由红帽开发，是一种维护软件包的工具。
+
+通过提供标准的软件包格式，`RPM` 能够轻松地管理 Linux 系统和服务器。`RPM` 提供了标准的安装机制、关于已安装软件包的信息以及卸载和升级软件包的工具。
+
+图 7-4: 显示了 `RPM` 工具的各种选项。
+
+> `RPM` 根据 `GNU` 通用公共许可证 (`GPL`) 分发，可用于许多 Linux 发行版，甚至可以用于其他的 `UNIX` 实现。
+
+# `RPMS` 目录
+
+`Red Hat` 发行版包含包含软件包的 `RPMS` 目录。你也可以在互联网和 `FTP` 站点找到软件包。可以找到软件包的网站之一是 `http://rpmfind.net`。
+
+# 安装软件包
+
+当你安装 Linux 时，你可能会安装随附的所有软件包。然而，只安装你需要的软件包会更好。以后，当你需要安装额外的软件包时，可以使用你的 `CD` 或 `DVD`（或你获取的任何源）来获取额外的包。你可以检查软件包的更新版本是否发布，并安装最新版本。
+
+# `/usr/lib/rpm/*` 目录
+
+`/usr/lib/rpm/*` 目录包含管理 `RPM` 软件包所需的 `RPM` 工具。`/var/lib/rpm/*` 目录包含已安装软件包的 `RPM` 数据库。默认情况下，`rpmrc` 配置文件位于 `/usr/lib/rpm*` 目录。`rpmrc` 文件包含 `RPM` 架构兼容性信息。如果你想让 `RPM` 设置适用于全局配置，请将 `rpmrc` 文件放在 `/etc` 目录。如果将 `rpmrc` 文件以 `.rpmrc` 的形式放在任何用户的家目录下，则 `RPM` 设置将仅适用于该特定用户。
+
+# `RPM` 命令
+
+常用的 `RPM` 软件包管理命令允许你执行软件包管理任务。
+
+常用的 `RPM` 软件包管理命令见下表。
+
+| 命令 | 允许你 |
+| --- | --- |
+| `rpm -i (package name)` | 安装软件包。 |
+| `rpm -F (package name)` | 重新安装软件包。 |
+| `rpm -U (package name)` | 升级软件包。 |
+| `rpm -e (package name)` | 移除软件包。 |
+
+> 在 `rpm -i` 命令的某些现有选项后添加 `h` 将会在软件包存档解包时打印 50 个哈希值（hashes）。添加 `v` 将为你提供所执行的软件包管理任务的详尽状态。例如，`rpm -ivh (package name)` 将指示 `RPM` 软件包安装的状态。
+
+# `RPM` 组件
+
+`RPM` 软件包管理器包含许多组件。使用这些组件，你可以维护系统上安装的软件包列表。
+
+| 组件 | 说明 |
+| --- | --- |
+| `RPM` 本地数据库 | 跟踪系统上安装的软件包。 |
+| `RPM` 软件包 | 包含安装软件包所需的许多可执行文件和脚本。 |
+| `YUM` | 作为 `RPM` 的前台软件包安装器。 |
+| `RPM` 软件包文件 | 软件包的源代码。 |
+
+# `RPM` 查询
+
+`RPM` 查询是一个函数，用于查询 `RPM` 关于已安装和未安装软件包的信息。`rpm -q` 命令有多种选项，可以提供不同的输出。
+
+```
+rpm query
+
+File Edit View Detail Help
+
+[root@localhost ~]# rpm -qi samba
+
+Name: Red Hat, Inc.
+
+Version: 3.0.33
+
+Release: 3.7.5
+
+Build Date: Tue 09 Dec 2008 11:03:42
+
+Install Date: Thu 25 Jun 2009 11:37 AM EDT  Host: h820-ci-b7-build
+
+group: System Environment/Daemons  Source: samba-3.0.33-7.el5.src
+
+Size: 31836025
+
+License: GPL Version 2
+
+Signature: DSA/SHA1, Nov 15 Dec 2008 05:05:28 PM EST, Key ID: 532610931707186
+
+Packager: Inc http://www.redhat.com/
+
+Summary: Samba
+
+Description: The Samba server.
+```
