@@ -1,0 +1,1 @@
+As you can see, Linux can go from being really affordable to being stupidly expensive in an instant. And these maintenance contracts are one of the things that can make it extremely expensive. Open source licensing, as we mentioned, can make or break your career. So make sure you take it seriously.
