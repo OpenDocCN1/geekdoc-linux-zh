@@ -1,0 +1,7 @@
+# ## About the Authors
+
+**Michael Meadhra** is an author and consultant who has written, co-authored, or contributed to more than 30 books, including *StarOffice For Linux For Dummies*, *Banking Online For Dummies*, and *Lotus SmartSuite Millennium Edition For Dummies*, all published by IDG Books Worldwide.
+
+**Joe Merlino** is a technical writer and avid Linux hobbyist. He is also a library worker and contributor to the Open Source Digital Library System project. He dabbles in Perl and Unix shell scripting. He has been a contributor to *Linux Gazette*, contributed to *StarOffice For Linux For Dummies*, and is co-author of *StarOffice 5.0 for Linux Bible* from IDG Books.
+
+**Kate Wrightson** is a technical writer with several years of Linux experience and over ten years of experience using UNIX. She works with university and college faculty to help them improve their teaching, especially through using technology in their classrooms and course preparation. She also spends time working with the USENET newsgroup creation process. Kate has published articles on topics ranging from the history of American higher education to clear business writing; she is the co-author of *StarOffice 5.0 for Linux Bible* from IDG Books and contributed to *StarOffice For Linux For Dummies*.

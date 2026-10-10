@@ -1,0 +1,13 @@
+From Listing 10-3, first we install the loadable modules that the Linux kernel requires to support JFFS2 and the MTD subsystem. We load the JFFS2 module followed by the mtdblock and mtdram modules. After the necessary device drivers are loaded, we use the Linux dd command to copy our JFFS2 file system image into the MTD RAM test driver using the mtdblock device. In essence, we are using system RAM as a backing device to emulate a MTD block device.
+
+After we have copied our JFFS2 file system image into the MTD block device, we can mount it using the mount command, in the manner shown in Listing 10-3. After the MTD pseudo-device has been mounted, we can work with the JFFS2 file system image in any way we choose. The only limitation using this method is that we can't enlarge the image. The size of the image is limited by two factors. First, when we configured the MTD RAM test device, we gave it a maximum size of 8MB.¹ Second, when we created the JFFS2 image, we fixed the size of the image using the mkfs.jffs2 utility. The image size was determined by the contents of the directory we specified when we created it. Refer back to Listing 9-9, in Chapter 9, to recall how our jffs2.bin image was built.
+
+It is important to realize the limitations of using this method to examine the contents of a JFFS2 file system. Consider what we did: We copied the contents of a file (the JFFS2 file system binary image) into a kernel block device (/dev/mtdblock0). Then we mounted the kernel block device (/dev/mtdblock) as a JFFS2 file system. After we did this, we could use all the traditional file system utilities to examine and even modify the file system. Tools such as ls, df, du, mv, rm, and cp can all be used to examine and modify the file system. However, unlike the loopback device, there is no connection between the file we copied and the mounted JFFS2 file system image. Therefore, if we unmount the file system after making changes, the changes will be lost. If you want to save the changes, you must copy them back into a file. One such method is the following:
+
+```
+# dd if=/dev/mtdblock0 of=your-modified-fs-image.bin
+```
+
+This command creates a file called your-modified-fs-image.bin that is the same size as the mtdblock0 device which was specified during configuration. In our
+
+¹ The size was fixed in the kernel configuration when we enabled the MTD RAM test device in the Linux kernel configuration.

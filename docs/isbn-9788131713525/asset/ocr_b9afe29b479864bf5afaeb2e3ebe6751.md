@@ -1,0 +1,13 @@
+the address space. Although this approach had simplicity as its most valuable characteristic, it led to bugs that could be difficult to diagnose.
+
+High-performance microprocessors contain complex hardware engines called Memory Management Units (MMUs) whose purpose is to enable an operating system to exercise a high degree of management and control over its address space and the address space it allocates to processes. This control comes in two primary forms: access rights and memory translation. Access rights allow an operating system to assign specific memory-access privileges to specific tasks: Memory translation allows an operating system to virtualize its address space, which has many benefits.
+
+The Linux kernel takes advantage of these hardware MMUs to create a *virtual memory* operating system. One of the biggest benefits of virtual memory is that it can make more efficient use of physical memory by presenting the appearance that the system has more memory than is physically present. The other benefit is that the kernel can enforce access rights to each range of system memory that it allocates to a task or process, to prevent one process from errantly accessing memory or other resources that belong to another process or to the kernel itself.
+
+Let's look at some details of how this works. A tutorial on the complexities of virtual memory systems is beyond the scope of this book.[11] Instead, we examine the ramifications of a virtual memory system as it appears to an embedded systems developer.
+
+# 2.3.6 · Execution Contexts
+
+One of the very first chores that Linux performs when it begins to run is to configure the hardware memory management unit (MMU) on the processor and the data structures used to support it, and to enable address translation. When this step is complete, the kernel runs in its own virtual memory space. The virtual kernel address selected by the kernel developers in recent versions defaults to 0xC0000000. In most architectures, this is a configurable parameter.[12] If we were to look at the kernel’s symbol table, we would find kernel symbols linked at an address starting with 0xC0xxxxxx. As a result, any time the kernel is executing code in kernel space, the instruction pointer of the processor will contain values in this range.
+
+In Linux, we refer to two distinctly separate operational contexts, based on the environment in which a given thread[13] is executing. Threads executing entirely

@@ -1,0 +1,3 @@
+![](bbox=[0.1, 0.11, 0.89, 0.55])
+
+When you compare KOffice to some of the popular commercial office suites, certain component applications seem conspicuous by their absence. For example, KOffice doesn’t include a Web browser component. But then, KOffice doesn’t need a separate Web browser because KFM fills that niche in KDE. Similarly, there’s no need for e-mail and news clients in KOffice because KMail and KRN are already part of KDE; KOrganizer handles appointment scheduling and to-do lists, so you won’t find that function duplicated in KOffice, either. So, when all is said and done, KOffice, combined with other utilities already available in KDE, will provide a comprehensive office productivity solution that is a completely free and open source.

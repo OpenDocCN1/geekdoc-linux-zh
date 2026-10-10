@@ -1,0 +1,275 @@
+
+# Index
+
+## K
+
+-   preemption debugging, 461
+-   runtime control of locking mode, 467
+-   soft lockup detection, 460
+-   wakeup latency history, 462
+-   wakeup timing, 461
+-   real-time kernel patch, 453-455
+    -   converting spinlocks to mutexes, 455
+    -   creating real-time processes, 458-459
+    -   critical section management, 459-460
+    -   ISR threading, 455-456
+    -   O(1) scheduler, 458
+    -   RCU (Read-Copy-Update), 457
+    -   SoftIRQ threading, 456-457
+
+## S
+
+-   source repositories, 69-70
+-   subsystem initialization, 121-123
+-   user space processes, 19
+-   versions of, 67-69
+
+## K
+
+-   kernel command line, 114-121
+-   kernel context, 19, 27
+-   Kernel GDB. See KGDB
+-   kernel oops, 337-340
+-   kernel preemption, 449
+    -   models for, 451-452
+    -   preventing, 449-451
+-   kernel proper (vmlinuz), 73-74
+    -   components of, 75-78
+-   composite kernel image, 100-102
+    -   architecture objects, 104-105
+    -   boot messages, 106-109
+    -   bootstrap loaders, 105-106
+    -   Image object, 103
+-   kernel-level autoconfiguration, 303
+-   KERNEL.BASE constant, 343
+-   KGDB (Kernel GDB), 353-354
+    -   booting with KGDB enabled, 355-358
+    -   breakpoints, 358-360
+    -   kernel configuration, 355
+    -   trapping crashes, 396-397
+-   ksoftirqd task, 456
+
+## L
+
+-   latency. See also real time
+    -   kernel preemption models, 451-452
+    -   preemption latency, source of, 453
+    -   real time and, 447-448
+-   latency tracing, enabling, 464-466
+-   ldd command, 347-348
+    -   shared library events, 408-410
+-   lib directory, 132
+-   libraries, debugging shared libraries, 405-411
+-   licensing device drivers, 211
+-   Lilo, 183-184
+-   line numbers, mismatched during debugging, 364-369
+-   linker command scripts, 161-162
+-   linker script file, 75
+-   linking bootloader images, 160-163
+
+## L
+
+-   Linux. See also embedded Linux
+    -   distributions, 32-34
+    -   GPL (General Public License) and, 3-5
+    -   initial announcement of, 66-67
+    -   standards
+        -   Linux Standard Base (LSB), 5
+        -   Open Source Development Labs (OSDL), 5-6
+-   Linux Documentation Project, 95
+-   Linux Kernel Development (Love), 453
+-   Linux kernel. See kernel
+-   Linux Loader (LILO), 183-184
+-   Linux scheduling, real time and, 447
+-   Linux Standard Base (LSB), 5
+-   Linux-supported architectures, 60-61
+-   linuxrc file, initrd and, 149-150
+-   listing files, 223
+
+## Listings
+
+-   adding file system ops to hello.c, 205
+-   ../arch/arm/Kconfig snippet, 91
+-   arch/arm/mach-ixp4xx/Kconfig file snippet, 92
+-   assembly file pages, 104
+-   autoconfh entries for default kernel command line, 430
+-   backtrace command, 314
+-   basic MTD configuration from .config, 248
+-   booting kernel with ramdisk support, 148
+-   booting with JFFS2 as root file system, 270
+-   booting with KGDB enabling using U-Boot, 357
+-   booting with NFS Root Mount, 305
+-   BusyBox build options, 276
+-   BusyBox default startup, 282
+-   BusyBox gzip applet usage, 287
+-   BusyBox library dependencies, 277
+-   BusyBox Symlink Structure—Top Level, 279
+-   BusyBox Symlink Structure—Tree Detail, 280
+-   BusyBox usage, 278
+-   calling early machine initialization, 427
+-   check for preemption a la Linux 2.4 + preempt patch, 451
+-   clean file system check, 220
+-   common kernel breakpoints, 359
+-   configuration for default kernel command line, 430
+-   configuration option for PowerDNA, 440
+-   connecting to KGDB, 358
+-   console setup code snippet, 117
+-   continue remote protocol example, 361
+-   converting ext2 file system to ext3 file system, 222
+-   converting RootFS to JFFS2, 268
+-   copying JFFS2 to RootFS partition, 269
+-   core dump analysis using GDB, 312
+-   correct file system check, 220
+-   Coyote-specific board setup, 264
+-   creating real-time processes, 458
+-   creation of kernel init thread, 124
+-   customized .config file snippet, 93
+-   debugging architecture-setup code, 360
+-   debugging module init code, 382
+-   default cross-compile directories, 294
+-   default native cpp search directories, 293
+-   detecting Redboot partitions on Linux-boot, 256
+-   DHCP target specification, 169
+-   directory layout for JFFS2 file system, 227
+-   disassemble function yosemite_setup_arch, 366
+-   disassembly using objdump, 344
+-   displaying partition information using fdisk, 216
+-   displaying symbols using nm, 348
+-   dmalloc log debug, 336
+-   dump of raw printk_log_buffer, 395
+-   early serial text debug, 393
+-   ELF file debug info for example program, 401
+-   erase and program Flash, 388
+-   /etc/exports contents, 231
+-   examining cramfs file system, 229
+-   example DHCP server configuration, 299
+-   example driver usage, 210
+-   example driver with parameter, 200
+-   example trace output, 327
+-   exercising our device driver, 209
+-   ext2 file system image creation, 242
+-   ext3 journal file, 223
+-   external bus controller initialization, 177
+-   family of __setup macro definitions from initch, 118
+-   final boot steps from main.c, 136
+-   final kernel boot steps from main.c, 126
+-   final kernel build sequence: ARM/IXP425, 101
+-   Flash device listing, 219
+-   formatting partitions using mke2fs, 217
+-   functions from 5200 platform file, 427
+-   gdb find_next_task macro, 376
+-   gdb find_task macro, 371
+-   GDB in follow-fork-mode = child, 413
+-   GDB in follow-fork-mode = parent, 412
+-   gdb list modules macro, 377
+-   gdb macro: print process information, 372
+-   GDB operations on threads, 416
+-   gdb ps macro output, 373
+-   gdb task_struct show macro, 374
+-   generic PowerPC machine functions, 438
+-   grub.conf example configuration file, 185
+-   Hello output, 29
+-   Hello World, embedded style, 29
+-   Hello, World Again, 292
+-   host GDB connecting to target threads demo, 415
+-   init process /proc entries, 236
+-   init process memory segments from /proc, 237
+-   initch family of macros, 122
+-   initial bootloader serial output, 15
+-   initial target memory segment mapping, 406
+-   initialization routine example, 121
+-   initialization via initchalls, 125
+-   initiate module debug session: loop.ko, 380
+-   Initiating a GDB Debug Session, 316
+-   initr example contents, 151
+-   initab simple example, 142
+-   Installing BusyBox on Root File System, 285
+-   interrupt off latency history (head), 463
+-   interrupt off maximum latency trace, 465
+-   invocation of cross-gdb, 405
+-   Kconfig for ARM architecture partial listing, 89
+-   Kconfig patch for examples, 194
+-   kernel build output, 72
+-   kernel command-line MTD partition format, 260
+-   kernel command-line processing, 119
+-   kernel include file ...include/linux/version.h, 68
+-   kernel iniramfs build directory, 153
+-   kernel MTD Flash partitions, 258
+-   Kernel MTD partition list, 266
+-   Kernel Ops, 338
+-   kernel subdirectory, 79
+-   ldd executed on development host, 409
+-   ldd executed on target board, 408
+-   linl.cong: example configuration, 183
+-   link.stafe: vmlinux, 74
+-   linker command script—reset vector placement, 162
+-   linux 2.6 . config snippet, 81
+-   Linux autoconf.h, 84
+-   Linux boot messages on IXP425, 106
+-   Linux final boot messages, 18
+-   Linux kernel /arch directory listing, 423
+-   Linux ramfs source module comments, 241
+-   Linux file example, 149
+-   Lite5200 platform_init function, 432
+-   loading and unloading a module, 198
+-   loading kernel via TFTP Server, 304
+-   loading the Linux kernel, 16
+-   locking critical sections, 450
+-   lsmod example output format, 201
+-   Makefile from .../arch/arm/mach-ixp4xx kernel subdirectory, 94
+-   makefile patch for examples, 196
+-   makefile targets, 86
+-   memory segments from /proc/ / pid/ / maps on target
+-   minimal BusyBox root file system, 282
+-   minimal device driver, 192
+-   minimal root file system contents, 133
+-   mkcramfs command example, 228
+-   mkfs.jffs2 command example, 227
+-   modinfo output, 204
+-   modprobe.conf file, 202
+-   module build output, 197
+-   module.c: module initialization, 379
+-   mount dependency on /proc, 235
+-   mounting JFFS2 on MTD RAM device, 251
+-   mounting MTD Flash partition as ext2 file system, 267
+-   moving around stack frames in GDB, 314
+-   mtrace Error Report, 334
+-   new Redboot partition list, 259
+-   NFS restart, 140
+-   optimized architecture-setup code, 364
+-   partial debug info dump, 343
+-   partial U-Boot board-configuration header file, 166
+-   patching your kernel for MTD, 250
+-   portions of source file yosemite.c, 368
+-   PowerDNA new or modified kernel files, 441
+-   ppcxxx_s dram_init() from U-Boot, 496
+-   PQ2FADs Flash mapping driver, 261
+-   process listing, 329
+-   profiling using ltrace, 328
+-   profiling using kgprof, 326
+-   promoting kgfsirt to real-time status, 457
+-   protecting critical section in kernel code, 459
+-   readelf section headers, 341
+-   Redboot Flash partition list, 256
+-   Redboot messages on power-up, 255
+-   Redboot partition creation, 258
+-   remote protocol: breakpoint hit, 363
+-   runlevel 2 startup script example, 145
+-   runlevel directory example, 141
+-   runlevel directory structure, 141
+-   simple C function, 161
+-   simple gdb initialization file, 370
+-   simple linear linked list, 332
+-   simple NFS clients list, 302
+-   simple rc5 BusyBox startup script, 284
+-   source definition of .reserve.c, 162
+-   spawning a child process with fork(), 411
+-   starting gdbserver on target board, 403
+-   startup messages list, 143
+-   stopping GDB on shared library events, 407
+-   trace output: GoAhead web demo, 321
+-   strip target application, 402
+-   syslog output, 240
+-   tapping crash on panic using KGDB, 396
+-   target file system example summary, 232
+-   target threads demo startup, 414

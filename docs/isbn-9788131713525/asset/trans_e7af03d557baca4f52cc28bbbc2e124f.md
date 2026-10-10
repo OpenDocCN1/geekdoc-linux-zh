@@ -1,0 +1,163 @@
+
+## 清单 14-1
+
+### 使用 U-Boot 启动启用了 KGDB 的内核
+
+```text
+=> set bootargs console=ttyS1,115200 root=/dev/nfs rw ip=eth0 gdb
+=> bootm 200000
+## Booting image at 00200000 ...
+Image Name: Linux-2.6.13
+Image Type: PowerPC Linux Kernel Image (gzip compressed)
+Data Size: 1064790 Bytes = 1 MB
+Load Address: 00000000
+Entry Point: 00000000
+Verifying Checksum ... OK
+Uncompressing Kernel Image ... OK
+$T0440:$C00a5ec:01:c0205fa0:$d9 <<< See text
+```
+
+启动序列的大部分内容我们在第 7 章“引导加载器”中介绍 U-Boot 时已经熟悉过。该内核启动序列有两个独特之处：启用 KGDB 的命令行参数以及内核解压后出现的奇特文本字符串。
+
+回顾第 7 章，内核命令行由 U-Boot 的 `bootargs` 环境变量定义。注意，我们添加了 `gdb` 参数，该参数指示内核强制设置一个早期断点并等待宿主调试器（你的 cross-gdb）连接。
+
+如图 14-3 所示，内核检测到 `gdb` 参数的存在，并试图将控制权传递给远程（基于主机的）调试器。这由清单 14-1 中串口转储的 ASCII 字符序列证实。如果你对这个 `gdb` 远程串口协议感到好奇，它在本章末尾引用的 `gdb` 手册中有记载。在这个例子中，KGDB 正在发送一个停止响应数据包，向主机上的远程 `gdb` 会话报告断点陷阱。这两个 32 位参数指示了程序位置和堆栈帧。
+
+现在内核已设置好并等待主机调试器，我们可以开始调试会话。我们从主机开发工作站调用 `cross-gdb`，并通过 `gdb` 的远程协议连接到目标机。在此示例中，我们正在共享串口，因此必须在尝试与 `gdb` 连接之前断开目标机的终端仿真器。清单 14-2 强调了 `gdb` 连接过程。这假设我们已经退出终端仿真器并释放了串口供 `gdb` 使用。
+
+## 清单 14-2
+
+连接至 KGDB
+
+```text
+$ ppc_4xx-gdb --silent vmlinux
+(gdb) target remote /dev/ttyS0
+Remote debugging using /dev/ttyS0
+Breakinist () at arch/ppc/kernel/ppc-stub.c:825
+825 }
+(gdb) l
+820 return;
+821 }
+822 }
+823 asm(" .globl breakinist \n\
+824 breakinist: .long 0x7d821008");
+825 }
+826 }
+827 #ifdef CONFIG_KGDB_CONSOLE
+828 /* Output string in GDB O-packet format if GDB has connected.
+If nothing
+829 output. returns 0 (caller must then handle output). */
+(gdb)
+```
+
+这里我们执行了三个操作：
+
+- 调用 `gdb` 并传入内核 ELF 文件 `vmlinux`
+- 在 `gdb` 中使用 `target remote` 命令连接到目标机
+- 发出 `list` 命令，使用其简写形式显示我们在源代码中的位置
+
+冒着指出显而易见之事的危险，我们传给 `gdb` 的 `vmlinux` 镜像必须来自产生目标内核二进制的同一内核构建。它也必须使用 `-g` 编译器标志编译以包含调试信息。
+
+当我们发出 `target remote` 命令时，`gdb` 通过显示程序计数器（PC）的位置来响应。在此示例中，内核停止在文件 `.../arch/ppc/kernel/ppc-stub.c` 第 823 行中内联汇编语句定义的断点处。当我们发出 `continue`（`c`）命令时，如所示，执行从第 825 行开始恢复。
+
+### 14.2.3 有用的内核断点
+
+我们已经在目标板上的内核建立了调试连接。当我们发出 `gdb` 的 `continue`（`c`）命令时，内核将继续启动，如果没有问题，启动过程将完成。在许多架构和处理器上使用 KGDB 有一个小限制。在支持非常早期的内核调试（例如，在完整的基于中断的串口驱动安装之前）的需求与希望保持 KGDB 调试引擎本身非常复杂（因此是稳健和可移植的）之间进行了工程权衡。KGDB 使用一个简单的轮询串口驱动程序，在内核运行时没有开销。作为这种实现的缺点，串口上的传统 `Ctrl-C` 或 `Break` 序列将不起作用。因此，除非遇到断点或其他故障，否则将无法停止正在运行的内核执行。
+
+因此，定义一些系统范围的断点已成为常见做法，这些断点提供了暂停当前线程执行的能力。清单 14-3 中重点介绍了两个最常见的断点。
+
+## 清单 14-3
+
+常用内核断点
+
+```text
+(gdb) b panic
+Breakpoint 1 at 0xc00161b8: file kernel/panic.c, line 74.
+(gdb) b sys_sync
+Breakpoint 2 at 0xc005a8c8: file fs/buffer.c, line 296.
+(gdb)
+```
+
+使用 `gdb` 的断点命令，再次使用其简写形式，我们输入了两个断点。一个在 `panic()`，另一个在同步系统调用入口 `sys_sync()`。前者允许调试器在稍后的事件导致恐慌时被调用。这使得能够检查恐慌发生时的系统状态。第二种是一种有用的方法，可以通过在目标硬件上运行的终端中输入 `sync` 命令，从用户空间停止内核并陷入调试器。
+
+我们现在准备好继续我们的调试会话。我们在目标机上运行了一个启用 KGDB 的内核，暂停在 KGDB 定义的早期断点处。我们使用基于主机的交叉调试器——在此情况下作为 `ppc4xx-gdb` 调用——建立了与目标机的连接，并且我们已经输入了一对有用的系统断点。现在我们可以将调试活动指向手头的任务。
+
+一个注意事项：根据定义，我们不能使用 KGDB 在 `.../arch/ppc/setup.c` 中用于建立启用 KGDB 的内核与我们主机上的 `cross-gdb` 之间连接的 `breakpoint()` 函数之前的代码进行单步调试。
+
+图 14-3 是关于 KGDB 获得控制权之前执行的代码的大致指南。调试这些早期代码需要使用硬件辅助调试探针。我们将在 14.4 节“硬件辅助调试”中简要介绍这个主题。
+
+## 14.3 调试 Linux 内核
+
+你可能单步调试内核代码的一个更常见原因是修改或定制你自定义板子的平台相关代码。让我们看看如何使用 AMCC Yosemite 板子来做到这一点。我们在平台相关的架构设置函数处设置一个断点，然后继续直到遇到该断点。清单 14-4 显示了该序列。
+
+## 清单 14-4
+
+调试架构设置代码
+
+```text
+(gdb) b yosemite_setup_arch
+Breakpoint 3 at 0xc021a488:
+   file arch/ppc/platforms/4xx/yosemite.c, line 308.
+(gdb) c
+Continuing.
+Can't send signals to this remote system. SIGILL not sent.
+
+Breakpoint 3, yosemite_setup_arch () at arch/ppc/platforms/4xx/yosemite.c:308
+308                 yosemite_set_emacdata();
+(gdb) l
+303 . . }
+304
+305 static void __init
+306 yosemite_setup_arch(void)
+307 {
+308                 yosemite_set_emacdata();
+309
+310         im400px_get_clocks(&clocks, YOSEMITE_SYSCLK, 6 * 1843200);
+311         ocp_sys_info.opb_bus_freq = - clocks.opb;
+312
+(gdb)
+```
+
+当遇到 `yosemite_setup_arch()` 处的断点时，控制权传递给 `gdb`，位置在 `yosemite.c` 的第 308 行。`list`（`l`）命令显示了以第 308 行断点为中心的源代码列表。`gdb` 在 `continue`（`c`）命令之后显示的警告信息可以安全忽略。这是 `gdb` 测试远程系统功能的一部分。它首先向目标机发送一个 `remote continue_with_signal` 命令。该目标板的 KGDB 实现不支持此命令；因此，目标机对其进行了 NAK 响应。
+
+`gdb` 通过显示此信息消息并发出标准的远程 `continue` 命令来响应。
+
+### 14.3.1 gdb 远程串口协议
+
+`gdb` 包含一个调试开关，使我们能够观察开发主机上的 `gdb` 与目标机之间使用的远程协议。这对于理解底层协议以及排查表现出异常或错误行为的目标机非常有用。要启用此调试模式，请发出以下命令：
+
+```text
+(gdb) set debug remote 1
+```
+
+启用远程调试后，观察 `continue` 命令的执行过程和 `gdb` 采取的步骤是很有启发性的。清单 14-5 说明了在启用远程调试的情况下使用 `continue` 命令。
+
+## 清单 14-5
+
+继续远程协议示例
+
+```text
+(gdb) c
+Continuing.
+Sending packet: $mC000000,4#80...Ack
+Packet received: c022d200
+Sending packet: $mC000000,4:7d821008#0...Ack
+Packet received: OK
+Sending packet: $mC0016de8,4#f8...Ack
+Packet received: 38600001
+Sending packet: $mC0016de8,4:7d821008#e0...Ack
+Packet received: OK
+Sending packet: $mC005bd5c,4#23...Ack
+Packet received: 38600001
+Sending packet: $mC005bd5c,4:7d821008#0b...Ack
+Packet received: OK
+Sending packet: $mC021a488,4#c8...Ack
+Packet received: 4bffbad
+Sending packet: $mC021a488,4:7d821008#b0...Ack
+Packet received: OK
+Sending packet: $c#63...Ack
+<< program running, gdb waiting for event
+```
+
+虽然一开始看起来很吓人，但这里发生的事情很容易理解。简而言之，`gdb` 正在恢复目标机上的所有断点。回顾清单 14-3，我们输入了两个断点，一个在 `panic()`，一个在 `sys_sync()`。在清单 14-4 中稍后，我们在 `yosemite_setup_arch()` 处添加了第三个断点。因此，有三个活动的用户指定断点。
+

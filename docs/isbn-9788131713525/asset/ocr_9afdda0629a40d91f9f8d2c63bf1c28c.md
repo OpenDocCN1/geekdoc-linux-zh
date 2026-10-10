@@ -1,0 +1,11 @@
+In Chapter 2, “Your First Embedded Experience,” we pointed out that the Linux kernel itself is but a small part of any embedded Linux system. After the kernel has initialized itself, it must mount a root file system and execute a set of developer-defined initialization routines. In this chapter, we examine the details of post-kernel system initialization.
+
+We begin by looking at the root file system and its layout. Next we develop and study a minimal system configuration. Later in this chapter, we add functionality to the minimal system configuration to produce useful example embedded system configurations. We complete the coverage of system initialization by introducing the initial ramdisk, or initrd, and its operation and use. The chapter concludes with a brief look at Linux shutdown logic.
+
+# 6.1 Root File System
+
+In Chapter 5, “Kernel Initialization,” we examined the Linux kernel’s behavior during the initialization process. We made several references to mounting a root file system. Linux, like many other advanced operating systems, requires a root file system to realize the benefits of its services. Although it is certainly possible to use Linux in an environment without a file system, it makes little sense because most of the features and value of Linux would be lost. It would be similar to putting your entire system application into an overloaded device driver or kernel thread.
+
+The root file system refers to the file system mounted at the base of the file system hierarchy, designated simply as / . As you will discover in Chapter 9, “File Systems,” even a small embedded Linux system typically mounts several file systems on different locations in the file system hierarchy. The proc file system, introduced in Chapter 9, is an example. It is a special-purpose file system mounted at /proc under the root file system. The root file system is simply the first file system mounted at the base of the file system hierarchy.
+
+As you will shortly see, the root file system has special requirements for a Linux system. Linux expects the root file system to contain programs and utilities to boot a system, initialize services such as networking and a system console, load device drivers, and mount additional file systems.

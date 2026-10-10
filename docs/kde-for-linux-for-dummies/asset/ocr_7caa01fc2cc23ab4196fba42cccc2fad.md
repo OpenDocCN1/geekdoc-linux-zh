@@ -1,0 +1,1 @@
+The best part about buying a KDE shirt from MieTerra is that the company donates half the purchase price to the KDE project. Such a good deal: Get a great-looking shirt and support your favorite desktop at the same time!

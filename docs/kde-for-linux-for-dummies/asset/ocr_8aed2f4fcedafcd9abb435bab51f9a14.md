@@ -1,0 +1,13 @@
+As with almost everything else in KDE, you can customize and move the taskbar to make it meet your needs. See Chapter 5 for more help on doing this.
+
+# I Have How Many Desktops?
+
+Now that you’ve got the KDE desktop under control, both in concept and in practice, allow us to complicate things by talking about *virtual desktops*. In one sense, the desktop on your screen is already virtual; after all, it’s not a real desk, it just looks like one. In Linux-speak, though, a virtual desktop is a whole new piece of electronic office furniture.
+
+Imagine that your office is large enough to contain three more desks, giving you four desktops for your work. Now, imagine those additional desks inside your computer — all of a sudden, you have new clean desktops to manage your programs and documents. By default, KDE gives you four virtual desktops. If you need more, you can configure up to eight . . . and what are you doing that needs more than eight desktops, anyway?
+
+Why on earth would you want to do this? Well, sometimes keeping various kinds of windows on separate desktops is useful. Separate desktops can help you stay organized and keep one desktop from getting so cluttered that you can’t do anything. For example, say you have a word-processing program window open on desktop 1, and you really need to look something up on the Web to add to your document. Running Netscape on the same desktop as the word-processing program may be too much of a distraction . . . admit it, haven’t you gotten sucked into surfing the Web when you should be working? So, you switch to a new desktop. You start Netscape on that separate desktop, where it will be the only program running, look up the item you need, and head back to the first desktop and your document.
+
+“Okay,” we hear you say, “but where the *heck are* these desktops? I only see one when I look at the screen.” Well, look back at the Pager icon in the panel. See how the pager has four buttons in a block? Each of those buttons represents a desktop. You can tell which one you’re on by which button is depressed, or shaded around the edges. To switch between virtual desktops, press the Pager buttons.
+
+If the concept’s still a bit fuzzy, take a minute to play with it. You can also read Chapter 2, which has a lot more information about desktops in general, including virtual desktops. Here’s a little exercise to work with using the KNote utility, which is included in the default KDE installation.
