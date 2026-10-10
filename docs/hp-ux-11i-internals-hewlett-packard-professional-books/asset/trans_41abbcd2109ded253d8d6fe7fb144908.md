@@ -1,0 +1,155 @@
+
+你想检查什么、要加载多少个以及如何找到它们。`load` 命令的最简单形式是 `load <type> from <address>`。类型可以是任何公开可见的内核结构体或 typedef。如果你使用的是结构体，必须包含 `struct` 关键字。地址可以是数值或符号。例如，要加载 `mproc_info` 数组中的第一个 `mpinfo` 结构体，我们会输入
+
+```
+q4> load struct mpinfo from mproc_info
+```
+
+因为 `struct mpinfo` 也被 typedef 为 `mpinfo_t`，我们也可以用
+
+```
+q4> load mpinfo_t from mproc_info
+```
+
+## 显示堆（Pile）的内容
+
+一旦你拥有一个包含结构体的堆，就需要能够查看其中的数据。要打印该堆，我们使用 `print` 命令。不带参数的 `print` 命令会打印整个结构体。如果你要打印大量元素，可能希望给 `print` 命令添加 `-t` 标志。此选项告知命令按每行一个元素的方式输出，名称显示在左侧，而不是按列输出数据且名称显示在顶部。`mpinfo` 结构体非常大——它包含超过 2,000 个元素——因此即使使用 `-t` 选项，你也会得到超过 2,000 行的输出。幸运的是，你不必查看全部内容。
+
+你可以通过 shell 命令管道处理 `q4` 命令。因此，在你加载好 `mpinfo` 堆之后，你可能想执行 `print -t | more` 以分页查看。你可以通过执行 `print -t | wc -l` 来查找 `mpinfo` 结构中有多少个项目。你还可以精确告诉 `q4` 要打印哪些项目。如果你输入 `print -t procindex prochnpa`，你会得到类似以下的结果：
+
+```
+procindex       0
+prochnpa        0xfffffffffed21000
+```
+
+## 使用 Skip 加载结构体
+
+到目前为止，我们已经将第一个 `mpinfo` 结构体加载到了堆中。但 `mpinfo` 是一个数组——如果你想查看其他处理器的 `mpinfo` 结构体怎么办？`skip` 关键字告诉 `q4` 跳过多少个数组元素。例如，如果你想查看第二个条目（即处理器 1 的条目），输入
+
+```
+q4> load struct mpinfo from mproc_info skip 1
+```
+
+现在，如果我们查看 `procindex` 和 `prochnpa`，我们会得到
+
+```
+procindex       0x1
+prochnpa        0xfffffffffed61000
+```
+
+## 加载多个结构体
+
+现在我们知道如何加载结构体并检查其内容。但堆可以包含多个结构体——你可以加载整个结构体数组。我们通过 `load` 命令的 `max` 关键字来实现这一点，它告诉 q4 要加载的结构体的最大数量；默认为一个。继续我们的 `mpinfo` 示例，我们可以利用全局符号 `n_mpinfo`（它告诉我们要有多少个）来加载所有处理器的 `mpinfo` 结构体：
+
+```
+q4> load struct mpinfo from mproc_info max n_mpinfo
+loaded 2 struct mpinfo as an array (stopped by max count)
+```
+
+q4 会告诉我们要加载了多少个以及是什么导致了停止。
+
+## 加载链表
+
+链表在内核中是一种如此常见的结构，以至于 q4 内置了对链表的认知。要将结构体列表加载到堆中，你必须告诉 q4 结构体中的哪个元素指向列表中的下一个结构体。你使用 `next` 关键字来完成此操作。
+
+举个例子，让我们看看进程表。在 HP-UX 发行版 11.11 之前，进程表是一个静态分配的条目表。从 HP-UX 11.11 开始，进程表成为一个链表。列表的头由符号 `proc_list` 指向，并且列表中的每个条目都有一个名为 `p_factp` 的成员，指向下一个条目。要加载当前所有进程表条目，我们输入
+
+```
+q4> load struct proc from proc_list next p_factp max 10000
+loaded 155 struct proc as a linked list (stopped by null pointer)
+```
+
+q4 再次告诉我们要加载了多少个结构体以及为什么停止——在本例中是因为遇到了空指针。当找到空指针或找到一个指回列表中第一个条目的指针时，q4 会检测到链表的末尾。
+
+注意 `max` 的值很大。在这种情况下，我们需要所有的 `proc` 结构体，因此我们选择一个足够大的 `max` 值，使其不会被超过。如果不指定 `max`，我们只会加载一个结构体。
+
+## 使用堆中的值
+
+除了使用全局符号外，我们还可以将当前堆中成员的名称指定为地址。由于很多情况下一个数据结构指向另一个，使用成员名称而不是输入地址是有意义的。例如，在 `proc` 结构体中有一个名为 `p_firstthread` 的成员，指向该进程的线程。一旦你在堆中拥有一个 `proc` 结构体，你可以通过输入以下内容来加载该进程的第一个线程：
+
+```
+q4> load struct kthread from p_firstthread
+```
+
+## 操作堆
+
+每次执行 `load` 命令时，都会创建一个新的堆。之前的堆会被推入堆栈，因此在任何时候你都可以访问你创建的所有堆。`history` 命令列出堆栈中的堆。例如，
+
+```
+q4> history
+HIST NAME    LAYOUT  COUNT  TYPE      COMMENTS
+  1 <none>    array   1      struct    mpinfo  stopped by max count
+  2 <none>    array   2      struct    mpinfo  stopped by max count
+  3 <none>    array   2      struct    mpinfo  stopped by max count
+  4 <none>    list   155     struct    proc    stopped by null pointer
+```
+
+编号最高的堆是当前堆。你可以使用 `recall` 命令调回之前的堆。`recall` 命令的参数是历史显示中 `HIST` 列中的堆编号。给定堆的副本会被推入堆栈并成为新的当前堆。根据前一个示例中的历史，我们可以调回第一个 `mpinfo` 堆：
+
+```
+q4> recall 1
+copied 1 item
+q4> history
+HIST NAME    LAYOUT  COUNT  TYPE      COMMENTS
+  1 <none>    array   1      struct    mpinfo  stopped by max count
+  2 <none>    array   2      struct    mpinfo  stopped by max count
+  3 <none>    array   2      struct    mpinfo  stopped by max count
+  4 <none>    list   155     struct    proc    stopped by null pointer
+  5 <none>    array   1      struct    mpinfo  copy of 1
+```
+
+堆也可以被赋予一个描述性的名称，该名称将显示在历史中。名称通过 `name` 命令应用于当前堆。语法就是 `name it <name>`。继续上面的示例，如果我们想将名称 `proc1` 分配给刚刚调回的堆，我们输入
+
+```
+q4> name it proc1
+so named
+q4> history
+HIST NAME    LAYOUT  COUNT  TYPE      COMMENTS
+  1 <none>    array   1      struct    mpinfo  stopped by max count
+  2 <none>    array   2      struct    mpinfo  stopped by max count
+  3 <none>    array   2      struct    mpinfo  stopped by max count
+  4 <none>    list   155     struct    proc    stopped by null pointer
+  5 proc1     array   1      struct    mpinfo  copy of 1
+```
+
+现在我们如果想调回该堆，就可以使用 proc1 代替堆编号。如果你有很多相同数据类型的堆，这会非常有用——因为很难区分它们。
+
+另一组方便的命令是 keep 和 discard。对于这两个命令，参数都是一个表达式。会创建一个新堆，其中仅包含表达式为真（keep）或表达式为假（discard）的那些结构体。举个例子，假设我们想查看 PID 为 1 的进程表条目。我们可以调回堆栈中所有进程的列表，然后只保留 p_pid 等于 1 的那个：
+
+```
+q4> recall 4
+copied 155 items
+q4> keep p_pid == 1
+kept 1 of 155 struct proc's, discarded 154
+q4> history
+HIST NAME   LAYOUT  COUNT  TYPE       COMMENTS
+1 <none>     array   1 struct mpinfo stopped by max count
+2 <none>     array   2 struct mpinfo stopped by max count
+3 <none>     array   2 struct mpinfo stopped by max count
+4 <none>     list   155 struct proc  stopped by null pointer
+5 proc1      array   1 struct mpinfo copy of 1
+6 <none>     list   155 struct proc  copy of 4
+7 <none>     mixed?  1 struct proc   subset of 6
+```
+
+现在我们拥有一个包含进程一的进程表的堆。
+
+## 示例：获取进程的 urea
+
+让我们看一个涵盖这些步骤的示例。在这个示例中，我们获取 PID 为 2003 的进程的 urea。由于结构体是相互关联的，实现这一目标有很多方法，其中一些比这个示例更快捷、更容易，但这里的想法是展示多种 q4 命令。以下是我们要经过的步骤：
+
+- 加载所有进程。
+- 保留进程 2003。
+- 通过 p_vas 指针获取该进程的 VAS 结构体。
+- 使用 VAS 区域列表，加载该进程的所有区域。
+- 保留类型为 PT_UREA 的区域。
+- 打印该区域的空间和偏移量。
+- 从该空间和偏移量加载一个 struct user。
+
+```
+q4> load struct proc from proc_list next p_factp max 10000
+loaded 150 struct proc as a linked list (stopped by null pointer)
+q4> keep p_pid == 2003
+kept 1 of 150 struct proc's, discarded 149
+```
+

@@ -592,6 +592,7 @@
 +   [像幽灵一样黑客：突破云端](docs/how-to-hack-like-a-ghost-breaching-the-cloud/README.md)
 +   [红帽Linux安装指南](docs/how-to-install-linux-for-red-hat-linux/README.md)
 +   [Linux 使用指南](docs/how-to-use-linux/README.md)
++   [HP-UX 11i 内部结构](docs/hp-ux-11i-internals-hewlett-packard-professional-books/README.md)
 +   [HP-UX 11i 系统管理手册与工具包](docs/hp-ux-11i-system-administration-handbook-and-toolkit/README.md)
 +   [HP-UX CSE：官方学习指南与桌面参考 (HP 专业系列)](docs/hp-ux-cse-official-study-guide-and-desk-reference-hp-profess/README.md)
 +   [Web开发者的HTML5指南](docs/html-5-guidelines-for-web-developmers/README.md)

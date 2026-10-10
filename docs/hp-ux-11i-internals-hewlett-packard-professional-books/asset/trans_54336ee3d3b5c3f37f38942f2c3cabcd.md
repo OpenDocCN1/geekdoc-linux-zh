@@ -1,0 +1,112 @@
+
+
+当我们继续探索内核时，我们会回到许多这些参数。我们旅程的下一站是 *kthread* 结构。
+
+## kthread 表
+
+最初，HP-UX 仅在进程级别管理作业，*proc* 表包含内核执行进程相关的所有信息。HP-UX 10.0 引入了 *kthread* 结构，作为实现完全线程化内核环境的第一步。尽管这只是迈向真正多线程环境的第一步，但它开启了将静态进程相关参数与动态线程相关值分离到不同结构中的过程。*proc* 表包含静态值以及指向所有线程平等共享的资源指针，而 *kthread* 结构则包含与其执行和运行时环境相关的动态信息。
+
+首先，让我们查看 *proc* 表条目及其 *kthreads* 是如何链接在一起的。在图 5-3 中，我们可以看到这种关系的映射。*proc* 表维护一个指向第一个线程和最后一个（最近创建的）*kthread* 的指针。此外，还会记录已创建线程的数量。请注意，此计数不会为原始线程增加，因此，一个仅包含单个原始线程的进程将显示 *p_created_threads = 0*，直到第一个兄弟线程生成。
+
+*kthread* 结构维护下一个/上一个链接，并且每个兄弟 *kthread* 都有一个指向其父 *proc* 结构条目的直接指针，以便快速访问。此外，每个 *kthread* 都通过 *pre gion* 结构拥有指向 uarea 结构的间接指针（这两者都将在本章稍后讨论）。
+
+![](img/08b7d2492fc1415a694a5fb16a8fdeb3_145_0.png)
+
+从 HP-UX 11.1 开始，kthread 表现在是一个动态链表。与 proc 表一样，不再需要的条目会被放入空闲列表（而不是将其空间返回给内核内存分配区域），当空闲列表为空时，按需分配新条目，直至达到可调整的限制。
+
+让我们查看 kthread 结构中感兴趣的字段，如清单 5.2 所示。
+
+### 清单 5.2 _q4> 字段 struct kthread_
+
+```c
+These forward and reverse links are used to place a thread into an appropriate run or sleep queue
+4   0   4   0 *   kt_link
+4   0   4   0 *   kt_rlink
+As we mentioned, each kthread has a direct pointer to its proc structure and its uarea
+8   0   4   0 *   kt_procp
+52  0   4   0 *   kt_upreg
+SMP systems make use of this spinlock to synchronize access to this structure
+12  0   4   0 *   kt_lock
+Next we see forward and previous linkage pointers connecting all the active kthreads
+16  0   4   0 *   kt_factp
+20  0   4   0 *   kt_pactp
+All the sibling threads of a single process are linked through these two pointers.
+24  0   4   0 *   kt_nexttp
+28  0   4   0 *   kt_prevp
+All kthread structures are linked to a global kthread list
+64  0   4   0 *   kt_global_kthread
+Thread status and flag values for the thread (see enum kthread_flag in kthread_private.h)
+32  0   4   0 enum4   kt_flag
+36  0   4   0 enum4   kt_cntxt_flags
+44  0   4   0 enum4   kt_stat
+180 0   4   0 enum4   kt_flag2
+184 0   4   0 enum4   kt_flag_tl
+Waiting threads maintain a sleep wait channel pointer and a forward and reverse pointer into a wait list (used by I/O drivers)
+48  0   4   0 *   kt_wchan
+236 0   4   0 *   kt_wait_list
+240 0   4   0 *   kt_rwait_list
+In addition, a reference count, the most recent user mode priority, the current internal priority, a thread id number, the current scheduling policy, number of ticks left before a voluntary timeslice will be requested, and the mysterious kt_cpu weighting factor (covered later) are maintained
+```
+
+```c
+72  0   4   0 int       kt_refcnt
+76  0   4   0 int       kt_deactime
+80  0   4   0 int       kt_sleeptime
+84  0   2   0 u_short   kt_usrpri
+86  0   2   0 u_short   kt_pri
+124 0   4   0 int       kt_tid
+196 0   4   0 u_int     kt_schedpolicy
+200 0   4   0 int       kt_ticksleft
+88  0   1   0 u_char    kt_cpu
+```
+
+还有用于 MP 负载平衡、信号处理和 IPC 服务的其他参数。
+
+我们游览的下一站是 vax 结构。
+
+## 进程的逻辑视图
+
+为了促进可重定位代码的概念，编译后的程序针对逻辑内存映像图进行链接。对于 32 位窄模式应用程序，逻辑大小为 $2^{32}$，即 4 GB；对于 64 位宽模式应用程序，理论大小限制在 $2^{64}$，即 16 EB。1 在这两种情况下，逻辑图都被划分为四个等大的象限。这不是任意配置。它由底层 HP PA-RISC 硬件平台及其虚拟内存系统的设计决定。
+
+我们在下一章讨论虚拟内存到物理内存的映射，但首先我们必须查看控制程序的各个内存对象在逻辑空间中的放置规则选项。图 5-4 说明了窄模式和宽模式程序映像的这一概念。
+
+![](img/08b7d2492fc1415a694a5fb16a8fdeb3_148_0.png)
+
+### 图 5-4 将程序映射到逻辑空间
+
+单个程序对象模块的映射由臭名昭著的链接加载器完成。该程序通常随编译器一起编译，必须了解需要哪些模块以及在哪里找到它们。通常，可运行映像的构建由 make 实用程序和相应的 Makefile 控制。
+
+在对可执行映像进行最终链接之前，编译器构建可重定位对象模块和一个骨架符号表。链接加载器必须确保链接后没有指向未链接到映像中的过程（或将在运行时通过共享库提供）的未定义外部引用。
+
+链接加载器必须理解其正在构建可执行映像的目标系统架构。每个硬件平台处理虚拟内存段分配的方式都是独一无二的。实际上，程序的对象（代码和数据块）根据其功能、类型以及所需的级别安全进行分离。
+
+大多数现代编译器将程序文本（指令代码）划分为一个对象，将程序数据划分为一个或多个额外对象。HP PA-RISC 系统根据页面框架映射到的象限，遵循访问权限和权限设置的某些默认值。
+
+窄模式可执行文件和宽模式可执行文件以不同方式映射对象。这一变化是由于希望允许在同一机器上运行的 *narrow* 和 *wide* 进程共享数据对象的需求所必需的。为了实现这一目标，有必要为宽模式进程分配 **quadrant Q1** 用于共享对象（毕竟，窄模式进程的整个逻辑空间轻松容纳在宽模式进程的 **Q1** 的前 .01% 中）。
+
+对于窄模式应用程序，默认设置如下：
+
+- **Q1** 为共享只读访问，
+- **Q2** 为私有读写，
+- **Q3** 为共享读写，以及
+- **Q4** 为共享读写。
+
+对于宽模式应用程序，
+
+- **Q1** 为共享读写访问，
+- **Q2** 为共享只读，
+- **Q3** 为私有读写，以及
+- **Q4** 为共享读写。
+
+如前所述，编译器必须意识到这些规则，但就像所有规则一样，可能存在例外！
+
+你可能已经注意到，由于隐含的限制控制哪些程序对象可以放置在哪些象限中，程序内存对象的大小存在系统级限制。一般来说，单个对象不能大于其映射到的象限，并且在许多情况下，它必须与其他对象共享空间。在 64 位系统上，考虑到其当前硬件实现的 4 TB 象限大小，这目前并不是一个大问题，但对于具有 1 GB 象限大小的 32 位应用程序而言，这已成为某些应用程序的严重限制因素。
+
+进程的私有数据象限的大小可能是一个问题，在某些情况下，系统中只有 1 3/4 个象限可供共享对象使用，这成为我们要运行的应用程序的限制因素（请记住，在窄内存映射的 Q4 中，最后 256 MB 保留给内存映射 I/O）。有一些行内技巧可以实施以解决某些限制。让我们变些魔术！
+
+### SHARE_MAGIC, EXEC_MAGIC 和 SHMEM_MAGIC
+
+我们要考虑的第一个编译器指令是 SHARE_MAGIC, EXEC_MAGIC。第一个是 HP-UX 编译器的默认值，第二个允许程序增加其可用的私有内存空间量。图 5-5 给出了这些选项逻辑映射的视觉对比。
+
+![](img/08b7d2492fc1415a694a5fb16a8fdeb3_149_0.png)
+

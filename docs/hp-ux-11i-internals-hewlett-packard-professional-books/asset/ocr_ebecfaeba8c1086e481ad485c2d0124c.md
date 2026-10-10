@@ -1,0 +1,15 @@
+SIG\_HOLD. No action is taken—the bit stays set, the siginfo stays, but the signal is not acted on.
+
+Once issig() has found a signal that needs to be handled, it has one more step to do before returning. If the signal was directed at the process, then any siginfo that goes with it is also attached to the process. issig() is working at the thread level, so when it returns a signal number, it is indicating that the current thread is to receive the signal. Just before it returns, issig() moves the siginfo data from the process to the thread so that the routines that actually handle the signal will be able to find it.
+
+The second step in signal recognition is handled by the routine psig(). psig() looks at the value it kt\_cursig to find the current signal number, then uses that to look up the signal action in the p\_signal array in the proc structure. If the action is SIG\_DFL, psig() takes the default action—for those signals whose default actions weren’t handled by issig(). These include SIGILL, SIGIOT, SIGBUS, SIGQUIT, SIGTRAP, SIGSEGV, SIGFPE, SIGSTKFLT, SIGSYS, SIGXCPU, SIGXFSZ, and SIGFAULT. In all these cases, a core file is generated for the process and the process is terminated.
+
+Ignored and held signals don’t make it to psig(), and those with default actions have now been handled either by issig() or psig(). What we’re left with is a signal that has a user handler installed. psig() then calls the function sendsig() to prepare for calling that function.
+
+psig() is also the route into the signal handler for synchronous signals such as SIGSEGV or SIGILL. These signals are caused by a thread trying to do an invalid operation. The invalid operation gets caught by the trap handler, which then calls psig() directly. In this way, these signals get handled immediately, not queued up to be found later. This detection happens in the trap() function in the kernel—but this isn’t the same as the detection of asynchronous signals in trap() that we mentioned above. In other words, trap() can generate a signal in two ways: first, for a trap of any kind, trap() checks to see if an asynchronous signal has been queued and needs to be handled; second, trap() checks to see if the exception that caused it to be called should immediately generate a synchronous signal.
+
+# Signal Handler Launch
+
+The function in the kernel that arranges for the signal handler to be called is sendsig(). Its job is to set up the stack frames for the call to the user function. It also has to make sure that when the routine finishes, it returns to the right place to clean up the signal data structures. It calls a variety of utility routines to do the work it has to do.
+
+The first is sendsig\_alloc\_sigcontext(), which allocates space on the stack to hold the sigcontext structure. This space can be either on the user’s stack or on a separate signal stack depending on the flags for this signal. Data is copied into this sigcontext structure by sendsig\_fillin\_sim() for sendsig\_copyoutsavesate() and sendsig\_fillin\_xsi().
