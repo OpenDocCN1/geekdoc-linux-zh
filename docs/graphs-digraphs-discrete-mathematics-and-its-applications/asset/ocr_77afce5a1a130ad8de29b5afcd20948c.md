@@ -1,0 +1,15 @@
+# ## 8.3 Menger Theorems for Digraphs
+
+Since Menger's theorem (Theorem 4.10) and its edge analogue (Theorem 4.17) both deal with sets that separate two vertices in a graph, it is perhaps not surprising that these two theorems are closely related to the Max-Flow Min-Cut Theorem which deals with deleting the arcs of a cut, thereby separating the source and sink of a network
+
+Recall that Menger's theorem states that if $u$ and $v$ are nonadjacent vertices of a graph $G$, then the maximum number of internally disjoint $u-v$ paths in $G$ equals the minimum number of vertices that separate $u$ and $v$. That is, Menger's theorem is a “max-min” theorem. As it turns out, there are other forms of Menger's theorem. We saw one of these in Theorem 4.17, which is the edge form of Menger's theorem. The vertex and edge forms of Menger's theorem have natural analogues for digraphs. All four of these results can be proved, either directly or indirectly, using the Max-Flow Min-Cut Theorem. In each case, the object is to construct an appropriate network from the given graph or digraph. For example, for two nonadjacent vertices $u$ and $v$ in a given graph $G$, Algorithm 8.8 can be used to determine the minimum number of vertices that separate $u$ and $v$ as well as such a set of vertices.
+
+While we have defined separating sets of vertices and separating sets of edges in a graph, we need analogous terminology for digraphs. Let $D$ be a digraph and let $u$ and $v$ be two nonadjacent vertices of $D$. A set $S \subseteq V(D)-\{u, v\}$ is said to be a $u-v$ **separating set of vertices** if every $u-v$ path in $P$ contains at least one vertex of $S$. A set $S$ of arcs in $D$ is a $u-v$ **separating set of arcs** if every $u-v$ path in $P$ contains at least one arc of $S$. We now present the arc form of Menger's theorem.
+
+> **The Arc Form of Menger's Theorem**
+
+**Theorem 8.10 (The Arc Form of Menger's Theorem)** *For distinct vertices* $u$ *and* $v$ *in a digraph* $D$, *the maximum number of pairwise arc-disjoint* $u-v$ *paths in* $D$ *equals the minimum number of arcs in a* $u-v$ *separating set of arcs.*
+
+**Proof.** *Suppose that the maximum number of* $u-v$ *paths in a collection of pairwise arc-disjoint* $u-v$ *paths in* $D$ *is* $k$ *and the minimum number of arcs in a* $u-v$ *separating set* $S$ *is* $\ell$. *Since each of these* $u-v$ *paths contains at least one arc of* $S$ *and no arc in* $S$ *belongs to more than one such* $u-v$ *path, it follows that* $k \le \ell$. *It remains to show that* $\ell \le k$.*
+
+We now construct a network $N$ with underlying digraph $D$, source $u$ and sink $v$ by defining a capacity function $c$ on $E(D)$ such that $c(a)=1$ for each arc $a$ of $D$. By the Max-Flow Min-Cut Theorem (Theorem 8.6), the value of a maximum flow in $N$ equals the capacity of a minimum cut. Let $f$ be a maximum flow in $N$ and $K$ a minimum cut. Thus, cap$(K)=$ val($f$). We next

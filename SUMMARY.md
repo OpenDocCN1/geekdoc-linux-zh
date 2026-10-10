@@ -506,6 +506,7 @@
 +   [Vim 秘籍](docs/gourmet-vim-cookbook/README.md)
 +   [操作系统研究生入门指南 (CS 6200)：期末考试复习笔记](docs/graduate-introduction-to-operating-systems-cs-6200-final-exa/README.md)
 +   [操作系统研究生入门 (CS 6200)：期中考试复习笔记](docs/graduate-introduction-to-operating-systems-cs-6200-midterm-e/README.md)
++   [图与有向图（离散数学及其应用）](docs/graphs-digraphs-discrete-mathematics-and-its-applications/README.md)
 +   [灰帽黑客：道德黑客手册，第六版](docs/gray-hat-hacking-the-ethical-hackers-handbook-sixth-edition/README.md)
 +   [Grok GIMP：数字图像处理高级技巧](docs/grokking-the-gimp-advanced-techniques-for-working-with-digit/README.md)
 +   [Gtk+ / Gnome 应用开发指南](docs/gtk-gnome-application-development/README.md)

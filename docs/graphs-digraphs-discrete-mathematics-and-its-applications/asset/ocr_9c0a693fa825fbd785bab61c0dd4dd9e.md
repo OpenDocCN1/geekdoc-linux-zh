@@ -1,0 +1,15 @@
+Every digraph also has an automorphism group. An **automorphism** of a digraph $D$ is an isomorphism from $D$ to itself; that is, an automorphism of $D$ is a permutation $\alpha$ on $V(D)$ such that $(u, v)$ is an arc of $D$ if and only if $(\alpha u, \alpha v)$ is an arc of $D$. The set of all automorphisms under composition forms a group, called the **automorphism group** of $D$, which, as expected, is denoted by Aut($D$). While Aut($G$) $\cong$ $\mathbb{Z}_3$ for the graph $G$ of Figure 9.5, there is an even simpler digraph $D$ having Aut($D$) $\cong$ $\mathbb{Z}_3$. In particular, the digraphs $D_1$ and $D_2$ of Figure 9.9 have cyclic automorphism groups, namely Aut($D_1$) $\cong$ $\mathbb{Z}_3$ and Aut($D_2$) $\cong$ $\mathbb{Z}_5$.
+
+![](bbox=[0.08, 0.36, 0.92, 0.58])
+
+Figure 9.9: Digraphs with cyclic automorphism groups
+
+# ## 9.2 Cayley Color Graphs
+
+We have seen that with every graph and every digraph, there is a finite group that can be associated with it. We now consider the reverse question of associating a digraph and a graph with a given finite group.
+
+A nontrivial group $\Gamma$ is said to be **generated** by nonidentity elements $h_1, h_2, \ldots, h_k$ (and these elements are called **generators**) of $\Gamma$ if every element of $\Gamma$ can be expressed as a (finite) product of generators. Every nontrivial finite group has a finite **generating set** (often several such sets) since the set of all nonidentity elements of the group is always a generating set for $\Gamma$.
+
+Let $\Gamma$ be a given nontrivial finite group having the generating set $\Delta = \{h_1, h_2, \ldots, h_k\}$. We associate a digraph with $\Gamma$ and $\Delta$, commonly called the **Cayley color graph** of $\Gamma$ **with respect** to $\Delta$ and denoted by $D_\Delta(\Gamma)$. The vertex set of $D_\Delta(\Gamma)$ is the set of group elements of $\Gamma$ and so the order of $D_\Delta(\Gamma)$ is $|\Gamma|$. Each generator $h_i$ is now regarded as a color. For $g_1, g_2 \in \Gamma$, there exists an arc $(g_1, g_2)$ colored $h_i$ in $D_\Delta(\Gamma)$ if $g_2 = g_1 h_i$. If $h_i$ is a group element of order 2 (and is therefore self-inverse) and $g_2 = g_1 h_i$, then necessarily $g_1 = g_2 h_i$. When a Cayley color graph $D_\Delta(\Gamma)$ contains each of the arcs $(g_1, g_2)$ and $(g_2, g_1)$, both colored $h_i$, then, for simplicity, it is customary to represent this symmetric pair of arcs by the single edge $g_1 g_2$ colored $h_i$. As we have now seen, a Cayley color graph is actually a digraph, each arc of which is assigned a color, where a color is a generator in $\Delta$. This digraph is named for the mathematician Arthur Cayley because of a famous theorem of his from group theory: *Every finite group is isomorphic to a group of permutations*.
+
+Before proceeding further, let’s illustrate the concepts just introduced. Let $\Gamma$ denote the symmetric group $S_3$ of all permutations on the set $\{1, 2, 3\}$, and

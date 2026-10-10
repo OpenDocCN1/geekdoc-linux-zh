@@ -1,0 +1,13 @@
+Although there is only one transitive tournament of each order $n$, in a certain sense, which we now describe, every tournament has the structure of a transitive tournament. Let $T$ be a tournament. We define a relation on $V(T)$ by $u$ is related to $v$ if there is both a $u-v$ path and a $v-u$ path in $T$. This relation is an equivalence relation and, as such, this relation partitions $V(T)$ into equivalence classes $V_1, V_2, \ldots, V_k$ ($k \geq 1$). Let $S_i = T[V_i]$ for $i = 1, 2, \ldots, k$. Then each subdigraph $S_i$ is a strong tournament and, indeed, is maximal with respect to the property of being strong. The subdigraphs $S_1, S_2, \ldots, S_k$ are called the **strong components** of $T$. So the vertex sets of the strong components of $T$ produce a partition of $V(T)$.
+
+Let $T$ be a tournament with strong components $S_1, S_2, \ldots, S_k$, and let $\widetilde{T}$ denote that digraph whose vertices $w_1, w_2, \ldots, w_k$ are in one-to-one correspondence with these strong components (where $w_i$ corresponds to $S_i$, $i = 1, 2, \ldots, k$) such that $(u_i, u_j)$ is an arc of $\widetilde{T}$, $i \neq j$, if and only if some vertex of $S_i$ is adjacent to some vertex of $S_j$. If $(u_i, u_j)$ is an arc of $\widetilde{T}$, then because $S_i$ and $S_j$ are distinct strong components of $\widetilde{T}$, it follows that every vertex of $S_i$ is adjacent to *every* vertex of $S_j$. Hence, $\widetilde{T}$ is obtained by identifying the vertices of $S_i$ for $i = 1, 2, \ldots, k$. A tournament $T$ and its associated digraph $\widetilde{T}$ are shown in Figure 7.13.
+
+![](bbox=[0.18, 0.54, 0.72, 0.72])
+
+Figure 7.13: A tournament $T$ and its associated transitive tournament $\widetilde{T}$
+
+Observe that for the tournament $T$ of Figure 7.13, $\widetilde{T}$ is itself a tournament, indeed a transitive tournament. That this always occurs follows from Theorem 7.16. (See Exercise 37.)
+
+**Theorem 7.16** If $T$ is a tournament with exactly $k$ strong components, then $\widetilde{T}$ is the transitive tournament of order $k$.
+
+Since for every tournament $T$, the tournament $\widetilde{T}$ is transitive, it follows that if $T$ is a tournament that is not strong, then $V(T)$ can be partitioned as $\{V_1, V_2, \ldots, V_k\}$ ($k \geq 2$) such that $T[V_i]$ is a strong tournament for each $i$, and if $v_i \in V_i$ and $v_j \in V_j$, where $i < j$, then $(v_i, v_j) \in E(T)$. This decomposition is often useful when studying the properties of tournaments that are not strong.
