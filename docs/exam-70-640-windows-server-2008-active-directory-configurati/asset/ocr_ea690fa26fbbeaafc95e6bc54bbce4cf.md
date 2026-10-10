@@ -1,0 +1,9 @@
+After completing this lesson, you will understand the necessary prerequisites for installing the Active Directory Domain Services (AD DS) role on a Windows Server 2008 computer. You will also learn the procedures involved in creating a new Active Directory forest, domain tree, and domain. You will be able to discuss an exciting new feature of AD DS in Windows Server 2008, the Read-Only Domain Controller (RODC). Finally, you will be able to discuss the requirements for modifying the Active Directory schema as well as installing and configuring the Active Directory Lightweight Directory Services (AD LDS), formerly known as ADAM in previous versions of the Windows operating system.
+
+# ## Introducing the Server Manager
+
+Before you begin working in Windows Server 2008, you need to be familiar with the central administrative interface. When you boot up a Windows Server 2008 server, you will see a window similar to that shown in Figure 2-1.
+
+![](bbox=[0.04, 0.38, 0.89, 0.74])
+
+Windows Server 2008 provides a new unified tool for administering all aspects of a particular server. When a Windows Server 2008 server boots for the first time, you will see the Initial Configuration Tasks window that allows you to perform initial configuration tasks, such as setting the computer name and configuring the Windows Firewall. You can add roles to a 2008 server from the Initial Configuration Tasks (ICT) interface or from the Server Manager console in the Administrative Tools folder. From here, you can add and remove different server roles (such as the DNS server role or the Active Directory Domain Services role), as well as perform system diagnostics; configure system services, such as the Windows Firewall; and drill down into specific administrative tools, such as the DNS Management Console or Active Directory Users and Computers.

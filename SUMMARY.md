@@ -404,6 +404,7 @@
 +   [Linux 日常使用](docs/everyday-linux/README.md)
 +   [每个人心中都潜着一个商业梦想](docs/everyone-has-a-business-inside-them/README.md)
 +   [关于 CURL 的一切](docs/evrth-curl/README.md)
++   [70-640 考试：Windows Server 2008 Active Directory 配置，含实验手册与 MOAC 在线实验室套装](docs/exam-70-640-windows-server-2008-active-directory-configurati/README.md)
 +   [CompTIA® Linux+ XK0-005 考试冲刺指南](docs/exam-cram-comptia-linux-xk0-005-exam-cram/README.md)
 +   [Exam Ref 70-687 配置 Windows 8.1 (MCSA) 考试参考](docs/exam-ref-70-687-configuring-windows-81-mcsa/README.md)
 +   [Excel 数据分析：数据、图表和透视表分析的可视化蓝图](docs/excel-data-analysis-your-visual-blueprint-to-analyzing-data-/README.md)

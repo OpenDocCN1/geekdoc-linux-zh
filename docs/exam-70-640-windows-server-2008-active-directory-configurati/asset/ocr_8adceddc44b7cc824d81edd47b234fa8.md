@@ -1,0 +1,15 @@
+# WileyPLUS
+
+Broad developments in education over the past decade have influenced the instructional approach taken in the Microsoft Official Academic Course programs. The way that students learn, especially about new technologies, has changed dramatically in the Internet era. Electronic learning materials and Internet-based instruction is now as much a part of classroom instruction as printed textbooks. WileyPLUS provides the technology to create an environment where students reach their full potential and experience academic success that will last them a lifetime!
+
+WileyPLUS is a powerful and highly-integrated suite of teaching and learning resources designed to bridge the gap between what happens in the classroom and what happens at home and on the job. WileyPLUS provides instructors with the resources to teach their students new technologies and guide them to reach their goals of getting ahead in the job market by having the skills to become certified and advance in the workforce. For students, WileyPLUS provides the tools for study and practice that are available to them 24/7, wherever and whenever they want to study. WileyPLUS includes a complete online version of the student textbook, PowerPoint presentations, homework and practice assignments and quizzes, image galleries, test bank questions, gradebook, and all the instructor resources in one easy-to-use Web site.
+
+Organized around the everyday activities you and your students perform in the class, WileyPLUS helps you:
+
++   *   Prepare & Present outstanding class presentations using relevant PowerPoint slides and other WileyPLUS materials—and you can easily upload and add your own.
++   *   Create Assignments by choosing from questions organized by lesson, level of difficulty, and source—and add your own questions. Students' homework and quizzes are automatically graded, and the results are recorded in your gradebook.
++   *   Offer context-sensitive help to students, 24/7. When you assign homework or quizzes, you decide if and when students get access to hints, solutions, or answers where appropriate—or they can be linked to relevant sections of their complete, online text for additional help whenever—and wherever they need it most.
++   *   Track Student Progress: Analyze students' results and assess their level of understanding on an individual and class level using the WileyPLUS gradebook, or export data to your own personal gradebook.
++   *   Administer Your Course: WileyPLUS can easily be integrated with another course management system, gradebook, or other resources you are using in your class, providing you with the flexibility to build your course, your way.
+
+Please view our online demo at www.wiley.com/college/wileyplus. Here you will find additional information about the features and benefits of WileyPLUS, how to request a "test drive" of WileyPLUS for this title, and how to adopt it for class use.

@@ -1,0 +1,53 @@
+
+## 最高的可用林功能级别
+
+当前可用的最高林功能级别为 **Windows Server 2008**。在 Active Directory 的当前版本中，**Windows Server 2008** 功能级别并未解锁 Active Directory 中的任何新功能。其主要目的是确保一旦将林功能级别提升至 **Windows Server 2008**，之后添加到林中的任何新子域都将自动以 **Windows Server 2008** 域功能级别创建。这确保了所有新的子域能够立即访问 **Windows Server 2008** 域功能级别的高级功能，同时也防止任何低版本域控制器被添加到林中。
+
+请使用以下指南来提升林功能级别：
+
+- 若要提升林的功能级别，必须作为企业管理员组的成员登录。
+- 仅通过连接到持有模式主控角色的域控制器才能提升林的功能级别。该服务器是所有模式变更的权威机构。
+- 林中的所有域控制器都必须运行由目标林功能级别支持的操作系统。
+- 将林功能级别提升至最高级别，即 Windows Server 2008，要求林中的所有域都必须处于 Windows Server 2008 功能级别。
+- 在提升林功能级别期间，所有域将自动提升至支持新的林功能级别的状态。
+- 提升林功能级别是不可逆的操作。
+
+**表 1-3** 提供了林功能级别及其包含功能的摘要。
+
+![](img/a8ee53dbf1310726255b6fbb9f296fb2_56_0.png)
+
+有关模式主控角色的更多信息，请参阅第 4 课。
+
+### 表 1-3 林功能级别摘要
+
+| **林功能级别** | **支持的操作系统** | **Windows Server 2003 功能** |
+| :--- | :--- | :--- |
+| Windows 2000 | Windows 2000<br>Windows Server 2003<br>Windows Server 2008 | 从介质安装<br>通用组缓存<br>应用程序目录分区<br>增强的用户界面 |
+| Windows Server 2003 | Windows Server 2003<br>Windows Server 2008 | Windows 2000 的所有功能以及以下功能：<br>链接值复制<br>改进的 ISTG 功能<br>用户对象可以转换为 inetOrgPerson 对象<br>模式和类的模式修改<br>可以创建称为 dynamicObjects 的动态辅助类对象的实例<br>域重命名<br>跨林信任<br>所有新域将以 Windows Server 2003 域功能级别创建 |
+| Windows Server 2008 | Windows Server 2008 | 所有新域将以 Windows Server 2008 域功能级别创建 |
+
+## 理解 Active Directory 信任模型
+
+Active Directory 使用*信任关系*来允许在多个域和/或林之间进行访问，无论是在单个林内还是跨越多个企业网络。顾名思义，信任关系允许特定域的管理员授予其他域的用户访问其域资源的权限。
+
+要查看信任关系的工作状态，请考虑以下示例。一家名为 Lucerne Publishing 的图书出版商与儿童玩具制造商 Wingtip Toys 达成了商业协议，为预期的合并做准备。为了让 Wingtip Toys 的研发部门能够访问 Lucerne Publishing 文件服务器上的设计文件，Lucerne Publishing 域的管理员需要与 Wingtip Toys 的 Active Directory 建立信任关系。
+
+为了简化 Active Directory 管理过程，某些信任关系会在 Active Directory 安装过程中自动创建。从 Active Directory 林中安装的第一个域开始，每个新域都与林中的每个其他域具有双向传递信任。双向信任意味着 A 域的用户可以访问 B 域的资源，同时 B 域的用户也可以访问 A 域的资源。传递信任关系可以追溯到中学数学时代——它意味着如果 A 域信任 B 域，且 B 域信任 C 域，则 A 域自动信任 C 域。Active Directory 林中的信任关系结构如下：
+
+- 当创建子域时，它会自动与其父域建立双向传递信任。因此，sales.tokyo.lucernepublishers.com 子域与其 tokyo.lucernepublishers.com 父域具有双向传递信任。并且，由于信任的传递性（tokyo.lucernepublishers.com 与其 lucernepublishers.com 父域具有双向传递信任），sales“孙子”域中的用户可以访问 lucernepublishers.com“祖父母”域中的资源，反之亦然。
+- 当创建新的域树时，新树中的根域会自动与林中所有其他域树根域建立双向传递信任。因此，如果 graphicdesigninstitute.com 林包含一个名为 finesartschool.net 的独立域树，则会在根域之间配置双向传递信任。由于信任的传递性质，graphicdesigninstitute.com 树中的任何子域都将能够访问 finesartschool.net 树中子域的资源，反之亦然。
+
+图 1–3 说明了 Active Directory 林中域之间信任关系的传递性。请注意，每个子域都链接到其父域，一直延伸到林根域。如果 sales.lucerne publishing.com 中的用户需要访问 us.marketing.lucerne publishing.com 中的资源，该请求将从 sales 子域发送到 lucernepublishing 根域。然后，它被发送到 marketing 子域，并最终到达 us.marketing.lucerne publishing.com 域中的目的地。此过程称为树遍历。
+
+![](img/a8ee53dbf1310726255b6fbb9f296fb2_57_0.png)
+
+如果林中的域由慢速 WAN 链路分隔，并且这种树遍历过程花费极长的时间才能允许跨域用户身份验证，您可以沿着常用的“信任路径”配置快捷信任。因此，如果 tokyo.lucerne publishing.com 中的用户需要频繁访问 marketing.us.talspins toys.com 中的资源，您可以创建快捷信任来“短路”树遍历过程，并在两个域之间形成直接信任路径，如图 1-4 所示。
+
+### 图 1-4 快捷信任
+
+![](img/a8ee53dbf1310726255b6fbb9f296fb2_58_0.png)
+
+这些快捷信任是非传递的，这意味着它们仅适用于在快捷信任中明确配置的两个域。例如，如果来自 us.sales.wingtip toys.com 的用户需要访问 us.marketing.wingtip toys.com 中的资源，该用户无法利用 sales 和 us.marketing 子域之间的快捷信任。他们将遵循图 1-3 中所示的默认树遍历信任路径。快捷信任也是*单向*的，这意味着从 sales 到 us.marketing 创建快捷信任将允许 sales 中的用户对 us.marketing 进行身份验证。然而，us.marketing 中的用户*无法*使用快捷信任对 sales 进行身份验证，除非在相反方向创建第二个快捷信任。
+
+另一种可以创建的信任类型是与另一个林中的 Windows NT 域或 Windows 2000 域建立的*外部信任*。与快捷信任类似，外部信任是单向、非传递的信任。如果您域中的用户可以访问远程域中的资源，那么远程域中的用户*无法*访问您域中的资源，除非您在相反方向创建第二个信任关系。同样，如果您的组织与供应商 A 建立信任，而供应商 A 随后与供应商 B 建立信任关系，您的用户将*无法*访问供应商 B 网络上的资源。您需要创建单独的直接连接您的 Active Directory 与供应商 B 的 Active Directory 的信任。此外，在与供应商 B 的远程 Windows 2000 Active Directory 的情况下，外部信任是非传递的，您只能访问已配置信任的特定域。如果您配置与 tokyo.lucerne publishing.com 域的信任，您将无法访问 lucernepublishing.com 域中的资源，除非直接配置与 lucernepublishing.com 的单独信任。
+

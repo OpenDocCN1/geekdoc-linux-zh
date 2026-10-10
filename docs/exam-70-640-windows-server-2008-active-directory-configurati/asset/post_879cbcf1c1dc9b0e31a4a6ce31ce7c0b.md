@@ -1,0 +1,214 @@
+
+## T
+
+- **time-to-live** The length of time a record is valid, after which it needs to be re-registered.
+- **tombstone** What is left of an object that has been deleted. Deleted objects are not completely removed from the Active Directory database; rather, they are marked for deletion. Tombstone objects have a lifetime of 180 days, by default.
+- **total cost of ownership (TCO)** A value used to assess the cost of implementing corporate software or hardware, both in terms of direct and indirect costs. TCO can be calculated based on how much ownership costs over the lifetime of a business resource.
+- **transaction buffer** Server RAM that stores data before it is actually written to the server's hard drive so that all data in the transaction can be written to disk at the same time.
+- **transfer** Move a role to a new domain controller.
+- **transitive** Default characteristic of site links that use the same transport protocol. A domain controller in any site can connect to a domain controller in any other site by navigating a chain of site links.
+- **trust relationship** Enables administrators from a particular domain to grant access to their domain's resources to users in other domains.
+- **Trusted Key Certification Authorities** A Public Key Certificates setting that determines whether users can choose to trust root CAs and the criteria that must be met by the CA to fulfill user requests.
+- **two-factor authentication** An authentication method that requires a smart card and a PIN to provide more secure access to company resources.
+
+## U
+
+- **unattended installation** Running dcpromo from the command line using a specially formatted text file to specify the necessary installation options.
+- **universal group** Memberships stored in the global catalog. A universal group can contain users, groups, and computers from any domain in the forest. In addition, universal groups, through their membership in domain local groups, can receive permissions for any resource anywhere in the forest.
+- **universal group membership caching** This feature stores universal group memberships on a local domain controller that can be used for logon to the domain, eliminating the need for frequent access to a global catalog server.
+- **Unrestricted Strategy** Strategy for enforcing restrictions that allows all applications to run, except those that are specifically excluded.
+- **update sequence number (USN)** A local value, maintained by each domain controller, that tracks the changes that are made at each DC, thus tracking which updates should be replicated to other domain controllers.
+- **urgent replication** The change will be placed at the "beginning of the line" and it will be applied before any other changes that are waiting to be replicated.
+- **User Configuration** A Group Policy setting that enables administrators to customize the configuration of a user's desktop, environment, and security settings. Enforced policies are based on the user rather than on the computer used.
+- **User Principal Name (UPN)** A naming format that simplifies access to multiple services such as Active Directory and email. A UPN follows a naming convention that can reflect the forest root domain or another alias that follows the format of username@domain-name.
+- **User Rights Assignment** A subcategory of the Local Policies setting area of a Group Policy Object that includes settings for items that pertain to rights needed by users to perform system-related tasks.
+
+## V
+
+- **version ID** A value associated with each Active Directory attribute that keeps track of how many times that attribute has been changed.
+- **VSS full backup** A backup type that updates each file's backup history and clears the Application Log files.
+
+## W
+
+- **wbadmin** The command-line component of the Windows Server Backup snap-in.
+- **Web enrollment** Feature that enables users connected to a Windows Server 2008 CA through a Web browser to request certificates and obtain an up-to-date Certificate Revocation List.
+- **weight** A relative weighting for SRV records with the same priority. For example, consider three SRV records with the same priority with relative weights of 60, 20, and 20. Because 60 + 20 + 20 = 100, the record with the weight of 60 will be used 60/100, or 60 percent, of the time, whereas each of the other two records will be used 20/100, or 20 percent, of the time.
+- **well-connected** The network infrastructure between sites defined by fast and reliable IP subnets.
+- **Windows Deployment Services (WDS)** A managed setting that can be defined or changed through Group Policies. This setting assists in rebuilding or deploying workstations quickly and efficiently in an enterprise environment.
+- **Windows Internet Naming Service (WINS)** A name resolution mechanism for NetBIOS names.
+- **Windows Management Instrumentation (WMI)** A component of the Microsoft Windows operating system that provides management information and control in an enterprise environment. It allows administrators to create queries based on hardware, software, operating systems, and services.
+- **Windows PowerShell** A command-line and task-based scripting technology introduced in Windows Server 2008.
+- **Windows Script Host (WSH)** Allows scripts to be run from a Windows desktop or a command prompt. The runtime programs provided to do this are WScript.exe and CScript.exe, respectively.
+- **Windows Server Backup** A feature used to back up Active Directory. It supports the use of CD and DVD drives as backup destinations, but does not support magnetic tapes as backup media.
+- **Windows Settings** A subnode within the Computer Configuration and User Configuration nodes. The Windows Settings folder located under the Computer Configuration node in the Group Policy Management Editor contains security settings and scripts that apply to all users who log on to Active Directory from that specific computer. The Windows Settings folder located under the User Configuration node contains settings related to folder redirection, security settings, and scripts that are applied to associated users.
+- **Windows token-based agent** An agent installed on a Web server that hosts traditional Windows NT token-based applications so that administrators can convert these tokens from AD FS tokens into Windows NT tokens.
+- **WMI Filtering** A filtering method that uses filters written in the WMI Query Language (WQL) to control GPO application.
+- **WMI Query Language (WQL)** A language that is similar to structured query language (SQL).
+
+## Z
+
+- **`.zap` file** A non-Windows Installer package that can be created in a text editor.
+- **zone transfers** The process of replicating DNS information from one DNS server to another.
+
+# Index
+
+- A record, 33
+- A resource record, 252
+- Access Control Lists (ACLs), 204
+- Access control lists (ACLs), 8
+- Access token, 103–104
+- Account Lockout Policy, 156, 158–159
+- Account logon event, 165
+- Account management event, 165
+- Account operators, 106
+- Account organization, 263
+- Account Policies
+  - Account Lockout Policies, 158–159
+    - configuring, 157
+    - domain-wide, 158–159
+    - Kerberos Policies, 158–159
+    - Password Policies, 158–159
+    - security settings, 156–159
+- Account security, 26
+- Account Policy, 2
+- Account settings, 165–172
+- Active Directory
+  - backing up, 225–232
+  - components, 5–7
+  - designing, implementation, 23–56
+  - diagnosing and troubleshooting, 239–240
+  - hardware, software, and administration requirements, 23–24
+  - installing, on Server Core, 39–41
+  - integrating Domain Name System (DNS) and, 10–11
+  - post-installation tasks, performing, 31–36
+  - Removing Active Directory, 41–42
+  - requirement for, 23–24
+  - restartable, 24
+  - securing administrative access to, 128–130
+  - Server Manager, 22
+  - sizes of objects and attributes in, 24
+- Active Directory Authentication, 12–13
+- Active Directory Certificate Services (AD CS)
+  - CA server settings, 283
+  - certificate auto-enrollment for wireless networks, 282–283
+  - certificate revocation, 272–275
+  - certificate templates, 275–278
+  - installing, 271–272
+  - key archival and recovery, 284–287
+  - maintaining Windows Server 2008 CA, 287–288
+  - managing certificate enrollments, 278–282
+  - public key infrastructure (PKI), 268–270
+- Active Directory database, moved, 225
+- Active Directory Domain Services (AD DS), 142
+- Active Directory components, categorizing, 5–7
+- Active Directory sites and subnets, creating, 8
+- centralizing and resource administration, 3
+- defined, 2
+- DNS and Active Directory, integrating, 10–11
+- domain functional levels, 11–13
+- Domain Name System (DNS), 10
+- domain trees and domains, 6
+- fault tolerance and redundancy, benefiting from, 4
+- forest, 5
+- forest functional levels, 11, 13–15
+- functions and benefits, 2–3
+- naming standards, 9
+- organizational units, 7
+- resource location, simplifying, 4–5
+- role installed but not configured, 26 (illus.)
+- schema, 7–8
+- single point of access to resource, providing, 3–4
+- summary of, 27 (illus.)
+- trust models, 16–18
+- Active Directory Domain Services Wizard, 27–30, 27 (illus.)
+- Active Directory Domains and Trusts, 3
+- Active Directory Federation Services (AD FS), 245, 263
+  - (dcpromo), 23–25, 27, 46, 60
+- Active Directory Installation Wizard
+- Active Directory Lightweight Directory Services (AD LDS), 2
+  - configuring, 50–52
+  - defined, 50
+  - importing LDIF files into, 52 (illus.)
+  - select File Locations for, 51 (illus.)
+  - select ports for, 51 (illus.)
+- Active Directory Migration Tool (ADMT), 134
+- Active Directory Rights Management Service (AD RMS), 263
+- Active Directory schema, 8, 48–49, 93, 111
+- Active Directory Sites and Services, 3, 60 (illus.), 203
+- Active Directory Users and Computers, 3, 203
+- Active Directory-Integrated zone, 259–260
+- Certificate Services (AD CS)
+- AD CS, See Active Directory Certificate Services (AD CS)
+- AD DS, See Active Directory Domain Services (AD DS)
+- AD FS, See Active Directory Federation Services (AD FS)
+- AD FS Federated Service, 263
+- AD FS Federation Services Proxy, 264
+- AD LDS, See Active Directory Lightweight Directory Services (AD LDS)
+- AD RMS, See Active Directory Rights Management Service (AD RMS)
+- Add Groups, Users, and Computers dialog box, 44 (illus.)
+- Add Or Remove Program application, 185
+- Add Revocation Configuration, 274–275 (illus.)
+- Add Roles Wizard, 25 (illus.), 271 (illus.)
+- Add Site Binding, 281 (illus.)
+- Address-to-name mapping, 254, 257
+- AD-integrated zone, 257
+- Admin OU, 151–152
+- Admin Role Separation, 45
+- Administrative account, 102–103
+- Administrative password, 103
+- Administrative Templates, 147–148
+- Administrator account, 103, 107–109
+- Administrators group, 107
+- ADMT, See Active Directory Migration Tool (ADMT)
+- ADMX files, 147
+- ADSI Edit, 3
+- ADSI/ADSI Tool, 240
+- Advanced, 186, 188
+- Advanced-Specific Location For Various User Groups, 172
+- Aging, configuring, 32–33
+- Alias Canonical Name (CNAME), 250
+- Allowed RODC Password Replication Group, 42–44, 109
+- Altris, 183
+- American National Standards Institute (ANSI), 48
+- Anonymous Login, 111–112
+- API, See Application Programming Interface (API)
+- Application Directory partitions, 14–15, 185–188, 260–261
+- Application Programming Interface (API), 270
+- Apply Group Policy, 209–210
+- Approve the Key Recovery Agent Certificate Request, 286
+- ARPA, See United States Defense Advanced Research Project Agency (ARPA)
+- ARPANET, 246–247
+- Assign, 184, 186
+- Assigned, 188
+- Asynchronous processing, 149
+- Asynchronous replication, 70
+- Attributes schema, 7–8
+- Audit Directory Service Access, 165
+- Audit Object Access, 165
+- Audit Policy
+  - configure, 165–166
+  - in Default Domain Policy, 164 (illus.)
+  - planning, 163–165
+  - as subcategory of Local Policy, 156
+- Auditing, 162
+  - configure Active Directory object for, 166–167
+  - configure files and folders for, 167
+  - improved, 12–13
+- Auditors, 288
+- Authenticates, 102
+- Authenticated Users, 108, 112, 209
+- Authenticated Users Special Identity group, 109
+- Authentication, 102
+- Authoritative restore, 233–234
+- Authoritative servers, 251–252
+- Authoritative source, 251
+- Authoritatively restored objects, 234
+- Authorization, 102
+- Autoenrollment
+  - for PKI certificates, 270, 275
+- Auto-enrollment
+  - configuring for wireless networks, 282–283
+- Autoenrollment ACL, 278
+- Auto-enrollment settings, 157
+- Automatic, 169
+- Automatic Certificate Request, 282
