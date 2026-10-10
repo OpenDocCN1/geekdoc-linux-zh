@@ -1,0 +1,94 @@
+
+### 自动恢复
+如果您在大文件下载过程中断开连接，您会 appreciate 这个新功能。下载中断后，重新连接到 FTP 站点并在相同的本地目录中再次开始下载文件。`ncftp` 命令会从上次停止的地方继续下载。
+
+## 使用 ncftp 进行后台传输
+
+如果您在 FTP 站点的不同部分之间移动，或在不同站点之间跳转，您可能不希望等待文件传输完成才能去其他地方。`ncftp` 命令具有出色的功能，可以将传输命令放入 spool 文件，然后立即或在后台稍后运行它们。
+
+要为后台传输选择文件，请使用 `bgget` 命令。以下是一个示例：
+
+```
+ncftp /pub > bgget wireless.doc
+Spooled: get wireless.doc
+ncftp /pub > jobs
+---Scheduled-For-----------Host-----------Command-----------
+2007-06-01 18:38 maple GET wireless.doc
+ncftp /pub > bgstart
+Background process started.
+Watch the "/home/br/.ncftp/spool/log" file to see how it is progressing
+```
+
+在此示例中，`bgget` 命令将从远程当前目录（`/pub`）将 `wireless.doc` 文件 spool，并设置将其复制到本地当前目录。输入 `jobs` 命令显示该任务（`GET wireless.doc`），来自名为 `maple` 的主机，已安排在立即运行（2007 年 6 月 1 日下午 6:38）。通过运行 `bgstart` 命令，此过程及其他 spool 任务将立即运行。
+
+您可以选择在稍后启动后台传输，而不是立即开始。对于已 spool 用于传输的后台任务，当您退出 `ncftp`、离开当前 FTP 站点或前往另一个 FTP 站点时，传输将开始。这样，执行传输的程序（`ncftpbatch`）可以接管您当前的登录会话以执行传输。
+
+如果您希望等待更长时间才执行传输，可以通过向 `bgget` 命令传递选项，指定在特定时间开始传输。以下是一个示例：
+
+```
+nftp /pub > bgget -@ 2007100410000 wireless.doc
+```
+
+使用此命令，传输被设置为在 2007 年 10 月 4 日凌晨 1 点运行，以传输名为 `wireless.doc` 的文件。同样，您可以检查主目录中的 `.nftp/spool/log` 文件，以查看传输是否已完成。
+
+## 使用 gFTP 窗口
+
+如果您更喜欢图形界面来访问 FTP 服务器，可以使用 gFTP 窗口。输入 `yum install gftp` 安装 gFTP。输入 `gftp` 可以打开 gFTP 窗口。图 9-9 展示了 gFTP 窗口的一个示例。
+
+![](img/fb202c163797a743c3c6cf236316bc96_438_0.png)
+
+图 9-9：从 gFTP 窗口同时查看本地和远程文件。
+
+与 `ftp` 命令不同，`gFTP` 窗口允许您同时查看当前远程和局部目录的内容。要将文件从一侧传输到另一侧，只需双击它或将其拖放到其他窗格即可。（通常，您只是从 FTP 站点复制文件，除非站点授予您写入权限。）
+
+按照以下步骤连接到 FTP 站点：
+
+1. 在 Host 框中输入想要连接的 FTP 服务器名称（例如，`ftp.dulug.duke.edu`）。
+2. 输入 FTP 服务器上的端口号（留空则使用默认端口号 21）。
+3. 输入用于登录 FTP 服务器的用户名。如果没有特定用户名且服务器公开可访问，请使用默认的 `anonymous`。
+4. 输入您输入的用户名的密码。匿名 FTP 服务器的惯例是使用您的电子邮件地址作为密码。
+5. 点击显示两个小显示器的图标以连接到 FTP 站点。
+6. 如果您输入的信息正确，窗口底部的窗格应显示传输已完成，右侧窗格应显示 FTP 站点当前目录的内容。连接后，您可以采取以下操作：
+   - `四处移动` — 双击目录以进入该目录，或双击两个点（..）以向上一级移动。您可以对远程和局部目录执行此操作。
+   - `拖放文件` — 您可以将文件从 FTP 站点拖放到左侧窗格（代表您当前的局部目录）。
+   - `保存此站点` — 如果希望稍后返回此站点，请选择 `Bookmarks → Add Bookmark`。弹出的窗口允许您为该书签列表中的站点命名。完成后，您以后可以从列表中选中该条目以连接到该站点。`gFTP` 窗口不仅存储了主机名，还存储了端口、用户名和密码。因此，您只需单击即可连接。这是诸如 `gFTP` 等图形化 FTP 程序的最佳功能之一。
+
+`gFTP` 的一个不错功能是它会存储日志信息。选择 `Logging → View Log`。会出现一个窗口，显示您的计算机与每个 FTP 站点之间发生过的对话。如果无法连接到站点，您可以查看这些消息以了解问题所在；或者用来回忆您曾在哪个 FTP 站点做过什么。
+
+> **注意：** 书签列表在 `Red Hot Sites` 菜单下带有一些条目，允许您直接连接到将软件打包为 `RPMs` 的 FTP 站点。虽然这些站点在某些时期很有用，但现在通常最好使用 `yum` 或 `update` 获取软件包。此书签列表中的许多站点包含过时的 `RPMs`，并且不会自动处理依赖性问题。
+
+## 使用 wget 获取文件
+
+如果您已经知道文件在网络上的位置，比打开 FTP 会话、在 FTP 服务器上移动并运行 `get` 命令更有效率的下载该文件的方法。`wget` 命令是一个简单高效的工具，用于通过 Internet 进行非交互式文件下载。
+
+> **注意：** 另一个用于通过网络复制文件的出色命令是 `rsync` 命令。我经常使用 `rsync` 进行网络备份。有关使用 `rsync` 进行备份的说明，请参见第 13 章。
+
+如果您想从 FTP 站点或 Web 服务器（HTTP）下载某个文件，并且确切知道文件的位置，`wget` 是一种很好的下载方式。如果您想递归地将整个站点从一台计算机复制到另一台计算机（例如，包含用户主目录），`wget` 命令非常有用。从 FTP 站点下载时，`wget` 允许您仅作为匿名用户下载，或在命令行中添加自己的用户名和密码。
+
+### 下载单个文件
+
+以下是使用 `wget` 从 Web 服务器获取文件的示例：
+
+```
+$ wget http://dag.wieers.com/packages/pan/pan-0.14.2.91-2.1.fc3.rf.i386.rpm
+--09:34:11--	http://dag.wieers.com/packages/pan/pan-0.14.2.91-2.1.fc3.rf.i386.rpm
+			-> 'pan-0.14.2.91-2.1.fc3.rf.i386.rpm'
+Resolving dag.wieers.com... 212.204.244.42
+Connecting to dag.wieers.com[212.204.244.42]:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://apt.sw.be/packages/pan/pan-0.14.2.91-2.1.fc3.rf.i386.rpm [following]
+--09:34:17--	http://apt.sw.be/packages/pan/pan-0.14.2.91-2.1.fc3.rf.i386.rpm
+			-> 'pan-0.14.2.91-2.1.fc3.rf.i386.rpm'
+Resolving apt.sw.be... 193.1.219.82
+Connecting to apt.sw.be[193.1.219.82]:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1,224,357 [application/x-redhat-package-manager]
+
+100%[======================================================================] 1,224,357	53.23K/s	ETA 00:00
+
+09:34:41 (52.08 KB/s) - 'pan-0.14.2.91-2.1.fc3.rf.i386.rpm' saved [1,224,357/1,224,357]
+```
+
+根据 URL 的第一部分（`http://`），`wget` 知道您正在从 HTTP 服务器复制文件到本地主机当前目录（`.`）。在解析地址（`dag.wieers.com`）之后，`wget` 连接到站点并传输文件。随着文件下载，`wget` 显示下载进度，然后退出。
+
+### 使用用户名和密码下载文件
