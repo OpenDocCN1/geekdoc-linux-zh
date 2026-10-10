@@ -481,6 +481,7 @@
 +   [Adobe Flex 入门指南](docs/getting-started-with-adobe-flex/README.md)
 +   [ASP.NET 5 在 OS X、Linux 和 Windows 上入门指南](docs/getting-started-with-aspnet-5-for-os-x-linux-and-windows/README.md)
 +   [macOS、Linux 和 Windows 版 ASP.NET Core 入门指南](docs/getting-started-with-aspnet-core-for-macos-linux-and-windows/README.md)
++   [DB2 应用开发入门指南](docs/getting-started-with-db2-app-development/README.md)
 +   [22 Express-C 入门指南](docs/getting-started-with-db2-express-c/README.md)
 +   [InfoSphere Data Architect 入门指南](docs/getting-started-with-infosphere-data-architect/README.md)
 +   [Linux 入门指南：Novell CompTIA Linux+ 指南 (课程 3060)](docs/getting-started-with-linux-novells-guide-to-comptias-linux-c/README.md)
