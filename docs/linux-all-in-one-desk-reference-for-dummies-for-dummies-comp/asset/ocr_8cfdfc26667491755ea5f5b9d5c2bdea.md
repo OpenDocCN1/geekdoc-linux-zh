@@ -1,0 +1,43 @@
+| Macro | Definition |
+| :--- | :--- |
+| `__STDC__` | This macro expands to the decimal constant 1 to indicate that the C compiler conforms to the ANSI standard. |
+| `__TIME__` | This string displays the time when you started compiling the source file. It is of the form `HH:MM:SS` (for example, `21:59:45`). |
+
+# ## Declaration and Definition of Variables
+
+In C, you must either define or declare all variables and functions before you use them. The definition of a variable specifies three things:
+
++   - Its **visibility**, which indicates exactly where the variable can be used. (Is it defined for all files in a program, the current file, or only in a function?)
++   - Its *lifetime*, which determines whether the variable exists temporarily (for example, a local variable in a function) or permanently (as long as the program is running).
++   - Its **type** (and, in some cases, its *initial value*). For example, an integer variable x initialized to 1 is defined this way:
+
+```
+```
+int x = 1;
+```
+```
+
+If you're using a variable defined in another source file, you declare the variable with an `extern` keyword, like this:
+
+```
+```
+extern int message_count;
+```
+```
+
+You must define this variable without the `extern` qualifier in at least one source file. When the program is built, the linker resolves all references to the `message_count` variable and ensures that they all use the same variable.
+
+# ## Basic data types
+
+C has four basic data types: `char` and `int` are for storing characters and integers, and `float` and `double` are for floating-point numbers. You can define variables for these basic data types in a straightforward manner:
+
+```
+```
+char c;
+int i, j, bufsize;
+float volts;
+double mean, variance;
+```
+```
+
+You can expand the basic data types into a much larger set by using the `long`, `short`, and `unsigned` qualifiers as prefixes. The `long` and `short` qualifiers are size modifiers. For example, a `long int` is at least 4 bytes

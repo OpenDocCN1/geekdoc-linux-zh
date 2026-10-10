@@ -1,0 +1,67 @@
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_283_0.png)
+
+The distance between your home and the central office — the *loop length* — is a factor in DSL’s performance. Unfortunately, the phone line can reliably carry the DSL signals over only a limited distance — typically three miles or less, which means that you can get DSL service only if your home (or office) is located within about three miles of your phone company’s central office. Your phone company can tell you whether your location can get DSL or not. Often, it has a Web site where you can type in your phone number and get a response about DSL availability. For example, try *www.dslavailability.com* for U.S. locations.
+
+## DSL alphabet soup: ADSL, IDSL, SDSL
+
+I have been using the term DSL as if there were only one kind of DSL. As you may imagine, nothing is ever that simple. There are in fact three variants of DSL, each with different features. Take a look:
+
+- ADSL: Asymmetric DSL is the most common form of DSL and has much higher download speeds (from the Internet to your PC) than upload speeds (from your PC to the Internet). ADSL can have download speeds of up to 8 Mbps and upload speeds of up to 1 Mbps. ADSL works best when your location is within about ½ miles (12,000 feet) of the central office. ADSL service is priced according to the download and upload speeds you want. A popular form of ADSL, called G.lite, is specifically designed to work on the same line you use for voice calls. G.lite has a maximum download speed of 1.5 Mbps and a maximum upload speed of 512 Kbps.
+
+- IDSL: ISDN DSL (ISDN is an older technology called *Integrated Services Digital Network*) is a special type of DSL that works at distances of up to five miles between your phone and the central office. The downside is that IDSL only offers *downstream* (from the Internet to your PC) and *upstream* (from your PC to the Internet) speeds of up to 144 Kbps.
+
+- SDSL: Symmetric DSL provides equal download and upload speeds of up to 1.5 Mbps. SDSL is priced according to the speed you want, with the higher speeds costing more. The closer your location is to the phone company central office, the faster the connection you can get.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_283_1.png)
+
+DSL (and cable modem) speeds are typically specified by two numbers separated by a slash, such as this: 1500/384. The numbers refer to data-transfer speeds in kilobits per second (that is, thousands-of-bits per second, abbreviated Kbps). The first number is the download speed, the second the upload. Thus, 1500/384 means you can expect to download from the Internet at a maximum rate of 1,500 Kbps (or 1.5 Mbps) and upload to the Internet at 384 Kbps. If your phone line’s condition is not perfect, you may not get these maximum rates — both ADSL and SDSL adjust the speeds to suit existing line conditions.
+
+The price of DSL service depends on which variant — ADSL, IDSL, or SDSL — you select. For most home users, the primary choice is ADSL (or, more accurately, the G.lite form of ADSL) with transfer speed ratings of 1500/128.
+
+## Typical DSL setup
+
+To get DSL for your home or business, you have to contact a DSL provider. In addition to your phone company, you can find many other DSL providers. No matter who provides the DSL service, some work has to be done at the central office — the place where your phone lines connect to the rest of the phone network. The work involves connecting your phone line to equipment that can work with the DSL modem at your home or office. The central office equipment and the DSL modem at your location can then do whatever magic is needed to send and receive digital data over your phone line.
+
+Because of the need to set up your line at the central office, it takes some time after you place an order to get your line ready for DSL.
+
+The first step for you is to check out the DSL providers that provide service and see if you can actually get the service. Because DSL can work only over certain distances — typically less than 2.5 miles — between your location and the central office, you have to check to see if you are within that distance limit. Contact your phone company to verify. You may be able to check this availability on the Web. Try typing into Google (*www.google.com*) the words **DSL availability** and then your local phone company’s name. The search results will probably include a Web site where you can type in your phone number to find out if DSL is available for your home or office.
+
+If DSL is available, you can look for the types of service — ADSL versus SDSL — and the pricing. The price depends on what download and upload speeds you want. Sometimes, phone companies offer a simple residential DSL (basically the G.lite form of ADSL) with a 1500/128 *speed rating* — meaning you can download at up to 1,500 Kbps and upload at 128 Kbps. Of course, these are the *maximums*, and your mileage may vary.
+
+After selecting the type of DSL service and provider you want, you can place an order and have the provider install the necessary equipment at your home or office. Figure 1-2 shows a sample connection diagram for typical residential DSL service.
+
+Here are some key points to note in Figure 1-2:
+
+- Connect your DSL modem’s data connection to the phone jack on a wall plate.
+- Connect the DSL modem’s Ethernet connection to the Ethernet card on your PC.
+- When you connect other telephones or fax machines on the same phone line, install a microfilter between the wall plate and each of these devices.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_284_0.png)
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_285_0.png)
+
+Because the same phone line carries both voice signals and DSL data, you need the microfilter to protect the DSL data from possible interference. You can buy them at electronics stores or from the DSL provider.
+
+> **WARNING!** When you connect your Linux PC to the Internet using DSL, the connection is always on, which means a greater potential for outsiders to break into the PC.
+
+You can protect your Linux system from intruders and as an added bonus, share the high-speed connection with other PCs in a local area network (LAN) by using a router that can perform Network Address Translation (NAT). Such a NAT router translates multiple private Internet Protocol (IP) addresses from an internal LAN into a single public IP address, which allows all the internal PCs to access the Internet. The NAT router acts as a gateway between your LAN and the Internet, and it isolates your LAN from the Internet — this makes it harder for intruders to reach the systems on your LAN.
+
+If you also want to set up a local area network, you need an Ethernet hub to connect the other PCs to the network. Figure 1-3 shows a typical setup that connects a LAN to the Internet through a NAT router and a DSL modem.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_286_0.png)
+
+Figure 1-3:
+A NAT router isolates your PC from the Internet and also lets you share the DSL connection with other PCs in a local area network.
+
+Here are the points to note when setting up a connection like the one shown in Figure 1-3:
+
+- You need a NAT router with two 10BaseT Ethernet ports (the 10BaseT port looks like a large phone jack, also known as an RJ-45 jack). Typically, one Ethernet port is labeled Internet (or External or WAN, for wide area network), and the other one is labeled Local or LAN (for local area network).
+
+- You also need an Ethernet hub. For a small home network, you can buy a 4- or 8-port Ethernet hub. Basically, you want a hub with as many ports as the number of PCs you intend to connect to your local area network.
+
+- Connect the Ethernet port of the DSL modem to the Internet port of the NAT router, using a 10BaseT Ethernet cable. (These look like phone wires with bigger RJ-45 jacks and are often labeled Category 5 or Cat 5 wire.)
+
+- Connect the Local Ethernet port of the NAT router to one of the ports on the Ethernet hub, using a 10BaseT Ethernet cable.
+
+- Now connect each of the PCs to the Ethernet hub. (Of course, to do so you must first have an Ethernet card installed and configured in each PC.)

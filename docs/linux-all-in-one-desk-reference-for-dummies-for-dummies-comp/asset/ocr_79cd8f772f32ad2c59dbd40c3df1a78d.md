@@ -1,0 +1,18 @@
+# Building Software Packages from Source Files
+
+Nearly all software packages come with some sort of **_README_** or **_INSTALL_** file — a text file that tells you how to build and install the package. XMMS is no exception; it comes with a **_README_** file you can peruse by typing **more README**. An **_INSTALL_** file contains instructions for building and installing XMMS.
+
+![](bbox=[0.12, 0.24, 0.2, 0.32])
+
+Most open source software packages, including XMMS, also come with a file named **COPYING**. This file contains the full text of the *GNU General Public License* (GPL), which spells out the conditions under which you can use and redistribute the software. If you're not familiar with the GNU GPL, read this file and show the license to your legal counsel for a full interpretation and an assessment of applicability to your business.
+
+To build the software package, follow the instructions in the **_README_** or **_INSTALL_** file. For the XMMS package, the **_README_** file lists some of the pre-requisites (such as libraries) and tells you what commands to type to build and install the package. In the case of XMMS, the instructions tell you to use the following steps:
+
++   1. Type **_./configure_** to run a shell script that checks your system configuration and creates a file named **Makefile** — a file the **make** command uses to build and install the package. (You can type **_./configure --help_** to see a list of options that **_configure_** accepts.)
++   	- If you get any errors about missing packages, you have to install those missing packages. Use your distribution's software installation tools to add the missing packages. For example, in Debian use the **_apt-get install_** command. In Fedora Core, choose **Applications> Add/Remove Software**. In SUSE, use the YaST GUI tool.
++   2. Type **make** to build the software.
++   	- This step compiles the source files in all the subdirectories. (Compiling source code converts each source file into an *object file* — a file containing binary instructions that your PC's processor can understand.)
++   3. Type **make install** to install the software.
++   	- This step copies libraries and executable binary files to appropriate directories on your system.
+
+Although these steps are specific to XMMS, most other packages follow these steps — **_configure_**, **_make_**, and **_install_**. The **_configure_** shell script guesses system-dependent variables and creates a **Makefile** with commands needed to build and install the software.

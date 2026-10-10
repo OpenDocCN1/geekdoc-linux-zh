@@ -1,0 +1,18 @@
+The security policy typically addresses the following areas:
+
++   *   **Authentication:** What method is used to ensure that a user is the real user? Who gets access to the system? What is the minimum length and complexity of passwords? How often do users change passwords? How long can a user be idle before that user is logged out automatically?
++   *   **Authorization:** What can different classes of users do on the system? Who can have the `root` password?
++   *   **Data protection:** What data must be protected? Who has access to the data? Is encryption necessary for some data?
++   *   **Internet access:** What are the restrictions on users (from the LAN) accessing the Internet? What Internet services (such as Web, Internet Relay Chat, and so on) can users access? Are incoming e-mails and attachments scanned for viruses? Is there a network firewall? Are virtual private networks (VPNs) used to connect private networks across the Internet?
++   *   **Internet services:** What Internet services are allowed on each Linux system? Are there any file servers? Mail servers? Web servers? What services run on each type of server? What services, if any, run on Linux systems used as desktop workstations?
++   *   **Security audits:** Who tests whether the security is adequate? How often is the security tested? How are problems found during security testing handled?
++   *   **Incident handling:** What are the procedures for handling any computer security incidents? Who must be informed? What information must be gathered to help with the investigation of incidents?
++   *   **Responsibilities:** Who is responsible for maintaining security? Who monitors log files and audit trails for signs of unauthorized access? Who maintains the security policy?
+
+# ## *Implementing security solutions (mitigation)*
+
+After you analyze the risks — vulnerabilities — and develop a security policy, you have to select the *mitigation approach*: how to protect against specific vulnerabilities. This is where you develop an overall security solution based on security policy, business requirements, and available technology — a solution that makes use of people, process, and technology and includes the following:
+
++   *   Services (authentication, access control, encryption)
++   *   Mechanisms (username/password, firewalls)
++   *   Objects (hardware, software)

@@ -1,0 +1,419 @@
+
+
+# G
+
+- groff GNU 软件包，19
+- groups
+  - 文件所有权，422-423
+  - 管理，418-419
+- growisofs，209
+- GRUB 引导加载程序
+  - Fedora Core 安装，52
+  - 简介，111-112
+  - 设置，493-495
+- gtk+ GNU 软件包，19
+- GUI 桌面
+  - 常见功能，134-142
+  - 上下文菜单，135-136
+  - 默认，115, 133
+  - GNOME，115-121
+  - 图标上下文菜单，136-137
+  - KDE，122-125
+  - 主菜单，139-142
+  - 面板，137-139
+  - SUSE Linux，153-156
+  - Xandros，158-160
+- GUI 文件管理器
+  - Konqueror，190-194
+  - Nautilus 外壳，186-190
+- GUI 系统管理工具
+  - Debian，375
+  - Fedora Core，375-376
+  - Knoppix，376-377
+  - MEPIS KDE，377-378
+  - SUSE Linux，378-379
+  - Ubuntu Linux，379-380
+  - Xandros，380-381
+- GUI 文本编辑器，239-240
+- GUI 用户管理器，添加用户账户，414-416
+- GUI 实用工具，root，382
+- GUIs（图形用户界面），应用程序，19-21
+- gzip GNU 软件包，19
+
+# H
+
+- hard drive 硬盘
+  - 安装及，34
+  - 编程，674
+  - 存储，25
+- hardware 硬件
+  - DVD 驱动器，34
+  - 硬盘，34
+  - 安装，34-36
+  - 键盘，34
+  - 调制解调器，34
+  - 监视器，35
+  - 鼠标，35
+  - 网卡，35
+  - 打印机，35
+  - 处理器，35
+  - RAM，35
+  - SCSI 控制器，35
+  - 声卡，35
+  - SUSE Linux，36
+  - 系统管理，374
+  - 显卡，35
+- hash 哈希，安全，509
+- hash FTP 命令，369
+- hashes 哈希值，521
+- header files 头文件，C 语言编程，722-723
+- Help 帮助
+  - Ubuntu GNOME 桌面，158
+  - Xandros Desktop，160
+- help 帮助，命令，170
+- help FTP 命令，369
+- Hide Panel option 隐藏面板选项
+  - SUSE Linux 桌面，155
+  - Xandros Desktop，160
+- Hide panel option 隐藏面板选项，Knoppix 桌面，147
+- hiding NAFS 隐藏 NAFS，538
+- hierarchy of file system 文件系统层次结构，426-428
+- /home 目录，428
+- Home Folder 主文件夹
+  - Knoppix 桌面，147
+  - MEPIS KDE 桌面，152
+  - SUSE Linux 桌面，155
+- host addresses 主机地址，IP 地址，277
+- host connectivity 主机连接，304-305
+- host security 主机安全
+  - 操作系统，552
+  - 权限，552
+- host-security tools 主机安全工具，558
+- HTML (HyperText Markup Language) 超文本标记语言
+  - 锚点 URL，337
+  - Web 文档，334
+- HTML messages HTML 消息，电子邮件，316
+- HTTP (HyperText Transfer Protocol) 超文本传输协议
+  - 描述，279
+  - HTTP 守护进程，583
+  - 互联网服务，570
+  - 作为互联网标准，584
+  - Web 文档，334
+- httpd，22
+- httpd directives Apache Web 服务器
+  - 配置文件，594-596
+- httpd Internet service，580
+- hypertext links 超文本链接。参见 links
+
+# I
+
+- I/O redirection 输入/输出重定向，shell 命令，165
+- I2O support 内核 I2O 支持，484-485
+- I2C support 内核 I2C 支持，487
+- icon context menus 图标上下文菜单，136-137
+- icons 图标
+  - Debian GNOME 桌面，142
+  - Fedora Core GNOME 桌面，144
+  - Knoppix 桌面，147
+  - MEPIS KDE 桌面，150
+  - SUSE Linux 桌面，154
+  - Xandros Desktop，158
+- IDE Zip drives 备份设备 IDE Zip 驱动器，435
+- IDSL (ISDN DSL)，258
+- IDSS (Intrusion Detection Systems) 入侵检测系统，558
+- IEEE 1394 support 内核 IEEE 1394 支持，484
+- ieee newsgroups，348
+- if-else statement C 语言编程中的 if-else 语句，718–719
+- if statement if 语句
+  - C 语言编程，718
+  - Perl，755–756
+- IM clients 即时通讯客户端
+  - Gaim，327–329
+  - Kopete，329–331
+- image FTP 命令，369
+- implementation 安全实施，504–505
+- Impress OpenOffice.org，217–218
+- incident handling 安全事件处理，504
+- incident response 事件响应，555
+- incremental backups 增量备份，440
+- indent GNU 软件包，19
+- inetd
+  - 互联网超级服务器，572–573
+  - 网络安全审查，555–556
+- Info Center MEPIS KDE 桌面信息中心，152
+- information sharing via Internet 通过互联网共享信息，254
+- init command init 命令
+  - 运行级别，387–388
+  - 启动/停止服务器，389
+- init process init 进程
+  - 启动，384–386
+  - 运行级别，385
+- INN server
+  - 配置，628–635
+  - 安装，628
+  - InterNetNews，630–634
+  - 启动，628–635
+- inn.conf 文件，631–632
+- innd，22
+- innd Internet 服务，580
+- input device support 内核输入设备支持，486
+- insmod 命令，404
+- installation 安装
+  - Apache Web 服务器，587–588
+  - Debian 软件，104–106
+  - 磁盘分区，31–34
+  - Fedora Core，48–57
+  - Fedora Core 软件，106–107
+  - 硬件及，34–36
+  - INN 服务器，628
+  - 简介，27–28
+  - Live CD 发行版，33
+  - 邮件服务器，613–628
+  - MEPIS，57–60
+  - MEPIS 软件，104–106
+  - RPMs，453–454
+  - Samba，666–667
+  - 软件，103–104
+  - SRPMs，464–465
+  - SUSE Linux，60–71
+  - SUSE Linux 软件，107–108
+  - 文本模式，82
+  - Ubuntu 软件，104–106
+  - Ubuntu Linux，71–72
+  - Xandros Desktop 操作系统，73–80
+  - Xandros 软件，108–110
+- integrity 完整性，安全，509
+- in.telnetsd，22
+- Internet 互联网
+  - 连接，254–256
+  - 电子邮件，253
+  - 信息共享，254
+  - 互联网服务，278–279
+  - LAN 连接，285–286
+  - 作为网络的网络，254
+  - 新闻组，254
+  - 端口号，278–279
+  - 远程访问，254
+  - 服务器，21–22
+  - TCP/IP，277
+  - Web，254
+- Internet access 互联网访问，安全，504
+- Internet applications 互联网应用程序
+  - Akregator，211
+  - Epiphany，210
+  - Evolution，210
+  - Firefox，210
+  - Gaim，210
+  - gFTP，210
+  - KMail，211
+  - KNode，210
+  - Konqueror，211
+  - Kopete，210
+  - KPhone，211
+  - Lipihone，211
+  - Lynx，210
+  - Mozilla，210
+  - Pan，211
+  - Skype，211
+  - Thunderbird，210
+  - XChat，211
+- Internet servers 互联网服务器
+  - httpd，22
+  - innd，22
+  - in.telnetsd，22
+  - sendmail，22
+  - sshd，22
+  - 超级服务器，530–531
+  - vsftpd，22
+- Internet services 互联网服务
+  - acpid，580
+  - apache，580
+  - apache2，580
+  - apmd，580
+  - autd，580
+  - autofs，580
+  - 客户端，565
+  - cron，580
+  - 和 DHCP，570
+  - 和 FTP，570
+  - gpm，580
+
+# I
+
+- IP addresses IP 地址
+  - 点分十进制表示法，278
+  - 点分四组表示法，278
+- ISA bus，481
+
+# J
+
+- job scheduling 任务调度
+  - 一次性任务，407–409
+  - 定期任务，409–412
+
+# K
+
+- k12 newsgroups，348
+- Kalfaine，209
+- Kate，208
+- K3b，209
+- KBear，363–364
+- KCalc，208
+- KDE (K Desktop Environment)
+  - 计算器，219–220
+  - 自定义，124–125
+  - 简介，20
+  - Knopix，146–150
+  - 注销，125
+  - MEPIS 桌面，150–153
+  - 面板，122
+- KDE System Guard MEPIS KDE 桌面 KDE 系统护卫，152
+- kernel 内核
+  - ATA 支持，483
+  - ATAPI 支持，483
+  - 块设备，482–483
+  - 引导加载程序及，112
+  - 启动选项，87–89
+  - 构建，491–492
+  - 总线选项，481
+  - 字符设备，486
+  - 配置，476–491
+  - 加密支持，491
+  - 调试，491
+  - 发行版，10
+  - 可执行文件格式，481
+  - 文件系统支持，489–490
+  - 软盘磁带驱动器，486–487
+  - 帧缓冲，488
+  - 高级图形，487
+  - I10 支持，484–485
+  - I2C 支持，487
+  - IEEE 1394 支持，484
+  - 输入设备，486
+  - 安装，493–495
+  - ISDN 子系统支持，486
+  - 可加载模块支持，479
+  - 内存技术设备，481
+  - MFM 支持，483
+  - 模块化，475–476
+  - 单片式，475–476
+  - 多媒体设备支持，487
+  - 本地语言支持，490
+  - 网络支持，485
+  - 分区类型，490
+  - 即插即用支持，482
+  - 端口支持，482
+  - 电源管理选项，480
+  - 处理器类型，479–480
+  - 创建 RAM 磁盘文件，492–493
+  - 重建，474–491
+  - RLL 支持，483
+  - SCSI 设备，484
+  - 安全选项，491
+  - 设置选项，479
+  - 声音支持，488
+  - 电话支持，486
+  - USB 支持，488
+  - 版本号，14
+  - 漏洞，552
+  - 看门狗定时器，486
+- key pairs 密钥对
+  - 交换密钥，524–525
+  - 生成，523
+- keyboard 键盘
+  - Fedora Core 安装，49
+  - 安装，34
+  - SUSE Linux 安装，68
+  - 键盘布局，Knoppix 桌面，147
+- KFax，210
+- KMail，325–327
+- KNode，354–356
+  - 描述，210
+- Knode 新闻阅读器，350
+- Knoqueror Web 浏览器，Knoppix 桌面，147
+- Knoppix
+  - 启动命令，84–86
+  - 刻录 CD/DVD，38–39
+  - 描述，12
+  - 探索 Live CD，36
+  - GUI 系统管理工具，376–377
+  - KDE 桌面，146–150
+  - Live DVD，13
+  - 打印机配置，94–96
+  - 文本模式安装，82
+  - update-rc.d 命令，577–578
+- Knoppix 菜单，Knoppix 桌面，147
+- Konqueror Web 浏览器
+  - 查看文件，191–193
+  - 查看文件夹，191–193
+  - MEPIS KDE 桌面，153
+  - 概述，339
+  - SUSE Linux 桌面，155
+  - 查看 Web 页面，194
+- Kontact
+  - 描述，208
+  - MEPIS KDE 桌面，153
+  - 概述，218–219
+  - SUSE Linux 桌面，155
+- Kooka，210
+- Kopecte
+  - 描述，210
+  - 概述，329–331
+- KörGanizer，208
+- KscD，209
+- KSnapshot，210
+- ksys 命令，404
+- KWrite，208
+
+# L
+
+- LANs (local area networks) 局域网，27
+  - 以太网设置，279–283
+  - 以太网布线，281–283
+  - 互联网连接，285–286
+  - TCP/IP，275–279
+  - TCP/IP 配置，283–285
+- Launcher applets GNOME 启动器小工具，117
+- lcd FTP 命令，369
+- less GNU 软件包，19
+- LGPL (GNU Library General Public License) GNU 库通用公共许可证，695, 697
+- /lib 目录，428
+- libpng GNU 软件包，19
+- licenses 许可证，695–697
+- LILO 引导加载程序，111–112
+- links 链接，335–337
+- Linspire，12
+- Linux
+  - 命令，170–173
+  - 发行版，10–14
+  - 简介，9
+  - linux 新闻组，348
+  - 与 Linux 相关的新闻组，348–349
+- Live CDs 活 CD，13
+  - 磁盘分区，40
+  - 安装，33
+  - knoppix，36
+- loadable module support 内核可加载模块支持，479
+- loading/unloading modules 加载/卸载模块，命令，404–405
+- localhost.zone 文件，DNS，655–656
+- Lock Xesktop Xandros Desktop 锁定，160
+- log analysis and monitoring tools 日志分析和监控工具，558
+- log files 日志文件，安全，509
+- login 登录
+  - GNOME，116
+  - root，381–382
+- Logout Xandros Desktop 注销，160
+- logout 注销
+  - GNOME，121
+  - KDE，125
+- LONE/TAP 实用工具，436
+- LPJ (Loops per jiffy) 每 jiffy 循环数，112
+- ls 命令，164
+- ls FTP 命令，369
+- LSB (Linux Standard Base) Linux 标准基础
+  - 和 ABI，15
+  - 认证计划，16
+  - 通用规范，15
+  - 硬件特定规范，15
+- lsmod 命令，404
+- Lynx，210

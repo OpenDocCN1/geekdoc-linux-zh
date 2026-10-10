@@ -1,0 +1,33 @@
+# 366 Using the Command-Line FTP Client
+
+![](bbox=[0.15, 0.13, 0.3, 0.28])
+
+Figure 4-4: You can use a Web browser to download files from anonymous FTP servers.
+
+![](bbox=[0.25, 0.13, 0.85, 0.28])
+
+![](bbox=[0.13, 0.32, 0.25, 0.4])
+
+WARNING!
+
+When you use the `ftp://localhost/` URL, you won’t get a response from your system if you’re not running an FTP server or if you have set up your firewall so that no FTP connections are allowed.
+
+![](bbox=[0.13, 0.39, 0.25, 0.48])
+
+DISTRO SPECIFIC
+
+In Debian and Fedora Core, log in as *root* and type `etc/init.d/vsftpd start` (in a terminal window) to start the FTP server. In SUSE, the `xinetd` super server controls the FTP server `vsftpd`. The `/etc/xinetd.d/vsftpd` configuration file specifies how `vsftpd` is started. See Book VII, Chapter 1 for more information about `xinetd` configuration files.
+
+The same approach of accessing anonymous FTP sites works if you type the hostname of some other anonymous FTP server. For example, try typing the following URL:
+
+```
+```http://ftp.netscape.com/```
+```
+
+You get the directory of the `ftp.netscape.com` server.
+
+# Using the Command-Line FTP Client
+
+Knowing how to use FTP from the command line is a good idea — just in case. For example, if your GUI desktop isn’t working, you may need to download some files in order to fix the problem. If you know how to use the command-line FTP client, you can download the files and take care of the problem. It’s not that hard, and the command-line FTP client is available in all Linux distributions.
+
+The best way to figure out the command-line FTP client is to try it out. The command is called `ftp`, and you can run the `ftp` commands from your Linux system. You don’t even need an Internet connection because you can use the `ftp` command to connect to your own system — I show you how.

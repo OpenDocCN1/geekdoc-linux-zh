@@ -1,0 +1,100 @@
+
+
+若要设置 sshd 在系统启动至运行级别 3、4 或 5 时自动启动，请输入以下命令（此时需以*root*身份登录）：
+
+```
+chkconfig --level 345 sshd on
+```
+
+在 Fedora Core 和 SUSE 中，你还可以使用*chkconfig*命令来检查哪些服务器处于开启或关闭状态。例如，要查看所有运行级别下所有服务器的完整列表，请输入以下命令：
+
+```
+chkconfig --list
+```
+
+在 Debian、MEPIS、Ubuntu 和 Xandros 中，你可以使用*update-rc.d*命令来启用服务器在系统启动时自动运行。例如，要将*sshd*设置为在默认运行级别下自动启动，请以*root*身份登录，并在终端窗口中输入*update-rc.d sshd defaults*。你也可以指定确切的运行级别和序列号（即每个服务器启动的顺序）。要了解*update-rc.d*命令的更多信息，请在终端窗口中输入*man update-rc.d*。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_415_0.png)
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_415_1.png)
+
+## 盘点 Linux 系统配置文件
+
+Linux 包含大量配置文件。所有这些文件都是文本文件，你可以使用任何文本编辑器对其进行编辑。若要编辑这些配置文件，必须以*root*身份登录。我并未逐一讨论这些文件，而是在表 1-9 中展示了一些配置文件的精选列表，并附带对每个文件的简要说明。这份清单让你了解系统管理员需要处理哪些类型的配置文件。在许多情况下，Linux 还包含图形用户界面（GUI）实用程序，用于配置许多此类文件。
+
+### 表 1-9 部分 Linux 配置文件
+
+| 配置文件 | 描述 |
+| :--- | :--- |
+| /boot/grub | GRUB 引导加载程序文件的位置 |
+| /boot/grub/menu.lst | GRUB 在启动系统前显示的引导菜单的配置文件 |
+| /boot/System.map | Linux 内核映射（将内核地址映射为函数和变量的名称） |
+| /boot/vmlinuz | Linux 内核（操作系统的核心） |
+| /etc/apache2/httpd.conf | Apache Web 服务器的配置文件（Debian 和 MEPIS） |
+| /etc/apt/sources.list | 列出高级打包工具（APT）获取包源（FTP 或网站或 CD-ROM）的配置文件（Debian、MEPIS、Ubuntu 和 Xandros） |
+| /etc/at.allow | 允许使用 at 命令安排稍后执行任务的用户名列表 |
+| /etc/at.deny | 禁止使用 at 命令的用户名列表 |
+| /etc/bashrc | bash shell 的系统级函数和别名（Fedora Core） |
+| /etc/bash.bashrc | bash shell 的系统级函数和别名（Debian、MEPIS、SUSE、Ubuntu 和 Xandros） |
+| /etc/cups/sys.conf | 通用 UNIX 打印系统（CUPS）调度程序的打印机配置文件 |
+| /etc/fonts | 包含字体配置文件的目录。（特别是，你可以将本地字体配置设置放入文件 /etc/fonts/local.conf 中。） |
+| /etc/fstab | 关于可用于挂载的文件系统及其挂载位置的信息 |
+| /etc/group | 关于组的信息 |
+| /etc/grub.conf | Fedora Core 和 SUSE 中 GRUB 引导加载程序的配置 |
+| /etc/hosts | IP 地址及其对应主机名的列表 |
+| /etc/hosts.allow | 允许访问本系统互联网服务的主机 |
+| /etc/hosts.deny | 禁止访问本系统互联网服务的主机 |
+| /etc/httpd/conf/httpd.conf | Apache Web 服务器的配置文件（Fedora Core） |
+| /etc/init.d | 包含用于启动和停止各种服务器的脚本的目录 |
+| /etc/inittab | 由 init 进程使用的配置文件，该进程会启动所有其他进程 |
+| /etc/issue | 包含在显示文本模式登录提示符之前要打印的消息的文件（通常是发行版名称和版本号） |
+| /etc/lilo.conf | Linux 加载器（LILO）的配置——这是一种可以从磁盘加载操作系统的引导加载程序之一（仅当你使用 LILO 引导加载程序时才存在） |
+| /etc/login.defs | 用于创建用户账户的默认信息，由 useradd 命令使用 |
+| /etc/modprobe.conf | 可加载内核模块的配置文件，由 modprobe 命令使用（Fedora Core 和 SUSE） |
+| /etc/modules.conf | 可加载模块的配置文件（Debian、MEPIS 和 Xandros） |
+| /etc/mtab | 关于当前已挂载文件系统信息 |
+| /etc/passwd | 关于所有用户账户的信息。（实际密码存储在 /etc/shadow 中。） |
+| /etc/profile | bash shell 的系统级环境和启动文件 |
+| /etc/profile.d | 包含脚本文件（以 .sh 结尾的名称）的目录，由 /etc/profile 脚本执行 |
+| /etc/init.d/rcS | Debian、MEPIS、SUSE、Ubuntu 和 Xandros 中的 Linux 初始化脚本 |
+| /etc/rc.d/rc.sysinit | Fedora Core 中的 Linux 初始化脚本 |
+| /etc/shadow | 包含所有用户账户加密密码的安全文件（只能由 root 读取） |
+| /etc/shells | 系统上用户可使用的 shell 列表 |
+| /etc/skel | 保存诸如 .bash_profile 等文件初始版本的目录，这些文件会被复制到新用户的 home 目录 |
+| /etc/sysconfig | Linux 配置文件（Fedora Core 和 SUSE） |
+| /etc/sysctl.conf | 包含内核参数的配置文件，这些参数在系统启动时由 sysctl 读取和设置 |
+| /etc/termcap | 终端功能和选项的数据库（Fedora Core 和 SUSE） |
+| /etc/udev | 包含 udev 配置文件的目录——udev 是提供动态命名热插拔设备并在 /dev 目录中创建设备文件能力的程序 |
+| /etc/X11 | 包含 X 窗口系统（X11）及 gdm 和 xdm 等各种显示管理器配置文件的目录 |
+| /etc/X11/XF86Config 或 /etc/X11/xf86config-4 | XFree86 X11 的配置文件（Debian、MEPIS 和 Xandros） |
+| /etc/X11/xorg.conf | X.org X11——X 窗口系统的配置文件（Fedora Core、Ubuntu 和 SUSE） |
+| /etc/xinetd.conf | xinetd 守护程序的配置，该程序按需启动一系列互联网服务 |
+| /etc/yum.conf | yum 包更新器及安装器的配置（Fedora Core） |
+| /var/log/apache2 | Web 服务器的访问和错误日志（Debian 和 MEPIS） |
+| /var/log/cron | 包含来自运行计划任务进程的 cron 进程的消息的日志文件 |
+| /var/log/boot.msg | 包含启动消息的文件（SUSE） |
+| /var/log/dmesg | 包含启动消息的文件（Debian、Fedora Core、MEPIS、Ubuntu 和 Xandros） |
+| /var/log/httpd | Web 服务器访问和错误日志（Fedora Core） |
+| /var/log/messages | 系统日志 |
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_416_0.png)
+
+## 监控系统性能
+
+作为系统管理员，你必须密切关注 Linux 系统的运行状况。你可以通过查看诸如以下信息来监控系统的整体性能：
+
+- 中央处理器（CPU）使用率
+- 物理内存使用率
+- 虚拟内存（交换空间）使用率
+- 硬盘使用率
+
+Linux 附带了许多实用程序，你可以使用它们来监控一个或多个此类性能参数。这里我介绍了其中一些实用程序，并展示了如何理解这些实用程序呈现的信息。
+
+### 使用 top 实用程序
+
+要查看占用 CPU 时间最多的进程——即 CPU 使用率最高的前几个进程——你可以使用文本模式的 top 实用程序。要启动该实用程序，请在终端窗口（或文本控制台）中输入 top。随后，top 实用程序将显示一个文本屏幕，列出当前进程（按 CPU 使用率排序），以及其他各种信息，如内存和交换空间使用情况。图 1-6 显示了 top 实用程序的典型输出。
+
+top 实用程序每五秒更新一次显示。如果你在某个窗口中保持 top 运行，你可以持续监控 Linux 系统的状态。要退出 top，请按 Q 或 Ctrl-C，或关闭终端窗口。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_418_0.png)
+

@@ -1,0 +1,13 @@
+choosing from the Main Menu. For example, in SUSE, you can click a desktop icon to open the initial window of the OpenOffice.org suite. You can create new OpenOffice documents or open existing documents (which can be Microsoft Office files as well) from the main window of the OpenOffice.org.
+
+I briefly introduce Writer, Calc, and Impress in the following sections.
+
+# Writer
+
+Choosing File> New> Text Document from any OpenOffice.org window starts OpenOffice.org Writer with a blank document in its main window. Using Writer is simple — it’s similar to other word processors such as Microsoft Word. For example, you can type text into the blank document, format text, and save text when done.
+
+You can also open documents that you have prepared with Microsoft Word on a Windows machine. Figure 4-1 shows a Microsoft Word document being opened in OpenOffice.org Writer.
+
+![](bbox=[0.11, 0.48, 0.84, 0.8])
+
+When you save a document, by default, Writer saves it in OpenDocument text format in a file with the .odt extension.

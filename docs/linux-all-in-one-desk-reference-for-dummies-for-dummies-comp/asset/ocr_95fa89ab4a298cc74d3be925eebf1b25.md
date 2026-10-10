@@ -1,0 +1,40 @@
+To see a list of all the programs currently running on the system, use the `ps` command, like this:
+
+```
+ps ax
+```
+
+The `ps` command takes many options, and you can provide these options without the usual dash prefix. This example uses the **a** and **x** options. The **a** option lists all processes that you are running, and the **x** option displays the rest of the processes. The net result is that `ps ax` prints a list of all processes running on the system, as shown in the following sample output of the `ps ax` command:
+
+```
+PID TTY STAT TIME COMMAND
+1 ? S 0:01 init [5]
+2 ? SN 0:00 [ksoftirqd/0]
+3 ? S< 0:00 [events/0]
+4 ? S< 0:00 [khelper]
+9 ? S< 0:00 [kthread]
+22 ? S< 0:00 [kblockd/0]
+58 ? S 0:00 [kapmld]
+79 ? S 0:00 [pdflush]
+80 ? S 0:00 [pdflush]
+82 ? S< 0:00 [aio/0]
+... lines deleted ...
+5525 ? Ss 0:00 /opt/kde3/bin/kdm
+5502 ? S 0:12 /usr/X11R6/bin/X -br -nolisten tcp :0 vt7 -auth /var/lib/xdm/authdir/authfiles/A:0-pIAOrt
+5503 ? S 0:00 -:0
+6187 ? Ss 0:00 /sbin/portmap
+6358 ? Ss 0:00 /bin/sh /usr/X11R6/bin/kde
+6566 ? Ss 0:00 /usr/sbin/cupsd
+6577 ? Ssl 0:00 /usr/sbin/nscd
+... lines deleted ...
+```
+
+Amazing how many programs can run on a system even when only you are logged in as a user, isn’t it?
+
+As you can guess, you can do everything from a shell prompt, but it does take some getting used to.
+
+# ## Shutting Down
+
+When you’re ready to shut down Linux, you must do so in an orderly manner. Even if you’re the sole user of a Linux PC, several other programs usually run in the background. Also, operating systems such as Linux try to optimize the way that they write data to the hard drive. Because hard drive
+
+![](bbox=[0.88, 0.16, 0.95, 0.32])

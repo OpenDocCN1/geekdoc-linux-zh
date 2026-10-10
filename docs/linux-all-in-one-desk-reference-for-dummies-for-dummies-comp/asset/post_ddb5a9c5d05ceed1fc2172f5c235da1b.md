@@ -1,0 +1,99 @@
+
+This would normally be the largest-sized partition (notice the Size column in Figure 2-1). For Windows 2000 or XP, the partition type is ntfs, as shown in the Type column in the list of partitions. In a typical new PC, you should see two partitions — a smaller fat16 partition and a large ntfs partition.
+
+- 4. Choose Operations:Resize from the QTParted menu.
+
+The Resize partition dialog box appears (see Figure 2-2).
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_67_0.png)
+
+> Figure 2-2: Resize a hard drive partition from this dialog box in QTParted.
+
+- 5. Type in a new size for the partition in the New Size text field (refer to Figure 2-2) to create free space after that partition.
+
+You should pick a size such that you get 4000MB or more free space after the partition. You'll see the size of the free space in the Free Space After field in the dialog box (see Figure 2-2).
+
+- 6. Click OK to close the dialog box.
+
+The hard drive partitions are not changed until you go through the next step.
+
+- 7. Choose File: Commit from the QTParted menu to put the partition changes into effect.
+
+Now the partition is changed and you have free space after the Windows partition.
+
+After you create free space on the hard drive for Linux, you can proceed to install the Linux distribution of your choice using the CDs or DVD that you have burned from the ISO image files provided on the companion DVD.
+
+## Installing Debian GNU/Linux
+
+To install Debian (pronounced DEB-ee-um) GNU (some people say GUH-new) /Linux, you first have to burn the CDs from the ISO images in the Debian folder of the companion DVD (see the “Burning CDs or DVDs from ISO Images” section, earlier in this chapter).
+
+Note that the Debian installer does not install the X Window System. You have to install X as a separate package after you finish installing the base operating system.
+
+## Getting an overview of the installation
+
+When you have the Debian CDs in hand, you are ready to install Debian GNU/Linux. Before you dive into the installation, here is an overview of the major steps in installing Debian:
+
+- 1. Before you begin the installation, remember to gather information about your computer's hardware because you may need to provide some details if the Debian installer cannot detect some peripheral on your PC.
+- 2. Boot the PC from the Debian CD. After the PC boots, you see a boot screen with a boot: prompt. You can press Enter to proceed, but if the system hangs, you may need to reboot again and enter some boot options such as linux acpi=off at the boot: prompt. The Linux kernel then boots and starts the Debian installer.
+- 3. Select the installation language.
+- 4. Configure the network interface.
+- 5. Create the hard drive partitions that will be used by Debian using the space you have freed up after shrinking the Windows partition. (See the “Setting Aside Space for Linux” section in this chapter.) At a minimum, you have to create a swap partition and a partition for the root file system.
+- 6. Install and set up the base system, which includes the Linux kernel and GNU utilities.
+- 7. Configure and install the GRUB boot loader so that it can start up Debian as well as other operating systems installed on your hard drive.
+- 8. Reboot the PC to start the base Debian system and finish the configuration steps — setting the time zone, setting the root password, and creating a normal user account, for example.
+- 9. Configure the Advanced Package Tool (APT) for further package installations. You have to identify sources such as the CDs (if you have them) and Internet sites where Debian packages can be found. The installer provides suggestions; all you have to do is to select the sources.
+- 10. Select software packages to install, including the desktop and various servers.
+- 11. The installer either downloads the files from the Internet or gets what it needs from the CD, installs all selected software, and then configures all packages, including the X Window System. After completing the configurations, the installer starts X and displays a graphical login screen.
+
+After you install Debian GNU/Linux, you can use the `apt-get` command-line tool to install other packages and even upgrade the entire distribution.
+
+## Completing the Debian installation
+
+Start by inserting the first CD into your PC's DVD/CD drive and then reboot the PC. The PC boots from the CD and displays a screen that says `Press F1 for help`. It's a good idea to press F1 and see the Help index, which tells you what information you can get by pressing various function keys (from F1 through F10). Table 2-1 summarizes the help information that the function keys provide.
+
+Table 2-1 Function Keys at Debian Installer Boot Screen
+
+| Function Key | What It Displays |
+| :--- | :--- |
+| F1 | Help index |
+| F2 | What your PC must have in terms of memory and hard drive space for installing Debian (at least 24MB of memory and 256MB hard drive space for a minimal installation but this could change in the future) |
+| F3 | The ways you can boot Linux from the CD (for example, by typing **linux** or **expert** or **linux26** or **expert26**, with each loading a different kernel) |
+| F4 | An overview of the boot parameters you can enter and the details you can get by pressing the function keys F5, F6, and F7 |
+| F5 | Boot parameters for special machines, such as some IBM ThinkPads and laptops with display problems |
+| F6 | Boot parameters for special disk controllers, such as Adaptec 151x, 152x, 1542, 274x, and 284x |
+| F7 | Boot parameters for use by the installer (For example, if you don't want the installer to probe for USB, add the parameter **debian-installer/probe/usb=false**) |
+| F8 | Points you to www.debian.org and tells you how to get help |
+| F9 | Brief mention of the Debian project |
+| F10 | Information about copyrights and warranties that apply to Debian GNU/Linux |
+
+After reading the help information, you can either press Enter to start or type **linux** followed by any boot parameters, such as **acpi=off**, that you need for your PC. After the Linux kernel loads, follow these steps to complete the Debian GNU/Linux installation. (Make sure your PC has a broadband Internet connection such as DSL or cable modem.)
+
+### 1. Select the language, the country or region, and the keyboard layout from the initial text mode screens.
+
+Use the arrow keys to make your selection, and press Enter after each selection. The installer then detects the hardware and loads components of the Debian installer from the CD-ROM. Then the installer configures the network with Dynamic Host Configuration Protocol (DHCP) and prompts for a host name.
+
+### 2. Enter the host name for your computer.
+
+The installer prompts for the domain name of your system and shows the default in the text input field. (The default is what the installer gets from the DHCP server.) You can simply press Enter to accept the default domain name. Then the Debian installer starts the disk partitioning tool that displays several options, as shown in Figure 2-3.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_70_0.png)
+
+### 3. If you have created free space for Debian, select the default choice Use the Largest Contiguous Free Space and press Enter.
+
+If your hard drive already has partitions that you want to use for Debian, select the Manually Edit Partition Table option and press Enter. The installer displays further options together with the list of existing partitions, as shown in Figure 2-4.
+
+**Installing Debian GNU/Linux**
+
+Figure 2-4:
+You can manually edit disk partitions from this screen.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_71_0.png)
+
+You can click one of the partitions and then edit its characteristics — what file system to use, for example — and select a mount point for the partition. When you’re done, you can finish partitioning and write the partition table to the hard drive. (See Figure 2.5.)
+
+Figure 2-5:
+When you’re done, write the partition table to the hard drive.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_71_1.png)
+
+The installer warns you that data on the selected partitions will be destroyed, and after you select Yes, it completes the partitioning and begins installing the base system.

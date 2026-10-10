@@ -1,0 +1,17 @@
+clicking Add. In the Add to Panel dialog box, you find many more categories of applets you can try.
+
+![](bbox=[0.13, 0.2, 0.68, 0.52])
+
+Explore all the items on the GNOME menus to see all the tasks you can perform from this menu. In particular, move the mouse pointer over the System->Preferences item to see your options for changing the appearance of the desktop. For example, you can change the desktop’s background from this menu, as shown in Figure 4-6.
+
+# Customizing the GNOME desktop
+
+By now, you may be itching to do a bit of decorating. No one likes to stick to the plain GNOME desktop. After all, it’s your desktop. You can set it up any way you want it. You can configure most aspects of the GNOME desktop’s look and feel — the appearance and behavior — by choosing System->Preferences, and choosing from among the various options.
+
+To see how the desktop decorating business works in Fedora Core, start by choosing System->Preferences->Desktop Background; a dialog box appears, as shown in Figure 4-7.
+
+From this dialog box, you can select a background of a solid color, a color gradient, or a *wallpaper* (an image used as the background). A color gradient background starts with one color and gradually changes to another color. The gradient can be in the vertical direction (top to bottom) or horizontal (left to right).
+
+Book I  
+Chapter 4  
+Trying Out Linux

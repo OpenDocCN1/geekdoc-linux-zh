@@ -1,0 +1,9 @@
+# **156 Introducing the Ubuntu's GNOME Desktop**
+
+![](bbox=[0.15, 0.14, 0.45, 0.55])
+
+The SUSE Main Menu (refer to Figure 1-20) has three broad categories — Most Used Applications shows the icons for applications you have used recently, All Applications organizes the applications that you can access, and Actions shows buttons for some common daily tasks such as locking the screen, running a command, or logging out. You should browse the All Applications category to familiarize yourself with what SUSE has to offer as a desktop operating system.
+
+# *Introducing the Ubuntu's GNOME Desktop*
+
+Ubuntu uses the GNOME as its GUI desktop, with its characteristic top and bottom panels, as shown in Figure 1-21. Unlike desktops in other distributions, Ubuntu does not use any desktop icons and has a clean look.

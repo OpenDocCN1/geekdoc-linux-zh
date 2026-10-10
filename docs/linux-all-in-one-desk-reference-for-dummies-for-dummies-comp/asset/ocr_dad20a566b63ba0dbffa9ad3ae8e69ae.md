@@ -1,0 +1,17 @@
+# Typical top 20 computer vulnerabilities
+
+The SANS Top 20 Internet security vulnerabilities list includes several types of vulnerabilities, such as Windows, cross-platform, and UNIX. Of these, the UNIX and cross-platform vulnerabilities are relevant to Linux. Table 4-1 summarizes some common UNIX and cross-platform vulnerabilities that apply to Linux. You can read the complete details about these vulnerabilities at www.sans.org/top20.
+
+| Table 4-1 Some Common Vulnerabilities to UNIX Systems | | | | 
+| --- | --- | --- | --- | 
+| Vulnerability Type | Description | | | 
+| BIND DNS | Berkeley Internet Name Domain (BIND) is a package that implements Domain Name System (DNS), the Internet’s name service that translates a name to an IP address. Some versions of BIND have vulnerabilities. | | | 
+| Apache Web server | Some Apache Web server modules (such as mod_ssl) have known vulnerabilities. Any vulnerability in Common Gateway Interface (CGI) programs used with Web servers to process interactive Web pages can provide attackers a way to gain access to a system. | | | 
+| Authentication | User accounts often have no passwords or weak passwords that are easily cracked by password-cracking programs. | | | 
+| CVS, Subversion | Concurrent Versions System (CVS) is a popular source-code control system used in Linux systems. Subversion is another version control system for Linux that is becoming popular. These version control systems have vulnerabilities that can enable an attacker to execute arbitrary code on the system. | | | 
+| sendmail | sendmail is a complex program used to transport mail messages from one system to another, and some versions of sendmail have vulnerabilities. | | | 
+| SNMP | Simple Network Management Protocol (SNMP) is used to remotely monitor and administer various network-connected systems ranging from routers to computers. SNMP lacks good access control, so if SNMP is running on your system, an attacker may be able to reconfigure or shut down your system. | | | 
+| Open Secure Sockets Layer (OpenSSL) | Many applications, such as Apache Web server, use OpenSSL to provide cryptographic security for a network connection. Unfortunately, some versions of OpenSSL have known vulnerabilities that could be exploited. | | | 
+| Network File System (NFS) and Network Information Service (NIS) | Both NFS and NIS have many security problems (for example, buffer overflow, potential for denial-of-service attacks, and weak authentication). Also, NFS and NIS are often misconfigured, which could allow local and remote users to exploit the security holes. | | | |
+
+(continued)

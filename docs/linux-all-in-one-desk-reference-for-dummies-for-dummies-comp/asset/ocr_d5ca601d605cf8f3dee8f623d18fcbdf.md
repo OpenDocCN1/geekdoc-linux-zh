@@ -1,0 +1,25 @@
+# # Chapter 1: Introducing
+## the GUI Desktops
+
+# In This Chapter
+
++   - Discovering the common features of the GNOME and KDE GUIs
++   - Introducing Debian’s GNOME desktop
++   - Introducing Fedora Core’s GNOME desktop
++   - Introducing the Knoppix desktop
++   - Introducing the MEPIS desktop
++   - Introducing the SUSE desktop
++   - Introducing the Ubuntu’s GNOME desktop
++   - Introducing the Xandros desktop
+
+Linux distributions come with one of two popular graphical user interfaces (GUIs)—GNOME and KDE. GNOME and KDE are similar to Microsoft Windows, but they are unique in one respect. Unlike Microsoft Windows, you can pick your GUI in Linux. If you don’t like GNOME, just log out and log back in with the KDE, the other GUI. Try doing that with Microsoft Windows!
+
+![](bbox=[0.11, 0.64, 0.21, 0.74])
+
+GNOME and KDE were developed independently of Linux. In fact, GNOME and KDE run on other UNIX operating systems besides Linux. You also have the option to install other GUIs, such as FVWM and Xfce, in Linux. Visit www.freedesktop.org/wiki/Desktops to see a list of other X desktops (desktops that run on X Window System).
+
+This chapter explores the major features of GNOME and KDE. You can best figure out these GUIs by simply starting to use them.
+
+![](bbox=[0.11, 0.78, 0.21, 0.88])
+
+Each Linux distribution typically installs one of the GUIs by default. The default GUI is GNOME in Debian, Fedora Core, and Ubuntu; and the default is KDE in Knoppix, MEPIS, SUSE, and Xandros. In Debian, you can install either GNOME or KDE. Each distribution also customizes GNOME or KDE to create a desktop that is unique to the distribution. For this reason, I also provide an overview of each distribution’s desktop—GNOME with Debian, Fedora Core, and Ubuntu; and KDE with Knoppix, MEPIS, SUSE, and Xandros. Think of this as a brief introduction. You have to explore the desktops on your own because that’s the best way to get used to the GUIs.

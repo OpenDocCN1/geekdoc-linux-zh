@@ -1,0 +1,27 @@
+# # Sidebars
+
+Sometimes, I use sidebars to highlight interesting, but not critical, information. Sidebars explain concepts you may not have encountered before
+
+or give a little insight into a related topic. If you're in a hurry, you can safely skip the sidebars.
+
+**Book VII: Internet Servers**: Managing the Internet services. Configuring the Apache Web server. Setting up the FTP server. Configuring the mail and news servers. Providing DNS. File sharing with NFS. Using Samba to set up a Windows server.
+
+**Book VIII: Programming**: Finding out the basics of programming. Exploring the software development tools in Linux. Writing shell scripts. Learning C and Perl programming.
+
+**Appendix: About the DVD**: Summarizes the contents of the book's companion DVD-ROM.
+
+# ## What's on the DVD?
+
+The DVD contains seven Linux distributions — it's a combined Fedora Core 4 and Knoppix DVD that contains a *distros* folder with ISO image files for Debian, Knoppix, MEPIS, SUSE, Ubuntu, and Xandros, organized into individual folders. You may use the DVD in accordance with the license agreements accompanying the software. To find out more about the contents of the DVD, please consult the appendix.
+
+# ## Icons Used in This Book
+
+Following the time-honored tradition of the *All-in-One Desk Reference For Dummies* series, I use icons to help you quickly pinpoint useful information. The icons include the following:
+
+![](bbox=[0.12, 0.835, 0.21, 0.89])
+
+The Distribution Specific icon points out information that applies to specific distributions — Debian, Fedora Core, Knoppix, MEPIS, SUSE, Ubuntu, and Xandros — that this book covers.
+
+![](bbox=[0.12, 0.905, 0.21, 0.96])
+
+The Remember icon marks a general, interesting fact — something that you want to know and remember.

@@ -1,0 +1,21 @@
+# # Chapter 2: Installing Linux
+
+# ## In This Chapter
+
++   - Understanding the installation steps
++   - Making a list of your PC’s hardware
++   - Trying out Knoppix from the DVD
++   - Burning CDs or DVDs for your distribution
++   - Setting aside hard drive space for Linux
++   - Installing Debian
++   - Installing Fedora Core
++   - Installing MEPIS
++   - Installing SUSE Linux
++   - Installing Ubuntu
++   - Installing Xandros Desktop
+
+PCs come with Microsoft Windows pre-installed. If you want to use Linux, you first have to install it.
+
+This book comes with a DVD-ROM that contains several Linux distributions — Debian, Fedora, Knoppix, MEPIS, SUSE, Ubuntu, and Xandros. Some are full distributions, and a few are Live CDs that you can try without installing on the hard drive. (*Full distributions* mean everything you need to install those distributions, whereas *Live CDs* mean CDs from which you can directly boot Linux.) The version of Xandros on the DVD is a limited version of Xandros Desktop called the *Open Circulation Edition*. All you have to do to install or try any of these distributions is follow the steps in this chapter.
+
+You may feel a tad worried about installing a new operating system on your PC because it’s a bit like brain surgery — or, rather, more like grafting a new brain because you can install Linux in addition to Microsoft Windows. When you install two operating systems like that, you can choose to start one or the other as you power up the PC. The biggest headache in adding Linux to a PC with Windows is creating a new *disk partition* — basically setting aside a

@@ -1,0 +1,164 @@
+
+## Compiling Multiple C++ Files with Make
+
+To compile a large number of C++ files by using GCC with the same options, for example, typing the options for each file is tedious. You can avoid this repetitive task by defining a variable or macro in make as follows:
+
+```
+# Define macros for name of compiler
+CXX= g++
+# Define a macro for the GCC flags
+CXXFLAGS= -O2 -g -mcpu=i686
+# A rule for building an object file
+form.o: form.C form.h
+        $(CXX) -c $(CXXFLAGS) form.C
+```
+
+In this example, `CXX` and `CXXFLAGS` are *make* variables. (*GNU make* prefers to call them variables, but most UNIX make utilities call them macros.)
+
+To use a variable anywhere in the makefile, start with a dollar sign ($) followed by the variable within parentheses. GNU make replaces all occurrences of a variable with its definition; thus it replaces all occurrences of `$(CXXFLAGS)` with the string `-O2 -g -mcpu=i686`.
+
+GNU make has several predefined variables that have special meanings. Table 1-2 lists these variables. In addition to the variables listed in Table 1-2, GNU make considers all environment variables (such as PATH and HOME) to be predefined variables as well.
+
+| Variable | Meaning |
+| :--- | :--- |
+| $% | Member name for targets that are archives. If the target is libDisp.a (image.o), for example, $% is image.o. |
+| $* | Name of the target file without the extension |
+| $+ | Names of all dependent files with duplicate dependencies, listed in their order of occurrence |
+| $< | The name of the first dependent file |
+| $? | Names of all dependent files (with spaces between the names) that are newer than the target |
+| $@ | Complete name of the target. If the target is libDisp.a (image.o), for example, $@ is libDisp.a |
+| $^ | Names of all dependent files, with spaces between the names. Duplicates are removed from the dependent filenames. |
+| AR | Name of the archive-maintaining program (default value: ar) |
+| ARFLAGS | Flags for the archive-maintaining program (default value: rv) |
+| AS | Name of the assembler program that converts the assembly language to object code (default value: as) |
+| ASFLAGS | Flags for the assembler |
+| CC | Name of the C compiler (default value: cc) |
+| CFLAGS | Flags that are passed to the C compiler |
+| CO | Name of the program that extracts a file from RCS (default value: co) |
+| COFLAGS | Flags for the RCS co program |
+| CPP | Name of the C preprocessor (default value: $(CC) -E) |
+| CPPFLAGS | Flags for the C preprocessor |
+| CXX | Name of the C++ compiler (default value: g++) |
+| CXXFLAGS | Flags that are passed to the C++ compiler |
+| FC | Name of the FORTRAN compiler (default value: f77) |
+| FFLAGS | Flags for the FORTRAN compiler |
+| LDFLAGS | Flags for the compiler when it is supposed to invoke the linker ld |
+| RM | Name of the command to delete a file (Default value: rm -f) |
+
+## A sample makefile
+
+You can write a makefile easily if you use the predefined variables of GNU make and its built-in rules. Consider, for example, a makefile that creates the executable xdraw from three C source files (xdraw.c, xviewobj.c, and shapes.c) and two header files (xdraw.h and shapes.h). Assume that each source file includes one of the header files. Given these facts, here is what a sample makefile may look like:
+
+```
+#####################################################################
+# Sample makefile
+# Comments start with '#'
+#
+#####################################################################
+# Use standard variables to define compile and link flags
+CFLAGS= -g -O2
+# Define the target "all"
+all: xdraw
+
+
+OBJS=xdraw.o xviewobj.o shapes.o
+xdraw: $(OBJS)
+
+# Object files
+xdraw.o: Makefile xdraw.c xdraw.h
+xviewobj.o: Makefile xviewobj.c xdraw.h
+shapes.o: Makefile shapes.c shapes.h
+```
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_712_0.png)
+
+This *makefile* relies on GNU *make*'s implicit rules. The conversion of .c files to .o files uses the built-in rule. Defining the variable *CFLAGS* passes the flags to the C compiler.
+
+The target named *all* is defined as the first target for a reason — if you run GNU *make* without specifying any targets in the command line (see the *make* syntax described in the following section), the command builds the first target it finds in the *makefile*. By defining the first target *all* as *xdraw*, you can ensure that *make* builds this executable file, even if you do not explicitly specify it as a target. UNIX programmers traditionally use *all* as the name of the first target, but the target's name is immaterial; what matters is that it is the first target in the *makefile*.
+
+## How to run make
+
+Typically, you run *make* by simply typing the following command at the shell prompt:
+
+make
+
+When run this way, GNU *make* looks for a file named *GNUmakefile*, *makefile*, or *Makefile* — in that order. If *make* finds one of these *makefiles*, it builds the first target specified in that *makefile*. However, if *make* does not find an appropriate *makefile*, it displays the following error message and exits:
+
+make: *** No targets specified and no *makefile* found. Stop.
+
+If your *makefile* happens to have a different name from the default names, you have to use the *-f* option to specify the *makefile*. The syntax of the *make* command with this option is
+
+make -f *filename*
+
+where *filename* is the name of the *makefile*.
+
+Even when you have a *makefile* with a default name such as *Makefile*, you may want to build a specific target out of several targets defined in the *makefile*. In that case, you have to use the following syntax when you run *make*:
+
+make target
+
+For example, if the *makefile* contains the target named *clean*, you can build that target with this command:
+
+make clean
+
+Another special syntax overrides the value of a *make* variable. For example, GNU *make* uses the `CFLAGS` variable to hold the flags used when compiling C files. You can override the value of this variable when you invoke *make*. Here is an example of how you can define `CFLAGS` as the option `-g -O2`:
+
+```
+make CFLAGS="-g -O2"
+```
+
+In addition to these options, GNU *make* accepts several other command-line options. Table 1-3 lists the GNU *make* options.
+
+| Option | Meaning |
+| :--- | :--- |
+| -b | Ignore but accept for compatibility with other versions of make |
+| -C DIR | Change to the specified directory before reading the makefile |
+| -d | Print debugging information |
+| -e | Allow environment variables to override definitions of similarly named variables in the makefile |
+| -f FILE | Read FILE as the makefile |
+| -h | Display the list of make options |
+| -i | Ignore all errors in commands executed when building a target |
+| -I DIR | Search specified directory for included makefiles. (The capability to include a file in a makefile is unique to GNU make.) |
+| -j NUM | Specify the number of commands that make can run simultaneously |
+| -k | Continue to build unrelated targets, even if an error occurs when building one of the targets |
+| -l LOAD | Don't start a new job if load average is at least LOAD (a floating-point number) |
+| -m | Ignore but accept for compatibility with other versions of make |
+| -n | Print the commands to execute, but do not execute them |
+| -o FILE | Do not rebuild the file named FILE, even if it is older than its dependents |
+| -p | Display the make database of variables and implicit rules |
+| -q | Do not run anything, but return 0 (zero) if all targets are up to date; return 1 if anything needs updating; and 2 if an error occurs |
+| -r | Get rid of all built-in rules |
+| -R | Get rid of all built-in variables and rules |
+| -s | Work silently (without displaying the commands as they execute) |
+| -t | Change the timestamp of the files |
+| -v | Display the version number of **make** and a copyright notice |
+| -w | Display the name of the working directory before and after processing the **makefile** |
+| -w FILE | Assume that the specified file has been modified (used with **-n** to see what happens if you modify that file). |
+
+# The GNU debugger
+
+Although **make** automates the process of building a program, that part of programming is the least of your worries when a program does not work correctly or when a program suddenly quits with an error message. You need a debugger to find the cause of program errors. Linux includes **gdb** — the versatile GNU debugger with a command-line interface.
+
+Like any debugger, **gdb** lets you perform typical debugging tasks, such as the following:
+
+- Set the breakpoint so that the program stops at a specified line
+- Watch the values of variables in the program
+- Step through the program one line at a time
+- Change variables in an attempt to fix errors
+
+The **gdb** debugger can debug C and C++ programs.
+
+## Preparing to debug a program
+
+If you want to debug a program by using **gdb**, you have to ensure that the compiler generates and places debugging information in the executable. The debugging information contains the names of variables in your program and the mapping of addresses in the executable file to lines of code in the source file. **gdb** needs this information to perform its functions, such as stopping after executing a specified line of source code.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_714_0.png)
+
+To ensure that the executable is properly prepared for debugging, use the -g option with GCC. You can do this task by defining the variable **CFLAGS** in the **makefile** as
+
+```
+CFLAGS= -g
+```
+
+## Running gdb
+
+The most common way to debug a program is to run **gdb** by using the following command:

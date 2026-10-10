@@ -768,6 +768,7 @@
 +   [Linux 初学者指南](docs/linux-all-in-one-desk-reference-for-dummies/README.md)
 +   [Linux 一本全大傻瓜指南](docs/linux-all-in-one-desk-reference-for-dummies-2nd-edition/README.md)
 +   [Linux 初学者指南全书：[8 本快速参考指南 - 超值优惠！；8 本合一]](docs/linux-all-in-one-desk-reference-for-dummies-eight-quick-refe/README.md)
++   [《Linux 全合一指南 新手入门手册》](docs/linux-all-in-one-desk-reference-for-dummies-for-dummies-comp/README.md)
 +   [Linux 初学者指南](docs/linux-all-in-one-for-dummies/README.md)
 +   [Linux 全能指南 (第 4 版)](docs/linux-all-in-one-for-dummies-4th-edition/README.md)
 +   [Linux 全能指南（第 5 版）](docs/linux-all-in-one-for-dummies-5th-edition/README.md)

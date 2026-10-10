@@ -1,0 +1,37 @@
+![](bbox=[0.13, 0.29, 0.25, 0.37])
+
+CodeWeavers created CrossOver Office by using a customized version of Wine to make sure that the Microsoft Office applications (especially Microsoft Word, Excel, and PowerPoint) run properly on Wine. CodeWeavers charges a nominal amount for CrossOver Office — the list price is $39.95 U.S. for CrossOver Office Standard and $74.95 U.S. for CrossOver Office Professional. However, all code changes and improvements to Wine are returned to the Wine project. Thus, the Wine open source project benefits from the sale of CrossOver Office.
+
+The commercial version of Xandros comes with CrossOver Office. You have to run the CrossOver Office setup and then install Microsoft Office from the original CD before you can start using Microsoft Office applications. During installation, you have to enter the product key for Microsoft Office, just as you would on a Windows installation.
+
+# Aspell spelling checker
+
+The Aspell utility is an interactive spelling checker. You can use it to check the spelling of words in a text file. To do so, simply type the following command in a terminal window:
+
+```
+aspell check filename
+```
+
+If you want to try out Aspell, type some notes and save them in a text file named notes.txt. (The filename can be anything, but I use this filename in this section.) To run the spelling checker on that file, type the following command in a terminal window:
+
+```
+aspell check notes.txt
+```
+
+Here’s what Aspell displays:
+
+```
+This note describes the *concensus* reached during the August 16 meeting.
+
+1) concensus 6) consensual
+2) con census 7) conciences
+3) con-census 8) incenses
+4) condenses 9) consensues’s
+5) concerns 0) consensuses
+i) Ignore all I) Ignore all
+r) Replace X) Replace all
+a) Add x) Exit
+?
+```
+
+When Aspell finds a misspelled word (any word that doesn’t appear in its dictionary), it displays the sentence with the misspelled word (concensus) and highlights that word by enclosing it in a pair of asterisks. Below that

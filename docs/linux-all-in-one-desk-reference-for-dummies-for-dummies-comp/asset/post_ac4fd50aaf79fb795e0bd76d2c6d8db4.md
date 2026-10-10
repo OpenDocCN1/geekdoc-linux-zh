@@ -1,0 +1,118 @@
+
+❖ **Main Menu:** Brings up the Main Menu (see Figure 1-23) from which you can start applications, run a command, get help, switch users, or log out.
+❖ **Firefox Web Browser:** Runs the Mozilla Firefox Web browser.
+❖ **Thunderbird Mail:** Starts the Mozilla Thunderbird Mail program for accessing your e-mail.
+❖ **Xandros File Manager:** Starts the Xandros File Manager, which is similar to Windows Explorer in its layout and its ability to navigate local as well as remote file systems.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_184_0.png)
+
+## 160 Introducing the Xandros Desktop
+
+- **Help:** Click to open the Xandros Desktop Help Center window, where you can get some help on Xandros and UNIX.
+- **Show Desktop:** Click to hide all windows and show the desktop.
+- **Desktop Pager:** Click each square to bring up a different desktop.
+- **Volume:** Click to change sound volume by dragging a slider.
+- **Updates:** Click to see status of Xandros updates and open Xandros Networks to perform online updates.
+- **Lock Desktop:** Click to lock the screen so that no one can access it. (You can access it again by entering your password.)
+- **Logout:** Click to log out. (You have to confirm that you really want to log out.)
+- **Clock:** Displays the current time. Clicking brings up a Time and Date utility for setting date and time.
+- **Hide Panel:** Click to hide the panel. The panel slides to the right and disappears, leaving only the button. Click again to view the panel. By hiding the panel, you have more room for your application windows.
+
+Xandros uses a streamlined Main Menu, shown in Figure 1-23, that appears when you click Main Menu on the panel. The menu has all applications organized into a single Applications category.
+
+You can explore the Main Menu to find out more about the applications that come with Xandros. I provide an overview of the applications in Chapter 4 of this miniBook.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_185_0.png)
+
+Try out the Xandros File Manager by clicking the icon on the panel. From the Xandros File Manager, you can browse various folders in your system, as well as access any Windows shares on your local area network. You can do all the usual things: move or copy files by dragging them and double-click on files to open them. I found the Xandros File Manager to be a good starting point for my Xandros sessions.
+
+### Figure 1-23: Xandros desktop provides a streamlined Main Menu.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_185_1.png)
+
+# Chapter 2: Commanding the Shell
+
+## In This Chapter
+
+- Opening terminal windows and virtual consoles
+- Using the bash shell
+- Discovering some Linux commands
+- Writing shell scripts
+
+Sometimes, things just don't work. What do you do if the GUI desktop stops responding to your mouse clicks? What if the GUI doesn't start at all? You can still tell your Linux system what to do, but you have to do it by typing commands into a text screen. In these situations, you work with the shell—the Linux command interpreter. I introduce the bash shell (the default shell in most Linux distributions) in this chapter.
+
+After you figure out how to work with the shell, you may even begin to like the simplicity and power of the Linux commands. And then, even if you're a GUI aficionado, someday soon you may find yourself firing up a terminal window and making the system sing and dance with two- or three-letter commands strung together by strange punctuation characters. (Hey, I can dream, can't I?)
+
+## Opening Terminal Windows and Virtual Consoles
+
+First things first. If you're working in a GUI desktop, such as GNOME or KDE, where do you type commands for the shell? Good question.
+
+The easiest way to get to the shell is to open a terminal (also called console) window. The GNOME and KDE GUIs in most distributions include an icon (or a Main Menu option) to open a terminal window. Click that icon or choose the menu option to get a terminal window. Now you can type commands to your heart's content.
+
+If, for some reason, the GUI seems to be hung (you click and type but nothing happens), you can turn to the virtual consoles. (The physical console is the monitor-and-keyboard combination.) The idea of virtual consoles is to give you the ability to switch between several text consoles even though you have only one physical console. Whether you are running a GUI or not, you can then use different text consoles to type different commands.
+
+To get to the first virtual console from the GNOME or KDE desktop, press Ctrl+Alt+F1. Press Ctrl+Alt+F2 for the second virtual console, and so on. Each of these virtual consoles is a text screen where you can log in and type Linux commands to perform various tasks. When you’re done, type `exit` to log out.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_187_0.png)
+
+You can use up to six virtual consoles. In most distributions, the seventh one is used for the GUI desktop. To get back to the GUI desktop, press Ctrl+Alt+F7.
+
+# Using the *Bash* Shell
+
+If you’ve used MS-DOS, you may be familiar with `COMMAND.COM`, the DOS command interpreter. That program displays the infamous `C:\>` prompt. In Windows, you can see this prompt if you open a command window. (To open a command window in Microsoft Windows, choose Start > Run, type **command** in the text box, and then click OK.)
+
+Linux comes with a command interpreter that resembles `COMMAND.COM` in DOS, but it can do a whole lot more. The Linux command interpreter is called a *shell*.
+
+The default shell in many Linux distributions is *bash*. When you open a terminal window or log in at a text console, the *bash* shell is what prompts you for commands. Then, when you type a command, the shell executes your command. By the way, just as there are multiple GUIs (GNOME or KDE) for Linux, you have the choice of shells besides *bash*. For example, the *c* shell is an alternate shell that some people prefer. You can easily change your default shell by using the `chsh` command.
+
+In addition to the standard Linux commands, *bash* can execute any computer program. So you can type the name of an application (the name is usually more cryptic than what you see in GNOME or KDE menus) at the shell prompt, and the shell starts that application.
+
+## Understanding the *syntax* of shell commands
+
+Because a shell interprets what you type, knowing how the shell processes the text you enter is important. All shell commands have this general format that starts with a command followed by options. (Some commands have no options.)
+
+```
+command option1 option2 . . . optionN
+```
+
+Such a single on-screen line giving a command is commonly referred to as a *command line*. On a command line, you enter a command, followed by zero or more options (*or arguments*). These strings of options — the *command line options* (*or command line arguments*) — modify the way the command works so that you can get it to do specific tasks.
+
+The shell uses a blank space or a tab to distinguish between the command and options. Naturally, you help it by using a space or a tab to separate the command from the options and the options from one another.
+
+An option can contain spaces — all you have to do is put that option inside quotation marks so that the spaces are included. For example, to search for my name in the password file, I enter the following `grep` command (`grep` is used for searching for text in files):
+
+```
+grep "Naba Barkakati" /etc/passwd
+```
+
+When `grep` prints the line with my name, it looks like this:
+
+```
+naba:x:1000:100:Naba Barkakati:/home/naba:/bin/bash
+```
+
+If you create a user account with your username, type the `grep` command with your username as an argument to look for that username in the `/etc/passwd` file.
+
+In the output from the `grep` command, you can see the name of the shell (`/bin/bash`) following the last colon (`:`).
+
+The number of command line options and their format, of course, depends on the actual command. Typically, these options look like `-X`, where X is a single character. For example, the `ls` command lists the contents of a directory. You can use the `-l` option to see more details. For example, here is a result of typing `ls -l` in a user’s home directory:
+
+```
+total 0
+drwxr-xr-x  2 naba users  48 2005-09-08 21:11 bin
+drwx------  2 naba users 320 2005-09-08 21:16 Desktop
+drwx------  2 naba users  80 2005-09-08 21:11 Documents
+drwxr-xr-x  2 naba users  80 2005-09-08 21:11 public_html
+drwxr-xr-x  2 naba users 464 2005-09-17 18:21 sdump
+```
+
+If a command is too long to fit on a single line, you can press the backslash key followed by Enter. Then, continue typing the command on the next line. For example, type the following command. (Press Enter after each line.)
+
+```
+cat \
+/etc/passwd
+```
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_188_0.png)
+![](img/11709a8f88c8cd03868a929dc94c0e2b_188_1.png)
+![](img/11709a8f88c8cd03868a929dc94c0e2b_188_2.png)

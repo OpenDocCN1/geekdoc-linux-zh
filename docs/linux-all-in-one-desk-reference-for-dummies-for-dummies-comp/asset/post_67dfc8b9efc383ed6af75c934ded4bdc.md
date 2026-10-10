@@ -1,0 +1,301 @@
+
+- Support for industry standard Executable and Linking Format (ELF) and Intel Binary Compatibility Specification (IBCS)
+- A complete suite of standard UNIX utilities from the GNU project
+- Tools to access and use DOS files and applications (mtools 3.9.10)
+- Text formatting and typesetting software (groff, TeX, and LaTeX)
+
+## Troubleshooting
+
+If you have difficulty installing or using the materials on the companion DVD, consult the detailed installation and troubleshooting instructions in Book I.
+
+If you still have trouble with the DVD-ROM, please call the Wiley Product Technical Support phone number: (800) 762-2974. Outside the United States, call 1(317) 572-3994. You can also contact Wiley Product Technical Support through the Internet at www.wiley.com/techsupport. Wiley Publishing will provide technical support only for installation and other general quality control items; for technical support on the applications themselves, consult the program's vendor or author.
+
+To place additional orders or to request information about other Wiley products, please call (800) 225-5945.
+
+## Index
+
+### Symbols
+
+- asterisk wildcard, 167–168
+- ! FTP command, 368
+- ? FTP command, 368
+- ? (question mark) wildcard, 167–168
+
+### A
+
+- ABI (application binary interface), LSB and, 15
+- AbiWord, 208
+- access point, wireless network, 292–293
+- accounts, users, system administration, 373
+- acpid Internet service, 580
+- Actions menu, Debian GNOME desktop, 142
+- ADSL (Asymmetric DSL), 258
+- alt newsgroups, 348
+- amarok, 209
+- apache Internet service, 580
+- Apache Web server
+  - access-control directives, 601–603
+  - computer vulnerabilities and, 551
+  - configuration, 589–606
+  - configuration file, 593–603
+  - configuration tools, 590–592
+  - installation, 587–588
+  - naming of, 588
+  - resource configuration directives, 596–600
+  - starting, 588–589
+  - virtual host setup, 603–606
+- apache2 Internet service, 580
+- apmd Internet service, 580
+- append FTP command, 368
+- application gateway, 508
+- Application layer, TCP/IP, 276
+- application-proxy firewall, 537–538
+- applications
+  - databases, 209
+  - default availability, 212–214
+  - graphics and imaging, 210
+  - GUIs, 19–21
+  - Internet, 210–211
+  - multimedia, 209
+  - office applications, 208
+  - office tools, 208
+  - text editors, 208
+- Applications menu
+  - Debian GNOME desktop, 142
+  - Fedora Core GNOME desktop, 145
+  - Ubuntu GNOME desktop, 157
+- Appware
+  - description, 21
+  - overview, 220
+- APT
+  - DEB files and, 459–461
+  - Debian updates, 465–466
+  - MEPIS Linux updates, 465–466
+  - Ubuntu Linux updates, 465–466
+- archives. See also backups
+  - commands for, 172
+  - multivolume archives, 438
+  - single-volume archive, 436–437
+  - tar program, 26, 436–441
+- Arkeia utility, 436
+- array variables, Perl, 747, 749
+- arrays, C programming, 707–708
+- ascii FTP command, 368
+- Aspell, 208, 222–223
+- associative arrays, Perl, 747, 750
+- asterisk (*) wildcard, 167–168
+- ATA support, kernel, 483
+- ATAPI support, kernel, 483
+- at Internet service, 580
+- attachments to e-mail, 316
+- audio CDs
+  - multimedia applications, 228
+  - playing, 230–231
+- audit, security. See security audits
+- authentication
+  - computer vulnerabilities, 551
+  - security, 504, 508
+- authorization, security, 504
+- autocanc GNU software package, 17
+- autofs Internet service, 580
+- automake GNU software package, 17
+- automated backups, 440
+- automate command completion, 167
+- automation, system administration, 374
+
+### B
+
+- backdoor, security, 508
+- backups. See also archives
+  - automated, 440
+  - commercial utilities, 435–436
+  - devices, 435
+  - incremental, 440
+  - media, 434–435
+  - multivolume archives, 438
+  - single-volume archive, 436–437
+  - strategies, 434–435
+  - system administration, 374
+  - tapes, 439–440
+- Bare Metal Plus utility, 436
+- bash GNU software package, 17
+- bash shell
+  - built-in commands, 739–742
+  - overview, 162
+  - starting, 126–127
+- bastion host, security, 508
+- bc GNU software package, 17
+- /bin directory, 427
+- binary FTP command, 369
+- BIND DNS
+  - computer vulnerabilities, 551
+  - Debian, 642
+  - Fedora Core, 642
+  - MEPIS, 642
+  - named daemon, 643
+  - resolver library, 644
+  - Ubuntu, 642
+  - Utility programs, 644–645
+  - Xandros, 642
+- BIND name server, 643
+- Binutils GNU software package, 17
+- bionet newsgroups, 348
+- bit newsgroups, 348
+- biz newsgroups, 348
+- block devices
+  - kernel, 482–483
+  - overview, 402
+- blogs, 358–360
+- BogoMIPS, 112
+- boot commands, Knoppix, 84–86
+- /boot directory, 427
+- /boot/grub configuration file, 390
+  - /boot/grub/menu.lst
+    - configuration file, 390
+- boot loader
+  - Fedora Core installation, 52
+  - kernel and, 112
+  - startup and, 111
+  - SUSE Linux installation, 68
+- boot messages, kernel startup and, 112
+- boot options, Linux kernel, 87–89
+- /boot/System.map configuration file, 390
+- /boot/vmlinuz configuration file, 390
+- booting
+  - definition, 111
+  - from DVD drive, 33
+  - /etc/initab file, 386–387
+  - Fedora Core, 113–114
+  - init process, 384–386
+  - login screen, 113–114
+  - network configuration at boot time, 308–309
+  - Ubuntu, 114
+  - Xandros, 113–114
+- break statement, C programming, 715
+- BrightStore ARcsereve Backup for Linux, 436
+- Browse Windows Network, 436
+  - MEPIS KDE desktop, 152
+- browsers. See Web browsers
+- BRU utility, 436
+- buffer overflow, security, 508
+- building kernel, 491–492
+- building modules, modular kernel, 491–492
+- built-in functions, Perl, 762–763
+- burning CDs/DVDs
+  - ISO images and, 37–39
+  - Knoppix, 38–39
+  - multimedia applications, 233–234
+  - Nautilus, 186–187
+- business requirements for security, 501
+
+### C
+
+- C++, compiling, 680
+- C and C++ compilers, GCC, 678–682
+- C programming
+  - arrays, 707–708
+  - bit fields, 707–710
+  - break statement, 715
+  - case statement, 716
+  - compound statements, 716
+  - continue statement, 716–717
+  - declarations, 700
+  - default label, 717
+  - definitions, 700
+  - do statement, 717
+  - enumerations, 706
+  - expression statements, 717
+  - expressions, 711–713
+  - function library, 722–723
+  - function prototypes, 721–722
+  - functions, variable number of arguments, 722
+  - goto statement, 718
+  - header files, 699, 722–723
+  - if-else statement, 718–719
+  - if statement, 718
+  - macros, 704–705
+  - null statement, 719
+  - operators, 711–715
+  - pointers, 708–709
+  - preprocessor directives, 701–705
+  - program structure, 699–701
+  - return statement, 719
+  - shared libraries, 724–729
+  - for statement, 717–718
+  - structures, 707–710
+  - switch statement, 719–720
+  - type definitions, 709–710
+  - type qualifiers, 710
+  - unions, 707–710
+  - variables, 705–706
+  - void type, 722
+  - while statement, 720–721
+- CA (certificate authority), security, 508
+- cable modem connection
+  - CMTS (Cable Modem Termination System), 263
+  - comparison to other connections, 255–256
+  - connecting with, 262–267
+  - overview, 255
+  - setup, 264–267
+  - upstream data, 262
+- cabling, Ethernet, 281–283
+- caching name server
+  - /etc/named.conf file, 647–650
+  - resource record formats, 650–653
+  - zone files, 650
+- Calc, OpenOffice.org, 216–217
+- calculators
+  - GNO ME, 219–220
+  - KDE, 219–220
+- calendars, 218–219
+- case statement, C programming, 716
+- categories of newsgroups, 347–348
+- CD/DVD Burning option, MEPIS KDE desktop, 153
+- cd FTP command, 369
+- CD with book
+  - burning, 32–33
+  - distributions, 31–32
+  - cdrecord, 209
+- CDs. See also audio CDs
+  - burning, multimedia applications, 233–234
+  - burning, Nautilus, 186–187
+  - introduction, 25
+  - management, 103
+  - SUSE Linux installation, 63–65
+- certificate, security, 508
+- character device support, kernel, 486
+- character devices, 402–403
+- chkconfig command
+  - Fedora Core, 576–577
+  - SUSE Linux, 576–577
+- chmod FTP command, 369
+- clari newsgroups, 348
+- client/server model, sockets, 568
+- clients, Internet services, 565
+- Clipboard Tool
+  - MEPIS KDE desktop, 153
+  - SUSE Linux desktop, 155
+- clock
+  - SUSE Linux desktop, 155
+  - Xandros Desktop, 160
+- close FTP command, 369
+- command completion, 167
+- command line arguments, 163
+- command line options, 163
+  - description, 127
+  - programming, and, 675
+- command-line FTP client, 366–370
+- command processor, programming, 675
+- commands
+  - archiving, 172
+  - compressing files, 172
+  - date and time, 173
+  - depmod, 404
+  - directory management, 170, 201–202
+  - directory navigation, 195–196
+  - disk-space usage, 204–206
+  - dmseg, 112
+  - dpkg, 457–459
+  - ed text editor, 244
+  - error messages, saving to file, 166
+  - file management, 170, 200–201

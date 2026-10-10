@@ -1,0 +1,34 @@
+```
+```
+/* Declare PointPtr to be pointer to Point types */
+   typedef Point *P_PointPtr;
+/* Define some instances of these types
+ * and initialize them */
+   Point      a = {0, 0};
+   PointPtr   p_a = &a;
+```
+```
+
+As shown by the `Point` and `PointPtr` types, you can use `typedef` to declare complex data types conveniently.
+
+# *Type qualifiers: const and volatile*
+
+Two type qualifiers, `const` and `volatile`, work this way in a declaration:
+
++   - The `const` qualifier in a declaration tells the compiler that the program must not modify the particular data object. The compiler must not generate code that might alter the contents of the location where that data item is stored.
+
++   - The `volatile` qualifier specifies that factors beyond the program’s control may change the value of a variable.
+
+You can use both `const` and `volatile` keywords on a single data item to mean that, although your program must not modify the item, some other process may alter it. The `const` and `volatile` keywords always qualify the item that immediately follows (to the right). The information provided by the `const` and the `volatile` qualifiers is supposed to help the compiler optimize the code it generates. For example, suppose that the variable `block_size` is declared and initialized as follows:
+
+```
+`const int block_size = 512;`
+```
+
+In this case, the compiler does not need to generate code to load the value of `block_size` from memory. Instead, it can use the value 512 wherever your program uses `block_size`. Now suppose that you add `volatile` to the declaration and change the declaration to
+
+```
+`volatile const int block_size = 512;`
+```
+
+This declaration says that some external process can change the contents of `block_size`. Therefore, the compiler cannot optimize away any reference to `block_size`. You may need to use such declarations when referring to an I/O port or video memory because these locations can be changed by factors beyond your program’s control.

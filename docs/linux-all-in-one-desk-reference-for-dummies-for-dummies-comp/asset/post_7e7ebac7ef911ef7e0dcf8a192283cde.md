@@ -1,0 +1,65 @@
+
+## Checking Your PC’s Hardware
+
+- **Monitor**: The kind of monitor is not particularly critical except that it must be capable of displaying the screen resolutions that the video card uses. The screen resolution is expressed in terms of the number of picture elements (*pixels*), horizontally and vertically (for example, 1024 × 768). The installer can detect most modern monitors. If it doesn’t detect your monitor, you can select a generic monitor type with a specific resolution (such as 1024 × 768). You can also specify the monitor by its make and model (which you can find on the back of the monitor).
+
+- **Mouse**: The installation program can detect the mouse. All types of mouse (such as PS/2 or USB) work with Linux and the X Window System.
+
+- **Network card**: Not all PCs have network cards, but if your does, the installer can probably detect and use it. If you have problems, try to find the make and model (such as Linksys LNE100TX Fast Ethernet Adapter) so that you can search for information on whether Linux supports that card.
+
+- **Processor**: A 400 MHz Pentium II or better is best. The processor speed, expressed in *MHz* (megahertz) or *GHz* (gigahertz), is not that important as long as it’s over 400 MHz. But the faster the better. Linux can run on other Intel-compatible processors, such as AMD, Cyrix, and VIA processors.
+
+- **RAM**: *RAM* is the amount of memory your system has. As with processing speed, the more RAM, the better. You need 256MB to install both Linux and the X Window System and to comfortably run a GUI desktop.
+
+- **SCSI controller**: Some high-performance PCs have SCSI controllers that connect disk drives and other peripherals to a PC. If your PC happens to have a SCSI controller, you might want to find out the make and model of the controller.
+
+- **Sound card**: If your PC has a sound card and you want to have sound in Linux, you have to make sure it’s compatible. You can configure the sound card after successfully installing Linux.
+
+- **Video card**: Linux works fine with all video cards (also known as *display adapters*) in text mode, but if you want the GUI, you need a video card that works with the X Window System. The installer can detect a supported video card and configure the X Window System correctly. However, if the installer cannot detect the video card, it helps if you know the make and model of your video card.
+
+- **Printer**: In addition to this hardware, you also need to find out the make and model of any printer you plan to use in Linux.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_60_0.png)
+
+Many distributions, such as Debian GNU/Linux, work on any hardware that’s compatible with the Linux kernel. For information on Linux-compatible hardware, see www.tldp.org/HOWTO/Hardware-HOWTO.
+
+To check whether your PC's hardware is compatible with SUSE Linux, visit the SUSE Linux Hardware Compatibility List at [http://hardwardedb.suse.de](http://hardwardedb.suse.de). For MEPIS, consult the MEPIS Hardware Database at [www.mepislovers.org/hwdatabase](www.mepislovers.org/hwdatabase). There is a hardware compatibility list for Ubuntu at [https://wiki.ubuntu.com/HardwareSupport/](https://wiki.ubuntu.com/HardwareSupport/). For Xandros Desktop, you can find the Hardware Compatibility list at [www.xandros.com/support/hcl.html](www.xandros.com/support/hcl.html).
+
+## Trying Out the Knoppix Live CD
+
+Before you install anything, you'll find it worthwhile to try out Knoppix (the K is silent) from the companion DVD. In addition to getting a feel for a Linux desktop, you can perform a few additional pre-installation chores from Knoppix. If you decide to install a distribution other than Fedora — Debian, MEPIS, SUSE, Ubuntu, or Xandros — you can burn the CDs or DVDs from the ISO image files provided on this book's companion DVD. You can also use the QTParted tool under Knoppix to make room for Linux on your hard drive.
+
+To start Knoppix, follow these steps:
+
+1. **Boot your PC from this book's companion DVD.**
+   A `boot:` prompt appears. At this prompt, you can enter various commands to control the boot process. In particular, you can type commands to disable some types of hardware detection that may be causing the installation to fail.
+2. **A few minutes later, you see the KDE GUI desktop that Knoppix uses.**
+   You can now start using Knoppix.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_61_0.png)
+
+If you try Knoppix on a laptop and it hangs after displaying a message about probing SCSI (that's the name of a type of interface), then reboot. When the `boot:` prompt appears, type **knoppix noscsi**. That should get you through the problem by telling Knoppix not to check for SCSI. For PCs that have problems with ACPI (Advanced Configuration and Power Interface), type **knoppix acpi=off** at the boot prompt. Press F3 at the boot prompt for a list of Knoppix boot options.
+
+After you get the Knoppix desktop, you can begin exploring Knoppix. Consult Chapter 4 of this minibook for more information on trying out Linux. If you want to use Knoppix to burn CDs or resize a hard drive partition, consult the "Using Knoppix to burn CDs or DVDs" section and the "Resizing a partition with QTParted in Knoppix" section in this chapter.
+
+When you finish using Knoppix, choose **Main Menu::Logout** and select **Restart Computer** from the KDE End Session dialog box that appears. After Knoppix shuts down, remove the DVD and press **Enter**.
+
+## Burning CDs or DVDs from ISO Images
+
+This book’s companion DVD includes Debian, MEPIS, SUSE, Ubuntu, and Xandros distributions in the form of ISO images, organized into separate folders within the distros folder of the DVD. To install any of these distributions, you must first burn the selected distribution’s ISO images onto CD or DVD, as the case may be. You can typically perform this step on a PC with a CD/DVD burner, most likely while using Microsoft Windows because most new PCs come with Windows pre-installed. Another option is to boot Knoppix from the companion DVD and then burn the CD or DVD using Knoppix. I describe these options in the next two sections.
+
+### Using a CD burner application
+
+In Microsoft Windows, you can use a CD burner application, such as Nero, to burn ISO images onto recordable CDs. If you don’t have a CD burner application for Microsoft Windows, boot Knoppix from the DVD and choose Main Menu > Multimedia > K3b from the GUI desktop to start the CD/DVD burning application. The exact steps for burning a CD from an ISO image depends on the CD burner application that you use. The general steps are as follows. (Use the same instructions to burn a DVD, provided you have a DVD burner.)
+
+1. **Place the companion DVD-ROM into the PC’s DVD drive.**
+   If your DVD drive is a combination DVD/CD burner, you have to first copy the ISO image files of the Linux distribution from the DVD to the PC’s hard drive so that you can use the same drive to burn the CDs.
+2. **Start the CD burner application.**
+3. **From the CD burner application, open the image file.**
+   The exact steps depend on the CD burner application. In K3b under Knoppix, choose Tools > CD > Burn CD Image from the menu. In other CD burner applications, you typically do this by selecting File > Open. From the Open dialog box, select the ISO image file for the distribution. If you are unsure, search the application’s online help for information on burning a CD from an ISO image.
+4. **Place a blank, recordable CD in the CD burner.**
+5. **Burn the ISO image onto the recordable CD.**
+   Typically, the CD burner application has a toolbar button that you can click to start burning the ISO image onto the blank CD.
+6. **If the distribution has more ISO images, repeat Steps 2 through 4 for the remaining ISO images.**
+
+> Live CD distributions come in a single ISO image that you can burn on a single CD. Other distributions typically come in multiple ISO images, and you have to burn each image file onto a separate CD.

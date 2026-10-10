@@ -1,0 +1,94 @@
+
+
+当首次打开 KNode 配置对话框时，它会提示输入您的个人信息。请输入您的识别信息，如姓名、电子邮件地址和组织名称——当您向新闻组发布新条目时，将使用这些信息。
+
+然后，点击左侧的“账户”（参见图 3-5），并点击右侧的“新闻组服务器”选项卡，以设置有关您将要从中阅读新闻的新闻服务器的信息。点击“新闻组服务器”选项卡中的“新建”，会弹出一个对话框（见图 3-6），您可以在其中输入有关新闻服务器的信息。您的 ISP（互联网服务提供商）应该已提供访问新闻服务器所需的信息。如果新闻服务器需要登录名和密码，您也必须输入这些信息。
+
+设置好新闻账户后，KNode 窗口左侧将显示新闻服务器的名称，如图 3-7 所示。右键单击服务器名称，并从弹出菜单中选择“订阅新闻组”。随后会出现一个对话框，您可以在其中订阅选定的新闻组（例如 `comp.linux.announce`）。
+
+图 3-7 展示了在阅读已订阅新闻组中的某篇文章时，KNode 窗口的典型视图。KNode 的用户界面与其他许多邮件和新闻阅读器类似，包括 Thunderbird。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_380_0.png)
+
+## 356 从您的 ISP 阅读新闻组
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_381_0.png)
+![](img/11709a8f88c8cd03868a929dc94c0e2b_381_1.png)
+
+### 在网站上阅读和搜索新闻组
+
+如果您无法通过 ISP 访问新闻组，您仍然可以在许多网站上阅读新闻组并发布文章。其中一些网站存档了旧的新闻文章，并提供了良好的搜索功能，因此您可以搜索这些网站以查找与您可能提出的问题相关的文章。
+
+通过网站阅读新闻组的最大优点是，您甚至不需要访问新闻服务器，就可以从网页浏览器阅读新闻。
+
+表 3-2 列出了提供免费访问 Usenet 新闻组的网站。一些网站提供收费的 Usenet 新闻组服务。本文未在此列出这些网站，但您可以通过 Google ([www.google.com](https://www.google.com)) 搜索它们——输入搜索词 usenet newsgroup access 即可获得提供新闻组访问服务的所有网站列表（包括收费的网站）。
+
+表 3-2 提供免费访问 Usenet 新闻组的网站
+
+| 网站 | URL |
+| --- | --- |
+| Google Groups | http://groups.google.com |
+| mail2web | http://usenet.mail2web.com |
+| InterBulletin | http://news.interbulletin.com |
+| Usenet Replayer | www.usenet-replayer.com |
+| Mailgate | www.mailgate.org |
+
+阅读新闻组、发布文章以及搜索旧新闻组存档的最佳场所之一是 Google Groups——Google 的 Usenet 讨论论坛——位于网络上的 http://groups.google.com。在该网站上，您可以选择要浏览的新闻组，并可以在各种新闻组上发布的文章回复中发布新回复。
+
+Google Groups 的最佳特性是其搜索功能。您已经知道 Google 的网络搜索有多好；您可以获得同样全面的搜索功能，以查找与您的搜索词相关的新闻组帖子。要搜索新闻组，请填写 http://groups.google.com 上的搜索表单并按 Enter 键。
+
+要在 Google Groups 中浏览新闻组，请忽略搜索框，查看高级别新闻组类别列表，例如 alt、comp 和 soc。点击类别，您可以逐渐深入到具体的新闻组。在 Google Groups 中查看文章时，您可以点击一个链接，该链接允许您发布对该文章的后续回复。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_382_0.png)
+
+## 阅读 RSS 源
+
+RSS 代表 Really Simple Syndication（简易信息聚合）。RSS 是一种用于*聚合*——收集和提供——网站内容的格式，主要用于以新闻为主的网站和博客。*blog* 一词是 weblog 的缩写——一个由博客创建者频繁更新的、包含其想法、评论和观点的日志。RSS 可用于提供可以分解为离散条目并放入 RSS 格式的任何类型的信息。这种 RSS 格式的内容称为 *RSS 源*，具备 RSS 识别能力的程序可以定期检查该源的变化，下载新条目，并将其提供给用户。
+
+RSS 格式是 XML（eXtensible Markup Language，可扩展标记语言）的一种方言。所有 RSS 文件都符合 XML 1.0 规范。
+
+RSS 有许多版本，但三个版本——0.91、1.0 和 2.0——正在广泛使用。Netscape 设计了 RSS 0.90 版本，用于收集和显示新闻网站的标题。一个更简单的版本 0.91 被提出，UserLand Software 采用了该版本用于其博客产品。与此同时，另一个非商业团体已将 RSS 0.90 演变为基于资源描述格式或 RDF（参见 `www.w3.org/rdf`）的 RSS 1.0。UserLand 没有接受 RSS 1.0，而是继续将 RSS 0.91 演变为 0.92、0.93、0.94 版本，并最终定为 RSS 2.0（跳过 1.0，因为该版本号已被占用）。目前，许多博客和网站使用 RSS 0.91 进行基本聚合（标题、URL 和描述）；对使用 RDF 的阅读器使用 RSS 1.0；对具有更多元数据的高级聚合使用 RSS 2.0。（可以将元数据理解为*关于数据的数据*，这就是 RSS 格式所提供的：它提供有关其他信息（如博客和新闻）的数据。）RSS 1.0 文件具有 `.rdf` 扩展名，而 RSS 0.91 和 2.0 文件具有 `.xml` 扩展名。然而，所有 RSS 文件都是使用 XML 标签的文本文件。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_383_0.png)
+
+### 检查 RSS 源
+
+RSS 源是一个包含 XML 标签的文本文件，用于描述网站的内容。通常，您使用自动程序定期生成 RSS 源文件，但您也可以使用文本编辑器准备 RSS 源文件。了解 RSS 源的外观是有益的，这样您就可以调试源的问题。
+
+RSS 源的具体细节取决于 RSS 的版本。最简单的源是 RSS 0.91，以下是一个典型的 RSS 0.91 源：
+
+```xml
+<?xml version="1.0" ?>
+<!-- A comment line -->
+<rss version="0.91">
+<channel> <!-- This tag specifies general information about the feed-->
+<title>Title of this feed</title>
+<link>URL of this feed, for example, http://naba.typepad.com/</link>
+<description>Brief description of feed</description>
+<language>en-us</language>
+<item>
+<title>Title of this item</title>
+<link>URL for this item</link>
+<description>Description of this item</description>
+</item>
+... more items ...
+</channel>
+</rss>
+```
+
+如您从上述列表所见，RSS 源包含一个频道，具有标题、链接、描述和语言，随后是一系列条目，每个条目都有标题、链接和描述。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_384_0.png)
+
+对于使用 RDF 格式的 RSS 1.0，其格式更加冗长。RSS 1.0 本质上提供了 RSS 0.91 中的基本信息，并添加了更多细节，如条目级别的作者、主题和发布日期，而 RSS 0.91 不支持这些。
+
+### 阅读 RSS 源
+
+有许多 GUI 程序可用于订阅 RSS 源并阅读源中的条目。这些程序被称为 RSS *聚合器*，因为它们可以从许多 RSS 源收集信息，并使所有内容在一个地方可用。
+
+有两种类型的 RSS 聚合器——Web 浏览器插件和独立程序。浏览器插件，如 NewsMonster ([www.newsmonster.org](http://www.newsmonster.org))，在 Web 浏览器中运行，以便源显示在 Web 浏览器中。独立程序，如 GNOME Straw ([www.nongnu.org/straw](http://www.nongnu.org/straw)) 和 KDE Akregator ([http://akregator.sourceforge.net](http://akregator.sourceforge.net))，是完整的 GUI 应用程序，通常与其他邮件和新闻阅读器程序外观相似。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_384_1.png)
+
+Fedora、MEPIS 和 SUSE 都配备了 Akregator 程序，这是一个独立的 RSS 源聚合器。要运行它，请在 GUI 桌面的应用程序菜单中寻找链接，但如果您没有看到它列在那里，请在终端窗口中输入 `akregator`。在 Debian 中，您可以通过输入 `apt-get install akregator` 来安装 Akregator（在输入 `su -` 成为 `root` 之后）。
+

@@ -1,0 +1,408 @@
+
+password checking tools, 558
+passwords
+- /etc/group, 554
+- /etc/passwd, 554
+- /etc/shadow, 554
+- PAMs, 515
+- root, forgotten, 383–384
+- root, Fedora Core, 53–54
+- securing, 513–515
+- security, 554–555
+- shadow passwords, 514–515
+
+patch GNU software
+package, 19
+
+pathname, parts of, 182
+
+PCI bus, 481
+
+PCMCIA bus, 481
+
+pcmcia Internet service, 580
+
+penetration testing, 557
+
+performance
+- disk performance, 396–397
+- disk usage, 396–397
+- system administration, 374
+- top utility, 393–395
+- uptime command, 395
+- vmstat utility, 395–396
+
+perimeter network,
+security, 510
+
+peripherals, 24, 26
+
+Perl
+- description, 23
+- expressions, 746, 751–752
+- expressions, regular, 752–755
+- file access, 760–761
+- filenames, pipe prefix, 761–762
+- flow-control statements, 746, 755–758
+- foreach statement, 757–758
+- functions, 746
+- functions, built-in, 762–763
+- goto statement, 758
+- if statement, 755–756
+- introduction, 743–744
+- Linux command access, 758–760
+- modules, 746, 763–766
+- modules, English, 766–769
+- objects, 766–767
+- objects, accessing, 767–768
+- objects, creating, 767–768
+- operators, 751–752
+- packages, 746, 763–766
+- script writing, 745–746
+- statements, 757–758
+- statements, 746
+- subroutines, 762–763
+- syntax, 747
+- unless statement, 755–756
+- variables, 746–750
+- which command, 744
+- while statement, 756–757
+
+permissions
+- /boot/grub/menu.lst, 553
+- commands, 196–198, 199–200
+- /etc/cron.allow, 553
+- /etc/cron.deny, 553
+- /etc/crontab, 553
+- /etc/hosts.allow, 553
+- /etc/hosts.deny, 553
+- /etc/logrotate.conf, 553
+- /etc/pam.d, 553
+- /etc/rc.d, 553
+- /etc/security, 553
+- /etc/selinux, 553
+- /etc/shadow, 553
+- /etc/sudoers.allow, 553
+- /etc/sshd, 553
+- /etc/sysconfig, 553
+- /etc/sysctl.conf, 553
+- /etc/syslog.conf, 553
+- /etc/udev/udev.conf, 554
+- /etc/vsftpd, 554
+- /etc/vsftpd.ftppusers, 554
+- /etc/xinetd, 554
+- /etc/xinetd.conf, 554
+- files, changing, 517
+- files, default, 517–519
+- host security, 552
+- set user ID, 519–520
+- /var/log, 554
+- /var/log/lastlog, 554
+- /var/log/messages, 554
+- /var/log/wtmp, 554
+
+Permissive option, SELinux, 57
+
+physical console, virtual console and, 161
+
+Physical layer, TCP/IP, 277
+
+PKI (Public Key Infrastructure), security, 510
+
+Places menu
+- Fedora Core GNOME desktop, 145
+- Ubuntu GNOME desktop, 157
+
+Places menu, GNOME, description, 118
+
+Plug and Pay support, kernel, 482
+
+pointers, C programming, 708–709
+
+port address translations, NATs, 538
+
+port numbers, TCP/IP, 278–279
+
+port scanners, tool names, 558
+
+port scanning, security, 510
+
+port-scanning tools, security, 529
+
+port support, kernel, 482
+
+portmap Internet service, 580
+
+ports, URLs, 337
+
+### PostgreSQL
+- description, 209
+- relational databases, 223
+- posting news to newsgroups, 353–354
+- power management, kernel, 480
+
+### Powersaver Tool, SUSE
+- Linux desktop, 155
+
+### predefined variables, Perl, 750
+
+### preprocessor directives, C programming
+- conditional directives, 703–704
+- include directive, 702
+- macro definition, 702–705
+- overview, 701–702
+- prevention, host security, 552
+
+### primary name server, configuration, 657–659
+
+### printer, installation, 35
+
+### printers
+- Debian configuration, 90–91
+- Fedora Core configuration, 92–94
+- Knoppix configuration, 94–96
+- MEPIS configuration, 94–96
+- SUSE configuration, 97–99
+- Ubuntu configuration, 99–100
+- Xandros configuration, 100–103
+- printing, system administration, 374
+- probability and impact, security, 503
+- /proc file system, 398–400
+
+### processes
+- commands for, 172
+- programming, 675
+- shell commands, 174–175
+
+### processor, installation, 35
+
+processor types, kernel, 479–480
+
+### programming
+- C. See C programming
+- command line, 675
+- command processor, 675
+- compilers, 676
+- computer, 673–674
+- CPU, 674
+- debugging, 676
+- environment variables, 675
+- expressions, 676
+- flow-control statements, 677
+- functions, 677
+- hard drive, 674
+- memory, 674
+- operating system, 675
+- overview, 676–677
+- processes, 675
+- shell, 675
+- software development tools, 677–695
+- statements, 677
+- text editor, 676
+- variables, 676
+
+### prompt FTP command, 369
+
+### protocols
+- description, 21
+- URLs, 336–337
+
+### proxy server, security, 510
+
+### public key cryptography, security, 510
+
+### public key encryption, 520–521
+
+### put FTP command, 369
+
+### pwd FTP command, 369
+
+### Python, 23
+
+## Q
+
+### QTParted, resizing Windows partition, 41–42
+
+### querying databases, MySQL, 228
+
+querying RPMs, 451–453
+
+### question mark (?) wildcard, 167–168
+
+### quit FTP command, 369
+
+## R
+
+### RAM (random access memory), 24
+- disk file, creating, 492–493
+- installation, 35
+- programming, 674
+
+### rcs GNU software package, 19
+
+### RCS (Revision Control System), 23
+
+reading RSS feeds, 358–360
+
+### reboot problem, troubleshooting, 87
+
+rebooting, 495–496
+
+rec newsgroups, 348
+
+recurring jobs, scheduling, 409–412
+
+recv FTP command, 369
+
+### regular expressions, Perl, 752–755
+
+### remote access, Internet use, 254
+
+### remote login
+- distributions and, 22
+- SSH, 532–534
+
+### removing RPMs, 454
+
+### rename FTP command, 369
+
+### repeating commands, 169
+
+### resolver library, DNS, 644
+
+### resource record (RR) formats, 650–653
+
+### response, host security, 552
+
+### responsibilities, security, 504
+
+### return statement, C programming, 719
+
+### Rhythmbox, 209
+
+### risk analysis, security
+- probability and impact, 503
+- threads, 502
+- vulnerabilities, 502–503
+
+RLL support, kernel, 483
+
+rm dir FTP command, 369
+
+rmm od command, 404
+
+### root
+- becoming, 173–174
+- /etc/password file entry, 513
+- GUI utilities, 382
+- logging in as, 381–382
+- password, forgotten, 383–384
+- /root directory, 428
+- root domain, DNS, 641–642
+- root password
+    - Fedora Core, 53–54
+    - GNOME login, 116
+- root zone files, DNS, 653–655
+
+### RPM files
+- commands, 450
+- filenames, 451
+- installation, 453–454
+- introduction, 449–450
+- querying, 451–453
+- removing, 454
+- SRPMs (Source RPMs), 464–465
+- upgrading, 454–455
+- verification, 455
+
+### RSS feeds, reading, 358–360
+
+### run level
+- init command, 387–388
+- init process, 385
+
+## S
+
+### Samba
+- configuration, 667–669
+- installation, 666–667
+- resources, 669
+- software package
+    - components, 665–666
+    - testing, 669
+- Windows server setup, 665–669
+
+samba internet service, 581
+
+SANS Institute, computer vulnerabilities, 550
+
+- /sbin directory, 428
+- /sbin/hotplug, device naming, 403
+- /sbin/udev, device naming, 403
+
+### scalar variables, Perl, 747–749
+
+### scheduling jobs
+- one-time jobs, 407–409
+- recurring jobs, 409–412
+
+sci newsgroups, 348
+
+screening router, security, 510
+
+### scripting
+- bash shell, built-in commands, 739–742
+- flow control, 736–739
+- introduction, 731–734
+- Perl, 745–746
+- shell functions, 735–736
+- storage, 734–735
+
+scripts, writing, 179–180
+
+SCSI controller, installation, 35
+
+SCSI devices, kernel, 484
+
+SCSI tape drives, backup devices, 435
+
+SCSI Zip drives, backup devices, 435
+
+DSL (Symmetric DSL), 258
+
+### security
+- application gateway, 508
+- audits, 504
+- authentication, 504, 508
+- authorization, 504
+- backdoor, 508
+- bastion host, 508
+- buffer overflow, 508
+- business requirements, 501
+- CA (certificate authority), 508
+- certificate, 508
+- confidentiality, 508
+- crackers, 499, 508
+- data protection, 504
+- DoS (distributed denial of service), 509
+- decryption, 508
+- digital signature, 508
+- directories, 516–520
+- DMZ, 509
+- DoS (denial of service) attack, 499, 508
+- dual-horned host, 509
+- encryption, 509
+- encryption, 520–527
+- exploit tools, 509
+- files, 516–520
+- firewalls, 509, 534–545
+- framework, establishing, 500–505
+- GPG, 523–527
+- hash, 509
+- host, 509
+- host security issues, 506, 552–555
+- implementation, 504–505
+- incident handling, 504
+- incident response, 555
+- integrity, 509
+- Internet access, 504

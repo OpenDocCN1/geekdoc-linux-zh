@@ -1,0 +1,29 @@
+# 476 *Rebuilding the Kernel*
+
+![](bbox=[0.15, 0.15, 0.25, 0.22])
+
+When you create a custom kernel for your hardware configuration, you may want to link all required device drivers into the kernel. You can still keep the size of such a monolithic kernel under control because you link in device drivers only for the exact set of hardware installed on your system.
+
+# Configuring the kernel
+
+The first phase in rebuilding a kernel is to configure it. To configure the kernel, log in as `root`. Then change the kernel source directory by using the `cd` command as follows:
+
+```
+```bash
+cd /usr/src/linux*
+```
+```
+
+To configure the kernel, you have to indicate which features and device drivers you want to include in your Linux kernel. In essence, you build your very own version of the Linux kernel with just the features you want.
+
+Linux provides several ways for you to configure the kernel:
+
++   - Type `make menuconfig` to enter the kernel-configuration parameters through a text-based interface similar to the one text mode Linux installation program uses.
+
++   - Type `make xconfig` to use an X Window System-based configuration program to configure the kernel. You have to run X to use this configuration program with a graphical interface. You also have to install the Qt development (`qt-devel`) package and set the `QTDIR` environment variable to the directory where Qt is installed. (If you have installed the `qt-devel` package, type `export QTDIR=/usr/lib/qt-3.3` to correctly define `QTDIR`.)
+
++   - Type `make config` to use a shell script that prompts you for each configuration option one by one. You can use this configuration program from the Linux command prompt. When you use this option, you undergo a long question-and-answer process to specify the configuration parameters. For each question, respond with `y` to link support into the kernel, `m` to build a module, and `n` to skip the support for that specific device.
+
++   - Type `make oldconfig` to use a shell script to reconfigure the kernel after upgrading the sources. This configuration script keeps the existing options and prompts you for only new or changed options.
+
+The `make menuconfig`, `make xconfig`, `make config`, and `make oldconfig` commands achieve the same end result—each stores your choices in a text file named `.config` located in the `/usr/src/linux*` directory. Because the filename starts with a period, you don't see it when you use the `ls` command alone to list the directory. Instead, type `ls -a` to see the `.config` file in the directory listing.

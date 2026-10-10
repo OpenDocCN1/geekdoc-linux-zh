@@ -1,0 +1,16 @@
+![](bbox=[0.2, 0.13, 0.88, 0.54])
+
+Figure 1-3:
+A NAT router isolates your PC from the Internet and also lets you share the DSL connection with other PCs in a local area network.
+
+Here are the points to note when setting up a connection like the one shown in Figure 1-3:
+
++   You need a NAT router with two 10BaseT Ethernet ports (the 10BaseT port looks like a large phone jack, also known as an RJ-45 jack). Typically, one Ethernet port is labeled Internet (or External or WAN, for wide area network), and the other one is labeled Local or LAN (for local area network).
+
++   You also need an Ethernet hub. For a small home network, you can buy a 4- or 8-port Ethernet hub. Basically, you want a hub with as many ports as the number of PCs you intend to connect to your local area network.
+
++   Connect the Ethernet port of the DSL modem to the Internet port of the NAT router, using a 10BaseT Ethernet cable. (These look like phone wires with bigger RJ-45 jacks and are often labeled Category 5 or Cat 5 wire.)
+
++   Connect the Local Ethernet port of the NAT router to one of the ports on the Ethernet hub, using a 10BaseT Ethernet cable.
+
++   Now connect each of the PCs to the Ethernet hub. (Of course, to do so you must first have an Ethernet card installed and configured in each PC.)

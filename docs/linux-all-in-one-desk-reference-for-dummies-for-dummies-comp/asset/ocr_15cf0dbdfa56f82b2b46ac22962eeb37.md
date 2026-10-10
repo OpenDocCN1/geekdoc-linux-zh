@@ -1,0 +1,47 @@
+Such a single on-screen line giving a command is commonly referred to as a *command line*. On a command line, you enter a command, followed by zero or more options (*or arguments*). These strings of options — the *command line options* (*or command line arguments*) — modify the way the command works so that you can get it to do specific tasks.
+
+The shell uses a blank space or a tab to distinguish between the command and options. Naturally, you help it by using a space or a tab to separate the command from the options and the options from one another.
+
+An option can contain spaces — all you have to do is put that option inside quotation marks so that the spaces are included. For example, to search for my name in the password file, I enter the following `grep` command (`grep` is used for searching for text in files):
+
+```
+`grep "Naba Barkakati" /etc/passwd`
+```
+
+When `grep` prints the line with my name, it looks like this:
+
+```
+`naba:x:1000:100:Naba Barkakati:/home/naba:/bin/bash`
+```
+
+If you create a user account with your username, type the `grep` command with your username as an argument to look for that username in the `/etc/passwd` file.
+
+In the output from the `grep` command, you can see the name of the shell (`/bin/bash`) following the last colon (`:`).
+
+The number of command line options and their format, of course, depends on the actual command. Typically, these options look like `-X`, where X is a single character. For example, the `ls` command lists the contents of a directory. You can use the `-l` option to see more details. For example, here is a result of typing `ls -l` in a user’s home directory:
+
+```
+```
+total 0
+drwxr-xr-x  2 naba users  48 2005-09-08 21:11 bin
+drwx------  2 naba users 320 2005-09-08 21:16 Desktop
+drwx------  2 naba users  80 2005-09-08 21:11 Documents
+drwxr-xr-x  2 naba users  80 2005-09-08 21:11 public_html
+drwxr-xr-x  2 naba users 464 2005-09-17 18:21 sdump
+```
+```
+
+If a command is too long to fit on a single line, you can press the backslash key followed by Enter. Then, continue typing the command on the next line. For example, type the following command. (Press Enter after each line.)
+
+```
+```
+cat \
+/etc/passwd
+```
+```
+
+![](bbox=[0.11, 0.5, 0.21, 0.6])
+
+![](bbox=[0.88, 0.32, 0.98, 0.36])
+
+![](bbox=[0.88, 0.37, 0.98, 0.48])

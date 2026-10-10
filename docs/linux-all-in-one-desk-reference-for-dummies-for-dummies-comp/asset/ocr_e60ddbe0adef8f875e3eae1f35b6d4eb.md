@@ -1,0 +1,22 @@
+yet. The RAM disk is essential if you are booting a SCSI disk and you haven't compiled the SCSI drivers into the kernel.
+
+# ATA/ATAPI/MFM/RLL support
+
+The next set of questions involves IDE devices, such as hard drives and ATAPI CD-ROM drives.
+
++   -
++   - ATA/ATAPI/MFM/RLL support
+
+ATA/ATAPI/MFM/RLL support (IDE) [M/n/y/?]  
+Enhanced IDE/MFM/RLL disk/cdrom/tape/floppy support (BLK_DEV_IDE) [M/n/?]
+
+When you're configuring an operating system, you have to expect a fair share of acronyms — this one has four acronyms: ATA, ATAPI, MFM, and RLL. All these relate to hard drives or the interface that links disk drives to the PC. Here’s what they mean:
+
++   ◆ **ATA** stands for AT Attachment and refers to the PC-AT style interface that connects hard drives and CD-ROM drives to the PC’s motherboard.  
++   ◆ **ATAPI** stands for AT Attachment Packet Interface and refers to the original PC hard drives that integrate the disk controller onto the hard drive itself. This interface used to be called *Integrated Drive Electronics*, or IDE. You typically see the terms IDE, ATA, and ATAPI used interchangeably.  
++   ◆ **MFM** stands for Modified Frequency Modulation, which is the way data was encoded on older hard drives. These hard drives can work over an IDE interface.  
++   ◆ **RLL** stands for Run Length Limited, an old technique for storing data on a hard drive from the early days of the PC. RLL disks can work over an IDE interface.
+
+The first question asks if you want the kernel to support IDE devices. The second question asks if you want to use the full-featured IDE device that can control up to ten IDE interfaces. Because each IDE interface can have a master and a slave device, this enables Linux to access a total of up to 20 IDE devices, such as disks or CD-ROM drives. You can press Enter to accept the default choices of module for both of these options.
+
+The next set of options concerns various IDE drivers. You can accept the default answers for these options. Note that IDE/ATAPI FLOPPY refers to IDE floppy drives, such as the Iomega Zip drive or the Imation Superdisk LS-120 drive. The questions about CMD640 and RZ1000 bug fixes refer to some known problems with specific chipsets used in IDE interfaces.

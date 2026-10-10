@@ -1,0 +1,20 @@
+# GNU software
+
+At the heart of a Linux distribution is a collection of software that came from the GNU Project. You get to know these GNU utilities only if you use your Linux system through a *text terminal* — a basic command-line interface that puts nothing much on-screen but a prompt at which you type in your commands. (Or you could use a graphical window that mimics a text terminal and still have use of GNU utilities.) The GNU software is one of the basic parts of any Linux distribution.
+
+As a Linux user, you may not realize the extent to which all Linux distributions rely on GNU software. Nearly all the tasks you perform in a Linux system involve one or more GNU software packages. For example, the GNOME graphical user interface (GUI) and the command interpreter (that is, the *bash*) are both GNU software programs. By the way, the *shell* is the command-interpreter application that accepts the commands you type and then runs programs in response to those commands. If you rebuild the kernel or develop software, you do so with the GNU C and C++ *compiler* (which is part of the GNU software that accompanies Linux). If you edit text files with the *ed* or *emacs* editor, you’re again using a GNU software package. The list goes on and on.
+
+![](bbox=[0.1, 0.48, 0.2, 0.58])
+
+Table 1-2 lists some of the well-known GNU software packages that come with most Linux distributions. I show this table only to give you a feel for all the different kinds of things you can do with GNU software. Depending on your interests, you may never need to use many of these packages, but knowing they are there in case you ever need them is good.
+
+**Table 1-2** Well-Known GNU Software Packages
+| *Software Package* | *Description* |
+| --- | --- |
+| autoconf | Generates shell scripts that automatically configure source-code packages |
+| automake | Generates *Makefile.in* files for use with *autoconf* |
+| bash | The default shell (command interpreter) in Linux |
+| bc | An interactive calculator with arbitrary precision numbers |
+| Binutils | A package that includes several utilities for working with binary files: *ar*, *as*, *gasp*, *gprof*, *ld*, *nm*, *objcopy*, *objdump*, *ranlib*, *readelf*, *size*, *strings*, and *strip* |
+
+*(continued)*

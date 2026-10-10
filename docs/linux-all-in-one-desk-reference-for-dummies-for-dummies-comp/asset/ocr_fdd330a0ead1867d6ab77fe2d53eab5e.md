@@ -1,0 +1,15 @@
+# **Installing Xandros Desktop**
+
+After reviewing the Disk Configuration, click **Next** to continue. The installer displays the Network Configuration. The default is to dynamically configure the Ethernet card, which means that DHCP is used to obtain the IP addresses of the network interface and the name servers. If this works for your network, click **Next**. Otherwise, you have to click **Edit** and enter a static IP address for the network. You can also choose not to configure the network. Click **Next** after completing the network configuration step.
+
+The installer prompts for the `root` user password. You can also enter a computer name. After you click **Next** to continue, the installer displays the User Account Configuration screen, where you can define multiple user accounts. For each user account, click **Add** and enter the required information. After you are done adding user accounts, click **Next**.
+
+The installer displays the Installation Summary screen (see Figure 2-22).
+
+Review the information carefully and click **Back** to correct any errors. When you are sure that the selections are acceptable, click **Finish**. The installer finishes installing Xandros and prompts you to restart the PC. After rebooting, Xandros runs the First Run Wizard that guides you through a number of configuration steps.
+
+Congratulations! You can now start using Xandros Desktop.
+
+![](bbox=[0.25, 0.55, 0.88, 0.94])
+
+**Figure 2-22:** Installation summary for custom install.

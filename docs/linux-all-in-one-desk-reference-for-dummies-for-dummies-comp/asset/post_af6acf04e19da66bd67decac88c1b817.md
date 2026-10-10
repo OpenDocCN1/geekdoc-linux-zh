@@ -1,0 +1,73 @@
+
+### Physical
+
+Refers to the physical networking hardware (such as an Ethernet card or token ring card) that carries the data packets in a network.
+
+The beauty of the layered model is that each layer takes care of only its specific task, leaving the rest to the other layers. The layers can mix and match — you can have TCP/IP network over any type of physical network medium, from Ethernet to radio waves (in a wireless network). The software is modular as well because each layer can be implemented in different modules. For example, typically the Transport and Network layers already exist as part of the operating system, and any application can make use of these layers.
+
+## TCP/IP and the Internet
+
+TCP/IP has become the protocol of choice on the Internet — the *network of networks* that evolved from ARPANet. The U.S. Government’s Advanced Research Projects Agency (ARPA) initiated research in the 1970s on a new way of sending information, using packets of data sent over a network. The result was ARPANet: a national network of linked computers. Subsequently, ARPA acquired a Defense prefix and became DARPA. Under the auspices of DARPA, the TCP/IP protocols emerged as a popular collection of protocols for *internetworking* — communication among networks.
+
+TCP/IP has flourished because the protocol is open. That means the technical descriptions of the protocol appear in public documents, so anyone can implement TCP/IP on specific hardware and software.
+
+TCP/IP also made great inroads because stable, working software was available. Instead of a paper description of network architecture and protocols, the TCP/IP protocols started out as working software — and who can argue with what’s already working? These days, as a result, TCP/IP rules the Internet.
+
+## IP addresses
+
+When you have many computers on a network, you need a way to identify each one uniquely. In TCP/IP networking, the address of a computer is the IP address. Because TCP/IP deals with internetworking, the address is based on the concepts of a network address and a host address. You may think of the idea of a network address and a host address as having to provide two addresses to identify a computer uniquely:
+
+-   **Network address** indicates the network on which the computer is located.
+-   **Host address** indicates a specific computer on that network.
+
+## Next-generation IP (IPv6)
+
+When the 4-byte IP address was created, the number of available addresses seemed adequate. Now, however, the 4-byte addresses are running out. The Internet Engineering Task Force (IETF) recognized the potential for running out of IP addresses in 1991 and began work on the next-generation IP addressing scheme. They called it IPng (for Internet Protocol Next Generation) and intended that it will eventually replace the old 4-byte addressing scheme (called IPv4, for IP version 4).
+
+Several alternative addressing schemes for IPng were proposed and debated. The final contender, with a 128-bit (16-byte) address, was dubbed IPv6 (for IP version 6). On September 18, 1995, the IETF declared the core set of IPv6 addressing protocols to be an IETF Proposed Standard. By now, there are many RFCs dealing with various aspects of IPv6, from IPv6 over PPP for the transmission of IPv6 packets over Ethernet.
+
+IPv6 is designed to be an evolutionary step from IPv4. The proposed standard provides direct interoperability between hosts using the older IPv4 addresses and any new IPv6 hosts. The idea is that users can upgrade their systems to use IPv6 when they want to and that network operators are free to upgrade their network hardware to use IPv6 without affecting current users of IPv4. Sample implementations of IPv6 are being developed for many operating systems, including Linux. For more information about IPv6 in Linux, consult the Linux IPv6 HOWTO at www.tldp.org/HOWTO/Linux+IPv6-HOWTO. For information about IPv6 in general, visit the IPv6 home page at www.ipv6.org.
+
+The IPv6 128-bit addressing scheme allows for a total of $2^{128}$ or 340,282,366,920,938,463,463,374,607,431,768,211,456 theoretically assignable addresses! That should last us for a while!
+
+The network and host addresses together constitute an *IP address*, and it's a 4-byte (32-bit) value. The convention is to write each byte as a decimal value and to put a dot (.) after each number. Thus, you see network addresses such as 132.250.112.52. This way of writing IP addresses is known as *dotted-decimal* or *dotted-quad* notation.
+
+In decimal notation, a byte (which has 8 bits) can have a value between 0 and 255. Thus, a valid IP address can use only the numbers between 0 and 255 in the dotted-decimal notation.
+
+## Internet services and port numbers
+
+The TCP/IP protocol suite has become the *lingua franca* of the Internet because many standard services are available on any system that supports TCP/IP. These services make the Internet tick by facilitating the transfer of mail, news, and Web pages. These services go by well-known names such as the following:
+
+-   DHCP (Dynamic Host Configuration Protocol) is for dynamically configuring TCP/IP network parameters on a computer. DHCP is primarily used to assign dynamic IP addresses and other networking information (such as name server, default gateway, and domain names) needed to configure TCP/IP networks. The DHCP server listens on port 67.
+-   FTP (File Transfer Protocol) is used to transfer files between computers on the Internet. FTP uses two ports—data is transferred on port 20, and control information is exchanged on port 21.
+-   HTTP (HyperText Transfer Protocol) is a protocol for sending documents from one system to another. HTTP is the underlying protocol of the Web. By default, the Web server and client communicate on port 80.
+-   SMTP (Simple Mail Transfer Protocol) is for exchanging e-mail messages between systems. SMTP uses port 25 for information exchange.
+-   NNTP (Network News Transfer Protocol) is for distribution of news articles in a store-and-forward fashion across the Internet. NNTP uses port 119.
+-   SSH (Secure Shell) is a protocol for secure remote login and other secure network services over an insecure network. SSH uses port 22.
+-   TELNET is used when a user on one system logs in to another system on the Internet. (The user must provide a valid user ID and password to log in to the remote system.) TELNET uses port 23 by default, but the TELNET client can connect to any port.
+-   SNMP (Simple Network Management Protocol) is for managing all types of network devices on the Internet. Like FTP, SNMP uses two ports: 161 and 162.
+-   TFTP (Trivial File Transfer Protocol) is for transferring files from one system to another. (It’s typically used by X terminals and diskless workstations to download boot files from another host on the network.) TFTP data transfer takes place on port 69.
+-   NFS (Network File System) is for sharing files among computers. NFS uses Sun’s Remote Procedure Call (RPC) facility, which exchanges information through port 111.
+
+A well-known port is associated with each of these services. The TCP protocol uses each such port to locate a service on any system. (A server process—a special computer program running on a system—provides each service.)
+
+## Setting Up an Ethernet LAN
+
+Ethernet is a standard way to move packets of data between two or more computers connected to a single hub. (You can create larger networks by connecting multiple Ethernet segments with gateways.) To set up an Ethernet LAN, you need an Ethernet card for each PC. Linux supports a wide variety of Ethernet cards for the PC.
+
+Ethernet is a good choice for the physical data-transport mechanism for the following reasons:
+
+-   Ethernet is a proven technology that has been in use since the early 1980s.
+-   Ethernet provides good data-transfer rates: typically 10 million bits per second (10 Mbps), although 100-Mbps Ethernet and Gigabit Ethernet (1,000 Mbps) are now available.
+-   Ethernet hardware is often built into the PC or can be installed at a relatively low cost. (PC Ethernet cards cost about $10 - $20 U.S.)
+-   With wireless Ethernet, you can easily connect laptop PCs to your Ethernet LAN without having to run wires all over the place. (Go to Chapter 3 of this minibook for more information on wireless Ethernet.)
+
+## How Ethernet works
+
+So what makes Ethernet tick? In essence, it's the same thing that makes any conversation work: listening and taking turns.
+
+In an Ethernet network, all systems in a segment are connected to the same wire. Because a single wire is used, a protocol is used for sending and receiving data because only one data packet can exist on the cable at any time. An Ethernet LAN uses a data-transmission protocol known as *Carrier-Sense Multiple Access/Collision Detection* (CSMA/CD) to share the single transmission cable among all the computers. Ethernet cards in the computers follow the CSMA/CD protocol to transmit and receive Ethernet packets.
+
+The idea behind the CSMA/CD protocol is similar to the way in which you have a conversation at a party. You listen for a pause (that's sensing the carrier) and talk when no one else is speaking. If you and another person begin talking at the same time, both of you realize the problem (that's collision detection) and pause for a moment; then one of you starts speaking again. As you know from experience, everything works out.
+
+In an Ethernet LAN, each Ethernet card checks the cable for signals — that's the carrier-sense part. If the signal level is low, the Ethernet card sends its packets on the cable; the packet contains information about the sender and the intended recipient. All Ethernet cards on the LAN listen to the signal, and the recipient receives the packet. If two cards send out a packet simultaneously,

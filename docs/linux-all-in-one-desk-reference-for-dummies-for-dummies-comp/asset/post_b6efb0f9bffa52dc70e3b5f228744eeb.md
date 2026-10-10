@@ -1,0 +1,101 @@
+
+After installing the base operating system, the installer detects other operating systems on any of the disk partitions and recommends installing the GRUB boot loader on the hard drive's first sector, called the *master boot record* (MBR).
+
+4. Install the GRUB boot loader and reboot the PC.
+
+The installer finishes installing the boot loader. Then it ejects the CD and reboots the PC. When the PC reboots, Debian starts and guides you through a number of configuration steps.
+
+5. Select the time zone and indicate if the PC's hardware clock is set to Greenwich Mean Time (GMT).
+
+The answer is usually no.
+
+6. Enter the root (the superuser) password.
+
+7. Set up a normal user account by entering the requested information: the username, the full name, and the password.
+
+8. Configure APT by indicating sources from which you want Debian to download software packages.
+
+You have to pick a country and a server in that country identifying the FTP and Web repositories containing the Debian packages. If your PC is behind an HTTP proxy, you can specify the proxy as well. (If not, just ignore this part.) Later on, you can use the *apt-get* command to install or update various software packages that are available in the Debian format. You can also identify a CD as a source of Debian packages, but you can always get the latest software if you identify a server as the source.
+
+9. Select the software packages to install.
+
+Move the cursor using up- and down-arrow keys and press the spacebar to select or deselect a package. You can pick from preconfigured packages that include: Desktop environment, Web server, Print server, DNS server, File server, Mail server, and SQL database. You can also select packages manually.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_72_0.png)
+
+If you select the Desktop environment package, you get the X Window System and the GNOME desktop.
+
+After finishing selections, press Tab to highlight OK and then press Enter.
+
+The installer then begins to download and install the selected packages. With a broadband cable or DSL connection to the Internet, this step may take about an hour to complete.
+
+10. Answer configuration questions as the installer prompts for information to configure the software packages it has downloaded and installed.
+
+The XFree86 package (the X Window System) is one of the packages the installer configures. After finishing all the configurations, the installer starts X, and you get a graphical login prompt.
+
+11. Log in at the graphical login screen.
+
+By default, the Debian installer installs the GNOME Desktop Manager (`gdm`), which starts the GNOME desktop.
+
+That’s it! You have Debian up and running now. You can explore it at your leisure and install more software packages as you need them and as you become more knowledgeable about Debian.
+
+## Installing Fedora Core
+
+To install Fedora Core, insert this book’s companion DVD in the DVD drive and restart your PC. (In Windows, choose Start > Shutdown and then select Restart from the dialog box.) If you use CDs, the installation steps are the same as that for the DVD except that you have to swap CDs when prompted by the installation program.
+
+If your PC isn’t already set to boot from the DVD drive, you have to get into Setup to change the order of boot devices.
+
+After your PC powers up, it loads the Linux kernel from the DVD, and the Linux kernel starts running the Fedora Core installation program. For the rest of the installation, you work with the installation program’s GUI screens.
+
+After a few moments, the text screen displays a Welcome message and a `boot:` prompt. The Welcome message tells you that help is available by pressing one of the function keys F1 through F5. To start installing Fedora Core immediately, press Enter. You can also type in other options at the `boot:` prompt. For example, if you think the DVD might be corrupted, type `linux mediacheck` and press Enter to test the DVD media for any problems. After the media check, you can continue with the installation.
+
+Installing Fedora Core from the companion DVD-ROM on a fast (400 MHz or better) Pentium PC takes about an hour or so, if you install nearly all packages.
+
+The Fedora Core installation program `probes` — attempts to determine the presence of — specific hardware and tailors the installation steps accordingly. For example, if the installation program detects a network card, the program automatically displays the screens needed to configure your PC to work with the network in Linux. You may see a different sequence of screens from what I show in the following sections; the exact sequence depends on your PC’s specific hardware configuration.
+
+49 Installing Fedora Core
+Book I
+Chapter 2
+Installing Linux
+
+If you run into any problems during the installation, turn to Chapter 3 of this minibook. That chapter shows you how to troubleshoot common installation problems.
+
+### Selecting keyboard and installation type
+
+In this first phase of the installation, you go through a number of steps before moving on to create the disk partitions for Fedora Core. Here are the steps in the first phase:
+
+1. **Select the language you want from the list of languages on-screen, and then click Next to proceed to the next step.**
+
+Each screen has online help available on the left side of the screen. You can read the Help message to find out more about what you’re supposed to do in a specific screen.
+
+After you select the language, the installer displays a list of keyboard layouts.
+
+2. **Select a keyboard layout suitable for your language’s character set (for example, U.S. English in the United States) and click Next.**
+
+The installation program displays a screen asking whether you want to install a new system or upgrade an older Fedora Core installation.
+
+3. **For a new Fedora Core installation, click Install and select the installation type.**
+
+For a new installation, you have to select one of the following installation types — Personal Desktop, Workstation, Server, or Custom. The Personal Desktop, Workstation, and Server installations simplify the installation process by partitioning the hard drive in a predefined manner. The Personal Desktop installation creates a Fedora Core system with a graphical environment along with productivity applications.
+
+A Workstation-class installation installs a graphical environment as well as software development tools. This type of installation also deletes all currently existing Linux-related partitions, creating a set of new partitions for Linux.
+
+A Server installation sets up all the Internet servers, such as Web server, FTP server, and Mail server. By default, the Server installation does not install the graphical environment, but you can always add the packages for the GUI desktops.
+
+For maximum flexibility, select the Custom installation. That way you can select only the packages you want to try out.
+
+The next major phase of installation involves partitioning the hard drive for use in Fedora Core.
+
+### Partitioning the hard drive for Fedora Core
+
+The Fedora Core installer displays a screen (see Figure 2-6) where you indicate how you want to partition the hard drive. If you click the current selection (shown with an up-down arrow to its right), the installer displays the following options for partitioning and using the hard drive:
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_75_0.png)
+
+- **Remove all Partitions on selected drives and create default layout:** This option causes the Fedora Core installer to remove all partitions, including those used by other operating systems, such as Microsoft Windows. Use this only if you want Fedora Core as the *only* operating system for your PC. Do not select this option if you want to retain any existing Windows partitions.
+- **Remove linux partitions on selected drives and create default layout:** This option causes the installer to remove only the existing Linux partitions and to create new partitions for installing Fedora Core. You can use this option if you already have any version of Linux installed on your PC and want to wipe it out and install the latest version of Fedora Core.
+- **Use free space on selected drives and create default layout:** If you created space for Linux by using PartitionMagic or the QT Parted utility, select this option to create the Linux partitions using the free space on the hard drive. If you install Fedora Core on a new PC after resizing the partition, this option is the right one to choose.
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_75_1.png)
+
+**Figure 2-6:** Select an automatic partitioning option from this screen.

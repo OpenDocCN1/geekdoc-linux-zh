@@ -1,0 +1,20 @@
++   * **Firefox Web Browser**: Runs the Mozilla Firefox Web browser.
++   * **Konqueror Web Browser**: Runs the Konqueror Web browser.
++   * **Kontakt**: Runs the Kontakt personal information manager.
++   * **Text Editor**: Runs the KWrite text editor.
++   * **CD/DVD Burning**: Runs the K3B CD/DVD burning application.
++   * **OpenOffice.org Writer**: Runs the OpenOffice.org Writer word processing application.
++   * **Desktop Pager**: Click on each square to bring up a different desktop.
++   * **System Performance Monitor**: Displays the current system performance (memory and processor usage).
++   * **Volume**: Click to control sound volume.
++   * **Clipboard Tool**: Click to see what you’ve cut and what you can paste elsewhere.
++   * **OpenOffice.org Quickstart**: Right-click to open a new OpenOffice.org document.
++   * **Mount Windows Shares**: Click to open the Smb4K that enables browsing and mounting Windows shares.
++   * **Weather**: Displays the current weather for a selected location (right-click and select Configure KWeather to change location).
++   * **Date and Time**: Displays the current date and time. Clicking brings up a Time and Date utility for setting date and time.
+
+The Mepis Main Menu (refer to Figure 1-18) has a typical KDE main menu structure that arranges the menu items into three broad categories — Most Used Applications shows the icons for applications you have used recently, All Applications has several submenus for accessing the applications, and Actions shows menus for some common tasks such as accessing the printing system, locking the screen, running a command, starting a new session, or logging out. To familiarize yourself with what Mepis has to offer as a desktop operating system, go through the menus in the All Applications category of the Mepis Main Menu.
+
+# Introducing the SUSE Desktop
+
+SUSE Linux is a commercial product, and it provides a customized desktop. SUSE automatically logs in the local user that you defined during installation and brings up the initial desktop, as shown in Figure 1-19.

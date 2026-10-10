@@ -1,0 +1,36 @@
+```
+cpu MHz : 2533.129
+cache size : 256 KB
+fdiv_bug : no
+hlt_bug : no
+f00f_bug : no
+coma_bug : no
+fpu : yes
+fpu_exception : yes
+cpuid level : 5
+wp : yes
+flags : fpu vme de pse tsc msr pae mce cx8 apic
+sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx
+fxsr sse sse2 ss ht tm pbe pi_ni monitor ds_cpl cid
+bogomips : 4997.12
+```
+
+This output is from a 2.5 GHz Celeron system. The listing shows many interesting characteristics of the processor. Notice the line that starts with `fdIv_bug`. Remember the infamous Pentium floating-point-division bug? The bug is in an instruction called `fdIv` (*for floating-point division*). Thus, the `fdIv_bug` line indicates whether this particular Pentium has the bug. (Fortunately, my PC's processor does not.)
+
+The last line in the `/proc/cpuinfo` file shows the BogoMIPS for the processor, as computed by the Linux kernel when it boots. BogoMIPS is something that Linux uses internally to time-delay loops.
+
+Table 1-12 summarizes some of the files in the `/proc` file system that provide information about your Linux system. You can view some of these files on your system to see what they contain, but note that not all files shown in Table 1-12 are present on your system. The specific contents of the `/proc` file system depend on the kernel configuration and the driver modules that are loaded (which, in turn, depend on your PC's hardware configuration).
+
+You can navigate the `/proc` file system just as you'd work with any other directories and files in Linux. Use the `more` or `cat` commands to view the contents of a file.
+
+![](bbox=[0.1, 0.62, 0.2, 0.7])
+
+Table 1-12 Some Files and Directories in /proc
+
+| File Name | Content |
+| :--- | :--- |
+| `/proc/acpi` | Information about Advanced Configuration and Power Interface (ACPI) — an industry-standard interface for configuration and power management on laptops, desktops, and servers |
+| `/proc/bus` | Directory with bus-specific information for each bus type, such as PCI |
+| `/proc/cmdline` | The command line used to start the Linux kernel (for example, `ro root=LABEL=/ rhgb`) |
+
+(continued)

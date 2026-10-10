@@ -1,0 +1,23 @@
+# 610  *Configuring the FTP Server*
+
++   ◇ `async_abor_enable=YES` causes vsftpd to recognize ABOR (abort) requests that arrive at any time. You may have to enable it to allow older FTP clients to work with vsftpd.
+
++   ◇ `banned_email_file=/etc/vsftpd.banned_emails` specifies the file with the list of banned e-mail addresses (used only if deny_email_enable is set to YES).
+
++   ◇ `chown_uploads=YES` causes uploaded anonymous files to be owned by a different user specified by the chown_username option. Don’t enable this option unless absolutely necessary—and don’t specify root as the chown_username. (That’s a disaster just waiting to happen.) You may need to enable this if a process running under a specific username uses the uploaded files, which means that no matter who uploads the files, the owner has to be changed to the username that the process expects.
+
++   ◇ `chown_username=name` specifies the username that owns files uploaded by anonymous FTP users.
+
++   ◇ `chroot_list_enable=YES` causes vsftpd to confine all users except those on a list specified by the chroot_list_file to their home directories when they log in for FTP service. This option prevents these users from getting to any other files besides what’s in their home directories. By default, vsftpd looks for the list of chroot users in /etc/vsftpd.chroot_list file, but you can override this by specifying the filename through the chroot_list_file option.
+
++   ◇ `chroot_list_file=/etc/vsftpd.chroot_list` is the list of users who are either confined to their home directories or not, depending on the setting of chroot_local_user.
+
++   ◇ `connect_from_port_20=YES` causes vsftpd to make sure that data transfers occur through port 20 (the FTP data port).
+
++   ◇ `data_connection_timeout=120` is the time in seconds after which an inactive data connection is timed out.
+
++   ◇ `deny_email_enable=YES` causes vsftpd to check a list of banned e-mail addresses and deny access to anyone who tries to log in anonymously with a banned e-mail address as a password. By default, vsftpd expects the banned e-mail addresses to be in the /etc/vsftpd.banned_emails file, but you can specify another filename through the banned_email_file option.
+
++   ◇ `dirmessage_enable=YES` causes vsftpd to display messages when FTP users change to certain directories.
+
++   ◇ `ftpd_banner=Welcome to my FTP service` sets the banner that vsftpd displays when a user logs in. You can change the message to anything you want.

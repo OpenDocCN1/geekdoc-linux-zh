@@ -1,0 +1,17 @@
+![](bbox=[0.26, 0.12, 0.88, 0.49])
+
+# Figure 2-20:
+Xandros installer suggests
+how it plans to use the
+hard drive.
+
+If you want to manage the disk partitions, click the Manage Disks and Partitions item and click Next. The installer displays an editor where you can delete and add partitions and assign mount points for partitions. For example, you can assign a small 50MB partition to the /boot mount point and assign a multi-gigabyte partition to the root file system ( / ). You can also identify a swap partition approximately twice the size of available memory. Linux uses the swap partition as virtual memory — a hard drive–based extension of the PC’s memory.
+
+Table 2-6 summarizes the possible options available in the Disk Configuration screen. (Refer to Figure 2-20.) Note that only the options applicable to your PC are available for selection. The others are grayed out.
+
+| Table 2-6 | Options for Disk Configuration | |---|---|---|---| |
+|---|---|---|---|
+| This Option | Does the Following |
+| Use Free Space | Uses the largest unallocated block of space on the hard drive |
+| Take Over Disk or Partition | Takes over an entire hard drive, a specific partition, or a previous version of Xandros and erases all data |
+| Resize a Windows Partition | Reduces the size of a Windows partition and installs Xandros in the space that’s freed up |

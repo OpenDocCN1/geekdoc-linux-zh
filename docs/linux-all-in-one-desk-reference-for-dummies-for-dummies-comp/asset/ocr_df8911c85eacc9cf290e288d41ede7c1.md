@@ -1,0 +1,19 @@
+and sends all of it to the Internet. The CMTS also puts digital data into the upstream channels so that your cable modem can extract that data and provide it to your PC via the Ethernet card.
+
+Cable modems can receive downstream data at the rate of about 30 Mbps and send data upstream at around 3 Mbps. However, all the cable modems in a neighborhood share the same downstream capacity. Each cable modem filters out — separates — the data it needs from the stream of data that the CMTS sends out. Cable modems follow a modem standard called DOCSIS, which stands for Data Over Cable Service Interface. You can buy any DOCSIS-compliant modem and use it with your cable Internet service; all you have to do is call the cable company and give them the modem's identifying information so that the CMTS can recognize and initialize the modem.
+
+![](bbox=[0.14, 0.36, 0.23, 0.46])
+
+In practice, with a cable modem, you can get downstream transfer rates of around 1.5 Mbps and upstream rates of 128 Kbps. These are maximum rates, and your transfer rate is typically lower, depending on how many users in your neighborhood are using cable modems at the same time.
+
+![](bbox=[0.14, 0.46, 0.23, 0.56])
+
+If you want to check your downstream transfer speed, go to http://bandwidthplace.com/speedtest and click the link to start the test. For my cable modem connection, for example, a recent test reported a downstream transfer rate of about 2.2 Mbps, but at other times the rate has been as high as 5.2 Mbps.
+
+# ### Typical cable modem setup
+
+To set up cable modem access, your cable TV provider must offer high-speed Internet access. If the service is available, you can call to sign up. The cable companies often have promotional offers, such as no installation fee or a reduced rate for three months. Look for these offers. If you are lucky, a local cable company may have a promotion going on just when you want to sign up.
+
+The installation is typically done by a technician, who splits your incoming cable into two — one side goes to the TV and the other to the cable modem. The technician provides information about the cable modem to the cable company's head end for setup at its end. When all that is done, you can plug in your PC's Ethernet card to the cable modem, and you're all set to enjoy high-speed Internet access. Figure 1-5 shows a typical cable-modem hookup.
+
+The cable modem connects to an Ethernet card in your PC. If you don't have an Ethernet card in your PC, the cable company technician often provides one.
