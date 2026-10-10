@@ -490,6 +490,7 @@
 +   [Ubuntu OS 入门指南：Linux 开源操作系统极简指南](docs/getting-started-with-ubuntu-os-a-ridiculously-simple-guide-t/README.md)
 +   [Ghost Process：在 Linux 集群中实现进程复制、迁移和检查点重启的基础方案](docs/ghost-process-a-sound-basis-to-implement-process-duplication/README.md)
 +   [Linux GIMP 圣经](docs/gimp-for-linux-bible/README.md)
++   [GNOME GTK+ 编程宝典](docs/gnome-gtk-programming-bible-create-state-of-the-art-guis-for/README.md)
 +   [GNU Linux 高级管理指南](docs/gnu-linux-advanced-administration/README.md)
 +   [GNU Linux 入门指南](docs/gnu-linux-basic/README.md)
 +   [GNU make：用于重编译的程序：GNU make 版本 3.79.1](docs/gnu-make-a-program-for-directing-recompilation-gnu-make-vers/README.md)

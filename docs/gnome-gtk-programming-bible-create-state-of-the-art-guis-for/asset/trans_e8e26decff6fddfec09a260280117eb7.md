@@ -1,0 +1,196 @@
+
+
+```c
+36 gtk_main();
+37 exit(0);
+38 }
+39 gboolean eventDraw(GtkWidget *widget,
+40 GdkEvent *event,gpointer data) {
+41 GdkGC *gc;
+42 GdbBitmap *mask;
+43 GdkStyle *style;
+44 GdkPixmap *stipple;
+45 GdkPixmap *terminal;
+46 GdkColormap *colormap;
+47 GdkColor foreground;
+48 GdkColor background;
+49 
+50 colormap = gdk_colormap_get_system();
+51 gc = gdk_gc_new(widget->window);
+52 if(gdk_color_parse("blue",&foreground)) {
+53 gdk_color_alloc(colormap,&foreground);
+54 gdk_gc_set_foreground(gc,&foreground);
+55 }
+56 if(gdk_color_parse("yellow",&background)) {
+57 gdk_color_alloc(colormap,&background);
+58 gdk_gc_set_background(gc,&background);
+59 }
+60 
+61 stipple = gdk_bitmap_create_from_data(widget->window,
+stipple_bits,
+stipple_width,
+stipple_height);
+65 gdk_gc_set_stipple(gc,stipple);
+67 style = gtk_widget_get_style(widget);
+68 terminal = gdk_pixmap_create_from_xpm_d(widget->window,
+69 &mask,
+70 &style->bg,GTK_STATE_NORMAL,
+71 (gchar **)terminal_sun.xpm);
+72 gdk_gc_set_tile(gc,terminal);
+74 
+75 gdk_gc_set_ts_origin(gc,30,30);
+76 gdk_gc_set_tfill(gc,GDK_STIPPLED);
+77 gdk_draw_rectangle(widget->window,
+78 gc,
+79 TRUE,
+80 30,30,
+81 200,100);
+82 
+83 gdk_gc_set_ts_origin(gc,30,160);
+84 gdk_gc_set_tfill(gc,GDK_OPAQUE_STIPPLED);
+85 gdk_draw_rectangle(widget->window,
+86 gc,
+87 TRUE,
+88 30,160,
+200,100);
+89
+90              gdk_gc_set_ts_origin(gc,30,280);
+91              gdk_gc_set_fill(gc,GDK_TILED);
+92              gdk_draw_rectangle(widget->window,
+93                          gc,
+94                          TRUE,
+95                          30,280,
+96                          200,100);
+97
+98              return(TRUE);
+99      }
+100       gint eventDelete(GtkWidget *widget,
+101                          GdkEvent *event,gpointer data) {
+102              return(FALSE);
+103      }
+104       gint eventDestroy(GtkWidget *widget,
+105                          GdkEvent *event,gpointer data) {
+106              gtk_main_quit();
+107              return(0);
+108      }
+```
+
+点绘图的文件位于第 4 行，用于平铺的位图位于第 5 行。第 29 行至第 33 行创建了一个绘制区域，将其附加到应用程序窗口，并连接回调函数 `eventDraw()`。
+
+第 50 行调用 `gdk_colormap_get_system()` 获取系统颜色映射的地址，第 51 行调用 `gdk_gc_new()` 创建一个新的图形上下文。第 52 行至第 59 行定义并安装了前景色和背景色。
+
+第 61 行调用函数 `gtk_bitmap_create_from_data()`，从编译到程序中的位图数据创建位图。结果是一个每像素一比特（1 bit per pixel）的位图。`stipple_bits` 参数是用作位图中值的比特数组。`stipple_height` 和 `stipple_width` 值定义了位图的矩形大小。位图构造完成后，第 65 行调用 `gdk_gc_set_stipple()` 将其插入图形上下文，作为用于点绘的位图。
+
+第 67 行至第 72 行创建平铺位图并将其安装到图形上下文中。第 68 行调用 `gdk_pixmap_create_from_xpm_d()` 将编译到程序中的 XPM 数据转换为位图。关于此过程的更多信息请参见第 7 章。第 72 行调用 `gdk_gc_set_tile()` 将位图安装到图形上下文中。
+
+第 74 行至第 80 行创建图 11-4 中窗口顶部显示的矩形区域。调用 `gdk_gc_set_ts_origin()` 将点绘图案的原点设置为与绘制矩形相同的 x 和 y 值。点绘图案从矩形的左上角开始（而不是默认的 (0,0)，即绘制区域的左上角）。点绘图案根据需要重复，以填充矩形。调用函数 `gdk_gc_set_fill()` 将填充模式设置为 `GDK_STIPPLED`，因此只有点绘位图中对应比特为 1 的像素会被绘制。其他像素保持原样，从而形成透明绘制效果。
+
+第 82 行至第 88 行创建图 11-4 中部的矩形区域。与之前的矩形类似，通过调用 `gdk_gc_set_ts_origin()` 将原点设置为与矩形相同。调用函数 `gdk_gc_set_fill()` 将填充模式设置为 `GDK_OPAQUE_STIPPLED`。顾名思义，结果是所有像素都会被绘制，从而完全覆盖窗口中已存在的像素。点绘图位图中对应比特为 1 的像素用前景色绘制，对应比特为 0 的像素用背景色绘制。
+
+![](img/8bcc1ba72831c7d67cfc8b395deab95f_388_0.png)
+
+第 90 行至第 96 行通过在整个矩形区域内平铺位图来填充图 11-4 底部的矩形区域。调用 `gdk_gc_set_ts_origin()` 将平铺原点设置为与被平铺矩形的原点相同的位置，因此左上角的平铺块是完整的。通过调用 `gdk_gc_set_fill()` 将填充模式设置为 `GDK_TILED`，因此调用 `gdk_draw_rectangle()` 通过反复绘制平铺位图（定义在第 67 行至第 72 行）来填充该区域，直到矩形被填满。
+
+**注意** 进行平铺和点绘还有许多其他方法。这些示例使用默认绘图函数 `GDK_COPY` 来绘制像素——即源像素直接覆盖目标像素。如本章前面表 11-2 所示，还有其他多种绘制像素的方法。通过组合不同的位图和不同的绘制函数，您可以生成几乎无限多样的组合。
+
+## 在 GtkGC 中设置值的函数
+
+在 GtkGC 中插入值有两种方法。前面的示例都使用函数调用来单独设置每个值。或者，您可以使用 GdkGCValues 结构体在创建图形上下文时同时设置多个值。以下示例演示了这两种不同的方法。
+
+```c
+1 /** setgc.c **/
+2 #include <gnome.h>
+3
+4 gint eventDelete(GtkWidget *widget,
+5     GdkEvent *event,gpointer data);
+6 gint eventDestroy(GtkWidget *widget,
+7     GdkEvent *event,gpointer data);
+8 gboolean eventDraw(GtkWidget *widget,
+9     GdkEvent *event,gpointer data);
+10 static GdkGC *functionCreateGC(GtkWindow *window);
+11 static GdkGC *valueCreateGC(GtkWindow *window);
+12
+13 #define WIDTH 300
+14 #define HEIGHT 100
+15
+16 int main(int argc,char *argv[])
+17 {
+18     GtkWidget *app;
+19     GtkWidget *area;
+20
+21     gnome_init("setgc","1.0",argc,argv);
+22     app = gnome_app_new("setgc","Setting GdkGC Values");
+23     gtk_signal_connect(GTK_OBJECT(app),"delete_event",
+24         GTK_SIGNAL_FUNC(eventDelete),NULL);
+25     gtk_signal_connect(GTK_OBJECT(app),"destroy",
+26         GTK_SIGNAL_FUNC(eventDestroy),NULL);
+27
+28     area = gtk_drawing_area_new();
+29     gtk_widget_set_usize(area,WIDTH,HEIGHT);
+30     gnome_app_set_contents(GNOME_APP(app),area);
+31     gtk_signal_connect(GTK_OBJECT(area),"event",
+32         GTK_SIGNAL_FUNC(eventDraw),area);
+33
+34     gtk_widget_show_all(app);
+35     gtk_main();
+36     exit(0);
+37 }
+38 gboolean eventDraw(GtkWidget *widget,
+39     GdkEvent *event,gpointer data) {
+40     GdkGC *gc;
+41     GtkWidget *area;
+42
+43     area = GTK_WIDGET(data);
+44
+45     gc = functionCreateGC(area->window);
+46     /****
+47     gc = valueCreateGC(area->window);
+48     ****/
+49
+50     gdk_draw_line(area->window,
+51         gc,
+52         20,HEIGHT/2,
+53         WIDTH-20,HEIGHT/2);
+54     return(TRUE);
+55 }
+56 static GdkGC *functionCreateGC(GtkWindow *window)
+57 {
+58     GdkGC *gc;
+59     GdkColormap *colormap;
+60     GdkColor foreground;
+61     gchar dash[2] = { 1, 20};
+62
+63     gc = gdk_gc_new(window);
+64
+65     colormap = gdk_colormap_get_system();
+66     if(gdk_color_parse("white",&foreground)) {
+67         gdk_color_alloc(colormap,&foreground);
+68         gdk_gc_set_foreground(gc,&foreground);
+69     }
+70     gdk_gc_set_line_attributes(gc,
+71         15,
+72         GDK_LINE_ON_OFF_DASH,
+73         GDK_CAP_ROUND,
+74         GDK_JOIN_MITER);
+75     gdk_gc_set_dashes(gc,0,dash,2);
+76
+77     return(gc);
+78 }
+79 static GdkGC *valueCreateGC(GtkWindow *window)
+80 {
+81     GdkGC *gc;
+82     GdkColormap *colormap;
+83     GdkColor foreground;
+84     gchar dash[2] = { 1, 20};
+85     GdkGCValues values;
+86
+87     colormap = gdk_colormap_get_system();
+88     if(gdk_color_parse("white",&foreground))
+89         gdk_color_alloc(colormap,&foreground);
+90     values.foreground = foreground;
+91     values.line_width = 15;
+92     values.line_style = GDK_LINE_ON_OFF_DASH;
+93     values.cap_style = GDK_CAP_ROUND;
+94     values.join_style = GDK_JOIN_MITER;
+```
+

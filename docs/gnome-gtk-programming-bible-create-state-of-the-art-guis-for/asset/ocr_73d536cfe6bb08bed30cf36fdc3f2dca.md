@@ -1,0 +1,15 @@
+The call to `gtk_signal_connect()` on line 21 causes the `eventDestroy()` callback to be called immediately to close the application. There is no `"delete_event"` callback (as with other top-level GNOME and GTK+ windows) because that particular signal is not defined for GnomeMDI.
+
+Lines 24 through 27 add document widgets to the MDI display. The call to `gnome_mdi_set_mode()` on line 29 sets the display mode so the tabs are available on the left (as shown in Figure 17-1). The call to `gnome_mdi_open_toplevel()` on line 30 creates a top-level window and uses it as a container for the GnomeMDI object displaying the document widgets.
+
+The `addChild()` function, beginning on line 35, creates a new document window and adds it to MDI as a child to be displayed. Each displayable object is a GnomeMDIGenericChild object, as created by the call to `gnome_mdi_generic_child()` on line 39. This object is added to the GnomeMDI object with the call to `gnome_mdi_add_child()` on line 40. Now, the child is added to GnomeMDI, but it is not visible until the widget that displays it is defined. The call to `gnome_mdi_generic_child_set_view_creator()` on line 43 specifies that the function `createView()` should be called to return the widget that is the display form of the object. The call to `gnome_mdi_generic_child_set_label_func()` on line 45 specifies that the function `setLabel()` should be called to create a label for the tabs on the page holding the view of the object. Finally, on line 47, the call to `gnome_mdi_add_view()` creates the visible portion of the document by calling the functions that are specified to create the display and the label.
+
+The function `createView()` on line 50 creates a widget that is used to display a view of the object. This example uses the name string that was passed in as the user data (on the call to `gnome_mdi_generic_child_set_view_creator()` on line 43) to create a string that contains the name. Then, the string is used to create and return a GtkLabel as the document to be displayed.
+
+The function `setLabel()` on line 58 is called to define a widget that serves as the label on the tab that the mouse uses to flip from one page to another. The second argument is the tab label widget (if any) that was created earlier. Whenever the MDI window first displays in the notebook mode, this function is called to create a label. However, one may exist already from a previous time when the MDI window was shown in the notebook mode.
+
+The notebook mode always supplies the label tabs on the left that you can use to switch from one view to another. If there are more tabs than can be displayed in the window, a pair of up and down arrows are inserted at the bottom so the user can scroll back and forth through the tabs. Figure 17-2 shows the window after reducing the size of the window from the preceding example.
+
+![](bbox=[0.167, 0.837, 0.368, 0.964])
+
+# **Figure 17-2:** Accessing tabs using the up and down arrow buttons

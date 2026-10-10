@@ -1,0 +1,218 @@
+
+## Glossary
+
+- **internationalization** The act of creating software that responds to its *locale*. This can be as simple as changing data formats and the currency symbol, or as complicated as translating all the buttons, menus, help, and other text displayed by the application. Internationalization also is called *i18n*.
+- **locale** The time and date format, currency symbol, numeric format, and character set, for a specific region. An international program may be able to switch to one of several locales.
+- **marshal** A process that dynamically organizes a collection of arguments and makes a function call. A GNOME signal makes its callbacks by *marshaling* the data to be passed to the callback function, and then using that data to call the function.
+- **MDI** Multiple Document Interface. A single window contains a number of subwindows, and you can switch among them. In other words, any one of the subwindows can be displayed.
+- **MIME** Multipurpose Internet Mail Extension. A method by which data can be encoded into a form that is transmitted easily over the Internet, or some other connection, and decoded into its original form by the receiver. Designed for handling attachments on e-mail, it is used for other things, such as drag-and-drop.
+- **Multiple Document Interface** See MDI.
+- **modal** While it is displayed, a modal window prevents mouse or keyboard access to any other window displayed by the same application.
+- **object** A data structure and the collection of functions that operate on it. This is the code organization used by GNOME and GTK+—but not by GDK and X.
+- **parent** The windows for an application are in a hierarchical tree. Any window that has one or more subwindows is called a *parent* window, and the subwindows are called *child* windows.
+- **parented** A child window also is called a parented window. That is, it has a parent.
+- **pixmap** A rectangular array of pixel values that accepts drawing commands. To draw a pixmap to a window, you simply copy its pixels to the display. Also, a program can draw onto a pixmap in RAM the same way it can draw to a window on the display—just treat it like a window in RAM.
+- **popt** A GNOME library package for reading arguments from the command line.
+- **popup** The same as a dialog box, except the window manager does not include the frame with the title and controls.
+- **root window** The parent window of all the windows on the display. It fills the entire display area and provides a place to display icons and background to fill places not used by other windows.
+- **rpm** Red Hat Package Manager. Creates and manipulates packages for distributing software packages. You can use it to build new software packages; install software from an existing package; update to a newer, installed version; query the status of the installed package; and uninstall a package.
+- **spline** An algorithm that uses piecewise refinement to construct a polynomial that will smoothly connect a set of points. It is often used to visually interpolate between data points in a graph.
+- **visual** A visual is the format of displayable screen data. There usually is a single default visual (stored as GdkVisual struct) that displays all windows. However, some screens allow multiple visuals to be active simultaneously—different windows displayed using different color and pixel-painting methods.
+- **widget** A single unit of a code-data combination in GTK+ and GNOME that facilitates windowing. Normally, a widget is displayable, but some widgets do not display a window. A widget can be very simple, such as a label that displays a text string; or it can be complex, such as a color selector that displays color graphics, buttons, and sliders. Widgets commonly contain other widgets, such as a button widget that contains a label widget to display its text.
+- **X or X11** Also called the X Window System. It is a set of library routines that you can use to implement a graphical user interface. The Linux version of X is XFree86, which is used on both BSD and Linux. You can get more information from this Web site: `XFree86.org`.
+- **XInput** An extension of X that allows input devices other than the mouse and keyboard.
+- **XPM** A graphics file format in the form of C source code. You can compile it directly into a program, or use an XPM file as an independent graphics file.
+
+# Index
+
+### A
+
+- a extension, 20
+- About popup window, 207
+- aboutCallback() callback function, 445
+- ABS() macro, 14
+- AC macros, 523
+- AC_ARG_PROGRAM macro, 524
+- accelerator keys, 202–203, 534–535
+- according header file, 527–528
+- AC_HEADER_STC macro, 524
+- AC_INIT macro, 524
+- AC_OUTPUT macro, 524
+- AC_PROG_C macro, 524
+- AC_PROG_CXX macro, 524
+- AC_SUBST macro, 524
+- actions, user responses to, 50
+- active page, 136
+- addButton() function, 131
+- addButtons() function, 131
+- addChild() function, 468, 473, 478
+- addImage() function, 458, 459
+- adding command-line options, 393–397
+- add_sigdsec_to_tree(), 260
+- add_sigslot() function, 160
+- affine transforms, 285–288
+- Ag widgets, 481
+- AgBargraph macro, 485
+- AgBargraph struct, 486, 502
+- AgBargraph widget
+  - adding information to, 482
+  - automatically resizing, 482
+  - bar_count value, 486
+  - C source code, 487–502
+  - characteristics, 482
+  - creating and displaying, 482–484
+  - ease of use, 482
+  - header file, 484–486
+  - inheritance, 482
+  - instances, 482
+  - object orientation, 482
+  - text font field, 486
+- ag_bargraph_add() function, 483, 486, 502
+- ag_bargraph_add_gc() function, 499
+- AgBargraphClass class struct, 486
+- AG_BARGRAPH_CLASS macro, 485
+- AgBargraphClass struct, 486
+- ag_bargraph_class_init() function, 489
+- ag_bargraph_destroy() callback function, 487, 489, 494
+- ag_bargraph_draw() function, 489, 495
+- ag_bargraph_event() function, 489, 496
+- ag_bargraph_get_type() function, 488, 489
+- ag_bargraph.h header file, 484–485, 502
+- ag_bargraph_init() function, 489–490
+- ag_bargraph_new() function, 483, 488, 503
+- ag_bargraph_paint() function, 487, 495, 496, 497, 502
+- ag_bargraph_paint_text() function, 498
+- ag_bargraph_realized() function, 489, 490
+- ag_bargraph_send_configure() function, 494, 501
+- ag_bargraph_set_maximum() function, 503
+- ag_bargraph_set_text() function, 496, 497
+- ag_bargraph_size_allocate() function, 489, 500
+- ag_bargraph_size_request() function, 489, 500
+- ag_bargraph_type state variable, 488
+- aggregate, 415
+- AG_IS_BARGRAPH macro, 485
+- ALGORITHM file, 527
+- aliases and fonts, 401
+- alignment container, 112–116
+- aligning c program, 112–113
+- ALL_LINGUAS file, 524
+- allocating memory, 15
+- ALL_SPACE value, 86
+- AM macros, 523
+- AM_ACLOCAL_INCLUDE macro, 524
+- AM_CONFIG_HEADER macro, 524
+- AM_GNU_GETTEXT macro, 525
+- AM_INIT_AUTOMAKE macro, 525
+- AM_MAINTAINER_MODE macro, 525
+- AM_PROG_LIBTOOL macro, 525
+- anum, array, 559
+- animation, 329–332, 638–640
+- animation.c program, 329–331
+- "animator.xpm" file, 639
+- app window, 44
+- Applet menu, 443–445
+- applets, 437
+  - compiling, 43
+  - displaying updated information, 440–442
+  - launching an application, 439–440
+  - panel orientation, 445–447
+  - simplified, 437–439
+- AppletWidget widget, 438, 440, 447
+- applet_widget_gtk_main() function, 438
+- applet_widget.h header file, 438
+- applet_widget_init() function, 438
+- applet_widget_new() function, 438
+- applet_widget_register_callback() function, 445
+- applet_widget_register_stock_callback() function, 445
+- application window, mouse pointer inside or outside, 299
+- applications
+  - chapter of ownership, 299–300
+  - configuration files, 305–306
+  - editing information, 655
+  - environmental control, 505–514
+  - event queue, 149–150
+  - internationalization, 514–516
+  - launching from applet, 439–440
+  - moving graphics among, 452–459
+- "apply" callback signal, 691
+- arcs, 315–319
+- arcs.c program, 315–317
+- are you sure? dialog, 47–49
+- argDescrip string, 393
+- argnames.c program, 416–417
+- argument, 416
+- argv array, 24
+- arrays and keys, 509–510
+- arrowhead, 537
+- art_affine_rotate() function, 288
+- art_affine_scale() function, 288
+- art_affine_translate() function, 288
+- ascent values, 400
+- aspect frame container, 121–124
+- aspic.c program, 121–122
+- assigning package name, 515
+- AUTHORS file, 526, 527
+- autocconf program, 527, 529
+- autogen.sh script, 523, 528–529, 531
+- autoheader program, 527
+- automatically
+  - scaling images, 271
+  - sizing widgets, 71–72
+
+### B
+
+- background color, 345, 355
+- background processing, 163–165
+- bar graph widgets, 481–482
+- bars array, 502
+- base class struct, 8
+- base classes, 8–9, 533, 552–554
+- baseline, 400
+- bevel join, 356
+- bindtextdomain() fun, 516
+- bin_PROGRAMS variable, 530
+- bit masks used to request events, 383–384
+- bitmap utility, 181–182, 189
+- bitmaps
+  - creation of, 181
+  - modifying, 182
+- blipping, 357–361
+- blank windows, 581–582
+- bool data type, 511
+- box widget, 61
+- boxbox.c program (Gnome), 718–719
+- boxbox.c program (Win32), 715–717
+- boxes
+  - automatically sizing widgets, 71–72
+  - within boxes, 87–90
+- combining with tables, 104–108
+- nesting, 71
+- packing, 71
+- spacing widgets in, 83–87
+- boxtext.c program, 88–90
+- BUGS file, 526
+- butt ending, 356
+- button box, 140–147
+- button clicks, 43, 77, 112, 132
+  - callback functions, 282
+- buttonClick() callback function, 111
+- buttonFill() function, 80
+- buttonFirst() callback function, 153
+- ButtonMover strct, 111
+- buttons, 29–31
+  - aligning, 536
+  - centering, 514
+  - changing and retaining on or off state, 619
+  - changing decoration appearance, 9
+  - creating and registering, 693–695
+  - grouping, 140–147
+  - horizontal display, 576
+  - indicating use, 293–294
+  - with label next to, 542–543
+- labels, 9
+- menus, 197
+- showing and hiding, 427–429
+- sizes and positions, 540
+- vertical layout, 625
+- buttonSecondCallback() function, 153
+- buttonx.xc program, 29–31

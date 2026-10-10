@@ -1,0 +1,315 @@
+
+## C
+
+- C++, 7
+- .C extension, 20
+- .c extension, 20
+- C function calls, 4
+- C library, 4, 7
+- calendar month display, 541-542
+- callback functions, 11, 28-29, 40, 487
+- button widget, 282
+- drag-drop, 154
+- emitting its own signal, 153
+- forms, 154-163
+- parameters, 154
+- passing data to, 53-55
+- prototypes, 154, 155, 202
+- recursive, 153
+- signal, 154
+- callback procedure, 30
+- callback() function, 717, 721
+- ccall() function, 195
+- candidialog.c program, 47-48
+- canvas, 252
+- adding widgets, 280-282
+- affine transforms, 285-288
+- anchor points to attach image to, 272
+- anchoring widgets, 282
+- displaying image, 645
+- drawing line, 647
+- drawing polygons, 283-285
+- filled polygon, 647
+- grouping items, 276-279
+- grouping objects, 645
+- images, 269-273
+- moving items, 265-268
+- passing events down to item, 259-265
+- positioning, 254
+- rectangle, 648
+- size, 254
+- text, 273-276, 648
+- canvasaffine.c program, 285-287
+- canvas.c program, 252-253
+- canvascall.c program, 259-262
+- canvasdrag.c program, 265-268
+- canvasEvent() callback function, 379
+- canvasimage.c program, 269-271
+- canvasorder.c program, 265-267
+- canvaspolygon.c program, 283-284
+- canvastext.c program, 273-275
+- canvaswidget.c program, 280-282
+- case statement, 721
+- caseless compare, 15
+- casting macros, 15
+- cbfunction() callback function, 45
+- .cc extension, 20
+- cc program, 20
+- CDK_CLIP_BY_CHILDREN, 345
+- centering buttons, 114
+- CFLAGS variable, 23, 26
+- changeCallback() function, 445
+- changeColor() callback function, 370
+- “changed” signal, 535, 674, 686
+- ChangeLog file, 527
+- char data type, 11
+- characters, 399-400
+- reading from keyboard, 385-391
+- child node, 558
+- child widget
+- aspect ratio, 538
+- controlling size, 536
+- child windows and MDI (Multiple Document Interface), 466, 678
+- circles
+- drawing, 315-319
+- repositioning, 279
+- classes, 8-9
+- class-level functions, 486
+- clean followed by recompile, 23
+- closedDialog callback function, 65
+- closerd() function, 709
+- closewin.c program, 26-28
+- closing windows, 26-28
+- collection.c program, 104
+- color
+- architecture, 335-339
+- background, 355
+- dialog to select, 367
+- floating-point values, 335
+- foreground, 355
+- information, 343
+- intensity, 335
+- selecting, 549-550, 653-654
+- widgets, 346-349
+- color maps, 336-337
+- color selection dialog, 550-551
+- colormazes category, 506
+- combining boxes and tables, 104-108
+- command line
+- executing, 703
+- command line arguments, 24
+- options, 391-393
+- commands and accelerator keys, 202-203
+- comparing strings, 15
+- comparison between GNOME and Win32 programs, 720-722
+
+### C
+
+- compiling
+- apples, 33
+- gcc program, 21
+- programs, 12, 21
+- concatenating strings, 15
+- config utility, 12
+- config.h header file, 516, 523, 527
+- configuration files
+- absolute path, 507
+- categories, 506
+- complete path to key, 506
+- data types, 510–514
+- file path, 506–507
+- format, 506
+- keys, 506
+- reading and displaying values, 508–509
+- reading and writing, 507–509
+- storing and retrieving vector, 509–510
+- time last updated, 507
+- configuration script macros, 523
+- configuration settings, 503
+- configure script, 523
+- configure.c program, 326–328
+- “configure_event” signal, 721
+- configure file, 523–526
+- configvec.c, 509–510
+- constructing wizards, 670–671
+- container widget group, 251
+- container widgets, 10
+- base class, 552–554
+- containing only single child widget, 539
+- containers, 10, 61
+- alignment, 112–116
+- aspect frame, 121
+- button box, 140–147
+- field, 109–112
+- frame, 116–121
+- hiding and showing widgets, 429
+- notebook, 135–140
+- paned, 124
+- resizing, 114
+- rules for positioning and spacing widgets, 598
+- scrolled windows, 132–135
+- contains_pointer value, 496
+- Context struct, 412
+- convert utility, 173, 177
+- coord array, 255
+- copy-and-paste operation, 449
+- COPYING file, 526
+- copying pixels within window, 298
+- counter variable, 165
+- create() function, 700
+- createMenus() command, 208
+- createPositionWidget() function, 411, 412
+- createView() callback function, 468, 473, 478
+- createWindow() function, 720
+- current time, 548–549, 705–708
+- cursol.c program, 183–187
+- cursors
+- black and white, 189
+- mask defining outline, 189
+- switching, 183–188
+- user-created, 188–191, 192–195
+- customized dialog box, 656–658
+- customizing function, 486
+- cut-and-paste operation, 449
+- cutpaste.c program, 460–461
+- cutting and pasting text, 460–462
+- .cxx extension, 20
+
+### D
+
+- dashed line types, 356–357
+- dashlist array, 356
+- data entry, 564–565
+- data types, 421
+- configuration files, 510–514
+- defined in glib, 11–13
+- portability, 11
+- primitive type definitions, 12
+- unsigned integers, 12
+- dataCallback.c program, 53–54
+- datawidget.c widget, 68
+- datawindow.c program, 65–67
+- deallocating memory, 24
+- debugging information, 23
+- default windows, 25
+- “delete_event” signal, 722
+- DEPENDS file
+- descent values, 400
+- describeEventButton() function, 264
+- describeEventMotion() function, 264
+- descrip string, 393
+- DESIGN file, 527
+- “destroy” event, 722
+- destroyColoress() callback function, 370, 371
+- destroyDialog() callback function, 62
+- destroy() function, 495
+- development directory, setting up, 522–523
+- dial, 561
+- dialog boxes
+- with close button, 61
+- customized, 656–658
+- with message boxes, 679–681
+- setting widget properties, 688–691
+- stock buttons, 658, 681
+- dialogs, 39–40, 59
+- are you sure?, 47–49
+- destroying when popped down, 59–62
+- hiding and redisplaying, 63–65
+- keyboard input, 49–52
+- modal, 48, 62
+- modal, but not parented, 48
+- parent window, 43–44
+- parsing but not modal, 48
+- passing data to callback function, 53–55
+- password, 50–52
+- predetermined, 40–57
+- progress bar, 56–57
+- prompt with default string, 55
+- retrieving user input, 65–68
+- to select colors, 367–371
+- string prompt with default value, 52
+- yes or no, 44–47
+- directly reading and writing values, 7
+- directories, 709
+- editing information, 655
+- listing files, 566–568
+- directory tree, 554–559
+- disableProperties() callback function, 229, 232
+- dispatching events, 150–151
+- DispatchMessage() function, 721
+- display
+- architectures, 336
+- locating and opening, 24
+- MDI (Multiple Document Interface) modes, 469–474
+- storage location for pixels, 336
+- disposable widgets, 533
+- docking toolbars, 218–219
+- documentation
+- MDI (Multiple Document Interface), 466
+- open source code, 522
+- double-click line, 357
+- drag-and-drop
+- graphics, 452–459
+- operation, 449
+- text, 449–452
+- drag-drop callback functions, 154
+- dragEvent() callback function, 268, 273, 276, 279
+- drawArcs() function, 317
+- drawing and filling
+- polygons, 312–315
+- rectangles, 309–312
+- drawing area, 303
+- basics, 304–305
+- resizing, 326–328
+- drawing graphics, 303
+- drawRandomRectangle() function, 348
+- dummyCallback() function, 211, 478
+
+### E
+
+- Edit menu, 202
+- function, 202
+- standard, 212
+- editing text from widgets, 563–564
+- elapsed timer, 548–549
+- ellipses, 315–319, 645
+- enableProperties() callback function, 229, 230, 232
+- encapsulation, 7–8
+- environment settings, 34
+- environmental control, 505–514
+- errno global variable, 15, 689, 710
+- error code, 689–700
+- error condition, 15
+- error dialog, 44
+- error popup, 44
+- error: c program, 699–700
+- escape sequence \, 510
+- /etc/conf file, 682
+- event queue, reading, 149–150
+- event structs, 292–293
+- eventButton() function, 30, 165
+- eventChange() callback function, 421
+- eventConfigure() callback function, 328, 721
+- eventDelete() function, 28, 722
+- eventDestroy() callback function, 36, 385, 468, 722
+- eventDrop() callback function, 305, 308, 314, 317, 321, 324, 328, 354, 360, 364, 412, 413
+- eventExpose() callback function, 721
+- eventFocus() callback function, 389, 390
+- eventFontSet() callback function, 405, 412
+- eventHideShow() callback function, 429
+- eventIonChanges() callback function, 674
+- eventIonSelected() callback function, 674
+- eventPressKey() function, 390
+- eventReleaseKey() callback function, 388, 391
+- events, 10–11, 28–29, 255–258
+- bit masks used to request, 383–384
+- change in visibility state of window, 300
+- change of application ownership, 299–300
+- changes in window size or position, 295
+- common fields, 291–292
+- communicating operation status, 296
+- copying pixels within window, 298
+- counter, 379
+- declarations, 291
+- dispatching, 150–151
+- focus change for window, 297

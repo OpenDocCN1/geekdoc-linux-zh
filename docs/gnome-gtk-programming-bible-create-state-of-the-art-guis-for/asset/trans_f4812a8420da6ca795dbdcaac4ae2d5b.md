@@ -1,0 +1,109 @@
+
+
+![](img/8bcc1ba72831c7d67cfc8b395deab95f_382_0.png)
+
+**图 11-2：** 绘制了粗线以演示线条样式
+
+第 54 行调用 *gdk\_font\_load*() 加载稍后用于在窗口上绘制文本的字体。这需要稍后使用，因为向绘图区域绘制字符串需要字体规范。
+
+在第 55 行通过调用 *gdk\_gc\_new*()（以绘图区域的窗口为参数）构造一个新的图形上下文。新的图形上下文被设置为颜色、线条等的默认值，并且其内部值被正确设置以绘制到作为参数使用的窗口。
+
+第 55 行至 64 行同时设置前景色和背景色。颜色是根据颜色映射表构建和分配的，因此在第 56 行通过调用 *gdk\_colormap\_get\_system*() 获取系统颜色映射表。第 57 行对 *gdk\_color\_parse*() 的调用给定一个颜色名称，只有当该名称被识别且颜色值被获取时才返回 **TRUE**。
+
+在调用 *gdk\_color\_parse*() 时，有两种方法可以指定颜色名称。你可以像本例中那样指定颜色名称，或者该名称出现在 /usr/lib/X11/rgb.txt 文件中。这是一个文本文件，用于将每个颜色名称映射到其三个 RGB 数值集合。如果你在此文件中添加一个颜色名称，你的程序会找到并使用它，但你的程序需要有一些备用操作，因为该颜色名称在另一个系统上可能缺失，甚至在这个系统的升级版本中也可能缺失。如果你想要自定义颜色，最好指定 RGB 值。你可以使用本章前面描述的方法，或者使用颜色的 RGB 值作为颜色名称。以下任意一种格式均可：
+
+```
+"#RGB"
+"#RRGGBB"
+"#RRRRGGGBBB"
+"#RRRRRGGGGGBBBB"
+```
+
+每个字母都是一个十六进制数字。`gdk_color_parse()` 函数通过计算字符串中数字的总数来确定哪些数字对应哪个颜色（总数必须是 3 的倍数）。例如，要使用每个颜色两个数字，并指定没有红色、最大绿色和少量蓝色：
+
+```
+"#00FF3C"
+```
+
+在第 57 行，如果颜色名称有效，`gdk_color_parse()` 函数返回 **TRUE**。在第 58 行调用函数 `gdk_color_alloc()` 初始化颜色信息，以便在图形上下文中使用，第 59 行对 `gdk_gc_set_foreground()` 的调用将该颜色安装到图形上下文中作为前景色。以类似的方式，第 61 行至 64 行的函数调用建立了背景色。
+
+在第 67 行，调用 `gdk_gc_set_line_attributes()` 指定一条 10 像素宽的线上的 *miter join*（斜接）。绘制宽线是为了便于观察线条构造的细节。Miter join 是指线条的外边缘延伸直至相交。这对于浅角度效果很好，但随着角度变窄，交点会向外移动，从而可能扭曲你要绘制的图像。在第 72 行，对 `gdk_polygon()` 的调用绘制了在第 48 行定义的点数组中定义的三角形。由于我们使用的是新的图形上下文，线条以蓝色绘制，宽度为 10 像素。在第 77 行，对 `gdk_draw_string()` 的调用在图 11-2 的左上角所示位置标注该图形。
+
+第 84 行的循环将三角形点移动到窗口上的下一个位置。接下来的函数调用，在第 86 行至 100 行，绘制另一个三角形。然而这次，连接样式是圆角的（rounded）。这是通过让绘制在线条到达端点时停止，然后围绕端点绘制一个直径与线条边缘匹配的圆圈来实现的。
+
+在第 105 行至 119 行，三角形再次向右移动，并以斜接（bevel join）绘制。你通过在两条线的外边缘之间画一条直线来制作 *bevel join*（斜接）。底部的 90 度角可能是最好的演示——两条线在同一端点结束，斜接通过填充剩下的小三角形形成。
+
+第 121 行至 186 行绘制四条具有不同结束样式的线。*butt ending*（平头结束）绘制一个包含端点像素的方形端。*not-last ending*（非最后结束）与平头结束相同，除了最后一个像素不绘制。*not-first ending*（非首先结束）可用于绘制构建某种框架的线条，并且由于颜色差异，线条不应覆盖显示上已存在的线条像素。*round ending*（圆头结束）只是围绕端点绘制一个圆。这将使线条在每个端点外延伸半个线条宽度。*projecting ending*（投射结束）将长度延伸半个宽度——与圆头结束的量相同——并绘制一个平头结束。
+
+通常绘制的是实线，但有两种方法可以绘制虚线。第 205 行至 224 行绘制 *on-off dashed lines*（开关式虚线）。也就是说，使用前景色绘制每隔一个线段，其他线段被跳过。第 226 行至 241 行通过交替使用前景色和背景色绘制双虚线。
+
+你可以按任意模式创建虚线。在本程序中，虚线模式由第 42 行的 **dashList** 数组定义。数组的每个成员指定要绘制为前景或背景的像素数。线条绘制例程使用 **dashList** 绘制 5 个像素，然后跳过 15 个像素，绘制 20 个像素，然后跳过 30 个像素，然后回到开头再次跳过 5 个像素，依此类推，直到到达线条末尾。如果数组中的成员数是奇数，则每次遍历数组时，开关选择会反转。例如：
+
+```
+char dashList[3] = { 5, 10, 15 };
+```
+
+线条以 5 个绘制像素开始，然后是 10 个跳过的像素，然后是 15 个绘制的像素，然后是 5 个跳过的像素，然后是 10 个绘制的像素，依此类推。就好像数组有六个成员，最后三个值重复一样。
+
+在第 207 行进行对 **gdk_gc_set_dashes()** 的调用，其第二个参数是指向数组的索引，指定起始成员——要绘制的第一个线段。最后一个参数是数组中值的数量。
+
+## 点阵图案
+
+使用点阵图案位图可以让你逐位控制哪些像素被绘制，哪些不被绘制。位图是一种深度为一的像素图——一种掩模，每个像素有一个位，确定哪些像素被绘制。可以使用第 7 章中描述的位图工具创建位图。以下示例中使用的位图名为 **stipple.xbm**，当加载到位图编辑器中时，看起来如图 11-3 所示。
+
+![](img/8bcc1ba72831c7d67cfc8b395deab95f_384_0.png)
+
+图 **11-3**：用作点阵图案掩模的位图
+
+位图作为 C 源代码存储在文件 `stipple.xbm` 中。它包含高度和宽度信息，以及每个像素一位的位数组：
+
+```c
+#define stipple_width 16
+#define stipple_height 16
+static unsigned char stipple_bits[] = {
+    0x00, 0x20, 0xaa, 0x2a, 0x54, 0x25, 0xaa, 0x2a,
+    0x54, 0x25, 0xaa, 0x2a, 0x54, 0x25, 0x00, 0x00,
+    0xfc, 0x3f, 0x1c, 0x00, 0x9c, 0x7f, 0x3c, 0x00,
+    0xef, 0xfc, 0x0e, 0x00, 0xce, 0x3f, 0x00, 0x20};
+```
+
+以下程序使用点阵图案绘制两个矩形。一个矩形绘制为透明——也就是说，对应 1 位的像素以前景色绘制，而对 0 位的像素不绘制。第二个矩形以 1 位为前景色，0 位为背景色绘制——所有像素都被绘制，因此是不透明的。
+
+```c
+1  /** stipple.c **/
+2  #include <gnome.h>
+3
+4  #include "stipple.xbm"
+5  #include "terminal.xpm"
+6
+7  gint eventDelete(GtkWidget *widget,
+8                  GdkEvent *event,gpointer data);
+9  gint eventDestroy(GtkWidget *widget,
+10                 GdkEvent *event,gpointer data);
+11  gboolean eventDraw(GtkWidget *widget,
+12                   GdkEvent *event,gpointer data);
+13
+14 #define WIDTH 250
+15 #define HEIGHT 420
+16
+17 int main(int argc,char *argv[])
+18 {
+19     GtkWidget *app;
+20     GtkWidget *area;
+21
+22     gnome_init("stipple","1.0",argc,argv);
+23     app = gnome_app_new("stipple","Stipple and Tile");
+24     g_signal_connect(GTK_OBJECT(app),"delete_event",
+25                     GTK_SIGNAL_FUNC(eventDelete),NULL);
+26     g_signal_connect(GTK_OBJECT(app),"destroy",
+27                     GTK_SIGNAL_FUNC(eventDestroy),NULL);
+28
+29     area = gtk_drawing_area_new();
+30     gtk_widget_set_usize(area,WIDTH,HEIGHT);
+31     gnome_app_set_contents(GNOME_APP(app),area);
+32     g_signal_connect(GTK_OBJECT(area),"event",
+33                     GTK_SIGNAL_FUNC(eventDraw),NULL);
+34
+35     gtk_widget_show_all(app);
+```
+

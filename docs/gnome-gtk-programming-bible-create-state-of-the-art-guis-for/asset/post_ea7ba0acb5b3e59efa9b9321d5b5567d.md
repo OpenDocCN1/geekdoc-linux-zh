@@ -1,0 +1,315 @@
+
+## 832 Index + E-F
+
+- events (continued)
+  - dependency of, 380
+  - indicating button use, 293–294
+  - interprocess communication, 294
+  - key pressed or released, 297
+  - keyboard, 40
+  - mouse, 40
+  - mouse pointer crossing window boundary, 295–296
+  - mouse pointer inside or outside application window, 299
+  - mouse pointer moved in window, 298
+  - not requiring extra information, 293
+  - passing down to canvas items, 259–265
+  - position information, 291
+  - pseudo, 380
+  - real, 380
+  - relating to function, 27–28
+  - signal, 305
+  - simulating, 151–153
+  - source field, 292
+  - state field, 291–292
+  - time fields, 291
+  - types, 292–293
+  - window property changes, 299
+  - window unavailable, 296–297
+  - windows, 25
+  - X and Y fields, 291
+  - X window manager, 11
+  - x_root and y_root fields, 291
+- eventSaveYourself() function, 651
+- eventShow() callback function, 425
+- eventShutdown() callback function, 65
+- examine.c program, 431–432
+- exec() function, 700, 701
+- exec1() function, 701
+- executing command line, 703
+- Exit command, 207
+- exit() function, 58
+- exiting GNOME applications, 36–37
+- expand value, 80
+- expanding widgets, 77
+- “expose_event” signal, 721
+
+### F
+
+- FALSE macro, 14
+- fcntl() function, 171
+- fflush() function, 705
+- fgets() function, 704
+- FIFO (first-in-first-out) files, 169
+- figures, drawing, 644
+- File menu, 202, 207
+  - standard, 212
+- FILE structure, 704
+- fileClose() function, 202
+- fileExit() function, 202
+- fileOpen() function, 202
+- files
+  - copying to other location, 23
+  - information about, 708–710
+  - listing, 566–568
+  - reading input from, 169–171
+  - selecting, 566–568
+  - single source-code, 487
+- fileSaveCallBack() function, 55
+- fill value, 80
+- “fill_color” parameter, 254, 255
+- filled polygon, 647
+- fillString() function, 345
+- fiver.c program, 92–93
+- fixed container, 109–112
+- fixed.c program, 109–111
+- flasher.c program, 347–348
+- float data type, 511, 512
+- focus change for window, 297
+- focusLabel label, 389
+- font files, 401
+- font picker widget, 403–406
+- fontpicker.c program, 403–405
+- fontpostfix.c program, 406–411
+- fonts, 399
+  - aliases, 401
+  - anatomy of, 399–400
+  - ascent value, 400
+  - baseline, 400
+  - characters, 399
+  - descent values, 400
+  - information about, 343–344
+  - long name, 401–403
+  - metrics, 406–413
+  - names, 401–403
+  - placement, 406–413
+  - returning name of, 669–670
+  - searching with wildcard characters for, 403
+  - selecting, 569–570, 668–669
+  - selecting and displaying, 403–406
+- fonts.alias file, 401
+- fonts.dir, 401
+- font_selection_set_filter() function, 570
+- foreground color, 345, 355
+- fquest.c program, 345, 701
+- fork() function, 700, 701
+- fputs() function, 705
+- frame container, 116–120
+- frame.c program, 116–118
+- frames.c program, 119–120
+- frames, 118
+  - around widgets, 572–573
+  - shadow styles, 573
+- free() function, 314
+- fronImage array, 459
+- ftp_applet.c program, 439–440
+- function prototypes, 486
+- functionCreateGC() function, 364
+- functions
+  - bool data type, 511
+  - calling to set value, 7–8
+  - class-level, 486
+  - customizing, 486
+  - float data type, 512
+  - int data type, 512
+  - nonstatic, 486, 488
+  - NULL or zero value, 507
+  - private, 487
+  - private utility, 487
+  - public, 487
+  - relating value to, 27–28
+  - setting values in GtkGC struct, 362–366
+  - static, 487
+  - string data type, 512
+  - translated_string, 513
+  - vector data type, 513–514
+  - for writing pixels, 344
+- functionString() function, 344
+
+### G
+
+- Games menu, 212
+- games, listing names and scores, 692–693
+- gboolean type, 14
+- gc+ program
+  - compiling, 21
+  - linking, 21
+  - passing arguments to, 23
+  - suffixes recognized by, 20
+- GDK library, 11
+  - GDK (GNOME Drawing Kit) library, 4–5
+  - GDK_BUTTON_PRESS event, 380
+  - GDK_ALL_EVENTS_MASK mask, 384
+  - GDK_AND function, 344
+  - GDK_AND_INVERT function, 344
+  - GDK_AND_REVERSE function, 344
+  - gdk_bitmap_create_from_data() function, 191
+  - GDK_BUTTON1_MOTION_MASK mask, 384
+  - GDK_BUTTON2_MOTION_MASK mask, 384
+  - GDK_BUTTON3_MOTION_MASK mask, 384
+  - GDK_BUTTON_MOTION_MASK mask, 383
+- GDK_BUTTON_PRESS event, 379, 380
+- GDK_BUTTON_PRESS_MASK mask, 384
+- GDK_BUTTON_RELEASE event, 380
+- GDK_BUTTON_RELEASE_MASK mask, 384
+- GdkCValues struct, 365
+- GDK_CLEAR function, 344
+- GdkColor object, 346, 349, 370, 688
+- GdkCursor struct, 5
+- gdk_color_alloc() function, 349, 356, 370, 494
+- gdk_color_get_system() function, 345, 355, 360
+- gdk_color_parse() function, 355, 356
+- GDK_COPY function, 344, 361
+- GDK_COPY_INVERT function, 344
+- GDK_CORE_POINTER, 294
+- GdkCursor object, 188, 191
+- gdk_cursor_new_from_pixmap() function, 191
+- gdk_cursor_new() function, 187, 188
+- GDK_DESTROY event, 253
+- gtk_draw_arc() function, 317–318, 332, 380
+- gtk_draw_pixmap() function, 325, 332, 334
+- gtk_draw_point() function, 308, 309
+- gtk_draw_polygon() function, 311, 314, 326
+- gdk_draw_rectangle() function, 311, 328, 332, 361
+- gdk_draw_string() function, 321, 325–326, 356
+- gdk_draw_text() function, 322
+- GDK_ENTER_NOTIFY event, 379
+- GDK_ENTER_NOTIFY_MASK mask, 384
+- GDK_EQUV function, 344
+- GdkEvent struct, 251, 258, 263, 268, 292–293
+- GdkEventAny struct, 293
+- GdkEventButton struct, 264, 293–294, 384
+- GdkEventCollect struct, 294
+- GdkEventConfig struct, 295, 384, 494, 501
+- GdkEventCrossing struct, 264, 295–296, 384
+- GdkEventDND event, 296
+- GdkEventExpose struct, 296–297, 346, 383
+- GdkEventFocus struct, 297, 384
+- GdkEventKey event, 297, 384, 390
+- GdkEventMotion event, 264, 293, 298, 383, 384
+- GdkEventNoExpose event, 296, 298, 346
+- GdkEventProperty event, 299, 384
+- GdkEventProximity event, 299, 384
+- GdkEvents, 250
+- GdkEventSelection event, 299–300
+- GdkEventVisibility event, 384
+- GdkEventVisibility event, 300, 384
+- GDK_EXPOSE event, 380
+- GDK_EXPOSURE_MASK mask, 383
+- GDK_FLEUR cursor, 183
+- GDK_FOCUS_CHANGE_MASK mask, 384
+- GdkFont object, 321, 415
+- gdk_font_load() function, 321, 355, 405, 412, 499
+- gdk_font_unref() function, 321, 412
+- GdkGC object, 305, 339, 340, 343, 364, 365
+- gdk_gc_get_value() function, 343
+- gdk_gc_new() function, 365
+- gdk_gc_new_with_values() function, 348, 355, 360
+- gdk_gc_new_with_value() function, 365
+- gdk_gc_new_with_values() function, 364
+- gdk_gc_set_background() function, 365
+- gdk_gc_set_clip_mask() function, 365
+- gdk_gc_set_clip_origin() function, 365
+- gdk_gc_set_clip_rectangle() function, 365
+- gdk_gc_set_clip_region() function, 365
+- gdk_gc_set_dashes() function, 357, 364, 365, 366
+- gdk_gc_set_exposure() function, 366
+- gdk_gc_set_fill() function, 361, 366
+- gdk_gc_set_font() function, 366
+- gdk_gc_set_foreground() function, 356, 364, 366
+- gdk_gc_set_function() function, 366
+- gdk_gc_set_line_attributes() function, 356, 364, 366
+- gdk_gc_set_origin() function, 366
+- gdk_gc_set_stipple() function, 366
+- gdk_gc_set_subwindow() function, 366
+- gdk_gc_set_ts() function, 360, 366
+- gdk_gc_set_ts_origin() function, 360, 361
+- gdk_gc_stipple() function, 360
+- GdkGCValues struct, 340, 343, 362, 364
+- GdkImage struct, 345
+- GdkImage object, 580
+- gdk_imlib_create_image_from_xpm() function, 271
+- gdk_imlib_destroy_image() function, 272
+- GdkImage, 269, 271
+- GDK_INCLUDE_INFERIORS, 345
+- GDK_INVERT function, 344
+- GDK_KEY_PRESS_MASK mask, 384
+- GDK_KEY_RELEASE_MASK mask, 384, 389
+- gtkkeys.h header file, 390
+- gdk_keyval_is_lower() function, 390
+- gdk_keyval_name() function, 390
+- GDK_LEAVE_NOTIFY event, 379
+- GDK_LEAVE_NOTIFY_MASK mask, 384
+- GDK_MAP event, 379
+- GDK_NAND function, 344
+- GDK_NOOP function, 344
+- GDK_OPAQUE_STIPPLED filling mode, 361
+- GDK_OPAQUE_STIPPLED function, 345
+- GDK_OR function, 344
+- GDK_OR_REVERSE function, 344
+- GdkPixmap, 325
+- gdk_pixmap_create_from_xpm_d() function, 178, 325, 340, 435
+- gdk_pixmap_create_from_xpm() function, 179
+- GdkPoint struct, 312
+- gdk_pointer_grab() function, 382
+- gdk_pointer_is_grabbed() function, 385
+- GDK_POINTER_HINT_HINT_MASK mask, 383
+- GDK_POINTER_MOTION_MASK mask, 383
+- gdk_pointer_ungrab() function, 385
+- gdk_polygon() function, 336
+- GDK_PROPERTY_CHANGE_MASK mask, 384
+- GDK_PROXIMITY_IN_MASK mask, 384
+- GDK_PROXIMITY_OUT_MASK mask, 384
+- GDK_SET() function, 344
+- GDK_SOLO() function, 345
+- GDK_STIPPLED function, 345, 361
+- GDK_STRUCTURE_MASK mask, 384
+- GDK_SUBSTRUCTURE_MASK mask, 384
+- gdk_text_extents() function, 412
+- GDK_TILED() function, 345, 361
+- GDK_VISIBILITY_NOTIFY_MASK mask, 384
+- GdkVisual struct, 339
+- gdk_visual_get_system() function, 339
+- GdkWindow object, 191
+- GdkWindowAttr struct, 491–493
+- gdk_window_clear_area_e() function, 412, 413
+- gdk_window_clear() function, 370, 498
+- gdk_window_new() function, 491
+- gdk_window_set_cursor() function, 191
+- gdk_window_set_user_data() function, 494
+- GdkWindowType struct, 493–494
+- GDK_XOR function, 344
+- glxlib data type, 13
+- geometry category, 507, 508
+- geometry information, 535
+- get_c program, 423–425
+- getenv() function, 713
+- GetMessage() function, 721
+- getpid() function, 701
+- getppid() function, 701
+- getpwnam() function, 707
+- gettimestr() function, 188
+- get_window_new() function, 24
+- gfloat data type, 13
+- g_free() (gnuplot menu) function, 14
+- GIMP (Gnu Image Manipulation Program), 11
+- gint data type, 13
+- gint64 integer, 12–13
+- glib library
+  - 4
+  - data types defined in, 11–13
+  - utility, 14
+- glong data type, 13
+- glyph, 399
+- g_malloc() function, 15
+- g_malloc0() function, 195
+- g_memdup() function, 15

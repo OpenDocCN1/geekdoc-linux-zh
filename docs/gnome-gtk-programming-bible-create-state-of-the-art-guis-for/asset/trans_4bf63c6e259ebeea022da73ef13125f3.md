@@ -1,0 +1,126 @@
+
+112 attributes.wclass = GDK_INPUT_OUTPUT;
+113 attributes.visual = gtk_widget_get_visual(widget);
+114 attributes.colormap = gtk_widget_get_colormap(widget);
+115 attributes.event_mask = gtk_widget_get_events(widget);
+116 |= GDK_EXPOSURE_MASK |
+117 GDK_BUTTON_PRESS_MASK |
+118 GDK_BUTTON_RELEASE_MASK |
+119 GDK_ENTER_NOTIFY_MASK |
+120 GDK_LEAVE_NOTIFY_MASK);
+121
+122 attributes_mask = GDK_WA_X | GDK_WA_Y
+123 | GDK_WA_VISUAL | GDK_WA_COLORMAP;
+124 widget->window = gdk_window_new(
+125 gtk_widget_get_parent_window(widget),
+126 &attributes.attributes_mask);
+127
+128 gdk_window_set_user_data(widget->window,widget);
+129
+130 widget->style = gtk_style_attach(widget->style,
+131 widget->window);
+132 gtk_style_set_background(widget->style,
+133 widget->window,GTK_STATE_NORMAL);
+134
+135 ag_bargraph_send_configure(AG_BARGRAPH(widget));
+136
+137 gdk_color_alloc(gtk_widget_get_colormap(widget),
+138 bargraph->outside_color);
+139 gdk_color_alloc(gtk_widget_get_colormap(widget),
+140 bargraph->inside_color);
+141 }
+
+第 105 行中的 `GDK_WIDGET_SET` 宏用于设置标志，指示该部件已实现（realized）。创建新窗口时有很多选项可以设置，因此参数存储在第 97 行定义的 `GdkWindowAttr` 结构体中，并且该结构体作为第 124 行调用 `gdk_window_new()` 的参数。`GdkWindowAttr` 结构体中的一些值是必需的，一些是可选的——可选值会被忽略，除非设置了相应的标志，如第 122 行的 `attributes_mask` 中设置的那些标志。
+
+表 18-1 列出了 `GdkWindowAttr` 结构体的所有字段以及与此字段关联的标志值。这些标志用于确定哪些字段包含有效的窗口规范数据。如果某个字段有关联的标志，则传递给 `gdk_window_new()` 的标志掩码中对应的标志位必须设置为 1，才能使 `gdk_window_new()` 使用提供的值。如果标志位为 0，则将使用默认值，而不是 `GdkWindowAttr` 中的值。由于存储在 `GdkWindowAttr` 结构体中的值始终被使用，因此一些字段没有定义标志——也就是说，它们是必需参数。其中一个必需参数是正在创建的窗口类型。窗口类型必须是表 18-2 中列出的类型之一。
+
+## 表 18-1
+**GdkWindowAttr 的字段和标志设置**
+
+| 字段 | 标志 | 描述 |
+| :--- | :--- | :--- |
+| `gchar *title` | `GDK_WA_TITLE` | 出现在窗口标题栏上的名称。默认值是程序名称。 |
+| `gint event_mask` | | 决定此窗口接收哪些事件的标志。 |
+| `guint16 x` | `GDK_WA_X` | 相对于父窗口的水平像素位置。默认为零。 |
+| `guint16 y` | `GDK_WA_Y` | 相对于父窗口的垂直像素位置。默认为零。 |
+| `guint16 width` | | 窗口宽度（以像素为单位）。 |
+| `guint16 height` | | 窗口高度（以像素为单位）。 |
+| `GdkWindowClass wclass` | | `GDK_INPUT_ONLY` 窗口不显示，但接受输入事件。`GDK_INPUT_OUTPUT` 窗口既接受事件又显示。 |
+| `GdkVisual *visual` | `GDK_WA_VISUAL` | 此窗口使用的视觉属性。如果未指定，则使用标准的 `GdkVisual` 默认值。 |
+| `GdkColormap *colormap` | `GDK_WA_COLORMAP` | 此窗口使用的颜色映射。默认值是系统颜色映射（与默认视觉属性匹配）。 |
+| `GdkWindowType window_type` | | 表 18-2 中描述的其中一种类型。 |
+| `GdkCursor *cursor` | `GDK_WA_CURSOR` | 此窗口的鼠标指针。默认值是父窗口的指针。 |
+| `gchar *wmclass_name` `gchar *wmclass_class` | `GDK_WA_WMCLASS` | 用于提示的名称和类。默认值是没有提示。 |
+| `gboolean override_redirect` | `GDK_WA_NOREDIR` | 如果为 TRUE，窗口管理器对此窗口的大小或位置没有控制权。默认值为 FALSE（除非窗口类型为 `GDK_WINDOW_TEMP`）。 |
+
+## 表 18-2
+**由 GdkWindowType 定义的窗口类型**
+
+| 类型 | 描述 |
+| :--- | :--- |
+| `GDK_WINDOW_ROOT` | 覆盖整个屏幕的根窗口。 |
+| `GDK_WINDOW_TOPLEVEL` | 应用程序创建的主窗口。通常由标题栏和控制菜单包围。它可以作为许多子窗口的父窗口。 |
+| `GDK_WINDOW_CHILD` | 包含在顶级窗口内部，并且是该顶级窗口的子窗口。 |
+| `GDK_WINDOW_DIALOG` | 与顶级窗口相同，除了窗口管理器会收到通知，知道这是一个对话框窗口（可能会被不同处理）。 |
+| `GDK_WINDOW_TEMP` | 寿命较短的窗口，例如下拉菜单。它是一个没有标题栏和控制的顶级窗口。此窗口始终覆盖重定向，这限制了窗口管理器的控制权。（例如，下拉菜单可能会延伸到其父窗口之外的区域。） |
+| `GDK_WINDOW_PIXMAP` | 窗口存储在内存中，并且不会出现在显示器上。位图和窗口都被视为 `GdkDrawable` 对象，因为可以使用同一组函数来写入它们中的任意一个。 |
+| `GDK_WINDOW_FOREIGN` | 不由 GDK 创建的窗口。 |
+
+发送到该部件的事件在第 116 到 120 行中指定，包括发送到父部件的事件。此外，该应用程序需要五个事件，因此无论它们在父部件中是否也设置了，它们都会被设置。
+
+第 128 行调用 `gdk_window_set_user_data()` 指定要作为第一个参数传递的数据，该参数是部件本身。第 130 行调用 `gtk_style_attach()` 检查附加到窗口上的样式，对其进行初始化，并在必要时对其进行更新和更改。然后它返回指向（可能新的）样式的指针。第 132 行调用 `gtk_style_set_background()` 初始化背景，使其按照样式中描述的方式显示，无论是纯色、位图、点画还是其他形式。由于这是该部件唯一的州（state），因此无需初始化其他州。
+
+需要通知父部件显示器的大小和位置，因此在第 135 行调用 `ag_bargraph_send_configure()` 以创建 `GdkEventConfigure` 事件并将其发送到父部件。
+
+初始化的最后一步是从颜色映射中分配颜色。第 137 到 140 行调用 `gdk_color_alloc()`，使用存储在第 77 到 87 行结构体中的 RGB 信息，为颜色映射分配具有适当颜色的值。
+
+第 142 行处的 `ag_bargraph_destroy()` 函数在需要销毁部件时调用，因为它在第 71 行被分配为“destroy”回调函数。该函数的目的是释放所有已分配内存并释放其他系统资源。
+
+```
+142 static void ag_bargraph_destroy(GtkObject *object)
+143 {
+144 int i;
+145 AgBargraph *bargraph;
+146 AgBargraphClass *klass;
+147
+148 g_return_if_fail(object != NULL);
+149     g_return_if_fail(AG_IS_BARGRAPH(object));
+150
+151     bargraph = AG_BARGRAPH(object);
+152     g_free(bargraph->outside_color);
+153     g_free(bargraph->inside_color);
+154     for(i=0; i<bargraph->bar_count; i++) {
+155         g_free(bargraph->bars[i].name);
+156         if(bargraph->bars[i].gc != NULL)
+157             gdk_gc_destroy(bargraph->bars[i].gc);
+158     }
+159     g_free(bargraph->bars);
+160
+161     if(bargraph->text_font != NULL)
+162         gdk_font_unref(bargraph->text_font);
+163
+164     klass = gtk_type_class(gtk_widget_get_type());
+165     if(GTK_OBJECT_CLASS(klass)->destroy)
+166         (* GTK_OBJECT_CLASS(klass)->destroy)(object);
+167
+```
+
+第 151 到 159 行释放由该部件分配的任何内存块。此外，在第 157 行，任何现有的图形上下文都被销毁。在第 162 行，如果创建了字体对象，其引用计数减少 1。如果计数减少到零，字体将删除自身。如果计数未变为零，则表示该字体在程序的其他地方正在使用。
+
+第 164 到 166 行调用对象的 destroy 函数。此时，你的部件分配的所有资源都已释放，因此只需调用父部件的 destroy 函数，以便其对其分配的资源执行相同操作。第 166 行调用 `destroy()` 函数将所有内存归还给系统——部件不复存在。
+
+第 168 行处的 `ag_bargraph_draw()` 函数在需要将该部件绘制到窗口时调用，因为它在第 65 行被分配为回调。这发生在程序刚开始运行时（紧接着其窗口被实现之后）。当窗口调整大小时也会发生。
+
+```
+168  static void ag_bargraph_draw(GtkWidget *widget,
+169                  GdkRectangle *area)
+170  {
+171      g_return_if_fail(widget != NULL);
+172      g_return_if_fail(AG_IS_BARGRAPH(widget));
+173
+174      ag_bargraph_paint(widget);
+175  }
+```
+
+`ag_bargraph_draw()` 函数本身不进行绘制。实际的绘制是通过第 174 行调用 `ag_bargraph_paint()` 来实现的。对于更复杂的部件（即渲染需要一些时间的部件），你可能希望
+
