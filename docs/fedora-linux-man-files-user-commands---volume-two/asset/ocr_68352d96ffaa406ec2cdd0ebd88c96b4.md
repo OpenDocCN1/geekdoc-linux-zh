@@ -1,0 +1,17 @@
+subscripts or lower limits are shifted up by at least this amount. This is usually less than sup2. **sub1** Subscripts are normally shifted down by at least this amount. **sub2** When there is both a subscript and a superscript, the subscript is shifted down by at least this amount. **sup_drop** The baseline of a superscript is no more than this much amount below the top of the object on which the superscript is set. **sub_drop** The baseline of a subscript is at least this much below the bottom of the object on which the subscript is set. **big_op_spacing1** The baseline of an upper limit is at least this much above the top of the object on which the limit is set. **big_op_spacing2** The baseline of a lower limit is at least this much below the bottom of the object on which the limit is set. **big_op_spacing3** The bottom of an upper limit is at least this much above the top of the object on which the limit is set. **big_op_spacing4** The top of a lower limit is at least this much below the bottom of the object on which the limit is set. **big_op_spacing5** This much vertical space is added above and below limits. **baseline_sep** The baselines of the rows in a pile or matrix are normally this far apart. In most cases this should be equal to the sum of **num1** and **denom1**. **shift_down** The midpoint between the top baseline and the bottom baseline in a matrix or pile is shifted down by this much from the axis. In most cases this should be equal to **axis_height**. **column_sep** This much space is added between columns in a matrix. **matrix_side_sep** This much space is added at each side of a matrix. **draw_lines** If this is non-zero, lines are drawn using the **\D** escape sequence, rather than with the **\\** escape sequence and the **(ru** character. **body_height** The amount by which the height of the equation exceeds this is added as extra space before the line containing the equation (using **x**). The default value is 85. **body_depth** The amount by which the depth of the equation exceeds this is added as extra space after the line containing the equation (using **x**). The default value is 35. **nroff** If this is non-zero, then **ndefine** behaves like **define** and **tdefine** is ignored, otherwise **tdefine** behaves like **define** and **ndefine** is ignored. The default value is~0 (This is typically changed to~1 by the **eqnrc** file for the **ascii**, **latin1**, **utf8**, and **cp1047** devices.)
+
+A more precise description of the role of many of these parameters can be found in Appendix~H of *The TeXbook*.
+
+# **Macros**
+
+Macros can take arguments. In a macro body, **$n** where *n* is between 1 and~9, is replaced by the *n*-th argument if the macro is called with arguments; if there are fewer than *n*~arguments, it is replaced by nothing. A word containing a left parenthesis where the part of the word before the left parenthesis has been defined using the **define** command is recognized as a macro call with arguments; characters following the left parenthesis up to a matching right parenthesis are treated as comma-separated arguments; commas inside nested parentheses do not terminate an argument.
+
+```
+sdefine name X anything X
+```
+
+This is like the **define** command, but *name* is not recognized if called with arguments.
+
+```
+include sfiles
+```

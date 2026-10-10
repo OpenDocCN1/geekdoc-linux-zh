@@ -1,0 +1,5 @@
+# DESCRIPTION
+
+Reads a tag contents on standard input and creates a tag object that can also be used to sign other objects.
+
+The output is the new tag's <object> identifier.

@@ -1,0 +1,3 @@
+# DESCRIPTION
+
+Displays references available in a remote repository along with the associated commit IDs.

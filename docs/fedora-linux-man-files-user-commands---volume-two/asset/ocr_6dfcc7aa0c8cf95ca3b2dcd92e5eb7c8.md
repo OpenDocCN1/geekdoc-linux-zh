@@ -1,0 +1,3 @@
+# DESCRIPTION
+
+Finds symbolic names suitable for human digestion for revisions given in any format parsable by *git rev-parse*.

@@ -1,0 +1,41 @@
+matches other criteria in the comparison; if there is no file that matches other criteria, nothing is selected.
+
+-S<string>
+
+Look for differences that change the number of occurrences of the specified string (i.e. addition/deletion) in a file. Intended for the scripter’s use.
+
+It is useful when you’re looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being; use the feature iteratively to feed the interesting block in the preimage back into -S, and keep going until you get the very first version of the block.
+
+-G<regex>
+
+Look for differences whose patch text contains added/removed lines that match <regex>.
+
+To illustrate the difference between -S<regex>—pickaxe-regex and -G<regex>, consider a commit with the following diff in the same file:
+
+```
+​+ return !regexe(regexp, two-->ptr, 1, &regmatch, 0); ... - hit = !regexe(regexp, mf2.ptr, 1, &regmatch, 0);
+```
+
+While git log -G"regexe(\regexp)" will show this commit, git log -S"regexe(\regexp)"— pickaxe-regex will not (because the number of occurrences of that string did not change). See the *pickaxe* entry in (7) for more information.
+
+—pickaxe-all
+
+When -S or -G finds a change, show all the changes in that changeset, not just the files that contain the change in <string>.
+
+—pickaxe-regex
+
+Treat the <string> given to -S as an extended POSIX regular expression to match.
+
+-O<orderfile>
+
+Output the patch in the order specified in the <orderfile>, which has one shell glob pattern per line. This overrides the diff.orderFile configuration variable (see (1)). To cancel diff.orderFile, use -O/dev/null.
+
+-R
+
+Swap two inputs; that is, show differences from index or on-disk file to tree contents.
+
+—relative[=\<path>]
+
+When run from a subdirectory of the project, it can be told to exclude changes outside the directory and show pathnames relative to it with this option. When you are not in a subdirectory (e.g. in a bare repository), you can name which subdirectory to make the output relative to by giving a <path> as an argument.
+
+-a, —text

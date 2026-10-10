@@ -1,0 +1,5 @@
+# DESCRIPTION
+
+This command caches credentials in memory for use by future Git programs. The stored credentials never touch the disk, and are forgotten after a configurable timeout. The cache is accessible over a Unix domain socket, restricted to the current user by filesystem permissions.
+
+You probably don't want to invoke this command directly; it is meant to be used as a credential helper by other parts of Git. See (7) or EXAMPLES below.

@@ -1,0 +1,1 @@
+the cherry-pick. In other words, return to the pre-cherry-pick state, preserving any local modifications you had in the working tree. **4.** try to apply the change introduced by topic^ again, spending extra time to avoid mistakes based on incorrectly matching context lines.

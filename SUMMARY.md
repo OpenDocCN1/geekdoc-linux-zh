@@ -441,6 +441,7 @@
 +   [Fedora Bible 2011版：基于 Fedora Linux 14](docs/fedora-bible-2011-edition-featuring-fedora-linux-14/README.md)
 +   [Fedora Core 7 与红帽企业 Linux（奥兹本完整参考），第 4 版](docs/fedora-core-7-red-hat-enterprise-linux-osborne-complete-refe/README.md)
 +   [Fedora Core 7 & Red Hat Enterprise Linux：完全参考 (完全参考系列)](docs/fedora-core-7-red-hat-enterprise-linux-the-complete-referenc/README.md)
++   [Fedora Linux 手册文件：用户命令 - 第二卷](docs/fedora-linux-man-files-user-commands---volume-two/README.md)
 +   [Fedora Linux 手册文件：用户命令 - 第二卷 (Fedora Linux 手册文件 - 用户命令指南 2)](docs/fedora-linux-man-files-user-commands---volume-two-fedora-lin/README.md)
 +   [Fedora Linux 手手册：用户命令卷 6](docs/fedora-linux-man-files-user-commands-volume-6/README.md)
 +   [Fedora Linux 手册：用户命令卷 6 (手册用户命令)](docs/fedora-linux-man-files-user-commands-volume-6-man-files-user/README.md)

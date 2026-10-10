@@ -1,0 +1,27 @@
+# FILES
+
+If not set explicitly with `--file`, there are four files where *git config* will search for configuration options:
+
++   `$(prefix)/etc/gitconfig`
++   
++   System-wide configuration file.
+
++   `$XDG_CONFIG_HOME/git/config`
++   
++   Second user-specific configuration file. If `$XDG_CONFIG_HOME` is not set or empty, `$HOME/.config/git/config` will be used. Any single-valued variable set in this file will be overwritten by whatever is in `~/.gitconfig`. It is a good idea not to create this file if you sometimes use older versions of Git, as support for this file was added fairly recently.
+
++   `~/.gitconfig`
++   
++   User-specific configuration file. Also called "global" configuration file.
+
++   `$GIT_DIR/config`
++   
++   Repository specific configuration file.
+
+If no further options are given, all reading options will read all of these files that are available. If the global or the system-wide configuration file are not available they will be ignored. If the repository configuration file is not available or readable, *git config* will exit with a non-zero error code. However, in neither case will an error message be issued.
+
+The files are read in the order given above, with last value found taking precedence over values read earlier. When multiple values are taken then all values of a key from all files will be used.
+
+All writing options will per default write to the repository specific configuration file. Note that this also affects options like `--replace-all` and `--unset`. *git config* **will only ever change one file at a time.**
+
+You can override these rules either by command-line options or by environment variables. The `--global` and the `--system` options will limit the file used to the global or system-wide file respectively. The `GIT_CONFIG` environment variable has a similar effect, but you can specify any filename you want.

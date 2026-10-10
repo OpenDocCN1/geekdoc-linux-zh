@@ -1,0 +1,3 @@
+# SYNOPSIS
+
+**extlinux** [*options*] *directory*

@@ -1,0 +1,3 @@
+# DESCRIPTION
+
+This counts the number of unpacked object files and disk space consumed by them, to help you decide when it is a good time to repack.

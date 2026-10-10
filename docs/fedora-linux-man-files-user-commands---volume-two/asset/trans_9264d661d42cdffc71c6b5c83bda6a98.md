@@ -1,0 +1,196 @@
+
+
+## GIT
+(1) 套件的一部分
+
+## NOTES
+1. BFG 仓库清理工具
+2. 命令选项
+
+## GIT-FMT-MERGE-MSG
+
+### 名称
+git-fmt-merge-msg – 生成合并提交信息
+
+### 概要
+```
+git fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log] <GIT_DIR/FETCH_HEAD>
+git fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log] -F <file>
+```
+
+### 描述
+从标准输入读取已合并对象列表，并生成适合用作合并提交信息的消息，通常作为 *git merge* 的 *<merge-message>* 参数传入。
+
+此命令主要供自动调用 *git merge* 的脚本内部使用。
+
+### 选项
+--log[=<n>]
+
+除分支名称外，使用正在合并的实际提交的一行描述来填充日志消息。每个合并父提交最多使用 <n> 个提交（如果省略 <n>，则默认为 20）。这会覆盖 merge.log 配置变量。
+
+--no-log
+
+不列出正在合并的实际提交的一行描述。
+
+--[no-]summary
+
+--log 和 --no-log 的同义词；这些选项已弃用，将来会被移除。
+
+-m <message>, --message <message>
+
+使用 <message> 代替分支名称作为日志消息的第一行。需与 --log 配合使用。
+
+-f <file>, --file <file>
+
+从 <file> 读取已合并对象列表，而不是从标准输入读取。
+
+### 配置
+
+**merge.branchdesc**
+
+除分支名称外，使用与分支相关的描述文本填充日志消息。默认值为 false。
+
+**merge.log**
+
+除分支名称外，使用正在合并的实际提交中指定数量的一行描述填充日志消息。默认值为 false，true 等同于 20。
+
+**merge.summary**
+
+merge.log 的同义词；此选项已弃用，将来会被移除。
+
+### 参见
+(1)
+
+## GIT-FOR-EACH-REF
+
+### 名称
+git-for-each-ref - 输出每个引用（ref）的信息
+
+### 概要
+```
+git for-each-ref [-count=<count> [-shell|--perl|--python|--tcl]] [--sort=<key>...] [--format=<format>] [<pattern>...]
+```
+
+### 描述
+遍历所有匹配 <pattern> 的引用，并根据给定的 <key> 排序后，按照指定的 <format> 显示它们。如果指定了 <count>，则在显示相应数量的引用后停止。<format> 中的插值可以作为字符串字面量在指定的宿主语言中进行引用，从而允许在该语言中直接求值。
+
+### 选项
+
+<count>
+
+默认情况下，该命令显示所有匹配 <pattern> 的引用。此选项使其在显示指定数量的引用后停止。
+
+<key>
+
+用于排序的字段名称。前缀 - 表示按值降序排序。未指定时，使用 refname。可以多次使用 `--sort=<key>` 选项，此时最后一个键成为主要排序键。
+
+<format>
+
+一个字符串，用于插值由正在显示的引用所指向的对象中的 %(fieldname)。如果 fieldname 前缀为星号 (*) 且引用指向标签对象，则使用标签所引用对象中该字段的值。未指定时，默认为 %(objectname) SPC %(objecttype) TAB %(refname)。它还插值 %% 为 %，而 %xx（其中 xx 为十六进制数字）插值为十六进制代码 xx 对应的字符；例如 %00 插值为 \0 (NUL)，%09 为 \t (TAB)，%0a 为 \n (LF)。
+
+<pattern>...
+
+如果给定一个或多个模式，则只显示至少匹配其中一个模式的引用，匹配方式可以是使用 (3) 或字面匹配，在后一种情况下，匹配是完全匹配或从头开始匹配到斜杠。
+
+--shell, --perl, --python, --tcl
+
+如果指定了此选项，替代 %(fieldname) 占位符的字符串将作为适合指定宿主语言的字符串字面量进行引用。其目的是生成可以直接 `eval` 执行的脚本片段。
+
+### 字段名称
+引用对象中的结构化字段的各种值可用于插值到结果输出中，或用作排序键。
+
+对于所有对象，可以使用以下名称：
+- refname
+  引用的名称（$GIT_DIR/ 之后的部分）。要获取引用的非歧义短名称，请追加 :short。选项 core.warnAmbiguousRefs 用于选择严格缩写模式。
+- objecttype
+  对象的类型（blob, tree, commit, tag）。
+- objectsize
+  对象的大小（与 *git cat-file -s* 报告的结果相同）。
+- objectname
+  对象名称（也称为 SHA-1）。要获取对象名称的非歧义缩写，请追加 :short。
+- upstream
+  可以被视为显示引用“上游”的本地引用名称。像上面的 refname 一样尊重 :short。此外，尊重 :track 以显示“[ahead N, behind M]”，以及 :trackshort 以显示简短版本：“>”（领先）、“<”（落后）、“<>”（既领先又落后）或“=”（同步）。如果引用没有关联的跟踪信息，则无效果。
+- push
+  代表显示引用的 @{push} 位置的本地引用名称。像 upstream 一样尊重 :short、:track 和 :trackshort 选项。如果未配置 @{push} 引用，则生成空字符串。
+- HEAD
+  * 如果 HEAD 与当前引用（已检出的分支）匹配，则显示 *；否则显示 ‘。
+- color
+  更改输出颜色。后面跟随 :<colorname>，其中名称在 color.branch.* 中描述。
+
+除上述字段外，对于提交和标签对象，可以使用头部字段名称（tree, parent, object, type, 和 tag）来指定头部字段中的值。
+
+值为名-邮箱-日期元组的字段（author, committer, 和 tagger）可以后缀 name、email 和 date 以提取指定的组件。
+
+提交和标签对象中的完整消息是 contents。其第一行是 contents:subject，其中 subject 是提交消息中第一空行之前的所有行的连接。下一行是 contents:body，其中 body 是第一个空行之后的所有行。最后，可选的 GPG 签名是 contents:signature。
+
+出于排序目的，具有数值的字段按数值顺序排序（objectsize, authordate, committerdate, taggerdate）。其他所有字段按其字节值顺序排序。
+
+在任何情况下，指代引用所指向对象中不适用字段的字段名称不会导致错误。它返回空字符串。
+
+作为日期类型字段的特殊情况，你可以在字段名末尾添加 :default、:relative、:short、:local、:iso8601、:rfc2822 或 :raw 之一来指定日期的格式；例如 %(taggerdate:relative)。
+
+### 示例
+
+一个直接生成格式化文本的示例。显示最近 3 个带标签的提交：
+```
+#!/bin/sh
+git for-each-ref --count=3 --sort='*authordate' \
+  --format='From: %(*authorname) %(*authoremail)
+            Subject: %(*subject)
+            Date: %(*authordate)
+            Ref: %(*refname)
+            %(*body)
+' refs/tags
+```
+
+一个展示 shell eval 使用输出的简单示例，演示 --shell 的使用。列出所有头部的名称前缀：
+```
+#!/bin/sh
+git for-each-ref --shell --format="ref=%(refname)" refs/heads |
+while read entry; do
+  eval "$entry"
+  echo `dirname $ref`
+done
+```
+
+一个更复杂的关于标签的报告，演示格式可以是整个脚本：
+```
+#!/bin/sh
+fmt='
+  r=%(refname)
+  t=%(*objecttype)
+  T=${r#refs/tags/}
+  o=%(*objectname)
+  n=%(*authorname)
+  e=%(*authoremail)
+  s=%(*subject)
+  d=%(*authordate)
+  b=%(*body)
+
+  kind=Tag
+  if test "z$t" = z; then
+    # could be a lightweight tag
+    t=%(objecttype)
+    kind="Lightweight tag"
+    o=%(objectname)
+    n=%(authorname)
+    e=%(authoremail)
+    s=%(subject)
+    d=%(authordate)
+    b=%(body)
+  fi
+
+  echo "$kind $T points at a $t object $o"
+  if test "z$t" = zcommit; then
+    echo "The commit was authored by $n <$e> at $d, and titled: $s"
+    echo "Its message reads as: "
+    echo "$b" | sed -e "s/^/ /"
+  fi
+'
+eval='git for-each-ref --shell --format="$fmt" \
+  --sort="*objecttype" \
+  --sort="taggerdate" \
+  refs/tags'
+eval "$eval"
+```
+

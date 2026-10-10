@@ -1,0 +1,7 @@
+# > **DESCRIPTION**
+
+# **Note**
+
+Using this helper will store your passwords unencrypted on disk, protected only by filesystem permissions. If this is not an acceptable security tradeoff, try (1), or find a helper that integrates with secure storage provided by your operating system.
+
+This command stores credentials indefinitely on disk for use by future Git programs. You probably don’t want to invoke this command directly; it is meant to be used as a credential helper by other parts of git. See (7) or EXAMPLES below.

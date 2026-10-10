@@ -1,0 +1,137 @@
+
+
+## 选项
+
+- `-n, --dry-run`
+  不删除任何内容；仅报告将被删除的对象。
+- `-v, --verbose`
+  报告所有被删除的对象。
+- `--`
+  不再将后续参数解释为选项。
+- `--expire <time>`
+  仅过期比 `<time>` 更久的松散对象。
+- `<head>…`
+  除了来自任何引用的可达对象外，还保留来自列出的 `<head>` 的可达对象。
+
+## 示例
+
+为了修剪未被您的仓库使用，或通过 `.git/objects/info/alternates` 从您的仓库借用的对象：
+
+```bash
+$ git prune $(cd ../another && git rev-parse --all)
+```
+
+## 备注
+
+在大多数情况下，用户无需直接调用 *git prune*，而应调用 *git gc*，它处理修剪以及许多其他维护任务。
+
+有关哪些对象被认为可以修剪的描述，请参阅 *git fsck* 的 `--unreachable` 选项。
+
+## 另请参阅
+
+`git-gc(1)`, `git-repack(1)`, `git-prune(1)`
+
+# GIT-PULL
+
+## 名称
+
+git-pull - 从另一个仓库或本地分支获取并整合
+
+## 概要
+
+*git pull* [选项] [<仓库> [<引用规格>...]]
+
+## 描述
+
+将远程仓库中的更改整合到当前分支。在默认模式下，*git pull* 是 *git fetch* 后接 *git merge FETCH_HEAD* 的简写。
+更准确地说，*git pull* 使用给定的参数运行 *git fetch*，并调用 *git merge* 将检索到的分支头合并到当前分支。如果使用 `--rebase`，它会运行 *git rebase* 而不是 *git merge*。
+
+<repository> 应该是传递给 `git-fetch(1)` 的远程仓库名称。<refspec> 可以指定任意远程引用（例如标签名称），甚至是指带有相应远程跟踪分支的引用集合（例如，`refs/heads/*:refs/remotes/origin/*`），但通常是远程仓库中分支的名称。
+
+<repository> 和 <branch> 的默认值从当前分支由 `git-branch(1) --track` 设置的“remote”和“merge”配置中读取。
+
+假设存在以下历史，且当前分支为 “master”：
+
+```text
+A---B---C origin 上的 master
+/
+D---E---F---G master ^ 您仓库中的 origin/master
+```
+
+那么 “*git pull*” 将获取并重放远程 master 分支自其分叉自本地 master 以来（即 E）直到其当前提交（C）的更改，在 master 之上记录结果到一个新提交中，并包含两个父提交的名称以及用户描述更改的日志消息。
+
+```text
+A---B---C origin/master
+      \
+D---E---F---G---H master
+```
+
+有关细节，包括冲突如何呈现和处理，请参阅 `git-merge(1)`。
+
+在 Git 1.7.0 或更高版本中，若要取消冲突合并，请使用 *git reset* `--merge`。**警告**：在旧版本的 Git 中，不建议在有未提交更改的情况下运行 *git pull*：虽然可行，但在发生冲突的情况下，可能会使您处于难以退回的状态。如果任何远程更改与本地未提交的更改重叠，合并将被自动取消，工作树保持不变。通常最好先将本地更改整理好，或者使用 `git-stash(1)` 将其暂存。
+
+## 选项
+
+- `-q`, `--quiet`
+  这会传递给底层 git-fetch 以静默传输期间的报告，并传递给底层 git-merge 以静默合并过程中的输出。
+- `-v`, `--verbose`
+  将 `--verbose` 传递给 git-fetch 和 git-merge。
+- `--[no-]recurse-submodules[={=yes|on-demand|no}]`
+  此选项控制是否也获取所有已填充子模块的新提交（见 `git-fetch(1)` 和 `git-submodule(5)`）。这可能对于获取合并子模块提交所需的数据是必要的，这是 Git 在 1.7.3 中习得的功能。注意，合并结果不会在子模块中检出，之后必须调用 "git submodule update" 以使工作树与合并结果保持同步。
+
+### 与合并相关的选项
+
+- `--commit`, `--no-commit`
+  执行合并并提交结果。此选项可用于覆盖 `--no-commit`。
+  使用 `--no-commit` 执行合并，但假装合并失败且不自动提交，以给用户机会在提交前检查并进一步调整合并结果。
+- `--edit`, `-e`, `--no-edit`
+  在成功完成机械合并后，提交前调用编辑器，以进一步编辑自动生成的合并消息，以便用户可以解释并说明合并的理由。`--no-edit` 选项可用于接受自动生成的消息（通常不鼓励这样做）。
+  较旧的脚本可能依赖于历史行为，即不允许用户编辑合并日志消息。当它们运行 git merge 时会看到打开的编辑器。为了使此类脚本更容易适应更新后的行为，可以在脚本开始处将环境变量 `GIT_MERGE_AUTOEDIT` 设置为 no。
+- `--ff`
+  当合并解决为快进时，仅更新分支指针，不创建合并提交。这是默认行为。
+- `--no-ff`
+  即使合并解决为快进，也创建合并提交。这是在合并注释（且可能签名）标签时的默认行为。
+- `--ff-only`
+  除非当前 HEAD 已经是最新状态或合并可以解决为快进，否则拒绝合并并以非零状态退出。
+- `--log[=<n>]`, `--no-log`
+  除了分支名称外，使用最多 <n> 个实际提交的单行描述填充日志消息。另请参阅 `git-log(1)`。
+  使用 `--no-log` 时，不列出正在合并的实际提交的单行描述。
+- `--stat`, `-n`, `--no-stat`
+  在合并结束时显示差异统计。差异统计也由配置选项 `merge.stat` 控制。
+  使用 `-n` 或 `--no-stat` 时，在合并结束时不显示差异统计。
+- `--squash`, `--no-squash`
+  生成工作树和索引状态，就好像发生了实际合并一样（除了合并信息），但不实际创建提交、移动 HEAD 或记录 `$GIT_DIR/MERGE_HEAD`（这会导致下一个 git commit 命令创建合并提交）。这允许您在当前分支顶部创建一个提交，其效果与合并另一个分支相同（或在章鱼合并的情况下合并更多）。
+  使用 `--no-squash` 执行合并并提交结果。此选项可用于覆盖 `--squash`。
+- `-s <策略>`, `--strategy=<策略>`
+  使用给定的合并策略；可以多次提供以指定它们应该尝试的顺序。如果没有 `-s` 选项，则将使用内置的策略列表（合并单个头时使用 `git merge-recursive`，否则使用 `git merge-octopus`）。
+- `-X <选项>`, `--strategy-option=<选项>`
+  将合并策略特定选项传递给合并策略。
+- `--verify-signatures`, `--no-verify-signatures`
+  验证正在合并的提交是否具有良好且受信任的 GPG 签名，并在没有的情况下中止合并。
+- `--summary`, `--no-summary`
+  `--stat` 和 `--no-stat` 的同义词；这些已弃用，将来将被移除。
+- `-r`, `--rebase[=false|true|preserve]`
+  当为 true 时，在获取后将当前分支变基到上游分支之上。如果存在对应于上游分支的远程跟踪分支，并且上游分支自上次获取以来已变基，则变基使用该信息以避免变基非本地更改。
+  当设置为 **preserve** 时，向 `git rebase` 传递 `--preserve-merges` 选项进行变基，以便本地创建的合并提交不会被展平。
+  当为 false 时，将当前分支合并到上游分支。
+  如果您希望 `git pull` 始终使用 `--rebase` 而不是合并，请参见 `git-config(1)` 中的 `pull.rebase`、`branch.<name>.rebase` 和 `branch.autoSetupRebase`。
+  **注意** 这是一种潜在的*危险*操作模式。它重写了历史，如果您已经发布了该历史，这就很不利。除非您已仔细阅读 `git-rebase(1)`，否则**不要**使用此选项。
+- `--no-rebase`
+  覆盖先前的 `--rebase`。
+
+### 与获取相关的选项
+
+- `--all`
+  获取所有远程。
+- `-a`, `--append`
+  将获取的引用的引用名称和对象名称追加到 `.git/FETCH_HEAD` 的现有内容中。没有此选项，`.git/FETCH_HEAD` 中的旧数据将被覆盖。
+- `--depth=<深度>`
+  加深或缩短由 `git clone` 使用 `--depth=<深度>` 选项创建的*浅*仓库的历史（见 `git-clone(1)`），使其达到从每个远程分支历史尖端指定的提交数量。不获取加深提交的标签。
+- `--unshallow`
+  如果源仓库是完整的，将浅仓库转换为完整仓库，移除浅仓库施加的所有限制。
+  如果源仓库是浅的，尽可能获取，使当前仓库具有与源仓库相同的历史。
+- `--update-shallow`
+  默认情况下，从浅仓库获取时，`git fetch` 拒绝需要更新 `.git/shallow` 的引用。此选项更新 `.git/shallow` 并接受此类引用。
+- `-f`, `--force`
+  当使用 `<rbranch>:<lbranch>` 引用规格使用 `git fetch` 时，除非获取的远程分支 `<rbranch>` 是其后代，否则它拒绝更新本地分支 `<lbranch>`
+

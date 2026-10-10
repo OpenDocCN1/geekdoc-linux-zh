@@ -1,0 +1,7 @@
+# ### DESCRIPTION
+
+funzip without a file argument acts as a filter; that is, it assumes that a ZIP archive (or a gzip¹d(1) file) is being piped into standard input, and it extracts the first member from the archive to stdout. When stdin comes from a tty device, funzip assumes that this cannot be a stream of (binary) compressed data and shows a short help text, instead. If there is a file argument, then input is read from the specified file instead of from stdin.
+
+A password for encrypted zip files can be specified on the command line (preceding the file name, if any) by prefixing the password with a dash. Note that this constitutes a security risk on many systems; currently running processes are often visible via simple commands (e.g., ps(1) under Unix), and command-line histories can be read. If the first entry of the zip file is encrypted and no password is specified on the command line, then the user is prompted for a password and the password is not echoed on the console.
+
+Given the limitation on single-member extraction, funzip is most useful in conjunction with a secondary archiver program such as tar(1). The following section includes an example illustrating this usage in the case of disk backups to tape.
