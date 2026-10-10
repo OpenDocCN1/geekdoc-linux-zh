@@ -1,0 +1,318 @@
+
+`$INCLUDE_file_name`
+
+```
+- 4. 使用 SOA 记录添加适用于该区域的全局参数。
+```
+
+```
+@ IN SOA master_server_name
+email_address_of_the_domain_administrator
+(
+    serial_number
+    time_in_seconds_to_refresh
+    time_in_seconds_to_retry
+    minimum_TTL_in_seconds
+)
+```
+
+- 5. 输入 `IN NS DNS_server_name` 以添加 NS 记录，通告该区域的权威 DNS 服务器。
+- 6. 输入 `last_octet_of_the_IP_address IN PTR FQDN_of_the_host` 以添加 PTR 记录，将 IP 地址与完全限定域名关联。
+- 7. 保存并关闭文件。
+
+## 操作参考：配置 DNS 从服务器
+
+要配置 DNS 从服务器：
+
+1. 输入 `vi /etc/named.conf` 以创建并编辑 `named.conf` 文件。
+2. 在区域语句中指定全局配置选项以及根域名、环回域名和正向与反向区域的区域语句。
+
+```text
+zone "", {
+    type hint;
+    file "named.ca";
+};
+
+zone "0.0.127.in.addr.arpa" {
+    type master;
+    file "zone file name";
+    masters master server's IP address;
+};
+```
+
+3. 保存并关闭文件。
+4. 创建正向和反向区域文件，类似于为主 DNS 服务器创建的文件。
+5. 输入 `chown root.root (文件名称)` 和 `chmod 700 (文件名称)` 以仅允许 root 用户读取该文件。
+6. 输入 `service named start` 以启动 `named` 服务。
+
+## 步骤参考：配置仅缓存服务器
+
+要配置仅缓存服务器：
+
+1. 使用编辑器打开 `named.conf` 文件。
+2. 在 `named.conf` 文件中，指定全局配置选项以及根域名和环回域名的区域语句。
+3. 在区域语句中，对于正向和反向区域，请确保将区域类型更改为 `caching-only`。
+4. 保存并关闭文件。
+5. 启动 `named` 服务。
+6. 验证 DNS 服务器是否解析主机名和 IP 地址。
+
+## 步骤参考：配置转发器
+
+要将 DNS 服务器配置为转发器：
+
+1. 打开 `named.conf` 文件。
+2. 在 `options` 语句中，包含 `forward` 和 `forwarders` 子句。
+
+```text
+forward first;
+
+forwarders {
+    IP address of your ISP's DNS server;
+};
+```
+
+3. 按 `Esc` 键切换到命令模式。保存并关闭文件。
+4. 验证 DNS 服务器是否解析主机名和 IP 地址。
+
+## 步骤参考：配置日志记录
+
+要在 DNS 服务器中配置日志记录：
+
+1. 打开 `/etc/named.conf` 文件。
+2. 添加带有 `channel` 子句的 `logging` 语句，以定义使用用户自定义文件名、大小、版本和安全级别的日志。
+
+```text
+logging {
+    channel channel_name {
+        file "log_file_name";
+        [versions number_of_versions];
+        [severity severity_level];
+    };
+};
+```
+
+3. 在 `logging` 语句中，为每个 `channel` 子句添加一个 `category` 子句，以定义消息类别。
+
+```text
+logging {
+    channel channel_name {
+        different channel options
+    };
+
+    category message_category {
+        channel_name;
+    };
+};
+```
+
+4. 按 `Esc` 键切换到命令模式。保存并关闭文件。
+5. 输入 `service named restart` 以重启 `named` 服务。
+
+### 日志记录语句
+
+`logging` 语句用于实现多种类型的日志。它包含 `channel` 和 `category` 子句。`channel` 子句用于定义日志消息的处理方式。消息将被写入具有用户自定义文件名、大小、版本和安全级别的定制日志中。`category` 子句定义发送到频道的消息类别。一个 `logging` 语句可以包含多个 `channel` 子句，并且每个子句都应定义一个 `category` 选项。`logging` 关键字后跟随用大括号括起来的 `channel` 和 `category` 子句。`channel` 和 `category` 子句以分号 (`;`) 结尾。
+
+默认情况下，`named` 服务的标准消息通过 `syslog` 守护进程通知；这些消息存储在 `/var/log/messages` 目录中。默认类别（也称为 `default`）使用内置频道执行正常日志记录，无需任何特殊配置。尽管执行了 `logging` 语句，但配置文件错误仍记录在系统日志位置，而不是配置文件中指定的位置。日志记录仅在服务器启动时读取 `named.conf` 文件的全部内容后生效。
+
+## 活动 12-4
+
+### 配置 DNS 服务器
+
+**开始前：** 导航至 `C:\085039Data\Configuring_Network` 文件夹以查看此活动的设置。
+
+打开 `Lesson 12 Activity 4.htm` 文件以查看步骤。
+
+**场景：** 您为 OGC Systems 获取了一个域名 `ourglobalcompany.com`。您希望 DNS 服务器将 IP 地址 `192.168.0.2` 和 `192.168.0.3` 解析为主机名 `srvA.ourglobalcompany.com` 和 `srvB.ourglobalcompany.com`。正向和反向区域的参数在表中给出：
+
+| 参数 | 正向区域 | 反向区域 |
+| :--- | :--- | :--- |
+| TTL 值 | 86400 秒 | 86400 秒 |
+| 序列号 | 1001 | 1001 |
+| 刷新周期长度 | 28800 秒 | 28800 秒 |
+| 重试周期长度 | 7200 秒 | 7200 秒 |
+| 从服务器响应查询的持续时间 | 360000 秒 | 604800 秒 |
+| 负缓存服务器的默认 TTL 值 | 86400 秒 | 86400 秒 |
+
+| 操作内容 | 操作方法 |
+| :--- | :--- |
+| 1. 创建正向域名的区域文件。 | a. 在标记为 srvA 的系统上，导航至 `/var/named` 目录。<br><br>b. 使用 vi 编辑器，打开 `ogc.forward` 文件。 |
+
+![](img/477ccb2f05b6ba1b2d563ea74f18c197_555_0.png)
+
+IP 地址 `192.168.0.2` 和 `192.168.0.3` 仅用于您的系统。学生需要在涉及本课中两个系统使用的所有活动中，将上述 IP 地址替换为 `[学生编号] [srvA]` 和 `[学生编号] [srvB]` 的地址。
+
+2. 输入正向区域的 TTL 指令和 SOA 记录。
+   a. 输入 `$TTL 86400` 以指定 TTL 值。
+   b. 输入 `@` 并按 `Tab` 键。
+   c. 输入 `IN` 并按 `Tab` 键。
+   d. 输入 `SOA` 并按 `Tab` 键。
+   e. 输入 `srvA.ourglobalcompany.com. root.srvA.ourglobalcompany.com. (`
+   f. 输入 `1001` 作为区域文件的序列号。
+   g. 输入 `28800` 作为刷新周期的长度。
+   h. 输入 `7200` 作为重试周期的长度。
+   i. 输入 `3600000` 作为从服务器在不更新其区域文件的情况下可以响应查询的时间。
+   j. 输入 `86400` 作为负缓存服务器的默认 TTL。
+   k. 输入 `)` 以完成 SOA 记录。
+
+参见代码示例 1。
+
+### 代码示例 1
+
+```text
+$TTL  86400
+
+@       IN      SOA     srvA.ourglobalcompany.com. root.srvA.ourglobalcompany.com. (
+                1001
+                28800
+                7200
+                3600000
+                86400
+                )
+```
+
+3. 输入正向区域的 NS 和 A 记录。
+   a. 按 `Tab` 键并输入 `IN`
+   b. 按 `Tab` 键并输入 `NS`
+   c. 按 `Tab` 键并输入 `srvA.ourglobalcompany.com.`
+   d. 按 `Tab` 键并输入 `IN`
+   e. 按 `Tab` 键并输入 `A`
+   f. 按 `Tab` 键并输入 `192.168.0.2`
+   g. 按 `Tab` 键并输入 `srvA`
+   h. 按 `Tab` 键并输入 `IN`
+   i. 按 `Tab` 键并输入 `IN`
+   j. 按 `Tab` 键并输入 `192.168.0.2`
+   k. 按 `Tab` 键并输入 `srvB`
+   l. 按 `Tab` 键并输入 `IN`
+   m. 按 `Tab` 键并输入 `IN`
+   n. 按 `Tab` 键并输入 `192.168.0.3`
+   o. 按 `Esc` 键切换到命令模式。
+   p. 保存并关闭文件。
+
+参见代码示例 2。
+
+### 代码示例 2
+
+```text
+IN    NS    srvA.ourglobalcompany.com.
+
+IN    A     192.168.0.2
+
+srvA  IN    A     192.168.0.2
+
+srvB  IN    A     192.168.0.3
+```
+
+4. 创建反向域名解析的区域文件。
+   a. 使用 `vi` 编辑器，打开 `ogc.reverse` 文件。
+   b. 输入 `$TTL 86400` 作为 `TTL` 值。
+   c. 创建具有以下值的 `SOA` 记录：
+      - 序列号-`1001`
+      - 刷新率-`28800`
+      - 重试率-`7200`
+      - 过期时间-`604800`
+      - 最小 TTL-`86400`
+      
+      参见代码示例 3。
+   d. 为具有主机名 `srvA.ourglobalcompany.com` 的 DNS 服务器创建一个 `NS` 记录。
+   e. 输入 `1 IN PTR srvA.ourglobalcompany.com.` 以添加一个 `PTR` 记录。
+   f. 为 `srvB` 添加一个 `PTR` 记录。
+      参见代码示例 4。
+   g. 按 `Esc` 键切换到命令模式。
+   h. 保存并关闭文件。
+   i. 清除终端屏幕。
+
+### 代码示例 3
+
+```text
+$TTL 86400
+
+@   IN  SOA  srvA.ourglobalcompany.com. root.srvA.ourglobalcompany.com. (
+    1001
+    28800
+    7200
+    604800
+    86400
+)
+```
+
+### 代码示例 4
+
+```text
+    IN  NS  srvA.ourglobalcompany.com.
+
+1   IN  PTR  srvA.ourglobalcompany.com.
+
+2   IN  PTR  srvB.ourglobalcompany.com.
+```
+
+5. 在 `named.conf` 文件中指定全局配置选项以及根域名和回环域名的 `zone` 语句。
+   a. 导航到 `/etc` 目录。
+   b. 使用 `vi` 编辑器打开 `named.conf` 文件。
+   c. 输入 `options {` 以开始 `options` 语句。
+   d. 输入 `directory "/var/named";` 以指定区域配置文件的位置。
+   e. 输入 `};` 以完成 `options` 语句。
+      参见代码示例 5。
+   f. 输入 `zone "." {` 以开始根服务器的 `zone` 语句。
+   g. 输入 `type hint;` 以指示该区域文件包含指向根服务器的指针。
+   h. 输入 `file "named.ca";` 以指定区域文件名。
+   i. 完成 `zone` 语句。
+      参见代码示例 6。
+   j. 创建回环区域的 `zone` 语句，指示该区域类型为 master，且 `named.local` 是区域文件。
+      参见代码示例 7。
+
+### 代码示例 5
+
+```text
+options {
+    directory "/var/named";
+};
+```
+
+### 代码示例 6
+
+```text
+zone "." {
+    type hint;
+    file "named.ca";
+};
+```
+
+### 代码示例 7
+
+```text
+zone "1.0.0.127.in-addr.arpa" {
+    type master;
+    file "named.local";
+};
+```
+
+6. 为正向和反向区域添加 `zone` 语句。
+   a. 创建 `ourglobalcompany.com` 正向区域的 `zone` 语句，并指定 `ogc.forward` 文件作为正向区域文件。
+      参见代码示例 8。
+   b. 创建 `0.168.192.in-addr.arpa` 反向区域的 `zone` 语句，并指定 `ogc.reverse` 文件作为反向区域文件。
+      参见代码示例 9。
+   c. 按 `Esc` 键切换到命令模式。
+   d. 保存并关闭文件。
+   e. 清除终端屏幕。
+      > `⇒` 符号表示该命令应在同一行上输入。
+   f. 输入 `yum localinstall /rhelsource/Server/⇒caching-nameserver⇒-9.3.4-10.el5.i386.rpm` 以安装 `caching-nameserver` 软件包。
+   g. 观察软件包安装完成。
+   h. 输入 `clear` 以清除终端屏幕。
+
+### 代码示例 8
+
+```text
+zone "ourglobalcompany.com" {
+    type master;
+    file "ogc.forward";
+};
+```
+
+### 代码示例 9
+
+```text
+zone "0.168.192.in-addr.arpa" {
+    type master;
+    file "ogc.reverse";
+};
+```
