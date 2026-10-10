@@ -1,0 +1,33 @@
+administrators write their sendmail configurations in another file, which is converted to a `sendmail.cf` file via a special utility, called `m4`:
+
+```
+```
+# m4 < myconfig.mc > sendmail.cf
+```
+```
+
+> **WARNING**  
+> If you issue the `m4` command in the same directory in which the original `sendmail.cf` file resides, the command copies over the existing `/etc/mail/sendmail.cf` file. For added safety, back up that file first. You can then restore it from the backup if something goes wrong.
+
+This command converts the `myconfig.mc` file into the `sendmail.cf` file. Where do you start, though? That is, where can you find a file to modify into `myconfig.mc`? Distributions that use sendmail typically provide sample configurations called `sendmail.mc`, `linux.smtp.mc`, or something similar. These files may exist in the `/etc/mail` directory or elsewhere. This file may be installed as part of the main sendmail package or as part of a separate package, such as Fedora’s `sendmail-cf` package. You may also need to install the `m4` package, which holds the `m4` utility used to convert the `.mc` file to a `.cf` file.
+
+For the most part, a typical desktop Linux system needs few or no changes to its send-mail configuration; the default values should work acceptably. Most distributions ship with sendmail configurations that cause the server to accept mail only from the computer on which the server runs. If you want sendmail to accept mail from other computers, though, you’ll need to modify the configuration. To do so, look for a line like this:
+
+```
+```
+DAEMON_OPTIONS(` Port=smtp,Addr=127.0.0.1, Name=MTA ')dn|
+```
+```
+
+> **NOTE**  
+> The character before `Port` in this line isn’t an ordinary single quote mark; it’s an *open* single-quote mark, which can be typed from the key to the left of the number 1 key on most keyboards that also includes the “tilde.” This character is also referred to as a “backtick” or a “back quote.” In some fonts, the result looks like “curly” single quotes around the options within the parentheses.
+
+This line tells sendmail to bind only to the 127.0.0.1 address—that is, the localhost interface. To have sendmail accept mail from other systems, you must comment this line out. The `.mc` file uses the string `dnl` as a comment indicator, so you should add that string to the start of the line:
+
+```
+```
+dnl DAEMON_OPTIONS(` Port=smtp,Addr=127.0.0.1, Name=MTA ')dn|
+```
+```
+
+You can then create a new `sendmail.cf` file by using `m4`, as just described. After you restart sendmail by using its `SysV` startup script, the server should accept mail from other computers.

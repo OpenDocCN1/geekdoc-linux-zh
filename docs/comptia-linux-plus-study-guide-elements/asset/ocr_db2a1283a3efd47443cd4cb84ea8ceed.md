@@ -1,0 +1,41 @@
+15. Which of the following is an advantage of designating one well-protected computer to record log files for several other computers?
+
++   A. Logging information in this way minimizes network use.
++   B. The logging system can analyze the logs using Tripwire.
++   C. Logs stored on a separate computer are less likely to be compromised by an intruder.
++   D. You can log information to a separate computer that you can't log locally.
+
+16. Why is a log file analysis tool like Logcheck useful?
+
++   A. Logcheck translates log file entries from cryptic comments into plain English.
++   B. Logcheck sifts through large log files and alerts you to the most suspicious entries.
++   C. Logcheck compares patterns of activity across several days or weeks and spots anomalies.
++   D. Logcheck uses information in log files to help identify a cracker.
+
+17. Which of the following configuration files does the logrotate program consult for its settings?
+
++   A. `/etc/logrotate.conf`
++   B. `/usr/sbin/logrotate/logrotate.conf`
++   C. `/usr/src/logrotate/logrotate.conf`
++   D. `/etc/logrotate/.conf`
+
+18. Your manager has asked that you configure logrotate to run on a regular, unattended basis. What utility/feature should you configure to make this possible?
+
++   A. at
++   B. logrotate.d
++   C. cron
++   D. inittab
+
+19. Which of the following commands will change all occurrences of dog in the file animals.txt to mutt in the screen display?
+
++   A. sed -s "dog" "mutt" animals.txt
++   B. grep -s "dog||mutt" animals.txt
++   C. sed 's/dog/mutt/' animals.txt
++   D. cat animals.txt | grep -c "dog" "mutt"
+
+20. Which of the following is an advantage of xinetd over inetd?
+
++   A. xinetd can control SysV startup scripts; inetd can't do this.
++   B. xinetd includes more built-in security features than does inetd.
++   C. xinetd provides a more succinct one-line-per-server configuration file format.
++   D. xinetd launches X; systems using inetd must launch X separately.

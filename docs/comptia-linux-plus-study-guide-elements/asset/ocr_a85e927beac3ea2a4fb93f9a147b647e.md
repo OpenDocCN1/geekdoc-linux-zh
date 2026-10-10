@@ -1,0 +1,29 @@
+# Configuring Web Servers
+
+Web servers are another staple of the Internet. These servers handle the Hypertext Transfer Protocol (HTTP), which is why most Web page addresses begin with the string http://. (A secure HTTP variant also exists; such pages are denoted by a leading https://.) Apache (http://httpd.apache.org) is the most popular Web server for Linux. Some distributions install Apache by default, but many don't, so if you want to run Apache, you may need to install it; it usually comes in a package called apache or httpd.
+
+![](bbox=[0.18, 0.29, 0.25, 0.34])
+
+Other Web server packages also exist, but none is nearly as popular as Apache. Because Apache usually ships with Linux and is sometimes installed by default, it's often a good choice, even though it provides more features than many sites need.
+
+Apache is an extremely complex server; this section presents only the barest features of the server. To learn more, consult its documentation or a book on the subject, such as Charles Auld's Linux Apache Server Administration, 2nd Edition (Sybex, 2002).
+
+# Setting Basic Apache Options
+
+Once it's installed, Apache relies on a configuration file, which is likely to be called httpd.conf or httpd2.conf (the latter name most often applies to Apache 2.0 or later installations). This file usually appears in /etc/apache, /etc/httpd, or /etc/httpd/conf. In any event, the usual Apache configuration file consists of comment lines that begin with hash marks (#) and option lines that take this form:
+
+```
+Directive Value
+```
+
+Directive is the name of an option you want to set, and Value is the value you want to assign to Directive. This file also contains blocks of options, which are denoted by codes in angle brackets:
+
+```
+IfDefine APACHEPROXIEND
+List  8080
+/IfDefine
+```
+
+A default Apache configuration typically delivers Web pages from a central location, which is specified with the DocumentRoot directive. Chances are you don't want to serve your distribution's generic Web page, so you should look for this directive and either change it to point to your own home page or replace the files in the default location with those you've created.
+
+In addition to the main site Web pages, Apache can deliver user Web pages, which it reads from a directory specified with the UserDir directive. These pages normally reside in a subdirectory of each user's home directory. For instance, if UserDir points to public_html, the public_html subdirectory of each user's home directory holds that user's Web pages, which can then be accessed by appending a tilde (~) and the username in the Web address, as in http://www.asmallisp.net/~john/ to access John's home page.

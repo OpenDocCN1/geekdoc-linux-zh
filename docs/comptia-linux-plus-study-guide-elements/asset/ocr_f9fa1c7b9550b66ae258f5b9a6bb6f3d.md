@@ -1,0 +1,28 @@
+The *device* parameter is the tape device filename. The *mt* utility supports many operations. Table 7.14 summarizes the most important ones.
+
+# **TABLE 7.14** 	ab mt Operations
+
+| Operation | Description |
+|---|---|
+| `fsf` | Moves forward *count* files. |
+| `bsf` | Moves backward *count* files. |
+| `eod` or `seed` | Moves to the end of data on the tape. |
+| `rewind` | Rewinds the tape. |
+| `offl`*line* or `rewoffl` | Rewinds and unloads the tape. (Unloading is meaningless on some drives but ejects the tape on others.) |
+| `retension` | Rewinds the tape, winds it to the end, and then rewinds it again. This action improves reliability with some types of tape, particularly if the tape has been sitting unused for several months. |
+| `erase` | Erases the tape. (This command usually doesn’t actually erase the data; it just marks the tape as being empty.) |
+| `status` | Displays information on the tape drive. |
+| `load` | Loads a tape into the drive. Unnecessary with many drives. |
+| `compression` | Enables or disables compression by passing an argument of 1 or 0, respectively. |
+| `datcompression` | Also enables and disables compression. |
+
+> **NOTE** The compression and datcompression operations aren’t identical; some- times a tape drive works with one but not the other.
+
+For instance, suppose you created a backup on a SCSI tape, but now you want to create another backup on the same tape without eliminating the first backup. You could issue the following commands to accomplish this task:
+
+```
+```
+# mt -f /dev/nst0 rewind
+# mt -f /dev/nst0 fsf 1
+```
+```

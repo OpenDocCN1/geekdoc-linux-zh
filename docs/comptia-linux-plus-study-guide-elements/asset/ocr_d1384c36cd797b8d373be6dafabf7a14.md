@@ -1,0 +1,24 @@
+# Installing and Removing Packages
+
+Debian-based systems often use a somewhat higher-level utility called `dselect` to handle package installation and removal. The dselect utility provides a text-mode list of installed packages and packages available from a specified source (such as a CD-ROM drive or an FTP site), and it allows you to select which packages you want to install and remove. This interface can be very useful when you want to install several packages, but dpkg is often more convenient when manipulating just one or two packages. Because dpkg can take package filenames as input, it's also the preferred method of installing a package that you download from an unusual source or create yourself.
+
+# Using APT
+
+Advanced Package Tool utilities are another option for Debian package management. These tools center around the `apt-get` utility, which enables you to perform easy upgrades of packages, especially if you have a fast Internet connection. Debian-based systems include a file, `/etc/apt/sources.list`, that specifies locations from which important packages can be obtained. If you installed the OS from a CD-ROM drive, this file will initially list directories on the installation CD-ROM in which packages can be found. There are also likely to be a few lines near the top, commented out with hash marks (#), indicating directories on an FTP or Web site from which you can obtain updated packages. (These lines may be uncommented if you did a network install initially.)
+
+![](bbox=[0.2, 0.5, 0.28, 0.56])
+
+Although APT is most strongly associated with Debian systems, a port to RPM-based systems is also available. Check `http://apt4rpm.sourceforge.net` for information on this port.
+
+The apt-get utility works by obtaining information on available packages from the sources listed in `/etc/apt/sources.list` and then using that information to upgrade or install packages. The syntax is similar to that of dpkg:
+
+```
+apt-get [options][command] [package-names]
+```
+
+Table 7.6 describes the `apt-get` commands, and Table 7.7 describes the most commonly used options. In most cases, you won't actually use any options with `apt-get`, just a single command and possibly one or more package names. One particularly common use of this utility is to keep your system up-to-date with any new packages. The following two commands will accomplish this goal, if `/etc/apt/sources.list` includes pointers to up-to-date file archive FTP sites:
+
+```
+# apt-get update
+# apt-get dist-upgrade
+```

@@ -1,0 +1,74 @@
+tools, 250–251
+unmounting, 270–271
+passive mode in FTP, 488
+passwd utility, 16, 200–201
+Password-cracking programs, 221
+passwords
+BIOS, 515
+compromised, 221–222
+enforcing, 219–221
+group configuration files, 215
+groups, 214–215
+MySQL, 501, 503
+NIS, 524
+protecting, 189
+root, 16
+Samba, 475
+setting, 200–204
+shadow, 190, 221–224
+SMB/CIFS, 424
+SSH, 405
+stolen, 516
+system accounts with, 536
+user account configuration files, 204–206
+wireless networks, 368
+PATA (parallel ATA) drives, 240
+PATH environment variable, 50, 87–88
+payloads in packets, 354
+PCI (Peripheral Component Interconnect) standard, 31–32
+PCL (Printer Control Language), 415
+pdisk tool, 252
+periods (.). See dots (.)
+Peripheral Component Interconnect (PCI) standard, 31–32
+permission bits, 76
+permissions, 72–73
+ACLs, 83–84
+components, 72–74
+default, 82–83
+
+modifying, 78–82
+processes, 123–125
+Samba, 477
+type codes, 74–78
+user accounts, 72, 189
+Permissive mode in SELinux, 530
+PGP (Pretty Good Privacy), 526
+phishing, 519
+PHP: Hypertext Preprocessor (PHP) scripts, 490–492
+php.ini file, 492
+physical access in security, 515
+physical volumes, 281
+PIDs (process IDs), 112
+ping tool
+connectivity testing, 377
+NTP servers, 451
+pipes
+file type codes, 75
+working with, 69–70
+plain-text transfer mode in FTP, 488
+PLIP (Parallel Line Interface Protocol), 350
+Pluggable Authentication Modules (PAM)
+configuring, 521–523
+LDAP support, 455
+password, 223
+plus signs (+)
+job scheduling, 128
+NTP servers, 453
+Point-to-Point Protocol (PPP), 351, 375
+pointer (PTR) records, 446
+policies
+itables, 400–401
+printing, 419
+SELinux packages, 530
+pool.ntp.org domain, 451
+POP (Post Office Protocol), 456, 461–462

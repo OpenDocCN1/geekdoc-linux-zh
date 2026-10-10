@@ -1,0 +1,17 @@
+**TABLE 7.3** Common yum Commands (*continued*)
+
+| Command | Description |
+|---|---|
+| `info` | Displays information about a package, similar to the `rpm -qi` command. |
+| `clean` | Cleans up the Yum cache directory. Running this command from time to time is advisable, lest downloaded packages chew up too much disk space. |
+| `shell` | Enters the Yum shell mode, in which you can enter multiple Yum commands one after another. |
+| `resolvedep` | Displays packages matching the specified dependency. |
+| `localinstall` | Installs the specified local RPM files, using your Yum repositories to resolve dependencies. |
+| `localupdate` | Updates the system using the specified local RPM files, using your Yum repositories to resolve dependencies. Packages other than those updated by local files and their dependencies are *not updated*. |
+| `deplist` | Displays dependencies of the specified package. |
+
+In most cases, using Yum is easier than using RPM directly to manage packages, because Yum finds the latest available package, downloads it, and installs any required dependencies. Yum has its limits, though; it’s only as good as its repositories, so it can’t install software that’s not stored in those repositories.
+
+> If you use Yum to automatically upgrade all packages on your system, you’re effectively giving control of your system to the distribution maintainer. Although Red Hat or other distribution maintainers are unlikely to try to break into your computer in this way, an automatic update with minimal supervision on your part could easily break something on your system, particularly if you’ve obtained packages from unusual sources in the past.
+
+If you don’t want to install the package but merely want to obtain it, you can use `yumdownloader`. Type this command followed by the name of a package, and the latest version of the package will be downloaded to the current directory. This can be handy if you need to update a system that’s not connected to the Internet; you can use another system that runs the same distribution to obtain the packages and then transfer them to the target system.

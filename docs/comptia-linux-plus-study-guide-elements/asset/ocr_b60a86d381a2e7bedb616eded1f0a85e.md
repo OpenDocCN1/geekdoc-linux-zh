@@ -1,0 +1,15 @@
+It's easy to forget the colon (:) at the end of the machine name when using **scp**. If you do, **scp** works much like **cp** when given the same arguments—it will copy the file locally, so you'll end up with a local file named after the remote username and computer hostname, such as gene@apollo1.luna.edu. This is usually a minor inconvenience, but if you don't verify that a file has been transferred, it could turn into a major inconvenience at a later time.
+
+The **sftp** program acts much like the more common **ftp** program: type the command name followed by the remote hostname (optionally preceded by a username). The computer then presents an **sftp>** prompt, at which you can type commands similar to those used by the **ftp** program. Example commands include **get** (to retrieve a file), **put** (to put a file), **dir** or **ls** (to view a directory listing), **cd** (to change into a directory on the remote system), **lcd** (to change into a directory on the local system), and **exit** or **quit** (to terminate the program). Chapter 11 describes the **ftp** client program in more detail. The **sftp** program requires that the server support its variant protocol, as described earlier.
+
+# Generating SSH Keys
+
+SSH works, in part, by using a series of *keys*, which are large numbers used to encrypt and decrypt data. Keys may also be used as a means of identification. Although SSH generates keys automatically so that you can use SSH without explicitly configuring keys, understanding SSH keys will enable you to perform tasks with the protocol you wouldn't otherwise be able to do.
+
+The SSH server stores its keys in `/etc/ssh`, in a series of files called `ssh_host_rsa_key`, `ssh_host_dsa_key`, and these same filenames with `.pub` extensions. The files with `.pub` extensions hold *public keys*—keys that are given to other computers as a means of decrypting data that's been encrypted with the server's *private keys* (the keys stored in files without `.pub` extensions).
+
+Private keys are extremely sensitive. They should be stored with `0600` (`-rw------`) or more restrictive permissions, and they should *never* be sent to other parties. If a miscreant obtains your private key, that individual can impersonate you. Public keys are not very sensitive, so they can usually be read by anybody on the local computer, and they're frequently distributed to other computers as a normal part of SSH operation.
+
+Individual users can also have SSH private and public keys. The **ssh client** program can automatically generate some keys as needed; however, you can alter the way SSH authenticates users by manually generating a new key. Using this method, either you'll use a passphrase instead of your normal password or you'll eliminate the need to type a password when you use SSH. To generate such a key, follow these steps:
+
++   1. Log into the SSH client system.

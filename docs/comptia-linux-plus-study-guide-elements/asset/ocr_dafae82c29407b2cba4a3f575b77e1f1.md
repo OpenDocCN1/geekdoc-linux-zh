@@ -1,0 +1,25 @@
+# NOTE
+
+Seeing messages in a mailq listing isn't necessarily a sign of trouble. If your system is processing very many or very large messages, they will appear in the queue for a time. Likewise, a slow network connection will cause messages to hang around for a while. If messages regularly stay in the queue for very long, though, your network connection may be unreliable or overloaded, or something about your mail server software's configuration may be suboptimal. Checking the mail log files (typically /var/log/mail) may provide you with more clues.
+
+If mail has accumulated in the queue and you believe you've corrected the problem, it should eventually clear out on its own. To speed up the process, though, you can type **sendmail -q**. This command causes the mail server to immediately attempt delivery of all queued messages.
+
+# ## Using Aliases and Forwarding E-mail
+
+E-mail aliases enable one address to stand in for another one. For instance, all e-mail servers are supposed to maintain an account called postmaster. E-mail to this account should be read by somebody who's responsible for maintaining the system. One way to do this is to set up an alias linking the postmaster name to the name of a real account. You can do this by editing the aliases file, which usually resides in /etc or sometimes in /etc/mail.
+
+The aliases file format is fairly straightforward. Comment lines begin with hash marks (#), and other lines take the following form:
+
+```
+name: addr1[,addr2[, ...]]
+```
+
+The name that leads the line is a local name, such as postmaster. Each address (addr1, addr2, and so on) can be a local account name to which the messages are forwarded, the name of a local file in which messages are stored (denoted by a leading slash), a command through which messages are piped (denoted by a leading vertical bar character), the name of a file whose contents are treated as a series of addresses (denoted by a leading include: string), or a full e-mail address (such as fred@example.com).
+
+A typical default configuration includes a few useful aliases for accounts such as postmaster. Most such configurations map most of these aliases to root. Reading mail as root is inadvisable, though—doing so increases the odds of a security breach or other problem because of a typo or bug in the mail reader. Thus, you may want to set up an alias line like the following:
+
+```
+root: yourusername
+```
+
+This redirects all of root's mail, including mail directed to root via another alias, to yourusername, which can take any of the forms just described (it's most likely to be a local username or a valid remote e-mail address). Some mail servers, including sendmail and Postfix, require you to compile /etc/aliases into a binary file that can be processed more quickly. To do so, type newaliases as root.

@@ -1,0 +1,70 @@
+
+## Creating System Cron Jobs
+
+The `/etc/crontab` file controls system cron jobs. This file normally begins with several lines that set environment variables, such as PATH and MAILTO (the former sets the path, and the latter is the address to which programs' output is mailed). The file then contains several lines that resemble the following:
+
+```
+02 4 * * * root run-parts /etc/cron.daily
+```
+
+This line begins with five fields that specify the time. The fields are, in order, the minute (0–59), the hour (0–23), the day of the month (1–31), the month (1–12), and the day of the week (0–7; both 0 and 7 correspond to Sunday). For the month and day of the week values, you can use the first three letters of the name rather than a number, if you like.
+
+In all cases, you can specify multiple values in several ways:
+
+- An asterisk (\*) matches all possible values.
+- A list separated by commas (such as 0,6,12,18) matches any of the specified values.
+- Two values separated by a dash (-) indicate a range, inclusive of the end points. For instance, 9-17 in the hour field specifies a time of from 9 a.m. to 5 p.m.
+- A slash, when used in conjunction with some other multivalue option, specifies stepped values—a range in which some members are skipped. For instance, */10 in the minute field indicates a job that's run every 10 minutes.
+
+After the first five fields, `/etc/crontab` entries continue with the account name to be used when executing the program (root in the preceding example) and the command to be run (*run-parts /etc/cron.daily* in this example). The default `/etc/crontab` entries generally use *run-parts*, *cronloop*, or a similar utility that runs any executable scripts within a directory. Thus, the preceding example runs all the scripts in `/etc/cron.daily` at 4:02 a.m. every day. Most distributions include monthly, weekly, daily, and hourly system cron jobs, each corresponding to scripts in a directory called `/etc/cron.interval`, where *interval* is a word associated with the run frequency. Others place these scripts in `/etc/cron.d/interval` directories.
+
+![](img/a78bc63f22351f522ba5ec1fa0c060d2_165_0.png)
+
+> The exact times chosen for system cron jobs to execute vary from one distribution to another. Normally, though, daily and longer-interval cron jobs run early in the morning—between midnight and 6 a.m. Check your `/etc/crontab` file to determine when your system cron jobs run.
+
+To create a new system cron job, you may create a script to perform the task you want performed and copy that script to the appropriate `/etc/cron.interval` directory. When the runtime next rolls around, cron will run the script.
+
+> Before submitting a script as a cron job, test it thoroughly. This is particularly important if the cron job will run when you're not around. You don't want a bug in your cron job script to cause problems by filling the hard disk with useless files or producing thousands of e-mail messages when you're not present to quickly correct the problem.
+
+If you need to run a cron job at a time or interval that's not supported by the standard /etc/crontab, either you can modify that file to change or add the cron job runtime or you can create a user cron job, as described in the next section. If you choose to modify the system cron job facility, model your changes after an existing entry, changing the times and script storage directory as required.
+
+> System cron job storage directories should be owned by root, and only root should be able to write to them. If ordinary users can write to a system cron directory, unsupculous users could write scripts to give themselves superuser privileges and place them in the system cron directory. The next time cron runs those scripts, the users will have full administrative access to the system.
+
+### Creating User Cron Jobs
+
+To create a user cron job, you use the `crontab` utility, not to be confused with the /etc/crontab configuration file. The syntax for crontab is as follows:
+
+```
+crontab [-u user] [-l | -e | -r] [file]
+```
+
+If given without the -u user parameter, crontab modifies the cron job associated with the current user. (User cron jobs are often called crontabs, but with that word also used in reference to the system-wide configuration file and the utility itself, this usage can be perplexing.) The crontab utility can become confused by the use of su to change the current user identity, so if you use this command, it's safest to also use -u user, even when you are modifying your own cron job.
+
+If you want to work directly on a cron job, use one of -l, -e, or -r options. The -l option causes crontab to display the current cron job, -r removes the current cron job, and -e opens an editor so that you can edit the current cron job. (vi is the default editor, but you can change this by setting the VISUAL or EDITOR environment variable, as described in Chapter 2.)
+
+Alternatively, you can create a cron job configuration file and pass the filename to crontab using the file parameter. For instance, typing `crontab -u baker my-cron` causes crontab to use my-cron for baker's cron jobs.
+
+Whether you create the cron job and submit it via the file parameter or edit it via -e, the format of the cron file is similar to that described earlier. You can set environment variables by using the form *VARIABLE=value*, or you can specify a command preceded by five numbers or wildcards to indicate when the job is to run. In a user cron job, however, you do *not* specify the username used to execute the job, as you do with system cron jobs. That information is derived from the owner of the cron job. Listing 3.3 shows a sample cron job file. This file runs two programs at different intervals: the *fetchmail* program runs every 30 minutes (on the hour and half hour), and *clean-adoubt* runs on Mondays at 2:00 a.m. Both programs are specified via complete paths, but you could include a *PATH* environment variable and omit the complete path specifications.
+
+**Listing 3.3:** A Sample User Cron Job File
+
+```
+SHELL=/bin/bash
+MAILTO=tbaker
+HOME=/home/tbaker
+0,30 * * * * /usr/bin/fetchmail -s
+0 2 * * mon /usr/local/bin/clean-adoubt $HOME
+```
+
+User access to cron can be controlled via the */etc/cron.allow* and */etc/cron.deny* files. Add a username to *cron.allow* to explicitly allow that user to use cron; add a username to *cron.deny* to explicitly deny that user the ability to use cron. The keyword *ALL* in either file stands for all users, so you can make access to cron very selective by placing *ALL* in *cron.deny* and then adding only trusted users to *cron.allow*.
+
+## Using at
+
+Sometimes cron is overkill. You might simply want to run a single command at a specific point in the future on a onetime basis, rather than on an ongoing basis. For this task, Linux provides another command: *at*. In ordinary use, this command takes a single option (although options to fine-tune its behavior are also available): a time. This time can take any of several forms:
+
+- **Time of day**: You can specify the time of day as *HH:MM*, optionally followed by *AM* or *PM* if you use a 12-hour format. If the specified time has already passed, the operation is scheduled for the next occurrence of that time—that is, for the next day.
+- **noon**, **midnight**, or **teatime**: These three keywords stand for what you'd expect (teatime is 4:00 p.m.).
+- **Day specification**: To schedule an *at* job more than 24 hours in advance, you must add a day specification after the time of day specification. You can do this in numeric form, using the format *MMDDYY*, *MM/DD/YY*, or *DD.MM.YY*. Alternately, you can specify the date as *month-name day* or *month-name day year*.
+- **now** + **count time-units**: You can specify a time using the keyword *now*, a plus sign (+), and a time period, as in *now* + *2 hours* to run a job in two hours.
+
+When you run *at* and give it a time specification, the program responds with its own prompt, *at>*, which you can treat much like your normal Bash or other command

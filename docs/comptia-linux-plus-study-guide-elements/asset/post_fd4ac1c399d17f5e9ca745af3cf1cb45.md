@@ -1,0 +1,50 @@
+
+Users may also be members of a group based on the primary group specification of their entries in the /etc/passwd file. For instance, if user george had project1 listed as his primary group, he need not be listed in the project1 line in /etc/group. If user george uses newgrp to change to another group, though, he won't be able to change back to project1 unless he's listed in the project1 line in /etc/group.
+
+Systems with shadow passwords also use another file, /etc/gshadow, to store shadow password information on groups. This file stores the shadow password and information on group administrators, as described earlier in “Using gpasswd.”
+
+![](img/a78bc63f22351f522ba5ec1fa0c060d2_255_0.png)
+
+If you configure Linux to use a network account database, the /etc/group file will be present and may define groups important for the system's basic operation. As with /etc/passwd and /etc/shadow, though, important user groups are likely to be defined only on the network account server, not in /etc/group.
+
+## Deleting Groups
+
+Deleting groups is done via the groupdel command, which takes a single argument: a group name. For instance, typing groupdel project3 removes the project3 group. You can also delete a group by editing the /etc/group file (and /etc/gshadow, if present) and removing the relevant line for the group. It's generally better to use groupdel, though, because groupdel checks to see whether the group is any user's primary group. If it is, groupdel refuses to remove the group; you must change the user's primary group or delete the user account first.
+
+As with deleting users, deleting groups can leave “orphaned” files on the computer. You can locate them with the find command, which is described in more detail in Chapter 2. For instance, if the deleted group had used a GID of 503, you can find all the files on the computer with that GID by using the following command:
+
+```
+# find / -gid 503
+```
+
+Once you've found any files with the deleted group's ownership, you must decide what to do with them. In some cases, leaving them alone won't cause any immediate problems, but if the GID is ever reused, it could lead to confusion and even security breaches. Therefore, it's usually best to delete the files or assign them other group ownership using the chown or chgrp command.
+
+## Using Common User and Group Strategies
+
+Linux's tools for handling users and groups can be quite powerful, but until you have some experience using them in a practical working environment, it's not always easy to see how best to use them. This is also one area of system configuration that can't be preconfigured by distribution maintainers in a way that's very helpful. After all, user accounts and groups are necessarily local features—your system's users and groups will almost certainly be different from those of a system across town. Nonetheless, Linux distributions need to have some sort of default scheme for handling users and groups—what UIDs and GIDs to assign and what groups to use for newly created users by default. Two such schemes are in common use, and each can be expanded in ways that may be useful to your system.
+
+> **The strategies described here can be further modified by employing access control lists (ACLs), as described in Chapter 2. These have the effect of giving individual users fine-grained control over who may access their files.**
+
+### Using User Private Groups
+
+The user *private group* scheme is used by Red Hat Linux and some of its derivative distributions, such as Fedora and Mandriva. This scheme creates an initial one-to-one mapping of users and groups. In this system, whenever a user account is created, a matching group is created, usually of the same name. This matching group has one member—its corresponding user. For instance, when you create the account *sally*, a group called *sally* is also created. The account *sally*'s primary group is the group *sally*. When used without modification, the user private group strategy effectively eliminates groups as a factor in Linux security—because each group has just one member, group permissions on files become unimportant.
+
+It's possible to modify group membership to control file access, however. For instance, if you want the user *george* to be able to read *sally*'s files, you can add *george* to the *sally* group and set the *sally* user's umask to provide group read access to new files created by the user *sally*. Indeed, if you make all users group administrators of their own groups, users may control who has access to their own files by using *gpasswd* themselves. Overall, this approach provides considerable flexibility, particularly when users are sophisticated enough to handle *gpasswd*. Giving users such power may run counter to your system's security needs, though. Even when security policy dictates against making users group administrators, a user private group strategy can make sense if you need to fine-tune file access on a user-by-user basis. This approach can also provide asymmetrical file access. For instance, *george* may be able to read *sally*'s files (at least, those with appropriate group permissions), but *sally* might not have access to *george*'s files (unless *george* sets the world read bit on his files).
+
+### Using Project Groups
+
+A second approach to group configuration is to create separate groups for specific purposes or projects. Therefore, I refer to this as the project group approach. Consider an example of a company that's engaged in producing three different products. Most employees work on just one product, and for security reasons, you don't want users working on one product to have access to information relating to the other two products. In such an environment, a Linux system may be well served by having three main user groups, one for each product. Most users will be members of precisely one group. If you configure the system with a umask that denies world access, those who don't belong to a specific product's group won't be able to read files relating to that product. You can set read or read/write group permission to allow group members to easily exchange files. (Individual users may use chmod to customize permissions on particular files and directories, of course.) If a user needs access to files associated with multiple products, you can assign that user to as many groups as necessary to accommodate the need. For instance, a supervisor might have access to all three groups.
+
+The project group approach tends to work well when a system's users can be easily broken down into discrete groups whose members must collaborate closely. It can also work well when users need not (and even should not) have ready access to each other's files, as with students taking the same class. In such a case, you would set the umask to block group access to users' files. The logical grouping of users can still be helpful to you as an administrator, however, because you can track users according to their group—you can easily find all files owned by users taking a particular class, for instance. (Keep in mind that this tracking ability breaks down when users are members of multiple groups.)
+
+Many Linux distributions default to using a type of project group approach. The default primary group for new users on such systems is typically called **users**. You can, and in most cases should, create additional groups to handle all your projects. You can leave the **users** group intact but not use it, rename it to the first project group name, or use **users** as an overarching group for when you want to give access to a file to most ordinary users, but perhaps not everyone (such as guest users on an FTP server).
+
+### Assigning Users to Multiple Groups
+
+On any but very simple systems, it's likely that at least some users will be members of multiple groups. This means that these users will be able to do the following things:
+
+- Read files belonging to any of the user's groups, provided that the file has group read permission.
+- Write to existing files belonging to any of the user's groups, provided that the file has group write permission.
+- Run programs belonging to any of the user's groups, provided that the file has group execute permission.
+- Change the group ownership of any of the user's own files to any of the groups to which the user belongs.
+- Use newgrp to make any of the groups to which the user belongs the user's primary group. Files created thereafter will have the selected group as the group owner.

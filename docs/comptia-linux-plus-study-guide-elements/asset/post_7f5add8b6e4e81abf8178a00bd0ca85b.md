@@ -1,0 +1,297 @@
+
+## Index
+
+- **links**
+    - creating, 60–61
+    - file type codes, 75
+    - inodes for, 73
+    - optical disks, 338
+    - permissions, 77
+- **Linux Documentation Project (LDP)**, 96–97
+- **Linux Loader (LILO)**, 8–9, 244–245
+- **listing files**, 54–56
+- **Livna repository**, 307
+- **lmhosts file**, 476
+- **ln command**, 60–61
+- **loading**
+    - Apache modules, 490
+    - kernel modules, 35–36
+- **LOADLIN boot loader**, 9
+- **loads**
+    - averages, 116
+    - verifying, 171
+- **local network tools**, 376, 531–532
+- **local program bugs**, 516–517
+- **local user complaints as intrusion symptom**, 538
+- **LocalTalk protocol**, 352
+- **locate command**, 65
+- **locating files**, 63–66
+- **log files**, 163
+    - analysis tools, 177
+    - awk and sed tools, 175–177
+    - common, 170–171
+    - exam essentials, 178–179
+    - for intrusion detection, 172, 538, 545–546
+    - monitoring, 545–546
+    - options, 164–166
+    - for problem identification, 171–172
+    - remote servers for, 169–170
+    - review questions, 180–186
+    - rotating, 125, 166–169
+    - scanning, 172–177
+    - for services, 148
+    - summary, 178
+    - syslog for, 163–164
+- **logcheck.sh file**, 177
+- **Logcheck tool**, 177
+- **logical partitions**, 243, 253
+- **logical volumes**, 280, 282
+- **login program**, 225–226
+- **logins**
+    - access control, 225
+    - historical data, 211–212
+    - privileges, 189
+    - remote. See remote logins
+    - switching identities after, 191–192
+    - user account shells, 536
+- **logrotate tool**, 166–168
+- **logtail utility**, 177
+- **long text files, viewing**, 68
+- **loop-AES program**, 515
+- **loopback interface configuration**, 371
+- **loopback option in optical disks**, 338
+- **loopback traffic with iptables**, 404
+- **low-level disk formats**, 241
+- **lp program**, 424–425
+- **lp utility**, 427
+- **lpd tool**, 414, 423
+- **lpmove command**, 427
+- **lpr program**, 414, 424–425
+- **lprm command**, 427
+- **lpr utility**, 426–427
+- **lprm utility**, 427
+- **lpstat utility**, 427
+- **ls program**, 51
+    - options, 54–56
+    - wildcards, 56
+- **lsmcd command**, 33–34
+- **lspci command**, 19, 31
+- **lsubd command**, 32
+- **lvcreate command**, 282
+- **lvdisplay command**, 282
+
+## M
+
+- **m4 utility**, 458
+- **MAC (mandatory access control)**, 529
+- **MAC (Media Access Control)**
+    - addresses, 359
+- **machine names**, 362
+- **magnetic devices**, 239–241
+- **magnetic tape**, 239–240
+- **mail**. See *e-mail*
+- **mail exchanger (MX) records**, 446
+- **mail options for log files**, 168
+- **mail transfer agents (MTAs)**, 456
+- **mail user agents (MUAs)**, 456
+- **maillog file**, 170
+- **mailq command**, 459
+- **make utility**, 318–321
+- **makewhatis command**, 94
+- **man pages**, 91–94
+- **mandatory access control (MAC)**, 529
+- **Mandrake distribution**, 3
+- **Mandriva distribution**, 3
+- **mangle table**, 399
+- **mapping UIDs and GIDs to users and groups**, 194–196
+- **masks**
+    - DHCP, 440
+    - network, 360, 370
+    - user, 82–83
+- **master boot record (MBR)**, 8
+    - partitioning system, 242–243
+    - protective, 244
+- **MD4 encryption**, 224
+- **MD5 (Message Digest 5) hash**, 223–224
+- **md5sum program**, 543–544
+- **mdadm package**, 278
+- **Media Access Control (MAC)**
+    - addresses, 359
+- **media for installation**, 4–5
+- **/media partition**, 247
+- **memory**
+    - process use, 113
+    - statistics, 122
+    - swap space for, 259–263
+- **menu.lst file**, 13–14
+- **menuconfig program**, 319
+- **Message Digest 5 (MD5) hash**, 223–224
+- **messages, dmesg**, 16–17
+- **messages log file**, 170
+- **Metacity window manager**, 29
+- **midnight setting in job scheduling**, 128
+- **mirroring, RAID**, 277
+- **mismatched names, dependency issues from**, 322–323
+- **missing libraries, dependency issues from**, 322–323
+- **missing log entries**, 172, 538, 546
+- **mixing case in passwords**, 220
+- **mkdir command**, 62
+- **mkdosfs utility**, 257
+- **mke2fs tool**, 256
+- **mks program**, 256–257
+- **mks.ext2 program**, 256
+- **mkinitrars utility**, 321
+- **mkinitrd utility**, 321
+- **mkisofs program**, 329, 337–338
+- **mknod command**, 71–72
+- **mkraid command**, 280
+- **mkreiserfs utility**, 257
+- **mkswap tool**, 261, 263
+- **/mnt partition**, 247
+- **mode lines in X configuration**, 23
+
+## modes
+
+- FTP, 488
+- SELinux, 530
+- symbolic, 80–81
+- Vi, 132–133
+- **modinfo command**, 34
+- **modprobe program**, 35–36, 264, 366
+- **module stacks**, 37
+- **modules**
+    - Apache servers, 490
+    - kernel, 33, 35–37
+    - PAM, 223, 455, 521–523
+- **monitor options in X configuration**, 23
+- **monitoring**
+    - log files, 545–546
+    - queues, 424–427, 426
+- **monthly option for log files**, 168
+- **more program**, 68
+- **mount command**, 264, 266–270, 272–273
+- **Mount options field**, 275
+- **Mount point field**, 275
+- **mount points**, 245–247, 266
+- **mounting partitions**, 266–270
+- **mouse, X configuration**, 22
+- **moving**
+    - files, 59
+    - shell text, 53
+- **Moving up command for info pages**, 94
+- **mt program**, 240, 331–333
+- **MTAs (mail transfer agents)**, 456
+- **MUIs (mail user agents)**, 456
+- **multiple disks, partitions for**, 245
+- **multiple groups for users**, 218–219
+- **multiple partitions**, 248
+- **multitasking systems**, 190–191
+- **multiuser concepts**, 188
+    - groups, 193–194
+    - home directories, 196–197
+    - mapping UIDs and GIDs to users and groups, 194–196
+    - user accounts, 188–193
+- **mv command**, 59
+- **MX (mail exchanger) records**, 446
+- **my.cnf file**, 500
+- **MySQL language**
+    - configuring, 500–501
+    - connections, 501–502
+    - SQL packages, 499–500
+- **mysqladmin command**, 501
+- **mysqld daemon**, 501
+
+## N
+
+- **Name section in man pages**, 92
+- **name server (NS) records**, 445–446
+- **name servers**
+    - DHCP, 440
+    - troubleshooting, 379–380
+- **Name Service Switch (NSS)**, 520
+- **named file**, 441
+- **names**
+    - dependency issues from, 322–323
+    - groups, 215
+    - hostnames. See *hostnames*
+    - kernel files, 13
+    - packages, 302
+    - RPM package files, 299
+- **NAT (network address translation)**, 362, 399
+- **nat table**, 399
+- **NEdit text editor**, 137
+- **NEighbor Discovery Protocol (NDP)**, 360
+- **Nessus scanner**, 532–535, 534–535
+- **Netatalk package**, 357
+- **NetBEUI protocol**, 357
+- **NetBIOS protocol**, 357, 440
+- **netstat tool**, 378–379, 531–532
+- **network activity**
+    - as intrusion symptom, 537
+    - tools, 531–532
+- **network address translation (NAT)**, 362, 399
+- **network addresses**
+    - hardware, 359
+    - hostnames, 362–364
+    - IP, 359–362
+    - overview, 358–359
+- **network-admin (Network Settings) tool**, 373
+- **Network Configuration tool**, 373
+- **Network File System (NFS)**, 382, 480
+    - exports, 273
+    - network backups, 334
+        - configuring, 480–482
+        - security, 482–483
+    - servers, 480
+- **Network Information Service (NIS)**, 196, 207, 455, 523–524
+- **network installations**, 4–5
+- **network masks**
+    - description, 360
+    - DHCP, 440
+    - Fedora, 370
+- **network servers**, 438
+    - authentication, 454–455, 523–526
+    - **e-mail**. See *e-mail*
+    - exam essentials, 463, 503–504
+    - FTP, 483–488
+    - hostnames, 441–448
+    - IP addresses, 438–441
+    - MySQL, 499–503
+    - NFS, 480–483
+    - review questions, 464–471, 505–511
+    - **Samba**. See *Samba servers*
+    - summary, 462, 503
+    - time, 448–454, 450, 453
+    - **Web**. See *Web servers*
+- **Network Settings tool (network-admin)**, 373
+- **networks**
+    - account databases, 207
+    - ARP cache, 376
+    - authentication, 523–526
+    - backups, 333–334
+    - bind option, 157
+    - configuration overview, 365–366
+    - connectivity testing, 377
+    - DHCP configuration, 368–369
+    - exam essentials, 382–383, 428–429
+    - filesystems, 271–276
+    - **firewalls**. See *firewalls*
+    - general tools, 380–382
+    - GUI configuration tools, 373–374, 374
+    - hardware, 350–354, 353
+    - hardware configuration, 366
+    - in installation process, 6
+    - name server troubleshooting, 379–380
+    - packets, 353–354
+    - ports, 364–365
+    - PPP, 375
+    - **printing**. See *printing*
+    - protocol stacks, 354–358, 355
+    - remote logins. See *remote logins*
+    - repositories, 296–297
+    - review questions, 384–390, 429–436
+    - route tracing, 377–378
+    - routing between, 392–393
+    - static IP address configuration, 369–373
+    - status, 378–379
+    - summary, 382, 428

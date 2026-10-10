@@ -1,0 +1,21 @@
+and a few numbered objectives are split across multiple chapters, so don't be alarmed when you notice gaps or repeats in the sequence.) At the end of each chapter, you'll find two sections you can use to help prepare for the exam:
+
+**Exam Essentials** This section summarizes important information that was covered in the chapter. You should be able to perform each of the tasks or convey the information requested.
+
+**Review Questions** Each chapter concludes with 20 review questions. You should answer these questions and check your answer against the one provided after the questions. If you can't answer at least 80 percent of these questions correctly, go back and review the chapter, or at least those sections that seem to be giving you difficulty.
+
+![](bbox=[0.18, 0.34, 0.24, 0.41])
+
+> The review questions, assessment test, and other testing elements included in this book are *not* derived from the CompTIA Linux+ exam questions, so don't memorize the answers to these questions and assume that doing this will enable you to pass the Linux+ exam. You should learn the underlying topic, as described in the text of the book. This will let you answer the questions provided with this book *and* pass the exam. Learning the underlying topic is also the approach that will serve you best in the workplace—the ultimate goal of a certification such as Linux+.
+
+To get the most out of this book, you should read each chapter from start to finish and then check your memory and understanding with the chapter-end elements. Even if you're already familiar with a topic, you should skim the chapter; Linux is complex enough that there are often multiple ways to accomplish a task, so you may learn something even if you're already competent in an area.
+
+# ## Bonus CD-ROM Contents
+
+This book comes with a CD-ROM that contains several additional elements. Items available on the CD-ROM include the following:
+
+**Book contents as a PDF file** The entire book is available as a fully searchable PDF that can be read on most OS, including Linux and Windows.
+
+**Electronic "flashcards"** The CD-ROM includes 150 questions in "flashcard" format (a question followed by a single correct answer). You can use these to review your knowledge of the Linux+ exam objectives.
+
+**Sample tests** All of the questions in this book appear on the CD-ROM—both the 30-question assessment test at the end of this introduction and the 240 questions that consist of the twelve 20-question "Review Questions" sections for each chapter. In addition, there are two 65-question bonus exams.

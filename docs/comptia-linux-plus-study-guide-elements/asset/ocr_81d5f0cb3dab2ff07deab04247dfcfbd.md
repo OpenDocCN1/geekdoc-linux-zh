@@ -1,0 +1,11 @@
++   15. C. The Linux man page system is divided into numbered sections, and section 4 is devoted to device files. Specifying the section number before the search term restricts the search to that section, so option C will produce the desired documentation, if it’s available. Specifying the complete pathname to the device, as in option A, will most likely produce an error. Option B specifies the incorrect section number of 2 (system calls). Option D will look up the default (incorrect) ttt entry and then attempt to find an entry for device.
+
++   16. A. The find utility operates by searching all files in a directory tree, so it is likely to take a long time to search all a computer’s directories. The locate program uses a precompiled database, and whereis searches a limited set of directories, so these commands will take less time.
+
++   17. D. The less program, like more, displays a text file a page at a time. The less utility also includes the ability to page backward in the text file, search its contents, and more.
+
++   18. C. The apropos command searches through certain sections of man pages to find the specified keyword and returns the names of the man pages in which that keyword was found. The info command of option A is an alternative to man, so unless your system happens to have a program called scanner, it’s unlikely to help. There is no standard Linux command called help, so option B is also incorrect. Although the find command could conceivably be used to help find scanner-related tools, the command specified in option D searches only the current directory for a file called scanner, so it won’t help.
+
++   19. B. The chgrp utility is used to change the group associated with a file, just as chown is used to change the owner associated with the file. The correct syntax requires the first parameter given be the name of the group to be associated with the file, followed by the name of the file. There is no group utility, and newgrp does not perform this function.
+
++   20. A. The grep utility is used to find matching text within a file and print those lines. It accepts regular expressions, which allow for the placing of the two characters you are looking for within brackets. The syntax for sed and find would not perform the needed task, and there is no standard Linux utility named search.

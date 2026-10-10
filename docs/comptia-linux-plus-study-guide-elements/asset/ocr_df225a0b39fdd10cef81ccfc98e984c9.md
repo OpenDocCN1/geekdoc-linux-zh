@@ -1,0 +1,20 @@
+TABLE 2.10 Codes Used in Symbolic Modes (continued)
+| Permission | Change | Permission to |
+| Set Code | Meaning | Type Code | Meaning | Modify Code | Meaning |
+|:-----------|:-------|:------------|:-------|:------------|:-------|
+| g | | | | | Existing group permissions |
+| o | | | | | Existing world permissions |
+
+To use symbolic permission settings, you combine one or more of the codes from the first column of Table 2.10 with one symbol from the third column and one or more codes from the fifth column. You can combine multiple settings by separating them by commas. Table 2.11 provides some examples of chmod using symbolic permission settings.
+
+TABLE 2.11 Examples of Symbolic Permissions with chmod
+| Command | Initial Permissions | End Permissions |
+|:-------------------------|:--------------|:--------------|
+| chmod a+x bigprogram | r--r---r-- | rwxr-xr-x |
+| chmod ug=rw report.tex | r-------- | rw-rw--- |
+| chmod o-rwx bigprogram | rwxrwxr-x | rwxrwx--- |
+| chmod g=u report.tex | rw-r---r-- | rw-rw-r-- |
+| chmod g-w,o-rw report.tex | rw-rw-rw- | rw-r----- |
+
+As a general rule, symbolic permissions are most useful when you want to make a simple change (such as adding execute or write permissions to one or more class of users) or when you want to make similar changes to many files without affecting their other permissions (for instance, adding write permissions without affecting execute permissions). Octal permissions are most useful when you want to set some specific absolute permission, such as rw-r-r-- (644). In any event, you should be familiar with both methods of setting permissions.
+A file's owner and root are the only users who may adjust a file's permissions. Even if other users have write access to a directory in which a file resides and write access to the file itself, they may not change the file's permissions (but they may modify or even delete the file). To understand why this is so, you need to know that the file permissions are stored as part of the file's inode, which isn't part of the directory entry. Read/write access to the directory entry, or even the file itself, doesn't give a user the right to change the inode structures (except indirectly—for instance, if a write changes the file's size or a file deletion eliminates the need for the inode).

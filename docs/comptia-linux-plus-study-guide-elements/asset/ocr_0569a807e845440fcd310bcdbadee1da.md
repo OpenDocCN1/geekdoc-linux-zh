@@ -1,0 +1,59 @@
+**10.** Why is it unwise to allow *root* to log on directly using SSH?
+
++   A. Somebody with the *root* password but no other password could then break into the computer.
+
++   B. The *root* password should never be sent over a network connection; allowing *root* logins in this way is inviting disaster.
+
++   C. SSH stores all login information, including passwords, in a publicly readable file.
+
++   D. When logged on using SSH, *root*’s commands can be easily intercepted and duplicated by undesirable elements.
+
+**11.** What programs directly support secure encrypted file transfers via SSH? (Choose all that apply.)
+
++   A. `ftp`
+
++   B. `sftp`
+
++   C. `scp`
+
++   D. NFS
+
+**12.** What program can you use to generate a key that will enable logins to remote SSH servers without using a password?
+
++   A. `authorized_keys`
+
++   B. `ssh-keygen`
+
++   C. `sshpasswd`
+
++   D. `id_rsa`
+
+**13.** To whom should you distribute your server’s main SSH private key?
+
++   A. Only to servers with which you want to communicate
+
++   B. Only to servers that have already provided their own public keys
+
++   C. To anybody who can provide a matching SSH public key
+
++   D. None of the above
+
+**14.** Which of the following is generally true of Linux programs that print?
+
++   A. They send data directly to the printer port.
+
++   B. They produce PostScript output for printing.
+
++   C. They include extensive collections of printer drivers.
+
++   D. They can print only with the help of add-on commercial programs.
+
+**15.** Which of the following describes the function of a smart filter?
+
++   A. It detects the type of a file and passes it through programs to make it printable on a given model of printer.
+
++   B. It detects information in print jobs that might be confidential, as a measure against industrial espionage.
+
++   C. It sends e-mail to the person who submitted the print job, obviating the need to wait around the printer for a printout.
+
++   D. It detects and deletes prank print jobs that are likely to have been created by miscreants trying to waste your paper and ink.

@@ -1,0 +1,44 @@
+Multiple group membership is extremely important when using user private groups, as
+described earlier—without this, it's impossible to fine-tune access to users' files. Even in a
+project group configuration, though, multiple group membership is critical for users who
+need access to multiple groups' files.
+
+You may find yourself creating a group membership scheme that's some combination of
+these two, or one that's unique unto itself. For instance, you might create multiple overlap-
+ping subgroups in order to fine-tune access control. It might be common in such a situation
+for users to belong to multiple groups. Part of the problem with such configurations is in
+teaching users to properly use the newgr and chgrp commands—many less technically
+savvy users prefer to simply create files and not worry about such details.
+
+# # Improving Account Security
+
+Creating, maintaining, and removing user accounts are obviously important activities
+on a Linux system. One particularly essential account maintenance task (or set of tasks) is
+maintaining account security. Crackers sometimes attack a system through vulnerable user
+accounts. Once access to a normal account is achieved, bugs or lax internal security can be
+exploited to enable the attacker to acquire root access, or the account can be used to attack
+other systems. Therefore, it's vital that you attend to this matter by periodically reviewing
+your configuration to see that it remains secure.
+
+![](bbox=[0.19, 0.51, 0.28, 0.58])
+
+> The popular media uses the term *hacker* to refer to computer miscreants.
+> This term has an older meaning, however—somebody who enjoys pro-
+> gramming or doing other technically challenging work on computers, but
+> not in an illegal or destructive sense. Many Linux programmers consider
+> themselves hackers in this positive sense. Thus, I use the term *cracker* to
+> refer to those who break into computers.
+
+# ## Enforcing User Password Security
+
+As a general rule, people tend to be lazy when it comes to security. In computer terms, this
+means that users tend to pick passwords that are easy to guess, and they change them infre-
+quently. Both these conditions make a cracker's life easier, particularly if the cracker knows
+the victim. Fortunately, Linux includes tools to help make your users select good passwords
+and change them regularly.
+
+Common (and therefore poor) passwords include those based on the names of family
+members, friends, and pets; favorite books, movies, television shows, or the characters in any
+of these; telephone numbers, street addresses, or Social Security numbers; *or other meaning-
+ful personal information*. Any single word that's found in a dictionary (*in any language*) is
+a poor choice for a password. The best possible passwords are random collections of letters,

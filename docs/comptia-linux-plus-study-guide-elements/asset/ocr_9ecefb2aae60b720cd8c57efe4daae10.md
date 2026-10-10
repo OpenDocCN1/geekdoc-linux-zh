@@ -1,0 +1,27 @@
++   4. Unused (may be configured for site-specific purposes).
++   5. Multiuser mode with networking and an X Display Manager Control Protocol (XDMCP) login.
++   6. Reboot the system.
+
+Runlevels 0, 1, and 6 have the same meanings across most distributions, but runlevels 2 through 5 have meanings that vary. In particular, Debian and its derivatives, such as Ubuntu, start the system in runlevel 2, which is equivalent to runlevel 3 or 5 in the Red Hat scheme. (X and the XDMCP login are started by SysV startup scripts in these distributions.) Gentoo, as mentioned earlier in this chapter, uses named runlevels.
+
+# Using init or telinit to Change the Runlevel
+
+The init program is critical to Linux’s boot process because it reads the /etc/inittab file that controls the boot process and implements the settings found in that file. Among other things, init sets the system’s initial runlevel.
+
+Once the computer has booted, you can use the telinit program to alter the runlevel. (In practice, calling init directly also usually works.) When using telinit, the syntax is as follows:
+
+```
+telinit [-t time] runlevel
+```
+
+![](bbox=[0.17, 0.55, 0.26, 0.59])
+
+> You can discover what runlevel your computer is in with the runlevel command. This command displays the previous and current runlevels as output. A previous runlevel of N means that the runlevel hasn’t changed since the system booted.
+
+In most cases, runlevel is the runlevel to which you want the system to change. There are, however, a few special codes you can pass as well. Most importantly, 5 or s brings the system into a single-user mode, and q or t tells the system to reexamine the /etc/inittab file and implement any changes in that file.
+
+![](bbox=[0.17, 0.73, 0.26, 0.77])
+
+> It’s possible to misconfigure X so that it doesn’t start. If you do this and your system is set to start X automatically, with some distributions, one consequence is that the system will try to start X, fail, try again, fail, and so on, ad infinitum. If the computer has network connections, one way to stop this cycle is to log in remotely and change the runlevel to one that doesn’t start X. This will stop the annoying screen flickering that results as X tries to start and fails. You can then correct the problem from the remote login or from the console, test X, and restore the default runlevel.
+
+When switching runlevels, init must sometimes kill processes. It does so “politely” at first by sending a SIGTERM signal, which is a way to ask a program to manage its own shutdown. If that doesn’t work, though, init becomes imperious and sends a SIGKILL

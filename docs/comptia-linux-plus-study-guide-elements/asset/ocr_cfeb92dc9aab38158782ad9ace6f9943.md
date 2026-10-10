@@ -1,0 +1,9 @@
++   16. B. The /etc/hosts file holds mappings of IP addresses to hostnames, on a one-line-per-mapping basis. It does not list the users or other hosts allowed to remotely access this one, nor does it affect remote administration through a Web browser.
+
++   17. D. Although traceroute can be a useful tool for locating problems, it's imperfect. Routers can sometimes be configured to drop traceroute packets but not regular packets, so you can't really be sure if 10.109.73.7 is dropping packets by design or if it's down; both are possibilities, so no conclusion can be drawn.
+
++   18. B, C. The /etc/hosts file contains static mappings of hostnames to IP addresses, so adding entries as specified in option B will work (although these entries will need to be changed if these servers' IP addresses ever change). Option C's solution will also work, and it will continue to work if the servers' IP addresses change, provided that their DNS server is appropriately updated. Option A won't work because the host command is a DNS lookup tool; it doesn't create hostname aliases, as option A implies. Option D confuses the search and nameserver functions of /etc/resolv.conf. The nameserver line in this file specifies a DNS name server by IP address, so option D won't work.
+
++   19. B. To add a default gateway of 192.168.0.1, the command would be route add default gw 192.168.0.1. Specifying the IP address of the host system is not necessary and in fact will confuse the route command.
+
++   20. D. Telnet is a TCP protocol, which means that it cannot connect to servers that use UDP exclusively. Thus, option D is correct. HTTP and SMTP are both TCP-based protocols for which telnet can be a useful diagnostic tool. Broadly speaking, Telnet can help diagnose TCP protocols, although this is easier for some protocols than for others.

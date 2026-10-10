@@ -1,0 +1,201 @@
+
+## relative directory name
+A directory name that's specified relative to the current directory. Relative directory names often include the parent specification (..), which indicates the current directory's parent.
+
+## release number
+See build number.
+
+## Remote Authentication Dial-In User Services (RADIUS)
+A network authentication tool that's often used by network gateway systems that require authentication, such as PPP servers or Wi-Fi routers.
+
+## Remote Desktop Protocol (RDP)
+A network protocol used by Microsoft to enable remote use of a Windows computer's GUI environment. The desktop program is a Linux RDP client.
+
+## Remote Frame Buffer (RFB)
+A cross-platform remote GUI login protocol used by VNC.
+
+## remote login server
+A type of server that enables individuals at distant locations to use a computer. Examples include Telnet, SSH, and XDM.
+
+## Request for Comments (RFC)
+An Internet standards document. RFCs define how protocols like Telnet and SMTP operate, thus enabling tools developed by different companies or individuals to interoperate.
+
+## RFB
+See Remote Frame Buffer (RFB).
+
+## RFC
+See Request for Comments (RFC).
+
+## root directory
+The directory that forms the base of a Linux filesystem (meaning 2). All other directories are accessible from the root directory, either directly or via intermediate directories.
+
+## root DNS servers
+A set of DNS servers that deliver information to other DNS servers about top-level domains (.com, .net, .us, and so on). DNS servers consult the root DNS servers first when performing full recursive DNS lookups.
+
+## root filesystem
+The filesystem (meaning 1) on a Linux system that corresponds to the root directory, along with several directories based on it.
+
+## root kit
+A set of scripts and other software that enable script kiddies to break into computers.
+
+## root name servers
+See root DNS servers.
+
+## root partition
+The partition associated with the root filesystem.
+
+## rooted
+An adjective describing a computer that has been compromised to the point where the intruder has full root access to the system.
+
+## router
+A computer that transfers data between networks. See also gateway.
+
+## RPM
+See RPM Package Manager (RPM).
+
+## RPM Package Manager (RPM)
+A package file format and associated utilities designed by Red Hat but now used on many other distributions as well. RPM features excellent dependency tracking and easy installation and removal procedures.
+
+## runlevel
+A number associated with a particular set of services that are being run. Changing runlevels changes services or can shut down or restart the computer.
+
+# S
+
+## Samba Web Administration Tool (SWAT)
+A server that enables administrators to configure Samba servers from the same or another computer by using an ordinary Web browser.
+
+## SAN
+See storage area network (SAN).
+
+## SAS
+See Serial Attached SCSI (SAS).
+
+## SATA
+See Serial ATA (SATA).
+
+## scp
+The secure copy (scp) program uses the SSH protocol to copy files over a network using encryption. It works much like the local cp program, but with extensions to enable specification of a remote server, username, and password.
+
+## script kiddy
+An individual with little knowledge or skill who breaks into computers using scripts created by others. Such break-ins often leave obvious traces, and script kiddies frequently cause collateral damage that produces system instability.
+
+## scripting language
+An interpreted computer programming language designed for writing small utilities to automate simple but repetitive tasks. Examples include Perl, Python, Tcl, and shell scripting languages like those provided by Bash and tcsh.
+
+## SCSI
+See Small Computer System Interface (SCSI).
+
+## Second Extended Filesystem (ext2 or ext2fs)
+The most common filesystem (meaning 1) in Linux from the mid-1990s through approximately 2001.
+
+## secondary boot loader
+A boot loader that’s launched by another boot loader.
+
+## Secure File Transfer Protocol (SFTP)
+A combination of SSH and FTP; this protocol employs an SSH link to provide encrypted transfer of files in an FTP-like way.
+
+## Secure Hash Algorithm (SHA)
+A type of encryption algorithm that may be used in generating checksum-like verifications of file integrity or in encrypting passwords, among other uses. Specific subtypes include SHA0, SHA1, and SHA2, with SHA1 being the most widely used in Linux.
+
+## Secure Shell (SSH)
+A remote login protocol and program that uses encryption to ensure that intercepted data packets cannot be used by an interloper.
+
+## Secure Sockets Layer (SSL)
+An encryption protocol that permits secure two-way communication over a network. Commonly used on the Web, in the form of HTTPS transfers. See also Transport Layer Security (TLS).
+
+## Security Enhanced Linux (SELinux)
+A set of extensions to the Linux kernel and support programs that enhance security.
+
+## SELinux
+See Security Enhanced Linux (SELinux).
+
+## Sequenced Packet Exchange (SPX)
+Part of the Novell networking stack, along with IPX.
+
+## sequential access
+A method of accessing a storage medium that requires reading or writing data in a specific order. The most common example is a tape; to read data at the end of a tape, you must wind past the interceding data. See also random access.
+
+## Serial ATA (SATA)
+A type of ATA interface that uses serial data transfer rather than the parallel data transfers used in older forms of ATA. See also parallel ATA (PATA).
+
+## Serial Attached SCSI (SAS)
+A type of SCSI interface that uses serial data transfer rather than the parallel data transfers used in older forms of SCSI.
+
+## server
+1. A program that responds to data transfer requests using networking protocols.
+2. A computer that runs one or more server programs.
+
+## Server Message Block (SMB)
+A file sharing protocol common on Windows-dominated networks. SMB is implemented in Linux via the Samba suite. Also known as the Common Internet Filesystem (CIFS).
+
+## Server Message Block File System (SMBFS)
+A Linux client implementation of SMB, enabling Linux to mount remote Windows or Samba shares as if they were local disk partitions.
+
+## server program
+See server, meaning 1.
+
+## service set ID (SSID)
+A name that identifies a specific Wi-Fi network to distinguish it from other nearby networks.
+
+## set group ID (SGID)
+A special type of file permission used on program files to make the program run with the permissions of its group. (Normally, the user’s group permissions are used.)
+
+## set user ID (SUID)
+A special type of file permission used on program files to make the program run with the permissions of its owner, rather than those of the user who runs the program.
+
+## SFTP
+See Secure File Transfer Protocol (SFTP).
+
+## SGID
+See set group ID (SGID).
+
+## sh
+A program or link in /bin that provides a default shell. On Linux systems, /bin/sh typically links to /bin/bash, the Bash binary.
+
+## SHA
+See Secure Hash Algorithm (SHA).
+
+## shadow password
+A method of storing encrypted passwords separately from most other account information. This allows the passwords to reside in a file with tighter security options than the rest of the account information, which improves security when compared to storing all the account information in one file with looser permissions.
+
+## share
+In file sharing protocols, and particularly in SMB/CIFS, a named network resource associated with a directory or printer that's being shared. May also be used as a verb to describe the process of making the share available.
+
+## shell
+A program that provides users with the ability to run programs, manipulate files, and so on.
+
+## shell script
+A program written in a language that's built into a shell.
+
+## signal
+In reference to processes, a signal is a code that the kernel uses to control the termination of the process or to tell it to perform some task. Signals can be used to kill processes.
+
+## Simple Mail Transfer Protocol (SMTP)
+The most common push mail protocol on the Internet. SMTP is implemented in Linux by servers such as sendmail, Postfix, Exim, and qmail.
+
+## Simple Network Management Protocol (SNMP)
+A protocol for reporting on the status of a computer over a network or for adjusting a computer's settings remotely.
+
+## slave
+The second of two possible devices on a PATA chain. The slave device has a higher Linux device letter than the master device does.
+
+## Small Computer System Interface (SCSI)
+An interface standard for hard disks, CD-ROM drives, tape drives, scanners, and other devices.
+
+## smart filter
+A program, run as part of a print queue, that determines the type of a file and passes it through appropriate programs to convert it to a format that the printer can handle.
+
+## SMB
+See Server Message Block (SMB).
+
+## SMBFS
+See Server Message Block File System (SMBFS).
+
+## SMTP
+See Simple Mail Transfer Protocol (SMTP).
+
+## SNMP
+See Simple Network Management Protocol (SNMP).
+
+## social engineering
+The practice of convincing individuals to disclose sensitive information without arousing suspicion. Social engineers may pretend to be system administrators to ask for passwords, for instance. See also phishing.

@@ -1,0 +1,13 @@
+# # Understanding E-mail Protocols
+
+Internet mail delivery today is dominated by a protocol known as the Simple Mail Transfer Protocol (SMTP). This protocol is an example of a push protocol, meaning that the sending system initiates the transfer.
+
+A user writes a message using a mail reader and then tells the mail reader to send the mail. The mail reader contacts a local SMTP server, which may run on the same or another computer. The SMTP server accepts the message for delivery, looks up the recipient address, and delivers the message to the recipient system.
+
+In some cases, the recipient system may forward the mail to another system, which handles the mail account for the addressee. Depending on how the recipient reads mail, that person may use the destination mail server computer directly or run a mail client on another computer. In the latter case, the mail client uses a protocol such as the Post Office Protocol (POP) or the Internet Message Access Protocol (IMAP) to retrieve the mail from the local mail server. POP and IMAP are both examples of pull protocols, in which the recipient, rather than the sender, initiates the data transfer. This configuration is outlined in Figure 10.3. The Internet's mail system is flexible enough that the total number of links between the sender and recipient may be more or less than the number depicted in Figure 10.3, though. Users may read mail on the final SMTP server (inbox.pangaea.edu in Figure 10.3) or use a POP or IMAP client (as depicted in Figure 10.3) to read mail from another system. It's even possible to use a program such as Fetchmail (http://fetchmail.berlios.de) to extend the chain further after a POP or IMAP retrieval.
+
+![](bbox=[0.18, 0.5, 0.8, 0.65])
+
+Three of the computers in Figure 10.3—mail.example.com, smtmp.pangaea.edu, and inbox.pangaea.edu—must run SMTP servers. These servers can be entirely different products running on different platforms. For instance, one might be sendmail on Linux, another might be Postfix on FreeBSD, and a third might be Microsoft Exchange on Windows. In addition to running an SMTP server, Figure 10.3's inbox.pangaea.edu must run a POP or IMAP server. The two end-point computers—client.example.com and franklin.example.com—need not run mail servers. Instead, client.example.com connects to the SMTP server on mail.example.com to send mail, and franklin.pangaea.edu connects to the POP or IMAP server on inbox.pangaea.edu to retrieve mail.
+
+> Mail servers are sometimes called mail transfer agents (MTAs), and mail clients (user systems) are sometimes called mail user agents (MUAs).

@@ -1,0 +1,53 @@
+| OBJECTIVE | CHAPTER |
+| --- | --- |
+| 2.8 Implement task scheduling using the following tools | 3 |
+| cron (cron,allow, cron.deny), crontab command syntax, crontab file format, at (atq) | |
+| 2.9 Utilize performance monitoring tools and concepts to identify common problems | 3 |
+| Commands: sar, iostat, vmstat, uptime, top | |
+| Load average | |
+
+# 3.0 Application and Services
+
++   3.1 Manage Linux system services using the following 4
++   /etc/init.d (start, stop, restart) inetd, xinetd, chkconfig
+
++   3.2 Implement interoperability with Windows using the following 10, 11
++   rdesktop – client
++   vnc – server and client
++   Samba – server and client: smb.conf, Winbind, lmhosts
++   Security and authentication (Kerberos)
+
++   3.3 Implement, configure and maintain Web and FTP services 11
++   Apache: Maintain PHP settings (php.ini), Edit Apache configuration files (Enable and
++   disable modules), Containers (Virtual hosts, Directories), Access control (.htaccess),
++   CGI (ExecCGI, ScriptAlias), Commands: apache21 (–t, –S, graceful, restart),
++   Configuring apache logs
++   FTP services: Configure FTP users (/etc/ftpsusers, chroot), Configure anonymous
++   access
+
++   3.4 Given a scenario, explain the purpose of the following web-related services 11
++   Tomcat, Apache, Squid
+
++   3.5 Troubleshoot web-related services using the following utilities 11
++   Commands: curl, wget, ftp, telnet
+
++   3.6 Given a scenario, troubleshoot common FTP problems 11
++   Active vs. passive, ASCII vs. binary
+
++   3.7 Given a scenario, perform the following MySQL administrative tasks 11
++   Locate configuration file, Starting and stopping, Test the connection
+
++   3.8 Explain the purpose of each of the following mail services, protocols and features 10
++   Protocols: SMTP, IMAP, POP3
++   MTA: Postfix, Sendmail
++   Email aliases: /etc/aliases, newaliases
+
++   3.9 Deploy and manage CUPS print services 9
++   Enable and disable queues
++   Web management interface (port 631)
++   Printing commands: lpr, 1p, lpq, 1pstat, cancel
+
++   3.10 Set up, install, configure and maintain a BIND DNS server and related services 10
++   DNS utilities: named, rndc
++   Config file locations (/var/named)
++   Forward zones, reverse zones, root hints

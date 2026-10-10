@@ -1,0 +1,31 @@
+# T
+
+**tarball** A package file format based on the tar utility. Tarballs are easy to create and are readable on any version of Linux, or most non-Linux systems. They contain no dependency information, and the files they contain are not easy to remove once installed.
+
+**TCP/IP** See *Transmission Control Protocol/Internet Protocol (TCP/IP).*
+
+**Telnet** A protocol used for performing remote text-based logins to a computer. Telnet is a poor choice for connections over the Internet because it passes all data, including passwords, in an unencrypted form, which is a security risk. *See also Secure Shell (SSH).*
+
+**terminal program** 1. A GUI program that’s used to run text-based programs in a GUI environment. Examples include programs called xterm, Konsole, and Terminal. 2. A program that’s used to initiate a simple text-mode connection between two computers, especially via a modem or RS-232 serial connection.
+
+**text editor** A program for editing text files on a computer.
+
+**TFTP** See *Trivial File Transfer Protocol (TFTP).*
+
+**Third Extended Filesystem (ext3 or ext3fs)** A variant of the *Second Extended Filesystem (ext2 or ext2fs)* that adds a journal to reduce startup times after a power failure or system crash. *See also journaling filesystem.*
+
+**time to live (TTL)** A limited “lifetime” for computer data, used to prevent time-sensitive data from being retained or retransmitted indefinitely and thereby causing problems. TTLs are used in DNS records to ensure that DNS servers periodically check authoritative sources for changed data and in low-level data packets to ensure that the packets don’t end up circling a network forever in case of a delivery error.
+
+**TLS** See *Transport Layer Security (TLS).*
+
+**Token Ring** A type of network hardware that supports speeds of up to 1Gbps on twisted-pair cabling.
+
+**Transmission Control Protocol/Internet Protocol (TCP/IP)** A very popular network stack and the one on which the Internet is built.
+
+**Transport Layer Security (TLS)** An encryption protocol that permits secure two-way communication over a network. Serves as the successor to Secure Sockets Layer (SSL) encryption in some applications.
+
+**Triple Data Encryption Standard (3DES)** A data encryption standard.
+
+**Trivial File Transfer Protocol (TFTP)** A simple file transfer protocol that’s most commonly used to provide files to computers, such as thin clients, that boot off of the network rather than from a local disk.
+
+**TTL** See *time to live (TTL).*

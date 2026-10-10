@@ -1,0 +1,19 @@
+that make it impractical for the day-to-day storage of ordinary files, however. Special software (mt in Linux) is required to manipulate magnetic tapes.
+
+Each of these classes of storage device has its own unique place on a Linux system. For a typical laptop, desktop, or server, the hard disk plays the most important role in day-to-day operations, although one or more solid-state and optical devices may be important as well. Aside from tapes and NVRAM, all of these devices are most commonly accessed with the help of a low-level filesystem, although the filesystems that are most useful vary from one device to another. (The upcoming section “Linux Filesystem Options” describes these options in more detail.)
+
+# ## Linux Storage Hardware Configuration
+
+To use a storage device, programs must be able to access it. In most cases, this is done through a low-level filesystem, which is then mounted to a directory—that is, the directory serves as a way to access the files and directories on the filesystem.
+
+> **NOTE** The upcoming section “Mounting and Unmounting Partitions” describes how to mount filesystems.
+
+In other cases, you must know the device filename that corresponds to the device. By reading from or writing to this device file, you may access data stored on the hardware. In fact, device filenames are important even for mounted filesystems, because you tell Linux what partition to mount by using a device filename.
+
+Hard disk devices are identified as either ATA (with /dev/hdx device filenames, where x is a letter from a onward) or SCSI (with /dev/sdx disk filenames). This characterization, however, is based on the state of hardware at the time this system was devised. Since that time, both the hardware and the driver situation have become more complex.
+
+Today, the ATA marketplace is divided between parallel ATA (PATA) and serial ATA (SATA) drives. PATA drives are the original ATA technology, whereas SATA is a newer standard. Most new computers today use SATA drives, but PATA drives are still available. PATA devices usually (but not always) have /dev/hdx device filenames, whereas SATA drives usually (but not always) have /dev/sdx device filenames. Which is used depends on the driver that’s built into the kernel or loaded first. The general trend is to favor the SCSI-style device filenames. True SCSI devices use the /dev/sdx identifiers, as do newer Serial Attached SCSI (SAS) disks. Disks and disk-like devices that use neither ATA nor SCSI, such as USB flash disks, generally acquire SCSI-style identifiers.
+
+In the case of true PATA devices, the master disk on the first controller is /dev/hda, the slave disk on that controller is /dev/hdb, the master disk on the second controller is /dev/hdc, and so on. Device letters can be skipped, depending on how disks are configured. For instance, if you have two hard disks, both masters on their chains, they must be known as /dev/hda and /dev/hdc, with /dev/hbd unused.
+
+SCSI disk devices are assigned letters sequentially, beginning with a; thus, a system with two SCSI disks will identify them as /dev/sda and /dev/sdb, even if they have noncontiguous

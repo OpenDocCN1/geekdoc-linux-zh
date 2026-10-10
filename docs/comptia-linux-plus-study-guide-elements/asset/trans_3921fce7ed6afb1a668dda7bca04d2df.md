@@ -1,0 +1,297 @@
+
+## I
+
+- **links**（链接）
+    - 创建，60–61
+    - 文件类型代码，75
+    - 相关 inode，73
+    - 光盘，338
+    - 权限，77
+- **Linux Documentation Project (LDP)**（Linux 文档项目），96–97
+- **Linux Loader (LILO)**（Linux 加载器），8–9, 244–245
+- **listing files**（列出文件），54–56
+- **Livna repository**（Livna 软件源），307
+- **lmhosts file**（lmhosts 文件），476
+- **ln command**（ln 命令），60–61
+- **loading**（加载）
+    - Apache 模块，490
+    - 内核模块，35–36
+- **LOADLIN boot loader**（LOADLIN 引导加载程序），9
+- **loads**（负载）
+    - 平均值，116
+    - 验证，171
+- **local network tools**（本地网络工具），376, 531–532
+- **local program bugs**（本地程序错误），516–517
+- **local user complaints as intrusion symptom**（本地用户投诉作为入侵症状），538
+- **LocalTalk protocol**（LocalTalk 协议），352
+- **locate command**（locate 命令），65
+- **locating files**（定位文件），63–66
+- **log files**（日志文件），163
+    - 分析工具，177
+    - awk 和 sed 工具，175–177
+    - 常见日志，170–171
+    - 考试要点，178–179
+    - 用于入侵检测，172, 538, 545–546
+    - 监控，545–546
+    - 选项，164–166
+    - 用于问题识别，171–172
+    - 远程服务器，169–170
+    - 复习题，180–186
+    - 轮转，125, 166–169
+    - 扫描，172–177
+    - 用于服务，148
+    - 总结，178
+    - syslog，163–164
+- **logcheck.sh file**（logcheck.sh 文件），177
+- **Logcheck tool**（Logcheck 工具），177
+- **logical partitions**（逻辑分区），243, 253
+- **logical volumes**（逻辑卷），280, 282
+- **login program**（登录程序），225–226
+- **logins**（登录）
+    - 访问控制，225
+    - 历史数据，211–212
+    - 权限，189
+    - 远程登录。参见*远程登录*
+    - 登录后切换身份，191–192
+    - 用户账户 shell，536
+- **logrotate tool**（logrotate 工具），166–168
+- **logtail utility**（logtail 实用程序），177
+- **long text files, viewing**（查看长文本文件），68
+- **loop-AES program**（loop-AES 程序），515
+- **loopback interface configuration**（回环接口配置），371
+- **loopback option in optical disks**（光盘中的回环选项），338
+- **loopback traffic with iptables**（使用 iptables 的回环流量），404
+- **low-level disk formats**（低级磁盘格式化），241
+- **lp program**（lp 程序），424–425
+- **lp utility**（lp 实用程序），427
+- **lpd tool**（lpd 工具），414, 423
+- **lpmove command**（lpmove 命令），427
+- **lpr program**（lpr 程序），414, 424–425
+- **lprm command**（lprm 命令），427
+- **lpr utility**（lpr 实用程序），426–427
+- **lprm utility**（lprm 实用程序），427
+- **lpstat utility**（lpstat 实用程序），427
+- **ls program**（ls 程序），51
+    - 选项，54–56
+    - 通配符，56
+- **lsmcd command**（lsmcd 命令），33–34
+- **lspci command**（lspci 命令），19, 31
+- **lsubd command**（lsubd 命令），32
+- **lvcreate command**（lvcreate 命令），282
+- **lvdisplay command**（lvdisplay 命令），282
+
+## M
+
+- **m4 utility**（m4 实用程序），458
+- **MAC (mandatory access control)**（MAC（强制访问控制）），529
+- **MAC (Media Access Control)**（MAC（媒体访问控制））
+    - 地址，359
+- **machine names**（机器名称），362
+- **magnetic devices**（磁存储设备），239–241
+- **magnetic tape**（磁带），239–240
+- **mail**。参见*e-mail*
+- **mail exchanger (MX) records**（邮件交换器（MX）记录），446
+- **mail options for log files**（日志文件的邮件选项），168
+- **mail transfer agents (MTAs)**（邮件传输代理（MTA）），456
+- **mail user agents (MUAs)**（邮件用户代理（MUA）），456
+- **maillog file**（maillog 文件），170
+- **mailq command**（mailq 命令），459
+- **make utility**（make 实用程序），318–321
+- **makewhatis command**（makewhatis 命令），94
+- **man pages**（man 手册页），91–94
+- **mandatory access control (MAC)**（强制访问控制（MAC）），529
+- **Mandrake distribution**（Mandrake 发行版），3
+- **Mandriva distribution**（Mandriva 发行版），3
+- **mangle table**（mangle 表），399
+- **mapping UIDs and GIDs to users and groups**（将 UID 和 GID 映射到用户和组），194–196
+- **masks**（掩码）
+    - DHCP，440
+    - 网络，360, 370
+    - 用户，82–83
+- **master boot record (MBR)**（主引导记录（MBR）），8
+    - 分区系统，242–243
+    - 保护型 MBR，244
+- **MD4 encryption**（MD4 加密），224
+- **MD5 (Message Digest 5) hash**（MD5（消息摘要 5）哈希），223–224
+- **md5sum program**（md5sum 程序），543–544
+- **mdadm package**（mdadm 软件包），278
+- **Media Access Control (MAC)**（媒体访问控制（MAC））
+    - 地址，359
+- **media for installation**（安装介质），4–5
+- **/media partition**（/media 分区），247
+- **memory**（内存）
+    - 进程使用，113
+    - 统计信息，122
+    - 交换空间，259–263
+- **menu.lst file**（menu.lst 文件），13–14
+- **menuconfig program**（menuconfig 程序），319
+- **Message Digest 5 (MD5) hash**（消息摘要 5（MD5）哈希），223–224
+- **messages, dmesg**（消息，dmesg），16–17
+- **messages log file**（messages 日志文件），170
+- **Metacity window manager**（Metacity 窗口管理器），29
+- **midnight setting in job scheduling**（作业调度中的午夜设置），128
+- **mirroring, RAID**（镜像，RAID），277
+- **mismatched names, dependency issues from**（名称不匹配导致的依赖问题），322–323
+- **missing libraries, dependency issues from**（缺失库导致的依赖问题），322–323
+- **missing log entries**（缺失日志条目），172, 538, 546
+- **mixing case in passwords**（密码中混合大小写），220
+- **mkdir command**（mkdir 命令），62
+- **mkdosfs utility**（mkdosfs 实用程序），257
+- **mke2fs tool**（mke2fs 工具），256
+- **mks program**（mks 程序），256–257
+- **mks.ext2 program**（mks.ext2 程序），256
+- **mkinitrars utility**（mkinitrars 实用程序），321
+- **mkinitrd utility**（mkinitrd 实用程序），321
+- **mkisofs program**（mkisofs 程序），329, 337–338
+- **mknod command**（mknod 命令），71–72
+- **mkraid command**（mkraid 命令），280
+- **mkreiserfs utility**（mkreiserfs 实用程序），257
+- **mkswap tool**（mkswap 工具），261, 263
+- **/mnt partition**（/mnt 分区），247
+- **mode lines in X configuration**（X 配置中的模式行），23
+
+## modes
+
+- FTP，488
+- SELinux，530
+- 符号，80–81
+- Vi，132–133
+- **modinfo command**（modinfo 命令），34
+- **modprobe program**（modprobe 程序），35–36, 264, 366
+- **module stacks**（模块堆栈），37
+- **modules**（模块）
+    - Apache 服务器，490
+    - 内核，33, 35–37
+    - PAM，223, 455, 521–523
+- **monitor options in X configuration**（X 配置中的显示器选项），23
+- **monitoring**（监控）
+    - 日志文件，545–546
+    - 队列，424–427, 426
+- **monthly option for log files**（日志文件的每月选项），168
+- **more program**（more 程序），68
+- **mount command**（mount 命令），264, 266–270, 272–273
+- **Mount options field**（挂载选项字段），275
+- **Mount point field**（挂载点字段），275
+- **mount points**（挂载点），245–247, 266
+- **mounting partitions**（挂载分区），266–270
+- **mouse, X configuration**（鼠标，X 配置），22
+- **moving**（移动）
+    - 文件，59
+    - shell 文本，53
+- **Moving up command for info pages**（info 页面的向上移动命令），94
+- **mt program**（mt 程序），240, 331–333
+- **MTAs (mail transfer agents)**（MTA（邮件传输代理）），456
+- **MUIs (mail user agents)**（MUA（邮件用户代理）），456
+- **multiple disks, partitions for**（多磁盘分区），245
+- **multiple groups for users**（用户属于多个组），218–219
+- **multiple partitions**（多分区），248
+- **multitasking systems**（多任务系统），190–191
+- **multiuser concepts**（多用户概念），188
+    - 组，193–194
+    - 主目录，196–197
+    - 将 UID 和 GID 映射到用户和组，194–196
+    - 用户账户，188–193
+- **mv command**（mv 命令），59
+- **MX (mail exchanger) records**（MX（邮件交换器）记录），446
+- **my.cnf file**（my.cnf 文件），500
+- **MySQL language**（MySQL 语言）
+    - 配置，500–501
+    - 连接，501–502
+    - SQL 软件包，499–500
+- **mysqladmin command**（mysqladmin 命令），501
+- **mysqld daemon**（mysqld 守护进程），501
+
+## N
+
+- **Name section in man pages**（man 手册页中的名称部分），92
+- **name server (NS) records**（名称服务器（NS）记录），445–446
+- **name servers**（名称服务器）
+    - DHCP，440
+    - 故障排除，379–380
+- **Name Service Switch (NSS)**（名称服务切换（NSS）），520
+- **named file**（named 文件），441
+- **names**（名称）
+    - 由名称引起的依赖问题，322–323
+    - 组名称，215
+    - 主机名。参见*hostnames*
+    - 内核文件，13
+    - 软件包名称，302
+    - RPM 软件包文件，299
+- **NAT (network address translation)**（NAT（网络地址转换）），362, 399
+- **nat table**（nat 表），399
+- **NEdit text editor**（NEdit 文本编辑器），137
+- **NEighbor Discovery Protocol (NDP)**（邻居发现协议（NDP）），360
+- **Nessus scanner**（Nessus 扫描器），532–535, 534–535
+- **Netatalk package**（Netatalk 软件包），357
+- **NetBEUI protocol**（NetBEUI 协议），357
+- **NetBIOS protocol**（NetBIOS 协议），357, 440
+- **netstat tool**（netstat 工具），378–379, 531–532
+- **network activity**（网络活动）
+    - 作为入侵症状，537
+    - 工具，531–532
+- **network address translation (NAT)**（网络地址转换（NAT）），362, 399
+- **network addresses**（网络地址）
+    - 硬件地址，359
+    - 主机名，362–364
+    - IP 地址，359–362
+    - 概述，358–359
+- **network-admin (Network Settings) tool**（network-admin（网络设置）工具），373
+- **Network Configuration tool**（网络配置工具），373
+- **Network File System (NFS)**（网络文件系统（NFS）），382, 480
+    - 导出，273
+    - 网络备份，334
+        - 配置，480–482
+        - 安全性，482–483
+    - 服务器，480
+- **Network Information Service (NIS)**（网络信息服务（NIS）），196, 207, 455, 523–524
+- **network installations**（网络安装），4–5
+- **network masks**（网络掩码）
+    - 描述，360
+    - DHCP，440
+    - Fedora，370
+- **network servers**（网络服务器），438
+    - 身份验证，454–455, 523–526
+    - **电子邮件**。参见*e-mail*
+    - 考试要点，463, 503–504
+    - FTP，483–488
+    - 主机名，441–448
+    - IP 地址，438–441
+    - MySQL，499–503
+    - NFS，480–483
+    - 复习题，464–471, 505–511
+    - **Samba**。参见*Samba 服务器*
+    - 总结，462, 503
+    - 时间，448–454, 450, 453
+    - **Web**。参见*Web 服务器*
+- **Network Settings tool (network-admin)**（网络设置工具（network-admin）），373
+- **networks**（网络）
+    - 账户数据库，207
+    - ARP 缓存，376
+    - 身份验证，523–526
+    - 备份，333–334
+    - bind 选项，157
+    - 配置概述，365–366
+    - 连接测试，377
+    - DHCP 配置，368–369
+    - 考试要点，382–383, 428–429
+    - 文件系统，271–276
+    - **防火墙**。参见*firewalls*
+    - 通用工具，380–382
+    - GUI 配置工具，373–374, 374
+    - 硬件，350–354, 353
+    - 硬件配置，366
+    - 安装过程中，6
+    - 名称服务器故障排除，379–380
+    - 数据包，353–354
+    - 端口，364–365
+    - PPP，375
+    - **打印**。参见*printing*
+    - 协议栈，354–358, 355
+    - 远程登录。参见*remote logins*
+    - 软件源，296–297
+    - 复习题，384–390, 429–436
+    - 路由跟踪，377–378
+    - 网络间路由，392–393
+    - 静态 IP 地址配置，369–373
+    - 状态，378–379
+    - 总结，382, 428

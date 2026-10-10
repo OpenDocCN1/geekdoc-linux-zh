@@ -1,0 +1,15 @@
+used by various programs that don't need high-privilege access to the system. Other accounts are likely to be unused on many systems. For instance, **games** is used by some games, so it isn't of much use on most servers or true productivity workstations. You may be able to delete some of these unused specialty accounts, but if you do so, you should definitely record details on the accounts' configurations so that you can restore them if you run into problems because the account wasn't quite as unnecessary as it first seemed.
+
+# Using Shadow Passwords
+
+Most Linux distributions use shadow passwords by default, and for the most part, this chapter is written with the assumption that this feature is active. In addition to providing extra security by moving hashed passwords out of the world-readable `/etc/passwd` file and into the more secure `/etc/shadow` file, shadow passwords add extra account information. (The earlier section "Directly Modifying Account Configuration Files" describes the `/etc/ shadow` file's contents in detail.)
+
+> If you happen to be using a system that hasn't enabled shadow passwords but you want to add that support, you can do so. Specifically, the `pwcov` and `grpconv` programs do this job for `/etc/passwd` and `/etc/group`, respectively. These programs take no parameters; simply type their names to create `/etc/ shadow` and `/etc/gshadow` files that hold the passwords and related account control information, based on the contents of the unprotected files.
+
+One of the advantages of shadow passwords is that the Linux shadow password system enables use of more advanced password hashes. The earliest Linux systems used a *Triple Data Encryption Standard (3DES)* hash. This hash, although good not too many years ago, is outdated by today's standards. Many Linux distributions today use the *Message Digest 5 (MD5)* hash instead, but some have moved on even from that to use the *Secure Hash Algorithm (SHA)*, which is even more secure. Linux's password tools support passwords longer than eight characters for MD5 or SHA hashes, but not for 3DES hashes. You can tell which one your distribution uses by examining the password field in `/etc/shadow` (or `/etc/passwd`, if you're not using shadow passwords). MD5 passwords begin with the string $1$, SHA passwords begin with $5$ or $6$, and 3DES passwords don't begin with any of these strings.
+
+You can't convert existing passwords from one hash to another, except by reconfiguring your system to use the new password and then having users reenter their passwords. You can, though, tell Linux to use one tool or the other for new passwords. To do so, edit the `/etc/pam.d/passwd` file. This file controls the Pluggable Authentication Modules (PAM) configuration for the `passwd` utility—that is, it controls how `passwd` does its work. Locate a line that looks something like this:
+
+```
+password required pam_unix.so nullok use_authtok
+```

@@ -1,0 +1,23 @@
+These tasks may be performed in almost any order, and some distributions add more tasks or omit some of them.
+
+Once the basic installation is done, the installer will reboot the computer. With any luck, you'll be greeted by a text-mode or GUI login prompt. You can then enter your username and password to see a working Linux system. Chapter 2 describes the commands used at a text-mode Linux shell. After a GUI login, you'll see a screen from which you can run various programs via a point-and-click interface similar to that in Windows or Mac OS.
+
+The rest of this chapter covers various topics related to booting and hardware configuration. Some of the tasks described in these sections require you to work at a text-mode command shell. You can either log into a text-mode session or locate an option called xterm, Konsole, shell, terminal, or something similar from the GUI menu.
+
+![](bbox=[0.185, 0.345, 0.25, 0.405])
+
+If X is running on your computer, you can access a full-screen text-mode session by pressing **Ctrl+Alt+F*n***, where *n* is a number, typically from 1 through 6. To switch back to X, you can press **Alt+F7** (Fedora uses **Alt+F1** for this purpose). These keystrokes switch between *virtual terminals*, which enable you to run multiple text-mode programs, each with its own display.
+
+X occupies one virtual terminal of its own.
+
+# ## Configuring Boot Loaders
+
+The Linux kernel is at the heart of a Linux computer; in fact, technically speaking, the *kernel is* Linux—everything else is support programs. Because the kernel must run before Linux is completely booted, the kernel must be loaded into memory in a unique way. A program known as a *boot loader* handles this task. Several boot loaders are available, some of which can boot a Linux kernel directly, and others of which require help to do the job.
+
+![](bbox=[0.185, 0.645, 0.25, 0.715])
+
+This section describes boot loaders for x86 and x86-64 systems using a legacy BIOS. If you’re using Linux on another architecture, such as PowerPC or Alpha, the available boot loaders will be different. Consult your distribution’s documentation for details.
+
+# ### The Role of the Boot Loader
+
+When it’s first powered up, an x86 CPU checks a specific area of memory for code to execute. This code is the BIOS in most systems. You’re probably familiar with the BIOS through your computer’s BIOS setup screens, which enable you to configure features such as RAM timing and whether or not onboard ports are active. The BIOS also provides code that allows the computer to boot. The BIOS checks the first sector of your hard disk (or of your

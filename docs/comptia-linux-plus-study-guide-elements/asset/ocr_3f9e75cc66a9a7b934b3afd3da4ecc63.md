@@ -1,0 +1,17 @@
+# ## Using chrootkit
+
+The chrootkit program (http://www.chrootkit.org) is something of a last-resort method of detecting intrusion and is the closest thing in the Linux world to Windows virus scanners. (Linux virus-scanning programs also exist, but they're intended mainly to check for Windows viruses on Samba shares. Linux viruses are not a problem in the real world, at least not as of mid-2009.)
+
+Many crackers use *root kits*, which are prepackaged intrusion tools. When an intruder runs a root kit against a target, the root kit software probes for known weaknesses (such as servers with known security bugs), breaks in, and installs software to enable simpler access by the intruder. The intruder can then log in using Telnet, SSH, or the like, and gain full control of the system.
+
+> Intruders who use root kits are often referred to as *script kiddies*. These miscreants have minimal skill; they rely on the root kit to do the real work of the intrusion. Some people prefer to reserve the term “cracker” for more skilled intruders, but others consider script kiddies to be crackers with minimal expertise.
+
+Using chrootkit is fairly straightforward: type its name. The result is a series of lines summarizing checks that the software performs. These lines should all end with *not infected, no suspect files found,* or a similar reassuring message. If any message alerts you to an intrusion, you should take immediate corrective measures.
+
+# ## Monitoring Log Files
+
+Log files can provide clues to intrusions. Chapter 4 describes log files in detail, so you should consult it for basic information on where log files reside, how you can configure them, and how you can monitor them. You should be aware, though, that log files often contain clues about intrusions. Suspicious items that may appear in log files include:
+
++   • **Suspicious logins** A login might catch your eye for any number of reasons. Perhaps the user is on vacation with no network access, or perhaps the login is from a location to which the user has no access. If you notice such activity, you should investigate further.
+
++   • **Repeated login failures** Crackers sometimes attempt to log in by guessing passwords. This procedure is likely to leave a trace in log files in the form of a long series of login

@@ -1,0 +1,27 @@
+![](bbox=[0.16, 0.15, 0.24, 0.21])
+
+> The *sar* tool requires that you launch the *sysstat* SysV startup script. Only activities that occur after this script is launched will be recorded.
+
+# Obtaining General-Purpose System Statistics
+
+The *sar* utility is extremely powerful; it can report on a wide range of system use measures over time. Its basic format is as follows:
+
+```
+sar [options] [interval [count]]
+```
+
+interval is the interval between measurements, in seconds; and count is the number of measurements to report. Table 3.4 summarizes some of the more useful *sar* options; however, there are many more. You should consult the program’s man page for details. If you don’t pass any *options* to *sar*, it produces a CPU utilization report. If you omit the *interval* and *count* options, *sar* produces information on recent activity; otherwise, it waits and displays information on the next few time periods, as specified by those options.
+
+# TABLE 3.4		Common sar Options
+
+| Option Name | Meaning |
+| --- | --- |
+| -A | Summarizes a wide variety of information. |
+| -b | Displays I/O and transfer rate information. |
+| -B | Summarizes paging (virtual memory) statistics. |
+| -c | Displays information on process creation—how many processes are started per second. |
+| -d | Reports on block device activity. |
+| -e [hh:mm:ss] | Sets the ending time for the report; without this option, the program continues reporting indefinitely. |
+| -i interval | Reports data as close as possible to the specified interval (in seconds); used when reporting already-recorded data. |
+| -I irq | Reports on use of the specified interrupt (IRQ). |
+| -n code | Reports on network use. The code keyword can be DEV, NFS, or various other values to report on specific types of network activity. Consult the man page for details. |
