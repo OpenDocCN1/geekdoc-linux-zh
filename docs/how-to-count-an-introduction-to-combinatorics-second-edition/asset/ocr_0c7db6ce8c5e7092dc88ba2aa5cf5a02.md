@@ -1,0 +1,15 @@
+The formulae (1.10)–(1.13) are on a different level and obviously both difficult and deep. An expert in elliptic functions can see at once that (1.13) is derived some- how from the theory of “complex multiplication”, but (1.10)–(1.12) defeated me completely; I had never seen anything the least like them before. A single look at them is enough to show that they could only be written down by a mathematician of the highest class. They must be true because, if they were not true, no one would have the imagination to invent them. Finally (you must remember that I knew nothing of Ramanujan, and had to think of every possibility), the writer must be completely honest, because great mathematicians are commoner than thieves or humbugs of such incredible skill.⁵
+
+Hardy made strenuous efforts to bring Ramanujan to England, initially against Ramanujan's own wishes. However, by April 1914 Ramanujan was in Cambridge, with finan- cial support from the Government of Madras and Trinity College. Although Ramanujan was now free from financial worries and could devote himself full-time to mathematics, his health soon deteriorated. He was elected as fellow of the Royal Society and a fellow of Trinity College in 1918. In 1919 his health had sufficiently recovered to enable him to travel home to India, but his health again failed and he died at a tragically early age on April 26, 1920, in Madras.
+
+Hardy and Ramanujan are associated not only by their mathematical work but also in one of the most often told stories about mathematicians. The story merits repetition, since, apart from anything else, it is marked out from many of the anecdotes that litter the his- tory of mathematics by being directly attested by one of the participants. We tell the story in Hardy's own words:
+
+> I remember once going to see him when he was lying ill at Putney. I had ridden in taxi-cab No. 1729, and remarked that the number (7-13-19) seemed to me rather a dull one, and I hoped it was not an unfavourable omen. “No”, he replied “it is a very interesting number; it is the smallest number expressible as a sum of two cubes in two different ways.”
+
+Hardy summed up Ramanujan's mathematical achievement as follows:
+
+> It was his insight into algebraic formulae, transformations of infinite series, and so forth, that was most amazing. On this side alone certainly I have never met his equal, and I can compare him only with Euler or Jacobi. He worked, far more than the majority of modern mathematicians, by induction from numerical examples; all of his congruence properties of partitions, for example, were discovered in this way. But with his memory, his patience, and his power of calculation, he combined the power of generalization, a feeling for form, and a capacity for rapid modification of
+
+⁵ G.H. Hardy, Ramanujan, Twelve Lectures on Subjects Suggested by His Life and Work, Cambridge University Press, Cambridge, 1940, p. 9.
+
+⁶ G.H. Hardy, P. V. Seshu Aiyar, and B. M. Wilson (editors), Collected Papers of Srinivasa Ramanujan, Cambridge University Press, Cambridge, 1927, p. xxxv. Note that 1729 = 1³ + 12³ = 9³ + 10³.

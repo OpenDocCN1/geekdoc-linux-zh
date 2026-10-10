@@ -1,0 +1,9 @@
+# # Acknowledgments
+
+We have not originated any of the mathematics in this book. We have tried to give references to the papers where the main theorems were first proved, but a lot of the book covers standard material that has been known for some time, and where locating original sources is not easy. In writing biographical notes about many of the mathematicians whose work we discuss, we have made much use of the excellent Web site: The MacTutor History of Mathematics Archive, http://www-history.mcs.st-andrews.ac.uk, based at the University of St Andrews.
+
+We have also benefited from the expository texts listed in our suggestions for further reading. Each of us has taught much of the material to students from the University of Leeds. We are grateful to our colleagues in Leeds who first allowed us to teach in an area of mathematics away from our research interests and to the students whose comments helped to shape our teaching.
+
+Modern technology has made the writing of this book much easier than it was for the first edition twenty years ago. However, technology does have some disadvantages. It turns out that the template used to typeset the book has a mind of its own. This has meant that in some places the layout of the pages, and, in particular, the position of the diagrams and tables is not as we would have wished. We apologize for this, but it has been outside our control.
+
+Previous experience leads us to believe that not everything in the book is correct. We hope that the errors are mostly minor misprints that have escaped our attention and that there are no major blunders. We encourage readers who detect errors or have questions about anything in this book to contact us.

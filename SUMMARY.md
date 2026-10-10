@@ -587,6 +587,7 @@
 +   [Linux 安全速成指南](docs/how-to-cheat-at-securing-linux/README.md)
 +   [Linux 安全攻防指南](docs/how-to-cheat-at-securing-linux-how-to-cheat-part-2/README.md)
 +   [如何破解 VoIP：IP 安全指南](docs/how-to-cheat-at-vo-ip-security/README.md)
++   [计数法：组合数学入门指南](docs/how-to-count-an-introduction-to-combinatorics-second-edition/README.md)
 +   [如何创建 RPM：Linux RPM 创建实用指南](docs/how-to-create-an-rpm-a-practical-guide-to-creating-a-linux-r/README.md)
 +   [Ubuntu Linux 全能指南](docs/how-to-do-everything-ubuntu-linux/README.md)
 +   [Ubuntu 全面指南](docs/how-to-do-everything-ubuntu-ubuntu/README.md)
