@@ -1,0 +1,100 @@
+
+## 电子邮件系统组件
+
+电子邮件用户代理（MUA）允许用户阅读和发送电子邮件。它读取已投递到用户邮箱的传入消息，并将传出消息传递给邮件传输代理（MTA）以发送给远程收件人。有许多 Linux 软件包用于编写和阅读电子邮件。例如，pine、elm、MH、Mail 和 elm 是最受欢迎的邮件阅读器之一。Linux 系统管理员主要处理电子邮件的传输和投递。
+
+邮件投递代理（MDA）从服务器接收邮件，并负责将邮件实际投递给用户。MDA 通常只投递特定类型的邮件。在 UNIX 系统中，标准的 MDA 是 /bin/mail 程序。它的职责是将邮件投递到用户的本地邮箱文件。OpenLinux 使用 mail.local 作为其 MDA，这是一个比 /bin/mail 更安全、用途更单一的 program。另一个非常流行的 MDA，在许多现代 Linux 系统中都是标准配置，是 procmail。procmail 可以作为本地投递代理使用，也可以在投递前作为高级邮件过滤器；OpenLinux 使用 procmail 作为过滤器。
+
+MTA 基本上是一个邮件路由器。它从 MUA 或另一个 MTA 接收消息。它根据邮件头中的信息决定应该使用哪种投递方法，然后将消息传递给适当的 MDA 或另一个 MTA。简而言之，MTA 处理了将邮件从邮件用户代理传输到邮件投递代理所需的一切。MTA 还解释别名，并为其他邮件投递代理重写地址。它中继来自其他传输代理的邮件。无法投递的邮件由 MTA 排队，以便稍后传输。
+
+在 UNIX 世界中占主导地位的邮件传输代理（约占所有互联网电子邮件的 70%~80%）是 Sendmail。有几个不同版本的 Sendmail（Berkeley、IDA、Sendmail Inc.），以及替代的 MTA，如 qmail、smail、zmail。本章将介绍 OpenLinux 中包含的 Berkeley/Sendmail Inc. 8.9 变体。
+
+## 简单邮件传输协议
+
+Sendmail 使用简单邮件传输协议（SMTP）在互联网主机之间传输邮件。SMTP 在 RFC821（即请求评论 #821）中有描述，是一个非常简单的协议，由四字命令和三字回复码组成。该协议足够简单，以至于可以通过直接 telnet 到 SMTP 端口 25 来使用它。这种方法通常用于确定 SMTP 配置中出了什么问题。然而，通过 telnet 进入无法提供标准邮件用户代理的功能性和灵活性。作为 SMTP 扩展版本的 ESMTP 现在被非常广泛地使用。
+
+要查看简单 SMTP 事务的示例（实际上在这种情况下是一个 SMTP 服务器），请按照下一节所示将 telnet 连接到 SMTP 服务器。
+
+### SMTP 会话
+
+```text
+$ telnet theneteffect.com 25
+Trying 206.202.56.3...
+Connected to theneteffect.com.
+Escape character is '^]'.
+220 consider.theneteffect.com ESMTP Sendmail 8.9/8.9.3; Thu, 26 Aug 1999
+21:35:42 -0500
+HELO theneteffect.com
+250 consider.theneteffect.com Hello chevaliere.theneteffect.com [206.202.0.252],
+please to meet you
+MAIL From: <mitch@theneteffect.com>
+250 <mitch@theneteffect.com>... Sender ok
+RCPT To: <mitch@acan.net>
+250 <mitch@acan.net>... Recipient ok
+DATA
+354 Enter mail, end with "." on a line by itself
+This is a test.
+
+250 VAA24159 Message accepted for delivery
+QUIT
+221 consider.theneteffect.com closing connection
+Connection closed by foreign host.
+```
+
+在这个示例中，我们通过 telnet 连接到 SMTP 服务器并与之交换问候语开始。我们告诉 SMTP 服务器将消息从 mitch@theneteffect.com 发送到 mitch@acan.net，SMTP 服务器验证了这两个地址。然后我们输入命令 DATA，后跟消息文本。当消息完成时，我们在提示符下输入 QUIT 来关闭 SMTP 会话。邮件消息已排队等待发送。
+
+### 消息格式
+
+电子邮件消息的格式在 RFC822 中规定。互联网电子邮件消息由报头和正文组成。报头字段是关键字/值对，由冒号分隔。某些报头字段是 RFC822 强制要求的，许多其他字段是可选的，并提供关于消息的信息。
+
+查看邮件消息的报头字段以了解邮件消息中包含何种信息是有用的。例如，查看前一个 SMTP 会话发送的消息：
+
+```text
+Return-Path: <mitch@theneteffect.com>
+Received: from consider.theneteffect.com (consider.theneteffect.com
+[206.202.56.3])
+    by nsl.acan.bsn (8.9.2/8.9.2) with SMTP id VAA0837
+    for <mitch@acan.net>; Thu, 26 Aug 1999 21:37:44 -0500 (CDT)
+Received: from theneteneffect.com (chevaliere.theneteneffect.com [206.202.0.252])
+    by consider.theneteneffect.com (8.9.3/8.9.3) with SMTP id VAA24159
+    for <mitch@acan.net>; Thu, 26 Aug 1999 21:36:27 -0500
+
+Date: Thu, 26 Aug 1999 21:36:27 -0500
+From: Mitch Aclair <mitch@theneteneffect.com>
+Message-Id: <199908270236.VAA24159@consider.theneteneffect.com>
+To: undisclosed-recipients:
+This is a test.
+```
+
+消息报头提供了基本信息，如发件人和收件人的地址，消息最初发送的日期和时间，以及处理或中继该消息的每个服务器的身份，以及每次中继生效的日期和时间。错误也会被报告，可用于排查电子邮件投递问题。
+
+## 配置 Sendmail
+
+Sendmail 可以说是本书中探讨的最困难的主题之一。幸运的是，对于 Caldera OpenLinux 2.3 的用户来说，无需深入学习 Sendmail 即可在新 OpenLinux 机器上设置邮件服务。为了彻底起见，我们将简要讨论配置 Sendmail 的旧方法，然后提及使用 M4 宏配置 Sendmail 的中间“简单”方法。如果您对该主题没有浓厚的兴趣，可以直接跳转到“使用 COAS 配置”部分，使您的生活简单得多。
+
+通常，Sendmail 在后台等待新消息。当建立 SMTP 连接时，会调用一个子进程来处理该连接。父 Sendmail 进程返回到监听新的 SMTP 连接。
+
+Sendmail 子进程将新到达的消息放入邮件队列（通常存储在 `/var/spool/queue` 中）。如果消息可以立即投递，该消息将被投递并从队列中删除。如果消息不能立即投递，该消息将保留在队列中，Sendmail 子进程将终止。
+
+队列中保留的消息的投递将在下次处理队列时尝试。父 Sendmail 通常会定期 fork 一个子进程，以尝试投递队列中保留的任何内容。
+
+## 文件位置
+
+多年来，Sendmail 发行版在很大程度上标准化了放置文件的位置，尽管在不同类型的机器（或工作站或服务器）和各种 UNIX 发行版之间存在一些差异。OpenLinux 在某种程度上偏离了这一松散标准，进入了“供应商配置”的世界。OpenLinux 并不是第一个，也肯定不是最后一个偏离标准位置的系统。事实上，如果对新接触 OpenLinux 的人而言，他们的系统确实比其他系统更合乎逻辑。尽管如此，知道某些东西在您预期的地方，许多不在，以及如果您是新用户则完全无法理解的一些事情，会有所帮助。
+
+首先，Sendmail 保存文件的“标准”位置是：
+
+- `etc` 用于 sendmail.cf 配置文件、sendmail.cw 和别名文件，以及 Sendmail 众多可选功能的各种文件。
+- `usr/sbin` 用于 Sendmail 二进制文件（或者 `usr/lib`，通常在二进制文件实际不在的那个目录中有一个符号链接）。
+- `usr/lib` 用于 sendmail.hf 帮助文本文件。
+- `var/log` 用于 sendmail.st 统计文件。
+- `var/spool/mail` 用于邮箱文件（这是 Linux 的一个术语，但它指的是 /var/mail、/usr/mail、/usr/spool/mail——它有很多可以存放的地方）。
+- `var/spool/mqueue` 用于队列文件（等待发送或投递的邮件）。
+- `var/run` 用于 sendmail.pid PID（进程 ID）文件。
+- `usr/bin` 通常保存所有支持文件/链接：newaliases、praliases、makemap、mailq。
+
+好的，这相当直截了当且简单——好吧，也许不简单，但相当标准。当然，如果您多年来一直在使用 Suns，您可能认为这些东西应该生活在 /etc/mail 中。
+
+OpenLinux 将其许多配置文件基于可扩展性和可配置性，尽可能通过图形和/或自动化工具。这意味着配置范围可以从极其简单（如果您只需要用鼠标点击几个选项）到比正常情况更困难和复杂（如果您需要手动完成某些操作）。
+
+首先，OpenLinux 支持在多个 MTA 之间切换，以支持用户偏好。这是通过程序 `usr/bin/mta-switch` 实现的。mta-switch 可以在 Sendmail、qmail 和 smail 之间切换，在切换后为您安排配置文件，并确保事物不会出错。其配置文件和程序链接分散在 /etc/mta 目录、/etc/sysconfig/mta 和 /etc/sysconfig/daemont/mta 中。文件 /etc/sysconfig/mta 的内容决定了 sendmail.cf 文件如何通过 Caldera Open Administration System (COAS) 或 mta-switch 重建——这是一个重要文件。

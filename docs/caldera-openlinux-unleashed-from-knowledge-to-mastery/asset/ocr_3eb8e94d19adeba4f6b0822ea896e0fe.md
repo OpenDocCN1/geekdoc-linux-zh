@@ -1,0 +1,59 @@
+# **Caldera OpenLinux Unleashed**
+
+Copyright © 2000 by **Sams Publishing**  
+All rights reserved. No part of this book shall be reproduced, stored in a retrieval system, or transmitted by any means, electronic, mechanical, photocopying, recording, or otherwise, without written permission from the publisher. No patent liability is assumed with respect to the use of the information contained herein. Although every precaution has been taken in the preparation of this book, the publisher and author assume no responsibility for errors or omissions. Neither is any liability assumed for damages resulting from the use of the information contained herein.
+
+International Standard Book Number: 0-672-31761-3
+
+Library of Congress Catalog Card Number: 99-64106
+
+Printed in the United States of America
+
+First Printing: December 1999
+
+01 00 99 4 3 2 1
+
+# **Trademarks**
+
+All terms mentioned in this book that are known to be trademarks or service marks have been appropriately capitalized. Sams Publishing cannot attest to the accuracy of this information. Use of a term in this book should not be regarded as affecting the validity of any trademark or service mark.
+
+# **Warning and Disclaimer**
+
+Every effort has been made to make this book as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an "as is" basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damage arising from the information contained in this book or from the use of the CD or programs accompanying it.
+
+**ASSOCIATE PUBLISHER**  
+*Michael Stephens*
+
+**EXECUTIVE EDITOR**  
+*Don Roche*
+
+**DEVELOPMENT EDITOR**  
+*Jim O'Shea*
+
+**MANAGING EDITOR**  
+*Charlotte Clapp*
+
+**TECHNICAL EDITORS**  
+*Gert-Jan Hagenraars*  
+*Carl Constantin*  
+*Steve Epstein*
+
+**TEAM COORDINATOR**  
+*Pamalee Nelson*
+
+**MEDIA DEVELOPER**  
+*Gary Scherf*
+
+**INTERIOR DESIGN**  
+*Don Adair*
+
+**COVER DESIGN**  
+*Aren Howell*
+
+**COPY WRITER**  
+*Eric Borgert*
+
+**PRODUCTION**  
+*Lisa England*  
+*Dan Harris*  
+*Brad Lensner*

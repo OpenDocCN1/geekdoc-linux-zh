@@ -196,6 +196,7 @@
 +   [Caldera OpenLinux 与 Netfinity 服务器集成指南](docs/caldera-openlinux-and-netfinity-server-integration-guide/README.md)
 +   [Caldera OpenLinux 圣经](docs/caldera-openlinux-bible/README.md)
 +   [Caldera OpenLinux 初学者指南](docs/caldera-openlinux-for-dummies/README.md)
++   [Caldera OpenLinux：从知识到精通](docs/caldera-openlinux-unleashed-from-knowledge-to-mastery/README.md)
 +   [你能承受得了吗？](docs/can-you-bear-it/README.md)
 +   [互联网服务容量规划：高增长率下的快速规划技术](docs/capacity-planning-for-internet-services-quick-planning-techn/README.md)
 +   [CentOS 7.3 Linux 服务器指南](docs/centos-73-linux-server-guide/README.md)

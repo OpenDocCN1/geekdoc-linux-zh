@@ -1,0 +1,11 @@
+# The Windows Menu
+
+From the Windows menu, you gain access to the other windows (and associated functions) available in xv. The Visual Schnauzer is like a simple file manager that enables you to work your way around directories and view their contents, but it also displays thumbnails of images in a directory. Figure 27.3 shows the Visual Schnauzer.
+
+![](bbox=[0.09, 0.26, 0.77, 0.48])
+
+When you first view a directory with the Visual Schnauzer, it will not display thumbnails of any images in the directory until you click the Update button. xv then looks at each file in the directory and, when it finds an image file, xv generates a thumbnail image and saves it in a new file in the hidden directory `.xvpics`. The next time you view this directory, xv will find the `.xvpics` directory and use the already-generated thumbnails when displaying the directory contents. If there are new images in the directory, you must click the Update button again to generate thumbnails for them. If you don't have write permission in the directory you are viewing, xv can still generate thumbnails, but they will not be saved. You will have to regenerate them each time you view that directory.
+
+The Color Editor allows you to perform color and brightness operations on the image. With the Color Editor, you can edit the color palette (if in 8-bit mode), change the hue and saturation of the image, and perform gamma correction for all colors at once (intensity) or for the red, green, and blue channels separately. Figure 27.4 shows the Color Editor.
+
+The Image Info window displays information about the image. The Image Comments window enables you to view any comments saved with an image. Comments do not affect the actual image. They are just added to the header section of the image file. The Text Viewer window enables you to view the image file in ASCII or hex format. If you try to open an image that xv doesn't recognize, it will open it in the Text Viewer window. Figure 27.5 shows the Text Viewer window.
