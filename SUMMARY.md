@@ -545,6 +545,7 @@
 +   [Linux 破解揭秘：Linux 安全秘密与解决方案](docs/hacking-linux-exposed-linux-security-secrets-solutions/README.md)
 +   [渗透攻击：网络与安全（二合一：Kali Linux 黑客攻击与网络入门指南）](docs/hacking-networking-and-security-2-books-in-1-hacking-with-ka/README.md)
 +   [大学黑客指南：从零开始学习 Python 计算机编程，精准掌握 Linux 命令行操作（双书合订本）](docs/hacking-university-learn-python-computer-programming-from-sc/README.md)
++   [kali linux 黑客指南：道德黑客初学者指南。网络安全基础学习实用示例。包含 kali linux 渗透测试](docs/hacking-with-kali-linux-a-comprehensive-beginners-guide-to-l/README.md)
 +   [Kali Linux 攻防：网络安全与黑客攻击基础分步指南](docs/hacking-with-kali-linux-a-step-by-step-guide-for-you-to-lear/README.md)
 +   [Kali Linux 攻防：网络安全高级指南，学习每个黑客必须使用网络、脚本和测试破解所有计算机配置的秘密编码工具](docs/hacking-with-kali-linux-the-advanced-guide-about-cybersecuri/README.md)
 +   [HackNotes - Linux 与 Unix 安全便携式参考](docs/hacknotes---linux-and-unix-security-portable-reference/README.md)

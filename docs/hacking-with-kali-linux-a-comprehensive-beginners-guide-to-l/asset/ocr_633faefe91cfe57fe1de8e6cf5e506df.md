@@ -1,0 +1,11 @@
+# INTRODUCTION
+
+# Ethical Hacking – What Is the Need to Learn
+
+This process is done by computer, and network experts called Ethical or white hat hackers. These people analyze and attack the security system of an organization to find and expose weaknesses that crackers can exploit and take advantage of it is essential to understand that unlike crackers, ethical hackers get permission from the relewant authority to go on and test the security of their information system. Cookies cause harm and loss to an organization and affect negatively to the integrity, availability, and confidentiality of an information system. So how did the concept of ethical hacking came up, and how is it done?
+
+The field of ethical hacking has been there in the computer world now for a while. Today, this subject has continued to gain much attention due to the increased availability and usage of computer resources and the internet. This growth and expansion of computer infrastructure have provided another avenue for interaction, and so has attracted significant organizations in businesses and governments. These bodies want to fully take advantage of the benefits offered by technology so that they can improve the quality of service they provide to their customers. For example, organizations want to use the internet for electronic commerce and advertising, among others.
+
+On the other hand, governments want to use these resources to distribute information to their citizens. Organizations fear the possibility of their computer information system being crackerd and accessed by unauthorized people. On the other hand, potential customers and users of these services worry about the safety of the information they are prompted to give. They fear that this information, like credit card numbers, social security numbers, home addresses, and contacts, will be accessed by intruders or outsiders who are going to use their data for other purposes outside the ones that intended. By so doing, their privacy is going to be interfered with, something that is not desirable to many people, if not all.
+
+Due to the above-raised fear, organizations sought to find a way to approach and counter this problem. They came to discover that one of the best methods they can use to limit and control the threat posed by
