@@ -1,0 +1,170 @@
+
+
+## 表 13.3 rpm 命令操作
+
+| 操作 | 说明 |
+|---|---|
+| `-b` | 从源文件构建二进制软件包 |
+| `-e` | 卸载指定的软件包 |
+| `-F` | 仅当已存在更早版本时升级软件包 |
+| `-i` | 安装指定的软件包 |
+| `-q` | 查询指定的软件包是否已安装 |
+| `-U` | 安装或升级指定的软件包 |
+| `-V` | 验证软件包文件是否存在 |
+
+```
+$ sudo rpm -Uvh zsh-5.0.2-31.el7.x86_64.rpm  
+Preparing...                                ##################################### [100%]  
+Updating / installing...  
+1:zsh-5.0.2-31.el7        ##################################### [100%]  
+$
+```
+
+使用 `-q` 操作可以查询软件包管理数据库中已安装的软件包：
+
+```
+$ rpm -q zsh  
+zsh-5.0.2-31.el7.x86_64  
+$
+```
+
+如果需要移除已安装的软件包，只需使用 `-e` 操作即可：
+
+```
+$ sudo rpm -e zsh  
+$ sudo rpm -q zsh  
+package zsh is not installed  
+$
+```
+
+`-e` 操作不会显示其是否成功，但如果移除过程中出现问题，它将显示一条错误消息。
+
+## 理解软件仓库
+
+dpkg 和 rpm 命令是有用的工具，但它们都有一定的局限性。如果您正在寻找新的软件包进行安装，则需要您自己去找寻。此外，如果一个软件包依赖于其他软件包的安装，那么您需要先以正确的顺序安装这些依赖的软件包。随着时间的推移，这可能变得相当麻烦。
+
+为了解决这个问题，每个 Linux 发行版都有自己的软件包中央集散地，称为软件仓库。软件仓库中包含经过测试并被确认为在发行版环境中能正确安装和工作的软件包。通过将所有已知的软件包放入单一的软件仓库中，Linux 发行版可以创建一个“一站式”购物环境，用于安装系统所需的所有应用程序。
+
+大多数 Linux 发行版都会创建和维护自己的软件包仓库。还有一些用于处理软件包仓库的附加工具。这些工具可以直接与软件包仓库交互，以查找新的软件，甚至自动查找并安装应用程序运行所需的任何依赖软件包。
+
+除了官方支持的发行版软件包仓库外，互联网上还涌现了许多第三方软件包仓库。通常，专业或定制的软件包不会作为正常 Linux 发行版仓库的一部分进行分发，但它们可以在第三方仓库中找到。软件仓库工具也允许您获取这些软件包。
+
+以下章节将介绍如何使用 Debian 和 Red Hat 的软件仓库工具。
+
+## Debian 软件仓库工具
+
+用于处理 Debian 软件仓库的核心工具是 apt 工具套件。其中包括 apt-cache 程序，它提供关于软件包数据库的信息；以及 apt-get 程序，它执行安装、更新和移除软件包的工作。为了简化操作，apt 程序是一个前端脚本，可以根据需要调用上述核心程序中的任意一个。
+
+apt 工具套件依赖 /etc/apt/sources.list 文件来识别查找软件仓库的位置。默认情况下，每个 Linux 发行版都会在该文件中填入其自己的仓库位置，但如果安装了发行版不支持的第三方应用程序，您也可以添加额外的仓库位置。
+
+apt-cache 程序中有一些有用的命令选项，用于显示关于软件包的信息：
+
+- **deps**：显示软件包所需的依赖项
+- **pkgnames**：显示系统上安装的所有软件包
+- **showpkg**：显示指定软件包的信息
+- **stats**：显示系统的软件包统计信息
+- **unmet**：显示已安装软件包的任何未满足的依赖项
+
+apt 工具套件的“主力”是 apt 程序。它是用于从 Debian 软件仓库安装和移除软件包的工具。表 13.4 列出了 apt 命令。
+
+## 表 13.4 apt 命令
+
+| 操作 | 说明 |
+| :--- | :--- |
+| autoremove | 自动移除作为其他已安装软件包依赖项而自动安装的任何不再需要的软件包 |
+| full-upgrade | 功能与 upgrade 相同，但会移除升级整个系统所需的任何已安装软件包 |
+| install | 从仓库安装新的软件包 |
+| list | 显示当前已安装的软件包 |
+| purge | 移除指定的应用程序，连同其任何配置文件或数据文件 |
+| reinstall | 尝试从仓库重新安装现有软件包 |
+| remove | 移除指定的应用程序，但保留其任何配置文件或数据文件 |
+| satisfy | 尝试解决已安装软件包中的软件依赖项 |
+| search | 在仓库中搜索特定的软件包 |
+| show | 显示指定软件包的信息 |
+| update | 从所有已配置的仓库下载软件包信息 |
+| upgrade | 从所有已安装的软件包中安装可用的升级 |
+
+从仓库安装新软件包只需使用 install 操作指定软件包名称即可：
+
+```
+$ sudo apt install zsh
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  zsh-doc
+The following NEW packages will be installed:
+  zsh
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 767 kB of archives.
+After this operation, 2,390 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 zsh amd64
+5.8-3ubuntul [707 kB]
+Fetched 707 kB in 1s (731 kB/s)
+Selecting previously unselected package zsh.
+(Reading database ... 195185 files and directories currently installed.)
+Preparing to unpack .../zsh_5.8-3ubuntul_amd64.deb ...
+Unpacking zsh (5.8-3ubuntul) ...
+Setting up zsh (5.8-3ubuntul) ...
+Processing triggers for man-db (2.9.1-1) ...
+$
+```
+
+如果需要任何依赖项，apt 程序也会获取这些依赖项并自动安装它们。
+
+![](img/c0a399aca0d18f8822d714ad0a173123_473_0.png)
+
+> upgrade 操作提供了一种极佳的方式，使您的基于 Debian 的整个系统保持最新状态，包括发布到发行版仓库的软件包和内核更新。运行该命令将确保您的软件包和 Linux 内核安装了所有安全补丁和错误修复。然而，这也意味着您完全信任发行版开发人员仅将经过测试的软件包放入仓库。偶尔，某个软件包可能会在完全测试之前进入仓库，从而引发问题。
+
+## Red Hat 软件仓库工具
+
+过去，用于处理 Red Hat 软件仓库的核心工具是 yum 工具（YellowDog Update Manager 的缩写，最初是为 YellowDog Linux 发行版开发的）。最近，该工具已被 dnf 工具取代，dnf 是 yum 的更新版本，增加了额外功能。dnf 工具允许您直接从 Red Hat 仓库查询、安装和移除系统上的软件包。
+
+yum 和 dnf 命令都使用 /etc/yum.repos.d 文件夹来存放列出其检查软件包的不同仓库的文件。对于默认的 Rocky Linux 系统，该文件夹包含多个仓库文件：
+
+```
+$ cd /etc/yum.repos.d
+$ ls -al
+total 88
+drwxr-xr-x.   2 root root 4096 Nov 30 09:15 .
+drwxr-xr-x. 150 root root 8192 Dec 27 09:34 ..
+-rw-r--r--.   1 root root 1485 Sep  4 13:28 epel-modular.repo
+-rw-r--r--.   1 root root 1564 Sep  4 13:28 epel-playground.repo
+-rw-r--r--.   1 root root 1422 Sep  4 13:28 epel.repo
+-rw-r--r--.   1 root root 1584 Sep  4 13:28 epel-testing-modular.repo
+-rw-r--r--.   1 root root 1521 Sep  4 13:28 epel-testing.repo
+-rw-r--r--.  1 root root   700 Oct  8 19:29 Rocky-AppStream.repo
+-rw-r--r--.  1 root root   685 Oct  8 19:29 Rocky-BaseOS.repo
+-rw-r--r--.  1 root root  1753 Oct  8 19:29 Rocky-Debuginfo.repo
+-rw-r--r--.  1 root root   350 Oct  8 19:29 Rocky-Devel.repo
+-rw-r--r--.  1 root root   685 Oct  8 19:29 Rocky-Extras.repo
+-rw-r--r--.  1 root root   721 Oct  8 19:29 Rocky-HighAvailability.repo
+-rw-r--r--.  1 root root   680 Oct  8 19:29 Rocky-Media.repo
+-rw-r--r--.  1 root root   670 Oct  8 19:29 Rocky-NFV.repo
+-rw-r--r--.  1 root root   680 Oct  8 19:29 Rocky-Plus.repo
+-rw-r--r--.  1 root root   705 Oct  8 19:29 Rocky-PowerTools.repo
+-rw-r--r--.  1 root root   736 Oct  8 19:29 Rocky-ResilientStorage.repo
+-rw-r--r--.  1 root root   671 Oct  8 19:29 Rocky-RT.repo
+-rw-r--r--.  1 root root  2335 Oct  8 19:29 Rocky-Sources.repo
+$
+```
+
+yum.repos.d 文件夹中的每个文件都包含关于某个仓库的信息，例如仓库的 URL 地址以及仓库内额外软件包文件的位置。yum 程序检查命令行请求的软件包是否存在于这些定义的每一个仓库中。
+
+dnf 程序非常通用。表 13.5 展示了您可以与其配合使用的命令。
+
+## 表 13.5 dnf 操作命令
+
+| 操作 | 说明 |
+| --- | --- |
+| alias | 定义指向其他 dnf 命令列表的别名 |
+| autoremove | 移除不再需要的作为依赖项而安装的任何软件包 |
+| check | 检查本地软件包数据库并报告任何问题 |
+| check-update | 检查指定软件包在仓库中的更新 |
+| clean | 清理为仓库保留的临时文件 |
+| deplist | repoquery 命令的已弃用别名 |
+| distro-sync | 降级或安装软件包，使系统与当前仓库保持同步 |
+| downgrade | 将指定的软件包降级到仓库中可用的版本 |
+| group | 将一组软件包作为一个单一实体进行管理 |
+| help | 显示 dnf 命令的帮助信息 |
+

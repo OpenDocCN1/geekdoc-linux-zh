@@ -1,0 +1,27 @@
+# TABLE 3.9 The find command's commonly used options and expressions
+
+| Option | Expression | Description |
+|---|---|---|
+| `-cmin` | *n* | Display names of files whose status changed *n* minutes ago. |
+| `-empty` | N/A | Display names of files that are empty and are a regular text file or a directory. |
+| `-gid` | *n* | Display names of files whose group id is equal to *n*. |
+| `-group` | *name* | Display names of files whose group is *name*. |
+| `-inum` | *n* | Display names of files whose inode number is equal to *n*. |
+| `-maxdepth` | *n* | When searching for files, traverse down into the starting point directory's tree only *n* levels. |
+| `-mmin` | *n* | Display names of files whose data changed *n* minutes ago. |
+| `-name` | *pattern* | Display names of files whose name matches *pattern*. Many regular expression arguments may be used in the *pattern* and need to be enclosed in quotation marks to avoid unpredictable results. Replace `-name` with `-iname` to ignore case. |
+| `-nogroup` | N/A | Display names of files where no group name exists for the file's group ID. |
+| `-nouser` | N/A | Display names of files where no username exists for the file's user ID. |
+| `-perm` | *mode* | Display names of files whose permissions matches *mode*. Either octal or symbolic modes may be used. |
+| `-size` | *n* | Display names of files whose size matches *n*. Suffixes can be used to make the size more human readable, such as G for gigabytes. |
+| `-user` | *name* | Display names of files whose owner is *name*. |
+
+# Listing 3.42: Employing the find command
+
+```
+```
+$ find . -name "*.txt"
+./Project47.txt
+./Answers/Project42.txt
+```
+```

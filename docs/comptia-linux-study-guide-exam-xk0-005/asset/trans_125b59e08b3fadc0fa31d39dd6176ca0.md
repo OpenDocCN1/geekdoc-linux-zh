@@ -1,0 +1,178 @@
+
+## 摘要与分析
+
+**概述用于分析网络设备状态的各个工具。** `ntm_ui`、`nmcli`、`ifconfig` 和 `ip` 命令用于显示系统上所有网络接口的当前状态。你还可以使用 `netstat` 或 `ss` 命令来显示所有监听端口的统计信息。
+
+**描述 Linux 初始化网络接口的过程。** 基于 Debian 的 Linux 系统使用 `/etc/network/interfaces` 文件来配置 IP 地址、子网掩码和默认网关。基于 Red Hat 的 Linux 系统使用 `/etc/sysconfig/network-scripts` 目录中的文件。`ifcfg-ens3` 文件包含 IP 地址和子网掩码设置，而 `network` 文件包含默认网关设置。系统启动时会检查这些文件以确定网络接口的配置。较新版本的 Ubuntu 使用 Netplan 工具，该工具将网络配置存储在 `/etc/netplan` 目录中。
+
+**解释如何测试网络连通性。** `ping` 和 `ping6` 命令允许你向远程主机发送 ICMP 消息并显示接收到的响应。`traceroute` 命令允许你查看到达特定远程主机所使用的网络路径。`mtr` 命令提供针对特定远程主机的实时连通性和响应统计数据。
+
+**描述 Linux 中用于配置网络设置的图形化工具。** 网络管理器（Network Manager）提供了一个图形界面，用于更改网络接口的设置。网络管理器显示为系统托盘区域中的一个图标。如果 Linux 系统使用无线网卡，该图标显示为无线电波信号；对于有线网络连接，则显示为迷你网络图标。当你点击该图标时，它会显示当前的网络状态；对于无线接口，它会列出检测到的接入点。通过打开网络管理器界面，你可以设置静态 IP 地址信息，或者配置网络以使用 DHCP 服务器动态设置网络配置。
+
+## 复习题
+
+1.  哪两个命令可用于通过命令行在接口上设置 IP 地址、子网掩码和默认网关信息？
+    - A. netstat
+    - B. ping
+    - C. nmtui
+    - D. ip
+    - E. route
+
+2.  较新版本的 Ubuntu 使用哪个工具来设置网络地址信息？
+    - A. netstat
+    - B. Netplan
+    - C. iwconfig
+    - D. route
+    - E. ifconfig
+
+3.  哪个命令显示以太网卡的双工设置？
+    - A. ethtool
+    - B. netstat
+    - C. iwconfig
+    - D. iwlist
+    - E. route
+
+4.  哪个命令显示 Linux 系统中哪些进程正在使用哪些端口？
+    - A. iwconfig
+    - B. ip
+    - C. ping
+    - D. nmtui
+    - E. ss
+
+5.  如果 Linux 服务器没有安装图形化桌面，你可以使用哪两个工具从命令行配置有线网卡的设置？
+    - A. nmcli
+    - B. iwconfig
+    - C. ip
+    - D. netstat
+    - E. ping
+
+6.  哪个网络设置定义了用于将数据包路由到远程网络主机的网络设备？
+    - A. 默认网关
+    - B. 子网掩码
+    - C. 主机名
+    - D. IP 地址
+    - E. DNS 服务器
+
+7.  哪个设备设置定义了将主机名映射到 IP 地址的主机？
+    - A. 默认网关
+    - B. 子网掩码
+    - C. 主机名
+    - D. IP 地址
+    - E. DNS 服务器
+
+8.  用于自动向客户端分配 IP 地址的是什么？
+    - A. 默认网关
+    - B. DHCP
+    - C. ARP 表
+    - D. 子网掩码
+    - E. `ifconfig`
+
+9.  使用哪种地址类型以便本地应用程序可以使用网络协议相互通信？
+    - A. 动态地址
+    - B. 回环地址
+    - C. 静态地址
+    - D. 主机名
+    - E. MAC 地址
+
+10. 你使用哪个命令来查找某个域的邮件服务器？
+    - A. `dig`
+    - B. `netstat`
+    - C. `ping6`
+    - D. `host`
+    - E. `ss`
+
+11. 你使用哪个命令来查找系统中哪个应用程序正在使用特定的 TCP 端口？
+    - A. `ip`
+    - B. `ss`
+    - C. `host`
+    - D. `dig`
+    - E. `ifconfig`
+
+12. 基于 Red Hat 的系统使用哪个目录来存储网络配置文件？
+    - A. `/etc/sysconfig/network-scripts`
+    - B. `/etc/network`
+    - C. `/etc/ifcfg-eth0`
+    - D. `/etc/ifconfig`
+    - E. `/etc/iwconfig`
+
+13. 哪个配置行为 Debian 系统设置了动态 IP 地址？
+    - A. `iface eth0 inet static`
+    - B. `iface eth0 inet dhcp`
+    - C. `auto eth0`
+    - D. `iface eth0 inet6 auto`
+    - E. `BOOTPROTO=dynamic`
+
+14. 哪个文件包含 Linux 系统可以用来解析主机名的 DNS 服务器列表？
+    - A. `/etc/dhcpd.conf`
+    - B. `/etc/resolv.conf`
+    - C. `/etc/switch.conf`
+    - D. `/etc/network/interfaces`
+    - E. `/etc/sysctl.conf`
+
+15. 哪种 `ifconfig` 格式正确地为 eth0 接口分配了 IP 地址和子网掩码？
+    - A. `ifconfig eth0 up 192.168.1.50 netmask 255.255.255.0`
+    - B. `ifconfig eth0 255.255.255.0 192.168.1.50`
+    - C. `ifconfig up 192.168.1.50 netmask 255.255.255.0`
+    - D. `ifconfig up`
+    - E. `ifconfig down`
+
+16. 哪个命令显示你所在区域所有可用的无线网络？
+    - A. `iwlisf`
+    - B. `iwconfig`
+    - C. `ifconfig`
+    - D. `ip`
+    - E. `arp`
+
+17. `iwconfig` 命令中的哪个选项设置无线接入点名称？
+    - A. key
+    - B. netmask
+    - C. address
+    - D. essid
+    - E. channel
+
+18. 你可以使用哪个命令来显示并设置 IP 地址、子网掩码和默认网关的值？
+    - A. `ifconfig`
+    - B. `iwconfig`
+    - C. `router`
+    - D. `ifup`
+    - E. `ip`
+
+19. 哪个工具允许你向远程主机发送 ICMP 消息以测试网络连通性？
+    - A. `netstat`
+    - B. `ifconfig`
+    - C. `ping`
+    - D. `iwconfig`
+    - E. `ss`
+
+20. 你有一个无法连接到远程服务器的网络应用程序。你应该使用哪个命令行工具来监视从你的系统发出的网络数据包，以确保它们使用正确的网络端口？
+    - A. `nc`
+    - B. `tcpdump`
+    - C. `ping`
+    - D. `traceroute`
+    - E. `mtr`
+
+# 第 8 章
+
+# 比较 GUI
+
+- ✓ 目标 1.1：概括 Linux 基础
+
+![](img/c0a399aca0d18f8822d714ad0a173123_300_0.png)
+
+![](img/c0a399aca0d18f8822d714ad0a173123_301_0.png)
+
+图形用户界面（GUI）是一组允许用户通过图标、窗口和其他各种视觉元素与计算机系统进行交互的程序。虽然有些人认为你应该仅通过基于文本的命令行来管理系统，但了解 Linux GUI（发音为“gooey”）仍然很重要。你可能需要使用某些 GUI 实用程序来管理系统及其安全性。
+
+不同的 Linux 发行版带有各种默认的桌面环境，你可能需要为偏好图形用户界面的用户安装和管理这些环境。管理底层软件也是必要的。此外，你需要了解远程桌面及其客户端-服务器模型。通过网络传输的远程桌面交互容易受到隐私问题的影响，因此保护这些 GUI 传输至关重要。
+
+对各种 GUI 桌面的访问应为所有人提供通用访问权限。GUI 桌面环境需要配置得能够适当地适用于视力、听力、手部及手指控制等方面存在障碍的人群。因此，我们很高兴在本章中介绍一个关于无障碍性的部分。
+
+## 关注 GUI
+
+在某些操作系统中，你的 GUI 相当僵化。你可能能够移动或添加几个图标，更改背景图片，或微调一些设置。然而，在 Linux 中，GUI 选择几乎令人眼花缭乱，灵活性极高。
+
+在 Linux 中，GUI 是一系列协同工作的组件，为用户界面（UI）提供图形设置。其中一个组件是*桌面环境*。桌面环境为 GUI 提供预期的外观和感觉。它通常由以下图形部分和功能组成：
+
+**桌面设置** 桌面设置包括允许你对桌面环境进行配置更改的程序。例如，你可能希望桌面窗口在光标悬停时激活，而不是在点击时激活。
+
+**显示管理器** 桌面环境的登录屏幕是你选择用户名并输入密码以获得系统访问权限的地方。如果系统上安装了多个桌面环境，显示管理器允许你在登录前选择它们。这些登录屏幕通常由公司修改，以包含关于系统适当使用的法律声明和/或公司徽标。

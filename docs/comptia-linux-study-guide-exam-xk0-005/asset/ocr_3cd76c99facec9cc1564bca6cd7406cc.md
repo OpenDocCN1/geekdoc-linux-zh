@@ -1,0 +1,1 @@
+**Explain how Linux can detect hot-pluggable devices.** The udev application runs in the background, monitoring the kernel ring buffer for new devices. When a new device is added, the udev application detects it from the kernel ring buffer messages and follows instructions defined in rules contained in the `/etc/udev/rules.d` directory.
