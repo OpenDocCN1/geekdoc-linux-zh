@@ -749,6 +749,7 @@
 +   [Linux：一个可移植的操作系统（理硕士学位论文）](docs/linux-a-portable-operating-system-master-of-science-thesis/README.md)
 +   [初学者 Linux 管理员指南](docs/linux-admin-for-absolute-beginners/README.md)
 +   [Linux 管理指南](docs/linux-administration/README.md)
++   [Linux 管理：初学者指南](docs/linux-administration-a-beginners-guide/README.md)
 +   [Linux 系统管理入门指南第 5 版](docs/linux-administration-a-beginners-guide-5th-fifth-edition/README.md)
 +   [Linux 系统管理：初学者指南，第八版](docs/linux-administration-a-beginners-guide-eighth-edition/README.md)
 +   [Linux 管理入门指南，第八版](docs/linux-administration-a-beginners-guide-eighth-edition-8th-ed/README.md)

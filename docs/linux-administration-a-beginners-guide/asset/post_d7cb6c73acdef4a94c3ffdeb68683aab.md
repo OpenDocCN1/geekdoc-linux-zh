@@ -1,0 +1,312 @@
+
+# B
+
+- Backup devices, naming, 444
+- Backup devices and files, managing, 443–446
+- Backup media, choosing, 442–443
+- Backup needs, evaluating, 442–443
+- Backup power, purposes of, 15
+- Backups, 441–451
+  - and accurate count of data, 442
+  - command-line tools for, 446–450
+  - to tape devices, 116–117
+  - tar vs. dump for, 450
+  - using dump, 448–450
+- Balancing system load, 213
+- Bandwidth
+  - estimating for backups, 443
+  - monitoring with MRTG, 213
+- banner command (fpaccess), 271–272
+- Banner message control (wu-ftpd), 271–273
+- bash (Bourne Again) shell, 78, 98
+  - built-in commands, 99–102
+  - command-line shortcuts, 102–103
+  - environment variables, 100–101
+  - how many jobs it is tracking, 99
+  - introduction to, 98–103
+  - multiple commands on the same line, 103
+  - pipes, 101
+  - redirection, 101–102
+- bashrc script, 79
+- Battery backup, 15
+- BB Stock Tool, 509
+- Bell Labs Unix, 5–6
+- Big networks, deployment of NIS in, 397–398
+- Binary (file), owner of, 94
+- BIND (Berkeley Internet Name Domain Server), 224, 226
+  - archive files, 227
+  - configuration options, 236–244
+  - documentation, 227–228
+  - downloading and compiling, 227–230
+  - files installed by, 229–230
+  - installing, 226–230
+- blacklist_recipients feature (Sendmail), 319
+- Bleeding-edge hardware and software configurations, 15
+- Block devices, 107, 196
+- Boot disk creation, 13, 38–39
+- Boot image, 131
+- Boot manager for Linux, 29
+- Boot process, 18, 129–142
+- BOOTP protocol, 428
+- Bootnelicks, identifying, 213
+- Broadcast address, with ifconfig, 461
+- Broadcast method (NIS client-to-server contact), 390–391
+- Browsing a server, using smbclient, 411–412
+- BugTraq mailing list, 215
+- Bulletin directory maintenance (Qpopper), 345
+- Bulletins, publishing in Qpopper, 347–348
+- Bus systems, installing Apache on, 256–297
+
+# C
+
+- Cached passwords, monitoring, 415
+- Caching servers, 226–248
+- Caldera Linux, 4
+- c or C program, 103, 117–118
+- C/C++ programming suite, 502
+- cd (change directory) command, 69, 228–229
+- CD player, 510
+- cdpath command ((spaces)), 275
+- CD-ROM, booting from, 18
+- CD-ROM drivers, support for old, 198
+- CERT (Computer Emergency Response Team), 215, 369
+- cckick command, 154
+- CGI script security, 295
+- Character devices, 107–108, 198
+- Chat, real-time, 510
+- chgrp command, 108
+- chmod command, 94, 109–110, 276, 486
+- chown command, 108
+- chroot command, 283
+- CIDR (Classless Inter Domain Routing), 459
+- class command ((spaces)), 268
+- Class ranges, in IP addresses, 456–457
+- ClearText, explained, 352
+- ClearText ASCII, 337
+- Client request to mount a server partition, 368–369
+- Client/server interactions (FTP), 264–265
+- Client-side DNS (Resolver), 230–232
+- Cloning users, 169
+- CNAME (canonical name) DNS record, 252
+- Code maturity level options, 196
+- Color scheme, KDE desktop, 51–53
+- Command box, in center of screen, 50
+- Command line Linux, 97–128
+- Command line user management tools, 83–89
+- Command-line shortcuts (bash), 102–103
+- Commands
+  - locating, 119
+  - run from a terminal window, 50
+- Comment formats (in /etc/named.conf), 233
+- Commetted lines, 172, 175, 211, 233, 388
+- Commenting out services, 211
+- Common Desktop Environment (CDE), 7, 44
+- Compiler error messages, 70–71
+- Compiling the Linux kernel, 187–204
+- Compiling software yourself, 67–72
+- Compress command ((spaces)), 275
+- Compressed archive, creating, 117
+- Compressed backups, 442
+- Compressing files, 114–115
+- Computer Emergency Response Team (CERT), 215, 369
+- Concatenating files, 117–118
+- Configurable of Linux, 11
+- Configure command (Qpopper), 341–342
+- configure --help command, 70
+- configure --prefix command, 70
+- Connection queue length, changing, 499
+- Connection state, 210
+- Connectivity problems with Samba, 415
+- Console drivers, 199
+- Context-sensitive help, 20
+- Control structures, See i-modes
+- Converting files, 112–114
+- COPS (Computer Oracle and Password System), 214
+- Copying files, 111–114
+- CORBA technology, 54–55
+- Core system services, 171–185
+- Corel WordPerfect 5, 508
+- corner activation feature, KDE desktop, 53
+- cost of response time, recovery and, 443
+- cp command, 111
+- cpp preprocessor, 502
+- crackers, 206
+- cron command, 183–185
+- cron entry, running COPS from, 214
+- cronjobs, listing, 184
+- crontab file, 184–185
+- cryptography, 346, 352–355, 362, 401
+- DES-encrypted password, 77, 80
+- desktop tools, 509
+- Desktops, 48–49
+- Destination IP address, 207
+- destination port, 207
+- Destination port number, 207
+- development software, real cost of, 6
+- Device drivers, NIC, 459–460
+- Device files, creating with mknod, 445
+- Devices, listing all active, 461
+- df (disk free) program, 119–120
+- DHCP client, 428
+  - configuring, 438
+  - options, 437–439
+- DHCP client daemon (dHclient), 437–439
+- DHCP (Dynamic Host Configuration Protocol), 427–440
+  - mechanics of, 429
+  - roots of, 428
+- DHCP server, 428–437
+  - compiling and installing, 430
+  - configuring, 429–437
+  - declarations, 431–432
+  - decoding, 429
+  - options, 435–436
+  - parameters, 432–435
+  - unpacking, 429
+- dhcdp.conf file, 430, 436–437
+- Dig tool (DNS), 259
+- Directories
+  - creating, 115–116
+  - explaining, 106–107, 144
+  - and kernel versions, 192
+  - mounting, 8
+  - mounting, 147
+  - removing, 116
+- Directory files, explained, 106–107
+- Directory location of a file, displaying, 119
+- Directory paths, need for, 8
+- Directory structure
+  - modifying, 192
+  - partitions within, 147
+- Directory tree, partitions in, 24
+- Disk device names, 153
+- Disk Druid partitioning tool, 25–26
+- Disk partitioning, See Partitions (disk)
+- Disk quotas, 165–170
+- Disk-hogging users, See 165–170
+- Diskless machines, 428
+- Disks
+  - benefits of sharing, 8
+  - location of, 153–154
+  - synchronizing, 120
+- Distributions (Linux)
+  - choosing, 4
+  - explained, 189
+- dvrt command (M4), 312
+- dnl instruction (M4), 313
+- DNS clients, configuring, 230–245
+- DNS database, creating, 252–258
+- DNS documentation entries, RP and TXT, 252
+- DNS (Domain Name Service), 219–261
+  - broken, 329
+  - CNAME entries in /etc/hosts file, 300
+  - domain vs. zone, 245
+  - domains and hosts, 222–223
+  - references, 260
+  - services, 231–232
+- DNS record types, 248–252
+- DNS resolution, 224–225
+- DNS servers, 220
+  - installing, 226–230
+  - types of, 223, 226
+- DNS tools, 258–260
+- DNS tree two layers deep, 222
+- DNS zone, vs. DNS domain, 245
+- Documentation files, distribution, 69
+- Documentation tools, 104–105
+- DOIMAIN macro (Sendmail), 314
+- Domain name (NIS)
+  - establishing, 10, 384–385, 389
+  - for secondary server, 393
+- domainname command, 384, 389
+- Domains, 10
+  - DNS, 222–223
+  - NIS vs. NT, 10
+  - top-level, 222
+- domainlateable feature (Sendmail), 317
+- Dot files, defined, 79
+- Drive summaries, 25–26
+- du (disk utilization) command, 118–119
+- Dual-booting issues, 16–17
+- Dump levels, concept of, 446
+- dump tool, 446–450
+  - to back up an entire system, 448–449
+  - command parameters, 447
+  - and suppressing tape size calculation, 447–448
+  - vs. tar, 450
+- dynamic addressing (DHCP), 428
+- dynamic-boot-lease-cutoff parameter (DHCP server), 433
+- dynamic-boot-lease-length parameter (DHCP server), 433
+
+# E
+
+- echo command, 495
+- EDITOR environment variable, 168
+- Editors, 127–128, 168
+- edquota command, 167–169
+- egcs package, 502
+- Electric Eyes (ee), 509
+- ELF binary format, 196
+- emacs editor, 127
+- E-mail, 79, 303–333
+  - reading with telnet, 337–339
+  - using POP for, 335–349
+- E-mail alias for a Web site administrator, 301
+- E-mail clients, 510
+- email command (ftpsrcs), 272
+- Enable Authenticated POP (APOP), 341
+- Encrypted passwords, 77, 80, 401, 413–415
+- Encrypting and sending data
+  - higher-bit, 355
+  - low-grade, 354–355
+  - process of, 353–354
+- Encription algorithms, Windows vs. UNIX, 401
+- Encryption key characteristics, 354–355
+- Enlightenment window manager, 54, 61
+- Environment variables (bash), 100–101
+  - as parameters, 102
+  - printing, 100
+  - setting, 100
+  - unsetting, 101
+- Error messages, compiler, 70–71
+- Escaped characters, using backslash for, 102
+- ESTABLISHED state (connection), 210
+- Ethernet device configuration, 459–462
+- Ethernet frames
+  - jumbo, 463
+  - with TCP packet component headers, 473
+- e2fsck tool, 152–153
+- Eudora (e-mail client), 510
+- Expect scripting language, 503
+- Experimental code, 196
+- Expert installation, 19
+- Explicit allow (firewalls), 486
+- Explicit deny (firewalls), 486
+- export command, 100
+- EXPORTS command, 374, 379
+- Exporting file systems, common problems, 374–375
+- EXPOSED_USER macro (Sendmail), 315
+- Extended partition, 157
+- ext2 file systems, 161, 198
+
+# F
+
+- fdisk utility, 154, 157–160
+- FEATURE macro (Sendmail), 315–319
+- File archives, creating onto tape, 450
+- File compression, 114–115
+- File conversions on the fly, 278–281
+- File handles, stale, 373
+- File ownership, 94–95
+- File permissions, 109–110, 276
+- File system exports, common problems, 374–375
+- File system sharing, 401
+- File systems, 28, 143–170, 198
+  - /proc, 483–500
+  - common problems with exporting, 375
+  - dumping active, 448
+  - making, 160–161
+  - managing, 140–153
+  - sharing, 401
+  - structure of, 144–146
+
+![](img/95b125a8bf06051f34d8aba73558b7eb_559_0.png)

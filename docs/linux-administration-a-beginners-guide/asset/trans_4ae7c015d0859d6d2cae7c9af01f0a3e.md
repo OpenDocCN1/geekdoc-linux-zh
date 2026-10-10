@@ -1,0 +1,151 @@
+
+如果你确实发现需要手动启动 **syslogd** 或修改在启动时运行它的脚本，你需要了解 **syslogd** 的命令行参数，如表 9-4 所示。
+
+## 表 9-4. **syslogd** 命令行参数
+
+| 参数 | 描述 |
+| :----------- | :--------------------------------------------------------- |
+| -d | 调试模式。通常，在启动时，**syslogd** 会从当前终端分离并开始在后台运行。使用 **-d** 选项时，**syslogd** 保留对终端的控制权，并在记录消息时打印调试信息。你极不可能需要此选项。 |
+| -f config | 指定一个配置文件作为默认 */etc/syslog.conf* 的替代。 |
+| -h | 默认情况下，**syslogd** 不转发那些真正目的地为其他主机的消息。*注意：如果你使用此参数，你有被用于分布式拒绝服务攻击的风险。* |
+| -I hostlist | 此选项允许你列出你愿意为其执行日志记录的主机。每个主机名应该是其简单名称，而不是其完全限定域名（FQDN）。你可以列出多个主机，只要它们由冒号分隔：`-I toolbox:fordoid` |
+| -m interval | 默认情况下，**syslogd** 每 20 分钟生成一条日志条目，作为“只是为了让你知道，我正在运行”的消息。这是为可能不繁忙的系统设计的。（如果你正在监视系统日志，并且在超过 20 分钟内没有看到任何一条消息，你就可以确定有某处出错了。）通过为 *interval* 指定一个数值，你可以指示 **syslogd** 在生成下一条消息前应该等待的分钟数。 |
+| -r | 默认情况下，作为一种安全措施，**syslogd** 守护进程拒绝来自网络的消息。此命令行参数启用此功能。 |
+| -s domainlist | 如果你接收到的 **syslog** 条目显示完整的 FQDN，你可以让 **syslogd** 剥离域名，仅保留主机名。只需将要去掉的域名列表作为冒号分隔列表作为 **-s** 选项的参数。例如：`-s x-files.com:conspiracy.com:wealthy.com` |
+
+`/etc/syslog.conf` 文件包含 `syslogd` 运行所需的配置信息。此文件的格式有点不寻常，但除非你开始需要寻求在特定文件或发送到远程日志记录机器中的特定信息，否则你拥有的默认配置文件可能就足够了。
+
+## 日志消息分类
+
+在我们理解 `/etc/syslog.conf` 文件格式本身之前，我们必须理解日志消息是如何被分类的。每条消息都有一个 `facility`（子系统/设施）和一个 `priority`（优先级）。子系统告诉我们消息源自哪个子系统，而优先级告诉我们消息的重要性。这两个值由一个点分隔。
+
+这两个值都有字符串等价物，使其更容易记忆。子系统和优先级的字符串等价物分别列在表 9-5 和表 9-6 中。
+
+## 表 9-5. `/etc/syslog.conf` 中子系统值的字符串等价物
+
+| 子系统 | 字符串等价物 | 描述 |
+| :--- | :--- | :--- |
+| `auth` | `auth` | 认证消息 |
+| `authpriv` | `authpriv` | 基本上与 `auth` 相同 |
+| `cron` | `cron` | 由 `cron` 子系统生成的消息（参见后文部分） |
+| `daemon` | `daemon` | 服务守护程序的通用分类 |
+| `kern` | `kern` | 内核消息 |
+| `lpr` | `lpr` | 打印机子系统消息 |
+| `mail` | `mail` | 邮件子系统消息（包括每封邮件的日志） |
+| `mark` | `mark` | 已废弃，但你可能会找到讨论它的书籍：`syslogd` 简单地忽略它 |
+| `news` | `news` | 通过 NNTP 子系统的消息 |
+| `security` | `security` | 与 `auth` 相同（不应使用） |
+| `syslog` | `syslog` | 来自 `syslogd` 自身的内部消息 |
+| `user` | `user` | 来自用户程序的通用消息 |
+| `uucp` | `uucp` | 来自 UUCP（UNIX 到 UNIX 复制）子系统的消息 |
+| `local0` - `local9` | `local0` - `local9` | 根据需求决定重要性的通用子系统级别 |
+
+## 表 9-6. /etc/syslog.conf 中优先级级别的字符串等价物
+
+| 优先级 | 字符串等价物 | 描述 |
+| :--- | :--- | :--- |
+| `debug` | `debug` | 调试语句 |
+| `info` | `info` | 杂项信息 |
+| `notice` | `notice` | 重要声明，但不一定是坏消息 |
+| `warning` | `warn` | 潜在危险情况 |
+| `err` | `error` | 错误条件 |
+| `crit` | `crit` | 关键情况 |
+| `alert` | `alert` | 指示重要事件的消息 |
+| `emerg` | `emerg` | 紧急情况 |
+
+**注意：** 优先级级别按照 syslogd 的严重程度排序。因此，*debug* 被认为完全不严重，而 *emerg* 则最关键。例如，子系统与优先级字符串的组合 *mail,crit* 指示邮件子系统存在关键错误（例如，磁盘空间已耗尽）。Syslogd 认为此消息比 *mail,info* 更重要，后者可能只是记录另一条消息的到达。
+
+Syslogd 也理解通配符。因此，你可以定义一大类消息；例如，*mail.* 指代所有与邮件子系统相关的消息。
+
+## /etc/syslog.conf 的格式
+
+以下是配置文件中每行的格式：
+
+```
+facility.priority...  由逗号分隔的目标  日志记录的文件/进程/主机
+```
+
+例如，
+
+```
+kernel.info    /var/log/kernlog
+```
+
+syslogd 可以发送日志消息的位置也非常灵活。它可以保存消息到文件，发送消息到 FIFO，发送到用户列表，或者（对于大型站点的集中式日志记录情况）发送到主日志主机。为了区分这些位置元素，以下规则应用于位置条目：
+
+- 如果位置以斜杠（`/`）开头，则消息指向文件。
+- 如果位置以管道符（`|`）开头，则消息指向 FIFO。
+- 如果位置以 `@` 开头，则消息指向主机。
+
+表 9-7 展示了根据这些规则的位置条目示例。
+
+如果你在位置条目前输入任何特殊字符，syslogd 假设该位置是一个逗号分隔的用户列表，消息将被写入他们的屏幕。如果你使用星号（`*`），syslog 将消息发送给所有登录的用户。通常，以交叉影线符号（`#`）开头的行是注释。
+
+现在让我们看一些配置文件的条目示例：
+
+```
+# Log all the mail messages in one place.
+mail.* /var/log/mailog
+```
+
+在这个例子中，我们表明邮件子系统中所有优先级的消息都应放置在 /var/log/mailog 文件中。
+
+## 表 9-7. 位置条目示例
+
+| 位置样式 | 描述 |
+| --- | --- |
+| /var/log/logfile | 一个文件。<br>注意：如果你在文件名前加一个破折号，syslogd 将在写入后不同步文件系统。这意味着如果在系统有机会刷新其缓冲区之前发生崩溃，你有丢失部分数据的风险。另一方面，如果某个应用程序日志记录过于冗长，使用此选项可以赢得性能。<br>提醒：如果你希望消息发送到控制台，你需要指定 /dev/console。 |
+| /tmp/mypipe | 一个管道。这种类型的文件是使用 mknod 命令创建的（参见第 6 章）。通过 syslogd 向管道的一侧提供数据，你可以运行另一个程序读取管道的另一侧。这是让程序解析日志输出并寻找关键情况的有效方式，以便在必要时呼叫你。 |
+| @loghost | 一个主机名。此示例将消息发送到 loghost。loghost 上的 syslogd 守护进程随后记录该消息。 |
+
+考虑下一个示例：
+
+```
+# Everybody gets emergency messages, plus log them on another
+# machine.
+*.*.emerg                                       @ghost;root
+```
+
+在这个例子中，我们看到任何具有 *emerg* 日志级别的子系统都被发送到一个运行名为 *loghost* 的 syslog 的另一个系统。此外，如果用户 *hdc*、*sashab* 或 *root* 已登录，被记录的消息将写入该用户的控制台。
+
+你也可以为单个事件在一行中指定多个选择器。例如：
+
+```
+*.*;mail.none;authpriv.none                      /var/log/messages
+```
+
+## /etc/syslog.conf 文件示例
+
+以下是一个完整的 syslog.conf 文件：
+
+```
+# Log all kernel messages to the console.
+# Logging much else clutters up the screen.
+*kern.*                                           /dev/console
+
+# Log anything (except mail) of level info or higher.
+# Don’t log private authentication messages!
+*.info;mail.none;authpriv.none                   /var/log/messages
+
+# The authpriv file has restricted access.
+authpriv.*                                        /var/log/secure
+
+# Log all the mail messages in one place.
+mail.*                                            /var/log/maillog
+
+# Everybody gets emergency messages, plus log them on another
+# machine.
+*.*.emerg                                         *
+
+# Save mail and news errors of level err and higher in a
+# special file.
+mail.*.err;news.*.err                             /var/log/spooler
+
+# Save boot messages also to boot.log
+local7.*                                          /var/log/boot.log
+```
+
+## Cron 程序
+
+cron 程序允许系统中的任何用户安排程序在任何日期、任何时间或每周的特定一天运行，精确到分钟。使用 cron 是一种极其高效的方法来自动化你的系统，定期生成报告，并
+

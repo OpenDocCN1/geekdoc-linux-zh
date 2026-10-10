@@ -1,0 +1,311 @@
+
+# L
+- Key-generation process, 362
+- kill command, 103, 124-125, 178, 211, 424
+  - -l option, 348
+  - security issues of, 124
+  - vs. terminate process, 124
+- Korganizer, 509-510
+- kpaint, 509
+- kscd CD player, 510
+- ksysv opening window, 142
+- ksysv tool, 44, 141-142, 384, 391, 394
+- kterm, 50
+- L command (disk), 158
+- Language, selecting during installation, 19-20
+- Languages (programing) with RedHat Linux, 501-505
+- Laptop IR port, 197
+- Large networks, deployment of NIS in, 397-398
+- leases, with IP addresses, 429
+- Less than sign (<), 102
+- LILO (Linux Loader) boot manager, 130-142
+  - boot process, 136-137
+  - command-line options, 136
+  - configuring, 130-135
+  - installing, 29-30
+  - options, 132-134
+  - running, 135-136
+  - setup screen, 29
+- lilo.conf file, 130-135
+  - default, 131
+  - editing, 201
+  - global options in, 132-133
+  - kernel options in, 30, 134
+  - per-block options in, 133
+- limit command (rprocess), 270
+- Linux mode (in LILO), 30
+- linker files, 112
+- Links, hard, 107. *See also* Symbolic links
+- Linux core development group, 188
+- Linux distributions, 4, 189
+  - choosing, 4
+  - coexisting with Microsoft Windows, 16-17
+  - vs. Windows NT, 3-11
+- Linux home page, 10
+- Linux kernel. *See* Kernel (Linux)
+- Linux Kernel Configuration General Setup, 195-196
+- Linux Kernel Configuration tool, 194-199
+- Linux partitions. *See* Partitions
+- Linux Password Authentication Module (PAM), 400
+- Linux shells, 78
+- Linux 6.1 Publishers Edition (with this book), 14
+- Linux system as a Windows client, 411-413
+- Linux system boot, 18, 23, 129-142
+- Linux text files, 80-83
+- Linuxberg, 511
+- LinuxCare, 17
+- Linuxconf package (configuration tool), 89
+  - adding a group, 93
+  - adding a user, 90
+  - adding a group, 94
+  - modifying a group, 93
+  - modifying a user, 91-92
+  - removing a user, 91-93
+  - User Privileges tab, 91
+  - using to manipulate users, 89-94
+- Lisp programming language, 505
+- LIST command (telnet), 338
+- LISTEN state (connection), 210
+- Lin command, 112
+- Load balancing, 213
+- Load sharing, 397
+- Loadable module support, 196
+- Local disks, mounting and unmounting, 146-151
+- Local mailer (Sendmail), 314
+- localhost, 234, 419
+- localnet (ACL), 234
+- local_procrunl feature (Sendmail), 318
+- Location entries, examples of, 182
+- Log commands (wu-ftpd), 274
+- Log entries, customizing, 273
+- Log entries (syslog), storing, 213
+- Log file (FTP), 278
+- Log message classifications, 180-181
+- Log message facility and priority, 180
+- Log messages with syslog, 212
+- Log parsing, 212
+- Log transfers (wu-ftpd), 274
+- logger command, 178
+- Logging, standardized, 178
+- logging statement (in /etc/named.conf), 235-236
+- Logging (wu-ftpd), 273-274
+- logstash, recording messages sent to, 213
+- Login shell, explained, 98
+- loginfails command (rprocess), 270-271
+- Login/password mechanism (UNIX), 400
+- Look-and-feel among applications, 7
+- Loopback address, 457
+- Loopback interface (localhost), 419
+- Lost+found directory, 153
+- Low-grade encryption, 354-355
+- lpd clients, 424-426
+- lpd (line printer daemon), 418, 426
+  - allowing remote users, 420
+  - basics of, 418-420
+  - input and output diagram, 419
+  - -f option, 426
+  - process steps, 418
+  - starting, 418-419
+- lpr command-line tool, 424-425
+  - options, 425
+  - with -P parameter, 425
+- lprm tool, 425-426
+- ls command, 106, 397
+- ls -1 command, 397
+- ls of program, 149
+
+# M
+- m command (fdisk), 154-155
+- Macros (Sendmail), 311-319, 323-324
+- Mahogany Mail, 310
+- Mail, 79, 303-333
+  - reading with telnet, 337-339
+  - using POP for, 335-349
+- Mail aliases file (Sendmail), 325-326
+- Mail delivery agent (MDA), 307
+- Mail filtering tool (Procmail), 314-315
+- Mail FROM: command (SMTP), 306
+- Mail hub, explained, 318
+- Mail logging (Sendmail), 332
+- Mail server, issues when deploying, 307
+- Mail service, components of, 307
+- Mail transfer agent (MTA), 307
+- Mail user agent (MUA), 307
+- Mailboxes, 79
+- MAILER macro (Sendmail), 314-315
+- mailalert feature (Sendmail), 316-317
+- mailq command (Sendmail), 328
+- mailstats (Sendmail), 310
+- Make all command, 394
+- make bzlimage command, 200
+- make command, 70, 193, 228-229, 341, 358, 385, 430
+- make config command, 193
+- Make Install command, 229, 358, 360, 403, 430, 476
+- make menuconfig command, 193
+- make sconfig command, 193
+- make zimage command, 200
+- Makefiles, 70
+  - all entry, 388
+  - editing, 385-388
+  - options that apply to Linux, 386-388
+  - and vpinit, 389-390
+- makemap (Sendmail), 310
+- man command, 104-105
+- man documentation system, 104-105
+- man (manual) pages, 104-105
+- man page sections, 104-105
+- man section references, 104
+- Manifest file (Samhain), 402
+- Maps (NIS)
+  - configured as shared, 388
+  - dumping, 395
+  - explained, 382-383
+  - rebuilding, 390
+  - updating, 390
+- MASQUERADE_AS macro (Sendmail), 315
+- Masquerading proxies, 490-491
+- Master boot record (MBR), 29, 131
+- Master NIS server, 383-390
+- max-lease-time parameter (DHCP server), 434
+- MC file, 323
+  - configuring Sendmail with, 311-324
+  - writing, 312
+- MD5 encryption method, 346
+- MD5-encrypted passwords, 33, 780
+- MERGE_GROUP setting (Makefile), 387
+- MERGE_PASSWD setting (Makefile), 386-387
+- message command (fpaccess), 272-273
+- Message file keywords (fpaccess), 272-273
+- Message script (sample), 139-141
+- M4 macro language, 311-312
+- Microsoft Windows NT. *See* Windows NT
+- MindTerm SSH clients, 356
+- MINUID and MINIGD, 386
+- Mixed access, FTP server, 286-287
+- mkr command, 115-116
+- mkfs2 utility, 161
+- mknod command, 108, 115, 445
+- mkswap utility, 161
+- Mobile machines, configuring, 428
+- Modules (Linux), 194-195, 459-460
+- Monitor frequency, 37
+- Monitoring the system, 212-215
+- more command, 118
+- Motif, 44
+- mount command, 147-148, 151, 375-377
+  - -o option, 147-148, 163, 375
+  - options, 148, 376
+- Mounts tables, maintaining, 162
+- Mounted directories, explained, 8
+- Mounted partitions, 23, 162
+- Mounting a partition, 368-369, 377
+- Mounting the root file system, 137
+- Mounting and unmounting local disks, 146-151
+- Mounts, hard vs. soft, 375-379
+- Mouse, selecting, 21-22
+- Mouse type installation menu, 22
+- Moving files, 111
+- MRTG (Multi Router Traffic Grapher), 213
+- mt command, 448
+  - for manipulating tape devices, 445-446
+  - parameters, 445
+- Multiple commands on the same line (bash), 103
+- Multiple desktops, KDE, 48-49
+- Multiple host name entries in /etc/hosts file, 300
+- Multiple partitions, creating, 25
+- Multi-user environment, 6-7, 79
+- mv command, 111
+- MX (mail exchanger) DNS record, 251
+- National Security Agency (NSA), 355
+- NetBIOS name server request handling, 402
+- Netmarks, 458, 461
+- Netscape Communicator, 509
+- netstat command, 207, 465-466
+  - options, 209, 466
+  - with -p option, 210
+  - with -r option, 466
+  - security implications of, 210
+  - using, 208-210
+- Network address translation (NAT), 470
+- Network Computers (NCs), 428
+- Network configuration, 455-467
+- Network device support, 197
+- Network disks, benefits of sharing, 8
+- Network File System. *See* NFS
+- Network file systems, 161-164
+- Network Information Services. *See* NIS
+- Network infrastructure, 443
+- Network interface cards (NICs), 459-463
+  - setting up at boot time, 461
+  - setting up under Red Hat Linux, 461-462
+- Network interfaces, modules and, 459-462
+- Network Neighbourhood, 8
+- Network security. *See* Security
+- Network services. *See* Services (network)
+- Network terminal support (ptys), 151
+- Network throughput, 443
+- Network users. *See* User accounts (users)
+- Networking
+  - advanced, 453-500
+  - finding more about, 456
+  - options, 196-197
+  - setting up, 30
+- Networking configuration screen, 31
+- next-server parameter (DHCP server), 434
+- NFS client permissions for shared partitions, 372-373
+- NFS clients, configuring, 375-377
+- NFS mount in /etc/fstab file, 162
+- NFS mount request, 368
+- NFS (Network File System), 8, 199, 367-379
+  - as a stateless protocol, 379
+  - checking whether it is running, 370
+  - components of, 371
+  - concept of, 368
+  - deploying under Linux, 368-379
+  - enabling, 370-371
+  - hard mounted, 378
+  - kernel support for, 371
+  - key server processes in, 379
+  - means of, 368-369
+  - security for, 369
+  - starting and stopping, 370
+  - troubleshooting, 377-378
+  - versions of, 369
+- NFS packet, 463
+- NFS partitions
+  - common uses for, 377
+  - mounting, 162, 376
+- NFS permission checking, 377
+- NFS server process, /etc/exports and, 374
+- NFS servers
+  - as NFS clients, 375
+  - configuring, 371-375
+- Nifty/Telnet SSH clients, 356
+- NIS client services, 392
+- NIS clients, configuring, 390-392
+- NIS client-to-server contact methods, 390-391
+- NIS distribution of /etc/hosts file, 221
+- NIS domain names, 383-385
+- NIS domains, 10, 383-385
+- NIS filenames, designing, 387-388
+- NIS maps
+  - configured as shared, 388
+  - dumping, 395
+  - explained, 382-383
+  - rebuilding, 390
+  - updating, 390
+- NIS master, setting up to push to slaves, 393
+- NIS (Network Information Services), 10, 33, 221, 381-398
+  - components of, 382-383
+  - implementing in a real network, 396-398
+  - keeping track of tables, 382
+  - key points to remember, 398
+  - vs. PDCs, 382
+  - splitting into multiple domains, 397
+  - start, 385
+  - tables vs. database, 383
+  - using in configuration files, 395-396
+  - Yellow Pages and, 384
+- NIS server, 383
+  - at each side of every WAN link, 397
+  - configuring secondary, 392-394

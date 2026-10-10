@@ -1,0 +1,7 @@
+Option | Description
+files number; | Maximum number of files named can open at once. Be aware: The more files BIND has open at once, the more its performance is affected by having to deal with all those file handles. (C programmers are familiar with this issue because of the select system call.)
+stacksize number; | Maximum amount of memory named can take off the system stack (used to track temporary variables in a program). Default under Linux is no limit. For number, follow the same conventions as for core size and data size.
+cleaning-interval number; | Specifies interval between server's removals of expired records from the cache. Default is every 60 minutes. If set to 0, no periodic cleaning will occur.
+interface-interval number; | By default, the server scans the list of interfaces on the system every 60 minutes. If listen-on is enabled (defined earlier in this table), named begins listening for DNS requests on any new interfaces it finds. If an interface has disappeared, named will stop listening to requests on that interface. If this option is set to 0, the server will check for available interfaces only when named is started up.
+
+Table 12-2. BIND Configuration Options (continued)
