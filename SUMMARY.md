@@ -415,6 +415,7 @@
 +   [探索 IBM eServer pSeries：IBM UNIX 服务器系列快速内部指南，第12版（探索 IBM 系列）](docs/exploring-ibm-eserver-pseries-the-instant-insiders-guide-to-/README.md)
 +   [探索树莓派：基于嵌入式 Linux 的现实世界接口](docs/exploring-raspberry-pi-interfacing-to-the-real-world-with-em/README.md)
 +   [Fedora Linux 工作站 40 快速指南](docs/express-guide-fedora-linux-workstation-40/README.md)
++   [Linux 设备极](docs/extreme-privacy---linux-devices/README.md)
 +   [极致隐私：Linux 设备](docs/extreme-privacy-linux-devices/README.md)
 +   [FreeBSD 使用手册](docs/fbsd-man/README.md)
 +   [Fedora 10 与 Red Hat Enterprise Linux 指南](docs/fedora-10-and-red-hat-enterprise-linux-bible-description-bas/README.md)
