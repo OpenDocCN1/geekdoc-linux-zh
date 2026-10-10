@@ -691,6 +691,7 @@
 +   [KDE Linux 入门指南](docs/kde-for-linux-for-dummies/README.md)
 +   [DE 编程圣经](docs/kde-programming-bible103/README.md)
 +   [Linux 内核项目：包含一套 Linux Mandrake OS 7.0 完整版及安装工具](docs/kernel-projects-for-linux-includes-a-complimentary-copy-of-l/README.md)
++   [Kismet 无线黑客技术](docs/kismet-hacking-wireless-networks/README.md)
 +   [Knoppix 的傻瓜](docs/knoppix-for-dummies/README.md)
 +   [Korn Shell ／Ksh：职场生存必备程序：计算机程序员与脚本编写者罗塞塔石系列第 1 卷](docs/korn-shell-ksh-essential-programs-for-your-survival-at-work-/README.md)
 +   [K Shell 编程示例](docs/korn-shell-programming-by-example/README.md)

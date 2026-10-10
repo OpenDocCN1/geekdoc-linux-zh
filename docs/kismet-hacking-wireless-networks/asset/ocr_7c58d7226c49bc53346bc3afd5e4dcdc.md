@@ -1,0 +1,7 @@
+# ## Summary
+
+In today’s world of everyone using wireless networks, there will almost always be other networks in the area of yours. This means that you probably only want to monitor threats directed at your network. In this case, you probably only want to monitor the channel you are operating your access points on, so as to avoid unnecessary data collection and possibly violating any number of laws regarding privacy and data inter- ception. As well, if you decide to channel hop, it’s likely you’ll miss a lot of data, which can be a problem if you are looking to monitor usage by users or by an intruder. If you want to monitor for performance reasons, channel hopping may be a good idea, so you can get a view of the wireless landscape of other networks in the area.
+
+Filters will be your friend as well. If you’re monitoring your network and all the traffic going over it, filters can be used to limit the amount of data collected to just the minimum necessary and the unusual, otherwise things will become very big, very quickly.
+
+The level of complexity is up to your imagination, but for the purposes of this book, we focus on Kismet’s strength as a cheap and effective way to monitor your small network in an office.

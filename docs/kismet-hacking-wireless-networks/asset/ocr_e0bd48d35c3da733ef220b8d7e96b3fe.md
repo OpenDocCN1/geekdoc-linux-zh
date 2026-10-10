@@ -1,0 +1,7 @@
+Both BackTrack 2 and BackTrack 3 Beta are available. Since BackTrack 3 Beta has very few bugs and is otherwise stable, this version is recommended (and will be the focus of this chapter). Furthermore, there are two versions of BackTrack 3 Beta: a \~700 MB CD image version (used in this chapter), and a larger (\~1 GB) version for Universal Serial Bus (USB) thumb drives that includes some additional (but unnecessary for our purposes) modules.
+
+You can download directly via Hypertext Transfer Protocol (HTTP) or File Transfer Protocol (FTP) from ten different mirrors, or by torrent. If you have the time, it is recommended (and more courteous) to use the torrent so that you can share some bandwidth. When you’re finished downloading the ISO, be sure to check the MD5 hash of the file. This will save you some hassle later if the burned CD doesn’t work correctly. You can find a simple Message Digest 5 (MD5) hash calculator at http://www.pc-tools.net/win32/md5sums/ (see Figure 10.2, with BT3b hash inset). Simply match the MD5 calculation with the hash posted at the Remote-Exploit download page, to confirm that your file is an authentic reproduction of the original, free from tampering or errors.
+
+# Figure 10.2 Confirming the MDS Hash
+
+![](bbox=[0.14, 0.53, 0.87, 0.85])

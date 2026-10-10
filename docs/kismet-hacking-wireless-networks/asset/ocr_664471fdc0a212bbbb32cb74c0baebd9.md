@@ -1,0 +1,13 @@
+reflects radio waves back to the earth's surface, and the waves subsequently bounce back up to the ionosphere again. This process continues until the energy of the waves dissipates.
+
+Another researcher by the name of Reginald Fessenden proceeded to further develop Marconi's achievements, and he became the first person to create a radio band wave of human speech. The importance of his results was felt worldwide, as radio was no longer limited to telegraph codes.
+
+# # Mounting Radio-Telephones in Cars
+
+In 1921, mobile radios began operating in the 2MHz range, which is just above the Amplitude Modulation (AM) frequency range of current radios. These mobile radios were generally used for law enforcement activities only. They were not integrated with the existing wireline phone systems that were much more common at that time—since the technology was still so new, the equipment was considered experimental and not practical for mass distribution. In fact, people originally did not consider mobile radio as a technology for the public sector. Instead, the technology was developed for police and emergency services personnel, who really served as the pioneers in mobile radio.
+
+It was not until 1924 that the voice-based wireless telephone had the ability to be bi-directional, or two-way. Bell Laboratories invented this breakthrough telephone. Not only could people now receive messages wirelessly, they could also respond to the message immediately, greatly increasing convenience and efficiency. This improved system was still not connected to landline telephone systems, but the evolution of wireless communication had taken one more major step. One issue that still plagued this early mobile radio system was the sheer size of the radio; it took up an entire trunk. Add to the size restriction, the cost of the radio system that was almost as expensive as the vehicle.
+
+In 1935, Edwin Howard Armstrong introduced Frequency Modulation (FM). This technology not only increased the overall transmission quality of wireless radio but also drastically reduced the size of the equipment. The timing could not have been any better. World War II had begun, and the military quickly embraced FM technology to provide two-way mobile radio communication. Due to the war, companies immediately sensed the urgency to develop the FM technology rapidly, and companies such as Motorola and AT&T immediately began designing considerably smaller equipment. Many of these new inventions became possible due to the invention of the circuit board, which changed the world of electronic equipment of all types.
+
+![](bbox=[0.73, 0.93, 0.98, 0.96])

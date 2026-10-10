@@ -1,0 +1,13 @@
+referred to as warwalking; flying, which is often referred to as warflying; bicycling, and so forth. Wardriving does not utilize the resources of any wireless access point or network that is discovered, without prior authorization of the owner.
+
+# The Terminology History of Wardriving
+
+The term wardriving comes from “War dialing,” a term that was introduced to the general public by Matthew Broderick’s character, David Lightman, in the 1983 movie, *War Games*. War dialing is the practice of using a modem attached to a computer to dial an entire exchange of telephone numbers sequentially (e.g., 555-1111, 555-1112, and so forth) to locate any computers with modems attached to them.
+
+Essentially, Wardriving employs the same concept, although it is updated to a more current technology: wireless networks. A wardriver drives around an area, often after mapping out a route first, to determine all of the wireless access points in that area. Once these access points are discovered, a wardriver uses a software program or Web site to map the results of his or her efforts. Based on these results, a statistical analysis is performed. This statistical wyalisot can be of one drive, one area, or a general overview of all wireless networks.
+
+The concept of driving around discovering wireless networks probably began the day after the first wireless access point was deployed. However, wardriving became more well-known when the process was automated by Peter Shipley, a computer security consultant in Berkeley, California. During the fall of 2000, Shipley conducted an 18-month survey of wireless networks in Berkeley, California and reported his results at the annual DefCon hacker conference in July 2001. This presentation, designed to raise awareness of the insecurity of wireless networks that were deployed at that time, laid the groundwork for the “true” wardriver.
+
+# Wardriving Misconceptions
+
+Some people confuse the terms wardriver and *hacker*. The term “hacker” was originally used to describe a person that could modify a computer to suit his or her own purposes. However, over time and owing to the confusion of the masses and consistent media abuse, the term hacker is now commonly used to describe a criminal; someone that accesses a computer or network without owner authorization. The same situation can be applied to the term wardriver. Wardriver has been used to describe someone that accesses wireless networks without owner authorization. An individual that accesses a computer system (wired or wireless) without authorization is a criminal. Criminality has nothing to do with hacking or wardriving.
