@@ -1,0 +1,234 @@
+
+## User Input
+
+We've seen some basic user interaction with the code from a few of the examples earlier, so now would be a good time to focus solely on how you would get information from the user then store and present it.
+
+### USER FRIENDLY
+
+The type of input you want from the user will depend greatly on the type of program you're coding. For example, a game may ask for a character's name, whereas a database can ask for personal details.
+
+#### STEP 1
+
+If it's not already, open the Python 3 IDLE Shell, and start a New File in the Editor. Let's begin with something really simple, enter:
+
+```python
+print("Hello")
+firstname=input("What is your first name? ")
+print("Thanks.")
+surname=input("And what is your surname? ")
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_107_0.png)
+
+#### STEP 2
+
+Save and execute the code, and as you already no doubt suspected, in the IDLE Shell the program will ask for your first name, storing it as the variable `firstname`, followed by your surname; also stored in its own variable (`surname`).
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_107_1.png)
+
+#### STEP 3
+
+Now that we have the user's name stored in a couple of variables we can call them up whenever we want:
+
+```python
+print("Welcome", firstname, surname, ". I hope you're well today.")
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_107_2.png)
+
+#### STEP 4
+
+Run the code and you can see a slight issue, the full stop after the surname follows a blank space. To eliminate that we can add a plus sign instead of the comma in the code:
+
+```python
+print("Welcome", firstname, surname + ". I hope you're well today.")
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_107_3.png)
+
+#### STEP 5
+
+You don't always have to include quoted text within the input command. For example, you can ask the user their name, and have the input in the line below:
+
+```python
+print("Hello. What's your name?")
+name=input()
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_0.png)
+
+#### STEP 6
+
+The code from the previous step is often regarded as being a little neater than having a lengthy amount of text in the input command, but it's not a rule that's set in stone, so do as you like in these situations. Expanding on the code, try this:
+
+```python
+print("Hello! Who goes there?")
+name=input()
+```
+
+#### STEP 7
+
+It's a good start to a text adventure game, perhaps? Now you can expand on it and use the raw input from the user to flesh out the game a little:
+
+```python
+if name == "David":
+    print("Welcome, good sir. You may pass.")
+else:
+    print("I know you not. Prepare for battle!")
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_1.png)
+
+#### STEP 8
+
+What you've created here is a condition, which we will cover soon. In short, we're using the input from the user and measuring it against a condition. So, if the user enters David as their name, the guard will allow them to pass unhindered. Else, if they enter a name other than David, the guard challenges them to a fight.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_1.png)
+
+#### STEP 9
+
+Just as you learned previously, any input from a user is automatically a string, so you need to apply a TypeCast in order to turn it into something else. This creates some interesting additions to the input command. For example:
+
+```python
+# Code to calculate rate and distance
+print("Input a rate and a distance")
+rate = float(input("Rate: "))
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_2.png)
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_3.png)
+
+#### STEP 10
+
+To finalise the rate and distance code, we can add:
+
+```python
+distance = float(input("Distance: "))
+print("Time: ", (distance / rate))
+```
+
+Save and execute the code and enter some numbers. Using the `float(input` element, we've told Python that anything entered is a floating point number rather than a string.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_4.png)
+![](img/d501697c83491ed0bb4b382b0d28ef0a_108_5.png)
+
+## Creating Functions
+
+Now that you’ve mastered the use of variables and user input, the next step is to tackle functions. You’ve already used a few functions, such as the `print` command but Python enables you to define your own functions.
+
+### FUNKY FUNCTIONS
+
+A function is a command that you enter into Python to do something. It’s a little piece of self-contained code that takes data, works on it and then returns the result.
+
+#### STEP 1
+
+It’s not just data that a function works on. They can do all manner of useful things in Python, such as sort data, change items from one format to another and check the length or type of items. Basically, a function is a short word that’s followed by brackets. For example, `len()`, `list()` or `type()`.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_109_0.png)
+
+#### STEP 2
+
+A function takes data, usually a variable, works on it and returns the end value. The data being worked on goes inside the brackets, so if you wanted to know how many letters are in the word *antidisestablishmentarianism*, then you’d enter: `len("antidisestablishmentarianism")` and the number 28 would return.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_109_1.png)
+
+#### STEP 3
+
+You can pass variables through functions in much the same manner. Let’s assume you want the number of letters in a person’s surname, you could use the following code (enter the text editor for this example):
+
+```python
+name = input("Enter your surname: ")
+count = len(name)
+print("Your surname has", count, "letters in it.")
+```
+
+Press F5 and save the code to execute it.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_109_2.png)
+
+#### STEP 4
+
+Python has tens of functions built into it, far too many to get into in the limited space available here. However, to view the list of built-in functions available to Python 3, navigate to www.docs.python.org/3/library/functions.html. These are the predefined functions, but since users have created many more, they’re not the only ones available.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_109_3.png)
+
+#### STEP 5
+
+Additional functions can be added to Python through modules. Python has a vast range of modules available that can cover numerous programming duties. They add functions and can be imported as and when required. For example, to use advanced Mathematics functions enter:
+
+```python
+import math
+```
+
+Once entered, you have access to all the Math module functions.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_110_0.png)
+
+#### STEP 6
+
+To use a function from a module enter the name of the module followed by a full stop, then the name of the function. For instance, using the Math module, since you've just imported it into Python, you can utilise the square root function. To do so, enter:
+
+```python
+math.sqrt(16)
+```
+
+You can see that the code is presented as `module.function(data)`.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_110_1.png)
+
+### FORGING FUNCTIONS
+
+There are many different functions you can import created by other Python programmers and you will undoubtedly come across some excellent examples in the future; you can also create your own with the `def` command.
+
+#### STEP 1
+
+Choose File > New File to enter the editor, let's create a function called `Hello`, that greets a user. Enter:
+
+```python
+def Hello():
+  print("Hello")
+Hello()
+```
+
+Press F5 to save and run the script. You can see `Hello` in the Shell, type in `Hello()` and it returns the new function.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_110_2.png)
+
+#### STEP 2
+
+Let's now expand the function to accept a variable, the user's name for example. Edit your script to read:
+
+```python
+def Hello(name):
+  print("Hello", name)
+Hello("David")
+```
+
+This will now accept the variable `name`, otherwise it prints `Hello David`. In the Shell, enter `name="Bob"` then: `Hello(name)`. Your function can now pass variables through it.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_110_4.png)
+
+#### STEP 3
+
+To modify it further, delete the `Hello('David')` line, the last line in the script and press Ctrl+S to save the new script. Close the Editor and create a new file (File > New File). Enter the following:
+
+```python
+from Hello import Hello
+Hello("David")
+```
+
+Press F5 to save and execute the code.
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_110_3.png)
+
+#### STEP 4
+
+What you've just done is import the `Hello` function from the saved `Hello.py` program and then used it to say hello to David. This is how modules and functions work: you import the module then use the function. Try this one, and modify it for extra credit:
+
+```python
+def add(a, b):
+  result = a + b
+  return result
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_110_5.png)

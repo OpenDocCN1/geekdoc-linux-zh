@@ -1,0 +1,22 @@
+![](bbox=[0.06, 0.04, 0.12, 0.09])
+
+
+
+# # Virus!
+
+# ## DID YOU KNOW...
+
+that one of the first programmed computer viruses that spread outside of a controlled system, i.e., into the wild, was called Elk Cloner and it was coded in 1982 by Rich Skrenta, a fifteen year old student.
+
+Elk Cloner was programmed to infect the Apple DOS 3.3 operating system, and attached to a game. When the game was played fifty times the virus would be activated and instead of displaying the game the virus would blank the screen and display a poem:
+
++   - Elk Cloner:
++   - The program with a personality
+
+It will get on all your disks  
+It will infiltrate your chips  
+Yes, it's Cloner!
+
+It will stick to you like glue  
+It will modify RAM too  
+Send in the Cloner!

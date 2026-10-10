@@ -1,0 +1,23 @@
+# # Compile and Execute
+
+You’ve created your first C++ program and you now understand the basics behind the structure of one. Let’s get things moving and compile and execute, or run if you prefer, the program and see how it looks.
+
+# ## GREETINGS FROM C++
+
+Compiling and executing code from within Geany is remarkably simple and just a matter of clicking a couple of icons and seeing the result. Here’s how it’s done.
+
+**STEP 1** Open Geany, if you haven’t already, and load up the previously saved Hello World code you created. Ensure that there are no visible errors, such as a missing semicolon at the end of the std::cout line.
+
+![](bbox=[0.06, 0.43, 0.49, 0.66])
+
+**STEP 3** When you click the Build icon, the pane at the bottom of the Geany interface displays some results. If all is well, you will see a successful compilation. If not then Geany issues an error along with the line the error was found on.
+
+![](bbox=[0.51, 0.43, 0.94, 0.66])
+
+**STEP 2** If your code is ready, look to the menu bar along the top of the Geany window. Notice that midway along the line of icons there’s a red brick icon. This is Build, which when clicked runs the compiler, checking it against the C++ standards to see if there are any errors that stop it from running.
+
+![](bbox=[0.06, 0.74, 0.49, 0.95])
+
+**STEP 4** With the code successfully built, it’s now time to execute it. Next to the Build icon there’s a paper aeroplane icon, this is the Run icon. You can’t run code that hasn’t been previously built or has an error in place. Click the Run icon.
+
+![](bbox=[0.51, 0.74, 0.94, 0.95])

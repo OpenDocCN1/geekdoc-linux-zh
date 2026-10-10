@@ -852,6 +852,7 @@
 +   [Linux 集群架构 (Kaleidoscope)](docs/linux-cluster-architecture-kaleidoscope/README.md)
 +   [Linux 集群构建与维护指南](docs/linux-clustering-building-and-maintaining-linux-clusters/README.md)
 +   [Linux 编码与编程 - 第12版，2022年](docs/linux-coding-and-programming---12th-edition-2022/README.md)
++   [Linux 编程与代码编写 - 第 14 版, 2022](docs/linux-coding-and-programming---14th-edition-2022/README.md)
 +   [Linux 命令初学者指南：用简单方法学习 Linux 命令、标志和选项](docs/linux-command-for-beginners-learn-linux-commands-flags-and-o/README.md)
 +   [Linux 命令行入门指南](docs/linux-command-line/README.md)
 +   [Linux 命令行：管理员初学者指南](docs/linux-command-line-an-admin-beginners-guide/README.md)

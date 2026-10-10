@@ -1,0 +1,49 @@
+**STEP 5** Close the command prompt or Terminal and relaunch the IDLE Shell. When you now enter: `import pyname`, the module will be imported into the code without any problems. You’ll find that most code downloaded or copied from the Internet will contain a module, mainstream of unique, these are usually the source of errors in execution due to them being missing.
+
+![](bbox=[0.06, 0.23, 0.48, 0.33])
+
+**STEP 8** Multiple modules can be imported within your code. To extend our example, use:
+```python
+import random
+import math
+for i in range(5):
+  print(random.randint(1, 25))
+print(math.pi)
+```
+
+![](bbox=[0.52, 0.27, 0.95, 0.38])
+
+**STEP 6** The modules contain the extra code needed to achieve a certain result within your own code, as we’ve previously experimented with. For example:
+`import random`
+Brings in the code from the Random Number Generator module. You can then use this module to create something like:
+```python
+for i in range(10):
+    print(random.randint(1, 25))
+```
+
+![](bbox=[0.06, 0.54, 0.48, 0.65])
+
+**STEP 9** The result is a string of random numbers followed by the value of Pi as pulled from the Math module using the print(math.pi) function. You can also pull in certain functions from a module by using the from and import commands, such as:
+```python
+from random import randint
+for i in range(5):
+    print(randint(1, 25))
+```
+
+![](bbox=[0.52, 0.54, 0.95, 0.65])
+
+**STEP 7** This code, when saved and executed, will display ten random numbers from 1 to 25. You can play around with the code to display more or less, and from a great or lesser range. For example:
+`import random`
+```python
+for i in range(25):
+    print(random.randint(1, 100))
+```
+
+![](bbox=[0.06, 0.8, 0.48, 0.91])
+
+**STEP 10** This helps create a more streamlined approach to programming. You can also use import module*, which will import everything defined within the named module. However, it’s often regarded as a waste of resources but it works nonetheless. Finally, modules can be imported as aliases:
+`import math as m`
+`print(m.pi)`
+Of course, adding comments helps to tell others what’s going on.
+
+![](bbox=[0.52, 0.8, 0.95, 0.91])

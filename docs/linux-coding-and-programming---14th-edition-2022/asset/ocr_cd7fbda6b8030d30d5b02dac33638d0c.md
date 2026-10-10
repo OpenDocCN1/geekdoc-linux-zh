@@ -1,0 +1,3 @@
+![](bbox=[0.0, 0.0, 1.0, 1.0])
+
+> DID YOU KNOW... that the word debugging in computing terms comes from Admiral Grace Hopper, who back in the 40s was working on a monolithic Harvard Mark II electromechanical computer. According to legend Hopper found a moth stuck in a relay, thus stopping the system from working. Removal of the moth was hence called debugging.

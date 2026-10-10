@@ -1,0 +1,25 @@
+# Update Mint via the Terminal
+
+**STEP 5**  Depending on the state of your updates, if you have any waiting to be installed, you might be asked if you want to apply the results of the sudo apt-get upgrade command. You can press y to accept and continue. What's happening here is that apt-get has some updated software to apply to Mint, and you're okaying the action.
+
+![](bbox=[0.04, 0.23, 0.48, 0.39])
+
+**STEP 7**  Essentially, that's it, your system is now up to date according to the available list of packages from the apt-get update command. You can run through the process one more time, just to check if everything went okay. To recap, enter: sudo apt-get update, press Enter, then type: sudo apt-get upgrade and press Enter.
+
+![](bbox=[0.5, 0.23, 0.95, 0.4])
+
+**STEP 6**  There's likely to be a long list of what seems gibberish now filling your Terminal window but don't worry. The files necessary for the upgrade have been downloaded, prepared, unpacked, processed, installed and set up correctly. There's a lot going on when you perform an upgrade, even with the smallest package.
+
+**STEP 8**  Interestingly, Linux Mint, among other distros, offers you the ability to chain several commands together. In this example, therefore, we can use sudo apt-get update && sudo apt-get upgrade. The double ampersand is what combines the commands and works perfectly, providing the preceding command went without a hitch. It's recommended to start any session with the update and upgrade combo.
+
+![](bbox=[0.04, 0.52, 0.48, 0.71])
+
+![](bbox=[0.5, 0.52, 0.95, 0.71])
+
+# TERMINAL VS UPDATE MANAGER?
+
+Why use the Terminal to update and upgrade over the Update Manager, regardless of the distro you're using? Some users greatly prefer using the Terminal to update their Linux systems and accompanying apps, in the belief that it's better. However, that's not often the case.
+
+Using the Terminal, apt-get upgrade, doesn't handle changing dependencies between versions of packages, so if a package has its dependent files changed from one version to another, then the upgrade is held back.
+
+The Update Manager, or Software Manager (depending on the distro), often phases its updates and marks those packages with changed dependencies for updating. However, and this is where Linux can often get confusing, sometimes it doesn't. It all boils down to the developer of the package being updated and the way the package is held in the distro's repositories and whether the update is classified as stable or not. In essence, from the point of view of the user, if you update and upgrade using both the Terminal and the Update Manager regularly, then you will be as up to date as possible, and get the essential and necessary stable versions of the packages and core software. If you're looking for cutting edge package updates, then it's best to opt for a rolling release distro instead.

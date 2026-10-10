@@ -1,0 +1,31 @@
+# Creating Bash Scripts – Part 1
+
+STEP 5
+Let's start with a simple script to output something to the Terminal. Enter `xed helloworld.sh`. This will launch Xed and create a file called helloworld.sh. In Xed, enter the following: `#!/bin/bash`, then on a new line: `echo Hello World!`.
+
+![](bbox=[0.08, 0.22, 0.47, 0.4])
+
+STEP 6
+The `#!/bin/bash` line tells the system what Shell you're going to be using, in this case Bash. The hash (#) denotes a comment line, one that is ignored by the system. The exclamation mark (!) means that the comment is bypassed and will force the script to execute the line as a command. This is also known as a Hash-Bang.
+
+![](bbox=[0.08, 0.51, 0.47, 0.69])
+
+STEP 7
+You can save this file, clicking `File > Save`, and exit back to the Terminal. Entering `ls`, will reveal the script in the folder. To make any script executable, and able to run, you need to modify its permissions. Do this with `chmod +x helloworld.sh`. You need to do this with every script you create.
+
+![](bbox=[0.08, 0.81, 0.47, 0.95])
+
+STEP 8
+When you enter `ls` again, you can see that the helloworld.sh script has now turned from being white to green, meaning that it's now an executable file. To run the script, in other words make it do the things you've typed into it, enter: `./helloworld.sh`.
+
+![](bbox=[0.53, 0.23, 0.92, 0.4])
+
+STEP 9
+Although it's not terribly exciting, the words ‘Hello World!’ should now be displayed in the Terminal. The `echo` command is responsible for outputting the words after it in the Terminal, as we move on you can make the `echo` command output to other sources.
+
+![](bbox=[0.53, 0.51, 0.92, 0.69])
+
+STEP 10
+Think of `echo` as the old BASIC Print command. It displays either text, numbers or any variables that are stored in the system, such as the current system date. Try this example: `echo Hello World! Today is $(date +%A). The $ (date +%A) is calling the system variable that stores the current day of the week.
+
+![](bbox=[0.53, 0.81, 0.92, 0.95])

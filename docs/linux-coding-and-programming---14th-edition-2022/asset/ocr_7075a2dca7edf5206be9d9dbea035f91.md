@@ -1,0 +1,59 @@
+# Common Coding Mistakes
+
+When you start something new you're inevitably going to make mistakes, this is purely down to inexperience and those mistakes are great teachers in themselves. However, even experts make the occasional mishap. Thing is, to learn from them as best you can.
+
+# X=MISTAKE, PRINT Y
+
+There are many pitfalls for the programmer to be aware of, far too many to be listed here. Being able to recognise a mistake and fix it is when you start to move into more advanced territory, and become a better coder. Everyone makes mistakes, even coders with over thirty years' experience. Learning from these basic, common mistakes help build a better coding foundation.
+
+# SMALL CHUNKS
+
+It would be wonderful to be able to work like Neo from The Matrix movies. Simply ask, your operator loads it into your memory and you instantly know everything about the subject. Sadly though, we can't do that. The first major pitfall is someone trying to learn too much, too quickly. So take coding in small pieces and take your time.
+
+![](bbox=[0.32, 0.45, 0.42, 0.61])
+
+# EASY VARIABLES
+
+Meaningful naming for variables is a must to eliminate common coding mistakes. Having letters of the alphabet is fine but what happens when the code states there's a problem with x variable. It's not too difficult to name variables lives, money, player! and so on.
+
+```
+1. var points = 1023;  
+2. var lives = 3;  
+3. var totalTime = 45;  
+4. write("Points: " + points);  
+5. write("lives: " + lives);  
+6. write("Total Time: " + totalTime + " sec");  
+7. write("----------...--
+```
+
+# //COMMENTS
+
+Use comments. It's a simple concept but commenting on your code saves so many problems when you next come to look over it. Inserting comment lines helps you quickly sift through the sections of code that are causing problems, also useful if you need to review an older piece of code.
+
+```
+22. orig == 0;  
+23. target = 2;  
+--  
+24.  
+25. @endif  
+26. if (n == 0)  
+27.     return;  
+28.  
+29. //  
+30. // Loop unrolling.  
+...  
+34. // (n & (-3)) is the greatest multiple of 4 less than n.  
+35. // In the while loop ahead, orig will move to  
+36. // increments (4 elements of 2 bytes).  
+37. // end marks our barrier for not falling into  
+38. char const * const end = orig + 2 * (n & (-3))  
+39. // See if we're aligned for writing in 64 or  
+40. #if SIZEOF_LONG == 8  
+41. #define( end8 ) || defined ( x86_64
+```
+
+# PLAN AHEAD
+
+While it's great to wake up one morning and decide to code a classic text adventure, it's not always practical without a good plan. Small snippets of code can be written without too much thought and planning but longer and more in-depth code requires a good working plan to stick to and help iron out the bugs.
+
+![](bbox=[0.53, 0.8, 0.92, 0.93])
