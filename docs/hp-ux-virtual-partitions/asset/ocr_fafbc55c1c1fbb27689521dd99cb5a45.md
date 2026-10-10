@@ -1,0 +1,22 @@
+![](bbox=[0.15, 0.11, 0.92, 0.48])
+
+Figure 12-18 *Global Summary - Short Time Period*
+
+Figure 12-18 shows a finer granularity of the utilization of many system resources during the shorter time window. You can now view the ways in which various system resources are related to other system resources.
+
+You can find the status of VantagePoint Performance Analyzer/UX running on your system with a useful command called **perfstat**. The following example shows issuing the **perfstat** command with the “-?” option to see all **perfstat** options:
+
+```
+# perfstat -?
+
+usage: perfstat [options]
+
+Unix option Function
+-? List all perfstat options.
+-c Show system configuration information.
+-e Search for warnings and errors from
+   performance tool status files.
+-f List size of performance tool status files.
+-p List active performance tool processes.
+-t Display last few lines of performance tool
+```

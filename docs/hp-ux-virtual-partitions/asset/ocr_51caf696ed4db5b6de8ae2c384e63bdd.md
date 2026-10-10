@@ -1,0 +1,1 @@
+cal white paper on \(v\)Pars. and managed the Early Access Program for HP customers on \(v\)Pars. Through his interactions with customers and HP technologists he is helping to shape the future of partitioning technologies within Hewlett-Packard.

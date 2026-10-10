@@ -1,0 +1,3 @@
+# Manual Pages for Commands Used in Chapter 1
+
+The following section contains copies of the manual pages for commands used in Chapter 1. This makes a quick reference for you to use when issuing the commands commonly used throughout your system administration day. The manual pages, more commonly referred to as man pages, are listed in detail with the exception of the Software Distributor (SD-UX). Because Software Distributor is commonly used from the GUI, only a summary of the command-line version of these commands is given. These commands are listed under ‘sw command summaries.’

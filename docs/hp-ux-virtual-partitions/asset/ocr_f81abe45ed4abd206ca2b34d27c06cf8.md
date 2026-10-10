@@ -1,0 +1,1 @@
+This output shows the default roles that have been set up for SCM and a brief description of each. Since you can perform most any function you want in the graphical version of SCM, I don't expect you'll be running many functions at the command line; however, it's good to know these commands exist.

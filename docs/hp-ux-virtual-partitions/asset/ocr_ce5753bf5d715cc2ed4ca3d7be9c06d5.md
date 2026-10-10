@@ -1,0 +1,55 @@
+```
+# perfstat -f
+```
+*************************************************************
+***  perfstat for ux6 on Fri May 15 12:20:08 EDT
+*************************************************************
+
+ls -l list of performance tool status files in /var/opt/perf:
+```
+-rw-rw-rw-    1 root     root      7812 May 10 19:35 status_alarmgen
+-rw-r-r--     1 root     root         0 May 10 02:40 status.mi
+-rw-rw-rw-    1 root     root      3100 May 10 02:40 status_perfIbd
+-rw-rw-rw-    1 root     root      3978 May 10 02:40 status_rep_server
+-rw-r-r-----    1 root     root      6079 May 11 23:30 status.scope
+-rw-r-r-----    1 root     root         0 Mar 31 07:26 status.ttd
+```
+`**** (end of perfstat -f output) ****`
+```
+
+Using the -v option displays the version strings for the performance tools running, as shown in the following listing:
+
+```
+# perfstat -v
+```
+*************************************************************
+***  perfstat for ux6 on Fri May 15 12:20:08 EDT
+*************************************************************
+
+listing version strings for performance tool files:
+```
+NOTE: The following software version information can be compared with the version information shown in the /opt/perf/ReleaseNotes file(s).
+```
+
+| MeasureWare executables in the directory /opt/perf/bin | | |
+| :--- | :--- | :--- |
+| scopeux C.01.00 | 12/17/97 HP-UX 11.0+ |
+| ttd A.11.00.15 | 12/15/97 HP-UX 11.0+ |
+| perflbd C.01.00 | 12/17/97 HP-UX 11.0+ |
+| alarmgen C.01.00 | 12/17/97 HP-UX 11.0+ |
+| agdbserver C.01.00 | 12/17/97 HP-UX 11.0+ |
+| agsysdb C.01.00 | 12/17/97 HP-UX 11.0+ |
+| rep_server C.01.00 | 12/17/97 HP-UX 11.0+ |
+| extract C.01.00 | 12/17/97 HP-UX 11.0+ |
+| utility C.01.00 | 12/17/97 HP-UX 11.0+ |
+| mwa A.10.52 | 12/05/97 |
+| perfstat A.11.01 | 11/19/97 |
+| dlslog C.01.00 | 12/17/97 HP-UX 11.0+ |
+| sdilcomp C.01.00 | 12/17/97 HP-UX 11.0+ |
+| sdi1expt C.01.00 | 12/17/97 HP-UX 11.0+ |
+| sdigendata C.01.00 | 12/17/97 HP-UX 11.0+ |
+| sdiltil C.01.00 | 12/17/97 HP-UX 11.0+ |
+| Measureware libraries in the directory /opt/perf/lib | | |
+| libmwa.sl C.01.00 | 12/17/97 HP-UX 11.0+ |
+| libmwa.a A.11.00.15 | 12/15/97 HP-UX 11.0 |
+| libarm.sl A.11.00.15 | 12/15/97 HP-UX 11.00 |

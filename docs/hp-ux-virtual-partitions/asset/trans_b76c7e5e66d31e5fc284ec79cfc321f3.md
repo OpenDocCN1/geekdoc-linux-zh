@@ -1,0 +1,91 @@
+
+
+make_net_recovery -s myserver -x inc_entire=vg00
+
+创建一个系统恢复归档，该归档包含 vg00 和 vg01 卷组中的所有文件，但排除 /depots 目录。
+
+make_net_recovery -s myserver -x inc_entire=vg00 -x inc_entire=vg01 -x exclude=/depots
+
+以下是一个示例 shell 脚本，可以在每个客户端上运行。它可以帮助您避免在服务器加载新发行版时，需要在每个客户端上更新 Ignite-UX。如果服务器上有更新的版本，它将自动更新网络恢复软件。这可能适合用于 crontab 条目中。此示例假设已创建 /var/opt/ignite/deposits/recovery_cmds 软件 depot。该 depot 是通过运行 ignite OQI 至少一次来创建系统恢复归档而创建的（另请参阅 pkg_rec_depot(1W)）。一旦创建，每次在服务器上更新 Ignite-UX 时，该 depot 将自动更新。
+
+```bash
+myserver=luxserver
+/opt/ignite/bin/check_version -s $myserver
+if [ $? != 0 ]
+then
+    swinstall -s
+    $myserver:/var/opt/ignite/deposits/recovery_cmds `*`
+fi
+/opt/ignite/bin/make_net_recovery -s $myserver
+```
+
+## 警告
+
+### 磁盘将被重新格式化
+
+如果恢复归档中包含来自某个磁盘或卷组的任何文件，则该磁盘（或卷组中的所有磁盘）将在恢复期间被重新格式化，且仅恢复包含在内的文件。未包含在归档中的任何文件，都必须从您的常规备份中恢复。
+
+未在任何归档中包含文件的磁盘和卷组在恢复期间不会被重新格式化，而是在恢复结束时重新导入并重新挂载。
+
+### 逻辑卷物理区分配未保留
+
+make_net_recovery 工具从系统中捕获足够的信息，以便在恢复期间重建先前 LVM 配置的大部分可见方面。这包括逻辑卷和卷组名称、属性，甚至次要号值。该工具还确保新的逻辑卷位于卷组中与之前相同的磁盘上。
+
+然而，make_net_recovery 并不确保逻辑卷按照原始相同的顺序进行扩展。这意味着分配给逻辑卷的 LVM 物理区在磁盘上的位置可能与之前不同。恢复工具使用一种非常具体且复杂的算法来扩展逻辑卷以确保成功（例如在扩展非连续卷之前先扩展连续卷）。此行为的一个示例效果是，即使原始布局可能并非如此，swap/dump 卷仍将位于根磁盘上某些其他卷的前面。
+
+### 未包含 VxVM 磁盘组
+
+由 VERITAS Volume Manager (VxVM) 管理的磁盘组无法包含在 Ignite-UX 归档中。如果包含它们，make_net_recovery 将报错退出。这些磁盘组将保持原样，并在恢复完成后重新集成到系统中。
+
+### 未恢复 LVM 磁盘镜像
+
+make_net_recovery 工具会为具有镜像磁盘的系统创建恢复备份，但它不会恢复镜像磁盘配置。如果系统稍后恢复，之前镜像的卷将不再镜像。系统启动后，可以手动重新镜像它们。使用客户端目录中的 config.local 文件，您可以指定在系统恢复后自动执行的 LVM 命令，以恢复镜像磁盘。有关更多细节，请参阅白皮书 /opt/ignite/share/doc/diskmirror.pdf。
+
+## 依赖项
+
+必须从 Ignite-UX 服务器运行 Ignite-UX GUI。参见 Ignite(5)。make_net_recovery 依赖于其他几个 Ignite-UX 工具。当运行 Ignite-UX 服务器 GUI 时，Ignite-UX 会检查 make_net_recovery 在其上运行的客户端系统是否具有相同版本的 Ignite-UX 工具。
+
+如果从未与 Ignite-UX GUI 交互，而是从命令行运行 make_net_recovery，则需要使用 swinstall(1M) 命令从 Ignite-UX 服务器将命令安装到 make_net_recovery 将在其上运行的客户端系统。
+
+## 作者
+
+Ignite-UX 和 make_net_recovery 由 Hewlett-Packard 公司开发。
+
+## 诊断
+
+网络恢复过程中的所有主要步骤都在服务器上记录，并通过 Ignite-UX 服务器 GUI 显示。
+
+## 文件
+
+-   **/opt/ignite/recovery/mr_essentials** 列出被认为必不可少的文件和目录，如果系统中存在这些文件，则它们始终包含在归档中。
+
+-   **/var/opt/ignite/recovery/mr_essentials** 列出必不可少的文件和目录，但这是实际可修改的用户版本，因此可以维护原始的 mr_essentials 文件。当此文件存在时，在检查 /opt/ignite/recovery/mr_essentials 文件之前，会先检查其内容。
+
+-   **/var/opt/ignite/clients/0x[LLA]/CIMDex** 此文件包含特定客户端的 Ignite-UX 配置列表，该客户端具有路径中所示的网络 LAN 链路地址 (LLA)。此文件为 Ignite-UX 提供由 make_net_recovery 创建的配置文件，并提供用户在系统恢复期间可从中选择的客户端特定选项列表。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery** 每个客户端的恢复目录。它持有如下一述的客户端恢复配置文件。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/defaults** 为 make_net_recovery 提供默认选项。由 Ignite GUI 创建。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/archive_content** 提供要包含或排除的文件和目录。使用 -x 命令行参数将导致忽略此文件。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/client_status** 用于将 make_net_recovery 命令的状态传回在 Ignite-UX 服务器上运行的 Ignite GUI 的文件。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/latest** 指向 <date_time> 目录的符号链接，该目录包含如下一述的最新一组恢复文件。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/<date_time>** 包含与在目录名中指示的日期和时间运行的 make_net_recovery 命令相关的文件的目录。路径示例如下：/var/opt/ignite/clients/0xd0000192486/1999-12-20,13:50
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/<date_time>/system_cfg** 描述系统文件系统和网络配置的配置文件（由 save_config(M) 命令生成）。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/<date_time>/archive_cfg** 提供包含要恢复的文件的归档的位置和访问方法的配置文件。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/<date_time>/control_cfg** 提供控制参数以及用于导入在恢复期间将被保留且不会重新创建的卷组的命令脚本的配置文件。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/config.local** 用户可选创建的配置文件，用于添加在客户端恢复期间使用的配置信息。例如，您可能希望在此文件中添加 post_config.cmd，以重新镜像恢复过程解除镜像的磁盘。（参见文档：/opt/ignite/share/doc/diskmirror.pdf 了解示例）。一旦创建此文件，make_net_recovery 将自动将其添加到其添加到 CINDBX 文件的任何新配置中。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/<date_time>/recovery.log** make_net_recovery 的默认日志文件位置。
+
+-   **/var/opt/ignite/clients/0x[LLA]/recovery/<date_time>/manifest** 在创建归档时系统中已安装和配置的软件和硬件 manifest 信息（参见 print_manifest(M)）。
+
+-   **/var/opt/ignite/recovery/archives/<hostname>** Ignite-UX 服务器上客户端存储恢复归档的默认位置。<hostname> 目录必须通过 NFS 导出给具有匹配主机名的各个客户端。
+
