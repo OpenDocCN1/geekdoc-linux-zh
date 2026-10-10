@@ -14669,7 +14669,7 @@ db> reset
 
 ```
 (kgdb) backtrace
-# 0000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000 pu.h:195
+#   pu.h:195
 # 0xc04c29 in db (dummy1=-8752368, dummy2=0, dummy3=524358, dummy4=0xc04db94a "panic" @ /usr/src/sys/db/command:416
 # 0xc04b95 in db_loop () @ /usr/src/sys/db/command:401
 # 0xc04e305 in db_trap (type=3, code=0) @ /usr/src/sys/db/command:222

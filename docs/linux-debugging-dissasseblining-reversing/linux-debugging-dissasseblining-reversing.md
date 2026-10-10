@@ -1267,7 +1267,7 @@ mov 0xC, a
     - C / C++: long, unsigned long long
     - 64 位
     - 取值范围 $0_{\text{dec}} - 18446744073709551615_{\text{dec}}$ 或 $0_{\text{hex}} - \text{FFFFFFFFFFFFFFFF}_{\text{hex}}$
-    - 示例：$000000000000000000000000000000000000000000000000000000001100_{\text{bin}}$ $000000000000000\text{C}_{\text{hex}}$
+    - 示例：$1100_{\text{bin}}$ $000000000000000\text{C}_{\text{hex}}$
 
 ### 内存布局
 

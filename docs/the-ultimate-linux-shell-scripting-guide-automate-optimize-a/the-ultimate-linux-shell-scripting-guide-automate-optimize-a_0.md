@@ -7093,7 +7093,7 @@ radius=12.5 area=pi*(radius²) print area 490.87385212340519350937
 在这个例子中，我选择将二进制数转换为十六进制。你也可以将 `ibase` 和 `obase` 设置为相同的值以便以便不同的数字系统中进行运算。这是一个执行二进制运算的示例：
 
 ```
-[donnie@fedora ~]$ bc -l bc 1.07.1 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc. This is free software with ABSOLUTELY NO WARRANTY. For details type `warranty'. ibase=2 obase=2 101-1 100 101+101 1010/101 1.0000000000000000000000000000000000000000000000000000000000 0
+[donnie@fedora ~]$ bc -l bc 1.07.1 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc. This is free software with ABSOLUTELY NO WARRANTY. For details type `warranty'. ibase=2 obase=2 101-1 100 101+101 1010/101 1. 0
 ```
 
 是的，我希望我在 80 年代就有这个东西，当时我在早期计算机课上必须学习二进制数学。这会让事情变得简单得多。但真的，注意在除法命令中，有许多尾零，所以使用了 `\` 在下一行继续。你可以使用 `scale=` 命令来更改，但在二进制模式下使用它你会得到一些非常意外的结果。我的意思是：

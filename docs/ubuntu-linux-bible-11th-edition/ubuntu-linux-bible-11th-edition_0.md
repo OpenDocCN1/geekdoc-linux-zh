@@ -13197,7 +13197,7 @@ Loaded 1 password hash (generic(3)) [?/32])
 …
 time: 0:07:21:55 (3) c/s: 119 trying: tth675 - tth787
 Session aborted
-0000000000000000000000000000000000000000000000000000000000000000
+
 ```
 
 ### Monitoring the Filesystem

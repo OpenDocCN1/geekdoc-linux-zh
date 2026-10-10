@@ -13601,7 +13601,7 @@ POSIX 版本的 **sigwait** 接受两个参数：一个对信号集的引用，�
 ```
 linux$ p11.3 2 3
 Signal bits turned on
-0110000000000000000000000000000000000000000000000000000000000000
+011
 Waiting for signals
 Signal 20 not in mask - in signal catcher <-- 用户从键盘输入 ^Z。
 Signal 3 in mask - no signal catcher <-- 用户从键盘输入 ^\。

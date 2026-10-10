@@ -18125,7 +18125,7 @@ obase
 
 to the same value in order to perform math in a different number system. Here’s an example of how to perform binary math:
 
-[donnie@fedora ~]$ bc -l bc 1.07.1 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc. This is free software with ABSOLUTELY NO WARRANTY. For details type `warranty'. ibase=2 obase=2 101-1 100 101+101 1010 101/101 1.000000000000000000000000000000000000000000000000000000000000000000\ 0
+[donnie@fedora ~]$ bc -l bc 1.07.1 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc. This is free software with ABSOLUTELY NO WARRANTY. For details type `warranty'. ibase=2 obase=2 101-1 100 101+101 1010 101/101 1.\ 0
 
 Yeah, I wish that I would have had this back in the 1980s, when I had to learn binary math in my early computer classes. It would have made things so much easier. But seriously, note that in the division command, there are so many trailing zeros that a
 

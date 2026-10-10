@@ -4077,7 +4077,7 @@ App1!malicious_hook_ini:
 
     x2sp]
 
-    x220sp0000000000000000000000000000000000000000000000000000000000000000
+    x220sp
 
     x23,[sp]
 
@@ -13305,7 +13305,7 @@ Thread 4 (0x7f645f8b170 (LWP 163)):
 
 # `7` `0x00000000045d222` (`(` (`(` (`(`)
 
-  1 (`0000600000000001100000000000000000000000000000000000000000000000000000000000__....()`
+  1 (`00006000000000011__....()`
 
 # `3` `0x0000000042b46` in `__cxa1_terminate(void (**))` at `pthread_create.c:688`
 
@@ -28876,7 +28876,7 @@ Response Time (ms) Location C:\A64\KSym
 
 [0xef] : 7028559513 Internal error: 0x0000000000000000 fault 0x000000000000000
 
-[0xf0] : 7028559573 rip=0x000000000000010 rdi=0x0000000000000000 xt_owner=0x0000000000000000 ipt_REJECT_reject_ipv4 t_tcp->xt_state->struct netfilter_conntrack->nf_defrag_ipv4->nf_defrag_ipv4_min_ct_nat_table filter_conntrack_n=0x00000000000000000000000000000000000000000000000000000000000
+[0xf0] : 7028559573 rip=0x000000000000010 rdi=0x0000000000000000 xt_owner=0x0000000000000000 ipt_REJECT_reject_ipv4 t_tcp->xt_state->struct netfilter_conntrack->nf_defrag_ipv4->nf_defrag_ipv4_min_ct_nat_table filter_conntrack_n=0x
 
 [0xf1] : 7028582522 Hardware: QEMU Virtual Machine, 1.6.0 06/08/2023
 

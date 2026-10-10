@@ -3857,7 +3857,7 @@ App1!malicious_hook_ini:
   00000000 041c18 a90f153 st
     fp,[sp]
     x2sp]
-    x220sp0000000000000000000000000000000000000000000000000000000000000000
+    x220sp
     x23,[sp]
 0001> dp 00000000 0410b8
 App1_program
@@ -11601,7 +11601,7 @@ Thread 3 (0x7f645e8b7f0 (LWP 165)):
 #6 0x0000000041b4b3 in start_thread (arg-optimized out) at pthread_create.c:486
 #7 0x00000000045d222 ( ( (
 
-  1 (00006000000000011000000000000000000000000000000000000000000000000000000000000000000000000__....()
+  1 (00006000000000011__....()
 #3 0x0000000042b46 in __cxa1_terminate(void (*)) at pthread_create.c:688
 #4 0x0000000042681 in std::terminate() at pthread_create.c:688
 #5 000000000424c4 in __raise () at pthread_create.c:688
@@ -24607,7 +24607,7 @@ Response Time (ms) Location C:\A64\KSym
 [0xeb] : 7028557893 fca = 0x4; translation level fault page size: 4kb, 48-bit VA, pgd=0000000001d5a7b0
 [0xec] : 7028557953 pde=0000000000000000, pud=0000000000000000, pte=0000000000000000
 [0xef] : 7028559513 Internal error: 0x0000000000000000 fault 0x000000000000000
-[0xf0] : 7028559573 rip=0x000000000000010 rdi=0x0000000000000000 xt_owner=0x0000000000000000 ipt_REJECT_reject_ipv4 t_tcp->xt_state->struct netfilter_conntrack->nf_defrag_ipv4->nf_defrag_ipv4_min_ct_nat_table filter_conntrack_n=0x000000000000000000000000000000000000000000000000000000000000
+[0xf0] : 7028559573 rip=0x000000000000010 rdi=0x0000000000000000 xt_owner=0x0000000000000000 ipt_REJECT_reject_ipv4 t_tcp->xt_state->struct netfilter_conntrack->nf_defrag_ipv4->nf_defrag_ipv4_min_ct_nat_table filter_conntrack_n=0x
 [0xf1] : 7028582522 Hardware: QEMU Virtual Machine, 1.6.0 06/08/2023
 [0xf2] : 7028583401 ra = 0xffffff8005218[mod_b]-555
 [0xf3] : 7028583949 pc = 0x000000000000000

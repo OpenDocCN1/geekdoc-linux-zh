@@ -2560,7 +2560,7 @@ exe 附加后缀，寻找存在的文件。在程序中，第一个后缀是空�
 
 
 (gdb) next
-(gdb) filename -- /bin/sh.a.00000000000000000000000000000000000000000000000000000000000000
+(gdb) filename -- /bin/sh.a.
 6: p = 0x4030d2 = "/usr/local/bin/usr/bin/usr/bin/cygdrive/c/cygdrive/c/Windows\Cygwin\system2"
 6: p = 0x4030d2 = "Emsda\e\vc\ntda\lib\if86\Include\e\vc\\"
 (gdb) next

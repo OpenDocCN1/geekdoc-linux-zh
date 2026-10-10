@@ -49466,7 +49466,7 @@ root@hpeos04[#] ifstat -sl
 192.168.0.65 -> 192.168.0.66 ttl 6 4/4
 pkt bytes 8985 49496 -= 22 28dc5c8:29b6789 32768:32768
 cmsk mmsk 0000 1986 0000000000000 2d8cba0:29663fe
-subf[0] [0000000000000000000000000000000000000000000000000000000000000000]
+subf[0] []
   pass in keep state IPV4
   pkt_flags & 2(b) = b, pkt_options & fffffffff = 0
   pkt_security & fff = 0, pkt_ftime & f = 0

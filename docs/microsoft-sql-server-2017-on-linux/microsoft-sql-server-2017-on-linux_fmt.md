@@ -3239,7 +3239,7 @@ WHERE objectid = OBJECT_ID('dbo.test')
 `sql_handle` 是一个指向执行计划的哈希值，可以使用 `sys.dm_exec_sql_text` 来检索查询文本，如下所示：
 
 ```
-SELECT SUBSTRING(text,44/2 + 1,(168-44)/2 + 1) FROM sys.dm_exec_sql_text(0x0000000000000000000000000000000000000000000000000000000000000000) -- 示例逻辑
+SELECT SUBSTRING(text,44/2 + 1,(168-44)/2 + 1) FROM sys.dm_exec_sql_text(0x) -- 示例逻辑
 ```
 
 `sql_handle` 保证对于每个批处理是唯一的。查询文本存储在 SQLM 中，你可以通过以下查询进行检查：
@@ -3251,7 +3251,7 @@ SELECT FROM sys.dm_os_objects WHERE type = 'SQLM'
 由于 `sql_handle` 与 `plan_handle` 存在 1:N 关系，文本将留在 SQLM 中直到计划被逐出。`plan_handle` 是一个指向执行计划的哈希值，可以使用 `sys.dm_exec_query_plan` 来检索执行计划。如果批处理中的多个语句被重新编译，它保证对于每个批处理是唯一的。这里有一个例子：
 
 ```
-SELECT FROM sys.dm_exec_query_plan(0x0000000000000000000000000000000000000000000000000000000000000000)
+SELECT FROM sys.dm_exec_query_plan(0x)
 ```
 
 # 第 5 章：SQL Server 查询调优与优化

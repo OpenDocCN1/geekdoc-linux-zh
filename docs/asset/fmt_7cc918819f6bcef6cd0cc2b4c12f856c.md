@@ -77,7 +77,7 @@ Linux 系统上的主日志通常称为 `messages` 或 `syslog`，安全日志�
 
 ```
 Apr 07:47:26 localhost SEVER[15651]: Dispatch input: bad request line
-'DB'A6;y0'A6;y0'A6;y0000000000000000000000000000000000000000000000000000000000000000000000
+'DB'A6;y0'A6;y0'A6;y
 
 ```
 
@@ -87,7 +87,7 @@ Apr 07:47:26 localhost SEVER[15651]: Dispatch input: bad request line
 
 ```
 Apr 07:47:26 localhost SEVER[15651]: Dispatch input: bad request line
-'DB'A6;y0'A6;y0'A6;y0000000000000000000000000000000000000000000000000000000000000000000000
+'DB'A6;y0'A6;y0'A6;y
 
 ```
 
@@ -97,7 +97,7 @@ Apr 07:47:26 localhost SEVER[15651]: Dispatch input: bad request line
 
 ```
 Apr 07:47:26 localhost SEVER[15651]: Dispatch input: bad request line
-'DB'A6;y0'A6;y0'A6;y0000000000000000000000000000000000000000000000000000000000000000000000
+'DB'A6;y0'A6;y0'A6;y
 
 ```
 
@@ -125,7 +125,7 @@ Linux 系统维护各种记录系统事件和用户账户活动的日志。Linux
 
 ```
 Apr 07:47:26 localhost SEVER[15651]: Dispatch input: bad request line
-'DB'A6;y0'A6;y0'A6;y0000000000000000000000000000000000000000000000000000000000000000000000
+'DB'A6;y0'A6;y0'A6;y
 
 ```
 
