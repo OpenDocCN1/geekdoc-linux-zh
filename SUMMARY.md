@@ -646,6 +646,7 @@
 +   [Network+ 网络入门指南](docs/introduction-to-networking-with-network/README.md)
 +   [Nginx 入门指南](docs/introduction-to-nginx/README.md)
 +   [Openlinux 入门指南 [包含 Openlinux Lite]](docs/introduction-to-openlinux-with-contains-openlinux-lite/README.md)
++   [Unix 和 Linux 命令无废话入门指南](docs/introduction-to-the-command-line-second-edition-the-fat-free/README.md)
 +   [Unix 入门指南](docs/introduction-to-unix/README.md)
 +   [Unix 和 Linux 入门指南](docs/introduction-to-unix-and-linux/README.md)
 +   [Unix and Linux 入门实验手册（学生版）](docs/introduction-to-unix-and-linux-lab-manual-student-edition/README.md)
