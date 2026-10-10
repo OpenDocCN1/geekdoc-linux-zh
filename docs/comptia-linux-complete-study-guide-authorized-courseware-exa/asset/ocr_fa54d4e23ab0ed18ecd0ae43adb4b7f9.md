@@ -1,0 +1,19 @@
+# ## Printing to Network Printers
+
+If your network hosts many Windows computers, you may use the Server Message Block/ Common Internet File System (SMB/CIFS) for file and printer sharing among Windows systems. Linux's Samba server also implements this protocol and so can be used for sharing printers from Linux.
+
+On the flip side, you can print to an SMB/CIFS printer queue from a Linux system. To do so, you select an SMB/CIFS queue in the printer configuration tool. Under CUPS, it’s called Windows Printer via SAMBA in step 3 in the preceding procedure. You must then provide your username, password, server name, and share name, but the format isn’t obvious from the Web-based configuration tool:
+
+smb://username:password@SERVER/SHARE
+
+This is a uniform resource identifier (URI) for an SMB/CIFS share. You must substitute appropriate values for username, password, SERVER, and SHARE, of course. Once this is done and you’ve finished the configuration, you should be able to submit print jobs to the SMB/CIFS share.
+
+![](bbox=[0.13, 0.5, 0.82, 0.6])
+
+If you want to print to a Unix or Linux server that uses the old LPD protocol, the URI format is similar but omits a username and password:
+
+lpd://hostname/queue
+
+You can use the same format, but substitute ipp:// for lpd://, to print to a CUPS server if browsing is disabled on your network.
+
+In practice, you may be faced with a decision: Should you use LPD, IPP, or SMB/CIFS for submitting print jobs? To be sure, not all print servers support all three protocols, but a Linux server might support them all. As a general rule, IPP is the simplest to configure because it supports browsing, which means that CUPS clients shouldn’t need explicit configuration to handle specific printers. This makes IPP the best choice for Linux-to-Linux printing, assuming both systems run CUPS. When CUPS isn’t in use, LPD is generally easier to configure than SMB/CIFS, and it has the advantage of not requiring the use of a username or password to control access. Because SMB/CIFS security is password-oriented, clients typically store passwords in an unencrypted form on the hard disk. This fact can become a security liability, particularly if you use the same account for printing as for other tasks. On the other hand, sometimes using a password on the server provides more of a security benefit than the risk of storing that password on the client. Generally speaking, if clients are few and well protected, whereas the server is exposed to the Internet at large, using passwords can be beneficial. If clients are numerous and exposed to the Internet,

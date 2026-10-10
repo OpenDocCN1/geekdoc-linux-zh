@@ -1,0 +1,9 @@
+a login system that starts X automatically and provides a GUI login screen. Configuring and managing this system requires you to understand a bit of how the system works, how to run it, and how to change the configuration.
+
+# The X GUI Login System
+
+As described later in this chapter, in “Using X for Remote Access,” X is a network-enabled GUI. This fact has many important consequences, and one of these relates to Linux’s GUI login system. This system employs a network login protocol, the *X Display Manager Control Protocol (XDMCP)*. To handle remote logins, an XDMCP server runs on a computer and listens for connections from remote computers’ X servers. To handle local logins, an XDMCP server runs on a computer and starts the local computer’s X server. The XDMCP server then manages the local X server’s display—that is, it puts up a login prompt like that shown in Figure 6.1.
+
+![](bbox=[0.138, 0.366, 0.845, 0.784])
+
+Three XDMCP servers are common on Linux: the X Display Manager (XDM), the KDE Display Manager (KDM), and the GNOME Display Manager (GDM). A few more exotic XDMCP servers are also available, but these three are the most important. As you may guess by their names, KDM and GDM are associated with the KDE and GNOME projects, respectively, but neither limits your choice of desktop environment. Most Linux distributions run either GDM or KDM as the default XDMCP server, but you can change which one your system uses if you don’t like the default.

@@ -1,0 +1,15 @@
+# Answers to Review Questions
+
++   1. D. Because they must be compiled prior to installation, source packages require more time to install than binary packages do, contrary to option D's assertion. The other options all describe advantages of source packages over binary packages.
+
++   2. A. Package management systems don't share information, but neither do their databases actively conflict. Installing the same libraries using both systems would almost guarantee that the files served by both systems would conflict with one another. Actively using both RPM and Debian packages isn't common on any distribution, although it's possible with all of them.
+
++   3. A. RPMs are usually portable across distributions, but occasionally they contain incompatibilities. There is no --convert-distrib parameter to rpm, nor is alien used to convert from RPM format to RPM format. Binary packages can't be rebuilt for another CPU architecture, but source packages may be rebuilt for any supported architecture provided the source code doesn't rely on any CPU-specific features.
+
++   4. B. The -i operation installs software, so option B is correct. (The -v and -h options cause a status display of the progress of the operation, which wasn't mentioned in the option.) Uninstallation is performed by the -e operation, and rebuilding source RPMs is done by the --rebuild operation (to either rpm or rpmbuild, depending on the RPM version). Although the filename meagprog.rpm is missing several conventional RPM filename components, the rpm utility doesn't use the filename as a package validity check, so option D is incorrect.
+
++   5. A. The rpmspec program extracts data from an RPM file and converts it into a cpio archive that's sent to standard output. Piping the results through cpio and using the -i and --make-directories options, as in option A, will extract those files to the current directory. Option B creates a cpio file called make-directories that contains the files from the RPM B package. Option C will uninstall the package called myfonts.rpm (but not the myfonts package). The alien utility has no --to-extract target, so option D is invalid.
+
++   6. A. An uppercase -P invokes the purge operation, which completely removes a package and its configuration files. The lowercase -p causes dpkg to print information about the package's contents. The -r parameter removes a package but leaves configuration files behind. The final variant (option D) also specifies a complete filename, which isn't used for removing a package—you should specify only the shorter package name.
+
++   7. C. You can specify Debian package archive sites in /etc/apt/sources.list, and then you can type apt-get update and apt-get upgrade to quickly update a Debian system to the latest packages. GUI package management tools for Debian and related distributions exist, but they aren't apt-get. The alien program can convert an RPM file and install the converted package on a Debian system; dpkg and apt-get both come with all Debian-based distributions.

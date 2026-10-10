@@ -1,0 +1,154 @@
+
+## Configuring IMAPv4 and POP3 with Dovecot
+
+当将用户添加到 CentOS 时，会在该用户名下的 `/var/spool/mail` 目录中配置一个邮箱（例如 `/var/spool/mail/timothy`）。该文件的默认格式是传统的 mbox 格式，所有邮件和附件都存储在该一个文件中。通过在邮件服务器上配置 POP3 服务，用户能够从其其他机器上的电子邮件文件夹下载电子邮件消息。通过配置 IMAPv4，用户可以直接在服务器上处理邮件和文件夹。
+
+以下程序描述了如何使用 Dovecot 在 CentOS 中配置 IMAPv4 或 POP3 服务。
+
+- 1. 查看 `/etc/dovecot.conf` 文件中设置的值。对于此示例，我假设使用默认值，因此您可以尝试在不修改此文件内容的情况下使用 Dovecot。为了本示例的目的，启用了 POP3 协议，启用了来自标准 `/etc/passwd` 文件的明文密码，并使用 PAM 进行身份验证。阅读文件中的注释，查看是否有任何想要更改的设置。
+- 2. 通过输入以下命令（作为 *root* 用户）来开启 `dovecot` 服务：
+    ```bash
+    # chkconfig dovecot on
+    ```
+    （如果未安装 Dovecot，请通过输入 `yum install dovecot` 进行安装）
+- 3. 通过以下方式启动 `dovecot` 服务来立即启动 POP3 服务：
+    ```bash
+    # /etc/init.d/dovecot start
+    ```
+- 4. 在防火墙上打开端口 110，以允许其他计算机请求您邮件服务器上的 POP3 服务。如果您使用支持 SSL 的 POP3，则应改为打开端口 995（或用于 IMAPv4 over SSL 的端口 993）。打开端口的简单方法是通过“安全级别和防火墙”窗口（选择 *系统 > 管理 > 安全级别和防火墙*）。选择“其他端口”，然后单击“添加”按钮，将 110 添加为端口，并将 TCP 和 UDP 添加为协议。
+
+默认情况下，您邮件服务器上所有拥有用户账户的用户都被配置为接受电子邮件。例如，如果电子邮件到达 `mail.hansonhistory.com` 服务器并面向名为 `jsmith` 的用户，则该消息会被复制到服务器上的 `/var/spool/mail/jsmith` 文件。继续这个例子，名为 `jsmith` 的用户可以这样设置他的邮件阅读器：
+
+- **邮件服务器** — `mail.hansonhistory.com`
+- **用户名** — `jsmith`
+- **密码** — *theiruserpassword*
+- **协议** — POP3
+
+配置好邮件阅读器后，当 `jsmith` 从他的邮件阅读器中点击“发送和接收”时，`/var/spool/mail/jsmith` 文件中的所有电子邮件消息都会下载到他的本地邮件阅读器。然后，这些消息会从服务器上删除。
+
+## Part IV Networking
+
+> **注意** 请记住，常规 POP3 和 IMAPv4 服务使用*明文协议*在网络上传输用户名和密码。根据您的网络环境，这可能构成安全威胁。
+
+### Getting Mail from Your Browser with SquirrelMail
+
+一旦您的邮件服务器启动并运行，您可以配置 SquirrelMail，允许您的邮件服务器用户通过 Web 浏览器获取他们的邮件。要使用 SquirrelMail，您必须从随书提供的 CentOS 安装 DVD 中安装 `squirrelmail` 包（或者输入 `yum install squirrelmail`）。此外，要使用 SquirrelMail，您需要配置并启动以下组件：
+
+- 邮件服务器 (Sendmail 或 Postfix)
+- IMAPv4 服务器 (Dovecot)
+- Web 服务器 (httpd)
+- 将通过 SquirrelMail 读取邮件的用户账户
+
+SquirrelMail 拥有非常直观的基于菜单的管理界面。该界面包含各种您可以添加到 SquirrelMail 的插件，用于使用诸如拼写检查、日历、密码修改和从 POP3 服务器获取邮件等功能。您还可以从 `http://squirrelmail.org` 获取更多插件。
+
+要配置 SquirrelMail，请从终端窗口以 `root` 用户身份输入以下内容：
+
+```bash
+# /usr/share/squirrelmail/config/conf.pl
+```
+
+您可能希望考虑调整的功能包括组织偏好设置（例如要放入 SquirrelMail 界面的组织名称和徽标）、主题（可用二十多种）以及插件（只需查看是否有可用的插件感兴趣即可）。
+
+此外，默认情况下，只能从本地主机上的浏览器访问邮件，因此您可能希望更改服务器设置。例如，将域名更改为允许用户访问其邮件的域的名称。
+
+用户若要使用 SquirrelMail 获取邮件，只需在 Web 浏览器的地址栏中输入以下地址（如果您在本地主机之外运行，请将 `server` 替换为 `localhost` 或计算机名称）：
+
+```bash
+http://server/webmail
+```
+
+图 18-1 显示了 Web 邮件浏览器界面的示例。
+
+输入您的用户名和密码。您的邮箱应会出现，如图 18-2 所示。
+
+让用户可以通过 Web 登录以获取邮件。
+
+![](img/2f265415ceec72538dd3c78ffca75c10_778_0.png)
+
+在 SquirrelMail 中管理多个文件夹中的邮件。
+
+![](img/2f265415ceec72538dd3c78ffca75c10_778_1.png)
+
+## Part IV Networking
+
+### Administering a Mailing List with Mailman
+
+Mailman 是一个流行的开源包，用于管理电子邮件讨论列表。除了提供用于设置和管理列表的灵活管理界面外，它还具有基于 Web 的界面，使人们可以轻松加入列表、访问讨论列表存档并调整自己的偏好设置。
+
+如果您需要有关配置 Mailman 的更多信息，有很多地方可以查看。请查阅 Mailman 网站 www.gnu.org/software/mailman/mailman/。同时查看 /usr/share/doc/mailman/\*\*\*\* 中的 README 文件。
+
+> **注意** 如果您在 CentOS 的早期版本中曾使用过 Mailman，请注意 Mailman 安装目录已从 `/var/mailman` 移动到了 `/usr/lib/mailman`。如果您对 `/var/mailman` 目录中的文件进行了任何更改，在升级 mailman 软件包后，您需要将这些文件移动到 `/var/lib/mailman` 目录。
+
+以下是使用 Mailman 配置讨论列表的简要步骤：
+
+- 1. 从 CentOS DVD 安装 mailman RPM 或输入 **yum install mailman**。
+- 2. 启动您的 Web 服务器（如果尚未运行），如下所示：
+    ```bash
+    # service httpd start
+    # chkconfig httpd on
+    ```
+- 3. 创建您网站的密码，如下所示：
+    ```bash
+    # /usr/lib/mailman/bin/mmsitepass
+    New site password: *****
+    Again to confirm password: *****
+    ```
+- 4. 编辑 /usr/lib/mailman/Mailman/mm_cfg.py 文件并更改 DEFAULT_URL_HOST 和 DEFAULT_EMAIL_HOST 的值。例如，我配置我的邮件列表的计算机的主机名是 dale.example.com。默认电子邮件主机是 example.com。值如下所示：
+    ```python
+    DEFAULT_EMAIL_HOST   = 'dale.example.com'
+    DEFAULT_URL_HOST_DEF = 'example.com'
+    ```
+    您可以将这些值保留为 fqdn，以简单使用本地计算机的完全限定域名。
+- 5. 编辑 /etc/httpd/conf.d/mailman.conf 文件。要使对 Mailman 的查询转到列表页面，请取消文件底部 RedirectMatch 行的注释，并修改该行以包含您的完全限定域名。例如，当我为 example.com 邮件列表这样做时，该行如下所示：
+    ```bash
+    RedirectMatch ~~/mailman/([.\\*|\\*)$ http://www.example.com/mailman/
+      listingo
+    ```
+    *(注：原文此处正则表达式及换行可能存在OCR错误，保留原意)*
+
+### Setting Up a Mail Server
+
+- 6. 要创建 Mailman 邮件列表，您必须首先创建一个未填充成员的名为 mailman 的邮件列表。与该列表一起，您必须为负责管理列表的人员分配电子邮件和初始密码。为此，输入以下内容：
+    ```bash
+    # /usr/lib/mailman/bin/newlist mailman
+    Enter the email of the person running the list: timothy@example.com
+    Initial mailman password: ******
+    Hit enter to notify mailman owner...
+    ```
+- 7. 重启 Web (httpd) 服务并启动 mailman 服务，如下所示：
+    ```bash
+    # service httpd restart
+    # service mailman start
+    # chkconfig mailman on
+    ```
+- 8. 使用 newlist 命令创建新的邮件列表，如下所示：
+    ```bash
+    # /usr/lib/mailman/bin/newlist
+    Enter the name of the list: pro
+    Enter the email of the person running the list: timothy@example.com
+    Initial pro password: *****
+    ```
+
+要完成创建您的邮件列表，您必须通过添加以下行并运行 "newaliases" 程序来编辑 /etc/aliases（或等效）文件：
+
+```bash
+## pro mailing list
+pro:	"/usr/lib/mailman/mail/mailman post pro"
+pro-admin:	"/usr/lib/mailman/mail/mailman admin pro"
+pro-bounces:	"/usr/lib/mailman/mail/mailman bounces pro"
+pro-confirm:	"/usr/lib/mailman/mail/mailman confirm pro"
+pro-join:	"/usr/lib/mailman/mail/mailman join pro"
+pro-leave:	"/usr/lib/mailman/mail/mailman leave pro"
+pro-owner:	"/usr/lib/mailman/mail/mailman owner pro"
+pro-request:	"/usr/lib/mailman/mail/mailman request pro"
+pro-subscribe:	"/usr/lib/mailman/mail/mailman subscribe pro"
+pro-unsubscribe:	"/usr/lib/mailman/mail/mailman unsubscribe pro"
+```
+
+- 9. 将刚刚显示的文本（从 # project list mailing list 行开始）复制并粘贴到 /etc/aliases 文件的末尾。
+- 10. 运行 newaliases 命令。此时，您应该能够通过网络浏览器查看新的邮件列表。从本地系统的 Web 浏览器中，在地址框中输入以下名称：
+    ```bash
+    http://localhost/mailman/listinfo
+    ```
+- 11. 如果一切似乎运行正常，开始添加更多邮件列表。在我的例子中，我创建了一个名为 projectlist 的邮件列表。该项目的名称显示在图 18-3 中的列表中。
+- 12. 选择该项目名称（单击它）。项目的 Info 页面应会出现。

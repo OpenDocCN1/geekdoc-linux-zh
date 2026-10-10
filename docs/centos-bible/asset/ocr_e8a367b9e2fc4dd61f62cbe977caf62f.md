@@ -1,0 +1,27 @@
+# Getting Started with the Desktop
+
+TABLE 3-2
+**Mouse Actions**
+| Pointer Position | Mouse Button | Results |
+| :--- | :--- | :--- |
+| Window title bar or frame *(current window active)* | Left | Raise current window. |
+| Window title bar or frame *(current window active)* | Middle | Lower current window. |
+| Window title bar or frame *(current window active)* | Right | Open operations menu. |
+| Window title bar or frame *(current window not active)* | Left | Activate current window and raise it to the top. |
+| Window title bar or frame *(current window not active)* | Middle | Activate current window and lower it. |
+| Window title bar or frame *(current window not active)* | Right | Open operations menu without changing position. |
+| Inner window *(current window not active)* | Left | Activate current window, raise it to the top, and pass the click to the window. |
+| Inner window *(current window not active)* | Middle | Activate current window and pass the click to the window. |
+| Inner window *(current window not active)* | Right | Activate current window and pass the click to the window. |
+| Any part of a window | Middle *(plus hold [Alt] key)* | Toggle between raising and lowering the window. |
+| Any part of a window | Right *(plus hold [Alt] key)* | Resize the window. |
+| On the desktop area | Left *(hold and drag)* | Select a group of icons. |
+| On the desktop area | Right | Open system pop-up menu. |
+
+The mouse actions in the table are all single-click actions. Use single-click with the left mouse button to open an icon on the desktop. On a window title bar, double-clicking results in a window-shade action, where the window scrolls up and down into the title bar.
+
+# Using Keystrokes
+
+If you don't happen to have a mouse or you just like to keep your hands on the keyboard, there are several keystroke sequences you can use to navigate the desktop. Here are some examples:
+
++   □ **Step through Windows** ([(Alt)+[Tab]]) — To step through each of the windows that are running on the current desktop, hold down the [Alt] key and press the [Tab] key until you see the one you want. Then release the [Alt] key to select it.

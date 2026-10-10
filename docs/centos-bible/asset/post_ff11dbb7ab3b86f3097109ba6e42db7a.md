@@ -1,0 +1,116 @@
+
+/usr/sbin/tmpwatch 720 /var/tmp
+
+```bash
+for d in /var/{cache/man,catman}/X11R6/cat2,.local/cat2; do
+if [ -d "$d" ]; then
+/usr/sbin/tmpwatch "$flags" -f 30d $d
+fi
+done
+```
+
+Each day, this tmpwatch script runs to delete temporary files that haven't been used for some time. The flags (-umc) indicate that time access is based on the file's access time (u), modification time (m), and inode change time (c). It starts by identifying files that are not to be deleted (tmpwatch -x). Files such as those in the /tmp/X11-unix directory represent sockets for active X servers and would make an active GUI inaccessible if they were deleted. All other files from the /tmp and /var/tmp directories are removed after 10 and 30 days of not being accessed, respectively. Temporary man page files stored in /var/cache subdirectories are also checked and deleted after 30 days of disuse.
+
+## Sending Mail to All Users
+
+Occasionally, you need to send messages to all users on your system. Warning users of planned downtime for hardware upgrades is a good example. Sending e-mail to each user individually is extremely time-consuming and wasteful; this is precisely the kind of task that e-mail aliases and mailing lists were invented for. Keeping a mailing list of all the users on your system can be problematic, however. If you are not diligent about keeping the mailing list current, it becomes increasingly inaccurate as you add and delete users. Also, if your system has many users, the mere size of the alias list can become unwieldy.
+
+The following script, called *maillfile*, provides a simple method of working around these problems. It grabs the login names from the /etc/passwd file and sends e-mail to all users.
+
+> **NOTE** Because regular user accounts begin with UID 500 in CentOS, the script excludes all UIDs under 500 that are typically administrative accounts. It also skips UID 65,534, which is the anonymous NFS user account.
+
+```bash
+#!/bin/bash
+# maillfile: This script mails the named file to all regular
+# users of the system. It skips all administrative
+# accounts (accounts under UID 500) as well as the
+# anonymous NFS user (UID 65534).
+#
+#
+# USAGE: maillfile "Subject goes here" filename.txt
+#
+# Check for a subject
+#
+# Get the subject of the message
+subject=$1
+```
+
+# Check for a filename
+# filename=$2
+# Loop through all login names, skipping accounts under 500
+# as well as the anonymous NFS account (65534)
+
+```bash
+for x in $(cut -d ":" -f 1,3 /etc/passwd)
+do
+    USER=$(echo $x | cut -d ":" -f1)
+    ID=$(echo $x | cut -d ":" -f2)
+
+    if [[ $ID -gt 499 && $ID -lt 65534 ]]; then
+        # Mail the file
+        echo Mailing to $USER
+        mail -s "$subject" $USER < $filename
+
+        # Sleep for a few seconds so we don't overload the mailer
+        # On fast systems or systems with few accounts, you can
+        # probably take this delay out.
+        sleep 2
+    fi
+done
+```
+
+The script accepts two parameters. The first is the subject of the e-mail message, which is enclosed in quotes. The second is the name of the file containing the text message to send. Thus, to send an e-mail message to all users warning them about an upcoming server hardware upgrade, I may do something similar to the following:
+
+```bash
+mailfile "System upgrade at 5:00pm" upgrade.txt
+```
+
+The file upgrade.txt contains the text of the message to be sent to each user. The really useful thing about this approach is that I can save this text file and easily modify and resend it the next time I upgrade the system.
+
+> **TIP** If you users log in to your system using text-based logins instead of graphical logins, you can add messages to the /etc/motd file to have them reach your users. Any text in that file will be displayed on each user's screen after the user logs in and before the first shell prompt appears.
+
+## Summary
+
+It is not uncommon for a Linux system to be used as a single-task server with no actual users. It sits quietly in a server room, serving web pages or handling domain name service, never crashing, and rarely needing attention. This is not always the case, however. You may have to support users on your Linux system, and that can be the most challenging part of your system administration duties.
+
+CentOS provides a variety of tools that help you with your user administrative chores. The `useradd`, `usermod`, and `userdel` commands enable easy command-line manipulation of user account data. Furthermore, you can lighten your load even more by creating a support mailbox and building shell scripts to automate repetitive tasks. CentOS builds on top of the rich history of UNIX and provides an ideal platform to support the diverse needs of your users.
+
+# Chapter 11
+
+# Automating System Tasks
+
+![](img/2f265415ceec72538dd3c78ffca75c10_460_0.png)
+
+You'd never get any work done if you typed every command that needs to be run on your CentOS system when it starts. Likewise, you could work more efficiently if you grouped together sets of commands that you run all the time. Shell scripts can handle these tasks.
+
+A *shell script* is a group of commands, functions, variables, or just about anything else you can use from a shell. These items are typed into a plain-text file. That file can then be run as a command. CentOS uses system initialization shell scripts during system startup to run commands needed to get things going. You can create your own shell scripts to automate the tasks you need to do regularly.
+
+This chapter provides a rudimentary overview of the inner workings of shell scripts and how they can be used. You learn how shell scripts are responsible for the messages that scroll by on the system console during booting and how simple scripts can be harnessed to a scheduling facility (such as *cron* or *at*) to simplify administrative tasks.
+
+You also learn to fine-tune your machine to start at the most appropriate run level and to run only services you need. With that understanding, you'll be able to personalize your computer and cut down on the amount of time you spend repetitively typing the same commands.
+
+![](img/2f265415ceec72538dd3c78ffca75c10_460_1.png)
+
+## Understanding Shell Scripts
+
+Have you ever had a task that you needed to do over and over that took a lot of typing on the command line? Do you ever think to yourself, "Wow, I wish there was just one command I could type to do all of this? Maybe a shell script is what you're after."
+
+Shell scripts are the equivalent of batch files in MS-DOS and can contain long lists of commands, complex flow control, arithmetic evaluations, user-defined variables, user-defined functions, and sophisticated condition testing. Shell scripts are capable of handling everything from simple one-line commands to something as complex as starting up your CentOS system.
+
+In fact, as we'll read in this chapter, CentOS does just that. It uses shell scripts (`/etc/rc.d/rc.sysinit` and `/etc/rc`) to check and mount all your file systems, set up your consoles, configure your network, launch all your system services, and eventually provide you with your login screen. While there are nearly a dozen different shells available in CentOS, the default shell is called *bash*, the Bourne-Again Shell.
+
+## Executing and Debugging Shell Scripts
+
+One of the primary advantages of shell scripts is that they can be opened in any text editor to see what they do. A big disadvantage is that large or complex shell scripts often execute more slowly than compiled programs. There are two basic ways to execute a shell script:
+
+- The filename is used as an argument to the shell (as in `bash myscript`). In this method, the file does not need to be executable; it just contains a list of shell commands. The shell specified on the command line is used to interpret the commands in the script file. This is most common for quick, simple tasks.
+- The shell script may also have the name of the interpreter placed in the first line of the script preceded by `#!` (as in `#!/bin/bash`), and have its execute bit set (using `chmod +x`). You can then run your script just like any other program in your path simply by typing the name of the script on the command line.
+
+> See Chapter 4 for more details on chmod and Read/Write/Execute permissions.
+
+When scripts are executed in either manner, options to the program may be specified on the command line. Anything following the name of the script is referred to as a *command-line argument*.
+
+As with writing any software, there is no substitute to clear and thoughtful design and lots of comments. The pound sign (`#`) prefaces comments and can take up an entire line or exist on the same line after script code. It's best to implement more complex shell scripts in stages, making sure the logic is sound at each step before continuing. There are a few good, concise tips to make sure things are working as expected during testing:
+
+- Place an `echo` statement at the beginning of lines within the body of a loop. That way, rather than executing the code, you can see what will be executed without making any permanent changes.
+- To achieve the same goal, you could place dummy `echo` statements throughout the code. If these lines get printed, you know the correct logic branch is being taken.

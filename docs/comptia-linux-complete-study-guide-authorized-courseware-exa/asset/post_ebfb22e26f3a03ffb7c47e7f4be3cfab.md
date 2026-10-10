@@ -1,0 +1,326 @@
+
+## Index
+
+### S
+- start of lines in regular expressions, 31
+- startup scripts
+  - anacron jobs, 372
+  - configuration files, 488–489
+  - package problems, 78
+  - runlevels, 244–245
+  - XDMCP servers, 289
+- startx command, 272–273
+- static files in FHS, 209
+- static IP addresses, 404–406
+- static libraries, 79
+- statistics with apt-cache, 65
+- stats command, 151
+- status, network, 414
+- stderr (standard error), 14, 352
+- stdin (standard input), 14
+- stdout (standard output), 14
+- sticky bits for permissions, 199
+- sticky keys, 296
+- store MySQL data, 460
+- strata in time servers, 361–362, 361
+- streams, 14
+- strong passwords, 490
+- Structured Query Language (SQL), 455
+  - basics, 456–457, 456
+  - MySQL. See MySQL
+  - packages, 455
+- su command, 494
+- subdomains, 396
+- subexpressions in regular expressions, 32
+- subject lines in e-mail, 450
+- subnet masks, 393
+- sudo program, 494
+- SUID files, locating, 497–498
+- SUID (set user ID) option, 198–200
+- summaries with hard disk monitoring, 157
+- summarizing commands for files, 29–30
+- super server restrictions, 477
+- iinet configuration, 477–480
+- xinetd configuration, 480–482
+- superblocks, 151, 228
+- superuser. See root account
+- support programs, missing, 75
+- SUSE distribution, 48
+- swap space, 135, 147
+- swapon command, 147
+- switches, 386
+- symbolic links, 191–192, 198
+- Synaptic tool, 71
+- sysfs virtual filesystem, 116
+- syslogd package, 349, 352
+- syslog-ng logger, 350
+- syslogd daemon, 239, 349–350
+- system accounts, 335
+- system administration, 330
+  - exam essentials, 374–375
+  - groups. See groups
+  - log files. See system log files
+  - review questions, 376–382
+  - scheduling tasks, 366
+    - anacron, 371–372
+    - at, 372–373
+    - cron, 366–370
+  - summary, 374
+  - system time management, 358
+    - NTP, 360–366, 361, 365
+    - time concepts, 358–359
+    - time setting, 359–360
+  - users. See users and user accounts
+- System Commander boot loader, 237
+- system-config-display command, 271
+- system-config-network tool, 408
+- system cron jobs, 367
+- system environment tuning, 348–349
+- system log files, 349
+  - manual logging, 352–353
+  - reviewing contents, 356–358
+  - rotating, 353–356
+  - settings, 350–352
+  - syslogd, 349–350
+- system time management, 358
+  - NTP, 360–366, 361, 365
+  - time concepts, 358–359
+  - time setting, 359–360
+- SysV startup scripts
+  - configuration files, 488–489
+  - problems, 78
+  - runlevels, 244–245
+  - XDMCP servers, 289
+
+### T
+- Tab key for command completion, 8
+- tables
+  - combining, 463–464
+  - deleting, 465
+  - MySQL, 458–460
+  - partition, 138
+  - SQL, 456, 456
+- tabs, converting spaces to, 21, 23
+- tags for system log files, 353
+- tail command, 28, 356–357
+- tail-merging process, 205
+- tar utility, 185–187
+- tarballs, 47, 74, 185
+- target files, linking, 191
+- task scheduling, 366
+  - anacron, 371–372
+  - at, 372–373
+  - cron, 366–370
+- TCP (Transmission Control Protocol), 390
+- TCP/IP (Transmission Control Protocol/Internet Protocol), 384
+  - hardware, 384–386, 387
+  - protocol stacks, 388, 389
+  - types, 389–390
+- TCP Wrappers, 477, 479–480, 503
+- tcpd program, 479
+- tcpdump command, 414–416
+- tcsh shell, 5, 435
+- tee command, 16
+- teletype (TTY) code, 88
+- telinit program
+  - runlevels, 248, 250
+  - X Windows System, 272
+  - XDMCP servers, 289
+- telnet program, 416–417
+- Telnet protocol, 416–417, 499
+- TERM environment variable, 431
+- terminating shells, 7
+- terminations for SCSI bus, 129
+- territories in locales, 302–303
+- testing network connectivity, 412
+- text and text files
+  - with backticks, 18
+  - displaying, 6
+  - extracting, 29–30
+  - filter commands, 4, 18
+  - combining files, 18–20
+  - formatting files, 24–27
+  - summarizing files, 29–30
+  - transforming files, 20–23
+  - viewing files, 27–29
+  - locales, 304
+- text editors
+  - command history text, 10
+  - scripts, 436
+  - Vi, 10, 250–254, 252
+- text-mode X login, 294
+- then keyword, 442
+- Third Extended File System (ext3fs or ext3), 142, 153
+- third-party boot loaders, 237
+- 3D acceleration support, 279
+- tilde character (~)
+  - backup files, 17–18, 179
+  - home directory, 6
+  - Vi editor, 252–253
+- time command, 6
+- time management, 358
+  - NTP, 360–366, 361, 365
+  - time concepts, 358–359
+  - time setting, 359–360
+- time of day setting for at command, 373
+- time options for log rotation files, 355
+- time stamps, 184–185, 362
+- time zones, 300–301, 358
+
+### Timeout
+- GRUB, 235
+- LILO, 230
+- titles in GRUB, 235
+- TLds (top-level domains), 396–397
+- /tmp directory, 211, 366
+- /tmp partition, 136
+- Token Ring networks, 385
+- top-level domains (TLds), 396–397
+- top tool, 89–90, 89
+- touch command, 184–185
+- tr command, 23
+- tracepath program, 413
+- traceroute command, 412–413
+- tracing routes, 412–413
+- tracking
+  - log files, 28
+  - mouse, 297
+- tracks, disk, 114, 114
+- transforming files, 20–23
+- translating characters, 23
+- Transmission Control Protocol (TCP), 390
+- Transmission Control Protocol/Internet Protocol (TCP/IP), 384
+  - hardware, 384–386, 387
+  - protocol stacks, 388, 389
+  - types, 389–390
+- transposing command history text, 9
+- TrueType fonts, 283, 287
+  - .ttf files, 283
+  - ttmkfdir program, 284
+- TTY (teletype) code, 88
+- tune2fs command, 149–150, 153–154
+- tuning filesystems, 145–148
+- tunnels in SSH, 293, 499–500, 505–507, 506
+- tuples in SQL, 456, 456
+- twisted-pair cabling, 385
+- Type 1 fonts, 283, 287
+- type command, 215
+
+### U
+- udev tool, 116
+- UDF (Universal Disc Format), 144
+- UDP (User Datagram Protocol), 390
+- UIDs. See user IDs (UIDs)
+- ulimit command, 496–497
+- umask command, 203–204
+- umasks, 161, 203–204
+- umount command
+  - external disks, 130
+  - filesystems, 158, 163–164
+- umsdos filesystem, 143, 179
+- uname command, 85
+- undeleting files, 149
+- underscores (_)
+  - filenames, 178–179
+  - usernames, 331
+- unp2xpad command, 23
+- Unicode format, 302
+- Unicode-Transformation Format (UTF-8), 302
+- uniform resource identifiers (URIs), 314
+- uninstallation
+  - packages, 47
+  - servers, 489–490
+- uniq command, 24
+- Universal Disc Format (UDF), 144
+- Universal Serial Bus. See USB (Universal Serial Bus) devices
+- universally unique identifiers (UUIDs), 150–151, 159
+- Unix98 ps options, 86
+- unlock accounts, 337
+- unmet dependencies with apt-cache, 65
+- unmounting
+  - external disks, 130
+  - filesystems, 158, 163–164
+- unprivileged ports, 401
+- unscaled specification, 285
+- unset command, 7
+- unshareable files in FHS, 209
+- until loops, 444
+- unused servers, disabling, 483-486
+- UPDATE command in MySQL, 461
+- update command in yum, 55
+- update copies, 183
+- updating
+  - Debian Packages, 66, 70
+  - expired accounts, 336
+  - library cache links, 84
+  - tar files, 187
+  - yum packages, 55
+- upgrade command, yum, 56
+- upgrading packages, 47
+  - Debian, 66, 70
+  - depended-on, 76-77
+  - yum, 55
+- uptime command, 90
+- URLs (uniform resource identifiers), 314
+- USB (Universal Serial Bus) devices, 106
+  - drivers, 124-125
+  - managing, 125-126
+  - overview, 123-124
+  - ports, 124, 384
+- USB 2.0 printers, 307
+- usbmgr package, 125
+- USE command, 459
+- user cron jobs, 367
+- User Datagram Protocol (UDP), 390
+- USER environment variable, 430
+- user IDs (UIDs)
+  - changing, 339
+  - configuration files, 341
+  - deleted accounts, 344
+  - searching for files by, 213
+- user accounts, 332-333, 335
+- user masks, 161, 203-204
+- user-mountable media, 166
+- user space programs, 116
+- useradd utility, 334-335, 438
+- userdel command, 344
+- usermod command, 338-339, 346
+- USERNAME environment variable, 430
+
+### Username
+- usernames
+  - characteristics, 330-331
+  - configuration files, 340-341
+  - filesystem mounts, 163
+  - processes, 88
+  - server configuration files, 478
+- users and user accounts, 330
+  - adding, 334-336
+  - changing, 338-339
+  - configuration files, 340-343, 434
+  - configuring, 333-334
+  - creating, 337-338
+  - deleting, 343
+  - environments, 348-349
+  - expiration settings, 339-340
+  - in groups, 331-332
+  - passwords, 336-337
+  - processes, 86
+  - scripts for, 438-439
+- UTC. See user IDs (UIDs)
+- usernames, 330-331
+- /usr directory, 210
+- /usr/lib directory, 81
+- /usr/lib/rpm/rpmrc file, 59
+- /usr/local directory, 211
+- /usr/local partition, 135
+- /usr partition, 134-135
+- /usr/share/fonts directory, 283
+- /usr/X11R6/lib/fonts directory, 283
+- /usr/share/zoneinfo directory, 300-301, 359
+- /usr/X11R6 directory, 211
+- /usr/X11R6/lib/modules/drivers directory, 277
+- /usr/X11R6/lib/X11/fonts directory, 283
+- UTC (Coordinated Universal Time), 300, 358-360
+- UTF-8 (Unicode Transformation Format), 302
+- UUIDs (universally unique identifiers), 150-151, 159

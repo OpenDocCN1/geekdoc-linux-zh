@@ -1,0 +1,35 @@
+At this point, the squid daemon should start automatically when your system boots. By default, the squid daemon will run with the -D option. The -D option enables Squid to start without having an active Internet connection. If you want to add other options to the squid daemon, you can edit the /etc/sysconfig/squid configuration file. Look for the line that looks similar to the following:
+
+```
+SQUID_OPTS="-D"
+```
+
+You can add any options, along with the -D option, between the quotes. Most of these options are useful for debugging Squid:
+
++   - `-a port#` — Substitute for *port#* a port number that will be used instead of the default port number (3128) for servicing HTTP proxy requests. This is useful for temporarily trying out an alternative port.
+
++   - `-f squidfile` — Use this option to specify an alternative squid.conf file (other than `/etc/squid/squid.conf`). Replace *squidfile* with the name of the alternative squid.conf file. This is a good way to try out a new squid.conf file before you replace the old one.
+
++   - `-d level` — Change the debugging level to a number indicated by *level*. This also causes debugging messages to be sent to `stderr`.
+
++   - `-X` — Use this option to check that the values are set properly in your squid.conf file. It turns on full debugging while the squid.conf file is being interpreted.
+
+You can restart the squid service by typing `/etc/init.d/squid restart`. While the squid daemon is running, there are several ways you can run the squid command to change how the daemon works, using these options:
+
++   - `squid -k reconfigure` — Causes Squid to again read its configuration file.
+
++   - `squid -k shutdown` — Causes Squid to exit after waiting briefly for current connections to exit.
+
++   - `squid -k interrupt` — Shuts down Squid immediately, without waiting for connections to close.
+
++   - `squid -k kill` — Kills Squid immediately, without closing connections or log files. Use this option only if other methods don’t work.
+
+With the squid daemon ready to run, you need to set up the squid.conf configuration file.
+
+# ## Using a Simple squid.conf File
+
+You can use the `/etc/squid/squid.conf` file that comes with Squid to get started. Although the file contains lots of comments, the actual settings in that file are quite manageable. The following paragraphs describe the contents of the default squid.conf file:
+
+```
+http_port 3128
+```

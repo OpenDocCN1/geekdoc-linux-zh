@@ -1,0 +1,9 @@
+![](bbox=[0.14, 0.1, 0.86, 0.48])
+
+Linux was designed with TCP/IP in mind, and the Internet is built atop TCP/IP. Other protocol stacks are available, though, and you may occasionally run into them. In particular, NetBEUI was the original Microsoft and IBM protocol stack for Windows. AppleTalk was Apple’s initial protocol stack, and the Internet Packet Exchange/Sequenced Packet Exchange (IPX/SPX) was Novell’s favored protocol stack. All three are now fading in importance, but you may still need to use them in some environments. Linux supports AppleTalk and IPX/SPX but not NetBEUI.
+
+# ## Knowing TCP/IP Protocol Types
+
+Within TCP/IP, several different protocols exist. Each of these protocols can be classified as falling on one of the four layers of the TCP/IP stack, as shown in Figure 8.2. The most important of the internet- and transport-layer protocols are the building blocks for the application-layer protocols with which you interact more directly. These important internet- and transport-layer protocols include the following:
+
+**IP** The *Internet Protocol* (IP) is the core protocol in TCP/IP networking. Referring to Figure 8.2, IP is an internet-layer (a.k.a. a network-layer or layer 2) protocol. IP provides a “best effort” method for transferring packets between computers—that is, the packets aren’t guaranteed to reach their destination. Packets may also arrive out of order or corrupted. Other components of the TCP/IP stack must deal with these issues and have their own ways of doing so. IP is also the portion of TCP/IP with which IP addresses are associated. (The Real-World Scenario sidebar “The Coming of IPv6” describes a change in the IP portion of TCP/IP that’s underway.)

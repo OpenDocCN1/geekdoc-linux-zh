@@ -1,0 +1,334 @@
+
+## L
+
+- LILO location, 230
+- locking accounts, 336
+- log files, 330
+  - rotation, 353
+  - system. *See* system log files
+  - tracking, 28
+- Logcheck tool, 357
+- logger tool, 352–353
+- logical block addressing (LBA) mode, 115
+- logical operators
+  - scripts, 442
+  - SELECT, 462
+- logical partitions, 132
+- logical volume management (LVM), 134
+- logins
+  - limits setting, 495–497
+  - without passwords, 504
+  - SSH scripts, 505
+  - X Windows System, 287–291
+- logout command, 7
+- logout scripts, 434
+- logrotate tool, 353–354
+- long file listings, 181
+- long filename systems, 143, 179
+- loopback addresses, 394
+- loopback devices, 160
+- loops in scripts, 443–444
+- low-level formatting, 141
+- lp utility, 317
+- LPD (Line Printer Daemon), 305
+- lpd command, 314
+- lpmove command, 317
+- lpq command, 317
+- lpr command, 305, 315–317
+- lprm command, 317
+- ls command
+  - file ownership, 194
+  - links, 191
+  - options, 180–182
+  - permissions, 195
+- lsdel command, 151
+- lsmod command, 120–121
+- lsof program, 485–486
+- lspci command, 117–119
+- lsusb utility, 124–125
+- lsrcrate utility, 134
+- LVM (logical volume management), 134
+- lvscan utility, 134
+
+## M
+
+- MAC (Media Access Control) addresses, 391–392
+- machine information, 85
+- machine names, 396
+- magnifier tools, 298–299
+- mail. *See* e-mail
+- mail command, 438
+- MAIL environment variable, 430
+- mail options for log rotation files, 355
+- mail program, 449–452
+- mail readers, 449
+- mail spools, 447
+- mail transfer agents (MTAs), 447
+- mailq program, 452
+- MAILTO environment variables, 367
+- make utility, 184
+- man pages, 13–14
+- manufacturer-provided video drivers, 270
+- masquerade information, 414
+- master SATA disks, 127
+- matching lines in regular expressions, 32
+- MBRs (master boot records), 131–133, 226–227
+- Media Access Control (MAC) addresses, 391–392
+- /media directory, 212
+- /media partition, 136
+- memory
+  - 106
+  - libraries, 79
+  - limits setting, 495–497
+  - process use, 88, 90
+  - video, 278–279
+- merging lines, 20
+- message signing in GPG, 510
+- messages
+  - boot process, 239–240
+  - system log files, 353
+- minus signs. *See* dashes (-)
+- misconfiguration of e-mail servers, 454
+- mismatched names, 75
+- missing libraries and support programs, 75
+- mkdir command, 193
+- mkdosfs tool, 145
+- mke2fs program, 144
+- mkfontdir program, 284
+- mkfontscale program, 284
+- mkfs tool, 144
+- mkisofs command, 144, 191
+- mkpart command, 141
+- mkswap command, 147
+- /mnt directory, 211
+- /mnt partition, 136
+- modes
+  - directories, 193
+  - files, 200–204
+- monitors, 276–277
+  - runlevel, 241–242
+  - Vi editor, 251
+- modification time, changing, 185
+- modinfo command, 120
+- modprobe command
+  - network hardware drivers, 402
+  - options, 120–122
+  - quotas, 207
+- module stacks, 123
+- modules
+  - kernel, 119–123
+  - X Windows System, 273–274
+- monitoring
+  - hard disk use, 155–158
+  - log files, 357
+  - network port use, 484–485
+  - print queues, 315–317
+- monitors
+  - contrast controls, 298
+  - X Windows System settings, 276–277
+- month in sorting files, 22
+- mount command, 155–163, 207
+- mount points
+  - filesystem mounts, 159–160, 165
+  - filesystem unmounts, 163
+  - partitions, 134–135
+- mounted filesystems, 158
+- mounted hard disks, 134
+- mounting filesystems, 158–166
+- mouse
+  - accessibility issues, 295–297
+  - X Windows System settings, 275
+- moving
+  - files, 183–184
+  - partitions, 141
+  - print jobs, 317
+- mpage command, 316–317
+- msdos filesystem code, 179
+- MTAs (mail transfer agents), 447
+- multi-column printing output, 26
+- multi-head displays, 281
+- multi-OS support, 130
+- multi-user mode, 242
+- multi-volume tar files, 187
+- multicasting, 393
+- multiple partitions, 137
+- multiple tests in SELECT, 462
+- mutt mail reader, 449
+- mv command, 183–184
+- MySQL
+  - 455, 457
+  - combining data, 463–464
+  - databases and tables, 458–461
+  - deleting data, 465
+  - exam essentials, 466–467
+  - retrieving data, 461–462
+  - review questions, 468–474
+  - starting, 458
+  - storing data, 460
+  - summary, 465–466
+- mysql program, 458
+
+## N
+
+- nail program, 450–451
+- named pipes file type code, 196
+- named runlevels, 242
+- names
+  - disks, 127
+  - files, 178–180, 183–184
+  - groups, 346–347
+  - hostname resolution, 397–399
+  - kernel, 85
+  - kernel modules, 121
+  - mismatched, 75
+  - nodes, 85
+  - packages, 49, 53
+  - print jobs, 315
+- NAT (Network Address Translation)
+  - routers, 394
+- Neighbor Discovery Protocol (NDP), 392
+- Nessus scanner, 487–488
+- nesting if/then/else clauses, 443
+- NET TIME command, 366
+- NetBEUI protocol, 389
+- netmask, 393, 395, 404–407
+- netstat command, 414, 483–485
+- network account databases, 343
+- Network Address Translation (NAT)
+  - routers, 394
+- network addresses, 390
+  - broadcasting data, 395–396
+  - hardware, 391–392
+  - hostnames, 396–399
+  - IP, 392–395
+  - ports, 399–402
+  - xinetd configuration, 481
+- Network Configuration tool, 408
+- network connections, 412
+  - configuring, 409–411
+  - FTP commands, 417–418
+  - raw network traffic, 414–416
+  - status, 414
+  - Telnet, 416–417
+  - testing, 412
+  - tracing, 412–413
+- Network File System (NFS), 390
+- Network Information System (NIS), 343
+- network ports
+  - overview, 399–402
+  - use monitoring, 484–485
+- network printers, 314–315
+- network scanners, 487–488
+- network stacks, 384
+- Network Time Protocol (NTP), 360–361
+  - client configuration, 365–366
+  - overview, 361–362
+  - server configuration, 363–365
+  - time sources, 362–363
+- networking, 383
+  - addresses. *See* network addresses
+  - connections. *See* network connections
+  - exam essentials, 418–419
+  - hardware, 384–386
+  - local networks. *See* local networks
+  - packets, 387
+  - protocol stacks, 387–389
+  - review questions, 420–426
+  - summary, 418
+  - TCP/IP, 384
+    - hardware, 384–386
+    - protocol stacks, 388, 389
+    - types, 389–390
+- New Technology File System (NTFS), 143
+- newaliases command, 454
+- newgrp command, 204, 332
+- NFS (Network File System), 390
+- nice command, 92
+- NIS (Network Information System), 343
+- nl command, 25–26
+- nmap command, 487–488
+- NMap scanner, 487–488
+- NNTPSERVER environment variable, 12, 15, 430
+- node names, 85
+- non-blank lines numbering option, 25
+- non-Linux boot partitions, 231
+- non-Linux root, 236
+- nslookup program, 397
+- NTFS (New Technology File System), 143
+- NTFS-3G filesystem, 143
+- NTP (Network Time Protocol), 360–361
+  - client configuration, 365–366
+  - overview, 361–362
+  - server configuration, 363–365
+  - time sources, 362–363
+- ntp.drift file, 362
+- ntp package, 364
+- ntpd package, 364
+- ntpd command, 365–366
+- ntp program, 364–365
+- ntsys utility, 246
+- number of copies for print jobs, 315
+- numbering lines, 25–26
+- numbers in passwords, 492
+- numeric sorts, 22
+- numeric tests with SELECT, 462
+
+## O
+
+- octal file displays, 21
+- octal permissions, 203
+- od command, 21
+- on-board hardware, 108
+- onscreen keyboards, 297
+- open files listing, 485–486
+- open ports, 414, 487
+- open relays, 447, 454
+- OpenFirmware program, 107
+- OpenPrinting database, 307
+- OpenSSH server, 500
+- openSUSE configuration, 294
+- /opt directory, 211
+- /opt/fonts directory, 283
+- /opt partition, 135
+- optflags lines, 59
+- optical media, 127, 191
+- options, command, 6–7
+- or operators
+  - scripts, 442
+  - SELECT, 462
+- Orca speech synthesis product, 299
+- ORDER BY keyword, 462
+- OS (operating system)
+  - GRUB, 235
+  - information, 85
+  - LILO, 231
+- outline fonts, 282–283
+- output
+  - printing, 26
+  - redirection, 15–16
+- ownership
+  - defaults, 203–204
+  - files, 182, 193–195
+  - filesystem mounting, 161
+
+## P
+
+- packages
+  - caches, 65
+  - Debian. *See* Debian packages
+  - dependencies and conflicts, 74–78
+  - format conversions, 73–74
+  - overview, 46–48
+  - rebuilding, 77
+  - RPM. *See* RPM (RPM Package Manager) and RPMs
+  - shared libraries. *See* shared libraries
+  - SQL, 455
+  - query script problems, 78
+  - versions, 77–78
+- packet-filter firewalls, 482
+- packet sniffers, 414–416
+- packets, 387
+- page length in printing, 26–27
+- page separators in line numbering, 25
+- page width in printing, 26
+- paging through files, 28–29

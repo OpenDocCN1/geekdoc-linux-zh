@@ -1,0 +1,144 @@
+
+## Part IV Networking
+
+Besides allowing proxy services, Squid can also be part of an Internet cache hierarchy. Internet caching occurs when Internet content is taken from the original server and copied to a caching server that is closer to you. When you, or someone else in the caching hierarchy, request that content again, it can be taken from the caching server instead of from the original server.
+
+You don't have to cache Internet content for other computers to participate in caching with Squid. If you know of a parent caching computer that will allow you access, you can identify that computer in Squid and potentially speed your Web browsing significantly.
+
+Caching services in Squid are provided through your Linux system's ICP port. Besides ICP services, you can also enable Simple Network Management Protocol (SNMP) services. SNMP lets your computer provide statistics and status information about itself to SNMP agents on the network. SNMP is a feature for monitoring and maintaining computer resources on a network.
+
+> **CAUTION** SNMP poses a potential security risk if it is not configured properly. Use caution when configuring SNMP with Squid.
+
+The squid daemon process (`/usr/sbin/squid`) can be started automatically at system boot time. After it is set up, most of the configuration for Squid is done in the `/etc/squid/squid.conf` file. The `squid.conf` file contains lots of information about how to configure Squid. (The file contains more than 4,300 lines of comments and examples, although there are only 35 lines of active settings.)
+
+For further information about the Squid proxy server, refer to the Squid Web Proxy Cache home page (`www.squid-cache.org`).
+
+## Starting the Squid Daemon
+
+When you install CentOS, you have an opportunity to install Squid (`squid` package). If you are not sure whether or not Squid was installed, type the following:
+
+```
+# rpm -q squid
+squid-2.6.STABLE21-3.el5
+```
+
+If Squid is not installed, you can install it from the DVD that comes with this book or by typing `yum install squid` to install it over the network. Next, you can check whether or not Squid is configured to run. To do that, type the following:
+
+```
+# chkconfig --list squid
+squid
+0:off 1:off 2:off 3:off 4:off 5:off 6:off
+```
+
+If the Squid service is off for run levels 3, 4, and 5 (it's off at all run levels by default), you can set it to start automatically at boot time. To set up the squid daemon to start at boot time, type the following:
+
+```
+# chkconfig squid on
+```
+
+At this point, the squid daemon should start automatically when your system boots. By default, the squid daemon will run with the `-D` option. The `-D` option enables Squid to start without having an active Internet connection. If you want to add other options to the squid daemon, you can edit the `/etc/sysconfig/squid` configuration file. Look for the line that looks similar to the following:
+
+```
+SQUID_OPTS="-D"
+```
+
+You can add any options, along with the `-D` option, between the quotes. Most of these options are useful for debugging Squid:
+
+-   `-a port#` — Substitute for *port#* a port number that will be used instead of the default port number (3128) for servicing HTTP proxy requests. This is useful for temporarily trying out an alternative port.
+-   `-f squidfile` — Use this option to specify an alternative `squid.conf` file (other than `/etc/squid/squid.conf`). Replace *squidfile* with the name of the alternative `squid.conf` file. This is a good way to try out a new `squid.conf` file before you replace the old one.
+-   `-d level` — Change the debugging level to a number indicated by *level*. This also causes debugging messages to be sent to `stderr`.
+-   `-X` — Use this option to check that the values are set properly in your `squid.conf` file. It turns on full debugging while the `squid.conf` file is being interpreted.
+
+You can restart the squid service by typing `/etc/init.d/squid restart`. While the squid daemon is running, there are several ways you can run the squid command to change how the daemon works, using these options:
+
+-   `squid -k reconfigure` — Causes Squid to again read its configuration file.
+-   `squid -k shutdown` — Causes Squid to exit after waiting briefly for current connections to exit.
+-   `squid -k interrupt` — Shuts down Squid immediately, without waiting for connections to close.
+-   `squid -k kill` — Kills Squid immediately, without closing connections or log files. Use this option only if other methods don’t work.
+
+With the squid daemon ready to run, you need to set up the `squid.conf` configuration file.
+
+## Using a Simple squid.conf File
+
+You can use the `/etc/squid/squid.conf` file that comes with Squid to get started. Although the file contains lots of comments, the actual settings in that file are quite manageable. The following paragraphs describe the contents of the default `squid.conf` file:
+
+```
+http_port 3128
+```
+
+The `http_port` tag identifies the port on which Squid listens for HTTP client requests. The default port to use is 3128. Optionally, you can add a hostname (e.g., `example.com:3128`) or IP address (e.g., `10.0.0.1:3128`) to limit allowed incoming requests to those made to a particular hostname or IP address.
+
+```
+hierarchy_stoplist cgi-bin ?
+```
+
+The `hierarchy_stoplist` tag indicates that when a certain string of characters appears in a URL, the content should be obtained from the original server and not from a cache peer. In this example, requests for the string `cgi-bin` and the question mark character (`?`) are all forwarded to the originating server.
+
+```
+acl QUERY urlpath regex cgi-bin ?
+cache deny QUERY
+```
+
+The preceding two lines can be used to cause URLs containing certain characters to never be cached. These go along with the previous line by not caching URLs containing the same strings (`cgi-bin` and `?`) that are always sought from the original server.
+
+```
+acl apache rep_header Server "Apache"
+acl all src 0.0.0.0/0.0.0.0
+acl manager proto cache_object
+acl localhost src 127.0.0.1/255.255.255.255
+```
+
+The `acl` tags are used to create access control lists. The first line in the preceding code creates an access control list called `apache` and assigns any response headers containing `Server: Apache` to the `apache` acl. After that, the `all` acl is defined to include all IP addresses. The next `acl` line assigns the `manager` acl to handle the `cache_object` protocol. The `localhost` source is assigned to the IP address of `127.0.0.1`.
+
+```
+access_log /var/log/squid/access.log squid
+```
+
+The preceding line identifies the location of the Squid `access.log` file. As the name implies, this file contains messages about requests to access the Squid server.
+
+Squid includes default settings for how long different types of content in cache are still considered to be fresh. The following `refresh_pattern` values are included in the `squid.conf` file:
+
+```
+refresh_pattern   -ftp:    1440     20%    10080
+refresh_pattern   -gopher:  1440     0%     1440
+refresh_pattern   .        0        20%    4320
+```
+
+In the code just shown, all lines that begin (`'`) with `ftp` or `gopher` are set to expire in 1,440 minutes. The percentage of the object's age during which it is considered to be fresh is shown in the next column (20%, 0%, and 20%). The last column indicates the maximum number of minutes during which the object will be considered fresh. The next several entries define how particular ports are handled and how access is assigned to HTTP and ICP services.
+
+## Setting Up an Internet Connection
+
+```
+acl SSI_ports port 443
+acl Safe_ports port 80       # http
+acl Safe_ports port 21       # ftp
+acl Safe_ports port 443      # https
+acl Safe_ports port 70       # gopher
+acl Safe_ports port 210      # wais
+acl Safe_ports port 1025-65535 # unregistered ports
+acl Safe_ports port 280      # http-mgmt
+acl Safe_ports port 488      # gss-http
+acl Safe_ports port 591      # filemaker
+acl Safe_ports port 777      # multiling http
+
+acl CONNECT_method CONNECT
+http_access allow manager localhost
+http_access deny manager
+http_access deny !Safe_ports
+http_access deny CONNECT !SSL_ports
+http_access allow localhost
+http_access deny all
+http_reply_access allow all
+icp_access allow all
+```
+
+The following sections describe these settings in more detail, as well as other tags you might want to set in your `squid.conf` file. By default, no clients can use the Squid proxy server, so you at least want to define which computers can access proxy services.
+
+To make sure that this simple Squid configuration is working, follow this procedure:
+
+1.  On the Squid server, restart the squid daemon. To do this, type `/etc/init.d/squid restart` (If Squid isn't running, use `start` instead of `restart`.)
+2.  On the Squid server, start your connection to the Internet if it is not already up.
+3.  On a client computer on your network, set up a Web browser to use the Squid server as a proxy server (described later in this chapter). In Firefox, select Edit > Preferences > Advanced and click on the Network tab, then choose Settings. From the Connection Setting window that pops up, select "Manual proxy configuration." Then add the Squid server's computer name and, by default, port 3128 to each protocol. You can also check the "Use this proxy server for all protocols" option to use the same proxy for all service requests from the browser.
+4.  On the client computer, try to open any web page on the Internet with the browser you just configured.
+
+If the web page doesn't appear, see the "Debugging Squid" section for how to fix the problem.

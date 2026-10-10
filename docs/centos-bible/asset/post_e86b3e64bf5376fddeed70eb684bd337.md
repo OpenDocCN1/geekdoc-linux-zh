@@ -1,0 +1,219 @@
+
+# Contents
+
+-   Special Installation Topics 46
+    -   Setting up to Dual-Boot Linux and Windows 46
+    -   Partitioning Your Disks 52
+    -   Using the GRUB Boot Loader 60
+-   Troubleshooting Installation 65
+-   Summary 67
+
+-   **Chapter 3: Getting Started with the Desktop** 69
+    -   Logging in to CentOS 69
+    -   Getting Familiar with the Desktop 72
+        -   Touring Your Desktop 72
+        -   Tips for Configuring Your Desktop 79
+    -   Using the GNOME Desktop 80
+        -   Using the Metacity Window Manager 81
+        -   Using the GNOME Panels 83
+        -   Using the Nautilus File Manager 88
+        -   Changing GNOME Preferences 91
+        -   Managing Removable Media 92
+        -   Trying Other GNOME Applications 93
+        -   Exiting GNOME 95
+    -   Running 3D Accelerated Desktop Effects 96
+    -   Switching Desktop Environments 98
+    -   Using the KDE Desktop 98
+        -   Starting with KDE 99
+        -   KDE Desktop Basics 100
+        -   Managing Files with the Konqueror File Manager 102
+        -   Using the Konqueror Browser Features 107
+        -   Configuring Konqueror Options 107
+        -   Managing Windows 110
+        -   Configuring the Desktop 111
+        -   Adding Widgets 113
+    -   Using the Xfce Desktop Environment 113
+    -   Troubleshooting Your Desktop 114
+        -   GUI Doesn’t Work at Startup 115
+        -   Tuning Your Video Card and Monitor 116
+        -   Configuring Video Cards for Gaming 118
+        -   Getting More Information 118
+        -   Summary 118
+
+-   **Chapter 4: Using Linux Commands** 119
+    -   The Shell Interface 119
+        -   Checking Your Login Session 120
+        -   Checking Directories and Permissions 121
+        -   Checking System Activity 123
+        -   Exiting the Shell 125
+    -   **Understanding the Shell** 125
+    -   **Using the Shell in Linux** 126
+        -   Locating Commands 127
+        -   Rerunning Commands 129
+        -   Connecting and Expanding Commands 135
+        -   Using Shell Environment Variables 138
+        -   Managing Background and Foreground Processes 141
+        -   Configuring Your Shell 143
+    -   **Working with the Linux File System** 147
+        -   Creating Files and Directories 149
+        -   Moving, Copying, and Deleting Files 155
+    -   **Using the vi Text Editor** 153
+        -   Starting with Vi 156
+        -   Moving around the File 159
+        -   Searching for Text 159
+        -   Using Numbers with Commands 160
+    -   Summary 161
+
+## Part II Using CentOS
+
+-   **Chapter 5: Accessing and Running Applications** 165
+    -   **Getting and Installing Software Packages** 166
+        -   Downloading and Installing Applications with yum 167
+        -   Getting CentOS Software Updates 175
+    -   **Managing RPM Packages** 176
+        -   Using the Add/Remove Window 176
+        -   Using the rpm Command 178
+    -   **Using Software in Different Formats** 188
+        -   Understanding Software Package Names and Formats 189
+        -   Understanding Different Archive Formats 191
+        -   Building and Installing from Source Code 191
+    -   **Using CentOS to Run Applications** 195
+        -   Finding Common Desktop Applications in Linux 196
+        -   Investigating Your Desktop 196
+        -   Starting Applications from a Menu 198
+        -   Starting Applications from a Run Application Window 198
+        -   Starting Applications from a Terminal Window 199
+        -   Running Remote X Applications 201
+    -   **Running Microsoft Windows, DOS, and Macintosh Applications** 205
+        -   Running DOS Applications 207
+        -   Running Microsoft Windows Applications in Linux 209
+        -   Running Applications in Virtual Environments 214
+        -   Running Applications Virtually with Xen 214
+        -   Running Applications Virtually with KVM and QEMU 218
+        -   Summary 220
+
+-   **Chapter 6: Publishing with CentOS** 221
+    -   Desktop Publishing in Linux 222
+        -   Using Text Editors and Notepads 222
+        -   Using Word Processors 222
+        -   Using Traditional Linux Publishing Tools 226
+        -   Creating Documents in Groff or LaTeX 227
+        -   Text Processing with Groff 228
+        -   Text Processing with TeX/LaTeX 231
+        -   Converting Documents 233
+        -   Creating DocBook Documents 234
+        -   Understanding SGML and XML 235
+        -   Displaying PDF Files with Evince 238
+        -   Doing Page Layout with Scribus 239
+    -   Working with Graphics 241
+        -   Manipulating Images with GIMP 241
+        -   Taking Screen Captures 243
+        -   Creating Vector Graphic Images with Inkscape 244
+        -   Using Scanners Driven by SANE 246
+    -   Web Publishing 247
+    -   Summary 248
+
+-   **Chapter 7: Music, Video, and Images in Linux** 249
+    -   Understanding Multimedia and Legal Issues in Linux 250
+    -   Extending Freedom to Codecs 251
+    -   Listening to Music in Linux 251
+        -   Configuring a Sound Card 253
+        -   Choosing Audio Players 259
+        -   Automatically Playing CDs 260
+        -   Playing and Managing Music with Rhythmbox 261
+        -   Playing Music with XMMS Audio Player 264
+        -   Using ogg123, mpg321, and play Command-Line Players 267
+        -   Using MIDI Audio Players 268
+        -   Converting Audio Files with Sox 268
+        -   Extracting and Encoding Music 271
+        -   Creating Your Own Music CDs 274
+        -   Creating CD Labels with clabelgen 277
+    -   Viewing TV and Webcams 278
+        -   Watching TV with Tvtime 279
+        -   Videoconferencing and VOIP with Ekiga 281
+    -   **Playing Video** 285
+        -   Examining Laws Affecting Video and Linux 285
+        -   Understanding Video Content Types 286
+        -   Watching Video with Xine 288
+        -   Using Totem Movie Player 292
+    -   **Using a Digital Camera** 293
+        -   Displaying Images in gThumb 293
+        -   Using Your Camera as a Storage Device 295
+    -   **Summary** 296
+
+-   **Chapter 8: Using the Internet and the Web** 297
+    -   **Overview of Internet Applications and Commands** 297
+    -   **Browsing the Web** 300
+        -   Understanding Web Browsing 301
+        -   Browsing the Web with Firefox 305
+        -   Setting Up Firefox 308
+        -   Using Text-Based Web Browsers 316
+    -   **Communicating with E-Mail** 317
+        -   E-Mail Basics 319
+        -   Using Evolution E-Mail 320
+        -   Thunderbird Mail Client 322
+        -   Text-Based Mail Programs 324
+    -   **Participating in Newsgroups** 326
+    -   **Instant Messaging with Pidgin** 326
+    -   **Sharing Files with BitTorrent** 328
+    -   **Using Remote Login, Copy, and Execution** 329
+        -   Using Telnet for Remote Login 330
+        -   Copying Files with FTP 331
+        -   Getting Files with Wget 337
+        -   Using ssh for Remote Login/Remote Execution 339
+        -   Using scp for Remote File Copy 340
+        -   Using the “-r” Commands: llogin, rcp, and rsh 341
+    -   **Summary** 341
+
+## Part III Administration
+
+-   **Chapter 9: Understanding System Administration** 345
+    -   **Using the root User Account** 346
+    -   **Becoming Super User (the su Command)** 346
+    -   **Learning about Administrative GUI Tools, Commands, Configuration Files, and Log Files** 348
+        -   Using Graphical Administration Tools 348
+        -   Administrative Commands 353
+        -   Administrative Configuration Files 354
+        -   Administrative Log Files 358
+    -   Using Other Administrative Logins 358
+    -   **Administering Your Linux System** 360
+    -   **Configuring Hardware** 361
+        -   Checking Your Hardware 361
+        -   Managing Hardware with HAL 361
+        -   Reconfiguring Hardware with kudzu 362
+        -   Configuring Modules 364
+    -   **Managing File Systems and Disk Space** 366
+        -   Mounting File Systems 369
+        -   Using the mkfs Command to Create a File System 377
+        -   Adding a Hard Disk 378
+        -   Using RAID Disks 381
+        -   Checking System Space 382
+    -   **Monitoring System Performance** 385
+        -   Watch Computer Usage with System Monitor 385
+        -   Monitoring CPU Usage with top 386
+        -   Monitoring Power Usage on Laptop Computers 387
+    -   **Using Security Enhanced Linux** 388
+    -   **Understanding Security Enhanced Linux** 389
+        -   Types and Roles in SELinux 389
+        -   Users in SELinux 390
+        -   Policies in SELinux 390
+        -   Tools in SELinux 390
+    -   **Using SELinux in CentOS** 391
+        -   SELinux 391
+        -   Checking Whether SELinux Is On 392
+        -   Checking SELinux Status 393
+    -   **Summary** 394
+
+-   **Chapter 10: Setting up and Maintaining User Accounts** 395
+    -   **Creating User Accounts** 395
+        -   Adding Users with useradd 396
+        -   Adding Users with User Manager 400
+    -   **Setting User Defaults** 402
+        -   Supplying Initial Login Scripts 405
+        -   Supplying Initial .bashrc and bash_profile Files 406
+        -   Supplying an Initial .testrc File 407
+        -   Configuring System-Wide Shell Options 407
+        -   Setting System Profiles 408
+        -   Adding User Accounts to Servers 409
+    -   **Creating Portable Desktops** 410
+    -   **Providing Support to Users** 411

@@ -1,0 +1,35 @@
+# **Part III**
+
+**Administration**
+
+Writing inode tables: done
+
+Filesystem too small for a journal
+
+Writing superblocks and filesystem accounting information: done
+
+The filesystem will be automatically checked every 23 mounts or 180 days, whichever comes first. Use tune2fs -c or -i to override.
+
+You can see the statistics that are output with the formatting done by the mkefs command. The number of inodes and blocks created are output. Likewise, the number of blocks per group and fragments per group are also output. You could now mount this file system (mount /mnt/floppy), change to it as your current directory (cd /mnt/floppy), and create files on it as you please.
+
+# ## Adding a Hard Disk
+
+Adding a new hard disk to your computer so that it can be used by Linux requires a combination of steps described in previous sections. The general steps are as follows:
+
++   1. Install the hard disk hardware.
++   2. Identify the partitions on the new hard disk.
++   3. Create the file systems on the new hard disk.
++   4. Mount the file systems.
+
+The easiest way to add a hard disk to Linux is to have the entire hard disk devoted to a single Linux partition. You can have multiple partitions of different sizes, however, and assign them each to different types of file systems and different mount points, if you like. The following procedure describes how to add a hard disk containing a single Linux partition. Along the way, however, it also notes which steps you need to repeat to have multiple file systems with multiple mount points.
+
+> **NOTE**
+> This procedure assumes that CentOS is already installed and working on the computer. If this is not the case, follow the instructions for adding a hard disk on your current operating system. Later, when you install CentOS, you can identify this disk when asked to partition your hard disk(s).
+
++   1. Install the hard disk into your computer. Follow the manufacturer’s instructions for physically installing and connecting the new hard disk. If, presumably, this is a second hard disk, you may need to change jumpers on the hard disk unit itself to have it operate as a slave hard disk. You may also need to change the BIOS settings.
++   2. Boot your computer to Linux.
++   3. Determine the device name for the hard disk. As root user from a shell, type:
+
+```
+`# dmegs | less`
+```

@@ -1,0 +1,99 @@
+
+assigned to them. Since this option doesn't work from *system-config-samba*, you'll need to specify the users with the valid users option either manually in /etc/samba/smb.conf or with SWAT.
+
+-   **Allow Access to Everyone**—This option allows you to grant anyone access this directory. (All users will have privileges assigned to the guest user when accessing the directory.)
+
+After you click OK, Samba is started and the new directory is immediately available. You can close the Samba Server Configuration window.
+
+13.  Although Samba should be running at this point, you probably need to set Samba to start automatically every time you reboot Linux. To do that, type the following as *root* user in a Terminal window:
+
+```
+# chkconfig smb on
+```
+
+If Samba isn't running yet, type *service smb start* to start it right now. You can repeat the steps for adding a Samba shared directory for every directory you want to make available on your network. At this point, you can do one of the following.
+
+1.  Go through your Samba server settings in more detail (as described in the "Configuring Samba with SWAT" section) to understand how you might want to further tune your Samba server.
+2.  Try accessing the shared directories you just created from a client computer on your network. To do that, refer to the "Mounting Samba Directories in Linux" section later in this chapter.
+
+If you cannot open the shared directory you just configured from a Windows computer or other Linux computer on your LAN, you are probably experiencing one of the following problems:
+
+-   The client isn't supplying a valid username and password.
+-   The client isn't supplying an encrypted password.
+
+The quick way around these problems is to use only share-level security (which, of course, throws your security right out the window). The other solution is to get passwords up-to-date and make sure that clients are using encryption.
+
+## Configuring Samba with SWAT
+
+The *Samba Web Administration Tool* (SWAT) is a Web-based interface for configuring Samba. While it's not quite as easy to use as the Samba Server Configuration window, it does offer more options for tuning Samba and Help descriptions for each option. Also, because SWAT is Web-based, you can configure your system remotely from any Web browser.
+
+> **CAUTION** Both SWAT and the Samba Server Configuration window configure Samba by modifying the /etc/samba/smb.conf file. Different GUI tools can overwrite each other's settings, sometimes in a way that causes the other tool not to work.
+
+In general, it’s best to make a *backup copy* of your files before switching GUI tools. Eventually, you should choose one tool and stick with it.
+
+## Turning on SWAT
+
+Before you can use SWAT, you must have the *samba-swat* package installed (type `yum install samba-swat`) and start the SWAT service. To set up SWAT to run from your browser, follow these steps:
+
+1.  To turn on the SWAT service, type the following, as `root` user, from a Terminal window:
+    ```
+    # chkconfig swat on
+    ```
+2.  To pick up the change to the SWAT service, reload data for the running `xinetd` start-up script as follows:
+    ```
+    # service xinetd reload
+    ```
+
+If `xinetd` is not already running, use `start` instead of `reload`. When you have finished this procedure, use the SWAT program, described in the next section, to configure Samba.
+
+## Starting with SWAT
+
+You can run the SWAT program by typing the following URL in your local browser:
+`http://localhost:901/`
+
+At this point, the browser will prompt you for a username and password. Enter the `root` username and password. The SWAT window should appear, as shown in Figure 17-5.
+
+> **TIP**
+> Instead of running SWAT from your local browser, you can run it from another computer on the network by substituting the server computer’s name for `localhost`. (To allow computers besides the local computer to access the swat service, you must change or remove the `only_from = 127.0.0.1` line from the `/etc/xinetd.d/swat` file and reload the `xinetd` service.) Keep in mind that you are entering clear-text passwords when you connect to the SWAT service, so using this feature outside of the local computer is not particularly secure.
+
+The rest of this section describes how to use SWAT to create your configuration entries (in `/etc/samba/smb.conf`) and to work with that configuration.
+
+> **CAUTION**
+> Any time you use a GUI to change a plaintext configuration file (as you do with SWAT), you may lose some of the information that you put in by hand. In this case, SWAT deletes comment lines and rearranges other entries. To protect changes you have made manually, make a backup copy of your `/etc/samba/smb.conf` file before you edit it with SWAT.
+
+## FIGURE 17-5
+
+Use SWAT from your browser to manage your Samba configuration.
+
+![](img/2f265415ceec72538dd3c78ffca75c10_736_0.png)
+
+## Creating Global Samba Settings in SWAT
+
+A group of global settings affects how file and print sharing are generally accomplished on a Samba server. They appear under the [global] heading in the /etc/samba/smb.conf file. To edit global variables, click on the GLOBAL option on the SWAT window.
+
+Nine option types are available: base options, security options, logging options, protocol, printing options, browse options, WINs, eventlog, and winbind options. To view and modify your global Samba server settings, click on the GLOBAL option. Then add the following options:
+
+> **NOTE** Each option shown relates to the exact parameters used in the /etc/samba/smb.conf file. You can refer to the smb.conf man page (type man smb.conf) to get more information on these parameters.
+
+### Base Options
+
+The following options relate to basic information associated with your Samba server:
+
+-   **workgroup** — The name of the workgroup associated with the group of SMB hosts. By default in CentOS, the value for this field is MYGROUP.
+-   *realm*—If you are using kerberos authentication, this value indicates the kerberos realm to use. Typically, that is reflected by the hostname of the server providing the service.
+-   *netbios name*—The name assigned to this Samba server. You can use the same name as your DNS hostname or leave it blank, in which case the DNS hostname is used automatically.
+-   *netbios alias*—This enables you to set a way of referring to a host computer (an alias) that is different from the host's TCP/IP DNS name.
+-   *server string*—A string of text identifying the server. This name appears in places such as the printer comment box. By default, it says Samba and the version number.
+-   *interfaces*—Lets you set up more than one network interface. This enables Samba to browse several different subnets. The form of this field can be IP Address/Subnetwork Mask. Or, you could identify a network interface (such as eth0 for the first Ethernet card on your computer).
+
+### Security Options
+
+Of the security options settings, the first option (*security*) is the most important one to get right. It defines the type of security used to give access to the shared file systems and printers to the client computers. (To see some of the fields described here, you need to click on the Advanced view.)
+
+-   *security*—Sets how password and user information is transferred to the Samba server from the client computer. As noted earlier, it's important to get this value right. The default value for *security* (*security*=*user*) is different from the default value for *security* (*security*=*share*) in pre-2.0 versions of Samba. If you are coming from an earlier version of Samba and clients are failing to access your server, this setting is a good place to start. Here are your options:
+
+*user*—The most common type of security used to share files and printers to Windows 95/98/2000 and Windows NT clients. It is the default set with Samba in the current release. This setting is appropriate if users are doing a lot of file sharing (as opposed to a Samba server used mostly as a print server). It requires that a user provide a username/password before using the server.
+
+The easiest way to get this method working is to give a Linux user account to every client user who will use the CentOS Samba server. This provides basically the same file permissions to a user account through Samba as the same user would get if he or she were logged in directly to Linux.
+
+*share*—The *share* value for security works best for just print sharing or for providing file access that is more public (guest sharing). A client doesn't need to provide a valid username and password to access the server. However, the user will typically have a “Guest” level of permission to access and change files. See the sidebar describing guest accounts for further information.

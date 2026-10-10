@@ -1,0 +1,15 @@
+With the shift from in-kernel device-specific USB drivers to the USB device filesystem `/proc/bus/usb`, **usmgr** has been declining in importance. In fact, it may not be installed on your system. Instead, most distributions rely on the Hotplug package (<http://linux-hotplug.sourceforge.net>), which relies on kernel support added with the 2.4.x kernel series. This system uses files stored in `/etc/hotplug` to control the configuration of specific USB devices. In particular, `/etc/hotplug/usb.usermap` contains a database of USB device IDs and pointers to scripts in `/etc/hotplug/usb` that are run when devices are plugged in or unplugged. These scripts might change permissions on USB device files so that ordinary users can access USB hardware, run commands to detect new USB disk devices, or otherwise prepare the system for a new (or newly removed) USB device.
+
+# # Configuring Hard Disks
+
+Hard disks are among the most important components in your system. Three different hard disk interfaces are common on modern computers: *Parallel Advanced Technology Attachment* (PATA), a.k.a. ATA; *Serial Advanced Technology Attachment* (SATA); and *Small Computer System Interface* (SCSI). In addition, external USB and IEEE-1394 drives are available, as well as external variants of SATA and SCSI drives. Each has its own method of low-level configuration.
+
+# ## Configuring PATA Disks
+
+PATA disks once ruled the roost in the x86 PC world, but today they’re fast giving way to SATA disks. Thus, you’re most likely to encounter PATA disks on slightly older computers—say, from 2005 or earlier. PATA disks are still readily available, though, and PATA is still used even in some new computers, particularly for CD-ROM and DVD-ROM drives.
+
+As the full name implies, PATA disks use a parallel interface, meaning that several bits of data are transferred over the cable at once. Thus, PATA cables are wide, supporting a total of either 40 or 80 lines, depending on the variety of PATA. You can connect up to two devices to each PATA connector on a motherboard or plug-in PATA controller, meaning that PATA cables typically have three connectors—one for the motherboard and two for disks.
+
+PATA disks must be configured as masters or as slaves. This can be done via jumpers on the disks themselves. Typically, the master device sits at the end of the cable and the slave device resides on the middle connector. All modern PATA disks also support an option called cable select. When set to this option, the drive attempts to configure itself automatically based on its position on the PATA cable. Thus, your easiest configuration is usually to set all PATA devices to use the cable-select option; you can then attach them to whatever position is convenient, and the drives should configure themselves.
+
+For best performance, disks should be placed on separate controllers rather than configured as master and slave on a single controller, because each PATA controller has a limited

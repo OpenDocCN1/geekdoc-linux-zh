@@ -1,0 +1,321 @@
+
+## 索引
+
+- user accounts, 331
+- usermod for, 338
+- /etc/profile file, 11, 204, 348–349, 431
+- /etc/rc.d directory, 308
+- /etc/rc.d/boot.local file, 78
+- /etc/rc.d/rc.local file, 78
+- /etc/rc.d/rc script, 244
+- /etc/resolv.conf file, 404
+- /etc/rpmrc file, 59
+- /etc/rsyslog.conf file, 350
+- /etc/security/limits.conf file, 495
+- /etc/services file, 402, 478–479, 483
+- /etc/shadow file, 347
+  - fields, 341–343
+  - passwords, 490, 493
+  - usermod for, 338
+- /etc/skel directory, 348–349, 434
+- /etc/ssh file, 502
+- /etc/ssh_config file, 293
+- /etc/ssh/sshd_config file, 500–501, 506
+- /etc/sshrc file, 293
+- /etc/sudoers file, 494–495
+- /etc/sysconfig directory, 289
+- /etc/sysconfig/clock file, 301
+- /etc/sysconfig/displaymanager file, 294
+- /etc/sysconfig/network file, 409
+- /etc/sysconfig/network-scripts/ifcfg-eth0 file, 403, 408
+- /etc/sysconfig/sysctl.conf file, 407
+- /etc/sysctl.conf file, 407
+- /etc/syslog.conf file, 350–352
+- /etc/timezone file, 301, 359
+- /etc/udev directory, 116
+- /etc/usbmgr directory, 125
+- /etc/usbmgr/usbmgr.conf file, 125
+- /etc/X11/fs.config file, 286
+- /etc/X11/gdm directory, 291
+- /etc/X11/gdm/gdm.conf file, 291, 294
+- /etc/X11/kdm directory, 291
+- /etc/X11/XorgX11 file, 271
+- /etc/X11/xdm directory, 294
+- /etc/X11/xdm/XAccess file, 290
+- /etc/X11/xdm/xdm-config file, 290
+- /etc/X11/xdm/Xresources file, 290
+- /etc/X11/xdm/Xservers file, 294
+- /etc/X11/XF86Config file, 271
+- /etc/XF86Config file, 271
+- /etc/inetd.conf file, 480–481
+- /etc/init.d directory, 480
+- /etc/yp.conf file, 60
+- /etc/yp.repos.d directory, 60
+
+- Ethernet, 385–386
+  - frames, 387–388
+  - printers, 307
+
+- Evolution mail reader, 449
+- Ex mode in Vi editor, 251
+- exact matches with SELECT, 462
+- exclamation marks (!)
+  - locked accounts, 336–337
+  - passwords, 341
+  - scripts, 436
+  - system log files, 351
+  - Vi editor, 254
+- exec command, 6
+- execute permissions, 196–198
+- Exim program, 448
+- exit command, 7
+- expand command, 21
+- expansion cards, 117–119
+- expansion rules for wildcards, 178–180
+- expiration dates for user accounts, 334–335, 339–340, 342
+- expired accounts, updating, 336
+- export command, 12, 441
+- exporting
+  - environment variables, 12, 441
+  - GPG keys, 508
+- expressions. See regular expressions
+- ext2fs or ext2 (Second Extended File System), 141–142
+- ext3fs or ext3 (Third Extended File System), 142, 153
+- ext4fs or ext4 (Fourth Extended File System), 142, 153
+- extended HFS, 143
+- extended partitions, 132, 132
+- extended regular expressions, 31, 33
+- Extensible Firmware Interface (EFI), 107
+- Extents File System (XFS), 142, 153
+- external commands, 6–8, 436
+- external disks, **129**–**130**
+- extracting
+  - boot process information, 238–239
+  - files, 151
+  - RPM data, 54–55
+  - tar files, 187
+  - text, **29**–**30**
+- facilities in system log files, 350–351
+- FAT (File Allocation Table) filesystem, **143**
+- fc-cache command, 287
+- FCEST environment variable, 10
+- FDDI (Fiber Distributed Data Interface), 385
+- fdformat command, 141
+- fdisk tool, 133, **138**–**140**, 146, 240
+- fetchmail program, 449
+- fg command, 91
+- FHS (Filesystem Hierarchy Standard)
+  - common directories, **210**–**212**
+  - overview, **208**–**209**, *209*
+- fi keyword, 442
+- Fiber Distributed Data Interface (FDDI), 385
+- Fibre Channel, 385
+- fields
+  - extracting text by, 29
+  - joining files by, **19**–**20**
+  - sort, 22
+  - SQL, 456
+- File Allocation Table (FAT) filesystem, **143**
+- file globbing, 180
+- file size in file listings, 182
+- File Transfer Protocol (FTP), 390
+- filenames, file searches by, 213
+- files, **177**–**178**
+  - archiving, **182**–**183**, **185**–**190**
+  - attributes, 205
+  - breaking into pieces, 22–23
+  - combining, 18–20
+  - copying, **182**–**183**, 503–504
+  - deleting, 184, 205
+  - directories. See directories
+  - exam essentials, **216**–**217**
+  - extracting, 151
+  - formatting, **24**–**27**
+  - groups, 195
+  - hexadecimal displays, 21
+  - joining, **19**–**20**
+  - limits, 496
+  - links, **191**–**192**
+  - listing, 180–182
+  - locating. See locating files
+  - modes, **200**–**204**
+  - moving, 183–184
+  - naming, 178–180
+  - octal displays, 21
+  - open, **485**–**486**
+  - ownership, 182, 193–195
+  - paging through, 28–29
+  - permissions. See permissions
+  - preparing for printing, **26**–**27**
+  - renaming, 183–184
+  - review questions, **218**–**224**
+  - sorting, 22
+  - summarizing, **29**–**30**
+  - summary, 216
+  - time stamps, **184**–**185**
+  - transforming, **20**–**23**
+  - undeleting, 151
+  - viewing, **27**–**29**
+  - word counts, 30
+- Filesystem Hierarchy Standard (FHS)
+  - common directories, **210**–**212**
+  - overview, **208**–**209**, *209*
+- Filesystem Standard (FSTND), **208**–**209**
+
+- filesystems
+  - checking, 153-155
+  - common types, 141-144
+  - creating, 144-146
+  - debugging, 151-152
+  - information, 148-150
+  - journals, 152-153, 205
+  - layouts, 135-136
+  - mounting, 158-166
+  - partitions, 130, 141-146
+  - tunable parameters, 149-151
+  - tuning, 148-151
+  - unmounting, 163-164
+  - virtual, 111, 212
+- filters, 4
+  - printing, 308
+  - proxy, 482
+  - text, 4, 18
+    - combining files, 18-20
+    - formatting files, 24-27
+    - summarizing files, 29-30
+    - transforming files, 20-23
+    - viewing files, 27-29
+- find command, 18
+  - archived files, 189
+  - options, 212-213
+  - scripts, 437
+  - SUID/SGID files, 498
+  - with UIDs, 344, 348
+- firewalls, 365, 482, 503
+- flash memory, 107
+- floppy disks and drives
+  - boot loaders on, 228
+  - corrupting, 164
+  - detecting, 114
+  - drivers, 111
+  - formatting, 141
+  - GRUB, 234
+  - viruses from, 113
+- fmt command, 24
+- FontForge program, 283
+- fonts
+  - default, 297-298, 298
+  - directories, 283-284
+  - paths, 284-285
+  - servers, 282, 285-286
+  - technologies and formats, 282-283
+  - X core, 283-285
+  - Xft, 286-287
+- fonts.dir file, 283-284
+- fonts.scale file, 284
+- Foomatic printer definitions, 311
+- footers numbering style, 25
+- for loops, 443-444
+- forcing actions
+  - account deletion, 344
+  - file overwrites, 182
+  - filesystem unmounts, 163
+  - group creation, 345
+  - kernel module loading, 122
+  - kernel module removal, 123
+  - package installations, 76
+- form feeds in printing, 26
+- formats
+  - fonts, 282-283
+  - line numbering, 25
+  - time, 359
+- formatting
+  - partitions, 141
+  - text files, 24-27
+- forward file, 454
+- forward slashes (/)
+  - cron jobs, 367
+  - directories, 183
+  - filenames, 179
+  - help system, 13
+  - IP addresses, 393
+  - paging, 28, 239
+- forwarding feature in X Windows System, 293
+- Fourth Extended File System (ext4fs or ext4), 142, 153
+- frames, 387-388
+- FreeType library, 287
+
+- FROM clause in SELECT, 464
+- fsck command, 150, 153–155
+- fsck.ext2 file, 153
+- fsck.ext3 file, 153
+- fsck.ext4 file, 153
+- FSTND (Filesystem Standard), 208–209
+- FTP (File Transfer Protocol), 390, 417–418
+- full-duplex transmissions, 386
+- function keyword, 444
+- functions in scripts, 444–445
+
+## G
+
+- Gnome Display Manager (GDM), 288
+  - configuring, 291
+  - remote access, 294
+- gnome-system-monitor tool, 89
+- GNU C library (glibc) version, 79
+- GNU Enscript program, 27
+- GNU Ghostscript, 307
+- GNU Network Object Model Environment (GNOME) desktop environment, 60
+- GNU Parted tool, 140–141
+- GNU Privacy Guard (GPG), 507
+  - encrypting and decrypting data, 509
+  - keys, 508–509
+  - message signing, 510
+- GNU ps options, 86
+- GOK (GNOME On-Screen Keyboard), 297
+- gpawssd command, 339, 346–347
+- GPG (GNU Privacy Guard), 507
+  - encrypting and decrypting data, 509
+  - keys, 508–509
+  - message signing, 510
+- GAG boot loader, 237
+- gateway addresses, 404
+- GDM (GNOME Display Manager), 288
+  - configuring, 291
+  - remote access, 294
+- gdm startup script, 289
+- gdmconfig command, 291
+- General Public License (GPL), 48
+- Gentoo distribution, 81
+- geometry settings, 113–115, 114
+- gestures, mouse, 297
+- getfacl command, 199
+- Ghostscript, 306–308
+- GIDs (group IDs)
+  - configuration files, 341
+  - SGID files, 497–498
+  - specifying, 345–347
+  - users and groups, 332–333
+- gigabit Ethernet, 385
+- GIMP Print drivers, 311
+- GIMP Tool Kit (GTK+), 79
+- glibc (GNU C library) version, 79
+- global configuration files, 434
+- globbing, 180
+- GMT (Greenwich Mean Time), 358
+- GNOME (GNU Network Object Model Environment) desktop environment, 60
+- GPL (General Public License), 48
+- GPT (GUID Partition Table) system, 131, 133
+- grand totals in hard disk monitoring, 157
+- Grand Unified Boot Loader. See GRUB (Grand Unified Boot Loader)
+- graphical user environments (GUIs). See X Window System
+- graphics for GRUB, 235
+- greater than signs (>)
+  - library paths, 83
+  - redirection, 15
+- Greenwich Mean Time (GMT), 358
+- grep command
+  - piping, 17
+  - with regular expressions, 32–34
+  - scripts, 437
+  - system log files, 356

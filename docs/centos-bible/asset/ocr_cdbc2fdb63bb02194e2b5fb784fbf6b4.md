@@ -1,0 +1,9 @@
+■ **Content Management System (CMS) Sofware** — For some web sites, you might want to offer a range of information. For an active online community, you may want to offer articles, forums, online polls, downloads, and other diverse activities. Content management systems (CMSs) such as Drupal (install the `drupa1` package) offer a platform for creating and managing those types of activities online. Other Open Source CMS systems include Plone (`www.plone.org`) and Zope (`www.zope.org`).
+
+Before installing and making any of these types of web sites available on the Internet, you should keep in mind that it will take some commitment to stay current with software updates and keep the site maintained. But if you are willing to make that commitment, the Open Source projects just mentioned can help you produce high-quality sites for publishing on the Internet.
+
+# ## Summary
+
+Tools available in Linux for publishing words and images on paper and the Web can compete with similar software available commercially. For producing hardcopy documents, you have word processors such as **OpenOffice.org** Writer and **StarOffice**. To lay out pages, there is **Scribus**. To work with photos, you have **The GIMP**, or for vector graphics, you can use **Inkscape**.
+
+Software for publishing content on the Internet in also available now in almost any category you can think of. For blogging, you can create a **WordPress** site. For image galleries, there is **Gallery** software. Content management systems include **Drupal**, **Plone**, and **Zope**. To create wikis, there are **MediaWiki** and **Moin Moin**.

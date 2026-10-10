@@ -1,0 +1,250 @@
+
+## Index
+
+### A
+
+- alien utility, 191
+- Allman, Eric, 720
+- AllowOverride directive (Apache Web server), 784
+- Alpine mail reader, 325
+- ALSA (Advanced Linux Sound Architecture), 251
+- alsamixer utility, 257
+- Amanda, configuring
+  - amanda.conf file, 495-497
+  - backup commands, 493-494
+  - backups, performing, 495
+  - directories, 494-495
+  - disklist files, 497-498
+  - network services, 498
+- Analog free log-file analyzer, 813
+- anonymous users, uploading files from (vsFTpd), 758
+- antennas, selecting, 578-581
+- Apache Web server
+  - configuring modules/related services, 804-805
+  - displaying server information, 808-809
+  - displaying server status, 808-810
+  - features of, 765
+  - httpd, command-line arguments to, 806-807
+  - logging errors, 811
+  - logging hits, 811-812
+  - monitoring activities of, 807-808
+  - quick-starting, 766-768
+  - server-info/server-status, security of, 810-811
+  - starting and stopping, 806-807
+  - Test Page, 812
+  - traffic, analyzing, 812-813
+- Apache Web server, configuring
+  - access options/overrides, 782-784
+  - actions and headers, defining, 798
+  - addresses, binding to specific, 774-775
+  - aliasing relocated content, 791-792
+  - canonical names, 781-782
+  - default index files for directories, 785
+  - directory-access control, 786
+  - e-mail address, 781
+  - encoding and language, defining, 796-797
+  - error responses, customizing, 798-800
+  - global environment, 769-772
+  - hostname lookups, 787
+  - HTTP content directories, 782
+  - HTTP logging, 788-791
+  - HTTP response codes, 799
+  - httpd.conf file, 769
+  - indexing, defining, 793-796
+  - LogFormat, available tokens within, 790
+  - MIME types and handlers, 797-798
+  - MIME-type default definitions, 787
+  - module-specific configuration files, 781
+  - proxy and caching services, 801-802
+  - redirecting requests for old content, 792-793
+  - responses to browsers, 800-801
+  - selecting modules in httpd.conf, 775-780
+  - server name, setting, 781
+  - server PID file, storing, 770-771
+  - server processes, setting number of, 772-774
+  - server root directory, 770
+  - signature lines, 791
+  - subcomponents, 770
+  - time-out values, 771-772
+  - user and group entries, 780
+  - user directories, 784-785
+  - virtual hosting, 803-804
+- applets
+  - Gnome, 85-86
+  - KDE, 100
+- applications
+  - application launchers, 86-87
+  - Applications menu (Gnome desktop), 77, 84-85
+  - OpenOffice.org, 223
+  - security and, 506
+  - Windows-equivalent, running in Linux, 197-198
+- applications, accessing/running
+  - basics, 165
+  - different formats. See Open Source software
+  - DOS applications, 207-209
+  - overview, 205-207
+  - RPM packages, managing. See RPM packages
+- running with CentOS. See applications, running with CentOS
+- software, locating and installing. See software virtual environments. See virtualization
+- Windows in Linux. See under Windows, Microsoft
+
+### B
+
+- applications, running with CentOS
+  - basics, 195-196
+  - desktops, 196-198
+  - menus, starting applications from, 198
+  - remote X, 201-205
+  - from Run Application windows, 198-199
+  - from Terminal windows, 199-201
+- archives
+  - backup archives, 467-469
+  - files, installing (RPM), 180
+  - formats, 191, 192
+  - pax archiving tool, 499-502
+- ARDI Executor, 207
+- arguments, defined, 126
+- arithmetic expressions, 137
+- arithmetic in shell scripts, 431-432
+- ASCII transfer mode (FTP), 333
+- at jobs, 458-459
+  - at.allow/at.deny files, 458
+  - atq command, 460
+  - atm command, 460
+- ATrps, 170
+- attachments, e-mail, 319
+- attacks against servers
+  - basic techniques, 536-537
+  - denial-of-service attacks, 537-540
+  - distributed DOS attacks, 540-544
+  - intrusion attacks, 544-548
+- attributes
+  - of FTP servers, 752-753
+  - object classes (LDAP schemas), 817
+- audio CDs
+  - creating with cdrecord, 274
+  - creating with K3b, 274-277
+- audio decoders, 251
+- audio files, converting with SoX, 268-271
+- audio players, 259-260
+- audio/video codecs, 287
+- authconfig command, 44
+- authentication
+  - BIND and, 894
+  - enabling, 33
+  - passwords, 535-536
+  - self-signed certificates and, 552-553
+  - VPNs, 564
+- authoritative answer (AA) bits, 891
+- authoritative zones (DNS servers), 891
+- autofs to mount NFS file systems, 693-694
+- Autolide feature (Gnome desktop), 88
+- AWStats (Advanced Web Statistics) tool, 814
+
+### Backgrounds
+
+- background commands (shell), 136
+- background/foreground processes (shells), 141-143
+- desktop, 74-75, 91
+- backups, 467-503
+  - Amanda for. See Amanda, configuring
+  - automating with cron daemon, 487-488
+  - backed-up files, restoring, 488-493
+  - backup archives, 467-469
+  - backup script example (shell scripts), 441
+  - BackupPC, 472
+  - databases, 875
+  - with dump command, 483-486
+  - media for. See media for backups
+  - multiple partitions and, 368
+  - pax archiving tool, 499-502
+  - rsync for, 469-472
+  - strategy for, 472-474
+  - tools, 472
+- Bacula tool, 472
+- bash command
+  - initial logins and, 405
+  - options, configuring, 407
+- bash shell, 125, 430-431
+- bash_profile file, 406
+- .bashrc file, 405, 406
+- batch command (system tasks), 461
+- bc command, 431–432
+- bdb (Berkeley DB transactional backend), 821
+- Berners-Lee, Tim, 764
+- bin administrative login, 359
+- binary rpms vs. building from source, 189–190
+- Binary transfer mode (FTP), 333
+- BIND (Berkeley Internet Name Domain)
+  - options (DNS servers), 905
+  - software basics, 892–894
+- BitTorrent
+  - clients/servers, overview, 299
+  - sharing files with, 328–329
+- blogging software, 247
+- bookmarks in Konqueror browser, 107
+- booting
+  - /boot directory, 59
+  - boot CD, 21
+  - bootloader command, 44
+  - finding Ethernet drivers at boot time, 597
+  - installation, 36–37
+  - process, 441–442
+- bridging, 368, 369, 638
+- browsers. See also Firefox Web browser
+  - choosing, 72
+  - configuring as proxies, 655
+  - Konqueror File Manager features, 107
+  - setting responses to (Apache Web server), 800–801
+  - SquirrelMail and, 744–745
+- brute-force decryption, 549
+- bus topology (LANs), 566, 567
+- buttons (Ksnapshrot), 243–244
+
+### C
+
+- `-c` option (rpm), 186
+- cable factor (LANs), 581
+- cable Internet, 883
+- cables (LANs), 566, 569
+- caching
+  - cache directives (Apache Web server), 802
+  - cache poisoning (DNS), 892
+  - cache.log file, 652
+  - caching-namespace package, 897
+  - defined, 650
+  - name servers, 891
+  - and proxy services (Apache Web server), 801–802
+  - in squid.conf, configuring, 650–651
+- canonical names (Apache Web server), 781–782
+- cards, supported TV, 279
+- case command (shell scripts), 435–436
+- CD images, mounting, 376
+- CDDA (Compact Disc Digital Audio system), 251–252
+- cdlabelgen for audio CD labels, 277–278
+- cdparanoia command, 271
+- cdrecord
+  - creating audio CDs with, 274
+  - writing to CDs, 476–479
+  - writing to DVD, 480–481
+- CDs
+  - for backups, 467–468, 475–479, 481–482
+  - burning ISO images to, 276
+  - copying, 276
+  - creating with k3b, 274–277
+  - extracting music with Sound Juicer, 271–272
+  - playing automatically, 260–261
+  - troubleshooting CD-ROMs, 260–261
+- CedeGa (WINE), 210
+- CentOS
+  - clustering/advanced features in, 4–5
+  - Firstboot, running, 32–33
+  - forums, 910
+  - installing. See installing CentOS 5
+  - IPsec in, 636–637
+  - Live CD, 16, 908–909
+  - logging into, 69–72
+  - vs. Microsoft Windows, 195–196
+  - project help, 12
+  - publishing with, 221
+  - Red Hat Enterprise Linux and, 5–6

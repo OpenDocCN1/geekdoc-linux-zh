@@ -1,0 +1,19 @@
+![](bbox=[0.05, 0.11, 0.22, 0.15])
+
+You can do some tricks with services such as port forwarding (iptables in Chapter 13) and virtual hosting (Apache Web Server in Chapter 20) that enable multiple physical computers to offer services or give the appearance of having multiple computers on a single static IP address. These tricks can reduce the number of IP addresses you need to buy. (To simplify the discussion here, however, I’m describing a case in which each public server has its own static, public IP address.)
+
+# Choosing a Connection Speed
+
+Another difficulty with keeping your servers in your own home or business is choosing how fast an Internet connection you need. Although most data centers at ISPs offer more than enough bandwidth for your needs, high-speed Internet connections may not be available to your location — or may prove prohibitively expensive.
+
+Although it’s technically possible, using a dial-up connection (up to 56 Kbps) to support an Internet server is generally considered unacceptable. Always-on connection services that you may want to consider include the following.
+
++   * **Digital Subscriber Line (DSL)** — DSL service is widely available these days. Using only the standard telephone wiring in your home, you can maintain an always-on Internet connection and telephone service on the same wires. Speeds of between 256 Kbps and 7 Mbps are available with DSL service (although the actual speed that you attain are typically slower than those in the advertisements).
+
++   * **Integrated Services Digital Network (ISDN)** — ISDN has been around longer than DSL to offer high-speed network services, and it’s comparable to DSL in the speeds that it can offer. However, ISDN is typically more expensive to implement than DSL at comparable speeds.
+
++   * **Cable Internet** — Often, cable television providers will offer Internet access as well. Some cable Internet services offer higher download speeds than you can get with DSL, but may limit upload speeds (which may restrict its value for use as a server). For example, a major cable television provider currently offers a basic 3-Mbps download speed, but only 256-Kbps upload speed for its standard service. To use your cable television provider to run your Internet server, find out about the business Internet services it offers.
+
++   * **Frame Relay** — This service is a packet-switching protocol that runs across wide-area networks. Although it can prove much more expensive than either DSL or ISDN, it can achieve much higher rates of speed. Speeds can range from 56 Kbps to 1.544 Mbps, or even as much as 45 Mbps. Frame relay can operate across a variety of network media. A primary advantage is that it uses virtual circuits that offer a fixed rate of speed because the circuit between you and the ISP isn’t shared with other ISP customers.
+
+If your business can afford it, you might want dedicated T-1 or T-3 lines for your business. A T-1 connection can operate at data rates of 1.544 Mbps. A T-3 line can support rates of 44.736 Mbps. Check with your local ISPs for available connection types and pricing.

@@ -1,0 +1,3 @@
+users on your Linux system, and that can be the most challenging part of your system adminis- tration duties.
+
+CentOS provides a variety of tools that help you with your user administrative chores. The `useradd`, `usermod`, and `userdel` commands enable easy command-line manipulation of user account data. Furthermore, you can lighten your load even more by creating a support mailbox and building shell scripts to automate repetitive tasks. CentOS builds on top of the rich history of UNIX and provides an ideal platform to support the diverse needs of your users.
