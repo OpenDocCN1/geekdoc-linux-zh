@@ -1,0 +1,224 @@
+
+Copyright 1999, 2000, 2001, 2004, 2006, 2008, 2010, 2012, 2013 Russ Allbery [rra@standards.org](mailto:rra@standards.org)。
+
+这是一个自由软件；你可以按照 Perl 本身的相同条款重新分发和/或修改它。
+
+### POD2USAGE
+
+### 名称
+
+`pod2usage` - 从文件内嵌的 pod 文档中打印用法消息
+
+### 概要
+
+`pod2usage`
+
+[`-help`] [`-man`] [`-exiterxitval`] [`-outputoutputfile`] [`-verbose` *level*] [`-pathlist` *dirlist*] [`-formatter` *module*] [`-utf8`] *file*
+
+### 选项和参数
+
+- `-help`
+
+    打印简明的帮助消息并退出。
+
+- `-man`
+
+    打印此命令的手册页并退出。
+
+- `-exit` *exitval*
+
+    要返回的退出状态值。
+
+- `-output` *outfile*
+
+    要打印到的输出文件。如果使用了特殊名称“-”或“>&1”或“>&STDOUT”，则使用标准输出。如果使用了“>&2”或“>&STDERR”，则使用标准错误。
+
+- `-verbose` *level*
+
+    所需的详细级别：
+
+    - 1 : 仅打印 SYNOPIS
+    - 2 : 打印 SYNOPIS 部分以及任何 OPTIONS/ARGUMENTS 部分
+    - 3 : 打印整个手册页（类似于运行 `pod2text`）
+
+- `-pathlist` *dirlist*
+
+    如果未提供绝对路径，则指定一个或多个目录以用于搜索输入文件。给定列表中的每个目录路径应使用 Unix 上的‘:’（MSWin32 和 dos 上的‘;’）进行分隔。
+
+- `-formatter` *module*
+
+    使用哪个文本格式化器。默认为 `Pod::Text`，或者对于非常旧的 Perl 版本为 `Pod::PlainText`。一个替代方案例如 `Pod::Text::Termcap`。
+
+- `-utf8`
+
+    此选项假设格式化器（见上文）理解“utf8”选项。它会开启 utf8 输出的生成。
+
+- *file*
+
+    包含要输出为用法消息格式的 pod 文档的文件的路径名（默认从标准输入读取）。
+
+### 描述
+
+`pod2usage` 将读取给定的输入文件以查找 pod 文档，并打印相应的用法消息。如果未指定输入文件，则从标准输入读取。
+
+`pod2usage` 调用 `Pod::Usage` 模块中的 `pod2usage()` 函数。请参阅 `Pod::Usage` 中的“*‘pod2usage()’*”。
+
+### 另请参阅
+
+`Pod::Usage`, (1)
+
+### 作者
+
+请使用 [bugzilla](http://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Usage) 报告 bug。
+
+Brad Appleton [bradapp@enteract.com](mailto:bradapp@enteract.com)
+
+基于 `podspeel` 的代码编写，由 Tom Christiansen [tchrist@perl.com](mailto:tchrist@perl.com) 编写
+
+### ppdc
+
+### 名称
+
+`ppdc` - cups ppd 编译器（已弃用）
+
+### 概要
+
+`ppdc` [ `-D` _name_[=value] ] [ `-I` _include-directory_ ] [ `-C` _message-catalog_ ] [ `-D` _output-directory_ ] [ `-I` _language(s)_ ] [ `-M` ] [ `-T` ] [ `-V` ] [ `-Z` ] [ `—CR` ] [ `—crlf` ] [ `—Lf` ] _source-file_
+
+### 描述
+
+`ppdc` 将 PPDC 源文件编译成一个或多个 PPD 文件。此程序已弃用，并将在 CUPS 的未来版本中移除。
+
+### 选项
+
+`ppdc` 支持以下选项：
+
+- `-D` *name[=value]*
+
+    设置命名变量以在源文件中使用。它等效于在源文件中使用 `#define` 指令。
+
+- `-I` *include-directory*
+
+    指定替代的包含目录。可以提供多个 `-I` 选项以增加额外的目录。
+
+- `-c` *message-catalog*
+
+    指定单个消息目录文件，格式为 GNU gettext (filename.po) 或 Apple strings (filename.strings)，用于本地化。
+
+- `-d` *output-directory*
+
+    指定 PPD 文件的输出目录。默认输出目录为“`ppd`”。
+
+- `-l` *language(s)*
+
+    指定在本地化 PPD 文件时使用的单个或多个语言。默认语言为“`en`”（英语）。用逗号分隔多个语言，例如“`de_DE,en_UK,es_ES,es_MX,es_US,fr_CA,fr_FR,it_IT`”将在每个文件中创建德语、英国英语、西班牙语（西班牙、墨西哥和美国）、法语（法国和加拿大）以及意大利语语言的 PPD 文件。
+
+- `-m`
+
+    指定输出文件名应基于 ModelName 值，而不是 FileName 或 PCFileName。
+
+- `-t`
+
+    指定 PPD 文件应被测试而不是生成。
+
+- `-v`
+
+    指定详细输出，基本上是被加载或写入文件的运行状态。
+
+- `-Z`
+
+    生成压缩的 PPD 文件 (filename.ppd.gz)。默认是生成未压缩的 PPD 文件。
+
+- `--cr`, `--crlf`, `--lf`
+
+    指定要使用的行结束符 - 回车，回车换行，或仅换行。默认是仅使用换行符。
+
+### 另请参阅
+
+(1), (1), (1), (1), (5), CUPS 在线帮助 (
+
+### 版权
+
+Copyright 2007-2014 by Apple Inc.
+
+### ppdht
+
+### 名称
+
+`ppdht` - cups ht 摘要生成器（已弃用）
+
+### 概要
+
+```
+ppdht [ -D name=value ] [ -I include-directory ] source-file
+```
+
+### 描述
+
+`ppdht` 读取驱动信息文件并生成一个 HTML 摘要页面，该页面列出文件中的所有驱动程序及其支持的选项。**此程序已弃用，并将在 CUPS 的未来版本中移除。**
+
+### 选项
+
+`ppdht` 支持以下选项：
+
+- `-D` *name[=value]*
+
+    设置命名变量以在源文件中使用。它等效于在源文件中使用 `#define` 指令。
+
+- `-I` *include-directory*
+
+    指定替代的包含目录。可以提供多个 `-I` 选项以增加额外的目录。
+
+### 另请参阅
+
+(1), (5), (1), (1), (1), CUPS 在线帮助 (
+
+### 版权
+
+Copyright 2007-2014 by Apple Inc.
+
+### ppdi
+
+### 名称
+
+`ppdi` - 导入 ppd 文件（已弃用）
+
+### 概要
+
+```
+ppdi [ -I include-directory ] [ -o source-file ] ppd-file [ ... ppd-file ]
+```
+
+### 描述
+
+`ppdi` 将一个或多个 PPD 文件导入到 PPD 编译器源文件中。同一 PPD 文件的多种语言合并到单个打印机定义中，以便于对所有本地化进行准确的修改。**此程序已弃用，并将在 CUPS 的未来版本中移除。**
+
+### 选项
+
+`ppdi` 支持以下选项：
+
+- `-I` *include-directory*
+
+    指定替代的包含目录。可以提供多个 -I 选项以增加额外的目录。
+
+- `-o` *source-file*
+
+    指定要更新的 PPD 源文件。如果源文件不存在，则创建一个新的源文件。否则，现有文件将与命令行上的新 PPD 文件合并。如果未指定源文件，则使用文件名 `ppdi.drv`。
+
+### 参见
+
+(1), (1), (1), (1), (5), CUPS 在线帮助 (
+
+### 版权
+
+Copyright 2007-2014 by Apple Inc.
+
+### ppdrge
+
+### 名称
+
+`ppdrg` - 合并 ppd 文件（已弃用）
+
+### 概要
+
+`ppdrg [ -o *output-ppd-file* ] *ppd-file ppd-file* [ ... *ppd-file* ]`

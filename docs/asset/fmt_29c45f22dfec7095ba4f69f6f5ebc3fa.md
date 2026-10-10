@@ -1,0 +1,110 @@
+
+MX 记录识别一个额外的字段，用于指定邮件交换器的优先级。如果您的区域有多个邮件服务器，您可以为它们在 MX 记录中分配不同的优先级。较小的数字具有较高的优先级。这样，如果邮件无法到达第一个邮件服务器，它可以被路由到备用服务器以到达主机。在以下示例中，发往 `mytrek.com` 域中主机的邮件首先被路由到位于
+
+`192.168.0.1` (`turtle.mytrek.com`)，如果该操作失败，则路由到位于 `192.168.0.2` (`rabbit.mytrek.com`) 的邮件服务器。
+
+```
+mytrek.com.   IN  MX  10  turtle.mytrek.com.
+
+                   IN  MX  20  rabbit.mytrek.com.
+```
+
+你也可以为特定的主机指定邮件服务器。在以下示例中，`lizard.mytrek.com` 的邮件服务器被指定为 `rabbit.mytrek.com`：
+
+```
+lizard.mytrek.com.      IN     A       192.168.0.3
+
+                       IN     MX  10  rabbit.mytrek.com.
+```
+
+## 别名：CNAME
+
+类型为 CNAME 的资源记录用于指定区域中主机的别名。别名常用于运行多种不同类型服务器的机器，例如同时运行 Web 服务器和 FTP 服务器。它们也用于当主机更改其名称时定位该主机。旧名称将成为新名称的别名。在以下示例中，`ftp.mytrek.com` 是实际名为 `turtle.mytrek.com` 的机器的别名：
+
+```
+ftp.mytrek.com.   IN  CNAME  turtle.mytrek.com.
+```
+
+术语 CNAME 代表规范名称（Canonical Name）。规范名称是主机的实际名称。在上面的示例中，规范名称是 `turtle.mytrek.com`。别名（也称为 CNAME）是 `ftp.mytrek.com`。在 CNAME 条目中，别名指向规范名称。别名不能用于 NS（名称服务器）或 MX（邮件服务器）条目。对于这些记录，你需要使用原始域名或 IP 地址。
+
+实现别名的更稳定方法是简单地为主机或域创建另一个地址记录。只要经过认证，你可以为同一个 IP 地址指定任意数量的主机名。例如，若要使 `www.mytrek.com` 成为 `turtle.mytrek.com` 的别名，你只需要为它添加另一个地址记录，赋予其与 `turtle.mytrek.com` 相同的 IP 地址。
+
+```
+turtle.mytrek.com.  IN  A  192.168.0.1
+
+www.mytrek.com.    IN  A  192.168.0.1
+```
+
+## 指针记录：PTR
+
+PTR 记录用于将 IP 地址反向映射到主机。PTR 记录用于反向映射文件中。名称条目包含反向的 IP 地址，而数据条目包含主机的名称。以下示例将 IP 地址 `192.168.0.1` 映射到 `turtle.mytrek.com`：
+
+```
+1.1.168.192  IN  PTR  turtle.mytrek.com.
+```
+
+在 PTR 记录中，你可以仅指定地址的最后一个数字段（主机地址），并让 DNS 自动填充地址的域部分。在下一个示例中，`1` 具有域地址 `1.168.192`，会自动添加以形成 `1.1.168.192`：
+
+```
+1  IN  PTR  turtle.mytrek.com.
+```
+
+HINFO、`RP`、`MINFO` 和 TXT 记录用于提供有关主机的信息。`RP` 记录允许你指定负责特定人员。HINFO 记录提供基本的硬件和操作系统标识。TXT 记录用于输入任何你希望包含的文本。MINFO 提供主机的邮件和邮箱信息。这些记录应谨慎使用，因为它们可能会泄露过多的服务器信息。
+
+### 区域文件
+
+DNS 服务器使用多个覆盖 DNS 不同组件的区域文件。每个区域使用两个区域文件：主区域文件和反向映射区域文件。区域文件包含该区域中主机的资源记录。反向映射文件包含提供域名条目反向映射的记录，使你能够映射从 IP 地址到域名。用于区域文件的文件名可以是任何名称。文件名在 `named.conf` 文件的区域声明的文件条目中指定。如果你的服务器支持多个区域，你可能希望使用表示特定区域的名称。大多数系统使用域名作为区域文件的名称。例如，区域 `mytrek.com` 将有一个与其同名且扩展名为 zone 的区域文件，如 `mytrek.com.zone` (`system-config-bind` 使用 `.db` 扩展名保存区域文件)。这些可以放置在名为 `zones` 或 `master` 的子目录中。以下示例中使用的区域文件名为 `mytrek.com.zone`。反向映射文件也可以是任何名称，但通常是对应于其相关区域文件中指定的反向 IP 地址域。例如，对于 `mytrek.com.zone` 区域文件，反向映射文件可能被称为 `192.168.0.zone`，即在 `mytrek.com.zone` 区域文件中定义的 `mytrek.com` 域的 IP 地址。此文件将包含该域中所有主机地址的反向映射，允许将其主机名地址映射到相应的 IP 地址。此外，BIND 为 localhost 设置了缓存文件和反向映射文件。缓存文件保存根名称服务器的资源记录，你的名称服务器将连接到这些服务器。缓存文件可以是任何名称，但通常被称为 `named.ca`。localhost 反向映射文件保存本地环回接口 localhost 的反向 IP 资源记录。虽然 localhost 可以是任何名称，但它通常名为 `named.local`。IPv6 版本命名为 `named.ip6.local`。
+
+创建区域文件后，你应该使用 `named-checkzone` 工具检查其语法。该工具要求你同时指定一个区域和一个区域文件。在以下示例中，在 `/var/named` 目录中，检查区域文件 `mytrek.com.zone` 中的区域 `mytrek.com`：
+
+```
+named-checkzone   mytrek.com  mytrek.com.zone
+```
+
+### Internet 区域的文件
+
+区域文件保存遵循特定格式的资源记录。文件以定义默认域或包含其他资源记录文件的一般指令开始。随后是一条 SOA 记录、名称服务器和域资源记录，然后是不同主机的资源记录。注释以分号开始，可以放在文件的任何位置。`@` 符号像宏一样工作，代表记录所应用的区域的域名。`@` 符号用于资源或 SOA 记录的第一字段，作为区域的域名。可以使用 `*` 匹配字符指定多个名称。资源记录的第一字段是其所应用的域名。如果名称留空，则自动使用另一个资源记录中前一个明确指定的名称条目。这样，你可以列出应用于同一主机的多个条目，而无需重复主机名。在此文件中使用的任何未以句点结尾的主机或域名，都会附加该区域的域。例如，如果区域的域是 `mytrek.com`，且资源记录仅包含名称 `rabbit` 而无尾部句点，则会自动附加该区域的域，使其变为 `rabbit.mytrek.com`。确保每当输入完整的全限定域名（例如 `turtle.mytrek.com.`）时，都包含尾部的句点。
+
+## 指令
+
+你还可以使用几个指令来设置全局属性。`$ORIGIN` 设置一个默认域名，用于附加到不以句点结尾的地址名称。`$INCLUDE` 包含一个文件。`$GENERATE` 可以生成域或 IP 地址仅通过迭代数字不同的记录。`$ORIGIN` 指令通常用于指定在地址记录中使用的根域。确保包含尾部的句点。以下示例将域源设置为 `mytrek.com`，并会自动附加到随后的 `lizard` 主机名：
+
+```
+$ORIGIN  mytrek.com.
+
+lizard IN    A      192.168.0.2
+```
+
+## SOA 记录
+
+区域文件以 SOA 记录开始，指定名称服务器运行所在的机器以及其他规范。`@` 符号用于 SOA 记录的名称，表示区域的域名。在 SOA 之后，列出名称服务器资源记录 (`NS`)。在名称服务器记录正下方是域名本身资源记录。随后是主机地址 (`A`)、别名 (`CNAME`) 和邮件交换器 (`MX`) 的资源记录。以下示例显示了一个示例区域文件，它以 SOA 记录开始，随后是 NS 记录、域的资源记录，然后是个别主机的资源记录：
+
+```
+; Authoritative data for turtle.mytrek.com
+
+;
+
+$TTL 86400
+
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com.
+
+       93071200 ; Serial number
+
+       10800 ; Refresh 3 hours
+
+       3600 ; Retry 1 hour
+
+       3600000 ; Expire 1000 hours
+
+       86400 ) ; Minimum 24 hours
+
+ IN NS turtle.mytrek.com.
+
+ IN A 192.168.0.1
+
+ IN MX 10 turtle.mytrek.com.
+
+ IN MX 15 rabbit.mytrek.com.
+
+turtle IN A 192.168.0.1
+```
