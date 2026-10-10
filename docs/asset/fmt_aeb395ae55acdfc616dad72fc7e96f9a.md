@@ -1,0 +1,230 @@
+
+只读模式。将设置`readonly`选项。你仍然可以编辑缓冲区，但会被阻止意外覆盖文件。如果你确实想要覆盖文件，请在 Ex 命令后加一个感叹号，如`":w!"`。`-R`选项还隐含了`-n`选项（见下文）。`readonly`选项可以通过`":set noro"`重置。参见`":help 'readonly'"`。
+
+### `-r`
+
+列出交换文件，以及关于如何恢复的信息。
+
+### `-r {file}`
+
+恢复模式。使用交换文件恢复崩溃的编辑会话。交换文件是一个在文本文件文件名后加上` .swp`的文件。参见`":help recovery"`。
+
+### `-S`
+
+静默模式。仅当作为`Ex`启动或在`-S`选项之前给出了`-e`选项时才生效。
+
+### `-s {scriptin}`
+
+读取脚本文件`{scriptin}`。文件中的字符将被解释为就像你输入的一样。也可以用命令`":source! {scriptin}"`实现相同功能。如果在编辑器退出前到达文件末尾，将从键盘读取更多字符。
+
+### `-T {terminal}`
+
+告诉**Vim**你正在使用的终端名称。仅当自动方式不起作用时才需要。应该是**Vim**（内置）知道的终端或在`termcap`或`terminfo`文件中定义的终端。
+
+### `-u {vimrc}`
+
+使用文件`{vimrc}`中的命令进行初始化。其他所有初始化都被跳过。使用此选项来编辑特定类型的文件。也可以通过提供名称`NONE`来跳过所有初始化。参见`vim`中的`":help initialization"`以获取更多细节。
+
+### `-U {gvimrc}`
+
+使用文件`{gvimrc}`中的命令进行 GUI 初始化。其他所有 GUI 初始化都被跳过。也可以通过提供名称`NONE`来跳过所有 GUI 初始化。参见`vim`中的`":help gui-init"`以获取更多细节。
+
+### `-V[N]`
+
+详细模式。提供关于哪些文件被加载以及读写`viminfo`文件的信息。可选数字 N 是`verbatim`的值。默认值为 10。
+
+### `-v`
+
+以 Vi 模式启动**Vim**，就像可执行文件被调用为`vi`一样。这只在可执行文件被调用为`ex`时有影响。
+
+### `-w {scriptout}`
+
+你输入的所有字符都被记录在文件`{scriptout}`中，直到你退出**Vim**。如果你想创建一个供`vim -s`或`source!`使用的脚本文件，这很有用。如果`{scriptout}`文件存在，字符将被追加。
+
+### `-W {scriptout}`
+
+类似于`-w`，但会覆盖现有文件。
+
+### `-x`
+
+在写文件时使用加密。将提示输入加密密钥。
+
+### `-X`
+
+不连接到 X 服务器。在终端中缩短启动时间，但不会使用窗口标题和剪贴板。
+
+### `-y`
+
+以简单模式启动**Vim**，就像可执行文件被调用为`evim`或`eview`一样。
+
+使**Vim**表现得像一个点击和输入编辑器。
+
+### `-Z`
+
+受限模式。工作方式与可执行文件以`r`开头相同。
+
+### `--`
+
+表示选项的结束。在此之后的参数将作为文件名处理。
+
+这可用于编辑以`-`开头的文件名。
+
+### `__echo_wid`
+
+仅限 GTK GUI：在标准输出回显窗口 ID。
+
+### `__help`
+
+显示帮助信息并退出，类似于`-h`。
+
+### `__literal`
+
+字面取文件名参数，不扩展通配符。这在 Unix 上没有影响，因为 shell 会扩展通配符。
+
+### `__nplugin`
+
+跳过加载插件。由`-u NONE`隐含。
+
+### `__remote`
+
+连接到 Vim 服务器并让它编辑剩余参数中给出的文件。
+
+如果未找到服务器，将给出警告并在当前 Vim 中编辑文件。
+
+### `__remote_expr {expr}`
+
+连接到 Vim 服务器，在其中求值`{expr}`并将结果打印到标准输出。
+
+### `__remote_send {keys}`
+
+连接到 Vim 服务器并向其发送`{keys}`。
+
+### `__remote_silent`
+
+类似于`__remote`，但在未找到服务器时不发出警告。
+
+### `__remote_wait`
+
+类似于`__remote`，但 Vim 在文件编辑完成前不会退出。
+
+### `--remote-wait-silent`
+
+类似于`--remote-wait`，但在未找到服务器时不发出警告。
+
+### `--remote-tab[-wait][-silent]`
+
+类似于`--remote`但为每个文件使用标签页
+
+### `--role`
+
+设置唯一角色以标识主窗口
+
+### `--serverlist`
+
+列出所有可找到的 Vim 服务器的名称。
+
+### `--servername {name}`
+
+将`{name}`用作服务器名称。用于当前的 Vim，除非与`--remote`参数一起使用，此时它是要连接的服务器名称。
+
+### `--socketid {id}`
+
+仅限 GTK GUI：使用`GtkPlug`机制在另一个窗口中运行`gvim`。
+
+### `--version`
+
+打印版本信息并退出。
+
+## 在线帮助
+
+在**Vim**中输入`":help"`开始。输入`":help subject"`获取关于特定主题的帮助。例如：`":help ZZ"`获取`"ZZ"`命令的帮助。使用`<Tab>`和`CTRL-D`补全主题（`":help cmdline-completion"`）。存在标签以从一个位置跳转到另一个位置（有点像超文本链接，参见`":help"`）。所有文档文件都可以以这种方式查看，例如`":help syntax.txt"`。
+
+### 文件
+
+`/usr/share/vim/vim74/doc/*.txt`
+
+**Vim**文档文件。使用`":help doc-file-list"`获取完整列表。
+
+`/usr/share/vim/vim74/doc/tags`
+
+用于在文档文件中查找信息的标签文件。
+
+`/usr/share/vim/vim74/syntax/syntax.vim`
+
+系统范围的语法初始化。
+
+`/usr/share/vim/vim74/syntax/*.vim`
+
+各种语言的语法文件。
+
+`/etc/vimrc`
+
+系统范围的**Vim**初始化。
+
+`~/.vimrc`
+
+你的个人**Vim**初始化。
+
+`/etc/gvimrc`
+
+系统范围的`gvim`初始化。
+
+`~/.gvimrc`
+
+你的个人`gvim`初始化。
+
+`/usr/share/vim/vim74/optwin.vim`
+
+用于`":options"`命令的脚本，一种查看和设置选项的好方法。
+
+`/usr/share/vim/vim74/menu.vim`
+
+`gvim`的系统范围菜单初始化。
+
+`/usr/share/vim/vim74/bugreport.vim`
+
+用于生成错误报告的脚本。参见`":help bugs"`。
+
+`/usr/share/vim/vim74/filetype.vim`
+
+通过文件名检测文件类型的脚本。参见`":help 'filetype'"`。
+
+`/usr/share/vim/vim74/scripts.vim`
+
+通过文件内容检测文件类型的脚本。参见`":help 'filetype'"`。
+
+`/usr/share/vim/vim74/print/*.ps`
+
+用于 PostScript 打印的文件。
+
+要获取最新信息，请阅读 VIM 主页：`<URL:http://www.vim.org/>`
+
+### 另请参阅
+
+`vimtutor(1)`
+
+## 作者
+
+**Vim**的大部分由 Bram Moolenaar 制作，并得到他人的大量帮助。在**Vim. Vim**中参见`":help credits"`。**Vim**基于 Stevie，由以下人员参与开发：Tim Thompson、Tony Andrews 和 G.R. (Fred) Walter。尽管几乎没有任何原始代码保留下来。
+
+## 错误
+
+可能有一些。参见`":help todo"`查看已知问题列表。
+
+请注意，有些人可能认为是错误的一些事情，实际上是由对 Vi 行为过于忠实的复现造成的。如果你认为其他事情是“因为 Vi 行为不同”的错误，你应该仔细查看`vi_diff.txt`文件（或在 Vim 中输入 `:help vi_diff.txt`）。还要查看`compatible`和`cpoptions`选项。
+
+### 名称
+
+`exempi` - 用于操作 XMP 元数据的命令行工具
+
+### 语法
+
+```
+exempi { -h | [--R] [-x] [ {-w | -o <file> } ] [ { -g <prop_name> | -s <prop_name> -v <value> } ] } <files>
+```
+
+### 选项
+
+- `-h`: 显示此帮助
+
+- `-R`: 不对账
