@@ -1,0 +1,99 @@
+
+`/sys/class/pardevice/led/control/` 中的文件
+
+`kobj.ktype = &ktype_led;`
+
+/* 注册 kobject */
+
+`kobject_register(&kobj);`
+
+`printk("LED Driver Initialized.\n");`
+
+`return 0;`
+
+}
+
+/* 驱动程序退出 */
+
+`void`
+
+`led_cleanup(void)`
+
+`{`
+
+    /* 注销对应于
+        /sys/class/pardevice/led/control 的 kobject */
+    `kobject_unregister(&kobj);`
+    /* 销毁对应于
+        /sys/class/pardevice/led/ 的 class 设备 */
+    `class_device_destroy(led_class, MKDEV(MAJOR(dev_number), 0));`
+    /* 销毁 /sys/class/pardevice */
+    `class_destroy(led_class);`
+    `return;`
+
+}
+
+`module_init(led_init);`
+
+`module_exit(led_cleanup);`
+
+`MODULE_LICENSE("GPL");`
+
+`*glow_show_led()*` 宏定义在代码列表 5.7 中，它使用了内核源文件中流行的一种技巧来紧凑地定义几个类似的函数。该定义生成了 `read()` 和 `write()` 方法（在 sysfs 术语中称为 `show()` 和 `store()`），并附加到八 /sys 文件上，板上每个 LED 对应一个。因此，`*glow_show_led(0)*` 将 `*glow_led_0()*` 和 `*show_led_0()*` 附加到对应于第一个 LED 的 /sys 文件。这些函数分别负责点亮/熄灭第一个 LED 以及读取其状态。## 将值连接到字符串，因此当编译器处理该语句时，`glow_led_##number` 转换为 `glow_led_0()`，即 `glow_show_led(0)`。
+
+这种支持 sysfs 的驱动程序版本使用 kobject 来表示“control”抽象，它模拟了一个用于控制 LED 的软件旋钮。每个 kobject 由 sysfs 中的一个目录名表示，因此代码列表 5.7 中的 `*kobject_register()*` 导致了 `/sys/class/pardevice/led/control/` 目录的创建。
+
+A ktype 描述了一个 kobject。“control” kobject 通过 `*ktype_led*` 结构体来描述，该结构体包含一个指向属性数组 `*led_attrs[]*` 的指针。该数组包含每个 LED 设备属性的地址。每个 LED 的属性通过以下语句绑定在一起：
+
+```
+static struct led_attr led##number =
+__ATTR(led##number, 0644, show_led_##number, glow_led_##number);
+```
+
+这使得每个 LED 的控制文件 `/sys/class/pardevice/led/control/ledX` 得以实例化，其中 X 是 LED 编号。若要改变 ledX 的状态，请将 1（或 0）echo 到相应的控制文件中。若要点亮板上的第一个 LED，请执行以下操作：
+
+```
+bash> echo 1 > /sys/class/pardevice/led/control/led0
+```
+
+在模块退出期间，驱动程序使用 `kobject_unregister()`、`class_device_destroy()` 和 `class_destroy()` 注销 kobjects 和类。
+
+第 7 章中的代码列表 7.2，“输入驱动程序”，使用另一种路线在 sysfs 中创建文件。
+
+编写字符驱动程序不再像 2.4 内核时代那样简单了。为了开发上述简单的 LED 驱动程序，我们使用了六种抽象：`cdev`、`sysfs`、`kobjects`、`类`、`类设备` 和 `parport`。然而，这些抽象带来了一些好处，如无缺陷的构建模块、代码重用和优雅的设计。
+
+## RTC 子系统
+
+内核中的 RTC 支持架构分为两层：一个硬件无关的顶层字符驱动程序，它实现了内核 RTC API；以及一个硬件相关的底层驱动程序，它与底层总线通信。在 `*Documentation/rtc.txt*` 中指定的 RTC API 是一组标准的 ioctls，合规的应用程序（如 hwclock）通过操作 `/dev/rtc` 来利用这些 API。该 API 还指定了 sysfs (`/sys/class/rtc/`) 和 procfs (`/proc/driver/rtc`) 中的属性。RTC API 保证用户空间工具独立于底层平台和 RTC 芯片。底层 RTC 驱动程序是总线特定的。第 8 章“Inter-Integrated Circuit 协议”中“设备示例：实时时钟”部分讨论的嵌入式设备有一个连接到 I²C 总线的 RTC 芯片，该芯片由一个 I²C 客户端驱动程序驱动。
+
+内核有一个专门的 RTC 子系统，它提供顶层字符驱动程序以及底层 RTC 驱动程序可以与顶层结合使用的核心基础设施。该基础设施的主要组成部分是 `rtc_class_ops` 结构体和注册函数 `rtc_device_[register|unregister]()`。散布在不同总线特定目录下的底层 RTC 驱动程序正通过与该子系统一起整合到 `drivers/rtc/` 下。
+
+RTC 子系统允许系统拥有多个 RTC 的可能性。它通过导出多个接口 `/dev/rtcN` 和 `/sys/class/rtc/rtcN` 来实现这一点，其中 *N* 是系统中 RTC 的数量。例如，某些嵌入式系统有两个 RTC：一个是内置在微控制器中，用于支持复杂操作（如周期性中断生成）；另一个是简单的、低功率、电池供电的外部 RTC，用于计时。由于支持 RTC 的应用程序操作基于 `/dev/rtc`，请设置一个符号链接，使得创建的一个 `/dev/rtcX` 节点可以访问为 `/dev/rtc`。
+
+要启用 RTC 子系统，请在内核配置期间打开 `CONFIG_RTC_CLASS`。
+
+> **传统 PC RTC 驱动程序**
+>
+> 在 PC 系统上，您可以通过使用传统 RTC 驱动程序 `drivers/char/rtc.c` 来绕过 RTC 子系统。此驱动程序为 PC 兼容系统上的 RTC 提供顶层和底层，并向用户应用程序导出 `/dev/rtc` 和 `/proc/driver/rtc`。要启用此驱动程序，请在内核配置期间打开 `CONFIG_RTC`。
+
+## 伪字符驱动程序
+
+几种常用的内核设施不与任何物理硬件相连，它们被优雅地实现为字符设备。$null$ 汇（sink）、永久的 $zero$ 源（source）以及内核随机数生成器被视为虚拟设备，并通过 $pseudo$ 字符设备驱动程序进行访问。
+
+$ null $ 字符设备吸收您不想在屏幕上显示的数据。因此，如果您需要从并发版本系统（CVS）存储库中签出源文件，而不希望文件名遍布屏幕，请执行以下操作：
+
+```
+bash> cvs co kernel > /dev/null
+```
+
+这将命令输出重定向到属于 $/dev/null$ 驱动程序的写入口。该驱动程序的 $read()$ 和 $write()$ 方法分别忽略输入和输出缓冲区的内容，仅仅返回成功。
+
+如果您想用一个零填充的图像文件，可以调用 $/dev/zero$ 来为您服务：
+
+```
+bash> dd if=/dev/zero of=file.img bs=1024 count=1024
+```
+
+这从属于 $/dev/zero$ 驱动程序的 $read()$ 方法中获取一系列零。该驱动程序没有 $write()$ 方法。
+
+内核内置了一个随机数生成器。为了方便希望使用随机序列的内核用户，随机数生成器导出了诸如 $get_random_bytes()$ 之类的 API。对于用户模式程序，它导出了两个字符接口：$/dev/random$ 和 $/dev/urandom$。从 $/dev/random$ 读取的随机性质量比从 $/dev/urandom$ 读取的要高。当用户程序从 $/dev/random$ 读取时，它会获得强（或真）随机数，但从 $/dev/urandom$ 读取会产生伪随机数。$/dev/random$ 驱动程序不使用公式来生成强随机数。相反，它收集“环境噪声”（中断间隔、按键点击等）来维持一个无序储备池（称为 $entropy\ pool$），该池为随机流提供种子。若要查看内核的 $input$ 子系统（在第 7 章中讨论）在检测到键盘按键或鼠标移动时对熵池的贡献，请查看 $drivers/input/input.c$ 中定义的 $input\_event()$：
