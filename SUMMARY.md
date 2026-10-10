@@ -327,6 +327,7 @@
 +   [Debian GNU／Linux 3.X 圣经](docs/debian-gnulinux-3x-bible/README.md)
 +   [Debian GNU/Linux 秘籍](docs/debian-gnulinux-biblie/README.md)
 +   [Debian GNU／Linux：CD-ROM 安装与使用指南](docs/debian-gnulinuxa-guide-to-installation-and-usage-with-cd-rom/README.md)
++   [Debian，用户指南，Progeny](docs/debianusers-guideprogeny/README.md)
 +   [Linux 系统调试指南 (Digital Short Cut)](docs/debugging-linux-systems-digital-short-cut/README.md)
 +   [Linux 网络深度解析：防火墙、VPN 与安全连接配置指南](docs/deep-dive-into-linux-networking-configuring-firewalls-vpns-a/README.md)
 +   [Linux 优化指南](docs/degunkingtrade-linux-degunking/README.md)

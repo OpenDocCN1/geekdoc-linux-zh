@@ -1,0 +1,1 @@
+So long as you are careful, these precautions should be unnecessary. However, even experienced computer users can make mistakes, or face an unexpected power interruption. If anything does happen, backing up your system will save you hours of time and trouble.

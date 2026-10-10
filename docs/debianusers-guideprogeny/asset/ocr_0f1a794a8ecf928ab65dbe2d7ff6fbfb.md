@@ -1,0 +1,5 @@
+Digitized by the Internet Archive
+in 2023 with funding from
+No Sponsor
+
+https://archive.org/details/isbn_0970936109
