@@ -1,0 +1,11 @@
+use. If you are connecting to an Internet service provider using the PPP protocol, you will probably use dynamic addressing.
+
+# Network Services and Ports
+
+TCP/IP uses a client/server design, in which network applications require two different types of programs. Users make use of a client program to obtain data of a particular type, such as FTP (for files located on the network), Web pages, or e-mail. Servers make a certain type of information available to clients. Although it’s quite possible to run clients and servers on the same machine, the more usual arrangement is that users run clients on their machines and obtain data from the network by contacting servers running on other machines. Generally provided by means of a daemon running in the background, server software provides a distinctive type of TCP/IP service. If you are running FTP, Web, and mail servers, these three services are available from your computer.
+
+So that TCP/IP can route incoming and outgoing signals to the various services correctly, TCP/IP associates a given type of networking service with a well-known port, a number that stands for a virtual electronic interface. For example, FTP is associated with port 21, while the Web servers are associated with port 80. The file called /etc/services lists all the ports that are defined for use on your system.
+
+# Disabling Unneeded Servers
+
+Because Linux comes with a variety of powerful, built-in servers, it is deservedly popular among organizations looking for low-cost server solutions. However, most of the readers of this book have no need to run server software. Nevertheless, Linux distributions may install and enable a variety of servers, and these may be running without the user being aware of this fact. Poorly configured or out-of-date servers could present potential intruders with a means of gaining unauthorized access to a Linux system. For this reason, it is a good practice to determine which TCP/IP servers are running on your system. Furthermore, you should disable any services that you do not need.

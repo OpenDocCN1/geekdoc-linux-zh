@@ -1,0 +1,3 @@
+# OPTIONS
+
+| Use This Option | To Do This | |---|---| | `=` | Display the current line number. | `.` | Repeat the previous command. | `:q`, `:Q`, `q`, `Q` | Quit. | `[ n ] regexp` | Search for the *n*th occurrence of *regexp* (a regular expression). By default, *n* is 1, so the search finds the next occurrence. | `[ n ] Ctrl + D`, `[ n ] d` | Display *n* more lines. 11 is the default. | `! command` | Run the specified shell command. | `n` | Display *n* more lines. Press the spacebar after typing the number. | `nf` | Skip *n* screenfuls and print a screenful of lines. | `nn` | Search for the *n*th occurrence of the last regular expression entered. | `ns` | Skip *n* lines and print a screenful of lines. | `s` | Skip to the next file. |

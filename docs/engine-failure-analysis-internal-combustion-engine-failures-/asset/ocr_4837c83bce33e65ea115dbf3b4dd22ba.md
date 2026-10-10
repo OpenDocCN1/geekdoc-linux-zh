@@ -1,0 +1,11 @@
+# Domain Name Service (DNS) and Domain Names
+
+As the previous section explained, every host connected to a TCP/IP network has its own, unique IP address. However, IP addresses are difficult for people to work with. Moreover, a given machine's address may change if it is connected to a different network. The *Domain name service (DNS)* solves this problem by mapping people-friendly *domain names*, such as *www.yahoo.com*, to specific IP addresses.
+
+The *domain name service* is a worldwide service that involves the use of servers at many levels. However, the DNS server of greatest importance to you is the default DNS server for your network. If you connect to the Internet by means of a dial-up (modem) connection, you need to know the IP address of your Internet service provider's DNS server. If you are connecting to a private, internal network, you need to know the IP address of the computer that is running the DNS service locally.
+
+# Network Interfaces
+
+To connect your Linux system to a TCP/IP network, you need to assign IP addresses to *network interfaces*. In brief, a network interface is a device, such as an Ethernet card or modem, that enables your computer to connect to a TCP/IP network. In Linux, network interfaces are created by the modules that support the device in question. For example, when *modprobe* detects an Ethernet card, it assigns the network interface *eth0* to the first detected card, *eth1* to the second detected card, and so on. Similarly, if you connect to the Internet by means of a modem running the PPP protocol, the software that supports your modem assigns the network interface *ppp0* to the first detected modem, *ppp1* to the second, and so on.
+
+Although the software that supports networking peripheraals assigns network interfaces automatically, you still need to associate each network interface with an IP address. Addresses can be assigned in two ways, *statically* or *dynamically*. In static addressing, you type the IP address that the network interface will use. In dynamic addressing, the IP address is automatically determined by services such as bootp or dhcp. If you plan to connect your Linux system to a local area network (LAN), ask the network administrator what type of address to
