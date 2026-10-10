@@ -641,6 +641,7 @@
 +   [Linux 入门指南：实用指南](docs/introduction-to-linux---a-hands-on-guide/README.md)
 +   [Linux 入门指南：实用指南](docs/introduction-to-linux-a-hands-on-guide/README.md)
 +   [Linux 入门指南：安装与编程](docs/introduction-to-linux-installation-and-programming/README.md)
++   [Linux 入门指南（第二版）](docs/introduction-to-linux-second-edition-fultus-technical-librar/README.md)
 +   [Network+ 网络入门指南](docs/introduction-to-networking-with-network/README.md)
 +   [Openlinux 入门指南 [包含 Openlinux Lite]](docs/introduction-to-openlinux-with-contains-openlinux-lite/README.md)
 +   [Unix 入门指南](docs/introduction-to-unix/README.md)
