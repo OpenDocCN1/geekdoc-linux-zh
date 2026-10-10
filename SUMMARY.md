@@ -216,6 +216,7 @@
 +   [小组认知疗法：实践指南与资源](docs/cognitive-therapy-in-groups-guidelines-and-resources-for-pra/README.md)
 +   [Comdex Linux 与 Open Office 课程套装 (附 CD)](docs/comdex-linux-and-open-office-course-kit-with-cd/README.md)
 +   [Bash 脚本与命令行功夫：Linux 编程技巧与单行命令](docs/command-line-kung-fu-bash-scripting-tricks-linux-shell-progr/README.md)
++   [OpenStack 常见部署：面向系统管理员和工程师的实战案例](docs/common-openstack-deployments-real-world-examples-for-systems/README.md)
 +   [Windows、Linux 和 Web 服务器系统常见黑客技术](docs/common-windows-linux-and-web-server-systems-hacking-techniqu/README.md)
 +   [Compaq Tru64 UNIX V5 实用程序与命令学生指南](docs/compaq-tru64-unix-v5-utilities-and-commands-students-guide/README.md)
 +   [Java 2 认证全攻略：学习指南](docs/complete-java-2-certification-study-guide/README.md)

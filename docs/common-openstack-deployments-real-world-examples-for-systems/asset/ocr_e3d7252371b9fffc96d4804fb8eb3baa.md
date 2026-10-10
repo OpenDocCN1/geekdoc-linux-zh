@@ -1,0 +1,3 @@
+# ## Summary
+
+Ironic bare metal provisioning extends the OpenStack tooling from the world of virtualization and enables physical machines to be managed and used in a fashion similar to that of virtual machines. In this chapter, you learned the basic options for installation of Ironic and were walked through the enrollment of hardware and booting of your first bare metal-based instance. The basic maintenance of a bare metal deployment was also briefly explained, as well as a glimpse into the community building and supporting it.

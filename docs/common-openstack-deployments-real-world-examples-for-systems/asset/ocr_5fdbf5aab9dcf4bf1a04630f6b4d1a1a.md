@@ -1,0 +1,3 @@
+# ## Vendors
+
+Finally, beyond the fleet of volunteers in the OpenStack community, there are several avenues of paid support. By exploring the OpenStack Marketplace at http://www.openstack.org/marketplace/ you will find links to training programs and integration and consulting vendors around the world. The integration and consulting vendors offer a vast array of support, from doing all the work of bringing OpenStack into your organization with their custom solution to being a resource you can contact when you need support. The Marketplace will also give you the ability to explore offerings for public and private clouds, appliances built with OpenStack components and a driver database for hardware that works with OpenStack.

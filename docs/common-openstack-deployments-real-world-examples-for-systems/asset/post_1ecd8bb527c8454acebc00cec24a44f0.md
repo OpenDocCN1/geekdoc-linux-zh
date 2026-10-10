@@ -1,0 +1,270 @@
+
+## Index
+
+### P
+- Project Team Lead (PTL), OpenStack projects, 243
+- Projects
+  - configuring Keystone, 64–65
+  - definition of, 64–65
+  - DevStack deployment as administrator, 29
+  - other OpenStack, 13
+  - Proprietary drivers/agent plug-ins, Neutron, 97
+  - Proprietary offerings, cost of public cloud and, 227
+  - Provider networks, 36
+- Provisioning
+  - bare metal, with Ironic, 12
+  - in Nova, 7
+- Proxy daemon, Swift, 170, 182
+- Proxy manifests, Swift, 175
+- Proxy_logging proxy manifest, Swift, 175
+- PTL (Project Team Lead), OpenStack projects, 243
+- Public compute cloud
+  - architecture overview, 143–144
+  - benefits of, 226
+  - companies using containers, 196
+  - compute node setup, 145
+  - controller node setup, 144–145
+  - deploying whole cloud, 205
+  - evaluating cost for, 227
+  - evaluating location and, 227
+  - hybrid cloud deployment, 228–229
+  - overview of, 141
+  - requirements, 142–143
+  - scenario, 144
+  - uses, 141–142
+  - viewing metrics and alerts, 150
+  - viewing statistics with command line client, 147–149
+  - viewing statistics with dashboard, 146–147
+- Public network switch, physical machine setup, 41
+- Publishing data, Ceilometer, 11, 144
+- Puppet
+  - configuring Cinder block storage, 155–157
+  - configuring controller node, 110
+  - configuring compute node, 98–99
+  - configuring initial setup on servers, 94–95
+  - contents of composition model, 240–241
+  - controller node setup for Swift, 173–176
+  - as deployment mechanism, 93
+  - Hiera, 237–238
+  - Ironic installation, 188
+  - Keystone identity profile, 102
+  - as master or masterless, 237
+  - module management, 238–239
+  - modules as configuration management system, 16
+  - more information, 241
+  - node classification, 238
+  - overview of, 237
+  - packages, 240
+  - passwords in Hiera, 238
+  - revision control, 240
+  - roles and profiles, 239
+  - roles, profiles and modules, 99–100
+  - software lifecycle, 239
+  - storing modules in common.yaml file, 98
+  - troubleshooting, 115, 221–222
+  - puppet apply command
+    - compute node setup for private cloud, 110
+    - controller node setup for Cinder, 155–157
+    - controller node setup for compute node, 98
+    - controller node setup for public cloud, 144
+    - controller node setup for Swift, 173–176
+    - deploying whole cloud, 204–205
+  - Puppet node classification, 238
+  - troubleshooting with, 221–222
+  - Puppetfile, module management, 238
+- PXE (Preboot Execution Environment), Ironic, 12, 186–187
+- Python, 215, 243
+- Python-ironicclient, 12
+- Python-openstackclient tool, 56–57
+
+### Q
+- qcow2 image file, Glance, 10
+- qdhcp network namespace, 218
+- QEMU
+  - accessing OpenStack instances, 9
+  - adding image for private cloud, 122
+  - instances as VMs using, 4
+  - Nova drivers supporting, 7
+  - reference deployment, 231
+  - as supported hypervisor, 146
+  - router:: namespace ID, 47, 218
+- Quantum, as previous name of Neutron, 10
+- Queuing
+  - OpenStack, 4
+  - Rabbit MQ. See RabbitMQ
+  - Queuing service
+
+### R
+- RabbitMQ Queuing service
+  - configuring controller node, 56–57
+  - profile, 105
+  - selecting for deployment, 96
+  - troubleshooting as key service, 216–217
+- RAM
+  - default flavors, 120
+  - DevStack requirements, 22
+  - reference deployment, 231–233
+  - simple deployment requirements, 52
+  - using Ironic, 189–191
+- Rate limit proxy manifest, Swift, 175
+- Re files, OpenStack, 251–252
+- Reading displayed errors, troubleshooting, 211–213
+- README.md file, troubleshooting via, 115
+- Recommendations, reference deployment, 233
+- Redundancy, Swift, 172
+- Reference deployment
+  - initial networking setup, 53
+  - installation, 231–233
+  - overview of, 231
+  - recommendations, 233
+  - requirements, 92–93, 231
+  - simple deployment, 52
+  - testing Horizon dashboard in controller node, 108–109
+- Registry
+  - configuring Glance, 69–71
+  - Glance profile, 101
+- Release cycle
+  - OpenStack, 13–14
+  - OpenStack contributions, 243–244
+  - OpenStack specifications, 245
+  - Puppet modules, 16
+  - Ubuntu Cloud Archive, 15–16
+  - Ubuntu Long Term Support, 14–15
+- Replicas, used by Rings in Swift, 171
+- Requesting help, 224
+- Requirements
+  - cinder block storage, 153–154
+  - deploying whole cloud, 203–204
+  - deployment foundations, 91–92
+  - DevStack, 22–23
+  - first OpenStack deployment, 51–52
+  - networking deployment, 39–43
+  - public compute cloud deployment, 142–143
+  - reference deployment, 231
+  - Swift object storage deployment, 169–172
+- Resource IDs, viewing statistics, 147–149
+- Resources, viewing statistics, 147–148
+- RESTful API, Ironic architecture, 187
+- RESTful HTTP API, Swift object storage, 11
+- Review system, code, 247–248
+- Revision control system
+  - code contributions, 246–247
+  - Puppet, 240
+- Ring-builder utility, Swift, 170
+- Rings
+  - further information on, 171
+  - in Swift, 170–171, 175–176
+- Roles
+  - defined, 66
+  - in DevStack deployment, 29
+  - in Keystone, 64–65
+  - modules vs., 99
+  - Puppet, 99–100, 239
+- Root Disk column, default flavors, 120
+- Rules
+  - ipable, 220–221
+  - prelaunch access/security with dashboard, 123–126
+
+### S
+- SaaS (Software as a Service), 2
+- Sahara: data processing, 209
+- SaltStack, 235–236
+- Scaling
+  - high availability and, 208
+  - two nodes for deployment and, 92
+  - VLAs vs. tunneling, 38
+- Scheduler
+  - controller node setup for Cinder, 156
+  - creating volume in dashboard, 158
+  - Scheduler daemon, Nova, 73
+  - Schema, adding to Keystone database, 60–61
+- screen - (screen reattach) command, 30
+- Screen tool, DevStack, 30
+- Scripts-and-configs, git repository, 55
+- SDKs (Software Development Kits)
+  - automating Cinder, 166
+  - OpenStack APIs and, 138
+- Security
+  - deployment requirements, 92
+  - installing Neutron, 79
+  - managing instances, 86
+  - OpenStack Client, 132-134
+  - private compute cloud, 123-126
+  - public cloud, 228
+  - two nodes for deployment, 92
+  - Security groups, 123-126
+- Segmented networking, tenant network, 37
+- Servers
+  - compute node. See Compute node
+  - controller node. See Controller node
+  - initial setup for deployment, 94
+  - logging in with SSH, 136-137
+  - Neutron, 77
+- Services
+  - Ceilometer, 12
+  - control network for, 36
+  - customizing DevStack, 33
+  - Glance, 67-69
+  - Heat, 13
+  - Keystone, 58-67
+  - Neutron, 77-78, 80, 85
+  - Nova, 7-8, 72-73, 84
+  - running, 136-138
+  - Swift, 11
+  - testing in controller node, 106
+  - troubleshooting key, 216-217
+  - troubleshooting reading displayed errors, 211
+  - troubleshooting via logs, 213
+- setup.sh script
+  - initial setup of Puppet, 94-95
+  - installing RabbitMQ Puppet module, 105
+  - placing Hiera common.yaml file via, 98
+- Sharing files, with object storage, 167-168
+- Snapshots, Cinder backup, 153
+- Software as a Service (SaaS), 2
+- Software Development Kits (SDKs)
+  - automating Cinder, 166
+  - OpenStack APIs and, 138
+- Software lifecycle, Puppet, 239
+- Software updates, initial operating system setup, 54
+- Source screen, DevStack deployment, 27
+- Spawning phase, launch with dashboard, 126
+- Specification process, OpenStack contributions, 245-246
+- SQLite database, configuring Keystone, 60
+- SSH (Secure Shell)
+  - add floating IP address, 128-130
+  - DevStack deployment as, user, 25-28
+  - loading simple HTTP server, 137-138
+  - logging into instance, 87
+  - logging into server, 136-137
+  - pre-launch access and security, 123-126
+  - prelaunching instance with OSC, 132-134
+  - reference deployment via, 233
+  - using Cinder block storage, 162-165
+- Stable DevStack, 24, 31-32
+- Stack, Heat, 13
+- Stackforge Puppet modules, 241
+- stack.sh script, DevStack
+  - commented version of, 23
+  - customizing DevStack, 33
+  - defined, 21
+- Staticweb proxy manifest, Swift, 175
+- Statistics, viewing public cloud, 146-149
+- Storage. See Cinder block storage; Swift object storage
+- sudo command, first OpenStack deployment, 55-57
+- Summit, OpenStack, 3, 255
+- Support outlets, OpenStack, 245
+- Swap Disk column, default flavors, 120
+- swift-account-server, 11
+- swift-container-server, 11
+- swift-object-server, 11
+- Swift objects
+  - Ceph vs., 184
+  - clusters, 170
+  - connecting to, 171-173
+  - controller node setup, 173-176
+  - creating container in dashboard, 176-179
+  - creating container in OSC, 179-181
+  - as key component, 11-12
+  - objects and containers, 171
+  - overview of, 167

@@ -1,0 +1,11 @@
+First, follow all the suggestions above and make sure you're testing everything before going into production. Next, always read release notes for the services you are using. OpenStack is a still a relatively young project, and it is developed in a space that is continually evolving. With each release you're bound to discover that the API version endpoint you should be using has changed, or there's a new database schema (or a new database). Perhaps a feature you have been using has been deprecated in favor of a new one. These are all things to watch out for, and all should be covered in the release notes for each project.
+
+# Requesting Help
+
+Sometimes you really get stuck. Perhaps you are still learning how all the components work together. Or the problem really requires a subject matter expert. Maybe an upgrade broke something you were depending on. There are countless reasons why you don't want or need to only depend upon your own knowledge or that inside your organization to find help with a problem.
+
+When you get to this point, sanitize your configuration and log files as much as possible to remove usernames, passwords and keys, and then reach out to the OpenStack community. The OpenStack community has mailing lists for users and more advanced operators, a question and answer format web forum, various IRC (Internet Relay Chat) channels and in-person events around the world where you can get assistance. There are also dozens of companies offering professional assistance on a contract or ongoing basis. Learn more about the specifics around OpenStack help resources available in Appendix F, “Finding Help with OpenStack.”
+
+# Summary
+
+Any operator of an OpenStack deployment becomes quickly skilled in the art of troubleshooting a deployment. In this chapter we've covered key ideas and tools that can be used to get started including demonstrations of how to read error messages and the related logs, key services you should keep an eye out for and ways to tackle debugging of networking. To conclude, we explored how Puppet is used for the deployments in this book, reviewed some tactics for mitigating breakage in your deployment and covered a quick summary of how to request help.
