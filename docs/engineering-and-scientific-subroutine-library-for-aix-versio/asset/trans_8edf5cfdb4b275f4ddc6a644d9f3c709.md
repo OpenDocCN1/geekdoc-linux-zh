@@ -1,0 +1,191 @@
+
+
+# SSPR2, DSPR2, CHPR2, ZHPR2, SSYR2, DSYR2, CHER2, ZHER2, SSLR2, 和 DSLR2
+
+- $ap$ 是阶数为 $n$ 的矩阵 $A$，包含计算结果。返回形式为：一维数组，包含表 70（第 319 页）中指定的数据类型的数值。
+
+- $a$ 是阶数为 $n$ 的矩阵 $A$，包含计算结果。返回形式为：二维数组，包含表 70（第 319 页）中指定的数据类型的数值。
+
+# 说明
+
+1. 所有子例程都接受小写字母作为 $uplo$ 参数。
+2. 向量 $\mathbf{x}$ 和 $\mathbf{y}$ 不得与矩阵 $A$ 有任何公共元素；否则，结果不可预测。参见第 55 页的“基本概念”。
+3. 在输入时，假定复数厄米矩阵 $A$ 的对角元素的虚部为零，因此您无需设置这些值。在输出时，如果 $\alpha \neq$ 零，则对角元素的虚部被设为零。
+4. 关于对称矩阵在上部或下部打包存储模式以及上部或下部存储模式下如何存储的描述，参见第 64 页的“对称矩阵”。关于复数厄米矩阵在上部或下部打包存储模式以及上部或下部存储模式下如何存储的描述，参见第 69 页的“复数厄米矩阵”。
+
+# 功能
+
+这些子例程执行以下两部分描述的计算。参见参考文献 [36]、[37] 和 [81]。如果 $n$ 或 $\alpha$ 为零，则不执行任何计算。
+
+对于 SSPR2、SSYR2、SSLR2、CHPR2 和 CHER2，中间结果以长精度进行累加。
+
+**SSPR2, DSPR2, SSYR2, DSYR2, SSLR2, 和 DSLR2：** 这些子例程计算实对称矩阵的二阶更新：
+
+$$A \leftarrow A + \alpha x y^T + \alpha y x^T$$
+
+其中：
+- $A$ 是阶数为 $n$ 的实对称矩阵。
+- $\alpha$ 是一个标量。
+- $\mathbf{x}$ 是长度为 $n$ 的向量。
+- $\mathbf{x}^{\mathrm{T}}$ 是向量 $\mathbf{x}$ 的转置。
+- $\mathbf{y}$ 是长度为 $n$ 的向量。
+- $\mathbf{y}^{\mathrm{T}}$ 是向量 $\mathbf{y}$ 的转置。
+
+其表达式如下：
+
+$$\begin{bmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \vdots & \\ \vdots & \vdots & \\ a_{n1} & \cdots & a_{mn} \end{bmatrix} \leftarrow \begin{bmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \vdots & \\ \vdots & \vdots & \\ a_{n1} & \cdots & a_{mn} \end{bmatrix} + \alpha \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} \begin{bmatrix} y_1 & \cdots & y_n \end{bmatrix} + \alpha \begin{bmatrix} y_1 \\ \vdots \\ y_n \end{bmatrix} \begin{bmatrix} x_1 & \cdots & x_n \end{bmatrix}$$
+
+CHPR2, ZHPR2, CHER2, 和 ZHER2：这些子例程计算复数厄米矩阵的二阶更新：
+
+$$\boldsymbol{A} \leftarrow \boldsymbol{A} + \alpha \boldsymbol{x} \boldsymbol{y}^\mathrm{H} + \bar{\alpha} \boldsymbol{y} \boldsymbol{x}^\mathrm{H}$$
+
+其中：
+- $A$ 是阶数为 $n$ 的复数厄米矩阵。
+- $\alpha$ 是一个标量。
+- $\mathbf{x}$ 是长度为 $n$ 的向量。
+- $\mathbf{x}^\mathrm{H}$ 是向量 $\mathbf{x}$ 的共轭转置。
+- $\mathbf{y}$ 是长度为 $n$ 的向量。
+- $\mathbf{y}^\mathrm{H}$ 是向量 $\mathbf{y}$ 的共轭转置。
+
+其表达式如下：
+
+$$\begin{bmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \vdots & \\ \vdots & \vdots & \\ a_{n1} & \cdots & a_{mn} \end{bmatrix} \leftarrow \begin{bmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \vdots & \\ \vdots & \vdots & \\ a_{n1} & \cdots & a_{mn} \end{bmatrix} + \alpha \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} \begin{bmatrix} \bar{y}_1 & \cdots & \bar{y}_n \end{bmatrix} + \bar{\alpha} \begin{bmatrix} y_1 \\ \vdots \\ y_n \end{bmatrix} \begin{bmatrix} \bar{x}_1 & \cdots & \bar{x}_n \end{bmatrix}$$
+
+## 错误条件
+
+**计算错误：** 无
+
+**输入参数错误：**
+
+1. $uplo$ ≠ 'L' 或 'U'
+2. $n$ < 0
+3. $incx$ = 0
+4. $incy$ = 0
+5. $lda$ ≤ 0
+6. $lda$ < $n$
+
+# 示例 1
+
+本示例展示了具有正步长的向量 $\mathit{x}$ 和 $\mathit{y}$，以及一个阶数为 3 的实对称矩阵 $A$，该矩阵存储在下部打包存储模式中。矩阵 $A$ 为：
+
+$$\left[ \begin{array}{c c c} 8.0 & 4.0 & 2.0 \\ 4.0 & 6.0 & 7.0 \\ 2.0 & 7.0 & 3.0 \end{array} \right]$$
+
+调用语句和输入：
+
+```
+             UPLO N ALPHA X INCX Y INCY AP
+                |   |   |   |  |   |   |
+CALL SSPR2(  'L' , 3 , 1.0, X , 1 ,  Y , 2 , AP  )
+X            =  (3.0, 2.0, 1.0)
+Y            =  (5.0, . , 3.0, . , 2.0)
+AP           =  (8.0, 4.0, 2.0, 6.0, 7.0, 3.0)
+```
+
+输出：
+
+```
+AP =  (38.0, 23.0, 13.0, 18.0, 14.0, 7.0)
+```
+
+# 示例 2
+
+本示例展示了步长符号相反的向量 $\mathit{x}$ 和 $\mathit{y}$。对于具有负步长的 $\mathit{x}$，处理从元素 $X(5)$ 开始，其值为 3.0。阶数为 3 的实对称矩阵 $A$ 存储在上部打包存储模式中。它使用与示例 1 相同的输入矩阵 $A$。
+
+调用语句和输入：
+
+```
+             UPLO N ALPHA X INCX Y INCY AP
+                |   |   |   |   |   |   |
+CALL SSPR2(  'U', 3 , 1.0, X , -2 , Y , 2 , AP  )
+X            =  (1.0, . , 2.0, . , 3.0)
+Y            =  (5.0, . , 3.0, . , 2.0)
+AP           =  (8.0, 4.0, 6.0, 2.0, 7.0, 3.0)
+```
+
+输出：
+
+```
+AP =  (38.0, 23.0, 18.0, 13.0, 14.0, 7.0)
+```
+
+# 示例 3
+
+本示例展示了具有正步长的向量 $\mathit{x}$ 和 $\mathit{y}$，以及一个阶数为 3 的复数厄米矩阵 $A$，该矩阵存储在下部打包存储模式中。矩阵 $A$ 为：
+
+$$\left[ \begin{array}{c c c} \left(1.0, 0.0\right) & \left(3.0, 5.0\right) & \left(2.0, -3.0\right) \\ \left(3.0, -5.0\right) & \left(7.0, 0.0\right) & \left(4.0, -8.0\right) \\ \left(2.0, 3.0\right) & \left(4.0, 8.0\right) & \left(6.0, 0.0\right) \end{array} \right]$$
+
+**注意：** 在输入时，假定复数厄米矩阵 $A$ 的对角元素的虚部为零，因此您无需设置这些值。在输出时，如果 $\alpha \neq$ 零，则对角元素的虚部被设为零。
+
+调用语句和输入：
+
+```
+             UPLO N ALPHA X INCX Y INCY AP
+                |   |   |   |   |   |   |
+CALL CHPR2(  'L' , 3 , ALPHA , X , 1 , Y , 2 , AP  )
+```
+
+ALPHA = (1.0, 0.0)
+X = ((1.0, 2.0), (4.0, 0.0), (3.0, 4.0))
+Y = ((1.0, 0.0), . , (2.0, -1.0), . , (2.0, 1.0))
+AP = ((1.0, . ), (3.0, -5.0), (2.0, 3.0), (7.0, . ),
+(4.0, 8.0), (6.0, . ))
+
+**输出：**
+AP = ((3.0, 0.0), (7.0, -10.0), (9.0, 4.0), (23.0, 0.0),
+(14.0, 23.0), (26.0, 0.0))
+
+# 示例 4
+
+本示例展示了步长符号相反的向量 x 和 y。对于具有负步长的 x，处理从元素 X(5) 开始，其值为 (1.0,2.0)。阶数为 3 的复数厄米矩阵 A 存储在上部打包存储模式中。它使用与示例 3 相同的输入矩阵 A。
+
+**注意：** 在输入时，假定复数厄米矩阵 A 的对角元素的虚部为零，因此您无需设置这些值。在输出时，如果 $\alpha \neq$ 零，则对角元素的虚部被设为零。
+
+**调用语句和输入：**
+
+```
+UPLO N ALPHA X INCX Y INCY AP
+|
+CALL CHPR2 ('U' , 3 , ALPHA , X , -2 , Y , 2 , AP )
+```
+
+ALPHA = (1.0, 0.0)
+X = ((3.0, 4.0), . , (4.0, 0.0), . , (1.0, 2.0))
+Y = ((1.0, 0.0), . , (2.0, -1.0), . , (2.0, 1.0))
+AP = ((1.0, . ), (3.0, 5.0), (7.0, . ), . , (2.0, -3.0),
+(4.0, -8.0), (6.0, . ))
+
+**输出：**
+AP = ((3.0, 0.0), (7.0, 10.0), (23.0, 0.0), (9.0, -4.0),
+(14.0, -23.0), (26.0, 0.0))
+
+# 示例 5
+
+本示例展示了具有正步长的向量 x 和 y，以及一个阶数为 3 的实对称矩阵 A，该矩阵存储在下部存储模式中。它使用与示例 1 相同的输入矩阵 A。
+
+**调用语句和输入：**
+
+```
+UPLO N ALPHA X INCX Y INCY A LDA
+|
+CALL SSYR2('L' , 3 , 1.0 , X , 1 , Y , 2 , A , 3 )
+```
+
+```
+X = (3.0, 2.0, 1.0)
+Y = (5.0, . , 3.0, . , 2.0)
+```
+
+```
+A = [8.0 . .
+4.0 6.0 .
+2.0 7.0 3.0]
+```
+
+**输出：**
+
+```
+A = [38.0 . .
+23.0 18.0 .
+13.0 14.0 7.0]
+```
+

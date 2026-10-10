@@ -389,6 +389,7 @@
 +   [嵌入式系统：ARM 编程与优化](docs/embedded-systems-arm-programming-and-optimization/README.md)
 +   [Enchantment OS：家庭与办公极简版 Linux](docs/enchantment-os-linux-simplified-for-home-and-office/README.md)
 +   [发动机故障分析：内燃机故障及其成因](docs/engine-failure-analysis-internal-combustion-engine-failures-/README.md)
++   [AIX 版本4 发布1 和 Linux on pSeries 版本4 发布1 的工程与科学子程序库：指南与参考](docs/engineering-and-scientific-subroutine-library-for-aix-versio/README.md)
 +   [系统使用指南](docs/enjoy-your-system/README.md)
 +   [英国、法国与美国的启蒙小说小说](docs/enlightenment-fiction-in-england-france-and-america/README.md)
 +   [政府级企业 Linux v6：Red Hat 系列 Linux 版本 6 管理与安全指南](docs/enterprise-linux-for-government-v6-administer-secure-red-hat/README.md)

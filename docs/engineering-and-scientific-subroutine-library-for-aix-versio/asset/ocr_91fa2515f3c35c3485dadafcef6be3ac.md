@@ -1,0 +1,74 @@
+# SGEADD, DGEADD, CGEADD, and ZGEADD
+
+```
+C = [ 310031.0  320032.0  330033.0 ]
+          [ 410041.0  420042.0  430043.0 ]
+          [       .        .        . ]
+```
+
+# Example 2
+
+This example shows the computation $C+A^T+B$ , where $A$, $B$ , and $C$ are the same size as arrays $A$, $B$, and $C$ , in which they are contained.
+
+**Call Statement and Input:**
+
+```
+          A     LDA   TRANSa    B     LDB    TRANSb   C     LDC    M     N
+CALL SGEADD( A , 3 , 'T' , B , 4 , 'N' , C , 4 , 4 , 3 )
+```
+
+```
+A = [ 110000.0  120000.0  130000.0  140000.0 ]
+          [ 210000.0  220000.0  230000.0  240000.0 ]
+          [ 310000.0  320000.0  330000.0  340000.0 ]
+```
+
+```
+B = [ 11.0  12.0  13.0 ]
+          [ 21.0  22.0  23.0 ]
+          [ 31.0  32.0  33.0 ]
+          [ 41.0  42.0  43.0 ]
+```
+
+**Output:**
+
+```
+C = [ 110011.0  210012.0  310013.0 ]
+          [ 120021.0  220022.0  320023.0 ]
+          [ 130031.0  230032.0  330033.0 ]
+          [ 140041.0  240042.0  340043.0 ]
+```
+
+# Example 3
+
+This example shows computation $C+A+B^T$ , where $A$ is contained in a larger array $A$, and $B$ and $C$ are the same size as arrays $B$ and $C$ , in which they are contained.
+
+**Call Statement and Input:**
+
+```
+          A     LDA   TRANSa    B     LDB    TRANSb   C     LDC    M     N
+CALL SGEADD( A , 5 , 'N' , B , 3 , 'T' , C , 4 , 4 , 3 )
+```
+
+```
+A = [ 110000.0  120000.0  130000.0 ]
+          [ 210000.0  220000.0  230000.0 ]
+          [ 310000.0  320000.0  330000.0 ]
+          [ 410000.0  420000.0  430000.0 ]
+          [       .        .        . ]
+```
+
+```
+B = [ 11.0  12.0  13.0  14.0 ]
+          [ 21.0  22.0  23.0  24.0 ]
+          [ 31.0  32.0  33.0  34.0 ]
+```
+
+**Output:**
+
+```
+C = [ 110011.0  120021.0  130031.0 ]
+          [ 210012.0  220022.0  230032.0 ]
+          [ 310013.0  320023.0  330033.0 ]
+          [ 410014.0  420024.0  430034.0 ]
+```

@@ -1,0 +1,99 @@
+
+### Getting the Best Accuracy
+- What Precisions Do ESSL Subroutines Operate On? . . . . . . . . . . . . . . . . . . . . . . . . . 43
+- How does the Nature of the ESSL Computation Affect Accuracy? . . . . . . . . . . . . . . . . . . . . 44
+- What Data Type Standards Are Used by ESSL, and What Exceptions Should You Know About? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+- How is Underflow Handled? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+- Where Can You Find More Information on Accuracy? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+### Getting the Best Performance
+- What General Coding Techniques Can You Use to Improve Performance? . . . . . . . . . . . . . . . . . . . . . . 45
+- Where Can You Find More Information on Performance? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+
+### Dealing with Errors when Using ESSL
+- What Can You Do about Program Exceptions? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+- What Can You Do about ESSL Input-Argument Errors? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+- What Can You Do about ESSL Computational Errors? . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+- What Can You Do about ESSL Resource Errors? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+- What Can You Do about ESSL Attention Messages? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+- How Do You Control Error Handling by Setting Values in the ESSL Error Option Table? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+- How does Error Handling Work in a Threaded Environment? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+- Where Can You Find More Information on Errors? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+
+## Data Structures
+- General Band Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+- Symmetric Band Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+- Positive Definite Symmetric Band Matrix . . . . . . . . . . . . . . . . . . . . . . . 83
+- Complex Hermitian Band Matrix . . . . . . . . . . . . . . . . . . . . . . . . 83
+- Triangular Band Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+- General Tridiagonal Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+- Symmetric Tridiagonal Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+- Positive Definite Symmetric Tridiagonal Matrix . . . . . . . . . . . . . . . . 90
+- Sparse Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+- Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+- Real and Complex Elements in Storage . . . . . . . . . . . . . . . . . . . 101
+- One-Dimensional Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+- Two-Dimensional Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+- Three-Dimensional Sequences . . . . . . . . . . . . . . . . . . . . . . . . . 102
+- How Stride Is Used for Three-Dimensional Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+
+## Chapter 3. Setting Up Your Data Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+
+- Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+- Vectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+- Transpose of a Vector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+- Conjugate Transpose of a Vector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+- In Storage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+- How Stride Is Used for Vectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+- Sparse Vector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+- Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+- Transpose of a Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+- Conjugate Transpose of a Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+- In Storage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+- How Leading Dimension Is Used for Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+- Symmetric Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+- Positive Definite or Negative Definite Symmetric Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+- Symmetric Indefinite Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+- Complex Hermitian Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+- Positive Definite or Negative Definite Complex Hermitian Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+- Positive Definite or Negative Definite Symmetric Toeplitz Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+- Positive Definite or Negative Definite Complex Hermitian Toeplitz Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+- Triangular Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+
+## Chapter 4. Coding Your Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+
+- Fortran Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+  - Calling ESSL Subroutines and Functions in Fortran . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+  - Setting Up a User-Supplied Subroutine for ESSL in Fortran . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+  - Setting Up Scalar Data in Fortran . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+  - Setting Up Arrays in Fortran . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+  - Creating Multiple Threads and Calling ESSL from Your Fortran Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+  - Handling Errors in Your Fortran Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+  - Example of Handling Errors in a Multithreaded Application Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+- C Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+  - Calling ESSL Subroutines and Functions in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+  - Passing Arguments in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+  - Setting Up a User-Supplied Subroutine for ESSL in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+  - Setting Up Scalar Data in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+  - Setting Up Complex Data Types in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+  - Using Logical Data in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+  - Setting Up Arrays in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+  - Creating Multiple Threads and Calling ESSL from Your C Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+  - Handling Errors in Your C Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+- C++ Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+  - Calling ESSL Subroutines and Functions in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+  - Passing Arguments in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+  - Setting Up a User-Supplied Subroutine for ESSL in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+  - Setting Up Scalar Data in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+  - Setting Up Arrays in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+  - Using Logical Data in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+  - Setting Up Complex Data in C++ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+  - Creating Multiple Threads and Calling ESSL from Your C++ Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+  - Handling Errors in Your C++ Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+
+## Chapter 5. Processing Your Program 157
+
+- Processing Your Program on AIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+- Dynamic Linking Versus Static Linking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+- Fortran Program Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+- C Program Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
