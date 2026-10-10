@@ -1,0 +1,7 @@
+# Suggested Partitioning
+
+Suggested partitioning leads you through the process of selecting and implementing a partition and filesystem schema based upon your disk layout. If possible, openSUSE Installer provides you with a recommended partition setting, as shown in Figure 2.9. For most new installations and first time users, the installation default will be acceptable. The next screen will present you with the choice to select the default **partition-based** option or the _logical volume management (LVM)-based_ option. The default selection is the **partition-based**. In addition, the user can choose to edit the existing partitions or create new partitions. The decision to create a new partition or edit an existing partition depends on whether the Linux system will coexist with an existing operating system (for example, Microsoft Windows XP), which contains more than one disk drive, or whether you want to resize a foreign filesystem partition (for example, NTFS). For additional information on this process, consult the openSUSE online documentation.
+
+The recommended partitioning schema represents the most common approach. This approach entails having two primary partitions and one extended partition. The two primary partitions support the Linux _root_ partition and the Linux _swap_ partition. The extended partition supports the
+
+![](bbox=[0.1, 0.53, 0.91, 0.94])

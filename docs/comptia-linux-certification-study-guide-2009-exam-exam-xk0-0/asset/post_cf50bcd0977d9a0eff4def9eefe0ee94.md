@@ -1,0 +1,291 @@
+
+## Index
+
+- user settings, 25
+- using DVD Media, 15
+- Welcome screen in, 18-19
+- OpenSUSE Installer tool, 33, 44
+- OpenSUSE Linux hardware compatibility list, 14
+- Optical storage media, 62
+
+### P
+
+- Package managers, 201
+- Packages, 200
+- Debian, 209
+- formats, 201
+- installing, 204, 210, 211
+- obtaining information about, 214
+- querying, 205
+- removing, 205, 210, 212
+- source, 201
+- types of, 201
+- updating, 204, 208
+- PAGER variable, 121
+- PAM. See Pluggable authentication modules
+- PASV command, 273
+- Parent process ID (PPID), 152, 172
+- parted command, 44
+- Rescue System to access, 44
+
+- Partitions, 64, 68-70
+- adding VFAT filesystem, 73-75
+- backup/restore, 71
+- based option, 24, 39
+- creating multiple, 69
+- disk space growth, 71
+- filesystem verification, 64
+- initial boot access, 70
+- logging/monitoring, 71
+- security and permissions, 71
+- system maintenance, 72
+- system re-partitioning, 71
+- volatile/temporary data, 72
+- Passive FTP, 273-274
+- passwd command, 108, 295, 312
+- Password encryption methods
+- Blowfish, 27
+- DES, 27
+- MD5, 27
+- PATH variable, 119, 120
+- Peripheral component interconnect (PCI) device, 122
+- PHP, 270-271
+- ping command, 139, 140
+
+- Pluggable authentication modules (PAM), 327
+- adjusting password length with, 328
+- management tasks, 327
+- PORT command, 273
+- Ports (TCP/IP), 115, 132-133
+- Postfix, 282-283
+- PostgreSQL, 219
+- Post office protocol (POP), 279
+- Primary partitions, 24, 39
+- vs. extended partitions, 40
+- Printers
+- management of, 233
+- testing of, 234
+- PRINTER variable, 121
+- Printing, 230
+- commands, 234-236
+- Privilege escalation, 313-316
+- managing, 168
+- necessity of, 174
+- Process identification number (PID), 152, 169
+- ps command, 169, 170
+- PS1 variable, 118
+- PS2 variable, 119
+- ps tree command, 172
+- Python language, 205
+
+### Q
+
+- quota check command, 80
+
+### R
+
+- RAID. See Redundant array of independent disk
+- RAM disk storage media, 63
+- Red Hat package manager (RPM), 202
+- command line tools, 203
+- definition, 199
+- yellow dog update modified [Yum], 205
+- Redundant array of independent disk (RAID)
+- advantages and disadvantages, 47-48
+- concept for implementing mirroring, 48
+- parity, 48
+- striping, 48
+- definition of, 9
+- hardware, 47
+- levels, 48-50
+- nested, 48, 49
+- software, 47
+- implementation of levels of, 50
+- Remote access, 143, 322
+- from command line, 266-267
+- SSH, 323
+- VNC, 326
+- Remote authentication dial in user service (RADIUS), 330
+- Remote desktop protocol (RDP), 261
+- Removable storage media, 62
+- Repositories, 201, 205, 221
+- adding and removing, 220
+- Fedora, 206
+- Yum, 221
+- Request for comments (RFC), 256
+- Rescue system, 106, 108
+- to access the parted command, 44
+- to execute pvcreate command, 47
+- Residual data, 61
+- Resolver file, 132
+- Resolving dependencies, 219
+- using Yum, 220
+- restore command for archiving and restoring files, 357
+- rndc command options, 258
+- Root directory, 75
+- Root filesystem, loading of, 94
+- Route, definition of, 115
+- route command, 134, 135
+- Routing, 134
+- rpm command, 204
+- RPM. See Red Hat package manager
+- rsync command, 350, 351
+- options of, 352
+- Runlevels, 102
+- changing to single user mode, 105
+- definition of, 91
+- executing of, 103-104
+- types of, 103
+- Running modes, 313
+
+### S
+
+- Samba server, 261
+- configuration file for, 263
+- connecting, 264-265
+- Imhosts file in, 264
+
+- Samba server (continued)
+- managing, 264
+- *ntmb daemon*, 262
+- *wizind component of*, 265
+- Sandbox, 291
+- sar command, 339
+- Scheduling tasks, 188–190
+- Scripts, 158, 186
+- Secure file transfer protocol (SFTP), 324, 352
+- Secure shell (SSH), 323
+- secure tunnels, 323
+- SFTP, 324
+- *X11 forwarding*, 325
+- Security applications and utilities, 316
+- Nessus, 318
+- Nmap, 316
+- Snort, 320
+- Tripwire, 320
+- Wireshark, 317
+- Security Enhanced (SE) Linux, 312
+- running modes of, 313
+- sed command, 347
+- Sendmail
+- configuration, 281
+- starting and stopping of, 280
+- Sendmail file, 281
+- building, with *m4*, 282
+- Server message block (SMB), 261
+- Server message block file system (SMBFS), 60, 65
+- ServerRoot directory, 268
+- Services file, 131
+- Setuid and setgid bit, 312
+- sftp command, 324
+- sha1sum command, 321
+- sh command, 186
+- Shadow password file, 301
+- shmount command, 83, 84
+- Simple mail transfer protocol (SMTP), 279
+- single user mode, 108
+- changing from current runlevel to, 105
+- Slack space, 61
+- Small computer system interface (SCSI), 74
+- Smart hosts, 281
+- smb.conf file, 263
+- *smclient*, 265
+- *smbd daemon*, 262
+- smbstatus command, 264
+- Snort, 320
+- Soft link, 163
+- Software package, 199
+- Software RAID, 47
+- installation and configuration, 48
+- Source
+- compiling and installing from, 215
+- configuring, 216
+- packages, 201
+- Special-purpose storage media, 63
+- Special permissions bit, 311
+- *setuid and setgid bit*, 312
+- *sticky bit*, 312
+- Squid server
+- as caching server, 276
+- configuration files, 275–276
+- *default port for*, 275
+- *HTTP and FTP in*, 275
+- as proxy server, 276
+- *uses of*, 274
+- SSH. See Secure shell
+- ssh-keygen command, 326
+- Stable libraries, 209
+- *startx command*, 237
+- *status libraries*, 354
+- *sticky bit*, 312
+- Storage containers, 61
+- Storage containers. See Storage media types
+- Storage media types, 61
+- *hard disk*, 61
+- *network based*, 62
+- *optical*, 62
+- *RAM disk*, 63
+- *removable*, 62
+- *special-purpose*, 63
+- Streams for communicating, 175
+- Subnet mask, 129, 130, 134
+- su command, 314
+- sudo command, 314
+- Suggested partitioning, 24
+- *extended*, 24
+- *primary*, 24
+- Super server service, 191
+- Swap, 59, 84–86
+- definition of, 59
+- file, creation of, 85
+- swapon command, 86
+- swapoff command, 85
+- Symbolic link, 163
+- Syslog, 342
+- configuration of, 343
+- *event levels of*, 343
+- System BIOS tasks of
+- *boot device selection*, 93
+- *boot sector loading*, 93
+- *power up self test (POST)*, 93
+- System documentation, 181–184
+- System probing, 19
+
+### T
+
+- *tail -f command*, 346
+- tar command
+- *for archiving and restoring files*, 355
+- *options of*, 355
+- *Target server*, 261
+- TCP/IP ports, 115, 132–133, 317
+- *Tektronix terminals*, 245
+- *Telnet command*, 141, 144, 266, 323
+- *Telnet hostname/IP address command*, 266
+- *Telnet package*, 204
+- *Terminal emulators*, 244–245
+- *Terminal program*, 153
+- *TERM variable*, 120
+- *test command*, 165, 166
+- *Testing files*, 165
+- *Testing libraries*, 209
+- TFTP. See Trivial file transfer program
+- *Tomcat configuration*, 272
+- *traceprogram command*, 140
+- *tty command*, 171, 340
+- *Tripwire*, 320
+- *Trivial file transfer program (TFTP)*, 144
+- *tsel command*, 121
+- *Tunneling*, 323
+- *Two-factor authentication*, 330
+
+### U
+
+- *umask command*, 310
+- *Universal disk format (UDF)*, 62
+- *upcount command*, 67
+- *uptime command*, 340
+- *Use automatic configuration*, 22
+- *User accounts*, 292
+- *creating*, 304
+- *managing*, 292–293

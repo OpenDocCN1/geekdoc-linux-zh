@@ -232,6 +232,7 @@
 +   [CompTIA Linux+ 认证全合一考试指南，第二版 (考试 XK0-005)](docs/comptia-linux-certification-all-in-one-exam-guide-second-edi/README.md)
 +   [CompTIA® Linux+ 认证学生手册（LPI + CertBlaster 支持）](docs/comptia-linux-certification-powered-by-lpi-certblaster-stude/README.md)
 +   [CompTIA Linux + 认证：学生手册](docs/comptia-linux-certification-student-manual/README.md)
++   [CompTIA Linux+ 认证学习指南（2009 年考试 XK-003）](docs/comptia-linux-certification-study-guide-2009-exam-exam-xk0-0/README.md)
 +   [CompTIA Linux+ 认证学习指南：[两套完整大师级考试；视频训练片段；完整电子书；Learnkey]](docs/comptia-linux-certification-study-guide-two-complete-mastere/README.md)
 +   [CompTIA Linux+ ／ LPIC-1 认证指南：考试 LX0-103 & LX0-104／101-400 & 102-400（认证指南）](docs/comptia-linux-lpic-1-cert-guide-exams-lx0-103-lx0-104101-400/README.md)
 +   [CompTIA Linux Plus 考试指南](docs/comptia-linux-plus-study-guide-elements/README.md)

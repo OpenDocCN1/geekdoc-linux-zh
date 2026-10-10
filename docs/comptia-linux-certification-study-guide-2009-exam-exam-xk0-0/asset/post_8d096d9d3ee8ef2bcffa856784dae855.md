@@ -1,0 +1,71 @@
+
+## Index
+
+- files for, 299–304
+- tools for, 293–298
+- normal user, 116
+- root, 117
+- superusers, 116, 117, 128
+- system user, 116, 117
+- **useradd** command, 293
+- User datagram protocol (UDP), 317
+- **userdel** command, 294
+- User identification number (UID), 293
+- **usermod** command, 294
+- User profiles, 116–117 and environment variables, 117–121
+- **V**
+  - **vi** command, 166
+  - Virtual consoles, 184
+  - Virtual desktops
+    - KDE, 241
+    - use of, 241
+  - Virtual file allocation table (VFAT), 64, 73
+  - Virtual file system, 185
+  - Virtual hosts container, 270
+  - Virtual network computing (VNC), 261–262, 326
+  - Virtual window managers, 238
+  - **vmstat** command, 340
+- **W**
+  - **w** command, 297
+  - Web archive (WAR) file, 272
+  - Web management port for CUPS, 232
+  - Web proxy, 251
+  - Web services, 265
+  - WebSpace container, 269
+  - **wget** command, 266
+  - **what is** command, 182
+  - **whereis** command, 162
+  - **which** command, 162
+  - **whoami** command, 297
+  - **who** command, 297
+  - Winbind, 265
+  - Window managers
+    - control of, 238
+    - types of, 238
+    - virtual, 238
+  - Windows domain, 27
+  - Windows interoperability, 261
+  - Wireless NIC configuring, 131
+  - Wireshark, 317
+- **X**
+  - **xargs** command, 178
+  - X11. See X Window system
+  - X display manager protocol (XDMCP), 240
+  - **xorg.conf** file, 243, 244
+  - X session manager, 239
+  - Xterm emulator, 245
+  - X Window manager, 238
+  - X Windows display manager (XDM), 239
+  - X Window system, 229, 230, 236
+    - clients vs. server, 237–238
+    - configuration file for, 243, 244
+    - directories of, 243
+    - origins of, 236
+    - starting and stopping of, 236–237
+- **Y**
+  - Yellow dog updater modified (Yum), 205–210
+    - installing software with, 206
+    - removing software by, 209
+    - repositories, 221
+    - resolving dependencies by, 220
+    - updating software package by, 208

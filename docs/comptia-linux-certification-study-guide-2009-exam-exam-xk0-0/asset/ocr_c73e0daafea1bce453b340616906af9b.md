@@ -1,0 +1,13 @@
+stuff that shows up on a computer screen -- they are used for entirely different things. A word processor is used to type letters and things that look nice, and have lots of features for formatting and arranging information in visually appealing ways -- fonts, colors, tables, and so forth. A text editor is meant for editing system files; stuff meant to be read by computers. Advanced text editing features include features that are handy for programmers, like parenthesis matching, autoindenting, and color-coded key-word (syntax) highlighted based on the programming language you are using. Like any fancy text editor, `vi` supports all that cool stuff, but it's most often used to quickly pop into a configuration file to make a small change and keep moving, so that's what we'll concentrate on here.
+
+The key to dealing with `vi` is understanding that it has three modes: *Command*, *Ex*, and *Edit*. When first starting `vi` you'll be in *Ex* mode, which allows you to move around in the file you are editing, perform *copy* and *paste* commands and other advanced features (like recording and replaying macros). To actually enter text, you'll need to shift into *Edit* mode by typing one of the edit keys, and then go back to *Ex* mode by pushing the *Esc* key. *Command* mode is entered from *Ex* mode by typing `“:`” and is used to enter save files, enter a filename, or text to be searched for. You can go back to *Ex* mode by pressing *Esc* again.
+
+Particularly useful movement commands in *Ex* mode are as follows:
+
++   - The arrow keys (up, down, left, and right) move in the appropriate direction, one character or line at a time. If you precede the arrow with a number, it will move that number of characters or lines. This feature will multiply the effects of most `vi` *Ex* mode functions. As a holdover from the days of serial terminals that may not have had arrow keys, you can also use the **h, j, k,** and **l** keys for left, down, up, and right.
+
++   - The **G** key (capitalized) will jump directly to the last line of the file. A number in front of the **G** will take you directly to the corresponding line number. This is particularly useful if you are trying to compile a file and the compiler gives you an error at a specific line number.
+
++   - The **D** key will delete from the current cursor location to the end of the current line, the `dd` command will delete the entire current line. A **d** followed by a movement key (that is, a down arrow) will delete the line below the current cursor location. A number in front of that will delete that number of lines.
+
++   - If you make a mistake, the **u** key will undo your last command.
