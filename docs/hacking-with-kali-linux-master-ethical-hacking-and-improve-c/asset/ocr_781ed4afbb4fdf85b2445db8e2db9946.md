@@ -1,0 +1,7 @@
+for payments from customers, then this is a gold mine for a hacker. They would love nothing more than to get into that information and use it for their own needs. Think about how far the hacker could go with all of that credit card information, and the chaos they could cause, and the money they would spend before anyone else would even notice what is going on.
+
+This is definitely something you need to be worried about if you are handling any credit card or payment information along the way. and when it happens, your customers could have a long battle ahead of them with dealing with missing money and information, and you will lose your reputation, not only among your customers, but also with some of the potential customers that you want to reach in the future.
+
+It is possible to recover in some situations, but you will find that for many companies, it is easier to go under if you have one of these data breaches. It is always better to be proactive and think ahead about how to handle these cybersecurity issues, rather than letting the hacker take advantage of you.
+
+When you are running a business, and even when you are handling one of your own networks, you need to make sure this cybersecurity is one of your number one priorities. Protecting your information and the information you gather from your customers is really important, and you need to make it something you focus on quite a bit. The good news is that with a lot of the topics we will discuss in this guidebook, you can get started with hacking and keeping your cybersecurity as safe as possible.

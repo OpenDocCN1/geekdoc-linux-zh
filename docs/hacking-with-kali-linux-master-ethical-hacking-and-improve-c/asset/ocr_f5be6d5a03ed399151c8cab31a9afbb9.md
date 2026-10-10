@@ -1,0 +1,9 @@
+Another benefit is this will adhere to the file-system hierarchy standard. This is important in the world of security. All systems that follow this standard, which is known as FHS, will allow the users to find support files, binaries, and even all of the libraries that they need to succeed. What this will mean for you is you won't have to go through and manually locate any of the tools you need, because you can enter in the command name into your root terminal and the system can find it for you.
+
+There are also hundreds of infiltration tools you can use. We will talk about the infiltration testing you can do with this program later on, but it is helpful to make sure no one else can get onto your system and cause issues. There are more than 600 infiltration testing tools available on Kali Linux, and this is designed to help make things easier for network security teams to check out how safe and secure their network is.
+
+These will include a lot of the basic tools you need to gather up information on your network, analysis tools, and even reporting tools. The reason Kali Linux incorporates so many of these tools is to make sure nothing is left to chance at all.
+
+Using the Meta Packages, you may install the tools you think is the most important to some of the work you want to get done. Each programmer will have a different type of work they want to do and may find some tools a little bit better than the others. This allows you the flexibility to pick out the tools you want to work with, no matter what kind of project is at hand.
+
+You may also like what is known as the Version Tracking feature in this language, which is the part that helps you to compare different versions of

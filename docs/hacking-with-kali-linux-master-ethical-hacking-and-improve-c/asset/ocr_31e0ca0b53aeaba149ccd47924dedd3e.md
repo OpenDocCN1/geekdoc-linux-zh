@@ -1,0 +1,7 @@
+whistleblower. This will often be some kind of employee who has a grudge against the company or a strategic employee who was compromised or hired by the rivals in order to garner some big trade secrets of their opponents in order to help them stay on top of their game.
+
+Often this kind of hacker will take privilege from their easy access to information, and the kind of role that they have inside of that company, to hack through the system and cause the problems that they want. This makes it easier for them to garner that information because they are already seen as being on the inside of the company, and it is possible that they already have a lot of the needed access rights that are needed to get into this kind of system.
+
+Because there are so many different types of hackers, you can work with on a regular basis. You will find that it is always best to err on the side of caution and watch out for some of the potential hackers who may try to get on your system. Whether you are worried about your own individual system or you are in charge of a large system that needs some care and attention, make sure to be on the lookout for those who want to do you harm along the way.
+
+For the most part, even though the goals and the objectives of each kind of hacker is slightly different, they will rely on a lot of the same techniques and more to get the work done. This is important in order to ensure we can see some good results in the process and that we can actually use the same techniques as the bad guys in order to keep our systems safe and secure.

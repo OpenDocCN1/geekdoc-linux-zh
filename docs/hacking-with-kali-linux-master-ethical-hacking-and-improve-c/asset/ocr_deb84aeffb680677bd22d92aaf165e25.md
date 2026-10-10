@@ -1,0 +1,7 @@
+anti-spyware software on your system will help prevent this kind of attack, and will keep your system safe and sound.
+
+And finally, we need to take a look at how we can password protect any of the software that we are using and lock up the devices as well. Most of the software that is web-connected and then you can install on your system will require some login credentials. You need to pick out a good and strong password to use here and remember to not use the same password you have on another account or application.
+
+To take this further, make sure that you have a strong computer password that you want to work with, as well. There are times when someone may be able to gain access physically to your computer, and if you do not have a strong password in place, then you will end up in trouble. a simple line of defense to make sure that you are protected on all sides with your system, no matter what is on it, is to come up with a strong password for the computer, so it is harder for the hacker to enter.
+
+Protecting your system is an important part of making sure that hackers are not able to get ahold of your information and use it in any manner that they choose. Having this setup, and following some of the security tips we talked about in this chapter, and in some of the rest of the guidebook, can be important to keep your system as safe and secure as possible.

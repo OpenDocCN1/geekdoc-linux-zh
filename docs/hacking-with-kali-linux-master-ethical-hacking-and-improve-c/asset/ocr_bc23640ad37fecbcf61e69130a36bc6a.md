@@ -1,0 +1,9 @@
+unimportant you may think you are, you can still become a victim of the attack as well.
+
+The first step that we can take is to make sure your system and all of the software on it is updated on a regular basis. This is a hard thing to work with because these updates seem like an annoyance. But it is really important for us to stay on top of them. Besides being able to offer us new features, they are there to cover up any security holes that can happen on our computer. In most cases, when your operating system or another major software as an update, you will get a notification about it. You can choose to go with updating later or right away.
+
+While it is easy to just forget about the update and assume that you will get to it at a later time, this is not a good thing to do for the safety of your system. In fact, you is much better off to do this right away and get it over with, because it helps to prevent issues with a hacker getting on the system.
+
+The next thing on the list we need to focus on is making sure you always have your wits around you and that you think things through. It is something that should just go without saying, but being suspicious about everything is one of the best things that you can do to make sure that your computer is secure all of the time. while a lot of techniques of hacking are becoming more sophisticated as time goes on, so it is harder to figure out if you are under attack or not, it can also be something simple that takes over as well.
+
+Make sure that you are always stopping and thinking twice before you click or open anything that doesn’t really look legitimate to work with. Do not rely on just the spam filters in order to catch some of the sketchy emails or other

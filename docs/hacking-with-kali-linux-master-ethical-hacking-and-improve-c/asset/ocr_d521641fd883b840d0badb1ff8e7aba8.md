@@ -1,0 +1,9 @@
+theoretical kinds of numbers, and it is hard to know for sure, but we can often take a look at what would happen if they broke into the credit card system, for example, and how much that would cost the business.
+
+It is important to do this kind of infiltration testing because it will allow us to see where the vulnerabilities of the system are, and how we can fix them in order to keep our customers’ information as safe as possible. You do not want to leave it all to chance because once a hacker can get onto the system, it could not only cost you a lot of money, but it could cost your customers a lot of money and time, can run your reputation, and if you are found to be in violation of the compliance rules, it could get a lot worse.
+
+Many companies will hire out some of this work because they want to make sure that someone on the outside to see if they can get onto the system and cause some of the issues. The tester can go through and figure out where the issues are, and then will make some of the necessary reports and suggested changes the company can choose to follow.
+
+Often this is something that is a big eye-opener to a lot of companies. They may have not realized there were so many problems with their system. And sometimes, these issues show up, even when you go through and deal with a security team that is supposed to protect your system. But even with the recommendations from the penetration tester, it is still up to the business to determine what they want to do with the information, what steps they want to take, and how they will deal with the vulnerabilities and make it all better.
+
+It is not the job of the penetration tester to fix the issues in the computer system unless this is your own personal computer that you are trying to work

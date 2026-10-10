@@ -1,0 +1,9 @@
+the threats start to advance and they continue to change more quickly than most companies will keep up with, we can find it is really hard to make sure all of the systems are protected and more.
+
+As a result, there are now advisory organizations out there who are more proactive and adaptive to the issues of cybersecurity. In addition, we will find that the NIST, or the National Institute of Standards and Technology, has issued some guidelines in the framework of risk assessment recommend that a company should work on real-time assessments and continuous monitoring of their systems, rather than leaving everything to chance. And it also recommends that these have a more data-focused approach when it comes to their security, rather than a model based on just looking at the perimeter.
+
+There are a lot of different methods that can be used when it is time to keep the security of your company good and strong. In many cases, there is a recommendation that you work with a top-down kind of approach to this security, which will lead for a big change in how this security is focused on across all of the practices of the business.
+
+There are a lot of different types of compliance organizations that we see, and these change based on what kind of industry you are in and more. It is important for us to know a bit more about this process and about the compliance we need to follow, to better understand how we can use those rules to keep our systems not only safe, but compliant for the expectations of our industry at the time.
+
+There are a lot of reasons why a hacker will want to get into your company and look at your data. To start, if you are collecting credit card information
