@@ -1,0 +1,83 @@
+
+# CHAPTER 1. QUICK START
+
+# Chapter 2
+
+# Installing Red Hat Linux/Intel
+
+This chapter explains in detail how to install or upgrade Red Hat Linux on Intel and compatible PCs. This chapter is organized as follows:
+
+- Section 2.1, *The Red Hat Linux Errata*, contains important pointers to the most current information about Red Hat Linux/Intel 4.2.
+- Section 2.2, *Before You Begin*, describes some of the things you need to know before you actually install Red Hat Linux.
+- Section 2.3, *Preparing to Install*, tells how to create installation floppies (if not included with your copy of Red Hat Linux) and explains how to use the installation program.
+- Section 2.4, *Step-By-Step Installation*, gives step-by-step instructions for completing the entire installation or upgrade process.
+
+### 2.1 The Red Hat Linux Errata
+
+Occasionally, we discover problems with a release of Red Hat Linux, some of which may affect installation. When we discover a problem, we post information about the problem and our solution in the Red Hat Linux Errata, which we make available in several ways:
+
+- via the World Wide Web: http://www.redhat.com/errata
+- via electronic mail: errata@redhat.com
+
+Please note that the solution to a problem listed in the Errata may require that you use a different boot or install disk image than the ones which are mentioned below or which come with your Red Hat Linux CD-ROM.
+
+### 2.2 Before You Begin
+
+Before you begin installing Red Hat Linux, you should collect some information about your system:
+
+- Be familiar with the hardware you have installed in your machine, including:
+  - **hard drive(s):** number and size; if you have more than one, it’s helpful to know which one is first, second, etc.
+  - **memory:** amount of RAM.
+  - **CD-ROM:** its interface type (IDE, SCSI, or other interface), and, for non-IDE, non-SCSI CD-ROMs, the make and model number.
+  - **SCSI adapter:** make and model number.
+  - **network card:** make and model number.
+  - **mouse:** type (serial, PS/2, or bus mouse), protocol (Logitech, Microsoft, MouseMan, etc.), and number of buttons; also, for serial mice, the com port it is connected to.
+
+Also, if you will be installing the X Window System, you should be familiar with the following:
+
+- **your video card:** make and model number or video chipset, amount of video RAM.
+- **your monitor:** make and model number, allowable range of horizontal and vertical refresh rates.
+
+You can find most of the above information in the documentation accompanying your system or from your system’s vendor or manufacturer.
+
+> **Please Note:** Current information about what hardware is supported by Red Hat Linux/Intel is available via Red Hat Software’s World Wide Web site at http://www.redhat.com/hardware/.
+
+- If you will be connected to a network, be sure you know your IP address, netmask, gateway IP address, name server IP addresses, domain name, and hostname. If you don’t know these values, ask your network administrator.
+- If Red Hat Linux/Intel will coexist on your machine with OS/2, you must create your disk partitions with the OS/2 partitioning software—otherwise, OS/2 may not recognize the disk partitions. During the installation, do not create any new partitions, but do set the proper partition types for your Linux partitions using the Linux *fdisk*.
+- If you plan to use LILO (the LInux LOader) to boot your Red Hat Linux system, see Section 2.4.19, *LILO Installation*, for guidelines that might affect your partitioning plans.
+
+Please read all of the installation instructions *before* starting; this will prepare you for any decisions you need to make and should eliminate potential surprises.
+
+#### 2.2.1 Installation Methods
+
+You can install or upgrade Red Hat Linux/Intel via any of several basic methods. Depending on the method you use, you need either one or two formatted high-density (1.44 MB) 3.5-inch diskettes.
+
+Installing from CD-ROM or via NFS requires only a boot diskette. Installing from a hard drive, via FTP, from an SMB volume, or from a PCMCIA device (including PCMCIA-based CD-ROMs) requires both a boot diskette and a supplemental diskette. Section 2.3.1 below explains how to create boot and supplemental diskettes.
+
+**CD-ROM** If you have a Red Hat Linux CD and a boot diskette you will need a supported CD-ROM drive and either a 3.5 inch floppy drive or an operational installation of MS-DOS on your machine in order to run the installation utility. If a boot diskette did not accompany your CD, you will need access to a computer running either Linux or MS-DOS to create a boot diskette from the CD.
+
+**NFS** If you wish to install over a network, you will need to mount the Red Hat Linux CD-ROM on a machine that supports ISO-9660 file systems with Rock Ridge extensions. The machine must also support NFS. Export the CD-ROM file system via NFS. You will need to have nameservices configured, or know the NFS server’s IP address, and the path to the exported CD-ROM.
+
+**FTP** For an FTP install, you must have a boot disk and supplemental disk. You will need to have a valid nameserver configured or the IP address of the FTP server you will be using. You will also need the path to the root of the Red Hat Linux directory on the FTP site.
+
+**SMB Shared Volume** If you wish to install from an SMB shared volume, you will need to mount the Red Hat Linux CD-ROM on a Microsoft Windows NT or Windows 95 server that supports shared volumes. You will need to have nameservices configured, or know the server’s IP address; you will also need the name of the shared volume containing the Red Hat Linux CD-ROM and the account number and password to use to access the volume.
+
+**Hard Drive** To install Red Hat Linux from a hard drive you will need the same boot and supplemental disks used by the FTP install. You must first create a RedHat directory at the top level of your directory tree. Everything you will install should be placed in that directory. First copy the base subdirectory, then copy the packages you want to install to another subdirectory called RPMs. You can use available space on an existing DOS partition or a Linux partition that is not required in the install procedure (for example, a partition that would be used for data storage on the installed system).
+
+If you are using a DOS filesystem, you may not be able to use the full Linux filenames for the RPM packages. The installation process does not care what the filenames look like, but it is a good idea that you keep track of them so you will know what you are installing.
+
+**PCMCIA** If your CD-ROM, ethernet card, or local hard disk is connected to a PCMCIA adapter, you must install with PCMCIA support. You need a supported PCMCIA controller and a supported PCMCIA SCSI adapter or ethernet card. Installing via PCMCIA requires the use of a supplemental diskette.
+
+#### 2.2.2 A Note About Kernel Drivers
+
+During installation of Red Hat Linux, there are some limits placed on the filesystems and other drivers supported by the kernel. However, after installation there is support for all file systems available under Linux. At install time the modularized kernel has support for (E)IDE devices, (including ATAPI CD-ROM drives), SCSI adapters, and network cards. Additionally, all mice, SLIP, CSLIP, PPP, PLIP, FPU emulation, console selection, ELF, SysV IPC, IP forwarding, firewalling and accounting, reverse ARP, QIC tape and parallel printers, are supported.
+
+After the installation is complete you may want to rebuild a kernel that includes support only for your hardware. See Chapter 5, Section 5.1 for information on how to build a customized kernel.
+
+#### 2.2.3 Disk Partitions
+
+To install Red Hat Linux, you must have disk space available for it to “live” in. This disk space needs to be separate from the disk space used by other operating systems you may have installed on your computer (e.g., MS-DOS, OS/2, a different version of Linux, or another well-known operating system which we won’t name). The way to make disk space available is by dividing it into *partitions*.
+
+You may wish to install Red Hat Linux on its own hard disk, or even on a computer which contains no other operating system. In that case, you can use the Red Hat Linux installation system to create the disk partitions you need.
+
+Alternatively, you may wish to install Red Hat Linux on a disk which already contains software or data from a different operating system; how to create the disk partitions you need depends on what other operating system is present.

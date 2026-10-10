@@ -1,0 +1,32 @@
+*primary group* for the user. See section 10.3.3 for details on how groups are used.
+
+| User | UID | GID | Home Directory | Shell |
+| :--- | :--- | :--- | :--- | :--- |
+| root | 0 | 0 | /root | /bin/bash |
+| bin | 1 | 1 | /bin |
+| daemon | 2 | 2 | /sbin |
+| adm | 3 | 4 | /var/adm |
+| lp | 4 | 7 | /var/spool/lpd |
+| sync | 5 | 0 | /sbin | /bin/sync |
+| shutdown | 6 | 0 | /sbin | /sbin/shutdown |
+| halt | 7 | 0 | /sbin | /sbin/halt |
+| mail | 8 | 12 | /var/spool/mail |
+| news | 9 | 13 | /var/spool/news |
+| uucp | 10 | 14 | /var/spool/uucp |
+| operator | 11 | 0 | /root | /bin/bash |
+| games | 12 | 100 | /usr/local/games |
+| gopher | 13 | 30 | /usr/lib/gopher-data |
+| ftp | 14 | 50 | /usr/ths/ftp |
+| nobody | 99 | 99 | /root |
+
+![](bbox=[0.29, 0.58, 0.71, 0.61])
+
+# 10.3.2 Standard Groups
+
+Table 10.3.2 lists the standard groups as set up by the installation process (this is essentially the *etc/group* file).
+
+# 10.3.3 User Private Groups
+
+Red Hat Linux uses a user private group (UPG) scheme, which makes UNIX groups much easier to use. The UPG scheme does not add or change anything in the standard UNIX way of handling groups. It simply offers a new convention for handling groups. Whenever you create a new user, by default, he or she has a unique group. The scheme works as follows:
+
+**User Private Group** Each user has it's own primary group, to which only it is a member.

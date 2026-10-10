@@ -1,0 +1,1 @@
++   • **X3D-PEX** (PEX) can be dynamically loaded, however **X3D-PEX** depends on **Multi-Buffering** being “ON”. Therefore, to use **X3D-PEX**, set **Multi-Buffering** to “ON” and **X3D-PEX** to “**DY**N**”.

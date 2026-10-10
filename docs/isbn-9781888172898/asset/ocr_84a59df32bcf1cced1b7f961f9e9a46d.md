@@ -1,0 +1,17 @@
+cations” group. Inside of that group, there is another grouping for all of the editors that are shipped.
+
+By convention, groups are written in the same way as UNIX paths. The top most group is written first, and subsequent groups follow with a slash separating the group names. This means that an X-based drawing program appears in the X11/Applications/Graphics group.
+
+To view the packages and subgroups within a group, double click the left mouse button on a group’s folder icon. The window then changes to show what that package contains. The top line of the package display shows which group you’re currently looking in, as well as the groups leading to the current one. To return to the previous group you were looking at, double click on the “Back” folder, which is always in the upper left hand corner of the folder area (though it often gets scrolled away).
+
+If you’d like to examine a subgroup in a new window, double click the middle mouse button on its folder. If your mouse has only two buttons, click both. This will create a new window with that group in it.
+
+# 9.2.1  Context Sensitive Menus
+
+Pressing the right mouse button on any icon in the package window brings up a small, *context sensitive* menu. The exact items it contains depends on exactly where you press it. They all contain options to select or deselect the item, and many let you install, uninstall, query, upgrade, or verify the item you clicked on. There’s more information on how to do these things later.
+
+To choose an item from a context sensitive menu, press and hold the right mouse button on an icon. While still holding the right button down, move the mouse pointer over the item you’d like to select (which will then become highlighted). Release the right mouse button to select that item and make the menu disappear.
+
+# 9.2.2  Selecting Packages
+
+To select a single package, click the left mouse button on it. You’ll notice a thin border appears around the package’s icon (as shown in figure 9.2) which shows that it’s currently selected. To unselect it, click the left mouse button

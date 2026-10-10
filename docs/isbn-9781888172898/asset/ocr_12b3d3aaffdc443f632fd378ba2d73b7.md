@@ -1,0 +1,22 @@
+# Screen Layout
+
+The Screen Layout window lets you specify how the multiple screens are arranged in your workspace so mouse movement from screen to screen will be appropriate.
+
++   1.  Press **Alt-S** to display the *Screen* pull-down menu.
++   2.  Type **L** for *Layout*.
++   3.  The *Screen Layout* window appears.
++   4.  Press **←** and **→** to view the various layout combinations for your number of screens.
++   5.  When the layout you want is displayed, press **Enter** to select it.
+
+# Font Path
+
+If needed, you can edit your font path from within the Metro-X Configuration Utility. This will be necessary if you are using a font server instead of or in addition to your existing fonts.
+
++   1.  Press **Alt-C** to display the *Configuration* pull-down menu, then press **Enter**.
++   2.  The *Font Path* window appears.
++   3.  Edit the file as necessary for your system.  Metro-X looks for fonts in the order in which the directories are listed in this file. If you are using a font server, enter this as the first line:
++       ```
++       tcp/<fontserver machine>:7000
++       ```
++       If your port number is not the default 7000, change it to the appropriate port number for your system.
++   4.  Press **Tab** to move to and amongst the bottom buttons, then press **Enter** to select one. If the information is correct, select the *Ok* button. If you want to disregard the changes you've made, select the *Cancel* button. If you've edited your font path and want to go back to the original settings, select the *Load Defaults* button.

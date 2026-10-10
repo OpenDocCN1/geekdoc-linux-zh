@@ -1,0 +1,28 @@
+information about the problem and our solution in the Red Hat Linux Errata, which we make available in several ways:
+
++   * via the World Wide Web: http://www.redhat.com/errata
++   * via electronic mail: errata@redhat.com
+
+Please note that the solution to a problem listed in the Errata may require that you use a different boot or install disk image than the ones which are mentioned below or which come with your Red Hat Linux CD-ROM.
+
+# ## 2.2 Before You Begin
+
+Before you begin installing Red Hat Linux, you should collect some information about your system:
+
++   * Be familiar with the hardware you have installed in your machine, including:
++   
++       – **hard drive(s):** number and size; if you have more than one, it’s helpful to know which one is first, second, etc.
++   
++       – **memory:** amount of RAM.
++   
++       – **CD-ROM:** its interface type (IDE, SCSI, or other interface), and, for non-IDE, non-SCSI CD-ROMs, the make and model number.
++   
++       – **SCSI adapter:** make and model number.
++   
++       – **network card:** make and model number.
++   
++       – **mouse:** type (serial, PS/2, or bus mouse), protocol (Logitech, Microsoft, MouseMan, etc.), and number of buttons; also, for serial mice, the com port it is connected to.
+
+Also, if you will be installing the X Window System, you should be familiar with the following:
+
++   – **your video card:** make and model number or video chipset, amount of video RAM.
