@@ -672,6 +672,7 @@
 +   [Linux 上的 Java 编程](docs/java-programming-on-linux/README.md)
 +   [JavaScript 正则表达式：示例指南](docs/javascript-regexp-an-example-based-guide/README.md)
 +   [Jono Bacon Php 和 Mysql 实用指南：构建八个动态 Web 应用](docs/jono-bacon-practical-php-and-mysql-building-eight-dynamic-we/README.md)
++   [够用的 UNIX](docs/just-enough-unix-paul-k-andersen/README.md)
 +   [纯属趣味：一位意外革命家的故事](docs/just-for-fun-the-story-of-an-accidental-revolutionary/README.md)
 +   [Kali Linux：2本合1：初初者的 Kali Linux 入门指南与 Kali Linux 黑客攻击，包含大量无线网络与渗透测试的实用示例](docs/kali-linux-2-books-in-1-the-complete-beginners-guide-about-k/README.md)
 +   [Kali Linux：3合1：初学者指南+简单有效的策略+学习 Kali Linux 的高级方法与策略](docs/kali-linux-3-in-1-beginners-guide-simple-and-effective-strat/README.md)
