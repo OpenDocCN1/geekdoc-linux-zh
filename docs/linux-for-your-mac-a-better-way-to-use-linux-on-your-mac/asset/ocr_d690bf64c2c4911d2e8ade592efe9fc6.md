@@ -1,0 +1,1 @@
+http://www.courtesan.com/sudo/. Home page for the `sudo` command, which allows system administrators to grant specified users permission to perform specific tasks, such as mounting CD-ROMs, without becoming the root operator.

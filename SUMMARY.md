@@ -978,6 +978,7 @@
 +   [Windows 管理员 Linux 入门指南 (Mark Minasi Windows 管理员库)](docs/linux-for-windows-administrators-mark-minasi-windows-adminis/README.md)
 +   [Windows 用户的 Linux](docs/linux-for-windows-users-bp/README.md)
 +   [笔记本电脑 Linux 指南](docs/linux-for-your-laptop-wcd/README.md)
++   [Mac 用户的 Linux：在 Mac 上更好地使用 Linux 的方法](docs/linux-for-your-mac-a-better-way-to-use-linux-on-your-mac/README.md)
 +   [Linux 取证：Python 和 Shell 脚本](docs/linux-forensics-with-python-and-shell-scripting/README.md)
 +   [Linux 格式 - 2020 年度刊](docs/linux-format---2020-annual/README.md)
 +   [Linux 格式 - 2011年8月.pdf](docs/linux-format---august-2011pdf/README.md)

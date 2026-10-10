@@ -1,0 +1,144 @@
+
+
+## 附录：PPC Linux 资源
+
+本附录提供了有关 X 的额外信息，以及指向有关 Linux、各种发行版和其他硬件的更多信息的链接。在查找有关您的 PPC 计算机上 Linux 的信息时，请从您的发行版网站开始搜索。如果您未能从供应商那里找到信息，请继续查找描述您的硬件上 Linux 的网站。最后，您还可以转向各种 Usenet 新闻组以寻求信息。
+
+### X11 命令参考
+
+本附录提供了随 XFree86 和大多数 Linux PPC 发行版提供的 X11 客户端的简短列表。本书专注于 Linux PowerPC 移植和 XFree86，但你会发现许多这些客户端也在使用基于 Intel 的 Linux 平台上。
+
+#### 表 A.1 X 客户端及其描述
+
+| 客户端 | 描述 |
+| :--- | :--- |
+| animate | 显示图像序列 |
+| bitmap | 简单的 X 位图编辑器 |
+| bmtoa | 将 X 位图转换为 ASCII |
+| bounce | 一个 X 屏幕保护程序 |
+| display | ImageMagick 图像查看器和编辑器 |
+| editres | X11 资源编辑器 |
+| fsinfo | X 字体服务器实用工具 |
+| flsfonts | X 字体列表工具 |
+| fly8 | 一个 X11 飞行模拟器 |
+| gears | X 屏幕保护程序 |
+| gedit | 简单的 GNOME 文本编辑器 |
+| gphoto | 数码相机下载器和图像编辑器 |
+| gv | PostScript 查看器和打印机 |
+| ico | X 图形演示 |
+| import | 捕获本地或远程 X 显示 |
+| kscd | KDE CD 播放器 |
+| kmahjongg | KDE 麻将游戏 |
+| lzmooon | Doom 的 X 移植版 |
+| maze | 创建并解决随机迷宫的 X11 演示 |
+| mcam | Zora 网络摄像头的 X11 前端 |
+| mcookie | 为 xvauth 生成魔法 cookie |
+| mkfontdir | 构建目录中 X 字体文件的索引 |
+| o'clock | 一个圆形的 X 时钟 |
+| pbmtoxbm | 将便携式位图转换为 X11 位图 |
+| ppmtoxyzm | 将便携式像素图转换为 X11“拼图”文件 |
+| ppmtoxpm | 将便携式像素图转换为 X11 像素图 |
+| relock | 带有预约和闹钟的 X11 时钟 |
+| showfont | 一个 X11 字体转储实用工具 |
+| showrgb | 显示 X 颜色表 (rgb.txt) |
+| startx | 启动带有可选参数的 X 会话 |
+| viewres | X 的图形类浏览器 |
+| x11perf | 一个 X11 服务器性能测试客户端 |
+| x11perfcomp | 一个 X11 服务器性能比较程序 |
+| xaumix | X 的 aumix 音频混合器封装 |
+| xauth | X 权限文件实用工具 |
+| xbiff | X 的邮箱标记客户端 |
+| xbmtoxpm | 将 X11 或 X10 位图转换为便携式位图 |
+| xbong | 经典的 X 打砖块游戏 |
+| xcalc | X 的科学计算器 |
+| xcam | SANE 的图形相机前端 |
+| xclipboard | 一个 X 剪贴板客户端 |
+| xclock | X 的模拟或数字时钟 |
+| xcmap | 在 X11 显示上显示默认颜色映射 |
+| xconsole | 一个带有 X 的控制台消息系统监视器 |
+| xcutsel | 在剪切缓冲区和选择之间互换 |
+| xdvi | 显示 dvi 输出 |
+| xdm | X 显示管理器 |
+| xdpyinfo | X 的显示信息实用工具 |
+| xfd | 显示 X 字体中的所有字符 |
+| xfindproxy | 定位代理服务的实用工具 |
+| xflame | 绘制动画火焰 |
+| xfontsel | 点选选择 X11 字体名称 |
+| xfs | X 字体服务器 |
+| xfwp | X 防火墙代理 |
+| xgalaga | X 街机游戏 |
+| xgamma | 修改 XFree86 监视器的伽马校正 |
+| xgo | 一个 X 绘图演示 |
+| xhost | X 的服务器访问控制程序 |
+| xieperf | XIE 服务器扩展测试和演示程序 |
+| xinit | X 窗口系统初始化程序 |
+| xjack | 只工作不玩乐屏幕保护程序 |
+| xjewel | 经典的落块 X 游戏 |
+| xkbcomp | XKB 键盘描述编译器 |
+| xkbevd | 一个 XKB 事件守护进程 |
+| xkbprint | 打印 XKB 键盘描述 |
+| xkill | 通过其 X 资源杀死一个客户端 |
+| xkobo | 一个面向视频的 X 游戏 |
+| xli | 将图像加载到 X11 窗口或根窗口上 |
+| xlintcity | X 的 Lintcity 模拟器 |
+| xload | X 的系统平均负载显示客户端 |
+| xlock | 对本地 X 显示进行密码锁定 |
+| xlogo | 显示 X 窗口系统标志 |
+| xlsclients | 列出在显示上运行的客户端应用程序 |
+| xlsfonts | X 的服务器字体列表显示器 |
+| xmahjongg | 经典的麻将 X 游戏 |
+| xmag | 放大屏幕部分的客户端 |
+| xman | 手册页显示程序 |
+| xmatrix | 模拟计算机显示的 X 屏幕保护程序 |
+| xmessage | 显示消息客户端 |
+| xmh | 带有 X 接口到 MH 的邮件传输实用工具 |
+| xmixer | 一个简单的 X 音频混合器客户端 |
+| xmkml | 从 Imakefile 生成 Makefile |
+| xmodmap | 修改 X 中的键映射和指针按钮映射 |
+| xcon | 在远程机器上启动一个 X 程序 |
+| xosview | 一个图形系统负载客户端 |
+| xpat2 | X11 的单人纸牌游戏 |
+| xplaycd | 一个简单的 X 音频 CD 播放器 |
+| xptoppgm | 将 X11 像素图转换为便携式像素图 |
+| xprop | X 的属性显示 |
+| xrd | X 服务器资源数据库实用工具 |
+| xrefresh | 刷新 X 屏幕全部或部分的客户端 |
+| xroger | X 标志屏幕保护程序 |
+| xsane | SANE 的扫描仪前端 |
+| xscanimage | X11 图像扫描客户端 |
+| xset | X 的用户偏好实用工具 |
+| xsetmode | 设置 X 输入设备的模式 |
+| xsetpointer | 将 X 输入设备设置为主指针 |
+| xsetroot | X 的根窗口参数设置实用工具 |
+| xsm | X 会话管理器 |
+| xstdcmap | X 标准颜色映射实用工具 |
+| xsuim | 一个 X 屏幕保护程序 |
+| xteevee | 模拟各种电视问题的屏幕保护程序 |
+| xterm | X 的终端仿真器 |
+| xv | 一个 X11 图像查看器、转换器和编辑器 |
+| xvidtune | XFree86 的视频模式调谐器 |
+| xvminitoppm | 将 xv“缩略图”图像转换为 PPM |
+| xvpictoppgm | 将 xv“缩略图”文件转换为标准 PPM 格式 |
+| xwd | 捕获 X11 显示 |
+| xwdtoppgm | 将 X11 或 X10 窗口转储文件转换为便携式任意图 |
+| xwininfo | X 的窗口信息实用工具 |
+| xwd | 显示 xwd 捕获 |
+
+### PPC Linux 网站
+
+以下是一个包含有关 PowerPC Linux 信息的必要网站短列表。有数百个专门介绍 Linux 的网站，但如果遇到麻烦，这些页面提供了更多信息的良好起点。
+
+- **http://www.yellowdoglinux.com**. 基于 Red Hat 的 Terra Soft Yellow Dog Linux 的主页
+- **http://www.linuxppc.org**. 必须访问的站点，获取 PPC Linux 的最新进展和软件
+- **http://www.suse.com**. SuSE, Inc. 的主页，您可以在此找到其针对 PowerMac 模型和其他支持 PowerPC 计算机的最新 Linux 发行版的链接
+- **http://www.debian.org**. 访问此站点以了解更多关于 Debian Linux 的哲学。您还应该探索以找到适用于您的 PowerPC 计算机的 Linux 版本
+- **http://www.linuxppc.com**. 现为非营利的 Linux PPC 2000 Q4 发行版的网站
+- **http://www.linux-laptop.net/apple.html**. 如果您拥有 PowerBook 并对使用 Linux 感兴趣，请在此站点查看有关当前和旧款 Apple 笔记本电脑的链接。您会发现愿意分享经验的拥有者
+- **http://penguinppc.org/~benh/**. Ben Herrenschmidt 关于最新 BootX 和 Yaboot 工具的页面
+- **http://www.wrietman.com/**. 关于在 iBook 上使用 Linux 的一切
+- **http://www.rapierbit.org/linux/**. 关于在 PowerPC 上使用 Linux 的信息
+- **http://www.fsmlabs.com/linuxppcbk.html**. 您可以在这里找到一些最新的 PPC Linux 内核源代码
+- **http://penguinpc.org/usr/hardware/edge.shtml**. 一个获取更多有关 PPC Linux 信息的好地方，包含指向最新软件和信息的链接
+- **http://students.washington.edu/mpaleczew/**. 一个检查支持声音的 iBook Linux 内核的地方
+- **http://www.rahul.net/kenton/xsites.framed.html**. 互联网上了解更多关于 X 的最佳站点
+

@@ -1,0 +1,12 @@
+This chapter introduces the basics of system administration for Linux using software and graphical administrative tools included with Linux distributions for the PowerPC. Why learn system administration? Because you have to! Whether you run Linux and X11 on your Mac as a workstation to take advantage of the benefits of the X desktop, or simply use your Mac as a server platform to host unique services—every system requires system administration. If you are the only one using your computer, you are the system administrator!
+
+Does this mean that you have to put a lot of effort into the job? Of course not! However, you will have to learn and understand a few of the basic concepts, especially if you want to keep your system safe, secure, and stable. Macintosh computers running Linux, especially later models outfitted with modest RAM and larger hard drives, are quite capable of hosting hundreds of users. When functioning as a system administrator, it does not matter whether you have to handle one, 10, 100, or 1,000 users. The object is to ensure maximum uptime with minimum fuss, changes, or other inconveniences.
+
+Experienced Mac users may initially have trouble understanding the capabilities that Linux provides for Apple hardware. As the owner and user of a Mac running Linux, you are in the driver’s seat when it comes to managing every running process or user logged into your system. The sooner you learn a modicum of skills, the faster you will be able to troubleshoot and fix problems.
+
+Being a system administrator can mean being responsible for different tasks within different jobs. When using Linux on a Mac, however, you will discover that there are common skills shared by every owner. Typical system administration duties include:
+
++   - **Adding or replacing system hardware.** This can be as simple as adding a USB device or changing a printer, or as serious as surgery in hard drive replacement.
++   - **Configuring and controlling system services.** Do you need a running Web server? What do you do when users complain that they cannot telnet or FTP into your box? How do you control what services are enabled or disabled when using your Linux distribution?
++   - **Ensuring data integrity.** Devising regular backups, a backup schedule, or even performing a backup can save hours of work and loads of grief over lost data.
++   - **Ensuring system security.** Do you want anyone to be able to access your system? What steps can you take to make your system safe from intruders?—Especially if your computer connects to the Internet.

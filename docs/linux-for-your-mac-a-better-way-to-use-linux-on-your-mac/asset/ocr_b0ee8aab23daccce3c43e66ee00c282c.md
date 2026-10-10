@@ -1,0 +1,13 @@
+This chapter introduces you to the concepts of filesystem management. There is a difference between a *file system* (layout of directories) and a *filesystem* (lower-level layout or structure of file handling on a storage medium). Filesystem management involves keeping your storage mediums in tip-top shape. It also involves the use of various utilities to repair, mount, read, wipe, erase, format, or uninstall a medium. Managing your Linux filesystem involves archiving and backing up important data, running scheduled maintenance tasks to clean up, or remove redundant, useless files. Managing your system’s resources also includes managing your users’ use of storage and the implementation of disk quotas.
+
+These tasks are all part of a system administrator’s job. If you are the only one using your system, guess what, you are the system administrator!
+
+Linux is a robust, stable operating system, so you should not have to do a lot of work. Some Linux distributions, such as SuSE PPC Linux, are set up to do most of the work for you. However, do not take the job too lightly. You should still understand how Linux works in case you need to troubleshoot or fix your system.
+
+One of the biggest mistakes that can lead to trouble is not shutting down properly. Always use the `shutdown` command to restart or power-off your computer. Other problems can arise if you remove a storage medium without first unmounting it properly. Do not just yank a Zip disk, removable hard drive, PCMCIA flash card, or floppy without unmounting its filesystem.
+
+Linux recognizes and can use a variety of filesystems, which are listed in Table 16.1. The main filesystem types you will use during your Linux sessions will be `ext2`, `nfs`, `iso9660`, `hfs`, `ufs`, and `smbfs`, and possibly `vfat` (and `mdos`. This is because you will normally be using the Linux `ext2` filesystem (the swap partition is automatically mounted during your sessions, and is not visible on your filesystem). If you mount a remote directory, you can easily do so using NFS services. If you use a CD-ROM, you will most likely mount one using an `iso9660` format. To mount a Mac OS partition, you will need to use `hfs`, which is the standard, not extended Mac OS filesystem (Mac OS X and Linux support `ufs`, but Linux does not yet support HFS+). If you mount a DVD, use `ufs`. If you mount a remote Windows partition, use Samba, which uses `smbfs`. Mounting and reading a DOS floppy involves the use of `vfat` or `mdos` filesystems (most likely `vfat`.
+
+# The Filesystem Table
+
+This section introduces the concept of the Linux filesystem table, which is initially configured when you install Linux.

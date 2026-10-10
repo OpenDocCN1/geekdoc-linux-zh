@@ -1,0 +1,164 @@
+
+
+## 配置远程登录
+
+如果你无法 ping 通远程主机，请确保 **DNS** 工作正常（检查 `/etc/resolv.conf` 文件中是否列出了地址），或者主机的 *名称* 已在系统的 `/etc/hosts` 文件中定义：
+
+- 127.0.0.1 localhost localhost.localdomain
+- 192.168.2.32 green.home.org green
+- 192.168.2.33 stinkpad.home.org stinky
+- 192.168.2.34 presario.home.org presario
+- 192.168.2.35 thinkpad.home.org thinkpad
+- ...
+
+有许多其他工具可用于测试你的网络以及与其它网络的连接。请阅读 *traceroute* 和 *dig* 命令的手册页。
+
+> 还有一个实用的命令，可用于测试两个远程主机（而不仅仅是你的机器）之间的连接性，即 *binger* 命令。与 *ping* 类似，*binger* 会报告数据包在两台计算机之间往返的最佳、平均和最慢时间。
+
+![](img/1ea833f5a3e3c1547e3dd2891f52804a_402_0.png)
+
+设置你的 Linux 系统以接受远程登录非常容易。Linux 用户可以访问几种不同类型的远程登录。你可以允许其他用户通过 *telnet*、*ssh* 或 *ftp* 命令进入你的计算机。你也可以允许人们通过外接或内置调制解调器拨入，登录，然后使用 shell。你还可以设置一个 *拨号点对点协议（dialup Point-to-Point Protocol）* 服务器，以分配动态或静态 IP 地址。
+
+*Telnet* 和 *FTP* 访问通常由系统 `/etc/inetd.conf` 或 `/etc/xinetd.d` 目录中的设置决定。例如，*SuSE* 和 *LinuxPPC 2000* 目前都使用 *inetd*（Internet 超级守护进程）及其 `/etc/inetd.conf` 配置文件。在这个文本文件中，你会看到：
+
+```
+...
+#
+ftp stream tcp nowait root /usr/sbin/tcpd in.proftpd
+telnet stream tcp nowait root /usr/sbin/tcpd in.telnetd
+#
+```
+
+这些设置允许在你的系统中使用 FTP 和 telnet 服务。其他配置文件，如 `services` 或 `ttypesace`，可用于微调来自特定远程主机的用户控制和访问权限。
+
+## 编辑 `/etc/inittab`
+
+要允许拨入访问，请编辑 `/etc/inittab` 文件，然后使用行监控和登录工具，如 `agetty`、`ugetty` 或 `ngetty`，来确定用户的访问权限。例如，如果你使用的是 SuSE Linux，并且可能在 `/dev/ttyS0` 上有一个内置调制解调器，你可以这样使用 `agetty` 命令：
+
+```
+2:123:respawn:/sbin/agetty -w -I 'ATE0Q1&D2&C1S0=1,015' 115200 ttyS0 vt100
+```
+
+使用此条目替换 runlevel 2 的默认条目：
+
+```
+2:123:respawn:/sbin/mingetty tty2
+```
+
+`agetty` 命令将监控你的调制解调器，如果用户拨入，它将自动接电话并提供登录提示。用户必须在你的系统上拥有一个账户才能登录。
+
+## 处理 Shell 账户
+
+允许远程 shell 账户可能存在安全隐患，但也可以为某些用户提供更好的在线工具和实用程序访问权限。例如，如果你的服务器拥有互联网访问权限，这将允许远程用户利用你的服务。用户可以使用基于文本的互联网实用程序，如 `pine`、`elm`、`trn`、`slrn` 或 `lynx`，来发送电子邮件、阅读新闻或浏览网络。
+
+你还可以限制系统上的活动。例如，你的服务器没有互联网访问权限，但连接到局域网（LAN）。这样，远程用户就被限制在业务活动范围内，员工创建的所有记录、活动和文件都保留在企业内部。
+
+你可以进一步限制活动，或者通过为用户分配单个程序而不是 shell 来允许互联网访问。例如，你的服务器拥有互联网访问权限，但在你的远程用户的 `/etc/passwd` 条目中，用基于文本的电子邮件客户端（如 `pine`）的名称替换 shell 条目：
+
+```
+bball::x:501:billy bally:/home/bball:/usr/bin/pine
+```
+
+当用户登录时，`pine` 程序将在没有 shell 访问权限的情况下呈现，并在退出程序时注销。
+
+> 确保 pine 未使用 SUSPEND_ENABLE 编译，否则远程用户只需按 Ctrl+z 即可访问 shell！你还需要确保 pine 列在 /etc/shells 中。
+
+## 设置 PPP 账户
+
+如果你希望仅提供具有静态 IP 地址的 PPP 账户，请创建远程用户账户，但在 `/etc/passwd` 文件中不提供 shell 条目，而是使用 shell 脚本的名称，如 `start_ppp`。
+
+例如：
+
+```
+bball:x:501:501:billy ball:/home/bball:/usr/local/bin/start_ppp
+```
+
+`start_ppp` shell 脚本如下所示：
+
+```
+exec /usr/sbin/pppd detach
+```
+
+你还需要在 `/etc/ppp` 目录中有一个配套条目，以提供调制解调器端口的设置。创建一个名为 `options.ttyS0` 的文件（以匹配你的调制解调器端口；例如，如果你的调制解调器在 `/dev/ttyS1` 上，那么文件名应为 `options.ttyS1`），其中包含服务器的 IP 地址和你希望分配给远程计算机的 IP 地址，例如：
+
+```
+192.168.2.37:192.168.2.99
+```
+
+你还需要一个包含以下内容的 `/etc/ppp/options` 文件：
+
+- asympap 0
+- netmask 255.255.255.0
+- proxyarp
+- lock
+- crtscts
+- modem
+
+这些设置对于支持通过调制解调器进行网络通信至关重要。现在你可以允许远程用户拨入并连接了！
+
+## 设置 Web 服务
+
+本节包含一些关于你需要编辑的文件以在系统中提供 FTP 和 Web 服务的小技巧和信息。你需要确保系统拥有活动的互联网连接，并且网络服务已启动并正在运行。
+
+### 配置 FTP
+
+大多数 Linux 发行版默认启用 FTP 服务。但是，如果你的系统不允许你从命令行通过 FTP 登录，请首先检查你的 `/etc/inetd.conf` 设置（如前文所示）。接下来，使用其脚本（作为 root）确保 inetd 守护进程已启动，如下所示：
+
+```
+$ /etc/rc.d/init.d/inetd status
+INET up
+```
+
+现在你应该能够使用 ftp 命令进入系统。例如，如果你正在处理一个名为 **cubie** 的主机，你应该能够像这样 FTP 到 cubie：
+
+```
+$ ftp cubie
+Trying 192.168.2.66...
+Connected to cubie.home.org.
+220 cubie.home.org FTP server (Version 6.4/OpenBSD/Linux-ftpd-0.17) ready.
+Name (cubie:ball1):
+331 Password:
+Password:
+230- Have a lot of fun...
+230 User ball1 logged in.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> exit
+221 Goodbye.
+```
+
+请注意，如果你使用 `ftp` 并用你的用户名和密码登录，你将进入主目录。外部用户将使用用户名 `anonymous` 登录，然后使用其电子邮件地址作为密码：
+
+```
+$ ftp titanium
+Connected to titanium.home.org.
+220 ProFTPD 1.2.0pre9 Server (ProFTPD) [titanium.home.org]
+Name (titanium:ball): anonymous
+331 Anonymous login ok, send your complete e-mail address as password.
+Password:
+230 Anonymous access granted, restrictions apply.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp>
+```
+
+在 SuSE Linux 下，默认 FTP 目录位于 `/usr/local/ftp` 下。当你使用 LinuxPPC 2000 时，默认目录位于 `/home/ftp` 下。这些设置取决于你的系统如何配置 FTP。请查看你系统服务器的手册页，并阅读关于使用 `/etc/ftpaccess`、`/etc/ftpusers`、`/etc/ftpgroups`、`/etc/ftpconversions` 和 `/etc/ftphosts` 的资料。你可以使用这些文件来更改默认公共访问目录、授予访问权限、限制用户、更改欢迎消息或添加自动文件转换实用程序。
+
+> 如果你仍然遇到问题，请确保在 `/etc/inetd.conf` 文件中指定的 FTP 服务器版本已安装！Linux 上有几种可用的 FTP 发行版，如 *wu-ftpd*、*ProFTPD* 和 *ftpd*。每个都可能使用不同的配置文件。如有疑问，请阅读随软件包提供的文档。
+
+### 配置 Apache
+
+Apache 是 Linux 的 *事实* 标准 Web 服务器，尽管有一些商业替代软件包，如 *Zeus*。如前所述，在 SuSE Linux 下启动、停止和重启 Apache 的系统脚本名为 `/etc/rc.d/init.d/apache`，而在 LinuxPPC 2000（以及其他基于 Red Hat 的系统）中，其名称为 `/etc/rc.d/init.d/htpd`。
+
+在 SuSE Linux 中，Apache 通过编辑名为 `/etc/httpd/httpd.conf` 的文件进行配置。在基于 Red Hat 的系统中，`httpd.conf` 文件可能位于 `/etc/httpd/conf` 目录下。其中一个最重要的设置是 `DocumentRoot`，它指定了你系统初始 Web 页面的位置。例如：
+
+```
+#
+# DocumentRoot: The directory out of which you will serve your
+# documents. By default, all requests are taken from this directory, but
+# symbolic links, and aliases may be used to point to other locations.
+#
+DocumentRoot  "/home/httpd/html"
+```
+
+本章（或本书）没有足够的空间来描述 Apache 的所有配置文件、服务器配置方式，或如何添加功能、模块和其他脚本。但是，你应该注意你系统的初始设置和你计算机主页的默认位置（最有可能
