@@ -341,6 +341,7 @@
 +   [Red Hat Enterprise Linux 管理与运维技能开发及 RHCSA 认证备考指南](docs/develop-the-skill-to-manage-and-administer-red-hat-enterpris/README.md)
 +   [跨平台着色器开发与调试](docs/developing-and-debugging-cross-platform-shaders/README.md)
 +   [Linux 应用开发：使用 Gtk+ 和 Gdk](docs/developing-linux-applications-with-gtk-and-gdk/README.md)
++   [.net Core 3 和 Visual Studio 2019 多平台桌面应用开发：macOS、Linux 和 Windows C# GUI 应用构建指南](docs/developing-multi-platform-desktop-applications-with-net-core/README.md)
 +   [实用无线应用开发指南](docs/developing-practical-wireless-applications/README.md)
 +   [DevOps 故障排除：Linux 服务器最佳实践](docs/devops-troubleshooting-linux-server-best-practices/README.md)
 +   [Kali Linux 数字取证：通过使用 Kali Linux 进行网络和内存取证提升你的调查技能](docs/digital-forensics-with-kali-linux-enhance-your-investigation/README.md)

@@ -1,0 +1,9 @@
+using this tool will become widely distributed and will benefit from a professional guarantee and support.
+
+QT nowadays provide a complete development environment for multiplatform application design, who is based on C and C++. It provides solution for desktop and mobile platforms development. QT provide a complete abstraction layer of the GUI (among others things).
+
+QT allow to develop GUI software for almost every platform, from the powerful workstation with a large display device to the embedded board computer passing by mobile and tablets (see the QT web site for more details). The versatility of this framework is astonishing and to acquire competences on this technology cannot be a lost investment in the long run (especially since the project have the support of a dedicated company).
+
+QT framework have a Dual licenses terms, one commercial and another Opensource (this is the one we gone use in our samples.). Notice, that the QT framework is developed by the company QT and require specific license according to the type of usage you have planned to do with it. Please consult the web site of the company for more information about the licensing conditions.
+
+From the technical standpoint QT provide a graphical framework allowing to the developer the implementation of high-quality graphical software, with the possibility to use effects and animations (natively included in the framework). QT is actually used in a number of main stream product for their graphical interface design (automotive, dedicated hardware, Laboratory hardware ...). Especially if you plane to use a GUI coming from a designer using Photoshop, you will be able, with QT, to use directly the graphic resources produced.

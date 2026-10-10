@@ -1,0 +1,5 @@
+Another important factor, for the choice of a solution type, is also the current skills available for making the application (the human resources). It is, for sure, a determinant criterion who will do the choice by itself in many development teams.
+
+So, we have seen there are many parameters for choosing a tool rather than another one. You should consider also the life expectancy you intend for your software. If your application does not intend to be used on a long run, or being developed for technologies demos purpose you could consider more fancy and trending tools (but often unstable). If you plan to develop an application with several release along many years, you will have to keep in mind that the tools you choose will be always developed and supported (or at least maintainable) for the time frame you target.
+
+We hope that this book is a great source of inspiration for your .NET Core 3 development project. As it is an always evolving technology be assured we will release updated edition about the exciting subject of the .NET Core GUI desktop development.
