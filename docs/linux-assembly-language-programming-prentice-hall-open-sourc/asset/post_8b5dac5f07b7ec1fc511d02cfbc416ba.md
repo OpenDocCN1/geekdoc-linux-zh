@@ -1,0 +1,106 @@
+
+I owe thanks to Bruce Grant, Itzick Vatnick, and Kate L'Armand for working with me on the scalex device driver.
+
+I owe thanks to the many students who have found errors in earlier drafts of this book. I owe special thanks to Joe Bissell, Scott Hawkins, Jason Kroll, Nancy Yoshimura, and Joanne Yurechak for their careful, detailed, and thoughtful criticism. Many errors undoubtedly remain. To those readers who notify me of them at neveln@cs.widener.edu I shall be grateful.
+
+# Linux-Driven Serial Port Input Device
+
+![](img/a3d6758e6e21b80b35e1b981ecbc1234_5_0.png)
+
+# Chapter 1. INTRODUCTION
+
+In this chapter some necessary tools and background ideas are reviewed.
+
+## 1.1 The Fetch-Execute Cycle
+
+One of the earliest electronic computers was the ENIAC. When it was first built it could not store programs. Each new computation required moving plugs and jumper cables. Now, however, nearly all computers store programs. For these computers, doing a computation means running a program. The place where the program is stored is called *memory*. The part of the machine which does the computation is called the *processor*. Computer programs generally take the form of a list of instructions. Computation is performed by the processor using the fetch-execute cycle. The fetch-execute cycle consists of a repeated process that includes these steps:
+
+- **Step 1.** The processor fetches an instruction from memory.
+- **Step 2.** The processor executes the instruction.
+- **Step 3.** The processor cycles back to step 1.
+
+Computers based on the fetch-execute cycle are sometimes called Von Neumann computers. Von Neumann was a well-known mathematician who was also an early computer theorist.
+
+Probably the most important examples of computers which are not based on the fetch-execute cycle are DNA computers and quantum computers. Of course it may be that these computers will reach a point in their development when they are ready to leave university laboratories and that by that time, they too will run stored programs.
+
+![](img/a3d6758e6e21b80b35e1b981ecbc1234_6_0.png)
+
+## 1.2 The Linux Operating System
+
+Most computers do not simply run one program at a time. They run a program called an operating system. It interacts with the user and manages hardware devices such as the disk drives and printers, and runs other programs. The earliest operating systems were written by computer vendors. Each computer had its own operating system. The first vendor-independent operating system was the Unix operating system. It was developed by a handful of researchers at Bell Labs.
+
+AT&T, the principal owner of Bell Labs, soon made Unix available for a nominal fee to academic institutions, which in turn developed Unix further. This generous behavior on the part of AT&T may have been influenced by a consent decree entered in 1956, which restricted commercial activity on the part of AT&T beyond “furnishing common carrier communications services.” This decree was the result of a complaint in 1949 by the Justice Department against Western Electric and AT&T, claiming they were trying to leverage their telephone monopoly into other sectors.
+
+The version of Unix developed at the University of California at Berkeley became very widely used. It was designed to be portable, i.e., easy to transfer from one type of computer to another. It is known as Berkeley Unix or BSD Unix. (Berkeley Software Division).
+
+Linux is a non-proprietary variant of Unix, which was created by Linus Torvalds on a 386-based computer and subsequently developed by an online community of users. Although several non-PC versions of Linux exist, most existing installations of Linux are on Intel-compatible hardware.
+
+Many users of Linux have Linux installed along with another operating system. Having separate disk partitions for Linux and Windows/DOS is common.
+
+## 1.3 The Gnu C Compiler
+
+The portability of the Unix operating system was partly a consequence of the fact that by 1973 it had been rewritten in a high-level language, C. The C language was in turn designed to be a portable language.
+
+The first nonproprietary version of C was developed by Richard Stallman of the Free Software Foundation. Its name, gnu, which stands for “Gnu's Not Unix,” proclaims its escape from proprietary copyright restrictions. The gnu C compiler is widely used, not only because it's free, but because it has set a standard for reliability. The Linux operating system depends heavily on the gnu C compiler.
+
+A compiler is a program which translates a program such as a C language program into a machine code program that can be stored in a computer's memory and run. A program that can be stored in memory and run is called an executable file or sometimes just an executable.
+
+The gnu C compiler works in stages. See Figure 1-2. To compile a program such as `prog.c` to the gnu compiler, one can enter the command
+
+![](img/a3d6758e6e21b80b35e1b981ecbc1234_7_0.png)
+
+```
+linuxbox$ gcc prog.c
+```
+
+This command takes the translation through all the stages and produces an executable file called a.out. To stop at an earlier stage, one can add a switch to the gnu command line. For example, to produce an assembly code file, the “-S” switch (upper case) is used. Entering the command
+
+```
+linuxbox$ gcc -S prog.c
+```
+
+yields an assembly language file, `prog.s`. To finish the compilation, the `gcc` command may be used on the `.s` file
+
+```
+linuxbox$ gcc prog.s
+```
+
+## 1.4 The Edlinas Assembler
+
+The assembly language in the `.s` files produced by the gnu compiler is different from the widely used Intel assembly language for the x86 processors. Edlinas assembly language is essentially the Intel assembly language. Its object code files run under x86 Linux. Edlinas is an interactive environment consisting of an editor, an assembler, and a simulator.
+
+### 1.4.1 Editing
+
+Source code editing uses commands borrowed from EDLIN, a DOS editor. Among the commands are i for insert, d for delete, c for change, e for exit, q for quit, and h for help. Commands affect the current line, which is the line that has the asterisk, `*`. The asterisk is moved using the arrow keys. Entered lines are checked by the assembler for syntax errors.
+
+### 1.4.2 Assembling
+
+Code is assembled as it is entered or loaded. Assembly code appears in the default window on the right side of the screen. Assembled code can be saved at any time using the `o` command.
+
+### 1.4.3 Interpreting
+
+To step through lines of code, the space bar is used. The line about to be executed is displayed in yellow. It is the line pointed at by the *instruction pointer*. The enter key resets the instruction pointer to the current line. Instructions can therefore be executed in any order by moving the asterisk around.
+
+The escape key brings up a cursor at the command prompt below. Commands here are executed *immediately*. An empty command exits the command line.
+
+To observe the effects of code execution, various areas of the machine may be brought into view in the right panel of the screen. The different choices for the contents of the right panel can be cycled through using the tab key.
+
+The layout of the Edlinas screen, which is adapted from that of an 8080 simulator written by Dave Felter, is shown in Figure 1-3.
+
+**Figure 1-3. The Edlinas Screen**
+
+![](img/a3d6758e6e21b80b35e1b981ecbc1234_8_0.png)
+
+Edlinas is a DOS program, EDL.EXE.
+
+### 1.4.4 Dosemu
+
+The Edlinas assembler is a DOS program. If you have a machine which has a DOS partition, the simplest way of getting to DOS is by rebooting. But it is not necessarily the most convenient. Further, your machine may not have a DOS partition. The dosemu program makes it possible to run DOS programs from Linux. It is available from www.dosemu.org.
+
+To run Edlinas, the `$_graphics` variable in dosemu.conf should be set to (1).
+
+## 1.5 NASM
+
+The Netwide Assembler, or NASM, is an open source assembler that runs under Linux as well as DOS. Its use is increasing and has much to recommend it. In particular due to its widespread use, it has been exposed to a very thorough debugging. It also accepts a broader vocabulary of assembly language instructions than does Edlinas. Most of the programs in this book may be assembled using either assembler. Edlinas can be used to step through the example programs in the text, but for the bigger programs such as the interrupt handler in chapter 11, NASM is definitely the better choice. NASM is an industrial-strength assembler.
+
+To unpack the distribution, which comes with this book, use the command
