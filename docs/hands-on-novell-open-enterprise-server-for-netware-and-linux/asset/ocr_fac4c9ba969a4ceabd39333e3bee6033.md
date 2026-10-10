@@ -1,0 +1,7 @@
+# APPENDIX
+
+# # C
+WORKING WITH **VMWARE**
+**WORKSTATION 5**
+
+**V**Mware Workstation 5 gives you a way to run other operating systems on your Windows XP desktop by creating virtual computer environments. You can experiment with other OSs without having to create a system or disk partition and keep copies of older OSs for use in troubleshooting or testing software applications. In this book, you can use VMware Workstation to perform activities by installing and running Windows XP, NetWare 6.5, and SUSE Linux in virtual computers on your Windows XP desktop. With virtual machines in the classroom, you can have full administrative control of your virtual system without affecting the desktop environment. In addition, using VMware Workstation enables you to suspend your system so that you can continue work later or take a snapshot of your system if you need to return to a specific point because you made a mistake. Because virtual machines can communicate with each other, using VMware Workstation allows you to simulate the lab network on your desktop. In this appendix, you learn how to install VMware, create new virtual computers, configure virtual machine settings, and start and stop virtual machines.

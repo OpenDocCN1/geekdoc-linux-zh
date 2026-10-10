@@ -1,0 +1,7 @@
+![](bbox=[0.15, 0.05, 0.9, 0.65])
+
+Figure 1-6  Sample network hardware components
+
+Some servers are **nondedicated servers**, meaning they can function as a user’s computer in addition to providing access to shared areas of the disk system. The server in Figure 1-6 is a **dedicated server**, meaning it can’t be used as a client computer. This ensures better performance and eliminates the possibility of a user shutting down or restarting the server while others are still accessing it. To prevent unauthorized access to the server’s hardware and software, most network administrators keep servers in separate rooms that can be secured.
+
+The server shown in Figure 1-6 is a PC specifically designed to be a server (many vendors offer PCs designed for use as servers); it uses dual processors with 2 GB of memory and a high-capacity 400 GB RAID storage system. The redundant array of indepedent disks (RAID) storage system provides fault tolerance at the hardware level so that if one drive fails, the server can continue to provide information services using data from the other drives until the failed drive is replaced. On networks requiring file and print services, the server is specialized to provide high-speed disk access, whereas client computers require fast processors and high-resolution graphics.

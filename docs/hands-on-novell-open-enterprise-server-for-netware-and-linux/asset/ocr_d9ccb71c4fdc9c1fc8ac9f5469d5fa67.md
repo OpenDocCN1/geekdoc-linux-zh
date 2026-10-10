@@ -1,0 +1,11 @@
+# Novell Portal Services (NPS)
+
+**Novell Portal Services (NPS)** is a portal strategy for delivering the right information to the people who are authorized to use it. Using NPS, personalized Web pages can be delivered to users regardless of OS platform or network structure, and network administrators can protect and control access to network resources and manage the delivery of personalized data based on users’ company roles, locations, and group associations. NPS consists of a number of Java servlets that run on Apache Web Server, as shown in Figure 11-2. NPS enables users to access Web sites and applications they are authorized to use by building customized Web pages based on users’ needs and access rights.
+
+![](bbox=[0.08, 0.22, 0.97, 0.63])
+
+> Figure 11-2 Novell Portal Services components
+
+As mentioned, Tomcat Servlet Engine runs Java servlets. To be used in NPS, it must support the Sun Microsystems Java 2.2 Servlet specification so that a variety of Web server platforms can be used. NetWare 6.5 ships with the Java 2.2-compliant Tomcat Servlet Engine. When users access the NPS URL on the NetWare 6.5 server, Apache Web Server, which is hosting the portal service, sends users an authentication page consisting of an HTML form for logging in. Users then submit their user names and passwords to the Apache Web server, which passes the information to the NPS Java servlet running on the Tomcat Servlet Engine. The NPS Java servlet then accesses eDirectory to authenticate users and build a Web page of data that’s customized in its content and display. The data’s display is based on the user’s access rights and the layout format, which can be defined with Extensible Stylesheet Language (XSL).
+
+During installation, NetWare 6.5 automatically creates eDirectory objects to support NPS’s additional capabilities. NPS configuration is managed through the Portal Admin browser-based utility, so you can use Netscape Navigator 6.0 or later or Internet Explorer 5.0 or later to access this utility.

@@ -1,0 +1,168 @@
+# Index
+
+Virtual Office (Novell), 26, 41, 43, **428–431**. *See also* specific applications
+Virtual Teams
+created, 429–430
+described, **429**
+working with, 430–431
+viruses
+boot sector, 460
+described, **457**
+protection against, 460–463
+removal planning, 462–463
+signatures, 461
+VLDB (Volume Location Database),
+**356–358**
+VMware, 89, 90, 502–503
+creating a virtual machine with,
+598–601
+ESX server, 598
+GSX server, 598
+Player, 598, 609–611
+snapshots, 608–609
+stop options, 607
+SUSE Linux and, 588–589
+views, 607
+workstation, working with, 595–611
+volume(s). *See also* SYS volume
+attributes, 85–87
+creating, 97–99, 563
+described, **81–85**
+implementing, 97–98
+information, viewing, 88–91
+logical, 539–542
+moving, 360–363
+names, 83
+NSS, **83**, 567–568
+objects, **133–134**
+planning, 97–98
+splitting, 360–363
+traditional, 83, 87, 98–99
+working with, 567–568
+VOLUMES command, 51, 56
+VPNs (virtual private networks), **459**
+VR.READY.NLM, 57
+
+W
+wallpaper, 392–393
+WANs (wide area networks)
+described, **10**
+network printing and, 320, 334
+Novell eDirectory Services and,
+144, 290
+protocols and, 15, 16
+Web browsers)
+file systems and, 88–90, 105–108
+FTP and, 449
+
+iFolder and, 402, 425–426
+Internet Services and, 438, 440
+iPrint and, 574–575
+NetDrive and, 426, 425–426
+NetStorage and, 423–425, 571–573
+network printing and, 331
+Novell Novell eDirectory Services
+and, 139
+OneNet user services and, 402–404
+Remote Manager and, 62–65
+Web client, 106
+Web Manager (NetWare), 169–171,
+416–417
+described, **411**
+Virtual Office and, 429
+Web Search Server (NetWare), 441
+Web Services
+configuration, 441–456
+described, **438**
+installing, 441–456
+securing, 457–464
+WebApps directory, 92
+WebDAV
+file systems and, 105, 111
+NetDrive and, 427
+NetStorage and, 419, 421
+WebDAV Provider option, 421
+who command, 523
+Windows 9x (Microsoft)
+file systems, 531
+Linux and, 534
+NOS and, 21
+network printing and, 303, 304, 335
+Windows 2000 (Microsoft)
+Active Directory and, 23–24
+file systems and, 106, 109
+Java and, 67
+network printing and, 303
+NOS and, 21
+ZENWorks and, 390
+Windows 2000 Server (Microsoft), **4**, 439
+Windows Desktop Preferences dialog
+box, 391–392
+Windows Desktop Preferences
+option, 391
+Windows Explorer, 350, 351, 423–424
+Windows NT (Microsoft)
+Active Directory and, 22
+certifications and, 4
+file systems and, 531
+Java and, 67
+Windows Server 2003 (Microsoft), 4,
+27, 388
+Windows XP (Microsoft)
+file systems and, 106, 109
+installation and, 42
+
+Linux and, 528
+NOS and, 21
+Novell eDirectory Services and, 139
+printing and, 303–306
+Web Manager and, 170
+WordPad, 309
+workgroups
+described, **21**, **29**
+drive mapping and, 349
+file systems and, 109, 110
+Workstation Management folder, 389
+Workstation Only option, 139, 154, 181,
+187, 425, 571, 575
+workstation variables, **373**
+Write attribute right, 254, 278
+WRITE command, **376**
+Write rights, 208, 209
+
+X
+X 400 standard (OSI Message
+Handling), 122
+X 500 standard, 4, 123
+described, **122–127**
+LDAP and, 127–128, 195
+object naming and, 134
+X.509 standard, 467, 470, 473
+X.509v3 format, 466
+X Windows GUI, **25**, **67**, **529**
+Xerox, 16
+XML (eXtensible Markup Language), 419
+XSL (Extensible Stylesheet Language), 440
+XTier directory, 92
+
+Y
+YAST (Yet Another Setup Tool),
+491–495, **498–501**
+configuration, 554
+creating user and group accounts
+with, 520–523
+described, **510–512**
+exploring Novell services with,
+554, 555
+local group accounts and, 518–519
+logical volumes and, 539
+NFS and, 545–547
+NSS and, 563–564
+partitions and, 533–537
+permissions and, 543–545
+RPM and, 530
+run levels and, 529–530
+working with, 505
+YEAR variable, 372
+
+![](bbox=[0.05, 0.05, 0.07, 0.08])

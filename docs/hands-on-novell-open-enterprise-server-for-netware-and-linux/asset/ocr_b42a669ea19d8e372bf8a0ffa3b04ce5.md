@@ -1,0 +1,19 @@
+# Novell Software Products Licensing Information
+
+The Novell software programs included with this book are evaluation versions licensed by Novell for temporary use (not to exceed five months) with the course book with which the software is provided. Use of the enclosed software programs is also subject to the terms of the applicable accompanying software license agreement ("License"). By using the software, you agree to be bound by the terms of the License.
+
+The Novell Linux Enterprise Server software DVD included with this book contains a full evaluation version of SUSE Linux Enterprise Server 9. To accommodate for this academic deliverable, the original software has been modified from CD to DVD and is distributed on an "as is" basis. Please note that this software is for classroom use only and is not to be used in a production environment. To download a fully functional, supported, and upgradable version of SUSE Linux Enterprise Server and other Novell open-source products, visit www.novell.com/downloads.
+
+For license information on the Novell software included with this book, please refer to the full license document at www.novell.com/licensing/eula/oels/oes_1_english.pdf.
+
+# Approach
+
+I wrote this book to meet the Novell NetWare 6.5 CNA 50-686 exam objectives and to provide coverage of Open Enterprise Server, which also includes SUSE Linux Enterprise Server 9. One of the best ways to learn new technologies is by working with them, so this book includes many hands-on activities that enable you to apply concepts described in the chapters. The hands-on activities require access to NetWare, Windows XP, and Linux operating systems. The best way to gain experience with all these operating systems is through the use of virtual machines, which enable you to run other operating systems on a Windows XP desktop system, as described in Appendix C. If your Windows XP desktop computer has 1 GB RAM, you can use virtual machines to simultaneously run a NetWare 6.5 server and a Windows XP client on your desktop computer without needing multiple partitions or disk drives. With virtual machines, you can easily switch between a Windows XP and Linux client or between NetWare 6.5 and SUSE Linux Enterprise Server 9 servers. Depending on your lab configuration, there are three general approaches to performing activities in this book:
+
++   - *Individualized environment*—This environment requires student systems to have at least 1 GB RAM and a 1.5 GHz processor to run client and server systems simultaneously. In addition to the necessary computer hardware, this environment requires VMware Player or VMware Workstation 5, described in Appendix C. A major advantage of this environment is that students can work outside the computer lab by storing their virtual computer files on removable media, such as USB hard drives.
+
++   - *Team environment*—In the team environment, you’re assigned to a team of two students. Each team then designates one computer to act as the server and another computer to act as the client. The server computer should be dual-booting or use VMware to run NetWare 6.5 or Linux Enterprise Server 9. The client computer should also use VMware or be dual-booting so it can run Windows XP or SUSE Linux 10. The team environment enables students to have full control of both their server and client computers.
+
++   - *Shared classroom server environment*—In this environment, the instructor installs a NetWare 6.5 OES server, and students are assigned areas of the server based on student numbers used when creating objects. The lab computer should be configured for multibooting so that students can switch between Windows XP, SUSE Linux 10, or SUSE Linux Enterprise 9 environments.
+
+Your instructor will inform you what environment is being used and explain how to set up and configure your lab computer.

@@ -563,6 +563,7 @@
 +   [Red Hat(R) 考试实用指南：RHCSATM 和 RHCE(R) 认证指南与实验手册（认证指南）](docs/hands-on-guide-to-the-red-hatr-exams-rhcsatm-and-rhcer-cert-/README.md)
 +   [Hacking 实用指南：成为下一代渗透测试与紫色团队专家](docs/hands-on-hacking-become-an-expert-at-next-gen-penetration-te/README.md)
 +   [Linux 实用指南：在两张光盘上体验 Caldera open Linux Lite、Netscape Navigator Gold 和 Netscape Fast Track Server](docs/hands-on-linux-featuring-caldera-open-linux-lite-netscape-na/README.md)
++   [Novell Open Enterprise Server 实用指南](docs/hands-on-novell-open-enterprise-server-for-netware-and-linux/README.md)
 +   [Linux Oracle Database 10g Express Edition 实用指南](docs/hands-on-oracle-database-10g-express-edition-for-linux-your-/README.md)
 +   [Harley Hahn 的 Unix 和 Linux 入门指南](docs/harley-hahn039s-guide-to-unix-and-linux/README.md)
 +   [Harley Hahn 的 Unix 和 Linux 指南指南](docs/harley-hahns-guide-to-unix-and-linux/README.md)

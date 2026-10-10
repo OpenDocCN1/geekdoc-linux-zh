@@ -1,0 +1,13 @@
+file in the specified directory. Because an application's printer output is actually data being transmitted to a printer, placing a job in a print queue is a similar process, in which printer data from the application is stored in a file called a print job.
+
+Just as data files are stored in directories, print job files are stored in print queue directories, which are actually subdirectories of the Queues directory, and can be placed on any volume. Because print queues can use a lot of disk space, Novell recommends placing print queues on data volumes, not on the SYS volume. Remember: If the SYS volume fills up, it could bring down the NetWare server. As described later in “Setting Up a Queue-Based Printing System,” print queues are created in NetWare Administrator, and at least one print queue is created for each network printer. For client computers that need to print to a specific printer, you use the Add Printer Wizard to configure sending their output to a print queue. DOS-based applications can be directed to send output to a print queue with the NetWare CAPTURE command-line utility. After print jobs have been stored in the print queue, the printer assigned to the print queue prints the jobs in the order they were received. After a job has been printed, it's deleted from the print queue automatically.
+
+One administrative task in network printing is managing jobs in print queues. By default, the network administrator who created the print queue becomes the print queue operator, authorized to rearrange the sequence of print jobs, remove a print job, or place a print job on hold. However, other users besides network administrators can be assigned the role of print queue operator.
+
+# Print Servers
+
+A **print server** actually makes queue-based printing happen by sending print jobs from print queues to the assigned printer, as shown in Figure 8-4.
+
+![](bbox=[0.13, 0.46, 0.87, 0.76])
+
+Printers can be attached directly to the print server or attached remotely through a client or device, such as the HP JetDirect. In addition to printing, print servers are responsible for sending control commands to printers and reporting printer status to the print server operator. By default, the print server operator is the Admin user; however, this role can be delegated to other users in NetWare Administrator. In queue-based printing, each print server is defined by an eDirectory print server object containing the print server name and the names of up to 255 printer objects. After the print server object has been created and configured, NetWare print server software can be loaded and run on the file server by loading the PSERVER.NLM program. (PSERVER.NLM is one of the NetWare Loadable Modules, which were discussed in Chapter 2.)
