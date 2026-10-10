@@ -1,0 +1,13 @@
+Personal Computer Memory Card International Association (PCMCIA) Type II and less-common Type III PC cards, and the new ultra high-speed IEEE-1394 Firewire for digital data transmission. Many computers now feature graphics cards that have more memory than was routinely installed on computers only a few years ago. In some cases, it matches or exceeds the amount of installed RAM!
+
+The point is that many of these new features and increased capabilities are now debuting on notebook computers! Whereas four years ago, mobile users had to make do with "catch-up" hardware, and notebook computing lagged behind the power of desktop computers, this game no longer applies. You can now get a laptop computer that easily matches or exceeds the power of a desktop computer.
+
+# Consider Carefully
+
+Sometimes you might have to make do with what you have, but if you intend to purchase a notebook for Linux, do some research! Even though many modern notebooks feature removable elements, such as a hard drive, memory, or CD-ROM drive, you're generally stuck with the installed CPU, graphics chipset, ports, and chassis features. Although there are ways to use a different pointing device or keyboard, when you're on the road you usually stick with the basic features of your notebook. You should also understand that this market is a moving target; it's always in flux and always changing. What was today's high-end notebook quickly becomes tomorrow's dinosaur hardware.
+
+# Mobile Form Factors
+
+Mobile computers were introduced right alongside the very first desktop personal computers. Veteran mobile users might remember the Osborne I with its 51-character display, the KayPro II with its dual floppy drives, or the NEC Startle, which all ran the CP/M operating system (the Startel used a read-only memory [ROM] operating system). The Radio Shack Tandy Model 100, with its embedded Beginners All-purpose Symbolic Instruction Code (BASIC), enjoyed large popularity. Following these first-generation models were early Disk Operating System (DOS)-based computers such as the lunch-pail Morrow Pivot and the luggage Compaqs.
+
+Although many of these computers are still in use and continue to serve admirably today, none of them may be used with the modern Linux kernel, which requires a minimum Intel 386-based chipset. However, these early computers helped define the notebook market, and many form factors still survive.

@@ -1,0 +1,13 @@
+This would tell Linux that 320MB of RAM is installed and available. After Linux boots, there are ways to conserve memory. Here are some ways to do this:
+
++   - **Run only the software you need.** Unless your laptop is a Web server, do you really need to run Apache? Although some Linux distributions, such as SuSE, use a locally running Web server to provide an HTML-based help system, you should limit the number of running processes and background processes. Red Hat Linux users should use the ntsysv command to turn off or limit the number of services started when Linux boots.
+
++   - **Examine memory.** Use the free, vmstat, asmem, kmem, xvsiw, and other utilities to monitor what's going on, especially if Linux starts to use excessive amounts of memory, including swap space. Use the top command, or other process-reporting utilities such as ps or ptstat, to determine which programs can use the most memory.
+
++   - **Choose software with a small memory “footprint.”** If you write only short text files and don't do any programming on your laptop, not using StarOffice or other suites, such as Apxilix, can save a lot of memory. The X Window System (its server) can require at least 8MB or more RAM. Audio players, such as .mp3 players, suck enormous amounts of memory (and CPU cycles) for buffering. In general, text-based applications might require less memory (the emacs editing environment is an exception).
+
+# Your Notebook's Hard Drive
+
+Almost all Intel-based laptops (and, indeed, the Apple iBook) use Integrated Drive Electronics (IDE)-type hard drives, so this section concentrates on and uses IDE drive examples. Newer versions of these drives are known as Enhanced or Expanded Integrated Drive Electronics (EIDE). Dealing with your notebook's hard drive, especially if you're not technically oriented and are installing Linux for the first time, can be very daunting. But don't worry! As long as you have backed up any important data, you can't hurt your computer by installing Linux!
+
+When you install Linux, you'll need to *partition* (make room on) your hard drive. There are a number of ways to do this. You can use free or commercial software to perform this operation. Partitioning seems to cause more grief than any other installation operation for new Linux users. This is probably because most business and home users have never needed to partition a hard drive before; most computers come with software preinstalled on a freshly formatted disk. It is also because the Macintosh OS runs on Motorola CPUs and has never posed a serious challenge to software for

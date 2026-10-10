@@ -1,0 +1,9 @@
+![](bbox=[0.16, 0.06, 0.82, 0.37])
+
+Figure 5.14 To use the remaining partition space and install a basic partition scheme for Linux using a single root directory, specify the mount point / and click on the Grow to fill disk? button.
+
+In the Add partition dialog box, enter the size of the new partition. In this case, you’ll add a Linux swap partition. This partition should be at least twice the amount of your notebook’s installed RAM, and perhaps more, depending on how you plan to use Linux. Enter the amount of hard drive space (in megabytes), and then click on the drop-down Partition Type menu to select Swap. When finished, click on the OK button. When you return to the main dialog box, again click on the Add button. You’ll again see the Add Partition dialog box, as shown in Figure 5.14.
+
+A basic Linux system requires only a root (/) directory, along with a swap partition. If you’re new to Linux, this is the simplest approach to partitioning and installing Linux. Experienced users will examine the amount of available partition space and then create different partitions for different parts of the Linux file system, as shown in Figure 5.15. To use up all the available partition space remaining, simply click on the Grow to fill disk? button, and then click on the OK button.
+
+When you have finished partitioning, make sure that every partition has a designated mount point. Although you can easily mount undesinated partitions (those that won’t show up in the Linux file system table, /etc/ fstab), you’ll definitely want to define a mount point for all bootable partitions. In this example, DOS may be installed in the /dev/hda1 partition, so you should select that entry and then click on the Edit button in the main dialog box. You’ll see the Edit Partition dialog box, as shown in Figure 5.16.

@@ -1,0 +1,15 @@
+# Chapter 18: The Essential Read Kit
+
+**Cell phone car adapter.** This is essential unless you're taking a short road trip and either you carry an extra charged battery or your cell phone works for 100 hours on a single charge.
+
+**Credit cards.** They're an evil, nasty necessity in today's world. Use only one, find a credit card with no annual fee, and always pay off your balance by the end of the month.
+
+**Day planner.** Why anyone using a Palm PDA, StarOrganizer, korganizer, plan, or ical for Linux would need one of these is beyond me. However, some people swear by them and like to stuff other things inside, such as checkbooks, calculators, and credit cards.
+
+**Digital camera.** Early models of these instruments were bulky and expensive and required lots of online storage, such as a separate hard drive encased in a shoulder or belt pack. Today you can get a reasonably inexpensive digital camera with re-movable Compact Flash storage that provides at least 5×7-inch pictures for less than $300. Many of these devices have a serial or USB port, but the fastest way to transfer data is by using the Compact Flash card in your notebook's PC Card slot. If you have a serial camera, take a look at the gPhoto client (http://www.gphoto.org), which supports nearly 100 different digital cameras under Linux and X11. You'll need the latest gtk+ software libraries and the gcc C compiler to build and install the software. However, you'll be pleasantly surprised to find that gphoto works better than the commercial support software provided with your camera. (In many cases, it excels by having more features.) In some instances, espe-cially with a close-up lens kit, your digital camera can also function as a scanner!
+
+**Driver's license.** Flying by E-ticket? You won't if you forget your driver's license (unless you have a police report stating that your wallet was stolen).
+
+**External CD-ROM drive.** In the recent past (12 months ago), these were bulky hunks of plastic with thick cables and brick transformers. Nowadays, most have trimmed down to slick and sleek devices that power off your PCMcia card. Many initialize as `/dev/hdg` under Linux, depending on the number of spindles in use on your notebook. They are usually used with an ultralight or mini-notebook computer. These devices suck power like crazy when used externally, although some models are equipped with internal rechargeable batteries or an external battery pack.
+
+**Flash card for backup.** This is an excellent, safe choice for backing up important documents and files. The drawback is that flash memory (using ATA or Compact Flash Type II cards) is still somewhat expensive. However, if you read David Hind's PCMcia-HOWTO, you might be able to craft a bootable filesystem on a card, especially if your notebook has a floppy drive. These cards require little power and have life spans measured in 100,000 or more read/write cycles.

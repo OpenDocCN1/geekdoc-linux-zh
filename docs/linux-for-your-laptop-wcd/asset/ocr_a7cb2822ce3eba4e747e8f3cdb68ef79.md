@@ -1,0 +1,12 @@
+Advanced Power Management, or APM, is something most desktop PC users don't have to worry about. Indeed, most mobile Linux users who have desktop replacement notebooks that are plugged in all day don't give power manage-ment a second thought. But when you're on the road trying to get work done and you hear your notebook bleating its last battery just before expiring, power manage-ment suddenly becomes an important issue.
+
+That's why it's important to arm yourself and your laptop with the right informa-tion and software before going on the road. You'll be able to confidently navigate your way through many extra minutes of “on” time and squeeze every bit of juice out of your battery.
+
+# What Is APM?
+
+APM is an industry-developed standard that helps equipment manufacturers and programmers design hardware and software to save power. This is accomplished in a number of ways, such as through “smart battery” circuitry, intelligent CPU throttle control and sensing of battery levels, timing loops in the operating system that measure intervals of inactivity before turning off devices such as displays and hard drives, and user control of a computer's components.
+
+Although desktop PC Linux users can benefit from APM’s feature of turning off the computer after shutdown, most nonbattery Linux boxes do not need APM installed or enabled. However, for mobile Linux users, APM is more than just a nice feature—it's a way of life! Notebook users will quickly become familiar with APM features such as these:
+
++   - **Suspend**. Also known as *sleep*, or the ability to turn off the LCD and back-light; shut down networking, serial ports, and PCMCIA; turn off the sound; and then restore with a mouse click or the touch of a keyboard key. This is the fastest and most efficient method of saving power for short periods.
++   - **Hibernate**. Also known as *suspend-to-RAM* or *suspend-to-disk*. This feature freezes the current desktop and saves the session in a “snapshot” to memory, to a file on the hard drive, or to a special partition. The system is restored through the power button. This is a slower and more power-intensive method of saving power, so hibernation should be used only when needed for longer periods, such as 30 minutes to an hour.
