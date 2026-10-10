@@ -1,0 +1,81 @@
+
+关于 `dump` 和 `restore` 程序还有大量其他细节，这里无需完全详述。使用 `restore` 的非交互模式中的 `-s` 选项来指定磁带上的特定备份会话就是这样的程序之一。其他方面包括高级使用 `mt` 实用程序、管理多个磁带、远程备份设备等等。一篇涵盖这些流程的关于 `dump` 和 `restore` 的优秀教程可以在 `http://www.nethamilton.net/dump.html` 找到。此外，请阅读关于 `dump`、`restore` 和 `mt` 的 man 页面，以了解这些工具的所有功能文档。
+
+## 镜像
+
+备份确实令人生畏，不是吗？难怪很少有人真正有耐心去做。它们至少需要像小型企业那样的预算和时间考量；个人爱好者系统可能难以证明这项投资和麻烦是值得的。幸运的是，有一个替代方案。
+
+只需比建立完整的磁带备份系统稍多一点的资金，您反而可以创建一个 `镜像服务器`——一台次要的 FreeBSD 机器，其唯一目的是每天与主服务器同步文件。如果主服务器发生任何意外，您可以将这些文件互换到位。而您用于执行镜像的工具呢？您猜对了：`CVSup`。
+
+理想情况下，您的次要服务器应位于与主服务器不同的物理位置。`CVSup` 的增量备份系统使得即使两个系统之间可用的带宽非常有限，也能实现这一点成为可能。
+
+### 设置 CVSup 镜像解决方案
+
+假设您想镜像四个目录结构：`/home`、`/usr`、`/local/www`、`/var/mail` 和 `/etc`。（在您的情况下，您可能需要做的远不止这些，但这些就足以作为示例。）第一步是设置一个基础目录——主服务器上的配置暂存区域。基础目录让 `cvsupd`（作为 `cvsup` 端口或包的一部分安装在 `/usr/local/sbin`，您应该已经安装了它）知道向客户端（例如您的镜像机器）提供哪些集合。
+
+以 root 身份输入以下命令：
+
+```bash
+# cd /usr/local/etc
+# mkdir -p cvsup/sup
+# cd cvsup/sup
+# mkdir home www mail etc
+```
+
+现在，在这四个新的子目录中的每一个中，您需要创建两个文件：`.cvs` 文件和 `releases` 文件。这些文件向 `cvsupd` 服务器描述一个“集合”并使其可供服务。在 *home* 子目录中，创建一个名为 *home.cvs* 的文件，内容如下：
+
+```
+upgrade home
+rsrcmlink *
+```
+
+接下来，创建一个名为 `releases` 的文件，内容如下：
+
+```
+home    list=home.cvs  prefix=/
+```
+
+对四个子目录中的每一个执行此操作，更改 `.cvs` 文件的名称以匹配目录或集合的名称，并相应地修改内容。
+
+### 运行 cvsupd 服务器
+
+当基础目录设置好后，您可以启动 `cvsupd` 服务器。`-C` 选项将同时客户端数量限制为 1，`-1`（小写字母 l）指定发送日志信息的位置：
+
+```bash
+# cvsupd -b /usr/local/etc/cvsup -C 1 -1 /dev/stout
+```
+
+至此，主服务器的配置已完成，您可以转向次要服务器，即作为客户端连接到您刚刚设置的 CVSUp 服务器的那台机器。
+
+在 `/etc` 中创建一个名为 `mirror-supfile`（或任何您喜欢的名字）的文件。内容应如清单 19.2 所示，其中 `server1.hostname.com` 是您的主服务器的主机名，您将镜像该服务器上的内容。您可以使用简单主机名、完全限定域名或 IP 地址作为 host 参数。
+
+### 清单 19.2 示例 CVSUp 配置文件 (mirror-supfile)
+
+```
+*default host=server1.hostname.com
+*default delete use-rel-suffix
+*default compress
+*default preserve
+*default base=/usr
+*default release=home
+home
+*default base=/usr/local
+*default release=www
+www
+*default base=/var
+*default release=mail
+mail
+*default base=/usr
+*default release=etc
+etc
+```
+
+请注意最后一项：我们要镜像的主服务器的 `/etc` 目录并不是复制到 `/etc`，而是复制到 `/usr/etc`。这样做的原因是，`/etc` 对每台机器都很重要，它是针对该特定机器进行定制的；您希望将 `/etc` 镜像到一个安全的位置，而不是用主服务器的 `/etc` 覆盖次要服务器的 `/etc`。无论如何，这是一个很好的理由来展示 CVSUp 的灵活性，展示如何将一组文件“签出”到第二服务器上的任何位置。
+
+### 运行 CVSUp 镜像过程
+
+一旦创建好 `mirror-supfile`，您就可以进行第一次镜像操作了。启动 CVSUp 过程：
+
+```bash
+# cvs up -L 2 /etc/mirror-supfile
+```
