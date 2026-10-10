@@ -1,0 +1,15 @@
+your network. Great progress has been made in the past couple of years, but the possibility of a security breach is increased when the attacker is in the area and knows the frequency on which to listen. It should also be noted that the encryption method used by more wireless NICs is weaker than other forms of encryption (such as SSH) and should not be considered as part of your security plan.
+
+> **TIP**
+> 
+> Always use OpenSSH-related tools, such as ssh or sftp, to conduct business on your wireless LAN. Passwords are not transimtted as plain text, and your sessions are encrypted. Refer to Chapter 15, “Remote Access with SSH,” to see how to connect to remote systems with ssh.
+
+The better the physical security is around your network, the more secure it will be (this applies to wired networks as well). Keep wireless transmitters (routers, switches, and so on) as close to the center of your building as possible. Note or monitor the range of transmitted signals to determine whether your network is open to mobile network sniffing—now a geek sport known as *war driving*. (Linux software is available at http://sourceforge.net/project/showfiles.php?group_id=57253.) An occasional walk around your building not only gives you a break from work, but can also give you a chance to notice any people or equipment that should not be in the area.
+
+Keep in mind that it takes only a single rogue wireless access point hooked up to a legitimate network hub to open access to your entire system. These access points can be smaller than a pack of cigarettes, so the only way to spot them is to scan for them with another wireless device.
+
+# ### Passwords and Physical Security
+
+The next step toward better security is to use secure passwords on your network and ensure that users use them as well, especially the root password. If the root password on just one machine is cracked, the whole network is in trouble. For somewhat more physical security, you can forice the use of a password with the LILO or GRUB bootloaders, remove bootable devices such as floppy and CD-ROM drives, or configure a network-booting server for Fedora. This approach is not well supported or documented at the time of this writing, but you can read about one way to do this in Briue J. Lethomme's Network Boot and Exotic Root HOWTO, available at http://www.tldp.org/HOWTO/Network-boot-HOWTO/. You can also read more about GRUB and LILO in Chapter 36, “Kernel and Module Management.”
+
+Also, keep in mind that some studies show that as many as 90% of network break-ins are by current or former employees. If a person no longer requires access to your network, lock out access or, even better, remove the account immediately. A good security policy also dictates that any data associated with the account first be backed up and retained for a set period of time to ensure against loss of important data. If you are able, remove the terminated employee from the system before he leaves the building.

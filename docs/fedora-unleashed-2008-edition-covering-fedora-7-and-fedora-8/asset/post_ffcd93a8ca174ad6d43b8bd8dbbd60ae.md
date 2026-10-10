@@ -1,0 +1,151 @@
+
+## NOTE
+
+By default, all the *ftpaccess* file command lines prohibit anonymous users from executing actions and enable authorized users to do so.
+
+## Allow Users to Change File Permissions
+
+The *chmod* line determines whether a user can change a file’s permissions. Here is the command line:
+
+```
+chmod <yes;no> <typelist>
+```
+
+This command acts the same as the standard *chmod* command.
+
+The *yes;no* parameter designates whether the command can be executed. *typelist* is a comma-delimited string of the keywords *anonymous*, *guest*, and *real*. If you do not specify a *typelist* string, the command is applied to all users. An exhaustive description of its purpose and parameters can be found in the man page.
+
+## Assign Users File-Delete Permission
+
+The *delete* line determines whether the user can delete files with the *rm* command. Here’s the command line:
+
+```
+delete <yes;no> <typelist>
+```
+
+The *yes;no* parameter is used to turn this permission on or off, and *typelist* is the same as the *chmod* command.
+
+## Assign Users File-Overwrite Permission
+
+This command line of the *ftpaccess* file allows or denies users the ability to overwrite an existing file. Here’s the command line:
+
+```
+overwrite <yes;no> <typelist>
+```
+
+The FTP client determines whether users can overwrite files on their own local machines; this line specifically controls overwrite permissions for uploads to the server. The *yes;no* parameter toggles the permission on or off, and *typelist* is the same as in the *chmod* line.
+
+## Allow Users to Rename Files
+
+You can enable or prevent a user from renaming files by using this command line:
+
+```
+rename <yes;no> <typelist>
+```
+
+The *yes;no* parameter toggles the permission on or off, and *typelist* is the same comma-delimited string as in *chmod*.
+
+## Allow Users to Compress Files
+
+This line determines whether the user is able to use the compress command on files:
+
+```
+compress <yes;no> [<classGlob>]
+```
+
+The yes|no parameter toggles the permission on or off, and classGlob is a regular expression string that specifies one or more defined classes of users. The conversions that result from the use of this command are specified in the ftpconversions file, which contains directions on what compression or extraction command is to be used on a file with a specific extension, such as .z for the compress command, .gz for the gunzip command, and so on. See the section “Configuring FTP Server File-Conversion Actions” later in this chapter.
+
+## Assign or Deny Permission to Use tar
+
+This line determines whether the user is able to use the tar (tape archive) command on files:
+
+```
+tar <yes;no> [<classGlob> ...]
+```
+
+The yes|no parameter toggles the permission on or off, and classGlob is a regular expression string that specifies one or more defined classes of users. Again, the conversions that result from the use of this command are specified in the ftpconversions file.
+
+## Determine What Permissions Can Apply to User-Created Upload Files
+
+This line is a bit different from the other commands in the permission control section. The umask command determines with what permissions a user can create new files; here it is.
+
+```
+umask <yes;no> <typeList>
+```
+
+The yes|no parameter toggles based on whether a user is allowed to create a file with his default permissions when uploading a file. Like the overwrite command you read about earlier in this section, this command line is specific to uploaded files because the client machine determines how new files are created from a download.
+
+## Configure Commands Directed Toward the cpPath
+
+This alias command allows the administrator to provide another name for a directory other than its standard name:
+
+```
+alias <string> <dir>
+```
+
+The alias line applies to only the cd command. This line is particularly useful if a popular directory is buried deep within the anonymous FTP user’s directory tree. The following is a sample entry:
+
+```
+alias linux-386 /pub/redhat/7.3/en/i386/
+```
+
+This line would allow the user to type `cd linux-386` and be automatically taken to the `/pub/redhat/7.3/en/i386` directory.
+
+The `cdpath <dir>` line specifies the order in which the `cd` command looks for a given user-entered string. The search is performed in the order in which the `cdpath` lines are entered in the `ftpaccess` file.
+
+For example, if the following `cdpath` entries are in the `ftpaccess` file,
+
+```
+cdpath  /pub/redhat/
+cdpath  /pub/linux/
+```
+
+and the user types `cd i386`, the server searches for an entry in any defined aliases, first in the `/pub/redhat` directory and then in the `/pub/linux` directory. If a large number of aliases are defined, it is recommended that symbolic links to the directories be created instead of aliases. Doing so reduces the amount of work on the FTP server and decreases the wait time for the user.
+
+## Structure of the shutdown File
+
+The `shutdown` command tells the server where to look for the shutdown message generated by the `ftpshut` command or by the user. The `shutdown` command is used with a path-name to a shutdown file, such as:
+
+```
+shutdown /etc/rh8ftpshut
+```
+
+If this file exists, the server checks the file to see when the server should shut down. The syntax of this file is as follows:
+
+```
+<year> <month> <day> <hour> <minute> <deny_offset> <disc_offset> <text>
+```
+
+`year` can be any year after 1970 (called the `epoch`), `month` is from 0–11, `hour` is 0–23, and `minute` is 0–59. `deny_offset` is the number of minutes before `shutdown` in which the server disallows new connections. `disc_offset` is the number of minutes before connected users are disconnected, and `text` is the message displayed to the users at login. In addition to the valid magic cookies defined in the messages section, those listed in Table 20.2 are also available.
+
+**TABLE 20.2 Magic Cookies for the shutdown File**
+
+| **Cookie** | **Description** |
+| :--------- | :------------------ |
+| `%s`       | The time the system will be shut down |
+| `%r`       | The time new connections will be denied |
+| `%d`       | The time current connections will be dropped |
+
+The FTP server can convert files during transfer to compress and uncompress files automatically. Suppose that the user is transferring a file to his Microsoft Windows machine that was TARed and GZIPed on a Linux machine. If the user does not have an archive utility installed to uncompress these files, he cannot access or use the files.
+
+As the FTP server administrator, you can configure the FTP server to automatically unarchive these files before download if the site supports users who do not have unrarchive capabilities. Additionally, you can configure an upload area for the users, and then configure the FTP server to automatically compress any files transferred to the server.
+
+The structure of the format of the ftppconversions file is:
+
+```
+1:2:3:4:5:6:7:8
+```
+
+where 1 is the strip prefix, 2 is the strip postfix, 3 is the add-on prefix, 4 is the add-on postfix, 5 is the external command, 6 is the types, 7 is the options, and 8 is the description.
+
+### Strip Prefix
+
+The strip prefix is one or more characters at the beginning of a filename that should be automatically removed by the server when the file is requested. By specifying a given prefix to strip in a conversions rule, such as deven1, the user can request the file devel_procman.tar.gz by the command get deven1_procman.tar.gz, and the FTP server performs any other rules that apply to that file and retrieve it from the server. Although this feature is documented, as of version 2.6.2, it has yet to be implemented.
+
+### Strip Postfix
+
+The strip postfix works much the same as the strip prefix, except that one or more characters are taken from the end of the filename. This feature is typically used to strip the .gz extension from a file that was TARed and GZIPed when the server performed automatic decompression before sending the file to the client.
+
+### Add-On Prefix
+
+The add-on prefix conversion instructs the server to insert one or more characters to a filename before it is transferred to the server or client. For example, assume that a user requests the file procman.tar.gz. The server has a conversion rule to add a prefix of gnome to all .tar.gz files; therefore the server would append this string to the file before sending it to the client. The user would receive a file called gnome_procman.tar.gz. Keywords such as uppercase and lowercase can be used in this function to change the case of the filename for those operating systems in which case makes a difference. As with the strip prefix conversion, this feature is not yet implemented in version 2.6.2.

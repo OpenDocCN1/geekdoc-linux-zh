@@ -1,0 +1,3 @@
++   http://freetype.sourceforge.net/patents.html—A discussion of the FreeType bytecode interpreter patents.
++   http://www.ethereal.com/—Home page for the Ethereal client.
++   http://www.realvnc.com/—The home page for the Virtual Network Computing remote desktop software, available for a variety of platforms, including Fedora Core Linux. This software has become so popular that it is now included with nearly every Linux distribution.

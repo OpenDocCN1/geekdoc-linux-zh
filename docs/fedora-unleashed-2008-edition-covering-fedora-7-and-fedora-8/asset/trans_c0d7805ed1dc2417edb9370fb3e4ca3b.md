@@ -1,0 +1,127 @@
+
+
+## 表 36.1（续）
+
+| 名称 | 描述 |
+| :--- | :--- |
+| 输入设备支持 | 配置通用串行总线 (USB) 人机接口设备 (HID) 的选项。包括键盘、鼠标和摇杆。 |
+| 字符设备 | 用于配置以顺序字符方式与服务器通信的设备的选项。这是一个大型子部分，包含若干主板芯片组的驱动程序。 |
+| 多媒体设备 | 视频和音频设备硬件实现的驱动程序，例如视频采集卡、电视卡和 AM/FM 无线电适配器卡。 |
+| 图形支持 | 配置 VGA 文本控制台、视频模式选择以及对帧缓冲卡的支持。 |
+| 声音 | 用于配置内核支持的声音卡驱动器和芯片组支持的大型子部分。 |
+| USB 支持 | 通用串行总线配置选项。包括 USB 设备的配置，以及 USB 的厂商特定版本。 |
+| 文件系统 | 支持的文件系统类型的配置选项。有关内核支持的文件系统的描述，请参阅第 34 章。 |
+| 附加设备驱动程序支持 | 第三方补丁。 |
+| 剖析支持 | 剖析内核行为信息，以辅助调试和开发。 |
+| 内核调试 | 确定内核是否包含高级调试选项。大多数用户不希望将其选项包含在生产内核中，因为这会增加内核大小并因添加额外的例程而降低性能。 |
+| 安全选项 | 确定是否启用 NSA 安全增强型 Linux (SELinux)。 |
+| 加密选项 | 对加密硬件的支持（在原版内核源代码中未找到 Fedora 补丁）。 |
+| 库例程 | 包含 zlib 压缩支持。 |
+
+选择完所有需要的选项后，您可以保存配置文件，并继续执行前面所示的内核编译检查清单中的第 7 步。
+
+## 创建初始 RAM 磁盘映像
+
+如果加载根文件系统所需的特殊设备驱动程序（例如用于 SCSI 驱动器、网卡或异构文件系统的驱动程序），您必须创建一个名为 /boot/initrd.img 的初始 RAM 磁盘映像。对于大多数用户，没有必要创建此文件，但如果您不确定，这样做也没有坏处。我们在第 34 章中讨论了 initrd.img。要创建 initrd.img 文件，请使用 shell 脚本 /sbin/mkinitrd。
+
+命令的格式如下：
+
+```bash
+/sbin/mkinitrd fileName kernel_version
+```
+
+其中 **fileName** 是您想要创建的映像文件的名称。
+
+mkinitrd 会查看 /etc/fstab、/etc/modprobe.conf 和 /etc/raidtab 以获取确定启动期间应加载哪些模块所需的信息。对于我们的个人系统，我们使用以下命令：
+
+```bash
+# mkinitrd initrd-2.6.7-1.img 2.6.7-1
+```
+
+### 当出现问题时
+
+在内核编译和安装过程中，可能会出现若干问题，而若干线索会指出真正的问题所在。您会在屏幕上看到打印的错误消息，一些错误消息会被打印到 /var/log/messages 文件中，可以使用文本编辑器检查该文件。如果您按照我们的说明对内核进行打补丁操作，则还必须检查特殊的错误日志。不要担心错误，因为许多问题通过您自己的一些研究就可以轻松解决。然而，根据您的技能水平和技术信息的可用性，一些错误可能无法修复。
+
+#### 编译期间的错误
+
+虽然内核无法编译的情况很少见，但回归测试中总是有可能漏掉一些问题。让我们看一下可能在编译过程中出现的问题示例。
+
+内核编译可能会崩溃并未能成功完成，尤其是当您尝试使用实验性补丁、添加未测试的功能或在旧系统上构建较新的（可能不稳定的）模块时。例如，在 Red Hat 7.2 原始安装上使用 2.4.9 内核时，如果选择了 NTFS 文件系统（无论是作为可加载模块还是内联方式），内核编译都会失败，如下所示：
+
+```bash
+gcc -O_KERNEL_ -I/usr/src/kernels/linux-2.4.9/include -Wall -Wstrict-prototypes
+-Wno-trigraphs -O2 -fomit-frame-pointer -fno-strict-aliasing -fno-common
+-pipe -mprefer-scaled -stack-boundary=2 -march=athlon -DMODULE -DMODVERSIONS
+-include /usr/src/kernels/linux-2.4.9/include/linux/modversions.h
+-DNTFS_VERSION='"1.16"'
+-> .c o unistr.o unistr.c
+unistr.c: In function 'ntfs_collate_names' :
+unistr.c:99: warning: implicit declaration of function 'min'
+unistr.c:99: parse error before 'unsigned'
+unistr.c:99: parse error before ' )'
+unistr.c:97: warning: 'c1' might be used uninitialized in this function
+unistr.c: At top level:
+unistr.c:118: parse error before 'if'
+```
+
+![](img/34e72348d53ca54c2a1d9c871316691b_836_0.png)
+
+```bash
+unistr.c:123: warning: type defaults to `'int'` in declaration of `'ci'`
+unistr.c:123: `'name1'` undeclared here (not in a function)
+unistr.c:123: warning: data definition has no type or storage class
+unistr.c:124: parse error before `'if'`
+make[2]: *** [unistr.o] Error 1
+make[2]: Leaving directory `/usr/src/kernels/linux-2.4.9/fs/ntfs'
+make[1]: *** [_modulesdir_ntfs] Error 2
+make[1]: Leaving directory `/usr/src/kernels/linux-2.4.9/fs'
+make: *** [_mod_fs] Error 2
+```
+
+在此阶段，您有两个选择：
+
+-   修复错误并重新编译
+-   移除有问题的模块或选项，并等待内核团队修复错误
+
+由于内核代码的复杂性，大多数用户将无法修复某些错误，尽管您不应排除这个选项。有可能其他人在测试内核期间发现了相同的错误并开发了该问题的补丁：请检查 Linux 内核邮件列表存档。如果那里没有提到这个问题，在 Google 上进行搜索可能会找到相关内容。
+
+第二个选项，即移除代码，是最简单的，也是大多数人在不需要有问题代码的情况下所做的事情。在 NTFS 模块失败的情况下，这几乎是意料之中的，因为 NTFS 支持仍被视为实验性的并易受错误影响。这主要是因为文件系统的代码是通过逆向工程实现的，而不是通过文档化的标准实现的。最近的内核中只读支持有了改善；写入支持仍然是实验性的。
+
+最后，如果您想承担自行尝试修复问题的任务，这是一个参与 Linux 内核并做出贡献的绝佳机会，这可能有助于许多其他人。
+
+如果您熟悉编码和内核事务，您可能需要查看内核源代码目录 `/usr/src/kernels/linux-2.6/` 中的 **MAINTAINERS** 文件，找到该代码的维护者。建议采取的行动是联系维护者，看看他们是否了解您遇到的问题。如果没有针对特定错误记录的内容，将错误提交到内核邮件列表是一个选项。这样做的准则位于内核源代码基础目录下的“如果出现问题”部分中的 **README** 文件中。
+
+## 运行时错误、引导加载程序问题和内核错误
+
+运行时错误发生在内核加载过程中。错误消息显示在屏幕上或写入 `/var/log/messages` 文件。引导加载程序问题会在屏幕上显示消息；不会产生日志文件。*内核错误* 是正在运行的内核中的错误，错误消息写入 `/var/log/messages` 文件。
+
+互联网上存在优秀的文档，用于排查 LILO、GRUB 或内核在启动期间可能出现的几乎所有类型的错误。找到这些文档的最佳方法是进入您喜欢的搜索引擎并输入收到的错误关键词。随着您聚焦搜索，您将需要调整使用的关键词。
+
+在这一类别中，最常见的问题涉及 LILO 配置问题。可以在 Linux 文档项目网站上找到的 LILO 迷你 HOWTO 中找到这些问题及其诊断和解决方案，网址为 http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/LILO.html。
+
+如果您遇到 GRUB 问题，GRUB 手册在线可用，网址为 http://www.gnu.org/software/grub/manual/。
+
+**提示**
+
+为了获得最佳结果，请访问 http://www.google.com/linux 以在互联网上查找所有 Linux 相关内容。Google 专门创建了一个 Linux 数据库区域，这应该允许比任何其他搜索引擎更快地访问 Linux 信息。
+
+可以通过 http://www.google.com/grphp 搜索 Usenet 新闻组帖子。
+
+可以在 Mailing listArchives (MARC) 中搜索邮件列表讨论，网址为 http://marc.theaimsgroup.com/。
+
+## 相关的 Fedora 和 Linux 命令
+
+在 Fedora 中管理内核及其模块时，您将使用以下命令：
+
+-   **gcc**—GNU 编译器系统
+-   **make**—GNU 项目和文件管理命令
+-   **mkbootdisk**—Fedora 的启动盘创建工具
+-   **sysctl**—在运行时操作内核变量的接口
+-   **mkinitrd**—创建用于引导支持的文件系统的 RAM 磁盘
+
+## 参考
+
+-   http://www.kernel.org/—Linux 内核存档。Linux 内核所有开发讨论的来源。
+-   http://www.kerneltraffic.com/kernel-traffic/index.html—Linux Kernel Traffic。每周发布的 Linux 内核邮件列表的摘要版本和评论。
+-   http://www.gnu.org/—自由软件基金会。用于整个内核编译过程中使用的程序和手册的软件来源。诸如 **make** 和 **gcc** 等工具的官方文档位于此处。
+

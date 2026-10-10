@@ -1,0 +1,35 @@
+# **Creating the File System on the Partitioned Disk**
+
+After you partition the disk for a specific file system, you can create the file system on it. In the DOS world, this two-part process is described by DOS as **low-level formatting** (creating the partitions and partition table) and **formatting** (creating the file system). In the Unix world, the latter is known as *creating a file system*. In this section, you learn how to create a file system in Linux.
+
+An unformatted disk storage device (a floppy disk, hard disk drive, or removable media) typically arrives to you with a low-level format, which has been done with a tool such as `fdisk` or `superformat`. Although the disk might have a boot block and partition information, it typically lacks the file structure needed for a file system.
+
+> **NOTE**
+> If you are preparing to create a file system on any device other than a floppy disk, examine it with `fdisk` or another utility of your choice and modify the partition table accordingly (following the instructions you saw in the preceding sections of this chapter).
+
+To create the file system structure, you need to do what is sometimes referred to as a high-level format. For FAT file systems, this is accomplished by the `format` command. In Linux, you use the `mke2fs -j` command to create an ext3 file system.
+
+> **NOTE**
+> If you are creating a Reiser file system, use the `mkreiserfs` command. To create a DOS file system, use the `mkdosfs` command. Other commands for other file systems include:
+
++       \u2022  `mkfs.ext2`—The ext2 file system
++       \u2022  `mkfs.msdos`—The MS-DOS file system
++       \u2022  `mkfs.vfat`—The FAT32 file system
+
+# ### Using mke2fs to Create the File System
+
+The `mke2fs` command is used to create both the ext2 and the ext3 file systems. At its simplest, the command is used as:
+
+```
+```
+# mke2fs partition
+```
+```
+
+such as:
+
+```
+```
+# mke2fs /dev/hdc4
+```
+```

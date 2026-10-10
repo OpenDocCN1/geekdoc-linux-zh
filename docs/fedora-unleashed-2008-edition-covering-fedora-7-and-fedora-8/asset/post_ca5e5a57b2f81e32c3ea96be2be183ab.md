@@ -1,0 +1,127 @@
+
+# An example of a PAM configuration file with the formatted entries as described previously is shown next. Here are the contents of /etc/pam.d/system-config-users:
+
+```bash
+#PAM-1.0
+auth		include	config-util
+account	include	config-util
+session	include	config-util
+```
+
+Amusingly, even the PAM documents state that you do not really need (or want) to know a lot about PAM to use it effectively.
+
+You will likely need only the PAM system administrator's guide. Look under the /usr/share/doc/pam* directory for additional documents in PostScript, text, and HTML formats.
+
+## Managing Password Security for Users
+
+Selecting appropriate user passwords is always an exercise in trade-offs. A password such as *password* (don't laugh, it has been used too often before in the real world) is just too easy to guess by an intruder, or be simple words or number combinations (a street address, for example). A security auditor for one of my former employers used to take the cover sheet from an employee's personnel file (which contained the usual personal information of name, address, birth date, and so on) and then attempt to log on to a terminal with passwords constructed from that information—and often succeeded in logging on.
+
+On the other hand, a password such as `2aS6u"*"F($84u$&^"H1u44lK%$` (!#EJD is sure to present great difficulty to an intruder (or an auditor). However, that password is so difficult to remember that it would be likely that the password owner would write that password down and tape it next to her keyboard. I worked for a business in which the safe combination was written on the ceiling tile over the safe; the manager could not remember it and was told he should not keep it on a piece of paper in his wallet. This is but one of many examples of poor security in the field.
+
+The sysadmin has control, with settings in the /etc/shadow file, over how often the password must be changed. The settings can be changed with a text editor, the *change* command, or a configuration tool such as Fedora's User Manager, as shown in Figure 10.1. Click the Password Info tab under that particular user's Properties to set individual password policies.
+
+## Changing Passwords in a Batch
+
+On a large system, there might be times when a large number of users and their passwords need some attention. The super user can change passwords in a batch by using the *chpasswd* command, which accepts input as a name/password pair per line in the following form:
+
+```bash
+# chpasswd username:password
+```
+
+You can change passwords *en masse* by redirecting a list of name and password pairs to the command. An appropriate shell script can be constructed with the information gleaned from this chapter.
+
+However, Fedora also provides the `newusers` command to add users in a batch from a text file. This command also allows a user to be added to a group, and a new directory can be added for the user, too.
+
+## Granting System Administrator Privileges to Regular Users
+
+It may be necessary for regular users to run a command as if they were the root user. They usually do not need these powers, but they might on occasion—for example, to temporarily access certain devices or run a command for testing purposes.
+
+There are two ways to run commands with root privileges: The first is useful if you are the super user and the user; the second if you are not the regular user (as on a large, multiuser network).
+
+### Temporarily Changing User Identity with the `su` Command
+
+What if you are also root, but are logged on as a regular user because you are performing nonadministrative tasks and you need to do something that only the super user can do? The `su` command is available for this purpose.
+
+> **NOTE**
+> A popular misconception is that the `su` command is short for *super user*; it just means *substitute user*. An important but often overlooked distinction is that between `su` and `su -`. In the former instance, you become that user but keep your own environmental variables (such as `PATH`). In the latter, you inherit the environment of that user. This is most noticeable when you use `su` to become the super user, root. Without appending the `-`, you do not inherit the path variable that includes `/bin` or `/sbin`, so you must always enter the full path to those commands when you just `su` to root.
+
+Because almost all Linux file system security revolves around file permissions, it can be useful to occasionally become a different user with permission to access files belonging to other users or groups or to access special files (such as the communications port `/dev/ttyS0` when using a modem, or the sound device `/dev/audio` when playing a game). You can use the `su` command to temporarily switch to another user identity, and then switch back.
+
+**TIP**
+
+It is never a good idea to use an *Internet Relay Chat* (IRC) client as the root user, and you might not want to run it using your regular user account. Just create a special new user just for IRC and so that user in a terminal window to launch your IRC client.
+
+The `su` command spawns a new shell, changing both the UID and GID of the existing user and automatically changes the environmental variables associated with that user. This behavior is known as *inheriting the environment*. See Chapter 4, “Command-Line Quick Start,” for more information on environmental variables.
+
+The syntax for the `su` command is this:
+
+```
+$ su option username arguments
+```
+
+The man page for `su` gives more details, but some highlights of the `su` command are as follows:
+
+- `-C, --command COMMAND`
+  - pass a single COMMAND to the shell with `-c`
+- `-m, --preserve-environment`
+  - do not reset environment variables
+- `-l` a full login simulation for the substituted user,
+  - the same as specifying the dash alone
+
+You can invoke the `su` command in different ways that yield diverse results. By using `su` alone, you can become root, but you keep your regular user environment. You can verify this by using the `printenv` command before and after the change. Note that the working directory (you can execute `pwd` as a command line to print the current working directory) has not changed. By executing the following, you become root and inherit root’s environment:
+
+```
+$ su -
+```
+
+By executing the following, you become that user and inherit the super user’s environment—a pretty handy tool. (Remember: Inheriting the environment comes from using the dash in the command; omit that, and you keep your “old” environment.) To become another user, specify a different user’s name on the command line:
+
+```
+$ su - other_user
+```
+
+When leaving an identity to return to your usual user identity, use the `exit` command. For example, while logged on as a regular user, use this:
+
+```
+$ su -
+```
+
+The system prompts for a password:
+
+```
+Password:
+```
+
+When the password is entered correctly, the root user's prompt appears:
+
+```
+#
+```
+
+To return to the regular user's identity, just enter the following:
+
+```
+# exit
+```
+
+This takes you to the regular user's prompt:
+
+```
+$
+```
+
+If you need to allow other users access to certain commands with root privileges, it is necessary to give them the root password so that they can use su—that definitely is not a secure solution. The next section describes a more flexible and secure method of allowing normal users to perform selected root tasks.
+
+## Granting Root Privileges on Occasion—The sudo Command
+
+It is often necessary to delegate some of the authority that root wields on a system. For a large system, this makes sense because no single individual will always be available to perform super-user functions. The problem is that UNIX permissions come with an all-or- nothing authority. Enter sudo, an application that permits the assignment of one, several, or all of the root-only system commands.
+
+After it is configured, using sudo is simple. An authorized user merely precedes the command that requires super-user authority with the sudo command, as follows:
+
+```
+$ sudo command
+```
+
+After getting the user's password, sudo checks the /etc/sudoers file to see whether that user is authorized to execute that particular command; if so, sudo generates a "ticket" for a specific length of time that authorizes the use of that command. The user is then prompted for his password (to reserve accountability and provide some measure of security), and then the command is run as if root had issued it. During the life of the ticket, the command can be used again without a password prompt. If an unauthorized user attempts to execute a sudo command, a record of the unauthorized attempt is kept in the system log and a mail message is sent to the super user.
+
+Three man pages are associated with sudo: sudo, sudoers, and visudo. The first covers the command itself, the second the format of the /etc/sudoers file, and the third the use of the special editor for /etc/sudoers. You should use the special editing command because it checks the file for parse errors and locks the file to prevent other from editing it at the same time. The visudo command uses the vi editor, so you might need a quick review of

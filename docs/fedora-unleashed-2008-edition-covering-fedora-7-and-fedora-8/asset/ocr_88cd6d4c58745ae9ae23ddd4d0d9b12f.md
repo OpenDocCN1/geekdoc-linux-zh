@@ -1,0 +1,37 @@
+# # Compound Operators
+
+Perl uses compound operators, similar to those used by C or awk, which can be used to combine other operations (such as comparisons or arithmetic) into more complex forms of logic. Table 25.3 shows the compound pattern operators and their behavior.
+
+TABLE 25.3 Compound Pattern Operators in Perl
+| Operator | Meaning |
+| :--- | :--- |
+| && | Logical AND |
+| \|\| | Logical OR |
+| ! | Logical NOT |
+| ( ) | Parentheses; used to group compound statements |
+
+# # Arithmetic Operators
+
+Perl supports a wide variety of math operations. Table 25.4 summarizes these operators.
+
+TABLE 25.4 Perl Arithmetic Operators
+| Operator | Purpose |
+| :--- | :--- |
+| x**y | Raises x to the y power (same as x^y) |
+| x%y | Calculates the remainder of x/y |
+| x+y | Adds x to y |
+| x-y | Subtracts y from x |
+| x*y | Multiplies x times y |
+| x/y | Divides x by y |
+| -y | Negates y (switches the sign of y); also known as the unary minus |
+| ++y | Increments y by 1 and uses value (prefix increment) |
+| y++ | Uses value of y and then increments by 1 (postfix increment) |
+| --y | Decrements y by 1 and uses value (prefix decrement) |
+| y-- | Uses value of y and then decrements by 1 (postfix decrement) |
+| x=y | Assigns value of y to x. Perl also supports operator-assignment operators (=, -=, \*=, /=, %=, \*=, and others) |
+
+You can also use comparison operators (such as == or <) and compound pattern operators (&&, \|\|, and ! ) in arithmetic statements. They evaluate to the value 0 for false and 1 for true.
+
+# # Other Operators
+
+Perl supports a number of operators that don't fit any of the prior categories. Table 25.5 summarizes these operators.

@@ -1,0 +1,16 @@
+Most users find that the precompiled Fedora kernel suits their needs. At some point, you might need to recompile the kernel to support a specific piece of hardware or add a new feature to the operating system. If you have heard horror stories about the difficulties of recompiling the Linux kernel, you can relax; this chapter gives you all the information you need to understand when recompiling is necessary and how to painlessly work through the process.
+
+# # The Linux Kernel
+
+The Linux kernel is the management part of the operating system that many people call “Linux.” Although many think of the entire distribution as Linux, the only piece that can correctly be called Linux is the kernel. Fedora, like many Linux distributions, includes a kernel packaged with add-on software that interacts with the kernel so that the user can interface with the system in a meaningful manner.
+
+The system utilities and user programs enable computers to become valuable tools to a user.
+
+> ## The First Linux Kernel
+> In 1991, Linus Torvalds released version .99 of the Linux kernel as the result of his desire for a powerful, Unixlike operating system for his Intel 80386 personal computer. Linus wrote the initial code necessary to create what is now known as the Linux kernel and combined it with Richard Stallman's GNU tools. Indeed, because many of the Linux basic system tools come from the GNU Project, many people refer to the operating system as GNU/Linux. Since then, Linux has benefited as thousands of contributors have added their talents and time to the Linux project. Linus still maintains the kernel, deciding on what will and will not make it into the kernel as official releases, known to many as the vanilia or Linux Linux kernel.
+
+# # The Linux Source Tree
+
+The source code for the Linux kernel is kept in a group of directories called the kernel source tree. The structure of the kernel source tree is important because the process of compiling (building) the kernel is automated; it is controlled by scripts interpreted by the make application. These scripts, known as Makefiles, expect to find the pieces of the kernel code in specific places or they do not work. You will learn how to use make to compile a kernel later in this chapter.
+
+It is not necessary for the Linux kernel typical code to be installed on your system for the system to run or for you to accomplish typical tasks such as email, web browsing, or word processing. It is necessary that the kernel sources be installed, however, if you want to compile a new kernel. In the next section, we show you how to install the kernel source files and how to set up the special symbolic link required. That link is /usr/src/kernelis/<yourkernelversion>, and it is how we will refer to the directory of the kernel source tree as we examine the contents of the kernel source tree.

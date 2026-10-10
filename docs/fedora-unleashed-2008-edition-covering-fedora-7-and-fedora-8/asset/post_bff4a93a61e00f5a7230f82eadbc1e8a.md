@@ -1,0 +1,321 @@
+
+## 索引
+
+- Games, installing, 193-198
+- KDEedu package, 199
+- proprietary video drivers, installing, 192-193
+- Wine code, 191
+- **gcc (GNU Compiler Collection), 629, 635-636**
+  - switches list, 635
+- **gcc command, 638, 685, 809**
+- **gdb command, 635, 638**
+- **gdb tool (C/C++ programming), 635**
+- **gdm, configuring, 68-69**
+- **GDM (GNOME Display Manager), 341**
+  - gdm display manager, configuring, 68-69
+- **gdmsetup command, 74**
+- **gecos field (password file), 219**
+- **gedit, 93**
+  - gedit text editor (Linux), 93
+- **General options (Writer), 131**
+- **General setup subsection (kernel), 804**
+- **GetCodecs application, 172**
+- **gftp command, 477**
+- **Ghostscript**
+  - versions, 183
+  - web site, 189
+  - Ghostscript interpreter, 177
+  - website, 444
+  - Ghostscript printer drivers, 181
+- **GID (group ID), 204, 207**
+  - creating, 209
+- **gif (Graphics Interchange Format) files, 153**
+- **GIMP (GNU Image Manipulation Program), 139, 150-152**
+  - Adobe Photoshop, compared, 151
+  - Gnome Office, 139
+  - menus, 152
+  - website, 175
+  - xane, 152
+- **gimp command, 144**
+- **GiMP Tool Kit (GTK), 139**
+- **GKrellm, 265-266**
+- **Glade, 637**
+  - Glade client, 637-638
+- **glade-3 command, 638**
+- **Global Learning Services (Red Hat), 850**
+- **global level privileges (MySQL), 402**
+- **global options, configuring Fetchmail, 492**
+- **global positioning servers (GPS), 313**
+- **GNOME (GNU Network Object Model Environment), 53, 814**
+  - configuring, 55
+  - desktop environment, 54-55
+  - development of, 54
+  - File Roller, 282-283
+  - games, 191
+  - Glade client, 637-638
+  - handheld digital cameras, using, 156-157
+  - mailing list, 856
+  - metacity window manager, 55
+  - optimization, 675
+  - website, 75
+  - X. See X Window System
+- **GNOME Display Manager (GDM), 341**
+- **Gnome Office, 139-141**
+  - website, 145
+- **gnome-lookit command, 332, 666**
+- **gnome-nettool tool, 265**
+- **gnome-panel-screenshot mechanism, 155**
+- **gnome-system-monitor tool, 266**
+- **GnomeBaker, burning CD/DVDs, 160-162**
+- **GNU commands, 82**
+- **GNU Compiler Collection (gcc). See gcc (GNU Compiler Collection)**
+- **GNU Ghostscript, 183**
+- **Gnu Network Object Model Environment. See GNOME**
+- **GNU tools, 788**
+- **Gnumeric. Gnome Office, 139-141**
+- **gnumeric command, 144**
+- **Go to end of line command (emacs text editor), 96**
+- **Go to start of line command (emacs text editor), 96**
+- **gorg optical character recognition client, 152**
+- **Google BrowserSync, 107**
+- **Google search engine, 849**
+- **Gottmail, 496**
+- **government use of Fedora, 817**
+- **gPARTed, 11, 13-14**
+- **gpasswd, 209**
+- **GPG keys, 755**
+- gprof command, 635, 638
+- GPS (global positioning servers), 313
+- grabbers, 172
+- Gracemate CDBB Music Recoggition Service, 161
+- granting
+  - MySQL privileges, 402-403
+  - privileges, PostgreSQL, 407-408
+  - system administration privileges to regular users, 223-227
+- Graph view (System Monitor), 267
+- graphic interfaces, configuring Apache web servers, 364-366
+- graphical configuration tools, networks, 298-300
+- graphical database clients, 413
+- graphical desktops, 88
+- graphical development tools, C/C++ programming tools, 636-638
+- graphical login managers, X Windows System, 57
+- graphical logins, 88
+- graphical process management tools, 265-268
+- graphical process tools, 268
+- graphical system optimization, 675
+- graphical user interfaces (GUIs). See GUIs (graphical user interfaces)
+- graphics
+  - F-Spot photo-management application, 158
+  - formats, 153-155
+  - image captures, xwd UNIX screenshot tool, 710
+  - import command (ImageMagick), 709
+  - manipulating
+    - conversions, 153
+    - digital cameras, 155-159
+    - GIMP (GNU Image Manipulation Program), 150-152
+    - scanners, 151-153
+    - screen image capturing, 155
+- graphics cards, installing, 192-193
+- graphics drivers, importance of, 56
+- Graphics support subsection (kernel), 806
+- Green, Andy, 335
+- Greenwich Mean Time (GMT), 708
+- greeting command, FTP version information, hiding, 460
+- grep command, 82, 254, 685, 693-694
+  - chkconfig command output, 240
+  - grep string file(s) command, 82
+- Grid options (Writer), 131
+- grolop driver, 181
+- Group directive (httpd.conf file), 368-369
+- group ID. See GID
+- group management tools, 209-210
+- groupadd, 209
+- groupdel, 209
+- groupmod, 209
+- groups
+  - adding, 209
+  - deleting, 209
+  - devices, ownership changes, 209
+  - disk quotas, 227-229
+  - GIDs (group IDs), 207
+  - creating, 209
+  - managing, 208-209
+  - group management tools, 209-210
+    - tools, 209-210
+- gswebos command, 165-166
+- grpck, 209
+- GRUB, 840
+  - nondefault runlevels, booting into, 238-239
+  - passwords, 238
+- GRUB boot loader, 40, 233
+  - configuring, 27
+  - installing, 26
+- GRUB Manual, 257
+- Grub, Glorious Grub, 257
+- gs client, 177
+- gs command, 182
+- gThumb, 157
+- GfK (GIMP Tool Kit), 139
+- Gtk#, creating GUIs, 650-651
+- guest operating systems, setting up Xen virtualization system, 348-349
+- GUI Network Configuration tool, 515
+- GUIs (graphical user interfaces), 683
+  - adoption of, 53
+  - AIGL, 55-56
+  - Apache web servers, configuring, 364-366
+  - creating Gtk#, 650-651
+  - GNome, 53-55
+  - KDE, 73
+  - Xfce, 74
+- gunzip, 83
+- gzip, 83, 294
+- gzip package, Linux kernel, 796
+
+### H
+
+- hackers versus crackers, 656
+- hacking, autohacking, 656
+- Hammel, Michael J., 175
+- Hancock Office, 143
+  - website, 145
+- handheld digital cameras, 155-157
+- hard disk optimization, 669
+  - atime setting, disabling, 673
+  - with badblocks command, 673
+  - benchmarking, 669
+  - BIOS settings, adjusting, 670
+  - with e2fsck command, 673
+  - file system tuning, 672
+  - with hdparm command, 671-672
+  - with tune2fs command, 672-673
+- hard disks, fine tuning, 669-674
+- hard drive partition installation method (Fedora), 838
+- hard drive storage, 829-830
+- hard drives
+  - components of, 768
+  - formatting, 779
+  - installing, 779
+  - master/slave jumpers, 779
+  - partitioning, 21-25, 839-840
+  - for Fedora installs, 21-22, 840-841
+  - partitioning scheme, selecting, 840-841
+  - separate partitions for file system, 841-842
+- hard links, 696
+- hardware
+  - backups, 277-279
+  - BIOS (problem detection), 232
+  - compatibility, checking, 830-831
+  - controller cards, 830
+  - controllerless modems, problems, 831
+  - CPUS, 830
+  - problems, 833-834
+  - hard disks, performance tuning, 669-674
+  - input devices, 830
+  - inventories, preparing, 834, 837
+  - legacy hardware, 828-829
+  - memory, problems, 833-834
+  - modems, 830
+  - motherboard-based hardware, problems, 832-833
+  - motherboards, 830
+  - multimedia, 169-172
+  - network cards, 830
+  - personal video recorders, 173-174
+  - pointing devices, 830
+  - with preinstalled Linux, 828
+  - printers, 830
+  - problems, preparing for, 831-834
+  - RAM, 830
+  - sound cards, 830
+  - storage devices, 831
+  - symmetric multiprocessing, problems, 833-834
+  - USB devices, problems, 832
+  - video cards, 831
+  - hardware compatibility, checking (Fedora installation), 830-831
+  - hardware compatibility database (Red Hat), 845
+  - hardware inventory checklist, 834-837
+  - hardware requirements, 827-829
+    - for Fedora installation, 827-828
+    - controllerless modem problems, 831-832
+    - CPU problems, 833-834
+    - hard drive storage, 829-830
+    - hardware compatibility, checking, 830-831
+    - inventory checklist, 834-837
+    - legacy hardware usage, 828-829
+    - memory problems, 833-834
+    - minimum requirements, 828
+    - motherboard-based hardware problems, 832-833
+    - USB device problems, 832
+- Hardware tab (system-config-display client), 65-66
+- hashes, Perl, 566-567
+- HDSL (high-level data link control), 325
+- hdparm command, 671-672
+- hdx=ide-ccsl command, 670
+- header files, 630
+- headerless files, 168
+- headless servers, 233
+- Heijsberg, Anders, 852
+- Help command (emacs text editor), 96
+- Heuser, Werner, 854
+- Hewlett-Packard, Linux, 814
+- lfs modules (file system), 758
+- hidden processes, viewing, 266
+- HIDs (human interface devices), 806
+- High Performance MySQL, 681
+- high-level data link control (H DLC), 325
+- high-level formatting (file systems), 772
+- history
+  - of Red Hat, 813-814
+  - of RPM, 738
+- HMAC-MD5 algorithm, 526
+- home directories
+  - commands, 86
+  - separate partition for, 841
+  - users, creating, 211
+- Home icon, 41, 45
+- HOME lines (/etc/crontab file), 250
+- home offices, 818
+- home-related features, Fedora, 818
+- home-user backup strategies, 275
+- Horvath, David B., 639
+- host command, 549
+  - nameservers, querying, 520
+- host.conf files, DNS client configuration, 513
+- hosting
+  - Linux file system, separate partitions, 841-842
+  - virtual hosting, Apache web server, 382-384
+- hostname command, 431
+- host files, DNS client configuration, 514-515
+- Hotmail, 489
+- Hotwayd, 496
+- HOWTO documents, 851
+  - chroot-BIND, 544
+  - disk quotas, 229
+  - DVDs, 164
+  - LILo configuration, 809
+  - LVM, 781
+  - Network Boot and Exotic Root, 659
+  - Path HOWTO, 230
+  - Shadow/Password, 230
+  - User-Authentication, 230
+  - UuidLAN, 174
+- htaccess configuration files, Apache web server, 371-372
+- HTML (Hypertext Markup Language), 105
+- HTML forms, handling (PHP), 626
+- htpasswd command, 375
+- HTTP (HyperText Transfer Protocol), 105
+  - installing Fedora, 16
+- http command, 386
+- http.conf file, Apache web server, 367
+  - editing, 368-370
+- HTTP Mail, 496
+- human interface devices (HIDs), 806
+- hwclock command, 28
+- hwclock shell command, 709
+- Hypertext Markup Language (HTML), 105
+- Hypertext Transfer Protocol (HT TP), 105
+- hyphenation dictionaries, OpenOffice.org, 129
+
+### I
+
+- `i` option, rpm command, 739-740
+- 120 device support subsection (kernel), 805

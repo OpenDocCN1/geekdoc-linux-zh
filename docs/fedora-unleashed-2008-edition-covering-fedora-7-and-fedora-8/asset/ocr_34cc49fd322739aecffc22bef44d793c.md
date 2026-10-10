@@ -1,0 +1,36 @@
+TABLE 11.1  Continued
+
+| Name | Description | Location |
+|---|---|---|
+| csh | The C shell, a symbolic link to tcsh | /bin/csh |
+| ksh | The Korn shell | /bin/ksh, /usr/bin/ksh |
+| pdksh | A symbolic link to ksh | /usr/bin/pdksh |
+| rsh | The restricted shell (for network operation) | /usr/bin/rsh |
+| sash | A standalone shell | /sbin/sash |
+| sh | A symbolic link to bash | /bin/sh |
+| tcsh | A csh-compatible shell | /bin/tcsh |
+| zsh | A compatible csh, ksh, and sh shell | /bin/zsh |
+
+# Learning More About Your Shell
+
+All the shells listed in Table 11.1 have accompanying man pages, along with other documentation under the `/usr/share/doc` directory. Some of the documentation can be quite lengthy, but it is generally much better to have too much documentation than too little! The *bash* shell includes more than 100 pages in its manual, and the *zsh* shell documentation is so extensive that it includes the *zshall* meta man page (use man zshall to read this overview)!
+
+# The Shell Command Line
+
+Having a basic understanding of the capabilities of the shell command line can help you write better shell scripts. If, after you have finished reading this short introduction, you want to learn more about the command line, check out Chapter 32, “Command-Line Master Class.” You can use the shell command line to perform a number of different tasks, including
+
++   - Getting data from and sending data to a file or command, known as *input* and *output redirection*.
+
++   - Feeding or filtering a program’s output to another command (called using *pipes* ).
+
+A shell can also have built-in *job-control* commands to launch the command line as a background process, suspend a running program, selectively retrieve or kill running or suspended programs, and perform other types of process control.
+
+Multiple commands can be run on a single command line, with a semicolon to separate commands:
+
+```
+$ w ; free ; df
+6:02pm up 4 days, 24 min, 1 user, load average: 0.00, 0.00, 0.00
+USER TTY FROM LOGIN IDLE JCPU PCPU WHAT
+bball pts/0 shuttle.home.org 1:14pm 0.00s 0.57s 0.01s w
+total used free shared buffers cached
+```

@@ -1,0 +1,35 @@
+```
+```
+ file "foo.example.com";
+ masters {
+ 192.0.2.96;
+ };
+};
+```
+
+```
+
+Similarly, your friend must configure `192.0.2.96`, which is a master for `foo.example.com` and a slave for `example.com`. She must also configure her server to accept mail addressed to `example.com`. Usually, `mx2` would just queue the mail until it could be delivered to `mx1`.
+
+# ## Reverse Zone
+
+Take a moment to pretend that we live in a perfect world: Your highly competent ISP has successfully delegated authority of your reverse zone to you, and you must set up named to handle reverse resolution, too. This process is very similar to what you used to set up the reverse zone for `0.0.127.in-addr.arpa`. Now, however, you must determine your zone’s name.
+
+DNS can delegate authority only at the `.` in domain names; as a result, you can set up reverse zones for the whole of a class A, B, or C network because they are divided at octet boundaries in the IP address. This approach is clearly unsuitable for classless subnets such as yours because the divisions are not at octet boundaries, but in the middle of an octet. In other words, your network cannot be described as `x.*` (Class A), `x.y.*` (Class B), or `x.y.z.*` (Class C). The latter comes closest, but includes several addresses (such as `192.0.2.22`) that do not belong to the tiny `192.0.2.0/29` network. To set up a reverse zone for your network, you must resort to the use of classless delegation (described in RFC 2317).
+
+The ISP, which is authoritative for the `2.0.192.in-addr.arpa` zone, must either maintain your reverse zone for you or add the following records into its zone file:
+
+```
+```
+  1      CNAME   1.1-6
+  2      CNAME   2.1-6
+  3      CNAME   3.1-6
+  4      CNAME   4.1-6
+  5      CNAME   5.1-6
+  6      CNAME   6.1-6
+
+  1-6    NS      192.0.2.1
+  1-6    NS      192.0.2.96
+```
+
+```

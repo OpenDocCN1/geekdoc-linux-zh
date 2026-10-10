@@ -454,6 +454,7 @@
 +   [Fedora Linux 服务器与 systemd · 第 3 版](docs/fedora-linux-servers-with-systemd-3rd-edition/README.md)
 +   [Systemd 与 Fedora Linux 服务器：第二版](docs/fedora-linux-servers-with-systemd-second-edition/README.md)
 +   [Fedora Linux toolbox：面向 Fedora、CentOS 和 Red Hat 高级用户的 1000+ 命令指南](docs/fedora-linux-toolbox-1000-commands-for-fedora-centos-and-red/README.md)
++   [Fedora 完全掌握指南，2008 年版：涵盖 Fedora 7 和 Fedora 8](docs/fedora-unleashed-2008-edition-covering-fedora-7-and-fedora-8/README.md)
 +   [大规模存储光纤通道](docs/fibre-channel-for-mass-storage/README.md)
 +   [Flash ActionScript：创建 Flash 增强网站的视觉化蓝图](docs/flash-actionscript-your-visual-blueprintfor-creating-flash--/README.md)
 +   [ARM64 Linux 调试、反汇编与逆向工程基础指南](docs/foundations-of-arm64-linux-debugging-disassembling-and-rever/README.md)

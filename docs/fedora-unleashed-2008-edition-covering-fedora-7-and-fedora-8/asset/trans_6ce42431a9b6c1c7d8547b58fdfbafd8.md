@@ -1,0 +1,335 @@
+
+
+## 索引
+
+- security
+  - 网桥, 662
+  - 灾难恢复计划, 664-665
+    - Tripwire 安全工具, 660-661
+  - 病毒, 662
+- 无线网络
+  - 接入点, 659
+  - 配置, 49-52
+  - 安全加固, 658-659
+- “The New Korn Shell”, 736
+- news.gmane.org, 120
+- newsgroups, 855-856
+  - Usenet 新闻组, 119-120
+- newsgroups (Usenet), 119-120
+- Pan 新闻阅读器, 120-122
+- 新闻阅读器, 120-122
+- newssers 命令, 223, 229
+- next 语句, Perl 编程语言, 573
+- NFS (Network File System), 237, 415-416, 761
+  - 客户端配置, 418-419
+  - 通过其安装, 838
+  - 服务器配置, 416-418
+- NFS (Network File System) 安装方法 (Fedora), 838
+- nfs 模块 (文件系统), 758
+- NFS Root Client 简版 HOWTO, 786
+- NFS-Root 简版 HOWTO, 786
+- nice 命令, 262
+- NICs (network cards), 297
+  - 配置, 310
+  - 混杂模式, 661
+- nmap 命令, 435, 667
+  - 漏洞评估，执行, 657-658
+- NNTP (Network News Transfer Protocol), 120
+- noatun 播放器, 173
+- noload 模式, ext3 磁盘文件系统, 774
+- nofailfast 运行级别，引导进入, 238-239
+- None 开关 (Options 指令), 371
+- 非矩形窗口, X Windows 系统 (支持), 57
+- 普通整数, Python 脚本语言, 581
+- Northup, Charles J., 736
+- 笔记本。参见 laptops
+- Novell，网站, 75
+- NS 记录, 531
+- NSA (National Security Agency), 35
+- nslookup 命令，查询名称服务器, 520-521
+- nsswitch.conf 文件，DNS 客户端配置, 513-514
+- ntpdate 命令, 549
+- nfs 模块 (文件系统), 758
+- ntsys 命令, 247
+  - 系统服务，配置, 240-242
+- 数字比较 (表达式比较), 726-727
+- 编号方案，内核, 816
+- 数字, Python 脚本语言, 581-582
+- 数值比较运算符, Perl 编程语言, 568
+- NVIDIA, 192-193
+  - Linux 驱动程序支持论坛, 200
+  - Linux 驱动程序, 200
+
+## O
+
+- -o 逻辑比较运算符, 728
+- 对象数据类型 (PHP), 601
+- 对象变量, Python 脚本语言, 592-593
+- OCR (Optical character recognition), 152
+- OCS (Oracle Collaboration Suite), 498
+- 八进制表示法，权限, 214
+- Office (Microsoft, OpenOffice.org (兼容性)), 125
+- 办公套件, 138
+  - Gnome Office, 139-141
+  - KOffice, 141-143
+  - OpenOffice.org, 46
+- Ogg 音频格式, 147
+- Ogg CD 抓轨工具, 175
+- Ogg Vorbis 文件, 168
+- Old CD-ROM 驱动程序子部分 (内核), 805
+- oocalic 命令, 144
+- oompress 命令, 144
+- OOP (object-oriented programming), Python 脚本语言, 591-592
+  - 类层次结构, 593-595
+  - 类, 592-593
+  - 构造函数, 593
+  - 析构函数, 593
+  - 模块, 596
+  - 多重继承, 595-596
+  - 对象变量, 592-593
+  - 引用, 597
+  - Vaults of Parnassus, 596
+  - 网站, 597
+- oowriter 命令, 144
+- 开源开发模式，红帽, 814
+- Open Xchange 消息服务器, 498
+- OpenBSD, 78
+- OpenDocument，标准化, 138
+- OpenLDAP 551
+  - 文件权限, 556
+  - 网站, 559
+- OpenOffice.org, 46, 126
+  - Base, 127
+  - Calc, 126, 133-134
+    - 数据汇总, 136-138
+    - 格式化, 134-136
+    - 启动, 133-134
+    - 汇总数据, 136-138
+    - 配置, 128-129
+    - 开发, 127
+    - Dia, 127
+    - Draw, 127
+    - 历史, 127
+    - 连字符词典, 129
+    - Impress, 127
+    - 安装, 128-129
+    - 安装和配置, 128-129
+    - Math, 127
+    - Microsoft Office，兼容性, 125-126
+    - Planner, 127
+    - 拼写词典, 129
+    - 网站, 128
+  - Writer, 126, 129-132
+- OpenPVR, 174
+- OpenSound.com, 175
+- OpenSSH, 446
+  - 网站, 477
+- OpenSSH 服务器
+  - 配置, 336-337
+  - ftp 命令, 337
+  - rcp 命令, 337
+  - scp 命令, 338
+  - sftp 命令, 339
+  - ssh-keygen 命令, 339-341
+  - 网站, 343
+- OpenSSH 相关工具, 659
+- 操作数, 607
+- 操作系统
+  - 来宾操作系统，设置, 348-349
+  - 安装挑战, 821
+- 运算符重载, Python 脚本语言, 585
+- 运算符
+  - Perl 编程语言, 568-570
+  - PHP 607-608
+  - 特殊运算符, 610
+  - Python 脚本语言, 581
+- /opt 目录，独立分区, 841
+- 光学字符识别 (OCR), 152
+- 优化, 669
+  - Apache 优化, 675-676
+  - Apache  web 服务器, 675-676
+  - 基准测试, 669
+  - 文件系统, 672-673
+  - 图形系统优化, 675
+  - 硬盘优化, 669
+    - 原子设置，禁用, 673
+    - 使用 badblocks 命令, 673
+    - 基准测试, 669
+    - BIOS 设置，调整, 670
+    - 使用 e2fsck 命令, 673
+    - 文件系统调优, 672
+    - 使用 hdparm 命令, 671-672
+    - 使用 tune2fs 命令, 672-673
+  - 硬盘, 669-674
+  - 内核, 674-675
+  - 内核优化, 674-675
+  - MySQL, 677-681
+  - 引用, 681
+- 选项
+  - rpm 命令, 739-744
+  - Writer (OpenOffice.org), 131
+
+## P
+
+- Options 指令 (Apache web 服务器), 371-372
+- options 字段 (ftpconversions 文件), 469
+- Options 开关 (AllowOverrides 指令), 372
+- Oracle, Linux, 使用, 814
+- Oracle Collaboration Suite (OCS), 498
+- ordered 模式, ext3 磁盘文件系统, 764, 774
+- 组织单元, 554
+- Owant, Jon, 578
+- OSS (Open Sound System) 声卡驱动程序, 166
+- OUs (organizational unit), 554
+- Outlook, 498
+- 输出，翻页 (less 命令), 694-696
+- 输出重定向, 253
+- CD 过度烧录, 164
+- 超频, 833
+- 过热, 834
+- 文件所有权, 用户, 204
+- parted 命令, 771, 785, 840
+- 分区表
+  - 创建, 769-771, 779
+  - 手动恢复, 290-291
+- 在文件系统上创建分区磁盘, 772-774
+- 分区
+  - Fedora 安装的硬盘分区, 21-26, 839-840
+  - 选择分区方案, 840-841
+  - 文件系统的独立分区, 841-842
+  - 安装, 839-842
+  - 准备安装 Fedora, 10-13
+  - 分区方案，选择, 840-841
+- PartitionMagic 实用工具, 40
+- 分区, 10
+  - 扩展分区, 769
+  - 文件系统, 760
+  - 文件，传输到, 780-781
+  - Linux 文件系统，托管, 841-842
+  - 挂载, 780-781
+  - 作为只读, 784
+  - 策略, 10-14
+- 包。另见 软件
+  - dvd+rw-tools, 165
+  - FTP 服务器, 446
+  - 库存管理, yum 工具, 749
+  - 生产力, 46-47
+  - 移除 yum 命令, 747
+- 数据包浏览, 662
+- 数据包写入, DVD, 165-166
+- PAM (Pluggable Authentication Modules), 220-222
+  - 网站, 230
+- Pan 新闻组新闻阅读器, 120-122
+- Pan 新闻阅读器, 120-122
+- 面板 (桌面), 41
+- Parallel port 支持子部分 (内核), 804
+- 参数
+  - BSD 风格参数, 701
+  - Mono，打印输出, 645
+  - 位置参数, shell 脚本变量, 716-718
+- 半虚拟化, 与虚拟化的区别, 346
+- passive 命令, 454
+- passwd, 85, 211, 229
+- passwd 文件 (/etc 目录), 85
+- passwd 文件, 203
+- 密码文件, 219-220
+- 密码策略, 219
+- 密码
+  - 分配, LDAP 553
+  - 批量密码，更改, 222-223
+  - BIOS, 29
+  - 引导加载程序, 27-29, 659
+  - 为组创建, 209
+  - FTP 用户, 448
+  - GRUB, 238
+  - 管理, 218-223
+  - MySQL root 用户，设置, 401
+  - 网络, 659-660
+  - 密码文件, 219-220
+  - 策略, 219
+  - root 密码, 29-31
+
+*如何使此索引更有用？请通过电子邮件联系我们：indexes@sams-publishing.com*
+
+- shadow 密码, 220-221
+- 用户，更新, 211
+- patch 命令, 638, 798
+- 打过补丁的内核, 794
+- 打补丁，Linux 内核, 797-798
+- **PATH**, 91
+- PATH 环境变量 (Linux), 91
+- Path HOWTO 文档, 230
+- PATH 行 (/etc/crontab 文件), 250
+- 模式匹配支持，shell, 254-255
+- PCI (Peripheral Component Interconnect), 833
+- PCI Express 卡, 833
+- pci-biosig 命令, 670
+- pcx (IBM Paintbrush) 文件, 153
+- PDAs, Linux 资源, 854
+- PDFs, 标准化, 138
+- pdksh shell, 253
+- 峰值性能 (Apache web 服务器)，配置以, 386
+- 性能调优, 669. 另见 优化
+  - Apache web 服务器, 675-676
+  - 硬盘, 669-674
+  - 内核, 674-675
+  - MySQL, 677-681
+- 定期基础，完全备份, 276
+- 外设和系统库存清单, 835-837
+- Peripheral Component Interconnect (PCI), 833
+- Perl (Practical Extraction and Report Language), 563
+  - 数组, 567
+  - 优势, 563-564
+  - 命令行错误，故障排除, 565
+  - 命令行工具, 577
+  - 条件语句, 570-571
+  - 数据结构, 566-568
+  - 文档, 566
+  - 哈希, 567
+  - if/else, 571
+  - 循环, 572-574
+  - 运算符, 568-570
+  - 引用, 578
+  - 正则表达式, 574-575
+  - 标量, 566
+  - shell, 575-577
+  - 简单的 Perl 程序示例, 564-566
+  - 字符串常量, 570
+  - 系统日志记录, 564
+  - 变量, 566-568
+  - 版本, 564
+  - The Perl Journal, 578
+  - Perl 语言主页, 577
+  - Perl Mongers 网站, 578
+  - periodic 命令, 566
+  - perfume 文档，访问, 566
+  - 权限控制指令，配置 wi-ftpd 服务器, 464-466
+- 权限
+  - 分配, 214
+  - 目录权限, 215-217
+  - 文件访问权限，更改, 689
+  - 文件权限, 211
+    - OpenLDAP 556
+  - 文件, 759
+  - FTP 用户，分配, 448
+  - 组权限, 208-209
+  - 管理, 213-218
+  - sgid 权限, 217-218
+  - suid 权限, 217-218
+- 个人视频录像机, 173-174
+- pgaccess 命令, 414
+- pg_ctl 命令, 414
+- PhoeniX, Tom, 578
+- Photophop，与 GIMP (GNU 图像操纵程序) 比较, 151
+- PHP
+  - 数组, 602-603
+  - 多维数组, 602
+  - 注释, 604
+  - 条件语句, 608-611
+  - 常量, 603-604
+  - 数据类型, 600-601
+  - 开发, 599
+  - 进入/退出, 600
+  - 转义序列, 605-606
+  - 文件，包含其他文件, 614-615
+

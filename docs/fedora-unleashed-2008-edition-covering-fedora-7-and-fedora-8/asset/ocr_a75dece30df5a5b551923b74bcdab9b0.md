@@ -1,0 +1,32 @@
+Samba settings to share directories and printers. You will then see how to test your Samba configuration.
+
+# Sharing Home Directories Using the [homes] Section
+
+The [homes] section shares out Fedora home directories for the users. The home directory is shared automatically when a user's Windows computer connects to the Linux server holding the home directory. The one problem with using the default configuration is that the user sees all the configuration files (such as .profile and others with a leading period in the filename) that he normally wouldn't see when logging on through Linux. One quick way to avoid this is to include a path option in the [homes] section. To use this solution, each user who requires a Samba share of his home directory needs a separate "home directory" to act as his Windows home directory.
+
+For example, this pseudo home directory could be a directory named share in each user's home directory on your Fedora system. You can specify the path option when using SWAT by using the *\u* option when specifying a path for the default homes shares. The complete path setting would be as follows:
+
+```
+/home/\u/share
+```
+
+This setting specifies that the directory named share under each user's directory is the shared Samba directory. The corresponding manual smb.conf setting to provide a separate "home directory" looks like this:
+
+```
+[homes]
+comment = Home Directories
+path = /home/\u/share
+valid users = %S
+read only = No
+create mask = 0664
+directory mask = 0775
+browsable = No
+```
+
+If you have a default [homes] section, the share shows up in the user's Network Neighbourhood as the user's name. When the user connects, Samba scans the existing sections in smb.conf for a specific instance of the user's home directory. If there is not one, Samba looks up the username in /etc/passwd. If the correct username and password have been given, the home directory listed in /etc/passwd is shared out at the user's home directory. Typically the [homes] section looks like this (the browsable = no entry prevents other users from being able to browse your home directory and using it is a good security practice):
+
+```
+[homes]
+browsable = no
+writable = yes
+```
