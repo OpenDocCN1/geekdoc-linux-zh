@@ -1,0 +1,51 @@
+
+### 启动 Mozilla 并配置辅助应用程序
+
+1. 通过在 `xterm` 中输入 `mozilla` 或从您的窗口管理器或桌面环境菜单中选择它来启动 Mozilla。
+
+2. 从 Mozilla 菜单栏中选择**编辑 | 首选项**。此操作会生成首选项对话框，您可以从中配置 Mozilla。
+
+3. 从首选项对话框左侧的可展开菜单中选择**导航器 | 辅助应用程序**。Mozilla 将显示如图 27-7 所示的辅助应用程序工具。
+
+![](img/f34d37e3abe9f4517128e54f80ab2616_701_0.png)
+
+**图 27-6.** 视频播放工具提供类似于音频播放工具的控制功能，但还会显示视频图像，以配合文件的声轨。
+
+4. 单击“新建类型”。Mozilla 将显示“新建类型”对话框，您在其中输入四项信息：描述（供您以后参考）、文件名扩展名（例如 `.wav` 或 `.avi`）、MIME 类型以及处理该文件类型的应用程序的完整路径。表 27-1 汇总了某些常见 AV 文件格式的 MIME 类型，以及可以处理这些文件程序的程序路径。
+
+5. 在“新建类型”对话框中单击“确定”。您应该看到新类型已添加到首选项对话框中。
+
+6. 在首选项对话框中单击“确定”。
+
+> **提示** 如果不确定某文件类型的适当 MIME 类型，并且您的系统上安装了 Apache，请检查 `/usr/local/etc/apache2/mime.types` 文件。您还可以在网页上找到 MIME 类型列表，例如 `http://www.december.com/html/spec/mime.html`。
+
+![](img/f34d37e3abe9f4517128e54f80ab2616_702_0.png)
+
+图 27-7. 首选项中的 Mozilla 辅助应用程序工具允许您将应用程序与 MIME 类型相关联。
+
+| 文件类型 | 文件名扩展名 | MIME 类型 | 可能的 FreeBSD 辅助应用程序 |
+|---|---|---|---|
+| WAV 音频文件 | `.wav` | `audio/x-wav` | `/usr/local/bin/play` |
+| MP3 音频文件 | `.mp3` | `audio/mpeg` | `/usr/local/bin/x11amp` |
+| MPEG 视频文件 | `.mpg`, `.mpeg`, `.mpe` | `video/mpeg` | `/usr/X11R6/bin/xanim` |
+| QuickTime 视频文件 | `.mov`, `.qt` | `video/quicktime` | `/usr/X11R6/bin/xanim` |
+| AVI 视频文件 | `.avi` | `video/x-msvideo` | `/usr/X11R6/bin/xanim` |
+| RealAudio 文件 | `.ra` | `audio/x-realaudio` | `/usr/local/bin/realplay` |
+| RealAudio 文件 | `.rpm` | `audio/x-pn-realaudio-plugin` | `/usr/local/bin/realplay` |
+| RealAudio 文件 | `.ram` | `audio/x-pn-realaudio` | `/usr/local/bin/realplay` |
+| RealVideo 文件 | `.rv` | `audio/vnd.rn-realaudio` | `/usr/local/bin/realplay` |
+| RealMedia 文件 | `.rm` | `video/vnd.rn-realvideo` | `/usr/local/bin/realplay` |
+
+> 表 27-1. 常见 AV 文件类型、其扩展名和 MIME 类型，以及可能的 FreeBSD 播放器
+
+一旦将 MIME 类型链接到适当的播放器，下次您单击指向该类型文件的链接时，Web 浏览器应该会启动播放器应用程序。不过，它可能会先询问您是否始终希望将该类型的文件链接到您选择的应用程序。如果您的查看器是 Linux 查看器，则必须启用 Linux 二进制兼容性，如第 4 章所述。
+
+> 在某些情况下，自动启动播放器是不明智的——例如，当文件类型可以包含程序代码，如脚本或可执行程序时。此外，某些文件格式可能会与其他文件混淆；例如，RealPlayer 文件使用的 `.rpm` 扩展名也被 Linux 程序的 Red Hat 包管理器 `RPM` 包文件使用。因此，Web 服务器可能会错误地设置此类包的 MIME 类型。
+
+### 使用 FreeBSD 进行娱乐：游戏
+
+大多数游戏都是多媒体应用程序，尽管也有例外——许多早期文本模式游戏可用于 FreeBSD，它们并不比其他文本模式程序更配得上“多媒体”这个称号。FreeBSD 拥有种类繁多的游戏，但按照当今的标准，大多数都很简单。大多数华丽的商业游戏仅针对 Windows 发布，有时也针对 Mac OS 发布，这使得 FreeBSD 用户无从入手。不过，有些游戏可用于 Linux，而 FreeBSD 可以使用其 Linux 兼容库运行这些程序中的许多。您甚至可以使用 `WINE`（在第 4 章中描述）运行某些 Windows 游戏。
+
+#### 传统的文本模式 UNIX 游戏
+
+在 20 世纪 70 年代和 80 年代，UNIX 还年轻的时候，按照当今的标准，计算机游戏总体上非常原始。事实上，许多最早的计算机游戏都是为 UNIX 编写的。这些游戏使用文本模式显示，使用散文来描述玩家的游戏环境和动作（例如经典游戏 *Adventure* 中的“*你身处一个迷宫般的扭曲小通道，它们都一模一样*”），或使用简陋的基于文本的图形——例如，使用竖线和短划线来标记迷宫。您可以在 `games` 软件包或 `ports` 部分找到各种基于文本的游戏，但其中许多游戏并未明确标记为基于文本。如今，大多数人可能对基于 X 的游戏更感兴趣，这些游戏可以显示复杂的图形。然而，有一类基于文本的游戏幸存下来并继续得到开发：冒险游戏。这类游戏以经典的 *Adventure* 命名，创建的场景类似于小说中找到的，并使用小说所使用的那种散文和讲故事技巧。在冒险游戏中，您扮演主角，并向游戏发出指令。例如，下面是使用 FreeBSD 中的 `Frotz` 玩商业游戏 *Planetfall* 时的一小段会话：
