@@ -1,0 +1,13 @@
+If, on the other hand, a program is deemed not too useful, the creator is left to his own devices. If he doesn't see the need to continue working, the buggy program falls into disuse unless someone else wishes to claim it.
+
+By this method, something akin to Darwin's natural selection, programs that serve little purpose are little used and eventually fall out of circulation. They become extinct, if you will. Programs with good potential are picked up by the open-source community and revised and improved upon until they no longer can be. This is the process of software evolution.
+
+Software evolution accounts for the propensity of programs to become viable quickly. Under the Open Source model, programs are developed quickly, and bugs are soon phased out. The closed model, however, provides for no outside help, so the programmers working on a project must debug the code entirely by themselves. This takes much longer, resulting in fewer and more expensive updates to software. In addition, it doesn't necessarily mean that we can gauge the usefulness of a program. Before a commercial program is released, it is usually given to a select group of people known as “beta testers,” who search for bugs and report them so that the programmers can fix the problems. In the Open Source model, once a reasonably stable version of a program is available, literally the entire Open Source community can beta test the program; this generates more bug reports and faster fixes for little to no cost.
+
+On the other hand, in a commercial capacity a program could easily cost up to a hundred dollars without actually being very useful. The Open Source model allows for poor ideas to die quickly with little cost to the consumer.
+
+Eric Raymond has detailed some of his experiences in the Open Source community in a paper entitled “The Cathedral and the Bazaar” (1996); check the resource list at the back of the book to find his web page. This is a very detailed description of an experiment with the Open Source model, and the results convinced Raymond to pioneer the Open Source Initiative (with help from others). That web page can also be found in the resource list.
+
+# What Are the Advantages of Open Source?
+
+We've mentioned at least one in brief above: programs released using the Open Source model are frequently of higher quality and updated faster than programs released commercially. Many of these programs are also released free of

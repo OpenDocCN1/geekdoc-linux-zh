@@ -1,0 +1,11 @@
+of your system. After the computer comes the *operating system*, which provides a way for the devices in your computer to interact with the computer itself. It also allows for outside interaction from you in the form of commands and such. It does this by way of a command interpreter or shell. You interact with the shell using the command line.
+
+The command line is really a function of that *command interpreter* or shell. The term “command interpreter” is a little more descriptive, since what a shell actually does is parse commands so that the operating system can understand them. The operating system will then send them via devices attached to the computer to the computer, which will then perform the requested task, using the operating system and shell to output any results.
+
+You interact with the operating system through the command line either directly or indirectly. The X-Window System, for instance, is dependent upon the shell to execute its own commands. If the X-Window System ever aborts and drops you to a shell prompt, you will notice that there are a lot of commands on the screen (and likely many error messages, too). So even when you’re dealing with Linux through a graphical user interface (GUI) such as the X-Window System, you are indirectly making use of the command-line interface.
+
+You could compare our terminal window access to the command line to the DOS mode or prompt in Windows9x. Unlike Windows, however, Linux makes use of numerous different shells. This allows users to pick which command interpreter they wish to use, and upholds the spirit of customization and choice that the Linux world is founded upon. The default shell used by Red Hat Linux is the Bourne-Again Shell (bash). Others, such as the C Shell (used and developed by C programmers, named csh), the Korne Shell (ksh), the Bourne Shell (sh), the Z Shell (zsh), and more, are used by millions of Linux users worldwide. The three most popular are bash, csh, and ksh.
+
+The difference between each of these shells is how they interpret commands that you send to the shell. Some shells also come with special functions. The C Shell, for instance, is used primarily by programmers who wish to take advantage of its special environment.
+
+You should probably keep using bash until you’re more familiar with how to use the command line.

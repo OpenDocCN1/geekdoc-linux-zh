@@ -1,0 +1,13 @@
+Apple computers tended to be better than the AT or XT clones in the “good old days.” Unfortunately, this meant that they were also more expensive. Money drives the market, as they say, and this is no exception. Apple was unable to gain a foothold among common users because of the price tag involved in using an Apple or Macintosh computer.
+
+When the Macintosh Operating System (MacOS) came out, it brought with it a new level of usability. This is Steve Jobs’ contribution to the computer industry. Users could interact using a windowed system and a mouse. MacOS brought new meaning to the term “user-friendly.” During this time, however, Microsoft had noted the achievements of the Macintosh operating system and developed them for itself. This eventually took shape in the form of Windows, which quickly catapulted to the head of the operating system race, at least in the personal computing environment. This was mostly due to marketing. Bill Gates did a better job of selling his operating system than Steve Jobs (CEO of Apple Computer) did, even though Windows was less than original.
+
+As UNIX continued to dominate the server and mainframe aspects of the computing world, Microsoft began developing products like Windows NT to compete with UNIX. While NT has gained more ground, flirting with a significant portion of the server market, UNIX still runs a majority of the computers involved in the Internet and other server-related activities all over the world.
+
+It is only lately, with the development of concerns about Microsoft’s monopoly status and the demand for more reliable and inexpensive personal computing equipment, that UNIX has begun to take strides in the personal computing world. This has come about with the advent of the Open Source Initiative and Linux.
+
+This discussion of various operating systems has left out a number of details. I have sought to establish here the causes for the present make-up of the operating system world. There have been other attempts at breaking into the commercial operating system business, such as those by OS/2 and OS/2 Warp, BeOS, and others. However, the computing world today runs on essentially three operating systems: Microsoft Windows, MacOS, and UNIX (and the derivatives thereof).
+
+# **The Development of Linux**
+
+The roots of Linux stem from an operating system known as MINIX, developed by a Dutch professor named Andrew Tanenbaum. Tanenbaum developed MINIX mostly for university students who needed to understand the workings
