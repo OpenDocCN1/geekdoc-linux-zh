@@ -1,0 +1,2 @@
+
+`init <number of runlevel>`
