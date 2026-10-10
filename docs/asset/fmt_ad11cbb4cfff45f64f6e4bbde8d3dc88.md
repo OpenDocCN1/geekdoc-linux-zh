@@ -1,0 +1,160 @@
+
+你也可以从 `www.kernel.org` 下载内核源码。此版本未针对 Fedora 进行优化。它应该放在你选择的目录中，而不是 `/usr/src/linux`。内核源码以压缩包（`.tar.gz`）的形式存在。它们以 `linux` 为前缀，版本名为后缀。你解压并使用 `Fileroller` 或 `tar` 命令解包。你首先切换到你选择的本地目录，然后解包创建一个以前缀 `linux` 命目录，其中存放源文件。以下示例创建了 `2.6.29.6` 内核
+
+```
+cd mykernel
+tar -xzv linux-2.6.29.6.tar.gz
+```
+
+# 从原始源码编译并安装内核
+
+要使用源代码编译并安装内核，你需要运行一系列 `make` 操作，首先编译内核，然后安装内核及其模块。现在配置已就绪，你可以编译内核。你可以使用 `help` 选项显示选项。
+
+```
+make help
+```
+
+# 编译并安装 RPM
+
+一旦你完成了内核的修改，就会生成内核二进制文件并将其封装成 RPM。内核包将放在 `RPMS` 目录中。
+
+```
+rpmbuild -bb --target=i86 kernel.spec
+```
+
+然后你可以使用 `rpm` 命令配合 `-Uvh` 安装该内核。通常在使用内核源码编译软件时，软件期望在 `/etc/src/linux` 中找到内核。为了适应这种情况，你可以创建一个链接 `/etc/src/linux` 到你的内核源码。这是你解压的目录。
+
+```
+-s /home/myuser/rpbuild/BUILD/kernel-2.6.29/linux-2.6.29.x86_64/
+/usr/src/linux
+```
+
+# 210 第 1 部分：系统管理
+
+你还需要清理可能从之前的编译留下的任何对象和依赖文件。使用以下命令删除此类文件：
+
+```
+make clean
+```
+
+要完全删除（包括配置文件），请使用 `mrproper`。
+
+```
+make mrproper
+```
+
+| 选项 | 说明 |
+|---|---|
+| `install` | 创建内核并将其安装到你的系统中。 |
+| `bzImage` | 创建压缩后的内核文件并命名为 `bzimage`。 |
+| `isoimage` | 创建内核并将其安装到 CD-ROM 光盘上（创建启动盘）。 |
+| `vmlinux` | 创建裸内核镜像文件。 |
+| `fimage` | 创建包含内核的 1.44 MB 软磁盘镜像（可启动）。 |
+| `fimage288` | 创建包含内核的 2.88 MB 软磁盘镜像（可启动）。 |
+
+---
+
+# 表 7-1：内核 make 命令的编译选项
+
+你可以使用多个选项来编译内核（参见表 7-1）。`bzImage` 选项简单来说是生成一个名为 `bzimage` 的内核文件并将其放置在 `arch` 目录下。对于 Intel 和 AMD 系统，请使用 `86/boot` 子目录下的 `bzimage`，`arch/86/boot`。对于内核源码，这将位于 `arch/86/boot`。`arch` 目录下还会生成一个内核类型目录，如 `i86` 或 `x86_64`，该目录将只包含一个 `boot` 目录以及一个指向 `arch/86/boot/bzimage` 文件的 `bzimage` 链接。
+
+```
+make bzImage
+```
+
+表 7-1 中的选项会创建内核，但不会创建模块——模块是那些需要被编译成独立模块的内核功能。要编译你的模块，请使用带有 `modules` 参数的 `make` 命令。
+
+```
+make modules
+```
+
+要安装你的模块，请使用带有 `modules_install` 选项的 `make` 命令。它将模块安装在 `/lib/modules/version-num` 目录下，其中 `version-num` 是内核的版本号。在安装新模块之前，你应该对旧模块进行备份。
+
+```
+make modules_install
+```
+
+`install` 选项既生成内核文件，又将其作为 `vmlinux` 安装到你的系统中，并包含了 `make bzImage` 步骤。该操作会将内核文件（如 `bzimage`）放置在 `/boot` 目录，并赋予它们相应的名称和内核版本号。
+
+```
+make install
+```
+
+简单的编译和安装命令显示在此处：
+
+```
+make clean
+
+make
+```
+
+# 第 7 章：内核管理 211
+
+```
+make modules_install
+make install
+```
+
+如果你愿意，可以将这些命令输入到所有行中，并用分号分隔命令，如下所示：
+
+```
+make clean; make; make modules_install; make install
+```
+
+在单行上执行这些操作更安全的方法是让它们相互产生条件依赖关系，使用 `&&` 命令。在一种一种方法中，如果某个操作发生错误，下一个操作仍会执行。通过将操作设为条件性的，只有在前一个 `&&` 操作成功时，才会运行下一个操作。
+
+```
+make clean && make modules_install && make install
+```
+
+# 手动安装内核镜像文件
+
+要手动安装内核 `bImage` 文件，请将 `bzImage` 文件复制到内核所在的目录，并将其命名为你发行版所使用的名称，例如 `vmlinuz-2.6.version`。记住首先备份旧内核文件，如预防步骤中所述。`vmlinuz` 是指向带有版本名称的实际内核文件 `vmlinuz` 的符号链接。因此，手动安装 `bImage` 文件时，将其复制到 `/boot` 目录，并带上版本号作为 `vmlinuz-2.6.version`。
+
+```
+make bzImage
+cp arch/i386/boot/bImage /boot/vmlinuz-2.6.version
+```
+
+你还需要制作 `System.map` 文件的副本，并将其链接到 `System.map` 符号链接。
+
+```
+cp arch/i386/boot/System.map /boot/System.map-2.6.version
+```
+
+以下命令显示了基本的编译和手动安装。首先，使用 `clean` 选项移除所有之前的二进制文件。然后使用 `arch/i386/boot` 目录中创建的 `bzImage` 对象创建内核。内核文件被复制到 `/boot` 目录并命名为 `vmlinuz-2.6.version`。然后，创建一个名为 `/boot/vmlinuz` 的符号链接指向内核文件 `vmlinuz-2.6.version`。最后，创建并安装模块：
+
+```
+make clean
+make
+make modules_install
+cp arch/i386/boot/bImage /boot/vmlinuz-2.6.version
+cp System.map /boot/System.map-2.6.version
+```
+
+你还需要创建一个模块内存磁盘（ram disk）并为 `/etc/grub/grub.conf` 添加条目。在 Fedora 上，你可以使用 `new-kernel-pkg` 命令自动执行这些操作。使用 `--mkinitrd` 创建模块内存磁盘，并使用 `--install` 设置 GRUB 条目。`--depmod` 选项运行 `depmod` 为内核模块生成依赖列表。
+
+```
+new-kernel-pkg -v --mkinitrd --install --depmod vmlinuz-2.6.version
+```
+
+# 212 第 1 部分：系统管理
+
+# 模块内存磁盘
+
+如果你使用了内核不支持的某些块设备（如 SCSI、RAID 或 IDE 设备），你需要在启动时加载所需的模块。此类块模块保存在 RAM 磁盘上，系统在首次启动时会访问该磁盘（RAM 磁盘也用于系统）。例如，如果你有 SCSI 硬盘或 CD-ROM，它们的驱动程序存储在每次启动时加载的模块中。这些模块存储在 RAM 磁盘中……（注：此处原文似乎存在大量重复和乱码，译文已根据第 212 页后的逻辑进行了对应处理）。
+
+`vmlinuz` 是指向带有版本名称的实际内核文件 `vmlinuz` 的符号链接。因此，手动安装 `bImage` 文件时，将其复制到 `/boot` 目录并带上版本号作为 `vmlinuz-2.6.version`。
+
+```
+make bzImage
+cp arch/i386/boot/bImage /boot/vmlinuz-2.6.version
+```
+
+你还需要制作 `System.map` 文件的副本，并将其链接到 `System.map` 符号链接。
+
+```
+cp arch/i386/boot/System.map /boot/System.map-2.6.version
+```
+
+以下命令显示了基本的编译和手动安装。首先，使用 `clean` 选项移除所有之前的二进制文件。然后使用 `arch/i386/boot` 目录中创建的 `bzImage` 对象创建内核。内核文件被复制到 `/boot` 目录并命名为 `vmlinuz-2.6.version`。然后，创建一个名为 `/boot/vmlinuz` 的符号链接指向内核文件 `vmlinuz-2.6.version`。最后，创建并安装模块：
