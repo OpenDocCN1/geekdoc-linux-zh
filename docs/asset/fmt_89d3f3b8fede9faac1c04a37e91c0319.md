@@ -1,0 +1,144 @@
+
+![](img/a8ee53dbf1310726255b6fbb9f296fb2_59_0.png)
+
+> **警告** 跨林信任的传递性不会扩展到两个林之外。这意味着，如果您配置了林 A 和林 B 之间的跨林信任，以及林 B 和林 C 之间的第二个跨林信任，除非您在林 A 和林 C 之间直接配置第三个信任关系，否则林 A 将无法访问林 C 中的资源。
+
+一旦建立信任，管理员就可以从受信任的林中选择用户和组，并将它们包含在对象的 `ACL`（访问控制列表）中。当通过跨林信任访问资源时，用户无需重新输入任何登录凭据；您在林边界之间实现了“单点登录”。此高级功能允许公司在不进行完全重新设计或迁移的情况下，与合作伙伴或新收购的公司共享资源。
+
+## 技能矩阵总结
+
+- 在本课中，您学习了：
+- `Active Directory` 是一个对象数据库，用于根据逻辑计划来组织资源。这些对象包括域和 `OU`（组织单元）等容器，以及用户、计算机和打印机等资源。
+- `Active Directory` 架构包含单个林内所有对象和属性的定义。每个林维护自己的 `Active Directory` 架构。
+- `Active Directory` 需要 `DNS` 支持 `SRV` 记录。此外，Microsoft 建议 `DNS` 支持动态更新。
+- 域和林功能级别是 `Windows Server 2008` 的新功能。为每个级别定义的标准基于 `Active Directory` 设计所需的服务器操作系统类型。`Windows Server 2003` 林功能级别是最高可用的功能级别，包括对 `Windows Server 2008` 所有功能的支持。
+- 双向传递性信任在 `Active Directory` 域结构中自动生成。父域和子域形成信任路径，林中的所有域都可以遍历该路径以定位资源。`STG`（安全支持提供程序信任管理器）负责此过程。
+- 跨林信任是 `Windows Server 2008` 的新功能，并且仅在林功能设置为 `Windows Server 2008` 时可用。必须手动创建和维护它们。
+
+### 填空题
+
+通过在提供的空白处填入正确的单词或短语来完成以下句子。
+
+1. `Active Directory` 数据库存储在每个域控制器中一个名为 ________ 的文件中。
+2. `Active Directory` ________ 被视为 `Active Directory` 环境的安全边界。
+3. 为了提供容错能力，`Active Directory` 利用 ________ 复制模型。
+4. 要与 `NT4` 域建立信任关系，您需要配置 ________。
+5. ________ 命名上下文在域中进行复制。
+6. `Active Directory` 对象的 ________ 标识其在目录结构中的位置。
+7. ________ 在两个林中的所有域之间提供双向传递性信任关系。
+8. `Active Directory` 林中的每个域与林中的其他每个域都有 ________ 信任关系。
+9. ________ 允许远程站点的用户无需联系全局编录服务器即可登录到 `Active Directory`。
+10. `Active Directory` 客户端依靠 `DNS` 中的 ________ 来定位 `Active Directory` 资源，如域控制器和全局编录服务器。
+
+### 选择题
+
+圈出正确的选项。
+
+1. 以下哪项是 `Active Directory` 中有效的叶对象？
+   - a. 域
+   - b. 用户
+   - c. 应用程序分区
+   - d. `OU`
+2. 以下哪个域控制器可以加入到当前设置为 `Windows Server 2008` 林功能级别的林？
+   - a. `Windows 2000`
+   - b. `Windows Server 2003`
+   - c. `Windows Server 2008`
+   - d. `Windows NT 4.0`
+3. 您正在为一家公司规划 `Active Directory` 实施，该公司目前拥有销售、会计和营销部门。所有部门负责人希望在 `Active Directory` 中管理自己的用户和资源。什么功能允许您将 `Active Directory` 设置为允许每个经理管理其自己的容器，但不管理其他容器？
+   - a. 委派控制
+   - b. 只读域控制器
+   - c. 多主复制
+   - d. `SRV` 记录
+4. `Active Directory` 运行需要 `DNS` 具备什么条件？
+   - a. 动态更新支持
+   - b. `DHCP` 转发支持
+   - c. `SRV` 记录支持
+   - d. `Active Directory` 集成
+5. 如果名为 Amy 的用户位于 `central.cohowinery.com` 域的销售 `OU` 中，在命令行实用程序中引用该用户的正确语法是什么？
+   - a. `amy.cohowinery.com`
+   - b. `cn=amy,ou=sales,dc=cohowinery.com`
+   - c. `cn=amy,ou=sales,dc=central,dc=cohowinery,dc=com`
+   - d. `dc=com,dn=cohowinery,ou=sales,cn=amy`
+6. `RODC`（只读域控制器）不参与以下哪项？
+   - a. 复制
+   - b. 跨林信任
+   - c. 出站复制
+   - d. 外部信任
+7. 哪个命名上下文包含 `Active Directory` 林的物理拓扑的林范围数据？
+   - a. 架构
+   - b. `ForestDNSZones`
+   - c. 配置
+   - d. `DomainDNSZones`
+8. 以下哪项是 `Active Directory` 中的容器对象？
+   - a. 文件夹
+   - b. 组
+   - c. 用户
+   - d. `OU`
+9. 在新 `Active Directory` 林中安装的第一个域叫什么？
+   - a. 林根域
+   - b. 父根域
+   - c. 域树根
+   - d. 域根
+10. 以下哪项是 `Active Directory` 内的安全边界？
+    - a. 林
+    - b. 域
+    - c. 域树
+    - d. `OU`
+
+## 工作准备
+
+## 部署 Windows Server 2008
+
+您是一家大型组织 IT 部门的经理。贵公司目前拥有 `Novell`、`Microsoft Windows NT` 和 `Windows 2000` 服务器的混合环境。您正与一位网络设计师合作，协助规划在接下来六个月内将所有服务器升级到 `Windows Server 2008`。考虑到推广将分阶段进行，且目标是最小化停机时间。`Windows Server 2008` 中的哪些新功能将帮助您进行此迁移？为什么这些新功能将协助您进行网络迁移？
+
+此外，贵公司最近收购了另一家公司。新收购的公司已经拥有 `Windows Server 2008` 网络，您希望保留它。但是，您希望提供对两个网络中资源的访问。您应该怎么做以在两个网络之间建立路径？在此之前您需要检查什么？
+
+## 实施 Active Directory
+
+### 目标域矩阵
+
+| 技术技能 | 目标域 | 目标域编号 |
+| :--- | :--- | :--- |
+| 安装新的 `Active Directory` 林 | 配置林或域。 | 2.1 |
+| 配置只读域控制器 | 配置只读域控制器 (`RODC`)。 | 3.3 |
+| 配置 `Active Directory` 轻型目录服务 | 配置 `Active Directory` 轻型目录服务 (`AD LDS`)。 | 3.1 |
+| 建立和维护信任关系 | 配置信任。 | 2.2 |
+
+### 关键词
+
+- `A` 记录
+- `Active Directory` 轻型目录服务 (`AD LDS`)
+- 管理员角色分离
+- 老化
+- 二进制文件
+- `dcpromo`
+- 目录服务还原模式 (`DSRM`)
+- 域 `netBIOS` 名称
+- 动态更新
+- 可灵活单主操作 (`FSMO`)
+- 正向查找区
+- 完全限定域名 (`FQDN`)
+- 全局编录
+- 增量区域传输
+- 实例
+- 延迟
+- `netdom`
+- `nslookup`
+- 对象标识符 (`OID`)
+- 密码复制策略
+- 指针 (`PTR`)
+- 优先级
+- 可重启 `Active Directory`
+- 反向查找区
+- 清除
+- 服务器核心
+- 服务器管理器
+- 分阶段安装
+- `SYSVOL`
+- 生存时间
+- 无人值守安装
+- 用户主体名称 (`UPN`)
+- 权重
+- 区域传输
+
+`Lucerne Publishing` 是一家医学教科书出版商，在伦敦、东京、纽约和班加罗罗设有办事处。`Lucerne Publishing` 决定部署 `Windows Server 2008`，以在其全球各地提供集中式的用户身份验证和授权。`Lucerne Publishing` 面临的一个挑战是，东京分公司没有全职 IT 管理员。由于它通过缓慢的 `WAN` 链接连接到纽约和伦敦，东京地区的经理担心该办公室的工作人员在登录到 `Active Directory` 时会遇到困难。
