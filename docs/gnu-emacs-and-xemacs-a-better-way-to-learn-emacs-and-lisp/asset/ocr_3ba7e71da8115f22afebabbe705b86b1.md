@@ -1,0 +1,12 @@
+statements, it is a good idea to byte-compile them. Emacs will start up faster (although, with the speed of modern computers, this isn't as significant as it was a few years ago). Just remember that any further changes you make to the original Lisp files won't have any effect until the file is again byte-compiled. The .elc file is then overwritten by an up-to-date version that reflects the changes made to the .el file. As a review, to byte-compile the file currently being edited, press M-x and type
+`byte-compile-file`
+
+GNU Emacs displays the file's directory path in the minibuffer and prompts you for the file name. Just type enough characters of the file name to allow Tab completion to finish the name. XEmacs assumes that you want the file you are editing to be byte-compiled and prompts you with its file name. With either editor, pressing Enter causes the operation to begin. Don't even bother to byte-compile until you are sure that there are no typos or Lisp errors.
+
+# Learn by Example
+
+Other Emacs users' personal .emacs files are a valuable resource. Many long-time users have publicly posted their .emacs files on the World Wide Web. (See Chapter 23 for a list of URLs.) Over the years, an .emacs file gradually accumulates more and more useful and time-saving additions, while files that haven't worked out are commented out or deleted. Since the files are small and portable, they can accompany a user from job to job and from machine to machine.
+
+# Splitting Your .emacs File
+
+Your .emacs file inevitably grows larger as you tailor the editor to your needs. These files tend to become unwieldy and filled with commented-out sections. The additions made by the Customize utility are not meant to be easily read by humans and can occupy quite a bit of space. Splitting your .emacs file into several single-topic files can help make the whole initialization scheme easier to deal with. To do this, first create a subdirectory, perhaps in your home directory. In this example, I'll call it /home/user/emacs. Load your .emacs file into Emacs, cut out chunks of the file dealing with keybindings, and paste them into a new file called /home/user/emacs/keys.el. Do the same with sections of .emacs that set options for various major modes; they can be pasted into a new file called modes.el. Macros that you have generated are good candidates for a new file as well. What is left after this dissection of the file is likely to be miscellaneous Emacs settings, along with options that
