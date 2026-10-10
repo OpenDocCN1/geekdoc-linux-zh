@@ -1,0 +1,25 @@
+# # Virtualisation 101
+
+Nobody can tell you what virtualisation is – you have to experience it for yourself. Or you could just read this...
+
+irtualisation has been around since the 1960s. Of course, computing then was all done on mainframes and OSEs were a lot different, so it's harder for youngsters to get their trendy heads around how this worked. The idea then is essentially the same as it is now: compute resources were to be shared (fairly) amongst users in such a way that concurrently running jobs would not interfere with one another. Operating system kernels used to be called 'supervisors', and each separate job was more or less its own entity (today we expect our OSEs to multitask programs as a matter of course, but this wasn't the case back then). So the underlying OS which governed these jobs was referred to as a hypervisor, a term still used today.
+
+![](bbox=[0.44, 0.22, 0.8, 0.39])
+
+We use only virtual penguins to test our disc now – ever since that ugly uprising six years ago.
+
+Modern hypervisors such as Xen and Microsoft's Hyper-V are thin OSEs that run on bare metal with the sole purpose of hosting guest VMs strictly and securely, much like the time-sharing scheme of the mainframe days. These are called Type-1 hypervisors, which correctly implies the existence of Type-2 hypervisors. The latter, exemplified by VirtualBox, Parallels and QEMU run on a regular operating system and are probably more familiar to everyday users. Things are not binary, though; the Linux's KVM (Kernel-based Virtual Machine) doesn't fit nicely into either category, since it turns the kernel into something like a Type-1 hypervisor, but the host OSE still runs as intended.
+
+In 2006, Intel and AMD started shipping processors with, respectively, VT-x and AMD-V extensions. These enabled operating systems to run virtualised without modification, in contrast to previous approaches such as paravirtualisation (which modified the OS to run in a guest environment) or complex software workarounds. Since then, virtually (ahem) all desktop CPUs have
+
+shipped with these hardware virtualisation extensions. And they have evolved to enable not only faster virtualisation, but deeper too, with hardware interrupts, memory management units (MMUs) and onboard graphics – via Intel's iGGT-G on Iris Pro graphics – now being virtualisable. It's even possible to blur the boundaries between physical and virtual: actual hardware can be handed off to a virtual machine and used seamlessly. A popular example of this is running a Windows 10 VM with a second (usually high spec) graphics card. This trick, known as PCIE passthrough, enables Linux users to play AAA games at very close to native speeds. PCIe and the general area of Virtual Function I/O (VFIO) require different CPU extensions, called VT-d on Intel and AMD-Vi on AMD. Some of Intel's overlocker-focused chips (the ones ending in K) lack these. One new project worth keeping an eye on is Looking Glass (https://lookeg-glass.hostingwindow.com) which aims to streamline passthrough setup for Windows VMs. In particular, the need for a separate monitor and keyboard is obviated.
+
+# ## VIRTUALISATION, EMULATION AND CONTAINERISATION
+
+It's easy to confuse virtualisation and emulation. Both are a piece of software masquerading as a machine, and both have been around for a long time. In one sense virtualisation is just a special form of emulation. On Linux, we can emulate lots of hardware; for example, a Raspberry Pi with QEMU, an Amiga with UME, or a Sega Megadrive with BlastEm (we know, we can emulate software using DOSBox or Wine (we know, Wine isn't an emulator – ah'et us) for example.
+
+Emulation recreates everything in software, translating or rearranging foreign code into something the host can understand. Virtualisation differs in that the guest code runs directly on the host, which means it's faster (although sometimes other hardware still has to be emulated which makes it slower again), but also means it's only possible to
+
+virtualise architectures that are similar. Around a decade after the virtualisation revolution, a new technology emerged: containers. These were popularised by Docker in 2013 and bring many of the benefits of virtualisation (isolation, efficiency), but use the host's kernel, obviating the need to run a whole guest operating system.
+
+Containers can be seen as OS-level virtualisation, as opposed to machine-level. Since a container need contain only the libraries required to run a particular application, they are eminently portable. They also provide a neat solution if that application only works with a particular version of a library. In the same way that Quebes OS runs applications in different VMs, OSEs like Container OS (formerly CoreOS Linux) and RancherOS run everything in containers.

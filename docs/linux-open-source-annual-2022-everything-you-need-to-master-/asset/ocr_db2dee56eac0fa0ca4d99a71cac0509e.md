@@ -1,0 +1,41 @@
+# # Rescuse distros
+
+# # The Verdict
+
+![](bbox=[0.54, 0.2, 0.93, 0.36])
+
+The first step to rescuing a damaged computer is to have access to the right utility, which is why we looked favourably at distros with a large collection of tools. But just having the largest collection of tools isn't of much use in the hands of inexperienced users. Taking that into consideration, the winner of this Roundup has to be a distro which can be used by a large number of people, irrespective of skill and experience. This is why ALT Linux Rescue loses out. While the distro is equipped to handle all sorts of repair and rescue jobs, it won't be of much use in the hands of new users — it's firmly designed for experienced technicians.
+
+MorpheusArch Linux loses out for similar but different reasons. Unlike ALT, the distro boots into a graphical desktop, but all the tools it packs are CLI-based and the distro provides no assistance to help guide users to the right tool for the job. We do like its *LinDiag* utility, which is a nice attempt to make some of the tools more palatable to first-time users, despite its limited area of reach. But the fact that it isn't included by default in the distro is a huge downer.
+
+SystemRescueCd has some of the same problems. Unlike earlier versions of the distro, which had a comprehensive boot menu, the current version is only useful in the hands of someone who is familiar with its cache of tools.
+
+The two options that impressed us the most are AIO System Rescue Kit and UBCD. Both are loaded to the brim with tools and utilities, and have customised interfaces to help you find your way to the right tool. However, AIO loses out to UBCD for its strong focus on Windows-specific repairs. Even its customised menu comes up when the distro runs from inside Windows.
+
+UBCD wins this Roundup because it scores highly on both our criteria. The distro is loaded with tools and is still intuitive enough to be of use in the hands of first-timers. Its logically arranged boot menu is also its USP, offering useful information to help you identify the right tool and then boot straight into it.
+
++   1. **Ultimate Boot CD** 8/10
++   Web: **www.ultimatebootcd.com** Licence: *Various* Version: **5.3.8**
++   UBCD packs in enough utilities to justify its name and exposes them via a user-friendly interface.
++   
++   2. **AIO System Rescue Toolkit** 6/10
++   Web: **https://paul.is-a-geek.org/aio-srt** Licence: *Various* Version: **2018-01-02**
++   The most comprehensive solution for rescuing... Windows installations.
++   
++   3. **SystemRescueCd** 5/10
++   Web: **www.system-rescue-cd.org** Licence: *GPL v2* Version: **6.0.2**
++   Can help you wriggle out of many common issues, if you have the time to read through its documentation.
++   
++   4. **ALT Linux Rescue** 5/10
++   Web: **https://en.altlinux.org/Rescue** Licence: *Various* Version: **20190306**
++   A good option for experienced users who know the bundled utilities.
++   
++   5. **MorpheusArch** 3/10
++   Web: **www.morpheusarch.co.uk** Licence: *GPL v2* Version: **2018.4**
++   Weirily, the best thing about the project (*LinDiag*) isn't included in the distro by default, too limited at the moment and too hard to use.
+
+# » ALSO CONSIDER
+
+As we mentioned earlier, many of the rescue distros that we've featured in past issues are no longer maintained. While they might not support the latest hardware, nor have the latest version of the bundled utilities, you can still use them to repair older machines, however. For example there's *Rescatux* (Tux with fingers *should not be!* — Ed) that has an interesting helper app to help your repair different parts of your installation without needing to be aware of the underlying CLI tool.
+
+Then there's *Trinity Rescue Kit*, which features an elaborate boot menu designed to help you find the right repair tool. Many repair and rescue tools also roll their utilities into *Live CDs* so that you can use if you know the tool you need to use. For example, *Boot-Repair* has a *Live CD* which is ideal for fixing all sorts of bootloader-related issues. *GParted* also has a *Live CD* of its own, which includes several other repair and rescue utilities such as *TestDisk*, *FSArchiver* and more.

@@ -1,0 +1,27 @@
+![](bbox=[0.05, 0.05, 0.43, 0.27])
+
+You'll be using a breadboard in the Elego UNO Basic Starter Kit to take the hassle out of connecting external components.
+
+The language is usually described as very similar to C/C++ with libraries for working with Arduino boards. Whatever you want to call it, though, so long as you have had some experience of coding, you'll soon get to grips with it. In fact, even if you're new to programming, with a bit of guidance in the form of online tutorials you should get the hang of it without too much trouble.
+
+The purpose of this code is to flash the onboard orange LED, so it's pretty much the same as the code that was already flashed into the UNO. Even so, to check that everything's working, click the round icon with the right-pointing arrow in the toolbar. Watch in the blue status bar at the bottom and you should see 'Compiling sketch...' followed by 'Uploading...' and then 'Done uploading.' You might also have noticed that another couple of orange onboard LEDs flash briefly, indicating the transfer of data between the PC and the Arduino. Once you know the IDE is working, we'll change the behaviour of that flashing LED.
+
+Towards the bottom of the sketch you'll find a line of code that turns the LED on, followed by one that waits for 1,000 milliseconds (one second), then one that turns it off again, and finally one that waits another second. These four instructions are inside a loop, so they execute forever. An easy change is to alter the lengths of the two waits from 1,000 to 500 milliseconds, so edit the sketch accordingly and upload the new code. After the other two LEDs have flashed, you'll notice that the orange onboard LED will start to flash more quickly. If you want to save your altered code, do it under a new name because the examples are read-only files.
+
+# Grip the hardware
+
+We're not going to go through all the tutorials in the starter kit documentation because that would be reinventing the wheel. The descriptions provided are excellent, giving both instructions and explanations, and you'll be well advised to go through all of them in sequence. Our aim here is just to whet your appetite in the hope and expectation that you'll get hold of this starter kit and, in so doing, get to grips with embedded computing. To do this, we're going to highlight just one tutorial, Lesson 5, which is a slightly expanded version of a classic in embedded computing. This enables an LED to be turned on with a pushbutton and turned off
+
+with another, so it illustrates the use of a digital input and a digital output. You can think of it as the equivalent of the 'Hello World' program, which is the first program many people write when learning to code.
+
+In this example, we're going to use some hardware that's external to the UNO, which is the very essence of embedded computing. We're going to be mounting and connecting together a few electronic components on the piece of breadboard that forms part of the starter kit. Breadboard would never be used for a real-world piece of equipment because printed circuit boards are so much more compact and reliable. For learning, or for trying out ideas, though, they're ideal. Breadboards have an array of holes into which you can push the leads of components, and behind those holes are electrical connections so components can be wired together without soldering. This means that you don't have to buy a soldering iron, and components can be reused.
+
+To understand the internal connections inside the breadboard, hold it with the red and blue lines running horizontally at the top and bottom. Behind the screws, all the holes in the top row connect together, as do those in the second row, the bottom row and the row one up from the bottom - these are intended for the power supplies. The holes in the remainder of the breadboard are connected in vertical columns, but with a horizontal gap where you can see the gutter.
+
+Now, add the various components to the breadboard as shown in the starter kit manual. You'll notice that, when you push a lead into a hole it will be 'grabbed', thereby holding it physically and connecting it to other holes internally. It doesn't matter if you use exactly the same holes as shown in the documentation so long as the components are positioned correctly with respect to each other. Next, load the code for Lesson 5 into the IDE from the starter kit's CD.
+
+If everything's gone to plan, you'll find that the left-hand pushbutton turns the LED on and the right-hand one turns it off. If it doesn't work initially, try wigwagging the component leads on the breadboard because it's all too easy make a poor connection when you add the components to the board. Finally, before we leave you to work through the other lessons, how about trying your hand at coding by modifying the sketch? 29
+
+![](bbox=[0.45, 0.68, 0.81, 0.91])
+
+The Flora is an Arduino-compatible board from Adafruit that can be sewn into clothing, for wearable electronic applications.

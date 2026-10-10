@@ -1,0 +1,47 @@
+# **KaOS  7/10**
+
+KDE has long been noted for its configurability. This can be a curse as well as a blessing. KDE 4 in particular dispersed options all over the shop, and also shipped with a near-infamous window glow enabled by default. KDE Plasma 5 has a perfectly cromulent default setup, but offers plenty of options to manipulate this.
+
+Being a KDE Plasma affair, we were expecting KaOS to show us something a little different from usual KDE layouts, and that it certainly did. A menubar on the right-hand side of the screen, and Dolphin demonstrating similar right bias with its navigation panel. You can probably get used to this, but it's a jar-ring first experience. Call us old-fashioned ('old' is more accurate – Ed), but we were much happier with the panel at the bottom, and the file manager navigation panel on the left. We heartily approve of the Powerline terminal stylistifier, though.
+
+![](bbox=[0.08, 0.49, 0.36, 0.6])
+
+# **Manjaro  8/10**
+
+The principle Manjaro edition is the Xfce one. This isn't going to resonate with people wanting desktop bling, since Xfce hasn't changed in nearly three years. But it's functional, far from ugly and gentle on system resources. It also features display scaling, so 4K users won't be left squinting at tiny fonts, but setting this up is more involved than KDE/Gnome.
+
+Remember that official Manjaro flavours exist for those desktops, and community flavours exist for others. Traditionalists will appreciate the inclusion of a shade control (for 'rolling' windows into their titlebars), and the ease and configurability of appearance/window manager settings.
+
+The default (Papyrus-Majia) icon theme is bold without being overbearing, and there are several other icon and GTK themes to choose from. Kvantum theme manager can jazz up Qt apps, but that'll be more useful in the KDE edition.
+
+![](bbox=[0.39, 0.49, 0.64, 0.6])
+
+# **Netrunner Rolling  7/10**
+
+Netrunner's Plasma setup features the full screen application dashboard, which like Gnome's can also search documents. The large fonts look a little odd, though. We much prefer Plasma's hybrid launcher, and you might prefer the classic cascading menu used by KaOS. The black panel looks stylish and we can't get enough of drop-down terminals so we applaud the inclusion of Yakuake.
+
+The My Computer and Network icons on the desktop seem a bit Windows-ey, but are easily ignored/expunged. The Breeze Alpha/Black theme, powered by modern versions of Plasma (5.14) and Qt (5.11) give some neat transparency effects.
+
+Minor annoyance about the dead link on the desktop, but plenty of nice wallpapers are included. The Breeze theme has a GTK counterpart, so such applications will conform to the desktop finery. No desktop widgets are on by default. Good.
+
+![](bbox=[0.66, 0.49, 0.92, 0.6])
+
+# # Documentation and support
+
+# ## Where can you turn when it all goes sideways?
+
+The Archwiki is a truly great learning resource. It's well-written (and consistently formatted), covers pretty much everything you can imagine, and is kept up to date. A lot of what you'll find there is applicable to other distros, all the more so if Arch is their progenitor. The Arch forums are likewise a veritable font of knowledge, but beware – holes are not suffered lightly there.
+
+In terms of bespoke support Manjaro shines ahead here. It has its own mailing lists, botracker, IRC channel, a comprehensive wiki and friendly (relatively speaking!) forums. There are also subforums for discussion in about 30 other languages, because Manjaro users are a diverse bunch. Netrunner benefits from this by osmosis, but they too have their own (rather more modest) forum.
+
+The Antergos wiki appears pretty thoroughable, although it does have a thorough guide to setting up dual-booting on Windows 10 which ought to appease newcomers. It also has a thriving, multilingual forum and an IRC channel. The ArchLabs forum is likewise buzzing. However, beyond some handy hints about the included programs and customising the desktop there's not a lot on the wiki. The smaller distros really benefit from community involvement and so if you solve some niggling problem (whether or not someone's asked about it) do consider adding your knowledge. For the greater good and all that.
+
+The KaOS team use several buetrackers and has a quiet forum. Its website has a handy guide to asking and reporting things sensibly and the world would truly be a better place if everyone read these kinds of things.
+
+# **VERDICT**
+
+ANTERDOS 8/10 MANJARO 9/10
+ARCHLABS 7/10 NETRUNNER ROLLING 6/10
+KAOS 6/10
+
+Manjaro's huge userbase means a strong community, many of whom won't default to 'RTFM' if you pose a genuine question.

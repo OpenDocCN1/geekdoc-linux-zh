@@ -1,0 +1,83 @@
+
+## Drawing tools
+### Investigating the core functionality.
+
+Here can be no more important features of a vector-based drawing package than the drawing tools it provides. In this paragraph we define the basic minimum, as provided by all our software. Tools are provided for drawing lines, lines with arrow heads, text, and shapes such as squares and circles, and to define the thickness and colour of the lines or outlines, and the colour of any fill. In addition to straight lines and polylines – that is a line comprising several straight segments – freemand and curved lines are available. Editing enables objects to be moved, stretched or shrunk, and rotated. A snap feature assists in aligning objects, and the order of objects, front to back, can be defined. Several objects can be grouped so they can more easily be manipulated. Groups can subsequently be ungrouped, if necessary, for manipulating their individual constituent objects.
+
+## Google Drawings 5/10
+
+Google Drawings offers the basic drawing tools and little more, but just saying that doesn't do it justice. For example, while some drawing packages offer just a handful of shapes – commonly rectangles, rectangles with rounded corners and circles – Google Drawings offers a vast number, under the headings of shapes, arrows, callouts and equation. This emphasises the most commonly suggested application for the software, namely the creation of flowcharts, block diagrams, organisational charts and so on. Text support is also good which makes this solution suitable for simple design applications such as the creation of flyers containing a mixture of text and graphics. Basic word art is offered in addition to text boxes, the latter including the sort of formatting options found in word processors. More usefully as number of template diagrams are offered.
+
+![](img/3f314b57ad3c8b08d25e5d1ab47de56d_155_0.png)
+
+## Gravit Designer 8/10
+
+Promotional literature for Gravit commonly shows artistic design applications, which hints at the fact that it has more advanced drawing facilities than most vector editing packages. However, we're of the view that the more sophisticated features won't normally be needed for technical applications, so they'll generally be of interest only to more imaginative illustrators. Gravit offers nearly everything provided by the other packages reviewed here, with the exception of connectors and dimensioning, but adds a range of extra facilities. Of particular note are master pages and styles, which can offer major benefits in improving your productivity. Most of the other advanced features will be of relevance to a minority of readers, but the key add-ons include a knife tool, non-destructive Booleans, path graphs and advanced colour support.
+
+![](img/3f314b57ad3c8b08d25e5d1ab47de56d_155_1.png)
+
+## Import and export
+### Which file formats are supported?
+
+Realistically, the only reason to create a diagram or illustration is so that you can display it online or insert it into a document, so it's essential that you can save or export it in a suitable format. Similarly, if you want to work on a drawing someone has created or, perhaps, include a third-party image in your drawing, the range of supported import formats becomes important. Nearly all the reviewed software uses a proprietary format for saving drawings, which isn't too helpful – except in the case of LibreOffice Draw, because its native format is recognised by other LibreOffice applications. The one package that can save in a variety of formats is Inkscape, which supports SVG, compressed SVG, PostScript/EPS, Adobe Illustrator and several other vector formats. Separate from the save formats, most of the software can export in several file types, including bitmapped as well as vector formats. Bear in mind, though, that if you export in a bitmapped format without also saving it in a vector format separately, you won't be able to edit it properly afterwards.
+
+Inkscape supports the widest range of import formats, including just about anything you'd ever want. However, all offer import of at least a few bitmapped formats, and most also allow you to import the vector SVG format. Google Drawings is particular poor in this respect, though; this may be due to the fact that it's an online-only tool, working through Google Docs. We didn't find a list of supported import formats, and our tests didn't reveal any vector formats that worked. We did find reference to a few workarounds suggested online, but didn't manage to get any to work either.
+
+## VERDICT
+
+| Software | Rating |
+| :--- | :--- |
+| Google Drawings | 2/10 |
+| LibreOffice Draw | 5/10 |
+| Gravit Designer | 7/10 |
+| Vectr | 5/10 |
+| Inkscape | 10/10 |
+
+> Somewhat surprisingly, there is a vast difference in the number of file formats supported for import and export.
+
+## Inkscape 10/10
+
+Inkscape is commonly compared favourably to Adobe Illustrator, a fully featured commercial offering with a hefty annual licence fee. It has an impressive range of features which means that, like Gravit Designer, it will appeal to graphic designers as well as those with more down-to-earth applications.
+
+We're not aware of any major drawing tools provided by any of the other software here that aren't also in Inkscape. The dimensioning feature for engineering drawings is provided by an extension, but this isn't a major drawback; instead the support for extensions is one of Inkscape's significant features.
+
+The list of advanced features is long; some of the most significant include support for generalised polygons and stars, spirals, Boolean operations, and calligraphy tools for freehand drawing using filled paths.
+
+![](img/3f314b57ad3c8b08d25e5d1ab47de56d_156_0.png)
+
+## LibreOffice Draw 7/10
+
+Compared to our basic set of drawing tools, LibreOffice Draw's main extensions are in the areas of layers and pages, 3D objects, connectors, and dimensioning. Its support for 3D objects is provided primarily by allowing 2D objects to be extruded, although a library of ready-made 3D objects is also available. Once you have a 3D object on-screen, you can apply various effects like lighting and shading.
+
+The concept of connectors very much simplifies the editing of diagrams such as flow charts or organisational charts, where boxes are connected by lines. When you connect objects using a special type of line called a connector, those connecting lines stay connected to their associated objects. If you move an object, its connectors remain connected and re-route accordingly. Finally, automatic dimensioning labels are valuable for engineering applications.
+
+![](img/3f314b57ad3c8b08d25e5d1ab47de56d_156_1.png)
+
+## Vectr 6/10
+
+Vectr offers more than basic drawing tools, but not by a huge margin. First, there's support for layers and pages. Layers enable you to assign objects to different layers, which can then be dragged above or below other layers, locked or hidden.
+
+The concept of pages is fundamental to word processors, but it's not universal in the realm of graphics editors. However, while it means that you can keep all the elements in a multi-page element together – unlike some of the other packages reviewed here – it doesn't provide the full benefit you might expect, because you can only export one page at a time.
+
+Another interesting feature is filters. For example, you could define both a solid colour and a graduated fill as an object's background with different opacities, although this won't be on most people's must-have list.
+
+![](img/3f314b57ad3c8b08d25e5d1ab47de56d_156_2.png)
+
+## Bitmap support
+### Going beyond just vector graphics capabilities.
+
+Although we're looking at vector-based graphics packages instead of the bitmap-based software used for editing photos, there are times when some limited support of bitmaps is useful, say for including photos of staff in an organisational chart. All the software reviewed here enables you to import bitmapped images for this purpose, and the basic editing functions available enable you to move, resize and rotate them. Some software also enables you to crop images but, even if there's no specific crop bitmap function, with most reasonably featured vector graphics software you'll be able to find some way of achieving this.
+
+While we wouldn't recommend using any vector-based software for dedicated image editing use – something like GIMP is far more appropriate – some of the packages included here do offer a bit more than the basics in terms of support for bitmaps and sometimes a lot more. This might streamline your workflow by not requiring you to edit images in other software before importing them to your vector-based editor. Gravit is particularly strong here, enabling you to adjust brightness and contrast, and even fine-tune colours and remove noise. While Inkscape doesn't offer all this natively, the raster extension adds all Gravit's bitmap editing capabilities and a lot more. LibreOffice Draw also has advanced features in this area – mostly artistic effects.
+
+Another useful feature associated with bitmaps is to convert them to vectors. This is variously called tracing, vectorising, or converting to polygons. Once converted to vectors or polygons, all the usual vector editing facilities become available. This functionality is available in Inkscape, LibreOffice Draw and Gravit.
+
+## VERDICT
+
+| Software | Rating | Software | Rating |
+| :--- | :--- | :--- | :--- |
+| Google Drawings | 4/10 | LibreOffice Draw | 6/10 |
+| Gravit Designer | 8/10 | Vectr | 4/10 |
+| Inkscape | 10/10 | | |
+
+All packages offer some sort of support for bitmaps, but some go well beyond the basics, with more advanced features.

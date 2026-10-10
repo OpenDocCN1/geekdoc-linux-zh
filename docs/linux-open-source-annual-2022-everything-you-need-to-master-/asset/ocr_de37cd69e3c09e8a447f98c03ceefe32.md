@@ -1,0 +1,65 @@
+# # Communication
+
+Chat securely or set up your own social network. In your face, Facebook!
+
+# **» JITSI**
+
+An all-in-one instant messaging app, Jitsi has an impressive set of audio and video-conferencing features. As a VoIP client, it enables you to make calls using the Session Initiation Protocol (SIP). It has all the features you’d expected from a softphone in that it can mute, put on hold, transfer and record calls. It can also make registrar-less SIP calls to other Jitsi users on the local network.
+
+You can use Jitsi to make video calls to one user or to several on both SIP and XMPP networks, while using Jitsi Videobridge, you can host multi-user video calls. It’s also a capable IM client with several unique features including the ability to stream and share the desktop of users at both ends of the call at the same time. [https://jitsi.org](https://jitsi.org)
+
+![](bbox=[0.53, 0.18, 0.59, 0.23])
+
+# **» ROCKET.CHAT**
+
+Billing itself as the ‘ultimate chat platform’, Rocket.Chat is filled with useful features. In addition to essentials ones like threaded conversations and the ability to edit and delete messages, the collaborative communications server offers several interesting ones such as live chat, with which you can use Rocket.Chat to have conversations with visitors to your website.
+
+You can roll out Rocket.Chat on a snap-supported distro with a single command, and it also support deployments over Docker and a wide range of PaaS services. It can also import your data from another service like Slack or Hipchat and with the SlackBridge plug-in can also mirrros messages received in a Slack channel or private group into Rocket.Chat in real-time.
+
+# **» TOX**
+
+If regular IM clients aren’t secure enough for you, use the Tox IM protocol which encrypts all chats with the NaCl encryption library and instead of a central server, routes them over direct P2P connections between users. The IM uses Tox IDs, which are public keys of peers instead of a user account and also allow for greater anonymity. [https://tox.chat](https://tox.chat)
+
+![](bbox=[0.33, 0.43, 0.62, 0.52])
+
+There are several apps that can communicate using the Tox protocol and one of the most popular ones is Qtox, which works on several platforms.
+
+Rocket.Chat also enables you to have a video conference with your team. You can also record and send voice messages to a public or a private conversation. [https://rocket.chat/community](https://rocket.chat/community)
+
+# **» BEEBEEP**
+
+An IM client with a difference, BeeBEEP is designed to connect you directly with peers on your network. It’ll automatically detect other BeeBEEP users on the network and provides all the features of a modern chat client and apart from encrypted text messages, can also share files. [http://beebep.sourceforge.net](http://beebep.sourceforge.net)
+
+![](bbox=[0.25, 0.6, 0.33, 0.64])
+
+# **» OPENFIRE**
+
+There are several XMPP-based IM servers available but Openfire is one of the easiest to manage. It implements many of the commonly used functions of the XMPP protocol. While you can use any XMPP-compatible IM client to chat through Openfire, it works best with its own Spark client. [www.igniterealtime.org/projects/openfire](www.igniterealtime.org/projects/openfire)
+
+![](bbox=[0.66, 0.53, 0.94, 0.65])
+
+Rocket.Chat enables you to preview links shared during a conversation including those from popular services like Twitter and YouTube.
+
+# **SIGNAL**
+
+The Signal messaging app helps secure communications over the mobile network. The app is endorsed by top security experts and uses end-to-end encryption to secure all your text, audio and video calls. [https://signal.org](https://signal.org)
+
+# **RIOT.IM**
+
+The Matrix protocol enables users registered with one service provider to seamlessly communicate with users of another. Riot.im is one of the best clients based on the federated Matrix protocol. [https://about.riot.im](https://about.riot.im)
+
+![](bbox=[0.33, 0.76, 0.38, 0.82])
+
+# **RETROSHARE**
+
+A P2P communications and file sharing platform, Retroshare creates encrypted connections between friends. You can add friends by sharing your keys privately or you can exchange them via a chat server. [http://retroshare.net](http://retroshare.net)
+
+# **SOGO**
+
+![](bbox=[0.68, 0.76, 0.8, 0.8])
+
+One of the best alternatives to MS Exchange, SOGo has all the necessary groupware functions with native desktop and mobile clients. Try the online demo before deploying it on your server. [https://sogo.nu](https://sogo.nu)
+
+# **HUMHUB**
+
+With HumHub you can deploy your own social network on the internet network. It has all the standard social networking features you’d expect and the project’s website hosts an online demo as well. [www.humhub.org](www.humhub.org)

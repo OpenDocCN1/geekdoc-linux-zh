@@ -1,0 +1,23 @@
+# # Anatomy of a ransomware attack
+
+Ever wondered how all this high-tech financial half-inching and data scrambling works? Wonder no more.
+
+Unfortunately, if you fall victim to a ransomware attack and don’t have any backups, it’s probably too late to do anything about it. The usual asking price to unlock is around $500, though many variants will threaten to increase this amount after a couple of days, and may even threaten to make decryption impossible after longer. These threats just provoke anxiety in the victim, who’s then more likely to pay up before considering the merits of doing so.
+
+What is important to remember is that while there’s a possibility that whoever’s in control of this malware is reasonable enough to provide a decryption key, there’s also the possibility that they won’t. Their business model, after all, is to collect payments, so why should they bother with the extra admin of sending an email after that is achieved? It’s not like people who receive a key will recommend that particular strain of malware to their friends. Be that as it may, whether or not you have access to it a decryption key probably does exist somewhere. There is a class of malware that just deletes everything – this class of malware is known as a wiper and would fall into the Chaotic Evil category in D&D – but this doesn’t offer criminals much in the way of revenue generation. Since crypto is hard, the people peddling ransomware often get it wrong and it is possible to recover a decryption key without becoming a victim of extortion. To understand how this is possible, it’s necessary to understand how all this key generation malarkies (ha – Ed) works.
+
+Traditional symmetric encryption relies on two people being able to agree on a secret key by a secure channel. That channel might be a meeting in the woods, or sealed message delivered by a trusted intermediary. Today’s numerous, distant electronic transactions do not allow us this luxury. We can’t go whisper to our buddy at Paypal every time we want to pay for something online; every transaction requires a new key to be negotiated.
+
+Fortunately we now have public key (asymmetric) encryption which enables us to negotiate a shared secret with a remote other party, be it a person or a machine, even if we’ve never met them. This is what underlies the key-exchange part of SSL/TLS (used in HTTPS), SSH and PGP communications. Public key crypto is also intrinsic to the workings of all cryptocurrencies. It’s a fascinating subject, and also a strange concept to get your head around, but we’ll leave you to ponder it at your leisure (or check out our Crypto feature in LXF247. All you need to know is that it requires parties to hold not one but two keys – a keypair; that only one of them needs to be kept secret; and that random numbers are involved.
+
+# » MAKES YOU WANNAcry
+
+The WannaCry damage could have been much worse had it not been for the actions of one Marcus Hutchins (aka MalwareTech), a security researcher who noticed WannaCry was trying to contact a server at an unregistered domain. Feeling inquisitive, he did register the domain and set up a sinkhole, a server designed to capture information, which had the effect of neutering the malware. Once infected machines were able to contact this domain they stopped trying to infect other machines: in short, Hutchins had found a killswitch.
+
+Further variants of WannaCry appeared in the aftermath, and mercifully killswitch domains were found for these too. Hutchins became something of a hero overnight, which makes the next part of the story quite upsetting. In August 2017 he was in Las Vegas attending the Def Con hacker conference, and was promptly picked up by the FBI on hacking charges relating to the Kronos banking trojan to which he admitted contributing code as a teenager. In July 2019, Hutchins was effectively granted his freedom, with the judge sentencing him to time already served and even recommending he seek a pardon. This could have gone much worse for Hutchins; the plea deal he accepted could have seen him spend a decade in jail.
+
+We’ve long commented that technology is moving faster than laws can keep up with. People doing security research have to walk a fine line. They are bound by a treaty known as the Wassenaar Arrangement, by which signatory nations agree to implement regulations governing software that could be used maliciously. The agreement was reworded in December 2017 to make special provisions for security researchers, who may have previously risked prosecution by sharing tools or vulnerabilities across borders.
+
+![](bbox=[0.56, 0.74, 0.94, 0.92])
+
+You’re unlikely to see a screen like this on Linux, or such a high ransom demand – but you never know.

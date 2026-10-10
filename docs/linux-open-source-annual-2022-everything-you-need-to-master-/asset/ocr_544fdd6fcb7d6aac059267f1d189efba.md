@@ -1,0 +1,39 @@
+# ## Email clients
+# The Verdict
+
+![](bbox=[0.52, 0.18, 0.98, 0.33])
+
+**M**ailspring is the youngest tool featured in this *Roundup*. All the others have received extensive coverage over the past several years, and we’ve certainly discussed them at length over the past few pages. In a break from tradition with our *Roundups*, where we normally spend some time going over the pros and cons of the winners, this time around we’ll spend more time talking about the last place finisher than all the other tools. This is because we’ve rarely come across an application that has so thoroughly impressed us. At the same time, a few popular choices and the lack of interest in providing key features also makes it one of the most disappointing tools ever featured in a *Roundup*.  
+Judging solely by the score on the different tests, you can see that *Mailspring* lags behind the other tools only in the add-ons and security features department. In today’s age, an email application that doesn’t enable you to encrypt messages or provide any means to filter spam is unimaginable. It’s for this reason that *Mailspring* finishes last. Otherwise, we were stunned with the speedy performance of the tool. Its search feature, quick configuration and near-instantaneous launch is something you must experience yourself, as words can’t do it justice. Even though the project relies on funding through the paid pro version, it still offers limited access to some of its best features such as delivery notification to the free users as well, which is much appreciated. Granted, some of these features, such as delivery notification are also available on *Thunderbird*, but it isn’t as neatly tied into the desktop as *Mailspring* on our Budgie installation, with pop-ups informing us when a mail was read, or when a person visited a link we had shared.
+*KMail* has made stunning improvements since last we looked at it in **LXFlS1**, and configuring a new account is now fairly easy. *Claws Mail*, unfortunately, is still not close to the simplicity of *Thunderbird* and *Evolution*. That said, there’s nothing wrong with *Claws Mail*, and if you are restricted to a low-spec machine, we would recommend nothing else. *Evolation* is a close second, but *Thunderbird* wins on account of its default features, search process and numerous extensions.
+
++   *   **1st Thunderbird** 10/10
++       Web: www.thunderbird.net
++       Licence: GPL and others Version: 60.0
++       Should look to *Mailspring* for inspiration.
++   
++   *   **2nd Evolution** 9/10
++       Web: https://wiki.gnome.org/Apps/Evolution
++       Licence: GPL and others Version: 3.28
++       Needs to work on the account setup process.
++   
++   *   **3rd KMail** 8/10
++       Web: http://userbase.kde.org/KMail
++       Licence: GPLv3 Version: 5.73
++       Could learn some tricks from *Thunderbird* and *Mailspring*.
++   
++   *   **4th Claws Mail** 7/10
++       Web: www.claws-mail.org
++       Licence: GPLv3 Version: 3.16
++       New account setup and documentation are its weaknesses.
++   
++   *   **5th Mailspring** 5/10
++       Web: https://getmailspring.com
++       Licence: GPLv3 Version: 1.4.2
++       Needs to add encryption and spam filtering support pronto!
+
+# ### » ALSO CONSIDER
+
+As is often the case, we restricted ourselves to graphical applications for this month’s *Roundup*. Before we turn to the command-line alternatives, there’s still some graphical ones that we must mention. If you like *Claws Mail* then you should also devote attention to *Sylpheed*, since *Claws* was forked from it back in 2005. Interestingly, both tools have a nearly identical feature set. Gnome users can also try *Geary*, but it isn’t as feature-packed as *Evolution*.
+
+If you’re feeling nostalgic, and remember the days of *Netscape*, *Seamonkey Mail* is a viable alternative and offers all the useful features as the rest, such as spam detection and message filtering. Then there’s *Mutt*, which is an incredibly robust mail client. You’ll need to install and configure other command-line utilities such as *Procmail* to filter messages. *Alpine* is another console application, like *Mutt*, but is designed to be more beginner friendly. **179**

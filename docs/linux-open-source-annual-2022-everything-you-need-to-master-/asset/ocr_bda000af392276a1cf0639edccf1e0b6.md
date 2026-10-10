@@ -1,0 +1,61 @@
+same time. That defies logic, doesn’t it? How did the developers accomplish this? Let’s examine the Flatpak format a little more closely to find out.
+
+# Unpacking Flatpak
+
+Like most open source projects, *Flatpak* stands on the shoulders of giants to accomplish its goals. Two key technologies behind *Flatpak* are *ostree* and *bubblwrapar*.
+
+When you install a Flatpak, you’re installing an ostree “bundle” containing the application. The project’s website describes it as something like “git for operating system binaries.” In addition to other benefits, this approach provides for atomic updates, which is a fancy way of saying that only what needs to get updated, gets updated. It also provides a rollback mechanism.
+
+Suppose you have a program with file 1 and file 2. An update provides a new version of file 2, which is actually designated file 3. The program will operate quite happily using file 1 and file 3 until you want to roll back a version. But you won’t need to do a whole uninstall/reinstall operation. You just need to change the application so it uses file 2 instead of the newer file 3 (which still exists, in case you want to “roll-forward”).
+
+The other helper technology is *bubblwrap*, a software layer that in turn uses the Linux kernel’s user namespaces feature. It enables non-root user accounts to serve as root accounts in containers, including a *Flatpak* sandbox. When you run a *Flatpak* application it’ll start a sub-system consisting of the *Flatpak* application and a select number of system resources for the sandbox to use. The *Flatpak* wiki on GitHub ([https://github.com/flatpak/flatpak/wiki/Sandbox](https://github.com/flatpak/flatpak/wiki/Sandbox)) has a page that describes the contents of the sandbox in detail, but some key attributes are:
+
++   • The application’s *runtime(s)* are mounted in the sandbox within */usr* (the structure of which is explained in more detail in the box [right]).
++   • The application itself is mounted within */app*.
++   • Configurations from the host */etc* directory are mounted to the sandbox’s */usr/etc*.
++   • Only processes in the sandbox are visible from the sandbox, for example the */proc* directory.
++   • Assets such as icons, fonts and so on are available through “bind-mounts”, or mounting one file/directory (outside the sandbox) to a different spot in the filesystem (within the sandbox).
++   • Overall, the sandbox has access only to the resources it needs to function, and then only with the least possible privileges.
+
+Now, if you’re not too confused yet, we’ll add another level of complexity. Because while most software requires root privileges to install on a Linux system, normal users can install Flatpaks. In the next section we’ll examine the difference between these “user installs” and a more traditional “system install.”
+
+# System versus User
+
+Seasoned Linux users are accustomed to providing a root password when installing software. That software ends up in a directory outside your *HOME*, such as */usr/bin*, */opt* or perhaps even */usr/local*. But as mentioned in our pros list, *Flatpak* supports the ability to install a program for a specific user, as opposed to the entire system. This works because a normal user has access to the necessary resources to run a program,
+
+![](bbox=[0.47, 0.08, 0.83, 0.29])
+
+> The results of the flatpak search command gave you the three-part, reverse-domain ID that you’ll need to install.
+
+# ANATOMY OF A FLATPAK
+
+Installing a Flatpak will create a file structure for the program and its runtimes, as well as some metadata. The basic structure of this consists of four top-level directories in either *SHOME*/*local/share/flatpak* or */var/lib/flatpak*, depending on whether it was a system or user install.
+
+The first of these is *repo*, which contains information about installed applications, remotes, and other metadata. The *app* directory is where the applications themselves live. Each program has a sub-directory named with its three-part identifier (for example, *org.gnome.GEdit*). There are further sub-directories that are set aside for architecture (such as *x86_64*), version numbers, and their associated checksums.
+
+Runtimes are managed in the same way, but are kept separately in the *runtime* directory. This is because they can be shared across more than one application. The final directory is *exports*, containing items related to the Flatpak programs yet sits outside the sandbox. These include things like the application icon and *desktop* file (which will appear in your desktop’s application menu), and system references such as connections to the windowing system. The *exports* directory contains links to things inside the Flatpak, and is one of the carefully controlled touchpoints between the host system and Flatpak’s sandbox.
+
+The following shows the export of the *tree* command run following a *LibreOffice* Flatpak installation:
+
+```
+$ aaron@app-demo:/var/lib/flatpak$ tree -L 2 app
+org.libreoffice.LibreOffice
+appstream
+flathub
+exports
+bin
+share
+repo
+config
+extensions
+flathub.trustedkeys.gpg
+objects
+refs
+state
+tmp
+runtime
+org.freedesktop.Platform
+org.freedesktop.Platform.fmpeg
+org.freedesktop.Platform.Locale
+org.libreoffice.LibreOffice.Locale
+```

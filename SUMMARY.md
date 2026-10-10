@@ -1102,6 +1102,7 @@
 +   [Linux 与开源年度报告 2015](docs/linux-open-source-annual-2015/README.md)
 +   [2020 年 Linux 和开源年鉴：全面掌握开源软件和操作系统必读指南 第 5 卷](docs/linux-open-source-annual-2020-everything-you-need-to-master-/README.md)
 +   [Linux 与开源年度报告 2021：掌握开源软件与操作系统全指南第 6 卷](docs/linux-open-source-annual-2021-everything-you-need-to-master-/README.md)
++   [2022 年 Linux 与开源年鉴：全面掌握开源软件与操作系统 第 7 卷](docs/linux-open-source-annual-2022-everything-you-need-to-master-/README.md)
 +   [Linux 与开源卷 7：精通开源软件与操作系统的精要指南](docs/linux-open-source-volume-7-the-essential-guide-to-mastering-/README.md)
 +   [Linux 操作系统：Linux 操作系统入门指南：Linux 系统管理员](docs/linux-operating-system-introduction-to-linux-operating-syste/README.md)
 +   [Linux 操作与管理指南](docs/linux-operations-and-administration/README.md)
