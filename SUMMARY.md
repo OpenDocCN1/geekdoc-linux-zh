@@ -813,6 +813,7 @@
 +   [系统管理员 Linux 基础：学习核心 Linux 概念和命令行技能，开启你的系统管理职业](docs/linux-basics-for-sysadmin-learn-core-linux-concepts-and-comm/README.md)
 +   [Linux 基础：学习 Linux 命令与 Linux 编码指南 (1 小时上手)](docs/linux-basics-linux-guide-to-learn-linux-commands-and-linux-c/README.md)
 +   [Linux From Scratch](docs/linux-bd-gd/README.md)
++   [linux 入门指南](docs/linux-beginners-crash-course-linux-for-beginners-guide-to-li/README.md)
 +   [LINUX 入门指南：快速轻松学习 Linux 操作系统和命令行的步步指南！](docs/linux-beginners-crash-course-your-step-by-step-guide-to-lear/README.md)
 +   [Linux 入门指南](docs/linux-bible/README.md)
 +   [Linux 圣经：综合教程资源](docs/linux-bible---the-comprehensive-tutorial-resource/README.md)

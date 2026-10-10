@@ -1,0 +1,1 @@
+resulting in a long listing of the directory /etc.

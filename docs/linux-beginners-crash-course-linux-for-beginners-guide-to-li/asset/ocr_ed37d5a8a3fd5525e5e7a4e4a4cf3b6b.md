@@ -1,0 +1,5 @@
+# What is Linux?
+
+In general, there are two types of PC users. Most people look at the computer as an amazing tool for cool stuff like browsing, playing games, watching movies and listening to music. They might even know about the hardware components like RAM, processors, and audio and video cards. But they don’t really care about the complexity behind these simple processes. They open a browser, type the address and somehow the website opens. They are not interested in knowing how it happens.
+
+Then there is a second set of people who are actually interested in knowing how things work internally. Almost everyone considers an operating system as additional software. It is not. An operating system, just like hardware components, is an important part of a computer. And when needed, the operating system can be upgraded or swapped for a more suitable one.
