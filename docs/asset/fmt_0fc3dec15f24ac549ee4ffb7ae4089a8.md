@@ -1,0 +1,103 @@
+
+# root (hd0,1)
+
+# kernel /vmlinuz-version ro root=/dev/VolGroup00/LogVol01
+
+# initrd /initrd-version.img
+
+#boot=/dev/sda
+
+default=1
+
+timeout=5
+
+splashimage=(hd0,1)/grub/splash.xpm.gz
+
+hiddenmenu
+
+title Fedora (2.6.21-1.3116.fc7)
+
+    root (hd0,1)
+
+    kernel /vmlinuz-2.6.21-1.3116.fc7 ro root=/dev/VolGroup00/LogVol01 quiet
+
+    initrd /initrd-2.6.21-1.3116.fc7.img
+
+title Fedora (2.6.21-1.3116.fc7)
+
+    root (hd0,1)
+
+    kernel /vmlinuz-2.6.21-1.3094.fc7 ro root=/dev/VolGroup00/LogVol01 quiet
+
+    initrd /initrd-2.6.21-1.3084.fc7.img
+
+title Windows XP
+
+    rootnoverify (hd0,0)
+
+    chainloader +1
+
+> **注意** 旧版本的 Red Hat 和 Fedora 提供旧版 Linux 加载器（LILO）作为其引导管理器。它执行与 GRUB 相同类型的任务。您可以使用诸如 Boot Manager (`LILO-config`) 之类的管理工具，或者直接编辑 `lilo.conf` 配置文件来修改您的 LILO 配置。您还可以使用 KDE 的 Kilo2 工具来配置 LILO。
+
+## 28 管理用户
+
+作为系统管理员，您必须管理系统中的用户。您可以添加或删除用户，也可以添加和删除组，并且可以修改用户和组的访问权限。您还可以访问用于配置所有用户 shell 的系统初始化文件。您还可以控制当用户账户首次创建时复制到该账户的默认初始化文件。您可以通过配置这些文件来决定新用户的账户应如何初始配置。
+
+> **提示** *每个文件都由一个可以控制对其访问的用户拥有。系统文件由 `root` 用户拥有，仅 `root` 用户可以访问。诸如 FTP 之类的服务是此规则的例外。虽然 `root` 用户可以访问，但服务的文件由其自己的特殊用户拥有。例如，FTP 文件由 `ftp` 用户拥有。这允许用户访问服务的文件，而无需拥有 `root` 用户权限。*
+
+### 用户配置文件
+
+任何管理用户的实用工具，例如 `system-config-users`，都会使用称为*配置文件*的某些默认文件和目录来设置新账户。使用一组路径名来定位这些默认文件或指示在何处创建某些用户目录。例如，`/etc/skel` 保存新用户所需的初始化文件。新用户的家庭目录在 `/home` 目录中创建。表 28-1 列出了这些路径名。
+
+> **提示** *您可以使用 `w` 或 `who` 命令查看当前登录的用户。`w` 命令显示有关每个连接用户的详细信息，例如他们从哪里登录以及活跃了多长时间，以及登录的日期和时间。`who` 命令提供的数据详细程度较低。*
+
+### 密码文件
+
+用户通过提供正确的登录名和密码来获得账户的访问权限。系统在密码文件中维护密码，并包含登录信息，如用户名和 ID。像 `passwd` 命令这样的工具通过修改这些文件让用户更改密码；`/etc/passwd` 是传统上保存用户密码的文件，尽管是以加密形式保存的。但是，所有用户都允许读取 `/etc/passwd` 文件，这将允许用户访问加密密码。为了更安全，密码条目保存在 `/etc/shadow` 文件中，该文件仅限 `root` 用户访问。
+
+| 目录和文件 | 描述 |
+| :--- | :--- |
+| `/home` | 用户自己的家庭目录的位置。 |
+| `/etc/skel` | 保存登录 shell 的默认初始化文件，例如 `.bash_profile`、`.bashrc` 和 `.bash_logout`。包含许多用户设置目录和文件，例如用于 KDE 的 `.kde` 和用于 GNOME 的 Desktop。 |
+| `/etc/shells` | 保存登录 shell，例如 BASH 或 TC SH。 |
+| `/etc/passwd` | 保存用户的密码。 |
+| `/etc/group` | 保存用户所属的组。 |
+| `/etc/shadow` | 加密的密码文件。 |
+| `/etc/gshadow` | 组的加密密码文件。 |
+| `/etc/login.defs` | 用户的默认登录定义。 |
+
+**表 28-1 用户配置文件的路径**
+
+### /etc/passwd
+
+当您添加用户时，会在 `/etc/passwd` 文件中为该用户创建一个条目，该文件通常称为密码文件。每个条目占一行，包含由列分隔的多个字段。字段如下：
+
+- **用户名** 用户的登录名
+- **密码** 用户账户的加密密码
+- **用户 ID** 系统分配的唯一数字
+- **组 ID** 用于识别用户所属组的数字
+- **注释** 任何用户信息，例如用户的全名
+- **家庭目录** 用户的家庭目录
+- **登录 shell** 用户登录时运行的 Shell；这是默认 shell，通常是 `/bin/bash`
+
+无论是否使用影子密码，密码字段（第二个字段）将是 `x` 或用户密码的加密形式。Fedora 默认实现影子密码，因此这些条目的密码应为 `x`。以下是 `/etc/passwd` 条目的一个示例。对于此类条目，您必须使用 `passwd` 命令创建密码。请注意，在此特定系统中，用户 ID 从 500 开始并以 1 递增。在 Fedora 中，给定的组不是通用的 User，而是仅由该用户组成的唯一组。例如，`dylan` 用户属于名为 Dylan 的组，而不是通用的 User 组。
+
+```
+dylan:x:500:500:Dylan:/home/dylan:/bin/bash
+
+chris:x:501:501:Chris:/home/chris:/bin/bash
+```
+
+> **提示** 如果您关闭*影子密码*支持，`passwd` 文件中的条目将显示*加密*密码。由于任何用户都可以读取 `/etc/passwd` 文件，入侵者可以访问并可能破解加密密码。
+
+> **提示** 虽然从*技术*上可以直接编辑 `/etc/passwd` 文件中的条目，但这并不*推荐*。特别是，删除一个条目并不会移除与用户相关的其他信息、权限和数据，这会导致*可能*的安全*漏洞*，入侵者可以接管被删除用户的 ID 或磁盘空间。
+
+### /etc/shadow 和 /etc/gshadow
+
+`/etc/passwd` 文件是一个简单的文本文件，容易受到安全漏洞的影响。任何获得 `/etc/passwd` 文件访问权限的人都可能通过暴力破解来解密或破解加密密码。*shadow* 应用程序套件实现了更高级别的安全性。其中包括 `useradd`、`groupadd` 及其对应的*更新*和*删除*程序的版本。大多数其他用户配置工具，包括 `system-config-users`，都支持*shadow* 安全措施。使用影子安全后，密码不再保存在 `/etc/passwd` 文件中。相反，密码保存在一个名为 `/etc/shadow` 的单独文件中。访问权限限制为 `root` 用户。
+
+以下示例显示了用户的 `/etc/passwd` 条目：
+
+```
+chris:x:501:501:Chris:/home/chris:/bin/bash
+```
