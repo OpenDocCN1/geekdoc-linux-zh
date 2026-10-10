@@ -1,0 +1,13 @@
+ible with the CPU word size. A number of high-end database products run only on 64-bit hardware. Once you’ve built an AMI, it’s specific to the CPU word size; it’s impossible to run AMIs built for a 32-bit instance type on a 64-bit instance type, or vice versa. Next, you’ll need to think about the resource demands of your application.
+
+Applications that need a lot of processing power relative to the amount of memory may run best on the High-CPU instances. Within the 32-bit and 64-bit product lines, there is plenty of room to move up and down to optimize your resource usage. Experienced EC2 users generally benchmark their application on two or three different instance types and then choose the one that provides the best price/performance level. Finally, you’ll need to decide whether you want to have lots of small instances or fewer large ones. This scale-out versus scale-up decision is, once again, very specific to your application’s needs. Complex, multi-tier applications will often use multiple instance types. For example:
+
++   - Small instances for the web tier
++   - Extra Large instances for the relational database tier
++   - High-CPU Extra Large instances for a CPU-intensive application tier
+
+Using a larger number of smaller instances also gives you the flexibility to distribute them across two or more Availability Zones for better fault tolerance. Extremely large-scale applications can even span more than one EC2 region, running some instances in the United States, some in Europe, and others in Asia. It’s actually quite easy to create these complex, multi-homed topologies using EC2 capabilities.
+
+When you build an application that literally spans the world, cloud computing will become even more compelling. You can build “follow-the-sun” applications, adding resources when and where your users are busiest and removing them when they’re asleep. You can add functional redundancy and geographic dispersion without having to deal with additional data center or bandwidth suppliers.
+
+When you launch an instance you always run a particular AMI (Amazon Machine Image). As we discussed in Chapter 2, the AMI contains your operating system and can also contain other layers and parts of your application. You can choose from a number of predefined AMIs or you can build your own. You have a lot of flexibility in how you configure and customize your AMIs. You can build a set of distinct AMIs for each tier of your application, or you can create a generic AMI that self-customizes at startup time according to its role. AMIs can be stored in Amazon S3 or as Elastic Block Storage snapshots. The newer, snapshot-based model is faster and more flexible. Instances that have been booted from an EBS snapshot can be

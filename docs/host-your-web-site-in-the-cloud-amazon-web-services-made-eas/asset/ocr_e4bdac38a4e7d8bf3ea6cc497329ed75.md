@@ -1,0 +1,13 @@
+![](bbox=[0.13, 0.07, 0.17, 0.1])
+
+# **Storage Engines**
+
+MySQL uses the word "engine" to refer to storage engines such as InnoDB and MyISAM. Each table in a MySQL instance uses a particular storage engine. The automated backup feature of Amazon RDS (which we'll get to in a minute) is currently supported only for InnoDB tables, since InnoDB supports reliable crash recovery. If you must use MyISAM tables with RDS, it's vital that you stop all activity on each table, lock it, and then flush it before backing it up. ${ }^{4}$
+
+A DB Instance is always in a particular state. The principal states are **creating**, **backing-up**, **available**, **modifying**, and **deleting**. The DB Instance will spend most of its life in the available state; the other states are transient.
+
+Your application program and database tools must be able to establish a network connection with your DB Instances. In order to make this possible, you must associate a DB Security Group with the DB Instance, and you must authorize ingress (inbound access) to the DB Instance from a network address range or EC2 Security Group. Once you’ve done this, you can configure your program and tools to use the DB Instance’s Endpoint to establish a connection.
+
+Amazon RDS gives you the ability to control the parameters that affect low-level aspects of the database engine’s performance and behavior using DB Parameter Groups. Each group contains a list of configuration variables specific to the database engine. For the MySQL database, the DB Parameter Group will include values such as `innodb_additional_mem_pool_size` and `innodb_buffer_pool_size`. Some of the values are absolute, and others are specified using a formula; for example, `innodb_buffer_pool_size` is specified by the formula (DBInstanceClassMemory*3/4). This allows the Parameter Group to apply to all of the DB Instance Classes—as the value will be adjusted based on the features of the Instance Class. If a particular Parameter Group has no value for a parameter, then a default value that’s specific to RDS or the database engine is used. Your AWS account contains a default DB Parameter Group that you can use until you need to change a parameter. When you modify a parameter group you can choose to apply the update immediately, or on the next reboot of the DB Instance or Instances associated with the group. Some
+
+> ${ }^{4}$ The Amazon Relational Database Service Developer Guide contains more information about this topic; you can find it at http://docs.amazonwebservices.com/AmazonRDS/latest/DeveloperGuide/.

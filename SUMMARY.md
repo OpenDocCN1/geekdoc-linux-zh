@@ -570,6 +570,7 @@
 +   [Linux, Unix 和 Windows 上的 DB2 高可用性与可扩展性指南](docs/high-availability-and-scalability-guide-for-db2-on-linux-uni/README.md)
 +   [LAMP 栈高可用性：消除单点故障并提高 Linux、Apache、MySQL 和 PHP Web 的运行时间](docs/high-availability-for-the-lamp-stack-eliminate-single-points/README.md)
 +   [HITB 杂志](docs/hitb-magazine/README.md)
++   [在云中托管您的网站：亚马逊云服务简化指南：亚马逊EC2简化指南](docs/host-your-web-site-in-the-cloud-amazon-web-services-made-eas/README.md)
 +   [Linux 工作原理指南](docs/how-linux-works/README.md)
 +   [Linux 工作原理（第2版）](docs/how-linux-works-2nd-edition/README.md)
 +   [Linux 工作原理（第2版）：超级用户都应该了解的内容](docs/how-linux-works-2nd-edition-what-every-superuser-should-know/README.md)

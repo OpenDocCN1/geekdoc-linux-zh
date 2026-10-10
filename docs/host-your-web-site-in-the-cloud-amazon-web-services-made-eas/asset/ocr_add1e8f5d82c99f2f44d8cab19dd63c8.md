@@ -1,0 +1,13 @@
++   No Configuration—Perhaps you can do your work with a totally stock AMI. If you’re doing short-term experimental development, a predefined AMI may include everything you need. You can store your source code in an external source code control system or on an EBS volume. You can launch an instance when you arrive at the office, mount the volume, spend your day coding, and then unmount the volume and terminate the instance at the end of the day.
+
++   Manual Configuration—If there’s no need for you to launch multiple copies of the same AMI and if the configuration procedure is short and simple, perhaps you can take a basic approach and manually configure your AMI after you start it. On Linux systems you can install all required packages with a single command. You can even create a shell script, store it in Amazon S3, and simply download and run it each time. Because you can stop and later restart an EBS-backed instance, manual configuration is sufficient in many situations.
+
++   Automated Configuration—You have the ability to pass a string (up to about 10,000 characters) of user data to each EC2 instance when you launch it. This data could be a reference to a script stored in Amazon S3, or it could be the script itself. 9 The script can perform the final customization of the instance, including retrieval of other scripts and configuration data from a source code repository.
+
++   Automated Role-based Configuration—If your system incorporates multiple tiers with distinct system configurations for each tier, you can extend the Automated Configuration model to customize each tier—installing different packages and making other changes based on a parameter that describes the role of the instance. The roles are arbitrary and will depend on the application. For example, a three-tier application could have “web server,” “database master,” “database slave,” and “application server” roles.
+
+If none of the above options meet your needs, go ahead and make your own AMI. The process is quick and simple, and you’ll walk away with an even better appreciation of the power of cloud computing and AWS.
+
+The AMI creation process has become significantly simpler with the introduction of EBS-backed AMIs, and that’s what we’ll describe in this section. If you need to create an S3-backed AMI, you’ll need to study the EC2 documentation to learn more about the bundling, uploading, and registration steps.
+
+> 9 You can pass up to 16,384 bytes of data to an EC2 instance in this way.

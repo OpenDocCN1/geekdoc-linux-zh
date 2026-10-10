@@ -1,0 +1,3 @@
+istics of a cloud, and proposed that the cloud could be thought of as a programmable data center. We examined the cloud from three sides: general, technical, and business, and enumerated some common misconceptions. Finally, we took a quick look at usage patterns and an extended look at actual use cases.
+
+In the next chapter we'll learn more about the Amazon Web Services, and we'll get ready to start writing some code of our own.
