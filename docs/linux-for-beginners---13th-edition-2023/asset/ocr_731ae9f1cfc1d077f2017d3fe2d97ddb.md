@@ -1,0 +1,23 @@
+# # 10 Things to do After Installing Linux Mint
+
+Linux Mint is a polished distro out of the box but, as with most Linux distros, there are some tweaks that can be applied to improve the way it works. Although these are Mint-specific tweaks, most can be applied to other distros.
+
+# ## LINUX TWEAKS
+
+Some of these post-installation actions are highly recommended, while others are just handy additions and simply tweak the system or add a customisation.
+
++   **STEP 1** The first, and most important, post-installation action is to update the system. Click on the shield icon in the Panel, found at the bottom right of the desktop next to the time and date. This launches the Update Manager.
+
+![](bbox=[0.07, 0.49, 0.48, 0.68])
+
++   **STEP 2** Linux Mint offers the user a three-level policy approach to updates: Don't Break My Computer, Optimise Stability and Security and Always Update Everything. The recommended option is the Optimise Stability and Security, which only updates safe, essential patches that won't impact critical elements of the core OS. Read through the descriptions but choose the middle, and recommended option.
+
+![](bbox=[0.07, 0.8, 0.48, 0.95])
+
++   **STEP 3** Click the OK button and you can see a couple of updates ready for installation. Before you update though, click on the blue bar OK button to switch to a Local Mirror. This opens the Software Sources option. In the Mirrors section, click on the Main and Base drop-down menus and select a server closest to your current location.
+
+![](bbox=[0.51, 0.51, 0.95, 0.68])
+
++   **STEP 4** Click the Update the Cache button and close the Software Sources window. Back in the Update Manager, click on the Install Updates icon and enter your password. The updates automatically apply themselves and relaunch Update Manager, this time with a lot more updates. Again, click Install Updates, OK any messages and wait for them to finish.
+
+![](bbox=[0.51, 0.8, 0.95, 0.95])

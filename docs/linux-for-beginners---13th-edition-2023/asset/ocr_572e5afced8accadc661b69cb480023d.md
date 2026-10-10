@@ -1,0 +1,23 @@
+# ## Becoming Anonymous Online
+
+The digital age has led to many great advances in communications; however, it has also brought on a new age of spying and snooping. Most of us are no strangers to the frequent news stories of governments, secret organisations and underground hackers breaking our privacy but how can you combat this?
+
+# ### ANONYMITY WITH MINT
+
+While it’s virtually impossible to become totally anonymous online, you can take measures to ensure our privacy is at its best.
+
++   STEP 1  Starting with the basics, use HTTPS instead of the standard HTTP when browsing. This means that anything that’s transmitted over HTTPS is secure (hence the S part at the end) and encrypted.
+
+![](bbox=[0.06, 0.49, 0.49, 0.66])
+
++   STEP 3  Although using Google may seem like the obvious choice for a modern Internet search, the company does track all searches made by an individual. Instead, consider an alternative search engine, such as DuckDuckGo, a search engine that doesn’t store personal data or track you.
+
+![](bbox=[0.51, 0.49, 0.94, 0.66])
+
++   STEP 2  When you’re browsing, consider using the Incognito or Private browsing modes available in a browser. This disables your web history and web cache, allowing you to browse without the details being stored for later scrutiny by someone else. However, it doesn’t stop any data or search tracking.
+
+![](bbox=[0.06, 0.74, 0.49, 0.92])
+
++   STEP 4  If you’re regularly on the Internet then consider installing some of the browser plug-ins that enhance your privacy. For example, for Firefox, use Ghostery, NoScript and Adblock Plus to block trackers, adverts and other data mining techniques.
+
+![](bbox=[0.51, 0.74, 0.94, 0.92])

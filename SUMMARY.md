@@ -930,6 +930,7 @@
 +   [Linux 初学者指南：5本合1高级 Linux 编程、内核精通、强化安全措施、系统自动化及深度实用指南终极指南](docs/linux-for-absolute-beginners-5-books-in-1-the-ultimate-guide/README.md)
 +   [Linux 初学者指南：Linux 操作系统入门指南，包含命令、编辑器和 Shell 编程](docs/linux-for-absolute-beginners-an-introduction-to-the-linux-op/README.md)
 +   [Linux 初学者指南](docs/linux-for-beginners/README.md)
++   [Linux 入门指南 - 第13版，2023](docs/linux-for-beginners---13th-edition-2023/README.md)
 +   [Linux 初学者指南（第17版，2024年）](docs/linux-for-beginners---17th-edition-2024/README.md)
 +   [Linux 初学者指南 - 学习 Linux 操作系统基础的逐步用户手册（Ubuntu 操作系统）](docs/linux-for-beginners---step-by-step-user-manual-to-learning-t/README.md)
 +   [Linux 初学者指南](docs/linux-for-beginners-17th-ed-2024/README.md)

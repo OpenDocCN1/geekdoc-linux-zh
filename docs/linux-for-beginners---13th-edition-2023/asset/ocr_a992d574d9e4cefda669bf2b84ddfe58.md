@@ -1,0 +1,37 @@
+![](bbox=[0.06, 0.045, 0.13, 0.085])
+
+# Using the Terminal
+
+# Fun Things to do in the Terminal
+
+Despite the seriousness of an operating system, the Linux community are certainly no strangers to a bit of fun. The developers over the years have created and inserted all manner of fun and odd elements into the Terminal.
+
+# TERMINAL FUN
+
+You'll be working exclusively in the Terminal for these next two sections, so start warming up your fingers. After all, all work and no play... as the saying goes.
+
+# STEP 1
+
+The first command we're going to use is sl, it's not installed by default so enter: sudo apt-get install sl. The command can be run with sl and when executed will display a Steam Locomotive travelling across the screen (hence 'sl'). Entering LS, note the upper case, also works.
+
+![](bbox=[0.07, 0.51, 0.48, 0.68])
+
+# STEP 3
+
+If you've ever fancied having the computer read a random fortune out to you, then you're in luck. Most distros require you to install the fortune app, however Linux Mint differs somewhat by having it already pre-loaded. All you need to do is enter the command fortune into the Terminal, and enjoy.
+
+![](bbox=[0.52, 0.51, 0.93, 0.68])
+
+# STEP 2
+
+Fans of Star Wars even get a fix when it comes to the Terminal. By linking to a remote server via the telnet command, you can watch Episode IV: A New Hope being played out, albeit in ASCII. To view this spectacle, enter: telnet towel.blinkenlights.nl.
+
+![](bbox=[0.07, 0.775, 0.48, 0.945])
+
+# STEP 4
+
+The rev command is certainly interesting, and at first what seems a quite useless addition to the OS. However, it can be used to create some seemingly unbreakable passwords. Enter: rev, now type some text, when you press Enter next, everything you typed in will be reversed. Press Ctrl+C to exit.
+
+![](bbox=[0.52, 0.775, 0.93, 0.945])
+
+60 www.pckpublications.com

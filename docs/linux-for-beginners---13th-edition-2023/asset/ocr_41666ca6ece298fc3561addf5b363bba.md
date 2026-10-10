@@ -1,0 +1,41 @@
+# The Best Linux Distributions
+
+# ARCH
+
+Arch is one of longest running Linux distributions and forms the basis of many other versions of Linux. Why install Mint or Ubuntu when you can install Arch? Many users do exactly that but it's not ideal for beginners. Ubuntu and Mint both offer an easier installation path and come with software packages to help you get started.
+
+![](bbox=[0.35, 0.14, 0.64, 0.32])
+
+Arch is a distro for when you're more experienced with Linux. You start with nothing but the command line and from there you have to manually partition your hard drive, set where the installation files go, create a user, set the OS locale and finally install a desktop environment along with the apps you want.
+
+Arch on the other hand, is a more 'bare bones' affair. Arch is committed to free software and its repositories contain over 50,000 apps to install, including multiple different Desktop environments, and use as you would with any other distro.
+
+The advantage though, for all this hard work, is a distro that you have created. This means your Arch distro won't come with all the unecessary files and apps that others have preinstalled; it's custom made for you, by you.
+
+www.archlinux.org
+
+# RASPBERRY PI DESKTOP
+
+No doubt you've heard of the Raspberry Pi. It's hard not to have, as this remarkable, tiny computer has taken the technology world by storm for the last six years since it was introduced.
+
+There are several aspects to the Raspberry Pi that make it such a sought after piece of the computing world. For one it's cheap, costing around £25 for what is essentially a fully working computer. It's small, measuring not much bigger than a credit card. You can build electronics with it, using a fully programmable interface; and it comes with Raspbian, its own custom-made, Debian-based operating system that includes an office suite alongside many different programming languages and educational resources.
+
+Raspbian is exclusive to the Pi hardware, since the Raspberry Pi uses an ARM processor to power it. However, the Raspberry Pi Foundation has since released a PC version of Raspbian: Raspberry Pi Desktop.
+
+Just like the Pi version, Raspberry Pi Desktop comes with the all the coding, educational and other apps you will ever need. It's quick, stable and works superbly. If you're interested in stretching your Linux experience, then this is certainly one of the top distros to consider.
+
+www.raspberrypi.org/downloads/raspberry-pi-desktop
+
+![](bbox=[0.08, 0.82, 0.47, 0.94])
+
+# OPENSUSE
+
+![](bbox=[0.53, 0.47, 0.92, 0.65])
+
+Most Linux distributions fall into two camps. There are ones with the latest features and technology like Ubuntu and Mint and those with few new features but rock solid reliability, like Debian.
+
+Meanwhile, openSUSE attempts to cover both bases. OpenSUSE Leap is the rock solid system. It's developed openly by a community along with SUSE employees, who develop an enterprise-level operating system, SUSE; this powers the London Stock Exchange amongst other things. It is designed for mission critical environments where there is no scope for instability. If you find all that too sensible, openSUSE Tumbleweed is a rolling release with all the latest features, and the occasional crash.
+
+openSUSE is a highly respected Linux distribution and many of its core contributors work on the Linux Kernel, LibreOffice, Gnome and other key Linux areas. In short, openSUSE is where you'll find the pros hanging out.
+
+www.openSUSE.org

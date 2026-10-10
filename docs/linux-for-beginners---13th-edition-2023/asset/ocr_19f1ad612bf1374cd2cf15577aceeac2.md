@@ -1,0 +1,29 @@
+# Introduction to the Cinnamon Menu
+
+# CINNAMON ON THE MENU
+
+Now the Software Rendering issue for Virtualbox users is out of the way, let’s take a look at the Mint Menu and how it all works. Remember, this is just for Mint Cinnamon, other distros look and behave differently.
+
+**STEP 1** First off, you may have already noticed the Welcome Screen that pops up when you login to Linux Mint. Take a moment to browse through the options, read the First Steps option and so on. When you’re done, click the X in the top right corner of the window to close it.
+
+![](bbox=[0.05, 0.27, 0.48, 0.43])
+
+**STEP 4** Open up the Menu again but this time hover the mouse pointer over Graphics, then click on GNU Image Manipulation Program. GIMP is a powerful image manipulation app that’s probably as effective as Adobe’s Photoshop but requires a little more work to get the results you want. It’s certainly worth taking the time to master, though.
+
+![](bbox=[0.52, 0.28, 0.94, 0.43])
+
+**STEP 2** You’ve already used the Mint Menu to reboot the system and when you first used the Live Environment. This time, click the Menu button and hover over the Office entry in the middle column. This changes the icons represented in the right-hand column, detailing what apps are installed under that section.
+
+![](bbox=[0.05, 0.54, 0.48, 0.69])
+
+**STEP 5** If you’re looking for a particular function or app, such as setting up a printer, click on the Search box at the top of the Menu box. Start typing the app or function you want, such as printers, and the Mint Menu displays the relevant options below. This works with most modern Linux menus, regardless of the distro.
+
+![](bbox=[0.52, 0.54, 0.94, 0.69])
+
+**STEP 3** Launching any of the apps from the Menu is as simple as finding one and clicking it. For example, under the Office section, click on LibreOffice Writer. Writer is the preinstalled word processor for Linux Mint. It opens and saves as Microsoft Word and functions in almost the same way.
+
+![](bbox=[0.05, 0.8, 0.48, 0.95])
+
+**STEP 6** Hover over any of the apps listed on the right-hand column and right-click, to be presented with a list of options: Add to Panel, Add to Desktop, Add to Favourites and Uninstall. Most of these options are obvious in their use. Add to Favourites though places the app in the left-hand, quick-access column.
+
+![](bbox=[0.52, 0.8, 0.94, 0.95])
