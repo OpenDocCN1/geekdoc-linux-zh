@@ -1,0 +1,26 @@
+
+```apache
+<Directory /home/user_name/public_html>
+
+  AllowOverride FileInfo AuthConfig Limit
+
+  Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+
+  <Limit GET POST OPTIONS>
+
+    Order allow,deny
+
+    Allow from all
+
+  </Limit>
+
+  <LimitExcept GET POST OPTIONS>
+
+    Order deny,allow
+
+    Deny from all
+
+  </LimitExcept>
+
+</Directory>
+```
