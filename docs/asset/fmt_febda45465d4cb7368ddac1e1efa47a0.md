@@ -1,0 +1,107 @@
+
+**`lock-out`** 工具允许你手动控制 HAL 锁。它仅适用于尚未使用 HAL 的软件。`--run` 选项指定了要运行的程序。
+
+| 工具 | 描述 |
+| :--- | :--- |
+| `lhal` | 显示 HAL 设备 |
+| `hal-get-property` | 为 HAL 数据库检索设备属性 |
+| `hal-set-property` | 为 HAL 数据库设置设备属性 |
+| `hal-find-by-property` | 根据属性字段搜索设备 |
+| `hal-find-by-capability` | 根据能力搜索设备 |
+| `hal-disable-polling` | 禁用可移除介质的轮询 |
+
+# HAL 配置：`/etc/hal/fdi` 和 `/usr/share/hal/fdi`
+
+设备信息以及管理设备的策略存储在 `/etc/hal/fdi` 和 `/usr/share/hal/fdi` 目录下的设备信息文件中。`/usr/share/hal/fdi` 目录用于你设置属性的地方，例如在 `/etc/fstab` 中用于 CD-ROM 的属性。
+
+Linux 上的 HAL 实现通过关注于特定设备的可挂载卷的存储方法来配置存储管理。卷定义了要采取的操作以及可以使用的验证选项。特殊调用（callouts）直接执行操作，例如使用 `hal-storage-mount` 挂载设备，或使用 `hal-storage-eject` 移除。
+
+# 设备信息文件：`fdi`
+
+这些设备的 HAL 属性由 `/usr/share/hal/fdi` 和 `/etc/hal/fdi` 目录下的设备信息文件 (`fdi`) 处理。`/usr/share/hal/fdi` 用于用于发行版提供的配置，而 `/etc/hal/fdi` 用于设置用户管理配置。这两个目录中都列出了 HAL 管理的各种信息的子目录，例如**策略**，哪些子目录包含关于如何管理设备的策略文件。这些文件被称为设备信息文件，包含了获取设备信息的规则，以及检测和分配可移除介质选项的规则。设备信息文件的扩展名为 `.fdi`，例如 `storage-methods.fdi`。例如，策略目录具有以下子目录：**100vendor** 和 **20third**。**100vendor** 留有管理可移除设备的策略规则的 fdi 文件（100vendor 替换了早期 HAL 版本中的 **90defaultpolicy**）。该目录包含用于存储设备的 **20-storage-methods** fdi 策略文件。在这里，你会找到指定 CD-ROM 等可移除存储介质选项的属性。目录以数字开头；数字越小越靠前。通过 udev，最后的读取将覆盖任何之前的属性设置，因此编号较高的目录及其持有的 fdi 文件具有优先级。这就是为什么默认策略在 **100vendor** 中，而会覆盖默认设置的用户策略位于编号较高的目录中，如 **30user**。
+
+目前设备信息文件目录中设置了三个设备信息文件目录，分别对应不同类型的信息：信息、策略和预探测（preprobe）。
+
+# 第17 章：设备 437
+
+- **信息 (Information)**：信息目录用于有关设备的信息。
+- **策略 (Policy)**：策略目录用于设置存储策略等策略。存储设备的默认策略位于 `policy/10osvendor` 下的 `20-storage-methods.fd` 文件中。
+- **预探测 (Preprobe)**：预探测目录处理复杂的设备，例如异常的驱动器或驱动器配置，例如在 `preprobe/10osvendor/10-ide-drives.fd` 中。这包含了设备在探测之前所需的信息。
+
+在这些子目录内部还有其他子目录，指示信息文件的来源（如供应商、第三方或用户）以及它们的优先级。这里列出了某些关键文件：
+
+- `information/10freeskip` 由 freedesktop.org 提供的信息
+- `policy/10osvendor` 默认策略（由系统管理员和操作系统发行版设置）
+- `preprobe/10usevendor` 针对复杂设备的预探测策略
+
+# 属性
+
+设备信息通过属性条目指定。此类条目由键值对组成，其中键指定设备及其属性，而值是该属性的值。有许多类型的值，例如布尔值真/假、用于指定目录挂载点的特殊值，或整数值。
+
+属性按元数据、物理连接、功能和策略进行分类。元数据提供有关设备的通用信息，例如它使用的总线、驱动程序或 HAL ID。元数据以 `info` 键开头，例如 `info.bus`。物理属性描述物理连接，即使用情况。PCI 和 SCSI 总线信息列在 `pci` 和 `scsi` 键中。`usb_device` 属性用于 USB 总线。
+
+功能属性适用于特定类型的设备。在这里，你会找到存储设备的属性，例如 `storage.cdcdrm` 键，指定光学设备是否具有可写能力。例如，将 `storage.cdcdrm` 键设置为 `true` 将指定光驱器可以写入 CD-R 光盘。
+
+卷属性用于可以挂载的设备，如 CD 盘或 USB 驱动器。
+
+方法和属性可以指示如何处理设备。方法实际上是调用程序将用于执行任务的指令调用。存储介质的方法使用卷属性处理，指定要使用的方法（调用）。卷属性指定了设备选项，如文件类型和挂载选项。HAL 使用 `/usr/libexec` 目录中的脚本来实际管理介质。缩写条目来自 `20-storagemethods.fd` 策略文件。第一个指定了要采取的操作。
+
+```
+<append key="Volume_name" type="list">storage-mount</append>
+```
+
+```
+<append key="Volume.mount.valid_options" type="strlist">storage-mount</append>
+```
+
+# 第三部分：设备与文件系统
+
+```
+<append key="volume.mount.valid_options"type="strlist">ro</append>
+```
+
+常用的几种方法和属性列在 17-8 中。
+
+| 属性 | 描述 |
+| :--- | :--- |
+| `volume.method_names` | 要采取的操作 |
+| `volume.method.execpath` | 要执行脚本 |
+| `volume.mount_point` (string) | 首选挂载点 |
+| `volume.filesystem` (string) | 使用的文件系统 |
+| `volume.mount_options` (strlist) | 默认选项 |
+
+表 17-8：HAL 属性和方法
+
+# 设备指令
+
+属性在文件中定义。如所述，设备信息文件具有 `.fdi` 扩展名。指令封装在大于小于符号中。有三种：
+
+- **`merge`** 指令会将新属性合并到设备数据库。
+- **`append`** 指令将追加或修改设备的属性。
+- **`match`** 指令将测试设备信息值。
+
+指令将包含一个类型，指定存储值的类型，如 `string`、`bool`、`int`、`double`。`copy-property-type` 将复制属性。`storage-methods.fdi` 的讨论展示了 `merge` 和 `match` 指令的示例。
+
+# `storage.fdi`
+
+**`20-storage-methods`** fdi 文件位于 `/usr/share/hal/fdi/policy/10osvendor` 目录，列出了可移除设备的策略。这里是实际指定存储卷选项（例如 CD-ROM）的地方。该文件根据特定设备类型到标准默认值进行组织。键用于定义选项，例如 `volume.mount_options`，它将指定 CD-ROM 等存储设备的挂载选项。键用于指定热插拔设备等异常情况。
+
+```
+storage-mount
+```
+
+```
+ro
+```
+
+存储设备的默认挂载根目录由挂载计数脚本 `hal-storage-mount` 设置。默认挂载是 `disk`。HAL 将尝试使用卷属性信息来生成挂载点。
+
+以下示例管理了空白磁盘。此类磁盘无法被挂载，只能被弹出。为了确定可能的操作，HAL 对 Volume 属性使用了 `method_names`、`method_signatures` 和 `method_ecpaths`（为了提高可读性，此示例删除了键名中的 `org.freedesktop.HAL` 前缀，类似于 `org.freedesktop.hal.Volume.method_names`）。
+
+```xml
+<match key="volume.disk.is_blank" bool="true">
+<append key="info.interfaces" type="strlist"></append>
+<append key="volume.method_names" type="strlist">Eject</append>
+<append key="volume.method_signatures" type="strlist"></append>
+<append key="volume.method_arguments" type="strlist">extra_options</append>
+```

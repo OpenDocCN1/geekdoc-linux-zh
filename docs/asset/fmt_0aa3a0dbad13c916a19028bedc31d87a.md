@@ -1,0 +1,55 @@
+
+# 第 7 章：在 Fedora 和 RHEL 293 中游戏
+
+表 7-3 包含了 Fedora 仓库中不断增长的游戏列表的示例。现在 Fedora 中已有超过 150 个游戏程序包。除另有说明外，表 7-3 中的所有游戏都可以从应用程序菜单的“游戏”列表中启动。
+
+## 表 7-3：Fedora 中的游戏
+
+| 游戏名称 | 描述 |
+|---|---|
+| Abe (`abe`) | 一款卷轴、平台跳跃、探索古代金字塔的游戏。 |
+| Beneath a Steel Sky (`beneath-a-steel-sky`) | 20 世纪 90 年代流行的商业科幻冒险游戏，背景设定在一个压抑的未来城市。 |
+| BSD Games (`bsd-games`) | 追溯到 70 年代早期 UNIX 系统的文本类卡牌游戏和冒险游戏。（从 shell 运行。） |
+| BZFlag (`bzflag`) | 3D 多人坦克战斗游戏。 |
+| Celestia (`celestia`) | OpenGL 实时视觉化空间模拟。（在“其他”菜单下可用。） |
+| CGoban (`cgoban`) | 用于下棋的 X 盘。 |
+| Crystal Stacker (`crystal-stacker`) | 当晶体掉落时，匹配三个或更多相同颜色的物体。 |
+| Cannon Smash (`cmasash`) | 3D 桌面游戏。 |
+| Enigma (`enigma`) | ATARI 游戏 Oxyd 的克隆版。 |
+| Flight Gear (`FlightGear`) | 飞行模拟软件。 |
+| FooBilliard (`foobilliard`) | OpenGL 台洲球游戏。 |
+| Fortune (`fortune-mod`) | 一个显示幸运语的程序。（通过输入 `fortune` 命令可用。） |
+| Freeciv (`freeeciv`) | Freeciv 多人策略游戏。 |
+| Freedoom (`freedoom`) | Doom 游戏引擎的数据文件（配合 `prdoom` 包使用，该包提供了 doom 引擎的开源移植）。 |
+| Freedroid (`freedroid`) | C64 游戏 Paradox 的克隆版。 |
+| Freedroid RPG (`freedroidpg`) | 以 Tux 为英雄的角色扮演 Freedroid 主题。 |
+| GL-117 (`gl-117`) | 飞行模拟器。 |
+| Gnofract 4D (`gnofract4d`) | Gnofract 4D 是一个基于 Gnome 的绘制分形的程序（在“图形”菜单下可用）。 |
+| Sudoku (`gnome-sudoku`) | 基于 GNOME 的数独谜游戏。 |
+| Chess (`gnchess`) | GNU 国际象棋程序。配合 `xbox` 包使用提供图形化象棋游戏。 |
+| gnogo (`gnugo`) | 文本类围棋程序。（通过输入 `gnogo` 命令可用。） |
+| Grhino (`grhino`) | 基于 GNOME 的反转游戏。 |
+| Lacewing (`lacewing`) | 操作不同飞船的星行星游戏。 |
+| Lincity (`lincity-ng`) | 构建模拟城市。 |
+| Marbles (`marbles`) | Atom 的克隆版，你可以创建弹子形象。 |
+| LucidLife (`lucidlife`) | 康威生命模拟器。 |
+| NetHack (`nethack`) | 探索地下城的单人 Roguel 类游戏。 |
+| Neverball (`neverball`) | 让球穿过障碍课程。 |
+| Maelstrom (`maelstrom`) | 太空战斗游戏。 |
+| Nexuis (`nexuis`) | 以死亡赛为向的第一人射击游戏（多人）。 |
+| Powermanga (`powermanga`) | 2D 街机射击游戏。 |
+| PPRacer (`ppacer`) | 3D 赛车游戏。 |
+| Qascade (`qascade`) | 经典益游戏。 |
+| Raidem (`raidem`) | 俯视角 2D 射击游戏。 |
+| Rogue (`rogue`) | 经典冒险游戏的图形版本。 |
+| Scorched Earth (`scorchedd`) | 基于经典 DOS Scorched Earth 的游戏。 |
+| Sirius (`sirius`) | 适用于 Gnome 的黑棋。 |
+| Sopwith (`sopwith`) | `sopwith` 游戏的 SDL 移植。（通过输入 `sopwith` 命令可用）。 |
+| Starfighter (`starfighter`) | 星际战斗机项目。在表 7-3 中列出的游戏之一名称： |
+| Superux (`supertux`) | 飞行 模拟器 游戏。 |
+
+你可以通过应用程序菜单（非 root 用户）点击“游戏 -> Freeciv”来启动 Freeciv。如果 Freeciv 没有启动，请尝试在终端窗口中输入以下命令启动它：
+
+```
+$ civclient &
+```
