@@ -1,0 +1,26 @@
+The first five lines of the output screen (refer to Figure 1-6) provide summary information about the system. Here is what these five lines show:
+
++   - The first line shows the current time, how long the system has been up, how many users are logged in, and three **load averages** — the average number of processes ready to run during the last 1, 5, and 15 minutes.
+
++   - The second line lists the total number of processes and the status of these processes.
+
++   - The third line shows CPU usage — what percentage of CPU time is used by user processes, what percentage by system (kernel) processes, and during what percentage of time the CPU is idle.
+
++   - The fourth line shows how the physical memory is being used — the total amount, how much is used, how much is free, and how much is allocated to buffers (for reading from the hard drive, for example).
+
++   - The fifth line shows how the virtual memory (or swap space) is being used — the total amount of swap space, how much is used, how much is free, and how much is being cached.
+
+The table that appears below the summary information (refer to Figure 1-6) lists information about the current processes, arranged in decreasing order by amount of CPU time used. Table 1-10 summarizes the meanings of the column headings in the table that top displays.
+
+| **Table 1-10** | **Meanings of Column Headings in top Utility's Output** |
+|---|---|
+| *Heading* | *Meaning* |
+| PID | The process ID of the process |
+| USER | Username under which the process is running |
+| PR | Priority of the process |
+| NI | Nice value of the process — the value ranges from -20 (highest priority) to 19 (lowest priority) and the default is 0. (The **nice value** represents the relative priority of the process: the higher the value the lower the priority and the nicer the process — because it yields to other processes.) |
+| VIRT | The total amount of virtual memory used by the process, in kilobytes |
+| RES | Total physical memory used by a task (typically shown in kilobytes, but an m suffix indicates megabytes) |
+| SHR | Amount of shared memory used by process |
+| S | State of the process (**S** for sleeping, **D** for uninterruptible sleep, **R** for running, **Z** for *zombies* — processes that should be dead but are still running — or **T** for stopped) |
+| %CPU | Percentage of CPU time used since last screen update |

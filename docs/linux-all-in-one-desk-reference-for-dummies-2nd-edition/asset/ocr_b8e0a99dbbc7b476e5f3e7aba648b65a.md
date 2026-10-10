@@ -1,0 +1,26 @@
+**14. Unless your PC is behind a proxy** (which may be the case at some organizations), select **No** and press **Enter**.
+
+The installer then prompts you for the name of the directory where the SUSE files are located.
+
+**15. Enter the name of the directory on the FTP server where the SUSE Linux files are located and press Enter.**
+
+The directory name is the parent directory of the location where you found the `boot.iso` file in Step 2. For example, if the `boot.iso` file is in `pub/suse/1386/10.0/boot/`, then you should type `pub/suse/1386/10.0/` and press **Enter**.
+
+The installer displays a message informing you that it is loading data into *RAM disk* (which refers to an area of memory that acts as a hard drive). When the installer finishes downloading data (about 62MB of data), YaST (that's what the SUSE installer is called) starts and displays its initial GUI screen.
+
+From this point on, the installation steps are the same as the ones for a CD/DVD install, which I explain in the next section. You should jump to the point where the YaST installer displays its initial GUI screen.
+
+# ## Installing SUSE Linux from CDs
+
+To install SUSE Linux from the CDs that you have burned from the ISO images on this book's companion DVD, simply insert the first CD into your PC's CD/DVD drive and restart your PC. (In Windows, choose **Start**>**Shutdown** and select **Restart** from the dialog box.) Note that you may have to enter Setup and make sure that your PC is set to boot from the CD/DVD drive.
+
+After your PC powers up, a boot loader starts and displays an initial boot screen with a menu of items. Table 2-2 lists each boot menu item and its meaning. As you can see, you can perform a number of tasks from the boot screen, including booting an existing installation from the hard drive and starting a rescue system.
+
+Table 2-2 SUSE Installer Boot Menu Items
+| Select This Item | To Do This |
+|---|---|
+| Boot from Hard Disk | Boot the PC from a previously installed operating system from the hard drive |
+| Installation | Automatically detect hardware and begin installing SUSE Linux |
+| Installation—ACPI Disabled | Disable support for ACPI (Advanced Configuration and Power Interface) but otherwise detect hardware and start SUSE installation |
+
+(continued)

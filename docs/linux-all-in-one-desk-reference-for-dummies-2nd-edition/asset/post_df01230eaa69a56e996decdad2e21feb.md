@@ -1,0 +1,184 @@
+
+7. **Select the make and model of your printer, and click Forward.**
+
+Click the drop-down list (above the scrolling list) to display a list of printer manufacturers. When you choose a printer manufacturer from this list, the scrolling list displays the names of different printer models from that manufacturer. If you have a PostScript printer, you can simply go to the Generic list (Generic is one of the choices in the manufacturer list) and select PostScript printer.
+
+The last screen shows information about the new print queue.
+
+8. **Review all information to make sure it's correct, and click Finish to create the print queue.**
+
+9. **When a dialog box appears asking whether you want to print a test page, click Yes.**
+
+Doing so applies all changes and restarts the print-scheduler program that takes care of printing. The printer now prints a test page, after which a message box appears and asks you to check the test page.
+
+10. **Click OK to dismiss the message box.**
+
+The new print queue appears in the printer configuration window, and you can submit print jobs to this queue.
+
+11. **Choose Action::Quit to close the printer configuration tool.**
+
+Or you can close the printer configuration window by clicking the X button in the upper-right corner of the window's frame.
+
+12. **You are prompted to save the printer information. Click Save to save and quit the printer configuration tool.**
+
+## Configuring printers in Knoppix and MEPIS
+
+Most of the steps for configuring printers in Knoppix and MEPIS are similar to each other, so I cover them both in this section. To add a printer in Knoppix or MEPIS, follow these steps:
+
+1. **From the Knoppix desktop, choose Main Menu::KNOPPIX::Configure::Configure printer(s). From the MEPIS desktop, choose Main Menu::Print System::Print Manager.**
+
+A printer configuration tool starts. Figure 3-5 shows its main window in MEPIS. The main window looks similar in Knoppix.
+
+2. **Click Add on the toolbar and choose Add Printer/Class from the drop-down menu.**
+
+The printer configuration tool starts the Add Printer Wizard (see Figure 3-6) that guides you through the steps.
+
+![](img/792720823146d68f19fd50c99ebfce4b_120_0.png)
+
+Figure 3-5: In Knoppix and MEPIS, configure and manage printers from this GUI tool.
+
+![](img/792720823146d68f19fd50c99ebfce4b_120_1.png)
+
+Figure 3-6: Add a new printer through the Add Printer Wizard.
+
+3. **Click Next and from the next screen select the type of printer connection. Then click Next.**
+
+This can be a local parallel, serial, or USB port, as well as a network printer supporting different protocols such as TCP or IPP.
+
+Book I
+Chapter 3
+Troubleshooting and Configuring Linux
+
+Depending on your printer's connection type, the wizard prompts for more information. For example, for a local printer, you have to select the parallel, serial, or USB port from a list.
+
+4. **Provide information about the printer connection — the local port or the URL identifying the network printer. Click Next.**
+
+The wizard displays a list of printer makes and models, as shown in Figure 3-7.
+
+![](img/792720823146d68f19fd50c99ebfce4b_121_0.png)
+
+5. **Select your printer's make and model and click Next.**
+
+The wizard displays a list of drivers along with its recommendation.
+
+6. **Select the printer driver and click Next.**
+
+The wizard displays a screen (see Figure 3-8) from which you can test the printer settings.
+
+7. **Select whether you want banners after each print job and click Next.**
+
+8. **Set any quotas, such as page limit or limit on the size of files sent to the printer, and click Next.**
+
+9. **Specify user access settings, such as which users can access the print queue, and click Next.**
+
+10. **Name the print queue and add the printer description. Click Next.**
+
+11. **Review printer settings and click Finish to add the printer.**
+
+## Configuring printers in SUSE
+
+To add a printer in SUSE, follow these steps:
+
+1. **Choose Main Menu → System → Control Center (YaST), enter the root password when prompted, and click Hardware on the left side of the window.**
+
+The YaST Control Center displays information about various hardware, as shown in Figure 3.9. As you can see, you can configure various hardware from YaST.
+
+![](img/792720823146d68f19fd50c99ebfce4b_122_0.png)
+
+**Figure 3-8:** Test the printer settings before installing a printer.
+
+![](img/792720823146d68f19fd50c99ebfce4b_122_1.png)
+
+**Figure 3-9:** To configure anything, start with the YaST Control Center.
+
+2. **Click Printer on the right side of the window.**
+
+YaST opens the printer configuration window and displays information about any printers that it detects, as shown in Figure 3-10.
+
+![](img/792720823146d68f19fd50c99ebfce4b_123_0.png)
+
+3. **If your printer is detected, go on to Step 4. If your printer is not detected, click Add.**
+
+YaST displays a list of printer types (see Figure 3-11) from which you can select your printer. The type depends on how your printer is connected to your PC (through parallel, serial, USB, or network).
+
+4. **Select your printer type and click Next.**
+
+YaST prompts for more information, depending on the printer type you select. For example, for a parallel printer, you have to identify the parallel port to which the printer is attached.
+
+5. **Provide information about the printer connection and click Next.**
+
+YaST prompts for the printer queue’s name and other related information.
+
+6. **Enter the name of the print queue, as well as some descriptive information about the printer, and click Next.**
+
+YaST displays a list of printer makes and models.
+
+7. **Select your printer’s make and model. Then click Next.**
+
+YaST displays the current configuration information so that you can test the configuration or edit it.
+
+## Setting Up Printers
+
+![](img/792720823146d68f19fd50c99ebfce4b_124_0.png)
+
+![](img/792720823146d68f19fd50c99ebfce4b_124_0.png)
+
+Figure 3-11: Select your printer type from this window.
+
+8. **Review the configuration information and click OK.**
+
+The Add Printer Wizard closes and returns to the YaST printer configuration window.
+
+9. **Click OK to save the settings.**
+
+### Configuring printers in Ubuntu
+
+To add a printer in Ubuntu, follow these steps:
+
+1. **Choose System → Administration → Printing.**
+
+The Printers window appears, as shown in Figure 3-12.
+
+![](img/792720823146d68f19fd50c99ebfce4b_124_2.png)
+
+![](img/792720823146d68f19fd50c99ebfce4b_124_2.png)
+
+Figure 3-12: In Ubuntu, manage printers from this window.
+
+2. **Click New Printer (refer to Figure 3-12).**
+
+This starts the Add a Printer assistant (see Figure 3-13) that guides you through the printer installation steps.
+
+![](img/792720823146d68f19fd50c99ebfce4b_125_0.png)
+
+3. **Select a printer connection (refer to Figure 3-13) and then click Forward.**
+
+You can select a printer type — local or network — or select a detected printer or a printer port (USB or parallel port).
+
+4. **Select the printer manufacturer and pick the model from the list (see Figure 3-14).**
+
+For that selected printer model, the recommended driver is displayed.
+
+5. **Click Apply.**
+
+This installs the printer and closes the Add a Printer assistant. The icon for the printer appears in the Printers window shown in Figure 3-12.
+
+## Configuring printers in Xandros
+
+When you run Xandros for the first time, the First Run Wizard gives you an opportunity to configure printers. Figure 3-15 shows the screen where the First Run Wizard displays information about printers and also gives you an opportunity to add a new printer.
+
+![](img/792720823146d68f19fd50c99ebfce4b_126_0.png)
+
+Figure 3-14: Select the printer make and model at this step.
+
+![](img/792720823146d68f19fd50c99ebfce4b_126_1.png)
+
+Figure 3-15: The printer configuration step in Xandros.
+
+If you skip it during the first reboot, you can always start the First Run Wizard by choosing Main Menu → Applications → System → First Run Wizard.
+
+From the First Run Wizard’s **Printers** screen, follow these steps to configure a printer:
+
+1. **Click the Add button in the First Run Wizard’s Printers screen (refer to Figure 3-15).**
+
+The Add Printer Wizard starts, as shown in Figure 3-16.

@@ -1,0 +1,21 @@
+You can browse a list of the top 75 security tools (based on an informal poll of nmap users) at www.insecure.org/tools.html. Table 4-4 lists a number of these tools by category. I describe a few of the freely available vulnerability scanners in the next few sections.
+
+Table 4-4 Some Popular Computer Security Testing Tools
+| Type | Names of Tools |
+|---|---|
+| Port scanners | nmap, Strobe |
+| Vulnerability scanners | Nessus Security Scanner, SAINT, SARA, Whisker (CGI scanner), ISS Internet Scanner, CyberCop Scanner, Vetescan, Retina Network Security Scanner |
+| Network utilities | Netcat, hping2, Firewall, Cheops, ntop, ping, grep, ngrep, AirSnort (802.11 WEP encryption cracking tool) |
+| Host-security tools | Tripwire, Isaf |
+| Packet sniffers | tcpdump, Ethereal, dsniff, snifit |
+| Intrusion Detection Systems (IDSs) | Snort, Abacus portsentry, scanlogd, NFR, LIDS |
+| Password checking tools | John the Ripper, LCA |
+| Log analysis and monitoring tools | logcolorise, tcpdstats, nlog, logcheck, LogWatch, Swatch |
+
+# nmap
+
+nmap (short for network mapper) is a port-scanning tool. It can rapidly scan large networks and determine what hosts are available on the network, what services they offer, what operating system (and the operating system version) they run, what type of packet filters or firewalls they use, and dozens of other characteristics. You can read more about nmap at www.insecure.org/nmap.
+
+If it’s not already installed, you can easily install nmap on your distribution. Fedora Core and Knoppix come with nmap. In Debian, MEPIS, and Ubuntu, you can install it with the command apt-get install nmap. In SUSE, click the Install and Remove Software from the Software category in YaST Control Center — Main Menu System Control Center (YaST) — and use the software search facility of YaST to find nmap and install it. In Xandros, you can use the apt-get install nmap command; after you run Xandros Networks, choose Edit Set Application Sources and click the Debian Unsupported Site link as a source.
+
+![](bbox=[0.15, 0.68, 0.23, 0.78])

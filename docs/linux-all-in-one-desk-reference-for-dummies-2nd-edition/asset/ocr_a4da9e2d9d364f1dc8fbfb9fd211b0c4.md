@@ -1,0 +1,32 @@
+These commands assume that the `xwdtopnm` and `pnmtotiff` programs are in the `/usr/bin` directory — one of the directories listed in the `PATH` environment variable. By the way, `xwdtopnm` and `pnmtotiff` are two programs in the PBM toolkit.
+
+After converting a few XWD files to TIFF format, I get tired of typing the same sequence of commands for each file, so I prepare a file named `totif` and save the following lines in it. (The first line has the *magic incantation* `#!/bin/sh` starts the `bash` program that then executes the remaining lines in the file — you need that first line in every shell script.)
+
+```
+#!/bin/sh
+xwdtopnm < $1.xwd > $1.pnm
+pnmtotiff < $1.pnm > $1.tif
+rm $1.pnm
+```
+
+Then I make the `totif` file executable by using this command:
+
+```
+chmod +x totif
+```
+
+The `chmod` command enables you to change the permission settings of a file. One of those settings determines whether the file is executable. The `+x` option marks the file as executable. You do have to mark it that way because `bash` runs only executable files.
+
+Now when I want to convert the file `figure1.xwd` to `figure1.tif`, I can do so by typing the following command:
+
+```
+./totif figure1
+```
+
+The `./` prefix indicates that the `totif` file is in the current directory — you don't need the `./` prefix if the `PATH` environment variable includes the current directory. The `totif` file is a shell script (also called a *shell program*). When you run this shell program with the command `totif figure1`, the shell substitutes `figure1` for each occurrence of `$1`. (Note that `$1` refers to the first option that the user types on the command used to execute the script.)
+
+Shell scripts are popular among system administrators. If you are a system administrator, you can build a collection of custom shell scripts that help you automate tasks you perform often. If a hard drive seems to be getting full, for example, you may want to find all files that exceed some size (say, 1MB) and that have not been accessed in the past 30 days. In addition, you may want to send an e-mail message to all users who have large files, requesting that they archive and clean up those files. You can perform all these tasks with a shell script. You might start with the following `find` command to identify large files:
+
+```
+find / -type f -atime +30 -size +1000k -exec ls -l {} > /tmp/largefiles
+```

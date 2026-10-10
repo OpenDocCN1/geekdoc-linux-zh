@@ -1,0 +1,25 @@
+Depending on your printer's connection type, the wizard prompts for more information. For example, for a local printer, you have to select the parallel, serial, or USB port from a list.
+
+4. **Provide information about the printer connection — the local port or the URL identifying the network printer. Click Next.**
+
+The wizard displays a list of printer makes and models, as shown in Figure 3-7.
+
+![](bbox=[0.14, 0.29, 0.82, 0.57])
+
+5. **Select your printer's make and model and click Next.**
+
+The wizard displays a list of drivers along with its recommendation.
+
+6. **Select the printer driver and click Next.**
+
+The wizard displays a screen (see Figure 3-8) from which you can test the printer settings.
+
+7. **Select whether you want banners after each print job and click Next.**
+
+8. **Set any quotas, such as page limit or limit on the size of files sent to the printer, and click Next.**
+
+9. **Specify user access settings, such as which users can access the print queue, and click Next.**
+
+10. **Name the print queue and add the printer description. Click Next.**
+
+11. **Review printer settings and click Finish to add the printer.**

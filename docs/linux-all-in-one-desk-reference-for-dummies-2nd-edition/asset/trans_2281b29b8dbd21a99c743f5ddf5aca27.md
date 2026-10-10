@@ -1,0 +1,101 @@
+
+
+```
+<channel> <!-- This tag specifies general information about the feed-->
+<title>Title of this feed</title>
+<link>URL of this feed, for example, http://naba.typepad.com/</link>
+<description>Brief description of feed</description>
+<language>en-us</language>
+<item>
+<title>Title of this item</title>
+<link>URL for this item</link>
+<description>Description of this item</description>
+</item>
+... more items ...
+</channel>
+</rss>
+```
+
+从上述代码列表中可以看出，RSS 源（RSS feed）包含一个频道（channel），该频道拥有标题、链接、描述和语言属性，随后是一系列条目（item），每个条目都有标题、链接和描述。
+
+![](img/792720823146d68f19fd50c99ebfce4b_384_0.png)
+
+RSS 1.0 的格式更为冗长，因为它使用 RDF 格式。RSS 1.0 基本上提供了 RSS 0.91 中包含的基本信息，并增加了更多细节，例如条目级别的作者、主题和发布日期，这些是 RSS 0.91 不支持的。
+
+## 阅读 RSS 源
+
+有许多图形用户界面（GUI）程序可用于订阅 RSS 源并阅读源中的条目。这些程序被称为 RSS *聚合器*（aggregators），因为它们可以从许多 RSS 源收集信息，并将所有内容集中在一个地方呈现。
+
+RSS 聚合器有两种类型——浏览器插件和独立程序。像 NewsMonter（*www.newsmonter.org*）这样的浏览器插件运行在 Web 浏览器中，因此源显示在 Web 浏览器内。像 GNOME Straw（*www.nongnu.org/straw*）和 KDE Akregator（*http://akregator.sourceforge.net*）这样的独立程序是完整的 GUI 应用程序，通常外观与其他邮件和新闻阅读器程序相似。
+
+![](img/792720823146d68f19fd50c99ebfce4b_384_1.png)
+
+Fedora、MEPIS 和 SUSE 系统都附带了 Akregator 程序，这是一个独立的 RSS 源*聚合器*。要运行它，请在图形桌面应用程序菜单中寻找其链接；如果找不到，请在终端窗口中输入 **akregator**。在 Debian 中，你可以通过输入 **apt-get install akregator** 来安装 Akregator（先输入 **su -** 成为 *root* 用户）。
+
+当 Akregator 首次运行时，它会显示主窗口，其中没有任何 RSS 源。要订阅一个源，请从菜单中选择“Feed->Add Feed”，或者在窗口左侧窗格中右键单击“All Feeds”（参见图 3-8），并从弹出菜单中选择“Add Feed”。然后在“Add Feed”对话框中输入该源的 URL，并点击“Ok”。例如，要阅读 Slashdot 的 RSS 源，我输入 `http://slashdot.org/index.rss`。该源的标题会显示在窗口左侧窗格中。点击该源标题以查看此源中的条目。然后，你可以点击右上角窗格中的一个条目，该条目会显示在右下角窗格中，如图 3-8 所示。你可以添加许多不同的 RSS 源，将它们组织到文件夹中，并在 Akregator 中浏览它们。
+
+![](img/792720823146d68f19fd50c99ebfce4b_385_0.png)
+
+**图 3-8：** 你可以在 Akregator 中组织和阅读 RSS 源。
+
+## 第 4 章：使用 FTP
+
+- **本章内容**
+- 使用 GNOME FTP 客户端
+- 使用任意 Web 浏览器作为 FTP 客户端
+- 了解 FTP 命令
+
+顾名思义，*文件传输协议*（FTP）用于在计算机之间传输文件。例如，如果你的互联网服务提供商（ISP）为你提供个人网站空间，你可能已经使用 FTP 上传了组成该网站的文件。使用计算机上的 FTP 客户端，你登录到 ISP 账户，提供密码，然后将文件从你的家庭系统复制到 ISP 的服务器上。
+
+你还可以使用 FTP 匿名下载其他文件，例如从互联网上的其他计算机下载开源软件——在这种情况下，你不需要在远程系统上拥有账户即可下载文件。你只需使用*匿名*（anonymous）作为用户名，并提供你的电子邮件地址作为密码即可登录。（事实上，你的 Web 浏览器可以代你完成这一过程，因此你甚至可能不知道这个过程正在发生。）这种类型的匿名 FTP 非常适合向任何想要的人分发文件。例如，硬件供应商可能会使用匿名 FTP 为需要的人提供更新设备驱动程序。
+
+Linux 附带了几个 FTP 客户端，包括命令行版本和 GUI 版本。在本章中，我将向你介绍几个 GUI FTP 客户端，并描述使用命令行 FTP 客户端时用于处理远程目录的命令。
+
+### 使用图形化 FTP 客户端
+
+你可以在 Linux 中使用以下 GUI FTP 客户端之一：
+
+- gFTP — GNOME 的图形化 FTP 客户端 ([http://gftp.seul.org](http://gftp.seul.org))
+- KBear — KDE 的图形化 FTP 客户端 ([http://kbear.sourceforge.net](http://kbear.sourceforge.net))
+- 用于匿名 FTP 下载的 Web 浏览器，如 Firefox
+
+对于上传文件，你可能需要使用 gFTP，因为此类传输通常需要用户名和密码。Web 浏览器用于匿名下载效果良好，这通常是你从互联网下载软件的方式。
+
+在接下来的两节中，我将简要介绍所有三种 GUI FTP 客户端。
+
+### 使用 gFTP
+
+GNOME 附带了 gFTP，一个图形化 FTP 客户端。gFTP 默认未安装，但你可以从 `http://gftp.seul.org` 下载并轻松安装它。在某些发行版中，它可能已包含在某个软件包中，你只需安装该包即可。
+
+在 Debian 中，在终端窗口中输入 `su -` 并输入 `root` 密码，然后输入 `apt-get install gftp`。
+
+在 Fedora Core 中，从本书的配套 DVD 安装 gFTP。以 `root` 身份登录，将 DVD 插入 DVD 驱动器，并在终端窗口中输入 `mount /mnt/cdrom`。（如果 DVD 驱动器是系统上的第二个 CD/DVD 驱动器，你可能需要将 `cdrom` 更改为 `cdrrom`。）然后输入 `cd /mnt/cdrom/Fedora/RPMS`，接着输入 `rpm -ivh gftp*`。
+
+在 Fedora Core 中，通过选择*主菜单->Internet->gFTP*来启动 gFTP（如果找不到 gFTP，请以 `root` 身份登录并输入 `yum install gftp`，然后在菜单中查找它）。在其他发行版中，你应该能够在主菜单中找到它。gFTP 窗口将出现，如图 4-1 所示。
+
+![](img/792720823146d68f19fd50c99ebfce4b_387_0.png)
+
+![](img/792720823146d68f19fd50c99ebfce4b_387_1.png)
+
+**gFTP** 窗口有一个菜单栏，包含用于执行各种任务的菜单。就在菜单栏下方是一个工具栏，包含一些按钮和文本字段。在这里，你可以输入远程主机名称或 IP 地址、用户名以及登录远程主机所需的密码。图 4-1 显示了填写这些信息并点击带有两台计算机图标的按钮（工具栏最左侧的按钮）建立与远程主机的连接后的 **gFTP** 窗口。
+
+要使用 **gFTP** 上传或下载文件，请遵循以下步骤：
+
+1. **在 Host 字段中填写远程系统的主机名或 IP 地址。**
+   如果你以前使用过该主机，当你点击 Host 字段旁边的向下箭头时，会出现一个下拉列表，你可以从中选择该主机。
+2. **在 User 字段中提供用户名，在 Pass 字段中提供密码，然后点击带有两台计算机图标的按钮（位于 Host 字段左侧）。**
+   此操作会使 **gFTP** 连接到你选定的主机，并使用你提供的用户名和密码登录。**gFTP** 窗口的下半部分显示了两个系统之间交换的 FTP 协议消息。
+3. **观察此区域，查看是否有任何错误消息的迹象。**
+   远程系统的目录列表显示在 **gFTP** 窗口的右半部分。左半部分显示当前的本地目录。
+4. **要从当前系统向远程系统上传一个或多个文件，请在左侧列表中选中文件，然后点击右箭头按钮。**
+5. **要从远程系统下载文件，请在右侧列表中选中文件名，然后点击左箭头按钮。**
+6. **完成文件传输后，从菜单中选择 FTP:\ Quit。**
+
+如这些步骤所示，使用像 **gFTP** 这样的 GUI FTP 客户端传输文件是一项简单的任务。
+
+> 信不信由你，**gFTP** 不仅用于 FTP 传输。它还可以使用 HTTP 协议传输文件，并使用安全 Shell (SSH) 协议进行安全文件传输。
+
+### 介绍 KBear
+
+KBear 是 KDE 的一个 GUI FTP 客户端。在 KDE 桌面上，你可以在主菜单（Internet 类别下）找到它。在 Debian 中，输入 `apt-get install kbear` 来安装 KBear（先输入 `su -` 成为 `root` 用户）。
+

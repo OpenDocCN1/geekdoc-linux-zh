@@ -1,0 +1,18 @@
+send data from your PC to the Internet (*upload*). One caveat with DSL is that your home must be between 12,000 and 15,000 feet from your local central office (the phone company facility where your phone lines end up). The distance limitation varies from provider to provider. In the U.S., you can check out the distance limits for many providers at www.dslreports.com/distance.
+
++   ◆  **Cable modem:** If the cable television company in your area offers Internet access over cable, you can use that service to hook up your Linux system to the Internet. Typically, cable modems offer higher data-transfer rates than DSL — for about the same cost. Downloading data from the Internet via cable modem is much faster than sending data from your PC to the Internet. You can expect routine download speeds of 1.5 Mbps and upload speeds of around 128 Kbps, but sometimes you may get even higher speeds than these.
+
++   ◆  **Dialup networking:** A dialup connection is what most folks were using before DSL and cable modems came along. You hook up your PC to a modem that’s connected to the phone line. Then you dial up an ISP to connect to the Internet. That’s why it’s called *dialup networking* — establishing a network connection between your Linux PC and another network (the Internet) through a dialup modem. In this case, the maximum data-transfer rate is 56 Kbps.
+
+DSL and cable modem services connect you to the Internet and also act as your Internet service provider (ISP); in addition to improved speed, what you’re paying for is an IP address and your e-mail accounts. If you use a dialup modem to connect to the Internet, first you have to connect to the phone line (for which you pay the phone company) and then select and pay a separate ISP — which gives you a phone number to dial and all the other necessary goodies (such as an IP address and e-mail accounts).
+
+Table 1-1 summarizes all these options. You can consult that table and select the type of connection that’s available to you and that best suits your needs.
+
+| Table 1-1 | Comparison of Dialup, DSL, and Cable | | | |
+|---|---|---|---|
+| *Feature* | *Dialup* | *DSL* | *Cable* |
+| **Equipment** | Modem | DSL modem, Ethernet card | Cable modem, Ethernet card |
+| **Also requires** | Phone service and an Internet Service Provider (ISP) | Phone service and location within 12,000 to 15,000 feet of central office | Cable TV connection |
+| **Connection type** | Dial to connect | Always on, dedicated | Always on, shared |
+
+*(continued)*

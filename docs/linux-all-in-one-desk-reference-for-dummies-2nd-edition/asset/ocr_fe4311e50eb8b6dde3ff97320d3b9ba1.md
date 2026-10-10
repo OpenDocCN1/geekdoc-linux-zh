@@ -1,0 +1,29 @@
+# 598 Configuring the Apache Web Server
+
++   * ReadmeName filename: Specifies the name of a README file whose contents are added to the end of an automatically generated directory listing. The default ReadmeName is README.
+
++   * HeaderName filename: Specifies the name of a header file whose contents are prepended to an automatically generated directory listing. The default HeaderName is HEADER.
+
++   * AddDescription “file description” filename: Specifies that the file description string display next to the specified filename in the directory listing. You can use a wildcard, such as *.html, as the filename. For example, the following directive describes files ending with .tgz as GZIP compressed tar archives:
++   
++       AddDescription “GZIP compressed tar archive” .tgz
+
++   * AddIcon iconfile extension1 extension2 ...: Associates an icon with one or more file extensions. The following directive associates the icon file /icons/text.gif with the file extension .txt:
++   
++       AddIcon /icons/text.gif .txt
+
++   * AddIconByType iconfile MIME-types: Associates an icon with a group of file types specified as a wildcard form of MIME types (such as text/* or image/*). To associate an icon file of /icons/text.gif with all text types, specify the following:
++   
++       AddIconByType (TXT, /icons/text.gif) text/*
++   
++   This directive also tells the server to use TXT in place of the icon for clients that cannot accept images. (Browsers tell the server what types of data they can accept.)
+
++   * AddIconByEncoding iconfile encoding1 encoding2 ...: Specifies an icon to display for one or more encoding types (such as x-compress or x-gzip).
+
++   * IndexIgnore filename1 filename2 ...: Instructs the server to ignore the specified filenames (they typically contain wildcards) when preparing a directory listing. To leave out README, HEADER, and all files with names that begin with a period (.), a trailing tilde (~), or a trailing hash mark (#), specify the following:
++   
++       IndexIgnore .??* *~ \*# HEADER\* README\* RCS CVS *,v ,t
+
++   * IndexOptions option1 option2 ...: Indicates the options you want in the directory listing prepared by the server. Options can include one or more of the following:
+
++   • FancyIndexing turns on the fancy directory listing that includes filenames and icons representing the files’ types, sizes, and last-modified dates.

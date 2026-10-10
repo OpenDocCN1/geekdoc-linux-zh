@@ -1,0 +1,5 @@
+When Akregator first runs, it displays its main window without any RSS feeds. To subscribe to a feed, choose Feed>^+Add Feed from the menu or right-click All Feeds in the left pane of the window (see Figure 3-8) and select Add Feed from the pop-up menu. Then type the URL for the feed in the Add Feed dialog box and click Ok. For example, to read Slashdot's RSS feed, I type `http://slashdot.org/index.rss`. The feed's title appears in the left pane of the window. Click the feed title to view the items in this feed. Then you can click an item in the upper-right pane, and that item appears in the lower-right pane, as shown in Figure 3-8. You can add many different RSS feeds, organize them into folders, and browse them in Akregator.
+
+![](bbox=[0.25, 0.33, 0.85, 0.64])
+
+**Figure 3-8:** You can organize and read RSS feeds in Akregator.

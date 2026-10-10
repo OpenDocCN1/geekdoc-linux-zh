@@ -1,0 +1,25 @@
+# Resolving Other Installation Problems
+
+Signal 11, also known as SIGSEGV (short for Segment Violation Signal), can occur in Linux applications. A *segment violation* occurs when a process tries to access a memory location that it’s not supposed to access. The operating system catches the problem before it happens and stops the offending process by sending it a signal 11. When that happens during installation, it means the installer made an error while accessing memory, and the most likely reason is a hardware problem. A commonly suggested cure for the signal 11 problem is to turn off the CPU cache in the BIOS. To do so, you have to enter Setup while the PC boots (by pressing a function key, such as F2) and turn off the CPU cache from the BIOS Setup menu.
+
+![](bbox=[0.07, 0.11, 0.2, 0.24])
+
+If the problem is due to a hardware error in memory (in other words, the result of bad memory chips), you can try swapping the memory modules around in their slots. You may also consider replacing an existing memory module with another memory module if you have one handy.
+
+You can read more about the signal 11 problem at www.bitwizard.nl/sig11.
+
+# Getting around the PC reboot problem
+
+On some PCs, when you press Enter at the boot prompt, the initial Linux kernel loads and immediately reboots the PC. This could be due to a bad implementation of ACPI in the PC’s BIOS. To bypass the problem, type **linux acpi=off** at the boot prompt to turn off ACPI, that doesn’t work, consult Table 3-3 for other boot options that you might want to try.
+
+# Using Linux kernel boot options
+
+When you boot the PC for Linux installation, either from the DVD or the first CD-ROM, you get a text screen with the boot: prompt. Typically, you press Enter at that prompt or do nothing, and the installation begins shortly. You can, however, specify quite a variety of options at the boot: prompt. The options control various aspects of the Linux kernel startup, such as disabling support for troublesome hardware or starting the X server using a specific X driver module. Some of these boot options can be helpful in bypassing problems that you may encounter during installation.
+
+To use these boot options, typically you type **linux** followed by the boot options. For example, to perform test mode installation and tell the kernel that your PC has 512MB of memory, you type the following at the boot: prompt:
+
+```
+linux text mem=512M
+```
+
+Consult Table 3-3 for a brief summary of some of the Linux boot options. You can use these commands to turn certain features on or off.

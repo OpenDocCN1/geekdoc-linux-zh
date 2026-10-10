@@ -1,0 +1,43 @@
+The PC reboots and after a few moments, displays a GUI screen with a number of options. Use the arrow keys to move among list items and the buttons on the screen. For example, if your PC has problems with ACPI, select the option to install with ACPI disabled.
+
++   6. **Use the arrow keys to select the Installation option and press Enter.**
++   This loads a Linux kernel and runs the installer. After detecting and ini-
++   tializing the hardware, the installer displays a message saying that it
++   cannot find the SUSE Linux installation source and is activating a manual
++   setup program. This is normal and you should press Enter to continue.
++   The installer then shows a list of languages.
+
++   7. **Use the arrow keys to select the language and press Enter.**
++   The installer displays a list of *keyboard maps* — the language-dependent
++   layouts for the keyboard.
+
++   8. **Select the keyboard language and press Enter.**
++   The installer displays the Main menu.
+
++   9. **Use arrow keys to select Start Installation or System and press Enter.**
++   On the next screen, select *Start Installation or Update* and press Enter.
++   The installer displays a list of *source mediums* — this is where you
++   indicate where the installer can find the files it needs to perform the
++   installation.
+
++   10. **Select Network as the source medium and press Enter.**
++   The installer prompts you for the network protocol.
+
++   11. **Select FTP as the network protocol and press Enter.**
++   A dialog box prompts you to determine whether to configure the net-
++   work automatically by using the Dynamic Host Configuration Protocol
++   (DHCP). If your network uses DHCP as most do, select *Yes* and press
++   Enter. Otherwise, you have to enter the IP address and the name
++   server’s IP address at this step. The installer then prompts for the IP
++   address of the FTP server.
+
++   12. **Enter the IP address of the FTP server that you found in Step 1 (for example, enter 140.221.37.130 for the FTP server mirror.
++   *   mcs.ani.gov).**
++   The installer prompts you to indicate if you want to use a username and
++   password to connect to the FTP server.
+
++   13. **Select No and press Enter.**
++   Answer *No* because the FTP servers support *anonymous FTP* — which
++   means that anyone can log in with the username *anonymous*.
++   The installer also prompts you to indicate if you want to use an HTTP
++   proxy.

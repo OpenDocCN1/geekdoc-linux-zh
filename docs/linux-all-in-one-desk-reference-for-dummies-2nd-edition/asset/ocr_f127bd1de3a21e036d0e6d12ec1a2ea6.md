@@ -1,0 +1,33 @@
+lines sorted alphabetically. If you want to sort a file and save the sorted version in another file, you have to use the `bash` shell's output redirection feature like this:
+
+```
+sort /etc/passwd > ~/sorted.text
+```
+
+This command sorts the lines in the `/etc/passwd` file and saves the output in a file named `sorted.text` in your home directory.
+
+# **Substituting or deleting characters from a file**
+
+Another interesting command is `tr` \u2014 it substitutes one group of characters for another (or deletes a selected character) throughout a file. Suppose that you have to occasionally use MS-DOS text files on your Linux system. Although you may expect to use a text file on any system without any problems, you find one catch: DOS uses a carriage return followed by a line feed to mark the end of each line whereas Linux uses only a line feed.
+
+On your Linux system, you can get rid of the extra carriage returns in the DOS text file by using the `tr` command with the `-d` option. Essentially, to convert the DOS text file named `filename.dos` to a Linux text file named `filename.linux`, type the following:
+
+![](bbox=[0.15, 0.45, 0.25, 0.55])
+
+```
+tr -d '\015' < filename.dos > filename.linux
+```
+
+In this command, `'\015'` denotes the code for the carriage-return character in octal notation.
+
+# **Splitting a file into several smaller files**
+
+The `split` command is handy for those times when you want to copy a file to a floppy disk but the file is too large to fit on a single floppy. You can then use the `split` command to break up the file into multiple smaller files, each of which can fit on a floppy.
+
+By default, `split` puts 1,000 lines into each file. The new, split files are named by groups of letters such as `aa`, `ab`, `ac`, and so on. You can specify a prefix for the filenames. For example, to split a large file called `hugefile.tar` into smaller files that fit onto several high-density 3.5-inch floppy disks, use `split` as follows:
+
+```
+split -b 1440k hugefile.tar part.
+```
+
+This command splits the `hugefile.tar` file into 1440K chunks so each one can fit onto a floppy disk. The command creates files named `part.aa`, `part.ab`, `part.ac`, and so on.

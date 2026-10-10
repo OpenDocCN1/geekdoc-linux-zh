@@ -1,0 +1,35 @@
+If I save all the `INSERT INTO` commands in a file named `additems.sql`, I can load the database from the `mysql` command line by using the `source` command like this. (Type `mysql books` to start the SQL client.)
+
+```
+mysql> `source additems.sql`
+```
+
+# Querying the database
+
+You can query the database interactively through the `mysql` monitor. You do have to know SQL to do this. For example, to query the `books` database, I start the SQL client with the command:
+
+```
+mysql books
+```
+
+Then I type SQL commands at the `mysql>` prompt to look up items from the database. When I’m done, I type `quit` to exit the `mysql` program. Here’s an example. (I typed all of this in a terminal window.)
+
+```
+mysql> select title from books where pubyear < 2006 \g
++------------------------------------------------------------------+
+| title                                                            |
++------------------------------------------------------------------+
+| SUSE Linux 9.3 For Dummies                                       |
+| Linux All-in-One Desk Reference For Dummies                      |
++------------------------------------------------------------------+
+2 rows in set (0.06 sec)
+mysql> quit
+Bye
+```
+
+# Multimedia Applications
+
+Most Linux distributions include quite a few multimedia applications—mostly multimedia audio players and CD players but also applications for using digital cameras and burning CD-ROMs. To play some other multimedia files (such as MPEG video), you may have to download and install additional software on your Linux system. Here’s a quick sketch of a few typical multimedia tasks and the applications you can use to perform these tasks:
+
++   - **Using digital cameras:** Use a digital camera tool to download photos from your digital camera in Linux (or simply access the camera as a USB mass storage device).
++   - **Playing audio CDs:** Use one of many audio CD players that come with Linux.

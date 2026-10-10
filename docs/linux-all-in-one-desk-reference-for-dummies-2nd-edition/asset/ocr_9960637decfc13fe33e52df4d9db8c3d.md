@@ -1,0 +1,47 @@
+The *foreach* statement is most appropriate for arrays. Following is the syntax:
+
+```
+`foreach Variable (Array) { statement block }`
+```
+
+The *foreach* statement assigns to *Variable* an element from the *Array* and executes the statement block. The *foreach* statement repeats this procedure until no array elements remain. The following *foreach* statement adds the numbers from 1 to 10:
+
+```
+```
+    foreach $i (1..10) { $sum += $i; }
+```
+```
+
+Notice that I declare the array by using the range operator (*..*). You also can use a list of comma-separated items as the array.
+
+If you omit the *Variable* in a *foreach* statement, Perl implicitly uses the *$_* variable to hold the current array element. Thus you can use the following:
+
+```
+`foreach (1..10) { $sum += $_;}`
+```
+
+# goto
+
+The *goto* statement causes Perl to jump to a statement identified by a label. Here is an example that prompts the user for a value and repeats the request if the value is not acceptable:
+
+```
+```
+ReEnter:
+    print "Enter offset: ";
+    $offset = <STDIN>;
+    chop $offset;
+    unless ($offset > 0 && $offset < 512)
+    {
+        print "Bad offset: $offset\n";
+        goto ReEnter;
+    }
+```
+```
+
+# Accessing Linux commands
+
+You can execute any Linux command from Perl in several ways:
+
++   - Call the *system* function with a string that contains the Linux command that you want to execute.
++   - Enclose a Linux command within back quotes (`` ` ``), which also are known as *grave accents*. You can run a Linux command this way and capture its output.
++   - Call the *fork* function to copy the current script and process new commands in the child process. (If a process starts another process, the new one is known as a *child* process.)

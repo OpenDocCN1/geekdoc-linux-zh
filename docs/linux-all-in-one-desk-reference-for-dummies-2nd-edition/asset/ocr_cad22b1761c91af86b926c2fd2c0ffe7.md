@@ -1,0 +1,11 @@
+Also try out the shell — open up a terminal window and type some Linux commands in that window. You can also explore the text editors that work in text mode. Knowing how to edit text files without the GUI, just in case the GUI is not available, is a good idea. At least you won't be helpless.
+
+# Find out more
+
+After you explore the Linux landscape and know what is what, you can then dig in deeper and find out more about specific subject areas. For example, you may be interested in setting up Internet servers. You can then learn the details of setting up individual servers such as sendmail for e-mail, Apache for a Web server, and the INN server for news.
+
+You can choose to find out about many more areas, such as security, pro- gramming, and system administration.
+
+Of course, you can expect this step to go on and on, even after you have your system running the way you want it — for now. After all, learning is a lifelong journey.
+
+Bon voyage!

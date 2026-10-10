@@ -1,0 +1,11 @@
+On the other hand, if you want to copy files from the Linux directory to the DOS floppy disk, you do want the shell to expand any wildcard characters. To copy all `*.jpg` files from the current Linux directory to the DOS floppy disk, for example, use `mcopy` like this:
+
+```
+mcopy *.jpg a:
+```
+
+With the `mtools` utilities, you can use the backslash character (`\`) as the directory separator, just as you do in DOS. However, when you type a filename that contains the backslash character, you must enclose the name in double quotation marks (`"\"`). For example, here's a command that copies a file from a subdirectory on the A drive to the current Linux directory:
+
+```
+mcopy "a:\test\sample.dat" .
+```

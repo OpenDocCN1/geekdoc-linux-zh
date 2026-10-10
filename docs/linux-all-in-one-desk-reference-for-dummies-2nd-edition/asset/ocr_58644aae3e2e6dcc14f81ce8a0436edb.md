@@ -1,0 +1,93 @@
+# Index
+
+# Symbols
+
++   * (asterisk) wildcard, 167–168  
++   ! FTP command, 368  
++   ? FTP command, 368  
++   ? (question mark) wildcard, 167–168
+
+# A
+
++   ABI (application binary interface), LSB and, 15  
++   AbiWord, 208  
++   access point, wireless network, 292–293  
++   accounts, users, system administration, 373  
++   acid Internet service, 580  
++   Actions menu, Debian GNOME desktop, 142  
++   ADSL (Asymmetric DSL), 258  
++   alt newsgroups, 348  
++   amarok, 209  
++   apache Internet service, 580  
++   Apache Web server  
++   access-control directives, 601–603  
++   computer vulnerabilities and, 551  
++   configuration, 589–606  
++   configuration file, 593–603  
++   configuration tools, 590–592  
++   installation, 587–588  
++   naming of, 588  
++   resource configuration directives, 596–600  
++   starting, 588–589
+
++   virtual host setup, 603–606  
++   apache2 Internet service, 580  
++   append Internet service, 580  
++   append FTP command, 368  
++   application gateway, 508  
++   Application layer, TCP/IP, 276  
++   application-proxy gateway firewall, 537–538  
++   applications  
++   databases, 209  
++   default availability, 212–214  
++   graphics and imaging, 210  
++   GUIs, 19–21  
++   Internet, 210–211  
++   multimedia, 209  
++   office applications, 208  
++   office tools, 208  
++   text editors, 208  
++   Applications menu  
++   Debian GNOME desktop, 142  
++   Fedora Core GNOME desktop, 145  
++   Ubuntu GNOME desktop, 157  
++   Applware  
++   description, 21  
++   overview, 220  
++   APT  
++   DEB files and, 459–461  
++   Debian updates, 465–466  
++   MEPIS Linux updates, 465–466  
++   Ubuntu Linux updates, 465–466
+
++   archives, *See also*  
++   backups commands for, 172  
++   multivolume archives, 438  
++   single-volume archive, 436–437  
++   tar program, 26, 436–441  
++   Arkeia utility, 436  
++   array variables, Perl, 747, 749  
++   arrays, C programming, 707–708  
++   ascl FTP command, 368  
++   Aspell, 208, 222–223  
++   associative arrays, Perl, 747, 750  
++   asterisk (*) wildcard, 167–168  
++   ATA support, kernel, 483  
++   ATAPI support, kernel, 483  
++   at Internet service, 580  
++   attachments to e-mail, 316  
++   audio CDs  
++   multimedia applications, 228  
++   playing, 230–231  
++   audits, security. *See*  
++   security audits  
++   authentication  
++   computer vulnerabilities, 551  
++   security, 504, 508  
++   authorization, security, 504  
++   autoconf GNU software package, 17  
++   autos Internet service, 580  
++   autotame GNU software package, 17  
++   automated backups, 440  
++   automatic command completion, 167  
++   automation, system administration, 374

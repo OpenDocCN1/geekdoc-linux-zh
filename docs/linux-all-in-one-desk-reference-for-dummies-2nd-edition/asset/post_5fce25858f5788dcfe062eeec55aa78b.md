@@ -1,0 +1,388 @@
+
+# B
+
+- backdoor, security, 508
+- backups. See also archives
+    - automated, 440
+    - commercial utilities, 435–436
+    - devices, 435
+    - incremental, 440
+    - media, 434–435
+    - multivolume archives, 438
+    - single-volume archive, 436–437
+    - strategies, 434–435
+    - system administration, 374
+    - tapes, 439–440
+- Bare Metal Plus utility, 436
+- bash GNU software package, 17
+- bash shell
+    - built-in commands, 739–742
+    - overview, 162
+    - starting, 126–127
+- bastion host, security, 508
+- bc GNU software package, 17
+- /bin directory, 427
+- binary FTP command, 369
+- BIND DNS
+    - computer vulnerabilities, 551
+    - Debian, 642
+    - Fedora Core, 642
+    - MEPIS, 642
+    - named daemon, 643
+    - resolver library, 644
+    - Ubuntu, 642
+    - Utility programs, 644–645
+    - Xandros, 642
+- BIND name server, 643
+- Binutils GNU software package, 17
+- bionet newsgroups, 348
+- bit newsgroups, 348
+- biz newsgroups, 348
+- block devices
+    - kernel, 482–483
+    - overview, 402
+- blogs, 358–360
+- BogoMIPS, 112
+- boot commands, Knoppix, 84–86
+- /boot directory, 427
+- /boot/grub configuration file, 390
+- /boot/grub/menu.lst configuration file, 390
+- boot loader
+    - Fedora Core installation, 52
+    - kernel and, 112
+    - start up and, 111
+    - SUSE Linux installation, 68
+- boot messages, kernel start up and, 112
+- boot options, Linux kernel, 87–88
+- /boot/System.map configuration file, 390
+- /boot/vmlinuz configuration file, 390
+- booting
+    - definition, 111
+    - from DVD drive, 33
+    - /etc/initab file, 386–387
+    - Fedora Core, 113–114
+    - init process, 384–386
+    - login screen, 113–114
+    - network configuration at boot time, 308–309
+    - Ubuntu, 114
+    - Xandros, 113–114
+- break statement, C programming, 715
+- BrightStore ARXserve Backup for Linux, 436
+- Browse Windows Network, 152
+- browsers. See Web browsers
+- BRU utility, 436
+- buffer overflow, security, 508
+- building kernel, 491–492
+- building modules, modular kernel, 491–492
+- built-in functions, Perl, 762–763
+- burning CDs/DVDs
+    - ISO images and, 37–39
+    - Knoppix, 38–39
+    - multimedia applications, 233–234
+    - Nautilus, 186–187
+- business requirements for security, 501
+
+# C
+
+- C++, compiling, 680
+- C and C++ compilers, GCC, 678–682
+- C programming
+    - arrays, 707–708
+    - bit fields, 707–710
+    - break statement, 715
+    - case statement, 716
+    - compound statements, 716
+    - continue statement, 716–717
+    - declarations, 700
+    - default label, 717
+    - definitions, 700
+    - do statement, 717
+    - enumerations, 706
+    - expression statements, 717
+    - expressions, 711–713
+    - function library, 722–723
+    - function prototypes, 721–722
+    - functions, variable number of arguments, 722
+    - goto statement, 718
+    - header files, 699, 722–723
+    - if-else statement, 718–719
+    - if statement, 718
+    - macros, 704–705
+    - null statement, 719
+    - operators, 711–715
+    - pointers, 708–709
+    - preprocessor directives, 701–705
+    - program structure, 699–701
+    - return statement, 719
+    - shared libraries, 724–729
+    - for statement, 717–718
+    - structures, 707–710
+    - switch statement, 719–720
+    - type definitions, 709–710
+    - type qualifiers, 710
+    - unions, 707–710
+    - variables, 705–706
+    - void type, 722
+    - while statement, 720–721
+- CA (certificate authority), security, 508
+- cable modem connection
+    - CMTS (Cable Modem Termination System), 263
+    - comparison to other connections, 255–256
+    - connecting with, 262–267
+    - overview, 255
+    - setup, 264–267
+    - upstream data, 262
+- cabling, Ethernet, 281–283
+- caching name server /etc/named.conf file, 647–650
+    - resource record formats, 650–653
+    - zone files, 650
+- Calc, OpenOffice.org, 216–217
+- calculators
+    - GNOME, 219–220
+    - KDE, 219–220
+- calendars, 218–219
+- case statement, C programming, 716
+- categories of newsgroups, 347–348
+- CD/DVD Burning option, MEPIS KDE desktop, 153
+- cd FTP command, 369
+- CD with book burning, 32–33
+    - distributions, 31–32
+- cdrecord, 209
+- CDs. See also audio CDs
+    - burning, multimedia applications, 233–234
+    - burning, ISO images, 37–39
+    - burning, Nautilus, 186–187
+    - introduction, 25
+    - management, 103
+    - SUSE Linux installation, 63–65
+- certificate, security, 508
+- character device support, kernel, 486
+- character devices, 402–403
+- chkconfig command
+    - Fedora Core, 576–577
+    - SUSE Linux, 576–577
+- chmod FTP command, 369
+- clari newsgroups, 348
+- client/server model
+    - sockets, 568
+- clients, Internet services, 565
+- Clipboard Tool
+    - MEPIS KDE desktop, 153
+    - SUSE Linux desktop, 155
+- clock
+    - SUSE Linux desktop, 155
+    - Xandros Desktop, 160
+- close FTP command, 369
+- command completion, 167
+- command line
+    - arguments, 163
+    - command line options, 163
+    - description, 127
+    - programming, and, 675
+- command-line FTP client, 366–370
+- command processor, programming, 675
+- commands
+    - archiving, 172
+    - compressing files, 172
+    - date and time, 173
+    - depmod, 404
+    - directory management, 170, 201–202
+    - directory navigation, 195–196
+    - disk-space usage, 204–206
+    - dmesg, 112
+    - dpkg, 457–459
+    - ed text editor, 244
+    - error messages, saving to file, 166
+    - file management, 170, 200–201
+    - file system management, 173
+    - finding files, 171, 202–203
+    - FTP, 366–370
+    - grep, 163
+    - help, 170
+    - input, 165
+    - insmod, 404
+    - iptables, 541–545
+    - Ksyms, 404
+    - lsmod, 404
+    - managing processes, 172
+    - modinfo, 404
+    - modprobe, 404
+    - mounting/unmounting, 203–204
+    - mt ools, 446–447
+    - navigation, 194–206
+    - output, saving, 165
+    - ownership, changing, 199–200
+    - permissions, 196–198
+    - permissions, changing, 199–200
+    - processing files, 171
+    - repeating, 169
+    - rmmod, 404
+    - RPM files, 450
+    - shell commands, 127
+    - su -, 382
+    - uptime, 395
+    - user account management, 416–417
+    - user management, 172
+    - vi text editor, 247–249
+    - wildcards, 167–168
+    - Yum, 466–469
+- commercial backup utilities, 435–436
+- commercially available software, office applications, 220–222
+- comp newsgroups, 348
+
+## compilers
+
+- GCC, 678–682
+- programming and, 676
+- cppound statements, C programming, 716
+- compressing files, commands for, 172
+- computer, programming and, 673–674
+- computer programming. See programming
+- computer systems Linux runs on, 10
+- computer vulnerabilities Apache Web Server, 551
+    - authentication, 551
+    - BIND DNS, 551
+    - CVS, 551
+    - databases, 552
+    - host security, 552
+    - Linux kernel, 552
+    - NFS (Network File System), 551
+    - NIS (Network Information Service), 551
+    - Open SSL (Open Secure Sockets Layer), 551
+    - resources for information, 550
+    - sendmail, 551
+    - SNMP, 551
+    - subversion, 551
+- concatenating shell commands, 164
+- conditional directives, C, 703–704
+- confidentiality, security, 508
+- configuration. See also TCP/IP configuration files
+    - Apache Web server, 589–606
+    - Fedora Core, networks, 52–53
+    - FTP server, 608–612
+    - NN server, 628–635
+    - introduction, 28
+    - kernel, 476–491
+    - printers, Debian, 90–91
+    - printers, Fedora Core, 92–94
+    - printers, Knoppix, 94–96
+    - printers, MEPIS, 94–96
+    - printers, SUSE, 97–99
+    - printers, Ubuntu, 99–100
+    - printers, Xandros, 100–103
+    - Samba, 667–669
+    - system configuration files, 390–392
+- configuration files
+    - sendmail, 617–623
+    - vsftpd file, 608–309
+    - vsftpd.conf file, 609–612
+- connection-oriented protocols, sockets, 567
+- connectionless protocols, sockets, 567
+- connections to Internet
+    - 255
+    - cable modem setup, 262–267
+    - dialup networking, 255, 267–274
+    - DSL (digital subscriber line), 254–262
+    - LANs, 285–286
+- console
+    - opening, 161
+    - virtual, 161
+- const type qualifier, C programming, 710
+- context menus
+    - desktop context menus, 135–136
+    - icon context menus, 136–137
+- continue statement, C programming, 716–717
+
+# D
+
+- Control Center, Mepis KDE desktop, 152
+- Coreutils GNU software package, 18
+- cpio GNU software package, 18
+- CPU (central processing unit), programming, 674
+- crackers, security, 499, 508
+- cron Internet service, 580
+- crond Internet service, 580
+- CrossOver Office, 21, 208, 221–222
+- cryptography support, kernel, 491
+- CSMA/CD (Carrier-Sense Multiple Access/Collision Detection), 280–281
+- CVE (Common Vulnerabilities and Exposures), computer vulnerabilities, 550
+- CVS (Concurrent Versions System)
+    - computer vulnerabilities, 551
+    - description, 23
+- data protection, security, 504
+- data types, C programming, 705–706
+- databases
+    - building, 224–225
+    - creating empty, 225
+    - designing, 225
+    - MySQL, 209, 223
+    - PostgreSQL, 209, 223
+    - querying, 228
+    - tables, defining, 226–227
+    - tables, loading data, 227–228
+    - vulnerabilities and, 552
+- date and time
+    - commands, 173
+    - Debian GNOME desktop, 142
+    - Fedora Core GNOME desktop, 146
+    - Knoppix desktop, 148
+    - MEPIS KDE desktop, 153
+    - Ubuntu GNOME desktop, 158
+- date command, 175–176
+- DDoS (distributed denial of service), security, 509
+- DEB files
+    - APT and, 459–461
+    - dpkg command, 457–458
+    - filenames, 456–457
+- Debian GNU/Linux description, 11
+    - GNOME desktop, 142–144
+    - GUI sysadmin tools, 375
+    - inetd, 531
+    - installation, 42–48
+    - printer configuration, 90–91
+    - software installation, 104–106
+    - standalone servers, 530
+    - text mode installation, 82
+    - update-rc.d command, 577–578
+    - updating, 465–466
+    - versions, 15
+- debugging
+    - gdb and, 691–695
+    - kernel, 491
+    - programming and, 676
+- declarations
+    - C programming, 700
+    - variables, C programming, 705–706
+- decryption
+    - GPG, 526–527
+    - security, 508
+- default label, C programming, 717
+- definitions
+    - C programming, 700
+    - variables, C programming, 705–706
+- delete FTP command, 369
+- denial of service, security, 502
+- depmod command, 404
+- Desktop Pager
+    - Knoppix desktop, 147
+    - MEPIS KDE desktop, 153
+    - SUSE Linux desktop, 155
+    - Xandros Desktop, 160
+- detection, host security, 552
+- /dev directory, 427
+- development environment
+    - CVS (Concurrent Versions System), 23
+    - GNU C compiler and, 23
+    - GNU C++ compiler and, 23
+    - GNU compiler for Java, 23
+    - GNU debugger and, 23
+    - GNU makes editor, 23
+    - GNU make utility, 23
+    - GNU profiling utility, 23
+    - Perl, 23
+    - Python, 23
+    - RCS (Revision Control System), 23
+    - shared libraries, 23
+    - Subversion, 23
+- Tcl/Tk (Tool command language and toolkit), 23
+- device drivers, 401

@@ -1,0 +1,22 @@
+**2. Click the Left Color button next to the drop-down list.**
+
+A color selection dialog box comes up (shown in Figure 4-8).
+
+![](bbox=[0.23, 0.21, 0.6, 0.4])
+
+Figure 4-8:
+The Pick a Color dialog box.
+
+**3. Pick a color and click OK.**
+
+**4. Repeat the same process to select the right color.**
+
+After you complete these steps, the desktop shows the new background color.
+
+If you want to use an image as wallpaper, click the Add Wallpaper button in the middle of the Desktop Background Preferences dialog box. The Add Wallpapers dialog box appears, from which you can select an image to use as wallpaper. By clicking the folder names in the Add Wallpapers dialog box, go to the /usr/share/backgrounds/images directory. That directory has the default.png file with the default wallpaper you see on the GNOME desktop. To change the wallpaper, select an image you want. You can select any Joint Photographic Experts Group (JPEG) or Portable Network Graphics (PNG) format image file as wallpaper. After selecting an image, click OK.
+
+The new wallpaper immediately appears on the desktop. When you’re done making the changes, click the Close button (refer to Figure 4-7) to close the dialog box and apply the changes.
+
+# Logging out of GNOME
+
+To log out from GNOME in Fedora Core, choose System>Log Out. Click OK when a dialog box asks if you really want to log out. In GNOME desktop of other distributions, you typically find the menu option to log out in the second or third menu button from the left on the top panel.

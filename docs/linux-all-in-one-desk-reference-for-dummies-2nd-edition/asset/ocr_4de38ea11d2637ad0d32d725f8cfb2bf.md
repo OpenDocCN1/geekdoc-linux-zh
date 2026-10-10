@@ -1,0 +1,23 @@
+the good news is that it’s free — available just for the downloading. For example, you can visit the Linux Online Web site at www.linux.org and click the Download button.
+
+![](bbox=[0.14, 0.21, 0.23, 0.29])
+
+Because a typical complete Linux distribution is *huge* — it takes up several CDs or at least a single DVD — your best bet is to buy a book (such as this one) that comes with Linux on a DVD-ROM. Then you boot the PC with that CD or DVD, which starts the Linux installation that creates the Linux partitions and installs Linux software packages from the DVD. Along the way, you configure many items — from the Ethernet card (if any) to the X Window System.
+
+Just to pique your curiosity, installation involves creating space on the hard drive for both Windows and Linux. If you want to install a distribution that’s in the form of ISO image file, you have to burn a CD or DVD (depending on the size of the ISO image) for that distribution. Then you boot the PC with that CD or DVD, which starts the Linux installation that creates the Linux partitions and installs Linux software packages from the DVD. Along the way, you configure many items — from the Ethernet card (if any) to the X Window System.
+
+# Configure
+
+When you finish installing Linux, the next step is to configure individual system components (for example, the sound card and the printer) and tweak any needed settings.
+
+If you aren’t getting a graphical login screen, the X Window System may not have been configured correctly during installation. You have to fix the X configuration file for the GUI to work.
+
+You may also want to configure your GUI desktop of choice — GNOME or KDE or both. Each has configuration tools. You can use these tools to adjust the look and feel of the desktop (background, title fonts, even the entire color scheme).
+
+After you’re through with the configuration step, all the hardware on your system and the applications should run to your liking.
+
+# Explore
+
+With a properly configured Linux PC at your disposal, you are ready to explore Linux itself. You can begin the exploration from the GUI desktop that you get after logging in.
+
+Explore the GUI desktops — GNOME and KDE — and the folders and files that make up the Linux file system. You can also try out the applications from the desktop. You find office and multimedia applications and Internet applications to explore.

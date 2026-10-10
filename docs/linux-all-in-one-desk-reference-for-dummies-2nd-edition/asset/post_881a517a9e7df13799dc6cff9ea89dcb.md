@@ -1,0 +1,138 @@
+
+## Table 1-15 Format for the Time of Execution in crontab Files
+
+| Field Number | Meaning of Field | Acceptable Range of Values* |
+| :--- | :--- | :--- |
+| 1 | Minute | 0–59 |
+| 2 | Hour of the day | 0–23 |
+| 3 | Day of the month | 0–31 |
+| 4 | Month | 1–12 (1 means January, 2 means February, and so on) or the names of months using the first three letters — Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec |
+| 5 | Day of the week | 0–6 (0 means Sunday, 1 means Monday, and so on) or the three-letter abbreviations of weekdays — Sun, Mon, Tue, Wed, Thu, Fri, Sat |
+
+* An asterisk in a field means all possible values for that field. For example, if an asterisk is in the third field, the job is executed every day.
+
+If you log in as root, you can also set up, examine, and remove cron jobs for any user. To set up cron jobs for a user, use this command:
+
+```
+crontab -u username filename
+```
+
+Here, username is the user for whom you install the cron jobs, and filename is the file that contains information about the jobs.
+
+Use the following form of crontab command to view the cron jobs for a user:
+
+```
+crontab -u username -l
+```
+
+To remove a user’s cron jobs, use the following command:
+
+```
+crontab -u username -r
+```
+
+Note: The cron daemon also executes the cron jobs listed in the system-wide cron job file /etc/crontab. Here’s a typical /etc/crontab file from a Linux system (type cat /etc/crontab to view the file):
+
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+# run-parts
+01 * * * * root run-parts /etc/cron.hourly
+02 4 * * * root run-parts /etc/cron.daily
+22 4 * * 0 root run-parts /etc/cron.weekly
+42 4 1 * * root run-parts /etc/cron.monthly
+```
+
+The first four lines set up several environment variables for the jobs listed in this file. The MAILTO environment variable specifies the user who receives the mail message with the output from the cron jobs in this file.
+
+The line that begins with a # is a comment line. The four lines following the run-parts comment execute the run-parts shell script (located in the /usr/bin directory) at various times with the name of a specific directory as argument. Each of the arguments to run-parts — /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly, and /etc/cron.monthly — are directories. Essentially, run-parts executes all scripts located in the directory that you provide as an argument.
+
+## Table 1-16 Script Directories for cron Jobs
+
+| Directory Name | Contents |
+| --- | --- |
+| /etc/cron.hourly | Scripts execute every hour |
+| /etc/cron.daily | Scripts execute each day |
+| /etc/cron.weekly | Scripts execute weekly |
+| /etc/cron.monthly | Scripts execute once each month |
+
+# Chapter 2: Managing Users and Groups
+
+*In This Chapter*
+
+- ✓ Adding user accounts
+- ✓ Understanding the password file
+- ✓ Managing groups
+- ✓ Exploring the user environment
+- ✓ Changing user and group ownerships of files and directories
+
+Linux is a multiuser system, so it has many user accounts. Even if you are the only user on your system, many servers require a unique username and group name. Take, for example, the FTP server. It runs under the username ftp. A whole host of system users are not for people but just for running specific programs.
+
+Also, users can belong to one or more groups. Typically, each username has a corresponding private group name. By default, each user belongs to that corresponding private group. However, you can define other groups for the purpose of providing access to specific files and directories based on group membership.
+
+User and group ownerships of files are a way to make sure that only the right people (or the right process) can access the right files and directories. Managing the user and group accounts is a typical system administration job. It’s not that hard to do this part of the job, given the tools that come with Linux. I show you how in this chapter.
+
+## Adding User Accounts
+
+You get the chance to add user accounts when you boot your system for the first time after installing Linux. The root account is the only one that you must set up during installation. If you don’t add other user accounts when you start the system for the first time, you can do so later on, using a GUI user account manager or the useradd command to add new users on your system.
+
+![](img/792720823146d68f19fd50c99ebfce4b_439_0.png)
+
+Creating other user accounts besides *root* is a good idea. Even if you're the only user of the system, logging in as a less privileged user is good practice because that way you can't damage any important system files inadvertently. If necessary, you can type `su -` to log in as *root* and then perform any system administration tasks.
+
+### Using a GUI user manager to add user accounts
+
+Most Linux distributions come with a GUI tool to manage user accounts. You can use that GUI tool to add new user accounts. The basic steps, regardless of the specific GUI tool, involve the following:
+
+1. The tool displays a list of current user accounts and has an **Add** button for adding new users.
+2. Click the **Add** button to bring up a dialog box that **prompts you for information about the new user account**.
+3. Enter the requested information — the username, the password (enter twice), and the full name of the user.
+4. Click the button to create a new account and the GUI tool takes care of adding the new user account.
+
+![](img/792720823146d68f19fd50c99ebfce4b_439_1.png)
+
+For example, in SUSE, select the Security and Users category from the YaST Control Center's left side and then click the User Management icon in the right side of the window. YaST then brings up the User and Group Administration pane, shown in Figure 2-1, where you can define new user accounts.
+
+![](img/792720823146d68f19fd50c99ebfce4b_439_2.png)
+
+**Figure 2-1:** In SUSE, you can manage user accounts and groups from YaST.
+
+Notice that the pane has two radio buttons: Users and Groups (as shown in Figure 2-1). Selecting the Users radio button displays the current list of users from the `/etc/passwd` file. Selecting the Groups radio button lists the names of groups from the `/etc/group`. Initially, the User and Group Administration tool filters out any system users and groups. However, you can view the system users by clicking Set Filter and choosing System Users from the drop-down menu. (System Users refers to user accounts that are not assigned to human users; rather, these user accounts are used to run various services.)
+
+You can Add new Users and Groups or Edit existing Users and Groups from the pane shown in Figure 2-1.
+
+To add a new user account, click the Add button and enter the information requested in the New Local User window, as shown in Figure 2-2.
+
+![](img/792720823146d68f19fd50c99ebfce4b_440_0.png)
+
+Fill in the requested information in the window (refer to Figure 2-2), and click the Accept button. The new user now appears in the list of users in the User and Group Administration pane.
+
+You can add more user accounts, if you like. When you finish, click the Finish button in the User and Group Administration pane (refer to Figure 2-1) to create the new user accounts.
+
+By default, YaST places all local users in a group named **users**. Sometimes you want a user to be in other groups as well, so that the user can access the files owned by that group. Adding a user to another group is easy. For example, suppose I want to add the username **naba** to the group called **wheel**. I simply type the following command in a terminal window:
+
+`usermod -G wheel naba`
+
+To remove a user account in SUSE, click the username in the list of user accounts (refer to Figure 2-1). Then click the **Delete** button.
+
+## Using commands to manage user accounts
+
+If you're working from a text console, you can create a new user account by using the **useradd** command. Follow these steps to add an account for a new user:
+
+1. **Log in as root.**
+    - If you're not already logged in as *root*, type `su` - to become root.
+2. **Type the following *useradd* command with the *-c* option to create the account:**
+    - `/usr/sbin/useradd -c "Ashley Barkakati" ashley`
+3. **Set the *password* by using the *passwd* command, as follows:**
+    - `passwd ashley`
+    - You're prompted for the password twice. If you type a password that someone can easily guess, the *passwd* program rejects it.
+
+The **useradd** command consults the following configuration files to obtain default information about various parameters for the new user account:
+
+- **/etc/default/useradd:** Specifies the default shell (*bin/bash*) and the default home directory location (*home*)
+- **/etc/login.defs:** Provides system-wide defaults for automatic group and user IDs, as well as *password-expiration* parameters
+- **/etc/skel:** Contains the default files that **useradd** creates in the user's home directory
+
+Examine these files with the `cat` or `more` commands to see what they contain.

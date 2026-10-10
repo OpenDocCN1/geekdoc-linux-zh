@@ -1,0 +1,91 @@
+
+## Using GUI File Managers
+
+Both GNOME and KDE desktops come with GUI file managers that enable you to easily browse the file system and perform tasks such as copying or moving files. The GNOME file manager is called *Nautilus* and the KDE file manager is *Konqueror*. I briefly describe these GUI file managers in the following sections.
+
+### Using the Nautilus shell
+
+The Nautilus file manager (more accurately called a *graphical shell*) comes with GNOME. Nautilus is intuitive to use; it’s similar to the Windows Active Desktop. You can manage files and folders and also manage your system with Nautilus.
+
+![](img/792720823146d68f19fd50c99ebfce4b_211_0.png)
+
+The latest version of Nautilus has changed from what you may have known in previous versions of Red Hat Linux or Fedora Core. Nautilus now provides a new *object window* view in addition to the navigation window that you know from the past. When you double-click any object on the desktop, Nautilus opens an object window with shows that object’s contents. If you want the older navigation window with its Web browser-like user interface, right-click a folder and choose Open→Browse Folder from the pop-up menu.
+
+### Viewing files and folders in object windows
+
+When you double-click a file or a folder, Nautilus opens that object in what it calls an object window. Unlike the Nautilus windows of the past — windows that enabled you to navigate the directory hierarchy — the object window doesn’t have Back and Forward buttons, toolbars, or side panes. For example, double-click the Computer icon on the left side of the GNOME desktop, and Nautilus opens an object window where it displays the storage devices in the computer, including the file system. If you then double-click an object inside that window, Nautilus opens another object window where that object’s contents appear. Figure 3-3 shows the result of double-clicking some objects in Nautilus.
+
+The Nautilus object window has a sparse user interface that has just the menu bar. You can perform various operations from the menu bar, such as open an object using an application, create folders and documents, and close the object window.
+
+### Burning data CDs from Nautilus
+
+If you have a CD recorder attached to your system (it can be a built-in ATAPI CD recorder or an external one attached to the USB port), you can use Nautilus to burn data CDs. From a Nautilus object window, you can access the CD Creator built into Nautilus. Just follow these simple steps:
+
+1. **In any Nautilus object window, choose Places·CD Creator.**
+
+Nautilus opens a CD Creator object window.
+
+Note: If you don’t have any Nautilus object windows open, just double-click the Computer icon on the desktop.
+
+2. **From other Nautilus windows, drag and drop into the CD Creator window whatever files and folders you want to put on the CD.**
+
+To get to files on your computer, double-click the Computer icon to open it in Nautilus and find the files you want. Then drag and drop those file or folder icons into the CD Creator window.
+
+3. **From the CD Creator window, choose File·Write to Disc.**
+
+Nautilus displays a dialog box where you can select the CD recorder, the write speed, and several other options, such as whether to eject the CD when done. You can also specify the CD title.
+
+4. **Click the Write button.**
+
+Nautilus burns the CD.
+
+![](img/792720823146d68f19fd50c99ebfce4b_212_0.png)
+
+Figure 3-3: By default, Nautilus opens a new object window for each object.
+
+### Browsing folders in a navigation window
+
+If you prefer to use the familiar navigation window for browsing folders, you have to do a bit of extra work. Instead of double-clicking an icon, right-click the icon and choose **Browse Folder** from the context menu. Nautilus then opens a navigation window with the contents of the object represented by the icon. For example, right-click the Home Folder icon in the upper-left corner of the GNOME desktop and select **Browse Folder** from the context menu. Nautilus opens a navigation window where it displays the contents of your home directory. (Think of a directory as a folder that can contain other files and folders.) Figure 3-4 shows a typical view of the Nautilus navigation window.
+
+> Figure 3-4:
+> You can view files and folders in the Nautilus navigation window.
+
+![](img/792720823146d68f19fd50c99ebfce4b_213_0.png)
+
+The navigation window is vertically divided into two parts. The left pane shows different views of the file system and other objects that you can browse with Nautilus. The right pane shows the files and folders in the currently selected folder in the left pane. Nautilus displays icons for files and folders. For image files, it shows a thumbnail of the image.
+
+The navigation window’s user interface is similar to that of a Web browser. The window’s title bar shows the name of the currently selected folder. The Location text box along the top of the window shows the full name of the directory in Linuspeak — for example, Figure 3-4 shows the contents of the `/home/naba/photos/April 8, 2005 - Cherry Blossoms` directory.
+
+If you’ve used Windows Explorer, you can use the Nautilus navigation window in a similar manner. To view the contents of another directory, do the following:
+
+1. Choose *Tree* from the **Information** drop-down menu (located in the left window).
+
+A tree menu of directories appears in that window. Initially the tree shows your home folder and the file system's root directory as a `FileSystem` folder.
+
+2. **Click the right arrow next to the `FileSystem` folder; in the resulting tree view, locate the directory you want to browse.**
+
+For example, to look at the `/etc` directory, click the right arrow next to the `etc` directory. Nautilus displays the subdirectories in `/etc` and changes the right arrow to a down arrow. `X11` is one of the subdirectories in `/etc` that you view in the next step.
+
+3. **To view the contents of the `X11` subdirectory, click `X11`.**
+
+The window on the right now shows the contents of the `/etc/X11` directory.
+
+Nautilus displays the contents of the selected directory by using different types of icons. Each directory appears as a folder with the name of the directory shown underneath the folder icon. Ordinary files, such as `XP86Config-4`, appear as a sheet of paper. The `x` file is a link to an executable file.
+
+The Nautilus navigation window has the usual menu bar and a toolbar. Notice the `View as Icons` button in Figure 3-4 on the right side of the toolbar. This button shows that Nautilus displays the directory contents with large icons. Click the button, and a drop-down list appears. Select `View as List` from the list, and Nautilus displays the contents by using smaller icons in a list format, along with detailed information, such as the size of each file or directory and the time when each was last modified, as shown in Figure 3-5.
+
+![](img/792720823146d68f19fd50c99ebfce4b_214_0.png)
+
+If you click any of the column headings — Name, Size, Type, or Date Modified — along the top of the list view, Nautilus sorts the list according to that column. For example, go ahead and click the Date Modified column heading. Nautilus now displays the list of files and directories sorted according to the time of their last modification. Clicking the Name column heading sorts the files and folders alphabetically.
+
+Not only can you move around different folders by using the Nautilus navigation window, you can also do things such as move a file from one folder to another or delete a file. I don’t outline each step. The steps are intuitive and similar to what you do in any GUI, such as Windows or Mac. Here are some of the things you can do in Nautilus:
+
+- To move a file to a different folder, drag and drop the file’s icon on the folder where you want the file.
+- To copy a file to a new location, select the file’s icon and choose Edit → Copy File from the Nautilus menu. (Or you can right-click the file’s icon and choose Copy File from the context menu.) Then move to the folder where you want to copy the file and choose Edit → Paste Files.
+- To delete a file or directory, right-click the icon and choose Move To Trash from the context menu. (You can do this only if you have permission to delete the file.) To permanently delete the file, right-click the Trash icon on the desktop and choose Empty Trash from the context menu. Of course, do this only if you really want to delete the file. Once you Empty Trash, you are never going to see the file again. If you have to retrieve a file from the trash, double-click the Trash icon and then drag the file’s icon back to the folder where you want to save it. You can retrieve a file from the trash until you empty it.
+- To rename a file or a directory, right-click the icon and choose Rename from the context menu. Then you can type the new name (or edit the name) in the text box that appears.
+- To create a new folder, right-click an empty area of the window on the right and choose Create Folder from the context menu. After the new folder icon appears, you can rename it by right-clicking the icon and choosing Rename from the context menu. If you don’t have permission to create a folder, that menu item is grayed out.
+
+## Using Konqueror
+
+Konqueror is a file manager and Web browser that comes with KDE. It’s intuitive to use — somewhat similar to the Windows Active Desktop. You can manage files and folders (and also view Web pages) with Konqueror.

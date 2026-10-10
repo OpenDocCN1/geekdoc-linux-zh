@@ -1,0 +1,18 @@
+You may think that you can avoid jeopardizing the internal network by connecting only the external servers, such as Web and FTP servers, to the Internet. However, employing this simplistic approach isn't wise. It's like deciding not to drive because you may have an accident. Not having a network connection between your Web server and your internal network also has the following drawbacks:
+
++   ❖ You cannot use network file transfers, such as FTP, to copy documents and data from your internal network to the Web server.
++   ❖ Users on the internal network cannot access the corporate Web server.
++   ❖ Users on the internal network don't have access to Web servers on the Internet. Such a restriction makes a valuable resource — the Web — inaccessible to the users in your organization.
+
+A practical solution to this problem is to set up an Internet firewall and to put the Web server on a highly secured host outside the firewall.
+
+In addition to using a firewall, here are some of the other steps to take to address network security. (I explain these further in Chapter 3 of this minibook.)
+
++   ❖ Enable only those Internet services you need on a system. In particular, don't enable services that are not properly configured.
++   ❖ Use Secure Shell (ssh) for remote logins. Don't use the r commands, such as rlogin and rsh.
++   ❖ Secure any Internet services, such as FTP or TELNET, that you want to run on your system. You can use the TCP wrapper access control files —/etc/hosts.allow and /etc/hosts.deny — to secure some of these services. (See Chapter 3 of this minibook for more on the TCP wrapper.)
++   ❖ Promptly fix any known vulnerabilities of Internet services that you choose to run. Typically, you can download and install the latest security updates from your Linux distribution's online update sites.
+
+# # Delving into Computer Security Terminology
+
+Computer books, magazine articles, and experts on computer security use a number of terms with unique meanings. You need to know these terms to understand discussions about computer security (and to communicate effectively with security vendors). Table 1-1 describes some of the commonly used computer security terms.

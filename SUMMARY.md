@@ -766,6 +766,7 @@
 +   [Linux 管理员安全指南](docs/linux-administrators-security-guide/README.md)
 +   [Linux 系统管理员高级指南：成为一名精通的系统管理员。2024](docs/linux-advanced-for-sysadmin-become-a-proficient-system-admin/README.md)
 +   [Linux 初学者指南](docs/linux-all-in-one-desk-reference-for-dummies/README.md)
++   [Linux 一本全大傻瓜指南](docs/linux-all-in-one-desk-reference-for-dummies-2nd-edition/README.md)
 +   [Linux 初学者指南全书：[8 本快速参考指南 - 超值优惠！；8 本合一]](docs/linux-all-in-one-desk-reference-for-dummies-eight-quick-refe/README.md)
 +   [Linux 初学者指南](docs/linux-all-in-one-for-dummies/README.md)
 +   [Linux 全能指南 (第 4 版)](docs/linux-all-in-one-for-dummies-4th-edition/README.md)

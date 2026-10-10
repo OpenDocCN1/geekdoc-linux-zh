@@ -1,0 +1,37 @@
+```
+chkconfig --list named
+```
+
+You see a line of output similar to the following:
+
+```
+named  0:off  1:off  2:off  3:on  4:off  5:on  6:off
+```
+
+The output shows you the status of the named server at run levels 0 through 6. As you can see, named is set to run at run levels 3 and 5.
+
+If you want to turn named off, you can do so with this command:
+
+```
+chkconfig --level 35 named off
+```
+
+You can use *chkconfig* to see the status of all services, including the ones started through *xinetd*. For example, you can view the status of all services by typing the following command:
+
+```
+chkconfig --list | more
+```
+
+The output shows the status of each service for each of the run levels from 0 through 6. For each run level, the service is either on or off. At the very end of the listing, *chkconfig* displays a list of the services that *xinetd* controls. Each *xinetd*-based service is also marked on or off, depending on whether *xinetd* is configured to start the service.
+
+# Using the update-rc.d command in Debian, Knoppix, MEPIS, Ubuntu, and Xandros
+
+In Debian, Knoppix, MEPIS, Ubuntu, and Xandros, you can use the *update-rc.d* command to set up services that should start when the system boots at specific boot levels. The easiest way to set up *is* to use the *defaults* option in a command of this form:
+
+```
+update-rc.d service defaults
+```
+
+where *service* is the name of the script file in the */etc/init.d* directory that starts and stops the service, among other things.
+
+When you use the *defaults* option, *update-rc.d* sets up *symbolic links* — shortcuts, in other words — to start the service in run levels 2, 3, 4, and 5 and stop the service in run levels 0, 1, and 6. A sequence number controls the order in which each service is started. (Services with smaller sequence numbers start before those with larger sequence numbers, and the numbers typically range from 00 through 99.) If you do not specify a sequence number explicitly, *update-rc.d* uses a sequence number of 20 when you use the *defaults* option.

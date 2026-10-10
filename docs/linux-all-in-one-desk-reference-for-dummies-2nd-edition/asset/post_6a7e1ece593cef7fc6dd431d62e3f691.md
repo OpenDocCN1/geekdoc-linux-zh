@@ -1,0 +1,133 @@
+
+# Using Knoppix to burn CDs or DVDs
+
+If you have a DVD-ROM drive and a separate DVD/CD burner, you can boot Knoppix from the companion DVD and then use Knoppix to burn the CD or DVD. In this case, Knoppix works from the DVD-ROM drive, and you can still burn CDs or DVDs on the separate DVD/CD burner.
+
+After Knoppix boots, open a terminal window by clicking the terminal program icon on the desktop panel. You can use the `cdrecord` command to burn a CD and the `growisofs` command to burn a DVD.
+
+Here are the steps to use `cdrecord` to burn an ISO image on a blank recordable CD:
+
+- 1. **Type** `cdrecord -scandbus` **and look at the last part of the output starting with the line** `scsibus0`.
+
+For example, here is the relevant part of that command's output from a PC with a DVD burner:
+
+```
+scsibus0:
+      0,0,0  0) 'SONY   ' 'DVD RW DRU-800A ' 'KYD1' Removable
+    CD-ROM
+      0,1,0  1) *
+      0,2,0  2) *
+      0,3,0  3) *
+      0,4,0  4) *
+      0,5,0  5) *
+      0,6,0  6) *
+      0,7,0  7) *
+```
+
+Note the three comma-separated numbers for the DVD/CD burner that you want to use. In this example, the numbers are 0,0,0. Use these numbers with the `dev` option in the `cdrecord` command in Step 5.
+
+- 2. **Type** `cd /cdrom/distro` **to change directory to where the ISO files are located on the DVD-ROM.**
+
+- 3. **Use the** `cd` **command to change to the subdirectory for the distribution whose ISO file you want to burn on a CD. Type** `ls -l` **to see the ISO file's name.**
+
+- 4. **Place a blank recordable CD in the burner.**
+
+- 5. **Type the following command to burn the CD, but replace** `filename.iso` **with the name of the ISO image file for your distribution:**
+
+```
+cdrecord -v -pad speed=1 dev=0,0,0 filename.iso
+```
+
+![](img/792720823146d68f19fd50c99ebfce4b_63_0.png)
+
+If the `cdrecord` command does not work, simply choose **Main Menu > Multimedia > K3b** from the Knoppix desktop. This starts the K3b CD/DVD burner application. You can then follow the instructions in the “Using a CD burner application” section to burn the CD.
+
+Burning a DVD ISO image onto a recordable DVD is also simple. Here are the steps:
+
+- 1. **Type** `cdrecord -scanbus` **and look at the last part of the output starting with the line** `scsibus0`.
+
+For example, here is the relevant part of that command's output from a PC with a DVD burner:
+
+```
+scsibus0:
+    0,0,0    0) 'SONY    ' DVD RW DRU-800A ' 'FY01' Removable
+    CD-ROM     0,1,0    1) *
+    0,2,0    2) *
+    0,3,0    3) *
+    0,4,0    4) *
+    0,5,0    5) *
+    0,6,0    6) *
+    0,7,0    7) *
+```
+
+Note the second column of numbers from 0 through 7 where the DVD burner is listed. In this example, the DVD burner is at number 0. For this number, use `/dev/scd0` as the device name in the `growisofs` command in Step 5. Remember to change the 0 in the device name to whatever number corresponds to your DVD burner in the output of the `cdrecord -scanbus` command.
+
+- 2. **Type** `cd /cdrom/distros` **to change directory to where the ISO files are located on this book's companion DVD.**
+
+You booted Knoppix from the DVD, so the DVD is still in the DVD-ROM drive.
+
+- 3. **Use the** `cd` **command to change to the subdirectory for the distribution whose ISO file you want to burn on a CD. Type** `ls -1` **to see the ISO file's name.**
+
+- 4. **Place a blank recordable DVD in the burner.**
+
+- 5. **Type the following command to burn the DVD but replace** `filename.iso` **with the name of the ISO image file for your distribution:**
+
+```
+growisofs -dvd-compat -Z /dev/scd0=filename.iso
+```
+
+![](img/792720823146d68f19fd50c99ebfce4b_64_0.png)
+
+Most of the ISO images included on this book's DVD are small enough to fit on CDs. However, if you want, you can burn any CD ISO image on a DVD. The ISO image for SUSE requires a DVD.
+
+## Setting Aside Space for Linux
+
+In a typical Windows PC, Windows is sitting on one big partition, taking over the whole hard drive. You want to shrink that partition and create room for Linux. During Linux installation, the installation program uses the free space for the Linux partitions.
+
+To try out any of the Live CD distributions — Knoppix or MEPIS — you don’t have to repartition your hard drive. Just boot your PC from the Live CD and you can start using these distributions. The MEPIS, SUSE, and Xandros installers can nondestructively shrink a Windows partition (performing the same task as a tool such as PartitionMagic), so you don’t need to perform the repartitioning step beforehand. If you plan to install Fedora Core, Debian, or any other Linux distribution on the hard drive, you have to repartition your hard drive. If you want to resize the disk partition under Windows, you can use Norton PartitionMagic (from Symantec) to resize and split disk partitions in all Microsoft operating systems from Windows 95/98/Me to Windows NT/2000/XP. It’s a commercial product, so you have to buy it to use it. At the time I’m writing this, the list price of Norton PartitionMagic 8.0 is $69.95 U.S. You can read about it and buy it at www.powerquest.com/partitionmagic.
+
+![](img/792720823146d68f19fd50c99ebfce4b_65_0.png)
+
+If you don’t already have PartitionMagic, no need to spend the money. Just boot Knoppix from this book’s companion DVD and then use QTParted (a GUI tool) to resize the Windows partitions. QTParted can resize NTFS partitions used by Windows 2000 and XP.
+
+![](img/792720823146d68f19fd50c99ebfce4b_65_1.png)
+
+Resizing the disk partition always involves the risk of losing all data on the hard drive. Therefore, before you resize hard drive partitions using a disk partitioning tool such as PartitionMagic, **back up your hard drive**. After making your backup — and before you do anything to the partitions — please make sure that you can restore your files from the backup.
+
+![](img/792720823146d68f19fd50c99ebfce4b_65_2.png)
+
+### Resizing a Windows partition using PartitionMagic
+
+When you run PartitionMagic, it shows the current partitions in a window. If you’re running Windows XP, your hard drive typically has two partitions: one small, hidden partition that contains Windows XP installation files, and a huge second NTFS partition that serves as the C: drive. You have to reduce the size of the existing C: drive. Doing so creates unused space following that partition. Then, during Linux installation, the installation program can create new Linux partitions in the unused space.
+
+To reduce the size of the Windows partition using PartitionMagic, follow these steps:
+
+- 1. **In the partition map in PartitionMagic’s main window, right-click the partition and choose Resize/Move from the context menu.**
+
+The Resize Partition dialog box appears.
+
+- 2. **In the Resize Partition dialog box, click and drag the right edge of the partition to a smaller size.**
+
+For a large hard drive (anything over 10GB), reduce the Windows partition to 5GB and leave the rest for Fedora Core. If you have to live with a smaller drive, try to create at least 4GB of space for Linux.
+
+- 3. Click **Ok** and then click **Apply** to apply the changes. After **PartitionMagic** has made the changes, click **Ok**.
+
+- 4. Reboot the PC.
+
+You don’t have to do anything with the hard drive space left over after shrinking the partition that used to be the C: drive. During installation, the Linux installer uses that free space to install Linux.
+
+## Resizing a partition with QTParted in Knoppix
+
+After Knoppix boots and the GUI desktop appears, follow these steps to reduce the size of the Windows partition:
+
+- 1. Choose **Main Menu > System > QTParted** from the Knoppix desktop.
+
+The QTParted window appears, and the tool displays the drives it finds on your PC. The first hard drive appears with a device name `/dev/hda`, second one as `/dev/hdb`, and so on.
+
+- 2. Click the hard drive from the list of devices on the upper left side of the QTParted window.
+
+QTParted displays the drive’s information in the lower left side and the partition information in the right side of the window, as shown in Figure 2-1.
+
+![](img/792720823146d68f19fd50c99ebfce4b_66_0.png)
+
+- 3. From the list of partitions on the right, click the partition you want to **resize**.

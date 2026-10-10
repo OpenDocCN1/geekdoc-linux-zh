@@ -1,0 +1,105 @@
++   File Manager, MEPIS KDE desktop, 152
++   file sharing, NFS, 661–665
++   file systems
++   commands and, 173
++   description, 181
++   devices, mounting,
++   429–430
++   directories, 427–428
++   DOS/Windows, 441–444
++   exporting, NFS, 662–664
++   hierarchy, 426–428
++   introduction, 26
++   kernel and, 489–490
++   mounting, NFS, 664–665
++   mounting/ unmounting
++   system administration and, 433–434
++   NFS, 26, 432–434
++   overview, 425–426
++   file transfer utilities, distributions, 22
++   filenames
++   DEB files, 456–457
++   pathname and, 182
++   pipe prefix, Perl, 761–762
++   RPM files, 451
++   URLs, 337
++   files
++   device files, 401–403
++   finding, commands,
++   171, 202–203
++   management, commands,
++   170
++   ownership, 422–423, 516
++   permissions, changing, 517
++   permissions, default,
++   517–519
++   permissions, set user ID,
++   519–520
++   /proc file system, 398–400
+
++   processing, commands,
++   171, 176–179
++   security, 516–520
++   sharing, NFS, 432–434
++   system configuration files, 390–392
++   viewing, Konqueror, 191–193
++   filters, packet filter firewall,
++   536
++   finding files, commands, 202–203
++   Findutils GNU software package, 18
++   finger GNU software package, 18
++   fingerprints, 521
++   Firefox Web Browser description, 210
++   Fedora Core GNOME desktop, 146
++   introduction, 339
++   Knoppix desktop, 147
++   MEPIS KDE desktop, 153
++   surfing, 343–344
++   user interface, 340–342
++   Xandros Desktop, 159
++   firewalls
++   application-proxy gateway firewall, 537–538
++   characteristics, 535–536
++   Fedora Core
++   configuration, 56–57
++   iptables command, 541–545
++   NATs (Network Address Translations), 538
++   networks and, 27
++   packet filter firewall, 536
++   packet filtering, enabling, 539–545
++   security, 509
+
++   setup overview, 534–536
++   stateful inspection
++   firewall, 536–537
++   floppy disks, backup devices, 435
++   floppy tape drive, kernel,
++   486–487
++   flow control, scripting, 736–739
++   flow-control statements
++   Perl, 746, 755–758
++   programming and, 677
++   folders
++   Nautilus, browsing,
++   188–190
++   viewing, Konqueror, 191–193
++   for statement
++   C programming, 717–718
++   Perl, 757–758
++   foreach statement, Perl, 757–758
++   FQDN (fully qualified domain name), 642
++   frame buffer, kernel, 488
++   FTP (file transfer protocol)
++   command-line FTP client,
++   366–370
++   commands, 366–370
++   description, 279
++   /etc/vsftpd.ftpusers file, 612
++   /etc/vsftpd.user_list file, 612
++   graphical FTP clients, 361–366
++   Internet services, 570
++   server configuration, 608–612
++   server installation, 607
++   SUSE Linux installation, 60–63
++   vsftpd configuration files,
++   608–309

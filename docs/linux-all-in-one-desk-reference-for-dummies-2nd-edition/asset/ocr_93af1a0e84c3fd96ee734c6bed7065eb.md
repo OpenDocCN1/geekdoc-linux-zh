@@ -1,0 +1,24 @@
+By default, YaST places all local users in a group named **users**. Sometimes you want a user to be in other groups as well, so that the user can access the files owned by that group. Adding a user to another group is easy. For example, suppose I want to add the username **naba** to the group called **wheel**. I simply type the following command in a terminal window:
+`usermod -G wheel naba`
+
+To remove a user account in SUSE, click the username in the list of user accounts (refer to Figure 2-1). Then click the **Delete** button.
+
+# Using commands to manage user accounts
+
+If you're working from a text console, you can create a new user account by using the **useradd** command. Follow these steps to add an account for a new user:
+
++   1. **Log in as root.**
++   If you're not already logged in as *root*, type `su` - to become root.
++   2. **Type the following *useradd* command with the *-c* option to create the account:**
++   `/usr/sbin/useradd -c "Ashley Barkakati" ashley`
++   3. **Set the *password* by using the *passwd* command, as follows:**
++   `passwd ashley`
++   You're prompted for the password twice. If you type a password that someone can easily guess, the *passwd* program rejects it.
+
+The **useradd** command consults the following configuration files to obtain default information about various parameters for the new user account:
+
++   * **/etc/default/useradd:** Specifies the default shell (*bin/bash*) and the default home directory location (*home*)
++   * **/etc/login.defs:** Provides system-wide defaults for automatic group and user IDs, as well as *password-expiration* parameters
++   * **/etc/skel:** Contains the default files that **useradd** creates in the user's home directory
+
+Examine these files with the `cat` or `more` commands to see what they contain.

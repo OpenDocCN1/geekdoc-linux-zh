@@ -1,0 +1,26 @@
+# Parallel port support
+
+These options are important if you use any devices such as printers or parallel Zip drives connected to the parallel port of your PC. Answer m to the Parallel port support and PC-style hardware options so that the drivers are built as modules.
+
+# Plug and Play support
+
+These options ask if you want to enable Plug and Play (PnP) support in the kernel. If you enable PnP support, the kernel automatically configures PnP devices (just as Windows does). Enable these options.
+
+# Block devices
+
+Block devices (such as disk drives) transfer data in chunks (as opposed to keyboards, which transfer data one character at a time). This set of options involves the floppy and IDE (Integrated Drive Electronics) devices connected to the PC’s parallel port as well as other block devices.
+
++   *  
++   *  Block devices
+
++   * Normal floppy disk support (`BLK_DEV_FD`) [M/n/y/?]
++   * XT hard disk support (`BLK_DEV_XD`) [N/m/y/?]
++   * Parallel port IDE device support (`PARIDE`) [M/n/?]
+
+The first question asks if you want floppy drive support. Because most PCs do have a floppy drive, your answer generally is Yes. You should press Enter to accept the default for the third question if you have external CD-ROM or disk devices that connect through your PC’s parallel port. Some IDE devices use a parallel port IDE adapter — that’s what the `PARIDE` option refers to.
+
+The next set of options is for various parallel IDE drivers. You may want to build in support for parallel port IDE devices through loadable modules. That way, the modules are there if you need them, but the kernel doesn’t get bloated with extra code.
+
+Next comes another set of options for block devices. The `BLK_DEV_LOOP` option is for a loopback device. Enabling the loopback device lets the Linux kernel manipulate an entire file system image stored in a single, large file. This option is useful if you want to mount a CD or DVD image (for example, a Linux ISO file) and check it out before actually burning the CD or DVD.
+
+The RAM disk support allows the kernel to use a portion of your system’s memory as a disk capable of storing a file system. Typically, a RAM disk functions only during system startup when the hard drive may not be available

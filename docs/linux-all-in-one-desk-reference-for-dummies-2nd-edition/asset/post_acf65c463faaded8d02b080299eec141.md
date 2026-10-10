@@ -1,0 +1,227 @@
+
+## Contents at a Glance
+
+- Introduction ... 1
+
+- **Book I: Linux Basics** ... 7
+    - Chapter 1: Introducing Linux ... 9
+    - Chapter 2: Installing Linux ... 31
+    - Chapter 3: Troubleshooting and Configuring Linux ... 81
+    - Chapter 4: Trying Out Linux ... 111
+
+- **Book II: Linux Desktops** ... 131
+    - Chapter 1: Introducing the GUI Desktops ... 133
+    - Chapter 2: Commanding the Shell ... 161
+    - Chapter 3: Navigating the Linux File System ... 181
+    - Chapter 4: Introducing Linux Applications ... 207
+    - Chapter 5: Using Text Editors ... 239
+
+- **Book III: Networking** ... 251
+    - Chapter 1: Connecting to the Internet ... 253
+    - Chapter 2: Setting Up a Local Area Network ... 275
+    - Chapter 3: Adding a Wireless Ethernet LAN ... 287
+    - Chapter 4: Managing the Network ... 299
+
+- **Book IV: Internet** ... 311
+    - Chapter 1: E-Mailing and IMing in Linux ... 313
+    - Chapter 2: Browsing the Web ... 333
+    - Chapter 3: Reading Newsgroups and RSS Feeds ... 345
+    - Chapter 4: Using FTP ... 361
+
+- **Book V: Administration** ... 371
+    - Chapter 1: Introducing Basic System Administration ... 373
+    - Chapter 2: Managing Users and Groups ... 413
+    - Chapter 3: Managing File Systems ... 425
+    - Chapter 4: Installing and Updating Applications ... 449
+    - Chapter 5: Customizing the Linux Kernel ... 473
+
+- **Book VI: Security** ... 497
+    - Chapter 1: Introducing Linux Security ... 499
+    - Chapter 2: Securing a Linux Host ... 513
+    - Chapter 3: Improving Network Security ... 529
+    - Chapter 4: Performing Computer Security Audits ... 547
+
+- **Book VII: Internet Servers** ... 563
+    - Chapter 1: Managing Internet Services ... 565
+    - Chapter 2: Running a Web Server ... 583
+    - Chapter 3: Setting Up the FTP Server ... 607
+    - Chapter 4: Managing Mail and News Servers ... 613
+    - Chapter 5: Managing DNS ... 639
+    - Chapter 6: Using Samba and NFS ... 661
+
+- **Book VIII: Programming** ... 671
+    - Chapter 1: Programming in Linux ... 673
+    - Chapter 2: Programming in C ... 699
+    - Chapter 3: Writing Shell Scripts ... 731
+    - Chapter 4: Programming in Perl ... 743
+
+- Appendix ... 771
+- Index ... 777
+
+## Table of Contents
+
+- **Introduction** ... 1
+    - About This Book ... 2
+    - Conventions Used in This Book ... 3
+    - What You Don't Have to Read ... 3
+    - Who Are You? ... 4
+    - How This Book Is Organized ... 4
+    - What's on the DVD? ... 5
+    - Icons Used in This Book ... 5
+    - Where to Go from Here ... 6
+
+- **Book 1: Linux Basics** ... 7
+    - **Chapter 1: Introducing Linux** ... 9
+        - What Is Linux? ... 9
+        - Linux distributions ... 10
+        - Making sense of version numbers ... 14
+        - Linux Standard Base (LSB) ... 15
+        - What a Linux Distribution Includes ... 16
+        - GNU software ... 17
+        - GUIs and applications ... 19
+        - Networks ... 21
+        - Internet servers ... 21
+        - Software development ... 22
+        - Online documentation ... 23
+        - What Linux Helps You Manage ... 24
+        - Disks, CD-ROMs, and DVD-ROMs ... 25
+        - Peripheral devices ... 26
+        - File systems and sharing ... 26
+        - Network ... 27
+        - Getting Started ... 27
+        - Install ... 27
+        - Configure ... 28
+        - Explore ... 28
+        - Find out more ... 29
+    - **Chapter 2: Installing Linux** ... 31
+        - Following the Installation Steps ... 32
+        - Checking Your PC's Hardware ... 34
+        - Trying Out the Knoppix Live CD ... 36
+        - Burning CDs or DVDs from ISO Images ... 37
+            - Using a CD burner application ... 37
+            - Using Knoppix to burn CDs or DVDs ... 38
+        - Setting Aside Space for Linux ... 39
+            - Resizing a Windows partition using PartitionMagic ... 40
+            - Resizing a partition with QTParted in Knoppix ... 41
+        - Installing Debian GNU/Linux ... 42
+            - Getting an overview of the installation ... 43
+            - Completing the Debian installation ... 44
+        - Installing Fedora Core ... 48
+            - Selecting keyboard and installation type ... 49
+            - Partitioning the hard drive for Fedora Core ... 50
+            - Setting up key system parameters ... 51
+            - Selecting and installing the package groups ... 54
+            - Configuring the firewall and SELinux after first boot ... 56
+        - Installing MEPIS ... 57
+        - Installing SUSE Linux ... 60
+            - Performing an FTP install ... 60
+            - Installing SUSE Linux from CDs ... 63
+            - Starting the SUSE install in YaST ... 65
+        - Installing Ubuntu ... 71
+        - Installing Xandros Desktop ... 73
+            - Using Xandros Express Install ... 75
+            - Using Xandros Custom Install ... 76
+    - **Chapter 3: Troubleshooting and Configuring Linux** ... 81
+        - Using Text Mode Installation ... 82
+        - Troubleshooting X ... 82
+            - Resolving Other Installation Problems ... 84
+            - Using Knoppix boot commands ... 84
+            - The fatal signal 11 error ... 86
+            - Getting around the PC reboot problem ... 87
+            - Using Linux kernel boot options ... 87
+        - Setting Up Printers ... 90
+            - Configuring printers in Debian ... 90
+            - Configuring printers in Fedora Core ... 92
+            - Configuring printers in Knoppix and MEPIS ... 94
+            - Configuring printers in SUSE ... 97
+            - Configuring printers in Ubuntu ... 99
+            - Configuring printers in Xandros ... 100
+        - Managing DVDs and CD-ROMs ... 103
+        - Installing Other Software ... 103
+            - Installing software in Debian, MEPIS, and Ubuntu ... 104
+            - Installing software in Fedora Core ... 106
+            - Installing software in SUSE ... 107
+            - Installing software in Xandros ... 108
+    - **Chapter 4: Trying Out Linux** ... 111
+        - Starting Linux ... 111
+        - Exploring GUI Desktops ... 115
+            - GNOME ... 115
+            - KDE ... 122
+        - Playing with the Shell ... 125
+            - Starting the bash shell ... 126
+            - Understanding shell commands ... 127
+            - Trying a few Linux commands ... 128
+        - Shutting Down ... 129
+
+- **Book II: Linux Desktops** ... 131
+    - **Chapter 1: Introducing the GUI Desktops** ... 133
+        - Getting to Know the Common Features of the GUIs ... 134
+            - Desktop context menus ... 135
+            - Icon context menus ... 136
+            - The panel ... 137
+            - The Main Menu ... 139
+        - Introducing Debian's GNOME Desktop ... 142
+        - Introducing Fedora Core's GNOME Desktop ... 144
+        - Introducing the Knoppix Desktop ... 146
+        - Introducing the MEPIS KDE Desktop ... 150
+        - Introducing the SUSE Desktop ... 153
+        - Introducing Ubuntu's GNOME Desktop ... 156
+        - Introducing the Xandros Desktop ... 158
+    - **Chapter 2: Commanding the Shell** ... 161
+        - Opening Terminal Windows and Virtual Consoles ... 161
+        - Using the Bash Shell ... 162
+            - Understanding the syntax of shell commands ... 162
+            - Combining shell commands ... 164
+            - Controlling command input and output ... 164
+            - Typing less with automatic command completion ... 167
+            - Going wild with asterisks and question marks ... 167
+            - Repeating previously typed commands ... 169
+        - Discovering and Using Linux Commands ... 170
+            - Becoming root (superuser) ... 173
+            - Managing processes ... 174
+            - Working with date and time ... 175
+            - Processing files ... 176
+        - Writing Shell Scripts ... 179
+    - **Chapter 3: Navigating the Linux File System** ... 181
+        - Understanding the Linux File System ... 181
+        - Using GUI File Managers ... 186
+            - Using the Nautilus shell ... 186
+            - Using Konqueror ... 190
+        - Navigating the File System with Linux Commands ... 194
+            - Commands for directory navigation ... 195
+            - Commands for directory listings and permissions ... 196
+            - Commands for changing permissions and ownerships ... 199
+            - Commands for working with files ... 200
+            - Commands for working with directories ... 201
+            - Commands for finding files ... 202
+            - Commands for mounting and unmounting ... 203
+            - Commands for checking disk-space usage ... 204
+    - **Chapter 4: Introducing Linux Applications** ... 207
+        - Taking Stock of Linux Applications ... 207
+        - Office Applications and Tools ... 214
+            - OpenOffice.org office suite ... 214
+            - Calendars ... 218
+            - Calculators ... 219
+        - Commercially available office applications for Linux ... 220
+        - Aspell spelling checker ... 222
+        - Databases ... 223
+            - Reviewing the steps to build the database ... 224
+            - Designing the database ... 225
+            - Creating an empty database ... 225
+            - Using the MySQL monitor ... 226
+            - Defining a table ... 226
+            - Loading data into a table ... 227
+            - Querying the database ... 228
+        - Multimedia Applications ... 228
+            - Using a digital camera ... 229
+            - Playing audio CDs ... 230
+            - Playing sound files ... 231
+            - Burning a CD ... 233
+        - Graphics and Imaging ... 234
+            - The GIMP ... 234
+            - GNOME Gshowview ... 236
+    - **Chapter 5: Using Text Editors** ... 239
+        - Using GUI Text Editors ... 239
+        - Text Editing with ed and vi ... 240
+            - Using ed ... 241
+            - Using vi ... 245

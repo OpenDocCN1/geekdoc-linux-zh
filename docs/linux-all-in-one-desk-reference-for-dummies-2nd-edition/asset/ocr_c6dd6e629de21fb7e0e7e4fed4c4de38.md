@@ -1,0 +1,45 @@
+# Linux® All-in-One Desk Reference
+For Dummies®, 2ⁿᵈ Edition Source Code Offer
+
+To comply with the GNU GPL, we provide separately the Linux source code. Anyone may use this fulfillment offer to receive the source code on DVD. If you'd like the source code sent to you, please follow the instructions below to order by phone, online, or coupon.
+
+For each ordering method, please use ISBN: 047004988X when prompted. The cost is $2.04 (USD) plus shipping.
+
+Terms: Void where prohibited or restricted by law. Allow 2-4 weeks for delivery.
+
+# To order by phone:
+
++   1. Call toll free in the United States: 1-877-762-2974. International customers, dial 1-317-572-3994.
++   2. Give the operator the appropriate ISBN. Please have your credit card ready.
+
+# To order online:
+
++   1. Go to http://www.wiley.com/
++   2. Use the Product Search feature to search for Linux All-in-One Desk Reference For Dummies 2E Source Code or 047004988X.
++   3. Place the item in the shopping cart.
+
+# To order by coupon:
+
++   1. Complete the coupon below.
++   2. Include a check or money order for $2.04 (USD) plus shipping. To find out the shipping costs, call 1-877-762-2974 in the US or 1-317-572-3994 for international customers.
++   3. Send it to us at the address listed at the bottom of the coupon.
+
+Name _______________________________________________________
+Company _____________________________________________________
+Address _____________________________________________________
+City ______________________ State ______ Postal Code ______ Country ________
+E-mail ______________________________________________________
+Telephone ___________________________________________________
+Place where book was purchased ______________________________
+
+☐ (Check here to find out what we're up to by joining our email list — convenient way to receive news about our products and events as well as about special discount offers.
+
+Return this coupon with the appropriate US funds to:
+
+Wiley Publishing, Inc.
+Customer Care
+Linux All-in-One Desk Reference For Dummies, 2ⁿᵈ Edition – Source Code [047004988X]
+10475 Crosspoint Blvd.
+Indianapolis, IN 46256
+
+Terms: Wiley is not responsible for lost, stolen, late, or illegible orders. For questions regarding this fulfillment offer, please call us at 1-877-762-2974 or 1-317-572-3994.

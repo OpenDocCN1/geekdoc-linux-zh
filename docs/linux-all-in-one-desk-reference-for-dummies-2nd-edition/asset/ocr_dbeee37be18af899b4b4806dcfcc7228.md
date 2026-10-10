@@ -1,0 +1,40 @@
+In Debian, the `runlevel` command prints an output like this:
+
+```
+`N 2`
+```
+
+The first character of the output shows the previous run level (*N* means no previous run level), and the second character shows the current run level (*2*). In this case, the system started at run level 2. If you are in a GUI desktop in Fedora Core or MEPIS, the `runlevel` command should show *5* as the current run level.
+
+# ## Examining the /etc/inittab file
+
+The `/etc/inittab` file is the key to understanding the processes that `init` starts at various run levels. You can look at the contents of the file by using the `more` command, as follows:
+
+```
+`more /etc/inittab`
+```
+
+![](bbox=[0.13, 0.45, 0.2, 0.52])
+
+To see the contents of the `/etc/inittab` file with the `more` command, you don't have to log in as *root*.
+
+To interpret the contents of the `/etc/inittab` file, follow these steps:
+
++   1. **Look for the line that contains the phrase *initdefault*.**
++      Here is that line from the `/etc/inittab` file from a Debian system:
++      `id:2:initdefault:`
++      That line shows the default run level. In this case, it's 2.
+
++   2. **Find all the lines that specify what `init` runs at run level 2. Look for a line that has a 2 between the first two colons (\:). Here is a relevant line in Debian:**
++      `l2:2:wait:/etc/init.d/rc 2`
++      This line specifies that `init` executes the file `/etc/init.d/rc` with `2` as an argument.
+
+If you look at the file `/etc/init.d/rc` in a Debian system, you find it's a shell script. You can study this file to see how it starts various processes for run levels 1 through 5.
+
+![](bbox=[0.13, 0.85, 0.2, 0.95])
+
+Each entry in the `/etc/inittab` file tells `init` what to do at one or more run levels — you simply list all run levels at which the process runs. Each `inittab` entry has four fields — separated by colons — in the following format:
+
+```
+`id:runlevels:action:process`
+```

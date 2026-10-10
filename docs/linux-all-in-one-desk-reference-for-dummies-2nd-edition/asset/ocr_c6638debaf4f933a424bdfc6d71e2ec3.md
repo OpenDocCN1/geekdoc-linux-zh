@@ -1,0 +1,23 @@
+# 304 Checking out TCP/IP Networks
+
+This output shows that three network interfaces — the loopback interface (`lo`) and two Ethernet cards (`eth0` and `eth1`) — are currently active on this system. For each interface, you can see the IP address, as well as statistics on packets delivered and sent. If the Linux system has a dialup PPP link up and running, you also see an item for the `ppp0` interface in the output.
+
+# Checking the IP routing table
+
+The other network configuration command, `/sbin/route`, also provides status information when you run it without a command-line argument. If you’re having trouble checking a connection to another host (that you specify with an IP address), check the IP routing table to see whether a default gateway is specified. Then check the gateway’s routing table to ensure that paths to an outside network appear in that routing table.
+
+A typical output from the `/sbin/route` command looks like the following:
+
+| Kernel IP routing table | | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Destination** | **Gateway** | **Genmask** | **Flags** | **Metric** | **Ref** | **Use** | **Iface** |
+| 192.168.0.0 | * | 255.255.255.0 | U | 0 | 0 | 0 | eth0 |
+| 192.168.0.0 | * | 255.255.255.0 | U | 0 | 0 | 0 | eth1 |
+| 169.254.0.0 | * | 255.255.0.0 | UG | 0 | 0 | 0 | eth1 |
+| default | 192.168.0.1 | 0.0.0.0 | UG | 0 | 0 | 0 | eth0 |
+
+As this routing table shows, the local network uses the `eth0` and `eth1` Ethernet interfaces, and the default gateway is the `eth0` Ethernet interface. The default gateway is a routing device that handles packets addressed to any network other than the one in which the Linux system resides. In this example, packets addressed to any network address other than those beginning with 192.168.0 are sent to the gateway — 192.168.0.1. The gateway forwards those packets to other networks (assuming, of course, that the gateway is connected to another network, preferably the Internet).
+
+# Checking connectivity to a host
+
+To check for a network connection to a specific host, use the `ping` command. `ping` is a widely used TCP/IP tool that uses a series of Internet Control Message Protocol (ICMP, pronounced *EE-comp*) messages. ICMP provides for an Echo message to which every host responds. Using the ICMP messages and replies, `ping` can determine whether or not the other system is alive and can compute the round-trip delay in communicating with that system.

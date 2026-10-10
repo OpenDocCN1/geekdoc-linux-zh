@@ -1,0 +1,13 @@
++   * It acts as the SMTP mail gateway for the internal network. Set up the sendmail software so that all outgoing mail appears to come from the firewall system.
++   * Its user accounts are limited to a few user accounts for those internal users who need access to external systems. External users who need access to the internal network should use SSH for remote login (see discussion of SSH earlier in this chapter).
++   * It keeps a log of all system activities, such as successful and unsuccessful login attempts.
++   * It provides DNS name-lookup service to the outside world to resolve any hostnames that are known to the outside world.
++   * It provides good performance so that it doesn't hinder the internal users' access to specific Internet services (such as HTTP and FTP).
+
+A firewall can take many different forms. Here are three common forms of a firewall:
+
++   * **Packet filter firewall**: This simple firewall uses a router capable of filtering (blocking or allowing) packets according to a number of their characteristics, including the source and destination IP addresses, the network protocol (TCP or UDP), and the source and destination port numbers. Packet filter firewalls are usually placed at the outermost boundary with an untrusted network, and they form the first line of defense. An example of a packet filter firewall is a network router that employs filter rules to screen network traffic.
++   
++   Packet filter firewalls are fast and flexible, but they cannot prevent attacks that exploit application-specific vulnerabilities or functions. They can log only a minimal amount of information, such as source IP address, destination IP address, and traffic type. Also, they are vulnerable to attacks and exploits that take advantage of flaws within the TCP/IP protocol, such as IP address spoofing, which involves altering the address information in network packets in order to make packets appear to come from a trusted IP address.
+
++   * **Stateful inspection firewall**: In this case, the firewall keeps track of network connections that network applications are using. When an application on an internal system uses a network connection to create a session with a remote system, a port is also opened on the internal system. This port receives network traffic from the remote system. For successful connections, packet filter firewalls must permit incoming packets from the remote system. Opening up many ports to incoming traffic creates a risk of intrusion by unauthorized users who abuse the expected conventions of network protocols such as TCP. Stateful inspection firewalls

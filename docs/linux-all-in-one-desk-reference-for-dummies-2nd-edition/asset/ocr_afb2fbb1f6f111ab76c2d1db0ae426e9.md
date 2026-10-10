@@ -1,0 +1,31 @@
+| This Command | Does the Following |
+| :--- | :--- |
+| `clear FILENAME:NUM` | Deletes the breakpoint at a specific line in a source file. For example, `clear xdraw.c:8` clears the breakpoint at line 8 of file xdraw.c. |
+| `continue` | Continues running the program being debugged. (Use this command after the program stops due to a signal or breakpoint.) |
+| `display EXPR` | Displays the value of expression (consisting of variables defined in the program) each time the program stops |
+| `file FILE` | Loads a specified executable file for debugging |
+| `help NAME` | Displays help on the command named NAME |
+| `info break` | Displays a list of current breakpoints, including information on how many times each breakpoint is reached |
+| `info files` | Displays detailed information about the file being debugged |
+| `info func` | Displays all function names |
+| `info local` | Displays information about local variables of the current function |
+| `info prog` | Displays the execution status of the program being debugged |
+| `info var` | Displays all global and static variable names |
+| `kill` | Ends the program you're debugging |
+| `list` | Lists a section of the source code |
+| `make` | Runs the make utility to rebuild the executable without leaving gdb |
+| `next` | Advances one line of source code in the current function without stepping into other functions, if any |
+| `print EXPR` | Shows the value of the expression EXPR |
+| `quit` | Quits gdb |
+| `run` | Starts running the currently loaded executable |
+| `set variable VAR=VALUE` | Sets the value of the variable VAR to VALUE |
+| `shell CMD` | Executes a UNIX command CMD, without leaving gdb |
+| `step` | Advances one line in the current function, stepping into other functions, if any |
+| `watch VAR` | Shows the value of the variable named VAR whenever the value changes |
+| `where` | Displays the call sequence. Use this command to locate where your program died. |
+| `x/F ADDR` | Examines the contents of the memory location at address ADDR in the format specified by the letter F, which can be o (octal), x (hex), d (decimal), u (unsigned decimal), t (binary), f (float), a (address), i (instruction), c (char), or s (string). You can append a letter indicating the size of data type to the format letter. Size letters are b (byte), h (halfword, 2 bytes), w (word, 4 bytes), and g (giant, 8 bytes). Typically, ADDR is the name of a variable or pointer. |
+
+Book VIII  
+Chapter 1
+
+Programming in Linux
