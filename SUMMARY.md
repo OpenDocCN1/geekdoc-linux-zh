@@ -613,6 +613,7 @@
 +   [Red Hat Linux 7 安装、配置与定制指南](docs/install-configure-and-customize-red-hat-linux-7-linux/README.md)
 +   [Linux 上安装 Joomla 和 drupal](docs/installation-of-joomla-and-drupal-on-linux/README.md)
 +   [Linux 上安装 Wordpress](docs/installation-of-wordpress-on-linux/README.md)
++   [Linux 安装与管理](docs/installing-and-administering-linux-gearhead-press/README.md)
 +   [Linux 安装与管理指南（第二版）](docs/installing-and-administering-linux-second-edition/README.md)
 +   [Debian Gnu/linux 安装指南（其他发行版）](docs/installing-debian-gnulinux-other-sams/README.md)
 +   [在死臭熊上安装 Linux（以及其他奇怪事物）](docs/installing-linux-on-a-dead-badger-and-other-oddities/README.md)

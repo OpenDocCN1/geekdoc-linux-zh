@@ -1,0 +1,106 @@
+
+
+文件管理员。`mtools` 命令不区分大小写。表 5.3 列出了现有 `mtools` 命令中约一半的语法和用途。
+
+有关选项的信息，请参考 man 手册页和其他资源。请记住，所有模式匹配都遵循 UNIX 语法和约定，而非 DOS 的。对于 *mcopy* 和 *mmove* 等命令，你可以通过确定 *sourcefile* 或 *targetfile* 是否带有 DOS 字母驱动器标识符，来判断文件是从 DOS 文件系统传输到 UNIX 文件系统，还是相反。
+
+## **MToolsFM**
+
+MToolsFM 是一个旨在让用户能够轻松地在 Linux 和类 UNIX 操作系统下通过图形用户界面（GUI）管理软盘文件的程序。MToolsFM 以前称为 *mfm*，但这偶尔会与 Motif 文件管理器（MFM）混淆。最新版本是 MToolsFM-1.8。
+
+它利用了 `mtools` 的功能。但 MToolsFM 的优势在于，由于熟悉 DOS 的人越来越少，GUI 界面提供了功能，但不要求用户学习另一套命令行命令。
+
+MToolsFM 可从 www.core-coutainville.org/MToolsFM/ 下载，该网站由 Christian Ospelkaus (christian@core-coutainville.org) 维护。
+
+## **打印文件：lp、lpq 和 lpr 命令**
+
+仅关于 Linux 的打印可能就足以写成一本书。在这里，我们将尽可能简练地介绍这些入门说明和示例。然而，如果你要设置 Linux 打印，我们建议你在 www.linuxprinting.org 阅读最新的 Linux 打印 HOWTO。该 HOWTO 自 1992 年以来一直由 Grant Taylor 维护（且拥有版权）。
+
+### **连接打印机并创建打印队列**
+
+然而，在简要讨论一些基本的打印命令之前，让我们先遵循“先决条件”。首先，将打印机连接到你的系统。我们使用了一台 Hewlett-Packard LaserJet 6L 打印机。我们将其连接到并口。
+
+# 表 5.3 mtools 命令
+
+| 语法 | 用途 |
+| :--- | :--- |
+| `mattrib +/-[!flags] dosfilename(s)` | 更改文件属性 |
+| `mcat [-w] drive:` | 从软盘设备复制或读取整个磁盘镜像；等同于 Linux/UNIX 的 `cat` 命令 |
+| `mcd dosdirectory` | 更改 DOS 驱动器上的 `mtools` 工作目录 |
+| `mcopy -[options] dossourcefile dostargetfile` | 在 UNIX 和 DOS 之间复制文件 |
+| `mdel -[options] dossourcfile` | 删除 DOS 文件 |
+| `mdeltree -[options] dosdirectory(ies)` | 删除 DOS 目录及其所有子目录和其中的内容 |
+| `mdir -[options] dosfilename(s)` | 显示 DOS 目录的内容 |
+| `mformat -[options] dosdrive:` | 为已通过 UNIX 低级 `fdformat` 命令格式化的磁盘添加 MS-DOS 文件系统 |
+| `mlabel -[options] drive:[label]` | 为磁盘添加卷标 |
+| `mmd -[options] dosdirectory(ies)` | 创建 DOS 子目录 |
+| `mount -[options] [dosdrive:]` | 挂载 DOS 磁盘；仅在 Linux 上可用 |
+| `mmove -[options] dossourcefile dostargetfile` | 移动或重命名现有的 DOS 文件或子目录 |
+| `mrd -[options] dosdirectory(ies)` | 删除 DOS 子目录 |
+| `mren -[options] dossourcefile dostargetfile` | 移动或重命名现有的 DOS 文件或子目录 |
+| `mtype -[options] dosfile(s)` | 显示 DOS 文件 |
+
+接下来，让我们为该打印机创建一个打印队列。打印队列机制允许多个用户同时使用同一台打印机，而无需等待打印机空闲。但要创建队列，我们必须暂时离开命令行世界，进入 X Window 系统的世界，后者在第 14 章“Linux X Window 系统”中有更详细的介绍。
+
+要调用 X Window 系统管理器（换句话说，就是 GUI 桌面），请进入你的命令行，并以 root 用户身份输入
+
+```bash
+# su - root
+# 密码:
+# startx<Enter>
+```
+
+将会调起其中一个 Linux 桌面管理器程序。以下说明假定你已经安装并正常运行 KDE。
+
+在 KDE 桌面上，点击工具栏上的 shell 终端图标（在工具栏上，我们要找的图标是一个微型终端窗口，上面叠加了某种类似鲍鱼壳或类似的外壳图案）。或者，如果没有这样的图标，请按 K 按钮，并在其菜单中搜索 Terminal bar 并点击它。最终，你会成功操作，桌面上会出现一个终端窗口。通过点击该窗口来激活终端窗口。
+
+进入终端窗口后，确保你已登录为 root 用户。普通用户无法设置打印功能。然后，以 root 用户身份输入
+
+```bash
+# printtool<Enter>
+```
+
+会出现一个独立的 **printconf-gui** 对话框/窗口。此时很可能还没有列出任何打印队列。在工具栏上，点击 **新建（New）**。
+
+会出现一个独立的 **编辑队列（Edit Queue）** 对话框（见图 5.7）。在 *左侧（LHS）*，你将看到一个变量列表，你需要为它们指定值：
+
+- 名称和别名
+- 队列类型
+- 打印机驱动程序
+
+高亮显示 **名称和别名**。然后，在 *右侧（RHS）* 的队列名称（Queue Name）字段中，输入你用于标识打印队列的名称。因为我们安装的是 Hewlett-Packard LaserJet 6L 打印机，所以我们指定 LJ6L-Q 作为队列名称。如果你想为队列使用一个或多个别名，请将你喜欢的别名添加到别名（Aliases）字段中。别名不是必须的，但队列名称是必须的。
+
+![](img/cae5c706c216875d12d4b7d28144cc71_166_0.png)
+
+**图 5.7** 编辑队列对话框；名称和别名。
+
+回到左侧，高亮显示队列类型（见图 5.8）。现在在右侧，将队列类型值保持为默认值 Local Printer（即本地打印机，也就是说，如果你是将打印机连接到你正在使用的系统，而不是连接在网络其他地方的服务器上），并将打印机设备值保持为默认的 /dev/lp0（UNIX 术语，指“第一个并口”）。
+
+现在，在左侧高亮显示打印机驱动程序（见图 5.9）。在右侧，向下滚动到你的打印机制造商的名称（在我们的例子中，它是 HP）并双击它。会出现另一个列表，包含你所指定制造商生产的打印机型号名称。向下滚动到你的打印机的实际型号名称（在我们的例子中，它是 LaserJet 6L）并高亮显示该名称。我们将打印机驱动程序值保留为默认的 lj5gray，然后点击编辑队列对话框底部的 OK 按钮，表示我们已完成设置。
+
+将驱动程序选项（Driver Options）保持在其各自的默认值（见图 5.10）。我们建议你不要在证明打印场景正常工作之前更改这些设置。你可以随时回到此屏幕进行进一步调整。
+
+![](img/cae5c706c216875d12d4b7d28144cc71_167_0.png)
+
+图 5.8 编辑队列对话框；队列类型。
+
+回到 printconf-gui 窗口，我们可以看到我们创建的队列现在已列出（见图 5.11）。高亮显示队列名称并点击工具栏上的 Default 按钮。队列名称的左侧应会出现一个对勾。此时绝对必须启动或刷新 lpd 守护进程。本质上，这些菜单更新了 /etc/printcap 文件。守护进程现在必须重新读取此文件以激活新打印机。执行此任务最简单的方法是什么？你必须点击 File 下拉菜单并选择 Restart lpd。
+
+一旦 lpd 守护进程重启，你应该测试打印机。点击 Test 下拉菜单并选择 Print ASCII Test Page。见图 5.12。
+
+此时，你应该拥有一个功能正常的打印环境。我们建议你手动编辑任何打印文件，如 /etc/printcap 或任何队列目录。始终使用 printtool 实用程序或打印命令来管理此环境。原因是许多打印文件和参数条目分布在多个文件中维护。命令和实用程序会处理所有这些文件之间的一致性，并防止你的打印环境损坏。
+
+![](img/cae5c706c216875d12d4b7d28144cc71_168_0.png)
+
+图 5.9 编辑队列对话框：打印机驱动程序。
+
+```bash
+# exit<Enter>
+```
+
+在 GUI 桌面上，点击 K^ 按钮并注销。在确认你确实正在注销后，你将返回到正常的命令提示符。
+
+## 打印命令
+
+现在，我们已经连接了打印机并创建了打印队列，我们可以开始介绍实际的打印命令了。或者，用伟大喜剧演员 Bill Cosby 的话稍作改编来说：“（我们）告诉你们*那些*是为了告诉你们*这些*。”
+

@@ -1,0 +1,356 @@
+
+
+## 练习
+
+1. 确保你当前位于主目录，然后显示你当前的进程 ID (PID)。
+
+```bash
+$ cd<Enter>
+$ pwd<Enter>
+$ echo $$<Enter>
+```
+
+2. 在提示符下输入 *bash* 创建一个子 shell，然后请求该子 shell 的 PID。子 shell 的 PID 与你的登录进程不同吗？
+
+```bash
+$ bash<Enter>
+$ echo $$<Enter>
+```
+
+3. 输入 `ls -R / > outfile 2> errfile &<Enter>` 命令，然后执行显示所有运行中进程的指令。（*ls* 命令在到达文件系统末尾时会终止。）
+
+```bash
+$ ls -R / > outfile 2> errfile &<Enter>
+$ ps a<Enter>
+```
+
+4. 终止你的子 shell。
+
+```bash
+$ exit<Enter>
+```
+
+如果你从登录 shell 中输入 *exit* 会发生什么？
+
+5. 显示当前进程环境中的所有变量。
+
+```bash
+$ set<Enter>
+```
+
+6. 创建一个名为 *x* 的变量并将其值设置为 10。检查该变量的值。再次显示所有当前变量。
+
+```bash
+$ x=10<Enter>
+$ echo $x<Enter>
+$ set<Enter>
+```
+
+7. 创建一个子 shell。
+
+```bash
+$ bash<Enter>
+```
+
+检查子 shell 中 x 变量的值。
+
+```bash
+$ echo $x<Enter>
+```
+
+x 的值是多少？列出子 shell 的当前变量。
+
+```bash
+$ set<Enter>
+```
+
+你看到 x 的列表了吗？
+
+8. 返回父进程。
+
+```bash
+$ exit<Enter>
+```
+
+设置 x 变量的值，以便其值被你的子进程继承。
+
+```bash
+$ export x=10<Enter>
+```
+
+通过创建一个子 shell 并检查子 shell 中 x 的值来验证。
+
+```bash
+$ bash<Enter>
+$ echo $x<Enter>
+```
+
+9. 将子 shell 中 x 的值更改为 200。
+
+```bash
+$ x=200<Enter>
+```
+
+验证值是否已更改。
+
+```bash
+$ echo $x<Enter>
+```
+
+10. 返回父进程。
+
+```bash
+$ exit<Enter>
+```
+
+检查此环境中 x 的值。
+
+```bash
+$ echo $x<Enter>
+```
+
+子 shell 中的更改是否导回父进程？
+
+11. 创建一个 shell 脚本并将其命名为 `sc1`。其内容应读取为 `pwd`、`cd /`、`pwd`
+
+```bash
+$ vi sc1<Enter>
+i (进入插入模式)
+pwd
+cd /
+pwd
+<Esc> (退出插入模式)
+:x<Enter> (保存 sc1 并退出 vi)
+```
+
+12. 使 `sc1` 可执行并运行该程序。
+
+```bash
+$ chmod 700 sc1<Enter>
+$ sc1<Enter>
+```
+
+你现在在哪个目录？为什么？
+
+```bash
+$ pwd<Enter>
+```
+
+> **注意** 如果你收到诸如 `bash: sc1: command not found` 这样的响应，请使用命令 `/home/username/sc1` 重新运行程序。很可能是 `/home/username` 不在你的 `PATH` 环境变量中，因此 shell 无法找到 `sc1` 命令。
+
+13. 创建另一个 shell 脚本并将其命名为 `sc2`。其内容应如下：
+var1 = hello; var2=$LOGNAME; export var1 var2.
+
+```bash
+$ vi sc2<Enter>
+i (进入插入模式)
+var1=hello
+var2=$LOGNAME
+export var1 var2
+<Esc> (退出插入模式)
+:x<Enter> (保存 sc2 并退出 vi)
+```
+
+14. 使 sc2 可执行并运行该程序。
+
+```bash
+$ chmod 700 sc2<Enter>
+$ sc2<Enter>
+```
+
+脚本执行完毕后，检查 var1 和 var2 变量的值。
+
+```bash
+$ echo $var1 $var2<Enter>
+```
+
+var1 和 var2 的值是多少？为什么？
+
+15. 再次运行 sc2 程序，这次强制其在当前 shell 中运行。
+
+```bash
+$ . sc2<Enter>
+```
+
+完成后，检查 var1 和 var2 的值。
+
+```bash
+$ echo $var1 $var2<Enter>
+```
+
+现在 var1 和 var2 的值是多少？为什么？
+
+16. 在前台执行 `ls -R / > outfile 2> errfile` 命令。
+
+```bash
+$ ls -R / > outfile 2> errfile<Enter>
+```
+
+17. 挂起你刚刚启动的任务。
+
+```bash
+$ <Ctrl>-$
+```
+
+18. 列出你在系统上运行的所有任务，并在后台重启前面的任务。
+
+```bash
+$ jobs<Enter>
+$ bg $jobnumber<Enter>
+```
+
+19. 将该任务带回前台。
+
+```bash
+$ fg $jobnumber<Enter>
+```
+
+20. 在 `ls` 命令执行完毕后，再次在后台启动它。显示进程 ID 并注销。
+
+```bash
+$ ls -R / > outfile 2> errfile &<Enter>
+$ ps <Enter>
+$ exit<Enter> (你会看到一条消息告诉你有正在运行的任务。)
+$ exit<Enter>
+```
+
+21. 登录。检查该进程是否仍在运行。
+
+```bash
+Login: username<Enter>
+Password: <Enter>
+$ ps <Enter>
+```
+
+22. 创建一个 shell 脚本并将其命名为 `sc3`。其内容应如下：
+
+```bash
+sleep 60; ls -R / > outfile 2> errfile &
+$ vi sc3<Enter>
+i (进入插入模式)
+sleep 60
+ls -R / > outfile 2> errfile &
+<ESC> (退出插入模式)
+:x<Enter> (保存 sc3 并退出 vi)
+```
+
+使脚本可执行。
+
+```bash
+$ chmod 700 sc3<Enter>
+```
+
+使用 nohup 命令启动脚本，通过显式路径引用它，并将其放入后台。不要忘记重定向 sc3 的输出，然后注销。
+
+```bash
+$ nohup ./sc3 > sc3.out 2> sc3err &<Enter>
+$ exit<Enter> (你会看到一条消息告诉你有正在运行的任务。)
+$ exit<Enter>
+```
+
+23. 登录。检查该进程是否仍在运行。
+
+```bash
+Login: username<Enter>
+Password: <Enter>
+$ ps a<Enter>
+```
+
+24. 当进程结束后，显示包含你输出信息的文件。（提示：如果你未指定输出文件，nohup 会将输出发送到 nohup.out。）
+
+```bash
+$ more /home/directoryname/sc3.out<Enter>
+```
+
+25. 使用 `ls -R /` 命令在后台启动一个长期运行的任务。
+
+```bash
+$ ls -R / > outfile 2> errfile &<Enter>
+```
+
+记下启动后台进程时提供的进程 ID。
+
+26. 如果你最初在后台启动命令时没有记录进程 ID，你如何找到它？
+知道进程 ID 后，终止该进程。检查以确保它已被终止。
+
+```bash
+$ ps a<Enter>
+$ kill PID<Enter>
+```
+
+（在此步骤中，输入你在练习 25 中记录的 PID，或刚刚通过 `ps a` 命令找到的 PID。）
+
+```bash
+$ ps a<Enter>
+```
+
+27. 重复练习 25。使用任务编号而不是进程 ID 来终止进程。检查以确保该任务已被终止。
+
+```bash
+$ ls -R / > outfile 2> errfile &<Enter>
+$ jobs<Enter>
+$ kill $jobnumber<Enter>
+$ ps a<Enter>
+```
+
+或
+
+```bash
+$ jobs<Enter>
+```
+
+答案见附录 B。
+
+## 测验
+
+1. 哪个命令用于将变量的值从父 shell 传递给子 shell？
+
+2. 确定以下过程结束时 `x` 的值：
+
+```bash
+$ (在登录 shell 中开始)
+$ x=5<Enter>
+$ bash<Enter>
+$ x=50<Enter>
+$ export x<Enter>
+$ <Ctrl>-d
+```
+
+3. 判断正误：每个进程在成功完成后都会向其父进程返回一个退出代码。
+
+4. 以下哪个是检查 shell 进程识别号的正确语法？
+   - `$ echo $$<Enter>`
+   - `$ echo $?<Enter>`
+   - `$ echo $pid<Enter>`
+   - `$ ps ef<Enter>`
+
+5. 当你导出一个变量时，该变量及其值成为什么环境的一部分？
+
+6. 使用 `ps` 命令时，使用哪个选项来显示正在运行的程序及其父进程之间的关系？
+
+7. 判断正误：作为普通用户，你只能 `kill` 你自己的任务，而不能 `kill` 其他用户的任务。
+
+8. `kill` 命令的哪个信号是最强的，且无法被捕获或忽略？
+
+9. 始终建议使用 `nohup` 命令在后台启动长时间运行的任务。给出两个原因。
+
+10. 永不停止的 Linux/UNIX 进程叫什么？
+
+11. 判断正误：当用户以正常方式执行涉及目录结构导航的命令时，除非程序或脚本中包含某种返回命令（如 `cd`），否则他们会发现自己位于命令中提到的最后一个目录。
+
+答案见附录 C。
+
+![](img/cae5c706c216875d12d4b7d28144cc71_418_0.png)
+
+## Shell 编程
+
+本章介绍了一些很酷的内容，并给你一个测试 shell 命令知识的机会。目前，我们不期望你能自己构建 shell 脚本，但你应该能够阅读它们。我们从过去的经验中得知，向某人介绍脚本的最佳方法是使用大量示例。本章包含一些非常基本的 shell 脚本，并讨论它们的作用及其用途。
+
+## Shell 脚本
+
+Shell 脚本是：
+
+- 一个可读的文本文件，可以用文本编辑器（如 `vi` 或我们在第 10 章“vi 编辑器”中提到的其他编辑器）进行编辑
+- 一个包含系统命令、变量赋值、流程控制语法和 shell 命令的程序
+- 一个包含注释的程序，以便你或未来的其他读者或开发人员或在某些未知地方的人了解什么
+

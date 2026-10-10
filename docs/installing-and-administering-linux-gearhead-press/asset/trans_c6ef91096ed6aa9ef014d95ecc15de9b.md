@@ -1,0 +1,155 @@
+
+
+在他自己的目录中，堂吉诃德可以通过以下方式检查并找到相同的链接：
+
+```
+$ cd<Enter>
+$ find . -type f -links 2 | xargs ls -li<Enter>
+13444 -rw-r--r-- 2 pansasan knights1 144 Jul 11 11:42 ./manuals
+16998 -rw-r--r-- 2 quixotet knights1 605 Jul 21 15:35 ./code_to_dapple
+18138 -rw-r--r-- 2 quixotet knights1 392 Jul 17 14:37 ./code_to_ros
+```
+
+你可以看到，每个链接的两端，其 inode 编号和其他各项参数是如何相匹配的。然而，文件名却是唯一的。示例 9.8 将 xargs 与 find -links 结合使用，但 Sancho 或堂吉诃德也可以使用纯 find，例如以下命令：
+
+```
+$ find . -type f -links 2 -exec ls -li {} \;
+```
+
+在这种情况下，他们的选择可以归结为语法偏好问题。
+
+## 减少按键次数：使用 find 配合 alias
+
+在本节中，我们展示了如何使用别名来简化和替代某些用于系统监控和维护的长命令。创建别名的语法如下：
+
+```
+$ alias shortcutcommand='commandname [options] [arguments]'<Enter>
+```
+
+请记住，当我们从命令行设置别名时，如示例 9.9 和 9.10 所示，这些别名仅在当前登录会话中有效。我们将在第 12 章“Linux 进程与进程控制”中展示一种技术，以确保别名能在会话之间持久存在。
+
+在此期间，此处展示的别名（以及其他别名）可以通过使用 unalias 命令取消定义。
+
+## 示例 9.9 使用 alias 命令检查链接
+
+喝咖啡时，Sancho 向 Juana 讲述了他如何检查文件结构中的链接（请参阅示例 9.8）。Preston 无意中听到后说：“如果你以后再做这件事，可以创建一个 alias 命令来节省你的时间和 effort。” 然后，他主动提议向 Sancho 展示如何创建一个名为 “linkcheck” 的别名，这类似于他（Freston）用来检查文件链接的别名：
+
+```
+$ alias linkcheck='find . -type f -links 2 | xargs ls -1i'<Enter>
+```
+
+之后，Sancho 只需 cd 进入他自己的主目录，然后输入
+
+```
+$ linkcheck<Enter>
+13444 -rw-r-r--- 2 panzasan knightal 144 Jul 11 11:42 ./knightdata
+16698 -rw-r---2 quixoted knightal 605 Jul 21 15:35 ./dapple_poem
+18138 -rw-r---2 quixoted knightal 392 Jul 17 14:37 ./roz_song
+```
+
+## 示例 9.10 使用 alias 命令删除旧文件
+
+在示例 9.3 中，我们看到了 Freston 如何结合 find、xargs 和 rm 来搜索修改日期超过 30 天的文件，以便将它们从系统中删除。
+
+他创建了一个名为 oldrm 的别名命令以实现相同目标并节省时间。以下是他创建该别名命令的方式：
+
+```
+$ alias oldrm='find . -type f -mtime +30 | xargs rm'<Enter>
+```
+
+注意，他省略了 -t（详细）选项。作为资深的 Linux/UNIX 用户，Freston 确实不需要对 rm 过程进行细致的监控。
+
+因此，现在 Freston 输入以下代码来查找并删除旧文件：
+
+```
+$ oldrm<Enter>
+rm ./oldfileX ./oldfileY ./oldfiles ./oldfilesa etc....
+```
+
+## 确定文件类型：file 命令
+
+file 命令用于根据文件内容对文件进行分类。该命令使用多达三种测试：
+
+- 文件系统测试
+- 魔术数字测试（`file` 本身将使用 `/usr/share/magic` 文件在候选文件中查找特定数字，以告知 Linux/UNIX 该文件是否可执行）
+- 语言测试（如果确定该文件是文本文件）
+
+以下是 `file` 的语法：
+
+```
+$ file [options] /path/filename<Enter>
+```
+
+`file` 的输出通常是一条消息，指出候选文件是 "text"（文本）、"data"（数据）或 "executable"（可执行）的某种变体，除非它找不到该候选文件。如果找不到该文件，`file` 将返回错误消息。以下是我们尝试为一个不存在的文件确定文件类型时此类消息的示例，我们将该文件恰当地命名为 *nonexistentfile*：
+
+```
+$ file nonexistentfile<Enter>
+Nonexistentfile: can't stat `nonexistentfile' (No such file or directory)
+```
+
+`file` 有什么好处？它可以快速指示文件是否属于你可以更容易地在终端屏幕上显示或发送到打印机的类型。或者，它可以告诉你文件是一个可执行文件。如果没有它，尝试在屏幕上显示可执行文件可能会造成困惑，甚至导致终端挂起。对于二进制文件，`file` 甚至可以提供编译该文件时使用的操作系统和版本的指示。
+
+`file` 命令有一套自己的选项。请查阅你的信息源。在示例 9.11 中，我们将看到一个简单的目录搜索。在示例 9.12 中，我们将看到 -f 选项，它告诉 `file` 确定在 -f 之后立即指定的另一个文件中包含的文件名列表的文件类型。在示例 9.12 中，那个指定文件——包含文件名列表的文件——被称为 *listoffiles*。请注意，在将文件名作为 `file` 命令的参数时，应确保每个文件名在该参数文件中单独出现在一行上。
+
+## 示例 9.11 使用 `file` 命令进行简单的文件类型确定
+
+Juana 在探索她的家庭目录时，看到了一个名为 *Desktop* 的子目录。由于她仅通过命令行工作（除非她有意调用特定应用程序），她想知道这样的子目录包含什么。以下是她的操作：
+
+```
+$ cd<Enter>
+$ ls<Enter>
+admin Desktop mbox Req-K1 Req-K2 Req-K3 tempwork
+$ cd Desktop<Enter>
+$ file ./\*<Enter>
+./Autostart: symbolic link to ../.kde/Autostart
+./Linux Documentation: ASCII Text
+./Printer: ASCII Text
+./kontrol-panel: ASCII Text
+```
+
+## 示例 9.12 使用 file 命令和文件名参数确定文件类型
+
+鉴于 Freston 为了保持 RFI 系统运行所需的所有开发、配置、故障排除、互联网浏览和报告工作，难怪他偶尔会失去对他管辖的文件（甚至是他自己的 /root 目录结构中的文件）的跟踪。这里，我们看到他正在检查他的文件类型。首先，他 cd 到他的主目录，然后检查确认他确实在那里。接着，他创建 listoffiles 文件，其内容是他 /root 目录中文件名的列表（作为开始；他稍后可以进行递归 -R 列表或检查各个子目录）：
+
+```
+$ cd<Enter>
+$ pwd<Enter>
+/root
+$ ls > listoffiles<Enter>
+$ file -f listoffiles<Enter>
+4.1.0 tgz: gzip compressed data, deflated, last modified: Mon Jun 4 10:52:13 2001, os: Unix
+BugReport: ASCII English text
+Desktop: directory
+```
+
+重复一下，这里使用的选项是 -f。该选项告诉 file 检查在 -f 之后立即指定的文件（即名为 listoffiles 的文件）中找到的文件列表。请注意，在使用此类参数文件为 file 列出文件时，应确保每个文件名单独出现在该参数文件的一行上。
+
+## 示例 9.13 更多简单的 file 示例
+
+Sancho 知道，和我们一样，他很快就会学习名为 vi 的 Linux/UNIX 文本编辑器。他以前使用过，但缓慢且小心。他只知悉最基础、最基本的命令。他认为 file 可以告诉他更多关于 vi 作为可执行应用的信息。以下是他如何获取更多信息：
+
+```
+$ file /bin/vi<Enter>
+/bin/vi: ELF 32-bit LSB executable, Intel 386, version 1,
+dynamically-linked (uses shared libs), stripped
+```
+
+现在，他希望 file 检查他的名为 dapple 的 dapple 配置文件：
+
+```
+$ file /home/panzasan/admin/dapple<Enter>
+/home/panzasan/admin/dapple: English text
+```
+
+我们建议你有空时查阅 file 的手册页，并滚动浏览 /usr/share/magic 文件，以更深入地了解 file 如何检查编码在可执行文件中的“魔术数字”。
+
+## 比较文本文件：diff 命令
+
+偶尔，你可能想要确定两个文本文件之间的差异。例如，两个用户可能正在办公室针对同一报告的不同部分工作，或者针对同一报告的相同部分工作——甚至是在不同时间针对同一报告工作。这些时候 diff 命令就派上用场了。该命令可以比较两个文件中的文本行，甚至比较两个目录中所有同名文本文件对（如果参数是目录名而不是文件名）。语法如下：
+
+```
+$ diff [-options] filename1 filename2<Enter>
+```
+
+因此，diff 命令允许用户逐行比较两个文本文件（我们将稍后讨论 cmp 命令，它允许比较其他类型的文件，并且基于字节对字节进行比较）。diff 有许多选项；请查阅你的信息源。在示例 9.12 中，我们将使用两个
+

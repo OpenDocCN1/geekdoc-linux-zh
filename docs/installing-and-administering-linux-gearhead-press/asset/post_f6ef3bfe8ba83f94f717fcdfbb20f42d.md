@@ -1,0 +1,257 @@
+
+## Index
+
+### a-c
+
+- **banner** command, 80-82, 184, 466, 474
+- **bash** command, 398-402
+- **bash** shell, 179
+    - job control in, 381-385
+- **bash_profiles**, changing on the fly, 405-406
+- **BCPL** language, 2
+- **Bell Laboratories**, 1-3, 181
+- **Berkeley Software Distribution (BSD)**, 4-6, 300
+- **/bin** directory, text editor listing, 299
+- **binary** files, 94
+- **BIOS**, installation, 15-17
+- **bit bucket** error redirection, 203-204
+- **blocking** messages and conversations, 78-79
+- **books** and magazines for Linux, 453-455
+- **boot** disks, 41-42
+    - boot image problems in Red Hat, 22
+    - DOS/Windows, 18-20
+    - installation, 17-22
+    - rawrite utility for, 18-20
+    - UNIX systems, 20-22
+- **boot** message, at installation, 24-25
+- **boot** process
+    - environment variable setting during, 343-345
+    - installation, problems in, 16-17
+- **Bourne** shell, 181
+- **brackets** as field delimiters, 60
+- **built-in** environment variables, 333
+- **Bull**, 5
+- **C**
+    - **C** language, 3, 6
+    - **C** shell, 181
+- **call** (c.Calendar) command, 64-67, 466
+- **calling** functions, 349
+- **Carnegie Mellon University**, 5, 10
+- **case** sensitivity, 123
+    - in environment variables, 334-335
+- **cat** command, 100-101, 127-128, 149, 183, 195, 464-465
+    - displaying nonprintable characters using, 288-292
+    - question mark in filename, pipe sequences and, 291-292
+    - redirection in, 200-201
+    - shell script creation using, 396-397
+- **CD-ROM** installation, 13-46
+    - authentication configuration in, 36-37
+    - BIOS and, 15-17
+    - boot disk creation in, 17-22, 41-42
+    - boot image problems in Red Hat, 22
+    - boot message in, 24-25
+    - boot problems in, 16-17
+    - buttons in, 23
+        - check boxes in, 23
+    - client/server systems, 27-28
+    - CMOS and, 22
+    - completion notification in, 46
+    - custom install in, 27
+    - disk space requirements, 39, 41
+    - entering information for, 23
+    - expert mode for, 25
+    - firewall configuration in, 31-32
+    - GNOME in, 27, 38
+    - GUI option for, caveats on, 14
+    - hard drive configuration and, 14-15
+    - hardware compatibility, 15
+    - I/O port settings and, 15
+    - install versus upgrade option in, 24
+    - installation process in, 40-41
+    - IP addresses in, 23, 30-31
+    - IRQ settings and, 15
+    - KDE in, 27-28, 38
+    - keyboard selection, 25-26
+    - language selection, 25
+    - language support in, 33
+    - laptop support in, 28
+    - licensing issues in, 14
+    - LinuxLoader (LILO) and, 17, 29
+    - Master Boot Record (MBR) in, 29
+    - master slave drives and, 15, 17
+    - memory address space and, 15
+    - menus for, 14
+    - monitor setup in, 42
+    - mouse selection in, 32-33
+    - network card and drivers in, 15-16
+    - network configuration in, 29-30
+    - network connection for, 23
+    - non-root users in, 36
+    - package group selection for, 37-40
+    - partitioning in, 28
+    - PCI Probe for, 40
+    - ping test anomalies in, 16
+    - rescue disk creation in, 17-18
+    - rescue mode for, 25
+    - root password setting in, 35
+    - screens or windows used in, 22-23
+    - scroll and select dialog boxes in, 23
+    - text input dialog boxes in, 23
+    - text versus GUI option in, 24
+    - time zone configuration in, 33–35
+    - troubleshooting in, 14–16
+    - type of installation, specifying, 27–28
+    - video configuration and, 16, 40, 42–44
+    - Welcome message in, 26–27
+    - X Server configuration in, 27–28, 40
+    - X Window System configuration in, 44–46
+- **change** directory, using cd command, 100–101
+- **character** substitution, environment variables setting, 339–340
+- **chat**, 77–78
+- **child** processes, 362–368
+- **chmod** command, 161–166, 465
+- **chown** command, 465
+- **csh** command, 183
+- **clear** command, 79–80
+- **client/server** installation of, 27–28
+- **clients**, X/in X Window System, 419–420, 435–437
+- **CMOS** installation, 22
+    - time zone configuration in, 33–35
+- **cmp** command, 282–285
+- **combined** redirection, 204–207
+- **comm** command, 282
+- **command**, 55
+    - command execution, vi/in vi editor, Linux/UNIX commands, 314–316
+    - command interpreter, 180, 184
+        - quoting metacharacters to disable in, 193–194
+    - command line parsing, 184–185
+    - Command mode, vi/in vi editor, 300, 305–316
+    - command substitution, environment variables setting, 337, 341–343
+    - command summary, 463–484
+    - command syntax, 55–56
+    - commands accessing history of, using Up and Down keys, 216–217
+    - connecting with pipes, 207–212
+    - displaying history of, using fc command, 214–215
+    - filter commands and piping in, 209–212
+    - history of, 319–320
+    - line continuation with backslash in, 213
+    - locating, using whats, whereis, which commands, 234–237
+    - maximizing work per command, using xargs, 257–264
+    - re executing, using bang command, 215–216
+    - return codes from, 372–373
+    - semicolons to group, 212–213
+    - “smart,” xargs for optimal execution of, 257–260
+    - split output for, tee command for, 210–212
+    - typical piping for, 208–209
+- **commercial** UNIX distributions, 4
+- **common** messages to all users, using wall command, 76–77
+- **comparing** all types of files, using cmp command, 282–285
+- **comparing** text files, using comm and diff3 commands, 282
+- **comparing** text files, using diff command, 276–283
+- **compatibility** issues, 10, 15
+- **compressing** files, using gzip, gunzip, zcat commands, 285–288
+- **concatenation** (See cat command)
+- **conditionals**, shell/in shell programming, 409–410
+- **continuation** characters, 469
+- **copying** files, cp command, 130–133
+- **Corel**, 10
+- **cp** command, 130–134, 465
+- **cpio** command, 472–473
+- **crontab**, 376, 411
+- **Ctrl D**, 465
+- **custom** install, 27
+
+### d
+
+- **daemons**, 385
+- **database** support, 10
+- **date** command, 64–67, 474
+- **date** process, 368
+- **dbadmin** user, 36
+- **del** command, 465
+- **Dell Computer**, 11
+- **desktop** environments or desktops, X/in X Window System, 422, 426
+    - destructive redirection in, 198–199
+- **dev** directory, 97
+- **dev/null** or bit bucket error redirection, 203–204
+- **diff** command, 276–283, 466
+- **diff3** command, 282
+- **digital Equipment (DEC)**, 4–5, 10, 417
+- **directories** and subdirectories (See also file management), 55–56, 93–122
+    - absolute versus relative path names in, 98–99
+    - change directory in, using cd command, 100–101
+    - command summary for, 464
+    - contents of, 95–96
+    - contents of, using ls command and options, 105–109
+    - copying, using cp command, 133–134
+    - creating, using mkdir command, 101–105, 170
+    - deleting, using rm command, 136–138
+    - deleting, using rmdir command, 102–105
+    - displaying information on, using stat command, 109–110
+    - dot special files (and .) in, 99, 101, 123
+    - hidden files in, 105
+    - hierarchical structure of, 96
+    - horizontal subdirectories in, 103–105
+    - inodes in, 110
+    - management of, 101–110
+    - navigating through, 99–110
+    - path names in, 96–99
+    - permissions in (See also permissions), 157–177
+    - personal, creation of, 168–170
+    - root subdirectories in, 97–98
+    - searching for files in, using find command, 226–234
+    - timestamps in, 110
+    - tree structure, directory tree in, 96
+    - vertical (recursive) subdirectories in, 103–105
+    - working directory in, using pwd command, 99–100
+- **disk** space requirements, 39, 41
+- **display**, X in X Window System, 426–427
+- **displaying** directory information, stat command, 109–110
+- **distributions** of Linux, 9–10, 448–450
+- **distributors** of Linux, current, 450–451
+
+### e-f
+
+- **documentation** and support, 447–461
+    - books and magazines for, 453–455
+    - distribution package, 448–450
+    - frequently asked questions (FAQs) in, 452–453
+    - Guides in, 451–452
+    - HOWTOs in, 452
+    - info pages in, 60–63
+    - Linux Documentation Project (LDP) in, 451–453
+    - man pages in, 56–60, 453
+    - projects in, 453
+- **dollar** sign variable, 361, 476
+- **DOS/Windows**, 37
+    - dot books for, 18–20
+    - floppy disk format and access, 114–117
+    - dtools utilities for, 138–140
+- **dosutils** directory, 18–19
+- **dot** files, 465
+- **dot** notation, 69
+- **dot** special files (and ..), 99, 101, 123
+- **downloaded** Linux distributions, 449–450
+- **drag** and drop, X in X Window System, 429
+- **dual** boot systems, 8
+- **echo** command, 80, 337, 471, 475
+- **e** text editor, 300, 321
+- **egrep** command, 245
+- **emacs** command, 468
+- **Emacs** editor, 299, 321
+- **email**, 70–75
+    - checking for mail in, 73–74
+    - mailbox in, 74–75
+    - reading mail in, 74
+    - receiving mail, 71–75
+    - sending mail, using mail command, 70–71
+    - storing mail in, 74–75
+    - You have mail notification in, 71
+- **encrypted** passwords, 53
+- **env** command, 471, 476
+- **environment** variables, 331–358
+    - adding, 332–333
+    - bootup, setting default variables during, 343–345
+    - built-in, 333
+    - case sensitivity in, 334–335
+    - changing settings, using unset command, 342–343
