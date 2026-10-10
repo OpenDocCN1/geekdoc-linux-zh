@@ -1,0 +1,214 @@
+
+# 索引
+
+- `LinkAttribute`, 102, 105
+- 链接元素, 299
+- `ItemizedList`, 28, 332
+- `Set`, 336
+- `LinkMode` 属性, 106
+- 在文档内,
+- 电子邮件地址, 108
+- `LinkEnd` 元素, 105
+- UNIX 系统, 122
+- `Target` 属性, 106
+- 概述, 123–128
+- `ULink` 元素, 97–98
+- 规范性文档, 255
+- `Note` 元素, 29, 30–239, 243
+- Tcl, 155–156
+- Notepad 编辑器, 16
+- `Para` 元素, 271
+- `Meta-Information` 元素, 303–307
+- 元数据, 254
+- 编号章节, 20
+- 父元素, 255
+- metal 元素, 318
+- 解析器, 255
+- 数值数据类型, XML Schema, 221–222
+- 解析, 255
+- SGMLTools, 127–132
+- Microsoft Word, Sec-254
+- `Part` 元素, 74–77, 269
+- 部分码, 70
+- 模态编辑器, Vim, 193
+- `PartInfo` 元素, 305
+- SpecMode, 106
+- `PartIntro` 元素, 269–270
+- PGML , 180
+- PCDA, 256
+- 月份类型, XML, 222
+- PDF 文件, 43–45
+- EPS, 43–45
+- OASIS (结构信息标准协会), 255
+- Perl (实用提取和报告语言), 255
+- OASIS 技术委员会, 递减元素, 3, 350–351
+- `Phone` 元素, 293
+- OASIS 网站, 262
+- `Phrase` 元素, 40
+- `Object` 元素, 302, 过时元素, 346–347
+- 物理划分, 7
+- `OLink` 元素, 105–198
+- 在线文档, 链接, 96–99
+- PNG (网络图形) 图像格式, 35–37
+- Open Project 网站, 353
+- `POB` 元素, 294
+- 开源, 255
+- POSIX 1003.2 规范, 186
+- 出版资源, 362–366
+- POSIX (可移植操作系统接口), 187
+- 开源工具, 46–52
+- `PostCode` 元素, 294
+- OpenJade, 255
+- PostScript 文件, 32
+- option 元素, 231
+- `OrderedList`, 29–30, 333
+- Prefaceelement, 105
+- OrgElement, 292
+- Primaryelement, 87
+- `ArgName` 元素, 292
+- 原生数据类型, XML Schema, 221
+- OS 属性, 263
+- OtherAddr, 292–293
+- `Procedure` 元素, 322
+- OtherName 元素, 71, 293
+- program 元素, 307–328
+- `ProgramList` 元素, 235, 322
+- `Prompt` 元素, 323
+- `Property` 元素, 323
+- PSGM, 120
+- HTML Tidy, 110
+- PGML 模式, Emacs, 175
+- 标记向上, 180–181
+- SGMLTools, 125–132
+- 负值数据类型, XML, 221
+- 嵌套元素, 254
+- NetBeans GUI, 159
+- 非规范性文档, 255
+- Integer 数据类型, XML, Schema, 221
+- PubDate, 294
+- 公共标识符, 256
+- `Publisher` 元素, 294
+- 公共图像, 32
+- 公共标识符, 345
+- `RefName` 元素, 345
+- `RefName` 元素, 345
+- `Reference` 元素, 83, 344
+- 引用元素, 333–346
+- 引用页, 83–85
+- 手册, 233–234
+- `ReferenceInfo` 元素, 305
+- `RefMeta` 元素, 344
+- `RefMiscInfo` 元素, 344–345
+- 可替换元素, 323
+- 报告, CVS, 155–156
+- 仓库, CVS, 150
+- 命名资源, 256
+- `ReturnValue` 元素, 323–324
+- `Revision` 元素, 264
+- 版本控制, 137–138
+- 版本日志, TkCVS, 158
+- `RevisionFlag` 属性, 264
+- RFC (请求为), 256
+- `Role` 属性, 264
+- 回滚文件 (RCS), 144–145
+- 根元素, 5, 256
+- RPMs, CVS 以及, 149
+- RCS 和, 141
+- rtf 文件, 从 DocBooks 生成, 130–131
+- SANE (扫描仪访问媒体), 50
+- 保存, 纯文本, 162
+- `SBR` 元素, 324
+- 扫描仪, 50–52
+- SGMLtool, 325
+- `SubjectSet`元素, 337
+- Vim, 186–187
+- SGMLtools, 125–126
+- `SubjectTerm`元素, 337
+- 文本文件，生成
+- 将 Linux 转换为 DocBooks, 131–132
+- Subject 标签, DTD, 203
+- DocBooks, 130
+- DVI 格式，以及 127–128
+- `Surname` 元素, 71
+- `TextObject` 元素, 40
+- HTML, 以及 108–110, 129–130
+- `Symbol` 元素, 325
+- `ToFoot` 元素, 342
+- 安装, 121–126
+- `SynFragment` 元素, 326
+- `TGroup` 元素, 342–343
+- out 和元素, 132
+- `SynopFragment` 元素, 326
+- `THead` 元素, 343
+- 解析文档, 127–132
+- 语法命令, 243–247
+- Tidy, 257
+- PostScript 文件转换, 127
+- 数据库, 246
+- TIFF (标记图像文件格式)
+- SGMLtools–见见 SGMLtools
+- 图像
+- 短数据类型, XML Schema, 221
+- GIMP, 47
+- Affbdevel, 226
+- tide(/), 69
+- 快捷键, Emacs, 167–110
+- Vim, 191–192
+- 导航, 171
+- 系统标识符, 256
+- 时间数据类型, XML Schema
+- 侧边栏, 334
+- SGML DTDS, 5
+- Schema, 222
+- 侧边栏元素, 307
+- `System` 元素, 326
+- 简单元素, 275
+- Schema,
+- `Tip` 元素, 30:31–239–240, 334
+- `Title` 元素, 316
+- SimpleSelect, 80, 275
+- XRef 元素，以及 103–158
+- 简化的 DocBook DTD, 204
+- 提交文件, 156
+- Of SoftXML, 元素
+- `ToC` 元素, 89, 275–286
+- SP (SGML) 解析器, 256
+- `ToCChap` 元素, 89, 276
+- Spansec 元素, 340
+- `ToCent` 元素, 277
+- `ToCfront` 元素, 277
+- `ToCheck` 元素, 276
+- SSH 元素, 121
+- `ToLevel1` 元素, 277
+- 106
+- 标准标签, 21–31
+- `ToLevel2` 元素, 277–288
+- Start元素, 256
+- `ToLevel3` 元素, 278
+- State 元素, 296
+- `ToLevel4` 元素, 278
+- Steep 元素, 325
+- `ToLevel5` 元素, 278
+- STMLools, 256
+- `ToPart` 元素, 89, 278
+- Street 元素, 296
+- token 数据类型, XML Schema, 221
+- 样式表, 12–14, 256. 见 CSS
+- token 元素, 327
+- 缩写词, 222
+- Trademark 元素, 26, 31,
+- 自定义, 210–213
+- DSSL, 211
+- 207–208, 296,
+- 编辑, 211–233
+- type 元素, 327
+- 安装, 119–122
+- 排版语言, 362–364
+- Joel, 212–213
+- 编程方案, 365–366
+- XML, 213–214
+- 语法, 256
+- `ULink` 元素, 97–98, 298–299
+- `Subject` 元素, 336–337
+- mailto, 107–
+- 未声明的章节, 20
