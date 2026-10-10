@@ -1,0 +1,175 @@
+
+要撰写新消息，按 `m`。在给出有效主题后，`mutt` 将启动 `vi(1)` 并可以编写邮件。一旦邮件内容完成，保存并退出 `vi`，`mutt` 将恢复显示待发送邮件的摘要屏幕。要发送邮件，按 `y`。屏幕示例如文所示：
+
+```
+$ q?abort t: c:CC:Sub ~Attach file d:Desc?Help
+From: Mailer localhost
+To: User-root@localhost
+Cc:
+Bcc:
+Subject: Re: test
+Reply-To:
+:
+Security: Clear
+```
+
+```
+--- Attachments ---
+- 1 /tmp/mutt-bsd-c0hobscq [text/plain, 7bit,ascii,1.1K]
+```
+
+```
+--- Mutt: Compose [Approx. size: 1.1K Atts:1] ---
+```
+
+`mutt` 还包含丰富的帮助信息，通过在大多数菜单中按 `?` 键即可访问。顶行在合适时也会显示键盘快捷键。
+
+## 24.11.3 pine
+
+`pine` 的目标是初级用户，但也包含了一些高级功能。
+
+> **警告：pine 软件过去被发现了几个漏洞，这些漏洞允许远程攻击者通过发送特制的电子邮件，以本地系统用户的用户的身份执行任意代码。所有此类已知问题均已修复，但 pine 代码的编写风格非常不安全，FreeBSD 安全官认为可能存在其他未被发现的漏洞。您自行承担安装 pine 的风险。**
+
+当前版本的 `pine` 可以使用 `mail/pine4` 端口安装。端口安装完成后，可以使用以下命令启动 `pine`：
+
+`pine`
+
+第一次运行 `pine` 时，它会显示一个带有简要介绍的欢迎页，以及来自 `pine` 开发团队的发送匿名邮件消息的请求，以便他们判断有多少用户在使用他们的客户端。要发送此匿名消息，请按 `Enter`，或者，按 `E` 在不发送匿名消息的情况下退出欢迎页。欢迎页的示例如文所示：
+
+# PINE 4.58      GREETING TEXT
+
+# 第 24 章 电子邮件
+
+```
+<<<此消息仅出现一次>>
+无消息
+欢迎使用 Pine ... - 一个用于互联网邮件和电子邮件的程序
+我希望您能探索 Pine 的许多功能。从主菜单中，
+选择 Setup/Config 查看所有可用的选项。请注意
+按 F1 获取帮助。
+
+官方请求：此软件作为西雅图华盛顿大学的公共服务向全球提供。为了证明分发此软件的合理性，我们希望尽可能多的人使用 Pine。您目前正被计为 Pine 用户吗？请向下方的地址向我们提供任何反馈，否则华盛顿大学的 Pine 开发团队将无法收到用于统计的反馈。
+PINE 是华盛顿大学的商标。
+```
+
+用户将看到主菜单，可以使用光标键轻松导航。此主菜单为撰写新邮件、浏览目录和管理书籍条目提供了快捷键。在主菜单下方，显示了执行当前任务特定功能的相应键盘快捷键。
+
+`pine` 默认打开收件箱。要查看消息索引，按 `I`。
+
+```
+PINE 4.58      MAIN MENU             Folder: INBOX
+? HELP               获取帮助
+C COMPOSE           撰写邮件
+I INDEX             查看索引
+L FOLDER            查看文件夹
+A ADDRESS BOOK        地址簿
+S SETUP             配置
+Q QUIT               退出
+Copyright 1996-2003 PINE 是华盛顿大学的商标。
+```
+
+`pine` 默认打开的是收件箱。要查看消息索引，按 `I`。
+
+```
+-
+1 M Mar 07 Super-User      (1) text
+2 N Mar 07 Super-User      (1) user account
+3 M Mar 09 Super-User      (1) sample
+```
+
+To: localhost
+
+Subject: test
+
+Date: Wed, 20 Oct 2004 22:20:36 +0200 (CEST)
+
+From: Super-User <root@localhost>
+
+This is a test message, please reply if you receive it.
+
+```
+
+To:
+:
+
+
+:::
+```
+
+```
+--- Attachments ---
+- 1 /tmp/mutt-bsd-c0hobscq [text/plain, 7bit,ascii,1.1K]
+```
+
+```
+--- Mutt: Compose [Approx. size: 1.1K Atts:1] ---
+```
+
+```
+-Mutt:/var/mail/marcs (Mags:3 New:3 1:60) (date/time)-- (all)
+```
+
+与 `mail(1)` 命令一样，`mutt` 允许用户仅回复消息的发送者，也可以仅回复邮件的发送者，可以使用 `r` 快捷键。要发送组回复（该回复将同时发送给原始发送者以及所有消息收件者），请使用 `g` 快捷键。
+
+> 注意：`mutt` 使用 `vi(1)` 命令作为创建和回复邮件的编辑器。用户可以通过在自己的主目录中创建或编辑自己的 `.mutrc` 文件并设置编辑器变量来对其进行自定义。
+
+要撰写新消息，按 `m`。在给出有效主题后，`mutt` 将启动 `vi(1)` 并可以编写邮件。一旦邮件内容完成，保存并退出 `vi`，`mutt` 将恢复显示待发送邮件的摘要屏幕。要发送邮件，按 `y`。屏幕示例如文所示：
+
+```
+$ q?abort t: c:CC:Sub ~Attach file d:Desc?Help
+From: Mailer localhost
+To: User-root@localhost
+Cc:
+Bcc:
+Subject: Re: test
+Reply-To:
+:
+Security: Clear
+```
+
+```
+-M - 1/1: Super-User                               test                               (all)
+```
+
+```
+--- Attachments ---
+- 1 /tmp/mutt-bsd-c0hobscq [text/plain, 7bit,ascii,1.1K]
+```
+
+```
+--- Mutt: Compose [Approx. size: 1.1K Atts:1] ---
+```
+
+`mutt` 还包含丰富的帮助信息，通过在大多数菜单中按 `?` 键即可访问。顶行在合适时也会显示键盘快捷键。
+
+## 24.11.3 pine
+
+`pine` 的目标对象是初级用户，但也包含了一些高级功能。
+
+> **警告：pine 软件过去被发现了几个漏洞，这些漏洞允许远程攻击者通过发送特制的电子邮件，以本地系统用户的用户的身份执行任意代码。所有此类已知问题均已修复，但 pine 代码的编写风格非常不安全，FreeBSD 安全官认为可能存在其他未被发现的漏洞。您自行承担安装 pine 的风险。**
+
+当前版本的 `pine` 可以使用 `mail/pine4` 端口安装。端口安装完成后，可以使用以下命令启动 `pine`：
+
+`pine`
+
+第一次运行 `pine` 时，它会显示一个带有简要介绍的欢迎页，以及来自 `pine` 开发团队的发送匿名邮件消息的请求，以便他们判断有多少用户在使用他们的客户端。要发送此匿名消息，请按 `Enter`，或者，按 `E` 在不发送匿名消息的情况下退出欢迎页。欢迎页的示例如文所示：
+
+# PINE 4.58      GREETING TEXT
+
+# 第 24 章 电子邮件
+
+```
+<<<此消息仅出现一次>>
+无消息
+欢迎使用 Pine ... - 一个用于互联网邮件和电子邮件的程序
+我希望您能探索 Pine 的许多功能。从主菜单中，
+选择 Setup/Config 查看所有可用的选项。请注意
+按 F1 获取帮助。
+
+官方请求：此软件作为西雅图华盛顿大学的公共服务向全球提供。为了证明分发此软件的合理性，我们希望尽可能多的人使用 Pine。您目前正被计为 Pine 用户吗？请向下方的地址向我们提供任何反馈，否则华盛顿大学的 Pine 开发团队将无法收到用于统计的反馈。
+PINE 是华盛顿大学的商标。
+```
+
+用户将看到主菜单，可以使用光标键轻松导航。此主菜单为撰写新邮件、浏览目录和管理书籍条目提供了快捷键。在主菜单下方，显示了执行当前任务特定功能的相应键盘快捷键。
+
+`pine` 默认打开的是收件箱。要查看消息索引，按 `I`。
