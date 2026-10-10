@@ -436,6 +436,7 @@
 +   [Fedora 9 与 Red Hat Enterprise Linux 圣经](docs/fedora-9-and-red-hat-enterprise-linux-bible-description-base/README.md)
 +   [Fedora 9 Linux 管理与安全指南](docs/fedora-9-linux-administration-and-security/README.md)
 +   [Fedora 9：Linux 桌面手册](docs/fedora-9-linux-desktop-handbook/README.md)
++   [Fedora 圣经：2010 年 版：以 Fedora Linux 12 为特色](docs/fedora-bible-2010-edition-featuring-fedora-linux-12/README.md)
 +   [Fedora Bible 2011版：基于 Fedora Linux 14](docs/fedora-bible-2011-edition-featuring-fedora-linux-14/README.md)
 +   [Fedora Core 7 与红帽企业 Linux（奥兹本完整参考），第 4 版](docs/fedora-core-7-red-hat-enterprise-linux-osborne-complete-refe/README.md)
 +   [Fedora Core 7 & Red Hat Enterprise Linux：完全参考 (完全参考系列)](docs/fedora-core-7-red-hat-enterprise-linux-the-complete-referenc/README.md)

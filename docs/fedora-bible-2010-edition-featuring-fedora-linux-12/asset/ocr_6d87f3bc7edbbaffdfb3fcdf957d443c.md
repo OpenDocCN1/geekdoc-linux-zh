@@ -1,0 +1,15 @@
+# Understanding Multimedia and Legal Issues in Linux
+
+You can’t play commercial (encrypted) DVD movies or MP3 music with software delivered with Fedora because software needed to do so isn’t included in Fedora. That’s because there are patent claims associated with the formats used to store, encode, and decode that content that would prevent open source software that worked with that content from being freely distributed.
+
+Commercial Linux vendors, including Red Hat, have decided not to add software codecs (which encode and decode multimedia formats), even if they were written from scratch and covered under the GPL, that are encumbered by contentious software patents. After Thomson and Fraunhofer Gesellschaff (which control the MP3 patent) began requesting licensing fees in 2002 of $0.075 for MP3 decoders (per system), Red Hat Linux dropped MP3 support. (See `http://www.mp3licensing.com/royalty` for details.)
+
+Just to clarify, I am not talking about copyright here. Nobody can rightfully claim that it is okay to copy someone else’s commercial code and release it as free software. It would clearly violate copyright laws. What we are talking about are patents.
+
+The idea of a patent is to allow someone to control the rights regarding who can make, sell, offer to sell, use, or import an invention that the patent applicant dreamed up. As it relates to multimedia software in particular, the encoding and decoding of audio and video content for many commercially released music and video formats are covered by patents. So, even if open source developers write every piece of code from scratch to encode and decode content, it may not be legal to distribute it without paying a royalty to the patent owner.
+
+Major efforts are underway (especially in Europe) to oppose software patents. Refer to the Foundation for a Free Information Infrastructure Web site (`http://ffii.org`) for further information. The contention is that so many ideas related to software are being patented that it could severely cripple the ability to innovate (especially for open source developers or small software companies without huge legal teams).
+
+Patents have been granted in Europe for common items that might appear on a Web page, such as selling things over a network, using an electronic shopping cart, and using rebates codes (see `http://webshop.ffii.org`). Although there are new laws in Europe that are aimed at preventing any further software patents, some software patents are still being granted and existing patents are still being used to discourage innovation.
+
+Despite efforts against software patents, however, the fact remains that Fedora does not include some of the software that you would want to use to play your digital media. That doesn’t mean, however, that there is nothing you can do to legally play the commercial audio and video content you want to play in Linux. This chapter includes discussions on how to find the codecs you want and use them legally, when possible.

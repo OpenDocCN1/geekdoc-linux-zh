@@ -1,0 +1,17 @@
+Despite its lack of formal support, however, Fedora is being used today in many businesses, schools, and homes around the world. In whatever way you plan to ultimately use Fedora, it is without a doubt a good way to learn and use the latest Linux technology as it is released to the Linux community and before it makes its way to Red Hat Enterprise Linux.
+
+Many companies and organizations don’t choose between Fedora and RHEL, but instead offer a mixed environment. The most critical servers may run Red Hat Enterprise Linux, with a full support contract with Red Hat. In the same location, Fedora may be used for desktop systems or office-based file and print servers. Organizations that have features similar to those in RHEL without the cost can use CentOS (which is a rebuild of RHEL source code). As someone learning to use Fedora with this book, you can likewise scale your use of this technology as far as you want to go.
+
+# ## Why Choose Fedora?
+
+To distinguish itself from other versions of Linux, each distribution adds some extra features. Because many power features included in most Linux distributions come from established open source projects (such as Apache, Samba, KDE, and so on), often enhancements for a particular distribution exist to make it easier to install, configure, and use Linux. Also, because there are different software packages available to do the same jobs (such as window managers or a particular server type), a distribution can distinguish itself by which packages it chooses to include and feature with its default installations.
+
+Fedora is continuing the Red Hat Linux tradition by offering many features that set it apart from other Linux distributions. Those features include:
+
++   * **Cutting-edge Linux technology** — In Fedora 12, major features include the GNOME 2.28 and KDE 4.3 desktops, Firefox 3.5, OpenOffice.org 3.1, new Ext4 file system support, and the latest Linux kernel.
+
++   * **Software packaging** — Red Hat, Inc. created the RPM Package Manager (RPM) method of packaging Linux. RPMs allow less technically savvy users to easily install, search, manage, and verify Linux software. With RPM tools, you can install from CD, hard disk, over your LAN, or over the Internet. It’s easy to track which packages are installed or to look at the contents of a package. Because RPM is available to the Linux community it has become one of the de facto standards for packaging Linux software. Tools such as yum and PackageKit, which are built to take advantage of RPM technology, have been added to Fedora to extend your ability to install and update packages. Those tools can point to online repositories, so the latest software packages are often only a click away.
+
+**CROSS-REFERENCE:** Chapter 5 describes how to install RPM packages and use yum repositories.
+
++   * **Easy installation** — The Fedora installation software (called *anaconda*) provides easy steps for installing Linux. During installation, anaconda also helps you take the first few

@@ -1,0 +1,23 @@
++   * TCP_REFRESH_MODIFIED — A stale cache object was replaced by new, updated content.
+
++   * TCP_SWAPFAIL — An object could not be accessed from cache, despite the belief that the object should have been there.
+
++   * cache.log — Contains valuable information about your Squid configuration when the squid daemon starts up. You can see how much memory is available (Max Mem), how much swap space (Max Swap), the location of the cache directory (/var/spool/squid), the types of connections being accepted (HTTP, ICP, and SNMP), and the port on which connections are being accepted. You can also see a lot of information about cached objects (such as how many are loaded, expired, or canceled).
+
++   * store.log — Contains entries that show when content is being swapped out from memory to the cache (SWAPOUT), swapped back into memory from cache (SWAPIN), or released from cache (RELEASE). You can see where the content comes from originally and where it is being placed in the cache. Time is logged in this file in raw UNIX time (in milliseconds).
+
+You might also be interested in another log file: /var/log/messages. This file contains entries describing the startup and exit status of the squid daemon.
+
+# Using the top command
+
+Run the top command to see information about running processes, including the Squid process. If you are concerned about performance hits from too much Squid activity, type M from within the top window. The M option displays information about running processes, sorted by the percent of memory each process is using. If you find that Squid is consuming too large a percentage of your system memory, you can reduce the memory usage by resetting the cache_mem value in your squid.conf file.
+
+# Setting Up Proxy Clients
+
+For your Linux proxy server to provide Web-browsing access (HTTP) to the Windows and Linux client computers on your network, each client needs to do a bit of setup within the Web browser. The beauty of using proxy servers is in what your client computers don't need to know, such as the following:
+
++   * Addresses of DNS servers
+
++   * Telephone numbers of ISPs
+
++   * Chat scripts to connect to the ISP

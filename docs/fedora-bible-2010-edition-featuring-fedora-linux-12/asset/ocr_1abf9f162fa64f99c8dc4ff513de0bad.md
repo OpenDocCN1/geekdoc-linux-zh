@@ -1,0 +1,13 @@
+Because the Internet client applications featured in Fedora are designed to be intuitive, if you are accustomed to using the Internet from Windows or Mac the transition to Linux shouldn't be that difficult. While I describe many of the basic features that come in these Internet applications, there are a few tricks you should learn to get the most out of them such as:
+
++   - **Tuning your browser** — While Firefox has made great strides in supporting different kinds of Web content, getting some multimedia, image, and document formats to play in Firefox can require some extra steps. In most cases, this is because software for playing many popular multimedia formats cannot be freely distributed, so you have to add them later. I describe some plug-ins and other software that you will want to add to Firefox (or another Web browser) to get it to play many popular types of content that it can't handle by default.
++   - **Managing e-mail** — With e-mail volume increasing every day, tools for managing your e-mail are becoming more important. In the e-mail section, I explain how to use filter rules to sort your e-mail and how to identify junk mail. I also discuss ways to manage and use mailing lists effectively.
++   - **Useful command options** — In addition to identifying some useful commands for remote login, file copying, and command execution, I identify options that are particularly helpful to use with them.
+
+To get started with Internet applications in Linux, you need to set up a connection to the Internet from your Linux system (as described in Chapters 14 and 15). Most graphical Internet applications in Fedora are available from menus on the GNOME or KDE desktops. Click Applications → Internet to see a list of Internet applications you can choose from. Icons to launch the Firefox browser and Evolution e-mail client are directly on the panel on the top of the display.
+
+# # Browsing the Web
+
+The most important client Internet program these days is the Web browser. In Fedora, you have several choices of Web browsers, including the following:
+
++   - **Firefox** — The Firefox browser is touted as the flagship Web browser from the Mozilla project and is aimed squarely at the dominance of Microsoft Internet Explorer in the browser space. Firefox offers easy-to-use features for dealing cleverly with issues that have wreaked havoc with other Internet browsers, such as viruses, spyware, and pop-ups. Firefox is the featured Web browser in Fedora. Firefox also runs on Windows and Mac OS X.

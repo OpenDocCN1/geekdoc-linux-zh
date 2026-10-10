@@ -1,0 +1,20 @@
+Below the chart, a table shows daily and monthly summaries for activity during each month. Users can click the name of a month to see detailed activity.
+
+> **TIP:** Because Webalizer supports both common log format (CLF) and combined log format, it can be used to display information for log files other than those produced for Apache. For example, you could display statistics for your FTP server or Squid server.
+
+Several other software tools are available for analyzing transfer statistics. The accompanying sidebar on statistics packages available for Fedora describes some of these tools.
+
+# **Statistics Packages Available for Fedora**
+
+Analyzing the transfer log by hand isn’t much fun. Several packages have been written to automate this task, including the following two:
+
++   *   **Analog** — This free log-file analyzer is very fast and easily configurable, and it produces very detailed output (including bar graphs and hypertext links). More information can be found at http://www.analog.cx.
++   *   **AWStats** — The Advanced Web Statistics tool (awstats package) produces graphical statistics representing Web-server access. AWStats can work with log files in the Apache common log format, as well as log files from sendmail, FTP, and other network servers. It can report statistics, such as the number of people who have visited, visits made per person, the domain and country of each visitor, and the number of visits made by bots. You can find more information at http://awstats.sourceforge.net.
+
+# **Summary**
+
+Web servers are responsible for storing and delivering the vast amount of content available on the World Wide Web to clients all over the world. Although several Web-server software packages are available for Fedora systems, the most popular is by far the Apache Web server.
+
+This chapter described how to install, configure, and run an Apache server in Fedora. The `httpd` daemon process handles requests for Web content (HTTP). Configuration files define what content is made available and how it can be accessed. In particular, the `/etc/httpd/conf/httpd.conf` file is used to configure the server.
+
+The Apache `httpd` package also includes facilities for logging error and transfer messages. You can look for the `access_log` and `error_log` files in the `/etc/httpd/logs` directory. The `access_log` file contains information on content requests that have been serviced by the server. The `error_log` file lists error conditions that have occurred and times when service has been denied. You can use tools such as Webalizer to simplify the viewing of Apache log data.

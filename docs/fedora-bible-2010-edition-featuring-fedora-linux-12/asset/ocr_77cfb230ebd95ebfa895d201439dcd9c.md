@@ -1,0 +1,3 @@
+(both live and install CDs) from the Internet or from distributions that come with books such as this one.
+
+Linux is based on a culture of free exchange of software. Linux’s roots are based in the UNIX operating system. UNIX provided most of the framework that was used to create Linux. That framework came from the POSIX standard, the AT&T System V Interface Definition, and the Berkeley Software Distribution (BSD), pieces of which have all found their way into Linux. Now the Linux Standard Base creates the standards to provide consistency among Linux distributions.

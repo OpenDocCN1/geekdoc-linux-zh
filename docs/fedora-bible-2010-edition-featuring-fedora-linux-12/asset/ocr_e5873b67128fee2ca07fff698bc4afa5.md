@@ -1,0 +1,21 @@
+# 642 **Part IV: Fedora Network and Server Setup**
+
+By default, the necessary modules to use IPsec are already available in Fedora. If you choose to use IPsec, all the tools you need to configure a VPN are contained in the ipsec-tools packages. You set up IPsec in the kernel in much the same way that you set up firewalls with iptables: you run commands that load settings into the kernel, either from command line options (standard input) or from a file containing your preconfigured options.
+
+The commands you use to set up a VPN with IPsec include the following:
+
++   - **setkey** — Use this command to load the data about your VPN connections into the kernel. It can add, change, flush, or dump information in the Security Association Database (SAD) and the Security Policy Database (SPD) for your IPsec VPN. Typically, you would create a configuration file in the format described on the setkey man page, and then run `setkey -f filename` to load that data into the kernel.
++   - **racocon** — Use this command to create IKE security associations between host computers communicating together over an IPsec VPN. Security data are loaded into `racocon` from the `/etc/racocon/racocon.conf` file (unless that file is overridden from the `racocon` command line using the `-f` option).
+
+Sample configuration files to use with `setkey` are available from the IPsec-HOWTO (www.ipsec-howto.org). A sample `racocon.conf` file is included with the ipsec-tools package (in the `/usr/share/doc/ipsec-tools-*` directory). For an in-depth description of the tools used with IPsec, refer to the IPsec-Tools Web site (http://ipsec-tools.sourceforge.net/).
+
+# **Configuring an OpenVPN Server**
+
+Virtual private networks were created to allow computer systems to have secure connections using insecure public networks. Setting up an OpenVPN server at your place of business can provide an inexpensive way for branch offices or telecommuters to securely access your company's private network.
+
+Because VPN technologies, such as OpenVPN, provide encrypted connections between two transport-level network interfaces, any applications communicating between those two systems are secure. This is as opposed to user-space applications, such as SSL, that must implement features from every application they want to offer to users.
+
+For Linux systems, OpenVPN provides a very good choice of software for configuring a VPN server. The following are some of the features of OpenVPN:
+
++   - A single port can provide access to up to 128 clients.
++   - The server can control client setup, doing tasks such as pushing configuration data to clients through the VPN tunnel.

@@ -1,0 +1,15 @@
++   - **A regular user** — As someone just using the Linux system, you probably have your own unique user name and password. Often, that name is associated with your real name (such as johnb, susanp, or djones). If you are still sure why you need a user login, see the sidebar “Why Do I Need a User Login?” You probably have at least one user account available that was added the first time you booted Fedora.
++   
++   - **The root user** — Every Linux system has a *root* user assigned when Linux is installed. The root user (literally type the user name *root*) can run programs, use files, and change the computer setup in any way. Because the root user has special powers, and can therefore do special damage, you usually log in as a regular user (which allows access only to that user’s files and those that are open to everyone). Logging in as the root user isn’t given as an option on the graphical login screen. You need to select Other to manually log in as root.
+
+CROSS-REFERENCE: See Chapter 9 for a description of the root user and Chapter 10 for information on how to set up and use other user accounts. Refer to Chapter 13 for suggestions on how to choose a good password. For information on instances where the root user doesn’t have complete control over the system, refer to the descriptions of SELinux (Security-Enhanced Linux) in Chapter 9.
+
+# Why Do I Need a User Login?
+
+If you are working on a PC, and you are the only one using your Linux computer, you may wonder why you need a user account and password. Unlike Windows, Linux (as its predecessor UNIX) was designed from the ground up to be a multiuser system. Here are several good reasons why you should use separate user accounts:
+
++   - Even as the only person using Linux, you want a user name other than *root* for running applications and working with files so you don’t change critical system files by mistake during everyday computer use.
++   - If several people are using a Linux system, separate user accounts let you protect your files from being accessed or changed by others.
++   - Networking is probably the best reason for using a Linux system. If you are on a network, a unique user name is useful in many ways. Your user name can be associated with resources on other computers: file systems, application programs, and mailboxes to name a few. Sometimes a root user is not allowed to share resources on remote Linux systems.
++   - Over time, you will probably change personal configuration information associated with your account. For example, you may add aliases, create your own utility programs, or set properties for the applications you use. By gathering this information in one place, it’s easy to move your account or add a new account to another computer in the future.
++   - Keeping all your data files and settings under a home login directory (such as /home/chris) makes it easier to back up the data and restore it later if needed.

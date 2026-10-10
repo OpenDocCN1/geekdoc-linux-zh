@@ -1,0 +1,19 @@
++   2. From the Applications menu, select **Sound & Video → Audio Player**. The X Multimedia System player appears.
++   3. Click the **Eject** button. The **Load files** window appears.
++   4. If you have inserted a CD, the content of that CD appears in the **Files** pane. (If it doesn’t, change to `/dev/cdrom`, `/media/cdrom`, or `/media/cdrecorder`, as appropriate.)
++      - Select the files you want to add to your **Playlist** and click the **Add Selected Files** or the **Add All Files** in **Directory** button to add all songs from the current directory. To add audio files from your file system, browse your files and directories and click the same buttons to add the audio files you want. Select **Close**.
++   5. Click the **Play List** button (the tiny button marked **PL**) on the console. A **Playlist Editor** window appears.
++   6. Double-click the music file and it starts to play.
++   7. With a file selected and playing, here are a few actions you can take:
++      - **Control play** — Buttons for controlling play are what you would expect to see on a physical CD player. From left to right, the buttons let you go to a previous track, play, pause, stop, go to the next track, or eject the CD. The **Eject** button opens a window, allowing you to load the next file.
++      - **Adjust sound** — Use the left slider bar to adjust the volume. Use the right slider bar to change the right-to-left balance.
++      - **Display time** — Click in the elapsed time area to toggle between elapsed time and time remaining.
++        - ![Figure showing playback controls](image_placeholder.png)
++      - **View file information** — Click the button in the upper-left corner of the screen to see the **XMMS** menu. Then select **View File Info**. You can often find out a lot of information about the file: title, artist, album, comments, and genre. For an **Ogg** file, you can see specific information about the file itself, such as the format, bit rate, sample rate, frames, file size, and more. You can change or add to the tag information and click **Save** to keep it.
++   8. When you are done playing music, click the **Stop** button to stop the current song. Then click the **X** in the upper-right corner of the display to close the window.
+
+Special features of the XMMS Audio Player let you adjust high and low frequencies using a graphic equalizer and gather and play songs using a Playlist Editor. Click the button marked **EQ** next to the balance bar on the player to open the Equalizer. Click the button marked **PL** next to that to open the Playlist Editor.
+
+# ### Using the Equalizer
+
+The Equalizer lets you use slider bars to set different levels to different frequencies played. Bars on the left adjust lower frequencies, and those on the right adjust higher frequencies. Click the **EQ** button to open the Equalizer. Here are tasks you can perform with the Equalizer:

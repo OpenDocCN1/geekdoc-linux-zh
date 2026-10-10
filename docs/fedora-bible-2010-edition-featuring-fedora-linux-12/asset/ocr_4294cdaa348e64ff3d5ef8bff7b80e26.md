@@ -1,0 +1,42 @@
+255 heads, 63 sectors/track, 4865 cylinders 
+Units = cylinders of 16065 * 512 = 8255280 bytes
+
+<tr><td>Device</td><td>Boot</td><td>Start</td><td>End</td><td>Blocks</td><td>Id</td><td>System</td></tr>
+<tr><td>/dev/sda1</td><td>*</td><td>1</td><td>13</td><td>104391</td><td>83</td><td>Linux</td></tr>
+<tr><td>/dev/sda2</td><td></td><td>14</td><td>4833</td><td>38716650</td><td>83</td><td>Linux</td></tr>
+<tr><td>/dev/sda3</td><td></td><td>4834</td><td>4865</td><td>257040</td><td>82</td><td>Linux swap</td></tr>
+
+To see how each partition is being used on your current system, type the following:
+
+```
+```
+# df -h
+
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda2 37G 5.4G 30G 16% /
+/dev/sda1 99M 8.6M 86M 10% /boot
+none 61M 0 61M 0% /dev/shm
+```
+```
+
+From the output of df, you can see that the root of your Linux system ( / ) is on the /dev/sda2 partition and that the /dev/sda1 partition is used for /boot .
+
+> > **CAUTION:** Before using fdisk to change your partitions, I strongly recommend running the df -h command to see how your partitions are currently being defined. This will help reduce the risk of changing or deleting the wrong partition.
+
+To use fdisk to change your partitions, begin (as root user) by typing:
+
+```
+```
+# fdisk device
+```
+```
+
+where device is replaced by the name of the device you want to work with. For example, here are some of your choices:
+
++   *   /dev/sda — For the first IDE or SCSI hard disk; sdb , sdc , and so on for other SCSI disks. (Beginning with Fedora 10, IDE hard drives no longer appear as hda , hdb , and so on.)
++   *   /dev/md0 — For a RAID device.
+
+After you have started fdisk , type m to see the options. Here is what you can do with fdisk:
+
++   *   **Delete a partition** — Type d and you are asked to enter a partition number on the current hard disk. Type the partition number and press Enter. For example, /dev/sda2 would be partition number 2. (The deletion won’t take effect until you write the change. Until then, it’s not too late to back out.)
++   *   **Create a partition** — If you have free space, you can add a new partition. Type n and you are asked to enter 1 for a logical partition (5 or over) or p for a primary partition (1–4). Enter a partition number from the available range. Then choose the first cylinder number from those available. (The output from fdisk -l shown earlier will show you cylinders being used under the Start and End columns.)

@@ -1,0 +1,25 @@
+files in the /etc/profile.d directory. Note that you can override all of these settings in other start-up files.
+
++   /etc/bashrc — By default, this file is executed for every user who runs the bash shell, each time a bash shell is opened. It sets the default prompt and may add one or more aliases. Values in this file can be overridden by information in each user's ~/.bashrc file.
+
++   ~/.bash_profile — This file is used by each user to enter information that is specific to his own use of the shell. It is executed only once, when the user logs in. By default, it sets a few environment variables and executes the user's ~/.bashrc file. You can instead create a file named ~/.bash_login to serve the same purpose as ~/.bash_profile.
+
++   ~/.bashrc — This file contains the information that is specific to your bash shells. It is read when you log in and also each time you open a new bash shell. This is the best location to add environment variables and aliases so that your shell picks them up.
+
++   ~/.bash_logout — This file executes each time you log out (exit the last bash shell). By default, it simply clears your screen.
+
+To change the /etc/profile or /etc/bashrc files, you must be the root user. Users can change the information in the $HOME/.bash_profile, $HOME/.bashrc, and $HOME/.bash_logout files in their own home directories.
+
+The following sections provide ideas about items to add to your shell configuration files. In most cases, you add these values to the .bashrc file in your home directory. However, if you administer a system, you may want to set some of these values as defaults for all of your Linux system's users.
+
+# Setting your prompt
+
+Your prompt consists of a set of characters that appear each time the shell is ready to accept a command. The PS1 environment variable sets what the prompt contains. If your shell requires additional input, it uses the values of PS2, PS3, and PS4.
+
+When your Fedora system is installed, your prompt is set to include the following information: your user name, your hostname, and the base name of your current working directory. That information is surrounded by brackets and followed by a dollar sign (for regular users) or a pound sign (for the root user). Here's an example of that prompt:
+
+```
+[chris@myhost bin]$
+```
+
+If you change directories, the bin name would change to the name of the new directory. Likewise, if you were to log in as a different user or to a different host, that information would change.

@@ -1,0 +1,52 @@
++   Connection to the LAN — 10.0.0.1 (IP address) and eth1 (interface). Replace 10.0.0.1 and eth1 with the static IP address and interface name associated with your connection to your LAN, respectively.
+
++   Computers on the LAN — Each computer on the LAN in the example has an IP address from 10.0.0.2 to 10.0.0.254. Change all the 10.0.0.x values to a number that matches your LAN's range of addresses.
+
+The following is an example of a script to load firewall rules that could be used for the configuration shown in Figure 13-2.
+
+```
+# (1) Policies (default)
+
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+
+# (2) User-defined chain for ACCEPTed TCP packets
+
+iptables -N okay
+iptables -A okay -p TCP --syn -j ACCEPT
+iptables -A okay -p TCP -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A okay -p TCP -j DROP
+
+# (3) INPUT chain rules
+
+# Rules for incoming packets from LAN
+
+iptables -A INPUT -p ALL -i eth! -s 10.0.0.0/24 -j ACCEPT
+iptables -A INPUT -p ALL -i lo -s 127.0.0.1 -j ACCEPT
+iptables -A INPUT -p ALL -i lo -s 10.0.0.1 -j ACCEPT
+iptables -A INPUT -p ALL -i lo -s 123.45.67.89 -j ACCEPT
+iptables -A INPUT -p ALL -i eth1 -d 10.0.0.255 -j ACCEPT
+
+# Rules for incoming packets from the Internet
+
+# Packets for established connections
+
+iptables -A INPUT -p ALL -d 123.45.67.89 -m state --state \\
+ESTABLISHED,RELATED -j ACCEPT
+
+# TCP rules
+
+iptables -A INPUT -p TCP -i eth0 --destination-port 21 -j okay
+iptables -A INPUT -p TCP -i eth0 --destination-port 22 -j okay
+iptables -A INPUT -p TCP -i eth0 --destination-port 80 -j okay
+iptables -A INPUT -p TCP -i eth0 --destination-port 113 -j okay
+
+# UDP rules
+
+iptables -A INPUT -p UDP -i eth0 --destination-port 53 -j ACCEPT
+iptables -A INPUT -p UDP -i eth0 --destination-port 2074 -j ACCEPT
+iptables -A INPUT -p UDP -i eth0 --destination-port 4000 -j ACCEPT
+
+# ICMP rules
+```

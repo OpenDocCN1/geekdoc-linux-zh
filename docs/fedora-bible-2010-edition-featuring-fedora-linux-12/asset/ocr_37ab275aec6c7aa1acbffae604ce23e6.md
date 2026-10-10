@@ -1,0 +1,28 @@
+```
+iptables -A INPUT -p ICMP -i eth0 --icmp-type 8 -j ACCEPT
+iptables -A INPUT -p ICMP -i eth0 --icmp-type 11 -j ACCEPT
+
+# (4) FORWARD chain rules
+# Accept the packets we want to forward
+iptables -A FORWARD -i eth1 -j ACCEPT
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# (5) OUTPUT chain rules
+# Only output packets with local addresses (no spoofing)
+iptables -A OUTPUT -p ALL -s 127.0.0.1 -j ACCEPT
+iptables -A OUTPUT -p ALL -s 10.0.0.1 -j ACCEPT
+iptables -A OUTPUT -p ALL -s 123.45.67.89 -j ACCEPT
+
+# (6) POSTROUTING chain rules
+iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to-source 123.45.67.89
+```
+
+I divided the commands in the preceding script into six sections. The following text describes each of those sections.
+
+(1) Policies — The iptables -P commands set the default policies for INPUT, OUTPUT, and FORWARD chains. By assigning each of those policies to DROP, any packet that isn’t matched is discarded. In other words, for a packet to get through, it has to be specifically matched with an ACCEPT by one of the other rules in the script.
+
+(2) User-defined chain — A user-defined chain I call okay is created to do a few more checks on packets requesting certain TCP services that I’m going to allow through (Web, FTP, and DNS services). The -N okay option creates the okay chain. The next line says that a SYN packet (- --syn), which requests a new connection, is fine to let through. The next line allows through packets associated with an ESTABLISHED connection (one that has already had traffic pass through the interface) or a RELATED connection (one that is starting a new connection related to an already established connection). The final line in this set tells iptables to DROP packets that don’t meet one of those checks.
+
+(3) INPUT chain rules — The bulk of the packet filtering is done in the INPUT chain. The first set of input rules indicates to iptables when to always accept packets from the Internet and from the LAN. The next three sets determine which requests for specific protocols (TCP, UDP, and ICMP) are accepted:
+
++   * **Packets from LAN** — Because you want your users on your LAN and the firewall computer itself to be able to use the Internet, this set of rules lets through packets that are initiated from those computers. The first line tells iptables to accept packets for ALL protocols for which the source is an acceptable address on your LAN (-s 10.0.0.0/24, which represents IP numbers 10.0.0.1 through 10.0.0.254). The next three lines allow packets that come from all valid IP addresses on the firewall computer itself (-s 127.0.0.1, 10.0.0.1, and 123.45.67.89). The last line accepts broadcast packets (-d 10.0.0.255) on the LAN.

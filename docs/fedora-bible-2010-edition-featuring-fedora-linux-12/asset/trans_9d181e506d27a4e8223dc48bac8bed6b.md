@@ -1,0 +1,133 @@
+
+
+## 表 5-1：Linux 归档文件格式
+
+| 格式 | 扩展名 | 描述 |
+|---|---|---|
+| gzip 文件 | .gz 或 .z | 文件使用 GNU gzip 工具进行压缩。可以使用 gzip 或 gunzip 工具进行解压（两者功能相同）。 |
+| tar 文件 | .tar | 文件使用 tar 命令归档。tar 用于将多个文件汇集到一个单一的归档文件中。您可以使用 tar 并配合不同的选项将归档展开为单独的文件。 |
+| tar 和 gzip 文件 | .tgz | 对于使用 gzip 压缩的 tar 归档文件，常见的命名实践是使用 .tgz 扩展名。 |
+| bzip2 | .bz2 | 文件使用 bzip2 程序压缩。 |
+| tar 和 bzip2 | .tbz2 | 使用 bzip2 压缩的 tar 归档文件。 |
+| Tar/压缩文件 | .taz 或 .tzt | 文件使用 tar 归档并通过 UNIX compress 命令压缩。 |
+| Linux 软件映射 | .lsm | 文件包含描述归档内容的文本。 |
+| Debian 二进制软件包 | .deb | 文件是与 Debian Linux 发行版一起使用的二进制软件包。（关于如何将 Debian 转换为 Red Hat 格式的描述请参阅本章后续内容。） |
+| RPM 软件包管理 | .rpm | 文件是与 Fedora 一起使用的二进制软件包。该格式也适用于其他 Linux 发行版。 |
+
+## 表 5-2：Linux 文档格式
+
+| 格式 | 扩展名 | 描述 |
+|---|---|---|
+| 超文本标记语言 | .html 或 .htm | 文件采用超文本格式，供 Web 浏览器程序（如 Mozilla）阅读。 |
+| PostScript | .ps | 文件采用 PostScript 格式，用于在 PostScript 打印机上输出。 |
+| SGML | .sgml | 文件采用 SGML 标准文档格式。SGML 常用于生成可后续输出为多种格式文档。 |
+| PDF | .pdf | 可移植文档格式，正在逐渐取代 PostScript 用于文档制作。 |
+| DVI | .dvi | 文件采用 DVI 格式，这是 LaTeX 文本处理工具的输出格式。使用 `dvips` 和 `dvilj` 命令将这些文件转换为 PostScript 或惠普的 PCL。 |
+| 纯文本 | | Fedora 中无后缀的文件有时是纯文本文件（ASCII 格式）。（一点注意：Linux 中的许多命令，例如 `/usr/bin` 和 `/usr/sbin` 中的命令，也没有扩展名。如果有一个没有扩展名的文件，最好在继续任何操作之前先对其使用 `file` 命令。实际上，对一个未测试过的文件使用 `file` 可以避免问题。一个充满二进制代码的 `.txt` 文件可能被用来利用文本编辑器并对系统做恶意事情。） |
+
+如果您不确定文件的格式，请按照以下方式使用 `file` 命令：
+
+```
+$ file filename
+```
+
+该命令会告诉您它是 GNU `tar` 文件、RPM、`gzip` 还是其他文件格式。（如果文件被重命名并丢失了扩展名，这是一个很好的技巧。）
+
+如果您想要将软件包从上述描述的其中一种格式进行转换，可以尝试 alien 工具（`http://freshmeat.net/projects/alien`）。尽管 alien 被认为不够稳定，不适合用于重要的系统软件包，但对于在您的 Fedora 系统上试用一些简单的软件包来说是一个好工具。
+
+## 从源代码构建和安装
+
+如果您想要的软件包没有二进制版本可用，或者您只是想根据需求定制软件包，您可以始终从源代码安装该软件包。首先，您可以从 Fedora 软件仓库获取 Fedora 中任何二进制软件包的源代码（SRPM）版本（详见附录 A）。您可以修改源代码并根据您的需要重新构建它。
+
+不可用 RPM 格式的软件包通常以 *tarball*（由 `tar` 工具格式化为单个文件的一组文件）的形式提供，并且已经过压缩（通常由 `gzip` 工具完成）。虽然从源代码归档安装应用程序的具体说明有所不同，但许多采用 `.bz2`、`.tar.bz2`、`.tgz`、`.gz` 和 `.tar` 格式的软件包遵循相同的基本流程。
+
+> **提示：** 在您从源代码安装之前，您需要安装各种软件开发包。如果您有足够的磁盘空间，我建议在 Fedora 安装过程中安装所有推荐的软件开发包。
+
+以下是 C 程序软件开发工具的最小列表：
+
+- *gcc* — 包含 gcc（GNU C 编译器）编译器。
+- *make* — 包含用于从 Makefile 生成二进制文件的 make 命令。
+- *glibc* — 包含重要的共享库、C 库和标准数学库。
+- *glibc-devel* — 包含创建可执行文件所需的标准头文件。
+- *binutils* — 包含编译程序所需的工具（如汇编器和链接器）。
+- *kernel-devel* — 包含 Linux 内核源代码，并用于重新构建内核。
+- *rpm-build* — 包含用于从源代码构建 RPM 二进制软件包的 rpmbuild 工具。
+- *libc* — 包含基于 *libc 5* 的程序所需的库，以便旧应用程序可以在 *glibc (libc 6)* 系统上运行。如果您使用 C++，有很多软件包需要获取，特别是 *libstdc++* 和 *libstdc++-devel*。
+
+### 安装 SRPM 格式的软件
+
+要从 Fedora 源代码目录安装源代码软件包，请执行以下操作：
+
+1. 参考附录 A 中关于获取 Fedora 源代码的信息。
+2. 将您想要的软件包下载到当前目录。
+3. 使用以下命令安装源代码软件包：
+
+```
+# rpm -iv package*.src.rpm
+```
+
+（将 *packagename* 替换为您正在安装的软件包名称。）从 Fedora 10 开始，源代码默认安装在主目录中名为 *rpmbuild/SOURCES* 的目录中。Spec 文件被复制到 *rpmbuild/SPECS*。在 Fedora 10 之前，默认路径为 */usr/src/redhat/SOURCES* 和 */usr/src/redhat/SPECS*。
+
+4. 按以下方式更改到 SPECS 目录：
+
+```
+# cd ~rpmbuild/SPECS
+```
+
+5. 按以下方式解包源代码（注意您可能需要安装 rpm-build 软件包）：
+
+```
+# rpmbuild -bp package*.spec
+```
+
+6. 软件包的源代码安装到 *rpmbuild/BUILD/package* 目录，其中 *package* 是软件包的名称。
+
+7. 现在您可以对软件包 *BUILD* 目录中的文件进行修改。阅读 README、Makefile 和其他文档文件以了解如何构建各个软件包的详细信息。
+
+`rpmbuild` 的 `--rebuild` 选项可用于在不先安装的情况下重新构建 RPM。生成的二进制文件将位于 `rpmbuild/RPMS/arch`，其中 `arch` 被替换为 i386 或您正在为其构建 RPM 的其他架构。
+
+### 安装 tar.gz 或 tar.bz2 格式的软件
+
+以下是一些通用说明，可用于安装许多采用 `gzip` 或 tar 格式的 Linux 软件包：
+
+1. 从互联网或 CD 发行版获取源代码软件包，并将其复制到空目录中（最好使用能标识该软件包的文件名）。
+
+2. 要在将 tar 归档提取到硬盘之前检查其内容，可以使用以下命令：
+
+```
+# tar ztvf package.tar.gz
+```
+
+> **注意：** 如果文件是使用 `bzip2` 压缩的，请使用命令 `tar tvjf`。
+
+3. 假设文件是使用 `gzip` 压缩的，使用以下命令解压缩该文件：
+
+```
+# gunzip package.tar.gz
+```
+
+结果是软件包被解压缩，并且软件包名称中的 `.gz` 被移除（例如，`package.tar`）。（如果您的软件包以 `bz2` 结尾，请使用 `bzip2` 命令代替 `gunzip`。）
+
+4. 从生成的 `tar` 归档中，按以下方式运行 `tar` 命令：
+
+```
+# tar xvf package.tar
+```
+
+该命令从归档中提取文件并将它们复制到当前目录的子目录中。（使用 `tar xvfz package.tar.gz` 您可以在一步中完成步骤 2 和 3。对于压缩的 `bzip2` 文件，请运行 `tar xvjf package.tar.bz2`。）
+
+5. 更改到步骤 3 中创建的新子目录，如下所示：
+
+```
+# cd package
+```
+
+6. 寻找名为 `INSTALL` 或 `README` 的文件。这些文件中的一个应提供有关如何继续安装的说明。通常使用 `make` 命令来安装软件包。以下是当前目录中需要查找的一些内容：如果存在 `Make.in` 文件，请尝试运行：
+
+```
+# ./configure --prefix=/usr/local
+# make all
+```
+
+如果存在 `Imake` 文件，请尝试运行：
+

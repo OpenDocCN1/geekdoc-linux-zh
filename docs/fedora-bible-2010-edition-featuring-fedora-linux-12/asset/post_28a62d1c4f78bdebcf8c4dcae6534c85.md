@@ -1,0 +1,333 @@
+
+# Index
+
+- dual boot, 60
+  - partitions, 64–65
+  - resizing, 61–63
+- dumb terminal, 148
+- dump command, 501–503
+- DVD drives, 498, 499
+- dvde record command, 498
+- DVDs, 29, 95
+  - bootable, 37
+  - capacity, 494
+  - writing to, 500
+- SquirrelMail, 753–754
+- text-based, 333
+- Spam Assassin, 747
+- Thunderbird, 331–332
+- e-mail clients
+  - Evolution, 327
+  - KMail, 327
+  - Sylpheed, 328
+  - text-based, 328
+  - Thunderbird, 327
+- e-mail servers, 939
+- Empathy, 337
+- encoding music, 277–279
+- encryption
+  - device mapper encryption, 379
+  - file systems, 378–379
+  - passwords, 526, 826
+  - Samba, 705, 711
+  - VPNs, 585
+- EndPoints Web cams, 289
+- environment variables, 145–148
+- Epoc Games, 304
+- Ephiphany, 313
+- epail, 244
+- ESMTP (Extended Simple Mail Transfer Protocol), 728
+- ESP (Encapsulating Security Payload), 641
+- /etc directory, 361
+- /etc/alternatives directory, 363
+- /etc/amanda directory, 364
+- /etc/cron* directory, 364
+- /etc/cups directory, 364
+- /etc/default directory, 364
+- /etc/dhcp.conf file, 840–846
+- /etc/exports file
+  - access options, 693
+  - configuration, 691–692
+  - hostnames, 692–693
+  - mapping options, 693–694
+- /etc/fstab file, NFS file systems, 697
+- /etc/httpd directory, 364
+- /etc/mail directory, 364
+- /etc/pemcia directory, 364
+- /etc/postfix directory, 364
+- /etc/ppp directory, 364
+- /etc/rc2.d directory, 364
+- /etc/security directory, 364
+- /etc/skel directory, 364
+- /etc/squid directory, 364
+- /etc/sysconfig directory, 365
+- /etc/uucp directory, 365
+- /etc/vsftpd directory, 365
+- /etc/X11, 363
+- /etc/xinetd.d directory, 365
+
+### Ethernet
+- installation and, 50
+- setup, 590
+- Ethernet Devices window, 592
+
+### Evolution, 311, 327–328
+- calendar, 328
+- composing messages, 330
+- contacts, 328
+- deleting messages, 330
+- Exchange, 329
+- filtering messages, 331
+- folders, 330
+- mail, 328
+- preferences, 329
+- receiving mail, 330–331
+- searching messages, 331
+- Send/Receive button, 330
+- sorting messages, 330
+- tasks, 329
+
+- Exchange, Evolution, 329
+- Exim, 729
+- expanding arithmetic expressions, 144
+- expanding commands, 144
+- exportfs command, 694
+- exporting NFS file system, 688
+- exports directory, 361
+- expr command, 448
+- ext file system, 377
+- ext2 file system, 377
+- ext3 file system, 376
+- ext4 file system, 376
+- ext4 file systems, 378
+- extracting music, 277–279
+
+### F
+- Face Browsing, 86
+- Fast User Switch, 102
+- fault tolerance, 490
+- fax2ps, 245
+- fax2tiff, 245
+- fdisk, partitioning and, 70–72
+- fdiskman, 72
+
+### Fedora
+- Enterprise comparison, 14
+- new features, 17–18
+- reasons to choose, 15–17
+- Fedora 12 Desktop Live CD, 29
+- Fedora 12 DVD, 29
+- Fedora 12 Live/Install desktop CD, 929
+- Fedora 12 official DVD, 929
+- Fedora Ambassadors and Marketing, 13
+- Fedora Artwork, 13
+- Fedora Desktop Live CD (GNOME), 20
+- Fedora Desktop Live CD (KDE), 20
+- Fedora Documentation, 13
+- Fedora Live CD, 13
+- Fedora spins, 24
+- fedora-release directory, 361
+- file servers, 937
+  - centralized distribution, 685
+  - FTP servers, 937
+  - NFS, setup, 686–702
+  - Samba setup, 702–725
+  - Samba server, 937
+  - transparency, 685
+- file sharing
+  - BitTorrent, 337–338
+  - Nautilus, 94
+- file system command, 136
+- File System Saint, 895
+- file systems, 7, 154, 687
+  - adfs, 376
+  - affs, 377
+  - be fs, 376
+  - brtfs, 376
+  - cifs, 376
+  - creating, 384–385
+  - ext, 377
+  - ext2, 377
+  - ext3, 376
+  - ext4, 376
+  - fstab and, 379
+  - fuse, 378
+  - hard disk, adding, 385–388
+  - hierarchy, 154
+  - hpfs, 377
+  - iso9660, 377
+  - jfs, 378
+  - ka fs, 377
+  - management, 373–376
+  - managing, 369
+  - minix, 377
+  - mount command, 382
+  - mounting, 376–384
+  - mounting removable media, 382–383
+  - msdos, 377
+  - ncpfs, 377
+  - nfs, 377
+  - ntfs, 377
+  - partitions, 375
+  - proc, 377
+  - RAID disks, 388–390
+  - reiser fs, 378
+  - restoring, 507
+  - shared, exporting, 694
+  - squashfs, 378
+  - swap, 377
+  - ufs, 378
+  - unmounting, 384
+  - vfat, 377
+  - xenix, 378
+  - xfs, 378
+  - xiafs, 378
+- file types
+  - Konqueror File Manager, 114
+  - Nautilus, 94
+- files
+  - copying, 162
+  - creating, 155, 157
+  - cron, 481
+  - deleting, 162
+  - moving, 162
+  - permissions, 160–161
+  - restoring, 507–509
+- find command, 393, 432
+- finger server, 944
+- Firefox, 312–313
+  - add-ons, 322–323
+  - bookmarks, 314
+  - History, 315
+  - plug-ins, 320
+  - pop-ups, blocking, 315
+  - preferences, 319
+  - preferenceres, 317
+  - resizing page, 315
+  - searches, 315
+  - security, 316, 323–324
+  - setup, 317–319
+  - sidebar, 315
+  - tabbed browsing, 313
+  - themes, 323
+  - tips, 324
+- Firewall Configuration window, 528–530
+- firewalls, 522
+  - custom rules, 530
+  - DHCP and, 839
+  - ICMP, 530
+  - iptables and, 528, 839
+  - opening, 894
+  - port forwarding, 530
+  - shared Internet connection, 534–538
+  - trusted interfaces, 530
+  - trusted services, 529
+- FirstAidKit, 398
+- Firstboot, 44
+  - Fedora License Agreement, 44
+  - hardware profile, 45
+- fixing packages, 198
+- FLAC audio, 258
+- Fluendo, 257
+- fonts in KDE, 116
+- for..do loop, 453
+- foreground commands, 149
+- formatting in Groff, 243
+- .forward file, sendmail, 743
+- Forwarding, enabling, 635–637
+- frame relay, 889
+- FreeIPA, 575
+  - client setup, 576
+  - identity, 575
+  - server setup, 576
+- Freshmeat, 175
+- FreshRPMsRPM Fusion, 179
+- Frozen Bubble, 306
+- fstab directory, 361, 379
+- fields, 380
+- fiope tools, magnetic tape and, 492
+- FTP (File Transfer Protocol), 759
+  - attributes, 760–761
+  - background transfers and, 342–343
+  - clients, 311
+  - configuration, 893
+  - copying files, 339
+  - directory commands, 339–340
+  - exiting commands, 341
+  - file copying commands, 340–341
+  - ftp command, 339
+  - gFTP window, 343–345
+  - installation, 52
+  - Ifp command, 339
+  - login process, 760
+  - nctfp command, 341–342
+  - public access, 760
+  - serveus, 760
+  - Squid and, 649
+  - types, 761
+  - vsFTPd, 761–769
+  - wget command, 345
+- FTPS, 759
+- full backups, 490
+- full duplex support for sound cards, 259
+- full virtualization, 915
+- function keys, virtual guests and, 922
+- functions, 136
+- fuse file system, 378
+
+### G
+- Games menu, 305
+- gaming, 304
+  - commercial games, 305
+  - Epic Games, 304
+  - Frozen Bubble, 306
+  - Games menu, 305
+  - Garage Games, 307
+  - GNOME games, 307
+  - Gweed, 306
+  - ID Software, 304
+  - id Software and, 307
+  - KDE games, 307
+  - Linux Game Tome and, 307
+  - Linux Gamers' FAQ, 308
+  - Linuxgames.com, 307
+  - open source games, 305
+  - Quake 3 Arena, 306
+  - TransGaming Technologies and, 307
+  - Tux Games, 308
+  - Vega Strike, 306
+  - WarZone 2100, 306
+  - Wikipedia and, 307
+- Garage Games, 307
+- gedit, 168
+- genisoimage, 494
+- gFTP window, 343
+- Ghostscript, 665
+- gif2tiff, 245
+- GiMP, graphics and, 248, 250
+- global settings, SWAT, 709–715
+- GNOME
+  - application launcher, 97–98
+  - configuration editor, 102
+  - exiting, 102
+  - games, 307
+  - Gedit, 168
+  - switching desktop environments, 103
+  - User Switcher, 102
+- GNOME desktop
+  - icons, 232
+  - Network Manager applet, 583
+- GnomeMeeting, 288
+- Google, 175
+- Gopher, 760
+  - Squid and, 649
+- GParted, 62–63
+- gparted package, 62
+- GPG/DSA key, 188
+- graphical administration tools, 356–360
+- graphics
+  - GiMP and, 248–250
+  - Inkscape, 251–252
+- grep (general regular expression parsers), 455
+- Grog, 240
+  - documents, 241
