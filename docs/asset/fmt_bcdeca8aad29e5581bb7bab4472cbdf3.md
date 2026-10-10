@@ -1,0 +1,97 @@
+
+`fxp0`: <Intel PLC 10/100 Ethernet> port `0xe000-0xe0ff` mem
+`0xff8fe000-0xff8fefff` irq `11` at device `8.0` on pci1
+`fxp0`: Ethernet address `00:00:b7:c7:74:f1`
+`fxp1`: <Intel Pro 10/100B/100+ Ethernet> port `0xdf00-0xdf3f` mem
+`0xff700000-0xff7fffff,0xff8f0000-0xff8fffff` irq `11` at
+device `9.0` on pci1
+`fxp1`: Ethernet address `00:d0:b7:bd:5d:13`
+
+然而，如果你使用的是旧的 ISA 卡，过程可能会更棘手。ISA 卡被设置为特定的内存地址和 IRQ（中断请求），你必须为这两者选择一些未被其他设备占用的值。大多数以太网卡的内存地址为 `0x300` 或 `0x280`，IRQ 为 `9` 或 `10`。安装多张此类卡意味着你必须将额外的卡配置为使用未使用的插槽。这里是最棘手的地方：这种卡配置通常必须使用随卡附带的 DOS 实用程序来完成。
+
+在 FreeBSD 初始安装期间的可视化配置菜单中，IRQ 和内存地址之间的冲突位置很容易看出。只需删除所有你不需要使用的驱动程序，如果两个已安装设备之间仍然存在冲突，请选择你想要更改的设备以及想要切换到的设置。使用 DOS“救援”软盘引导进入 MS-DOS，如果你还有原始磁盘，则运行该卡的诊断程序。以太网卡的诊断程序通常提供一系列常用的内存地址和 IRQ 设置选项；选择一个未被任何其他设备使用的设置（如可视化配置菜单所报告），设置卡的固件，然后重新引导进入 FreeBSD。
+
+你可能还需要更改你的卡的“设备提示”（在第 16 章中有描述）。这些提示保存在 `/boot/device.hints` 中，控制 FreeBSD 预期在哪里查找该设备。你可以通过编辑该文件来调整它们以匹配你的卡。你应该会看到如下类似的行：
+
+```
+hint.ed.0.at="isa"
+hint.ed.0.port="0x300"
+hint.ed.0.irq="10"
+```
+
+修改 `port`（内存地址）和 `IRQ` 行以匹配你的卡设置，然后重启以使其生效。
+
+## 不使用 sysinstall 配置网络设置
+
+使用 `sysinstall` 配置你的卡在某种程度上使事情变得容易；例如，它很直观，并且在同一个地方完成所有操作。但对于你可能需要执行的许多网络任务，使用 `sysinstall` 进行配置并不是一个功能强大的选项。你可以从命令行更直接地访问网络设置。自然，为了以改变系统配置的方式运行这些命令，你必须是 root 用户。
+
+> **注意**
+>
+> 我们要讨论的一些功能无法在 *sysinstall* 中完成，例如添加 IP 别名和修改路由表。事实上，如果你有自定义的 IP 配置（例如，一张绑定了许多 IP 别名的卡），然后使用 *sysinstall* 对卡进行额外配置，你可能会丢失你的自定义设置。请注意，*sysinstall* 仅适用于最基本和常见的配置任务，但对于更复杂的情况（它并非为此设计），应避免使用它。
+
+## 使用 ifconfig 应用网络设置
+
+接口配置器 `ifconfig` 是一个用于即时应用网络设置的多功能工具。它的主要目的是为以太网卡（接口）分配 IP 地址，不过，与其他大多数 Unix 工具一样，它还可以做更多其他事情。在这里，我们介绍 `ifconfig` 最常用的功能；如需更多信息，请查阅 `man ifconfig` 页面。
+
+首先，让我们使用 `ifconfig` 来收集有关我们网络接口的信息。在上一章中，你看到了 `ifconfig -a` 的一个示例，它显示所有接口并告诉你哪些可用。使用 `ifconfig -a` 提供了一种简单的方法来查明你的以太网驱动程序是 `ed0`、`fxp0`、`xl0` 还是其他。知道之后，你可以指定该设备名称作为 `ifconfig` 的参数，以仅获取该接口的设置：
+
+```
+# ifconfig fxp1
+fxp1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	in6t fe80::2d0:b7ff:febd:5d13%fxp1 prefixlen 64 scopeid 0x2
+	inet 64.41.131.102 netmask 0xffffff00 broadcast 64.41.131.255
+	ether 00:d0:b7:bd:5d:13
+	media: autoselect (100baseTX <full-duplex>) status: active
+	supported media: autoselect 100baseTX <full-duplex> 100baseTX
+10baseT/UTP <full-duplex> 10baseT/UTP
+```
+
+> **注意**
+> 我们即将浏览几个配置示例，这些示例几乎肯定会导致你的以太网接口失去与任何已连接会话的连接。如果你想在自己的机器上尝试 `ifconfig` 的功能，请从物理控制台进行操作，而不是通过 Telnet 或 SSH 连接时进行操作！
+
+如果你只想更改 IP 地址，请使用以下命令：
+
+`# ifconfig fxp1 64.41.131.103`
+
+这就完成了。注意，如果你不指定子网掩码，系统假定你正在设置一个 A 类地址——并且子网掩码和广播地址会相应设置，你可以在更新后的 `ifconfig fxp1` 输出中看到：
+
+```
+in6t 64.41.131.103 netmask 0xff000000 broadcast 64.255.255.255
+```
+
+让我们再试一次，但这次让它成为一个 C 类地址，这意味着你还需要设置你的子网掩码。你使用 `netmask` 关键字与 IP 地址结合来实现这一点。注意，`ifconfig` 接受十六进制表示法、点分十进制表示法或在 `/etc/networks` 中定义的符号名称来表示子网掩码。因此，以下命令是等效的：
+
+```
+# ifconfig fxp1 64.41.131.103 netmask 255.255.255.0
+# ifconfig fxp1 64.41.131.103 netmask 0xffffff00
+# ifconfig fxp1 64.41.131.103 netmask your-netmask
+```
+
+你也可以指定广播地址，尽管这通常只有在非常特殊的网络中才有用。注意，虽然如果你省略广播地址，它会自动从 IP 地址和子网掩码推导出来（如前所述），但反之并不成立：省略子网掩码会使 ifconfig 假定使用 A 类掩码。如果你必须设置广播地址，请确保同时设置它和子网掩码：
+
+```
+# ifconfig fxp1 64.41.131.103 netmask 255.255.0.0 broadcast 64.41.255.255
+```
+
+在某些情况下，你可能需要设置接口的最大传输单元（MTU）。MTU 表示卡可以发送的最大数据包大小（以字节为单位）；对于以太网卡，此值通常为 `1500`。有时，你可能想将其设置为较小的值，以最小化低速 WAN 链路上的延迟。不过，你的路由器通常负责管理传输以最小化延迟，所以除非你必须这样做且知道自己在做什么，否则不必担心此设置：
+
+```
+# ifconfig fxp1 mtu 536
+```
+
+`ifconfig` 可以使用的最后一个技巧涉及 `media` 关键字，它允许你在各种列出的介质类型之间切换卡片。如果你有具有多个接口的卡（如你在第 21 章“网络组件”部分所见的那样），并且你想从 BNC 连接器切换到 RJ-45 (UTP) 连接器，或从 RJ-45 切换到 AUI 连接器，那么这个功能非常有用。如果你有一张 10/100 以太网卡和一个自动感应的集线器，该集线器已与你的卡自动协商出 100Mbps 全双工速度，你可以使用 `media` 和 `mediaopt` 关键字将其强制设置为 10Mbps 模式。查看 `ifconfig fxp1` 报告的支持的介质类型（以下是一个典型示例）：
+
+```
+media: autoselect (100baseTX <full-duplex>) status: active
+supported media: autoselect 100baseTX <full-duplex> 100BaseTX
+10baseT/UTP <full-duplex> 10baseT/UTP
+```
+
+此示例告诉你处于自动选择模式。在该模式下，卡片会与其连接的集线器协商最高可能的速度。将其设置为 10BaseT 模式。`supported media:` 行告诉你，此关键字为 `10baseT/UTP`，并且有一个可选的 `full-duplex` 选项，你可以选择设置（使用 `mediaopt` 关键字）。选项显示在尖括号中。更清晰地显示，此示例中的介质类型和选项如下：
+
+```
+autoselect
+100baseTX <full-duplex>
+100baseTX
+10baseT/UTP <full-duplex>
+```
