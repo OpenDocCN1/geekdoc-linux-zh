@@ -1,0 +1,170 @@
++   - ownership, 13–14
++   - permissions, 14–17
++   - shared, 11
++   - for Web servers, 267–268
++   - working with, 6
++   - directory trees, 202
++   - Disallowed IP or network addresses option, 302
++   - disaster recovery
++     - installation disks for, 82
++     - 135–136
++     - system log books for, 163
++   - disks and disk devices, 77–78
++     - BIOS options for, 57–59, 58
++     - checking, 66–68, 219–220
++     - identifying, 78–80
++     - installation, 135–136
++     - partitions on. See partitions
++     - performance, 80–83
++     - power management for,
++   - 91–92
++   - in removable mounts, 131
++   - testing, 166–167
++   - verifying, 201
++   - $DISPLAY variable, 43
++   - distribution installation disks for recovery, 135–136
++   - DLT (digital linear tape)
++     - format, 131
++   - DMA (direct memory addressing), 66
++   - dmesg command
++     - for CPU, 164–165
++     - for kernel messages, 69
++   - for network hardware, 232
++   - DNS (Domain Name System)
++     - (for hostname resolution), 236
++     - with local firewalls, 306
++     - settings, 242
++     - documentation, 160
++     - system, 176–178
++       - CPUs, 179–182, 180, 182
++       - man pages, 178–179
++       - online, 183–186
++       - system log books, 160–161
++       - adding entries to, 162
++       - starting, 161
++       - uses for, 163
++     - system log files, 169–170
++       - options for, 171–172
++       - reviewing, 175–176
++       - rotating, 173–175
++     - system performance, 163–164
++       - CPU, 164–165
++       - disks, 166–167
++       - memory, 165–166
++       - ongoing tests, 167–169
++   - dollar signs ($)
++     - for prompts, 3
++     - in scripts, 48
++   - domain configuration, 269–270
+
++   - domain controllers, 276
++     - Domain Name System (DNS)
++       - for hostname resolution, 236
++       - with local firewalls, 306
++       - settings, 242
++       - dotted quad notation, 23
++       - dpkg program, 120–123
++       - drivers
++         - disk, 82
++         - video, 98
++       - DRoP policy, 304–305
++         - DSL (Digital Subscriber Line), 231
++         - mu command, 192
++       - dump command, 133
++   
++   ## E
++   
++   - e command in Vi, 28
++   - e2fsck program, 219–220
++   - echo command, 47
++   - ed
++     - commands, 8
++     - files, 23–28, 26
++   - EDITOR variable, 40–41, 43
++   - editors
++     - invoking, 8
++     - selecting, 40–41
++     - Vi, 23–24
++       - modes in, 24–25
++         - procedures in, 25–28, 26
++         - saving changes in, 28
++   - edquota command, 311
++   - 8mm tapes, 131
++   - email. See mail servers
++   - emergency recovery, 135–136
++   - encryption for passwords, 277, 317
++   - en command, 44
++   - environment variables, 38
++   - list of, 41–42
++   - permanent, 41–42
++   - program-specific, 40–41
++   - environments, installing, 108
++   - ESP Print Pro, 287
++   - /etc/classes file, 261
++   - /etc/at file, 158
++   - /etc/cron/allow file, 156
++   - /etc/cron.deny file, 156
++   - /etc/crontab file, 156
++   - /etc/export file, 274
++   - /etc/stab file, 213–214
++   - /etc/su file, 214–215
++     - for local filesystems, 215–216
++     - for network mounts, 216–217
++   - for quotas, 310
++   - for swap space, 208, 216
++   - for user-controlled mounts,
++     - 217–218
++   - /etc/hosts.allow file, 302
++   - /etc/hosts.deny file, 302
++   - /etc/initd.allow, 254–255
++   - /etc/initd.deny, 150
++   - /etc/ilo.conf file
++     - editing, 23–28, 26
++     - for kernel, 224–226
++       - /etc/logrotate.conf file, 173–174
++         - /etc/logrotate.d file, 173–174
++           - /etc/passwd file, 30
++             - /etc/security limits.conf file, 312
++               - /etc/services file, 238
++                 - /etc/shadow file, 30
++                   - /etc/sysfs, 281
++                     - /etc/sysfs/ssh_config file, 281
++                       - /etc/sysfs/ssh_config file, 281
++                         - /etc/X11/xm/config file, 302
++                           - 102–103
++                             - /etc/X11/xm/config file, 258–257, 302
++                               - Ethernet hardware, 232
++                                 - ex mode in Vi, 24
++                                   - examining files, 5–6
++                                     - exclamation mark (!) in Vi, 28
++                                       - execute permission, 14–17
++                                         - existence of files, 5
++                                           - exit command, 9
++                                             - exports in NFS, 273
++                                               - ext2fs or ext2 (Second Extended File System), 204
++                                                 - ext3fs or ext3 (Third Extended File System), 204
++                                                   - Extended Hierarchical File System (HFS+), 205
++                                                     - extended partitions, 190
++                                                       - Extens File System (XFS), 204
++                                                         - external commands
++                                                           - in scripts, 46–47
++                                                             - in Vi, 28
++   
++   ## F
++   
++   - facility codes, 171
++   - FAQs (frequently asked questions), 184
++   - FAT (File Allocation Table) filesystem, 205
++   - fdisk utility, 195–196
++     - advanced options, 201
++     - for disk checks, 68
++     - for disk identification, 79–80
++     - for partitions
++       - creating, 199–201
++       - deleting, 198
++       - tables, 162, 197–198
++   - FEATURX file, 263–265
++   - Fedora Core distributions
++     - package changes to, 113–119
++     - XDMCP servers in, 101
++   - fi expressions, 50

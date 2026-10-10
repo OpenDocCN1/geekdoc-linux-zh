@@ -1,0 +1,17 @@
+# Planning a Backup Schedule
+
+Regular computer backup is important, but precisely *how* regular is a matter that varies from one system to another. If a computer’s contents almost never change (as might be true of a dedicated router or a workstation whose user files reside on a file server), backups once a month or even less often might be in order. For critical file servers, once a day is not too often. You’ll have to decide for yourself just how frequently your systems require backup.
+
+Even the most zealous backup advocate must admit that creating a full backup of a big system on a regular basis can be a tedious chore. A backup can easily take several hours, depending on backup size and hardware speed. For this reason, most backup packages support *incremental backups*. An incremental backup scheme involves creating a full backup first. On subsequent backups, only those files that have changed since the last full or incremental backup are backed up. This scheme saves backup time and reduces the need for backup capacity, but at a cost: Data restoration becomes more complex because you may need to use multiple backup media to restore your data.
+
+Despite these problems, incremental backups can be an extremely useful tool for helping make backups manageable. They can also reduce wear and tear on backup devices and media, and they can minimize the time it takes to restore files if you know that the files you need to restore were backed up on an incremental tape.
+
+> **WARNING**  
+> Whether you perform incremental backups or nothing but complete backups, you should maintain multiple backups. Murphy’s Law guarantees that your backup will fail when you need it most, so having a backup for your backup (even if it’s from a week or a month earlier!) can help immensely. A typical backup plan includes a rotating set of backup tapes. For instance, you might have two tapes per week—one for a full backup on one day and one for several incremental backups. Eight tapes will then hold backups for four weeks.
+
+You should also consider how much data to back up. Sometimes, backing up an entire computer is the best approach. A full backup like this enables you to quickly recover the entire system if it should fail. Often, though, a partial backup is tempting because it can save backup time and media. You might back up just the /home directory on a workstation or whatever directory holds a file server’s files. Such a backup enables you to recover lost user files easily, but if the entire system goes south, you’ll need to re-install the base OS from scratch and then recover user files from the backup.
+
+> **TIP**  
+> If you decide to do a partial backup, be sure to include your system configuration files. Backing up /etc should do this job. You might not want to restore the entire /etc directory over whatever you re-install, but if you back it up you’ll at least be able to restore changes to important configuration files with relative ease.
+
+At this point, you should plan your backup schedule. How often do you want to create full backups? What about incremental backups? Bear in mind that there are no completely right or wrong answers to these questions, although some backup plans will become unwieldy or will prove to be inadequate when ultimately tested.

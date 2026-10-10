@@ -1,0 +1,3 @@
+# # About the Author
+
+Roderick W. Smith is a consultant and writer on computer technology. He has more than a dozen books to his name, mostly about Linux and other open source software. These titles include *Linux in a Windows World* (O'Reilly, 2005), *LPIC-1: Linux Professional Institute Certification Study Guide* (Sybex, 2005), and *Linux+ Study Guide, Third Edition* (Sybex, 2005). He is also the author of *Linux Magazine*'s monthly “Guru Guidance” column. His Web page is `http://www.rodbooks.com`. Rod resides in Woonsoc k et, Rhode Island.

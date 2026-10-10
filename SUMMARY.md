@@ -761,6 +761,7 @@
 +   [Linux 管理手册（第2版）](docs/linux-administration-handbook-2nd-edition/README.md)
 +   [Linux 管理简易指南](docs/linux-administration-made-easy/README.md)
 +   [Linux 管理：Linux 管理员的 Linux 操作系统与命令行指南](docs/linux-administration-the-linux-operating-system-and-command-/README.md)
++   [Linux 管理员街头智慧：Linux 认证技能的实战指南；[分步练习教你掌握实用技能；真实场景帮你融会贯通](docs/linux-administrator-street-smarts-a-real-world-guide-to-linu/README.md)
 +   [Linux 管理员安全指南](docs/linux-administrators-security-guide/README.md)
 +   [Linux 系统管理员高级指南：成为一名精通的系统管理员。2024](docs/linux-advanced-for-sysadmin-become-a-proficient-system-admin/README.md)
 +   [Linux 初学者指南](docs/linux-all-in-one-desk-reference-for-dummies/README.md)
