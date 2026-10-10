@@ -698,6 +698,7 @@
 +   [Kylix 开发者指南](docs/kylix-developers-guide/README.md)
 +   [Eckert's Linux+ Linux 认证指南实验手册，第 4 版](docs/lab-manual-for-eckerts-linux-guide-to-linux-certification-4t/README.md)
 +   [Linux 实验手册与 Linux 认证指南](docs/lab-manual-for-linux-guide-to-linux-certification/README.md)
++   [Linux+ 基础与认证配套实验手册](docs/lab-manual-to-accompany-linux-fundamentals-and-certification/README.md)
 +   [Linux 平台与应用安全策略实验室手册版本 1.5](docs/laboratory-manual-version-15-security-strategies-in-linux-pl/README.md)
 +   [LabSim 手册 - Linux+ (经验才能教授的课程)](docs/labsim-manual---linux-the-lessons-only-experience-can-teach/README.md)
 +   [LabSim 手册：“只有经验能教会你的课程” Linux](docs/labsim-manual-the-lessons-only-experience-can-teach-linux/README.md)

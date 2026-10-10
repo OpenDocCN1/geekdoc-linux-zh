@@ -1,0 +1,2387 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Lab Manual to accompany
+
+    Linux+ Fundamentals
+
+    and Certification
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_0.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_1.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_2.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_3.png)
+
+
+    David Engle,
+
+    Cisco Learning Institute'
+  - '[PAGE 1]
+
+
+    ![](img/d6e84b412351e10580574e8217099217_1_0.png)
+
+
+    Digitized by the Internet Archive
+
+    in 2020 with funding from
+
+    Kahle/Austin Foundation
+
+
+    https://archive.org/details/labmanualtoaccom0000unse'
+  - '[PAGE 2]
+
+
+    # ## Linux+
+
+    ## Fundamentals
+
+    ## and Certification
+
+
+    **Cisco Learning Institute**
+
+    **David Engle**
+
+
+    ![](img/d6e84b412351e10580574e8217099217_2_0.png)
+
+
+    Upper Saddle River, New Jersey
+
+    Columbus, Ohio'
+  - '[PAGE 3]
+
+
+    **Assistant Vice President and Publisher:** Charles E. Steward, Jr.
+
+    **Production Editor:** Alexandra Benedicto Wolf
+
+    **Design Coordinator:** Diane Emsberger
+
+    **Cover Designer:** Jeff Vanik
+
+    **Cover art:** Apart Creations
+
+    **Production Manager:** Mattottenweller
+
+    **Marketing Manager:** Ben Leonard
+
+
+    This book was set in Times Roman by *The GTS Companies*/York, PA Campus. It was
+    printed and bound by Courier Kendallville, Inc. The cover was printed by Phoenix
+    Color Corp.
+
+
+    Linux 2.0 Penguin logo courtesy of Larry Ewing (www.isc.tamu.edu) and The GIMP
+    (General Image Manipulation Program). Reprinted with permission.
+
+
+    Cisco Learning Institute™ is a trademark of Cisco Learning Institute.
+
+
+    **Copyright © 2005 by Cisco Learning Institute, Phoenix, Arizona, 85016, and published
+    by Pearson Education, Inc., Upper Saddle River, New Jersey 07458.**
+
+
+    Pearson Prentice Hall. All rights reserved. Printed in the United States of America.
+    This publication is protected by Copyright and permission should be obtained from
+    the publisher prior to any prohibited reproduction, storage in a retrieval system,
+    or transmission in any form or by any means, electronic, mechanical, photocopying,
+    recording, or likewise. For information regarding permission(s), write to: Rights
+    and Permissions Department.
+
+
+    **Pearson Prentice Hall™** is a trademark of Pearson Education, Inc.
+
+    **Pearson®** is a registered trademark of Pearson plc
+
+    **Prentice Hall** is a registered trademark of Pearson Education, Inc.
+
+
+    +   - Pearson Education Ltd.
+
+    +   - Pearson Education Singapore Pte. Ltd.
+
+    +   - Pearson Education Canada, Ltd.
+
+    +   - Pearson Education—Japan
+
+    +   - Pearson Education Australia Pty. Limited
+
+    +   - Pearson Education North Asia Ltd.
+
+    +   - Pearson Educación de México, S.A. de C.V.
+
+    +   - Pearson Education Malaysia Pte. Ltd.
+
+
+    ![](img/d6e84b412351e10580574e8217099217_3_0.png)
+
+
+    10 9 8 7 6 5 4 3 2 1
+
+    ISBN 0-13-185511-5'
+  - '[PAGE 4]
+
+
+    # Contents
+
+
+    +   PREFACE  v
+
+
+    +   LAB 1.1  LINUX DISTRIBUTION  I
+
+
+    +   LAB 2.1  BUDGETS  2
+
+
+    +   LAB 2.2  PARTITIONING  3
+
+
+    +   LAB 2.3  HARD DRIVE INSTALLATION  4
+
+
+    +   LAB 3.1  LINUX DISTRIBUTION  5
+
+
+    +   LAB 3.2  LINUX DISTRIBUTION—BOOT FLOPPY DISK  6
+
+
+    +   LAB 4.1  CREATING SECURE ACCOUNTS  7
+
+
+    +   LAB 4.2  DIRECTORIES  8
+
+
+    +   LAB 4.3  DIRECTORY TREES  9
+
+
+    +   LAB 5.1  USING VI  10
+
+
+    +   LAB 5.2  COMMAND LINE BASICS  11
+
+
+    +   LAB 6.1  ADMINISTRATIVE TASKS—BACKUPS  12
+
+
+    +   LAB 6.2  PACKAGES  13
+
+
+    +   LAB 6.3  SHELL PROGRAMMING  14'
+  - '[PAGE 5]
+
+
+    +   - LAB 7.1 NETWORKING— SUBNET MASKS  15
+
+
+    +   - LAB 7.2 NFS SERVERS  16
+
+
+    +   - LAB 7.3 SYSTEM CONFIGURATION  17
+
+
+    +   - LAB 8.1 COMMON PORTS  18
+
+
+    +   - LAB 8.2 USER CONFIGURATIONS  19
+
+
+    +   - LAB 8.3 SAMBA  20
+
+
+    +   - LAB 9.1 X WINDOWS CONFIGURATION  21
+
+
+    +   - LAB 9.2 SWAP SPACE  22
+
+
+    +   - LAB 9.3 ADDITIONAL SWAP SPACE  23
+
+
+    +   - LAB 10.1 CREATING A DESKTOP APPLICATION  24
+
+
+    +   - LAB 10.2 DESKTOP UTILITIES  25
+
+
+    +   - LAB 11.1 USER CRON— COMMAND RUN ON  26
+
+
+    +   - LAB 11.2 PROCESS MANAGEMENT  27
+
+
+    +   - LAB 12.1 SECURE UPDATES  29
+
+
+    +   - LAB 12.2 SETTING A GRUB PASSWORD  30
+
+
+    +   - LAB 12.3 SECURING SERVICES  31
+
+
+    +   - LAB 13.1 TROUBLESHOOTING LOG FILES  32
+
+
+    +   - LAB 13.2 TROUBLESHOOTING HARDWARE  33
+
+
+    +   - LAB 13.3 TROUBLESHOOTING CONNECTION STATUS  34'
+  - '[PAGE 6]
+
+
+    # # Preface
+
+
+    Merriam-Webster''s Collegiate Dictionary defines a computer as a programmable
+    electronic device that can store, retrieve, and process data. A more inclusive
+    definition would be that it operates under the control of instructions stored
+    in its own memory and can accept data, manipulate the data, produce results, and
+    store the results for future use. A computer has two principal characteristics:
+    It responds to a specific set of instructions and it can execute a prerecorded
+    list of instructions called a program.
+
+
+    The set of machine-language instructions that a computer will respond to is embedded
+    in the central processing unit. These instructions are the basic building blocks
+    of all instructions that the computer will follow. Before your word processing
+    or game program will execute on a computer, the computer has to be programmed,
+    using these basic instructions, to accomplish a wide range of tasks. These tasks
+    include reading and writing to the disk drives, interpreting the keyboard strokes,
+    interpreting the mouse movements, and many other hardware-related jobs. A set
+    of instructions that accomplishes these critical tasks is called an *operating
+    system* (OS).
+
+
+    Every computer system must have an operating system. The OS is a set of programs
+    that coordinates all the tasks of the computer system. For example, if you want
+    to print a document to the printer, the OS must translate your text to code that
+    the printer will understand, then send the code to the printer. Every task, no
+    matter how small, must be controlled by the operating system.
+
+
+    The operating system consists of a group of related programs needed to accomplish
+    these individual tasks. The rationale for having a group of programs, rather than
+    one program, is that not everyone needs all the programs that are available. In
+    most cases, if you installed all the available programs, you would run out of
+    space on your hard drive and in your computer''s memory.
+
+
+    At the core of the operating system is the program called the kernel. The kernel
+    maintains the computer''s clock, starts applications, and assigns resources such
+    as devices, programs, and data. The kernel is memory resident, which means that
+    it is in memory once the operating system starts and remains there while the computer
+    system is running. Other programs are often nonresident, which means that they
+    have to be read from an external storage device into memory when needed.
+
+
+    There are many different operating systems. The most commonly used operating systems
+    in personal computers today are Linux, Windows, Mac OS, and Unix. Of the operating
+    systems listed, only Linux may be freely copied and distributed.
+
+
+    Linux is growing in popularity, and its market share is increasing every year.
+    Determining market share for Linux is difficult because if someone purchases a
+    computer preconfigured with Windows and then replaces the operating system with
+    Linux operating system, no one subtracts one from the Windows column. Linux''s
+    market share is even more difficult to determine due to the fact that most Linux
+    distributions are downloaded from the Internet rather than purchased.
+
+
+    With the increased market share of the Linux operating system comes the increased
+    need of Linux professionals. One way to distinguish yourself from the average
+    technician'
+  - '[PAGE 7]
+
+
+    is to obtain the Linux + certification. This book will put you well on your way
+    to obtaining this certification. This book addresses all of the new exam objectives
+    covered in the latest exam version.
+
+
+    # ## ORGANIZATION OF THE TEXT
+
+
+    *Linux+ Fundamentals and Certification* covers all of the exam requirements and
+    provides a solid foundation for learning Linux +, including installation requirements,
+    administration basics, and administrative tasks. Also included are networking
+    basics such as network addresses and configuring remote client access, managing
+    services, hardware configuration, security, and troubleshooting.
+
+
+    Each chapter begins with a list of **performance objectives**, which indicate
+    what new skills and knowledge will be learned after completing the chapter. The
+    instructor will usually administer the requirements of the performance objectives.
+    Each chapter presents all the information needed to perform the exercises and
+    pass the review quiz. The **self-test** at the end of each chapter verifies the
+    students’ understanding of the material. Answers to the self-test questions (true/false
+    and multiple choice) are given at the end of the book.
+
+
+    Discussions of the Linux + exam objectives are specified throughout the book.
+    A list of exam objectives and their coverage in the text is found after the Preface.
+
+
+    Labs are provided for each chapter in the accompanying laboratory manual. These
+    labs allow the Linux + student to practice the concepts taught in the chapter.
+
+
+    Industry tips are provided throughout the book. These tips are written by various
+    network professionals and provide insight into the working world of Linux +.
+
+
+    # ## SUPPLEMENTS
+
+
+    *Linux+ Fundamentals and Certification* is supported by the following materials:
+
+
+    +   * ReviewMaster Tutorial on CD packaged with the text provides review questions
+    designed to prepare the reader for the Linux + examination.
+
+    +   * Another CD-ROM contains useful example programs and files designed to aid
+    the student in developing and understanding the concepts presented in each part.
+    View the README document (text, Microsoft Word, and HTML formats) to get a detailed
+    description of the companion CD-ROM.
+
+    +   * The laboratory manual accompanying the text provides hands-on experiments
+    for each chapter.
+
+    +   * An instructor’s manual is available, which contains teaching suggestions,
+    sample syllabi and tests, and other helpful items.
+
+
+    # ## ACKNOWLEDGMENTS
+
+
+    Many people have helped me with this book and without their assistance I would
+    still be revising chapters. Mike Gay and Shane DeRidder provided valuable technical
+    feedback on many of the chapters. My brother Vic, the real Linux guru of the family,
+    provided more support, technical knowledge, and feedback than anyone could ask
+    for.
+
+
+    Most of all, thanks to Lynda, my wife, for encouraging me and accepting the time
+    I needed to write this book. God has blessed me with a wonderful wife.
+
+
+    David Engle'
+  md: '
+
+    # Lab Manual to accompany
+
+    Linux+ Fundamentals
+
+    and Certification
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_0.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_1.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_2.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_3.png)
+
+
+    David Engle,
+
+    Cisco Learning Institute
+
+
+    ![](img/d6e84b412351e10580574e8217099217_1_0.png)
+
+
+    Digitized by the Internet Archive
+
+    in 2020 with funding from
+
+    Kahle/Austin Foundation
+
+
+    https://archive.org/details/labmanualtoaccom0000unse
+
+
+    ## Linux+ Fundamentals
+
+    ## and Certification
+
+
+    **Cisco Learning Institute**
+
+    **David Engle**
+
+
+    ![](img/d6e84b412351e10580574e8217099217_2_0.png)
+
+
+    Upper Saddle River, New Jersey
+
+    Columbus, Ohio
+
+
+    **Assistant Vice President and Publisher:** Charles E. Steward, Jr.
+
+    **Production Editor:** Alexandra Benedicto Wolf
+
+    **Design Coordinator:** Diane Emsberger
+
+    **Cover Designer:** Jeff Vanik
+
+    **Cover art:** Apart Creations
+
+    **Production Manager:** Matt Ottenweller
+
+    **Marketing Manager:** Ben Leonard
+
+
+    This book was set in Times Roman by *The GTS Companies*/York, PA Campus. It was
+    printed and bound by Courier Kendallville, Inc. The cover was printed by Phoenix
+    Color Corp.
+
+
+    Linux 2.0 Penguin logo courtesy of Larry Ewing (www.isc.tamu.edu) and The GIMP
+    (General Image Manipulation Program). Reprinted with permission.
+
+
+    Cisco Learning Institute™ is a trademark of Cisco Learning Institute.
+
+
+    **Copyright © 2005 by Cisco Learning Institute, Phoenix, Arizona, 85016, and published
+    by Pearson Education, Inc., Upper Saddle River, New Jersey 07458.**
+
+
+    Pearson Prentice Hall. All rights reserved. Printed in the United States of America.
+    This publication is protected by Copyright and permission should be obtained from
+    the publisher prior to any prohibited reproduction, storage in a retrieval system,
+    or transmission in any form or by any means, electronic, mechanical, photocopying,
+    recording, or likewise. For information regarding permission(s), write to: Rights
+    and Permissions Department.
+
+
+    **Pearson Prentice Hall™** is a trademark of Pearson Education, Inc.
+
+    **Pearson®** is a registered trademark of Pearson plc
+
+    **Prentice Hall** is a registered trademark of Pearson Education, Inc.
+
+
+    - Pearson Education Ltd.
+
+    - Pearson Education Singapore Pte. Ltd.
+
+    - Pearson Education Canada, Ltd.
+
+    - Pearson Education—Japan
+
+    - Pearson Education Australia Pty. Limited
+
+    - Pearson Education North Asia Ltd.
+
+    - Pearson Educación de México, S.A. de C.V.
+
+    - Pearson Education Malaysia Pte. Ltd.
+
+
+    ![](img/d6e84b412351e10580574e8217099217_3_0.png)
+
+
+    10 9 8 7 6 5 4 3 2 1
+
+    ISBN 0-13-185511-5
+
+
+    # Contents
+
+
+    - PREFACE v
+
+    - LAB 1.1 LINUX DISTRIBUTION I
+
+    - LAB 2.1 BUDGETS 2
+
+    - LAB 2.2 PARTITIONING 3
+
+    - LAB 2.3 HARD DRIVE INSTALLATION 4
+
+    - LAB 3.1 LINUX DISTRIBUTION 5
+
+    - LAB 3.2 LINUX DISTRIBUTION—BOOT FLOPPY DISK 6
+
+    - LAB 4.1 CREATING SECURE ACCOUNTS 7
+
+    - LAB 4.2 DIRECTORIES 8
+
+    - LAB 4.3 DIRECTORY TREES 9
+
+    - LAB 5.1 USING VI 10
+
+    - LAB 5.2 COMMAND LINE BASICS 11
+
+    - LAB 6.1 ADMINISTRATIVE TASKS—BACKUPS 12
+
+    - LAB 6.2 PACKAGES 13
+
+    - LAB 6.3 SHELL PROGRAMMING 14
+
+    - LAB 7.1 NETWORKING— SUBNET MASKS 15
+
+    - LAB 7.2 NFS SERVERS 16
+
+    - LAB 7.3 SYSTEM CONFIGURATION 17
+
+    - LAB 8.1 COMMON PORTS 18
+
+    - LAB 8.2 USER CONFIGURATIONS 19
+
+    - LAB 8.3 SAMBA 20
+
+    - LAB 9.1 X WINDOWS CONFIGURATION 21
+
+    - LAB 9.2 SWAP SPACE 22
+
+    - LAB 9.3 ADDITIONAL SWAP SPACE 23
+
+    - LAB 10.1 CREATING A DESKTOP APPLICATION 24
+
+    - LAB 10.2 DESKTOP UTILITIES 25
+
+    - LAB 11.1 USER CRON— COMMAND RUN ON 26
+
+    - LAB 11.2 PROCESS MANAGEMENT 27
+
+    - LAB 12.1 SECURE UPDATES 29
+
+    - LAB 12.2 SETTING A GRUB PASSWORD 30
+
+    - LAB 12.3 SECURING SERVICES 31
+
+    - LAB 13.1 TROUBLESHOOTING LOG FILES 32
+
+    - LAB 13.2 TROUBLESHOOTING HARDWARE 33
+
+    - LAB 13.3 TROUBLESHOOTING CONNECTION STATUS 34
+
+
+    # Preface
+
+
+    Merriam-Webster''s Collegiate Dictionary defines a computer as a programmable
+    electronic device that can store, retrieve, and process data. A more inclusive
+    definition would be that it operates under the control of instructions stored
+    in its own memory and can accept data, manipulate the data, produce results, and
+    store the results for future use. A computer has two principal characteristics:
+    It responds to a specific set of instructions and it can execute a prerecorded
+    list of instructions called a program.
+
+
+    The set of machine-language instructions that a computer will respond to is embedded
+    in the central processing unit. These instructions are the basic building blocks
+    of all instructions that the computer will follow. Before your word processing
+    or game program will execute on a computer, the computer has to be programmed,
+    using these basic instructions, to accomplish a wide range of tasks. These tasks
+    include reading and writing to the disk drives, interpreting the keyboard strokes,
+    interpreting the mouse movements, and many other hardware-related jobs. A set
+    of instructions that accomplishes these critical tasks is called an *operating
+    system* (OS).
+
+
+    Every computer system must have an operating system. The OS is a set of programs
+    that coordinates all the tasks of the computer system. For example, if you want
+    to print a document to the printer, the OS must translate your text to code that
+    the printer will understand, then send the code to the printer. Every task, no
+    matter how small, must be controlled by the operating system.
+
+
+    The operating system consists of a group of related programs needed to accomplish
+    these individual tasks. The rationale for having a group of programs, rather than
+    one program, is that not everyone needs all the programs that are available. In
+    most cases, if you installed all the available programs, you would run out of
+    space on your hard drive and in your computer''s memory.
+
+
+    At the core of the operating system is the program called the kernel. The kernel
+    maintains the computer''s clock, starts applications, and assigns resources such
+    as devices, programs, and data. The kernel is memory resident, which means that
+    it is in memory once the operating system starts and remains there while the computer
+    system is running. Other programs are often nonresident, which means that they
+    have to be read from an external storage device into memory when needed.
+
+
+    There are many different operating systems. The most commonly used operating systems
+    in personal computers today are Linux, Windows, Mac OS, and Unix. Of the operating
+    systems listed, only Linux may be freely copied and distributed.
+
+
+    Linux is growing in popularity, and its market share is increasing every year.
+    Determining market share for Linux is difficult because if someone purchases a
+    computer preconfigured with Windows and then replaces the operating system with
+    Linux operating system, no one subtracts one from the Windows column. Linux''s
+    market share is even more difficult to determine due to the fact that most Linux
+    distributions are downloaded from the Internet rather than purchased.
+
+
+    With the increased market share of the Linux operating system comes the increased
+    need of Linux professionals. One way to distinguish yourself from the average
+    technician is to obtain the Linux + certification. This book will put you well
+    on your way to obtaining this certification. This book addresses all of the new
+    exam objectives covered in the latest exam version.
+
+
+    ## ORGANIZATION OF THE TEXT
+
+
+    *Linux+ Fundamentals and Certification* covers all of the exam requirements and
+    provides a solid foundation for learning Linux +, including installation requirements,
+    administration basics, and administrative tasks. Also included are networking
+    basics such as network addresses and configuring remote client access, managing
+    services, hardware configuration, security, and troubleshooting.
+
+
+    Each chapter begins with a list of **performance objectives**, which indicate
+    what new skills and knowledge will be learned after completing the chapter. The
+    instructor will usually administer the requirements of the performance objectives.
+    Each chapter presents all the information needed to perform the exercises and
+    pass the review quiz. The **self-test** at the end of each chapter verifies the
+    students’ understanding of the material. Answers to the self-test questions (true/false
+    and multiple choice) are given at the end of the book.
+
+
+    Discussions of the Linux + exam objectives are specified throughout the book.
+    A list of exam objectives and their coverage in the text is found after the Preface.
+
+
+    Labs are provided for each chapter in the accompanying laboratory manual. These
+    labs allow the Linux + student to practice the concepts taught in the chapter.
+
+
+    Industry tips are provided throughout the book. These tips are written by various
+    network professionals and provide insight into the working world of Linux +.
+
+
+    ## SUPPLEMENTS
+
+
+    *Linux+ Fundamentals and Certification* is supported by the following materials:
+
+
+    - * ReviewMaster Tutorial on CD packaged with the text provides review questions
+    designed to prepare the reader for the Linux + examination.
+
+    - Another CD-ROM contains useful example programs and files designed to aid the
+    student in developing and understanding the concepts presented in each part. View
+    the README document (text, Microsoft Word, and HTML formats) to get a detailed
+    description of the companion CD-ROM.
+
+    - The laboratory manual accompanying the text provides hands-on experiments for
+    each chapter.
+
+    - An instructor’s manual is available, which contains teaching suggestions, sample
+    syllabi and tests, and other helpful items.
+
+
+    ## ACKNOWLEDGMENTS
+
+
+    Many people have helped me with this book and without their assistance I would
+    still be revising chapters. Mike Gay and Shane DeRidder provided valuable technical
+    feedback on many of the chapters. My brother Vic, the real Linux guru of the family,
+    provided more support, technical knowledge, and feedback than anyone could ask
+    for.
+
+
+    Most of all, thanks to Lynda, my wife, for encouraging me and accepting the time
+    I needed to write this book. God has blessed me with a wonderful wife.
+
+
+    David Engle
+
+    '
+  mdcn: '
+
+
+    # 配套实验手册
+
+    Linux+ 基础
+
+    与认证
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_0.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_1.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_2.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_3.png)
+
+
+    David Engle,
+
+    Cisco 学习学院
+
+
+    ![](img/d6e84b412351e10580574e8217099217_1_0.png)
+
+
+    互联网档案馆于 2020 年通过
+
+    Kahle/Austin 基金会的资助
+
+    进行了数字化
+
+
+    https://archive.org/details/labmanualtoaccom0000unse
+
+
+    ## Linux+ 基础
+
+    ## 与认证
+
+
+    **Cisco 学习学院**
+
+    **David Engle**
+
+
+    ![](img/d6e84b412351e10580574e8217099217_2_0.png)
+
+
+    新泽西州上萨德尔河
+
+    俄亥俄州哥伦布
+
+
+    **助理副总裁兼出版商：** Charles E. Steward, Jr.
+
+    **制作编辑：** Alexandra Benedicto Wolf
+
+    **设计协调员：** Diane Emsberger
+
+    **封面设计师：** Jeff Vanik
+
+    **封面艺术：** Apart Creations
+
+    **制作经理：** Matt Ottenweller
+
+    **市场经理：** Ben Leonard
+
+
+    本书由宾夕法尼亚州约克分校的 *The GTS Companies* 使用 Times Roman 字体进行排版。由 Courier Kendallville,
+    Inc. 负责印刷和装订。封面由 Phoenix Color Corp. 印刷。
+
+
+    Linux 2.0 企鹅标志由 Larry Ewing (www.isc.tamu.edu) 和 The GIMP（通用图像操作程序）提供。经许可重印。
+
+
+    Cisco 学习学院™ 是 Cisco 学习学院的商标。
+
+
+    **版权所有 © 2005 年，由位于亚利桑那州凤凰城 85016 的 Cisco 学习学院出版，并由位于新泽西州上萨德尔河 07458 的 Pearson
+    Education, Inc. 出版发行。**
+
+
+    Pearson Prentice Hall。保留所有权利。美国印刷。本出版物受版权保护，任何未经许可的复制、存储在检索系统中或以任何形式或任何方式（电子、机械、复印、录音等）进行传输之前，都应从出版商处获得许可。有关许可的信息，请写信至：版权与许可部门。
+
+
+    **Pearson Prentice Hall™** 是 Pearson Education, Inc. 的商标。
+
+    **Pearson®** 是 Pearson plc 的注册商标。
+
+    **Prentice Hall** 是 Pearson Education, Inc. 的注册商标。
+
+
+    - Pearson Education Ltd.
+
+    - Pearson Education Singapore Pte. Ltd.
+
+    - Pearson Education Canada, Ltd.
+
+    - Pearson Education—日本
+
+    - Pearson Education Australia Pty. Limited
+
+    - Pearson Education North Asia Ltd.
+
+    - Pearson Educación de México, S.A. de C.V.
+
+    - Pearson Education Malaysia Pte. Ltd.
+
+
+    ![](img/d6e84b412351e10580574e8217099217_3_0.png)
+
+
+    10 9 8 7 6 5 4 3 2 1
+
+    ISBN 0-13-185511-5
+
+
+    # 目录
+
+
+    - 前言 v
+
+    - 实验 1.1 LINUX 发行版 I
+
+    - 实验 2.1 预算 2
+
+    - 实验 2.2 分区 3
+
+    - 实验 2.3 硬盘安装 4
+
+    - 实验 3.1 LINUX 发行版 5
+
+    - 实验 3.2 LINUX 发行版—启动软盘 6
+
+    - 实验 4.1 创建安全账户 7
+
+    - 实验 4.2 目录 8
+
+    - 实验 4.3 目录树 9
+
+    - 实验 5.1 使用 VI 10
+
+    - 实验 5.2 命令行基础 11
+
+    - 实验 6.1 管理任务—备份 12
+
+    - 实验 6.2 包 13
+
+    - 实验 6.3 Shell 编程 14
+
+    - 实验 7.1 网络—子网掩码 15
+
+    - 实验 7.2 NFS 服务器 16
+
+    - 实验 7.3 系统配置 17
+
+    - 实验 8.1 常用端口 18
+
+    - 实验 8.2 用户配置 19
+
+    - 实验 8.3 SAMBA 20
+
+    - 实验 9.1 X WINDOWS 配置 21
+
+    - 实验 9.2 交换空间 22
+
+    - 实验 9.3 额外交换空间 23
+
+    - 实验 10.1 创建桌面应用程序 24
+
+    - 实验 10.2 桌面实用工具 25
+
+    - 实验 11.1 用户 CRON— 定时命令执行 26
+
+    - 实验 11.2 进程管理 27
+
+    - 实验 12.1 安全更新 29
+
+    - 实验 12.2 设置 GRUB 密码 30
+
+    - 实验 12.3 服务安全 31
+
+    - 实验 13.1 故障排除日志文件 32
+
+    - 实验 13.2 硬件故障排除 33
+
+    - 实验 13.3 连接状态故障排除 34
+
+
+    # 前言
+
+
+    《梅里安-韦伯斯特大学词典》将计算机定义为一种可存储、检索和处理数据的可编程电子设备。更全面的定义是，它在存储在自身内存中的指令控制下运行，可以接收数据、操纵数据、生成结果并将结果存储以供将来使用。计算机有两个主要特征：它响应一组特定的指令，并且它可以执行称为程序的一组预录指令。
+
+
+    计算机响应的机器语言指令集嵌入在中央处理单元中。这些指令是计算机将遵循的所有指令的基本构建模块。在你的文字处理或游戏程序在计算机上执行之前，计算机必须使用这些基本指令进行编程，以完成广泛的任务。这些任务包括读写磁盘驱动器、解释键盘按键、解释鼠标移动以及许多其他与硬件相关的工作。完成这些关键任务的一组指令称为*操作系统*（OS）。
+
+
+    每个计算机系统都必须有操作系统。操作系统是一组协调计算机系统所有任务的程序。例如，如果你要将文档打印到打印机，操作系统必须将你的文本转换为打印机能理解的代码，然后将代码发送到打印机。无论任务多么小，都必须由操作系统来控制。
+
+
+    操作系统由一组相关的程序组成，以完成这些单独的任务。之所以使用一组程序而不是一个程序，是因为并非每个人都需要所有可用的程序。在大多数情况下，如果你安装了所有可用的程序，你的硬盘空间和计算机内存就会耗尽。
+
+
+    操作系统的核心是称为内核的程序。内核维护计算机时钟，启动应用程序，并分配设备、程序和数据等资源。内核是内存驻留的，这意味着当操作系统启动后它就位于内存中，并在计算机系统运行时保留在那里。其他程序通常是非驻留的，这意味着当需要它们时，必须从外部存储设备将它们读取到内存中。
+
+
+    有许多不同的操作系统。当今个人计算机中最常用的操作系统是 Linux、Windows、Mac OS 和 Unix。在列出的操作系统中，只有 Linux 可以自由复制和分发。
+
+
+    Linux 的受欢迎程度正在增长，其市场份额每年都在增加。确定 Linux 的市场份额很困难，因为如果某人购买了一台预装 Windows 的计算机，然后将操作系统替换为
+    Linux 操作系统，没有人会从 Windows 一栏中减去一。由于大多数 Linux 发行版都是从互联网下载而不是购买的，因此确定 Linux 的市场份额更加困难。
+
+
+    随着 Linux 操作系统市场份额的增加，对 Linux 专业人士的需求也在增加。使自己区别于普通技术人员的一种方法是获得 Linux+ 认证。这本书将使你朝着获得此认证迈出坚实的一步。本书涵盖了最新考试版本中所有新的考试目标。
+
+
+    ## 文本组织结构
+
+
+    *Linux+ 基础与认证* 涵盖了所有考试要求，并为学习 Linux+ 提供了坚实的基础，包括安装要求、管理基础知识和管理任务。还包括网络基础知识，如网络地址和配置远程客户端访问、管理服务、硬件配置、安全以及故障排除。
+
+
+    每章开头都列出一组**绩效目标**，表明在完成本章后将学到哪些新技能和知识。通常由讲师来实施绩效目标的要求。每章提供了执行练习并通过复习测验所需的所有信息。每章末尾的**自测**验证学生对材料的理解。自测问题（判断题和选择题）的答案在书末给出。
+
+
+    全书中明确规定了关于 Linux+ 考试目标的讨论。在引言之后有一列考试目标及其在文本中的覆盖范围列表。
+
+
+    配套的实验手册为每章提供了实验。这些实验让 Linux+ 学生练习本章教授的概念。
+
+
+    全书提供了行业提示。这些提示由各种网络专业人员撰写，提供了对 Linux+ 工作世界的洞察。
+
+
+    ## 补充材料
+
+
+    *Linux+ 基础与认证* 由以下材料支持：
+
+
+    - 随文本包装的 CD 上的 ReviewMaster 教程提供了设计好的复习问题，为读者准备 Linux+ 考试。
+
+    - 另一张 CD-ROM 包含有用的示例程序和文件，旨在帮助学生开发和理解每部分提出的概念。查看 README 文档（文本、Microsoft Word 和
+    HTML 格式）以获取配套 CD-ROM 的详细描述。
+
+    - 随附文本的实验手册为每章提供动手实验。
+
+    - 提供教师手册，其中包含教学建议、教学大纲和测试样本以及其他有用的项目。
+
+
+    ## 致谢
+
+
+    许多人在这本书上帮助了我，如果没有他们的帮助，我仍然会在修改章节。Mike Gay 和 Shane DeRidder 为许多章节提供了宝贵的技术反馈。我的兄弟
+    Vic，家庭中真正的 Linux 大师，提供了任何人所能要求的支持、技术知识和反馈。
+
+
+    最重要的是，感谢我的妻子 Lynda，她鼓励我并接受了我写这本书所需的时间。上帝赐予我一位奇妙的妻子。
+
+
+    David Engle
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 8]
+
+
+    # # Linux Distribution
+
+
+    ![](img/d6e84b412351e10580574e8217099217_8_0.png)
+
+
+    **Scenario:** You have an older Pentium II 333 MHz computer with a 256 MB RAM,
+    a 4 GB EIDE/ATA hard drive, and a 100Base-T network card. You have decided to
+    install the Linux operating system on the computer to use it as a personal desktop
+    and an FTP server. For a personal desktop system, you need a word processing and
+    spreadsheet application. The FTP server needs to use a secure protocol that only
+    those with authorization can access. The Linux distribution should have a package
+    management system.
+
+
+    **Action:** Research at least three different Linux distributions to assure they
+    meet the criteria described above. Compare each distribution''s features using
+    a spreadsheet (rows and columns). Based on the compared criteria, choose a distribution
+    to install.'
+  - "[PAGE 9]\n\n# # Budgets\n\n# LAB 2.1\n\nCreate a budget for a three-workstation\
+    \ implementation in a small business. The work-\nstations will be used to develop\
+    \ a C++ programming project. Include in your project bud-\nget the following:\n\
+    \n+   1. **Hardware**—The developers will be developing a high-end GUI application.\
+    \ They\n+   want three computers with the following characteristics:\n+   \n+\
+    \       a. High-performance video cards and monitors\n+   \n+       b. 1 GB of\
+    \ internal memory\n+   \n+       c. Two 80 GB hard drives/machines\n+   \n+  \
+    \     d. Gigabit network interface cards\n+   \n+       e. An 8-port switch to\
+    \ work at gigabit speed\n+   \n+       f. Moderate-quality color laser printer\n\
+    \n+   2. **Software**—Each machine will have a Linux distribution with the latest\
+    \ stable kernel.\n+   In addition the developers want the following applications:\n\
+    +   \n+       a. StarOffice productivity software\n+   \n+       b. Intel® C++\
+    \ Compiler 7.1 for Linux\n\n+   3. **Maintenance**—At least two years on-site\
+    \ for computer hardware\n\n+   4. **Support**—At least a year of phone support\
+    \ for the C++ compiler\n\n+   5. **Training**—Training will be done in-house by\
+    \ the system administrator. Budget the\n+   time requirement of the administrator\
+    \ for a beginning usage training course."
+  - "[PAGE 10]\n\n# ## Partitioning\n\nBased on the hardware and software specifications\
+    \ outlined in lab 2.1, design a partition schema. Partition each workstation in\
+    \ the same way.  \nThere will be no more than ten users per workstation. Source\
+    \ code and data files for each user will be no more than 5 GB. The log files for\
+    \ the programs will be substantial. The disk space for the software will be in\
+    \ excess of 200 MB."
+  - '[PAGE 11]
+
+
+    # # Hard Drive Installation
+
+
+    # LAB **2.3**
+
+
+    Outline the steps necessary to install a Barracuda ATA V-ST3120023A hard drive,
+    from Seagate, as a slave drive to an existing hard drive of the same type. Include
+    the tools needed, jumper settings, and cable connections.
+
+
+    Outline the steps needed to set up the newly installed hard drive on a Linux operating
+    system. Include creating a partition, formatting the drive, and mounting the drive
+    to the /opt/Oracle directory.'
+  - '[PAGE 12]
+
+
+    # Linux Distribution
+
+
+    **LAB 3.1**
+
+
+    Install a distribution of the Linux operating system. Use a CD distribution set.
+    Choose a custom installation type. Choose default values for all entries, except
+    the following:
+
+
+    +   * Use your first initial and last name as the host name of the computer.
+
+    +   * Select no firewall.
+
+    +   * Use **LinuxPlus** as the root password.
+
+    +   * Select *shadow passwords*.
+
+    +   * Install all packages.
+
+
+    Add an account for yourself. Always log on with your account and use the `su`
+    command to connect as root when needed.'
+  - "[PAGE 13]\n\n# Linux Distribution—  \nBoot Floppy Disk  \n**LAB** 3.2\n\nUse\
+    \ the procedure outlined in the chapter to create a boot floppy disk. Once the\
+    \ boot floppy is created, test it by starting your computer with the boot disk."
+  - '[PAGE 14]
+
+
+    # Creating Secure Accounts
+
+
+    LAB **4.1**
+
+
+    Create an account for all students in the class. Divide the students evenly into
+    two groups, groupA and groupB. Use the first initial and last name as the user
+    name. Follow a policy for strong passwords.'
+  - "[PAGE 15]\n\n# # LAB 4.2  \n## Directories\n\nCreate two directories within /home\
+    \ called groupA and groupB. Assign permissions to these directories that allow\
+    \ members of groupA full access to the /home/groupA directory and members of groupB\
+    \ full access to the /home/groupB directory. No other users should be able to\
+    \ read, write, or execute any files within the directories.\n\nOutline the steps\
+    \ needed to accomplish the above tasks. Test that your permission schema works\
+    \ properly. Outline the tasks used to test permissions."
+  - '[PAGE 16]
+
+
+    # # Directory Trees
+
+
+    # # 4.3
+
+    LAB
+
+
+    Draw a directory tree of your system. Identify all physical partitions on the
+    tree with the drive name and the total size of the partitions.
+
+
+    Identify the user, group owner, and permissions of the following directories and
+    files:
+
+
+    +   - /etc
+
+    +   - /var
+
+    +   - /home/<your_user_directory>
+
+    +   - /opt
+
+    +   - /boot
+
+    +   - /etc/shadow'
+  - '[PAGE 17]
+
+
+    # Using vi
+
+
+    ![](img/d6e84b412351e10580574e8217099217_17_0.png)
+
+
+    Change your bash profile using vi to include the following:
+
+
+    +   * Your script directory (/*home/userid/scripts*) in the path environment variable
+
+    +   * A command-line prompt that includes the date and time on a line above the
+    default line
+
+    +   * A list of the contents of your home directory
+
+
+    Test your script.'
+  - '[PAGE 18]
+
+
+    # # Command Line
+
+    # Basics
+
+
+    Execute the commands needed to accomplish the following:
+
+
+    +   - Capture the file list of the /etc directory.
+
+    +   - Display the number of files captured.
+
+    +   - Display all lines in the captured file that contain the characters jpg.'
+  - '[PAGE 19]
+
+
+    # ## Administrative Tasks—Backups
+
+
+    **LAB 6.1**
+
+
+    Use the *tar* command to:
+
+
+    +   - Create a new *tar* file containing all the files in your home directory.
+    Name your *tar* file **myhome.tar**.
+
+    +   - Create a new directory called **test** in your home directory.
+
+    +   - Extract your *myhome.tar* file into your *test* directory.'
+  - '[PAGE 20]
+
+
+    # # Packages
+
+
+    # ## LAB 6.2
+
+
+    There are many packages on your Linux distribution disk. Execute the following
+    commands:
+
+
+    +   * List the files in an RPM package.
+
+    +   * Install an RPM package. (Choose tftp-server, whois, or some other small
+    package.)
+
+    +   * Update the RPM package. (You can use the same package.)
+
+    +   * Use the rpm command to query that the package is present.
+
+    +   * Remove the package.'
+  - '[PAGE 21]
+
+
+    # ## Shell
+
+    ## Programming
+
+
+    # ### LAB 6.3
+
+
+    Create the following scripts:
+
+
+    +   Create a script called **copy** that accepts a “from” filename and a “to”
+    filename, then copy the file using the cp command.
+
+
+    +   Create a script called **tod** that displays the time of day and either morning
+    or evening, depending on the time.
+
+
+    +   Write a script that creates user accounts from a text file list of user names.
+
+
+    +   Set the expire date to a value included on the command line.
+
+
+    +   Set the initial group to **mygroup**.'
+  - '[PAGE 22]
+
+
+    # # Networking—
+
+    Subnet Masks
+
+
+    ![](img/d6e84b412351e10580574e8217099217_22_0.png)
+
+
+    Using the IP address 192.168.0.0, answer the following questions:
+
+
+    +   1. What is the default subnet mask?
+
+    +       2. To divide the network into a minimum of 5 subnets, what would the subnet
+    mask be?
+
+    +       (Do not allow any more subnets than necessary.)
+
+    +       3. If the subnet mask provides for a minimum of 5 subnets within the network,
+    how
+
+    +       many host addresses would be available in each subnet?
+
+    +       4. With the subnet mask determined in question 2, list the network address
+    and broadcast
+
+    +       address of each subnet.'
+  - '[PAGE 23]
+
+
+    # **NFS Servers**
+
+
+    # **LAB 7.2**
+
+
+    Modify your `/etc/hosts` file to contain the IP address of every computer system
+    on your network.'
+  - '[PAGE 24]
+
+
+    # ## System Configuration
+
+
+    ### LAB 7.3
+
+
+    Connect to another student’s computer using the ssh program. Once connected:
+
+
+    +   - Change your password.
+
+    +   - List the files in your home directory.
+
+    +   - Change your command-line prompt.
+
+    +   - Log out. Log back into the other computer and ensure that your new password
+    is accepted and the new command-line prompt is displayed.'
+  - '[PAGE 25]
+
+
+    # Common Ports
+
+
+    # **LAB** 8.1
+
+
+    Identify which well-known ports are open on your computer system. Identify the
+    port and the processes that are listening on the port.'
+  md: "\n## Linux Distribution\n\n![](img/d6e84b412351e10580574e8217099217_8_0.png)\n\
+    \n**Scenario:** You have an older Pentium II 333 MHz computer with a 256 MB RAM,\
+    \ a 4 GB EIDE/ATA hard drive, and a 100Base-T network card. You have decided to\
+    \ install the Linux operating system on the computer to use it as a personal desktop\
+    \ and an FTP server. For a personal desktop system, you need a word processing\
+    \ and spreadsheet application. The FTP server needs to use a secure protocol that\
+    \ only those with authorization can access. The Linux distribution should have\
+    \ a package management system.\n\n**Action:** Research at least three different\
+    \ Linux distributions to assure they meet the criteria described above. Compare\
+    \ each distribution's features using a spreadsheet (rows and columns). Based on\
+    \ the compared criteria, choose a distribution to install.\n\n## Budgets\n\n###\
+    \ LAB 2.1\n\nCreate a budget for a three-workstation implementation in a small\
+    \ business. The workstations will be used to develop a C++ programming project.\
+    \ Include in your project budget the following:\n\n- 1. **Hardware**—The developers\
+    \ will be developing a high-end GUI application. They want three computers with\
+    \ the following characteristics:\n  - a. High-performance video cards and monitors\n\
+    \  - b. 1 GB of internal memory\n  - c. Two 80 GB hard drives/machines\n  - d.\
+    \ Gigabit network interface cards\n  - e. An 8-port switch to work at gigabit\
+    \ speed\n  - f. Moderate-quality color laser printer\n- 2. **Software**—Each machine\
+    \ will have a Linux distribution with the latest stable kernel. In addition the\
+    \ developers want the following applications:\n  - a. StarOffice productivity\
+    \ software\n  - b. Intel® C++ Compiler 7.1 for Linux\n- 3. **Maintenance**—At\
+    \ least two years on-site for computer hardware\n- 4. **Support**—At least a year\
+    \ of phone support for the C++ compiler\n- 5. **Training**—Training will be done\
+    \ in-house by the system administrator. Budget the time requirement of the administrator\
+    \ for a beginning usage training course.\n\n## Partitioning\n\n### LAB 2.2\n\n\
+    Based on the hardware and software specifications outlined in lab 2.1, design\
+    \ a partition schema. Partition each workstation in the same way.\n\nThere will\
+    \ be no more than ten users per workstation. Source code and data files for each\
+    \ user will be no more than 5 GB. The log files for the programs will be substantial.\
+    \ The disk space for the software will be in excess of 200 MB.\n\n## Hard Drive\
+    \ Installation\n\n### LAB 2.3\n\nOutline the steps necessary to install a Barracuda\
+    \ ATA V-ST3120023A hard drive, from Seagate, as a slave drive to an existing hard\
+    \ drive of the same type. Include the tools needed, jumper settings, and cable\
+    \ connections.\n\nOutline the steps needed to set up the newly installed hard\
+    \ drive on a Linux operating system. Include creating a partition, formatting\
+    \ the drive, and mounting the drive to the /opt/Oracle directory.\n\n## Linux\
+    \ Distribution\n\n### LAB 3.1\n\nInstall a distribution of the Linux operating\
+    \ system. Use a CD distribution set. Choose a custom installation type. Choose\
+    \ default values for all entries, except the following:\n\n- Use your first initial\
+    \ and last name as the host name of the computer.\n- Select no firewall.\n- Use\
+    \ **LinuxPlus** as the root password.\n- Select *shadow passwords*.\n- Install\
+    \ all packages.\n\nAdd an account for yourself. Always log on with your account\
+    \ and use the `su` command to connect as root when needed.\n\n### Boot Floppy\
+    \ Disk\n\n### LAB 3.2\n\nUse the procedure outlined in the chapter to create a\
+    \ boot floppy disk. Once the boot floppy is created, test it by starting your\
+    \ computer with the boot disk.\n\n## Creating Secure Accounts\n\n### LAB 4.1\n\
+    \nCreate an account for all students in the class. Divide the students evenly\
+    \ into two groups, groupA and groupB. Use the first initial and last name as the\
+    \ user name. Follow a policy for strong passwords.\n\n### Directories\n\n### LAB\
+    \ 4.2\n\nCreate two directories within /home called groupA and groupB. Assign\
+    \ permissions to these directories that allow members of groupA full access to\
+    \ the /home/groupA directory and members of groupB full access to the /home/groupB\
+    \ directory. No other users should be able to read, write, or execute any files\
+    \ within the directories.\n\nOutline the steps needed to accomplish the above\
+    \ tasks. Test that your permission schema works properly. Outline the tasks used\
+    \ to test permissions.\n\n## Directory Trees\n\n### LAB 4.3\n\nDraw a directory\
+    \ tree of your system. Identify all physical partitions on the tree with the drive\
+    \ name and the total size of the partitions.\n\nIdentify the user, group owner,\
+    \ and permissions of the following directories and files:\n\n- /etc\n- /var\n\
+    - /home/<your_user_directory>\n- /opt\n- /boot\n- /etc/shadow\n\n## Using vi\n\
+    \n![](img/d6e84b412351e10580574e8217099217_17_0.png)\n\nChange your bash profile\
+    \ using vi to include the following:\n\n- Your script directory (/*home/userid/scripts*)\
+    \ in the path environment variable\n- A command-line prompt that includes the\
+    \ date and time on a line above the default line\n- A list of the contents of\
+    \ your home directory\n\nTest your script.\n\n## Command Line Basics\n\nExecute\
+    \ the commands needed to accomplish the following:\n\n- Capture the file list\
+    \ of the /etc directory.\n- Display the number of files captured.\n- Display all\
+    \ lines in the captured file that contain the characters jpg.\n\n## Administrative\
+    \ Tasks—Backups\n\n### LAB 6.1\n\nUse the *tar* command to:\n\n- Create a new\
+    \ *tar* file containing all the files in your home directory. Name your *tar*\
+    \ file **myhome.tar**.\n- Create a new directory called **test** in your home\
+    \ directory.\n- Extract your *myhome.tar* file into your *test* directory.\n\n\
+    ## Packages\n\n### LAB 6.2\n\nThere are many packages on your Linux distribution\
+    \ disk. Execute the following commands:\n\n- List the files in an RPM package.\n\
+    - Install an RPM package. (Choose tftp-server, whois, or some other small package.)\n\
+    - Update the RPM package. (You can use the same package.)\n- Use the rpm command\
+    \ to query that the package is present.\n- Remove the package.\n\n## Shell Programming\n\
+    \n### LAB 6.3\n\nCreate the following scripts:\n\n- Create a script called **copy**\
+    \ that accepts a “from” filename and a “to” filename, then copy the file using\
+    \ the cp command.\n- Create a script called **tod** that displays the time of\
+    \ day and either morning or evening, depending on the time.\n- Write a script\
+    \ that creates user accounts from a text file list of user names.\n  - Set the\
+    \ expire date to a value included on the command line.\n  - Set the initial group\
+    \ to **mygroup**.\n\n## Networking—Subnet Masks\n\n![](img/d6e84b412351e10580574e8217099217_22_0.png)\n\
+    \nUsing the IP address 192.168.0.0, answer the following questions:\n\n- 1. What\
+    \ is the default subnet mask?\n- 2. To divide the network into a minimum of 5\
+    \ subnets, what would the subnet mask be? (Do not allow any more subnets than\
+    \ necessary.)\n- 3. If the subnet mask provides for a minimum of 5 subnets within\
+    \ the network, how many host addresses would be available in each subnet?\n- 4.\
+    \ With the subnet mask determined in question 2, list the network address and\
+    \ broadcast address of each subnet.\n\n## NFS Servers\n\n### LAB 7.2\n\nModify\
+    \ your `/etc/hosts` file to contain the IP address of every computer system on\
+    \ your network.\n\n## System Configuration\n\n### LAB 7.3\n\nConnect to another\
+    \ student’s computer using the ssh program. Once connected:\n\n- Change your password.\n\
+    - List the files in your home directory.\n- Change your command-line prompt.\n\
+    - Log out. Log back into the other computer and ensure that your new password\
+    \ is accepted and the new command-line prompt is displayed.\n\n## Common Ports\n\
+    \n### LAB 8.1\n\nIdentify which well-known ports are open on your computer system.\
+    \ Identify the port and the processes that are listening on the port.\n"
+  mdcn: "\n\n## Linux 发行版\n\n![](img/d6e84b412351e10580574e8217099217_8_0.png)\n\n\
+    **场景：** 你有一台旧的 Pentium II 333 MHz 计算机，配备 256 MB 内存、4 GB EIDE/ATA 硬盘和 100Base-T\
+    \ 网卡。你决定在这台计算机上安装 Linux 操作系统，将其用作个人桌面和 FTP 服务器。对于个人桌面系统，你需要文字处理和电子表格应用程序。FTP 服务器需要使用安全的协议，仅允许授权用户访问。该\
+    \ Linux 发行版应包含一个包管理系统。\n\n**操作：** 研究至少三种不同的 Linux 发行版，以确保它们符合上述标准。使用电子表格（行和列）比较每个发行版的特性。根据比较标准，选择一个发行版进行安装。\n\
+    \n## 预算\n\n### 实验 2.1\n\n为一家小型企业的三台工作站实施创建预算。这些工作站将用于开发 C++ 编程项目。在你的项目预算中包含以下内容：\n\
+    \n- 1. **硬件** — 开发人员将开发高端 GUI 应用程序。他们希望配备以下特性的三台计算机：\n  - a. 高性能显卡和显示器\n  - b.\
+    \ 1 GB 内部内存\n  - c. 两个 80 GB 硬盘/机器\n  - d. 千兆网络接口卡\n  - e. 一个以千兆速度工作的 8 口交换机\n\
+    \  - f. 中等质量的彩色激光打印机\n- 2. **软件** — 每台机器都将安装带有最新稳定内核的 Linux 发行版。此外，开发人员希望拥有以下应用程序：\n\
+    \  - a. StarOffice 生产力软件\n  - b. 适用于 Linux 的 Intel® C++ Compiler 7.1\n- 3. **维护**\
+    \ — 计算机硬件至少两年现场服务\n- 4. **支持** — C++ 编译器至少一年电话支持\n- 5. **培训** — 培训将由系统管理员内部进行。为入门使用培训课程编制系统管理员的时间需求预算。\n\
+    \n## 分区\n\n### 实验 2.2\n\n根据实验 2.1 中概述的硬件和软件规范，设计一个分区方案。以相同的方式对每台工作站进行分区。\n\n每台工作站将不超过十名用户。每个用户的源代码和数据文件不超过\
+    \ 5 GB。程序的日志文件将相当大。软件所需的磁盘空间将超过 200 MB。\n\n## 硬盘安装\n\n### 实验 2.3\n\n概述将希捷 Barracuda\
+    \ ATA V-ST3120023A 硬盘作为从盘安装到现有同类型硬盘上的必要步骤。包括所需工具、跳线设置和电缆连接。\n\n概述在 Linux 操作系统上设置新安装硬盘所需的步骤。包括创建分区、格式化驱动器以及将驱动器挂载到\
+    \ /opt/Oracle 目录。\n\n## Linux 发行版\n\n### 实验 3.1\n\n安装 Linux 操作系统的一个发行版。使用 CD 发行版套装。选择自定义安装类型。除以下各项外，所有条目均选择默认值：\n\
+    \n- 使用你的名字首字母和姓氏作为计算机的主机名。\n- 选择不启用防火墙。\n- 使用 **LinuxPlus** 作为 root 密码。\n- 选择\
+    \ *shadow passwords*（影子密码）。\n- 安装所有软件包。\n\n为你自己添加一个账户。始终使用你的账户登录，并在需要时使用 `su`\
+    \ 命令以 root 身份连接。\n\n### 启动软盘\n\n### 实验 3.2\n\n使用章节中概述的步骤创建启动软盘。创建启动软盘后，使用启动盘启动计算机以测试它。\n\
+    \n## 创建安全账户\n\n### 实验 4.1\n\n为班上所有学生创建账户。将学生平均分成两组：groupA 和 groupB。使用名字首字母和姓氏作为用户名。遵循强密码策略。\n\
+    \n### 目录\n\n### 实验 4.2\n\n在 /home 下创建两个名为 groupA 和 groupB 的目录。为这些目录分配权限，允许 groupA\
+    \ 的成员完全访问 /home/groupA 目录，允许 groupB 的成员完全访问 /home/groupB 目录。其他任何用户都不应能够读取、写入或执行这些目录内的任何文件。\n\
+    \n概述完成上述任务所需的步骤。测试你的权限模式是否正常工作。概述用于测试权限的任务。\n\n## 目录树\n\n### 实验 4.3\n\n绘制你的系统目录树。在树上标识所有物理分区，注明驱动器名称和分区的总大小。\n\
+    \n标识以下目录和文件的用户、组所有者以及权限：\n\n- /etc\n- /var\n- /home/<your_user_directory>\n- /opt\n\
+    - /boot\n- /etc/shadow\n\n## 使用 vi\n\n![](img/d6e84b412351e10580574e8217099217_17_0.png)\n\
+    \n使用 vi 修改你的 bash 配置文件，以包含以下内容：\n\n- 你的脚本目录（/*home/userid/scripts*）在路径环境变量中\n\
+    - 包含日期和时间的命令行提示符，位于默认行之上的一行\n- 你主目录内容的列表\n\n测试你的脚本。\n\n## 命令行基础\n\n执行执行以下命令以完成下列任务：\n\
+    \n- 捕获 /etc 目录的文件列表。\n- 显示捕获的文件数量。\n- 显示捕获文件中含有字符 jpg 的所有行。\n\n## 管理任务 — 备份\n\n\
+    ### 实验 6.1\n\n使用 *tar* 命令：\n\n- 创建一个包含你主目录中所有文件的新 *tar* 文件。将你的 *tar* 文件命名为 **myhome.tar**。\n\
+    - 在你的主目录中创建一个名为 **test** 的新目录。\n- 将你的 *myhome.tar* 文件提取到你的 *test* 目录中。\n\n## 软件包\n\
+    \n### 实验 6.2\n\n你的 Linux 发行版磁盘上有许多软件包。执行以下命令：\n\n- 列出 RPM 软件包中的文件。\n- 安装一个 RPM\
+    \ 软件包。（选择 tftp-server、whois 或其他小型软件包。）\n- 更新 RPM 软件包。（你可以使用相同的软件包。）\n- 使用 rpm\
+    \ 命令查询该软件包是否存在。\n- 移除该软件包。\n\n## Shell 编程\n\n### 实验 6.3\n\n创建以下脚本：\n\n- 创建一个名为\
+    \ **copy** 的脚本，接受“源”文件名和“目标”文件名，然后使用 cp 命令复制文件。\n- 创建一个名为 **tod** 的脚本，根据时间显示一天中的时间以及“上午”或“晚上”。\n\
+    - 编写一个脚本，根据文本文件中的用户名列表创建用户账户。\n  - 将过期日期设置为命令行中包含的值。\n  - 将初始组设置为 **mygroup**。\n\
+    \n## 网络 — 子网掩码\n\n![](img/d6e84b412351e10580574e8217099217_22_0.png)\n\n使用 IP\
+    \ 地址 192.168.0.0，回答以下问题：\n\n- 1. 默认子网掩码是什么？\n- 2. 要将网络划分为至少 5 个子网，子网掩码应该是什么？（不要允许多于必要的子网。）\n\
+    - 3. 如果子网掩码为网络内的至少 5 个子网提供空间，每个子网中有多少个主机地址可用？\n- 4. 使用第 2 题中确定的子网掩码，列出每个子网的网络地址和广播地址。\n\
+    \n## NFS 服务器\n\n### 实验 7.2\n\n修改你的 `/etc/hosts` 文件，使其包含网络上每个计算机系统的 IP 地址。\n\n\
+    ## 系统配置\n\n### 实验 7.3\n\n使用 ssh 程序连接到另一名学生的计算机。连接后：\n\n- 更改你的密码。\n- 列出你主目录中的文件。\n\
+    - 更改你的命令行提示符。\n- 注销。重新登录另一台计算机，确保接受你的新密码并显示新的命令行提示符。\n\n## 常见端口\n\n### 实验 8.1\n\
+    \n识别你的计算机系统中哪些知名端口是打开的。识别端口以及在端口上监听的进程。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 26]
+
+
+    # # User Configurations
+
+
+    # ## LAB 8.2
+
+
+    Configure your directory * /home/username/scripts * to share to others using NFS.
+
+
+    +   * Configure * /etc/exports * , * /etc/hosts.allow * , and * /etc/hosts.deny
+    * .
+
+    +   * Start the NFS service.
+
+
+    Configure your directory * /home/username/scripts * to share to others using Samba.
+
+
+    +   * Configure * /etc/samba/smb.conf * .
+
+    +   * Create Samba users.
+
+    +   * Start Samba.'
+  - '[PAGE 27]
+
+
+    # Samba
+
+
+    # LAB 8.3
+
+
+    Configure a Windows client to connect to your Samba share from lab 8.2. Test your
+    client by accessing the share.'
+  - '[PAGE 28]
+
+
+    # # X Windows Configuration
+
+
+    ## LAB
+
+
+    ![](img/d6e84b412351e10580574e8217099217_28_0.png)
+
+
+    Manually configure X. Copy the /etc/X11/XFree86Config file before beginning this
+    procedure.
+
+
+    +   1. Use the /usr/sbin/ddcprobe command to probe the hardware for monitor and
+    video card information. Write down your results.
+
+    +   2. Generate a configuration file skeleton using the XFree86 program with the
+    -configure option.
+
+    +   3. Test the configuration using XFree86 with the -xf86config option.
+
+    +   4. Replace the existing XF86Config file with your new file.'
+  - '[PAGE 29]
+
+
+    # # Swap Space
+
+
+    ![](img/d6e84b412351e10580574e8217099217_29_0.png)
+
+
+    Create a swap file of 16 MB. Use a partition that contains enough space, create
+    the file, then enable the file.'
+  - '[PAGE 30]
+
+
+    # # Additional Swap Space
+
+
+    LAB 9.3
+
+
+    Add another hard drive to your Linux system. Complete the following tasks:
+
+
+    +   - Physically add the hard drive.
+
+    +   - Partition the hard drive.
+
+    +   - Format the partitions created.
+
+    +   - Update the *etc/fstab* configuration file.'
+  - '[PAGE 31]
+
+
+    # Creating a Desktop Application
+
+
+    LAB 10.1
+
+
+    From GNOME create a launcher to launch a vi session in a terminal window. The
+    vi pro- gram is located in the /bin directory. Name your launcher vi.'
+  - '[PAGE 32]
+
+
+    # Desktop Utilities
+
+
+    LAB 10.2
+
+
+    Add a menu panel to the GNOME desktop. Add the following items to the menu panel:
+
+
+    +   * The utility, Show Desktop Button
+
+    +   * The multimedia object, CD Player
+
+    +   * The button object, Log Out'
+  - '[PAGE 33]
+
+
+    # User cron—
+
+    command run on
+
+
+    Create a user cron job to monitor disk space.
+
+
+    +   - The cron should run at 5 PM daily.
+
+    +   - Write the results of the df command to a file.
+
+    +   - E-mail the file to your sendmail account.'
+  - '[PAGE 34]
+
+
+    # Process Management
+
+
+    # LAB 11.2
+
+
+    Test killing, suspending, and restarting a process.
+
+
+    +   - Create a test script that will loop continually and display text at each
+    iteration.
+
+    +   - Suspend the script.
+
+    +   - Check to see that the script has a T state.
+
+    +   - Restart the script in the foreground.
+
+    +   - Check to see that the script has restarted.
+
+    +   - Kill the script.'
+  - '[PAGE 35]
+
+
+    # ## Lab 11.3
+
+    # Logging Features
+
+
+    Check the secure log file for refused connections. Create a user cron job that
+    mails refused connections to you.
+
+
+    +   - Create a cron that runs daily at 10 minutes after noon.
+
+    +   - Use the grep command to extract any log entries that contain the word refused
+    to a file.
+
+    +   - E-mail the file to your sendmail account.'
+  - '[PAGE 36]
+
+
+    # Secure Updates
+
+
+    # LAB 12.1
+
+
+    Use the RedHat up2date program to update your operating system.
+
+
+    +   1. The latest SSL certificate for Red Hat Network (RHN) is located at https://rhn.redhat.com/help/ssl_cert.px.
+    Follow the onscreen instructions to download, verify, and install the new certificate.
+
+
+    +   2. Execute the **up2date** program from the command line. You must be logged
+    in as root to run this program (su root).
+
+
+    +   3. Follow the onscreen prompts to register an account, send your computer
+    information, download the latest updates, and install the updates.'
+  - '[PAGE 37]
+
+
+    # Setting a GRUB Password
+
+
+    LAB
+
+
+    # 12.2
+
+
+    Set a GRUB password.
+
+
+    +   1. Use `/sbin/grub-md5-crypt` to create a password hash.
+
+    +   2. Add the password generated to the appropriate file.'
+  - '[PAGE 38]
+
+
+    # Securing Services
+
+
+    # LAB 12.3
+
+
+    Create a login banner for sshd connections. The banner should not give any information
+    about the system and should warn those connecting that only authorized users are
+    allowed.'
+  - '[PAGE 39]
+
+
+    # # Troubleshooting Log Files
+
+
+    # ## LAB 3.1
+
+
+    Check the log files for login attempts from unauthorized users. Attempt several
+    logins with invalid users, then check the logs for failed attempts.'
+  - '[PAGE 40]
+
+
+    # **Troubleshooting Hardware**
+
+
+    # LAB 13.2
+
+
+    Identify your hard drive. List the manufacturer''s designation, type of hard drive
+    (EIDE or SCSI), and cable type. Accomplish this task by opening the computer case
+    and examining the components.'
+  - '[PAGE 41]
+
+
+    # # Troubleshooting Connection Status
+
+
+    # LAB
+
+    ## 3.3
+
+
+    Check the network connection from your computer to a remote Web site, for example,
+    www.cisco.com.
+
+
+    +   1. Ping the remote connection. Identify the IP address and make sure that
+    the system responds to the ping.
+
+    +   2. Use `traceroute` to determine the network path to the remote system.
+
+    +   3. Use `nslookup` to ensure that the remote connection has a DNS entry and
+    to identify the DNS servers that service the entry.
+
+    +   4. Determine whether the remote connection has any mail servers using the
+    `host` command.'
+  - '[PAGE 42]
+
+
+    <!-- no content -->'
+  - '[PAGE 43]
+
+
+    <!-- no content -->'
+  - '[PAGE 44]
+
+
+    <!-- no content -->'
+  - '[PAGE 45]
+
+
+    <!-- no content -->'
+  - '[PAGE 46]
+
+
+    <!-- no content -->'
+  - '[PAGE 47]
+
+
+    <!-- no content -->'
+  - '[PAGE 48]
+
+
+    <!-- no content -->'
+  - '[PAGE 49]
+
+
+    <!-- no content -->'
+  - '[PAGE 50]
+
+
+    <!-- no content -->'
+  - "[PAGE 51]\n\n![](img/d6e84b412351e10580574e8217099217_51_0.png)\n\n# Cisco Learning\
+    \ Institute's  \nLinux+ Fundamentals and Certification\n\nThe need for a comprehensive\
+    \ Linux certification is simple: Linux is vendor-independent. Linux-certified\
+    \ professionals must know basic installation, operation, and troubleshooting of\
+    \ Linux operating systems.\n\nLinux+ Fundamentals and Certification covers all\
+    \ of the exam requirements and provides a solid foundation on installation requirements,\
+    \ administration basics, and administrative tasks. It also covers networking basics\
+    \ such as network addresses and configuring remote client access, managing services,\
+    \ hardware configuration, security, and troubleshooting.\n\nLinux+ Fundamentals\
+    \ and Certification ensures that you can explain fundamental open source resources/licenses,\
+    \ demonstrate knowledge of user administration, understand file permissions/software\
+    \ configurations, and manage local storage devices and network protocols.\n\n\
+    Key features include:\n\n+   - The main text, printed in two-color and filled\
+    \ with numerous illustrations, contains Linux+ objectives, performance objectives,\
+    \ and end-of-chapter review questions to aid in understanding and retention.\n\
+    +   - The lab manual accompanying the main text includes discussions and instructions\
+    \ on how to complete the hands-on exercises.\n+   - The certification kit on the\
+    \ accompanying CD includes hands-on, Web-based activities as well as hundreds\
+    \ of questions to help you prepare for the exam.\n+   - A Student Resource CD\
+    \ containing hundreds of questions to help you prepare for the Linux+ Certification\
+    \ exam.\n+   - Authentication to access the Web-based curriculum, which contains\
+    \ hands-on labs through an authorized training site.\n\n![](img/d6e84b412351e10580574e8217099217_51_1.png)\n\
+    \nFor more information about this book or any of Prentice Hall's other new technology\
+    \ titles, visit our website at http://www.prenhall.com\n\nStudentAid.ed.gov\n\n\
+    ![](img/d6e84b412351e10580574e8217099217_51_2.png)\n\n![](img/d6e84b412351e10580574e8217099217_51_3.png)\n\
+    \n![](img/d6e84b412351e10580574e8217099217_51_4.png)"
+  md: '
+
+    ## User Configurations
+
+
+    ### LAB 8.2
+
+
+    Configure your directory `/home/username/scripts` to share to others using NFS.
+
+
+    - Configure `/etc/exports`, `/etc/hosts.allow`, and `/etc/hosts.deny`.
+
+    - Start the NFS service.
+
+
+    Configure your directory `/home/username/scripts` to share to others using Samba.
+
+
+    - Configure `/etc/samba/smb.conf`.
+
+    - Create Samba users.
+
+    - Start Samba.
+
+
+    ### Samba
+
+
+    ### LAB 8.3
+
+
+    Configure a Windows client to connect to your Samba share from lab 8.2. Test your
+    client by accessing the share.
+
+
+    ## X Windows Configuration
+
+
+    ### LAB
+
+
+    ![](img/d6e84b412351e10580574e8217099217_28_0.png)
+
+
+    Manually configure X. Copy the `/etc/X11/XFree86Config` file before beginning
+    this procedure.
+
+
+    1. Use the `/usr/sbin/ddcprobe` command to probe the hardware for monitor and
+    video card information. Write down your results.
+
+    2. Generate a configuration file skeleton using the XFree86 program with the `-configure`
+    option.
+
+    3. Test the configuration using XFree86 with the `-xf86config` option.
+
+    4. Replace the existing XF86Config file with your new file.
+
+
+    ## Swap Space
+
+
+    ![](img/d6e84b412351e10580574e8217099217_29_0.png)
+
+
+    Create a swap file of 16 MB. Use a partition that contains enough space, create
+    the file, then enable the file.
+
+
+    ## Additional Swap Space
+
+
+    ### LAB 9.3
+
+
+    Add another hard drive to your Linux system. Complete the following tasks:
+
+
+    - Physically add the hard drive.
+
+    - Partition the hard drive.
+
+    - Format the partitions created.
+
+    - Update the `/etc/fstab` configuration file.
+
+
+    ## Creating a Desktop Application
+
+
+    ### LAB 10.1
+
+
+    From GNOME create a launcher to launch a vi session in a terminal window. The
+    vi program is located in the /bin directory. Name your launcher vi.
+
+
+    ## Desktop Utilities
+
+
+    ### LAB 10.2
+
+
+    Add a menu panel to the GNOME desktop. Add the following items to the menu panel:
+
+
+    - The utility, Show Desktop Button
+
+    - The multimedia object, CD Player
+
+    - The button object, Log Out
+
+
+    ## User cron — command run on
+
+
+    Create a user cron job to monitor disk space.
+
+
+    - The cron should run at 5 PM daily.
+
+    - Write the results of the `df` command to a file.
+
+    - E-mail the file to your sendmail account.
+
+
+    ## Process Management
+
+
+    ### LAB 11.2
+
+
+    Test killing, suspending, and restarting a process.
+
+
+    - Create a test script that will loop continually and display text at each iteration.
+
+    - Suspend the script.
+
+    - Check to see that the script has a T state.
+
+    - Restart the script in the foreground.
+
+    - Check to see that the script has restarted.
+
+    - Kill the script.
+
+
+    ### Lab 11.3
+
+
+    ## Logging Features
+
+
+    Check the secure log file for refused connections. Create a user cron job that
+    mails refused connections to you.
+
+
+    - Create a cron that runs daily at 10 minutes after noon.
+
+    - Use the `grep` command to extract any log entries that contain the word refused
+    to a file.
+
+    - E-mail the file to your sendmail account.
+
+
+    ## Secure Updates
+
+
+    ### LAB 12.1
+
+
+    Use the RedHat up2date program to update your operating system.
+
+
+    1. The latest SSL certificate for Red Hat Network (RHN) is located at https://rhn.redhat.com/help/ssl_cert.px.
+    Follow the onscreen instructions to download, verify, and install the new certificate.
+
+    2. Execute the **up2date** program from the command line. You must be logged in
+    as root to run this program (`su root`).
+
+    3. Follow the onscreen prompts to register an account, send your computer information,
+    download the latest updates, and install the updates.
+
+
+    ## Setting a GRUB Password
+
+
+    ### LAB 12.2
+
+
+    Set a GRUB password.
+
+
+    1. Use `/sbin/grub-md5-crypt` to create a password hash.
+
+    2. Add the password generated to the appropriate file.
+
+
+    ## Securing Services
+
+
+    ### LAB 12.3
+
+
+    Create a login banner for sshd connections. The banner should not give any information
+    about the system and should warn those connecting that only authorized users are
+    allowed.
+
+
+    ## Troubleshooting Log Files
+
+
+    ### LAB 13.1
+
+
+    Check the log files for login attempts from unauthorized users. Attempt several
+    logins with invalid users, then check the logs for failed attempts.
+
+
+    ## Troubleshooting Hardware
+
+
+    ### LAB 13.2
+
+
+    Identify your hard drive. List the manufacturer''s designation, type of hard drive
+    (EIDE or SCSI), and cable type. Accomplish this task by opening the computer case
+    and examining the components.
+
+
+    ## Troubleshooting Connection Status
+
+
+    ### LAB 13.3
+
+
+    Check the network connection from your computer to a remote Web site, for example,
+    www.cisco.com.
+
+
+    1. Ping the remote connection. Identify the IP address and make sure that the
+    system responds to the ping.
+
+    2. Use `traceroute` to determine the network path to the remote system.
+
+    3. Use `nslookup` to ensure that the remote connection has a DNS entry and to
+    identify the DNS servers that service the entry.
+
+    4. Determine whether the remote connection has any mail servers using the `host`
+    command.
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_0.png)
+
+
+    # Cisco Learning Institute''s Linux+ Fundamentals and Certification
+
+
+    The need for a comprehensive Linux certification is simple: Linux is vendor-independent.
+    Linux-certified professionals must know basic installation, operation, and troubleshooting
+    of Linux operating systems.
+
+
+    Linux+ Fundamentals and Certification covers all of the exam requirements and
+    provides a solid foundation on installation requirements, administration basics,
+    and administrative tasks. It also covers networking basics such as network addresses
+    and configuring remote client access, managing services, hardware configuration,
+    security, and troubleshooting.
+
+
+    Linux+ Fundamentals and Certification ensures that you can explain fundamental
+    open source resources/licenses, demonstrate knowledge of user administration,
+    understand file permissions/software configurations, and manage local storage
+    devices and network protocols.
+
+
+    Key features include:
+
+
+    - The main text, printed in two-color and filled with numerous illustrations,
+    contains Linux+ objectives, performance objectives, and end-of-chapter review
+    questions to aid in understanding and retention.
+
+    - The lab manual accompanying the main text includes discussions and instructions
+    on how to complete the hands-on exercises.
+
+    - The certification kit on the accompanying CD includes hands-on, Web-based activities
+    as well as hundreds of questions to help you prepare for the exam.
+
+    - A Student Resource CD containing hundreds of questions to help you prepare for
+    the Linux+ Certification exam.
+
+    - Authentication to access the Web-based curriculum, which contains hands-on labs
+    through an authorized training site.
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_1.png)
+
+
+    For more information about this book or any of Prentice Hall''s other new technology
+    titles, visit our website at http://www.prenhall.com
+
+
+    StudentAid.ed.gov
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_2.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_3.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_4.png)
+
+    '
+  mdcn: '
+
+    ## 用户配置
+
+
+    ### 实验 8.2
+
+
+    使用 NFS 将你的目录 `/home/username/scripts` 配置为可与他人共享。
+
+
+    - 配置 `/etc/exports`、`/etc/hosts.allow` 和 `/etc/hosts.deny`。
+
+    - 启动 NFS 服务。
+
+
+    使用 Samba 将你的目录 `/home/username/scripts` 配置为可与他人共享。
+
+
+    - 配置 `/etc/samba/smb.conf`。
+
+    - 创建 Samba 用户。
+
+    - 启动 Samba。
+
+
+    ### Samba
+
+
+    ### 实验 8.3
+
+
+    配置一台 Windows 客户端，使其能够连接到你在实验 8.2 中创建的 Samba 共享。通过访问该共享来测试客户端连接。
+
+
+    ## X 窗口系统配置
+
+
+    ### 实验
+
+
+    ![](img/d6e84b412351e10580574e8217099217_28_0.png)
+
+
+    手动配置 X 窗口系统。在执行此流程之前，请复制 `/etc/X11/XFree86Config` 文件作为备份。
+
+
+    1. 使用 `/usr/sbin/ddcprobe` 命令探测显示器和显卡的硬件信息。记下你的探测结果。
+
+    2. 使用 XFree86 程序并加上 `-configure` 选项生成配置文件的骨架。
+
+    3. 使用 XFree86 并加上 `-xf86config` 选项测试配置。
+
+    4. 用新文件替换现有的 XF86Config 文件。
+
+
+    ## 交换空间
+
+
+    ![](img/d6e84b412351e10580574e8217099217_29_0.png)
+
+
+    创建一个 16 MB 的交换文件。选择一个空间足够的分区，创建该文件，然后启用该文件。
+
+
+    ## 额外交换空间
+
+
+    ### 实验 9.3
+
+
+    向你的 Linux 系统添加另一块硬盘。完成以下任务：
+
+
+    - 物理安装硬盘。
+
+    - 对硬盘进行分区。
+
+    - 格式化创建的分区。
+
+    - 更新 `/etc/fstab` 配置文件。
+
+
+    ## 创建桌面应用程序
+
+
+    ### 实验 10.1
+
+
+    在 GNOME 中创建一个启动器（launcher），用于在终端窗口中启动 vi 会话。vi 程序位于 /bin 目录中。将启动器命名为 vi。
+
+
+    ## 桌面工具
+
+
+    ### 实验 10.2
+
+
+    在 GNOME 桌面上添加一个菜单面板。将以下项目添加到菜单面板中：
+
+
+    - 工具：显示桌面按钮 (Show Desktop Button)
+
+    - 多媒体对象：CD 播放器 (CD Player)
+
+    - 按钮对象：注销 (Log Out)
+
+
+    ## 用户 cron — 命令运行于
+
+
+    创建一个用户 cron 任务来监控磁盘空间。
+
+
+    - cron 任务应每天下午 5 点运行。
+
+    - 将 `df` 命令的结果写入一个文件。
+
+    - 将该文件通过电子邮件发送到你的 sendmail 账户。
+
+
+    ## 进程管理
+
+
+    ### 实验 11.2
+
+
+    测试终止、挂起和重启进程。
+
+
+    - 创建一个测试脚本，该脚本将持续循环并在每次迭代时显示文本。
+
+    - 挂起该脚本。
+
+    - 检查脚本是否处于 T 状态。
+
+    - 在前台重启该脚本。
+
+    - 检查脚本是否已重启。
+
+    - 终止该脚本。
+
+
+    ### 实验 11.3
+
+
+    ## 日志功能
+
+
+    检查安全日志文件中的连接被拒绝记录。创建一个用户 cron 任务，将连接被拒绝的记录通过邮件发送给你。
+
+
+    - 创建一个每天中午过后 10 分钟运行的 cron 任务。
+
+    - 使用 `grep` 命令提取包含 "refused" 一词的日志条目到一个文件中。
+
+    - 将该文件通过电子邮件发送到你的 sendmail 账户。
+
+
+    ## 安全更新
+
+
+    ### 实验 12.1
+
+
+    使用 RedHat up2date 程序更新你的操作系统。
+
+
+    1. Red Hat Network (RHN) 最新的 SSL 证书位于 https://rhn.redhat.com/help/ssl_cert.px。按照屏幕说明下载、验证并安装新证书。
+
+    2. 从命令行执行 **up2date** 程序。你必须以 root 身份登录才能运行此程序 (`su root`)。
+
+    3. 按照屏幕提示注册账户，发送计算机信息，下载最新更新并安装这些更新。
+
+
+    ## 设置 GRUB 密码
+
+
+    ### 实验 12.2
+
+
+    设置 GRUB 密码。
+
+
+    1. 使用 `/sbin/grub-md5-crypt` 创建密码哈希。
+
+    2. 将生成的密码添加到相应的文件中。
+
+
+    ## 保护服务
+
+
+    ### 实验 12.3
+
+
+    为 sshd 连接创建一个登录横幅。横幅不应提供任何系统信息，并且应警告连接者只有授权用户才允许访问。
+
+
+    ## 故障排除日志文件
+
+
+    ### 实验 13.1
+
+
+    检查日志文件中来自未授权用户的登录尝试。使用无效用户尝试几次登录，然后检查日志中的失败尝试记录。
+
+
+    ## 故障排除硬件
+
+
+    ### 实验 13.2
+
+
+    识别你的硬盘。列出制造商的型号、硬盘类型（EIDE 或 SCSI）以及线缆类型。通过打开计算机机箱并检查组件来完成此任务。
+
+
+    ## 故障排除连接状态
+
+
+    ### 实验 13.3
+
+
+    检查从你的计算机到远程网站（例如 www.cisco.com）的网络连接。
+
+
+    1. Ping 远程连接。识别 IP 地址并确保系统对 ping 有响应。
+
+    2. 使用 `traceroute` 确定到远程系统的网络路径。
+
+    3. 使用 `nslookup` 确保远程连接有 DNS 条目，并识别服务于该条目的 DNS 服务器。
+
+    4. 使用 `host` 命令确定远程连接是否有邮件服务器。
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_0.png)
+
+
+    # 思科学习学院 Linux+ 基础与认证
+
+
+    需要全面 Linux 认证的原因很简单：Linux 是厂商独立的。Linux 认证专业人士必须了解 Linux 操作系统的基本安装、操作和故障排除。
+
+
+    Linux+ 基础与认证涵盖了所有考试要求，并在安装要求、管理基础和管理任务方面提供了坚实的基础。它还涵盖了网络基础知识，如网络地址和配置远程客户端访问、服务管理、硬件配置、安全性和故障排除。
+
+
+    Linux+ 基础与认证确保你能解释基本的开源资源/许可证，展示用户管理的知识，理解文件权限/软件配置，并管理本地存储设备和网络协议。
+
+
+    主要特点包括：
+
+
+    - 正文部分采用双色印刷，包含大量插图，其中包含 Linux+ 目标、性能目标以及章节末尾的复习问题，以帮助理解和记忆。
+
+    - 随附正文的实验手册包含有关如何完成动手练习的讨论和说明。
+
+    - 随附 CD 上的认证套件包含动手的基于 Web 的活动，以及数百道题目，帮助你为考试做准备。
+
+    - 学生资源 CD 包含数百道题目，帮助你为 Linux+ 认证考试做准备。
+
+    - 通过授权培训站点访问基于 Web 课程的身份验证，该课程包含动手实验。
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_1.png)
+
+
+    有关本书或 Prentice Hall 其他新技术新书的更多信息，请访问我们的网站 http://www.prenhall.com
+
+
+    StudentAid.ed.gov
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_2.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_3.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_51_4.png)
+
+
+    '
+  merge: 0

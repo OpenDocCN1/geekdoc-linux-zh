@@ -1,0 +1,1053 @@
+- pgno: 0
+  md: '# Lab Manual to accompany
+
+    Linux+ Fundamentals
+
+    and Certification
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_0.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_1.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_2.png)
+
+
+    ![](img/d6e84b412351e10580574e8217099217_0_3.png)
+
+
+    David Engle,
+
+    Cisco Learning Institute'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/d6e84b412351e10580574e8217099217_1_0.png)
+
+
+    Digitized by the Internet Archive
+
+    in 2020 with funding from
+
+    Kahle/Austin Foundation
+
+
+    https://archive.org/details/labmanualtoaccom0000unse'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# ## Linux+
+
+    ## Fundamentals
+
+    ## and Certification
+
+
+    **Cisco Learning Institute**
+
+    **David Engle**
+
+
+    ![](img/d6e84b412351e10580574e8217099217_2_0.png)
+
+
+    Upper Saddle River, New Jersey
+
+    Columbus, Ohio'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '**Assistant Vice President and Publisher:** Charles E. Steward, Jr.
+
+    **Production Editor:** Alexandra Benedicto Wolf
+
+    **Design Coordinator:** Diane Emsberger
+
+    **Cover Designer:** Jeff Vanik
+
+    **Cover art:** Apart Creations
+
+    **Production Manager:** Mattottenweller
+
+    **Marketing Manager:** Ben Leonard
+
+
+    This book was set in Times Roman by *The GTS Companies*/York, PA Campus. It was
+    printed and bound by Courier Kendallville, Inc. The cover was printed by Phoenix
+    Color Corp.
+
+
+    Linux 2.0 Penguin logo courtesy of Larry Ewing (www.isc.tamu.edu) and The GIMP
+    (General Image Manipulation Program). Reprinted with permission.
+
+
+    Cisco Learning Institute™ is a trademark of Cisco Learning Institute.
+
+
+    **Copyright © 2005 by Cisco Learning Institute, Phoenix, Arizona, 85016, and published
+    by Pearson Education, Inc., Upper Saddle River, New Jersey 07458.**
+
+
+    Pearson Prentice Hall. All rights reserved. Printed in the United States of America.
+    This publication is protected by Copyright and permission should be obtained from
+    the publisher prior to any prohibited reproduction, storage in a retrieval system,
+    or transmission in any form or by any means, electronic, mechanical, photocopying,
+    recording, or likewise. For information regarding permission(s), write to: Rights
+    and Permissions Department.
+
+
+    **Pearson Prentice Hall™** is a trademark of Pearson Education, Inc.
+
+    **Pearson®** is a registered trademark of Pearson plc
+
+    **Prentice Hall** is a registered trademark of Pearson Education, Inc.
+
+
+    +   - Pearson Education Ltd.
+
+    +   - Pearson Education Singapore Pte. Ltd.
+
+    +   - Pearson Education Canada, Ltd.
+
+    +   - Pearson Education—Japan
+
+    +   - Pearson Education Australia Pty. Limited
+
+    +   - Pearson Education North Asia Ltd.
+
+    +   - Pearson Educación de México, S.A. de C.V.
+
+    +   - Pearson Education Malaysia Pte. Ltd.
+
+
+    ![](img/d6e84b412351e10580574e8217099217_3_0.png)
+
+
+    10 9 8 7 6 5 4 3 2 1
+
+    ISBN 0-13-185511-5'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Contents
+
+
+    +   PREFACE  v
+
+
+    +   LAB 1.1  LINUX DISTRIBUTION  I
+
+
+    +   LAB 2.1  BUDGETS  2
+
+
+    +   LAB 2.2  PARTITIONING  3
+
+
+    +   LAB 2.3  HARD DRIVE INSTALLATION  4
+
+
+    +   LAB 3.1  LINUX DISTRIBUTION  5
+
+
+    +   LAB 3.2  LINUX DISTRIBUTION—BOOT FLOPPY DISK  6
+
+
+    +   LAB 4.1  CREATING SECURE ACCOUNTS  7
+
+
+    +   LAB 4.2  DIRECTORIES  8
+
+
+    +   LAB 4.3  DIRECTORY TREES  9
+
+
+    +   LAB 5.1  USING VI  10
+
+
+    +   LAB 5.2  COMMAND LINE BASICS  11
+
+
+    +   LAB 6.1  ADMINISTRATIVE TASKS—BACKUPS  12
+
+
+    +   LAB 6.2  PACKAGES  13
+
+
+    +   LAB 6.3  SHELL PROGRAMMING  14'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '+   - LAB 7.1 NETWORKING— SUBNET MASKS  15
+
+
+    +   - LAB 7.2 NFS SERVERS  16
+
+
+    +   - LAB 7.3 SYSTEM CONFIGURATION  17
+
+
+    +   - LAB 8.1 COMMON PORTS  18
+
+
+    +   - LAB 8.2 USER CONFIGURATIONS  19
+
+
+    +   - LAB 8.3 SAMBA  20
+
+
+    +   - LAB 9.1 X WINDOWS CONFIGURATION  21
+
+
+    +   - LAB 9.2 SWAP SPACE  22
+
+
+    +   - LAB 9.3 ADDITIONAL SWAP SPACE  23
+
+
+    +   - LAB 10.1 CREATING A DESKTOP APPLICATION  24
+
+
+    +   - LAB 10.2 DESKTOP UTILITIES  25
+
+
+    +   - LAB 11.1 USER CRON— COMMAND RUN ON  26
+
+
+    +   - LAB 11.2 PROCESS MANAGEMENT  27
+
+
+    +   - LAB 12.1 SECURE UPDATES  29
+
+
+    +   - LAB 12.2 SETTING A GRUB PASSWORD  30
+
+
+    +   - LAB 12.3 SECURING SERVICES  31
+
+
+    +   - LAB 13.1 TROUBLESHOOTING LOG FILES  32
+
+
+    +   - LAB 13.2 TROUBLESHOOTING HARDWARE  33
+
+
+    +   - LAB 13.3 TROUBLESHOOTING CONNECTION STATUS  34'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # Preface
+
+
+    Merriam-Webster''s Collegiate Dictionary defines a computer as a programmable
+    electronic device that can store, retrieve, and process data. A more inclusive
+    definition would be that it operates under the control of instructions stored
+    in its own memory and can accept data, manipulate the data, produce results, and
+    store the results for future use. A computer has two principal characteristics:
+    It responds to a specific set of instructions and it can execute a prerecorded
+    list of instructions called a program.
+
+
+    The set of machine-language instructions that a computer will respond to is embedded
+    in the central processing unit. These instructions are the basic building blocks
+    of all instructions that the computer will follow. Before your word processing
+    or game program will execute on a computer, the computer has to be programmed,
+    using these basic instructions, to accomplish a wide range of tasks. These tasks
+    include reading and writing to the disk drives, interpreting the keyboard strokes,
+    interpreting the mouse movements, and many other hardware-related jobs. A set
+    of instructions that accomplishes these critical tasks is called an *operating
+    system* (OS).
+
+
+    Every computer system must have an operating system. The OS is a set of programs
+    that coordinates all the tasks of the computer system. For example, if you want
+    to print a document to the printer, the OS must translate your text to code that
+    the printer will understand, then send the code to the printer. Every task, no
+    matter how small, must be controlled by the operating system.
+
+
+    The operating system consists of a group of related programs needed to accomplish
+    these individual tasks. The rationale for having a group of programs, rather than
+    one program, is that not everyone needs all the programs that are available. In
+    most cases, if you installed all the available programs, you would run out of
+    space on your hard drive and in your computer''s memory.
+
+
+    At the core of the operating system is the program called the kernel. The kernel
+    maintains the computer''s clock, starts applications, and assigns resources such
+    as devices, programs, and data. The kernel is memory resident, which means that
+    it is in memory once the operating system starts and remains there while the computer
+    system is running. Other programs are often nonresident, which means that they
+    have to be read from an external storage device into memory when needed.
+
+
+    There are many different operating systems. The most commonly used operating systems
+    in personal computers today are Linux, Windows, Mac OS, and Unix. Of the operating
+    systems listed, only Linux may be freely copied and distributed.
+
+
+    Linux is growing in popularity, and its market share is increasing every year.
+    Determining market share for Linux is difficult because if someone purchases a
+    computer preconfigured with Windows and then replaces the operating system with
+    Linux operating system, no one subtracts one from the Windows column. Linux''s
+    market share is even more difficult to determine due to the fact that most Linux
+    distributions are downloaded from the Internet rather than purchased.
+
+
+    With the increased market share of the Linux operating system comes the increased
+    need of Linux professionals. One way to distinguish yourself from the average
+    technician'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'is to obtain the Linux + certification. This book will put you well on your
+    way to obtaining this certification. This book addresses all of the new exam objectives
+    covered in the latest exam version.
+
+
+    # ## ORGANIZATION OF THE TEXT
+
+
+    *Linux+ Fundamentals and Certification* covers all of the exam requirements and
+    provides a solid foundation for learning Linux +, including installation requirements,
+    administration basics, and administrative tasks. Also included are networking
+    basics such as network addresses and configuring remote client access, managing
+    services, hardware configuration, security, and troubleshooting.
+
+
+    Each chapter begins with a list of **performance objectives**, which indicate
+    what new skills and knowledge will be learned after completing the chapter. The
+    instructor will usually administer the requirements of the performance objectives.
+    Each chapter presents all the information needed to perform the exercises and
+    pass the review quiz. The **self-test** at the end of each chapter verifies the
+    students’ understanding of the material. Answers to the self-test questions (true/false
+    and multiple choice) are given at the end of the book.
+
+
+    Discussions of the Linux + exam objectives are specified throughout the book.
+    A list of exam objectives and their coverage in the text is found after the Preface.
+
+
+    Labs are provided for each chapter in the accompanying laboratory manual. These
+    labs allow the Linux + student to practice the concepts taught in the chapter.
+
+
+    Industry tips are provided throughout the book. These tips are written by various
+    network professionals and provide insight into the working world of Linux +.
+
+
+    # ## SUPPLEMENTS
+
+
+    *Linux+ Fundamentals and Certification* is supported by the following materials:
+
+
+    +   * ReviewMaster Tutorial on CD packaged with the text provides review questions
+    designed to prepare the reader for the Linux + examination.
+
+    +   * Another CD-ROM contains useful example programs and files designed to aid
+    the student in developing and understanding the concepts presented in each part.
+    View the README document (text, Microsoft Word, and HTML formats) to get a detailed
+    description of the companion CD-ROM.
+
+    +   * The laboratory manual accompanying the text provides hands-on experiments
+    for each chapter.
+
+    +   * An instructor’s manual is available, which contains teaching suggestions,
+    sample syllabi and tests, and other helpful items.
+
+
+    # ## ACKNOWLEDGMENTS
+
+
+    Many people have helped me with this book and without their assistance I would
+    still be revising chapters. Mike Gay and Shane DeRidder provided valuable technical
+    feedback on many of the chapters. My brother Vic, the real Linux guru of the family,
+    provided more support, technical knowledge, and feedback than anyone could ask
+    for.
+
+
+    Most of all, thanks to Lynda, my wife, for encouraging me and accepting the time
+    I needed to write this book. God has blessed me with a wonderful wife.
+
+
+    David Engle'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Linux Distribution
+
+
+    ![](img/d6e84b412351e10580574e8217099217_8_0.png)
+
+
+    **Scenario:** You have an older Pentium II 333 MHz computer with a 256 MB RAM,
+    a 4 GB EIDE/ATA hard drive, and a 100Base-T network card. You have decided to
+    install the Linux operating system on the computer to use it as a personal desktop
+    and an FTP server. For a personal desktop system, you need a word processing and
+    spreadsheet application. The FTP server needs to use a secure protocol that only
+    those with authorization can access. The Linux distribution should have a package
+    management system.
+
+
+    **Action:** Research at least three different Linux distributions to assure they
+    meet the criteria described above. Compare each distribution''s features using
+    a spreadsheet (rows and columns). Based on the compared criteria, choose a distribution
+    to install.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# # Budgets\n\n# LAB 2.1\n\nCreate a budget for a three-workstation implementation\
+    \ in a small business. The work-\nstations will be used to develop a C++ programming\
+    \ project. Include in your project bud-\nget the following:\n\n+   1. **Hardware**—The\
+    \ developers will be developing a high-end GUI application. They\n+   want three\
+    \ computers with the following characteristics:\n+   \n+       a. High-performance\
+    \ video cards and monitors\n+   \n+       b. 1 GB of internal memory\n+   \n+\
+    \       c. Two 80 GB hard drives/machines\n+   \n+       d. Gigabit network interface\
+    \ cards\n+   \n+       e. An 8-port switch to work at gigabit speed\n+   \n+ \
+    \      f. Moderate-quality color laser printer\n\n+   2. **Software**—Each machine\
+    \ will have a Linux distribution with the latest stable kernel.\n+   In addition\
+    \ the developers want the following applications:\n+   \n+       a. StarOffice\
+    \ productivity software\n+   \n+       b. Intel® C++ Compiler 7.1 for Linux\n\n\
+    +   3. **Maintenance**—At least two years on-site for computer hardware\n\n+ \
+    \  4. **Support**—At least a year of phone support for the C++ compiler\n\n+ \
+    \  5. **Training**—Training will be done in-house by the system administrator.\
+    \ Budget the\n+   time requirement of the administrator for a beginning usage\
+    \ training course."
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# ## Partitioning\n\nBased on the hardware and software specifications outlined\
+    \ in lab 2.1, design a partition schema. Partition each workstation in the same\
+    \ way.  \nThere will be no more than ten users per workstation. Source code and\
+    \ data files for each user will be no more than 5 GB. The log files for the programs\
+    \ will be substantial. The disk space for the software will be in excess of 200\
+    \ MB."
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # Hard Drive Installation
+
+
+    # LAB **2.3**
+
+
+    Outline the steps necessary to install a Barracuda ATA V-ST3120023A hard drive,
+    from Seagate, as a slave drive to an existing hard drive of the same type. Include
+    the tools needed, jumper settings, and cable connections.
+
+
+    Outline the steps needed to set up the newly installed hard drive on a Linux operating
+    system. Include creating a partition, formatting the drive, and mounting the drive
+    to the /opt/Oracle directory.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Linux Distribution
+
+
+    **LAB 3.1**
+
+
+    Install a distribution of the Linux operating system. Use a CD distribution set.
+    Choose a custom installation type. Choose default values for all entries, except
+    the following:
+
+
+    +   * Use your first initial and last name as the host name of the computer.
+
+    +   * Select no firewall.
+
+    +   * Use **LinuxPlus** as the root password.
+
+    +   * Select *shadow passwords*.
+
+    +   * Install all packages.
+
+
+    Add an account for yourself. Always log on with your account and use the `su`
+    command to connect as root when needed.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# Linux Distribution—  \nBoot Floppy Disk  \n**LAB** 3.2\n\nUse the procedure\
+    \ outlined in the chapter to create a boot floppy disk. Once the boot floppy is\
+    \ created, test it by starting your computer with the boot disk."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Creating Secure Accounts
+
+
+    LAB **4.1**
+
+
+    Create an account for all students in the class. Divide the students evenly into
+    two groups, groupA and groupB. Use the first initial and last name as the user
+    name. Follow a policy for strong passwords.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# # LAB 4.2  \n## Directories\n\nCreate two directories within /home called\
+    \ groupA and groupB. Assign permissions to these directories that allow members\
+    \ of groupA full access to the /home/groupA directory and members of groupB full\
+    \ access to the /home/groupB directory. No other users should be able to read,\
+    \ write, or execute any files within the directories.\n\nOutline the steps needed\
+    \ to accomplish the above tasks. Test that your permission schema works properly.\
+    \ Outline the tasks used to test permissions."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# # Directory Trees
+
+
+    # # 4.3
+
+    LAB
+
+
+    Draw a directory tree of your system. Identify all physical partitions on the
+    tree with the drive name and the total size of the partitions.
+
+
+    Identify the user, group owner, and permissions of the following directories and
+    files:
+
+
+    +   - /etc
+
+    +   - /var
+
+    +   - /home/<your_user_directory>
+
+    +   - /opt
+
+    +   - /boot
+
+    +   - /etc/shadow'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Using vi
+
+
+    ![](img/d6e84b412351e10580574e8217099217_17_0.png)
+
+
+    Change your bash profile using vi to include the following:
+
+
+    +   * Your script directory (/*home/userid/scripts*) in the path environment variable
+
+    +   * A command-line prompt that includes the date and time on a line above the
+    default line
+
+    +   * A list of the contents of your home directory
+
+
+    Test your script.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # Command Line
+
+    # Basics
+
+
+    Execute the commands needed to accomplish the following:
+
+
+    +   - Capture the file list of the /etc directory.
+
+    +   - Display the number of files captured.
+
+    +   - Display all lines in the captured file that contain the characters jpg.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# ## Administrative Tasks—Backups
+
+
+    **LAB 6.1**
+
+
+    Use the *tar* command to:
+
+
+    +   - Create a new *tar* file containing all the files in your home directory.
+    Name your *tar* file **myhome.tar**.
+
+    +   - Create a new directory called **test** in your home directory.
+
+    +   - Extract your *myhome.tar* file into your *test* directory.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Packages
+
+
+    # ## LAB 6.2
+
+
+    There are many packages on your Linux distribution disk. Execute the following
+    commands:
+
+
+    +   * List the files in an RPM package.
+
+    +   * Install an RPM package. (Choose tftp-server, whois, or some other small
+    package.)
+
+    +   * Update the RPM package. (You can use the same package.)
+
+    +   * Use the rpm command to query that the package is present.
+
+    +   * Remove the package.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# ## Shell
+
+    ## Programming
+
+
+    # ### LAB 6.3
+
+
+    Create the following scripts:
+
+
+    +   Create a script called **copy** that accepts a “from” filename and a “to”
+    filename, then copy the file using the cp command.
+
+
+    +   Create a script called **tod** that displays the time of day and either morning
+    or evening, depending on the time.
+
+
+    +   Write a script that creates user accounts from a text file list of user names.
+
+
+    +   Set the expire date to a value included on the command line.
+
+
+    +   Set the initial group to **mygroup**.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# # Networking—
+
+    Subnet Masks
+
+
+    ![](img/d6e84b412351e10580574e8217099217_22_0.png)
+
+
+    Using the IP address 192.168.0.0, answer the following questions:
+
+
+    +   1. What is the default subnet mask?
+
+    +       2. To divide the network into a minimum of 5 subnets, what would the subnet
+    mask be?
+
+    +       (Do not allow any more subnets than necessary.)
+
+    +       3. If the subnet mask provides for a minimum of 5 subnets within the network,
+    how
+
+    +       many host addresses would be available in each subnet?
+
+    +       4. With the subnet mask determined in question 2, list the network address
+    and broadcast
+
+    +       address of each subnet.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# **NFS Servers**
+
+
+    # **LAB 7.2**
+
+
+    Modify your `/etc/hosts` file to contain the IP address of every computer system
+    on your network.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# ## System Configuration
+
+
+    ### LAB 7.3
+
+
+    Connect to another student’s computer using the ssh program. Once connected:
+
+
+    +   - Change your password.
+
+    +   - List the files in your home directory.
+
+    +   - Change your command-line prompt.
+
+    +   - Log out. Log back into the other computer and ensure that your new password
+    is accepted and the new command-line prompt is displayed.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Common Ports
+
+
+    # **LAB** 8.1
+
+
+    Identify which well-known ports are open on your computer system. Identify the
+    port and the processes that are listening on the port.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# # User Configurations
+
+
+    # ## LAB 8.2
+
+
+    Configure your directory * /home/username/scripts * to share to others using NFS.
+
+
+    +   * Configure * /etc/exports * , * /etc/hosts.allow * , and * /etc/hosts.deny
+    * .
+
+    +   * Start the NFS service.
+
+
+    Configure your directory * /home/username/scripts * to share to others using Samba.
+
+
+    +   * Configure * /etc/samba/smb.conf * .
+
+    +   * Create Samba users.
+
+    +   * Start Samba.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Samba
+
+
+    # LAB 8.3
+
+
+    Configure a Windows client to connect to your Samba share from lab 8.2. Test your
+    client by accessing the share.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # X Windows Configuration
+
+
+    ## LAB
+
+
+    ![](img/d6e84b412351e10580574e8217099217_28_0.png)
+
+
+    Manually configure X. Copy the /etc/X11/XFree86Config file before beginning this
+    procedure.
+
+
+    +   1. Use the /usr/sbin/ddcprobe command to probe the hardware for monitor and
+    video card information. Write down your results.
+
+    +   2. Generate a configuration file skeleton using the XFree86 program with the
+    -configure option.
+
+    +   3. Test the configuration using XFree86 with the -xf86config option.
+
+    +   4. Replace the existing XF86Config file with your new file.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# # Swap Space
+
+
+    ![](img/d6e84b412351e10580574e8217099217_29_0.png)
+
+
+    Create a swap file of 16 MB. Use a partition that contains enough space, create
+    the file, then enable the file.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# # Additional Swap Space
+
+
+    LAB 9.3
+
+
+    Add another hard drive to your Linux system. Complete the following tasks:
+
+
+    +   - Physically add the hard drive.
+
+    +   - Partition the hard drive.
+
+    +   - Format the partitions created.
+
+    +   - Update the *etc/fstab* configuration file.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Creating a Desktop Application
+
+
+    LAB 10.1
+
+
+    From GNOME create a launcher to launch a vi session in a terminal window. The
+    vi pro- gram is located in the /bin directory. Name your launcher vi.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Desktop Utilities
+
+
+    LAB 10.2
+
+
+    Add a menu panel to the GNOME desktop. Add the following items to the menu panel:
+
+
+    +   * The utility, Show Desktop Button
+
+    +   * The multimedia object, CD Player
+
+    +   * The button object, Log Out'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# User cron—
+
+    command run on
+
+
+    Create a user cron job to monitor disk space.
+
+
+    +   - The cron should run at 5 PM daily.
+
+    +   - Write the results of the df command to a file.
+
+    +   - E-mail the file to your sendmail account.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Process Management
+
+
+    # LAB 11.2
+
+
+    Test killing, suspending, and restarting a process.
+
+
+    +   - Create a test script that will loop continually and display text at each
+    iteration.
+
+    +   - Suspend the script.
+
+    +   - Check to see that the script has a T state.
+
+    +   - Restart the script in the foreground.
+
+    +   - Check to see that the script has restarted.
+
+    +   - Kill the script.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# ## Lab 11.3
+
+    # Logging Features
+
+
+    Check the secure log file for refused connections. Create a user cron job that
+    mails refused connections to you.
+
+
+    +   - Create a cron that runs daily at 10 minutes after noon.
+
+    +   - Use the grep command to extract any log entries that contain the word refused
+    to a file.
+
+    +   - E-mail the file to your sendmail account.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Secure Updates
+
+
+    # LAB 12.1
+
+
+    Use the RedHat up2date program to update your operating system.
+
+
+    +   1. The latest SSL certificate for Red Hat Network (RHN) is located at https://rhn.redhat.com/help/ssl_cert.px.
+    Follow the onscreen instructions to download, verify, and install the new certificate.
+
+
+    +   2. Execute the **up2date** program from the command line. You must be logged
+    in as root to run this program (su root).
+
+
+    +   3. Follow the onscreen prompts to register an account, send your computer
+    information, download the latest updates, and install the updates.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Setting a GRUB Password
+
+
+    LAB
+
+
+    # 12.2
+
+
+    Set a GRUB password.
+
+
+    +   1. Use `/sbin/grub-md5-crypt` to create a password hash.
+
+    +   2. Add the password generated to the appropriate file.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Securing Services
+
+
+    # LAB 12.3
+
+
+    Create a login banner for sshd connections. The banner should not give any information
+    about the system and should warn those connecting that only authorized users are
+    allowed.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # Troubleshooting Log Files
+
+
+    # ## LAB 3.1
+
+
+    Check the log files for login attempts from unauthorized users. Attempt several
+    logins with invalid users, then check the logs for failed attempts.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# **Troubleshooting Hardware**
+
+
+    # LAB 13.2
+
+
+    Identify your hard drive. List the manufacturer''s designation, type of hard drive
+    (EIDE or SCSI), and cable type. Accomplish this task by opening the computer case
+    and examining the components.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# # Troubleshooting Connection Status
+
+
+    # LAB
+
+    ## 3.3
+
+
+    Check the network connection from your computer to a remote Web site, for example,
+    www.cisco.com.
+
+
+    +   1. Ping the remote connection. Identify the IP address and make sure that
+    the system responds to the ping.
+
+    +   2. Use `traceroute` to determine the network path to the remote system.
+
+    +   3. Use `nslookup` to ensure that the remote connection has a DNS entry and
+    to identify the DNS servers that service the entry.
+
+    +   4. Determine whether the remote connection has any mail servers using the
+    `host` command.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "![](img/d6e84b412351e10580574e8217099217_51_0.png)\n\n# Cisco Learning Institute's\
+    \  \nLinux+ Fundamentals and Certification\n\nThe need for a comprehensive Linux\
+    \ certification is simple: Linux is vendor-independent. Linux-certified professionals\
+    \ must know basic installation, operation, and troubleshooting of Linux operating\
+    \ systems.\n\nLinux+ Fundamentals and Certification covers all of the exam requirements\
+    \ and provides a solid foundation on installation requirements, administration\
+    \ basics, and administrative tasks. It also covers networking basics such as network\
+    \ addresses and configuring remote client access, managing services, hardware\
+    \ configuration, security, and troubleshooting.\n\nLinux+ Fundamentals and Certification\
+    \ ensures that you can explain fundamental open source resources/licenses, demonstrate\
+    \ knowledge of user administration, understand file permissions/software configurations,\
+    \ and manage local storage devices and network protocols.\n\nKey features include:\n\
+    \n+   - The main text, printed in two-color and filled with numerous illustrations,\
+    \ contains Linux+ objectives, performance objectives, and end-of-chapter review\
+    \ questions to aid in understanding and retention.\n+   - The lab manual accompanying\
+    \ the main text includes discussions and instructions on how to complete the hands-on\
+    \ exercises.\n+   - The certification kit on the accompanying CD includes hands-on,\
+    \ Web-based activities as well as hundreds of questions to help you prepare for\
+    \ the exam.\n+   - A Student Resource CD containing hundreds of questions to help\
+    \ you prepare for the Linux+ Certification exam.\n+   - Authentication to access\
+    \ the Web-based curriculum, which contains hands-on labs through an authorized\
+    \ training site.\n\n![](img/d6e84b412351e10580574e8217099217_51_1.png)\n\nFor\
+    \ more information about this book or any of Prentice Hall's other new technology\
+    \ titles, visit our website at http://www.prenhall.com\n\nStudentAid.ed.gov\n\n\
+    ![](img/d6e84b412351e10580574e8217099217_51_2.png)\n\n![](img/d6e84b412351e10580574e8217099217_51_3.png)\n\
+    \n![](img/d6e84b412351e10580574e8217099217_51_4.png)"
+  merge: -1
+  img_proc: true
