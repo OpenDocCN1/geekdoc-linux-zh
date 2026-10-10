@@ -932,6 +932,7 @@
 +   [Linux 初学者指南](docs/linux-for-beginners/README.md)
 +   [Linux 初学者指南（第17版，2024年）](docs/linux-for-beginners---17th-edition-2024/README.md)
 +   [Linux 初学者指南 - 学习 Linux 操作系统基础的逐步用户手册（Ubuntu 操作系统）](docs/linux-for-beginners---step-by-step-user-manual-to-learning-t/README.md)
++   [Linux 初学者指南](docs/linux-for-beginners-17th-ed-2024/README.md)
 +   [Linux 初学者指南：学习 Linux 操作系统和掌握 Linux 命令行的实用全面指南：包含自测题以验证您的学习水平](docs/linux-for-beginners-a-practical-and-comprehensive-guide-to-l/README.md)
 +   [Linux 初学者指南：Linux 操作系统与命令行入门指南](docs/linux-for-beginners-an-introduction-to-the-linux-operating-s/README.md)
 +   [Linux 初学者指南：基础 Linux 命令与 Shell 脚本](docs/linux-for-beginners-basic-linux-commands-and-shell-scripting/README.md)

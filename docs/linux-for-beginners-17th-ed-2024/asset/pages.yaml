@@ -1,0 +1,4932 @@
+- pgno: 0
+  md: '# GET STARTED WITH LINUX CODING & PROGRAMMING
+
+
+    # Linux
+
+    For Beginners
+
+
+    ✔ Jargon-free
+
+    Tips & Advice
+
+
+    ✔ Step-by-step
+
+    Tutorials
+
+
+    ✔ Clear Full
+
+    Colour Guides
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_0_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_0_1.png)
+
+
+    www.pclpublications.com
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_0_2.png)
+
+
+    100% INDEPENDENT'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Want to master your Code?
+
+
+    Then don’t miss our NEW Programming & Coding magazine on K Readly now!
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_1_0.png)
+
+
+    Click our handy link to read now: https://bit.ly/30Cl1zx'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Linux
+
+    For Beginners
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_2_0.png)
+
+
+    Linux For Beginners is the first and only choice if you are a new adopter and
+    want to learn everything you''ll need to get started with coding and programming.
+    This guide is crammed with helpful guides and step-by-step fully illustrated tutorials,
+    written in plain easy to follow English. Over the pages of this new user guide
+    you will clearly learn all you need to know about coding your own amazing apps.
+    With this unofficial instruction manual at your side no problem will be unsolvable,
+    no question unanswered as you learn, explore and enhance your programming skills.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_2_1.png)
+
+
+    www.pcipublications.com'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Contents
+
+
+    **6** Say Hello to Linux
+
+
+    8 Why Linux?
+
+    10 The Best Linux Distributions
+
+    12 Equipment You Will Need
+
+    14 Desktop Environments
+
+    16 Which Distro?
+
+
+    **18** Getting Started with Linux
+
+
+    20 Creating a Linux Installer on Windows
+
+    22 Installing Linux on a PC
+
+    24 Installing a Virtual Environment
+
+    26 Installing Linux in a Virtual Environment
+
+
+    **28** Getting to Know Linux
+
+
+    30 Introduction to the Cinnamon Menu
+
+    32 Navigating the Cinnamon Desktop
+
+    34 10 Things to do After Installing Linux Mint
+
+    36 Did You Know...Apollo 11
+
+    38 Creating Users
+
+    40 Customising the Desktop
+
+    42 Becoming Anonymous Online
+
+
+    **44** Using the Terminal
+
+
+    48 Basics of the Terminal
+
+    48 Update Mint via the Terminal
+
+    50 Install Apps via the Terminal – Part 1
+
+    52 Install Apps via the Terminal – Part 2
+
+    54 Did You Know...Linux Kernel 0.01
+
+    56 Creating a File Using the Terminal
+
+    58 Creating and Removing Directories
+
+    60 Fun Things to do in the Terminal
+
+    62 More Fun Things to do in the Terminal
+
+    64 Linux Tips and Tricks
+
+    66 Did You Know...Linux and the Big Bang
+
+    68 Creating Bash Scripts – Part 1
+
+    70 Creating Bash Scripts – Part 2
+
+    72 Creating Bash Scripts – Part 3
+
+    74 Creating Bash Scripts – Part 4
+
+    76 Creating Bash Scripts – Part 5
+
+    78 Pi X Linux = The Perfect Combination
+
+    80 Command Line Quick Reference
+
+    82 A-Z of Linux Commands
+
+    84 Did You Know...Good enough for NASA
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_3_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# FREE CODE
+
+    DOWNLOAD!
+
+    50 Complete
+
+    Programs!
+
+    Over 20,000
+
+    lines of code!
+
+
+    Visit: pcpublications.com/exclusives
+
+    Please note: Sign up is required to download.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_4_0.png)
+
+
+    > “With this book, you too can become a part of the open community of Linux users.
+    The tutorials within these pages will help you get to grips with Linux, show you
+    how it works, what you can do with it and how you can code with it to take your
+    Linux experience to even greater heights.”
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_4_1.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_4_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_4_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "![](img/5019375da05cbf0090115165d80772a1_5_0.png)\n\n> **\"How did you know\
+    \ so much about computers?\"**  \n> **\"I didn't, it was the first one.\"**  \n\
+    > — *Admiral Grace Hopper (pioneer programmer)*  \n> *when interviewed by David\
+    \ Letterman*"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Say Hello
+
+    to Linux
+
+
+    Why Linux? What is it? Where do I get it? Why are there so many different versions
+    of it? Most beginners ask these, and many more, questions when starting out. It''s
+    true that Linux is an incredibly versatile and powerful operating system but where
+    do you start? Thankfully, you can find the answers in this section.
+
+
+    There is so much you can do with Linux but you need to know where to start; we''re
+    here to help you out. In this section you can learn what Linux is, what a distro
+    is and what a desktop environment is. You can also begin to explore how Linux
+    works and how it can work for you.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Why Linux?
+
+
+    For many of its users, Linux means freedom. Freedom from the walled garden approach
+    of other operating systems, freedom to change and use the OS as you please and
+    freedom from any form of licensing or payment. There’s a lot more to Linux than
+    you may think though.
+
+
+    # FREE AND OPEN
+
+
+    Linux is a fantastic fit for those who want something different. The efficiency
+    of the system, the availability of applications and stability are just a few good
+    reasons.
+
+
+    The first thing you need to know is that there is no such operating system called
+    Linux. Linux is in fact the operating system kernel, the core component of an
+    OS. When talking about Linux what we, and others, are referring to are one of
+    the many distributions, or distros, that use the Linux kernel. No doubt you’ve
+    heard of at least one of the current popular distros: Ubuntu, Linux Mint, Fedora,
+    openSUSE, Debian, Raspbian, the list goes on. Each one of these distros offer
+    something a little different for the user. While each has the Linux kernel at
+    its core, they provide the user with a different looking desktop environment,
+    different preloaded applications, different ways in which to update the system
+    and get more apps installed and a slightly different look and feel throughout
+    the entire system. However, at the centre lies Linux, which is why we say Linux.
+
+
+    Linux works considerably differently to Windows or macOS. It’s free for a start:
+    free to download, free to install on as many computers as you like, free to use
+    for an unlimited amount of time and free to upgrade and extend with, equally,
+    free programs and applications. This free to use element is one of the biggest
+    draws for the developer. While a Windows licence can cost up to £100, and a Mac
+    considerably more, a user, be they a developer, gamer or someone who wants to
+    put an older computer to use, can quickly download a distro and get to work in
+    a matter of minutes. Alongside the free to use aspect comes a level of freedom
+    to customise and mould the system to your own uses. Each of the available distros
+    available on the Internet have a certain ‘spin’,
+
+
+    Linux is a great operating system on which to start coding.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_7_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/5019375da05cbf0090115165d80772a1_8_0.png)
+
+
+    # There are thousands of free packages available for programmers under Linux.
+
+
+    in that some offer increased security, a fancy looking desktop, a gaming specific
+    spin, or something directed toward students. This extensibility makes Linux a
+    more desirable platform to use, as you can quickly mould the system into a development
+    base, including many different kinds of IDEs for the likes of Python, web development,
+    C++, Java and so on; or create a base for online anonymity, perhaps as a Minecraft
+    server, media centre and much more.
+
+
+    Another remarkable advantage for those looking to learn how to code, is that Linux
+    comes with most of the popular coding environments built in. Both Python and C++
+    are preinstalled in a high percentage of Linux distros available, which means
+    you can start to program almost as soon as you install the system and boot it
+    up for the first time.
+
+
+    Generally speaking, Linux doesn''t take up as many system resources as Windows
+    or macOS; by system resources we mean memory, hard drive space and CPU load. The
+    Linux code has been streamlined and is free from third-party ''bloatware'' which
+    hogs those systems resources. A more efficient system of course means more available
+    resources for the coding and testing environment and the programs you eventually
+    create. Less use of resources also means you can use Linux on older hardware that
+    would normally struggle or even
+
+
+    # A Linux programming environment can be as simple or as complex as you need it
+    to be.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_8_1.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_8_2.png)
+
+
+    # Each distro offers something unique to the user but all have Linux at the core.
+
+
+    refuse to run the latest versions of Windows or macOS; so rather than throwing
+    away an old computer, it can be reused with a Linux distro.
+
+
+    It''s not all about C++, Python or any of the other more popular programming languages
+    though. Using the command line of Linux, also called the Terminal, you''re able
+    to create Shell scripts, which are programs that are designed to run from the
+    command line and made up of scripting languages. They are used mainly to automate
+    tasks or offer the user some form of input and output for a certain operation.
+
+
+    Finally, although there are many more advantages we can list, there are thousands
+    and thousands of free programs and apps available that cover nearly every aspect
+    of computing. Known as packages, there are (at the time of writing) over 8,700
+    specific programming applications just on Linux Mint alone and an incredible 62,000+
+    overall packages catering for everything from Amater Rad20 to WIKI tools.
+
+
+    Linux then, is a great resource and environment for programming in. It''s perfectly
+    suited for developers and is continually improving and evolving. If you''re serious
+    about getting into coding, or you just want to try something new, give Linux a
+    try and see how it works for you.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# The Best Linux Distributions
+
+
+    There are lots of versions of Linux available, known as Distributions. Each has
+    a different ethos and approach. Here are five great distributions to try and where
+    you can get them.
+
+
+    # GOING LINUX
+
+
+    The installation process for most distributions is similar. You download a disk
+    image from the website and burn it to an optical disk or create a USB Flash Drive
+    installer. Just be careful to get the right distribution for your hardware and
+    read the instructions carefully.
+
+
+    # LINUX MINT
+
+
+    By far the most popular Linux distro (distribution) is Linux Mint. Mint began
+    life back in 2006, as an alternative to the then most popular distro, Ubuntu.
+    Although based on Ubuntu’s Long Term Support build, Linux Mint took a different
+    direction and offered the user a better overall experience.
+
+
+    Linux Mint has three main desktop versions available with each new version of
+    the core OS it releases. This may sound confusing at first but it’s quite simple.
+    Currently, Linux Mint uses the Cinnamon Desktop Environment as its flagship model;
+    there’s MATE and Xfce models available too.
+
+
+    Cinnamon is a graphically rich desktop environment, MATE uses less fancy graphics,
+    and is more stable on a wider variety of desktop systems, and Xfce is an extremely
+    streamlined desktop environment that’s built for speed and ultimate stability.
+
+
+    Throughout this title we’ll be using the Cinnamon version; however, you can try
+    out any of the other desktop environments as you wish. In fact, it’s recommended
+    that you do spend some time trying different environments, and even different
+    distros, to see which suits you and your computer best.
+
+
+    www.linuxmint.com
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_9_0.png)
+
+
+    # UBUNTU
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_9_1.png)
+
+
+    The second most popular distro available is Ubuntu, which is an ancient African
+    word meaning “humanity to others”. Ubuntu’s popularity has fluctuated over its
+    fourteen year life. At one time, it was easily the most used Linux-based operating
+    system in the world but some wrong choices along the way with regards to its presentation,
+    and some unfortunate, controversial elements involving privacy, sadly saw it topple
+    from the number one spot.
+
+
+    That said, Ubuntu has since made amends and is slowing crawling its way back up
+    the Linux leader board. The latest versions of the OS use the GNOME 3 desktop
+    environment, an impressive environment, although it can be a little confusing
+    for former Windows users and is a little heavy on system resources, especially
+    if you’re planning on installing it on an older computer.
+
+
+    Ubuntu, for all its faults, is a good Linux distro to start experimenting with.
+    It’s a clean interface, easy to use and install and offers the user a complete
+    Linux experience.
+
+
+    www.ubuntu.com'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# ARCH
+
+
+    Arch is one of longest running Linux distributions and forms the basis of many
+    other versions of Linux. Why install Mint or Ubuntu when you can install Arch?
+    Many users do exactly that but it''s not ideal for beginners. Ubuntu and Mint
+    both offer an easier installation path and come with software packages to help
+    you get started.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_10_0.png)
+
+
+    Arch is a distro for when you''re more experienced with Linux. You start with
+    nothing but the command line and from there you have to manually partition your
+    hard drive, set where the installation files go, create a user, set the OS locale
+    and finally install a desktop environment along with the apps you want.
+
+
+    Arch on the other hand, is a more ''bare bones'' affair. Arch is committed to
+    free software and its repositories contain over 50,000 apps to install, including
+    multiple different Desktop environments, and use as you would with any other distro.
+
+
+    The advantage though, for all this hard work, is a distro that you have created.
+    This means your Arch distro won''t come with all the unnecessary files and apps
+    that others have preinstalled; it''s custom made for you, by you.
+
+
+    www.archlinux.org
+
+
+    # RASPBERRY PI DESKTOP
+
+
+    No doubt you''ve heard of the Raspberry Pi, it''s hard not to have, as this remarkable,
+    tiny computer has taken the technology world by storm for the last six years since
+    it was introduced.
+
+
+    There are several aspects to the Raspberry Pi that make it such a sought after
+    piece of the computing world. For one it''s cheap, costing around £25 for what
+    is essentially a fully working computer. It''s small, measuring not much bigger
+    than a credit card. You can build electronics with it, using a fully programmable
+    interface, and it comes with Raspbian, its own custom-made, Debian-based operating
+    system that includes an office suite alongside many different programming languages
+    and educational resources.
+
+
+    Raspbian is exclusive to the Pi hardware, since the Raspberry Pi uses an ARM processor
+    to power it. However, the Raspberry Pi Foundation has since released a PC version
+    of Raspbian: Raspberry Pi Desktop.
+
+
+    Just like the Pi version, Raspberry Pi Desktop comes with the all the coding,
+    educational and other apps you will ever need. It''s quick, stable and works superbly.
+    If you''re interested in stretching your Linux experience, then this is certainly
+    one of the top distros to consider.
+
+
+    www.raspberrypi.org/downloads/raspberrypi-pi-desktop
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_10_1.png)
+
+
+    # OPEN SUSE
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_10_2.png)
+
+
+    Most Linux distributions fall into two camps. There are ones with the latest features
+    and technology (like Ubuntu) and Mint and those with few new features but rock
+    solid reliability, like Debian.
+
+
+    Meanwhile, openSUSE attempts to cover both bases. openSUSE Leap is the rock solid
+    system; it''s developed openly by a community along with SUSE employees, who develop
+    an enterprise-level operating system, SUSE; this powers the London Stock Exchange
+    amongst other things. It is designed for mission critical environments where there
+    is no scope for instability; if you find all that too sensible, openSUSE Tumbleweed
+    is a rolling release with all the latest features, and the occasional crash.
+
+
+    openSUSE is a highly respected Linux distribution and many of its core contributors
+    work on the Linux Kernel, LibreOffice, Gnome and other key Linux areas. In short,
+    openSUSE is where you''ll find the pros hanging out.
+
+
+    www.openSUSE.org'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Equipmnt You Will Need
+
+
+    The system requirements for successfully installing Linux Mint on to a PC are
+    surprisingly low, so even a computer that’s several years old will happily run
+    this distro. However, it’s worth checking you have everything in place before
+    proceeding.
+
+
+    # MINTY INGREDIENTS
+
+
+    Before we start working our way through this book, here’s what you need to install
+    and run Linux Mint. You have several choices available, so take your time and
+    see which works best for you.
+
+
+    # SYSTEM REQUIREMENTS
+
+
+    The minimum system requirements for Linux Mint are as follows:
+
+
+    **CPU** – 700MHz
+
+    **RAM/Memory** – 512MB
+
+    **Hard Drive space** – 9GB (20GB recommended)
+
+    **Display** – 1024 x 768 resolution
+
+
+    Obviously the better the system you have, the better the experience will be and
+    quicker too.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_11_0.png)
+
+
+    # USB INSTALLATION
+
+
+    You can install Linux Mint onto your computer via USB or DVD. We look into each
+    a little later on but if you’re already familiar with the process, or thinking
+    of USB and just gathering the hardware you need, then you’re going to need a minimum
+    4GB USB flash drive to store the Linux Mint ISO.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_11_1.png)
+
+
+    # DVD INSTALLATION
+
+
+    DVD installation of Linux Mint simply requires a blank DVD-R disc. Of course,
+    you also need an optical drive (a DVD Writer drive) before you’re able to transfer
+    or burn the ISO image to the disc.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_11_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/5019375da05cbf0090115165d80772a1_12_0.png)
+
+
+    # VIRTUAL ENVIRONMENT
+
+
+    Installation to a virtual environment is a favourite method of testing and using
+    Linux distros. Linux Mint works exceedingly well when used in a virtual environment
+    but more on that later. There are many different virtual environment apps available;
+    however, VirtualBox, from Oracle, is one of the easiest to inzo. You can find
+    the latest version at: www.virtualbox.org.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_12_1.png)
+
+
+    # INTERNET CONNECTION
+
+
+    It goes without saying really, that an Internet connection is vital for making
+    sure that Linux Mint is up to date with the latest updates and patches, as well
+    as the installation of further software. Although you don''t need an Internet
+    connection to use Linux Mint, you''ll miss out on a world of free software available
+    for the distro.
+
+
+    # MAC HARDWARE
+
+
+    Although Linux Mint can be installed onto a Mac, there''s a school of thought
+    that recommends Mac owners use a virtual environment, such as Virtualbox or Parallels;
+    and why not, macOS is already a splendid operating system. If you''re wanting
+    to breathe new life into an older Mac, make sure it''s an Intel CPU model and
+    not the Power PC models. Beware though, it''s not as pain free as installing on
+    to a PC.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_12_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Desktop Environments
+
+
+    Linux Mint comes in several different versions, or Flavours: Cinnamon, MATE and
+    Xfce; there are 32-bit and 64-bit versions of these too. What does it all mean
+    though and which version should you choose for your installation?
+
+
+    # WHICH MINT?
+
+
+    A Desktop Environment is the graphical interface which you use to interact with
+    the core Linux system. Just as the graphical desktop for Windows 10 is also called
+    Fluent Design.
+
+
+    Linux Mint offers the user a choice of versions of the distro: Cinnamon, MATE,
+    and Xfce. While that may sound a little confusing for the newcomer, essentially
+    each of the versions available contains the same core Linux structure and kernel;
+    the kernel is the core of the operating system, that handles all the instructions
+    between the software and hardware.
+
+
+    Each version is simply a different desktop environment, the Graphical User interface
+    (GUI) that you use to interact with the operating system. Each of the desktop
+    environments uses different apps to access or use the system, such as the file
+    manager to browse the operating system''s file structure or the way it launches
+    other apps. Again though, the core available productivity, video and graphic suites
+    are the same, and function in the same way.
+
+
+    Why bother then with a different desktop environment? Simply put, it’s down to
+    personal taste. Some users prefer MATE, as MATE is a fork of the classic GNOME
+    2 environment and is a little more menu-centric, and performs well on older computers.
+    Others prefer Cinnamon, which is a more modern environment that works better on
+    recent hardware and features some cutting edge desktop code. Xfce, on the other
+    hand, is a lightweight desktop environment that works well on older hardware due
+    to its extremely low use of the available system resources.
+
+
+    In short, Cinnamon is the flagship desktop environment for Linux Mint. MATE is
+    more compatible with a wider variety of hardware. Where Windows, for example,
+    only offers one desktop environment to work in, Linux offers many. Linux Mint
+    has therefore opted to bring the user a wealth of choice.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_13_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# A DASH OF CINNAMON
+
+
+    Cinnamon has many benefits beyond its look and feel, although they are important
+    factors. Here, we outline a couple of features to help you decide if it’s the
+    DE for you.
+
+
+    # FAB FEATURE 1
+
+
+    It performs excellently on more modern systems but is a lot more stable than it
+    used to be, and not quite the resource hog it once was. Therefore, don’t be put
+    off Cinnamon if you’re using an older computer to install and test Linux Mint.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_14_0.png)
+
+
+    # FAB FEATURE 2
+
+
+    Cinnamon features configurable Hot Corners, where each corner of the desktop can
+    be clicked to perform a certain task, such as display the Workspaces, Show all
+    Windows or Run a Command. The Hot Corners are an excellent way to switch between
+    different views and help make the desktop a more efficient environment.
+
+
+    # BEST MATE
+
+
+    MATE is a simple to use and intuitive DE that’s fast and stable. In comparison
+    to Cinnamon it looks a little antiquated but that’s only on the surface. There’s
+    plenty to like with MATE.
+
+
+    # FAB FEATURE 1
+
+
+    MATE is an excellent desktop environment for older computers. It works better
+    with a larger number of hardware components that Cinnamon generally does but is
+    also just as capable of delivering a great looking desktop as well as advanced
+    customisations.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_14_1.png)
+
+
+    # FAB FEATURE 2
+
+
+    Due to its highly configurable nature, MATE can be customised to a fine degree.
+    There are plenty of options available to the user who demands a little more from
+    their desktop environment, including Compiz Settings, where you’re able to configure
+    all manner of desktop effects, even a 3D desktop cube.
+
+
+    # CHOLESTEROL FREE DESKTOP
+
+
+    Xfce started life as the Common Desktop Environment (CDE) in 1996. Since then
+    it’s changed name a few times and is now simply Xfce, with the nickname ‘Cholesterol
+    Free Desktop Environment’.
+
+
+    # FAB FEATURE 1
+
+
+    Xfce really is a quick desktop and brings out the best in Linux as a fast operating
+    system. In fact, it’s taken us to this point from the top of the page to install
+    it onto a new computer. A few hundred words written and we’re using a brand new
+    OS. Hot bad.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_14_2.png)
+
+
+    # FAB FEATURE 2
+
+
+    Just because it’s quick and lightweight doesn’t mean Linux Mint Xfce isn’t a complete
+    desktop operating system. Just like the other environments on offer, you get the
+    latest Firefox, LibreOffice, VLC, Gimp, chat apps and even a bit torrent client.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # Which Distro?
+
+
+    Up to now we''ve looked mainly at Linux Mint but there are other Linux distributions
+    out there to try. In truth there are thousands of Linux distros available to download
+    and install, so which one should you decide on to use?
+
+
+    # DISTRO HOPPING
+
+
+    Distro hopping is a term used by the community for people who never stick to a
+    single distribution. Instead, they hop from one to the other and back again, testing
+    each, using them, then moving on to another or a newly released distro.
+
+
+    There''s nothing wrong with distro hopping, as it''s a good way to get to grips
+    with what''s out there and discover the elements of one distro over another that
+    may or may not appeal to your tastes. The problem of course is which one do you
+    use overall?
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_15_0.png)
+
+
+    While distro hopping is a good thing, it''s not exactly a stable way to enjoy
+    Linux and get the most from it. We''re not saying you should stick to one distro
+    and never look elsewhere, as you would be missing a lot of great content out there,
+    but instead we recommend you find a handful and slowly progress through them based
+    on your increasing Linux skills.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_15_1.png)
+
+
+    For example, Linux Mint is an ideal starting place. It''s an easy to install and
+    use distro, has all the software you would normally use on a day-to-day basis
+    already installed out of the box and gently eases you into the unique world of
+    Linux and how it works and performs.
+
+
+    Ubuntu offers much the same experience but it does this in a slightly different
+    way. There''s generally less preinstalled with Ubuntu than with Linux Mint, so
+    you would need to manually install it yourself. Another point worth considering
+    is the sheer volume of content and help pages dedicated to Ubuntu users when using
+    Linux. If you get stuck, you''re never too far from a solution to the problem.
+
+
+    Moving on, as you begin to grow more confident with Linux, you may test out the
+    likes of openSUSE, Fedora or Debian. These are all excellent distros and each
+    offers the user a slightly different perspective on how the system runs. Some
+    are more demanding, in terms of Linux skills, than others, but essentially they
+    each have some valuable lessons to learn for the user.
+
+
+    You may find yourself moving to a particular distro because it offers something
+    radically different from the norm. Tails Linux, for example, is a distro that''s
+    designed purely for online anonymity. It contains complex and military grade encryption
+    tools as well as tools and browsers designed to help you browse the web without
+    ever being detected, traced or monitored. Kali Linux is designed for security
+    professionals and contains many different kinds of ethical hacking
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_15_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/5019375da05cbf0090115165d80772a1_16_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_16_1.png)
+
+
+    tools preinstalled, that a user can run for penetration testing against their
+    network. There was once even a Hannah Montana Linux distribution but the less
+    we talk about that the better. The point being, there’s a distro out there for
+    you.
+
+
+    Needless to say, once you’ve mastered Linux to a relatively high degree, probably
+    a power user ability, then you will want to expand your skills and begin to build
+    your own Linux distro based on Arch, Debian or one of the many other distros available.
+    Doing so involves a lot of command line knowledge, as well as knowledge on how
+    the Linux system works and interacts with the hardware in the computer. You will
+    need to partition your own hard drive, install a desktop environment and eventually
+    install the apps and programs you want. Doing so takes time and again there are
+    a lot of skills you’re going to need to learn.
+
+
+    Eventually you can consider yourself a technical Linux user but never consider
+    yourself an expert, after all we’re always learning something new. You can build
+    your own distro from scratch, help other Linux users out with problems, maybe
+    even contribute to the improvement of a distro during its testing phase or build.
+    Where next then?
+
+
+    Oddly enough, most higher-end technical users find themselves back at square one,
+    using a distro like Linux Mint. The main reason is usually because it’s an easy
+    option, and it’s a stable environment. Just because you know the system inside
+    and out, doesn’t mean you always want to be fixing potential issues. Most of us
+    would prefer the easy life, especially where technology is concerned, so the logical
+    choice would be to choose a distro that’s simple, yet still powerful enough to
+    do everything you want it to do, hence Linux Mint.
+
+
+    However, in the end, it’s purely down to choice, your own personal choice. You
+    may find that after going through the tutorials in this title you don’t like Linux
+    Mint or the Cinnamon desktop. Fine, you may prefer Ubuntu, Debian or openSUSE
+    that’s the beauty of Linux. The freedom to change what you want, to distro hop
+    from one to another without being penalised by cost or lack of access.
+
+
+    The answer to the question, which distro is any which one you like! It can be
+    as complex or easy as you need it to be, as long as it does what you want it to
+    do, then it’s perfect.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_16_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "> \"In real open source, you\n> have the right to control\n> your own destiny.\"\
+    \n> \n> — Linus Torvalds\n> (developer of the Linux kernel)\n\n![](img/5019375da05cbf0090115165d80772a1_17_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Getting Started with Linux
+
+
+    It’s all fine and well talking about how good Linux is but how do you get it on
+    your computer? Installing Linux is remarkably simple but there are several options
+    available to you. This section looks into how you can download the Linux ISO,
+    install it on a PC as your main operating system and even how to install a virtual
+    environment.
+
+
+    With a virtual environment you can run Linux while still using your main operating
+    system, be that Windows or macOS. Intrigued? Read on and find out more.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_18_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# # Creating a Linux Installer on Windows\n\nYou need to transfer the downloaded\
+    \ Linux ISO to either a DVD or a USB key before being able to install it onto\
+    \ a computer. This will be a live environment, which allows you to test the OS\
+    \ prior to installation, but first you need to create the bootable media.\n\n\
+    # ## DVD BOOTABLE MEDIA\n\nWe’re using a Windows 10 PC here to transfer the ISO\
+    \ to a DVD. If you’re using a version of Windows from 7 onward the process is\
+    \ extremely easy.\n\n+   **STEP 1**\n+   \n+   First locate the ISO image of Linux\
+    \ you’ve already downloaded. You can usually find it in the Downloads folder in\
+    \ Windows 7, 8, 1 and 10 computers, unless you specified a different location\
+    \ when saving it.\n\n![](img/5019375da05cbf0090115165d80772a1_19_0.png)\n\n+ \
+    \  **STEP 3**\n+   \n+   Right-click the Linux ISO and from the menu select Burn\
+    \ Disc Image. Depending on the speed of the PC, it may take a few seconds before\
+    \ anything happens. Don’t worry too much, unless it takes more than a minute,\
+    \ in which case it might be worth restarting your PC and trying again. With luck,\
+    \ the Windows Disc Image Burner should launch.\n\n![](img/5019375da05cbf0090115165d80772a1_19_1.png)\n\
+    \n+   **STEP 2**\n+   \n+   Next insert a recordable DVD disc into your computer’s\
+    \ optical drive. After a few seconds, while the disc is read, Windows displays\
+    \ a pop-up message asking you what to do with the newly inserted disc. Ignore\
+    \ this, as we’re going to use the built-in image burning function.\n\n![](img/5019375da05cbf0090115165d80772a1_19_2.png)\n\
+    \n+   **STEP 4**\n+   \n+   With the Windows Disc Image Burner dialogue box open,\
+    \ click on the 'Verify disc after burning' tick box, then the Burn button. The\
+    \ process should take a few minutes, depending on the speed of your PC’s optical\
+    \ drive. Once it’s complete it runs through the verification stage and when done\
+    \ the optical drive should auto-eject the disc for you.\n\n![](img/5019375da05cbf0090115165d80772a1_19_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Creating a Linux Installer on Windows
+
+
+    # ## USB BOOTABLE MEDIA
+
+
+    USB media is faster than a DVD and often more convenient, as most modern PCs don’t
+    have an optical drive installed. The process of transferring the image is easy
+    but you need a third-party app first and a USB flash drive of 4GB or more.
+
+
+    **STEP 1** First open up a web browser and go to www.rufus.akeo.ie/. Scroll down
+    the page a little and you come to a Download heading, under which is the latest
+    version of Rufus. Left click the link to start the download.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_20_0.png)
+
+
+    **STEP 2** Double-click the downloaded Rufus executable and click Yes to the Windows
+    security question and Yes to checking for Updates. With Rufus launched it should
+    have already identified your inserted USB flash drive; if not, just remove and
+    reinsert.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_20_1.png)
+
+
+    **STEP 3** At first glance the Rufus interface can look a little confusing but
+    don’t worry, it’s really quite simple. To begin with, click on the SELECT button
+    next to the “Disk or ISO Image (Please select)” pull-down menu. This launches
+    a Windows Explorer window where you can locate and select the Linux ISO.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_20_2.png)
+
+
+    **STEP 4** When you’re ready, click on the Start button at the bottom of the Rufus
+    app. This may open up another dialogue box asking you to download and use a new
+    version of SysLinux. SysLinux is a selection of boot loaders, used to allow a
+    modern PC to access and boot from a USB flash drive. It is necessary, so if asked
+    click on “Yes” to continue.
+
+
+    > > This image uses Syslinux 6.03/20151222 but this application only includes
+    the installation files for Syslinux 6.03/2014-10-06.
+
+    > > \*\*\*
+
+
+    As new versions of SysLinux are not compatible with one another, and it wouldn’t
+    be possible for Rufus to include them all, two additional files must be downloaded
+    from the Internet (“ldlinux.sys” and “ldlinux.bin”):
+
+
+    - Select “Yes” to connect to the Internet and download these files
+
+    - Select “No” to cancel the operation
+
+
+    > > Note. The files will be downloaded to the current application directory and
+    will be reused automatically if present.
+
+
+    **STEP 5** The next step asks which image mode you want the Linux ISO to be written
+    to the USB flash drive in. Both methods work for different situations but, generally,
+    the recommended ISO Image Mode is the more popular. Make sure this mode is preselected
+    and click Ok to continue, followed by Ok again to confirm the action.
+
+
+    If the image you have selected is an ‘ISO9660’ image. This means it can be written
+    either in ISO Image (file mode), copy mode or DD Image (disk image) mode. Rufus
+    recommends using ISO Image mode, so that you always have full access to the drive
+    after writing it. However, if you encounter issues during boot, you can try writing
+    this image again in DD mode.
+
+
+    Please select the mode that you want to use to write this image:
+
+    - Write in ISO Image mode (Recommended)
+
+    - Write in DD Image mode
+
+
+    **STEP 6** The Linux transfer to the ISO is now transferred to the USB flash drive.
+    The process shouldn’t take too long, again depending on the speed of the USB device
+    and the PC. You may find Rufus auto-closes the USB drive in Windows Explorer during
+    the process; don’t worry you can minimise or close it if you want. When the process
+    is complete, click on the Close button.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_20_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Installing Linux on a PC
+
+
+    Most Linux distros come as a *Live Environment*. This means you can boot into
+    an actual, fully-working distro straight from the DVD or USB that you just created.
+    Let’s see how that works and how you go about installing Linux from there.
+
+
+    # UEFI BIOS
+
+
+    The Unified Extensible Firmware Interface (UEFI) is used to identify hardware
+    and protect a PC during its boot-up process. It replaces the traditional BIOS
+    but can cause issues when installing Linux.
+
+
+    **STEP 1**  Insert your DVD or USB flash drive into your PC and, if you haven’t
+    already, shutdown Windows. In this instance we’re using the USB boot media but
+    the process is virtually identical. Start the PC and when prompted press the appropriate
+    keys to enter the BIOS or SETUP, which could for example be: F2, Del or even F12.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_21_0.png)
+
+
+    **STEP 3**  With UEFI turned to Legacy mode, there are now two ways of booting
+    into the *Live Environment*. The first is via the BIOS you’re already in. Locate
+    the Boot Sequence and change the first boot device from its original setting,
+    usually internal HDD or similar, to: USB Storage Device for the USB media option,
+    or DVD Drive for the DVD media option.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_21_1.png)
+
+
+    **STEP 2**  There are different versions of a UEFI BIOS, so covering them all
+    would be impossible. What you’re looking for is a section that details the Boot
+    Sequence or Boot Mode. Here you have the option to turn off UEFI and choose Legacy
+    or Disable Secure Booting. Most distros work with UEFI but it can be a tricky
+    process to enable it to boot.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_21_2.png)
+
+
+    **STEP 4**  Alternatively use the Boot Option Menu. With this option you can press
+    F12 (or something similar) to display a list of boot media options; from there,
+    you can choose the appropriate boot media. Either way, you can now Save and Exit
+    the BIOS by navigating to the Save & Exit option and choosing ‘Save Changes and
+    Exit’.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_21_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# INSTALLING LINUX
+
+
+    Once the Live Environment has booted, you see the option to install the distro
+    to your computer. Have a look around and when you’re ready, look for the Install
+    option on the desktop.
+
+
+    **STEP 1** Providing you’re connected to the internet (if not, then do so now)
+    and you’re in the Live Environment, start the installation process by double-clicking
+    on the Install Linux Mint icon on the desktop. Other distros display their own
+    name, of course, but the process is the same. Click **Continue** when you’re ready.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_22_0.png)
+
+
+    **STEP 4** Before the installation process begins, you’re asked if the choice
+    you made regarding the erasure of the hard drive is correct. This is your last
+    chance to back off. If you’re certain you don’t mind wiping everything and starting
+    again with Linux Mint, click **Continue**. If you need to backup your files remove
+    the Linux disc/USB, reboot, backup and start again.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_22_1.png)
+
+
+    **STEP 2** While the installation process is very similar across most Linux distros,
+    some offer different questions during the installation. Generally, the questions
+    aren’t too difficult, nothing very technical, but some such as ‘Installing third-party
+    software…’ can be confusing. In this case you can click **Continue** but if you’re
+    unsure, have an Internet-connected device available to ask any questions.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_22_2.png)
+
+
+    **STEP 5** Eventually you are asked to set up your Linux username and password.
+    Enter your Name to begin with, then the Computer Name, which is the name it is
+    identified on the network as. Next choose a Username, followed by a good Password.
+    You can tick the Login Automatically option but leave the Encrypt Home Folder
+    option for now.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_22_3.png)
+
+
+    **STEP 3** When installing a new operating system it’s recommended that you wipe
+    the old OS, replacing it with the new. When you reach this stage of the installation
+    process, ensure the ‘Erase disk and install Linux…’ option is selected. **NOTE:**
+    This completely wipes Windows 10 from your computer, so make sure you have backups
+    of all your personal files and data.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_22_4.png)
+
+
+    **STEP 6** The installation process can be quick, and there may be more questions
+    to answer, or it may simply start installing Linux based on your previous answers.
+    Either way, you end up being asked to **Continue Testing the Live Environment**
+    or **Restarting** to use the newly installed OS. If you’re ready to use Linux,
+    then click **Restart** Now.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_22_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Installing a Virtual
+
+    Environment
+
+
+    A Virtual Environment is a simulated computer system. Using a Virtual Machine,
+    you can mimic a standard PC and install an entire operating system to it without
+    affecting the one installed on your computer. It’s a great way to test and use
+    Linux, while still having Windows 10 as your main OS.
+
+
+    # GOING VIRTUAL
+
+
+    Using a Virtual Machine (VM) takes resources from your computer: memory, hard
+    drive space, processor usage and so on. Make sure you have enough of each before
+    commencing.
+
+
+    # STEP 1
+
+
+    We’re using VirtualBox in this instance, as it’s one of the easiest virtual environments
+    to get to grips with. Enter www.virtualbox.org and click on ‘Download VirtualBox’.
+    This takes you to the main download page. Locate the correct host for your system:
+    Windows or Mac, the Host being the current installed operating system, and click
+    the link to begin the download.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_23_0.png)
+
+
+    # STEP 2
+
+
+    Next, while still at the VirtualBox download page, locate the VirtualBox Extension
+    Pack link. The Extension Pack supports USB devices as well as numerous other extras
+    that can help make the VM environment a more accurate emulation of a ‘real’ computer.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_23_1.png)
+
+
+    # STEP 3
+
+
+    With the correct packages downloaded, and before you install anything, you need
+    to make sure that the computer you’re using is able to host a VM. To do this,
+    reboot the computer and enter the BIOS. When the computer starts up, press the
+    Del, F2 or whichever key is necessary to Enter Setup.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_23_2.png)
+
+
+    # STEP 4
+
+
+    Each BIOS is laid out differently and it’s very difficult to assess where to look
+    in each personal example. However, as a general rule of thumb, you’re looking
+    for Intel Virtualisation Technology, or simply Virtualisation, found usually within
+    the Advanced section of the BIOS. When you’ve located it, Enable it, save the
+    settings, exit the BIOS and reboot the computer.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_23_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Installing a Virtual Environment
+
+
+    **STEP 5**  With the computer back up and running, locate the downloaded main
+    VirtualBox application and double-click to begin the installation process. Click
+    Next to continue, when you’re ready.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_24_0.png)
+
+
+    **STEP 6**  The default installation location of VirtualBox should satisfy most
+    users but if you have any special location requirements click on the ‘Browse’
+    button and change the install folder. Then, make sure that all the icons in the
+    VirtualBox feature tree are selected, i.e. none of them have a red X next to them.
+    Click Next to move on.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_24_1.png)
+
+
+    **STEP 7**  This section can be left alone to the defaults, should you wish. You
+    simply makes life a little easier when dealing with VMs, especially when dealing
+    with downloaded VMs, which you may encounter in the future. Again, clicking Next
+    moves you on to the next stage.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_24_2.png)
+
+
+    **STEP 8**  When installing VirtualBox your network connection is disabled for
+    a very brief period. This is due to VirtualBox creating a linked, virtual network
+    connection so that any VM installed is able to access the internet; and your home
+    network resources; via the computer’s already established network connection.
+    Click Yes, then Install to begin the installation.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_24_3.png)
+
+
+    **STEP 9**  You’ll probably be asked by Windows to accept a security notification.
+    Click Yes for this and you may encounter a dialogue box asking you to trust the
+    installation from Oracle; again, click yes and accept the installation of the
+    VirtualBox application. When it’s complete, click finish to start VirtualBox.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_24_4.png)
+
+
+    **STEP 10**  With VirtualBox up and running you can now install the VirtualBox
+    Extension Pack. Locate the downloaded add-on and double-click. There may be a
+    short pause while VirtualBox analyses the pack but you eventually receive a message
+    to install it; obviously click Install to begin the process, scroll down the next
+    screen to accept the agreement and click I Agree.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_24_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Installing Linux in a Virtual Environment
+
+
+    With Oracle’s VirtualBox now up and running, the next task is to create the Virtual
+    Machine (VM) environment into which you will install Linux. This process won’t
+    affect your currently installed operating system, which is why a VM is a great
+    choice.
+
+
+    # CREATING THE VM
+
+
+    There are plenty of options to choose from when creating a VM. For now though,
+    we’ll setup a VM adequate to run the excellent Linux Mint, and perform well.
+
+
+    +   **STEP 1**
+
+    +   With VirtualBox open, click on the New icon in the top-middle of the right-hand
+    panel of the app. This will open the new VM Wizard.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_25_0.png)
+
+
+    +   **STEP 3**
+
+    +   The next section will define the amount of system memory, or RAM, the VM has
+    allocated. Remember this amount will be taken from the available memory installed
+    in your computer, so don’t give the VM too much. For example, we have 8GB of memory
+    installed and we’re giving 2GB (2048MB) to the VM. When you’re ready, click Next
+    to continue.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_25_1.png)
+
+
+    +   **STEP 2**
+
+    +   In the box next to Name type Linux Mint, and VirtualBox should automatically
+    choose Linux as the Type and Ubuntu (64-bit) as the Version, if not then use the
+    drop-down boxes to select the correct settings (remember Mint’s mainstream is
+    based on Ubuntu). Click Next when you’re ready to proceed.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_25_2.png)
+
+
+    +   **STEP 4**
+
+    +   This section is where you’ll start to create the virtual hard disk that the
+    VM will use to install Mint on to. The default option, ‘Create a virtual hard
+    disk now’, is the one we’re using. Click Create to move on.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_25_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Installing Linux in a Virtual Environment
+
+
+    **STEP 5** The pop-up window that appears after clicking Create is asking you
+    what type of virtual hard disk you want to create. We''re going to use the default
+    VDI (VirtualBox Disk Image) in this case, as the others are often used to move
+    VMs from one VM application to the next. Make sure VDI is selected, and click
+    Next.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_26_0.png)
+
+
+    **STEP 6** The question of whether to opt for Dynamically or Fixed sized virtual
+    hard disks may come across as being somewhat confusing to the newcomer. Basically,
+    a Dynamically Allocated virtual hard disk is a more flexible storage management
+    option. It won''t take up much space within your physical hard disk to begin with
+    either. Ensure Dynamically Allocated is selected, and click Next.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_26_1.png)
+
+
+    **STEP 7** The virtual hard disk will be a single folder, up to the size you state
+    in this section. Ensure the location of the virtual hard disk, on your computer,
+    has enough free space available. For example, we''ve used a bigger storage option
+    on our D\ drive, named it Linux Mint, and allocated 25.50GB of space to the virtual
+    hard disk.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_26_2.png)
+
+
+    **STEP 8** After clicking Create the initial setup of the VM is complete; you
+    should now be looking at the newly created VM within the VirtualBox application.
+    Before you begin though, click the Settings button from the top of the right-hand
+    panel, and within the General section click the Advanced tab. Using the pull-down
+    menus, choose ''Bidirectional'' for both Shared Clipboard and Drag''n''Drop.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_26_3.png)
+
+
+    **STEP 9** Follow that by clicking on the System section, then the Processor tab.
+    Depending on your CPU allocate as many cores as you can without detriment to your
+    host system; we''ve opted for two CPUs. Now click on the Display section, slide
+    the Video Memory up to the maximum, and tick ''Enable 3D Acceleration''. Click
+    OK to commit the new settings.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_26_4.png)
+
+
+    **STEP 10** Click on the Start button and use the explorer button in the ''Select
+    Start-up Disk'' window; the explorer button is a folder with a green arrow. Click
+    Add in the new pop-up window, to locate the downloaded ISO of Mint; and click
+    Open to select the ISO. Now click the Start button to boot the VM with the Linux
+    Mint Live Environment. You can now install Linux as per the standard PC installation
+    requirements.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_26_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '> "Anyone can build a fast processor. The trick is to build a fast system."
+
+
+    — Seymour Cray (Electrical Engineer, and designer/founder of Cray Supercomputers)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_27_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '![](img/5019375da05cbf0090115165d80772a1_28_0.png)
+
+
+    # # Getting to
+
+    # Know Linux
+
+
+    We''ve used Linux Mint as a guideline here, as it''s an easy to use distro and
+    perfect for former Windows users. It''s also one of the most developed and well
+    documented Linux distros as well as having some fantastic configuration options.
+
+
+    In this section, we introduce the Linux Mint Cinnamon Menu and Desktop Environment,
+    how it works and what you can do to customise it. Want to create another user
+    or even discover how to become anonymous online? Then read on.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Getting to Know Linux
+
+
+    # Introduction to the
+
+    Cinnamon Menu
+
+
+    Now that you have Linux installed it’s time to have a good look around. First
+    though, if you’re using Virtualbox you’ll have a notification regarding Software
+    Rendering; here’s how to fix it.
+
+
+    # CINNAMON VIRTUALBOX FIX
+
+
+    You’ve already looked at some list functions, using .insert, .remove, and .pop
+    but there are also functions that can be applied to strings.
+
+
+    # STEP 1
+
+
+    Before we begin, we’re assuming you’re having this issue within Virtualbox. The
+    Software Rendering message appears in the top right of the desktop. To fix this,
+    click on Devices in the Virtualbox window, followed by Insert Guest Additions
+    CD image.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_29_0.png)
+
+
+    # STEP 3
+
+
+    After a moment or two you’re automatically dropped into a command line view, called
+    the Terminal in Linux. This details the installation of the new VirtualBox drivers,
+    removing any old drivers it has detected, and installing the latest versions.
+    It won’t take long and when it’s done you will be asked to hit Return to exit
+    the Terminal.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_29_1.png)
+
+
+    # STEP 2
+
+
+    The Guest Additions CD contains drivers for Virtualbox, including the virtual
+    video hardware. When it’s loaded in, you get a “software needs running” notification
+    box with two options, Cancel and Run. Click the Run button and enter your Linux
+    user password.
+
+
+    # The Virtualbox Additions CD icon is on the desktop, so right-click it and then
+    scroll icon the menu to click Eject. You can now restart Linux Mint by clicking
+    the Menu, the bottom icon in the strip to the left, then the Restart button. This
+    reboots Mint and the problem is fixed.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_29_2.png)
+
+
+    The Virtualbox Additions CD icon is on the desktop, so right-click it and then
+    scroll icon the menu to click Eject. You can now restart Linux Mint by clicking
+    the Menu, the bottom icon in the strip to the left, then the Restart button. This
+    reboots Mint and the problem is fixed.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_29_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# ## CINNAMON ON THE MENU
+
+
+    Now the Software Rendering issue for Virtualbox users is out of the way, let''s
+    take a look at the Mint Menu and how it all works. Remember, this is just for
+    Mint Cinnamon, other distros look and behave differently.
+
+
+    **STEP 1**  First off, you may have already noticed the Welcome Screen that pops
+    up when you login to Linux Mint. Take a moment to browse through the options,
+    read the First Steps option and so on. When you''re done, click the X in the top
+    right corner of the window to close it.
+
+
+    **STEP 4**  Open up the Menu again but this time hover the mouse pointer over
+    Graphics, then click on GNU Image Manipulation Program. GIMP is a powerful image
+    manipulation app that''s probably as effective as Adobe''s Photoshop but requires
+    a little more work to get the results you want. It''s certainly worth taking the
+    time to master, though.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_30_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_30_1.png)
+
+
+    **STEP 2**  You''ve already used the Mint Menu to reboot the system and when you
+    first used the Live Environment. This time, click the Menu button and hover over
+    the Office entry in the middle column. This changes the icons represented in the
+    right-hand column, detailing what apps are installed under that section.
+
+
+    **STEP 5**  If you''re looking for a particular function or app, such as setting
+    up a printer, click on the Search box at the top of the Menu box. Start typing
+    the app or function you want, such as printers, and the Mint Menu displays the
+    relevant options below. This works with most modern Linux menus, regardless of
+    the distro.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_30_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_30_3.png)
+
+
+    **STEP 3**  Launching any of the apps from the Menu is as simple as finding one
+    and clicking it. For example, under the Office section, click on LibreOffice Writer:
+    Writer is the preinstalled word processor for Linux Mint. It opens and saves as
+    Microsoft Word and functions in almost the same way.
+
+
+    **STEP 6**  Hover over any of the apps listed on the right-hand column and right-click,
+    to be presented with a list of options: Add to Panel, Add to Desktop, Add to Favourites
+    and Uninstall. Most of these options are obvious in their use. Add to Favourites
+    though places the app in the left-hand, quick-access column.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_30_4.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_30_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # Navigating the Cinnamon Desktop
+
+
+    Each desktop environment behaves differently to that of the next. Some DEs offer
+    widgets that can be customised and placed on the desktop, others instead opt for
+    a clean, sharp look to keep everything running as fast as possible. Let’s see
+    what the Cinnamon desktop has to offer.
+
+
+    # ## A TOUCH OF SPICE
+
+
+    The Cinnamon desktop environment is a great blend of style and performance. There’s
+    lots to like about it, which is why it’s such a popular DE.
+
+
+    **STEP 1**
+
+    Begin exploring the Cinnamon desktop by double-clicking the Computer icon. This
+    brings up Nemo, the file manager used in Cinnamon. The Computer icon opens up
+    the root level file system, with access and views to the optical drive (if you
+    have one installed), hard drive and core Linux file system.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_31_0.png)
+
+
+    **STEP 2**
+
+    The Linux file system can appear confusing to a former Windows user, so until
+    you’re a little more knowledgeable on how it all works, we’d recommend you concentrate
+    on the Home icon on the desktop instead. In here is everything relating to your
+    user account: where you store Pictures, Videos, Music, Documents, Downloaded items
+    etc.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_31_1.png)
+
+
+    **STEP 3**
+
+    Nemo has many different features, views and ways so that you can view and manipulate
+    files and folders. For example, if you have any images in the Pictures folder,
+    you can select the icon zoom level for the images by using the slider located
+    in the bottom right of Nemo, labelled Adjust Zoom Level.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_31_2.png)
+
+
+    **STEP 4**
+
+    Just like any good file manager, if you right-click any of the files or folders
+    within you get a wealth of options. In the case of Cinnamon, the defaults allow
+    you to play or view a file depending on what type of file it is and copy, cut,
+    delete, compress, rename, send via email and view its properties.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_31_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# ## Navigating the Cinnamon Desktop
+
+
+    STEP 5  At the bottom of the desktop there''s the Panel. We''ve already looked
+    at one section of the Panel, the Menu. If you right-click anywhere on the Panel,
+    other than on a Panel app, you see a menu allowing you to edit, add and set up
+    the Panel in a different way.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_32_0.png)
+
+
+    STEP 6  For example, if you click the option Modify Panel, you can remove, move,
+    renumber, modify the Panel, add a new one and clear it of any Applets that are
+    currently present. An Applet, by the way, is an app that''s designed to work and
+    fit into the Cinnamon Panel.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_32_1.png)
+
+
+    STEP 7  If you right-click anywhere on the Cinnamon desktop you see a set of options
+    that allows you to further add to, edit or view the desktop content differently.
+    It''s very similar to that of Windows, which is why Mint is a good choice for
+    ex-Windows users.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_32_2.png)
+
+
+    STEP 8  From that desktop right-click, context menu, select Customize, followed
+    by the Desktop Icons Settings link at the bottom of the newly opened window. This
+    opens a new window where you''re able to edit which desktop icons are present.
+    If you''re using a setup with multiple monitors attached, you can also choose
+    which monitor displays which icons.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_32_3.png)
+
+
+    STEP 9  Click on the Menu and type system settings and open the resulting icon.
+    This takes you to the System Settings options. From here you''re able to control
+    and edit the way Linux Mint Cinnamon looks and works as well add new users, manage
+    the firewall and enable accessibility options.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_32_4.png)
+
+
+    STEP 10  In short, Linux Mint Cinnamon can be configured to look quite extraordinary.
+    There are many examples available of how good it can get and what can be achieved.
+    You can go as complex or as simple as you want, adding different component and
+    animations or just keeping it plain and easy to read.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_32_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 10 Things to do After Installing Linux Mint
+
+
+    Linux Mint is a polished distro out of the box but, as with most Linux distros,
+    there are some tweaks that can be applied to improve the way it works. Although
+    these are Mint-specific tweaks, most can be applied to other distros.
+
+
+    # LINUX TWEAKS
+
+
+    Some of these post-installation actions are highly recommended, while others are
+    just handy additions and simply tweak the system or add a customisation.
+
+
+    # STEP 1
+
+
+    The first, and most important, post-installation action is to update the system.
+    Click on the shield icon in the Panel, found at the bottom right of the desktop
+    next to the time and date. This launches the Update Manager.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_33_0.png)
+
+
+    # STEP 3
+
+
+    Click the OK button and you can see a couple of updates ready for installation.
+    Before you update though, click on the blue bar OK button to switch to a Local
+    Mirror. This opens the Software Sources option. In the Mirrors section, click
+    on the Main and Base drop-down menus and select a server closest to your current
+    location.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_33_1.png)
+
+
+    # STEP 2
+
+
+    Linux Mint offers the user a three level policy approach to updates: Don''t Break
+    My Computer, Optimise Stability and Security and Always Update Everything. The
+    recommended option is the Optimise Stability and Security, which only updates
+    safe, essential patches that won''t impact critical elements of the core OS. Read
+    through the descriptions but choose the middle, and recommended option.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_33_2.png)
+
+
+    # STEP 4
+
+
+    Click the Update the Cache button and close the Software Sources window. Back
+    in the Update Manager, click on the Install Updates icon and enter your password.
+    The updates automatically apply themselves and relaunch Update Manager; this time
+    with a lot more options. Again, click Install Updates, Ok any messages, and wait
+    for them to finish.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_33_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# 10 Things to do After Installing Linux Mint
+
+
+    # STEP 5
+
+
+    The updates are graded by level, 1 being a low to level 3 updates, level 5 being
+    a dangerous one. Stick to level 3 updates, if you configure and click Replace
+    for any messages regarding overriding a configuration file. With regards to the
+    Sofware Rendering issue and lack of drivers for non-VirtualBox users, click the
+    Menu and type ‘driver’ into the search box.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_34_0.png)
+
+
+    # STEP 8
+
+
+    When asked to accept the changes, enter Y and also when asked to configure lsbvd.
+    Make sure Ok is highlighted and press Enter, then Yes to any further questions.
+    Next up, still in the terminal, enter: `cat /proc/sys/`vm`/swappiness`; the result
+    should be 60. If your computer has less than 4GB of RAM/ memory, then enter: `gksudo
+    xed /etc/sysctl` conf.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_34_1.png)
+
+
+    # STEP 6
+
+
+    Click the Driver Manager app that appears as a result of the search and enter
+    your password. Mint takes a moment to analyse what’s available and presents you
+    with a selection of potential drivers based on your detected hardware. Those with
+    graphical problems, such as Sofware Rendering, should opt to use the latest, recommended
+    Graphics driver.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_34_2.png)
+
+
+    # STEP 9
+
+
+    This tweak helps speed up systems with less than 4GB RAM/memory. Scroll down to
+    the bottom of the file you just opened and add the following new lines:
+
+
+    `# Decrease swap usage to a more reasonable level`
+
+
+    `vm.swapiness=10`
+
+
+    Click File > Save, then File > Quit. Reboot Linux Mint and you should notice a
+    slight hike in performance.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_34_3.png)
+
+
+    # STEP 7
+
+
+    At this point you’ll probably need to restart Linux Mint, so do that now. After
+    a reboot click the Menu button again, followed by the Terminal. The Terminal icon
+    is found in the left-hand column, above the Files icon. With the Terminal open,
+    enter: `sudo apt-get install libdvd-pkg` press Enter and type in your password.
+    This enables encrypted DVD playback.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_34_4.png)
+
+
+    # STEP 10
+
+
+    Security is always a concern in this modern digital age. While Linux Mint is a
+    secure system, it’s advisable to always try and improve it. Click the Menu button
+    and search for Firewall; click the Firewall Configuration icon and enter your
+    password. In the Firewall window, click the Status slider to On.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_34_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# # Apollo 11
+
+
+    **DID YOU KNOW…** July 20th 1969 is remembered as a turning point in human history,
+    when mankind first stepped on the moon. The software that helped the crew make
+    that pivotal voyage didn’t even exist at the time and had to be developed from
+    scratch. Using a new method of storing programs called Rope Memory, the engineers
+    at MIT Instrumentation Laboratory populated the memory with a special version
+    of assembly.
+
+
+    Incredibly, that code is freely available to view on GitHub. Uploaded by a researcher
+    in 2003, you can view the code by visiting www.github.com/Chai2010/aag/Apollo-11.
+    Look out for code snippets, such as Burn_Baby_Burn, in particular line 925 with
+    the comment "Goodbye. Come again soon."
+
+
+    Have a look through, and see what else you can find.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_35_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_35_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'Did You Know...
+
+
+    One giant leap for mankind, and coding.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_36_0.png)
+
+
+    Credit: Apollo 11/NASA'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# # Creating Users
+
+
+    When you first install Linux Mint it is configured for use with a single user.
+    While sharing a user account with the entire family is fine, there may come a
+    time when you need to create separate users with their own unique Home folders.
+
+
+    # ## NEW USERS
+
+
+    Having different users means each user has access to his or hers own areas on
+    the system. Documents, pictures, videos and so on are separate, as with multiple
+    users on other operating systems.
+
+
+    **STEP 1** Click on the Linux Mint Menu and type ''users'' to begin searching
+    for the relevant console. From the search results, choose Users and Groups and
+    enter your password. The Users and Groups console is quite basic looking, and
+    thankfully easy to use. At first, you can just see your own username from when
+    you installed Linux Mint.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_37_0.png)
+
+
+    **STEP 2** To add a new user, click the Add button at the bottom of the console.
+    There are two types of user you can create, Standard and Administrator. Unless
+    the new user has need to install new apps or access parts of the file system beyond
+    their Home folder, then opt for the Standard account type. Otherwise, use the
+    Administrator account type.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_37_1.png)
+
+
+    **STEP 3** Enter the new user''s Full Name, followed by the Username they need
+    when logging into Linux Mint. Make sure the username is all in lower case, a-z
+    and 0-9 characters only. You can have full stops, underscores or hyphens if you
+    wish. Click the Add button when you''re ready to continue.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_37_2.png)
+
+
+    **STEP 4** The new user appears in the list of current Linux Mint users, in alphabetical
+    order. At present, there''s no password set so click the user in the list of current
+    users, then click the No Password Set option under the user''s username.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_37_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '![](img/5019375da05cbf0090115165d80772a1_38_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_38_1.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_38_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_38_3.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_38_4.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_38_5.png)
+
+
+    # **STEP 5**  You can now enter a password for the new user or click the curled
+    arrow at the end of the New Password text box to generate a password for you,
+    as well as displaying it. Naturally, it''s a good idea to come up with as strong
+    a password as possible. When you''re done, click the Change button.
+
+
+    # **STEP 7**  Once logged in the new user is required to set up their own desktop
+    wallpaper, icons, Panel, Menu and so on. Depending on what Account Type you set
+    up for them, Standard or Administrator; they won''t be able to install any new
+    apps. This screenshot is from a Standard user account type.
+
+
+    # **STEP 6**  You can close the Users and Groups console window now, as the new
+    user has been created. If you click the Mint Menu, followed by Logout, you are
+    presented with the Mint Login Manager. The new user is now present in the list
+    of currently available users. Click on him/her to log them in.
+
+
+    # **STEP 8**  You can create as many new accounts as you need and you''re able
+    to switch between them when required. It''s best to have just one account that''s
+    capable of installing new software, that way you can keep track of what''s on
+    your system.
+
+
+    # ## COMMAND LINE ACCOUNTS
+
+    Just as you''d expect, you can also create a new user within the command line.
+    Open up a Terminal session under the main (yours) Administrator account.
+
+
+    # **STEP 1**  The process for adding a new user from the command line is relatively
+    simple. To begin with, type: `sudo adduser <username>`, where `<username>` is
+    the new user''s login name. You''re then asked to create a new password for the
+    user, along with their full name and other details. Click *y* to confirm the details
+    and create the user account.
+
+
+    # **STEP 2**  You can check the details and account type for the new user from
+    within the Users and Groups console. If you want to delete a user from Mint, you
+    can either enter `sudo deluser <username>` in the Terminal or click the Delete
+    button in Users and Groups.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# ## Customising the Desktop
+
+
+    Customising the operating system desktop is one way to make it your own: a personalised
+    workspace that is there to help you work, inspire you or feature the company logo.
+    Whatever your reasons for having your own desktop, here’s how it’s done.
+
+
+    # ### YOUR DESKTOP
+
+
+    Linux is probably one of the customisable operating systems there is. With just
+    a few tweaks, one or two extras installed and some imagination, you can create
+    something incredible.
+
+
+    +   * STEP 1 The first aspect of desktop customisation is to change the wallpaper.
+    Right-click the desktop and choose Change Desktop Background. This opens the Backgrounds
+    app in Linux Mint; remember, other distros may present their background, wallpaper
+    selection tools differently.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_39_0.png)
+
+
+    +   * STEP 2 More recent versions of Linux Mint display available backgrounds
+    depending on the version the user is running. You normally get three categories
+    followed by a fourth, Pictures, which is separated from the others. The Pictures
+    option is different because it reads the image content from the Pictures folder
+    in your Home area.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_39_1.png)
+
+
+    +   * STEP 3 You just need to click the available images, from any of the locations
+    provided to have them install as the desktop wallpaper. Incidentally, if you have
+    images stored in another location on your system or network, you can add them
+    by clicking on the Plus symbol at the bottom of the Backgrounds console, using
+    the file manager to locate them.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_39_2.png)
+
+
+    +   * STEP 4 By clicking on the Settings tab you can, instead, play numerous images
+    as a slideshow or change the aspect of the wallpapers to a variety of choices.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_39_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Customising the Desktop
+
+
+    **STEP 5** If none of the available wallpapers take your fancy, open a browser
+    and search for the type of background image you prefer. When you’ve found the
+    image you want as the desktop wallpaper, right-click it and choose **Set As Desktop
+    Background** from the list of options. When the **Set Desktop Background** console
+    open, click the **Set Desktop Background** button.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_40_0.png)
+
+
+    **STEP 8** Themes allows you to change the way certain aspects of the Mint desktop
+    look: Window Borders, Icons, Controls, Mouse Pointer and Desktop. In the Settings
+    tab you can extend the options with a few on/off slider buttons, too.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_40_1.png)
+
+
+    **STEP 6** Click the Menu button and search for ‘desktop’ and click the Desktop
+    Settings result. The Desktop console allows you to pick the layout, desktop icons
+    and options for multi-monitor support you want. You can experiment with the options
+    for the best setup, according to your personal tastes.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_40_2.png)
+
+
+    **STEP 9** If you click on the **Add/remove** button in the centre of the three
+    available options, you can choose the default view from a number of preinstalled
+    themes. Click the theme you want, then click the **Install** (downward-pointing
+    arrow) button to enable it.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_40_3.png)
+
+
+    **STEP 7** In addition to changing the desktop wallpaper, and how the icons are
+    displayed, you can also alter the overall theme for Linux Mint. From the Mint
+    Menu, search for ‘themes’ and click the Themes app as it appears in the search
+    results.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_40_4.png)
+
+
+    **STEP 10** Click back on **Themes**, then **Desktop** and you can locate the
+    newly installed theme and apply it to your desktop. Any installed Themes can also
+    be uninstalled via the **Add/Remove** button. It’s worth spending some time personalising
+    your desktop how you want it and there are some incredible themes available too.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_40_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# ## Becoming Anonymous Online\n\nThe digital age has led to many great advances\
+    \ in communications; however, it has also brought on a new age of spying and snooping.\
+    \ Most of us are no strangers to the frequent news stories of governments, secret\
+    \ organisations and underground hackers breaking our privacy but how can you combat\
+    \ this?\n\n# ### ANONYMITY WITH MINT\n\nWhile it’s virtually impossible to become\
+    \ totally anonymous online, you can take measures to ensure our privacy is at\
+    \ its best.\n\n+   **STEP 1**\n+   \n+   Starting with the basics, use HTTPS instead\
+    \ of the standard HTTP when browsing. This means that anything that’s transmitted\
+    \ over HTTPS is secure (hence the S part at the end) and encrypted.\n\n![](img/5019375da05cbf0090115165d80772a1_41_0.png)\n\
+    \n+   **STEP 2**\n+   \n+   When you’re browsing, consider using the Incognito\
+    \ or Private browsing modes available in a browser. This disables your web history\
+    \ and web cache, allowing you to browse without the details being stored for later\
+    \ scrutiny by someone else. However, it doesn’t stop any data or search tracking.\n\
+    \n![](img/5019375da05cbf0090115165d80772a1_41_1.png)\n\n+   **STEP 3**\n+   \n\
+    +   Although using Google may seem like the obvious choice for a modern internet\
+    \ search, the company does track all searches made by an individual. Instead,\
+    \ consider an alternative search engine, such as DuckDuckGo, a search engine that\
+    \ doesn’t store personal data or track you.\n\n![](img/5019375da05cbf0090115165d80772a1_41_2.png)\n\
+    \n+   **STEP 4**\n+   \n+   If you’re regularly on the Internet then consider\
+    \ installing some of the browser plug-ins that enhance your privacy. For example,\
+    \ for Firefox, use Ghostery, NoScript and AdBlock Plus to block trackers, adverts\
+    \ and other data mining techniques.\n\n![](img/5019375da05cbf0090115165d80772a1_41_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# VPNS AND TOR
+
+
+    The previous steps can aid your online privacy but to really become anonymous
+    you need a Virtual Private Network and Tor.
+
+
+    **STEP 1**
+
+    A VPN is a remote server, or cluster of servers, that establishes a connection
+    with your computer. The end result is that your computer’s identity on the Internet
+    is hidden behind the VPN remote server; so you could live in the UK but have an
+    IP address (the computer online identity) belonging to Iceland.
+
+
+    # How VPN works?
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_42_0.png)
+
+
+    **STEP 2**
+
+    Most good VPNs charge a monthly or annual fee but it''s worth the expense. We
+    use CyberGhost, [www.cyberghostvpn.com](http://www.cyberghostvpn.com), which offers
+    VPN connections for Windows, Mac, Mint (as well as other Linux distros), Android
+    and iOS devices. Details for each OS can be found at [www.support.cyberghostvpn.com/hc/en-us/articles/213190329-Read-me-first.](http://www.support.cyberghostvpn.com/hc/en-us/articles/213190329-Read-me-first.)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_42_1.png)
+
+
+    **STEP 3**
+
+    Another option is to use Tor. Tor is an open network that helps you to mask activity
+    to that hides your IP address behind countless nodes around the world. It’s available
+    for Windows, Mac and Linux computers and is very easy to install and use. Start
+    by navigating to [www.torproject.org/download/download-easy.html](http://www.torproject.org/download/download-easy.html)
+    and clicking on the Download Linux 64-bit button.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_42_2.png)
+
+
+    **STEP 4**
+
+    When the download has finished, drop into the Terminal and enter the Downloads
+    folder, `cd Downloads/`. Enter `ls` to check the tor.xz file is present, then
+    enter `tar -xf tor-browser--linux-x86_64-0.4.8-en-US.tar.xz` to unpack regularly.
+    So if your version is different press Tab to autocomplete the tor--browser--filename.
+    When the files are unpacked, use `cd tor-browser_en-US/` to enter the new folder.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_42_3.png)
+
+
+    **STEP 5**
+
+    A quick `ls` reveals a couple of entries: a folder called Browser and a file called
+    `start-tor-browser.desktop`. To start the Tor setup, type `./start-tor-browser.desktop`.
+    This command launches the Tor setup, where you are offered two options: Connect
+    or Configure. For most users, the Connect option will suffice. Click Connect when
+    you’re ready.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_42_4.png)
+
+
+    **STEP 6**
+
+    After the connection is established, the Tor Browser launches. This is a customised
+    version of Firefox that can help you to securely browse the Internet without fear
+    of being viewed or tracked. Mixing both a VPN and Tor makes for an extremely secure
+    and private connection to the online world.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_42_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/5019375da05cbf0090115165d80772a1_43_0.png)
+
+
+    > "Linux: the operating system with a CLUE... Command Line User Environment."
+
+    > - *Anonymous (Posted on comp.software.testing)*'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '![](img/5019375da05cbf0090115165d80772a1_44_0.png)
+
+
+    # # Using the Terminal
+
+
+    The Linux command line, the Terminal, is an incredibly powerful environment. From
+    it, you can bring the OS to its knees, or update it to something spectacular.
+    You can hack into remote computers, look at an animated ASCII camp fire, install
+    new apps and programs, watch Star Wars played out from a server in the Netherlands,
+    and code intricate automated scripts.
+
+
+    In this section you will explore the intricacies of the Terminal, and how it works
+    with Linux. You will learn how to manipulate the Linux file system from the Terminal,
+    but you will discover some odd, but fun things you can do in the Terminal.
+
+
+    The Terminal rules supreme in the world of Linux. Learn how it works, and you
+    can access all that power.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Basics of the Terminal
+
+
+    Most operating systems use two kinds of interface, the GUI, which is the desktop
+    that Windows, macOS and Linux Mint boot into and the command line. While modern
+    operating systems shy away from the command line, Mint uses the Terminal to give
+    the user greater control of the system.
+
+
+    # TAKING COMMAND
+
+
+    The command line, or Terminal, is an extremely powerful interface. Everything
+    you can do on the desktop can be done within the Terminal. Let’s start by seeing
+    how it works.
+
+
+    +   **STEP 1** The Terminal can be accessed by either clicking on the Terminal
+    icon on the Panel, located between the Firefox and Files icons or launched by
+    opening the Menu and selecting it from the left-hand quick launch strip.
+
+
+    +   **STEP 3** What you currently see in the Terminal is your login name followed
+    by the name of the computer; as you named it during setup when you first installed
+    Mint. The line then ends with the current folder name; at first this is just a
+    tilde ~ , which means your Home folder.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_45_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_45_1.png)
+
+
+    +   **STEP 2** The Terminal gives you access to the Linux Mint Shell, called Bash,
+    which gives you access to the underlying operating system. Everything in Mint,
+    including the desktop and GUI, is a module running from the command line.
+
+
+    +   **STEP 4** The flashing cursor at the very end of the line is where your text-based
+    commands are entered. You can begin to experiment with a simple command, Print
+    Working Directory (pwd), which outputs the current folder you’re in to the screen.
+    Type pwd and press Enter.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_45_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_45_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '+   **STEP 5**
+
+    +   All the commands you enter work in the same manner: you enter the command,
+    include any parameters to extend the use of the command and press Enter to execute
+    the command line you''ve entered. Type into the Terminal: uname -a and press Enter.
+    This displays some system information regarding Mint.
+
+
+    +   **STEP 6**
+
+    +   Before we get into entering commands, let''s take a moment to see what menus
+    the Terminal has to offer. The File menu option allows you to open a new Terminal,
+    create a new profile, where you can alter the size, colours and behaviour of the
+    Terminal, add a new tab, and close all current active Terminal sessions.
+
+
+    +   **STEP 7**
+
+    +   The Edit option lets you copy and paste commands to and from the Terminal
+    and other sources; handy for when you want to copy a very long and complex command
+    from a web page. It also allows you to edit the current profile preferences,
+
+
+    +   **STEP 8**
+
+    +   View and Search options let you alter the sizing of the Terminal window and
+    of course search within the Terminal for any particular key words.
+
+
+    +   **STEP 9**
+
+    +   The Terminal entry extends the profile editing and sizing and allows you to
+    alter the character encoding. Interestingly, you can also set it to a Read Only
+    mode, which stops you from entering any commands into the Terminal; this is good
+    for when you need to permanently display the Terminal contents.
+
+
+    +   **STEP 10**
+
+    +   Finally, the Help option displays the help contents and version number of
+    the Terminal, or to be more precise, GNOME Terminal; we''ll simply refer to it
+    as Terminal in future. The Contents are worth having a quick read through, to
+    help familiarise yourself with how the Terminal works.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Update Mint via the Terminal
+
+
+    Up to now you’ve been using the shield icon to launch Mint Update Manager in order
+    to update the system and upgrade the currently installed apps, tools and other
+    elements. However, you can also accomplish a complete system update and upgrade
+    from the Terminal.
+
+
+    # USING APT-GET
+
+
+    To update and upgrade via the Terminal you use the APT (Advanced Packaging Tool)
+    command. It’s a powerful command and combines different elements depending on
+    its use.
+
+
+    # STEP 1
+
+
+    Start by opening a new Terminal or if you already have one opened clear its contents
+    with the clear command. This starts you off with a clean slate on which to work.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_47_0.png)
+
+
+    # STEP 3
+
+
+    Apt-get is used to update and upgrade the software in Mint, as well as Ubuntu
+    and other Debian-based distros. Using the Update element retrieves new package
+    lists and updates the list of source files. Upgrade downloads and performs an
+    upgrade to the latest versions of those files. To start the entire Upgrade and
+    Update process, enter: `sudo apt-get update`, followed by your password.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_47_1.png)
+
+
+    # STEP 2
+
+
+    Enter `apt-get` into the Terminal. This brings up a list of the most used apt-get
+    commands, along with a brief description of what the command does. It’s worth
+    having a look at, even if it doesn’t make a huge amount of sense at this time.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_47_2.png)
+
+
+    # STEP 4
+
+
+    Notice now the addition of the sudo command. The sudo command once meant Super
+    User Do; these days it’s more acceptable as Substitute User Do. It means that
+    the administrative user (Super User) uses APT (Advanced Packaging Tool) to Get
+    any Updates. Now try this: `sudo apt-get upgrade`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_47_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Update Mint via the Terminal
+
+
+    # STEP 5
+
+
+    Depending on the state of your updates, if you have any waiting to be installed,
+    you might be asked if you want to apply the results of the sudo apt-get upgrade
+    command. You can press Y to accept and continue. What’s happening here is that
+    apt-get has some updated software to apply to Mint, and we’re okaying the action.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_48_0.png)
+
+
+    # STEP 7
+
+
+    Essentially, that’s it, your system is now up to date according to the available
+    list of packages from the apt-get update command. You can run through the process
+    one more time, just to check if everything went okay. To recap, enter: `sudo apt-get`
+    update, press Enter, then type: `sudo apt-get upgrade` and press Enter.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_48_1.png)
+
+
+    # STEP 6
+
+
+    There’s likely to be a long list of what seems gibberish now filling your Terminal
+    window but don’t worry. The files necessary for the upgrade have been downloaded,
+    prepared, unpacked, processed, installed and set up correctly. There’s a lot going
+    on when you perform an upgrade, even with the smallest package.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_48_2.png)
+
+
+    # STEP 8
+
+
+    Interestingly, Linux Mint, among other distros, offers you the ability to chain
+    several commands together. In this example, therefore, we can use `sudo apt-get
+    update && sudo apt-get upgrade`. The double ampersand is what combines the commands
+    and works perfectly, providing the preceding command went without a hitch. It’s
+    recommended to start any session with the update and upgrade combo.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_48_3.png)
+
+
+    # TERMINAL VS UPDATE MANAGER?
+
+
+    Why use the Terminal to update and upgrade over the Update Manager, regardless
+    of the distro you’re using? Some users greatly prefer using the Terminal to update
+    their Linux systems and accompanying apps, in the belief that it’s better. However,
+    that’s not often the case.
+
+
+    Using the Terminal, apt-get upgrade, doesn’t handle changing dependencies between
+    versions of packages, so if a package has its dependent files changed from one
+    version to another, then the upgrade is held back.
+
+
+    The Update Manager, or Software Manager (depending on the distro), often phases
+    its updates and marks those packages with changed dependencies for updating. However,
+    and this is where Linux can often get confusing, sometimes it doesn’t.
+
+
+    It all boils down to the developer of the package being updated and the way the
+    package is held in the distro’s repositories and whether the update is classified
+    as stable or not. In essence, from the point of view of the user, if you update
+    and upgrade using both the Terminal and the Update Manager regularly, then you
+    will be as up to date as possible, and get the essential and necessary stable
+    versions of the packages and core software. If you’re looking for cutting edge
+    package updates, then it’s best to opt for a rolling release distro instead.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Install Apps via the Terminal – Part 1
+
+
+    There are different ways to install apps and programs on Linux. You can opt for
+    the graphical route, using a Software Manager, or you can use the Terminal. Often,
+    the Terminal provides better control over the software being installed and sometimes,
+    you have no choice in the matter.
+
+
+    # COMMAND LINE INSTALLS
+
+
+    Installing an app with the Terminal may require some nifty keyboard work but you
+    get a better sense of what’s being installed and where.
+
+
+    +   STEP 1
+
+    +   Installing apps form the Terminal is often relatively simple. First though,
+    you need to make sure that the system is up to date. To do this open up the Terminal
+    and enter: `sudo apt-get update && sudo apt-get upgrade`. Enter your password
+    and accept any necessary updates.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_49_0.png)
+
+
+    +   STEP 3
+
+    +   You need to enter y to confirm the installation, which takes up around 5.5MB
+    of storage in the system. Once Stella is installed, you can see again that Mint
+    has automatically created the Games category in the Menu as well as the app shortcut.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_49_1.png)
+
+
+    +   STEP 2
+
+    +   Just as you’ve seen, sudo apt-get update/upgrade and so on are designed to
+    upgrade the software that’s already installed on the system. How do you install
+    more apps though? It just so happens that it’s extraordinarily simple. First you
+    need an app to install, so let’s use Stella again. Enter: `sudo apt-get install
+    stella`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_49_2.png)
+
+
+    +   STEP 4
+
+    +   Sometimes, when installing software, you need to add the app’s Repository.
+    The repository, or repo, is simply the remote server location where the software
+    is held, along with all its dependencies (the vital libraries and such it needs
+    to function). Start by typing in this: `sudo add-apt-repository ppa:peterlewi/ppa`.
+    Press Enter when asked to add the PPA (Personal Package Archive).
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_49_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# STEP 5
+
+
+    This adds the repo for the app Variety Wallpaper Changer, an Ubuntu-based app
+    that works in Mint and changes the wallpaper automatically. Now that the repo
+    is added, enter: `sudo apt-get update`, to update the new information and add
+    the contents of the repo to the package database.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_50_0.png)
+
+
+    # STEP 6
+
+
+    Now to install Variety, enter: `sudo apt-get install variety`. Press y to confirm
+    and accept the installation, and to continue with the install. Once installed,
+    you can type `variety` into the terminal to run the app.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_50_1.png)
+
+
+    # REMOVING APPS
+
+
+    In addition to installing apps, the `apt` command can also be used to remove any
+    apps and helps keep the system tidy and free up resources.
+
+
+    # STEP 1
+
+
+    To uninstall, or remove, the Variety app enter the following: `sudo apt-get remove
+    variety`. Enter y to continue with the uninstall of the app; notice also that
+    you’re informed of how much space you’re freeing up on the hard drive as a result
+    of removing the app.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_50_2.png)
+
+
+    # STEP 3
+
+
+    When you remove apps from the system you’re to be informed that some packages
+    that were automatically installed are no longer required. You already saw in the
+    previous tutorial, you can tidy things up with the following command: `sudo apt-get
+    autoremove`, followed by pressing y to accept the process.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_50_3.png)
+
+
+    # STEP 2
+
+
+    While the ''apt-get remove'' command uninstalls an app, it doesn''t get rid of
+    the extra clutter that comes with an app, such as configuration and library files.
+    To completely remove the clutter, enter: `sudo apt-get purge variety`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_50_4.png)
+
+
+    # STEP 4
+
+
+    Finally, to tidy up all the non-used packages in the system, and to remove elements
+    that the autoremove command didn''t, you can enter: `sudo apt-get autoclean`.
+    These last few steps are vital for keeping your Linux Mint setup in good working
+    order and to trim off the unnecessary excess caused by installations and upgrades.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_50_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# # Install Apps via the Terminal – Part 2
+
+
+    Most of the time you''ll get to install apps from the Terminal using the standard
+    apt-get command. However, sometimes an app demands a little more work. This means
+    installing an app from its source code, which isn''t as scary as it first sounds.
+
+
+    # FROM THE SOURCE
+
+
+    The commands you''ll need to become familiar with here are Configure, Make and
+    Install. You''ll find a lot of apps use installing from source, so it''s certainly
+    a skill worth investing time in.
+
+
+    +   1.  **STEP 1** Source code files for Linux usually come in the form of .TAR.GZ
+    or .TAR.BZ2. Both are compressed files holding all the core files needed to ‘make''
+    the app. Start off this tutorial by creating a new folder in Home: **mkdir vim**.
+
+    +   2.  **STEP 3** The wget command retrieves content from the Internet, in this
+    case the BZ2 file for Vim. To check the file was downloaded successfully, enter
+    ls. According to Mint''s file system colour key, the compressed file should be
+    displayed in red.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_51_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_51_1.png)
+
+
+    +   3.  **STEP 2** Vim, by the way, is an advanced text editor which we''ll use
+    as an example to install. Enter the new folder, cd vim, then from within the new
+    Vim folder, enter the following command into the Terminal: wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2.
+
+    +   4.  **STEP 4** We need to uncompress the contents of the file now, so enter:
+    tar -xf vim-7.4.tar.bz2 into the Terminal. Note: you can type in tar -xf v and
+    press the Tab key to auto-fill the remaining file name.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_51_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_51_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Install Apps via the Terminal — Part 2
+
+
+    +   **STEP 5** If you enter `ls` again, you’ll notice that a new folder has been
+    created: `vim74`; in light blue text representing a folder in `Mint`. It’s always
+    handy to create root folders for the main app. You can upgrade apps through this
+    method the individual versions will each have their own folder.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_52_0.png)
+
+
+    +   **STEP 6** Type in `cd vim74` to enter the folder, and `ls` again to view
+    its contents. There will likely be a fair number of files present; most are app’s
+    core files, while others will be labelled `README` or `INSTALL`. It’s always wise
+    to read these files first as they provide valuable information regarding the installation.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_52_1.png)
+
+
+    +   **STEP 7** The first part of the installation requires you to enter `./configure`.
+    The `./configure` command will check your system for any missing dependencies
+    associated with the app. If you received an error regarding a C Compiler, then
+    enter: `sudo apt-get: install build-essential`. The third-party app `Ncurses`
+    was recorded as missing. We need to install that with: `sudo apt-get: install
+    libncurses5-dev libncursesw5-dev`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_52_2.png)
+
+
+    +   **STEP 8** You may need to keep installing new dependencies, depending on
+    the app. After each new dependency is installed, re-run `./configure` and when
+    it doesn’t report back with an error you can continue to the next stage of the
+    installation. Note: you may need to search online for some error messages.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_52_3.png)
+
+
+    +   **STEP 9** With a successful `./configure`, the system will create a `Makefile`.
+    This needs to be ‘made’ by entering: `make` into the Terminal. This may take a
+    while, depending on the size of the app.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_52_4.png)
+
+
+    +   **STEP 10** Finally, you need to enter: `sudo make: install` into the Terminal.
+    This will install the app, and make it ready for use in the system. When complete
+    you can now execute the app, in this case by entering `vim` into the Terminal
+    or searching for it via the Dash.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_52_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Using the Terminal
+
+
+    ```
+
+    Kernel command line: block2mtl.block2mtl=/dev/hda2,131072,rootfs root=/dev/mtdbl
+
+    cOckO rootfstype=jffs2 init=/etc/preinit noinitrd console=tty0 console=ttyS0,384
+
+    00n8 reboot=biOS
+
+    Found and enabled local APIC
+
+    Enabling fast FPU save and restore... done.
+
+    Enabling unmasked SIMD FPu exception support... done.
+
+    Initializing CPU#0
+
+    PID hash table entries: 32 (order: 5, 128 bytes)
+
+    Detected 1991.657 Mhz processor.
+
+    Console: colour VGA+ 80x25
+
+    console [tty0] enabled
+
+    console [ttyS0] enabled
+
+    Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+
+    Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+
+    Memory: 5112k/8128k available (1497k kernel code, 2624k reserved, 597k data, 196
+
+    k init, Ok highmem)
+
+    virtual kernel memory layout:
+
+    fixmap : 0xffffb000 - 0xfffff000 (280 KB)
+
+    vmalloc : 0xc1000000 - 0xffff7000 (1007 MB)
+
+    lowmem : 0xc0000000 - 0xc07f0000 ( 7 MB)
+
+    .init : 0xc0313000 - 0xc0344000 (196 kB)
+
+    .data : 0xc027653c - 0xc030bcf0 (597 kB)
+
+    .text : 0xc0010000 - 0xc027653c (1497 kB)
+
+    Checking if this processor honors the WP bit even in supervisor mode... Ok.
+
+    Calibrating delay using timer specific routine... 4047.64 BogoMIPS (lpj=20238210)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "![](img/5019375da05cbf0090115165d80772a1_54_0.png)\n\n# # Linux Kernel 0.01\n\
+    \n```\n```c\n/*\n * Copyright Linus Torvalds\n * Based on WRITE-BAKED 838-MODE\
+    \ - Q-51.1\n * Hopefully (this will be a faster complete VTI.01 implementation.\n\
+    \ */\n\n/*\n * 838: The 838-SIM-1324-41-BRIDGE-DRIVER\n */\n\n#include <linux/mod.h>\n\
+    #include <asm/io.h>\n#include <asm/bio.h>\n#include <asm/segm.h>\n\n#define SCREEN_DATA\
+    \ 128000\n#define SCREEN_END  (0xC600)\n#define LINES 25\n#define COLUMNS 80\n\
+    #define SPAM 16\n\nextern void keyboard_interrupt(void);\n\nstatic unsigned long\
+    \ origin=SCREEN_DATA;\nstatic unsigned long mtr_end=SCREEN_DATA+LINES*(COLUMNS+2);\n\
+    static unsigned long p0m;\nstatic unsigned long top_i=bottom_LINE;\nstatic unsigned\
+    \ long line_i=LINES*COLUMNS;\nstatic unsigned long state;\nstatic unsigned long\
+    \ npar,nar*(NPAR);\nstatic unsigned long gear;\nstatic unsigned char attr=NOT;\n\
+    ```\n```\n\nthat the first Linus kernel, as programmed by Linus Torvalds, only\
+    \ occupied 65KB of memory? And that since version 0.01, the Linux kernel now boasts\
+    \ over 18 million lines of code. Not bad for a university project that now runs\
+    \ the New York Stock Exchange, and powers the US Department of Defence's fleet\
+    \ of nuclear submarines.\n\n# ## DID YOU KNOW..."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# ## Creating a File Using the Terminal
+
+
+    Using the Terminal, you''re able to create folders, files and even execute Linux
+    Mint apps. In truth, if you didn''t have the GUI at hand, you could still accomplish
+    the same from the Terminal.
+
+
+    # ### MORE TERMINAL WORK
+
+
+    Creating content using the Terminal isn''t quite as strenuous as it may first
+    appear. Yes, the Terminal can look a daunting place for the newcomer, but once
+    mastered it''s really quite intuitive.
+
+
+    +   **STEP 1** Open up the Terminal, and make sure you''re in the Home folder.
+    If not use the **cd** command to return you to the Home folder from wherever you''re
+    currently located.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_55_0.png)
+
+
+    +   **STEP 2** Let''s start by creating a new folder within Home, and call it
+    **Test**. The command you''ll need is **mkdir** in **Test**. Press **Enter** to
+    create the folder when you''ve typed in the command, then **cd /Test** and press
+    **Enter**. This will Change Directory (hence **CD**) to the newly created Test
+    folder.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_55_1.png)
+
+
+    +   **STEP 3** Your command line should change to the Test folder and if you enter
+    **ls** (List folder contents) there''ll be nothing within the folder, as you''ve
+    just created it. The **mkdir** command is fairly self explanatory: Make Directory
+    followed by the name of your choosing.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_55_2.png)
+
+
+    +   **STEP 4** To create an empty text file, called **Test.txt**, enter in the
+    Terminal: **touch Test.txt**, then use **ls** to view the new file in the folder.
+    Touch is a standard Linux command that allows the creation of files without the
+    need to open a text editor, save the file, then close the editor.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_55_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Creating a File Using the Terminal
+
+
+    **STEP 5** Let''s say you now wanted to create a text file. We''ll call it **Test2.txt**,
+    complete with some content. To do so, enter: **cat > Test2.txt.** This will create
+    the file **Test2.txt** and put the Terminal into an editing mode.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_56_0.png)
+
+
+    **STEP 8** Xed is a GUI app, and you can enter text and save the file, or any
+    file, accordingly by using the app''s main window; and the **File > Save**, or
+    **File > Save As** functions from its top menu bar options.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_56_1.png)
+
+
+    **STEP 6** You''ll notice that the cursor is flashing below the **cat > Test2.txt**
+    command, without the usual prompt. This editing mode will allow you enter the
+    text that the file will contain. Enter some text, then press **Ctrl+D** to exit
+    and write the contents to the file.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_56_2.png)
+
+
+    **STEP 9** If, however, you prefer to remain working in the Terminal to edit/save/create
+    files, you can use **Nano**. Nano is a simple Terminal-based text editor. To try
+    it with the example, enter: **nano Test2.txt.** There''s a menu along the bottom
+    of the screen. To exit and save any content in Nano, press **Ctrl+X** and follow
+    the on-screen instructions.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_56_3.png)
+
+
+    **STEP 7** Of course you don''t always have to use the Terminal to enter text
+    into a file. Mint comes with a text editor called **Xed**, which is similar to
+    Windows'' Notepad. To view the previously created file in Xed, type into the Terminal:
+    **xed Test2.txt**, and press **Enter**.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_56_4.png)
+
+
+    **STEP 10** We''ve used the Terminal to launch a Mint app, **xed**, but any app
+    can be launched from within the Terminal. For example, try: **firefox** and press
+    **Enter**. Close Firefox to return to the Terminal. Providing you know the name
+    of the app, it can run from the Terminal. Additionally, entering **firefox** opens
+    Firefox, AND lets you still use the Terminal.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_56_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# Creating and Removing Directories\n\nAs with creating files in the Terminal,\
+    \ you can also create and delete directories, or folders if you prefer. Directories\
+    \ form the structure of your file system, without logical directories the filing\
+    \ system would be in utter chaos.\n\n# MANAGING FOLDERS\n\nLearning how to create\
+    \ and delete folders in the Terminal is an important Mint, and indeed Linux overall,\
+    \ skill to master. Here's the basics for you to try out.\n\n+   **STEP 1**  With\
+    \ the Terminal open enter `cd` – to make sure you’re in your own Home directory.\
+    \ Now enter `ls` to view the current folders you have housed in the Home directory.\
+    \ You’ll notice that folders are labelled in Mint in cyan (light blue). Let’s\
+    \ start by creating a new directory. Enter `mkdir testdir`.\n\n![](img/5019375da05cbf0090115165d80772a1_57_0.png)\n\
+    \n+   **STEP 3** If you were to enter the command again, `mkdir testdir`, you’ll\
+    \ receive a message stating: `mkdir: cannot create directory ‘testdir’: File exists`.\
+    \ It goes without saying then, that you’re only able to have one uniquely named\
+    \ directory within the current directory. However, as Linux is case-sensitive,\
+    \ you can have `TestDir`, `TesDir`, `testDir` and so on.\n\n![](img/5019375da05cbf0090115165d80772a1_57_1.png)\n\
+    \n+   **STEP 2** If you now enter `ls` again, you’ll see that the new directory,\
+    \ testdir, has been created alongside the other directories in the Home area.\
+    \ Obviously the command `mkdir` is what creates the directory, and no doubt you’ve\
+    \ already guessed it stands for Make Directory.\n\n+   **STEP 4** You can create\
+    \ directories within directories you’ve already created. For example, enter the\
+    \ testdir directory with `cd testdir/`, followed by `ls` to list the folder structure.\
+    \ Naturally there’s nothing present, as you’ve just created the directory.\n+\
+    \   \n+   Now drop back to Home with `cd ~`, and enter `mkdir testdir/reports`.\
+    \ Go back to the testdir, `cd testdir/`, and `ls` again.\n\n![](img/5019375da05cbf0090115165d80772a1_57_2.png)\n\
+    \n![](img/5019375da05cbf0090115165d80772a1_57_3.png)\n\n58\n\nwww.mymagbooks.com\
+    \  mymag.com.au/mymag"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# STEP 5
+
+
+    The command to create directories is quite logical, therefore. You''ll create
+    the directory, and any sub-directories within. However, what if you want to create
+    a directory and a sub-directory in a single command? Make sure you''re at **Home**
+    (**cd** →) and enter **mkdir r ~p Temp/finances**. Now, **cd Temp/**, and **ls**
+    to list the new directory.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_58_0.png)
+
+
+    # STEP 8
+
+
+    Now that we''ve created some directories, let''s see about removing them. Start
+    by entering the **testdir** directory and listing its contents: **cd testdir**,
+    then **ls**. The previously created **reports** sub-directory is present. One
+    way to remove it is to enter: **rmdir reports**, then **ls** again to confirm
+    it''s not there.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_58_1.png)
+
+
+    # STEP 6
+
+
+    The **-p** option is what enables the **mkdir** command to create the sub-directory
+    as well as the parent directory. In Linux, commands always follow the same structure:
+    **Command, Option, and Argument**. In the previous step example, command (**mkdir**),
+    option (**-p**), and argument (**Temp/finances**).
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_58_2.png)
+
+
+    # STEP 9
+
+
+    A quick warning: removing a directory in the Terminal doesn''t place it in the
+    Mint **Rubish Bin**, via Nemo file manager. The same goes for any files, too.
+    If you remove a directory from the Terminal command then it''s gone for good.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_58_3.png)
+
+
+    # STEP 7
+
+
+    If you want to drill down into the various options available for the **mkdir**
+    command, you can enter **mkdir r ~help** in the Terminal. This will provide a
+    quick help guide detailing the options and how the command structure works.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_58_4.png)
+
+
+    # STEP 10
+
+
+    **Rmdir** will only remove empty directories, to remove directories containing
+    sub-directories, or even files, you''ll need to use the **rm** command with the
+    **-R** option. For example, on the **Temp** page directories, use **rm ~R Temp**.
+    A quick **ls** reveals that the parent folder and all of its contents are removed.
+    Careful when using this command.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_58_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# # Fun Things to do in the Terminal\n\nDespite the seriousness of an operating\
+    \ system, the Linux community are certainly no strangers to a bit of fun. The\
+    \ developers over the years have created and inserted all manner of fun and odd\
+    \ elements into the Terminal.\n\n# ## TERMINAL FUN\n\nYou'll be working exclusively\
+    \ in the Terminal for these next two sections, so start warming up your fingers.\
+    \ After all, all work and no play... as the saying goes.\n\n+   **STEP 1**\n+\
+    \   \n+   The first command we're going to use is **sl**. It's not installed by\
+    \ default so enter: `sudo apt-get install sl`. The command can be run with **sl**\
+    \ and when executed will display a Steam Locomotive travelling across the screen\
+    \ (hence 'sl'). Entering **LS**, note the upper case, also works.\n\n![](img/5019375da05cbf0090115165d80772a1_59_0.png)\n\
+    \n+   **STEP 2**\n+   \n+   Fans of Star Wars even get a fix when it comes to\
+    \ the Terminal. By linking to a remote server via the telnet command, you can\
+    \ watch Episode IV: A New Hope being played out, albeit in ASCII. To view this\
+    \ spectacle, enter: `telnet towel.blinkenlights.nl`.\n\n![](img/5019375da05cbf0090115165d80772a1_59_1.png)\n\
+    \n+   **STEP 3**\n+   \n+   If you've ever fancied having the computer read a\
+    \ random fortune out to you, then you're in luck. Most distros require you to\
+    \ install the fortune app, however Linux Mint differs somewhat by having it already\
+    \ pre-loaded. All you need to do is enter the command **fortune** into the Terminal,\
+    \ and enjoy.\n\n![](img/5019375da05cbf0090115165d80772a1_59_2.png)\n\n+   **STEP\
+    \ 4**\n+   \n+   The **rev** command is certainly interesting, and at first what\
+    \ seems a quite useless addition to the OS. However, it can be used to create\
+    \ some seemingly unbreakable passwords. Enter: **rev**, now type some text, when\
+    \ you press **Enter** next, everything you typed in will be reversed. Press **Ctrl+C**\
+    \ to exit.\n\n![](img/5019375da05cbf0090115165d80772a1_59_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Fun Things to do in the Terminal
+
+
+    **STEP 5**  If you''re stuck trying to work out all the possible factors for any
+    particular number, simply enter **factor** followed by the number. For example,
+    **factor 7** doesn''t offer much output, whereas **factor 60** displays more.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_60_0.png)
+
+
+    **STEP 6**  There’s a fine line between the rather cool and really-quirky vibe.
+    Having an ASCII cow repeat text to you could potentially fall in the latter. Enter
+    **cowsay** followed by any text you want, such as **cowsay Linux Mint is ace!**.
+    In fact, you can even output the **ls** command through the cow, by entering **ls
+    | cowsay**.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_60_1.png)
+
+
+    **STEP 7**  To further the cow element, there’s even a graphical, ie, non-terminal,
+    cow available. Install it with **sudo apt-get install xcowsay**, then when it’s
+    installed enter something similar to cowsay, such as **xcowsay BOM Publications**.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_60_2.png)
+
+
+    **STEP 8**  If you really want to expand the whole cow thing, for whatever reason,
+    then pipe the fortune command through it with **fortune | cowsay** and for the
+    graphical cow equivalent: **fortune | xcowsay**. Plus, there’s always **cowthink**.
+    Try: **cowthink ... This book is awesome.**
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_60_3.png)
+
+
+    **STEP 9**  The command **toilet** doesn’t inspire much confidence, we’ll admit.
+    However, it’s not as bad as it first sounds. Start by installing it with **sudo
+    apt-get install toilet**. Then when installed, type something along the lines
+    of **toilet David**. Or perhaps list the contents of the current folder through
+    it, with **ls | toilet**.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_60_4.png)
+
+
+    **STEP 10**  Expanding the **toilet** command, you can actually generate some
+    decent looking graphics through it. For example, try this **toilet -F monolid
+    -F metal David**. You can enter **toilet -help**, for a list of the command line
+    arguments to expand further.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_60_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# More Fun Things to
+
+    do in the Terminal
+
+
+    If the previous list of fun, and quite bizarre, things to do in the Terminal has
+    you wanting more, you''re in luck. We''ve put together another batch of some useful,
+    and some not so useful, commands for you to try out.
+
+
+    # MORE FUN, YAY
+
+
+    Since the Terminal session is already open, and your keyboard digits are nicely
+    warmed up, here are another two pages of Terminal nonsense.
+
+
+    +   **STEP 1** Remember the old ZX Spectrum days of computing, when you could
+    type in 10 print “Hello”, 20 goto 10 and Hello would list down the screen? Well,
+    in Linux Mint you can do the same. Simply more yes followed by some text, i.e.
+    yes Linux ts ace. It''ll keep going until you press Ctrl+C.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_61_0.png)
+
+
+    +   **STEP 3** Having a little white cat chase your mouse pointer around the desktop
+    may sound like a terrible waste of time. Oddly though, it isn''t. Enter: sudo
+    apt-get install oneko, then type oneko to have the cat appear. Move your ''mouse''
+    cursor around the screen and the cat will chase it. Use Ctrl+C to exit the action.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_61_1.png)
+
+
+    +   **STEP 2** The Matrix was one of the most graphically copied films ever released;
+    there''s even a version of the Matrix code available for Linux Mint. Install it
+    with: sudo apt-get install cmatrix. When it''s done enter: cmatrix and follow
+    the white rabbit. Neo. Unlike the real Matrix though, you can press Ctrl+C to
+    exit.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_61_2.png)
+
+
+    +   **STEP 4** This entry is a little more serious than the previous. It''s called
+    the **Fork Bomb** and what it does, basically, is continually replicate itself
+    until it has used up all the available system resources, thus causing your computer
+    to crash. You don''t have to try it but it''s interesting nonetheless. Simply
+    enter: \{\{:\};\}; and be prepared to reboot.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_61_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'STEP 5
+
+    Stringing several commands and piping them through can be what makes scripting
+    such a powerful element to an OS. Using the while command, for example, together
+    with toilet, can yield some impressive results. Enter:
+
+    while true; do echo "$(date ''+%d %T'')" | toilet -f term; -F border -:-metal);
+    sleep 1; done.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_62_0.png)
+
+
+    STEP 8
+
+    Used as a music demo from the old Amiga and DOS days, the bb command reminds us
+    of getting hold of three and a half inch floppies crammed with all manner of dosmode
+    goodies. We''ve already installed bb from the previous step, so just enter bb.
+    Follow the on-screen instructions, and turn up your volume.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_62_1.png)
+
+
+    STEP 6
+
+    Talking computers were the craze of the 80s, enter: speak "Hello, this is Linux
+    Mint" to have the computer repeat the text inside the quotes to you. Make sure
+    your volume is turned up and try the following: ls > folders.txt && speak -f folders.txt.
+    This will have Mint read back the contents of the ls command.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_62_2.png)
+
+
+    STEP 9
+
+    This entry is in two parts. First you need to get hold of the necessary packages:
+    sudo apt-get install libcurses-perl. When that''s done enter: cd Downloads/ &&
+    wget http://search.cpan.org/CPAN/authors/id/K/KB/KBALCOM/Term-Animation-2.4.tar.gz
+    && tar -xf Term-Animation-2.4.tar.gz && cd Term-Animation-2.4/. Then: perl Makefile.PL
+    && make && make test && sudo make install.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_62_3.png)
+
+
+    STEP 7
+
+    A roaring ASCII fire isn''t the most useful command to have at your disposal,
+    but it''s fun. Install it with: sudo apt-get install libaa-bin, then when installed
+    use: aafire. It''s not exactly warming but you get the idea. To expand the above,
+    enter: sudo apt-get install bb caca-utils, then, caca-fire.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_62_4.png)
+
+
+    STEP 10
+
+    With that little lot done, onto the next: Enter cd . . && wget http://www.rorobunny.com/projects/asciiarium/asciiarium.tar.gz
+    && tar -xf asciiarium.tar.gz && cd asciiarium-1.1/ && chmod +x asciiarium. Providing
+    all went well, enter ./asciiarium and enjoy your very own ASCII-based aquarium.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_62_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# # Linux Tips and Tricks
+
+
+    As you''ve seen, the Linux Terminal is quite an exceptional environment. With
+    a few extra apps installed, and a smidgen of command knowledge, incredible, and
+    often quite strange, things can be accomplished.
+
+
+    # ## TAKING COMMAND
+
+
+    There are countless Linux tips, secrets, hacks and tricks out there. Some are
+    very old, originating from Linux''s Unix heritage, while others are recent additions
+    to Linux lore. Here''s our favourite ten tips and tricks.
+
+
+    # ### EASTER EGGS
+
+
+    Emacs, the text editor, is a great piece of software; however, did you know it
+    also contains a hidden Easter Egg? With Emacs installed (`sudo apt-get install
+    emacs25`), drop to a Terminal session and enter:
+
+
+    ```
+
+    ```bash
+
+    emacs --batch -l dunnet
+
+    ```
+
+    ```
+
+
+    Dunnet is a text adventure written by Ron Schell in 1982, and hidden in Emacs
+    since 1994.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_63_0.png)
+
+
+    # ### TERMINAL BROWSING
+
+
+    Ever fancied being able to browse the Internet from the Terminal? While not particularly
+    useful, it is quite a fascinating thing to behold. To do so, enter:
+
+
+    ```
+
+    ```bash
+
+    sudo apt-get install elinks elinks
+
+    ```
+
+    ```
+
+
+    Enter the website you want to visit.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_63_1.png)
+
+
+    # ### MOON BUGGY
+
+
+    Based on the classic 1982 arcade game, Moon Patrol, Moon Buggy appeared on the
+    home computers of 1985 amid much praise. It''s a cracking Atari game, and it''s
+    available in the Linux Terminal by entering:
+
+
+    ```
+
+    ```bash
+
+    sudo apt-get install moon-buggy
+
+    ```
+
+    ```
+
+
+    Then:
+
+
+    ```
+
+    ```bash
+
+    moon-buggy
+
+    ```
+
+    ```
+
+
+    Enjoy.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_63_2.png)
+
+
+    # ### LET IT SNOW
+
+
+    Snowing in the Terminal console isn''t something you come across every day. If
+    you''re interested, however, enter:
+
+
+    ```
+
+    ```bash
+
+    wget https://gist.githubusercontent.com/sentek/
+
+    1505483/raw/7d024716e057e69fb52632fee09f42
+
+    753631c4d2/snowjob.sh
+
+    chmod +x snowjob.sh
+
+    ./snowjob.sh
+
+    ```
+
+    ```
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_63_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# MEMORY HOGS
+
+
+    If you need to see what apps are consuming the most memory on Linux, simply enter:
+
+
+    ```
+
+    ps aux | sort -rnk 4
+
+    ```
+
+
+    This sorts the output by system memory use.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_64_0.png)
+
+
+    # BBS
+
+
+    Back in the days of dial-up connections, the online world was made up of Bulletin
+    Board Systems. These remote servers provided hang-outs for users to chat, swap
+    code, play games and more. Using telnet in Linux, we can still connect to some
+    active BBSes:
+
+
+    ```
+
+    telnet battlebbs.tarballs.dynnds.org
+
+    ```
+
+
+    There are countless operable BBSes available, check out https://www.telnetbbsguide.com/bbslist/detail/,
+    for more.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_64_1.png)
+
+
+    # SHREDDER
+
+
+    When you delete a file, there’s a chance of someone with the right software being
+    able to retrieve it. However, to securely and permanently delete a file, use Shred:
+
+
+    ```
+
+    shred -zvu NAMEOFFILE.txt
+
+    ```
+
+
+    Replace NAMEOFFILE with the name of the file to delete.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_64_2.png)
+
+
+    # DIRECTORY TREES
+
+
+    If you want to create an entire directory (or folder) tree with a single command,
+    you can use:
+
+
+    ```
+
+    mkdir -p New-Dir/{subfolder1,subfolder2,subfolder3,subfolder4}
+
+    ```
+
+
+    This creates a New-Dir with four sub folders within.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_64_3.png)
+
+
+    # ASCII ART
+
+
+    ASCII art can be quite striking when applied to some images. However, it’s often
+    difficult to get just right. You can create some great ASCII art from the images
+    you have by using img2txt:
+
+
+    ```
+
+    img2txt NAMEOFIMAGEFILE.png
+
+    ```
+
+
+    Replace NAMEOFIMAGEFILE with the actual name of the image file on your system.
+    If img2txt install installed, use:
+
+
+    ```
+
+    sudo apt-get install caca-utils
+
+    ```
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_64_4.png)
+
+
+    # FORGOTTEN COMMANDS
+
+
+    It’s not easy trying to remember all the available Linux commands. Thankfully,
+    we can use apropos to help us. Simply use it, along with a description of the
+    command:
+
+
+    ```
+
+    apropos "copy files"
+
+    apropos "rename files"
+
+    ```
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_64_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'Using the Terminal
+
+
+    # Linux and the Big Bang
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_65_0.png)
+
+
+    > Linux is colliding particles, so we can understand how the universe works.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# DID YOU KNOW...
+
+
+    that Linux is at the heart of the science behind the Large Hadron Collider? Using
+    a combination of Red Hat Linux and CentOS (an ultra-stable distro built from the
+    Red Hat core) as the base distributions of choice, scientists, developers and
+    engineers have created SL – Scientific Linux.
+
+
+    Using SL as the base, the clever people at CERN have developed several different
+    versions of their own custom Linux distro to help with all aspects of the LHC.
+    Most notable is SLC, or Scientific Linux CERN, also known as CERN6. According
+    to reports, there are over 36,000 systems running SL, and over 15,000 running
+    SLC.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_66_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# # Creating Bash Scripts – Part 1
+
+
+    Eventually, as you advance with Linux Mint, you''ll want to start creating your
+    own automated tasks and programs. These are essentially scripts. Bash Shell scripts
+    to be exact, and they work in the same way as a DOS Batch file does, or any other
+    programming language.
+
+
+    # ## GET SCRIPTING
+
+
+    A Bash script is simply a series of commands that Mint will run through to complete
+    a certain task. They can be simple or remarkably complex, it all depends on the
+    situation.
+
+
+    **STEP 1** You''ll be working within the Terminal and with a text editor throughout
+    the coming pages. There are alternatives to the text editor, which we''ll look
+    at in a moment but for the sake of ease, we''ll be doing our examples in Xed.
+    Before you begin, however, run through the customary update check: `sudo apt-get
+    update && sudo apt-get upgrade.`
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_67_0.png)
+
+
+    **STEP 3** To begin with, and before you start to write any scripts, you need
+    to create a folder where you can put all your scripts into. Start with `mkdir
+    scripts`, and enter the folder `cd scripts/`. This will be our working folder
+    and from here you can create sub-folders if you want of each script you create.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_67_1.png)
+
+
+    **STEP 2** There are several text editors we can use to create a Bash script:
+    Xed, Vi, Nano, Vim, GNU Emacs and so on. In the end it all comes down to personal
+    preference. Our use of Xed is purely due to making it easier to read the script
+    in the screenshots you see below.
+
+
+    **STEP 4** Windows users will be aware that in order for a batch file to work,
+    as in be executed and follow the programming within it, it needs to have a .BAT
+    file extension. Linux is an extension-less operating system but the convention
+    is to give scripts a .sh extension.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_67_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Creating Bash Scripts - Part 1
+
+
+    **STEP 5** Let’s start with a simple script to output something to the Terminal.
+    Enter `xed helloworld.sh`. This will launch Xed and create a file called helloworld.sh.
+    In Xed, enter the following: `#!/bin/bash`, then on a new line: `echo Hello World!`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_68_0.png)
+
+
+    **STEP 8** When you enter `ls` again, you can see that the helloworld.sh script
+    has now turned from being white to green, meaning that it’s now an executable
+    file. To run the script, in other words make it do the things you’ve typed into
+    it, enter: `./helloworld.sh`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_68_1.png)
+
+
+    **STEP 6** The `#!/bin/bash` line tells the system what Shell you’re going to
+    be using, in this case Bash. The hash (#) denotes a comment line, one that is
+    ignored by the system, the exclamation mark (!) means that the comment is bypassed
+    and will force the script to execute the line as a command. This is also known
+    as a Hash-Bang.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_68_2.png)
+
+
+    **STEP 9** Although it’s not terribly exciting, the words ‘Hello World!’ should
+    now be displayed in the Terminal. The `echo` command is responsible for outputting
+    the words after it in the Terminal, as we move on you can make the `echo` command
+    output to other sources.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_68_3.png)
+
+
+    **STEP 7** You can save this file, clicking **File > Save**, and exit back to
+    the Terminal. Entering `ls`, will reveal the script in the folder. To make any
+    script executable, and able to run, you need to modify its permissions. Do this
+    with `chmod +x helloworld.sh`. You need to do this with every script you create.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_68_4.png)
+
+
+    **STEP 10** Think of `echo` as the old **BASIC** Print command. It displays either
+    text, numbers or any variables that are stored in the system, such as the current
+    system date. Try this example: `echo Hello World! Today is $(date +%A)`. The `$(date
+    +%A)` is calling the system variable that stores the current day of the week.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_68_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Using the Terminal
+
+
+    # Creating Bash Scripts
+
+    – Part 2
+
+
+    Previously we looked at creating your first Bash script, Hello World, and adding
+    a system variable. Now you can expand these and see what you can do when you start
+    to play around with your own unique variables.
+
+
+    # VARIABLES
+
+
+    Just as in every other programming language a Bash script can store and call certain
+    variables from the system, either generic or user created.
+
+
+    +   **STEP 1**
+
+    +   Let’s start by creating a new script called hello.sh;
+
+    +   `xed hello.sh.` In it enter: `#!/bin/bash`, then, echo Hello $1. Save the
+    file and exit Xed. Back in the Terminal make the script executable with `chmod
+    +x hello.sh.`
+
+
+    +   **STEP 3**
+
+    +   The output now will be Hello David. This is because Bash automatically assigns
+    variables for the user, which are then held and passed to the script. So the variable
+    ''$1'' now holds ‘David’. You can change the variable by entering something different:
+    `./hello.sh Mint`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_69_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_69_1.png)
+
+
+    +   **STEP 2**
+
+    +   As the script is now executable, run it with `./hello.sh.` Now, as you probably
+    expected a simple ''Hello'' is displayed in the Terminal. However, if you then
+    issue the command with a variable, it begins to get interesting. For example,
+    try `./hello.sh David`.
+
+
+    +   **STEP 4**
+
+    +   You can even rename variables. Modify the hello.sh script with the following:
+    `firstname=$1, surname=$2, echo Hello $firstname $surname.` Putting each statement
+    on a new line. Save the script and exit back into the Terminal.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_69_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_69_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'STEP 5  When you run the script now you can use two custom variables ..,/hello.sh
+    David Hayward. Naturally change the two variables with your own name, unless you’re
+    also called David Hayward. At the moment we’re just printing the contents, so
+    let’s expand the two-variable use a little.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_70_0.png)
+
+
+    STEP 6  Create a new script called **addition.sh**, using the same format as the
+    hello.sh script, but changing the variable names. Here we’ve added **strnumber**
+    and **secondnumber**, and used the echo command to **first** **number** simple
+    arithmetic by placing an integer expression. **echo The sum is $(($firstnumber+$secondnumber))**.
+    Save the script, and make it executable (**chmod +x addition.sh**).
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_70_1.png)
+
+
+    STEP 7  When you now run the addition.sh script we can enter two numbers: **./addition.sh
+    1 2**. The result will hopefully be 3, with the Terminal displaying **The sum
+    is 3**. Try it with a few different numbers and see what happens. See also if
+    you can alter the script and rename it do multiplication, and subtraction.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_70_2.png)
+
+
+    STEP 8  Let’s expand things further. Create a new script called **greetings.sh**.
+    Enter the scripting as below in the screenshot, save it and make it executable
+    with the **chmod** command. You can see that there are a few new additions to
+    the script now.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_70_3.png)
+
+
+    STEP 9  We’ve added a **–n** to the echo command here which will leave the cursor
+    on the same line as the question. Instead of a new line. The **read** command
+    stores the users’ input as the variables **firstname** and **surname**, so then
+    read back later in the last **echo** line. And the **clear** command clears the
+    screen.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_70_4.png)
+
+
+    STEP 10  As a final addition, let’s include the date variable we used in the last
+    section. Amend the last line of the script to read: **echo Hello $firstname $surname,
+    how are you on this fine $(date +%a)?**. The output should display the current
+    day of the week, calling it from a system variable.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_70_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# # Creating Bash Scripts – Part 3\n\nIn the previous pages we looked at some\
+    \ very basic Bash scripting, which involved outputting text to the screen, getting\
+    \ a user’s input, storing it and outputting that to the screen; as well as including\
+    \ a system variable using the Date command. Now let’s combine what you’ve achieved\
+    \ so far and introduce Loops.\n\n# ## IF, THEN, ELSE\n\nWith most programming\
+    \ structures there will come a time where you need to loop through the commands\
+    \ you’ve entered to create better functionality, and ultimately a better program.\n\
+    \n+   **STEP 1** Let’s look at the If, Then and Else statements now, which when\
+    \ executed correctly, compare a set of instructions and simply work out that:\
+    \ If something is present, THEN do something, ELSE do something different: Create\
+    \ a new script called greeting2.sh and enter the text in the screenshot below\
+    \ into it.\n\n+   **STEP 3** The next line, ELSE, is what happens if the variable\
+    \ doesn’t equal ‘David’. In this case it simply outputs to the screen the now\
+    \ familiar ‘Hello...’. The last line, the FI statement, is the command that will\
+    \ end the loop. If you have an if command without a FI command, then you get an\
+    \ error.\n\n+   **STEP 2** Greeting2.sh is a copy of greeting.sh but with a slight\
+    \ difference. Here we’ve added a loop starting at the If statement. This means,\
+    \ if the variable entered is equal to David the next line, THEN, is the reaction\
+    \ to what happens, in this case it will output to the screen ‘Awesome name’, followed\
+    \ by the variable (which is David).\n\n+   **STEP 4** You can obviously play around\
+    \ with the script a little, changing the name variable that triggers a response;\
+    \ or maybe even issuing a response where the first name and surname variables\
+    \ match a specific variable.\n\n```\n```\n#!/bin/bash\n\necho -n 'Hello, what\
+    \ is your name? '\nread firstname\necho -n 'Thank you, and what is your surname?\
+    \ '\nread surname\nclear\nif [ $firstname == 'David' ]\nthen\n  echo $firstname\n\
+    ```\n```greeting.sh X\n#!/bin/bash\n\necho -n 'Hello, what is your name? '\nread\
+    \ firstname\necho -n 'Thank you, and what is your surname? '\nread surname\nclear\n\
+    if [ $firstname == 'David' ]\nthen\n  echo $firstname\n```\n```\n\n```\n```\n\
+    $ mkdir scripts\n$ cd scripts\n$ nano greeting2.sh\n\n#!/bin/bash\n\necho -n 'Hello,\
+    \ what is your name? '\nread firstname\necho -n 'Thank you, and what is your surname?\
+    \ '\nread surname\nclear\nif [ $firstname == 'David' ]\nthen\n  echo $firstname\n\
+    else\n  echo Hello $surname\nfi\n```\n```\n\n```\n```\ndavid@david-mint ~ \n$\
+    \ ./scripts\ndavid@david-mint ~ \n$ ./scripts\nHello, what is your name? David\n\
+    Thank you, and what is your surname? Hayard\nAwesome name, $firstname $surname\n\
+    ```\n```\n\n```\n```\n#!/bin/bash\n\necho -n 'Hello, what is your name? '\nread\
+    \ firstname\necho -n 'Thank you, and what is your surname? '\nread surname\nclear\n\
+    if [ $firstname == 'David' ] && [ $surname == 'Hayard' ]\nthen\n  echo $firstname\
+    \ $surname\nelse\n  echo Hello $firstname $surname, how are you on this fine Wednesday?\n\
+    fi\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# MORE LOOPING
+
+
+    You can loop over data using the FOR, WHILE and UNTIL statements. These can be
+    handy if you''re batch naming, copying or running a script where a counter is
+    needed.
+
+
+    +   **STEP 1**\nCreate a new script called **count_.sh**. Enter the text in the
+    screenshot below, save it and make it executable. This creates the variable ''count''
+    which at the beginning of the script equals zero. Then start the WHILE loop, which
+    WHILE count is less than (the LT part) 100 will print the current value of count
+    in the echo command.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_72_0.png)
+
+
+    +   **STEP 2**\nExecuting the count.sh script will result in the numbers 0 to
+    99 listing down the Terminal screen; when it reaches 100 the script will end.
+    Modifying the script with the FOR statement, makes it work in much the same way.
+    To use it in our script, enter the text from the screenshot into the count.sh
+    script.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_72_1.png)
+
+
+    +   **STEP 3**\nThe addition we have here is: **for count in {0..100}; do.** Which
+    means, FOR the variable ''count'' in the numbers from zero to one hundred, then
+    start the loop. The rest of the script is the same. **Run** this script, and the
+    same output should appear in the Terminal.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_72_2.png)
+
+
+    +   **STEP 4**\nThe UNTIL loop works much the same way as the WHILE loop only,
+    more often than not, in reverse. So our counting to a hundred; using UNTIL, would
+    be: **until [ $count -gt 100 ]; do.** The difference being, UNTIL count is greater
+    than (the gt part) one hundred, keep on looping.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_72_3.png)
+
+
+    +   **STEP 5**\nYou''re not limited to numbers zero to one hundred. You can, within
+    the loop, have whatever set of commands you like and execute them as many times
+    as you want the loop to run for. Renaming a million files, creating fifty folders
+    etc. For example, this script will create ten folders named folder1 through to
+    folder10 using the FOR loop.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_72_4.png)
+
+
+    +   **STEP 6**\nUsing the FOR statement once more, we can execute the counting
+    sequence by manipulating the (0..100) part. This section of the code actually
+    means {START,END, INCREMENT}, if there''s no increment then it''s just a single
+    digit up to the END, For example, we could get the loops to count up to 1000 in
+    two''s with: **for count in {0..1000..2}; do.**
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_72_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Creating Bash Scripts
+
+
+    – Part 4
+
+
+    You’ve encountered user interaction with your scripts, asking what the user’s
+    name is and so on. You’ve also looked at *creating loops within the script* to
+    either count or simply do something several times. Let’s combine and expand some
+    more.
+
+
+    # CHOICES AND LOOPS
+
+
+    Let’s bring in another command, **CHOICE**, along with some nested IF and ELSE
+    statements. Start by creating a new script called mychoice.sh.
+
+
+    # STEP 1
+
+
+    The mychoice.sh script is beginning to look a lot more complex. What we have here
+    is a list of four choices, with three possible options. The options: Mint, Is,
+    and Awesome will be displayed if the user presses the correct option key. If not,
+    then the menu will reappear, the fourth choice.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_73_0.png)
+
+
+    # STEP 3
+
+
+    You can, of course, increase the number of choices but you need to make sure that
+    you match the number of choices to the number of IF statements. The script can
+    quickly become a very busy screen to look at. This lengthy script is another way
+    of displaying a menu, this time with a fancy colour scheme too.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_73_1.png)
+
+
+    # STEP 2
+
+
+    If you follow the script through you soon get the hang of what’s going on, based
+    on what we’ve already covered: WHILE, IF, and ELSE, with the FI closing loop statement
+    will run through the options and bring you back to the start if you pick the wrong
+    option.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_73_2.png)
+
+
+    # STEP 4
+
+
+    You can use the arrow keys and Enter in the menu setup in the script. Each choice
+    is an external command that feeds back various information. Play around with the
+    commands and choices, and see what you can come up with. It’s a bit beyond what
+    we’ve looked at but it gives a good idea of what can be achieved.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_73_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# CREATING A BACKUP TASK SCRIPT
+
+
+    One of the most well used examples of Bash scripting is the creation of a backup
+    routine, one that automates the task as well as adding some customisations along
+    the way.
+
+
+    # STEP 1
+
+
+    A very basic backup script would look something along the lines of `#!/bin/bash`,
+    then, `tar cvfz ~/backups/my-backup.tgz ~/Documents/`. This will create a compressed
+    file backup of the `~/Documents` folder, with everything in it, and put it in
+    a folder called `~/backups` with the name `my-backup.tgz`.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_74_0.png)
+
+
+    # STEP 4
+
+
+    Once the `~/backups` folder is created, we can now create a new subfolder within
+    it based on the Time Stamp variables we set up at the beginning. Add `mkdir -p
+    $dest/''"$day $month $year"''`. It’s in here that you can put the backup file
+    relevant to that day/month/year.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_74_1.png)
+
+
+    # STEP 2
+
+
+    While perfectly fine, we can make the simple script a lot more interactive. Let’s
+    begin with defining some variables. Enter the text in the screenshot into a new
+    backup. sh script. Notice that we’ve misspelt ‘source’ as ‘sauce’, this is because
+    there’s already a built-in command called ‘source’ hence the different spelling
+    on our part.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_74_2.png)
+
+
+    # STEP 5
+
+
+    With everything in place, you can now enter the actual backup routine, based on
+    the `tar` command from Step 5. Combined with the variables, you have: `tar cvfz
+    $dest/''"$day $month $year"''/Documents`Backup.tgz $sauce. In the screenshot,
+    we added a handy ‘Now backing up...’ echo command.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_74_3.png)
+
+
+    # STEP 3
+
+
+    The previous script entries allowed you to create a Time Stamp, so you know when
+    the backup was taken. You also created a ‘dest’ variable, which is the folder
+    where the backup file will be created (~/backups). You can now add a section of
+    code to first check if the `~/backups` folder exits, if not, then it creates one.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_74_4.png)
+
+
+    # STEP 6
+
+
+    Finally, you can add a friendly message: `echo "Backup complete. All done..."`.
+    The completed script isn’t too over-complex and it can be easily customised to
+    include any folder within your Home area, as well as the entire Home area itself.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_74_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# # Creating Bash Scripts – Part 5\n\nThe backup script we looked at previously\
+    \ can be further amended to incorporate choices, user-interaction with regards\
+    \ to where the backup file will be copied to and so on. Automating tasks is one\
+    \ of the main benefits of Bash scripting, a simple script can help you out in\
+    \ many ways.\n\n# ## EASY AUTOMATION AND HANDY SCRIPTS\n\nEntering line after\
+    \ line of commands to retrieve system information, find a file or rename a batch\
+    \ of files? A script is a better answer.\n\n**STEP 1**  Let's start by creating\
+    \ a script to help display the Mint system information; always a handy thing to\
+    \ have. Create a new script called **sysinfo.sh** and enter the following into\
+    \ Xed, or the text editor of your choice.\n\n```\n```\nsysinfo.sh\n\n#!/bin/bash\n\
+    \n#  Dishtn system information\necho \" $(dpkg -l | grep linux-generic | tail\
+    \ -n 1 | awk '{print $2}')\"\nlsb_release -a\n\necho\necho \"File system disk\
+    \ space usage:\"\ndf -h\n\necho\necho \"Free and used memory:\"\nfree -m\n\necho\n\
+    echo \"System uptime and performance load:\"\nuptime\n\necho\necho \"Users currently\
+    \ logged in:\"\nwho\n\necho\necho \"Top five processes being used by the system:\"\
+    \nps aux | egrep -e \"sshd\" -e \"sudo\" -e \"sh\" -e \"bash\" -e \"systemd\"\
+    \ --sort=-%cpu | head -n 6\n\necho -n \"  \",\n\necho -n \"  \",\n```\n\n```\n\
+    \n**STEP 3**  Each of the sections runs a different Terminal command, outputting\
+    \ the results under the appropriate heading. You can include a lot more, such\
+    \ as the current aliases being used in the system, the current time and date and\
+    \ so on. Plus, you could also pipe all that information into a handy HTML file,\
+    \ ready to be viewed in a browser.\n\n```\n```bash\ndavid@david-mint:~/scripts\
+    \ $\n$ sh sysinfo.sh > ~/sysinfo.html\ndavid@david-mint:~/scripts $\n```\n\n```\n\
+    \n**STEP 2**  We've included a couple of extra commands in this script. The first\
+    \ is the **-e** extension for **echo**, this means it'll enable **echo** interpretation\
+    \ of additional instances of a new line, as well as other special characters.\
+    \ The preceding **'31;43m'** element enables colour for foreground and background.\n\
+    \n```\n```bash\ndavid@david-mint:~/scripts $ ./sysinfo.sh\n\nStatic Hostname:\
+    \ david-mint\nIcon name: computer-vm\nChassis: vm\nMachine ID: 5ab3c275b7304ad3b8aee9f6fcc37eb4\n\
+    Boot ID: 8ccb1bafd934f409c8ac5009aeb7e18\nVirtualization: oracle\nOperating System:\
+    \ Linux Mint 18.1\nKernel: Linux 4.4.0-53-generic\nArchitecture: x86 64\n```\n\
+    \n```\n\n**STEP 4**  Although there are simple Terminal commands to help you look\
+    \ for a particular file or folder, it's often more fun to create a script to help\
+    \ you. Plus, you can use that script for other non-technical users. Create a new\
+    \ script called **look4.sh**, entering the content from the screenshot below.\n\
+    \n```\n```bash\nlook4.sh\n\n#!/bin/bash\ntarget=~/\nread name\n\noutput=$(find\
+    \ $target -iname \"*$name*\" -d 2>/dev/null |)\nif [ [ -e \"$output\" ]; then\n\
+    \    echo \"found\"\nelse\n    echo \"match found\"\nfi\n```\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Creating Bash Scripts – Part 5
+
+
+    **STEP 5** When executed the script waits for input from the user, so in this
+    case the file extension, such as jpg, mp4 and so on. It’s not very friendly though.
+    Let’s make it a little friendlier. Add an echo, with echo -n “Please enter the
+    extension of the file you’re looking for: ”, just before the read command.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_76_0.png)
+
+
+    **STEP 6** Here’s an interesting, fun kind of script using the app espeak. Install
+    espeak with sudo -apt-install espeak, then enter the text below into a new script
+    called speak.sh. As you can see it’s a rehash of the first greeting script we
+    ran. Only this time, it uses the variables in the espeak output.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_76_1.png)
+
+
+    **STEP 7** We briefly looked at putting some colours in the output for our scripts.
+    Whilst it’s too long to dig a little deeper into the colour options, here’s a
+    script that outputs what’s available. Create a new script called colours.sh and
+    enter the text (see below) into it.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_76_2.png)
+
+
+    **STEP 8** The output from colours.sh can, of course, be mixed together, bringing
+    different effects depending on what you want the output to say. For example, white
+    text in a red background flashing (or blinking). Sadly the blinking effect doesn’t
+    work on all Terminals, so you may need to change to a different Terminal.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_76_3.png)
+
+
+    **STEP 9** Whilst we’re on making fancy scripts, how about using Zenity to output
+    a graphical interface? Enter what you see below into a new script, menu.sh. Make
+    it executable and then run it. You should have a couple of dialogue boxes appear,
+    followed by a final message.
+
+
+    **STEP 10** While gaming in a Bash script isn’t something that’s often touched
+    upon, it is entirely possible, albeit a little basic. Movement-based games are
+    difficult, and sometimes buggy, however a good text adventure, or Fighting Fantasy
+    type game is a perfect choice for gaming in the Terminal. Give it a go, and let
+    us know how you get on.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_76_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Pix Linux =
+
+    The Perfect Combination
+
+
+    The Raspberry Pi is a remarkable piece of hardware, and to help drive its potential
+    it needs a remarkable operating system. Thankfully, Linux is the default and recommended
+    OS of choice for the Pi, and together they make a winning team.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_77_0.png)
+
+
+    When the Raspberry Pi was in its developmental stages its designers needed to
+    ensure that they were creating a piece of hardware that could offer much more
+    than simply being a cheap, but small, computer.
+
+
+    The Pi needed to be flexible with what it could do, it needed to have room to
+    grow into more ambitious project concepts and ideas, and it needed to do so in
+    as easy to use a fashion as possible. The goal was to create a universal learning
+    platform, that students of any age could expand on and tinker with, while learning
+    new concepts such as programming, electronics, and computing. Naturally, once
+    the hardware was developed, the only real choice of operating system was of course,
+    Linux.
+
+
+    The versatility of Linux is legendary. This incredible core OS is so malleable
+    that it can be steered toward near any aspect of computing, from supercomputing
+    to robotics, the space industry to more terrestrial engineering; education and
+    science, manufacturing and the Internet. Think of an industry, and you will likely
+    find a Linux installation somewhere in the background keeping it all together.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_77_1.png)
+
+
+    Raspberry Pi OS is the recommended operating system for the Raspberry Pi, a customised
+    Debian-based distribution that comes packed with a collection of useful tools
+    that cater for coding, electronics, and general desktop computing duties. Alongside
+    the apps are pre-loaded modules to help get the most from each of the programming
+    languages you decide to learn and use, as well as software to hardware modules
+    that will enable you to power and use the hardware specific items unique to the
+    Pi. For example, there are Python modules that interact with the Raspberry Pi’s
+    40-pin GPIO, allowing you to create content for any of the Hardware Attached on
+    Top devices.
+
+
+    This combination is what makes the Raspberry Pi an excellent base of operations
+    to learn not only coding on, but also Linux in general. Raspberry Pi OS, being
+    Debian-based, will be able to run any of the Terminal commands listed in this
+    book, as Linux Mint and even Ubuntu are also Debian-based. And since the Raspberry
+    is so small, and costs very little setup, you’re able to have both your regular,
+    Windows or macOS computers, and have a Raspberry Pi as a headless (a powered device
+    that doesn’t need a keyboard, mouse or monitor) attached, as you connect to it
+    (remotely) computer from which you can connect to and learn how to use Linux and
+    how to code.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# WHICH PI?
+
+
+    There are several Raspberry Pi models available, with each offering something
+    slightly different from the others. The most recent Pi released is the Raspberry
+    Pi 5, and while this model is slightly more expensive than some of the other examples,
+    it is the most powerful and feature-rich Pi available.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_1.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_3.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_4.png)
+
+
+    Overall, it''s probably best to start experimenting with the Pi using the Pi 3
+    Model B+, then moving on to one of the other models as you develop your skills
+    and focus on a particular project, such as the need to use one of the Pi Zero
+    models, with a smaller footprint and WiFi enabled connectivity.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_5.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_6.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_7.png)
+
+
+    # BEYOND RASPBERRY PI OS
+
+
+    The flexibility of the Raspberry Pi''s ARM processor means that it''s capable
+    of running other operating systems beyond Raspbian. Still keeping with Linux,
+    you can instead install Ubuntu MATE, Pidora (a Fedora-based distribution), Lakka,
+    PiPlay (a retro emulation distribution) and Arch Linux ARM. There are also systems
+    based loosely on the Linux kernel, such as Android, Minibian, and Chromium OS.
+
+
+    There''s Windows 10 IoT Core, FreeBSD, RISC OS, Plan 9 and, remarkably, AROS –
+    an Amiga OS clone. Needless to say, that once you''ve finished experimenting with
+    one version of Linux, just as you would with a desktop version of Linux, you can
+    hop to another on the Raspberry Pi and see how that one works, and whether it
+    will work for you.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_8.png)
+
+
+    # PI, LINUX AND CODING
+
+
+    As previously mentioned, the Raspberry Pi is an excellent code base, and with
+    Linux as the backbone you''re able to start learning how to code in a multitude
+    of different programming languages.
+
+
+    Bash scripting works perfectly, since Raspberry Pi OS is Linux, and Debian-based,
+    and you can easily expand your scripts to encompass much of the Pi''s functionality.
+    Aside from creating backup scripts, you can also create scripts that can access
+    the GPIO pins on the Pi, and so be able to control LEDs, and even more complex
+    HATS.
+
+
+    Python is by far the most popular choice for beginners, and Raspbian comes pre-installed
+    with everything you will need to get the most from your Python experience. There
+    are countless pre-loaded modules, as well as the most recent stable release of
+    the language.
+
+
+    C++ is one of the most powerful programming languages to learn. It''s used for
+    games, apps, and even entire operating systems. The Raspberry Pi comes with a
+    great C++ editor, that''s easy to use and can help you develop amazing content.
+    Whenever may you decide to take your coding and Linux adventure, the Raspberry
+    Pi is an excellent platform from which to begin on.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_78_9.png)'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# Command Line Quick Reference
+
+
+    When you start using Linux full time, you will quickly realise that the graphical
+    interfaces of Ubuntu, Mint, etc. are great for many tasks but not great for all
+    tasks. Understanding how to use the command line not only builds your understanding
+    of Linux but also improves your knowledge of coding and programming in general.
+    Our command line quick reference guide is designed to help you master Linux quicker.
+
+
+    # TOP 10 COMMANDS
+
+
+    These may not be the most common commands used by everyone but they will certainly
+    feature frequently for many users of Linux and the command line.
+
+
+    +   The **cd** command is one of the commands you will use the most at the command
+    line in Linux. It allows you to change your working directory. You use it to move
+    around within the hierarchy of your file system. You can also use cdhir.
+
+
+    +   The **mv** command moves a file to a different location or renames a file.
+    For example `mv file sub` renames the original file to `sub`. `mv sub` moves the
+    file `sub` to your desktop directory but does not rename it. You must specify
+    a new filename to rename a file.
+
+
+    +   The **ls** command shows you the files in your current directory. Used with
+    certain options, it lets you see file sizes, when files where created and file
+    permissions. For example, `ls -` shows you the files that are in your home directory.
+
+
+    +   The **chown** command changes the user and/or group ownership of each given
+    file. If only an owner (a user name or numeric user ID) is given, that user is
+    made the owner of each given file, and the files'' group is not changed.
+
+
+    +   The **cp** command is used to make copies of files and directories. For example,
+    `cp file sub` makes an exact copy of the file whose name you entered and names
+    the copy sub but the first file will still exist with its original name.
+
+
+    +   The **chmod** command changes the permissions on the files listed. Permissions
+    are based on a fairly simple model. You can set permissions for users, groups
+    and world and you can set whether each can read, write and or execute the file.
+
+
+    +   The **pwd** command prints the full pathname of the current working directory
+    (pwd stands for "print working directory"). Note that the GNOME terminal also
+    displays this information in the title bar of its window.
+
+
+    +   The **rm** command removes (deletes) files or directories. The remove process
+    unlink a filename in a filesystem that data on the storage device and marks that
+    space as usable by future writes. In other words, removing files increases the
+    amount of available space on your disk.
+
+
+    +   The **clear** command clears your screen if this is possible. It looks in
+    the environment for the terminal type and then in the termfo database to figure
+    out how to clear the screen. This is equivalent to typing Control-L when using
+    the bash shell.
+
+
+    +   Short for "make directory", **mkdir** is used to create directories on a file
+    system. If the specified directory does not already exist, `mkdir` will create
+    a working directory. More than one directory may be specified when calling mkdir.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "![](img/5019375da05cbf0090115165d80772a1_80_0.png)\n\n# USEFUL HELP/INFO COMMANDS\n\
+    \nThe following commands are useful for when you are trying to learn more about\
+    \ the system or program you are working with in Linux. You might not need them\
+    \ every day, but when you do, they will be invaluable.\n\n+   ```\n+   free  \
+    \  The free command displays the total amount of free and used physical and swap\
+    \ memory in the system. For example, `free -m` gives the information using megabytes.\n\
+    +   ```\n+   \n\n+   ```\n+   sed     The sed command opens a stream editor. A\
+    \ stream editor is used to perform text transformations on an input stream: a\
+    \ file or input from a pipeline.\n+   ```\n+   \n\n+   ```\n+   df      The df\
+    \ command displays filesystem disk space usage for all partitions. The command\
+    \ `df -h` is probably the most useful (the -h means human-readable).\n+   ```\n\
+    +   \n\n+   ```\n+   adduser The adduser command adds a new user to the system.\
+    \ Similarly, the addgroup command adds a new group to the system.\n+   ```\n+\
+    \   \n\n+   ```\n+   top     The top program provides a dynamic real-time view\
+    \ of a running system. It can display system summary information, as well as a\
+    \ list of processes.\n+   ```\n+   \n\n+   ```\n+   deluser The deluser command\
+    \ removes a user from the system. To remove the user’s files and home directory,\
+    \ you need to add the `--remove-home` option.\n+   ```\n+   \n\n+   ```\n+   unname-a\
+    \ The uname command with the -a option prints all system information, including\
+    \ machine name, kernel name, version and a few other details.\n+   ```\n+   \n\
+    \n+   ```\n+   delgroup The delgroup command removes a group from the system.\
+    \ You cannot remove a group that is the primary group of any users.\n+   ```\n\
+    +   \n\n+   ```\n+   ps      The ps command allows you to view all the processes\
+    \ running on the machine. Every operating system’s version of ps is slightly different,\
+    \ but all do the same thing.\n+   ```\n+   \n\n+   ```\n+   man man The man man\
+    \ command brings up the manual entry for the man command, which is a great place\
+    \ to start when using it.\n+   ```\n+   \n\n+   ```\n+   grep    The grep command\
+    \ allows you to search inside a number of files for a particular search pattern\
+    \ and then print matching lines. An example would be: `grep -R blah *file*`\n\
+    +   ```\n+   \n\n+   ```\n+   man intro The man intro command is especially useful.\
+    \ It displays the introduction to User Commands, which is a well-written, fairly\
+    \ brief introduction to the Linux command line.\n+   ```\n+"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# A-Z of Linux Commands
+
+
+    There are literally thousands of Linux commands, so while this is not a complete
+    A-Z, it does contain many of the commands you will most likely need. You will
+    probably find that you end up using a smaller set of commands over and over again
+    but having an overall knowledge is still very useful.
+
+
+    +   A
+
+    +   adduser Add a new user
+
+    +   arch Print machine architecture
+
+    +   awk Find and replace text within file(s)
+
+    +   B
+
+    +   bc An arbitrary precision calculator language
+
+    +   C
+
+    +   cat Concatenate files and print on the standard output
+
+    +   chdir Change working directory
+
+    +   chgrp Change the group ownership of files
+
+    +   chroot Change root directory
+
+    +   cksum Print CRC checksum and byte counts
+
+    +   cmp Compare two files
+
+    +   comm Compare two sorted files line by line
+
+    +   cp Copy one or more files to another location
+
+    +   crontab Schedule a command to run at a later time
+
+    +   csplit Split a file into context-determined pieces
+
+    +   cut Divide a file into several parts
+
+    +   date Display or change the date & time
+
+    +   dc Desk calculator
+
+    +   dd Data Dump, convert and copy a file
+
+    +   diff Display the differences between two files
+
+    +   dlrename Convert a full path name to just a path
+
+    +   du Estimate file space usage
+
+    +   echo Display message on screen
+
+    +   ed A line oriented text editor (edlin)
+
+    +   egrep Search file(s) for lines that match an extended expression
+
+    +   env Display, set or remove environment variables
+
+    +   expand Convert tabs to spaces
+
+    +   expr Evaluate expressions
+
+    +   factor Print prime factors
+
+    +   fdisk Partition table manipulator for Linux
+
+    +   fgrep Search file(s) for lines that match a fixed string
+
+    +   find Search for files that meet a desired criteria
+
+    +   fmt Reformat paragraph text
+
+    +   fold Wrap text to fit a specified width
+
+    +   format Format disks or tapes
+
+    +   fsck Filesystem consistency check and repair
+
+
+    +   G
+
+    +   gawk Find and Replace text within file(s)
+
+    +   grep Search file(s) for lines that match a given pattern
+
+    +   groups Print group names a user is in
+
+    +   gzip Compress or decompress named file(s)
+
+    +   H
+
+    +   head Output the first part of file(s)
+
+    +   hostname Print or set system name
+
+    +   I
+
+    +   id Print user and group ids
+
+    +   info Help info
+
+    +   install Copy files and set attributes
+
+    +   J
+
+    +   join Join lines on a common field
+
+    +   K
+
+    +   kill Stop a process from running
+
+    +   L
+
+    +   less Display output one screen at a time
+
+    +   ln Make links between files
+
+    +   locate Find files'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# A-Z of Linux Commands
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_82_0.png)
+
+
+    +   1.  **L**
+
+    +       *   **loginame** Print current login name
+
+    +       *   **lpc** Line printer control program
+
+    +       *   **lpr** Off line print
+
+    +       *   **lp rm** Remove jobs from the print queue
+
+    +   2.  **M**
+
+    +       *   **man** See Help manual
+
+    +       *   **mkdir** Create new folder(s)
+
+    +       *   **mkfifo** Make FIFOs (named pipes)
+
+    +       *   **mknod** Make block or character special files
+
+    +       *   **more** Display output one screen at a time
+
+    +       *   **mount** Mount a file system
+
+    +   3.  **N**
+
+    +       *   **nice** Set the priority of a command or job
+
+    +       *   **nl** Number lines and write files
+
+    +       *   **nohup** Run a command immune to hangups
+
+    +   4.  **P**
+
+    +       *   **passwd** Modify a user password
+
+    +       *   **paste** Merge lines of files
+
+    +       *   **pathchk** Check file name portability
+
+    +       *   **pr** Convert text files for printing
+
+    +       *   **printcap** Printer capability database
+
+    +       *   **printenv** Print environment variables
+
+    +       *   **printf** Format and print data
+
+    +   5.  **Q**
+
+    +       *   **quota** Display disk usage and limits
+
+    +       *   **quotacheck** Scan a file system for disk usage
+
+    +       *   **quotactl** Set disk quotas
+
+    +   6.  **R**
+
+    +       *   **ram** Ram disk device
+
+    +       *   **rcp** Copy files between two machines
+
+    +       *   **rm** Remove files
+
+    +       *   **rmdir** Remove folder(s)
+
+    +       *   **rpm** Remove Package Manager
+
+    +       *   **rsync** Remove file copy (synchronous file trees)
+
+    +   7.  **S**
+
+    +       *   **screen** Terminal window manager
+
+    +       *   **sdiff** Merge two files interactively
+
+    +       *   **select** Accept keyboard input
+
+    +       *   **seq** Print numeric sequences
+
+    +       *   **shutdown** Shutdown or restart linux
+
+    +       *   **sleep** Delay for a specified time
+
+    +       *   **sort** Sort text files
+
+    +       *   **split** Split a file into fixed-size pieces
+
+    +       *   **su** Substitute user identity
+
+    +       *   **sum** Print a checksum for a file
+
+    +       *   **symlink** Make a new name for a file
+
+    +       *   **sync** Synchronise data on disk with memory
+
+    +   8.  **T**
+
+    +       *   **tac** Concatenate and write files in reverse
+
+    +       *   **tail** Output the last part of files
+
+    +       *   **tar** Tape Archiver
+
+    +       *   **tee** Redirect OUTPUT to multiple files
+
+    +       *   **test** Evaluate a conditional expression
+
+    +       *   **time** Measure Program Resource Use
+
+    +       *   **touch** Change file timestamps
+
+    +       *   **top** List processes running on the system
+
+    +       *   **traceroute** Trace Route to Host
+
+    +       *   **tr** Translate, squeeze and/or delete characters
+
+    +       *   **tsort** Topological sort
+
+    +   9.  **U**
+
+    +       *   **umount** Unmount a device
+
+    +       *   **unexpand** Convert spaces to tabs
+
+    +       *   **uniq** Uniquify files
+
+    +       *   **units** Convert units from one scale to another
+
+    +       *   **unshar** Unpack shell archive scripts
+
+    +       *   **useradd** Create new user account
+
+    +       *   **usermod** Modify user account
+
+    +       *   **users** List users currently logged in
+
+    +   10. **V**
+
+    +       *   **vd1r** Verbosely list directory contents (1-8-0)
+
+    +   11. **W**
+
+    +       *   **watch** Execute or display a program periodically
+
+    +       *   **wc** Print byte, word, and line counts
+
+    +       *   **whereis** Report all known instances of a command
+
+    +       *   **which** Locate a program file in the user''s path
+
+    +       *   **who** Print all usernames currently logged in
+
+    +       *   **whoami** Print the current user id and name
+
+    +   12. **X**
+
+    +       *   **xargs** Execute utility, passing constructed argument list(s)
+
+    +   13. **Y**
+
+    +       *   **yes** Print a string until interrupted
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_82_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "![](img/5019375da05cbf0090115165d80772a1_83_0.png)\n\n# Using the Terminal\n\
+    \n> **DID YOU KNOW...**\n> \n> that NASA's state-of-the-art supercomputing cluster,\
+    \ Pleiades, is powered by Linux? Pleiades consists of 160 racks (11,440 nodes),\
+    \ 245,536 CPU cores, a total memory count of 935TB, 184,320 NVIDIA CUDA cores,\
+    \ and over six miles of fibre optic cabling.\n> \n> At the heart of it lies a\
+    \ complex setup of SUSE Linux Enterprise Server, along with many custom development\
+    \ packages and other software unique to NASA's projects. The projects NASA's Advanced\
+    \ Supercomputing Division uses Pleiades for are: The Kepler Mission–searching\
+    \ for extra-solar Earth-like planets; CFD (Computational Fluid Dynamics) modelling\
+    \ to help create more efficient space launch systems; Dark Matter research and\
+    \ simulation; and visualisation of Earth's ocean currents, building data for the\
+    \ ECCO (Estimating the Circulation and Climate of the Ocean) Project."
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Good enough for **NASA**
+
+
+    > NASA’s Linux-powered supercomputer, Pleiades, currently ranked the 11th most
+    powerful in the world.
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_84_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# Read More
+
+
+    Now you''ve got the basics down, you can improve and learn more essential skills
+    in our next level guide...
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_85_0.png)
+
+
+    Now Available on
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_85_1.png)
+
+
+    www.pcipublications.com'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Read More
+
+
+    # For Beginners
+
+
+    Tech Guides
+
+    Available on
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_0.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_1.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_2.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_3.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_4.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_5.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_6.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_7.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_8.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_9.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_10.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_11.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_12.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_13.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_14.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_15.png)
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_86_16.png)
+
+
+    For a full list of titles available visit:
+
+
+    www.pclpublications.com'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# Save a whopping
+
+
+    25% Off!
+
+
+    ALL Tech Manuals
+
+
+    with Paperclut
+
+
+    ![](img/5019375da05cbf0090115165d80772a1_87_0.png)
+
+
+    Not only can you learn new skills and master your
+
+
+    tech, but you can now SAVE 25% off all of our coding
+
+
+    and consumer tech digital and print guidebooks!
+
+
+    # Simply use the following exclusive code at checkout:
+
+
+    NYHF23CN
+
+
+    www.pclpublications.com
+
+
+    Linux For Beginners
+
+    17 - ISBN: 978-1-912847-10-5
+
+    Published by: Paperclut Limited
+
+    Digital distribution by: Reedsy AB - www.reedsy.com
+
+    © 2024. Paperclut Limited. All rights reserved. No part of this
+
+    publication may be reproduced in any form, stored in a retrieval
+
+    system or integrated into any other publication, database or
+
+    commercial programs without the express written permission of
+
+    the publisher. Under no circumstances should this publication and its
+
+    contents be resold, leased out or used in any form by way of trade
+
+    without the publisher''s written permission. While we order
+
+    ourselves on the quality of the information we provide, Paperclut
+
+    Limited reserve the right not to be held responsible for any
+
+    misuse or misinterpretation found within the text of this publication.
+
+    Due to the nature of the tech industry, the publisher cannot
+
+    guarantee that all apps and software will work on every version or
+
+    service. We maintain the purchase as sole responsibility for confirming
+
+    the suitability of this book and its content for whatever purpose.
+
+    Any use images reproduced in the text cover are solely for
+
+    design purpose and not any representation of content.
+
+    We advise all potential buyers to check listing prior to purchase for
+
+    confirmation of actual current list. All editorial opinion herein is that of
+
+    the reviewer - as an individual - and is not representative of the
+
+    publisher or any of its affiliates. Therefore the publisher holds no
+
+    responsibility for any use of opinions of this publication as such.
+
+    This is an independent publication and as such does not
+
+    necessarily reflect the views of the producer of the apps
+
+    or products contained within. This publication is 100% unclassified.
+
+    All copyright, trademarks and required frameworks for the
+
+    respective products are acknowledged.
+
+    Relevant graphic imagery reproduced with courtesy of brands and
+
+    products. Additional images contained within this publication are
+
+    reproduced under licence from Shutterstock, Pexels, International
+
+    Stock. All rights, titles and content are subject to change.
+
+    All information was correct at time of publication. Some content
+
+    may have been previously published in other works or titles.
+
+
+    Paperclut Limited
+
+    Registered in England & Wales No: 05308515
+
+
+    ADVERTISING - For our latest media packs please contact:
+
+    Britt Francis - britt@apaperclut.co.uk
+
+    Visit - www.pclpublications.com
+
+
+    INTERNATIONAL LICENSING - Paperclut Limited has many great
+
+    publications and all are available for licensing worldwide.
+
+    For more information email: janne@papercut.co.uk'
+  merge: -1
+  img_proc: true

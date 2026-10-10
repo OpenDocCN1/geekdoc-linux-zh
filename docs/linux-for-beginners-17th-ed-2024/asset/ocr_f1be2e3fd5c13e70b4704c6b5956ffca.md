@@ -1,0 +1,63 @@
+# A-Z of Linux Commands
+
+There are literally thousands of Linux commands, so while this is not a complete A-Z, it does contain many of the commands you will most likely need. You will probably find that you end up using a smaller set of commands over and over again but having an overall knowledge is still very useful.
+
++   A
++   adduser Add a new user
++   arch Print machine architecture
++   awk Find and replace text within file(s)
++   B
++   bc An arbitrary precision calculator language
++   C
++   cat Concatenate files and print on the standard output
++   chdir Change working directory
++   chgrp Change the group ownership of files
++   chroot Change root directory
++   cksum Print CRC checksum and byte counts
++   cmp Compare two files
++   comm Compare two sorted files line by line
++   cp Copy one or more files to another location
++   crontab Schedule a command to run at a later time
++   csplit Split a file into context-determined pieces
++   cut Divide a file into several parts
++   date Display or change the date & time
++   dc Desk calculator
++   dd Data Dump, convert and copy a file
++   diff Display the differences between two files
++   dlrename Convert a full path name to just a path
++   du Estimate file space usage
++   echo Display message on screen
++   ed A line oriented text editor (edlin)
++   egrep Search file(s) for lines that match an extended expression
++   env Display, set or remove environment variables
++   expand Convert tabs to spaces
++   expr Evaluate expressions
++   factor Print prime factors
++   fdisk Partition table manipulator for Linux
++   fgrep Search file(s) for lines that match a fixed string
++   find Search for files that meet a desired criteria
++   fmt Reformat paragraph text
++   fold Wrap text to fit a specified width
++   format Format disks or tapes
++   fsck Filesystem consistency check and repair
+
++   G
++   gawk Find and Replace text within file(s)
++   grep Search file(s) for lines that match a given pattern
++   groups Print group names a user is in
++   gzip Compress or decompress named file(s)
++   H
++   head Output the first part of file(s)
++   hostname Print or set system name
++   I
++   id Print user and group ids
++   info Help info
++   install Copy files and set attributes
++   J
++   join Join lines on a common field
++   K
++   kill Stop a process from running
++   L
++   less Display output one screen at a time
++   ln Make links between files
++   locate Find files
