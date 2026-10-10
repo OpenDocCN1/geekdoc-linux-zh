@@ -964,6 +964,7 @@
 +   [Linux 入学者指南，第三版](docs/linux-for-dummies-third-edition/README.md)
 +   [嵌入式与实时应用 Linux](docs/linux-for-embedded-and-real-time-applications/README.md)
 +   [嵌入式与实时应用 Linux (嵌入式技术)](docs/linux-for-embedded-and-real-time-applications-embedded-techn/README.md)
++   [嵌入式与实时应用 Linux（第四版）](docs/linux-for-embedded-and-real-time-applications-fourth-edition/README.md)
 +   [嵌入式与实时应用 Linux 入门指南，第三版](docs/linux-for-embedded-and-real-time-applications-third-edition/README.md)
 +   [Linux 破解指南：安装、测试与破解](docs/linux-for-hacking-install-test-and-hack/README.md)
 +   [Hank 的 Linux](docs/linux-for-hank/README.md)
