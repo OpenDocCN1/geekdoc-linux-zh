@@ -1,0 +1,297 @@
+
+## Index
+
+### K
+- KDE
+  - DCOP, 172-73
+  - Konqueror Web browser, 164
+
+### L
+- Large programs
+  - system resources and, 20
+  - understanding, 18
+  - warning signs, 18
+  - See also Small programs
+- Learning curve, 29-33
+  - engineers and, 30
+  - in professional life, 29
+- Leveraging, 71-87
+  - automation and, 78-80
+  - CUIs and, 99-100
+  - GUIs and, 101
+  - other people’s code, 73-74
+  - other people using your code for, 76-78
+  - shell scripts, 80-87
+  - software, using, 72-80
+  - Tupperware analogy, 71-72
+  - Windows and, 170-71
+- Linux
+  - command source code lines, 82
+  - distributions, 179
+  - marketing, 7
+  - as open-source software, 7
+  - philosophy, xx-xxi
+  - short name usage and, 113
+  - as Third System and Second System, 44-45
+  - in Unix evolution, 7
+  - as Unix-like operating system, 6-7
+  - Windows vs., 153-74
+- Look for the 90-percent solution (tenet), 121-22
+  - in computer world, 122
+  - defined, 10
+  - Federal Express analogy, 121
+  - See also Tenets
+- Lowercase
+  - reasons for, 112
+  - using, 9, 112-14
+- Ls command, 23-25
+  - in pipelines, 117
+  - user friendly, 116-17
+
+### M
+- Machine translation (MT), 164
+- Maintenance, small programs, 19-20
+- Make each program do one thing well (tenet 2), 23-25
+  - "creeping featurism" and, 23
+  - defined, 8
+  - hidden benefit, 25
+  - /s command example and, 23-25
+  - small is beautiful tenet and, 25
+  - Windows and, 169
+  - See also Tenets
+- Make every program a filter (tenet 9), 102-4
+  - defined, 8
+  - Windows and, 173-74
+  - See also Tenets
+- Make operating system kernels small and lightweight (tenet), 111-12
+  - benefits, 112
+  - defined, 9
+  - put-it-in-the kernel camp vs., 111
+- MH
+  - Application Layer, 132-33
+  - command availability, 132
+  - command combinations, 131
+  - commands, 130-31
+  - command usage, 131
+  - complex application building example, 132
+  - defined, 129
+  - folders, 131
+  - New (NMH), 129
+  - Small Programs Layer, 132
+  - User Interface Layer, 133
+- "Micro-optimizations," 55
+- Microsoft Windows
+  - audible content, 160-62
+  - avoid captive user interfaces (tenet 8) and, 172-73
+  - "bigger is better" approach, 154
+  - build a prototype as soon as possible (tenet 3) and, 169-70
+  - choose portability over efficiency (tenet 4) and, 170
+  - GUI, 155
+  - Linux vs., 153-74
+  - make each program do one thing well (tenet 2) and, 169
+  - make every program a filter (tenet 9) and, 173-74
+  - small is beautiful (tenet 1) and, 169
+  - SMB networking, 179
+  - software design for, 154
+  - store data in flat ext files (tenet 5) and, 170
+  - text content, 162-69
+  - Unix philosophy vs., 154
+  - users, as power users, 167
+  - use shell scripts to increase leverage and portability (tenet 7) and, 171-72
+  - use software leverage to your advantage (tenet 6) and, 170-71
+  - visual content, 158-60
+  - windowing environment, 172
+- MIPS (millions of instructions per second), 20
+- Monoliths, 134
+- MS-DOS, 143-45
+  - acceptance, 143-44
+  - defined, 143
+  - elimination, 139
+  - herd mentality and, 143
+  - philosophy behind, 144
+  - pipes, 145
+  - Unix concepts and, 144-45
+  - See also Operating systems
+- Multics, 3
+- Music, 160
+
+### N
+- New MH (NMH), 129
+- Not invented here (NIH) syndrome, 3–4
+  - adherents, 76
+  - avoiding, 74–76
+  - danger, 74
+  - defined, 3–4
+  - enhancement/expansion vs., 4
+  - symptoms, 74
+  - threat, 76
+
+### O
+- Object-oriented programming
+  - central concept, 196
+  - refactoring, 197
+  - tenets, 196
+  - Unix philosophy and, 196
+- OpenOffice.org, 181
+- Open-source software (OSS), 179–87
+  - build a prototpye as soon as possible and, 180
+  - choose portability over efficiency and, 180
+  - community, 185, 187
+  - development goal, 180
+  - do one thing well and, 180
+  - marketing advances, 184
+  - open data formats, 182
+  - security, 186
+  - small is beautiful and, 180
+  - store data in flat text files and, 181
+  - use scripts to increase leverage and portability and, 183
+  - use software leverage to their advantage, 182
+- Operating systems
+  - Atari Home Computer, 140–43
+  - GUI division, 155
+  - kernels, small/lightweight, 111–12
+  - MS-DOS, 143–45
+  - VMS, 145–49
+  - Windows, 153–74
+- Organization, this book, xxii–xxv
+
+### P
+- Paradigm shifts, [191-92](file_link)
+- Parallelism, [117-18](file_link)
+- Perl, [183-84](file_link)
+- Portability, [4](file_link), [51-67](file_link)
+  - building in, [53](file_link)
+  - case study, [58-60](file_link)
+  - cell phone example, [202](file_link)
+  - efficiency vs., [55-56](file_link)
+  - overcoming lack of speed, [64](file_link)
+  - over efficiency, [52-60](file_link)
+  - shell scripts and, [80-87](file_link)
+  - transfer cost and, [56](file_link)
+  - user training and, [56-57](file_link)
+  - Windows and, [170](file_link)
+- Programs
+  - combined with other tools, [21-22](file_link)
+  - with CUIs, combining, [98-99](file_link)
+  - data creation and, [102-3](file_link)
+  - as filters, [102-4](file_link)
+  - with GUIs, combining, [100-101](file_link)
+  - “hardwiring,” [75](file_link)
+  - interactive, [91-106](file_link)
+  - large, [18](file_link), [20](file_link)
+  - maintaining, [19-20](file_link)
+  - porting, [57](file_link)
+  - real-time, [103](file_link)
+  - small, [7-8](file_link), [15-22](file_link)
+  - speed, [53-55](file_link)
+  - system resources and, [20-21](file_link)
+  - understanding, [17-19](file_link)
+  - user-friendly, [115](file_link)
+  - using, as filters, [104-6](file_link)
+  - *See also [Software](file_link)*
+- Prototypes
+  - acceleration and, [135](file_link)
+  - advantages, [34](file_link)
+  - AI program, [206](file_link)
+  - building, [8](file_link), [33-34](file_link), [135](file_link)
+  - emphasis on, [34](file_link)
+  - as learning process, [34](file_link)
+  - risk reduction and, [34](file_link)
+  - Windows and, [169-70](link)
+
+### Team Lib
+![](img/b25e7c0c327bab571582b25f020f3286_296_0.png)
+![](img/b25e7c0c327bab571582b25f020f3286_296_1.png)
+
+### R
+- Raw audio, 160
+- Refactoring, 197, 198-99
+- Risks
+  - First System of man, 36-37 prototyping and, 34
+- Ritchie, Dennis, 33
+- *Rn user interface*, 118
+
+### S
+- Save trees (tenet), 114-15
+  - defined, 9, 114-15
+  - information usefulness and, 115
+- Scaling
+  - CUIs and, 99
+  - GUIs and, 101
+- Second System of man, 39-42
+  - characteristics in Third system, 44
+  - defined, 39
+  - design by committee, 40
+  - fat and slow, 41
+  - features, 41
+  - ideas proven by First System, 39-40
+  - Linux as, 44-45
+  - as mixed blessing, 41
+  - world hailing, 41-42
+  - See also Three Systems of Man
+- Security, 186
+- Sed command, 82
+- Shell scripts, 54, 80-87
+  - command interpreters and, 80
+  - COMPILE step and, 83
+  - construction of, 136
+  - defined, 81
+  - environment, 80
+  - example, 81-82
+  - as highest level of portability, 84
+  - leverage, 80-87
+  - as optimum choice, 87
+  - portability and, 80-87
+  - rewriting in C, resisting, 85-87
+  - size of, 83
+  - sigma of ownership and, 85
+  - time leveraging and, 83-84
+  - visibility, 84
+  - Windows and, 171-72
+- Silence is golden (tenet), 115-17
+  - defined, 9
+  - example, 116-17
+  - importance, 117
+  - See also Tenets
+- Small is beautiful (tenet 1), 15-17
+  - benefits, 17-22
+  - defined, 7-8
+  - example, 16-17
+  - make each program do one thing well tenet and, 25
+  - Windows and, 169
+  - See also Small programs; tenets
+- Small programs, 7-8, 15-17
+  - advantages, 134
+  - combined with other tools, 21-22
+  - example, 16-17
+  - maintaining, 19-20
+  - monoliths and, 134
+  - system resources and, 20-21
+  - understanding, 17-19
+  - Windows and, 169
+  - See also Programs; Small is beautiful (tenet 1)
+- Software
+  - engineering, reworking in, 31-33
+  - leverage, 72-80, 135
+  - portable, 135
+  - reworking, 31-33
+  - scavengers, 80
+  - See also Programs
+- Sort command, 82
+- SourceForge, 38-39
+- Spoken word, 161
+- Static visual media, 158-59
+  - drawbacks, 158-59
+  - producing, 158
+- Stderr, 105-6
+- Stdio, 104
+- Stdout, 105
+- Stin, 104-5
+- Store data in flat text files (tenet 5), 60-67
+  - case study, 65-67
+  - common interchange format, 61
+  - defined, 8, 60-61
+  - easily read and edited, 61-62
+  - increased portability, 64
+  - lack of speed and, 64-65
+  - Unix text tool simplification, 62-64

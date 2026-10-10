@@ -1,0 +1,9 @@
+Kudos go to Pam Chester, acquisitions editor at Digital Press, an imprint of Butterworth-Heinemann, for selling me on the need to do this new edition and then persevering when it had every appearance of becoming another prepublication casualty. Thanks also go to her boss, Theron Shreve, for having the patience to allow the book to come to its full fruition.
+
+I was fortunate to have an awesome crew of developmental reviewers for this edition. Thanks go to Jim Lieb, Scott Morris, Rob Lembree, and Jes Sorensen for their thoughtful insights. Their responses helped me see things in different ways and added much interesting depth to the book. They also provided much-needed encouragement on the home stretch.
+
+Not only does Jon "maddog" Hall deserve special mention for providing an insightful foreword to this book, his efforts at Unix and Linux advocacy are a model for all of us. Few can match his tireless efforts at bringing the message of the Unix way to so many people.
+
+Thanks also go to Phil Sutherland, formerly of Digital Press, for the email exchanges we'd had on the original book idea. Even though it didn't turn out quite the way that either of us expected, he can take heart that his efforts to convince me to write this were not in vain. Some things just take a little longer than others.
+
+Having an author in a household means that everyone learns what it's like to live with a writer. Thank you, Sarah, for all that typing, as boring as it must have been for you. Adam, it's paintball time. I am deeply grateful for the sacrifice you made. And, most importantly, thanks go to my wife Viv for supporting me throughout the writing of this book. Your "Honey-Do" list must be a mile long by now.

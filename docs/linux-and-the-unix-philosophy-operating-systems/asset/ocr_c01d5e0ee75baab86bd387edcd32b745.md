@@ -1,0 +1,17 @@
+# 9.3 VMS: The antithesis of UNIX?
+
+If MS-DOS was the king of the PC operating systems before Windows came along, Digital Equipment Corporation’s VMS³ was the king of minicomputer operating systems. Before Unix had caught the world's attention, no other single operating system in the minicomputer space had earned such a wide, loyal following.
+
+VMS owed much of its success to Digital's VAX line of computers, where the same software could run unmodified on a range of systems from the desktop machine to the large, room-filling lab system. This compatibility at the binary level made it relatively easy to construct huge, fully integrated environments with a uniform style of interaction throughout.
+
+Digital's approach to building systems was at one time the envy of the industry. What Digital had done with VMS and the VAX line had no equal in the minicomputer world. Other companies, such as IBM and Hewlett Packard, had tried to unify their entire product lines around a single architecture, but had failed. The success of Intel's x86 architecture running Windows is an affirmation of Digital's 'one system one architecture' concept as well.
+
+VMS was a closed-source, proprietary operating system, meaning a single company developed the source code, maintained a strong grip on it, and derived all profits from it. Although written by Digital's VMS Engineering Group in Nashua, New Hampshire, it really represented the aggregate thoughts on software that Digital's engineers had carried in their minds for years. The similarities to Digital's other operating systems were many. For instance, users of RSX-11, an earlier Digital operating system, felt very much at home with the VMS command interpreter. Like earlier Digital operating systems, VMS relied on compatibility across an entire hardware product line to strengthen and extend its user base.
+
+The VMS developers had strong ideas about what constituted the VMS philosophy. Like the developers of the Atari Home Computer's operating system, they assumed not only that the user should be amply shielded from any vagaries lurking within the system, but that the user should be well informed of their existence. If the Atari approach was to build a tunnel through solid rock, then the VMS approach was to put lights in the tunnel.
+
+Second, in the VMS environment, if big was good, then bigger was better. This led to the development of large, complex environments, such as Digital's All-In-1 office automation product, which integrated many closely related functions under a single user interface. VMS had been quite successful in this area and had one of the strongest office suites available before the PC-based ones came along.
+
+A third element of the VMS philosophy was an artifact of the effect that the VMS mind set had on Digital's customers. Many people who purchased VMS did so because they had a defined task to accomplish and were unaware or unsure of the kind of information technology required to provide a solution. While the typical Linux user today says “I need this box” or “Give me that application,” the typical VMS customer would ask, “How can I do this with your system?” The difference may appear subtle, but it profoundly affected how VMS engineers wrote software.
+
+Applications developed by VMS engineers tended to be feature rich. But they were often rich under the covers, where the user couldn't see all of the wondrous complexity. The

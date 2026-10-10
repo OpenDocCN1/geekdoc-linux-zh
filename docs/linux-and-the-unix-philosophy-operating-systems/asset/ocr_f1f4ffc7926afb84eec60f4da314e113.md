@@ -1,0 +1,17 @@
+# Extreme Programming
+
+Tenets: SMALL, 1THING, PROTO, custom, sum, 90cent
+
+*Central concept*: Build a prototype early and work iteratively with your customer.
+
+If you’ll take a look at the definition of extreme programming (XP) at http://www.extremeprogramming.org/what.html, you might think that the inventors of XP have usurped the Unix philosophy, slapped a new label on it, and called it their own. And you may be right. If anything, the XP methodology affirms what the Unix developers of yesterday and the Linux developers of today have been saying all along: Build a prototype. Do it now. Don’t wait.
+
+To their credit, the XP community has done a great service in formalizing iterative development and communicating its value to the nontechnical management and executive individuals of the world. They have taken much of what the Unix programmers have been saying all along and made it palatable to people who live in the worlds of accounting and marketing spin. They are busy teaching them that the best way to develop software may be to sit down, try it out, and then talk to the programmer about what you like or don’t like about it. Huraah!
+
+One area of focus where the XP thinkers have brought clarity is testing. Unix adherents have usually tested their software by releasing early prototypes to willing guinea pigs hungry to get their hands on the latest anything. While this has served the Unix community well as the number of testers is usually large under these circumstances, it occasionally leaves gaps. The XP approach, on the other hand, is to write the test software first. This helps you nail down the software’s business requirements early, they say.
+
+In practice, early testing in the XP methodology is a mixed blessing. It is good to involve the customers early in the testing. Sometimes developers will get so bogged down in writing the tests early on, however, that they do not pay enough attention to what the customer is asking for. Even worse, as the requirements evolve over time, one usually has to go back and rework the tests, something that doesn’t always get done during the frantic period approaching the end of a software development project. When carried to the extreme (no pun intended here), this approach assumes one had better know all of the requirements up front because one is going to write the tests for those requirements.
+
+The problem is that there will not be as much time to modify those tests later as the requirements change. It would be far better to spend the time building the prototype first without the tests, get it into the hands of the users, and then write the tests. That way you write fewer unnecessary tests and spend more time getting in tune with what the customer really wants. Then, to raise the overall quality of the application, you write only those tests that give you the biggest bang for your efforts. This is not unlike using a code profiler to determine where the program spends its time, then spending 10 percent of your effort in order to gain a 90 percent improvement.
+
+Despite these differences, I suspect that the Unix community and the XP community are on very good terms. They share a lot of common goals and their approaches are quite similar.

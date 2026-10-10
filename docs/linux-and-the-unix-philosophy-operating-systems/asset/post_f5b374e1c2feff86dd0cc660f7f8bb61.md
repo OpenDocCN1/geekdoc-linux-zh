@@ -1,0 +1,50 @@
+
+Another way to improve a program's performance is to examine how you deal with the data. For example, I once wrote a simple shell script that could search through more than two million lines of source code scattered across several thousand files in under a second. The secret was to create an index of the data first. Each line of the index contained a unique word and a list of all the files that the word was contained in. Most programs use less than 20,000 symbols, meaning that the index would be no more than 20,000 lines long. Searching through 20,000 lines is a relatively simple task for the Unix tool *grep*. Once *grep* located the unique word entry, it would simply print out a list of the file names associated with that word. It was very fast, yet portable due to the way that the data was being viewed.
+
+### 4.1.3 The most efficient way is rarely portable
+
+Any time a program takes advantage of special hardware capabilities, it becomes at once more efficient and less portable. Special capabilities may occasionally provide great boosts, but their usage requires separate device-dependent code that must be updated when the target hardware is replaced by a faster version. Although updating hardware-specific code provides job security for many system programmers, it does little to enhance the profit margins of their employers.
+
+At one point in my career, I worked on a design team producing an early version of the X Window System for a new hardware platform. An engineer on the project wrote several demos that bypassed the X Window System and took advantage of the advanced graphics capabilities of the hardware. Another engineer coded a similar set of demos to run under the portable interface provided by the X Window System. The first engineer's demos really sparkled because they used state-of-the-art graphics accelerators. Incredibly efficient, they flexed the hardware's muscles to their fullest. The second engineer's demos, while admittedly slower, remained staunchly portable because they ran under X.
+
+Eventually, the state-of-the-art graphics hardware became not-so-state-of-the-art and the company built a new, faster graphics chip set incompatible with the first. Reimplementing the first engineer's demos for the new hardware required a significant effort, more than anyone had time for. So the demos disappeared into obscurity. The portable demos that ran under X, on the other hand, were ported to the new system without modification and are probably still in use as of this writing.
+
+When you take advantage of specialized hardware capabilities for efficiency's sake, your software becomes a tool for selling the hardware, instead of software that stands on its own. This limits its efficiency as a software product and leads you to sell it for less than its intrinsic worth.
+
+Software tightly coupled to a hardware platform holds its value only as long as that platform remains competitive. Once the platform's advantage fades, the software's worth drops off dramatically. To retain its value, it must be ported from one platform to another as newer, faster models become available. Failure to move rapidly to the next available hardware spells death. Market opportunity windows remain open for short periods before slamming shut. If the software doesn't appear within its opportunity window, it finds its market position usurped by a competitor. One could even argue that the inability to port their software to the latest platforms has killed more software companies than all other reasons combined.
+
+One measure of an application's success is the number of systems it runs on. Obviously, a program depending largely on one vendor's hardware base will have difficulties becoming a major contender compared to another that has captured the market on multiple vendors' systems. In essence, portable software is more valuable than efficient software.
+
+Software conceived with portability in mind reduces the transfer cost associated with moving to a new platform. Since the developer must spend less time porting, he can devote more time to developing new features that attract more users and give the product a commercial advantage. Therefore, portable software is more valuable than the day it is written. The incremental effort incurred in making it portable from the beginning pays off handsomely later as well.
+
+### 4.1.4 Portable software also reduces the need for user training
+
+Once a user has taken the time to learn an application package, he can reap the benefits of this investment on future platforms by running the same package. Future versions of the software may change slightly, but the core idea and the user interface supporting it are likely to remain intact. The user's experience with the product increases with each new version, transforming him from an “occasional” user into a “power” user over time.
+
+The process of transforming users into power users has been ongoing since the very earliest versions of Unix. Most of the knowledge learned in working with the earlier versions is directly applicable to Linux today. It is true that Linux adds a few wrinkles of its own, but by and large experienced Unix users are quite comfortable in a Linux environment due to the portability of the entire user environment, from the shell to the common utilities available.
+
+### 4.1.5 Good programs never die—they are ported to new hardware platforms
+
+Have you ever noticed that certain programs have been around for years in one form or another? People have always found them useful. They have true intrinsic worth. Usually someone has taken it upon himself to write or port them, for fun or profit, to the currently popular hardware platform.
+
+Take Emacs-style text editors, for example. While in some ways they are bad examples of Unix applications, they have long been favorites with programmers in general and Unix devotees in particular. You can always find a version around not only on Unix systems but on other systems as well. Although some Emacs versions have grown into cumbersome monoliths over the years, in its simplest form Emacs still offers a respectable “modeless” vehicle for entering and manipulating text.
+
+Another good example is the set of typical business programs such as that found in Microsoft Office and similar products. People have found that modern business environments usually require desktop programs such as word processors, spreadsheets, and presentation tools in order to function effectively.
+
+No single individual, company, organization, or even nation can keep a good idea to itself, however. Eventually, others take notice, and “reasonable facsimiles” of the idea begin to appear. The intelligent entity, recognizing the user's need, should strive to implement it on as many platforms as practical to gain the largest possible market share. The most effective way to achieve this end is to write portable software.
+
+## Case Study: The Atari 2600
+
+Let's look at the Atari 2600, otherwise known as the Atari Video Computer System (VCS). The VCS was the first successful home video game system, a product in the right place at the right time. It captured the imagination of a people that had just sampled Space Invaders at local pubs and arcades and was ready to bring the new world of video games into the living room. The first cartridge-programmable game console, it launched an entire industry bent on bringing the joys of games once found only in campus labs and software professionals' hidden directories to the family television screen. If programmers have an affinity for games, it is minuscule compared to the interests of main-stream houses America and, for that matter, the world at large.
+
+High on the price-performance curve when it was introduced, the 2600 gave you reasonable capabilities for your money. The 8-bit console sold for around $100 or so. It came with a couple of joysticks and a pair of potentiometers known as paddle controllers. Atari supplied it with "Combat," a cartridge programmed with a variety of two-person battle games incorporating tanks, jets, and Fokkers.
+
+Atari made comparatively little money on sales of the console. The big profits came from the sale of the game cartridges. With prices ranging from $14 to more than $35 each, these units became the bread and butter of Atari and a slew of smaller software houses hoping to capitalize on the video game craze. From Atari's standpoint, once the software engineering investment to develop a cartridge was recovered, the rest was pure gravy.
+
+A friend of mine found a job at a software house that produced cartridges for the 2600. He explained that it was quite a feat to squeeze, say, a chess game or a "shoot-em-up" into less than 8K of ROM. It was like jamming twenty people into a Volkswagen Bug; not everyone gets a chance to look out the windows.
+
+In writing the code for the game cartridges, he wrote some of the most efficient—and nonportable—software in his career. He treated instructions as data and data as instructions. Certain operations were performed during horizontal retrace, the time when the light beam on a television set, having finished painting the last dot on the right side of the screen, returns to the left side. Every possible shortcut had to be taken to conserve memory. His code was at once a thing of beauty and a software maintainer's worst nightmare.
+
+Sometime during the reign of the 2600, Atari introduced the 800, a 6502-based system that became the flagship of its home computer line. The 800 was a true computer in the sense that it had a typewriter-style keyboard and interfaces for secondary storage and communications devices. Selling for close to $1,000, the 800 posed little threat to the 2600's captive niche—until the price of memory chips dropped.
+
+Because of competitive pressures from other vendors and the 800's popular extended graphics capabilities, Atari fell under heavy pressure to produce a video game machine for the micro world that could run the 800's software. This machine, dubbed the XEGB,

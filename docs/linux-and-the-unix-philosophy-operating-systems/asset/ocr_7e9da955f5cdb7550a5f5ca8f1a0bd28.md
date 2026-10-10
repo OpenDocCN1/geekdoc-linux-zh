@@ -1,0 +1,9 @@
+# ### 3.5.4 The world hails the Second System as a great achievement, with much pomp and circumstance
+
+It makes a big splash in the marketplace. It garners widespread commercial acclaim for its flexibility, broad range of options, and expandability. Vendors praise its virtues: It delivers tomorrow's technology today. It goes far beyond existing systems in every respect. It's the last system you'll ever need.
+
+The herd, overwhelmed by this hype, looks to the experts for answers. The experts willingly accommodate them. Any member of the design committee (which by now has grown to several hundred members) instantly gains respect as an expert. Others climb the ladder of credibility by critiquing the work of the design committee.
+
+Interest in the system grows. It becomes the media's darling. Magazines spring up to track its progress. Books appear to explain its mysteries. Conferences are held for the serious-minded to discuss its future. Seminars help the less enlightened to explore its past. The phenomenon builds momentum as more followers join the ranks of the informed and the initiated.
+
+Once the herd is convinced by all the hype that the Second System is outstanding, it remains stubbornly so. For example, the X Window System incorporates many features beyond its basic windowing capabilities. Most of these are seldom used, and their presence drastically impairs general performance. Still, X survives because it is a Second System. Despite its shortcomings, it has enough momentum to overcome any other window system in the Unix marketplace. It reigns supreme. As a Second System, no other system could take its place—except the Third System.

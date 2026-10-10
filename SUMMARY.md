@@ -785,6 +785,7 @@
 +   [Linux 与 OpenVMS 互操作性：针对老手、新兵及开放系统的技巧 (HP 技术)](docs/linux-and-openvms-interoperability-tricks-for-old-dogs-new-d/README.md)
 +   [Linux 与树莓派基础项目：面向初学者、儿童、创客与专业人士。STEAM 教育](docs/linux-and-raspberry-pi-basic-projects-for-beginners-kids-mak/README.md)
 +   [Linux 与 Unix 哲学](docs/linux-and-the-unix-philosophy/README.md)
++   [Linux 与 Unix 哲学：操作系统](docs/linux-and-the-unix-philosophy-operating-systems/README.md)
 +   [LINUX 和 UNIX 编程工具：软件开发者入门指南](docs/linux-and-unix-programming-tools-a-primer-for-software-devel/README.md)
 +   [Linux 和 UNIX Shell 编程](docs/linux-and-unix-shell-programming/README.md)
 +   [Linux 与 Windows 2000 集成工具包：附光盘完整资源指南](docs/linux-and-windows-2000-integration-toolkit-a-complete-resour/README.md)

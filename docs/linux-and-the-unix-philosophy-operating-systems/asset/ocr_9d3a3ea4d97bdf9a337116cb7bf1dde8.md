@@ -1,0 +1,5 @@
+as described above. But what happens when the directory is empty? Since ls produces no output, the pipeline breaks immediately and no further processing by awk and sort occurs. If, however, ls produced "DIRECTORY: NO FILES FOUND" on its output to the pipeline, this would result in a strange "FOUND" message appearing as the final output from the sort command, since "FOUND" is the fourth field in the message. ls may not seem very user friendly because it doesn't warn explicitly of an empty directory, but its design both informs the user that the directory is empty and makes it possible for ls to be used in pipelines.
+
+One Unix system administrator pointed out that system logs are a real lifesaver for him. Without the extra output, he says, he would be unable to solve some of the configuration problems he has seen. In cases where the extra output is necessary for debugging purposes, it is easy enough to redirect just the error information to a log file for later perusal.
+
+Under Unix it is important that you say what you mean—nothing more, nothing less.

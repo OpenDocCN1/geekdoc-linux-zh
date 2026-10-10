@@ -1,0 +1,1 @@
+everyone, it meets the needs of most. The rest can write their own operating systems.
