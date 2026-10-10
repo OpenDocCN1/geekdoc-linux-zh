@@ -1,0 +1,38 @@
+For example, given the previous INSERT statement, TSQLConnection changes it to
+
+```
+INSERT INTO EMPLOYEE VALUES (?, ?, ?, ?)
+```
+
+The dbExpress driver may replace the question marks with some other construct that is specific to the database server.
+
+> Parameters do not need to have the same name as the underlying column in the table. Notice in the preceding code snippet that I named the parameter `EmpNumber` instead of `EmpNo`, and `Hired` instead of `DateHired`.
+
+After you create the SQL statement, you need to fill in the value of each parameter before executing. The following code snippet shows how this is done:
+
+```
+Params := TParams.Create(nil);
+try
+   // Create the parameters
+   Params.CreateParam(ftInteger, 'EmpNumber', ptInput);
+   Params.CreateParam(ftString, 'Name', ptInput);
+   Params.CreateParam(ftSQLDate, 'Hired', ptInput);
+   Params.CreateParam(ftFloat, 'Salary', ptInput);
+
+   // Assign values to the parameters
+   Params.ParamByName('EmpNumber').Value := 123;
+   Params.ParamByName('Name').Value := 'John Doe';
+   Params.ParamByName('Hired').Value := '5/15/1994';
+   Params.ParamByName('Salary').Value := 35000;
+
+   // Execute the statement
+   SQLConnection1.Execute('INSERT INTO EMPLOYEE VALUES (:EmpNumber, :Name, '
+   +':Hired, :Salary)', Params);
+finally
+   Params.Free;
+end;
+```
+
+You might be wondering why you would ever want to do this rather than simply executing each statement directly. After all, creating the parameters and assigning them takes a lot more effort. In addition, time tests on my development machine show that the second method takes about twice as long as the first.
+
+In cases where I need to repeatedly execute the same statement, I still prefer using a parameterized query for the following reasons:

@@ -1,0 +1,191 @@
+
+
+## 数据感知网格
+
+### 列表 6.2 续
+
+```pascal
+uses
+SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs, DB,
+DBClient, QGrids, QDBGrids, QExtCtrls, DateUtils;
+
+type
+TfrmMain = class(TForm)
+pnlClient: TPanel;
+DBGrid1: TDBGrid;
+DataSource1: TDataSource;
+ClientDataSet1: TClientDataSet;
+Image1: TImage;
+procedure FormCreate(Sender: TObject);
+procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
+DataCol: Integer; Column: TColumn; State: TGridDrawState);
+private
+{ Private declarations }
+public
+{ Public declarations }
+end;
+var
+frmMain: TfrmMain;
+
+implementation
+
+{$R *.xfm}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+ClientDataSet1.LoadFromFile('C:\Employee.CDS');
+end;
+
+procedure TfrmMain.DBGrid1DrawColumnCell(Sender: TObject;
+const Rect: TRect; DataCol: Integer; Column: TColumn;
+State: TGridDrawState);
+var
+RetirementBirthdate: TDateTime;
+X: Integer;
+begin
+if Odd(ClientDataSet1.RecNo) then
+DBGrid1.Canvas.Brush.Color := clAqua
+else
+DBGrid1.Canvas.Brush.Color := clWhite;
+
+if gdSelected in State then begin
+   DBGrid1.Canvas.Font.Color := clGreen;
+   DBGrid1.Canvas.Font.Style := [fsBold];
+end;
+
+if Column.ID = 0 then begin
+   DBGrid1.Canvas.FillRect(Rect);
+   
+   RetirementBirthdate := IncYear(Date, -50);
+   if ClientDataSet1.FieldByName('Birthday').AsDateTime <=
+   RetirementBirthdate then begin
+      // Eligible for retirement
+      X := (Column.Width - Image1.Picture.Width) div 2 + Rect.Left;
+      DBGrid1.Canvas.Draw(X, Rect.Top, Image1.Picture.Graphic);
+   end;
+end else
+   DBGrid1.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+end;
+end.
+```
+
+图 6.1 展示了运行时 CustomDraw 应用程序的效果。
+
+在列表 6.2 中的 `DBGrid1DrawColumnCell` 方法中，发生了几件事。首先，奇数行使用 `clAqua` 作为背景色绘制，而偶数行使用 `clWhite` 作为背景色绘制。这使得网格呈现出支票簿式的视觉效果。
+
+其次，当前行（由 `State` 参数包含 `gdSelected` 选项这一事实决定）使用粗体绿色字体绘制。`State` 参数包含 `gdSelected` 选项，是因为在网格的选项中指定了 `dgRowSelect`。
+
+最后，代码会检查员工的生日。如果员工年满 50 岁（或更老），则会在第一列绘制一个手表图标。第一列的 ID 为 0。请注意，代码并没有检查 `DataCol` 参数来判断它是否为 0，因为用户可以在运行时重新排列列。相反，它检查的是 `Column ID`，这是一个在设计时确定的从零开始的整数，不会改变。
+
+![](img/52a35759a0f10dade27a840504be5d82_269_0.png)
+
+如果开启了 `dgIndicator` 选项，则列 ID 将是 1 而不是 0，因为指示器列的 ID 将为 0。
+
+## 常见网格问题的解决方案
+
+在本节中，我将尝试回答一些关于 `TDBGrid` 组件的常见问题。解决这些问题并不特别困难，但在大多数情况下，它们涉及的操作不仅仅是调用一个方法或设置一个属性那么简单。
+
+### 确定当前行或列
+
+有时您可能需要确定当前获得焦点的行、列或单元格。根据您需要的信息，有几种处理方法。
+
+如果您只需要知道哪一行获得焦点，最简单的方法是检查底层数据集。数据集中的当前记录就是获得焦点的记录。因此，如果您想获取当前“工资”列的值，可以执行以下操作：
+
+```pascal
+var
+CurrentSalary: Double;
+begin
+CurrentSalary := TDBGrid.DataSource.DataSet.FieldByName('Salary').AsFloat;
+...
+end;
+```
+
+要获取获得焦点的列的索引，您可以访问网格的 *SelectedIndex* 属性。*SelectedIndex* 是一个从零开始的数字，表示所选列的绝对位置。*SelectedIndex* 会对指示器进行补偿，因此如果存在指示器，第一个数据列的索引为 1。如果不显示指示器，第一个数据列的索引为 0。
+
+要获取当前列的字段对象，您可以引用网格的 *SelectedField* 属性。*SelectedField* 返回底层数据集的 `TField` 对象，因此您可以直接访问它以获取当前单元格的值。
+
+```pascal
+ShowMessage('The current cell value is ' + DBGrid.SelectedField.AsString);
+```
+
+> **注意**
+> 如果当前列未连接到数据集字段，*SelectedIndex* 将返回 -1，而 *SelectedField* 将返回 nil。如果您在网格中显示了任何未与字段绑定的列，在尝试使用 *SelectedIndex* 或 *SelectedField* 属性之前，始终应该检查是否为 -1 或 nil。
+
+### 获取给定鼠标坐标处的单元格
+
+只需一点努力，您就可以确定任意鼠标位置处的单元格所在行和列。通常，您不需要这样做，因为您可以使用数据集的当前记录以及网格的 *SelectedIndex* 或 *SelectedField* 属性来确定当前单元格。但是，您可能希望了解一个非当前单元格的详细信息。
+
+例如，假设您想编写一个事件处理程序，用于跟踪鼠标当前位置并提供该位置字段的信息。一个更具野心的项目可能是编写代码，当鼠标悬停在内容过长而无法在单元格中完全显示的单元格上时，显示工具提示。
+
+在这两种情况下，您可以调用网格的 `MouseCoord` 方法，传入相对于网格控件的鼠标 X 和 Y 坐标。`MouseCoord` 返回一个 `TGridCoord` 结构，其中包含 X 和 Y 字段，表示该鼠标位置处单元格的绝对列和行索引。
+
+`TGridCoord` 的 X 和 Y 值需要稍作解释。这些是绝对索引，意味着它们考虑了指示器列和标题行。如果显示指示器，第一个数据列的 X 位置为 1。如果不显示指示器，则为 0。对于行也是如此：如果不显示网格标题（即在网格的 `Options` 属性中未设置 `dgTitles`），则第一行数据的 Y 位置为 0。如果显示标题，则为 1。
+
+如果鼠标位置不在单元格上方（例如，鼠标位于网格的背景区域），返回的 `TGridCoord` 的 X 和 Y 值均为 −1。
+
+以下代码片段展示了如何更新标签以显示当前鼠标位置处单元格的 X 和 Y 位置以及字段名称。
+
+```pascal
+procedure TForm1.DBGrid1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+var
+  GC: TGridCoord;
+  IndicatorOffset: Integer;
+  TitleOffset: Integer;
+begin
+  GC := DBGrid1.MouseCoord(X, Y);
+  if GC.X = -1 then
+    Label1.Caption := IntToStr(GC.X) + ', ' + IntToStr(GC.Y)
+  else begin
+    if dgIndicator in DBGrid1.Options then
+      IndicatorOffset := 1
+    else
+      IndicatorOffset := 0;
+
+    if dgTitles in DBGrid1.Options then
+      TitleOffset := 1
+    else
+      TitleOffset := 0;
+
+    if GC.X < IndicatorOffset then
+      Label1.Caption := IntToStr(GC.X) + ', ' + IntToStr(GC.Y) +
+' - Indicator'
+else
+  Label1.Caption := IntToStr(GC.X) + ' ' + IntToStr(GC.Y) + ' - '
+    + DBGrid1.Columns[GC.X - IndicatorOffset].FieldName;
+
+// To move the dataset to the corresponding record, clone the dataset,
+// and set the clone's RecNo property to GC.Y - TitleOffset.
+end;
+end;
+```
+
+在该代码片段的末尾，有一行注释解释了如何获取相应单元格的数据。以下是实现该功能的代码（假设网格连接到一个客户端数据集）：
+
+```pascal
+var
+  CloneDS: TClientDataSet;
+  FieldValue: string;
+begin
+...
+
+CloneDS := TClientDataSet.Create(nil);
+try
+  CloneDS.CloneCursor(DBGrid1.DataSource.DataSet);
+  CloneDS.RecNo := GC.Y - TitleOffset;
+
+  // Now access the fields of the cloned dataset
+  FieldValue := CloneDS.FieldName(DBGrid1.Columns[GC.X -
+    IndicatorOffset].FieldName).AsString;
+finally
+  CloneDS.Free;
+end;
+```
+
+### 手动设置编辑模式
+
+如果 `dgAlwaysShowEditor` 为 True，当用户进入某个单元格时，网格会自动进入编辑模式。如果 `dgAlwaysShowEditor` 为 False，当用户按下 F2 时，网格会进入编辑模式。（用户也可以直接开始输入值来覆盖单元格的内容。）但是，如果您希望（为了与其他软件包兼容）在用户按下其他按键——例如按 F9 而不是 F2——时进入编辑模式，该怎么办？
+
+要实现这一点，您需要控制网格进入编辑模式的时机。最佳位置是在网格的 `OnKeyDown` 事件中。在该处理程序中，将网格的 `EditorMode` 属性设置为 True 即可进入编辑模式。
+
+以下代码片段展示了如何在用户按下 F9 时进入编辑模式（而不是在按下 F2 时）。
+

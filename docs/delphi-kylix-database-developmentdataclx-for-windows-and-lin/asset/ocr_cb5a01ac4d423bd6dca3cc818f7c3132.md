@@ -1,0 +1,23 @@
+Add a button to your sample application and create an OnClick handler for it. In the OnClick handler, add the following code:
+
+```
+if ClientDataSet.ApplyUpdates(0) > 0 then\n  ShowMessage('Failed to update database');
+```
+
+Now run the application again, modify some data, and click the button. If you quit the application and rerun it, you’ll see that the changes were indeed saved to the database.
+
+The call to ApplyUpdates takes a single parameter, which indicates the “tolerance level” for errors. In this case, I’ve specified a zero-error tolerance level. What this means is that if any errors occur during the update process, the changes are rolled back and none of the updates are committed to the underlying database.
+
+# Note
+
+> When resolving data to a database, VCL/CLX automatically wraps the updates in a transaction, so either all the changes are made or none of them are. You don’t need to write any code to deal with transactions in this case.
+
+At times, you might be willing to tolerate one or more errors when resolving data. For instance, if the user changes three rows in the grid, but only two of the changes can be saved successfully, you might still want those two changes saved. If this is the case, pass the maximum number of errors that you will allow to ApplyUpdates. If you don’t care how many errors occur, call ApplyUpdates with a parameter of –1.
+
+After the call to ApplyUpdates, any successful updates are removed from the client dataset’s change log. If any rows could not be updated, they are left in the change log.
+
+You may be wondering why the provider might not be able to save changes to the underlying database. The most common reason is that another user changed the same row while you were viewing it or deleted the row before you had a chance to save your changes. Other reasons may include a broken connection to the database server.
+
+# Note
+
+> TDataSetProvider and TClientDataSet give you control over how to detect and respond to data clashes. Later in this chapter, I’ll cover some of the various techniques you can use.

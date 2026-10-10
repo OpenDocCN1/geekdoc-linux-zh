@@ -1,0 +1,161 @@
+
+## 索引
+
+- TSQuery 组件, 60
+- TSQuery 组件, 380-381
+- TSQueryStoredProc 组件, 60
+- TSQuery 组件, 60
+- TSQueryTable 组件, 60
+- TUpdateKind 值, 279
+- TUpdateMode 值, 291-292
+- TUpdateStatus 值, 181
+- TurboPower 软件公司网站, 211
+- TurboPower 软件网站, 299
+- TurboPower 网站, 271
+- TWebConnection 组件, 334
+
+### U
+
+- ukDelete 值, 279
+- ukInsert 值, 279
+- ukModify 值, 279
+- 下划线 (_), 210
+- 撤销支持, 176-177
+  - Cancel 方法, 177
+  - 更改日志, 177
+  - CancelUpdates 属性, 181
+  - ChangeCount 属性, 181
+  - LogChanges 属性, 177
+  - MergeChangeLog 属性, 181
+  - RevertRecord 属性, 178-179
+  - SavePoint 属性, 179-180
+  - StatusFilter 属性, 181-182
+  - UndoLastChange 属性, 178
+  - 查看, 182, 186
+- UndoLastChange 属性, 178
+- 未命名连接, 11
+- 更新模式, 291-293
+- UpdateAction 方法, 228
+- UpdateMode 属性, 291
+- Updates 应用程序 (MainForm.pas), 代码列表, 159-161, 281-289
+- 更新数据集, 227-228
+- Upper 函数, 128
+- upWhereAll 值, 291
+- upWhereChanged 值, 291
+- upWhereKeyOnly 值, 291
+- URL 属性, 334-335
+- usDeleted 值, 181
+- Use Callback 复选框, 54
+- 用户界面 (服务器应用程序), 创建, 326-328
+- UserName 属性, 12, 334-335
+- usInserted 值, 181
+- usModified 值, 181
+- usUnmodified 值, 181
+- uTotalMsgLen 字段, 48
+
+### V
+
+- 值
+  - Apartment, 321
+  - Both, 321
+  - DataMoveMode, 384
+  - dmAlwaysInsert, 384
+  - DmAppend, 384
+  - DmAppendUpdate, 384
+  - DmDelete, 384
+  - DmUpdate, 384
+  - Free, 321
+  - gdFixed, 253
+  - gdFocused, 253
+  - gdSelected, 253
+  - Internal, 320
+  - Multiple Instance, 320
+  - Neutral, 321
+  - pHidden, 292
+  - pfInKey, 292
+  - pfInUpdate, 292
+  - pfInWhere, 292
+  - 提供 (计算字段), 99-100
+  - raAbort, 279
+  - raCancel, 279
+  - raCorrect, 279
+  - raRefresh, 279
+  - raRefresh, 279
+  - raSkip, 279
+  - Single, 321
+  - Single Instance, 320
+  - stColumns, 80, 89
+  - stIndexes, 80, 90-91
+  - stNoSchema, 80
+  - stProcessorParams, 80, 89-90
+  - stProcedures, 80, 88
+  - stSysTables, 80
+  - stSystemTables, 88
+  - stTables, 80, 88
+  - TGridDrawState, 253
+  - traceBLOB, 48
+  - traceDATIN, 48
+  - traceDATAOUT, 48
+  - traceERROR, 48
+  - traceMISC, 48
+  - traceEXECUTE, 48
+  - traceQPREPARE, 48
+  - traceSTMT, 48
+  - traceTRANSACT, 48
+  - traceVENDOR, 48
+  - TReconciliationAction, 279
+  - TSchemaType, 80
+  - TUpdateKind, 279
+  - TUpdateMode, 291-292
+  - TUpdateStatus, 181
+  - ukDelete, 279
+  - ukInsert, 279
+  - ukModify, 279
+  - upWhereAll, 291
+  - upWhereChanged, 291
+  - upWhereKeyOnly, 291
+  - usDeleted, 181
+  - usInserted, 181
+  - usModified, 181
+  - usUnmodified, 181
+  - xiCUSTOM, 40
+  - xiDIRTYREAD, 39
+  - xiREADCOMMITTED, 39
+  - xiREPEATABLEREAD, 40
+- Values 属性, 214
+- 仅适用于 VCL 的数据感知控件, 222
+- VendorLib 属性, 9
+- 视图名称,
+  - 检索, 381-382
+- 查看更改日志, 182, 186
+- Visible 属性, 242
+
+### W
+
+- 网站
+  - Borland, 378
+  - Code Central, 264, 380
+  - Dan Misel, 333
+  - Developer Express, 272
+  - Object-Insight, 272
+  - Raize Software, 47
+  - Skyline Tools Imaging, 165
+  - TurboPower Software, 211, 271, 299
+  - Woll2Woll, 271
+- WebServices 选项卡, 323
+- Width 属性, 242
+- Windows 应用程序,
+  - 再分发, 376-377
+- Windows 驱动程序, 376
+- Woll2Woll 网站, 271
+- 编写事件处理程序, 50
+
+### X-Z
+
+- xiCUSTOM 值, 40
+- xiDIRTYREAD 值, 39
+- xiREADCOMMITTED 值, 39
+- xiREPEATABLEREAD 值, 40
+- Year 函数, 129
+- 零 (0), 207
+

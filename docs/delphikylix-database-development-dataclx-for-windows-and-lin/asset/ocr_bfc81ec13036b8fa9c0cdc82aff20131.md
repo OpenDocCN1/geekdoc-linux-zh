@@ -1,0 +1,52 @@
+# **LISTING 5.4** Continued
+
+```
+```
+cblLookup: TDBLookupComboBox;
+	tabImage: TTabSheet;
+	Label5: TLabel;
+	img: TDBImage;
+	btnLoad: TButton;
+	btnClear: TButton;
+
+procedure FormCreate(Sender: TObject);
+procedure DataSource1DataChange(Sender: TObject; Field: TField);
+procedure ClientDataSet1NewRecord(DataSet: TDataSet);
+procedure DataSource1StateChange(Sender: TObject);
+procedure btnLoadClick(Sender: TObject);
+procedure btnClearClick(Sender: TObject);
+procedure DataSource1UpdateData(Sender: TObject);
+private
+  { Private declarations }
+public
+  { Public declarations }
+end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+{$R *.xfm}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+
+procedure AddLookupItem(ID: Integer; const Description: string);
+begin
+  cdsLookup.Append;
+  cdsLookupID.AsInteger := ID;
+  cdsLookupDescription.AsString := Description;
+  cdsLookup.Post;
+end;
+
+begin
+  // Create the lookup dataset and populate it with some data
+  cdsLookup.CreateDataSet;
+  AddLookupItem(1, 'Widget');
+  AddLookupItem(2, 'Gadget');
+  AddLookupItem(3, 'Thingamabob');
+
+ClientDataSet1.CreateDataSet;
+end;
+```
+```

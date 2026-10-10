@@ -1,0 +1,26 @@
+# **LISTING 1.1** Continued
+
+```
+```
+   lbEvents.Items.Add(E.Message);
+   end;
+   lbEvents.Items.Add('---End Close---');
+   lbEvents.Items.Add('');
+   end;
+
+procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+   conn.Close;
+end;
+
+   end.
+```
+```
+
+Notice in the code that the *BeforeConnect* and *BeforeDisconnect* event handlers call *Abort* if the appropriate check box is not selected. *btnConnectClick* and *btnDisconnectClick* check for an *EAbort* (or other exception), and display an appropriate message in the list box if the connect or disconnect attempt fails for any reason.
+
+Figure 1.3 shows what the application looks like at runtime. The list box is filled with informative text that illustrates exactly when, and in what order, the connection events fire.
+
+![](bbox=[0.31, 0.54, 0.54, 0.73])
+
+# **FIGURE 1.3** *The Events application makes it easy to understand connection events.*

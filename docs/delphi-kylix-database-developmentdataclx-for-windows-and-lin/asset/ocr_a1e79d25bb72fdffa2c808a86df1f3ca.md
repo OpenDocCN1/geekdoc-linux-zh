@@ -1,0 +1,70 @@
+Log Trace check box, 54
+LogChanges property, 177
+logging messages, 49-50
+logical operators (filters), 128
+login, controlling, 12-13
+LoginPrompt property, 9
+lookup data-aware controls, 222-223
+lookup fields, 100-101
+Lookup method, 137-138
+loPartialKey option, 136
+Lower function, 128
+
+# M
+
+MainForm.pas code listings, 352
+Advanced application, 76-79
+Basic application, 65-68
+BLObs application, 169-171
+CDS (ClientDataset) application, 108-111
+CDSIndex, 124-126
+ChangeLog application, 182-185
+Clone application, 188-191
+ConMan application, 362-371
+ConManServer application, 356-357
+CtrlGrid application, 260-270
+CustomDraw application, 254-256
+DataAware application, 232-236
+DataFetch application, 311-313
+DDLSQL application, 33-36
+EventLog application, 151-155
+Events application, 14-17
+feedback, 51-54
+Joins application, 304-307, 312-313
+MetaData, 20-25
+MethodsClient application, 338-339
+MethodsServer application, 327-328
+navigating client datasets, 116-118
+Nested application, 174-175
+options, 246-251
+RangeFilter application, 130-132
+Schema application, 81-87
+Search application, 141-143
+Trans, 42-46
+Updates application, 159-161, 281-289
+
+maintained aggregates, 192-193
+creating at design time, 193
+
+*nonpersistent aggregates,* 194-195
+*persistent aggregates,* 193-194
+creating at runtime, 195
+manipulating client datasets
+deleting records, 106
+example, 108
+modifying records, 105-106
+manually populating client datasets, 105
+master/detail relationships, 74-76, 301
+Max aggregate type, 195
+MaxBlobSize property, 61
+MergeChangeLog property, 181
+message handlers, 228
+messages
+buffering, 50
+logging, 49-50
+metadata (dbExpress Plus), 381-383
+MetaData application (MainForm.pas), code listing, 20-25
+methods
+Add, 102
+AddFieldDef, 102
+AddIndex, 121

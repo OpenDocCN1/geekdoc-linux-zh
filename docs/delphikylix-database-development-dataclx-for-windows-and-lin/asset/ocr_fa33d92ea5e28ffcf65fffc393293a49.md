@@ -1,0 +1,19 @@
++   • To enable the client dataset to be sorted on-the-fly. This is useful when you want to order the data in a data-aware grid, for example.
+
++   • To implement maintained aggregates.
+
+![](bbox=[0.27, 0.22, 0.6, 0.4])
+
+# FIGURE 3.6
+
+> The Navigate application demonstrates various navigational techniques.
+
+# # Creating Indexes
+
+Like field definitions, indexes can be created at design-time or at runtime. Unlike field definitions, which are usually created at design-time, you might want to create and destroy indexes at runtime. For example, some indexes are only used for a short time—say, to create a report in a certain order. In this case, you might want to create the index, use it, and then destroy it. If you constantly need an index, it’s better to create it at design-time (or to create it the first time you need it and not destroy it afterward).
+
+# ## Creating Indexes at Design-Time
+
+To create an index at design-time, click the `TClientDataSet` component located on the form or data module. In the Object Inspector, double-click the `IndexDefs` property. The index editor appears.
+
+To add an index to the client dataset, right-click the index editor and select Add from the pop-up menu. Alternately, you can click the Add icon on the toolbar, or simply press `Ins`. Next, go back to the Object Inspector and set the appropriate properties for the index. Table 3.2 shows the index properties.

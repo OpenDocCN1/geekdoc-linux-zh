@@ -1,0 +1,47 @@
+# **LISTING 6.1** *Continued*
+
+```
+begin
+UpdateOption(dgEditing, cbEditing.Checked);
+end;
+
+procedure TfrmMain.cbAlwaysShowEditorClick(Sender: TObject);
+begin
+UpdateOption(dgAlwaysShowEditor, cbAlwaysShowEditor.Checked);
+end;
+
+procedure TfrmMain.cbTitlesClick(Sender: TObject);
+begin
+UpdateOption(dgTitles, cbTitles.Checked);
+end;
+
+procedure TfrmMain.cbIndicatorClick(Sender: TObject);
+begin
+UpdateOption(dgIndicator, cbIndicator.Checked);
+end;
+
+procedure TfrmMain.cbColumnResizeClick(Sender: TObject);
+begin
+UpdateOption(dgColumnResize, cbColumnResize.Checked);
+end;
+
+procedure TfrmMain.cbColLinesClick(Sender: TObject);
+begin
+UpdateOption(dgColLines, cbColLines.Checked);
+end;
+
+procedure TfrmMain.cbRowLinesClick(Sender: TObject);
+begin
+UpdateOption(dgRowLines, cbRowLines.Checked);
+end;
+
+procedure TfrmMain.cbTabsClick(Sender: TObject);
+begin
+UpdateOption(dgTabs, cbTabs.Checked);
+end;
+
+procedure TfrmMain.cbRowSelectClick(Sender: TObject);
+begin
+UpdateOption(dgRowSelect, cbRowSelect.Checked);
+end;
+```

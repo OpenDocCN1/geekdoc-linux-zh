@@ -1,0 +1,49 @@
+# **LISTING 9.5 Continued**
+
+```
+memoNotes: TDBMemo;
+DataSet1: TMenuItem;
+First1: TMenuItem;
+Prior1: TMenuItem;
+Next1: TMenuItem;
+Last1: TMenuItem;
+N2: TMenuItem;
+Insert1: TMenuItem;
+Edit2: TMenuItem;
+Post1: TMenuItem;
+Delete2: TMenuItem;
+Cancel1: TMenuItem;
+N3: TMenuItem;
+Refresh1: TMenuItem;
+FileConnect1: TAction;
+ConnectToDatabaseServer1: TMenuItem;
+N4: TMenuItem;
+DataSetNumUpdates: TAction;
+DataSetApplyUpdates: TAction;
+DataSetCancelUpdates: TAction;
+N5: TMenuItem;
+ApplyUpdates1: TMenuItem;
+CancelUpdates1: TMenuItem;
+popupTodos: TPopupMenu;
+MarkDone1: TMenuItem;
+ToolMarkDone1: TAction;
+TodoAdd: TAction;
+AddTodo1: TMenuItem;
+N6: TMenuItem;
+btnLoadImage: TButton;
+btnClearImage: TButton;
+ImageLoad1: TAction;
+ImageClear1: TAction;
+OpenPictureDialog1: TOpenPictureDialog;
+ToolButton4: TToolButton;
+ToolButton5: TToolButton;
+ToolButton6: TToolButton;
+ToolButton7: TToolButton;
+ToolButton8: TToolButton;
+ToolButton9: TToolButton;
+ToolButton10: TToolButton;
+ToolButton11: TToolButton;
+ToolButton12: TToolButton;
+ToolButton13: TToolButton;
+ToolButton14: TToolButton;
+```

@@ -1,0 +1,81 @@
+# C
+
++   *   c specifier, 209
++   *   **calculated fields**, 98
++       *   internal, 98-99
++       *   providing values, 99-100
++       *   standard, 98
++   *   **callback handlers, removing**, 49
++   *   **callback events, trace (SQL operations feedback)**, 47-49
++   *   callbacks, 325-326
++   *   Cancel button, 224
++   *   Cancel method, 177
++   *   CancelUpdates property, 181
++   *   CanModify property, 225
++   *   Caption property, 244
++   *   CaselsFields property, 120
++   *   cbProcedurClick method, 25
++   *   cbUseCallbackClick event handler, 54
++   *   **CD-ROM-based applications, redistributing**, 378
++   *   CDS (ClientDataset) application
++       *   (MainForm.pas), code listing, 108-111
++   *   CDSIndex application
++       *   (MainForm.pas), code listing, 124-126
++   *   cell (grids), 257-259
+
++   *   change log, 177
++   *   properties
++       *   CancelUpdates, 181
++       *   ChangeCount, 181
++       *   LogChanges, 177
++       *   MergeChangeLog, 181
++       *   RevertRecord, 178-179
++       *   SavePoint, 179-180
++       *   StatusFilter, 181-182
++       *   UndoLastChange, 178
++   *   viewing, 182, 186
++   *   ChangeCount property, 181
++   *   CHANGEINDEX index, 123
++   *   ChangeLog application, code listings
++       *   ChangeLogForm.pas, 184-185
++       *   MainForm.pas, 182-185
++   *   **ChangeLog application), code listing**, 184-185
++   *   changing
++       *   cursor (SQL operations feedback), 47
++       *   field data (servers), 297-298
++   *   check boxes
++       *   Log Trace, 54
++       *   Use Callback, 54
++   *   classes
++       *   TCustomClientDataSet, 94
++       *   TFieldDataLink, 225-226
+
++   *   **client applications**
++       *   ConMan, 358, 361-362, 371-372
++       *   CORBA connections, 335
++       *   creating, 329
++           *   *local connections*, 329-330
++           *   *remote connections*, 330
++       *   DCOM connections, 333
++       *   HTTP connections, 334
++       *   intercepting data packets, 333
++       *   multiple connection types, 343-344
++       *   SOAP connections, 335
++       *   socket connections, 330
++       *   socket servers, 331-332
++   *   **client datasets**, 94
++       *   *advantages/*
++       *   disadvantages, 94-95
++       *   cloning, 186-188, 191-192
++       *   creating, 95
++       *   *design-time*, 96
++       *   *example*, 108
++       *   *runtime*, 101-103
++   *   **field definitions, creating**, 96
++   *   fields
++       *   *accessing*, 103-105
++       *   *adding*, 102
++       *   *calculated*, 98-100
++       *   *data*, 96-97
++       *   *lookup*, 100-101
++   *   file formats, 107

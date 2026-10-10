@@ -1,0 +1,26 @@
+# ## Ordering Data from a Query
+
+If you’re using a `TSQLQuery` or `TSQLDataSet` component, the method used to order the result set is more straightforward: You simply add an `ORDER BY` clause to the SQL statement yourself, like this:
+
+```
+```sql
+SQLDataSet1.CommandText := 'SELECT * FROM CONTACTS ORDER BY LAST, FIRST';
+```
+```
+
+If there is an index defined in the database that supports the `ORDER BY` clause, the underlying database engine uses the index for increased speed. If not, the database engine sorts the data in the requested order before it is returned to the application.
+
+# ## Master/Detail Relationships
+
+Although standalone datasets are useful, datasets are commonly related to other datasets in master/detail relationships. A master/detail relationship (also known as a one-to-many relationship) is one in which a single record in one dataset corresponds to one, or more, records in another dataset.
+
+The most commonly cited example of a master/detail relationship uses customers, orders, and items as its datasets. A single customer can place more than one order with a given vendor. In turn, a single order can contain more than one item. Figure 2.3 shows a graphic representation of typical customer, order, and item datasets.
+
+![](bbox=[0.3, 0.55, 0.85, 0.76])
+
+**FIGURE 2.3**
+*Master/Detail relationships can have multiple levels.*
+
+In the ConMan database, the CONTACT and ACTIVITIES tables are joined in a master/detail relationship on the ContactID field.
+
+To create this master/detail link in an application, you would perform the following steps:

@@ -1,0 +1,39 @@
+# **Note**
+
+For a good third-party encryption library that supports encryption standards such as DES, Blowfish, and Rijndael (AES), take a look at TurboPower Software’s LockBox product at `www.tpx.turbopower.com/products/LockBox`.
+
+```
+```
+procedure TForm1.ProviderGetData(Sender: TObject;
+  DataSet: TCustomClientDataSet);
+begin
+  while not DataSet.EOF do begin
+    DataSet.Edit;
+    DataSet.FieldName('AccountNumber').AsString :=
+      EncryptData(DataSet.FieldName('AccountNumber').AsString);
+    DataSet.Post;
+    DataSet.Next;
+  end;
+end;
+```
+```
+
+```
+```
+procedure TfrmMain.DataSetProvider1UpdateData(Sender: TObject;
+  DataSet: TCustomClientDataSet);
+begin
+  while not DataSet.EOF do begin
+    if DataSet.UpdateStatus <> usDeleted then begin
+      DataSet.Edit;
+      DataSet.FieldName('AccountNumber').AsString :=
+        DecryptData(DataSet.FieldName('AccountNumber').AsString);
+      DataSet.Post;
+      DataSet.Next;
+    end;
+  end;
+end;
+```
+```
+
+On the client side, the `AccountNumber` field will be encrypted. `ClientDataSet1.FieldName('AccountNumber').AsString` will return an encrypted account code, which you should then decrypt before displaying. Note that the code shown here is a rather simplistic implementation of encrypting/decrypting data. For one thing, only the account number is encrypted and decrypted. In a real application, you might want to encrypt and decrypt all string fields by looping through all fields in the dataset.

@@ -1,0 +1,14 @@
+# Advanced Client Dataset Operations
+
+# CHAPTER 4
+
+# IN THIS CHAPTER
+
++   - Dataset Events 148
++   - Disabling Data-Aware Components 158
++   - BLOBs 162
++   - Nested Datasets 172
++   - Undo Support 176
++   - Cloning Data from Another Client Dataset 186
++   - Maintained Aggregates 192
++   - Miscellaneous Properties 197

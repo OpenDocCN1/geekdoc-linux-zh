@@ -331,6 +331,8 @@
 +   [Linux 系统调试指南 (Digital Short Cut)](docs/debugging-linux-systems-digital-short-cut/README.md)
 +   [Linux 网络深度解析：防火墙、VPN 与安全连接配置指南](docs/deep-dive-into-linux-networking-configuring-firewalls-vpns-a/README.md)
 +   [Linux 优化指南](docs/degunkingtrade-linux-degunking/README.md)
++   [Delphi Kylix 数据库开发：Windows 与 Linux 的 DataCLX](docs/delphi-kylix-database-developmentdataclx-for-windows-and-lin/README.md)
++   [Windows 和 Linux 的 DataCLX Delphi/Kylix 数据库开发](docs/delphikylix-database-development-dataclx-for-windows-and-lin/README.md)
 +   [Linux 命令高级指南](docs/demirez-kemal-master-of-linux-commands-e-kitap-projesi-97860/README.md)
 +   [在 EMC Symmetrix DMX 上部署 Linux、UNIX 和 Windows 上的 DB2](docs/deploying-db2-for-linux-unix-and-windows-on-emc-symmetrix-dm/README.md)
 +   [桌面端 Linux 部署指南](docs/deploying-linux-on-the-desktop/README.md)

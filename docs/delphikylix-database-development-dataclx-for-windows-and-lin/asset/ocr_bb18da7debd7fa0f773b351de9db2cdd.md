@@ -1,0 +1,50 @@
+# **LISTING 6.1** Continued
+
+```
+cbColumnResize: TCheckBox;
+cbColLines: TCheckBox;
+cbRowLines: TCheckBox;
+cbTabs: TCheckBox;
+cbRowSelect: TCheckBox;
+cbAlwaysShowSelection: TCheckBox;
+cbConfirmDelete: TCheckBox;
+cbCancelOnExit: TCheckBox;
+cbMultiSelect: TCheckBox;
+btnShowSelections: TButton;
+DBNavigator: TDBNavigator;
+
+lbEvents: TListBox;
+Label1: TLabel;
+Label2: TLabel;
+btnClearEventLog: TButton;
+
+procedure FormCreate(Sender: TObject);
+procedure gridCellClick(Column: TColumn);
+procedure gridColExit(Sender: TObject);
+procedure gridColEnter(Sender: TObject);
+procedure gridColumnMoved(Sender: TObject; FromIndex,
+	ToIndex: Integer);
+procedure gridEditButtonClick(Sender: TObject);
+procedure cbEditingClick(Sender: TObject);
+procedure cbAlwaysShowEditorClick(Sender: TObject);
+procedure cbTitlesClick(Sender: TObject);
+procedure cbIndicatorClick(Sender: TObject);
+procedure cbColumnResizeClick(Sender: TObject);
+procedure cbColLinesClick(Sender: TObject);
+procedure cbRowLinesClick(Sender: TObject);
+procedure cbTabsClick(Sender: TObject);
+procedure cbRowSelectClick(Sender: TObject);
+procedure cbAlwaysShowSelectionClick(Sender: TObject);
+procedure cbConfirmDeleteClick(Sender: TObject);
+procedure cbCancelOnExitClick(Sender: TObject);
+procedure cbMultiSelectClick(Sender: TObject);
+procedure btnShowSelectionsClick(Sender: TObject);
+procedure btnClearEventLogClick(Sender: TObject);
+private
+procedure RetrieveOptions;
+procedure UpdateOption(Option: TDBGridOption; Active: Boolean);
+{ Private declarations }
+public
+{ Public declarations }
+end;
+```

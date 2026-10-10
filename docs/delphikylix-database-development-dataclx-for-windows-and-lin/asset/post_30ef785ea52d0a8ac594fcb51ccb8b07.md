@@ -1,0 +1,306 @@
+
+## C
+
+- ComputerName property, 333
+- ConfigFile property, 265
+- ConfigureColumns method, 265
+- ConMan, 348
+- advantages, 373
+- disadvantages, 373
+- application server, 352-353
+- client application, 358, 361-362, 371-372
+- database structure, 349-350
+- code listings
+  - DataModule.pas, 358-361
+  - MainForm.pas, 362-371
+  - TodoForm.pas, 372-373
+- ConMan.SQL, code listing, 350-351
+- ConManServer_TLB.pas, 352
+- conn component, 352
+- connect events, 14, 17
+- Connected property, 8
+- connecting to databases, 8-9
+- controlling login, 12-13
+- dbExpress, 8
+- local, 308
+- named connections, 9-11
+- setting database parameters, 11-12
+- unnamed connections, 11
+- connecting to datasets, 275-276
+- connection brokering, 344-345
+- Connection Editor, 10-11
+- Connection Name list box, 10
+- ConnectionName property, 8
+- connections
+  - database, closing, 64
+  - DCOM (Distributed COM), 333
+  - HTTP, 334
+  - creating
+    - local, 329-330
+    - remote, 330
+  - named, 9-11
+  - SOAP, 335
+  - sockets, 330
+  - unnamed, 11
+- constraints, 197-198
+- Constraints property, 197
+- Contacts table, 349
+- ContactsByState procedure, 350
+- Control property, 225
+- controlling login, 12-13
+- controls (data-aware)
+  - lookup, 222-223
+  - VCL-only, 222
+- CORBA remote data modules, creating, 322
+- Count aggregate type, 195
+- CreateBlobStream method, 166
+
+## C
+
+- creating
+  - application servers, 318
+  - callbacks, 325-326
+  - client application, 329
+  - local connections, 329-330
+  - remote connections, 330
+- client datasets, 95
+  - design-time, 96
+  - example, 108
+  - runtime, 101-103
+- data-aware components, 225
+- databases (DDL commands), 28-29
+- DataChange event handler, 227
+- empty databases from a resource, code listing, 29
+- field definitions (client datasets), 96
+- grouped aggregates, 196
+- indexes (client datasets), 119
+  - at design-time, 119-120
+  - at runtime, 121
+- maintained aggregates
+  - design time, 193-195
+  - runtime, 195
+- master/detail relationships, 74-76
+- remote data modules, 319
+  - CORBA remote data modules, 322
+  - MTS remote data modules, 321-322
+  - SOAP remote data modules, 322-323
+  - standard remote data modules, 320-321
+- tables (DDL commands), 27-28
+- TColumn object, 242
+- user interfaces (server applications), 326-328
+
+## C
+
+- CtrlGrid application
+  - (MainForm.pas), code listing, 268-270
+- cursor, changing (SQL operations feedback), 47
+- custom drawing, 252-254
+- CustomConstraint property, 198
+- CustomDraw (MainForm.pas), code listing, 254-256
+- CustomIsolation field, 39
+- customizing columns, 241-242, 265
+- column titles, 243-244
+- column types, 243
+
+## D
+
+- Dan Miser Web site, 333
+- data
+  - fields (servers), changing, 297-298
+  - intercepting, 298-299
+  - ordering, 73
+  - queries, 74
+  - tables, 73
+  - returned, limiting, 309-311, 314-315
+  - server, refreshing, 290-291
+  - streamed, storing (BLObs), 165-168
+- data clashes, 277
+- Data Definition Language (DDL) statements, 27
+- data fields, 96-97
+- Data Manipulation Language (DML) statements, 27
+- data modules, remote, 318-319
+  - adding methods, 324
+  - creating, 319-322
+  - populating with components, 324
+- data packets, intercepting, 333
+- data pumping (dbExpress Plus), 383-384
+- data sources, setting up connection to, 227
+- data-aware components, 202-203
+  - controlling user editing, 206
+  - creating, 225
+  - disabling, 158-159, 162
+  - formatting/editing field values, 206
+  - numeric fields, 207-209
+  - string fields, 209-210
+  - modifying data from code, 205-206
+  - non-data-aware equivalents, 202-203
+  - simple, 211
+  - TCheckBox, 212
+  - TDBComboBox, 213, 217-218
+  - TDBEdit, 212
+  - TDBImage, 221
+  - TDBListBox, 218-221
+  - TDBLookupComboBox, 218-221
+  - TDBLookupListBox, 223
+  - TDBMemo, 212
+  - TDBRadioGroup, 213
+  - TDBText, 211
+  - TDataSource, 204-205
+  - TDBNavigator, 223-225
+- data-aware controls
+  - lookup, 222-223
+  - VCL-only, 222
+- data-aware grids
+  - TClientDataSetGrid, 261, 263-264
+    - automatic sorting, 264-265
+    - columns, customizing, 265
+  - TDBCtrlGrid, 266
+    - events, 267-268
+    - properties, 267
+  - TDBGrid, 240-241
+    - custom drawing, 252-254
+    - customizing columns, 241-244
+    - edit mode, setting, 259-260
+    - events, 245-246
+    - grid options, 244-245
+    - grid settings, persisting, 262-263
+    - limitations, 263
+    - resized columns, detecting, 260-261
+    - row/column/cell, determining, 257-259
+    - third party, 271-272
+      - ExpressQuantumGrid, 271
+      - InfoPower 2000, 271
+      - Orpheus, 271
+      - TopGrid, 272
+- DataAware application (MainForm.pas), code listing, 232-236
+- database connections, closing, 64
+- database events, monitoring, 49
+  - buffering messages, 50
+  - logging messages, 49-50
+- Database Login dialog box, 12
+- database metadata, retrieving, 18
+- database parameters, 11-12
+- Database property, 12
+- database structure (ConMan), 349-350
+- databases
+  - connecting to, 8-9
+  - controlling login, 12-13
+  - dbExpress, 8
+  - named connections, 9-11
+  - setting database parameters, 11-12
+  - unnamed connections, 11
+  - creating (DDL commands), 28-29
+  - creating empty databases from a resource, code listing, 29
+  - disconnecting from, 13
+    - automatically, 13-14
+    - manually, 13
+  - local, connecting to, 308
+  - saving changes, 276-277
+- DataChange event handler, creating, 227
+- DataFetch application (MainForm.pas), code listing, 311-313
+- DataModule.pas, 352, 358-361
+- DataModuleCreate method, 361
+- DataModuleDestroy method, 361
+- DataMoveMode values, 384
+- dataset events, 148
+  - AfterXxx events, 149-150
+  - BeforeXxx events, 149
+  - event handlers, 150
+- Dataset property, 204
+- dataset providers, 274-275
+- datasets. See also queries; stored procedures; tables
+  - aggregates, 196-197
+  - client, 94
+  - advantages/disadvantages, 94-95
+  - calculated fields, 98-100
+  - cloning, 186-188, 191-192
+  - creating, 95-96, 101-103, 108
+  - data fields, 96-97
+  - field definitions, creating, 96
+  - fields
+    - accessing, 103-105
+    - adding, 102
+  - file formats, 107
+  - indexes. See client datasets, indexes
+  - lookup fields, 100-101
+  - manipulating, 105-108
+  - navigating, 113-118
+  - populating, 105-108
+- closing, 64
+- connecting to, 275-276
+- constraints, 197-198
+- dbExpress, 58-59
+- field contents, retrieving, 64-65
+- navigating, 65, 68
+- nested, 172-176
+- opening, 63-64
+- resolving to, 278
+- responding to changes, 227
+- updating, 227-228
+
+## D
+
+- DatasetTypeForm.pas (Basic application), code listing, 68-69
+- DataSize property, 107
+- DataSnap, 318
+- DataSource property, 60, 240
+- Date function, 129
+- date separator (/), 210
+- date/time functions (filters), 129
+- Day function, 129
+- dbExpress
+  - connecting to databases, 8
+  - Linux drivers, 377
+  - statically-linked driver units, 377
+- dbExpress Connection Editor, 10-11
+- dbExpress datasets, 58-59
+- dbExpress Plus, 380
+  - data pumping, 383-384
+  - metadata, 381-383
+  - scripting, 380-381
+- dbExpress Windows drivers, 376
+- DCOM (Distributed COM) connections, 333
+- DDL (Data Definition Language) statements, 27
+- DDL commands, 27
+  - creating tables, 28
+  - databases, creating, 28-29
+  - executing, 27
+  - tables, creating, 27
+- DDLSQL (MainForm.pas), code listing, 33-36
+- decimal point (,), 207
+- Declaration edit box, 324
+- DefaultDrawing property, 253-254
+- DEFAULT_ORDER index, 123
+- Delete button, 224
+- Delete method, 106
+- DeleteIndex method, 121
+- deleting
+  - indexes (client datasets), 121
+  - records (client databases), 106
+- Delphi Randomizer, 111
+- DescFields property, 120
+- design-time
+  - client datasets, creating, 96
+  - indexes, creating, 119-120
+  - maintained aggregates, creating, 193-195
+- detail records, fetching manually, 310-311, 314-315
+- detecting
+  - resized columns, 260-261
+  - transaction support, 38
+- determining
+  - position of record in aggregate, 197
+  - row/cell
+    - current, 257
+    - mouse coordinate, 257-259
+- Developer Express Web site, 272
+- dgAlwaysShowEditor option, 244, 259
+- dgAlwaysShowSelection option, 245
+- dgCancelOnExit option, 245
+- dgColLines option, 244
+- dgColumnResize option, 244
+- dgConfirm option, 245
+- dgEditing option, 244, 260
+- dgIndicator option, 244
+- dgMultiSelect option, 245
+- dgRowLines option, 244
+- dgRowSelect option, 245, 253

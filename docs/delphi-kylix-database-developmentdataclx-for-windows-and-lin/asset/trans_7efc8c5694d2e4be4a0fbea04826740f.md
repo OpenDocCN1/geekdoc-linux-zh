@@ -1,0 +1,349 @@
+
+
+## 索引
+
+- **PanelWidth** 属性，267
+- **ParamCheck** 属性，61，72-73
+- **参数化查询**，71-73，75
+- **参数化 SQL 语句**，30-32
+- **参数**
+    - 数据库，11-12
+    - **KeyFields**，136
+    - **KeyValues**，136
+    - 可选，300-301
+    - **Options**，136
+    - **Properties**，300
+    - 检索，19-20，25-27
+- **Params** 属性，9-12，61
+- **Password** 属性，12，334-335
+- **密码**，设置（命名连接），11
+- **句点 (.)**，207
+- **持久聚合**，在设计时创建，193-194
+- **持久字段**，103
+- **持久化网格设置**，262-263
+- **pfhidden** 值，292
+- **pflnkKey** 值，292
+- **pflnUpdate** 值，292
+- **pflnWhere** 值，292
+- **PickList** 属性，243
+- **poAllowCommandText** 选项，294
+- **poAllowMultiRecordUpdates** 选项，294
+- **poAutoRefresh** 选项，294
+- **poCascadeUpdates** 选项，294
+- **poDisableDeletes** 选项，294
+- **poDisableEdits** 选项，294
+- **poDisableInserts** 选项，294
+- **poFetchBlobsOnDemand** 选项，293，310
+- **poFetchDetailsOnDemand** 选项，293，310
+- **polnclFieldProps** 选项，293
+- **poNoReset** 选项，294
+- **poPropagateChanges** 选项，294
+- **Populate lE XEcute** 方法，111
+- **填充**
+    - 客户端数据集，105-108
+    - 远程数据模块，324
+- **poReadOnly** 选项，294
+- **poRetainServerOrder** 选项，294
+- **Port** 属性，331
+- **Post** 按钮，224
+- **井号 (#)**，207-209
+- **Prior** 按钮，224
+- **Prior** 方法，113
+- **过程**
+    - ContactByState，350
+    - 存储过程，提供/解析数据，302。另见数据集
+- **属性**
+    - **Active**，60
+    - **Address**，331
+    - **Aggregates**，194-195
+    - **Aligment**，242-244
+    - **AlloDelete**，267
+    - **AlloInsling**，267
+    - **AsString**，103
+    - **AutoCalcFields**，98
+    - **AutoEdit**，204
+    - **AutoSave**，49
+    - **BlobSize**，70
+    - **ButtonStyle**，243
+    - **CancelUpdates**，181
+    - **CanModify**，225
+    - **Caption**，244
+    - **CaselnsFields**，120
+    - **ChangeCount**，181
+    - **ColCount**，267
+    - **Color**，242-244
+    - **Columns**，240-241
+    - **CommandText**，60，310
+    - **CommandType**，60
+    - **ComputerName**，333
+    - **ConfigFile**，265
+    - **Constraints**，197
+    - **Control**，225
+    - **CustomContraint**，198
+    - **Database**，12
+    - **DataSet**，204
+    - **DataSource**，107
+    - **Data Size**，60，240
+    - **De/aultDrawing**，253-254
+    - **DescFields**，120
+    - **DisableStringTrim**，198-199
+    - **DispayFormat**，207-209
+        - 设置，208
+        - 说明符，207
+    - **DropDownRows**，243
+    - **EditMask**，209
+        - 设置，210-211
+        - 说明符，209-210
+    - **EditMode**，259
+    - **Enabled**，204
+    - **Expression**，120
+    - **FetchOnDemand**，310-311
+    - **Field**，226
+    - **FieldCount**，65
+    - **FieldDefs**，102
+    - **FieldName**，226，242
+    - **Fields**，104，120
+    - **File Name**，49
+    - **Filter**，130
+    - **Font**，242，244
+    - **GetFieldNames**，18-19
+    - **GetIndexNames**，19
+    - **GetProcedureNames**，19
+    - **GetProcedureParams**，19-20，25-27
+    - **GetTableNames**，18
+    - **GroupingLevel**，120
+    - **Host**，331
+    - **HostName**，335
+    - **IndexDefs**，119
+    - **IndexFieldNames**，73，122
+    - **IndexName**，73
+    - **InterceptGUID**，331
+    - **InterceptName**，331
+    - **InTransaction**，41
+    - **KeepSettings**，187-188
+    - **LoadBalanced**，344
+    - **LogChanges**，177
+    - **MaxBlobSize**，61
+    - **MergeChangeLog**，181
+    - **Name**，120
+    - **ObjectBroker**，344
+    - **ObjectName**，335
+    - **ObjectView**，61
+    - **Options**，120，293-294
+    - **Orientation**，267
+    - **PacketRecord**，309
+    - **PanelBorder**，267
+    - **ParamCheck**，61，72-73
+    - **ParamHeight**，267
+    - **PanelWidth**，267
+    - **Params**，61
+    - **Password**，12，334-335
+    - **PickList**，243
+    - **Port**，331
+    - **ProviderFlags**，292-293
+    - **Proxy**，334-335
+    - **ReadOnly**，199，242
+    - **RecNo**，115-116
+    - **RepositoryID**，335
+    - **Reset**，187-188
+    - **ResolveToDataSet**，278
+    - **RevertRecord**，178-179
+    - **RowCount**，267
+    - **SavePoint**，179-180
+    - **SelectedColor**，267
+    - **SelectedField**，257
+    - **SelectedIndex**，257
+    - **ServerGUID**，331-334
+    - **ServerName**，331，334
+    - **ShowFocus**，267
+    - **SortFieldName**，61
+    - **Source**，120
+    - **SQLConnection**，61
+    - **SQLHourGlass**，47
+    - **StatusFilter**，181-182
+    - **SupportCallbacks**，331
+    - **TableScope**，18
+    - **TColumn**，242-243
+    - **TCORBAConnection**
+        - 组件，335
+    - **TDataSource**，204
+    - **TDBCtrlGrid**
+        - 组件，267
+    - **TDCOMConnection**，333-334
+    - **TFieldDataLink**，225-226
+    - **Title**，242-244
+    - **TitleSort**，264
+    - **TraceList**，50
+    - **TransactionSupported**，38
+    - **TSOAPConnection**，335
+    - **TSocketConnection**
+        - 组件，331
+    - **TSQLConnection**，8-9
+        - **Connected**，8
+        - **ConnectionName**，8
+        - **DriverName**，8
+        - **GetDriverFunc**，8
+        - **KeepConnection**，8
+        - **LibraryName**，8
+        - **LoadParamsOnConnect**，9
+        - **LoginPrompt**，9
+        - **Params**，9，11-12
+        - **TableScope**，9
+        - **VendorLib**，9
+    - **TSQLDataSet**
+        - 组件，60-61
+    - **TWebConnection**
+        - 组件，334
+    - **UndoLastChange**，178
+    - **UpdateMode**，291
+    - **URL**，334-335
+    - **UserName**，12，334-335
+    - **Values**，214
+    - **Visible**，242
+    - **Width**，242
+- **Properties 参数**，300
+- **ProviderFlags 属性**，292-293
+- **提供程序**，在不同表单上访问，308
+- **提供**
+    - 数据
+        - *联接*，302-304，307
+        - *存储过程*，302
+    - 值（计算字段），99-100
+- **Proxy 属性**，334-335
+- **pszTrace 字段**，48
+- **pvContacts 组件**，353
+
+## Q-R
+
+- **查询**。另见数据集
+    - 数据排序，74
+    - 参数化，71-75
+- **查询级访问 (TSQLDataSet 组件)**，61-62
+- **raAbort 值**，279
+- **raCancel 值**，279
+- **raCorrect 值**，279
+- **Raise Software 网站**，47
+- **raMerge 值**，279
+- **随机访问导航 (客户端数据集)**，114-116
+    - 书签，114-115
+    - 记录号，115
+- **Randomizer**，111
+- **RangeFilter**
+    - 应用，代码列表
+        - **FilterForm.pas**，133
+        - **MainForm.pas**，130-132
+        - **RangeForm.pas**，134-135
+- **RangeForm.pas (RangeFilter 应用)**，代码列表，134-135
+- **范围**，126-127
+- **raRefresh 值**，279
+- **raSkip 值**，279
+- **ReadOnly 属性**，199，242
+- **RecErrorForm.pas**，352
+- **RecNo 属性**，115-116
+- **Reconcile 错误对话框图标**，280
+- **协调错误**，278-280，289-290
+- **记录号**，115
+- **记录**
+    - 删除（客户端数据库），106
+    - 确定在聚合中的位置，197
+    - 修改（客户端数据库），105-106
+- **TransactionDesc**，39
+- **再分发的**
+    - **应用程序**，376
+        - 基于 CD-ROM，378
+        - 源数据，378
+        - Linux，377-378
+        - Windows，376-377
+- **Refresh 按钮**，224，290
+- **Refresh 方法**，290
+- **刷新数据 (服务器)**，290-291
+- **RefreshRecord 方法**，291
+- **关系**
+    - 主/从，74-76，301
+    - 一对多，74
+- **远程连接 (客户端应用程序)**，创建，330
+- **远程数据模块上下文菜单**
+    - 命令（添加到接口），324
+- **远程数据模块**，318-319
+    - 创建，319
+    - *CORBA 远程数据模块*，322
+    - *MTS 远程数据模块*，321-322
+    - *SOAP 远程数据模块*，322-323
+    - *标准远程数据模块*，320-321
+    - 添加方法，324
+    - 通过组件填充，324
+
+## R
+
+- **RemoteDataModule.pas** (comManServer 应用)，代码列表，352-357，359-361，363-371，373
+- **移除**
+    - BLOB 列，70
+    - 回调处理程序，49
+- **RepositoryID**
+    - 属性，335
+- **Reset 方法**，225
+- **Reset 属性**，187-188
+- **调整大小的列**，检测，260-261
+- **ResolveToDataSet 属性**，278
+- **解析**，274
+    - BLOB 字段的更改，290
+    - 数据
+        - *联接*，302-304，307
+        - *存储过程*，302
+    - 数据集，278
+- **响应数据集更改**，227
+- **结果集**，返回，33
+- **检索**
+    - 数据库元数据，18
+    - 字段内容（数据集），64-65
+    - 字段元数据，382
+    - 字段名称，18-19
+    - 字段对象，257
+    - 索引数据，382-383
+    - 索引信息（客户端数据集），122
+        - *GetIndexNames* 方法，122
+        - *TIndexDefs* 方法，123
+    - 索引名称，19
+    - 索引，257
+    - 参数，19-20，25-27
+    - 架构信息，79-81，87-88
+    - 存储过程，19
+    - 表/视图/字段名称，381
+    - 表，18
+- **返回数据**，限制，309
+- **BLOB**，手动获取，310
+- **详细记录**，手动获取，310-311，314-315
+- **返回**
+    - 书签，114
+    - 结果集，33
+- **RevertRecord 属性**，178-179
+- **回滚事务**，40
+- **行 (网格)**，确定
+    - 当前行，257
+    - 鼠标坐标，257-259
+- **RowCount 属性**，267
+- **运行时**
+    - 创建客户端数据集，101-103
+    - 创建索引，121
+    - 创建维护聚合，195
+    - 删除索引，121
+
+## S
+
+- **Save1E XExecute 方法**，112
+- **SavePoint 属性**，179-180
+- **SaveToFile 方法**，50，106
+- **SaveToStream 方法**，106
+- **保存数据库更改**，276-277
+- **Schema 应用** (MainForm.pas)，代码列表，81-87
+- **架构列**
+    - stColumns 值，89
+    - stIndices 值，90-91
+    - stProcedurParams 值，89-90
+    - stProcedures 值，88
+    - stSystemTables 值，88
+    - stTables 值，88
+- **架构信息**，检索，79-81，87-88
+- **科学记数法 (E+/–)**，207
+- **ScktSrvr**，331-332
+

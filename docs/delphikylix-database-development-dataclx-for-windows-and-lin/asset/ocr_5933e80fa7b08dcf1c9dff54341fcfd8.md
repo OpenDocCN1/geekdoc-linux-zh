@@ -1,0 +1,56 @@
+# **LISTING 6.4** Continued
+
+```
+```pascal
+Label3: TLabel;
+Label4: TLabel;
+ecBirthday: TDBEdit;
+
+pnlBottom: TPanel;
+cbAllowInsert: TCheckBox;
+cbAllowDelete: TCheckBox;
+ecRowCount: TEdit;
+ecColCount: TEdit;
+
+        cbShowFocus: TCheckBox;
+Label5: TLabel;
+Label6: TLabel;
+Label7: TLabel;
+
+        cbOrientation: TComboBox;
+Image1: TImage;
+
+        procedure FormCreate(Sender: TObject);
+        procedure cbAllowInsertClick(Sender: TObject);
+        procedure cbAllowDeleteClick(Sender: TObject);
+        procedure cbShowFocusClick(Sender: TObject);
+        procedure ecRowCountChange(Sender: TObject);
+        procedure ecColCountChange(Sender: TObject);
+        procedure cbOrientationClick(Sender: TObject);
+        procedure DBCtrlGrid1PaintPanel(DBCtrlGrid1: TDBCtrlGrid;
+                     Index: Integer);
+
+private
+ { Private declarations }
+public
+ { Public declarations }
+end;
+
+var
+ Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+ ClientDataSet1.LoadFromFile('C:\Employee.cds');
+end;
+
+procedure TForm1.cbAllowInsertClick(Sender: TObject);
+begin
+ DBCtrlGrid1.AllowInsert := cbAllowInsert.Checked;
+end;
+```
+```

@@ -1,0 +1,27 @@
+After the application server is debugged locally, you should then move it to a server machine for further testing and debugging.
+
+For application servers implementing **TRemoteDataModule**, registering the server is a simple matter of running it once. Running the server automatically registers it with the computer. When you modify the application server or move it to a new directory or computer for testing, you should run it again.
+
+Other remote data modules, such as **TMTSDataModule** or **TCORBADataModule**, will require registering the server with MTS or CORBA.
+
+# ## Creating the Client Application
+
+Now that the application server has been created and registered, it's time to create the client application.
+
+The client application is functionally identical to the applications created in the previous chapter, except that it doesn't contain the server-side data module. In addition, the data module in the client application will contain a remote connection component, discussed in the following sections.
+
+To get the client application started, select File, New from the Delphi main menu, and then select Application (at this time, CLX applications don't support DataSnap).
+
+Now create a data module, which will house the client datasets that retrieve data from the application server.
+
+# ## Connecting to a Local Database Connection
+
+In the previous chapter, you learned how to connect to a provider that is on the same form or data module as a client dataset. You also learned how to call **TClientDataSet.SetProvider** at runtime to connect to a provider on a different form or data module.
+
+This section shows you how you can use the **TLocalConnection** component to connect to providers on different forms or data modules at design time.
+
+To set up a local connection, do the following:
+
++   1. Drop a **TLocalConnection** on the data module that contains the server-side datasets and providers. **TLocalConnection** can be found on the DataSnap page of the component palette, along with the remote connection components.
+
++   2. Add the server-side data module to the uses clause of the client-side data module.

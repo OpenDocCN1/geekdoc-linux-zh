@@ -1,0 +1,252 @@
+
+
+# **清单 1.1**（续）
+
+```pascal
+type
+  TfrmMain = class(TForm)
+    conn: TSQLConnection;
+    pnlClient: TPanel;
+    pnlBottom: TPanel;
+    btnConnect: TButton;
+    btnDisconnect: TButton;
+    Label1: TLabel;
+    lbEvents: TListBox;
+    grpOptions: TGroupBox;
+    cbAllowConnect: TCheckBox;
+    cbAllowDisconnect: TCheckBox;
+    procedure connAfterConnect(Sender: TObject);
+    procedure connAfterDisconnect(Sender: TObject);
+    procedure connBeforeConnect(Sender: TObject);
+    procedure connBeforeDisconnect(Sender: TObject);
+    procedure connLogin(Database: TSQLConnection;
+                        LoginParams: TStrings);
+    procedure btnConnectClick(Sender: TObject);
+    procedure btnDisconnectClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+{$R *.xfrn}
+
+procedure TfrmMain.connAfterConnect(Sender: TObject);
+begin
+  lbEvents.Items.Add('AfterConnect');
+end;
+
+procedure TfrmMain.connAfterDisconnect(Sender: TObject);
+begin
+  lbEvents.Items.Add('AfterDisconnect');
+end;
+
+procedure TfrmMain.connBeforeConnect(Sender: TObject);
+begin
+  lbEvents.Items.Add('BeforeConnect');
+  if not cbAllowConnect.Checked then
+    Abort;
+end;
+
+procedure TfrmMain.connBeforeDisconnect(Sender: TObject);
+begin
+  lbEvents.Items.Add('BeforeDisconnect');
+  if not cbAllowDisconnect.Checked then
+    Abort;
+end;
+
+procedure TfrmMain.connLogin(Database: TSQLConnection;
+  LoginParams: TStrings);
+begin
+  lbEvents.Items.Add('OnLogin');
+end;
+
+procedure TfrmMain.btnConnectClick(Sender: TObject);
+begin
+  lbEvents.Items.Add('---Begin Open---');
+  try
+    conn.Open;
+  except
+    on EAbort do
+      lbEvents.Items.Add(' Connect aborted');
+    on E: Exception do
+      lbEvents.Items.Add(E.Message);
+  end;
+  lbEvents.Items.Add('---End Open---');
+  lbEvents.Items.Add('');
+end;
+
+procedure TfrmMain.btnDisconnectClick(Sender: TObject);
+begin
+  lbEvents.Items.Add('---Begin Close---');
+  try
+    conn.Close;
+  except
+    on EAbort do
+      lbEvents.Items.Add('Disconnect aborted');
+    on E: Exception do
+      lbEvents.Items.Add(E.Message);
+  end;
+  lbEvents.Items.Add('---End Close---');
+  lbEvents.Items.Add('');
+end;
+
+procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  conn.Close;
+end;
+
+end.
+```
+
+请注意代码中 `BeforeConnect` 和 `BeforeDisconnect` 事件处理程序在相应复选框未被选中时会调用 `Abort`。`btnConnectClick` 和 `btnDisconnectClick` 会检查是否发生 `EAbort`（或其他异常），如果连接或断开连接尝试因任何原因失败，它们会在列表框中显示相应的消息。
+
+图 1.3 展示了应用程序在运行时的外观。列表框中填充了信息性文本，精确说明了连接事件在何时以及以何种顺序触发。
+
+![](img/52a35759a0f10dade27a840504be5d82_30_0.png)
+
+# 图 1.3
+
+Events 应用程序有助于理解连接事件。
+
+# 获取数据库元数据
+
+TSQLConnection 暴露了一组属性，使您能够从数据库中提取基本架构信息，包括表、字段、索引、存储过程以及存储过程参数属性。接下来的章节将描述如何从数据库连接中获取这些信息类型。
+
+## GetTableNames
+
+您可以调用 GetTableNames 来获取数据库中的表列表，包括用户表、系统表、视图和同义词（仅适用于 Oracle 数据库）。
+
+TSQLConnection.GetTableNames 在 sqlxexpr.pas 中定义如下：
+
+```pascal
+procedure GetTableNames(List: TStrings; SystemTables: Boolean = False);
+```
+
+第一个参数指定返回表名的字符串列表。列表中现有的字符串将被清除。第二个参数指示是否仅返回系统表。
+
+如果将 SystemTables 参数设置为 True，则无论 TableScope 属性的当前设置如何（如表 1.4 所示），都只将系统表添加到列表中。如果 SystemTables 为 False，则 TableScope 控制添加到列表中的表类型。
+
+**表 1.4 TableScope 设置**
+
+| 属性 | 描述 |
+| :--- | :--- |
+| TsSynonym | 同义词 |
+| TsSysTable | 系统表 |
+| TsTable | 普通用户定义表 |
+| TsView | 视图 |
+
+下面的代码片段展示了 GetTableNames 的典型调用：
+
+```pascal
+GetTableNames(ListBox1.Items, False);
+```
+
+## GetFieldNames
+
+GetFieldNames 用于检索给定表或视图中定义的所有字段名称。GetFieldNames 接受两个参数，定义如下：
+
+```pascal
+procedure GetFieldNames(const TableName: string; List: TStrings);
+```
+
+在第一个参数中传递要检索字段名的表名。第二个参数指示要将结果字段名加载到哪个列表中。列表中现有的字符串将被删除。
+
+```pascal
+GetFieldNames('CONTACTS', ListBox1.Items);
+```
+
+## GetIndexNames
+
+与 **GetFieldNames** 类似，**GetIndexNames** 用于检索给定表上定义的所有索引名称。**GetIndexNames** 定义如下：
+
+```pascal
+procedure GetIndexNames(const TableName: string; List: TStrings);
+```
+
+与 **GetFieldNames** 一样，*TableName* 代表要获取索引名称的表。**List** 指示要将结果索引名称加载到哪个列表中。列表中现有的字符串将被删除。
+
+```pascal
+GetIndexNames('CONTACTS', ListBox1.Items);
+```
+
+## GetProcedureNames
+
+要检索数据库中的存储过程列表，请调用 **GetProcedureNames** 方法。  
+**GetProcedureNames** 定义如下：
+
+```pascal
+procedure GetProcedureNames(List: TStrings);
+```
+
+从该过程返回后，**List** 包含存储过程名称的列表。之前存储在列表中的任何信息都将被删除。
+
+```pascal
+GetProcedureNames(ListBox1.Items);
+```
+
+## GetProcedureParams
+
+**GetProcedureParams** 返回给定存储过程的参数列表。其定义如下：
+
+```pascal
+procedure GetProcedureParams(ProcedureName: string; List: TList);
+```
+
+第一个参数 *ProcedureName* 指定要检索参数名称的存储过程名称。第二个参数引用一个预创建的 **TList**，过程参数将返回到该列表中。从过程返回后，**List** 包含存储过程的参数列表。
+
+```pascal
+var
+  listParams: TList;
+  Params: TParams;
+begin
+  listParams := TList.Create;
+  try
+    SQLConnection.GetProcedureParams('CONTACTSUBSTATE', listParams);
+    Params := TParams.Create;
+    try
+      LoadParamListItems(Params, listParams);
+
+      // Do something with Params here...
+    finally
+      Params.Free;
+    end;
+  finally
+    FreeProcParams(listParams);
+  end;
+```
+
+注意此代码片段末尾对 `FreeProcParams` 的调用。`FreeProcParams` 释放并将 `listParams` TList 置为 nil，因此您不需要显式释放该列表。
+
+清单 1.2 展示了一个示例应用程序的完整源代码，该应用程序使用 TSQLConnection 从 InterBase 数据库中检索表、字段、索引、过程和参数名称。
+
+# **清单 1.2** 元数据—MainForm.pas
+
+```pascal
+unit MainForm;
+
+interface
+
+uses
+  SysUtils, Classes, QGraphics, QControls, QForms, QDialogs, QExtCtrls,
+  DBXpress, QComCtrls, QStdCtrls, DB, SqlExpr;
+
+type
+  TfrmMain = class(TForm)
+    conn: TSQLConnection;
+    pnlBottom: TPanel;
+    lblConnection: TLabel;
+    pnlClient: TPanel;
+    grpTableScope: TGroupBox;
+    btnTable: TCheckBox;
+    btnView: TCheckBox;
+    btnSynonym: TCheckBox;
+    btnSystemTable: TCheckBox;
+```
+

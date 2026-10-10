@@ -1,0 +1,22 @@
+Double-click the grid component at design time (or right-click it and select Columns Editor… from the pop-up menu) to display the columns editor. The columns editor works like most collection editors in Delphi—press Ins to create a new TColumn object, or right-click and select Add from the pop-up menu.
+
+Each column supports a number of properties that can be used to customize the column’s look and feel. (For the ultimate in display flexibility, see the “Custom Drawing” section later in this chapter.) These properties are listed in Table 6.1.
+
+# TABLE 6.1 Basic TColumn Properties
+
+| Property | Description |
+| :--- | :--- |
+| **Alignment** | Sets the alignment of the data displayed in the column to left-justified, centered, or right-justified. |
+| **Color** | Sets the background color of the individual column. |
+| **FieldName** | Specifies the name of the field in the underlying dataset that is to be displayed in this column. Any field can be displayed (including data fields, calculated fields, lookup fields, and aggregate fields). |
+| **Font** | Customizes the font used to display the column data. |
+| **ReadOnly** | When *True*, the column data cannot be edited, even if the underlying field and dataset allow editing. |
+| **Title** | Enables customization of the column’s title cell. This property is discussed later in the “Column Titles” section. |
+| **Visible** | When *False*, the column is not displayed. |
+| **Width** | Sets the width of the column in screen pixels. |
+
+When you set the `FieldName` property, Delphi sets the `Alignment` and `Width` properties automatically (based on the size and type of the field). Unfortunately, even though Delphi sets `Alignment` to `taRightJustify` for a numeric field, it doesn’t automatically set the title’s alignment to `taRightJustify`. So, you need to set the title’s alignment manually.
+
+# **NOTE**
+
+> It is possible to add a column for which no underlying data field exists. To do so, insert a new column and leave the `FieldName` property blank. When doing this, you need to set the column's `Alignment` and `Width` properties manually, and you must use the grid's custom draw functionality to paint the cell contents for that column. For example, you might want to create a column with no associated field to display an icon in certain rows.

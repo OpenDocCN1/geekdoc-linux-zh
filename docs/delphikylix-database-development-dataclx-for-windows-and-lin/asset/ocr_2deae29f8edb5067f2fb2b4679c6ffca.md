@@ -1,0 +1,33 @@
+# SOAP Connections
+
+TSOAPConnection uses SOAP to communicate between the client and server applications. TSOAPConnection is similar to TWebConnection in that it uses HTTP as the underlying protocol.
+
+As with TWebConnection, the client machine must contain a copy of wininet.dll.
+
+Table 8.6 lists the most important properties for TSOAPConnection.
+
+**TABLE 8.6** TSOAPConnection Properties
+
+| Property | Description |
+| :--- | :--- |
+| Password | Valid password used for authentication on the host machine. This may be left blank if the host does not require authentication. |
+| Proxy | Semicolon-delimited list of proxy servers that can be used to resolve the IP address of the host machine. |
+| URL | The URL used to locate the application server on the host machine. |
+| UserName | Valid username used for authentication on the host machine. This may be left blank if the host does not require authentication. |
+
+# CORBA Connections
+
+TCORBAConnection uses CORBA, or IIOP, as its underlying protocol. To establish a CORBA connection to an application server, you must be running a CORBA Smart Agent somewhere on your network.
+
+Table 8.7 lists the most important properties for TCORBAConnection.
+
+**TABLE 8.7** TCORBAConnection Properties
+
+| Property | Description |
+| :--- | :--- |
+| HostName | Specifies the machine where the application server is located. If this property is blank, the connection component will connect to the first available machine that supports the interface specified by the RepositoryID property. |
+| ObjectName | Set this property if the interface specified by RepositoryID must be implemented by a specific instance of the object. Leave this property blank if only one object supports the specified interface. |
+| RepositoryID | Specifies the CORBA data module to connect to. May take one of two forms:
+`IDL:ProjectName/CorbaDataModuleName:1.0`
+or
+`ProjectName/CorbaDataModuleName` |

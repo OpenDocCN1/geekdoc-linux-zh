@@ -1,0 +1,49 @@
+# **LISTING 3.3**   Continued
+
+```
+var
+    TfrmMain: TfrmMain;
+
+implementation
+
+{$R "*.xfm"}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+    ClientDataSet1.LoadFromFile('C:\Employee.cds');
+end;
+
+procedure TfrmMain.DBGrid1TitleClick(Column: TColumn);
+begin
+    try
+        ClientDataSet1.DeleteIndex('byUser');
+    except
+    end;
+
+    ClientDataSet1.AddIndex('byUser', Column.FieldName, []);
+    ClientDataSet1.IndexName := 'byUser';
+end;
+
+procedure TfrmMain.btnDefaultOrderClick(Sender: TObject);
+begin
+    // Deleting the current index will revert to the default order
+    try
+        ClientDataSet1.DeleteIndex('byUser');
+    except
+    end;
+
+    ClientDataSet1.IndexFieldNames := '';
+end;
+
+procedure TfrmMain.btnIndexListClick(Sender: TObject);
+var
+    Index: Integer;
+    IndexDef: TIndexDef;
+begin
+    ClientDataSet1.IndexDefs.Update;
+
+    ListBox1.Items.BeginUpdate;
+    try
+        ListBox1.Items.Clear;
+
+```

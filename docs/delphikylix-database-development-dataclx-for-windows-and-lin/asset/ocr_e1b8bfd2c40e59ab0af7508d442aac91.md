@@ -1,0 +1,33 @@
+TABLE 1.2 Common Database Parameters
+
+| Property | Description |
+| :--- | :--- |
+| Database | Specifies the database to connect to. For an InterBase database, this refers to the actual filename, such as \\SERVERID:\RemoteData.gdb. For an Oracle database, this refers to the entry in TNSNames.ora that uniquely identifies the database. |
+| Password | Password corresponds to User_Name. You usually do not want to set this at design time, as it bypasses database security. |
+| User_Name | The username employed while establishing the connection. You typically want the user to supply this information at runtime. |
+
+You can also access the *Params* property at runtime to set database parameters, like this:
+
+```
+SQLConnection1.Params.Values['Database'] := 'D:\Interbase\LocalDatabase.gdb';
+```
+
+For an InterBase connection, you can specify the database in one of three ways: as a local path, as a UNC path, or as a TCP path. The following are examples of these three constructs, respectively:
+
+```
+D:\Interbase\LocalDatabase.gdb
+\\SERVERID:\Data\RemoteDatabase.gdb
+192.168.0.1:D:\Data\RemoteDatabase.gdb
+```
+
+It is generally advisable to use either a UNC path or a TCP path when connecting to the database because InterBase has difficulties connecting to a database using a local path under certain conditions (such as connecting to a database from within a service application). You can connect to a local database with a TCP path by using 127.0.0.1 as the IP address, like this:
+
+```
+127.0.0.1:D:\Interbase\LocalDatabase.gdb
+```
+
+# Controlling Login
+
+As indicated previously, the connection's *LoginPrompt* property determines whether VCL/DataCLX automatically prompts the user for a username and password at runtime. If you set *LoginPrompt* to *True*, the default connection dialog is displayed at runtime, as shown in Figure 1.2.
+
+You can override the default login dialog and provide your own means of retrieving the username and password by handling the connection's *OnLogin* event, and setting the appropriate parameters there. The following code snippet shows how:

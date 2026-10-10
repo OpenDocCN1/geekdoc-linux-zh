@@ -1,0 +1,22 @@
+The value returned from `ApplyUpdates` is also dependent on the parameter passed to `ApplyUpdates`. The return value will never be more than one greater than the value specified by the parameter. For instance, if you pass 0 to `ApplyUpdates` (which is typically what's done), the return value will be either 0 or 1.
+
+# **TABLE 7.1** UpdateKind Values
+
+| Value | Description |
+| :--- | :--- |
+| ukInsert | The record is a newly inserted record. |
+| ukModify | Modifications were made to an existing record. |
+| ukDelete | The record refers to a deleted record. |
+
+# **TABLE 7.2** TReconcileAction Values
+
+| Value | Description |
+| :--- | :--- |
+| raSkip | Don't apply updates to this record. Leave the unapplied changes in the client dataset's change log. This record will be counted in the return value from `ApplyUpdates`. |
+| raAbort | Abort the whole operation. No updates are made to the underlying database at all, and all changes are left in the client dataset's change log. All records are counted in the return value from `ApplyUpdates`. |
+| raMerge | Merge the record with the record in the underlying database. This works only if the fields that are changed in the record don't conflict with fields that were changed by someone else. This record will not be counted in the return value from `ApplyUpdates`. You must set the `pfnKey` flag (discussed later in the section titled "Update Modes") for all fields in the primary key for this option to be available. |
+| raCorrect | Indicates that changes were made to the current record inside the OnReconcileError event handler. VCL/CLX should try to update again with the new field values. |
+| raCancel | Cancel changes to this record, reverting to the original record data. This record will not be counted in the return value from `ApplyUpdates`. |
+| raRefresh | Cancel changes to this record and reread the record data from the database. This record will not be counted in the return value from `ApplyUpdates`. You must set the `pfnKey` flag for all fields in the primary key for this option to be available. |
+
+![](bbox=[0.84, 0.3, 0.96, 0.4])

@@ -1,0 +1,322 @@
+
+## LISTING 5.3
+Continued
+
+```pascal
+type
+  TETHDBDateTimePicker = class(TDateTimePicker)
+private
+{ Private declarations }
+  FDataLink: TFieldDataLink;
+  function GetDataField: string;
+  function GetDataSource: TDataSource;
+  procedure SetDataField(const Value: string);
+  procedure SetDataSource(const Value: TDataSource);
+  function GetField: TField;
+  procedure DataChange(Sender: TObject);
+  procedure UpdateData(Sender: TObject);
+  procedure CMGetDataLink(var Message: TMessage); message CM_GETDATALINK;
+protected
+{ Protected declarations }
+  procedure Loaded; override;
+  procedure Notification(AComponent: TComponent;
+    Operation: TOperation); override;
+  procedure Change; override;
+  procedure Click; override;
+  procedure CMExit(var Message: TCMExit); message CM_EXIT;
+public
+{ Public declarations }
+  constructor Create(AOwner: TComponent); override;
+  destructor Destroy; override;
+  function ExecuteAction(Action: TBasicAction): Boolean; override;
+  function UpdateAction(Action: TBasicAction): Boolean; override;
+  property Field read GetField;
+published
+{ Published declarations }
+  property DataField: string read GetDataField write SetDataField;
+  property DataSource: TDataSource read GetDataSource write SetDataSource;
+end;
+
+procedure Register;
+implementation
+
+procedure Register;
+begin
+  RegisterComponents( 'ETH' , [TETHDBDateTimePicker]);
+end;
+
+{ TETHDBDateTimePicker }
+
+constructor TETHDBDateTimePicker.Create(AOwner: TComponent);
+begin
+    inherited Create(AOwner);
+
+    ControlStyle := ControlStyle + [csReplicable];
+    FDataLink := TFieldDataLink.Create;
+    FDataLink.Control := Self;
+    FDataLink.OnDataChange := DataChange;
+    FDataLink.OnUpdateData := UpdateData;
+end;
+
+destructor TETHDBDateTimePicker.Destroy;
+begin
+    FDataLink.Free;
+    FDataLink := nil;
+    inherited Destroy;
+end;
+
+procedure TETHDBDateTimePicker.Loaded;
+begin
+    inherited Loaded;
+    if (csDesigning in ComponentState) then
+        DataChange(Self);
+end;
+
+procedure TETHDBDateTimePicker.Notification(AComponent: TComponent;
+    Operation: TNotification);
+begin
+    inherited Notification(AComponent, Operation);
+    if (Operation = opRemove) and
+        (FDataLink <> nil) and
+        (AComponent = DataSource) then
+        DataSource := nil;
+end;
+
+procedure TETHDBDateTimePicker.CMGetDataLink(var Message: TMessage);
+begin
+    Message.Result := Integer(FDataLink);
+end;
+
+procedure TETHDBDateTimePicker.Change;
+begin
+    FDataLink.Edit;
+    inherited Change;
+    FDataLink.Modified;
+end;
+
+procedure TETHDBDateTimePicker.Click;
+begin
+    FDataLink.Edit;
+    inherited Click;
+    FDataLink.Modified;
+end;
+
+function TETHDBDateTimePicker.GetDataSource: TDataSource;
+begin
+    Result := FDataLink.DataSource;
+end;
+
+procedure TETHDBDateTimePicker.SetDataSource(const Value: TDataSource);
+begin
+    if not (FDataLink.DataSourceFixed and (csLoading in ComponentState)) then
+        FDataLink.DataSource := Value;
+    if Value <> nil then
+        Value.FreeNotification(Self);
+end;
+
+function TETHDBDateTimePicker.GetDataField: string;
+begin
+    Result := FDataLink.FieldName;
+end;
+
+procedure TETHDBDateTimePicker.SetDataField(const Value: string);
+begin
+    FDataLink.FieldName := Value;
+end;
+
+function TETHDBDateTimePicker.GetField: TField;
+begin
+    Result := FDataLink.Field;
+end;
+
+procedure TETHDBDateTimePicker.DataChange(Sender: TObject);
+begin
+    if FDataLink.Field <> nil then
+        Date := FDataLink.Field.AsDateTime
+    else
+        Date := Now;
+end;
+
+procedure TETHDBDateTimePicker.UpdateData(Sender: TObject);
+begin
+      FDataLink.Field.AsDateTime := Date;
+    end;
+
+    procedure TETHDBDateTimePicker.CMExit(var Message: TCMExit);
+    begin
+      try
+        FDataLink.UpdateRecord;
+      except
+        SetFocus;
+        raise;
+      end;
+    end;
+
+    function TETHDBDateTimePicker.ExecuteAction(Action: TBasicAction): Boolean;
+    begin
+      Result := inherited ExecuteAction(Action) or (FDataLink <> nil) and
+                 FDataLink.ExecuteAction(Action);
+    end;
+
+    function TETHDBDateTimePicker.UpdateAction(Action: TBasicAction): Boolean;
+    begin
+      Result := inherited UpdateAction(Action) or (FDataLink <> nil) and
+                 FDataLink.UpdateAction(Action);
+    end;
+
+    end.
+```
+
+![](img/fe651f295b5f960d5463c4fb581d2281_241_0.png)
+
+## Sample Application
+
+Listing 5.4 is a sample application that makes use of many (but not all) of the data-aware components discussed in this chapter. As you can see from Listing 5.4, there is very little code in this application. Thanks to VCL/CLX, the data-aware components encapsulate almost everything needed to display and update datasets in your applications.
+
+## LISTING 5.4
+DataAware—MainForm.pas
+
+```pascal
+unit MainForm;
+
+interface
+
+uses
+  SysUtils, Classes, QGraphics, QControls, QForms, QDialogs, DB, DBClient,
+  QStdCtrls, QExtCtrls, QButtons, Mask, QComCtrls, QDBCtrls, QMask;
+
+type
+TfrmMain = class(TForm)
+ClientDataSet1: TClientDataSet;
+DataSource1: TDataSource;
+cdsLookup: TClientDataSet;
+dsLookup: TDataSource;
+cdsLookupID: IntegerField;
+cdsLookupDescription: TStringField;
+DBNavigator1: TDBNavigator;
+pnlBottom: TPanel;
+ClientDataSet1Weekday: TStringField;
+ClientDataSet1WeekdayValue: TIntegerField;
+ClientDataSet1Image: TBlobField;
+ClientDataSet1Active: TStringField;
+ClientDataSet1Age: TIntegerField;
+ClientDataSet1ItemID: TIntegerField;
+ClientDataSet1Salary: TFloatField;
+ClientDataSet1Enabled: TBooleanField;
+LblCurrent: TLabel;
+Lb1State: TLabel;
+OpenDialog1: TOpenDialog;
+Panel1: TPanel;
+lbDSEvents: TListBox;
+Label3: TLabel;
+pnlClient: TPanel;
+PageControl1: TPageControl;
+tabSimple: TTabSheet;
+txtAge: TDBText;
+Label1: TLabel;
+txtWeekday: TDBText;
+txtSalary: TDBText;
+Label6: TLabel;
+Label7: TLabel;
+ecAge: TDBEdit;
+DBRadioGroup1: TDBRadioGroup;
+cbActive: TDBCheckBox;
+cbEnabled: TDBCheckBox;
+ecSalary: TDBEdit;
+tabComboList: TTabSheet;
+Label12: TLabel;
+cbWeekday: TDBComboBox;
+lb1Weekday: TDBListBox;
+raLookup: TTabSheet;
+Label4: TLabel;
+lblLookup: TDBLookupListBox;
+cblLookup: TDBLookupComboBox;
+tabImage: TTabSheet;
+Label5: TLabel;
+img: TDBImage;
+btnLoad: TButton;
+btnClear: TButton;
+procedure FormCreate(Sender: TObject);
+procedure DataSource1DataChange(Sender: TObject; Field: TField);
+procedure ClientDataSet1NewRecord(DataSet: TDataSet);
+procedure DataSource1StateChange(Sender: TObject);
+procedure btnLoadClick(Sender: TObject);
+procedure btnClearClick(Sender: TObject);
+procedure DataSource1UpdateData(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+{$R *.xfm}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+
+  procedure AddLookupItem(ID: Integer; const Description: string);
+  begin
+    cdsLookup.Append;
+    cdsLookupID.AsInteger := ID;
+    cdsLookupDescription.AsString := Description;
+    cdsLookup.Post;
+  end;
+
+begin
+  // Create the lookup dataset and populate with some data
+  cdsLookup.CreateDataSet;
+  AddLookupItem(1, 'Widgit');
+  AddLookupItem(2, 'Gadget');
+  AddLookupItem(3, 'Thingamabob');
+
+  ClientDataSet1.CreateDataSet;
+end;
+
+procedure TfrmMain.ClientDataSet1NewRecord(DataSet: TDataSet);
+begin
+  DataSet.FieldName('Enabled').AsString := 'T';
+  DataSet.FieldName('Active').AsString := 'T';
+end;
+
+procedure TfrmMain.DataSource1DataChange(Sender: TObject; Field: TField);
+begin
+  if Field = nil then
+    lbDSEvents.Items.Add('Data Change: Field = nil')
+  else
+    lbDSEvents.Items.Add('Data Change: Field = ' + Field.FieldName);
+
+  lblCurrent.Caption := Format('('Record %d of %d)',
+    [ClientDataSet1.RecNo, ClientDataSet1.RecordCount]);
+end;
+
+procedure TfrmMain.DataSource1StateChange(Sender: TObject);
+begin
+  lbDSEvents.Items.Add('State Change');
+
+  case DataSource1.State of
+    dsInactive: lblState.Caption := 'Inactive';
+    dsBrowse: lblState.Caption := 'Browse';
+    dsEdit: lblState.Caption := 'Edit';
+    dsInsert: lblState.Caption := 'Insert';
+  end;
+end;
+
+procedure TfrmMain.DataSource1UpdateData(Sender: TObject);
+begin
+  lbDSEvents.Items.Add('Update Data')
+end;
+
+procedure TfrmMain.btnLoadClick(Sender: TObject);
+begin
+  if OpenDialog1.Execute then begin
+    ClientDataSet1.Edit;
+    ClientDataSet1Image.LoadFromFile(OpenDialog1.FileName);
+  end;
+end;
+
+procedure TfrmMain.btnClearClick(Sender: TObject);
+```

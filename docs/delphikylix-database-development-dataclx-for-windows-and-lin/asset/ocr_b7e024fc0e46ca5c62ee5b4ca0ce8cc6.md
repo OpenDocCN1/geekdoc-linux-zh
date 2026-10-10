@@ -1,0 +1,24 @@
+```
+ShowMessage('The query took ' + IntToStr(OP + 'ms and was executed on ' +
+ DateToStr(TimeQueried) + ' at ' + TimeToStr(TimeQueried));
+ end;
+```
+
+# Master/Detail Relationships
+
+Back in Chapter 2, “dbExpress Datasets,” you learned how to create a master/detail relationship between two or more dbExpress datasets.
+
+Later, in Chapter 4, you learned how to create nested TClientDataSets to create a master/detail relationship at the TClientDataSet level.
+
+Using providers, you will establish the master/detail relationship on the server-side data module, using TSQLDataSet components. You will then connect a TDataSetProvider component to the master dataset only. Drop a single TClientDataSet component on the client-side data module and connect it to the master dataset’s provider. This will automatically create a nested dataset on the client side.
+
+It is good practice to create one data module for the dbExpress components and dataset providers and another data module for the client datasets. I refer to these data modules as server-side data modules and client-side data modules. This is explained more fully in the section titled, “Connecting to a Local Database,” later in this chapter.
+
+The MasterDetail sample application, included in the downloads for this book, illustrates this technique. I haven’t included a listing here, because almost no code is required—everything is done at design time.
+
+Figure 7.4 shows the main form of the MasterDetail application at design time. For simplicity, I put the database components directly on the main form instead of creating separate data modules for the server and client.
+
+![](bbox=[0.28, 0.67, 0.6, 0.87])
+
+**FIGURE 7.4**
+*Components needed for a master/detail relationship.*

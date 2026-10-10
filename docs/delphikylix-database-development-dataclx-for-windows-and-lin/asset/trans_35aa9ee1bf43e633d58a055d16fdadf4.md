@@ -1,0 +1,229 @@
+
+
+# 列表 7.1 更新—MainForm.pas
+
+```pascal
+unit MainForm;
+
+interface
+
+uses
+  SysUtils, Variants, Classes, Graphics, QControls, QForms, QStdCtrls,
+  QDLogs, QExtCtrls, DBXpress, FM TBcd, QRids, QDBGrids, DB, Provider,
+  DBClient, SqlExpr, QDBCtrls, QTypes;
+
+type
+  TfrmMain = class(TForm)
+    pnlClient: TPanel;
+    pnlBottom: TPanel;
+    SQLConnection1: TSQLConnection;
+    SQLDataSet1: TSQLDataSet;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    btnApplyUpdates: TButton;
+    btnCancelUpdates: TButton;
+    lblUpdates: TLabel;
+    Timer1: TTimer;
+    DBNavigator1: TDBNavigator;
+    SQLDataSet1CONTACT_ID: TIntegerField;
+    SQLDataSet1FIRST: TStringField;
+    SQLDataSet1LAST: TStringField;
+    SQLDataSet1DEAR: TStringField;
+    SQLDataSet1TITLE: TStringField;
+    SQLDataSet1COMPANY_NAME: TStringField;
+    SQLDataSet1ADDRESS1: TStringField;
+    SQLDataSet1ADDRESS2: TStringField;
+    SQLDataSet1CITY: TStringField;
+    SQLDataSet1STATE: TStringField;
+    SQLDataSet1POSTAL_CODE: TStringField;
+    SQLDataSet1COUNTRY: TStringField;
+    SQLDataSet1PHONE: TStringField;
+    SQLDataSet1FAX: TStringField;
+    SQLDataSet1CELLULAR: TStringField;
+    SQLDataSet1PAGER: TStringField;
+    SQLDataSet1EMAIL: TStringField;
+    SQLDataSet1IMAGE: TBlobField;
+    SQLDataSet1NOTES: TMemoField;
+    sqlID: TSQLDataSet;
+    LogEvents: TListBox;
+    Label: TLabel;
+    btnClearEventLog: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure btnApplyUpdatesClick(Sender: TObject);
+    procedure btnCancelUpdatesClick(Sender: TObject);
+    procedure ClientDataSet1ReconcileError(DataSet: TCustomClientDataSet;
+      E: EReconcileError; UpdateKind: TUpdateKind;
+      var Action: TReconcileAction);
+    procedure DataSetProvider1BeforeUpdateRecord(Sender: TObject;
+      SourceDS: TDataSet; DeltaDS: TCustomClientDataSet;
+      UpdateKind: TUpdateKind; var Applied: Boolean);
+    procedure DataSetProvider1AfterApplyUpdates(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1BeforeExecute(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1BeforeGetParams(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1BeforeGetRecords(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1BeforeRowRequest(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1AfterUpdateRecord(Sender: TObject;
+      SourceDS: TDataSet; DeltaDS: TCustomClientDataSet;
+      UpdateKind: TUpdateKind);
+    procedure DataSetProvider1BeforeApplyUpdates(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1AfterExecute(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1AfterGetParams(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1AfterGetRecords(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure DataSetProvider1AfterRowRequest(Sender: TObject;
+      var OwnerData: OleVariant);
+    function DataSetProvider1DataRequest(Sender: TObject;
+      Input: OleVariant): OleVariant;
+    procedure DataSetProvider1GetData(Sender: TObject;
+      DataSet: TCustomClientDataSet);
+    procedure DataSetProvider1GetDataSetProperties(Sender: TObject;
+      DataSet: TDataSet; out Properties: OleVariant);
+    procedure DataSetProvider1GetTableName(Sender: TObject;
+      DataSet: TDataSet; var TableName: String);
+    procedure DataSetProvider1UpdateData(Sender: TObject;
+      DataSet: TCustomClientDataSet);
+    procedure DataSetProvider1UpdateError(Sender: TObject;
+      DataSet: TCustomClientDataSet; E: EUpdateError;
+      UpdateKind: TUpdateKind; var Response: TResolverResponse);
+    procedure ClientDataSet1AfterApplyUpdates(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1AfterExecute(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1AfterGetParams(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1AfterGetRecords(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1AfterRefresh(DataSet: TDataSet);
+    procedure ClientDataSet1AfterRowRequest(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1BeforeApplyUpdates(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1BeforeExecute(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1BeforeGetParams(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1BeforeGetRecords(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure ClientDataSet1BeforeRefresh(DataSet: TDataSet);
+    procedure ClientDataSet1BeforeRowRequest(Sender: TObject;
+      var OwnerData: OleVariant);
+    procedure btnClearEventLogClick(Sender: TObject);
+  private
+    function GetNextID: Integer;
+    procedure Log(const s: string);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+uses RecErrorForm;
+
+{$R *.xfm}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+    ClientDataSet1.Open;
+end;
+
+procedure TfrmMain.Timer1Timer(Sender: TObject);
+begin
+    lblUpdates.Caption := IntToStr(ClientDataSet1.ChangeCount) + ' Update(s)';
+end;
+
+procedure TfrmMain.btnApplyUpdatesClick(Sender: TObject);
+begin
+    ShowMessage('ApplyUpdates returned a value of ' +
+        IntToStr(ClientDataSet1.ApplyUpdates(0)));
+end;
+
+procedure TfrmMain.btnCancelUpdatesClick(Sender: TObject);
+begin
+    ClientDataSet1.CancelUpdates;
+end;
+
+procedure TfrmMain.ClientDataSet1ReconcileError(
+    DataSet: TCustomClientDataSet; E: EReconcileError;
+    UpdateKind: TUpdateKind; var Action: TReconcileAction);
+begin
+    Action := HandleReconcileError(DataSet, UpdateKind, E);
+end;
+
+function TfrmMain.GetNextID: Integer;
+begin
+    SQLID.ExecSQL;
+    Result := SQLID.ParamByName('AValue').AsInteger;
+end;
+
+procedure TfrmMain.DataSetProvider1BeforeUpdateRecord(Sender: TObject;
+    SourceDS: TDataSet; DeltaDS: TCustomClientDataSet;
+    UpdateKind: TUpdateKind; var Applied: Boolean);
+begin
+    Log('TDataSetProvider.BeforeUpdateRecord');
+
+    if UpdateKind = ukInsert then
+        if DeltaDS.FieldByName('ID').OldValue <= 0 then
+            DeltaDS.FieldByName('ID').NewValue := GetNextID;
+end;
+
+procedure TfrmMain.Log(const s: string);
+begin
+    LogEvents.Items.Add(s);
+end;
+
+procedure TfrmMain.DataSetProvider1AfterApplyUpdates(Sender: TObject;
+    var OwnerData: OleVariant);
+begin
+    Log('TDataSetProvider.AfterApplyUpdates');
+end;
+
+procedure TfrmMain.DataSetProvider1AfterExecute(Sender: TObject;
+    var OwnerData: OleVariant);
+begin
+    Log('TDataSetProvider.AfterExecute');
+end;
+
+procedure TfrmMain.DataSetProvider1AfterGetParams(Sender: TObject;
+    var OwnerData: OleVariant);
+begin
+    Log('TDataSetProvider.AfterGetParams');
+end;
+
+procedure TfrmMain.DataSetProvider1AfterGetRecords(Sender: TObject;
+    var OwnerData: OleVariant);
+begin
+    Log('TDataSetProvider.AfterGetRecords');
+end;
+
+procedure TfrmMain.DataSetProvider1AfterRowRequest(Sender: TObject;
+    var OwnerData: OleVariant);
+begin
+    Log('TDataSetProvider.AfterRowRequest');
+end;
+
+procedure TfrmMain.DataSetProvider1AfterUpdateRecord(Sender: TObject;
+    SourceDS: TDataSet; DeltaDS: TCustomClientDataSet;
+    UpdateKind: TUpdateKind);
+begin
+    Log('TDataSetProvider.AfterUpdateRecord');
+end;
+
+procedure TfrmMain.DataSetProvider1BeforeApplyUpdates(Sender: TObject;
+    var OwnerData: OleVariant);
+```
+

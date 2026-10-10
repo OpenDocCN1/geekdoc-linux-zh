@@ -1,0 +1,36 @@
+As you can see, it’s somewhat easier to create your client datasets at design-time than it is at runtime. However, if you commonly create temporary in-memory datasets, or if you need to create a client dataset in a formless unit, you can create the dataset at runtime with a minimal amount of fuss.
+
+# ## Accessing Fields
+
+Regardless of how you create the client dataset, at some point you need to access field information—whether it’s for display, to calculate some values, or to add or modify a new record.
+
+There are several ways to access field information in Delphi. The easiest is to use persistent fields.
+
+# ## Persistent Fields
+
+Earlier in this chapter, when we used the field editor to create fields, we were also creating persistent field objects for those fields. For example, when we added the `LastName` field, Delphi created a persistent field object named `cdsEmployeeLastName`.
+
+When you know the name of the field object, you can easily retrieve the contents of the field by using the `AsXXX` family of methods. For example, to access a field as a string, you would reference the `AsString` property, like this:
+
+```
+ShowMessage('The employee’s last name is ' +
+    cdsEmployeeLastName.AsString);
+```
+
+To retrieve the employee’s salary as a floating-point number, you would reference the `AsFloat` property:
+
+```
+Bonus := cdsEmployeeSalary.AsFloat * 0.05;
+```
+
+See the VCL/CLX source code and the Delphi documentation for a list of available access properties.
+
+![](bbox=[0.05, 0.77, 0.17, 0.79])
+
+You are not limited to accessing a field value in its native format. For example, just because `Salary` is a currency field doesn’t mean you can’t attempt to access it as a string. The following code displays an employee’s salary as a formatted currency:
+
+```
+ShowMessage('Your salary is ' + cdsEmployeeSalary.AsString);
+```
+
+You could access a string field as an integer, for example, if you knew that the field contained an integer value. However, if you try to access a field as an integer (or other data type) and the field doesn’t contain a value that’s compatible with that data type, Delphi raises an exception.

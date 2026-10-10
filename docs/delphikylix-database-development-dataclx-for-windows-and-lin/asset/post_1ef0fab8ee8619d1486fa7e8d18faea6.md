@@ -1,0 +1,341 @@
+
+## OnUpdateData event
+- OnUpdateData event, 205, 226, 297-298
+- OnUpdateError event, 297
+- opening datasets, 63-64
+- operators
+    - Addition (+), 128
+    - And, 128
+    - arithmetic (filters), 128
+    - asterisk (*), 129
+    - BLANK, 128
+    - comparison (filters), 127-128
+    - Division (/), 128
+    - equality test (=), 127
+    - filters, 129
+    - greater than (>), 127
+    - greater than or equal to (>=), 129
+    - IN, 129
+    - inequality test (< >), 127
+    - IS NOT NULL, 128
+    - IS NULL, 128
+    - less than (<), 127
+    - less than or equal to (<=), 127
+    - LIKE, 129
+    - logical (filters), 128
+    - Multiplication (*), 128
+    - Not, 128
+    - Or, 128
+    - Subtraction (-), 128
+- optional parameters, 300-301
+
+## Options
+- options
+    - dgAlwaysShowEditor, 244, 259
+    - dgAlwaysShowSelection, 245
+    - dgCancelOnExit, 245
+    - dgColLines, 244
+    - dgColumnResize, 244
+    - dgConfirm, 245
+    - dgEditing, 244, 260
+    - dgIndicator, 244
+    - dgMultiSelect, 245
+    - dgRowLines, 244
+    - dgRowSelect, 245, 253
+    - dgTabs, 244
+    - dgTitles, 244
+    - grid (TDBGrid), 244-245
+    - IxCasInsensitive, 120
+    - IxDescending, 120
+    - IxExpression, 120
+    - IxOnMaintained, 120
+    - IxPrimary, 120
+    - IxUnique, 120
+    - loCaseInsensitive, 136
+    - loPartialKey, 136
+    - MainForm.pas, code listing, 246-251
+    - poAllowCommandText, 294
+    - poAllowMultiRecordUpdates, 294
+    - poAutoRefresh, 294
+    - poCascadeUpdates, 294
+    - poDisableDeletes, 294
+    - poDisableEdits, 294
+    - poDisableInserts, 294
+    - poFetchBlobsOnDemand, 293, 310
+    - poFetchDetailsOnDemand, 293, 310
+    - poIncFieldProps, 293
+    - poNoReset, 294
+    - poPropagateChanges, 294
+    - poReadOnly, 294
+    - poRetainServerOrder, 294
+    - TDataSetProvider component, 293-295
+- Options parameter, 136
+- Options property, 120, 293-294
+- OptionsForm.pas (EventLog application), code listing, 156-157
+- Or operator, 128
+- ordering data, 73
+    - queries, 74
+    - tables, 73
+- Orientation property, 267
+- Orpheus, 271
+- Other command (New menu), 280, 319
+    - overlapped transactions, 40
+
+## P
+- PacketRecords property, 309
+- PanelBorder property, 267
+- PanelHeight property, 267
+- PanelWidth property, 267
+- ParamCheck property, 61, 72-73
+- parameterized queries, 71-73
+- parameterized SQL statements, 30-32
+- parameters
+    - database, 11-12
+    - KeyFields, 136
+    - Key Values, 136
+    - optional, 300-301
+    - Options, 136
+    - Properties, 300
+    - retrieving, 19-20, 25-27
+    - Params property, 9-12, 61
+    - Password property, 12, 334-335
+    - passwords, setting (named connections), 11
+- period (.), 207
+- persistent aggregates, creating at design time, 193-194
+- persistent fields, 103
+- persistence grid settings, 262-263
+- pfHideAnd value, 292
+- pfnKey value, 292
+- pfnUpdate value, 292
+- pfmWhere value, 292
+- PickList property, 243
+- poAllowCommandText option, 294
+- poAllowMultiRecordUpdates option, 294
+- poAutoRefresh option, 294
+- poCascadeUpdates option, 294
+- poDisableDeletes option, 294
+- poDisableEdits option, 294
+- poDisableInserts option, 294
+- poFetchDetailsOnDemand option, 293, 310
+- poIncFieldProps option, 293
+- poNoReset option, 294
+- poPropagateChanges option, 294
+- PopulateTXExecute method, 111
+- populating
+    - client datasets, 105-108
+    - remote data modules, 324
+- poReadOnly option, 294
+- poRetainServerOrder option, 294
+- Port property, 331
+- Post button, 224
+- pound sign (#), 207-209
+- Prior button, 224
+- Prior method, 113
+- procedures
+    - ContactsByState, 350
+    - stored, providing/resolving data, 302. *See also* datasets
+- properties
+    - Active, 60
+    - Address, 331
+    - Aggregates, 194-195
+    - Alignment, 242-244
+    - AllowDelete, 267
+    - AllowInsert, 267
+    - AsString, 103
+    - AutoCalcFields, 98
+    - AutoEdit, 204
+    - AutoSave, 49
+    - BlobSize, 70
+    - ButtonStyle, 243
+    - CancelUpdates, 181
+    - CanModify, 225
+    - Caption, 244
+    - CaseInsFields, 120
+    - ChangeCount, 181
+    - ColCount, 267
+    - Color, 242-244
+    - Columns, 240-241
+    - CommandText, 60, 310
+    - CommandType, 60
+    - ComputerName, 333
+    - ConfigFile, 265
+    - Constraints, 197
+    - Control, 225
+    - CustomConstraint, 198
+    - Database, 12
+    - DataSet, 204
+    - DataSize, 107
+    - DataSource, 60, 240
+    - DefaultDrawing, 253-254
+    - DescFields, 120
+    - DisableStringTrim, 198-199
+    - DisplayFormat, 207-209
+    - DropDownRows, 243
+    - EditMask, 209
+    - settings, 210-211
+    - specifiers, 209-210
+    - EditMode, 259
+    - Enabled, 204
+    - Expression, 120
+    - FetchOnDemand, 310-311
+    - Field, 226
+    - FieldCount, 65
+    - FieldDefs, 102
+    - FieldName, 226, 242
+    - Fields, 104, 120
+    - FileName, 49
+    - Filter, 130
+    - Font, 242, 244
+    - GetFieldNames, 18-19
+    - GetIndexNames, 19
+    - GetProcedureNames, 19
+    - GetProcedureParams, 19-20, 25-27
+    - GetTableNames, 18
+    - GroupingLevel, 120
+    - Host, 331
+    - HostName, 335
+    - IndexDefs, 119
+    - IndexFieldNames, 73, 122
+    - IndexName, 73
+    - InterceptGUID, 331
+    - InterceptParam, 331
+    - InTransaction, 41
+    - KeepSettings, 187-188
+    - LoadBalanced, 344
+    - LogChanges, 177
+    - MaxBlobSize, 61
+    - MergeChangeLog, 181
+    - Name, 120
+    - ObjectBroker, 344
+    - ObjectName, 335
+    - ObjectView, 61
+    - Options, 120, 293-294
+    - Orientation, 267
+    - PacketRecord, 309
+    - PanelBorder, 267
+    - PanelHeight, 267
+    - PanelWidth, 267
+    - ParamCheck, 61, 72-73
+    - Params, 61
+    - Password, 12, 334-335
+    - PickList, 243
+    - Port, 331
+    - ProviderFlags, 292-293
+    - Proxy, 334-335
+    - ReadOnly, 199, 242
+    - RecNo, 115-116
+    - RepositoryID, 335
+    - Reset, 187-188
+    - ResolveToDataSet, 278
+    - RevertRecord, 178-179
+    - RowCount, 267
+    - SavePoint, 179-180
+    - SelectedColor, 267
+    - SelectedField, 257
+    - SelectedIndex, 257
+    - ServerGUID, 331-334
+    - ServerName, 331, 334
+    - ShowFocus, 267
+    - SortFieldName, 61
+    - Source, 120
+    - SQLConnection, 61
+    - SQLHourGlass, 47
+    - StatusFilter, 181-182
+    - SupportCallbacks, 331
+    - TableScope, 18
+    - TColumn, 242-243
+    - TCORBAConnection component, 335
+    - TDataSnapshot, 204
+    - TDBGrid component, 267
+    - TDCOMConnection, 333-334
+    - TFieldDataLink, 225-226
+    - Title, 242-244
+    - TitleSort, 264
+    - TraceList, 50
+    - TransactionSupported, 38
+    - TSOAPConnection, 335
+    - TSocketConnection component, 331
+    - TSQLConnection, 8-9
+        - Connected, 8
+        - ConnectionName, 8
+        - DriverName, 8
+        - GetDriverFunc, 8
+        - KeepConnection, 8
+        - LibraryName, 8
+        - LoadParamsOnConnect, 9
+        - LoginPrompt, 9
+        - Params, 9, 11-12
+        - TableScope, 9
+        - VendorLib, 9
+    - TSQLDataSet Component, 60-61
+    - TWebConnection component, 334
+    - UndoLastChange, 178
+    - UpdateMode, 291
+    - URL, 334-335
+    - UserName, 12, 334-335
+    - Rendum, 214
+    - Visible, 242
+    - Width, 242
+- Properties parameter, 300
+- ProviderFlags property, 292-293
+- providers, accessing on different form, 308
+- providing data
+    - joins, 302-304, 307
+    - stored procedures, 302
+    - values (calculated fields), 99-100
+- Proxy property, 334-335
+- pszTrace field, 48
+- pvContacts component, 353
+
+## Q-R
+- queries. See also datasets
+    - ordering data, 74
+    - parameterized, 71-75
+- query-level access (TSQLDataSet component), 61-62
+- raAbort value, 279
+- raCancel value, 279
+- raCorrect value, 279
+- Raize Software Web site, 47
+- raMerge value, 279
+- random-access navigation (client datasets), 114-116
+    - bookmarks, 114-115
+    - record numbers, 115
+- Randomizer, 111
+- RangeFilter application, code listings
+    - FilterForm.pas, 133
+    - MainForm.pas, 130-132
+    - RangeForm.pas, 134-135
+- RangeForm.pas (RangeFilter application), code listing, 134-135
+- ranges, 126-127
+- raRefresh value, 279
+- raSkip value, 279
+- ReadOnly property, 199, 242
+- RecErrorForm.pas, 352
+- RecNo property, 115-116
+- Reconcile Error Dialog icon, 280
+- reconciliation errors, 278-280, 289-290
+- record numbers, 115
+- records
+    - deleting (client databases), 106
+    - determining position in aggregate, 197
+    - modifying (client databases), 105-106
+    - TransactionDesc, 39
+- redistributing applications, 376
+    - CD-ROM-based, 378
+    - fees, 378
+    - Linux, 377-378
+    - Windows, 376-377
+- Refresh button, 224, 290
+- refreshing data (servers), 290-291
+- RefreshRecord method, 291
+- relationships
+    - master/detail, 74-76, 301
+    - one-to-many, 74
+- remote connections (client applications), creating, 330
+- remote data module context menu commands (Add to Interface), 324
+- remote data modules, 318-319
+    - creating, 319
+    - CORBA remote data modules, 322
+    - MTS remote data modules, 321-322
+    - SOAP remote data modules, 322-323
+    - standard remote data modules, 320-321

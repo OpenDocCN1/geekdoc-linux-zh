@@ -1,0 +1,51 @@
+# **LISTING 1.4** Continued
+
+```
+procedure TfrmMain.btnDeleteClick(Sender: TObject);
+begin
+	conn.ExecuteDirect('DELETE FROM TESTING WHERE NAME = 'Tina'');
+
+	lbOutput.Items.Add('Deleted Tina from TESTING table');
+end;
+
+procedure TfrmMain.btnParametersClick(Sender: TObject);
+const
+	SQL = 'INSERT INTO TESTING VALUES (:Name, :Age)';
+var
+	Params: TParams;
+begin
+	Params := TParams.Create(nil);
+try
+	Params.CreateParam(ftString, 'PName', ptInput);
+	Params.CreateParam(ftInteger, 'Page', ptInput);
+
+	// Add first name
+	Params.ParamByName('PName').AsString := 'Mike';
+	Params.ParamByName('Page').AsInteger := 34;
+	conn.Execute(SQL, Params);
+
+	lbOutput.Items.Add('Added Mike to TESTING table');
+finally
+	Params.Free;
+end;
+
+procedure TfrmMain.btnDropClick(Sender: TObject);
+begin
+	conn.ExecuteDirect('DROP TABLE TESTING');
+
+	lbOutput.Items.Add('Removed TESTING table');
+end;
+
+procedure TfrmMain.connAfterConnect(Sender: TObject);
+begin
+	btnConnect.Enabled := False;
+	btnCreate.Enabled := True;
+	btnPopulate.Enabled := True;
+	btnDelete.Enabled := True;
+	btnParameters.Enabled := True;
+	btnDrop.Enabled := True;
+```
+
+
+
+![](bbox=[0.9, 0.14, 0.98, 0.48])

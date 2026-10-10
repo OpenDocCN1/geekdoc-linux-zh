@@ -1,0 +1,50 @@
+# **LISTING 1.1**  Continued
+
+```
+```pascal
+procedure TfrmMain.connBeforeConnect(Sender: TObject);
+begin
+  lbEvents.Items.Add('BeforeConnect');
+  if not cbAllowConnect.Checked then
+    Abort;
+end;
+
+procedure TfrmMain.connBeforeDisconnect(Sender: TObject);
+begin
+  lbEvents.Items.Add('BeforeDisconnect');
+  if not cbAllowDisconnect.Checked then
+    Abort;
+end;
+
+procedure TfrmMain.connLogin(Database: TSQLConnection;
+  LoginParams: TStrings);
+begin
+  lbEvents.Items.Add('OnLogin');
+end;
+
+procedure TfrmMain.btnConnectClick(Sender: TObject);
+begin
+  lbEvents.Items.Add('---Begin Open---');
+  try
+    conn.Open;
+  except
+    on EAbort do
+      lbEvents.Items.Add(' Connect aborted');
+    on E: Exception do
+      lbEvents.Items.Add(E.Message);
+  end;
+  lbEvents.Items.Add('---End Open---');
+  lbEvents.Items.Add('');
+end;
+
+procedure TfrmMain.btnDisconnectClick(Sender: TObject);
+begin
+  lbEvents.Items.Add('---Begin Close---');
+  try
+    conn.Close;
+  except
+    on EAbort do
+      lbEvents.Items.Add('Disconnect aborted');
+    on E: Exception do
+```
+```

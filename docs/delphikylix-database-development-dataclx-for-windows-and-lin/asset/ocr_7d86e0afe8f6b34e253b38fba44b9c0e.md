@@ -1,0 +1,21 @@
+In addition to the dbExpress driver, you need to redistribute LTBMMIDAS.SO. The redistributable files should be placed in /home/<usrname>/delphidir/bin.
+
+# Licensing Issues
+
+If you’re writing database applications that work with local data (that is, data does not travel from one machine to another), you don’t need to worry about any licensing fees for your applications. However, if data packets travel from one machine to another, you will need to pay a small redistribution fee to Borland for use of the DataSnap technology.
+
+For the particulars about when you need to pay the redistribution fees and how much they are, visit Borland’s Web site at http://www.borland.com/midas.
+
+# CD-ROM-Based Applications
+
+A common requirement of many database applications is that they need to be able to access a (read-only) database on a CD. These applications, such as phone lists, parts databases, and so on, are often redistributed with a large database on CD. The end user doesn’t need to update the data—the user needs only to access the data from the CD.
+
+To redistribute a read-only InterBase database on CD, you need to first run the gfix command against the database, like this:
+
+```
+gfix -read-only mydata.gdb
+```
+
+This marks the database as read-only.
+
+In your application, you should set the poReadOnIy option for all dataset providers and set ReadOnly to True for any TClientDataSets. This will ensure that none of the database-related components attempt to update any data in the database.

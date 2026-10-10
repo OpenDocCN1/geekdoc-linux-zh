@@ -1,0 +1,205 @@
+
+
+## 列表 4.9（续）
+
+```pascal
+DataSource1: TDataSource;
+DBGrid1: TDBGrid;
+btnUpdate: TButton;
+btnInsert: TButton;
+btnRange: TButton;
+btnInsert2: TButton;
+
+procedure FormCreate(Sender: TObject);
+procedure FormDestroy(Sender: TObject);
+procedure btnUpdateClick(Sender: TObject);
+procedure btnInsertClick(Sender: TObject);
+procedure btnRangeClick(Sender: TObject);
+procedure btnInsert2Click(Sender: TObject);
+private
+{ 私有声明 }
+FCloneDS: TClientDataSet;
+public
+{ 公共声明 }
+end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+{$R *.fmf}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+  ClientDataSet1.LoadFromFile('C:\Employee.cds');
+  ClientDataSet1.AddIndex('byID', 'ID', [ixPrimary, ixUnique]);
+  ClientDataSet1.IndexName := 'byID';
+
+  FCloneDS := TClientDataSet.Create(nil);
+  FCloneDS.CloneCursor(ClientDataSet1, False, False);
+end;
+
+procedure TfrmMain.FormDestroy(Sender: TObject);
+begin
+  FCloneDS.Free;
+end;
+
+procedure TfrmMain.btnUpdateClick(Sender: TObject);
+begin
+  Screen.Cursor := crHourglass;
+  try
+    FCloneDS.First;
+    while not FCloneDS.EOF do begin
+      FCloneDS.Edit;
+      FCloneDS.FieldName('Salary').AsFloat := FCloneDS.FieldName('Salary').AsFloat * 1.10;
+      FCloneDS.Post;
+      FCloneDS.Next;
+    end;
+  finally
+    Screen.Cursor := crDefault;
+  end;
+end;
+
+procedure TfrmMain.btnInsertClick(Sender: TObject);
+begin
+  if FCloneDS.State <> dsBrowse then
+    Exit;
+  FCloneDS.Append;
+  FCloneDS.FieldName('ID').AsInteger := 99999;
+  FCloneDS.FieldName('Name').AsString := 'Eric Harmon';
+  FCloneDS.FieldName('Birthday').AsString := '1/1/1967';
+  FCloneDS.FieldName('Salary').AsFloat := 1.00;
+end;
+
+procedure TfrmMain.btnInsert2Click(Sender: TObject);
+begin
+  if FCloneDS.State <> dsInsert then
+    Exit;
+  try
+    FCloneDS.Post;
+    ClientDataSet1.GoToCurrent(FCloneDS);
+  except
+    FCloneDS.Cancel;
+    raise;
+  end;
+end;
+
+procedure TfrmMain.btnRangeClick(Sender: TObject);
+begin
+  Screen.Cursor := crHourglass;
+  try
+    FCloneDS.SetRange([100], [199]);
+    try
+      FCloneDS.First;
+      while not FCloneDS.EOF do begin
+        FCloneDS.Edit;
+        FCloneDS.FieldName('Salary').AsFloat := 50000.0;
+        FCloneDS.Post;
+      end;
+      FCloneDS.Next;
+    finally
+      FCloneDS.CancelRange;
+    end;
+  finally
+    Screen.Cursor := crDefault;
+  end;
+end;
+```
+
+图 4.7 展示了该克隆应用程序在运行时的状态。
+
+![](img/52a35759a0f10dade27a840504be5d82_204_0.png)
+
+观察这段代码，你可能会注意到几件事。其中一点是，我在 `FormCreate` 方法中创建了克隆数据集，并在 `FormDestroy` 方法中将其销毁。我这样做是为了简化说明。在实际应用中，你通常会在需要该克隆的方法中创建它，并在随后立即销毁。在这个示例程序中，我只创建和销毁了一次，从而节省了几行代码。
+
+“Update”（更新）按钮遍历整个数据集，为所有员工加薪 10%。请注意，即使代码没有调用 `DisableControls`（在本章开头附近有讨论），网格在遍历数据集时仍然不会滚动。这是因为网格连接到 `ClientDataSet1`，而更新操作是在克隆数据集上执行的。
+
+“Insert (Part 1)”（插入 第一部分）和 “Insert (Part 2)”（插入 第二部分）按钮在克隆上执行插入操作的两个阶段。第一个按钮向数据集添加一个新记录并填充数据。第二个按钮将该新记录提交到数据集，然后调用原始数据集的 `GoToCurrent` 方法（将原始数据集与克隆同步）。`GoToCurrent` 使原始数据集跳转到克隆数据集的当前记录。
+
+将插入操作拆分为两个按钮的原因是，这样你可以轻松看到插入过程中发生了什么。点击“Insert (Part 1)”。现在向下滚动到网格底部。你将在网格中看到员工 99999 的某一行——这是新插入但尚未提交的记录。当你点击“Insert (Part 2)”时，该新记录将出现在网格中。相比之下，如果你将插入按钮事件处理程序中的代码改为使用 `ClientDataSet1` 而不是 `FCloneDS`，你会看到在新记录实际提交之前，它就会出现在网格中。
+
+最后，“Range”（范围）按钮的操作方式与“Update”按钮非常相似：它对数据集应用一个范围，然后将该范围内所有员工的工资设置为 50,000 美元。网格不会更新以反映该范围，因为该范围仅应用于克隆数据集，而未应用于 `ClientDataSet1`。
+
+### 维护聚合
+
+数据集中的记录通常不是完全相互独立的。很多时候，你希望获得整列或该列某个子集的和或平均值。例如，你可能想要计算销售部门所有员工的平均工资，或者你可能需要检索姓名为 Jones 的员工数量。
+
+如果你使用的是基于 SQL 的数据库，你可以发出 SQL 语句来计算这些值。例如：
+
+```sql
+SELECT AVG(SALARY) FROM EMPLOYEE WHERE DEPARTMENT = 'SALES';
+SELECT COUNT(*) FROM EMPLOYEE WHERE LASTNAME = 'Jones';
+```
+
+然而，你不能直接对客户端数据集执行 SQL 语句。
+
+> **注意**
+>
+> 如果你通过数据库提供程序将客户端数据集连接到 dbExpress 数据集，然后你可以将 SQL 语句发送到数据库后端，并在客户端数据集中检索结果。这项技术在第 7 章中讨论。
+
+相反，客户端数据集支持一种称为维护聚合的强大功能。维护聚合会自动计算整个数据集（或一组记录）的和、平均值、计数、最小值或最大值。
+
+### 在设计时创建维护聚合
+
+在设计时创建维护聚合与设计时创建字段类似。与字段一样，维护聚合可以是持久的，也可以是非持久的。以下各节展示了如何创建每种类型。
+
+#### 持久聚合
+
+你创建持久聚合的方式与你创建数据字段、计算字段或查找字段的方式大致相同。
+
+- 在表单编辑器中右键单击客户端数据集，并从弹出菜单中选择 *Field Editor...*（字段编辑器）。
+- 按 *Ins* 键创建新字段。
+- 在 *New Field*（新字段）对话框中输入字段名和字段类型。对于维护聚合，字段类型应为 *Aggregate*（聚合）。
+- 在 *Field type*（字段类型）组框中选择 *Aggregate*（聚合）单选按钮。
+- 点击 *OK*（确定）创建该聚合。
+
+图 4.8 显示了在添加名为 `AvgSalary` 的聚合字段后的字段编辑器。
+
+![](img/52a35759a0f10dade27a840504be5d82_206_0.png)
+
+*图 4.8：字段编辑器在单独的部分显示聚合。*
+
+创建聚合后，你需要设置一些额外的属性（例如要聚合的表达式，以及聚合是否处于活动状态）。
+
+- 在字段编辑器中点击该聚合字段。
+- 在对象检查器中，在 `Expression`（表达式）属性中输入聚合表达式。聚合表达式在“聚合表达式”一节中有讨论。暂时，你可以使用 `Avg(Salary)`。
+- 将 *Active*（活动）属性设置为 True。默认情况下，聚合处于非活动状态，这意味着你无法访问它们。将 `AggregatesActive` 设置为 True 以激活聚合字段。
+
+创建持久聚合会自动创建一个类型为 `TAggregateField` 的组件，你可以使用它来引用聚合值。然而，与大多数字段不同，你不使用 `AsFloat` 属性来获取聚合值。相反，你使用 `Value` 属性，如下所示：
+
+```pascal
+ShowMessage('The average salary is ' + ClientDataSet1AvgSalary.Value);
+```
+
+由于 `Value` 是一个变体，你可以将其视为字符串或浮点数进行引用。因此，以下代码也是正确的：
+
+```pascal
+var
+  AvgRaisedSalary: Double;
+begin
+  AvgRaisedSalary := ClientDataSet1AvgSalary.Value * 1.05;
+end;
+```
+
+#### 非持久聚合
+
+要在设计时创建非持久聚合，请在表单编辑器中点击客户端数据集，然后在对象检查器中双击 `Aggregates` 属性以显示聚合编辑器。
+
+聚合编辑器的外观和行为与字段编辑器非常相似。点击工具栏上的 **Add New**（添加新）按钮（或按 *Ins* 键）创建新聚合。
+
+同样，你需要设置一些额外的属性（例如要聚合的表达式，以及聚合是否处于活动状态）。
+
+- 在聚合编辑器中点击该聚合。
+- 在对象检查器中，为该聚合输入一个名称，例如 `AvgSalary`。
+- 在 `Expression` 属性中输入聚合表达式，例如 `Avg(Salary)`。
+- 将 *Active*（活动）属性设置为 True。
+- 将 `AggregatesActive` 设置为 True。
+
+与上一节不同，Delphi 不会为此种方式创建的聚合并创建组件。相反，你通过数据集的 `Aggregates` 属性来访问聚合，如下所示：
+
+```pascal
+ShowMessage('The average salary is ' +
+  ClientDataSet1.Aggregates.Find('AvgSalary').Value);
+```
+

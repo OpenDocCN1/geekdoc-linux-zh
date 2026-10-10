@@ -1,0 +1,18 @@
+# The Briefcase Model
+
+Multitier applications lend themselves to something called the briefcase model. When in the office, the user is presumably connected to the server and is running an application using live data. Before leaving the office, the user downloads any data that may be needed onto the user's local machine, for use while away from the office. The general overview of the briefcase model is as follows:
+
+When in the office, the user works with live data directly from the application server. While on the road, the user works with a local copy of the data, making additions or modifications to the data as needed. Upon return to the office, the user reconnects to the server and reconciles all updates back to the server.
+
+This magic is performed using the techniques you have already learned in this book. When connected to the server, dataset providers provide a live copy of the data to the client application's client datasets. Before the user leaves the office, the data is saved locally by calling `TClientDataSet.SaveToFile`.
+
+While on the road, the client is unable to connect to the application server; instead, it loads the local copy of the data by calling `TClientDataSet.LoadFromFile`. Changes are accumulated in the change log, which is persisted by calling `TClientDataSet.SaveToFile` before the user exits the application.
+
+When the user returns to the office, the client application again calls `TClientDataSet.LoadFromFile` to load the local copy of the data, but then calls `TClientDataSet.ApplyUpdates` to resolve any updates back to the application server.
+
+Note that the server application does not change in any way—only the client application contains code to support the briefcase model.
+
+Because Delphi ships with a useful briefcase demo application, I won't duplicate its functionality here. Instead, I encourage you to take a look at the Delphi demo. For a typical Delphi installation, look at C:\Program Files\Borland\Delphi6\Demos\Midas\Briefcase.
+
+**Note**
+Rather than calling `LoadFromFile` and `SaveToFile` in your application, you can simply assign the client dataset's `FileName` property to the name of the local file to save to and load from. Delphi will then take care of loading and saving the data at the appropriate times.
