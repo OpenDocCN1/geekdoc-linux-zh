@@ -1,0 +1,9 @@
+# ## Summary
+
+This chapter examines three SSH servers that can be used with any SSH client: OpenSSH, SSH Communications' SSH Server, and VanDyke Software's VSHell SSH server. Many more, equally effective SSH servers exist than the ones discussed here; however, in the interests of time and space, they have not been covered. Be aware that most of the other servers are very similar to the ones examined in the previous paragraphs. For example, F-Secure's SSH server and SSH Communications' SSH server are practically alike.
+
+When deciding on the choice of an SSH server for your organization, it is important to know the business and technical requirements in addition to the different options available with each. While many SSH servers offer similar functionality, many offer features that might not be present in others. For example, if your SSH architecture is being used for terminal access, port forwarding, SFTP, or all of the above, different SSH servers have strengths and weaknesses that should influence your decision.
+
+In this chapter, I have described in detail the various options available in each SSH server and use this information throughout the rest of this book to highlight the strengths and weakness of the SSH servers. This approach will not only help you understand the features of the SSH servers, but will also allow you to make an informed decision when choosing a server.
+
+Chapter 1 of this book has covered the basics of SSH (namely, the deployment of SSH servers), and Chapter 2 has covered the detailed descriptions of SSH servers themselves. The next chapter focuses on SSH clients.

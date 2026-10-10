@@ -603,6 +603,7 @@
 +   [实施备份与恢复：企业级就绪指南 (VERITAS 系列)](docs/implementing-backup-and-recovery-the-readiness-guide-for-the/README.md)
 +   [Linux 和 Windows 下的 IBM 带实现指南](docs/implementing-ibm-tape-in-linux-and-windows/README.md)
 +   [使用 IBM 磁盘存储实现 Linux](docs/implementing-linux-with-ibm-disk-storage/README.md)
++   [SSH实现：安全外壳优化策略](docs/implementing-ssh-strategies-for-optimizing-the-secure-shell/README.md)
 +   [你应该知道的常用 Linux 命令](docs/important-linux-commands-you-should-know/README.md)
 +   [必学的重要 Linux 命令：初学者口袋指南](docs/important-linux-commands-you-should-know-a-pocket-guide-for-/README.md)
 +   [Linux 内部机制](docs/inside-linux/README.md)

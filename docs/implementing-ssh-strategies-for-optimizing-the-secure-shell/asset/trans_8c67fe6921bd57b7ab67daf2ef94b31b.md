@@ -1,0 +1,132 @@
+
+本节总结了通过 SSH 可用的其他一些认证选项，例如服务器认证（即客户端对服务器进行认证）以及通用选项认证设置。讨论顺序如下：
+
+- 通用选项
+- 密码
+- 基于主机的认证
+- 服务器认证
+- 公钥
+
+## 通用选项
+
+根据部署的 SSH 服务器类型，SSH 提供了几种通用的认证选项。这些选项的范围从有效的密码尝试到使用空密码。以下段落描述了 SSH 服务器及其提供的认证选项。
+
+### SSH Communications 的 SSH 服务器（Windows）
+
+SSH Communications 的 SSH 服务器提供了一些认证选项。打开 SSH 服务器配置界面（开始 ↔ 程序 ↔ SSH Secure Shell Server ↔ Configuration），并选中界面中的“用户认证”部分。认证界面如图 4.1 所示。
+
+![](img/c99d6f526a5f9fa62f2c34daada85ad7_146_0.png)
+
+**图 4.1** SSH Communications 的 SSH 服务器界面的“用户认证”部分。
+
+表 4.1 至表 4.3 描述了 SSH Communications 的 SSH 服务器的通用认证选项。
+表 4.1 描述了通用的用户认证选项。可以配置登录宽限期、重试次数和重试间隔等参数。
+表 4.2 描述了密码部分下的用户认证密码选项。可以配置密码认证、允许空密码以及键盘交互等参数。
+表 4.3 描述了公钥部分下的用户认证公钥选项。可以配置公钥认证、密钥目录和授权文件等参数。
+
+**表 4.1 用户认证选项**
+
+| 选项 | 描述 |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 登录宽限期 | 设置用户完成认证过程的时间量。具体来说，即从用户发起连接的时间到用户输入用户名/密码或私钥密码的时间。 |
+| 重试 – 重试次数 | 规定用户尝试登录的次数。 |
+| 重试 – 重试间隔 | 指定重试之间的持续时间。 |
+
+**表 4.2 用户认证密码选项**
+
+| 选项 | 描述 |
+| :------------------ | :----------------------------------------------------------------------------- |
+| 密码认证 | 允许、要求或拒绝密码认证。 |
+| 允许空密码 | 允许账户使用空密码。 |
+| 键盘交互 | 允许与密码认证配合使用键盘交互认证。 |
+
+**表 4.3 用户认证公钥选项**
+
+| 选项 | 描述 |
+| :---------------------- | :--------------------------------------------------------- |
+| 公钥认证 | 允许、要求或拒绝公钥认证。 |
+| 用户密钥目录 | 指定存储用户公钥的目录。默认为 `%D\.ssh2`，即 .ssh2 文件夹中用户的家目录（例如，Unix 上的 `/home/<username>/.ssh2` 和 Windows 上的 Documents and Settings\<username>\.ssh2）。 |
+| 授权文件 | 存储可用于公钥认证的公钥有效列表。默认为授权文件，该文件存储在家目录中（Unix 上的 /home/<username>/.ssh2 和 Windows 上的 Documents and Settings\<username>\.ssh2）。 |
+
+### SSH Communications 的 SSH 服务器（Unix）
+
+Unix 版本的 SSH 服务器提供了与 Windows 平台类似的认证选项。一个区别在于，Windows 服务器配置界面只是一个指向 SSH 配置文件（即 sshd_2_config）的 GUI，而 SSH Communications 服务器的 Unix 版本不使用 GUI，而是直接使用配置文件本身。要查看认证选项，请输入以下命令。
+
+```
+#cd /etc/ssh2
+#more sshd_2_config
+```
+
+认证部分的选项列于表 4.4 中，并附带对每个选项的描述。
+
+**表 4.4 认证**
+
+| 选项 | 描述 |
+| :--- | :--- |
+| BannerMessageFile | 指明包含横幅消息的文件位置，例如“唯一的获胜方式是不参与”。默认路径为 /etc/ssh2/ssh_banner_message。 |
+| PasswordGuesses | 指定用户输入正确密码的尝试次数。 |
+| AllowedAuthentication | 指示 SSH 服务器允许的认证方法类型。选项包括 hostbased、publickey、password 和 PAM。 |
+| RequiredAuthentication | 命名 SSH 服务器要求的认证方法类型。选项包括 hostbased、publickey、password 和 PAM。 |
+| HostbasedAuthForce<br>ClientHostnameDNSMatch | 强制进行认证时的 DNS 匹配。可能的选项为 yes 和 no。 |
+| SchPAMClientPath | 如果使用了 PAM 客户端，则指明 PAM 客户端的位置。 |
+
+### VShell SSH 服务器
+
+VanDyke Software 的 VShell SSH 服务器提供了一些认证选项。打开 VShell 配置界面（开始 ↔ 程序 ↔ VShell ↔ VShell），并选中界面中的“认证”部分。（见图 4.2。）表 4.5 描述了 VShell 的通用认证选项。
+
+![](img/c99d6f526a5f9fa62f2c34daada85ad7_149_0.png)
+
+**图 4.2** VShell SSH 服务器的用户认证界面。
+
+**表 4.5 VShell 的认证选项**
+
+| 选项 | 描述 |
+| --- | --- |
+| 限制失败尝试次数至 | 限制用户在会话断开之前可以进行的失败尝试次数。 |
+| 认证后等待时间 | 设置用户完成认证过程的时间量。具体来说，即从用户发起连接的时间到用户输入用户名/密码或私钥密码的时间。 |
+| 必需认证方法 – 密码 | 要求使用密码进行认证。 |
+| 必需认证方法 – 公钥 | 要求使用公钥进行认证。 |
+| 必需认证方法 – 公钥上传 | 设置用户可以仅使用密码登录以上传公钥的次数。如果公钥认证是唯一的认证方法，此功能非常有用，因为它为用户提供了一种上传公钥的方法。 |
+| 公钥文件夹 | 指定存储用户公钥的位置。默认为 Program Files\VShell\Publickey\<username>。 |
+
+### OpenSSH（Unix 和 Windows）
+
+OpenSSH 服务器提供了与 VShell 和 SSH Communications 的 SSH 服务器类似的认证选项。要查看认证选项，请输入以下命令：
+
+```
+#cd /etc/ssh
+#more sshd_config
+```
+
+或者
+
+```
+c:\cd *Program Files*\OpenSSH\ssh
+c:\notepad sshd_config
+```
+
+OpenSSH 的认证部分选项在表 4.6 中描述。
+
+**表 4.6 OpenSSH 的认证选项**
+
+| 选项 | 描述 |
+| :--- | :--- |
+| LoginGraceTime | 指定用户完成认证过程的时间量。具体来说，即从用户发起连接的时间到用户输入用户名/密码或私钥密码的时间。 |
+| PermitRootLogin | 允许（yes）或禁止（no）root 用户登录到 SSH 会话。最佳做法是限制 root 访问权限，并让授权用户通过 'su' 切换到 root。 |
+| StrictModes | 在接受认证前启用（yes）或禁用（no）检查其家目录和 rhosts 文件中用户的权限。应将其设置为 yes，以防止家目录中出现全局可写的文件。 |
+| RSA 认证 | 允许 RSA 认证。 |
+| 公钥认证 | 允许公钥认证；可能的值为 yes 和 no。 |
+| AuthorizedKeysFile | 指明 SSH 服务器上授权密钥验证文件的路径。默认为 .ssh/authorized_keys，即 .ssh 文件夹中用户的家目录（例如，Windows 上的 Program Files\OpenSSH\ssh 中的 /home/<username>/.ssh/authorized_keys）。 |
+| Rhosts 认证 | 允许用于 RSH 的 rhosts 认证。 |
+| RhostsRSA 认证 | 允许来自 RSA 主机密钥的 rhosts 认证。 |
+| 基于主机的认证 | 授权基于主机的认证。 |
+| 密码认证 | 启用（yes）或禁用（no）密码认证。 |
+| PermitEmptyPasswords | 允许（yes）或禁止（no）使用空密码。 |
+
+## 密码
+
+密码认证是 SSH 的基本认证方法。SSH 服务器支持 Windows 和 Unix 平台的认证。Unix 平台上的 SSH 服务器有两种密码认证方法：
+
+- /etc/passwd 或 /etc/shadow
+- PAM（可插拔认证模块）
+

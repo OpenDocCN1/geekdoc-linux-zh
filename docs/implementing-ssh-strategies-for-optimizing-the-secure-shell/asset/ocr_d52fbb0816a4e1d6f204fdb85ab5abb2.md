@@ -1,0 +1,9 @@
+# CHAPTER 5
+
+# SSH Management
+
+Thus far, I have described SSH in terms of application servers or SSH client applications. While using applications such as VanDyke Software’s VShell, SSH Communications’ SSH, and OpenSSH, or core SSH server utilities, SSH services can also be available without any of these applications. SSH services are also available on network devices such as routers, switches, firewalls, load balancers, and storage filers. These services on network devices provide the same type of secure access that SSH applications provide. Furthermore, the SSH services on these devices provide secure management capabilities while replacing insecure clear-text protocols such as Telnet, FTP, and/or SNMP.
+
+In addition to SSH services being available on network hardware, SSH services can be integrated with other security utilities. Utilities such as Chroot, user restrictions, TCP wrappers, and IP access filters can be used with SSH to complement and enhance the overall security of network management.
+
+Secure management is often overlooked when it comes to security. Many organizations and corporations deploy a strong perimeter defense with multiple firewalls and router-access control lists; however, they also use poor management protocols that weaken the entire network environment. For example, for remote business travelers, the use of encryption to gain access to e-mail or internal file servers is usually a requirement, either through SSH port forwarding (described in Chapters 6 and 7) or IPsec. In spite of this, many network administrators use Telnet to access perimeter devices such as routers, firewalls, and switches in order to conduct remote management. The odd thing
