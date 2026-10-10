@@ -1,0 +1,17 @@
+programming.
+
+# Starting gedit
+
+In the GNOME Shell desktop environment, accessing gedit is fairly straightforward. Click the Activities icon in the upper-right corner of the desktop window. When the search bar appears, click within the bar to access it, type `gedit` or `text editor`, and then click Text Editor.
+
+![](bbox=[0.12, 0.26, 0.88, 0.49])
+
+If gedit is not installed by default on your desktop environment, you can easily install it (see Chapter 9). The package name is `gedit` . You should install the `gedit` plugins as well, because they provide powerful and advanced features. Their package name, as you might have already guessed, is `gedit-plugins`.
+
+If desired, you can start gedit from the command-line prompt in a GUI terminal emulator:
+
+```
+$ gedit factorial.sh myprog.c
+```
+
+When you start gedit with multiple files, it loads all the files into separate buffers and displays each one as a tabbed window within the main editor window, as shown in Figure 10-15.

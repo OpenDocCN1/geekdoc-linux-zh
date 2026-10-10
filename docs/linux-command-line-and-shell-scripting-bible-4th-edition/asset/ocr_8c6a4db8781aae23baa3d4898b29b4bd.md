@@ -1,0 +1,40 @@
+idea to use the default case command character (the asterisk) to catch any incorrect menu entries.
+
+The following code illustrates the use of the case command in a typical menu:
+
+```
+menu
+case $option in
+0)
+    break ;;
+1)
+    diskspace ;;
+2)
+    whoseon ;;
+3)
+    memusage ;;
+*)
+    clear
+    echo "Sorry, wrong selection";;
+esac
+```
+
+This code first uses the menu function to clear the monitor screen and display the menu. The read command in the menu function pauses until the user presses a character on the keyboard. After that's been done, the case command takes over. The case command calls the appropriate function based on the returned character. After the function completes, the case command exits.
+
+# Putting it all together
+
+Now that you've seen all the parts that make up a shell script menu, let's put them together and see how they all interoperate. Here's an example of a full menu script:
+
+```
+$ cat menu1
+#!/bin/bash
+# simple script menu
+
+function diskspace {
+    clear
+    df -k
+}
+
+function whoseon {
+    clear
+```

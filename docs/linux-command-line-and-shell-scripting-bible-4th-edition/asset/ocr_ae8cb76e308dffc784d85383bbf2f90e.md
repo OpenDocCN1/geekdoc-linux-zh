@@ -1,0 +1,38 @@
+the pattern anywhere in the text string, it passes the string along to the Linux utility that’s using it.
+
+The key is matching the regular expression pattern to the data stream text. It’s important to remember that regular expressions are extremely picky about matching patterns. The first rule to remember is that regular expression patterns are case sensitive. This means they’ll match only those patterns with the proper case of characters:
+
+```
+$ echo "This is a test" | sed -n '/this/p'
+$
+$ echo "This is a test" | sed -n '/This/p'
+This is a test
+$
+```
+
+The first attempt failed to match because the word “this” doesn’t appear in all lowercase in the text string, whereas the second attempt, which uses the uppercase letter in the pattern, worked just fine.
+
+You don’t have to limit yourself to whole words in the regular expression. If the defined text appears anywhere in the data stream, the regular expression matches the following:
+
+```
+$ echo "The books are expensive" | sed -n '/book/p'
+The books are expensive
+$
+```
+
+Even though the text in the data stream is “books,” the data in the stream contains the regular expression “book”, so the regular expression pattern matches the data. Of course, if you try the opposite, the regular expression fails:
+
+```
+$ echo "The book is expensive" | sed -n '/books/p'
+$
+```
+
+The complete regular expression text didn’t appear in the data stream, so the match failed and sed didn’t display the text.
+
+You also don’t have to limit yourself to single text words in the regular expression. You can include spaces and numbers in your text string as well:
+
+```
+$ echo "This is line number 1" | sed -n '/ber 1/p'
+This is line number 1
+$
+```

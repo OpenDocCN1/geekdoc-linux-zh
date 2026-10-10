@@ -1,0 +1,198 @@
+
+现在你可以检查源文件并将其检回仓库。在做出更改后，你可以使用 `git` 命令的 `diff` 选项检查它与顶端（`HEAD`）的区别。这是在工作树（`./git_work`）中发出的。它列出了整个源文件，并显示哪个文件代表仓库（`a`），哪个代表工作树（`b`），以及已更改行的标准 diff 格式。
+
+```
+$ git diff
+diff -git a/test.c b/test.c
+index 16e6e96..3c04533 100644
+-- a/test.c
++++ b/test.c
+@@ -2,7 +2,7 @@
+```
+
+```
+int main() {
+{
+    print("test string.\n");
+    + printf("test string.\n");
+
+    return 0;
+}
+$
+```
+
+# 第 9 章 GNU/Linux 中的源码控制
+
+## 合并仓库的更改
+
+要从另一个分支合并更改，使用 `merge` 选项。它会将指定分支的更改合并到当前分支。
+
+```
+$ git merge branch_name
+Already up-to-date.
+```
+
+## 其他实用命令
+
+Git 有许多实用的命令，很难列出所有。但这里有两个展示 Git 强大之处的命令。
+
+Git 可以通过 `status` 选项快速总结工作树中的更改。该选项告诉你与工作树父目录相比，哪些文件被添加、删除或更改。如下所示，没有待处理的更改。
+
+```
+$ git status
+## on branch master
+nothing to commit (working directory clean)
+```
+
+## 仓库标签
+
+Git 的优势之一是它的标签功能。通过 `git` 命令的 `tag` 选项可以非常简单地创建标签。在这里你标记为 `release_1`。
+
+```
+$ git tag release_1
+$
+```
+
+但如果你再次不带任何选项执行 tag 命令，可以看到当前存在的标签列表。
+
+```
+$ git tag
+release_1
+$
+```
+
+`show-branch` 选项也可以用于检查分支状态。注意这里你指定了感兴趣的分支。
+
+```
+$ git show-branch release_1
+[release_1] Updated.
+$
+```
+
+Git 同样允许删除标签，这是通过 `-d` 选项完成的。
+
+```
+$ git tag -d release_1
+Deleted tag 'release_1'
+$
+```
+
+分支在 Git 中通过 `branch` 选项以类似的方式完成的。以下命令创建了一个分支然后显示它。注意 `*` 表示当前分支（master），你通过检出分支来切换它。
+
+```
+$ git branch my_branch
+$ git branch
+* master
+my_branch
+$ git checkout my_branch
+Switched to branch "my_branch"
+$ git branch
+master
+* my_branch
+```
+
+# 第 9 章 GNU/Linux 中的版本控制
+
+通过这些简单的示例，你可以看到在 Git 中标签（tagging）和分支（branching）是非常简单的操作。这只是冰山一角；更多信息可以参考 Git 文档和用户指南。
+
+## 从仓库中删除文件
+
+从仓库中删除文件或目录可以使用 `rm` 选项。操作方法简单如下：
+
+```
+$ git rm test.c
+rm 'test.c'
+$ git commit
+Created commit 351c4f6: Deleted.
+1 files changed, 0 insertions(+), 8 deletions(-)
+delete node 10064 test.c$
+```
+
+请注意，在提交之前，删除操作（如更新）不会影响远程仓库。
+
+## Git 总结
+
+Git 是一个非常优秀的新分布式源码控制系统，正被 Linux 内核（这是它最初的设计目标）之外广泛采用。分布式仓库模型非常适用于分层项目团队共同维护主仓库的情况。它还提供了一系列选项来监控检查，这些检查为了安全和可追溯性进行了哈希处理。对于需要更高控制和项目可见性的新项目，Git 是极佳的选择。
+
+## 总结
+
+与其他许多技术一样，在源码和版本管理中没有“一刀切”的方案。集中式仓库（仍然是最流行的）管理起来简单高效，但分布式仓库提供了分发开发的手段。源码管理分布式模型在现在的出现并不意外，因为开源开发的演进引导了它们的发展。当你考虑诸如 Linux 内核这样的项目时，你会发现分布式模型运行得非常好。无论你选择哪种模型，你都信能找到适合你需求的源码管理系统。本章介绍了 CVS、Sub-version 和 Git，但还有许多其他工具（如 Arch），值得你花时间探索。
+
+## 参考文献
+
+- [Wikipedia:SVN] “Subversion (software),”最后检索于 2007/12/30，地址为 http://en.wikipedia.org/wiki/Subversion_(software)。
+
+## 资源
+
+- CVS—Concurrent Versions System，最后检索于 2008/01/06，地址为 http://www.nongnu.org/cvs/.
+
+- Collabnet Subversion Home Site，最后检索于 2008/01/06，地址为 http://subversion.tigris.org/project_packages.html.
+
+- “Git—Fast Version Control System，”最后检索于 2008/01/06，地址为 http://git.or.cz。
+
+# 10 章 使用 Gnuplot 进行数据可视化
+
+## 本章内容
+
+- Gnuplot 安装
+- Gnuplot 用户界面简介
+- 绘制函数和文件中的数据
+- 2D 和 3D 绘图
+- 构建多图（Multiplot）
+
+## 引言
+
+GNU/Linux 提供了多种开源解决方案来实现数据可视化。这些方案不仅可以将你的数据转换为图表、绘图或特殊的图像，还包含了过滤和减少数据的功能，使其更有用。本章将探索最流行的解决方案之一——Gnuplot。
+
+## GNUPLOT
+
+Gnuplot 是较早的可视程序之一，但它仍然是最优秀且流行的程序之一。它使用 shell 界面并运行在几乎任何你可以想象的系统上（如 Linux, VMS, 甚至是 Atari）。它通过命令行 shell 进行交互，因此你可以使用多种不同的选项在 2D 或 3D 环境中绘制函数或你的数据。最后，你可以在 Ruby、Python 和 Smalltalk 等许多流行语言中找到语言绑定。这些绑定允许你在这些语言内部生成图表。
+
+## GNU/Linux 应用程序编程
+
+Gnuplot 首次发布于 1986 年，虽然名称暗示它是 GNU 项目的一部分，但它实际上是根据自己的许可证发布的。
+
+在本章中，我们将回顾 Gnuplot 解决方案并探索它的某些功能。
+
+## 安装 GNUPLOT
+
+Gnuplot 可以作为标准工具进行打包，但如果你的发行版没有 Gnuplot（可以通过执行 `which gnuplot` 无响应来判断），那么你可以轻松地安装它。如果你的发行版支持 APT，则可以通过以下命令安装 Gnuplot：
+
+```
+$ sudo apt-get install gnuplot
+```
+
+否则，你可以像列表 10.1 所示从源码处编译安装。
+
+## 列表 10.1 从源码安装 Gnuplot 工具
+
+```
+$ sudo su -
+$ cd /usr/local/src
+$ wget http://internap.sourceforge.net/sourceforge/gnuplot/
+gnuplot-4.2.2.tar.gz
+$ tar xvfz gnuplot-4.2.2.tar.gz
+$ cd gnuplot-4.2.2
+$ ./configure
+$ make
+$ make install
+$ which gnuplot
+/usr/local/bin/gnuplot
+$
+```
+
+## 用户界面
+
+现在是时候开始使用 Gnuplot 了。首先，你需要熟悉 Gnuplot 的用户界面 shell。当你启动 Gnuplot 时，你会看到列表 10.2 所示的代码。`gnuplot>` 提示符表示 Gnuplot 已准备好接受用户输入。你还应该注意，终端类型被设置为 x11，这意味着你生成的任何图表都会以图形形式发送到屏幕上。你也可以将图表重定向到文件中，这将在章节稍后的部分进行探讨。
+
+## 列表 10.2 Gnuplot 的启动屏幕
+
+```
+$ gnuplot
+
+GN U P L O T
+Version 4.2 patchlevel 0
+last modified March 2007
+terminal x11
+gnuplot>
+```

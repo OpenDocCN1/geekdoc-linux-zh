@@ -1,0 +1,321 @@
+
+- fg, 451
+- fgrep command, 108
+- FHS. See Filesystem Hierarchy Standard
+- field separation character, 537, 628
+- field separators, internal, 351–352
+- FIELDWIDTHS variable, 629–630
+- file, 77
+- File Browser, 268
+- file compression utilities, 108–109
+- file descriptor
+    - about, 412
+    - closing, 424–425
+    - creating input, 421
+    - creating output, 419–420
+    - listing open, 424–426
+    - read/write, 422
+    - redirecting, 420–421
+    - standard, 412–414
+- file globbing, 65, 352
+- File menu
+    - GNOME Terminal, 33
+    - Konsol Terminal Emulator, 38
+- file paths, 54
+- file permissions
+    - access control lists (ACL), 184–186
+    - changing, 179–182
+    - codes, 176–179
+    - decoding, 176–179
+    - groups, 173–176
+    - security, 163–173
+    - sharing files, 182–184
+- file redirection, 432
+- files
+    - account, 702
+    - comparisons
+        - checking directories, 320–321
+        - checking for file, 322–324
+        - checking for object existence, 321–322
+        - date, 330
+        - default group, 329–330
+        - execute permission, 328
+        - ownership, 328–329
+        - read access, 324
+        - write permission, 326–327
+    - copying, 66–69
+    - creating, 66
+    - date, 330
+    - default group, 329–330
+    - deleting, 73–74
+    - executable, finding, 373–374
+    - linking, 69–71
+    - listing, 60–65
+    - looping on data, 364–365
+    - numbering lines in, 612–613
+    - ownership, 328–329
+    - printing last lines, 613–614
+    - reading editor commands from, 534–535, 759
+    - reading gawk scripts from, 539, 760
+    - redirecting loop output to, 371–372
+    - renaming, 71–73
+    - script, creating, 276–278
+    - sed using
+        - reading, 557–559
+        - writing, 556–557
+    - sharing, 182–184
+    - spacing with double lines, 610–611
+    - startup, 462
+    - temporary, 427–430
+    - using command-line completion, 69
+    - viewing contents, 77–82
+- filesystem commands. See external commands
+- Filesystem Hierarchy Standard (FHS), 57
+
+## filesystems
+
+- about, 8–9, 189–190
+- checking and repairing, 201–202
+- creating, 199–201
+- as a function of Linux kernel, 5, 8–9
+- GNU parted program, 198–199
+- journaling, 191–192
+- Linux, 53–57
+- management, 8–9
+- managing logical volumes, 202–207
+- mounting media, 97–100
+- navigating, 53–60
+- partitions, 194–197
+- traversing directories, 57–60
+- volume-managing, 192–194
+- working with, 194–202
+- working with gdisk, 197–198
+- filtering listing output, 64–65
+- find, 702, 715
+- finding executable files, 373–374
+- finger, 171, 172
+- fod command, 240
+- flags, 756
+- flatpak command, 227–228
+- flatpak containers, 227–228
+- floating-point math, 293–297
+- Fluxbox, 16
+- FNR variable, 632–633
+- for command
+    - about, 345–354
+    - changing field separator, 351–352
+    - C-style, 354–357
+    - piping output, 371–372
+    - reading complex values in list, 347–349
+    - reading directory using wildcards, 352–354
+    - reading list from variable, 349–350
+    - reading values from command, 350–351
+    - reading values in list, 346–347
+    - redirecting output to file, 371–372
+- for loops, 361–363, 676
+- for statement, 384–386, 645
+- --foreground option, 26
+- forking, 128
+- format specifiers
+    - control letters, 646
+    - modifiers, 647
+- format string, 646
+- formatted numbers, 574–575
+- formatted printing, 645–648
+- forward slash (/), 54, 57, 59, 61, 67, 241, 570
+- FreeBSD, 659
+- fs variable, 628
+- fsck, 201–202
+- fselect widget, 512
+- function command, 667–668
+- function keyword, 474, 653–654
+- function() statement, 667–668
+- functions
+    - array variables, 485–488
+    - command line usage, 491–494
+    - creating, 474
+    - creating on command line, 491–492
+    - dash shell, 667–668
+    - default exit status, 477–478
+    - default shell audit, 710–714
+    - defining in .bashrc file, 492–494
+    - gawk
+        - built-in, 648–653
+        - creating library, 654–655
+        - defining, 653–654
+        - mathematical, 649–650
+        - string, 650–652
+        - time, 652–653
+        - user-defined, 653–655
+        - using, 654
+    - get account name, 695–696
+    - libraries, 489–491
+    - parameter passing to, 480–482
+    - recursion, 488–489
+    - return command, 478–479
+    - returning values, 477–480
+    - scope, 482
+    - stub, 501
+    - using, 474–476
+    - using output, 479–480
+    - variables in, 480–485
+    - zsh, 675–677
+- Fvwm, 16
+- fvwm95, 16
+
+## G
+
+- gawk
+    - about, 535–541, 566, 760–765
+    - arrays
+        - deleting, 638
+        - iteration through, 637–638
+        - variable assignment, 636–637
+    - bitwise manipulation, 650
+    - command format, 536, 760
+    - data field variables, 537–538, 763
+    - environment variables, 632
+    - features, 764–765
+    - formatted printing, 645–648
+    - functions
+        - built-in, 648–653
+        - creating library, 654–655
+        - defining, 653–654
+        - mathematical, 649–650
+        - string, 650–652
+        - time, 652–653
+        - user-defined, 653–655
+        - using, 654
+    - intervals, 581
+    - matching operator, 764
+    - mathematical expressions, 764
+    - multiple commands in program script, 538, 761
+    - options, 760
+    - pattern matching
+        - matching operator, 639–640
+        - mathematical expressions, 640–641
+        - regular expressions, 639, 764
+    - print command, 629
+    - reading program file, 539, 761
+    - reading script from command line, 536–537, 760
+    - record variables, 763
+    - running scripts
+        - after processing data, 540–541, 761–762
+        - before processing data, 539–540, 761
+    - structured commands, 641–645, 765
+    - using, 760–762
+    - variables
+        - about, 537–538, 627–636
+        - ARGC, 632
+        - ARGV, 632
+        - assigning in scripts, 634–635
+        - assigning on command line, 635–636, 764
+        - built-in, 628–634, 763–764
+        - data, 631–634
+        - data field, 628–631, 639
+        - ENVIRON, 632
+        - field and record separator, 628–631
+        - FIELDWIDTHS, 629–630
+        - FNR, 632–633
+        - FS, 628
+        - NF, 632–633
+        - NR, 632–633
+        - OFS, 628–629
+        - ORS, 630
+        - RS, 630
+        - user-defined, 634–636
+- gdialog, 521
+- gdisk utility, 194, 197–198
+- gedit, 264–271
+- Gentoo, 18
+- getfacs command, 184–186
+- getopt command, 392–395, 393
+- getopts command, 395–398
+- Git. See also version control
+    - committing with, 732–739
+    - setting up environment, 727–732
+    - using for version control, 727
+- global environment variables, 138–139
+- global variables, in functions, 483–484
+- GNOME desktop, 13–15
+- GNOME editor. See gedit
+- GNOME graphical environment, 521–525
+- GNOME Terminal
+    - accessing, 27–32
+    - menu bar, 32–36
+- gnome-terminal, 31
+- GNU
+    - about, 3, 9–11
+    - gzip, 109
+    - vim, 235
+- GNU bash shell, 114–115
+- GNU long parameters, 91–92
+- GNU Network Object Model Environment. See GNOME desktop
+- GNU parted program, 198–199
+- GNU utilities, 9–11
+- graphical interfaces, elements, 26–27
+- graphical terminal emulation, accessing CLI via, 26–27
+- graphical terminals, 22–23
+- greater than (>), 285
+- grep, 106–108, 305, 711
+- grip utility, 108–109
+- groupadd, 174–175
+- grouping commands, 546
+- grouping expressions, 583
+- groupmod, 175–176
+- groups
+    - about, 173, 685–686
+    - changing file ownership, 181–182
+    - creating, 174–175
+    - default, 329–330
+    - /etc/group file, 173–174
+    - modifying, 175–176
+- Guake, 29
+- GUI environment, using Emacs editor in, 252–253
+- gunzip, 109
+- gzcatt, 109
+- gzip, 109
+
+## H
+
+- hard links, 70–71
+- hardware management, 5, 8
+- hdparm, 196
+- head, 82
+- Help menu
+    - GNOME Terminal, 36
+    - Konsole Terminal Emulator, 41–42
+- history command, 130–132
+- hold space, 598–599
+- $HOME, 280–281, 322–324
+- HOME directory, 277
+- $HOME startup files, 156–157
+- $HOME/.bash_login, 152
+- $HOME/.bash_profile, 152
+- $HOME/.bashrc, 152
+- $HOME/bin directory, 277
+- $HOME/.profile, 152
+- hpfs filesystem, 9
+- HTML tags, removing, 617–619
+- Huffman coding, 108
+
+## I
+
+- -i command, 73–74
+- IBM, 192
+- IDE drives, 194
+- if statement
+    - archiving data files script, 684
+    - gawk, 641–643
+    - nested, 307–311
+- IFS, 351–352
+- IFS environment variable, 364–365
+- if-then statements
+    - about, 605
+    - compound testing, 331–332
+    - continue command, 368–371
+    - as test command alternative, 313
+    - working with, 303–306
+- if-then-else statements, 306–307, 676
+- immutable attribute, 712–713
+- incremental search, 249–250

@@ -1,0 +1,43 @@
+```
+The data3 File Contents:
+Line 1
+Line 2
+Line 3
+$ 
+```
+
+Now after gawk executes the BEGIN script, it uses the second script to process any file data. Be careful when doing this — both of the scripts are still considered one text string on the gawk command line. You need to place your single quotation marks accordingly.
+
+# Running scripts after processing data
+
+Like the BEGIN keyword, the END keyword allows you to specify a program script that gawk executes after reading the data:
+
+```
+$ gawk 'BEGIN {print "The data3 File Contents:"}
+> {print $0}
+> END {print "End of File"}' data3.txt
+The data3 File Contents:
+Line 1
+Line 2
+Line 3
+End of File
+$ 
+```
+
+When the gawk program is finished printing the file contents, it executes the commands in the END script. This is a great technique to use to add footer data to reports after all the normal data has been processed.
+
+You can put all these elements together into a nice little program script file to create a full report from a simple data file:
+
+```
+$ cat script4.gawk
+BEGIN {
+print "The latest list of users and shells"
+print "UserID \t Shell"
+print "------- \t -------"
+FS=";"
+}
+
+{
+print $1 "          \t "  $7
+}
+```

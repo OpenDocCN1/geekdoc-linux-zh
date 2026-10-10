@@ -1,0 +1,27 @@
+# APPENDIX A
+Quick Guide to Bash Commands
+
+# IN THIS APPENDIX
+
++   Reviewing built_in commands
++   
++   Looking at common Bash commands
++   
++   Assessing environment variables
+
+As you've seen throughout this book, the Bash shell contains lots of features and thus has lots of commands available. This appendix provides a concise guide to allow you to quickly look up a feature or command that you can use from the Bash command line or from a Bash shell script.
+
+# Reviewing Built-In Commands
+
+The Bash shell includes many popular commands built into the shell. You can use these commands to achieve faster processing times. Table A.1 shows the built_in commands available directly from the Bash shell.
+
+**TABLE A.1 Bash Built_In Commands**
+| Command | Description |
+| :--- | :--- |
+| & | Starts a job in background mode |
+| (( x )) | Evaluates the x mathematical expression |
+| not : | Reads and executes commands from a designated file in the current shell |
+| : | Does nothing, and always exits successfully |
+| [ t ] | Evaluates the t conditional expression |
+| [[ e ]] | Evaluates the e conditional expression |
+| alias | Defines an alias for the specified command |

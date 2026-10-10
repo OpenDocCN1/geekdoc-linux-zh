@@ -1,0 +1,34 @@
+| | INT | Interrupt. |
+|---|---|---|
+| 3 | QUIT | Stop running. |
+| 9 | KILL | Unconditionally terminate. |
+| 11 | SEGV | Segment violation. |
+| 15 | TERM | Terminate if possible. |
+| 17 | STOP | Stop unconditionally but don't terminate. |
+| 18 | TSTP | Stop or pause but continue to run in background. |
+| 19 | CONT | Resume execution after STOP or TSTP. |
+
+A few different commands are available in Linux that allow you to send process signals to running processes. This section discusses the two most common ones: kill and pkill.
+
+# The kill command
+
+The kill command allows you to send signals to processes based on their PIDs. By default, the kill command sends a TERM signal to all the PIDs listed on the command line. Unfortunately, you can use only the process PID instead of its command name, making the kill command difficult to use sometimes.
+
+To send a process signal, you must either be the owner of the process or be logged in as the root user:
+
+```
+$ kill 3940
+-bash: kill: (3940) - Operation not permitted
+$
+```
+
+The TERM signal tells the process to stop running. Unfortunately, if you have a runaway process, most likely it will ignore the request. When you need to get forceful, the -s parameter allows you to specify other signals (using either their name or their signal number).
+
+As you can see from the following example, no output is associated with the kill command:
+
+```
+# kill -s HUP 3940
+#
+```
+
+To see if the command was effective, you'll have to perform another ps

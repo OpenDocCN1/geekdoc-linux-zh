@@ -1,0 +1,243 @@
+
+
+## if-then 语句与布尔逻辑
+
+if-then 语句允许你使用布尔逻辑来组合测试。你可以使用以下两个布尔运算符：
+
+- [ 条件1 ] && [ 条件2 ]
+- [ 条件1 ] || [ 条件2 ]
+
+第一个布尔操作使用 AND（与）布尔运算符将两个条件组合在一起。只有当两个条件都满足时，then 部分才会执行。
+
+> **注意**
+>
+> **布尔逻辑是一种将潜在返回值简化为 TRUE（真）或 FALSE（假）的方法。**
+
+第二个布尔操作使用 OR（或）布尔运算符将两个条件组合在一起。如果任一条件评估为 TRUE，then 部分就会执行。
+
+以下示例展示了 AND 布尔运算符的用法：
+
+```bash
+$ cat AndBoolean.sh
+#!/bin/bash
+# Testing an AND Boolean compound condition
+#
+if [ -d $HOME ] && [ -w $HOME/newfile ]
+then
+    echo "The file exists and you can write to it."
+#
+else
+    echo "You cannot write to the file."
+#
+fi
+$
+$ ls -l $HOME/newfile
+ls: cannot access '/home/christine/newfile': No such file or directory
+$
+$ ./AndBoolean.sh
+You cannot write to the file.
+$
+$ touch $HOME/newfile
+$ ./AndBoolean.sh
+The file exists and you can write to it.
+$
+```
+
+使用 AND 布尔运算符时，必须满足两个比较条件。第一个比较检查用户的 `$HOME` 目录是否存在。第二个比较检查用户 `$HOME` 目录中是否存在名为 `newfile` 的文件，以及用户是否对该文件拥有写权限。如果这两个比较中有任何一个失败，if 语句就会失败，shell 将执行 else 部分。如果两个比较都成功，if 语句就会成功，shell 将执行 then 部分。
+
+## 使用高级 if-then 特性
+
+Bash shell 提供三种附加功能，可在 if-then 语句中使用：
+
+- 使用单括号在子 shell 中运行命令
+- 使用双括号进行数学表达式运算
+- 使用双方括号进行高级字符串处理功能
+
+以下各部分将更详细地描述这些功能。
+
+### 使用单括号
+
+单括号允许你在 if 语句的比较中使用子 shell。子 shell 在第 5 章“理解 Shell”中已有介绍。这是单括号测试命令的格式：
+
+```text
+( command)
+```
+
+在 Bash shell 执行命令之前，它会创建一个子 shell 来运行该命令。如果命令成功完成任务，退出状态（在第 11 章中有介绍）将被设置为零，并执行 then 部分下列出的命令。如果命令的退出状态为其他任何值，则不执行 then 命令。以下是一个使用子 shell 进行测试的脚本：
+
+```bash
+$ cat SingleParentheses.sh
+#!/bin/bash
+# Testing a single parentheses condition
+echo $BASH_SUBSHELL
+#
+if (echo $BASH_SUBSHELL)
+then
+    echo "The subshell command operated successfully."
+#
+else
+    echo "The subshell command was NOT successful."
+#
+fi
+$
+$ ./SingleParentheses.sh
+0
+1
+The subshell command operated successfully.
+$
+```
+
+当脚本第一次运行 `echo $BASH_SUBSHELL` 命令时（在 `if` 语句之前），它会在当前 shell 中完成操作。该命令显示 `0`，表示没有使用子 shell。（`$BASH_SUBSHELL` 环境变量在第 5 章中已有介绍。）在 `if` 语句中，脚本在子 shell 中执行命令，并且 `echo $BASH_SUBSHELL` 命令显示 `1`，表示使用了子 shell。该子 shell 操作成功完成，触发了 `then` 命令。
+
+> **警告**
+>
+> **虽然你可以在 `if` 测试语句中使用进程列表（在第 5 章中有介绍），但可能会产生意外的结果。如果进程列表中除最后一个命令外的所有命令都失败，子 shell 会将退出状态设置为零，并执行 `then` 部分下列出的命令。**
+
+稍微修改一下脚本，这里有一个在子 shell 中运行失败命令的例子：
+
+```bash
+$ cat SingleParentheses.sh
+#!/bin/bash
+# Testing a single parentheses condition
+#echo $BASH_SUBSHELL
+if (cat /etc/PASSWORD)
+    then
+        echo "The subshell command operated successfully."
+    else
+        echo "The subshell command was NOT successful."
+fi
+$ ./SingleParentheses.sh
+cat: /etc/PASSWORD: No such file or directory
+The subshell command was NOT successful.
+$
+```
+
+由于子 shell 命令在操作中包含了一个错误的文件名，退出状态未被设置为零。因此，触发的是 else 命令，而不是 then 命令。
+
+### 使用双括号
+
+*双括号* 命令允许你在比较中加入高级数学公式。*test* 命令仅允许在比较中进行简单的算术运算。双括号命令提供了更多的数学符号，这可能为使用过其他编程语言的程序员所熟悉。以下是双括号命令的格式：
+
+```text
+(( expression ))
+```
+
+*表达式* 项可以是任何数学赋值或比较表达式。除了 *test* 命令使用的标准数学运算符外，表 12-4 中显示的额外运算符也可以在双括号命令中使用。
+
+#### 表 12-4 双括号命令符号
+
+| 符号 | 描述 |
+| :--- | :--- |
+| `val ++` | 后置递增 |
+| `val --` | 后置递减 |
+| `++ val` | 前置递增 |
+| `-- val` | 前置递减 |
+| `!` | 逻辑非 |
+| `~` | 按位非 |
+| `**` | 乘方 |
+| `<<` | 按位左移 |
+| `>>` | 按位右移 |
+| `&` | 按位布尔 AND |
+| `|` | 按位布尔 OR |
+| `&&` | 逻辑 AND |
+| `||` | 逻辑 OR |
+
+你可以将双括号命令用于 if 语句中，也可以用于脚本中作为普通命令来赋值：
+
+```bash
+$ cat DoubleParentheses.sh
+#!/bin/bash
+# Testing a double parentheses command
+#
+val1=10
+#
+if (( $val1 ** 2 > 90 ))
+then
+    (( val2 = $val1 ** 2 ))
+    echo "The square of $val1 is $val2,"
+    echo "which is greater than 90."
+#
+fi
+$ ./DoubleParentheses.sh
+The square of 10 is 100,
+which is greater than 90.
+$
+```
+
+请注意，在双括号内的表达式中，无需转义大于号（greater-than symbol）。这是双括号命令之外的另一个高级特性。
+
+### 使用双方括号
+
+双方括号命令为字符串比较提供了高级功能。以下是双方括号命令的格式：
+
+```text
+[[ expression ]]
+```
+
+带双方括号的表达式使用 test 评估中标准的字符串比较。然而，它提供了一种 test 评估没有的功能——模式匹配。
+
+> **注意**
+>
+> 双方括号在 Bash shell 中工作良好。但请注意，并非所有 shell 都支持双方括号。
+
+在模式匹配中，你可以定义一个正则表达式（在第 20 章“正则表达式”中详细讨论），并将其与字符串值进行匹配：
+
+```bash
+$ cat DoubleBrackets.sh
+#!/bin/bash
+# Using double brackets for pattern matching
+#
+#if [[ $BASH_VERSION == 5.* ]]
+then
+    echo "You are using the Bash Shell version 5 series."
+fi
+$
+$ ./DoubleBrackets.sh
+You are using the Bash Shell version 5 series.
+$
+```
+
+在上面的脚本中请注意，使用了双等号（`==`）。这些双等号将右侧的字符串（`5.*`）指定为模式，并应用模式匹配规则。双方括号命令将 `$BASH_VERSION` 环境变量进行匹配，以检查它是否以 `5.` 字符串开头。如果是，比较成功，shell 将执行 then 部分的命令。
+
+### 考虑使用 case 命令
+
+通常，你会发现自己正在评估一个变量的值，试图在一组可能的值中找到特定的值。在这种情况下，你不得不编写一个冗长的 if-then-else 语句，如下所示：
+
+```bash
+$ cat LongIf.sh
+#!/bin/bash
+# Using a tedious and long if statement
+#
+if [ $USER == "rich" ]
+then
+	echo "Welcome $USER"
+	echo "Please enjoy your visit."
+elif [ $USER == "barbara" ]
+then
+	echo "Hi there, $USER"
+	echo "We're glad you could join us."
+elif [ $USER == "christine" ]
+then
+	echo "Welcome $USER"
+	echo "Please enjoy your visit."
+elif [ $USER == "tim" ]
+then
+	echo "Hi there, $USER"
+	echo "We're glad you could join us."
+elif [ $USER == "testing" ]
+then
+	echo "Please log out when done with test."
+else
+	echo "Sorry, you are not allowed here."
+fi
+$
+$ ./LongIf.sh
+Welcome christine
+Please enjoy your visit.
+$
+```
+
+`elif` 语句继续 `if`-then 检查，针对单个比较变量寻找特定的值。
+
+与其编写所有的 `elif` 语句来继续检查相同的变量值，你可以使用 `case` 命令。`case` 命令以列表导向的格式检查单个变量的多个值：
+
