@@ -1,0 +1,7 @@
+# Looking for Sensitive Information in Log Files
+
+Many programs are known to write to specific log files. Sometimes, these log files are accidentally placed within the web root of the web server. For example, a query such as: “Index of/ dead.letter on http://www.google.com/ will provide you with links to web servers serving the file dead.letter (see Figure 1-1). Note that the dead.letter file is created by some e-mail clients when a user cancels sending an e-mail, and it may contain part of the e-mail being composed. This file, along with other such log files, may provide critical and confidential information to potential intruders.
+
+![](bbox=[0.14, 0.34, 0.88, 0.75])
+
+Figure 1-1. Contents of a user’s dead.letter file being served by a web server

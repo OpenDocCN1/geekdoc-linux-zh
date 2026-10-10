@@ -1,0 +1,11 @@
+The Gnu Privacy Guard set of tools can be used to facilitate the encrptytion of e-mails. Encourage users to encrypt e-mail containing sensitive information. Visit http://www.gnupg.org/ for more information on Gnu Privacy Guard.
+
+**Software Vulnerabilities** Sendmail is the most popular MTA (Mail Trans-fer Agent) used on the Internet. Sendmail is known to have been suscep-tible to many remotely exploitable vulnerabilities.
+
++   **Sendmail Header Processing Buffer Overflow** This vulnerability was caused by a buffer overflow condition in Sendmail’s header-parsing componenet. More specifically, Sendmail’s *crackaddr* (*char *addr*) function failed to correctly handle < and > characters in the string containing the “From” address field in the mail header. For more details, see http://www.cert.org/advisories/CA-2003-07 .html and http://securityfocus.com/bid/6991.
+
++   **Sendmail MIME Vulnerability** Sendmail version 8.8.3 introduced a new vulnerability caused by improper bounds checking while performing MIME conversions on e-mail messages. It was possible to exploit this vulnerability in order to run arbitrary commands on the Sendmail server by sending specially crafted messages that caused the Sendmail process to overwrite its internal stack space. See http://online.securityfocus.com/bid/685 for more information.
+
++   **Sendmail HELO Buffer Overflow** A buffer overflow in older versions of Sendmail caused it to crash when long strings were sent as a parameter to its HELO command. It was possible to remotely exploit this vulnerability in order to run arbitrary commands on the Sendmail server. More info can be found at http://www.eeye.com/html/Products/Refina/RTHs/ Mail_Servers/141.html.
+
++   **Sendmail DNS Map TXT Record Buffer Overflow Vulnerability** A buffer overflow vulnerability was found in the DNS handling of Sendmail code. This vulnerability was caused by improper bounds checking on data returned from the name server. Since this vulnerability leads to a buffer overflow, it is possible to exploit this vulnerability to run commands on the Sendmail server by making a malicious name server return a response of arbitrary length. More information can be found on http://online.securityfocus.com/bid/5122.

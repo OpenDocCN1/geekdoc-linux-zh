@@ -1,0 +1,165 @@
+
+# HTTP（超文本传输协议）：80（TCP）
+
+HTTP 是一种无状态协议，用于分发布种超媒体。它最常用于提供万维网（WWW）内容。
+
+> 手动检查所有可能的 HTTP 配置错误和漏洞是不可能的。自动化工具（如可从 http://www.cirt.net/code/nikto.shtml 获取的 Nikto）在评估 Web 服务器和应用程序方面表现出色，应使用它们来检查配置错误和漏洞。
+
+**暴力破解** 可以使用 Hydra 等工具暴力破解 HTTP 认证。
+
+## 暴力破解 HTTP 认证
+
+Hydra 是一个支持 HTTP 的暴力破解工具，可用于暴力破解受密码保护的 HTTP 资源。以下是使用 Hydra 暴力破解 HTTP 认证的示例：
+
+```
+hydra -L usernames.txt -P passwords.txt
+www.somecompanyasanexample.com http
+```
+
+## 防止 HTTP 暴力破解
+
+请参见“针对暴力破解攻击的通用防御措施。”
+
+**嗅探** 由于 HTTP 是明文协议，网络段上的恶意用户可以监视其他用户的 HTTP 流量。
+
+## 嗅探 URL
+
+与 Dsniff 一起分发的 urlsnarf 程序可用于嗅探用户通过网络发送的 HTTP 请求：
+
+```
+[bash]$ urlsnarf
+Kernel filter, protocol ALL, raw packet socket
+urlsnarf: listening on eth0 [tcp port 80 or port 8080 or port 3128]
+10.0.0.1 - - [19/Feb/2003:21:50:16 -0800] "GET http://www.mozilla.org/ HTTP/1.1" - - "*" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212"
+10.0.0.1 - - [19/Feb/2003:21:50:42 -0800] "GET http://cirt.net/ HTTP/1.1" - - "*" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212"
+10.0.0.1 - - [19/Feb/2003:21:50:42 -0800] "GET http://cirt.net/images/bg.gif HTTP/1.1" - - "http://cirt.net" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212"
+10.0.0.1 - - [19/Feb/2003:21:50:42 -0800] "GET http://cirt.net/images/cirt_headline.gif HTTP/1.1" - - "http://cirt.net/*" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212"
+10.0.0.1 - - [19/Feb/2003:21:50:42 -0800] "GET http://cirt.net/images/pix.gif HTTP/1.1" - - "http://cirt.net/*" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212"
+```
+
+与 Dsniff 一起分发的 webspy 程序是另一个出色的 HTTP 嗅探工具。一旦它在网络上检测到 HTTP 请求，就会将其发送到正在运行的 Netscape 进程。这使得网络上的恶意用户能够实时监视受害者的 HTTP 会话。
+
+## 嗅探 HTTP 数据
+
+Ettercap 可用于嗅探通过网络发送的 HTTP 流量：
+
+```
+bash
+etercap -t tcp -N -B ANY:80
+```
+
+```
+etercap 0.6.7 (c) 2002 ALoR & NgAc
+Your IP: 10.0.0.1 with MAC: 00:01:01:13:4A:B2 on Iface: eth0
+Loading plugins... Done.
+Resolving 1 hostnames...
+* |==============================================>| 100.00 %
+Press 'h' for help...
+Sniffing (IP based): ANY:80 <--> ANY:0
+TCP packets only...
+22:15:33 10.0.0.1:37725 --> 192.168.1.1:80 proto: T
+GET / HTTP/1.0.
+Host: mozilla.org
+Accept: text/html, text/plain, application/vnd.sun.xml.writer, application/vnd.sun.xml.writer.global, application/vnd.stardivision.writer, application/vnd.stardivision.writer-global, application/x-starwriter, application/vnd.sun.xml.writer.template, application/vnd.sun.xml.calc, application/vnd.stardivision.calc, application/x-starcalc, application/vnd.sun.xml.calc.template, application/vnd.sun.xml.impress, application/vnd.stardivision.impress, application/x-starimpress, application/vnd.stardivision.impress-packed, Accept: application/x-starimpress, application/
+vnd.sun.xml.impress.template, application/vnd.sun.xml.draw, application/vnd.stardivision.draw, application/x-stardraw, application/vnd.sun.xml.draw.template, application/vnd.sun.xml.math. Accept: application/vnd.stardivision.math, application/x-starmath, audio/mod, image/*, video/mpeg, video/*, application/pgp, application/pdf, application/postscript, message/partial, message/external-body, x-bez, application/andrew-inset, text/richtext. Accept: text/enriched, x-sun-attachtext, audio-file, poster-xml, text, default, mail-file, sun-deskset-message, application/x-metamail-patch, application/meword, audio/x-pn-realaudio, audio/vnd.rn-realaudio, application/emil, text/vnd.rn-realtext. Accept: application/x-shockwave-flash2-preview, application/sdp, application/x-sdp, application/vnd.rn-realmedia, audio/wav, audio/x-wav, audio/x-pn-wav, audio/x-pn-windows-ac
+```
+
+```
+22:15:33  10.0.0.1:37725 --> 192.168.1.1:80  proto: T
+m, audio/basic, audio/x-pn-au, audio/aiff, audio/x-aiff, audio/x-pn-aiff.
+Accept: text/sgml, */*; q=0.01.
+Accept-Encoding: gzip, q=compress.
+Accept-Language: en.
+User-Agent: Lynx/2.8.5dev.7 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6b
+```
+
+```
+22:15:33  192.168.1.1:80 --> 10.0.0.1:37725  proto: T
+
+HTTP/1.1 200 OK.
+Date: Thu, 20 Feb 2003 06:21:30 GMT.
+Content-Type: text/html.
+Last-modified: Wed, 12 Feb 2003 13:13:05 GMT.
+Content-length: 17831.
+Accept-ranges: bytes.
+Connection: close.
+.
+```
+
+```
+22:15:33  192.168.1.1:80 --> 10.0.0.1:37725  proto: T
+
+<HTML>
+<TITLE>Welcome to somecompanyasanexample.com's Web-Site:</TITLE>
+</HEAD>
+<BODY>
+<H1>Welcome!</H1>
+</BODY>
+</HTML>
+```
+
+# 远程黑客攻击
+
+## 嗅探 HTTP 认证
+
+受限的 HTTP 位置需要身份验证。由于 HTTP 是明文协议，这些信息可以被 Ettercap 嗅探到：
+
+```
+bash
+$ ettercap -m -C -N
+
+ettercap 0.6.7 (c) 2002 ALoR & NaGA
+
+Your IP: 192.168.1.1 with MAC: 00:00:02:13:C1:13 on iface: eth0
+Loading plugins... Done.
+Resolving 1 hostnames...
+* [========================================> ] 100.00 %
+
+Press 'h' for help...
+
+Sniffing (MAC based): ANY <--> ANY
+
+TCP + UDP packets... (default)
+
+Collecting passwords...
+
+23:54:24 192.168.1.1:36304 <--> 10.0.0.1:80 http
+USER: root
+PASS: myApach3B0X!@#
+http://10.0.0.1/intranet/private/administration
+```
+
+## 使用 HTTPS
+
+在传输关键和私人数据时，请使用 HTTPS 而不是 HTTP。
+
+**HTTP 配置错误** 通常，Web 服务器会被错误配置，或者在生产网络中使用默认配置。接下来的段落描述了一些常被利用的配置错误。
+
+### 自动索引
+
+当自动索引开启时，如果不存在索引文件（如 index.html），Web 服务器将显示目录的内容。
+
+通常，Web 内容作者会错误地将包含敏感信息的文件放置在 Web 根目录中，如果目录内容被显示，未经身份验证的用户可以轻易查看这些文件。
+
+### 关闭索引
+
+Apache 用户可以在 *httpd.conf* 中使用 *IndexIgnore* 指令来指示服务器关闭索引。
+
+### 获取源代码、配置、统计信息和密码资源
+
+许多 HTTP 服务器被错误配置为提供关键文件。以下是一些示例：
+
+-   CGI 应用程序的源代码可能包含数据库的用户名和密码。许多 Web 应用程序使用具有 .inc 或 .conf 等后缀的配置。这些文件可能包含系统和密码信息，且常被配置错误的 Web 服务器提供出来。
+-   Web 服务器统计程序将结果输出到 /stats 等目录，这些目录通常位于 Web 根目录内。
+-   Apache 允许用户通过在目录中放置名为 .htaccess 的文件来对目录进行密码保护。.htaccess 文件包含关于密码文件位置的信息（通常称为 .htpasswd），该文件包含允许账户的密码哈希值。通常，Apache 未配置为限制提供 .htaccess 和 .htpasswd 文件。一旦入侵者获得 .htpasswd 文件的访问权限，就可以使用 john 等暴力破解工具进行破解。
+
+### 不提供关键资源
+
+配置 Web 服务器以不提供敏感文件。如果使用 Apache，请编辑 *httpd.conf* 文件以拒绝提供具有特定后缀的文件。例如，以下指令禁止提供以 .* 开头的文件：
+
+```text
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+</Files>
+```

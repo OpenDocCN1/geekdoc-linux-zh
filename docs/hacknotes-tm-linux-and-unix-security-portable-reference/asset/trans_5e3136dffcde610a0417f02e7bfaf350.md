@@ -1,0 +1,144 @@
+
+许多在线安全资源发布了针对各种漏洞的漏洞利用代码。请务必谨慎对待此类漏洞利用，因为它们确实可能包含恶意后门，从而导致执行该漏洞利用的主机遭到入侵。在虚拟机环境中测试未知的漏洞利用是一个好主意。最广泛使用的虚拟机软件由 VMware 提供。详情请参见 http://www.vmware.com/。
+
+## 针对软件漏洞利用的常见防御措施
+
+有时，软件漏洞的远程利用代码会在漏洞通告或补丁发布之前公布。此类漏洞利用通常被称为零日漏洞（zero-day exploits）。要防御针对未公开漏洞的利用是不可能的。然而，除了遵循以下建议外，每位系统管理员还必须密切关注并应对异常的系统活动：
+
+-   保持软件补丁的最新状态。
+-   订阅漏洞监控列表，例如 Bugtraq。（访问 http://securityfocus.com/cgi-bin/sf/online/subscribe.pl 获取更多信息。）请参阅本书参考中心中的“在线资源”部分，以获取更多其他安全资源的指针。
+-   为防止某些类型的缓冲区溢出，有几种可用的解决方案：
+    -   StackGuard: http://www.immunix.org/stackguard.html
+    -   Libsafe: http://www.research.avalayalabs.com/project/libsafe/
+    -   StackGhost: http://stackghost.cerias.purdue.edu/
+    -   Openwall: http://www.openwall.com/linux
+    -   如果使用 Solaris，请编辑 /etc/system 并添加以下行：
+      ```
+      set noexec_user_stack=1
+      set noexec_usr_stack_log=1
+      ```
+-   监控并处理 IDS 日志。
+
+## 远程服务漏洞
+
+以下列出了常被利用的服务。这是基于这些服务通常监听的已知标准端口号。
+
+### 识别运行在非标准端口上的服务
+
+此处列出的任何服务都可以配置为监听非标准端口。诸如 Amap 等工具（可在 [http://www.thehackerschoice.com/releas-es.php](http://www.thehackerschoice.com/releas-es.php) 获取）可用于确定监听未知或非标准端口的服务：
+
+```bash
+[bash]$ amap -sF intranet,somecompanyas anexample.com 9934
+Total amount of tasks to perform: 15
+Amap v1.2.1b started at Sun Mar  9 09:30:22 2003, stand back and keep the children away.
+Protocol on IP 192.168.1.3 port 9934 tcp matches ssl
+Protocol on IP 192.168.1.3 port 9934 tcp matches http
+Unidentified ports: None.
+Amap v1.2.1b ended at Sun Mar  9 09:30:59 2003
+```
+
+在此示例中，Amap 成功发现主机 *intranet.somecompanyas anexample.com* 正在端口 9934 上运行 HTTPS。这是一个有用的信息，因为 HTTPS 的标准保留端口是 443。
+
+### 阻止和停止不必要的服务
+
+![](img/1b84de2bb5e7ca74dd76d8f9ae35b93d_117_0.png)
+
+某些服务被配置为接受来自任何源 IP 地址的连接。例如，电子商务组织的 HTTP 服务器必须接受来自任何 IP 地址的连接，以便允许所有地区的远程用户查看该组织的网站。在这种情况下，组织无法隐藏其正在运行 HTTP 服务器的事实。
+
+然而，根据组织的需求和网络架构，某些服务可能仅期望接受来自授权 IP 地址的连接。在这种情况下，应部署防火墙规则，以确保阻止来自未授权 IP 地址的连接。此外，必须关闭或不必要的服务必须通过防火墙规则被阻止。这将防止未授权的远程主机利用和识别不应被其访问的服务。
+
+### FTP（文件传输协议）：21 (TCP)
+
+FTP 是一种用于在主机之间传输文件的协议。
+
+**暴力破解** 可以使用 Hydra 对 FTP 账户进行暴力破解。
+
+### 暴力破解 FTP
+
+以下是如何使用 Hydra 暴力破解 FTP 账户的示例：
+
+```bash
+[bash]$ hydra -L usernames.txt -P passwords.txt ftp.somecompanyforexample.com ftp
+Hydra v2.2 (c) 2002 by van Hauser / THC - use allowed only for legal purposes.
+Hydra is starting! [parallel tasks: 4, login tries: 4 (1:2/p:2)]
+[21] [ftp] login: joe  password: mypassword
+Hydra finished.
+```
+
+### 防止 FTP 暴力破解
+
+请参见“针对暴力破解攻击的常见防御措施”。
+
+**嗅探** 由于 FTP 是一种明文协议，因此可以捕获在网络上传输的用户名和密码。诸如 Ettercap 等工具可以方便地捕获 FTP 数据。
+
+### 嗅探 FTP 认证
+
+以下是如何使用 Ettercap 捕获通过网络传输的 FTP 凭据的示例：
+
+```bash
+[bash]# ettercap -M -C -N
+
+ettercap 0.6.7 (c) 2002 ALoR & NaGA
+
+Your IP: 10.0.0.102 with MAC: 01:11:04:03:6A:A3 on Iface: eth0
+
+Loading plugins... Done.
+
+Resolving 1 hostnames...
+
+* |==========================================================================| 100.00 %
+
+Press 'h' for help...
+
+ Sniffing (MAC based): ANY <--> ANY
+
+ TCP + UDP packets... (default)
+
+ Collecting passwords...
+```
+
+07:04:58  10.0.0.102:4814 <--- 192.168.1.1:21      ftp
+
+USER: smith
+PASS: myp455word
+
+### 使用安全协议
+
+不要使用 FTP 等明文协议。考虑使用 HTTPS 或 SSH 进行安全的文件传输。
+
+### FTP 配置错误
+
+由于配置错误问题，FTP 客户端和服务器容易受到远程利用。以下段落涵盖了针对此类配置错误的最常见攻击。
+
+### 弹射攻击
+
+由于 FTP 协议的设计，当 FTP 客户端使用“主动”模式请求数据传输时，FTP 服务器必须主动发起连接到 FTP 客户端的端口。FTP 客户端发出带有其 IP 地址和监听端口号作为参数的 PORT 命令。如果 FTP 客户端发出带有其他主机 IP 地址的 PORT 命令，那么 FTP 服务器将尝试连接到该主机。因此，FTP 协议的这一功能可用于代理端口扫描。您可以利用 nmap 的 -b 选项执行此类扫描。
+
+一旦发出 PORT 命令，恶意客户端可以执行 RETR 命令，将包含命令的文件发送到 FTP 服务器。这将导致 FTP 服务器将给定文件的内容转储到由 PORT 命令指定的主机的给定端口。该文件可能包含 SMTP 命令，例如，这使得恶意 FTP 客户端用户可以通过 FTP 服务器代理电子邮件。
+
+### 防止弹射攻击成功
+
+为确保防御 FTP 弹射攻击，请确保已采取以下预防措施：
+
+-   配置您的 FTP 服务器，以便在发出 PORT 命令时拒绝连接到除客户端以外的 IP 地址。大多数最新的 FTP 服务器默认执行此操作。
+-   指示防火墙不允许源端口为 20 的传入连接。但请注意，此规则可能会阻止合法连接。
+
+### 连接窃取
+
+当 FTP 客户端在发出带有其 IP 地址和端口号的 PORT 命令后发送 PASV（被动）命令时，服务器开始在请求的端口上监听连接。此时，恶意用户可能在客户端之前连接到服务器的端口。根据 FTP 客户端发出的下一条命令，恶意用户现在可能有权访问传输的数据。
+
+如果未使用被动模式，则 FTP 会话会退回到“主动”模式。在这种模式下，由客户端开始在指定端口上进行监听。此时，攻击者可能在 FTP 服务器之前连接到客户端。根据客户端发出的下一条命令，攻击者可能会冒充合法的服务器，并可能向客户端传输修改过的文件或数据。
+
+### 防止连接窃取攻击
+
+以下建议将有助于防御连接窃取攻击：
+
+-   配置您的 FTP 服务器，以仅允许来自已认证客户端 IP 地址连接到其数据端口。大多数 FTP 服务器默认执行此操作。请注意，这可能无法防止攻击者和合法 FTP 用户都在同一 NAT 网关后面的攻击，因为它们的源 IP 地址将是相同的。
+-   配置您的 FTP 客户端，以仅接受来自其所连接的 FTP 服务器的连接。
+
+### 软件漏洞
+
+WU-FTPD 是 Unix 和 Linux 上最广泛使用的 FTP 守护进程。不幸的是，其历史一直被漏洞所困扰，许多远程利用代码已知存在。以下是部分已知 WU-FTPD 漏洞列表：
+
+-   **文件通配符堆损坏漏洞** WU-FTPD 的“文件通配符”功能允许客户端按模式组织文件。发现某些模式会导致 WU-FTPD 进程中的堆损坏。此漏洞使得攻击者能够通过发送特制数据作为输入，在易受攻击的 WU-FTPD 服务器上执行任意命令。有关更多详细信息，请参见 [http://online.securityfocus.com/bid/3581](http://online.securityfocus.com/bid/3581)。
+-   **SITE EXEC 漏洞** WU-FTPD 的旧版本在其“SITE EXEC”功能中存在漏洞。这是
