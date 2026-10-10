@@ -1,0 +1,4622 @@
+- pgno: 0
+  md: '# LINUX FOR BEGINNERS
+
+
+    The Science of Linux Operating System and Programming Tools for Installation,
+    Configuration and Command Line with a Basic Guide on Networking, Cybersecurity,
+    and Ethical Hacking
+
+
+    ![](img/c2ecc1bb8564b9a4762d61fd676ebc2b_0_0.png)
+
+
+    DARWIN GROWTH'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Linux for Beginners
+
+
+    The Science of Linux Operating System and Programming Tools for Installation,
+    Configuration and Command-Line with a Basic Guide on Networking, Cybersecurity,
+    and Ethical Hacking
+
+
+    Darwin Growth'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# © Copyright 2019 Darwin Growth - All rights reserved.
+
+
+    The content contained within this book may not be reproduced, duplicated or transmitted
+    without direct written permission from the author or the publisher. Under no circumstances
+    will any blame or legal responsibility be held against the publisher, or author,
+    for any damages, reparation, or monetary loss due to the information contained
+    within this book. Either directly or indirectly.
+
+
+    # **Legal Notice:**
+
+
+    This book is copyright protected. This book is only for personal use. You cannot
+    amend, distribute, sell, use, quote or paraphrase any part, or the content within
+    this book, without the consent of the author or publisher.
+
+
+    # **Disclaimer Notice:**
+
+
+    Please note the information contained within this document is for educational
+    and entertainment purposes only. All effort has been executed to present accurate,
+    up to date, and reliable, complete information. No warranties of any kind are
+    declared or implied. Readers acknowledge that the author is not engaging in the
+    rendering of legal, financial, medical or professional advice. The content within
+    this book has been derived from various sources. Please consult a licensed professional
+    before attempting any techniques outlined in this book.
+
+
+    By reading this document, the reader agrees that under no circumstances is the
+    author responsible for any losses, direct or indirect, which are incurred as a
+    result of the use of the information contained within this document, including,
+    but not limited to, — errors, omissions, or inaccuracies.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table of Contents
+
+
+    +   - Introduction
+
+    +     - Chapter 1: Basic Operating System Concepts
+
+    +     - Chapter 2: Operating System Architecture
+
+    +     - Chapter 3: Process and Flow Management
+
+    +     - Chapter 4: Process and Flow Planning
+
+    +     - Chapter 5: Flow Interaction
+
+    +     - Chapter 6: Managing Memory
+
+    +     - Conclusion'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Introduction
+
+
+    Congratuations on choosing *Linux For Beginners* and thank you for doing so.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, please enjoy it!
+
+
+    There are three ways to access a Linux system:
+
+
+    +   - Through a text console. In this method the user connects directly to the
+    computer that has Linux installed and then they can access it through a non-graphical
+    system
+
+    +   - From a graphical session manager (X Window). Here the user connects directly
+    to the computer that has Linux installed and accesses the system through a graphical
+    program
+
+    +   - From a remote computer using telnet or secure shell.
+
+
+    In any of the previous situations, the following will appear (more or less):
+
+
+    +   - Login: (Username is typed)
+
+    +   - Password: (The password is typed, which is not visible on the screen)
+
+    +     - For security reasons the password must meet certain conditions such as:
+
+    +       - Contain at least six characters
+
+    +       - Contain at least one numerical or special character and two alphabetic
+    characters
+
+    +       - Be different from the login name
+
+
+    The first time the system is accessed, the password used will be the one provided
+    by the administrator of the system. There are several'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "ways to end the work session in Linux, depending on whether we are in graphic\
+    \ mode or text.\n\nIn-text mode:\n\n+   1. Press the <ctrl> d keys\n+   2. Enter\
+    \ the exit command.\n\nIn graphic mode:\nThe output of X Window depends on the\
+    \ window manager that is running and will be explained later.\n\n# Linux File\
+    \ System Structure\n\nFiles: Types\n\nThe basis of the Linux filing system will\
+    \ include the file, which is nothing other than the structure used by the operating\
+    \ system to store information on a physical device such as a hard drive, a floppy\
+    \ disk, a CD-ROM or a DVD. Naturally, a file can contain any type of information\
+    \ that you would ilke, from an image in PNG or JPEG format to a text or a web\
+    \ page in HTML format. The file system is the structure that allows Linux to handle\
+    \ the files it contains.\n\nAll Linux files have a name, which must comply with\
+    \ certain rules:\n\n+   * A file name can be between 1 and 255 characters\n+ \
+    \  * You can use any character except the slash / and it is not recommended to\
+    \ use the characters with special meaning in Linux, which are the following: =\
+    \ \\ ^ ~ \"* *; -? [] ! & ~ <>  \n+   \t* To use files with these characters or\
+    \ spaces you must enter the name of the file between quotation marks\n+   * Numbers\
+    \ can also be used if desired.\n+   * Uppercase and lowercase letters are considered\
+    \ different, and therefore letter.txt is not the same as Letter.txt or letter.Txt"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'As in Windows, a certain "type" criterion can be used to mark the different
+    kinds of files using a series of characters at the end of the name that indicates
+    the type of file in question. So, the text files, HTML, PNG or JPEG images have
+    extensions .txt, .htm (or .html), .png and .jpg (or .jpeg) respektively.
+
+
+    Despite this, Linux only distinguishes three types of files:
+
+
+    +   * Files or ordinary files are those mentioned above
+
+
+    +   * Directories (or folders), is a special file that groups other files in a
+    structured way
+
+
+    +   * Special files are the basis on which Linux sits since they represent the
+    devices connected to a computer, such as a printer. In this way, enter information
+    in that file is equivalent to sending information to the printer. For the user,
+    these devices have the same appearance and use than ordinary files
+
+
+    # Links
+
+
+    Links are an ordinary file type that have the goal to create a new name for a
+    determined file. Once the symbolic link is created, it allows access to the file
+    that links in the same way as if we had copied the contents of it to another file,
+    with the advantage that it has not really been copied. The symbolic links are
+    especially useful when you want a group of people to work on the same file since
+    they allow sharing the file but centralizing the modifications.
+
+
+    As an example, you can assume the existence of a file called balance.1999.txt,
+    to which a link is created symbolic balance.txt. Any access to balance.txt is
+    translated by the system so that you access the balance content.1999.txt.
+
+
+    # The Path'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'In any modern operating system, the file structure is hierarchical and depends
+    on the directories. In general, the file system structure resembles a tree structure,
+    each node being composed of a directory or folder, which contains other directories
+    or files. In Windows, each disk drive is identified as a basic folder that serves
+    as root to others. On Linux, there is a single root called / from which all files
+    and directories hang, and that is independent of which devices are connected to
+    the computer.
+
+
+    The path or path of a file or directory is the sequence of directories that must
+    be traversed to access a certain file separated by /.
+
+
+    There are two forms of the path:
+
+
+    +   ❖ The absolute path that shows the entire path to a file, /home/luis/Carta.txt
+
+
+    +   ❖ The path relative to a certain directory, for example, if we cannot find
+    the / home directory, the path relative to the file Letter.txt is Luis / Letter.txt
+
+
+    +   ○ To complicate matters further, all directories contain two special directories:
+
+
+    +   ❖ The current directory, represented by the point “.”
+
+
+    +   ❖ The parent directory represented by a colon “..”
+
+
+    Being in the directory/home you can access Carta.txt with /home/luis/Carta.txt
+    (absolute path) or /luis/Carta.txt (relative path). In Luis as ./Carta.txt or
+    simply Letter.txt.
+
+
+    The Linux file system follows all UNIX conventions, which means it has a structure
+    determined, compatible and homogeneous with the rest of UNIX systems. Unlike in
+    Windows or MS-DOS the file system on any Unix system is not directly linked to
+    the hardware structure, that is, it does not depend on whether a given computer
+    has 1, 2 or 7 hard drives to create the c:\, d:\ or m:\ drives.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Every UNIX file system has a unique root or root origin represented by / .
+    Under this directory you will find all the files that the operating system can
+    access. These files are organized in different directories whose mission and name
+    are standard for all Unix systems.
+
+
+    +   - / : Root of the file system
+
+    +   - / dev: Contains system files representing the devices that are physically
+    installed in the computer
+
+    +   - / etc: This directory is reserved for system configuration files
+
+
+    In this directory, no binary files (programs) should appear. Under this, two other
+    subdirectories should appear:
+
+
+    +   - / etc / X11: X Window configuration files
+
+    +   - / etc / skel: Basic configuration files that are copied to the user''s directory
+    when one is created new
+
+    +   - / lib: Contains the libraries needed to run programs that reside in / bin
+    (not libraries of user programs)
+
+    +   - / proc: Contains special files that either receive or send information to
+    the system kernel (It recommends not modifying the contents of this directory
+    and its files)
+
+    +   - / sbin: Contains programs that are only accessible to the superuser or root
+
+    +   - / usr: This is one of the most important directories of the system since
+    it contains the usage programs common to all users. Its structure is usually similar
+    to the following:
+
+    +   - / usr / X11R6: Contains the programs to run X Window
+
+    +   - / usr / bin: General purpose programs, which includes the C / C ++ compiler
+
+    +   - / usr / doc: General system documentation
+
+    +   - / usr / etc: General configuration files
+
+    +   - / usr / include: C / C ++ header files (.h)
+
+    +   - / usr / info: GNU information files
+
+    +   - / usr / lib: General libraries of the programs
+
+    +   - / usr / man: Manuals accessible with the man command'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   ✢ /usr/sbin: System administration programs
+
+    +   ✢ /usr/src: Source code of programs
+
+
+    In addition to the previous ones, there are other directories that are usually
+    located in the /usr directory, such as the folders of the programs that are installed
+    in the system.
+
+
+    +   ✢ /var: This directory contains temporary information about the programs (which
+    does not imply that you can delete its content, in fact, it should not be done)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Chapter 1:
+
+
+    # Basic Operating System Concepts
+
+
+    # The Concept Of The Operating System, Its Purpose, And Function
+
+
+    # The Concept of An Operating System
+
+
+    The main idea and start of our modern day operating systems was the need to create
+    ISG including them in the use of computer systems (By *computer cybernetic system*,
+    we mean a set of hardware and software). The computer cybernetic system initially
+    developed for liability solutions and practical problems of users. Because it
+    was difficult to do this with hardware alone, applications were created. These
+    programs required general operations of hardware management, distribution of hardware
+    from resources, and the like. These operations are grouped under a separate layer
+    of software, which is known as the operating system.
+
+
+    Further, the capabilities of operating systems went far beyond the basic set of
+    operations required by applications, but the intermediate position of such systems
+    between applications and hardware remained unchanged.
+
+
+    # Purpose Of The Operating System
+
+
+    Operating systems provide us with a score of cybernetic system, and secondly,
+    efficiency and reliability of its work. The first function is characteristic of
+    the OS as an extended machine, the second - the OS as a distributor of hardware
+    resources.
+
+
+    # Operating System As An Extended Machine
+
+
+    Using the operating system, the application programmer (and through his programs
+    and the user) should have the impression that they are working with an advanced
+    machine. The hardware is not'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'well adapted for direct use in applications. For example, if you consider working
+    with I / O devices at the command level of the respective controllers, you can
+    see that the set of such commands is limited, and for many devices - primitive.
+    The operating system hides such a hardware interface but instead offers the programmer
+    an application programming interface that uses higher-level concepts (called abstractions).
+
+
+    For example, when working with a disk, a typical abstraction is a file. It is
+    easier to work with files than directly with a disk controller (no need to consider
+    moving the drive heads, starting and stopping the motor, etc.), as a result, the
+    programmer can focus on the essence of his application. The operating system is
+    responsible for interacting with the disk controller.
+
+
+    Abstraction highlighting makes it easy for OS and application code to change when
+    migrating to new hardware. For example, if you install a new type of disk device
+    on your computer (provided that it is supported by the OS), all its features will
+    be taken into account at the OS level, and applications will continue to use the
+    files as before. This characteristic of the system is called hardware independence.
+    OS can be said to provide a hardware-independent environment for executing applications.
+
+
+    # Operating System As A Resource Allocator
+
+
+    The operating system must allocate resources efficiently. It acts as the manager
+    of these resources and provides them to applications on demand. There are two
+    main types of resource allocation. In the case of the *spatial distribution* of
+    resource access will be for multiple customers simultaneously, and each one of
+    them can use the resources (the shared memory). In the case of *temporal distribution,
+    the system queues* and, according to it, allows them to use the entire resource
+    for a limited time (so the processor is distributed in single-processor systems).
+
+
+    When allocating resources, the OS resolves possible conflicts, prevents unauthorized
+    access of programs to those resources, on'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'which they have no rights, ensures the efficient operation of the computer
+    system.
+
+
+    # Classification Of Modern Operating Systems
+
+
+    Consider the classification of modern operating systems, depending on their scope.
+    First of all, note the OS of *large* computers (mainframes). The main characteristic
+    of the hardware for which they are designed is the performance of I / O: large
+    computers provide a large number of peripherals (disks, printers, terminals, etc.).
+    Such a computer cybernetic system is used for the reliable processing of large
+    amounts of data. This OS should effectively support this process (in batch mode
+    or time allocation). An example of an OS of this class would be IBM''s OS /390.
+
+
+    The following category includes *server* operating systems. The main feature of
+    such operating systems is the ability to serve a large number of user requests
+    for shared resources. Network support plays an important role for them. There
+    are specialized server Oses that exclude elements that are not related to the
+    performance of their basic functions (for example, support for user applications).
+    Universal servers ( UNIX or Windows XP systems ) are now more commonly used to
+    implement servers.
+
+
+    The most massive category is *personal* OS. Some operating systems in this category,
+    developed with the expectation of the user (Windows 95/98 / Me) by Microsoft are
+    simplified versions of the universal OS. Particular attention in the personal
+    OS is given to the support of the graphical user interface and multimedia technologies.
+    There is also a *real-time* OS. In such a system, each operation must be guaranteed
+    to be performed within a specified time range. Real-time OS can control the flight
+    of a spaceship, process or video demonstration. There are specialized real-time
+    OSes such as QNX and VxWorks.
+
+
+    Another category is *embedded* OS. These include managing applications for various
+    microprocessor systems used in military'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'technology, consumer electronics systems, smart cards, and other devices. Such
+    systems pose special requirements: placing a small amount of memory and support
+    for specialized OS devices. Often, built-in OS is developed for a specific device;
+    universal systems include embedded Linux and Windows CE.
+
+
+    # ## Functional Components Of Operating Systems
+
+
+    An operating system can be considered as a set of components, each of which is
+    responsible for the implementation of a specific function of the system. Consider
+    the most important features of the modern OS and the components that implement
+    them.
+
+
+    The way the system is built from components and their relationship is determined
+    by the architecture of the operating system. Each operating system is going to
+    be a bit different in the kind of work that it can handle, and its organizational
+    structure, so learning this and how to put it all together can be important.
+
+
+    # ## Process And Flow Management
+
+
+    As we mentioned, one of the most important functions of OS is to execute applications.
+    Code and application data is stored in the computer cybernetic system on disk
+    in a special executable manner. After the user decides to run either OS to perform
+    a file system creates the basic unit of a computer, called a process. You can
+    specify the following: a process is a program that executes it.
+
+
+    The operating system allocates resources between processes. These resources include
+    CPU time, memory, devices, disk space as files. For the allocation of memory of
+    each process, undertake its address space - set address memory, which allows you
+    access. The process space is stored in the address space. The allocation of disk
+    space for each process formed a list of open files similarly.
+
+
+    The processes protect the resources they possess. For example, the process address
+    space cannot be accessed directly from other processes (it is secure), and when
+    working with files, a mode can be'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'specified that denies access to the file to all processes except the current
+    one.
+
+
+    The allocation of processor time between processes is necessary because the processor
+    executes instructions one by one (ie, at a particular time, only one process can
+    physically execute on it), and for the user, the processes should appear as sequences
+    of instructions executed in parallel. To achieve this effect, the OS provides
+    the processor with each process for a short time, after which it switches the
+    processor to another process; in this case, the execution of the processes resume
+    from the place where they were interrupted.
+
+
+    In a *multiprocessor system*, processes can run in parallel on different processors.
+
+
+    Modern operating systems in addition to processes can support multitasking, which
+    provides in the process, the presence of several sequences of instructions (*threads*),
+    which run in parallel to the user, like most processes in the OS. Unlike processes,
+    threads do not provide resource protection (for example, they share the address
+    space of their process).
+
+
+    # ## Memory Management
+
+
+    While executing the code, the processor takes instructions and data from the computer''s
+    (main) memory. This memory is displayed as an array of bytes, each of which has
+    an address.
+
+
+    As mentioned, the main memory is a type of resource between processes. OS is responsible
+    for the allocation of memory. The address space is protected during the process
+    and released only after the execution process is completed. The amount of memory
+    available to the process can vary in the course of the distribution of memory.
+
+
+    OS must be capable of programs, individually or in the aggregate amount available
+    for the main memory. To this end, virtual memory technology must be realized.
+    This technology allows placing in the'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'main memory only those instructions and processes that are needed at the current
+    time, while the contents of the rest of the address space are stored on disk.
+
+
+    # # I / O Management
+
+
+    The operating system is responsible for managing I / O devices connected to the
+    computer''s memory. Support for such devices in the OS is usually performed at
+    two levels. The first lower level includes *device drivers* - software modules
+    that control devices of a particular type, taking into account all their features.
+    The second level includes a *versatile I / O interface* convenient for use in
+    applications.
+
+
+    The OS should implement a common I / O driver interface through which they interact
+    with other system components. This interface makes it easy to add drivers for
+    new devices. Modern OSes provide a large selection of ready-made drivers for specific
+    peripherals. The more devices the OS supports, the more chance it has of practical
+    use.
+
+
+    # # File Management And File Systems
+
+
+    For OS users and programmers, disk space is provided as a set of *files* organized
+    into a *file system*. A file is a set of files on a file system that can be accessed
+    by name. The term "file system" can be used for two concepts: the principle of
+    organizing data in the form of files and a specific set of data (usually the corresponding
+    part of the disk) organized in accordance with this principle. As part of the
+    OS, it can be implemented simultaneously supported and ICA several file systems.
+
+
+    File systems are considered at the logical and physical levels. The logical level
+    defines the external representation of the system as a collection of files (usually
+    located in directories), as well as performing operations on files and directories
+    (creation, deletion, etc.). The physical layer defines the principles of allocation
+    of data structures of the file system on the drive.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# # Network Support
+
+
+    # ## Network systems
+
+
+    Modern operating systems are adapted to work on the network, they are called *network
+    operating systems*. Networking support enables the OS to:
+
+
+    +   - To make local resources (disk space, printers, etc.) publicly available
+    over the network, ie to function as a server
+
+    +   - Refer to other computer resources through a network that is functioning
+    as a client
+
+
+    Implementing the functionality of server and client based on *vehicles* responsible
+    for the transmission of data between computers according to the rules specified
+    network protocols.
+
+
+    # ## Distributed systems
+
+
+    Network OSes do not hide the presence of a network from the user. The network
+    support in them does not determine the structure of the system and enriches it
+    with additional capabilities. There are also *distributed* OSs that allow pooling
+    the resources of several computers in a *distributed system*. It appears to the
+    user as one computer with multiple processors working in parallel. Distributed
+    and multiprocessor systems are two major categories of OS that use multiple processors.
+
+
+    # ## Data security
+
+
+    Data security in the OS means ensuring the reliability of the system (data protection
+    against loss in case of failure) and protection of data against unauthorized access
+    (accidental or intentional). To protect against unwarranted access, the OS should
+    ensure the availability of *authentication* of users (such means allow to determine
+    whether the users are actually who they say they are. This is usually used for'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'system passwords) and their *authorization* (to verify user rights which have
+    been authenticated to perform a specific operation).
+
+
+    # User Interface
+
+
+    There are two types of user interaction means running: *shell* ( shell ) and *a
+    graphical user interface* ( GUI ). The command interpreter enables users to interact
+    with the OS using a special command language (online or through startup) to execute
+    batch files. Commands of this language force the OS to perform certain actions
+    (for example, run applications, work with files).
+
+
+    The graphical user interface allows it to interact with the OS by opening windows
+    and executing commands with menus or buttons. There are many approaches to implementing
+    a GUI: for example, in Windows systems, its support systems are built into the
+    system, and in UNIX, they are external to the system and rely on standard I /
+    O controls.
+
+
+    # Conclusions
+
+
+    +   * An operating system is a level of software that lies between the levels
+    of applications and computer hardware. Its main purpose - to make use of computer
+    systems easier and improve efficiency
+
+
+    +   * The main functional components of the OS include process management, memory
+    management, I / O management, file management and file system support, network
+    support, data protection, user interface implementation'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# ## Chapter 2:  \n# Operating System Architecture\n\nAn operating system can\
+    \ be considered as a set of components, each of which is responsible for certain\
+    \ functions. The set of such components and the order of their interaction with\
+    \ each other and with the external environment is determined by the *architecture\
+    \ of the operating system*.\n\nConsider the basic concepts of operating system\
+    \ architecture, approaches to them, features of OS interaction with the external\
+    \ environment. Let’s consider the implementation of the architecture on the example\
+    \ of Linux.\n\n# **Basic Concepts Of Operating System Architecture**\n\n# ###\
+    \ System Kernel - Privileged Mode And User Mode\n\nThe basic components of the\
+    \ OS, which are responsible for its most important functions, are usually in the\
+    \ memory constantly and are executed in a privileged mode, called the *kernel\
+    \ of the operating system*.\n\nCurrent approaches to the design of OS architecture\
+    \ differently define the functionality of the kernel. The most important functions\
+    \ of the OS, the teaching of which, of course, lay in the core include interrupt\
+    \ processing, memory control, input-output control. The kernel’s reliability and\
+    \ performance make it more demanding.\n\nThe core feature of the kernel is that\
+    \ it runs in privileged mode. Consider the features of this model. To ensure efficient\
+    \ resource management computer’s memory operating system should have certain privileges\
+    \ regarding applications. It is necessary that applications do not operate the\
+    \ OS, and simultaneous OS should be able to intervene in a program, such as CPU\
+    \ or switching solution liabilities conflict in the struggle for resources."
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Realizing these benefits requires hardware support for processors. They must
+    support at least two modes - *privileged* (protected mode kernel mode, kernel
+    mode ) and *user mode* ( user mode ) in the invalid user commands that are critical
+    to system operation (switching tasks to appeal to memory, given the limits access
+    I / O devices, etc.).
+
+
+    Consider how different CPU modes are used when interacting with the kernel and
+    applications. After loading the kernel switches, the processor in privileged mode
+    and gets complete control of a computer. Each application is started and executed
+    in user mode, where it does not have access to kernel resources and other applications.
+    When you need to perform an action implemented in the kernel, the application
+    makes a *system call*. The kernel intercepts it, switches the processor to privileged
+    mode, performs an action, switches the processor back to user mode and returns
+    the result of the application.
+
+
+    A system call is slower than a call to a user-implemented function because the
+    processor switches between modes twice. For some OSes, some of the functionality
+    is implemented in user mode, so you don''t need to use system calls to access
+    it.
+
+
+    # Implementation of Operating System Architecture
+
+
+    Consider several approaches to implementing an operating system architecture.
+    In real OS, they usually use some combination of these approaches.
+
+
+    # Monolithic Systems
+
+
+    The OSEs, in which all the basic functions are concentrated in the kernel, are
+    called *monolithic systems*. In the implementation of a monolithic kernel, the
+    OS becomes more productive (the processor does not switch between modes during
+    the interaction between its components), but less reliable (all its code is executed
+    in privileged mode, and the error in each of the components is critical).'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'A monolithic kernel does not mean that all of its components must reside in
+    the memory. Modern operating systems allow placing code fragments (*kernel modules*)
+    dynamically in the kernel address space. The implementation of kernel modules
+    also makes it possible to achieve its extensibility (to add new functionality,
+    it is enough to develop and load the appropriate module in memory).
+
+
+    # ## Multilevel Systems
+
+
+    Components of *multilevel* OS form a hierarchy of levels (layers), each of which
+    relies on functions of the previous level. The lowest level interacts directly
+    with the hardware, the highest level implements system calls.
+
+
+    In traditional multilevel operating systems, transferring control from the top
+    to the bottom is implemented as a system call. The top-level must have the right
+    to execute this call and these rights are verified with the support of the hardware.
+    An example of such a system is the Multics OS, developed in the ''60s. The practical
+    application of this approach is limited today because of poor performance.
+
+
+    Levels can also be isolated in a monolithic kernel; in this case, they are programmatically
+    supported and cause system implementation to be disrupted. In the monolithic system,
+    a kernel determines the levels:
+
+
+    +      - *Abstraction means from equipment* that one interacts with the hardware
+    directly, releasing other components of the system from such interaction
+
+    +      - *Core kernels* that are responsible for the most basic, simplest kernel
+    actions, such as writing a block of data to disk. By these means, upper-level
+    instructions are executed with the management of resources
+
+    +      - *Resource management tools* (or resource managers) that implement basic
+    OS functions (process management, memory, input-output, etc.). At this level,
+    the most important'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '+   resource management decisions are made that are made using the core kernel
+
+
+    +   A system call interface that is used to communicate with system and application
+    software
+
+
+    # Micronucleus Systems
+
+
+    One of the trends of modern operating systems is that in privileged mode, a small
+    proportion of kernel functions, which are a microkernel, are implemented. Other
+    OS functions are performed by user-mode processes (server processes). Servers
+    are responsible for supporting the file system for dealing with process memory.
+
+
+    The micronucleus communicates between system components and performs a basic resource
+    allocation. To execute a system call, the process (client process) accesses the
+    microkernel. The microkernel sends a request to the server, the server performs
+    the work and sends the response back. And the micronucleus forwards it to the
+    client. Customers can not only be single users and other operating units.
+
+
+    The advantages of a micro-core approach are:
+
+
+    +   The small size of microkernel which simplifies its development and debugging
+
+
+    +   High system reliability due to the fact that the servers run in user mode
+    and do not have direct access to the hardware
+
+
+    +   Greater flexibility and expandability of the system (unnecessary components
+    do not take up space in memory '' memory, expanding the functionality of the system
+    is reduced to adding to it new server)
+
+
+    +   The possibility of adapting to network conditions (way to exchange data between
+    the server and the related network or they are on the same computer)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'The main disadvantage of the micro-core approach is the decrease in performance.
+    Instead of the two-time switchings of the processor mode in case of a system call,
+    four occur (two - during the exchange between the client and the micronucleus,
+    two \u2014 during the exchange between the server and the micronucleus).
+
+
+    This disadvantage is rather theoretical, in practice, the performance and reliability
+    of the micronucleus depend primarily on the quality of its implementation. Thus,
+    in QNX OS, the micro-kernel takes up several kilobytes of memory and provides
+    a minimal set of functions, with the system corresponding to real-time OS performance.
+
+
+    # The Concept Of Virtual Machines
+
+
+    In *virtual machine systems* programmatically create copies of the hardware (emulation
+    occurs). These copies (*virtual machines*) run in parallel, each running software
+    that interacts with applications and users.
+
+
+    # Architecture Features: UNIX and Linux
+
+
+    # UNIX Basic Architecture
+
+
+    UNIX is an example of fairly simple OS architecture. Much of the functionality
+    of this system is contained in the kernel, the kernel communicates with applications
+    through system calls.
+
+
+    The system has three main components: the process management subsystem, the file
+    system, and the I / O subsystem. *The process management subsystem* controls the
+    creation and deletion of processes, the allocation of system resources between
+    them, inter-process interaction, memory management.
+
+
+    *The file subsystem* provides a single interface for accessing data stored on
+    disk drives and peripherals. Such an interface is one of the most important features
+    of UNIX. They use the same system calls to either communicate with the disk or
+    output to a terminal or printer (the program works with the printer just like
+    a file). In this case, the'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'file system forwards requests to the relevant modules of the I / O subsystem,
+    and those - directly to the peripheral devices. In addition, the file subsystem
+    controls file access rights, which largely determine the privileges of the user
+    on the system.
+
+
+    The I / O subsystem performs file system requests by interacting with device drivers.
+    In UNIX, two types of devices: character (eg, printer) and block (eg, hard disk).
+    The main difference between them is that the block device allows direct access.
+    To increase the productivity of block devices using the buffer cache - plot memory
+    which stores data last scanned from the disc. Subsequent accesses to these data
+    can be retrieved from the cache.
+
+
+    # ## Linux Architecture
+
+
+    There are three main parts to Linux :
+
+
+    +   - Core, which implements the basic functions of the OS (process management,
+    input-output, memory, etc.)
+
+    +   - System libraries that define a standard set of functions for use in applications
+    (performing such functions does not require a transition to privileged mode)
+
+    +   - System utilities (applications that perform specialized tasks)
+
+
+    # ## The Purpose Of The Linux Kernel And Its Features
+
+
+    Linux implements a monolithic kernel technology. All kernel data and data structures
+    are in the same address space. There are several functional components in the
+    kernel.
+
+
+    +   - Process Scheduler - Responsible for the implementation of multitasking in
+    the system (interrupt processing, timer operation, creation and completion of
+    processes, context switching)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   * Memory Manager - allocates a separate address space for each process
+    and implements support for virtual memory
+
+
+    +   * Virtual File System - Provides a universal interface for interacting with
+    various file systems and me/O devices
+
+
+    +   * Device Drivers - Provide direct access to peripherals. They are accessed
+    through the virtual file system interface
+
+
+    +   * Network Interface - Provides access to the implementation of network protocols
+    and network device drivers
+
+
+    +   * Interoperability Subsystem - Offers mechanisms that allow different processes
+    in the system to communicate with each other
+
+
+    Some of these subsystems are logical components of the system, they are loaded
+    into memory with the core and remain there permanently. Components of other subsystems
+    (such as device drivers) to implement profitable so that their code could upload
+    them on demand. To accomplish this, Linux supports the concept of kernel modules.
+
+
+    # ## Kernel Modules
+
+
+    The Linux kernel makes it possible to load and unload individual sections of code
+    on demand. These sections are called *kernel modules* and run in privileged mode.
+    Kernel modules offer a number of advantages.
+
+
+    +   * Code modules can be loaded in memory '' Five in the process of the system,
+    which simplifies debugging kernel components, especially drivers
+
+
+    +   * They have the ability to change a set of core components at runtime: the
+    ones that are currently not in use, cannot be loaded into memory
+
+
+    +   * Modules are an exception to the rule that code that extends kernel functionality
+    under a Linux license must be open. This'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'allows hardware manufacturers to develop drivers for Linux, even if they do
+    not have access to their source code
+
+
+    Linux module support has three components.
+
+
+    +   * Module management tools make it possible to load modules into memory and
+    communicate between modules and the rest of the kernel
+
+    +   * Driver logging tools allow modules to report to another part of the kernel
+    that a new driver has come to fruition
+
+    +   * Conflict resolution tools allow device drivers to reserve hardware resources
+    and protect them from being accidentally used by other drivers
+
+
+    A single module can register multiple drivers if required (for example, for two
+    different access mechanisms). The modules can be downloaded in advance - at system
+    start-up (boot modules) or in the run of a program that triggers their functions.
+    After loading, the module code is in the same address space as the other kernel
+    code. A module error is critical to the system.
+
+
+    # Features Of System Libraries
+
+
+    Linux system *libraries* are *dynamic libraries* that are only loaded into memory
+    when needed. They perform a number of functions:
+
+
+    +   * Implementation of system call packers
+
+    +   * Extension of system call functionality (such libraries include the C language
+    I / O library, which implements functions such as printf() based on system calls
+
+    +   * implementation of user-mode service functions (sorting, row processing,
+    etc.)
+
+
+    # User Application'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'Linux user applications use functions from system libraries and interact with
+    the kernel through system calls.
+
+
+    # # Installation
+
+
+    Unlike what happens with Microsoft Windows, installing Linux is not a simple process
+    since Linux allows the control and customization of a greater number of parameters
+    and options. In spite of everything, they are making great progress looking for
+    the installation of Linux to be the least traumatic process possible, depending
+    on the simplicity of it of the distribution used.
+
+
+    Despite everything, before proceeding to install Linux it is necessary to take
+    into account a number of fundamental aspects. The first one is to read the information
+    contained in the installation CD, this information can appear in two different
+    ways, the regular HOW TO or in the form of manuals developed for distribution.
+
+
+    The general steps to follow for the installation of this operating system, in
+    most of its distributions, are summarized in the following steps:
+
+
+    Installation process:
+
+
+    +   - Language Choice: The installation program gives us the possibility to configure
+    our system in a large number of languages that exist
+
+
+    +   - Acceptance of the license agreement with the company that owns the distribution
+    we own
+
+
+    +   - Configuration of the type and model of our keyboard and mouse
+
+
+    +   - Choice of security level: In which there are four default security levels
+    to choose from, depending on the use of the computer on which we are performing
+    this installation, being able to choose levels from an internet client to a server
+    with a large number of connections to support'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Partitioning: One of the main concepts to consider before installation is
+    partition
+
+
+    Each operating system organizes the information of the files it contains differently,
+    using your own file system. For reference, the file system name of different operating
+    systems:
+
+    This generally prevents multiple mixed operating systems from being installed
+    on the same hard drive. To solve this problem there are the so-called partitions
+    with which a certain hard disk is divided so that it can contain both file systems.
+    For all purposes, making a partition is equivalent to the hard drive is divided
+    into two, although of course it is not divided into a physical but logical way.
+    The fundamental problems when installing Linux come from the fact that in most
+    cases the user wants to keep Windows and all programs for this system. There are
+    currently several distributions that allow the installation of Linux on a Windows
+    file system, either in what is called an image disk (A very large file), of the
+    Corel Linux distributions, or directly in the Windows file system (WinLinux 2000).
+    However to obtain a good performance it is preferable to install Linux on a partition
+    different from that of Windows using Linux''s own file system, so it is usually
+    necessary to perform a partition of the hard disk, since Windows when installed,
+    usually appropriates the entire size of the hard drive. Until recent times this
+    division meant the incredible and inevitable loss of all the information that
+    was contained on the hard disk. At the moment in the installation of the distributions
+    of Linux, it is allowed to divide the hard disk without losing information, in
+    order to reduce the size of the Windows partition and create a new one during
+    the installation of Linux. In the case of RedHat or Mandrake, there is a possibility
+    of automatic assignment that will be useful in the case of or knowing how to manipulate
+    the partitions. For Linux, at least one root native partition must be created.
+    It should be the desired size and a swapping partition that must be at least twice
+    the size of the RAM of your equipment, up to a maximum of 512 MB. During this
+    process, care must be taken not to erase the partition where Windows resides,
+    since in that case ALL the information will be lost permanently.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '+   * System installation: Selection of the various packages to be included
+    with the Linux operating system and its subsequent installation.
+
+
+    Some of these packages are:
+
+
+    +   * Workstation
+
+    +   * Server
+
+    +   * Graphic environment
+
+    +   * Office work station.
+
+    +   * Webserver / FTP
+
+    +   * KDE station
+
+    +   * Play Station
+
+    +   * Mail.
+
+    +   * Gnome station
+
+    +   * Multimedia station
+
+    +   * Database server
+
+    +   * Internet station
+
+    +   * Firewall Server / Router
+
+    +   * DNS / NIS
+
+    +   * Scientific work station
+
+    +   * Console tools
+
+    +   * Network server
+
+
+    # ## System Configuration
+
+
+    +   * Root password: The installation program asks you to enter a root or administrator
+    password with which you will be able to have access to all the configuration areas
+    of the system, which as a normal user is not possible
+
+    +   * Creation of a user: The installation program asks for a login and password,
+    for the creation of the first user, which does not have the necessary administrator
+    permissions for security reasons'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '+   - Boot loader: Another point to consider is how you want to boot Linux.
+    If Windows exists, the easiest way is to install LILO or GRUB, programs that are
+    responsible for booting both operational systems according to what the user indicates
+    when starting the PC. It must be selected when setting the option of saving the
+    magazine in the first sector of the disk. Problems will arise to boot Linux is
+    if there is an option to reinstall Windows again, since this operating system
+    assumes control of the PC and boot system, removing LILO (and preventing Linux
+    boot). Another very simple way would be to use the boot floppy disk that is created
+    during the installation of Linux
+
+
+    +   - Installation exit: The user is informed of the installed services and the
+    installation program is finished
+
+
+    Once Linux is first started, the initial wizard will start and allow you to configure
+    basic system items, such as the type of desktop to use; KDE, Gnome, WindowMaker,
+    etc. and some services like mail.
+
+
+    # Conclusions
+
+
+    +   - The OS architecture defines a set of components, as well as how they interact
+    with each other and with the environment
+
+
+    +   - The most important for studying the architecture of the OS is the concept
+    of the core of the system. The core feature of the kernel is that it runs in privileged
+    mode
+
+
+    +   - The main types of OS architecture are monolithic and micro-kernel based
+    architecture. Monolithic architecture requires that the core functions of the
+    system be concentrated in the kernel, its most important advantage being performance.
+    In microkernel systems in privileged'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'mode, only the basic functions are performed, the main advantages of such systems
+    are reliability and flexibility
+
+
+    +   The operating system directly interacts with the computer hardware. Modern
+    computer architectures offer many operating system support tools
+
+
+    +   The operating system interacts with applications. It provides a set of system
+    calls to access functions implemented in the kernel. For applications, system
+    calls, along with system library tools, are accessible through the application
+    programming interface'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # Chapter 3:
+
+    ## Process and Flow Management
+
+
+    Consider two major abstractions of the operating system that describe the execution
+    of the program code - processes and flows - features of their implementation in
+    the operating system, the states in which they may reside, basic mechanisms for
+    working with them (means of creation, completion, and termination, etc.).
+
+
+    # ## Basic concepts of processes and flows
+
+
+    # ### Processes and flows in modern OS
+
+
+    In today''s operating system, the kernel code (which belongs to its various subsystems)
+    and the code of the user programs are executed at the same time. There are different
+    actions: some programs and subsystems follow the instructions of the processor.
+    Others are busy with I / O, some still wait for requests from the user or other
+    applications. To simplify the management of these actions in the system, it is
+    advisable to allocate a set of elementary active elements and to define the interface
+    of OS interaction with these elements.
+
+
+    The *process* means the abstraction of the OS, which combines everything necessary
+    to execute one program at a certain point in time. The program is some sequence
+    of machine commands stored on disk, and if necessary, is loaded into memory and
+    executed. It can be said that at run time, the program represents a process.
+
+    A one-to-one correspondence between a program and a process is established only
+    at a specific point in time: one process at a time can execute the code of several
+    programs, the code of one program can execute several processes at the same time.
+
+
+    Successful programs require some resources. They include:
+
+
+    +   - Resources required for sequential execution of program code (primarily CPU
+    time)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '+   *   Resources that allow storing information that ensures the execution
+    of the program code (CPU registers, RAM, etc.); these resource groups identify
+    two components of the process
+
+
+    +       *   The sequence of executable commands of the processor
+
+
+    +       *   Set addresses memory '' memory ($address\ space$), which are these
+    commands and data for them
+
+
+    The selection of these parts is also justified by the fact that within the same
+    address space may be several sequentially executed sequences of commands that
+    share the same data. The need to distinguish between the sequence of commands
+    and the address space leads to the concept of flow.
+
+
+    A thread (control thread) is called a set of sequentially executed processor commands
+    that use the shared process space. Since there can be many threads at a time,
+    the OS''s task is to organize the switching of the processor between them and
+    to plan their execution. In multiprocessor systems, the code for individual threads
+    can be executed on separate processors.
+
+
+    Thus, the $process\ is$ called the set of one or more threads and the protected
+    address space in which these threads are executed.
+
+
+    The security of the process address space is its most important characteristic.
+
+
+    The process code and data cannot be directly read or overwritten by another process;
+    thus protecting themselves from the rich bugs and unauthorized access attempts.
+
+
+    Naturally, only $direct$ access is inadmissible (for example, writing to memory
+    using a simple data transfer instruction); the exchange of data between processes
+    is, in principle, possible, but for this purpose $special\ means$, which are called
+    means of $interprocess\ interaction$, should be used. Such tools are more difficult
+    than direct access and run slower, but provide protection against accidental errors
+    when accessing data.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'Unlike the process *flows managing total memory, stream data is not secured
+    against access to other streams provided that they are all executed in the address
+    space of the same process. This provides additional application development capabilities
+    but complicates programming.*
+
+
+    The protected alert process space sets the abstraction of code execution on a
+    single machine, and the thread provides an abstraction of sequential command execution
+    on a single dedicated processor. The address space of the process does not always
+    correspond to RAM addresses. For example, it may display files or registers of
+    the I / O controllers, so writing to a specific address in this space will either
+    write to a file or perform an I / O operation. This technology is called the *reflection
+    in memory ( memory mapping ).*
+
+
+    # Process and Flow Models
+
+
+    The maximum number of processes (secure address spaces) and the threads that they
+    execute may vary across systems.
+
+
+    +   In single-tasking systems, there is only one address space in which one stream
+    can be executed at any one time
+
+
+    +   Some embedded systems also have one address space (one process), but it allows
+    many threads to execute. In this case, parallel computations can be organized,
+    but data protection is not implemented
+
+
+    +   In systems similar to traditional UNIX versions, many processes are allowed,
+    but only one thread is executed within the process address space. This is a traditional
+    single-threaded *process model*. The concepts of flow in this model do not apply
+    but use the term "switching between processes", "process planning", "sequence
+    of process commands" and the like (here by the term process, we mean a single
+    flow)
+
+
+    +   Most modern operating systems (such as the Windows XP line, modern versions
+    of UNIX ) can have many processes in the address space of each process. These
+    systems support'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'multithreading or implement a *flow model*. A process in such a system is called
+    a *multithreaded process*
+
+
+    In the future, the term “flow” is used to refer to the sequence of executing commands,
+    except in situations where the implementation of the process model will be discussed.
+
+
+    # # Process and Flow Components
+
+
+    The elements of the process include:
+
+
+    +   - Protected address space
+
+    +   - Data common to the whole process (these data can be shared usage of all
+    its streams)
+
+    +   - Resource usage information (open files, network connections)
+
+    +   - Process flow information
+
+
+    The stream contains the following elements:
+
+
+    +   - The state of the processor (a set of current data from its registers), including
+    the counter of the current instruction of the processor
+
+    +   - Flow stack (the memory area where the local flow variables and function
+    return addresses are called in its code)
+
+
+    # # Process And Flow States
+
+
+    The following states are allowed for the stream:
+
+
+    +   - *Creation* ( new ) - the thread is in the process of creation
+
+    +   - Execution ( running ) - instruction stream processor performs (at a particular
+    time on a single processor, only one thread can be in this state)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '+   Waiting (waiting ) - awaiting some event flow (such as completion operations);
+    this state is also called with a blocked and terminated flow
+
+
+    +   Readiness (ready ) - Stream expects scheduler switches CPU at him when it
+    has all the necessay resources, in addition to CPU time
+
+
+    +   Terminated ( terminated ) - the thread has completed execution (unless its
+    resources have been removed from the system, it goes into an additional state
+    - a zombie state)
+
+
+    The transition of flows between standby and readiness states is based on task
+    planning or flow planning. When scheduling threads, determine which threads need
+    to be restored after completing the I/O operation, how to organize the system
+    expectations. The transition between standby and execution states requires a processor
+    time schedule. Based on the algorithms of such planning, determine which of the
+    finished threads need to be executed at a specific time, when do you need to interrupt
+    the execution of the thread to switch to another ready thread and so on.
+
+
+    With regard to systems that implement the process model, it is customary to talk
+    about the state of processes, not flows, and the planning of processes; in fact,
+    the states of the process in this case clearly correspond to the states of its
+    single flow.
+
+
+    # Description Of Processes And Flows
+
+
+    As we already know, one of the main tasks of the operating system is the allocation
+    of resources between processes and flows. These resources are primarily CPU time
+    (distributed between streams during scheduling), I/O, and memory (shared between
+    processes).
+
+
+    To manage the allocation of resources, the OS must support data structures that
+    contain information describing processes, flows, and resources. The following
+    data structures include:'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '+   Resource allocation tables: memory tables, I/O tables, file tables, etc.
+
+
+    +   Process tables and flow tables that provide information about the processes
+    and flows present in systems at a specific point in time
+
+
+    # Managing Process And Flow Blocks
+
+
+    Information about the processes and flows in the system is stored in special data
+    structures, which are called process control blocks and flow control blocks. These
+    structures are very important for the OS because on the basis of their information
+    system manages processes.
+
+
+    Managing power flow (Thread Control Block or TCB ) to an active flow, ie that
+    which is in a state of readiness, expectation or execution. This block may contain
+    the following information:
+
+
+    +   Flow identity (usually its unique identifier)
+
+
+    +   Flow processor status: custom processor registers, instruction counter, the
+    stack pointer
+
+
+    +   Flow planning information
+
+
+    Table streams - is a list or array of flow control units. It is located in a protected
+    area of the OS memory. The managing unit process (Process Control Block or PCB
+    ) corresponds to the process that is present in the system. Such block may contain:
+
+
+    +   Process identity (unique identifier information about other processes related
+    to adan)
+
+
+    +   Information about the threads that are running in the address space of the
+    process (for example, pointers to their control blocks)
+
+
+    +   Information that allows you to determine the rights of a process to use different
+    resources (for example, the user ID that created the process)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '+   * Process address allocation information
+
+    +   * Information about I / O resources and files used by the process
+
+
+    # Process And Flow Images
+
+
+    The totality of the information displayed in the memory process called the image
+    process, and all information flow (thread image). The image process includes:
+
+
+    +   * Process control unit
+
+    +   * User code
+
+    +   * User data (global program data common to all threads)
+
+    +   * Process flow pattern information
+
+
+    The user program code, user data, and stream information are loaded into the process
+    address space. The image process is generally not a continuous section of memory,
+    its parts are unloaded to disk. The streaming image includes:
+
+
+    +   * Flow control unit
+
+    +   * Kernel stack (the flow stack used when executing kernel flow code)
+
+    +   * User stack (stream stack available in user mode)
+
+
+    # Creating and Completing Processes and Threads
+
+
+    The process creation and termination tools allow you to dynamically change the
+    set of applications that are running on the operating system. Thread creation
+    and completion tools are the basis for creating multithreaded applications.
+
+
+    # Creating Processes'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Basic principles of process creation
+
+
+    Processes can be created by the kernel of the system during its initialization.
+    For example, in UNIX- compatible systems, such a process can be the process of
+    initialization of the in-it system, in Windows XP - the processes of subsystems
+    ( Win 32 or POSIX ). This creation process, however, is the exception, not the
+    PR and the fork.
+
+
+    Most often, processes are created when performing other processes. In this case,
+    a process that creates another process is called an ancestor and the process created
+    by it is called a descendant. New processes can be created while the application
+    is running according to its logic (the compiler can create processes for each
+    compilation step, the web server can handle the incoming requests), or directly
+    at the request of the user (for example, from a command interpreter, graphical
+    shell, or file manager).
+
+
+    # Interactive And Background Processes
+
+
+    There are two types of background processes in terms of their interaction with
+    the user.
+
+
+    +   - **Interactive processes** interact with users directly, receiving input
+    from the keyboard, mouse, and more. An example of an interactive process is the
+    process of a text editor or an integrated development environment
+
+
+    +   - **Background processes** do not interact with the user directly. They are
+    usually started at system startup and are waiting for requests from other applications.
+    Some of them (system processes) support the functioning of the system (implement
+    background printing, networking tools, etc.), others exclude specialized tasks
+    (implement web servers, database servers, etc.). Background processes are also
+    called services (services, in Windows XP systems ) or demo about us (daemons,
+    on UNIX)'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # Managing Address Space When Creating Processes
+
+
+    Because the core element of the process is secure address space, it is important
+    to solve the problem of allocating it when creating a new process. Consider two
+    different approaches.
+
+
+    # ## System Calls Fork() Exec()
+
+
+    In the first approach, the descendant''s address space is created as an exact
+    copy of the ancestor''s address space. This operation is implemented by a system
+    call, which is POSIX systems, which is called fork(). In this case, not only the
+    address space is copied, but also the counter of the mainstream process commands,
+    so after calling fork() the ancestors and descendants will follow the same instruction.
+    The developer must determine which of the two processes should be managed. This
+    can be done based on the differences between the fork() return codes for the ancestor
+    and the descendant.
+
+
+    When the creation of a new process occurs by duplicating the ancestral address
+    space, there is a need for special means of loading the code into the address
+    space of the process. Such tools are implemented by a system call, which is POSIX
+    systems, which is called exec(). As an option to call exec() must specify the
+    full path to the executable program to be loaded into memory. In fork() - based
+    systems, in order to run the program, you must immediately call exec() after calling
+    fork() (this is called fork + exec technology).
+
+
+    # ## Run The Application With One System Call
+
+
+    The second approach does not separate address space duplication and code loading
+    - these steps are combined here into one. In this case, the system call triggers
+    the specified application to execute (usually it needs to specify the entire path
+    to the executable file of this application). It is to be divided into two stages
+    of implementation of the system call:'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '+   Allocation of memory '' memory address space under the new process (with
+    no information from the address space ancestor is not copied)
+
+
+    +   Download executable code from the specified file into the highlighted address
+    space
+
+
+    The approach using fork() and exec() is more flexible, as it allows you to limit
+    yourself to one single step of starting an application if necessary. Modern operating
+    systems mainly implement a combination of first and second approaches.
+
+
+    # # Features Of Process Completion
+
+
+    Consider three options for completing processes. The process *correctly completes*
+    on its own after completing its task (for interactive processes, this is often
+    done at the initiative of a user who, for example, used the appropriate menu item).
+    To do this, the process code must perform a system call to complete the process.
+    This call on POSIX systems is called _ exit (). It can turn the process that caused
+    it.
+
+
+    The process *crashes* due to an error. This output can be provided by the programmer
+    (error when processing a decision that the program cannot continue) and may be
+    due to the generation of interruption (division by zero, access to a secure area
+    memory '' memory, etc.).
+
+
+    The process is *completed by another process* or system kernel. For example, before
+    the OS shutdown, the kernel stops performing all processes. The process can terminate
+    a process through systems is the many calls which in POSIX -a system called kill
+    ().
+
+
+    Once the process completes its work memory reserved for its address space is freed
+    and can be used for other purposes. All flows of this process also cease to exist.
+    If there are descendants in this process, their work is preferably not terminated
+    after the work of the'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'ancestor. The online processes are usually terminated when the user logs off.
+
+
+    # ## Synchronous And Asynchronous Execution Of Processes
+
+
+    When the system is a new process for the old process, there are two basic options:
+
+
+    +   * Continue execution in parallel with the new process - this mode of operation
+    is called *asynchronous execution*
+
+
+    +   * Suspend execution until the new process is complete - this is called *synchronous
+    execution*. (In this case, they use a special system call, which is POSIX systems,
+    is called wait ())
+
+
+    The choice of a particular model depends on the specific task. For example, a
+    web server can create descendant processes to handle requests (if the descendant
+    set is not enough to handle that request). In this case, the processing must be
+    asynchronous, as soon as the descendant is created and the ancestor must be ready
+    to receive the next request. Compiler C, on the other hand, must wait for the
+    completion of each step before proceeding to the next stage, in which case they
+    use synchronous processing.
+
+
+    # ## Creating and Completing Streams
+
+
+    # ### Features Of Creating Streams
+
+
+    Setting up streams is different, related primarily to the fact that the currents
+    are created within an existing address space (or a particular kernel process).
+    There are several situations that can be a new stream.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'If a process is created by a fork () system call, flow is automatically created
+    after the distribution of the address space within that process (often the main
+    application flow). You can create streams from the user code with an appropriate
+    system call.
+
+
+    Many operating systems have special threads that create the kernel of the system
+    (the kernel code can also be executed in threads). When creating a stream, the
+    system must follow these steps.
+
+
+    +   1. Create data structures that reflect the flow in the OS
+
+    +   2. Select city at the stack of flow
+
+    +   3. Set the processor command counter to the beginning of the code to be executed
+    in the thread;
+
+
+    this code is called a stream procedure or function, and the ng pointer is referred
+    to as a stream call or system call.
+
+
+    Note that when creating flows, as opposed to the creation process, there is no
+    need to allocate memory for the new address space, so usually flows are created
+    faster and with lesser resources.
+
+
+    # Features Completion Streams
+
+
+    At the end of the stream, its resources are released (first of all, the folder);
+    this operation is usually faster than completing the process. The flow may be
+    completed when the control reaches the end of the flow procedure; there are also
+    special system calls intended for early termination of flows.
+
+
+    Like processes, threads can be executed synchronously and asynchronously. A thread
+    that created another thread may pause its execution until it is completed. This
+    expectation is called joining streams (thread joining). Upon completion of the
+    attached thread,'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'the thread that was waiting to complete it may receive execution status. When
+    creating a stream or joining it, if the stream cannot connect, it is called *disconnected*
+    or detached. If the stream is not disconnected, it is called *Pluggable*, after
+    which it is necessary to join them to stop memory leakage.
+
+
+    # Managing Processes In UNIX and Linux
+
+
+    # Image Of The Process
+
+
+    In UNIX systems, the process image contains the following components:
+
+
+    +   - Process control unit
+
+    +   - The code of the program executed by the process
+
+    +   - The process stack where temporary data is stored (procedure parameters,
+    return values, local variables, etc.)
+
+    +   - Global data common to the whole process
+
+
+    # Identification Information And Process Security Attributes
+
+
+    The process identifier (PID) is unique throughout the system and is used to access
+    this process. The init process identifier is always one. The process ID of the
+    ancestor (ppid) is specified when it is created. If the ancestor of process P
+    completes execution, the ancestor of that process automatically becomes init,
+    so ppid for P will be unity.
+
+
+    With the process as fl'' related set of security attributes.
+
+
+    +   - The real user and process group identifiers (uid, gid) correspond to the
+    user who started the program, resulting in'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'the corresponding process appearing on the system
+
+
+    +   - Effective user and process group identifiers (eid, egid ) are used in a
+    special process execution mode - are owned by the owner
+
+
+    # Process Control Unit
+
+
+    Consider the structure of the process control unit in Linux.
+
+
+    The process control block on Linux is displayed by the task _ struct data structure.
+
+
+    The most important fields in this structure are fields that contain the following
+    information:
+
+
+    +   - Identification data (including pid - process identifier)
+
+    +   - Process status (execution, expectations, etc.)
+
+    +   - Pointers to ancestral and descendant structures
+
+    +   - Process creation time and total execution time (so-called process timers)
+
+    +   - Processor state (contents of registers and counter of instructions)
+
+    +   - Process security attributes (id, gid, euid, egid)
+
+
+    Note that the Linux kernel does not have a separate data structure for the stream,
+    so the processor status information is contained in the control block of the process.
+    In addition to the above, task _ struct has several custom fields required for
+    different Linux subsystems :
+
+
+    +   - Information for signal processing
+
+    +   - Process planning information
+
+    +   - About files and directories floor '' related to the process
+
+    +   - Data structure for managing memory subsystems'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'The task _ struct field data can be shared by several special purpose processes,
+    in which case these processes are actually threads. The control units of the process
+    are stored in the kernel in a special data structure. Prior to the release of
+    kernel 2.4, this structure was called a system process table; it was an array
+    whose maximum length could not exceed 4K. In the core processes, it has been replaced
+    by two dynamic data structures that do not have such a restriction:
+
+
+    +   - A hash table (where the pid of the process acts as a hash ), this structure
+    allows you to quickly find the process by its ID
+
+    +   - Ring list, this structure ensures the implementation of actions in the loop
+    for all system processes
+
+
+    Now the limit on the maximum number of processes is checked only within the implementation
+    of the fork ( ) function and depends on the amount of available memory (for example,
+    there is information that on a system with 512 MB of memory it is possible to
+    create about 32000 processes).
+
+
+    The implementation of a control unit in Linux is different from its traditional
+    implementation in UNIX systems. In most versions of UNIX (System V, BSD), the
+    process control block consists of two data layers - a process structure ( proc
+    ) and a user structure ( u ).
+
+
+    # # Creation Process
+
+
+    # ## Implementation Of The Fork ( ) in Linux
+
+
+    In UNIX- compatible systems, processes create an already known system call fork
+    ( ). Let''s consider its implementation in Linux.
+
+
+    +   1.  Allocate memory for the new process control block ( task _ struct ). If
+    memory is not enough, it returns an error
+
+    +   2.  All values from the ancestral data structure are copied to the descendant
+    data structure. After that, the fields whose'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'values should be different from the original ones will be changed. If the user
+    exceeds the specified number of processes for him or if the number of processes
+    in the system exceeds the maximum possible value (which depends on the amount
+    of available memory), the process creation stops and an error returns
+
+
+    +   3.  An identifier ( pid ) is generated for the process using a special algorithm
+    to guarantee uniqueness
+
+
+    +   4.  For the descendant, the necessary additional ancestral data structures
+    (table of file descriptors, information about the current directory, table of
+    signal handlers, etc.) are copied
+
+
+    +   5.  Form the address space of the process
+
+
+    +   6.  The process data structure is placed in the list and hash table of system
+    processes
+
+
+    +   7.  The process is put into readiness for execution
+
+
+    # Using Fork() In Applications
+
+
+    Consider an example of using a fork() system call to create a process. The description
+    of fork() according to POS IX looks like this:
+
+
+    ```
+
+    #include <unistd.h>
+
+    pid_t fork(); // type pid_t is an integer
+
+    ```
+
+
+    Since executing fork() causes the control of both the ancestor and the descendant
+    to switch to an operator, which after calling fork() (both begin to execute one
+    instruction), practically the only difference between the ancestor and the descendant
+    in the programmer''s view is in the code return fork().'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "For descendant fork () returns zero and for ancestor the id ( pid ) of the\
+    \ created descendant process. When for some reason the descendant was not created,\
+    \ fork () will return -1. Therefore, the normal code for and fork () looks like\
+    \ this:\n\n```\npid_t pid;\nif ((pid = fork ()) == -1)\n{ /* error, crash */}\n\
+    if (pid == 0)\n{\n    // is a descendant\n}\nelse\n{\n    // this is the ancestor\n\
+    \    printf (\" Descendant started with code % d \\ n \", pid);\n}\n```\n\nOnce\
+    \ the process is created, it can access the identifying information by a system\
+    \ call to getpid () which returns the current process ID, and getppid (), which\
+    \ returns the process ID of the ancestor.\n\n```\n#include <unistd. h>\npid_t\
+    \ mypid, parent_pid;\nmypid = getpid ();\nparent_pid = getppid ();\n```\n\n# Completing\
+    \ The Process\n\nTo end the process, UNIX systems use the _ exit () system call.\
+    \ Consider implementing this system call in Linux. The following actions occur\
+    \ during its execution.\n\n+   1. The status of the process shines through TASK\
+    \ _ ZOMBIE\n\n+   2."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '+   The process informs the ancestors and descendants that it has ended (with
+    the help of special signals)
+
+    +   3.
+
+    +   The resources allocated during the fork () call are released
+
+    +   4.
+
+    +   The scheduler is informed that the context can be switched
+
+
+    You can use either the _exit() system call or its exit() library function to complete
+    the process in applications. This function closes all process threads, correctly
+    releases all resources, and calls _exit() to actually complete it:
+
+
+    ```
+
+    #include <unistd.h>
+
+    void _exit(int status); // status specifies the return code
+
+    #include <stdlib.h>
+
+    void exit(int status); // status specifies the return code
+
+    exit(128);
+
+    ```
+
+
+    Note that it is better not to call exit() when a process can use resources in
+    conjunction with other processes (for example, it is a descendant process with
+    an ancestor, and a descendant inherited resource descriptors from the ancestor).
+    The reason is that in this case, trying to release the resources in the offspring
+    will result in them being released from the ancestors as well. You must use _exit()
+    to complete these processes.
+
+
+    # Waiting For Process To Complete
+
+
+    When the process is completed, its control block is not immediately removed from
+    the process list and hash and remains there until another process (ancestor) removes
+    it from there. If the process is actually missing in the system (it is finished),
+    but only its control unit, then the process is called a zombie process.
+
+
+    # Waitpid() system call'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "You can use the wait() system call to remove process information from Linux,\
+    \ but more often use the more versatile version of it - waitpid(). This call checks\
+    \ if the control unit of the corresponding process is in the system. If it is,\
+    \ and the pr/z is not in the zombie state (that is, it is still running), then\
+    \ the process in the case of waitpid() will go to standby. When the descendant\
+    \ process is completed, the ancestor exits standby and removes the descendant\
+    \ control unit. If the ancestor does not call waitpid() for the descendant, it\
+    \ may remain in the zombie state for a long time.\n\n# ### Synchronous Implementation\
+    \ Of Processes In Applications\n\nLet's consider the synchronous execution of\
+    \ processes based on waitpid().\nAccording to POSIX, this system call is defined\
+    \ as:\n\n```\n```\n# Include < sys/wait.h>\npid_t waitpid(pid_t pid,// pid of\
+    \ the expected process\n               int * status,// descendant completion status\
+    \ information\n               int options); // suppress as 0\n```\n```\n\nThe\
+    \ pid parameter can be set to 0, which means that the process is waiting for the\
+    \ same group to which the ancestor belongs, or as $\\u2212 1$, which means the\
+    \ expectation of any descendant. Here is an example of the implementation of synchronous\
+    \ execution with the expectation:\n\n```\n```\npid_t pid;\nif ((pid = fork())\
+    \ == - 1)\n    exit(-1);\nif (pid == 0)\n{\n    // descendant - call exec()\n\
+    }\nelse\n{\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\n// ancestor - wait for posternity\nint status;\nwaitpid (pid, & status,\
+    \ 0);\n// continue execution\n}\n```\n\nThe status value gives you more information\
+    \ about the completed descendant process. There are a number of macros with <\
+    \ sys/wait for .h>:\n\n+   - WIFEXITED ( status ) - a non-zero value when the\
+    \ descendant of a step has completed normally;\n+   - WEXITSTATUS ( status ) -\
+    \ descendant return code (only when WIFEXITED (!) = 0).\n\nThe descendant return\
+    \ code is obtained as follows:\n\n```\nwaitpid (pid, & status, 0);\nif (WIFEXITED\
+    \ (status))\n   printf (\" Descendant ended with code % d \\n\",\n   WEXITST A\
+    \ TUS (status));\n```\n\n# ## 5/3 7 Alerts\n\nIn the case of multitasking, there\
+    \ is a need to report processes about events occurring in the system or other\
+    \ processes. The simplest mechanism for this alert, defined by POSIX , is the\
+    \ *alerts*. The process after receiving the signal immediately responds to his\
+    \ call special functions - a *handler* of the signal ( signal handler ), or action\
+    \ by default for this signal with each signal related to its number, which is\
+    \ unique in the system. No other information along with the signal can be transmitted.\n\
+    \nAlarms are the simplest mechanism for interprocess on UNIX systems but since\
+    \ they allow the transmission of limited data, they"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'are mainly used for event reporting.
+
+
+    # ### Types Of Signals
+
+
+    Depending on the circumstance, the signals are divided into synchronous and asynchronous.
+    Synchronous signals occur during the execution of an active process stream (usually
+    through an error - access to the wrong memory area, incorrect floating-point operation,
+    execution of incorrect and n processor design). These signals are generated by
+    the OS kernel immediately sends them to the process whose thread was causing the
+    error.
+
+
+    Asynchronous signals can be received by the process at any time of execution:
+
+
+    +   * A programmer can send an asynchronous signal to another process using a
+    system call, which is POSIX systems, is called kill (), the parameters of that
+    call are the signal number and process identifier
+
+    +   * The signal may also be caused by some external event (keystroke, termination,
+    etc.)
+
+
+    During the processing of such signals, the system must interrupt the execution
+    of the current code, execute the processor code and return to the same instruction
+    that was executed at the time of receiving the signal.
+
+
+    # ### Layout Of Signals
+
+
+    On receipt of the signal process can respond in one of the three ways (method
+    response process called signal alert disposition):
+
+
+    +   * Call the signal handler
+
+    +   * Ignore a signal that in this case "disappears" and does not take any action'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '+   Use the default allocation (this is the default setting for each signal,
+    often ending the process)
+
+
+    The process can set individual exposure for each signal.
+
+
+    # Signal Blocking
+
+
+    The process can not only set the position of signals but also determine its willingness
+    to receive signals of a certain type at that moment. If the process is not ready,
+    it can block these signals. If a locked signal is to be delivered to a process,
+    the system queues it where it will stay and remains until the process unlocks
+    it. The process locks and unlocks signals by changing the *process signal mask*
+    (a special data structure that stores information about what signals can be delivered
+    to the process immediately, usually stored in its control block. The descendant
+    processes inherit the ancestral signal mask.
+
+
+    # Examples Of Signals
+
+
+    Consider the signals by POSIX and supported in Linux ( in parentheses next to
+    the name '' pit signal is given his room). By synchronous signals include, for
+    example, the signal SIGSEGV (11) that generates the system while recording a protected
+    area of memory.
+
+
+    Asynchronous signals include:
+
+
+    +   SIGHUP (1) - a gap called '' communication (eg, user out of the system)
+
+
+    +   SIGINT and SIGQUIT (2,3) - program interrupt signals from the keyboard (generated
+    by a user pressing Ctrl + C and Ctrl + \ respectively)
+
+
+    +   SIGKILL ( 9) - immediate termination of the program (this signal cannot be
+    changed position)
+
+
+    +   SIGUSR 1 SIGUSR 2 (10,12) - user signals that can use applications'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "+   SIGTERM (15) - Offer the program to shut down (this signal, unlike SIGKILL,\
+    \ may be ignored)\n\nThe default action for all of these signals, except for SIGSEGV,\
+    \ is to terminate the program (an additional memory dump ( core dump ) is generated\
+    \ for SIGSEGV - a file that stores the image of the process address space for\
+    \ later analysis).\n\n# ## Setting The Signal Layout\n\nA sigaction () system\
+    \ call is used to set the signal disposition.\n\n```\n#include <signal.h>\nint\
+    \ sigaction (int signum, // signal number\n            struct sigaction * action,\
+    \ // new layout\n            struct sigaction  * old_action); // return the previous\
+    \ disposition\n```\n\nThe exposition is described using the sigaction structure\
+    \ with the following fields:\n\n+   - sa_handler - pointer to the signal processor\
+    \ function\n+   - sa_mask - the signal mask that specifies which signals will\
+    \ be blocked inside the processor\n+   - sa_flag - additional checkboxes\n\nLimit\
+    \ to zeroing sa_mask and sa_flag (without blocking any signal):\n\n```\nstruct\
+    \ sigaction action = {0};\n```\n\nThe sa_handler field should be set as a pointer\
+    \ to a previously declared function that looks like this:\n\n```\nvoid user_handler\
+    \ (int signum)\n{\n    // signal processing\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '```
+
+    ```
+
+    }
+
+    ```
+
+    ```
+
+
+    This feature becomes a signal processor. The signum parameter determines which
+    signal is sent to the handler (the same handler can be logged for multiple signals
+    by several sigaction ( ) calls ). After logging in, the handler will always be
+    called when it receives the appropriate signal:
+
+
+    ```
+
+    ```
+
+    #include <signal.h>
+
+    void sigint _handler (int signum)
+
+    {
+
+    // SIGINT processing
+
+    }
+
+    // ...... action.sa_handler = sigint_handler;
+
+    sigaction (SIGINT, & action, 0);
+
+    ```
+
+    ```
+
+
+    If we need to organize the wait for the signal, the simplest way is to open a
+    system call pause ( ). In this case, the process enters standby mode, from which
+    it will output any signal:
+
+
+    ```
+
+    ```
+
+    // ask the handlers for help with sigaction ()
+
+    pause (); // wait for a signal
+
+    ```
+
+    ```
+
+
+    # Signal Generation
+
+
+    Let''s consider how to send a process signal. This uses the kill ( ) system call.
+
+
+    ```
+
+    ```
+
+    #include (signal.h>
+
+    int kill (pid_t pid, // process ID
+
+    int signum ); // signal number
+
+    ```
+
+    ```
+
+
+    For example, sending a SIGHUP signal to a process pid that is specified at the
+    command line:
+
+
+    ```
+
+    ```
+
+    kill ( atoi ( argv [1], SIGHUP );
+
+    ```
+
+    ```
+
+
+    # Organization Of Asynchronous Execution Of Processes'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "Consider how you can use signal processing to organize asynchronous process\
+    \ execution. As you know, calling `waitpid ()` causes an offspring to execute\
+    \ synchronously. When to start the descendant process is asynchronous. It seems\
+    \ natural not to call `waitpid ()` in the ancestor process for that descendant.\
+    \ But upon completion of the descendant process, it will turn into a zombie process.\n\
+    \nTo avoid this, you must take advantage of the fact that the ancestor process\
+    \ receives a special SIGCHLD signal at the end of the descendant process. Calling\
+    \ `waitpid ()` in this signal handler will remove the descendant process information\
+    \ from the process table, leaving zombies in the system.\n\n```\nvoid clear_zombie\
+    \ (int signum)\n{\n\twaitpid (-1, NULL, 0);\n}\nstruct sigaction action = {0};\n\
+    action.sa_handler = clear_zombie;\nsigaction (SIGCHLD, & action, 0);\nif ((pid\
+    \ = fork ()) == - 1)\n\t_exit ();\nif ( pid == 0 )\n{\n\t// descendant running\
+    \ asynchronously\n\texit ();\n}\nelse\n{\n\t// ancestor does not have a waitpid\
+    \ () call\n}\n```\n\n# Managing Threads in Linux\n\n# Basic support for multithreading"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'Until recently, the only multithreading support for Linux was the clone() system
+    call, which made it possible to create a new process based on an existing one.
+    This call is similar to the fork() call but has several other features.
+
+
+    +   ✩ For the new process, you need to specify a special set of checkboxes that
+    determine how resources will be distributed between the ancestor and the descendant.
+    The resources that can be shared include address space, open file information,
+    signal handlers. Note that in the traditional clone() implementation, there is
+    no special use of process identifier (pid), ancestor ID, and some other important
+    attributes
+
+
+    +   ✩ The new process poribno set a new stack (as a consequence call clone() two
+    processes can share a common memory diamond, are unacceptable for general use
+    stack)
+
+
+    Support clone() means implementing multithreading scheme 1: 1. The primary ones
+    in the system are processes, not threads (in Linux, the instructions given by
+    the kernel on which the kernel runs are called processes, not kernel threads).
+    The traditional multithreading implementation on Linux determines that user threads
+    are mapped to processes in the kernel. Therefore, it is impractical to look at
+    the flow data structures in Linux separately - it is displayed with the same task_
+    struct structure as the process.
+
+
+    # The Disadvantages Of Traditional Multitasking Support For Linux
+
+
+    Multithreading basics in the Linux kernel have not undergone the principle of
+    changes since the clone() system call. In the meantime, Linux has evolved from
+    an experimental system to an industry-wide system where enterprise-class heavy-duty
+    applications are implemented.
+
+
+    This use of the system has led to the implementation of multi- threaded high reliability
+    and scalability.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'It became apparent that the clone () system call implementation did not meet
+    these requirements. We had the full implementation of multithreaded processing
+    facilities at STI in the nucleus.
+
+
+    Flow control is part of the standard POSIX 1996 corresponding API was named streams
+    POSIX.
+
+
+    # ## Linux Kernel Threads
+
+
+    In addition to user processes and threads, Linux also supports a special kind
+    of planned objects that are already known as kernel threads. Such flows are scheduled
+    as normal processes and flows, each with its own id ( pid ). Differences of kernel
+    threads from processes and user threads are that:
+
+
+    +   - The flow functions for them are defined in the kernel code
+
+    +   - They run only in kernel mode
+
+    +   - Them inaccessible areas of memory '' memory allocated in user mode
+
+
+    # ## The Flow Management Software Interface
+
+
+    # ## Creating Threads
+
+
+    To add a new thread to the current process, POSIX uses the pthread_create () function
+    with the following syntax:
+
+
+    ```
+
+    ```
+
+    #include <pthread.h>
+
+    int pthread_create (pthread_t * th, pthread_attr * attr, void * (* thread_fun)
+    (void *). void * arg);
+
+    ```
+
+    ```
+
+
+    Consider the parameters of this function:
+
+
+    +   - th is a pointer to a predefined structure of type pthread_t which will then
+    be passed to other functions of work with'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "flows; then call the AI to handle the flow ( thread handle )\n\n+   Attr is\
+    \ a pointer to a structure with flow attributes (you need to pass a null pointer\
+    \ to use the default attributes; some attributes will be reviewed later)\n\n+\
+    \   thread _ fun is a pointer to a stream function that should be described as\n\
+    +   g void *mythread_fun ( void * value )\n+   {\n\n```\nvoid *mythread_fun (\
+    \ void * value )\n{\n    // executing the stream code\n}\n```\n\n+   arg - the\
+    \ data passed to the stream function (there they will get a parameter value )\n\
+    \nAn example of creating a POSIX stream:\n\n```\n# include < pthread . h >\n//\
+    \ flow function\nvoid * thread_fun ( void * num )\n{\n    printf ( \" stream number\
+    \ % d \\ n\", (int) num );\n}\n// ..........................\npthread_t th;\n\
+    // create the second thread\npthread_create (& th, NULL, thread_fun, (void *)\
+    \ ++ thread_num );\n// there are two threads running in parallel\n```\n\nThe new\
+    \ thread begins to run in parallel with the thread that created it. For example,\
+    \ if a thread was created inside the main () function, then two threads would\
+    \ continue to execute: an original program executing the main () code and a new\
+    \ one.\n\n# ## Completion of POSIX Streams\n\nTo end a thread, just go to the\
+    \ end of its thread function thread thread _ fun () or call pthread_exit () from\
+    \ it:\n\n```\n# include < pthread.h >\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '```
+
+    void pthread_exit (void * retval);
+
+    ```
+
+
+    The retval parameter specifies the return code. Here is an example of ending a
+    stream:
+
+
+    ```
+
+    void * turead_fun( void * num )
+
+    {
+
+    printf( " stream number % d \ n", (int) num);
+
+    pthread_exit(0);
+
+    }
+
+    ```
+
+
+    There are two different situations for the application startup code:
+
+
+    +   ◆  Executing the return statement or executing all statements by the end of
+    main () completes the whole process with all threads also completing their execution
+
+
+    +   ◆  Executing the pthread_exit () function inside the main () function completes
+    only the initial thread, this action does not affect other threads in the program
+    - they will continue executing until they are completed
+
+
+    Calling the pthread_exit () function is used only to join threads because it does
+    not release the flow resources - this is the responsibility of the threaded joiner.
+
+
+    # ## Waiting For Completion Of Threads
+
+
+    To await completion of threads, use the pthread_join () function. It has the following
+    syntax:
+
+
+    ```
+
+    int pthread_join (pthread_t the ,, void ** status);
+
+    ```
+
+
+    This function blocks the thread where it was called until the thread specified
+    by the handle deserves its execution. If the status is not a null pointer, it
+    will point to the data returned by the stream after the call (argument pthread_exit
+    ()). If the thread is already complete by the time the pthread_join () function
+    is called, its information should be read immediately.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Conclusions
+
+
+    +   Processes and threads are the active resources of computer systems that implement
+    code execution. The thread is called a set of sequentially executed processor
+    commands. A process is a collection of one or more threads and the protected address
+    space in which they are executed. Streams in the same address space can share
+    data together, and for streams of different processes without special means, this
+    is not possible. In traditional systems, each process can execute only one thread
+    code execution of processes. Modern operating systems support the concept of multithreading.
+
+
+    +   Using threads in an application means paralleling it - the ability to perform
+    actions simultaneously with different snippets of code. Program parallelism reflects
+    the asynchronous nature of the outside world, its sources being code execution
+    on multiple processors, I / O operations, user interaction, and client application
+    requests. Bahatopoto k ovist allows applications to implement this course and
+    achieve parallelism and efficiency.
+
+
+    +   There are user threads running in the slugger mode in the process address
+    space, and the kernel threads with which the OS kernel works. The relationship
+    between them determines the scheme of implementation of the flow model. In practice,
+    they often use the 1: 1 scheme, when each thread of the user corresponds to one
+    thread of the kernel, and the kernel itself is responsible for managing the threads
+    of the user.
+
+
+    +   The flow can be in different states (execution, expectations, readiness, etc.).
+    The principles of moving from one state to another depending on the principles
+    of flow planning and processor time planning. Moving the process from execution
+    state to any other state is about switching the context - transferring control
+    from one thread to another while preserving the state of the processor.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: +   ◇ Each process and flow in the system corresponds to its control unit -
+    a data structure containing all the necessary information. During the creation
+    process (usually by the system call fork ()) create one control unit, allocate
+    memory and launch the mainstream. Creating flow is faster and easier because they
+    do not need to allocate memory to the new address.
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# # Chapter 4:
+
+    ## Process and Flow Planning
+
+
+    The ability to run streams in parallel depends on the number of processors available.
+    If the processor is single, parallel execution is impossible in principle (only
+    one thread can be executed at any one time). If the number of processors is N
+    > 1, parallel execution can only be implemented for N threads (one thread per
+    processor).
+
+
+    The main purpose of scheduling for a single-processor system is to arrange multiple
+    threads on a single processor that would give the system user the impression that
+    they are running at the same time. This definition can be extended to multiprocessor
+    systems if a scheduling task occurs when the number of threads exceeds the number
+    of available processors.
+
+
+    Consider the basic types of planning, their principles, and algorithms.
+
+
+    # ## General Principles Of Planning
+
+
+    Consider the basic principles underlying planning.
+
+
+    # ## Features Of Thread Execution
+
+
+    In terms of scheduling, flow can be depicted as a cycle of alternating computation
+    (CPU usage) and I / O periods. The time interval during which the flow executes
+    only the instructions of the processor is called the CPU usage interval (CPU burst),
+    the time interval when the flow is waiting for I / O, the I / O burst interval.
+    Most of these intervals are from 2 to 8 ms.
+
+
+    Streams that spend more time computing and less - on the IO referred *disabilities
+    processor (CPU bound)*. They actively use the processor. Their main characteristic
+    is the time spent on computing, the intervals of CPU usage for them are longer.
+    Flows that take most of the time are pending IO referred *disabled input-output*
+    ( I / O bound ). Such threads load the processor much less,'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'and the average length of the processor usage interval for them is small. The
+    higher the clock speed of the processor, the more flows can be attributed to the
+    second category.
+
+
+    Processor-limited flow (matrix multiplication)
+
+    I / O restricted stream (text editor)
+
+    Interval input-output ( I / O bound )
+
+    and the interval CPU usage ( CPU bound )
+
+
+    # Planning Mechanisms and Policy
+
+
+    The planning *mechanism* and *policy* should be differentiated.
+
+    Scheduling mechanisms include context switching tools, flow synchronization tools,
+    etc., and scheduling policies are tools for determining when to switch contexts.
+    The part of the system that is responsible for policy planning called *scheduler*
+    ( scheduler ) and the algorithm used to this - *scheduling algorithm*.
+
+
+    There are various evaluation criteria for planning policies, some of which apply
+    to all systems, others to batch systems or interactive only. Today, three criteria
+    are most commonly used to evaluate goal achievement.
+
+
+    +   *   ***Minimum response time.*** This is the most important criterion for
+    interactive systems. Response time refers to the time between running a stream
+    (or typing an interactive command) and getting the first response. For modern
+    systems, we have taken the time of 50-150 ms
+
+
+    +   *   ***Maximum bandwidth.*** This is the number of tasks that the system can
+    perform per unit of time (for example, per second). Such a criterion is appropriate
+    to apply in batch systems; in interactive systems, it can be used for background
+    tasks. To increase bandwidth, you must:
+
+
+    +   *   Reduce wasted load time (for example, the time it takes to switch context)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '+   - Use resources more efficiently (to ensure that neither the processor
+    nor the I / O devices are idle)
+
+
+    +   - The third criterion is *equity*, which means that the CPU time is allocated
+    according to their importance. Fairness provides such a distribution of processor
+    time that all threads advance in their execution, and none proto. Note that implementing
+    a fair planning policy does not always reduce the average response time. Sometimes
+    this requires making the system less fair
+
+
+    # Planning Principles
+
+
+    The principles of flow planning are applicable first of all to multithreaded systems
+    with 1: 1 scheme implementation (only kernel flows are planned here), as well
+    as to systems with the implementation of process modules. In the latter case,
+    the term “process” can be used instead of the term “flow” and the information
+    necessary for planning can be stored in the structures of these processes. More
+    complex scheduling principles are used in multithreaded systems for which the
+    number of user threads does not match the number of kernel threads (Schemes 1:
+    M and M: N). They require two schedulers: one for kernel-level operation, the
+    other for user mode.
+
+
+    # Types Of Planning
+
+
+    Distinguish between long - term scheduling, medium-term scheduling, and short-term
+    scheduling.
+
+
+    # Long-Term Planning
+
+
+    Long-term planning means determining which of the programs should be in the vicinity
+    to perform the download. This scheduling is also called static because it does
+    not depend on the current state of the system. It played an important role in
+    batch systems when it was known in advance what processes needed to be completed
+    and the tasks could be scheduled. In interactive systems (eg systems with'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'time-sharing) loading processes in principally engaged users, and it is not
+    subject to planning; so they usually use a simplified long-term planning strategy.
+    The system allows you to create processes and threads to reach some maximum limit,
+    and then further attempts to create a new process or flow will cause an error.
+    This strategy is also based on the psychology of users, who, feeling uncomfortable
+    in an overloaded system, can interrupt work with it, which leads to reduced load.
+
+
+    # Medium-Term Planning
+
+
+    Medium-term scheduling controls the transition of paused flows to standby and
+    back. In the control unit which is ready for execution, threads are immediately
+    organized in a structure called queue of ready threads ( or ready queue ).
+
+
+    The transition to a suspended state can be caused by the following factors:
+
+
+    +   - Waiting for an I / O operation
+
+    +   - Waiting for the completion of another thread (joining)
+
+    +   - Blocking a stream because it needs to be synchronized with other streams
+
+
+    Usually, for the correct organization of this expectation, in addition to the
+    queue of ready threads, they implement an additional set of queues. Each such
+    queue is associated with a resource that may cause flow expectations (eg, an I
+    / O device); These queues are called `scheduling queues` or `waiting for queues`
+    ( wait for queues ). The mid-term scheduler manages all these queues by moving
+    threads between them and the queue of ready threads.
+
+
+    # Short-Term Planning
+
+
+    Short-term planning or *scheduling processor* ( CPU scheduling ) is the most important
+    type of planning. It answers two basic questions:'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '+   - When to interrupt a stream?
+
+    +   - Which of the ready-to-execute threads should the processor transfer at this
+    point?
+
+
+    *A short-term scheduler* is an OS subsystem that interrupts the active flow in
+    the event of a need and chooses the one that should be executed from the queue.
+    Its performance is top-notch because it receives control very often. There is
+    also a controller ( dispatcher ), which directly controls pre-selected streams
+    (context switches).
+
+
+    The format of the queue of ready flows depends on the implementation of short-term
+    planning. This stage can be organized on the principle of FIFO, set the priorities,
+    wood or disordered, which is called the related list.
+
+
+    All of the planning strategies and algorithms that we will look at below are short-term
+    planning.
+
+
+    # **Planning Strategies - Displacement And Non-Displacement Multitasking**
+
+
+    Before considering basic planning strategies, let''s list the options for transferring
+    controls from one thread to another:
+
+
+    +   - After the flow has entered a standby state (for example, during input-output
+    or connection)
+
+    +   - After completion of the flow
+
+    +   - Explicit (the thread itself gives the processor other threads for a while
+    until it is busy)
+
+    +   - Interrupts (for example, a timer interrupt can interrupt a stream that is
+    running longer than allowed)
+
+
+    The latter option differs from the others in that the flow cannot control when
+    the control transfer time has come, which is the responsibility of the operating
+    system scheduler. Depending on this variant of'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'control transmission, there are two main strategies for flow planning - displacement
+    and non-displacement multitasking. In pre-emptive multitasking, logical flows
+    may be temporarily interrupted without the need for them to transfer control to
+    other flows. Interrupting the flow and transfer control to another stream often
+    done in the interrupt handler of the system (and also the mayor). This strategy
+    is implemented in all modern operating systems.
+
+
+    In multitasking, flows may be performed during an unlimited time and cannot be
+    used in interrupted OSes. For non-redundant multitasking, the latter control transmission
+    is not implemented, and the streams themselves must give control of the OS for
+    transmission to other threads or at least go to standby. If a thread forgets or
+    fails to do so, for example, it will take the processor an endless loop, other
+    threads will not be able to continue their work. This strategy was implemented
+    in Nowell Net Ware.
+
+
+    Naturally, the implementation of non-redundant multitasking in the general case
+    makes the system quite unstable (any incorrectly written application of the user
+    can cause a "hang" of the whole system). The practice has shown that non-redundant
+    multitasking in systems with user applications cannot be implemented. Such a strategy,
+    however, can be used in systems where all applications are executed in kernel
+    mode and are actually system drivers. The development of such applications requires
+    high skills of programmers, requirements for reliability of applications can be
+    compared with the requirements for the OS itself. With the simplicity of implementation
+    and absence of external interruptions of flows from the OS, the scheduler can
+    increase system productivity for the limited range of tasks (for example, in the
+    case of Net Ware OS it was to use the system as a file server).
+
+
+    # ### Planning Algorithms
+
+
+    The scheduling algorithm allows a short-term scheduler to choose from the ready-to-run
+    threads the one to be executed next. It can be said that planning algorithms implement
+    planning policies.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'Depending on the planning strategy implemented by the algorithms, they are
+    divided into displacement and non-displacement. Displacement algorithms interrupt
+    flows during their execution, non-displacement algorithms do not interrupt. Some
+    algorithms fit only one of these strategies, others may have both displacement
+    and non-displacement implementations.
+
+
+    # FIFO Planning
+
+
+    Consider the simplest ("naive") inelible algorithm in which flows are executed
+    in order of their appearance on the system and executed before going to standby
+    explicit transmission or completion. The queues of finished streams are organized
+    according to the FIFO principle, so the algorithm is called the FIFO algorithm.
+    As soon as a new stream is created in the system, its control unit is added to
+    the tail of the queue. When the processor is released, it is provided to the stream
+    from the queue head.
+
+    This algorithm has many disadvantages:
+
+
+    +   * It is by definition irreversible
+
+    +   * The average response time for it may be quite significant (for example,
+    if the former receives a stream with a long CPU usage interval, other streams
+    will wait even if they themselves use only short intervals)
+
+    +   * It is subject to the convoy effect (convoy effect)
+
+
+    The effect of the convoy can be explained by this situation. Suppose there is
+    a single thread (let''s call it T _CPU ) in the system, limited by the processor
+    capabilities, and many T _io threads limited by the I/O capabilities. Sooner or
+    later, the T _CPU thread will be available to the processor and will execute instructions
+    with a long interval of use of the CPU. During this time, the other T _io streams
+    will complete the I/O, queue the finished threads and wait there, with the idle
+    I/O devices. When T _CPU finally block and will transfer control of all'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'flows T io quickly follow the instructions of their ranges CPU and then move
+    to the IO. After that, T CPU will again capture the processor for a long time,
+    etc.
+
+
+    # ## Circular Planning
+
+
+    The easiest to understand and the fairest algorithm is a *circular plan* algorithm
+    (round-robin scheduling). In the Middle Ages, the term “round-robin ” was coined
+    in petitions where signatures were done in a circle so that one could not know
+    who signed up first (this name indicates that for such an algorithm all flows
+    are equal).
+
+
+    Each stream allocated time period in which this stream is allowed to run is called
+    a *time slice* ( or time quantum ). When the thread is still running after the
+    time quantum is exhausted, it is interrupted and the processor switches to perform
+    instructions from another thread. When it blocks or completes its execution until
+    the time quantum runs out, the processor is also passed to another thread. The
+    length of time quantum for the whole system is the same.
+
+
+    Such an algorithm is quite easy to implement. For this, the turn of the ready
+    threads should be a cyclic list. When a stream has exhausted its quantum of time,
+    it is moved to the end of the list, where new flows are provided. Checking the
+    exhaustion of the quantum of time is performed in the interrupt handler from the
+    system timer.
+
+
+    The only characteristic that affects the operation of the algorithm is the length
+    of the quantum of time. The balance between time spent switching contexts and
+    having to respond to many simultaneous interactive queries should be kept in mind
+    here.
+
+
+    Tasking too short a quantum of time leads to a lot of context switches, and a
+    significant percentage of CPU time is spent not on useful work, but on those switches.
+    On the other hand, the task of a too-long quantum, while saving CPU time, also
+    reduces the response time for interactive queries because if ten users press a'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'key at the same time, ten threads will be in the ready list, resulting in the
+    last one expecting ten long quanta time. In the case of a quantum of infinite
+    length, circular scheduling is reduced to the FIFO algorithm (all threads have
+    time to block or end before the quantum is exhausted). In practice, it is recommended
+    to set the quantum length to 10 - 100 ms.
+
+
+    Note that traditional circular scheduling can "skew" toward streams that are constrained
+    by processor capabilities. Such threads preferably utilize their quantum completely,
+    whereas threads limited by I / O often transmit control until the quantum runs
+    out, and as a result, they have less processing time. To solve this problem, you
+    can increase the length of the quantum (given the problems described earlier)
+    or enter an additional queue of completed I / O streams, which takes precedence
+    over completed queues.
+
+
+    # Priority Planning
+
+
+    Circular duty scheduling assumes that all flows are equally important. Otherwise,
+    prioritized planning should be used. The basic idea is simple: each thread is
+    given priority, while the highest priority stream from the queue of ready threads
+    will be executed. Priorities can be given statically or dynamically.
+
+
+    One of the approaches to the implementation of planning priorities algorithm is
+    multi-queue ( multilevel queues ). In this case, several bursts organize groups
+    with different priorities streams (streams each group usually have different purposes).
+
+
+    The decision to choose the thread to execute is made as follows:
+
+
+    +   * If the highest priority streams are streams, they should use a simpler scheduling
+    algorithm (such as circular scheduling), without regard for streams in other queues
+
+    +   * If there are no threads in the queue, the threads with the lower it priority
+    move to the queue'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'Different scheduling algorithms can be used for different queues, and each
+    queue can be allocated a certain amount of CPU time. Sharing priorities is a difficult
+    task, and failing to resolve them can cause streams of low priority processes
+    to wait a long time. For example, in 1973, a machine was stopped at the Massachusetts
+    Institute of Technology, which found a low-priority process - it was queued for
+    execution in 1967 and has not been able to run since. This situation is called
+    *starvation*.
+
+
+    There are different ways to solve the problem of starvation. For example, a scheduler
+    can gradually reduce the priority of the stream they perform (this process is
+    called aging), and when it becomes lower than the next priority stream, switch
+    the context to that stream. You can, on the contrary, gradually increase the priority
+    flows waiting in UT.
+
+
+    # ## Planning Based On Performance Characteristics
+
+
+    An important class of prioritized scheduling algorithms is algorithms in which
+    decisions about the choice of flow to execute are made on the basis of knowledge
+    or evaluation of the characteristics of its further execution.
+
+
+    First of all, it should be noted that in the " *first - with the shortest time
+    of execution* " algorithm (Shortest Time to Completion First, STCF ), when associated
+    with each duration interval following the use of the CPU, each is selected to
+    perform at the stream in which this short interval. As a result, streams that
+    capture the CPU for a shorter time get an advantage during scheduling and leave
+    the system faster.
+
+
+    The STCF algorithm is theoretically optimal by the criterion of the average response
+    time, that is, it can be proved that for the selected group of flows, the average
+    response time in the application of this algorithm will be minimal compared to
+    any other algorithm. Unfortunately, for short-term planning, it is impossible
+    to implement it because this implementation requires anticipation of the expected
+    characteristics. For long-term planning, it is used quite often (in this case,
+    when setting the task for the operator, the'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'operator must indicate the expected time of completion, which the system will
+    take into account when choosing). Note also that the optimality of such an algorithm
+    is inseparable from its "unfairness" to flows with longer CPU usage intervals.
+
+    For short-term scheduling, an approximation to this algorithm may be implemented
+    based on an estimate of the length of the next processor usage interval, taking
+    into account previous intervals of the same flow. You can use recursion in the
+    formula to calculate this estimate
+
+
+    ```
+
+    t $_{n+1}$ = at $_{n}$ + (1- a ) t $_{n}$, 0 ≤ a ≤ 1,   t $_{0}$ = T $_{0}$,
+
+    ```
+
+
+    +   where t $_{n+1}$ - estimate the length of the interval;
+
+    +   t $_{n}$ is an estimate of the length of the previous interval;
+
+    +   T $_{n}$ is the true length of the previous interval.
+
+
+    The most commonly used values are a = 0.5, in this case, it is sufficient to calculate
+    the average between the previous estimate and the actual interval value.
+
+
+    Shortest Remaining Time to Completion First, SRTCF.
+
+    Its difference from STCF is that when a new thread is queued for ready threads,
+    the next CPU usage time is shorter than the time remaining before the current
+    thread completes, the current thread is interrupted and a new thread becomes in
+    its place.
+
+
+    # Multilevel Feedback Queues
+
+
+    Algorithms *of* *multi* *bursts* *with* *feedback* ( multilevel feedback queues
+    ) are scheduling algorithms (using settings it can be reduced to any other algorithm),
+    but one of them is used in the implementation. In terms of organizing data structures,
+    this algorithm is similar to the conventional multilevel queue algorithm: there
+    are several queues of ready threads with different priorities, with lower priority
+    queue threads only running when all upper-level queues are empty.
+
+
+    The differences between the two algorithms are:'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '+   *   Flows are allowed to cross from level to level
+
+    +   *   Flows in a line are united not by priority and the length of the use interval
+    flows with shorter intervals are in line with higher priority
+
+
+    Within all queues, except the lowest, use circular scheduling (the lowest FIFO
+    algorithm works). The different queues correspond to different lengths of time
+    quanta - the higher the priority, the shorter the quantum (usually the length
+    of the quantum for adjacent queues is halved). If the flow has exhausted its time
+    quantum, it moves to the tail of the queue with a lower priority (and with a longer
+    quantum). As a result, flows with shorter intervals (such as limited I / O) remain
+    with high priority, and flows with longer intervals extend their time. You can
+    also automatically move non-managed streams from the lower tier to the tier in
+    and out.
+
+
+    # Lottery Planning
+
+
+    Planning lottery ( lottery scheduling ) - algorithm, easy to understand and easy
+    to implement and it has great potential. The idea of lottery planning is that:
+
+
+    +   *   The stream receives an insane amount of lottery tickets, each of which
+    entitles the processor to use T for a time
+
+    +   *   The scheduler selects one lottery ticket at random over a period of time
+    T
+
+    +   *   The winnable stream gets control to the next draw
+
+
+    Lottery planning allows you to:
+
+
+    +   *   Emulate circular scheduling, giving each stream the same number of tickets'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '+   - Emulate priority scheduling, distributing tickets according to stream
+    priorities
+
+    +   - Emulate SRTCF - give short streams more tickets than long ones (if the stream
+    received at least one ticket, it would not starve)
+
+    +   - Ensure that the processing time is split between threads - give each thread
+    a number of tickets proportional to the fraction of processor time it needs to
+    allocate (for example, if there are three threads, and it is necessary for thread
+    A to occupy 50% of the processor and threads B and C, 25 each %, it is possible
+    to give stream A two tickets and flows B and C one each)
+
+    +   - To change priorities, selecting and adding tickets on the go
+
+
+    Although most of these tasks can be solved by lottery planning, only approximately,
+    with some likelihood, in practice, they are quite satisfactory. The longer the
+    system works, the closer the results will be to the theoretical values (by the
+    law of large numbers). In fact, lottery planning takes advantage of the fact that
+    all planning ideology is largely heuristic since one cannot accurately predict
+    the nature of flow behavior in the system.
+
+
+    # Implementation Of Planning In Linux
+
+
+    Consider two options for implementing Linux scheduling - the traditional one (which
+    includes kernels up to 2.4 inclusive) and the new one included in the 2.6 kernels.
+
+    The Linux kernel does not distinguish between processes and flows when planning,
+    so for certainty, we will continue to discuss process planning. All processes
+    in the system can be divided into three groups: real-time with FIFO scheduling,
+    real-time with circular scheduling, normal.
+
+
+    # Real-Time Scheduling Of Kernel Processes
+
+
+    Regarding real-time processes, it is enough to say that:'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '+   - They will always have priority over normal processes when planning
+
+
+    +   - The FIFO scheduling process is performed until it itself gives in to the
+    processor (for example, as a result of suspension or termination) or until it
+    is superseded by a higher-priority real-time process
+
+
+    +   - The same applies to the circular scheduling process, except that it will
+    be further displaced after the quantum of time is exhausted
+
+
+    # ### Traditional Scheduling Algorithm
+
+
+    Consider an algorithm for scheduling ordinary processes. At the core of the algorithm
+    is the allocation of CPU time to the *epoch* (epochs). During the epoch, each
+    process has a quantum of time, the length of which is calculated at the time of
+    the epoch. For the most part, different processes have quanta of different lengths.
+    When the process has exhausted its quantum, it is displaced and during the current
+    era, it will no longer be performed. Management is given to another process. If,
+    however, the process is paused for I / O or due to synchronization, its quantum
+    is not considered exhausted and it may be exhausted by the scheduler during the
+    current era. The era ends when all ready-to-complete processes have exhausted
+    their quanta. In this case, the scheduling algorithm recalculates the quanta for
+    all processes and begins a new era. The quantum, which is set at the beginning
+    of the era, is called the *basic quantum of the processing time*. Its values can
+    be dynamically modified by the *nice* () and *setpriority* () system calls. The
+    descendant process always inherits the basic quantum of its ancestor.
+
+
+    There are two types of process priority: fixed, for real-time processes that are
+    set only during the process creation, and dynamic, for normal processes, which
+    depend on the basic priority and the time remaining until the quantum is exhausted.
+    Dynamic priority to any'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'conventional process is always lower than the priority of any real process
+    for the first time.
+
+
+    We describe the most important fields of the process data structure for planning:
+
+
+    +   - Policy - determines to which group the process belongs (normal, real-time
+    FIFO algorithm, etc.)
+
+    +   - Nice - specifies the value on which the base quantum of the processing time
+    is based (in the future, for simplicity, we will consider nice to be equal to
+    the base quantum; in fact, this is not quite so)
+
+    +   - Counter - Contains the number of timer interrupts left before the process
+    quantum is exhausted. At the beginning of the era of a counter, the values of
+    the base quantum are reduced and reduced by one in the timer interrupt handler
+
+
+    # Planning Procedure Call Conditions
+
+
+    Consider a situation where a scheduling call (called a schedule ()) occurs.
+
+
+    +   - When the process needs to be blocked because the resource it needs is unavailable
+    at this time. In this case, its control unit is first added to the corresponding
+    waiting queue, and then the redevelopment takes place
+
+    +   - With the delayed start ( lazy invocation ). The delayed startup is that
+    at a certain point in time, special field needs _ reached process structures are
+    assigned a value of 1. This is echoed in the following cases: when the current
+    process has exhausted its quantum; when a process whose priority is higher than
+    the current one goes into standby; when the process is clearly inferior to its
+    right to execute through an appropriate system call. This redevelopment happens
+    immediately, but later, when the'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "process must regain control after the interrupt, it checks whether the field\
+    \ is needed _ reached unit. If equal, the scheduling process is started\n\n# ##\
+    \ Planning Procedure\n\nThis procedure first checks that the current process is\
+    \ not in the standby state, and if so, removes it from the process queue. Then\
+    \ a process is selected for execution. To do this, view the queue of finished\
+    \ processes, for each process evaluate the dynamic priority and select the process\
+    \ and with its maximum value. For a process that has run out of its quantum of\
+    \ time, it will be zero. If no process has been selected, the current process\
+    \ continues. When the choice is made, the context is switched to a new process.\n\
+    \n# ## The Beginning Of A New Era\n\nA special situation arises when for all processes\
+    \ in the queue of ready processes the value of dynamic priority is zero, that\
+    \ is, they have all exhausted their quantum, and it is time to start a new era.\
+    \ However, this does not mean that the system does not have processes for which\
+    \ the quantum is not exhausted - they can be queued (most often, these are processes\
+    \ that are limited by I/O. \n\nWhen a new era opens, the quantum is recalculated\
+    \ for all system processes (not just standby processes). In this case, the length\
+    \ of the quantum for each process is set equal to the sum of its base priority\
+    \ and half of the remaining quantum in it:\n\n```\nfor each_task (p)  \n p.counter\
+    \ = (p.counter / 2) + p.nice;\n```\n\nSince the beginning of a new era of quantum\
+    \ remains nonzero only in processes that are not in a state of readiness, this\
+    \ algorithm provides an advantage to processes disabilities output. In this case,\
+    \ the quantum value for the process can never be greater than twice its base priority\
+    \ value."
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Dynamic Priority Calculation
+
+
+    Let us return to the calculation of dynamic priority. To do this, use the goodness
+    () function. Consider the possible values that it can return.
+
+
+    +   0 - when the process has run out of time. This process will not be selected
+    for execution. Except when it is in the queue of finished processes first, and
+    all other processes in the queue have also exhausted their quantum
+
+
+    +   0 to 1000 - if the process has not exhausted its quantum of time. This value
+    is calculated based on the value of the base quantum of the process and the portion
+    of the current quantum remaining in it. This can be summarized as follows:
+
+
+    ```
+
+    c = p.counter + p.nice; where p is a pointer to the control block of the process.
+
+    ```
+
+
+    This implies that the longer the process takes to complete and the longer it''s
+    base quantum, the higher its priority. In addition, further increasing the value
+    per unit for processes that use the same memory as ancestors (for example, if
+    the process shows the flow created by using the clone () ).
+
+
+    # Recounting A Quantum When Creating A New Process
+
+
+    Consider what happens when you create a new process. The simplest solution (to
+    copy the counter value to the descendant data structure) can cause processes to
+    artificially extend their quantum by creating new descendants that execute the
+    same code. In order to prevent this, after the fork () function, the values of
+    the counter are split in half: one half goes to descendants, the other remains
+    ancestral.
+
+
+    List the disadvantages of the algorithm.
+
+
+    +   The choice of process to execute is due to the calculation of the dynamic
+    priority for all processes in the queue of finished'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 'processes. With the increasing number of ready processes in the system, it
+    is unprofitable to view the queue from start to finish during each call of the
+    scheduling procedure
+
+
+    +   • If the number of processes is very large, it will take a long time to list
+    all the dynamic priorities at the beginning of a new era. On the other hand, epochs
+    change less often with more processes in the system
+
+
+    +   • The algorithm is designed to reduce response time for processes with limited
+    I/O capabilities, even if they are not interactive (eg, background search engine
+    indexing) and do not require a short response time
+
+
+    +   • With the increase in the number of processors, maintaining common queues
+    that do not take into account the presence of different processors becomes unprofitable
+
+
+    # Modern Approaches To Planning Implementation
+
+
+    These shortcomings began to significantly affect the operation of the system when
+    it was operating under load conditions. Under normal circumstances, traditional
+    Linux scheduling worked quite effectively. Work on fixing the shortcomings has
+    continued. As a result, a new implementation of the scheduling algorithm has been
+    integrated into the kernel of version 2.6. Consider briefly how it helps the solution
+    '' bind previously mentioned problems.
+
+
+    First of all, this algorithm supports separate queues of finishing processes for
+    each processor, ensuring efficient operation under conditions of multiprocessing.
+    Another problem that has solutions connected with the need to rely on the old
+    algorithm for the dynamic priority of all ready processes during each procedure
+    call planning. The decisions are as follows: each queue of the digestion processes
+    is an array of ready-made process queues, where the elements are sorted by dynamic
+    priority. As a result, when choosing a process to execute, it is enough to look
+    at the highest priority queue for the first process that can be started. This
+    procedure does not depend on the number of ready processes with a STEM.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'There are two arrays of queues of ready processes - an array of queues of active
+    processes and an array of queues of processes with an exhausted quantum. After
+    the process has exhausted its quantum, it is transferred from the first array
+    to a long one. When there is no process in the active queue, both arrays are replaced
+    by missions, and the sequence of steps is repeated from the beginning. As a result,
+    the depletion of quanta processes increases the likelihood of running those processes
+    that have not yet been managed.
+
+
+    # The Programming Interface Of Planning
+
+
+    Let''s take a look at the Linux system calls that can handle the underlying process
+    priority (the value nice ) and thus influence their scheduling.
+
+    To change the base priority of the process, use the call set priority ():
+
+
+    ```
+
+    ```c
+
+    #include <sys / resource.h>
+
+    int setpriority (int which, int who, int priority);
+
+    ```
+
+    ```
+
+
+    In particular, the parameter which can be set to PRIO_PROCESS or PRIO_USER, respectively,
+    indicating that the parameter will be interpreted as a process identifier or user
+    ID. In the first case, they set a priority for a specific process (or for the
+    current process, if who equals zero), in the second - for all processes of that
+    user.
+
+
+    The priority parameter sets a new priority. Priority may vary from −20 to 20,
+    smaller values indicate higher priority. The default value is 0. Negative priority
+    values can only be set by users with admin privileges.
+
+
+    Use the getpriority () call to get information about the current base priority
+    :
+
+
+    ```
+
+    ```c
+
+    Int getpriority (int which, int who);
+
+    ```
+
+    ```
+
+
+    This call returns the priority value, the which and who parameters for it have
+    the same meaning as for the setpriority () function.
+
+    Here''s an example of how to use these calls:'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '```
+
+    // set a priority for the current process
+
+    setpriority ( PRIO _ PROCESS , 0,10);
+
+    // find out about the current priority value
+
+    printf (" current priority: % d \n ", getpriority ( PRIO _ PROCESS ,
+
+    0));
+
+    ```
+
+
+    You can also use the nice() system call to change the underlying priority of the
+    current process relatively :
+
+
+    ```
+
+    # Include <unistd . h>
+
+    int nice (int inc ); // changes the priorities of the current process to
+
+    inc.
+
+    ```
+
+
+    # ## Conclusions
+
+
+    +   - The task of scheduling a thread is to organize the execution of multiple
+    threads on a single processor so that users have the impression that they are
+    running at the same time. Planning goals are: minimizing response time, maximizing
+    throughput and fairness. Major planning strategies include displacement and non-displacement
+    multitasking. In modern operating systems, multitasking is used when decisions
+    about switching the flow context are made in the system kernel code and not in
+    the flow code.
+
+
+    +   - Distinguish between long-term, middle-term and short-term planning. The
+    most important here is a short-term scheduler, which is used to decide which flow
+    to run at a given time. Basic short-term scheduling algorithms include circular
+    and priority planning.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# # Chapter 5:
+
+    ## Flow Interaction
+
+
+    Let''s consider the basic principles of interaction of flows of one process. The
+    focus will be on synchronizing access to the shared data of such streams.
+
+
+    # ## Basic Principles Of Flow Interaction
+
+
+    Threads that are executed in a parallet process can be independent or interact
+    with each other. A stream is independent if it does not affect the execution of
+    other process threads, does not detect the impact on their part, and has no data
+    in common with them. Its implementation is clearly dependent on the input data
+    and is called deterministic.
+
+
+    All other threads are interacting. These threads have data shared with other threads
+    (they are in the address space of their process). Their implementation depends
+    not only on the input data but also on the execution of other threads, ie they
+    are *non-deterministic* (let us consider further examples of such non-deterministic).
+
+
+    Independent thread execution results can always be repeated, which is not the
+    case with interacting threads. Data Worms are common to several streams, called
+    shared data. This is the most important concept of multi-threaded programming.
+    Any stream can change this data at any time. Mechanisms for ensuring correct access
+    to shared data are called flow synchronization mechanisms.
+
+
+    Working with independent streams is easier than interacting with threads. A programmer
+    may disregard the fact that others are running concurrently with such threads,
+    and ignore the state of the shared data that the thread is working with.
+
+
+    However, there are several reasons why you cannot implement thread interaction.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '+   - It is necessary to organize the sharing of information when working with
+    streams. For example, database or web server users may want to request the same
+    information at one time, and the system must ensure that it is received concurrently
+    by the threads that serve those users
+
+
+    +   - Proper implementation of this interaction and the use of appropriate algorithms
+    can significantly speed up the computing process on multiprocessor systems. This
+    task is divided into subtasks that perform simultaneously on different processors,
+    and the results are collected together for the final solution liabilities. This
+    technology is called *parallel computing technology*
+
+
+    +   - In tasks requiring concurrent execution of I / O calculations, I / O threads
+    should be able to signal to other threads with the completion of their operations
+
+
+    +   - Such an organization makes it possible to divide tasks into separate executable
+    modules, designed as separate threads, which, at the same time, the output of
+    one module can be an input for another, and also increases the flexibility of
+    the system, since individual modules can be changed without tapping others
+
+
+    The need for concurrent execution of interacting streams requires mechanisms for
+    exchanging data between them and ensuring that they are synchronized.
+
+
+    # ## The Main Problems Of Flow Interaction
+
+
+    # ### The Problem Of Competition
+
+
+    Let''s look at a simpler example of what can happen when interacting streams share
+    common data without additional synchronization steps. Suppose that in banking
+    organization systems for the service of each user allocate a separate flow (then
+    trying to improve the system performance in the case of a large number of simultaneous
+    requests). Suppose that putting data on a user''s contribution is'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'reduced by increasing the global variable total _ amount. At this time, each
+    sweat and k when changing the deposit is executed by the following simple operator:
+
+
+    total _ amount = total _ amount + new _ amount;
+
+
+    The question is: is it possible to guarantee that, due to the contribution, the
+    flow, corresponding to each user, will be able to increase the value of total_amount
+    by the required value?
+
+
+    In fact, this at first glance is the simplest operator boils down to a sequence
+    of actions:
+
+
+    +   - Get the current value of total _ amount of global memory '' memory
+
+    +   - To increase its new _ amount and store the result in a global memory ''
+    memory
+
+
+    Consider the case where two users A and B share the same account. There are 100
+    monetary units in the account. User A is going to deposit 1000 User at the same
+    time - 100 Flow T$_{A}$ corresponding to the user A, T flow$_{in}$ - the user
+    B.
+
+
+    Consider the following sequence of events (option 1).
+
+
+    +   1. Stream T$_{A}$ reader mentioned total _ amount, equal to 100
+
+    +   2. The stream T$_{B}$ reads the value total _ amount, also equal to 100
+
+    +   3. Stream T$_{A}$ increases the read values in step 1 total _ amount in 1000,
+    received 1100 and stores it in memory
+
+    +   4. The T$_{B}$ stream increases the value of total _ amount in step 2 by 100,
+    gets 200, and also stores it in global memory,'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'overwriting what the stream Thas saved
+
+
+    User A''s contribution is completely lost.
+
+
+    Now consider another sequence of events (Option 2).
+
+
+    +   1.  Stream TA reads total_amount, increase it to 1000 and records the value
+    1100 in the global memory
+
+
+    +   2.  Stream Tin reading total_amount, equal to 1100, it increased to 100 in
+    1200 and writes the value into a global city
+
+
+    As a result, both contributions were successfully registered.
+
+
+    As you can see, the result of executing the simplest code snipet above depends
+    on the sequence of execution of threads in the system. This leads to the following:
+    in one situation the code may work, in the other - no, and in general it is impossible
+    to predict the occurrence of an error. This situation is referred to as race (or
+    race condition), which is one of the most difficult bugs captured faced by programmers.
+    It is practically non-negotiable (since it is unrealistic to override all possible
+    combinations of flow execution sequences, especially if there are many).
+
+
+    Attempts to bind these necessitated problems into synchronization streams. Immediately
+    note that the problems of synchronization and organization of parallel computing
+    are some of the most difficult in practical programming. Therefore, the development
+    and debugging of multithreaded programs in particular often seen as a kind of
+    "art" that is not known to all programmers.
+
+
+    In fact, such development and debugging is not an art, but a strict discipline,
+    subject to one basic principle: because for multithreaded programs, traditional
+    debugging is not suitable, the programmer'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'must write the code so that at the stage of development, there is room for
+    errors. Let us familiarize ourselves with the rules that must be followed in order
+    for the generated code to comply with this principle. Consider the main approaches
+    to competition problems.
+
+
+    Sometimes (but rarely enough) you can just ignore these mistakes. This may make
+    sense when we are not interested in the accurate recording of particular data,
+    but collect statistics about them, so individual errors will not affect the overall
+    result. For example, a global counter is a value on which to calculate the average
+    number of requests to the system per day, and you can ignore the error of registering
+    such requests that occur every few hours. Unfortunately, in most cases, this approach
+    is not accepted.
+
+
+    Sometimes, the use of global data is not dictated by the specifics of the task.
+    In this case, the straightforward solution is to create local copies of data for
+    each stream and operate them only. In practice, this works very well and should
+    be used wherever possible. For example, if the specifics of the problem allow
+    the creation of a separate counter for each thread (or global array of counters,
+    where each element is changed only by a certain flow), the implementation of such
+    data structures solves the problem. Again, such a solution cannot be applied in
+    all cases (for example, in the situation with bank accounts, different flows,
+    after all, must somehow modify the total for all accounts).
+
+
+    In all other cases, changes must be protected against the effects of other flows.
+    This is the main task of synchronization. Consider different approaches to solving
+    it.
+
+
+    # Critical Sections And Locks
+
+
+    # The Concept Of Critical Section
+
+
+    Consider using a simpler idea to solve a competition problem. It is easy to see
+    how the source of our mistake is that, from the outside, the simplest money-transferring
+    operation actually breaks down into several operations, with the chance of any
+    other flow interfering'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'between them. In this case, it is said that the operation is not an atom but
+    a molecule.
+
+
+    It follows that the solution to the problem of competition is to transform the
+    code snippet that causes the problem into an atomic operation, that is, one that
+    is guaranteed to be performed completely without interference from other threads.
+    This piece of code called *a critical section*:
+
+
+    ```
+
+    ```python
+
+    // start critical section
+
+    total_amount = total_amount + new_amount;
+
+    // end of critical section
+
+    ```
+
+    ```
+
+
+    Now, when two threads are going to execute the code of the critical section at
+    the same time, the one that started the first one will execute all its code completely
+    before the second starts its execution (the second thread will wait until the
+    first one completes the code of the critical section). As a result, we are guaranteed
+    to have a sequence of events in Option 2 in our program, and the competition will
+    never take place.
+
+
+    Consider the properties that a critical section should have.
+
+
+    +   Mutual exclusion: In a particular time code, a critical section can execute
+    only one thread
+
+
+    +   Progesterone if multiple threads are present at the entrance to the critical
+    section, one of them must be necessarily required to enter into it (they cannot
+    block each other completely)
+
+
+    +   Limited mode, a process that tries to enter a critical section, sooner or
+    later is necessarily required to enter into it
+
+
+    The simple question remains: "How can we make the system perceive multiple operations
+    as one atomic operation?". The simplest solution to such a task would be to prohibit
+    interruptions for the duration of the critical section. This approach, although
+    solves the problem in principle, in practice, cannot be applied as a result'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "because the cycling program in the critical section of the whole system can\
+    \ remain as locked interrupts, and therefore, present an unfavorable condition.\n\
+    \n# ## Locking\n\nThe tidier solution is to use *locks*. A lock is a mechanism\
+    \ that prevents more than one thread from executing the code of a critical section.\
+    \ Using a lock comes in two steps: commit (lock, acquire_lock()) and unlock (lock,\
+    \ release_lock()). In the case of a lock, it is checked that it has not already\
+    \ been made by another thread, and if so, this thread enters the standby state,\
+    \ otherwise, it enforces the lock and enters the critical section. After leaving\
+    \ the critical section, the flow removes the blockage.\n\n```\n```\n acquire_lock(lock);\n\
+    \ // critical section\n release_lock(lock);\n```\n```\n\nSo realize mutual exclusion\
+    \ property, hence another name for blocking is mutex, short for mutual exclusion.\n\
+    \n# ## Problems With Implementation Of Blocking\n\nConsider a naive implementation\
+    \ of a critical section using *block variables*.\nWith each critical section associated\
+    \ integer variable, which assumes the value as a unit during freezing and zero\
+    \ after forging. Here's what the code for this implementation looks like:\n\n\
+    ```\n```\n int lock = 0;\n void acquire_lock(int lock)\n {\n // if lock does not\
+    \ have ( lock == 0), roll it (set lock = 1)\n // and exit - we are in the critical\
+    \ section\n // otherwise wait until the lock is removed\n while(lock!= 0); //\
+    \ (1)\n lock = 1; // (2)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '```
+
+    ```
+
+    }
+
+    void release_lock (int lock)
+
+    {
+
+    // remove the lock
+
+    lock = 0;
+
+    }
+
+    ```
+
+    ```
+
+
+    The main problem with this implementation is that checking the value of the locking
+    variable and changing it is not part of a single atomic operation.
+
+
+    # ## Basic Mechanisms Of Flow Synchronization
+
+
+    Modern OSes provide a wide range of ready-made synchronization mechanisms. *Synchronization
+    mechanisms* are operating system tools that help to solve the main task of synchronization
+    - to ensure the coordination of flows that work with shared data. If such tools
+    are the minimum blocks for building multithreaded programs, they are called *synchronization
+    primitives*.
+
+
+    Synchronization primitives are divided into the following main categories:
+
+
+    +   - Versatile, low-level, which can be used in different ways (*semaphores*)
+
+
+    +   - Simple, low-level, each of which is adapted to the solution
+
+
+    +   - High-level universal expressed through simple; this group includes the concept
+    of a *monitor* which can be expressed through mutexes and conditional variables
+
+
+    +   - High level, adapted to the solution of a specific synchronization problem
+    (blocking read-write and barriers)
+
+
+    Let us look at the different mechanisms and evaluate the advantages that each
+    of them has, as well as their possible disadvantages. To'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: 'further illustrate the material, let''s take a classic example that demonstrates
+    the need for synchronization - the problem of producer-consumers or the problem
+    of limited buffer ( bounded buffer ).
+
+
+    The formulation of the problem is simple. Suppose we have production threads and
+    consumer threads. The manufacturer creates objects, the consumer receives them.
+    The task is to synchronize their work so that the consumer cannot attempt to retrieve
+    objects that have not yet been created, and the manufacturer cannot create more
+    objects than the consumer can.
+
+
+    To synchronize flows, place a buffer of fixed length $n$ between the manufacturer
+    and the consumer. The manufacturer can place objects on the buffer, the consumer
+    - take them from there. If the consumer takes the object, it is removed from the
+    buffer. There are several requirements to be met:
+
+
+    +   1. When the manufacturer or consumer is working with the buffer, the rest
+    of the threads should wait for it to finish
+
+    +   2. When the manufacturer is trying to put an about object on the buffer and
+    the buffer is full, it must wait until it appears in place
+
+    +   3. When a consumer tries to pick an about object of the buffer and the buffer
+    is empty, it must wait until it is on '' '' appears about '' object
+
+
+    # Semaphores
+
+
+    Concept semaphore proposed in 1965 by E. Dijkstra - known Dutch specialist in
+    Computer Books Science. Semaphores are the oldest synchronization primitives of
+    those used in practice. Semaphore - a shared net ample integer counter asked for
+    which initial value and determined following atomic operations:'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "❖ Down Semaphore (down): If the value of the semaphore is greater than zero,\
+    \ it is reduced by one, if the value is zero, this stream goes to standby until\
+    \ it is greater than zero (everyone who is \"waiting at the semaphore\" or \"\
+    Blocked at the semaphore\"). This operation is also called expectations - wait.\
+    \ Here is her pseuodocode:\n\n```\nvoid down (semaphore_t sem)\n{\n    if (sem>\
+    \ 0)\n        sem--;\n    else sleep ();\n}\n```\n\n❖ Increase semaphore (up):\
+    \ increase semaphore values by one; when there are streams waiting at the semaphore,\
+    \ one of them goes out of the waiting and performs its own operation. If more\
+    \ than one thread is expected on a semaphore, its up value remains null due to\
+    \ the up operation but one of the threads continues to execute (in most implementations,\
+    \ the choice of this thread will be random). This operation is also called post-signaling.\
+    \ Here is her dog in the doc:\n\n```\nvoid up (semaphore_t sem)\n{\n    sem ++;\n\
+    \    if (waiting_threads ())\n        wakeup (some_thread);\n}\n```\n\nIn fact,\
+    \ a semaphore value determines the number of threads that can pass through that\
+    \ semaphore without blocking it. When a semaphore is set to zero initial value,\
+    \ it will block all threads until some thread \"opens\" it by performing the up\
+    \ operation. Operations up and down can be performed by any flows that have access\
+    \ to the semaphore."
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "# # Features Of Use Of Semaphores\n\nSemaphores can be used to solution ' Liabilities\
+    \ synchronize two different tasks.\n\n+   1. With their help, it is possible to\
+    \ organize mutual exclusion (to protect the code of critical sections from execution\
+    \ by more than one thread). It is most convenient to use a **binary semaphore**,\
+    \ which can take two values: 0 and 1. Here is an example of implementing a critical\
+    \ section using a binary semaphore:\n\n```\n```c\nsemaphore _ t sem = 1; // at\
+    \ the beginning the semaphore is open\ndown (sem);\n// critical section\nup (here);\n\
+    ```\n```\n\n+   2. With their help, you can organize the expectation of the fulfillment\
+    \ of some condition. Suppose that one needs to organize the wait for one thread\
+    \ to complete another (analog of the join operation). In this case, a semaphore\
+    \ with an initial value of 0 (closed) can be used. The stream that is waiting\
+    \ must perform a down operation for this semaphore and in order to signal the\
+    \ completion of the stream, its completion function requires up to perform the\
+    \ same semaphore. Here is the pseuodocode (this_thread stands for current thread):\n\
+    \n```\n```c\nVoid thread_init ()\n{\n    this _ thread. sem = 0; // At the beginning\
+    \ of the stream\n    execution the semaphore is exposed\n}\nvoid thread _ exit\
+    \ ()\n{\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '```
+
+    up ( this _ thread . sem ); // wake up the pending stream, if any
+
+    }
+
+    void thread_join (thread_t thread)
+
+    {
+
+    down (thread.sem); // Waiting for thread to finish
+
+    }
+
+    ```
+
+
+    # Realization Of The Problem Of Producers-
+
+    Consumers With The Help Of Semaphores
+
+
+    First, let''s call the synchronization actions required to solve this
+
+    problem.
+
+
+    +   1. Put the operations of direct buffer change (for the
+
+    +      manufacturer - placing the object in the buffer, for the
+
+    +      consumer - removing the object from the buffer) in the critical
+
+    +      sections
+
+    +      2. Arrange expectations according to requirement 2
+
+    +      (manufacturer''s expectations in case of full buffer). In doing
+
+    +      so, the consumer must inform the expectant manufacturers
+
+    +      that he has taken the object from the buffer (ie the buffer has
+
+    +      become incomplete, if complete)
+
+    +      3. Arrange expectations according to requirement 3
+
+    +      (consumer expectations in case of full buffer). In doing so, the
+
+    +      manufacturer must inform consumers who expected that the
+
+    +      matched buffer is non-empty and if it was empty.
+
+
+    Now let''s look at the synchronization primitives we need. Each
+
+    synchronization operation requires a separate semaphore:
+
+
+    +   1.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "To use the critical section, we use the binary semaphore, as we did before.\
+    \ Let's call it to lock. It will be used by both the manufacturer and the consumer,\
+    \ protecting access to the buffer from other threads (again, both manufacturers\
+    \ and consumers)\n\n+   2. In order to organize the manufacturer's expectations\
+    \ in the case of a full buffer, we will need a semaphore whose current value is\
+    \ equal to the number of free spaces in the buffer. Let's call it empty _items.\
+    \ The manufacturer, before attempting to add a new object to the buffer, reduces\
+    \ this semaphore to the standby state if it is equal to 0. The consumer, after\
+    \ removing the object from the buffer, will increase the semaphore by informing\
+    \ the manufacturers ( and waking up one of them)\n\n+   3. In order to organize\
+    \ consumer expectations in the case of an empty buffer, a semaphore whose current\
+    \ value is equal to the number of seats in the buffer will be required. Let's\
+    \ call it full _ items. The consumer before attempting to pick up an object from\
+    \ the buffer reduces this semaphore, going into a state of waiting\n\nHere is\
+    \ the pseudocode solution to this problem:\n\n```\nsemaphore _t lock = 1; // for\
+    \ the critical section\n  semaphore _t empty _ items = n; // 0 buffer full, empty\
+    \ from the beginning\n  semaphore _t full_items = 0; // if 0 - the buffer is empty\n\
+    \n// manufacturer\nvoid producer ()\n{\n item _t item = produce (); // create\
+    \ about ' object\n  down ( empty _items); // is there a place for information\
+    \ ' facility ?\n  down ( lock ); // enter the critical section\n```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n```\nappend_to_buffer (item); // add about ' object item to the clipboard\n\
+    up (lock); // exit critical section\nup (full _items ); // inform consumers that\
+    \ there is a new object\n}\n\n// consumer\nvoid consumer ()\n{\n    item_t item;\n\
+    down (full _items ); // not empty buffer?\ndown ( lock ); // enter the critical\
+    \ section\nitem = receive_from_buffer (); // pick about ' Object item from the\
+    \ clipboard\nup ( lock ); // exit critical section\nup ( empty _items ); // notify\
+    \ manufacturers of the location\nconsume ( item ); // consume the object\n}\n\
+    ```\n```\n\n# **Mutexes**\n\nThe concept of mutex largely coincides with the notion\
+    \ of blocking defined previously (Section 5.2). Synchronization primitives called\
+    \ Mutexes are the ones that prevent the execution of a piece of code in more than\
+    \ one stream. In fact, the mutex is an implementation of OS-level blocking. Mutex,\
+    \ as its name implies, eliminates mutual exclusion. Its main task is to block\
+    \ all threads trying to access the code when that code is already executing a\
+    \ thread. A mutex can be in two states: the free and the busy. The initial state\
+    \ is \"free\" and has two possible atomic operations.\n\n+   - **Take mutex**\
+    \ (`mutex _ lock`): if mutex was free, he is busy, and the flow continues its\
+    \ execution (entering the critical section); if the mutex was busy, the stream\
+    \ enters a standby state (said to be a \"wait on a mutex\" or \"locked on a mutex\"\
+    ), the execution continues another stream. Stream, which took mutex called the\
+    \ owner of the mutex:"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '```
+
+    mutex_lock ( mutex_t mutex )
+
+
+    {
+
+    if (mutex.state ==== free)
+
+    {
+
+    mutex.state = locked;
+
+    mutex.owner = this_thread;
+
+    }
+
+    else
+
+    sleep ();
+
+    }
+
+    ```
+
+
+    ✈ To release the mutex ( mutex_unlock ): mutex becomes free; if several streams
+    are expected on it, one of them is selected, it starts executing, occupies the
+    mutex and enters the critical section. In most implementations, the flow selection
+    will be random. Only the owner can release the mutex. Here is the pseudocode of
+    this operation:
+
+
+    ```
+
+    mutex_unlock (mutex_t mutex)
+
+    {
+
+    if (mutex.owner! = this_thread)
+
+    return error;
+
+    mutex.state = free;
+
+    if (waiting_threads ())
+
+    wakeup (some_thread);
+
+    }
+
+    ```
+
+
+    Some implementations provide a third operation try to take the mutex ( mutex_trylock):
+    if the mutex is free, to act similarly to mutex_lock, if busy - to immediately
+    return the error and continue execution. Here is the simplest implementation of
+    the critical section using a mutex.
+
+
+    ```
+
+    mutex_t mutex;
+
+    mutex_lock (mutex);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '```
+
+    // critical section
+
+    mutex_unlock (mutex);
+
+    ```
+
+
+    The main difference in the mutex of binary semaphores is that the release of mutex
+    can only be done by its owner, while the semaphore can change the value of any
+    stream, which has access to it.
+
+
+    # Interprocess
+
+
+    So far, we have considered the interaction of flows of one process. The main feature
+    of this interaction is the ease of technical implementation of data exchange between
+    them - one process flow using one address space and therefore, can freely access
+    the co-usage of variant data as if they were their own. Since there are no technical
+    difficulties with the implementation of data exchange, the main problem that needs
+    to be solved in this case is the synchronization of flows.
+
+
+    On the other hand, each thread is executed within the address space of a process,
+    so the task of organizing interaction between the flows of different processes
+    is often a problem. The question itself about interprocess interaction ( interprocess
+    communication or IPC ). For streams of different processes, the issues of synchronization
+    are also relevant, but in most cases, they are not based on the concept of shared
+    data (such default data for processes are missing). In addition, the challenge
+    of securing exchange between protected address spaces is added. Approaches to
+    its solution define different types of interprocess interaction.
+
+
+    # Types Of Interprocess Interaction
+
+
+    Implementation of inter processing is accomplished by three basic methods: *message
+    passing*, *memory allocation*, and *displayed memory*.
+
+
+    Another method of IPC is to consider the signal technology discussed earlier.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# ## Technology Expanded Memory (Mapped Memory)
+
+
+    In a number of operating systems, the displayed memory is the basic system mechanism
+    on which other types of interprocess interaction and system decisions are based.
+    Of course, the display memory used in conjunction with the file system interface,
+    in this case, talking about *the files displayed in the memory* ( memory-mapped
+    files ).
+
+
+    This technology is to ensure that a special system call (usually mmap () ) a part
+    of the process address space uniquely floor containing the file. After that, an
+    operation to write to such memory causes the contents of the displayed file to
+    change, which immediately becomes available to all applications that have access
+    to that file. Other applications can also display the same file in their address
+    space and communicate with one another through it.
+
+
+    # ## Conclusions
+
+
+    +   * Streams of one interacting process have access to shared data hosted in
+    the address space of that process. Any stream is able to change this data at any
+    time and cause a state of competition when the outcome depends on the flow sequence.
+
+
+    +   * Flow synchronization mechanisms are used to ensure correct access to shared
+    data; the main one is to ensure mutual exclusion when only one stream can access
+    such data at a particular time. Blocking is used to organize mutual exclusion.
+
+
+    +   * Various synchronization primitives can be used to solve synchronization
+    problems. The simplest primitives include semaphores, mutexes, conditional variables,
+    read-write locks, and barriers.
+
+
+    +   * A higher-level mechanism is a monitor concept that combines mutexes and
+    conditional variables and sets some rules for their interaction to protect shared
+    data. Using'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: monitors  is  the  most  consistent  approach  to  stream synchronization.
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# # Chapter 6:
+
+    # Managing Memory
+
+
+    Different types of memory are organized into a hierarchy. At the lower levels
+    of such a hierarchy, there is a cheaper and slower memory of a larger volume,
+    and as the hierarchy moves upwards the memory becomes more expensive and faster
+    (and its volume becomes smaller). The cheapest and slowest storage device is the
+    hard drive. It is also called secondary storage. Faster and more expensive memory
+    is stored in the memory chips installed on the computer - a memory called the
+    main memory. Faster storage facilities have different cache processors, and at
+    least, these caches are more limited.
+
+    Managing memory is a rather difficult task. The required memory characteristics
+    are often not enough identified, and in order not to interfere with the work of
+    the user, it is necessary to implement means of coordination of different types
+    of memory. Thus, the current application cannot fit entirely in the main memory,
+    while unused code can use tymch and COBOL stored on the hard drive. In this section,
+    we look at technologies that use primary memory.
+
+
+    # ## Fundamentals of Virtual Memory Technology
+
+
+    We first consider the prerequisites for introducing the concept of virtual memory.
+    In this situation, each process is loaded into its own continuous portion of physical
+    memory, and the next process begins immediately after the previous one. If you
+    analyze the memory allocation features of this approach, the following questions
+    may arise.
+
+
+    +   * How do I perform processes that require more physical memory than installed
+    on my computer?
+
+    +   * What happens when the process performs a write operation at the wrong address
+    (eg P2- at 0x7500)?'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '+   - What should I do if a process (such as P1) needs more memory to execute?
+
+
+    +   - When will the process receive information about the specific physical memory
+    address, which memory will start executing it, and how should the memory addresses
+    used in its code be converted?
+
+
+    +   - What should I do if the process doesn''t need all the memory allocated to
+    it?
+
+
+    Direct loading of processes into physical memory does not provide an answer to
+    these questions. Obviously, some memory translation tools are needed to allow
+    processes to use address sets that are different from physical memory addresses.
+    Before we understand the peculiarities of these addresses, let us briefly dwell
+    on the peculiarities of composing and downloading applications.
+
+
+    The program usually resides on disk as a binary executable file obtained after
+    compilation and layout. It must be loaded into memory (process address space)
+    for its execution. Modern architectures allow processes to be located anywhere
+    in physical memory, and the same program can accommodate different processes loaded
+    into different memory locations. It is unknown in advance which memory area the
+    program will be loaded into.
+
+
+    During execution, the process accesses different addresses, in particular, when
+    a function is called, it uses its address (this is the code address), and the
+    global variable accesses the memory address to store the value of that variable
+    (this is the data address).
+
+
+    The programmer does not normally use memory addresses directly in his program,
+    instead, they use symbolic names (functions, global variables, etc.). Due to compilation
+    and layout, these names are linked to moving addresses (such addresses are specified
+    in relative units, such as "100 bytes from the beginning of the module"). When
+    running the program, the relocated addresses, in turn, are bound to absolute addresses
+    in memory. In fact, each bind is a mapping of one set of addresses to another.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '+   * Memory protection. Addressing errors that occur in a process code should
+    only affect the execution of that process. When the P2 process does a write operation
+    at 0x7500, it must be interrupted by an error. The memory security strategy is
+    that a valid address range is stored for each process, and each memory access
+    operation is checked for an address belonging to that range
+
+
+    +   * Lack of binding to physical memory addresses. The process can be performed
+    regardless of its memory location and physical memory size. The process address
+    space is allocated as a large static address set, with each address of the set
+    being moved. Processor and hardware should be able to convert these addresses
+    to physical addresses of main memory (the same address placeable at different
+    times or for different processes may correspond to different places including
+    his address))
+
+
+    # # The Concept Of Virtual Memory
+
+
+    Virtual memory - a technology that introduces I level additional conversions between
+    memory addresses used by the process and physical memory addresses used by the
+    desktop app. Such transformations should ensure that the memory is protected and
+    that the process is not bound to physical memory addresses.
+
+
+    With virtual memory, the physical memory of the process address space can be fragmented,
+    since the bulk of the memory occupied by the process remains free most of the
+    time. There is a so-called ninety to ten rule or a localization rule that states
+    that 90% of memory accesses in the process account for 10% of its address space.
+    You can move the addresses so that only the sections of the process address space
+    that are actually in use at that time correspond to the main memory.
+
+
+    In this case, unused partitions of the address space can be mapped to slower memory,
+    such as hard disk space, and at this time other processes can use the main memory,
+    which previously displayed the'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'addresses of these partitions. When a partition is needed, its data is loaded
+    from disk to main memory, perhaps instead of partitions that became unnecessary
+    at a particular moment (and which, in turn, will now be stored on disk). Data
+    can be read from disk at a village thus a key memory LDPE time addressing them.
+
+
+    In this way, you can significantly increase the size of the process address space
+    and ensure that processes larger than the main memory are executed.
+
+
+    # Problems of virtual memory implementation: Memory fragmentation
+
+
+    The main problem that occurs when using virtual memory is the efficiency of its
+    implementation. Because address conversions need to be done every time memory
+    is accessed, careless implementation of these conversions can have the worst effect
+    on the performance of the entire system. If most memory accesses make the system
+    actually have to access the disk (which is tens of thousands of times slower than
+    the main memory), it will be virtually impossible to operate such a system. The
+    issue of improving the performance of virtual memory implementation will be discussed.
+
+
+    Another problem is the memory fragmentation that occurs when free memory cannot
+    be used. There are internal and external memory fragmentations. The external is
+    reduced to the fact that due to the allocation and subsequent freeing of memory,
+    it creates free blocks of small size - holes. Because of this situation may arise
+    in which it is impossible to provide a continuous memory block size N, because
+    there is no contiguous free block of size S ≥ N, although in general, the amount
+    of free memory space more than N. So in the above case, there is not enough space
+    to execute the P5 process due to external fragmentation.
+
+
+    Internal fragmentation is the result that, on request, memory blocks larger than
+    actually used are allocated, resulting in unused areas inside the dedicated blocks
+    that can no longer be allocated to something else.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Logical And Physical Memory Addressing
+
+
+    The most important concept of the concept of virtual memory is addressing the
+    logical and physical memory.
+
+
+    Logical or Virtual Address - An address generated by a program running on some
+    processor. Addresses that use the instructions of a particular processor are logical
+    addresses. A set of logical addresses is called a logical address space.
+
+
+    Physical Address - The address that the memory chip operates on. An application
+    in modern computers never deals with physical addresses. A special MMU ( memory
+    management unit ) is responsible for converting logical addresses into physical
+    ones. The totality of all available physical addresses is called a physical address
+    space. So, if your computer has a 128MB chipset, then that amount of memory is
+    physically addressed. Usually, much more memory is logically addressed.
+
+
+    The specifics of converting logical addresses into physical ones are determined
+    by different approaches to managing memory, the study of which will be the topic
+    of this section.
+
+
+    # Approach Of Base And Boundary Registers
+
+
+    When implementing virtual memory, it is necessary to protect memory, move processes
+    in memory, and share memory across multiple processes.
+
+
+    One of the easiest ways to meet these requirements is to approach the *base and
+    boundary registers*. For each process in two CPU registers store two values -
+    the *base address* ( base ) and *limits* ( bounds ). Each access to a logical
+    address is converted to a physical address by adding a logical address to the
+    base address. If the received physical address does not fall within the range
+    ( base, base + bounds ), consider that the address is incorrect and generate an
+    error.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: 'This approach is the simplest example of a dynamic movement of processes in
+    memory. All the other approaches that will be discussed in this section are different
+    options for developing this basic scheme. For example, the fact that each process
+    has its own values of base and boundary registers when using this approach is
+    the simplest implementation of the process address space concept, which is based
+    on the fact that each process has its own memory mapping.
+
+
+    To organize memory protection in this situation, it is necessary that the use
+    of the user cannot change the value of the base and border registers. It is enough
+    to make such changes available only in the preferred mode of the processor.
+
+
+    The advantages of this approach include simplicity, modest hardware requirements
+    (only two registers are required), and high efficiency. However, today it is practically
+    not used because of a number of disadvantages, due primarily to the fact that
+    the address space of the process is still mapped to one continuous block of physical
+    memory: it is unclear how to dynamically expand the address space of the process;
+    different processes cannot share memory; no code and data distribution.
+
+
+    In this approach, only one pair of base address-limit values is allocated to the
+    process. The natural evolution of this idea was the mapping of the process address
+    space through several physical memory ranges, each of which sets its own pair
+    of the base address and boundary values. That’s how the concept of memory segmentation
+    came about.
+
+
+    # # Memory Segmentation
+
+
+    # ## Features Of Memory Segmentation
+
+
+    Memory segmentation allows you to depict a logical address space as a set of independent
+    variable-length blocks called segments. Each segment usually contains data for
+    one purpose, for example, one may have a stack, the other, a program code, etc.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'Each segment has a name and length (for ease of implementation, use names alongside
+    names). The logical address consists of a segment number and an offset within
+    the segment; the application program works with such segments. Compilers often
+    create separate segments for different application data (code segment, the data
+    segment, stack segment). When a program is loaded into memory, it creates a table
+    of process segment descriptors, each element of which corresponds to one segment
+    and consists of a base address, boundary value, and access rights.
+
+
+    When forming an address, its segment portion points to the corresponding element
+    of the process segment descriptor table. If the offset is greater than the limit
+    setpoint (or if the process access rights do not match the segment set rights),
+    then the hardware generates an error. When all is well, the sum of the base and
+    offset in the case of pure segmentation will result in a physical address in the
+    main memory. If a segment is uploaded to a disk, trying to access it causes it
+    to be loaded from the disk into the main memory. As a result, each segment corresponds
+    to a contiguous block of memory of the same length, located in an arbitrary location
+    of physical memory or on a disk. Here are the benefits of memory segmentation.
+
+
+    +   • There is an opportunity to organize several independent segments of memory
+    for the process and use them to store data of different nature. However, the access
+    rights to each such segment can be set differently
+
+    +   • Individual segments can be shared by different processes, and their segment
+    descriptor tables must contain the same elements that describe that segment
+
+    +   • Physical memory corresponding to the process address space should not necessarily
+    be continuous now. In fact, segmentation allows individual portions of the address
+    space to be mapped, not to the main memory, but to the disk and reloaded as needed,
+    ensuring that processes of any size are executed'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'This approach is not without its disadvantages.
+
+
+    +   The need to introduce an additional layer of memory conversion causes a decrease
+    in performance (this drawback is inherent in any full implementation of virtual
+    memory). Appropriate hardware support is required for effective segmentation implementation
+
+
+    +   Managing variable length memory blocks with the need to store them on a disk
+    can be quite complicated
+
+
+    +   The requirement that each segment corresponds to a contiguous block of the
+    physical memory of the appropriate size causes external memory fragmentation.
+    Internal fragmentation does not occur in this case because the segments have a
+    variable length and you can always select a segment of the length required to
+    execute the program
+
+
+    Today, segmentation is used rather limited, primarily because of the fragmentation
+    and complexity of implementing efficient memory and disk-sharing. Wider use of
+    memory allocation got into blocks of fixed length - page memory organization that
+    will be discussed.
+
+
+    # # Segmentation Implementation In IA-32 Architecture
+
+
+    In the IA-32 architecture, logical addresses in the program are formed using segmentation
+    and look like a “shift selector”. The values of the selector are loaded into a
+    special register of the processor (segment register) and used as an index in the
+    table of descriptiors of the segment, which is in memory and is an analog of the
+    table of segments, described earlier. Six segment registers are supported in IA-32
+    architecture. This means that the executable code at the same time can address
+    these six independent d cops.
+
+
+    The selector contains a descriptor index in the table, bits of the local or global
+    table indicator, and the required privilege level. For system set common global
+    descriptor table'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '( Global Descriptor Table, GDT ), and for each task - *local descriptor table*
+    ( Local Descriptor Table, LDT ).
+
+
+    The descriptors in IA-32 are 64 bits long. They define the properties of software
+    objects (for example, memory segments or descriptor tables). Handle contains the
+    value *base* (*base* ), which corresponds to the address of the object (for example,
+    the beginning segment); limit value (*limit* ); object type (segment, descriptor
+    table, etc.); protection characteristics.
+
+
+    Access to tables of descriptors is supported by hardware. If the security characteristics
+    specified in the handle do not correspond to the privilege level specified by
+    the selector, it will not be possible to access the memory using it. They provide
+    memory protection.
+
+
+    However, it has never been mentioned that a physical address is stored in the
+    handle. The fact is that for the IA-32 architecture, due to the conversion of
+    the logical address, they receive not another physical address, but another type
+    of address, which is called a linear address.
+
+
+    # ## Page Memory Organization
+
+
+    The main technologies of virtual memory implementation other than segmentation
+    owned *-page memory organization* ( paging ). Its main idea is the allocation
+    of memory blocks of fixed length. These blocks are called *pages and so are we*.
+    This technology is the most common approach to virtual memory implementation in
+    modern operating systems.
+
+
+    # ## Basic Principles Of Page Organization Of Memory
+
+
+    In the case of page memory organization, a logical address is also called a linear
+    or virtual address. Such addresses belong to one set (for example, a 32 bits non-negative
+    number can be a linear address). Physical memory is divided into blocks of fixed
+    length - *frames*, or page blocks ( frames ). Logical memory, in turn, divided
+    into blocks of the same length - *page*. When the process starts, its pages are
+    loaded into available physical memory frames from disk or'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: 'other media. The paging organization must have hardware support. Each address
+    generated by the processor is divided into two parts: the page number and the
+    page offset. The page number is used as an index in the page table.
+
+
+    A page table is a data structure containing page-table entries ( PTE ), each of
+    which contains information about the page number, the number of the corresponding
+    physical memory frame (or directly it''s the base address) and access rights.
+    The page number is used to find the item in the table. After finding it, the page
+    frame is added to the base address of the corresponding frame, which determines
+    the physical address.
+
+
+    Page size is a power of 2, modern OS uses pages ranging from 2 to 8 KB. In custom
+    addressing modes, you can work with larger pages. For each process, they create
+    their own page table. When the process begins to run, the OS calculates its page
+    size and the number of frames in physical memory. Each page is uploaded to a corresponding
+    frame, after which its number is written to the process page table.
+
+
+    The process of memory mapping is different from the actual physical memory state.
+    At the logical level, all memory is represented by a continuous block and belongs
+    only to this process, and physically it is spread over the address space of the
+    memory chip, alternating with the memory of other processes. The process cannot
+    access memory whose address is not specified in its page table (so memory protection
+    is implemented).
+
+
+    The operating system must have information about the current state of physical
+    memory (frame occupancy, frame number, etc.). This information is usually stored
+    in a frame table. Each element corresponds to the frame and contains all the information
+    about it.
+
+
+    # Comparative Analysis Of Page Organization Of Memory And Segmentation'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: 'Page memory organization and segmentation have more in common than differences.
+    The main difference between the two approaches is that all pages have a fixed
+    length and segments have a variable length. Other basics (no requirement for continuity
+    of physical memory, ability to unload memory blocks to disk, need to support conversion
+    tables, etc.) are fundamentally different. Let''s take a look at the main benefits
+    of page memory organization over page memory segmentation. They are determined
+    primarily by the fact that all pages have the same length.
+
+
+    +   The implementation of memory allocation and memory is simplified. All pages
+    are equal in terms of process, so you can maintain a list of free pages and, if
+    necessary, select the first page from that list and, upon release, return the
+    page to the list. The segments do so not because each segment can only be used
+    for its purpose (try to use a segment for other purposes likely lead to what will
+    be needed in the segment to some other thing)
+
+
+    +   Disk communication with the disk is also simplified. To arrange such an exchange,
+    the portion of the disk used to store page information discharged from memory
+    (support space or backing store) can also be broken down into blocks of fixed
+    size equal to the size of the frame
+
+
+    The page organization of memory is not without its drawbacks.
+
+
+    +   First of all, this approach causes internal fragmentation due to the fact
+    that the page size is always fixed, and if necessary to allocate a memory block
+    of a specific length, its size will be multiple of the page size. On average,
+    the amount of unused memory is approximately half a page for each dedicated memory
+    block (similar to a segment). This fragmentation can be reduced by reducing the
+    number and size of the blocks that appear and fuse
+
+
+    +   Page tables should be larger than segment tables. For example, to allocate
+    a contiguous memory range of 100 KB you will need one element of the segment table
+    that'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'describes the segment allocated for that range. On the other hand, if we use
+    4KB pages to describe this range, we will need 25-page table elements, one for
+    each page
+
+
+    # # Multi-Level Page Tables
+
+
+    To address the logical address space of a large volume with a single page table,
+    it has to be very large. For example, in an IA-32 architecture with a standard
+    page size of 4 KB (addressing inside such a page requires 12 bits) the index in
+    the table remains 20 bits, which corresponds to a page table of 1 million elements.
+
+
+    To avoid such large spreadsheets, the technology of *tiered page tables* is proposed.
+    Page tables themselves are broken down into pages whose information is stored
+    in top-level page tables. The number of levels rarely exceeds 2, but can reach
+    4.
+
+
+    When there are two levels of tables, the logical address is broken down into an
+    index in the top-level table, an index in the lower-level table, and offset. This
+    technology has two main advantages. First, page tables are smaller in size, so
+    they can be searched faster. Second, not all page tables should be in memory at
+    a specific point in time. For example, if the process does not use some memory
+    block, then the contents of all the lower-level pages of an unused block may be
+    temporarily stored on the disk.
+
+
+    # ## Implementation Of Page Tables In IA-32 Architecture
+
+
+    The IA-32 architecture utilizes a two-tier page organization, starting with the
+    Intel 80386. A table-top level called *directory pages* for each task should be
+    given a separate directory page, a physical address that is stored in a special
+    control register and where it automatically loads the hardware when switching
+    context. Table bottom level is called a *page table*.
+
+
+    The linear address is divided into three fields:'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '+   *   *Directory* ( *Directory* ) - defines the directory entry pages, indicating
+    the desired page table
+
+    +   *   *Table* ( *Table* ) - vyznachaye page table element that indicates the
+    desired frame memory
+
+    +   *   *Offset* ( *Offset* ) - determines the offset within the frame, combined
+    with the address of the frame forms a physical address
+
+
+    The size of the directory and table fields is 10 bits, giving page tables containing
+    1024 elements, the size of the offset field is 12 bits, giving pages and frames
+    4 KB in size. One lower-level page table addresses 4 MB of memory (1 MB of frames)
+    and the entire directory of pages has 4 GB.
+
+
+    The page table elements at all levels have the same structure. Here are the following
+    element fields:
+
+
+    +   *   *Flag presence* ( *Present* ), equal to one of the page is in physical
+    memory (it corresponds to the frame); equality of this flag means that the page
+    is not in physical memory, and the operating system may use other element fields
+    for its purposes
+
+    +   *   *The 20 most significant bits* that set the frame start address to be
+    multiple of 4 KB (1 MB of different start addresses can be specified)
+
+    +   *   *Flag Access* ( *Accessed* ), which is equal to one pin each time the
+    reference device support paged to the corresponding frame
+
+    +   *   *Flag Changes* ( *Dirty* ), which confer equal to one while recording
+    each transaction in the corresponding frame
+
+    +   *   *Flag read-write* ( *Read / Write* ), which specifies the rights to access
+    the page or page table (for reading and write or read-only)
+
+    +   *   *The privilege* ( *User / Supervisor* ) checkbox that specifies the processor
+    mode required to access the page. If this'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 'checkbox is zero, the page can only be addressed from privileged mode, if units
+    are also available from user mode
+
+
+    Presence, access, and change checkboxes can be used by the OS to organize virtual
+    memory.
+
+
+    # Associative Memory
+
+
+    When implementing page tables, you have to access memory several times to access
+    the physical memory byte. If two-tier pages are used, three access operations
+    are required: the page directory, the page table, and directly to the address
+    of this byte, and the three-level tables require four operations. This slows down
+    memory access and reduces overall system performance.
+
+
+    As already noted, the ninety to ten rule indicates that most memory access to
+    a process belongs to a small subset of its pages, and the composition of this
+    subset changes rather slowly. A way to improve the performance of a page-based
+    memory organization is to cache the addresses of the memory frames corresponding
+    to this subset of pages.
+
+
+    To solve this problem was proposed technology *associative memory* or *cache translation*
+    ( translation look-aside buffers or TLB ). In high-speed memory (faster than main
+    memory), they create a set of several elements (different architectures assign
+    associative memory from 8 to 2048 elements, in the architecture of IA-32 such
+    elements to Pentium 4 were 32, starting with Pentium 4 - 128). Each element of
+    the translation cache corresponds to one element of the page table.
+
+
+    Now when generating a physical address, the corresponding element of the table
+    is first searched for in the cache (in IA-32 - by the directory field, the table
+    field and the offset), and if it is found, the address of the corresponding frame
+    becomes available, which can be immediately used to access the memory. If there
+    is no corresponding element in the cache, then memory is accessed'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: 'through the page table, and then the element of the page table is stored in
+    the cache instead of the oldest element.
+
+
+    Unfortunately, when switching contexts in the IA-32 architecture, the entire cache
+    needs to be cleared, since each process has its own page table, and the same page
+    numbers for different processes may correspond to different frames in physical
+    memory. Clearing the translation cache is a very slow operation that must be avoided
+    in every possible way.
+
+
+    An important feature of the translation cache is the percentage of hits, that
+    is, the percentage of times that the required elements of the page table is in
+    the cache and does not require memory access. It is known that at 32 elements
+    98% of hits are provided. Note also that this percentage decrease in performance
+    hits when using a two-level page table compared to the single-level is 28%, but
+    the benefits derived when allocating memory would be making a decline.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# Conclusion
+
+
+    Thank you for making it through to the end of Linux For Beginners, let’s hope
+    it was informative and able to provide you with all of the tools you need to achieve
+    your goals whatever they may be.
+
+
+    In Linux, unlike other operating systems, by default, the work with Linux is not
+    done in a graphical way, but by entering commands manually. Linux has several
+    programs that are responsible for interpreting the commands entered by the user
+    and perform the appropriate actions in response. These programs called shell are
+    the typical mode of communication on all UNIX systems including Linux. For many
+    people having to enter the commands manually may seem intimidating and difficult,
+    although as you must have seen in the book Linux commands are relatively simple
+    and very powerful.
+
+
+    Linux is also a multitasking and multi-user operating system and it is capable
+    of running several programs (or tasks) simultaneously and host several users simultaneously.
+    Therefore, all users of Linux must have a user account on the system that establishes
+    its privileges. Linux organizes users into groups so that privileges can be established
+    for a particular workgroup, for access to certain files or system services.
+
+
+    Finally, there is another fundamental concept when installing and using Linux,
+    which is a Super User or User root. This user is the system administrator and
+    is created during installation. As an administrator, you can access and modify
+    (as well as destroy) all system information, so try to avoid working as a root
+    user as much as possible. We hope you learned all of this and a lot more is seen
+    from this book.
+
+
+    Finally, if you found this book useful in any way, a review on Amazon is always
+    appreciated!'
+  merge: -1
+  img_proc: true

@@ -942,6 +942,7 @@
 +   [Linux 初学者指南：循序渐易学习 Linux](docs/linux-for-beginners-learn-linux-step-by-step-very-easy/README.md)
 +   [Linux 入门指南：Linux 全方位初学者指南](docs/linux-for-beginners-linux-for-beginners-the-complete-beginne/README.md)
 +   [Linux 初学者指南：关于 Linux 的方位百科指南](docs/linux-for-beginners-linux-for-beginnersthe-essantail-guide-o/README.md)
++   [Linux 入门指南：Kali Linux 操作系统基础、安装配置、命令行、网络安全及黑客工具](docs/linux-for-beginners-the-basics-of-kali-linux-operating-syste/README.md)
 +   [Linux 初学者指南：Linux 操作系统科学、安装、配置与命令行编程工具，以及网络、网络安全与道德黑客攻击基础指南](docs/linux-for-beginners-the-science-of-linux-operating-system-an/README.md)
 +   [Linux 初学者指南：Linux 命令行、Linux 编程与 Linux 操作系统终极初学者指南](docs/linux-for-beginners-the-ultimate-beginner-guide-to-linux-com/README.md)
 +   [Linux 入门指南：为什么你还没有开始 Linux 以及如何克服命令行恐惧症](docs/linux-for-beginners-why-youre-not-using-linux-yet-and-how-to/README.md)

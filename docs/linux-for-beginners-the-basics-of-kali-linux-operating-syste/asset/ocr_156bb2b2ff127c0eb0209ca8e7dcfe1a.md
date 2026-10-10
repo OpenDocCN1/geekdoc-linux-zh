@@ -1,0 +1,11 @@
+Different scheduling algorithms can be used for different queues, and each queue can be allocated a certain amount of CPU time. Sharing priorities is a difficult task, and failing to resolve them can cause streams of low priority processes to wait a long time. For example, in 1973, a machine was stopped at the Massachusetts Institute of Technology, which found a low-priority process - it was queued for execution in 1967 and has not been able to run since. This situation is called *starvation*.
+
+There are different ways to solve the problem of starvation. For example, a scheduler can gradually reduce the priority of the stream they perform (this process is called aging), and when it becomes lower than the next priority stream, switch the context to that stream. You can, on the contrary, gradually increase the priority flows waiting in UT.
+
+# ## Planning Based On Performance Characteristics
+
+An important class of prioritized scheduling algorithms is algorithms in which decisions about the choice of flow to execute are made on the basis of knowledge or evaluation of the characteristics of its further execution.
+
+First of all, it should be noted that in the " *first - with the shortest time of execution* " algorithm (Shortest Time to Completion First, STCF ), when associated with each duration interval following the use of the CPU, each is selected to perform at the stream in which this short interval. As a result, streams that capture the CPU for a shorter time get an advantage during scheduling and leave the system faster.
+
+The STCF algorithm is theoretically optimal by the criterion of the average response time, that is, it can be proved that for the selected group of flows, the average response time in the application of this algorithm will be minimal compared to any other algorithm. Unfortunately, for short-term planning, it is impossible to implement it because this implementation requires anticipation of the expected characteristics. For long-term planning, it is used quite often (in this case, when setting the task for the operator, the

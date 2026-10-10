@@ -1,0 +1,11 @@
+well adapted for direct use in applications. For example, if you consider working with I / O devices at the command level of the respective controllers, you can see that the set of such commands is limited, and for many devices - primitive. The operating system hides such a hardware interface but instead offers the programmer an application programming interface that uses higher-level concepts (called abstractions).
+
+For example, when working with a disk, a typical abstraction is a file. It is easier to work with files than directly with a disk controller (no need to consider moving the drive heads, starting and stopping the motor, etc.), as a result, the programmer can focus on the essence of his application. The operating system is responsible for interacting with the disk controller.
+
+Abstraction highlighting makes it easy for OS and application code to change when migrating to new hardware. For example, if you install a new type of disk device on your computer (provided that it is supported by the OS), all its features will be taken into account at the OS level, and applications will continue to use the files as before. This characteristic of the system is called hardware independence. OS can be said to provide a hardware-independent environment for executing applications.
+
+# Operating System As A Resource Allocator
+
+The operating system must allocate resources efficiently. It acts as the manager of these resources and provides them to applications on demand. There are two main types of resource allocation. In the case of the *spatial distribution* of resource access will be for multiple customers simultaneously, and each one of them can use the resources (the shared memory). In the case of *temporal distribution, the system queues* and, according to it, allows them to use the entire resource for a limited time (so the processor is distributed in single-processor systems).
+
+When allocating resources, the OS resolves possible conflicts, prevents unauthorized access of programs to those resources, on

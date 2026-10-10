@@ -1,0 +1,5 @@
+through the page table, and then the element of the page table is stored in the cache instead of the oldest element.
+
+Unfortunately, when switching contexts in the IA-32 architecture, the entire cache needs to be cleared, since each process has its own page table, and the same page numbers for different processes may correspond to different frames in physical memory. Clearing the translation cache is a very slow operation that must be avoided in every possible way.
+
+An important feature of the translation cache is the percentage of hits, that is, the percentage of times that the required elements of the page table is in the cache and does not require memory access. It is known that at 32 elements 98% of hits are provided. Note also that this percentage decrease in performance hits when using a two-level page table compared to the single-level is 28%, but the benefits derived when allocating memory would be making a decline.
