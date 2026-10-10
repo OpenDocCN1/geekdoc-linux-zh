@@ -348,6 +348,7 @@
 +   [DevOps 故障排除：Linux 服务器最佳实践](docs/devops-troubleshooting-linux-server-best-practices/README.md)
 +   [Kali Linux 数字取证：通过使用 Kali Linux 进行网络和内存取证提升你的调查技能](docs/digital-forensics-with-kali-linux-enhance-your-investigation/README.md)
 +   [开源工具数字取证：使用开源平台工具对目标系统进行计算机取证：Windows、Mac、Linux、UNIX 等](docs/digital-forensics-with-open-source-tools-using-open-source-p/README.md)
++   [LibreOffice 2020 探索指南：成为 LibreOffice 专家](docs/discover-libreoffice-2020-become-a-libreoffice-expert/README.md)
 +   [Linux 入门指南](docs/discover-linux/README.md)
 +   [分布式 UNIX 系统管理：企业级团队流程](docs/distributed-unix-system-administration-team-procedures-for-t/README.md)
 +   [DNS 入门指南：Windows 和 Unix/Linux 逐步进阶指南](docs/dns-for-dummies-step-by-step-instructions-for-windows-and-un/README.md)
