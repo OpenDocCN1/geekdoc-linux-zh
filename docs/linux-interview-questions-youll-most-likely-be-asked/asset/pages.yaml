@@ -1,0 +1,4337 @@
+- pgno: 0
+  md: 'Job Interview Questions Series
+
+
+    # 2015 Edition
+
+
+    # Linux
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    ![](img/001bb3de17839602ba124233057974fd_0_0.png)
+
+
+    +   - Hardware
+
+    +   - Red-hat Linux
+
+    +   - Ubuntu
+
+    +   - Administration
+
+    +   - Shell Scripting
+
+    +   - Firewall
+
+    +   - Routing
+
+
+    200 Linux Questions
+
+
+    51 HR Interview Questions
+
+
+    FREE
+
+    2 Aptitude Tests, download available on website
+
+
+    VP
+
+    Vibrant Publishers'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Linux
+
+
+    ## Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    Vibrant Publishers
+
+    www.vibrantpublishers.com'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Linux Interview Questions
+
+    You''ll Most Likely Be Asked
+
+
+    © 2014, By Vibrant Publishers, USA. All rights reserved. Printed in India. No
+    part of this publication may be reproduced or distributed in any form or by any
+    means, or stored in a database or retrieval system, without the prior permission
+    of the publisher.
+
+
+    ISBN-10: 1456473816
+
+    ISBN-13: 978-14-56473-81-5
+
+
+    Library of Congress Control Number: 2010943043
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. The author has made every effort in the
+    preparation of this book to ensure the accuracy of the information. However, information
+    in this book is sold without warranty either expressed or implied. The Author
+    or the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+    promotions, or for use in corporate training programs. For more information please
+    write to bulkorders@vibrantpublishers.com
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to sellerorors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit www.vibrantpublishers.com'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Table of Contents
+
+
+    1 Hardware 7
+
+    2 Red Hat Linux 17
+
+    3 Debian/Ubuntu 25
+
+    4 Various Commands & Utilitie 33
+
+    5 General Administration 41
+
+    6 Shells & Shell Scripting 49
+
+    7 Firewalls/Routing 57
+
+    8 Linux, Apache, MySQL & PHP (LAMP) 67
+
+    9 Samba 75
+
+    10 Server Performance 81
+
+    11 Networking 87
+
+    12 Postfix 93
+
+    13 HR Questions 99
+
+    INDEX 129'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '*This page is intentionally left blank*'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Linux Questions
+
+
+    *Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.*'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Hardware'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1: What command displays hardware related kernel
+
+    messages?
+
+
+    +   a) dmesg
+
+    +   b) messages
+
+    +   c) kmesg
+
+
+    **Answer:**
+
+    a) dmesg
+
+
+    # 2: What command shows PCI card information?
+
+
+    +   a) show_pci
+
+    +   b) lspci
+
+    +   c) cat /var/log/messages
+
+
+    **Answer:**
+
+    b) lspci
+
+
+    # 3: What does the command ''lsmod'' do?
+
+
+    +   a) List currently loaded modules
+
+    +   b) List available modules
+
+    +   c) List unloaded modules'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'Answer:
+
+
+    +   a) List currently loaded modules
+
+
+    # 4: What does the command ''insmod'' do?
+
+
+    +   a) Show module information
+
+
+    +   b) Show available modules
+
+
+    +   c) Load an available module
+
+
+    Answer:
+
+
+    +   c) Load an available module
+
+
+    # 5: What is the device name for the first SATA drive on a server?
+
+
+    +   a) /dev/hda
+
+
+    +   b) /dev/sda
+
+
+    +   c) /dev/disk1
+
+
+    +   d) /dev/diska
+
+
+    Answer:
+
+
+    +   b) /dev/sda'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# 6: What is the device name for the first IDE drive on a server?\n\n+   a)\
+    \ /dev/sda\n+   \n+   b) /dev/disk1\n+   \n+   c) /dev/diska\n+   \n+   d) /dev/hda\n\
+    \n**Answer:**\nd) /dev/hda\n\n# 7: Which two video card vendors require proprietary\
+    \ drivers for full hardware support?\n\n+   a) Intel/Nvidia\n+   \n+   b) Nvidia/ATI\n\
+    +   \n+   c) ATI/Intel\n+   \n+   d) none of the above\n\n**Answer:**\nb) Nvidia/ATI\n\
+    \n# 8: Which device corresponds to the physical memory?\n\n+   a) /dev/mem"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   b) /dev/kmem
+
+    +   c) /dev/memory
+
+    +   d) /dev/umem
+
+
+    **Answer:**
+
+    b) /dev/kmem
+
+
+    **9: Which daemon checks the health status of hard drives?**
+
+
+    +   a) SMARTD
+
+    +   b) Ide-Status
+
+    +   c) Watchdog Syslog
+
+
+    **Answer:**
+
+    a) SMARTD
+
+
+    **10: What command will install the required drivers for a Realtek 8139 based
+    network card?**
+
+
+    **Answer:**
+
+    insmod rt8139 OR modprobe rt8139
+
+
+    **11: What two values are needed in order to properly setup a**'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   a) hsync, esync
+
+
+    +   b) hsync, vsync
+
+
+    +   c) vsync, refresh rate
+
+
+    +   d) refresh rate, bit depth
+
+
+    **Answer:**
+
+
+    b) hsync, vsync
+
+
+    # **12: What is the maximum amount of addressable RAM that a 32-bit kernel will
+    address?**
+
+
+    +   a) 3.5 GB
+
+
+    +   b) 3 GB
+
+
+    +   c) 4 GB
+
+
+    +   d) Up to 64GB, with PAE
+
+
+    **Answer:**
+
+
+    d) Up to 64GB, with PAE
+
+
+    # **13: What is the most popular architecture, in use today?**
+
+
+    +   a) i386'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '+   b) i686
+
+    +   c) x86_64
+
+    +   d) ia64
+
+
+    **Answer:**
+
+
+    a) i386
+
+
+    **14: What command should you use to rebuild the modules.conf file?**
+
+
+    a) depmod
+
+
+    b) rmmod
+
+
+    c) insmod
+
+
+    **Answer:**
+
+
+    a) depmod
+
+
+    **15: What device corresponds to the first serial device port, using the newer
+    /proc layout?**
+
+
+    **Answer:**
+
+
+    /proc/ttyS0'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '16: **What file contains all filesystems that are available to be mounted,
+    as well as all mount options?**
+
+
+    **Answer:**
+
+
+    ```
+
+    /etc/fstab
+
+    ```
+
+
+    17: **What mount option allows for better disk performance, by not recording the
+    access time of each file?**
+
+
+    **Answer:**
+
+
+    ```
+
+    noatime
+
+    ```
+
+
+    18: **What command would you use to mount the partition /dev/sda1, which is formmatted
+    ext3, at /mnt/linux?**
+
+
+    **Answer:**
+
+
+    ```
+
+    mount -t ext3 /dev/sda1 /mnt/linux
+
+    ```
+
+
+    19: **What utility will allow you to create block-by-block copies of a disk, or
+    save block-by-block copies of a disk?**
+
+
+    **Answer:**
+
+
+    ```
+
+    dd
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "20: What is the exact command to duplicate (block-by-block) the device /dev/sda\
+    \ to the device /dev/sdb?\n\nAnswer: \n\n```\ndd if=/dev/sda of=/dev/sdb\n```\n\
+    \n21: What is the exact command to store a block-by-block backup of the device\
+    \ /dev/sda, to the file /tmp/sda.img?\n\nAnswer: \n\n```\ndd if=/dev/sda of=/tmp/sda.img\n\
+    ```\n\n22: How would you scan the filesystem (ext3) on /dev/sda1 for errors, assuming\
+    \ that the partition is unmounted, and that you want to run the scan interactively?\n\
+    \nAnswer: \n\n```\nfsck /dev/sda1\n```\n\n23: What utility can be used to configure\
+    \ filesystem parameters for ext2/ext3 filesystems?\n\nAnswer:  tune2fs"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '*This page is intentionally left blank*'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Red Hat Linux'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# 24: What is the proper command to list all installed RPM packages?
+
+
+    +   a) rpm -qa
+
+    +   b) rpm -q
+
+    +   c) rpm –list
+
+    +   d) rpm -l
+
+
+    **Answer:**
+
+
+    a) rpm -qa
+
+
+    # 25: Where is the default configuration file for Apache, under RHEL?
+
+
+    +   a) /etc/httpd/conf/httpd.conf
+
+    +   b) /etc/apache2/conf/httpd.conf
+
+    +   c) /etc/httpd/conf.d/httpd.conf
+
+    +   d) /etc/httpd.conf
+
+
+    **Answer:**
+
+
+    a) /etc/httpd/conf/httpd.conf
+
+
+    # 26: What is the ncurses-based utility to configure startup'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# **services?**\n\n+   a) sysv  \n+   b) sysrq  \n+   c) ntsysv  \n+   d) rund\
+    \  \n+   e) initd\n\n**Answer:**\n\nc) ntsysv\n\n# **27: In what file will you\
+    \ find the version of Red Hat Linux installed?**\n\n+   a) /etc/redhat-version\
+    \  \n+   b) /etc/redhat-release  \n+   c) /etc/redhat/version  \n+   d) /etc/uname\n\
+    \n**Answer:**\n\nb) /etc/redhat-release\n\n# **28: What is the proper command\
+    \ to install the package 'httpd',**"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'and all of its dependencies?
+
+
+    +   a) rpm -i httpd-version.rpm
+
+    +   b) yum install httpd
+
+    +   c) yum install httpd-version.rpm
+
+    +   d) yum search httpd | rpm -i
+
+
+    **Answer:**
+
+
+    b) yum install httpd
+
+
+    **29: What does the command ''yum clean all'' do?**
+
+
+    **Answer:**
+
+
+    Remove cached packages, and headers
+
+
+    **30: Which utility will add startup symbolic links to the /etc/rc.d directory?**
+
+
+    a) update-rc.d
+
+    b) chkconfig
+
+    c) init.d
+
+    d) init-rc.d
+
+
+    **Answer:**'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'b) chkconfig
+
+
+    **31: True, or False: CentOS and RHEL are function the same-utilities designed
+    for one, freely work on the other.**
+
+
+    **Answer:**
+
+
+    True
+
+
+    **32: What is the default DNS server that comes with RHEL?**
+
+
+    **Answer:**
+
+
+    BIND
+
+
+    **33: Which of the following mail server software does NOT come with RHEL/CentOS:**
+
+
+    +   a)  Sendmail
+
+    +   b)  Postfix
+
+    +   c)  Exim
+
+    +   d)  Qmail
+
+
+    **Answer:**
+
+
+    d) Qmail'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '**34: What command will update all available packages on a Red Hat Linux installation?**
+
+
+    +   a) yum update
+
+
+    +   b) yum -u upgrade
+
+
+    +   c) rhn_notifv
+
+
+    +   d) rpm update
+
+
+    **Answer:**
+
+
+    a) yum update
+
+
+    **35: What is the preferred command to use to install updates, when using the
+    Red Hat Network?**
+
+
+    +   a) yum
+
+
+    +   b) yast
+
+
+    +   c) up2date
+
+
+    +   d) rhn_notify
+
+
+    **Answer:**
+
+
+    c) up2date
+
+
+    **36: What user does Apache run as, in RHEL/CentOS?**'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   a) apache
+
+    +   b) httpd
+
+    +   c) apache2
+
+    +   d) www-data
+
+
+    Answer:
+
+
+    +   a) apache'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '*This page is intentionally left blank*'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Debian/Ubuntu'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# 37: Where is the default configuration file for Apache located?
+
+
+    +   a) /etc/httpd/conf/httpd.conf
+
+    +   b) /etc/apache2/conf/httpd.conf
+
+    +   c) /etc/httpd.conf
+
+    +   d) /etc/apache/conf/httpd.conf
+
+
+    **Answer:**
+
+
+    b) /etc/apache2/conf/httpd.conf
+
+
+    # 38: What mail server software solution does NOT come with Debian GNU/Linux?
+
+
+    +   a) Sendmail
+
+    +   b) Postfix
+
+    +   c) Exim
+
+    +   d) Qmail
+
+
+    **Answer:**
+
+
+    d) Qmail
+
+
+    # 39: Which utility will add startup symbolic links to the'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# /etc/rc.d directory?
+
+
+    +   a) update-rc.d
+
+
+    +   b) chkconfig
+
+
+    +   c) init.d
+
+
+    +   d) init-rc.d
+
+
+    Answer:
+
+
+    a) update-rc.d
+
+
+    # 40: What command will install the package ''vim'', and all of its dependencies?
+
+
+    +   a) dpkg -i vim-version.deb
+
+
+    +   b) apt-get install vim
+
+
+    +   c) deb install vim-version.deb
+
+
+    +   d) yum install vim
+
+
+    Answer:
+
+
+    b) apt-get install vim
+
+
+    # 41: What command will list all packages installed on a Debian GNU/Linux installation?'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "+   a) `dpkg -l`\n+   \n+   b) `dpkg -v`\n+   \n+   c) `dpkg --show`\n+   \n\
+    +   d) `dpkg -s`\n\n**Answer:**\n\na) `dpkg -l`\n\n# **42: What command will remove\
+    \ an individual Debian GNU/Linux package?**\n\n+   a) `dpkg -e package-version`\n\
+    +   \n+   b) `yum remove package`\n+   \n+   c) `apt-get remove package`\n+  \
+    \ \n+   d) `dpkg -r package-version`\n\n**Answer:**\n\na) `dpkg -e package-version`\n\
+    \n# **43: What command will upgrade the version of Debian installed?**\n\n+  \
+    \ a) `apt-get install debian-version`"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '+   b) apt-get dist-upgrade
+
+    +   c) dpkg -i debian-releasse-version.deb
+
+    +   d) apt-get upgrade
+
+
+    Answer:
+
+
+    b) apt-get dist-upgrade
+
+
+    # 44: What command will update all available packages from Debian''s update server?
+
+
+    +   a) apt-get install
+
+    +   b) yum upgrade
+
+    +   c) apt-get upgrade
+
+    +   d) apt-get update;apt-get upgrade
+
+
+    Answer:
+
+
+    d) apt-get update;apt-get upgrade
+
+
+    # 45: If you need a newer version of a package (and still want to use an official
+    Debian package), what distribution version should you look for a newer package
+    in?
+
+
+    +   a) testing'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '+   - b) stable
+
+    +   - c) newer
+
+    +   - d) unstable
+
+
+    **Answer:**
+
+
+    a) testing
+
+
+    **46: If you need the absolute newest version of a package, than what is provided
+    in Debian stable, what distribution version should you look for the newest package
+    in?**
+
+
+    +   - a) unstable
+
+    +   - b) stable
+
+    +   - c) testing
+
+    +   - d) unreliable
+
+
+    **Answer:**
+
+
+    a) unstable
+
+
+    **47: What user does Apache run as, in RHEL/CentOS?**
+
+
+    +   - a) apache
+
+    +   - b) httpd'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '+   c) apache2
+
+    +   d) www-data
+
+
+    **Answer:**
+
+
+    +   a) apache'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Various Commands &
+
+
+    **Utilities**'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '48: Which command allows you to view the mail server for an external domain?
+
+
+    +   a) dig
+
+    +   b) mx
+
+    +   c) lookup
+
+    +   d) dig-mx
+
+
+    Answer:
+
+
+    a) dig
+
+
+    49: What command will \"reverse grep\" a string, showing lines that DON''T match
+    a string?
+
+
+    +   a) grep \"string\"
+
+    +   b) grep -r \"string\"
+
+    +   c) grep -c \"string\"
+
+    +   d) grep -v \"string\"
+
+
+    Answer:
+
+
+    d) grep -v \"string\"
+
+
+    50: Which redirector should be used to append to a file?'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "+   a) '>'\n+        b) '>>'\n+        c) '|'\n+        d) '%' \n\nAnswer:\
+    \  \nb) '>>'\n\n51: Which character (or command) can be used after a command to\
+    \ send the command into the background (while still executing)?\n\n+   a) >/dev/null\n\
+    +        b) &\n+        c) %\n+        d) | null\n\nAnswer:  \nb) &\n\n52: What\
+    \ utility allows you to manually test SMTP functionality, troubleshoot firewall\
+    \ restrictions, and connect"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "to other servers?\n\n+   a) telnet  \n+       b) ssh  \n+       c) echo  \n\
+    +       d) Ping\n\n**Answer:**\n\na) telnet\n\n**53: Which command switch to the\
+    \ 'ping' utility will allow you to adjust the \"TTL, or Time to Live\"?**\n\n\
+    +   a) --ttl  \n+       b) -l  \n+       c) -t  \n+       d) -p\n\n**Answer:**\n\
+    \nc) --t\n\n**54: What command will allow you to view the routers and hosts that\
+    \ a packet makes it's way through, from the**"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "computer you are on, to an outside host?\n\n+   a) traceret\n+   \n+   b) traceroute\n\
+    +   \n+   c) trace_route\n+   \n+   d) route\n\n**Answer:**\n\nb) traceroute\n\
+    \n**55: What command will show listening network connections, as well as active\
+    \ network connections?**\n\n+   a) connections\n+   \n+   b) conn_list\n+   \n\
+    +   c) list\n+   \n+   d) netstat\n\n**Answer:**\n\nd) netstat\n\n**56: What command\
+    \ will allow you to see all processes running on the server?**"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "+   a) `ps -a`\n+   \n+   b) `ps -auw`\n+   \n+   c) `ps -waux`\n+   \n+  \
+    \ d) `ps --all-processes`\n\n**Answer:**\n\nc) `ps -waux`\n\n**57: What command\
+    \ will remove an empty directory?**\n\n+   a) `rm`\n+   \n+   b) `rmdir`\n+  \
+    \ \n+   c) `deltree`\n+   \n+   d) `remove`\n\n**Answer:**\n\nb) `rmdir`\n\n**58:\
+    \ What three commands are typically used to compile software, utilizing the standard\
+    \ 'make' system?**\n\n**Answer:**\n\n`./configure, make, make install`"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '59: What is the proper syntax to apply a source code patch (called patch.diff)
+    to a source code tree, assuming that the current directory is that of the source
+    code tree?
+
+
+    Answer:
+
+
+    patch < patch.diff
+
+
+    60: When compiling the Linux kernel, what is the command to configure the compilation
+    process, using an ncurses-based menu?
+
+
+    Answer:
+
+
+    Make menuconfig
+
+
+    61: What is the proper command to use, to delete all compiled executables, and
+    object files from a source directory (most often used to remove these files to
+    troubleshoot compilation issues)?
+
+
+    Answer:
+
+
+    Make clean'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# 62: What is the proper command to use, to remove an installed source package,
+    when the source tree used to compile the software is retained (and the current
+    directory is that of the source tree)?
+
+
+    Answer: Make uninstall'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# General Administration'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# **63: What command allows you to change group ownership of a file?**\n\n\
+    +   a) chown groupname filename\n+   \n+   b) chgrp groupname filename\n+   \n\
+    +   c) chown groupname:filename\n+   \n+   d) chmod 707 filename\n\n**Answer:**\n\
+    \nb) chgrp groupname filename\n\n# **64: If you recently created a new user, but\
+    \ they receive an \"access denied\" error upon logging onto the server, what command\
+    \ did you forget?**\n\n+   a) chmod 755 /home/username\n+   \n+   b) chown -R\
+    \ username /home/username\n+   \n+   c) passwd username\n+   \n+   d) adduser\
+    \ username\n\n**Answer:**\n\nb) chown -R username /home/username"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "**65: What file contains the encrypted password of a user?**\n\n+   a) `/etc/passwd`\n\
+    +   \n+   b) `/etc/shadow`\n+   \n+   c) `/etc/users`\n+   \n+   d) `/etc/group`\n\
+    \n**Answer:**\n\nb) `/etc/shadow`\n\n**66: What file contains most system errors?**\n\
+    \n+   a) `/var/log/syslog`\n+   \n+   b) `/var/log/errors`\n+   \n+   c) `/var/log/messages`\n\
+    +   \n+   d) `/var/messages`\n\n**Answer:**\n\nc) `/var/log/messages`\n\n**67:\
+    \ What command will search for a string, within vi?**\n\n+   a) `% string`\n+\
+    \   \n+   b) `/string`"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '+   c) "string
+
+    +   d) $string
+
+
+    **Answer:**
+
+    b) /string
+
+
+    # **68: What command will quit vi, without saving the changes to a file?**
+
+
+    +   a) :q
+
+    +   b) :wq
+
+    +   c) :q!
+
+    +   d) :e!
+
+
+    **Answer:**
+
+    c) :q!
+
+
+    # **69: What single key will allow you to modify a line of text, within vi?**
+
+
+    +   a) w
+
+    +   b) i
+
+    +   c) q'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'd) n
+
+
+    # Answer:
+
+
+    b) i
+
+
+    # 70: What command will write the changes to a file, without quitting vi?
+
+
+    +   a) `:wq`
+
+    +   b) `:w!q`
+
+    +   c) `:w`
+
+    +   d) `:g`
+
+
+    # Answer:
+
+
+    c) `:w`
+
+
+    # 71: What file contains the list of preferred DNS servers to use, when looking
+    up the IP address of a domain name?
+
+
+    +   a) `/etc/dns`
+
+    +   b) `/etc/sysconfig/networking`
+
+    +   c) `/etc/resolv.conf`
+
+    +   d) `/etc/sysconfig/dns`'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'Answer:
+
+
+    c) /etc/resolv.conf
+
+
+    # 72: What file controls text displayed to every user that logs into the server?
+
+
+    +   a) /etc/message
+
+    +   b) /etc/motd
+
+    +   c) /etc/warning
+
+    +   d) /etc/bash_profile
+
+
+    Answer:
+
+
+    b) /etc/motd
+
+
+    # 73: What file contains a user''s shell variable settings, and scripts launched
+    at every login (BASH)?
+
+
+    +   a) /home/username/.bash_script
+
+    +   b) /home/username/.bash
+
+    +   c) /home/username/.bash_profile
+
+    +   d) /home/username/.bash_history
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "c) `/home/username/.bash_profile`\n\n# **74: What command will create a shortcut\
+    \ to a file in another directory?**\n\n+   a) `ln -s /usr/local/something/something.sh`\
+    \  \n+   `/usr/bin/something.sh`\n\n+   b) `ln -h /usr/local/something/something.sh`\
+    \  \n+   `/usr/bin/something.sh`\n\n+   c) `ls -s /usr/bin/something.sh`\n\n+\
+    \   d) `chmod a+x /usr/bin/something.sh`\n\n**Answer:**\n\na) `ln -s /usr/local/something/something.sh`\
+    \  \n`/usr/bin/something.sh`\n\n# **75: What command will create a TAR archive\
+    \ of a directory /home, and store the TAR backup as /backup/backup-home.tar**\n\
+    \n+   a) `tar -cvf /home /backup/backup-home.tar`\n\n+   b) `tar -xvf /home /backup/backup-home.tar`"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '+   c) tar -cvf /backup/backup-home.tar /home
+
+
+    +   d) none of the above
+
+
+    **Answer:**
+
+
+    c) tar -cvf /backup/backup-home.tar /home
+
+
+    **76: True or false: The ''tar'' command will preserve the original permissions
+    on a directory, or file?**
+
+
+    **Answer:**
+
+
+    True
+
+
+    **77: What command would you use to copy an entire directory (including its contents),
+    to another location?**
+
+
+    **Answer:**
+
+
+    Cp -R directory /path/to/location
+
+
+    **78: What command will compress the file ''file.tar'', using the maximum available
+    compression, and in GZIP format?**
+
+
+    **Answer:**
+
+
+    gzip -9 file.tar'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # Shells & Shell Scripting'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# 79: What file contains a user''s shell variable settings, and scripts launched
+    at every login (BASH)?
+
+
+    +   a) /home/username/.bash_script
+
+    +   b) /home/username/.bash
+
+    +   c) /home/username/.bash_profile
+
+    +   d) /home/username/.bash_history
+
+
+    **Answer:**
+
+    c) /home/username/.bash_profile
+
+
+    # 80: What is the most popular shell used today?
+
+
+    **Answer:**
+
+    BASH, or the Bourne Again Shell
+
+
+    # 81: What command will print text that the user running a script can see?
+
+
+    **Answer:**
+
+    echo
+
+
+    # 82: What line must be included at the beginning of every'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'shell script, in order to ensure that the lines in the script are properly
+    executed?
+
+
+    **Answer:**
+
+
+    ```
+
+    #! /bin/sh, or #! /bin/bash
+
+    ```
+
+
+    **83: What command needs to be executed, if your script gives a "permission denied"
+    error?**
+
+
+    +   a) chmod a+r script.sh
+
+    +   b) chown your_username script.sh
+
+    +   c) chmod a+x script.sh
+
+    +   d) ln -s script.sh script.sh
+
+
+    **Answer:**
+
+
+    c) chmod a+x script.sh
+
+
+    **84: What will the line "DAY=$date | cut -b 1-4" do, in a basic shell script?**
+
+
+    **Answer:**
+
+    Create a variable named “DAY”, and assign the value of the current day to it (i.e.
+    Mon, Tue, Wed, etc.).'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 85: What command will send an exit status of 0, in a basic shell script?
+
+
+    # Answer:
+
+
+    ```
+
+    exit 0
+
+    ```
+
+
+    # 86: If a script is set to run as the owner of the script, with all the permissions
+    of the script owner, what bit is said to be set on the script?
+
+
+    +   a) setuid
+
+
+    +   b) setroot
+
+
+    +   c) chown
+
+
+    +   d) owner
+
+
+    # Answer:
+
+
+    +   a) setuid
+
+
+    # 87: What command will set a script to run as the owner of the script, with all
+    of the permissions of that owner?
+
+
+    +   a) chmod 0755 script.sh
+
+
+    +   b) chmod 2077 script.sh'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '+   c)  chmod 4755 script.sh
+
+    +   d)  chown username script.sh
+
+
+    **Answer:**
+
+    c) chmod 4755 script.sh
+
+
+    **88: What command can be used to make a script pause execution for 5 minutes,
+    then continue script execution?**
+
+
+    **Answer:**
+
+
+    sleep 5m
+
+
+    **89: What special device will allow all input to be discarded?**
+
+    a)  /dev/zero
+
+    b)  /dev/null
+
+    c)  /dev/discard
+
+    d)  /dev/trash
+
+
+    **Answer:**
+
+    b) /dev/null
+
+
+    **90: What special device contains truly random characters, and**'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'is considered by many to be a replacement to the traditional random device?
+
+
+    +   a) /dev/random
+
+
+    +   b) /dev/dsp
+
+
+    +   c) /dev/urandom
+
+
+    +   d) /dev/null
+
+
+    **Answer:**
+
+
+    c) /dev/urandom
+
+
+    **91: What character is used as a comment designator, in shell scripts?**
+
+
+    +   a) %
+
+
+    +   b) //
+
+
+    +   c) #
+
+
+    +   d) @
+
+
+    **Answer:**
+
+
+    c) #
+
+
+    **92: What syntax can be used to manually execute a script, that**'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'does not have an execute bit set?
+
+
+    Answer:
+
+
+    sh script.sh OR bash script.sh
+
+
+    93: Which single character will allow you to place two separate commands, on a
+    single line?
+
+
+    Answer:
+
+
+    ;
+
+
+    94: Please write the line, which will create an element named "trees", with the
+    separate values "elm, pine, spruce, fir, dogwood". This element’s values will
+    be used as separate values, and should not be set to a single value.
+
+
+    Answer:
+
+
+    For trees in elm pine spruce fir dogwood
+
+
+    95: Give an example of how to print these separate elements, one per line.
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '```
+
+    do
+
+    echo $trees
+
+    done
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Firewalls/Routing'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# **96: What device needs to have a value of "1" to enable packet forwarding,
+    between network interfaces?**
+
+
+    +   a) /proc/sys/net/ip/ip_forward
+
+
+    +   b) /dev/sys/net/ipv4/ip_forward
+
+
+    +   c) /proc/sys/net/ipv4/ip_forward
+
+
+    +   d) /proc/sys/net/ip_forward
+
+
+    **Answer:**
+
+
+    c) /proc/sys/net/ipv4/ip_forward
+
+
+    # **97: Give an example of an iptables command that will block incoming TCP traffic
+    on port 25, on all network interfaces.**
+
+
+    This rule should be the last rule in the list, and it should drop the SYN packet
+    that it recevies from an external host.
+
+
+    **Answer:**
+
+
+    ```
+
+    ```bash
+
+    /sbin/iptables -A INPUT -p tcp -dport 25 -j DROP
+
+    ```
+
+    ```
+
+
+    # **98: Give an example of an iptables command that will block incoming TCP traffic
+    on port 25, when the source address is 209.181.6.8. This rule should be the last
+    rule in the list.**'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: 'Answer:
+
+
+    /sbin/iptables -A INPUT -p tcp --dport 25 -s 209.181.6.8 -j DROP
+
+
+    99: Give an example of an iptables command to block all ICMP traffic, on interface
+    eth0. This rule should be the first rule on the list.
+
+
+    Answer:
+
+
+    /sbin/iptables -I INPUT -p icmp -i eth0 -j DROP
+
+
+    100: Give an example of an iptables command that will redirect all traffic on
+    TCP port 25 (eth0) to another host, 192.168.0.5. This rule should be the first
+    rule in the chain.
+
+
+    Answer:
+
+
+    /sbin/iptables -I INPUT -p tcp --dport 25 -i eth0 -j DNAT --to 192.168.0.5
+
+
+    101: Give an example of an iptables command that will redirect all traffic on
+    TCP port 8080 (eth0) to the host 192.168.0.5, port 80. This rule should be the
+    last rule in the'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'chain.
+
+
+    Answer:
+
+
+    ```
+
+    /sbin/iptables -A INPUT -p tcp -dport 8080 -i eth0 -j DNAT --to
+
+    192.168.0.5:80
+
+    ```
+
+
+    **102: What command will reset all iptables rules to the default policy?**
+
+
+    Answer:
+
+
+    ```
+
+    /sbin/iptables -F
+
+    ```
+
+
+    **103: Give an example of an iptables command that will block all traffic on TCP
+    port 80 to host 192.168.0.1, with a RSET packet. This rule should be the last
+    rule in the chain.**
+
+
+    Answer:
+
+
+    ```
+
+    /sbin/iptables -A INPUT -p tcp -dport 80 -s 192.168.0.1 -j
+
+    REJECT --reject-with tcp-reset
+
+    ```
+
+
+    **104: Give an example of the syntax used to start a port scan, using the utility
+    NMAP, on the host 192.168.0.10. Pinging the**'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "host before the scan should be disabed, since the host drops all ICMP traffic.\n\
+    \nAnswer:  \nnmap -PO 192.168.0.10\n\n105: What command will delete the default\
+    \ route?  \nAnswer:  \nroute del default\n\n106: What command will route all external\
+    \ traffic to host 192.168.0.1, via eth0?  \nAnswer:  \nroute add default gw 192.168.0.1\
+    \ eth0\n\n107: What command will bring down eth0?  \nAnswer:  \nifdown eth0\n\n\
+    108: What command will bring up eth0?"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '**Answer:**
+
+
+    ```
+
+    ifup eth0
+
+    ```
+
+
+    **109: What iptables command should you use to allow traffic on interface eth0,
+    to the SSH service? This command should be the first command in the chain.**
+
+
+    **Answer:**
+
+
+    ```
+
+    iptables -I INPUT -p tcp -dport 22 -i eth0 -j ACCEPT
+
+    ```
+
+
+    **110: What iptables command should you use to allow all UDP traffic from host
+    192.168.0.5? This command should be the first command in the chain.**
+
+
+    **Answer:**
+
+
+    ```
+
+    iptables -I INPUT -p udp -s 192.168.0.5 -j ACCEPT
+
+    ```
+
+
+    **111: What file controls which hosts are allowed to connect to a Linux server,
+    and is most commonly used by xinetd?**
+
+
+    **Answer:**
+
+
+    ```
+
+    /etc/hosts.allow
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# **112: What file controls which hosts are not all owed to connect to a Linux
+    server, and is most commonly used by xinetd?**
+
+
+    **Answer:**
+
+
+    /etc/hosts.deny
+
+
+    # **113: Why is it always better to block hosts at the network, or kernel level,
+    rather than at the application level?**
+
+
+    **Answer:**
+
+
+    Better security (preventing blocked hosts from interacting with the server application),
+    and better performance (blocking hosts at the network level prevents tying up
+    resources with requests that will be ignored (or given a 403 error, etc).
+
+
+    # **114: Which iptables command can be used to enable IP Masquerading, given that
+    eth0 is the inside interface, and that eth1 is the outside interface?**
+
+
+    **Answer:**
+
+
+    /sbin/iptables -t NAT -A POSTROUTING -o eth1 -j MASQUERADE'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# **115: What is the iptables command to set the default incoming traffic policy
+    to drop traffic not specifically allowed?**
+
+
+    **Answer:**
+
+
+    ```
+
+    `/sbin/iptables -P INPUT DROP`
+
+    ```
+
+
+    # **116: What is the iptables command to set the default outgoing traffic policy
+    to allow traffic not specifically denied?**
+
+
+    **Answer:**
+
+
+    ```
+
+    `/sbin/iptables -P OUTPUT ACCEPT`
+
+    ```
+
+
+    # **117: What are the three main iptables chains?**
+
+
+    +   a) INPUT, OUTPUT, FORWARD
+
+    +   b) INPUT, OUTPUT, POSTROUTING
+
+    +   c) INPUT, OUTPUT, DROP
+
+    +   d) INPUT, OUTPUT, DENY
+
+
+    **Answer:**
+
+    a) INPUT, OUTPUT, FORWARD'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 118: What is the command to list all iptables rules?
+
+
+    **Answer:**
+
+
+    ```
+
+    ```bash
+
+    /sbin/iptables -L
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '*This page is intentionally left blank*'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Linux, Apache, MySQL, & PHP (LAMP)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# **119: Where is the default location for PHP's configuration file?**\n\n\
+    +   a) `/etc/php/php.ini`  \n+   b) `/etc/php.ini`  \n+   c) `/etc/php.d/php.ini`\
+    \  \n+   d) `/etc/php5/php.ini`\n\n**Answer:**\nb) `/etc/php.ini`\n\n# **120:\
+    \ What is the proper syntax to use for mysqladmin to backup the entire MySQL installation\
+    \ to the file `/root/mysql-backup.sql`?**\n\n**Answer:**\nmysqldump -u root --all-databases\
+    \ > `/root/mysql-backup.sql`\n\n# **121: True or False: A backup of the `/var`\
+    \ directory will backup all MySQL databases.**\n\n**Answer:**\nTrue"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '**122: What command should you use to access the MySQL instance running on
+    the server you are working on, and connect to the database ''mail''?**
+
+
+    **Answer:**
+
+
+    `mysql -u root -P mail`
+
+
+    **123: True or False: most PHP applications require safe_mode to be turned on.**
+
+
+    **Answer:**
+
+
+    False
+
+
+    **124: What is the name of the PHP setting used to configure the maximum amount
+    of memory that a script can consume?**
+
+
+    a) mem_limit
+
+    b) mlimit
+
+    c) memory_limit
+
+    d) memorylimit
+
+
+    **Answer:**
+
+
+    **c) memory_limit**'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "**125: What setting should you set in PHP\\'s configuration to log all PHP\
+    \ errors to the external file,*/tmp/php-errors.log*?**\n\n**Answer:**\n\nerror_log\
+    \ = /tmp/php-errors.log\n\n**126: What setting and value should you set in Apache\\\
+    's configuration to disable the display of Apache\\'s default banner (including\
+    \ version information)?**\n\n**Answer:**\n\nServerSignature Off\n\n**127: What\
+    \ is wrong with the following VirtualHost declaration:**\n\n```\n```text\n<VirtualHost\
+    \ 192.168.0.1:80>\n    ServerName example.com\n    DocumentRoot /var/wwwo/html/example.com\n\
+    \    CustomLog /var/wwwo/html/example.com_access.log\n        combined\n    ErrorDocument\
+    \ 404 /error.php\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "*ErrorDocument 403 /error.php*\n\n</VirtualHost>\n\n+   a) Missing ServerAlias\
+    \ directive\n+   \n+   b) Missing Directory directive\n+   \n+   c) VirtualHost\
+    \ directive is incorrectly set\n+   \n+   d) None of the above\n\n**Answer:**\n\
+    \nb) Missing Directory directive\n\n**128: What is the correct syntax to enable\
+    \ the external module mod_rewrite, in the main Apache configuration?**\n\n**Answer:**\n\
+    \nLoadModule rewrite_module\n\nmodules/mod_rewrite.so\n\n**129: What is the default\
+    \ value of \"StartServers\" in Apache?**\n\n**Answer:**\n\n5"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# **130: Which of the following services must be restarted after a change in
+    the PHP configuration?**
+
+
+    +   a) Apache
+
+
+    +   b) PHP
+
+
+    +   c) MySQL
+
+
+    +   d) PostgreSQL
+
+
+    **Answer:**
+
+
+    a) Apache
+
+
+    **131: What is the command to start MySQL into "Safe Mode", so that you can reset
+    the root MySQL password?**
+
+
+    **Answer:**
+
+
+    ```
+
+    mysqld_safe --skip-grant-tables
+
+    ```
+
+
+    **132: What is the name of the CentOS package that gives MySQL support to PHP?**
+
+
+    **Answer:**
+
+
+    php-mysql'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# 133: What is the MySQL command to create a new database called ''test''?
+
+
+    Answer:
+
+
+    ```
+
+    CREATE database test;
+
+    ```
+
+
+    # 134: What is the MySQL command to create a new user called ''test'' (and password
+    to ''password''), and give ''test'' full access to the database ''test''?
+
+
+    Answer:
+
+
+    ```
+
+    GRANT ALL PRIVILEGES on test.* to ''test''@''localhost''
+
+    IDENTIFIED BY ''password'';
+
+    ```
+
+
+    # 135: If Apache allows a web browser to download PHP files, instead of properly
+    executing them, what directive is missing from the Apache configuration?
+
+
+    Answer:
+
+
+    AddHandler'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '**136: What MySQL command should you enter, after creating new users, or modifying
+    access controls?**
+
+
+    **Answer:**
+
+
+    FLUSH PRIVILEGES;
+
+
+    **137: Where is the deault error log for Apache located in CentOS/RHEL?**
+
+
+    **Answer:**
+
+
+    /var/log/httpd/error_log
+
+
+    **138: What should you also create, when creating a new database for a new web
+    application, in addition to the new MySQL database?**
+
+
+    **Answer:**
+
+
+    As a best practice, a new MySQL user, that has full access to the new database
+    (and the new database alone).'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Samba'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '**139: Where is the Samba configuration file typically found?**
+
+
+    **Answer:**
+
+
+    /etc/samba/smb.conf
+
+
+    **140: What two security authentication types are available with Samba?**
+
+
+    **Answer:**
+
+
+    security, user
+
+
+    **141: If a share has a “create mask” of “700”, what does that mean?**
+
+
+    **Answer:**
+
+
+    All files created will be “chmod 700”, meaning that the user will have full read,
+    write, and execute privileges to the file, and everyone else will have no access
+    to the file.
+
+
+    **142: What command would you use to create a Samba account for the user ‘tom’,
+    assuming that ‘tom’ is already added as a user on the server itself?**'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'Answer:
+
+
+    ```
+
+    smbpasswd -a tom
+
+    ```
+
+
+    **143: If a user is presented with a login screen, when attempting to browse the
+    server’s shares, what is the first thing you should do (assuming that the user’s
+    username and password on their Windows computer matches that of the account they
+    are trying to use on the Samba server)?**
+
+
+    **Answer:**
+
+
+    Reset the Samba password for the user, verify that the user account has been created
+    (in /etc/passwd, for the local server).
+
+
+    **144: What does the following option: "SO_RCVBUF=8192 SO_SNDBUF=8192 socket options
+    = TCP_NODELAY" do on a Samba server?**
+
+
+    **Answer:**
+
+
+    Increase Samba performance, by setting the sending and receiving buffer sizes.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '145: True or False: By default, all printers on the local CUPS server are shared
+    through Samba.
+
+
+    **Answer:**
+
+    True
+
+
+    146: True or False: Samba permissions override any filesystem permissions.
+
+
+    **Answer:**
+
+    False. Filesystem permissions will override any Samba permissions.
+
+
+    147: What is the best way to setup an advanced ACL for a file or directory that
+    is stored on a Samba server?
+
+
+    **Answer:**
+
+    By using a Windows computer. Samba currently has no method of setting up advanced
+    ACL for files and directories.
+
+
+    148: True or False: By default, Samba will be configured to act as the domain
+    "master", or domain server.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '**Answer:**
+
+
+    True. Samba will, by default, allow users to log into the server, and act as a
+    domain “master”, or domain server.
+
+
+    **149: What share definition, created by most default installlations, is typically
+    set to "read only = yes","browsable = no",and "guest ok= no"?**
+
+
+    **Answer:**
+
+
+    [homes]
+
+
+    **150: What does ''valid users = @reception'' mean?**
+
+
+    **Answer:**
+
+
+    That all users on the group ''reception'' are allowed to access the share.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Server Performance'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# 151: What command allows you to fine-tune the hard disk performance on a\
+    \ Linux server?\n\nAnswer: \n\nHdparm\n\n# 152: What is the exact command (from\
+    \ the above question) that will allow you to benchmark the hard disk drive /dev/sda?\n\
+    \nAnswer: \n\nhdparm -T /dev/sda\n\n# 153: What command will allow you to view\
+    \ the amount of used, free, and cached RAM?\n\nAnswer: \n\nfree\n\n# 154: What\
+    \ command will allow you to see the amount of disk space available, and used,\
+    \ on all mounted drives?\n\nAnswer:"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'df
+
+
+    **155: What is the option to the command above that will output the values in
+    an easily readable format?**
+
+
+    **Answer:**
+
+
+    df -h
+
+
+    **156: What is the file that contains processor information, including CPU frequency,
+    flags supported, CPU cache size, and the number of installed processors?**
+
+
+    **Answer:**
+
+
+    /proc/cpuinfo
+
+
+    **157: What command will stop all running processes, of a given name?**
+
+
+    **Answer:**
+
+
+    killall
+
+
+    **158: What command will stop a running process, if you know**'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'the PID of the process?
+
+
+    Answer: kill
+
+
+    159: What does the "-9" flag to the above command do?
+
+
+    Answer: Forces the process to terminate, often resulting in the loss of data.
+
+
+    160: What does the "-HUP" flag to the above command do?
+
+
+    Answer: Stops, and then restarts the process.
+
+
+    161: What command will allow you to view the running processes on the server,
+    sorted by CPU utilization, in real time?
+
+
+    Answer: top'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '162: What key, when pressed while running the above command, will allow you
+    to terminate a process?
+
+
+    Answer:
+
+
+    K
+
+
+    163: What command will allow you to adjust the priority of a process (in terms
+    of system resources)?
+
+
+    Answer:
+
+
+    Nice
+
+
+    164: What is the exact syntax to launch a script named ''script.sh'' (using the
+    above utility), with the lowest system priority?
+
+
+    Answer:
+
+
+    nice -n 20 script.sh
+
+
+    165: What is the exact syntax to launch a script named ''script.sh'' (using the
+    above utility), with the highest system priority?'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'Answer:
+
+    nice -n -20 script.sh
+
+
+    **166: What number corresponds to the default system priority?**
+
+
+    Answer:
+
+
+    0
+
+
+    **167: What command will allow you to adjust the priority of an already running
+    process?**
+
+
+    Answer:
+
+
+    renice'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Networking'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '**168: What TCP port does HTTP run on?**
+
+
+    **Answer:**
+
+
+    80
+
+
+    **169: What TCP port does SSH run on?**
+
+
+    **Answer:**
+
+
+    22
+
+
+    **170: What TCP port does SMTP run on?**
+
+
+    **Answer:**
+
+
+    25
+
+
+    **171: What TCP port does SSL run on?**
+
+
+    **Answer:**
+
+
+    443
+
+
+    **172: What is the default port for the submission service?**
+
+
+    **Answer:**
+
+
+    587'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# 173: What TCP port does POP3 run on?
+
+
+    **Answer:**
+
+
+    113
+
+
+    # 174: What TCP port does FTP run on?
+
+
+    **Answer:**
+
+
+    21
+
+
+    # 175: What TCP port does Squid, or most other HTTP proxies, run on?
+
+
+    **Answer:**
+
+
+    8080
+
+
+    # 176: What TCP port does CIFS/SMB (also called NETBIOS) run on?
+
+
+    **Answer:**
+
+
+    139
+
+
+    # 177: What file contains the default applications, and port'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'numbers associated with them?
+
+
+    Answer:
+
+
+    /etc/services
+
+
+    178: What TCP port does DNS run on?
+
+
+    Answer:
+
+
+    53
+
+
+    179: What TCP port does MySQL run on?
+
+
+    Answer:
+
+
+    3306
+
+
+    180: What command is used to find the packet route between
+
+    the server you are on, and a host located on another network, called example.com?
+
+
+    Answer:
+
+
+    traceroute example.com
+
+
+    181: What command can be used to send a test packet to'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'ensure that a host is responding to ICMP packets?
+
+
+    Answer:
+
+
+    ping
+
+
+    **182: What is the highest priority a mail server can have, on a DNS MX record?**
+
+
+    Answer:
+
+
+    0
+
+
+    **183: What is the name for a DNS record that points to an IP address?**
+
+
+    Answer:
+
+
+    A Record
+
+
+    **184: What is the name for a DNS record that points to another DNS record?**
+
+
+    Answer:
+
+
+    CNAME Record'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# 185: What is the ''TTL'' setting on a DNS record for?
+
+
+    **Answer:**
+
+
+    “Time to Live”, or the time that a record is valid, in seconds. After the TTL
+    period, the record expires, and DNS servers should no longer cache the response.
+
+
+    # 186: What is a SPF record used for?
+
+
+    **Answer:**
+
+
+    A domain-based anti-spam protection. It specifies which hosts are allowed to send
+    mail for a domain.
+
+
+    # 187: What is the difference between DKIM, and SPF?
+
+
+    **Answer:**
+
+
+    DKIM digitally signs emails (to confirm that the mail message came from a mail
+    server that is the authoritative mail server for that domain), SPF specifies which
+    hosts are allowed to send mail on behalf of that domain. DKIM requires a software
+    implementation on the sending server, SPF is purely a DNS record, requiring no
+    further software installation.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: Postfix
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '188: What configuration file controls the majority of Postfix’s configuration?
+
+
+    Answer:
+
+
+    /etc/postfix/main.cf
+
+
+    189: What configuration file controls what TCP ports Postfix listens on, as well
+    as the different options enabled on each Postfix instance?
+
+
+    Answer:
+
+
+    /etc/postfix/master.cf
+
+
+    190: What file contains all mailbox aliases on the Linux server?
+
+
+    Answer:
+
+
+    /etc/aliases
+
+
+    191: What command should be ran after updating the above file?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'newaliases
+
+
+    # **192: What does the option "mynetworks" control?**
+
+
+    **Answer:**
+
+
+    Which networks are allowed to relay mail through the Postfix server.
+
+
+    # **193: What is the option that controls which domains Postfix will accept mail
+    for (for multiple domains)?**
+
+
+    **Answer:**
+
+
+    mydestination
+
+
+    # **194: What is the default mail delivery location?**
+
+
+    **Answer:**
+
+
+    ```
+
+    /var/mail/username, or /var/spool/mail/username
+
+    ```
+
+
+    # **195: What is the default mail log location?**
+
+
+    **Answer:**
+
+
+    ```
+
+    /var/log/mail.log
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# 196: What is the default mail error log location?
+
+
+    Answer:
+
+
+    /var/log/mail.err
+
+
+    # 197: What is the command to restart Postfix?
+
+
+    Answer:
+
+
+    /etc/init.d/postfix restart
+
+
+    # 198: What authentication method does Postfix support, for authenticating SMTP
+    users securely (via local UNIX accounts, or even a MySQL database)?
+
+
+    Answer:
+
+
+    SASL
+
+
+    # 199: What command can you use to manually start a SMTP conversation with a mail
+    server running on example.com, in order to troubleshoot mail delivery issues?
+
+
+    Answer:
+
+
+    telnet example.com 25'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '200: **What is the first command that is ran at the beginning of every SMTP
+    connection (per RFC 2821?**
+
+
+    **Answer:**
+
+
+    EHLO'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '*This page is intentionally left blank*'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# ## HR Questions
+
+
+    *Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will also find some strategy suggestions with
+    it.*'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# **1: How do you make decisions?**
+
+
+    **Answer:**
+
+
+    This is a great opportunity for you to wow your interviewer with your decisiveness,
+    confidence, and organizational skills.
+
+
+    Make sure that you outline a process for decision-making, and that you stress
+    the importance of weighing your options, as well as in trusting intuition. If
+    you answer this question skillfully and with ease, your interviewer will trust
+    in your capability as a worker.
+
+
+    # **2: What are the most difficult decisions for you to make?**
+
+
+    **Answer:**
+
+
+    Explain your relationship to decision-making, and a general synopsis of the process
+    you take in making choices. If there is a particular type of decision that you
+    often struggle with, such as those that involve other people, make sure to explain
+    why that type of decision is tough for you, and how you are currently engaged
+    in improving your skills.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# 3: When making a tough decision, how do you gather information?
+
+
+    Answer:
+
+
+    If you’re making a tough choice, it’s best to gather information from as many
+    sources as possible. Lead the interviewer through your process of taking information
+    from people in different areas, starting first with advice from experts in your
+    field, feedback from coworkers or other clients, and by looking analytically at
+    your own past experiences.
+
+
+    # 4: Tell me about a decision you made that did not turn out well.
+
+
+    Answer:
+
+
+    Honesty and transparency are great values that your interviewer will appreciate
+    – outline the choice you made, why you made it, the results of your poor decision
+    – and finally (and most importantly!) what you learned from the decision.
+
+
+    Give the interviewer reason to trust that you wouldn’t make a decision like that
+    again in the future.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# 5: Are you able to make decisions quickly?
+
+
+    Answer:
+
+
+    You may be able to make decisions quickly, but be sure to communicate your skill
+    in making sound, thorough decisions as well. Discuss the importance of making
+    a decision quickly, and how you do so, as well as the necessity for each decision
+    to first be well-informed.
+
+
+    # 6: Why would your skills be a good match with $X$ objective of our company?
+
+
+    Answer:
+
+
+    If you’ve researched the company before the interview, answering this question
+    should be no problem. Determine several of the company’s main objectives, and
+    explain how specific skills that you have are conducive to them. Also, think about
+    ways that your experience and skills can translate to helping the company expand
+    upon these objectives, and to reach further goals. If your old company had a similar'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: 'objective, give a specific example of how you helped the company to meet it.
+
+
+    # **7: What do you think this job entails?**
+
+
+    **Answer:**
+
+
+    Make sure you''ve researched the position well before heading into the interview.
+    Read any and all job descriptions you can find (at best, directly from the employer''s
+    website or job posting), and make note of key duties, responsibilities, and experience
+    required. Few things are less impressive to an interviewer than a candidate who
+    has no idea what sort of job they''re actually being interviewed for.
+
+
+    # **8: Is there anything else about the job or company you''d like to know?**
+
+
+    **Answer:**
+
+
+    If you have learned about the company beforehand, this is a great opportunity
+    to show that you put in the effort to study before the interview. Ask questions
+    about the company''s'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: 'mission in relation to current industry trends, and engage the interviewer
+    in interesting, relevant conversation. Additionally, clear up anything else you
+    need to know about the specific position before leaving – so that if the interviewer
+    calls with an offer, you’ll be prepared to answer.
+
+
+    # ### 9: Are you the best candidate for this position?
+
+
+    **Answer:**
+
+
+    Yes! Offer specific details about what makes you qualified for this position,
+    and be sure to discuss (and show) your unbridled passion and enthusiasm for the
+    new opportunity, the job, and the company.
+
+
+    # ### 10: How did you prepare for this interview?
+
+
+    **Answer:**
+
+
+    The key part of this question is to make sure that you have prepared! Be sure
+    that you’ve researched the company, their objectives, and their services prior
+    to the interview, and know as much about the specific position as you possibly
+    can. It’s'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'also helpful to learn about the company''s history and key players in the current
+    organization.
+
+
+    # **11: If you were hired here, what would you do on your first day?**
+
+
+    **Answer:**
+
+
+    While many people will answer this question in a boring fashion, going through
+    the standard first day procedures, this question is actually a great chance for
+    you to show the interviewer why you will make a great hire. In addition to things
+    like going through training or orientation, emphasize how much you would enjoy
+    meeting your supervisors and coworkers, or how you would spend a lot of the day
+    asking questions and taking in all of your new surroundings.
+
+
+    # **12: Have you viewed our company''s website?**
+
+
+    **Answer:**
+
+
+    Clearly, you should have viewed the company''s website and done some preliminary
+    research on them before coming to the'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'interview. If for some reasoin you did not, do not say that you did, as the
+    interviewer may reveail you by asking a specific question about it. If you did
+    look at the company''s website, this is an appropriate time to bring up something
+    you saw there that was of particular interest to you, or a value that you especially
+    supported.
+
+
+    # **13: How does \textit{X experience} on your resume relate to this position?**
+
+
+    **Answer:**
+
+
+    Many applicants will have some bit of experience on their resume that does not
+    clearly translate to the specific job in question. However, be prepared to be
+    asked about this type of seemingly-irrelevant experience, and have a response
+    prepared that takes into account similar skill sets or training that the two may
+    share.
+
+
+    # **14: Why do you want this position?**'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# **Answer:**
+
+
+    Keep this answer focused positively on aspects of this specific job that will
+    allow you to further your skills, offer new experience, or that will be an opporuntunity
+    for you to do something that you particulary enjoy. Don''t tell the interviewer
+    that you''ve been looking for a job for a long time, or that the pay is very appealing,
+    or you will appear unmotivated and opportunistc.
+
+
+    # **15: How is your background relevant to this position?**
+
+
+    # **Answer:**
+
+
+    Ideally, this should be obvious from your resume. However, in instances where
+    your experience is more loosely-related to the position, make sure that you''ve
+    researched the job and company well before the interview. That way, you can intelligently
+    relate the experience and skills that you do have, to similar skills that would
+    be needed in the new position. Explain specifically how your skills will translate,
+    and use words to describe your background such as “preparation” and'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '“learning.” Your prospective position should be described as an “opportunity”
+    and a chance for “growth and development.”
+
+
+    # **16: How do you feel about X mission of our company?**
+
+
+    **Answer:**
+
+
+    It’s important to have researched the company prior to the interview – and if
+    you’ve done so, this question won’t catch you off guard. The best answer is one
+    that is simple, to the point, and shows knowledge of the mission at hand.  Offer
+    a few short statements as to why you believe in the mission’s importance, and
+    note that you would be interested in the chance to work with a company that supports
+    it.
+
+
+    # **17: Would you rather receive more authority or more responsibility at work?**
+
+
+    **Answer:**
+
+
+    There are pros and cons to each of these options, and your interviewer will be
+    more interested to see that you can provide a critical answer to the question.  Receiving
+    more authority'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: 'may mean greater decision-making power and may be great for those with outstanding
+    leadership skills, while greater responsibility may be a growth opportunity for
+    those looking to advance steadily throughout their careers.
+
+
+    # 18: What do you do when someone in a group isn''t contributing their fair share?
+
+
+    # Answer:
+
+
+    This is a particularly important question if you''re interviewing for a position
+    in a supervisory role – explain the ways in which you would identify the problem,
+    and how you would go about pulling aside the individual to discuss their contributions.
+    It''s important to understand the process of creating a dialogue, so that you
+    can communicate your expectations clearly to the individual, give them a chance
+    to respond, and to make clear what needs to change. After this, create an action
+    plan with the group member to ensure their contributions are on par with others
+    in the group.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# 19: Tell me about a time when you made a decision that was outside of your
+    authority.
+
+
+    Answer:
+
+
+    While an answer to this question may portray you as being
+
+
+
+    decisive and confident, it could also identify you to an
+
+
+
+    employer as a potential problem employee. Instead, it may be
+
+
+
+    best to slightly refocus the question into an example of a time
+
+
+
+    that you took on additional responsibilities, and thus had to
+
+
+
+    make decisions that were outside of your normal authority (but
+
+
+
+    which had been granted to you in the specific instance).
+
+
+    Discuss how the weight of the decision affected your decision-
+
+
+
+    making process, and the outcomes of the situation.
+
+
+    # 20: Are you comfortable going to supervisors with disputes?
+
+
+    Answer:
+
+
+    If a problem arises, employers want to know that you will
+
+
+
+    handle it in a timely and appropriate manner. Emphasize that
+
+
+
+    you''ve rarely had disputes with supervisors in the past, but if a
+
+
+
+    situation were to arise, you feel perfectly comfortable in'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "discussing it with the person in question in order to find a resolution that\
+    \ is satisfactory to both parties.\n\n# 21: If you had been in charge at your\
+    \ last job, what would you have done differently?\n\nAnswer:  \nNo matter how\
+    \ many ideas you have about how things could run better, or opinions on the management\
+    \ at your previous job, remain positive when answering this question. It’s okay\
+    \ to show thoughtful reflection on how something could be handled in order to\
+    \ increase efficiency or improve sales, but be sure to keep all of your suggestions\
+    \ focused on making things better, rather than talking about ways to eliminate\
+    \ waste or negativity.\n\n# 22: Do you believe employers should praise or reward\
+    \ employees for a job well done?\n\nAnswer:  \nRecognition is always great after\
+    \ completing a difficult job, but"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 'there are many employers who may ask this question as a way to infer as to
+    whether or not you’ll be a high-maintenance worker. While you may appreciate rewards
+    or praise, it’s important to convey to the interviewer that you don’t require
+    accolades to be confident that you’ve done your job well. If you are interviewing
+    for a supervisory position where you would be the one praising other employees,
+    highlight the importance of praise in boosting team morale.
+
+
+    # **23: What do you believe is the most important quality a leader can have?**
+
+
+    **Answer:**
+
+
+    There are many important skills for a leader to have in any business, and the
+    most important component of this question is that you explain why the quality
+    you choose to highlight is important. Try to choose a quality such as communication
+    skills, or an ability to inspire people, and relate it to a specific instance
+    in which you displayed the quality among a team of people.'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# **24: Tell me about a time when an unforeseen problem arose. How did you
+    handle it?**
+
+
+    **Answer:**
+
+
+    It''s important that you are resourceful, and level-headed under pressure. An
+    interviewer wants to see that you handle problems systematically, and that you
+    can deal with change in an orderly process. Outline the situation clearly, including
+    all solutions and results of the process you implemented.
+
+
+    # **25: Can you give me an example of a time when you were able to improve X objective
+    at your previous job?**
+
+
+    **Answer:**
+
+
+    It''s important here to focus on an improvement you made that created tangible
+    results for your company. Increasing efficiency is certainly a very important
+    element in business, but employers are also looking for concrete results such
+    as increased sales or cut expenses. Explain your process thoroughly, offering
+    specific numbers and evidence wherever'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: 'possible, particularly in outlining the results.
+
+
+    **26: Tell me about a time when a supervisor did not provide specific enough direction
+    on a project.**
+
+
+    **Answer:**
+
+
+    While many employers want their employees to follow very specific guidelines without
+    much decision-making power, it''s important also to be able to pick up a project
+    with vague direction and to perform self-sufficiently. Give examples of necessary
+    questions that you asked, and specify how you determined whether a question was
+    something you needed to ask of a supervisor or whether it was something you could
+    determine on your own.
+
+
+    **27: Tell me about a time when you were in charge of leading a project.**
+
+
+    **Answer:**
+
+
+    Lead the interviewer through the process of the project, just as you would have
+    with any of your team members. Explain the'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: 'goal of the project, the necessary steps, and how you delegated tasks to your
+    team. Include the results, and what you learned as a result of the leadership
+    opportunity.
+
+
+    # 28: Tell me about a suggestion you made to a former employer that was later
+    implemented.
+
+
+    Answer:
+
+
+    Employers want to see that you’re interested in improving your company and doing
+    your part – offer a specific example of something you did to create a positive
+    change in your previous job. Explain how you thought of the idea, how your supervisors
+    received it, and what other employees thought was the idea was put into place.
+
+
+    # 29: Tell me about a time when you thought of a way something in the workplace
+    could be done more efficiently.
+
+
+    Answer:
+
+
+    Focus on the positive aspects of your idea. It’s important not to portray your
+    old company or boss negatively, so don''t'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'elaborate on how inefficient a particular system was. Rather, explain a situation
+    in which you saw an opportunity to increase productivity or to streamline a process,
+    and explain in a general step-by-step how you implemented a better system.
+
+
+    **30: Is there a difference between leading and managing people – which is your
+    greater strength?**
+
+
+    **Answer:**
+
+
+    There is a difference – leaders are often great idea people, passionate, charismatic,
+    and with the ability to organize and inspire others, while managers are those
+    who ensure a system runs, facilitate its operations, make authoritative decisions,
+    and who take great responsibility for all aspects from overall success to the
+    finest decisions. Consider which of these is most applicable to the position,
+    and explain how you fit into this role, offering concrete examples of your past
+    experience.
+
+
+    **31: Do you function better in a leadership role, or as a worker on a team?**'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '**Answer:**
+
+
+    It is important to consider what qualities the interviewer is
+
+    looking for in your position, and to express how you embody
+
+    this role. If you''re a leader, highlight your great ideas, drive
+
+    and passion, and ability to incite others around you to action.
+
+    If you work great in teams, focus on your dedication to the task
+
+    at hand, your cooperation and communication skills, and your
+
+    ability to keep things running smoothly.
+
+
+    # **32: Tell me about a time when you discovered something in the workplace that
+    was disrupting your (or others) productivity – what did you do about it?**
+
+
+    **Answer:**
+
+
+    Try to not focus on negative aspects of your previous job too
+
+    much, but instead choose an instance in which you found a
+
+    positive, and quick, solution to increase productivity. Focus on
+
+    the way you noticed the opportunity, how you presented a
+
+    solution to your supervisor, and then how the change was
+
+    implemented (most importantly, talk about how you led the'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: 'change initiative). This is a great opportunity for you to display your problem-solving
+    skills, as well as your resourceful nature and leadership skills.
+
+
+    # **33: How do you perform in a job with clearly-defined objectives and goals?**
+
+
+    **Answer:**
+
+
+    It is important to consider the position when answering this question – clearly,
+    it is best if you can excel in a job with clearly-defined objectives and goals
+    (particularly if you''re in an entry level or sales position). However, if you''re
+    applying for a position with a leadership role or creative aspect to it, be sure
+    to focus on the ways that you additionally enjoy the challenges of developing
+    and implementing your own ideas.
+
+
+    # **34: How do you perform in a job where you have great decision-making power?**
+
+
+    **Answer:**
+
+
+    The interviewer wants to know that, if hired, you won''t be the'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: 'type of employee who needs constant supervision or who asks for advice, authority,
+    or feedback every step of the way.
+
+
+    Explain that you work well in a decisive, productive environment, and that you
+    look forward to taking initiative in your position.
+
+
+    # 35: If you saw another employee doing something dishonest or unethical, what
+    would you do?
+
+
+    Answer:
+
+
+    In the case of witnessing another employee doing something dishonest, it is always
+    best to act in accordance with company policies for such a situation – and if
+    you don''t know what this company''s specific policies are, feel free to simply
+    state that you would handle it according to the policy and by reporting it to
+    the appropriate persons in charge. If you are aware of the company''s policies
+    (such as if you are seeking a promotion within your own company), it is best to
+    specifically outline your actions according to the policy.'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# 36: Tell me about a time when you learned something on your own that later
+    helped in your professional life.
+
+
+    Answer:
+
+
+    This question is important because it allows the interviewer to gain insight into
+    your dedication to learning and advancement. Choose an example solely from your
+    personal life, and provide a brief anecdote ending in the lesson you learned.
+    Then, explain in a clear and thorough manner how this lesson has translated into
+    a usable skill or practice in your position.
+
+
+    # 37: Tell me about a time when you developed a project idea at work.
+
+
+    Answer:
+
+
+    Choose a project idea that you developed that was typical of projects you might
+    complete in the new position. Outline where your idea came from, the type of research
+    you did to ensure its success and relevancy, steps that were included in the project,
+    and the end results. Offer specific before and after statistics, to show its success.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# 38: Tell me about a time when you took a risk on a project.
+
+
+    **Answer:**
+
+
+    Whether the risk involved something as complex as taking on a major project with
+    limited resources or time, or simply volunteering for a task that was outside
+    your field of experience, show that you are willing to stretch out of your comfort
+    zone and to try new things. Offer specific examples of why something you did was
+    risky, and explain what you learned in the process – or how this prepared you
+    for a job objective you later faced in your career.
+
+
+    # 39: What would you tell someone who was looking to get into this field?
+
+
+    **Answer:**
+
+
+    This question allows you to be the expert – and will show the interviewer that
+    you have the knowledge and experience to go along with any training and education
+    on your resume. Offer your knowledge as advice of unexpected things that someone'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: 'entering the field may encounter, and be sure to end with positive advice such
+    as the passion or dedication to the work that is required to truly succeed.
+
+
+    # 40: How would you handle a negative coworker?
+
+
+    Answer:
+
+
+    Everyone has to deal with negative coworkers – and the single best way to do so
+    is to remain positive. You may try to build a relationship with the coworker or
+    relate to them in some way, but even if your efforts are met with a cold shoulder,
+    you must retain your positive attitude. Above all, stress that you would never
+    allow a coworker''s negativity to impact your own work or productivity.
+
+
+    # 41: What would you do if you witnessed a coworker surfing the web, reading a
+    book, etc, wasting company time?
+
+
+    Answer:
+
+
+    The interviewer will want to see that you realize how detrimental it is for employees
+    to waste company time, and'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'that it is not something you take lightly. Explain the way you would adhere
+    to company policy, whether that includes talking to the coworker yourself, reporting
+    the behavior straight to a supervisor, or talking to someone in HR.
+
+
+    # **42: How do you handle competition among yourself and other employees?**
+
+
+    **Answer:**
+
+
+    Healthy competition can be a great thing, and it is best to stay focused on the
+    positive aspects of this here. Don''t bring up conflict among yourself and other
+    coworkers, and instead focus on the motivation to keep up with the great work
+    of others, and the ways in which coworkers may be a great support network in helping
+    to push you to new successes.
+
+
+    # **43: When is it okay to socialize with coworkers?**
+
+
+    **Answer:**
+
+
+    This question has two extreme answers (all the time, or never), and your interviewer,
+    in most cases, will want to see that you'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: 'fall somewhere in the middle. It''s important to establish solid relationships
+    with your coworkers, but never at the expense of getting work done. Ideally, relationship-building
+    can happen with exercises of teamwork and special projects, as well as in the
+    break room.
+
+
+    # 44: Tell me about a time when a major change was made at your last job, and
+    how you handled it.
+
+
+    Answer:
+
+
+    Provide a set-up for the situation including the old system, what the change was,
+    how it was implemented, and the results of the change, and include how you felt
+    about each step of the way. Be sure that your initial thoughts on the old system
+    are neutral, and that your excitement level grows with each step of the new change,
+    as an interviewer will be pleased to see your adaptability.
+
+
+    # 45: When delegating tasks, how do you choose which tasks go to which team members?'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Answer:
+
+
+    The interviewer is looking to gain insight into your thought process with this
+    question, so be sure to offer thorugh reasoning behind your choice. Explain that
+    you delegate tasks based on each individual''s
+
+
+    # 46: Tell me about a time when you had to stand up for something you believed
+    strongly about to coworkers or a supervisor.
+
+
+    # Answer:
+
+
+    While it may be difficult to explain a situation of conflict to an interviewer,
+    this is a great opportunity to display your passions and convictions, and your
+    dedication to your beliefs. Explain not just the situation to the interviewer,
+    but also elaborate on why it was so important to you to stand up for the issue,
+    and how your coworker or supervisor responded to you afterward – were they more
+    respectful? Unreceptive? Open-minded? Apologetic?'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# 47: Tell me about a time when you helped someone finish their work, even
+    though it wasn''t “your job.”
+
+
+    **Answer:**
+
+
+    Though you may be frustrated when required to pick up someone else''s slack, it''s
+    important that you remain positive about lending a hand. The interviewer will
+    be looking to see if you''re a team player, and by helping someone else finish
+    a task that he or she couldn''t manage alone, you show both your willingness to
+    help the team succeed, and your own competence.
+
+
+    # 48: What are the challenges of working on a team? How do you handle this?
+
+
+    **Answer:**
+
+
+    There are many obvious challenges to working on a team, such as handling different
+    perspectives, navigating individual schedules, or accommodating difficult workers.
+    It''s best to focus on one challenge, such as individual team members missing
+    deadlines or failing to keep commitments, and then'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: 'offer a solution that clearly addresses the problem. For example, you could
+    organize weekly status meetings for your team to discuss progress, or assign shorter
+    deadlines in order to keep the long-term deadline on schedule.
+
+
+    # 49: Do you value diversity in the workplace?
+
+
+    Answer:
+
+
+    Diversity is important in the workplace in order to foster an environment that
+    is accepting, equalizing, and full of different perspectives and backgrounds.
+    Be sure to show your awareness of these issues, and stress the importance of learning
+    from others'' experiences.
+
+
+    # 50: How would you handle a situation in which a coworker was not accepting of
+    someone else''s diversity?
+
+
+    Answer:
+
+
+    Explain that it is important to adhere to company policies regarding diversity,
+    and that you would talk to the relevant supervisors or management team. When it
+    is appropriate, it'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: 'could also be best to talk to the coworker in question about the benefits of
+    alternate perspectives – if you can handle the situation yourself, it''s best
+    not to bring resolvable issues to management.
+
+
+    # **51: Are you rewarded more from working on a team, or accomplishing a task
+    on your own?**
+
+
+    **Answer:**
+
+
+    It''s best to show a balance between these two aspects – your employer wants to
+    see that you''re comfortable working on your own, and that you can complete tasks
+    efficiently and well without assistance. However, it''s also important for your
+    employer to see that you can be a team player, and that you understand the value
+    that multiple perspectives and efforts can bring to a project.
+
+
+    And Finally Good Luck!'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# INDEX
+
+
+    # LINUX
+
+
+    # Hardware
+
+
+    +   1: What command displays hardware related kernel messages?
+
+    +   2: What command shows PCI card information?
+
+    +   3: What does the command ''lsmod'' do?
+
+    +   4: What does the command ''insmod'' do?
+
+    +   5: What is the device name for the first SATA drive on a server?
+
+    +   6: What is the device name for the first IDE drive on a server?
+
+    +   7: Which two video card vendors require proprietary drivers for full hardware
+    support?
+
+    +   8: Which device corresponds to the physical memory?
+
+    +   9: Which daemon checks the health status of hard drives?
+
+    +   10: What command will install the required drivers for a Realtek R139 based
+    network card?
+
+    +   11: What two values are needed in order to properly setup a monitor under
+    X11?
+
+    +   12: What is the maximum amount of addressable RAM that a 32-bit kernel will
+    address?
+
+    +   13: What is the most popular architecture, in use today?
+
+    +   14: What command should you use to rebuild the modules.conf file?
+
+    +   15: What device corresponds to the first serial device port, using the newer
+    /proc layout?
+
+    +   16: What file contains all filesystems that are available to be mounted, as
+    well as all mount options?
+
+    +   17: What mount option allows for better disk performance, by not recording
+    the access time of each file?
+
+    +   18: What command would you use to mount the partition /dev/sda1, which is
+    formatted ext3, at /mnt/linux?
+
+    +   19: What utility will allow you to create block-by-block copies of a disk,
+    or save block-by-block copies of a disk?'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '+   20: What is the exact command to duplicate (block-by-block) the device
+    /dev/sda to the device /dev/sdb?
+
+
+    +   21: What is the exact command to store a block-by-block backup of the device
+    /dev/sda, to the file /tmp/sda.img?
+
+
+    +   22: How would you scan the filesystem (ext3) on /dev/sda1 for errors, assuming
+    that the partition is unmounted, and that you want to run the scan interactively?
+
+
+    +   23: What utility can be used to configure filesystem parameters for ext2/ext3
+    filesystems?
+
+
+    # Red Hat Linux
+
+
+    +   24: What is the proper command to list all installed RPM packages?
+
+
+    +   25: Where is the default configuration file for Apache, under RHEL?
+
+
+    +   26: What is the ncurces-based utility to configure startup services?
+
+
+    +   27: In what file will you find the version of Red Hat Linux installed?
+
+
+    +   28: What is the proper command to install the package ''httpd'', and all of
+    its dependencies?
+
+
+    +   29: What does the command ''yum clean all'' do?
+
+
+    +   30: Which utility will add startup symbolic links to the /etc/rc.d directory?
+
+
+    +   31: True, or False: CentOS and RHEL are function the same- utilities designed
+    for one, freely work on the other.
+
+
+    +   32: What is the default DNS server that comes with RHEL?
+
+
+    +   33: Which of the following mail server software does NOT come with RHEL/CentOS:
+
+
+    +   34: What command will update all available packages on a Red Hat Linux installation?
+
+
+    +   35: What is the preferred command to use to install updates, when using the
+    Red Hat Network?
+
+
+    +   36: What user does Apache run as, in RHEL/CentOS?
+
+
+    # Debian/Ubuntu
+
+
+    +   37: Where is the default configuration file for Apache located?'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '42: What command will remove an individual Debian GNU/Linux package?
+
+
+    43: What command will upgrade the version of Debian installed?
+
+
+    44: What command will update all available packages from Debian’s update server?
+
+
+    45: If you need a newer version of a package (and still want to use an official
+    Debian package), what distribution version should you look for a new package in?
+
+
+    46: If you need the absolute newest version of a package, than what is provided
+    in Debian stable, what distribution version should you look for the newest package
+    in?
+
+
+    47: What user does Apache run as, in RHEL/CentOS?
+
+
+    # ## Various Commands & Utilities
+
+
+    48: Which command allows you to view the mail server for an external domain?
+
+
+    49: What command will ‘reverse grep’ a string, showing lines that DON’T match
+    a string?
+
+
+    50: Which command should be used to *append* to a file?
+
+
+    51: Which character (or command) can be used after a command to send the command
+    into the background (while still executing)?
+
+
+    52: What utility allows you to manually test SMTP functionality, troubleshoot
+    firewall restrictions, and connect to other servers?
+
+
+    53: Which command switch to the ‘ping’ utility will allow you to adjust the “TTL,
+    or Time to Live”?
+
+
+    54: What command will allow you to view the routers and hosts that a packet makes
+    its way through, from the computer you are on, to an outside host?
+
+
+    55: What command will show listening network connections, as well as active network
+    connections?
+
+
+    56: What command will allow you to see all processes running on the server?
+
+
+    57: What command will remove an empty directory?
+
+
+    58: What three commands are typically used to compile software, utilizing the
+    standard ‘make’ system?
+
+
+    59: What is the proper syntax to apply a source code patch (called patch.diff)
+    to a source code tree, assuming that the current directory is the root of the
+    source code tree?
+
+
+    60: When compiling the Linux kernel, what is the command to configure the compilation
+    process, using an ncurses-based menu?'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '61: What is the proper command to use, to delete all compiled executables,
+    and object files from a source directory (most often used to remove these files
+    to troubleshoot compilation issues)?
+
+
+    62: What is the proper command to use, to remove an installed source package,
+    when the source tree used to compile the software is retained (and the current
+    directory is that of the source tree)?
+
+
+    # ## General Administration
+
+
+    63: What command allows you to change group ownership of a file?
+
+
+    64: If you recently created a new user, but they receive an "access denied" error
+    upon logging onto the server, what command did you forget?
+
+
+    65: What file contains the encrypted password of a user?
+
+
+    66: What file contains most system errors?
+
+
+    67: What command will search for a string, within vi?
+
+
+    68: What command will quit vi, without saving the changes to a file?
+
+
+    69: What single key will allow you to modify a line of text, within vi?
+
+
+    70: What command will write the changes to a file, without quitting vi?
+
+
+    71: What file contains the list of preferred DNS servers to use, when looking
+    up the IP address of a domain name?
+
+
+    72: What file controls text displayed to every user that logs into the server?
+
+
+    73: What file contains a user''s shell variable settings, and scripts launched
+    at every login (BASH)?
+
+
+    74: What command will create a shortcut to a file in another directory?
+
+
+    75: What command will create a TAR archive of a directory /home, and store the
+    TAR backup as /backup/backup-home.tar
+
+
+    76: True or false: The ''tar'' command will preserve the original permissions
+    on a directory, or file?
+
+
+    77: What command would you use to copy an entire directory (including its contents),
+    to another location?
+
+
+    78: What command will compress the file ''file.tar'', using the maximum available
+    compression, and in GZIP format?'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: "# # Shells & Shell Scripting\n\n+   79: What file contains a user's shell variable\
+    \ settings, and scripts launched at every login (BASH)?\n\n+   80: What is the\
+    \ most popular shell used today?\n\n+   81: What command will print text that\
+    \ the user running a script can see?\n\n+   82: What line must be included at\
+    \ the beginning of every shell script, in order to ensure that the lines in the\
+    \ script are properly executed?\n\n+   83: What command needs to be executed,\
+    \ if your script gives a \"permission denied\" error?\n\n+   84: What will the\
+    \ line \tDAY=`date \\| cut -b 1-4\"` do, in a basic shell script?\n\n+   85: What\
+    \ command will send an exit status of 0, in a basic shell script?\n\n+   86: If\
+    \ a script is set to run as the owner of the script, with all the permissions\
+    \ of the script owner, what bit is said to be set on the script?\n\n+   87: What\
+    \ command will set a script to run as the owner of the script, with all of the\
+    \ permissions of that owner?\n\n+   88: What command can be used to make a script\
+    \ pause execution for 5 minutes, then continue script execution?\n\n+   89: What\
+    \ special device will allow all input to be discarded?\n\n+   90: What special\
+    \ device contains truly random characters, and is considered by many to be a replacement\
+    \ to the traditional random device?\n\n+   91: What character is used as a comment\
+    \ designator, in shell scripts?\n\n+   92: What syntax can be used to manually\
+    \ execute a script, that does not have an execute bit set?\n\n+   93: Which single\
+    \ character will allow you to place two separate commands, on a single line?\n\
+    \n+   94: Please write the line, which will create an element named \"trees\"\
+    , with the separate values 'elm, pine, spruce, fir, dogwood\". This element's\
+    \ values will be used as separate values, and should not be set to a single value.\n\
+    \n+   95: Give an example of how to print these seperate elements, one per line.\n\
+    \n# # Firewalls/Routing\n\n+   96: What device needs to have a value of \"1\"\
+    \ to enable packet forwarding, between network interfaces?"
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '97: Give an example of an iptables command that will block incoming TCP traffic
+    on port 25, on all network interfaces. This rule should be the last rule in the
+    list, and it should drop the SYN packet that it receives from an external host.
+
+
+    98: Give an example of an iptables command that will block incoming TCP traffic
+    on port 25, when the source address is 209.168.1.8. This rule should be the last
+    rule in the list.
+
+
+    99: Give an example of an iptables command to block all ICMP traffic, on interface
+    eth0. This rule should be the first rule on the list.
+
+
+    100: Give an example of an iptables command that will redirect all traffic on
+    TCP port 25 (eth0) to another host, 192.168.0.5. This rule should be the first
+    rule in the chain.
+
+
+    101: Give an example of an iptables command that will redirect all traffic on
+    TCP port 8080 (eth0) to the host 192.168.0.5, port 80. This rule should be the
+    last rule in the chain.
+
+
+    102: What command will reset all iptables rules to the default policy?
+
+
+    103: Give an example of an iptables command that will block all traffic on TCP
+    port 80 to host 192.168.0.1, with a RSET packet. This rule should be the last
+    rule in the chain.
+
+
+    104: Give an example of the synbox used to start a port scan, using the utility
+    NMAP, on the host 192.168.0.10. Pinpointing the host before the scan should be
+    disabled, since the host drops all ICMP traffic.
+
+
+    105: What command will delete the default route?
+
+
+    106: What command will route all external traffic to host 192.168.0.1, via eth0?
+
+
+    107: What command will bring down eth0?
+
+
+    108: What command will bring up eth0?
+
+
+    109: What iptables command should you use to allow traffic on interface eth0,
+    to the SSH service? This command should be the first command in the chain.
+
+
+    110: What iptables command should you use to allow all UDP traffic from host 192.168.0.5?
+    This command should be the first command in the chain.
+
+
+    111: What file controls which hosts are allowed to connect to a Linux server,
+    and is most commonly used by xinetd?
+
+
+    112: What file controls which hosts are not allowed to connect to a Linux server,
+    and is most commonly used by xinetd?
+
+
+    113: Why is it always better to block hosts at the network, or kernel level, rather
+    than at the application level?
+
+
+    114: Which iptables command can be used to enable IP Masquerading, given that
+    eth0 is the inside interface, and that eth1 is the outside interface?
+
+
+    115: What is the iptables command to set the default incoming traffic policy to
+    drop traffic not specifically allowed?'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "+   116: What is the iptables command to set the default outgoing traffic policy\
+    \ to allow traffic not specifically denied?\n+   117: What are the three main\
+    \ iptables chains?\n+   118: What is the command to list all iptables rules?\n\
+    \n# Linux, Apache, MySQL, & PHP (LAMP)\n\n+   119: Where is the default location\
+    \ for PHP’s configuration file?\n+   120: What is the proper syntax to use for\
+    \ mysqladmin to backup the entire MySQL installation to the file /root/mysql-backup.sql?\n\
+    +   121: True or False: A backup of the /var directory will backup all MySQL databases.\n\
+    +   122: What command should you use to access the MySQL instance running on the\
+    \ server you are working on, and connect to the database 'mail'? \n+   123: True\
+    \ or False: most PHP applications require safe_mode to be turned on.\n+   124:\
+    \ What is the name of the PHP setting used to configure the maximum amount of\
+    \ memory that a script can consume?\n+   125: What setting should you set in PHP’s\
+    \ configuration to log all PHP errors to the external file, /tmp/php-errors.log?\n\
+    +   126: What setting and value should you set in Apache’s configuration to disable\
+    \ the display of Apache’s default banner (including version information)?\n+ \
+    \  127: What is wrong with the following VirtualHost External module mod_rewrite,\
+    \ in the main Apache configuration?\n+   128: What is the correct syntax to enable\
+    \ the External module mod_rewrite, in the main Apache configuration?\n+   129:\
+    \ What is the default value of \"StartServers\" in Apache?\n+   130: Which of\
+    \ the following services must be restarted after a change in the PHP configuration?\n\
+    +   131: What is the command to start MySQL into \"Safe Mode\", so that you can\
+    \ reset the root MySQL password?\n+   132: What is the name of the CentOS package\
+    \ that gives MySQL support to PHP?\n+   133: What is the MySQL command to create\
+    \ a new database called 'test'?\n+   134: What is the MySQL command to create\
+    \ a new user called 'test' (and password to 'password'), and give 'test' full\
+    \ access to the database 'test'?\n+   135: If Apache allows a web browser to download\
+    \ PHP files, instead of properly executing them, what directive is missing from\
+    \ the Apache configuration?"
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '+   136: What MySQL command should you enter, after creating new users, or
+    modifying access controls?
+
+    +   137: Where is the default error log for Apache located in CentOS/RHEL?
+
+    +   138: What should you also create, when creating a new database for a new web
+    application, in addition to the new MySQL database?
+
+
+    # ## Samba
+
+
+    +   139: Where is the Samba configuration file typically found?
+
+    +   140: What two security authentication types are available with Samba?
+
+    +   141: If a share has a "create mask" of "700", what does that mean?
+
+    +   142: What command would you use to create a Samba account for the user ''tom'',
+    assuming that ''tom'' is already added as a user on the server itself?
+
+    +   143: If a user is presented with a login screen, when attempting to browse
+    the server''s shares, what is the first thing you should do (assuming that the
+    user''s username and password on their Windows computer matches that of the account
+    they are trying to use on the Samba server)?
+
+    +   144: What does the following option: ''SO\_RCVBUF=8192 SO\_SNDBUF=8192 socket
+    options = TCP\_NODELAY" do on a Samba server?
+
+    +   145: True or False: By default, all printers on the local CUPS server are
+    shared through Samba.
+
+    +   146: True or False: Samba permissions override any filesystem permissions.
+
+    +   147: What is the best way to setup an advanced ACL for a file or directory
+    that is stored on a Samba server?
+
+    +   148: True or False: By default, Samba will be configured to act as the domain
+    "master", or domain server.
+
+    +   149: What share definition, created by most default installations, is typically
+    set to "read only = yes", "browsable = no", and "guest ok = no"?
+
+    +   150: What does "valid users = @reception" mean?
+
+
+    # ## Server Performance
+
+
+    +   151: What command allows you to fine-tune the hard disk performance on a Linux
+    server?
+
+    +   152: What is the exact command (from the above question) that will allow you
+    to benchmark the hard disk drive /dev/sda?'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '153: What command will allow you to view the amount of used, free, and cached
+    RAM?
+
+
+    154: What command will allow you to see the amount of disk space available, and
+    used, on all mounted drives?
+
+
+    155: What is the option to the command above that will output the values in an
+    easily readable format?
+
+
+    156: What is the file that contains processor information, including CPU frequency,
+    flags supported, CPU cache size, and the number of installed processors?
+
+
+    157: What command will stop all running processes, of a given name?
+
+
+    158: What command will stop a running process, if you know the PID of the process?
+
+
+    159: What does the "-9" flag to the above command do?
+
+
+    160: What does the "HUP" flag to the above command do?
+
+
+    161: What command will allow you to view the running processes on the server,
+    sorted by CPU utilization, in real time?
+
+
+    162: What key, when pressed while running the above command, will allow you to
+    terminate a process?
+
+
+    163: What command will allow you to adjust the priority of a process (in terms
+    of system resources)?
+
+
+    164: What is the exact syntax to launch a script named ''script.sh'' (using the
+    above utility), with the lowest system priority?
+
+
+    165: What is the exact syntax to launch a script named ''script.sh'' (using the
+    above utility), with the highest system priority?
+
+
+    166: What number corresponds to the default system priority?
+
+
+    167: What command will allow you to adjust the priority of an already running
+    process?
+
+
+    # Networking
+
+
+    168: What TCP port does HTTP run on?
+
+
+    169: What TCP port does SSH run on?
+
+
+    170: What TCP port does SMTP run on?
+
+
+    171: What TCP port does SSL run on?
+
+
+    172: What is the default port for the submission service?
+
+
+    173: What TCP port does POP3 run on?
+
+
+    174: What TCP port does FTP run on?'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '175: What TCP port does Squid, or most other HTTP proxies, run on?
+
+
+    176: What TCP port does CIFS/SMB (also called NETBIOS) run on?
+
+
+    177: What file contains the default applications, and port numbers associated
+    with them?
+
+
+    178: What TCP port does DNS run on?
+
+
+    179: What TCP port does MySQL run on?
+
+
+    180: What command is used to find the packet route between the server you are
+    on, and a host located on another network, called example.com?
+
+
+    181: What command can be used to send a test packet to ensure that a host is responding
+    to ICMP packets?
+
+
+    182: What is the highest priority a mail server can have, on a DNS MX record?
+
+
+    183: What is the name for a DNS record that points to an IP address?
+
+
+    184: What is the name for a DNS record that points to another DNS record?
+
+
+    185: What is the ‘TTL’ setting on a DNS record for?
+
+
+    186: What is a SPF record used for?
+
+
+    187: What is the difference between DKIM, and SPF?
+
+
+    # Postfix
+
+
+    188: What configuration file controls the majority of Postfix’s configuration?
+
+
+    189: What configuration file controls what TCP ports Postfix listens on, as well
+    as the different options enabled on each Postfix instance?
+
+
+    190: What file contains all mailbox aliases on the Linux server?
+
+
+    191: What command should be ran after updating the above file?
+
+
+    192: What does the option “mynetworks” control?
+
+
+    193: What is the option that controls which domains Postfix will accept mail for
+    (for multiple domains)?
+
+
+    194: What is the default mail delivery location?
+
+
+    195: What is the default mail log location?
+
+
+    196: What is the default mail error log location?
+
+
+    197: What is the command to restart Postfix?
+
+
+    198: What authentication method does Postfix support, for authenticating SMTP
+    users securely (via local UNIX accounts, or even a MySQL database)?'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '199: What command can you use to manually start a SMTP conversation with a
+    mail server running on example.com, in order to troubleshoot mail delivery issues?
+
+
+    200: What is the first command that is run at the beginning of every SMTP connection
+    (per RFC 2821)?
+
+
+    # ## HR Questions
+
+
+    +   1: How do you make decisions?
+
+    +   2: What are the most difficult decisions for you to make?
+
+    +   3: When making a tough decision, how do you gather information?
+
+    +   4: Tell me about a decision you made that did not turn out well.
+
+    +   5: Are you able to make decisions quickly?
+
+    +   6: Why would your skills be a good match with X objective of our company?
+
+    +   7: What do you think this job entails?
+
+    +   8: Is there anything else about the job or company you’d like to know?
+
+    +   9: Are you the best candidate for this position?
+
+    +   10: How did you prepare for this interview?
+
+    +   11: If you were hired here, what would you do on your first day?
+
+    +   12: Have you viewed our company’s website?
+
+    +   13: How does X experience on your resume relate to this position?
+
+    +   14: Why do you want this position?
+
+    +   15: How is your background relevant to this position?
+
+    +   16: How do you feel about X mission of our company?
+
+    +   17: Would you rather receive more authority or more responsibility at work?
+
+    +   18: What do you do when someone in a group isn’t contributing their fair share?
+
+    +   19: Tell me about a time when you made a decision that was outside of your
+    authority.
+
+    +   20: Are you comfortable going to supervisors with disputes?
+
+    +   21: If you had been in charge at your last job, what would you have done differently?
+
+    +   22: Do you believe employers should praise or reward employees for a job well
+    done?
+
+    +   23: What do you believe is the most important quality a leader can have?
+
+    +   24: Tell me about a time when an unforeseen problem arose. How did you handle
+    it?
+
+    +   25: Can you give me an example of a time when you were able to improve X objective
+    at your previous job?
+
+    +   26: Tell me about a time when a supervisor did not provide specific enough
+    direction on a project.
+
+    +   27: Tell me about a time when you were in charge of leading a project.'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '+   28: Tell me about a suggestion you made to a former employer that was later
+    implemented.
+
+
+    +   29: Tell me about a time when you thought of a way something in the workplace
+    could be done more efficiently.
+
+
+    +   30: Is there a difference between leading and managing people – which is your
+    greater strength?
+
+
+    +   31: Do you function better in a leadership role, or as a worker on a team?
+
+
+    +   32: Tell me about a time when you discovered something in the workplace that
+    was disrupting your (or others’ ) productivity – what did you do about it?
+
+
+    +   33: How do you perform in a job with clearly-defined objectives and goals?
+
+
+    +   34: How do you perform in a job where you have great decision-making power?
+
+
+    +   35: If you saw another employee doing something dishonest or unethical, what
+    would you do?
+
+
+    +   36: Tell me about a time when you learned something on your own that later
+    helped in your professional life.
+
+
+    +   37: Tell me about a time when you developed a project idea at work.
+
+
+    +   38: Tell me about a time when you took a risk on a project.
+
+
+    +   39: What would you tell someone who was looking to get into this field?
+
+
+    +   40: How would you handle a negative coworker?
+
+
+    +   41: What would you do if you witnessed a coworker surfing the web, reading
+    a book, etc. wasting company time?
+
+
+    +   42: How do you handle competition among yourself and other employees?
+
+
+    +   43: When is it okay to socialize with coworkers?
+
+
+    +   44: Tell me about a time when a major change was made at your last job, and
+    how you handled it.'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Most Likely Be Asked
+
+    +   2. 200 Interview Questions You''ll Most Likely Be Asked
+
+    +   3. Access VBA Programming Interview Questions You''ll Most Likely Be Asked
+
+    +   4. Adobe ColdFusion Interview Questions You''ll Most Likely Be Asked
+
+    +   5. Advanced Excel Interview Questions You''ll Most Likely Be Asked
+
+    +   6. Advanced JAVA Interview Questions You''ll Most Likely Be Asked
+
+    +   7. Advanced SAS Interview Questions You''ll Most Likely Be Asked
+
+    +   8. AJAX Interview Questions You''ll Most Likely Be Asked
+
+    +   9. Algorithms Interview Questions You''ll Most Likely Be Asked
+
+    +   10. Android Development Interview Questions You''ll Most Likely Be Asked
+
+    +   11. Ant & Maven Interview Questions You''ll Most Likely Be Asked
+
+    +   12. Apache Web Server Interview Questions You''ll Most Likely Be Asked
+
+    +   13. Artificial Intelligence Interview Questions You''ll Most Likely Be Asked
+
+    +   14. ASP.NET Interview Questions You''ll Most Likely Be Asked
+
+    +   15. Automated Software Testing Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   16. Base SAS Interview Questions You''ll Most Likely Be Asked
+
+    +   17. B.E.A WebLogic Server Interview Questions You''ll Most Likely Be Asked
+
+    +   18. C & C++ Interview Questions You''ll Most Likely Be Asked
+
+    +   19. C# Interview Questions You''ll Most Likely Be Asked
+
+    +   20. C++ Internals Interview Questions You''ll Most Likely Be Asked
+
+    +   21. CCNA Interview Questions You''ll Most Likely Be Asked
+
+    +   22. Cloud Computing Interview Questions You''ll Most Likely Be Asked
+
+    +   23. Computer Architecture Interview Questions You''ll Most Likely Be Asked
+
+    +   24. Computer Networks Interview Questions You''ll Most Likely Be Asked
+
+    +   25. Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+    +   26. Data Structures & Algorithms Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   27. Data Warehousing Interview Questions You''ll Most Likely Be Asked
+
+    +   28. EJB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+    +   29. Entity Framework Interview Questions You''ll Most Likely Be Asked
+
+    +   30. Fedora & RHEL Interview Questions You''ll Most Likely Be Asked
+
+    +   31. GNU Development Interview Questions You''ll Most Likely Be Asked
+
+    +   32. Hibernate, Spring & Struts Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   33. HTML, XHTML, and CSS Interview Questions You''ll Most Likely Be Asked
+
+    +   34. HTML5 Interview Questions You''ll Most Likely Be Asked
+
+    +   35. IBM WebSphere Application Server Interview Questions You''ll Most Likely
+    Be Asked
+
+    +   36. iOS SDK Interview Questions You''ll Most Likely Be Asked
+
+    +   37. Java / J2EE Design Patterns Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   38. Java EE Interview Questions You''ll Most Likely Be Asked
+
+    +   39. Java Messaging Service Interview Questions You''ll Most Likely Be Asked
+
+    +   40. JavaScript Interview Questions You''ll Most Likely Be Asked
+
+    +   41. JSP Interview Questions You''ll Most Likely Be Asked
+
+    +   42. JDBC Interview Questions You''ll Most Likely Be Asked
+
+    +   43. jQuery Interview Questions You''ll Most Likely Be Asked
+
+    +   44. JSP Servlet Interview Questions You''ll Most Likely Be Asked
+
+    +   45. JUnit Interview Questions You''ll Most Likely Be Asked
+
+    +   46. Linux Commands Interview Questions You''ll Most Likely Be Asked
+
+    +   47. Linux Interview Questions You''ll Most Likely Be Asked
+
+    +   48. Linux System Administrator Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   49. Mac OS X Lion Interview Questions You''ll Most Likely Be Asked'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '+   50. Mac OS X Snow Leopard Interview Questions You''ll Most Likely Be Asked
+
+    +   51. Microsoft Access Interview Questions You''ll Most Likely Be Asked
+
+    +   52. Microsoft Excel Interview Questions You''ll Most Likely Be Asked
+
+    +   53. Microsoft Powerpoint Interview Questions You''ll Most Likely Be Asked
+
+    +   54. Microsoft Word Interview Questions You''ll Most Likely Be Asked
+
+    +   55. MySQL Interview Questions You''ll Most Likely Be Asked
+
+    +   56. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+    +   57. Networking Interview Questions You''ll Most Likely Be Asked
+
+    +   58. OOPS Interview Questions You''ll Most Likely Be Asked
+
+    +   59. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+    +   60. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+    +   61. Oracle E-Business Suite Interview Questions You''ll Most Likely Be Asked
+
+    +   62. ORACLE PL SQL Interview Questions You''ll Most Likely Be Asked
+
+    +   63. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+    +   64. PHP Interview Questions You''ll Most Likely Be Asked
+
+    +   65. PMP Interview Questions You''ll Most Likely Be Asked
+
+    +   66. Python Interview Questions You''ll Most Likely Be Asked
+
+    +   67. RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+    +   68. Ruby Interview Questions You''ll Most Likely Be Asked
+
+    +   69. Ruby on Rails Interview Questions You''ll Most Likely Be Asked
+
+    +   70. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+    +   71. SAP HANA Interview Questions You''ll Most Likely Be Asked
+
+    +   72. SAS Programming Guidelines Interview Questions You''ll Most Likely Be
+    Asked
+
+    +   73. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+    +   74. Silverlight Interview Questions You''ll Most Likely Be Asked
+
+    +   75. Software Repositories Interview Questions You''ll Most Likely Be Asked
+
+    +   76. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    +   77. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+    +   78. Toman Interview Questions You''ll Most Likely Be Asked
+
+    +   79. UML Interview Questions You''ll Most Likely Be Asked
+
+    +   80. Unix Interview Questions You''ll Most Likely Be Asked
+
+    +   81. UNIX Shell Programming Interview Questions You''ll Most Likely Be Asked
+
+    +   82. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+    +   83. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+    +   84. XLDAP, XSLT, XPATH, XFORMS & XQuery Interview Questions You''ll Most Likely
+    Be Asked
+
+    +   85. XML Interview Questions You''ll Most Likely Be Asked
+
+
+    For complete list visit
+
+    www.vibripublishers.com'
+  merge: -1
+  img_proc: true
