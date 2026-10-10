@@ -524,6 +524,7 @@
 +   [Linux 下 UNIX 使用指南（第二版）](docs/guide-to-unix-using-linux-second-edition/README.md)
 +   [Linux UNIX 使用指南（第三版）](docs/guide-to-unix-using-linux-third-edition/README.md)
 +   [使用 Linux 和 Python 破解手机](docs/hack-a-mobile-phone-with-linux-and-python/README.md)
++   [黑客攻击揭秘：UNIX、Windows 和 Linux 完整参考指南及自定义安全工具包（第二版）](docs/hack-attacks-revealed-a-complete-reference-for-unix-windows-/README.md)
 +   [Linux 安全加固：开源安全指南，停止黑客的唯一方法是像黑客一样思考](docs/hack-proofing-linux-a-guide-to-open-source-security-the-only/README.md)
 +   [Sun Solaris 8 安全加固指南](docs/hack-proofing-sun-solaris-8/README.md)
 +   [Web 应用安全防护：停止黑客的唯一方法是像黑客一样思考](docs/hack-proofing-your-web-applications-the-only-way-to-stop-a-h/README.md)

