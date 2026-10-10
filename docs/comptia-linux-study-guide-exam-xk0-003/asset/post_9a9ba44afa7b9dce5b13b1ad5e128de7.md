@@ -1,0 +1,52 @@
+
+access to the password file, that individual can run any of several password-cracking programs on the file. For this reason, you should use shadow passwords stored in /etc/shadow whenever possible. Most Linux distributions use shadow passwords by default.
+
+Keep passwords secret. You should remind your users not to reveal their passwords to others. Such trust is sometimes misplaced, and sometimes even a well-intentioned password recipient might slip up and let the password fall into the wrong hands. This can happen by writing the password down, storing it in electronic form, or sending it by e-mail or other electronic means. Indeed, users shouldn't e-mail their own passwords even to themselves, because e-mail can be intercepted.
+
+Use secure remote login protocols. Certain remote login protocols are inherently insecure; all data traverse the network in an unencrypted form. Intervening computers can be configured to snatch passwords from such sessions. Because of this, it's best to disable Telnet, FTP, and other protocols that use cleartext passwords, in favor of protocols that encrypt passwords, such as SSH. Chapter 9, "Configuring Advanced Networking," and Chapter 11, "Configuring Network Servers II," describe these protocols in more detail.
+
+Be alert to shoulder surfing. If your users work on computers in public, as is common in college computer centers, in Internet cafes, when using a laptop in public, and so on, it's possible that others will be able to watch them type their passwords. This practice is sometimes called shoulder surfing. Users should be alert to this possibility and minimize such logins if possible.
+
+Some of these steps are things you can do, such as replacing insecure remote login protocols with encrypted ones. Others are things your users must do. Once again, this illustrates the importance of user education, particularly on systems with many users.
+
+## Disabling Unused Accounts
+
+Linux computers sometimes accumulate unused accounts. This occurs when employees leave a company, when students graduate, and so on. You should be diligent about disabling such accounts because they can easily be abused, either by the individual who's left your organization or by others who discover the password through any of the means already described. As covered in detail earlier in this chapter, you disable accounts with the userdel command.
+
+If the individual has had legitimate access to the root account, you must carefully consider how to proceed. If you have no reason to suspect the individual of wrongdoing, changing the root password and deleting the user's regular account are probably sufficient. If the individual might have sabotaged the computer, though, you'll have a hard time checking for every possible type of damage, particularly if the individual was a competent administrator. In such situations, you're better off backing up user data and reinstalling from scratch, just as you should if your system is compromised by an outsider.
+
+Many Linux distributions create a number of specialized accounts that are normally not used for conventional user logins. These may include daemon, lp, shutdown, mail1, news, uucp, games, nobody, and others. Some of these accounts have necessary functions. For instance, daemon is used by some servers, lp is associated with Linux's printing system, and nobody is used by various programs that don’t need high-privilege access to the system. Other accounts are likely to be unused on many systems. For instance, `games` is used by some games, and so it isn’t of much use on most servers or true productivity workstations. You may be able to delete some of these unused specialty accounts, but if you do so, you should definitely record details on the accounts’ configurations so that you can restore them if you run into problems because the account wasn’t quite as unnecessary as it first seemed.
+
+### Using Shadow Passwords
+
+Most Linux distributions use shadow passwords by default, and for the most part, this chapter is written with the assumption that this feature is active. In addition to providing extra security by moving hashed passwords out of the world-readable `/etc/passwd` file and into the more secure `/etc/shadow` file, shadow passwords add extra account information. (The earlier section “Directly Modifying Account Configuration Files” describes the `/etc/shadow` file’s contents in detail.)
+
+![](img/9903a4d3f7abd8dcbef1035fa04a3406_262_0.png)
+
+If you happen to be using a system that hasn’t enabled shadow passwords but you want to add that support, you can do so. Specifically, the `pwconv` and `grpconv` programs do this job for `/etc/passwd` and `/etc/group`, respectively. These programs take no parameters; simply type their names to create `/etc/shadow` and `/etc/gshadow` files that hold the passwords and related account control information, based on the contents of the unprotected files.
+
+One of the advantages of shadow passwords is that the Linux shadow password system enables use of more advanced password hashes. The earliest Linux systems used a *Triple Data Encryption Standard* (3DES) hash. This hash, although good not too many years ago, is outdated by today’s standards. Many Linux distributions today use the *Message Digest 5* (MD5) hash instead, but some have moved on even from that to use the *Secure Hash Algorithm* (SHA), which is even more secure. Linux’s password tools support passwords longer than eight characters for MD5 or SHA hashes, but not for 3DES hashes. You can tell which one your distribution uses by examining the password field in `/etc/shadow` (or `/etc/passwd`, if you’re not using shadow passwords). MD5 passwords begin with the string `$1$`, SHA passwords begin with `$5$` or `$6$`, and 3DES passwords don’t begin with any of these strings.
+
+You can’t convert existing passwords from one hash to another, except by reconfiguring your system to use the new password and then having users reenter their passwords. You can, though, tell Linux to use one tool or the other for new passwords. To do so, edit the `/etc/pam.d/passwd` file. This file controls the Pluggable Authentication Modules (PAM) configuration for the `passwd` utility—that is, it controls how `passwd` does its work. Locate a line that looks something like this:
+
+```
+password  required  pam_unix.so  nullok use_authtok
+```
+
+The line may look somewhat different on your system, but the key points are that it begins with the string **password** and references the **pam_unix.so** library file. PAM is described in more detail in Chapter 12.
+
+To configure Linux to encode new passwords using MD5, add **md5** to the list of parameters after **pam_unix.so**. To switch to SHA, add **sha256** or **sha512** to the parameter list (the number refers to the number of bits used in the hash, with higher values being preferable).
+
+If you can’t find a line that looks like this one in /etc/pam.d/**password**, look for it in /etc/pam.d/**system-auth**. This file serves as a stand-in for several other configuration files in some distributions, so making the change there may do the job.
+
+Additional encryption and hashing functions exist, such as **MD4** and **blowfish**. These are not commonly used in Linux password databases, but they may be used in network account database systems, in encrypted data transfer tools such as SSH, and elsewhere.
+
+## Controlling System Access
+
+One of the many uses of accounts is as a tool to control access to a computer—that is, to allow **sally** to log in remotely, but not **sam**, much less a cracker from halfway around the world. Precisely how such tasks can be accomplished varies from one server program to another; some provide better access controls than others, and each server has its own methods of handling the matter. The **root** account is often handled in a unique way with respect to access control, and for good reason—**root** is powerful enough that you may want to restrict its access to local logins in order to minimize the chance of abuse by a distant cracker.
+
+### Accessing Common Servers
+
+Several common server programs provide some means to limit access by username, often via PAM. Others don’t provide this facility but do provide a way to limit access by computer hostname or IP address. Servers you’re particularly likely to want to limit in these ways include login servers and the File Transfer Protocol (FTP) server.
+
+All servers have their own security implications. Chapter 10 describes some of these servers in brief, but you should be aware that running **any** server has security consequences that can be subtle, making safe configuration difficult. You should consult appropriate server-specific or security documentation before running servers on the Internet.

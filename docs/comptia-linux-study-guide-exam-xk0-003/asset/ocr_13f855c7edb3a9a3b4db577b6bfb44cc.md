@@ -1,0 +1,16 @@
+# ## Methods of Starting and Stopping Services
+
+Before proceeding further, you should understand the basics of three methods of starting and stopping services: SysV startup scripts, super servers, and local startup scripts. Each approach has its advantages and disadvantages.
+
+SysV startup scripts were named after Unix System V, in which this method first appeared. Each service has a script that controls the service. Depending on the options passed to the script, the script may start the service, shut it down, restart it, or do other things. These scripts are run with specific options when the computer boots or when certain other events occur, as described in the next few sections. SysV startup scripts are typically provided by distribution maintainers with service packages—so a script to launch the Samba server is included with the Samba package. These scripts can launch both network servers and non-server services (such as the cron daemon). They’re generally used for services that must be running continuously, rather than started on an as-needed basis.
+
+Super servers, by contrast, run continuously, listen for network connections, and launch network servers on an as-needed basis. This approach can reduce the memory load of seldom-used servers, and it also enables the super server, or its helper programs, to perform extra security checks. Super servers impose a speed penalty, though: when a connection request arrives, the super server must launch the program that actually responds to the request, and this takes time, so the computer may take a second or two to respond. Super servers are also useful only for launching network servers, not for non-network services.
+
+Local startup scripts are like SysV startup scripts in that they can launch both network servers and non-network services. These startup scripts are intended to be modified by system administrators to handle local needs, such as unusual configurations or the launching of locally compiled programs for which no SysV startup scripts are available.
+
+> **NOTE**  
+> The terms server and service are used in different ways by different people. In this book, I use server to refer either to a program that responds to network access requests or to the computer on which a server program runs; I use service to refer to any program that runs in the background to handle either network or non-network tasks. Some people, however, restrict the term server to computer hardware and use service to refer to what I call server programs.
+
+# ## Starting and Stopping via SysV Scripts
+
+When Linux starts, it enters one of several runlevels, each of which corresponds to a specific set of running services, as described in more detail in the upcoming section, “Setting the Runlevel.” You can start and stop services controlled through SysV startup scripts either temporarily by running the scripts manually or permanently by setting appropriate links to have the system start or stop the service when it reboots.

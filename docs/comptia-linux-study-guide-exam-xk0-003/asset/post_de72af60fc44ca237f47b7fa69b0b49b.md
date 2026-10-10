@@ -1,0 +1,298 @@
+
+## B
+
+- /bin directory, 247
+- binary files with FTP, 488
+- binary form, 89
+- binary packages, 297
+- BIND (Berkeley Internet Name Domain), 441, 443–448
+- bind options
+  - DNS, 364, 442
+  - xinetd, 157
+- bind-tools package, 363
+- bind-utils package, 363
+- BIOS
+  - boot options, 4
+  - CHS translation, 10
+  - EFI for, 243
+  - NVRAM for, 239
+  - passwords, 515
+  - setup screens, 7
+- Blackbox window manager, 29
+- block device file type codes, 75
+- blowfish encryption, 224
+- boot directive, 12
+- /boot/grub/grub.conf file, 10
+- /boot/grub/menu.lst file, 10
+- boot loaders, 2
+  - available, 8–9
+  - GRUB, 8–11
+  - role, 7–8
+- boot.log file, 170
+- boot options
+  - installation process, 4, 6
+  - setting, 12–13
+- /boot partition, 246
+- boot problems, 14
+  - dmesg messages, 16–17
+  - GRUB kernel options, 14–15
+  - rescue discs for, 15
+  - root passwords, 16
+- BOOTPROTO variable, 369
+- broadband routers, 367, 367
+- broadcast queries, 360
+- browsing in IPP, 418
+- BRU package, 326
+- BSD (Berkeley Standard Distribution)
+  - disk labels, 242
+  - printing systems, 416, 424, 427
+  - ps options, 110–111
+- buffers, ring, 16–17
+- Bugs section in man pages, 93
+- build numbers in RPM, 299
+- BusID setting, 24
+- bzImage kernel, 13
+- bzip2 tool, 314–315
+
+## C
+
+- caches, ARP, 376
+- cancel command, 427
+- canonical name (CNAME)
+  - records, 445
+- case changes in Vi, 136
+- case-sensitivity of usernames, 193
+- cat program, 34, 67–68
+- cd command, 57
+- cdcror program, 329, 337–338
+- cdtools package, 337
+- CERT (Computer Emergency Response Team), 514
+- CGI (Common Gateway Interface)
+  - scripts, 490–491
+- chage command, 203–204
+- chain loaders, 12
+- chains, iptables, 399–401, 399
+- changing
+  - passwords, 221
+  - runlevels, 160–162
+  - text case, 53
+- character devices file type codes, 75
+- checksums
+  - CRC, 244
+  - file database, 295
+    - generating, 543-544
+    - package manager, 544-545
+  - Tripwire, 542-543
+- chgrp command, 79, 194, 219
+- child processes, 109
+- chipssets for video card, 18-19, 18
+- chkconfig tool, 151
+- chkrootkit program, 545
+- chmod command, 78-81
+- choosers, 412
+- chown command, 78-79, 194, 202
+- chroot jails, 485
+- CHS translation schemes, 10
+- CIDR (Classless Inter-Domain Routing), 361
+- cifs filesystem, 272-273
+- classes for IP addresses, 361
+- Classless Inter-Domain Routing (CIDR), 361
+- clients
+  - DHCP, 368-369
+  - FTP, 486-488
+  - iptables traffic, 404
+  - NTP, 450, 454
+  - vs. servers, 365
+  - VNC, 498-499
+  - Web, 495-496
+- X, 17
+- CNAME (canonical name) records, 445
+- colons (:)
+  - account configuration files, 204-205
+  - chown, 79
+  - directories, 55
+  - group configuration files, 215
+  - hardware addresses, 359
+  - IP addresses, 360
+  - scp, 407-408
+  - Vi, 133
+  - VNC clients, 498
+- color depths in X configuration, 25
+- com inkjet printers, 417
+- combing-text files, 67-68
+- command-line interface (CLI). See shells
+- command lines, generating, 70-71
+- Command mode in Vi, 133
+- command prompts for shells, 49
+- commas (,)
+  - cron jobs, 126
+  - DNS servers, 440, 446
+  - hostnames, 534
+  - log files, 164
+  - mount options, 275
+  - symbolic permissions, 81
+- comments
+  - account configuration files, 205
+  - aliases, 460
+  - Apache, 489
+  - /etc/fstab, 275
+  - /etc/named.conf, 442
+  - /etc/services, 396
+  - inetd.conf, 154
+  - log files, 164, 166
+  - Samba, 477
+  - shell scripts, 90
+- X configuration, 21
+- Common Gateway Interface (CGI) scripts, 490-491
+- Common Unix Printing System (CUPS) utility, 414, 417
+  - configuration files, 417-419
+  - printer definitions, 420
+  - Web-based utilities, 420-422, 421
+- compartible hardware, 30-31
+- compiling source code, 318-321
+- complaints as intrusion symptom, 538
+- compress option, 168
+- compress tool, 314–315
+- compression options
+  - log files, 168
+  - tarballs, 314–315
+- compromised passwords, 221–222
+- Computer Emergency Response Team (CERT), 514
+- Connectiva distribution, 3
+- conflicts in packages, 322–324
+- connections
+  - MySQL, 501–502
+  - TCP/IP, 356
+  - testing, 377
+- consoles, X configuration, 29–30
+- content of files, 34, 66–67
+- contexts in SELinux, 529–530
+- copying files, 58–59
+- corrupted log files, 538
+- Courier e-mail servers, 462
+- cp command, 58–59
+- cpio program, 326–329, 335
+- CPUs and processes
+  - priority, 113
+  - restrictions on, 116–117
+  - time use, 112–113, 116
+- Crack program, 221
+- crackers, 219
+- crashes as intrusion symptom, 538
+- create option for log files, 168
+- cron file, 170
+- cron jobs, 125
+  - log files, 166
+  - system, 126–127
+  - user, 127–128
+- crontab utility, 127–128
+- crontabs, 127
+- cross-platform optical discs, 338–339
+- CUPS (Common Unix Printing System)
+  - utility, 414, 417
+  - configuration files, 417–419
+  - printer definitions, 420
+  - Web-based utilities, 420–422, 421
+- CUPS Driver Development Kit (DDK), 420
+- cupsd daemon, 417
+- cupsdisable command, 427
+- cupsenable command, 427
+- curl command, 496
+- curly braces ({} )
+  - environment variables, 86
+  - /etc/dhcpd.conf, 440
+  - log files, 167
+- current directories, 56–58
+- custom.conf file, 29, 413
+- custom startup files, 158–159
+- cylinders, 10
+- Cyrus IMAP servers, 461
+
+## D
+
+- daemons, 125, 148
+- daily option for log files, 168
+- dashes (-) in cron jobs, 126
+- data overrun protection
+  - partitions, 246
+- data structures in filesystems, 74
+- databases
+  - installed file, 295–296
+  - network accounts, 207
+- date command, 449
+- day setting in job scheduling, 128
+- Days before change required field, 206
+- Days between expiration and deactivation field, 206
+- Days until change allowed field, 206
+- Days warning before password expiration field, 206
+- dd utility, 261
+- DDK (Driver Development Kit), 420
+- DDoS (distributed denial-of-service) attacks, 518
+- Debian distribution, 3
+- Debian packages, 307
+  - APT tool, 311–313, 314
+  - conventions, 307–308
+  - dpkg commands, 308–311
+  - tools, 294
+- debug level logs, 164
+- Default OS option, 11
+- default permissions, 82–83
+- default routes, 373
+- default shells, 189, 205
+- DefaultDepth setting, 25
+- definitions, glossary of, 556–591
+- deleting
+  - files, 60
+  - groups, 216
+  - print queue jobs, 426–427
+  - shell command text, 53
+  - user accounts, 207–208
+- denial-of-service (DoS) attacks, 518
+- dependencies, package, 296, 322–324
+- Description section in man pages, 92
+- desktop environment, 17, 29
+- /dev directory, 11, 71
+- /dev/fd devices, 241
+- /dev/hd devices, 240–241
+- /dev/ht devices, 241
+- /dev/nh devices, 241
+- /dev/null file, 71
+- /dev/nvram file, 242
+- /dev/random file, 71
+- /dev/sd devices, 241
+- /dev/st devices, 241
+- /dev/urandom file, 71
+- /dev/zero file, 71
+- Device field, 275
+- device files, 71–72
+- Device Manager, 18, 18
+- df utility, 266, 273–274
+- dhclient client, 368
+- DHCP (Dynamic Host Configuration Protocol), 6, 359
+  - configuration, 368–369
+  - IP addresses with, 438–441
+- dhcp.leases file, 440
+- dhcp package, 439
+- dhcp-server package, 439
+- dhcpd client, 368
+- dhcpd program, 439
+- diff command, 536–537
+- dig program, 364
+- digital subscriber line (DSL), 351
+- direct administrative logins, 191
+- directories, 53
+  - creating, 62
+  - current, 56–58
+  - file type codes, 75
+  - home, 196–197
+  - LDAP, 455, 525
+  - permissions, 77
+  - removing, 62–63
+- dirs command, 57
+- Disabled mode in SELinux, 530
+- disabling unused accounts, 222–223
+- Disallowed IP or network addresses setting, 158
+- disaster recovery, backups for, 335–336
+- disks
+  - for backups, 325–326
+  - exam essentials, 283–284

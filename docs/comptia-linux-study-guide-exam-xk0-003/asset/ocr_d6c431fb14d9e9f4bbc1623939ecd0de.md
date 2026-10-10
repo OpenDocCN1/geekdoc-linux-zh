@@ -1,0 +1,19 @@
+# **Real World Scenario**
+
+# Using PPP
+
+With the rise in broadband access, most Linux systems—even in homes—now have always-up Internet connections. Nonetheless, you might still need to use a dial-up PPP connection from time to time. The easiest way to do this generally is to employ a GUI configuration tool, such as those described in “Using GUI Configuration Tools.” These tools collect information such as the dial-in system's telephone number, a username, and a password, and they alter the relevant configuration files to make initiating a PPP connection easy.
+
+If you prefer to edit the configuration files manually, start with /etc/ppp/pap-secrets or /etc/ppp/chap-secrets. These files hold authentication information for dial-up connections:
+
+> username server password IP_address
+
+You'll normally enter a username and password, but place an asterisk (*) in the server field and leave the IP_address field blank.
+
+With the authentication data entered, you can edit the ppp-on script, which is usually found somewhere in the /usr/share/doc/ppp directory tree. Copy the script, along with ppp-off and ppp-on-dialer, to a location such as /usr/local. You must then edit ppp-on to include your ISP's telephone number (on the TELEPHONE line) and your username (on the ACCOUNT line). Verify that the DIALER line points to the ppp-on-dialer script. You may also need to modify the device used by the call to pppd at the end of the script (usually /dev/ttyS0 by default); this device must point to your modem.
+
+With these changes in place, you can test your connection by typing ppp-on. (Depending on security settings, you may need to be root to do this.) If it's successful, your modem will dial and connect, and a short while later your PPP connection will come up. Typing ifconfig ppp0 will show a valid network link, and you should be able to use ordinary Linux networking programs. Type ppp-off to shut down your PPP connection.
+
+# Diagnosing Network Problems
+
+Network configuration is a complex topic, and unfortunately, things don't always work as planned. Fortunately, there are a few commands you can use to help diagnose a problem. Four of these are arp, ping, traceroute, and netstat. Each of these commands exercises the network in a particular way and provides information that can help you track down the source of a problem. You can also use other network tools to help give your network connections a workout.

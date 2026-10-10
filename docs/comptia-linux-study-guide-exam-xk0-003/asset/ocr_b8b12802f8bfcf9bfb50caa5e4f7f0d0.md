@@ -1,0 +1,29 @@
++   6.  Which of the following are restrictions on ordinary users' abilities to run renice? (Choose all that apply.)
++      * A.  Users may not modify the priorities of processes that are already running.
++      * B.  Users may not modify the priorities of other users' processes.
++      * C.  Users may not decrease the priority (that is, increase the priority value) of their own processes.
++      * D.  Users may not increase the priority (that is, decrease the priority value) of their own processes.
+
++   7.  You discover that a process with PID 27319 is running out of control, consuming most of the system's CPU time when it shouldn't be. As root, you type kill -15 27319, but the process continues to run. What might you try next? (Choose all that apply.)
++      * A.  Type kill -9 27319.
++      * B.  Type kill -TERM 27319.
++      * C.  Type kill -KILL 27319.
++      * D.  Type killall 27319.
+
++   8.  Which of the following are risks of SUID and SGID programs? (Choose all that apply.)
++      * A.  The program files are large and thus may cause a disk to run out of space.
++      * B.  Bugs in the programs may cause more damage than they would in ordinary programs.
++      * C.  Users may be able to abuse a program's features, thus doing more damage than would otherwise be possible.
++      * D.  Because the programs require password entry, running them over an insecure network link runs the risk of password interception.
+
++   9.  Which of the following commands would you type to locate all SUID or SGID programs installed on the computer?
++      * A.  find / --suid -sgid
++      * B.  find / -perm +u+s
++      * C.  find / -perm +suid+sgid
++      * D.  find / -perm +ug+s
+
++   10. Which of the following lines, if used in a user cron job, will run /usr/local/bin/cleanup twice a day?
++      * A.  15 7,19 * * * tbaker /usr/local/bin/cleanup
++      * B.  15 7,19 * * * /usr/local/bin/cleanup
++      * C.  15 */2 * * * tbaker /usr/local/bin/cleanup
++      * D.  15 */2 * * * /usr/local/bin/cleanup

@@ -1,0 +1,20 @@
+4 10.9.8.133 21.059 ms 9.231 ms 103.068 ms
+5 10.9.14.9 8.554 ms 12.982 ms 10.029 ms
+6 10.1.0.44 10.273 ms 9.987 ms 11.215 ms
+7 10.1.0.43 16.360 ms * 8.102 ms
+
+The -n option to this command tells traceroute to display target computers' IP addresses, rather than their hostnames. This can speed up the process a bit, and it can sometimes make the output easier to read—but you might want to know the hostnames of problem systems, because that can help you pinpoint who's responsible for a problem.
+
+This sample output shows a great deal of variability in response times. The first hop, to 192.168.1.254, is purely local; this router responded in 1.021, 36.519, and 0.971 ms to its three probes. (Presumably the second probe caught the system while it was busy with something else.) Probes of most subsequent systems are in the 8–20 ms range, although one is at 103.068 ms. The final system has only two times; the middle probe never returned, as the asterisk (*) on this line indicates.
+
+Using traceroute, you can localize problems in network connectivity. Highly variable times and missing times can indicate a router that's overloaded or that has an unreliable link to the previous system on the list. If you see a dramatic jump in times, it typically means that the physical distance between two routers is great. This is common in intercontinental links. Such jumps don't necessarily signify a problem, though, unless the two systems are close enough that a huge jump isn't expected.
+
+What can you do with the traceroute output? Most immediately, traceroute is helpful in determining whether a problem in network connectivity exists in a network for which you're responsible. For instance, the variability in the first hop of the preceding example could indicate a problem on the local network, but the lost packet associated with the final destination most likely is not a local problem. If the trouble link is within your jurisdiction, you can check the status of the problem system, nearby systems, and the network segment in general.
+
+![](bbox=[0.14, 0.62, 0.21, 0.68])
+
+NOTE As with ping, some routers are configured to drop packets from traceroute. Thus, the traceroute output may indicate dropped packets even though regular network traffic passes through these routers just fine.
+
+# # Checking Network Status
+
+Another useful diagnostic tool is netstat. This is something of a Swiss Army knife of network tools because it can be used in place of several others, depending on the parameters it is passed. It can also return information that's not easily obtained in other ways. Table 8.2 summarizes some examples.

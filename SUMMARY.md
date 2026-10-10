@@ -247,6 +247,7 @@
 +   [CompTIA Linux+ 实践指南：考试 XK0-004](docs/comptia-linux-practice-tests-exams-xk0-004/README.md)
 +   [CompTIA Linux+ 学习指南](docs/comptia-linux-study-guide/README.md)
 +   [CompTIA Linux+ 学习指南：2009 考试](docs/comptia-linux-study-guide-2009-exam/README.md)
++   [CompTIA Linux+ 学习指南： XK0-003 考试](docs/comptia-linux-study-guide-exam-xk0-003/README.md)
 +   [CompTIA Linux+学习指南：考试 XK0-004](docs/comptia-linux-study-guide-exam-xk0-004/README.md)
 +   [CompTIA Linux+ 考试指南：XK0-005](docs/comptia-linux-study-guide-exam-xk0-005/README.md)
 +   [CompTIA Linux+学习指南：考试 XK0-005, 第5版](docs/comptia-linux-study-guide-exam-xk0-005-5th-edition/README.md)

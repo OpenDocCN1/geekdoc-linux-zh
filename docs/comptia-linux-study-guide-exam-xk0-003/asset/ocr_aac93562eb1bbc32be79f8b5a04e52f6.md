@@ -1,0 +1,30 @@
+```
+# The primary network interface
+auto eth0
+iface eth0 inet static
+address 192.168.29.39
+netmask 255.255.255.0
+gateway 192.168.29.1
+```
+
+The loopback interface configuration in the first few lines of the file should never be touched. The eth0 configuration, though, can be altered to suit your needs. The entry includes the same basic information as appears in a Fedora configuration file, but the exact keywords and formatting differ. Also, pay attention to the line beginning with the keyword iface: it concludes with the word static. In a DHCP configuration, as noted earlier, it would end with dhcp, and the following address, netmask, and gateway lines would be absent.
+
+# Setting DNS Options
+
+In order for Linux to use DNS to translate between IP addresses and hostnames, you must specify at least one DNS server in the /etc/resolv.conf file. Precede the IP address of the DNS server by the keyword nameserver. You may include up to three such lines, although just one may be sufficient. (More than one provides redundancy in case the first name server becomes unresponsive.) This file may also include a domain keyword, which sets the Internet domain name in which the system resides, and one or more search keywords, which are additional domains that are searched if none is specified. For instance, to enable you to contact dino.pangaea.edu by using the shortened hostname dino, you could include the line search pangaea.edu, whether or not your computer is in the pangaea.edu domain. Listing 8.3 shows a sample resolv.conf file.
+
+# Listing 8.3: A Sample /etc/resolv.conf File
+
+```
+domain pangaea.edu
+search luna.edu
+nameserver 192.168.29.11
+nameserver 172.24.24.24
+nameserver 10.103.9.41
+```
+
+Adjusting this file is all you need to do to set the name server addresses; you don't have to do anything else to make the setting permanent. You might notice that Listing 8.3 specifies name servers on three different networks. This is perfectly valid (although for example purposes I've used addresses on reserved private networks). In general, though, the closer a DNS server is to your own system, the better.
+
+![](bbox=[0.15, 0.84, 0.25, 0.88])
+
+If you use DHCP, the DHCP client alters /etc/resolv.conf. Thus, if you make changes to this file and then use DHCP, your changes will be lost.

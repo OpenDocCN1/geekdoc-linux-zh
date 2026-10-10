@@ -1,0 +1,57 @@
+
+## Controlling Login Access
+
+Remote login access is usually provided by a Telnet or SSH server. These servers provide remote text-mode access, enabling users to run Bash or other shells and text-mode programs. SSH also supports tunneling X connections, so if the user’s computer runs an X server, the user can run X programs hosted on the login server computer.
+
+Unfortunately, Telnet provides only very limited security options. The server uses the login program to process user logins, so user-by-user login restrictions are those provided by login.
+
+Telnet servers are usually called from a super server (inetd or xinetd), so you can use these servers’ features (or the features of programs they call, such as TCP Wrappers) to restrict access to Telnet on the basis of the calling systems’ IP addresses. These options are described in Chapter 4, “Managing System Services.”
+
+SSH servers don’t normally use login to control the login process. These servers may employ PAM, though, so you can configure PAM to limit who may log in via SSH.
+
+In addition to these controls, other options can limit root access to these login servers, as described later in “Controlling root Access.”
+
+## Controlling FTP Access
+
+Most FTP servers use PAM to authenticate user access. Instead of or in addition to PAM, some FTP servers use a file called /etc/ftpusers to limit who may access the computer. This file contains a list of users who may not access the FTP server. Typically, it includes root and various other system accounts, but you can add ordinary users to the list, if you like. You cannot use this file to restrict access based on the remote system, though, unlike the PAM-based restrictions.
+
+![](img/9903a4d3f7abd8dcbef1035fa04a3406_264_0.png)
+
+The presence of an /etc/ftpusers file doesn’t mean that the file is actually in use. This file could be a relic from an earlier FTP server installed on the system, or the FTP server might be configured to not use the file. Before you rely on this file, you should test it by adding an ordinary username to the file and then attempting to access your FTP server using that username. If you succeed, try restarting the FTP server and testing it again. If you can still access the FTP server, consult its documentation to learn how to get it to use /etc/ftpusers or use PAM to limit access.
+
+## Controlling root Access
+
+The root account is unusually powerful, so a compromise of that account is far more serious than a compromise of an ordinary account. Furthermore, in many cases, root should not be accessing a computer over a network, at least not in certain ways. For instance, a standard Telnet server doesn’t encrypt its traffic, so its use for root access exposes the root password on the network wires—or over radio waves, if you’re using wireless networking. What’s more, the data transferred by root may be unusually sensitive. For instance, you might edit `/etc/shadow` as root, thus exposing the data in that file, if you edit it via a Telnet link.
+
+For these reasons, many servers and login protocols provide extra tools to help control root access to the system. Frequently, these tools simply deny all access to direct root logins. Administrators can still log in using a normal account and then use `su`, `sudo`, or similar tools to perform administrative tasks. This approach requires two passwords, which means that a miscreant is less likely to be able to get in than if direct root logins were accepted.
+
+The default configuration for most Linux distributions is to deny direct root logins via Telnet (or any other remote login server that uses the `login` program). Thus, you shouldn’t need to change anything to keep this server from accepting root logins. If you do, the key lies in the `/etc/security.conf` file. This file holds a list of terminals from which root is permitted to log in. It normally contains a list of local device filenames, one per line, minus the leading `/dev` directory indicator. If this list is incomplete, you may not be able to log in as root from the console. Adding appropriate specifications, such as `tty1` through `tty6` and `vc/1` through `vc/6`, should fix the problem. If you want to use a directly connected “dumb” RS-232 serial terminal, you can add its device filename, such as `ttyS0`. (You’ll also need to enable this terminal for normal logins by adding it to the `/etc/inittab` file or creating a `ttyS0` file with appropriate options in `/etc/event.d`, depending on the version of `init` you’re using.)
+
+> **WARNING**
+> Even if you log in using Telnet via a normal user account, using `su` and performing administrative functions can be risky. The password you type after you type `su` will be passed over the network in an unencrypted form, as will all the data you type or see on your screen. Remote text-mode administration is best done via SSH or some other encrypted protocol.
+
+Most default SSH configurations allow `root` to log in directly. Although SSH’s encryption makes this practice much safer than the equivalent when using Telnet, you can gain the added benefit of requiring two passwords by disabling direct root logins via SSH. To do so, you must edit the server’s `/etc/ssh/ssh_config` file (not to be confused with `ssh_config`, which controls the SSH client). Look for the `PermitRootLogin` line, and set it to `no`:
+
+```
+PermitRootLogin no
+```
+
+You may want to consult the documentation for other servers you run, as well. Some, including remote administration tools such as the Samba Web Administration Tool (SWAT), require root access to do more than display basic information and perhaps change user passwords. Others, such as the main Samba servers themselves, should ordinarily not give root access—they simply aren’t designed for administrative functions, and root may be able to do things with the server that you’d rather not be done. For the most part, remote root access should be limited to SSH (ideally *after* a regular user login) or to tools that are explicitly designed to support root access for administrative purposes.
+
+## Summary
+
+Linux's accounts and its security model are inextricably intertwined. A single Linux system can support many users, who can be tied together in groups. Users can create files that they own and that have permissions that define which other users may access the files and in what ways. To manage these users, you'll use a handful of commands, such as *useradd*, *groupadd*, *userdel*, *usermod*, and *passwd*. These commands enable you to manage your user accounts to suit your system's needs.
+
+Managing account security is critically important. You must educate your users about the importance of good passwords, and about proper procedures for safeguarding their passwords. Most importantly, users should know to *never* divulge their passwords to others. They should also be alert to suspicious activities that might indicate shoulder surfing or other methods cracker's employ to obtain passwords. As a system administrator, you can disable or delete unused accounts and manage shadow passwords.
+
+Controlling access to a computer is an important part of security and user management. Many programs also provide their own tools to accomplish these goals. Some servers provide special options to disable or limit *root* access to the computer, and you should often take advantage of such options.
+
+## Exam Essentials
+
+- **Describe why accounts are important on a Linux system.** Accounts enable several users to work on a computer with minimal risk that they'll damage or (if you so desire) read one another's files. Accounts also enable you to control normal users' access to critical system resources, limiting the risk of damage to the Linux installation as a whole.
+
+- **Summarize important files in controlling access to Linux.** The `/etc/passwd` and `/etc/shadow` files contain information on Linux accounts. Files in `/etc/pam.d` control PAM, including defining how PAM authenticates users. Individual programs and servers often have their own security files, such as `/etc/sudoers` to control `sudo`, `/etc/ftpusers` to control who may access an FTP server, and `/etc/ssh/sshd_config` to control the SSH server.
+
+- **Describe the characteristics of a good password.** Good passwords resemble random strings of letters, numbers, and punctuation. To make them memorable to the account holder, they can be generated by starting from a base built on a personally relevant acronym or a pair of unrelated words and then modified by adding letters and punctuation, mixing the case of letters, and reversing some sequences in the password.
+
+- **Explain the importance of shadow passwords.** The shadow password system stores password hashes in a file that can be read only by *root*, thus reducing the risk that a cracker can read the file and use a password-cracking program to discover users' passwords.

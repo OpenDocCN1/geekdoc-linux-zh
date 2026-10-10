@@ -1,0 +1,25 @@
+# Review Questions
+
++   You've located a program that continuously monitors your disk activity in the background and e-mails you if it detects problems. Which of the following methods is *least* appropriate for launching this program?  
++   A. Typing its name at a Bash prompt  
++   B. A SysV startup script  
++   C. A super server  
++   D. A local startup script
+
++   A Linux system keeps its SysV startup scripts in the */etc/init.d* directory. Which of the following commands will temporarily stop the ProFTpd server on that computer, if it's started from these startup scripts?  
++   A. */etc/init.d/proftpd stop*  
++   B. *sysvstop /etc/init.d/proftpd*  
++   C. *sysvstop proftpd*  
++   D. */etc/init.d/proftpd stop5m*
+
++   You've installed a server by compiling it from source code. The source code included no SysV startup script, and you don't want to run it from a super server, so you start it in a local startup script (*/etc/rc.d/rc.local*). You need to temporarily shut down the server. How might you do this?  
++   A. Type */etc/rc.d/rc.local stop*.  
++   B. Edit the startup script to remove the server, and rerun the script.  
++   C. Remove the server's entry from */etc/inetd.conf*, and type */etc/rc.d/init.d/inetd restart*.  
++   D. Find the server's process ID number (*pid*) with *ps*, and then type *kill pid*.
+
++   You've discovered that the VitalServer package is installed on your Fedora system, but it's not running automatically when you start the computer into runlevel 5. Assuming this package comes with a SysV startup script called *vitald*, what might you type to enable this server in runlevel 5?  
++   A. *xinetd 5 vitald add*  
++   B. *init vitald 5*  
++   C. *rc-update add vitald 5*  
++   D. *chkconfig --level 5 vitald on*

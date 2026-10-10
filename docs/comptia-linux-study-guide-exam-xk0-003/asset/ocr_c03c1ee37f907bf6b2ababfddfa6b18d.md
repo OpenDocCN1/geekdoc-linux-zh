@@ -1,0 +1,29 @@
+# F
+
+**failed dependency** A state in which a package's dependencies are not met when attempting to install it, or in which removing a package would cause other installed packages to have unmet dependencies.
+
+**FAT** See *File Allocation Table* (FAT).
+
+**FDDI** See *Fiber Distributed Data Interface* (FDDI).
+
+**Fiber Distributed Data Interface (FDDI)** A type of network hardware that supports up to 100Mbps speeds over fiber-optic cables.
+
+**Fibre Channel** A type of network hardware that supports up to 6800Mbps speeds over fiber-optic cables.
+
+**file access permissions** Linux's file access control mechanism. Every file has an owner, a group, and permissions that define how the owner, group members, and all other users (the “world”) may access the file. Permissions include read, write, and execute for the owner, group, and world.
+
++   **File Allocation Table (FAT)** 1. A filesystem (meaning 1) popularized by DOS and used today on removable media because of its wide support. See also *Virtual FAT* (VFAT). 2. A data structure used on the FAT filesystem, after which the filesystem is named.
+
+**file owner** The account with which a file is most strongly associated. The owner often has permission to do more with a file than other users can do.
+
+**file permissions** See *file access permissions*.
+
+**file sharing protocol** A network protocol that enables one computer to access files stored on a second computer as if the second computer's files were local to the first computer. Examples include SMB/CIFS (used on Windows-dominated networks), NFS (used on Unix-dominated networks), and AppleShare (used on Macintosh-dominated networks).
+
+**File Transfer Protocol (FTP)** A common network protocol designed for the transfer of files between computers. In its basic form, FTP does not support *anonymouse* FTP access, in which publicly accessible files may be retrieved using no or any password.
+
+**file type code** A special code that identifies the type of a file, such as a regular file, a directory, or a device file.
+
+**filename completion** A feature of some shells that enables them to complete a command or filename when you press the Tab key.
+
++   **filesystem** 1. The low-level data structures recorded on a disk in order to direct the placement of file data. The filesystem determines characteristics such as the maximum partition size, the file-naming rules, and what extra data (time stamps, ownership, and so on) may be

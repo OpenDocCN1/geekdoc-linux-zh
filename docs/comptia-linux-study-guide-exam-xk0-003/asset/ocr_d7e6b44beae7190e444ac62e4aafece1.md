@@ -1,0 +1,17 @@
+What happens when the characters you enter are *not unique*? In this case, the shell completes as much of the job as it can. For instance, if you type **emacs sh** and then press the Tab key, Bash fills out the next three characters so that the command line reads **emacs share**. Some configurations also summarize the possible completions at this point. (For those that don't, pressing Tab again usually displays these completions.) If you then type either **h** or - and press Tab again, Bash completes the filename.
+
+![](bbox=[0.14, 0.25, 0.24, 0.32])
+
+Command and filename completion details vary; you *may need to* press Tab multiple times and there *may be fewer or more beeps than* described here.
+
+Another shortcut is the use of the up and down arrow keys to scroll through previous commands. If you need to type two similar commands in a row, you can type one and then press the up arrow key to retrieve the previous command. You can go back through several commands in this way, and if you overshoot, you can use the down arrow key to retrieve more recent commands. Once you find the command you want, you can use the left arrow or Backspace key to move back in the line to edit it (Backspace deletes characters, but the left arrow key doesn't). Pressing Ctrl+A moves the cursor to the start of the line, and pressing Ctrl+E moves the cursor to the end of the line. Edit the line, and press the Enter key to enter the new command.
+
+These shortcuts, and other basic shell commands, are extremely helpful. You can perform many tasks with a file manager, of course, but text-based utilities were designed to be used from shells.
+
+# # Using the Shell's History
+
+Another helpful shell shortcut is the *history*, which keeps a record of every command you type (stored in `~/.bash_history` in the case of Bash), up to a configurable number of commands. If you've typed a long command recently and want to use it again, or use a minor variant of it, you can pull the command out of the history. The simplest way to do this is to press the up and down arrow keys on your keyboard, as described in the previous section. The Ctrl+P and Ctrl+N keystrokes double for the up and down arrow keys, respectively.
+
+Another way to use the command history is to search through it. Press Ctrl+R to begin a backward (reverse) search, and begin typing characters that should be unique to the command you want to find. The characters you type need not be the ones that begin the command; they can exist anywhere in the command. You can either keep typing until you find the correct command or, after you've typed a few characters, press Ctrl+R repeatedly until you find the one you want. The Ctrl+S keystroke works similarly but searches forward in the command history, which might be handy if you've used a backward search or the up arrow key to look back and have overshot. In either event, if you can't find the command you want or change your mind and want to terminate the search, press Ctrl+G.
+
+Frequently, after finding a command in the history, you want to edit it. Bash, like many shells, provides editing features modeled after those of the Emacs editor:

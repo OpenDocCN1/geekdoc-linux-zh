@@ -1,0 +1,11 @@
+# Using Internet-Based Help Resources
+
+In addition to the documentation you find on your computer, you can locate documentation on the Internet. Most packages have associated Internet Web sites, which may be referred to in man pages, info pages, README files, or other documentation. Frequently, online documentation ships with the software, so you might be able to find it on your local hard disk; however, sometimes the local documentation is old or sparse compared to what's available online. Of course, if your local documentation is old, your local software may be old, too.
+
+Another online resource that's extremely helpful is the Linux Documentation Project [LDP; http://tldp.org]. The LDP is dedicated to providing more tutorial information than is commonly available with most Linux programs. You'll find several types of information at this site:
+
+**HOWTOs**   Linux HOWTO documents are short and medium-length tutorial pieces intended to get you up to speed with a topic or technology. HOWTOs have varying focus---some describe particular programs, whereas others are more task-oriented and cover a variety of tools in service to the task. As the name implies, they're generally designed to tell you how to accomplish some goal.
+
+**Guides**   Guides are longer documents, often described as book-length. (In fact, some of them are available in printed form.) Guides are intended as thorough tutorials or reference works on large programs or general technologies, such as Linux networking as a whole.
+
+**FAQs**   A Frequently Asked Question (FAQ) is, as the name implies, a question that comes up often---or more precisely, in the sense of the LDP category, that question and an answer to it. LDP FAQs are organized into categories, such as the Faqpe FAQ or the WordPerfect on Linux FAQ. Each contains multiple questions and their answers, often grouped in subcategories. If you have a specific question about a program or technology, looking for an appropriate FAQ can be a good place to look first for an answer.

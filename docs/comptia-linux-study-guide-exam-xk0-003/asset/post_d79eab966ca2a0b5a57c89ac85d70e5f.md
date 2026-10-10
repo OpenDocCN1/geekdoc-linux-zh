@@ -1,0 +1,118 @@
+
+17. Which of the following commands is *most* likely to stop a runaway process with PID 2939?
+    A. `kill --s SIGHUP 2939`
+    B. `kill --s SIGTERM 2939`
+    C. `kill --s SIGKILL 2939`
+    D. `kill --s SIGDIE 2939`
+
+18. Which of the following is *not* one of the responsibilities of CUPS?
+    A. Maintaining the printer queues
+    B. Accepting print jobs from remote systems
+    C. Managing the scanner hardware on combination scanner/printers
+    D. Sending data to printers
+
+19. Which of the following commands displays the contents of a tarball, including file sizes and time stamps?
+    A. `tar xzf theprogram-1.2.3.tgz`
+    B. `tar tzf theprogram-1.2.3.tgz`
+    C. `tar tvzf theprogram-1.2.3.tgz`
+    D. `tar x theprogram-1.2.3.tgz`
+
+20. Which of the following commands replaces *jpertwee*'s current cron job with `my-cron`?
+    A. `crontab -r my-cron`
+    B. `crontab -e my-cron`
+    C. `crontab jpertwee my-cron`
+    D. `crontab -u jpertwee my-cron`
+
+21. How would you direct the output of the `uptime` command to a file called `uptime-stats.txt`?
+    A. `echo uptime uptime-stats.txt`
+    B. `uptime > uptime-stats.txt`
+    C. `uptime | uptime-stats.txt`
+    D. `uptime < uptime-stats.txt`
+
+22. A workstation ordinarily runs with a load average of 0.25. Suddenly, its load average is 1.25. Which of the following might you suspect, given this information? (Choose all that apply.)
+    A. The workstation's user may be running more programs or more CPU-intensive programs than usual.
+    B. A process may have hung—locked itself in a loop consuming CPU time but doing no useful work.
+    C. A process may have begun consuming an inordinate amount of memory.
+    D. The CPU may be malfunctioning and require replacement.
+
+23. You've installed Linux on a new computer, but you've been unable to get X to function in anything better than 640 × 480 (VGA) video mode. After you investigate, you learn that the video card's chipset is unsupported by the standard drivers in XFree86 3.3.6, XFree86 4.x, or X.org-X11. Which of the following is not an option you might consider to resolve the situation? 
+    A. Replace the video card. 
+    B. Obtain an XFree86 4.x driver from the card's manufacturer. 
+    C. Replace your distribution's X server with Accelerated-X. 
+    D. Upgrade the card's memory to allow higher video resolutions.
+
+24. The final step of your company's procedures for creating a new server requires you to store information on /dev/hda's MBR partition table in an ASCII file named documentation.txt. Which of the following commands will allow you to accomplish this action? 
+    A. df /dev/hda > documentation.txt 
+    B. parted -1 /dev/hda > documentation.txt 
+    C. fdisk -l /dev/hda > documentation.txt 
+    D. du /dev/hda > documentation.txt
+
+25. You are configuring your company firewall and have been told that TCP and UDP data to port 53 must be allowed through. By default, what server uses this port? 
+    A. NNTP 
+    B. PortMapper 
+    C. NetBIOS 
+    D. BIND
+
+26. Your company makes computer hardware, and you want to enable customers to download Linux, Windows, and MacOS drivers and documentation files for this hardware. Which of the following are the best choices to enable users to retrieve such files? (Choose two.) 
+    A. SFTP 
+    B. FTP 
+    C. HTTP 
+    D. NFS
+
+27. Which of the following statements are true of SSH? (Choose all that apply) 
+    A. Most default configurations allow root to log in directly. 
+    B. Encryption makes SSH safer than Telnet. 
+    C. The default port used is 53. 
+    D. By default, SSH uses UDP.
+
+28. Where may the Linux root (/) partition reside?
+    A. On a primary or logical partition  
+    B. On a logical partition only  
+    C. On a primary partition only  
+    D. On a partition that falls below the 1,024th cylinder
+
+29. What tool can diagnose and fix many common Linux filesystem problems?
+    A. mkfs
+    B. fsck
+    C. chkdsk
+    D. scandisk
+
+30. Which of the following tools enables you to digitally “sign” e-mail messages as a way of proving to recipients that you were the true sender?
+    A. GPG
+    B. SSH
+    C. BIND
+    D. Winbind
+
+# Answers to Assessment Test
+
+1. A. GRUB may reside in any of the locations listed in option A. If you install it in a FAT or NTFS partition (used by DOS or Windows), these partitions will be damaged, and if you install GRUB in a swap partition that is then used, GRUB will be wiped out. See Chapter 1 for more information.
+
+2. C. Option C, *mkfs*, is a tool for creating a new filesystem, which is something you’re likely to need to do in an emergency recovery situation. The first option, *fdformat*, does a low-level format on a floppy disk; OpenOffice.org is an office productivity suite, and *traceroute* helps diagnose network connectivity problems. You’re unlikely to need to use any of these tools from an emergency disk. See Chapter 1 for more information.
+
+3. B, C. Log files record messages generated by the kernel, servers, and certain security-related system utilities. The *su* command typically records a summary of its actions in log files, and *xinetd* typically records login failures, although these defaults can be changed. Text editors seldom log information, nor do simple file-viewing utilities, even if they’re asked to violate file security measures. See Chapter 4 for more information.
+
+4. A. When shutting down certain servers, *telinit* first tries asking them to shut themselves down by sending a *SIGTERM* signal. The server can then close open files and perform other necessary shutdown housekeeping. If the servers don’t respond to this signal, *telinit* becomes more forceful and passes a *SIGKILL* signal, which is more likely to work but doesn’t give the server a chance to shut itself down in an orderly fashion. The -t parameter specifies the time between these two signals. See Chapter 4 for more information.
+
+5. B. The Link encap: *Ethernet* portion of the output indicates that the device uses Ethernet to establish links with other systems. *Hwaddr* 00:A0:CC:24:BA:02 specifies the hardware address (aka the Media Access Control, or MAC, address). Ethernet cards use these addresses to “talk” to each other; Linux’s TCP/IP stack locates a MAC address when given a TCP/IP address, if the target system is on the same network segment. (If not, Linux locates the gateway system and passes data through it.) See Chapter 8 for more information.
+
+6. B. Tracking down and removing or changing the permissions of a former user’s files can prevent confusion or possibly even spurious accusations of wrongdoing in the future. Unless the user was involved in system cracking, there’s no reason to think that the user’s password would be duplicated in the password database. No system file’s ownership or permissions should need changing when deleting a user. Although overriding deleted files with random data may be useful in some high-security environments or with unusually sensitive data, it’s not a necessary practice on most systems. See Chapter 5 for more information.
+
+7. C. The second set of permission bits (rw-) indicates that the file’s group (audio) may read from and write to the file. This permission string ensures that, if audio has more than one member, multiple users may access the file. The leading c indicates that the file is a character device file, not a directory. The command *chmod 660 loud* will not change the file’s permissions; 660 is equivalent to rw-rw---- . See Chapter 2 for more information.
+
+8. A. The TCP Wrappers program, tcpd, includes security features that are largely provided directly by xinetd, so most systems that use xinetd don't call tcpd from xinetd. The other options appear in both types of files, although arguments for the server aren't required for either super server. See Chapter 4 for more information.
+
+9. A. Only the file's owner and root may change permissions on a file via chmod. Whether the file is writeable by the owner is irrelevant, as is whether the directory in which the file resides is writeable. See Chapter 2 for more information.
+
+10. B. Typing su username gives the person who runs the command the privileges associated with that username, assuming that the person who runs the command successfully enters the user's password. When the username isn't specified, root is assumed. The su command also runs a program as the specified user. Normally, this is a shell, but you can specify another program using a command-line argument. Although option C describes part of what su can do, option C is incomplete; option B is a more complete answer. The su command does not give superuser privileges to the named user, nor does it give everybody who's logged in superuser privileges. See Chapter 5 for more information.
+
+11. A. To use disk space on a new computer, you must add one or more /etc/fstab entries for the new disk partitions (unless you intend to manually mount the new disk's partitions as root whenever you need them). A Zip disk is just like any other removable medium; /etc/fstab can contain an entry for the drive, which doesn't need changing to read a new disk. Disk checks don't change partition tables, and so they don't require /etc/fstab to be edited. The /boot/grub/menu.lst boot configuration won't alter partition layouts either. See Chapter 6 for more information.
+
+12. A. A denial of service (DoS) attack is any type of attack that denies you the use of your equipment. Core is not a type of attack. Rooted is a term used to describe root access being obtained by a hacker, while phishing involves sending bogus e-mails or setting up fake Web sites that lure unsuspecting individuals into divulging sensitive financial or other information. See Chapter 12 for more information.
+
+13. B. Option B, iptables, is a tool for configuring the 2.4.x and 2.6.x Linux kernel's firewall features. (The ipfwadm and ipchains programs perform these tasks for the 2.0.x and 2.2.x kernels, respectively.) Apache is a Web server, and wall sends messages to all currently logged-on users. TCP Wrappers controls access to specific servers, but it isn't a firewall per se. See Chapter 9 for more information.
+
+14. B. These scripts hold startup commands individualized for their host ("local") computer, as opposed to those that are provided with the distribution. In principle, these scripts could be used for any of the other listed purposes, but this isn't their usual function. See Chapter 4 for more information.
+
+15. B. BIND is the Berkeley Internet Name Domain—a name server. Normally, BIND runs only on your network's name servers; other computers on your network point to a DNS server that runs BIND or similar software. See Chapter 10 for more information.
+
+16. C. You can use traceroute to check the time for data transfers to, and the reliability of, every router between you and a destination system. This data should help you identify a failure point on a connection. See Chapter 8 for more information.

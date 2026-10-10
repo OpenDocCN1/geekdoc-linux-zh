@@ -1,0 +1,29 @@
+**process**  A piece of code that's maintained and run by the Linux kernel separately from other pieces of code. Most processes correspond to programs that are running. One program can be run multiple times, resulting in several processes.
+
+**process ID (PID)**  A number associated with a specific process. Utilities such as k `ill` and `renice` work on PIDs, enabling you to terminate them or alter their priorities.
+
+**Programmed Input/Output (PIO)**  A method of data transfer between memory and expansion cards in which the CPU actively performs the transfer. PIO tends to consume much more CPU time than DMA does.
+
+**protocol stack**  A collection of drivers, kernel procedures, and other software that implements a standard means of communicating across a network. Two computers must support compatible protocol stacks to communicate. The most popular protocol stack today is TCP/IP.
+
+**pull mail protocol**  A mail protocol in which the recipient initiates the transfer. Examples include POP and IMAP.
+
+**push mail protocol**  A mail protocol in which the sender initiates the transfer. SMTP is the most common push mail protocol.
+
+# R
+
+**RADIUS** See *Remote Authentication Dial-In User Services (RADIUS)*.
+
+**RAID** See *redundant array of independent disks (RAID)*.
+
+**random access**  A method of access to a storage device (RAM, hard disk, and so on) in which information may be stored or retrieved in an arbitrary order with little or no speed penalty. See also *sequential access*.
+
+**RDP**  See *Remote Desktop Protocol (RDP)*.
+
+**redirection**  A procedure in which a program's standard output or standard error is sent to a file rather than to the screen, or in which the program's standard input is obtained from a file rather than from the keyboard. See also *standard input*, *standard error*, and *standard output*.
+
+**redundant array of independent disks (RAID)**  Two or more disks that are treated as a single physical hard disk. RAID can improve speed, reliability, or both, depending on how it's configured. It can be implemented in special hardware RAID controllers or via special kernel options and Linux configuration.
+
+**regular expression**  A method of matching textual information that may vary in important ways but that contains commonalities. The regular expression captures the commonalities and uses various types of wildcards to match variable information.
+
+**ReiserFS**  One of several journaling filesystems for Linux. ReiserFS was developed from scratch for Linux.

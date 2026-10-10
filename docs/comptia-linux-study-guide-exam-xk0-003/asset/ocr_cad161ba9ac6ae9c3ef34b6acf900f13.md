@@ -1,0 +1,32 @@
+more sophisticated scanners, including Nessus, will check for known vulnerabilities, so they can tell you whether a server might be compromised should you decide to leave it running.
+
+![](bbox=[0.16, 0.17, 0.22, 0.23])
+
+Network scanners are used by crackers for locating likely target systems, as well as by network administrators for legitimate purposes. Many organizations have policies forbidding the use of network scanners except under specific conditions. Therefore, you should check these policies and obtain explicit permission, signed and in writing, to perform a network scan. Failure to do so could cost you your job or even result in criminal charges, even if your intentions are honorable.
+
+Nmap can perform a basic check for open ports. Pass the -sT parameter and the name of the target system to it, as shown here:
+
+```
+$ nmap -sT teela.friolbooks.com
+```
+
+```
+Starting nmap V. 3.55 ( www.insecure.org/nmap/) at 2004-12-21 12:11 EDT
+Interesting ports on teela.riodsbooks.com (192.168.1.2):
+(The 1581 ports scanned but not shown below are in state: closed)
+Port	State	Service
+21/tcp	open	ftp
+22/tcp	open	ssh
+```
+
+![](bbox=[0.16, 0.54, 0.22, 0.59])
+
+As with the output of netstat shown in "Using Local Network Activity Tools," the preceding output for Nmap has been trimmed for brevity’s sake.
+
+This output shows two open ports—21 and 22, used by ftp and ssh, respectively. If you weren’t aware that these ports were active, you should log into the scanned system and investigate further, using netstat or ps to locate the programs using these ports, and if desired, shut them down. The -sT option specifies a scan of TCP ports. A few servers, though, run on UDP ports, so you need to scan them by typing nmap -sU hostname. (This usage requires root privileges, unlike scanning TCP ports.)
+
+Nmap is capable of more sophisticated scans, including "stealth" scans that aren’t likely to be noticed by most types of firewalls, ping scans to detect which hosts are active, and more. The Nmap man page provides details.
+
+Nessus is a more sophisticated network scanner than Nmap. It comes as separate client and server components; the client enables you to control the server, which does the actual work. You’ll typically need to install the two parts separately, so check your distribution’s package manager to find and install them both. You can install the server on one system and the client on another, if you like.
+
+Once Nessus is installed, you must create a Nessus account. This is an account in Nessus itself, not a regular Linux account. Type nessus-adduser on the Nessus server system. The

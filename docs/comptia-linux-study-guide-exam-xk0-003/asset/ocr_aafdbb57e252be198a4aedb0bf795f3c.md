@@ -1,0 +1,15 @@
+# ## Using Virtual Terminals
+
+Linux implements a feature, known as *virtual terminals* (VTs), that can greatly help you when you want to run multiple programs from a text-mode login or when you want to switch between text-mode and GUI sessions. A single computer can support multiple VTs. You can switch to a new VT from a text-mode login by pressing **Alt+F** *n*, where *n* is the VT number. For instance, if you're in VT1 and you want to switch to VT2, press **Alt+F2**. To switch out of a VT in which X is running, you must add Ctrl to the keystroke; so, to switch to VT2 from X, you'd press **Ctrl+Alt+F2**.
+
+Typically, VT1 through VT6 are text-mode VTs, while X runs in VT7. Some distributions deviate from this convention, though. For instance, Fedora 10 (but not earlier versions of Fedora) run X in VT1.
+
+VTs enable you to log into the computer multiple times and run different programs in different VTs. You can then switch between the VTs to switch between different programs running in each VT.
+
+> X sometimes misbehaves and becomes unresponsive. If this happens, you may be able to recover by switching to a text-mode VT and shutting down and restarting X, as described in Chapter 1, “Getting Started with Linux.”
+
+# ## Launching Programs
+
+You can launch a program from a shell by typing its name. In fact, many shell “commands” are actually external programs that the shell runs. Most of these standard commands reside in the */bin* directory, but shells search all directories specified by the **PATH** environment variable (described in more detail later, in “Setting Environment Variables”) for commands to run. If you type the name of a program that resides in any directory on the path, the shell runs that program. You can also pass *parameters* to a program—optional information that the program can use in a program-specific way. For instance, the names of the files and directories are parameters to commands like **ls** and **cd**, which are described later, in “Navigating the Linux Filesystem.” Many programs accept parameters that are preceded by one or two dashes and a code, as in **-r** or **-t** *time*. Most parameters are case sensitive; in fact, many programs use upper- and lowercase versions of a parameter in different ways.
+
+Most text-based programs take over the display (the text-mode login, Telnet session, **xterm**, or what have you). Many show little or no information before returning control to the shell, so you don’t really notice this fact. Some programs, such as text-mode editors, truly control the display; they may clear all the information that has previously appeared and fill the display with their own information. Other programs may not clear the screen entirely, or even display their own information, but they may take a long time to operate. In some cases, you may want to retain control of your shell while the program does its thing in the background. To do this, follow the command with an ampersand (&). When you do this, the program you launch will still be attached to the display from which it

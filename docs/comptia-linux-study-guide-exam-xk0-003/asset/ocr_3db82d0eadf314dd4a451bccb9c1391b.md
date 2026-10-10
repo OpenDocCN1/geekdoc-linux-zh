@@ -1,0 +1,23 @@
+Allowed IP or network addresses You can use the `only_from` option to specify IP addresses, networks (as in `192.168.78.0/24`), or computer names on this line, separated by spaces. The result is that `xinetd` will accept connections only from these addresses, similar to TCP Wrappers' `hosts.allow` entries.
+
+Disallowed IP or network addresses The `no_access` option is the opposite of `only_from`; you list computers or networks here that you want to blacklist. This is similar to the `hosts.deny` file of TCP Wrappers.
+
+Access times The `access_times` option sets times during which users may access the server. The time range is specified in the form `hour:min-hour:min`, using a 24-hour clock. Note that this option affects only the times during which the service will `respond`. If the `xinetd` `access_times` option is set to `8:00-17:00` and somebody logs in at 4:59 p.m. (one minute before the end time), that user may continue using the system well beyond the 5:00 p.m. cutoff time.
+
+You should enter these options into the files in `/etc/xinetd.d` that correspond to the servers you want to protect. Place the lines between the opening brace ( `{`) and closing brace (`}`) for the service. If you want to restrict `all` your `xinetd`-controlled servers, you can place the entries in the `defaults` section in `/etc/xinetd.conf`.
+
+![](bbox=[0.12, 0.44, 0.22, 0.58])
+
+> Some servers provide access control mechanisms similar to those of TCP Wrappers or `xinetd` by themselves. For instance, Samba provides `hosts allow` and `hosts deny` options that work much like the TCP Wrappers file entries, and NIS includes similar configuration options. These options are most common on servers that are awkward or impossible to run via `xinetd` or `xinetd`.
+
+# ### Using Custom Startup Files
+
+Occasionally it’s desirable to start a service through some means other than a SysV script or super server. This is most frequently the case when you’ve compiled a server yourself or installed it from a package file intended for a distribution other than the one you’re using, and when you don’t want to run it through a super server for performance reasons. In such cases, the program may not come with a SysV startup script, or the provided SysV script may not work correctly with your system.
+
+Many Linux distributions include a startup script that runs after the other SysV startup scripts. This script is generally called `/etc/rc.d/rc.local`, `/etc/rc.d/boot.local`, or something similar. You can launch a server or other program from this script by entering the command you would use to launch the program manually, as described in the program’s documentation. For instance, you might include the following line to launch an FTP server:
+
+```
+/usr/sbin/in.ftpd -l -D
+```
+
+Some programs must have an ampersand (`&`) added to the end of the line to have them execute in the background. If you fail to add this, subsequent lines in the startup script may

@@ -1,0 +1,23 @@
+In addition to `chmod` and its file permissions, you can view and manipulate more fundamental permissions when using an ext2, ext3, or ext4 filesystem.
+
+The `lsattr` command displays file attributes, and `chattr` enables you to change them. Attributes adjustable in this way include automatic kernel compression (c), a flag to prevent backup by `dump` (d), zeroing of allocated data upon file deletion (s), and various other highly technical attributes. Consult the `lsattr` and `chattr` man pages for more information.
+
+These two commands are useless on XFS, JFS, ReiserFS, or any other filesystem except for the ext2 family.
+
+# Setting Default Permissions
+
+When a user creates a file, that file has default ownership and permissions. The default owner is, understandably, the user who created the file. The default group is the user's primary group. The default permissions, however, are configurable. These are defined by the `user mask` (*umask*), which is set by the `umask` command. This command takes as input an octal value that represents the bits to be removed from **777** permissions for directories, or from **666** permissions for files, when creating a new file or directory. Table 2.12 summarizes the effect of several possible umask values.
+
+**TABLE 2.12**
+Sample Umask Values and Their Effects
+
+| **Umask** | **Created Files**          | **Created Directories** |
+| :-------- | :------------------------- | :-----------------------|
+| 000      | 666 (rw\-rw\-rw\-)         | 777 (rwxrwxrwx)        |
+| 002      | 664 (rw\-rw\-r\-)          | 775 (rwxrwxr\-x)      |
+| 022      | 644 (rw\-r\-\-r\-)          | 755 (rwxr\-xr\-x)      |
+| 027      | 640 (rw\-r\-\-\-\-\-)      | 750 (rwxr\-x\-\-\-\-)  |
+| 077      | 600 (rw\-\-\-\-\-\-\-\-)    | 700 (rwx\-\-\-\-\-\-)   |
+| 277      | 400 (r\-\-\-\-\-\-\-\-)     | 500 (r\-xr\-\-\-\-\-)  |
+
+Note that the umask isn't a simple subtraction from the values of **777** or **666**; it's a bitwise removal. Any bit that's set in the umask is removed from the final permission for new files, but if the execute bit isn't set (as in ordinary files), its specification in the umask doesn't do any harm. For instance, consider the 7 values in several entries of Table 2.12's “Umask” column. This corresponds to a binary value of 111. An ordinary file might have rw\- (110) permissions, but applying the umask's 7 (111) eliminates 1 values but doesn't touch 0 values, thus producing a 000 (binary) value—that is, \-\-\- permissions, expressed symbolically.

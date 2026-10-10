@@ -1,0 +1,39 @@
++   16. You type **uname -a** at a Bash prompt and receive the following output. Which of the following is *not* true of the computer that produced this output?
++   
++   ```
++   Linux aldrin.luna.edu 2.6.28 #6 SMP PREEMPT Wed Jan 14 14:26:19 EST 2009\
++   x86_64 GNU/Linux
++   ```
+
++   A. The kernel supports multiple CPUs (or a multicore CPU).
++   B. The computer's hostname is **aldrin.luna.edu**.
++   C. The computer is running a 32-bit Linux kernel.
++   D. The system is running a 2.6.28 Linux kernel.
+
++   17. You edit a file using Vi. When you're done, you hit the Esc key to exit from edit mode, and you type **:q** in command mode to exit from Vi. Vi then complains. Why?
+
++   A. The **:q** command was incomplete; you must type **:q!** to exit from Vi.
++   B. The **:q** command doesn't exit from Vi; it attempts to spell-check the document, but you didn't specify a spell-check dictionary.
++   C. You didn't save your changes; **:q** exits from Vi, but Vi recognizes there are unsaved changes and warns you of this fact.
++   D. You can exit from Vi only using ex mode, which you must enter by typing **:ex** before you type **:q**.
+
++   18. You've finished typing a document in Vi, and you want to save it. How would you do this?
+
++   A. Press Esc to enter command mode, and then type **:w** to write the file.
++   B. Select File ➪ Save from the menu.
++   C. Press Ctrl+X and then Ctrl+S.
++   D. Any of the above.
+
++   19. Which mode in Vi would you use to type text?
+
++   A. Ex mode
++   B. Command mode
++   C. Type mode
++   D. Edit mode
+
++   20. How would you remove two lines of text from a file using Vi?
+
++   A. In command mode, position the cursor on the first line, and type **2dd**.
++   B. In command mode, position the cursor on the last line, and type **2yy**.
++   C. In edit mode, position the cursor at the start of the first line, hold the Shift key down while pressing the down arrow key twice, and hit the Delete key on the keyboard.
++   D. In edit mode, position the cursor at the start of the first line, and press Ctrl+K twice.

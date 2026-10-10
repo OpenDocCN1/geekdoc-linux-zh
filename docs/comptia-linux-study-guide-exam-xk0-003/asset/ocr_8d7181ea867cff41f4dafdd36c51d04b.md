@@ -1,0 +1,15 @@
+When Linux mounts a filesystem, it ordinarily records this fact in `/etc/mtab`. This file has a format similar to that of `/etc/fstab` and is stored in `/etc`, but it’s not a configuration file that you should edit. You might examine this file to determine what filesystems are mounted, though. (The `df` command, described in more detail in the section “Using df,” is another way to learn what filesystems are mounted.)
+
+# ### Using mount Options
+
+When you need to use special parameters, it’s usually to add filesystem-specific options. Table 6.7 summarizes the most important filesystem options. Some of these are meaningful only in the `/etc/fstab` file.
+
+**TABLE 6.7** Important Filesystem Options for the `mount` Command
+
+| Option | Supported Filesystems | Description |
+| --- | --- | --- |
+| `defaults` | All | Uses the default options for this filesystem. It’s used primarily in the `/etc/fstab` file to ensure that there’s an options column in the file. |
+| `loop` | All | Uses the loopback device for this mount. Enables you to mount a file as if it were a disk partition. For instance, `mount -t vfat -o loop image.img /mnt/image` mounts the file `image.img` as if it were a disk. |
+| `auto` or `noauto` | All | Mounts or does not mount the filesystem at boot time or when root issues the `mount` command. The default is auto, but noauto is appropriate for removable media. Used in `/etc/fstab`. |
+| `user` or `nouser` | All | Allows or disallows ordinary users to mount the filesystem. The default is `nouser`, but user is often appropriate for removable media. Used in `/etc/fstab`. When included in this file, user allows users to type `mount /mountpoint`, where `/mountpoint` is the assigned mount point, to mount a disk. Only the user who mounted the filesystem may unmount it. |
+| `users` | All | Similar to user, except that any user may unmount a filesystem once it’s been mounted. |

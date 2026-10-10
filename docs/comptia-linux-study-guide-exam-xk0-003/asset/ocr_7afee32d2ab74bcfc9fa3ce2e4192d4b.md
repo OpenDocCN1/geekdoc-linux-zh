@@ -1,0 +1,24 @@
+# Setting Overall BIND Options
+
+The main BIND configuration file is /etc/named.conf. This file controls overall server operation, including global options (in a section that begins with the keyword options) and one or more zone sections that point to files that describe the domains the server manages. The simplest type of BIND configuration is as a forwarding-only DNS server—that is, as a server that merely forwards DNS lookups to another computer. This configuration can improve DNS lookup times because your local DNS server can cache the names most frequently looked up by users on your local network, eliminating the need for your systems to consult an outside DNS server. A forwarding-only DNS configuration is enabled in the options section of named.conf, as shown in Listing 10.2. Most lines in this file end in a semicolon (;). This punctuation denotes the end of a configuration option. Comments are indicated by two leading slashes (//).
+
+# Listing 10.2: Sample BIND /etc/named.conf Configuration
+
+```
+"""
+    options {
+        directory "/var/named";
+        forwarders {
+            10.9.16.30;
+            10.13.16.30;
+        };
+        listen-on{
+            192.168.1.1;
+            172.24.21.1;
+        };
+        forward only;
+    };"""
+
+```
+
+The key sections of this definition are the forwarders lines and the forward only line. The forwarders definition specifies the DNS servers to which BIND should forward the lookup requests it receives. This example specifies two outside systems; BIND will try each of them in turn, stopping when it receives a reply. The forward only line tells BIND that it should function only as a forwarding server; that is, it won’t attempt to do lookups itself. If you change this line to forward first, then BIND will attempt to get an answer from the systems specified in the forwarders area, but if they don’t answer, BIND will attempt to perform a full recursive DNS lookup. In this process, BIND contacts the root DNS servers (aka the root name servers), which know which systems handle the TLDs. These systems know which servers handle individual domain names, and so on. BIND queries each of these systems in turn. Full recursive lookups can take some time by computer standards (perhaps a couple of seconds), and the faster the network connection, the faster this happens. Thus, leaving this task to a server that’s closer to the Internet at large than your own system is generally a good idea. Listing 10.2 has a listen-on section, which tells BIND on which IP addresses it should listen. This option is most useful on server computers that have multiple network interfaces; you can have BIND respond to queries from some interfaces but not others.

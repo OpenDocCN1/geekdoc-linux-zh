@@ -1,0 +1,23 @@
+The `fdisk` program is a fairly basic text-mode tool for manipulating partitions. If you use `fdisk`, you'll need to manually create filesystems, configure RAID or LVM, or set up swap space afterward.
+
+![](bbox=[0.14, 0.21, 0.23, 0.26])
+
+Linux on non-MBR systems may not use a tool called `fdisk`. For instance, PowerPC versions of Linux, which employ the APM partitioning system, use a tool called `pdisk`. Further complicating matters, some PowerPC Linux distributions call their `pdisk` programs `fdisk`. If your computer uses GPT, the `gdisk` program works much like `fdisk`, although a few details differ. If you're using a non-MBR system, consult the documentation for your distribution and its disk-partitioning tool. If you prefer, you can use GNU Parted on a wide variety of partition table types, bypassing `fdisk` or its workalikes entirely.
+
+Linux's `fdisk` is a text-based tool that requires you to type one-letter commands. You can obtain a list of commands by typing `?` or `m` at the `fdisk` prompt. Table 6.2 describes the most important `fdisk` commands.
+
+# **TABLE 6.2**  `fdisk` Commands
+
+| Command | Description |
+| --- | --- |
+| d | Deletes a partition |
+| l | Lists partition type codes |
+| m | Displays available commands |
+| n | Creates a new partition |
+| o | Creates a new partition table, wiping out all current partitions |
+| p | Displays (prints) the partition layout |
+| q | Quits without saving changes |
+| t | Changes a partition's type code |
+| w | Writes (saves) changes and quits |
+
+To start `fdisk`, type its name followed by the Linux device filename associated with your disk device, as in `fdisk /dev/hdb`. When you first start `fdisk`, the program displays its prompt. It's often helpful to type `p` at this prompt to see the current partition layout,

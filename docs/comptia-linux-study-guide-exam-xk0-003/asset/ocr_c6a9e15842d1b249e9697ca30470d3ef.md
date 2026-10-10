@@ -1,0 +1,1 @@
+From one writer to another: Lola, keep writing your stories!

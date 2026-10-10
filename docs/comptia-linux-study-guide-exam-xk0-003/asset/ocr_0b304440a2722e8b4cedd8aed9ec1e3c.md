@@ -1,0 +1,22 @@
+command line. When using Yum, you don't even need to locate and download the package files, because Yum does this for you by searching in one or more repositories (Internet sites that host RPM files for a particular distribution).
+
+Yum originated with the fairly obscure Yellow Dog Linux distribution, but it's since been adopted by Red Hat, Fedora, and some other RPM-based distributions. Yum isn't used by all RPM-based distributions, though; SUSE and Mandriva, to name just two, each use their own meta-packagers. Debian-based distributions generally employ the Advanced Package Tools (APT), as described later in "Using APT." Nonetheless, because of the popularity of Red Hat and Fedora, knowing Yum can be valuable.
+
+The most basic way to use Yum is with the yum command, which has the following syntax:
+
+yum [_options_] [_command_] [_package_. . . ]
+
+Which options are available depend on the command you use. Table 7.3 describes common yum commands.
+
+# TABLE 7.3 Common yum Commands
+
+Command | Description | 
+--- | --- | 
+install | Installs one or more packages by package name. Also installs dependencies of the specified package or packages. | 
+update | Updates the specified package or packages to the latest available version. If no packages are specified, yum updates every installed package. | 
+check-update | Checks to see whether updates are available. If they are, yum displays their names, versions, and repository area (updates or extras, for instance). | 
+upgrade | Works like update with the --obsoletes flag set, which handles obsolete packages in a way that's superior when performing a distribution version upgrade. | 
+remove or erase | Deletes a package from the system; similar to rpm -e, but yum also removes depended-on packages. | 
+list | Displays information about a package, such as the installed version and whether an update is available. | 
+provides or whatprovides | Displays information about packages that provide a specified program or feature. For instance, typing yum provides samba lists all the Samba-related packages, including every available update. Note that the output can be copious. | 
+search | Searches package names, summaries, packagers, and descriptions for a specified keyword. This is useful if you don't know a package's name but can think of a word that's likely to appear in one of these fields but not in these fields for other packages. |

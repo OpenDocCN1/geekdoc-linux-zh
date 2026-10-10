@@ -1,0 +1,28 @@
+Table 3.8 summarizes the options available for sysctl.
+
+# **TABLE 3.8** Common sysctl Options
+
+| Option Name | Meaning |
+| :--- | :--- |
+| -a | This option displays all the keys and their associated values. It's used without a key or filename. |
+| -A | This option works much like the -a option. The man page specifies a table form. |
+| -n | You can disable the display of key names with this option. |
+| -N | This option disables display of values. |
+| -q | This option is much like -N, but it affects only standard output. |
+| -e | This option disables the display of errors should sysctl encounter an unknown key. |
+| -w | You can change a setting with this option. You must then pass key=value, where key is a key name and value is the value you want to set. |
+| -p | You can change multiple settings at once by specifying them in a file, whose name you must pass to sysctl. |
+
+Most of these options refer to read activity. If you pass -a as the first parameter, you can view all of the keys, values, or both. If you don't use -a, you'll normally pass a key name to see the associated value or use the -w or -p option to change one or a set of values. For instance, suppose you want to verify and then reset the computer's hostname and reset various options to their startup values. You might type this:
+
+```
+```
+# sysctl kernel.hostname
+kernel.hostname = diana.luna.edu
+# sysctl -w kernel.hostname=artemis.luna.edu
+kernel.hostname = artemis.luna.edu
+# sysctl -p /etc/sysctl.conf
+```
+```
+
+The final command in this example will be followed by lines that echo the keys and values that are being set from the specified file. In fact, the /etc/sysctl.conf file is the name of a

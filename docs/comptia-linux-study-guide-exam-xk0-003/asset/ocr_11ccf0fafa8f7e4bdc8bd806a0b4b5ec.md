@@ -1,0 +1,21 @@
+The first step to running VNC is to install it. Several different VNC servers exist, and most distributions ship with at least one of them. Typically, separate client and server packages are available, often called vnc and vnc-server, or variants of this (such as tightvnc and tightvncserver). If you’re not sure whether VNC is installed on your system, use your high-level package manager, such as yum or apt-get, to search for relevant packages. If VNC isn’t installed, install the appropriate packages for your distribution, or check the RealVNC Web site (http://www.realvnc.com/) or the Tight VNC Web site (http://www.tightvnc.com). After you install VNC, follow these steps as an ordinary user on the VNC server system:
+
++   1. Create a directory called ~/.vnc in your home directory. This directory will house your VNC configuration files.
++   2. Type vncpasswd. The program prompts you for a password and for a verification of this password. VNC doesn’t, by default, use the normal Linux password database. You will need this password to gain entry to the system.
++   3. Type vncserver. This command is actually a script that performs various checks and then starts a VNC server (using the Xvnc program file) in your name. The program displays some summary information, including a VNC session number:
+
+```
+New `tranquility.luna.edu:1` (`neil`) `desktop is` `tranquility.luna.edu:1`
+```
+
+You should now be able to access this VNC server system, as described in the upcoming section “Using a VNC Client.” When you try this, though, you may run into problems. One common issue is that the server fails to start, or it starts and then crashes. Check for log files in `~/.vnc`. These files may include clues to the problem. One common problem relates to font paths; the VNC server is very sensitive about its font paths, and it will crash if you specify font directories that don’t exist or that are misconfigured. You can add the -fp option and a comma-separated list of font directories to the command line to work around this problem. Alternatively, you can adjust your configuration files.
+
+A second problem—or series of problems, really—is that various default options may be set strangely. Most configurations use two types of configuration files:
+
+**The VNC Startup Script** The `vncserver` script includes within it various options, such as the default desktop size, the default font path, and so on. For the most part, these defaults are equivalent to X server defaults you would set in your local X server’s xorg.conf file. You can edit this script to change these defaults.
+
+**User Configuration Files** Most VNC servers use `~/.vnc/xstartup` as a user’s local startup script. This script may call `/etc/X11/xinit/xinitrc` or some other local default startup script, or it may launch a bare-bones window manager, such as twm. In any event, you can edit this script much as you’d edit any other X startup script.
+
+# # Using a VNC Client
+
+The Linux VNC client program is usually called `vncviewer`. This tool takes several options, but in most cases you use it by typing the program name followed by the VNC

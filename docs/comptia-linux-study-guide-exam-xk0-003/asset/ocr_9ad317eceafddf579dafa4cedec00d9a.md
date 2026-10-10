@@ -1,0 +1,19 @@
+# The TCP/IP Protocol Stack
+
+The OSI model describes an idealized protocol stack, although literal implementations of it do exist. One of the most common real-world network stacks is the *Transmission Control Protocol/Internet Protocol (TCP/IP)* stack. This stack is generally described using just four layers (Application, Transport, Internet, and Link), as opposed to OSI’s seven (shown in Figure 8.2). The principles are the same for both models; the differences are just a matter of how the terms are applied and precisely how the stacks are implemented.
+
+TCP/IP has several important features that make it a popular network protocol and the one on which the Internet is based. These characteristics include the following:
+
++   - **Routeable** TCP/IP was designed so that computers configured in a particular manner could route packets between two networks. These computers (known as *gateways* or *routers*) make the Internet possible. A small network links to another one via a router, which links to another, and so on. Such a collection of networks is known as an *internet* (without capitalization). The *Internet* (capitalized) is a particularly large globe-spanning internet.
+
++   - **Flexible addressing system** TCP/IP supports two types of addresses, one based on numbers and one based on text. The current most popular numeric system supports approximately 4 billion addresses, and the textual system supports multiple levels of names. Both features support large and complex network structures.
+
++   - **Multiple connection types** TCP/IP supports several types of connection, including the *Transmission Control Protocol (TCP)* after which the stack is named, the *User Datagram Protocol (UDP)*, and the *Internet Control Message Protocol (ICMP)*. These connection protocols support differing levels of complexity and error correction.
+
++   - **Standards-based** The TCP/IP stack and many of the protocols that use it are described by documents maintained by the *Internet Engineering Task Force* (IETF; [http://www.ietf.org](http://www.ietf.org)), an international standards organization. IETF protocols are *nonproprietary*, so they may be implemented by anybody who cares to examine and put to use the IETF standards documents, which are known as *Requests for Comments* (*RFCs*).
+
+This combination has made TCP/IP a formidable protocol stack. It has been implemented in a large array of OSes, ranging from DOS to Linux. A huge number of network tools are built atop TCP/IP, including everything related to the Internet—Web browsers, e-mail clients, and so on. A few networking programs, though, either don’t use TCP/IP or use it only optionally. Other protocol stacks remain popular in certain environments, and you should be aware of them and how they interact and compete with TCP/IP.
+
+# Alternatives to TCP/IP
+
+TCP/IP was initially developed using Unix, but today it is supported by many other platforms. Some of these other OSes have their own protocol stacks. Most of these have also been implemented on other OSes, including Linux. These TCP/IP alternatives don’t support as many networking applications, though, and they’re generally limited to use on much

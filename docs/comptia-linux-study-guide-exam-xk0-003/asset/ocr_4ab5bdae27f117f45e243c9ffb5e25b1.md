@@ -1,0 +1,30 @@
+# ## Checking Historical Login Data
+
+When you need to find out who's logged into your computer in the recent past, neither who nor w will do the job. Instead, you need last, which displays a list of recent logins, most recent first:
+
+```
+$ last -6
+
+    rhonda  pts/6       tych0.luna.edu      Fri  Apr 10 20:59    still logged in
+    rhonda  pts/5       tych0.luna.edu      Fri  Apr 10 20:06    still logged in
+    paul    pts/4       :0.0                Fri  Apr 10 15:53    still logged in
+    root    pts/4       tranquility.luna Fri  Apr 10 09:53 - 09:56  (00:02)
+    paul    pts/4       tranquility.luna Fri  Apr 10 08:15 - 08:46  (00:31)
+    paul    pts/5       tych0.luna.edu      Thu  Apr  9 21:45 - 22:04  (00:18)
+
+wtmp begins Tue  Apr   7  06:20:29 2009
+```
+
+This output reveals that three logins are still active but that several others have been terminated. (In fact, the -6 option limited the output; without that option, last's output is likely to go on for pages!) Table 5.6 summarizes last's options.
+
+# **TABLE 5.6** Options for last
+
+| Option Name | Effect |
+|---|---|
+| -f file | Ordinarily, last gets its data from the /var/log/wtmp file. You can specify another file with this option, which can be useful if you're studying login activity from an emergency boot system. |
+| -num | You can specify a number (*num*) to limit output to that many logins. |
+| -t YYYYMMDDHHMMSS | You can find out who was logged in at a particular time with this option, which requires a time specification down to the second. |
+| -R | This option causes the hostname field to be omitted from the output. |
+| -a | This option shifts the hostname to the final field. |
+| -d | This option causes the IP address of remote systems to be looked up anew. |
+| -i | You can obtain the IP address of a remote system, rather than its hostname, with this option. |
