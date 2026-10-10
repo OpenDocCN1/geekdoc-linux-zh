@@ -1,0 +1,13 @@
+be a good idea to know how many staff members you have, how much they cost you, and the percentage of their time that they are spending right now on functions that are pretty necessary to the business.
+
+In answering these questions, you are going to then come up with some sub-questions as well. For example, do you see that your staff is not being utilized to their full potential, and are there some improvements to the process that you could do to help with this and reduce costs? There are always a lot of options and questions that you are able to work with on this one, and the more you focus on these questions, and the further down you go with them, the better you will be able to make a decision as well.
+
+And the final thing that we need to look at when it is time to decide what to measure out of your process, you need to make sure that all of the reasonable objections that may come up if you do go with one action over another. For example, if you do decide to cut down on a few staff, how will you be able to respond if there is a big surge in demand for your services.
+
+You need to then move on to the second step that is going to come with this process. Thinking about how you are going to measure out this data is going to be just as important as all of the other steps, especially before you go through the phase for data collection. The reason for this is that the measuring process that you are working with is either going to be able to back up the analysis that you do later on, or it is going to discredit the analysis that you are doing. There are a few different key questions that you are able to work with here, and they will include:
+
++   1. What is the time frame that you want to follow? Think about how long you want to search for the information, how much historical data you want to use, and how long you expect these changes to last. If you are just dealing with a temporary decline, such as a seasonal one, maybe finding another way to reduce costs is better than laying people off.
++   2. What is the unit of measure that you are going to work with? This could b a comparison of Euro and USD for example.
++   3. What factors do you think should be included in this process. You could check out the cost of your employees with just their annual salary. However, this is not going to provide you with the full picture because you will be able to learn a lot more if you work with the annual salary, and the cost of benefits that you are providing to your employees can add up as well.
+
+It is important to have a good plan in place before you try to do anything with your data. Even collecting it is something that can be done after you have your measurement criteria in place, and you are sure that you know what steps to take next.

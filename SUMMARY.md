@@ -274,6 +274,7 @@
 +   [计算机黑客初学者指南：如何破解无线网络、基础安全与渗透测试、Kali Linux 以及你的第一次攻击](docs/computer-hacking-beginners-guide---how-to-hack-wireless-netw/README.md)
 +   [计算机网络初学者指南：无线技术与系统安全入门，助通过 CCNA 考试，涵盖 Linux 编程与命令行技巧](docs/computer-networking-beginners-guide-an-introduction-on-wirel/README.md)
 +   [计算机编程：二合一：树莓派与 Python 初学者指南，循序渐进精通 Python 并解锁强大技巧](docs/computer-programming-2-books-in-1-raspberry-pipython-for-beg/README.md)
++   [计算机编程：4合1：数据科学、使用Kali Linux进行黑客攻击、网络入门、Python编程。机器学习与人工智能编程语言](docs/computer-programming-4-books-in-1-data-science-hacking-with-/README.md)
 +   [计算机编程：四合一：SQL 入门指南、C# 入门指南、C# 中级指南、Kali Linux 攻击实战：掌握编程与网络安全所需的一切](docs/computer-programming-4-books-in-1-sql-for-beginners-c-for-be/README.md)
 +   [计算机编程：循序学习 SQL、Linux 和 Python 编程指南](docs/computer-programming-a-step-by-step-guide-to-learn-sql-linux/README.md)
 +   [初学者计算机编程指南：四合一。LINUX 命令行 + Python 编程 + 网络 + KALI LINUX 黑客攻击。网络安全、无线、LTE、网络与渗透测试](docs/computer-programming-for-beginners-4-books-in-1-linux-comman/README.md)

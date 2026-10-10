@@ -1,0 +1,44 @@
+
+It is a good idea to know how many staff members you have, how much they cost you, and the percentage of their time that they are spending right now on functions that are pretty necessary to the business.
+
+In answering these questions, you are going to then come up with some sub-questions as well. For example, do you see that your staff is not being utilized to their full potential, and are there some improvements to the process that you could do to help with this and reduce costs? There are always a lot of options and questions that you are able to work with on this one, and the more you focus on these questions, and the further down you go with them, the better you will be able to make a decision as well.
+
+And the final thing that we need to look at when it is time to decide what to measure out of your process, you need to make sure that all of the reasonable objections that may come up if you do go with one action over another. For example, if you do decide to cut down on a few staff, how will you be able to respond if there is a big surge in demand for your services.
+
+You need to then move on to the second step that is going to come with this process. Thinking about how you are going to measure out this data is going to be just as important as all of the other steps, especially before you go through the phase for data collection. The reason for this is that the measuring process that you are working with is either going to be able to back up the analysis that you do later on, or it is going to discredit the analysis that you are doing. There are a few different key questions that you are able to work with here, and they will include:
+
+- 1. What is the time frame that you want to follow? Think about how long you want to search for the information, how much historical data you want to use, and how long you expect these changes to last. If you are just dealing with a temporary decline, such as a seasonal one, maybe finding another way to reduce costs is better than laying people off.
+- 2. What is the unit of measure that you are going to work with? This could be a comparison of Euro and USD for example.
+- 3. What factors do you think should be included in this process? You could check out the cost of your employees with just their annual salary. However, this is not going to provide you with the full picture because you will be able to learn a lot more if you work with the annual salary, and the cost of benefits that you are providing to your employees can add up as well.
+
+It is important to have a good plan in place before you try to do anything with your data. Even collecting it is something that can be done after you have your measurement criteria in place, and you are sure that you know what steps to take next.
+
+## Collect the Data
+
+At this point, we have had some time to go through and clearly define the question that we would like to solve for our business. And then, we also took some time to learn which measurement priorities we need to set as well to ensure we get the right kind of data and more. Now it is time to collect the data. As we go through and organize and collect the data, there are going to be a few points that we are able to keep in mind that will make it easier for us to really see some of the results that we want.
+
+First, before we go through and collect the new data, we need to look at the information that we already have. If you already have some of your own sources and databases that have been collecting data, then you need to look at those first. This can help you to really take a look at this data and save yourself a lot of time and money in the process. Depending on how much data is collected, you may have all of the data that you need without having to look in other locations.
+
+Then we need to move on and determine how we are going to handle the data that we bring in. If we look at some of our own resources and find that we need some more information, we then need to think of a good naming and file storing system ahead of time. This is going to make it easier for those who are on the team to work with this to collaborate with one another. This process is going to save your team some time and can prevent the members from going through and collecting the same information more than one time.
+
+If you end up needing to go through the process of gathering up the data and using interviews and observations to finish this up, then you need to make sure that there is a good interview template that everyone is able to use. This is going to make sure that there is a level of consistency in what you will see, and can save some time.
+
+And finally, we are going to make sure that we keep all of the data that we are collecting through this process as organized as possible. The method you use is going to depend on the data that you are using and how you plan to use it for your needs. You could do something like having a log with the collection dates, and then add in any of the source notes that you need to keep this all in line. This practice is important to spend some time on because it is going to help validate some of the conclusions that you are making later on.
+
+Collecting the data that you need to finish this process will help us to really get the data analysis done. You need to make sure that when you collect this data, you are picking it out from some reputable and good sources along the way. The higher the quality that you can put with the data that you collect, the better it is going to be later on. When you perform the analysis, this data is going to give you some of the results and predictions that you are going to put your decisions on, so being a bit selective with this can help.
+
+## Look Through and Analyze the Data
+
+And this brings us to our fourth step, which is where we are going to take all of that data that we have been collecting so far, and we will analyze it. After we have been able to collect the data that is able to help us answer the question that we came up with in the first step, it is time for us to go through a deeper analysis of the data. There are a few options and steps that we are able to follow to make this happen, and we are going to spend some time discussing those now.
+
+Begin this with manipulating the data such as plotting out that data and seeing what kind of correlation is there. Or you can even create your own pivot table to work within Excel. This pivot table can work for you because it will allow you to do some sorting and filtering of your data by some different variables. It is also going to make it easier to figure out the maximum, mean, standard deviation, and a minimum of the data that you have.
+
+As you are working on manipulating the data, you will sometimes find that you already have the exact data that you need right from the start. But in most cases, you will still need to either gather more data to help or make some revisions to the original question that you were asking. Either way, this initial analysis of the correlations, outliers, variations, and trends will make sure that you are able to focus the analysis that you are doing on answering the question that you originally posed. It is also a good way for us to handle some of the objections that others may have raised against you.
+
+During this specific step, the tools and software that come with data analysis are going to be really helpful. There are a few different advanced processes that you are able to choose from that will help us handle these advanced statistical data analyses that we want to complete. In most cases, though, you are able to keep things simple because you can work with Microsoft Excel and get a lot of the same decision-making tools that you need. There are a lot of features and functions that come with Excel, and you will find that you are able to use this to help you get the best results as well.
+
+The analysis that we do during this step is going to take some time. Picking out the tools that we want to use, and the right algorithm is going to make it a lot easier. We will talk about some of the algorithms that are available to help us complete this analysis and often it is going to depend on how much data you want to work with, and what answers you are hoping to get out of it as well. There are also a few ways that we need to go through and separate our data.
+
+These two methods are going to be the training set and the testing set. Before we are able to get through and actually work on the analysis, we need to train and test the algorithm that we would like to use on the proper methods and what it needs to do overall. The algorithm is not going to come already prepared and ready to go. Instead, we have to show it how to behave and do some work with it, and then we can put through the data we want and get the predictions.
+
+To start, we need to split our data into two sets, the training, and the testing set. The training set

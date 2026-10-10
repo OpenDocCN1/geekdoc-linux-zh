@@ -1,0 +1,15 @@
+In the following chapter, it will be different. The reason is that it will be beginning with unsupervised learning, wherein there were no exact labels provided.
+
+This means there’s only input data, but there’s no output data. Additionally, no supervision happens when learning from data.
+
+In fact, unsupervised learning is considered to engulf the essence of artificial intelligence. That’s because there is no much human supervision or intervention. As a result, the algorithms are left to discover things from data. This is the case in Clustering wherein the eventual goal is to reveal organic aggregates or “clusters” in data.
+
+# **Objectives and Function of Clustering**
+
+This is a form of Unsupervised Learning where there are no labels, or in many cases, there are no truly correct answers. That’s because there were no correct answers in the first place. We just have a dataset, and our goal is to see the groupings that have organically formed. We’re not trying to predict an outcome here. The goal is to look for structures in the data. In other words, we’re “dividing” the dataset into groups wherein members have some similarities or proximities. For example, each e-commerce customer might belong to a particular group (e.g., given their income and spending level). If we have gathered enough data points, it’s likely there are aggregates.
+
+At first, the data points will seem scattered (no pattern at all). But once we apply a clustering algorithm. The data will somehow make sense because we’ll be able to easily visualize the groups or clusters. Aside from discovering the natural groupings, Clustering algorithms may also reveal outliers for Anomaly Detection (we’ll also discuss this later). Clustering is being applied regularly in the fields of marketing, biology, earthquake studies, manufacturing, sensor outputs, product categorization, and other scientific and business areas. However, there are no rules set in stone when it comes to determining the number of clusters and which data point should belong to a certain cluster. It’s up to our objective (or if the results are useful enough). This is also where our expertise in a particular domain comes in. As with other data analysis and machine learning algorithms and tools, it’s still about our domain knowledge. This way, we can look at and analyze the data in the proper context. Even with the most advanced tools and techniques, the context and objective are still crucial in making sense of data.
+
+# **K-Means Clustering**
+
+One way to make sense of data through Clustering is by K-Means. It’s one of the most popular Clustering algorithms because of its simplicity. It works by partitioning objects into k clusters (number of clusters we specified) based on feature similarity. Notice that the number of clusters is arbitrary. We can set it into any number we like. However, it’s good to make the number of clusters just enough to make our work meaningful and useful. Let’s discuss an example to

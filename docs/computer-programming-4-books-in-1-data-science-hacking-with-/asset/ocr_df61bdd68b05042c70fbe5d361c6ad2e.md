@@ -1,0 +1,3 @@
+than others-after a breakdown. Whatever the case, a more reliable link is preferred to a less reliable link. The system administrator is charged with responsibility of assigning reliability values which are numeric in nature.
+
++   * Load: this is the degree of how busy a network link is at any given moment. It may be in the form of packets that are processed per unit time; processor utilization or memory use. The load increases with increasing traffic. In routing, the link with a lighter load is considered to be the best path for data transmission.

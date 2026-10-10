@@ -1,0 +1,1 @@
+are various OS in the market today such as MAC and Windows which can easily connect with the LAN without using the MAC address.

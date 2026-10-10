@@ -1,0 +1,5 @@
+# Machine Learning in Security
+
+Security has been enhanced greatly with the adoption of machine learning systems. CCTV cameras, metal detectors, security alarms and other security devices are perfect examples of machine learning in use. For instance, face recognition services are particularly important in ATM machines since they massively add to the security of ATM centers.
+
+In summary, machine learning is an important subset of artificial intelligence; especially during the present times when we have to deal with a lot of data and information as a result of the information systems euphoria. Healthcare, financial sector, education sector and, and governments need statistical data to make crucial decisions for sustainable operations. With machine learning, such needs can be met more efficiently.

@@ -1,0 +1,15 @@
+are used up by the resources of the computer system and is mainly used for developing software. This comes with data configuration, help data, documentation, templates for messaging and many more. Generally, the term library is being used for describing a huge collection of implementations regarding behavior which is written down in terms of computer language. It comes with a perfectly defined form of interface which helps in invoking the behavior. So, this means that anyone who wants to create a program of high level can easily use up the system library for the purpose of making system calls continuously.
+
+The system library can be requested at a time by various individual forms of programs simultaneously, in order to make sure that the library has been coded in a way so that several programs can use up the library even when the concerned programs are not at all linked nor have a connection with each other. In simple terms, the system libraries are unique programs or form of functions built up of the system utilities or application programs which have access to all the features of the kernel. This form of library implements a majority of the functions related to the operating system of a computer and they are not required to have the rights of code access for the module of the kernel.
+
+# The System Utility
+
+The programs of system utility are responsible for performing all forms of individual and specialized level tasks. The utility software is a form of system software. It has been designed for running the programs of application and hardware for a system of computer. The system software can also be considered as the interface between the applications of the users and the hardware. In simple words, the system utility software is the software of a system which has been designed for the purpose of configuring, analyzing, optimizing and maintaining a system of computer. The utility software works hand in hand with the operating system for supporting the infrastructure of a system, differentiating it from the software of application which is aimed for performing the various tasks directly which will be benefiting the normal users.
+
+# Characteristics of Linux architecture
+
+Linux comes with various features that can help the regular users a lot.
+
+# Multiuser capability
+
+This is the most unique characteristic of Linux OS in which the resources of a computer such as memory, hard disk etc. can be accessed by various users at a time. However, the users access the resources not from a single terminal. Each of the users is given an individual terminal for accessing the resources and operating them. A terminal consists of at least one VDU, mouse and keyboard as the devices for input. All the terminals are linked or connected with the primary server or Linux or with the host machine the resources of which and other peripheral devices like printer can be used by the users.
