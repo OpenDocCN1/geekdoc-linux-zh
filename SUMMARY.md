@@ -290,6 +290,7 @@
 +   [Linux 酷技巧 2025 版](docs/cool-linux-hacks-2025-edition/README.md)
 +   [Core JSTL：精通 JSP 标准标签库](docs/core-jstl-mastering-the-jsp-standard-tag-library/README.md)
 +   [PHP 核心编程：使用 PHP 构建动态网站指南](docs/core-php-programming-using-php-to-build-dynamic-web-sites/README.md)
++   [corel linux 傻瓜书](docs/corel-linux-for-dummies-with-cd-rom/README.md)
 +   [Corel LINUX OS 入门套装：官方指南（附 CD-ROM）](docs/corel-linux-os-starter-kit-the-official-guide-cd-rom-include/README.md)
 +   [课程培训：Sair 基础/Linux Plus 100 V2.0](docs/course-ilt-sair-fundamentalslinux-plus-100-v20/README.md)
 +   [创世神话](docs/creation-myth/README.md)
