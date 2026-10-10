@@ -1,0 +1,3 @@
+# **Summary**
+
+Troubleshooting is largely synonymous with problem-solving. As such, various heuristics and rules of thumb can help guide you through the process. The number of specific problems and solutions is so large that this chapter is only long enough to present a few guiding principles and symptoms of some of the more common problems and problem classes. If you run into a real stumper, you can avail yourself of various resources to get help, including books, web pages, and Usenet newsgroups.

@@ -1,0 +1,15 @@
+In 2002, many Linux users are migrating to other filesystems. One of these, the Third Extended Filesystem (ext3fs), is a journaling extension of ext2fs. The FreeBSD ext2fs support should handle these partitions, but I strongly recommend against trying to mount them with full read/write support unless and until this feature has been adequately tested. Linux’s ext3fs is an example of a new class of filesystems known as journaling filesystems.
+
+# Journaling Filesystems
+
+A journaling filesystem maintains a data structure (the journal) on the disk in order to track changes before they’re made to the disk. The idea is that, should a system crash or power failure occur, the journal can be used to simplify the disk recovery procedure that must otherwise be run. On some filesystems, such as Linux’s ext2fs, this recovery process can be very time-consuming, so a journal can greatly reduce system startup times after a crash or power failure.
+
+> Note FFS’s recovery process is quicker than that of ext2fs, so there’s less incentive to implement a native FreeBSD journaling filesystem than a Linux journaling filesystem. Recent versions of FFS also support a feature known as soft updates. This is another approach to guaranteeing consistency in case of a crash or power failure, and further obviates the need for a new journaling filesystem for FreeBSD.
+
+Many journaling filesystems are in use today. In fact, NTFS is one of them. Others include ext3fs (the journaling ext2fs variant), ReiserFS (a new filesystem designed for Linux), XFS (developed by SGI for its IRIX and also ported to Linux), JFS (developed by IBM for its AIX and OS/2, and also ported to Linux), and BeFS (developed for BeOS). In 2002, there’s been talk of porting some of these to FreeBSD, but no working code is as yet available. (Check [http://sourceforge.net/projects/jfs4bsd](http://sourceforge.net/projects/jfs4bsd) for information on a planned JFS implementation for FreeBSD.) The technical challenges are daunting, so it may be some time before FreeBSD supports any of these filesystems. If one or more is ported and made stable, it might eventually replace FFS as the standard FreeBSD filesystem. Before then, the driver could be used to support file transfers between FreeBSD and other OSs.
+
+# CD-ROM Filesystems
+
+CD-ROMs are the standard method of exchanging moderately large amounts of data. A standard CD-ROM can hold up to 650MB of data, and some techniques enable this value to be pushed slightly higher, to around 700MB. When CD-ROMs were first developed, they were envisaged as read-only media, and the original CD-ROM filesystems reflected this fact. The most popular of these, ISO-9660, comes in several variants, some of which support filenames even more restrictive than those of DOS—8.3 filename length limits, with a smaller selection of available-punctuation characters in filenames.
+
+UNIX-like systems rely heavily upon their unique filesystem features, so many CD-ROMs created for UNIX-like Os, including FreeBSD, support an ISO-9660 extension known as Rock Ridge. A Rock Ridge CD-ROM supports file ownership and permissions,

@@ -1,0 +1,5 @@
+If you want to install software described in this book that's not on the CD-ROM, you can obtain it from the Internet. The easiest way to do so is to specify installation of the additional packages from an FTP site, as described in Chapter 11. In fact, you can also boot the CD-ROM but install FreeBSD itself from an FTP site, which may enable you to install programs initially that aren't on the included CD-ROM. Network installations of FreeBSD work best when you have a fast network connection; if you have only a 56Kbps dial-up modem, it may take hours to download all the packages you choose to install, so using the CD-ROM and then adding more packages from the Internet will be much faster.
+
+# # Contacting Me
+
+If you have comments or questions about the book, feel free to contact me at  rogers@rogersbooks.com. I maintain a web page about this book at http://www.rogersbooks.com/freebsd/.

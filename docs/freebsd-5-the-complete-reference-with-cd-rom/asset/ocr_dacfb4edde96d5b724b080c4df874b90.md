@@ -1,0 +1,15 @@
+that the NAT router also serves. When the reply arrives, the NAT router reverses this conversion and sends the packets on to their true destination. A NAT router can also change the destination IP address in a similar manner.
+
+This description raises a basic question: Why bother? The answer is that NAT features allow you to do several things, including
+
++   * **Quick network reconfigurations**  If you need to move a server from one address to another on short notice, you can use NAT to redirect traffic to the correct address on a temporary (or even permanent) basis.
+
++   * **Load balancing**  It’s possible to configure a NAT router to split traffic destined for one address to multiple systems, thus providing a “quick and dirty” method of load balancing. More elegant means exist to do this, but NAT can still be handy for a simple setup.
+
++   * **Stretching IP addresses**  A NAT router allows clients to be configured using private IP address ranges (such as 192.168.*.*), yet still access the Internet using a single public IP address (belonging to the NAT router). This feature allows home users and small businesses with dial-up or broadband access that provides a single IP address to link networks to the Internet, and it allows larger businesses to expand their internal networks without consuming huge numbers of new IP addresses.
+
+This final function of NAT may be the most popular, and it’s the use that’s described in the upcoming section, “Configuring NAT.” Even an old 486 computer can function as a NAT router for a private network with a handful, or even dozens, of computers, allowing these computers to share a single external IP address.
+
+Used as a way of “hiding” a private network, NAT provides certain firewall-like protections. Outside systems *see* only the NAT router, and so cannot connect directly to servers that run on the internal network; the result is very much like running a firewall that blocks external access requests. (You can use port forwarding techniques to get around this feature if you so desire.) Connections initiated from internal systems are let through without challenge, unless the NAT router uses separate firewall rules to limit such outgoing requests.
+
+NAT is undeniably a powerful tool, but it’s not without its limits. Most importantly, some protocols don’t work well with NAT. Some of these require both outgoing and incoming server connections (some teleconferencing tools fall into this category). Others embed IP address information within data packets. NAT implementations sometimes include special rules to overcome such problems, but occasionally this is impossible. For instance, some security protocols encrypt IP address information, so NAT can’t decrypt, alter, and re-encrypt the data. Such issues aren’t problems for common protocols like those used for e-mail, web browsing, and FTP, but if you use rare protocols, and especially if they use encryption, you should research their compatibility with FreeBSD’s NAT tools before attempting to use NAT.

@@ -1,0 +1,15 @@
+unfamiliar with FreeBSD. If you're more experienced, though, you may want to set up partitions of your own. Some common partitions, which FreeBSD creates using the A option, include
+
++   root (/
++   
++   This is the base of the FreeBSD directory tree; all files are accessible from the root directory. Thus, this is the only truly required filesystem. The A option makes the root filesystem small because most files go in other partitions with this option. Figure 2-7 shows a larger root filesystem because this installation lacks some of these additional partitions.
+
++   /home The /home directory holds users' data files. Its optimum size therefore depends on the number of users your system will support and their disk space requirements. A small single-user system, or a computer that functions as a server with few actual login users, may need just a few megabytes in /home, or it might even be integrated into the root partition. A system with many users who create large files might need gigabytes of /home space.
+
++   /usr The /usr directory holds most ordinary program files. It's therefore the largest partition in a default configuration, with the likely exception of /home. For a fully useable FreeBSD installation, you should have at least 1GB in /usr, and preferably more. (A tiny FreeBSD installation can get by with less than 100MB in /usr, though.) If you don't create a separate /usr partition, the root partition should be at least this large.
+
++   /tmp This directory holds temporary files. Automatic system tools normally clean it out periodically. FreeBSD puts /tmp in a separate partition so that temporary files don't overwhelm other important partitions, in case some misbehaved process creates too many or too large temporary files.
+
++   /var This directory is similar to /tmp in that it holds files that are mostly fleeting. These files are more commonly created by FreeBSD or its processes than by users, though. For instance, this directory holds mail files received by mail servers until they're read by users. Like /tmp, it's often placed on a separate partition to protect other partitions from trouble should too many files be created in /var. A typical install creates a /var partition that's well under 1GB in size, but some systems need much more space than this. For instance, a busy mail server might need a multigigabyte /var.
+
+Getting partition sizes right is one of the most difficult tasks for new FreeBSD administrators. If you intend to use the system as a typical workstation, or (or a server that doesn't receive a great deal of data (for instance, for a web or FTP server), the default settings created by the A option work well. If you're in doubt, you might consider simplifying the installation. For instance, rather than using A to create partitions automatically, use C, and create just a root (/), a /home, and a swap partition. Such a configuration poses some risks because runaway processes can fill the root partition by writing to /var or /tmp, but if you're uncertain how much space you'll need in these

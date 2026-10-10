@@ -1,0 +1,15 @@
+hardware components. If you’re working in an environment with lots of spare computer parts, or even a computer that can be taken down for a while for a temporary component swap, exchanging parts may not be too difficult. For smaller installations, though, this is a costly proposition. (For instance, when writing this book, one of my computers’ motherboards went south, but I couldn’t determine whether it was the motherboard or the CPU until after I replaced the CPU, so I ended up replacing both the CPU and the motherboard—as well as the RAM because the new motherboard required newer RAM than had the older motherboard.)
+
+The first trick in diagnosing a hardware problem is to determine that it is a hardware problem. Typical characteristics of hardware problems include
+
++   - **Unpredictable operation** Some hardware problems manifest as random events—random system crashes, random video glitches, and so on. Software problems are usually a bit more predictable, although this isn’t universally true.
+
++   - **Hard crashes** FreeBSD has a reputation as a highly reliable OS; it seldom crashes. Thus, if your computer crashes or reboots very often (meaning more than once a year at the outside), there’s a good chance that you’ve got a hardware problem. The other likely alternative is a very buggy driver, which might be fixed by a kernel upgrade (described in Chapter 12).
+
++   - **Problems related to hardware devices, not programs** Most hardware can be used by multiple programs, so hardware problems tend to cause difficulties for many programs. A bad Ethernet adapter will cause problems for web browsers, e-mail clients, Samba, and other programs, for instance.
+
++   - **Unbootable computer** Severe hardware problems may stop a computer from booting. Severe system misconfiguration can do the same, but the symptoms will be somewhat different. Typically, a hardware problem bad enough to stop the boot process manifests before the FreeBSD boot loader appears on the screen, or possibly during the kernel boot messages. If the FreeBSD kernel messages appear and complete, and the system at least starts displaying messages associated with the `/etc/rc` script, chances are it’s not a hardware problem.
+
++   - **Problem confined to one computer** If FreeBSD is installed on multiple computers, and is configured identically on all of them, then a problem that appears on just one is likely to be hardware-related. This diagnosis isn’t certain, though; a configuration problem unique to one computer could be the cause of the difficulties.
+
++   - **Problems across OSs** If your FreeBSD system multiboots into another OS, you may want to check operation in the other OS. If the problem appears in both OSs, it’s most probably a hardware issue. If the problem doesn’t appear in the other OS, it’s more likely a software issue, although this isn’t certain. (Occasionally one OS’s drivers won’t trigger a problem that really is hardware related.)

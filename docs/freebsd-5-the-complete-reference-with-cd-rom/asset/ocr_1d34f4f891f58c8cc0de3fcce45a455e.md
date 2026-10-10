@@ -1,0 +1,15 @@
+# ## Accounts and Groups
+
+Accounts are powerful tools, but in many environments they don't go far enough. In particular, it's often necessary to provide security based on groups of users. FreeBSD implements this capability with its group feature. A group is a collection of accounts. For instance, `pierre` and `marie` might belong to the `physics` group, whereas `jane` and `charles` might belong to the `biology` group. One user can belong to multiple groups, if necessary.
+
+For the most part, groups are used in conjunction with file permissions, as described in Chapter 8, to fine-tune access to files by different groups of users. The upcoming section, "Tending to Account Security," describes some possible configurations for your system.
+
+One group is particularly important: wheel. This group's members have the honor of being able to use the `su` command to acquire the privileges of another user—including `root`. This command is described in Chapter 3. Normally, a small number of users (possibly just one) are members of the wheel group and know the `root` password. This combination allows these users to log on using their regular accounts, type `su` and the `root` password, and administer the system. Any user who's not a member of the wheel group is denied access to `su`, and so is less likely to succeed in compromising the system, even if that person is a malicious individual who's somehow acquired the `root` password. Thus, wheel is a component of the FreeBSD security system.
+
+> **Tip** If you're administering a FreeBSD system, you should be sure you're a member of the wheel group. When you administer the system, log in using your ordinary account and then use `su` to become `root`. This leaves more traces in the system logs concerning your activities than would a direct login as `root`. Such traces can be important when tracking down abuse, particularly on a system with multiple administrators.
+
+# ## Usernames, Groups, UIDs, and GIDs
+
+At their cores, computers work on numbers. Whenever you read a word or name on a computer screen, that's just a translation of numeric data into a format that's convenient for you as a human. In many cases, such as when using a word processor, this translation occurs at a low enough level that you can almost always ignore it. Such translations involve the conversion controlled by the *American Standard Code for Information Interchange* (ASCII), which maps numbers to letters and other punctuation, or perhaps some other method of encoding. Other mappings are at work in creating displays of characters on your screen. In the case of usernames and group names, though, this very low-level translation is joined by another one that's more likely to be important in managing user accounts. Specifically, usernames are a convenient human representation of *user IDs* (UIDs), and group names are a representation of *group IDs* (GIDs).
+
+Internally, FreeBSD uses UIDs and GIDs almost exclusively. For instance, UIDs and GIDs are stored with other file metadata (data describing a file, as opposed to the file's

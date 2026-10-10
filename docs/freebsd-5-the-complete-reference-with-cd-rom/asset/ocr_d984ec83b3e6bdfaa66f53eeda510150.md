@@ -1,0 +1,13 @@
+# Tools to Help Reconfigure X
+
+Reconfiguring X by editing XF86Config provides you with a great deal of flexibility, but it can be a tedious and tricky process, particularly if you’re new to FreeBSD. Fortunately, there are some tools that can help you do the job. This section briefly describes two of them: XFree86 itself and the xf86cfg tool.
+
+XFree86 4.x includes the ability to probe your hardware and generate an XF86Config file. To use this feature, type XFree86 -configure. This command generates a great deal of status information and creates a file called /root/XF86Config.new, which you can use as the basis for further modifications. You can test this file by typing XFree86 -xf86config /root/XF86Config.new, which should launch X using the new configuration file. There’s a good chance that this command won’t work correctly on the first try, or it may not work as you want it to. The auto-configuration routines frequently miss or misidentify certain types of hardware, such as mice driven through the moused server.
+
+If you generate the XF86Config.new file and find it to be lacking, or if you want to modify an existing file, you may want to try editing it with xf86cfg. This program is included as part of a standard XFree86 4.x installation, and provides a GUI interface to XF86Config editing, as shown in Figure 13-5. Of course, the fact that it uses a GUI interface means that you must already have an X server running on the computer you intend to configure. Thus, xf86cfg is useful for tweaking an already working configuration, or perhaps for creating a new configuration prior to changing a video card. You can call it as follows:
+
+```
+$ xf86cfg -XF86config /path/to/XF86Config
+```
+
+The /path/to/XF86Config could point to /etc/XF86Config or to a test file such as /root/XF86Config.new, as created by XFree86 using its -xf86config option. Once the program is running, you can configure a component by right-clicking it and selecting Configure from the pop-up menu. This action creates a dialog box in which you can enter or change information relating to the device, as described in the preceding sections. You can also add devices by clicking the device icons near the top of the window. To add a new device to the layout, right-click it and select Enable from the pop-up menu. For most workstations, there’s little need to add components; you’re most likely to do this if you want to use multiple monitors to expand your working desktop area, or if you want to define an external USB keyboard or mouse for optional use with a notebook computer.

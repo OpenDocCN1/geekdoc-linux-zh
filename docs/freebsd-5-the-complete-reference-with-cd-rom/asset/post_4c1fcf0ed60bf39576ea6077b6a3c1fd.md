@@ -1,0 +1,46 @@
+
+## Print Queue Benefits
+
+Print queues provide, directly or indirectly, several benefits:
+
+- **Print job scheduling**
+  By default, FreeBSD print queues process jobs on a first-in-first-out basis, thus preventing problems when multiple users or programs try to access the same limited resource. Indeed, an application that prints can submit a large job and terminate, and the print queue will still print the job. You can also alter the order in which jobs print, as described in the upcoming section, “Reordering Print Jobs.”
+
+- **Printer management**
+  You name your print queues, giving each one a name that users should find easy to remember. In fact, you can give each printer multiple names. Sometimes these are exactly equivalent, but you can configure the same printer to work differently depending upon how it’s called—for instance, printing on both sides (*duplexing*) if called by one name, but not by another. If you replace or upgrade a printer, you can attach the new one to an old name, easing the transition for users.
+
+- **Job filtering**
+  One of the most powerful features of FreeBSD print queues is the ability to apply a *filter* to a queue. This is a program that processes the print job before the printer receives it. In practice, the print filter often calls the PostScript program, as described in the upcoming sections, “PostScript as a Standard Printing Language” and “Setting Up Ghostscript.”
+
+- **Network access**
+  The way FreeBSD’s printing system works lends itself to network operation. It’s easy to configure the system to send files to a printer shared by another print server, and it’s equally easy to configure a FreeBSD system to accept print jobs from other computers. (This ease of configuration relates to systems using the BSD printing system or those designed to be compatible with it. Interoperating with Windows, Mac OS, or other types of print clients and servers is more complex.) These topics are covered in the upcoming sections, “Creating a Print Queue” and “Controlling Remote Printer Access.”
+
+FreeBSD uses a printing system that’s generally known as the *BSD LPD* system, named after the OS that originated it (BSD) and the name of one of its major components, the *Line Printer Daemon* (*LPD*). Some competing printing systems are available for FreeBSD. Most notably, LPRng aims to be more up-to-date than the BSD LPD system, while maintaining compatibility. Most of this chapter applies to LPRng as well as to BSD LPD. The *Common UNIX Printing System* (*CUPS*) diverges more from the BSD LPD mold, providing features such as feedback to applications about specific printers’ capabilities. The cost is complete incompatibility from a configuration point of view, although CUPS includes programs that work like those in the BSD LPD system for submitting print jobs, so it works in a similar way from a user’s perspective. A few programs are beginning to take advantage of CUPS’s features, but most don’t. Both LPRng and CUPS are available from the standard FreeBSD installation media.
+
+Assuming a FreeBSD system is configured to use a printer, as described later in this chapter, the first step in using it as an ordinary user is to submit a print job. In the BSD LPD system, this is done through a program called `lpr`, as described in the upcoming section, “Submitting Print Jobs.” The `lpr` program can be used either directly by you (if you want to print a file in your directory) or by other programs (for instance, a word processor can submit a print job to the queue by sending a file it creates to `lpr`).
+
+In practice, `lpr` works by taking an input file and sending it to the next program in the BSD printing system, the Line Printer Daemon (`lpd`). Essentially, `lpr` is just a convenient middleman, enabling you to easily direct a file into whatever print queue you specify.
+
+> The `LPD` and `CUPS` printing systems also use programs called `lpr`, which work much like the BSD `lpr` described in this chapter. These alternate printing systems’ `lpr` programs submit jobs to their own printer daemons, though.
+
+Remember that a print job is a file. Even if you don’t explicitly create a file, `lpr` and `lpd` treat it as if it were a file. In fact, print jobs normally reside on your hard disk as a file at some point in their lives.
+
+## The Role of the Line Printer Daemon
+
+The bulk of the FreeBSD printing work is done by the `lpd` program, after which the BSD `LPD` printing system as a whole is named. This daemon, like all daemons, is designed to run in the background and wait for input. Part of the key to the FreeBSD printing system is that `lpd` accepts jobs over network protocols. Thus, when you print locally, `lpr` passes the job to `lpd` using the `localhost` network interface. This means that the print job never sees your network wire, but it’s processed as if it were a network access. The `lpd` program also accepts requests from other computers’ `lpr` programs, assuming it’s configured to do so, as described in the upcoming section, “Controlling Remote Printer Access.”
+
+When `lpd` accepts a print job, the daemon stores the file in the spool directory for the printer you specified and makes note of where the file is in the print queue. When print jobs before the one in question are cleared, `lpd` processes the job. This involves passing the job through any filters you’ve configured in the queue and then sending them out the printer port or to a remote computer. When the last byte of the job has been sent to its destination, `lpd` removes the job from the print queue.
+
+## PostScript as a Standard Printing Language
+
+One important feature of print queues is that they grant applications some degree of printer independence. In Windows, OS/2, or Mac OS, you install a printer driver for your specific model of printer. Applications can then print to the queue using OS-specific commands, and the OS converts those commands into printer-specific commands.
+
+This interaction can go both ways, so that the OS can tell applications what features a printer supports, such as color or maximum page size. In FreeBSD, the process is somewhat different. Because UNIX systems have historically been powerful computers, they've typically been connected either to high-speed, high-volume printers known as *line printers*, which can't handle complex formatting, or to PostScript laser printers. Thus, UNIX and FreeBSD programs that need to print typically produce plain text or PostScript output, on the assumption that they'll be printing to one of these two types of printers.
+
+The strength of PostScript in the UNIX and FreeBSD world means that Windows-style printer drivers have never caught on. Programs can generate PostScript for printed output, and this works. One negative consequence of this approach, though, is that programs don't know as much about their printers as do Windows programs. For instance, there's no way for a program to know if a printer supports color output, or what resolutions it supports. Thus, FreeBSD programs either make assumptions or require you to enter such information in the application that's printing, often in a print dialog box. Overcoming this limitation is one of the goals of CUPS; it enables you to associate a *PostScript Printer Description* (PPD) file to each queue, and applications can query CUPS for information stored in the PPD file.
+
+> Tip: If you need to provide access to printer features that aren't directly supported by PostScript, or by individual programs' PostScript code, you may be able to do it by creating multiple print queues. For instance, you might create two or three print queues to print at different resolutions on an inkjet printer. The upcoming sections, “Creating a Print Queue” and “Setting Up Ghostscript,” cover such configurations.
+
+On desktop computers, plain text output is seldom a problem because most printers can handle plain text; but PostScript can be a problem because PostScript has traditionally added substantially to the cost of the low-end laser and inkjet printers typically associated with x86 computers. The solution is to use a filter in the print queue that converts PostScript into whatever format a printer actually accepts. This filter uses a program known as *Ghostscript* (http://www.cs.wisc.edu/~ghost/) to do the conversion. Essentially, Ghostscript serves as a PostScript interpreter that runs on the computer rather than on the printer. The following section, “Creating a Print Queue,” describes setting up a print queue *without* a Ghostscript filter, as you might do if your printer understands PostScript or if you want to use the printer only for simple text in the printer's default font. The “Setting Up Ghostscript” section describes adding Ghostscript to the mix.
+
+A few FreeBSD applications, such as The GIMP, can generate output designed for specific printers. The results you obtain from such tools may or may not be superior to the results you obtain by generating PostScript and using a conventional print queue. You may want to try both ways to see which works best—but be aware that some filters will misidentify printer-format output and discard it or mangle it, so you may need to create a special queue that uses no filter to print such output.

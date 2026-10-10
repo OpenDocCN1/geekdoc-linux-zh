@@ -1,0 +1,4074 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Getting Started with
+
+
+    # ASP.NET 5
+
+
+    # for OS X, Linux, and Windows
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_0.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_1.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_2.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_3.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_4.png)
+
+
+    Agus Kurniawan'
+  - '[PAGE 1]
+
+
+    # Copyright
+
+
+    Getting Started with ASP.NET 5 for OS X, Linux, and Windows
+
+
+    Agus Kurniawan
+
+
+    1st Edition, 2015
+
+
+    Copyright © 2015 Agus Kurniawan'
+  - '[PAGE 2]
+
+
+    # # Table of Contents
+
+
+    +   - Copyright
+
+
+    +   - Preface
+
+
+    +   1. Preparing Development Environment
+
+
+    +   1.1 ASP.NET 5
+
+
+    +   1.2 System Requirements
+
+
+    +   1.3 Development Tools
+
+
+    +   2 Deploying ASP.NET 5 on OS X
+
+
+    +   2.1 Getting Started
+
+
+    +   2.2 Deploying ASP.NET 5
+
+
+    +   2.3 Testing
+
+
+    +   2.3.1 ASP.NET Console
+
+
+    +   2.3.2 ASP.NET 5
+
+
+    +   2.3.3 ASP.NET MVC
+
+
+    +   2.4 Development Tools
+
+
+    +   3 Deploying ASP.NET 5 on Linux
+
+
+    +   3.1 Getting Started
+
+
+    +   3.2 Deploying ASP.NET 5
+
+
+    +   3.2.1 Installing Mono
+
+
+    +   3.2.2 Installing libuv
+
+
+    +   3.2.3 Installing DNVM
+
+
+    +   3.2.4 Installing git
+
+
+    +   3.3 Testing
+
+
+    +   3.3.1 ASP.NET Console
+
+
+    +   3.3.2 ASP.NET 5
+
+
+    +   3.3.3 ASP.NET MVC
+
+
+    +   3.4 Development Tools
+
+
+    +   4 Deploying ASP.NET 5 on Windows
+
+
+    +   4.1 Getting Started
+
+
+    +   4.2 Deploying ASP.NET 5'
+  - '[PAGE 3]
+
+
+    4.2.1 Installing .NET
+
+
+    4.2.2 Installing DNVM
+
+
+    4.2.3 Installing git
+
+
+    4.3 Testing
+
+
+    4.3.1 ASP.NET Console
+
+
+    4.3.2 ASP.NET 5
+
+
+    4.3.3 ASP.NET MVC
+
+
+    4.4 Development Tools
+
+
+    5. ASP.NET 5 Development
+
+
+    5.1 Getting Started
+
+
+    5.2 Building ASP.NET 5 Console Application
+
+
+    5.2.1 Creating A Project
+
+
+    5.2.2 Writing Program
+
+
+    5.2.3 Testing
+
+
+    5.3 Building ASP.NET 5 MVC Application
+
+
+    5.3.1 Creating a Project
+
+
+    5.3.2 Writing Program
+
+
+    5.3.2.1 Creating Model
+
+
+    5.3.2.2 Creating Controller
+
+
+    5.3.2.3 Creating View
+
+
+    5.3.3 Testing
+
+
+    6. ASP.NET 5 RESTful and AngularJS
+
+
+    6.1 Getting Started
+
+
+    6.2 Creating Project
+
+
+    6.3 Writing Program
+
+
+    6.3.1 Creating Model
+
+
+    6.3.2 Dummy Database
+
+
+    6.3.3 Creating Controller
+
+
+    6.3.4 Creating View
+
+
+    6.3.5 AngularJS Program
+
+
+    6.4 Testing'
+  - '[PAGE 4]
+
+
+    +   - 6.5 What''s The Next?
+
+    +   - Source Code
+
+    +   - Contact'
+  - '[PAGE 5]
+
+
+    # Preface
+
+
+    This book was written to help anyone want to get started with ASP.NET 5 core.
+    It describes ASP.NET 5 core deploying and the basic elements of ASP.NET 5 core
+    and shows how to work with several ASP.NET 5 core features.
+
+
+    Agus Kurniawan
+
+    Berlin & Depok, June 2015'
+  - '[PAGE 6]
+
+
+    # 1. Preparing Development Environment'
+  - '[PAGE 7]
+
+
+    # **1.1 ASP.NET 5**
+
+
+    ASP.NET 5 is a lean and composable framework for building web and cloud applications.
+
+    ASP.NET 5 is fully open source and available on GitHub, http://github.com/aspnet/home
+    .
+
+    ASP.NET 5 is currently in preview when this book is written.
+
+
+    This book will focus on how to develop ASP.NET 5 on OS X, Linux and Windows platforms.
+    We use ASP.NET 5 core beta4.'
+  - '[PAGE 8]
+
+
+    # **1.2 System Requirements**
+
+
+    For testing, I use Debian/Ubuntu Linux, OS X Yosemite and Windows 8.1. You can
+    use any Linux distribution which inherited from Debian based.'
+  - '[PAGE 9]
+
+
+    # 1.3 Development Tools
+
+
+    In general, we can use any editor to write ASP.NET 5program. I recommend to use
+    Sublime Text, [http://www.sublimetext.com/](http://www.sublimetext.com/), to write
+    ASP.NET 5 codes. Microsoft also released Visual Studio Code and you can download
+    it on [https://code.visualstudio.com/](https://code.visualstudio.com/).'
+  - '[PAGE 10]
+
+
+    # ## 2 Deploying ASP.NET 5 on OS X
+
+
+    In this chapter we will learn how to deploy ASP.NET 5 on OS X.'
+  - '[PAGE 11]
+
+
+    # 2.1 Getting Started
+
+
+    In this section we start to deploy ASP.NET 5 on OS X. In this book I use ASP.NET
+    5 preview, beta4. Please follow installation steps on next section.'
+  - '[PAGE 12]
+
+
+    # ### 2.2 Deploying ASP.NET 5
+
+
+    To install ASP.NET on OS X, you can use brew, [http://brew.sh/](http://brew.sh/).
+    Type these commands to install ASP.NET 5.
+
+
+    ```
+
+    $ brew tap aspnet/dnx
+
+    $ brew update
+
+    $ brew install dnvm
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_12_0.png)
+
+
+    If success, you can see a task which you should do. We must add dnvm on our profile.'
+  - '[PAGE 13]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_13_0.png)
+
+
+    Type this command.
+
+
+    ```
+
+    $ nano ~/.bash_profile
+
+    ```
+
+
+    Then, you get nano editor. You can use another text editor. Add this script on
+    `~/.bash_profile`.
+
+
+    ```
+
+    source dnvm.sh
+
+    ```'
+  - '[PAGE 14]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_14_0.png)
+
+
+    If done, save this file. After that, close your Terminal and then open again so
+    Terminal will load profile script.
+
+
+    The next step is to upgrade. Type this command.
+
+
+    ```
+
+    $ dnvm upgrade
+
+    ```'
+  - '[PAGE 15]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_15_0.png)
+
+
+    Now you already installed dnvm. It will be used to manage ASP.NET 5 runtime on
+    OS X. You can verify dnvm by typing this command.
+
+
+    ```
+
+    $ dnvm help
+
+    ```
+
+
+    So you see a list of dnvm parameter.'
+  - '[PAGE 16]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_16_0.png)
+
+
+    You can also see a list of your DN X runtime by typing this command.
+
+
+    ```
+
+    $ dnvm list
+
+    ```'
+  - "[PAGE 17]\n\n```\ndnvm alias <alias>\n    display value of the specified alias\n\
+    \ndnvm alias <alias> <semver>|<alias>|<package>\n    <alias>\n        <semver>|<alias>|<package>\
+    \   the name of the alias to set\n        the DN X version to set the alias to.\
+    \ Alternative ly use the version of the specified alias\n\ndnvm unalias <alias>\n\
+    \    remove the specified alias\n\ndnvm [help|-h|--help|--help]\n    displays\
+    \ this help text.\n\ndnvm update-self\n    updates dnvm itself.\nagusk$ dnvm list\n\
+    \nActive Version                Runtime Arch Location                 Alias\n\
+    ----- ------                  ---- ---- ----- ---                 -----\n    *\
+    \  1.0.0-beta4            mono            ~/.dnx/runtimes      default\nagusk$\n\
+    \n```"
+  - '[PAGE 18]
+
+
+    # # 2.3 Testing
+
+
+    To test our ASP.NET 5, we use code samples from [https://github.com/aspnet/Home](https://github.com/aspnet/Home)
+    . We clone this code samples and then restore all required libraries using dnu
+    command. Type these commands.
+
+
+    ```
+
+    $ git clone https://github.com/aspnet/Home
+
+    $ cd Home
+
+    $ dnu restore
+
+    ```
+
+
+    If you don’t git on your OS X, you can install it via brew.
+
+
+    ```
+
+    $ brew install git
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_18_0.png)
+
+
+    Now you are ready to run code samples.
+
+
+    # ## 2.3.1 ASP.NET Console
+
+
+    To run ASP.NET Console, we can use dnx. Firstly, navigate to ConsoleApp project.
+    Type these commands.'
+  - "[PAGE 19]\n\n```\n$ cd samples/latest/ConsoleApp/\n$ dn\\x . run .\n```\n\nIf\
+    \ success, you can see a message “Hello World” on Terminal.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_19_0.png)\n\
+    \n# 2.3.2 ASP.NET 5\n\nTo run ASP.NET 5 app, we can use dn\\x with kestrel. Firstly,\
+    \ navigate to HelloWeb project.  \nType these commands.\n\n```\n$ cd samples/latest/HelloWeb/\n\
+    $ dn\\x . kestrel\n```\n\nNow open a browser and then navigate to http://localhost:5004/\
+    \ . You should see  \nASP.NET 5 app."
+  - '[PAGE 20]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_0.png)
+
+
+    To stop kestrel, you can type `exit`.
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_1.png)'
+  - '[PAGE 21]
+
+
+    # # 2.3.3 ASP.NET MVC
+
+
+    To run ASP.NET MVC, we can use dnx. Firstly, navigate to HelloMvc project. Type
+    these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    Now open a browser and then navigate to http://localhost:5004/ . You should see
+    ASP.NET MVC app.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_21_0.png)
+
+
+    To stop kestrel, you can type exit.'
+  - "[PAGE 22]\n\n# HelloMvc — bash — 80×24\n\n```\nagusk$ cd ConsoleApp/\nagusk$\
+    \ ls\nConsoleApp.xproj       project.json\nProgram.cs             project.lock.json\n\
+    agusk$ dn x . run .\nHello World\nagusk$ ls\nConsoleApp.xproj       project.json\n\
+    Program.cs             project.lock.json\nagusk$ cd ..\nagusk$ ls\nConsoleApp\
+    \    HelloMvc    HelloWeb    NuGet.Config\nagusk$ cd HelloWeb/\nagusk$ dn x .\
+    \ kestrel\nStarted\nexit\nagusk$ cd ..\nagusk$ ls\nConsoleApp    HelloMvc    HelloWeb\
+    \    NuGet.Config\nagusk$ cd HelloMvc/\nagusk$ dn x . kestrel\nStarted\nexit\n\
+    agusk$ \n```"
+  - '[PAGE 23]
+
+
+    # ## 2.4 Development Tools
+
+
+    The next step is to build program. To write a program, you can use any text editor.
+    Microsoft also provides Visual Studio Code. It runs on Windows, Linux and Mac.
+    You can download it on [https://code.visualstudio.com/](https://code.visualstudio.com/)
+    .
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_23_0.png)'
+  md: "\n# Getting Started with ASP.NET 5 for OS X, Linux, and Windows\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_0.png)\n\
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_1.png)\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_2.png)\n\
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_3.png)\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_4.png)\n\
+    \nAgus Kurniawan\n\n## Copyright\n\nGetting Started with ASP.NET 5 for OS X, Linux,\
+    \ and Windows\n\nAgus Kurniawan\n\n1st Edition, 2015\n\nCopyright © 2015 Agus\
+    \ Kurniawan\n\n## Table of Contents\n\n- Copyright\n- Preface\n- 1. Preparing\
+    \ Development Environment\n    - 1.1 ASP.NET 5\n    - 1.2 System Requirements\n\
+    \    - 1.3 Development Tools\n- 2. Deploying ASP.NET 5 on OS X\n    - 2.1 Getting\
+    \ Started\n    - 2.2 Deploying ASP.NET 5\n    - 2.3 Testing\n        - 2.3.1 ASP.NET\
+    \ Console\n        - 2.3.2 ASP.NET 5\n        - 2.3.3 ASP.NET MVC\n    - 2.4 Development\
+    \ Tools\n- 3. Deploying ASP.NET 5 on Linux\n    - 3.1 Getting Started\n    - 3.2\
+    \ Deploying ASP.NET 5\n        - 3.2.1 Installing Mono\n        - 3.2.2 Installing\
+    \ libuv\n        - 3.2.3 Installing DNVM\n        - 3.2.4 Installing git\n   \
+    \ - 3.3 Testing\n        - 3.3.1 ASP.NET Console\n        - 3.3.2 ASP.NET 5\n\
+    \        - 3.3.3 ASP.NET MVC\n    - 3.4 Development Tools\n- 4. Deploying ASP.NET\
+    \ 5 on Windows\n    - 4.1 Getting Started\n    - 4.2 Deploying ASP.NET 5\n   \
+    \     - 4.2.1 Installing .NET\n        - 4.2.2 Installing DNVM\n        - 4.2.3\
+    \ Installing git\n    - 4.3 Testing\n        - 4.3.1 ASP.NET Console\n       \
+    \ - 4.3.2 ASP.NET 5\n        - 4.3.3 ASP.NET MVC\n    - 4.4 Development Tools\n\
+    - 5. ASP.NET 5 Development\n    - 5.1 Getting Started\n    - 5.2 Building ASP.NET\
+    \ 5 Console Application\n        - 5.2.1 Creating A Project\n        - 5.2.2 Writing\
+    \ Program\n        - 5.2.3 Testing\n    - 5.3 Building ASP.NET 5 MVC Application\n\
+    \        - 5.3.1 Creating a Project\n        - 5.3.2 Writing Program\n       \
+    \     - 5.3.2.1 Creating Model\n            - 5.3.2.2 Creating Controller\n  \
+    \          - 5.3.2.3 Creating View\n        - 5.3.3 Testing\n- 6. ASP.NET 5 RESTful\
+    \ and AngularJS\n    - 6.1 Getting Started\n    - 6.2 Creating Project\n    -\
+    \ 6.3 Writing Program\n        - 6.3.1 Creating Model\n        - 6.3.2 Dummy Database\n\
+    \        - 6.3.3 Creating Controller\n        - 6.3.4 Creating View\n        -\
+    \ 6.3.5 AngularJS Program\n    - 6.4 Testing\n    - 6.5 What's The Next?\n- Source\
+    \ Code\n- Contact\n\n## Preface\n\nThis book was written to help anyone want to\
+    \ get started with ASP.NET 5 core. It describes ASP.NET 5 core deploying and the\
+    \ basic elements of ASP.NET 5 core and shows how to work with several ASP.NET\
+    \ 5 core features.\n\nAgus Kurniawan\nBerlin & Depok, June 2015\n\n## 1. Preparing\
+    \ Development Environment\n\n### 1.1 ASP.NET 5\n\nASP.NET 5 is a lean and composable\
+    \ framework for building web and cloud applications.\nASP.NET 5 is fully open\
+    \ source and available on GitHub, http://github.com/aspnet/home.\nASP.NET 5 is\
+    \ currently in preview when this book is written.\n\nThis book will focus on how\
+    \ to develop ASP.NET 5 on OS X, Linux and Windows platforms. We use ASP.NET 5\
+    \ core beta4.\n\n### 1.2 System Requirements\n\nFor testing, I use Debian/Ubuntu\
+    \ Linux, OS X Yosemite and Windows 8.1. You can use any Linux distribution which\
+    \ inherited from Debian based.\n\n### 1.3 Development Tools\n\nIn general, we\
+    \ can use any editor to write ASP.NET 5 program. I recommend to use Sublime Text,\
+    \ [http://www.sublimetext.com/](http://www.sublimetext.com/), to write ASP.NET\
+    \ 5 codes. Microsoft also released Visual Studio Code and you can download it\
+    \ on [https://code.visualstudio.com/](https://code.visualstudio.com/).\n\n## 2\
+    \ Deploying ASP.NET 5 on OS X\n\nIn this chapter we will learn how to deploy ASP.NET\
+    \ 5 on OS X.\n\n### 2.1 Getting Started\n\nIn this section we start to deploy\
+    \ ASP.NET 5 on OS X. In this book I use ASP.NET 5 preview, beta4. Please follow\
+    \ installation steps on next section.\n\n### 2.2 Deploying ASP.NET 5\n\nTo install\
+    \ ASP.NET on OS X, you can use brew, [http://brew.sh/](http://brew.sh/). Type\
+    \ these commands to install ASP.NET 5.\n\n```bash\n$ brew tap aspnet/dnx\n$ brew\
+    \ update\n$ brew install dnvm\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_12_0.png)\n\
+    \nIf success, you can see a task which you should do. We must add dnvm on our\
+    \ profile.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_13_0.png)\n\nType this\
+    \ command.\n\n```bash\n$ nano ~/.bash_profile\n```\n\nThen, you get nano editor.\
+    \ You can use another text editor. Add this script on `~/.bash_profile`.\n\n```bash\n\
+    source dnvm.sh\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_14_0.png)\n\n\
+    If done, save this file. After that, close your Terminal and then open again so\
+    \ Terminal will load profile script.\n\nThe next step is to upgrade. Type this\
+    \ command.\n\n```bash\n$ dnvm upgrade\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_15_0.png)\n\
+    \nNow you already installed dnvm. It will be used to manage ASP.NET 5 runtime\
+    \ on OS X. You can verify dnvm by typing this command.\n\n```bash\n$ dnvm help\n\
+    ```\n\nSo you see a list of dnvm parameter.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_16_0.png)\n\
+    \nYou can also see a list of your DNX runtime by typing this command.\n\n```bash\n\
+    $ dnvm list\n```\n\n```text\ndnvm alias <alias>\n    display value of the specified\
+    \ alias\n\ndnvm alias <alias> <semver>|<alias>|<package>\n    <alias>\n      \
+    \  <semver>|<alias>|<package>   the name of the alias to set\n        the DNX\
+    \ version to set the alias to. Alternatively use the version of the specified\
+    \ alias\n\ndnvm unalias <alias>\n    remove the specified alias\n\ndnvm [help|-h|--help|--help]\n\
+    \    displays this help text.\n\ndnvm update-self\n    updates dnvm itself.\n\n\
+    agusk$ dnvm list\n\nActive Version                Runtime Arch Location      \
+    \           Alias\n----- ------                  ---- ---- ----- ---         \
+    \        -----\n    *  1.0.0-beta4            mono            ~/.dnx/runtimes\
+    \      default\nagusk$\n```\n\n### 2.3 Testing\n\nTo test our ASP.NET 5, we use\
+    \ code samples from [https://github.com/aspnet/Home](https://github.com/aspnet/Home).\
+    \ We clone this code samples and then restore all required libraries using dnu\
+    \ command. Type these commands.\n\n```bash\n$ git clone https://github.com/aspnet/Home\n\
+    $ cd Home\n$ dnu restore\n```\n\nIf you don’t have git on your OS X, you can install\
+    \ it via brew.\n\n```bash\n$ brew install git\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_18_0.png)\n\
+    \nNow you are ready to run code samples.\n\n#### 2.3.1 ASP.NET Console\n\nTo run\
+    \ ASP.NET Console, we can use dnx. Firstly, navigate to ConsoleApp project. Type\
+    \ these commands.\n\n```bash\n$ cd samples/latest/ConsoleApp/\n$ dnx . run .\n\
+    ```\n\nIf success, you can see a message “Hello World” on Terminal.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_19_0.png)\n\
+    \n#### 2.3.2 ASP.NET 5\n\nTo run ASP.NET 5 app, we can use dnx with kestrel. Firstly,\
+    \ navigate to HelloWeb project.\nType these commands.\n\n```bash\n$ cd samples/latest/HelloWeb/\n\
+    $ dnx . kestrel\n```\n\nNow open a browser and then navigate to http://localhost:5004/.\
+    \ You should see\nASP.NET 5 app.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_0.png)\n\
+    \nTo stop kestrel, you can type `exit`.\n\n```bash\nexit\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_1.png)\n\
+    \n#### 2.3.3 ASP.NET MVC\n\nTo run ASP.NET MVC, we can use dnx. Firstly, navigate\
+    \ to HelloMvc project. Type these commands.\n\n```bash\n$ cd samples/latest/HelloMvc/\n\
+    $ dnx . kestrel\n```\n\nNow open a browser and then navigate to http://localhost:5004/.\
+    \ You should see ASP.NET MVC app.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_21_0.png)\n\
+    \nTo stop kestrel, you can type exit.\n\n#### 2.4 Development Tools\n\nThe next\
+    \ step is to build program. To write a program, you can use any text editor. Microsoft\
+    \ also provides Visual Studio Code. It runs on Windows, Linux and Mac. You can\
+    \ download it on [https://code.visualstudio.com/](https://code.visualstudio.com/).\n\
+    \n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_23_0.png)\n"
+  mdcn: "\n# 在 OS X、Linux 和 Windows 上入门 ASP.NET 5\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_0.png)\n\
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_1.png)\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_2.png)\n\
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_3.png)\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_0_4.png)\n\
+    \nAgus Kurniawan\n\n## 版权声明\n\n在 OS X、Linux 和 Windows 上入门 ASP.NET 5\n\nAgus Kurniawan\n\
+    \n第一版，2015\n\n版权所有 © 2015 Agus Kurniawan\n\n## 目录\n\n- 版权声明\n- 前言\n- 1. 准备开发环境\n\
+    \    - 1.1 ASP.NET 5\n    - 1.2 系统要求\n    - 1.3 开发工具\n- 2. 在 OS X 上部署 ASP.NET\
+    \ 5\n    - 2.1 入门\n    - 2.2 部署 ASP.NET 5\n    - 2.3 测试\n        - 2.3.1 ASP.NET\
+    \ 控制台\n        - 2.3.2 ASP.NET 5\n        - 2.3.3 ASP.NET MVC\n    - 2.4 开发工具\n\
+    - 3. 在 Linux 上部署 ASP.NET 5\n    - 3.1 入门\n    - 3.2 部署 ASP.NET 5\n        - 3.2.1\
+    \ 安装 Mono\n        - 3.2.2 安装 libuv\n        - 3.2.3 安装 DNVM\n        - 3.2.4\
+    \ 安装 git\n    - 3.3 测试\n        - 3.3.1 ASP.NET 控制台\n        - 3.3.2 ASP.NET 5\n\
+    \        - 3.3.3 ASP.NET MVC\n    - 3.4 开发工具\n- 4. 在 Windows 上部署 ASP.NET 5\n \
+    \   - 4.1 入门\n    - 4.2 部署 ASP.NET 5\n        - 4.2.1 安装 .NET\n        - 4.2.2\
+    \ 安装 DNVM\n        - 4.2.3 安装 git\n    - 4.3 测试\n        - 4.3.1 ASP.NET 控制台\n\
+    \        - 4.3.2 ASP.NET 5\n        - 4.3.3 ASP.NET MVC\n    - 4.4 开发工具\n- 5.\
+    \ ASP.NET 5 开发\n    - 5.1 入门\n    - 5.2 构建 ASP.NET 5 控制台应用程序\n        - 5.2.1\
+    \ 创建项目\n        - 5.2.2 编写程序\n        - 5.2.3 测试\n    - 5.3 构建 ASP.NET 5 MVC 应用程序\n\
+    \        - 5.3.1 创建项目\n        - 5.3.2 编写程序\n            - 5.3.2.1 创建模型\n    \
+    \        - 5.3.2.2 创建控制器\n            - 5.3.2.3 创建视图\n        - 5.3.3 测试\n- 6.\
+    \ ASP.NET 5 RESTful 和 AngularJS\n    - 6.1 入门\n    - 6.2 创建项目\n    - 6.3 编写程序\n\
+    \        - 6.3.1 创建模型\n        - 6.3.2 虚拟数据库\n        - 6.3.3 创建控制器\n        -\
+    \ 6.3.4 创建视图\n        - 6.3.5 AngularJS 程序\n    - 6.4 测试\n    - 6.5 下一步是什么？\n\
+    - 源代码\n- 联系方式\n\n## 前言\n\n本书旨在帮助任何希望开始使用 ASP.NET 5 core 的人。它描述了 ASP.NET 5 core\
+    \ 的部署以及 ASP.NET 5 core 的基本元素，并展示了如何使用几个 ASP.NET 5 core 功能。\n\nAgus Kurniawan\n\
+    柏林 & 德波克，2015 年 6 月\n\n## 1. 准备开发环境\n\n### 1.1 ASP.NET 5\n\nASP.NET 5 是一个轻量级且可组合的框架，用于构建\
+    \ Web 和云应用程序。\nASP.NET 5 完全开源，可在 GitHub 上获取，http://github.com/aspnet/home。\n撰写本书时，ASP.NET\
+    \ 5 目前处于预览阶段。\n\n本书将重点介绍如何在 OS X、Linux 和 Windows 平台上开发 ASP.NET 5。我们使用 ASP.NET\
+    \ 5 core beta4。\n\n### 1.2 系统要求\n\n为了进行测试，我使用了 Debian/Ubuntu Linux、OS X Yosemite\
+    \ 和 Windows 8.1。你可以使用任何源自 Debian 的 Linux 发行版。\n\n### 1.3 开发工具\n\n一般来说，我们可以使用任何编辑器来编写\
+    \ ASP.NET 5 程序。我建议使用 Sublime Text，[http://www.sublimetext.com/](http://www.sublimetext.com/)，来编写\
+    \ ASP.NET 5 代码。微软还发布了 Visual Studio Code，你可以在 [https://code.visualstudio.com/](https://code.visualstudio.com/)\
+    \ 上下载。\n\n## 2 在 OS X 上部署 ASP.NET 5\n\n在本章中，我们将学习如何在 OS X 上部署 ASP.NET 5。\n\n###\
+    \ 2.1 入门\n\n在本节中，我们开始在 OS X 上部署 ASP.NET 5。在本书中，我使用 ASP.NET 5 预览版，beta4。请按照下一节的步骤进行安装。\n\
+    \n### 2.2 部署 ASP.NET 5\n\n要在 OS X 上安装 ASP.NET，你可以使用 brew，[http://brew.sh/](http://brew.sh/)。输入以下命令来安装\
+    \ ASP.NET 5。\n\n```bash\n$ brew tap aspnet/dnx\n$ brew update\n$ brew install\
+    \ dnvm\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_12_0.png)\n\n如果成功，你会看到一个你应该执行的任务。我们必须将\
+    \ dnvm 添加到我们的配置文件中。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_13_0.png)\n\n\
+    输入此命令。\n\n```bash\n$ nano ~/.bash_profile\n```\n\n然后，你会打开 nano 编辑器。你可以使用其他文本编辑器。将此脚本添加到\
+    \ `~/.bash_profile` 中。\n\n```bash\nsource dnvm.sh\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_14_0.png)\n\
+    \n完成后，保存此文件。然后，关闭你的终端并重新打开，以便终端加载配置文件脚本。\n\n下一步是升级。输入此命令。\n\n```bash\n$ dnvm upgrade\n\
+    ```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_15_0.png)\n\n现在你已经安装了 dnvm。它将用于管理\
+    \ OS X 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 dnvm。\n\n```bash\n$ dnvm help\n```\n\n因此你会看到\
+    \ dnvm 参数列表。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_16_0.png)\n\n你还可以通过输入此命令来查看你的\
+    \ DNX 运行时列表。\n\n```bash\n$ dnvm list\n```\n\n```text\ndnvm alias <alias>\n   \
+    \ display value of the specified alias\n\ndnvm alias <alias> <semver>|<alias>|<package>\n\
+    \    <alias>\n        <semver>|<alias>|<package>   the name of the alias to set\n\
+    \        the DNX version to set the alias to. Alternatively use the version of\
+    \ the specified alias\n\ndnvm unalias <alias>\n    remove the specified alias\n\
+    \ndnvm [help|-h|--help|--help]\n    displays this help text.\n\ndnvm update-self\n\
+    \    updates dnvm itself.\n\nagusk$ dnvm list\n\nActive Version              \
+    \  Runtime Arch Location                 Alias\n----- ------                 \
+    \ ---- ---- ----- ---                 -----\n    *  1.0.0-beta4            mono\
+    \            ~/.dnx/runtimes      default\nagusk$\n```\n\n### 2.3 测试\n\n为了测试我们的\
+    \ ASP.NET 5，我们使用来自 [https://github.com/aspnet/Home](https://github.com/aspnet/Home)\
+    \ 的代码示例。我们克隆这些代码示例，然后使用 dnu 命令还原所有必需的库。输入这些命令。\n\n```bash\n$ git clone https://github.com/aspnet/Home\n\
+    $ cd Home\n$ dnu restore\n```\n\n如果你的 OS X 上没有 git，你可以通过 brew 安装它。\n\n```bash\n\
+    $ brew install git\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_18_0.png)\n\
+    \n现在你准备好运行代码示例了。\n\n#### 2.3.1 ASP.NET 控制台\n\n要运行 ASP.NET 控制台，我们可以使用 dnx。首先，导航到\
+    \ ConsoleApp 项目。输入这些命令。\n\n```bash\n$ cd samples/latest/ConsoleApp/\n$ dnx . run\
+    \ .\n```\n\n如果成功，你可以在终端上看到消息 “Hello World”。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_19_0.png)\n\
+    \n#### 2.3.2 ASP.NET 5\n\n要运行 ASP.NET 5 应用程序，我们可以使用带有 kestrel 的 dnx。首先，导航到 HelloWeb\
+    \ 项目。\n输入这些命令。\n\n```bash\n$ cd samples/latest/HelloWeb/\n$ dnx . kestrel\n```\n\
+    \n现在打开浏览器，然后导航到 http://localhost:5004/。你应该会看到\nASP.NET 5 应用程序。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_0.png)\n\
+    \n要停止 kestrel，你可以输入 `exit`。\n\n```bash\nexit\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_1.png)\n\
+    \n#### 2.3.3 ASP.NET MVC\n\n要运行 ASP.NET MVC，我们可以使用 dnx。首先，导航到 HelloMvc 项目。输入这些命令。\n\
+    \n```bash\n$ cd samples/latest/HelloMvc/\n$ dnx . kestrel\n```\n\n现在打开浏览器，然后导航到\
+    \ http://localhost:5004/。你应该会看到 ASP.NET MVC 应用程序。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_21_0.png)\n\
+    \n要停止 kestrel，你可以输入 exit。\n\n#### 2.4 开发工具\n\n下一步是构建程序。要编写程序，你可以使用任何文本编辑器。微软还提供了\
+    \ Visual Studio Code。它可以在 Windows、Linux 和 Mac 上运行。你可以在 [https://code.visualstudio.com/](https://code.visualstudio.com/)\
+    \ 上下载。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_23_0.png)\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 24]
+
+
+    # ## 3 Deploying ASP.NET 5 on Linux
+
+
+    In this chapter we will learn how to deploy ASP.NET 5 on Linux.'
+  - '[PAGE 25]
+
+
+    # 3.1 Getting Started
+
+
+    In this section we start to deploy ASP.NET 5 on Linux. In this book I use ASP.NET
+    5 preview, beta4. For illustration, I use Ubuntu 15.04 as Linux distro. Please
+    follow installation steps on next section.'
+  - '[PAGE 26]
+
+
+    # ## 3.2 Deploying ASP.NET 5
+
+
+    This installation process is based on this documentation, [https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md](https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md)
+    . In this section, we install ASP.NET 5 on Linux manually (without docker). Firstly,
+    you update your distro.
+
+
+    ```
+
+    ```
+
+    $ sudo apt-get update
+
+    ```
+
+    ```
+
+
+    In general, to install ASP.NET 5 on Ubuntu, you can do the following steps:
+
+
+    +   - Installing Mono
+
+    +   - Installing libuv
+
+    +   - Installing DNVM
+
+    +   - Installing git (optional)
+
+
+    # ### 3.2.1 Installing Mono
+
+
+    Mono is .NET runtime for Linux. You need the latest version of Mono runtime. To
+    install it, you can type these commands.
+
+
+    ```
+
+    ```
+
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FA7E032
+
+    $ echo "deb http://download.mono-project.com/repo/debian wheezy main" > /etc/apt/sources.list.d/mono.list
+
+    $ sudo apt-get update
+
+    $ sudo apt-get install mono-complete
+
+    ```
+
+    ```
+
+
+    If finished, you can verify it by checking its version.
+
+
+    ```
+
+    ```
+
+    $ mono --version
+
+    ```
+
+    ```'
+  - "[PAGE 27]\n\n```\n```\nagusk@ubuntu15:~$\nagusk@ubuntu15:~$ mono --version\n\
+    Mono JIT compiler version 4.0.1 (tarball Tue May 12 15:39:23 UTC 2015)\nCopyright\
+    \ (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com\n\
+    \    TLS:               __thread\n    SIGSEGV:          altstack\n    Notifications:\
+    \    epoll\n    Architecture:     amd64\n    Disabled:         none\n    Misc:\
+    \             softdebug\n    LLVM:             supported, not enabled.\n    GC:\
+    \               sgen\nagusk@ubuntu15:~$ `` `\n```\n\n# ## 3.2.2 Installing libuv\n\
+    \nLibuv is a multi-platform asynchronous IO library that is used by the KestrelHttpServer\
+    \ that we will use to host our web applications.\n\nType these commands to install\
+    \ libuv library.\n\n```\n```\n$ sudo apt-get install automake libtool curl\n$\
+    \ curl -sSL https://github.com/libuv/libuv/archive/v1.4.2.tar.gz | sudo tar -xz\
+    \ -C /usr/local/src/\n$ cd /usr/local/src/libuv-1.4.2\n$ sudo sh autogen.sh\n\
+    $ sudo ./configure\n$ sudo make\n$ sudo make install\n$ sudo rm -rf /usr/local/src/libuv-1.4.2\
+    \ && cd ~/\n$ sudo ldconfig\n```\n```"
+  - "[PAGE 28]\n\n```\nagusk@ubuntu15:~\nin a given directory, LIBDIR, you must either\
+    \ use libtool, and\nspecify the full pathname of the library, or use the `-LLIBDIR'\n\
+    flag during linking and do at least one of the following:\n- add LIBDIR to the\
+    \ 'LD_LIBRARY_PATH' environment variable\nduring execution\n- add LIBDIR to the\
+    \ 'LD_RUN_PATH' environment variable\nduring linking\n- use the '-Wl,-rpath -Wl,LIBDIR'\
+    \ linker flag\n- have your system administrator add LIBDIR to '/etc/ld.so.conf'\n\
+    \nSee any operating system documentation about shared libraries for\nmore information,\
+    \ such as the ld(1) and ld.so(8) manual pages.\n----------------------\n/bin/mkdir\
+    \ -p '/usr/local/include'\n/usr/bin/install -c -m 644 include/uv.h include/uv-errno.h\
+    \ include/uv-threadpool.h include/uv-version.h include/uv-unix.h include/uv-linux.h\
+    \ '/usr/local/include/'\n/bin/mkdir -p '/usr/local/lib/pkgconfig'\n/usr/bin/install\
+    \ -c -m 644 libuv.pc '/usr/local/lib/pkgconfig'\nmake[1]: Leaving directory '/usr/local/src/libuv-1.4.2'\n\
+    agusk@ubuntu15:/usr/local/src/libuv-1.4.2$ sudo rm -rf /usr/local/src/libuv-1.4.2\
+    \ && cd ~/agusk@ubuntu15:~$ sudo ldconfig\nagusk@ubuntu15:~$ \n```\n\n# ### 3.2.3\
+    \ Installing DNVM\n\nThe last step is to install DNVM. Type this command.\n\n\
+    ```\n$ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh\
+    \ | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh\n```\n\nIf success, you can\
+    \ see a task which you should do. We must add dnvm on our profile.\n\n```\nagusk@ubuntu15:~\n\
+    agusk@ubuntu15:~$ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvm\
+    \ install.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh\nDownloading dnvm\
+    \ as script to '/home/agusk/.dnx/dnvm/dnvm'\nAppending source string to /home/agusk/.bashrc\n\
+    Type 'source /home/agusk/.dnx/dnvm/dnvm.sh' to start using dnvm\nagusk@ubuntu15:~$\
+    \ \n```\n\nType this command.\n\n```\n$ nano /home/<account>/.bashrc\n```\n\n\
+    Please change <account> by your Linux login account."
+  - '[PAGE 29]
+
+
+    Then, you get nano editor. You also edit this file using gedit or other text editor.
+    Add this script on .bashrc file into your profile, for instance, /home/<account>/.bashrc
+    .
+
+
+    Then, type this script.
+
+
+    ```
+
+    ```
+
+    source /home/<account>/.dnx/dnvm/dnvm.sh
+
+    ```
+
+    ```
+
+
+    Please change <account> by your Linux login account.
+
+
+    If done, save this file. After that, close your Terminal and then open again so
+    Terminal will load profile script.
+
+
+    The next step is to upgrade. Type this command.
+
+
+    ```
+
+    ```
+
+    $ dnvm upgrade
+
+    ```
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_29_0.png)
+
+
+    Now you already installed dnvm. It will be used to manage ASP.NET 5 runtime on
+    Linux. You can verify dnvm by typing this command.
+
+
+    ```
+
+    ```
+
+    $ dnvm help
+
+    ```
+
+    ```
+
+
+    So you see a list of dnvm parameter.'
+  - "[PAGE 30]\n\n```\n```\nagusk@ubuntu15:~$ dnvm upgrade\nDetermining latest version\n\
+    Latest version is 1.0.0-beta4\nDownloading dnx-mono.1.0.0-beta4 from https://www.nuget.org/api/v2\n\
+    Download: https://www.nuget.org/api/v2/package/dnx-mono/1.0.0-beta4\n##############################################\
+    \ 100.0%\nInstalling to /home/agusk/.dnx/runtimes/dnx-mono.1.0.0-beta4\nAdding\
+    \ /home/agusk/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin to process PATH\nSetting\
+    \ alias 'default' to 'dnx-mono.1.0.0-beta4'\nagusk@ubuntu15:~$ dnvm help\n\n \
+    \   ██████████████████████████\n\n.NET Version Manager - Version 1.0.0-beta6-10381\n\
+    By Microsoft Open Technologies, Inc.\n\nDNVM can be used to download versions\
+    \ of the .NET Execution Environment and mana\nge which version you are using.\n\
+    You can control the URL of the stable and unstable channel by setting the DNx_FE\n\
+    ED and DNx_UNSTABLE_FEED variables.\n\nCurrent feed settings:\n```\n\n```\n\n\
+    You can also see a list of your DNx runtime by typing this command.\n\n```\n```\n\
+    $ dnvm list\n```\n\n```\n\n```\n```\ndnvm alias <alias>\n    display value of\
+    \ the specified alias\n\ndnvm alias <alias> <sever>|<alias>|<package>\n    <alias>\
+    \              the name of the alias to set\n    <sever>|<alias>|<package>   \
+    \ the DNx version to set the alias to. Alternativel\n    y use the version of\
+    \ the specified alias\n\ndnvm unalias <alias>\n    remove the specified alias\n\
+    \ndnvm [help|-h|-help|--help]\n    displays this help text.\n\ndnvm update-self\n\
+    \    updates dnvm itself.\nagusk@ubuntu15:~$ dnvm list\n\nActive Version     \
+    \     Runtime Arch Location           Alias\n--------- ----------    --------\
+    \  ---  --------    -----   ----\n        *   1.0.0-beta4    mono      ~/.dnx/runtimes\
+    \    default\n\nagusk@ubuntu15:~$\n```\n\n```"
+  - "[PAGE 31]\n\n# ### 3.2.4 Installing git\n\nThis task is optional but I recommend\
+    \ to install it because we want to run the sample app from https://github.com/aspnet/Home\
+    \ .\n\nType this command to install git.\n\n```\n$ sudo apt-get install git\n\
+    ```\n\n```\nagusk@ubuntu15:~\n\nagusk@ubuntu15:~$ sudo apt-get install git\n[sudo]\
+    \ password for agusk:\nReading package lists... Done\nBuilding dependency tree\n\
+    Reading state information... Done\nThe following extra packages will be installed:\n\
+    \  git-man liberror-perl\nSuggested packages:\n  git-daemon-run git-daemon-sysvinit\
+    \ git-doc git-el git-email git-gui gitk\n  gitweb git-arch git-cvs git-mediawiki\
+    \ git-svn\nThe following NEW packages will be installed:\n  git git-man liberror-perl\n\
+    0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.\nNeed to get 3,517\
+    \ kB of archives.\nAfter this operation, 22,7 MB of additional disk space will\
+    \ be used.\nDo you want to continue? [Y/n]\n```"
+  - '[PAGE 32]
+
+
+    # ## 3.3 Testing
+
+
+    To test our ASP.NET 5, we use code samples from https://github.com/aspnet/Home
+    . We clone this code samples and then restore all required libraries using dnu
+    command.
+
+
+    Type these commands.
+
+
+    ```
+
+    $ git clone https://github.com/aspnet/Home
+
+    $ cd Home
+
+    $ dnu restore
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_32_0.png)
+
+
+    Now you are ready to run code samples.
+
+
+    # ### 3.3.1 ASP.NET Console
+
+
+    To run ASP.NET Console, we can use dnx. Firstly, navigate to ConsoleApp project.
+
+
+    Type these commands.
+
+
+    ```
+
+    $ cd samples/latest/ConsoleApp/
+
+    $ dnx . run .
+
+    ```
+
+
+    If success, you can see a message “Hello World” on Terminal.'
+  md: "\n## 3 Deploying ASP.NET 5 on Linux\n\nIn this chapter we will learn how to\
+    \ deploy ASP.NET 5 on Linux.\n\n### 3.1 Getting Started\n\nIn this section we\
+    \ start to deploy ASP.NET 5 on Linux. In this book I use ASP.NET 5 preview, beta4.\
+    \ For illustration, I use Ubuntu 15.04 as Linux distro. Please follow installation\
+    \ steps on next section.\n\n### 3.2 Deploying ASP.NET 5\n\nThis installation process\
+    \ is based on this documentation, [https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md](https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md).\
+    \ In this section, we install ASP.NET 5 on Linux manually (without docker). Firstly,\
+    \ you update your distro.\n\n```bash\n$ sudo apt-get update\n```\n\nIn general,\
+    \ to install ASP.NET 5 on Ubuntu, you can do the following steps:\n\n- Installing\
+    \ Mono\n- Installing libuv\n- Installing DNVM\n- Installing git (optional)\n\n\
+    #### 3.2.1 Installing Mono\n\nMono is .NET runtime for Linux. You need the latest\
+    \ version of Mono runtime. To install it, you can type these commands.\n\n```bash\n\
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FA7E032\n$ echo\
+    \ \"deb http://download.mono-project.com/repo/debian wheezy main\" > /etc/apt/sources.list.d/mono.list\n\
+    $ sudo apt-get update\n$ sudo apt-get install mono-complete\n```\n\nIf finished,\
+    \ you can verify it by checking its version.\n\n```bash\n$ mono --version\n```\n\
+    \n```bash\nagusk@ubuntu15:~$\nagusk@ubuntu15:~$ mono --version\nMono JIT compiler\
+    \ version 4.0.1 (tarball Tue May 12 15:39:23 UTC 2015)\nCopyright (C) 2002-2014\
+    \ Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com\n    TLS:  \
+    \             __thread\n    SIGSEGV:          altstack\n    Notifications:   \
+    \ epoll\n    Architecture:     amd64\n    Disabled:         none\n    Misc:  \
+    \           softdebug\n    LLVM:             supported, not enabled.\n    GC:\
+    \               sgen\nagusk@ubuntu15:~$\n```\n\n#### 3.2.2 Installing libuv\n\n\
+    Libuv is a multi-platform asynchronous IO library that is used by the KestrelHttpServer\
+    \ that we will use to host our web applications.\n\nType these commands to install\
+    \ libuv library.\n\n```bash\n$ sudo apt-get install automake libtool curl\n$ curl\
+    \ -sSL https://github.com/libuv/libuv/archive/v1.4.2.tar.gz | sudo tar -xz -C\
+    \ /usr/local/src/\n$ cd /usr/local/src/libuv-1.4.2\n$ sudo sh autogen.sh\n$ sudo\
+    \ ./configure\n$ sudo make\n$ sudo make install\n$ sudo rm -rf /usr/local/src/libuv-1.4.2\
+    \ && cd ~/\n$ sudo ldconfig\n```\n\n```bash\nagusk@ubuntu15:~\nin a given directory,\
+    \ LIBDIR, you must either use libtool, and\nspecify the full pathname of the library,\
+    \ or use the `-LLIBDIR'\nflag during linking and do at least one of the following:\n\
+    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable\nduring execution\n\
+    - add LIBDIR to the 'LD_RUN_PATH' environment variable\nduring linking\n- use\
+    \ the '-Wl,-rpath -Wl,LIBDIR' linker flag\n- have your system administrator add\
+    \ LIBDIR to '/etc/ld.so.conf'\n\nSee any operating system documentation about\
+    \ shared libraries for\nmore information, such as the ld(1) and ld.so(8) manual\
+    \ pages.\n----------------------\n/bin/mkdir -p '/usr/local/include'\n/usr/bin/install\
+    \ -c -m 644 include/uv.h include/uv-errno.h include/uv-threadpool.h include/uv-version.h\
+    \ include/uv-unix.h include/uv-linux.h '/usr/local/include/'\n/bin/mkdir -p '/usr/local/lib/pkgconfig'\n\
+    /usr/bin/install -c -m 644 libuv.pc '/usr/local/lib/pkgconfig'\nmake[1]: Leaving\
+    \ directory '/usr/local/src/libuv-1.4.2'\nagusk@ubuntu15:/usr/local/src/libuv-1.4.2$\
+    \ sudo rm -rf /usr/local/src/libuv-1.4.2 && cd ~/agusk@ubuntu15:~$ sudo ldconfig\n\
+    agusk@ubuntu15:~$ \n```\n\n#### 3.2.3 Installing DNVM\n\nThe last step is to install\
+    \ DNVM. Type this command.\n\n```bash\n$ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh\
+    \ | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh\n```\n\nIf success, you can\
+    \ see a task which you should do. We must add dnvm on our profile.\n\n```bash\n\
+    agusk@ubuntu15:~\nagusk@ubuntu15:~$ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvm\
+    \ install.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh\nDownloading dnvm\
+    \ as script to '/home/agusk/.dnx/dnvm/dnvm'\nAppending source string to /home/agusk/.bashrc\n\
+    Type 'source /home/agusk/.dnx/dnvm/dnvm.sh' to start using dnvm\nagusk@ubuntu15:~$\
+    \ \n```\n\nType this command.\n\n```bash\n$ nano /home/<account>/.bashrc\n```\n\
+    \nPlease change `<account>` by your Linux login account.\n\nThen, you get nano\
+    \ editor. You also edit this file using gedit or other text editor. Add this script\
+    \ on .bashrc file into your profile, for instance, `/home/<account>/.bashrc`.\n\
+    \nThen, type this script.\n\n```bash\nsource /home/<account>/.dnx/dnvm/dnvm.sh\n\
+    ```\n\nPlease change `<account>` by your Linux login account.\n\nIf done, save\
+    \ this file. After that, close your Terminal and then open again so Terminal will\
+    \ load profile script.\n\nThe next step is to upgrade. Type this command.\n\n\
+    ```bash\n$ dnvm upgrade\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_29_0.png)\n\
+    \nNow you already installed dnvm. It will be used to manage ASP.NET 5 runtime\
+    \ on Linux. You can verify dnvm by typing this command.\n\n```bash\n$ dnvm help\n\
+    ```\n\nSo you see a list of dnvm parameter.\n\n```bash\nagusk@ubuntu15:~$ dnvm\
+    \ upgrade\nDetermining latest version\nLatest version is 1.0.0-beta4\nDownloading\
+    \ dnx-mono.1.0.0-beta4 from https://www.nuget.org/api/v2\nDownload: https://www.nuget.org/api/v2/package/dnx-mono/1.0.0-beta4\n\
+    ############################################## 100.0%\nInstalling to /home/agusk/.dnx/runtimes/dnx-mono.1.0.0-beta4\n\
+    Adding /home/agusk/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin to process PATH\nSetting\
+    \ alias 'default' to 'dnx-mono.1.0.0-beta4'\nagusk@ubuntu15:~$ dnvm help\n\n \
+    \   ██████████████████████████\n\n.NET Version Manager - Version 1.0.0-beta6-10381\n\
+    By Microsoft Open Technologies, Inc.\n\nDNVM can be used to download versions\
+    \ of the .NET Execution Environment and mana\nge which version you are using.\n\
+    You can control the URL of the stable and unstable channel by setting the DNx_FE\n\
+    ED and DNx_UNSTABLE_FEED variables.\n\nCurrent feed settings:\n```\n\nYou can\
+    \ also see a list of your DNx runtime by typing this command.\n\n```bash\n$ dnvm\
+    \ list\n```\n\n```bash\ndnvm alias <alias>\n    display value of the specified\
+    \ alias\n\ndnvm alias <alias> <sever>|<alias>|<package>\n    <alias>         \
+    \     the name of the alias to set\n    <sever>|<alias>|<package>    the DNx version\
+    \ to set the alias to. Alternativel\n    y use the version of the specified alias\n\
+    \ndnvm unalias <alias>\n    remove the specified alias\n\ndnvm [help|-h|-help|--help]\n\
+    \    displays this help text.\n\ndnvm update-self\n    updates dnvm itself.\n\
+    agusk@ubuntu15:~$ dnvm list\n\nActive Version          Runtime Arch Location \
+    \          Alias\n--------- ----------    --------  ---  --------    -----   ----\n\
+    \        *   1.0.0-beta4    mono      ~/.dnx/runtimes    default\n\nagusk@ubuntu15:~$\n\
+    ```\n\n#### 3.2.4 Installing git\n\nThis task is optional but I recommend to install\
+    \ it because we want to run the sample app from https://github.com/aspnet/Home.\n\
+    \nType this command to install git.\n\n```bash\n$ sudo apt-get install git\n```\n\
+    \n```bash\nagusk@ubuntu15:~\n\nagusk@ubuntu15:~$ sudo apt-get install git\n[sudo]\
+    \ password for agusk:\nReading package lists... Done\nBuilding dependency tree\n\
+    Reading state information... Done\nThe following extra packages will be installed:\n\
+    \  git-man liberror-perl\nSuggested packages:\n  git-daemon-run git-daemon-sysvinit\
+    \ git-doc git-el git-email git-gui gitk\n  gitweb git-arch git-cvs git-mediawiki\
+    \ git-svn\nThe following NEW packages will be installed:\n  git git-man liberror-perl\n\
+    0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.\nNeed to get 3,517\
+    \ kB of archives.\nAfter this operation, 22,7 MB of additional disk space will\
+    \ be used.\nDo you want to continue? [Y/n]\n```\n\n## 3.3 Testing\n\nTo test our\
+    \ ASP.NET 5, we use code samples from https://github.com/aspnet/Home. We clone\
+    \ this code samples and then restore all required libraries using dnu command.\n\
+    \nType these commands.\n\n```bash\n$ git clone https://github.com/aspnet/Home\n\
+    $ cd Home\n$ dnu restore\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_32_0.png)\n\
+    \nNow you are ready to run code samples.\n\n### 3.3.1 ASP.NET Console\n\nTo run\
+    \ ASP.NET Console, we can use dnx. Firstly, navigate to ConsoleApp project.\n\n\
+    Type these commands.\n\n```bash\n$ cd samples/latest/ConsoleApp/\n$ dnx . run\
+    \ .\n```\n\nIf success, you can see a message “Hello World” on Terminal.\n"
+  mdcn: "\n\n## 3 在 Linux 上部署 ASP.NET 5\n\n在本章中，我们将学习如何在 Linux 上部署 ASP.NET 5。\n\n\
+    ### 3.1 入门\n\n在本节中，我们将开始在 Linux 上部署 ASP.NET 5。在这本书中，我使用的是 ASP.NET 5 预览版，beta4。作为示例，我使用\
+    \ Ubuntu 15.04 作为 Linux 发行版。请按照下一节的安装步骤进行操作。\n\n### 3.2 部署 ASP.NET 5\n\n此安装过程基于此文档：[https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md](https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md)。在本节中，我们将手动在\
+    \ Linux 上安装 ASP.NET 5（不使用 docker）。首先，请更新你的发行版。\n\n```bash\n$ sudo apt-get update\n\
+    ```\n\n通常，要在 Ubuntu 上安装 ASP.NET 5，你可以执行以下步骤：\n\n- 安装 Mono\n- 安装 libuv\n- 安装 DNVM\n\
+    - 安装 git（可选）\n\n#### 3.2.1 安装 Mono\n\nMono 是用于 Linux 的 .NET 运行时。你需要最新版本的 Mono\
+    \ 运行时。要安装它，你可以输入这些命令。\n\n```bash\n$ sudo apt-key adv --keyserver keyserver.ubuntu.com\
+    \ --recv-keys 3FA7E032\n$ echo \"deb http://download.mono-project.com/repo/debian\
+    \ wheezy main\" > /etc/apt/sources.list.d/mono.list\n$ sudo apt-get update\n$\
+    \ sudo apt-get install mono-complete\n```\n\n完成后，你可以通过检查其版本来验证。\n\n```bash\n$\
+    \ mono --version\n```\n\n```bash\nagusk@ubuntu15:~$\nagusk@ubuntu15:~$ mono --version\n\
+    Mono JIT compiler version 4.0.1 (tarball Tue May 12 15:39:23 UTC 2015)\nCopyright\
+    \ (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com\n\
+    \    TLS:               __thread\n    SIGSEGV:          altstack\n    Notifications:\
+    \    epoll\n    Architecture:     amd64\n    Disabled:         none\n    Misc:\
+    \             softdebug\n    LLVM:             supported, not enabled.\n    GC:\
+    \               sgen\nagusk@ubuntu15:~$\n```\n\n#### 3.2.2 安装 libuv\n\nLibuv 是一个多平台异步\
+    \ IO 库，由我们将用于托管 Web 应用程序的 KestrelHttpServer 使用。\n\n输入这些命令来安装 libuv 库。\n\n```bash\n\
+    $ sudo apt-get install automake libtool curl\n$ curl -sSL https://github.com/libuv/libuv/archive/v1.4.2.tar.gz\
+    \ | sudo tar -xz -C /usr/local/src/\n$ cd /usr/local/src/libuv-1.4.2\n$ sudo sh\
+    \ autogen.sh\n$ sudo ./configure\n$ sudo make\n$ sudo make install\n$ sudo rm\
+    \ -rf /usr/local/src/libuv-1.4.2 && cd ~/\n$ sudo ldconfig\n```\n\n```bash\nagusk@ubuntu15:~\n\
+    in a given directory, LIBDIR, you must either use libtool, and\nspecify the full\
+    \ pathname of the library, or use the `-LLIBDIR'\nflag during linking and do at\
+    \ least one of the following:\n- add LIBDIR to the 'LD_LIBRARY_PATH' environment\
+    \ variable\nduring execution\n- add LIBDIR to the 'LD_RUN_PATH' environment variable\n\
+    during linking\n- use the '-Wl,-rpath -Wl,LIBDIR' linker flag\n- have your system\
+    \ administrator add LIBDIR to '/etc/ld.so.conf'\n\nSee any operating system documentation\
+    \ about shared libraries for\nmore information, such as the ld(1) and ld.so(8)\
+    \ manual pages.\n----------------------\n/bin/mkdir -p '/usr/local/include'\n\
+    /usr/bin/install -c -m 644 include/uv.h include/uv-errno.h include/uv-threadpool.h\
+    \ include/uv-version.h include/uv-unix.h include/uv-linux.h '/usr/local/include/'\n\
+    /bin/mkdir -p '/usr/local/lib/pkgconfig'\n/usr/bin/install -c -m 644 libuv.pc\
+    \ '/usr/local/lib/pkgconfig'\nmake[1]: Leaving directory '/usr/local/src/libuv-1.4.2'\n\
+    agusk@ubuntu15:/usr/local/src/libuv-1.4.2$ sudo rm -rf /usr/local/src/libuv-1.4.2\
+    \ && cd ~/agusk@ubuntu15:~$ sudo ldconfig\nagusk@ubuntu15:~$ \n```\n\n#### 3.2.3\
+    \ 安装 DNVM\n\n最后一步是安装 DNVM。输入此命令。\n\n```bash\n$ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh\
+    \ | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh\n```\n\n如果成功，你会看到一个你应该执行的任务。我们必须将\
+    \ dnvm 添加到我们的配置文件（profile）中。\n\n```bash\nagusk@ubuntu15:~\nagusk@ubuntu15:~$ curl\
+    \ -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvm install.sh | DNX_BRANCH=dev\
+    \ sh && source ~/.dnx/dnvm/dnvm.sh\nDownloading dnvm as script to '/home/agusk/.dnx/dnvm/dnvm'\n\
+    Appending source string to /home/agusk/.bashrc\nType 'source /home/agusk/.dnx/dnvm/dnvm.sh'\
+    \ to start using dnvm\nagusk@ubuntu15:~$ \n```\n\n输入此命令。\n\n```bash\n$ nano /home/<account>/.bashrc\n\
+    ```\n\n请将 `<account>` 替换为你的 Linux 登录账户。\n\n然后，你将看到 nano 编辑器。你也可以使用 gedit 或其他文本编辑器来编辑此文件。将此脚本添加到你的配置文件（例如，`/home/<account>/.bashrc`）中的\
+    \ .bashrc 文件里。\n\n然后，输入此脚本。\n\n```bash\nsource /home/<account>/.dnx/dnvm/dnvm.sh\n\
+    ```\n\n请将 `<account>` 替换为你的 Linux 登录账户。\n\n完成后，保存此文件。之后，关闭你的终端并再次打开，以便终端加载配置文件脚本。\n\
+    \n下一步是进行升级。输入此命令。\n\n```bash\n$ dnvm upgrade\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_29_0.png)\n\
+    \n现在你已经安装好了 dnvm。它将用于管理 Linux 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 dnvm。\n\n```bash\n\
+    $ dnvm help\n```\n\n这样你就会看到 dnvm 参数列表。\n\n```bash\nagusk@ubuntu15:~$ dnvm upgrade\n\
+    Determining latest version\nLatest version is 1.0.0-beta4\nDownloading dnx-mono.1.0.0-beta4\
+    \ from https://www.nuget.org/api/v2\nDownload: https://www.nuget.org/api/v2/package/dnx-mono/1.0.0-beta4\n\
+    ############################################## 100.0%\nInstalling to /home/agusk/.dnx/runtimes/dnx-mono.1.0.0-beta4\n\
+    Adding /home/agusk/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin to process PATH\nSetting\
+    \ alias 'default' to 'dnx-mono.1.0.0-beta4'\nagusk@ubuntu15:~$ dnvm help\n\n \
+    \   ██████████████████████████\n\n.NET Version Manager - Version 1.0.0-beta6-10381\n\
+    By Microsoft Open Technologies, Inc.\n\nDNVM can be used to download versions\
+    \ of the .NET Execution Environment and mana\nge which version you are using.\n\
+    You can control the URL of the stable and unstable channel by setting the DNx_FE\n\
+    ED and DNx_UNSTABLE_FEED variables.\n\nCurrent feed settings:\n```\n\n你还可以通过输入此命令来查看你的\
+    \ DNx 运行时列表。\n\n```bash\n$ dnvm list\n```\n\n```bash\ndnvm alias <alias>\n   \
+    \ display value of the specified alias\n\ndnvm alias <alias> <sever>|<alias>|<package>\n\
+    \    <alias>              the name of the alias to set\n    <sever>|<alias>|<package>\
+    \    the DNx version to set the alias to. Alternativel\n    y use the version\
+    \ of the specified alias\n\ndnvm unalias <alias>\n    remove the specified alias\n\
+    \ndnvm [help|-h|-help|--help]\n    displays this help text.\n\ndnvm update-self\n\
+    \    updates dnvm itself.\nagusk@ubuntu15:~$ dnvm list\n\nActive Version     \
+    \     Runtime Arch Location           Alias\n--------- ----------    --------\
+    \  ---  --------    -----   ----\n        *   1.0.0-beta4    mono      ~/.dnx/runtimes\
+    \    default\n\nagusk@ubuntu15:~$\n```\n\n#### 3.2.4 安装 git\n\n此任务是可选的，但我建议安装它，因为我们想要从\
+    \ https://github.com/aspnet/Home 运行示例应用。\n\n输入此命令来安装 git。\n\n```bash\n$ sudo apt-get\
+    \ install git\n```\n\n```bash\nagusk@ubuntu15:~\n\nagusk@ubuntu15:~$ sudo apt-get\
+    \ install git\n[sudo] password for agusk:\nReading package lists... Done\nBuilding\
+    \ dependency tree\nReading state information... Done\nThe following extra packages\
+    \ will be installed:\n  git-man liberror-perl\nSuggested packages:\n  git-daemon-run\
+    \ git-daemon-sysvinit git-doc git-el git-email git-gui gitk\n  gitweb git-arch\
+    \ git-cvs git-mediawiki git-svn\nThe following NEW packages will be installed:\n\
+    \  git git-man liberror-perl\n0 upgraded, 3 newly installed, 0 to remove and 0\
+    \ not upgraded.\nNeed to get 3,517 kB of archives.\nAfter this operation, 22,7\
+    \ MB of additional disk space will be used.\nDo you want to continue? [Y/n]\n\
+    ```\n\n## 3.3 测试\n\n为了测试我们的 ASP.NET 5，我们使用来自 https://github.com/aspnet/Home 的代码示例。我们克隆这些代码示例，然后使用\
+    \ dnu 命令恢复所有必需的库。\n\n输入这些命令。\n\n```bash\n$ git clone https://github.com/aspnet/Home\n\
+    $ cd Home\n$ dnu restore\n```\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_32_0.png)\n\
+    \n现在你准备好运行代码示例了。\n\n### 3.3.1 ASP.NET 控制台\n\n要运行 ASP.NET 控制台，我们可以使用 dnx。首先，导航到\
+    \ ConsoleApp 项目。\n\n输入这些命令。\n\n```bash\n$ cd samples/latest/ConsoleApp/\n$ dnx\
+    \ . run .\n```\n\n如果成功，你可以在终端上看到一条 “Hello World” 消息。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 33]
+
+
+    ```
+
+    ```
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp
+
+    agusk@ubuntu15: ~/books/aspnet/home$ ls
+
+    CONTRIBUTING.md    dnvm.ps1       GettingStartedDeb.md   README.md
+
+    dnvm.cmd           dnvm.sh        Home.sln               samples
+
+    dnvm.ps1           LICENSE.txt
+
+    agusk@ubuntu15: ~/books/aspnet/home$ cd samples/latest/ConsoleApp/
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$ dnx . run .
+
+    Hello World
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$
+
+    ```
+
+    ```
+
+
+    # 3.3.2 ASP.NET 5
+
+
+    To run ASP.NET 5 app, we can use dn x with kestrel. Firstly, navigate to HelloWeb
+    project. Type these commands.
+
+
+    ```
+
+    ```
+
+    $ cd samples/latest/HelloWeb/
+
+    $ dn x . kestrel
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/HelloWeb
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/HelloWeb$ ls
+
+    HelloWeb.xproj   project.lock.json   Start up.cs
+
+    project.json     Properties          wwwroot
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/HelloWeb$ dn x . kestrel
+
+    Started
+
+    ```
+
+    ```
+
+
+    Now open a browser and then navigate to http://localhost:5004/ . You should see
+    ASP.NET 5 app.'
+  - '[PAGE 34]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_34_0.png)
+
+
+    To stop kestrel, you can type exit.
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    # ### 3.3.3 ASP.NET MVC
+
+
+    To run ASP.NET MVC, we can use dnx. Firstly, navigate to HelloMvc project. Type
+    these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dnx . kestrel
+
+    ```'
+  - '[PAGE 35]
+
+
+    ```
+
+    ```
+
+    agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ ls
+
+    Controllers  Models  project.lock.json  Startup.cs  wwwroot
+
+    HelloMvc.xproj  project.json  Properties  Views
+
+    agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ dnex . kestrel
+
+    Started
+
+    ```
+
+    ```
+
+
+    Now open a browser and then navigate to http://localhost:5004/ . You should see
+    ASP.NET MVC app.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_35_0.png)
+
+
+    To stop kestrel, you can type exit.'
+  - '[PAGE 36]
+
+
+    # ## 3.4 Development Tools
+
+
+    The next step is to build program. To write a program, you can use any text editor.
+    Microsoft also provides Visual Studio Code. It runs on Windows, Linux and Mac.
+    You can download it on https://code.visualstudio.com/ .
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_36_0.png)'
+  - '[PAGE 37]
+
+
+    # **4 Deploying ASP.NET 5 on Windows**
+
+
+    In this chapter we will learn how to deploy ASP.NET 5 on Windows.'
+  - '[PAGE 38]
+
+
+    # **4.1 Getting Started**
+
+
+    In this section we start to deploy ASP.NET 5 on Windows. In this book I use ASP.NET
+    5 preview, beta4. For illustration, I use Windows 8.1. Please follow installation
+    steps on next section.'
+  - '[PAGE 39]
+
+
+    # 4.2 Deploying ASP.NET 5
+
+
+    This installation process is based on this documentation, https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md
+    . In this section, we install ASP.NET 5 on Windows. Firstly, you update your Windows.
+
+
+    In general, to install ASP.NET 5 on Ubuntu, you can do the following steps:
+
+
+    +   - Installing .NET
+
+    +   - Installing DNVM
+
+    +   - Installing git (optional)
+
+
+    # 4.2.1 Installing .NET
+
+
+    You need the latest version of .NET Framework runtime. To install it, you can
+    download it on [https://www.microsoft.com/net](https://www.microsoft.com/net)
+    .
+
+
+    # 4.2.2 Installing DNVM
+
+
+    You can install DNVM via Command Prompt. Open CMD and type this command.
+
+
+    ```
+
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{$Branch=''dev'';iex
+    ((new-object net.webclient).DownloadString(''https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1''))}"
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_39_0.png)'
+  - '[PAGE 40]
+
+
+    If success, you can verify where dnvm is by typing this command.
+
+
+    ```
+
+    `where dnvm`
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_40_0.png)
+
+
+    If got error, check your PATH configuration. Make sure .dnx path already added.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_40_1.png)'
+  - '[PAGE 41]
+
+
+    The next step is to upgrade DNVM. Type this command.
+
+
+    ```
+
+    $ dnvm upgrade
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_41_0.png)
+
+
+    Now you already installed dnvm. It will be used to manage ASP.NET 5 runtime on
+    Windows. You can verify dnvm by typing this command.
+
+
+    ```
+
+    $ dnvm help
+
+    ```
+
+
+    So you see a list of dnvm parameter.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_41_1.png)
+
+
+    You can also see a list of your DN X runtime by typing this command.
+
+
+    ```
+
+    $ dnvm list
+
+    ```'
+  - '[PAGE 42]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_42_0.png)
+
+
+    # ## 4.2.3 Installing git
+
+
+    This task is optional but I recommend to install it because we want to run the
+    sample app from https://github.com/aspnet/Home . You can install git by downloading
+    it on https://git-scm.com/downloads .'
+  - '[PAGE 43]
+
+
+    # 4.3 Testing
+
+
+    To test our ASP.NET 5, we use code samples from https://github.com/aspnet/Home
+    . We clone this code samples and then restore all required libraries using dnu
+    command.
+
+
+    Type these commands.
+
+
+    ```
+
+    $ git clone https://github.com/aspnet/Home
+
+    $ cd Home
+
+    $ dnu restore
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_43_0.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_43_1.png)
+
+
+    Now you are ready to run code samples.
+
+
+    # 4.3.1 ASP.NET Console'
+  - '[PAGE 44]
+
+
+    To run ASP.NET Console, we can use dnx. Firstly, navigate to ConsoleApp project.
+    Type these commands.
+
+
+    ```
+
+    $ cd samples/latest/ConsoleApp/
+
+    $ dnx . run .
+
+    ```
+
+
+    If success, you can see a message “Hello World” on Terminal.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_44_0.png)
+
+
+    # ## 4.3.2 ASP.NET 5
+
+
+    To run ASP.NET 5 app, we can use dnx with kestrel. Firstly, navigate to HelloWeb
+    project. Type these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloWeb/
+
+    $ dnx . kestrel
+
+    ```'
+  - '[PAGE 45]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_45_0.png)
+
+
+    When you run these commands, you may get a security confirmation. Please click
+    **Allow access** button to give a security permission.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_45_1.png)
+
+
+    Now open a browser and then navigate to [http://localhost:5004/](http://localhost:5004/)
+    . You should see ASP.NET 5 app.'
+  - '[PAGE 46]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_46_0.png)
+
+
+    To stop kestrel, you can type exit.
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    # 4.3.3 ASP.NET MVC
+
+
+    To run ASP.NET MVC, we can use dn\ x. Firstly, navigate to HelloMvc project. Type
+    these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dn\ x. kestrel
+
+    ```'
+  - '[PAGE 47]
+
+
+    ```
+
+    ```
+
+    D:\Temp\Home>cd samples/latest/Conso1eApp/
+
+    D:\Temp\Home\samples\latest\Conso1eApp>dpx . run.
+
+    He 11o World
+
+
+    D:\Temp\Home\samples\latest\Conso1eApp>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd He11oWeb
+
+
+    D:\Temp\Home\samples\latest\He11oWeb>dpx . kestrel
+
+
+
+    ```
+
+    ```
+
+
+    Now open a browser and then navigate to [http://localhost:5004/](http://localhost:5004/).
+    You should see ASP.NET MVC app.
+
+
+    ```
+
+    ```
+
+    D:\Temp\Home\samples\latest\Conso1eApp>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd He11oWeb
+
+
+    D:\Temp\Home\samples\latest\He11oWeb>dpx . kestrel
+
+    Started
+
+    exit
+
+
+    D:\Temp\Home\samples\latest\He11oWeb>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd He11oMvc
+
+
+    D:\Temp\Home\samples\latest\He11oMvc>dpx . kestrel
+
+    Started
+
+    exit
+
+    ```
+
+
+    ```
+
+
+    To stop kestrel, you can type exit.'
+  - '[PAGE 48]
+
+
+    # ## 4.4 Development Tools
+
+
+    The next step is to build program. To write a program, you can use any text editor.
+    Microsoft also provides Visual Studio Code. It runs on Windows, Linux and Mac.
+    You can download it on https://code.visualstudio.com/ .
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_48_0.png)'
+  - '[PAGE 49]
+
+
+    # 5. ASP.NET 5 Development
+
+
+    In this chapter I’m going to explain how to work with ASP.NET 5 development.'
+  - '[PAGE 50]
+
+
+    # **5.1 Getting Started**
+
+
+    In this chapter, we learn how to write a program for ASP.NET 5 from scratch. We
+    use two scenarios, ASP.NET 5 Console and ASP.NET 5 MVC, for illustrating.'
+  - '[PAGE 51]
+
+
+    # 5.2 Building ASP.NET 5 Console Application
+
+
+    In this case, we build a simple program for ASP.NET 5 Console. We implement Math
+    operation using Math class.
+
+
+    # 5.2.1 Creating A Project
+
+
+    To create a project, we can create a folder, called ConsoleDemo. In Linux/OS X,
+    you can type this command on Terminal.
+
+
+    ```
+
+    ```bash
+
+    mkdir ConsoleDemo
+
+    ```
+
+    ```
+
+
+    Furthermore, we create a file, **project.json**. Type this script.
+
+
+    ```
+
+    ```json
+
+    {
+
+    "dependencies" : {
+
+    },
+
+    "commands" : {
+
+    "ConsoleApp" : "ConsoleDemo"
+
+    },
+
+    "frameworks" : {
+
+    "dnx451" : { },
+
+    "dnxcore50" : {
+
+    "dependencies" : {
+
+    "System.Console" : "4.0.0-beta- *"
+
+    }
+
+    }
+
+    }
+
+    }
+
+    ```
+
+    ```
+
+
+    This file is a project configuration which uses ASP.NET 5 DNX.
+
+
+    # 5.2.2 Writing Program
+
+
+    To create a program, we create a class, SimpleMath. Create a file, called **SimpleMath.cs**.
+    Then, write this code.
+
+
+    ```
+
+    ```csharp
+
+    using System;
+
+
+    public class SimpleMath
+
+    {
+
+    public SimpleMath(){ }
+
+    }
+
+    ```
+
+    ```'
+  md: '
+
+    # 3.3.2 ASP.NET 5
+
+
+    To run ASP.NET 5 app, we can use `dnx` with kestrel. Firstly, navigate to HelloWeb
+    project. Type these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloWeb/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ```
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp
+
+    agusk@ubuntu15: ~/books/aspnet/home$ ls
+
+    CONTRIBUTING.md    dnvm.ps1       GettingStartedDeb.md   README.md
+
+    dnvm.cmd           dnvm.sh        Home.sln               samples
+
+    dnvm.ps1           LICENSE.txt
+
+    agusk@ubuntu15: ~/books/aspnet/home$ cd samples/latest/ConsoleApp/
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$ dnx . run .
+
+    Hello World
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$
+
+    ```
+
+
+    Now open a browser and then navigate to `http://localhost:5004/`. You should see
+    ASP.NET 5 app.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_34_0.png)
+
+
+    To stop kestrel, you can type `exit`.
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    ### 3.3.3 ASP.NET MVC
+
+
+    To run ASP.NET MVC, we can use `dnx`. Firstly, navigate to HelloMvc project. Type
+    these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ```
+
+    agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ ls
+
+    Controllers  Models  project.lock.json  Startup.cs  wwwroot
+
+    HelloMvc.xproj  project.json  Properties  Views
+
+    agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ dnx . kestrel
+
+    Started
+
+    ```
+
+
+    Now open a browser and then navigate to `http://localhost:5004/`. You should see
+    ASP.NET MVC app.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_35_0.png)
+
+
+    To stop kestrel, you can type `exit`.
+
+
+    ## 3.4 Development Tools
+
+
+    The next step is to build program. To write a program, you can use any text editor.
+    Microsoft also provides Visual Studio Code. It runs on Windows, Linux and Mac.
+    You can download it on `https://code.visualstudio.com/`.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_36_0.png)
+
+
+    # 4. Deploying ASP.NET 5 on Windows
+
+
+    In this chapter we will learn how to deploy ASP.NET 5 on Windows.
+
+
+    ## 4.1 Getting Started
+
+
+    In this section we start to deploy ASP.NET 5 on Windows. In this book I use ASP.NET
+    5 preview, beta4. For illustration, I use Windows 8.1. Please follow installation
+    steps on next section.
+
+
+    ## 4.2 Deploying ASP.NET 5
+
+
+    This installation process is based on this documentation, `https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md`.
+    In this section, we install ASP.NET 5 on Windows. Firstly, you update your Windows.
+
+
+    In general, to install ASP.NET 5 on Ubuntu, you can do the following steps:
+
+
+    - Installing .NET
+
+    - Installing DNVM
+
+    - Installing git (optional)
+
+
+    ### 4.2.1 Installing .NET
+
+
+    You need the latest version of .NET Framework runtime. To install it, you can
+    download it on `https://www.microsoft.com/net`.
+
+
+    ### 4.2.2 Installing DNVM
+
+
+    You can install DNVM via Command Prompt. Open CMD and type this command.
+
+
+    ```
+
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{$Branch=''dev'';iex
+    ((new-object net.webclient).DownloadString(''https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1''))}"
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_39_0.png)
+
+
+    If success, you can verify where `dnvm` is by typing this command.
+
+
+    ```
+
+    where dnvm
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_40_0.png)
+
+
+    If got error, check your PATH configuration. Make sure `.dnx` path already added.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_40_1.png)
+
+
+    The next step is to upgrade DNVM. Type this command.
+
+
+    ```
+
+    $ dnvm upgrade
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_41_0.png)
+
+
+    Now you already installed `dnvm`. It will be used to manage ASP.NET 5 runtime
+    on Windows. You can verify `dnvm` by typing this command.
+
+
+    ```
+
+    $ dnvm help
+
+    ```
+
+
+    So you see a list of `dnvm` parameter.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_41_1.png)
+
+
+    You can also see a list of your DNX runtime by typing this command.
+
+
+    ```
+
+    $ dnvm list
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_42_0.png)
+
+
+    ### 4.2.3 Installing git
+
+
+    This task is optional but I recommend to install it because we want to run the
+    sample app from `https://github.com/aspnet/Home`. You can install git by downloading
+    it on `https://git-scm.com/downloads`.
+
+
+    ## 4.3 Testing
+
+
+    To test our ASP.NET 5, we use code samples from `https://github.com/aspnet/Home`.
+    We clone this code samples and then restore all required libraries using `dnu`
+    command.
+
+
+    Type these commands.
+
+
+    ```
+
+    $ git clone https://github.com/aspnet/Home
+
+    $ cd Home
+
+    $ dnu restore
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_43_0.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_43_1.png)
+
+
+    Now you are ready to run code samples.
+
+
+    ### 4.3.1 ASP.NET Console
+
+
+    To run ASP.NET Console, we can use `dnx`. Firstly, navigate to ConsoleApp project.
+    Type these commands.
+
+
+    ```
+
+    $ cd samples/latest/ConsoleApp/
+
+    $ dnx . run .
+
+    ```
+
+
+    If success, you can see a message “Hello World” on Terminal.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_44_0.png)
+
+
+    ### 4.3.2 ASP.NET 5
+
+
+    To run ASP.NET 5 app, we can use `dnx` with kestrel. Firstly, navigate to HelloWeb
+    project. Type these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloWeb/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_45_0.png)
+
+
+    When you run these commands, you may get a security confirmation. Please click
+    **Allow access** button to give a security permission.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_45_1.png)
+
+
+    Now open a browser and then navigate to `http://localhost:5004/`. You should see
+    ASP.NET 5 app.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_46_0.png)
+
+
+    To stop kestrel, you can type `exit`.
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    ### 4.3.3 ASP.NET MVC
+
+
+    To run ASP.NET MVC, we can use `dnx`. Firstly, navigate to HelloMvc project. Type
+    these commands.
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ```
+
+    D:\Temp\Home>cd samples/latest/ConsoleApp/
+
+    D:\Temp\Home\samples\latest\ConsoleApp>dnx . run.
+
+    Hello World
+
+
+    D:\Temp\Home\samples\latest\ConsoleApp>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd HelloWeb
+
+
+    D:\Temp\Home\samples\latest\HelloWeb>dnx . kestrel
+
+    ```
+
+
+    Now open a browser and then navigate to `http://localhost:5004/`. You should see
+    ASP.NET MVC app.
+
+
+    ```
+
+    D:\Temp\Home\samples\latest\ConsoleApp>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd HelloWeb
+
+
+    D:\Temp\Home\samples\latest\HelloWeb>dnx . kestrel
+
+    Started
+
+    exit
+
+
+    D:\Temp\Home\samples\latest\HelloWeb>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd HelloMvc
+
+
+    D:\Temp\Home\samples\latest\HelloMvc>dnx . kestrel
+
+    Started
+
+    exit
+
+    ```
+
+
+    To stop kestrel, you can type `exit`.
+
+
+    ## 4.4 Development Tools
+
+
+    The next step is to build program. To write a program, you can use any text editor.
+    Microsoft also provides Visual Studio Code. It runs on Windows, Linux and Mac.
+    You can download it on `https://code.visualstudio.com/`.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_48_0.png)
+
+
+    # 5. ASP.NET 5 Development
+
+
+    In this chapter I’m going to explain how to work with ASP.NET 5 development.
+
+
+    ## 5.1 Getting Started
+
+
+    In this chapter, we learn how to write a program for ASP.NET 5 from scratch. We
+    use two scenarios, ASP.NET 5 Console and ASP.NET 5 MVC, for illustrating.
+
+
+    ## 5.2 Building ASP.NET 5 Console Application
+
+
+    In this case, we build a simple program for ASP.NET 5 Console. We implement Math
+    operation using Math class.
+
+
+    ### 5.2.1 Creating A Project
+
+
+    To create a project, we can create a folder, called ConsoleDemo. In Linux/OS X,
+    you can type this command on Terminal.
+
+
+    ```bash
+
+    mkdir ConsoleDemo
+
+    ```
+
+
+    Furthermore, we create a file, **project.json**. Type this script.
+
+
+    ```json
+
+    {
+
+    "dependencies" : {
+
+    },
+
+    "commands" : {
+
+    "ConsoleApp" : "ConsoleDemo"
+
+    },
+
+    "frameworks" : {
+
+    "dnx451" : { },
+
+    "dnxcore50" : {
+
+    "dependencies" : {
+
+    "System.Console" : "4.0.0-beta- *"
+
+    }
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    This file is a project configuration which uses ASP.NET 5 DNX.
+
+
+    ### 5.2.2 Writing Program
+
+
+    To create a program, we create a class, SimpleMath. Create a file, called **SimpleMath.cs**.
+    Then, write this code.
+
+
+    ```csharp
+
+    using System;
+
+
+    public class SimpleMath
+
+    {
+
+    public SimpleMath(){ }
+
+    }
+
+    ```
+
+    '
+  mdcn: '
+
+
+    # 3.3.2 ASP.NET 5
+
+
+    要运行 ASP.NET 5 应用程序，我们可以使用 `dnx` 搭配 kestrel。首先，导航到 HelloWeb 项目。输入以下命令。
+
+
+    ```
+
+    $ cd samples/latest/HelloWeb/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ```
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp
+
+    agusk@ubuntu15: ~/books/aspnet/home$ ls
+
+    CONTRIBUTING.md    dnvm.ps1       GettingStartedDeb.md   README.md
+
+    dnvm.cmd           dnvm.sh        Home.sln               samples
+
+    dnvm.ps1           LICENSE.txt
+
+    agusk@ubuntu15: ~/books/aspnet/home$ cd samples/latest/ConsoleApp/
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$ dnx . run .
+
+    Hello World
+
+    agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$
+
+    ```
+
+
+    现在打开浏览器，然后导航到 `http://localhost:5004/`。你应该能看到 ASP.NET 5 应用程序。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_34_0.png)
+
+
+    要停止 kestrel，你可以输入 `exit`。
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    ### 3.3.3 ASP.NET MVC
+
+
+    要运行 ASP.NET MVC，我们可以使用 `dnx`。首先，导航到 HelloMvc 项目。输入以下命令。
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ```
+
+    agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ ls
+
+    Controllers  Models  project.lock.json  Startup.cs  wwwroot
+
+    HelloMvc.xproj  project.json  Properties  Views
+
+    agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ dnx . kestrel
+
+    Started
+
+    ```
+
+
+    现在打开浏览器，然后导航到 `http://localhost:5004/`。你应该能看到 ASP.NET MVC 应用程序。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_35_0.png)
+
+
+    要停止 kestrel，你可以输入 `exit`。
+
+
+    ## 3.4 开发工具
+
+
+    下一步是构建程序。为了编写程序，你可以使用任何文本编辑器。微软还提供了 Visual Studio Code。它运行在 Windows、Linux 和 Mac
+    上。你可以在 `https://code.visualstudio.com/` 上下载它。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_36_0.png)
+
+
+    # 4. 在 Windows 上部署 ASP.NET 5
+
+
+    在本章中，我们将学习如何在 Windows 上部署 ASP.NET 5。
+
+
+    ## 4.1 入门
+
+
+    在本节中，我们开始在 Windows 上部署 ASP.NET 5。在这本书中，我使用的是 ASP.NET 5 预览版，beta4。为了说明，我使用 Windows
+    8.1。请遵循下一节的安装步骤。
+
+
+    ## 4.2 部署 ASP.NET 5
+
+
+    此安装过程基于此文档，`https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md`。在本节中，我们在
+    Windows 上安装 ASP.NET 5。首先，你更新你的 Windows。
+
+
+    通常，要在 Ubuntu 上安装 ASP.NET 5，你可以执行以下步骤：
+
+
+    - 安装 .NET
+
+    - 安装 DNVM
+
+    - 安装 git（可选）
+
+
+    ### 4.2.1 安装 .NET
+
+
+    你需要最新版本的 .NET Framework 运行时。要安装它，你可以在 `https://www.microsoft.com/net` 上下载它。
+
+
+    ### 4.2.2 安装 DNVM
+
+
+    你可以通过命令提示符安装 DNVM。打开 CMD 并输入此命令。
+
+
+    ```
+
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{$Branch=''dev'';iex
+    ((new-object net.webclient).DownloadString(''https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1''))}"
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_39_0.png)
+
+
+    如果成功，你可以通过输入此命令来验证 `dnvm` 的位置。
+
+
+    ```
+
+    where dnvm
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_40_0.png)
+
+
+    如果收到错误，请检查你的 PATH 配置。确保 `.dnx` 路径已经添加。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_40_1.png)
+
+
+    下一步是升级 DNVM。输入此命令。
+
+
+    ```
+
+    $ dnvm upgrade
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_41_0.png)
+
+
+    现在你已经安装了 `dnvm`。它将用于管理 Windows 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 `dnvm`。
+
+
+    ```
+
+    $ dnvm help
+
+    ```
+
+
+    因此你会看到 `dnvm` 参数列表。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_41_1.png)
+
+
+    你还可以通过输入此命令来查看你的 DNX 运行时列表。
+
+
+    ```
+
+    $ dnvm list
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_42_0.png)
+
+
+    ### 4.2.3 安装 git
+
+
+    此任务是可选的，但我建议安装它，因为我们想从 `https://github.com/aspnet/Home` 运行示例应用程序。你可以在 `https://git-scm.com/downloads`
+    上下载来安装 git。
+
+
+    ## 4.3 测试
+
+
+    为了测试我们的 ASP.NET 5，我们使用来自 `https://github.com/aspnet/Home` 的代码示例。我们克隆这些代码示例，然后使用
+    `dnu` 命令还原所有必需的库。
+
+
+    输入这些命令。
+
+
+    ```
+
+    $ git clone https://github.com/aspnet/Home
+
+    $ cd Home
+
+    $ dnu restore
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_43_0.png)
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_43_1.png)
+
+
+    现在你准备好运行代码示例了。
+
+
+    ### 4.3.1 ASP.NET 控制台
+
+
+    要运行 ASP.NET 控制台，我们可以使用 `dnx`。首先，导航到 ConsoleApp 项目。输入这些命令。
+
+
+    ```
+
+    $ cd samples/latest/ConsoleApp/
+
+    $ dnx . run .
+
+    ```
+
+
+    如果成功，你可以在终端上看到“Hello World”消息。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_44_0.png)
+
+
+    ### 4.3.2 ASP.NET 5
+
+
+    要运行 ASP.NET 5 应用程序，我们可以使用 `dnx` 搭配 kestrel。首先，导航到 HelloWeb 项目。输入这些命令。
+
+
+    ```
+
+    $ cd samples/latest/HelloWeb/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_45_0.png)
+
+
+    当你运行这些命令时，你可能会收到一个安全确认。请点击 **Allow access** 按钮以授予安全权限。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_45_1.png)
+
+
+    现在打开浏览器，然后导航到 `http://localhost:5004/`。你应该能看到 ASP.NET 5 应用程序。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_46_0.png)
+
+
+    要停止 kestrel，你可以输入 `exit`。
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    ### 4.3.3 ASP.NET MVC
+
+
+    要运行 ASP.NET MVC，我们可以使用 `dnx`。首先，导航到 HelloMvc 项目。输入这些命令。
+
+
+    ```
+
+    $ cd samples/latest/HelloMvc/
+
+    $ dnx . kestrel
+
+    ```
+
+
+    ```
+
+    D:\Temp\Home>cd samples/latest/ConsoleApp/
+
+    D:\Temp\Home\samples\latest\ConsoleApp>dnx . run.
+
+    Hello World
+
+
+    D:\Temp\Home\samples\latest\ConsoleApp>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd HelloWeb
+
+
+    D:\Temp\Home\samples\latest\HelloWeb>dnx . kestrel
+
+    ```
+
+
+    现在打开浏览器，然后导航到 `http://localhost:5004/`。你应该能看到 ASP.NET MVC 应用程序。
+
+
+    ```
+
+    D:\Temp\Home\samples\latest\ConsoleApp>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd HelloWeb
+
+
+    D:\Temp\Home\samples\latest\HelloWeb>dnx . kestrel
+
+    Started
+
+    exit
+
+
+    D:\Temp\Home\samples\latest\HelloWeb>cd ..
+
+
+    D:\Temp\Home\samples\latest>cd HelloMvc
+
+
+    D:\Temp\Home\samples\latest\HelloMvc>dnx . kestrel
+
+    Started
+
+    exit
+
+    ```
+
+
+    要停止 kestrel，你可以输入 `exit`。
+
+
+    ## 4.4 开发工具
+
+
+    下一步是构建程序。为了编写程序，你可以使用任何文本编辑器。微软还提供了 Visual Studio Code。它运行在 Windows、Linux 和 Mac
+    上。你可以在 `https://code.visualstudio.com/` 上下载它。
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_48_0.png)
+
+
+    # 5. ASP.NET 5 开发
+
+
+    在本章中，我将解释如何处理 ASP.NET 5 开发。
+
+
+    ## 5.1 入门
+
+
+    在本章中，我们学习如何从头开始为 ASP.NET 5 编写程序。我们使用两个场景，ASP.NET 5 控制台和 ASP.NET 5 MVC，进行说明。
+
+
+    ## 5.2 构建 ASP.NET 5 控制台应用程序
+
+
+    在这种情况下，我们为 ASP.NET 5 控制台构建一个简单的程序。我们使用 Math 类来实现 Math 操作。
+
+
+    ### 5.2.1 创建项目
+
+
+    要创建一个项目，我们可以创建一个文件夹，名为 ConsoleDemo。在 Linux/OS X 中，你可以在终端中输入此命令。
+
+
+    ```bash
+
+    mkdir ConsoleDemo
+
+    ```
+
+
+    此外，我们创建一个文件，**project.json**。输入此脚本。
+
+
+    ```json
+
+    {
+
+    "dependencies" : {
+
+    },
+
+    "commands" : {
+
+    "ConsoleApp" : "ConsoleDemo"
+
+    },
+
+    "frameworks" : {
+
+    "dnx451" : { },
+
+    "dnxcore50" : {
+
+    "dependencies" : {
+
+    "System.Console" : "4.0.0-beta- *"
+
+    }
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    此文件是一个项目配置，使用 ASP.NET 5 DNX。
+
+
+    ### 5.2.2 编写程序
+
+
+    要创建一个程序，我们创建一个类，SimpleMath。创建一个文件，名为 **SimpleMath.cs**。然后，编写此代码。
+
+
+    ```csharp
+
+    using System;
+
+
+    public class SimpleMath
+
+    {
+
+    public SimpleMath(){ }
+
+    }
+
+    ```
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 52]\n\n```\npublic double Add(double a, double b)\n{\n    return a + b;\n\
+    }\npublic void DemoMath(double a, double b)\n{\n    Console.WriteLine(\"cos({0})\
+    \ = {1}\", a, Math.Cos(a));\n    Console.WriteLine(\"sin({0}) = {1}\", b, Math.Sin(b));\n\
+    \    Console.WriteLine(\"exp({0}) = {1}\", a, Math.Exp(a));\n}\n```\n\nThe next\
+    \ step is to create a main program. Create a file, **Program.cs**, and write this\
+    \ code.\n\n```\nusing System;\n\npublic class Program\n{\n    public static void\
+    \ Main()\n    {\n        Console.WriteLine(\"===Demo Simple Math===\");\n    \
+    \    double a = 0.2;\n        double b = 3.5;\n\n        SimpleMath o = new SimpleMath();\n\
+    \        double result = o.Add(a, b);\n        Console.WriteLine(\"{0} + {1} =\
+    \ {2}\", a, b, result);\n\n        o.DemoMath(a, b);\n\n        Console.WriteLine(\"\
+    Done\");\n    }\n}\n```\n\nSave all files.\n\nThe following is our project structure.\n\
+    \n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_52_0.png)\n\n# 5.2.3 Testing"
+  - '[PAGE 53]
+
+
+    Now you can test the program. Firstly, we load all required libraries using dnu.
+    Then, we execute the program using dn
+
+
+    ```
+
+    dnu restore
+
+    dnx . run .
+
+    ```
+
+
+    If success, you can see the program output.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_53_0.png)'
+  - '[PAGE 54]
+
+
+    # # 5.3 Building ASP.NET 5 MVC Application
+
+
+    The second demo is to build ASP.NET 5 MVC application. We develop a simple entry
+    form and utilize ASP.NET MVC session. The following is our scenario:
+
+
+    +   - User fills a form to create a new project
+
+    +   - User clicks Save button to save the data
+
+    +   - The data will be stored to a session stack
+
+    +   - Then, the data will be shown in another page
+
+
+    Let’s start to develop.
+
+
+    # ## 5.3.1 Creating a Project
+
+
+    Firstly, we create a project by creating a folder, called WebDemo. Then, you create
+    the following folder:
+
+
+    +   - Controllers
+
+    +   - Models
+
+    +   - Properties
+
+    +   - Views
+
+    +   - wwwroot
+
+
+    You can see the project structure on the Figure below.'
+  - '[PAGE 55]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_55_0.png)
+
+
+    We need project a config file, called **project.json**, on the project root folder.
+    It consists of required libraries. Please write this script for project.json file.
+
+
+    ```
+
+    1 {
+
+    2 "version": "1.0.0-*",
+
+    3 "webroot": "wwwroot",
+
+    4 "exclude": [
+
+    5 "wwwRoot"
+
+    6 ],
+
+    7 "packExclude": [
+
+    8 "**.kproj",
+
+    9 "**.user",
+
+    10 "**.vspcc"
+
+    11 ],
+
+    12 "dependencies": {
+
+    13 "Kestrel": "1.0.0-*",
+
+    14 "Microsoft.AspNet.Diagnostics": "1.0.0-*",
+
+    15 "Microsoft.AspNet.Mvc": "6.0.0-*",
+
+    16 "Microsoft.AspNet.Server.IIS": "1.0.0-*",
+
+    17 "Microsoft.AspNet.Server.WebListener": "1.0.0-*",
+
+    18 "Microsoft.AspNet.Session": "1.0.0-*"
+
+    19 },
+
+    20 "commands": {
+
+    21 "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Serve..
+
+    22 "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server,u..
+
+    23 },
+
+    24 "frameworks": {
+
+    25 "dnx451": { },
+
+    26 "dnxcore50": { }
+
+    27 }
+
+    ```'
+  - "[PAGE 56]\n\n```\n```\n} }\n```\n```\n\nApp will start by executing **Startup.cs**\
+    \ file. Create this file and write this code.\n\n```\n```\nusing Microsoft.AspNetCore.Builder;\n\
+    using Microsoft.Framework.DependencyInjection;\n\nnamespace WebDemo\n{\n    public\
+    \ class Startup\n    {\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            services.AddMvc();\n        }\n        \n\
+    \        public void Configure(IApplicationBuilder app)\n        {\n         \
+    \   // handle error page\n            app.UseErrorPage();\n            // handle\
+    \ session\n            app.UseInMemorySession();\n            // aspNet routing\n\
+    \            app.UseMvc(routes =>\n            {\n                routes.MapRoute(\"\
+    default\", \"{controller=Home}/{action=In\n            });\n        }\n    }\n\
+    }\n```\n```\n\nWe also add **launchSettings.json** to configure how to execute\
+    \ the program. Store it on Properties folder. Write this script for **launchSettings.json**\
+    \ file.\n\n```\n```\n{\n  \"profiles\": {\n    \"IIS Express\": {\n      \"commandName\"\
+    : \"IISExpress\",\n      \"launchBrowser\": true,\n      \"environmentVariables\"\
+    : {\n        \"ASPNET_ENV\": \"Development\"\n      }\n    },\n    \"kestrel\"\
+    : {\n      \"commandName\": \"kestrel\",\n      \"launchBrowser\": true,\n   \
+    \   \"launchUrl\": \"http://localhost:5004\"\n    },\n    \"web\": {\n```\n```"
+  - "[PAGE 57]\n\n```\n\"commandName\": \"web\",\n\"launchBrowser\": true,\n\"launchUrl\"\
+    : \"http://localhost:5001\"\n}\n```\n\n```\n\n# 5.3.2 Writing Program\n\nIn this\
+    \ section, we write our ASP.NET 5 MVC program.\n\n# 5.3.2.1 Creating Model\n\n\
+    A model holds a data. In our case, we create a module, called Product, which consists\
+    \ of four properties. Create a file, called **Product.cs**, and write this code.\n\
+    \n```\nusing System.ComponentModel.DataAnnotations;\n\nnamespace WebDemo.Web.Models\n\
+    {\n    public class Product\n    {\n        [Required]\n        [MinLength(4)]\n\
+    \        [Display( Name = \"Name\" )]\n        public string Name { get; set;\
+    \ }\n        [Display( Name = \"Product Code\" )]\n        public string ProductCode\
+    \ { get; set; }\n        [Display( Name = \"Quantity\" )]\n        public int\
+    \ Quantity { get; set; }\n        [Display( Name = \"Is Discount\" )]\n      \
+    \  public bool IsDiscount { get; set; }\n    }\n}\n```\n\n```\n\nSave this file\
+    \ into Models folder.\n\n# 5.3.2.2 Creating Controller\n\nNow we create MVC controller,\
+    \ called Home controller. Create a file, called **HomeController.cs**, and write\
+    \ this code."
+  - '[PAGE 58]
+
+
+    ```
+
+    using System;
+
+    using Microsoft .AspNet.Mvc;
+
+    using Microsoft .AspNet.Http;
+
+    using WebDemo .Web .Models;
+
+
+    namespace WebDemo .Web .Controllers
+
+    {
+
+    public class HomeController : Controller
+
+    {
+
+    public IActionResult Index()
+
+    {
+
+    return View();
+
+    }
+
+    public IActionResult Create()
+
+    {
+
+    var product = new Product();
+
+    return View (product);
+
+    }
+
+    [HttpPost]
+
+    public IActionResult Create (Product obj)
+
+    {
+
+    // do database processing
+
+    ///////
+
+    // for testing, save it into a session
+
+    Context .Session .SetString ("name" , obj .Name);
+
+    Context .Session .SetString("code" , obj .ProductCode);
+
+    Context .Session .SetInt ("quantity" , obj .Quantity);
+
+    Context .Session .SetString ("discount" , obj .IsDiscount .ToString
+
+
+    return RedirectToAction("Save");
+
+    }
+
+    public IActionResult Save()
+
+    {
+
+    var product = new Product();
+
+    product .Name = Context .Session .GetString ("name");
+
+    product .ProductCode = Context .Session .GetString ("code");
+
+    product .Quantity = (int)Context .Session .GetInt ("quantity");
+
+    product .IsDiscount = Convert .ToBoolean (Context .Session .GetSt
+
+    return View (product);
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    5.3.2.3 Creating View'
+  - "[PAGE 59]\n\nWe create three pages:\n\n+   * Index.cshtml\n+   * Create.cshtml\n\
+    +   * Save.cshtml\n\nWe also create a layout, called **Shared.cshtml**. Write\
+    \ this script.\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\"\
+    \ />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    \ />\n    <title>@ViewBag.Title - My ASP.NET Application</title>\n    <link rel=\"\
+    stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.0...\n</head>\n<body>\n\
+    \    <div class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div class=\"\
+    container\">\n            <div class=\"navbar-header\">\n                <button\
+    \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" ...>\n    \
+    \                <span class=\"icon-bar\"></span>\n                    <span class=\"\
+    icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n   \
+    \             </button>\n            </div>\n            <div class=\"navbar-collapse\
+    \ collapse\">\n                <ul class=\"nav navbar-nav\">\n               \
+    \     <li><a href=\"/\">Home</a></li>\n                </ul>\n            </div>\n\
+    \        </div>\n    </div>\n    <div class=\"container body-content\">\n    \
+    \    @RenderBody()\n        <footer>\n            <p>&copy; @DateTime.Now.Year\
+    \ - My ASP.NET Application</p>\n        </footer>\n    </div>\n</body>\n</html>\n\
+    ```\n\nThe following is a script for **Index.cshtml** file.\n\n```\n@{\n    Layout\
+    \ = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title = \"Home Page\";\n}\n\
+    \n<div class=\"jumbotron\">\n```"
+  - "[PAGE 60]\n\n```\n```html\n<h1>ASP.NET MVC Demo</h1>\n<p class=\"lead\"> Filling\
+    \ and submitting a form.</p>\n<p><a href=\"/Home/Create\" class=\"btn btn-primary\
+    \ btn-lg\">Create &</div>\n```\n```\n\nThe following is a script for **Create.cshtml**\
+    \ file.\n\n```\n```csharp\n@using WebDemo.Web.Models\n@model Product\n@{\n   \
+    \ Layout = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title = \"Create Product\"\
+    ;\n}\n\n<div class=\"jumbotron\">\n    <h1>ASP.NET</h1>\n    <p class=\"lead\"\
+    >Create a new product. Fill this form. Then, click Sa</div>\n@using ( Html.BeginForm()\
+    \ )\n{\n    <fieldset>\n        <legend>Create a new Product</legend>\n\n    \
+    \    <div class=\"editor-label\">\n            @Html.LabelFor(model => model.Name)\n\
+    \        </div>\n        <div class=\"editor-field\">\n            @Html.TextBoxFor(model\
+    \ => model.Name)\n        </div>\n        <br/>\n\n        <div class=\"editor-label\"\
+    >\n            @Html.LabelFor(model => model.ProductCode)\n        </div>\n  \
+    \      <div class=\"editor-field\">\n            @Html.TextBoxFor( model => model.ProductCode\
+    \ )\n        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n \
+    \           @Html.LabelFor(model => model.Quantity)\n        </div>\n        <div\
+    \ class=\"editor-field\">\n            @Html.TextBoxFor( model => model.Quantity\
+    \ )\n        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n \
+    \           <div style=\"float: left;\">\n                @Html.CheckBoxFor(model\
+    \ => model.IsDisco</div>\n            @Html.LabelFor(model => model.IsDiscount)\n\
+    ```\n```"
+  md: "\n```csharp\npublic double Add(double a, double b)\n{\n    return a + b;\n\
+    }\n\npublic void DemoMath(double a, double b)\n{\n    Console.WriteLine(\"cos({0})\
+    \ = {1}\", a, Math.Cos(a));\n    Console.WriteLine(\"sin({0}) = {1}\", b, Math.Sin(b));\n\
+    \    Console.WriteLine(\"exp({0}) = {1}\", a, Math.Exp(a));\n}\n```\n\nThe next\
+    \ step is to create a main program. Create a file, **Program.cs**, and write this\
+    \ code.\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static\
+    \ void Main()\n    {\n        Console.WriteLine(\"===Demo Simple Math===\");\n\
+    \        double a = 0.2;\n        double b = 3.5;\n\n        SimpleMath o = new\
+    \ SimpleMath();\n        double result = o.Add(a, b);\n        Console.WriteLine(\"\
+    {0} + {1} = {2}\", a, b, result);\n\n        o.DemoMath(a, b);\n\n        Console.WriteLine(\"\
+    Done\");\n    }\n}\n```\n\nSave all files.\n\nThe following is our project structure.\n\
+    \n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_52_0.png)\n\n## 5.2.3 Testing\n\nNow\
+    \ you can test the program. Firstly, we load all required libraries using `dnu`.\
+    \ Then, we execute the program using `dnx`.\n\n```bash\ndnu restore\ndnx . run\
+    \ .\n```\n\nIf success, you can see the program output.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_53_0.png)\n\
+    \n## 5.3 Building ASP.NET 5 MVC Application\n\nThe second demo is to build an\
+    \ ASP.NET 5 MVC application. We develop a simple entry form and utilize ASP.NET\
+    \ MVC session. The following is our scenario:\n\n- User fills a form to create\
+    \ a new project\n- User clicks Save button to save the data\n- The data will be\
+    \ stored to a session stack\n- Then, the data will be shown in another page\n\n\
+    Let’s start to develop.\n\n### 5.3.1 Creating a Project\n\nFirstly, we create\
+    \ a project by creating a folder, called WebDemo. Then, you create the following\
+    \ folders:\n\n- Controllers\n- Models\n- Properties\n- Views\n- wwwroot\n\nYou\
+    \ can see the project structure on the Figure below.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_55_0.png)\n\
+    \nWe need a config file, called **project.json**, in the project root folder.\
+    \ It consists of required libraries. Please write this script for project.json\
+    \ file.\n\n```json\n{\n  \"version\": \"1.0.0-*\",\n  \"webroot\": \"wwwroot\"\
+    ,\n  \"exclude\": [\n    \"wwwRoot\"\n  ],\n  \"packExclude\": [\n    \"**.kproj\"\
+    ,\n    \"**.user\",\n    \"**.vspcc\"\n  ],\n  \"dependencies\": {\n    \"Kestrel\"\
+    : \"1.0.0-*\",\n    \"Microsoft.AspNet.Diagnostics\": \"1.0.0-*\",\n    \"Microsoft.AspNet.Mvc\"\
+    : \"6.0.0-*\",\n    \"Microsoft.AspNet.Server.IIS\": \"1.0.0-*\",\n    \"Microsoft.AspNet.Server.WebListener\"\
+    : \"1.0.0-*\",\n    \"Microsoft.AspNet.Session\": \"1.0.0-*\"\n  },\n  \"commands\"\
+    : {\n    \"web\": \"Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener\
+    \ --server.urls http://localhost:5001\",\n    \"kestrel\": \"Microsoft.AspNet.Hosting\
+    \ --server Kestrel --server.urls http://localhost:5004\"\n  },\n  \"frameworks\"\
+    : {\n    \"dnx451\": {},\n    \"dnxcore50\": {}\n  }\n}\n```\n\nApp will start\
+    \ by executing **Startup.cs** file. Create this file and write this code.\n\n\
+    ```csharp\nusing Microsoft.AspNetCore.Builder;\nusing Microsoft.Framework.DependencyInjection;\n\
+    \nnamespace WebDemo\n{\n    public class Startup\n    {\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            services.AddMvc();\n        }\n        \n\
+    \        public void Configure(IApplicationBuilder app)\n        {\n         \
+    \   // handle error page\n            app.UseErrorPage();\n            // handle\
+    \ session\n            app.UseInMemorySession();\n            // aspNet routing\n\
+    \            app.UseMvc(routes =>\n            {\n                routes.MapRoute(\"\
+    default\", \"{controller=Home}/{action=Index}\");\n            });\n        }\n\
+    \    }\n}\n```\n\nWe also add **launchSettings.json** to configure how to execute\
+    \ the program. Store it on Properties folder. Write this script for **launchSettings.json**\
+    \ file.\n\n```json\n{\n  \"profiles\": {\n    \"IIS Express\": {\n      \"commandName\"\
+    : \"IISExpress\",\n      \"launchBrowser\": true,\n      \"environmentVariables\"\
+    : {\n        \"ASPNET_ENV\": \"Development\"\n      }\n    },\n    \"kestrel\"\
+    : {\n      \"commandName\": \"kestrel\",\n      \"launchBrowser\": true,\n   \
+    \   \"launchUrl\": \"http://localhost:5004\"\n    },\n    \"web\": {\n      \"\
+    commandName\": \"web\",\n      \"launchBrowser\": true,\n      \"launchUrl\":\
+    \ \"http://localhost:5001\"\n    }\n  }\n}\n```\n\n### 5.3.2 Writing Program\n\
+    \nIn this section, we write our ASP.NET 5 MVC program.\n\n#### 5.3.2.1 Creating\
+    \ Model\n\nA model holds a data. In our case, we create a model, called Product,\
+    \ which consists of four properties. Create a file, called **Product.cs**, and\
+    \ write this code.\n\n```csharp\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace WebDemo.Web.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"Is Discount\"\
+    )]\n        public bool IsDiscount { get; set; }\n    }\n}\n```\n\nSave this file\
+    \ into Models folder.\n\n#### 5.3.2.2 Creating Controller\n\nNow we create MVC\
+    \ controller, called Home controller. Create a file, called **HomeController.cs**,\
+    \ and write this code.\n\n```csharp\nusing System;\nusing Microsoft.AspNet.Mvc;\n\
+    using Microsoft.AspNet.Http;\nusing WebDemo.Web.Models;\n\nnamespace WebDemo.Web.Controllers\n\
+    {\n    public class HomeController : Controller\n    {\n        public IActionResult\
+    \ Index()\n        {\n            return View();\n        }\n\n        public\
+    \ IActionResult Create()\n        {\n            var product = new Product();\n\
+    \            return View(product);\n        }\n\n        [HttpPost]\n        public\
+    \ IActionResult Create(Product obj)\n        {\n            // do database processing\n\
+    \            /////////////////\n            // for testing, save it into a session\n\
+    \            Context.Session.SetString(\"name\", obj.Name);\n            Context.Session.SetString(\"\
+    code\", obj.ProductCode);\n            Context.Session.SetInt(\"quantity\", obj.Quantity);\n\
+    \            Context.Session.SetString(\"discount\", obj.IsDiscount.ToString());\n\
+    \n            return RedirectToAction(\"Save\");\n        }\n\n        public\
+    \ IActionResult Save()\n        {\n            var product = new Product();\n\
+    \            product.Name = Context.Session.GetString(\"name\");\n           \
+    \ product.ProductCode = Context.Session.GetString(\"code\");\n            product.Quantity\
+    \ = (int)Context.Session.GetInt(\"quantity\");\n            product.IsDiscount\
+    \ = Convert.ToBoolean(Context.Session.GetString(\"discount\"));\n            return\
+    \ View(product);\n        }\n    }\n}\n```\n\n#### 5.3.2.3 Creating View\n\nWe\
+    \ create three pages:\n\n- Index.cshtml\n- Create.cshtml\n- Save.cshtml\n\nWe\
+    \ also create a layout, called **Shared.cshtml**. Write this script.\n\n```html\n\
+    <!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"\
+    viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>@ViewBag.Title\
+    \ - My ASP.NET Application</title>\n    <link rel=\"stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\"\
+    \ />\n</head>\n<body>\n    <div class=\"navbar navbar-inverse navbar-fixed-top\"\
+    >\n        <div class=\"container\">\n            <div class=\"navbar-header\"\
+    >\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"\
+    collapse\" data-target=\".navbar-collapse\">\n                    <span class=\"\
+    icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n   \
+    \                 <span class=\"icon-bar\"></span>\n                </button>\n\
+    \            </div>\n            <div class=\"navbar-collapse collapse\">\n  \
+    \              <ul class=\"nav navbar-nav\">\n                    <li><a href=\"\
+    /\">Home</a></li>\n                </ul>\n            </div>\n        </div>\n\
+    \    </div>\n    <div class=\"container body-content\">\n        @RenderBody()\n\
+    \        <footer>\n            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>\n\
+    \        </footer>\n    </div>\n</body>\n</html>\n```\n\nThe following is a script\
+    \ for **Index.cshtml** file.\n\n```html\n@{\n    Layout = \"/Views/Shared/_Layout.cshtml\"\
+    ;\n    ViewBag.Title = \"Home Page\";\n}\n\n<div class=\"jumbotron\">\n    <h1>ASP.NET\
+    \ MVC Demo</h1>\n    <p class=\"lead\">Filling and submitting a form.</p>\n  \
+    \  <p><a href=\"/Home/Create\" class=\"btn btn-primary btn-lg\">Create</a></p>\n\
+    </div>\n```\n\nThe following is a script for **Create.cshtml** file.\n\n```html\n\
+    @using WebDemo.Web.Models\n@model Product\n@{\n    Layout = \"/Views/Shared/_Layout.cshtml\"\
+    ;\n    ViewBag.Title = \"Create Product\";\n}\n\n<div class=\"jumbotron\">\n \
+    \   <h1>ASP.NET</h1>\n    <p class=\"lead\">Create a new product. Fill this form.\
+    \ Then, click Save.</p>\n</div>\n\n@using (Html.BeginForm())\n{\n    <fieldset>\n\
+    \        <legend>Create a new Product</legend>\n\n        <div class=\"editor-label\"\
+    >\n            @Html.LabelFor(model => model.Name)\n        </div>\n        <div\
+    \ class=\"editor-field\">\n            @Html.TextBoxFor(model => model.Name)\n\
+    \        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n     \
+    \       @Html.LabelFor(model => model.ProductCode)\n        </div>\n        <div\
+    \ class=\"editor-field\">\n            @Html.TextBoxFor(model => model.ProductCode)\n\
+    \        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n     \
+    \       @Html.LabelFor(model => model.Quantity)\n        </div>\n        <div\
+    \ class=\"editor-field\">\n            @Html.TextBoxFor(model => model.Quantity)\n\
+    \        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n     \
+    \       <div style=\"float: left;\">\n                @Html.CheckBoxFor(model\
+    \ => model.IsDiscount)\n            </div>\n            @Html.LabelFor(model =>\
+    \ model.IsDiscount)\n        </div>\n        <br/>\n        <div>\n          \
+    \  <input type=\"submit\" value=\"Save\" />\n        </div>\n    </fieldset>\n\
+    }\n```\n"
+  mdcn: "\n\n```csharp\npublic double Add(double a, double b)\n{\n    return a + b;\n\
+    }\n\npublic void DemoMath(double a, double b)\n{\n    Console.WriteLine(\"cos({0})\
+    \ = {1}\", a, Math.Cos(a));\n    Console.WriteLine(\"sin({0}) = {1}\", b, Math.Sin(b));\n\
+    \    Console.WriteLine(\"exp({0}) = {1}\", a, Math.Exp(a));\n}\n```\n\n下一步是创建主程序。创建一个文件，**Program.cs**，并编写以下代码。\n\
+    \n```csharp\nusing System;\n\npublic class Program\n{\n    public static void\
+    \ Main()\n    {\n        Console.WriteLine(\"===Demo Simple Math===\");\n    \
+    \    double a = 0.2;\n        double b = 3.5;\n\n        SimpleMath o = new SimpleMath();\n\
+    \        double result = o.Add(a, b);\n        Console.WriteLine(\"{0} + {1} =\
+    \ {2}\", a, b, result);\n\n        o.DemoMath(a, b);\n\n        Console.WriteLine(\"\
+    Done\");\n    }\n}\n```\n\n保存所有文件。\n\n以下是我们的项目结构。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_52_0.png)\n\
+    \n## 5.2.3 测试\n\n现在您可以测试该程序了。首先，我们使用 `dnu` 加载所有必需的库。然后，使用 `dnx` 执行该程序。\n\n```bash\n\
+    dnu restore\ndnx . run .\n```\n\n如果成功，您将看到程序的输出。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_53_0.png)\n\
+    \n## 5.3 构建 ASP.NET 5 MVC 应用程序\n\n第二个演示是构建一个 ASP.NET 5 MVC 应用程序。我们开发一个简单的输入表单并利用\
+    \ ASP.NET MVC 会话。以下是我们的场景：\n\n- 用户填写表格以创建新项目\n- 用户点击保存按钮以保存数据\n- 数据将被存储到一个会话堆栈中\n\
+    - 然后，数据将在另一个页面中显示\n\n让我们开始开发吧。\n\n### 5.3.1 创建项目\n\n首先，我们通过创建一个名为 WebDemo 的文件夹来创建项目。然后，您创建以下文件夹：\n\
+    \n- Controllers\n- Models\n- Properties\n- Views\n- wwwroot\n\n您可以在下图中看到项目结构。\n\
+    \n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_55_0.png)\n\n我们需要在项目的根目录中有一个配置文件，称为\
+    \ **project.json**。它包含必需的库。请为 project.json 文件编写此脚本。\n\n```json\n{\n  \"version\"\
+    : \"1.0.0-*\",\n  \"webroot\": \"wwwroot\",\n  \"exclude\": [\n    \"wwwRoot\"\
+    \n  ],\n  \"packExclude\": [\n    \"**.kproj\",\n    \"**.user\",\n    \"**.vspcc\"\
+    \n  ],\n  \"dependencies\": {\n    \"Kestrel\": \"1.0.0-*\",\n    \"Microsoft.AspNet.Diagnostics\"\
+    : \"1.0.0-*\",\n    \"Microsoft.AspNet.Mvc\": \"6.0.0-*\",\n    \"Microsoft.AspNet.Server.IIS\"\
+    : \"1.0.0-*\",\n    \"Microsoft.AspNet.Server.WebListener\": \"1.0.0-*\",\n  \
+    \  \"Microsoft.AspNet.Session\": \"1.0.0-*\"\n  },\n  \"commands\": {\n    \"\
+    web\": \"Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener\
+    \ --server.urls http://localhost:5001\",\n    \"kestrel\": \"Microsoft.AspNet.Hosting\
+    \ --server Kestrel --server.urls http://localhost:5004\"\n  },\n  \"frameworks\"\
+    : {\n    \"dnx451\": {},\n    \"dnxcore50\": {}\n  }\n}\n```\n\n应用程序将通过执行 **Startup.cs**\
+    \ 文件启动。创建此文件并编写以下代码。\n\n```csharp\nusing Microsoft.AspNetCore.Builder;\nusing\
+    \ Microsoft.Framework.DependencyInjection;\n\nnamespace WebDemo\n{\n    public\
+    \ class Startup\n    {\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            services.AddMvc();\n        }\n        \n\
+    \        public void Configure(IApplicationBuilder app)\n        {\n         \
+    \   // handle error page\n            app.UseErrorPage();\n            // handle\
+    \ session\n            app.UseInMemorySession();\n            // aspNet routing\n\
+    \            app.UseMvc(routes =>\n            {\n                routes.MapRoute(\"\
+    default\", \"{controller=Home}/{action=Index}\");\n            });\n        }\n\
+    \    }\n}\n```\n\n我们还添加 **launchSettings.json** 来配置如何执行程序。将其存储在 Properties 文件夹中。请为\
+    \ **launchSettings.json** 文件编写此脚本。\n\n```json\n{\n  \"profiles\": {\n    \"IIS\
+    \ Express\": {\n      \"commandName\": \"IISExpress\",\n      \"launchBrowser\"\
+    : true,\n      \"environmentVariables\": {\n        \"ASPNET_ENV\": \"Development\"\
+    \n      }\n    },\n    \"kestrel\": {\n      \"commandName\": \"kestrel\",\n \
+    \     \"launchBrowser\": true,\n      \"launchUrl\": \"http://localhost:5004\"\
+    \n    },\n    \"web\": {\n      \"commandName\": \"web\",\n      \"launchBrowser\"\
+    : true,\n      \"launchUrl\": \"http://localhost:5001\"\n    }\n  }\n}\n```\n\n\
+    ### 5.3.2 编写程序\n\n在本节中，我们将编写我们的 ASP.NET 5 MVC 程序。\n\n#### 5.3.2.1 创建模型\n\n模型持有数据。在我们的情况下，我们创建一个名为\
+    \ Product 的模型，它由四个属性组成。创建一个文件，称为 **Product.cs**，并编写以下代码。\n\n```csharp\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace WebDemo.Web.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"Is Discount\"\
+    )]\n        public bool IsDiscount { get; set; }\n    }\n}\n```\n\n将此文件保存到 Models\
+    \ 文件夹中。\n\n#### 5.3.2.2 创建控制器\n\n现在我们将创建名为 Home 控制器的 MVC 控制器。创建一个文件，称为 **HomeController.cs**，并编写以下代码。\n\
+    \n```csharp\nusing System;\nusing Microsoft.AspNet.Mvc;\nusing Microsoft.AspNet.Http;\n\
+    using WebDemo.Web.Models;\n\nnamespace WebDemo.Web.Controllers\n{\n    public\
+    \ class HomeController : Controller\n    {\n        public IActionResult Index()\n\
+    \        {\n            return View();\n        }\n\n        public IActionResult\
+    \ Create()\n        {\n            var product = new Product();\n            return\
+    \ View(product);\n        }\n\n        [HttpPost]\n        public IActionResult\
+    \ Create(Product obj)\n        {\n            // do database processing\n    \
+    \        /////////////////\n            // for testing, save it into a session\n\
+    \            Context.Session.SetString(\"name\", obj.Name);\n            Context.Session.SetString(\"\
+    code\", obj.ProductCode);\n            Context.Session.SetInt(\"quantity\", obj.Quantity);\n\
+    \            Context.Session.SetString(\"discount\", obj.IsDiscount.ToString());\n\
+    \n            return RedirectToAction(\"Save\");\n        }\n\n        public\
+    \ IActionResult Save()\n        {\n            var product = new Product();\n\
+    \            product.Name = Context.Session.GetString(\"name\");\n           \
+    \ product.ProductCode = Context.Session.GetString(\"code\");\n            product.Quantity\
+    \ = (int)Context.Session.GetInt(\"quantity\");\n            product.IsDiscount\
+    \ = Convert.ToBoolean(Context.Session.GetString(\"discount\"));\n            return\
+    \ View(product);\n        }\n    }\n}\n```\n\n#### 5.3.2.3 创建视图\n\n我们创建三个页面：\n\
+    \n- Index.cshtml\n- Create.cshtml\n- Save.cshtml\n\n我们还创建一个布局，称为 **Shared.cshtml**。编写此脚本。\n\
+    \n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\" />\n \
+    \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    \ />\n    <title>@ViewBag.Title - My ASP.NET Application</title>\n    <link rel=\"\
+    stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\"\
+    \ />\n</head>\n<body>\n    <div class=\"navbar navbar-inverse navbar-fixed-top\"\
+    >\n        <div class=\"container\">\n            <div class=\"navbar-header\"\
+    >\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"\
+    collapse\" data-target=\".navbar-collapse\">\n                    <span class=\"\
+    icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n   \
+    \                 <span class=\"icon-bar\"></span>\n                </button>\n\
+    \            </div>\n            <div class=\"navbar-collapse collapse\">\n  \
+    \              <ul class=\"nav navbar-nav\">\n                    <li><a href=\"\
+    /\">Home</a></li>\n                </ul>\n            </div>\n        </div>\n\
+    \    </div>\n    <div class=\"container body-content\">\n        @RenderBody()\n\
+    \        <footer>\n            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>\n\
+    \        </footer>\n    </div>\n</body>\n</html>\n```\n\n以下是 **Index.cshtml**\
+    \ 文件的脚本。\n\n```html\n@{\n    Layout = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title\
+    \ = \"Home Page\";\n}\n\n<div class=\"jumbotron\">\n    <h1>ASP.NET MVC Demo</h1>\n\
+    \    <p class=\"lead\">Filling and submitting a form.</p>\n    <p><a href=\"/Home/Create\"\
+    \ class=\"btn btn-primary btn-lg\">Create</a></p>\n</div>\n```\n\n以下是 **Create.cshtml**\
+    \ 文件的脚本。\n\n```html\n@using WebDemo.Web.Models\n@model Product\n@{\n    Layout\
+    \ = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title = \"Create Product\"\
+    ;\n}\n\n<div class=\"jumbotron\">\n    <h1>ASP.NET</h1>\n    <p class=\"lead\"\
+    >Create a new product. Fill this form. Then, click Save.</p>\n</div>\n\n@using\
+    \ (Html.BeginForm())\n{\n    <fieldset>\n        <legend>Create a new Product</legend>\n\
+    \n        <div class=\"editor-label\">\n            @Html.LabelFor(model => model.Name)\n\
+    \        </div>\n        <div class=\"editor-field\">\n            @Html.TextBoxFor(model\
+    \ => model.Name)\n        </div>\n        <br/>\n\n        <div class=\"editor-label\"\
+    >\n            @Html.LabelFor(model => model.ProductCode)\n        </div>\n  \
+    \      <div class=\"editor-field\">\n            @Html.TextBoxFor(model => model.ProductCode)\n\
+    \        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n     \
+    \       @Html.LabelFor(model => model.Quantity)\n        </div>\n        <div\
+    \ class=\"editor-field\">\n            @Html.TextBoxFor(model => model.Quantity)\n\
+    \        </div>\n        <br/>\n\n        <div class=\"editor-label\">\n     \
+    \       <div style=\"float: left;\">\n                @Html.CheckBoxFor(model\
+    \ => model.IsDiscount)\n            </div>\n            @Html.LabelFor(model =>\
+    \ model.IsDiscount)\n        </div>\n        <br/>\n        <div>\n          \
+    \  <input type=\"submit\" value=\"Save\" />\n        </div>\n    </fieldset>\n\
+    }\n```\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 61]
+
+
+    ```
+
+    </div> <br/> <input type="submit" value="Save" /> </fieldset> } <p><br/></p>
+
+    ```
+
+
+    The following is a script for **Save.cshtml** file.
+
+
+    ```
+
+    @model WebDemo.Web.Models.Product @{ Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Reading Session"; } <div class="jumbotron"> <h1>ASP.NET</h1>
+    <p class="lead">Reading data from ASP.NET MVC session.</p> <p><a href="/Home"
+    class="btn btn-primary btn-large">Back to home &r </div> <div> <p>Name: @(Model
+    != null ? Model.Name : "")</p> <p>Product Code: @(Model != null ? Model.ProductCode
+    : "")</p> <p>Quantity: @(Model != null ? Model.Quantity : 0)</p> <p>Is Discount:
+    @(Model != null ? Model.IsDiscount : false)</p> </div> <p><br/></p>
+
+    ```
+
+
+    Save all files and store them into Views folder. See project structure.
+
+
+    # ### 5.3.3 Testing
+
+
+    Now you are ready to execute. Type these command to load required libraries and
+    execute the program.
+
+
+    ```
+
+    dnu restore dnx . kestrel
+
+    ```'
+  - "[PAGE 62]\n\n```\nRestoring packages for  /Users/agusk/Documents/AK/mybook/aspnet5/codes/WebDemo/project.json\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Kestrel'\nCACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.OptimisticCon...'\
+    \  \nCACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.Mvc'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Server'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Server.Kestrel'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Session'\n\
+    Writing lock file /Users/agusk/Documents/AK/mybook/aspnet5/codes/WebDemo/project.lock.json\n\
+    Restore complete: 3283ms elapsed\nagusk$ dnx . kestrel\nStarted\n```\n\nOpen a\
+    \ browser and navigate to http://localhost:5004 . Click Create button.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_62_0.png)\n\
+    \nFill all fields. If done, click Save button."
+  - '[PAGE 63]
+
+
+    # ASP.NET
+
+
+    Create a new product. Fill this form. Then, click Save button if done.
+
+
+    # Create a new Product
+
+
+    Name
+
+    product abc
+
+
+    Product Code
+
+    abc123
+
+
+    Quantity
+
+    10
+
+
+    ☑Is Discount
+
+
+    Save
+
+
+    © 2015 - My ASP.NET Application
+
+
+    Our filled form will be shown in the next page. It uses ASP.NET session to keep
+    our filled data.'
+  - '[PAGE 64]
+
+
+    # ASP.NET
+
+
+    Reading data from ASPNET MVC session.
+
+
+    ```
+
+    Back to home »
+
+    ```
+
+
+    Name: product abc
+
+
+    Product Code: abc123
+
+
+    Quantity: 10
+
+
+    Is discount: True
+
+
+    © 2015 - My ASPNET Application'
+  - '[PAGE 65]
+
+
+    # 6. ASP.NET 5 RESTful and AngularJS
+
+
+    In this chapter I’m going to explain how to work with ASP.NET 5 RESTful and AngularJS'
+  - '[PAGE 66]
+
+
+    # ## 6.1 Getting Started
+
+
+    In this section, we develop a simple app to work with ASP.NET RESTful and AngularJS.
+    AngularJS is an open-source JavaScript framework, maintained by Google, that assists
+    with running single-page applications. Further information about AngularJS, you
+    can visit official website on http://angularjs.org/ .
+
+
+    To integrate your application with AngularJS, you can download AngularJS on http://code.angularjs.org/.
+    Choose AngularJS version you want to use. To use AngularJS on your web application,
+    you just put it on your web page:
+
+
+    ```
+
+    ```html
+
+    <script src="lib/angular.min.js"></script>
+
+    ```
+
+    ```
+
+
+    This means AngularJS file will be downloaded from your local. You also can put
+    AngularJS as follows.
+
+
+    ```
+
+    ```html
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+    ```
+
+    ```
+
+
+    The following is our scenario:
+
+
+    +   - User click a button
+
+    +   - Program will request data from server via RESTful
+
+
+    Let''s start to develop.'
+  - '[PAGE 67]
+
+
+    # ## 6.2 Creating Project
+
+
+    Firstly, we create a project by creating a folder, called RESTfuldemo. After that,
+    you can create the following folder:
+
+
+    +   - Controllers
+
+    +   - Database
+
+    +   - Models
+
+    +   - Properties
+
+    +   - Views
+
+    +   - wwwroot
+
+
+    The following is project structure.
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_67_0.png)
+
+
+    We need project config file, called **project.json**, on the project root folder.
+    It consists of required libraries. Please write this script for **project.json**
+    file.
+
+
+    ```
+
+    `{`
+
+
+    ```'
+  - "[PAGE 68]\n\n```\n```json\n\"version\": \"1.0.0-*\",\n\"webroot\": \"wwwroot\"\
+    ,\n\"exclude\": [\n    \"wwwroot\"\n],\n\"packExclude\": [\n    \"***.kproj\"\
+    ,\n    \"***.user\",\n    \"***.vspscc\"\n],\n\"dependencies\": {\n    \"Kestrel\"\
+    : \"1.0.0-*\",\n    \"Microsoft.AspNet.Diagnostics\": \"1.0.0-*\",\n    \"Microsoft.AspNet.Mvc\"\
+    : \"6.0.0-*\",\n    \"Microsoft.AspNet.Server.IIS\": \"1.0.0-*\",\n    \"Microsoft.AspNet.Server.WebListener\"\
+    : \"1.0.0-*\",\n    \"Microsoft.AspNet.StaticFiles\": \"1.0.0-*\"\n},\n\"commands\"\
+    : {\n    \"web\": \"Microsoft.AspNet.Hosting --server Microsoft.AspNet.Serve...\"\
+    ,\n    \"kestrel\": \"Microsoft.AspNet.Hosting --server Kestrel --server.u...\"\
+    \n},\n\"frameworks\": {\n    \"dnx451\": { },\n    \"dnxcore50\": { }\n}\n```\n\
+    ```\n\nWe also add **launchSettings.json** to configure how to execute the program.\
+    \ Store it on Properties folder. Write this script for **launchSettings.json**\
+    \ file.\n\n```\n```json\n{\n    \"profiles\": {\n        \"IIS Express\": {\n\
+    \            \"commandName\": \"IISExpress\",\n            \"launchBrowser\":\
+    \ true,\n            \"environmentVariables\": {\n                \"ASPNET_ENV\"\
+    : \"Development\"\n            }\n        },\n        \"kestrel\": {\n       \
+    \     \"commandName\": \"kestrel\",\n            \"launchBrowser\": true,\n  \
+    \          \"launchUrl\": \"http://localhost:5004\"\n        },\n        \"web\"\
+    : {\n            \"commandName\": \"web\",\n            \"launchBrowser\": true,\n\
+    \            \"launchUrl\": \"http://localhost:5001\"\n        }\n    }\n}\n```\n\
+    ```"
+  - "[PAGE 69]\n\nApp will start by executing **Startup.cs** file. Create this file\
+    \ and write this code.\n\n```\nusing **Microsoft.AspNetCore**; using **Microsoft.Framework.DependencyInjection**;\n\
+    \nnamespace **WebDemo**\n{\n  public class **Startup**\n  {\n    public void **ConfigureServices**(IServiceCollection\
+    \ services)\n    {\n      services.AddMvc();\n    }\n\n    public void **Configure**(IApplicationBuilder\
+    \ app)\n    {\n      // handle error page\n      app.UseErrorPage();\n      //\
+    \ handle static file requests\n      app.UseStaticFiles();\n      // aspNet routing\n\
+    \      app.UseMvc(routes =>\n      {\n        routes.MapRoute(\"default\", \"\
+    {controller=Home}/{action=In\n      });\n    }\n  }\n}\n```"
+  - "[PAGE 70]\n\n# ## 6.3 Writing Program\n\nIn this section, we write our ASP.NET\
+    \ 5 MVC program.\n\n# ### 6.3.1 Creating Model\n\nFirstly, we create a model,\
+    \ called Product. The following is code implementation.\n\n```\n```\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace WebDemo.Web.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display( Name = \"Name\" )]\n        public\
+    \ string Name { get; set; }\n        [Display( Name = \"Product Code\" )]\n  \
+    \      public string ProductCode { get; set; }\n        [Display( Name = \"Quantity\"\
+    \ )]\n        public int Quantity { get; set; }\n        [Display( Name = \"Price\"\
+    \ )]\n        public double Price { get; set; }\n    }\n}\n```\n```\n\nSave this\
+    \ code into a file, called Product.cs and store it into Models folder.\n\n# ###\
+    \ 6.3.2 DUMMY Database\n\nIn this case, we don't access database directly so we\
+    \ create a dummy database which generates product data. Create a file, called\
+    \ DumpDatabase.cs and write this code.\n\n```\n```\nusing System;\nusing System.Collections.Generic;\n\
+    \nusing WebDemo.Web.Models;\nnamespace WebDemo.Web.Database\n{\n    public class\
+    \ DumpDatabase\n    {\n        private DumpDatabase(){}\n        public static\
+    \ List<Product> GetAllProducts()\n```\n```"
+  - "[PAGE 71]\n\n```\n```\n{\n    // generate data\n    List<Product> list = new\
+    \ List<Product>();\n    for(int i=0;i<10;i++){ \n        var item = new Product();\n\
+    \        item.Name = String.Format(\"Product {0}\",\n        item.ProductCode\
+    \ = String.Format(\"K0{0}\",\n        item.Quantity = 4 + i;\n        item.Price\
+    \ = 1.43 * (i+1);\n        list.Add(item);\n    }\n    return list;\n}\n```\n\
+    ```\n\nSave this file into Database folder.\n\n# ### 6.3.3 Creating Controller\n\
+    \nFurthermore, we build a controller, called Home by creating a file, called **HomeController.cs**.\
+    \ Write this code.\n\n```\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    using Microsoft. AspNet.Mvc;\nusing WebDemo.Web. Models;\nusing WebDemo.Web. Database;\n\
+    namespace WebDemo.Web.Controllers\n{\n    public class HomeController : Controller\n\
+    \    {\n        public IActionResult Index()\n        {\n            return View();\n\
+    \        }\n        [HttpPost]\n        public JsonResult GetAllProducts()\n \
+    \       {\n            List<Product> list = DumpDatabase.GetAllProducts();\n \
+    \           return Json(list);\n        }\n    }\n```\n```"
+  md: "\n# 5.3.3 Testing\n\nThe following is a script for **Save.cshtml** file.\n\n\
+    ```html\n@model WebDemo.Web.Models.Product\n@{\n    Layout = \"/Views/Shared/_Layout.cshtml\"\
+    ;\n    ViewBag.Title = \"Reading Session\";\n}\n<div class=\"jumbotron\">\n  \
+    \  <h1>ASP.NET</h1>\n    <p class=\"lead\">Reading data from ASP.NET MVC session.</p>\n\
+    \    <p><a href=\"/Home\" class=\"btn btn-primary btn-large\">Back to home &rarr;</a></p>\n\
+    </div>\n<div>\n    <p>Name: @(Model != null ? Model.Name : \"\")</p>\n    <p>Product\
+    \ Code: @(Model != null ? Model.ProductCode : \"\")</p>\n    <p>Quantity: @(Model\
+    \ != null ? Model.Quantity : 0)</p>\n    <p>Is Discount: @(Model != null ? Model.IsDiscount\
+    \ : false)</p>\n</div>\n```\n\nSave all files and store them into Views folder.\
+    \ See project structure.\n\nNow you are ready to execute. Type these commands\
+    \ to load required libraries and execute the program.\n\n```bash\ndnu restore\n\
+    dnx . kestrel\n```\n\n```text\nRestoring packages for /Users/agusk/Documents/AK/mybook/aspnet5/codes/WebDemo/project.json\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Kestrel'\nCACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.OptimisticConcurrency'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.Mvc'\nCACHE\
+    \ https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Server'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Server.Kestrel'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Session'\n\
+    Writing lock file /Users/agusk/Documents/AK/mybook/aspnet5/codes/WebDemo/project.lock.json\n\
+    Restore complete: 3283ms elapsed\nagusk$ dnx . kestrel\nStarted\n```\n\nOpen a\
+    \ browser and navigate to `http://localhost:5004`. Click Create button.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_62_0.png)\n\
+    \nFill all fields. If done, click Save button.\n\n# ASP.NET\n\nCreate a new product.\
+    \ Fill this form. Then, click Save button if done.\n\n### Create a new Product\n\
+    \nName: product abc  \nProduct Code: abc123  \nQuantity: 10  \nIs Discount: [x]\
+    \  \nSave  \n\n© 2015 - My ASP.NET Application\n\nOur filled form will be shown\
+    \ in the next page. It uses ASP.NET session to keep our filled data.\n\n# ASP.NET\n\
+    \nReading data from ASP.NET MVC session.\n\nBack to home »\n\nName: product abc\
+    \  \nProduct Code: abc123  \nQuantity: 10  \nIs Discount: True  \n\n© 2015 - My\
+    \ ASP.NET Application\n\n# 6. ASP.NET 5 RESTful and AngularJS\n\nIn this chapter\
+    \ I’m going to explain how to work with ASP.NET 5 RESTful and AngularJS.\n\n##\
+    \ 6.1 Getting Started\n\nIn this section, we develop a simple app to work with\
+    \ ASP.NET RESTful and AngularJS. AngularJS is an open-source JavaScript framework,\
+    \ maintained by Google, that assists with running single-page applications. Further\
+    \ information about AngularJS, you can visit official website on `http://angularjs.org/`.\n\
+    \nTo integrate your application with AngularJS, you can download AngularJS on\
+    \ `http://code.angularjs.org/`. Choose AngularJS version you want to use. To use\
+    \ AngularJS on your web application, you just put it on your web page:\n\n```html\n\
+    <script src=\"lib/angular.min.js\"></script>\n```\n\nThis means AngularJS file\
+    \ will be downloaded from your local. You also can put AngularJS as follows.\n\
+    \n```html\n<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js\"\
+    ></script>\n```\n\nThe following is our scenario:\n\n- User click a button\n-\
+    \ Program will request data from server via RESTful\n\nLet's start to develop.\n\
+    \n## 6.2 Creating Project\n\nFirstly, we create a project by creating a folder,\
+    \ called RESTfuldemo. After that, you can create the following folder:\n\n- Controllers\n\
+    - Database\n- Models\n- Properties\n- Views\n- wwwroot\n\nThe following is project\
+    \ structure.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_67_0.png)\n\nWe need\
+    \ project config file, called **project.json**, on the project root folder. It\
+    \ consists of required libraries. Please write this script for **project.json**\
+    \ file.\n\n```json\n{\n    \"version\": \"1.0.0-*\",\n    \"webroot\": \"wwwroot\"\
+    ,\n    \"exclude\": [\n        \"wwwroot\"\n    ],\n    \"packExclude\": [\n \
+    \       \"*.kproj\",\n        \"*.user\",\n        \"*.vspscc\"\n    ],\n    \"\
+    dependencies\": {\n        \"Kestrel\": \"1.0.0-*\",\n        \"Microsoft.AspNet.Diagnostics\"\
+    : \"1.0.0-*\",\n        \"Microsoft.AspNet.Mvc\": \"6.0.0-*\",\n        \"Microsoft.AspNet.Server.IIS\"\
+    : \"1.0.0-*\",\n        \"Microsoft.AspNet.Server.WebListener\": \"1.0.0-*\",\n\
+    \        \"Microsoft.AspNet.StaticFiles\": \"1.0.0-*\"\n    },\n    \"commands\"\
+    : {\n        \"web\": \"Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener\
+    \ --server.urls http://localhost:5001\",\n        \"kestrel\": \"Microsoft.AspNet.Hosting\
+    \ --server Kestrel --server.urls http://localhost:5004\"\n    },\n    \"frameworks\"\
+    : {\n        \"dnx451\": {},\n        \"dnxcore50\": {}\n    }\n}\n```\n\nWe also\
+    \ add **launchSettings.json** to configure how to execute the program. Store it\
+    \ on Properties folder. Write this script for **launchSettings.json** file.\n\n\
+    ```json\n{\n    \"profiles\": {\n        \"IIS Express\": {\n            \"commandName\"\
+    : \"IISExpress\",\n            \"launchBrowser\": true,\n            \"environmentVariables\"\
+    : {\n                \"ASPNET_ENV\": \"Development\"\n            }\n        },\n\
+    \        \"kestrel\": {\n            \"commandName\": \"kestrel\",\n         \
+    \   \"launchBrowser\": true,\n            \"launchUrl\": \"http://localhost:5004\"\
+    \n        },\n        \"web\": {\n            \"commandName\": \"web\",\n    \
+    \        \"launchBrowser\": true,\n            \"launchUrl\": \"http://localhost:5001\"\
+    \n        }\n    }\n}\n```\n\nApp will start by executing **Startup.cs** file.\
+    \ Create this file and write this code.\n\n```csharp\nusing Microsoft.AspNetCore;\n\
+    using Microsoft.Framework.DependencyInjection;\n\nnamespace WebDemo\n{\n    public\
+    \ class Startup\n    {\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            services.AddMvc();\n        }\n\n        public\
+    \ void Configure(IApplicationBuilder app)\n        {\n            // handle error\
+    \ page\n            app.UseErrorPage();\n            // handle static file requests\n\
+    \            app.UseStaticFiles();\n            // aspNet routing\n          \
+    \  app.UseMvc(routes =>\n            {\n                routes.MapRoute(\"default\"\
+    , \"{controller=Home}/{action=Index}\");\n            });\n        }\n    }\n\
+    }\n```\n\n## 6.3 Writing Program\n\nIn this section, we write our ASP.NET 5 MVC\
+    \ program.\n\n### 6.3.1 Creating Model\n\nFirstly, we create a model, called Product.\
+    \ The following is code implementation.\n\n```csharp\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace WebDemo.Web.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"Price\")]\n\
+    \        public double Price { get; set; }\n    }\n}\n```\n\nSave this code into\
+    \ a file, called Product.cs and store it into Models folder.\n\n### 6.3.2 DUMMY\
+    \ Database\n\nIn this case, we don't access database directly so we create a dummy\
+    \ database which generates product data. Create a file, called DumpDatabase.cs\
+    \ and write this code.\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    \nusing WebDemo.Web.Models;\n\nnamespace WebDemo.Web.Database\n{\n    public class\
+    \ DumpDatabase\n    {\n        private DumpDatabase() { }\n\n        public static\
+    \ List<Product> GetAllProducts()\n        {\n            // generate data\n  \
+    \          List<Product> list = new List<Product>();\n            for (int i =\
+    \ 0; i < 10; i++)\n            {\n                var item = new Product();\n\
+    \                item.Name = String.Format(\"Product {0}\", i);\n            \
+    \    item.ProductCode = String.Format(\"K0{0}\", i);\n                item.Quantity\
+    \ = 4 + i;\n                item.Price = 1.43 * (i + 1);\n                list.Add(item);\n\
+    \            }\n            return list;\n        }\n    }\n}\n```\n\nSave this\
+    \ file into Database folder.\n\n### 6.3.3 Creating Controller\n\nFurthermore,\
+    \ we build a controller, called Home by creating a file, called **HomeController.cs**.\
+    \ Write this code.\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    using Microsoft.AspNet.Mvc;\nusing WebDemo.Web.Models;\nusing WebDemo.Web.Database;\n\
+    \nnamespace WebDemo.Web.Controllers\n{\n    public class HomeController : Controller\n\
+    \    {\n        public IActionResult Index()\n        {\n            return View();\n\
+    \        }\n\n        [HttpPost]\n        public JsonResult GetAllProducts()\n\
+    \        {\n            List<Product> list = DumpDatabase.GetAllProducts();\n\
+    \            return Json(list);\n        }\n    }\n}\n```\n"
+  mdcn: "\n\n# 5.3.3 测试\n\n以下是 **Save.cshtml** 文件的脚本。\n\n```html\n@model WebDemo.Web.Models.Product\n\
+    @{\n    Layout = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title = \"Reading\
+    \ Session\";\n}\n<div class=\"jumbotron\">\n    <h1>ASP.NET</h1>\n    <p class=\"\
+    lead\">Reading data from ASP.NET MVC session.</p>\n    <p><a href=\"/Home\" class=\"\
+    btn btn-primary btn-large\">Back to home &rarr;</a></p>\n</div>\n<div>\n    <p>Name:\
+    \ @(Model != null ? Model.Name : \"\")</p>\n    <p>Product Code: @(Model != null\
+    \ ? Model.ProductCode : \"\")</p>\n    <p>Quantity: @(Model != null ? Model.Quantity\
+    \ : 0)</p>\n    <p>Is Discount: @(Model != null ? Model.IsDiscount : false)</p>\n\
+    </div>\n```\n\n保存所有文件并将其存储到 Views 文件夹中。参见项目结构。\n\n现在你可以执行了。输入这些命令以加载所需的库并执行程序。\n\
+    \n```bash\ndnu restore\ndnx . kestrel\n```\n\n```text\nRestoring packages for\
+    \ /Users/agusk/Documents/AK/mybook/aspnet5/codes/WebDemo/project.json\nCACHE https://www.nuget.org/api/v2/findPackagesById()?id='Kestrel'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.OptimisticConcurrency'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.Mvc'\nCACHE\
+    \ https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Server'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Server.Kestrel'\n\
+    CACHE https://www.nuget.org/api/v2/findPackagesById()?id='Microsoft.AspNet.Session'\n\
+    Writing lock file /Users/agusk/Documents/AK/mybook/aspnet5/codes/WebDemo/project.lock.json\n\
+    Restore complete: 3283ms elapsed\nagusk$ dnx . kestrel\nStarted\n```\n\n打开浏览器并导航到\
+    \ `http://localhost:5004`。点击创建按钮。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_62_0.png)\n\
+    \n填写所有字段。完成后，点击保存按钮。\n\n# ASP.NET\n\n创建一个新产品。填写此表单。完成后，点击保存按钮。\n\n### 创建一个新产品\n\
+    \n名称：product abc  \n产品代码：abc123  \n数量：10  \n是否折扣：[x]  \n保存  \n\n© 2015 - 我的 ASP.NET\
+    \ 应用程序\n\n我们填写的表单将在下一页显示。它使用 ASP.NET 会话来保持我们填写的数据。\n\n# ASP.NET\n\n从 ASP.NET MVC\
+    \ 会话中读取数据。\n\n返回主页 »\n\n名称：product abc  \n产品代码：abc123  \n数量：10  \n是否折扣：True  \n\
+    \n© 2015 - 我的 ASP.NET 应用程序\n\n# 6. ASP.NET 5 RESTful 和 AngularJS\n\n在本章中，我将解释如何使用\
+    \ ASP.NET 5 RESTful 和 AngularJS。\n\n## 6.1 入门\n\n在本节中，我们将开发一个简单的应用程序，以结合使用 ASP.NET\
+    \ RESTful 和 AngularJS。AngularJS 是一个由 Google 维护的开源 JavaScript 框架，它有助于运行单页应用程序。有关\
+    \ AngularJS 的更多信息，你可以访问 `http://angularjs.org/` 上的官方网站。\n\n要将你的应用程序与 AngularJS\
+    \ 集成，你可以从 `http://code.angularjs.org/` 下载 AngularJS。选择你要使用的 AngularJS 版本。要在你的\
+    \ Web 应用程序中使用 AngularJS，你只需将其放在你的网页上：\n\n```html\n<script src=\"lib/angular.min.js\"\
+    ></script>\n```\n\n这意味着 AngularJS 文件将从本地下载。你也可以像下面这样放置 AngularJS。\n\n```html\n\
+    <script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js\"\
+    ></script>\n```\n\n以下是我们的场景：\n\n- 用户点击一个按钮\n- 程序将通过 RESTful 向服务器请求数据\n\n让我们开始开发。\n\
+    \n## 6.2 创建项目\n\n首先，我们通过创建一个名为 RESTfuldemo 的文件夹来创建一个项目。之后，你可以创建以下文件夹：\n\n- Controllers\n\
+    - Database\n- Models\n- Properties\n- Views\n- wwwroot\n\n以下是项目结构。\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_67_0.png)\n\
+    \n我们需要在项目的根文件夹中有一个项目配置文件，称为 **project.json**。它包含所需的库。请为 **project.json** 文件编写此脚本。\n\
+    \n```json\n{\n    \"version\": \"1.0.0-*\",\n    \"webroot\": \"wwwroot\",\n \
+    \   \"exclude\": [\n        \"wwwroot\"\n    ],\n    \"packExclude\": [\n    \
+    \    \"*.kproj\",\n        \"*.user\",\n        \"*.vspscc\"\n    ],\n    \"dependencies\"\
+    : {\n        \"Kestrel\": \"1.0.0-*\",\n        \"Microsoft.AspNet.Diagnostics\"\
+    : \"1.0.0-*\",\n        \"Microsoft.AspNet.Mvc\": \"6.0.0-*\",\n        \"Microsoft.AspNet.Server.IIS\"\
+    : \"1.0.0-*\",\n        \"Microsoft.AspNet.Server.WebListener\": \"1.0.0-*\",\n\
+    \        \"Microsoft.AspNet.StaticFiles\": \"1.0.0-*\"\n    },\n    \"commands\"\
+    : {\n        \"web\": \"Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener\
+    \ --server.urls http://localhost:5001\",\n        \"kestrel\": \"Microsoft.AspNet.Hosting\
+    \ --server Kestrel --server.urls http://localhost:5004\"\n    },\n    \"frameworks\"\
+    : {\n        \"dnx451\": {},\n        \"dnxcore50\": {}\n    }\n}\n```\n\n我们还添加\
+    \ **launchSettings.json** 来配置如何执行程序。将其存储在 Properties 文件夹中。请为 **launchSettings.json**\
+    \ 文件编写此脚本。\n\n```json\n{\n    \"profiles\": {\n        \"IIS Express\": {\n  \
+    \          \"commandName\": \"IISExpress\",\n            \"launchBrowser\": true,\n\
+    \            \"environmentVariables\": {\n                \"ASPNET_ENV\": \"Development\"\
+    \n            }\n        },\n        \"kestrel\": {\n            \"commandName\"\
+    : \"kestrel\",\n            \"launchBrowser\": true,\n            \"launchUrl\"\
+    : \"http://localhost:5004\"\n        },\n        \"web\": {\n            \"commandName\"\
+    : \"web\",\n            \"launchBrowser\": true,\n            \"launchUrl\": \"\
+    http://localhost:5001\"\n        }\n    }\n}\n```\n\n通过执行 **Startup.cs** 文件来启动应用程序。创建此文件并编写此代码。\n\
+    \n```csharp\nusing Microsoft.AspNetCore;\nusing Microsoft.Framework.DependencyInjection;\n\
+    \nnamespace WebDemo\n{\n    public class Startup\n    {\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            services.AddMvc();\n        }\n\n        public\
+    \ void Configure(IApplicationBuilder app)\n        {\n            // handle error\
+    \ page\n            app.UseErrorPage();\n            // handle static file requests\n\
+    \            app.UseStaticFiles();\n            // aspNet routing\n          \
+    \  app.UseMvc(routes =>\n            {\n                routes.MapRoute(\"default\"\
+    , \"{controller=Home}/{action=Index}\");\n            });\n        }\n    }\n\
+    }\n```\n\n## 6.3 编写程序\n\n在本节中，我们将编写我们的 ASP.NET 5 MVC 程序。\n\n### 6.3.1 创建模型\n\n\
+    首先，我们创建一个名为 Product 的模型。以下是代码实现。\n\n```csharp\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace WebDemo.Web.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"Price\")]\n\
+    \        public double Price { get; set; }\n    }\n}\n```\n\n将此代码保存到一个名为 Product.cs\
+    \ 的文件中，并将其存储到 Models 文件夹中。\n\n### 6.3.2 模拟数据库\n\n在这种情况下，我们不直接访问数据库，所以我们创建一个模拟数据库来生成产品数据。创建一个名为\
+    \ DumpDatabase.cs 的文件并编写此代码。\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    \nusing WebDemo.Web.Models;\n\nnamespace WebDemo.Web.Database\n{\n    public class\
+    \ DumpDatabase\n    {\n        private DumpDatabase() { }\n\n        public static\
+    \ List<Product> GetAllProducts()\n        {\n            // generate data\n  \
+    \          List<Product> list = new List<Product>();\n            for (int i =\
+    \ 0; i < 10; i++)\n            {\n                var item = new Product();\n\
+    \                item.Name = String.Format(\"Product {0}\", i);\n            \
+    \    item.ProductCode = String.Format(\"K0{0}\", i);\n                item.Quantity\
+    \ = 4 + i;\n                item.Price = 1.43 * (i + 1);\n                list.Add(item);\n\
+    \            }\n            return list;\n        }\n    }\n}\n```\n\n将此文件保存到\
+    \ Database 文件夹中。\n\n### 6.3.3 创建控制器\n\n此外，我们通过创建一个名为 **HomeController.cs** 的文件来构建一个名为\
+    \ Home 的控制器。编写此代码。\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    using Microsoft.AspNet.Mvc;\nusing WebDemo.Web.Models;\nusing WebDemo.Web.Database;\n\
+    \nnamespace WebDemo.Web.Controllers\n{\n    public class HomeController : Controller\n\
+    \    {\n        public IActionResult Index()\n        {\n            return View();\n\
+    \        }\n\n        [HttpPost]\n        public JsonResult GetAllProducts()\n\
+    \        {\n            List<Product> list = DumpDatabase.GetAllProducts();\n\
+    \            return Json(list);\n        }\n    }\n}\n```\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 72]\n\n```\n}\n}\n```\n\nSave this file into Controllers folder.\n\n# 6.3.4\
+    \ Creating View\n\nWe create a page, Index.cshtml. We also create a layout, called\
+    \ _Shared.cshtml. Write this script.\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n\
+    \    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\" />\n    <title>@ViewBag.Title - My ASP.NET Application</title>\n\
+    \    <link rel=\"stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\"\
+    \ />\n    <link href=\"~/css/simple.css\" rel=\"stylesheet\" type=\"text/css\"\
+    \ />\n</head>\n<body>\n<div class=\"navbar navbar-inverse navbar-fixed-top\">\n\
+    \    <div class=\"container\">\n        <div class=\"navbar-header\">\n      \
+    \      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\
+    \ data-target=\".navbar-collapse\">\n                <span class=\"icon-bar\"\
+    ></span>\n                <span class=\"icon-bar\"></span>\n                <span\
+    \ class=\"icon-bar\"></span>\n            </button>\n        </div>\n        <div\
+    \ class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\"\
+    >\n                <li><a href=\"~\">Home</a></li>\n            </ul>\n      \
+    \  </div>\n    </div>\n</div>\n<div class=\"container body-content\">\n    @RenderBody()\n\
+    \    <footer>\n        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>\n\
+    \    </footer>\n</div>\n</body>\n</html>\n```"
+  - "[PAGE 73]\n\nThe following is a script for **Index.cshtml** file.\n\n```\n\n\
+    @{\n    Layout = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title = \"Home\
+    \ Page\";\n}\n\n<script src=\"~/js/lib/angular.min.js\"></script>\n<script src=\"\
+    ~/js/services/productservice.js\"></script>\n<div class=\"jumbotron\">\n    <h1>ASP.NET\
+    \ 5 MVC, ASP.NET RESTful, and AngularJS</h1>\n    <p class=\"lead\"> This is demo\
+    \ to illustrate how to use ASP.NET 5 MVC\n</div>\n<h2>Product Application</h2>\n\
+    <br />\n<div ng-app=\"ProductService\" ng-controller=\"MyControlller\" >\n   \
+    \ <p>\n        <button class=\"btn btn-primary btn-large\" ng-click=\"getAllData()\"\
+    \n    </p>\n    <table>\n        <thead>\n            <tr>\n                <th>Product\
+    \ Name</th>\n                <th>Code</th>\n                <th>Quantity</th>\n\
+    \                <th>Price</th>\n                <th>Action</th>\n           \
+    \ </tr>\n        </thead>\n        <tbody ng-repeat=\"product in products\">\n\
+    \            <tr ng-class=\"{even: $even, odd: $odd}\">\n                <td>{{\
+    \ product.Name }}</td>\n                <td>{{ product.ProductCode}}</td>\n  \
+    \              <td>{{ product.Quantity}}</td>\n                <td>{{ product.Price\
+    \ | number:2}}</td>\n                <td>\n                    <a href=\"javascript:void(0)\"\
+    \ ng-click=\"select(product>\n                </td>\n            </tr>\n     \
+    \   </tbody>\n    </table>\n    <p>Selected: {{ selected }}</p>\n</div>\n<p><br></p>\n\
+    ```\n\nThis file loads AngularJS files. We write them on next section.\n\nSave\
+    \ all files. The following is our View structure."
+  - "[PAGE 74]\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_0.png)\n\n# # 6.3.5\
+    \ AngularJS Program\n\nFirstly, download AngularJS on http://code.angularjs.org/.\
+    \ Put those files into /js/lib folder.\n\n![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_1.png)\n\
+    \nThe next step is to write AngularJS program. Create a file, called **product.service.js**,\
+    \ and write this script.\n\n```\n```javascript\nvar myApp = angular.module('ProductService',\
+    \ []);\n\nmyApp.service('DataService', function ($http) {\n    \n    this.read\
+    \ = function (callback) {\n        $http({\n            method: 'POST',\n    \
+    \        url: 'Home/GetAllProducts/',\n            headers: {\n              \
+    \  'Content-type': 'application/json'\n            }\n        }).success(function\
+    \ (resp) {\n            callback(resp);\n        }).error(function () {\n    \
+    \        callback(undefined);\n        });\n    };\n\n});\n\nmyApp.controller('MyController',\
+    \ function ($scope, DataService) {\n```\n```"
+  - "[PAGE 75]\n\n```\n$scope.products = [];\n$scope.selected = {};\n\n$scope.getAllData\
+    \ = function () {\n    DataService.read(function (data) {\n        $scope.products\
+    \ = data;\n    });\n};\n$scope.select = function (selected) {\n    $scope.selected\
+    \ = selected;\n};\n```\n\nThe following is a script for simple.css file.\n\n```\n\
+    table { margin: 1em; border-collapse: collapse; }\ntd, th { padding: .3em; border:\
+    \ 1px #ccc solid; }\nthead { background: #70ff45; }\n.even{\n    background-color:\
+    \ #beffc a;\n}\n.odd{\n    background-color: #f0fff6;\n}\n```"
+  - '[PAGE 76]
+
+
+    # ### 6.4 Testing
+
+
+    Now you are ready to execute. Type these command to load required libraries and
+    execute the program.
+
+
+    ```
+
+    ```
+
+    dnu restore
+
+    dnx . kestrel
+
+    ```
+
+    ```
+
+
+    Open a browser and navigate to http://localhost:5004 .
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_76_0.png)
+
+
+    Click Load data from server button. It should show data which come from a server.'
+  - '[PAGE 77]
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_77_0.png)
+
+
+    Try to click **edit** menu on table row. Then, selected item will show on the
+    bottom.'
+  - '[PAGE 78]
+
+
+    # # Product Application
+
+
+    | Product Name | Code | Quantity | Price | Action |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Product 1 | K01 | 4 | 1.43 | edit |
+
+    | Product 2 | K02 | 5 | 2.86 | edit |
+
+    | Product 3 | K03 | 6 | 4.29 | edit |
+
+    | Product 4 | K04 | 7 | 5.72 | edit |
+
+    | Product 5 | K05 | 8 | 7.15 | edit |
+
+    | Product 6 | K06 | 9 | 8.58 | edit |
+
+    | Product 7 | K07 | 10 | 10.01 | edit |
+
+    | Product 8 | K08 | 11 | 11.44 | edit |
+
+    | Product 9 | K09 | 12 | 12.87 | edit |
+
+    | Product 10 | K010 | 13 | 14.30 | edit |
+
+
+    Selected: {"Name":"Product 2","ProductCode":"K02","Quantity":5,"Price":2.86}'
+  - '[PAGE 79]
+
+
+    # 6.5 What’s The Next?
+
+
+    You can do more practices for AngularJS by reading several tutorial in Internet
+    or books. I also wrote a book about AngularJS Programming by Example. This book
+    helps you to learn about AngularJS programming. Please visit my blog, http://blog.aguskurniawan.net/post/AngularJS.aspx
+    .
+
+
+    ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_79_0.png)'
+  - '[PAGE 80]
+
+
+    # **Source Code**
+
+
+    Source code can be downloaded on
+
+    [http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip](http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip).'
+  - '[PAGE 81]
+
+
+    # Contact
+
+
+    If you have question related to this book, please contact me at aguskur@hotmail.com
+    . My blog: [http://blog.aguskurniawan.net](http://blog.aguskurniawan.net).'
+  md: "\n# 6.3.4 Creating View\n\nSave this file into Controllers folder.\n\nWe create\
+    \ a page, Index.cshtml. We also create a layout, called _Shared.cshtml. Write\
+    \ this script.\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"\
+    utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    \ />\n    <title>@ViewBag.Title - My ASP.NET Application</title>\n    <link rel=\"\
+    stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\"\
+    \ />\n    <link href=\"~/css/simple.css\" rel=\"stylesheet\" type=\"text/css\"\
+    \ />\n</head>\n<body>\n<div class=\"navbar navbar-inverse navbar-fixed-top\">\n\
+    \    <div class=\"container\">\n        <div class=\"navbar-header\">\n      \
+    \      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\
+    \ data-target=\".navbar-collapse\">\n                <span class=\"icon-bar\"\
+    ></span>\n                <span class=\"icon-bar\"></span>\n                <span\
+    \ class=\"icon-bar\"></span>\n            </button>\n        </div>\n        <div\
+    \ class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\"\
+    >\n                <li><a href=\"~\">Home</a></li>\n            </ul>\n      \
+    \  </div>\n    </div>\n</div>\n<div class=\"container body-content\">\n    @RenderBody()\n\
+    \    <footer>\n        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>\n\
+    \    </footer>\n</div>\n</body>\n</html>\n```\n\nThe following is a script for\
+    \ **Index.cshtml** file.\n\n```html\n@{\n    Layout = \"/Views/Shared/_Layout.cshtml\"\
+    ;\n    ViewBag.Title = \"Home Page\";\n}\n\n<script src=\"~/js/lib/angular.min.js\"\
+    ></script>\n<script src=\"~/js/services/productservice.js\"></script>\n<div class=\"\
+    jumbotron\">\n    <h1>ASP.NET 5 MVC, ASP.NET RESTful, and AngularJS</h1>\n   \
+    \ <p class=\"lead\"> This is demo to illustrate how to use ASP.NET 5 MVC\n</div>\n\
+    <h2>Product Application</h2>\n<br />\n<div ng-app=\"ProductService\" ng-controller=\"\
+    MyController\" >\n    <p>\n        <button class=\"btn btn-primary btn-large\"\
+    \ ng-click=\"getAllData()\">Load data from server</button>\n    </p>\n    <table>\n\
+    \        <thead>\n            <tr>\n                <th>Product Name</th>\n  \
+    \              <th>Code</th>\n                <th>Quantity</th>\n            \
+    \    <th>Price</th>\n                <th>Action</th>\n            </tr>\n    \
+    \    </thead>\n        <tbody ng-repeat=\"product in products\">\n           \
+    \ <tr ng-class=\"{even: $even, odd: $odd}\">\n                <td>{{ product.Name\
+    \ }}</td>\n                <td>{{ product.ProductCode}}</td>\n               \
+    \ <td>{{ product.Quantity}}</td>\n                <td>{{ product.Price | number:2}}</td>\n\
+    \                <td>\n                    <a href=\"javascript:void(0)\" ng-click=\"\
+    select(product)\">edit</a>\n                </td>\n            </tr>\n       \
+    \ </tbody>\n    </table>\n    <p>Selected: {{ selected }}</p>\n</div>\n<p><br></p>\n\
+    ```\n\nThis file loads AngularJS files. We write them on next section.\n\nSave\
+    \ all files. The following is our View structure.\n\n![View Structure](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_0.png)\n\
+    \n# 6.3.5 AngularJS Program\n\nFirstly, download AngularJS on http://code.angularjs.org/.\
+    \ Put those files into /js/lib folder.\n\n![AngularJS Files](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_1.png)\n\
+    \nThe next step is to write AngularJS program. Create a file, called **product.service.js**,\
+    \ and write this script.\n\n```javascript\nvar myApp = angular.module('ProductService',\
+    \ []);\n\nmyApp.service('DataService', function ($http) {\n    \n    this.read\
+    \ = function (callback) {\n        $http({\n            method: 'POST',\n    \
+    \        url: 'Home/GetAllProducts/',\n            headers: {\n              \
+    \  'Content-type': 'application/json'\n            }\n        }).success(function\
+    \ (resp) {\n            callback(resp);\n        }).error(function () {\n    \
+    \        callback(undefined);\n        });\n    };\n\n});\n\nmyApp.controller('MyController',\
+    \ function ($scope, DataService) {\n    $scope.products = [];\n    $scope.selected\
+    \ = {};\n\n    $scope.getAllData = function () {\n        DataService.read(function\
+    \ (data) {\n            $scope.products = data;\n        });\n    };\n    $scope.select\
+    \ = function (selected) {\n        $scope.selected = selected;\n    };\n});\n\
+    ```\n\nThe following is a script for simple.css file.\n\n```css\ntable { margin:\
+    \ 1em; border-collapse: collapse; }\ntd, th { padding: .3em; border: 1px #ccc\
+    \ solid; }\nthead { background: #70ff45; }\n.even{\n    background-color: #beffca;\n\
+    }\n.odd{\n    background-color: #f0fff6;\n}\n```\n\n# 6.4 Testing\n\nNow you are\
+    \ ready to execute. Type these command to load required libraries and execute\
+    \ the program.\n\n```bash\ndnu restore\ndnx . kestrel\n```\n\nOpen a browser and\
+    \ navigate to http://localhost:5004 .\n\n![Testing Result](img/2b788c7cc1c2fc37b428b6e7f92dcaed_76_0.png)\n\
+    \nClick Load data from server button. It should show data which come from a server.\n\
+    \n![Data Loaded](img/2b788c7cc1c2fc37b428b6e7f92dcaed_77_0.png)\n\nTry to click\
+    \ **edit** menu on table row. Then, selected item will show on the bottom.\n\n\
+    # Product Application\n\n| Product Name | Code | Quantity | Price | Action |\n\
+    | :--- | :--- | :--- | :--- | :--- |\n| Product 1 | K01 | 4 | 1.43 | edit |\n\
+    | Product 2 | K02 | 5 | 2.86 | edit |\n| Product 3 | K03 | 6 | 4.29 | edit |\n\
+    | Product 4 | K04 | 7 | 5.72 | edit |\n| Product 5 | K05 | 8 | 7.15 | edit |\n\
+    | Product 6 | K06 | 9 | 8.58 | edit |\n| Product 7 | K07 | 10 | 10.01 | edit |\n\
+    | Product 8 | K08 | 11 | 11.44 | edit |\n| Product 9 | K09 | 12 | 12.87 | edit\
+    \ |\n| Product 10 | K010 | 13 | 14.30 | edit |\n\nSelected: {\"Name\":\"Product\
+    \ 2\",\"ProductCode\":\"K02\",\"Quantity\":5,\"Price\":2.86}\n\n# 6.5 What’s The\
+    \ Next?\n\nYou can do more practices for AngularJS by reading several tutorial\
+    \ in Internet or books. I also wrote a book about AngularJS Programming by Example.\
+    \ This book helps you to learn about AngularJS programming. Please visit my blog,\
+    \ http://blog.aguskurniawan.net/post/AngularJS.aspx .\n\n![Author Blog](img/2b788c7cc1c2fc37b428b6e7f92dcaed_79_0.png)\n\
+    \n# Source Code\n\nSource code can be downloaded on [http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip](http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip).\n\
+    \n# Contact\n\nIf you have question related to this book, please contact me at\
+    \ aguskur@hotmail.com . My blog: [http://blog.aguskurniawan.net](http://blog.aguskurniawan.net).\n"
+  mdcn: "\n\n# 6.3.4 创建视图\n\n将此文件保存到 Controllers 文件夹中。\n\n我们创建一个页面，Index.cshtml。我们还创建一个布局，称为\
+    \ _Shared.cshtml。编写以下脚本。\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <meta\
+    \ charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\" />\n    <title>@ViewBag.Title - My ASP.NET Application</title>\n\
+    \    <link rel=\"stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\"\
+    \ />\n    <link href=\"~/css/simple.css\" rel=\"stylesheet\" type=\"text/css\"\
+    \ />\n</head>\n<body>\n<div class=\"navbar navbar-inverse navbar-fixed-top\">\n\
+    \    <div class=\"container\">\n        <div class=\"navbar-header\">\n      \
+    \      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\
+    \ data-target=\".navbar-collapse\">\n                <span class=\"icon-bar\"\
+    ></span>\n                <span class=\"icon-bar\"></span>\n                <span\
+    \ class=\"icon-bar\"></span>\n            </button>\n        </div>\n        <div\
+    \ class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\"\
+    >\n                <li><a href=\"~\">Home</a></li>\n            </ul>\n      \
+    \  </div>\n    </div>\n</div>\n<div class=\"container body-content\">\n    @RenderBody()\n\
+    \    <footer>\n        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>\n\
+    \    </footer>\n</div>\n</body>\n</html>\n```\n\n以下是 **Index.cshtml** 文件的脚本。\n\
+    \n```html\n@{\n    Layout = \"/Views/Shared/_Layout.cshtml\";\n    ViewBag.Title\
+    \ = \"Home Page\";\n}\n\n<script src=\"~/js/lib/angular.min.js\"></script>\n<script\
+    \ src=\"~/js/services/productservice.js\"></script>\n<div class=\"jumbotron\"\
+    >\n    <h1>ASP.NET 5 MVC, ASP.NET RESTful, and AngularJS</h1>\n    <p class=\"\
+    lead\"> This is demo to illustrate how to use ASP.NET 5 MVC\n</div>\n<h2>Product\
+    \ Application</h2>\n<br />\n<div ng-app=\"ProductService\" ng-controller=\"MyController\"\
+    \ >\n    <p>\n        <button class=\"btn btn-primary btn-large\" ng-click=\"\
+    getAllData()\">Load data from server</button>\n    </p>\n    <table>\n       \
+    \ <thead>\n            <tr>\n                <th>Product Name</th>\n         \
+    \       <th>Code</th>\n                <th>Quantity</th>\n                <th>Price</th>\n\
+    \                <th>Action</th>\n            </tr>\n        </thead>\n      \
+    \  <tbody ng-repeat=\"product in products\">\n            <tr ng-class=\"{even:\
+    \ $even, odd: $odd}\">\n                <td>{{ product.Name }}</td>\n        \
+    \        <td>{{ product.ProductCode}}</td>\n                <td>{{ product.Quantity}}</td>\n\
+    \                <td>{{ product.Price | number:2}}</td>\n                <td>\n\
+    \                    <a href=\"javascript:void(0)\" ng-click=\"select(product)\"\
+    >edit</a>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n\
+    \    <p>Selected: {{ selected }}</p>\n</div>\n<p><br></p>\n```\n\n此文件加载 AngularJS\
+    \ 文件。我们将在下一节中编写它们。\n\n保存所有文件。以下是我们的视图结构。\n\n![View Structure](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_0.png)\n\
+    \n# 6.3.5 AngularJS 程序\n\n首先，从 http://code.angularjs.org/ 下载 AngularJS。将这些文件放入\
+    \ /js/lib 文件夹中。\n\n![AngularJS Files](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_1.png)\n\
+    \n下一步是编写 AngularJS 程序。创建一个名为 **product.service.js** 的文件，并编写以下脚本。\n\n```javascript\n\
+    var myApp = angular.module('ProductService', []);\n\nmyApp.service('DataService',\
+    \ function ($http) {\n    \n    this.read = function (callback) {\n        $http({\n\
+    \            method: 'POST',\n            url: 'Home/GetAllProducts/',\n     \
+    \       headers: {\n                'Content-type': 'application/json'\n     \
+    \       }\n        }).success(function (resp) {\n            callback(resp);\n\
+    \        }).error(function () {\n            callback(undefined);\n        });\n\
+    \    };\n\n});\n\nmyApp.controller('MyController', function ($scope, DataService)\
+    \ {\n    $scope.products = [];\n    $scope.selected = {};\n\n    $scope.getAllData\
+    \ = function () {\n        DataService.read(function (data) {\n            $scope.products\
+    \ = data;\n        });\n    };\n    $scope.select = function (selected) {\n  \
+    \      $scope.selected = selected;\n    };\n});\n```\n\n以下是 simple.css 文件的脚本。\n\
+    \n```css\ntable { margin: 1em; border-collapse: collapse; }\ntd, th { padding:\
+    \ .3em; border: 1px #ccc solid; }\nthead { background: #70ff45; }\n.even{\n  \
+    \  background-color: #beffca;\n}\n.odd{\n    background-color: #f0fff6;\n}\n```\n\
+    \n# 6.4 测试\n\n现在你准备好运行了。输入以下命令以加载必需的库并执行程序。\n\n```bash\ndnu restore\ndnx . kestrel\n\
+    ```\n\n打开浏览器并导航到 http://localhost:5004 。\n\n![Testing Result](img/2b788c7cc1c2fc37b428b6e7f92dcaed_76_0.png)\n\
+    \n单击“从服务器加载数据”按钮。它应该显示来自服务器的数据。\n\n![Data Loaded](img/2b788c7cc1c2fc37b428b6e7f92dcaed_77_0.png)\n\
+    \n尝试单击表格行中的 **edit** 菜单。然后，选中的项将显示在底部。\n\n# 产品应用程序\n\n| 产品名称 | 代码 | 数量 | 价格 |\
+    \ 操作 |\n| :--- | :--- | :--- | :--- | :--- |\n| 产品 1 | K01 | 4 | 1.43 | 编辑 |\n\
+    | 产品 2 | K02 | 5 | 2.86 | 编辑 |\n| 产品 3 | K03 | 6 | 4.29 | 编辑 |\n| 产品 4 | K04 |\
+    \ 7 | 5.72 | 编辑 |\n| 产品 5 | K05 | 8 | 7.15 | 编辑 |\n| 产品 6 | K06 | 9 | 8.58 | 编辑\
+    \ |\n| 产品 7 | K07 | 10 | 10.01 | 编辑 |\n| 产品 8 | K08 | 11 | 11.44 | 编辑 |\n| 产品\
+    \ 9 | K09 | 12 | 12.87 | 编辑 |\n| 产品 10 | K010 | 13 | 14.30 | 编辑 |\n\n选中项：{\"Name\"\
+    :\"产品 2\",\"ProductCode\":\"K02\",\"Quantity\":5,\"Price\":2.86}\n\n# 6.5 接下来是什么？\n\
+    \n你可以通过阅读互联网或书籍上的几个教程来进行更多 AngularJS 实践。我还写了一本关于 AngularJS 编程实例的书。这本书帮助你学习 AngularJS\
+    \ 编程。请访问我的博客，http://blog.aguskurniawan.net/post/AngularJS.aspx 。\n\n![Author Blog](img/2b788c7cc1c2fc37b428b6e7f92dcaed_79_0.png)\n\
+    \n# 源代码\n\n源代码可以从 [http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip](http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip)\
+    \ 下载。\n\n# 联系\n\n如果你有关于本书的问题，请通过 aguskur@hotmail.com 联系我。我的博客：[http://blog.aguskurniawan.net](http://blog.aguskurniawan.net)。\n\
+    \n"
+  merge: 0

@@ -1,0 +1,15 @@
++   -h  On sites that print a header page for each job, this option disables the header.
+
++   -m  If you want to be notified when a job is finished printing, include this option and 1pcd will send you e-mail when the job has printed.
+
++   -r  If you want lpr to delete the original file after printing it, use this option. It’s most often used in scripts or by programs that generate temporary files to be printed.
+
++   -s  Normally, the printing system copies the file to be printed to the spool directory. If you’re printing a very large file, though, this practice can temporarily consume a great deal of disk space—potentially enough to keep the print job from succeeding if you’re low on disk space. This option tells the system to create a symbolic link rather than copy the file, which reduces temporary disk space requirements.
+
+You can submit one or more files to be printed, and you can use wildcards to submit many files in a directory—but be cautious when doing this, lest you end up with many more print jobs than you intended. If you don’t specify a file to be printed, lpr reads from standard input. This feature is most useful for scripting or when using lpr in a pipe with other programs. The files must be in a format that’s understandable to your print queue. If you’ve set up a simple queue that uses no filter, this means a format that’s acceptable to your printer. If you use a filter, it means a format that’s understandable to your filter. Most configurations should be able to handle either plain text or PostScript.
+
+# Printing from Applications
+
+Some programs enable you to print directly, without manually invoking lpr. In practice, most of these programs generate PostScript output and send it to lpr, often using temporary files in /tmp or a pipe. Precisely how the application interacts with you varies from one program to another. Some produce a dialog box in which you can enter a printing command, typically with a partial command already displayed. You can then modify the command as you see fit, using the normal lpr syntax. For instance, Figure 9-2 shows the print dialog box in the xv graphics program. It uses a default print command of lpr, with no options. You can redirect the print job to another printer by adding -Pprinter, add other lpr options, or even use some entirely different command, such as a custom printing script or Samba’s smbprint utility.
+
+Other programs provide an interface that may be easier for new users to understand. These programs typically examine /etc/printcap or use their own configuration files to identify printers. For instance, Figure 9-3 shows the print dialog box used by OpenOffice.org. In this dialog box, you can select a printer from the Name option box, set the number of copies, and so on. Such dialog boxes may have application-specific options, such as the Print Range option in Figure 9-3, which enables you to print a subset of the pages in a document.

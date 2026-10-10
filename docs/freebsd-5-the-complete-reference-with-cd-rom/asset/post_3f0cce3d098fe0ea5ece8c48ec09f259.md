@@ -1,0 +1,315 @@
+
+## Index
+
+- support libraries, software compilation tools, 735–736
+- S VGA (Super Video Graphics Adapter), audio and, 648
+- swap space, 685, 687, 689–690
+  - See also memory monitoring; system maintenance
+  - adding swap file, 689–690
+  - adding swap partition, 688–689
+  - defined, 809
+- SWAT (Samba Web Administration Tool), GUI administrative tools, 159
+- SWATCH program, intruder detection, 727
+- switches
+  - defined, 809
+  - network hardware, 357
+- Sylphheed program, e-mail clients, 571, 572
+- symbolic links, defined, 809
+- symbols, HTML documents and, 487
+- symptoms. See hardware symptoms; software symptoms
+- syntax checking programs, HTML documents and, 491
+- syntax highlighting, software compilation tools, 736
+- Sys Admin Magazine, printed help resources, 776
+- sysctl program, memory monitoring, 686
+- sysinstall program
+  - booting installers, 44–45
+  - HCP, 371
+  - /etc/printcap file and, 247, 248
+  - groups, 283, 284
+  - GUI administrative tools, 159
+  - installing packages, 296–298
+  - network configuration, 53–54
+  - Network Configuration form, 365
+  - SSH (Secure Shell) servers, 500
+  - static IP addresses, 364–366
+  - user accounts, 270–272
+- system, partitioning. See system partitioning
+
+- system accounts, 65
+  - See also user accounts
+- system administration, defined, 809
+- system administration tools, 132–136
+  - /etc directory, 132–136
+  - GUI, 158–159
+  - overview, 132
+  - summary, 160
+- system commands, 147–158
+- text editors, 136–147
+- system administrators, defined, 809
+- system commands, 147–158
+  - See also system administration tools
+  - manipulation, 153–156
+  - pipes, 157–158
+  - redirection, 156–157
+- system console settings, 55–56
+  - See also post-installation configuration; system installation
+- system documentation, 775
+  - See also help
+- system information commands, 147–153
+  - See also system administration tools
+  - df command, 148–149
+  - dmesg command, 147–148
+  - man command, 150
+  - ps command, 150–151
+  - top command, 152
+  - uptime command, 150
+- system installation, 31–68
+  - See also installing kernel
+  - booting installers, 44–45
+  - computer preparation, 35–43
+  - distribution sets, 50, 51
+  - installation methods, 51–52
+  - obtaining FreeBSD, 32–36
+  - overview, 32
+  - partitioning, 45–50
+  - post-installation configuration, 52–68
+  - process of, 44–50, 52
+  - software selection, 50–51
+  - summary, 68
+
+- system jobs, cron utility (scheduling jobs), 178, 179–180
+- system maintenance, 671–696
+  - automated and nonautomated, 673–698
+  - compiling software, 731–744
+  - CPU monitoring, 680–685
+  - file cleanup, 674–680
+  - memory monitoring, 685–690
+  - periodic utility and temporary files, 677
+  - scripts, 745–771
+  - security, 695–729
+- software updates, 690–697
+- summary, 697–698
+- troubleshooting, 773–796
+- system manipulation commands, 153–156
+  - *See also* system administration tools
+  - kill/killall commands, 154–156
+  - nice/renice commands, 153–154
+  - overview, 153
+- system partitioning, 45–50
+  - *See also* partitions; system installation
+  - boot loader options, 47
+  - creating FreeBSD slices, 46–47
+  - FDISK Partition Editor, 46
+  - overview, 45–46
+  - “unused” space and, 47
+- system probes, 701–702
+  - *See also* attack methods; security; whois utility, 701
+- system startup and control processes, 161–181
+  - cron utility (scheduling jobs), 176–181
+  - kernel, 162–165
+  - login process, 167–176
+  - PAM authentication, 170–173
+  - startup scripts, 165–167
+  - summary, 181
+- system startup problems, 790–791
+  - *See also* software diagnostics; troubleshooting
+  - boot loader, 790
+  - kernel, 790
+  - startup scripts, 790
+- system startup scripts, 133–134, 165, 166–167
+  - *See also* etc/ directory; startup scripts; system administration tools
+  - BSD startup method, 133
+  - calls, 134
+  - editing, 166–167
+  - init process, 133
+  - processes, 133
+  - scripts, 133–134
+  - shell scripts, 166
+
+### T
+
+- tables, partition, 806
+- tags
+  - *See also* HTML documents; defined, 809
+  - HTML, 485–487
+- tape, installation methods, 52
+- tarballs, defined, 809
+- Tcl, scripting languages, 749
+- TCP (Transmission Control Protocol), defined, 809
+- TCP Wrappers, 713–716
+  - *See also* security; server access control
+  - client-list element, 714–715
+  - daemon-list element, 714–715
+  - /etc/hosts.allow file, 714–715
+  - examples, 716
+  - EXCEPT keyword, 716
+  - inetd super server and, 713–714
+  - option element, 714
+  - overview, 713
+  - patterns, 715
+  - rules, 716
+- Telnet servers and, 497
+- TCP/IP, 356, 358–360
+  - *See also* network configuration
+  - AppleTalk comparison, 359
+  - client/server architecture, 359
+  - cross-platform support, 359
+  - hostnames, 358
+  - IPX protocol comparison, 359
+  - large address space, 358
+  - multi-protocol networking, 358
+  - NetBEUI comparison, 359
+  - as network stack, 358
+  - network stacks comparison, 359–360
+  - overview, 358–359
+  - PPP (Point-to-Point Protocol) and, 358
+  - routing, 358–359, 361
+  - stack. See TCP/IP stack
+- TCP/IP Options dialog box, X-ISP GUI dialer, 385
+- TCP/IP stack
+  - defined, 809
+  - FreeBSD and, 7
+  - ports and, 397–398, 399
+  - tracing network connections, 401, 402
+- tsh shell
+  - login process, 173
+  - user login control files, 174
+- Telnet clients, remote logins, 595–656
+- Telnet servers, 494, 495–498
+  - *See also* login servers; text-mode
+- login servers
+  - access control, 497–498
+  - account management, 497
+  - firewalls and, 497
+  - killall command, 496
+  - NAT routers and, 497
+  - operation of, 496
+  - overview, 495
+  - routers and, 497
+  - rules, 497
+  - running, 496
+- SSH (Secure Shell) servers
+  - comparison, 499
+  - TCP Wrappers and, 497
+- temporal restrictions, server access control, 712
+- temporary files, 676–677
+  - *See also* file cleanup; system maintenance
+  - periodic utility, 677
+- terminal emulators, testing modems, 380
+- terminal programs, defined, 810
+- terminal sessions, running programs from GUI, 91
+- terminals
+  - dumb. *See* dumb terminals
+  - X, 507, 511–512
+- testing modems, 379, 380
+- testing network configuration, 372–375
+  - *See also* network configuration
+  - dhclient program, 373
+  - hostname resolution, 373–374
+  - ifconfig command, 373
+  - ping utility, 372–374
+  - routers, 374–375
+  - traceroute command, 374–375
+  - whois utility, 375
+- testing solutions, 793–794
+  - See also troubleshooting
+- text editors, 136–147
+  - *See also* system administration tools
+  - GUI, 138–139
+  - OpenOffice.org, 613–615
+  - overview, 136–137
+  - software compilation tools, 736
+  - text-mode, 137–143
+  - vi, 137, 139–143
+- text entry, GIMP, 631
+- text-mode
+  - logging off, 93–94
+  - shut down, 94–96
+  - user login control files, 174–175
+- text-mode commands, 77–86
+  - file manipulation commands, 82–86
+  - overview, 77–78
+  - running text-mode programs, 80–82
+  - shells, 78–80
+- text-mode console, login process, 168
+- text-mode dialog tools, 386–391
+  - *See also* dial-up networking
+  - chat scripts, 387, 388–390
+  - editing support files, 387
+  - /etc/resolv.conf file, 387
+  - kernel PPP configuration, 387–390
+  - overview, 386–387
+  - pppd program, 386–391
+- text-mode and GUI logins, 74–75
+  - *See also* logins
+  - background processing, 75
+  - command prompts, 75
+  - passwords, 75
+  - virtual consoles, 75
+  - XDM (X Display Manager), 75
+- text-mode login servers, 494–495
+  - *See also* login servers
+  - SSH (Secure Shell), 438, 494–495, 498–502
+  - Telnet, 494, 495–498
+- text-mode logins, 504–507
+  - *See also* remote X access
+  - overview, 504–505
+  - passwords, 505
+  - tunneling, 505–506
+  - xauth program, 506–507
+- text-mode SSH (Secure Shell) servers, 438, 494–495, 498–502
+- text-mode text editors, 137–138
+  - Easy Editor, 138
+  - Emacs, 137
+  - Emacs clones, 138
+  - pagers and, 138
+  - vi, 137, 139–143
+- text-mode UNIX games, 667–668
+  - *See also* games
+  - adventure games, 667
+  - Planetfall, 667–668
+  - Rogue, 668
+  - z-code gaming language, 668
+- text-mode virtual terminals, multiple X sessions, 350
+- theft of service, local attacks, 704
+- third-party boot loaders, 105–106
+  - *See also* boot loaders; multiple operating systems
+- threats of attack. *See* attack threats; firewalls
+- thttpd web server, 477
+  - *See also* servers; web servers
+- time servers, 535–540
+  - *See also* servers
+  - locating parent, 536–537
+  - NTP (Network Time Protocol) servers, 535, 536–540
+  - overview, 535
+- time zones, 56
+  - *See also* post-installation configuration; system installation
+- UTC (Universal Coordinated Time), 56
+- <TITLE> tag, HTML documents, 486
+- title bars, window managers, 330
+- TLDs (top-level domains), network configuration and IP addresses, 362
+- /tmp directory, FreeBSD partitions, 49
+- Toon Ring, routing, 360
+- Tool Options window, GIMP (GNU Image Manipulation Program), 626
+- tools
+  - *See also* applications; packages; software
+  - administration. *See* GUI administrative tools; system administration tools
+  - audio, 652–661
+  - CPU monitoring, 681–682
+  - drawing. *See* vector drawing tools
+  - firewall, 419–421
+  - graphics, 623–646
+  - memory monitoring, 686–687
+  - MP3, 657–659
+  - networking, 569–597
+  - Office, 599–622
+  - playback and recording, 654–657
+  - software compilation, 735–738
+  - web page creation, 488–489
+  - web server, 477
+  - X Window System, 333
+- top command
+  - memory monitoring, 686–687
+  - system information commands, 152
+- top utility, CPU monitoring, 682
+- top-level domains (TLDs), network configuration and IP addresses, 362

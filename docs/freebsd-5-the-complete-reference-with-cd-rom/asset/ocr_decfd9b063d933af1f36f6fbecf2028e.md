@@ -1,0 +1,15 @@
+In some relatively new configurations, root does not have absolute access to all files. Such configurations can be a security boon because some servers ordinarily run as root, which gives them – and their bugs – free reign over the system. Another limit to root's power is in non-FreeBSD filesystems. When FreeBSD mounts a FAT partition or floppy disk, for instance, all the files acquire the same owner and permissions (although the FAT read-only bit is mapped as the inverse of the FreeBSD write bit). Even root cannot change permissions or ownership on a FAT partition on a file-by-file basis, except for write permissions, because FAT doesn't support this feature. You can use mount_msdosfs options to change ownership or permissions on FAT partitions, though, as described in Chapter 4.
+
+In addition to these common permissions, there are three special permission bits that you can set on a file:
+
++   - Set User ID (SUID): This permission is used in conjunction with executable files. Normally, a program runs with the UID code of the user who launches the program. You can use this bit to tell FreeBSD to use the UID of the program file, instead. This feature is used by *some* programs that require root privileges to operate normally (called SUID root programs). SUID root programs are potentially dangerous, but this technique is sometimes necessary when a program needs to access privileged files or data but be run by ordinary users. SUID programs can be identified by an *s* rather than an *x* in their owner execute permission position, as in rwxr-x-sx-x. 
+
++   - Set Group ID (SGID): This feature works much like the SUID bit, but, as its name implies, it sets the program to run using its own GID rather than the user's GID. Such programs are identified by an *s* rather than an *x* in their group execute permission position, as in rwxr-srx-x. 
+
++   - Sticky bit: In modern FreeBSD, the sticky bit is used in directories to indicate that only a file's owner may delete a file. (As described in the next section, file deletion rules often permit nonowners to delete a file.) This bit is routinely set on /tmp and /var/tmp. The sticky bit is indicated by a *t* rather than an *x* in the world execute permission position, as in drwx--x--t. 
+
+As a general rule, you shouldn't try setting these bits on any file or directory. If a program's documentation indicates that it needs to run with the SUID or SGID bit set, or that it requires a directory to have its sticky bit set, you can do so with the *chmod* command, described in the upcoming section, “Changing Permissions.”
+
+# Special Considerations for Directories
+
+Directories are a bit odd when it comes to permissions. The overarching principle in understanding directory permissions is that a directory is a file. The contents of this file happen to be filenames and pointers to disk indexes, which in turn point to the sectors on the disk that hold files. Like any file, a directory's contents are protected by the

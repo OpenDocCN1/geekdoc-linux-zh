@@ -1,0 +1,15 @@
+You can upgrade most FreeBSD programs using the methods described in Chapter 11. One program, however, deserves special consideration: the *kernel*. As described in Chapter 1, the FreeBSD kernel is both unusual and extremely important. The kernel is the core around which an OS is built. It serves as a central control program, giving all other programs access to the computer’s hardware resources, resolving conflicts between programs, and so on. These features mean that the kernel must be configured, upgraded, and run differently from other programs, and this chapter describes this important topic.
+
+This chapter begins with an overview of the kernel, so that you can better understand its role in running FreeBSD system. It continues with a look at methods of modifying the kernel’s configuration. Some of these approaches involve fairly straightforward changes, but other changes require recompiling the kernel from source code. Although this task sounds daunting, it’s a very useful skill for any FreeBSD system administrator. Sometimes, you may need to upgrade the kernel to a new version. This process often involves compiling the new kernel.
+
+# An Overview of the Kernel
+
+To understand the need for unique kernel configuration, installation, and upgrade procedures, it’s necessary to understand what the kernel does. The kernel’s role in a FreeBSD system is so central that upgrading it often requires rebooting the computer—something that’s not true of other software upgrades.
+
+# The Kernel’s Role in FreeBSD
+
+Chapter 6, and especially its section “Understanding the Kernel’s Control,” describes the role of the kernel in a FreeBSD system. In brief, the kernel is the lowest-level software that runs on a computer. For most types of hardware, the kernel is the only software that’s allowed to directly access the hardware. This is done by hardware *drivers*, which are written for specific hardware components, such as a VIA Rhine Ethernet board or a 16550 RS-232 serial interface. Programs can then call the kernel and tell it that they want to access the Ethernet or RS-232 serial interface, and the kernel translates these calls into ones that work for the specific hardware installed on the computer.
+
+> **Note** During the boot process, and in some OSs even after the system has booted, code at a lower level than the kernel also runs. This is the Basic Input/Output System (BIOS), which was designed to provide an interface between the OS and the hardware. The x86 BIOS, however, is very primitive, and most modern OSs, including FreeBSD, rely on it mainly as a part of the boot procedure because the system runs the BIOS as part of its boot process, but the kernel can do a better job after that point.
+
+Just as the kernel provides an interface layer between hardware and most programs, it provides similar services for other necessary computer functions. These services
