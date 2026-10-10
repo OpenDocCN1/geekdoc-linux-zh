@@ -1,0 +1,37 @@
+# Chapter 11: Setting Up and Supporting Users 473
+
++   - Creates a home directory based on the user’s name and places it in the /home directory.
++   - Copies any files located within the /etc/skel directory to the new home directory. This usually includes login and application startup scripts.
+
+The preceding example uses only one of the available useradd options. Most account settings are assigned using default values. Here’s an example that uses a few more options:
+
+```
+# useradd -m -g users -G wheel,sales -s /bin/tcsh -c "Mary Smith" mary
+```
+
+In this case, the useradd command is told to create a home directory for the user mary (-m), make users the primary group she belongs to (-g), add her to the groups wheel and sales (-G), and assign tcsh as her primary command shell (-s). Note that the wheel and sales groups must already exist for this example to work. This results in a line similar to the following being added to the /etc/passwd file:
+
+```
+mary:x:502:100:Mary Smith:/home/mary:/bin/tcsh
+```
+
+In the /etc/passwd file, each line represents a single user account record. Each field is separated from the next by a colon (:) character. The field’s position in the sequence determines what it is. As you can see, the login name is first. The password field contains an x because Fedora is using a shadow password file in which to store encrypted password data.
+
+The user ID selected by the useradd command was 502. The primary group ID is 100, which corresponds to the users group in the /etc/group file. The comment field was correctly set to Mary Smith, the home directory was automatically assigned as /home/mary, and the command shell was assigned as /bin/tcsh, exactly as specified with the useradd options.
+
+By leaving out many of the options (as I did in the first useradd example), defaults are assigned in most cases. For example, by not using -g users or -G wheel,sales, a group named mary would have been created and assigned to the new user. Likewise, excluding -s /bin/tcsh causes /bin/bash to be assigned as the default shell.
+
+The /etc/group file holds information about the different groups on your Fedora or RHEL system and the users who belong to them. Groups are useful for allowing multiple people to share access to the same files while denying access to others. If you peek at the /etc/group file, you should find something similar to this:
+
+```
+bin:x:1::root,bin,daemon
+daemon:x:2:root,bin,daemon
+sys:x:3:root,bin,adm
+adm:x:4:root,adm,daemon
+tty:x:5:
+disk:x:6:root
+lp:x:7:daemon,lp
+mem:x:8:
+wheel:x:10:root,joe,mary
+
+```

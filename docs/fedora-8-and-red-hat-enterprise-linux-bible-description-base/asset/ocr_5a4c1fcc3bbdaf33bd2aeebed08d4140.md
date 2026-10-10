@@ -1,0 +1,47 @@
+# ### Printer Sharing
+
+You can set up printer sharing using netatalk so that Mac clients using the standard AppleTalk print service (called Printer Access Protocol, or PAP) can print to your Linux computer. To do that, you must:
+
++   - Configure a local Linux printer (see Chapter 17).
++   - Set up the `/etc/atk/papd.conf` file to point to that printer.
++   - Restart the atalk service (or, more specifically, the papd daemon).
+
+When a Mac client prints to a Linux printer configured in this way, the print job is handed to the standard Linux `lpr` daemon and put into a spool file for printing, along with Linux print jobs for the printer.
+
+> NOTE: Mac OS X computers can print directly to Linux print services (CUPS or LPing) without requiring netatalk printing. Older Mac OS 9 clients, however, might need to see an AppleTalk printer that you set up in this way with netatalk.
+
+The `papd.conf` file follows the same basic format as the `/etc/ printcap` file (traditionally used for Linux printing). Here’s an example of a printer configured in the `papd.conf` file:
+
+```
+```
+LaserJet2100M:\
+    :pr=| /user/bin/lpr -P hp01:\
+    :pd=/etc/ataklaserjet.ppd:\
+    :op=root:\
+    :am:uams_guest,ao:
+```
+```
+
+The printer in this example is named LaserJet2100M. To print the file from the Mac client, it takes the output file and pipes it to the `lpr -P hp01` command (`hp01` is the name of the local printer). The `ppd` file is `/etc/ataklaserjet.ppd`. The root user is the operator, and guests are allowed to print to the printer (no password is needed).
+
+The printer definition file (`ppd`) must be installed on both the netatalk server (at the location noted in the `papd.conf` file) and on the Mac client.
+
+To test that the interface to your AppleTalk printer is working, use the `pap` command:
+
+```
+```
+# pap -P LaserJet2100M /etc/hosts
+```
+```
+
+The `-p` option identifies your netatalk printer. In this example, it prints a copy of your `/etc/hosts` file. Or, you can just check the status of the printer:
+
+```
+```
+# papstatus -p LaserJet2100M
+```
+```
+
+# ### Troubleshooting netatalk
+
+Several tools are available that enable you to see the status of your AppleTalk network. The `aecho` command can test whether a particular AppleTalk host computer is alive. The

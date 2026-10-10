@@ -1,0 +1,24 @@
+```
+May 16 13:03:27 toys sendmail[699]: NOQUEUE: "wiz" command from localhost  [127.0.0.1]  (127.0.0.1)
+May 16 13:03:29 toys sendmail[699]: NOQUEUE: "debug" command from localhost  [127.0.0.1]  (127.0.0.1)
+May 16 13:03:37 toys sendmail[701]: NOQUEUE: localhost  [127.0.0.1]:  expn oracle
+May 16 13:03:43 toys sendmail[702]: NOQUEUE: localhost  [127.0.0.1]:  vrfy oracle
+```
+
+# ## Configuring sendmail
+
+To configure the sendmail facility, you edit configuration files in /etc/mail and /etc that are then used to by the sendmail start-up script to generate database files. Those database files are, in turn, used by the sendmail daemon to control the behavior of your sendmail server. Once sendmail is configured, you can begin adding user accounts to have mailboxes on your server. The general steps I describe in this section for configuring sendmail are:
+
++   1. **Getting a domain name** — You need a unique Internet domain name to assign to your mail server. You can purchase an Internet domain name from one of many different places, and then have DNS mail exchange (MX) records for your domain point to the mail server you are creating.
+
++   2. **Configuring basic sendmail settings** — In this step, you edit the /etc/mail/sendmail.mc file. That file defines such things as the locations of other configuration and log files, as well as letting you configure some behavior of the sendmail daemon.
+
++   3. **Defining outgoing mail access** — The most critical security issue associated with your mail server is which mail messages it will accept to relay to other mail servers. By editing the /etc/mail/access file, you can indicate the hosts and users from which your server will accept mail for local delivery or relay.
+
++   4. **Configuring virtual servers** — By default, sendmail assumes that you are setting up the mail server for the domain of which the server is a member. To have sendmail on a single computer be the mail server for multiple domains (referred to as virtual servers), you need to define each domain name in the /etc/mail/local-host-names file.
+
++   5. **Configuring virtual users** — Using the /etc/mail/virtusertable configuration file, you can instruct the sendmail daemon what to do with the mail it receives for the users and domains it's configured to handle. This file gives you a lot of flexibility to take mail addressed to a particular user and direct it to a particular mailbox, forward it to a different mail address, or reject that mail in various ways.
+
++   6. **Adding user accounts** — You need to add a user account for every user that has a mailbox on your mail server.
+
++   7. **Starting sendmail and generating database files** — Starting the sendmail service causes two major action to happen: it runs the sendmail server daemon and it compiles your configuration files into database files that can be used by sendmail. If the server is

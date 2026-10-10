@@ -1,0 +1,23 @@
++   • Copy a file — Right-click and select Copy. This copies the file to your clipboard. After that, you can paste it to another folder. Click the Klipper (clipboard) icon in the panel to see a list of copied files. (See the Move a file bullet item for a drag-and-drop method of copying.)
+
++   • Paste a file — Right-click (an open area of a folder) and select Paste. A copy of the file you copied previously is pasted in the current folder.
+
++   • Move a file — With the original folder and target folder both open on the desktop, press and hold the left mouse button on the file you want to move, drag the file to an open area of the new folder, and release the mouse button. From the menu that appears, click Move. (You could also copy or create a link to the file using this menu.)
+
++   • Link a file — Drag and drop a file from one folder to another. When the menu appears, click Link Here. (A linked file lets you access a file from a new location without having to make a copy of the original file. When you open the link, a pointer to the original file causes it to open.)
+
+There are also several features for viewing information about the files and folders in your Konqueror windows:
+
++   • View quick file information — Position the mouse pointer over the file. When a mouse pointer is over a file in a Konqueror window, information appears in the window footer. This includes the filename, file size, and file type.
+
++   • View hidden files — Select View → Show Hidden Files. This allows you to see files that begin with a dot (.). Dot files tend to be used for configuration and don't generally need to be viewed in your daily work.
+
++   • View file system tree — Select View → View Mode → Tree View. This presents a tree view of your folder, displaying folders above the current folder in the file system. You can click a folder in the tree view to jump directly to that folder. There are also Multicolumn, Detailed List, and Text views available.
+
++   • Change icon view — Select View → Icon Size, and then choose Large, Medium, or Small to select the size of the icons that are displayed in the window. You can also choose Default Size, to return to the default icon size.
+
++   • Change icon view — Select View → View Mode → Photobook to display the contents of the current folder as an image gallery.
+
+**NOTE:** Tree View, Icon View, and Photobook icons are also in the Konqueror toolbar for quick selection.
+
+To act on a group of files at the same time, there are a couple of actions you can take. Choose Edit → Selection → Select. A pop-up window lets you match all (*) or any group of documents indicated by typing letters, numbers, and wildcard characters. Or, to select a group of files, click in an open area of the folder and drag the pointer across the files you want to

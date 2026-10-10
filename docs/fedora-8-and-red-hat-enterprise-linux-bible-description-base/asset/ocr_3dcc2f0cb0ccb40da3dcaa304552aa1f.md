@@ -1,0 +1,33 @@
+The line beginning with `bogus@linuxtoys.net` illustrates an error condition. Here, e-mail destined for the user named `bogus` will be rejected with the error message `No such user here` being directed back to the sender. Besides creating custom error messages, you can also use any Enhanced Mail System Status codes that are compliant with RFC 1893.
+
+> **NOTE:** In general, it's not a good idea to tell a potential spammer that a user account doesn't exist. Spammers often query mail servers looking for such information, often addressing e-mail to common names in an attempt to determine what real user exists on the server. As a general rule, try to give as little information as possible to someone phishing for information on your mail server.
+
+The last two lines (beginning with `@example.net` and `@example.com`) illustrate how e-mail for all recipients for a given domain can all be directed to the same place. In the first case, all `example.net` messages go into the mailbox for the user named `example-cat`chall. The last line shows how the users from a particular domain can all be mapped into their same user name (`$1`) on a selected domain name.
+
+Once you have made changes to this file to suit you, you must rebuild the virtusertable database (`virtusertable.db` file) for the changes to take effect. See “Starting sendmail and generating database files” for information on this topic.
+
+# ### Adding user accounts
+
+Ultimately, the e-mail received by your mail server is placed in a user’s mailbox, where the user can pick it up and read it at his or her leisure. Each of those user names must be added as a real user on your Fedora system. For example, to add the user `chris` to your Fedora sendmail server, you could try (as root user):
+
+```
+```
+# useradd -s /sbin/nologin chris
+```
+```
+
+This action creates a user account named `chris` in the `/etc/passwd` file, sets the shell to `/sbin/nologin`, and creates a mail box for that user in `/var/spool/mail/chris`. The `/sbin/nologin` shell prevents the user from logging in to a shell (which is a good security practice when you only want a user to have mail or FTP access, for example). Now, sendmail can direct e-mail to that user’s mail box.
+
+For that user to be able to access his e-mail later from his POP3 client, he will need a password for his user account. Set the password for that user with the `passwd` command as follows:
+
+```
+```
+# passwd chris
+Changing password for user chris
+New UNIX password:  ********
+Retype new UNIX password:  ********
+passwd: all authentication tokens updated successfully
+```
+```
+
+Make sure that the user has this user account name and password so it can be configured into the user’s e-mail client.

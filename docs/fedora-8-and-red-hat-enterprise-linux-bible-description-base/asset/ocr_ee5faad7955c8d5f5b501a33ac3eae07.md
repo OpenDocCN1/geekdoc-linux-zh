@@ -1,0 +1,15 @@
+page, or all files linked from the current Web page. There is also a Build Gallery feature that lets you identify a range of filenames to download at once. When FlashGot is installed, you can access it from Firefox by selecting Tools  FlashGot, and then choosing a feature from the menu. In Fedora, FlashGot passes requests to KDE to complete the download. You can get other download tools to use instead of KDE, such as Wget.
+
++   - **Selectively block ads (AdBlock)** — Using AdBlock, you can selectively prevent ads from being displayed on the Web pages you visit. With AdBlock installed, an AdBlock button appears on the lower-right corner of Firefox. Click that button to see a window containing items on the current page you want to block. Right-click on an image and select AdBlock Image to choose to block that image. Use an asterisk to block all content from a particular site (for example, www.example.com/\*). Open the AdBlock preferences window from Firefox (Tools  AdBlock  Preferences) to see, edit, or remove blocked sites. With Firefox 1.5 or later, you should use AdBlock Plus instead of AdBlock.
+
++   - **Access FTP servers (FireFTP)** — Contains a useful client application that runs in Firefox for accessing with FTP servers. There is also a FireFTP button add-on for accessing FireFTP from the toolbar.
+
++   - **Block Flash animations (FlashBox)** — Prevent Flash animations from playing in your Firefox browser window. Can be particularly useful for dial-up users who don't want to take a performance hit when a visited site tries to play unrequested Flash content.
+
++   - **Improve tab browsing (Tabbrowser Preferences)** — Although Firefox already gives you some nice features for using tabs to keep multiple Web pages open in the same Firefox window, Tabbrowser Preferences takes those features a step further. Select Edit  Preferences  Tabbred Browsing. The Tabbred Browsing selections let you refine how tabs work in Firefox. You can set what motion selects tabs (such as mouse-over as opposed to clicking), put tabs on the bottom instead of the top, or choose whether or not to load the home page in a new tab.
+
++   - **Watch your weather (ForecastFox)** — With ForecastFox, the latest weather for any region you select can be just a click away in Firefox. After you install ForecastFox and restart Firefox, a pop-up window enables you to configure ForecastFox options. Select at least Find Code, to choose the area in which you want to keep up on weather. Save your options and a weather icon appears in the lower-right corner of Firefox. Move your mouse over that icon to see a quick view of the current weather. Double-click the icon to have a more detailed weather report displayed from www.weather.com.
+
+After you have installed an extension, you need to restart Firefox for it to take effect. In some cases, a change to an extension's option will also require you to restart Firefox.
+
+If you want to uninstall an extension, change an extension's options, or get more extensions, select Tools  Add-ons from Firefox. The window that appears shows you a list of installed

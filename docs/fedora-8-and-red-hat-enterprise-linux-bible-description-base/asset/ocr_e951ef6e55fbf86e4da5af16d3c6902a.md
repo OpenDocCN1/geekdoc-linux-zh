@@ -1,0 +1,21 @@
+as Terms of Service or User Agreement. If you can’t find it on the ISP’s Web site, you will almost certainly see it after you click a link to sign up for an account.
+
+Typically, an ISP requires you to sign up for a business account if you want to do any kind of business on your Internet service. Here are some excerpts from agreements for several ISPs:
+
+> “, . . . you are not permitted to use your Internet connection to sell or advertise goods or services. This is permitted only to those who have purchased a business account or a virtual server.”
+
+> “Dialup clients are not to use their dialup connection for active or constantly connected Web/FTP/mail or other server services.”
+
+> “Anyone wanting to promote a business or sell a product must use a business account.”
+
+Internet access is the volume business for most ISPs, and they consider business accounts for those who want to manage their own Web presence as premium services. Although you can technically use a personal account to set up a server (TCP/IP doesn’t care what goes across the wire), the ISP’s Terms of Service or Acceptable Use Policy may not permit you to do so. Although your DSL connection may easily handle a handful of hits a day on your Web server, offering that service can result in the termination of your account by the ISP. Check into what the ISP considers acceptable use before you use any Internet account to set up a public server.
+
+# ### Getting static IP addresses
+
+Most dialup and DSL Internet-access accounts use dynamic IP addresses, so whenever you connect to your Internet service, the provider assigns the IP address to that connection. After you disconnect, the ISP can reclaim that IP address to assign to someone else. The next time you connect, it is possible that you will get a different IP address.
+
+For a server to have constant, reliable presence on the Internet, it will typically have one or more *static IP addresses*. Most ISPs charge an additional fee for static IP addresses. Each static IP address typically costs between $5 and $20 per month.
+
+**NOTE:** You can assign a public DNS hostname to a server without a static IP address using Dynamic DNS. Dynamic DNS involves running software on your server that monitors your IP address and notifies the Dynamic DNS provider when that IP address changes.
+
+The number of static IP addresses that you need varies, depending on how you configure your servers. Most likely, you want at least two static IP addresses, one for each of two DNS servers (if you’re configuring DNS). In a small organization, those same servers may also offer your Web server, mail server, and other services as well. In general, you want one static IP address for each computer that you make publicly accessible to the Internet.

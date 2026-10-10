@@ -1,0 +1,25 @@
+# **Selecting a Backup Strategy**
+
+While it is tempting to do the quick-and-easy backup, backing up important data requires more planning and forethought. There are several approaches you can take to backing up your data. You need to ask yourself a few questions to decide which approach is best for you. Some things that you should consider are:
+
++   • In the event of a crash, how much downtime can I tolerate?  
++   • Will I need to recover older versions of my files or is the most recent revision sufficient?  
++   • Do I need to back up files for just one computer or for many computers on a network?
+
+Your answers to these questions will help you decide how often to do full backups and how often to do incremental backups. If the data is particularly critical, you may even decide that you need to have your data duplicated constantly, using a technique called disk mirroring. The following sections describe different backup methods.
+
+# **Full backup**
+
+A full backup is one that stores every file on a particular disk or partition. If that disk should ever crash, you can rebuild your system by restoring the entire backup to a new disk. Whatever backup strategy you decide on, some sort of full backup should be part of it. You may perform full backups every night or perhaps only once every week; it depends on how often you add or modify files on your system, as well as the capacity of your backup equipment.
+
+# **Incremental backup**
+
+An incremental backup is one that contains only those files that have been added or modified since the last time a more complete backup was performed. You may choose to do incremental backups to conserve your backup media.
+
+Incremental backups also take less time to complete, because they only back up data that has changed since the most recent backup (full or incremental). Incremental and other partial backup types can be important when systems are in high use during the workweek and running a full backup would degrade system performance. Full backups can be reserved for the weekend when the system is not in use.
+
+# **Disk mirroring**
+
+Full and incremental backups can take time to restore, and sometimes you just can't afford that downtime. By duplicating your operating system and data on an additional hard drive, you can greatly increase the speed with which you can recover from a server crash.
+
+With disk mirroring, it is usually common for the system to continuously update the duplicate drive with the most current information. In fact, with a type of mirroring called RAID 1 (described in Chapter 10), the duplicate drive is written to at the same time as the original, and

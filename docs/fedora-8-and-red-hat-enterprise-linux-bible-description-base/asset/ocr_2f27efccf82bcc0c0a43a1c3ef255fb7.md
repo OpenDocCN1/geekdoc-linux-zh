@@ -1,0 +1,47 @@
+If the `named` daemon starts successfully, clients of your DNS server should start getting information about your domain. To set the `named` daemon to start each time that the system boots up, type the following:
+
+```
+# chkconfig named on
+```
+
+Remember that, whenever you make changes to the `named.conf` or any of the zone files, you must increase the serial number for anyone checking your domain records to pick up those changes. After that, you should restart the `named` service too (as root user) as follows:
+
+```
+# /etc/init.d/named restart
+```
+
+Then you should consider adding the server's own local address to its own `/etc/resolv.conf` file. For example, the `/etc/resolv.conf` file could include the following:
+
+```
+search yourdomain.com
+nameserver 127.0.0.1
+```
+
+If you see the `Starting named` message, your DNS server is probably up and running. If you want to make sure that your server is correctly resolving addresses, the next section, “Checking that DNS is working,” describes some tools that you can use to check your DNS name server.
+
+# ## Checking that DNS is working
+
+The best way to verify whether your DNS server is working correctly is to watch it in action. Here are a few commands you can use to check out your DNS server. The first example uses the `host` command to get the IP address for the host computer named `blue` in the local domain:
+
+```
+# host blue
+blue.yourdomain.com has address 10.0.0.3
+```
+
+Instead of using the simple hostname to get the computer's IP address, you can enter an IP address (instead of the name) or a fully qualified hostname. In the following example, the `dig` command is used with a domain name to get information about the addresses for a domain:
+
+```
+# dig yourdomain.com
+;<>> DiG 9.3.2 <<>> yourdomain.com
+;; global options: printcmd
+;; Got answer:
+;; ->HEADER<=- opcode: QUERY, status: NOERROR, id: 43728
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;yourdomain.com.		IN	A
+
+;; AUTHORITY SECTION:
+yourdomain.com.		604800 IN NS nsl.yourdomain.com.
+yourdomain.com.		604800 IN NS ns2.yourdomain.com.
+```

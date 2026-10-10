@@ -1,0 +1,45 @@
+
+## 浏览器插件
+
+- **DjVu 插件** (*djvu.sourceforge.net*) — 显示采用 DjVu 图像压缩技术的图像。该插件由 A&T 提供。
+- **Macromedia Flash Player** (*www.macromedia.com*) — 显示多媒体矢量图形和动画。该插件由 Macromedia 公司提供。Fedora 提供 Flash Player，但 Macromedia Shockwave 插件尚未在 Linux 上发布。
+- **MPlayer 插件** (*http://mplayerplug-in.sourceforge.net*) — 该插件实现了流行的 mplayer 视频播放器，用于在浏览器窗口中播放嵌入式视频内容。该插件的 RPM 包（*mplayerplug-in*）可从 *http://rpm.livna.org* 获取。有关使用 *rpm* 的更多信息，请参阅第 5 章。
+- **Java 运行时环境** (*java-1.7.0-icedtea*) — 为了能够从网页浏览器播放 Java 和 JavaScript 内容，你需要一个提供 Sun Microsystems（*http://java.com/en/download/index.jsp*）Java 运行时环境 Web 插件功能的插件。不过，Fedora 项目没有使用 Sun 的专有代码，而是结合 OpenJDK 项目和 IcedTea 项目（*http://fedoraproject.org/wiki/Features/IcedTea*）的软件添加了一个完全免费的等效版本。
+
+为了确保插件正常工作，请重启 Firefox 并在地址栏输入 `about:plugins`。你将看到一个列表，显示由 GCJ Web Browser Plugin 处理的 Java 内容。你还可以尝试访问包含 Java 内容不同的网站来测试你的 Java 插件。例如，你可以访问 Java.com 测试页面：`http://java.com/en/download/help/testvm.xml`。
+
+如果无法看到 Java 内容，请打开“软件包更新器”窗口，查找更新的 nspluginwrapper 软件包。安装该更新软件包并重启 Firefox 浏览器后，你应该就能看到 Java 内容了。
+
+**注意**：如果你担心目前 IcedTea 的实验性质，在 Fedora 中还有其他方法可以让 Java 运行时环境浏览器插件正常工作。*www.wierts.com* Fedora 软件库提供该软件的其他 *RPM* 版本。其他人也曾成功从 *www.java.com* 获取软件。过去，我直接从 sun.com 获取软件包并使其正常工作，但发现在最新的 Fedora 版本中使其正常工作更加困难。由于在 Linux 上让 Java 运行时环境软件正常工作是一个不断变化的目标，你可能需要自己构建 *RPM*（参见 *www.FedoraFAQ.org/#java*）。
+
+- **CrossOver 插件** (*www.codeweavers.com*) — 对于一些更有趣和流行的插件，Linux 插件尚不可用。QuickTime 5 电影、Shockwave Director 多媒体内容以及各种 Microsoft 电影、文件和数据格式无法在 Firefox 中原生播放。利用基于 Linux x86 架构处理器上的 WINE 软件，CodeWeavers 创建了 CrossOver 插件。尽管它不再作为单独产品提供（你必须购买整个 Crossover Office 产品，价格为 39.95 美元），但 CrossOver 插件允许你播放一些在 Linux 中原本无法使用的的内容。（可从 www.codeweavers.com/site/products/download_trial 下载试用版。）
+
+安装 CrossOver 插件后，你会看到一个漂亮的“插件设置”窗口，允许你选择性地安装 QuickTime、Windows Media Player、Shockwave、Flash、iTunes 和 Lotus Notes 的插件，以及 Microsoft Word、Excel 和 PowerPoint 查看器。（到你阅读本文时，这些内容格式的后续版本支持可能已经可用。）你还可以安装其他多媒体插件，以及这些插件使用的各种字体。
+
+对于某些插件，系统会询问你希望将插件放在哪里。你可以安装它们以供系统上的所有用户使用，或仅供当前用户使用。若要仅将插件添加到当前用户，请将其放在 `~/.mozilla/plugins` 目录中。若要让插件可供系统中运行 Firefox 的所有用户使用，请将插件放在 `/usr/lib/firefox-*/plugins` 目录中。
+
+> **注意**：当 Firefox 没有分配插件来处理特定数据类型时，弹出一个窗口询问你是否希望使用桌面环境中的默认应用程序来处理该数据。对于 GNOME，`/usr/share/applications/defaults.list` 文件定义了系统范围的默认应用程序。对于你自己的桌面环境，你可以按如下方式更改用于打开特定文件类型的默认设置：打开 Nautilus 文件管理器；右键单击你想更改类型中的任意文件；选择 *属性*；选择 *打开方式* 选项卡；然后从列表中选择你想要用于该文件类型的应用程序。如果你想添加的应用程序不在列表中，请单击 *添加* 将其添加到列表中。
+
+## 添加扩展
+
+虽然插件可用于播放特定类型的内容，但扩展可用于向浏览器本身添加功能。
+
+若要扩展 Firefox 以处理 Fedora 或 RHEL 中未提供的内容，请从 Mozilla.org 的 Firefox 产品页面（www.mozilla.org/products/firefox）开始。从那里，遵循链接到 Firefox 扩展。以下是 Mozilla.org 上可用的最流行的 Firefox 扩展中的一些：
+
+> **注意**：有些 Firefox 扩展已知会导致 Firefox 的性能问题，主要是由于使用过量的内存。如果 Firefox 性能不佳，请关闭所有 Firefox 窗口，然后从终端窗口通过输入以下内容在安全模式下重启 Firefox：
+>
+> `firefox -safe-mode`
+>
+> 有关使用安全模式调试 firefox 问题的更多信息，请参阅 http://kb.mozillazine.org/Safe_Mode。
+
+- **下载工具（FlashGot）** — 如果你习惯从网页浏览器中下载文件组，FlashGot 可能是一个非常有用的工具。安装 FlashGot 后，你可以选择下载单个文件、通过高亮显示网页上的链接来识别的文件，或当前网页链接的所有文件。还有一个“构建图库”功能，允许你识别要一次性下载的文件名范围。安装 FlashGot 后，你可以通过在 Firefox 中选择 **工具** > **FlashGot**，然后从菜单中选择一个功能来访问它。在 Fedora 中，FlashGot 将请求传递给 KDE 以完成下载。你可以获取其他下载工具来代替 KDE，例如 Wget。
+- **有选择地屏蔽广告（AdBlock）** — 使用 AdBlock，你可以有选择地防止显示在你访问的网页上的广告。安装 AdBlock 后，Firefox 右下角会出现一个 AdBlock 按钮。单击该按钮以查看一个窗口，其中包含当前页面上你想屏蔽的项。右键单击图像并选择“AdBlock Image”以选择屏蔽该图像。使用星号屏蔽来自特定站点的所有内容（例如，www.example.com/\*）。从 Firefox 打开 AdBlock 首选项窗口（**工具** > **AdBlock** > **首选项**）以查看、编辑或删除已屏蔽的站点。使用 Firefox 1.5 或更高版本时，你应该使用 AdBlock Plus 代替 AdBlock。
+- **访问 FTP 服务器（FireFTP）** — 包含一个有用的客户端应用程序，可在 Firefox 中运行以访问 FTP 服务器。还有一个 FireFTP 按钮附加组件，可从工具栏访问 FireFTP。
+- **屏蔽 Flash 动画（FlashBox）** — 防止 Flash 动画在你的 Firefox 浏览器窗口中播放。这对于拨号用户特别有用，他们不希望访问的网站试图播放未请求的 Flash 内容时造成性能下降。
+- **改进标签页浏览（Tabbrowser Preferences）** — 虽然 Firefox 已经为你提供一些使用标签页在同一 Firefox 窗口中保持多个网页打开的不错功能，但 Tabbrowser Preferences 将这些功能更进一步。选择 **编辑** > **首选项** > **标签页浏览**。标签页浏览选项让你细化 Firefox 中标签页的工作方式。你可以设置什么动作选择标签页（例如，鼠标悬停与点击），将标签页放在底部而不是顶部，或选择是否在新标签页中加载主页。
+- **查看天气（ForecastFox）** — 使用 ForecastFox，你在 Firefox 中选择的任何区域的最新天气只需单击即可。安装 ForecastFox 并重启 Firefox 后，一个弹出窗口允许你配置 ForecastFox 选项。至少选择“查找代码”，以选择你想关注天气的地区。保存你的选项后，Firefox 右下角会出现一个天气图标。将鼠标悬停在该图标上即可查看当前天气的快速视图。双击该图标可从 www.weather.com 显示更详细的天气报告。
+
+安装扩展后，你需要重启 Firefox 才能使其生效。在某些情况下，更改扩展选项也需要你重启 Firefox。
+
+如果你想卸载扩展、更改扩展选项或获取更多扩展，请从 Firefox 中选择 **工具** > **附加组件**。出现的窗口会显示已安装扩展的列表。
+

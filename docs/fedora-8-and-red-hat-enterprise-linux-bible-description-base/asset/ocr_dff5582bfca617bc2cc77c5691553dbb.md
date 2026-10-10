@@ -1,0 +1,15 @@
+# Chapter 9: Using the Internet and the Web 367
+
++   - **Web browsers** — Most Web browsers available for Linux today follow from the legacy of Netscape Navigator. The open source Mozilla project, which was originally spawned from Netscape source code, is responsible for the recent award-winning Firefox Web browser. Another browser that comes with Fedora is the Konqueror browser/file manager. (The Mozilla suite was renamed SeaMonkey and is available with Fedora in the seamonkey package.)
+
+Relatively new ways for gathering content from the Web include RSS news feed readers, such as the liferea RSS/RDF feed reader. There are also several browsers, such as lynx and w3m, that can run from the command line (with no graphical interface required).
+
++   - **E-mail clients** — The Evolution e-mail client has evolved into a full-fledged groupware suite, combining an e-mail reader with features for managing contacts, calendars, and tasks, as well as connecting to Microsoft Exchange servers. Thunderbird is an up-and-coming e-mail client from the Mozilla project (SeaMonkey mail is also available from the same organization). For those who prefer old-school e-mail readers, mutt, pine, and mail commands let you read mail from the command line, often with limited abilities to handle attachments, HTML, or other modern e-mail features.
+
++   - **FTP clients** — If you use the FTP protocol to download files from FTP servers, or to upload Web pages to your server, graphical tools for doing those tasks include gFTP and kGet applications. There are also many shell commands available for accessing FTP servers to look for files, download files, or upload files. Those commands include ftp, ncftp, and tftp.
+
++   - **BitTorrent clients/servers** — BitTorrent is the popular open source software project for sharing files among many computers at the same time. With BitTorrent, as you download a file you can simultaneously safely upload that same file to others. BitTorrent is particularly useful for publishing CD or DVD images containing large software distributions (such as Fedora) the minute they becomes available, without overstressing the original servers releasing the software.
+
++   - **Instant messaging and chats** — Typing live messages to friends, family, and associates has become a popular activity in recent years. Pidgin is an instant messaging client that lets you connect to AIM, IRC, MSN, Google, and ICQ servers. XChat is a popular Internet Relay Chat (IRC) client (a popular protocol among Linux enthusiasts for online chats). Kopete is an instant messaging client that integrates with a KDE desktop.
+
++   - **Remote commands (login, file copy, and so on)** — As you spend more time working with Linux, you will find that it is often quicker and more convenient to run commands than it is to run graphical applications. Some very powerful command-line tools exist in Linux for doing such things as remote login and remote execution (*ssh*) and remote file copy (*wget*, *scp*, and *rsync*).

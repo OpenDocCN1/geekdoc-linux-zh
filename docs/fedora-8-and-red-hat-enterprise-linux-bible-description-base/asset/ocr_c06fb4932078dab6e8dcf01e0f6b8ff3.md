@@ -1,0 +1,15 @@
+represent the version of the package. In this case, it is version 4.2.3 (the major version number is 4, followed by minor version number and patch level 2.3). After the version number is a dot, followed by some optional parts, which are followed by indications of how the file is archived and compressed.
+
+The first line shows a package that is in the **RPM Package Manager** (.rpm) format. The .1.386 before the .rpm indicates that the package contains binaries that are built to run Intel i386 architecture computers (in other words, PCs). The -1 indicates the build level (the same package may have been rebuilt multiple times to make minor changes). See the sidebar “Using Binary RPMs versus Building from Source” for the pros and cons of using prebuilt RPM binary packages as opposed to compiling the program yourself.
+
+# Using Binary RPMs versus Building from Source
+
+Binaries created in RPM format are easily installed, managed, and uninstalled using tools such as **rpm** and **yum**. This is the recommended installation method for Fedora and RHEL novices. Sometimes, however, building an application from source code may be preferable. Here are some arguments on both sides:
+
++   *   **RPM** — Installing applications from a binary RPM archive is easy. After the application is installed, there are both shell commands and GUIs for managing, verifying, updating, and removing the **RPM** package. You don't need to know anything about Makefiles or compilers. When you install a binary RPM package, **RPM** tools even check to make sure that other packages that the package depends on are installed. Because Red Hat has released **RPM** under the **GPL**, other Linux distributions also use it to distribute their software. Thus, most Linux applications are, or will be, available in **RPM** format.
++   
++   *   **Source code** — Not all source-code packages are made into **RPM** binaries. If you use **RPM**, you may find yourself with software that is several versions old, when you could simply download the latest source code and run a few tar and make commands. Also, by modifying source code, you can tailor the package to better suit your needs.
+
+Refer to Appendix A for information on getting source code for Fedora **RPM** binary packages that are included on the DVD that comes with this book. You can modify that source code yourself and rebuild the **RPM** binaries. The rebuilt binaries can be tuned to your hardware and include the features you want with the package. For more information on **RPMs**, refer to the *Red Hat RPM Guide* by Eric Foster-Johnson (Red Hat Press/Wiley, 2003).
+
+In the next two lines of the previous example, each file contains the source code for the package. The files that make up the package were archived using the **tar** command (.tar) and compressed using the **gzip** command (.gz). You use these two commands (or just the **tar** command with the *-tz option*) to expand and uncompress the packages when you are ready to install the applications.

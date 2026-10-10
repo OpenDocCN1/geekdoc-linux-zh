@@ -431,6 +431,7 @@
 +   [Fedora 7 和 Red Hat Enterprise Linux 圣经](docs/fedora-7-and-red-hat-enterprise-linux-bible/README.md)
 +   [Fedora 7 释放指南](docs/fedora-7-unleashed/README.md)
 +   [Fedora 8 和 Red Hat Enterprise Linux 圣经](docs/fedora-8-and-red-hat-enterprise-linux-bible/README.md)
++   [Fedora 8 与 Red Hat Enterprise Linux 圣经](docs/fedora-8-and-red-hat-enterprise-linux-bible-description-base/README.md)
 +   [Fedora 8 入门指南](docs/fedora-8-introduction/README.md)
 +   [Fedora 9 与 Red Hat Enterprise Linux 宝典](docs/fedora-9-and-red-hat-enterprise-linux-bible-bible-wiley/README.md)
 +   [Fedora 9 与 Red Hat Enterprise Linux 圣经](docs/fedora-9-and-red-hat-enterprise-linux-bible-description-base/README.md)
