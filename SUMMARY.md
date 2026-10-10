@@ -655,6 +655,7 @@
 +   [iOS 和 macOS 性能调优：Cocoa®、Cocoa Touch®、Objective-C® 和 Swift™](docs/ios-and-macostm-performance-tuning-cocoa-cocoa-touch-objecti/README.md)
 +   [C 语言 IoT 项目：Linux 存在多久了：我的电脑能运行 Linux 吗](docs/iot-projects-using-c-language-how-long-has-linux-been-around/README.md)
 +   [Java 实战](docs/isbn-9780070528499/README.md)
++   [Agnes-3.0-flash](docs/isbn-9780198065593/README.md)
 +   [数据科学实战](docs/isbn-9780536211729/README.md)
 +   [数据库系统概念](docs/isbn-9780619130015/README.md)
 +   [Python 深度学习入门指南](docs/isbn-9780974433943/README.md)

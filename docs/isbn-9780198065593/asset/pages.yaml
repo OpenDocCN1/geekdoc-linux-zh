@@ -1,0 +1,2499 @@
+- pgno: 0
+  md: '# **Learn with**
+
+    # **LINUX**
+
+
+    based on the
+
+    **edubuntu**
+
+    distribution
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_0_0.png)
+
+
+    **CLASS 2**
+
+
+    **DEEPAK BHARGAVA • GUNJAN KOTWANI • NEERAJ K. BEDHOTIYA**'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "Digitized by the Internet Archive  \nin 2022 with funding from  \nKahle/Austin\
+    \ Foundation\n\nhttps://archive.org/details/isbn_9780198065593"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Learn with
+
+
+    # LINUX
+
+
+    FOR THE PRIMARY SCHOOL
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_2_0.png)
+
+
+    # CLASS 2
+
+
+    +   DEEPAK BHARGAVA
+
+    +   GUNJAN KOTWANI
+
+    +   NEERAJ K. BEDHOTIYA
+
+
+    # OXFORD
+
+
+    UNIVERSITY PRESS'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/9a5b9efff92da1263a1b04aa9d4ae262_3_0.png)
+
+
+    Oxford University Press is a department of the University of Oxford. It furthersthe
+    University’s objective of excellence in research, scholarship,and education by
+    publishing worldwide. Oxford is a registered trade mark ofOxford University Press
+    in the UK and in certain other countries.
+
+
+    Published in India by
+
+    Oxford University Press
+
+    YMCA Library Building, 1 Jai Singh Road, New Delhi 110001, India
+
+
+    © Oxford University Press 2010
+
+
+    The moral rights of the author/s have been asserted.
+
+
+    First published 2010
+
+    Fifth impression 2014
+
+
+    All rights reserved. No part of this publication may be reproduced, stored inaretrieval
+    system, or transmitted, in any form or by any means, without theprior permission
+    in writing of Oxford University Press, or as expressly permittedby law, by licence,
+    or under terms agreed with the appropriate reprographicsrights organization. Enquiries
+    concerning reproduction outside the scope of theabove should be sent to the Rights
+    Department, Oxford University Press, at theaddress above.
+
+
+    You must not circulate this work in any other formand you must impose this same
+    condition on any acquirer.
+
+
+    ISBN-13: 978-0-19-806559-3
+
+    ISBN-10: 0-19-806559-0
+
+
+    Typeset in Comic Sans MS
+
+    By Star Compographics, New Delhi 110096
+
+    Printed in India by Battra Art Press, New Delhi 110028'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Preface
+
+
+    *Learn with Linux* for classes 1 to 8 is a computer science series for the primary
+    and middle school, which focuses on free and open-source software (FOSS). FOSS
+    refers to software that is liberally licensed under the GNU General Public License,
+    granting users the right to study, change, and improve its design through free
+    availability of its source code. Therefore, FOSS users have fundamental control
+    and flexibility.
+
+
+    Our introduction to FOSS transpired at a training program attended by one of us
+    (Neeraj K. Bedhotiya) in 2004 at IIM (A), which enthusiastically endorsed the
+    use of FOSS in school education. Thereafter, we experimented with this option
+    in our school (Mayoor School, Ajmer), and this series is an outcome of our experiences
+    over the last five years.
+
+
+    The search for an appropriate open-source software led us to the Edbuntu distribution
+    – a user-friendly, educational version of the Linux-based Ubuntu operating system.
+    A comprehensive curriculum was then designed in conformity with the recommendations
+    of the National Curriculum Framework 2005. The aim of this series is to promote
+    critical thinking and creativity amongst learners, and age-appropriate syllabi
+    in each book links computer science education with real-life experiences. Computer
+    science is not treated as an isolated subject, rather a computer is projected
+    as a tool allowing integrated learning and reinforcement of concepts from all
+    core subjects.
+
+
+    # Key Features
+
+
+    +   1.  Makes appropriate use of screenshots to present concepts in a lucid and
+    child-friendly manner.
+
+    +   2.  **Think Tank** within each chapter poses application-based questions,
+    encouraging further exploration and thought on the concepts covered.
+
+    +   3.  **Activity Sheet** provides practical exercises integrating different
+    subjects using the tools learned.
+
+    +   4.  **Worksheet** contains questions, both objective and descriptive, for
+    revision.
+
+    +   5.  **Teacher''s Note** at relevant places gives useful suggestions to teachers
+    on teaching methodologies and directions on how to explore a topic further.
+
+
+    We invite you to share your experiences with FOSS and this series with us. Your
+    constructive feedback on improving the content and coverage of these books would
+    be greatly welcomed.
+
+
+    -The Authors
+
+
+    +   -   Software used in this book can be freely downloaded from [http://linux.oxcomputers.com](http://linux.oxcomputers.com)
+
+    +   -   Also available is a DVD for teachers that contains the complete software
+    requirements including the Edbuntu operating system, all the open-source application
+    software covered in the syllabus, installation guides, an image library for the
+    activities, and sample presentations. Windows versions of the application software
+    are also available. Teachers may contact the publisher for the DVD.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'We dedicate this book to
+
+    ‘The Spirit of Mayoor School’
+
+    that allows us to think and explore
+
+
+    # ## Acknowledgements
+
+
+    We are grateful to Late Dr. Laxman Mohanty, guest faculty at IIM Ahmedabad, for
+    passionately promoting FOSS in education, and also to Dr. G. Nagarjuna, researcher
+    at Homi Bhabha Centre for Science Education (Mumbai) and one of the founders of
+    the Free Software Foundation of India, who gave us the solution to implement FOSS
+    by introducing Edubuntu to us.
+
+
+    Our special thanks to the technical team led by Mr. Pawan Yadav, who helped us
+    in our research, in setting up a networked Linux lab, and in finding software
+    solutions.
+
+
+    We also thank the FOSS Community for diligently providing solutions to all our
+    technical problems.
+
+
+    Thanks are also due to the Mayoor School IT team which has worked hard on the
+    layout of these books to make them attractive and child-friendly.
+
+
+    We also thank Ms. Vineeta Bedhotiya, for her constructive criticism and guidance
+    at every step.
+
+
+    A special mention is due to all our students of the primary classes, who with
+    their creative minds and innocent queries inspired us to think and come up with
+    new ideas.
+
+
+    Our heartfelt gratitude also to the parent community for their constructive feedback,
+    and for keeping faith in us during the initial difficult phase of the change in
+    platforms.
+
+
+    Thanks are also due to the wonderful and supportive staff at Mayoor School, Ajmer,
+    who always gave us fresh ideas to integrate computers with other subjects.
+
+
+    Finally, our grateful thanks to the Mayo College General Council for supporting
+    us in our endeavour to publish *Learn with Linux* series in association with Oxford
+    University Press.
+
+
+    We feel fortunate that we have been able to touch the lives of so many learners
+    through these books. We would consider our job done, if we can instill the spirit
+    of self-learning in students through the use of these software.
+
+
+    -The Authors'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Learn with Linux
+
+
+    # CONTENTS
+
+
+    +   - *Preface* 3
+
+    +     - *Acknowledgements* 4
+
+    +     1. *Introduction to Edubuntu*
+
+    +       - Introduction to Linux 7
+
+    +       - Linux for the Young 7
+
+    +       - Educational Softwares in Edubuntu 9
+
+    +     2. *Fun with Math - TuxMath*
+
+    +       - Features and Objective of TuxMath 10
+
+    +       - Gameplay Overview 11
+
+    +       - Program Navigation 13
+
+    +       - How to Play 15
+
+    +       - Activity Sheet 1 17
+
+    +     3. *OpenOffice.org Word Processor*
+
+    +       - Word Processing 21
+
+    +       - Start with Word Processor 22
+
+    +       - Worksheet 1 26
+
+    +       - Commands 27
+
+    +       - Activity Sheet 2 30
+
+    +       - Worksheet 2 32
+
+    +       - Text Editing Features 33
+
+    +       - Text Formating Features 35
+
+    +       - Worksheet 3 42
+
+    +       - Text Alignment 43
+
+    +       - Activity Sheet 3 45
+
+    +       - Create Bulleted and Numbered Lists 48
+
+    +       - Drop Caps 51
+
+    +       - Activity Sheet 4 52
+
+    +       - Worksheet 4 54
+
+    +       - More Text Editing Features
+
+    +         - -Find and Replace 55
+
+    +         - -Using Spellcheck and Thesaurus 57
+
+    +       - Activity Sheet 5 60
+
+    +       - Working with Graphics 61
+
+    +       - Worksheet 5 66
+
+    +       - Activity Sheet 6 67'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Introduction to Edubuntu
+
+
+    # Introduction to Linux
+
+
+    Linux is a free Unix-type operating system originally created by Linus Torvalds
+    with the assistance of developers around the world.
+
+
+    Linux has an official mascot, Tux, the Linux penguin, which was selected by Linus
+    Torvalds to represent the image he associates with the operating system.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_8_0.png)
+
+
+    # Linux for the Young
+
+
+    “Ubuntu” is an ancient African word, meaning “humanity to others”. The Edubuntu
+    Linux distribution brings the spirit of Ubuntu to schools, through its customized
+    school environment.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # Introduction to Edubuntu
+
+
+    Edubuntu is a complete Linux-based operating system, freely available with community-based
+    support.
+
+
+    The Edubuntu community is built on the following ideas enshrined in the Edubuntu
+    Manifesto.
+
+
+    +   Software should be available free of charge.
+
+    +   Software tools should be usable by people in their local language and despite
+    any disabilities.
+
+    +   People should have the freedom to customize and alter their software in whatever
+    way they see fit.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_9_0.png)
+
+
+    # ## Edubuntu Desktop
+
+
+    These freedoms make Edubuntu fundamentally different from proprietary software:
+    not only are the tools you need available free of charge, you, and thousands of
+    developers around the world, have the right to modify and build upon your software
+    until it works exactly the way you want it to.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Introduction to Edubuntu
+
+
+    # Educational Softwares in Edubuntu
+
+
+    Edubuntu offers a variety of educational programs. Some of them are as follows:
+
+
+    +   * **Fun with Math** -- TuxMath is an educational arcade game starring Tux,
+    the Linux mascot! Based on the classic arcade game “Missile Command,” Tux must
+    defend his cities by solving arithmetic problems.
+
+
+    +   * **Office Suite** -- OpenOffice.org is a complete office suite similar to
+    the Microsoft Office suite. It features a word processor, as well as a spreadsheet,
+    presentation, drawing, database, and mathematical formula applications. OpenOffice.org
+    can open and convert most Microsoft Office documents and has support for many
+    languages.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_10_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Fun with Math — TuxMath
+
+
+    # Tux, of Math Command or TuxMath
+
+
+    TuxMath is a simple arithmetic educational software starring Tux, the Linux penguin.
+    Tux has to fire phasers at calculations that are falling down from the sky. The
+    student has to type the right result and push [Spacebar/Enter] to destroy the
+    calculation before it touches the ground.
+
+    The math involved covers addition, subtraction, multiplication, and division.
+    It is a great way for kids and adults to stretch their minds.
+
+
+    # Features of TuxMath
+
+
+    +   - Cute, animated graphics
+
+    +   - Sound effects and music
+
+    +   - Optional on-screen input, for children who can’t use a keyboard (great for
+    touchscreens!)
+
+
+    # Objective of TuxMath
+
+
+    The objective of this software is to develop oral and mental math skills. In “Tux,
+    of Math Command,” Commander Tux defends his cities from an attack of math equations.
+    You can play the part of Commander Tux. Comets are hurtling towards your cities,
+    and you must destroy them by solving their equations.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_11_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Fun with Math — TuxMath
+
+
+    # Gameplay Overview
+
+
+    Tux, the Linux penguin, stands at the controls of a laser defense system ready
+    to defend his fellow penguins from falling comets. His companions are tucked away
+    safely in igloos. Two igloos on each side of the defense station give Tux the
+    task of defending a total of four other penguins.
+
+
+    Each incoming comet has a math problem attached. Entering the correct solution
+    will cause the laser to destroy the comet. Entering an incorrect answer will result
+    in a miss.
+
+
+    This simple gameplay is entertaining, which becomes more interesting when a comet
+    hits the igloo. The first comet strike will partially melt the penguin''s igloo.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_12_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Fun with Math — TuxMath
+
+
+    A second strike causes the igloo to melt completely, forcing the penguin to run
+    away. No penguins are ever harmed; they simply walk away once their igloo is gone.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_13_0.png)
+
+
+    Giving young players two tries before the penguin flees helps to prevent them
+    from becoming frustrated while still providing challenge.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Fun with Math — TuxMath
+
+
+    # Program Navigation
+
+
+    # Title Screen
+
+
+    On this screen, you can either choose to play the game, change the gameplay options,
+    view the credits, or quit.
+
+
+    Use the [Up] and [Down] arrow keys to select what you wish to do, and then press
+    [Enter/Return]. Otherwise, use the mouse to click the menu item. Pressing [Escape]
+    will quit the program.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_14_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Fun with Math — TuxMath
+
+
+    More Options Screen
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_15_0.png)
+
+
+    More Options Screen
+
+
+    Credits Screen
+
+
+    This screen displays the credits. You can press [Escape] to return to the title
+    screen.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_15_1.png)
+
+
+    Credits Screen'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Fun with Math — TuxMath\n\n# How to Play\n\n# Destroying Comets\n\nAs the\
+    \ comets fall towards your cities, you must solve their equations.\n\nTo destroy\
+    \ a comet, do the following:  \nFirst, figure out the answer to the equation.\
+    \  \nFor example, \"3 × 4\" would be \"12\".\n\nSecond, type in the answer. As\
+    \ you type numbers on the keyboard, they will appear in the \"LED\"-style display\
+    \ at the bottom center of the screen.\n\nFinally, press [Enter/Return/Spacebar].\n\
+    \nThe comet that has the number you entered as its answer will be shot down by\
+    \ Tux, the penguin.\n\nNote:\n\n+   1. Sometimes more than one comet will have\
+    \ the same answer. In this case, the comet closest to your cities will be destroyed\
+    \ first.\n+   2. After typing [Enter/Return], the \"LED\"-style display will automatically\
+    \ reset to \"000\", so you can answer the next equation!\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_16_0.png)\n\
+    \n# Correcting your Answer\n\nIf you make a mistake, you can press [Backspace/Delete]\
+    \ and the \"LED\"-style display at the bottom center of the screen will reset\
+    \ to \"000\"."
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Fun with Math — TuxMath
+
+
+    # Losing a City
+
+
+    If a comet crashes into one of your cities before you had the chance to answer
+    its equation correctly, the city''s shield will be destroyed. If the city is hit
+    by another comet, it will be destroyed completely.
+
+
+    *Note:* The correct answer to the calculation is always displayed as the equation
+    hits the ground.
+
+
+    Once you lose all of your cities, the game will end.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_17_0.png)
+
+
+    # Teacher''s Note
+
+
+    The teacher can launch the program with the --fullscreen option from the Terminal
+    application in Edubuntu. The game screen will appear in full screen mode.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Fun with Math — TuxMath
+
+    Activity Sheet 1
+
+    Setting Administrative Options
+
+
+    “Tux, of Math Command” allows parents or teachers to adjust parts of the game
+    options. Click on Math Command Training Academy.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_18_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# ## Fun with Math — TuxMath
+
+
+    The following screen will be displayed on selecting Math Command Training Academy.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_19_0.png)
+
+
+    Here, all addition options are available. You can select the desired option based
+    on the age and level of understanding of the child.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'Click on the Next Arrow button to browse more options. For example, addition
+    of negative numbers.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_20_0.png)
+
+
+    The next screen will show you more options.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_20_1.png)
+
+
+    This feature makes TuxMath useful for children of all age groups.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Fun with Math – TuxMath
+
+
+    # Think Tank
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_21_0.png)
+
+
+    Try clicking on Hall Of Fame.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_21_1.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_21_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# OpenOffice.org Word Processor\n\n# Word Processing\n\nWord processing means\
+    \ using a computer to create, edit, and print documents. To perform word processing,\
+    \ you need a special program called a Word Processor.\n\n# Advantages of a Word\
+    \ Processor\n\n+   * You can make changes or edit without retyping the entire\
+    \ document.\n+       You can apply many formatting styles to the text in the document.\n\
+    +   * You can include graphics in the document.\n+   * You can save the document\
+    \ for future use.\n+   * You can print the document.\n\nOpenOffice.org Word Processor\
+    \ is a free and open source word processor software which is a component of the\
+    \ OpenOffice.org software package.\n\n> **Teacher's Note**\n> \n> The teacher\
+    \ can give an introduction to the terms like document, edit, formatting, graphics,\
+    \ save, open, and print. She can open a previously created file, take a print\
+    \ and show it to the learners. She can explain the tasks that can be done using\
+    \ a Word Processor, like making shopping lists, writing letters, creating graphics,\
+    \ tables, check for spellings and grammar, perform calculations etc."
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# OpenOffice.org Word Processor
+
+
+    # To Start with Word Processor
+
+
+    Click on Applications → Office → OpenOffice.org Word Processor
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_23_0.png)
+
+
+    The screen will be as follows:
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_23_1.png)
+
+
+    22'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# OpenOffice.org Word Processor
+
+
+    # Keyboard
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_24_0.png)
+
+
+    1. The keyboard has keys that can be pressed to make characters (letters, numbers,
+    and symbols) appear on the screen.
+
+
+    2. Press means to touch a key on the keyboard hard enough to cause the character
+    to appear on the screen and then release it immediately.
+
+
+    3. Press the "H" key now. (An "h" appears on the screen.) Next to the "h" is a
+    blinking vertical line. This blinking line is the cursor which indicates the place
+    on the page where something will be placed when you press a key. Press the "E"
+    key, then press the "L" key and the "P" key. (The word "help" appears on the screen.)
+
+
+    # Space Bar
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_24_1.png)
+
+
+    The [Space Bar] key is the long key in the middle at the bottom of the keyboard.
+    Press the [Space Bar] key. (The cursor moves one space to the right.)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# OpenOffice.org Word Processor
+
+
+    # Shift key
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_25_0.png)
+
+
+    Pressing the [Shift] key along with a letter key makes the letters appear in capitals.
+
+
+    Type the word "Help" by doing the following:
+
+
+    +   1. Press and hold down the [Shift] key as you press the "H" key. Release the
+    [Shift] key. (The letter "H" appears in capitals on the screen.)
+
+    +   2. Press the "E" key, then press "L", then press "P". (The word "Help" appears
+    on the screen.)
+
+
+    # Think Tank
+
+
+    +   1. Can you see a [Caps Lock] key on the keyboard?
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_25_1.png)
+
+
+    A small light on the keyboard tells you whether the [Caps Lock] key is On or Off.
+    What is the use of this key?
+
+
+    +   2. There is a [Num Lock] key on the keyboard. Do you know its use?
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_25_2.png)
+
+
+    +   3. What is the difference between [Backspace] and [Delete] keys?
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_25_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# # OpenOffice.org Word Processor\n\n# ## Mouse\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_26_0.png)\n\
+    \nThe device next to the keyboard is called a Mouse.\n\n+   1. Moving the mouse\
+    \ causes the mouse pointer, I, to move on your screen.\n+   2. Move the mouse\
+    \ up and down on the table top or the mouse pad. Notice that the pointer, I, also\
+    \ moves up or down on your screen.\n+   3. Move the mouse to the left and to the\
+    \ right on the table top or the mouse pad. Notice that the pointer, I, also moves\
+    \ to the left or to the right on your screen.\n+   4. Move the mouse so the pointer,\
+    \ I, is somewhere on the word “Help” that you just typed.\n+   5. To click, put\
+    \ your right hand on the mouse. Put your index finger (the finger that you use\
+    \ to point) on the left button, press it and release the button.\n+   6. Notice\
+    \ that the cursor (blinking vertical line) moves to where you click the mouse.\
+    \ Press the letter X. Letter x appears at the place where the blinking cursor\
+    \ was seen.\n\n> **Think Tank**\n> \n> Can you see a small wheel on the mouse\
+    \ between the left and right buttons? Try to rotate the wheel and observe what\
+    \ happens."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# OpenOffice.org Word Processor\nWorksheet 1\n\nDate: __/__/\n\na. State right\
+    \ ✓ or wrong ✗.\n\n+   1. The keyboard is an output device.\n+   2. The longest\
+    \ key on the keyboard is the [Space Bar] key.\n+   3. Pressing the [Shift] key\
+    \ makes the letter appear in capitals.\n+   4. The mouse is an input device.\n\
+    +   5. The right mouse button is clicked for selection.\n\nb. Label the parts\
+    \ of Word Processor window.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_27_0.png)\n\
+    \nDate: __/__/  \nTeacher’s Signature: _________"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# OpenOffice.org Word Processor
+
+
+    # Commands
+
+
+    # To Open a New File
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_28_0.png)
+
+
+    Click on File→ New→ Text Document. The text document Untitled 1 : OpenOffice.org
+    Writer appears on your screen. The screen is where you see things happen like
+    on a TV screen.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# OpenOffice.org Word Processor
+
+
+    # To Save a File
+
+
+    Click on File→ Save
+
+
+    The Save dialog box appears.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_29_0.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_29_1.png)
+
+
+    Type the name of your file in the Name text box.
+
+
+    Click on Save button to save your text document.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# OpenOffice.org Word Processor
+
+
+    # To Open an Existing File
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_30_0.png)
+
+
+    The Open command is used to open an already saved file in Word Processor. Click
+    on File→ Open The Open dialog box appears.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_30_1.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_30_2.png)
+
+
+    Choose the name of the file to be opened. Then click on Open button.
+
+
+    # To Close a File
+
+
+    Click on File→ Close
+
+
+    # Think Tank
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_30_3.png)
+
+
+    Can you see underlined letters on the menu bar? Why are they underlined?
+
+
+    29'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# OpenOffice.org Word Processor
+
+
+    # Activity Sheet 2
+
+
+    Some suggested activities are:
+
+
+    +   1. Open Word Processor. Type your name, your class with section and the name
+    of your school.
+
+    +      For example,
+
+    +      Ankita Kapoor
+
+    +      II A
+
+    +      Mayoor School
+
+
+    +   2. Save the file in Documents folder by the name "Myself".
+
+
+    +   3. Close the file.
+
+
+    +   4. Open the file and add the current date and day. Save your work and exit
+    Word Processor.
+
+
+    +   5. Open the file and add the names of all family members. Save the file and
+    exit.
+
+
+    +   6. Create a new file and type 5 sentences about any object in your Computer
+    Lab. For example, computer, air conditioner, projector, etc.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_31_0.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_31_1.png)
+
+
+    +   7. The teacher can take a bag, fill it with simple things like a ball, a pencil,
+    an eraser, a box, a small toy, a feather, a stone, a piece of paper, etc. Ask
+    each child to choose an object and write about it in Word Processor. Save the
+    file.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_31_2.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_31_3.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_31_4.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_31_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# OpenOffice.org Word Processor
+
+
+    +   8.  Thematic writing: Some suggested topics are Earth Day, mother''s day,
+    my school, myself, nature, my family, my favorite season, a day in the market,
+    let''s talk about our friends.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_32_0.png)
+
+
+    +   9.  Picture Composition: The teacher can show any painting or any picture
+    to the students, discuss the picture, encourage children to speak up and exchange
+    ideas and then write a few sentences about the picture, using Word Processor.
+    Save the file.
+
+
+    For example,
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_32_1.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_32_2.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_32_3.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_32_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# OpenOffice.org Word Processor
+
+
+    # Worksheet 2
+
+
+    Date: __/__/
+
+
+    # a. Fill in the blanks.
+
+
+    +   1. Each time you press the [Enter] key, the cursor goes ______ by one line.
+
+
+    +   2. The area where you type and edit text is known as _____________.
+
+
+    +   3. The button for opening a new file is located on the ____________
+
+    +      toolbar.
+
+
+    +   4. Click on ______ → Save, to save a file.
+
+
+    +   5. When you click on File→ Open, _________ dialog box opens.
+
+
+    # b. Match the following:
+
+
+    +   1. New
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_33_0.png)
+
+
+    +   2. Open
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_33_1.png)
+
+
+    +   3. Save
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_33_2.png)
+
+
+    +   4. [Space Bar]
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_33_3.png)
+
+
+    +   5. [Shift] key
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_33_4.png)
+
+
+    Date: __/__/____ Teacher’s Signature: _______________'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# OpenOffice.org Word Processor
+
+
+    # Text Editing Features
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_34_0.png)
+
+
+    # To Undo Changes done in a Text Document
+
+
+    Click on Edit-> Undo
+
+
+    Alternatively, you can press [Ctrl+Z] (a keyboard shortcut for Undo). This command
+    will undo the last change done to the file.
+
+
+    # To Redo Changes done in a Text Document
+
+
+    Click on Edit-> Redo
+
+
+    Alternatively, you can press [Ctrl+Y] (a keyboard shortcut for Redo). This command
+    will reverse the action of the undo command.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_34_1.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_34_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# OpenOffice.org Word Processor
+
+
+    # To Cut Text from a Text Document
+
+
+    First step is to select the text which you want to cut. Text selection is done
+    by pressing and holding down the left mouse button and dragging the mouse pointer
+    over the text you wish to select. Once the desired text is highlighted, release
+    the left mouse button to complete the selection. Then click on Edit→ Cut
+
+
+    Alternatively, you can press Ctrl+X (a keyboard shortcut for Cut). The selected
+    text will disappear from the screen and will be pasted in the temporary memory
+    know as Clipboard of the system.
+
+
+    # To Copy Text from a Text Document
+
+
+    First step is to select the text which you want to copy. Then click on Edit→ Copy
+
+
+    Alternatively, you can press Ctrl+C (a keyboard shortcut for Copy). The selected
+    text will still appear on the screen and will also be pasted in the temporary
+    memory known as Clipboard of the system.
+
+
+    # To Paste Text in a Text Document
+
+
+    To paste text that you have cut or copied, place the cursor where you want to
+    paste the text. Then click on Edit→ Paste
+
+
+    Alternatively, you can press Ctrl+V (a keyboard shortcut for Paste).
+
+
+    # Think Tank
+
+
+    +   Try this:
+
+    +   For the text editing commands, you can use any of the following:
+
+    +   1. the menu bar
+
+    +   2. the toolbar
+
+    +   3. select the text and right click on it to get the context sensitive menu
+
+    +   4. shortcut keys'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# OpenOffice.org Word Processor
+
+
+    # Text Formatting Features
+
+
+    Word Processor allows many kinds of formatting styles.
+
+
+    # To Format Text
+
+
+    The first step is to select text to be formatted. Then click on Format→ Character
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_36_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# OpenOffice.org Word Processor
+
+
+    The Character dialog box will appear.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_37_0.png)
+
+
+    Click the **Font** tab in the Character dialog box.
+
+
+    To select a font, scroll through the font-list and stop at the one you want to
+    use. The font-list shows all the fonts available on the computer you are using.
+    As you scroll through the list of fonts, a preview of the font selected is displayed
+    in the preview window.
+
+
+    To change the typeface of a font, select the desired typeface from the **Typeface**
+    list box. Available typeface types are: Regular, Regular Italic, Bold, Medium
+    Italic.
+
+
+    To change the size of a font, select from the Size scroll box. Font-size is commonly
+    expressed in points.
+
+
+    Click on **OK** button to apply the changes to the selected text.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# OpenOffice.org Word Processor
+
+
+    # To Further Format Text
+
+
+    The first step is to select text to be formatted. Then click on Format-> Character
+
+
+    The Character dialog box will appear. Click the Font Effects tab in the Character
+    dialog box.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_38_0.png)
+
+
+    In the Underlining field, select the style.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_38_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# OpenOffice.org Word Processor
+
+
+    In the Color field, select the underlining color.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_39_0.png)
+
+
+    In the Strikethrough field, select the style.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_39_1.png)
+
+
+    In the Font color field, select the color you want to apply.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_39_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'In the Effects field, select the effect style.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_40_0.png)
+
+
+    In the Relief field, select the texture style.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_40_1.png)
+
+
+    Furthermore, you can select the checkboxes from the following options to give
+    additional effects to the selected text.
+
+
+    +   - Outline
+
+    +   - Shadow
+
+    +   - Blinking
+
+    +   - Hidden'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# OpenOffice.org Word Processor\n\n# To Set the Positioning of Text\n\nSelect\
+    \ the text to be formatted.  \nThen click on Format➔ Character  \nThe Character\
+    \ dialog box will appear.\n\nClick the Position tab in the Character dialog box.\n\
+    \n![](img/9a5b9efff92da1263a1b04aa9d4ae262_41_0.png)\n\nIn the Position area,\
+    \ set the superscript or subscript option for the selected text.\n\nSuperscript\
+    \ is used to reduce the font-size of the selected text and raise it above the\
+    \ base line.\n\nNormal setting removes the superscript or subscript setting.\n\
+    \nSubscript is used to reduce the font-size of the selected text and lower it\
+    \ below the base line.\n\nFor example,\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_41_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# OpenOffice.org Word Processor
+
+
+    In the Rotation/scaling area, you can set the degree of rotation of the text and
+    the percentage of the text to be scaled.
+
+    Click on OK button to apply the desired changes.
+
+    For example,
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_42_0.png)
+
+
+    # To apply Colored Background to the Text
+
+
+    Select the text to be formatted.
+
+    Then click on Format → Character. The Character dialog box will appear.
+
+    Click the Background tab in the Character dialog box.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_42_1.png)
+
+
+    Click on the color you want as a background for the selected text and then click
+    on OK button.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# OpenOffice.org Word Processor
+
+    Worksheet 3
+
+
+    Date:\_\_\_/\_\_\_/\_\_\_
+
+
+    a. Fill in the blanks.
+
+
+    +   1. The keyboard shortcut for redo is \_\_\_\_\_\_\_\_\_\_\_.
+
+    +   2. Pressing [Ctrl+X] on the keyboard \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_the selected
+    text.
+
+    +   3. The keyboard shortcut for paste is \_\_\_\_\_\_\_\_\_\_\_.
+
+    +   4. To apply superscript formatting to the selected text, you need to click
+    on \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ tab in the Character dialog box.
+
+    +   5. To apply background to the selected text, you need to click on **Background**
+    tab in the \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ dialog box.
+
+
+    b. Match the following:
+
+
+    +   1. Redo
+
+    +   2. Paste
+
+    +   3. Copy
+
+    +   4. Undo
+
+    +   5. Cut
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_43_0.png)
+
+
+    Date:\_\_\_/\_\_\_/\_\_\_ Teacher''s Signature:\_\_\_\_\_\_\_\_\_\_\_\_'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# OpenOffice.org Word Processor
+
+
+    # Text Alignment
+
+
+    # Text Alignment using Menu
+
+
+    Choose Format→ Paragraph from the menu bar.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_44_0.png)
+
+
+    The Paragraph dialog box will open.
+
+
+    Select the Alignment tab of the Paragraph dialog box.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_44_1.png)
+
+
+    There are four types of alignment options available. Select the desired alignment
+    and then click on OK button.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# OpenOffice.org Word Processor
+
+
+    Align Left
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_45_0.png)
+
+
+    All the lines of the paragraph start from the left margin with uneven spacing
+    on the right.
+
+
+    Centered
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_45_1.png)
+
+
+    Each line is centered on the page.
+
+
+    Align Right
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_45_2.png)
+
+
+    All the lines of the paragraph end at the right margin with uneven spacing on
+    the left.
+
+
+    Justified
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_45_3.png)
+
+
+    All the lines of the paragraph start at the left margin and end at the right margin
+    evenly.
+
+
+    An example showing the four alignments:
+
+
+    | **Align Left** | **Centered** | **Align Right** |
+
+    | :--- | :--- | :--- |
+
+    | This is a sample paragraph to depict text alignment options available in OpenOffice.org
+    Word Processor. This paragraph depicts **left alignment**. | | |
+
+    | | This is sample text to depict text alignment options available in OpenOffice.org
+    Word Processor. This text depicts **centered alignment**. | |
+
+    | This is a sample paragraph to depict text alignment options available in OpenOffice.org
+    Word Processor. This paragraph depicts **right alignment**. | | |
+
+    | This is a sample paragraph to depict text alignment options available in OpenOffice.org
+    Word Processor. This paragraph depicts **justified alignment**. | | |'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# OpenOffice.org Word Processor\n\n# Activity Sheet 3\n\nSome suggested activities\
+    \ are:\n\n+   Open the documents created in Activity Sheet 2 and apply text formatting\
+    \ features to them. Change the font styles, size, underline the headings, center\
+    \ align the headings.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_46_0.png)\n\n\
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_46_1.png)\n\n+   Type a letter to your\
+    \ dear one and apply appropriate formatting styles and text alignment options.\
+    \ For example,\n\n> Dear Mother,\n> \n> I love you very much. You are so beautiful.\
+    \ You take care of me and you. You help me in my studies. I am lucky to have such\
+    \ a nice mother.\n> \n> Your loving daughter\n> Mihika\n\n> Teacher's Note\n>\
+    \ The teacher can take prints of the letters and mail them.\n\n+   Type and format\
+    \ your favorite piece of writing."
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '4. Create a poem with the help of your teacher. Type and format it using Word
+    Processor.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_47_0.png)
+
+
+    # ### Rain is falling
+
+
+    Rain is falling down,
+
+    tip, tap, tip, tap,
+
+    Children like rain and say,
+
+    tip, tap, tip, tap,
+
+    Rain is falling on my window pane,
+
+    Splish. splash, splish, splash,
+
+    Rain rain come again.
+
+    Children like to play in rain.
+
+    And they say. ‘Hurray’, ‘Hurray’.
+
+    Rain has made our day.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_47_1.png)
+
+
+    # ### Spring
+
+
+    *Welcome spring,*
+
+    *with lots of flowers,*
+
+    *colourful butterflies,*
+
+    *fluttering all over,*
+
+    *come, come friends,*
+
+    *we all together,*
+
+    *will enjoy the lovely*
+
+    *season of spring.*
+
+
+    5. Write a school notice.
+
+
+    **For example,**
+
+
+    #### Mayoor School, Ajmer
+
+    #### 6th Summer Camp
+
+
+    May 1, 2009
+
+
+    Dear parents,
+
+
+    The summer camp will be organized from the 9th of May to the 30th of May, 2009.
+    For details and registration, please contact the school office.
+
+
+    Wishing your child happy vacation!
+
+
+    Co-ordinator'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "6. Imagine you are a bird. Write a few sentences to express your feelings.\
+    \  \nFormat the text and save the document.\n\nI am a SpARROw\n\nI am a Sparrow.\
+    \  \nI build my nest to lay my eggs.  \nIt is so difficult to make a nest.  \n\
+    People break my nest again and again.  \nBut, I do not get tired.  \nAt last,\
+    \ I make my nest.  \nI love my little babies.  \nI teach them how to fly.\n\n\
+    # Think Tank\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_48_0.png)\n\nThere is\
+    \ a key 'Tab' on the keyboard. When do you use the [Tab] key?\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_48_1.png)\n\
+    \n# Teacher's Note\n\nThe teacher can take color prints of the documents made\
+    \ by learners and display them to encourage learners. The selected documents can\
+    \ be uploaded on the school's website."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Create Bulleted and Numbered Lists
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_49_0.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_49_1.png)
+
+
+    We can make two kinds of lists in Word Processor: Bulleted List and Numbered List.
+
+
+    Bullets are symbols used to highlight items in a list. It is used in lists which
+    do not have any particular order.
+
+
+    A numbered list is used to display information in a particular order.
+
+
+    You can use the default Bullets and Numbering settings by clicking on the appropriate
+    button on the Toolbar.
+
+
+    Click on Format→ Bullets and Numbering
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_49_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# OpenOffice.org Word Processor
+
+
+    Bullets and Numbering dialog box appears.
+
+
+    Select the bullet style from the various options available.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_50_0.png)
+
+
+    You can also select colored bullets from the *Graphics* tab.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_50_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# OpenOffice.org Word Processor
+
+
+    Click on **Numbering type** tab to create numbered lists.
+
+    Select the style you want from the available styles.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_51_0.png)
+
+
+    Click on **Outline** tab to create sub-bulleted and sub-numbered lists.
+
+    Select the style you want from the available styles.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_51_1.png)
+
+
+    Click on **OK** button to apply the changes.
+
+
+    Following are examples of a bulleted and a numbered list.
+
+
+    # List of objects in the Computer Lab
+
+
+    +   - Computer
+
+    +   - Projector
+
+    +   - White Board
+
+    +   - Air Conditioner
+
+    +   - Paintings
+
+    +   - Chairs
+
+
+    # List of lessons for Class II today
+
+
+    +   1.  English
+
+    +   2.  Art and Craft
+
+    +   3.  Mathematics
+
+    +   4.  Computer
+
+    +   5.  Hindi
+
+    +   6.  Physical Education
+
+
+    50'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Applying Drop Caps
+
+
+    Select the **Drop Caps** tab of the Paragraph dialog box.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_52_0.png)
+
+
+    Select the **Display drop caps** check box.
+
+
+    This feature is generally used in newspaper and magazine articles to display the
+    first character in a larger font size and common character for more than one (1)
+    line. An example of drop cap is shown in the following picture:
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_52_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# OpenOffice .org Word Processor
+
+
+    # Activity Sheet 4
+
+
+    Some suggeted activities are:
+
+
+    +   1. Create a bulleted list of fruits and a list of vegetables.
+
+
+    +   2. Create a numbered list of ''Things to do today’.
+
+
+    +   3. Create a numbered list of grocery items to be purchased. The teacher can
+    first discuss the various items of grocery with the students and then the students
+    can create lists.
+
+
+    +   4. Create a list of animals, birds, aquatic animals, etc., and apply different
+    kinds of numbering styles to it.
+
+
+    +   5. Create a list of friends and apply different styles of coloured bullets
+    to it.
+
+
+    +   6. Create a list of occupations, for example, doctor, tailor, lawyer, teacher,
+    engineer, astronaut, etc.
+
+
+    +   7. Type and format a newspaper article. Use the drop cap feature and appropriate
+    formatting features.
+
+
+    # Teacher''s Note
+
+
+    Learners can be asked to write a newspaper article about the activities organized
+    in the school. Learners will type the article and apply appropriate formatting
+    features to it. The news can then be read in the Assembly.
+
+
+    For example,
+
+
+    > Inter-School Drawing competition, for children of age group 5-7, was Organized
+    at Mayoor School, Ajmer. The theme of the event was ‘Conservation’ . Akshita Mehra
+    of class II A, Mayoor School, won the first prize. She depicted ways to save water,
+    electricity and our environment. Her efforts were praised by the judges.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Think Tank
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_54_0.png)
+
+
+    Can you use the drop cap feature to decorate a greeting card?
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_54_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# OpenOffice.org Word Processor
+
+
+    # Worksheet 4
+
+
+    Date: __/__/__
+
+
+    +   a. Match the following:
+
+
+    +   1. Bullets icon
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_0.png)
+
+
+    +   2. Right alignment
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_1.png)
+
+
+    +   3. Outline
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_2.png)
+
+
+    +   4. Drop cap
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_3.png)
+
+
+    +   5. Graphics
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_4.png)
+
+
+    +   6. Bullets
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_5.png)
+
+
+    +   7. Justified alignment
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_6.png)
+
+
+    +   8. Default alignment
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_7.png)
+
+
+    +   9. Numbering icon
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_8.png)
+
+
+    +   10. Centered alignment
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_55_9.png)
+
+
+    Date: __/__/__
+
+
+    Teacher''s Signature: _______________
+
+
+    54'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# OpenOffice.org Word Processor
+
+
+    # More Text Editing Features
+
+
+    # Find and Replace
+
+
+    This is a very useful feature of Word Processor. It is used to search a particular
+    word in the whole document and then replace it with the correct one. It is generally
+    used to rectify a mistake that has occurred repeatedly in the document.
+
+
+    Click on Edit→ Find & Replace
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_56_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# OpenOffice.org Word Processor
+
+
+    The Find & Replace dialog box will be displayed.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_57_0.png)
+
+
+    Type the word to be searched for in the **Search for** text box. Type the correct
+    word to replace it in the **Replace with** text box.
+
+
+    Click on **Find** or **Find All** button.
+
+
+    Then click on **Replace** or **Replace All** button.
+
+
+    > ### Think Tank
+
+    > Try selecting the **Match case** option while searching for a particular word.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# OpenOffice.org Word Processor
+
+
+    # Using Spellcheck and Thesaurus
+
+
+    # Using Spellcheck
+
+
+    OpenOffice.org Word Processor has a built-in dictionary to check the spellings
+    in the document. The Spellcheck proceeds from the current position of the cursor
+    and checks the complete document.
+
+
+    # To Run Spellcheck
+
+
+    Click on Tools→ Spelling and Grammar
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_58_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# OpenOffice.org Word Processor
+
+
+    Spelling dialog box displays the first incorrectly spelled word in the document,
+    as well as suggestions in the form of closest possible matches available in the
+    dictionary.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_59_0.png)
+
+
+    +   1.  **Ignore Once**, to ignore the spelling for just one occurrence.
+
+    +   2.  **Ignore All**, to ignore the spelling in the complete document.
+
+    +   3.  **Change**, to accept and change the spelling for just one occurrence.
+
+    +   4.  **Change All**, to accept and change the spelling in the complete document.
+
+
+    # Using AutoSpellcheck
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_59_1.png)
+
+
+    AutoSpellcheck easily identifies incorrectly spelt words on the page as you type
+    the document. The incorrectly spelt words can be seen with a single red wavy line
+    beneath them. Right-click on the incorrectly spelt word and choose a suggested
+    replacement from the list that appears. The correction is applied to the document.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_59_2.png)
+
+
+    58'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# OpenOffice.org Word Processor\n\n# Using Thesaurus\n\nThe Thesaurus helps\
+    \ you to improve your vocabulary by providing a list of synonyms (words with similar\
+    \ meaning) and related words.  \nClick on Tools→ Language→ Thesaurus or press\
+    \ [Ctrl+F7]\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_60_0.png)\n\nThe Thesaurus\
+    \ dialog box is displayed. In the Meaning list, select the definition that matches\
+    \ the context of the word. Select the replacement word in the Synonym list. Click\
+    \ OK.\n\nI am a good **student**.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_60_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# OpenOffice.org Word Processor
+
+    Activity Sheet 5
+
+
+    Some suggested activities are:
+
+
+    +   1. Write a paragraph on ‘My Friend Computer’.
+
+    +   2. Use Spellcheck and Thesaurus to check your document and make appropriate
+    changes.
+
+    +   3. Find the word ‘Friend’ and replace it with ‘Dear’ in the whole document.
+
+    +   4. Select difficult words from the English textbook. Type them in Word Processor
+    and find out their meanings. Also find out the antonyms and synonyms of the words.
+
+
+    # Teacher’s Note
+
+
+    By clicking on Tools→ Language option in the menu bar, the teacher can select
+    the desired dictionary.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_61_0.png)
+
+
+    # Think Tank
+
+
+    Try working in Word Processor without using the mouse. Use only the keyboard.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# **OpenOffice.org Word Processor**
+
+
+    # ## Working with Graphics
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_62_0.png)
+
+
+    # ## Insert Graphic as a Copy
+
+
+    1. Open the **Gallery** by clicking the **Gallery** icon on the Standard toolbar,
+    or by selecting Tools→ Gallery.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_62_1.png)
+
+
+    2. Select a **theme**.
+
+
+    3. Select an **object** using a single click.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_62_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# OpenOffice.org Word Processor
+
+
+    4.  Drag the object into the document, or right-click to open the context menu
+    and select Insert→ Copy.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_63_0.png)
+
+
+    # Insert Graphic as a Background
+
+
+    +   1. Open the Gallery by clicking the **Gallery** icon on the Standard toolbar,
+    or by selecting **Tools→ Gallery**.
+
+    +   2.  Select a theme.
+
+    +   3.  Select an object by a single click.
+
+    +   4.  Open the context menu and choose **Insert→ Background→ Page or Paragraph**.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_63_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# OpenOffice.org Word Processor
+
+
+    # Insert a Border around a Graphic
+
+
+    Select the graphic, then click on Format\ Picture...
+
+
+    Alternatively, you can right-click the graphic and select Picture...
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_64_0.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_64_1.png)
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_64_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# OpenOffice.org Word Processor
+
+
+    The Picture dialog box opens. Select the **Borders** tab.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_65_0.png)
+
+
+    In the **Line arrangement** area, select one of the five buttons to
+
+
+    +   1. set no border,
+
+    +   2. set all four borders,
+
+    +   3. set left and right borders only,
+
+    +   4. set top and bottom borders only, or
+
+    +   5. set left border only.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_65_1.png)
+
+
+    In the **Line** area, select an entry that determines the thickness and color
+    of the line.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_65_2.png)
+
+
+    Click on **OK** button.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_65_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# OpenOffice.org Word Processor\n\n# Drawing Toolbar\n\nClick on View→ Toolbars->\
+    \ Drawing.  \n\tThe Drawing toolbar will be displayed.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_66_0.png)\n\
+    \nYou can click on various shapes and draw attractive drawings. You can even use\
+    \ the Fontwork Gallery for attractive display.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_66_1.png)\n\
+    \n# Think Tank\n\nClick on View→ Toolbars. You will see a list of toolbars available\
+    \ in OpenOffice.org Word Processor. What is the use of these toolbars?"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# OpenOffice.org Word Processor
+
+
+    # Worksheet 5
+
+
+    Date: `___`/`___`/`___`
+
+
+    # a. State right √ or wrong ×.
+
+
+    +   1. To search a particular word in the whole document and then replace it with
+    the correct one, you will click on Format→Find & Replace.
+
+
+    +   2. You cannot apply border to a picture using Word Processor.
+
+
+    +   3. You cannot insert a graphic as a background in a text document.
+
+
+    +   4. Word Processor can automatically identify incorrectly spelt words as you
+    type the document.
+
+
+    +   5. You can click on this icon to open the Gallery.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_67_0.png)
+
+
+    # b. Fill in the blanks.
+
+
+    +   1. The keyboard shortcut for Thesaurus is `___________`.
+
+
+    +   2. Gallery option is available in the `___________` menu item.
+
+
+    +   3. You can create your own drawings by using the `___________` toolbar.
+
+
+    +   4. The icon for Fontwork Gallery is available in the `___________` toolbar.
+
+
+    +   5. The keyboard shortcut for Find & Replace is `___________`.
+
+
+    Date: `___`/`___`/`___`
+
+
+    Teacher''s Signature: `______________`'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# # OpenOffice.org Word Processor
+
+
+    # ## Activity Sheet 6
+
+
+    Some suggested activities are:
+
+
+    +   1. Create greeting cards for different occasions, like Birthday cards, Happy
+    Vacations cards, or Get Well Soon cards. Use text formatting features and colors
+    to make the card attractive. Use the Fontwork Gallery and the Drawing toolbar
+    to draw graphics. For example,
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_68_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# OpenOffice.org Word Processor
+
+
+    2. Use the drawing toolbar to present any topic in a pictorial manner. For example,
+    Diwali, Dussehra, My Family, Independence Day.
+
+
+    # Happy Diwali
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_69_0.png)
+
+
+    # Dussehra
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_69_1.png)
+
+
+    # My Family
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_69_2.png)
+
+
+    # Independence Day
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_69_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '3. Add sentences and apply formatting features to the document created in the
+    Activity Sheet 2, to make it a complete document. For example,
+
+
+    # # My Family
+
+
+    +   - I have a sweet family.
+
+    +   - There are four members in my family – father, mother, sister and myself.
+
+    +   - My mother is the best mother of the world. She cooks delicious food. She
+    takes care of everyone in the family.
+
+    +   - My mother tells me lots of stories. She plays chess and snakes & ladder
+    with me.
+
+    +   - My father is an officer in the Indian army.
+
+    +   - He plays football, hockey and tennis with me. We go for cycling together.
+    We go together for a walk in the evening.
+
+    +   - My sister is younger to me. I love to play with my sister.
+
+    +   - My family is very warm and loving.
+
+    +   - I love my family very much.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_70_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# OpenOffice.org Word Processor\n\n4. Write a small message for your dear one.\
+    \ Type and format it using appropriate word processing tools.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_71_0.png)\n\
+    \n6. Thematic Document Making\n\nFor example, my three wishes.\n\n![](img/9a5b9efff92da1263a1b04aa9d4ae262_71_1.png)\n\
+    \n> Teacher’s Note\n> \n> The class can be given a theme in advance. Themes can\
+    \ be related to the curriculum, current news, everyday activities, sports, etc.\
+    \ For example, my favourite sport, teacher’s day, my birthday, scene at the railway\
+    \ station, the postman, etc. The teacher can discuss the theme with the class.\
+    \ A thematic document making activity can be organized wherein the learners will\
+    \ create a document using all the word processing tools learnt."
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# OpenOffice.org Word Processor
+
+
+    # Function Keys for OpenOffice.org Word Processor
+
+
+    | Shortcut keys | Effect |
+
+    |---|---|
+
+    | [F3] | Complete AutoText |
+
+    | [Ctrl+F3] | Edit AutoText |
+
+    | [F7] | Spellcheck |
+
+    | [Ctrl+F7] | Thesaurus |
+
+    | [F12] | Numbering on |
+
+    | [Shift+F12] | Bullets on |
+
+    | [Ctrl+Shift+F12] | Numbering / Bullets off |
+
+
+    # Shortcut Keys for OpenOffice.org Word Processor
+
+
+    | Shortcut keys | Effect |
+
+    |---|---|
+
+    | [Ctrl+A] | Select All |
+
+    | [Ctrl+J] | Justify |
+
+    | [Ctrl+D] | Double Underline |
+
+    | [Ctrl+E] | Centered |
+
+    | [Ctrl+F] | Find and Replace |
+
+    | [Ctrl+Shift+P] | Superscript |
+
+    | [Ctrl+L] | Align Left |
+
+    | [Ctrl+R] | Align Right |
+
+    | [Ctrl+Shift+B] | Subscript |
+
+    | [Ctrl+Y] | Redo last action |
+
+    | [Ctrl+Enter] | Manual page break |
+
+    | [Ctrl+Shift+Enter] | Column break in multicolumnar texts |'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# OpenOffice.org Word Processor
+
+
+    [Arrow Left] Move cursor to left
+
+
+    [Shift+Arrow Left] Move cursor with selection to the left
+
+
+    [Ctrl+Arrow Left] Go to beginning of word
+
+
+    [Ctrl+Shift+Arrow Left] Select to the left word by word
+
+
+    [Arrow Right] Move cursor to right
+
+
+    [Shift+Arrow Right] Move cursor with selection to the right
+
+
+    [Ctrl+Arrow Right] Go to end of word
+
+
+    [Ctrl+Shift+Arrow Right] Select to the right word by word
+
+
+    [Arrow Up] Move cursor up one line
+
+
+    [Shift+Arrow Up] Select lines in an upward direction
+
+
+    [Ctrl+Arrow Up] Move cursor to beginning of paragraph
+
+
+    [Shift+Ctrl+Arrow Up] Select to beginning of paragraph
+
+
+    [Arrow Down] Move cursor down one line
+
+
+    [Shift+Arrow Down] Select lines in a downward direction
+
+
+    [Ctrl+Arrow Down] Move cursor to end of paragraph
+
+
+    [Shift+Ctrl+Arrow Down] Select to end of paragraph
+
+
+    [Home] Go to beginning of line
+
+
+    [Shift+Home] Go and select to the beginning of a line
+
+
+    [End] Go to end of line
+
+
+    [Shift+End] Go and select to end of line
+
+
+    [Shift+Home] Go to start of document
+
+
+    [Ctrl+Shift+Home] Go and select text to start of document
+
+
+    [Ctrl+End] Go to end of document
+
+
+    [Ctrl+Shift+End] Go and select text to end of document
+
+
+    [Insert] Insert mode on/off
+
+
+    [PageUp] Screen page up
+
+
+    [PageDown] Move down screen page
+
+
+    [Ctrl+Del] Delete text to end of word
+
+
+    [Ctrl+Shift+Del] Delete text to end of sentence
+
+
+    [Ctrl+Shift+Backspace] Delete text to beginning of sentence'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Learn with
+
+
+    # LINUX
+
+
+    Learn with Linux for classes 1 to 8 is a computer science series for the primary
+    and middle school, focusing on free and open-source software (FOSS). The curriculum
+    for this course has been so designed that it conforms to the recommendations of
+    the National Curriculum Framework 2005. Age-appropriate syllabi in each book links
+    computer science education with real-life experiences. The aim of this series
+    is to promote critical thinking and creativity amongst learners. The series is
+    based on the Edubuntu distribution – a user-friendly, educational version of the
+    Linux-based Ubuntu operating system.
+
+
+    # Key Features
+
+
+    +   ■ Makes appropriate use of screenshots to present concepts in a lucid and
+    child-friendly manner.
+
+
+    +   ■ Think Tank within each chapter poses application-based questions, encouraging
+    further exploration and thought on the concepts covered.
+
+
+    +   ■ Activity Sheet provides practical exercises integrating different subjects
+    using the tools learned.
+
+
+    +   ■ Worksheet contains questions, both objective and descriptive, for revision.
+
+
+    +   ■ Teacher''s Note at relevant places gives useful suggestions to teachers
+    on teaching methodologies and directions on how to explore a topic further.
+
+
+    # About the Authors
+
+
+    Neeraj K. Bedhotiya is the principal of Mayor School, Ajmer, and has been one
+    of the pioneers in introducing the use of FOSS in school education. He has been
+    an educator for more than 20 years, including 11 years at The Doon School, Dehra
+    Dun and a year at Marlborough College, UK.
+
+
+    Deepak Bhargava, currently the IT Co-ordinator at Mayor School, Ajmer, has nearly
+    10 years of teaching experience at the senior secondary level and has been instrumental
+    in setting up the FOSS network at his school.
+
+
+    Gunjan Kotwari, faculty member of the computer science department at Mayor School,
+    Ajmer, has a Masters in Information Technology, and has effectively implemented
+    the switch to FOSS in her classes.
+
+
+    # NOTE ON SOFTWARE
+
+
+    Software used in this book can be freely downloaded from http://linux.oupcomputers.com.
+    Also available is a DVD for teachers that contains the complete software requirements
+    including the Edubuntu operating system, all the open-source application software
+    covered in the syllabus, installation guides, an image library for the activities,
+    and sample presentations. Windows versions of the application software are also
+    provided. Teachers may contact the publisher for the DVD.
+
+
+    ![](img/9a5b9efff92da1263a1b04aa9d4ae262_75_0.png)
+
+
+    OXFORD
+
+    UNIVERSITY PRESS
+
+
+    www.oup.co.in
+
+
+    ISBN 0-19-806559-0
+
+
+    9 780198 065593
+
+
+    Rs 114'
+  merge: -1
+  img_proc: true
