@@ -1,0 +1,5 @@
+*In mid-sentence he says, “That’s my kid.” You could look up at the monitor and see the stage lighting reflecting off the beads of sweat on his forehead.*
+
+*Afterward, audience members line up for questions. He quickly declines to say which of the Linux word processing software he prefers. When someone asks him how many stuffed penguins he has at home, he answers: “Quite a few.” An audience member asks how he likes living in California, to which he responds by rhapsodizing about the weather. “It’s November and I’m still wearing shorts. In Helsinki I’d have lost my crown jewels by now.” A fan walks up to the microphone for audience questions and announces, simply, “Linus, you’re my hero.” To which Linus responds, as if he has heard the same statement a million times and answered it a million times: “Thanks.”*
+
+*After the questions are over, hundreds of people flood into the area below the podium, where Linus has now moved and is shaking as many hands as he possibly can.*

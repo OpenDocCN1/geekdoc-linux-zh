@@ -1,0 +1,11 @@
+cut off. To add insult to injury, Symbolics hired away many of his cohorts from the AI lab.
+
+The same thing happened to him a few other times. The way I understand it, his motivation for promoting open source was not so much anticommercial as it was antixclusion. For him, open source is about not getting left out. It's about being able to continue working on a project regardless of who makes it commercial.
+
+The GPL is wonderful in its gift of letting anyone play. Just think about what a major advance for humanity that is! But does that mean that every innovation should be GPL'd?
+
+No way! This is the abortion issue of technology. It should be up to the individual innovator to decide for herself or himself whether to GPL the project or to use a more conventional approach to copyright. The thing that drives me crazy about Richard is that he sees everything in black and white. And that creates unnecessary political divisions. He never understands the viewpoint of anybody else. If he were into religion, you would call him a religious fanatic.
+
+In fact, the most annoying thing—second only to religious enthusiasts knocking on my door saying what I should believe in—is people knocking on my door (or bombarding me with email) saying how I should license my software. This should not be a political issue. People should be able to make up their own minds. It's one thing to suggest to someone that they consider GPLing their software, and then leaving it at that. It's another thing to argue the point. It's really bad when people complain about the fact that I work for a commercial company that doesn't GPL everything it does. I tell them it's not their business.
+
+The thing I find hugely irritating about Richard is not that he believes that Linux—because its kernel relied on applications from the gnu software project—should more rightly be called "gnu/Linux." It is not that he openly resents me for being a poster boy for open source even though he was sharing code while I was still sleeping in a laundry basket. No, the reason I find him so

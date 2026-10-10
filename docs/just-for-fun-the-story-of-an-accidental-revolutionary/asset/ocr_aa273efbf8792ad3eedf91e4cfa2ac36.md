@@ -1,0 +1,11 @@
+threshold of around $2,000. If the lowest-cost computer is much more expensive, a company isn't going to be able to sell many of them. But they were expensive enough to manufacture that it didn't make sense for a company to make them much cheaper. Peo- ple would always pay the extra $200 or so to get a better machine.
+
+In the last two years they have become a lot less expensive to make. And even the low-end machines have gotten pretty good. Companies have lost many of the people who would pay the extra $200 for a slightly better machine. Since companies couldn't sell on features alone, they've had to sell on price.
+
+I admit it: Back in 1987, one of the selling points of the QL was that it *looked* cool.
+
+It was entirely matte black, with a black keyboard. It was fairly angular. This was not a rounded, pretty-boy machine. It tried to be kind of extreme. The keyboard was about an inch thick because it was part of the same unit as the computer. That's the way most of the home computers were designed. On the right- hand side of the keyboard, where you would have a keypad, you had two slots for the revolutionary Sinclair microdrive, which was this endless loop of tape that was used only on a Sinclair machine. It acted and was organized like a disk drive. Because it was one long loop, you could just spin it until you hit what you wanted. It turned out to be a bad idea because it was not as reliable as a disk drive.
+
+So I spent close to $2,000 for the Sinclair QL. Most of what I did with it was one programming project after another. I was always searching for something interesting to do. I had a Forth lan- guage interpreter and compiler, just to play around with. Forth was a strange language that nobody uses anymore. It was kind of a fun, niche-market language that was fairly widely used in the 1980s for different things, but it never became very popular, being difficult to follow for non-techie people. Actually it was kind of useless.
+
+I wrote programming tools for myself. One of the first things I bought for the machine was an expansion bay with an

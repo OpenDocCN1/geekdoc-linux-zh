@@ -1,0 +1,3 @@
+I remember one email whose writer said he really liked my operating system, and he went on for at least one paragrah to tell me how nice it was. Then he explained that it had just eaten his hard disk, and that my disk driver was flaky or something. He had lost all the work he had done, but he was still very positive. It was fun to read that kind of email. It was a bug report about something that screwed him up.
+
+That was just the sort of feedback I was looking for. I fixed some bugs, like the one that caused it to lock up when it ran out of memory. And I made the big step of porting the GCC compiler to the operating system, so I could compile small programs. That meant users wouldn't need to load my GCC compiler before running the operating system.

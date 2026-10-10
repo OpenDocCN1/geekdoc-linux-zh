@@ -1,0 +1,3 @@
+PS> I apologise for sometimes sounding too harsh: minix is nice enough if you have nothing else. Amoeba might be nice if you have 5-10 spare 386's lying around, but I certainly don't. I don't usually get into flames, but I'm touchy when it comes to linux:)
+
+There were a few more installments in this, one of my few flame wars. But you get the point: There were opposing voices, even in the early days. (Or maybe the point is: Be careful when you put yourself out there in an electronic forum. Your typos and errors of grammar will haunt you forever.)

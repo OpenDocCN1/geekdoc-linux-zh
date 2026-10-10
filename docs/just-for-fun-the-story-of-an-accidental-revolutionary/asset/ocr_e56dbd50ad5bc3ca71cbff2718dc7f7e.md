@@ -1,0 +1,11 @@
+Once again, the short-term strategy turned out to be the wrong thing to do.
+
+The entertainment industry is just one example. The same thing has been happening for years in software. That's why Microsoft's strategy of bundling software is ultimately doomed to fail. Open source products, on the other hand, cannot possibly be used in a despotic manner because they're free. If somebody tried to bundle things with Linux, somebody else could just unbundle it and sell it the way people really want it.
+
+It's doubly futile to attempt to control people through technology. In the end, it always not only hurts the company but also hinders the acceptance of the technology. A recent example is Java, which has lost a lot of the appeal it originally had. By trying to control the Java environment, Sun Microsystems basically lost it. Java is still doing reasonably well, but it surely hasn't lived up to its potential.
+
+Sun wasn't trying to make money on Java itself, but the company saw the programming language as a way to make its computer more unique to users and get us out of Microsoft's grip—and sell more Sun hardware, by the way. And while they weren't really trying to make money on Java, they did feel that they had to keep control of it as a phenomenon and as a microbe. All of their licensing terms came with a lot of extra baggage just for this control.
+
+Good product. But the problem was that they were trying too hard to screw over Microsoft. They were motivated by fear, loathing, and hate, which is sort of a mid-to-late 1990s approach to business. (Think of the Grateful Dead lyric: "Ain't no time to hate.") And because they were so hateful of Microsoft and so afraid, they made all the wrong licensing decisions. They made it difficult for everybody, even their partners, to use the product. That's why companies like Hewlett Packard and IBM all eventually decided to make their own Java implementations. They just said "Screw Sun."
+
+Sun tried to get Java standardized through two different standardization bodies, and each time they basically pulled out because of the control issues. On the one hand, Sun wanted to stan-

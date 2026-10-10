@@ -1,0 +1,9 @@
+# V.
+
+And I basically sat in front of a computer for four years.
+
+Okay, there was school: Norsen High, the most central of Helsinki’s five Swedish-language high schools, and the one nearest my home. Math and physics were interesting, and therefore easy. But whenever a subject involved rote memorization, my enthusiasm for that subject was diminished. So history was boring when it meant worrying about the date of the Battle of Hastings, but got interesting when you discussed the economic factors affecting a country. The same thing went for geography. I mean, who really cares how many people are in Bangladesh? Well, it might matter to a lot of folks, come to think of it. But the point is, it was far easier for me not to daydream about my computer when we were learning about something more engaging than statistics, like the monsoons, for example, or the reasons for the monsoons.
+
+Phys ed was another matter entirely. I’m probably not breaking any news by revealing that I wasn’t the most athletic guy on the Fennoscandia peninsula. I was skinny then, too, believe it or not. Gymnastics was actually okay to participate in. But when we would have soccer or ice hockey, it would be time for me to skip class.
+
+This showed up in my grades. In Finland you get graded on a scale of four to ten. So I would earn tens and some nines for math, physics, biology, and everything else—but sevens for phys ed. Once there was a six. I earned a six in woodworking, too. That wasn’t my strong sport, either. Other guys have well-crafted nap-kin holders or stools as souvenirs of woodworking class. All I have

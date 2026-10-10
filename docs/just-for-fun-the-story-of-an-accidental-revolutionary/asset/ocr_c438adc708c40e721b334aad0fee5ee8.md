@@ -1,0 +1,11 @@
+fusing. It means that I end up arguing both sides. And I think this is because there are really *are two sides* to intellectual property, and they share nothing but the name.
+
+To many people, including me, intellectual property is all about human inventiveness, about the very thing that makes us *humans* instead of animals (that, and thumbs, of course). And in that setting, the very name "intellectual property" is an affront: It's not property to be sold like chattel, it's the act of creation, it's the greatest thing any human can ever do. It's *Art*, with a capital A. It's the Mona Lisa, but it's also the end result of a long night of programming, and it's an end result that you as a programmer are damned *proud* of. It's something so precious that selling it isn't even possible: It's indelibly a part of who you are.
+
+That kind of creativity—whether it be in the form of painting, music, sculpture, writing, or programming—should be sacred. The creator and the thing he or she created have a bond that cannot be severed. It's like the bond between a mother and child, or between bad Chinese food and MSG. But at the same time it's something that everybody in the whole world should be able to be part of, because it *is* humanity.
+
+And then, in the other corner, weighing in at an approximate seven gazillion billion U.S. dollars a year, intellectual property is huge business. Human creativity got a price tag, and it turned out to be quite expensive. Creativity is rare, and as a result it is not just expensive but also extremely lucrative. Which brings in a totally different class of arguments, and totally different kinds of people. The kind of people who call the end result of human creativity "property." Not to mention, of course, lawyers.
+
+Read the title of this chapter again. The "property" people are winning. After all, their name stuck. So what's the problem?
+
+The most well-known example of intellectual property is the notion of copyright. Copyrights are basically the codification of the rights of any creator to do with his or her creation as he or she

@@ -1,0 +1,11 @@
+wishes. The “owner” of the creation can decide on how that creation should be used.
+
+Copyrights are also legally very simple to get. You don’t have to register your copyright: You are automatically the copyright holder of whatever creative work you do. This is an important distinction from most other intellectual property law, mainly because it actually makes it easy for individuals, not just big corporations, to own copyrights. *You* can own a copyright, simply by virtue of writing, painting, or generally creating something unique. If you want to, you can add a legend like “(C) Copyright 2000 Yourname Here,” but quite frankly, you don’t need to. You own the copyright whether you say so or not. Saying so just makes it easier for other people to track you down if they want to use your work.
+
+Of course, just owning a copyright in itself is not very useful. But the fact that you own what you create means that you can control how it is used. You have, for example, the right to sell such a work of art to somebody else, and nobody but the IRS gets to have any say in the matter. But it’s about *more* than just the money, and that’s where a lot of people seem to find themselves flummoxed.
+
+For example, you can use your power as owner of a copyright to try to do more interesting things than just sell it. You can license it. This is even *better* than selling it; instead of selling the work of art you can sell the license to do certain things to it, and still retain the copyright on it. Basically, you can have your cake and eat it, too. This is how the Microsofts of the world get created: endlessly selling the rights to use something, without actually losing anything. No wonder people just *love* to own this kind of property.
+
+Does anybody perhaps start to see a problem here? If you don’t see anything strange so far, I have a bridge and a few pieces of waterfront property to sell you.
+
+The basic problem with intellectual property is starting to show itself: You as the owner of intellectual property can effectively sell it forever, without ever losing anything yourself. You don’t risk anything, and in fact you might decide to write your license in a

@@ -1,0 +1,5 @@
+So in the social rankings I might have been a nerd, but, on the whole, school was good. I got good grades without having to work at it--never truly great grades, exactly because I *didn't* work at it. And an accepted place in the social order. Nobody else really seemed to care too much about my nose; this was almost certainly, in retrospect, because they cared about their own problems a whole lot more.
+
+Looking back, I realize that most other children seem to have had pretty bad taste in clothes, too. We grow up and suddenly somebody else makes that particular decision. In my case, it's the marketing staffs for high-tech companies, the people who select the T-shirts and jackets that will be given away free at conferences. These days, I dress pretty much exclusively in velloware, so I never have to pick out clothes. And I have a wife to make the decisions that complete my wardrobe, to pick out things like sandals and socks. So I never have to worry about it again.
+
+And I've grown into my nose. At least for now, I'm more man than nose.

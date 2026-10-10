@@ -1,0 +1,11 @@
+out. They had to go to the trouble of installing the special compiler, getting a clean partition so they could use that to boot, compiling my kernel, and then running just the shell. Running the shell was basically all you could do. You could print out the sources, which amounted to just 10,000 lines—that's less than 100 pages of paper if you printed with small font. (Now it's something on the order of 10 million lines.)
+
+One of the main reasons I distributed the operating system was to prove that it wasn't all just hot air, that I had actually done something. On the Internet, talk is cheap. Regardless of what you do, whether it be operating systems or sex, too many people are just faking it in cyberspace. So it's nice, after talking to a lot of people about building an operating system, to be able to say, "See, I actually got something done. I wasn't stringing you along. Here's what I've been doing. . . ."
+
+And Ari Lemke, who insured that it made its way to the ftp site, hated the name Frex. He preferred the other working name I was using—Linux—and named my posting: pub/OS/Linux. I admit that I didn't put up much of a fight. But it was his doing. So I can honestly say I wasn't egotistical, or half-honestly say I wasn't egotistical. But I thought, okay, that's a good name, and I can always blame somebody else for it, which I'm doing now.
+
+As I mentioned, my operating system really wasn't very useful. For one thing, it would crash very easily if you filled up memory or if you did anything nasty. Even if you weren't doing anything nasty, the operating system would crash if you kept it running for any length of time. But it wasn't meant to be run at that stage. It was meant to be looked at. Yes, and admired.
+
+So it wasn't intended to be anything but a specialty for the few people who were interested in creating new operating systems. Very technical people—and even within technical people, a special interest group.
+
+Their reaction was invariably positive, but positive in a kind of "It would be nice if it could also do this" kind of sense, or "It looks cool but it really doesn't work on my computer at all."

@@ -1,0 +1,7 @@
+In fact, the only time I brought girls home was when they wanted to be tutored. It didn't happen all that many times, and it was never my idea, but my father harbors fantasies that they were interested in more than math tutoring. (In his mind, somehow they had bought into his Stately Nose = Stately Man equation.) If they were looking for any math-guy action, they certainly didn't have a willing partner. I mean, I could never even figure out what they were referring to by "heavy petting." I had spent time taking care of a neighbor's fifteen-pound cat and couldn't figure out what the big deal was.
+
+Yes, I was definitely a geek. No question about it. This is before geekdom became sexy. Well, I guess it's not really sexy but hipper. What you had was someone who was both a geek and shy—or is that redundant?
+
+So I would be sitting in front of a computer and be perfectly happy.
+
+For high school graduation in Finland, you wear a fluffy white hat with a black band. There's a ceremony in which they hand out diplomas, and when you come home all your relatives are there with lots of champagne, flowers, and cake. And there's also a party for the entire class at a local restaurant. We did all that, and I guess I had fun, but I don't remember anything special about it. But ask me about the specs on my 68008-chip machine and I can rattle them off with total recall.
