@@ -1,0 +1,15 @@
+is the router in the New York office. The router simba does know about the existence of lynx, and it also knows that it can get network traffic to lynx by passing it to the router in Denmark (falcon). The router in Denmark then sends the traffic to lynx.
+
+This is a very simple example. In a real scenario (especially when sending transoceanic network traffic), several routers will usually be involved, each passing the traffic to another until it gets to the proper destination. If you want an analogy, you can think of routers as being like air traffic controllers, and network traffic as being like aircraft. An aircraft en route from New York to Denmark will be handed off between several different air traffic controllers until it finally reaches its destination.
+
+Okay. So why do we need a router? Why not just tell the hosts in New York about the hosts in Denmark, and vice versa, so that they can communicate with each other directly? There are two primary reasons why it is not done this way:
+
++   * **Ease of maintenance**—This might not seem like a big deal with only eight systems. But now think of a network the size of the Internet. Without routers, every single system connected to the network would have to know how to contact every other system on the network. Obviously, when you are dealing with millions of systems, this would quickly become a maintenance nightmare.
+
++   * **Reduced traffic congestion**—If the two offices were just connected by one big network, then all network traffic would have to be sent to all computers. If, for example, lion sends network traffic to cheetah (both in the New York Office), this traffic would also get sent through the pipe, across the Atlantic Ocean, and into the Denmark office. This would occur even though the hosts in Denmark couldn't care less about this traffic because it is not for them. Imagine the network congestion if any time any host on the Internet sent network traffic to another host, that traffic had to also go to every single other host on the Internet. And besides that, transoceanic leased lines are expensive—you are usually charged by the amount of bandwidth you use. That means you don't want to use the line when you don't have to. The router acts as a “door” that keeps traffic intended for one of the local hosts inside the local network. Only traffic not intended for one of the local hosts will be sent outside of the local network. (This also increases security because you don't have internal network traffic being broadcast over the Internet and such.)
+
+# ## What Is a Gateway?
+
+In general network terminology, a *gateway* is a router that allows the rest of the clients on the internal LAN to access the outside world, hence the name “gateway.” Because of this, the terms *default router* and *gateway* are virtually interchangeable in most networking circles these days. In our example in the previous section, the routers *simba* and *falcon* could be called gateways.
+
+If you want to get really technical, the preceding definition of a gateway is incorrect. According to the technical definition, a gateway is a router that can route between two

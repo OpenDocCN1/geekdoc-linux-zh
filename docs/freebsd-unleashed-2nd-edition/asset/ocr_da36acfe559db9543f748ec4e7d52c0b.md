@@ -1,0 +1,15 @@
++   7.  Update all your services to the most recent versions, referring to all relevant security bulletins, before putting the system back online. Be especially vigilant for the first few days after bringing the system back up; the hacker may continue to try to break in. Pay especially close attention to your log files during this period; the more evidence you can gather, the easier it will be for the NIPC and FBI to do their job.
+
+# ## Denial of Service (DOS) Attacks
+
+Although it isn’t technically a security issue, another type of malicious network activity has nonetheless become quite important to system administrators recently. This is the Denial of Service (DOS) attack.
+
+DOS attacks don’t involve any compromise of a system’s security or privacy. Rather, they are simply brute-force floods, sending so much traffic over a network that legitimate traffic is lost in the shuffle. The goal is often to crash the server through sheer overwhelming volume of data and number of requests. These kinds of attacks are much harder to defend against than directed hack attacks, which can be foiled through the use of IPFW, PortSentry, and the other tools we have already discussed. The impact of a DOS attack cannot be eliminated; it can only be mitigated because DOS attacks are made up completely of legitimate traffic, indistinguishable from your actual mission-critical data flow. The problem is just that there’s too much of it.
+
+Sometimes, a DOS attack can be identified as coming from a certain source, and you can block it by adding a firewall rule to deny traffic from or to that source. However, many recent attacks hide the actual source—ping (ICMP) broadcast attacks look as if they’re coming from a certain source address, which is actually the victim address that receives the brunt of the attack. Distributed DOS, or DDOS, attacks work even more insidiously, with hundreds or even thousands of compromised desktop machines unwittingly taking part in the attack, or tracking down the actual culprit is pretty much impossible.
+
+Certain configuration options in various servers and in the kernel can help to prevent your system from completely submerging during a DOS attack. The following sections look at a few of these measures; however, bear in mind that they can only serve to increase your system’s chances of surviving a DOS attack—they can’t neutralize the attack itself, nor can they guarantee that the attacker won’t simply try harder until your system does succumb.
+
+# ### Limiting Server Forks
+
+Many DOS attacks are targeted against services such as Apache, Sendmail, or others that operate by *forking* a new process to handle each incoming request. If an attacker sends an overwhelming number of requests to the service, it will fork off so many processes that the CPU and memory will eventually become exhausted, possibly destabilizing your system.

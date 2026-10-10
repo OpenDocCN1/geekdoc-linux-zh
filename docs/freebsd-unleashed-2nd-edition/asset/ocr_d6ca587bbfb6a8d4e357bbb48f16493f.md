@@ -1,0 +1,5 @@
+# About the Authors
+
+**Michael Urban** is a biology student at the University of Minnesota. His current work on research projects involving African lions for the Lion Research Center includes programming projects with Java and C++. Michael has worked with various forms of Unix for several years, including FreeBSD, Linux, and Solaris. He has also worked as a technical analyst and is the author of *Teach Yourself FreeBSD in 24 Hours*, also from Sams Publishing. In his free time, which is very sparse these days between exams and research projects, he enjoys reading and is also starting to pursue wildlife photography.
+
+**Brian Tiemann** has been a constant user of FreeBSD since his student days at Caltech, where he used it to build a movie fan Web site that continues to grow and sustain an ever-increasing load. Born in Ukiah, California, Brian has remained in the state all his life; he currently lives in San Jose and works in the networking appliance field. Aside from FreeBSD, his other interests include Macintoshes, motorcycles, and animation, topics about which he writes frequently.

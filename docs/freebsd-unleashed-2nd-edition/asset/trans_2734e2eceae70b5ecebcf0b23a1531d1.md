@@ -1,0 +1,140 @@
+
+
+当你的 `/etc/rc.conf` 配置正确后，请重新启动系统。或者，你可以从物理控制台（而不是远程终端，后者非常危险，因为它可能导致机器失去网络连接而无法访问）运行 `/etc/netstart` 脚本。如果你看到以下行，说明防火墙已成功启用：
+
+```
+Kernel firewall module loaded
+Flushed all rules.
+00100 allow ip from any to any via lo0
+00200 deny ip from any to 127.0.0.0/8
+00300 deny ip from 127.0.0.0/8 to any
+65000 allow ip from any to any
+Firewall rules loaded, starting divert daemons.
+```
+
+你还可以使用 `kldstat` 检查 `IPFW` 模块是否已自动加载：
+
+```
+# kldstat
+Id Refs Address Size Name
+1 0xc0100000 355be4 kernel
+2 1 0xc0eee000 6000 ipfw.ko
+3 1 0xc0f19000 12000 linux.ko
+```
+
+现在你可以完全访问 `ipfw` 命令，该命令允许你设置允许何种流量类型的规则，并查看由 `IPFW` 累积的统计信息。
+
+## 配置 IPFW
+
+`ipfw` 命令用于向内核过滤和统计系统添加或删除规则。规则的构建语法在一定程度上类似于自然英语；它由一个操作（例如 `deny`）、该操作适用的协议（例如 `tcp`）以及包含 `from` 子句和 `to` 子句的地址说明组成。例如，像 `deny tcp from badhost.com to any` 这样的规则会阻止来自名为 `badhost.com` 的主机的 TCP 流量。你可以按以下方式将此规则添加到内核防火墙中：
+
+```
+# ipfw add deny tcp from badhost.com to any
+```
+
+这种主题有多种变体。你可以基于网络掩码指定地址，使用掩码模式（例如，`255.255.255.0`）或 `CIDR` 位掩码（例如，`/24`）。你也可以阻止单个端口而不是整个系统；这种技术可以防止具有不可预测 `IP` 地址的大型 `ISP` 中的主机针对你机器上的单一服务。此类规则可能如下所示：
+
+```
+# ipfw add deny all from evil.isp.com/16 to www.somewhere.com 80
+```
+
+同样，你可以通过添加允许规则作为例外，使某些主机免受早期规则的限制，如下所示：
+
+```
+# ipfw add allow all from goodhost.evil.isp.com to www.somewhere.com 80
+```
+
+请注意，IPFW 规则是按“链”形式输入的，其中每条规则按照其指定的顺序进行评估。每条规则都有一个索引号，通常与其相邻规则间隔 100，你可以在 `ipfw` 命令中的 add 或 deny 关键字后指定索引号来控制它；这是你指示规则执行顺序的方式。使用 `ipfw -a list` 查看现有的规则集：
+
+```
+# ipfw -a list
+00100	0	0 allow ip from any to any via lo0
+00200	0	0 deny ip from any to 127.0.0.0/8
+00300	0	0 deny ip from 127.0.0.0/8 to any
+00400	0	0 deny tcp from badhost.com to any
+00500	0	0 deny all from evil.isp.com/16 to www.somewhere.com 80
+00600	0	0 allow all from goodhost.evil.isp.com to www.somewhere.com 80
+65000 1214 79688 allow ip from any to any
+65535	1	40 deny ip from any to any
+```
+
+索引号显示在第一列；如前所述，编号为 65535 的规则是默认的拒绝规则，它拒绝所有从上流传下来的任何内容。开放设置在拒绝规则上方放置了一个允许桶；然而，允许规则具有高索引号，以帮助确保它排在你可能通过常规使用添加的其他任何规则之后。
+
+第二列和第三列显示使用统计信息，分别显示匹配每条规则的数据包总数和字节总数。这是你判断规则是否有效的方式。
+
+## 排查 IPFW 故障
+
+你可能会发现，你认为非常简单的配置导致了完全不可预测的结果。例如，你可能已经为所有主机添加了拒绝规则，并为你自己的远程机器的 IP 地址添加了允许规则，但你发现仍然无法访问 FreeBSD 机器。
+
+永远记住，IPFW 规则是按照指定顺序应用和执行的。列表中较后的规则会覆盖列表中较早指定的规则；数据包按照索引号指定的顺序与每条规则进行比较。在大多数情况下（尽管这在一定程度上取决于采取的操作和系统设置），数据包将继续接受进一步规则的匹配检查，这些规则可能以更具体的方式匹配；这就是“例外”规则的工作方式。然而，索引为 65535 的“默认”规则仅匹配没有其他规则匹配的数据包。
+
+确保你的索引号按特异性递增的顺序应用规则。为了使配置更容易，考虑使用防火墙配置文件，我们稍后会讨论这一点。
+
+你可以在 `/etc/rc.conf` 中指定多种不同的防火墙类型。每个关键字都有不同的含义，如表 29.2 所示。这些配置文件的精确定义可以从 `/etc/rc.firewall` 中的 shell 脚本代码中解读出来。
+
+### 表 29.2 可用的防火墙类型
+
+| 关键字 | 含义 |
+|---|---|
+| open | 允许所有人从所有地方访问 |
+| closed | 禁用除回环 (lo0) 接口上的所有 IP |
+| client | 设置旨在仅保护本机的规则 |
+| simple | 设置旨在保护整个网络的规则 |
+| unknown | 除了索引 65535 处的默认拒绝规则外，不加载任何规则 |
+| <filename> | 从 <filename> 加载规则 |
+
+如果你的设置不复杂，对于你的目的，"canned"（现成的）IPFW 配置文件，如 `client` 或 `simple`，可能是合适的。然而，随着系统的持续演变，你很可能需要专门的配置。
+
+## 使用防火墙配置文件
+
+由于防火墙规则不是持久的（每次重启时都会刷新），如果你有自定义的防火墙设置，你会希望使用配置文件来维护防火墙。这也比从命令行操作 IPFW 更易于维护和更快的故障排查。
+
+将你的专用规则集放入你选择的文件中；在这个例子中，称之为 `/etc/firewall.conf`。在该文件中列出你希望的规则，省略 `ipfw` 命令本身：
+
+```
+add deny tcp from badhost.com to any
+add deny all from evil.isp.com/16 to www.somewhere.com 80
+add allow all from goodhost.evil.isp.com to www.somewhere.com 80
+add 65000 allow all from any to any
+```
+
+现在，更改 `/etc/rc.conf` 文件中的 `firewall_type`：
+
+```
+firewall_type="/etc/firewall.conf"
+```
+
+下次你重启或运行 `/etc/netstart` 时，`/etc/firewall.conf` 中的规则将以 100、200、300 等索引加载。索引 65000 处的 `allow all` 规则提供了传递流量而不是拒绝流量的默认行为，这在大多数情况下是期望的（除非你只希望指定主机能够访问你的机器）。
+
+关于 IPFW 的进一步阅读，请参阅 `man ipfw` 页面以及在线 *FreeBSD 手册*，位于 [http://www.freebsd.org/handbook](http://www.freebsd.org/handbook)。
+
+## 防止入侵和妥协
+
+防火墙、密码策略和加密在保护你的系统免受恶意访问方面起了很大作用。然而，它们仍然不足以防御真正坚定的黑客，这些人拥有“rootkit”或专门利用你的某个系统服务中已知弱点的其他工具。
+
+你可以在 Red Hat Linux 中使用多种工具，这些工具超越了简单防火墙的功能，可以动态阻止可疑主机、监控入侵并按主机控制对单个服务的访问。以下章节介绍其中的一些工具。
+
+## 使用 PortSentry
+
+PortSentry，来自 Psionic Software，是一个守护进程，监控所有传入网络流量以检测端口扫描——一种初步攻击，黑客在其中探测你系统上可被利用的开放服务。PortSentry 监听你指定的一组端口列表。当 PortSentry 检测到可能表明端口扫描的流量时，它通过将主机包裹在黑洞路由（一种静默丢弃来自特定 IP 地址或范围的数据包的路由）或 IPFW 规则中来阻止该主机访问你的系统。来自违规主机的所有未来连接尝试都将被丢弃。
+
+PortSentry 监控 TCP 和 UDP 流量，动态构建某种“killfile”表——一个被禁用的地址列表——它像抗体对抗病毒一样起作用。PortSentry 通过阻止可疑活动在其有机会造成任何损害之前做出反应。
+
+PortSentry 是一个开源工具，可以从 ports 中安装（`/usr/ports/security/portsentry`）。portsentry 二进制文件安装到 `/usr/local/bin`，配置文件是 `/usr/local/etc/portsentry.conf`。用你最喜欢的文本编辑器打开此文件；需要编辑此文件 PortSentry 才能正常工作。
+
+你必须决定要让 PortSentry 监控哪一组端口。有三个可用的集合，成对以 TCP_PORTS 和 UDP_PORTS 开头：
+
+```
+# Un-comment these if you are really anal:
+#TCP_PORTS="1,7,9,11,15,70,79,80,109,110,111,119,138,139,143,512,513,514..."
+#UDP_PORTS="1,7,9,66,67,68,69,111,137,138,161,162,474,513,517,518,635,640..."
+#
+# Use these if you just want to be aware:
+TCP_PORTS="1,11,15,111,119,540,635,1524,2000,5742,12345,12346,20034,31337..."
+UDP_PORTS="1,7,9,69,161,162,513,635,640,641,700,32770,32771,32772,32773..."
+#
+# Use these for just bare-bones
+#TCP_PORTS="1,11,15,110,111,143,540,635,1080,524,2000,12345,12346,20034..."
+#UDP_PORTS="1,7,9,69,161,162,513,640,700,32770,32771,32772,32773,32774..."
+```
+

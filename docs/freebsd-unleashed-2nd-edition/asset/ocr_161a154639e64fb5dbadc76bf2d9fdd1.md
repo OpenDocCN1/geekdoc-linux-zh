@@ -1,0 +1,15 @@
++   • **Lines 3 and 4**—These are comments. Comments in a shell program begin with `#` and extend to the end of the line. Comments are ignored by the interpreter. They are used for the benefit of the programmer who needs to revisit a complicated program he wrote six months ago and try to figure out what it does again.
+
++   • **Line 6**—The `echo` command takes whatever it receives and echoes it to STDOUT (which is normally the screen). This can be redirected, however, so that `echo` sends the output somewhere else, such as to a file. In this case, `echo` by itself simply prints a blank line on STDOUT.
+
++   • **Line 7**—The `echo` command here prints the string “Hello World!” to STDOUT. The quotes tell the interpreter that everything inside them should be interpreted as a single argument (that is, the shell should interpret the string as one long unit instead of many short units). Without the quotes, the shell will interpret the white-space as an argument separator. In this case, the quotes would not have been strictly necessary, but you will see later on in the chapter why quoting is important. It is a good idea to get into the habit of quoting strings such as these.
+
++   • **Line 8**—The `echo` command here prints a blank line again.
+
++   • **Line 9**—The `exit` command exits the program and returns an exit status to the invoking program. (This is normally the shell, but it could be another program, such as another shell program.) An exit status of 0 indicates that the program terminated normally. An exit status of anything other than 0 indicates that an error occurred. The exit status can be read by the calling program and used in decision-making. The calling program then determines what action it should take next, based on the success or failure of the previous program that was run.
+
+In a program this short, setting the exit status isn't really necessary. If the exit status is not implicitly set, the exit status returned will be the exit status of the last command that was run in the script. It is wise to be aware of the exit status, though, because it will become important as you start to write larger and more complex shell programs. Later in this chapter, you will see how the exit status of a command can be used in a shell script to make automatic decisions about the next action that should be performed. However, setting the exit status should not generally be necessary; if a script is written properly, it will exit with a status of 0 on its own. Otherwise, it will have inherited an error condition from one of its lines, and you as the programmer should address this rather than masking the true status with an `exit` statement.
+
+# ### Using the `printf` Command
+
+The previous program could also have been written using `printf` instead of `echo`. The `printf` command performs a similar function, but it allows more control over how its output is formatted. The following example shows how the program could be rewritten using `printf` instead of `echo`:

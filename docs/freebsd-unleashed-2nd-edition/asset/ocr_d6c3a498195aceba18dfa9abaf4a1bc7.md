@@ -1,0 +1,15 @@
+work in FreeBSD are especially important to users migrating from Linux. Packages and ports provide a centralized filtering mechanism to tweak the build and installation options of software written for Linux so that it will compile properly under FreeBSD and install into the prescribed locations for user-installed materials. Ports and packages travel through the FreeBSD committers and the central download sites, rather than being available directly from the software developers themselves. This helps keep a FreeBSD system neat and tidy.
+
+# ## Keeping in Sync
+
+FreeBSD is more “source centric” than Linux; because there is effectively only one “distribution” of the operating system, the entire installation is directly available in source form. The Linux world doesn’t do this as effectively. Each distribution has its own structure and its own software selections. The Linux kernel itself is the only source subtree that you can be sure is the same as another Linux user’s. Different distributions have different philosophies toward making the rest of their source trees available for automatic download, synchronization, and building. FreeBSD provides these tools.
+
+This means that to keep synchronized with the latest development code, all you have to do in FreeBSD is to track the sources using CVSup, as described in Chapter 17. Security patches and hotfixes (available in Linux variously as RPMs, source patches, or binary patches) are distributed in FreeBSD both in source patch form and by checking in fixes to the central source tree. You can update your system in response to a security bulletin either by following the line-by-line patch instructions in the bulletin or by simply making sure your source tree is synchronized to a point after the fix has been made and then rebuilding that part of the system.
+
+> **CAUTION**
+> 
+> Patching system components without rebuilding the entire operating system is a method that usually works (especially for small, noncritical elements of the system), but not always. The more fundamental to the system’s operation a component is, the more likely it is that you will need to do a complete make world in order to upgrade properly. Such fundamental areas of the system usually include the central libraries (items in /usr/lib) or headers (in /usr/include). Less-risky areas are the supporting binaries, in /usr/bin and /usr/sbin.
+
+# ## Working with Master Password Files
+
+Linux and FreeBSD both use shadow passwords, a method of storing encrypted password strings in a file readable only by root (see “The /etc/passwd and /etc/master.passwd Files,” in Chapter 9). However, whereas FreeBSD maintains an /etc/master.passwd file that contains all user data, with /etc/passwd being simply a subset (without the actual password strings), Linux does it a bit differently. Linux’s /etc/shadow file doesn’t contain any useful information other than the username and the hashed password. *

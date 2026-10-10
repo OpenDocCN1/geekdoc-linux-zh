@@ -1,0 +1,178 @@
+
+
+## Shell 初始化文件
+
+现在是时候讨论如何自定义你的 shell 以使其执行你想要的操作了。你可以创建别名来简化常用命令，你可以设置每次登录时自动执行某些程序，你可以根据自己的喜好设置各种环境变量，等等。这些任务由 shell 初始化和配置文件处理，这些文件既有全局级别的，也有用户级别的。
+
+由于 tcsh 和 bash 拥有完全不同的配置文件集，我们将依次介绍它们。FreeBSD 为这两种 shell 都包含了系统范围的以及默认的每用户配置文件，因此如果你真的想这样做（尽管这很少见），你可以系统范围地从 tcsh 切换到 bash。
+
+> **注意**
+> 当创建新用户时，默认的 shell 配置文件会从 /usr/share/skel（其中每个文件的点前缀会被去除）复制到新用户的家目录中。如果愿意，你可以将这些默认文件复制到 /usr/local/share/skel，按你的喜好修改它们，然后更改 /etc/adduser.conf 文件，使其从这个新位置复制默认的“点文件”。使用此技术可以在用户甚至被创建之前，对所有用户默认的 shell 配置进行全局的、预防性的修改。
+
+### tcsh/csh 文件：.cshrc, .login, 和 .logout
+
+tcsh 执行时查看的第一个文件是系统范围的配置文件 /etc/csh.cshrc，紧接着是 /etc/csh.login。请注意，在 FreeBSD 中，这两个文件都存在，但它们的内容都被注释掉了（参见列表 11.1）。
+
+**列表 11.1** 全局 /etc/csh.cshrc 和 /etc/csh.login 文件
+
+```
+# cat /etc/csh.cshrc
+
+# $FreeBSD: src/etc/csh.cshrc,v 1.3 1999/08/27 23:23:40 peter Exp $
+# System-wide .cshrc file for csh(1).
+# For the setting of languages and character sets please see login.conf(5) and in particular the charset and lang options.
+
+# cat /etc/csh.login
+
+# $FreeBSD: src/etc/csh.login,v 1.19.2.1 2000/07/31 20:13:26 rwatson Exp $
+# System-wide .login file for csh(1).
+# Uncomment this to give you the default 4.2 behavior, where disk information is shown in K-Blocks
+# setenv BLOCKSIZE K
+```
+
+```
+# For full locales list check /usr/share/lo/*
+#
+# Read system messages
+# msgs -f
+# Allow terminal messages
+# mesg y
+```
+
+此列表显示这些配置文件实际上并不执行任何操作，但如果你选择的话，它们可以执行。你在这些文件中的任何更改，例如全局启用 `mesg`（终端消息），都是全局应用的。只有当按用户配置文件以不同的方式设置时，这些更改才会被覆盖，这些用户配置文件与系统范围的配置文件类似，并紧随其后从用户的家目录中读取（`.cshrc`，然后是 `.login`）。
+
+默认的 `.cshrc` 文件，来自 `/usr/share/skel/dot.cshrc`，执行许多通常有用的操作来设置 shell 环境。例如，它创建几个别名来缩短命令：
+
+```
+alias h				history 25
+alias j				jobs -1
+alias la				ls -a
+alias lf				ls -FA
+alias ll				ls -lA
+```
+
+它设置程序的搜索路径：
+
+```
+set path = (/bin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin
+/usr/local/bin /usr/X11R6/bin $HOME/bin)
+```
+
+它设置各种控制许多不同 shell 任务行为的环境变量：
+
+```
+setenv EDITOR		vi
+setenv PAGER		more
+setenv BLOCKSIZE	K
+```
+
+还设置了一些其他内容。你可以查看自己家目录中的 `.cshrc` 文件来了解所有细节。
+
+接下来读取的 `.login` 文件，是用户可以放置任何她希望每次登录时运行的程序的地方。例如，默认的 `.login` 文件（来自 `/usr/share/skel/dot.login`）中提供了 `fortune` 程序，并被封装在一个存在性测试条件中（但它被注释掉了）：
+
+```
+# Uncomment to display a random cookie each login:
+# [ -x /usr/games/fortune ] && /usr/games/fortune -s
+```
+
+你（管理员）或用户还可以指定某些在用户注销时发生的操作。例如，你可以编写一个脚本来清理 /tmp 中由用户拥有的任何临时文件；你可以将此脚本的调用放入 /etc/csh.logout，该文件默认情况下没有实质内容：
+
+```
+# cat /etc/csh.logout
+# $FreeBSD: src/etc/csh.logout,v 1.3 1999/08/27 23:23:41 peter Exp $
+#
+# System-wide .logout file for csh(1).
+```
+
+注销过程还会读取用户家目录中的 .logout 文件（如果存在），但默认情况下没有安装这样的每用户文件。
+
+> **注意**
+> 本节中显示的文件是 *csh* 作为登录 shell 执行时运行的那些文件。*csh* 可以在各种其他情况下运行——例如，作为非登录 shell 执行以运行 shell 脚本，或者从脚本的解释器行调用。在这种情况下，.login 和 .logout 文件（及其系统范围等效文件）将被忽略。
+
+### bash 文件：.profile, .shrc, 和 .bash_logout
+
+如果你选择使用 *bash* 而不是 *csh* 作为你的 shell，它的操作方式将非常相似。它首先读取系统范围的配置和初始化文件，然后继续处理每用户的文件。首先是 /etc/profile，它（就像 /etc/csh.cshrc 一样）实质上是空白的，但包含一些你可能决定启用的选项示例，如列表 11.2 所示。
+
+**列表 11.2** 全局 /etc/profile 文件
+
+```
+# cat /etc/profile
+# $FreeBSD: src/etc/profile,v 1.12.2.1 2000/07/31 20:13:26 rwatson Exp $
+#
+# System-wide .profile file for sh(1).
+#
+# Uncomment this to give you the default 4.2 behavior, where disk
+# information is shown in K-Blocks
+# BLOCKSIZE=K; export BLOCKSIZE
+#
+# For the setting of languages and character sets please see
+# login.conf(5) and in particular the charset and lang options.
+# For full locales list check /usr/share/locale/*
+# You should also read the setlocale(3) man page for information
+# on how to achieve more precise control of locale settings.
+```
+
+```
+#
+# Read system messages
+# msgrs -f
+# Allow terminal messages
+# msg y
+```
+
+请注意，/etc/profile 结合了 /etc/csh.cshrc 和 /etc/csh.login 的功能。它是系统中唯一的与 bash 相关的全局文件；没有用于 bash 的系统范围注销脚本。
+
+bash 的下一个文件是用户的 .profile 文件，它主要设置各种环境变量（包括 PATH），并以 Bourne shell 风格导出它们：
+
+```
+# remove /usr/games and /usr/X11R6/bin if you want
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/bin:/usr/X11R6/bin:$HOME/bin; export PATH
+BLOCKSIZE=K;      export BLOCKSIZE
+EDITOR=vi;       export EDITOR
+PAGER=more;      export PAGER
+# set ENV to a file invoked each time sh is started for interactive use.
+ENV=$HOME/.shrc; export ENV
+```
+
+最后一行将 ENV 变量设置为 .shrc 文件，同样位于用户的家目录中。然后按顺序读取 .shrc，紧随 .profile 之后。其目的是定义 tcsh 在 .cshrc 中设置的各个别名，以及一些其他可选内容，例如自定义提示符，这些内容默认被注释掉：
+
+```
+# some useful aliases
+alias h='fc -1'
+alias j=jobs
+alias m=$PAGER
+alias ll='ls -laFo'
+alias l='ls -l'
+alias g='egrep -i'
+# # set prompt: `username@hostnamc$
+# PS1="\whoami\`@\`hostname | sed 's/\..*//';"
+# case `id -u` in
+#       0) PS1="${PS1}# ";;
+#       \*) PS1="${PS1} ";;
+# esac
+```
+
+就像 tcsh 的 .logout 一样，如果 .bash_login 文件存在，bash 也会读取并执行该文件（但默认情况下没有安装此类文件）。
+
+> 如果 bash 作为登录 shell 执行，它会“source”（即作为配置文件读取）这些文件。然而，如果它被用作非登录 shell，则它读取的文件是 .bashrc 而不是 .profile。此文件在 FreeBSD 中通常不存在。
+
+## 自定义 Shell 环境
+
+你已经在 tcsh 和 bash 风格中看到了几个示例，展示了如何通过使用 shell 配置文件中的默认设置来自定义 shell 的工作方式。这些可以作为扩展 shell 功能的完全有效的示例。不过，你还可以做几件额外的事。此外，一些选项在默认文件中没有清楚地演示。我们将查看如何在 tcsh 和 bash 中实现这些自定义。在大多数情况下，这些是内置的 shell 命令，可以直接从命令行发出，也可以从任何 shell 配置文件中发出。
+
+> 有关大量可用的内置命令的完整细节——其中一些出现在 csh/tcsh 中，一些出现在 sh/bash 中，一些在两者中都出现——可以在 man builtin 中找到。
+
+### 自定义 tcsh
+
+最常见的 shell 自定义是创建别名。此自定义将命令的第一个单词替换为你选择的任何内容。别名可以大大简化你的工作，特别是如果你发现自己经常使用某些复杂的命令。最简单的别名是 .cshrc 中看到的类型：
+
+```
+alias ll		ls -lA
+```
+
+正如你所料，这个别名会将诸如 ll /usr/local 这样的命令替换为 ls -lA /usr/local。但如果你也想执行参数替换，根据你每次输入的内容重新格式化命令的参数呢？你可以使用 tcsh 极其通用但也极其复杂的命令行解析语法来完成。man tcsh 页面详细解释了这一点，但就我们的目的而言，只需注意别名赋值中命令的第一个参数可以表示为 \1^（或 \1:1），进一步的参数可以表示为 \1:2、\1:3，等等。因此，你可以创建如下别名：
+
+```
+alias lookup	grep \1^ /etc/passwd
+```
+

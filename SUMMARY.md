@@ -469,6 +469,7 @@
 +   [FreeBSD 精通之路：高级 ZFS (IT Mastery Book 9)](docs/freebsd-mastery-advanced-zfs-it-mastery-book-9/README.md)
 +   [FreeBSD 精通：特殊文件系统 (IT Mastery Book 8)](docs/freebsd-mastery-specialty-filesystems-it-mastery-book-8/README.md)
 +   [FreeBSD 精通指南：ZFS (IT 精通) (第 7 卷)](docs/freebsd-mastery-zfs-it-mastery-volume-7/README.md)
++   [FreeBSD 实战](docs/freebsd-unleashed-2nd-edition/README.md)
 +   [农业、食品与环境应用中的真菌生物技术（真菌学系列，第 21 卷）](docs/fungal-biotechnology-in-agricultural-food-and-environmental-/README.md)
 +   [Geek指南 »恶意软件时代的 Linux](docs/geek-guide-linux-in-the-time-of-malware/README.md)
 +   [西方图像及其数字未来的谱系学与本体论（劳特利奇艺术与视觉研究前沿）](docs/genealogy-and-ontology-of-the-western-image-and-its-digital-/README.md)

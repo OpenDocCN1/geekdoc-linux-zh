@@ -1,0 +1,282 @@
+
+## Index
+
+### D
+- disk controllers compatible with FreeBSD, 858–859
+- Disk Label Editor
+  - overview of, 28–30
+  - Soft Updates, enabling in, 181
+- disk names reference Web site, 176
+- diskcheckd daemon and Soft Updates, 181
+- Disklabel Editor, 413
+  - adding new disks, 415–416
+  - assigning BSD partitions and mount points, 413–415
+  - Auto Defaults for all! option, 414
+  - writing changes, 416
+- disks. See hard disks
+- Display subsection (XF86Config file), 835–836
+- distributed DOS attacks, 720
+- DMA modes, 402–403
+- dmesg command, 216
+- dmesg output, 180
+- dmesg tool, 368–369
+- DMZ concept, 636
+- DNS (Domain Name System), 503
+  - BIND files and programs, 745
+  - caching name servers, 750
+  - configuring, 522–523
+  - lookup, 744
+  - overview of, 743
+  - restricting access, 753–754
+  - software, 745
+  - structure of, 744–745
+  - zone, 745
+  - zones, 745
+- DNS resolution issues and Sendmail, 554–555
+- dock (WindowMaker), 89
+  - applications for installing and starting, 93–94
+  - button properties, changing, 92–93
+  - moving, 93
+  - overview of, 91
+- Docked Application Settings dialog (WindowMaker), 92–93
+- dollar sign ($), 756
+- domain name servers, configuring
+  - BIND and, 745
+  - BIND configuration file, 747–754
+  - name server daemon, enabling, 746–747
+  - overview of, 743
+  - zone file, 756–763
+  - zone files, 755–756
+- Domain Name Service (DNS). See DNS
+- domain names, 503–504
+- domains, 779
+- DontZap option of ServerFlags section of XF86Config file, 828
+- DontZoom option of ServerFlags section of XF86Config file, 828
+- DOS attacks. See denial of service attacks
+- DOS mode
+  - creating boot floppies in, 23
+  - dual boot system with, 62
+  - wildcards, 146
+- dotfiles, 137
+- double indirect pointer, 186
+- double transition clocking, 403
+- down command, 357
+- downloading boot floppies, 22
+- drivers, finding for video cards, 835
+- dry run install, 322
+- du (Disk Usage) command, 168–169
+- dual boot systems
+  - DOS, Windows 95, Windows 98, or Windows ME, 62
+  - installing and, 24
+  - limitations of, 61–62
+  - Linux, 62
+- dump command, 178
+- dump files, X-Windows, 828
+- dump utility, 440–441
+- dumping databases to disk, 677–678
+- dynamic content of Web sites, 638
+- Dynamic Host Configuration Protocol. See DHCP (Dynamic Host Configuration Protocol)
+- dynamic linking, 315
+- dynamic modules (Apache), 598
+- dynamic routing, 636
+
+### E
+- e-mail applications
+  - Mutt, 125
+  - Pine, 123–124
+  - uencode and udecode, 125–126
+- e-mail services
+  - configuring, 543
+  - Exim, 575
+  - IMAP, 566–567
+  - IMAP-UV, installing, 567–568
+  - message path for, 546
+  - POP3
+    - cleartext and, 562
+    - overview of, 561
+  - POP3 servers
+    - configuring with qpopper, 562–565
+    - enabling SSL encryption, 565–566
+  - Postfix, 575
+  - Qmail, 575
+  - securing, 696–697
+  - Sendmail
+    - configuring, 543
+    - controlling, 555
+    - disadvantages of, 574
+    - DNS resolution issues, 554–555
+    - /etc/mail/access file, 552
+    - /etc/mail/aliases file, 551
+    - /etc/mail/freebsd.mc file, 550
+    - /etc/mail/local-host-names file, 553
+    - /etc/mail/Makefile file, 554
+    - /etc/mail/sendmail.cf file, 549
+    - /etc/mail/virtusertable file, 553–554
+    - file layout, 549
+    - message queue, 556–557
+    - overview of, 548
+    - relaying messages, 558–560
+  - Smail, 575
+  - standalone workstations, 569
+    - Fetchmail, 569–572
+    - Sendmail, 573–574
+- echo command, 255
+- editing
+  - crontab files, 307–308
+  - system configuration files, 100
+- EDITOR environment variable, 248
+- ee (Easy Editor)
+  - key combinations, 101–102
+  - overview of, 101
+  - setting up and configuring, 102–104
+- ee command, 854
+- elif statements, 274, 276–277
+- Elm, 548
+- else statements, 273
+- Emulate3Buttons option of InputDevice section of XF86Config file, 832
+- Emulate3Timeout option of InputDevice section of XF86Config file, 832
+- emulators, 45
+- enable command, 358
+- enabling. *See also disabling*
+  - anonyomous FTP access, 617
+  - CGI in Apache, 604–605
+  - DHCP, 796–797
+  - firewalls, 628–629, 706–707
+  - inetd services, 226
+  - Linux compatibility, 45
+  - lpd for command-line printing, 348
+  - modules (Apache), 598
+  - name server daemon, 746–747
+  - NAT for systems without static IP addresses, 626
+    - firewall, configuring and enabling, 628–629
+    - Kernel PPP program, 627
+    - natd, configuring and enabling, 627–628
+    - User PPP program, 626
+  - natd, 627–628
+  - packet forwarding, 625–626
+  - print queuing, 358
+  - quota support, 184
+  - server mode for POP3 servers, 564–565
+  - server-side includes in Apache, 601
+  - SoftUpdates, 38
+  - SSL encryption for POP3 servers, 565–566
+  - standalone mode for POP3 servers, 563
+  - SWAT (Samba Web Administration Tool), 783
+  - UFS extensions, 200–201
+- encrypted passwords, 787
+- encrypted protocols, adding, 694–695
+- encryption
+  - enabling for POP3 servers, 565–566, 697
+  - IMAP and, 568
+  - public Web data, 699
+- enforcing user filesystem quotas, 184–186
+- enterprise networks, 766
+- enterprise routing, 636
+- Entity-Relationship (E-R) diagram, 651–652
+- entries
+  - in databases, 639
+  - deleting with ACL, 205
+  - removing with ACL, 206
+- environment variables and shells, 248–249
+- error messages
+  - kernel, configuring, 376
+  - mounting filesystems, 170
+  - unmounting filesystems, 171
+- error-trapping in code, 664
+- escape character, 149
+- etc/ directory, 165
+
+### /etc directory
+- /etc/rc.d file, 219
+  - make world process and, 389
+  - resource configuration scripts, 218–219
+  - /usr/local/etc file compared to, 223
+- /etc/adduser.message file, 208
+- /etc/csh.cshrc file, 241
+- /etc/csh.login file, 241, 855
+- /etc/csh.logout file, 243
+- /etc/defaults/periodic.conf file, 310
+- /etc/defaults/rc.conf file, 220–221
+- /etc/dhclient.conf file, 799–800
+- /etc/exports file, 769–771
+- /etc/fstab, 416–417
+  - adding NFS mounts to, 773
+  - noauto option, 773–774
+- /etc/fstab file
+  - async option, 435
+  - overview of, 177–179
+- /etc/ftpchroot file, 614
+- /etc/ftphosts file, 614, 618–619
+- /etc/ftpmotd file, 614
+- /etc/ftpsells file, 614, 617
+- /etc/ftpusers file, 614, 616–617
+- /etc/ftpwelcome file, 614
+- /etc/group file, 211
+- /etc/group, merging with /etc/passwd, 389–391
+- /etc/hosts file, mapping names to IP addresses with, 521
+- /etc/hosts.allow file, 523, 714
+- /etc/host.conf file, 524
+- /etc/inetd.conf file, 226–227, 523, 615
+- /etc/key.access file, 690
+- /etc/login.conf file, 686–688
+- /etc/mail/access file, 552
+- /etc/mail/aliases file, 551
+- /etc/mail/freebsd.mc file, 550
+- /etc/mail/local-host-names file, 553
+- /etc/mail/Makefile file, 554
+- /etc/mail/sendmail.cf file, 549
+- /etc/mail/virtusertable file, 553–554
+- /etc/make.conf, 391
+- /etc/master.passwd file, 209–210
+- /etc/motd, 240
+- /etc/namedb file, 746
+- /etc/namedb/named.conf file, 746–747
+  - forwarder, using, 749–750
+  - listing, 748–749
+  - master and slave configurations, 751–752
+  - restricting DNS access, 753–754
+  - zone types, 752
+- /etc/netgroup file, 770
+- /etc/netstart file, 518–519
+- /etc/networks file, 523
+- /etc/pam.conf file, 524
+- /etc/passwd file, 209–210
+- /etc/periodic.conf file, 310
+- /etc/periodic/security directory, 311
+- /etc/ppp/chap-secrets file, 532
+- /etc/ppp/options file, 527–529
+- /etc/ppp/pap-secrets file, 532
+- /etc/ppp/ppp.conf file, 535–537
+- /etc/printcap, configuring, 347
+- /etc/printcap file, 785
+- /etc/profile file, 243, 856
+- /etc/protocols file, 524
+- /etc/pwd.db file, 210
+- /etc/rc.conf file, 221–223, 856
+  - network settings and, 517–518
+- /etc/rc.d directory, 218
+- /etc/rc.d file, 219
+- /etc/rc.d/devfs script, 373
+- /etc/rc.local file, 77, 229–230
+- /etc/re.conf file, 703–704
+- /etc/re.network script, 519
+- /etc/resolv.conf file
+  - configuring DNS with, 522–523
+  - kernel PPP and, 527
+- /etc/rpc file, 524
+- /etc/services file, 523
+- /etc/shells file, 235–236
+- /etc/spwd.db file, 210
+- /etc/syslog.conf file, 227–228
+- /etc/tybs file, 77
+- /etc/X11/XF86Config file, 856
+
+### F
+- login, 240
+- power management events, 830
+- print queuing, 357
+- printing, 355–357
+- SSH1, 696
+- S/Key, 691
+- Telnet, 696
+- video mode switching, 828

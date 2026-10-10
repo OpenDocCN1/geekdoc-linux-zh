@@ -1,0 +1,9 @@
+# Twisted-Pair Cables
+
+The most commonly used cabling these days is twisted-pair cables, due to the relative simplicity and low cost of the cables and components. ThinNet and ThickNet must deal with terminators, segment-length limitations, repeaters, transceivers, BNC T-connectors (or “vampire tap” connectors for ThickNet), and unwieldy coaxial cables; DB-15 connectors had to be fitted with transceivers to connect them to coaxial or UTP Ethernet cables. Twisted-pair networks, however, connect computers’ network interface cards (NICs) directly to hubs and switches via cheap cables that can be coiled tightly and connected easily to RJ-45 phone-style jacks. Ethernet cards until recently came with multiple connectors to support whatever mixture of Ethernet cables types your network might have (see Figure 21.5). Today, though, it’s hard to find NICs with anything but the de facto standard RJ-45 connectors.
+
+![](bbox=[0.2, 0.35, 0.8, 0.59])
+
+This standardization has resulted in an even lower cost in recent years for constructing Ethernet networks. Today, the only real use for BNC T-connectors and terminators is to make little metal sculptures, and ThickNet cable is useful only in hand-to-hand combat. The remainder of this chapter concentrates on twisted-pair cable components because of their near ubiquity in today’s networks.
+
+Twisted-pair cables are cheap and flexible, and you can make your own if you want to save even more money. RJ-45 jack crimpers can be bought at any electronics supply store, as well as RJ-45 connectors and UTP cable. Refer to the next section for information on pin-outs so that you can attach the connectors correctly.

@@ -1,0 +1,11 @@
+![](bbox=[0.15, 0.1, 0.88, 0.25])
+
+# # Perl in FreeBSD
+
+Some of the programs that make up FreeBSD’s core installation are actually Perl scripts. The rest are generally compiled binaries, built from source code written in C, C++, or a number of other popular languages. These binaries cannot be read by a human or easily decompiled back to source form. Perl code, on the other hand, does not need to be compiled. It exists as plain text, easily readable and editable, and is run with the help of the Perl interpreter, /usr/local/bin/perl.
+
+![](bbox=[0.15, 0.42, 0.89, 0.53])
+
+Chapter 12, “Shell Programming,” describes how to write scripts using the shell interpreter /bin/sh by specifying the name of the interpreter on the first line of the script. Perl scripts work the same way. The difference is that whereas shell scripts are primarily useful as “batch programs” (in MS-DOS parlance) that execute sequences of system commands as they would be entered on the command line with simple variable substitution and flow control, Perl is a fully functional programming environment that allows you to write programs as complex as Web servers or database-management systems. Because they’re interpreted rather than compiled, Perl programs tend to be slower in execution (especially to start) than their C counterparts, although C programs typically take longer to develop properly. Perl’s primary strengths are in string processing and text handling, however. Therefore, the ideal application for a Perl program is as a system-utility script (such as adduser) or a CGI program that performs string manipulations and operations on files. Perl can be less efficient at doing heavy-duty mathematics than a well-designed C or C++ program.
+
+Perl is used in this capacity throughout FreeBSD. Some examples of system utilities written in Perl are adduser and sockstat. It’s still more widely found in third-party applications such as majordomo, the popular mailing list manager. You will probably run into Perl programs at least as frequently in FreeBSD as you will shell scripts, so it’s important to know how to work with them.
