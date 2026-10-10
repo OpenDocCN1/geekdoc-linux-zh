@@ -1,0 +1,115 @@
+
+```pascal
+ukModify: begin
+// Update the first table
+SQL := '';
+
+if not VarIsEmpty(DeltaDS.FieldName('FIRST').NewValue) then
+  SQL := SQL + Format('FIRST = %s',
+              [QuotedStr(DeltaDS.FieldName('FIRST').NewValue)]);
+
+if not VarIsEmpty(DeltaDS.FieldName('LAST').NewValue) then begin
+  if SQL <> '' then
+    SQL := SQL + ', ';
+  SQL := SQL + Format('LAST = %s',
+              [QuotedStr(DeltaDS.FieldName('LAST').NewValue)]);
+end;
+
+if SQL <> '' then begin
+  ID := DeltaDS.FieldName('CONTACTID').OldValue;
+  SQL := Format('UPDATE CONTACTS SET %s ' +
+          'WHERE CONTACTID = %d', [SQL, ID]);
+  Connection.Execute(SQL, nil, nil);
+end;
+
+// Update the second table
+SQL := '';
+
+if not VarIsEmpty(DeltaDS.FieldName('SPOUSE').NewValue) then begin
+  ID := DeltaDS.FieldName('CONTACTID').OldValue;
+
+  if VarIsNull(DeltaDS.FieldName('SPOUSE').OldValue) then
+    SQL := Format('INSERT INTO CONTACTS2 (CONTACTID, SPOUSE) ' +
+             'VALUES (%d, %s)',
+   [ID, QuotedStr(DeltaDS.FieldName('SPOUSE').NewValue)])
+   else
+      SQL := Format('UPDATE CONTACTS2 SET SPOUSE = %s '
+         'WHERE CONTACTID = %d',
+         [QuotedStr(DeltaDS.FieldName('SPOUSE').NewValue), ID]);
+
+   Connection.Execute(SQL, nil, nil);
+end;
+end;
+
+ukDelete: begin
+   ID := DeltaDS.FieldName('CONTACTID').OldValue;
+
+   // Delete from the second table
+   SQL := Format('DELETE FROM CONTACTS2 WHERE CONTACTID = %d', [ID]);
+   Connection.Execute(SQL, nil, nil);
+
+   // Delete from the first table
+   SQL := Format('DELETE FROM CONTACTS WHERE CONTACTID = %d', [ID]);
+   Connection.Execute(SQL, nil, nil);
+end;
+end;
+
+   Applied := True;
+end;
+
+procedure TfrmMain.btnApplyUpdatesClick(Sender: TObject);
+begin
+   ClientDataSet1.ApplyUpdates(0);
+end;
+end.
+```
+
+![image](img/fe651f295b5f960d5463c4fb581d2281_319_0.png)
+
+`CONMAN` 数据库包含一个 `CONTACTS2` 表，该表与 `CONTACTS` 表具有一对一的对应关系。`CONTACTS2` 仅用于本示例的数据库目的。
+
+`DataSetProvider1BeforeUpdateRecord` 方法通过动态构建适当的 SQL 语句并将其直接发送到数据库来处理所有插入、修改和删除请求。
+
+为了保持 SQL 语句的简洁，此示例应用程序仅处理 `CONTACTS` 表中的两个字段和 `CONTACTS2` 表中的一个字段。
+
+### 连接到本地数据库
+
+本章说明如何在多级应用程序中利用数据提供程序，其中客户端和服务器在物理上都位于同一个可执行文件中。即使在这种安排下，将应用程序结构组织成一种形式也是有益的，这样如果你决定迁移到独立的服务器和客户端应用程序，将服务器移至其自身应用程序中将相对简单。
+
+为此，你应该将服务器端组件放在与客户端组件不同的数据模块中。在这种安排下，你的应用程序将具有以下结构：
+
+- `服务器数据模块` 包含数据库连接，以及必要的数据集和数据提供程序。
+- `客户端数据模块` 包含客户端数据集和（可选的）数据源。
+- `窗体和单元` 应用程序中的窗体和支持单元将引用客户端数据模块中的数据。
+
+除了服务器数据模块内部之外，你不应该引用服务器端的任何组件，包括数据库连接或数据集。所有数据访问都应通过客户端数据模块进行。如果你对你的代码施加这一限制，它将大大有助于简化将服务器数据模块移至其自身应用程序的过程。
+
+### 使用位于不同窗体上的数据提供程序
+
+当您将数据访问组件和数据提供程序移到单独的数据模块上后，客户端数据集将无法直接连接到数据集提供程序。换句话说，`TClientDataSet` 的 `ProviderName` 属性不会在其下拉列表中列出该提供程序，因为该提供程序不在同一个窗体（或数据模块）上。
+
+为了将服务器端数据模块上的数据提供程序访问提供给客户端数据集，你需要调用 `TClientDataSet.SetProvider` 或使用 `TLocalConnection` 组件，后者将在下一章中讨论。
+
+目前，在运行时，你可以调用 `TClientDataSet.SetProvider` 来建立与不同窗体或数据模块上的提供程序的连接。下面这行代码显示了如何执行此操作：
+
+```pascal
+ClientDataSet1.SetProvider(ServerDM.PvContacts);
+```
+
+### 一站式购物：TSQLClientDataSet
+
+如果你编写了大量使用 dbExpress 的应用程序，并且不打算预先规划以便轻松迁移到独立的应用程序服务器，你可能会发现 `TSQLClientDataSet` 组件在某种程度上简化了你的应用程序。
+
+`TSQLClientDataSet` 将 `TSQLDataSet`、`TDataSetProvider` 和 `TClientDataSet` 组件封装到一个组件中。你仍然需要按照第 2 章的说明设置 `TSQLConnection` 组件，但之后你可以将单个 `TSQLClientDataSet` 组件放在你的数据模块上，而不是为每个数据集设置三个组件。
+
+使用 `TSQLClientDataSet` 的缺点是，如果你后来决定迁移到独立的应用程序服务器，你需要在服务器端创建新的 `TSQLDataSet` 和 `TDataSetProvider` 组件，然后在客户端用 `TClientDataSet` 组件替换 `TSQLClientDataSet` 组件。此外，`TSQLClientDataSet` 限制了对单个提供程序和数据集事件的控制程度。
+
+一开始设置单独的组件并不费多少额外精力，而且这使得未来迁移到多级应用程序变得更加容易。因此，我不建议在大多数应用程序中完全使用 `TSQLClientDataSet`。
+
+### 限制服务器返回的数据量
+
+默认情况下，当你打开一个客户端数据集时，服务器端数据集返回的所有数据都会返回到客户端应用程序。在许多情况下，这是可以接受的。在其他情况下，你可能希望限制一次返回的记录数。例如，如果查询返回一个包含 10,000 条记录的结果集，当客户端应用程序位于缓慢的局域网（LAN）甚至更慢的广域网（WAN）的另一端时，一次将所有记录返回给客户端可能不是一个好主意。
+
+为了限制从服务器一次返回的数据量，请设置 `TClientDataSet` 的 `PacketRecords` 属性。默认情况下，此属性设置为 -1，这意味着应从服务器一次返回所有记录。
+
+如果你将 `PacketRecords` 设置为大于零的数字，它将确定在给定时间内从服务器返回的最大记录数。当 `PacketRecords` 设置为零时，服务器仅返回元数据信息——不返回实际行数据。
