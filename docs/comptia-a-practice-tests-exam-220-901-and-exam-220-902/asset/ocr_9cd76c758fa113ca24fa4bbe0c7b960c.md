@@ -1,0 +1,7 @@
+**55.** A user reports that his LCD monitor is flickering constantly. What is the easiest course of action to resolve this problem? A. Replace the video card. B. Replace the monitor. C. Remove external interference such as fans or motors. D. Degauss the monitor.
+
+**56.** You are having problems printing to a networked printer from your Windows 8.1 workstation. Several jobs were sent, but none printed. You just tried to print a test page and nothing came out. What should you do? A. Check your connections and stop and restart the print spooler. B. Turn the printer off and back on. C. Use the printer's display to clear out the oldest job, take it offline, and put it back online. D. Press the Reset button on the printer.
+
+**57.** A user reports that none of the keys on her laptop keyboard seem to work. She has rebooted the computer and the problem has not gone away. She needs to finish an important paper before lunch. What should you do next? A. Replace the keyboard. B. Check to ensure that the internal keyboard is still connected properly. C. Connect an external keyboard using the USB port. D. Clean under the keys of the keyboard with compressed air.
+
+**58.** You are troubleshooting a Mac running macOS. Intermittently, the computer will completely lock up and display a rotating pinwheel instead of the mouse cursor. Which component is most likely causing this problem? A. CPU B. RAM

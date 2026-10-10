@@ -1,0 +1,1 @@
+802.11g standard has a maximum throughput of 54Mbps, and 802.11i is an encryption standard.

@@ -1,0 +1,11 @@
++   need to do their job. Assign permissions to groups rather than users, and make users member of groups (or remove them from groups) as they change roles or positions.
+
++   14. D. Placing an unauthorized router with a seemingly legitimate configuration is specifically known as an evil twin. Those can lead to man-in-the-middle attacks, which involve clandestinely placing something (such as a piece of software or a rogue router) between a server and the user, and neither the server’s administrator nor the user is aware of it. The man-in-the-middle intercepts data and then sends the information to the server as if nothing is wrong. The man-in-the-middle software may be recording information for someone to view later, altering it, or in some other way compromising the security of your system and session.
+
++   15. B. Companies normally generate a huge amount of paper, most of which eventually winds up in Dumpsters or recycle bins. Dumpsters may contain information that is highly sensitive in nature, and attackers may seek it out by practicing Dumpster diving. In high-security and government environments, sensitive papers should be either shredded or burned.
+
++   16. B, D. You should rename the default account and always require strong passwords. In Windows, you are unable to disable the Administrator account or remove it from the Administrators group.
+
++   17. A. A virtual private network (VPN) is a private network connection that occurs through a public network. VPNs make use of tunneling, which sends private data across a public network by placing (encapsulating) that data into other packets. Even though a VPN is created through the Internet or other public networks, the connection logically appears to be part of the local network.
+
++   18. B, D. NTFS permissions affect users regardless of if they are at the local computer or accessing the resource across the network. They can also be applied to individual files, whereas Share permissions can be applied only to folders. One set of

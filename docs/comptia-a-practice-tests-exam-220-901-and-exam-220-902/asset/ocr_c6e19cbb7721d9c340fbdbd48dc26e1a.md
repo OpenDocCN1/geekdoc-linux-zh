@@ -1,0 +1,11 @@
++   52. A, B. If your intent is to physically destroy the drive, you have a few options. They include shredders (not the paper kind but ones that can handle metal), a drill or hammer, and incineration. Although these methods can be fun, they can also be dangerous, so be sure to use adequate safety measures.
+
++   53. C. There are trusted software sources that you know and work with all the time (such as Microsoft or HP) and there are untrusted sources, and you should differentiate between them. Don’t use or let your users use untrusted software sources. Generally, common sense can be your guide.
+
++   54. C. There isn’t any one universal solution to wireless access point placement; it depends a lot on the environment. As a general rule, the greater the distance the signal must travel, the more it will attenuate, but you can lose a signal quickly in a short space as well if the building materials reflect or absorb it. You should try to avoid placing access points near metal (which includes appliances) or near the ground. They should be placed in the center of the area to be served and high enough to get around most obstacles. Note that of all current 802.11 standards, only 802.11ac offers directional antennae. All other standards are omnidirectional, meaning that the signal transmits in all directions.
+
++   55. C. When a hole is found in a web browser or other software and attackers begin exploiting it the very day it is discovered by the developer (bypassing the one- to two-day response time that many software providers need to put out a patch once the hole has been found), it is known as a zero-day attack (or exploit).
+
++   56. C. Changing the default username, password, and SSID are all good measures to take when installing a new router. Another good step is to update the firmware. It’s possible that new firmware was introduced while your device was sitting on a shelf somewhere, and it’s always smart to be up-to-date.
+
++   57. D. When a hole is found in a web browser or other software and attackers begin exploiting it the very day it is discovered by the developer (bypassing the one- to two-day response time that many software providers need to put out a patch once the hole

@@ -1,0 +1,11 @@
+identify the problem; establish a theory of probable cause; test the theory to determine cause; establish a plan of action to resolve the problem and implement the solution; verify full system functionality and, if applicable, implement preventive measures; and document findings, actions, and outcomes.
+
++   48. A. Set and meet—or exceed—expectations and communicate timelines and status. After resolving a customer’s issue, follow up with them to ensure that they were satisfied with the services provided. The follow-up shows professionalism and may earn you future business.
+
++   49. A. Even though it’s not recommended that you repair monitors without specific training, the A+ exam may test your knowledge of the safety practices to use if you ever you need to do so. If you have to open a monitor, you must first discharge the high-voltage charge on it by using a high-voltage probe. This probe has a very large needle, a gauge that indicates volts, and a wire with an alligator clip. Do *not* use an ESD strap when discharging the monitor; doing so can lead to a fatal electric shock.
+
++   50. A. In difficult situations, it can be challenging to keep a level head. It’s important to do so, and avoid arguing and becoming defensive. Many times, clients are frustrated because things are not working as they should. Sometimes they will take their frustration out on you. Keep a level head and work to resolve the problem.
+
++   51. A. If you have your policy in place, then your incident response plan should be relatively scripted. Your first priority as the first responder is to identify the improper activity or content. Then you should always get someone else to verify the material or action so that it doesn’t turn into a situation of your word against someone else’s. Immediately report the situation through proper channels.
+
++   52. D. When humidity gets to be very low, around 20 percent or lower, the risk of electrostatic discharge (ESD) increases. Remember that computer components can be damaged with as little as 300 volts, whereas humans can’t feel a shock until it

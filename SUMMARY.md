@@ -222,6 +222,7 @@
 +   [Java 2 认证全攻略：学习指南](docs/complete-java-2-certification-study-guide/README.md)
 +   [CompTIA A+ 认证全方位考试指南（第九版，考试代码 220-901 & 220-902）](docs/comptia-a-certification-all-in-one-exam-guide-ninth-edition-/README.md)
 +   [CompTIA A+ 认证：轻松通过 CompTIA 考试的初学者完整学习指南](docs/comptia-a-certification-the-complete-study-guide-for-beginne/README.md)
++   [CompTIA A+ 实践指南：考试220-901和考试220-902](docs/comptia-a-practice-tests-exam-220-901-and-exam-220-902/README.md)
 +   [CompTIA Cybersecurity Analyst (CySA+) 认证指南](docs/comptia-cybersecurity-analyst-cysa-cert-guide/README.md)
 +   [CompTIA IT Fundamentals 学习指南：考试 FC0-U51 第一版](docs/comptia-it-fundamentals-study-guide-exam-fc0-u51-1st-edition/README.md)
 +   [CompTIA Linux+ 和 LPIC 实践指南：考试 LX0-103／LPIC-1 101-400, LX0-104／LPIC-1 102-400, LPIC-2 201, 以及 LPIC-2 202](docs/comptia-linux-and-lpic-practice-tests-exams-lx0-103lpic-1-10/README.md)

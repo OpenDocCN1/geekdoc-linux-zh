@@ -1,0 +1,11 @@
+minimum. After using DHCP to obtain network configuration parameters from a server, the thin client can locate a PXE boot server to send it the files that it needs to boot.
+
++   29. C. The taskkill command is used to terminate processes, just like you can do in Task Manager in Windows. To kill a process by its name, use the /IM switch. If you know the process ID, use the /PID switch. The /S switch is used to specify a remote system, and the /FI switch applies a filter to a set of tasks. The /T switch terminates child processes, and /F terminates the process forcefully.
+
++   30. B. During the Windows 8/7/Vista boot process, winload.exe processes a file that resides in the root directory specifying what OSs are installed on the computer and where they reside on the disk. During this step of the boot process, you may be presented with a list of the installed OSs (depending on how your startup options are configured and whether you have multiple OSs installed). In Windows 8/7/Vista, winload.exe replaces ntlldr from the Windows XP days.
+
++   31. C. The best device for power protection is an uninterruptible power supply (UPS). These devices can be as small as a brick or as large as an entire server rack. Inside the UPS is one or more batteries and fuses. Much like a surge suppressor, a UPS is designed to protect everything that’s plugged into it from power surges. UPSs are also designed to protect against power sags and even power outages. Energy is stored in the batteries, and if the power fails, the batteries can power the computer for a period of time so that the administrator can then safely power it down.
+
++   32. A. DHCP servers are configured with a scope, which contains the information that the server can provide to clients. DHCP servers need at least one scope, but they can also have more than one. The scope contains the address pool for DHCP clients as well as other pertinent information for configuration.
+
++   33. A, B. There are three tools that quickly show you CPU and memory usage in Windows. They are Resource Monitor, Performance Monitor, and Task Manager. Performance Monitor

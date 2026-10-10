@@ -1,0 +1,11 @@
+inspection, intrusion protection service, gateway anti-malware, spam blocking, malicious website blocking, and application control.
+
+51. C. The major feature of virtualization is breaking down that one-to-one hardware and software barrier. The virtualized version of a computer is appropriately called a virtual machine (VM). Thanks to VMs, it is becoming far less common to need dual-boot machines today than in the past. VMs allow computers to do things like run five instances of an OS or one instance of several different OSs.
+
+52. B. When an app hangs inside the Mac OS, you can use Force Quit to force it to close. Most devices, whether running Mac OS or iOS, offer similar options. You get to Force Quit by looking at the Apple menu or by pressing Command+Option+Esc, which is analogous to pressing Ctrl+Alt+Del on a PC.
+
+53. B. Companies can purchase virtualization software to set up individual clouds within their own network. That type of setup is referred to as a private cloud. Running a private cloud pretty much eliminates many of the features that companies want from the cloud, such as rapid scalability, and eliminates the need to purchase and manage computer assets. The big advantage, though, is that it allows the company to control its own security within the cloud.
+
+54. A. Some mobile devices give you the option to improve the ability of the computer to recognize how you personally actuate the sensors. For example, many phones allow you to recalibrate (or retrain) the onscreen touch keyboard. That would be the first thing to try in this situation.
+
+55. C. The International Mobile Equipment Identity (IMEI) is a 15-digit serial number that is unique to each phone. If a phone is reported stolen, the IMEI will be declared invalid. The IMEI can be displayed on most phones by dialing *#06#. AT&T and T-Mobile were the first networks to use IMEI. The International Mobile Subscriber Identity (IMSI) is also a unique 15-digit identifier, but it describes a specific mobile user and their network.

@@ -1,0 +1,11 @@
+personal software on company computers and the use of personal hardware such as USB devices.
+
+**25.** B. BitLocker allows you to use drive encryption to protect files—including those needed for startup and logon. This is available only with more complete editions of Windows 8 (Pro and Enterprise), Windows 7 (Enterprise and Ultimate), and Windows Vista (Enterprise and Ultimate). For removable drives, BitLocker To Go provides the same encryption technology to help prevent unauthorized access to the files stored on them.
+
+**26.** C. Spyware differs from other malware in that it works—often actively—on behalf of a third party. Rather than self-replicating, like viruses and worms, spyware is spread to machines by users who inadvertently ask for it. The users often don't know they have asked for it but have done so by downloading other programs, visiting infected sites, and so on. The spyware program monitors the user's activity and responds by offering unsolicited pop-up advertisements (sometimes known as adware), gathers information about the user to pass on to marketers, or intercepts personal data such as credit card numbers.
+
+**27.** C. When creating user accounts, follow the principle of least privilege: give users only the permissions they need to do their work and no more. This is especially true with administrators. Users who need administrative-level permissions should be assigned two accounts: one for performing nonadministrative, day-to-day tasks and the other to be used only when performing administrative tasks that specifically require an administrative-level user account. Those users should be educated on how each of the accounts should be used.
+
+**28.** A, C. Password attacks occur when an account is attacked repeatedly. This is accomplished by using applications known as password crackers, which send possible passwords to the account in a systematic manner. Two types of password attacks are brute-force and dictionary attacks.
+
+**29.** C. All the options will increase the security of an iPhone. For
