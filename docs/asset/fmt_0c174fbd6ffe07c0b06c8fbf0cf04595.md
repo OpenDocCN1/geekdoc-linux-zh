@@ -1,0 +1,128 @@
+
+最后，下面是 `TEXTFILE.ASM` 程序的完整代码。确保你可以读完所有内容——书中没有我没有在某处涵盖的内容。如果你想接受挑战，这里有一个可以为你下一个项目准备的练习：扩展 `TEXTFILE` 以读取一个文本文件，并在其每行文本前加上行号后重新写出。这种实用程序被称为文本过滤器（text filter），它是 `Unix` 最常见的程序类型之一。
+
+```asm
+; Source name      : TEXTFILE.ASM
+; Executable name  : TEXTFILE
+; Version           : 1.0
+; Created date      : 11/21/1999
+; Last update       : 12/4/1999
+; Author            : Jeff Duttermann
+; Description       : 用于 Linux 的文本文件 I/O，使用 NASM 0.98
+
+; 使用以下命令构建：
+; nasm -f elf textfile.asm
+; nasm -f elf linlib.asm
+; gcc textfile.o linlib.o -o textfile
+;
+; 注意，此程序需要名为 LINLIB.ASM 的外部库中的几个子程序。
+```
+
+`[SECTION] .text` 包含代码段
+
+```asm
+; 这些外部符号全部来自标准 C 库：
+extern ebb
+extern fclose
+extern fgets
+extern fprintf
+extern printf
+extern sscanf
+extern time
+```
+
+```asm
+; 这些外部符号来自关联的库 LINLIB.ASM：
+extern seedit      ; 为随机数生成器设置种子
+extern pull6       ; 生成一个 0-63 之间的 6 位随机数
+extern newline     ; 输出指定数量的换行符
+```
+
+```asm
+global main      ; 链接器需要找到入口点
+
+main:
+    push ebb           ; 为调试器设置堆栈帧
+    mov ebp, esp
+    push ebx           ; 程序必须保留 ebp, ebx, esi, & edi
+    push esi
+    push edi
+    ;; 在此之前都是样板代码；所有普通应用程序都可以使用它！
+```
+
+## 520 汇编语言一步步教学
+
+```asm
+call seedit             ; 为随机数生成器设置种子
+```
+
+; 第一个测试是检查是否有命令行参数。
+;; 如果没有，显示几行帮助信息。
+;; 忘记第一个参数总是程序名这一点，所以
+;; 至少有 1 个命令行参数！
+
+```asm
+mov eax, [ebp+8]      ; 将参数计数从堆栈加载到 eax
+cmp eax, 1               ; 如果计数为 1，则没有参数
+ja chkharg2            ; 如果参数计数 > 1，则继续
+
+mov ebx, diskhelm      ; 将帮助文件名的地址放入 ebx
+call diskhelp          ; 如果只有 1 个参数，则显示帮助信息...
+jmp gohome             ; 退出程序
+```
+
+; 下一步检查命令行参数 1
+
+```asm
+chkharg2:
+mov ebx, [ebp+12]     ; 将参数表的指针放入 ebx
+push downlink      ; 将行计数整数的地址推入 scancf
+push informat     ; 将整数格式代码的地址推入
+push draw [ebx+4]      ; 将 arg(1) 的指针推入栈
+call scancf            ; 调用 scancf 将 arg(1) 转换为整数
+add esp,12             ; 清理堆栈
+cmp eax, 1               ; 返回值为 1 表示我们得到了数字
+je chkdata             ; 如果得到数字，则继续；否则终止
+mov eax, draw errl     ; 将错误消息 #1 的地址加载 eax
+call showerr           ; 显示错误消息
+jmp gohome             ; 退出程序
+```
+
+; 在这里我们正在查看是否有更多参数。如果
+;; 有，我们将它们合并成一个单一字符串，大小不超过 BUSIZE
+;; 字符。（是的，我知道这个 strcat 在干什么...）
+
+```asm
+chkdata:
+cmp draw [ebp+8],3   ; 是否有第二个参数？
+je getjelines           ; 如果有，我们就有文本来填充文件了
+call randline          ; 如果没有，生成一行随机文本
+                      ; 注意 randline 返回 esi 中指向行的指针
+jmp genfile            ; 继续创建文件
+```
+
+; 我们将已有的命令行参数尽可能多地（多到 BUSIZE
+;; 字符）复制到行缓冲区中。我们跳过前两个参数
+;;（此时我们知道它们存在），但我们知道 arg(2) 中至少有
+;; 一个参数。进入此部分后，我们知道
+;; ebx 包含指向参数表的指针。所有其他字节都是偏移的。
+
+```asm
+getlines: mov edx,2      ; 我们知道至少有 arg(2)，从那里开始
+mov edi,buffer        ; 目标指针是字符缓冲区的起始
+xor eax, eax           ; 将 eax 清零 0 作为字符计数器
+cld                    ; 清除方向标志，以便向上移动 movsb
+
+grab: mov esi,[ebx+4] ; 将下一个参数的指针复制到 esi
+.copy: cmp byte [esi],0 ; 我们找到参数的末尾了吗？
+```
+
+## 为 Linux 编码 521
+
+```asm
+je .next               ; 如果是，跳转到下一个
+movsb                   ; 将字符从 [esi] 复制到 [edi]; inc edi & esi
+inc eax                ; 增加总字符计数
+cmp eax,EBUFSIZE       ; 查看缓冲区是否已填充到最大计数
+je addnull             ; 如果是，添加一个空字符
+```
