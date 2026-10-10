@@ -1,0 +1,1 @@
+We look at another frame buffer application when we learn to access memory regions from user space in Chapter 19, "Drivers in User Space."

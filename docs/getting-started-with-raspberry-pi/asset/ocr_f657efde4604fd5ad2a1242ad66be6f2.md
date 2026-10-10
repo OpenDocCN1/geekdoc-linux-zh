@@ -1,0 +1,7 @@
+# BIOS and Legacy Drivers
+
+The BIOS provides a degree of hardware abstraction to some Linux drivers. Let’s take the PC serial port driver (discussed in Chapter 6, "Serial Drivers") as an example. The BIOS probes the Super I/O chipset and assigns I/O base addresses and IRQs to the respective serial (and Infrared) ports. The serial driver needs to be told about the resources assigned by the BIOS either via hard-coded values in a header file (include/asm-x86/serial.h) or via user-space commands. As an exercise, dig into the data sheet of your Super I/O chipset and add support in the serial driver to probe for the resource values set by the BIOS.
+
+To take another example, even if you disable USB support in the kernel, you can use USB keyboards and mice on PC systems with help from the BIOS. The BIOS turns on an emulation mode in the South Bridge that routes USB keyboard and mouse input from the USB controller to the keyboard controller. This tricks the operating system into thinking that you are using a legacy keyboard or mouse.
+
+The kernel used to rely on the BIOS to walk the PCI bus and configure detected devices. This is now obsolete, but take a look at arch/x86/pci/pcbios.c to see how PCI BIOS can be accessed from the kernel. Chapter 10, "Peripheral Component Interconnect," discussed PCI drivers.

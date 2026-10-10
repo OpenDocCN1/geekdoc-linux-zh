@@ -486,6 +486,7 @@
 +   [22 Express-C 入门指南](docs/getting-started-with-db2-express-c/README.md)
 +   [InfoSphere Data Architect 入门指南](docs/getting-started-with-infosphere-data-architect/README.md)
 +   [Linux 入门指南：Novell CompTIA Linux+ 指南 (课程 3060)](docs/getting-started-with-linux-novells-guide-to-comptias-linux-c/README.md)
++   [树莓派入门指南](docs/getting-started-with-raspberry-pi/README.md)
 +   [Ubuntu OS 入门指南：Linux 开源操作系统极简指南](docs/getting-started-with-ubuntu-os-a-ridiculously-simple-guide-t/README.md)
 +   [Ghost Process：在 Linux 集群中实现进程复制、迁移和检查点重启的基础方案](docs/ghost-process-a-sound-basis-to-implement-process-duplication/README.md)
 +   [Linux GIMP 圣经](docs/gimp-for-linux-bible/README.md)

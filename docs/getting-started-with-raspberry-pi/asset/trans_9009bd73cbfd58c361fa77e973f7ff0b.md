@@ -1,0 +1,106 @@
+
+## 查看源代码
+
+大多数输入事件驱动程序位于 *drivers/input/* 目录中。然而，键盘事件驱动程序位于 *drivers/char/keyboard.c*，因为它连接到虚拟终端，而不是 */dev/input/* 下的设备节点。
+
+你可以在多个地方找到输入设备驱动程序。旧式键盘、鼠标和摇杆的驱动程序位于 *drivers/input/* 下的不同子目录中。蓝牙输入驱动程序位于 *net/bluetooth/hidp/*。你还可以在 *drivers/hwmon/* 和 *drivers/media/video/* 等区域找到输入驱动程序。事件类型、代码和值在 *include/linux/input.h* 中定义。
+
+serio 子系统保留在 *drivers/input/serio/* 中。serport 行规程的源代码位于 *drivers/input/serio/serport.c*。*Documentation/input/* 包含有关不同输入接口的更多详细信息。
+
+表 7.1 总结了本章中使用的主要数据结构及其在源代码树中的位置。表 7.2 列出了本章中使用的内核编程接口及其定义位置。
+
+**表 7.1. 数据结构总结**
+
+| 数据结构 | 位置 | 描述 |
+| :--- | :--- | :--- |
+| `input_event` | `include/linux/input.h` | evdev 产生的每个事件包都采用此格式。 |
+| `input_dev` | `include/linux/input.h` | 输入设备的表示形式。 |
+| `input_handler` | `include/linux/serial_core.h` | 包含事件驱动程序支持的入口点。 |
+| `psmouse_protocol` | `drivers/input/mouse/psmouse-base.c` | 关于支持的 PS/2 鼠标协议驱动程序的信息。 |
+| `psmouse` | `drivers/input/mouse/psmouse.h` | PS/2 鼠标驱动程序支持的方法。 |
+
+**表 7.2. 内核编程接口总结**
+
+| 内核接口 | 位置 | 描述 |
+| :--- | :--- | :--- |
+| `input_register_device()` | `drivers/input/input.c` | 向输入核心注册设备 |
+| `input_unregister_device()` | `drivers/input/input.c` | 从输入核心移除设备 |
+| `input_report_rel()` | `include/linux/input.h` | 在指定方向上生成相对移动 |
+| `input_report_abs()` | `include/linux/input.h` | 在指定方向上生成绝对移动 |
+| `input_report_key()` | `include/linux/input.h` | 生成按键或按钮按下事件 |
+| `input_sync()` | `include/linux/input.h` | 指示输入子系统可以将先前生成的事件收集到一个 evdev 包中，并通过 `/dev/input/input*X*` 将其发送到用户空间 |
+| `input_register_handler()` | `drivers/input/input.c` | 注册自定义事件驱动程序 |
+| `sysfs_create_group()` | `fs/sysfs/group.c` | 创建具有指定属性的 sysfs 节点组 |
+| `sysfs_remove_group()` | `fs/sysfs/group.c` | 移除使用 `sysfs_create_group()` 创建的 sysfs 组 |
+| `tty_insert_flip_char()` | `include/linux/tty_flip.h` | 将字符发送到行规程层 |
+| `platform_device_register_simple()` | `drivers/base/platform.c` | 创建一个简单的平台设备 |
+| `platform_device_unregister()` | `drivers/base/platform.c` | 注销平台设备 |
+
+## 第 8 章. 集成电路间协议
+
+### 本章内容
+
+- 什么是 I²C/SMBus？ 234
+- I²C 核心 235
+- 总线事务 237
+- 设备示例：EEPROM 238
+- 设备示例：实时时钟 247
+- i2c-dev 251
+- 使用 LM-Sensors 进行硬件监控 251
+- 串行外设接口总线 251
+- 单线总线 254
+- 调试 254
+- 查看源代码 255
+
+集成电路间总线，或 I²C（发音为 *I 平方 C*）及其子集 *系统管理总线*（SMBus），是广泛用于桌面和嵌入式设备中的同步串行接口。让我们通过实现示例驱动程序来访问 I²C EEPROM 和 I²C RTC，以了解内核如何支持 I²C/SMBus 主机适配器及客户端设备。在本章结束之前，我们还要看看内核支持的其他两种串行接口：*串行外设接口* 或 SPI（常发音为 *spy*）总线以及单线总线。
+
+所有这些串行接口（I²C、SMBus、SPI 和单线总线）都具有两个共同特征：
+
+- 交换的数据量很小。
+- 所需的数据传输率较低。
+
+### 什么是 I²C/SMBus？
+
+I²C 是一种在桌面计算机和笔记本电脑中广泛使用的串行总线，用于将处理器与 EEPROM、音频编解码器以及监测温度或电源电压等参数的专用芯片等设备进行接口连接。此外，I²C 在嵌入式设备中广泛用于与 RTC（实时时钟）、智能电池电路、多路复用器、端口扩展器、光收发器及其他类似设备通信。由于 I²C 得到了大量微控制器的支持，目前市场上有大量的廉价 I²C 设备。
+
+I²C 和 SMBus 是主从协议，通信发生在 *主机适配器*（或 *主机控制器*）与 *客户端设备*（或 *从设备*）之间。主机适配器通常是桌面计算机南桥芯片组的一部分，而在嵌入式设备中则是微控制器的一部分。图 8.1 展示了 PC 兼容硬件上的 I²C 总线示例。
+
+![](img/07cc6f9c8c74622020874f66bfb53dc4_214_0.png)
+
+![](img/07cc6f9c8c74622020874f66bfb53dc4_215_0.png)
+
+I²C 及其子集 SMBus 是分别由 Philips 和 Intel 开发的 2 线接口。这两根线是 *时钟线* 和 *双向数据线*，对应的线路称为 *串行时钟*（SCL）和 *串行数据*（SDA）。由于 I²C 总线只需要一对线，它在电路板上占用空间较少。然而，支持的带宽也很低。I²C 在标准模式下允许最高 100Kbps，在快速模式下允许 400Kbps。（然而，SMBus 仅支持最高 100Kbps。）因此，该总线仅适用于慢速外设。尽管 I²C 支持双向交换，但由于只有一根数据线，通信是半双工的。
+
+I²C 和 SMBus 设备拥有 *7 位地址*。该协议也支持 10 位地址，但许多设备仅响应 7 位寻址，这意味着总线上最多可以有 127 个设备。由于协议的主从特性，设备地址也被称为 *从设备地址*。
+
+### I²C 核心
+
+I²C 核心是一个代码库，包含主机适配器驱动程序和客户端驱动程序可用的例程和数据结构。核心中的通用代码使驱动程序开发者的工作更加轻松。核心还提供了一层间接性，使客户端驱动程序独立于主机适配器，即使客户端设备用于具有不同 I²C 主机适配器的板卡，它们也能保持不变而正常工作。这种核心层及其附带好处的理念在内核中的许多其他设备驱动程序类别中也适用，例如 PCMCIA、PCI 和 USB。
+
+除了核心之外，内核 I²C 基础设施还包括以下部分：
+
+- I²C 主机适配器的设备驱动程序。它们属于总线驱动程序范畴，通常由适配器驱动程序和算法驱动程序组成。前者使用后者与 I²C 总线通信。
+- I²C 客户端设备的设备驱动程序。
+- i2c-dev，允许实现用户模式 I²C 客户端驱动程序。
+
+你更有可能实现客户端驱动程序而不是适配器或算法驱动程序，因为 I²C 设备比 I²C 主机适配器多得多。因此，本章我们将局限于客户端驱动程序。
+
+图 8.2 说明了 Linux I²C 子系统。它展示了 I²C 内核模块与 I²C 总线上的主机适配器和客户端设备对话。
+
+![](img/07cc6f9c8c74622020874f66bfb53dc4_216_0.png)
+
+由于 SMBus 是 I²C 的子集，仅使用 SMBus 命令与你的设备通信可以生成一个同时支持 SMBus 和 I²C 适配器的驱动程序。表 8.1 列出了由 I²C 核心提供的 SMBus 兼容数据传输例程。
+
+**表 8.1. I²C 核心提供的 SMBus 兼容数据访问函数**
+
+| 函数 | 用途 |
+| :--- | :--- |
+| i2c_smbus_read_byte() | 从设备读取单个字节，不指定位置偏移。使用之前发出的命令相同的偏移量。 |
+| i2c_smbus_write_byte() | 将单个字节发送到设备，使用之前发出的命令相同的内存偏移量。 |
+| i2c_smbus_write_quick() | 向设备发送单个位（代替列表 8.1 中显示的 Rd/Wr 位）。 |
+| i2c_smbus_read_byte_data() | 从指定偏移量处的设备读取单个字节。 |
+| i2c_smbus_write_byte_data() | 将单个字节发送到指定偏移量处的设备。 |
+| i2c_smbus_read_word_data() | 从指定偏移量读取 2 个字节。 |
+| i2c_smbus_write_word_data() | 将 2 个字节发送到指定偏移量。 |
+
+![](img/07cc6f9c8c74622020874f66bfb53dc4_217_0.png)

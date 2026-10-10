@@ -1,0 +1,166 @@
+
+
+```c
+int
+submit_work(void (*func)(void *data), void *data)
+{
+    struct _mydrv_work *mydrv_work;
+
+    /* Allocate the work structure */
+    mydrv_work = kmalloc(sizeof(struct _mydrv_work), GFP_ATOMIC);
+    if (!mydrv_work) return -1;
+
+    /* Populate the work structure */
+    mydrv_work->worker_func = func; /* Work function */
+    mydrv_work->worker_data = data; /* Argument to pass */
+    spin_lock(&mydrv_wq.lock);     /* Protect the list */
+
+    /* Add your work to the tail of the list */
+    list_add_tail(&mydrv_work->mydrv_workitem,
+                  &mydrv_wq.mydrv_worklist);
+
+    /* Wake up the worker thread */
+    wake_up(&mydrv_wq.todo);
+
+    spin_unlock(&mydrv_wq.lock);
+    return 0;
+}
+```
+
+要从驱动程序入口点提交工作函数 `void job(void *)`，请执行以下操作：
+
+```c
+submit_work(job, NULL);
+```
+
+提交工作函数后，代码列表 3.3 会唤醒工作线程。代码列表 3.4 中展示的工作线程通用结构与上一节讨论的标准内核线程类似。该线程使用 `list_entry()` 遍历列表中的所有节点。`list_entry()` 返回嵌入列表节点内部的容器数据结构。请仔细查看代码列表 3.4 中的相关代码行：
+
+```c
+mydrv_work = list_entry(mydrv_wq.mydrv_worklist.next,
+                        struct _mydrv_work, mydrv_workitem);
+```
+
+`mydrv_workitem` 嵌入在 `mydrv_work` 内部，因此 `list_entry()` 返回指向相应 `mydrv_work` 结构的指针。传递给 `list_entry()` 的参数分别是嵌入的列表节点地址、容器结构的类型以及嵌入列表节点的字段名。
+
+执行已提交的工作函数后，工作线程使用 `list_del()` 将相应节点从列表中移除。请注意，在已提交的工作函数执行期间，`mydrv_wq.lock` 会被释放并重新获取。这是因为工作函数可能会进入睡眠状态，如果新调度的代码试图获取同一个自旋锁，可能会导致潜在的死锁。
+
+## 代码列表 3.4：工作线程
+
+```c
+static int
+mydrv_worker(void *unused)
+{
+    DECLARE_WAIT_QUEUE(wait, current);
+    void (*worker_func) (void *);
+    void *worker_data;
+    struct _mydrv_work *mydrv_work;
+
+    set_current_state(TASK_INTERRUPTIBLE);
+
+    /* Spin until asked to die */
+    while (!asked_to_die()) {
+        add_wait_queue(&mydrv_wq.todo, &wait);
+
+        if (list_empty(&mydrv_wq.mydrv_worklist)) {
+            schedule();
+            /* Woken up by the submitter */
+        } else {
+            set_current_state(TASK_RUNNING);
+        }
+        remove_wait_queue(&mydrv_wq.todo, &wait);
+
+        /* Protect concurrent access to the list */
+        spin_lock(&mydrv_wq.lock);
+
+        /* Traverse the list and plough through the work functions
+           present in each node */
+        while (!list_empty(&mydrv_wq.mydrv_worklist)) {
+            /* Get the first entry in the list */
+            mydrv_work = list_entry(mydrv_wq.mydrv_worklist.next,
+                                     struct _mydrv_work, mydrv_workitem);
+            worker_func = mydrv_work->worker_func;
+            worker_data = mydrv_work->worker_data;
+
+            /* This node has been processed. Throw it
+               out of the list */
+            list_del(mydrv_wq.mydrv_worklist.next);
+            kfree(mydrv_work); /* Free the node */
+
+            /* Execute the work function in this node */
+            spin_unlock(&mydrv_wq.lock); /* Release lock */
+            worker_func(worker_data);
+            spin_lock(&mydrv_wq.lock); /* Re-acquire lock */
+        }
+        spin_unlock(&mydrv_wq.lock);
+        set_current_state(TASK_INTERRUPTIBLE);
+    }
+
+    set_current_state(TASK_RUNNING);
+    return 0;
+}
+```
+
+为了简化，示例代码没有执行错误处理。例如，如果代码列表 3.2 中对 `kernel_thread()` 的调用失败，你需要释放为相应工作结构分配的内存。此外，代码列表 3.4 中的 `asked_to_die()` 未被编写。它本质上会在检测到收到的信号或从 `release()` 入口点接收到模块即将从内核卸载的通信时跳出循环。
+
+在结束本节之前，让我们看看另一个有用的列表库例程，`list_for_each_entry()`。使用这个宏，迭代变得更简单且更具可读性，因为你不需要在循环内部使用 `list_entry()`。如果你将在循环内部删除列表元素，请使用 `list_for_each_entry_safe()` 变体。你可以将代码列表 3.4 中的以下代码片段替换为：
+
+```c
+while (!list_empty(&mydrv_wq.mydrv_worklist)) {
+    mydrv_work = list_entry(mydrv_wq.mydrv_worklist.next,
+                            struct _mydrv_work, mydrv_workitem);
+    /* ... */
+}
+```
+
+替换为：
+
+```c
+struct _mydrv_work *temp;
+list_for_each_entry_safe(mydrv_work, temp,
+                         &mydrv_wq.mydrv_worklist,
+                         mydrv_workitem) {
+    /* ... */
+}
+```
+
+在这种情况下，你不能使用 `list_for_each_entry()`，因为在代码列表 3.4 的循环内部，你正在移除由 `mydrv_work` 指向的条目。`list_for_each_entry_safe()` 通过使用作为第二个参数传递的临时变量（*temp*）来解决这个问题，以保存列表中下一个条目的地址。
+
+### 哈希列表
+
+之前讨论的双向链表实现对于希望实现诸如哈希表之类的链式数据结构的情况并不是最优的。这是因为哈希表只需要一个仅包含单个指针的列表头。为了减少此类应用程序的内存开销，内核提供了哈希列表（或 *hlists*），这是列表的一种变体。与使用相同结构作为列表头和列表节点的列表不同，hlists 具有独立的定义：
+
+```c
+struct hlist_head {
+    struct hlist_node *first;
+}; 
+struct hlist_node {
+    struct hlist_node *next, **prev;
+};
+```
+
+为了适应单指针 hlist 列表头的方案，节点维护前一个节点指针的地址，而不是指针本身。
+
+哈希表是使用 `hlist_heads` 数组实现的。每个 `hlist_head` 都源自由 `hlist_nodes` 组成的双向链表。使用哈希函数来定位 `hlist_head` 数组中的索引（或桶）。完成此操作后，你可以使用 hlist 辅助例程（也在 *include/linux/list.h* 中定义）来操作链接到所选桶的 `hlist_nodes` 列表。目录缓存（dcache）在 fs/dcache.c 中的实现就是一个例子。
+
+## 工作队列
+
+工作队列是延迟内核内工作的一种方式。[2] 在无数情况下，延迟工作都非常有用。示例包括以下内容：
+
+- 响应错误中断触发网络适配器重启
+- 文件系统任务，如同步磁盘缓冲区
+- 向磁盘发送命令并跟随存储协议状态机
+
+工作队列的功能与代码列表 3.2 到 3.4 中描述的示例类似。然而，工作队列可以帮助你以更简单的方式完成相同的任务。
+
+工作队列辅助库向用户暴露了两个接口结构：一个 `workqueue_struct` 和一个 `work_struct`。使用工作队列的步骤如下：
+
+1. 创建一个工作队列（或 `workqueue_struct`），其带有一个或多个关联的内核线程。要创建服务于 `workqueue_struct` 的内核线程，请使用 `create_singlethread_workqueue()`。要创建系统中每个 CPU 一个工作线程，请使用 `create_workqueue()` 变体。内核还具有默认的每 CPU 工作线程（`events/n`，其中 *n* 是 CPU 编号），你可以时间共享这些线程，而不是请求单独的工作线程。根据你的应用程序，如果没有专用的工作线程，你可能会遭受性能损失。
+2. 创建一个工作元素（或 `work_struct`）。使用 `INIT_WORK()` 初始化 `work_struct`，该函数用你的工作函数的地址和参数填充它。
+3. 将工作元素提交到工作队列。`work_struct` 可以使用 `queue_work()` 提交到专用队列，或者使用 `schedule_work()` 提交到默认的内核工作线程。
+
+让我们重写代码列表 3.2 到 3.4 以利用工作队列接口。这在代码列表 3.5 中实现。整个内核线程，以及自旋锁和等待队列，都在工作队列接口内部消失。如果你使用默认的内核工作线程，即使是对 `create_singlethread_workqueue()` 的调用也会消失。
+
+[2] Softirqs 和 tasklets 是内核内延迟工作的另外两种机制。第 4 章的表 4.1 比较了 softirqs、tasklets 和工作队列。
+
+### 代码列表 3.5：使用工作队列延迟工作
+

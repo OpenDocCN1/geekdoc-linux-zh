@@ -1,0 +1,237 @@
+
+
+# 索引
+
+- NVRAM 驱动程序
+- urandom 字符设备
+- **URB（USB 请求块）**
+- **urb 结构体 第2次**
+- **USB（通用串行总线）**
+  - 寻址
+  - 蓝牙 第2次
+  - 总线速度
+  - 类驱动程序
+    - HID（人机接口设备）
+    - 大容量存储
+    - 概述
+    - USB-Serial
+    - 与 I²C 和 PCI 的对比
+  - 数据结构
+    - *描述符*
+    - *管道*
+    - *表格索引*
+      - *URB（USB 请求块）*
+    - *usb_device 结构体*
+    - *嵌入式驱动程序*
+  - 在嵌入式系统上
+  - 端点
+  - 枚举
+  - 设备驱动程序
+  - 主控制器
+  - Linux-USB 子系统图示
+  - 内核编程接口，表格索引
+  - Linux-USB 子系统架构
+  - 鼠标
+  - OTG 控制器
+  - 概述
+  - 插座
+  - 参考资料
+  - 遥测卡示例
+    - *数据传输*
+    - *驱动程序初始化*
+    - *pci_device_id 结构体*
+    - *探测和断开连接*
+    - *寄存器访问*
+    - *寄存器空间*
+  - 收发器
+  - 传输类型
+  - URB（USB 请求块）
+  - usbfs 虚拟文件系统
+  - USB 设备项目
+  - USB-Serial
+- **usb-serial.c 驱动程序**
+- **usb_[control|interrupt|bulk]_msg() 函数**
+- **usb_[rcv][snd][ctrl][int|bulk][soc]pipe() 函数 第2次**
+- **usb_alloc_urb() 函数 第2次**
+- **usb_buffer_alloc() 函数**
+- **usb_buffer_free() 函数**
+- **usb_bulk_msg() 函数**
+- **usb_bus 结构体**
+- **usb_close() 函数**
+- **usb_config_descriptor 结构体 第2次**
+- **usb_control_msg() 函数 第2次 第3次**
+- **usb_ctrrequest 结构体**
+- **usb_deregister() 函数**
+- **usb_deregister_dev() 函数**
+- **usb_dev_handle 结构体**
+- **USB_DEVICE() 宏**
+- **usb_device_descriptor 结构体 第2次**
+- **usb_device_id 结构体**
+- **usb_device 结构体** 第2次 第3次
+- **usb_driver 结构体**
+- **usb_endpoint_descriptor 结构体** 第2次
+- **usb_fill_bulk_urb() 函数** 第2次
+- **usb_fill_control_urb() 函数** 第2次 第3次
+- **usb_fill_int_urb() 函数** 第2次
+- **usb_find_buses() 函数**
+- **usb_find_devices() 函数**
+- **usb_find_interface() 函数**
+- **usb_free_urb() 函数** 第2次
+- **usb_gadget_driver 结构体** 第2次
+- **usb_gadget_register_driver() 函数** 第2次
+- **usb_get_tifdata() 函数** 第2次
+- **usb_init() 函数**
+- **usb_interface_descriptor 结构体** 第2次
+- **usb_open() 函数**
+- **usb_register() 函数** 第2次
+- **usb_register_dev() 函数**
+- **usb_serial_deregister() 函数**
+- **usb_serial_driver 结构体**
+- **usb_serial_register() 函数** 第2次
+- **usb_set_intfdata()** 第2次
+- **usb_submit_urb() 函数** 第2次
+- **usb_tele_init() 函数**
+- **USB_UART**
+- **USB_UART 驱动程序**
+- 代码列表
+- 寄存器布局
+- **USB_UART 端口**
+- **usb_uart_probe() 函数**
+- **usb_uart_rxint() 函数**
+- **usb_uart_start_tx() 函数**
+- **usb_unlink_urb() 函数** 第2次
+- **usbfs 虚拟文件系统** 第2次
+- **USB 设备项目**
+- **usbhid 驱动程序**
+- **usbhid USB 客户端驱动程序**
+- **USB 键盘**
+- **usbmon 命令**
+- **USB 请求块（URB）**
+- **usbserial 驱动程序**
+- **用户空间驱动程序**
+- 数据结构
+- I/O 区域
+  - 访问
+  - 转储字节
+- 内存区域，访问
+- 并行端口 LED 板，控制
+- 进程调度
+  - CFS（完全公平调度器）
+  - $O(1)$ 调度器
+  - 原始调度器
+  - 概述
+  - 响应时间
+- sg（SCSI 通用）
+- 参考资料
+- UIO（用户空间 I/O）
+- usbfs 虚拟文件系统
+- 用户空间 I²C
+- 用户空间库函数
+  - 何时使用
+- **用户空间辅助工具**
+- **用户模式 Linux（UML）**
+  - 块设备模拟
+  - 字符设备模拟
+  - 定义
+  - JFFS（日志闪存文件系统）
+  - MTD-utils
+  - 概述
+- YAFFS（另一个闪存文件系统）
+- 用户空间驱动程序 [参见 用户模式驱动程序]
+- 用户空间调节器
+- 用户空间 IO（UIO）
+- 用户空间库函数
+- usr 目录
+- UU_READ_DATA_REGISTER
+- UU_STATUS_REGISTER
+- UU_WRITE_DATA_REGISTER
+- **V2IP（IP 音视频）**
+- **变量**
+  - `loops_per_jiffy` 第2次 第3次
+  - `xtime`
+- **VCI（虚电路标识符）**
+- 校验和验证命令 (iocr)
+- 版本控制
+- 甚高速集成电路硬件描述语言 (VHDL)
+- **vesafb（视频帧缓冲区驱动程序）**
+- VFS（虚拟文件系统） 第2次
+- `vfs_readir()` 函数
+- **VGA（视频图形阵列）**
+- VHDL（甚高速集成电路硬件描述语言）
+- **视频**
+  - 布线标准
+  - 控制器
+  - 嵌入式驱动程序
+    - VGA（视频图形阵列）
+    - 视频帧缓冲区驱动程序 [参见 **vesafb（视频帧缓冲区驱动程序）**]
+- **IP 音视频（V2IP）**
+- video1394 驱动程序
+- **虚拟地址**
+- **虚电路标识符（VCI）**
+- **虚拟文件系统（VFS）** 第2次
+- 虚拟鼠标设备示例
+  - gpm（通用鼠标）
+    - 模拟鼠标移动
+    - vms.c 输入驱动程序
+- **虚拟网络计算（VNC）**
+- **虚拟路径标识符（VPI）**
+- **虚拟终端（VT）**
+- 重要产品数据（VPD）
+- `vmalloc()` 函数 第2次
+- vmlinux 内核镜像
+- vms.c 应用程序
+- `vms_init()` 函数
+- VNC（虚拟网络计算）
+- VoIP（网络语音传输）
+- VOLUME_REGISTER
+- VPD（重要产品数据）
+- VPI（虚拟路径标识符）
+- vt.c 驱动程序
+- **VT（虚拟终端）**
+- **w1** 总线
+  - **w1_family_ops** 结构体
+  - **w1_family** 结构体
+  - **wait_event_timeout()** 函数 第2次
+  - **wait_for_completion()** 函数 第2次
+  - **wait_queue_t** 结构体
+  - **等待队列** [参见 队列]
+  - **wake_up_interruptible()** 函数 第2次 第3次
+  - 实际时间
+  - 看门狗超时
+  - 看门狗定时器
+  - 观察点
+  - **wd33c93_init()** 函数
+  - 磨损均衡
+  - WiFi 第2次 第3次
+  - WiMax
+  - **无线**
+    - 权衡
+    - WiFi 第2次 第3次
+    - 无线扩展
+  - **wmb()** 函数 第2次
+  - **工作，提交以供稍后执行**
+  - **work_struct** 结构体 第2次
+  - 工作线程
+  - **workqueue_struct** 结构体
+  - 工作队列 第2次 第3次
+  - **write()** 方法
+  - **write_lock()** 函数
+  - **write_lock_irqrestore()** 函数 第2次
+  - **write_lock_irqsave()** 函数 第2次
+  - **write_seqlock()** 函数
+  - **write_sequnlock()** 函数
+  - **write_unlock()** 函数
+  - **write_vms()** 函数
+  - **write_wakeup()** 函数
+  - **writev()** 函数
+  - **编写**
+    - CMOS 驱动程序
+    - 输入事件驱动程序
+- **x86 引导加载程序**
+- **Xf86SIGIO() 函数**
+- **Xf86WaitForInput() 函数**
+- **XGA（扩展图形阵列）**
+- **XIP（原地执行）**
+- **xtime 变量**
+- **X Windows**
+
