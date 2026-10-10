@@ -1,0 +1,132 @@
+
+```array ibm_db.fetch_tuple(IBM_DBStatement stmt, [, int row_number])```
+
+表 10.3 解释了 `ibm_db.fetch_tuple` 的不同参数。
+
+| 名称 | 描述 |
+|---|---|
+| `Stmt` | 包含结果集的有效语句对象。 |
+| `row_number` | 可选：1 起始的行号，指定您想要从结果集中获取的特定行。如果结果集使用仅向前游标，传递此参数会导致警告 |
+
+## 表 10.3 - 函数 `ibm_db.fetch_tuple` 的参数
+
+如果结果集中没有更多行，或者 `row_number` 请求的行不存在于结果集中，该函数返回 `False`。
+
+例如，您可以获取并打印结果集中的所有行，如下文清单 10.6 所示。
+
+```
+(1) mytuple = ibm_db.fetch_tuple(stmt)
+(2) while mytuple != False:
+    (3) print "First Name: %s, Last Name: %s" % (mytuple[0], mytuple[1])
+    (4) mytuple = ibm_db.fetch_tuple (stmt)
+```
+
+### 清单 10.6 – 从结果集中获取行
+
+*清单 10.6* 中的各项解释如下：
+
+- (1) 函数 `ibm_db.fetch_tuple` 将结果集中的每一行作为元组返回，并将其赋值给变量 `mytuple`；
+- (2) 循环直到函数返回 `False`，这表示结果集中没有剩余的行；
+- (3) 使用 0 起始的列位置（例如 `mytuple[0], mytuple[1]`）打印返回行中每一列的值；
+- (4) 将下一行获取到变量 `mytuple` 中。
+
+> **注意：**
+>
+> 除了 `ibm_db.fetch_tuple` 之外，`ibm_db` 驱动程序还提供其他 3 个数据获取函数，支持灵活地获取结果集：`ibm_db.fetch_assoc`、`ibm_db.fetch_both` 和 `ibm_db.fetch_row`。更多信息请参阅 [http://code.google.com/p/ibm-db/wiki/APIs](http://code.google.com/p/ibm-db/wiki/APIs)。
+
+如果您想测试上述所有代码片段，请编辑随本书附带的练习文件中的 Python 脚本 `select.py`，并将用户 ID 和密码替换为您自己的。然后按如下方式运行脚本：
+
+```
+python select.py
+```
+
+执行上述脚本的结果如 *图 10.5* 所示。
+
+![](img/5f6ba170efa3a607142589708531bef8_349_0.png)
+
+图 10.5 执行脚本 `select.py`
+
+> **注意：**
+>
+> 本章使用的所有脚本都包含在随本书附带的 zip 文件 `Exercise_Files_DB2_Application_Development.zip` 中的目录 `samples/chapter10` 中。
+>
+> 运行这些脚本之前，您可能需要先使用 `db2samp1` 实用程序创建 `SAMPLE` 数据库。此外，请将脚本中的用户名和密码替换为您自己的。
+
+### 10.3.3 插入、更新和删除数据
+
+与 `SELECT` 语句类似，在编写应用程序时已知的 `INSERT`、`UPDATE` 或 `DELETE` SQL 语句可以通过调用函数 `ibm_db.exec_immediate` 直接执行。对于包含可变输入或参数标记的 SQL 语句，请参阅第 `10.3.4` 节。
+
+成功执行 SQL 语句后，您可以使用 `ibm_db.num_rows` 函数返回该 SQL 语句影响的行数。
+
+让我们查看 **清单 10.7** 中的示例。
+
+```
+(1) stmt = ibm_db.exec_immediate (conn, "CREATE TABLE PRODUCT(product_id char(6), name char(30))")
+(2) stmt = ibm_db.exec_immediate (conn, "Insert into PRODUCT values ('000001','Computer'), ('000002','TV')")
+(3) print "Returns for insert: ", ibm_db.num_rows(stmt)
+(4) stmt = ibm_db.exec_immediate (conn, "update PRODUCT set name = 'notebook' where product_id='000001'")
+(5) print "Returns for update: ", ibm_db.num_rows(stmt)
+(6) stmt = ibm_db.exec_immediate (conn, "delete from PRODUCT where product_id='000003'")
+(7) print "Returns for delete: ", ibm_db.num_rows(stmt)
+(8) stmt = ibm_db.exec_immediate (conn, "drop table PRODUCT")
+```
+
+### 清单 10.7 - 脚本 `ins_upd_del.py`
+
+**清单 10.7** 中的各项解释如下：
+
+- 1. 调用函数 `ibm_db.exec_immediate` 创建表 `PRODUCT`
+- 2. 调用函数 `ibm_db.exec_immediate` 向 `PRODUCT` 表插入行
+- 3. 打印插入的行数
+- 4. 更新表中的一些行
+- 5. 打印更新的行数
+- 6. 删除表中的一些行
+- 7. 打印删除的行数
+- 8. 删除该表。
+
+上述代码片段是随书附带的练习文件中脚本 `ins_upd_del.py` 的一部分。您可以通过适当修改脚本中的用户 ID 和密码来测试代码，并按如下方式运行：
+
+```
+python ins_upd_del.py
+```
+
+执行脚本的结果如 **图 10.6** 所示。
+
+![](img/5f6ba170efa3a607142589708531bef8_351_0.png)
+
+图 10.6 - 执行脚本 `ins_upd_del.py`
+
+### 10.3.4 执行带参数标记的 SQL 语句
+
+在前两节中，您学习了如何使用函数 `ibm_db.exec_immediate` 执行在编写应用程序时已知的 SQL 语句。现在让我们看看如何执行可能包含可变输入且其值直到运行时才确定的 SQL 语句。
+
+问号 (`?`) 字符将用作 SQL 语句字符串中每个可变输入的参数标记。准备和执行此类 SQL 语句的过程如下所述：
+
+- 1. 使用 `ibm_db.connect` 函数连接到数据库，如果连接成功，该函数返回数据库连接对象。
+- 2. 使用 `ibm_db.prepare` 函数准备包含参数标记的 SQL 字符串，如果准备尝试成功，该函数返回一个 `IBM_DBStatement` 语句对象。
+
+函数 `ibm_db.prepare` 的语法为：
+
+```
+IBM_DBStatement ibm_db.prepare( IBM_DBConnection connection, string statement [, array options])
+```
+
+表 10.4 描述了函数 `ibm_db.prepare` 的参数。
+
+| 名称 | 描述 |
+| :--- | :--- |
+| `connection` | 由 `ibm_db.connect()` 返回的有效数据库连接对象 |
+| `Statement` | 字符串格式的 SQL 语句，可选择性地包含输入/输出参数标记，其值在 SQL 执行前未知。 |
+| `options` | 可选：包含语句选项的字典。您可以使用此参数请求支持此类游标的数据库服务器提供可滚动游标。默认情况下，返回的是仅向前游标。 |
+
+### 表 10.4 - 函数 `ibm_db.prepare` 的参数
+
+如果 SQL 成功准备，该函数返回语句对象，否则引发异常。
+
+例如，您可以准备一个包含参数标记的 `SELECT` 语句，如下所示：
+
+```
+stmt = ibm_db.prepare(conn, "SELECT empno, lastname, job, salary FROM employee WHERE workdept = ?")
+```
+
+如上所示，连接对象 `conn` 作为第一个函数参数传入，而第二个参数是一个包含谓词 "workdept = ?" 中参数标记的 `SELECT` 字符串，其中参数标记 "?" 代表一个直到 SQL 执行时才确定的部门编号可变输入。如果函数 `ibm_db.prepare` 成功准备了 SQL 语句，它会返回一个语句对象并将其赋值给变量 `stmt`。

@@ -1,0 +1,115 @@
+
+本节还可以包含其他一些选项，但它们的使用频率较低。如果你对可用的其他选项感兴趣，请参阅 `XF86Config` 的手册页。
+
+## Section “InputDevice”
+
+本节是配置输入设备的地方。配置文件中可以有多个 `InputDevice` 部分。通常至少会有两个：一个用于键盘，另一个用于鼠标或其他指点设备。
+
+`InputDevice` 部分有几个相关的关键词。第一个是 `Identifier` 关键词。其后跟着一个用于标识该设备的名称。X-Windows 并不真正关心你如何命名该设备，但最好使用一个能定义设备的描述性名称。
+
+第二个是 `Driver` 关键词。其后跟着引号括起来的该设备驱动程序的名称。最常见的驱动程序是“keyboard”和“mouse”，但还有一些其他的，例如用于触摸屏的“microtouch”。
+
+`InputDevice` 部分的最后一部分由该设备的选项组成。
+
+接下来的小节将讨论两种最常见的 `InputDevice` 部分——键盘和鼠标——以及可用于配置它们的一些选项行。
+
+## 配置键盘选项
+
+以下是键盘 `InputDevice` 部分开头的示例：
+
+```
+Section “InputDevice”
+    Identifier     “Keyboard1”
+    Driver        “Keyboard”
+```
+
+你可以从众多可用选项中选择，以控制键盘的行为。以下是一些最常用的选项：
+
+- `Option` “Protocol”—如果省略或注释掉此选项，将使用默认值 “standard”。通常没有理由更改此值。
+- `Option` “AutoRepeat” “x y”—此选项控制键盘按键的重复速率。由 `$x$` 表示的数字是按键开始重复前的延迟毫秒数。由 `$y$` 表示的数字是按键每秒重复的次数。
+
+默认情况下，按键在开始重复前有 500 毫秒的延迟，且每秒重复 30 次。
+
+- `Option` "XkbRules" "xfree86"—此选项决定了键盘各方面解释的方式。在大多数情况下，除非你使用的是日本 PC-98 平台（在这种情况下应设置为 "xfree98"），否则应将此值保留为 "xfree86"。
+- `Option` "XkbModel" "pc104"—如果你使用的是 104 键 Windows 键盘，这将设为 "pc104"。如果你使用的是没有 Windows 键的 101 键键盘，则设为 "pc101"。这些值也适用于笔记本电脑。尽管笔记本电脑通常按键较少，但它们通常具有模拟额外按键的方法。
+- `Option` "XkbLayout" "us"—这通常设置为 "us"。但如果你使用的是日本 PC-98 平台，则需要将其更改为 "nep/jp"。
+- `Option` "XkbOptions" "ctrl:swaps"—如果取消此行的注释，将使 Caps Lock 键变成 Ctrl 键，而左 Ctrl 键变成 Caps Lock 键。如果你是 Emacs 用户（Emacs 大量依赖 Ctrl 键）或者习惯使用 Unix 键盘布局（在这种布局中，Ctrl 键位于 PC 键盘上 Caps Lock 键所在的位置），你可能希望取消此行的注释。
+
+## 配置鼠标选项
+
+以下是鼠标 `InputDevice` 部分开头的示例：
+
+```
+Section "InputDevice"
+
+# Identifier and driver
+
+    Identifier    "Mouse1"
+    Driver        "mouse"
+```
+
+以下子小节描述了一些最常用的选项。
+
+`Option` "Protocol" "protocol" 在此选项中，`protocol` 代表你系统上鼠标的类型。此选项是必需的，如果不存在，X-Server 将无法工作。
+
+许多用户只需在此指定 Auto，让 X-Server 自动尝试确定鼠标使用的协议即可。还有其他一些可用的选项。以下是有效的协议类型：Auto, Microsoft, MouseSystems, MMSeries, Logitech, MouseMan, MMHitTab, GlidePoint, IntelliMouse, ThinkingMouse, AceCad, PS/2, ImPS/2, ExplorerPS/2, ThinkingMousePS/2, MouseManPlusPS/2, GlidePointPS/2, NetMousePS/2, NetScrollPS/2, BusMouse, SysMouse, WSMouse, USB, and Xqueue.
+
+以下是选择正确协议的一些指南：
+
+- Logitech 协议仅用于较旧的罗技串口鼠标。如果你使用的是较新的罗技串口鼠标，请使用 Microsoft 或 MouseMan 协议。
+- 对于任何 PS/2 鼠标，无论制造商是谁，请使用 PS/2 协议。如果鼠标连接器是小圆形的，你就拥有 PS/2 鼠标。
+- 如果你使用的是笔记本电脑或笔记本系统，内置指点设备（如触控板或指点杆）很可能支持 PS/2 协议。
+
+建议你先尝试使用 Auto，如果鼠标未被检测到或工作不正常，再更改此设置。
+
+`Option` "Device" "devicename" 此选项指定鼠标所在的设备。此选项是必需的，如果缺少此选项，X-Server 将无法工作。表 35.3 列出了鼠标可能位于的一些常见设备名称。
+
+TABLE 35.3 不同鼠标类型的设备名称
+
+| 鼠标类型 | 鼠标设备 |
+| --- | --- |
+| PS/2 鼠标（或笔记本电脑） | `/dev/psm0` |
+| COM 1 上的串口鼠标 | `/dev/cuaa0` |
+| COM 2 上的串口鼠标 | `/dev/cuaa1` |
+| COM 3 上的串口鼠标 | `/dev/cuaa2` |
+| COM 4 上的串口鼠标 | `/dev/cuaa3` |
+| 总线鼠标 | `/dev/mse0` |
+
+请注意，此选项中的 `devicename` 应替换为实际的鼠标设备名称。
+
+`Option` "Buttons" "n" 在大多数情况下，鼠标的按键数量会自动检测。但如果无法自动检测，可以使用此选项告知 X-Server 鼠标有多少个按键。
+
+在此，`$n$` 代表鼠标的按键数量。最常见的值是 2 和 3，尽管支持多达 5 个键。如果你碰巧有一个五键鼠标，请尽管使用。
+
+`Option` "Emulate3Buttons" 此选项行允许双键鼠标模拟三键鼠标。如果你使用的是双键鼠标，你会希望取消此行的注释，因为 X-Windows 大量使用所有三个鼠标按键。
+
+如果你取消此行的注释，中间鼠标按键将通过同时按下左鼠标键和右鼠标键来模拟。
+
+`Option` "Emulate3Timeout" "n" 如果设置了 `Emulate3Buttons` 选项，此选项将控制在 X-Windows 不再将该操作解释为中键点击之前，点击左鼠标键和右鼠标键之间允许经过的毫秒数。
+
+换句话说，为了使操作被解释为中键点击，必须在时间框架内同时按下左鼠标键和右鼠标键。在此，`$n$` 是允许经过的毫秒数。
+
+如果此选项行不存在且启用了 `Emulate3Buttons` 选项，则默认的 `Emulate3Timeout` 值将为 50 毫秒。
+
+## Section "Monitor"
+
+这是配置显示器水平和垂直刷新率的地方。它由 `Identifier` 关键词后跟引号括起来的名称组成，用于标识此显示器。你选择的名称并不重要。
+
+此部分还需要存在另外两个关键词：`HorizSync` 和 `VertRefresh`。你可以在后续小节中了解更多关于它们的信息。`Monitor` 部分还可以使用其他一些选项，但它们不太常见。有关所有可用选项的完整详细信息，请参阅 `XF86Config` 的手册页。
+
+### HorizSync
+
+这是显示器支持的以千赫为单位的水平同步频率。它可以通过几种方式指定：
+
+- 作为一个范围—这通常是配置多同步显示器（如今几乎所有显示器都是多同步的）使用的方法。例如，对于支持 44 到 76 千赫兹水平刷新率范围的显示器，将使用 `HorizSync 44-76`。
+- 作为一个单一值—如果你有一个仅支持一个频率的固定频率显示器，只需在 `HorizSync` 后面列出该频率即可。
+- 作为一个频率列表—如果你的显示器支持几个固定频率，你可以提供它支持的固定频率列表，用逗号分隔（例如 “`HorizSync 31.5, 35.2`”）。
+- 作为多个频率范围—如果你的显示器支持多个频率范围，但在中间有一个不支持的空隙，你可以列出多个范围（例如 “`HorizSync 15-25, 30-50`”）。
+
+### VertRefresh
+
+此关键词列出了你的显示器可以支持的垂直刷新率。它可以采用 `HorizSync` 关键词可用的任何格式的值。
+
+![](img/48eec858cce7dfb89da36a4d40b7daf3_866_0.png)
+
+## 章节“Device”
