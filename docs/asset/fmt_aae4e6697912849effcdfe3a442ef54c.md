@@ -1,0 +1,122 @@
+
+`genisoimage` 源自 Jörg Schilling 于 2006 年 5 月发布的 `cdrtools 2.01.01a08` 软件包中的 `mkisofs`（并提取了来自 2007 年 3 月的 `cdrtools 2.01.01a24` 的少量更新），但现在它是 `cdrkit` 套件的一部分，由 Joerg Jaspert、Eduard Bloch、Steve McIntyre、Peter Samuelson、Christian Fromme、Ben Hutchings 以及其他贡献者维护。可以通过 `cdrkit` 邮件列表联系维护者，或查阅 `cdrkit` 项目网站。
+
+Eric Youngdale 编写了 `mkisofs` 的早期版本（1993-1998）。Jörg Schilling 编写了 SCSI 传输库及其接口，并自 1999 年以来一直维护 `mkisofs`。James Pearson 使用 Robert Leslie 的 *libhfs* 编写了 HFS 混合代码。Pearson、Schilling、Jungshik Shin 和 Jaakko Heinonen 为字符集转换代码做出了贡献。`cdrkit` 维护者自 2006 年以来一直维护 `genisoimage`。
+
+Copyright 1993-1998 by Yggdrasil Computing, Inc.
+
+Copyright 1996-1997 by Robert Leslie
+
+Copyright 1997-2001 by James Pearson
+
+Copyright 1999-2006 by Jörg Schilling
+
+Copyright 2007 by Jörg Schilling (originating few updates)
+
+Copyright 2002-2003 by Jungshik Shin
+
+Copyright 2003 by Jaakko Heinonen
+
+Copyright 2006 by the Cdrkit maintainers
+
+如果你想参与 `genisoimage` 的开发，可以按照项目网站上的说明加入 `cdrkit` 开发者邮件列表。该列表的电子邮件地址可在网站上找到。这也是用户支持问题的受理地址。请注意，`cdrkit` 和 `cdrtools` 没有隶属关系。
+
+### 致谢
+
+UNIX 是 The Open Group 在美国及其他国家的注册商标。
+
+### GENPKEY
+
+#### 名称
+
+`genpkey` - 生成私钥
+
+#### 概要
+
+```
+openssl genpkey [-out filename] [-outform PEM|DER] [-pass arg] [-cipher] [-engine id] [-paramfile file] [-algorithm alg] [-pkeyopt opt:value] [-genparam] [-text]
+```
+
+#### 描述
+
+`genpkey` 命令用于生成私钥。
+
+##### 选项
+
+- `-out filename`: 输出文件名。如果未指定此参数，则使用标准输出。
+- `-outform DER|PEM`: 指定输出格式为 `DER` 或 `PEM`。
+- `-pass arg`: 输出文件的密码来源。有关 `arg` 格式的更多信息，请参阅 `ssl(1)` 或类似手册页中的 `PASS PHRASE ARGUMENTS`（密码短语参数）部分（原文说 `(1)`）。
+- `-cipher`: 此选项使用提供的加密算法对私钥进行加密。接受任何由 `EVP_get_cipherbyname()` 接受的算法名称，例如 `des3`。
+- `-engine id`: 通过其唯一的 `id` 字符串指定引擎将使 `genpkey` 尝试获取指定引擎的功能引用，从而在需要时初始化它。然后，该引擎将被设置为所有可用算法的默认引擎。如果使用此选项，它应位于所有其他选项之前。
+- `-algorithm alg`: 要使用的公钥算法，例如 `RSA`、`DSA` 或 `DH`。如果使用此选项，它必须位于任何 `-pkeyopt` 选项之前。选项 `-paramfile` 和 `-algorithm` 是互斥的。
+- `-pkeyopt opt:value`: 将公钥算法选项 `opt` 设置为 `value`。支持的具体选项集取决于所使用的公钥算法及其实现。有关更多详细信息，请参阅下面的 `KEY GENERATION OPTIONS`（密钥生成选项）。
+- `-genparam`: 生成一组参数而不是私钥。如果使用此选项，它必须位于任何 `-algorithm`、`-paramfile` 或 `-pkeyopt` 选项之前。
+- `-paramfile filename`: 某些公钥算法基于一组参数生成私钥。可以使用此选项提供这些参数。如果使用此选项，所使用的公钥算法由参数决定。如果使用此选项，它必须位于任何 `-pkeyopt` 选项之前。选项 `-paramfile` 和 `-algorithm` 是互斥的。
+- `-text`: 打印私钥、公钥和参数的文本表示（未加密），并连同 PEM 或 DER 结构一起显示。
+
+##### 密钥生成选项
+
+每种算法甚至每种算法实现所支持的选项可能各不相同。OpenSSL 实现的选项如下所述。
+
+##### RSA 密钥生成选项
+
+- `rsa_keygen_bits:numbits`: 生成密钥的位数。如果未指定，则使用 1024。
+- `rsa_keygen_pubexp:value`: RSA 公指数值。如果前面带有 0x，可以是较大的十进制或十六进制值。默认值为 65537。
+
+##### DSA 参数生成选项
+
+- `dsa_paramgen_bits:numbits`: 生成参数的位数。如果未指定，则使用 1024。
+
+##### DH 参数生成选项
+
+- `dh_paramgen_prime_len:numbits`: 素数参数 `p` 的位数。
+- `dh_paramgen_generator:value`: 生成器 `g` 的值。
+- `dh_rfc5114:num`: 如果设置了此选项，则使用相应的 RFC5114 参数，而不是生成新参数。值 `num` 可以取值 1、2 或 3，分别对应 RFC5114 中描述的由 1024 位组和 160 位子组、2048 位组和 224 位子组以及 2048 位组和 256 位子组组成的 DH 参数，如 RFC5114 第 2.1、2.2 和 2.3 节所述。
+
+##### EC 参数生成选项
+
+- `ec_parangen_curve:curve`: 要使用的 EC 曲线。
+
+##### GOST2001 密钥生成和参数选项
+
+默认情况下未启用 Gost 2001 支持。要启用此算法，应在 OpenSSL 配置文件中加载 ccgost 引擎。更多详细信息请参阅源代码分发中 `engines/ccgost` 目录下的 `README.gost` 文件。
+
+对于 GOST R 34.10 算法，使用参数文件是可选的。可以在密钥生成期间直接指定参数，也可以在生成参数文件时指定。
+
+`paramset:name`
+
+根据 RFC 4357 指定 GOST R 34.10-2001 参数集。可以使用缩写名称、对象短名称或数字 OID 指定参数集。支持以下参数集：
+
+| 参数集 | OID | 用途 |
+| :--- | :--- | :--- |
+| A | 1.2.643.2.2.35.1 | 签名 |
+| B | 1.2.643.2.2.35.2 | 签名 |
+| C | 1.2.643.2.2.35.3 | 签名 |
+| XA | 1.2.643.2.2.36.0 | 密钥交换 |
+| XB | 1.2.643.2.2.36.1 | 密钥交换 |
+| test | 1.2.643.2.2.35.0 | 测试目的 |
+
+##### 备注
+
+鼓励使用 `genpkey` 程序而不是特定于算法的工具，因为可以使用额外的算法选项和 ENGINE 提供的算法。
+
+##### 示例
+
+使用默认参数生成 RSA 私钥：
+
+```
+openssl genpkey -algorithm RSA -out key.pem
+```
+
+使用 128 位 AES 和短语“hello”加密输出私钥：
+
+```
+openssl genpkey -algorithm RSA -out key.pem -aes-128-cbc -pass pass:hello
+```
+
+使用 3 作为公指数生成 2048 位 RSA 密钥：
+
+```
+openssl genpkey -algorithm RSA -out key.pem -pkeyopt rsa_keygen_bits:2048 \
+-pkeyopt rsa_keygen_pubexp:3
+```

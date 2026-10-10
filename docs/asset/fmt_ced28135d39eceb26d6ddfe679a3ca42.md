@@ -1,0 +1,98 @@
+
+## 使用 racoon 配置 IPsec：IKE
+
+IPsec 密钥可以手动设置、作为共享密钥或使用证书实现。手动密钥是明确交换的，容易出现安全问题。共享密钥和证书均通过 IPsec 密钥交换（IKE）协议进行管理，该协议会自动交换密钥，并随机更改密钥以避免被检测到。
+
+使用 IKE 的一个优势是，如果没有提供安全关联，它会自动生成任何所需的安全关联。这意味着在配置安全连接时，使用 IKE 只需要指定安全策略，而不需要指定安全关联。
+
+`racoon` 工具是 IPsec IKE 协议的密钥交换守护进程。在使用共享密钥的情况下，`racoon` 使用预共享密钥动态认证主机。在使用证书方法时，使用证书文件认证主机。`racoon` 配置文件位于 `/etc/racoon/racoon.conf`。在此处可以设置通用参数。大多数连接可以使用默认的 `racoon.conf` 文件。
+
+`racoon` 配置由包含可能连接参数的块组成。以下示例展示了一个非常简单的配置，使用单个共享秘密密钥。位置由 `path pre_shared_key` 选项指定，在本例中为 `/etc/racoon/psk.txt`。证书密钥是一种使用公钥和私钥的更安全方法，稍后将进行讨论。
+
+## 证书
+
+若要使用证书代替共享密钥，首先必须使用 OpenSSL 创建证书。然后指示 `racoon` 使用这些证书。请指定证书的路径。
+
+```
+path certificate "/usr/local/etc/racoon/certs";
+```
+
+现在，你可以配置 `racoon` 以使用由证书生成的公钥和私钥。在 `/etc/racoon/racoon.conf` 文件的相应部分中，`certificate_type` 指令指定了本系统的公钥和私钥。`peers_certfile` 指令指定了远程系统公钥的位置。`authentication_method` 指令现在设置为 `rsasig`，即 RSA 公钥/私钥。确保每个系统都拥有其对应的公钥和私钥。
+
+```
+certificate_type x509 "192.168.0.2.public" "192.168.0.2.private";
+
+peers_certfile "192.168.0.5.public";
+
+authentication_method rsasig;
+```
+
+### 使用 racoon 的连接配置
+
+使用 racoon 时，你只需指定连接配置的安全策略，如下所示（从发送方角度）。接收方将拥有相应的策略：
+
+```
+spcadd 192.168.0.5 192.168.0.2 any -P out ipsec esp/transport//require ah/transport//require;
+
+spcadd 192.168.0.2 192.168.0.5 any -P in ipsec esp/transport//require ah/transport//require;
+```
+
+### IPsec 和 IP 表：网络穿越
+
+IPtables 的 netfiltering 会阻止许多 IPsec 数据包。若要使 IPtables 允许 IPsec 数据包通过，请使用以下 IPtables 命令。AH 协议的编号为 51，ESP 协议的编号为 50。若要允许 IPsec 数据包，应设置类似以下策略规则：
+
+```
+iptables -A INPUT -p 50 -j ACCEPT
+
+iptables -A OUTPUT -p 51 -j ACCEPT
+```
+
+对于实现 IP 伪装（masquerading）的 netfiltering，你需要在 racoon 的 IPsec 配置中添加 `net_traversal` 选项。使用 Net Traversal 时，IPsec 连接将绕过 IP Tables 在伪装 IP 地址时执行的 IP 地址替换。此外，`nat_keepalive` 选项将保持连接，而通过 `iskamp_natt` 选项，你可以指定要连接的 IP 地址和端口。
+
+### IPsec 隧道模式：虚拟专用网络
+
+除了直接加密两台主机，你还可以使用 IPsec 仅加密这些主机所属网络之间的网关，假设这些网络内部的通信是可以信任的。这将显著减少加密配置的设置工作量，使整个网络的主机能够通过其网关之间的中间安全 IPsec 连接，访问另一个网络的主机。对于网关之间的连接，通过中间路由器发送的传输可以被隧道封装。这就是 IPsec 的隧道模式，用于实现虚拟专用网络（VPN）。加密网关之间的传输有效地实现了 VPN，保护了从一个本地网络到另一个本地网络在更大范围内的传输安全。
+
+要将来自主机的传输通过网关隧道至某个网络，你需要使用 `-m tunnel` 选项。IPsec 连接将在两个网关之间建立。以下示例是网关 10.0.0.1 上的安全关联，它加密从网关 10.0.0.1 发送到网关 10.0.23.5 的传输。此处使用的示例是网关到网关的连接，设置为使用手动密钥在两台主机之间建立直接连接。
+
+```
+add 10.0.0.1 10.0.23.5 esp 34501 -m tunnel -E 3des-cbc "secretkey";
+```
+
+10.0.0.1 上的安全策略随后实现了通过各自网关从一个网络到另一个网络的通信加密。这两个网络是 192.168.0.0 和 192.168.1.0。来自 192.168.0.0 网络主机的传输由其网关 10.0.0.1 进行加密，然后发送给 192.168.1.0 网络的网关 10.0.23.5，该网关随后对其进行解密。
+
+```
+spgadd 192.168.0.0/24 192.168.1.0/24 any -P out ipsec esp/tunnel/10.0.0.1-10.0.23.5/require;
+```
+
+请注意，网关的 IP 地址是在 `spgadd` 指令的 `ipsec` 指令中指定的。指定的模式是隧道模式，而不是传输模式。
+
+```
+ipsec esp/tunnel/10.0.0.1-10.0.23.5/require
+```
+
+接收网关 10.0.23.5 将拥有相应的安全关联和策略，如下所示。策略设置为处理传入的传输。在两个网关的配置中，除了指定 tunnel 选项并在安全策略中使用网络地址外，安全关联和策略与用于主机到主机连接的那些相同。
+
+```
+add 10.0.0.1 10.0.23.5 esp 34501 -m tunnel -E 3des-cbc "secretkey";
+```
+
+```
+spgadd 192.168.0.0/24 192.168.1.0/16 any -P in ipsec esp/tunnel/10.0.0.1-10.0.23.5/require;
+```
+
+若要设置完整的双向通信，两个网关必须拥有相应的安全关联和策略，以处理双向流量。以下示例是网关 10.0.0.1 上的配置，处理与网关 10.0.23.5 之间的双向流量。网关 10.0.23.5 将具有类似的配置：
+
+```
+add 10.0.0.1 10.0.23.5 esp 34501 -m tunnel -E 3des-cbc "secretkey";
+
+add 10.0.23.5 10.0.0.1 esp 34501 -m tunnel -E 3des-cbc "secretkey";
+```
+
+```
+spgadd 192.168.0.0/24 192.168.1.0/24 any -P out ipsec esp/tunnel/10.0.0.1-10.0.23.5/require;
+```
+
+```
+spgadd 192.168.1.0/16 192.168.0.0/24 any -P in ipsec esp/tunnel/10.0.23.5-10.0.0.1/require;
+```
