@@ -541,6 +541,7 @@
 +   [Hacking：1 小时内创建你自己的渗透测试实验室！（Kali Linux 小册）（计算机科学）](docs/hacking-how-to-create-your-own-penetration-testing-lab-in-1-/README.md)
 +   [KALI LINUX 2016 初学者渗透测试实验室构建指南](docs/hacking-how-to-create-your-own-penetration-testing-lab-using/README.md)
 +   [iPod 与 iTunes 破解指南 (ExtremeTech)](docs/hacking-ipod-and-itunes-extremetech/README.md)
++   [破解 iPod 和 iTunes](docs/hacking-ipod-and-itunes-install-and-run-linux-on-your-ipod-w/README.md)
 +   [Knoppix 破解实战](docs/hacking-knoppix-extremetech/README.md)
 +   [Linux 骇客实战](docs/hacking-linux/README.md)
 +   [Linux 破解揭秘：Linux 安全秘密与解决方案](docs/hacking-linux-exposed-linux-security-secrets-solutions/README.md)

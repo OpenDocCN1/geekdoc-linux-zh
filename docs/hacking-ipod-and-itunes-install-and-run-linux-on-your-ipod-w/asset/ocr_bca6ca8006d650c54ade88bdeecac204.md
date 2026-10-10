@@ -1,0 +1,15 @@
+This bookcase-sized magical device would hook up to my stereo, record all my vinyl records, and store the music somehow, probably on a library of very small tapes. There would be a keyboard and monitor attached. To listen to music, I would type commands like PLAY BAND “PINK FLOYD” or PLAY SONG “BALLROOM BLITZ”. I could hear songs or albums in any order I wanted. Robotic arms might be involved in grabbing the right tape—being a software guy, I was vague on that part. I never tried to build my proto-iPod, which is probably a good thing.
+
+Many years later, smart people had a simple, incredibly powerful idea that changed the world: media in the real world, like pictures and sound, could be digitized and manipulated by computers. Audio CDs were just giant disks filled with data. The invention of MP3 made it possible to cram music into one-tenth the space that it occupied on a CD, and the advent of MP3 encoders like SoundJam and Winamp made it real. No longer did we have to hand-encode our own MP3s by candlelight in unheated cabins.
+
+Apple was late to this party, but eventually it figured out that a revolution was taking place and it started running faster than everyone else. The company absorbed SoundJam and transformed it into iTunes. Macs began shipping with drives that could burn CDs. And then, in October 2001, Apple introduced the iPod with iTunes 2. And it was about a million times better than what I had dreamed up 26 years earlier.
+
+Getting thousands of songs into one box is a great achievement. Making the box small enough to fit in your hand is incredible. It’s mind-boggling to look at an iPod in your hand and think that all your music is inside there.
+
+# ## About Hacking
+
+The term *hacking* has gotten a bad reputation. Many people think of hacking as something evil, exploitive, and criminal. In recent years there has been a trend to reclaim the word and return it to its original, more noble meaning: creatively reshaping the world to make things better and more interesting. Hacking is about innovation, exploration, learning, and fun.
+
+Hacking doesn’t have to involve high technology. You can hack anything. My wife Barbara hacks her delicious pumpkin bread recipe by substituting applesauce for oil to make it more healthy. Holding a tiny nail in place with a pocket comb so you can hammer it is a classic hack. Héloïse of “*Hints from Héloïse*” fame was a household hacker. MacGyver was a famous hacker with a long-running TV show. When you figure out a secret route to the airport, you’re hacking.
+
+In this book, we hack iPod and iTunes by prodding, poking, and playing with them. Apple keeps iPod and iTunes locked up pretty tight, which eliminates the extreme hacks possible with more open system. So we won’t be taking your iPod apart and turning it into a Pop-Tart toaster. Despite that, there’s plenty of depth and power for curious folks to investigate in iPod and iTunes.

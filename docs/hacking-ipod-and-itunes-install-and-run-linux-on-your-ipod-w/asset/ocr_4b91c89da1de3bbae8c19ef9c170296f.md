@@ -1,0 +1,7 @@
+ful name. If the playlist you're cooking up contains just one song, the playlist gets the same name as the song. If the playlist is a single album, the playlist is named after the album, no matter what you dragged to create it. Same thing for a single-artist playlist: it's named for the artist. If the new playlist can't be reduced to a single artist, album, or song, it's just called "untitled playlist", suffixed with a number if necessary to distinguish it from any other anonymous playlists.
+
+One more cool thing about dragging to create playlists: whenever iTunes adds a song to a playlist, it checks to make sure the song is actually stored on the disk where it's supposed to be. If it's not there, iTunes simply doesn't add it to the playlist. In the Library, and in any playlists that already include the song, it's marked with a scary looking exclamation point to let you know that it has a big problem (see Figure 5-10). If all the songs meant for the new playlist are missing, iTunes doesn't even bother creating the playlist (or giving you an error message).
+
+![](bbox=[0.17, 0.44, 0.92, 0.86])
+
+FIGURE 5-10: Tracks are displayed with an exclamation point when iTunes can't find them. These are never added to playlists.

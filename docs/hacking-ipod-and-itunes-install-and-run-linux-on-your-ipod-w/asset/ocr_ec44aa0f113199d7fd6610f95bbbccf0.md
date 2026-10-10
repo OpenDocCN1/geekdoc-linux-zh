@@ -1,0 +1,15 @@
+have enough room on your iPod to hold all the music you have in iTunes. If you think that describes you, iTunes can check your assumption. Choose that option, then click OK. Immediately, if not sooner, iTunes starts thinking very hard, adding up the space used by all your music in iTunes, and comparing that sum to the room you have on your iPod. If you have enough space on the iPod, then you've got it easy. All your music and playlists get copied over, so you can grab your iPod, round up the family, and jump in the car. (If all your music fits on an iPod, Apple would probably like you to consider visiting the iTunes Music Store more often.)
+
+If you're a master manipulator, you might have picked the option, “Manually manage songs and playlists”. This setting gives you dictatorial control over the music on your iPod. With this option, the only way to get music onto the iPod is to drag it over there with your bare mouse. Once a track is on the iPod, you can have your way with it: change tag information like name and artist, choose an equalizer preset, or even delete the poor thing. But watch out: changes you make to songs and playlists on the iPod are never copied back to iTunes on your computer.
+
+Obviously, you have to be very careful with this option, and I recommend you avoid using it, except in specialized situations, such as collecting music from several computers for our family road trip. It's too easy to get confused and inadvertently delete music from the iPod that you don't have anywhere else. (Well, it was too easy for me, anyway.) If you must use this setting, make sure you don't make changes to songs and playlists directly on the iPod while you're working in iTunes. And please drive safely!
+
+# ## Update Your iPod without Replugging
+
+As an iPod owner, you get to experience frequent cool moments as you come across its niftier features. One of those moments happens whenever you simply connect your iPod to your computer. If you're using automatic updating (see the hack *Share Your iPod*), you watch as the computer feels that the iPod is there, starts iTunes, and begins updating the music on the iPod.
+
+Sometimes you find yourself messing around with playlists while the iPod is connected. If you open iPod Preferences and make any changes to the set of playlists you want to put on the iPod, then click OK, iTunes automatically updates what's on the iPod to match your new set of playlists.
+
+But there is a case when automatic updating isn't fully automatic. If you change a song in a playlist in iTunes, and that playlist is synched with the iPod, the change isn't immediately copied to the iPod. Instead, the update happens when you eject the iPod, right before the computer lets go. But you might want the iPod to update right away, for example, if you're on the edge of running out of iPod space and you're watching carefully as you try to tweak your playlists to use up every last ounce of iPod disk storage.
+
+One way to force an update is to eject the iPod and disconnect it, then immediately plug it back in so you can keep working on it. But that would be wrong. There's a much easier
