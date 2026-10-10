@@ -606,6 +606,7 @@
 +   [你应该知道的常用 Linux 命令](docs/important-linux-commands-you-should-know/README.md)
 +   [必学的重要 Linux 命令：初学者口袋指南](docs/important-linux-commands-you-should-know-a-pocket-guide-for-/README.md)
 +   [Linux 内部机制](docs/inside-linux/README.md)
++   [Linux 内核探秘：操作系统开发](docs/inside-linux-a-look-at-operating-system-development/README.md)
 +   [机器内部：微处理器与计算机架构图解入门指南](docs/inside-the-machine-an-illustrated-introduction-to-microproce/README.md)
 +   [Red Hat Linux 6.1 安装、配置与自定义指南](docs/install-configure-and-customize-red-hat-linux-61-electronic-/README.md)
 +   [Red Hat Linux 7 安装、配置与定制指南](docs/install-configure-and-customize-red-hat-linux-7-linux/README.md)

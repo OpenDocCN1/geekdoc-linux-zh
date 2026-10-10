@@ -1,0 +1,23 @@
+This code follows the outline shown in Figure 5.5. As the subroutine passes in towards the bounce point, any part of the process state which is not already in memory, such as the registers, are stored on the stack. By the time the bounce point is reached, the stack pointer holds or references the process’ context. Switching the value of the stack pointer means that when control returns out of the trampoline function, **it is via a different stack**! Therefore a context switch has occurred.
+
+```
+Trampoline:
+;save context of old
+;process on its stack
+PUSH Register1
+...
+PUSH RegisterN
+SAVE StackPointer in TaskStructA
+;BOUNCE!!!
+LOAD StackPointer from TaskStructB
+;restore context of new
+;process from its stack
+POP RegisterN
+...
+POP Register1
+RETURN
+```
+
+![](bbox=[0.34, 0.727, 0.755, 0.747])
+
+At least that is the general idea. It works if you have a simple enough processor, but most architectures make this more difficult because some special registers cannot be saved and restored as easily as shown here. The trouble has to do with memory management—if all code shared a common memory address space, the switch would really be as easy as shown here. The trouble is that some of these registers affect how memory is mapped—leading to the programming equivalent of sawing the tree limb upon which one is perched.
