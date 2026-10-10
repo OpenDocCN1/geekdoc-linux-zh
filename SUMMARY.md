@@ -398,6 +398,7 @@
 +   [计算机体系原理指南](docs/essentials-of-computer-architecture/README.md)
 +   [道德黑客：3合1——初学者指南 + 道德黑客完整技巧与技巧 + 通过高级道德黑客技术与方法学习渗透测试与网络安全](docs/ethical-hacking-3-in-1--a-comprehensive-beginners-guide-comp/README.md)
 +   [道德黑客攻击与防御 EC-Council Press. 第 4 卷 Linux、Macintosh 和移动系统](docs/ethical-hacking-and-countermeasures-ec-council-press-vol-4-l/README.md)
++   [《道德黑客与对策：Linux、Macintosh和移动系统》](docs/ethical-hacking-and-countermeasures-linux-macintosh-and-mobi/README.md)
 +   [Kali Linux 道德破解与渗透测试步步指南](docs/ethical-hacking-and-penetration-step-by-step-with-kali-linux/README.md)
 +   [Linux 日常使用](docs/everyday-linux/README.md)
 +   [每个人心中都潜着一个商业梦想](docs/everyone-has-a-business-inside-them/README.md)
