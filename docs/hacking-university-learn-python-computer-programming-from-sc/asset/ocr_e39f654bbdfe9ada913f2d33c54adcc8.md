@@ -1,0 +1,7 @@
+# ## Managing Directories
+
+Directories, another name for folders, work the same as they do in other operating systems. Folders hold files, and you must be currently accessing a directory in order to interact with the files inside of it. You can use the terminal command "cd" to change directory and move about the file system. As an example, typing "cd Desktop" from the Home folder will transfer you to that folder. Now using "ls" will not show anything (unless you added files to the desktop). To back out, type "cd ..". Practice navigating around the file system in this fashion; cd into a directory and ls to view the files.
+
+Because you are typing commands, Linux expects your input to be exact. If you misspell a command it will simply not work, and if you type a folder or file incorrectly it will try to reference something that does not exist. Watch your input carefully when using the terminal.
+
+Opening a file is done with a different command – ".". The period is used to start the specified file, so if you were attempting to open a picture it could be done like so: ".//house.png". Both the period and the slash are necessary, as it denotes that you are running a file within the current directory. When you run a file it will be opened with the default application assigned to the file type, so in the case of a picture it will most likely be opened in an image viewer.

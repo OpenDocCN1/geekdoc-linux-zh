@@ -1,0 +1,1 @@
+Conclusively, scripting and automating scripts are fantastic ways to take administrative control of regularly occurring tasks. Continue writing scripts, or look up examples online to see how your computing experience can be made easier with bash.

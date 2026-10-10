@@ -1,0 +1,1 @@
+focus on Linux concepts, how do achieve certain tasks, and how to further your knowledge of your system.

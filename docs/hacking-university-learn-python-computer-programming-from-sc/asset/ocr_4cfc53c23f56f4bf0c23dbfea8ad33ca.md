@@ -1,0 +1,3 @@
+VI and Emacs are two other popular text editors for programmers. Both are considered highly advanced and optimized for writing code, but a bit of a “flame war” exists between fans of both softwares. For the Linux Python programmer, investigate the two text editors and test whether it helps with Python workflow.
+
+After you have finished a particularly useful Python program and wish to distribute it to users, you have to keep in mind that many of them do not have Python installed and will likely not want to install it just to run your program. PyInstaller (http://www.pyinstaller.org/) is a piece of software that builds your Python script and the needed modules into an .exe file that does not need Python to run. It is a handy software should distribute your applications.

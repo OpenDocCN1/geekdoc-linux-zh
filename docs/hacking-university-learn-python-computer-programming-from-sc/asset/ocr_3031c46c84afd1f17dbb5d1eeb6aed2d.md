@@ -1,0 +1,3 @@
+Because Python starts at the top of a program and works downwards, the above lines need to be in the correct order. If lucky_number is not first created, then print() will return an error for attempting to call a variable that does not yet exist.
+
+An important distinction that can be made is seen when closely viewing the previous print() parameter. The variable lucky_number is not placed within quotations, so Python knows to print the value contained within (7). If we placed quotations around the text, Python would print “lucky_number”, which was not our intended result. This situation is referred to as a logic error.

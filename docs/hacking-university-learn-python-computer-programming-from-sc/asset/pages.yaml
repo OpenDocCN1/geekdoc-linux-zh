@@ -1,0 +1,4733 @@
+- pgno: 0
+  md: '# # HACKING UNIVERSITY
+
+
+    LEARN PYTHON COMPUTER PROGRAMMING AND THE LINUX OPERATING COMMAND LINE
+
+    2 MANUSCRIPT BUNDLE
+
+
+    The Ultimate Beginners Guide in Mastering Python and a Complete Step by Step Guide
+    in Learning Linux
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_0_0.png)
+
+
+    # ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Hacking University: Learn Python Computer Programming from Scratch & Precisely
+    Learn How The Linux Operating Command Line Works 2 Manuscript Bundle
+
+
+    The Ultimate Beginners Guide in Mastering Python and a Complete Step by Step Guide
+    in Learning Linux
+
+
+    Series: Hacking Freedom and Data Driven (Junior & Senior)
+
+
+    By *Isaac D. Cody*'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# HACKING
+
+    UNIVERSITY
+
+
+    LEARN PYTHON COMPUTER PROGRAMMING
+
+    AND THE LINUX OPERATING COMMAND LINE
+
+    2 MANUSCRIPT BUNDLE
+
+
+    The Ultimate Beginners Guide in Mastering Python and a Complete
+
+    Step by Step Guide in Learning Linux
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_2_0.png)
+
+
+    # ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# QUICK TABLE OF CONTENTS
+
+
+    This book will contain 2 manuscripts from the Hacking Freedom and Data Driven
+    series. It will essentially be two books into one.
+
+
+    Hacking University Junior Edition welcomes you to the programming art of Python.
+
+
+    Hacking University Senior Edition covers a everything you need to know about Linux
+
+
+    Both books are for intended for beginner’s and even those with moderate experience
+    with Python and Linux.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Hacking University: Junior Edition. Learn Python Computer Programming from
+    Scratch
+
+
+    Become a Python Zero to Hero. The Ultimate Beginners Guide in Mastering the Python
+    Language
+
+
+    BY: ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# HACKING
+
+    UNIVERSITY
+
+    JUNIOR EDITION
+
+
+    Learn Python Computer Programming from Scratch
+
+    Become a Python Zero to Hero. The Ultimate Beginners
+
+    Guide in Mastering the Python Language
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_5_0.png)
+
+
+    ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Table of Contents
+
+
+    Introduction
+
+
+    Related Software
+
+
+    Online Resources
+
+
+    The Job Market
+
+
+    History of Python
+
+
+    Why Use Python?
+
+
+    Benefits of Python
+
+
+    Setting up a Development Environment
+
+
+    Hello World
+
+
+    Programming Concepts
+
+
+    Variables'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Variable Types
+
+
+    # Input
+
+
+    # String Formatting
+
+
+    # Example Program 1
+
+
+    # Decision Structures
+
+
+    # Conditional Operators
+
+
+    # Example Program 2
+
+
+    # Loops
+
+
+    # Example Program 3
+
+
+    # More about Variables
+
+
+    # Example Program 4
+
+
+    # Functions'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '+   - Example Program 5
+
+
+    +   - Classes
+
+
+    +   - Special Methods
+
+
+    +   - Example Program 6
+
+
+    +   - Inheritance
+
+
+    +   - Example Program 7
+
+
+    +   - Modules
+
+
+    +   - Example Program 8
+
+
+    +   - Common Errors
+
+
+    +   - Conclusion
+
+
+    +   - Related Titles'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Copyright 2016 by **Isaac D. Cody.** - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'The information herein is offered for informational purposes solely, and is
+    universal as so. The presentation of the information is without contract or any
+    type of guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # Disclaimer
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# **Introduction**
+
+
+    > Thank you for downloading the book “*Hacking University: Junior Edition. Learn
+    Python Computer Programming from Scratch. Become a Python Zero to Hero. The Ultimate
+    Beginners Guide in Mastering the Python Language.*”
+
+
+    Python is a powerful and highly recommended language for beginners for a variety
+    of reasons. This book serves as a beginners guide for those that have never written
+    programming code before, so even if the thought of programming is daunting this
+    book can explain it in simple terms. We will introduce the process from the very
+    beginning with actual code examples; follow along to learn a valuable computer
+    skill that can potentially land you a job working with the elegant Python language.
+
+
+    # **Related Software**
+
+
+    For enhancing your Python skill, use an IDE. If you have not downloaded it yet,
+    Atom is highly recommended for Python programming. Atom is customizable, in that
+    you can install add-ons at any time to make programming easier. “autocomplete-python”
+    is one such add-on that can guess what you are typing and automatically fill in
+    the rest of the command.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'VI and Emacs are two other popular text editors for programmers. Both are considered
+    highly advanced and optimized for writing code, but a bit of a “flame war” exists
+    between fans of both softwares. For the Linux Python programmer, investigate the
+    two text editors and test whether it helps with Python workflow.
+
+
+    After you have finished a particularly useful Python program and wish to distribute
+    it to users, you have to keep in mind that many of them do not have Python installed
+    and will likely not want to install it just to run your program. PyInstaller (http://www.pyinstaller.org/)
+    is a piece of software that builds your Python script and the needed modules into
+    an .exe file that does not need Python to run. It is a handy software should distribute
+    your applications.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # Online Resources
+
+
+    For obtaining online help related to Python, you can always check the online documentation
+    ([https://www.python.org/doc/](https://www.python.org/doc/)). The documentation
+    contains examples and manual pages for every function built-in to Python and its
+    included modules.
+
+
+    For times when programming code just does not work, you can always turn to search
+    engines to resolve your problem. Typing in the error text into Google can turn
+    up other programmers who also had the same problem and posted online. If the problem
+    cannot be fixed by observing other code, websites such as Stack Overflow ([http://stackoverflow.com/](http://stackoverflow.com/))
+    are notoriously helpful in resolving code issues. Make an account their and post
+    your problem politely and somebody will probably help you out.
+
+
+    Finally, there are websites that offer tutorials online about how to learn intermediate
+    and advanced Python programming. [http://www.learnpython.org/](http://www.learnpython.org/)
+    is one particularly exemplary one, but the sheer amount comes from the fact that
+    Python is highly used and well understood. For any time Python help is needed,
+    a quick internet search may solve your curiosities.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# The Job Market
+
+
+    As a popular language and because of its widely implemented use, Python jobs are
+    abundant. Large companies and start-ups alike are looking for programmers that
+    understand Python, and because Python is still increasing in use the jobs prospects
+    will continue to increase.
+
+
+    Most companies do not require college education for programming jobs, because
+    they understand that most programmers are self-taught. Obtaining a job in the
+    Python job market is not difficult because of this, but it still requires preparation
+    and dedication on the programmer''s part. Younger Python programmers can gain
+    internships at Google, Apple, Intel, and more just by showing a drive to learn.
+    Adult Python programmers can apply for programming jobs by directly contacting
+    companies or replying to job listings. Search online in message boards, job sites,
+    and freelance websites such as UpWork for prospects. Also ask around programming
+    groups and attend job fairs to learn about companies that are hiring Python programmers.
+
+
+    Build a decent résumé and be prepared to prove your knowledge with the language.
+    The interview process for programming jobs often contain “whiteboard” programming
+    tests where you are presented with a situation and asked to use Python to solve
+    the issue. They will not be too terribly difficult, but you certainly need to
+    have a decent grasp on Python to pass.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: Overall, finding a Python job is easy because of the current market, but also
+    difficult because you need to know Python intimately. Dedicate yourself to applying
+    for as many positions as possible and eventually a job will appear.
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # History of Python
+
+
+    Python is a programming language with origins in the late 1980’s. Guido van Rossum,
+    the creator, was looking to develop a language as a hobby project to supersede
+    the ABC programming language. Taking cues from the popular C language, Python
+    was created to be a powerful but easy to understand scripting language.
+
+
+    The term “scripting language” refers to the fact that written code is not actually
+    compiled, but rather it is interpreted by an application. Normally this means
+    that scripting languages are not nearly as powerful as actual programming languages.
+    For Python, though, the opposite is true- the language remains one of the most
+    powerful available for web servers and desktop clients. Development of Python
+    continued throughout the 1990’s until version 2 was released in 2000. The interpreter
+    behind Python became intricate enough that current versions of Python are almost
+    indistinguishable from lower level programming languages.
+
+
+    Throughout the mid 2000’s and even now, Python continues to be developed by Guido
+    van Rossum and a team of dedicated volunteers. The language gained great popularity
+    due to its many benefits, and popular websites such as YouTube, Reddit, and Instagram
+    even use Python for functionality. It seems as though Python will continue to
+    grow for many more years as companies adopt the easy to use but highly useful
+    Python language.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# ## Why Use Python?
+
+
+    When first starting out learning how to program, the huge amount of options, information,
+    and advice can be truly intimidating. Some experts claim that the difficult but
+    time-honored C language is the best start, but other professionals say starting
+    on an easier language such as Java or Python will give the learner a chance to
+    actually absorb key concepts. Python is recommended for this exact reason- programming
+    will not be as foreign and confusing by starting with a straightforward scripting
+    language.
+
+
+    Python is easy to understand, an elegant and clean language, and free of many
+    of the complicated symbols and markings that are used elsewhere. Often accomplishing
+    a task using Python only requires a few lines of neatly formatted code.
+
+
+    Large companies such as Google, Disney, NASA, and Yahoo all use Python for their
+    own programs; having Python knowledge could potentially land a programmer a job
+    working at a high-profile organization. Moreover, because Python is continuously
+    developed today with new features always being added, interest in the language
+    will continuously increase with time. More companies will discover that Python
+    is an exceedingly useful programming language, so learning it now will prepare
+    you for the future.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# ## Benefits of Python
+
+
+    In addition to being easy and fast, Python also has various other benefits. Python
+    is very portable, meaning that Python code can run on a variety of different operating
+    systems. Windows, Mac OSX and Linux distributions are all supported directly,
+    and code written on one platform can be used on all of them.
+
+
+    Power is not compromised by Python’s ease-of-use. The interpreter behind the scripting
+    language is able to turn near-natural English commands into low-level processor
+    instructions that put it on par with actual programming languages. Big-name companies
+    choose to use Python because of this, and as websites such as YouTube and Pinterest
+    prove, Python has a wide range of functionality.
+
+
+    Python is clean and retains a focus on readable code. Style and formatting are
+    usually left up to individual programmers, but with Python neatness is absolutely
+    required. For beginner programmers this instills good programming practices, which
+    will dually help with Python and any other languages the novice wishes to learn.
+
+
+    Ease of development and testing also propel Python above other similar languages.
+    Code can be run instantly with the interpreter which allows for rapid prototyping.
+    Being able to quickly'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'test out code means that bugs can be fixed quickly, allowing more time for
+    other development goals.
+
+
+    Conclusively, Python is the perfect language for beginners. Both simple to develop
+    for and learn, Python is also decently powerful. Fantastic for newcomers and those
+    just starting out programming, Python remains the top choice of technology companies
+    everywhere. Learning the language will prove to be useful now and into the future
+    as its popularity continues to grow.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# ## Setting up a Development Environment
+
+
+    Programming languages are typically used on Linux-based operating systems such
+    as Ubuntu and Debian. Python is no exception, but there is another option of developing
+    on Windows. This book will explain how to get both set up. It is important to
+    know though, that we will develop with Python 3, rather than the older (but still
+    extremely popular) Python 2.7.
+
+
+    Most Linux distributions actually come with Python installed by default. Therefore,
+    there are no extra setup procedures to obtaining a working environment. The Python
+    interpreter can be entered by typing “python” into a terminal console. If there
+    are multiple versions installed, though, “python” will start the first one found.
+    Check the version number in the interpreter, and if 2.7 launches you might have
+    to type “python3” into the terminal instead. Press ctrl+c to quit out of the interpreter
+    at any time.
+
+
+    Windows computers usually never have Python preinstalled. To obtain the software,
+    navigate to the Python website and download the most recent version. As of now,
+    Python 3.5.2 is the current version. So long as your version number is Python
+    3, the code written in this book should also be compatible. Install the software
+    with mostly default settings. Definitely check the “Add Python to the Path”, because
+    it simplifies testing programs. After the installer is done the Python interpreter
+    can be started by searching for “python” in the start menu.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'The interpreter, or parser, is one of Python''s advertised features that allows
+    for individual lines to be written and run. For testing out code the parser is
+    fantastic, but mostly every program we write in this book will be multiline, so
+    we will need an IDE (integrated Development Environment). Windows has a few popular
+    solutions, such as Atom, Pycharm, and Eclipse. These are all 3rd party applications
+    that can be downloaded and installed. IDEs are essentially glorified text editors
+    that offer helpful programming features such as syntax highlighting and command-completion.
+    Although Atom is highly recommended for Windows developers, Python comes with
+    an IDE solution already. IDLE is an interpreter program that can be made multiline
+    by clicking on "file" and then "new file". Whether you choose to use the preinstalled
+    editor or choose to get a full-fledged programming environment through Atom/Eclipse,
+    the Python code will work just the same. You will write your code within one of
+    the multiline programs.
+
+
+    On Linux you also have the option of downloading a Python-compatible IDE application,
+    but most programmers tend to use the preinstalled application "nano". Nano is
+    a built-in, barebones text editor accessible by typing "nano" into a console.
+    The program can actually do some rudimentary syntax highlighting once it knows
+    a Python script is being written, so many developers prefer the basic setup provided.
+    Code is written into nano, then saved by pressing ctrl+x.
+
+
+    Now that there is a development environment set up, you can continue onwards to
+    begin writing your first Python program.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# **Hello World**
+
+
+    Mostly every programmer gets introduced to a new language by writing the “Hello
+    World” program. Hello World is traditionally a simple exercise that involves displaying
+    the titular text on the screen. To do it in Python, we must open up our IDE or
+    text editor and simply type the function.
+
+
+    ```
+
+    print (“Hello, World!”)
+
+    ```
+
+
+    Next, we save the file. In IDLE (and most IDEs such as Atom) one must go through
+    “file” and click “save as”. In Nano ctrl+x must be pressed. Name the file with
+    a “.py” extension and save it in an easily accessible directory- your desktop
+    is perfectly fine. For this demonstration we will name the file "test.py".
+
+
+    Running a Python file differs slightly between platforms. Windows must use the
+    command prompt, while Linux must use the terminal. Open up the respective application
+    (ctrl+R and then cmd for Windows, ctrl+T for Linux). These applications are text-based
+    interfaces that can be used to navigate and interact with a computer. The printed
+    line will tell which directory you are currently located in, and you can type
+    “dir” in Windows or “ls” in Linux to display a list of files in that directory.
+    Move to another folder by typing “cd” followed by the directory name. Since we
+    have saved the file to the desktop,'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'on both operating systems we can make it active by typing “cd Desktop”. Finally,
+    the Hello World script can be run by typing “python test.py” or “python3 test.py”
+    (on Linux).
+
+
+    If the above programming code was copied exactly, the output “Hello, World!” will
+    be seen. The program will run and then exit back to terminal/prompt. Not entirely
+    glamorous, but a worthy first step into learning Python.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# # Programming Concepts
+
+
+    In the above program, "print" is referred to as a command or function. Each function
+    has a specific syntax that must be followed. For example, after print there is
+    a set of parenthesis. Values passed within parenthesis are called parameters.
+    Quotations also surround our text, and that is syntax that specifies written text,
+    or a string. The syntax of print must be followed exactly, or else a syntax error
+    will be returned when the program tries to run. As new functions are introduced
+    in this book, careful attention must be placed upon following the syntax rules.
+
+
+    Anything can be put within the quotations of the print function and it will be
+    written to the console. Since Python starts at the beginning of a script and reads
+    lines individually, multiple print functions can be placed one after another like
+    so:
+
+
+    ```
+
+    ```
+
+    print (“Hello, World!”)
+
+
+    print (“This is my 2nd Python Program”)
+
+
+    print (“Notice how each print command puts the text on a new line!”)
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'After saving and running the file, all three functions will print their respective
+    parameters. As mentioned previously, the quotations explain that text will be
+    displayed. By forgoing quotations, numbers can be displayed instead.
+
+
+    ```
+
+    print ("The answer to everything is:")
+
+    ```
+
+
+    ```
+
+    print (42)
+
+    ```
+
+
+    Python starts at the beginning of the script file and works its way down one line
+    at a time until no more lines are found, in which case the program exits back
+    to prompt or terminal.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Variables
+
+
+    Computers have the ability to “remember” data by storing the values as variables.
+    Variables are RAM locations that are set aside to contain a value. Programming
+    languages must specifically declare variables and assign them by writing code.
+    Being able to manipulate data will prove to be a valuable asset when creating
+    applications.
+
+
+    Creating a variable is known as “declaration”. Giving a value is known as “assigning”.
+    Python simplifies the process by combining the two concepts into a single statement.
+    Within a program the following line will create a variable:
+
+
+    ```
+
+    ```
+
+    lucky_number = 7
+
+    ```
+
+    ```
+
+
+    And then we can use the print function to view the variable we created.
+
+
+    ```
+
+    ```
+
+    print (lucky_number)
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'Because Python starts at the top of a program and works downwards, the above
+    lines need to be in the correct order. If lucky_number is not first created, then
+    print() will return an error for attempting to call a variable that does not yet
+    exist.
+
+
+    An important distinction that can be made is seen when closely viewing the previous
+    print() parameter. The variable lucky_number is not placed within quotations,
+    so Python knows to print the value contained within (7). If we placed quotations
+    around the text, Python would print “lucky_number”, which was not our intended
+    result. This situation is referred to as a logic error.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# ## Variable Types\n\nVariables can contain values of multiple types. Our\
+    \ first variable was assigned a numerical value, but Python has methods for handling\
+    \ values of different types as well.\n\n```\nsecret_message = “rosebud”\n```\n\
+    \n```\nprint (secret_message)\n```\n\nAs shown above, we can assign a string of\
+    \ text to a variable as well. The process is nearly the same, but notice the quotations\
+    \ around the value that explicitly indicate a string. Here are the most important\
+    \ data types in Python 3:\n\n+   - Integer – Simple numerical value as a whole\
+    \ number.\n+     - 1, 0, -7\n+   \n+   - Float – Decimal value. “Floating Point\
+    \ Number”.\n+     - 3.0, -7.6, 1.0100001"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "+   String – Letters, words, or entire phrases. Contained within quotation\
+    \ marks.\n+   \n+   \"Hello, world\", “no”, “12”\n\n+   Lists/Tuples/Dictionaries\
+    \ – Multiple related values grouped together as one object. Can be a variety of\
+    \ data types.\n+   \n+   [1, 4, 4, 0], [“Dog”, 2, “yes”]\n\nObviously, numerical\
+    \ values are declared by simply supplying an integer in the variable declaration.\
+    \ If there is a decimal involved, it will a float. Quotations signify strings,\
+    \ and brackets are for lists.\n\nVariables can also be used in equations, or altered\
+    \ and changed mid-program. Write the following lines to a script.\n\n```\nfirst_num\
+    \ = 2\n```\n\n```\nresult = 3 + first_num\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '```
+
+    print (result)
+
+    ```
+
+
+    ```
+
+    first_num = 3
+
+    ```
+
+
+    ```
+
+    result = 3 + first_num
+
+    ```
+
+
+    ```
+
+    print (result)
+
+    ```
+
+
+    You can observe that the value 2 is assigned to first_num. Then, we create a new
+    variable “result” that is equal to a short mathematical expression. 3 and 2 are
+    added and assigned to the result, which is printed as 5. Then, first_num is updated
+    to contain a new value. Result is calculated again and the new result is printed
+    out. This program shows how easy it is to use variables within assignments, and
+    how variables can be edited at any time in the program.
+
+
+    More arithmetic operations can be done to numerical variables by specifying an
+    operator in the equation. The following list explains the 5 main operators and
+    the symbol that is used to perform the sequence.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '+   - Addition (+) – Combining numbers
+
+
+    +   - Subtraction (-) – Taking the difference of numbers
+
+
+    +   - Multiplication (*) – Repeated addition
+
+
+    +   - Division (/) – Grouping, or the opposite of multiplication
+
+
+    +   - Modulus (%) – Dividing and using the remainder as an answer
+
+
+    Both integers and floats can easily perform calculations using the above operators.
+    Note, though, that integers will generally return integer answers (whole numbers)
+    while floats will always return an answer with a decimal point. Python can usually
+    transform an integer into a float when it is needed, but good programming form
+    comes from choosing the correct data type at the appropriate time. For example,
+    see how floats are used in the program below:
+
+
+    ```
+
+    first_number = 5.0
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '```
+
+    second_number = 3.0
+
+    ```
+
+
+    ```
+
+    result = first_number / second_number
+
+    ```
+
+
+    ```
+
+    print (result)
+
+    ```
+
+
+    And the console will return 1.666666 as an answer. Whereas if integers were used
+    everything past the decimal would be left off for an answer of 1. Assigning the
+    answer to the result variable is not entirely necessary in our small program,
+    and we can rewrite it like so:
+
+
+    ```
+
+    first_number = 5.0
+
+    ```
+
+
+    ```
+
+    second_number = 3.0
+
+    ```
+
+
+    ```
+
+    print (first_number / second_number)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'String variables are not edited mathematically (as in 1 + "two" would not return
+    3). Instead, the remarks are changed by simply overwriting the words.
+
+
+    ```
+
+    name = "Bob"
+
+    ```
+
+
+    ```
+
+    name = "Bill"
+
+    ```
+
+
+    ```
+
+    print (name)
+
+    ```
+
+
+    Name will initially be created as the string "Bob", but "Bill" is assigned to
+    it directly after. So when print() is called, the string only contains "Bill".
+    Operators can be used, however, to combine separate strings.
+
+
+    ```
+
+    my_string = "Hello,"
+
+    ```
+
+
+    ```
+
+    my_string2 = "World! "
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '```
+
+    print (my_string + my_string2)
+
+    ```
+
+
+    ```
+
+    print (my_string2 * 3)
+
+    ```
+
+
+    The output would be “Hello, World!” for the first print(), and “World! World!
+    World!” for the second print(). The addition operator combines two strings together
+    into one massive string, and the multiplication operator repeats a string the
+    specified number of times.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# **Input**
+
+
+    Although what we have learned so far is interesting, predetermined applications
+    are not very useful for the end user. Python allows us, though, to obtain input
+    from the user to add a layer of interactivity within our scripts. The input()
+    function assigns input to a variable.
+
+
+    ```
+
+    favorite_number = input(“What is your favorite number? ”)
+
+    ```
+
+
+    When a program reaches this line, it will display the text specified and wait
+    for user input. Whatever is input will be assigned to favorite_number, which can
+    be called just as any other variable.
+
+
+    ```
+
+    print(“Your favorite number is”, favorite_number)
+
+    ```
+
+
+    Instead of using an addition operand, we use a comma instead. In print(), commas
+    are used to combine multiple print statements into one (on the same line). We
+    could have used either method, but operators cannot be used for differing data
+    types. Both data types are strings in this case, so it all still works.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'The answer that the user gives through input() will always be a string, though.
+    If we were seeking a numerical answer we would have to convert it. Another function,
+    int() can be used to extract numerical data from a string.
+
+
+    ```
+
+    favorite_number = int(input (“What is your favorite number? ”))
+
+    ```
+
+
+    ```
+
+    print (“Your favorite number plus 2 is “, favorite_number + 2)
+
+    ```
+
+
+    There are a lot of new nuances going on in this program. For example, int() is
+    used to convert the input into an integer. Notice how int() surrounds the entire
+    input() function, which happens because input() must be passed as the entire parameter
+    of int(). Next, the print statement is printing multiple bits of output, and the
+    equation “favorite_number + 2” is evaluated before being printed.
+
+
+    Using int() will always return an integer answer, but float() could have been
+    used to extract a decimal answer instead. The int() function works essentially
+    by transforming the string “3” into the number 3. Definitely remember to include
+    it whenever getting numerical input.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# **String Formatting**
+
+
+    Being able to display strings with print() is useful, but sometimes our programs
+    require us to display variables within them. To actually insert a variable into
+    a string without first editing it or combining multiple variables, we can use
+    a “string formatter”. The format() function can be included within a print() statement
+    to do positional formatting of variables.
+
+
+    ```
+
+    dog_name = “Rex”
+
+    ```
+
+
+    ```
+
+    print(“My dog’s name is {} and he is a good boy.”.format(dog_name))
+
+    ```
+
+
+    When you run the above code, it automatically replaced the brackets {} with the
+    supplied variable. The format() is placed directly after the string it will be
+    editing, and before the closing parenthesis. So when the code is run, the console
+    outputs “My dog’s name is Rex...”. Without using format(), we would have had to
+    use a multi-line complicated print setup. But format()’s greatest use comes from
+    situations with multiple variables.
+
+
+    ```
+
+    dog_name = “Rex”
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '```
+
+    dog_age = 12
+
+    ```
+
+
+    ```
+
+    print ("My dog''s name is {0} and he is {1}. Sit, {0}".format(dog_name, dog_age))
+
+    ```
+
+
+    Here we choose to specify values within the curly brackets. 0 translates to the
+    first supplied parameter, while 1 refers to the second variable. Therefore anywhere
+    in our string we can use {0} to have dog_name be inserted and {1} to have dog_age
+    be inserted. The console text will be "My dog''s name is Rex and he is 12. Sit,
+    Rex!"'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# **Example Program 1 – project1.py**
+
+
+    ```
+
+    user_name = input("What is your name? ")
+
+
+    user_age = int(input("What is your age? "))
+
+
+    user_pets = int(input("How many pets do you have? "))
+
+
+    user_GPA = float(input("what is your GPA? "))
+
+
+    print () #print a blank line
+
+
+    print ("{0} is {1} years old. They have a {3} GPA, probably because they have
+    {2} pets. ".format(user_name, user_age, user_pets, user_GPA))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'This program combines what we have learned so far to obtain input from the
+    user and display it back to them. A new concept, comments are introduced as well.
+    The # symbol is used to denote a comment, or a block of text for human reading.
+    Whenever a # is placed on a line everything after it is ignored by Python. Comments
+    are used primarily to explain things to other programmers that might happen to
+    read your code. In our case, we explain that a blank print() line simply produces
+    a blank line. It is good programming form to use comments throughout your code
+    to explain potentially confusing elements or help remind yourself of what certain
+    blocks of code are doing.
+
+
+    Next, the format() function is used to replace 4 different instances within a
+    print() function. As you might have noticed, counting begins with 0 in Python.
+    0 always refers to the first element of something, which is why 3 indicates the
+    fourth supplied variable in our format().
+
+
+    Depending upon the medium in which you are reading this publication, some of the
+    above lines may have word-wrapped to multiple lines. This is not how you should
+    be typing it into a text editor though, as the print() line is one single command.
+    Furthermore, copy and pasting from this document may introduce extra characters
+    that Python does not understand. Therefore the correct way to input project 1’s
+    code is by typing it out yourself.
+
+
+    Homework program:'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: +   • Make a program that obtains information about a user's pet and returns
+    it back.
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# ## Decision Structures\n\nNow that the basics of Python 3 are explained,\
+    \ we can begin to offer truly interactive programs by implementing decision structures\
+    \ into our code. Decision structures are pieces of code (called conditional statements)\
+    \ that evaluate an expression and branch the program down differing paths based\
+    \ on the outcome. Observe the following example:\n\n```\n```\nuser_input = int(input(\"\
+    What is 4 / 2? \"))\n\nif (user_input == 2):\n    print (\"Correct!\")\nelse:\n\
+    \    print (\"Incorrect...\")\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'First we obtain input from the user. We test user_input against 2 (the correct
+    answer). If the conditional statement turns out true, then the program will print
+    “Correct!”. However, if the user provides the wrong answer Python will return
+    “Incorrect...”. There is a lot of new concepts going on here, so we will break
+    it down line by line.
+
+
+    The first line is familiar to us; it obtains input, converting it into an integer
+    and assigning it to the variable user_input. Line 2 introduces a new function-
+    an “if statement”. If statements are conditionals that evaluate the expression
+    contained within the parenthesis. Our exact statement checks to see if user_input
+    is 2, and if it is than the immediately following line of code is run. Comparisons
+    use the “==” operator instead of the “=” operator. Double equal signs are checking
+    for equality while single equal signs are only used to assign variables. Lastly,
+    a colon follows the if statement.
+
+
+    Indentations are used extensively in Python to separate off blocks of code. Under
+    the if statement is a tabbed line with a print() function. Because this line is
+    tabbed in, it will not run normally in code. Rather, the line will only run if
+    the conditional if statement is proven true. Because our user input 3 the conditional
+    will evaluate to “False” and the “Correct!” line will not run. Instead the program
+    moves on to the “else statement”. Else is a keyword that means “run when the if
+    statement fails”. Another indented line follows the conditional, but this time
+    the indented code actually runs because else becomes activated.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'If the user had input the correct answer of 2 instead, the if statement would
+    evaluate to true and the console would print "Correct". In that situation, the
+    else statement would not run at all. Focus once again on the indented code and
+    understand that those lines are indented because they are part of the "if" and
+    "else" code blocks. Also realize that only one statement from a decision structure
+    can ever run in a program, so if "else" runs, that means "if" did not run. Likewise
+    a program that has "if" activated will not run the code block under "else". Conditional
+    statements are not limited to single lines of code, as you can see below.
+
+
+    ```
+
+    user_input =  input("What language is this written in? ")
+
+
+    if (user_input == "Python"):
+
+
+    print ("Correct!")
+
+
+    else:
+
+
+    print ("Incorrect...")
+
+
+    print ("This is not written in {}, it uses Python!".format(user_input))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: Another indented line is within the else code block, and both lines will run
+    if the user does not correctly input “Python”. This program does indeed compare
+    strings, so quotations must surround the text.
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# **Conditional Operators**
+
+
+    Double equal signs (==) are only one of the many operators that can be used to
+    create a conditional expression. This small list shows other operators in Python.
+
+
+    +   - > - Greater than
+
+
+    +   - < - Less than
+
+
+    +   - == - Equal to
+
+
+    +   - >= - Greater than or equal to
+
+
+    +   - <= - Less than or equal to
+
+
+    +   - != - Not equal to'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "If statements evaluate whether the expression in the parenthesis is true; the\
+    \ above operators allow for some interesting expressions.\n\n```\nage = int(input(\"\
+    How old are you? \"))\n\nif (age <= 18):\n\n    print (\"Starting early! Good\
+    \ for you!\")\nelse:\n\nprint (\"Ah, a good age to learn.\")\n\nprint (\"Thank\
+    \ you for downloading this book.\")\n```\n\nA clever use of indentations is used\
+    \ here. If the user’s age is 18 or under, it will congratulate them then skip\
+    \ the else statement and finally print out the thank you message. If the user\
+    \ is above 18 it will display the else message and then also thank them. No matter"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "which conditional runs, the user will still receive the thank you message.\
+    \ The indentation makes all the difference about what code lines will actually\
+    \ run within a decision structure, and you must pay close attention to avoid a\
+    \ logic error.\n\nFor situations that require more than just two potential outcomes,\
+    \ the keyword \"elif\" can be used.\n\n```\nage = int(input(\"How old are you?\
+    \ \"))\nif (age <= 18 and age > 0):\n    print (\"Starting early! Good for you!\"\
+    )\nelif (age >= 80):\n    print (\"Never too late to learn!\")\nelif (age > 18\
+    \ and age < 80):\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '```
+
+    print ("Ah, a good age to learn.")
+
+    ```
+
+
+    ```
+
+    else:
+
+    ```
+
+
+    ```
+
+    print ("That seems like an invalid age.")
+
+    quit()
+
+    ```
+
+
+    ```
+
+    print ("Thank you for downloading this book.")
+
+    ```
+
+
+    Elif is a keyword that can be used to split the decision making process into multiple
+    branching paths. Between if and else statements, any number of elif conditionals
+    can be used. Also, another new keyword is used above- "and". Our first comparison
+    checks to see if age is less than or equal to 18 AND greater than 0. Therefore
+    that conditional will only evaluate to true if the age value satisfies both requirements.
+    Pretend the user input 75. The first statement evaluates, and 75 is indeed greater
+    than 0, but it is not also less than 18, so that statement is skipped. Then, the
+    first elif is evaluated. Age is not greater than 80, so that statement is skipped
+    as well. Thirdly, age is definitely between 18 and 80, so the console prints "Ah,
+    a good age to learn" and then skips the else statement altogether.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "Remembering that only one statement in a decision “tree” can ever run, we can\
+    \ see that any elif that activates essentially runs its code block and then breaks\
+    \ from the decision structure.  Else is used as a “catch-all” type expression\
+    \ in our above program.  Any invalid input, such as “-1” would be picked up by\
+    \ else and displayed as such.  Good programming form comes from catching potential\
+    \ user errors like this, and as an aspiring programmer you should always be expecting\
+    \ the user to incorrectly input values whenever the chance arises.\n\n“And” is\
+    \ a comparison operator that forces both parts of an expression to be true.  Another\
+    \ operator, “or”, is used to force only one part of the expression to evaluate\
+    \ to true.\n\n```\nelif (age == 25 or age == 50 or age == 75):   \nprint (\"Happy\
+    \ quarterly birthday!\")\n```\n\nIf we were to put this elif within the above\
+    \ program (under the first if), we would see that only one part of the expression\
+    \ must be true for the whole comparison to be true.  The user’s age could be 25,\
+    \ 50, or 75 and the application would say “Happy quarterly birthday”.  Using “and”\
+    \ instead of “or” would be impossible, because the age cannot be 25 and 50 and\
+    \ 75 all at the same time.  The keywords that we use for comparisons are helpful\
+    \ and greatly useful, but if used incorrectly they can lead to logic errors."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# **Example Program 2 – project2.py**
+
+
+    ```
+
+    ```
+
+    print("Python Quiz!")
+
+
+    answered = 0
+
+
+    correct = 0
+
+
+    print()
+
+
+    print("What version of python are we using?")
+
+
+    print("A: 1, B: 2, C: 3")
+
+
+    user_answer = input("Enter A, B, or C: ")
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '```
+
+    answered += 1
+
+    ```
+
+
+    ```
+
+    print()
+
+    ```
+
+
+    ```
+
+    if (user_answer == "C" or user_answer == "c"):
+
+    ```
+
+
+    ```
+
+    correct += 1
+
+    ```
+
+
+    ```
+
+    print ("Correct")
+
+    ```
+
+
+    ```
+
+    else:
+
+    ```
+
+
+    ```
+
+    print ("Incorrect")
+
+    ```
+
+
+    ```
+
+    print()
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "```\nprint(\"How many 'else' statements can be in a decision tree?\")\n\nprint(\"\
+    A: 1, B: Infinite, C: None\")\n\nuser_answer = input(\"Enter A, B, or C: \")\n\
+    \nanswered += 1\n\nprint()\n\nif (user_answer == \"A\" or user_answer == \"a\"\
+    ):\n    correct += 1\n    print (\"Correct\")\n```"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "```\nelse:\n```\n\n```\n    print (\"Incorrect\")\n```\n\n```\nprint()\n```\n\
+    \n```\nprint(\"What does '=' do in Python?\")\n```\n\n```\nprint(\"A: Compare,\
+    \ B: Assign, C: Both\")\n```\n\n```\nuser_answer = input(\"Enter A, B, or C: \"\
+    )\n```\n\n```\nanswered += 1\n```\n\n```\nprint()\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\n```\nif (user_answer == \"B\" or user_answer == \"b\"):\n\n    correct\
+    \ += 1\n\n    print (\"Correct\")\n\nelse:\n\n    print (\"Incorrect\")\n\nprint()\n\
+    \nprint (\"You got {} out of {} correct.\".format(correct, answered))\n\nif (correct\
+    \ == 3):\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "```\nprint (\"Congratulations! Good score.\")\n\nelif (correct == 2):\n\n \
+    \   print (\"Good work, but study hard!\")\n\nelse:\n\n    print (\"Go back and\
+    \ read over the section again, I'm sure you'll get it.\")\n\nHomework program:\n\
+    \n- Use if statements to create a calculator program that prompts the user for\
+    \ two numbers and an operator.\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# # Loops\n\nJust as conditional statements activate if an expression evaluates\
+    \ to true, looping conditionals also compare values in an expression. But while\
+    \ if, elif, and else statements are linear in nature, other conditionals have\
+    \ the ability to repeatedly run blocks of code. \"Loops\" are conditional statements\
+    \ that can be run several times through the course of a program, and they allow\
+    \ for expanded functionality within Python programs. A \"while\" loop is such\
+    \ a conditional.\n\n```\n```python\nanswer = 0\nwhile (answer != 2):\n\tanswer\
+    \ = int(input(\"What is 4 / 2? \"))\nprint (\"Correct!\")\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'So long as the specified condition evaluates to true, the “while” code block
+    will continuously run. We can see a perfect example of this through the program
+    above. We create a new variable “answer” and repeatedly compare it to 2. While
+    answer is not equal to 2, the program will ask the user for the correct answer.
+    Inputting something other than 2 will just loop back around to the while statement,
+    again prompting for the correct answer. If while finally does evaluate to true
+    (because answer equals 2) the loop will break and the program will resume by printing
+    “Correct”.
+
+
+    The program can be enhanced further by “nesting” conditionals. A single indentation
+    indicates a code block set aside for our while statement, but we can go for a
+    second level of indentation to add an additional comparison.
+
+
+    ```
+
+    answer = 0
+
+    ```
+
+
+    ```
+
+    while (answer != 2):
+
+    ```
+
+
+    ```
+
+    answer = int(input("What is 4 / 2? "))
+
+    ```
+
+
+    ```
+
+    if (answer != 2):
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '```
+
+    print ("Incorrect...")
+
+    ```
+
+
+    ```
+
+    print ("Correct!")
+
+    ```
+
+
+    This program uses “nested” functions to incorporate if statements within while
+    statements. The sheer amount of possibilities gained from this are virtually endless.
+    Note how there are indentation levels that determine which code blocks can run
+    within which functions. Every intended block, both 1 and 2 indent levels, will
+    run when the while loop activates. It is a hard-to-master concept, but one that
+    surely increases functionality.
+
+
+    Another common loop is the “for” loop. For is different from while in that a for
+    loop runs through a range of numbers or a set of values instead of checking a
+    conditional.
+
+
+    ```
+
+    for user_variable in range (1, 5):
+
+    ```
+
+
+    ```
+
+    print (user_variable)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'For takes the specified variable "user_variable" and uses the supplied range.
+    The variable will be initialized at 1, and it will be iterated every time the
+    function loops. By observing the output we can see how this works.
+
+
+    +   1
+
+    +   2
+
+    +   3
+
+    +   4
+
+
+    User_variable is printed out, then incremented to 2. It is printed again and incremented
+    as 3. Once more time for 4. But it reaches 5 and stops, which is why 5 does not
+    get printed out.
+
+    Because the keyword "range" was used, the for loop will always start at the first
+    number and stop at the second. Leaving it out will have the for loop cycle through
+    the values given.
+
+
+    ```
+
+    for user_variable in (1, 5):
+
+
+    print(user_variable)
+
+    ```
+
+
+    For example, only "range" is left out here, but the output is very different.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '+   1
+
+    +   5
+
+
+    Python runs the loop with the first value, 1, and then runs it with the second
+    value, 5. We will learn that using for loops this way is especially useful for
+    lists, dictionaries, and tuples.
+
+
+    Lastly, loops can be broken with the break() function. Bad programming form can
+    lead to infinite loops, but including break() as a safeguard might save a user''s
+    computer from crashing.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Example Program 3 – project3.py
+
+
+    ```
+
+    print("Adding simulator")
+
+    ```
+
+
+    ```
+
+    print("Type a number to add to total, or type blank line to stop")
+
+    ```
+
+
+    ```
+
+    line = "a"
+
+    ```
+
+
+    ```
+
+    total = 0
+
+    ```
+
+
+    ```
+
+    while (line != ""):
+
+    ```
+
+
+    ```
+
+    line = input("")
+
+    ```
+
+
+    ```
+
+    if (line == ""):
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '```
+
+    break
+
+    ```
+
+
+    ```
+
+    total += int(line)
+
+    ```
+
+
+    ```
+
+    print ("Total = {}".format(total))
+
+    ```
+
+
+    Homework program:
+
+
+    +   Write a program using if statements that displays a text adventure game. Offer
+    multiple choices to the player that they can type in to select. Use while loops
+    to check the validity of user input.'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# **More about Variables**
+
+
+    Lists are another data type beneficial to talk about. A list is an array of values
+    that are grouped together into a single variable. The single variable can then
+    be used to call upon any of the “sub variables” it contains. They are mostly used
+    for organization and grouping purposes, and also to keep related variables in
+    a similar place. List variables are created by initializing them.
+
+
+    ```
+
+    state = "Texas"
+
+    ```
+
+
+    ```
+
+    jack_info = [8, "West Elementary", state, "A"]
+
+    ```
+
+
+    ```
+
+    print ("Jack goes to {} in {}.".format(jack_info[1], jack_info[2]))
+
+    ```
+
+
+    ```
+
+    print ("He has a {} in math, even though he''s only {}.".format(jack_info[3],
+    jack_info[0]))
+
+    ```
+
+
+    The list "jack_info" contains four values because we specify four different entries
+    between the square brackets. They are just'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'ordinary values such as the integer 8 or the variable state, but they are grouped
+    together for a common purpose by being placed into the list. As it is seen, entries
+    in lists can be accessed by specifying the location of the entry in square brackets.
+    Counting starts at 0, so the first entry of jack_info is 8, and the entry in [3]
+    is "A". Visualize it like so:
+
+
+    | Entry number: | 0 | 1 | 2 | 3 |
+
+    |---|---|---|---|---|
+
+    | Data value: | 8 | "West Elementary" | state | "A" |
+
+
+    A list could be initially declared with 3 entries, and it would have the range
+    0-2. The number of entries is nearly infinite, and it is only limited by the computer''s
+    memory and the amount of variables the programmer fills it with.
+
+
+    The elements of a list can be edited as if they were individual variables. If
+    Jack ages a year, we only need to update the entry. Furthermore, adding a new
+    entry to the list can be done without completely redefining every value within
+    it. Using append(), a new entry will be created in the last
+
+
+    ```
+
+    state = "Texas"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    jack_info = [8, "West Elementary", state, "A"]
+
+    ```
+
+
+    ```
+
+    jack_info[0] = 9
+
+    ```
+
+
+    ```
+
+    jack_info.append(22)
+
+    ```
+
+
+    ```
+
+    print ("Jack goes to {} in {} ".format(jack_info[1], jack_info[2]))
+
+    ```
+
+
+    ```
+
+    print ("He has a {} in math, even though he''s only {} ".format(jack_info[3],
+    jack_info[0]))
+
+    ```
+
+
+    ```
+
+    print ("Lucky number is {} ".format(jack_info[4]))
+
+    ```
+
+
+    The new additions to the program change the list ever so slightly to now have
+    a new set of values.
+
+
+    | Entry number: | 0 | 1 | 2 | 3 | 4 |
+
+    |---|---|---|---|---|---|
+
+    | Data | 9 | “West | state | “A” | 22 |'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '|             | value: | "Elementary" |             |             |             |
+
+
+    Before continuing onwards, it is worthy to note a few more features about the
+    string data type. Strings are actually lists that contain character values. As
+    an example, take the string “Hello, World!”. Broken down as a list, it would look
+    like this:
+
+
+    | Entry    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | ... |
+
+    | :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+
+    | Character | H | e | l | l | o | , |   | W | ... |
+
+
+    And likewise, individual entries can be displayed from the string list.
+
+
+    ```
+
+    print (user_string[0]) # would print “H”
+
+    ```
+
+
+    ```
+
+    print (user_string[7:13]) #would print “World!”
+
+    ```
+
+
+    Moving onwards, tuples are another data type within Python. They are declared
+    by using parentheses instead of square brackets. Tuples are actually static lists,
+    or lists that cannot be edited. They are used when the programmer needs to ensure
+    a range of data cannot change.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "```\njim_grades = (99, 87, 100, 99, 77)\n```\n\n```\nprint (jim_grades[2])\n\
+    ```\n\nNotice how an entry in a tuple is still accessed using square brackets.\n\
+    \nDictionaries take the concept of organized variables and take it to an extreme.\
+    \ Just like lists and tuples, dictionaries can contain multiple values in a single\
+    \ variable. The difference, however, is that dictionaries organize their records\
+    \ through names instead of numbers. In this way, dictionaries are “unordered”\
+    \ lists of sorts, where any value can be called by the entry name. Declare a dictionary\
+    \ with curly brackets, separating out values with commas and colons.\n\n```\n\
+    pet_dict = {\"Total\": 2, \"Dog\": \"Scruffy\", \"Cat\": \"Meowzer\"}\n```\n\n\
+    ```\nprint (\"I have {} pets, {} and {}.format(pet_dict[\"Total\"],\n pet_dict[\"\
+    Dog\"], pet_dict[\"Cat\"]))\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'Here, the dictionary pet_dict contains three values: "Total", "Dog", and "Cat".
+    The entries are declared by naming the entry within quotations and then supplying
+    a value. Those entries are called by specifying the name of the entry, such as
+    with pet_dict["Dog"] to access the value stored within. An unprecedented amount
+    of organization is available when using dictionaries because they resemble a database
+    in form. Likewise, they can be changed, updated, removed, or added to at any time
+    within a program.
+
+
+    ```
+
+    albums = {"Miilkduds": 2, "Harold Gene": 1, "The 7750''s": 3}
+
+    ```
+
+
+    ```
+
+    albums["Miilkduds"] += 1 #new album!
+
+    ```
+
+
+    ```
+
+    albums["The 7750''s"] = 2 #actually only had 2
+
+    ```
+
+
+    ```
+
+    albums.update({"Diamond Dozens": 1}) #found new band
+
+    ```
+
+
+    ```
+
+    del albums["Harold Gene"] #sold one away, didn''t like
+
+    ```
+
+
+    ```
+
+    print ("These are the number of albums I own.")
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'print(albums)
+
+
+    The humorous example above is a simple dictionary used to store the number of
+    albums a person has. At the beginning the dictionary has a set number of albums
+    for each band, but the second line has the collector gaining a new Milkduds album.
+    That line also uses a new code shortcut. Whenever “+=” is used, the code is actually
+    expanded to be “albums["Milkduds"] = albums["Milkduds"] + 1”, but much time and
+    space is saved in the program by using the shorthand. Third line has the collector
+    realizing they only had 2 7750’s albums, so the command changes the value of the
+    entry altogther. Next update() is introduced. It shows how an entirely new entry
+    can be added to the dictionary. Sadly, though, Harold Gene is deleted from the
+    dictionary because the collector sold away the album. Finally, printing the entire
+    dictionary can be done by not specifying any entry.
+
+
+    A fun example, the above program actually shows how versatile dictionaries can
+    be in gathering and storing data. Include them within your program to group variables
+    together in an easy-to-call way.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Example Program 4 – project4.py
+
+
+    ```
+
+    keep_going = "a" #initialize variables before they are used
+
+    number_grades = 0
+
+    grade_list = []
+
+    total = 0
+
+    print("Grade Average Calculator")
+
+    print()
+
+    while (keep_going != "No" and keep_going != "no"):
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "```\ngrade = int(input(\"Enter a test grade: \"))\nnumber_grades += 1\ngrade_list.append(grade)\n\
+    keep_going = input(\"Add more grades? \")\nprint()\nfor x in range (0, number_grades):\n\
+    \    total += grade_list[x] #add up all grades in list\nprint (\"Average of {}\
+    \ tests is {}\".format(number_grades, total / number_grades))\n\n```\n\nHomework\
+    \ program:"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "+   - Devise code for more math functions, such as medians and modes.\n\n#\
+    \ Functions\n\nEvery function used thus far has been built-in to Python and programmed\
+    \ by Python’s developers. Functions are actually code shortcuts, as functions\
+    \ are condensed versions of code that take data as parameters, run longer blocks\
+    \ of code behind the scenes, and then return a result. The use of functions is\
+    \ to save time and code when doing commonly repeated tasks. Python retains the\
+    \ ability for programmers to write their own functions, and they are done like\
+    \ so:\n\n```\ndef happy(name):\n\n    print (\"Happy birthday to you. \" * 2)\n\
+    \n    print (\"Happy birthday dear {}.\".format(name))\n```"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '```
+
+    print ("Happy birthday to you.")
+
+    ```
+
+
+    The “def” keyword indicates a user defined function declaration, and the name
+    immediately following is the name of the function; we create the function happy().
+    Within the parentheses are the values that our function will take (only one, a
+    variable named “name”). Just as print() must have a value, so does our happy()
+    need one too. Then, the code associated with the function is indented. Our code
+    simply runs through a happy birthday song, which supplying the variable “name”
+    inside the song. This function declaration goes at the top of our pythlon program,
+    but it does not actually run when the program starts. To call it, we need to specifically
+    reference the function in code.
+
+
+    ```
+
+    happy("Dana")
+
+    ```
+
+
+    Something interesting happens here. We call happy() by passing “Dana” as the value.
+    “Dana” gets assigned to “name”, and the function runs through. However, the variable
+    “name” does not exist outside of the user defined function, and any attempts to
+    call it will result in an error. This is because variables have scopes of operation,
+    which are areas in which they can be accessed. “Name” has a variable scope that
+    is specific to the function, so it will not ever be called outside of it. Similary,
+    any variables declared in the main program cannot directly be accessed by the
+    user defined function, but rather they must be passed as parameters when calling
+    the function. Follow along with the next exercise to see an example for an in-depth
+    analysis on user defined functions (UDFs).'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\n```\ndef intdiv(num_one, num_two):\n\n    whole_answer = int(num_one /\
+    \ num_two)\n\n    remainder = num_one % num_two\n\n    print (\"{} / {} = {} with\
+    \ {} left\n\nover.\".format(num_one, num_two, whole_answer, remainder))\n\nfirst\
+    \ = int(input(\"Enter first number: \"))\n\nsecond = int(input(\"Enter second\
+    \ number: \"))\n\nintdiv(first, second)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "First, the UDF is declared. This code does not run automatically because it\
+    \ has not yet been called. The program actually starts on the fifth line. The\
+    \ variable \"first\" is declared within the main program's scope based on the\
+    \ user's input. So too is the variable \"second\". The UDF \"intdiv\" is invoked\
+    \ with first and second as the two parameters. The variables are passed as parameters\
+    \ so they can be transferred into the UDF. First and second are not actually leaving\
+    \ their scope, though, because the UDF uses the variables num_one and num_two\
+    \ to perform calculations.\n\nVariables can be passed back from a UDF by using\
+    \ the return keyword.\n\n```\ndef exp (base, pow):\n\n    orig_num = base\n\n\
+    \    for x in range (1, pow):\n\n        base = base * orig_num\n\n    return\
+    \ base\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'Above is a UDF that calculates the result of exponential multiplication based
+    on two supplied values, the base and power numbers.  The return keyword passes
+    a variable back into the main program, which is how we can get around the variable’s
+    scope.
+
+
+    ```
+
+    answer = exp(2, 3)
+
+    ```
+
+
+    So when we call the function like above, the answer (base) is given back as the
+    result and assigned to the variable “answer”.
+
+
+    Conclusively, user defined functions can save a lot of time for programs that
+    must repeatedly call a block of code. UDFs can just contain other functions, like
+    our Happy Birthday UDF, or they can help simplify complicated code, such as our
+    exponential multiplication UDF. You must remember that variables are defined within
+    a scope that they cannot leave.  However, values can be passed from the main program
+    to a UDF by supplying them as parameters, and values can return from a UDF by
+    using the return keyword and assigning the result to a variable.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# Example Program 5 – project5.py\n\n```\ndef cm_to_inch(cm):\n\n    inch =\
+    \ cm * 0.39\n\n    return inch\n\ndef inch_to_cm(inch):\n\n    cm = inch * 2.54\n\
+    \n    return cm\n\nprint(\"Inch/cm converter\")\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\nprint(\"1: Convert cm to inch\")\n\n\nprint(\"2: Convert inch to cm\"\
+    )\n\n\nchoice = int(input(\"Enter a menu option: \"))\n\n\nwhile (choice != 1\
+    \ and choice != 2):\n\n    print(\"Invalid, try again.\")\n\n    choice = int(input(\"\
+    Enter a menu option: \"))\n\n\nif (choice == 1):\n\n    user_input = int(input(\"\
+    Enter cm: \"))\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '```
+
+    print("{} cm is {} inches.".format(user_input, cm_to_inch(user_input)))
+
+    ```
+
+
+    ```
+
+    if (choice == 2):
+
+    ```
+
+
+    ```
+
+    user_input = int(input("Enter inches: "))
+
+    ```
+
+
+    ```
+
+    print("{} inches is {} cm.".format(user_input, inch_to_cm(user_input)))
+
+    ```
+
+
+    ```
+
+    print("Thank you for using the program.")
+
+    ```
+
+
+    Homework program:
+
+
+    +   - Convert the programs you have already made to use UDFs'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "# ## Classes\n\nClasses are a feature of Python that bring it more in line\
+    \ with some of the more difficult programming languages. They are essentially\
+    \ “programs within programs” because of how many features you can put into one.\
+    \ Moreover, it is good programming form to use classes for organization. Object-oriented\
+    \ languages such as Python occasionally show their object roots through concepts\
+    \ like these, whereas objects contain attributes in the form “object.attribute”.\
+    \ See the example below to understand.\n\n```\n```\nclass student:\n\ndef __init__(self,\
+    \ name, grade):\n\n    self.name = name\n    self.grade = grade\n    self.gpa\
+    \ = 0.0\n```\n```\n\nThe class that we create is called “student”, and student\
+    \ contains its own variables. Classes give us a way to organize"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'objects and give them personal attributes. So instead of having student1_name,
+    student1_grade, student2_grade, etc... as different variables, they can be consolidated
+    by belonging to a class. Within a program, the class declaration goes at the very
+    top. Just like a UDF, it does not actually run in the main program until called.
+
+
+    ```
+
+    student1 = student("Tim", "Freshman")#object is student1, an attribute is "name".
+
+    ```
+
+
+    Our newly declared “student” class is used to create the student1 object with
+    the attributes “Tim” and “Freshman”. This would have previously taken two lines,
+    but it is condensed considerably with classes. Classes compartmentalize the related
+    variables of the object so that each “student” declared has the 3 properties “name”,
+    “grade”, and “gpa”. The second line of our class declaration contains __init__,
+    which is a “method” (user defined function) that runs when an object in the student
+    class is created. Init’s parameters are the ones required when creating that object.
+    Self is not actually a parameter, it just refers to “student”, but “name” and
+    “grade” are required, which is why we included them when creating “student1”.
+    Attributes of student1 can be called like so:
+
+
+    ```
+
+    print(student1.name)
+
+    ```
+
+
+    Which would simply print “Tim”. We did not declare the GPA variable during the
+    student1 initialization, so we can do that with an assignment statement.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '```
+
+    student1.gpa = 4.0
+
+    ```
+
+
+    Or otherwise change an attribute that already exists.
+
+
+    ```
+
+    student1.grade = "Sophomore"
+
+    ```
+
+
+    If we were to create another object, it would have its own set of attributes that
+    are completely different from student1.
+
+
+    ```
+
+    student2 = student("Mary", "Senior")
+
+    ```
+
+
+    Where student1.grade is different from student2.grade, even though they share
+    the same variable name. For large projects with multiple repeating variables,
+    classes can reduce the amount of code clutter and variable names to keep track
+    of.
+
+
+    Looking back to our custom class, we can expand upon it to achieve user defined
+    functions within the class itself.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '```
+
+    ```
+
+    class student:
+
+
+    def __init__(self, name, grade):
+
+
+    self.name = name
+
+
+    self.grade = grade
+
+
+    self.gpa = 0.0
+
+
+    def record(self):
+
+
+    return "Student {} is a {} with a {}".format(self.name, self.grade, self.gpa)
+
+
+    student3 = student("Lily", "Junior")
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '```
+
+    student3.gpa = 3.67
+
+    ```
+
+
+    ```
+
+    print (student3.record())
+
+    ```
+
+
+    The `__init__` stays the same, but we add a UDF definition with the name “record”.
+    It passes the parameter self (because it has to refer to the class) and returns
+    a formatted string. In our actual main program student3 is created. Finally, we
+    call the UDF with student3.record() (object.function). It returns our formatted
+    string, and therefore it is printed out by print().'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# Special Methods
+
+
+    The __init__ method is actually a form of a UDF. However, methods that are surrounded
+    by two underscores are special methods within Python, which means they run automatically
+    at certain times. __init__ is a special method also specifically called a “constructor
+    method”. Constructor methods get called whenever an object is created, and that
+    is why we put variable declarations within it. When student3 is created, so too
+    are student3.name, student3.grade, and student3.gpa. Therefore, any code that
+    is put within the __init__ block will be activated any time an object is created
+    for the first time.
+
+
+    Other special methods exist, and they are called on different events.
+
+
+    +   • __del__ - called whenever an object is deleted (del). Also called destructor
+    method.
+
+
+    +   • __str__ - called when an object is passed as a string'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "+   • `__setattr__` - will run every time an attribute is set with a value\n\
+    \n+   • `__delattr__` - same as setattr, but only runs when an attribute is deleted\n\
+    \nAdding in these special methods can show when they run.\n\n```\n```\nclass student:\n\
+    \n    def __init__(self, name, grade):\n\n        self.name = name\n        self.grade\
+    \ = grade\n\n        self.gpa = 0.0\n\n    def __str__(self):\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '```
+
+    return "{}".format(self.name)
+
+    ```
+
+
+    ```
+
+    def record(self):
+
+    ```
+
+
+    ```
+
+    return "Student {} is a {} with a {}".format(self.name, self.grade, self.gpa)
+
+    ```
+
+
+    ```
+
+    student4 = student("Barry", "Professor")
+
+    ```
+
+
+    ```
+
+    print (student4)
+
+    ```
+
+
+    When student4 is printed (referenced as a string), the __str__ special method
+    takes over and returns the “name” attribute of the object. If this special method
+    was not in there, we would not get the intended output from referencing the object.
+
+
+    Finally, classes are useful because we can create “class variables” within them.
+    “Name” and “GPA” are attribute variables that are specific to each object declared,
+    but there can also be class'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "variables that are shared by all objects. For instance, this program will keep\
+    \ track of the total number of objects using a class variable.\n\n```\nclass food:\n\
+    \    total_foods = 0\n\n    def __init__(self, name):\n\n        self.name = name\n\
+    \n        self.calories = 0\n\n        self.foodgroup = \"\"\n\n        food.total_foods\
+    \ += 1\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\ndef __del__(self):\n\n    food.total_foods -= 1\n\ndef __str__(self):\n\
+    \n    return \"{}\".format(self.name)\n\ndef get_total():\n\n    return food.total_foods\n\
+    \ndef record(self):\n\n    return \"Food {0} is a {2} with {1} calories.\".format(self.name,\
+    \ self.calories, self.foodgroup)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '```
+
+    food1 = food("Carrot Stew")
+
+
+    food1.calories = 210
+
+
+    food1.foodgroup = "Vegetables"
+
+
+    food2 = food("Buttered Toast")
+
+
+    food2.calories = 100
+
+
+    food2.foodgroup = "Grains"
+
+
+    print (food.get_total())
+
+
+    del food2
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '```
+
+    print (food.get_total())
+
+    ```
+
+
+    As the program creates a food, 1 is added to total_foods. Then, a food object
+    is deleted so 1 is taken away. The console prints 2, then 1 to show how our UDF
+    can be called to check the class variable. Keeping track of the number of something
+    is a common use for class variables, but they are highly useful for other situations
+    as well.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "# Example Program 6 – project6.py\n\n```\nclass house:\n\ndef __init__(self,\
+    \ name, bedrooms, bathrooms, cost):\n\n\tself.name = name\n\n\tself.bedrooms =\
+    \ bedrooms\n\n\tself.bathrooms = bathrooms\n\n\tself.cost = cost\n\n\tprint(\"\
+    House for sale!\")\n```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n```\n    def __del__(self):\n        \n        print(\"House off the market.\"\
+    )\n```\n```\nprint(\"House for sale:\")\n```\n```\nuser_input = input(\"What is\
+    \ the address of the house? \")\n```\n```\nuser_input2 = int(input(\"How many\
+    \ bedrooms? \"))\n```\n```\nuser_input3 = int(input(\"How many bathrooms? \"))\n\
+    ```\n```\nuser_input4 = int(input(\"How much does it cost? \"))\n```\n```\nhouse1\
+    \ = house(user_input, user_input2, user_input3, user_input4)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '```
+
+    print("Looking for buyers…")
+
+    ```
+
+
+    ```
+
+    for x in range (0, house1.cost):
+
+    ```
+
+
+    ```
+
+    x += 1 #wait a while
+
+    ```
+
+
+    ```
+
+    print("Sold!")
+
+    ```
+
+
+    ```
+
+    del house1
+
+    ```
+
+
+    Homework program:
+
+
+    +   * Use classes to make a database organization program. Users should be able
+    to create new entries of a class and set variables, and also view them at will.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "# # Inheritance\n\nIn your more robust and expansive programs, you might use\
+    \ multiple related classes. As an example, think of the program where you must\
+    \ categorize devices on a network. Each device type (desktop, laptop, phone, etc…)\
+    \ will have its own class, but you will ultimately be repeating commonly used\
+    \ attributes. Both desktops and laptops will have names, departments, and IP addresses,\
+    \ but they will also have a few distinct variables specific to them such as Wi-Fi\
+    \ for the laptops and graphics cards for the desktop.\n\nThrough a process called\
+    \ “inheritance”, classes can be put into a parent/child relationship where certain\
+    \ parent attributes can be “inherited” by children classes. Effectively sharing\
+    \ attributes across classes leads to more elegant organization and less code overall.\n\
+    \n```\n```\nclass device:\n    \n    total_devices = 0\n    \n    def __init__(self,\
+    \ name, owner):\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '```
+
+    self.name = name
+
+    ```
+
+
+    ```
+
+    self.owner = owner
+
+    ```
+
+
+    ```
+
+    device.total_devices += 1
+
+    ```
+
+
+    ```
+
+    def __del__(self):
+
+    ```
+
+
+    ```
+
+    device.total_devices -= 1
+
+    ```
+
+
+    ```
+
+    def __str__(self):
+
+    ```
+
+
+    ```
+
+    return "{}".format(self.name)
+
+    ```
+
+
+    ```
+
+    def get_total():
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '```
+
+    return device.total_devices
+
+    ```
+
+
+    ```
+
+    class laptop(device):
+
+    ```
+
+
+    ```
+
+    def __init__(self, name, owner, wifi):
+
+    ```
+
+
+    ```
+
+    device.__init__(self, name, owner)
+
+    self.wifi = wifi
+
+    ```
+
+
+    ```
+
+    def __str__(self):
+
+    ```
+
+
+    ```
+
+    return "{} is owned by {} and connected to {}.format(self.name,
+
+    self.owner, self.wifi)
+
+    ```
+
+
+    ```
+
+    class cellular(device):
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "```\ndef __init__(self, name, owner, connection, BYOD):\n    \n    device.__init__(self,\
+    \ name, owner)\n    \n    self.connection = connection\n    \n    self.BYOD =\
+    \ BYOD\n    \n\ndef __str__(self):\n    \n    return \"{} is owned by {} and it\
+    \ uses {}. BYOD?\".format(self.name, self.owner, self.connection, self.BYOD)\n\
+    \    \n\ndevice1 = laptop(\"STAFF12\", \"IT\", \"Staff-wifi\")\n    \n\ndevice2\
+    \ = cellular(\"Jack's-iDevice\", \"Jack\", \"4G LTE\", \"yes\")\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '```
+
+    print (device1)
+
+    ```
+
+
+    ```
+
+    print (device2)
+
+    ```
+
+
+    ```
+
+    print (device.get_total())
+
+    ```
+
+
+    In this program, the parent class “device” is created with 2 attributes – name
+    and owner. The other classes, laptop and cellular, also contain name and owner
+    attributes, so we set them up to inherit them from the parent class. To set a
+    class into a parent/child relationship, the child class must pass the parent class
+    as a parameter in the declaration. This is why “class cellular(device)” is used,
+    because we are setting cellular to be linked to device.
+
+
+    Secondly, we call the device constructor method specifically within each child
+    class constructor method. When this is done, the child class actually runs the
+    entire parent constructor method. Name and owner are obtained this way, and also
+    the “total_devices += 1” line gets passed as well.
+
+
+    Both children contain a __str__ method, even though the parent class also has
+    one. Through a process called overwriting, if a special method is called that
+    exists in both the parent and child, than only the child method will run. In the
+    absence of a called method in'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: 'a child, the parent will runs its method instead. This is why referencing a
+    laptop object as a string will display laptop information, but deleting a laptop
+    object will fall back to the parent and run its destructor method instead.
+
+
+    Understanding how inheritance works can provide your applications with unprecedented
+    organization and composition. Most higher-level and advanced programs take advantage
+    of classes and their properties to quickly devise a framework for many applications
+    such as database tools, so learning them would undoubtedly improve your Python
+    skills.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "# **Example Program 7 – project7.py**\n\n```\n```python\nclass house:\n\n \
+    \   def __init__(self, name, bedrooms, bathrooms):\n\n        self.name = name\n\
+    \n        self.bedrooms = bedrooms\n\n        self.bathrooms = bathrooms\n\n \
+    \       self.cost = 0\n\n        print(\"Living space for sale!\")\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '```
+
+    def __del__(self):
+
+    ```
+
+
+    ```
+
+    print("Living space off the market.")
+
+    ```
+
+
+    ```
+
+    class apartment(house):
+
+    ```
+
+
+    ```
+
+    def __init__(self, name, bedrooms, bathrooms):
+
+    ```
+
+
+    ```
+
+    house.__init__(self, name, bedrooms, bathrooms)
+
+    ```
+
+
+    ```
+
+    self.monthly_payment = 0
+
+    ```
+
+
+    ```
+
+    forsale1 = apartment("100 Col. Ave", 2, 2)
+
+    ```
+
+
+    ```
+
+    forsale1.monthly_payment = 250
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: 'Homework program:
+
+
+    +   Expand the database program that you could optionally create in the last chapter
+    to include inheritance.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# # Modules
+
+
+    Every bit of functionality that we have used so far is built-in to Python already.
+    Python is an expansive language, but additional features can be added to Python
+    easily through modules. Those familiar with C can relate modules to “h” files
+    and preprocessor statements. Modules do much the same thing, they are included
+    in order to add new functions and commands to Python.
+
+
+    To add a new module, we only need to include one statement at the top of our program.
+
+
+    ```
+
+    import math
+
+    ```
+
+
+    So in this line, we import the “math” module, which opens up a slew of new functions
+    for us to use.
+
+
+    ```
+
+    import math
+
+    ```
+
+
+    ```
+
+    print (math.sin(3))
+
+    ```
+
+
+    ```
+
+    answer = math.sqrt(16)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '```
+
+    print (answer)
+
+    ```
+
+
+    ```
+
+    print (math.gcd(100, 125))
+
+    ```
+
+
+    In particular, sqrt(), sin(), and gcd() are three examples you can notice above.
+    Every module has a defined purpose, and math''s is to provide advanced mathematical
+    functions. Here is a list of the most important ones.
+
+
+    +   • math.sqrt() – square root of number
+
+
+    +   • math.sin() – sine of number
+
+
+    +   • math.cos() – cosine of number
+
+
+    +   • math.tan() – tangent of number
+
+
+    +   • math.log() – two parameters, log and base'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '+   * math.pi – 3.14159
+
+
+    +   * math.e – 2.71828
+
+
+    Those needing to use complicated functions such as the ones above only need to
+    "import math" at the top of the program.
+
+
+    Other specialized modules exist as well, such as datetime. Datetime is a module
+    that provides time-keeping functions. import datetime
+
+
+    ```
+
+    current_time = datetime.datetime.now()
+
+    ```
+
+
+    ```
+
+    print (current_time.hour)
+
+    ```
+
+
+    ```
+
+    print (current_time.minute)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '```
+
+    `print (current_time.second)`
+
+    ```
+
+
+    Other functions provided through datetime include:
+
+
+    +   - year
+
+    +   - month
+
+    +   - day
+
+
+    Or os, a module that unlocks operating system functions for altering files. Here
+    is a small program for creating a new folder and then making it the active directory.
+
+
+    ```
+
+    `import os`
+
+    ```
+
+
+    ```
+
+    `os.mkdir("folder") #make folder`
+
+    ```
+
+
+    ```
+
+    `os.chdir("folder") #go into folder`
+
+    ```
+
+
+    ```
+
+    `os.chdir("..") #up one directory`
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: 'More functions available to os are listed.
+
+
+    +   - os.rmdir() – delete specified folder
+
+
+    +   - os.remove() – delete specified file
+
+
+    +   - os.path.exists() – checks to see if specified file exists
+
+
+    +   - os.rename() – renames specified file to second parameter supplied
+
+
+    And other highly useful modules, such as random, statistics, and pip exist that
+    can give new features to your Python applications that were not previously possible.
+    Python also has support for downloading and using user-created modules, but that
+    is an advanced concept not covered here.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# Example Program 8 – project8.py
+
+
+    ```
+
+    import random
+
+    ```
+
+
+    ```
+
+    print ("Fortune telling...")
+
+    ```
+
+
+    ```
+
+    rng = random.randrange(1, 7)
+
+    ```
+
+
+    ```
+
+    if (rng == 1):
+
+    ```
+
+
+    ```
+
+    print("You will soon come into money.")
+
+    ```
+
+
+    ```
+
+    elif (rng == 2):
+
+    ```
+
+
+    ```
+
+    print("Consider buying stocks.")
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "```\n```python\nelif (rng == 3):\n\n    print(\"Look both ways before crossing.\"\
+    )\n\nelif (rng == 4):\n\n    print(\"Call your relatives...\")\n\nelif (rng ==\
+    \ 5):\n\n    print(\"You will get a phone call.\")\nelse:\n\n    print(\"Future\
+    \ cloudy... Try again.\")\n```\n```\n\nHomework project:"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: +   - Create a “sampler” program that shows off various Python module features.
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Common Errors
+
+
+    Because many programmers choose Python as their first language to learn, they
+    often succumb to a few common errors. If your applications are not functioning
+    correctly, or if you are looking for a few of the best programming practices,
+    than this section will help you. When code is run through Python, it may stop
+    and return an error to you. By reading the error you can learn which line the
+    error comes from, and usually Python will point (^) to the exact character that
+    is wrong. Use the information that is given to you to understand your error and
+    rectify the situation.
+
+
+    Not specifying the correct parameters is a common newbie mistake. When putting
+    values between the parentheses for a function, you must pay close attention to
+    what kind of data it expects. Some functions require only integers, and some have
+    2 or more parameters to enter. When in doubt, consult the Python documentation
+    page for the specific function you are working with. Advanced IDEs, such as Atom
+    and Eclipse often are programmed to display an example parameter list as you are
+    typing out a function, and you can follow along with the example to know what
+    each parameter is expecting.
+
+
+    Sometimes we forget to convert user input to an integer. If we are prompting a
+    user for numerical input, we must surround input() with int() for float(). Failure
+    to do this will pass the input as a string, which will likely return an error.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: 'When comparing two values, Python requires the programmer to use the double
+    equal sign (==). When assigning a value, you must use the single equal sign (=).
+    Using an inappropriate sign for any occasion will always return a syntax error.
+
+
+    After every comparison statement and loop (such as if, elif, else, for, while,
+    def, and class) there is a colon (:). This colon denotes that the next line should
+    be indented, and thus all indented lines will fall within the function''s scope.
+    Failure to place a colon returns a syntax error.
+
+
+    Strings and functions are usually surrounded by a pair of characters. Functions
+    use parentheses, while strings use quotations to indicate where their boundaries
+    are. If you ever forget to supply the closing character, Python will surely return
+    an error.
+
+
+    Beginners will often try to use functions that are not in Python by default without
+    including the correct module. Trying to call an advanced math function, or editing
+    a file directory is not possible with regular Python. Always place the import
+    commands for modules you will use at the top of the program, or the application
+    will simply not run.'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: 'Indentations are required in Python. Those coming from other programming languages
+    will likely forget this and indent in their own personal style. This will break
+    mostly all Python programs, because the interpreter expects a certain formatting
+    standard. An error will be returned every time that indentations are incorrect.
+    Pay close attention to your indentation levels or risk your program failing to
+    logic and syntax errors.
+
+
+    Programming languages demand perfect syntax at all times. Because of this, even
+    a spelling error can be disastrous for our applications. Besides indentation problems
+    and misspelled functions, giving the wrong variable name or accidentally calling
+    the wrong function can make your program fail outright or perform unexpectedly.
+    When coding, double check over your scripts to ensure no characters are out of
+    place. Test your code after each implementation so you know that when an error
+    occurs it should be coming from a new addition. Sometimes there is an error or
+    bug in the code and it just cannot be rectified after reviewing the code. Programmers
+    must “debug” their code by following it line-by-line at this point, “tracing”
+    the path that the interpreter takes as it runs the program. Some IDE’s have tools
+    for debugging, such as “breakpoints” or “line stops” that allow you to run each
+    line at the click of a button. Taking the program slow like that can reveal the
+    source of the issue most of the time, but it takes a keen eye and a dedicated
+    troubleshooter to fix code.
+
+
+    Many programmers consider it unnecessary, but commenting your scripts is an essential
+    part of coding. Failure to do so is an extremely common beginner mistake that
+    many first time programmers fail for. Once you master the art of Python and begin
+    programming in a company with other coders, there might be multiple people working
+    on the same script. Even the cleanest code'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'is confusing to look at for the first time, but comments help to demystify
+    the complex characters. Moreover, coming back to an old script of yours from weeks
+    past can feel like reading a foreign language- comments help you to quickly get
+    back to coding. Many programmers put a comment as the top line of their program
+    with a brief description of what the script does, when it was written, and any
+    contributors to it. That way the next time you are quickly looking through files
+    trying to find a certain program, the comments can help you understand what is
+    inside without actually running or deciphering the code.
+
+
+    The final common mistake that runs rampant in Python newbies is variable naming.
+    If it has not already been brought to light in your experimentation, there are
+    just certain names that you cannot name your variables. “Reserved ” words such
+    as class, break, print, and, or, while, etc... are keywords that cannot be used
+    for a variable name. If Python detects their use a syntax error will occur. Besides
+    errors, though, programmers often use bad form when naming their variables. Avoid
+    ambiguous and simple variable names such as “number” or “var1” in favor of descriptive
+    one such as “user_input” or “totalNumberOfDogs”. These variables explain their
+    use at a glance, so a verbose programmer will never misuse a variable or have
+    to check what its intent is. Python programmers typically use the underscore method
+    to name their variables (grade_average, dog_1), but camelCase is acceptable as
+    well (userInput, multiAnswer). No matter which method is used, a skillful programmer
+    will always make the name descriptive.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# Conclusion
+
+
+    Thank you again for downloading this beginner’s guide to Python. Now that you
+    have finished the text, you have a basic knowledge of how Python works, and you
+    should be able to write your own programs. You can further increase your knowledge
+    by attempting to create larger and more complicated programs, or you can study
+    modules and learn new functions. If you have enjoyed the book, rate and leave
+    a review on Amazon so more high quality books can be produced.'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Hacking University Senior Edition
+
+
+    # Linux
+
+
+    Optimal beginner''s guide to precisely learn and conquer the Linux operating system.
+    A complete step-by-step guide in how the Linux command line works
+
+
+    *BY ISAAC D. CODY*'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# HACKING UNIVERSITY
+
+
+    # SENIOR EDITION
+
+
+    # LINUX
+
+
+    Optimal Beginner''s Guide To Precisely Learn And Conquer The Linux Operating System.
+    A Complete Step By Step Guide In How Linux Command Line Works
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_120_0.png)
+
+
+    # ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# Table of Contents
+
+
+    +   * [Introduction](#)
+
+
+    +   * [History of Linux](#)
+
+
+    +   * [Benefits of Linux](#)
+
+
+    +   * [Linux Distributions](#)
+
+
+    +   * [Booting Into Linux](#)
+
+
+    +   * [Ubuntu Basics](#)
+
+
+    +   * [Installing Linux](#)
+
+
+    +   * [Managing Hardware and Software](#)
+
+
+    +   * [The Command Line / Terminal](#)
+
+
+    +   * [Managing Directories](#)
+
+
+    +   * [Apt](#)'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: 'More Terminal Commands
+
+
+    Connecting to Windows / Mac Computers
+
+
+    Useful Applications
+
+
+    Administration
+
+
+    Security Protocols
+
+
+    Scripting
+
+
+    Advanced Terminal Concepts
+
+
+    I/O Redirection
+
+
+    More Linux Information
+
+
+    What Next and Conclusion'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# Copyright 2016 by Isaac D. Cody - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# # Disclaimer
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Introduction
+
+
+    Computers contain two functional components- software and hardware. The hardware
+    is the physical parts that spin, compute, and use electricity to perform calculations,
+    but software is a more virtual concept. Essentially, software consists of programming
+    code that gives instructions to the hardware- telling the parts what to do. There
+    is “high level” software such as Internet browsers, word processors, music players,
+    and more. But the often overlooked component is the “low level” software known
+    as an operating system.
+
+
+    Operating systems are required for our personal computers to work. At an office,
+    or with a relatively inexpensive desktop computer the operating system used is
+    probably Microsoft’s Windows. Content creators, writers, and graphic artists prefer
+    Apple computers because they come with the creativity-focused OSX operating system.
+    Those two OS’s, Windows and OSX, have dominated the consumer market for many years.
+    However, an alternative operating system exists that excels in usability, customization,
+    security, and price. OS’s based off of the relatively unknown Linux meet and exceed
+    in all of those areas, but it remains an obscure option that many people have
+    not even heard of.
+
+
+    Linux is not an operating system by itself. It is a kernel, or the “core” of an
+    OS. Just as Windows NT is the kernel of Windows 7,'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: 'Linux is the kernel of “distributions” such as Ubuntu, Debian, Arch, Fedora,
+    and more.
+
+
+    But why would anybody abandon the familiarity of Windows for an unheard of computing
+    environment? Linux is not only monerarily free, but it is also compatible with
+    a huge range of devices. Older computers, and especially ones that no longer work
+    can be rejuvenated with a Linux OS, making it run as though it were new again.
+
+
+    This book will explicate upon the benefits of switching to Linux, as well as serve
+    as a beginners guide to installing, configuring, and using the most popular distribution.
+    Then, the terminal command line will be explained to tell how to take advantage
+    of the OS in ways not possible in other systems. Truly there are many advantages
+    to be gained by switching to Linux, and you just might find a suitable primary
+    OS to use on your computers by reading this book.'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# History of Linux
+
+
+    In the early 1990s Linus Torvalds was a student in Finland. Computers of the time
+    usually ran on either DOS or UNIX, two operating systems that were both proprietary
+    and difficult to use at the time. Torvalds sought to create his own operating
+    system as a hobby project (based off of UNIX), but the project quickly grew and
+    attracted more developers. The kernel continued to transform until it was portable
+    (usable on a variety of systems) and entirely usable for computing. A kernel is
+    not an OS, though, so Linux was combined with the GNU core utilities to create
+    a computing environment reminiscent of an operating system.
+
+
+    Then, 3rd party organizations took the base Linux product and added their own
+    high level software and features to it, thereby creating Linux “distributions”.
+    Linux remains a free hobby project even through today, and thus the kernel is
+    continuously receiving updates and revisions by Torvalds and the community. Throughout
+    the 2000s, many other 3rd parties saw the usefulness of the Linux environment
+    and they began to incorporate it into their production environments and corporations.
+    Today, Linux is known for being highly used in servers and business settings with
+    a small dedicated desktop following. Working towards the future, the kernel has
+    reached a level of popularity where it will never die out. Large companies revel
+    in Linux because of its advantages and usefulness, and so the kernel and various
+    distributions will always exist as the best alternative operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# ## Benefits of Linux
+
+
+    To compare how great of an option Linux is for a computer, we shall compare it
+    to the more familiar modern operating systems.
+
+
+    First, Linux is free. The background of GNU places Linux into a “free and open
+    source” mentality where most (if not all) of the software shipping with Linux
+    is free. Free and open source (FOSS) refers to two things- the software is both
+    monetarily free and the source code is also transparent. FOSS differs from proprietary
+    software in that everything is open with FOSS, and there are no hidden spyware,
+    fees, or catches involved with using it. The software is often more secure because
+    anybody can contribute to the readily available source code and make it better.
+    Because Linux and most of the software you can download for it is free, it is
+    a fantastic operating system for small businesses or individual users on a budget.
+    Certainly no quality is sacrificed by not charging a fee, because the Linux project
+    and its various distributions are community-driven and funded through donations.
+    Compare this to the cost of Windows, which is often many hundreds of dollars for
+    the OS alone. Microsoft Office is a popular document writing program suite, but
+    it also prices high. Free alternatives to these programs exist in Linux, and they
+    definitely compare in quality to the big name products.
+
+
+    Probably the largest complaint held by PC owners is viruses. Windows computers
+    are especially susceptible to them, and even'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: 'anti-virus software companies are always playing catch-up to the newest threats.
+    Simply visiting a malicious website is often enough to infect a computer, and
+    many users choose Mac computers because of the significantly less frequency of
+    incidents relating to malware. Linux-based operating systems are similar to Macs
+    in that viruses are virtually non-existent. This increased security makes switching
+    to Linux a must for anybody concerned about privacy, security, or reliability.
+
+
+    Linux is very popular within corporations and government agencies. This is because
+    high-powered servers and critical devices will run remarkably better with Linux
+    as the operating system. The OS is known for reliability and stability too. While
+    a Windows computer will need regular restarts and maintenance to “freshen” it
+    up and keep it from running slow, Linux servers can run months or even years without
+    a single restart. IT professionals inevitably choose Linux to be the backbone
+    of their network because of its reputation. Its renowned stability is available
+    to consumers as well on the desktop platform, and it is definitely useful for
+    us as well.
+
+
+    Perhaps the best benefit to using Linux is the speed. Low system requirements
+    mean that computers that are normally slow and groggy on Windows will be zippy
+    and quick on Linux. Users frustrated with computer slowdowns can replace their
+    OS for a more responsive experience. Furthermore, Linux can be installed on older
+    computers to reinvigorate them. So even though that old laptop may be too outdated
+    for the newest version of Windows, there will probably be a distribution of Linux
+    that will squeeze a few more years of useful life out of it.'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: 'Customization is a sought after feature in technology. Windows, and especially
+    OSX, limit the amount that you can do with your operating system out of fear that
+    the average user would break it. This is not the case with Linux, as it encourages
+    editing and changing visuals and functionality of the OS. Of course it is not
+    necessary, and the default configuration of most Linux distributions is extremely
+    stable and difficult to break unintentionally. But for those that love jailbreaking,
+    modding, and playing around with computers, Linux can facilitate the creative
+    side and even provide curious hackers with access to tools unavailable in other
+    systems.
+
+
+    And finally, Linux is compatible with a huge range of devices. Linux can run on
+    almost any architecture, meaning it can be installed on cell phones, desktops,
+    laptops, servers, game consoles, and “smart” devices. Hobbyists take pleasure
+    in simply installing Linux on niche, old, or quirky devices simply because they
+    can. For the average user, it means that Linux is probably compatible with your
+    computer.
+
+
+    Overall, Linux beats out the mainstream operating systems in many areas. All of
+    these things definitely make Linux the better choice for your computer, and you
+    should use it to gain access to these revered features. Artists, hackers, creative
+    individuals, small business owners, techies, non-techies, and just about everyone
+    can find something to like about Linux. The wide range of distributions means
+    there is something for everyone, so install Linux today to see what you can gain
+    from it.'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# # Linux Distributions
+
+
+    Installing Linux can be done in a few ways, such as burning an image of the OS
+    onto a disc, writing it to a USB, ordering a Live CD from online, formatting an
+    SD card, or trying one out via Virtual Box. Ultimately though you cannot just
+    install "Linux" and have a usable OS. Because Linux is just the kernel, you will
+    need the other software as well that gives you graphical user interfaces, Internet
+    access, etc... As previously mentioned, "distributions" of Linux exist. Distributions
+    are versions of Linux containing preinstalled programs and a distinctive style
+    and focus. A distribution takes the core of Linux and makes it into an entire
+    operating system fit for daily use.
+
+
+    There are a mind-boggling amount of distributions. Some have specific purposes,
+    such as Kali Linux for hacking, Sugar Linux for education, or Arch Linux for customization.
+    Others are more general purpose, such as Ubuntu and Debian. Getting the most out
+    of installing Linux means you will need to understand about different distributions
+    and make a choice as to which will work best for you. Read the following sections
+    to understand what a few of the most popular distributions are used for.
+
+
+    Ubuntu is the most widely known distribution at the time of writing. Throughout
+    the 2000''s it gained popularity for being user friendly and inituitive. Based
+    off of the earlier Debian distro, Ubuntu is very similar to Windows computers
+    in use, meaning it is an'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: 'excellent choice for the Linux newbie. Because of this, we will be installing
+    an Ubuntu variant later in the book. Canonical Ltd is the company that actively
+    develops Ubuntu- yearly versions updates mean that the OS is always up to date
+    and usable with emerging technology. Despite this, Ubuntu still work on many older
+    devices at a reasonable speed. Applications can be installed from a "store" of
+    sorts, meaning that the beginning user does not need to understand the often complicated
+    command line. Conclusively, the Ubuntu distro is a great choice for the first
+    time Linux user, and you should install it to learn how Linux works without diving
+    into the harder distros.
+
+
+    For more specific cases of computing, Ubuntu has various sub-distributions or
+    "flavors". These are distros that use Ubuntu as a base but have a different focus,
+    such as Lubuntu’s emphasis on lightweight applications. Here are a few:
+
+
+    +   * Lubuntu – A version of Ubuntu designed to run on older hardware or computers
+    with limited resources. The install file is less than 1GB, and the hardware requirements
+    are much lower than standard Ubuntu. Use this distro for revitalizing older computers
+    but while retaining the usability of Ubuntu.
+
+
+    +   * Ubuntu Studio – Ubuntu for artists including digital painters, sound producers,
+    and video editors. Ubuntu studio is Ubuntu but with editing tools installed already.'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '+   - Kubuntu – Ubuntu reskinned with the KDE desktop environment. The look
+    and feel of Kubuntu differs from the classic Ubuntu feel by providing a desktop
+    environment that is more traditional to other operating systems.
+
+
+    +   - Xubuntu is another lightweight distro that is not as quite as bare bones
+    as Lubuntu. Xubuntu sacrifices size and hardware requirements to provide an OS
+    that works on old, but not too old computers. It certainly is more aesthetic than
+    other minimal Linux distributions, and it also uses Ubuntu as a base for user-friendliness
+    and familiarity.
+
+
+    +   - Ubuntu Server – A Ubuntu variant more suited to industrial and corporate
+    needs, Ubuntu server can be run headless and provide functionality for other Linux
+    systems in a network.
+
+
+    +   - Mythbuntu – A variant with TV streaming and live television programs preinstalled.
+    This is a great distro for converting old computers into “smart TV” devices via
+    Kodi.
+
+
+    In conclusion, the wide range of Ubuntu distributions mean that there is a beginner
+    OS for everybody. It is highly recommended that you take advantage of the ease
+    of use features and general familiarity contained within Ubuntu. It serves as
+    a stepping stone'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: 'OS, one that will gradually introduce you to Linux. Definitely install it as
+    your first Linux experience.
+
+
+    Linux Mint is a highly used OS in the Linux world. "Powerful and easy to use",
+    Mint contains FOSS and proprietary software as well with the purpose of being
+    a complete experience for Linux beginners. While not totally Linux-like, Mint
+    is an excellent choice for a first-time alternate operating system. It consistently
+    ranks among the most used operating systems ever, and its default layout is very
+    similar to Windows facilitating a smooth transition into the Linux world.
+
+
+    Debian is one of the oldest Linux distributions, being created in 1993. Combining
+    with the Linux philosophy, Debian keeps stability and solidity as the guiding
+    development principal. Certainly the amount of time Debian has been around is
+    an indicator of refinement, so those seeking an experience free of bugs and glitches
+    can turn to Debian. Free and open source software also has a home in Debian, because
+    most of the software contained within is FOSS. This does not mean that you are
+    limited, though, because there is an official repository of non-free software
+    for proprietary programs such as Adobe Flash. Debian is a decent choice for beginners,
+    but Ubuntu still stands as the best introductory OS. Install Debian for stability,
+    FOSS, and a wholly Linux experience.
+
+
+    Slackware is an OS that goes back even further than Debian. It stays close to
+    the original Linux intent, meaning that you will have to install your own GUI
+    and program dependencies. Because of that fact, Slackware is mostly for intermediate
+    Linux users, as beginners'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: 'will be confused at the unfamiliar methods. However, if you want to experience
+    a Linux distribution that is closer to the UNIX roots, Slackware can provide for
+    you.
+
+
+    Fedora is an OS more oriented towards workstations and business uses. Even Linus
+    Torvalds himself is a user of Fedora, attributing to the operating system''s popularity
+    and use. Fedora is updated very often, meaning that it is always up-to-date and
+    on the cutting edge of Linux technology. Security and FOSS are also a focus within
+    the OS, which is why it is commonly used on endpoint computers in small businesses.
+    There could be a challenge with working with Fedora, though, so consider it as
+    an intermediate OS.
+
+
+    Arch Linux is another distribution, but one that is mostly designed for experienced
+    users. The OS comes as a shell of a system that the user can customize to their
+    liking, by adding only the programs and services that they want. Because of this,
+    Arch is difficult to set up, but a rewarding and learning experience as well.
+    By building your own personal system, you will understand the deeper Linux concepts
+    that are hidden from you on the higher level distributions. Install this advanced
+    OS after becoming very comfortable with the basics.
+
+
+    And finally, there is an abundance of other unique distributions that are worth
+    mentioning. In the following list, we will talk about a few of them. Just note
+    that there are so many distributions, this entire book could be filled describing
+    each and every niche use.'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '+   - CrunchBang – A Debian-based distribution that aims to be less resource
+    intensive. It is simple and without some of the bloatware that some distributions
+    include by default. CrunchBang can run fast and be efficient at computing.
+
+
+    +   - Android – The popular phone OS is actually a Linux variant. Since many phones
+    have lower specifications than full desktop PCs, the OS is a great choice for
+    laptops, touchscreen devices, or home media computers. Furthermore, you can use
+    many of the Google Apps from the Play store, meaning that thousands of apps, games,
+    and utilities are available to be used on your phone and computer. While it is
+    not recommended as your first Linux OS, it is definitely a neat choice for experimenting
+    with older computers or children’s PCs.
+
+
+    +   - Chrome OS – Another mobile-type OS developed by Google, Chrome OS is essentially
+    a lightweight Linux browser meant for online use. Google has this OS preinstalled
+    on their ChromeBooks, which have lower specifications than other laptops. But
+    the OS is really only a full screen Chrome browser, so the OS is perfect for users
+    wanting an uncomplicated experience or a dedicated Internet machine.
+
+
+    +   - Tiny Core – An OS measured in megabytes, Tiny Core is for antique computers
+    or embedded devices. This OS is'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: 'mostly for intermediate users that have a hobby project or dedicated purpose
+    in mind.
+
+
+    +   Damn Small Linux – Another minimal Linux variant, this OS is best for quick
+    access to a Linux command line.
+
+
+    +   openSUSE – This is a distribution for experienced computer users. With many
+    tools for administrators and program developers, openSUSE is the best OS for users
+    confident in their skills.
+
+
+    Positively the number of operating systems based off of the Linux kernel is astounding.
+    With a huge amount of choices, you might be confused as to where to start and
+    how to install it. When in doubt (and as we will demonstrate shortly), install
+    Ubuntu or one of its variants. The OS is great for beginners and makes the Linux
+    transition smoother. But as you increase in skill and wish to learn more about
+    Linux, you can always install another operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# Booting Into Linux
+
+
+    If you are ready to take the plunge into a Linux based distribution, the first
+    thing you must do is back up your files. Overwriting the OS on your hard drive
+    will erase any data contained within, meaning you must back up any pictures, music,
+    or files you wish to keep after the transition. Use an external hard drive, or
+    an online data storage site (such as Google Drive) to temporarily hold your files.
+    We are not responsible for you losing something important, back it up!
+
+
+    Next we will need to choose an OS. This book will use Ubuntu 16.04 as an extended
+    example, and it is recommended you do the same. Navigate to Canonical''s official
+    website ([http://www.ubuntu.com](http://www.ubuntu.com)) and acquire a copy of
+    the OS. You will download the image from the site to your computer.
+
+
+    Next we need to obtain an installation media. This can be a DVD, a USB drive,
+    an SD card, or any other writable media that your computer can read. The only
+    restriction is that the device must be able to hold an image as large as the OS
+    download, so 4GB should be suffice. Remove everything from the drive, as it will
+    also be formatted.'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: 'Download a tool for writing the image file. For DVDs install Imgburn ([http://www.imgburn.com/](http://www.imgburn.com/)),
+    and for flash media download Rufus ([https://rufus.akeo.ie/](https://rufus.akeo.ie/)).
+    The most common method of OS installation is to use a 4GB USB drive, and it is
+    more recommended. Insert your media, start the appropriate program, select the
+    OS image that was downloaded, and begin the writing process. It will take some
+    time, as the image needs to be made bootable on the media. When it is finished,
+    you can shut down your computer fully.
+
+
+    This is the point to make double sure you are ready to install Linux. Check that
+    your files are backed up, understand that you will be erasing your current OS,
+    and preferably have a Windows/OSX install disc handy in case you decide to switch
+    back. If you are indeed ready to switch, continue.
+
+
+    With the installation media still inserted, turn on your computer. The first screen
+    that you will see is the BIOS / UEFI POST screen, and it will give a keyboard
+    button that you should press to enter setup. This screen shows every time you
+    boot, but you probably pay no attention to it. Press the indicated key to enter
+    the BIOS setup. If you are too slow, the screen will disappear and your usual
+    OS will begin to load. If this happens, simply shut the computer back down and
+    try again.
+
+
+    Once within the BIOS / UEFI, you will have to navigate to the “boot order” settings.
+    Every computer’s BIOS / UEFI is slightly different, so we cannot explain the process
+    in detail. But generally you can follow button prompts at the bottom of the screen
+    to understand how to navigate. After arriving at the boot order settings,'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: 'place your boot medium at the top of the list. As an example, if you used a
+    USB drive, then you would see its name and have to bring it to the top of the
+    list. These settings control the order in which the PC searches for operating
+    systems. With our boot medium at the top of the list, it will boot into our downloaded
+    Linux image instead of our usual OS. Save your settings and restart the computer.
+    If everything was done correctly the computer will begin to boot into Ubuntu.
+
+
+    But if something goes wrong, try troubleshooting it with these tips:
+
+
+    +   * Primary OS boots instead of Linux – You probably did not save the settings
+    with your alternate boot medium at the top of the list. The PC is still defaulting
+    to the internal HDD to boot.
+
+
+    +   * “No boot media found” – Did you “drag and drop” your Linux image onto the
+    media instead of writing it? Without explicitly telling the computer it is bootable,
+    it will not know what to do with the data files on the media. Alternatively, you
+    could have a corrupted download, or an incomplete write. Try downloading the image
+    again and making another installation.
+
+
+    +   * “Kernel Panic” – Something is wrong with the boot process. See above for
+    the possibility of a corrupted'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: 'installation. Otherwise, the image you are trying to install may not be compatible
+    with your hardware. IF you see any other error messages, do an Internet search
+    on them. For prebuilt computers and laptops, search for the model name and Linux
+    to find other user’s experiences. Finally, you might have attempted to install
+    a 64-bit image on a 32-bit computer. With your next image download, specifically
+    select a 32-bit image.
+
+
+    +   * “Problem reading data from CD-ROM..." – Try using a different install medium,
+    because some distributions no longer support CD and DVD installations. USB drives
+    are recommended.
+
+
+    +   * PC seems to boot, but there is nothing at all on the screen – If you are
+    using a dedicated graphics card (compared to integrated GFX from the CPU), Linux
+    might not be recognizing it completely. Plug your monitor into the motherboard
+    directly instead of the card.
+
+
+    But most of those problems are rare or simply due to user error. Linux has high
+    compatibility and is relatively easy to install/use past the initial installation.
+    The typical user will have Ubuntu boot successfully at this point, and they will
+    be presented with a working computing environment.'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: The desktop you see is referred to as a “Live CD”, which is pretty much a demonstration
+    of the OS and how it works. You have not actually installed the OS to your hard
+    drive yet, as it is still running directly from your boot media. It is a chance
+    for you to test out Linux without actually removing your primary OS, so take the
+    opportunity to explore how Linux distributions work.
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# Ubuntu Basics
+
+
+    Similar to Windows, Ubuntu has a desktop graphical user interface. Applications
+    open within Windows that can be maximized, minimized, closed, and moved around
+    with the top bar. Ubuntu also has a "task bar" of sorts that functions much like
+    its Windows counterpart- icons resemble programs that can be launched by clicking
+    on them. The "Windows Button" (called the Dash Button) on the task bar is used
+    to open a search functionality from which you can type in the name of a program
+    or file on your computer to quickly start it.
+
+
+    Furthermore, there is a bar at the top of the screen that works like the "menu"
+    bar of other operating systems. This is where drop-down menus such as "file",
+    "edit", "help", etc... will appear once a program is active.
+
+
+    Besides a few nominal differences Ubuntu functions is a very familiar way. In
+    fact, many of the programs that you may already use on other operating systems,
+    such as Firefox, are available and sometimes preinstalled on Linux distributions.
+    With enough experimentation and practice, you will be able to navigate the GUI
+    of Ubuntu as if you were a professional. Continue exploring the system, and continue
+    if you are ready to replace your main operating system with this Linux one.'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# ## Installing Linux
+
+
+    On the desktop, you will see an “Install Ubuntu 16.04 LTS” icon. Double clicking
+    it will launch an application that makes installation very easy. If you are not
+    connected to the Internet, do so now by plugging in an Ethernet cord or by connecting
+    to Wi-Fi from the top right icon. Select your language and click “continue”. The
+    next prompt will ask whether you would like to download updates and install third-party
+    software during the OS installation. These options are highly recommended for
+    beginners, so check them and click “continue”.
+
+
+    The application will move on to another screen asking for your install method.
+    There are various options, such as erasing the disk altogether, installing alongside
+    your primary OS, or updating a previous version of Linux. Select an option that
+    works best for you. If you are still hesitant about making a full switch, elect
+    to install Ubuntu as your secondary OS. That option will allow you to choose which
+    OS to boot into after the BIOS screen. Nevertheless, select your option and click
+    “install now”.
+
+
+    While Ubuntu installs, you can specify a few other options, such as your time
+    zone, computer name, account name, and password. The entire installation should
+    not take too long, but it will take long enough that your computer should be plugged
+    in (if it is a laptop). After finishing, the OS will require a reboot. Congratulations,
+    you now have a usable Linux system on your computer. Throughout the next chapters
+    in this publication we will'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: focus on Linux concepts, how do achieve certain tasks, and how to further your
+    knowledge of your system.
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# Managing Hardware and Software
+
+
+    Hardware in Linux is actually much easier to manage than hardware on Windows.
+    Instead of downloading individual drivers for devices, most of the drivers are
+    built-in to the OS itself. This means that most popular devices can simply be
+    installed with no further steps involved before they are usable. Printers, networks,
+    hard drives, and other common devices are included- fiddling with drivers is not
+    usually needed on Linux.
+
+
+    However, powerful graphics cards and other specific hardware will need proprietary
+    drivers from that company to function to full efficiency. Because although your
+    graphics card works by default with Linux, the secret and often hidden technology
+    within can only be fully utilized with that company’s software. On Ubuntu the
+    process is straightforward- open the “additional drivers” application and let
+    the OS search for you. After determining whether you have the devices, it will
+    ask you which version of the driver to use. Follow any on-screen prompts to enable
+    the 3rd party drivers. For any devices that do not appear, do Internet research
+    on the manufacturer’s website to determine whether they released a specific Linux
+    driver that you can download.
+
+
+    Software is another aspect of Linux that excels over Windows. Much like an Apple
+    computer, Ubuntu has an app store of sorts from which you can search through repositories
+    of applications that are compatible with your device to download and install with
+    just a few clicks. Just search for the “Ubuntu Software Center” from dash to'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: 'open the application. From there you can browse individual categories such
+    as “Games”, “Office”, or “System” for a list of programs, or you can search directly
+    by name. After finding a program, click on it and then queue up the download by
+    clicking “install”. After authenticating yourself the software will automatically
+    download and install. From there, the application can be run by searching for
+    it in the dash.
+
+
+    Another method of installing software is available through the terminal, but we
+    will discuss that later. Ubuntu is not totally limited to software found in the
+    app store, because programs downloaded from the Internet can also be installed.
+    Once again, we will touch on that subject after discussing the terminal.
+
+
+    Overall, managing hardware and software in Ubuntu is effortless. Whether installing
+    a new hardware device or downloading a popular program, Linux distributions make
+    you''re computing experience trouble-free. That is not to say that Linux is wholly
+    meant for beginners, because as we will learn Linux is definitely a great choice
+    for power users and experienced admins.'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# **The Command Line / Terminal**
+
+
+    Before modern computers, hardware and software were interfaced by using keyboards
+    exclusively. The mouse brought graphical interfaces and simplified the process,
+    but many functions remained text-only as to not present complicated options to
+    end users. In Linux, this process continues today. There exists the GUI that is
+    present on most distributions, but every Linux distro also has a built-in text-based
+    interface as well, from which powerful commands can be typed and executed. Think
+    of the terminal as a much more powerful command prompt, because you can completely
+    use your computer exclusively through the terminal alone. With enough knowledge,
+    a user can actually browse the Internet, install programs, manage their file system,
+    and more through text.
+
+
+    Begin the terminal by launching it from dash or by using the Ctrl+Alt+T keyboard
+    shortcut. A purple window will open and wait for your input. You can type a command
+    and press enter to activate it. For our first command, enter “ls”. This is short
+    for list, and it will display all of the files within our current directory. You
+    will be able to see the files and folders in Home, Ubuntu’s main user folder.
+    If you are lost, you can always type in “pwd” to print the working directory and
+    display the name of the folder you are currently browsing. As you learn commands,
+    it helps to write them down as to better internalize their use.'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# ## Managing Directories
+
+
+    Directories, another name for folders, work the same as they do in other operating
+    systems. Folders hold files, and you must be currently accessing a directory in
+    order to interact with the files inside of it. You can use the terminal command
+    "cd" to change directory and move about the file system. As an example, typing
+    "cd Desktop" from the Home folder will transfer you to that folder. Now using
+    "ls" will not show anything (unless you added files to the desktop). To back out,
+    type "cd ..". Practice navigating around the file system in this fashion; cd into
+    a directory and ls to view the files.
+
+
+    Because you are typing commands, Linux expects your input to be exact. If you
+    misspell a command it will simply not work, and if you type a folder or file incorrectly
+    it will try to reference something that does not exist. Watch your input carefully
+    when using the terminal.
+
+
+    Opening a file is done with a different command – ".". The period is used to start
+    the specified file, so if you were attempting to open a picture it could be done
+    like so: ".//house.png". Both the period and the slash are necessary, as it denotes
+    that you are running a file within the current directory. When you run a file
+    it will be opened with the default application assigned to the file type, so in
+    the case of a picture it will most likely be opened in an image viewer.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: 'You can also create and remove directories and files through terminal as well.
+    For this example navigate to the Home directory. As a shortcut you can type “cd
+    ~” to change the directory to your Home, because the tilde key is short for “the
+    current user’s home”. Make a directory with the “mkdir” command; type, “mkdir
+    Programming” to create a new folder with that title. You can CD into it, or you
+    can go to the GUI and enter it to prove that you have indeed created a new folder.
+    Now remove that directory by going Home and typing “rmdir Programming”. Without
+    hesitation, Linux will remove the specified directory. Similarly, using “rm” will
+    remove the specified file.
+
+
+    Linux has a design philosophy that many users are not used to. In Windows and
+    OSX, the OS will almost always double check that you want to commence with an
+    action such as deleting a file or uninstalling a program. Linux distributions
+    believe that if you are imitating an event, you definitely mean to follow through
+    with it. It will not typically confirm deleting something, nor will it display
+    any confirmation messages (file successfully deleted). Rather, the absence of
+    a message indicates the process completed successfully. While the philosophy is
+    somewhat dangerous (because you could potentially ruin your OS installation without
+    warning), it serves as a design contrast to other operating systems. Linux gives
+    you complete control, and it never tries to hide anything or obscure options because
+    they might be too complicated. It takes some time to get used to, but most users
+    agree it is a welcome change to be respected by the technology they own.
+
+
+    This does not compromise security, however, because any critical action requires
+    the “sudo” command as a prefix. Sudo stands for “super user do”, meaning that
+    the user of the highest permissions is requesting the following command. Any sudo
+    entry'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: will require an administrator password, so malicious software or un-intending
+    keyboard spammers cannot accidently do damage without knowing the password first.
+    A lot of the commands we use in this book require sudo permissions, so if the
+    command fails to complete with a message explaining it does not have enough permissions
+    you can retry with sudo.
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# # Apt
+
+
+    Learning the terminal opens up computer functions that are not available through
+    the GUI. Also, you can shorten the amount of time it takes to do many things by
+    typing it instead. Take, for instance, the amount of work required installing
+    a program. If you wanted to download the Google Chromium browser, you would have
+    to open the software center, type in the name of the program, locate the correct
+    package, mark it for installation, and execute the action. Compare that to typing
+    “sudo apt-get install chromium-browser” into the terminal. With that one command,
+    Ubuntu will save you many minutes.
+
+
+    Apt (advanced packaging tool) is the command associated with managing applications
+    in Ubuntu. Other distributions may use their own tool, but apt is commonly used
+    for its large repositories and simple commands. Packages are installed with the
+    “apt-get install” formatting, where you specify the name of the program you wish
+    to install. In the example above we specify the Chromium program with the package
+    name “chromium-browser”. Given that you do not know every package name, there
+    is another command “apt-cache search” that can be used to locate package names
+    matching the supplied string. So “apt-cache search chromium” would show “chromium-browser”,
+    and you could specify the correct name to install.
+
+
+    The usefulness of apt extends beyond that, as you can use it to update every single
+    application on your system with a few'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: 'commands. Use "apt-get update" to refresh the repository, then use "apt-get
+    upgrade" to have every application upgrade itself to the newest version. Windows
+    OS users should be envious at this easy process, because updating a Windows programs
+    requires uninstalling and reinstalling with the newest version.
+
+
+    As time goes by, you might need to update the Ubuntu version. Every year there
+    is a new release, and it can be installed with "apt-get dist-upgrade". Staying
+    up to date with the newest fixes and additions ensures your Linux system will
+    be working healthy for a long time. You might have even noticed that installing
+    and updating the system does not require a reboot; a feature that contributes
+    to Linux computer''s lengthy uptimes and stability. Lastly, removing an application
+    is done with "apt-get remove" followed by the package name.
+
+
+    To run the programs that we install we can either search for them from the dash,
+    or we can just type the package name into the terminal. Typing "chromium-browser"
+    will launch it just the same as double clicking its icon would. Some programs
+    must be started from the command line by typing the package name exclusively because
+    the package does not show up in a dash search. Overall utilizing the terminal
+    is a time-saver and a great way to practice moving away from slow and cumbersome
+    graphical user interfaces.
+
+
+    Easy installation and management of packages is a Linux feature that becomes highly
+    useful- master it to improve your experience. There is a third method of installing
+    packages, and it involves downloading and launching .deb files from the Internet.'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: Some software are bundled in that format, and they act similar to .exe files
+    in that they just need to be double clicked to begin the installation process.
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# # More Terminal Commands
+
+
+    Here are a few more basic terminal commands that you should internalize and put
+    to use in your system. Fully understanding the basics will provide a decent foundation
+    upon which to build on later.
+
+
+    +   - cp - “cp image1.jpg image2.jpg” - copies (and renames) the first parameter
+    to the second supplied parameter. Copy directories with the -r switch.
+
+
+    +   - mv - “mv cat.jpg /home/Pictures” - Move the specified file to the given
+    directory.
+
+
+    +   - shutdown - “shutdown -h now” - shuts down the computer. -h is a tag meaning
+    “halt”, but you can also use -r to restart. Now refers to the time until it executes.
+
+
+    +   - date - “date” - Displays the current date and time.'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '+   * free – “free –g” – Show the current RAM usage of programs.
+
+
+    +   * du – “du –h” – Give the HDD usage.
+
+
+    +   * ps – “ps” – Show the active processes using CPU time.
+
+
+    +   * touch – “touch memo.txt” – Used to create a new blank file in the current
+    directory with the specified name.
+
+
+    +   * ifconfig – “ifconfig” – The Linux equivalent of ipconfig, it shows network
+    information.
+
+
+    Some commands have “tags” or “switches” associated with them. These are the letters
+    preceded by dashes. They all do different things, and learning which switches
+    to use for what purpose is best found through that command’s manual pages. See
+    the advanced section for opening the manual.
+
+
+    One of the most useful programs from the command line, nano is a simple text editor
+    that can be used to edit files and quickly make changes to settings or scripts.
+    It is accessed by typing “nano” into a'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: 'command line. You can type a file as needed and then press ctrl+x to save and
+    quit. As you save, you will give it the name and file extension associated with
+    it; notes.txt will create a text file with the name “notes”. Alternatively, you
+    can edit a file by typing “nano notes.txt”. In that example, we open notes in
+    the editor and display its contents in an editable state.
+
+
+    Nano may be very simple, but it is undoubtedly powerful and a time saver for quick
+    changes and file creation.'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# # Connecting to Windows / Mac Computers
+
+
+    Windows and OSX computers have built-in networking functions such as workgroups,
+    domains, shares, and more. Integrating Linux computers into the network infrastructure
+    that has been dominated by Windows server computers is fairly easy, though, and
+    correct setup will allow you to see Windows shares as well as join corporate domains.
+
+
+    The first step to intercommunication is installing the “samba” package. Either
+    find it through the software center, or type in “sudo apt-get install samba” to
+    obtain and install the necessary software.
+
+
+    Sharing files from your Ubuntu machine to other computers involves creating a
+    samba share. Samba runs off of the same protocols that other popular file sharing
+    methods use, so files shared from the Ubuntu machine can easily be seen on Windows.
+    After installing samba, use “sudo nano /etc/samba/smb.conf” to start editing the
+    configuration file. At the very bottom of the file add these lines:
+
+
+    [share]
+
+
+    comment = File Share from Ubuntu'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '```
+
+    path = /srv/samba/share
+
+
+    browsable = yes
+
+
+    guest ok = yes
+
+
+    read only = no
+
+
+    create mask = 0755
+
+    ```
+
+
+    Now, create the folder specified in “path” (sudo mkdir -p /srv/samba/share) and
+    set permissions (sudo chown nobody:nogroup /srv/samba/share/) so that anybody
+    can access its contents. Place any files you want to share within that directory,
+    and then restart the service (sudo restart smbd, sudo restart nmbd) to make the
+    share active. Lastly, log on to your other computer and navigate to the network
+    shares. In Windows, they will appear in the left panel of file explorer. If the
+    share does not appear automatically, type the IP into the file path box (find
+    Ubuntu IP with ifconfig). You are now able to access Ubuntu’s files from other
+    operating systems.'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: 'You might also need to see files from other operating systems in the Ubuntu
+    computer. Firstly, open the Ubuntu file explorer. From the menu bar, click “files”,
+    and then select “connect to server”. In the resulting box, type the URL of the
+    share you wish to access. It could be an ftp address (ftp://ftp.test.com), an
+    http address (http://test.com), or a share address (smb://share/Folder). Without
+    any additional hardware or setup, you can see the files this way.
+
+
+    Finally, joining a domain such as Active Directory allows your computer to interact
+    with other operating systems on the network and achieve other business-oriented
+    tasks. Whether you have a small home network, or whether you are adding Linux
+    computers to a corporate domain, the process is the same. Install a few extra
+    packages (realmd, sssd, sssd-tools, samba-common, samba-common-bin, samba-libs,
+    krb5-user, adcli, packagekit). While installing them, it will ask for your domain
+    name. Enter it in all caps. Enter “kinlt -V adminname” replacing that with an
+    actual admin account name in the domain. After entering the password you will
+    have been authenticated to the domain. Now joining it is done with “realm --verbose
+    join -U adminname domainname.loc”.
+
+
+    If it fails, it means the DNS is misconfigured on our device. Type “echo ‘ad_hostname
+    = nix01.domainname.loc’ >> /etc/sssd/sssd.conf”, then “echo ‘dyndns_update = True’
+    >> /etc/sssd/sssd.conf” and finally use “service sssd restart” to restart with
+    those new settings. The first line sets the FQDN of our computer, so the line
+    needs to be changed according to our domain settings. After a successful restart
+    with correctly configured settings the terminal will claim it has joined the domain.
+    Test this with “realm'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: 'list". Now connected to AD you can administer the Linux device from your server!
+
+
+    For most users, however, creating shares and joining domains is far beyond the
+    connectivity needs. Simple file sharing is much better done through USB drive
+    transfers or a service such as Dropbox. Indeed Dropbox can be installed on the
+    big three operating systems and files can be synced between them with no additional
+    setup. On Ubuntu eiter download the .deb file directly from the website, install
+    it from the software center, or use "sudo apt-get install nautilus-dropbox" to
+    obtain the application. Within the Dropbox folder, place any files that you wish
+    to transfer between computers and it will automatically be downloaded and updated
+    on all other Dropbox computers you own.
+
+
+    Using other operating systems is not complicated when you connect them together.
+    So long as the computers are on the same network you can create file shares, join
+    them into a domain, or use a simple service such as Dropbox.'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Useful Applications
+
+
+    Here is a list of the best Applications for your Ubuntu system that will help
+    you get the most out of your computer.
+
+
+    +   Office Productivity – Abiword, VI, Emacs, LibreOffice, nano
+
+
+    +   Multimedia – VLC, DeaDBeeF, Cmus, AquaLung, MPlayer, Miro
+
+
+    +   Web Browsing – Firefox, Chromium, Midori, W3M
+
+
+    +   Creativity – Aud
+
+
+    +   acity, GIMP
+
+
+    +   Other – Kupfer, Thunderbird, qBittorrent
+
+
+    And for programs that help with usability, there are so many varied choices that
+    it depends on what you are trying to accomplish.
+
+    The best way to discover a program is to search on the internet for a'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: functionality you wish to add. For example, if you are searching for a quick
+    way to open and close the terminal you might come across the program "Guake".
+    Or if you are wanting audio within the terminal it might recommend "Cmus". Finding
+    the perfect applications for you is part of the customization aspect of Linux,
+    and it makes every install a little more personal for each user.
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# Administration
+
+
+    If you are looking for a “Control Panel” of sorts, you can find shortcuts to administrative
+    tools such as network, printing, keyboard, appearance, and more from within the
+    “System Settings” application. Some Ubuntu variants use “Settings Manager” or
+    just “Settings” for the same purpose.
+
+
+    After launching it there will be links to other default configuration applications;
+    just click on whichever you need to change to obtain a GUI for settings a few
+    options. But not everything administrative is found through the GUI. Most low-level
+    settings are only available through the command line, and as such you will need
+    to know exactly what to type to edit them.
+
+
+    As an example, adding a new user to Ubuntu requires the “adduser” command. By
+    following the command with a username, the terminal will prompt for basic information
+    and a password. Setting that new user to be an administrator is done with “usermod
+    -aG sudo nameofuser”. Moreover a user can be deleted with “deluser”. These options
+    are difficult to find through GUI but can be done in seconds with a terminal.'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '"Task Manager", or the administration of running applications within Ubuntu
+    is done through the terminal as well. The program "top" is standardly installed
+    on all distributions (mostly), and starting it displays a list of all currently
+    running processes as per task manager. By default though, the list of processes
+    will be updated and moving around in such a way that it might be difficult to
+    read the data we need. Press the "f" button to bring up a sorting list, navigate
+    to "PID" with the arrow keys and press "s" to set over that option. Now use escape
+    to return to top and we can now scroll through the list with page-up and page-down
+    to view the tasks. Say, for instance, we want to close the program "Pidgin" because
+    it is unresponsive. Find it in the list (or search for it with the above filtering
+    commands) and take note of the PID (Process ID) number. Press "q" to quit top,
+    then type "kill 4653" obviously replacing the number with the PID. At any time
+    within top you can press "h" to see a list of keyboard shortcuts for various actions.
+    If top is too difficult to use consider installing "htop", a "human readable"
+    version of the program. It actually shows neat ASCII graphs detailing CPU, RAM,
+    and other usage statistics. Search for a program with F3, then use F9 and Enter
+    to kill it.
+
+
+    As for services, you might have noticed we use the "service" command to change
+    their status. So starting a web server would be done with "service apache2 start",
+    restarting it done by replacing start with restart, and stopping it by replacing
+    start with stop. Finding a list of services is done with "service --status-all".
+    Services are daemons, or background tasks that are continuously running. They
+    can be gathering data, running a service such as Bluetooth and Wi-Fi, or waiting
+    for user interaction.'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# Security Protocols
+
+
+    Linux has a focus on security in general, which contributes to its use in corporate
+    and server settings. Taking advantage of the security protocols means that you
+    are more secure than other operating systems and less likely to have your computer
+    compromised. This requires good security principals, of course, and always being
+    safe online. A computer without a password is hardly protected at all.
+
+
+    One feature brought over from UNIX is file permissions. Every file has a set of
+    permission- the owner, group, and rights. The command “chown” changes the owner
+    of a file, “chgrp” changes the group, and “chmod” changes the rights associated
+    with the file. Discovering the permissions of a file or folder is done by typing
+    “ls -l filename”. It will return an initially confusing line such as “- rw- rw-
+    r--”. “R” means read, “W” stands for write, and the third option is “X” for execute.
+    The three sets are respectively owner, group, and other. So our example file above
+    has read and write permissions set for the owner and its group, but only read
+    permissions for other users. This means that the owner and the group he belongs
+    to (most likely sudo users) have permission to both access the file and change
+    its contents, but other users on the network or PC can only view the contents
+    and not edit it. Script files will need to have the X in order to be executed,
+    and without it they cannot be run.
+
+
+    Most people will only need to use the “chmod” command to change the permissions
+    of files they wish to use. We use the'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: 'command and a set of numbers to set the permission of the file. “chmod 777
+    test.sh” makes the file readable, writable, and executable by all users anywhere
+    because each specification (owner, group, other) has the number 7 attached to
+    it. Numbers determine the permissions that entity has, and the number used is
+    calculated like so:
+
+
+    +   *   Start with the number 0.
+
+    +   *   Add 4 for adding readability.
+
+    +   *   Add 2 for write-ability.
+
+    +   *   Add 1 for executable-ness.
+
+    +   *   The number you have left determines the permissions.
+
+
+    6 would be read/write, but 1 would only be executable. 5 would be readable and
+    executable, but not changeable. In our 777 example, we set owner, group, and others
+    to all be 7. This is not particularly good security, because that means anybody
+    anywhere can mess with that file. A more conservative permission set would be
+    775. Use security permissions advantageously for secure computing.
+
+
+    Security within Linux expands beyond just permissions. Ensure that you practice
+    good security practices, and that you are following common sense in regards to
+    security- install only needed programs, do not follow all internet advice, do
+    not use sudo too often, use passwords, use encrypted networks, keep software up
+    to date, encrypt important files, and make regular backups. As a final word'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: of advice, look into using a distribution with SELinux, a module that supports
+    AC and other security policies.
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# Scripting
+
+
+    Bash is the “programming language” or the terminal. When we type a command, we
+    are doing so within bash. A script is a list of bash commands that execute in
+    order, meaning we can create a script with a list of commands and run it to save
+    time or automate terminal tasks that we normally have to type. As an intermediate
+    and advanced Linux administrator, you can use scripts to greatly shorten the amount
+    of work required for repetitive or constantly running tasks.
+
+
+    To start a script, create a new file “script.sh” within nano. The first line must
+    always be “#!/bin/bash” to mark it as a bash script. Type the following lines
+    for your first script.
+
+
+    ```
+
+    echo “What is your name?”
+
+    ```
+
+
+    ```
+
+    read name
+
+    ```
+
+
+    ```
+
+    echo “Hey, $name. Here is your current directory, followed by the files.”
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# Pwd
+
+
+    # Ls
+
+
+    Save the script. Now we have to set the permissions to allow it to be run. Use
+    “sudo chmod 777 script.sh”, and then run the script with “./script.sh”. So long
+    as you copied the script exactly, it will ask for your name and then show you
+    your directory and files. Take the concept and expand it further in your own scripts.
+    You can run commands from installed programs as well, so you can write a script
+    that automatically joins a domain, or one that connects to the network specified.
+    Shutting down remote computers is a great automatic task as well.
+
+
+    Scripts can either be run manually or set to execute at certain times. To run
+    a certain script every time the user logs in, open the “startup applications”
+    program from dash and create a new app with the script as the source. Now every
+    time that user logs in the script will run automatically. This is useful for setting
+    up certain options or starting background services without requiring the user
+    to do it themselves.
+
+
+    Scheduling tasks for a certain time can be done with the Cron system daemon. It
+    is installed be default on some systems, but if not “sudo apt-get install cron”
+    can be used. Start the service with'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '"service cron start" and create a new crontab file with "crontab -e". Select
+    nano as your text editor. At the bottom of the created file, add a new line with
+    our scheduled task. The format goes as follows:
+
+
+    minute, hour, day, month, weekday, command
+
+
+    And we format it with these options to specify when to run the command. Time numbers
+    start with 0, so the hours range from 0 to 23 and minutes are from 0 to 59. Replace
+    any option with an asterisk to specify that it will run on any value. Pay attention
+    to these examples:
+
+
+    ```
+
+    0 12 * * * ~/script.sh
+
+    ```
+
+
+    This will run the script.sh found in the Home directory every day at noon.
+
+
+    ```
+
+    30 18 25 12 * /usr/bin/scripts/test.sh
+
+    ```
+
+
+    And this will run test.sh within the /usr/bin/scripts directory at 6:30 on Christmas
+    day every year.'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: Conclusively, scripting and automating scripts are fantastic ways to take administrative
+    control of regularly occurring tasks. Continue writing scripts, or look up examples
+    online to see how your computing experience can be made easier with bash.
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '# # Advanced Terminal Concepts
+
+
+    Mastering Linux comes down to intimate comprehension of the tools available in
+    the OS and how to utilize them. Many of the topics discussed in this chapter will
+    focus on more tasks and how to accomplish them, or a few QOL improvements to the
+    OS in general.
+
+
+    Compression and decompression of files often confuses Linux beginners. The tools
+    are typically already installed, but the command line must be used. Furthermore,
+    the strange .tar and .gz file-types are Linux-specific formats that you might
+    often come across. All files can be unzipped or zipped with the gzip tool. Preinstalled
+    on Ubuntu, we access it with the “tar” command. To compress a folder and the files
+    contained within, navigate to it in terminal and type “tar -czvf name.tar.gz foldername”.
+    C stands for “create”, z means “compress (gzip)”, v is for “verbose”, and f allows
+    filename specification. If you want more compression (but at the cost of time),
+    zip the folder with gzip2 by replacing the -z switch with the -j switch instead.
+
+
+    Now extracting that same archive can be done with “tar -xzvf name.tar.gz”. You
+    will notice that the -c was replaced with an -x, and this indicates extraction.
+    Once again if you are dealing with bzp2 files use the -j switch instead.'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: 'Continuing with advanced terminal concepts, let us talk about a few quality
+    tips and tricks that can save you time in the terminal. When typing a command
+    or file name, press tab halfway through. This feature, tab completion, will guess
+    what you are attempting to type and fill in the rest of the phrase. For files
+    it will complete the name as shown in the directory, or complete a command by
+    considering what you are trying to do. Linux experts and anyone that has to use
+    the terminal regularly may seem as though they are typing exactly what they want
+    with extreme accuracy and speed, but they are actually just using tab completion.
+
+
+    Users, especially administrators, will spend a decent amount of time with the
+    sudo command because their instructions require elevated privileges to run. But
+    when typing out a long command and forgetting to type sudo, you will be angered
+    at having to type it again. Instead simply type “sudo !!”, shorthand for “super
+    user do again”. It generously saves from typing an entire command again.
+
+
+    Another method of repeating commands is to use the up and down arrows. Pressing
+    up continuously cycles through previously typed commands. You can also edit the
+    commands with the left and right arrows to change the text contained within.
+
+
+    And the most requested terminal tip involves copy and pasting. Attempting to paste
+    a line into the terminal results in the strange character ^V. The keyboard shortcut
+    is not configured to work in the terminal, and that is why the strange combination
+    is displayed. To actually paste, right click and select the option; or use'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: 'the key combination shift+insert. Copy in the same way, but with ctrl+insert
+    instead. While it might be okay to copy and paste terminal commands from the Internet
+    (provided you understand the risk and know what they are doing in the command),
+    do not try to paste from this publication. The formatting introduced through the
+    medium in which you are reading it might have inserted special characters that
+    are not recognized by the terminal, so it is best if you do not copy and paste,
+    but rather you should type manually any commands presented.
+
+
+    Linux has a hidden feature that not many users know about. Files are displayed
+    to the user when you visit that directory or type ls, but actually not all of
+    the files are viewable this way. In Linux if you name a file with a period as
+    the first character it will be marked as hidden. Hidden files are not normally
+    visible by common users, and it acts as a way to protect configuration files from
+    accidental editing/deleting/so forth. To see those files, we only need to add
+    the --a tag to our ls search. In the GUI press ctrl+h in a directory to reveal
+    the secret content. And as you create scripts and other configuration files consider
+    hiding them with the period as a form of user protection.
+
+
+    Any command within terminal can be interrupted or quit with the ctrl+d key combination.
+    Use it to stop a lengthy process or to exit out of a program/command that you
+    do not understand.
+
+
+    Aliasing is a way to create your own personal shortcuts within the terminal. Instead
+    of typing a long command or a bunch of smaller commands aliases can be used to
+    combine them into a'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: "sngle user defined option. Just as the name implies, aliases are different\
+    \ names for anything you specify. Every alias is contained within a hidden config\
+    \ file- begin editing it with “nano ~/.bashrc”. Because it exists within the user's\
+    \ home directory every alias will be pertinent only to that user. At the bottom\
+    \ of the file we can begin creating alias as per the following example:\n\n```\n\
+    alias gohome=\"cd ~ && ls\"\n```\n\nThis alias will change the directory to home\
+    \ and display the contents by typing “gohome”. When creating aliases you must\
+    \ follow the formatting presented above exactly, meaning there is no space between\
+    \ the command and the equal sign. Multiple commands are strung together inside\
+    \ the single quotes separated by “&&”. For more robust aliases, add a function\
+    \ instead. The following example combines cd and ls into a single command.\n\n\
+    ```\nfunction cdls () {\n    cd \"$@\" && ls\n}\n```\n\nAfter writing your aliases,\
+    \ save the file and restart the computer. Your new commands are then available\
+    \ for use."
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: 'That file we edit, .bashrc, is the configuration file for the Ubuntu terminal.
+    Besides making aliases we can also use it to customize our terminal settings,
+    such as color, size, etc... A quick tip is to uncomment the "#force_color_prompt=yes"
+    by removing the # and ensuring "yes" is after the equals. This adds color to the
+    terminal, making certain words different colors. More options are available when
+    you open a terminal, right click on it, and select profiles followed by profile
+    preferences. Through the tabs here you can customize the font, size, colors, background
+    colors, and much more. Customization of the terminal is recommended if you are
+    going to be using it a lot, because it helps to be comfortable with the tools
+    you will work with.'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# I/O Redirection
+
+
+    During normal terminal command execution, “normal input” (typed by the user, or
+    read from a file/attribute/hardware) is entered and parsed by the command. Sometimes
+    the command has “standard output” as well, which is the return text shown in the
+    terminal. In “ls”, the standard input is the current working directory, and the
+    standard output is the contents of the folder.
+
+
+    Input and output are normally direct, but by using I/O redirection we can do more
+    with the terminal. As an example, the “cat” command (concatenate) followed by
+    a file will output that file to the screen. Running cat by itself opens a parser
+    where any line that is input will be immediately output (use ctrl+d) to quit.
+    But with I/O redirection hotkeys (<, >, <<, >>, |) we can redirect the output
+    to another source, such as a file. And “cat > test.txt” will now put the standard
+    output in that new file. Double signs signify appending, so “cat >> test.txt”
+    will place the output at the end of the file rather than erasing the contents
+    at the beginning.
+
+
+    The vertical line character, or the “pipe”, uses another form of I/O redirection
+    to take the output of one command and directly insert it into the input of another.
+    “ls | sort -r” would take the output of ls and sort it into a backwards list.
+    We redirected the output and gave it to another command to accomplish this.'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: 'And finally, the “grep” command is used very often within I/O redirection.
+    Grep can search for a certain string within a specified file and return the results
+    to standard output. Using redirection, this output can be put into other commands.
+    An interesting feature of Linux to note is that object is a file, even hardware.
+    So our CPU is actually a file that stores relevant data inside of it, and we can
+    use grep and other tools to search within it. That example is fairly advanced,
+    but here is a simpler instance:
+
+
+    ```
+
+    “grep Conclusion report.txt”
+
+    ```
+
+
+    And it will search within the file for that specific word. I/O redirection can
+    become a complicated process with all of the new symbols and commands, but it
+    is a feature that you can incorporate into your scripts and daily use that often
+    allows for certain features and functions of Linux to be done in a single line.
+
+
+    Linux and the terminal are difficult concepts to fully master. But with practice
+    and continuing dedication you will be able to perform masterful feats of computing
+    and do helpful tasks that are not possible in Windows or OSX. Learning more about
+    commands and how to use them certainly helps in this regard, so persist in your
+    studies of new commands and their use. Positively the only command you actually
+    need to memorize is “man”, a command that will show the manual pages and documentation
+    of any other command specified. The manual pages show switches, examples, and
+    the intended use of every command on your system. Use the tool to your advantage
+    and gain intimate knowledge of your system.'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '# More Linux Information
+
+
+    To continue learning about Linux and the possibilities it can provide, consider
+    the examples in this section. It will briefly discuss more uses for Linux, and
+    a few other concepts that have yet to be talked about.
+
+
+    The “Linux file system” refers to the main layout of the files and folders on
+    your computer. If you continue to “cd ..” in the terminal, or if you click the
+    back button on the GUI until it goes no further you will stumble upon the “root”
+    directory. The folders here, bin, boot, etc, usr, and so on are how your hardware
+    and settings are configured. Each folder has a specific purpose and use, and you
+    can understand them by exploring the contents. As an example, user data is stored
+    in home, but user programs are stored in usr. Because of how diverse and complicated
+    the file system actually is it will not be discussed here, but if you wish to
+    learn more do an Internet search or read the documentation associated with your
+    operating system.
+
+
+    Linux systems are often used for purposes other than desktop use. Dedicated machines
+    run variants of Linux because of the power and stability it provides. Even our
+    cars have a Linux kernel running to keep track of error codes and help mechanics.'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: 'Servers often have Linux installed because of reliability and the functions
+    the distributions have within them. For instance, Linux machines are used as firewalls
+    because the “iptables” application provides excellent port blocking and intelligent
+    filtering. You yourself can run a firewall on your system with the application
+    as well, thus gaining business-level software for free. In this way, Linux is
+    also great for networking. The machine can act as a switch, router, DNS server,
+    DHCP server, and more just by installing the relevant applications.
+
+
+    And finally, Linux systems are not limited to the interfaces we have seen insofar.
+    Every distro has its preferred desktop environment, but the interface can be extremely
+    customized to the individual''s preference. There are even file and web browsers
+    for the terminal, which is greatly helpful for those using SSH or remote computing.
+    All-in-all, you should try out different DE''s by installing them and configuring
+    them to your liking.'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# What Next and Conclusion
+
+
+    How you continue depends on what you want to do with your Linux distribution.
+    For casual browsing and simple use, continue with Ubuntu and install the programs
+    you need. For more adventurous people, consider installing a new distribution
+    to see what each has to offer. Those wishing to learn even more deeply about Linux
+    can install one such as Arch or DSL to build their own unique OS from scratch.
+    Administrators and power users can install a server version of a distro to build
+    their own Linux network, or they can consider changing over their environment
+    from other operating systems to entirely free ones.
+
+
+    Conclusively, Linux is a powerful and relatively easy to use set of operating
+    systems. But their real potential comes from the hard-to-master terminal and command
+    line functions. Thank you for reading this publication, and I hope that it has
+    shed some light on the mysterious subject of the defacto alternative operating
+    system. If Linux has confused you or did not live up to expectations, I implore
+    you to take a second look at the features it can offer. While it may not have
+    the same caliber of games or 3rd party proprietary software, the OS is simple
+    and customizable enough to be used as a primary OS with maybe Windows or OSX as
+    a secondary OS. Alternatives exist for just about every program, so if it is possible
+    to get rid of Microsoft and Apple entirely, it is highly recommended you do so.
+    Thank you again, and make good use of your new Linux knowledge.'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# Related Titles
+
+
+    Hacking University: Freshman Edition Essential Beginner''s Guide on How to Become
+    an Amateur Hacker
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_187_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# Hacking University: Sophomore Edition. Essential Guide to Take Your Hacking
+    Skills to the Next Level. Hacking Mobile Devices, Tablets, Game Consoles, and
+    Apps
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_188_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '# Hacking University: Junior Edition. Learn Python Computer Programming From
+    Scratch. Become a Python Zero to Hero. The Ultimate Beginners Guide in Mastering
+    the Python Language
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_189_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: 'Hacking University: Senior Edition Linux. Optimal Beginner''s Guide To Precisely
+    Learn And Conquer The Linux Operating System. A Complete Step By Step Guide In
+    How Linux Command Line Works
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_190_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: 'Hacking University: Graduation Edition. 4 Manuscripts (Computer, Mobile, Python,
+    & Linux). Hacking Computers, Mobile Devices, Apps, Game Consoles and Learn Python
+    & Linux
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_191_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# Data Analytics: Practical Data Analysis and Statistical Guide to Transform
+    and Evolve Any Business, Leveraging the power of Data Analytics, Data Science,
+    and Predictive Analytics for Beginners
+
+
+    ![](img/fd3b07b76342e40d21bbab5fa5696daf_192_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# **About the Author**
+
+
+    Isaac D. Cody is a proud, savvy, and ethical hacker from New York City. After
+    receiving a Bachelors of Science at Syracuse University, Isaac now works for a
+    mid-size Informational Technology Firm in the heart of NYC. He aspires to work
+    for the United States government as a security hacker, but also loves teaching
+    others about the future of technology. Isaac firmly believes that the future will
+    heavily rely computer "geeks" for both security and the successes of companies
+    and future jobs alike. In his spare time, he loves to analyze and scrutinize everything
+    about the game of basketball.'
+  merge: -1
+  img_proc: true

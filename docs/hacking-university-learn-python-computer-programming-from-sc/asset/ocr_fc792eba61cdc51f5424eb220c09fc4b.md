@@ -1,0 +1,3 @@
+# **About the Author**
+
+Isaac D. Cody is a proud, savvy, and ethical hacker from New York City. After receiving a Bachelors of Science at Syracuse University, Isaac now works for a mid-size Informational Technology Firm in the heart of NYC. He aspires to work for the United States government as a security hacker, but also loves teaching others about the future of technology. Isaac firmly believes that the future will heavily rely computer "geeks" for both security and the successes of companies and future jobs alike. In his spare time, he loves to analyze and scrutinize everything about the game of basketball.
