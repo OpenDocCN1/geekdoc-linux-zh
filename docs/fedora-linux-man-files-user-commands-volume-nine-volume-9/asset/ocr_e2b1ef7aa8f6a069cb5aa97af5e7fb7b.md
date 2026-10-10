@@ -1,0 +1,3 @@
+# DESCRIPTION
+
+ppdc compiles PPDC source files into one or more PPD files. This program is deprecated and will be removed in a future release of CUPS.

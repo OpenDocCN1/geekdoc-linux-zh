@@ -1,0 +1,3 @@
+# > **SYNOPSIS**
+
+**rygel** `[options]`

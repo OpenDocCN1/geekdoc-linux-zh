@@ -1,0 +1,41 @@
+# OPTIONS
+
+The options may be given in any order, before or after filenames. Options without an argument can be coined after a single dash.
+
++   +[num]
++   * For the first file the cursor will be positioned on line “num”. If “num” is missing, the cursor will be positioned on the last line.
+
++   +/{pat}
++   * For the first file the cursor will be positioned on the first occurrence of {pat}. See “help search-pattern” for the available search patterns.
+
++   +{command}
++   * -c {command}
++   * {command} will be executed after the first file has been read. {command} is interpreted as an Ex command. If the {command} contains spaces it st be enclosed in double quotes (this depends on the shell that is used). Example: Vim “+set si” main.c
++   Note: You can use up to 10 “+” or “-c” commands.
+
++   -S {file}
++   * {file} will be sourced after the first file has been read. This is equivalent to -c “source {file}”. {file} cannot start with ‘-’. If {file} is omitted “Session.vim” is used (only works when -S is the last argument).
+
++   --cmd {command}
++   * Like using “-c”, but the command is executed just before processing any vimrc file. You can use up to 10 of these commands, independently from “-c” commands.
+
++   -A
++   * If **Vim** has been compiled with ARABIC support for editing right-to-left oriented files and Arabic keyboard mapping, this option starts **Vim** in Arabic mode, i.e. ‘arabic’ is set. Otherwise an error sage is given and **Vim** aborts.
+
++   -b
++   * Binary mode. A few options will be set that makes it possible to edit a binary or executable file.
+
++   -C
++   * Compatible. Set the ‘compatible’ option. This will make **Vim** behave mostly like Vi, even though a .vimrc file exists.
+
++   -d
++   * Start in diff mode. There should be two, three or four file na arguments. **Vim** will open all the files and show differences between them. Works like (1).
+
++   -d {device}
++   * Open {device} for use as a terminal. Only on the Amiga. Example: “-d con:20/30/600/150”.
+
++   -D
++   * Debugging. Go to debugging mode when executing the first command from a script.
+
++   -e
++   * Start **Vim** in Ex mode, just like the executable was called “ex”.

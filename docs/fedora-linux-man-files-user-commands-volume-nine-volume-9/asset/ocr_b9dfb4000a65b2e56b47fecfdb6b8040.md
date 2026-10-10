@@ -1,0 +1,3 @@
+# EXIT STATUS
+
+On success 0 is returned, a non-zero failure code otherwise.

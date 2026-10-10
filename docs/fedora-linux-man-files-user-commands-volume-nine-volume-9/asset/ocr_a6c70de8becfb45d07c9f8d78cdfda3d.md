@@ -1,0 +1,38 @@
+-nb
+Beco an editor server for NetBeans. See the docs for details.
+
+-o[N]
+Open N windows stacked. When N is omitted, open one window for each file.
+
+-O[N]
+Open N windows side by side. When N is omitted, open one window for each file.
+
+-p[N]
+Open N tab pages. When N is omitted, open one tab page for each file.
+
+-R
+Read-only mode. The ‘readonly’ option will be set. You can still edit the buffer, but will be prevented from accidentally overwriting a file. If you do want to overwrite a file, add an exclamation mark to the Ex command, as in “:w!”. The -R option also implies the -n option (see below). The ‘readonly’ option can be reset with “:set noro”. See “:help ‘readonly’ ”.
+
+-r
+List swap files, with information about using them for recovery.
+
+-r {file}
+Recovery mode. The swap file is used to recover a crashed editing session. The swap file is a file with the sa filena as the text file with “.swp” appended. See “:help recovery”.
+
+-s
+Silent mode. Only when started as “Ex” or when the “-e” option was given before the “-s” option.
+
+-s {scriptin}
+The script file {scriptin} is read. The characters in the file are interpreted as if you had typed them. The sa can be done with the command “:source! {scriptin}” . If the end of the file is reached before the editor exits, further characters are read from the keyboard.
+
+-T {terminal}
+Tells **Vim** the na of the terminal you are using. Only required when the automatic way doesn’t work. Should be a terminal known to **Vim** (builtin) or defined in the termcap or terminfo file.
+
+-u {vimrc}
+Use the commands in the file {vimrc} for initializations. All the other initializations are skipped. Use this to edit a special kind of files. It can also be used to skip all initializations by giving the na “NONE”. See “:help initialization” within vim for more details.
+
+-U {gvimrc}
+Use the commands in the file {gvimrc} for GUI initializations. All the other GUI initializations are skipped. It can also be used to skip all GUI initializations by giving the na “NONE”. See “:help gui-init” within vim for more details.
+
+-V[N]
+Verbose. Give ssages about which files are sourced and for reading and writing a

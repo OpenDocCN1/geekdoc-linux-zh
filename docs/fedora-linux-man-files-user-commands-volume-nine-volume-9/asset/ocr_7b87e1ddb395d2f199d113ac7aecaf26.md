@@ -1,0 +1,5 @@
+# SYNOPSIS
+
+```
+system-config-abrt
+```

@@ -1,0 +1,3 @@
+# SYNOPSIS
+
+**stat** [OPTION]... FILE...

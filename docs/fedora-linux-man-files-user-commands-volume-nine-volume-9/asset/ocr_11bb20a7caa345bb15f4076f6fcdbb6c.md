@@ -1,0 +1,1 @@
+bugzilla -d . -c /etc/libreport/plugins/bugzilla.conf

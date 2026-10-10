@@ -1,0 +1,3 @@
+# DESCRIPTION
+
+**ps2epsi** uses (1) to process a **PostScript**(tm) file and generate as output a new file which conforms to Adobe’s **Encapsulated PostScript Interchange** (EPSI) format. EPSI is a special form of encapsulated PostScript (EPS) which adds to the beginning of the file in the form of PostScript comnts a bitmapped version of the final displayed page. Programs which understand EPSI (usually word processors or DTP programs) can use this bitmap to give a preview version on screen of the PostScript. The displayed quality is often not very good (e.g., low resolution, no colours), but the final printed version uses the real PostScript, and thus has the normal PostScript quality.

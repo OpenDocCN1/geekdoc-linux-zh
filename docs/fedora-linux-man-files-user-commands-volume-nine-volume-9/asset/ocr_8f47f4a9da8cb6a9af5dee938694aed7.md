@@ -1,0 +1,20 @@
+# OTHER INFORMATION
+
+—help*section*
+Print a help ssage. The section argument can be one of *simple, list, output, threads, misc* or *all*. The argument can be shortened to one of the underlined letters as in:
+s|l|o|t|m|a.
+
+—info
+Print debugging info.
+
+L
+List all format specifiers.
+
+V
+Print the procps-ng version.
+
+-V
+Print the procps-ng version.
+
+—version
+Print the procps-ng version.

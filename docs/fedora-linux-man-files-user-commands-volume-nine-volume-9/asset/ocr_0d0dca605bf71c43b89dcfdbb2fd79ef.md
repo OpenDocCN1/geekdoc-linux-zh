@@ -1,0 +1,3 @@
+# SYNOPSIS
+
+**sort** `[OPTION]...` `[FILE]...` **sort** `[OPTION]...` `—files0-from=F`

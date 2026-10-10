@@ -1,0 +1,17 @@
+# BUGS
+
+Help and version command line options would be useful.
+
+The ability to put input and output filenas on the command line might be good as well.
+
+# Bug reports
+
+I would appreciate hearing of any problems you have with SYSLINUX. I would also like to hear from you if you have successfully used SYSLINUX, especially if you are using it for a distribution.
+
+If you are reporting problems, please include all possible information about your system and your BIOS; the vast majority of all problems reported turn out to be BIOD or hardware bugs, and I need as ch information as possible in order to diagnose the problems.
+
+There is a mailing list for discussion among SYSLINUX users and for announcents of new and test versions. To join, send a ssage to with the line:
+
+subscribe syslinux
+
+in the body of the ssage. The submission address is .

@@ -1,0 +1,230 @@
+
+
+# 维护者
+
+Bryn M. Reeves <>
+
+# 作者与贡献者
+
+请参阅 /usr/share/doc/sosreport 中的 **AUTHORS** 文件。
+
+# 翻译
+
+翻译由 transifex 处理（
+
+# SPEAKER-TEST
+
+## 名称
+
+speaker-test - 用于 ALSA 的命令行扬声器测试音调生成器
+
+# 概要
+
+speaker-test [-options]
+
+# 描述
+
+**speaker-test** 生成可用于测试计算机扬声器的音调。
+
+**speaker-test** 默认将测试 *default* 设备。如果你想测试另一个声音设备，你必须首先获取系统中所有声卡以及与这些声卡关联的设备列表。请注意，例如，可能有一个设备用于模拟声音，一个用于数字声音，还有一个用于 HDMI 声音。要获取可用卡和设备的列表，你可以运行 **aplay -L**。
+
+```
+$ aplay -L
+null      Discard all samples (playback) or generate zero samples
+          (capture)
+default:CARD=ICH5   Intel ICH5, Intel ICH5
+                  Default Audio Device
+front:CARD=ICH5,DEV=0   Intel ICH5, Intel ICH5
+                  Front speakers
+surround40:CARD=ICH5,DEV=0   Intel ICH5, Intel ICH5
+                  4.0 Surround output to Front and Rear speakers
+(...)
+```
+
+在上面的示例中，列出了四个设备：null、default、front 和 surround40。因此，如果你想测试最后一个设备，你可以运行 **speaker-test -Dsurround40:ICH5 -c 6**。-c 选项将指示必须测试该设备中的六个音频通道。
+
+# 选项
+
+- -c | --channels NUM
+  流中的 NUM 个通道
+- -D | --device NAME
+  PCM 设备名称 NAME
+- -f | --frequency FREQ
+  频率为 FREQ Hz 的正弦波
+- --help
+  打印使用帮助
+- -b | --buffer TIME
+  使用 TIME 微秒的缓冲区大小。如果给定 0，则使用最大缓冲区大小。默认值为 0。
+- -p | --period TIME
+  使用 TIME 微秒的周期大小。如果给定 0，则使用由 -P 选项给出的周期数。默认值为 0。
+- -P | --nperiods PERIODS
+  使用周期数量。默认值为 4。
+- -r | --rate RATE
+  速率为 RATE Hz 的流
+- -t | --test pink|sine|wav
+  - 使用 pink 进行 -t 并使用粉噪声（默认）。
+    粉噪声在感知上是均匀的噪声——也就是说，听起来像同时具有所有频率。如果你能听到任何音调，这可能表明你的扬声器系统或房间中存在共振。
+  - 使用 sine 进行 -t 并使用正弦波。
+  - 使用 wav 进行 -t 以播放 WAV 文件，可以是预定义的文件或通过 -w 选项给定的文件。
+    你可以传递 1 到 3 之间的数字以保持向后兼容性。
+- -l | --nloops COUNT
+  指定循环次数。零表示无限运行。
+  
+  当下面 -s 选项给出有效通道时，speaker-test 将始终执行单次测试，而不进行循环。
+- -s | --speaker CHANNEL
+  对给定通道执行单次扬声器测试。通道编号从 1 开始。通道编号对应左、右、后左、后右、中置、低频效果（LFE）、侧左、侧右等。
+  
+  例如，当传递 1 时，它只测试一次左通道，而不是循环测试两个通道。
+- -W | --wavfile FILE
+  使用给定的 WAV 文件进行播放，而不是预定义的 WAV 文件。
+- -W | --wavdir DIRECTORY
+  指定包含用于播放的 WAV 文件的目录。默认路径是 /usr/share/sounds/alsa。
+- -m | --chap MAP
+  传递通道映射以覆盖默认设置。如果需要按特定顺序或通道位置进行播放，请向此选项传递通道位置字符串。
+- -X | --force-frequency
+  允许提供的 *FREQ* 超出 30-8000Hz 的默认范围。仍会强制最小值为 1Hz。
+
+# 使用示例
+
+从一个立体声插孔产生立体声声音：
+
+```
+speaker-test -Dplug:front -c2
+```
+
+从两个立体声插孔产生 4 扬声器声音：
+
+```
+speaker-test -Dplug:surround40 -c4
+```
+
+从三个立体声插孔产生 5.1 扬声器声音：
+
+```
+speaker-test -Dplug:surround51 -c6
+```
+
+向低音炮发送一个悦耳的 75Hz 低音调，然后退出而不触碰其他任何扬声器：
+
+```
+speaker-test -Dplug:surround51 -c6 -s1 -f75
+```
+
+使用 spdif（同轴或光纤）输出进行 2 扬声器测试：
+
+```
+speaker-test -Dplug:spdif -c2
+```
+
+从前置 PCM 按右前和左前的顺序播放：
+
+```
+speaker-test -Dplug:front -c2 -mFR,FL
+```
+
+# 参见
+
+speaker-test(1)
+
+# 作者
+
+speaker-test 程序由 James Courtier-Dutton 编写。Nathan Hurst 添加了粉噪声支持。Takashi Iwai 进行了进一步的扩展。
+
+# SPEED
+
+# 名称
+
+speed - 测试库性能
+
+# 概要
+
+```
+openssl speed [-engine id] [md2] [mdc2] [md5] [hmac] [sha1] [md160] [idea-cbc] [rc2-cbc] [rc5-cbc] [bf-cbc] [des-cbc] [des-ede3] [rc4] [rsa512] [rsa1024] [rsa2048] [rsa4096] [dsa512] [dsa1024] [dsa2048] [idea] [rc2] [des] [rsa] [blowfish]
+```
+
+# 描述
+
+此命令用于测试加密算法的性能。
+
+# 选项
+
+-engine id
+指定引擎（通过其唯一 ID 字符串）将导致 **speed** 尝试获取指定引擎的功能引用，从而在需要时初始化它。然后，该引擎将设置为所有可用算法的默认值。
+
+[零个或多个测试算法]
+如果提供了任何选项，**speed** 将测试这些算法，否则将测试上述所有算法。
+
+# spice-vdagent
+
+# 名称
+
+spice-vdagent - Spice 客户机代理 X11 会话代理
+
+# 概要
+
+**spice-vdagent** [*OPTIONS*]
+
+# 描述
+
+Linux 上的 spice 客户机代理由 2 部分组成，一个系统范围的守护进程 **spice-vdagentd** 和一个 X11 会话代理 **spice-vdagent**，每个 X11 会话都有一个。**spice-vdagent** 会在遵守 */etc/xdg/autostart* 的桌面环境中自动启动，并在 gdm 下启动。
+
+## 功能
+
+spice 客户机代理为 spice Linux 客户机添加了以下功能：
+
+- 客户端鼠标模式（无需客户端抓取鼠标，无鼠标延迟）
+- 根据客户端窗口数量及其分辨率自动调整 X11 会话的虚拟监视器数量及其分辨率
+- 支持在活动 X11 会话和客户端之间复制和粘贴（文本和图像），这支持主要选择区和剪贴板
+- 支持将文件从客户端传输到代理
+
+# 选项
+
+-h
+
+打印所有命令行选项的简短描述
+
+-d
+
+记录调试消息
+
+-s port
+
+设置 virtio 串行 *port*（默认：/dev/virtio-ports/com.redhat.spice.0）
+
+-x
+
+不守护进程化
+
+-f dir|xdg-desktop|xdg-download
+
+设置保存从客户端发送文件的目录，这可以是任意 *dir* 或 *xdg-desktop* 或 *xdg-download* 的一个特殊值，以选择默认的 xdg 桌面目录或 xdg 下载目录。如果未指定值，在桌面上有图标的桌面环境中默认为 *xdg-desktop*，在其他桌面环境中为 *xdg-download*
+
+-o 0|1
+
+禁用/启用使用 xdg-open 打开文件保存目录（在文件管理器中显示该目录），当来自客户端的文件传输完成时。如果未指定值，在桌面上有图标的桌面环境中默认为 *0*，在其他桌面环境中为 *1*
+
+# 参见
+
+spice-vdagentd(1)
+
+# 版权
+
+版权所有 2010-2013 Red Hat, Inc. 许可证 GPLv3+: GNU GPL 版本 3 或更高版本 <>。
+这是自由软件：你可以自由更改和重新分发它。在法律允许的范围内，没有保修。
+
+# spice-vdagentd
+
+# 名称
+
+spice-vdagentd - Spice 客户机代理守护进程
+
+# 概要
+
+```
+spice-vdagentd [*OPTIONS*]
+```
+
+# 描述
+
+Linux 上的 spice 客户机代理由 2 部分组成，一个系统范围的守护进程 **spice-vdagentd** 和一个 X11 会话代理 **spice-vdagent**，每个 X11 会话都有一个。**spice-vdagentd** 通过 Sys-V 初始化脚本或 systemd 单元启动。
+

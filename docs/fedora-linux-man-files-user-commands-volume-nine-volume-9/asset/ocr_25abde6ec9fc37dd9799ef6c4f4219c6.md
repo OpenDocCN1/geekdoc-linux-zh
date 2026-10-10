@@ -1,0 +1,3 @@
+# ## INTERNAL OPTIONS
+
+The options —**server** and —**sender** are used internally by rsync, and should never be typed by a user under normal circumstances. So awareness of these options may be needed in certain scenarios, such as when setting up a login that can only run an rsync command. For instance, the support directory of the rsync distribution has an example script nadrrsync (for restricted rsync) that can be used with a restricted ssh login.

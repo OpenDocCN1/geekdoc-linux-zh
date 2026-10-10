@@ -1,0 +1,3 @@
+# > SYNOPSIS
+
+**gstack** `pid`

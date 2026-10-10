@@ -1,0 +1,17 @@
+(or non-ACL-enabled) rsyncs use the umask even if default ACLs are present. (Keep in mind that it is the version of the receiving rsync that affects these behaviors.) **-E**, **executability** This option causes rsync to preserve the executability (or non-executability) of regular files when **—perms** is not enabled. A regular file is considered to be executable if at least one ‘x’ is turned on in its permissions. When an existing destination file’s executability differs from that of the corresponding source file, rsync modifies the destination file’s permissions as follows:
+
++   - To make a file non-executable, rsync turns off all its ‘x’ permissions.
++   
++   - To make a file executable, rsync turns on each ‘x’ permission that has a corresponding ‘r’ permission enabled.
+
+If **—perms** is enabled, this option is ignored. **-A**, **acls** This option causes rsync to update the destination ACLs to be the sa as the source ACLs. The option also implies **—perms**. The source and destination systems st have compatible ACL entries for this option to work properly. See the **—fake-super** option for a way to backup and restore ACLs that are not compatible. **-X**, **xattrs** This option causes rsync to update the destination extended attributes to be the sa as the source ones. For systems that support extended-attribute namespaces, a copy being done by a super-user copies all namespaces except system.*. A normal user only copies the user.* namespace. To be able to backup and restore non-user namespaces as a normal user, see the **—fake-super** option. Note that this option does not copy rsyncs special xattr values (e.g. those used by **—fake-super**) unless you repeat the option (e.g. -XX). This “copy all xattrs” mode cannot be used with **—fake-super**.
+
+**—chmod** This option tells rsync to apply one or more comma-separated (“chmod”) modes to the permission of the files in the transfer. The resulting value is treated as though it were the permissions that the sending side supplied for the file, which ans that this option can seem to have no effect on existing files if **—perms** is not enabled. In addition to the normal parsing rules specified in the (1) manpage, you can specify an item that should only apply to a directory by prefixing it with a ‘D’, or specify an item that should only apply to a file by prefixing it with a ‘F’. For example, the following will ensure that all directories get marked set-gid, that no files are other-writable, that both are user-writable and group-writable, and that both have consistent executability across all bits:
+
+**—chmod=Dg+s,ug+w,Fo-w,+X**
+
+Using octal mode nuer is also allowed:
+
+**—chmod=D2775,F664**
+
+It is also legal to specify multiple **—chmod** options, as each additional option is just appended to the list of changes to make. See the **—perms** and **—executability** options for how the resulting permission value can be applied to the files in the transfer. **-o**, **owner** This option causes rsync to set the owner of the destination file to be the sa as the source file, but only if the receiving rsync is being run as the super-user (see also the **—super** and **—fake-super** options). Without this option, the owner of new and/or transferred files are set to the invoking user on the receiving side. The preservation of ownership will associate matching nas by default, but may fall back to using the ID nuer in so circumstances (see

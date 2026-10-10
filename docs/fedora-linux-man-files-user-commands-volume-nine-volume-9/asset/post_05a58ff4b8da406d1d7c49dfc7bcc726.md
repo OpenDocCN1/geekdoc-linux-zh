@@ -1,0 +1,142 @@
+
+## ENVIRONMENT
+
+**ssh** will normally set the following environment variables:
+
+- **DISPLAY**
+  The **DISPLAY** variable indicates the location of the X11 server. It is automatically set by **ssh** to point to a value of the form “hostna:n” where “hostna” indicates the host where the shell runs, and ‘n’ is an integer >= 1. **ssh** uses this special value to forward X11 connections over the secure channel. The user should normally not set **DISPLAY** explicitly, as that will render the X11 connection insecure (and will require the user to manually copy any required authorization cookies).
+- **HOME**
+  Set to the path of the user’s home directory.
+- **LOGNAME**
+  Synonym for **USER** set for compatibility with systems that use this variable.
+- **MAIL**
+  Set to the path of the user’s mailbox.
+- **PATH**
+  Set to the default **PATH** as specified when compiling.
+- **SSH_ASKPASS**
+  If **ssh** needs a passphrase, it will read the passphrase from the current terminal if it was run from a terminal. If **ssh** does not have a terminal associated with it but **DISPLAY** and **SSH_ASKPASS** are set, it will execute the program specified by **SSH_ASKPASS** and open an X11 window to read the passphrase. This is particularly useful when calling **ssh** from a .xsession or related script. (Note that on some machines it may be necessary to redirect the input from /dev/null to make this work.)
+- **SSH_AUTH_SOCK**
+  Identifies the path of a UNIX socket used to communicate with the agent.
+- **SSH_CONNECTION**
+  Identifies the client and server ends of the connection. The variable contains four space-separated values: client IP address, client port number, server IP address, and server port number.
+- **SSH_ORIGINAL_COMMAND**
+  This variable contains the original command line if a forced command is executed. It can be used to extract the original arguments.
+- **SSH_TTY**
+  This is set to the name of the tty (path to the device) associated with the current shell or command. If the current session has no tty, this variable is not set.
+- **TZ**
+  This variable is set to indicate the present time zone if it was set when the daemon was started (i.e. the daemon passes the value on to new connections).
+- **USER**
+  Set to the name of the user logging in.
+
+Additionally, **ssh** reads `~/.ssh/environment` and adds lines of the format “`VARNAME=value`” to the environment if the file exists and users are allowed to change their environment. For more information, see the **PermitUserEnvironment** option in `sshd_config` 5.
+
+### SSH_USE_STRONG_RNG
+
+The reseeding of the OpenSSL random generator is usually done from **/dev/urandom**. If the **SSH_USE_STRONG_RNG** environment variable is set to value other than **0** the OpenSSL random generator is reseeded from **/dev/random**. The number of bytes read is defined by the SSH_USE_STRONG_RNG value. Minimum is 14 bytes. This setting is not recommended on the computers without the hardware random generator because insufficient entropy causes the connection to be blocked until enough entropy is available.
+
+## FILES
+
+**~/\.rhosts**
+
+This file is used for host-based authentication (see above). On some machines this file may need to be world-readable if the user's home directory is on an NFS partition, because (8) reads it as root. Additionally, this file must be owned by the user, and must not have write permissions for anyone else. The recommended permission for most machines is read/write for the user, and not accessible by others.
+
+**~/\.shosts**
+
+This file is used in exactly the same way as .rhosts but allows host-based authentication without permitting login with rlogin/rsh.
+
+**~/\.ssh/**
+
+This directory is the default location for all user-specific configuration and authentication information. There is no general requirement to keep the entire contents of this directory secret, but the recommended permissions are read/write/execute for the user, and not accessible by others.
+
+**~/\.ssh/authorized_keys**
+
+Lists the public keys (DSA, ECDSA, Ed25519, RSA) that can be used for logging in as this user. The format of this file is described in the (8) manual page. This file is not highly sensitive, but the recommended permissions are read/write for the user, and not accessible by others.
+
+**~/\.ssh/config**
+
+This is the per-user configuration file. The file format and configuration options are described in ssh_config5. Because of the potential for abuse, this file must have strict permissions: read/write for the user, and not writable by others.
+
+**~/\.ssh/environment**
+
+Contains additional definitions for environment variables; see **ENVIRONMENT**, above.
+
+**~/\.ssh/identity**
+**~/\.ssh/id_dsa**
+**~/\.ssh/id_ecdsa**
+**~/\.ssh/id_ed25519**
+**~/\.ssh/id_rsa**
+
+Contains the private key for authentication. These files contain sensitive data and should be readable by the user but not accessible by others (read/write/execute). **ssh** will simply ignore a private key file if it is accessible by others. It is possible to specify a passphrase when generating the key which will be used to encrypt the sensitive part of this file using 3DES.
+
+**~/\.ssh/identity.pub**
+**~/\.ssh/id_dsa.pub**
+**~/\.ssh/id_ecdsa.pub**
+**~/\.ssh/id_ed25519.pub**
+**~/\.ssh/id_rsa.pub**
+
+Contains the public key for authentication. These files are not sensitive and can (but need not) be readable by anyone.
+
+**~/\.ssh/known_hosts**
+
+Contains a list of host keys for all hosts the user has logged into that are not already in the systemwide list of known host keys. See (8) for further details of the format of this file.
+
+**~/\.ssh/rc**
+
+Commands in this file are executed by **ssh** when the user logs in, just before the user’s shell (or command) is started. See the (8) manual page for more information.
+
+**/etc/hosts.equiv**
+
+This file is for host-based authentication (see above). It should only be writable by root.
+
+**/etc/ssh/shosts.equiv**
+
+This file is used in exactly the same way as hosts.equiv but allows host-based authentication without permitting login with rlogin/rsh.
+
+**/etc/ssh/ssh_config**
+
+Systemwide configuration file. The file format and configuration options are described in ssh_config5.
+
+- /etc/ssh/ssh_host_key
+- /etc/ssh/ssh_host_dsa_key
+- /etc/ssh/ssh_host_ecdsa_key
+- /etc/ssh/ssh_host_ed25519_key
+- /etc/ssh/ssh_host_rsa_key
+
+These files contain the private parts of the host keys and are used for host-based authentication. If protocol version 1 is used, **ssh** must be set up root, since the host key is readable only by root. For protocol version 2, **ssh** uses ssh-keysign8 to access the host keys, eliminating the requirement that **ssh** be set up root when host-based authentication is used. By default **ssh** is not set up root.
+
+**/etc/ssh/ssh_known_hosts**
+
+Systemwide list of known host keys. This file should be prepared by the system administrator to contain the public host keys of all machines in the organization. It should be world-readable. See (8) for further details of the format of this file.
+
+**/etc/ssh/sshrd**
+
+Commands in this file are executed by **ssh** when the user logs in, just before the user’s shell (or command) is started. See the (8) manual page for more information.
+
+## EXIT STATUS
+
+**ssh** exits with the exit status of the remote command or with 255 if an error occurred.
+
+## IPV6
+
+IPv6 address can be used everywhere where IPv4 address. In all entries, the IPv6 address must be enclosed in square brackets. Note: The square brackets are special characters for the shell and must be escaped in shell.
+
+## SEE ALSO
+
+(1), (1), ssh-add1, ssh-agent1, ssh-keygen1, ssh-keyscan1, (4), ssh_config5, ssh-keysign8, (8)
+
+## STANDARDS
+
+- S. Lehtinen C. Lonvick January 2006 *RFC 4250 The Secure Shell (SSH) Protocol Assigned Numbers*
+- T. Ylonen C. Lonvick January 2006 *RFC 4251 The Secure Shell (SSH) Protocol Architecture*
+- T. Ylonen C. Lonvick January 2006 *RFC 4252 The Secure Shell (SSH) Authentication Protocol*
+- T. Ylonen C. Lonvick January 2006 *RFC 4253 The Secure Shell (SSH) Transport Layer Protocol*
+- T. Ylonen C. Lonvick January 2006 *RFC 4254 The Secure Shell (SSH) Connection Protocol*
+- J. Schlyter W. Griffin January 2006 *RFC 4255 Using DNS to Securely Publish Secure Shell (SSH) Key Fingerprints*
+- F. Cusack M. Forssen January 2006 *RFC 4256 Generic Message Exchange Authentication for the Secure Shell Protocol (SSH)*
+- J. Galbraith P. Remaker January 2006 *RFC 4335 The Secure Shell (SSH) Session Channel Break Extension*
+- M. Bellare T. Kohno C. Namprempre January 2006 *RFC 4344 The Secure Shell (SSH) Transport Layer Encryption Modes*
+- B. Harris January 2006 *RFC 4345 Improved Arcfour Modes for the Secure Shell (SSH) Transport Layer Protocol*
+- M. Friedl N. Provos W. Simpson March 2006 *RFC 4419 Diffie-Hellman Group Exchange for the Secure Shell (SSH) Transport Layer Protocol*
+- J. Galbraith R. Thayer Noever 2006 *RFC 4716 The Secure Shell (SSH) Public Key File Format*
+- D. Stebila J. Green December 2009 *RFC 5656 Elliptic Curve Algorithm Integration in the Secure Shell Transport Layer*
+- A. Perrig D. Song 1999 *International Workshop on Cryptographic Techniques and E-Commerce (CrypTEC ’99) Hash Visualization: a New Technique to improve Real-World Security*

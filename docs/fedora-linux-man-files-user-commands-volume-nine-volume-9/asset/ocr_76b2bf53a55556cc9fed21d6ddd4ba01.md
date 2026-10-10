@@ -1,0 +1,3 @@
+# SYNOPSIS
+
+pr [OPTION]... [FILE]...

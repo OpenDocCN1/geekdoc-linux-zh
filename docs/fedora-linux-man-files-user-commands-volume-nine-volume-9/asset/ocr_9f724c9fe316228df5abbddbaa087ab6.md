@@ -1,0 +1,34 @@
+# # ENVIRONMENT VARIABLES
+
+The following environnt variables could affect **ps**:
+
++   *   **COLUMNS**
++       Override default display width.
++   *   **LINES**
++       Override default display height.
++   *   **PS_PERSONALITY**
++       Set to one of posix, old, linux, bsd, sun, digital... (see section **PERSONALITY** below).
++   *   **CMD_ENV**
++       Set to one of posix, old, linux, bsd, sun, digital... (see section **PERSONALITY** below).
++   *   **I_WANT_A_BROKEN_PS**
++       Force obsolete command line interpretation.
++   *   **LC_TIME**
++       Date format.
++   *   **PS_COLORS**
++       Not currently supported.
++   *   **PS_FORMAT**
++       Default output format override. You may set this to a format string of the type used for the -o option. The **DefSysV** and **DefBSD** values are particulariy useful.
++   *   **PS_SYSMAP**
++       Default nalist (System.map) location.
++   *   **PS_SYSTEM_MAP**
++       Default nalist (System.map) location.
++   *   **POSIXLY_CORRECT**
++       Don’t find excuses to ignore bad “features”.
++   *   **POSIX2**
++       When set to “on”, acts as **POSIXLY_CORRECT**.
++   *   **UNIX95**
++       Don’t find excuses to ignore bad “features”.
++   *   **_XPG**
++       Cancel **CMD_ENV**=*irx* non-standard behavior.
+
+In general, it is a bad idea to set these variables. The one exception is **CMD_ENV** or **PS_PERSONALITY**, which could be set to Linux for normal systems. Without that setting, **ps** follows the useless and bad parts of the Unix98 standard.
