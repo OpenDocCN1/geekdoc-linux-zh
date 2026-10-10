@@ -1,0 +1,13 @@
+Many users report that Linux is at least as stable as commercial Unix systems. Linux is still under development, but the two-pronged release philosophy has made stable versions available without impeding development.
+
+The most important factor for many users is price. Linux software is free if you can download it from the Internet or another computer network. If you do not have Internet access, you can still purchase Linux inexpensively via mail order on diskette, tape, or CD-ROM.
+
+Of course, you may copy Linux from a friend who already has the software or share the purchase cost with someone else. If you plan to install Linux on a large number of machines, you need only purchase a single copy of the software—Linux is not distributed with a single-machine license.
+
+The value of commercial Unix implementations should not be demeaned. In addition to the price of the software itself, one often pays for documentation, support, and quality assurance. These are very important factors for large institutions, but personal computer users may not require these benefits. In any case, many businesses and universities have found that running Linux in a lab of inexpensive personal computers is preferable to running a commercial version of Unix in a lab of workstations. Linux can provide workstation functionality on a personal computer at a fraction of the cost.
+
+Linux systems have travelled the high seas of the North Pacific and manage telecommunications and data analysis for an oceanographic research vessel. Linux systems are used at research stations in Antarctica. Several hospitals maintain patient records on Linux systems.
+
+Other free or inexpensive implementations of Unix are available for the 80386 and 80486. One of the best known is 386BSD, an implementation of BSD Unix for the 80386. The 386BSD package is comparable to Linux in many ways, though one is better depends on your needs and expectations. The only strong distinction we can make is that Linux is developed openly, and any volunteer can aid in the development process, while 386BSD is developed by a closed team of programmers. Because of this, serious philosophical and design differences exist between the two projects. The goal of Linux is to develop a complete Unix system from scratch (and have a lot of fun in the process), and the goal of 386BSD is in part to modify the existing BSD code for use on the 80386.
+
+NetBSD is another port of the BSD NET/2 distribution to several machines, including the 80386. NetBSD has a slightly more open development structure and is comparable to 386BSD in many respects.

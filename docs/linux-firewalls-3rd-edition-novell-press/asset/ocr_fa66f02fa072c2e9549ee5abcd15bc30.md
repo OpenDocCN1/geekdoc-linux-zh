@@ -1,0 +1,3 @@
+were demonstrated. Finally, the issues involved in firewall installation were described, both for sites with a static IP address and for sites with a dynamically assigned IP address.
+
+Chapter 5 uses the standalone firewall as the basis for building an optimized firewall. Chapter 6 uses it as the basis for a more complicated firewall architecture. A screened subnet architecture using two firewalls separating a DMZ perimeter network is described in Chapter 6. A small business could easily have the need and the resources for this more elaborate configuration. Chapter 7 uses the standalone firewall as the basis for its examples but does not build on this example directly.

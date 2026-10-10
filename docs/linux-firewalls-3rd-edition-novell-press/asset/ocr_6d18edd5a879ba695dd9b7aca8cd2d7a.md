@@ -1,0 +1,13 @@
+# # Dedication
+
+*To my wife, Rebecca*
+
+# # Acknowledgments
+
+Thanks first to my family for being supportive while I write seemingly every day. I’d also like to thank my agent, Laura Lewin at Studio B, for all of her hard work and her constant help. Thanks also to A.J. Prowant for doing the technical edit on this project.
+
+Chris and Nikie Tuescher deserve an acknowledgment for being great friends and understanding why we haven’t come to Minneapolis lately—these books take time to write! Thanks to Aaron and Jodi Deering for having us over and for Aaron taking it easy on me at basketball. Thanks to Duff Damos for his continued friendship throughout the years. Pat Dunn, thanks for changing your password all the time and then forgetting it. Thanks to meet for his patience and constant help.
+
+Here’s the list, in no particular order: Though it maybe isn’t readily apparent exactly how some of you helped, you have, in some way, contributed to this book (for better or worse). Andy Hale (let me know when you want to start fixing your floors), Dan Noah, Jim & Amy Leu, Kent & Amy Laabs, Michael Mittelstadt, Denise Sandell, The Pilgers, AWRC, Jake Buchholz, Richard Dean Anderson, Aaron Schrunk, Beaz, RySch, HFB & The #JBS, The Guthries, The Heinis, Tim McKeown, Pearl & Moff, Roo Konkol, Erin Thomas, Paul, Darrick, Jeff Sanner, Edward Van Haken, Peter DeLuise, The DBAs and the Data Architect team, Sarah Hagerman, Jay & Deb Schrunk, Brian Page, Is Anyone Still Reading This, Mark Little, Nightmare Squad, Jim Oliva, John Eckendorff, 90fm, Scott & Karla Kluck, Amanda Tapping, The Steffens, Eliot Irons, Keith Imlach & the Data Security team, No, seriously, is anyone reading this, Sue Crawford, Eric Hartman, Commas are my best friend, Ron Mackay, The Chaasteens, Darin Davission, If you haven’t seen your name yet wait until my next book, Justin Hoerter, John Hein, Andy Berkman, The Internets, Mike Wrzinski, , That was an extra comma because I love them so much, Chris Judge, Tony Failardo, Steve Hannan (I just thanked a Project Manager), Greg Ruby, Ryan Anderson, Suzi Limberg, Kevin Blake, Dave Duhle, I get paid based on how many people I thank, Michael Shanks, Tom Lindley, This Space For Rent, Kevin Bedell, James Turner, Dee-Ann LeBlanc, Neil Peart, Norm & Crew @ Music Quest.
+
+That was a long list and I’m sure that I forgot people, just like last time. I need to send this, the final deliverable, to the publisher as the deadline looms. If you weren’t thanked explicitly here then know that I do thank you...even though I forgot about you when writing this.

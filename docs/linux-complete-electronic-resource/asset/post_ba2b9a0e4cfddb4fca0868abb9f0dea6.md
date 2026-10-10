@@ -1,0 +1,50 @@
+
+Ssh connects and logs into the specified hostname. The user must prove his/her identity to the remote machine using one of several methods. First, if the machine the user logs in from is listed in `/etc/hosts.equiv` or `/etc/hosts.equiv` on the remote machine, and the user names are the same on both sides, the user is immediately permitted to log in. Second, if `.rhosts` or `.shosts` exists in a user's home directory on the remote machine and contains a line containing the name of the client machine and the name of the user on that machine, the user is permitted to log in. This form of authentication alone is normally not allowed by the server because it is not secure.
+
+The second (and primary) authentication method is the `.rhosts` or `.hosts.equiv` method combined with RSA-based host authentication. It means that if the login would be permitted by `.rhosts`, `.shosts`, `/etc/.hosts.equiv`, or `/etc/hosts.equiv`, and additionally ssh can verify the client's host key (see `$HOME/.ssh/known_hosts` and `/etc/ssh/.rhosts` in the FILES section), only then is login permitted. This authentication method closes security holes due to IP spoofing, DNS spoofing, and routing spoofing. [Note to the administrator: `/etc/hosts.equiv`, `.rhosts`, and the login/rsh protocol in general, are inherently insecure and should be disabled if security is desired.]
+
+As a third authentication method, ssh supports RSA based authentication. The scheme is based on public-key cryptography: there are cryptosystems where encryption and decryption are done using separate keys, and it is not possible to derive the decryption key from the encryption key. RSA is one such system. The idea is that each user creates a public/private key pair for authentication purposes. The server knows the public key, and only the user knows the private key. The file `$HOME/.ssh/.authorized_keys` lists the public keys that are permitted for logging in. When the user logs in, the ssh program tells the server which key pair it would like to use for authentication. The server checks if this key is permitted, and if so, sends the user (actually the ssh program running on behalf of the user) a challenge, a random number, encrypted by the user's public key. The challenge can only be decrypted using the proper private key. The user's client then decrypts the challenge using the private key, proving that he/she knows the private key but without disclosing it to the server.
+
+Ssh implements the RSA authentication protocol automatically. The user creates his/her RSA key pair by running `ssh-keygen(1)`. This stores the private key in `.ssh/identity` and the public key in `.ssh/identity.pub` in the user's home directory. The user should then copy the `identity.pub` to `.ssh/authorized_keys` in his/her home directory on the remote machine. (The `authorized_keys` file corresponds to the conventional `.rhosts` file and has one key per line, though the lines can be very long.) After this, the user can log in without giving the password. RSA authentication is much more secure than rhosts authentication.
+
+The most convenient way to use RSA authentication may be with an authentication agent. See `ssh-agent(1)` for more information.
+
+If other authentication methods fail, ssh prompts the user for a password. The password is sent to the remote host for checking; however, since all communications are encrypted, the password cannot be seen by someone listening on the network.
+
+When the user's identity has been accepted by the server, the server either executes the given command, or logs into the machine and gives the user a normal shell on the remote machine. All communication with the remote command or shell will be automatically encrypted.
+
+If a pseudo-terminal has been allocated (normal login session), the user can disconnect with `~^.`, and suspend ssh with `~^Z`. All forwarded connections can be listed with `~#`, and if the session blocks waiting for forwarded X11 or TCP/IP connections to terminate, it can be backgrounded with `~&` (this should not be used while the user shell is active, as it can cause the shell to hang). All available escapes can be listed with `~?`.
+
+A single tilde character can be sent as `~~` (or by listing the tilde by a character other than those described above). The escape character must always follow a new line to be interpreted as special. The escape character can be changed in configuration files or on the command line.
+
+If no pseudo tty has been allocated, the session is transparent and can be used to reliably transfer binary data. On most systems, setting the escape character to "none" will also make the session transparent even if a tty is used.
+
+The session terminates when the command or shell in on the remote machine exits and all X11 and TCP/IP connections have been closed. The exit status of the remote program is returned as the exit status of ssh.
+
+If the user is using X11 (the DISPLAY environment variable is set), the connection to the X11 display is automatically forwarded to the remote side in such a way that any X11 programs started from the shell (or command) will go through the encrypted channel, and the connection to the real X server will be made from the local machine. The user should not manually set DISPLAY. Forwarding of X11 connections can be configured on the command line or in configuration files.
+
+The DISPLAY value set by ssh will point to the server machine, but with a display number greater than zero. This is normal, and happens because **ssh** creates a "proxy" X server on the server machine for forwarding the connections over the encrypted channel.
+
+ssh will also automatically set up Xauthority data on the server machine. For this purpose, it will generate a random authorization cookie, store it in Xauthority on the server, and verify that any forwarded connections carry this cookie and replace it by the real cookie when the connection is opened. The real authentication cookie is never sent to the server machine (and no cookies are sent in the plain).
+
+If the user is using an authentication agent, the connection to the agent is automatically forwarded to the remote side unless disabled on command line or in a configuration file.
+
+Forwarding of arbitrary TCP/IP connections over the secure channel can be specified either on command line or in a configuration file. One possible application of TCP/IP forwarding is a secure connection to an electronic purse; another is going through firewalls.
+
+Ssh automatically maintains and checks a database containing RSA-based identifications for all hosts it has ever been used with. The database is stored in `~/.ssh/known_hosts` in the user's home directory. Additionally, the file `/etc/ssh/known_hosts` is automatically checked for known hosts. Any new hosts are automatically added to the user's file. If a host's identification ever changes, **ssh** warns about this and disables password authentication to prevent a trojan horse from getting the user's password. Another purpose of this mechanism is to prevent man-in-the-middle attacks which could otherwise be used to circumvent the encryption. The **StrictHostKeyChecking** option (see below) can be used to prevent logins to machines whose host key is not known or has changed.
+
+## OPTIONS
+
+- **-a** Disables forwarding of the authentication agent connection. This may also be specified on a per-host basis in the configuration file.
+
+- **-c idea | des | 3des | arcfour | tss | none** Selects the cipher to use for encrypting the session. **idea** is used by default. It is believed to be secure. **des** is the data encryption standard, but is breakable by governments, large corporations, and major criminal organizations. **3des** (triple-des) is encrypt-decrypt-encrypt triple with three different keys. It is presumably more secure than DES. It is used as default if both sites do not support IDEA. **arfour** is an algorithm published in the Usenet News in 1995. This algorithm is believed to be equivalent with the RC4 cipher from RSA Data Security (RC4 is a trademark of RSA Data Security). This is the fastest algorithm currently supported. **TSS** is a fast home-grown algorithm based on MD5. **none** disables encryption entirely; it is only intended for debugging, and it renders the connection insecure.
+
+- **-ch '^ch'|none** Sets the escape character for sessions with a tty (default: `~`). The escape character is only recognized at the beginning of a line. The escape character followed by a dot (.) closes the connection, followed by control-Z suspends the connection, and followed by itself sends the escape character once. Setting the character to 'none' disables any escapes and makes the session fully transparent.
+
+- **-f** Requests ssh to go to background after authentication is done and forwards have been established. This is useful if the user is going to ask for passwords or passphrases, but the user wants it in the background. This may also be useful in scripts. This implies **-n**. The recommended way to start X11 programs at a remote site is with something like "ssh -f host xterm".
+
+- **-i identity_file** Selects the file from which the identity (private key) for **RSA** authentication is read. Default is `~/.ssh/identity` in the user's home directory. Identity files may also be specified on a per-host basis in the configuration file. It is possible to have multiple -i options (and multiple identities specified in configuration files).
+
+- **-l login_name** Specifies the user to log in as on the remote machine. This may also be specified on a per-host basis in the configuration file.
+
+- **-n** Redirects stdin from /dev/null (actually, prevents reading from stdin). This must be used when ssh is run in the background. A common trick is to use this to run X11 programs in a remote machine. For example, "ssh -n host.fu.emacs.cs.hu.fi emacs &" will start an emacs on shadows.cs.hu.fi, and the X11 connection will be automatically forwarded over an encrypted channel. The ssh program will be put in the background. (This does

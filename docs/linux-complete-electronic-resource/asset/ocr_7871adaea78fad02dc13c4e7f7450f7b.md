@@ -1,0 +1,11 @@
+readable by the user but not accessible by others. It is possible to specify a passphrase when generating the key; the passphrase will be used to encrypt the sensitive part of this file under **IDEA**.
+
+`$HOME/.ssh/identity.pub` Contains the public key for authentication (public part of the identity file in human-readable form). The contents of this file should be added to `$HOME/.ssh/authorized_keys` on all machines where you wish to log in using RSA authentication. This file is not sensitive and can (but need not) be readable by anyone. This file is never used automatically and is not necessary; it is only provided for the convenience of the user.
+
+`$HOME/.ssh/config` This is the per-user configuration file. The format of this file is described above. This file is used by the `ssh` client. This file does not usually contain any sensitive information, but the recommended permissions are read/write for the user, and not accessible by others.
+
+`$HOME/.ssh/authorized_keys` Lists the RSA keys that can be used for logging in as this user. The format of this file is described in the `sshd` manual page. In the simplest form the format is the same as the .pub identity files (that is, each line contains the number of bits in n modulus, public exponent, modulus, and comment fields, separated by spaces). This file is not highly sensitive, but the recommended permissions are read/write for the user, and not accessible by others.
+
+`/etc/ssh_known_hosts` Systemwide list of known host keys. This file should be prepared by the system administrator to contain the public host keys of all machines in the organization. This file should be world-readable. This file contains public keys, one per line, in the following format (fields separated by spaces): system name, number of bits in n modulus, public exponent, modulus, and optional comment field. When different names are used for the same machine, all such names should be listed, separated by commas. The format is described on the `sshd` manual page.
+
+The canonical system name (as returned by name servers) is used by `sshd` to verify the client host when logging in; other names are needed because `ssh` does not convert the user-supplied name to a canonical name before checking the key

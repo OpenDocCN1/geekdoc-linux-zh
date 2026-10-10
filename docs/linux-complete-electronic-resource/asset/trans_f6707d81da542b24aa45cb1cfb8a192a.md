@@ -1,0 +1,122 @@
+
+
+## 那么路由程序究竟做了什么？
+
+上述描述的路由配置最适合那些只有单一可能路径通往目的地的简单网络拓扑。当你的网络结构变得更加复杂时，情况也会变得更加复杂。幸运的是，对大多数用户来说，这不会成为一个问题。
+
+所谓“手动路由”或“静态路由”的主要缺点是，如果你的网络中某台机器或链路发生故障，那么如果你需要更改数据报的传输路径（假设存在其他路径），唯一的方法就是人工干预并执行相应的命令。显然，这种方法笨拙、缓慢、不切实际且容易出错。人们已经开发出多种技术，以便在网络发生故障且存在备用路由时，自动调整路由表；这些技术都松散地归属于“动态路由协议”这一术语的范畴。
+
+你可能听说过一些更常见的动态路由协议。其中最常见的可能是 RIP（路由信息协议）和 OSPF（开放最短路径优先协议）。路由信息协议在小型网络上非常普遍，例如中小型企业网络或楼宇内部网络。OSPF 更为现代，处理大型网络配置的能力更强，更适合那些网络中可能存在大量路径的环境。这些协议的常见实现包括：“routed” - 支持 RIP；“gated” - 支持 RIP、OSPF 等。`routed` 程序通常随你的 Linux 发行版提供，或包含在上述详述的 “NetKit” 软件包中。
+
+使用动态路由协议的位置和方式的一个示例可能类似于下一页中的图表：
+
+我们有三个路由器 A、B 和 C。每个路由器支持一个以太网网段，该网段属于一个 C 类 IP 网络（子网掩码为 255.255.255.0）。每个路由器还与其他每个路由器之间拥有一条 PPP 链路。该网络形成一个三角形。
+
+显然，路由器 A 上的路由表可能如下所示：
+
+```
+root# route add -net 192.168.1.0 netmask 255.255.255.0 eth0
+root# route add -net 192.168.2.0 netmask 255.255.255.0 ppp0
+root# route add -net 192.168.3.0 netmask 255.255.255.0 ppp1
+```
+
+![](img/a3584dae761d2e3abed8bf40d7637389_236_0.png)
+
+只要路由器 A 和 B 之间的链路没有故障，这种配置运行得非常好。如果该链路发生故障，那么如上所示的路由条目会导致 A 的以太网网段上的主机无法访问 B 的以太网网段上的主机，因为数据包会被定向到路由器 A 的 ppp0 链路上，而该链路已断开。它们仍然可以继续与 C 的以太网网段上的主机通信，并且 C 的以太网网段上的主机仍然可以与 B 的以太网网段上的主机通信，因为 B 和 C 之间的链路仍然完好。
+
+但等等，如果 A 可以与 C 通信，而 C 仍然可以与 B 通信，为什么 A 不将发往 B 的数据报经由 C 进行路由，让 C 将它们发送给 B 呢？这正是 RIP 等动态路由协议旨在解决的那类问题。如果路由器 A、B 和 C 中的每一个都在运行路由守护进程，那么当网络中任何一条链路发生故障时，它们的路由表会自动调整以反映网络的新状态。配置这样的网络很简单：在每个路由器上，你只需要做两件事。以路由器 A 为例：
+
+```
+root# route add -net 192.168.1.0 netmask 255.255.255.0 eth0
+root# /usr/sbin/routed
+```
+
+`routed` 路由守护进程启动时会自动查找所有活动的网络端口，并在每个网络设备上发送和监听消息，以便它能够确定并更新主机上的路由表。
+
+以上是对动态路由及其使用场景的简要介绍。如果你需要更多信息，请参考文档顶部列出的建议参考书目。
+
+与动态路由相关的重要要点如下：
+
+- 只有当你的 Linux 机器有可能选择通往目的地的多条可能路径时，你才需要运行动态路由协议守护进程。
+- 动态路由守护进程会自动修改你的路由表，以适配网络的变化。
+- RIP 适用于小到中等规模的网络。
+
+## 配置你的网络服务器和服务
+
+网络服务器和服务是那些允许远程用户使用你的 Linux 机器的程序。服务器程序监听网络端口。网络端口是寻址特定主机上特定服务的手段，也是服务器区分传入的 telnet 连接和传入的 ftp 连接的方式。远程用户与你的机器建立网络连接，监听该端口的服务器程序（即网络守护进程程序）接受连接并执行。网络守护进程有两种工作方式。在实际应用中，这两种方式都很常见。这两种方式是：
+
+**独立运行** 网络守护进程程序监听指定的网络端口，当有传入连接时，它自己管理该网络连接以提供服务。
+
+**作为 inetd 服务器的从属** *inetd 服务器* 是一个特殊的网络守护进程程序，专门用于管理传入的网络连接。它有一个配置文件，告诉它在接收到传入连接时需要运行哪个程序。任何服务端口都可以配置为使用 tcp 或 udp 协议。这些端口在另一个文件中描述，我们很快就会讲到。
+
+我们需要配置两个重要文件。它们分别是 /etc/services 文件，用于为端口号分配名称；以及 /etc/inetd.conf 文件，它是 inetd 网络守护进程的配置文件。
+
+### /etc/services
+
+/etc/services 文件是一个简单的数据库，将人类友好的名称与机器友好的端口号关联起来。其格式相当简单。该文件是一个文本文件，每一行代表数据库中的一个条目。每个条目由三个字段组成，字段之间用任意数量的空白字符（制表符或空格）分隔。字段包括：名称 端口/协议 别名 # 注释
+
+- 名称 代表所描述服务的单个单词名称。
+- 端口/协议 此字段分为两个子字段。
+    - 端口 指定指定服务可用的端口号的数字。大多数常见服务都有分配的服务编号。这些在 RFC-1340 中有描述。
+    - 协议 此子字段可以设置为 tcp 或 udp。
+- 别名 可用于指代此服务条目的其他名称。
+
+需要注意的是，18/tcp 的条目与 18/udp 的条目非常不同，而且没有技术原因要求同一服务必须同时存在于两者之上。通常常识起主导作用，只有当特定服务同时通过 tcp 和 udp 可用时，你才会看到两个条目。
+
+任何出现在某行中 "##" 字符之后的文本都会被忽略，并被视为注释。
+
+### /etc/Services 文件示例
+
+所有现代 Linux 发行版都提供一个良好的 /etc/services 文件。以防你恰好是从头开始构建机器，这里是一份来自旧版 Debian 发行版（参见 http://www.debian.org/）提供的 /etc/services 文件的副本。
+
+```
+# /etc/services:
+# $Id: services,v.1.3 1996/05/06 21:42:37 tobias Exp $
+#
+# Network services, Internet style
+#
+# Note that it is presently the policy of IANA to assign a
+# single well-known port number for both TCP and UDP; hence,
+# most entries here have two entries even if the protocol
+# doesn't support UDP operations.
+# Updated from RFC 1340, 'Assigned Numbers' (July 1992).
+# Not all ports are included, only the more common ones.
+
+tcpmux	1/tcp		# TCP port service multiplexer
+echo	7/tcp
+		7/udp
+discard	9/tcp		sink null
+		9/udp		sink null
+systat	11/tcp		users
+daytime	13/tcp
+		13/udp
+daytime	17/tcp
+		17/udp
+qotd		17/tcp		quote
+msp		18/tcp		# message send protocol
+		18/udp		# message send protocol
+chargen	19/tcp		tystst source
+		19/udp		tystst source
+ftp-data	20/tcp
+ftp		21/tcp
+ssh		22/tcp		# SSH Remote Login Protocol
+		22/udp		# SSH Remote Login Protocol
+telnet	23/tcp
+# 24 - private
+smtpp	25/tcp		mail
+# 26 - unassigned
+time	37/tcp		timeserver
+		37/udp		timeserver
+		39/udp		resource	# resource location
+nameserver	42/tcp		name	# IEN 116
+whois	43/tcp		nicname
+re-mail-ck	50/tcp		# Remote Mail Checking Protocol
+		50/udp		# Remote Mail Checking Protocol
+domain	53/tcp		nameserver	# name-domain server
+		53/udp		nameserver
+mtop	57/tcp		# deprecated
+bootps	67/tcp		# BOOTP server
+		67/udp
+bootpc	68/tcp		# BOOTP client
+```
+

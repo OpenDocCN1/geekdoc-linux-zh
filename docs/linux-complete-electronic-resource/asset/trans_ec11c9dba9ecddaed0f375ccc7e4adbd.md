@@ -1,0 +1,68 @@
+
+如果您的 Linux 系统通过以太网连接到 Internet，并且拥有调制解调器，那么您的系统可以成为其他主机的 SLIP 或 PPP 服务器。
+
+NFS（网络文件系统）让您的系统能够与网络上的其他机器无缝共享文件系统。FTP（文件传输协议）允许您与其他机器传输文件。Sendmail 通过 SMTP 协议发送和接收电子邮件；C-News 和 INN 是基于 NNTP 的新闻系统；而 Telnet、rlogin 和 rsh 允许您登录到网络上的其他机器并执行命令。Finger 允许您获取关于其他 Internet 用户的信息。
+
+Linux 还支持通过 Samba 连接到 Microsoft Windows，以及通过 AppleTalk 和 LocalTalk 连接到 Macintosh。此外，它还包含对 Novell IPX 协议的支持。
+
+完整的邮件和新闻阅读器可供选择用于 Linux，包括 elm、pine、rn、nn 和 tin。无论您的偏好如何，您都可以配置 Linux 系统从世界各地发送和接收电子邮件和新闻。
+
+系统提供了标准的 Unix 套接字编程接口。几乎任何使用 TCP/IP 的程序都可以移植到 Linux。Linux X 服务器也支持 TCP/IP，运行在其他系统上的应用程序可以使用本地系统的显示器。
+
+在《*Linux Complete*》第二部分中，我们讨论了 TCP/IP 软件的安装，包括 SLIP 和 PPP。
+
+UUCP（Unix-to-Unix Copy）是一种较旧的机制，用于在 Unix 机器之间传输文件、电子邮件和电子新闻。历史上，UUCP 机器通过调制解调器使用电话线连接，但 UUCP 也能够通过 TCP/IP 网络传输数据。如果您无法访问 TCP/IP 网络或 SLIP 或 PPP 服务器，您可以配置系统使用 UUCP 发送和接收文件及电子邮件。UUCP HOWTO 提供了更多信息（参见 `http://metalab.unc.edu/LDP/HOWTO/UUCP-HOWTO.html`）。
+
+## 电信和 BBS 软件
+
+如果您有调制解调器，您将通过 Linux 可用的电信包与其他机器进行通信。许多人使用电信软件访问公告板系统（BBS）和 Prodigy、CompuServe、America Online 等商业在线服务。人们使用调制解调器连接到工作或学校的 Unix 系统。调制解调器可以发送和接收传真。
+
+Linux 的一个流行通信包是 seyon，它在 X 下提供可定制的符合人体工程学的界面，并内置对 Kermit 和 ZModem 文件传输协议的支持。其他电信程序包括 C-Kermit、pcomm 和 minicom。这些与其他操作系统中的通信程序类似，使用起来非常容易。
+
+如果您无法访问 SLIP 或 PPP 服务器（参见上一节），可以使用 term 来复用您的串行线路。term 程序允许您在调制解调器连接上打开多个登录会话。它允许您将 X 客户端连接重定向到通过串行线路的本地 X 服务器。另一个软件包 KA9Q 实现了类似的、类似 SLIP 的接口。
+
+运营公告板系统（BBS）是许多人喜爱的爱好和收入来源。Linux 支持广泛的 BBS 软件，其中大多数比其他操作系统上可用的软件更强大。使用电话线、调制解调器和 Linux，您可以将系统变成 BBS，并为用户提供拨号访问。Linux 的 BBS 软件包括 XBBS 和 MiniBoard BBS 包。
+
+大多数 BBS 软件将用户锁定在基于菜单的系统中，其中只有特定的功能和应用程序可用。BBS 访问的替代方案是完整的 Unix 访问，它允许用户拨入您的系统并正常登录。这需要系统管理员大量的维护，但提供公共 Unix 访问并不困难。除了 TCP/IP 组网之外，您还可以在系统上提供电子邮件和新闻访问。
+
+如果您无法访问 TCP/IP 网络或 UUCP 信息源，Linux 允许您与 FidoNet 等 BBS 网络通信，后者允许您通过电话线交换电子新闻和邮件。您可以在在线找到关于电信和 BBS 软件的更多信息。
+
+## 万维网
+
+值得注意的是，Linux 包含 Web 服务器软件，以及 Web 浏览器。最常见的服务器是 Apache。如今，成千上万的 Linux 系统在 Internet 上运行 Apache。
+
+Linux 发行版包含不同的 Web 浏览器，其他浏览器可以从 Internet 下载。可用的浏览器包括 Lynx、Mosaic、Netscape、Arena 和 Amaya。
+
+Linux 为 Java 和 CGI 小程序提供完整支持，并且 Perl 是 Linux 编程环境中的标准工具。
+
+## 接口和 MS-DOS
+
+存在各种与 MS-DOS 接口的实用工具。最著名的应用程序是 Linux MS-DOS 模拟器，它允许您直接从 Linux 运行 MS-DOS 应用程序。虽然 Linux 和 MS-DOS 是完全不同的操作系统，但 80386 保护模式环境允许 MS-DOS 应用程序表现得像在它们原生的 8086 环境中运行一样。
+
+MS-DOS 模拟器仍在开发中，但许多流行的应用程序可以在其上运行。可以理解的是，由于任何模拟器固有的局限性，使用系统奇特或生僻功能的 MS-DOS 应用程序可能永远不会得到支持。例如，您不应该期望运行使用 80386 保护模式功能的程序，如 Microsoft Windows（即在 386 增强模式下）。
+
+标准的 MS-DOS 命令和实用工具，如 PKZIP.EXE 在模拟器下运行，4DOS（COMMAND.COM 的替代）、FoxPro 2.0、Harvard Graphics、MathCad、Stacker 3.1、Turbo Assembler、Turbo C/C++、Turbo Pascal、Microsoft Windows 3.0（在实模式下）以及 WordPerfect 5.1 也是如此。
+
+MS-DOS 模拟器主要作为临时解决方案，供那些仅需少数应用程序使用 MS-DOS 而其他一切都使用 Linux 的人使用。它不是 MS-DOS 的完整实现。当然，如果模拟器不满足您的需求，您始终可以在同一系统上运行 MS-DOS 和 Linux。使用 LILO 引导加载程序，您可以在启动时指定要启动哪个操作系统。Linux 也可以与其他操作系统共存，如 OS/2。
+
+Linux 提供了一个无缝接口，以便在 Linux 和 MS-DOS 之间传输文件。您可以在 Linux 下挂载 MS-DOS 分区或软盘，并像访问任何文件一样直接访问 MS-DOS 文件。
+
+目前正在开发 WINE——Linux 下 X 窗口系统的 Microsoft Windows 模拟器。一旦 WINE 完成，用户将能够直接从 Linux 运行 MS-Windows 应用程序。这与 Sun Microsystems 的商业 WABI Windows 模拟器类似，后者也可用于 Linux。
+
+## 其他应用程序
+
+由于 Linux 是一个杂糅的操作系统，可以预见地，它拥有大量杂项程序和实用工具。Linux 的主要重点是 Unix 个人计算，但这不是它出色的唯一领域。商业和科学软件的选择正在扩大，商业软件供应商已开始为不断增长的 Linux 应用程序库做出贡献。
+
+有多种关系数据库可供 Linux 使用，包括 Postgres、Ingres 和 Mbase。这些是功能齐全的、专业的客户/服务器数据库应用程序，类似于其他 Unix 平台上的那些。还有许多商业数据库系统可用。
+
+科学计算应用程序包括 FELT（有限元分析）；gnuplot（数据绘图和分析）；Octave（一个类似于 MATLAB 的符号数学包）；xspread（电子表格计算器）；xfractint（流行的 Fractint 分形生成器的基于 X 的移植版）；以及 xliostat（统计）。其他应用程序包括 SPICE（电路设计和分析）和 Khros（图像和数字信号处理与可视化）。Maple 和 MathLab 等商业包也可用。
+
+还有许多其他应用程序已移植到 Linux。如果您绝对找不到所需的软件，您可以尝试自行将该应用程序从其他平台移植到 Linux。无论您如何决定，将标准 Unix 应用程序移植到 Linux 都是直截了当的。Linux 完整的 Unix 编程环境足以作为任何科学应用程序的基础。
+
+Linux 也有一定数量的游戏。这些包括经典的基于文本的地牢游戏，如 Nethack 和 Moria；MUDs（多用户地牢，允许许多用户在基于文本的冒险中交互），如 DikuMUD 和 TinyMUD；以及一系列 X 游戏，如 xtetris、netrek 和 xboard（gnuchess 的 X11 版本）。流行的射击街机风格游戏 Doom 也已移植到 Linux。
+
+对于音频爱好者，Linux 支持各种声卡和相关软件，如 CDplayer，它使 CD-ROM 驱动器变成音频 CD 播放器；MIDI 音序器和编辑器，允许您为通过合成器或其他 MIDI 控制乐器播放而创作音乐；以及用于数字化声音的声音编辑器。
+
+找不到您正在寻找的应用程序？Linux 软件地图列出了已编写或移植到 Linux 的软件包。Freshmeat（参见 http://www.freshmeat.net）是一个更及时更新的、基于 Web 的 Linux 软件列表。
+
+大多数可自由分发的基于 Unix 的软件都可以在 Linux 上轻松编译。如果所有其他方法都失败，您可以自己编写该应用程序。如果您在寻找商业应用程序，可能会有一个免费的克隆版可用，或者您可以鼓励软件公司考虑发布

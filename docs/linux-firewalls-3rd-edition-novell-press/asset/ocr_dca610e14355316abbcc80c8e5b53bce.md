@@ -1,0 +1,5 @@
+# # About the Authors
+
+**Steve Suehring** is a technology architect with a diverse set of skills. He works with a wide array of technologies, from mainframe OS/390 through Microsoft Windows to several distributions of Linux. He has written a book on MySQL and numerous magazine articles. During his tenure as an editor for *LinuxWorld Magazine*, he focused on advocacy of Linux and open-source software, as well as computer security. He wrote a cover story for *LinuxWorld Magazine* featuring the WilliamsF1 team's use of Linux to design their Formula 1 car. Suehring is also a Cisco Certified Network Professional (CCNP), and he has contributed, according to him, "extremely small bits of code" to some open-source projects and lurks on a number of mailing lists, helping and answering questions when he can.
+
+**Robert Zigler** is a renowned firewall architect and consultant who has worked for a variety of organizations, including Nokia's router and access groups. He is well known as the author of the two previous editions of *Linux Firewalls*, and he operates a respected firewall resource site to share his design skills and evaluations of tools.

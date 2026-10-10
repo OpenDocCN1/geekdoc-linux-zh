@@ -1,0 +1,143 @@
+
+## mangle 表列表格式
+
+列出 mangle 表链中所有规则的 mangle 表列表命令的基本格式如下：
+
+```
+iptables -t mangle -vn -L PREROUTING
+iptables -t mangle -vn -L OUTPUT
+```
+
+或者
+
+```
+iptables -t mangle -vn -L
+```
+
+请注意，上述列表命令仅显示 mangle 表链中的规则。
+
+以下是两个 mangle 表规则示例，一个是 PREROUTING 链上的 MARK 规则，另一个是 OUTPUT 链上的 TOS 规则。为了简洁起见，仅展示 -v 选项的输出：
+
+```
+> iptables -t mangle -v -L
+```
+
+| Line | Chain | pkts | bytes | target | prot | opt | in | out | source | destination |
+|------|-------|------|-------|--------|------|-----|----|-----|--------|-------------|
+| 1 | PREROUTING (policy DROP 0 packets, 0 bytes) | | | | | | | | | |
+| 2 | | | | | | | | | | |
+| 3 | | 0 | 0 | MARK | tcp | -- | eth0 | any | laptop.private.lan | anywhere |
+| | | | | | | | | spts:1024:65535 dpt:ssh MARK set 0x10070 | | |
+
+| Line | Chain | pkts | bytes | target | prot | opt | in | out | source | destination |
+|------|-------|------|-------|--------|------|-----|----|-----|--------|-------------|
+| 4 | OUTPUT (policy DROP 0 packets, 0 bytes) | | | | | | | | | |
+| 5 | | | | | | | | | | |
+| 6 | | 0 | 0 | TOS | tcp | -- | any | eth1 | bastion.firewall.lan | anywhere |
+| | | | | | | | | spts:1024:65535 dpt:ssh TOS set Minimize-Delay | | |
+
+第 1 行标识该列表属于 PREROUTING 链，这是 MANGLE 被应用的位置。PREROUTING 链的默认策略是 DROP（丢弃）。
+
+第 2 行包含这些列标题：
+
+- **pkts** 是匹配该规则的数据包数量。
+- **bytes** 是匹配该规则的数据包中包含的字节数。
+- **target** 指代匹配该规则的 MARK 或 TOS 目标处置方式。
+- **prot** 是协议的缩写，可以是 all、tcp、udp 或 icmp，也可以是 /etc/protocols 文件中的值。
+- **opt** 代表 *分段选项*，该选项可以通过 `-f` 或 `! -f` 选项设置。第一个空格中的 `!` 表示 `! -f` 选项，这意味着匹配未分段的数据包或系列中的第一个分段。第二个空格中的 `f` 表示 `-f` 选项，这意味着匹配第二个及后续分段。
+- **in** 是入站网络接口名称——例如 `eth0`、`eth1`、`lo` 或 `ppp0`——此规则适用于该接口。只有到达该特定网络接口的数据包才匹配规则。如果您有一个局域网，为不同接口设置了单独的防火墙规则，或者您正在接口之间转发流量，此字段就变得很重要。
+  - 在 **PREROUTING** 链上，只有 **in** 字段是相关的。**out** 字段在 **PREROUTING** 链上没有意义。
+- **out** 是出站网络接口名称——例如 `eth0`、`eth1`、`lo` 或 `ppp0`——此规则适用于该接口。只有从该特定网络接口发出的数据包才匹配规则。如果您有一个局域网，为不同接口设置了单独的防火墙规则，或者您正在接口之间转发流量，此字段就变得很重要。
+  - 在 **OUTPUT** 链上，只有 **out** 字段是相关的。**in** 字段在 **OUTPUT** 链上没有意义。
+- **source** 是 IP 数据包头中的源地址。
+- **destination** 是 IP 数据包头中的目标地址。
+
+第 3 行是一个 **MARK** 规则，用于更改 iptables 与到达入站接口的 SSH 数据包关联的标记值。来自本地笔记本电脑并指向任何位置的 SSH 客户端连接被分配标记值 `0x10070`。
+
+第 4 行标识该列表属于 **OUTPUT** 链，这是 **mangle** 表操作应用于本地生成数据包的链。**OUTPUT** 链的默认策略是 **DROP**。
+
+第 5 行包含与第 2 行相同的列标题。
+
+第 6 行是一个 **TOS** 规则，用于更改出站 SSH 客户端数据包 IP 数据包头中的 **tos** 值。来自本地主机并指向本地堡垒防火墙的 SSH 客户端连接被分配 **tos** 值 **minimize-delay**。
+
+### 检查输入、输出和转发规则
+
+现在，既然您已经了解了防火墙链列表的样子以及可用的格式选项，我们将简要列出 **INPUT**、**OUTPUT** 和 **FORWARD** 规则。示例规则代表了您最可能使用的一些规则。
+
+## 检查输入规则
+
+当默认策略为 **DROP** 时，您的输入规则主要是 **ACCEPT** 规则。默认情况下，一切都被拒绝，您明确定义什么将被接受。请记住，到达 **INPUT** 链的数据包是目标指向本地主机的。以下示例包含代表性的输入接受规则样本：
+
+```
+> iptables -v -L INPUT
+```
+
+```
+Chain INPUT (policy DROP 0 packets, 0 bytes)
+  pkts bytes target     prot opt in     out     source            destination \
+ 1     4    390 ACCEPT all  --  lo    any    anywhere        \
+ 2     59   2599 ACCEPT all  --  any  any    anywhere        \
+       anywhere         state RELATED,ESTABLISHED \
+ 3     0    0 DROP    all  --  !lo   any    choke.dnz.lan   \
+       anywhere                                      \
+ 4     0    0 DROP    all  --  !lo   any    router.private.lan \
+       anywhere                                      \
+ 5     0    0 DROP    all  --  eth0  any    ! .private.lan  \
+       anywhere                                      \
+ 6     0    0 ACCEPT  udp  --  eth0  any    .private.lan    \
+       router.private.lan  udp spts:1024:65535 dpts:domain state NEW \
+ 7     0    0 REJECT  tcp  --  eth0  any    anywhere        \
+       choke.dnz.lan  tcp spts:1024:65535 dpts:auth state NEW \
+ 8     0    0 ACCEPT  udp  --  eth0  any    jet.private.lan \
+       255.255.255.255  udp spt:ntp dpt:ntp state NEW \
+ 9     0    0 ACCEPT  tcp  --  any   any    anywhere        \
+       anywhere         tcp flags:FIN,ACK/FIN,ACK \
+ 10    0    0 LOG     all  --  any   any    anywhere        \
+       anywhere         LOG Level warning
+```
+
+入站数据包的默认策略是 **DROP**。被拒绝的数据包将被直接丢弃，不会向源地址返回任何通知。该链上有 10 条规则：
+
+- 第 1 行——到达回环接口的所有数据包都被接受。
+- 第 2 行——所有被识别为先前接受的连接或交换的一部分，或与之相关的数据包，都被接受。
+- 第 3 行——任何到达除回环接口外的任何接口且声称来自该机器外部 DMZ 网络接口的数据包都被丢弃。
+- 第 4 行——任何到达除回环接口外的任何接口且声称来自该机器内部私有 LAN 网络接口的数据包都被丢弃。
+- 第 5 行——任何到达内部私有 LAN 接口且声称来自内部私有 LAN 网络地址范围之外的源地址的数据包都被丢弃。
+- 第 6 行——来自私有 LAN 中主机的 UDP DNS 客户端请求被接受。
+- 第 7 行——所有目标为本地 `auth` 服务器 `AUTH` 服务端口 113 的入站 TCP 数据包都被拒绝。将向源地址返回 `ICMP` 错误通知 `Type 3, Service Unavailable`。
+- 第 8 行——来自本地打印机到 `UDP ntp` 时间服务器端口 123 的限制广播被接受。
+- 第 9 行——来自任何地方的 `FIN/ACK` 数据包都被接受。
+- 第 10 行——所有其他入站数据包在被默认策略丢弃之前都会先被记录日志。
+
+## 检查输出规则
+
+当默认策略为 `DROP` 时，您的输出规则主要是 `ACCEPT` 规则。默认情况下，一切都被阻止。您明确定义什么将被接受。以下示例包含代表性的输出接受规则样本：
+
+```
+> iptables -L OUTPUT
+```
+
+```
+Chain OUTPUT (policy DROP 0 packets, 0 bytes)
+  num target
+  prg chain opt in out source
+    \|
+  1 34 3558 ACCEPT all -- any to anywhere
+  2 92 12721 ACCEPT all -- any any anywhere
+       state RELATED, ESTABLISHED
+  3 1 82 ACCEPT udp -- any eth1 choke.dmnz.lan
+       nameserver.dmnz.lan udp dport:domain dpt:domain state NEW
+  4 0 ACCEPT udp -- any eth1 choke.dmnz.lan
+       nameserver.dmnz.lan udp dpts:1024:65535 dpt:domain state NEW
+  5 0 ACCEPT tcp -- any eth1 choke.dmnz.lan
+       nameserver.dmnz.lan tcp dpts:1024:65535 dpt:domain state NEW
+  6 2 120 ACCEPT tcp -- any eth0 router.private.lan
+       .private.lan multiport dports ssh,http,https,auth,ftp
+       tcp dpts:1024:65535 flags:SYN,RST,ACK/SYN state NEW
+  7 0 ACCEPT tcp -- any eth1 choke.dmnz.lan
+       .dmz.lan tcp dpts:1024:65535 dpt:ssh state NEW
+  8 0 ACCEPT tcp -- any eth1 choke.dmnz.lan
+       anywhere multiport dports ftp,https,auth,ftp,nicname
+       tcp dpts:1024:65535 flags:SYN,RST,ACK/SYN state NEW
+```
+

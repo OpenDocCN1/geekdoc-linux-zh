@@ -1,0 +1,142 @@
+
+
+启动时运行的 **ntpd** 启动脚本会使用 **ntpd** 查询一系列公共时间服务提供商。ntpd 守护进程在收到服务器回复后启动。这些主机需要在一组防火墙规则中分别指定：
+
+```
+TIME_SERVER="my.time.server"   # 外部时间服务器（如果有）
+if [ "$CONNECTION_TRACKING" = "1" ]; then
+$IPT -A OUTPUT -o $INTERNET -p udp \
+    -s $IPADDR --sport SUNPRIVPORTS \
+    -d $TIME_SERVER --dport 123 \
+    -m state --state NEW -j ACCEPT
+fi
+$IPT -A OUTPUT -o $INTERNET -p udp \
+    -s $IPADDR --sport SUNPRIVPORTS \
+    -d $TIME_SERVER --dport 123 -j ACCEPT
+$IPT -A INPUT -i $INTERNET -p udp \
+    -s $TIME_SERVER --sport 123 \
+    -d $IPADDR --dport SUNPRIVPORTS -j ACCEPT
+```
+
+请注意，上述规则是为标准的客户端/服务器 UDP 通信编写的。根据您特定的客户端和服务器软件，其中一方或双方都可能使用 NTP 服务器间通信模型，即客户端和服务器都使用 UDP 端口 123。
+
+## 过滤 ICMP 控制报文和状态报文
+
+ICMP 控制报文是根据多种错误条件生成的，并由 **ping** 和 **traceroute** 等网络分析程序产生。
+
+> **ICMP 报文类型与 IPTABLES**
+> iptables 支持使用 ICMP 数字报文类型或字母符号名称。
+> iptables 还支持使用报文子类型或代码。这对于对 3 型目的站不可达（Destination Unreachable）消息进行更精细的过滤控制特别有用。例如，您可以专门禁止出站端口不可达（Port Unreachable）消息以禁用传入的 traceroute，或者您可以专门只允许出站需要分片（Fragmentation Needed）消息。
+> 要查看 iptables 支持的所有 ICMP 符号名称列表，请运行 `iptables -p icmp -h`。要查看官方 RFC 分配，请访问 [http://www.iana.org/assignments/icmp-parameters](http://www.iana.org/assignments/icmp-parameters)。
+
+### 错误状态和控制报文
+
+有四种 ICMP 控制报文和状态报文需要通过防火墙：源站抑制（Source Quench）、参数问题（Parameter Problem）、传入的目的站不可达（Destination Unreachable）以及出站的需要分片（Fragmentation Needed）目的站不可达。另外四种 ICMP 报文类型是可选的：回显请求（Echo Request）、回显应答（Echo Reply）、其他出站目的站不可达子类型以及超时（Time Exceeded）。其他报文类型可以被忽略，由默认策略过滤掉。
+
+在可以——或者应当——被忽略的报文中，只有重定向（redirect）因其作为重定向炸弹在拒绝服务攻击中的作用而被视为危险。（有关重定向炸弹的更多信息，请参阅第 2 章。）与重定向一样，其余的 ICMP 报文类型都是专门设计用于路由器之间的控制和状态报文。
+
+以下部分更详细地描述了端点主机（相对于中间路由器）重要的报文类型。
+
+#### 分片的 ICMP 报文
+
+在正常情况下，ICMP 报文永远不会被分片。ICMP 报文应完全容纳在一个二层帧内。丢弃分片的 ICMP 报文是安全的。此类数据包通常用于拒绝服务攻击：
+
+```
+$IPT -A INPUT -i $INTERNET --fragment -p icmp -j LOG \
+    --log-prefix 'Fragmented ICMP: '
+
+$IPT -A INPUT -i $INTERNET --fragment -p icmp -j DROP
+```
+
+#### 源站抑制（SOURCE QUENCH）控制报文（类型 4）
+
+ICMP 报文类型 4（源站抑制）可以在连接源（通常是路由器）发送数据的速度快于下一个目标路由器所能处理的速度时发送。源站抑制用作 IP 网络层的一种原始流量控制形式，通常位于两个相邻的点对点机器之间：
+
+```
+$IPT -A INPUT -i $INTERNET -p icmp \
+    --icmp-type source-quench -d $IPADDR -j ACCEPT
+
+$IPT -A OUTPUT -o $INTERNET -p icmp \
+    -s $IPADDR --icmp-type source-quench -j ACCEPT
+```
+
+路由器的下一跳或目标机器发送 *源站抑制* 命令。源路由器通过以更慢的速度发送数据包来响应，逐渐增加速度，直到收到另一个源站抑制消息为止。
+
+实际上，源站抑制在互联网中已很少使用。流量控制留给更高级别的协议处理。然而，这种报文类型在局域网（LANs）中可以看到。
+
+#### 参数问题（PARAMETER PROBLEM）状态报文（类型 12）
+
+ICMP 报文类型 12（参数问题）在接收到包含非法或意外头部数据的数据包，或者当头部校验和与接收机器生成的校验和不匹配时发送：
+
+```
+$IPT -A INPUT -i $INTERNET -p icmp \
+    --icmp-type parameter-problem -d $IPADDR -j ACCEPT
+
+$IPT -A OUTPUT -o $INTERNET -p icmp \
+    -s $IPADDR --icmp-type parameter-problem -j ACCEPT
+```
+
+#### 目的站不可达（DESTINATION UNREACHABLE）错误报文（类型 3）
+
+ICMP 报文类型 3（目的站不可达）是一种通用的错误状态报文：
+
+```
+$IPT -A INPUT -i $INTERNET -p icmp \
+    --icmp-type destination-unreachable -d $IPADDR -j ACCEPT
+
+$IPT -A OUTPUT -o $INTERNET -p icmp \
+    -s $IPADDR --icmp-type fragmentation-needed -j ACCEPT
+
+# 不记录被丢弃的出站 ICMP 错误消息
+$IPT -A OUTPUT -o $INTERNET -p icmp \
+    -s $IPADDR --icmp-type destination-unreachable -j DROP
+```
+
+3 型报文（目的站不可达）的 ICMP 数据包头部包含一个错误代码字段，用于标识具体的错误类型。理想情况下，您希望丢弃出站的 3 型报文。这种报文类型是在响应用于映射您的服务端口或地址空间的端口扫描时发送的。攻击者可以通过轰炸您的未使用端口来迫使您的系统生成大量这些消息，从而创建拒绝服务状况。更糟糕的是，攻击者可以伪造源地址，迫使您的系统将它们发送到被伪造的主机。不幸的是，目的站不可达消息创造了一种两难境地。其中一个报文子类型，需要分片（Fragmentation Needed），用于协商数据包分片大小。如果没有这种协商，您的网络性能可能会严重下降。
+
+#### 超时（TIME EXCEEDED）状态报文（类型 11）
+
+ICMP 报文类型 11（超时）表示超时条件——或者更准确地说，表示数据包的最大跳数已被超过。在当今的网络中，传入的超时主要是作为出站 UDP traceroute 请求的 ICMP 响应出现的：
+
+```
+$IPT -A INPUT -i $INTERNET -p icmp \
+    --icmp-type time-exceeded -d $IPADDR -j ACCEPT
+```
+
+如果您想使用 `traceroute`，必须允许传入的 ICMP 超时消息。因为您的机器不是中间路由器，所以对于超时消息没有其他用途。
+
+#### ping 回显请求（类型 8）和回显应答（类型 0）控制报文
+
+`ping` 使用两种 ICMP 报文类型。请求消息（回显请求）是报文类型 8。应答消息（回显应答）是报文类型 0。`ping` 是一种简单的网络分析工具，其历史可以追溯到原始的 DARPA 网。`ping` 这个名字取自声呐系统发出的可听见的 ping 声。（DARPA 毕竟是国防高级研究计划局。）与声呐类似，广播到网络地址空间中所有机器的回显请求消息会引发网络中所有响应主机返回的回显应答消息。
+
+> **smurf 攻击**
+> 不要向互联网广播任何内容。之前提到的 ping 广播是 smurf IP 拒绝服务攻击的基础。有关 smurf 攻击的更多信息，请参阅 CERT Advisory CA-98.01，*smurf*，访问 http://www.cert.org。
+
+#### 发往远程主机的出站 `ping`
+
+以下规则对允许您 `ping` 互联网上的任何主机：
+
+```
+if [ "$CONNECTION_TRACKING" = "1" ]; then
+# 允许出站 ping 到任何位置
+$IPT -A OUTPUT -o $INTERNET -p icmp \
+    -s $IPADDR --icmp-type echo-request \
+    -m state --state NEW -j ACCEPT
+fi
+```
+
+```
+# 允许出站 ping 到任何位置
+$IPT -A OUTPUT -o $INTERNET -p icmp \
+    -s $IPADDR --icmp-type echo-request -j ACCEPT
+```
+
+```
+$IPT -A INPUT -i $INTERNET -p icmp \
+    --icmp-type echo-reply -d $IPADDR -j ACCEPT
+```
+
+#### 来自远程主机的传入 `ping`
+
+这里展示的方法只允许选定的外部主机 `ping` 您：
+

@@ -1,0 +1,13 @@
+because global computing is inherently insecure. As your data goes from point A to point B on the Internet, for example, it may pass through several other points along the way, giving other users the opportunity to intercept, and even alter, it. Even other users on your system may maliciously transform your data into something you did not intend. Unauthorized access to your system may be obtained by intruders, also known as cracker, who then use advanced knowledge to impersonate you, steal information from you, or even deny you access to your own resources. If you're wondering what the difference is between a hacker and a cracker, see Eric Raymond's document, “How to Become A Hacker,” available at http://sagan.earthspace.net/ e s r / f a q s / h a c k e r - h o w t o . h t m l .
+
+# How Secure Is My System?
+
+First, keep in mind that no computer system can ever be completely secure. All you can do is make it increasingly difficult for someone to compromise your system. For the average home Linux user, not much is required to keep the casual cracker at bay. For high profile Linux users (banks, telecommunications companies, etc.), much more work is required.
+
+Another factor to take into account is that the more secure your system is, the more intrusive your security becomes. You need to decide where in this balancing act your system will still be usable, and yet secure for your purposes. For instance, you could require everyone dialing into your system to use a call-back modem to call them back at their home number. This is more secure, but if someone is not at home, it makes it difficult for them to login. You could also setup your Linux system with no network or connection to the Internet, but this limits its usefulness.
+
+If you are a large- to medium-sized site, you should establish a security policy stating how much security is required by your site and what auditing is in place to check it. You can find a well-known security policy example at h t t p : / / d s . i n t e r n i c . n e t / r f c / r f c 2 1 9 6 . t x t . It has been recently updated, and contains a great framework for establishing a security policy for your company.
+
+# What Are You Trying to Protect?
+
+Before you attempt to secure your system, you should determine what level of threat you have to protect against, what risks you should or should not take, and how vulnerable your system is as a result. You should analyze

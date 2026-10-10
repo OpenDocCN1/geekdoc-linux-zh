@@ -1,0 +1,11 @@
+they're stored (excepting truncation, conversion of unsupported characters, etc.): this option causes the names of all files from certain systems to be converted to lowercase.
+
+**-M** Pipe all output through an internal pager similar to the Unix `more(1)` command. At the end of a screenful of output, `unzip` pauses with a "--More--" prompt; the next screenful may be viewed by pressing the Enter (Return) key or the space bar. `unzip` can be terminated by pressing the "q" key and, on some systems, the Enter/Return key. Unlike Unix `more(1)`, there is no forward-searching or editing capability. Also, `unzip` doesn't notice if long lines wrap at the edge of the screen, effectively resulting in the printing of two or more lines and the likelihood that some text will scroll off the top of the screen before being viewed. On some systems the number of available lines on the screen is not detected, in which case `unzip` assumes the height is 24 lines.
+
+**-n** Never overwrite existing files. If a file already exists, skip the extraction of that file without prompting. By default `unzip` queries before extracting any file that already exists; the user may choose to overwrite only the current file, overwrite all files, skip extraction of the current file, skip extraction of all existing files, or rename the current file.
+
+**-N** [Amiga] Extract file comments as Amiga filenotes. File comments are created with the `-c` option of `zip(1L)`, or with the `-N` option of the Amiga port of `zip(1L)`, which stores filenotes as comments.
+
+**-O** Overwrite existing files without prompting. This is a dangerous option, so use it with care. (It is often used with `-f`, however, and is the only way to overwrite directory EAs under OS/2.)
+
+**-P** *password* Use *password* to decrypt encrypted zipfile entries (if any). **THIS IS INSECURE!** Many multi-user operating systems provide ways for any user to see the current command line of any other user; even on stand-alone systems there is always the threat of over-the-shoulder
