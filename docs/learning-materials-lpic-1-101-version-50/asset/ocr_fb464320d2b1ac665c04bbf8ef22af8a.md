@@ -1,0 +1,3 @@
+tr command to squeeze multiple occurrences of a space into a single space to aid in formatting the output with a cut command.
+
++   This exercise assumes you are on a real machine (not a virtual machine). You must also have a USB stick with you. Review the manual pages for the tail command and find out how to follow a file as text is appended to it. While monitoring the output of a tail command on the /var/log/syslog file, insert a USB stick. Write out the full command that you would use to get the Product, Manufacturer and the total amount of memory of your USB stick.

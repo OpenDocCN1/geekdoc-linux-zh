@@ -1,0 +1,205 @@
+
+
+```bash
+drwxrwxr-x 1 carol carol 988 jul 13 17:30 Images
+```
+
+**注意** 是的，子卷也可以像其他目录一样被访问。
+
+我们可以通过以下命令检查子卷是否处于活动状态：
+
+```bash
+# btrfs subvolume show /mnt/disk/BKP/
+    Name:                   BKP
+    UUID:                   e90alafe-69fa-da4f-9764-3384f66fa32e
+    Parent UUID:            -
+    Received UUID:          -
+    Creation time:          2019-07-13 17:35:40 +0300
+    Subvolume ID:           260
+    Generation:            23
+    Gen at creation:       22
+    Parent ID:              5
+    Top level ID:           5
+    Flags:                  -
+    Snapshot(s):
+```
+
+可以通过向 `mount` 命令传递 `-t btrfs -o subvol=NAME` 参数，将子卷挂载到 `/mnt/bkp`：
+
+```bash
+# mount -t btrfs -o subvol=BKP /dev/sdb1 /mnt/bkp
+```
+
+**注意** `-t` 参数指定要挂载的文件系统类型。
+
+## 处理快照
+
+快照就像子卷一样，但其中预填了创建快照时所在卷的内容。
+
+创建时，快照和原始卷具有完全相同的内容。但从那一刻起，它们将开始分离。对原始卷所做的更改（如添加、重命名或删除文件）不会反映在快照上，反之亦然。
+
+请记住，快照*不会*复制文件，并且初始时几乎不占用磁盘空间。它只是复制了文件系统树，同时指向原始数据。
+
+创建快照的命令与创建子卷的命令相同，只需在 `btrfs subvolume` 后添加 `snapshot` 参数即可。下面的命令将在 `/mnt/disk/snap` 中为挂载在 `/mnt/disk` 的 Btrfs 文件系统创建一个快照：
+
+```bash
+# btrfs subvolume snapshot /mnt/disk /mnt/disk/snap
+```
+
+现在，假设 `/mnt/disk` 中包含以下内容：
+
+```bash
+$ ls -lh
+
+    total 2,8M
+    -rw-rw-r-- 1 carol carol 109K jul 10 16:22 Galaxy_Note_10.png
+    -rw-rw-r-- 1 carol carol 484K jul  5 15:01 geminoid2.jpg
+    -rw-rw-r-- 1 carol carol 429K jul  5 14:52 geminoid.jpg
+    -rw-rw-r-- 1 carol carol 467K jul  2 11:48 LG-G8S-Thinq-Mirror-White.jpg
+    -rw-rw-r-- 1 carol carol 654K jul  2 11:39 LG-G8S-Thinq-Range.jpg
+    -rw-rw-r-- 1 carol carol  94K jul  2 15:43 Memoji_Comparativo.jpg
+    -rw-rw-r-- 1 carol carol 112K jul 10 16:20 Note10Plus.jpg
+    drwxr-x--- 1 carol carol  366 jul 13 17:56 snap
+    -rw-rw-r-- 1 carol carol 118K jul 11 16:36 Twitter_Down_20190711.jpg
+    -rw-rw-r-- 1 carol carol 324K jul  2 15:22 Xiaomi_Mimoji.png
+```
+
+注意包含快照的 `snap` 目录。现在，让我们删除一些文件，并检查目录内容：
+
+```bash
+$ rm LG-G8S-Thinq-*
+$ ls -lh
+
+    total 1,7M
+    -rw-rw-r-- 1 carol carol 109K jul 10 16:22 Galaxy_Note_10.png
+    -rw-rw-r-- 1 carol carol 484K jul  5 15:01 geminoid2.jpg
+    -rw-rw-r-- 1 carol carol 429K jul  5 14:52 geminoid.jpg
+    -rw-rw-r-- 1 carol carol  94K jul  2 15:43 Memoji_Comparativo.jpg
+    -rw-rw-r-- 1 carol carol 112K jul 10 16:20 Note10Plus.jpg
+    drwxr-x--- 1 carol carol  366 jul 13 17:56 snap
+    -rw-rw-r-- 1 carol carol 118K jul 11 16:36 Twitter_Down_20190711.jpg
+    -rw-rw-r-- 1 carol carol 324K jul  2 15:22 Xiaomi_Mimoji.png
+```
+
+然而，如果你在 `snap` 目录内部查看，你删除的文件仍然存在，如果需要还可以恢复它们。
+
+```bash
+$ ls -lh snap/
+
+    total 2,8M
+    -rw-rw-r-- 1 carol carol 109K jul 10 16:22 Galaxy_Note_10.png
+    -rw-rw-r-- 1 carol carol 484K jul  5 15:01 geminoid2.jpg
+    -rw-rw-r-- 1 carol carol 429K jul  5 14:52 geminoid.jpg
+    -rw-rw-r-- 1 carol carol 467K jul  2 11:48 LG-G8S-Thinq-Mirror-White.jpg
+    -rw-rw-r-- 1 carol carol 654K jul  2 11:39 LG-G8S-Thinq-Range.jpg
+    -rw-rw-r-- 1 carol carol  94K jul  2 15:43 Memoji_Comparativo.jpg
+    -rw-rw-r-- 1 carol carol 112K jul 10 16:20 Note10Plus.jpg
+    -rw-rw-r-- 1 carol carol 118K jul 11 16:36 Twitter_Down_20190711.jpg
+    -rw-rw-r-- 1 carol carol 324K jul  2 15:22 Xiaomi_Mimoji.png
+```
+
+还可以创建只读快照。它们的工作方式与可写快照完全相同，区别在于快照的内容不能被修改，它们在时间上是“冻结”的。只需在创建快照时添加 `-r` 参数：
+
+```bash
+# btrfs subvolume snapshot -r /mnt/disk /mnt/disk/snap
+```
+
+## 关于压缩的几点说明
+
+Btrfs 支持透明文件压缩，并为用户提供三种不同的算法。只要文件系统以 `-o compress` 选项挂载，就会自动在单个文件基础上完成。这些算法足够智能，能够检测不可压缩的文件并尝试不压缩它们，从而节省系统资源。因此，在单个目录中，可能会同时存在压缩和未压缩的文件。默认的压缩算法是 ZLIB，但也可以使用 LZO（更快，但压缩率更差）或 ZSTD（比 ZLIB 更快，压缩率相当），并且具有多个压缩级别（参见相应的挂载选项目标）。
+
+## 使用 GNU Parted 管理分区
+
+GNU Parted 是一个非常强大的分区编辑器（因此得名），可用于创建、删除、移动、调整大小、救援和复制分区。它可以处理 GPT 和 MBR 磁盘，几乎可以满足你所有的磁盘管理需求。
+
+有许多图形前端使使用 `parted` 变得更加容易，例如基于 GNOME 桌面环境的 GParted 和用于 KDE 桌面的 KDE 分区管理器。然而，你应该学习如何在命令行中使用 `parted`，因为在服务器环境中，你无法指望总有图形桌面环境可用。
+
+> **警告**
+> 与 `fdisk` 和 `gdisk` 不同，`parted` 在发出命令后立即对磁盘进行修改，而不等待另一个命令将更改写入磁盘。练习时，最好在空磁盘或备用磁盘或闪存驱动器上进行操作，以免因失误而导致数据丢失。
+
+开始使用 `parted` 的最简单方法是输入 `parted DEVICE`，其中 `DEVICE` 是你想要管理的设备（例如 `parted /dev/sdb`）。程序将启动一个类似于 `fdisk` 和 `gdisk` 的交互式命令行界面，带有 `(parted)` 提示符供你输入命令。
+
+```bash
+# parted /dev/sdb
+GNU Parted 3.2
+Using /dev/sdb
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+
+(parted)
+```
+
+> **警告**
+> 小心！如果你不指定设备，`parted` 会自动选择主磁盘（通常是 `/dev/sda`）进行操作。
+
+### 选择磁盘
+
+若要切换到命令行中指定的磁盘以外的其他磁盘，你可以使用 `select` 命令，后跟设备名称：
+
+```bash
+(parted) select /dev/sdb
+Using /dev/sdb
+```
+
+### 获取信息
+
+`print` 命令可用于获取特定分区的更多详细信息，甚至所有连接到你系统的块设备（磁盘）。
+
+若要获取当前选定分区的信息，只需输入 `print`：
+
+```bash
+(parted) print
+Model: ATA CT120BX500SSD1 (scsi)
+Disk /dev/sda: 120GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+   1     2097kB 116GB   116GB  primary  ext4
+   2     116GB  120GB   4295MB primary  linux-swap(v1)
+```
+
+你可以使用 `print devices` 获取连接到你系统的所有块设备的列表：
+
+```bash
+(parted) print devices
+/dev/sdb (1999MB)
+/dev/sda (120GB)
+/dev/sdc (320GB)
+/dev/mapper/cryptswap (4294MB)
+```
+
+若要一次性获取所有连接设备的信息，你可以使用 `print all`。如果你想知道每个设备中有多少可用空间，可以使用 `print free`：
+
+```bash
+(parted) print free
+Model: ATA CT120BX500SSD1 (scsi)
+Disk /dev/sda: 120GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size     Type     File system      Flags
+   1     32.3kB 2097kB  2065kB  Free
+   2     2097kB 116GB   116GB   primary  ext4
+   3     116GB  116GB   512B    Free
+   4     116GB  120GB   4295MB  primary  linux-swap(v1)
+   5     120GB  120GB   2098kB  Free
+```
+
+### 在空磁盘上创建分区表
+
+要在空磁盘上创建分区表，请使用 `mklabel` 命令，后跟你希望使用的分区表类型。
+
+有许多支持的分区表类型，但你应该了解的主要类型是 `msdos`（此处用于指代 MBR 分区表）和 `gpt`（用于指代 GPT 分区表）。要创建 MBR 分区表，请输入：
+
+```bash
+(parted) mklabel msdos
+```
+
+而要创建 GPT 分区表，命令如下：
+
+```bash
+(parted) mklabel gpt
+```
+

@@ -1,0 +1,29 @@
+# # Guided Exercises
+
++   1. Consider the following listing:
+
+```
+```
+$ find /home/frank/Documents/ -type d
+/home/frank/Documents/
+/home/frank/Documents/animal
+/home/frank/Documents/animal/domestic
+/home/frank/Documents/animal/wild
+```
+```
+
++   - What kind of files would this command output?
++   
+
++   - In which directory does the search begin?
++   
+
+2. A user wishes to compress his backup folder. He uses the following command:
+
+```
+```
+$ tar cvf /home/frank/backup.tar.gz /home/frank/dir1
+```
+```
+
+Which option is lacking to compress the backup using the gzip algorithm?

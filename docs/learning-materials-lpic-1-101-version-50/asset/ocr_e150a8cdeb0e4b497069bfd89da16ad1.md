@@ -1,0 +1,46 @@
+The first disk on a system is usually the *boot device* and you may need to know whether there is a *boot partition* on the disk. This can be done with the `fdisk` utility. To list all the partitions on the first disk of your machine, use:
+
+```
+```
+# fdisk -l /dev/sda
+Disk /dev/sda: 111,8 GiB, 120034123776 bytes, 234441648 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x97f8fef5
+
+Device     Boot     Start       End  Sectors   Size Id Type
+/dev/sda1  *         2048   2000895  1998848  976M 83 Linux
+/dev/sda2       2002942  234440703  232437762  110,9G  5 Extended
+/dev/sda5       2002944   18008063   16005120    7,6G 82 Linux swap / Solaris
+/dev/sda6       18010112  234440703  216430592   103,2G 83 Linux
+```
+```
+
+The boot partition is identified with the `*` under the boot column. In the example above, it is `/dev/sda1`.
+
+Now, create a temporary directory under `/mnt` and mount the partition under it:
+
+```
+```
+# mkdir /mnt/tmp
+# mount /dev/sda1 /mnt/tmp
+```
+```
+
+Then run `grub-install`, pointing it to the *boot device* (not the partition) and the directory where the boot partition is mounted. If your system does have a dedicated boot partition, the command is:
+
+```
+```
+# grub-install --boot-directory=/mnt/tmp /dev/sda
+```
+```
+
+If you are installing to a system which does not have a boot partition, but just a `/boot` directory on the root filesystem, point `grub-install` to it. So, the command is:
+
+```
+```
+# grub-install --boot-directory=/boot /dev/sda
+```
+```

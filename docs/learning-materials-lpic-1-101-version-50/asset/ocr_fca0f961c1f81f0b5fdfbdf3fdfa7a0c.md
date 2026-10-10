@@ -1,0 +1,3 @@
+the socket (`/tmp/our_socket`) with the right permissions so that both you and the other user can read and write. What other two conditions should be met in order for the second user to be able to successfully attach the session through `tmux -S /tmp/our_socket a -t our_session`?
+
+Both users must have a group in common, e.g. `multiplexer`. Then, we must have the socket changed into that group as well: `chgrp multiplexer /tmp/our_socket`.

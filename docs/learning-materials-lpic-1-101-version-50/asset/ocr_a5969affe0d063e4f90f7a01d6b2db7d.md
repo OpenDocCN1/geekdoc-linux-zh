@@ -1,0 +1,1 @@
+which counts the number of characters. Strings containing spaces must be inside quotes, otherwise only the first word will be used as the Here string and the remaining ones will be passed as arguments to the command.

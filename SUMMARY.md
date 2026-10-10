@@ -719,6 +719,7 @@
 +   [CentOS 入门指南：Linux 使用指南](docs/learning-centos-a-beginners-guide-to-using-linux/README.md)
 +   [Linux 二进制分析入门指南](docs/learning-linux-binary-analysis/README.md)
 +   [Linux 入门指南学习](docs/learning-materials-linux-essentials/README.md)
++   [LPIC-1 (101)（5.0版）](docs/learning-materials-lpic-1-101-version-50/README.md)
 +   [老式 Linux 入门指南](docs/learning-old-school-linux/README.md)
 +   [学习 Python、Java、JavaScript、C、C++、C#、CSS、HTML、jQuery、MySQL、SQL、Linux、Perl、PHP 或 XML：300+ 份免费教材、100+ 份速查表、100+ 份 vi 快速链接](docs/learning-python-java-javascript-c-c-c-css-html-jquery-mysql-/README.md)
 +   [学习 Ubuntu：Linux 使用初学者指南](docs/learning-ubuntu-a-beginners-guide-to-using-linux/README.md)
