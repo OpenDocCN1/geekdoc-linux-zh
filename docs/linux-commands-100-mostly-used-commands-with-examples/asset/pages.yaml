@@ -1,0 +1,10842 @@
+- pgno: 0
+  md: 'Rushikesh Shinde
+
+
+    # LINUX
+
+    COMMANDS
+
+
+    100 Mostly Used Commands
+
+    With Examples
+
+
+    ![](img/7986e09826a89bb7bb63cc16edad1407_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# LINUX COMMANDS
+
+
+    100 Mostly Used Commands With Examples
+
+
+    +   1. ls: List files and directories in the current directory.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'The `ls` command is a fundamental command in Linux and Unix-like operating
+    systems used to list files and directories in a directory.
+
+
+    # Examples:
+
+
+    +   1. **List files and directories in the current directory:**
+
+
+    ```
+
+    ```
+
+    ls
+
+    ```
+
+    ```
+
+
+    +   2. **List files and directories in a specific directory:**
+
+
+    ```
+
+    ```
+
+    ls /path/to/directory
+
+    ```
+
+    ```
+
+
+    +   3. **List files in long format with human-readable sizes and hidden files:**
+
+
+    ```
+
+    ```
+
+    ls -l -h -a
+
+    ```
+
+    ```
+
+
+    +   4. **List all files and directories recursively:**
+
+
+    ```
+
+    ```
+
+    ls -R
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '+   5. **List files sorted by modification time** (newest first):
+
+
+    ```
+
+    ```
+
+    ls -t
+
+    ```
+
+    ```
+
+
+    # 2. **cd: Change directory.**
+
+
+    The `cd` command in Linux is used to change the current working directory. It
+    allows you to navigate through the file system by moving from one directory to
+    another.
+
+
+    **Examples:**
+
+
+    +   1. **Change to Home Directory:**
+
+
+    ```
+
+    ```
+
+    cd
+
+    ```
+
+    ```
+
+
+    This command takes you to your home directory.
+
+
+    +   2. **Change to a Specific Directory:**
+
+
+    ```
+
+    ```
+
+    cd /path/to/directory
+
+    ```
+
+    ```
+
+
+    Replace "/path/to/directory" with the actual path of the directory you want to
+    move into. This is an example of an absolute path.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 3. Move Up One Directory:
+
+
+    ```
+
+    cd ..
+
+    ```
+
+
+    This command moves you up one level in the directory structure.
+
+
+    # 4. Move to the Parent Directory:
+
+
+    ```
+
+    cd ../parent_directory
+
+    ```
+
+
+    Replace "parent_directory" with the name of the parent directory you want to move
+    into. This is an example of a relative path.
+
+
+    # 5. Move to a Subdirectory:
+
+
+    ```
+
+    cd subdirectory
+
+    ```
+
+
+    Replace "subdirectory" with the name of the subdirectory you want to move into.
+    This is an example of a relative path.
+
+
+    # 6. Use of Tilde (~) to Represent Home Directory:'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '```
+
+    cd ~/documents
+
+    ```
+
+
+    This command moves to the "documents" directory inside the user''s home directory.
+
+
+    7. Navigate Back to the Previous Directory:
+
+
+    ```
+
+    cd -
+
+    ```
+
+
+    This command takes you back to the previous working directory.
+
+
+    8. Use of Environment Variables:
+
+
+    ```
+
+    cd $HOME
+
+    ```
+
+
+    This command is equivalent to `cd` without any arguments and takes you to your
+    home directory.
+
+
+    # 3. pwd: Print the current working directory.
+
+
+    The `pwd` command in Linux stands for "print working directory." It is used to
+    display the current working directory, which represents the absolute path of the
+    user''s current location in the file system.
+
+
+    Examples:'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   1. Display the current working directory:
+
+
+    ```
+
+    pwd
+
+    ```
+
+
+    +   2. Display the logical current working directory:
+
+
+    ```
+
+    pwd -L
+
+    ```
+
+
+    +   3. Display the physical current working directory:
+
+
+    ```
+
+    pwd -P
+
+    ```
+
+
+    # 4. mkdir: Create a new directory.
+
+
+    The `mkdir` command in Linux is used to create directories or folders. It allows
+    users to create one or more directories in a specified location.
+
+
+    Examples:
+
+
+    +   1. Basic Usage:'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '```
+
+    mkdir my_directory
+
+    ```
+
+
+    This creates a directory named "my_directory" in the current working directory.
+
+
+    # 2. Creating Multiple Directories:
+
+
+    ```
+
+    mkdir dir1 dir2 dir3
+
+    ```
+
+
+    This command creates three directories named "dir1", "dir2", and "dir3" in the
+    current working directory.
+
+
+    # 3. Setting Permissions:
+
+
+    ```
+
+    mkdir -m 755 my_directory
+
+    ```
+
+
+    This creates a directory named "my_directory" with the permission set to 755 (read,
+    write, and execute for the owner, and read and execute for others).
+
+
+    # 4. Creating Parent Directories:'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '```
+
+    ```
+
+    mkdir -p path/to/my_directory
+
+    ```
+
+    ```
+
+
+    This creates the directory "my_directory" along with any necessary parent directories
+    (if they don''t exist) in the specified path.
+
+
+    # 5. rm: Remove files or directories.
+
+
+    The `rm` command in Linux is used to remove or delete files and directories. It
+    allows users to delete one or more files or directories, and it doesn''t move
+    them to a trash/recycle bin; instead, it permanently deletes them.
+
+
+    **Examples:**
+
+
+    1. **Remove a File:**
+
+
+    ```
+
+    ```
+
+    rm myfile.txt
+
+    ```
+
+    ```
+
+
+    This command removes the file named `**myfile.txt**` .
+
+
+    2. **Remove Multiple Files:**
+
+
+    ```
+
+    ```
+
+    rm file1.txt file2.txt
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Removes both `file1.txt` and `file2.txt` .
+
+
+    # 3. **Remove a Directory:**
+
+
+    ```
+
+    rm -r mydirectory
+
+    ```
+
+
+    Recursively removes the directory named `mydirectory` and its contents.
+
+
+    # 4. **Remove with Confirmation:**
+
+
+    ```
+
+    rm -i sensitivefile.txt
+
+    ```
+
+
+    Prompts the user for confirmation before removing the file `sensitivefile.txt`
+    .
+
+
+    # 5. **Forceful Removal:**
+
+
+    ```
+
+    rm -f stubbornfile.txt
+
+    ```
+
+
+    Removes the file `stubbornfile.txt` without asking for confirmation, even if it''s
+    write-protected.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 6. cp: Copy files or directories.
+
+
+    The `cp` command in Linux is used to copy files and directories from one location
+    to another. It is a fundamental command for file manipulation and is part of the
+    GNU core utilities.
+
+
+    Examples:
+
+
+    1. Copy a file to another location:
+
+
+    ```
+
+    ```
+
+    cp file.txt /path/to/destination/
+
+    ```
+
+    ```
+
+
+    2. Copy a directory and its contents recursively:
+
+
+    ```
+
+    ```
+
+    cp -r /path/to/source_directory/ /path/to/destination/
+
+    ```
+
+    ```
+
+
+    3. Prompt before overwriting an existing file:
+
+
+    ```
+
+    ```
+
+    cp -i file.txt /path/to/destination/
+
+    ```
+
+    ```
+
+
+    4. Copy only if source is newer or destination is missing:
+
+
+    ```
+
+    ```
+
+    cp -u file.txt /path/to/destination/
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '5. **Create a hard link instead of copying:**
+
+
+    ```
+
+    cp -l file.txt /path/to/link_destination/
+
+    ```
+
+
+    6. **Preserve ownership and timestamps when copying:**
+
+
+    ```
+
+    cp -a /path/to/source_directory/ /path/to/destination/
+
+    ```
+
+
+    **7. Verbose mode (show files as they are copied):**
+
+
+    ```
+
+    cp -v file1.txt file2.txt /path/to/destination/
+
+    ```
+
+
+    # 7. **mv: Move or rename files or directories.**
+
+
+    The `mv` command in Linux is used to move or rename files and directories. It
+    allows you to change the name of a file or move it from one directory to another.
+
+
+    **Examples:**
+
+
+    1. **Rename a file:**
+
+
+    ```
+
+    mv old_file.txt new_file.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'This command renames "old_file.txt" to "new_file.txt."
+
+
+    # 2. Move a file to a different directory:
+
+
+    ```
+
+    mv file.txt /path/to/destination/
+
+    ```
+
+
+    Moves "file.txt" to the specified destination directory.
+
+
+    # 3. Move multiple files to a directory:
+
+
+    ```
+
+    mv file1.txt file2.txt /path/to/destination/
+
+    ```
+
+
+    Moves multiple files to the specified destination directory.
+
+
+    # 4. Interactive mode:
+
+
+    ```
+
+    mv -i file.txt /path/to/destination/
+
+    ```
+
+
+    Prompts for confirmation if the destination file already exists.
+
+
+    # 5. Update mode:
+
+
+    ```
+
+    mv -u newer_file.txt /path/to/destination/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'Moves only if "newer_file.txt" is newer than the existing file in the destination.
+
+
+    +   6. **Verbose mode:**
+
+
+    ```
+
+    mv -v file.txt /path/to/destination/
+
+    ```
+
+
+    Displays detailed information about the move operation.
+
+
+    # **8. touch: Create an empty file or update the timestamp of an existing file.**
+
+
+    The `touch` command in Linux is used to update the access and modification timestamps
+    of a file or create an empty file if it doesn''t exist. It''s a versatile command
+    that allows users to manipulate file timestamps without modifying the file content.
+
+
+    +   **Examples:**
+
+
+    +   1. **Create a new empty file:**
+
+
+    ```
+
+    touch newfile.txt
+
+    ```
+
+
+    This command creates a new file named `newfile.txt` in the current directory.
+
+
+    +   2. **Update the access and modification timestamps of a file:**'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '```
+
+    touch existingfile.txt
+
+    ```
+
+
+    This command updates the access and modification timestamps of `existingfile.txt`
+    to the current time.
+
+
+    3. **Change only the access time:**
+
+
+    ```
+
+    touch -a file.txt
+
+    ```
+
+
+    This command updates only the access timestamp of `file.txt` .
+
+
+    4. **Change only the modification time:**
+
+
+    ```
+
+    touch -m file.txt
+
+    ```
+
+
+    This command updates only the modification timestamp of `file.txt` .
+
+
+    5. **Use a specified date and time:**
+
+
+    ```
+
+    touch -d "2023-11-10 12:30" file.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'This command sets the access and modification timestamps of `file.txt` to the
+    specified date and time.
+
+
+    # 6. Prevent file creation:
+
+
+    ```
+
+    touch -c non_existent_file.txt
+
+    ```
+
+
+    This command checks if `non_existent_file.txt` exists; if not, it does not create
+    the file.
+
+
+    # 9. cat: Display the contents of a file.
+
+
+    The `cat` command in Linux is short for "concatenate." It is a versatile utility
+    that is used to display the content of one or more files, concatenate files, create
+    new files, and concatenate and display them on the standard output. The `cat`
+    command is a simple and frequently used command in Linux.
+
+
+    # Examples:
+
+
+    # 1. Display the content of a file:
+
+
+    ```
+
+    cat filename.txt
+
+    ```
+
+
+    # 2. Concatenate multiple files and display the output:'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '```
+
+    cat file1.txt file2.txt
+
+    ```
+
+
+    **3. Display line numbers along with the content of a file:**
+
+
+    ```
+
+    cat -n filename.txt
+
+    ```
+
+
+    **4. Display non-printable characters and line endings:**
+
+
+    ```
+
+    cat -vE filename.txt
+
+    ```
+
+
+    **5. Concatenate files and create a new file:**
+
+
+    ```
+
+    cat file1.txt file2.txt > newfile.txt
+
+    ```
+
+
+    **6. Display content with line numbers and non-printable characters:**
+
+
+    ```
+
+    cat -n -vE filename.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 10. nano or vim: Text editors for creating or editing files.
+
+
+    `nano` and `vim` are both text editors commonly used in Linux and Unix-like operating
+    systems. They are powerful tools for editing text files from the command line.
+
+
+    # Nano:
+
+
+    `nano` is a simple and user-friendly text editor that is easy to use, especially
+    for beginners. It provides a basic set of commands at the bottom of the screen,
+    making it more straightforward for users who are not familiar with complex keyboard
+    shortcuts.
+
+
+    # Example:
+
+
+    To edit a file named "example.txt," you would run:
+
+
+    ```
+
+    nano example.txt
+
+    ```
+
+
+    Once inside the editor, you can use the commands displayed at the bottom to navigate,
+    edit, and save the file.
+
+
+    # Vim:
+
+
+    `vim` (Vi Improved) is a highly configurable and powerful text editor that is
+    an enhanced version of the older `vi` editor. It is known for its efficiency and
+    extensive feature set, but it has a steeper learning curve compared to `nano`.
+
+
+    # Example:
+
+
+    To edit a file named "example.txt," you would run:'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "```\n```\n vim example.txt\n```\n```\n\n# **11. grep: Search for a specific\
+    \ pattern in files.**\n\n`grep` is a powerful command-line utility in Linux used\
+    \ for searching text patterns within files. Its name is derived from the ed command\
+    \ `g/re/p` (global/regular expression/print), which was used for similar purposes.\n\
+    \n**Examples:**\n\n+   1. **Basic Search:**\n\n```\n```\n grep \"pattern\" filename\n\
+    ```\n```\n\n+   2. **Case-Insensitive Search:**\n\n```\n```\n grep -i \"pattern\"\
+    \ filename\n```\n```\n\n+   3. **Search Recursively in Subdirectories:**"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '```
+
+    grep -r "pattern" /path/to/directory
+
+    ```
+
+
+    # 4. **Display Line Numbers:**
+
+
+    ```
+
+    grep -n "pattern" filename
+
+    ```
+
+
+    # 5. **Invert Match (Exclude Lines Containing Pattern):**
+
+
+    ```
+
+    grep -v "pattern" filename
+
+    ```
+
+
+    # 6. **Count the Number of Matching Lines:**
+
+
+    ```
+
+    grep -c "pattern" filename
+
+    ```
+
+
+    # 7. **Display Lines After and Before Match:**
+
+
+    ```
+
+    grep -A 2 -B 2 "pattern" filename
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# 8. **Recursive Search with Line Numbers and Case-Insensitive:**
+
+
+    ```
+
+    grep -rin "pattern" /path/to/directory
+
+    ```
+
+
+    # 12. **chmod: Change file permissions.**
+
+
+    `chmod` is a Linux command that is used to change the permissions of files and
+    directories. The name "chmod" stands for "change mode," and it allows you to control
+    who can read, write, and execute a file.
+
+
+    # **Mode:**
+
+
+    The mode consists of three components: user, group, and others, each with read
+    ( `r` ), write ( `w` ), and execute ( `x` ) permissions. Additionally, you can
+    use numeric representations to set permissions.
+
+
+    +   - Symbolic representation:
+
+    +     - `u` for user
+
+    +     - `g` for group
+
+    +     - `o` for others
+
+    +     - `a` for all (equivalent to `ugo` )
+
+
+    +   - Permission Symbols:
+
+    +     - `r` for read
+
+    +     - `w` for write
+
+    +     - `x` for execute'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "- Operators:\n    - `+` to add permissions\n    - `-` to remove permissions\n\
+    \    - `=` to set permissions explicitly\n- File:\n    The file or directory for\
+    \ which you want to modify permissions.\n\n# **Examples:**\n\n1. **Grant read\
+    \ and write permissions to the owner of the file:**\n\n```\nchmod u+rw file.txt\n\
+    ```\n\n2. **Remove execute permission from the group for a script:**\n\n```\n\
+    chmod g-x script.sh\n```\n\n3. **Give read and execute permissions to everyone\
+    \ for a directory and its contents recursively:**\n\n```\nchmod -R a+rx directory/\n\
+    ```\n\n4. **Set specific permissions using numeric representation (read: 4, write:\
+    \ 2, execute: 1):**"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '```
+
+    chmod 754 file.txt
+
+    ```
+
+
+    In this example, the user has read, write, and execute (4+2+1 = 7), the group
+    has read and execute (4+1 = 5), and others have read-only (4).
+
+
+    # **13. chown: Change file owner or group.**
+
+
+    The `chown` command in Linux is used to change the ownership of files or directories.
+    Ownership refers to the user and group associated with a file or directory. This
+    command is particularly useful when you need to transfer ownership of files or
+    directories from one user to another.
+
+
+    **Examples:**
+
+
+    +   1. **Basic Usage - Change Ownership of a File:**
+
+
+    ```
+
+    chown newowner:newgroup myfile.txt
+
+    ```
+
+
+    This command changes the ownership of `myfile.txt` to the user `newowner` and
+    the group `newgroup` .
+
+
+    +   2. **Recursive Ownership Change for a Directory:**'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '```
+
+    chown -R newowner:newgroup mydirectory
+
+    ```
+
+
+    This command recursively changes the ownership of all files and subdirectories
+    within `mydirectory` to the user `newowner` and the group `newgroup`.
+
+
+    3. **Verbose Output:**
+
+
+    ```
+
+    chown -c newowner:newgroup myfile.txt
+
+    ```
+
+
+    This command provides a verbose output, indicating the changes made to the ownership
+    of `myfile.txt`.
+
+
+    4. **Changing Ownership Based on Current Owner:**
+
+
+    ```
+
+    chown --from=currentowner:currentgroup newowner:newgroup myfile.txt
+
+    ```
+
+
+    This command changes the ownership of `myfile.txt` from the current owner `currentowner`
+    and group `currentgroup` to the new owner `newowner` and group `newgroup`.
+
+
+    14. **ps:** Display information about running processes.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'The `ps` command in Linux is used to display information about currently running
+    processes. It provides a snapshot of the current processes on a system, including
+    their process IDs (PIDs), terminal associations, resource usage, and other details.
+
+
+    # Examples:
+
+
+    1. **Display a list of all processes running on the system:**
+
+
+    ```
+
+    ```
+
+    ps
+
+    ```
+
+    ```
+
+
+    2. **Display detailed information about all processes:**
+
+
+    ```
+
+    ```
+
+    ps -ef
+
+    ```
+
+    ```
+
+
+    3. **Display a full-format listing of all processes:**
+
+
+    ```
+
+    ```
+
+    ps -f
+
+    ```
+
+    ```
+
+
+    4. **Display information about processes owned by a specific user (replace `username`
+    with the actual username):**
+
+
+    ```
+
+    ```
+
+    ps -u username
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '+   5. Display a tree-like process hierarchy:
+
+
+    ```
+
+    ps -e --forest
+
+    ```
+
+
+    **15. kill: Terminate a process.**
+
+
+    The `kill` command in Linux is used to send signals to processes, allowing you
+    to terminate or manipulate their behavior.
+
+
+    **Examples:**
+
+
+    +   1. **Terminate a process with default signal:**
+
+
+    ```
+
+    kill 1234
+
+    ```
+
+
+    This sends the SIGTERM signal to the process with PID 1234.
+
+
+    +   2. **Forcefully terminate a process:**
+
+
+    ```
+
+    kill -9 5678
+
+    ```
+
+
+    This sends the SIGKILL signal to the process with PID 5678, forcefully terminating
+    it.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '3. **Restart a process:**
+
+
+    ```
+
+    kill -HUP 9876
+
+    ```
+
+
+    This sends the SIGHUP signal to the process with PID 9876, which is often used
+    to restart a process.
+
+
+    4. **Pause a process:**
+
+
+    ```
+
+    kill -STOP 1111
+
+    ```
+
+
+    This sends the SIGSTOP signal to the process with PID 1111, pausing it.
+
+
+    5. **Resume a paused process:**
+
+
+    ```
+
+    kill -CONT 1111
+
+    ```
+
+
+    This sends the SIGCONT signal to the paused process with PID 1111, resuming its
+    execution.
+
+
+    # 16. **top: Display real-time system statistics.**
+
+
+    The `top` command in Linux is a powerful utility that provides a real-time, dynamic
+    overview of system performance.
+
+    It displays information about processes, system resource usage, and other important
+    statistics. The `top` command is'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'particularly useful for monitoring system activity, identifying resource-hungry
+    processes, and understanding overall system health.
+
+
+    Examples:
+
+
+    +   1. **Displaying a Dynamic Overview:**
+
+
+    ```
+
+    top
+
+    ```
+
+
+    This will launch `top` in its interactive mode, showing real-time information
+    about processes and system resources.
+
+
+    +   2. **Setting Update Interval:**
+
+
+    ```
+
+    top -d 5
+
+    ```
+
+
+    Launches `top` with a 5-second update interval, providing information every 5
+    seconds.
+
+
+    +   3. **Monitoring Specific User''s Processes:**
+
+
+    ```
+
+    top -u username
+
+    ```
+
+
+    Displays information about processes owned by the specified user (`username`).'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '+   4. **Monitoring Specific Processes by PID:**
+
+
+    ```
+
+    top -p 1234,5678
+
+    ```
+
+
+    Monitors processes with the specified process IDs (PID) - 1234 and 5678 in this
+    example.
+
+
+    +   5. **Exiting After a Number of Iterations:**
+
+
+    ```
+
+    top -n 5
+
+    ```
+
+
+    Runs `top` for 5 iterations and then exits.
+
+
+    +   **17. df: Display disk space usage.**
+
+
+    The `df` command in Linux is used to display information about disk space usage
+    on the file system. It provides details on the total disk space, used space, available
+    space, and the percentage of used space on each mounted file system. This command
+    is particularly useful for monitoring disk space and identifying storage issues.
+
+
+    **Examples:**
+
+
+    +   1. **Display disk space usage for all mounted file systems:**
+
+
+    ```
+
+    df
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '2. Display disk space usage in human-readable format:
+
+
+    ```
+
+    df -h
+
+    ```
+
+
+    3. Show total disk space usage:
+
+
+    ```
+
+    df --total
+
+    ```
+
+
+    4. Display information for a specific file system (e.g., /dev/sda1):
+
+
+    ```
+
+    df /dev/sda1
+
+    ```
+
+
+    5. Display inode information for a file system:
+
+
+    ```
+
+    df -i
+
+    ```
+
+
+    # **18. du: Show the size of a directory and its subdirectories.**'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'The `du` command in Linux is used to estimate file and directory space usage.
+    It calculates the size of a directory and its subdirectories, displaying the disk
+    space usage in a human-readable format.
+
+
+    # **Examples:**
+
+
+    1. **Display the disk usage of a directory:**
+
+
+    ```
+
+    ```text
+
+    du -h /path/to/directory
+
+    ```
+
+    ```
+
+
+    2. **Display the total disk usage of a file or directory:**
+
+
+    ```
+
+    ```text
+
+    du -sh /path/to/file_or_directory
+
+    ```
+
+    ```
+
+
+    3. **Display the total disk usage of multiple directories and subdirectories:**
+
+
+    ```
+
+    ```text
+
+    du -h --max-depth=1 /path/to/directory1 /path/to/directory2
+
+    ```
+
+    ```
+
+
+    4. **Display the total disk usage of the current directory and its subdirectories:**
+
+
+    ```
+
+    ```text
+
+    du -h --max-depth=1
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '+   5. Display the total disk usage of all files and directories, and show
+    the grand total at the end:
+
+
+    ```
+
+    du -h -c /path/to/directory1 /path/to/directory2
+
+    ```
+
+
+    # **19. tar: Create or extract tar archives.**
+
+
+    The `tar` command in Linux is used for creating and manipulating archive files.
+    It stands for "tape archive" and is commonly used to bundle multiple files and
+    directories into a single archive file. The `tar` command is particularly useful
+    for compressing and backing up data.
+
+
+    **Examples:**
+
+
+    +   1. **Create a Tar Archive:**
+
+
+    ```
+
+    tar -cvf archive.tar file1.txt file2.txt directory/
+
+    ```
+
+
+    This command creates a tar archive named `archive.tar` containing `file1.txt`,
+    `file2.txt`, and the contents of the `directory/`.
+
+
+    +   2. **Extract Files from Tar Archive:**
+
+
+    ```
+
+    tar -xvf archive.tar
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'This command extracts the contents of the `archive.tar` file.
+
+
+    # 3. Create a Gzipped Tar Archive:
+
+
+    ```
+
+    tar -czvf archive.tar.gz directory/
+
+    ```
+
+
+    This creates a compressed tar archive named `archive.tar.gz` of the `directory/`
+    using gzip compression.
+
+
+    # 4. Extract Files from Gzipped Tar Archive:
+
+
+    ```
+
+    tar -xzvf archive.tar.gz
+
+    ```
+
+
+    This extracts the contents of the compressed `archive.tar.gz` file.
+
+
+    # 5. List Contents of Tar Archive:
+
+
+    ```
+
+    tar -tvf archive.tar
+
+    ```
+
+
+    This command lists the contents of the `archive.tar` file without extracting them.
+
+
+    # 20. wget: Download files from the internet.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '`wget` is a command-line utility for downloading files from the internet. It
+    supports downloading via HTTP, HTTPS, and FTP protocols. It is a powerful tool
+    with various options and capabilities for retrieving content from web servers.
+
+
+    # Examples:
+
+
+    # 1. **Basic Usage**:
+
+
+    ```
+
+    wget https://example.com/file.zip
+
+    ```
+
+
+    This command downloads the file.zip from the specified URL.
+
+
+    # 2. **Save with a Different Name**:
+
+
+    ```
+
+    wget -O newfile.zip https://example.com/file.zip
+
+    ```
+
+
+    Downloads the file from the URL but saves it as `newfile.zip` .
+
+
+    # 3. **Download in the Background**:
+
+
+    ```
+
+    wget -b https://example.com/largefile.zip
+
+    ```
+
+
+    Downloads the file in the background, allowing you to continue using the terminal.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# 4. **Recursive Download**:
+
+
+    ```
+
+    wget -r -np https://example.com/directory/
+
+    ```
+
+
+    Downloads all files from the specified directory recursively but does not ascend
+    to the parent directory (`-np`).
+
+
+    # 5. **Limit Download Speed**:
+
+
+    ```
+
+    wget --limit-rate=200k https://example.com/largefile.zip
+
+    ```
+
+
+    Limits the download speed to 200 kilobytes per second.
+
+
+    # 6. **Resume Interrupted Download**:
+
+
+    ```
+
+    wget -c https://example.com/largefile.zip
+
+    ```
+
+
+    If the download is interrupted, use `-c` to resume and complete the download.
+
+
+    # 21. **ssh: Connect to a remote server securely.**'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'The `ssh` command, which stands for "Secure Shell," is a widely used protocol
+    for securely connecting to a remote server or device over a network. It provides
+    a secure encrypted communication between two systems, allowing users to access
+    and manage remote systems as if they were local. The `ssh` command is commonly
+    used in Unix-like operating systems, including Linux.
+
+
+    # Examples:
+
+
+    1. **Basic SSH Connection:**
+
+
+    ```
+
+    ssh username@remote-host
+
+    ```
+
+
+    This command establishes an SSH connection to the remote host with the specified
+    username.
+
+
+    2. **Specifying a Port:**
+
+
+    ```
+
+    ssh -p 2222 username@remote-host
+
+    ```
+
+
+    Connects to the remote host using port 2222. The default SSH port is 22.
+
+
+    3. **Executing a Command:**
+
+
+    ```
+
+    ssh username@remote-host ls -l /path/to/directory
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'Connects to the remote host and executes the `ls -l /path/to/directory` command,
+    displaying a detailed list of files in the specified directory.
+
+
+    # 4. Identity File (Private Key):
+
+
+    ```
+
+    ssh -i /path/to/private-key username@remote-host
+
+    ```
+
+
+    Specifies the path to the private key file for authentication. Useful when using
+    key-based authentication instead of a password.
+
+
+    # 5. Tunneling (Port Forwarding):
+
+
+    ```
+
+    ssh -L 8080:localhost:80 username@remote-host
+
+    ```
+
+
+    Sets up local port forwarding, redirecting traffic from port 8080 on the local
+    machine to port 80 on the remote host.
+
+
+    # 6. X11 Forwarding:
+
+
+    ```
+
+    ssh -X username@remote-host
+
+    ```
+
+
+    Enables X11 forwarding, allowing the remote server to display graphical applications
+    on the local machine.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# **22. scp: Securely copy files between local and remote machines.**
+
+
+    `scp` stands for Secure Copy Protocol, and it is a command-line tool used in Linux
+    and Unix-like operating systems to securely copy files and directories between
+    hosts. It uses SSH (Secure Shell) for data transfer and provides encryption and
+    authentication.
+
+
+    # **Examples:**
+
+
+    +   1. **Copy a file from local to remote host:**
+
+
+    ```
+
+    ```
+
+    scp file.txt username@remote_server_ip/path/to/destination/
+
+    ```
+
+    ```
+
+
+    Replace `file.txt` with the name of the file you want to copy, `username` with
+    the username on the remote server, `remote_server_ip` with the IP address of the
+    remote server, and `/path/to/destination/` with the destination path on the remote
+    server.
+
+
+    +   2. **Copy a file from remote to local host:**
+
+
+    ```
+
+    ```
+
+    scp username@remote_server_ip/path/to/file.txt /local/path/
+
+    ```
+
+    ```
+
+
+    This command copies the `file.txt` from the remote server to the local machine.
+    Adjust the paths and username accordingly.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# 3. Copy an entire directory from local to remote host:
+
+
+    ```
+
+    scp -r my_directory username@remote_server_ip:/path/to/destination/
+
+    ```
+
+
+    The `-r` option is used to copy directories recursively.
+
+
+    # 4. Copy from remote to local with a specific port:
+
+
+    ```
+
+    scp -P 2222 username@remote_server_ip:/path/to/file.txt /local/path/
+
+    ```
+
+
+    Here, the `-P` option specifies the port number (2222 in this example).
+
+
+    # 5. Copy with compression:
+
+
+    ```
+
+    scp -C file.txt username@remote_server_ip:/path/to/destination/
+
+    ```
+
+
+    The `-C` option enables compression during the transfer.
+
+
+    # 23. find: Search for files in a directory hierarchy.
+
+
+    The `find` command in Linux is a powerful and versatile tool used to search for
+    files and directories in a directory hierarchy based on various criteria.
+
+
+    **Examples:**'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '1. **Basic Usage:**
+
+
+    ```
+
+    find /path/to/search -name "filename.txt"
+
+    ```
+
+
+    This command searches for a file named "filename.txt" in the specified path.
+
+
+    2. **Case-Insensitive Search:**
+
+
+    ```
+
+    find /path/to/search -iname "file*.txt"
+
+    ```
+
+
+    The `-iname` option performs a case-insensitive search for files matching the
+    specified pattern.
+
+
+    3. **Search by File Type:**
+
+
+    ```
+
+    find /path/to/search -type f
+
+    ```
+
+
+    This command finds regular files in the specified path.
+
+
+    4. **Search by Directory Type:**
+
+
+    ```
+
+    find /path/to/search -type d
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'This command finds directories in the specified path.
+
+
+    # 5. Search for Files Modified in the Last N Days:
+
+
+    ```
+
+    find /path/to/search -mtime -7
+
+    ```
+
+
+    This command finds files modified within the last 7 days.
+
+
+    # 6. Search for Files Larger Than a Specific Size:
+
+
+    ```
+
+    find /path/to/search -size +1M
+
+    ```
+
+
+    This command finds files larger than 1 megabyte.
+
+
+    # 7. Execute Command on Found Files:
+
+
+    ```
+
+    find /path/to/search -name "*.log" -exec rm {} \;
+
+    ```
+
+
+    This command finds all files with a ".log" extension and removes them using the
+    `rm` command.
+
+
+    # 8. Combine Multiple Criteria with Logical Operators:
+
+
+    ```
+
+    find /path/to/search -name "*.txt" -o -name "*.md"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'This command finds files with either a ".txt" or ".md" extension.
+
+
+    # 9. Search for Files and Exclude Certain Paths:
+
+
+    ```
+
+    find /path/to/search -name "*.jpg" -not -path "/path/to/search/exclude/*"
+
+    ```
+
+
+    This command finds JPEG files but excludes files in the specified exclude path.
+
+
+    # 10. Search for Empty Files:
+
+
+    ```
+
+    find /path/to/search -type f -empty
+
+    ```
+
+
+    This command finds empty files in the specified path.
+
+
+    # 24. nproc: Print the number of processing units available.
+
+
+    The `nproc` command in Linux is a simple yet powerful utility that provides information
+    about the number of processing units available on a system. It essentially displays
+    the number of processing units (or cores) that the system has.
+
+
+    Examples:
+
+
+    +   1. Basic Usage:'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '```
+
+    nproc
+
+    ```
+
+
+    This will output the total number of processing units available on the system.
+
+
+    # 2. Display Number of Cores:
+
+
+    ```
+
+    echo "Number of cores: $(nproc)"
+
+    ```
+
+
+    This command uses command substitution(`$ `(nproc` `)) to embed the result of
+    `**nproc` in the output message.
+
+
+    # 3. Specify the Maximum Number of Processors:
+
+
+    ```
+
+    nproc --all
+
+    ```
+
+
+    This option,`--all` or`-a`, displays the maximum number of processors available,
+    including online and offline processors.
+
+
+    # 4. Show Physical Cores:
+
+
+    ```
+
+    nproc --sockets
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "This option, `--sockets` or `-s`, displays the number of physical sockets (processors).\n\
+    \n# 5. Display Threads per Core:\n\n```\nnproc --threads\n```\n\nThis option,\
+    \ `--threads` or `-T`, shows the number of threads per core.\n\n# 6. Display Online\
+    \ Processors:\n\n```\nnproc -online\n```\n\nThis option, `-online` or `-o`, displays\
+    \ the number of online processors (active processors).\n\n# 7. Check if a Specific\
+    \ Number of Cores is Available:\n\n```\nif [ \"$(nproc)\" -ge 4 ]; then\n\techo\
+    \ \"There are at least 4 cores available.\"\nelse\n\techo \"There are fewer than\
+    \ 4 cores available.\"\nfi\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'This example demonstrates the use of `nproc` within a script to check the number
+    of cores available.
+
+
+    # 8. **Combine with Other Commands:**
+
+
+    ```
+
+    echo "This system has $(nproc) cores and $(free -m | awk ''/^Mem:/ {print $2}'')
+
+    megabytes of RAM."
+
+    ```
+
+
+    This example combines `nproc` with the `free` command to display both the number
+    of cores and total RAM.
+
+
+    # 9. **Display Help Information:**
+
+
+    ```
+
+    nproc --help
+
+    ```
+
+
+    This command provides information about the available options and usage of the
+    `nproc` command.
+
+
+    # 25. **awk: A text processing tool for pattern scanning and processing.**
+
+
+    AWK is a powerful programming language and command-line utility used in Unix and
+    Linux environments for text processing. It is particularly useful for processing
+    and analyzing text files, extracting specific information, and performing data
+    manipulation tasks.
+
+
+    # **Examples:**
+
+
+    # 1. **Print Specific Columns:**
+
+
+    To print specific columns from a file, use the `print` statement.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '```
+
+    # Print the first and third columns of a file
+
+    awk ''{print $1, $3}'' filename
+
+    ```
+
+
+    # 2. Filtering Data:
+
+
+    AWK can be used to filter data based on a condition.
+
+
+    ```
+
+    # Print lines where the second column is greater than 50
+
+    awk ''$2 > 50 {print}'' filename
+
+    ```
+
+
+    # 3. Calculations:
+
+
+    AWK is capable of performing calculations on data.
+
+
+    ```
+
+    # Calculate and print the average of the third column
+
+    awk ''{sum += $3} END {print "Average:", sum/NR}'' filename
+
+    ```
+
+
+    # 4. Pattern Matching:
+
+
+    Use patterns to match specific lines.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    ```
+
+    # Print lines containing the word "error"
+
+    awk ''/error/ {print}'' filename
+
+    ```
+
+    ```
+
+
+    # 5. Conditional Statements:
+
+
+    AWK supports conditional statements.
+
+
+    ```
+
+    ```
+
+    # Print "Pass" or "Fail" based on the value in the second column
+
+    awk ''{if ($2 >= 50) print "Pass"; else print "Fail"}'' filename
+
+    ```
+
+    ```
+
+
+    # 6. Field Separator:
+
+
+    Specify a custom field separator using the `-F` option.
+
+
+    ```
+
+    ```
+
+    # Print the second field using ":" as the separator
+
+    awk -F: ''{print $2}'' filename
+
+    ```
+
+    ```
+
+
+    # 7. Built-in Variables:
+
+
+    AWK has several built-in variables. For example, `NF` represents the number of
+    fields in a line.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '```
+
+    ```
+
+    # Print lines with more than 3 fields
+
+    awk ''NF > 3 {print}'' filename
+
+    ```
+
+    ```
+
+
+    # 8. **Reading from Command Output:**
+
+
+    AWK can read from the output of other commands.
+
+
+    ```
+
+    ```
+
+    # List files and their sizes in the current directory
+
+    ls -l | awk ''{print $9, $5}''
+
+    ```
+
+    ```
+
+
+    # 9. **Formatting Output:**
+
+
+    Use `printf` for better formatting.
+
+
+    ```
+
+    ```
+
+    # Print the first and second columns with specific formatting
+
+    awk ''{printf "Name: %-10s Score: %d\n", $1, $2}'' filename
+
+    ```
+
+    ```
+
+
+    # 10. **Multiple Commands:**'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'Execute multiple commands with curly braces.
+
+
+    ```
+
+    **# Print the first and second columns, then calculate and print their sum**
+
+    awk ''{print $1, $2; sum += $2} END {print "Sum:", sum}'' filename
+
+    ```
+
+
+    # 26. sed: A stream editor for filtering and transforming text.
+
+
+    `sed` stands for stream editor and is a powerful text processing tool in Linux.
+    It is used for performing basic text transformations on an input stream (a file
+    or input from a pipeline) and producing an output stream. `sed` is often used
+    for substitution, deletion, insertion, and other text manipulations in scripts
+    and one-liners.
+
+
+    Examples:
+
+
+    +   1. **Substitute text in a file:**
+
+
+    ```
+
+    sed ''s/apple/orange/'' fruits.txt
+
+    ```
+
+
+    This command replaces the first occurrence of "apple" with "orange" in the file
+    `fruits.txt` and prints the result to the standard output.
+
+
+    +   2. **Substitute all occurrences globally:**'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '```
+
+    sed ''s/apple/orange/g'' fruits.txt
+
+    ```
+
+
+    This command replaces all occurrences of "apple" with "orange" in the file `fruits.txt`
+    .
+
+
+    # 3. **Delete lines containing a specific pattern:**
+
+
+    ```
+
+    sed ''/pattern/d'' file.txt
+
+    ```
+
+
+    This command deletes all lines containing the specified pattern from the file
+    `file.txt` .
+
+
+    # 4. **Print specific lines:**
+
+
+    ```
+
+    sed -n ''1,5p'' file.txt
+
+    ```
+
+
+    This command prints lines 1 to 5 from the file `file.txt` without automatically
+    printing other lines.
+
+
+    # 5. **In-place editing (update the file):**
+
+
+    ```
+
+    sed -i ''s/old/new/'' file.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'This command replaces the first occurrence of "old" with "new" in the file
+    `file.txt` and updates the file in place.
+
+
+    # **27. tree: Display directory tree structure.**
+
+
+    The `tree` command in Linux is used to display the hierarchical structure of directories
+    and subdirectories in a tree-like format. It is a useful tool for visually representing
+    the file system structure.
+
+
+    **Examples:**
+
+
+    1. **Display the tree structure of the current directory:**
+
+
+    ```
+
+    ```
+
+    tree
+
+    ```
+
+    ```
+
+
+    2. **Display the tree structure with full paths:**
+
+
+    ```
+
+    ```
+
+    tree -f
+
+    ```
+
+    ```
+
+
+    3. **Show hidden files and directories in the tree:**
+
+
+    ```
+
+    ```
+
+    tree -a
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '4. Limit the depth of the tree to 2 levels:
+
+
+    ```
+
+    tree -L 2
+
+    ```
+
+
+    5. Display only directories in the tree:
+
+
+    ```
+
+    tree -d
+
+    ```
+
+
+    6. Exclude specific directories from the tree:
+
+
+    ```
+
+    tree --prune dir_to_exclude
+
+    ```
+
+
+    7. Invert match to display files that do not match a pattern:
+
+
+    ```
+
+    tree -i -P "*.txt"
+
+    ```
+
+
+    # 28. gzip: Compress or decompress files.
+
+
+    The `gzip` command in Linux is used for file compression and decompression. It
+    is named after the GNU zip compression algorithm it uses.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Examples:
+
+
+    +   1. **Compress a File:**
+
+
+    ```
+
+    ```
+
+    gzip example.txt
+
+    ```
+
+    ```
+
+
+    This compresses the file `example.txt` and creates a compressed file named `example.txt.gz`.
+
+
+    +   2. **Decompress a File:**
+
+
+    ```
+
+    ```
+
+    gzip -d example.txt.gz
+
+    ```
+
+    ```
+
+
+    Decompresses the file `example.txt.gz` and restores it to `example.txt`.
+
+
+    +   3. **Keep Original File:**
+
+
+    ```
+
+    ```
+
+    gzip -k example.txt
+
+    ```
+
+    ```
+
+
+    Compresses `example.txt` and keeps the original file, resulting in both `example.txt`
+    and `example.txt.gz` coexisting.
+
+
+    +   4. **Recursive Compression:**'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '```
+
+    gzip -r my_directory
+
+    ```
+
+
+    Recursively compresses all files in the directory `my_directory`.
+
+
+    +   5. **Test Compressed File:**
+
+
+    ```
+
+    gzip -t example.txt.gz
+
+    ```
+
+
+    Tests the integrity of the compressed file `example.txt.gz`.
+
+
+    +   6. **Verbose Output:**
+
+
+    ```
+
+    gzip -v example.txt
+
+    ```
+
+
+    Displays the compression ratio and file sizes during the compression of `example.txt`.
+
+
+    # **29. gunzip: Decompress gzip files.**'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'The `gunzip` command in Linux is used to decompress files that have been compressed
+    using the gzip compression utility. It is essentially a counterpart to the `gzip`
+    command and is used to extract the original uncompressed version of a file that
+    has been compressed with gzip.
+
+
+    # **Examples:**
+
+
+    +   1. **Decompress a file:**
+
+
+    ```
+
+    gunzip example.txt.gz
+
+    ```
+
+
+    +   2. **Decompress multiple files:**
+
+
+    ```
+
+    gunzip file1.gz file2.gz
+
+    ```
+
+
+    +   3. **Decompress and keep the original file:**
+
+
+    ```
+
+    gunzip -k example.txt.gz
+
+    ```
+
+
+    +   4. **Decompress and list the contents of the compressed archive:**
+
+
+    ```
+
+    gunzip -l example.txt.gz
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '5. **Decompress and write output to standard output:**
+
+
+    ```
+
+    gunzip -c example.txt.gz > output.txt
+
+    ```
+
+
+    # **30. ping: Test the reachability of a host on an IP network.**
+
+
+    The `ping` command is a network utility tool used to test the reachability of
+    a host on an Internet Protocol (IP) network. It also measures the round-trip time
+    for messages sent from the originating host to a destination computer. The name
+    "ping" comes from the sonar sound used by submarines to detect other objects in
+    the water.
+
+
+    **Examples:**
+
+
+    +   1. **Simple Ping:**
+
+
+    ```
+
+    ping google.com
+
+    ```
+
+
+    This will send a series of ICMP Echo Requests to google.com, and you''ll see the
+    round-trip time for each packet.
+
+
+    +   2. **Set Number of Packets:**
+
+
+    ```
+
+    ping -c 4 google.com
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'This sends only 4 packets to google.com and then stops.
+
+
+    # 3. Set Packet Size:
+
+
+    ```
+
+    ```
+
+    ping -s 100 google.com
+
+    ```
+
+    ```
+
+
+    This sends packets of size 100 bytes to google.com.
+
+
+    # 4. Set Interval Between Packets:
+
+
+    ```
+
+    ```
+
+    ping -i 2 google.com
+
+    ```
+
+    ```
+
+
+    This sets a 2-second interval between successive packets.
+
+
+    # 5. Set Timeout:
+
+
+    ```
+
+    ```
+
+    ping -t 5 google.com
+
+    ```
+
+    ```
+
+
+    This sets a timeout of 5 seconds. If no response is received within this time,
+    the ping command stops.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '+   6. **Quiet Mode:**
+
+
+    ```
+
+    `ping -q google.com`
+
+    ```
+
+
+    This runs the ping command in quiet mode, showing only the summary at the end.
+
+
+    +   7. **Verbose Mode:**
+
+
+    ```
+
+    `ping -v google.com`
+
+    ```
+
+
+    This runs the ping command in verbose mode, providing more detailed information
+    about each packet.
+
+
+    +   8. **IPv6 Ping:**
+
+
+    ```
+
+    `ping6 ipv6.google.com`
+
+    ```
+
+
+    This performs a ping using IPv6. The `ping6` command is used for IPv6 addresses.
+
+
+    +   **31. traceroute: Display the route that packets take to reach a network host.**'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'Traceroute is a command-line tool used in Linux and other operating systems
+    to trace the route that packets take from your computer to a destination IP address
+    or domain. It helps identify the network path and measure the transit delays of
+    packets across the internet.
+
+
+    **Examples:**
+
+
+    +   1. **Basic Usage:**
+
+
+    ```
+
+    ```tracoute example.com```
+
+    ```
+
+
+    This command traces the route to the IP address of `example.com`, showing the
+    list of routers (hops) along the way.
+
+
+    +   2. **Specify Maximum TTL:**
+
+
+    ```
+
+    ```tracoute -m 15 example.com```
+
+    ```
+
+
+    Sets the maximum TTL to 15, limiting the number of hops the trace will make.
+
+
+    +   3. **Do Not Resolve Hostnames:**
+
+
+    ```
+
+    ```tracoute -n example.com```
+
+    ```
+
+
+    Displays IP addresses instead of resolving them to hostnames, which can speed
+    up the process.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '+   4. **Set Query Packets:**
+
+
+    ```
+
+    traceroute -q 5 example.com
+
+    ```
+
+
+    Sends 5 query packets per hop instead of the default 3.
+
+
+    +   5. **Use UDP Packets:**
+
+
+    ```
+
+    traceroute -U example.com
+
+    ```
+
+
+    Uses UDP packets instead of the default ICMP Echo Request packets.
+
+
+    +   6. **Specifying Wait Time:**
+
+
+    ```
+
+    traceroute -w 2 example.com
+
+    ```
+
+
+    Sets the time (in seconds) to wait for a response before sending the next packet.
+
+
+    +   7. **Trace to a Specific Port:**'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '```
+
+    ```
+
+    traceroute -p 80 example.com
+
+    ```
+
+    ```
+
+
+    Specifies the destination port (e.g., port 80 for HTTP).
+
+
+    # **8. IPv6 Traceroute:**
+
+
+    ```
+
+    ```
+
+    traceroute -6 ipv6.example.com
+
+    ```
+
+    ```
+
+
+    Performs a traceroute using IPv6 addresses.
+
+
+    # **9. Save Output to a File:**
+
+
+    ```
+
+    ```
+
+    traceroute example.com > trace_output.txt
+
+    ```
+
+    ```
+
+
+    Redirects the output to a file for later analysis.
+
+
+    # **10. Continuous Tracing:**
+
+
+    ```
+
+    ```
+
+    traceroute -q 1 -w 1 -n -A example.com
+
+    ```
+
+    ```
+
+
+    Continuously traces the route, sending a single packet per hop with minimal wait
+    time.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# 32. ifconfig or ip: Configure network interfaces.
+
+
+    `ifconfig` Command:
+
+
+    The `ifconfig` command is used to configure network interfaces on a Linux system.
+    It allows you to view and configure the IP address, netmask, broadcast address,
+    and other parameters of a network interface. However, `ifconfig` has been deprecated
+    in many modern Linux distributions in favor of the more powerful `ip` command.
+
+
+    **Examples:**
+
+
+    1. **Viewing Network Interfaces:**
+
+
+    ```
+
+    ```
+
+    ifconfig
+
+    ```
+
+    ```
+
+
+    This command displays information about all network interfaces on the system.
+
+
+    2. **Viewing Information for a Specific Interface:**
+
+
+    ```
+
+    ```
+
+    ifconfig eth0
+
+    ```
+
+    ```
+
+
+    Replace "eth0" with the name of your network interface. This command displays
+    detailed information about the specified interface.
+
+
+    3. **Assigning an IP Address:**'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '```
+
+    sudo ifconfig eth0 192.168.1.2
+
+    ```
+
+
+    This command assigns the IP address 192.168.1.2 to the "eth0" interface.
+
+
+    # 4. Setting Netmask:
+
+
+    ```
+
+    sudo ifconfig eth0 netmask 255.255.255.0
+
+    ```
+
+
+    Sets the netmask for the "eth0" interface.
+
+
+    # 5. Bringing an Interface Up or Down:
+
+
+    ```
+
+    sudo ifconfig eth0 up
+
+    sudo ifconfig eth0 down
+
+    ```
+
+
+    These commands bring the "eth0" interface up or down, respectively.
+
+
+    # `ip` Command:
+
+
+    The `ip` command is a more powerful and flexible tool for configuring and managing
+    network interfaces. It provides a wide range of functionality beyond what `ifconfig`
+    offers.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'Examples:
+
+
+    # 1. **Viewing Network Interfaces**:
+
+
+    ```
+
+    ip link show
+
+    ```
+
+
+    This command shows information about all network interfaces on the system.
+
+
+    # 2. **Viewing IP Addresses**:
+
+
+    ```
+
+    ip address show
+
+    ```
+
+
+    Displays detailed information about all IP addresses assigned to interfaces.
+
+
+    # 3. **Assigning an IP Address**:
+
+
+    ```
+
+    sudo ip address add 192.168.1.2/24 dev eth0
+
+    ```
+
+
+    Assigns the IP address 192.168.1.2 with a netmask of 255.255.255.0 to the "eth0"
+    interface.
+
+
+    # 4. **Setting Netmask**:'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '```
+
+    sudo ip address add 192.168.1.2/24 dev eth0
+
+    ```
+
+
+    This also sets the netmask for the "eth0" interface.
+
+
+    # 5. Bringing an Interface Up or Down:
+
+
+    ```
+
+    sudo ip link set eth0 up
+
+    sudo ip link set eth0 down
+
+    ```
+
+
+    These commands bring the "eth0" interface up or down, respectively.
+
+
+    # 6. Displaying Routing Table:
+
+
+    ```
+
+    ip route show
+
+    ```
+
+
+    Shows the kernel''s routing table.
+
+
+    # 33. netstat: Display network connections, routing tables, interface statistics,
+    masquerade connections, and multicast memberships.'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'The `netstat` command in Linux is a powerful network utility used to display
+    information about network connections, routing tables, interface statistics, masquerade
+    connections, and more. It provides a variety of options to help you analyze and
+    troubleshoot network-related issues.
+
+
+    # Examples:
+
+
+    +   Display all listening and non-listening sockets using numerical addresses:
+
+
+    ```
+
+    netstat -an
+
+    ```
+
+
+    +   Show statistics for all protocols:
+
+
+    ```
+
+    netstat -s
+
+    ```
+
+
+    +   Display all TCP connections and the process using them:
+
+
+    ```
+
+    netstat -atp
+
+    ```
+
+
+    +   Show routing table:'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '```
+
+    netstat -r
+
+    ```
+
+
+    +   5. **Display only listening TCP sockets:**
+
+
+    ```
+
+    netstat -tl
+
+    ```
+
+
+    +   6. **Display information about all interfaces:**
+
+
+    ```
+
+    netstat -ie
+
+    ```
+
+
+    +   7. **Show kernel interface table:**
+
+
+    ```
+
+    netstat -i
+
+    ```
+
+
+    # **34. ncdu: NCurses Disk Usage - a disk usage analyzer.**
+
+
+    `ncdu` (NCurses Disk Usage) is a command-line utility in Linux used for analyzing
+    and managing disk space usage. It provides a simple and interactive way to view
+    and navigate through the file system, showing the sizes of directories and subdirectories
+    in a hierarchical format.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# Examples:\n\n+   1. **To analyze the disk usage of the current directory:**\n\
+    +   \n+       `ncdu`\n\n+   2. **To analyze the disk usage of a specific directory:**\n\
+    +   \n+       `ncdu /path/to/directory`\n\n+   3. **To exclude certain files or\
+    \ directories from the analysis:**\n+   \n+       `ncdu -x \"*.log\" /path/to/directory`\n\
+    \n+   4. **To run in read-only mode to prevent accidental deletions:**\n+   \n\
+    +       `ncdu -r /path/to/directory`\n\n+   5. **To specify a file containing\
+    \ a list of directories to analyze:**"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '```
+
+    ncdu -f directory_list.txt
+
+    ```
+
+
+    # **35. ltrace: A library call tracer.**
+
+
+    `ltrace` is a command-line utility in Linux used for intercepting and displaying
+    dynamic library calls that a program makes. It allows you to see the library functions
+    and system calls that a process invokes, providing valuable insights into the
+    behavior of a program during its execution.
+
+
+    **Examples:**
+
+
+    +   **1. Basic Usage:**
+
+
+    ```
+
+    ltrace ls
+
+    ```
+
+
+    This command traces the dynamic library calls made by the `ls` command.
+
+
+    +   **2. Filtering Output:**
+
+
+    ```
+
+    ltrace -e fopen ls
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'The `-e` option allows you to filter the output to display only the functions
+    you''re interested in. In this example, it traces only calls to the `fopen` function
+    made by the `ls` command.
+
+
+    3. **Redirecting Output to a File:**
+
+
+    ```
+
+    ltrace -o output.txt ls
+
+    ```
+
+
+    This command redirects the output of `ltrace` to a file named `output.txt` instead
+    of printing it to the terminal.
+
+
+    4. **Tracing a Specific Process by PID:**
+
+
+    ```
+
+    ltrace -p <pid>
+
+    ```
+
+
+    Replace `<pid>` with the process ID of the running process you want to trace.
+    This is useful for attaching `ltrace` to an already running process.
+
+
+    5. **Displaying System Calls:**
+
+
+    ```
+
+    ltrace -S ls
+
+    ```
+
+
+    The `-S` option includes the display of system calls in addition to library calls.
+
+
+    6. **Tracing a 32-bit Process on a 64-bit System:**'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '```
+
+    ltrace -a 32 -c ls
+
+    ```
+
+
+    Use the `-a` option to specify the architecture (in this case, 32-bit) when tracing
+    a process on a 64-bit system.
+
+
+    # 7. Filtering by Library:
+
+
+    ```
+
+    ltrace -l libm.so ls
+
+    ```
+
+
+    This traces only the calls to functions from the `libm` library made by the `ls`
+    command.
+
+
+    # 8. Displaying Time and Counts:
+
+
+    ```
+
+    ltrace -c ls
+
+    ```
+
+
+    The `-c` option displays a summary of the number of calls and time spent in each
+    function.
+
+
+    # 9. Tracing a Program with Command-Line Arguments:
+
+
+    ```
+
+    ltrace gzip file.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'You can trace a program along with its command-line arguments.
+
+
+    +   10. **Tracing Multiple Commands:**
+
+
+    ```
+
+    ltrace -o output.txt sh -c "ls; echo Hello"
+
+    ```
+
+
+    Tracing multiple commands in a shell by using the `c` option and enclosing them
+    in quotes.
+
+
+    +   11. **Displaying Function Arguments:**
+
+
+    ```
+
+    ltrace -f -F ls
+
+    ```
+
+
+    The `f` option follows forks, and the `F` option displays function arguments.
+
+
+    # **36. useradd: Create a new user account.**
+
+
+    The `useradd` command in Linux is used to create a new user account on the system.
+    It is a fundamental command, and it allows you to specify various parameters while
+    creating a new user.
+
+
+    **Examples:**
+
+
+    +   1. **Create a new user:**'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '```
+
+    sudo useradd mohan
+
+    ```
+
+
+    This command creates a new user account named "mohan" with default settings. The
+    user''s home directory will be `/home/mohan`.
+
+
+    # 2. Create a user with a specific home directory:
+
+
+    ```
+
+    sudo useradd -m -d /home/customuser customuser
+
+    ```
+
+
+    The `-m` option ensures the creation of the user''s home directory, and `-d` specifies
+    the home directory path.
+
+
+    # 3. Specify the user''s login shell:
+
+
+    ```
+
+    sudo useradd -s /bin/bash bashuser
+
+    ```
+
+
+    This command creates a user named "bashuser" and sets the login shell to `/bin/bash`.
+
+
+    # 4. Set the user''s password:
+
+
+    ```
+
+    sudo useradd -m -p $(openssl passwd -1 mypassword) secureuser
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: 'The ` -p ` option allows you to set the encrypted password for the user. In
+    this example, ` openssl passwd -1 ` generates the encrypted password for the string
+    "mypassword."
+
+
+    +   5. **Create a user with a specific user ID (UID) and group ID (GID):**
+
+
+    ```
+
+    sudo useradd -u 1001 -g 1001 customuser
+
+    ```
+
+
+    The ` -u ` option sets the user ID, and the ` -g ` option sets the primary group
+    ID for the user.
+
+
+    +   6. **Create a system user:**
+
+
+    ```
+
+    sudo useradd -r sysuser
+
+    ```
+
+
+    The ` -r ` option is used to create a system user, which is typically used for
+    running system services.
+
+
+    +   7. **Set the expiration date for a user account:**
+
+
+    ```
+
+    sudo useradd -e 2023-12-31 tempuser
+
+    ```
+
+
+    The ` -e ` option sets the expiration date for the user account. In this example,
+    the account for "tempuser" will expire on December 31, 2023.
+
+
+    +   8. **Display useradd command help:**'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '```
+
+    useradd --help
+
+    ```
+
+
+    This command provides a summary of the `useradd` command options and usage.
+
+
+    # 37. userdel: Delete a user account.
+
+
+    The `userdel` command in Linux is used to delete a user account and related files
+    from the system. It is a powerful command that requires administrative privileges
+    to execute. When a user account is deleted, the associated home directory and
+    mail spool are typically removed, but the user''s files in other locations are
+    not touched.
+
+
+    **Examples:**
+
+
+    +   1. **Basic usage:**
+
+
+    ```
+
+    sudo userdel mohan
+
+    ```
+
+
+    This will delete the user account named "mohan."
+
+
+    +   2. **Remove user and home directory:**
+
+
+    ```
+
+    sudo userdel -r jane
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'This will delete the user account "jane" along with the home directory and
+    its contents.
+
+
+    # 3. Force deletion without prompting:
+
+
+    ```
+
+    sudo userdel -f alice
+
+    ```
+
+
+    # 4. Specify a different home directory:
+
+
+    ```
+
+    sudo userdel -m -r bob
+
+    ```
+
+
+    This will remove the user account "bob" and move the home directory to a backup
+    location.
+
+
+    # 5. Remove user from groups:
+
+
+    ```
+
+    sudo userdel -G developers,sudo charlie
+
+    ```
+
+
+    This command will delete the user account "charlie" and remove him from the "developers"
+    and "sudo" groups.
+
+
+    # 6. Display help information:
+
+
+    ```
+
+    userdel --help
+
+    ```
+
+
+    This will display a list of options and their explanations.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# **38. passwd: Change user password.**
+
+
+    The `passwd` command in Linux is used to change a user''s password. It allows
+    users to update their own password or, if executed by a superuser, change the
+    password for any user on the system.
+
+
+    **Examples:**
+
+
+    +   1. **Change your own password:**
+
+
+    ```
+
+    passwd
+
+    ```
+
+
+    You will be prompted to enter your current password and then the new password.
+
+
+    +   2. **Change another user''s password (as root):**
+
+
+    ```
+
+    sudo passwd username
+
+    ```
+
+
+    Replace "username" with the actual username. This command will prompt you to enter
+    the new password for the specified user.
+
+
+    +   3. **Lock a user account:**
+
+
+    ```
+
+    sudo passwd -l username
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'This will lock the password of the specified user account, preventing them
+    from logging in.
+
+
+    +   4. **Unlock a user account:**
+
+
+    ```
+
+    sudo passwd -u username
+
+    ```
+
+
+    This will unlock the password of the specified user account, allowing them to
+    log in again.
+
+
+    +   5. **Delete a user''s password:**
+
+
+    ```
+
+    sudo passwd -d username
+
+    ```
+
+
+    This will delete the password of the specified user account, effectively making
+    it impossible to log in using a password.
+
+
+    +   6. **Expire a user''s password:**
+
+
+    ```
+
+    sudo passwd -e username
+
+    ```
+
+
+    This will force the user to change their password the next time they log in.
+
+
+    # 39. mpostat: Report processors related statistics.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'The `mpstat` command in Linux is used to display detailed information about
+    the utilization of each processor in a multi-processor system. It provides statistics
+    for both individual processors and an average across all processors.
+
+
+    # Examples:
+
+
+    1. **Display CPU utilization statistics for all processors every 2 seconds, for
+    a total of 3 reports:**
+
+
+    ```
+
+    ```
+
+    mpstat -u 2 3
+
+    ```
+
+    ```
+
+
+    2. **Display statistics for individual processors:**
+
+
+    ```
+
+    ```
+
+    mpstat -P ALL
+
+    ```
+
+    ```
+
+
+    3. **Display interrupt statistics:**
+
+
+    ```
+
+    ```
+
+    mpstat -I SUM
+
+    ```
+
+    ```
+
+
+    4. **Display all available information:**'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '```
+
+    mpstat -A
+
+    ```
+
+
+    # 40. sar: Collect, report, or save system activity information.
+
+
+    The `sar` command in Linux is used to collect, report, and save system activity
+    information. It provides a wide range of statistics about the system''s performance,
+    including CPU utilization, memory usage, disk activity, network activity, and
+    more. The data collected by `sar` can be useful for performance analysis and troubleshooting.
+
+
+    Examples:
+
+
+    +   1. Display CPU utilization statistics at 5-second intervals, 3 times:
+
+
+    ```
+
+    sar -u 5 3
+
+    ```
+
+
+    +   2. Display memory utilization statistics at 10-second intervals, 5 times:
+
+
+    ```
+
+    sar -r 10 5
+
+    ```
+
+
+    +   3. Display I/O and transfer rate statistics at 1-minute intervals indefinitely:'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '```
+
+    sar -b 60
+
+    ```
+
+
+    +   4. **Display network statistics at 2-second intervals, 4 times:**
+
+
+    ```
+
+    sar -n DEV 2 4
+
+    ```
+
+
+    +   5. **Display all available statistics at 30-second intervals, 10 times:**
+
+
+    ```
+
+    sar -A 30 10
+
+    ```
+
+
+    # **41. echo: Display a message or write a message to a file.**
+
+
+    The `echo` command in Linux is used to display a line of text or a string of characters
+    on the standard output (usually the terminal). It is a simple and frequently used
+    command for printing information, variables, or messages to the screen.
+
+
+    **Examples:**
+
+
+    +   1. **Basic Usage:**
+
+
+    ```
+
+    echo "Hello, World!"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# 2. Using Variables:
+
+
+    ```
+
+    name="mohan"
+
+    echo "My name is $name"
+
+    ```
+
+
+    # 3. Without Newline:
+
+
+    ```
+
+    echo -n "This is on the same line"
+
+    echo " but this is on the next line."
+
+    ```
+
+
+    # 4. Escape Characters:
+
+
+    ```
+
+    echo -e "This is a line with a\\tab."
+
+    ```
+
+
+    # 42. history: Display the command history.
+
+
+    The Linux command history is a feature that allows users to view and recall previously
+    executed commands in the terminal. It helps users save time by avoiding the need
+    to retype frequently used commands. The command history is stored in a file, typically
+    located in the user''s home directory, and is managed by the shell.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '## Examples:
+
+
+    +   1. **Viewing Command History:**
+
+
+    ```
+
+    history
+
+    ```
+
+
+    This will show a numbered list of commands with the most recent at the bottom.
+
+
+    +   2. **Executing Previous Commands:**
+
+
+    ```
+
+    !5
+
+    ```
+
+
+    This will execute the command at line 5 of the history.
+
+
+    +   3. **Clearing Command History:**
+
+
+    ```
+
+    history -c
+
+    ```
+
+
+    This will not remove the history file; it just clears the current session''s history.
+
+
+    # 43. iostat: Report CPU and I/O statistics.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'The `iostat` command in Linux is used to report CPU and input/output (I/O)
+    statistics for devices, partitions, and NFS (Network File System). It provides
+    a comprehensive overview of system performance, helping users identify potential
+    bottlenecks and monitor resource utilization.
+
+
+    # **Examples:**
+
+
+    1. **Display CPU utilization statistics:**
+
+
+    ```
+
+    iostat -c
+
+    ```
+
+
+    2. **Display device utilization statistics with a 2-second interval for 5 reports:**
+
+
+    ```
+
+    iostat -d 2 5
+
+    ```
+
+
+    3. **Display extended statistics for devices and partitions in megabytes per second:**
+
+
+    ```
+
+    iostat -x -m
+
+    ```
+
+
+    4. **Display NFS statistics with timestamps:**
+
+
+    ```
+
+    iostat -N -t
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# **44. fuser: Identify processes using files or sockets.**
+
+
+    The `fuser` command in Linux is used to identify processes that are using a specific
+    file, file system, or socket. It displays the process IDs (PIDs) of the processes
+    that have a file open, allowing you to determine which processes are accessing
+    a particular resource.
+
+
+    # **Examples:**
+
+
+    +   1. **To find which processes are using a specific file:**
+
+
+    ```
+
+    ```
+
+    fuser myfile.txt
+
+    ```
+
+    ```
+
+
+    +   2. **To find processes using a mounted file system:**
+
+
+    ```
+
+    ```
+
+    fuser -m /mnt/myfilesystem
+
+    ```
+
+    ```
+
+
+    +   3. **To kill processes using a file:**
+
+
+    ```
+
+    ```
+
+    fuser -k myfile.txt
+
+    ```
+
+    ```
+
+
+    +   4. **To find processes using a network socket (e.g., port 8080):**'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '```
+
+    fuser -n tcp 8080
+
+    ```
+
+
+    +   5. **To display more detailed information:**
+
+
+    ```
+
+    fuser -v myfile.txt
+
+    ```
+
+
+    # 45. ln: Create links between files.
+
+
+    The `ln` command in Linux is used to create links between files or directories.
+    It has two primary forms: creating hard links and symbolic (soft) links.
+
+
+    **Examples:**
+
+
+    +   1. **Creating a Hard Link:**
+
+
+    ```
+
+    ln file1.txt hardlink.txt
+
+    ```
+
+
+    This creates a hard link named `hardlink.txt` pointing to the same inode as `file1.txt`
+    .
+
+
+    +   2. **Creating a Symbolic Link:**'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '```
+
+    ln -s /path/to/file1.txt symlink.txt
+
+    ```
+
+
+    This creates a symbolic link named `symlink.txt` pointing to `file1.txt` .
+
+
+    # 3. Creating Symbolic Link with Relative Path:
+
+
+    ```
+
+    ln -s -r /path/to/file1.txt relative_symlink.txt
+
+    ```
+
+
+    This creates a symbolic link named `relative_symlink.txt` with a relative path
+    to `file1.txt` .
+
+
+    # 4. Prompt before Overwriting:
+
+
+    ```
+
+    ln -i file1.txt hardlink.txt
+
+    ```
+
+
+    If `hardlink.txt` already exists, the command will prompt before overwriting it.
+
+
+    # 5. Verbose Output:
+
+
+    ```
+
+    ln -v file1.txt hardlink.txt
+
+    ```
+
+
+    Prints a message for each hard link created.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '+   6. **Forcefully Creating a Symbolic Link:**
+
+
+    ```
+
+    ln -sf /path/to/new_target symlink.txt
+
+    ```
+
+
+    This forcefully creates a symbolic link, overwriting `symlink.txt` if it already
+    exists.
+
+
+    +   **46. ldconfig: Configure dynamic linker run-time bindings.**
+
+
+    The `ldconfig` command in Linux is used to configure the dynamic linker runtime
+    bindings. It updates the shared library cache, which is a system-wide index of
+    shared libraries. This cache is used by the dynamic linker to quickly locate and
+    load shared libraries when an executable is run.
+
+
+    **Examples:**
+
+
+    +   1. **To update the shared library cache:**
+
+
+    ```
+
+    sudo ldconfig
+
+    ```
+
+
+    +   2. **To show what would be done without actually updating the cache:**
+
+
+    ```
+
+    ldconfig -n
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '3. **To clear the entire dynamic linker cache:**
+
+
+    ```
+
+    ```
+
+    sudo ldconfig -X
+
+    ```
+
+    ```
+
+
+    4. **To update the cache with verbose output:**
+
+
+    ```
+
+    ```
+
+    sudo ldconfig -v
+
+    ```
+
+    ```
+
+
+    5. **To print configuration variables:**
+
+
+    ```
+
+    ```
+
+    ldconfig -C
+
+    ```
+
+    ```
+
+
+    # 47. **curl: Transfer data to or from a server.**
+
+
+    `curl` (short for "Client for URLs") is a command-line tool used in Unix and Linux
+    systems to transfer data with URLs. It supports various protocols like HTTP, HTTPS,
+    FTP, FTPS, SCP, SFTP, LDAP, and more. `curl` is highly flexible and versatile,
+    allowing users to perform a wide range of tasks, including downloading files,
+    sending requests to web services, and more.
+
+
+    **Examples:**'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# 1. Simple GET Request:
+
+
+    ```
+
+    curl https://www.example.com
+
+    ```
+
+
+    # 2. Save Output to a File:
+
+
+    ```
+
+    curl -o output.html https://www.example.com
+
+    ```
+
+
+    # 3. HTTP POST Request with Data:
+
+
+    ```
+
+    curl -X POST -d "param1=value1&param2=value2" https://www.example.com/api
+
+    ```
+
+
+    # 4. Setting Custom Headers:
+
+
+    ```
+
+    curl -H "Authorization: Bearer <token>" https://api.example.com/data
+
+    ```
+
+
+    # 5. Follow Redirects:'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '```
+
+    curl -L https://www.example.com
+
+    ```
+
+
+    # 48. lsof: List open files and the processes that opened them.
+
+
+    The `lsof` command in Linux is used to list information about files that are currently
+    opened by processes. It provides detailed information about files, directories,
+    and network sockets that are being used by running processes on the system. This
+    can be extremely useful for system administrators and users to troubleshoot issues
+    related to file access, identify which processes are using specific files, or
+    to find out what network connections a particular process has open.
+
+
+    Examples:
+
+
+    +   1. List all open files:
+
+
+    ```
+
+    lsof
+
+    ```
+
+
+    +   2. List open files for a specific process (e.g., process ID 1234):
+
+
+    ```
+
+    lsof -p 1234
+
+    ```
+
+
+    +   3. List open files for a specific user (e.g., user ''username''):'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '```
+
+    lsof -u username
+
+    ```
+
+
+    4. List **open files for a specific command** (e.g., command ''nginx''):
+
+
+    ```
+
+    lsof -c nginx
+
+    ```
+
+
+    5. List **open network connections**:
+
+
+    ```
+
+    lsof -i
+
+    ```
+
+
+    6. List **open files for a specific process** and display only the **process IDs**:
+
+
+    ```
+
+    lsof -p 1234 -t
+
+    ```
+
+
+    # 49. iotop: Monitor I/O usage of processes.
+
+
+    `iotop` is a command-line utility on Linux systems that allows users to monitor
+    and display input/output (I/O) usage information of processes in real-time. It
+    provides a dynamic and interactive view of the I/O activities on the system, helping
+    users identify processes that are reading from or writing to storage devices.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Examples:
+
+
+    1. **Run `iotop` with default settings:**
+
+
+    ```
+
+    ```
+
+    iotop
+
+    ```
+
+    ```
+
+
+    This will display a real-time, interactive view of I/O usage.
+
+
+    2. **Run `iotop` in batch mode, with a limited number of iterations and a delay
+    of 2 seconds between each iteration:**
+
+
+    ```
+
+    ```
+
+    iotop -b -n 5 -d 2
+
+    ```
+
+    ```
+
+
+    This runs `**iotop**` in batch mode, capturing I/O statistics for 5 iterations
+    with a 2-second delay between each iteration.
+
+
+    3. **Display only processes or threads actually performing I/O:**
+
+
+    ```
+
+    ```
+
+    iotop -o
+
+    ```
+
+    ```
+
+
+    This will show only the processes or threads that are currently involved in I/O
+    operations.
+
+
+    # **50. rsync: Synchronize files and directories between two locations.**'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '`rsync` is a powerful and versatile command-line utility for synchronizing
+    files and directories between two locations on a Unix-like operating system. It
+    efficiently transfers only the differences between source and destination, making
+    it particularly useful for remote backups or mirroring.
+
+
+    # Examples:
+
+
+    # 1. Basic Sync:
+
+
+    ```
+
+    rsync -av /path/to/source/ /path/to/destination/
+
+    ```
+
+
+    This command synchronizes the contents of the source directory to the destination
+    directory, preserving permissions and other attributes.
+
+
+    # 2. Remote Sync:
+
+
+    ```
+
+    rsync -avz -e ssh user@remote:/path/to/source/ /path/to/destination/
+
+    ```
+
+
+    Synchronize files between a local machine and a remote machine over SSH. Replace
+    `user` with the username and `remote` with the remote machine''s IP or hostname.
+
+
+    # 3. Exclude Files:
+
+
+    ```
+
+    rsync -av --exclude="*.log" /path/to/source/ /path/to/destination/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: 'Sync source to destination excluding files with a `.log` extension.
+
+
+    +   4. **Dry Run:**
+
+
+    ```
+
+    `rsync -av --dry-run /path/to/source/ /path/to/destination/`
+
+    ```
+
+
+    Perform a dry run to see what changes would be made without actually transferring
+    any files.
+
+
+    +   5. **Show Progress:**
+
+
+    ```
+
+    `rsync -avP /path/to/source/ /path/to/destination/`
+
+    ```
+
+
+    Show progress during the transfer, indicating the percentage completion and transfer
+    rate.
+
+
+    # **51. uname: Display system information.**
+
+
+    The `uname` command in Linux is used to display system information such as the
+    system name, kernel name, network node hostname, kernel release, kernel version,
+    machine hardware name, and processor architecture.
+
+
+    **Examples:**
+
+
+    +   1. **Display all system information:**'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '```
+
+    uname -a
+
+    ```
+
+
+    2. **Display only the kernel name:**
+
+
+    ```
+
+    uname -s
+
+    ```
+
+
+    3. **Display the machine hardware name:**
+
+
+    ```
+
+    uname -m
+
+    ```
+
+
+    4. **Display the kernel version:**
+
+
+    ```
+
+    uname -v
+
+    ```
+
+
+    5. **Display the operating system:**
+
+
+    ```
+
+    uname -o
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# **52. uptime: Display how long the system has been running.**
+
+
+    The `uptime` command in Linux is a simple yet powerful tool that provides information
+    about how long a system has been running, as well as some key performance metrics.
+
+
+    **Examples:**
+
+
+    1. **Display only uptime information:**
+
+
+    ```
+
+    uptime -p
+
+    ```
+
+
+    This command will display only the uptime information in a more human-readable
+    format.
+
+
+    2. **Display short output:**
+
+
+    ```
+
+    uptime -s
+
+    ```
+
+
+    This command shows the system’s start time.
+
+
+    3. **Display load averages only:**
+
+
+    ```
+
+    uptime -q
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'This command provides information about the system load averages.
+
+
+    +   4. **Custom formatting:**
+
+
+    ```
+
+    ```
+
+    uptime -f
+
+    ```
+
+    ```
+
+
+    This command displays the following information in a more machine-readable format.
+
+
+    # **53. killall: Kill processes by name.**
+
+
+    The `killall` command in Linux is used to terminate or send a signal to all processes
+    with a specified name. It allows you to kill multiple processes at once based
+    on their process name rather than their process ID (PID).
+
+
+    **Examples:**
+
+
+    +   1. **To terminate all processes named "firefox":**
+
+
+    ```
+
+    ```
+
+    killall firefox
+
+    ```
+
+    ```
+
+
+    +   2. **To forcefully kill all instances of a process named "myprocess" using
+    the `SIGKILL` signal:**'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '```
+
+    killall -s SIGKILL myprocess
+
+    ```
+
+
+    +   3. **To use the exact match option, ensuring that only processes with the
+    exact name "myprocess" are terminated:**
+
+
+    ```
+
+    killall -e myprocess
+
+    ```
+
+
+    +   4. **To interactively kill all instances of a process named "myprocess":**
+
+
+    ```
+
+    killall -i myprocess
+
+    ```
+
+
+    # 54. htop: Interactive process viewer.
+
+
+    `htop` is an interactive process viewer and system monitor for Unix-like operating
+    systems. It provides a user-friendly interface to monitor and manage system resources
+    in real-time. `htop` allows users to view detailed information about running processes,
+    system utilization, and other essential performance metrics.
+
+
+    **Examples:**
+
+
+    +   1. **To launch `htop`:**'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '```
+
+    htop
+
+    ```
+
+
+    +   2. **To show processes for a specific user** (replace "username" with the
+    actual username):
+
+
+    ```
+
+    htop -u username
+
+    ```
+
+
+    +   3. **To sort processes by CPU usage**:
+
+
+    ```
+
+    htop -s PERCENT_CPU
+
+    ```
+
+
+    +   4. **To kill a process by PID** (replace "pid" with the actual process ID):
+
+
+    ```
+
+    htop -k pid
+
+    ```
+
+
+    +   5. **To display `htop` help**:
+
+
+    ```
+
+    htop -h
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# 55. chroot: Run a command with a different root directory.
+
+
+    The `chroot` command in Linux is used to change the root directory for a specific
+    process, essentially creating a restricted environment in which the specified
+    command or shell operates. This can be useful for testing or repairing systems
+    without affecting the rest of the operating system.
+
+
+    Examples:
+
+
+    +   1. **Change the root directory to a new location and run a command within
+    it:**
+
+
+    ```
+
+    sudo chroot /path/to/new/root /bin/bash
+
+    ```
+
+
+    This example changes the root directory to `/path/to/new/root` and starts a new
+    Bash shell within this environment.
+
+
+    +   2. **Change the root directory and execute a specific command:**
+
+
+    ```
+
+    sudo chroot /path/to/new/root /bin/ls -l /home
+
+    ```
+
+
+    This command changes the root directory and lists the contents of the `/home`
+    directory using the `ls` command.
+
+
+    # 56. who: Display information about users who are currently logged in.'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: 'The `who` command in Linux is used to display information about users who are
+    currently logged into the system. It provides details such as the username, terminal,
+    login time, and originating IP address.
+
+
+    # **Examples:**
+
+
+    +   1. **Display a list of all logged-in users:**
+
+
+    ```
+
+    who
+
+    ```
+
+
+    +   2. **Display a count of logged-in users:**
+
+
+    ```
+
+    who -q
+
+    ```
+
+
+    +   3. **Show information about the current terminal''s owner:**
+
+
+    ```
+
+    who -m
+
+    ```
+
+
+    +   4. **Display the time of the last system boot:**
+
+
+    ```
+
+    who -b
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# **57. w: Show who is logged in and what they are doing.**
+
+
+    The `w` command in Linux is used to display information about the users currently
+    logged in and their activities. It provides a quick overview of who is logged
+    in, what they are doing, and how long they have been idle.
+
+
+    **Examples:**
+
+
+    +   1. **Display Information about Currently Logged-In Users:**
+
+
+    ```
+
+    ```
+
+    w
+
+    ```
+
+    ```
+
+
+    This command will display information about the users currently logged in, including
+    their username, terminal, remote host (if applicable), login time, idle time,
+    JCPU (total CPU time used by all processes attached to the terminal), PCPU (the
+    CPU time used by the current process), and the command being executed.
+
+
+    +   2. **Display Information with Header:**
+
+
+    ```
+
+    ```
+
+    w -h
+
+    ```
+
+    ```
+
+
+    Adding the `-h` option suppresses the header line, providing a more compact display
+    of user information.
+
+
+    +   3. **Display Information for a Specific User:**
+
+
+    ```
+
+    ```
+
+    w username
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'Replace "username" with the actual username you want to display information
+    for. This will show details about the specified user only.
+
+
+    # 4. **Display Information for a Specific Terminal:**
+
+
+    ```
+
+    w -s
+
+    ```
+
+
+    The `-s` option sorts the output by the terminal names, making it easier to see
+    who is using a particular terminal.
+
+
+    # 5. **Display Information in Short Format:**
+
+
+    ```
+
+    w -s -f
+
+    ```
+
+
+    The `-f` option provides a shorter output format, displaying only the user, terminal,
+    login time, JCPU, and PCPU.
+
+
+    # 6. **Display Information with More Details:**
+
+
+    ```
+
+    w -i
+
+    ```
+
+
+    The `-i` option provides additional information about system idle time and the
+    time since the system was last booted.
+
+
+    # 7. **Display Information with Load Average:**'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '```
+
+    w -l
+
+    ```
+
+
+    The ` -l ` option adds the system load average to the output. The load average
+    represents the average number of processes waiting for CPU time over a specific
+    period (1, 5, and 15 minutes).
+
+
+    8. **Display Information in a Specific Format:**
+
+
+    ```
+
+    w -o user,time,from
+
+    ```
+
+
+    The ` -o ` option allows you to specify the format of the output. In this example,
+    the format includes user, time, and from (remote host).
+
+
+    # **58. sudo: Execute a command as a superuser or another user.**
+
+
+    `sudo` is a command-line utility in Unix and Unix-like operating systems that
+    allows a permitted user to execute a command as the superuser or another user,
+    as specified by the security policy. The name "sudo" stands for "superuser do."
+
+
+    **Examples:**
+
+
+    +   1. **Install Software:**'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '```
+
+    sudo apt-get install firefox
+
+    ```
+
+
+    This command installs the Firefox web browser. The `sudo` command is used to elevate
+    the privileges for the installation process.
+
+
+    # 2. Edit System Files:
+
+
+    ```
+
+    sudo nano /etc/network/interfaces
+
+    ```
+
+
+    This opens the Nano text editor to edit the network configuration file. Editing
+    system files often requires superuser privileges.
+
+
+    # 3. Update Package Lists:
+
+
+    ```
+
+    sudo apt-get update
+
+    ```
+
+
+    This updates the local package lists, necessary before installing or upgrading
+    software.
+
+
+    # 4. Upgrade Installed Packages:
+
+
+    ```
+
+    sudo apt-get upgrade
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'Upgrades all installed packages to their latest versions.
+
+
+    **5. Remove Software:**
+
+
+    ```
+
+    sudo apt-get remove firefox
+
+    ```
+
+
+    Removes the Firefox browser. Like installation, removal of software often requires
+    elevated privileges.
+
+
+    **6. Restart Services:**
+
+
+    ```
+
+    sudo service apache2 restart
+
+    ```
+
+
+    Restarts the Apache web server. Managing system services often requires superuser
+    privileges.
+
+
+    **7. Change File Ownership:**
+
+
+    ```
+
+    sudo chown user:group filename
+
+    ```
+
+
+    Changes the ownership of a file to a specified user and group.
+
+
+    **8. Mount a Filesystem:**'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '```
+
+    sudo mount /dev/sdb1 /mnt
+
+    ```
+
+
+    Mounts a filesystem from a specified device to a specified directory.
+
+
+    # **9. View System Logs:**
+
+
+    ```
+
+    sudo journalctl
+
+    ```
+
+
+    Displays the system logs using the journalctl command. Accessing log files usually
+    requires superuser privileges.
+
+
+    # **10. Add a User to a Group:**
+
+
+    ```
+
+    sudo usermod -aG groupname username
+
+    ```
+
+
+    Adds a user to a specified group.
+
+
+    # **11. Run a Command as Another User:**
+
+
+    ```
+
+    sudo -u username command
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: 'Executes a command as the specified user.
+
+
+    # 12. **Edit a Protected File with Graphical Editor:**
+
+
+    ```
+
+    sudo gedit /etc/fstab
+
+    ```
+
+
+    This opens the graphical text editor Gedit to edit a system file.
+
+
+    # 59. journalctl: Query and display messages from the journal, managed by systemd.
+
+
+    `journalctl` is a command-line utility in Linux used for querying and displaying
+    messages from the journal, which is a centralized logging system implemented by
+    the `systemd` system and service manager. The journal contains information about
+    system events, logs from various services, and kernel messages. It''s a powerful
+    tool for troubleshooting, monitoring, and analyzing system logs.
+
+
+    # **Examples:**
+
+
+    # 1. **Viewing the Entire Journal:**
+
+
+    ```
+
+    journalctl
+
+    ```
+
+
+    This command displays the entire journal, starting from the oldest entry to the
+    most recent.
+
+
+    # 2. **Viewing the Journal in Real-Time:**'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '```
+
+    journalctl -f
+
+    ```
+
+
+    The `-f` option allows you to follow the journal in real-time, similar to the
+    `tail -f` command for traditional log files.
+
+
+    # 3. Viewing the Last ''n'' Lines of the Journal:
+
+
+    ```
+
+    journalctl -n 50
+
+    ```
+
+
+    Use the `-n` option to specify the number of lines to display from the end of
+    the journal.
+
+
+    # 4. Viewing Logs for a Specific Unit (Service):
+
+
+    ```
+
+    journalctl -u apache2
+
+    ```
+
+
+    This command displays logs related to the Apache web server. Replace `apache2`
+    with the name of any other systemd unit.
+
+
+    # 5. Viewing Logs for the Current Boot:
+
+
+    ```
+
+    journalctl -b
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: 'Displays logs only for the current boot.
+
+
+    # **6. Viewing Logs for a Specific Boot Sequence:**
+
+
+    ```
+
+    journalctl -b -1
+
+    ```
+
+
+    Replace `-1` with the boot sequence number to view logs for a specific previous
+    boot.
+
+
+    # **7. Viewing Logs Within a Time Range:**
+
+
+    ```
+
+    journalctl --since "2023-01-01 00:00:00" --until "2023-01-02 23:59:59"
+
+    ```
+
+
+    Use the `--since` and `--until` options to view logs within a specific time range.
+
+
+    # **8. Displaying Logs with Full Details:**
+
+
+    ```
+
+    journalctl -xe
+
+    ```
+
+
+    The `-x` option displays the full details of each log entry, including the message
+    and additional fields.
+
+
+    # **9. Filtering Logs by Priority:**'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '```
+
+    journalctl -p err
+
+    ```
+
+
+    Use the `-p` option to filter logs by priority. In this example, only logs with
+    the "err" (error) priority are displayed.
+
+
+    # 10. Filtering Logs by Process ID:
+
+
+    ```
+
+    journalctl _PID=1234
+
+    ```
+
+
+    Replace `1234` with the process ID you want to filter logs for.
+
+
+    # 11. Filtering Logs by Message Content:
+
+
+    ```
+
+    journalctl | grep "search_term"
+
+    ```
+
+
+    You can use standard Unix tools like `grep` to filter logs based on the content
+    of the log messages.
+
+
+    # 60. dd: Copy and convert files, create disk images.
+
+
+    The `dd` command is a versatile and powerful utility in Linux used for copying
+    and converting files and data streams. The name "dd" stands for "data duplicator,"
+    but it is often humorously referred to as "disk destroyer" because of its'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'potential to overwrite data if used incorrectly. The `dd` command operates
+    at the block level, making it efficient for tasks like creating disk images, copying
+    data between devices, and converting data formats.
+
+
+    # Examples:
+
+
+    # 1. **Create a Backup Image of a Disk:**
+
+
+    To create a backup image of an entire disk, you can use `dd` to copy the contents
+    block by block. Replace `/dev/sdX` with the appropriate disk identifier.
+
+
+    ```
+
+    sudo dd if=/dev/sdX of=backup.img bs=4M
+
+    ```
+
+
+    +   - `if=/dev/sdX`: Specifies the input file (source disk).
+
+    +   - `of=backup.img`: Specifies the output file (destination disk image).
+
+    +   - `bs=4M`: Sets the block size to 4 megabytes for better performance.
+
+
+    # 2. **Copy Data Between Devices:**
+
+
+    Copy the content of one disk to another. Be extremely cautious with this operation
+    to avoid overwriting important data.
+
+
+    ```
+
+    sudo dd if=/dev/sdX of=/dev/sdY bs=4M
+
+    ```
+
+
+    +   - `if=/dev/sdX`: Specifies the input file (source disk).
+
+    +   - `of=/dev/sdY`: Specifies the output file (destination disk).
+
+    +   - `bs=4M`: Sets the block size to 4 megabytes for better performance.'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# **3. Create a Bootable USB Drive from an ISO:**
+
+
+    Use `dd` to write an ISO image to a USB drive, creating a bootable medium.
+
+
+    ```
+
+    ```
+
+    sudo dd if=ubuntu.iso of=/dev/sdX bs=4M
+
+    ```
+
+    ```
+
+
+    +   - `if=ubuntu.iso`: Specifies the input file (source ISO image).
+
+    +   - `of=/dev/sdX`: Specifies the output file (destination USB drive).
+
+    +   - `bs=4M`: Sets the block size to 4 megabytes for better performance.
+
+
+    # **4. Random Data Generation:**
+
+
+    `dd` can be used to generate random data for testing purposes.
+
+
+    ```
+
+    ```
+
+    dd if=/dev/urandom of=random_data.bin bs=1M count=10
+
+    ```
+
+    ```
+
+
+    +   - `if=/dev/urandom`: Specifies the input file (use the random data source).
+
+    +   - `of=random_data.bin`: Specifies the output file (destination for random
+    data).
+
+    +   - `bs=1M`: Sets the block size to 1 megabyte.
+
+    +   - `count=10`: Specifies the number of blocks to copy (in this case, 10 megabytes
+    of random data).
+
+
+    # **61. man: Display the manual for a command.**'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: 'The ` man ` command in Linux is a powerful tool that provides manual pages,
+    or documentation, for various commands and utilities in the Linux operating system.
+    It is a built-in system for accessing and viewing documentation on the command
+    line. The name "man" stands for "manual."
+
+
+    # Examples:
+
+
+    # 1. **Viewing the manual page for a command:**
+
+
+    ```
+
+    ```
+
+    man ls
+
+    ```
+
+    ```
+
+
+    This command displays the manual page for the ` ls ` command, which is used to
+    list files and directories.
+
+
+    # 2. **Searching for a specific keyword in manual pages:**
+
+
+    ```
+
+    ```
+
+    man -k keyword
+
+    ```
+
+    ```
+
+
+    For example:
+
+
+    ```
+
+    ```
+
+    man -k copy
+
+    ```
+
+    ```
+
+
+    This command searches for the keyword "copy" in the manual pages and displays
+    a list of commands related to the keyword.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '+   3. **Viewing a specific section of the manual page:**
+
+
+    ```
+
+    man 5 passwd
+
+    ```
+
+
+    This command displays the manual page for the `passwd` command, but specifically
+    in section 5, which typically contains file format information.
+
+
+    +   4. **Opening the manual page for a library function:**
+
+
+    ```
+
+    man 3 printf
+
+    ```
+
+
+    This command opens the manual page for the `printf` function in section 3, which
+    contains library calls and functions.
+
+
+    +   5. **Opening a manual page directly without using the `man` command:**
+
+
+    ```
+
+    man -l filename
+
+    ```
+
+
+    This command opens the manual page for a specified file directly.
+
+
+    +   6. **Viewing the manual page for a command with a specific option:**'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '```
+
+    ```
+
+    man ls | col -b
+
+    ```
+
+    ```
+
+
+    This command pipes the output of the `man` command for `ls` through the `col`
+    command to remove backspaces, allowing you to view it more clearly.
+
+
+    **7. Getting help for `man` itself:**
+
+
+    ```
+
+    ```
+
+    man man
+
+    ```
+
+    ```
+
+
+    This command displays the manual page for the `man` command, providing information
+    on how to use `man` itself.
+
+
+    # **62. tput: Set terminal-dependent capabilities.**
+
+
+    The `tput` command in Linux is a powerful utility that interacts with the terminal,
+    allowing you to manipulate various terminal capabilities such as colors, cursor
+    movement, and text formatting. It''s particularly useful for creating dynamic
+    and visually appealing scripts in the command line.
+
+
+    **Examples:**
+
+
+    **1. Changing Text Colors:**'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '```
+
+    ```text
+
+    tput setaf 2  # Set foreground color to green
+
+    echo "This is green text"
+
+    tput sgr0     # Reset text attributes to default
+
+    ```
+
+    ```
+
+
+    # 2. Changing Background Colors:
+
+
+    ```
+
+    ```text
+
+    tput setab 4  # Set background color to blue
+
+    echo "This has a blue background"
+
+    tput sgr0     # Reset text attributes to default
+
+    ```
+
+    ```
+
+
+    # 3. Formatting Text:
+
+
+    ```
+
+    ```text
+
+    tput bold     # Set bold text
+
+    echo "This is bold text"
+
+    tput sgr0     # Reset text attributes to default
+
+    ```
+
+    ```
+
+
+    # 4. Moving the Cursor:
+
+
+    ```
+
+    ```text
+
+    tput cup 5 10 # Move the cursor to row 5, column 10
+
+    echo "Hello, world!"
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# 5. Clearing the Screen:
+
+
+    ```
+
+    tput clear # Clear the entire terminal screen
+
+    ```
+
+
+    # 6. Getting Terminal Dimensions:
+
+
+    ```
+
+    rows=$(tput lines)    # Get the number of rows in the terminal
+
+    cols=$(tput cols)     # Get the number of columns in the terminal
+
+    echo "Terminal size: $rows rows x $cols columns"
+
+    ```
+
+
+    # 7. Saving and Restoring Cursor Position:
+
+
+    ```
+
+    tput sc # Save current cursor position
+
+    # Do some work that moves the cursor
+
+    tput rc # Restore cursor to the saved position
+
+    ```
+
+
+    # 8. Checking Terminal Capabilities:
+
+
+    ```
+
+    tput colors # Print the number of supported colors
+
+    tput bel # Emit a bell character (useful for notifications)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# **9. Styling Text:**
+
+
+    ```
+
+    tput rev  # Reverse video (swap background and foreground colors)
+
+    echo "This has reversed video"
+
+    tput sgr0  # Reset text attributes to default
+
+    ```
+
+
+    # **10. Underlining Text:**
+
+
+    ```
+
+    tput smul  # Start underlining text
+
+    echo "This is underlined"
+
+    tput rmul  # Stop underlining text
+
+    ```
+
+
+    # **63. nmap: Network exploration tool and security scanner.**
+
+
+    `nmap` (Network Mapper) is a powerful and versatile open-source tool used for
+    network discovery and security auditing. It is commonly used to discover hosts
+    and services on a computer network, creating a map of the network''s structure.
+    `nmap` operates by sending packets to the target hosts and analyzing the responses.
+
+
+    # **Examples:**
+
+
+    +   1. **Basic Scan:**'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '```
+
+    nmap target_ip
+
+    ```
+
+
+    This command performs a basic scan on the specified target IP address. It shows
+    open ports and their associated services.
+
+
+    # 2. Scan a Range of IP Addresses:
+
+
+    ```
+
+    nmap 192.168.1.1-50
+
+    ```
+
+
+    Scans a range of IP addresses from 192.168.1.1 to 192.168.1.50.
+
+
+    # 3. Scan Entire Subnet:
+
+
+    ```
+
+    nmap 192.168.1.0/24
+
+    ```
+
+
+    Scans all IP addresses in the 192.168.1.0/24 subnet.
+
+
+    # 4. Scan Multiple Hosts:
+
+
+    ```
+
+    nmap host1 host2 host3
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: 'Scans multiple hosts specified on the command line.
+
+
+    # 5. Aggressive Scan:
+
+
+    ```
+
+    nmap -A target_ip
+
+    ```
+
+
+    Performs an aggressive scan, including OS detection, version detection, script
+    scanning, and traceroute.
+
+
+    # 6. Service Version Detection:
+
+
+    ```
+
+    nmap -sV target_ip
+
+    ```
+
+
+    Attempts to determine the version of services running on open ports.
+
+
+    # 7. Operating System Detection:
+
+
+    ```
+
+    nmap -O target_ip
+
+    ```
+
+
+    Tries to determine the operating system of the target.
+
+
+    # 8. Scan Specific Ports:'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '```
+
+    nmap -p 80,443 target_ip
+
+    ```
+
+
+    Scans only specified ports (80 and 443 in this example).
+
+
+    # 9. Scan All 65535 Ports:
+
+
+    ```
+
+    nmap -p- target_ip
+
+    ```
+
+
+    Scans all 65535 ports. This can take longer but ensures no port is overlooked.
+
+
+    # 10. Output to a File:
+
+
+    ```
+
+    nmap -oN output.txt target_ip
+
+    ```
+
+
+    Saves the results to a file named "output.txt" in normal format.
+
+
+    # 11. Output in XML Format:
+
+
+    ```
+
+    nmap -oX output.xml target_ip
+
+    ```
+
+
+    Saves the results in XML format.'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# 12. **Script Scanning:**
+
+
+    ```
+
+    nmap --script=default target_ip
+
+    ```
+
+
+    Executes default scripts against the target.
+
+
+    # 13. **Timing and Performance:**
+
+
+    ```
+
+    nmap -T4 target_ip
+
+    ```
+
+
+    Sets the timing template to aggressive, balancing speed and reliability.
+
+
+    # 14. **Ping Scan:**
+
+
+    ```
+
+    nmap -sn target_ip
+
+    ```
+
+
+    Performs a ping scan without port scanning.
+
+
+    # 15. **UDP Scan:**
+
+
+    ```
+
+    nmap -sU target_ip
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'Performs a UDP scan on the target.
+
+
+    # **64. iftop: Display bandwidth usage on an interface.**
+
+
+    `**iftop**` is a command-line network bandwidth monitoring tool for Linux. It
+    shows a list of network connections between your system and others and displays
+    information about the data rate and data for each connection.
+
+
+    **Examples:**
+
+
+    **1. Basic Usage:**
+
+
+    ```
+
+    iftop
+
+    ```
+
+
+    This will start `**iftop**` in interactive mode, displaying a list of connections,
+    data rates, and total data transferred.
+
+
+    **2. Display Bytes per Second:**
+
+
+    ```
+
+    iftop -B
+
+    ```
+
+
+    Shows bandwidth in bytes per second instead of the default bits per second.
+
+
+    **3. Filtering by Port:**'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '```
+
+    iftop -F 80
+
+    ```
+
+
+    Displays only the connections using port 80. You can use other port numbers as
+    needed.
+
+
+    4. Displaying Timestamps:
+
+
+    ```
+
+    iftop -t
+
+    ```
+
+
+    Adds a timestamp to each line of output.
+
+
+    5. Monitor Specific Interface:
+
+
+    ```
+
+    iftop -i eth0
+
+    ```
+
+
+    Monitors only the traffic on the specified network interface (replace `eth0` with
+    your actual interface name).
+
+
+    6. Do Not Resolve Hostnames:
+
+
+    ```
+
+    iftop -n
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: 'Prevents `iftop` from resolving IP addresses to hostnames, making the display
+    faster.
+
+
+    +   7. **Display Ports Alongside Hosts:**
+
+
+    ```
+
+    iftop -N
+
+    ```
+
+
+    Shows both hosts and their corresponding ports.
+
+
+    +   8. **Apply a BPF Filter:**
+
+
+    ```
+
+    iftop -F "host 192.168.1.1"
+
+    ```
+
+
+    Uses a BPF filter to display only the traffic to or from the specified host (replace
+    `192.168.1.1` with the desired IP address).
+
+
+    # **65. fsck: File system consistency check and repair.**
+
+
+    The `fsck` command, which stands for "file system consistency check," is a powerful
+    utility used in Linux and other Unix-like operating systems to check and repair
+    file system inconsistencies on a disk. It is commonly employed when a system encounters
+    unexpected shutdowns, power failures, or other issues that might lead to file
+    system corruption. `fsck` can work with various file system types, such as ext2,
+    ext3, ext4, and others.
+
+
+    # **Examples:**'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# **1. Check a File System:**
+
+
+    ```
+
+    fck /dev/sda1
+
+    ```
+
+
+    This command checks and repairs the file system on the device `/dev/sda1`. Replace
+    `/dev/sda1` with the appropriate device identifier for your system.
+
+
+    # **2. Automatically Repair File System:**
+
+
+    ```
+
+    fck -y /dev/sda1
+
+    ```
+
+
+    The `-y` option automatically answers **yes** to all questions asked by `fck`,
+    making it suitable for unattended repair processes.
+
+
+    # **3. Interactive Repair:**
+
+
+    ```
+
+    fck -r /dev/sda1
+
+    ```
+
+
+    The `-r` option prompts the user for confirmation before fixing each issue. This
+    allows you to review and approve each repair manually.
+
+
+    # **4. Check and Repair All File Systems:**'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '```
+
+    ```text
+
+    fcsk -A
+
+    ```
+
+    ```
+
+
+    This command checks and repairs all file systems specified in the `/etc/fstab`
+    file. It''s often used during the system boot process.
+
+
+    # ### 5. Check a Specific File System Type:
+
+
+    ```
+
+    ```text
+
+    fcsk.ext4 /dev/sda1
+
+    ```
+
+    ```
+
+
+    In this example, `fcsk.ext4` is used specifically for the ext4 file system. Different
+    file systems may have their own `fcsk` variants.
+
+
+    # ### 6. Force File System Check Even if Clean:
+
+
+    ```
+
+    ```text
+
+    fcsk -f /dev/sda1
+
+    ```
+
+    ```
+
+
+    The `-f` option forces a file system check even if it appears clean. This can
+    be useful for ensuring a thorough examination.
+
+
+    # ### 7. Check and Repair Root File System:'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '```
+
+    fsck -f /
+
+    ```
+
+
+    To check and repair the root file system, you may need to boot from a live CD
+    or another bootable media to unmount the root partition.
+
+
+    # 8. Dry Run (Check, but don''t repair):
+
+
+    ```
+
+    fsck -n /dev/sda1
+
+    ```
+
+
+    The `-n` option performs a dry run, displaying what would be done without actually
+    making any changes to the file system.
+
+
+    # 66. tac: Concatenate and display files in reverse.
+
+
+    The `tac` command in Linux is used to concatenate and display the contents of
+    a file in reverse order. The name "tac" is derived from the word "cat" (concatenate)
+    spelled backward. It''s a simple yet powerful tool that can be handy in various
+    scenarios, especially when you want to view the end of a file or reverse the order
+    of lines in a text file.
+
+
+    # Examples:
+
+
+    # 1. Basic Usage:
+
+
+    Display the contents of a file in reverse order.'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '```
+
+    ```
+
+    tac filename.txt
+
+    ```
+
+    ```
+
+
+    # **2. Concatenate Multiple Files in Reverse Order:**
+
+
+    Concatenate the contents of multiple files and display them in reverse order.
+
+
+    ```
+
+    ```
+
+    tac file1.txt file2.txt
+
+    ```
+
+    ```
+
+
+    # **3. Reverse the Output of a Command:**
+
+
+    Use a command''s output as input for `tac` and reverse the order.
+
+
+    ```
+
+    ```
+
+    ls -l | tac
+
+    ```
+
+    ```
+
+
+    # **4. Display the End of a Log File:**
+
+
+    View the last few lines of a log file in reverse order to quickly see the latest
+    entries.
+
+
+    ```
+
+    ```
+
+    tac /var/log/syslog
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '+   5. **Reverse Lines in a File and Save to Another File:**
+
+
+    Reverse the lines in a file and save the result to a new file.
+
+
+    ```
+
+    tac original.txt > reversed.txt
+
+    ```
+
+
+    +   6. **Recursive Reverse Order of Files in a Directory:**
+
+
+    Display the contents of all files in a directory and its subdirectories in reverse
+    order.
+
+
+    ```
+
+    find /path/to/directory -type f -exec tac {} \;
+
+    ```
+
+
+    +   7. **Display Only N Lines from the End:**
+
+
+    Show only a specific number of lines from the end of a file.
+
+
+    ```
+
+    tac -n 10 filename.txt # Display the last 10 lines
+
+    ```
+
+
+    +   8. **Display Line Numbers with Reversed Output:**
+
+
+    Display the reversed content of a file along with line numbers.'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '```
+
+    tac -n filename.txt
+
+    ```
+
+
+    # 9. Reverse Order of Lines in a Pipeline:
+
+
+    Combine `tac` with other commands in a pipeline.
+
+
+    ```
+
+    cat filename.txt | grep "pattern" |tac
+
+    ```
+
+
+    # 10. Reverse Order of Lines in Compressed Files:
+
+
+    Use `zcat` to decompress and display the contents of compressed files in reverse
+    order.
+
+
+    ```
+
+    zcat filename.txt.gz |tac
+
+    ```
+
+
+    # 67. rev: Reverse lines of a file or files.
+
+
+    The `rev` command in Linux is a simple utility that reverses the characters in
+    a line. It reads input from either a file or standard input, reverses the order
+    of characters in each line, and then writes the result to the standard output.
+
+
+    **Examples:**'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# 1. **Basic Usage:**
+
+
+    ```
+
+    echo "Hello, World!" | rev
+
+    ```
+
+
+    # 2. **Read from a File:**
+
+
+    ```
+
+    rev textfile.txt
+
+    ```
+
+
+    This reverses the content of `textfile.txt` and prints the result to the console.
+
+
+    # 3. **Reverse Each Word:**
+
+
+    ```
+
+    echo "Linux is awesome" | rev | sed ''s/ /\\n/g'' | rev
+
+    ```
+
+
+    # 4. **Reverse Only a Portion of a Line:**
+
+
+    ```
+
+    echo "abcdef" | rev | cut -c 2-4 | rev
+
+    ```
+
+
+    This example reverses the characters in the entire line, extracts characters 2
+    to 4, and then reverses them back.'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '5. **Reverse Each Line in a File and Redirect to Another File:**
+
+
+    ```
+
+    rev input.txt > output.txt
+
+    ```
+
+
+    This reads each line from `input.txt`, reverses the characters, and writes the
+    result to `output.txt`.
+
+
+    6. **Reverse a String from a Variable:**
+
+
+    ```
+
+    my_string="OpenAI"
+
+    echo "$my_string" | rev
+
+    ```
+
+
+    Reverses the content of the variable `my_string`.
+
+
+    # ## 68. alias: Create an alias for a command.
+
+
+    In Linux, the `alias` command is used to create shortcuts or alternate names for
+    other commands. This can be particularly useful to save time, reduce typing, or
+    create personalized shortcuts for complex or frequently used commands. Aliases
+    are typically defined in the shell configuration file (e.g., `.bashrc` for Bash)
+    so that they are available each time you open a new terminal session.
+
+
+    **Examples:**
+
+
+    +   1. Simple Alias:'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '```
+
+    alias ll=''ls -l''
+
+    ```
+
+
+    Now, whenever you type `ll`, it will execute the `ls -l` command.
+
+
+    # 2. Customizing Command Options:
+
+
+    ```
+
+    alias grep=''grep --color=auto''
+
+    ```
+
+
+    This alias adds color to the `grep` command output, making it easier to distinguish
+    matches.
+
+
+    # 3. Combining Commands:
+
+
+    ```
+
+    alias update=''sudo apt-get update && sudo apt-get upgrade''
+
+    ```
+
+
+    This alias combines the update and upgrade commands into a single command.
+
+
+    # 4. Navigate to a Specific Directory:
+
+
+    ```
+
+    alias documents=''cd ~/Documents''
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: 'Typing `documents` will change the directory to ~/Documents.
+
+
+    5. **Force Recursive Removal:**
+
+
+    ```
+
+    ```bash
+
+    alias rm=''rm -i''
+
+    ```
+
+    ```
+
+
+    This alias adds an interactive prompt to the `rm` command, asking for confirmation
+    before removing files.
+
+
+    6. **Displaying a Colored, Human-readable File Size:**
+
+
+    ```
+
+    ```bash
+
+    alias df=''df -h''
+
+    ```
+
+    ```
+
+
+    The `-h` option makes the file sizes in human-readable format (e.g., KB, MB, GB).
+
+
+    7. **Listing Only Directories:**
+
+
+    ```
+
+    ```bash
+
+    alias lsd=''ls -l | grep "^d"''
+
+    ```
+
+    ```
+
+
+    This alias lists only directories in the current location.
+
+
+    8. **Shortcut for Clearing the Terminal:**'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '```
+
+    ```
+
+    alias cls=''clear''
+
+    ```
+
+    ```
+
+
+    Typing `cls` will clear the terminal screen.
+
+
+    # 69. date: Display or set the system date and time.
+
+
+    The `date` command in Linux is used to display the current date and time or to
+    set the system date and time. It also allows you to format the output in various
+    ways.
+
+
+    **Examples:**
+
+
+    1. **Displaying the Current Date and Time:**
+
+
+    ```
+
+    ```
+
+    date
+
+    ```
+
+    ```
+
+
+    This command will display the current date and time in the default format.
+
+
+    2. **Displaying the Date and Time in a Custom Format:**
+
+
+    ```
+
+    ```
+
+    date +"%Y-%m-%d %H:%M:%S"
+
+    ```
+
+    ```
+
+
+    This example formats the output to display the date and time in the "YYYY-MM-DD
+    HH:MM:SS" format.'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '+   3. **Displaying the Day of the Week:**
+
+
+    ```
+
+    date +"%A"
+
+    ```
+
+
+    This command will display the current day of the week.
+
+
+    +   4. **Displaying the Date in a Specific Timezone:**
+
+
+    ```
+
+    TZ="America/New_York" date
+
+    ```
+
+
+    This sets the timezone to "America/New_York" and displays the current date and
+    time in that timezone. You can replace "America/New_York" with the desired timezone.
+
+
+    +   5. **Calculating Future/Past Dates:**
+
+
+    ```
+
+    date --date="2 days ago"
+
+    ```
+
+
+    This command shows the date and time from two days ago.
+
+
+    +   **70. cal: Display a calendar.**'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: 'The `cal` command in Linux is a simple utility that displays a calendar in
+    the terminal. It can show calendars for the current month, a specific month, or
+    an entire year.
+
+
+    **Examples:**
+
+
+    +   1. **Display the current month:**
+
+
+    ```
+
+    ```
+
+    cal
+
+    ```
+
+    ```
+
+
+    This will display the calendar for the current month, highlighting the current
+    day.
+
+
+    +   2. **Display a specific month in the current year:**
+
+
+    ```
+
+    ```
+
+    cal 12 2023
+
+    ```
+
+    ```
+
+
+    This example displays the calendar for December 2023. You can replace `12` and
+    `2023` with the desired month and year.
+
+
+    +   3. **Display a specific year:**
+
+
+    ```
+
+    ```
+
+    cal 2022
+
+    ```
+
+    ```
+
+
+    This command shows the entire calendar for the year 2022.'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '+   4. **Display a specific month and highlight a specific day**:
+
+
+    ```
+
+    cal -m 11 -y 2023
+
+    ```
+
+
+    This example displays the calendar for November 2023, highlighting the current
+    day. The `-m` option sets the month, and the `-y` option sets the year.
+
+
+    +   5. **Display Monday as the first day of the week**:
+
+
+    ```
+
+    cal -m
+
+    ```
+
+
+    By default, the `cal` command starts the week with Sunday. The `-m` option changes
+    the starting day to Monday.
+
+
+    +   6. **Display a calendar for a specific country**:
+
+
+    ```
+
+    cal -A 3 -B 2
+
+    ```
+
+
+    This example displays a calendar with 3 months ahead (`-A 3`) and 2 months before
+    (`-B 2`) the current month.
+
+
+    +   7. **Display a calendar with week numbers**:
+
+
+    ```
+
+    cal -w
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: 'The `-w` option adds week numbers to the calendar.
+
+
+    8. **Display a calendar for a different locale:**
+
+
+    ```
+
+    LC_TIME=fr_FR cal
+
+    ```
+
+
+    This command displays the calendar using the French locale. You can replace `fr_FR`
+    with the appropriate locale.
+
+
+    # 71. **logname: Print the user''s login name.**
+
+
+    The `logname` command in Linux is used to display the login name of the current
+    user. It retrieves the user''s login name from the utmp or wtmp files, which store
+    information about user logins and logouts.
+
+
+    **Examples:**
+
+
+    1. **Basic Usage:**
+
+
+    ```
+
+    logname
+
+    ```
+
+
+    This will simply output the login name of the current user.
+
+
+    2. **Using Command Substitution:**'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '```
+
+    echo "The current user is $(logname)"
+
+    ```
+
+
+    In this example, the `logname` command is used within a command substitution to
+    embed the user''s login name into a sentence.
+
+
+    # 3. Checking Another User''s Login Name:
+
+
+    ```
+
+    logname -u username
+
+    ```
+
+
+    Replace "username" with the actual username of the user whose login name you want
+    to check. This can be useful if you want to get the login name of a user other
+    than the one currently logged in.
+
+
+    # 4. Combining with Other Commands:
+
+
+    ```
+
+    echo "You are logged in as $(logname) and your home directory is $HOME"
+
+    ```
+
+
+    This example combines the output of `logname` with the `echo` command to display
+    both the login name and the home directory of the current user.
+
+
+    # 5. Checking the Login Name in a Script:'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '```
+
+    #!/bin/bash
+
+    `current_user=$(logname)`
+
+    `echo "The script is being run by $current_user"`
+
+    ```
+
+
+    In a script, you can use the `logname` command to store the current user''s login
+    name in a variable for later use.
+
+
+    # 72. export: Set environment variables.
+
+
+    The `export` command in Linux is used to set an environment variable. Environment
+    variables are dynamic values that affect the behavior of processes running on
+    the system. These variables are accessible by any child process of the shell that
+    sets them.
+
+
+    +   **Examples:**
+
+
+    +   **1. Setting a Simple Variable:**
+
+
+    ```
+
+    `export MY_VARIABLE="Hello, World!"`
+
+    ```
+
+
+    This sets the environment variable `MY_VARIABLE` with the value "Hello, World!".
+
+
+    +   **2. Appending to the PATH:**'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '```
+
+    export PATH=$PATH:/usr/local/bin
+
+    ```
+
+
+    This adds `/usr/local/bin` to the end of the `PATH` environment variable. It is
+    often used to include directories containing executable files.
+
+
+    # 3. Setting Variables for Subsequent Commands:
+
+
+    ```
+
+    export EDITOR=vim
+
+    ```
+
+
+    This sets the default text editor to Vim. Subsequent commands that rely on the
+    `EDITOR` variable will use Vim.
+
+
+    # 4. Exporting Variables for Use in Subshells:
+
+
+    ```
+
+    export MY_VARIABLE="Hello, Subshell!"
+
+    (echo $MY_VARIABLE)
+
+    ```
+
+
+    In this example, the variable is set and then accessed within a subshell. The
+    parentheses start a subshell, and the variable is available within that scope.
+
+
+    # 5. Setting Multiple Variables:'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '```
+
+    export VAR1="Value1" VAR2="Value2"
+
+    ```
+
+
+    You can export multiple variables in a single command, separating them with spaces.
+
+
+    # **6. Unsetting a Variable:**
+
+
+    ```
+
+    export MY_VARIABLE=
+
+    ```
+
+
+    Setting a variable to an empty value effectively unsets it.
+
+
+    # **7. Exporting Variables in a Shell Script:**
+
+
+    ```
+
+    #!/bin/bash
+
+    export SCRIPT_VAR="Script Variable"
+
+    echo $SCRIPT_VAR
+
+    ```
+
+
+    When running a shell script, exported variables are accessible in the script''s
+    environment.
+
+
+    # **8. Viewing All Exported Variables:**
+
+
+    ```
+
+    export
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: 'Running `export` without any arguments displays a list of all currently exported
+    variables.
+
+
+    # **73. hostname: Display or set the system hostname.**
+
+
+    The `hostname` command in Linux is used to display or set the system''s host name.
+    The host name is a label assigned to a device on a network, and it is used to
+    identify the device in various network operations. The `hostname` command is also
+    useful for viewing or changing the host name of the system.
+
+
+    **Examples:**
+
+
+    +   1. **View the current host name:**
+
+
+    ```
+
+    hostname
+
+    ```
+
+
+    This command will output the current host name of the system.
+
+
+    +   2. **Display the fully qualified domain name (FQDN):**
+
+
+    ```
+
+    hostname -f
+
+    ```
+
+
+    The `-f` option is used to display the FQDN of the system, which includes both
+    the host name and the domain name.
+
+
+    +   3. **Set a new host name temporarily:**'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '```
+
+    sudo hostname newhostname
+
+    ```
+
+
+    This command sets a new host name for the system temporarily.
+
+
+    +   4. **Set a new host name persistently (requires system reboot):**
+
+
+    ```
+
+    sudo hostnamectl set-hostname newhostname
+
+    ```
+
+
+    This command sets a new host name for the system, and the change will persist
+    across reboots. It uses `hostnamectl`, which is a tool for querying and changing
+    system hostname and related settings.
+
+
+    +   5. **View the static host name (configured in /etc/hostname):**
+
+
+    ```
+
+    cat /etc/hostname
+
+    ```
+
+
+    The static host name is often configured in the `/etc/hostname` file. This command
+    displays the content of that file.
+
+
+    +   6. **Edit the static host name using a text editor:**
+
+
+    ```
+
+    sudo nano /etc/hostname
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: 'Use a text editor like `nano` to edit the static host name in the `/etc/hostname`
+    file. After editing, save the changes and exit the editor.
+
+
+    +   7. **Edit the hosts file to associate the host name with an IP address:**
+
+
+    ```
+
+    sudo nano /etc/hosts
+
+    ```
+
+
+    The `/etc/hosts` file maps IP addresses to host names. You can edit this file
+    to associate your host name with the desired IP address.
+
+
+    +   8. **Check the current domain name:**
+
+
+    ```
+
+    domainname
+
+    ```
+
+
+    This command displays the NIS/YP domain name associated with the system.
+
+
+    # **74. zip: Package and compress files.**
+
+
+    The `zip` command in Linux is used for compressing files and directories into
+    a zip archive. It is a popular utility for creating and managing compressed files
+    in a cross-platform manner.
+
+
+    **Examples:**
+
+
+    +   1. **Zip a Single File:**'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '```
+
+    zip archive.zip file.txt
+
+    ```
+
+
+    This creates a zip archive named `archive.zip` containing the file `file.txt`
+    .
+
+
+    # 2. Zip Multiple Files:
+
+
+    ```
+
+    zip archive.zip file1.txt file2.txt
+
+    ```
+
+
+    Creates a zip archive named `archive.zip` containing `file1.txt` and `file2.txt`
+    .
+
+
+    # 3. Zip a Directory:
+
+
+    ```
+
+    zip -r archive.zip directory/
+
+    ```
+
+
+    The `-r` option is used to recursively include all files and subdirectories within
+    the specified directory (`directory/`) in the zip archive.
+
+
+    # 4. Add Files to an Existing Archive:
+
+
+    ```
+
+    zip -u archive.zip newfile.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: 'The `-u` option updates an existing zip archive (`archive.zip`) by adding `new_file.txt`
+    to it.
+
+
+    # 5. Set Compression Level:
+
+
+    ```
+
+    zip -9 archive.zip file.txt
+
+    ```
+
+
+    The `-9` option sets the compression level to the maximum. You can use values
+    from 1 to 9 to adjust compression levels, where 1 is the fastest compression and
+    9 is the best compression.
+
+
+    # 6. Exclude Files:
+
+
+    ```
+
+    zip archive.zip *.txt -x exclude.txt
+
+    ```
+
+
+    This command creates a zip archive (`archive.zip`) containing all `.txt` files
+    in the current directory but excludes the file `exclude.txt`.
+
+
+    # 7. Password Protect a Zip Archive:
+
+
+    ```
+
+    zip -e secure.zip sensitive-file.txt
+
+    ```
+
+
+    The `-e` option prompts for a password and creates a password-protected zip archive
+    (`secure.zip`) containing the specified file (`sensitive-file.txt`).'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '+   8. List Contents of a Zip Archive:
+
+
+    ```
+
+    unzip -l archive.zip
+
+    ```
+
+
+    Use the `unzip -l` command to list the contents of a zip archive (`archive.zip`)
+    without extracting them.
+
+
+    +   9. Extract a Zip Archive:
+
+
+    ```
+
+    unzip archive.zip
+
+    ```
+
+
+    The `unzip` command extracts the contents of a zip archive (`archive.zip`) into
+    the current directory.
+
+
+    # 75. unzip: Unpack zip archives.
+
+
+    The `unzip` command in Linux is used to extract files from a compressed archive
+    in the ZIP format. It is a versatile utility that comes pre-installed on most
+    Linux distributions.
+
+
+    Examples:
+
+
+    +   1. Extract a ZIP file:
+
+
+    ```
+
+    unzip file.zip
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: 'This command will extract all files from `file.zip` in the current directory.
+
+
+    2. **Extract to a specific directory:**
+
+
+    ```
+
+    ```
+
+    unzip file.zip -d /path/to/destination
+
+    ```
+
+    ```
+
+
+    This will extract the contents of `file.zip` to the specified destination directory.
+
+
+    3. **List contents of a ZIP file:**
+
+
+    ```
+
+    ```
+
+    unzip -l file.zip
+
+    ```
+
+    ```
+
+
+    The `-1` option lists the contents of the ZIP file without extracting them.
+
+
+    4. **Extract specific files:**
+
+
+    ```
+
+    ```
+
+    unzip file.zip file1.txt file2.txt
+
+    ```
+
+    ```
+
+
+    You can specify specific files to extract from the ZIP archive.
+
+
+    5. **Overwrite existing files:**'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '```
+
+    unzip -o file.zip
+
+    ```
+
+
+    The `-o` option overwrites existing files without prompting.
+
+
+    # 6. Quiet mode (no output):
+
+
+    ```
+
+    unzip -q file.zip
+
+    ```
+
+
+    The `-q` option suppresses the printing of file and directory names as they are
+    extracted.
+
+
+    # 7. Extract with full path:
+
+
+    ```
+
+    unzip -j file.zip
+
+    ```
+
+
+    The `-j` option extracts files with their paths, discarding any directory structure.
+
+
+    # 8. Password-protected ZIP file:
+
+
+    ```
+
+    unzip -P your_password file.zip
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: 'Use the `-P` option followed by the password to extract files from a password-protected
+    ZIP archive.
+
+
+    # 9. Test integrity of a ZIP file:
+
+
+    ```
+
+    unzip -t file.zip
+
+    ```
+
+
+    The `-t` option tests the integrity of the ZIP file without extracting its contents.
+
+
+    # 10. Update existing files:
+
+
+    ```
+
+    unzip -u file.zip
+
+    ```
+
+
+    The `-u` option updates existing files and extracts new files from the ZIP archive.
+
+
+    # 76. lsblk: List information about block devices.
+
+
+    The `lsblk` command in Linux is used to list information about block devices,
+    such as hard drives and their partitions. It provides a detailed overview of the
+    block devices attached to the system, their mount points, sizes, and relationships.
+
+
+    # Examples:
+
+
+    # 1. Basic Usage:'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '```
+
+    lsblk
+
+    ```
+
+
+    This command without any options displays a hierarchical list of all block devices
+    on the system.
+
+
+    2. Display Filesystem Information:
+
+
+    ```
+
+    lsblk -f
+
+    ```
+
+
+    This option includes information about the filesystem type on each device.
+
+
+    3. Display Sizes in Bytes:
+
+
+    ```
+
+    lsblk -b
+
+    ```
+
+
+    Prints sizes in bytes instead of the default human-readable format.
+
+
+    4. Show All Devices, Including Empty Ones:
+
+
+    ```
+
+    lsblk -a
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: 'Includes empty devices in the output.
+
+
+    +   5. **Display Device Permissions:**
+
+
+    ```
+
+    lsblk -m
+
+    ```
+
+
+    Shows information about device permissions.
+
+
+    +   6. **Show Specific Device Information:**
+
+
+    ```
+
+    lsblk /dev/sda
+
+    ```
+
+
+    Displays information about a specific device ( `/dev/sda` in this case).
+
+
+    +   7. **Do Not Print Dependent Devices:**
+
+
+    ```
+
+    lsblk -d
+
+    ```
+
+
+    Suppresses the output of dependent devices. Only shows the top-level devices.
+
+
+    +   8. **Print Tree in ASCII Characters:**'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '```
+
+    ```markdown
+
+    lsblk -i
+
+    ```
+
+    ```
+
+
+    Uses ASCII characters to draw the tree structure, providing a visual representation.
+
+
+    # **77. findmnt: Display information about currently mounted filesystems.**
+
+
+    The `findmnt` command in Linux is used to display a list of currently mounted
+    file systems or search for a specific mount point. It provides information about
+    mounted file systems in a concise and easily readable format. The `findmnt` command
+    is part of the util-linux package and is available on most Linux distributions.
+
+
+    **Examples:**
+
+
+    +   1. **List all mounted file systems:**
+
+
+    ```
+
+    ```markdown
+
+    findmnt
+
+    ```
+
+    ```
+
+
+    This command will display a list of all mounted file systems along with their
+    mount points, source devices, file system types, and other relevant information.
+
+
+    +   2. **Filter by file system type:**
+
+
+    ```
+
+    ```markdown
+
+    findmnt -t ext4
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: 'This command will display only the mounted file systems with the ext4 file
+    system type.
+
+
+    # 3. Filter by source device:
+
+
+    ```
+
+    findmnt -S /dev/sda1
+
+    ```
+
+
+    This command will display information about the mounted file system associated
+    with the `/dev/sda1` device.
+
+
+    # 4. Display specific columns:
+
+
+    ```
+
+    findmnt -o SOURCE,TARGET,FSTYPE,OPTIONS
+
+    ```
+
+
+    This command will display only the specified columns: source device, target mount
+    point, file system type, and mount options.
+
+
+    # 5. List network file systems (NFS, SMB):
+
+
+    ```
+
+    findmnt -t nfs,smb
+
+    ```
+
+
+    This command will display information about mounted NFS and SMB file systems.
+
+
+    # 6. Search for a specific mount point:'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '```
+
+    findmnt /mnt/data
+
+    ```
+
+
+    This command will display information about the mount point `/mnt/data` if it
+    is currently mounted.
+
+
+    +   7. **Display information without headings:**
+
+
+    ```
+
+    findmnt -n
+
+    ```
+
+
+    This command will display information without column headings, making it suitable
+    for parsing in scripts.
+
+
+    +   **78. mount: Mount a filesystem.**
+
+
+    The `mount` command in Linux is used to attach a filesystem to the directory tree.
+    This operation makes the files and directories on the attached filesystem accessible
+    and usable by the system. The `mount` command is essential for working with external
+    storage devices, network shares, and other file systems.
+
+
+    **Examples:**
+
+
+    +   1. **Mount a USB Drive:**
+
+
+    ```
+
+    sudo mount /dev/sdb1 /mnt/usb
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: 'This command mounts the first partition (`/dev/sdb1`) of a USB drive to the
+    `/mnt/usb` directory. Make sure the mount point (`/mnt/usb` in this case) exists
+    before running the command.
+
+
+    # 2. Mount an ISO Image:
+
+
+    ```
+
+    sudo mount -o loop path/to/image.iso /mnt/iso
+
+    ```
+
+
+    Here, the `-o loop` option is used to mount an ISO image file (`path/to/image.iso`)
+    as if it were a device. The contents of the ISO file will be accessible in the
+    `/mnt/iso` directory.
+
+
+    # 3. Mount a Network Share (NFS):
+
+
+    ```
+
+    sudo mount -t nfs server:/shared_folder /mnt/network_share
+
+    ```
+
+
+    This example mounts a shared folder from an NFS server (`server:/shared_folder`)
+    to the local directory `/mnt/network_share`. The `-t nfs` option specifies the
+    filesystem type as NFS.
+
+
+    # 4. Mounting with Specific Filesystem Type:
+
+
+    ```
+
+    sudo mount -t ext4 /dev/sdc1 /mnt/data
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: 'In this case, the `-t ext4` option explicitly specifies the filesystem type
+    (ext4 in this example) for the device (`/dev/sdc1`). The device is then mounted
+    to the `/mnt/data` directory.
+
+
+    # 5. Mounting with Read-Only Option:
+
+
+    ```
+
+    sudo mount -o ro /dev/sdd1 /mnt/read_only
+
+    ```
+
+
+    The `-o ro` option mounts the device (`/dev/sdd1`) in read-only mode, ensuring
+    that no write operations can be performed on the filesystem. This can be useful
+    for preserving the integrity of the data on the device.
+
+
+    # 6. Unmounting a Device:
+
+
+    ```
+
+    sudo umount /mnt/usb
+
+    ```
+
+
+    To detach a mounted device, you use the `umount` command followed by the mount
+    point. In this example, the USB drive mounted at `/mnt/usb` is unmounted.
+
+
+    # 79. umount: Unmount a mounted filesystem.
+
+
+    The `umount` command in Linux is used to unmount (detach) a currently mounted
+    filesystem, allowing the underlying device or directory to be accessed or removed.
+    Properly unmounting filesystems is crucial to ensure data integrity and prevent
+    data corruption.'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: 'Examples:
+
+
+    # 1. Unmounting a Filesystem:
+
+
+    ```
+
+    ```bash
+
+    umount /mnt/data
+
+    ```
+
+    ```
+
+
+    This example unmounts the filesystem mounted at `/mnt/data`.
+
+
+    # 2. Unmounting a Device:
+
+
+    ```
+
+    ```bash
+
+    umount /dev/sdb1
+
+    ```
+
+    ```
+
+
+    Unmounts the filesystem associated with the specified device, in this case, `/dev/sdb1`.
+
+
+    # 3. Force Unmount:
+
+
+    ```
+
+    ```bash
+
+    umount -f /mnt/data
+
+    ```
+
+    ```
+
+
+    Forces an unmount, useful when the filesystem is busy. Use with caution, as it
+    may lead to data corruption if processes are actively using the filesystem.
+
+
+    # 4. Unmounting All Filesystems:'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '```
+
+    umount -a
+
+    ```
+
+
+    Unmounts all filesystems listed in `/etc/fstab`. Use with caution, especially
+    on a running system.
+
+
+    # 5. Unmounting by Device Name:
+
+
+    ```
+
+    umount /dev/sdb*
+
+    ```
+
+
+    Unmounts all filesystems associated with devices matching the pattern `/dev/sdb*`.
+
+
+    # 6. Unmounting by Mount Point:
+
+
+    ```
+
+    umount -R /mnt/data
+
+    ```
+
+
+    Recursively unmounts all filesystems mounted under the specified directory.
+
+
+    # 7. Verbose Output:
+
+
+    ```
+
+    umount -v /mnt/data
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: 'Displays detailed information about the unmount process.
+
+
+    # 8. Dry Run (Test):
+
+
+    ```
+
+    umount -n /mnt/data
+
+    ```
+
+
+    Simulates the unmount operation without actually detaching the filesystem. Useful
+    for testing.
+
+
+    # 9. Unmounting NFS Share:
+
+
+    ```
+
+    umount -t nfs server:/mnt/share
+
+    ```
+
+
+    Unmounts an NFS (Network File System) share.
+
+
+    # 10. Unmounting CIFS Share:
+
+
+    ```
+
+    umount -t cifs //server/share /mnt/cifs
+
+    ```
+
+
+    Unmounts a CIFS (Common Internet File System) share.
+
+
+    # 11. Unmounting with Lazy Detach:'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '```
+
+    umount --lazy /mnt/data
+
+    ```
+
+
+    Detaches the filesystem lazily, allowing processes to continue using the filesystem
+    until they finish.
+
+
+    # 12. Unmounting and Detaching Loop Device:
+
+
+    ```
+
+    losetup -d /dev/loop0 && umount /mnt/loop
+
+    ```
+
+
+    Detaches a loop device and then unmounts the associated filesystem.
+
+
+    # 80. sftp: Securely transfer files over the SSH protocol.
+
+
+    `SFTP` (Secure File Transfer Protocol) is a secure alternative to FTP (File Transfer
+    Protocol) for transferring files between computers on a network. It provides a
+    secure channel over an insecure network, typically the internet. SFTP encrypts
+    both the command and data connections, preventing unauthorized access to sensitive
+    information.
+
+
+    Examples:
+
+
+    +   1. **Connect to a remote server:**
+
+
+    ```
+
+    sftp username@remote_host
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: 'Replace `username` with your remote username and `remote_host` with the IP
+    address or domain of the server.
+
+
+    +   2. **Connect using a custom port:**
+
+
+    ```
+
+    sftp -oPort=2222 username@remote_host
+
+    ```
+
+
+    This example connects to the remote server using port 2222. Adjust the port number
+    as needed.
+
+
+    +   3. **Upload a file to the remote server:**
+
+
+    ```
+
+    put local_file.txt
+
+    ```
+
+
+    This command uploads `local_file.txt` to the current working directory on the
+    remote server.
+
+
+    +   4. **Download a file from the remote server:**
+
+
+    ```
+
+    get remote_file.txt
+
+    ```
+
+
+    Downloads `remote_file.txt` from the remote server to the local working directory.
+
+
+    +   5. **Navigate on the remote server:**'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '```
+
+    cd remote_directory
+
+    ```
+
+
+    Changes the current working directory on the remote server.
+
+
+    6. Navigate on the local machine:
+
+
+    ```
+
+    lcd local_directory
+
+    ```
+
+
+    Changes the current working directory on the local machine.
+
+
+    7. List files on the remote server:
+
+
+    ```
+
+    ls
+
+    ```
+
+
+    Lists files and directories in the current remote directory.
+
+
+    8. List files on the local machine:
+
+
+    ```
+
+    lls
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: 'Lists files and directories in the current local directory.
+
+
+    # 9. Delete a file on the remote server:
+
+
+    ```
+
+    rm remote_file.txt
+
+    ```
+
+
+    Removes `remote_file.txt` from the remote server.
+
+
+    # 10. Recursive upload or download:
+
+
+    ```
+
+    put -r local_directory
+
+    ```
+
+
+    Uploads the entire local directory and its contents recursively to the remote
+    server.
+
+
+    ```
+
+    get -r remote_directory
+
+    ```
+
+
+    Downloads the entire remote directory and its contents recursively to the local
+    machine.
+
+
+    # 11. Preserve file timestamps:
+
+
+    ```
+
+    put -P local_file.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: 'Preserves the timestamps of the uploaded file on the remote server.
+
+
+    +   12. **Exit SFTP session:**
+
+
+    ```
+
+    exit
+
+    ```
+
+
+    Closes the SFTP session and returns to the local shell.
+
+
+    # 81. locate: Find the location of files and directories on the system.
+
+
+    `locate` is a command-line utility in Linux used for finding the location of files
+    and directories on the system. It relies on a pre-built index of files and their
+    locations, making it a faster alternative to searching the file system directly.
+
+
+    # Examples:
+
+
+    +   1. **Search for a File:**
+
+
+    ```
+
+    locate myfile.txt
+
+    ```
+
+
+    This command will search for and display the paths of all files named `myfile.txt`
+    on the system.
+
+
+    +   2. **Case-Insensitive Search:**'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '```
+
+    ```
+
+    locate -i MyFile.txt
+
+    ```
+
+    ```
+
+
+    The `-i` option makes the search case-insensitive, so it will match files like
+    `myfile.txt`, `MyFile.txt`, and so on.
+
+
+    # 3. **Limit Search to Specific Directories:**
+
+
+    ```
+
+    ```
+
+    locate -r ''/home/user/*.txt''
+
+    ```
+
+    ```
+
+
+    The `-r` option allows you to use regular expressions. This example searches for
+    all files with a `.txt` extension in the `/home/user/` directory.
+
+
+    # 4. **Update the Locate Database:**
+
+
+    ```
+
+    ```
+
+    sudo updatedb
+
+    ```
+
+    ```
+
+
+    `locate` relies on a database that needs to be periodically updated. The `updatedb`
+    command is used to refresh this database. It''s typically run with `sudo` because
+    it may need access to system files.
+
+
+    # 5. **Display Number of Matches:**
+
+
+    ```
+
+    ```
+
+    locate -c myfile.txt
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: 'The `-c` option counts the number of matches without displaying the actual
+    paths.
+
+
+    +   6. **Display Paths Relative to Root:**
+
+
+    ```
+
+    ```
+
+    locate -r ''^/etc\.\*\.conf$''
+
+    ```
+
+    ```
+
+
+    This example uses a regular expression to find all files in the `/etc` directory
+    with a `.conf` extension. The `^` signifies the start of the path.
+
+
+    +   7. **Suppress Warnings:**
+
+
+    ```
+
+    ```
+
+    locate -q myfile.txt
+
+    ```
+
+    ```
+
+
+    The `-q` option suppresses warnings about unreadable directories and permissions.
+
+
+    +   8. **Display Version Information:**
+
+
+    ```
+
+    ```
+
+    locate --version
+
+    ```
+
+    ```
+
+
+    Shows the version information of the `locate` command.
+
+
+    +   9. **Help:**'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '```
+
+    man locate
+
+    ```
+
+
+    Displays the manual page for the `locate` command, providing detailed information
+    on its usage and options.
+
+
+    # 82. last: Show a listing of last logged in users.
+
+
+    The `last` command in Linux is used to display information about the last logged-in
+    users on the system. It extracts data from the `/var/log/wtmp` file, which keeps
+    track of login and logout activity.
+
+
+    Examples:
+
+
+    +   1. **Display the last logged-in users:**
+
+
+    ```
+
+    last
+
+    ```
+
+
+    This will display a list of users who have logged in, along with their login and
+    logout times, as well as the duration of their sessions.
+
+
+    +   2. **Display the last 5 logins:**
+
+
+    ```
+
+    last -n 5
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: 'This command shows the last 5 logins, providing a more concise output.
+
+
+    +   3. **Display the last login for a specific user:**
+
+
+    ```
+
+    ```
+
+    last username
+
+    ```
+
+    ```
+
+
+    Replace `username` with the actual username you want to check. This will show
+    the login/logout history for that specific user.
+
+
+    +   4. **Display only the reboot entries:**
+
+
+    ```
+
+    ```
+
+    last reboot
+
+    ```
+
+    ```
+
+
+    This command shows a list of system reboots along with the corresponding times.
+
+
+    +   5. **Display the logins on a specific date:**
+
+
+    ```
+
+    ```
+
+    last -F YYYYMMDD
+
+    ```
+
+    ```
+
+
+    Replace `YYYYMMDD` with the desired date in the format Year-Month-Day (e.g., 20231110
+    for November 10, 2023). This will display logins only on that specific date.'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '+   6. **Display the logins for a specific period:**
+
+
+    ```
+
+    last -s YYYY-MM-DD -t YYYY-MM-DD
+
+    ```
+
+
+    Replace the start date ( `-s` ) and end date ( `-t` ) with the desired date range.
+    This command will show logins within the specified period.
+
+
+    +   7. **Display IP addresses along with user logins:**
+
+
+    ```
+
+    last -i
+
+    ```
+
+
+    This option includes IP addresses along with user logins, providing additional
+    information about the origin of the logins.
+
+
+    +   8. **Display hostname in the output:**
+
+
+    ```
+
+    last -a
+
+    ```
+
+
+    The `-a` option shows the hostname in the output, providing information about
+    which host the user logged in from.
+
+
+    83. stty: Change and print terminal line settings.'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: 'The `stty` command in Linux is used to change and print terminal line settings.
+    It allows users to configure various aspects of the terminal interface, such as
+    input and output settings, control characters, and more.
+
+
+    # Examples:
+
+
+    +   1. **Display Current Terminal Settings:**
+
+
+    ```
+
+    stty -a
+
+    ```
+
+
+    This command displays all the current settings of the terminal.
+
+
+    +   2. **Change Erase Character:**
+
+
+    ```
+
+    stty erase ^H
+
+    ```
+
+
+    This changes the erase character to `Ctrl + H` (backspace). You can replace `^H`
+    with the appropriate control character.
+
+
+    +   3. **Disable Echoing (Password Entry):**
+
+
+    ```
+
+    stty -echo
+
+    ```
+
+
+    This command turns off the echoing of characters as you type. Useful for password
+    entry.'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '+   4. **Enable Echoing:**
+
+
+    ```
+
+    stty echo
+
+    ```
+
+
+    This command turns on the echoing of characters.
+
+
+    +   5. **Change Terminal Size:**
+
+
+    ```
+
+    stty rows 40 cols 80
+
+    ```
+
+
+    This sets the terminal size to 40 rows and 80 columns. Adjust the values according
+    to your needs.
+
+
+    +   6. **Ignore Interrupt Signal (Ctrl + C):**
+
+
+    ```
+
+    stty intr ""
+
+    ```
+
+
+    This command ignores the interrupt signal (`Ctrl + C`). The double quotes indicate
+    an empty string.
+
+
+    +   7. **Restore Default Terminal Settings:**
+
+
+    ```
+
+    stty sane
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: 'This command restores the terminal to a sane state, reverting any changes made
+    with `stty`.
+
+
+    # 8. Disable Flow Control (Ctrl + S and Ctrl + Q):
+
+
+    ```
+
+    stty -ixon
+
+    ```
+
+
+    This disables software flow control, allowing you to use `Ctrl + S` and `Ctrl
+    + Q` for other purposes.
+
+
+    # 9. Set Input and Output Speed:
+
+
+    ```
+
+    stty speed 9600
+
+    ```
+
+
+    This sets the input and output speed to 9600 baud. Adjust the value based on your
+    requirements.
+
+
+    # 10. Set Terminal to Raw Mode:
+
+
+    ```
+
+    stty raw
+
+    ```
+
+
+    This puts the terminal into raw mode, where input is passed through without any
+    processing (useful for some interactive applications).'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# 84. tail: Display the last part of a file.
+
+
+    The `tail` command in Linux is a powerful utility that allows you to display the
+    last few lines of a text file or a stream of data. It is particularly useful for
+    monitoring log files in real-time or quickly checking the end of a large file.
+
+
+    # Examples:
+
+
+    +   1. **Display the last 10 lines of a file:**
+
+
+    ```
+
+    tail filename
+
+    ```
+
+
+    +   2. **Display a specific number of lines from the end of a file:**
+
+
+    ```
+
+    tail -n 20 filename
+
+    ```
+
+
+    This will display the last 20 lines of the file.
+
+
+    +   3. **Follow a file in real-time (similar to `tail -f`):**
+
+
+    ```
+
+    tail -f filename
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: 'This is commonly used to monitor log files as new lines are added.
+
+
+    4. **Display and continuously update the last 10 lines of a file:**
+
+
+    ```
+
+    tail -n 10 -f filename
+
+    ```
+
+
+    5. **Display the last part of a file, and update it as new data is added:**
+
+
+    ```
+
+    tail -c 500 filename
+
+    ```
+
+
+    This will display the last 500 bytes of the file.
+
+
+    6. **Display lines that are added to a file after a certain point in time:**
+
+
+    ```
+
+    tail -n +5 filename
+
+    ```
+
+
+    This will display all lines starting from the 5th line to the end of the file.
+
+
+    7. **Display lines added to a file, but only show the changes:**
+
+
+    ```
+
+    tail -n 10 -f filename | grep "pattern"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: 'This will show only the lines that contain the specified pattern as new lines
+    are added.
+
+
+    # 8. **Display lines in reverse order (from the end to the beginning):**
+
+
+    ```
+
+    ```
+
+    tac filename | tail -n 10
+
+    ```
+
+    ```
+
+
+    Note: `tac` is the reverse of `cat`, and it''s not available on all systems.
+
+
+    # 9. **Display multiple files simultaneously:**
+
+
+    ```
+
+    ```
+
+    tail -n 5 file1 file2
+
+    ```
+
+    ```
+
+
+    This will display the last 5 lines of both files.
+
+
+    # **85. head: Display the first part of a file.**
+
+
+    The `head` command in Linux is used to display the beginning (head) of a text
+    file or a stream of data. By default, it shows the first 10 lines of a file, but
+    you can specify a different number of lines using the `-n` option.
+
+
+    # **Examples:**
+
+
+    1. **Display the first 10 lines of a file:**'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '```
+
+    head filename.txt
+
+    ```
+
+
+    2. **Display a specific number of lines (e.g., 5) from a file:**
+
+
+    ```
+
+    head -n 5 filename.txt
+
+    ```
+
+
+    3. **Display the first 20 bytes of a file:**
+
+
+    ```
+
+    head -c 20 filename.txt
+
+    ```
+
+
+    4. **Display headers only when multiple files are specified:**
+
+
+    ```
+
+    head -q file1.txt file2.txt
+
+    ```
+
+
+    5. **Display headers always, even for a single file:**
+
+
+    ```
+
+    head -v filename.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '+   6. Combine `head` with other commands using pipes (|):
+
+
+    ```
+
+    cat filename.txt | head -n 8
+
+    ```
+
+
+    This example shows the first 8 lines of a file using `head` after displaying the
+    entire file content with `cat` .
+
+
+    +   7. Display the first few lines of a command output:
+
+
+    ```
+
+    ls -l | head
+
+    ```
+
+
+    This displays the first 10 lines of the output from the `ls -l` command.
+
+
+    +   8. Display the first 3 lines of multiple files:
+
+
+    ```
+
+    head -n 3 file1.txt file2.txt
+
+    ```
+
+
+    This command displays the first 3 lines of both `file1.txt` and `file2.txt` .
+
+
+    +   9. Display the first N lines of all text files in a directory:
+
+
+    ```
+
+    head -n N *.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: 'Replace N with the desired number of lines. This command shows the first N
+    lines of every text file in the current directory with a ".txt" extension.
+
+
+    # **86. chsh: Change login shell.**
+
+
+    The `chsh` command in Linux is used to change the default login shell for a user.
+    The term "shell" refers to the command interpreter that allows users to interact
+    with the operating system. Each user on a Linux system is assigned a default shell,
+    and `chsh` provides a way to modify that setting.
+
+
+    **Examples:**
+
+
+    +   1. **Change the default shell for the current user:**
+
+
+    ```
+
+    ```
+
+    chsh -s /bin/zsh
+
+    ```
+
+    ```
+
+
+    This command changes the default shell for the currently logged-in user to Zsh.
+    You need to provide the full path to the desired shell (in this case, `/bin/zsh`).
+
+
+    +   2. **Change the default shell for a specific user:**
+
+
+    ```
+
+    ```
+
+    chsh -s /bin/bash username
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: 'Replace "username" with the actual username of the user for whom you want to
+    change the default shell. This example changes the default shell to Bash.
+
+
+    +   3. **List available shells:**
+
+
+    ```
+
+    chsh -l
+
+    ```
+
+
+    This command lists all the available shells on the system. The output will display
+    the paths to the available shells.
+
+
+    +   4. **Interactive mode:**
+
+
+    ```
+
+    chsh
+
+    ```
+
+
+    Running `chsh` without any options will prompt you to enter the desired shell.
+    It will interactively ask for the new shell''s path. Simply enter the path and
+    press Enter.
+
+
+    +   5. **Change the default shell to the user''s current shell:**
+
+
+    ```
+
+    chsh -s "$(which zsh)"
+
+    ```
+
+
+    This example uses the `which` command to get the path of the current user''s shell
+    (Zsh in this case) and sets it as the default shell.'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '+   6. **Change the default shell for another user as root:**
+
+
+    ```
+
+    sudu chsh -s /bin/fish username
+
+    ```
+
+
+    This command allows the system administrator (root) to change the default shell
+    for another user. Replace "username" with the actual username, and `/bin/fish`
+    with the desired shell.
+
+
+    # 87. stat: Display file or file system status.
+
+
+    The `stat` command in Linux is used to display detailed information about a file
+    or file system. It provides a comprehensive set of details, including file type,
+    access permissions, inode number, UID (user ID), GID (group ID), size, and timestamps
+    for the last access, modification, and status change.
+
+
+    Examples:
+
+
+    +   1. **Display Basic Information:**
+
+
+    ```
+
+    stat filename
+
+    ```
+
+
+    This provides basic information about the file, including size, permissions, and
+    timestamps.
+
+
+    +   2. **Display Information in Terse Format:**'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '```
+
+    stat -t filename
+
+    ```
+
+
+    This displays information in a terse form, which is useful for scripting or extracting
+    specific details.
+
+
+    3. **Display File System Information:**
+
+
+    ```
+
+    stat -f filename
+
+    ```
+
+
+    This shows information about the file system on which the file resides, including
+    the total and free space.
+
+
+    4. **Display Information for Multiple Files:**
+
+
+    ```
+
+    stat file1 file2
+
+    ```
+
+
+    You can provide multiple files as arguments to get information about each of them.
+
+
+    5. **Custom Output Format:**
+
+
+    ```
+
+    stat --format="File: %n Size: %s bytes" filename
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: 'Customize the output format using control characters. `%n` represents the file
+    name, and `%s` represents the file size.
+
+
+    # 6. Follow Symbolic Links:
+
+
+    ```
+
+    stat -L symlink
+
+    ```
+
+
+    If the file is a symbolic link, this command displays information about the linked
+    file rather than the link itself.
+
+
+    # 7. Display Information Recursively:
+
+
+    ```
+
+    find /path/to/directory -type f -exec stat {} \;
+
+    ```
+
+
+    Use `find` with `exec` to apply `stat` recursively to all files in a directory.
+
+
+    # 8. Display Inode Number:
+
+
+    ```
+
+    stat --format="Inode: %i" filename
+
+    ```
+
+
+    `%i` represents the inode number of the file.
+
+
+    # 9. Human-Readable Output:'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '```
+
+    stat --format="Size: %s bytes" --printf="%h\n" filename
+
+    ```
+
+
+    `%h` in `--printf` provides human-readable file size.
+
+
+    # 88. watch: Execute a command repeatedly and display the results.
+
+
+    The `watch` command in Linux is a handy utility that allows you to execute a given
+    command periodically and display the results in real-time. This can be particularly
+    useful for monitoring changes or updates in the output of a command without having
+    to rerun it manually each time.
+
+
+    Examples:
+
+
+    1. Simple Usage:
+
+
+    ```
+
+    watch date
+
+    ```
+
+
+    This will continuously update and display the current date and time every 2 seconds
+    (by default).
+
+
+    2. Monitor Disk Space:
+
+
+    ```
+
+    watch df -h
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: 'This command will periodically display the disk space usage, updating every
+    2 seconds by default.
+
+
+    # 3. **Check System Resource Usage:**
+
+
+    ```
+
+    watch -n 1 top
+
+    ```
+
+
+    The `-n` option allows you to specify the update interval in seconds. In this
+    example, `top` will be refreshed every 1 second, providing real-time information
+    about system resource usage.
+
+
+    # 4. **Monitor Log Files:**
+
+
+    ```
+
+    watch -n 5 tail /var/log/syslog
+
+    ```
+
+
+    This example watches the system log file, updating every 5 seconds. It can be
+    useful for keeping an eye on log entries as they occur.
+
+
+    # 5. **Track File Changes:**
+
+
+    ```
+
+    watch -d ls -l
+
+    ```
+
+
+    The `-d` option highlights the differences between successive updates. In this
+    case, it shows changes in the file listing with each refresh.'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# **6. Monitor Network Connections:**
+
+
+    ```
+
+    watch -n 2 ss -t -a
+
+    ```
+
+
+    This example uses the `ss` command to display information about TCP socket connections.
+    It refreshes every 2 seconds.
+
+
+    # **7. Customize Update Interval:**
+
+
+    ```
+
+    watch -n 10 free -m
+
+    ```
+
+
+    Here, the update interval is set to 10 seconds, and the command `free -m` is used
+    to display memory usage in megabytes.
+
+
+    # **8. Highlight Command Output Changes:**
+
+
+    ```
+
+    watch -d ''ps aux | grep ssh''
+
+    ```
+
+
+    The `-d` option highlights the differences in the output of the command `ps aux
+    | grep ssh` with each update, making it easy to spot changes.
+
+
+    # **9. Watch a Script:**'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '```
+
+    watch ./myscript.sh
+
+    ```
+
+
+    You can use `watch` to continuously monitor the output of a script. Replace `./myscript.sh`
+    with the path to your script.
+
+
+    +   10. **Combine Multiple Commands:**
+
+
+    ```
+
+    watch ''echo "Hello" && date && df -h''
+
+    ```
+
+
+    You can use a compound command within single quotes after `watch` to execute multiple
+    commands sequentially and see their output.
+
+
+    # 89. **shutdown: Shut down or restart the system.**
+
+
+    The `shutdown` command in Linux is used to bring the system down in a secure and
+    organized manner. It allows you to schedule a system shutdown or reboot, giving
+    users a warning and preventing new logins.
+
+
+    **Examples:**
+
+
+    +   1. **Shutdown immediately:**
+
+
+    ```
+
+    sudo shutdown now
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '+   2. **Schedule a shutdown in 10 minutes:**
+
+
+    ```
+
+    sudo shutdown +10
+
+    ```
+
+
+    The system will be shut down in 10 minutes.
+
+
+    +   3. **Schedule a shutdown at a specific time:**
+
+
+    ```
+
+    sudo shutdown 22:00
+
+    ```
+
+
+    This command schedules a shutdown at 10:00 PM.
+
+
+    +   4. **Display a custom message before shutdown:**
+
+
+    ```
+
+    sudo shutdown +5 "System maintenance in 5 minutes. Save your work!"
+
+    ```
+
+
+    Users will see the specified message five minutes before the shutdown.
+
+
+    +   5. **Cancel a scheduled shutdown:**'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '```
+
+    sudo shutdown -c
+
+    ```
+
+
+    This command cancels any scheduled shutdown.
+
+
+    # 6. Reboot the system immediately:
+
+
+    ```
+
+    sudo shutdown -r now
+
+    ```
+
+
+    This command reboots the system immediately.
+
+
+    # 7. Schedule a reboot in 15 minutes:
+
+
+    ```
+
+    sudo shutdown -r +15
+
+    ```
+
+
+    The system will be rebooted in 15 minutes.
+
+
+    # 8. Schedule a reboot at a specific time:
+
+
+    ```
+
+    sudo shutdown -r 08:30
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: 'This schedules a system reboot at 8:30 AM.
+
+
+    +   9.  **Display a message before reboot:**
+
+
+    ```
+
+    sudo shutdown -r +5 "System will reboot in 5 minutes for updates."
+
+    ```
+
+
+    Users will see the specified message five minutes before the reboot.
+
+
+    # **90. reboot: Restart the system.**
+
+
+    The `reboot` command in Linux is used to restart the system. It is a straightforward
+    command that allows you to initiate a system reboot gracefully.
+
+
+    **Examples:**
+
+
+    +   1.  **Simple Reboot:**
+
+
+    ```
+
+    reboot
+
+    ```
+
+
+    This command will immediately initiate a system reboot.
+
+
+    +   2.  **Delayed Reboot:**'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '```
+
+    ```
+
+    reboot -d 60
+
+    ```
+
+    ```
+
+
+    The `-d` option specifies a delay in seconds before initiating the reboot. In
+    this example, the system will reboot after a 60-second delay.
+
+
+    # 3. Forceful Reboot:
+
+
+    ```
+
+    ```
+
+    reboot -f
+
+    ```
+
+    ```
+
+
+    The `-f` option forces an immediate reboot without gracefully terminating processes.
+    Use this with caution, as it may lead to data loss if there are unsaved changes.
+
+
+    # 4. Reboot with a Message:
+
+
+    ```
+
+    ```
+
+    reboot -n "System will restart for updates at 3:00 PM"
+
+    ```
+
+    ```
+
+
+    The `-n` option allows you to add a message that will be sent to all logged-in
+    users before the reboot.
+
+
+    # 5. Reboot to a Specific Kernel:
+
+
+    ```
+
+    ```
+
+    reboot -k 5.4.0-81-generic
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: 'The `-k` option lets you specify a particular kernel version to boot into after
+    the system restarts.
+
+
+    # 6. Power Off After Reboot:
+
+
+    ```
+
+    reboot -p
+
+    ```
+
+
+    The `-p` option shuts down the system after rebooting. This is useful when you
+    want to turn off the machine completely.
+
+
+    # 7. Reboot with a Time Schedule:
+
+
+    ```
+
+    shutdown -r 22:30
+
+    ```
+
+
+    Alternatively, you can use the `shutdown` command to schedule a reboot at a specific
+    time. In this example, the system will reboot at 10:30 PM.
+
+
+    # 91. lsusb: Display information about USB buses and devices.
+
+
+    The `lsusb` command in Linux is used to list information about USB (Universal
+    Serial Bus) devices connected to the system. It provides details such as the vendor
+    and product IDs, device class, and other information related to USB devices.
+
+
+    **Examples:**'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '+   1. **Basic Usage:**
+
+
+    ```
+
+    lsusb
+
+    ```
+
+
+    This command will list all the USB devices connected to your system.
+
+
+    +   2. **Verbose Output:**
+
+
+    ```
+
+    lsusb -v
+
+    ```
+
+
+    This will provide detailed information about each USB device, including configuration,
+    interfaces, and more.
+
+
+    +   3. **Tree View:**
+
+
+    ```
+
+    lsusb -t
+
+    ```
+
+
+    Displays a tree-like structure of the USB devices, showing the hierarchy and relationship
+    between them.
+
+
+    +   4. **Specific Device:**
+
+
+    ```
+
+    lsusb -d 045e:00cb
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: 'Replace `045e:00cb` with the vendor and product IDs of the specific USB device
+    you want information about. This command will display detailed information about
+    that particular device.
+
+
+    # 5. List Bus and Device Numbers:
+
+
+    ```
+
+    lsusb -t | grep -i ''bus\\device''
+
+    ```
+
+
+    This command shows a concise list of bus and device numbers, making it easier
+    to identify the USB devices.
+
+
+    # 6. Display Only Device Description:
+
+
+    ```
+
+    lsusb | awk ''{print $6, $7, $8, $9, $10, $11, $12, $13}''
+
+    ```
+
+
+    This command uses `awk` to display only the device description.
+
+
+    # 7. Show USB 3.0 Devices:
+
+
+    ```
+
+    lsusb | grep ''3.0''
+
+    ```
+
+
+    This command filters the output to display only USB 3.0 devices, helping you identify
+    the high-speed USB connections.
+
+
+    # 8. Show Bus and Device Numbers:'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '```
+
+    lsusb | cut -d'' '' -f2,4
+
+    ```
+
+
+    This command extracts and displays the bus and device numbers of the USB devices.
+
+
+    # 92. lspci: Display information about PCI buses and connected devices.
+
+
+    The `lspci` command in Linux is a powerful tool that provides detailed information
+    about the PCI buses and the devices connected to them on your system. PCI (Peripheral
+    Component Interconnect) is a standard interface for connecting various hardware
+    devices like network cards, graphics cards, and storage controllers to the motherboard
+    of a computer.
+
+
+    Examples:
+
+
+    +   1. List all PCI devices:
+
+
+    ```
+
+    lspci
+
+    ```
+
+
+    This command displays a list of all PCI devices in a compact format.
+
+
+    +   2. Display detailed information for a specific device:
+
+
+    ```
+
+    lspci -v -s <bus>;<device>.<function>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: 'Replace `<bus>`, `<device>`, and `<function>` with the appropriate values from
+    the output of the `lspci` command. This provides verbose information about a specific
+    PCI device.
+
+
+    3. **Show information in a human-readable format:**
+
+
+    ```
+
+    lspci -nn
+
+    ```
+
+
+    This command displays vendor and device codes in a more human-readable format.
+
+
+    4. **Display information about a specific vendor:**
+
+
+    ```
+
+    lspci -d <vendor_id>
+
+    ```
+
+
+    Replace `<vendor_id>` with the hexadecimal code for the vendor. This command shows
+    a list of devices from a specific vendor.
+
+
+    5. **Show kernel driver and module in use:**
+
+
+    ```
+
+    lspci -k
+
+    ```
+
+
+    This command displays information about the kernel driver and module currently
+    in use by each PCI device.
+
+
+    6. **List all devices and their IRQ assignments:**'
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '```
+
+    lspci -v -vv
+
+    ```
+
+
+    This command provides very verbose output, including IRQ assignments for each
+    PCI device.
+
+
+    7. **Display PCI devices in a tree-like format:**
+
+
+    ```
+
+    lspci -t
+
+    ```
+
+
+    This command organizes the PCI devices in a tree-like structure, showing the hierarchy
+    of buses and devices.
+
+
+    8. **Show only Ethernet devices:**
+
+
+    ```
+
+    lspci | grep Ethernet
+
+    ```
+
+
+    This command uses `grep` to filter the output and display only the lines containing
+    "Ethernet," helping you quickly identify network-related devices.
+
+
+    **93. strace: Trace system calls and signals.**'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '`strace` is a powerful command-line tool used in Linux and other Unix-like
+    operating systems to trace and debug system calls and signals made by a process.
+    It allows you to inspect the interactions between a process and the Linux kernel,
+    providing valuable insights into the system-level behavior of programs.
+
+
+    **Examples:**
+
+
+    1. **Trace a Command:**
+
+
+    ```
+
+    strace ls -l
+
+    ```
+
+
+    This command traces the system calls made by the `ls` command when listing files
+    in the long format.
+
+
+    2. **Redirect Output to a File:**
+
+
+    ```
+
+    strace -o output.txt ls -l
+
+    ```
+
+
+    This example redirects the `strace` output to a file named `output.txt` for later
+    analysis.
+
+
+    3. **Trace Specific System Calls:**
+
+
+    ```
+
+    strace -e trace=open,read,write ls -l
+
+    ```
+
+
+    This command traces only the `open`, `read`, and `write` system calls made by
+    the `ls` command.'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: '# 4. Display Timestamps:
+
+
+    ```
+
+    ```
+
+    strace -t ls -l
+
+    ```
+
+    ```
+
+
+    It adds timestamps to each line of output, providing information on when each
+    system call occurred.
+
+
+    # 5. Display System Calls with Arguments:
+
+
+    ```
+
+    ```
+
+    strace -v ls -l
+
+    ```
+
+    ```
+
+
+    The `-v` option provides more detailed information, including the arguments for
+    each system call.
+
+
+    # 6. Trace a Running Process:
+
+
+    ```
+
+    ```
+
+    strace -p PID
+
+    ```
+
+    ```
+
+
+    Replace `PID` with the process ID of the running process you want to trace.
+
+
+    # 7. Filter Output for a Specific System Call:
+
+
+    ```
+
+    ```
+
+    strace -e trace=write -e write=1 ls -l
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: 'This example traces only the `write` system call, specifically for file descriptor
+    1 (stdout).
+
+
+    # 8. **Count System Calls:**
+
+
+    ```
+
+    ```
+
+    strace -c ls -l
+
+    ```
+
+    ```
+
+
+    It prints a summary of the counts and times of each system call, providing a quick
+    overview of the system call activity.
+
+
+    # **94. vmstat: Report virtual memory statistics.**
+
+
+    `vmstat` is a command-line utility in Linux that provides information about virtual
+    memory statistics, system resources, processes, and CPU utilization. The name
+    "vmstat" stands for "virtual memory statistics." It is a useful tool for system
+    administrators and users to monitor and analyze system performance.
+
+
+    # **Examples:**
+
+
+    # 1. **Basic Usage:**
+
+
+    ```
+
+    ```
+
+    vmstat
+
+    ```
+
+    ```
+
+
+    This command displays a summary of virtual memory statistics, including processes,
+    memory, swap, and CPU utilization. The values represent averages since the last
+    reboot.'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# 2. Display Memory Statistics:
+
+
+    ```
+
+    vmstat -s
+
+    ```
+
+
+    This command provides a summary of memory statistics, showing the total, used,
+    and free memory in kilobytes.
+
+
+    # 3. Display Process-related Information:
+
+
+    ```
+
+    vmstat -p [partition]
+
+    ```
+
+
+    This command displays process-related information, including process ID, priority,
+    virtual memory size, resident set size, and more. You can specify a particular
+    partition to filter the output.
+
+
+    # 4. Display Disk Statistics:
+
+
+    ```
+
+    vmstat -d
+
+    ```
+
+
+    This command provides disk statistics, including the number of reads/writes, blocks
+    read/written, and the number of I/O operations per second.
+
+
+    # 5. Display System Information at Regular Intervals:'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '```
+
+    vmstat 2 5
+
+    ```
+
+
+    This command displays system statistics every 2 seconds, a total of 5 times.
+
+
+    # 6. Display CPU Utilization:
+
+
+    ```
+
+    vmstat -n 2 5
+
+    ```
+
+
+    This command displays CPU utilization every 2 seconds, a total of 5 times. The
+    `-n` option prevents the display of the header, making it easier to parse the
+    output.
+
+
+    # 7. Display Process Queue Statistics:
+
+
+    ```
+
+    vmstat -q
+
+    ```
+
+
+    This command displays information about the process queues, including the number
+    of processes waiting for CPU time and the number of processes in uninterruptible
+    sleep.
+
+
+    # 8. Display Kernel Threads:
+
+
+    ```
+
+    vmstat -t
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: 'This command displays the timestamp along with various statistics, including
+    kernal threads.
+
+
+    # 95. ss: Display socket statistics.
+
+
+    The `ss` command in Linux is a powerful tool for displaying socket statistics.
+    It provides detailed information about network sockets on a system, including
+    their state, type, and other relevant details. The `ss` command is part of the
+    iproute2 package and is often used as a replacement for the older `netstat` command.
+
+
+    **Examples:**
+
+
+    +   1. **Display all Sockets:**
+
+
+    ```
+
+    ```
+
+    ss
+
+    ```
+
+    ```
+
+
+    This command displays a list of all sockets on the system.
+
+
+    +   2. **Display Listening Sockets:**
+
+
+    ```
+
+    ```
+
+    ss -l
+
+    ```
+
+    ```
+
+
+    This shows all listening sockets.
+
+
+    +   3. **Display Established Connections:**'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '```
+
+    ss -a -e
+
+    ```
+
+
+    This command displays all established connections, both incoming and outgoing.
+
+
+    # 4. Display TCP Sockets:
+
+
+    ```
+
+    ss -t
+
+    ```
+
+
+    Show only TCP sockets.
+
+
+    # 5. Display UDP Sockets:
+
+
+    ```
+
+    ss -u
+
+    ```
+
+
+    Show only UDP sockets.
+
+
+    # 6. Display Unix Domain Sockets:
+
+
+    ```
+
+    ss -X
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: 'Show only Unix domain sockets.
+
+
+    7. **Display Summary Statistics:**
+
+
+    ```
+
+    ss -s
+
+    ```
+
+
+    Display summary statistics for each protocol.
+
+
+    8. **Display Processes Associated with Sockets:**
+
+
+    ```
+
+    ss -p
+
+    ```
+
+
+    Show the process information for each socket.
+
+
+    9. **Filter by Port:**
+
+
+    ```
+
+    ss -t -a ''sport = :80''
+
+    ```
+
+
+    Display only TCP sockets with a source port of 80.
+
+
+    10. **Display Socket Details:**'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '```
+
+    ss -t -i
+
+    ```
+
+
+    Show extended socket information.
+
+
+    # 11. Display Timers:
+
+
+    ```
+
+    ss -o
+
+    ```
+
+
+    Display socket timers.
+
+
+    # 12. Display More Information:
+
+
+    ```
+
+    ss -t -i -o -e
+
+    ```
+
+
+    Display detailed information about TCP sockets.
+
+
+    # 96. renice: Alter priority of running processes.
+
+
+    The `renice` command in Linux is used to alter the scheduling priority of running
+    processes. This command allows you to change the nice value of a process, which
+    determines its priority in the system scheduler. The nice value ranges from -20
+    to 19, with lower values indicating higher priority.'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# **Examples:**
+
+
+    1. **Change the priority of a specific process by ID:**
+
+
+    ```
+
+    ```
+
+    renice 10 -p 1234
+
+    ```
+
+    ```
+
+
+    This command increases the priority of the process with ID 1234 to a nice value
+    of 10.
+
+
+    2. **Change the priority of a process group:**
+
+
+    ```
+
+    ```
+
+    renice -5 -g 5678
+
+    ```
+
+    ```
+
+
+    This command decreases the priority of all processes in the process group with
+    ID 5678 to a nice value of -5.
+
+
+    3. **Change the priority of all processes owned by a user:**
+
+
+    ```
+
+    ```
+
+    renice 3 -u username
+
+    ```
+
+    ```
+
+
+    This command raises the priority of all processes owned by the user "username"
+    to a nice value of 3.
+
+
+    4. **View the current priorities of processes:**'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '```
+
+    renice -p 5678
+
+    ```
+
+
+    This command shows the current priority of the process with ID 5678.
+
+
+    # 97. sync: Synchronize cached writes to persistent storage.
+
+
+    The `sync` command in Linux is used to ensure that all pending changes to the
+    file system are written to disk. It helps in synchronizing the system''s in-memory
+    data with the data on the disk, reducing the risk of data loss in case of unexpected
+    shutdowns or power failures. The `sync` command does not directly flush the file
+    system buffers but schedules them to be flushed at the earliest opportunity.
+
+
+    Examples:
+
+
+    +   1. **Basic Usage:**
+
+
+    ```
+
+    sync
+
+    ```
+
+
+    This command by itself synchronizes all file system buffers.
+
+
+    +   2. **Using with File Descriptors:**
+
+
+    ```
+
+    sync; echo 3 > /proc/sys/vm/drop_caches
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: 'This sequence first synchronizes the file system buffers and then clears the
+    page cache, dentries, and inodes.
+
+
+    # 3. **With Options**:
+
+
+    ```
+
+    sync -f -d -v
+
+    ```
+
+
+    +   - `-f` : Force the sync operation even if file systems are clean.
+
+    +   - `-d` : Enable disk write caching.
+
+    +   - `-v` : Verbose mode.
+
+
+    # 4. **Sync before Shutdown**:
+
+
+    ```
+
+    sync && shutdown -h now
+
+    ```
+
+
+    This command syncs the file system and then initiates a system shutdown.
+
+
+    # 5. **Viewing Sync Progress**:
+
+
+    ```
+
+    watch -n 1 sync
+
+    ```
+
+
+    This updates the sync status every second.'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: '# **98. tcpdump: Capture and display network traffic.**
+
+
+    `tcpdump` is a powerful command-line packet analyzer tool that allows you to capture
+    and display network traffic on a Linux system. It is widely used for network troubleshooting,
+    analysis, and security auditing.
+
+
+    **Examples:**
+
+
+    +   1. **Capture all packets on a specific interface:**
+
+
+    ```
+
+    ```
+
+    tcpdump -i eth0
+
+    ```
+
+    ```
+
+
+    This command captures all packets on the `eth0` interface.
+
+
+    +   2. **Capture packets with a specific source or destination IP address:**
+
+
+    ```
+
+    ```
+
+    tcpdump host 192.168.1.2
+
+    ```
+
+    ```
+
+
+    This captures packets where the IP address 192.168.1.2 is either the source or
+    destination.
+
+
+    +   3. **Capture packets on a specific port:**
+
+
+    ```
+
+    ```
+
+    tcpdump port 80
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: 'This captures packets on port 80.
+
+
+    4. **Capture packets from a specific IP and port:**
+
+
+    ```
+
+    tcpdump src 192.168.1.2 and port 22
+
+    ```
+
+
+    This captures packets where the source IP is 192.168.1.2 and the port is 22.
+
+
+    5. **Capture and display packet details in verbose mode:**
+
+
+    ```
+
+    tcpdump -v
+
+    ```
+
+
+    This command provides more detailed information about each captured packet.
+
+
+    6. **Capture a specific number of packets:**
+
+
+    ```
+
+    tcpdump -c 10
+
+    ```
+
+
+    This captures and displays the first 10 packets, then exits.
+
+
+    7. **Write captured packets to a file:**
+
+
+    ```
+
+    tcpdump -w capture.pcap
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: 'This writes the captured packets to a file named `capture.pcap`, which can
+    be later analyzed using tools like Wireshark.
+
+
+    8. **Read packets from a file:**
+
+
+    ```
+
+    ```
+
+    tcpdump -r capture.pcap
+
+    ```
+
+    ```
+
+
+    This reads and displays packets from the specified `capture.pcap` file.
+
+
+    9. **Capture only TCP or UDP packets:**
+
+
+    ```
+
+    ```
+
+    tcpdump tcp
+
+    ```
+
+    ```
+
+
+    or
+
+
+    ```
+
+    ```
+
+    tcpdump udp
+
+    ```
+
+    ```
+
+
+    This captures only TCP or UDP packets, respectively.
+
+
+    10. **Capture packets with specific protocol:**'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '```
+
+    tcpdump icmp
+
+    ```
+
+
+    This captures only ICMP (ping) packets.
+
+
+    11. **Capture non-verbose output:**
+
+
+    ```
+
+    tcpdump -q
+
+    ```
+
+
+    This provides less detailed, quiet output.
+
+
+    # 99. **time: Measure program execution time.**
+
+
+    The `time` command in Linux is a utility that provides information about the resources
+    used by a command or a script. It is often used to measure the execution time
+    of a process and analyze its performance. The `time` command can track the total
+    elapsed time, user CPU time, and system CPU time.
+
+
+    **Examples:**
+
+
+    **1. Basic Usage:**
+
+
+    ```
+
+    time ls
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: 'This example will measure the time it takes to execute the `ls` command.
+
+
+    # 2. **Display More Detailed Information:**
+
+
+    ```
+
+    time -v ls
+
+    ```
+
+
+    The `-v` option provides more detailed information, including the CPU usage, system
+    and user time.
+
+
+    # 3. **Redirect Output:**
+
+
+    ```
+
+    time -o output.txt ls
+
+    ```
+
+
+    You can redirect the output to a file using the `-o` option.
+
+
+    # 4. **Time a Pipeline:**
+
+
+    ```
+
+    time (command1 | command2)
+
+    ```
+
+
+    You can also time a pipeline of commands by enclosing them in parentheses.
+
+
+    # 5. **Time a Script:**'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '```
+
+    time ./myscript.sh
+
+    ```
+
+
+    You can use the `time` command to measure the execution time of a shell script.
+
+
+    # ### 100. sort: Sort lines of text files.
+
+
+    The `sort` command in Linux is a powerful utility that is used to sort lines of
+    text files or input streams. It is a versatile tool that allows you to arrange
+    data in ascending or descending order based on various criteria.
+
+
+    # **Examples:**
+
+
+    **1. Sorting a Text File in Ascending Order:**
+
+
+    ```
+
+    sort filename.txt
+
+    ```
+
+
+    This command sorts the contents of `filename.txt` in ascending order and displays
+    the result on the terminal.
+
+
+    **2. Sorting a Text File in Descending Order:**
+
+
+    ```
+
+    sort -r filename.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: 'The `-r` option is used to sort the data in descending order.
+
+
+    # ### 3. **Sorting and Redirecting Output to a New File:**
+
+
+    ```
+
+    sort input.txt > output.txt
+
+    ```
+
+
+    This command reads the content of `**input.txt**`, sorts it, and then saves the
+    result in `**output.txt**`.
+
+
+    # ### 4. **Sorting Numerical Data:**
+
+
+    ```
+
+    sort -n numbers.txt
+
+    ```
+
+
+    If you have a file containing numerical values, the `-n` option can be used to
+    sort them numerically.
+
+
+    # ### 5. **Specifying a Custom Delimiter:**
+
+
+    ```
+
+    sort -t''!''-k2,2 file.csv
+
+    ```
+
+
+    If you''re working with a file where fields are separated by a specific delimiter
+    (e.g., a CSV file with ";" as a delimiter), you can use the `-t` option to specify
+    the delimiter and the `-k` option to indicate the key field for sorting.
+
+
+    # ### 6. **Ignoring Leading Whitespace:**'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '```
+
+    sort -b data.txt
+
+    ```
+
+
+    The `-b` option is used to ignore leading blanks (whitespaces) when sorting.
+
+
+    # 7. Unique Sorting:
+
+
+    ```
+
+    sort -u names.txt
+
+    ```
+
+
+    The `-u` option ensures that only unique lines are displayed after sorting. It
+    is useful when you want to eliminate duplicate entries.
+
+
+    # 8. Merging Already Sorted Files:
+
+
+    ```
+
+    sort -m sorted1.txt sorted2.txt
+
+    ```
+
+
+    The `-m` option is used to merge two or more pre-sorted files.
+
+
+    # 9. Sorting by Month Names:
+
+
+    ```
+
+    sort -M months.txt
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: 'If you have a file containing month names, the `-M` option can be used to sort
+    them in calendar order.
+
+
+    # **10. Human-Readable Sorting:**
+
+
+    ```
+
+    ls -lh | sort -k5,5
+
+    ```
+
+
+    In this example, the `ls -lh` command lists files with human-readable sizes, and
+    `sort -k5,5` sorts them based on the fifth column (size).
+
+
+    1'
+  merge: -1
+  img_proc: true

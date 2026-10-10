@@ -1,0 +1,84 @@
+- - '###'
+  - 最终变更列表
+- - '####'
+  - Print the first and third columns of a file
+- - '####'
+  - Print lines where the second column is greater than 50
+- - '####'
+  - Calculate and print the average of the third column
+- - '####'
+  - Print lines containing the word "error"
+- - '####'
+  - Print "Pass" or "Fail" based on the value in the second column
+- - '####'
+  - Print the second field using ":" as the separator
+- - '####'
+  - Print lines with more than 3 fields
+- - '####'
+  - List files and their sizes in the current directory
+- - '####'
+  - Print the first and second columns with specific formatting
+- - '####'
+  - Print the first and second columns, then calculate and print their sum
+- - '##'
+  - 63. nmap：网络探索工具和安全扫描器
+- - '##'
+  - 64. iftop：显示接口的带宽使用情况
+- - '##'
+  - 65. fsck：文件系统一致性检查和修复
+- - '##'
+  - 66. tac：反向连接并显示文件
+- - '##'
+  - 85. head：显示文件的前几行。
+- - '##'
+  - 86. chsh：更改登录 Shell。
+- - '##'
+  - 87. stat：显示文件或文件系统状态。
+- - '##'
+  - 88. watch：重复执行命令并显示结果。
+- - '##'
+  - 89. shutdown：关机或重启系统。
+- - '###'
+  - 6. 立即重启系统：
+- - '###'
+  - 7. 安排15分钟后重启：
+- - '###'
+  - 8. 安排在特定时间重启：
+- - '###'
+  - 9. 在重启前显示消息：
+- - '####'
+  - 2. 更改背景颜色
+- - '####'
+  - 3. 文本格式化
+- - '####'
+  - 4. 移动光标
+- - '####'
+  - 5. 清屏
+- - '####'
+  - 6. 获取终端尺寸
+- - '####'
+  - 7. 保存和恢复光标位置
+- - '####'
+  - Do some work that moves the cursor
+- - '####'
+  - 8. 检查终端功能
+- - '####'
+  - 9. 文本样式
+- - '####'
+  - 10. 下划线文本
+- - '####'
+  - 2. 显示内存统计信息
+- - '####'
+  - 3. 显示进程相关信息
+- - '####'
+  - 4. 显示磁盘统计信息
+- - '####'
+  - 5. 定期显示系统信息
+- - '####'
+  - 6. 显示 CPU 使用率
+- - '####'
+  - 7. 显示进程队列统计信息
+- - '####'
+  - 8. 显示内核线程
+- - '##'
+  - 100. sort：对文本文件的行进行排序。

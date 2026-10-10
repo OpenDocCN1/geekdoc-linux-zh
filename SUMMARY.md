@@ -878,6 +878,7 @@
 +   [Linux 命令行与 Shell 脚本](docs/linux-command-lines-and-shell-scripting/README.md)
 +   [Linux 命令参考指南](docs/linux-command-reference/README.md)
 +   [Linux Shell 命令参考：从 A 到 Z](docs/linux-command-reference-shell-commands-from-a-to-z/README.md)
++   [Linux 常用命令](docs/linux-commands-100-mostly-used-commands-with-examples/README.md)
 +   [Linux 命令示例：快速学习 Linux 命令的实用指南](docs/linux-commands-by-example-a-straight-and-practical-guide-to-/README.md)
 +   [Linux 命令、C、C++、Java 和 Python 初学者练习指南](docs/linux-commands-c-c-java-and-python-exercises-for-beginners/README.md)
 +   [Linux 命令：Linux 初学者指南，学习 Linux 基础与命令行 (1 小时上手)](docs/linux-commands-linux-for-beginners-to-learn-linux-basics-and/README.md)
