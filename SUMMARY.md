@@ -236,6 +236,7 @@
 +   [CompTIA Linux+ 认证学习指南（2009 年考试 XK-003）](docs/comptia-linux-certification-study-guide-2009-exam-exam-xk0-0/README.md)
 +   [CompTIA Linux+ 认证学习指南：[两套完整大师级考试；视频训练片段；完整电子书；Learnkey]](docs/comptia-linux-certification-study-guide-two-complete-mastere/README.md)
 +   [CompTIA Linux+ 完整学习指南官方教材：考试 LX0-101 和 LX0-102](docs/comptia-linux-complete-study-guide-authorized-courseware-exa/README.md)
++   [CompTIA Linux+ 认证指南](docs/comptia-linux-guide-to-linux-certification/README.md)
 +   [CompTIA Linux+ ／ LPIC-1 认证指南：考试 LX0-103 & LX0-104／101-400 & 102-400（认证指南）](docs/comptia-linux-lpic-1-cert-guide-exams-lx0-103-lx0-104101-400/README.md)
 +   [CompTIA Linux Plus 考试指南](docs/comptia-linux-plus-study-guide-elements/README.md)
 +   [CompTIA Linux+ 便携式命令指南：CompTIA XK0-004 考试全命令的紧凑便携资源，第 2 版](docs/comptia-linux-portable-command-guide-all-the-commands-for-th/README.md)

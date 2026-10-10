@@ -1,0 +1,292 @@
+
+## Index
+
+- /etc/passwd file, 443
+- /etc/ppp, 543
+- /etc/ppp/chap-secrets file, 543
+- /etc/ppp/pap-secrets file, 543
+- /etc/rc.d/rc.d directory, 554
+- /etc/resolv.conf file, 547
+- /etc/syslog.conf file, 435
+- /etc/services file, 551
+- /etc/shadow file, 443
+- /etc/skel directory, 449
+- /etc/sysconfig/network-scripts/ifcfg-eth0 file, 536
+- /etc/sysconfig/network-scripts/ifcfg-interface file, 536
+- /etc/sysconfig/network-scripts/ifcfg-isp file, 542
+- /etc/sysconfig/vncservers file, 561
+- /etc/syslog.conf file, 436
+- Ethernet, 527
+- Ethrich, Mathias, 371
+- Eudora, 24
+- ex, 103
+- executable program files, 89, 144
+- execute permission, 155–156
+- export command, 317
+- ext2, 54
+- ext2 filesystem, 196
+- ext3, 54
+- ext4, 54
+- extended partition, 53
+
+## F
+
+- facility, 436
+- FAQs (frequently asked questions), 13
+- FAT, 54
+- FAT32, 54
+- fault tolerant configuration, 262
+- fdisk command, 210, 215
+- Fedora LiveUSB Creator, 45
+- fgrep command, 104
+- FHS (Filesystem Hierarchy Standard), 136
+- FHS Web site, 136
+- fields, 602
+- fifth SCSI hard disk drive (/dev/sde), 206
+- file command, 92
+- file descriptors, 298
+- file handles, 632
+- filename extensions, 89
+- filenames, 88–89
+    - appending special character at, 90
+    - configuration files or program directories, 93
+    - hidden files, 93
+    - metacharacters, 95
+    - starting with period character (.), 93
+- files
+    - absolute pathname, 84
+    - block device, 188
+    - changing permissions for, 156–160
+    - character device, 188
+    - compression, 474
+    - copying, 139–140
+    - cpio utility, 486–488
+    - creation of, 160
+    - default permissions, 160–162
+    - dump/restore utility, 488–492
+    - execute permission, 156
+    - handles, 632
+    - hard-linked, 147–148
+    - linking, 146–149
+    - listing, 89–95
+    - managing, 136
+    - ownership, 150–153
+    - permissions, 149–167
+    - removing, 140–141
+    - superblock, 146
+    - symbolic links, 148–149
+    - system backup, 481–493
+    - tape device, 482
+    - tar (tape archive) utility, 482–486
+    - types, 88
+    - write permission, 163
+- file servers, 28
+- file sharing services, 590–599
+- FTP (File Transfer Protocol), 595–599
+- NFS (NetWork File System), 593–595
+- Samba, 590–593
+- / filesystem, 228
+- filesystems, 191–195
+    - attributes, managing, 166–167
+    - commands used to create, 197
+    - configurations, 53–56
+    - corruption, 231, 633
+    - data blocks, 146, 191
+    - disk usage, 227–231
+    - errors and, 231–234
+    - ext2 filesystem, 196
+    - file handles, 632
+    - formatting, 192
+    - hard disk quotas, 234–237
+    - inode table, 146, 191
+    - journaling, 54
+    - LVM (Logical Volume Manager), 221–226
+    - monitoring, 227–234
+    - root, 194–195
+    - superblock, 191
+    - table of commands to create, 197
+    - tar (tape archive) utility, 482–486
+    - troubleshooting, 632–633
+    - types, 192
+- filter commands, 306
+- find command, 142
+    - common criteria used with the, 145
+    - wildcard metacharacters with, 142–143
+- find /dev -type f command, 190
+- firewall-cmd command, 650
+- Firewall Configuration utility, 651–652
+- firewall daemon (firewalld), 650
+- firewalls, 25–26
+    - configuring, 647–652
+    - firewall-cmd command, 650
+    - firewalld, 650
+- FireWire-based storage devices, 226–227
+- firmware RAID, 264
+- first SCSI hard disk device (/dev/sda), 206
+- flash media drives, 2
+- flavor, 16
+- floppy devices
+    - copying files to, 198
+    - create subdirectories underneath, 198
+- floppy disks
+    - ejecting, 199
+    - filesystem type, 195–202
+    - formatting, 195–202
+    - mounting, 196–198, 200–202
+    - root of, 198
+    - unmounting, 199
+- -l f option, 94, 104
+- for construct, 331–332
+- foreground (fg) command, 401
+- foreground processes, 400
+- forking, 399
+- formatting, 192
+- forward lookup, 579–580
+- fourth SCSI hard disk drive (/dev/sdd), 206
+- FQDNs (fully qualified domain names), 27, 544, 579, 580
+- free command, 642
+- free utility, 642
+- freeware, 9
+- fsck (filesystem check) command, 201, 232
+    - -f (full) option, 232
+    - options, 233
+- fixing corrupted file, 232–233
+- FSF (Free Software Foundation), 8
+- FTP (File Transfer Protocol), 25
+    - configuring and connecting to Linux FTP server, 595–599
+- ftp command, 597
+- FTP services, 25
+- full backup, 489–490
+- fuser command, 197
+
+## G
+
+- gcc (GNU C Compiler), 494
+- gdisk (GPT fdisk) command, 218
+- GECOS (General Electric Comprehensive Operating System), 444
+- gedit editor, 118
+- GID (Group Identifier), 443–444
+- GIMP (GNU Image Manipulation Program), 371
+- GNOME (GNU Network Object Model Environment), 20, 371, 634, 643, 651, 657
+    - Display Manager, 372
+    - GTK+ toolkit, 371
+    - GNOME Display Manager, 58–59, 372
+- GNU (GNUs Not UNIX), 8
+- GNU General Public License, 678–690
+- GNU info pages, 67
+- GNU Project, 17, 18
+- GNU Savannah, 10
+- Google Android, 32–33
+- GPG (GNU Privacy Guard), 656, 657–658
+- gpg command, 658
+- GPL (GNU Public License), 8
+- GPT (GUID Partition Table), 208
+- grep bash command, 392
+- grep (Global Regular Expression Print) command, 103, 104–107, 305, 318
+- grep telnet /etc/services, 551
+- groupadd command, 453
+- groupdel command, 453
+- groups, 154
+    - administration of, 443–454
+    - managing, 453–454
+- groups command, 453
+- GRUB (GRand Unified Bootloader), 272, 354–357
+    - MBR/GPT, 357
+    - Stage 1, 357
+    - Stage 1.5, 357
+    - Stage 2, 357
+    - troubleshooting, 632–633
+- GRUB2 (GRand Unified Bootloader version 2), 357–359
+    - configuration file for, 358
+    - Stage 1, 357
+    - Stage 2, 357
+- grub2-install command, 359
+- grub2-mkconfig command, 358
+- grub-install command, 355
+- GRUB root partition, 355
+- GTK+ toolkit, 371
+- GUIs (graphical user interfaces), 3, 58, 60
+    - distributions, 19–22
+    - environment, 20
+    - X Windows, 19–20
+- gunzip command, 477–478
+- .gz filename extension, 477
+- gzip-compressed archive, 485
+- gzip (GNU zip) utility, 477–479
+
+## H
+
+- hacker, 17–18, 645–647, 659
+- hacker culture, 17–18
+- hard disk quotas, 234–237
+- hard disks, 2, 206–220
+    - configurations, 53–56, 206
+    - corrupted, 208
+    - flavors, 206
+    - iSCSI configuration, 261
+    - LVM (Logical Volume Manager), 221–226
+    - parallel SCSI configuration, 258–260
+    - RAID (Redundant Array of Inexpensive Disks) configuration, 262–265
+    - SAS (Serial Attached SCSI) configuration, 260
+    - standard partitioning, 207–210
+    - working with partitions, 210–220
+- hard limits, 234
+- hard links, 146–147
+- hardware, 2
+- HCL (Hardware Compatibility List), 44, 628
+- Jabbering, 635
+- performance monitoring, 635–643
+- requirements for Fedora, 44
+- server, 256–257
+- troubleshooting, 628–630
+- hardware platforms, flexibility for, 12–13
+- hardware RAID, 264
+- hashing, 320
+- HCL (Hardware Compatibility List), 44, 628
+- HDSL (High bit-rate DSL), 541
+- head command, 97
+- help command, 64–69
+- home directory, 85
+- HOME variable, 314–315
+- host id, 528
+- host name, 544
+- hostname command, 544
+- hot fix, 11
+- HOWTO documents, 13
+- HP-UX, 16
+- HTTP (HyperText Transfer Protocol), 26, 588
+- httpd (HTTP Daemon), 588–590
+- http.conf directives, 589
+- hwclock command, 583
+
+## I
+
+- ICMPv6 (Internet Control Message Protocol version 6), 534
+- id command, 453
+- iConfig (interface configuration) command, 534
+- if construct, 323–328
+- iLink, 540
+- IMAP (Internet Message Access Protocol), 599, 601
+- incremental backup, 489
+- info pages, 67
+- infrastructure services, 576–588
+    - DNS, 579–582
+    - Dynamic Host Configuration Protocol (DHCP), 576–579
+    - Network Information Service (NIS), 586–588
+    - NTP, 582–585
+    - working with chronyd, 585–586
+- init command, 361
+- initialization
+    - boot process, 350–351
+    - /etc/initab file, 361
+    - Linux, 359–368
+    - runlevels, 360–361
+    - runtime configuration (rc) scripts, 362–364
+    - Systemd, 366–368
+- initialize (init) daemon, 350
+- init scripts, 360
+- INN (InterNetNews), 27
+- inodes (information nodes), 146
+- inode table, 146, 191
+- insert mode, 108
+- insmod command, 533

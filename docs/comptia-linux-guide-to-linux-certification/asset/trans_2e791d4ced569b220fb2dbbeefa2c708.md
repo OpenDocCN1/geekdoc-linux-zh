@@ -1,0 +1,115 @@
+
+## 项目 13-3
+
+在这个动手项目中，你将在 Ubuntu Server Linux 虚拟机上安装并探索 NTP 守护进程，同时在 Fedora Linux 虚拟机上探索 Chrony NTP 守护进程。
+
+- 1. 启动你的 Ubuntu Server Linux 虚拟机，使用用户名 **root** 和密码 **LNXrocks!** 登录到 tty1。
+- 2. 在命令提示符下，输入 **apt-get install ntp** 并按 **Enter**。当提示安装 NTP 守护进程时，按 **y**。接下来，输入 **ps -ef | grep ntpd** 并按 **Enter** 以验证 NTP 守护进程正在运行。
+- 3. 在命令提示符下，输入 **less /etc/client.conf** 命令。哪些行表明你的系统已配置为 NTP 客户端？你的系统是否配置为 NTP 服务器？如果没有，你可以修改哪一行允许网络中的计算机查询你的 NTP 服务器？
+- 4. 在命令提示符下，输入 **service ntp stop** 并按 **Enter** 以停止 NTP 守护进程。
+- 5. 在命令提示符下，输入 **ntpd -u 0.ubuntu.pool.ntp.org** 并按 **Enter** 以将你的时钟与 /etc/ntp.conf 中列出的第一个时间服务器同步。重复此命令几次，直到偏移量非常低。
+- 6. 在命令提示符下，输入 **service ntp start** 并按 **Enter** 以启动 NTP 守护进程。
+- 7. 在命令提示符下，输入 **ntpq -p** 并按 **Enter** 以查看你正在同步的时间服务器（对等点）的信息。
+- 8. 输入 **exit** 并按 **Enter** 以注销你的 shell。
+- 9. 在你的 Fedora Linux 虚拟机上，通过按 **Ctrl+Alt+F2** 切换到命令行终端（tty2），并使用用户名 **root** 和密码 **LNXrocks!** 登录到该终端。
+- 10. 在命令提示符下，输入 **less /etc/chrony.conf** 并按 **Enter**。哪些行表明你的系统已配置为 NTP 客户端？你的系统是否配置为 NTP 服务器？如果没有，你可以修改哪一行允许网络中的计算机查询你的 NTP 服务器？
+- 11. 在命令提示符下，输入 **chronyc sources -v** 并按 **Enter** 以查看你正在同步的时间服务器（对等点）的信息。
+- 12. 输入 **exit** 并按 **Enter** 以注销你的 shell。
+
+## 项目 13-4
+
+在这个动手项目中，你将配置 Fedora Linux 虚拟机上的 Apache Web 服务器，并测试系统中守护进程对文件的权限。
+
+- 1. 在你的 Fedora Linux 虚拟机上，通过按 **Ctrl+Alt+F2** 切换到命令行终端（tty2），并使用用户名 **root** 和密码 **LNXrocks!** 登录到该终端。
+- 2. 在命令提示符下，输入 `yum install httpd` 并按 `Enter`。当提示完成 Apache Web 服务器安装时，按 `y`。
+- 3. 在命令提示符下，输入 `grep DocumentRoot /etc/httpd/conf/httpd.conf` 并按 `Enter`。文档根目录是什么？
+- 4. 在命令提示符下，输入 `grep DirectoryIndex /etc/httpd/conf/httpd.conf` 并按 `Enter`。哪些文件将由 Apache 守护进程从文档根目录自动处理？
+- 5. 在命令提示符下，输入 `grep "User" /etc/httpd/conf/httpd.conf` 并按 `Enter`。Apache 守护进程在本地以什么用户身份运行？
+- 6. 在命令提示符下，输入 `grep "Group" /etc/httpd/conf/httpd.conf` 并按 `Enter`。Apache 守护进程在本地以什么用户身份运行？
+- 7. 在命令提示符下，输入 `apachectl configtest` 并按 `Enter`。你的 /etc/httpd/conf/httpd.conf 文件中是否存在任何语法错误？
+- 8. 使用 vi 等文本编辑器编辑 /var/www/html/index.html 文件。是否有任何条目？添加以下行：
+
+```html
+<html>
+<body>
+<h1>My sample website</h1>
+</body>
+</html>
+```
+
+完成后，保存更改并退出编辑器。
+- 9. 在命令提示符下，输入 `systemctl start httpd.service` 并按 `Enter` 以启动 Apache Web 服务器。
+- 10. 在命令提示符下，输入 `curl http://127.0.0.1/` 并按 `Enter`。你的网页是否被 Apache 成功返回？
+- 11. 在命令提示符下，输入 `ab -n 1000 http://127.0.0.1/` 并按 `Enter`。Apache 响应 1000 个请求花了多长时间？
+- 12. 在命令提示符下，输入 `less /etc/httpd/logs/access_log` 并按 `Enter`。显示了多少次网页访问？请解释原因。
+- 13. 在命令提示符下，输入 `firewall-cmd --add-service http` 并按 `Enter` 以允许防火墙中的入站 HTTP 连接。
+- 14. 在你的 Windows 主机上，打开 Web 浏览器并导航到位置 `http://IPaddress`（其中 `IPaddress` 是你的 Fedora Linux 虚拟机的 IP 地址）。你的网页是否显示出来？
+- 15. 返回到你的 Fedora Linux 虚拟机上的 tty2。在命令提示符下，输入 `ls -l /var/www/html/index.html` 并按 `Enter`。谁拥有该文件？组所有者是谁？当 Apache 守护进程以用户 `apache` 和组 `apache` 身份运行时，它们使用什么类别？
+- 16. 在命令提示符下，输入 `chmod 640 /var/www/html/index.html` 并按 `Enter`。
+- 17. 在你的 Windows 主机的 Web 浏览器中，刷新 **http://IPaddress** 的网页（其中 *IPaddress* 是你的 Fedora Linux 虚拟机的 IP 地址）。你收到了什么错误，为什么？
+- 18. 返回到你的 Fedora Linux 虚拟机上的 *tty2*。在命令提示符下，输入 **chmod 644 /var/www/html/index.html** 并按 **Enter**。
+- 19. 在你的 Windows 主机的 Web 浏览器中，刷新 **http://IPaddress** 的网页（其中 *IPaddress* 是你的 Fedora Linux 虚拟机的 IP 地址）。你的页面现在是否正常显示？关闭你的 Windows 主机上的 Web 浏览器。
+- 20. 返回到你的 Fedora Linux 虚拟机上的 *tty2*，输入 **poweroff**，并按 **Enter** 以关闭你的虚拟机。
+
+## 项目 13-5
+
+在这个动手项目中，你将在 Ubuntu Server Linux 虚拟机上配置和测试 Samba 文件共享。
+
+- 1. 在你的 Ubuntu Server Linux 虚拟机上，使用用户名 **root** 和密码 **LNXrocks!** 登录到 **tty1**。
+- 2. 在命令提示符下，输入 **ps -ef | grep smbd** 并按 **Enter**。Samba 守护进程是否已安装并默认启动？
+- 3. 使用 **vi** 文本编辑器编辑 **/etc/samba/smb.conf** 文件。花几分钟时间查看该文件中的注释，以了解可用的 Samba 配置选项。在 Share Definitions 部分，请注意默认配置的两个共享是 **[printers]** 共享（向 Windows 主机共享所有打印机）和隐藏的 **[print$]** 共享（向 Windows 主机共享打印驱动）。
+- 4. 在此文件中 **[global]** 行下方添加以下行，其中 *hostname* 是在你的 Ubuntu Server Linux 虚拟机上配置的主机名： 
+
+```
+netbios name = hostname
+```
+
+- 5. 取消注释/修改以下部分，该部分将所有主目录共享给成功认证的：
+
+```
+[homes]  
+    comment = Home Directories  
+    browseable = no  
+    read only = no
+```
+
+- 6. 接下来，在文件底部添加以下共享定义，以只读方式将 **/etc** 目录共享给所有用户：
+
+```
+[etc]  
+    comment = The etc directory  
+    path = /etc  
+    guest ok = yes  
+    read only = yes
+```
+
+- 7. 完成后，保存更改并退出编辑器。
+- 8. 在命令提示符下，输入 **testparm** 并按 **Enter**。**/etc/samba/smb.conf** 中是否报告了任何语法错误？按 **Enter** 查看你的 Samba 配置。
+- 9. 在命令提示符下，输入 `service samba restart` 并按 **Enter** 以重启 Samba 守护进程。
+- 10. 在命令提示符下，输入 `smbpasswd -a root` 并按 **Enter**。当提示时，提供密码 `LNXrocks!`。第二次提示时，重复相同的密码。
+- 11. 在命令提示符下，输入 `smbclient -L 127.0.0.1` 并按 **Enter**。当提示时，提供你的 Samba 密码 `LNXrocks!`。你看到了你的共享主目录吗？你看到了任何打印机共享吗？
+- 12. 在命令提示符下，输入 `smbclient //127.0.0.1/root` 并按 **Enter**。当提示时，提供你的 Samba 密码 `LNXrocks!`。
+- 13. 在 smb:\> 提示符下，输入 `dir` 并按 **Enter**。你在你的主目录中吗？
+- 14. 在 smb:\> 提示符下，输入 `exit` 并按 **Enter**。
+- 15. 在命令提示符下，输入 `poweroff` 并按 **Enter** 以关闭你的虚拟机。
+- 16. 在你的 Windows 主机上，添加一个名为 `root` 的本地用户账户，密码为 `LNXrocks!`，该账户在你的 PC 上具有管理员权限。接下来，以 root 用户身份登录到 Windows 主机，并启动你的 Ubuntu Server Linux 虚拟机。
+- 17. 一旦你的 Ubuntu Server Linux 虚拟机启动完成，在 Windows 主机上打开“运行”对话框，输入 `\\IPaddress`，并按 **Enter**。你看到了哪些共享目录和打印机，为什么？你是否能够从 Windows 主机将文件复制到你的主目录共享？你是否能够从 Windows 主机将文件复制到你的 `/etc` 目录共享？请解释。
+- 18. 完成后，关闭 Windows 资源管理器窗口。
+
+## 项目 13-6
+
+在这个动手项目中，你将使用 NFS 在 Ubuntu Server Linux 虚拟机上导出 `/etc` 目录，并从你的 Fedora Linux 虚拟机访问它。
+
+- 1. 在你的 Ubuntu Server Linux 虚拟机上，使用用户名 `root` 和密码 `LNXrocks!` 登录到 tty1。
+- 2. 在命令提示符下，输入 `apt-get install nfs-kernel-server` 并按 **Enter** 以安装 NFS。
+- 3. 使用 vi 文本编辑器编辑 `/etc/exports` 文件，并添加一行如下：
+
+```
+/etc *(rw)
+```
+
+完成后，保存更改并退出编辑器。
+- 4. 在命令提示符下，输入 `exportfs -a` 并按 **Enter**。
+- 5. 在命令提示符下，输入 `service nfs-kernel-server restart` 并按 **Enter** 以重启 NFS。
+- 6. 启动你的 Fedora Linux 虚拟机。在 Linux 系统加载完成后，通过按 **Ctrl+Alt+F2** 切换到命令行终端（tty2），并使用用户名 `root` 和密码 `LNXrocks!` 登录到该终端。
+- 7. 在命令提示符下，输入 `yum install nfs` 并按 **Enter**。当提示完成 NFS 安装时，按 y。

@@ -1,0 +1,82 @@
+
+## Glossary
+
+- `*sum commands`: Commands that can be used to verify the checksum on a file where `*` represents the checksum algorithm. For example, to verify a SHA1 checksum, you could use the `sha1sum` command.
+- `/dev` directory: The directory off the root where device files are typically stored.
+- `/etc/at.allow`: A file listing all users who can use the `at` command.
+- `/etc/at.deny`: A file listing all users who cannot access the `at` command.
+- `/etc/cron.allow`: A file listing all users who can use the `cron` command.
+- `/etc/cron.d`: A directory that contains additional system cron tables.
+- `/etc/cron.deny`: A file listing all users who cannot access the `cron` command.
+- `/etc/crontab`: The default system cron table.
+- `/etc/cups/cupsd.conf`: A file that holds daemon configuration for the cups daemon.
+- `/etc/cups/printers.conf`: A file that holds printer configuration for the cups daemon.
+- `/etc/default/useradd`: A file that contains default values for user creation.
+- `/etc/dumpdates`: The file used to store information about incremental and full backups for use by the dump/restore utility.
+- `/etc/fstab`: A file used to specify which filesystems to mount automatically at boot time and queried by the `mount` command if an insufficient number of arguments are specified.
+- `/etc/group`: The file that contains group definitions and memberships.
+- `/etc/login.defs`: A file that contains default values for user creation.
+- `/etc/logrotate.conf`: The file used by the logrotate utility to specify rotation parameters for log files.
+- `/etc/mtab`: A file that stores a list of currently mounted filesystems.
+- `/etc/passwd`: The file that contains user account information.
+- `/etc/syslog.conf`: The main configuration file for the System Log Daemon.
+- `/etc/shadow`: The file that contains the encrypted password as well as password and account expiry parameters for each user account.
+- `/etc/skel`: A directory that contains files that are copied to all new users' home directories upon creation.
+- `/etc/syslogd.conf`: The configuration file for the System Journal Daemon.
+- `/proc/devices`: A file that contains currently used device information.
+- `/var/log`: A directory that contains most log files on a Linux system.
+- `/var/spool/at`: A directory that stores the information used to schedule commands using the `at` daemon on Fedora systems.
+- `/var/spool/cron`: A directory that stores user cron tables on a Fedora system.
+- `/var/spool/cron/atjobs`: A directory that stores the information used to schedule commands using the `at` daemon on Ubuntu systems.
+- `/var/spool/cron/crontabs`: A directory that stores user cron tables on an Ubuntu system.
+- `|`: A shell metacharacter used to pipe Standard Output from one command to the Standard Input of another command.
+- `&`: A shell metacharacter used to obtain Standard Input from a file.
+- `>`: A shell metacharacter used to redirect Standard Output and Standard Error to a file.
+- `~`: A shell metacharacter used to represent a user's home directory.
+- **1U server**: A rackmount server that has a standard height of 1.75 inches.
+- **aa-complain command**: A command used to set an AppArmor profile to complain mode.
+- **aa-enforce command**: A command used to set an AppArmor profile to enforce mode.
+- **ab (Apache benchmark) command**: A command that can be used to obtain performance benchmarks for a Web server such as Apache.
+- **absolute pathname**: The full pathname to a certain file or directory starting from the root directory.
+- **access control list (ACL)**: The section within an inode of a file or directory that lists the permissions assigned to users and groups on the file or directory.
+- **active partition**: The partition searched for an operating system after the MBR/GPT.
+- **add-apt-repository command**: A command used to add repository information to the database used by the `apt-get` command.
+- **Advanced Technology Attachment (ATA)**: See *Parallel Advanced Technology Attachment*.
+- **AIX**: A version of UNIX developed by IBM.
+- **alias command**: A command used to create special variables that are shortcuts to longer command strings.
+- **ANoING**: The process by which binary bits are compared to calculate the network and host IDs from an IP address and subnet mask.
+- **Android**: A mobile Linux-based operating system currently developed by Google’s Open Handset Alliance.
+- **apache2ctl command**: A command that can be used to start, stop, and restart the Apache Web server as well as check for syntax errors within the Apache configuration file.
+- **AppArmor**: A Linux kernel module and related software packages that prevent malicious software from executing on a Linux system.
+- **AppArmor profile**: A text file within the /etc/apparmor.d directory that lists application-specific restrictions.
+- **apparmor_status command**: A command used to view the status of AppArmor and AppArmor profiles.
+- **application (app)**: The software that runs on an operating system and provides the user with specific functionality (such as word processing or financial calculation). Applications are commonly referred to as apps today.
+- **apt-cache command**: A command used to search DPM repositories for package information.
+- **apt-get (Advanced Package Tool) command**: A command used to install and upgrade DPM packages from software repositories, as well as manage and remove installed DPM packages.
+- **Aptitude**: A utility that can be used to manage DPM packages using a graphical interface.
+- **aptitude command**: The command used to start the Aptitude utility.
+- **archive**: The location (file or device) that contains a copy of files; it is typically created by a back-up utility.
+- **arguments**: The text that appears after a command name, does not start with a dash (the - character), and specifies information that a command requires to work properly.
+- **artistic license**: An open source license that allows source code to be distributed freely but changed at the discretion of the original author.
+- **assistive technologies**: Software programs that cater to specific user needs.
+- **asymmetric encryption**: A type of encryption that uses a key pair to encrypt and decrypt data.
+- **at command**: The command used to schedule commands and tasks to run at a preset time in the future.
+- **at daemon (atd)**: The system daemon that executes tasks at a future time; it is configured with the at command.
+- **authentication**: The process whereby each user must log in with a valid user name and password before gaining access to the user interface of a system.
+- **Automatic Private IP Addressing (APIPA)**: A feature that automatically configures a network interface using an IPv4 address on the 169.254.0.0 network.
+- **background (bg) command**: The command used to run a foreground process in the background.
+- **background process**: A process that does not require the BASH shell to wait for its termination. Upon execution, the user receives the BASH shell prompt immediately.
+- **bad blocks**: The areas of a storage medium unable to store data properly.
+- **baseline**: A measure of normal system activity.
+- **BASH shell**: Also known as the Bourne Again Shell, this is the default command-line interface in Linux.
+- **Beowulf clustering**: A popular and widespread method of clustering computers together to perform useful tasks using Linux.
+- **Berkeley Internet Name Domain (BIND)**: The standard that all DNS servers and DNS configuration files adhere to.
+- **binary data file**: A file that contains machine language (binary 1s and 0s) and stores information (such as common functions and graphics) used by binary compiled programs.
+- **BIND configuration utility**: A graphical utility that can be used to generate and modify the files that are used by the DNS name daemon.
+- **BIOS (Basic Input/Output System)**: The part of a computer system that contains the programs used to initialize hardware components at boot time.
+- **blade server**: See *rackmount server*.
+- **block**: The unit of data commonly used by filesystem commands; a block can contain several sectors.
+- **block devices**: The storage devices that transfer data to and from the system in chunks of many data bits by caching the information in RAM; they are represented by block device files.
+- **boot loader**: A program used to load an operating system.
+- **broadcast**: The TCP/IP communication destined for all computers on a network.
+- **BSD (Berkeley Software Distribution)**: A version of UNIX developed out of the original UNIX source code and given free to the University of California, Berkeley by AT&T.
