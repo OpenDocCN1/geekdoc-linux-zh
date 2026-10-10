@@ -1,0 +1,120 @@
+
+# 教程
+
+# TUIFEED
+
+来源：https://github.com/veselo/tuifeed
+
+## 极简主义的 RSS 阅读器
+
+就**沙桑克·夏尔马**（Shashank Sharma）而言，现代互联网使用的罪魁祸首并非社交媒体，而是广告，而他有一个巧妙的变通方法。
+
+![](img/5cfcf2f4448dccdd1c5c2a2851544557_53_0.png)
+
+> **我们的专家**
+> 沙桑克·夏尔马
+> 是新德里的一名执业律师，也是 Arch Linux 的铁杆用户。他总是在寻找价格实惠的极客纪念品。
+
+对于大量消费网络内容的用户来说，在信息获取之旅中最大的障碍是需要在不同网站之间切换。如果你能用一个应用程序或工具浏览数百个你喜爱的互联网资源，那岂不是很棒？这就是 RSS 源的馈赠。
+
+使用极简主义的源阅读器 *Tuifeed*，你可以快速浏览所有喜爱网站的内容，而无需动用浏览器。不幸的是，*Tuifeed* 及其同类应用（如 *Nom*，见下文框内内容）仅限于从网站获取基于文本的内容。然而，一些图形替代方案可以更进一步，获取播客。
+
+该项目使用 Rust 编写，并在 MIT 许可证下发布，它不在桌面发行版的软件仓库中可用，但安装仍然相当简单。
+
+如果你还没有安装 Rust 和 Cargo，可以使用发行版的包管理器来安装它们。`sudo dnf install rust cargo` 命令可在基于 RPM 的发行版（如 Fedora）上安装它们。如果你使用的是 Ubuntu 或 Debian 或其衍生版本，可以类似地运行 `sudo apt install cargo`，这也会安装 Rust 软件包。
+
+现在你可以使用 Cargo（Rust 包的包管理器）通过 `cargo install tuifeed` 命令安装 *Tuifeed*。或者，你可以使用官方 shell 脚本安装最新版本：
+
+```bash
+curl --proto 'https' --tlsv1.2 -sSLf 'https://git.io/Jl0Gz' | sh
+```
+
+## 使用源
+
+*Tuifeed* 声称支持 RSS 和 Atom 源。你必须将你感兴趣的源添加到 `~/.config/tuifeed/config.toml` 文件中。用你喜欢的文本编辑器打开该文件，或者运行 `tuifeed -c` 命令。所有源都以 "*网站名称*" = "*URL*" 的格式添加在 `~/.config/tuifeed/config.toml` 文件的 `[sources]` 部分下：
+
+```toml
+[sources]
+"Comicosity" = "https://www.comicosity.com/feed/"
+"TechRadar Software" = "https://www.techradar.com/rss/news/software"
+"TechRadar" = "https://www.techradar.com/rss/"
+"Ars Technica Tech Policy" = "https://feeds.arstechnica.com/arstechnica/tech-policy"
+"Ars Technica" = "https://feeds.arstechnica.com/arstechnica/index"
+"IPLeaders Blog" = "https://blog.iplleaders.in/feed/"
+"SpicyIP" = "https://spicyip.com/feed"
+"Best Thrillers" = "https://bestthrillers.com/feed/"
+```
+
+在将所有喜爱互联网资源的源添加到 `~/.config/tuifeed/config.toml` 文件后，你可以使用 `tuifeed` 命令启动 Tuifeed。界面分为三个窗格。添加到 config.toml 文件中的所有源都列在左上角的 Feed 窗格中。其下方是 Articles 窗格，展示所选源的最新文章。界面的右侧保留给所选文章。你会在顶部找到标题、作者姓名和发布日期，实际文章内容则在 Summary 窗格下方。
+
+当你首次启动 Tuifeed 时，Feed 窗格被选中。你可以使用向上和向下箭头键在 Feed 窗格中导航并选择你感兴趣的源。所选源会被高亮显示，也可以通过最左侧的 `>` 符号识别出来。要重新加载源，请从列表中选中它并按 `r`。或者，你可以按 `Ctrl+r` 重新加载所有已添加的源。
+
+你可以按右箭头键或 `Tab` 键切换到 Articles 窗格。同样，可以使用上/下箭头键滚动浏览所选源中的文章列表。每篇文章的内容显示在 Tuifeed 界面的右半部分。要阅读文章，请从 Articles 窗格中选择它，然后按右箭头键切换到 Summary 窗格。现在你可以使用上/下箭头键滚动浏览文章。从 Summary 窗格，你可以使用左箭头键返回 Articles 窗格。再按一次左箭头键即可返回到 Feed 窗格。
+
+使用 Tuifeed 等源阅读器阅读内容的最大优势可能是它们会自动过滤掉广告，提供流畅的阅读体验。Tuifeed 没有提供太多可配置参数。它没有主题、字体、颜色或其他用于改进阅读体验的调整选项。
+
+不过，你可以选择显示已发布文章的作者姓名和时间戳。为此，请在 `~/.config/tuifeed/config.toml` 文件的 `[sources]` 部分下方添加以下部分：
+
+```toml
+[article-title]
+show-author = true
+show-timestamp = true
+```
+
+这会在 Articles 窗格标题前添加每篇文章的作者姓名和时间戳。我们建议你将其设置为 `false`。当从 Articles 窗格选择文章时，可以在 Tuifeed 界面右侧 Summary 窗格上方看到这些详细信息。
+
+要退出 Tuifeed，请按 `Esc`，然后在“你确定要退出吗？”提示下按 `Enter`。当你重新启动 Tuifeed 时，它会自动从定义的源获取最新的故事和文章。
+
+## 买家注意
+
+大多数源阅读器都拥有一系列有用的功能，例如将喜爱源加入书签、将源或文章标记为已读、在 web 浏览器中打开文章或其中的链接等。你在极简主义的 Tuifeed 中找不到这些功能中的任何一个。添加来自不同网站的一系列 RSS 源并显示每个源的最新故事是该项目能力的极限。
+
+但这还不是全部。虽然 Tuifeed 的三窗格界面很妙，但并非没有问题。首先，该项目在处理 RSS 1.0 和 Atom 源的显示时表现不佳。虽然如果你添加此类源供其获取，它不会抱怨，但该项目只能从此类源下载文章标题，而无法下载实际内容。此外，由于 Tuifeed 不允许调整单个窗格的大小，你不得不勉强利用有限的阅读区域来滚动浏览整篇文章。根据源网站的格式，Tuifeed 要么将内容整齐地分段，要么将整篇文本显示为单个段落。Tuifeed 以这种格式渲染内容没有明显的模式。
+
+尽管 RSS 从未达到许多人认为它会达到的采用水平，但仍有许多源阅读器可供选择。你的 web 浏览器，甚至你首选的电子邮件客户端工具，可能都内置或可通过扩展提供 RSS 阅读器。但如果你对 CLI 工具感兴趣，请参阅框内关于 Nom 的讨论，它是一个极其健壮的 CLI 替代方案，与 Tuifeed 同样简洁，但在显示内容方面更擅长。或者尝试 Newsboat，这是一个功能丰富得多的替代方案，我们之前在 LXF255 中介绍过。如果你不确定要将哪些网站添加到阅读列表中，或者想要超越你的最爱，请访问 https://blog.feedspot.com/rss_directory/，那里有大量来自数百个网站的源，按健康、旅行、健身、法律、小说等类别分类，供你阅读愉快。
+
+## 使用 NOM
+
+*Nom* ([https://github.com/guyfedwards/nom](https://github.com/guyfedwards/nom)) 与 *Tuifeed* 一样极简，甚至更甚。它没有窗格界面，也没有颜色。然而，与 *Tuifeed* 不同，*Nom* 从不弄乱文章内容，并尊重段落。
+
+使用 Go 编写，你可以使用 `go install github.com/guyfedwards/nom/cmd/nom@latest` 命令安装 *Nom*。你可以将源发送到 `~/.config/nom/config.yml` 文件：
+
+```yaml
+feeds:
+  - url: https://feeds.arstechnica.com/arstechnica/tech-policy
+    name: ArsTechnica Tech Policy
+  - url: https://feeds.arstechnica.com/arstechnica/index
+    name: ArsTechnica
+  - url: https://bestthrillers.com/feed
+    name: Best Thrillers
+```
+
+你可以运行 `nom --feed URL` 来测试它如何显示指定的源，而无需将其添加进去。
+
+当你在将所有源添加到配置文件后运行 *Nom* 时，该项目会显示所有获取文章编号列表以及源名称：
+
+- 11. TechRadar Software: Nvidia's latest AI model
+- 12. TechRadar Software: Microsoft gives one of
+- 14. TechRadar Software: Microsoft is finally
+- 74. ArsTechnica: CEO: Raspberry Pi stock to
+
+我们只展示了一个截断的列表，以说明 *Nom* 如何显示来自不同源的内容。使用箭头键或 `PgUp`/`PgDn` 在列表中移动。
+
+要阅读文章，请从列表中选中它并按 `Enter`。使用上/下键阅读文章，并按 `Esc` 返回到文章列表。
+
+## 终端教程
+
+![](img/5cfcf2f4448dccdd1c5c2a2851544557_54_0.png)
+
+![](img/5cfcf2f4448dccdd1c5c2a2851544557_54_1.png)
+
+> 你必须调整终端模拟器的配色方案来微调 Tuifeed 的外观，因为它不支持主题。
+
+> 选中 Summary 窗格后，你也可以按 Enter 在桌面默认 web 浏览器中打开所选文章。
+
+> 由于 Tuifeed 不支持调整单个窗格的大小，我们建议你最大化终端模拟器窗口，以充分利用 Tuifeed 的界面。
+
+## 增强你的终端技能
+
+现在订阅 http://bit.ly/LinuxFormat
+

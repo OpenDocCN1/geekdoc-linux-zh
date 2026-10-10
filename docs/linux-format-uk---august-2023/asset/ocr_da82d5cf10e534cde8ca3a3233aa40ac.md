@@ -1,0 +1,27 @@
+# Terminal TUTORIALS
+
+![](bbox=[0.07, 0.1, 0.44, 0.24])
+
+![](bbox=[0.47, 0.1, 0.93, 0.24])
+
+> You'll have to play around with your terminal emulator's colour scheme to tweak Tuifed's appearance because it doesn't support themes.
+
+> With the summary pane selected, you can also hit Enter to open the selected article in the default web browser on your desktop.
+
+config.toml file, you can launch Tuifed with the tuifed command. The interface is split into three panes. All the feeds you've added to the config.toml file are listed in the top-left under the Feed pane. Below this is the Articles pane, which features the latest stories from the selected feed. The right-hand side of the interface is reserved for the selected article. You'll find the title, author name and publication date at the top, and the actual content of the article under the Summary pane. When you first launch Tuifed, the Feed pane is selected. You can use the up and down arrow keys to navigate the Feed pane and select the feed you're interested in. The selected feed is highlighted and can also be identified with the > symbol on the extreme left. To reload a feed, select it from the list and press r. You can alternatively press Ctrl+r to reload all the added feeds. You can press the right arrow key or Tab to move to the Articles pane. Once again, the up/down arrow keys can be used to scroll through the list of articles within the selected feed. The content of each article is displayed in the right half of Tuifed's interface. To read an article, select it from the Articles pane, and then press the right arrow key to move to the Summary pane. You can now scroll through the article using the up/down arrow keys. From the Summary pane, you can use the left arrow key to move to the Articles pane. Just press the left arrow key again to move up to the Feed pane. Possibly the greatest advantage of reading content using feed readers such as Tuifed is that they automatically filter the ads out, providing for a smooth reading experience. Tuifed doesn't offer too many configurable parameters. It has no themes, fonts, colours or other tweaks to improve your reading experience. You can, however, choose to display the author name and the timestamp for the published articles. To do so, add the following section to the ~/config/tuifed/config.toml file below the [sources] section: [article-title] show-author = true show-timestamp = true This adds the name of the author and the timestamp for each article ahead of the title under the Articles pane. We suggest that you set these to false. These details can be seen on the right side of the Tuifed interface above the Summary pane when you select an article from the Articles pane. To quit Tuifed, press Esc and then press Enter at the 'Are you sure you wish to quit?' prompt. When you relaunch Tuifed, it automatically fetches the latest stories and articles from the defined feeds.
+
+false. These details can be seen on the right side of the Tuifed interface above the Summary pane when you select an article from the Articles pane. To quit Tuifed, press Esc and then press Enter at the 'Are you sure you wish to quit?' prompt. When you relaunch Tuifed, it automatically fetches the latest stories and articles from the defined feeds.
+
+# Caveat emptor
+
+Most feed readers boast a series of useful features such as the ability to bookmark favourite feeds, mark feeds or articles as read, open the article or a link within in a web browser, and so on. You won't find any of these features in the minimalist Tuifed. Adding a series of RSS feeds from different websites and displaying the latest stories from each is the extent of the project's capabilities. But that's not all. As wonderful as Tuifed's three-pane interface is, it isn't without problems. For one, the project struggles with displaying RSS 1.0 and Atom feeds. While it won't complain if you add such feeds to be fetched, the project can only download the article's title from such feeds, and not the actual content. Also, because Tuifed doesn't let you resize the individual panes, you have to make do with the limited reading area to scroll through the entire article. Depending on the formatting on the source website, Tuifed either neatly breaks the content into individual paragraphs, or displays the whole article text as a single paragraph. There's no discernible pattern to Tuifed rendering content in such a fashion. Although RSS never achieved the level of adoption many thought it would, there are plenty of feed readers on offer. You web browser, and maybe even preferred email client tool, probably has an RSS reader built in or available through extensions. But if it's CLI tools you're interested in, refer to the box for a discussion of Nom, an incredibly robust CLI alternative that's just as barebones as Tuifed but more adept at displaying content. Or try your hands at Newsboat, a far more feature-rich alternative that we previously covered in LXF255. If you're unsure what sites to add to your reading list, or are looking to move beyond your favourites, head to https://blog.feedspot.com/rss_directory/ for a sizeable collection of feeds from hundreds of websites sorted into categories such as health, travel, fitness, law, fiction and so on for your reading pleasure. 157
+
+# ENHANCE YOUR TERMINAL-FU
+
+Subscribe now at http://bit.ly/LinuxFormat
+
+
+
+
+
+> Because Tuifed doesn't support resizing the individual panes, we suggest you maximise the terminal emulator window to get the most out of Tuifed's interface.

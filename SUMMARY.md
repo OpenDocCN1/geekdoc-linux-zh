@@ -987,6 +987,7 @@
 +   [Linux Format 年度回顾 - 第 6 卷，2023](docs/linux-format-annual---volume-6-2023/README.md)
 +   [Linux Format Presents 2022 Ubuntu：完全指南 第12版 2022](docs/linux-format-presents-2022-ubuntu-the-complete-guide-12ed-20/README.md)
 +   [Linux 格式：Ubuntu 完整指南](docs/linux-format-ubuntu-the-complete-guide/README.md)
++   [Linux 格式 UK - 2023 年 8 月](docs/linux-format-uk---august-2023/README.md)
 +   [Linux 格式英国：2025年3月](docs/linux-format-ukmarch-2025/README.md)
 +   [Linux 从零构建指南](docs/linux-from-scratch/README.md)
 +   [Linux 从零开始 - 11.0 版本](docs/linux-from-scratch---version-110-110/README.md)
