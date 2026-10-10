@@ -1,0 +1,9 @@
+# Advanced Terminal Concepts
+
+Mastering Linux comes down to intimate comprehension of the tools available in the OS and how to utilize them. Many of the topics discussed in this chapter will focus on more tasks and how to accomplish them, or a few QOL improvements to the OS in general.
+
+Compression and decompression of files often confuses Linux beginners. The tools are typically already installed, but the command line must be used. Furthermore, the strange .tar and .gz file-types are Linux-specific formats that you might often come across. All files can be unzipped or zipped with the gzip tool. Preinstalled on Ubuntu, we access it with the “tar” command. To compress a folder and the files contained within, navigate to it in terminal and type “tar -czvf name.tar.gz foldername”. C stands for “create”, z means “compress (gzip)”, v is for “verbose”, and f allows filename specification. If you want more compression (but at the cost of time), zip the folder with gzip2 by replacing the -z switch with the -j switch instead.
+
+Now extracting that same archive can be done with “tar -xzvf name.tar.gz”. You will notice that the -c was replaced with an -x, and this indicates extraction. Once again if you are dealing with bzip2 files use the -j switch instead.
+
+Continuing with advanced terminal concepts, let us talk about a few quality tips and tricks that can save you time in the terminal. When typing a command or file name, press tab halfway through. This feature, tab completion, will guess what you are attempting to type and fill in the rest of the phrase. For files it will complete the name as shown in the directory, or complete a command by considering what you are trying to do. Linux experts and anyone that has to use the terminal regularly may seem as though they are typing exactly what they want with extreme accuracy and speed, but they are actually just using tab completion.

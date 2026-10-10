@@ -1,0 +1,3373 @@
+- pgno: 0
+  md: '# DATA ANALYTICS
+
+    AND LINUX
+
+    OPERATING SYSTEM
+
+
+    # 2 BUNDLE MANUSCRIPT
+
+
+    Beginners Guide to Learn Data Analytics, Predictive Analytics and Data Science
+    with Linux Operating System
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_0_0.png)
+
+
+    # ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Data Analytics and Linux Operating System 2 Bundle Manuscript
+
+
+    Beginners Guide to Learn Data Analytics, Predictive Analytics and Data Science
+    with Linux Operating System
+
+
+    Series: Hacking Freedom and Data Driven (Senior Edition) + Data Analytics
+
+
+    *By Isaac D. Cody*'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/b4564831f9e4aeede0c6ec7987331942_2_0.png)
+
+
+    # # DATA ANALYTICS
+
+
+    # ## AND LINUX OPERATING SYSTEM
+
+
+    2 BUNDLE MANUSCRIPT
+
+
+    Beginners Guide to Learn Data Analytics, Predictive Analytics and Data Science
+    with Linux Operating System
+
+
+    ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# QUICK TABLE OF CONTENTS
+
+
+    This book will contain 2 manuscripts from the Hacking Freedom and Data Driven
+    series. It will essentially be two books into one.
+
+
+    Data Analytics will help you learn how to leverage the power of data analytics,
+    data science, and predictive analytics.
+
+
+    Hacking University Senior Edition will begin your quest in learning to dominate
+    the linux operating system!'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Data Analytics:
+
+
+    # Practical Data Analysis and Statistical Guide to Transform and Evolve Any Business
+
+
+    # Leveraging the Power of Data Analytics, Data Science, and Predictive Analytics
+    for Beginners
+
+
+    BY: ISAAC D. CODY
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_4_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '© Copyright 2016 Isaac D. Cody - All rights reserved.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    Legal Notice:
+
+
+    This book is copyright protected. This is only for personal use. You cannot amend,
+    distribute, sell, use, quote or paraphrase any part or the content within this
+    book without the consent of the author or copyright owner. Legal action will be
+    pursued if this is breached.
+
+
+    Disclaimer Notice:
+
+
+    Please note the information contained within this document is for educational
+    and entertainment purposes only. Every attempt has been made to provide accurate,
+    up to date and reliable complete information. No warranties of any kind are expressed
+    or implied. Readers acknowledge that the author is not engaging in the rendering
+    of legal, financial, medical or professional advice.
+
+
+    By reading this document, the reader agrees that under no circumstances are we
+    responsible for any losses, direct or indirect, which are incurred as a result
+    of the use of information contained within this document, including, but not limited
+    to, —errors, omissions, or inaccuracies.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# **Preview of this book**
+
+
+    Have you ever wanted to use data analytics to support your business?
+
+
+    With many businesses, data analytics can just that plus more. It’s a great system
+    to see how things are going, and you can collect the information to form conclusions
+    through this. But how does it work? What are the nuances of this? Well, that’s
+    where this book comes in.
+
+
+    In this book, you’ll learn the following:
+
+
+    +   - What are data analytics
+
+    +   - The importance of big data
+
+    +   - How to conduct data analytics
+
+    +   - Why a business needs this for success and prosperity now, and in the future
+
+
+    With data analytics, you can save your business, and this book will further prove
+    to you the importance of this subject, what it can do for you, and how you can
+    use data analytics to make your business shine and grow'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Table of Contents
+
+
+    +   - Introduction
+
+
+    +   - Chapter 1: The Importance of Data Analytics and Why Your Business Should
+    Use it
+
+
+    +   - Chapter 2 _ How to Handle Big Data
+
+
+    +   - Chapter 3 The Benefits and Challenges of Data Management
+
+
+    +   - Chapter 4 _ Real World Examples of Data Management
+
+
+    +   - Chapter 5 _ The Different Types of Data Analytics
+
+
+    +   - Chapter 6 _ They all Work Together: Data Management, Data Mining, Data Integration
+    and Data Warehousing
+
+
+    +   - Chapter 7 _ Conducting Data Analysis for Your Business
+
+
+    +   - Chapter 8 _ An Organizational Approach to Data Analytics
+
+
+    +   - Chapter 9 _ Data Visualization
+
+
+    +   - Chapter 10 Using Social Media
+
+
+    +   - Chapter 11 How Data Analytics Can Sustain any Business'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Conclusion'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # Introduction
+
+
+    I want to thank you and congratulate you for downloading the book
+
+
+    *Data Analytics: Practical Data Analysis and Statistical Guide to Transform and
+    Evolve Any Business, Leveraging the power of Data Analytics, Data Science, and
+    Predictive Analytics for Beginners*
+
+
+    This book contains proven steps and strategies on how to become proficient with
+    big data, data analysis, and predictive analytics, even if you have never studied
+    statistical science. This book takes you from the beginning concepts of data analytics
+    to processing the information, structuring your organization, and even security
+    issues with data management. From the knowledge contained within this book the
+    business owner can create and install big data analytics in even the smallest
+    business.
+
+
+    Data analysis has been proven to change the business world. Companies that are
+    using data analysis for their business decisions are moving ahead of the competition
+    by leaps and bounds. Armed with the knowledge supplied from their analysts, business
+    owners and organizations are making better business decisions regarding marketing,
+    sales and forecasting, to name just a few helpful functions of data analysis.
+
+
+    Here''s an inescapable fact: you will need data analysis to keep up with the competition,
+    because they are using it now, in real-time, to make their business decisions.
+
+
+    If you do not develop your understanding of data analysis and big data, you will
+    be left behind in the dust. Your sales may drop and your business may be in jeopardy
+    as a result of inexperience and the lack of information about a growing and necessary
+    trend in business intelligence.
+
+
+    This book is an amazing resource that defines data analysis and the tools and
+    methods that make it successful.
+
+
+    Good luck!'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# Chapter 1 The Importance of Data Analytics and Why Your Business Should Use\
+    \ It\n\nData analytics is the buzzword of the decade. Everyone is discussing and\
+    \ promoting data analytics from healthcare to big business. Small businesses and\
+    \ mega-corporations are touting the advantages of using Big Data to transform\
+    \ their business practices. Warehouses, trucking companies and suppliers are raving\
+    \ about the money they have saved using Data Mining to overhaul their organizations.\
+    \ Is it hype or is it the new Casino, offering cash at every pull of the slot\
+    \ machine handle (or in this case, the data set)?\n\nData analytics (DA) is the\
+    \ process of interpreting raw data for the purpose of informing the individual\
+    \ (or group) the conclusions derived from the data. Data analytics are used throughout\
+    \ industry to make business decisions on inventory, cash-flow, sales projections,\
+    \ customer characteristics, and loss-prevention strategies, just to name only\
+    \ a few of the practical uses. In science, data analytics are used to prove and\
+    \ disprove theories.\n\nThe concept of business analytics and big data has been\
+    \ around since the 1950s to predict insights and trends in the consumer markets.\
+    \ The difference between data collection sixty years ago and today is that today’s\
+    \ information set is almost in real time. Today businesses can receive the information\
+    \ in thirty minutes or less to make an immediate business decision. This gives\
+    \ companies that use data analysis a big competitive edge over a company that\
+    \ does not.\n\nThe data that is received today by a corporate executive is thorough,\
+    \ fast and reliable. This allows the decision maker to determine the best course\
+    \ of action within minutes of receiving the desired information, rather than weeks,\
+    \ months or even years as previously experienced.\n\nBusinesses are tapping into\
+    \ the data mines to utilize the information in many ways, including, but not limited\
+    \ to:\n\n+   1.  **Cost reduction for data storage**. In 1981 it cost $700,000\
+    \ to store 1GB of information. In 1996 that cost was $295.00 and in 2014 that\
+    \ same storage cost was only $00.03. (*source:* http://www.mkomco.com/cost-per-gigabyte-update)\
+    \  \n+       2.  **Opportunity for real data for R&D**. Customers are now very\
+    \ vocal about their wants and needs. A new product launch on Twitter can determine\
+    \ quickly the interest in an innovative product design. Data analysis allows immediate\
+    \ feedback for research and development of market trends."
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   3. **Inventory and product analysis.** Using data analysis, a company can
+    see what is popular on the shelves and what products need dusting off and moved
+    on out of the store and off the valuable shelf space. Why do grocers’ place the
+    most utilized products on the very top and very bottom shelves? They know those
+    products will always sell but the products with the highest markup are at eye-level
+    for the consumer.
+
+
+    Lenovo was designing a new keyboard for their customers, but failed to recognize
+    their loyal customer base in the gaming industry. After using data analytics,
+    Lenovo changed their design to incorporate the gamers’ needs and launched a worthy
+    product that brought millions in sales. Data analytics saved their product and
+    increased their profits.
+
+
+    Data analytics is by no means limited to the retail sector. Other businesses use
+    data analytics to increase their profitability and efficiency. Here are a few
+    uses that are currently being adopted by industries:
+
+
+    # ## Travel and Hospitality
+
+
+    Customer satisfaction is very hard to measure but the key to a thriving enterprise.
+    Big data analytics give the management instant access to customer preferences
+    as they check-in, at customer decision points, and even as they leave the facility.
+    This gives management the opportunity to rectify grievances as they occur, turning
+    a potential customer relations bomb into a satisfactory experience for all parties
+    concerned.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Health Care
+
+
+    In the health care industry, big data is changing the way records are kept, research
+    is analyzed, and patient care is managed. The result is a better method of caring
+    for the patient with a computerized record that can follow the patient no matter
+    treatment is given. In addition, sometimes a new procedure or medicine is available
+    immediately because of the instantaneously information of a query. Staffing for
+    hospitals has been transformed also with data analysis, allowing the care facilities
+    to schedule more personnel in the peak times and less for the slower times.
+
+
+    # Government
+
+
+    Local police forces are using data analytics to determine the areas with the greatest
+    crime statistics, where more foot patrols would be advantageous, and even the
+    peak times for burglaries and petty crimes. The technology of analysis can pinpoint
+    the problem areas in a suburb or city without sacrificing the limited manpower
+    for surveillance.
+
+
+    Small and mid-size businesses have the same opportunities for collecting data
+    as large factions, but it will be helpful to keep in mind these strategies:
+
+
+    To tap into the mainstream of consumers there must be a digital presence for the
+    business. Customers and clients that are shopping for services and products go
+    to websites and Social Media for opinions, reports, comparisons and reviews.
+
+
+    The website should be straightforward and honest. It should also describe the
+    benefits of the product or service without exaggeration or misrepresentation.
+    Consumers know hype when they see it, and will studiously avoid those websites
+    as potential outlets of information or products. The website should be enabled
+    to give information and to collect information.
+
+
+    Website analytics will gather the demographics of the customer, their interests,
+    their entry point, their boredom and "click off" point, and their favorite social
+    media sites.
+
+
+    If the website is designed correctly with many points of interaction, the client
+    or customer will specify their needs and wants before'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: they realize they have been "mined".
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# **Small Business Example**
+
+
+    Here is a good example of a small business that used big data:
+
+
+    A local bakery finds the chocolate chip cookie sales are booming, with orders
+    by the dozen on both the website and from call-in orders. The chocolate cupcakes,
+    however, become slower and slower to move. The baker reads the remarks on the
+    website and finds this innocuous remark: "I love the chocolate cupcakes and the
+    chocolate chip cookies, but I can buy 12 chocolate chip cookies for the price
+    of only 2 cupcakes."
+
+
+    This data became an "aha" moment for the baker. The baker quickly made a separate
+    page for just cookie sales (to continue the chocolate chip cookie trend), but
+    also changes the product offering of full-sized cupcakes to mini-cupcakes. Four
+    mini-cupcakes were priced the same as the chocolate chip cookies by the dozen.
+    The baker also placed a coupon special on the Facebook listing of "buy one dozen
+    assorted cookies and receive a free mini-cupcake of your choice, by mentioning
+    this ad." Sales of all cookies and the new product increased.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Chapter 2 How to Handle Big Data
+
+
+    # Big Data and Its Issues
+
+
+    Big data is the data mined that is too large, disorganized or unstructured for
+    an analysis using the traditional technology and techniques currently used in
+    data management. The quantity of data is less important than the how the data
+    is used and categorized.
+
+
+    Big data is divided by three sectors: volume, velocity and variety. Companies
+    are inundated with huge amounts of data and need ways to identify and utilize
+    the data sets.
+
+
+    Regardless of the management issues, big data is still very valuable for a business
+    or organization. Big data makes information transparent and usable. Now that organizations
+    are collecting larger amounts of data, it is much less expensive to store in digital
+    formatting than it ever was by tape. Management uses performance data to explore
+    trends in sick days and employee tardiness, product inventory, movement, and even
+    storage capacity. Other businesses are using data to explore forecasting for budgets
+    and purchasing decisions.
+
+
+    Big data aids companies in segmenting their customer base so that they can tailor
+    the product offerings to the customer needs and desires. More importantly, big
+    data is being utilized in Research and Development to improve the next generation
+    of service and product offerings.
+
+
+    # Grabbing and Grasping Big Data
+
+
+    Companies now have to use new storage, computing, collecting, analysis and techniques
+    to capture and crunch the big data. Even'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'though the technology challenges and even the priorities of individual firms
+    are different, they all have the same issues: older computer systems, incompatible
+    formats, and incomplete integration of data that inhibits the interpretation of
+    the database information.
+
+
+    There are new approaches available for crunching the data to assist with quality
+    management of big data. The best approach will analyze the volume, variety and
+    complexity of the data before making purchasing decisions.
+
+
+    Big data has open source technologies for the database management systems, including
+    Hadoop and Cassandra. There are also several business intelligence software products
+    on the market that report, present and analyze the finished product to the business
+    owner.
+
+
+    # Utilizing Big Data for Business
+
+
+    It is estimated that businesses only use 5 percent of the information they receive.
+    This leaves a big space for improvement, which may be filled with the technological
+    stack of implements needed for Big data analysis. There is a requirement of storage,
+    computing, visualization software and analytical software, to start the list.
+    There will the need for additional personnel and probably an IT department.
+
+
+    Does investing in big data payoff in the ROI? In a nutshell, positively. The McKinsey
+    Global Institute anticipates that a business that correctly utilizes big data
+    could increase the operating margin by over 60 percent, a huge sum.
+
+
+    Here are the steps suggested to implement big data in your organization:
+
+
+    +   - Inventory all data related assets
+
+    +   - Move the management to embrace a data-driven worldview
+
+    +   - Develop technology implementation'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '+   • Address policy issues including data security, privacy and property
+
+
+    +   • Identify opportunities and risks
+
+
+    Data security is of particular importance. Databases contain confidential information
+    that may be trade secrets, personal medical information, and even copyrighted
+    materials. Data should be centralized and secure. Encyption is not an option due
+    to the large amounts of data and the time and personnel that would be required
+    to continue such a practice. Protection of the database begins with the first
+    step mentioned, inventory all sources of input. Only when the scope of the contributing
+    sources is analyzed can businesses determine which security measures need revamping
+    and which particular products with take care of the job.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# # Chapter 3 The Benefits and Challenges of Data Management
+
+
+    Long ago and far away the business owner would look at a new product, listen to
+    the sales presentation from the jobber, and decide upon whether to purchase the
+    product based on their "gut" intuition. Just like the general store with a post
+    office and gas station, those days are gone.
+
+
+    This is the age of information. Businesses must keep current with trends, market
+    dynamics, consumer preferences, and economic pressures to make the appropriate
+    decisions regarding their presence in the marketplace. The enormous amount of
+    information that is available requires educated persons that are comfortable and
+    accurate in interpreting the data provided.
+
+
+    Case Western Reserve University in Cleveland has recently announced there will
+    soon be a shortage of 190,000 analytics personnel and over 1.5 million data managers.
+    This problem will mostly affect the small and medium sized businesses that cannot
+    afford to hire a personal data analyst on a shoestring budget.
+
+
+    The demand for Information Technology Project Managers with big data skills increased
+    by 123.6% last year, and big data skilled Computer Systems Analysts increased
+    89.8%, according to Forbes Magazine.
+
+
+    *(source: http://www.forbes.com/sites/louiscolombus/2014/12/29/where-big-data-jobs-will-be-in-2015/#2cqed00404a)*
+
+
+    Even when a business has access to data analytics there are still challenges for
+    the business besides how to use the information provided. One of these challenges
+    is Data Management.
+
+
+    Data management is the organizational management of the data and gathered information
+    for security, limited access, and storage issues. Tasks that the data management
+    requires include governance policies, database management systems, integration
+    of data systems, data security, source identification, segregation of data and
+    storage issues.
+
+
+    # ## Keys to Effective Data Management'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'Data management issues are not a new dilemma. As long as data has been collected
+    the businesses have been dealing with the problematic issue of keeping data pristine.
+    Now, with the increase in data and marketing automation, data security has moved
+    to the pinnacle of the problem areas.
+
+
+    If data isn''t clean or relevant, it is of no use to the marketing and business
+    primary officers. Data management requires constant surveillance as hackers are
+    waiting to scoop up and destroy millions of relevant information and resources.
+    There are few things that should be automatic for security issues with data, such
+    as:
+
+
+    +   1. **Limit Access**
+
+
+    Many times the access to materials and information is wide open to all employees
+    to modify. Office managers, sales personnel, and office staff should not have
+    the ability to enter the database and change, access or delete and add information.
+    The best way to control this situation is to establish boundaries, or limited
+    access.
+
+
+    Set controls based on specific functions, such as marketing personnel are limited
+    to viewing market data, but not to editing. Determine which person in the organization
+    will do all the data changes including additions/deletions and actions (such as
+    changing contact information for the client). Establish data import and export
+    rules so that secured data is not flying out the door and so that viruses are
+    not being uploaded. Create a master list of data so that information is neither
+    duplicated nor compromised.
+
+
+    +   2. **Create a Data Map**
+
+
+    A data map is a flow chart data the route of data, delineating the intake and
+    output, the departmental integration, and the use for each data entry. Data mapping
+    is an ongoing exercise that maintains controls and data consistency.
+
+
+    +   3. **Organize your Data in Segments**'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Data is not about quantity but instead about quality. It does no good to have
+    millions of names in the database if your clientele is in the hundreds. It is
+    not helpful to have hundreds of names in the database if you have no organization
+    for retrieval.
+
+
+    Instead, separate the data by your needs. Examples could be by sex, age, address
+    demographics, zip code, contact preferences, etc. Correctly segmenting the database
+    can make the data come alive with potential whereas a disordered database will
+    look and feel like chaos.
+
+
+    Begin with your current active customer base. Segment them into demographics and
+    then by purchasing habits. Connect with your customers on a regular basis to glean
+    their input on your products and services.
+
+
+    # 4. Data Hygiene
+
+
+    Data hygiene is the process of keeping data clean and current. Old data and corrupted
+    data will only clutter your database and possibly even infect all of your records.
+    Just like the previous functions, hygiene should be provided on a regular basis
+    to ensure the data is not decayed or contaminated.
+
+
+    The importance of maintaining a pristine and organized database cannot not be
+    overlooked. If the data isn''t good, all the contacts and marketing projects will
+    not succeed if they are addressed to the wrong contact point. To enhance the value
+    of your database for marketing and sales endeavors, do not neglect database management.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# # Chapter 4 Real World Examples of Data Management
+
+
+    # ## An Example of Ineffectual Usage
+
+
+    +   - John Belushi, 33
+
+    +   - Chris Farley, 33
+
+    +   - Jimi Hendrix, 27
+
+    +   - Philip Seymour Hoffman, 46
+
+    +   - Whitney Houston, 48
+
+    +   - Michael Jackson, 50
+
+    +   - Janis Joplin, 27
+
+    +   - Heath Ledger, 28
+
+    +   - Cory Monteith, 31
+
+    +   - River Phoenix, 23
+
+    +   - Elvis Presley, 42
+
+    +   - Prince, aged 57
+
+    +   - Anna Nicole Smith, 39
+
+    +   - Amy Winehouse, 27
+
+
+    Source: http://www.usatoday.com/story/life/people/2016/06/02/celebrities-who-have-died-drug-addiction/85314450/
+
+
+    These celebrities have a sad connection: They all died from a drug overdose at
+    a too young age.
+
+
+    The prescription drug-monitoring program can inform prescribers (doctors and nurse
+    practitioners) and dispensers (pharmacists) to establish controls for drug abuse
+    and diversion of opioids, the major contributor to the aforementioned deaths.
+    Celebrities only make up a small percentage of the yearly deaths attributed to
+    drug overdoses. The US Centers for Disease Control and Prevention (the CDC) has
+    established that it is the primary cause of accidental death in the United States.
+    At the last published data analysis, it was determined there were over 47,000
+    drug overdoses in 2014. Prescription pain killers were responsible for 18,893
+    of those deaths.
+
+
+    Source: http://www.cdc.gov/nchs/data/health_policy/VADR_drug_poisoning_involving_OA_Heroin_US_2000-2014.pdf
+
+
+    The names of these drugs are common prescriptions when one has surgery or a broken
+    arm or just about any circumstance that requires a trip to the local hospital
+    emergency room: Percocet, Lortab, OxyContin, Fentanyl, Vicodin, Morphine and Xanax
+    are just a few examples. Xanax is a benzodiazepine, not a painkiller, but is lethal
+    when ingested with an opioid, even at the minimal quantity of'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'just one dose.
+
+
+    For preventing this epidemic of drug overdose, the separate states have established
+    databases to monitor prescriptions of the products. This database entails the
+    dosage, the frequency the prescription is filled, and the prescribing doctor,
+    in order to determine which patients may be diverting or mismanaging their dosages
+    and which patients are frequenting different doctors and hospitals within a thirty-day
+    period to acquire more drugs.
+
+
+    The concept is great: Have one database that combines the data from various and
+    multiple sources of pharmacies and medical personnel to combat the issue. Unfortunately,
+    the database has several problems that prevent effective management.
+
+
+    +   - Data is derived from multiple sources and is time-consuming and complex.
+
+
+    +   - The data is incomplete as many physicians don’t take the time to consult
+    the database. Although the installation of the system is mandatory in 49 states,
+    only 22 states require compliance, and no one is monitored for conformity.
+
+
+    +   - There are too few personnel to conduct real-time analysis of the information.
+    It is fed into the database but not retrieved effectively.
+
+
+    Leading Data Analytics at SAS Institute have addressed the issue in the report
+    *Data and Analytics to Combat the Opioid Epidemic*. Their take is that the information
+    at present is almost unusable.
+
+
+    Source: [http://www.sas.com/en\_us/whitepapers/tia-data-analytics-combat-opioid-epidemic-108369.html](http://www.sas.com/en_us/whitepapers/tia-data-analytics-combat-opioid-epidemic-108369.html)
+
+
+    With better analytics and interpretation physicians could develop improved treatment
+    protocols, patient education and policy boundaries. For example:
+
+
+    +   - Physicians can compare their treatments with their peers to determine specific
+    patterns of early drug addiction.
+
+
+    +   - Insurance and government payment systems can catalog the potential misuse
+    or diversion, avoiding the expense costs of paying for fraud.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   Larger hospital and public health systems could develop better educational
+    programs, treatment protocols and resource decisions.
+
+
+    +   Pharmacies could compare their dispensing data to determine geographic overlap
+    in abuse, among other factors.
+
+
+    +   States could utilize the database for funding treatment centers by demographical
+    information.
+
+
+    Combinng and segmenting the data could work to alleviate macabre headlines by
+    saving lives.
+
+
+    # An Example of Effe ctual Usage
+
+
+    A famous mid-sized business owner found $400,000 by using Data Analytics. It seems
+    that he had lost track 1,000 items of inventory, which was impeding his much desired
+    cash-flow. The first day that he started his inventory, he saw the product that
+    had not moved from the shelves.
+
+
+    He initiated a huge warehouse sale and sold the entire stock in one weekend, increasing
+    his cash flow by $400,000. This more than paid for the implementation of the new
+    database and peripherals. With the quick and decisive move to sell the new-found
+    inventory, the company has utilized their data in a positive fashion with immediate
+    results.
+
+
+    Previously this company had no IT department and did not have a POS system that
+    traced product aging. He had money molding on the shelves. Once he had the database
+    system installed, he was able to reduce older inventory by 40%, in addition to
+    changing price points that were overblown, supplier costs, and profit margins.
+    He also cleaned up the customer base with updated information, saving a substantial
+    sum on postage and printing costs. With his new information, he can target the
+    purchasers of the product to upgrade their sales rather than broadcasting mail
+    to uninterested households. This company also uses their data to offer special
+    discounts to their loyal and top customers, which generates income through upselling.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# # Chapter 5   The Different Types of Data Analytics
+
+
+    Big data is such a buzzword there is a misconception of what it is and what it
+    does. The uses of Big Data are tremendous: fraud detection, competitive analysis,
+    consumer preference analysis, traffic management, call center optimization, managing
+    utility power grids, and managing warehouse and inventory, just to name only a
+    few. Big data itself is problematic because it is the business intelligence code
+    word for data overload.
+
+
+    **There are three V''s of Big data:**
+
+
+    +   1. Too much data, or **volume**
+
+    +   2. Too much speed; the data is moving so quickly it cannot be analyzed, or
+    **velocity**
+
+    +   3. Too much information from too many sources, or **variety**.
+
+
+    Even though the collection and assimilation of big data is daunting, the business
+    intelligence that is derived from big data can aid a business immensely.
+
+
+    # *Four Kinds of Big Data Business Intelligence*
+
+
+    There are four kinds of big data business intelligence that are particularly helpful
+    for business owners:
+
+
+    +   1. Prescriptive
+
+    +   2. Predictive
+
+    +   3. Diagnostic
+
+    +   4. Descriptive'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Prescriptive Analysis
+
+
+    Prescriptive analysis is the most valuable analysis because it informs the business
+    what steps should be taken to improve the situation. The use of this data can
+    be the beginning of change for the organization. Even though it is considered
+    the most valuable, it is the least used as barely 3 percent of the organizations
+    reported to use big data. Companies could use prescriptive analysis to give specific
+    issues to isolated problems, such as in the health care industry and the problem
+    of diabetes and obesity. Big data could identify the obese patients with both
+    diabetes and high cholesterol, three contributing factors in the development of
+    heart disease. These patients could be targeted immediately to initiate a four-fold
+    attack on the risk factors through diet, diabetes education, exercise encouragement
+    and cholesterol monitoring. At present, the issues are addressed by different
+    specialists, if they are even addressed at all. Combining treatment strategies
+    would be much more effective and the combination of information could be compiled
+    through prescriptive analysis.
+
+
+    # Predictive Analysis
+
+
+    Predictive analysis is the prediction of possible scenarios derived from the analysis
+    of the information. This is usually in the form of a business forecast. This form
+    of analysis looks at the past to foretell the future. For example, the business
+    might look at the previous Christmas sales to predict the future Christmas potential
+    sales for a particular product. Predictive analysis is especially useful in marketing
+    and sales departments to mimic previous campaigns that were successful. Some businesses
+    are using predictive analysis to examine the sales process, from customer introduction,
+    communications with the customer, the lead to the customer, the sale to the customer,
+    the closing of the sale, and the follow-up communications.
+
+
+    # Diagnostic Analytics
+
+
+    Diagnostic analysis focuses on past predicaments to discern the who, what and
+    why of a situation. This analysis can use an analytic dashboard, or widgets that
+    help the reader see at a glance the information at hand. An example of use of
+    diagnostic analytics could be examining a sales campaign or a social media marketing
+    campaign. With the widgets, one could see the number of posts, the number of visitors,
+    the quantity of comments and likes, the page views and the feedback from the customer.
+    Seeing these analytics at a glance instead of paging through reports brings a
+    faster grasp of the salient points of the data. Utilizing diagnostic analytics
+    will explain the failure of a marketing campaign to increase sales of a specific
+    product.
+
+
+    # Descriptive Analytics'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'This type of analytics gives real-time data on the current situation. Instead
+    of giving last week''s or even yesterday''s data, this information is happening
+    now. An example of the usage of descriptive analytics is pulling the current credit
+    report for a customer desiring to purchase a new car. Examining the past behavior
+    to assess the current credit risk and predict the future credit profile would
+    help the sales manager determine if the potential customer can or will fulfill
+    the credit contract.
+
+
+    Big data analytics will bring certain value to a company for the ROI because it
+    fills in the blanks regarding customer performance and product sales. By reducing
+    the enormity of big data into manageable chunks of information, a business owner
+    can make better business decisions regarding staffing, sales, profits, and product
+    variances.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # Chapter 6 They all Work Together: Data Management, Data Mining, Data Integration
+    and Data Warehousing
+
+
+    The terms for Big Data are many; this section of the book identifies the most
+    useful terminology when addressing the logistics of big data.
+
+
+    **Data management.** Data management is the process of placing restrictions on
+    the access and quality of data that flows in and through and out of an organization.
+    Restrictions may include limited access, security measures to prevent viruses
+    and corrupted data, and maintenance issues.
+
+
+    **Data mining.** Data mining is the process of sifting through the data to extract
+    patterns and relevant information to solve the current issues in the business.
+    Using software, data mining will take all the chaos out of the voluminous data.
+
+
+    **Hadoop.** This is open source software (meaning it''s free!) to store data and
+    run discriminating applications on commodity hardware. It is key to sifting the
+    multiples of data information that is bombarding the data sets. It is known for
+    the speed for which it processes data.
+
+
+    **In-memory analytics.** By investigating information from framework memory (rather
+    than from your hard plate drive), you can get prompt bits of knowledge from your
+    information and follow up on them rapidly. This innovation can expel information
+    prep and investigative handling latencies to test new situations and make models;
+    it''s not just a simple route for businesses to stay agile and settle on better
+    business choices, it likewise empowers them to run iterative and intelligent examination
+    situations.
+
+
+    **Predictive analytics.** Predictive analytics uses, statistical algorithms, machine-learning
+    techniques and data to identify the predictive outcomes based on previous patterns
+    of usage. It''s about giving a best evaluation on what will happen later, so businesses
+    can feel more assured that they''re settling on the best business choice. The
+    most common and basic utilizitions of predictive analytics incoroperate misrepresentation
+    and fraud, risk management, operations management and marketing functions.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '**Text mining**. In utilizing text mining technology, the business you examine
+    text data from the world wide web, comments, articles and other text sources to
+    uncover insights that were previously unseen. Text mining incorporates machine
+    learning and language processing to evaluate and sort web documents like blogs,
+    feeds, intelligence on competitors, emails, comments and surveys to assist the
+    business in analyzing quantities of information and discover tangents and hidden
+    relationships.
+
+
+    **Data integration** is the combination of adding new information and data to
+    an old computer system while keeping the data both clean and uncorrupted in content.
+    Moving data effectively has become a challenge for businesses in the following
+    areas:
+
+
+    +   * **Data Needs**
+
+    +       * Delivering the correct data in the required format to alleviate the
+    business needs is the primary reason for the integration of data. Every new source
+    of data can impact the previous collection of information and systems to which
+    it migrates.
+
+
+    +   * **Anticipating the Needs of the Business**
+
+    +       * Data is not helpful if it is not available in a timely fashion. Integration
+    must be adequate to manage both batches of information and real-time
+
+
+    +   * **Confirm all Data is Stamped with Pertinent Information**
+
+    +       * Old systems did not time stamp or date activity in the server. For quick
+    identification of the changes made to the data, the data integration needs to
+    record this information.
+
+
+    +   * **Be Suspicious of All Incoming Data**
+
+    +       * It is natural to anticipate data from other sources, but be suspicious
+    that it may be infected or other corrupt. Scan everything that comes in for compatibility
+    and integration needs.
+
+
+    +   * **Validate Customer Information**
+
+    +       * Compare incoming data to the master database to confirm the customer
+    database is correct and current.
+
+
+    +   * **Keep a History of Every Change**
+
+    +       * There is always a need to backtrack changes sometimes for statutory
+    compliance and often when integration doesn''t work as anticipated.
+
+
+    +   * **Upgrade the Systems and Evaluate the Process**'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '+   • Constantly look for ways the system may be deficient for your business
+    needs. Upgrade the systems regularly to ensure you have the best possible solution
+    to your data management and integration needs.
+
+
+    **Data Warehousing.** Data warehousing is the storage of electronic data by the
+    organization for which it is prepared. Data must be stored so that it is reliable,
+    uncompromised, secure, easily retrievable and easily managed.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# # Chapter 7 Conducting Data Analysis for Your Business\n\nWe have stressed\
+    \ throughout this book the need for data analysis in the business enterprises,\
+    \ but we have yet to explain exactly how to collect data. This chapter will focus\
+    \ on basic data collection so that you can implement a strategy that will further\
+    \ your organizational goals.\n\n# ## A Step by Step Guide\n\n# ### What is Collecting\
+    \ Data?\n\nBasically, gathering collected data implies putting your configuration\
+    \ for gathering data into operation. You've chosen how you're going to get data\
+    \ – whether by direct perception, interviews, overviews, investigations and testing,\
+    \ or different techniques – and now you and/or different spectators need to actualize\
+    \ your arrangement. There's more to gathering information, be that as it may.\
+    \ You'll need to record the information in suitable ways and sort the data so\
+    \ it’s ideally helpful.\n\nThe way you gather your information ought to identify\
+    \ with how you're wanting to dissect and utilize it. Despite what strategy you\
+    \ choose to utilize, recording ought to be done simultaneous with information\
+    \ accumulation if conceivable, or soon thereafter, so nothing gets lost and memory\
+    \ doesn't blur.\n\n# ### Some of the functions necessary for useful data collection:\n\
+    \n+   - *Assembling data from all sources.*\n+   \n+   Computing any numerical\
+    \ or comparative operations expected to get quantitative data prepared for examination.\
+    \ These might, for example, incorporate entering numerical perceptions into a\
+    \ diagram, table, or spreadsheet, or figuring the mean (normal), middle (midpoint),\
+    \ and/or mode (most every now and again happening) of an arrangement of numbers.\n\
+    +   \n+   Coding information (deciphering information, especially subjective information\
+    \ that isn't communicated in numbers, into a structure that permits it to be handled\
+    \ by a particular programming project).\n+   \n+   - *Arranging data in ways that\
+    \ make them simpler to work with.*\n\nHow you do this will rely upon your design\
+    \ of research and your assessment questions. You may amass perceptions by the\
+    \ independent variable (pointer of achievement) they identify with, by people\
+    \ or gatherings of members, by time, by movement, and so on. You may likewise\
+    \ need to group the collected information in a few distinctive ways, so you can\
+    \ consider interactions and"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'relationships among various variables.
+
+
+    There are two sorts of variables in data. An independent variable (the intercession)
+    is a condition executed by the analyst or group to check whether it will make
+    change and improve the situation. This could be a project, strategy, framework,
+    or other activity. A dependent variable is the situation that may change as a
+    consequence of the independent variable or intercession. A dependent variable
+    could be a conduct or a result.
+
+
+    # ## How Do We Examine Data?
+
+
+    Investigating data includes looking at it in ways that reveal the connections,
+    designs, patterns, and so on that can be found inside. That may mean subjecting
+    it to statistical operations that can let you know not just what sorts of connections
+    appear to exist among variables and additionally to what level you can believe
+    the answers you''re getting. It might mean contrasting your data with that from
+    different data sets (a control group, statewide figures, and so on), to reach
+    a few inferences from the information. The point, as far as your assessment, is
+    to get a precise evaluation so as to better comprehend your work and its consequences.
+
+
+    There are two sorts of information you will use, even though not all assessments
+    will fundamentally incorporate both. Quantitative data alludes to the data that
+    is gathered as, or can be interpreted into, numbers, which can then be shown and
+    broke down mathematically; Qualitative data are gathered as descriptions, accounts,
+    conclusions, quotes, understandings, and so forth., and are by and large either
+    not ready to be reduced to numbers, or are viewed as more important or enlightening
+    if left as narratives. As you may anticipate, quantitative and qualitative data
+    should be analyzed in different ways.
+
+
+    # ### Quantitative data
+
+
+    Quantitative data is collected as numbers. Examples of quantitative data include:
+
+
+    +   - Frequency (rate and duration) of specific behaviors or situations
+
+    +   - Survey results (reported behaviors, ratings of customer satisfaction, etc.)
+
+    +   - Percentages of people with certain characteristics in the demographic (those
+    with diabetes, obese, with heart disease indicators, the education level, etc.)
+
+
+    Data can also be collected other than numerically, and converted into quantitative
+    data that is ready for analysis. Compilers can assign numbers to the levels of
+    emphasis of a specific behavior. For instance, compilers can enumerate the quantity
+    of Facebook "likes" or "comments". Whether or not this kind of information is
+    necessary or helpful is dependent upon the kinds of questions your data is meant
+    to answer.
+
+
+    Quantitative data is converted to statistical procedures such as calculating the
+    mean number of times an event repeats. These calculations, because numbers are
+    exacting, can offer definitive answers to varying questions. Quantitative analysis
+    can identify changes in dependent variables that are related to – duration, frequency,
+    timing intensity, etc. This allows comparative analysis with like issues, like
+    changes within the population count of a zip code, or purchasing changes between
+    women of a similar age.
+
+
+    # ### Qualitative Data
+
+
+    Unlike numbers, qualitative information is considered ''soft'' data, meaning it
+    can’t be reduced to a specific conclusion. A number may indicate the population
+    in a demographic, but the soft data may tell you the stress levels of the shoppers
+    by the attitude and appearance of the customers.
+
+
+    Qualitative data can occasionally be converted into numbers, by counting the number
+    of times specific things happen, or by assigning numbers to levels of importance,
+    customer satisfaction or whether a function is user friendly when placing an order
+    on a'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'website.
+
+
+    The translation of qualitative data into quantitative data is dependent upon the
+    human factor. Even if the customers agree to use the numbers 1-5 (1 being very
+    unsatisfied and 5 being extremely satisfied) to evaluate customer satisfaction,
+    there is still the issue of where 2, 3, and 4 fall on the assessment scale. The
+    numbers only give a partial assessment; they give no information about the "why"
+    of the customer rating. Was the customer unhappy because of the product inventory
+    on the shelf, a detail about the product, a problem with the atmosphere or music
+    in the store, the location of the store, etc.?
+
+
+    Likewise, when counting specific instances of a behavior, did the counter include
+    those who exhibited only partial behaviors (those that hit "like" but did not
+    comment on Facebook, for example)?
+
+
+    Qualitative data can impart particular knowledge that is not available in quantitative
+    data, such as why a sales campaign is working, or how the campaign is culturally
+    conflicting with the customer base. (In 1962, Chevrolet was puzzled why their
+    new "Nova" was so popular in the United States but had almost no sales in Mexico.
+    Researchers failed to translate the word "Nova" into Spanish, which means "no
+    go." The Spanish vernacular for the name of the car was "doesn''t run." No wonder
+    sales were down in Mexico! The automobile was renamed to Caribe and sales increased.)
+
+
+    It is often helpful to evaluate both quantitative and qualitative data sets.
+
+
+    # What are the steps to collecting and analyzing data?
+
+
+    +   - Clearly design and define the measurements that are required to answer the
+    questions.
+
+
+    +   - Conduct the research for the needed period of time in the correct timeframe.
+
+
+    +   - Organize the data dependent on the function of the data; how will you use
+    the information?
+
+
+    +   - If possible and appropriate, change qualitative data into quantitative data.
+
+
+    +   - Use graphs and visualization charts (examples are in Chapter 10) to make
+    the data easier to assimilate.
+
+
+    +   - Visually inspect the patterns of information to identify trends and connections.
+
+
+    +   - Seek patterns in the qualitative data, just like the quantitative data.
+    If people consistently refer to similar problems, these may be crucial to understanding
+    the problem and a workable solution.
+
+
+    **Interpret the findings** by using one of the following categories:
+
+
+    +   - Your marketing plan is performing on target with no obvious problems.
+
+
+    +   - Your marketing plan had no significant effect on sales.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '+   - Your marketing plan had a negative effect on sales. (Possibly it was
+    offensive or deemed silly by consumers.)
+
+
+    +   - Your marketing plan had mixed results. The promoted product sold well but
+    a previously popular product may have decreased sales. For example, Secret deodorant
+    offered a new scent category that was very popular but the unscented product sales
+    decreased significantly as loyal users just swapped their preferences.
+
+
+    +   - If the analysis shows your marketing program is working you have a simple
+    choice of continuing the program or tweaking it to hopefully increase sales.
+
+
+    +   - If analysis shows the program isn''t working, interpretation is more convoluted.
+    What is missing from the equation? What factor is preventing the desired results?
+
+
+    Analyzing and interpreting the results brings you full circle in the process;
+    now you can use the knowledge you''ve gain to adjust your business and improve
+    your service. Continuing to analyze and evaluate the business goals and results
+    will keep the business current and an effective presence in the marketplace.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Chapter 8    An Organizational Approach to Data Analytics
+
+
+    This chapter discusses the framework that needs to be in place in the organization
+    that incorporates big data into the corporate culture. A workable analytics governance
+    will enable the business to utilize big data for an edge over the competition.
+
+
+    # The Framework
+
+
+    To integrate information technology, business intelligence, and analytics four
+    dominant questions must be under consideration:
+
+
+    +   1. Are analytics a key component of the business, in the same categories as
+    finance, sales, product development, research and marketing?
+
+    +   2. Are the appropriate personnel in place?
+
+    +   3. Do the personnel have the ability for deep knowledge of the business needs?
+
+    +   4. Is there a governance structure in place?
+
+
+    This framework is referred to as the CSPG framework.
+
+
+    +   - Culture
+
+    +     - Does the business revolve around the data analytics or does analytics
+    take a backseat to marketing, R&D, and sales?'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '+   * Staffing
+
+
+    +       * Is there adequate staffing and is hiring of qualified staff a priority?
+    Does the IT department work on a shoestring budget or do they have the proper
+    resources to conduct big data analysis?
+
+
+    +   * Processes
+
+
+    +       * If the analytics process is completed correctly, data can be traded
+    with like organizations without fear of contamination, allowing multiple streams
+    of information.
+
+
+    +   * Governance
+
+
+    +       * Governance is a new concept for businesses that have come recently to
+    the table of data analytics. The governance needs a structure that encompasses
+    people, structure, and salaries so that the IT department is not out of variance
+    with the other departments.
+
+
+    # Placement of the Analytics Function in the Business
+
+
+    There are three models for placement of the Data Analytics function:
+
+
+    +   1.  Placing the analytics department in a central unit. The advantage of this
+    location is that it is easy to obtain data, integration into the company culture
+    is simpler, and the data retrieval is faster. The challenge for a centralized
+    department can be the location (as an add-on department it may be located away
+    from the hub of decision makers), there may be confusion as to whom the department
+    reports, and the data analysts may be so far away from the corporate culture that
+    they cannot anticipate the business needs.
+
+
+    The second possibility is to decentralize the analytics and place analysts in
+    each department throughout the company. This allows the analysts to focus on the
+    business sector in which they reside. The challenge is to work together on company-wide
+    projects that are not segmented and need all the analysts focused on one problem
+    set.
+
+
+    +   2.  The third option is a mix of the two previous scenarios. This places the
+    analysts in a centralized location but also'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'deploys analysts throughout the organization. This requires a very large staff
+    of analysts, which may be the biggest challenge for the business.
+
+
+    # ### The Key Analytics
+
+
+    Analytics is composed of models, infrastructure and operations. The models are
+    statistical or predictive or datamining that are originated from statistical data.
+    Key to the analytics process is the building of the models, which is usually performed
+    by the analysts or data scientists or statisticians.
+
+
+    Infrastructure is the software components, applications used and platforms utilized
+    for data management, data processing and decision making. The processes connected
+    to analytics infrastructure are data management, model deployment and multiple
+    analytics that must be incorporated in the business operations.
+
+
+    Operation are the processes that create the data used for models and actions for
+    business use. Data can be purchased, internal, external, or collaborative.
+
+
+    The Data Analytics team must identify the internal and external relevant data,
+    manage the data, build the analytical models and introduce the models into the
+    internal systems. Most businesses organize these functions thusly: The business
+    department requests the model, the Analytics team constructs the model, the IT
+    department supplies the raw data, and operations launches the model. This brings
+    us to the why of analytics governance.
+
+
+    # ## Analytics Governance
+
+
+    The three challenges that businesses face when extracting big data are:
+
+
+    +   1. Identifying the unique needs for which the data will be used'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '+   2. Obtaining the needed information
+
+
+    +   3. Deploying the analytics models into the organization
+
+
+    The analytics manager must have enough authority to negate these challenges. The
+    structure of governance needs a mechanism for identification, communications and
+    resolution of issues stemming from data analysis problems. The analytics manager
+    also needs the flexibility to hire qualified and knowledgeable personnel.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # Chapter 9 Data Visualization
+
+
+    Visualization is what makes data come alive to the reader. A list of information
+    can be a struggle to try to translate into useable data; translating the groups
+    of data into a manageable form is essential to help the reader differentiate between
+    the important and the superfluous.
+
+
+    Using graphic designing software can draw notice to the key statistics, and by
+    using visual images, can uncover hidden patterns and connections that might not
+    otherwise be detected.
+
+
+    The following is a list of *free* data visualization software programs that are
+    easily accessible on the web:
+
+
+    **Chart.js**
+
+
+    http://www.chartjs.org/
+
+
+    This program offers 6 different graphics HTML5, and is one of the most popular
+    small-charting programs.
+
+
+    **Dygraphs**
+
+
+    dygraphs.com/
+
+
+    This is a JavaScript charting tool that is customizable, works with almost all
+    browsers, and is used for dense data sets. It is mobile device and tablet friendly.
+
+
+    **FusionCharts**
+
+
+    www.fusioncharts.com/
+
+
+    FusionCharts Suite XT offers more than 90 charts, 965 data maps, and customizable,
+    interactive business dashboard. FusionCharts is AJAX application-friendly and
+    can be used with JavaScript API.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Instant Atlas
+
+
+    www.instantatlas.com/
+
+
+    Instant Atlas combines statistics with map data, which is very useful with demographic
+    information.
+
+
+    # Raw
+
+
+    raw.densitydesign.org/
+
+
+    Raw is customizable and available for modification, can be uploaded from the app
+    to the compute, exported as SVG or PNG, can be embedded into the webpage, and
+    offers vector-based images.
+
+
+    # Table au
+
+
+    www.tableau.com/
+
+
+    Tableau allows the user to drag and drop data to update immediately into real-time
+    charts.
+
+
+    # Time line
+
+
+    https://timeline.knightlab.com/
+
+
+    Timeline gives a detailed analysis of events that offers a clickable ability to
+    open the chart for more particularized information.
+
+
+    # Visual.ly
+
+
+    visual.ly/
+
+
+    Visual.ly is a gallery tool and an infographic tool. With Visual.ly one can build
+    stunning representations of data that are brilliant and easy to create.
+
+
+    # Visualize Free
+
+
+    https://visualizefree.com/
+
+
+    Visualize Free allows you to upload your own data sets and build HTML5 interactive
+    charts for visualization.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# ZingChart
+
+
+    [https://www.zingchart.com/](https://www.zingchart.com/)
+
+
+    ZingChart is another JavaScript charting program that has interactive Flash and
+    HTML5 charts, more than 100 selections for your data analysis.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# ## Chapter 10  Using Social Media\n\nDomo released the infographic of statistics\
+    \ for Social Media users in 2015. Here are the statistics showing the phenomenal\
+    \ increase in users.\n\n> *In just one minute,*\n> \n> BuzzFeed streams 34,000+\
+    \ videos\n> \n> Instagram displays 1.7 million+ photos\n> \n> Netflix streams\
+    \ 80,000 video hours\n> \n> Vine streams 1,000,000 videos\n> \n> YouTube has uploads\
+    \ of 300 hours of video\n> \n> Facebook has more than 4.1 million likes for posts\
+    \ (this is not the same as posts quantity as everyone does not take the time to\
+    \ like)\n> \n> Twitter has 347,000 tweets\n> \n> *Source: Domo, Data never sleeps*\n\
+    \nObviously Social Media is now a major player for reaching consumers. A successful\
+    \ implementation of integration with social media and business practices can only\
+    \ enhance the opportunities for customer development. It would be wise for businesses\
+    \ to search for their products to find the answers to their tricky troubleshooting\
+    \ problems.\n\nOne of the often-neglected sources of information for a retail-related\
+    \ business is YouTube videos. Customers often make available videos that demonstrate\
+    \ how-to's that are not available in the product user manual. Sometimes Frequently\
+    \ Asked Questions writers are stymied at a little-known product failure. YouTube\
+    \ may have the answer that can be a solution if the Analysts engage in data mining.\n\
+    \n# *Social Media Analytics*"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'Social media analytics is using gathered information from blogs and social
+    media websites to make a business more successful and more visible. Having an
+    Internet presence is key to attracting younger generations of customers. Eighty-one
+    percent of purchasers under 30 use the Internet to influence their purchases.
+    A connection point to these purchasers is primary to business growth and development.
+
+
+    Social media analytics involves the practice of data mining, analysis of website
+    information, data gathering, and utilizing the information for business forecasting
+    and product shaping. The primary use of social media analytics is to evaluate
+    customer responses to support marketing progress and customer service decisions.
+    The second major use of social analytics is to get an edge over the competitor
+    by maintaining a presence on the web. The third use for social media analysis
+    is to gauge the customer sentiment regarding a product or service. The fourth
+    use for social media analysis is to enhance the products by offering web only
+    resources and discounts. The fifth use of social media analysis is for producing
+    products that are contrary to logic (like runners pulling the lining out of running
+    shoes because it makes their feet too hot) but desired by the consumer.
+
+
+    Social media analysis is similar to any other data analysis, but has specific
+    needs to consider such as:
+
+
+    # **Form the hypothesis**
+
+
+    Social media analysis is more about why something happened and less about reporting
+    the event itself. Begin the analysis with of a circumstance or even with a question
+    of why. Why did readers engage with this question but not respond to a similar
+    survey on Facebook or Twitter? Examine the posting frequency and times you post.
+    Are they optimal for your brand or product? For example, advertising for a food
+    delivery would be much more effective at 5:00 than at 2:00 in the afternoon, as
+    customers are hungry and tired when they leave work and want an instant solution
+    to the dinner-hour dilemma.
+
+
+    Utilize the information to identify new ways of sharing information that attracts
+    increased reader traffic. For example, Twitter now allows Vine videos to be embedded
+    into posts. A hypothesis for testing would be: Does the new addition to Twitter
+    increase traffic to the website or just entertain the readers more fully?
+
+
+    # **Move the Data to a Spreadsheet**'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "Start with identifying trends and patterns on the spreadsheet. From this data\
+    \ you can extrapolate issues and variances for exploration.\n\n# Expand the Sample\
+    \ to Encompass as Much Data as you Possibly Can\n\nExpanding the sample can be\
+    \ accomplished in many ways, but here are two of the possibilities: changing the\
+    \ end date of the sample, or tracking the competitors also.\n\n# Question the\
+    \ Results\n\nIt is easy to determine a false correlation when there is more data\
+    \ than one needs. Just like proof-testing, it can be a quick resolution by finding\
+    \ data to support your anticipated and desired outcome. Continue to test the results\
+    \ to eliminate bias in the conclusions.\n\n# Tools to Help Manage Social Media\n\
+    \nPosting to several social media outlets day by day is time consuming, but also\
+    \ necessary. Rather than devote several hours a day to maintaining social media\
+    \ updates, consider some of the following tools that take the drudge out of daily\
+    \ monitoring.  \nHere is a list of recommended tools to help the business owner\
+    \ complete the task in less time. Some of these tools are free, but most require\
+    \ a paid subscription.\n\n*Buffer, HootSuite, and Sprout Social*\n\nThese tools\
+    \ allow you to log in one time and schedule the posts for the major social media\
+    \ outlets. You can perform more than one function at the same time, writing and\
+    \ scheduling a week's worth of posts, analyzing the efficacy, and sharing information.\n\
+    \n*SumAll, Social Express, Sociallight*"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'These programs send the data to you instead of you having to go to them for
+    retrieval. You get to choose what reports interest you for your business.
+
+
+    *Social Count, SharedCount, BuzzSumo*
+
+
+    This program tracks your "shares" from the different URLs. You enter the URL and
+    it spits out the "Shares" per day, week and month. This saves time so that you
+    don''t surf from Website to Website seeking the information.
+
+
+    # *Social Media Strategies for the Business Owner*
+
+
+    These are the most helpful tips for the small and medium business owner that is
+    managing the business and the social media.
+
+
+    Use a business dashboard to consolidate your social media.
+
+
+    Complete all social media posts at the same time and schedule them ahead of time.
+
+
+    Watch the engagement of your posts.
+
+
+    Segment your audience for faster analysis.
+
+
+    Social media is here to stay and gets bigger and more complex every day. Managing
+    social media is now essential to maintain a presence on the web. Businesses that
+    are ignoring social media with their heads hidden in the sand like ostriches are
+    losing the opportunity for a new income stream. Online sales of products are increasing
+    more every moment. In one minute, Amazon has over 4,000 new customers purchase
+    a product. A savvy business owner will want to tap that potential customer base
+    as quickly as possible.
+
+
+    Social media analytics helps the business owner target customers that are already
+    interested in the product or service promoted by the organization. With a little
+    attention to the customer service needs of the consumer, a pathway may be discovered
+    that opens the gateway for communication and sales through the Internet outlet.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Chapter 11 How Data Analytics Can Sustain any Business
+
+
+    The Age of Analytics has dawned and the Age of Aquarius has moved on. Organizations
+    that collect, interpret, and act on the raw data they derive can change to the
+    rapidly moving marketplace, and stay well ahead of the competition.
+
+
+    To use the data correctly and quickly, analyzing the data with these tools will
+    bring clarity and innovative suggestions.
+
+
+    Begin with **Measuring**, determines which analytics will be most helpful for
+    decision making within the firm.
+
+
+    **Diagnose** the problems that have occurred with customer satisfaction or product
+    placement. Why has something happened in an adverse way? Data analytics can help
+    you locate the specific issue for a satisfying solution.
+
+
+    **Predict and Optimize** to forecast changes and the potential consequences of
+    the change. Use the "if"..."then" method of questioning. (If I make this change
+    with customer service how can I then anticipate the reaction?) This analytical
+    technique helps to determine the direction of the organization and the best route
+    to sustain continued growth.
+
+
+    **Operationalize**, or placing the information into use by the front-line workers,
+    sales staff, engineers, marketers, managers and the remaining decision makers.
+    This is the transition from analysis to usefulness, leaving the laboratory and
+    moving into real-world experience.
+
+
+    **Automation** is when the business managers use real-time information to make
+    immediate changes in the organization. For example, in a grocery industry, couponing
+    is a big money maker for both the customer and the grocer. The grocer moves the
+    product but is reimbursed by the couponing agency, along with a processing fee
+    based on the value of the coupon. The customer receives the product at a reduced
+    price, and the product is usually a newly introduced item that would be considered
+    a luxury item in a depressed economy. What happens, though, when the customer
+    takes advantage of the retailer by purchasing all of the shelf stock of the product,
+    leaving none for the following customers and creating an environment of disgruntled
+    customers? The store manager immediately assesses the situation and applies a
+    "3 coupons only per transaction" rule. Now the customer can still purchase the
+    item but very few want to leave the checkout to make more than one transaction.
+    The retail grocer has used automation to analyze the'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'problem and create an immediate solution.
+
+
+    The last stage of implementation is **transformation**, when the business moves
+    to a data-driven corporate culture, making business decisions based on current
+    analytics instead of tradition or gut instinct.
+
+
+    # *How You Can Collect Data for Analysis Today*
+
+
+    +   1.  Establish a digital presence that both gives and receives information.
+    Before you can collect data you need a way like a social media outlet and an interactive
+    website.
+
+
+    +   2.  Remember your goal is to receive, sort, and address the data you have
+    collected from as many sources as possible, as quickly as possible so the data
+    won’t be stale or even unreliable. The more data you collect the more accurate
+    your findings will be.
+
+
+    +   3.  Focus on the questions that need answers. It will be tempting to read
+    and ponder everything, but that will defeat the purpose of collecting the data.
+    Keeping the questions at the forefront of your mind will help you mine the customer
+    intelligence for the necessary information to change your business practices into
+    a positive spin.
+
+
+    +   4.  Engage with your customers through social media. Don’t assume you know
+    what they want. Give them plenty of opportunities to push the like button. This
+    valuable button will target the customers’ wants and needs much better than a
+    formal questionnaire.
+
+
+    +   5.  Use Google Analytics and Alex to determine relevant information regarding
+    your client base. They have easy-to-understand statistics on website traffic and
+    SEO rankings. Use this information to cater to your clientele. Just changing a
+    few keywords on your site can increase your traffic and move you to number one
+    in the Google search engine, a prime place for attracting new customers and readers.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# ## Conclution
+
+
+    Thank you again for downloading this book, **Data Analytics: Practical Data Analysis
+    and Statistical Guide to Transform and Evolve Any Business, Leveraging the power
+    of Data Analytics, Data Science, and Predictive Analytics for Beginners!**
+
+
+    I hope this book was able to help you to understand and utilize data analytics
+    to increase your business sales, marketing and efficiency.
+
+
+    The next step is to implement the policies and procedures that are presented in
+    this guide to data analytics.
+
+
+    Finally, if you enjoyed this book, please take the time to share your thoughts
+    and post a review on Amazon. It’d be greatly appreciated! Thank you and good luck!'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Hacking University Senior Edition
+
+
+    # Linux
+
+
+    Optimal beginner''s guide to precisely learn and conquer the Linux operating system.
+    A complete step-by-step guide in how the Linux command line works
+
+
+    BY ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# HACKING
+
+
+    # UNIVERSITY
+
+
+    SENIOR EDITION
+
+
+    # LINUX
+
+
+    Optimal Beginner''s Guide To Precisely Learn And Conquer The Linux Operating System.
+    A Complete Step By Step Guide In How Linux Command Line Works
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_50_0.png)
+
+
+    ISAAC D. CODY'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Table of Contents
+
+
+    +   * [Introduction](#)
+
+    +   * [History of Linux](#)
+
+    +   * [Benefits of Linux](#)
+
+    +   * [Linux Distributions](#)
+
+    +   * [Booting Into Linux](#)
+
+    +   * [Ubutu Basics](#)
+
+    +   * [Installing Linux](#)
+
+    +   * [Managing Hardware and Software](#)
+
+    +   * [The Command Line / Terminal](#)
+
+    +   * [Managing Directories](#)
+
+    +   * [Apt](#)
+
+    +   * [More Terminal Commands](#)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '+   - Connecting to Windows / Mac Computers
+
+    +   - Useful Applications
+
+    +   - Administration
+
+    +   - Security Protocols
+
+    +   - Scripting
+
+    +   - Advanced Terminal Concepts
+
+    +   - I/O Redirection
+
+    +   - More Linux Information
+
+    +   - What Next and Conclusion'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Copyright 2016 by Isaac D. Cody - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    +   - From a Declaration of Principles which was accepted and approved equally
+    by a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Disclaimer
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# ## Introduction
+
+
+    Computers contain two functional components- software and hardware. The hardware
+    is the physical parts that spin, compute, and use electricity to perform calculations,
+    but software is a more virtual concept. Essentially, software consists of programming
+    code that gives instructions to the hardware- telling the parts what to do. There
+    is “high level” software such as Internet browsers, word processors, music players,
+    and more. But the often overlooked component is the “low level” software known
+    as an operating system.
+
+
+    Operating systems are required for our personal computers to work. At an office,
+    or with a relatively inexpensive desktop computer the operating system used is
+    probably Microsoft’s Windows. Content creators, writers, and graphic artists prefer
+    Apple computers because they come with the creativity-focused OSX operating system.
+    Those two OS’s, Windows and OSX, have dominated the consumer market for many years.
+    However, an alternative operating system exists that excels in usability, customization,
+    security, and price. OS’s based off of the relatively unknown Linux meet and exceed
+    in all of those areas, but it remains an obscure option that many people have
+    not even heard of.
+
+
+    Linux is not an operating system by itself. It is a kernel, or the “core” of an
+    OS. Just as Windows NT is the kernel of Windows 7, Linux is the kernel of “distributions”
+    such as Ubuntu, Debian, Arch, Fedora, and more.
+
+
+    But why would anybody abandon the familiarity of Windows for an unheard of computing
+    environment? Linux is not only monetarily free, but it is also compatible with
+    a huge range of devices. Older computers, and especially ones that no longer work
+    can be rejuvenated with a Linux OS, making it run as though it were new again.
+
+
+    This book will explicate upon the benefits of switching to Linux, as well as serve
+    as a'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: beginners guide to installing, configuring, and using the most popular distribution.
+    Then, the terminal command line will be explained to tell how to take advantage
+    of the OS in ways not possible in other systems. Truly there are many advantages
+    to be gained by switching to Linux, and you just might find a suitable primary
+    OS to use on your computers by reading this book.
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# History of Linux
+
+
+    In the early 1990s Linus Torvalds was a student in Finland. Computers of the time
+    usually ran on either DOS or UNIX, two operating systems that were both proprietary
+    and difficult to use at the time. Torvalds sought to create his own operating
+    system as a hobby project (based off of UNIX), but the project quickly grew and
+    attracted more developers. The kernel continued to transform until it was portable
+    (usable on a variety of systems) and entirely usable for computing. A kernel is
+    not an OS, though, so Linux was combined with the GNU core utilities to create
+    a computing environment reminiscent of an operating system.
+
+
+    Then, 3rd party organizations took the base Linux product and added their own
+    high level software and features to it, thereby creating Linux “distributions”.
+    Linux remains a free hobby project even through today, and thus the kernel is
+    continuously receiving updates and revisions by Torvalds and the community. Throughout
+    the 2000s, many other 3rd parties saw the usefulness of the Linux environment
+    and they began to incorporate it into their production environments and corporations.
+    Today, Linux is known for being highly used in servers and business settings with
+    a small dedicated desktop following. Working towards the future, the kernel has
+    reached a level of popularity where it will never die out. Large companies revel
+    in Linux because of its advantages and usefulness, and so the kernel and various
+    distributions will always exist as the best alternative operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# **Benefits of Linux**
+
+
+    To compare how great of an option Linux is for a computer, we shall compare it
+    to the more familiar modern operating systems.
+
+
+    First, Linux is free. The background of GNU places Linux into a “free and open
+    source” mentality where most (if not all) of the software shipping with Linux
+    is free. Free and open source (FOSS) refers to two things- the software is both
+    monetarily free and the source code is also transparent. FOSS differs from proprietary
+    software in that everything is open with FOSS, and there are no hidden spyware,
+    fees, or catches involved with using it. The software is often more secure because
+    anybody can contribute to the readily available source code and make it better.
+    Because Linux and most of the software you can download for it is free, it is
+    a fantastic operating system for small businesses or individual users on a budget.
+    Certainly no quality is sacrificed by not charging a fee, because the Linux project
+    and its various distributions are community-driven and funded through donations.
+    Compare this to the cost of Windows, which is often many hundreds of dollars for
+    the OS alone. Microsoft Office is a popular document writing program suite, but
+    it also prices high. Free alternatives to these programs exist in Linux, and they
+    definitely compare in quality to the big name products.
+
+
+    Probably the largest complaint held by PC owners is viruses. Windows computers
+    are especially susceptible to them, and even anti-virus software companies are
+    always playing catch-up to the newest threats. Simply visiting a malicious website
+    is often enough to infect a computer, and many users choose Mac computers because
+    of the significantly less frequency of incidents relating to malware. Linux-based
+    operating systems are similar to Macs in that viruses are virtually non-existent.
+    This increased security makes switching to Linux a must for anybody concerned
+    about privacy, security, or reliability.
+
+
+    Linux is very popular within corporations and government agencies. This is because
+    high- powered servers and critical devices will run remarkably better with Linux
+    as the operating system. The OS is known for reliability and stability too. While
+    a Windows computer will need regular restarts and maintenance to “freshen” it
+    up and keep it from running slow, Linux servers'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'can run months or even years without a single restart. IT professionals inevitably
+    choose Linux to be the backbone of their network because of its reputation. Its
+    renowned stability is available to consumers as well on the desktop platform,
+    and it is definitely useful for us as well.
+
+
+    Perhaps the best benefit to using Linux is the speed. Low system requirements
+    mean that computers that are normally slow and groggy on Windows will be zippy
+    and quick on Linux. Users frustrated with computer slowdowns can replace their
+    OS for a more responsive experience. Furthermore, Linux can be installed on older
+    computers to reinvigorate them. So even though that old laptop may be too outdated
+    for the newest version of Windows, there will probably be a distribution of Linux
+    that will squeeze a few more years of useful life out of it.
+
+
+    Customization is a sought after feature in technology. Windows, and especially
+    OSX, limit the amount that you can do with your operating system out of fear that
+    the average user would break it. This is not the case with Linux, as it encourages
+    editing and changing visuals and functionality of the OS. Of course it is not
+    necessary, and the default configuration of most Linux distributions is extremely
+    stable and difficult to break unintentionally. But for those that love jailbreaking,
+    modding, and playing around with computers, Linux can facilitate the creative
+    side and even provide curious hackers with access to tools unavailable in other
+    systems.
+
+
+    And finally, Linux is compatible with a huge range of devices. Linux can run on
+    almost any architecture, meaning it can be installed on cell phones, desktops,
+    laptops, servers, game consoles, and “smart” devices. Hobbyists take pleasure
+    in simply installing Linux on niche, old, or quirky devices simply because they
+    can. For the average user, it means that Linux is probably compatible with your
+    computer.
+
+
+    Overall, Linux beats out the mainstream operating systems in many areas. All of
+    these things definitely make Linux the better choice for your computer, and you
+    should use it to gain access to these revered features. Artists, hackers, creative
+    individuals, small business owners, techies, non-techies, and just about everyone
+    can find something to like about Linux. The wide range of distributions means
+    there is something for everyone, so install Linux today to see what you can gain
+    from it.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Linux Distributions
+
+
+    Installing Linux can be done in a few ways, such as burning an image of the OS
+    onto a disc, writing it to a USB, ordering a Live CD from online, formatting an
+    SD card, or trying one out via Virtual Box. Ultimately though you cannot just
+    install “Linux” and have a usable OS. Because Linux is just the kernel, you will
+    need the other software as well that gives you graphical user interfaces, Internet
+    access, etc... As previously mentioned, “distributions” of Linux exist. Distributions
+    are versions of Linux containing preinstalled programs and a distinctive style
+    and focus. A distribution takes the core of Linux and makes it into an entire
+    operating system fit for daily use.
+
+
+    There are a mind-boggling amount of distributions. Some have specific purposes,
+    such as Kali Linux for hacking, Sugar Linux for education, or Arch Linux for customization.
+    Others are more general purpose, such as Ubuntu and Debian. Getting the most out
+    of installing Linux means you will need to understand about different distributions
+    and make a choice as to which will work best for you. Read the following sections
+    to understand what a few of the most popular distributions are used for.
+
+
+    Ubuntu is the most widely known distribution at the time of writing. Throughout
+    the 2000’s it gained popularity for being user friendly and intuitive. Based off
+    of the earlier Debian distro, Ubuntu is very similar to Windows computers in use,
+    meaning it is an excellent choice for the Linux newbie. Because of this, we will
+    be installing an Ubuntu variant later in the book. Canonical Ltd is the company
+    that actively develops Ubuntu- yearly versions updates mean that the OS is always
+    up to date and usable with emerging technology. Despite this, Ubuntu still work
+    on many older devices at a reasonable speed. Applications can be installed from
+    a “store” of sorts, meaning that the beginning user does not need to understand
+    the often complicated command line. Conclusively, the Ubuntu distro is a great
+    choice for the first time Linux user, and you should install it to learn how Linux
+    works without diving into the harder distros.
+
+
+    For more specific cases of computing, Ubuntu has various sub-distributions or
+    “flavors”. These are distros that use Ubuntu as a base but have a different focus,
+    such as Lubuntu’s emphasis'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'on lightweight applications. Here are a few:
+
+
+    +   * Lubuntu – A version of Ubuntu designed to run on older hardware or computers
+    with limited resources. The install file is less than 1GB, and the hardware requirements
+    are much lower than standard Ubuntu. Use this distro for revitalizing older computers
+    but while retaining the usability of Ubuntu.
+
+
+    +   * Ubuntu Studio – Ubuntu for artists including digital painters, sound producers,
+    and video editors. Ubuntu studio is Ubuntu but with editing tools installed already.
+
+
+    +   * Kubuntu – Ubuntu reskinned with the KDE desktop environment. The look and
+    feel of Kubuntu differs from the classic Ubuntu feel by providing a desktop environment
+    that is more traditional to other operating systems.
+
+
+    +   * Xubuntu is another lightweight distro that is not as quite as bare bones
+    as Lubuntu. Xubuntu sacrifices size and hardware requirements to provide an OS
+    that works on old, but not too old computers. It certainly is more aesthetic than
+    other minimal Linux distributions, and it also uses Ubuntu as a base for user-friendliness
+    and familiarity.
+
+
+    +   * Ubuntu Server – A Ubuntu variant more suited to industrial and corporate
+    needs, Ubuntu server can be run headless and provide functionality for other Linux
+    systems in a network.
+
+
+    +   * Mythbuntu – A variant with TV streaming and live television programs preinstalled.
+    This is a great distro for converting old computers into “smart TV” devices via
+    Kodi.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'In conclusion, the wide range of Ubuntu distributions mean that there is a
+    beginner OS for everybody. It is highly recommended that you take advantage of
+    the ease of use features and general familiarity contained within Ubuntu. It serves
+    as a stepping stone OS, one that will gradually introduce you to Linux. Definitely
+    install it as your first Linux experience.
+
+
+    Linux Mint is a highly used OS in the Linux world. “Powerful and easy to use”,
+    Mint contains FOSS and proprietary software as well with the purpose of being
+    a complete experience for Linux beginners. While not totally Linux-like, Mint
+    is an excellent choice for a first-time alternate operating system. It consistently
+    ranks among the most used operating systems ever, and its default layout is very
+    similar to Windows facilitating a smooth transition into the Linux world.
+
+
+    Debian is one of the oldest Linux distributions, being created in 1993. Combining
+    with the Linux philosophy, Debian keeps stability and solidity as the guiding
+    development principal. Certainly the amount of time Debian has been around is
+    an indicator of refinement, so those seeking an experience free of bugs and glitches
+    can turn to Debian. Free and open source software also has a home in Debian, because
+    most of the software contained within is FOSS. This does not mean that you are
+    limited, though, because there is an official repository of non-free software
+    for proprietary programs such as Adobe Flash. Debian is a decent choice for beginners,
+    but Ubuntu still stands as the best introductory OS. Install Debian for stability,
+    FOSS, and a wholly Linux experience.
+
+
+    Slackware is an OS that goes back even further than Debian. It stays close to
+    the original Linux intent, meaning that you will have to install your own GUI
+    and program dependencies. Because of that fact, Slackware is mostly for intermediate
+    Linux users, as beginners will be confused at the unfamiliar methods. However,
+    if you want to experience a Linux distribution that is closer to the UNIX roots,
+    Slackware can provide for you.
+
+
+    Fedora is an OS more oriented towards workstations and business uses. Even Linus
+    Torvalds himself is a user of Fedora, attributing to the operating system''s popularity
+    and use. Fedora is'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: 'updated very often, meaning that it is always up-to-date and on the cutting
+    edge of Linux technology. Security and FOSS are also a focus within the OS, which
+    is why it is commonly used on endpoint computers in small businesses. There could
+    be a challenge with working with Fedora, though, so consider it as an intermediate
+    OS.
+
+
+    Arch Linux is another distribution, but one that is mostly designed for experienced
+    users. The OS comes as a shell of a system that the user can customize to their
+    liking, by adding only the programs and services that they want. Because of this,
+    Arch is difficult to set up, but a rewarding and learning experience as well.
+    By building your own personal system, you will understand the deeper Linux concepts
+    that are hidden from you on the higher level distributions. Install this advanced
+    OS after becoming very comfortable with the basics.
+
+
+    And finally, there is an abundance of other unique distributions that are worth
+    mentioning. In the following list, we will talk about a few of them. Just note
+    that there are so many distributions, this entire book could be filled describing
+    each and every niche use.
+
+
+    +   • CrunchBang – A Debian-based distribution that aims to be less resource intensive.
+    It is simple and without some of the bloatware that some distributions include
+    by default. CrunchBang can run fast and be efficient at computing.
+
+
+    +   • Android – The popular phone OS is actually a Linux variant. Since many phones
+    have lower specifications than full desktop PCs, the OS is a great choice for
+    laptops, touchscreen devices, or home media computers. Furthermore, you can use
+    many of the Google Apps from the Play store, meaning that thousands of apps, games,
+    and utilities are available to be used on your phone and computer. While it is
+    not recommended as your first Linux OS, it is definitely a neat choice for experimenting
+    with older computers or children’s PCs.
+
+
+    +   • Chrome OS – Another mobile-type OS developed by Google, Chrome OS is'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'essentially a lightweight Linux browser meant for online use. Google has this
+    OS preinstalled on their ChromeBooks, which have lower specifications than other
+    laptops. But the OS is really only a full screen Chrome browser, so the OS is
+    perfect for users wanting an uncomplicated experience or a dedicated Internet
+    machine.
+
+
+    +   - Tiny Core – An OS measured in megabytes, Tiny Core is for antique computers
+    or embedded devices. This OS is mostly for intermediate users that have a hobby
+    project or dedicated purpose in mind.
+
+
+    +   - Damm Small Linux – Another minimal Linux variant, this OS is best for quick
+    access to a Linux command line.
+
+
+    +   - openSUSE – This is a distribution for experienced computer users. With many
+    tools for administrators and program developers, openSUSE is the best OS for users
+    confident in their skills.
+
+
+    Positively the number of operating systems based off of the Linux kernel is astounding.
+    With a huge amount of choices, you might be confused as to where to start and
+    how to install it. When in doubt (and as we will demonstrate shortly), install
+    Ubuntu or one of its variants. The OS is great for beginners and makes the Linux
+    transition smoother. But as you increase in skill and wish to learn more about
+    Linux, you can always install another operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Bootng Into Linux
+
+
+    If you are ready to take the plunge into a Linux based distribution, the first
+    thing you must do is back up your files. Overwriting the OS on your hard drive
+    will erase any data contained within, meaning you must back up any pictures, music,
+    or files you wish to keep after the transition. Use an external hard drive, or
+    an online data storage site (such as Google Drive) to temporarily hold your files.
+    We are not responsible for you losing something important, back it up!
+
+
+    Next we will need to choose an OS. This book will use Ubuntu 16.04 as an extended
+    example, and it is recommended you do the same. Navigate to Canonical’s official
+    website ([http://www.ubuntu.com](http://www.ubuntu.com)) and acquire a copy of
+    the OS. You will download the image from the site to your computer.
+
+
+    Next we need to obtain an installation media. This can be a DVD, a USB drive,
+    an SD card, or any other writable media that your computer can read. The only
+    restriction is that the device must be able to hold an image as large as the OS
+    download, so 4GB should be suffice. Remove everything from the drive, as it will
+    also be formatted.
+
+
+    Download a tool for writing the image file. For DVDs install Imgburn ([http://www.imgburn.com](http://www.imgburn.com/)),
+    and for flash media download Rufus ([https://rufus.akeo.ie](https://rufus.akeo.ie)/).
+    The most common method of OS installation is to use a 4GB USB drive, and it is
+    more recommended. Insert your media, start the appropriate program, select the
+    OS image that was downloaded, and begin the writing process. It will take some
+    time, as the image needs to be made bootable on the media. When it is finished,
+    you can shut down your computer fully.
+
+
+    This is the point to make double sure you are ready to install Linux. Check that
+    your files are backed up, understand that you will be erasing your current OS,
+    and preferably have a'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'Windows/OSX install disc handy in case you decide to switch back. If you are
+    indeed ready to switch, continue.
+
+
+    With the installation media still inserted, turn on your computer. The first screen
+    that you will see is the BIOS / UEFI POST screen, and it will give a keyboard
+    button that you should press to enter setup. This screen shows every time you
+    boot, but you probably pay no attention to it. Press the indicated key to enter
+    the BIOS setup. If you are too slow, the screen will disappear and your usual
+    OS will begin to load. If this happens, simply shut the computer back down and
+    try again.
+
+
+    Once within the BIOS / UEFI, you will have to navigate to the “boot order” settings.
+    Every computer’s BIOS / UEFI is slightly different, so we cannot explain the process
+    in detail. But generally you can follow button prompts at the bottom of the screen
+    to understand how to navigate. After arriving at the boot order settings, place
+    your boot medium at the top of the list. As an example, if you used a USB drive,
+    then you would see its name and have to bring it to the top of the list. These
+    settings control the order in which the PC searches for operating systems. With
+    our boot medium at the top of the list, it will boot into our downloaded Linux
+    image instead of our usual OS. Save your settings and restart the computer. If
+    everything was done correctly the computer will begin to boot into Ubuntu.
+
+
+    But if something goes wrong, try troubleshooting it with these tips:
+
+
+    +   * Primary OS boots instead of Linux – You probably did not save the settings
+    with your alternate boot medium at the top of the list. The PC is still defaulting
+    to the internal HDD to boot.
+
+    +   * “No boot media found” – Did you “drag and drop” your Linux image onto the
+    media instead of writing it? Without explicitly telling the computer it is bootable,
+    it will not know what to do with the data files on the media. Alternatively, you
+    could have'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'a corrupted download, or an incomplete write. Try downloading the image again
+    and making another installation.
+
+
+    +   “Kernel Panic” – Something is wrong with the boot process. See above for the
+    possibility of a corrupted installation. Otherwise, the image you are trying to
+    install may not be compatible with your hardware. IF you see any other error messages,
+    do an Internet search on them. For prebuilt computers and laptops, search for
+    the model name and Linux to find other user''s experiences. Finally, you might
+    have attempted to install a 64-bit image on a 32-bit computer. With your next
+    image download, specifically select a 32-bit image.
+
+
+    +   “Problem reading data from CD-ROM...” – Try using a different install medium,
+    because some distributions no longer support CD and DVD installations. USB drives
+    are recommended.
+
+
+    +   PC seems to boot, but there is nothing at all on the screen – If you are using
+    a dedicated graphics card (compared to integrated GFX from the CPU), Linux might
+    not be recognizing it completely. Plug your monitor into the motherboard directly
+    instead of the card.
+
+
+    But most of those problems are rare or simply due to user error. Linux has high
+    compatibility and is relatively easy to install/use past the initial installation.
+    The typical user will have Ubuntu boot successfully at this point, and they will
+    be presented with a working computing environment.
+
+
+    The desktop you see is referred to as a “Live CD”, which is pretty much a demonstration
+    of the OS and how it works. You have not actually installed the OS to your hard
+    drive yet, as it is still running directly from your boot media. It is a chance
+    for you to test out Linux without actually removing your primary OS, so take the
+    opportunity to explore how Linux distributions'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: work.
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Ubuntu Basics
+
+
+    Similar to Windows, Ubuntu has a desktop graphical user interface. Applications
+    open within Windows that can be maximized, minimized, closed, and moved around
+    with the top bar. Ubuntu also has a “task bar” of sorts that functions much like
+    its Windows counterpart- icons resemble programs that can be launched by clicking
+    on them. The “Windows Button” (called the Dash Button) on the task bar is used
+    to open a search functionality from which you can type in the name of a program
+    or file on your computer to quickly start it.
+
+
+    Furthermore, there is a bar at the top of the screen that works like the “menu”
+    bar of other operating systems. This is where drop-down menus such as “file” ,
+    “edit”, “help”, etc… will appear once a program is active.
+
+
+    Besides a few nominal differences Ubuntu functions is a very familiar way. In
+    fact, many of the programs that you may already use on other operating systems,
+    such as Firefox, are available and sometimes preinstalled on Linux distributions.
+    With enough experimentation and practice, you will be able to navigate the GUI
+    of Ubuntu as if you were a professional. Continue exploring the system, and continue
+    if you are ready to replace your main operating system with this Linux one.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Installing Linux
+
+
+    On the desktop, you will see an “Install Ubuntu 16.04 LTS” icon. Double clicking
+    it will launch an application that makes installation very easy. If you are not
+    connected to the Internet, do so now by plugging in an Ethernet cord or by connecting
+    to Wi-Fi from the top right icon. Select your language and click “continue”. The
+    next prompt will ask whether you would like to download updates and install third-party
+    software during the OS installation. These options are highly recommended for
+    beginners, so check them and click “continue”.
+
+
+    The application will move on to another screen asking for your install method.
+    There are various options, such as erasing the disk altogether, installing alongside
+    your primary OS, or updating a previous version of Linux. Select an option that
+    works best for you. If you are still hesitant about making a full switch, elect
+    to install Ubuntu as your secondary OS. That option will allow you to choose which
+    OS to boot into after the BIOS screen. Nevertheless, select your option and click
+    “install now”.
+
+
+    While Ubuntu installs, you can specify a few other options, such as your time
+    zone, computer name, account name, and password. The entire installation should
+    not take too long, but it will take long enough that your computer should be plugged
+    in (if it is a laptop). After finishing, the OS will require a reboot. Congratulations,
+    you now have a usable Linux system on your computer. Throughout the next chapters
+    in this publication we will focus on Linux concepts, how do achieve certain tasks,
+    and how to further your knowledge of your system.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Managing Hardware and Software
+
+
+    Hardware in Linux is actually much easier to manage than hardware on Windows.
+    Instead of downloading individual drivers for devices, most of the drivers are
+    built-in to the OS itself. This means that most popular devices can simply be
+    installed with no further steps involved before they are usable. Printers, networks,
+    hard drives, and other common devices are included-fiddling with drivers is not
+    usually needed on Linux.
+
+
+    However, powerful graphics cards and other specific hardware will need proprietary
+    drivers from that company to function to full efficiency. Because although your
+    graphics card works by default with Linux, the secret and often hidden technology
+    within can only be fully utilized with that company''s software. On Ubuntu the
+    process is straightforward- open the “additional drivers” application and let
+    the OS search for you. After determining whether you have the devices, it will
+    ask you which version of the driver to use. Follow any on-screen prompts to enable
+    the 3rd party drivers. For any devices that do not appear, do Internet research
+    on the manufacturer’s website to determine whether they released a specific Linux
+    driver that you can download.
+
+
+    Software is another aspect of Linux that excels over Windows. Much like an Apple
+    computer, Ubuntu has an app store of sorts from which you can search through repositories
+    of applications that are compatible with your device to download and install with
+    just a few clicks. Just search for the “Ubuntu Software Center” from dash to open
+    the application. From there you can browse individual categories such as “Games”,
+    “Office”, or “System” for a list of programs, or you can search directly by name.
+    After finding a program, click on it and then queue up the download by clicking
+    “install”. After authenticating yourself the software will automatically download
+    and install. From there, the application can be run by searching for it in the
+    dash.
+
+
+    Another method of installing software is available through the terminal, but we
+    will discuss that later. Ubuntu is not totally limited to software found in the
+    app store, because programs downloaded from the Internet can also be installed.
+    Once again, we will touch on that subject after discussing the terminal.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: Overall, managing hardware and software in Ubuntu is effortless. Whether installing
+    a new hardware device or downloading a popular program, Linux distributions make
+    you're computing experience trouble-free. That is not to say that Linux is wholly
+    meant for beginners, because as we will learn Linux is definitely a great choice
+    for power users and experienced admins.
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# The Command Line / Terminal
+
+
+    Before modern computers, hardware and software were interfaced by using keyboards
+    exclusively. The mouse brought graphical interfaces and simplified the process,
+    but many functions remained text-only as to not present complicated options to
+    end users. In Linux, this process continues today. There exists the GUI that is
+    present on most distributions, but every Linux distro also has a built-in text-based
+    interface as well, from which powerful commands can be typed and executed. Think
+    of the terminal as a much more powerful command prompt, because you can completely
+    use your computer exclusively through the terminal alone. With enough knowledge,
+    a user can actually browse the Internet, install programs, manage their file system,
+    and more through text.
+
+
+    Begin the terminal by launching it from dash or by using the Ctrl+Alt+T keyboard
+    shortcut. A purple window will open and wait for your input. You can type a command
+    and press enter to activate it. For our first command, enter “ls”. This is short
+    for list, and it will display all of the files within our current directory. You
+    will be able to see the files and folders in Home, Ubuntu’s main user folder.
+    If you are lost, you can always type in “pwd” to print the working directory and
+    display the name of the folder you are currently browsing. As you learn commands,
+    it helps to write them down as to better internalize their use.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# ## Managing Directories
+
+
+    Directories, another name for folders, work the same as they do in other operating
+    systems. Folders hold files, and you must be currently accessing a directory in
+    order to interact with the files inside of it. You can use the terminal command
+    "cd" to change directory and move about the file system. As an example, typing
+    "cd Desktop" from the Home folder will transfer you to that folder. Now using
+    "ls" will not show anything (unless you added files to the desktop). To back out,
+    type "cd ..". Practice navigating around the file system in this fashion; cd into
+    a directory and ls to view the files.
+
+
+    Because you are typing commands, Linux expects your input to be exact. If you
+    misspell a command it will simply not work, and if you type a folder or file incorrectly
+    it will try to reference something that does not exist. Watch your input carefully
+    when using the terminal.
+
+
+    Opening a file is done with a different command –“./”. The period is used to start
+    the specified file, so if you were attempting to open a picture it could be done
+    like so: "/.house.png". Both the period and the slash are necessary, as it denotes
+    that you are running a file within the current directory. When you run a file
+    it will be opened with the default application assigned to the file type, so in
+    the case of a picture it will most likely be opened in an image viewer.
+
+
+    You can also create and remove directories and files through terminal as well.
+    For this example navigate to the Home directory. As a shortcut you can type "cd
+    ~" to change the directory to your Home, because the tilde key is short for "the
+    current user’s home". Make a directory with the "mkdir" command; type, "mkdir
+    Programming" to create a new folder with that title. You can CD into it, or you
+    can go to the GUI and enter it to prove that you have indeed created a new folder.
+    Now remove that directory by going Home and typing "rmdir Programming". Without
+    hesitation, Linux will remove the specified directory. Similarly, using "rm" will
+    remove the specified file.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'Linux has a design philosophy that many users are not used to. In Windows and
+    OSX, the OS will almost always double check that you want to commence with an
+    action such as deleting a file or uninstalling a program. Linux distributions
+    believe that if you are imitating an event, you definitely mean to follow through
+    with it. It will not typically confirm deleting something, nor will it display
+    any confirmation messages (file successfully deleted). Rather, the absence of
+    a message indicates the process completed successfully. While the philosophy is
+    somewhat dangerous (because you could potentially ruin your OS installation without
+    warning), it serves as a design contrast to other operating systems. Linux gives
+    you complete control, and it never tries to hide anything or obscure options because
+    they might be too complicated. It takes some time to get used to, but most users
+    agree it is a welcome change to be respected by the technology they own.
+
+
+    This does not compromise security, however, because any critical action requires
+    the “sudo” command as a prefix. Sudo stands for “super user do”, meaning that
+    the user of the highest permissions is requesting the following command. Any sudo
+    entry will require an administrator password, so malicious software or un-intending
+    keyboard spammers cannot accidentally do damage without knowing the password first.
+    A lot of the commands we use in this book require sudo permissions, so if the
+    command fails to complete with a message explaining it does not have enough permissions
+    you can retry with sudo.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Apt
+
+
+    Learning the terminal opens up computer functions that are not available through
+    the GUI. Also, you can shorten the amount of time it takes to do many things by
+    typing it instead. Take, for instance, the amount of work required installing
+    a program. If you wanted to download the Google Chromium browser, you would have
+    to open the software center, type in the name of the program, locate the correct
+    package, mark it for installation, and execute the action. Compare that to typing
+    "sudo apt-get install chromium-browser" into the terminal. With that one command,
+    Ubuntu will save you many minutes.
+
+
+    Apt (advanced packaging tool) is the command associated with managing applications
+    in Ubuntu. Other distributions may use their own tool, but apt is commonly used
+    for its large repositories and simple commands. Packages are installed with the
+    "apt-get install" formatting, where you specify the name of the program you wish
+    to install. In the example above we specify the Chromium program with the package
+    name "chromium-browser". Given that you do not know every package name, there
+    is another command "apt-cache search" that can be used to locate package names
+    matching the supplied string. So "apt-cache search chromium" would show "chromium-browser",
+    and you could specify the correct name to install.
+
+
+    The usefulness of apt extends beyond that, as you can use it to update every single
+    application on your system with a few commands. Use "apt-get update" to refresh
+    the repository, then use "apt-get upgrade" to have every application upgrade itself
+    to the newest version. Windows OS users should be envious of this easy process,
+    because updating a Windows programs requires uninstalling and reinstalling with
+    the newest version.
+
+
+    As time goes by, you might need to update the Ubuntu version. Every year there
+    is a new release, and it can be installed with "apt-get dist-upgrade". Staying
+    up to date with the newest fixes and additions ensures your Linux system will
+    be working healthy for a long time. You might have even noticed that installing
+    and updating the system does not require a reboot; a feature that contributes
+    to Linux computer’s lengthy uptimes and stability. Lastly, removing an application
+    is done with "apt-get remove" followed by the package name.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'To run the programs that we install we can either search for them from the
+    dash, or we can just type the package name into the terminal. Typing “chromium-browser”
+    will launch it just the same as double clicking its icon would. Some programs
+    must be started from the command line by typing the package name exclusively because
+    the package does not show up in a dash search. Overall utilizing the terminal
+    is a time-saver and a great way to practice moving away from slow and cumbersome
+    graphical user interfaces.
+
+
+    Easy installation and management of packages is a Linux feature that becomes highly
+    useful- master it to improve your experience. There is a third method of installing
+    packages, and it involves downloading and launching .deb files from the Internet.
+    Some software are bundled in that format, and they act similar to .exe files in
+    that they just need to be double clicked to begin the installation process.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# More Terminal Commands
+
+
+    Here are a few more basic terminal commands that you should internalize and put
+    to use in your system. Fully understanding the basics will provide a decent foundation
+    upon which to build on later.
+
+
+    +   cp – “cp image1.jpg image2.jpg” – copies (and renames) the first parameter
+    to the second supplied parameter. Copy directories with the −r switch.
+
+
+    +   mv – “mv cat.jpg /home/Pictures” – Move the specified file to the given directory.
+
+
+    +   shutdown – “shutdown −h now” – shuts down the computer. −h is a tag meaning
+    “halt”, but you can also use −r to restart. Now refers to the time until it executes.
+
+
+    +   date – “date” – Displays the current date and time.
+
+
+    +   free – “free −g” – Show the current RAM usage of programs.
+
+
+    +   du – “du −h” – Give the HDD usage.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '+   ps – “ps” – Show the active processes using CPU time.
+
+
+    +   touch – “touch memo.txt” – Used to create a new blank file in the current
+    directory with the specified name.
+
+
+    +   ifconfig – “ifconfig” – The Linux equivalent of ipconfig, it shows network
+    information.
+
+
+    Some commands have “tags” or “switches” associated with them. These are the letters
+    preceded by dashes. They all do different things, and learning which switches
+    to use for what purpose is best found through that command’s manual pages. See
+    the advanced section for opening the manual.
+
+
+    One of the most useful programs from the command line, nano is a simple text editor
+    that can be used to edit files and quickly make changes to settings or scripts.
+    It is accessed by typing “nano” into a command line. You can type a file as needed
+    and then press ctrl+x to save and quit. As you save, you will give it the name
+    and file extension associated with it; notes.txt will create a text file with
+    the name “notes”. Alternatively, you can edit a file by typing “nano notes.txt”.
+    In that example, we open notes in the editor and display its contents in an editable
+    state.
+
+
+    Nano may be very simple, but it is undoubtedly powerful and a time saver for quick
+    changes and file creation.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# ## Connecting to Windows / Mac Computers
+
+
+    Windows and OSX computers have built-in networking functions such as workgroups,
+    domains, shares, and more. Integrating Linux computers into the network infrastructure
+    that has been dominated by Windows server computers is fairly easy, though, and
+    correct setup will allow you to see Windows shares as well as join corporate domains.
+
+
+    The first step to intercommunication is installing the “samba” package. Either
+    find it through the software center, or type in “sudo apt-get install samba” to
+    obtain and install the neccessary software.
+
+
+    Sharing files from your Ubuntu machine to other computers involves creating a
+    samba share. Samba runs off of the same protocols that other popular file sharing
+    methods use, so files shared from the Ubuntu machine can easily be seen on Windows.
+    After installing samba, use “sudo nano /etc/samba/smb.conf” to start editing the
+    configuration file. At the very bottom of the file add these lines:
+
+
+    ```
+
+    [share]
+
+
+    comment = File Share from Ubuntu
+
+
+    path = /srv/samba/share
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '```
+
+    browsable = yes
+
+
+    guest ok = yes
+
+
+    read only = no
+
+
+    create mask = 0755
+
+    ```
+
+
+    Now, create the folder specified in “path” (sudo mkdir -p /srv/samba/share) and
+    set permissions (sudo chown nobody:nogroup /srv/samba/share/) so that anybody
+    can access its contents. Place any files you want to share within that directory,
+    and then restart the service (sudo restart smbd, sudo restart nmbd) to make the
+    share active. Lastly, log on to your other computer and navigate to the network
+    shares. In Windows, they will appear in the left panel of file explorer. If the
+    share does not appear automatically, type the IP into the file path box (find
+    Ubuntu IP with ifconfig). You are now able to access Ubuntu’s files from other
+    operating systems.
+
+
+    You might also need to see files from other operating systems in the Ubuntu computer.
+    Firstly, open the Ubuntu file explorer. From the menu bar, click “files”, and
+    then select “connect to server”. In the resulting box, type the URL of the share
+    you wish to access. It could be an ftp address (ftp://ftp.test.com), an http address
+    (http://test.com), or a share address (smb://share/Folder). Without any additional
+    hardware or setup, you can see the files this way.
+
+
+    Finally, joining a domain such as Active Directory allows your computer to interact
+    with other operating systems on the network and achieve other business-oriented
+    tasks. Whether you have a small home network, or whether you are adding Linux
+    computers to a corporate domain, the process is the same. Install a few extra
+    packages (realmd, sssd, sssd-tools, samba-common,'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'samba-common-bin, samba-libs, krb5-user, adcli, packagekit). While installing
+    them, it will ask for your domain name. Enter it in all caps. Enter “kinit -V
+    adminname” replacing that with an actual admin account name in the domain. After
+    entering the password you will have been authenticated to the domain. Now joining
+    it is done with “realm --verbose join -U adminname domainname.loc”.
+
+
+    If it fails, it means the DNS is misconfigured on our device. Type “echo ‘ad_hostname
+    = nix01.domainname.loc’ >> /etc/sssd/sssd.conf”, then “echo ‘dyndns_update = True’
+    >> /etc/sssd/sssd.conf” and finally use “service sssd restart” to restart with
+    those new settings. The first line sets the FQDN of our computer, so the line
+    needs to be changed according to our domain settings. After a successful restart
+    with correctly configured settings the terminal will claim it has joined the domain.
+    Test this with “realm list”. Now connected to AD you can administer the Linux
+    device from your server!
+
+
+    For most users, however, creating shares and joining domains is far beyond the
+    connectivity needs. Simple file sharing is much better done through USB drive
+    transfers or a service such as Dropbox. Indeed Dropbox can be installed on the
+    big three operating systems and files can be synced between them with no additional
+    setup. On Ubuntu either download the .deb file directly from the website, install
+    it from the software center, or use “sudo apt-get install nautilus-dropbox” to
+    obtain the application. Within the Dropbox folder, place any files that you wish
+    to transfer between computers and it will automatically be downloaded and updated
+    on all other Dropbox computers you own.
+
+
+    Using other operating systems is not complicated when you connect them together.
+    So long as the computers are on the same network you can create file shares, join
+    them into a domain, or use a simple service such as Dropbox.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Useful Applications
+
+
+    Here is a list of the best Applications for your Ubuntu system that will help
+    you get the most out of your computer.
+
+
+    +   - Office Productivity – Abiword, VI, Emacs, LibreOffice, nano
+
+
+    +   - Multimedia – VLC, DeaDBeef, Cmus, AquaLung, MPlayer, Miro
+
+
+    +   - Web Browsing – Firefox, Chromium, Midori, W3M
+
+
+    +   - Creativity – Aud
+
+
+    +   - acity, GIMP
+
+
+    +   - Other – Kupfer, Thunderbird, qBittorrent
+
+
+    And for programs that help with usability, there are so many varied choices that
+    it depends on what you are trying to accomplish. The best way to discover a program
+    is to search on the internet for a functionality you wish to add. For example,
+    if you are searching for a quick way to open and close the terminal you might
+    come across the program “Guake”. Or if you are wanting audio within the terminal
+    it might recommend “Cmus”. Finding the perfect applications for you is part of
+    the customization aspect of Linux, and it makes every install a little more personal
+    for each user.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# **Administration**
+
+
+    If you are looking for a “Control Panel” of sorts, you can find shortcuts to administrative
+    tools such as network, printing, keyboard, appearance, and more from within the
+    “System Settings” application. Some Ubuntu variants use “Settings Manager” or
+    just “Settings” for the same purpose.
+
+
+    After launching it there will be links to other default configuration applications;
+    just click on whichever you need to change to obtain a GUI for settings a few
+    options. But not everything administrative is found through the GUI. Most low-level
+    settings are only available through the command line, and as such you will need
+    to know exactly what to type to edit them.
+
+
+    As an example, adding a new user to Ubuntu requires the “adduser” command. By
+    following the command with a username, the terminal will prompt for basic information
+    and a password. Setting that new user to be an administrator is done with “usermod
+    -aG sudo nameofuser”. Moreover a user can be deleted with “deluser”. These options
+    are difficult to find through GUI but can be done in seconds with a terminal.
+
+
+    “Task Manager”, or the administration of running applications within Ubuntu is
+    done through the terminal as well. The program “top” is standardly installed on
+    all distributions (mostly), and starting it displays a list of all currently running
+    processes as per task manager. By default though, the list of processes will be
+    updated and moving around in such a way that it might be difficult to read the
+    data we need. Press the “f” button to bring up a sorting list, navigate to “PID”
+    with the arrow keys and press “s” to set over that option. Now we escape to return
+    to top and we can now scroll through the list with page-up and page-down to view
+    the tasks. Say, for instance, we want to close the program “Pidgin” because it
+    is unresponsive. Find it in the list (or search for it with the above filtering
+    commands) and take note of the PID (Process ID) number. Press “q” to quit top,
+    then type “kill 4653” obviously replacing the number with the PID. At any time
+    within top you can press “h” to see a list of keyboard shortcuts for various actions.
+    If top is'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'too difficult to use consider installing “htop”, a “human readable” version
+    of the program. It actually shows neat ASCII graphs detailing CPU, RAM, and other
+    usage statistics. Search for a program with F3, then use F9 and Enter to kill
+    it.
+
+
+    As for services, you might have noticed we use the “service” command to change
+    their status. So starting a web server would be done with “service apache2 start”,
+    restarting it done by replacing start with restart, and stopping it by replacing
+    start with stop. Finding a list of services is done with “service --status-all”.
+    Services are daemons, or background tasks that are continuously running. They
+    can be gathering data, running a service such as Bluetooth and Wi-Fi, or waiting
+    for user interaction.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# **Security Protocols**
+
+
+    Linux has a focus on security in general, which contributes to its use in corporate
+    and server settings. Taking advantage of the security protocols means that you
+    are more secure than other operating systems and less likely to have your computer
+    compromised. This requires good security principals, of course, and always being
+    safe online. A computer without a password is hardly protected at all.
+
+
+    One feature brought over from UNIX is file permissions. Every file has a set of
+    permission- the owner, group, and rights. The command “chown” changes the owner
+    of a file, “chgrp” changes the group, and “chmod” changes the rights associated
+    with the file. Discovering the permissions of a file or folder is done by typing
+    “ls -l filename”. It will return an initially confusing line such as “- rw- rw-
+    r--”. “R” means read, “W” stands for write, and the third option is “X” for execute.
+    The three sets are respectively owner, group, and other. So our example file above
+    has read and write permissions set for the owner and its group, but only read
+    permissions for other users. This means that the owner and the group he belongs
+    to (most likely sudo users) have permission to both access the file and change
+    its contents, but other users on the network or PC can only view the contents
+    and not edit it. Script files will need to have the X in order to be executed,
+    and without it they cannot be run.
+
+
+    Most people will only need to use the “chmod” command to change the permissions
+    of files they wish to use. We use the command and a set of numbers to set the
+    permission of the file. “chmod 777 test.sh” makes the file readable, writable,
+    and executable by all users anywhere because each specification (owner, group,
+    other) has the number 7 attached to it. Numbers determine the permissions that
+    entity has, and the number used is calculated like so:
+
+
+    +   - Start with the number 0.
+
+    +   - Add 4 for adding readability.
+
+    +   - Add 2 for write-ability.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "+   - Add 1 for executable-ness.\n+   \n+   - The number you have left determines\
+    \ the permissions.\n\n6 would be read/write, but 1 would only be executable. 5\
+    \ would be readable and executable, but not changeable. In our 777 example, we\
+    \ set owner, group, and others to all be 7. This is not particularly good security,\
+    \ because that means anybody anywhere can mess with that file. A more conservative\
+    \ permission set would be 775. Use security permissions advantageously for secure\
+    \ computing.\n\nSecurity within Linux expands beyond just permissions. Ensure\
+    \ that you practice good security practices, and that you are following common\
+    \ sense in regards to security- install only needed programs, do not follow all\
+    \ internet advice, do not use sudo too often, use passwords, use encrypted networks,\
+    \ keep software up to date, encrypt important files, and make regular backups.\
+    \ As a final word of advice, look into using a distribution with SELinux, a module\
+    \ that supports AC and other security policies."
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# ## Scripting
+
+
+    Bash is the “programming language” or the terminal. When we type a command, we
+    are doing so within bash. A script is a list of bash commands that execute in
+    order, meaning we can create a script with a list of commands and run it to save
+    time or automate terminal tasks that we normally have to type. As an intermediate
+    and advanced Linux administrator, you can use scripts to greatly shorten the amount
+    of work required for repetitive or constantly running tasks.
+
+
+    To start a script, create a new file “script.sh” within nano. The first line must
+    always be “#!/bin/bash” to mark it as a bash script. Type the following lines
+    for your first script.
+
+
+    ```
+
+    echo “What is your name?”
+
+    ```
+
+
+    ```
+
+    read name
+
+    ```
+
+
+    ```
+
+    echo “Hey, $name. Here is your current directory, followed by the files.”
+
+    ```
+
+
+    ```
+
+    Pwd
+
+    ```
+
+
+    ```
+
+    Ls
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'Save the script. Now we have to set the permissions to allow it to be run.
+    Use “sudo chmod 777 script.sh”, and then run the script with “./script.sh”. So
+    long as you copied the script exactly, it will ask for your name and then show
+    you your directory and files. Take the concept and expand it further in your own
+    scripts. You can run commands from installed programs as well, so you can write
+    a script that automatically joins a domain, or one that connects to the network
+    specified. Shutting down remote computers is a great automatic task as well.
+
+
+    Scripts can either be run manually or set to execute at certain times. To run
+    a certain script every time the user logs in, open the “startup applications”
+    program from dash and create a new app with the script as the source. Now every
+    time that user logs in the script will run automatically. This is useful for setting
+    up certain options or starting background services without requiring the user
+    to do it themselves.
+
+
+    Scheduling tasks for a certain time can be done with the Cron system daemon. It
+    is installed as default on some systems, but if not “sudo apt-get install cron”
+    can be used. Start the service with “service cron start” and create a new crontab
+    file with “crontab -e”. Select nano as your text editor. At the bottom of the
+    created file, add a new line with our scheduled task. The format goes as follows:
+
+
+    minute, hour, day, month, weekday, command
+
+
+    And we format it with these options to specify when to run the command. Time numbers
+    start with 0, so the hours range from 0 to 23 and minutes are from 0 to 59. Replace
+    any option with an asterick to specify that it will run on any value. Pay attention
+    to these examples:
+
+
+    ```
+
+    0 12 * * * ~/script.sh
+
+    ```
+
+
+    This will run the script.sh found in the Home directory every day at noon.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '```
+
+    30 18 25 12 * /usr/bin/scripts/test.sh
+
+    ```
+
+
+    And this will run test.sh within the /usr/bin/scripts directory at 6:30 on Christmas
+    day every year.
+
+
+    Conclusively, scripting and automating scripts are fantastic ways to take administrative
+    control of regularly occurring tasks. Continue writing scripts, or look up examples
+    online to see how your computing experience can be made easier with bash.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Advanced Terminal Concepts
+
+
+    Mastering Linux comes down to intimate comprehension of the tools available in
+    the OS and how to utilize them. Many of the topics discussed in this chapter will
+    focus on more tasks and how to accomplish them, or a few QOL improvements to the
+    OS in general.
+
+
+    Compression and decompression of files often confuses Linux beginners. The tools
+    are typically already installed, but the command line must be used. Furthermore,
+    the strange .tar and .gz file-types are Linux-specific formats that you might
+    often come across. All files can be unzipped or zipped with the gzip tool. Preinstalled
+    on Ubuntu, we access it with the “tar” command. To compress a folder and the files
+    contained within, navigate to it in terminal and type “tar -czvf name.tar.gz foldername”.
+    C stands for “create”, z means “compress (gzip)”, v is for “verbose”, and f allows
+    filename specification. If you want more compression (but at the cost of time),
+    zip the folder with gzip2 by replacing the -z switch with the -j switch instead.
+
+
+    Now extracting that same archive can be done with “tar -xzvf name.tar.gz”. You
+    will notice that the -c was replaced with an -x, and this indicates extraction.
+    Once again if you are dealing with bzip2 files use the -j switch instead.
+
+
+    Continuing with advanced terminal concepts, let us talk about a few quality tips
+    and tricks that can save you time in the terminal. When typing a command or file
+    name, press tab halfway through. This feature, tab completion, will guess what
+    you are attempting to type and fill in the rest of the phrase. For files it will
+    complete the name as shown in the directory, or complete a command by considering
+    what you are trying to do. Linux experts and anyone that has to use the terminal
+    regularly may seem as though they are typing exactly what they want with extreme
+    accuracy and speed, but they are actually just using tab completion.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: 'Users, especially administrators, will spend a decent amount of time with the
+    sudo command because their instructions require elevated privileges to run. But
+    when typing out a long command and forgetting to type sudo, you will be angered
+    at having to type it again. Instead simply type “sudo !!”, shorthand for “super
+    user do again”. It generously saves from typing an entire command again.
+
+
+    Another method of repeating commands is to use the up and down arrows. Pressing
+    up continuously cycles through previously typed commands. You can also edit the
+    commands with the left and right arrows to change the text contained within.
+
+
+    And the most requested terminal tip involves copy and pasting. Attempting to paste
+    a line into the terminal results in the strange character ^v. The keyboard shortcut
+    is not configured to work in the terminal, and that is why the strange combination
+    is displayed. To actually paste, right click and select the option; or use the
+    key combination shift+insert. Copy in the same way, but with ctrl+insert instead.
+    While it might be okay to copy and paste terminal commands from the Internet (provided
+    you understand the risk and know what they are doing in the command), do not try
+    to paste from this publication. The formatting introduced through the medium in
+    which you are reading it might have inserted special characters that are not recognized
+    by the terminal, so it is best if you do not copy and paste, but rather you should
+    type manually any commands presented.
+
+
+    Linux has a hidden feature that not many users know about. Files are displayed
+    to the user when you visit that directory or type ls, but actually not all of
+    the files are viewable this way. In Linux if you name a file with a period as
+    the first character it will be marked as hidden. Hidden files are not normally
+    visible by common users, and it acts as a way to protect configuration files from
+    accidental editing/deleting/so forth. To see those files, we only need to add
+    the -a tag to our ls search. In the GUI press ctrl+h in a directory to reveal
+    the secret content. And as you create scripts and other configuration files consider
+    hiding them with the period as a form of user protection.
+
+
+    Any command within terminal can be interrupted or quit with the ctrl+d key combination.
+    Use it to stop a lengthy process or to exit out of a program/command that you
+    do not understand.'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: 'Aliasing is a way to create your own personal shortcuts within the terminal.
+    Instead of typing a long command or a bunch of smaller commands aliases can be
+    used to combine them into a single user defined option. Just as the name implies,
+    aliases are different names for anything you specify. Every alias is contained
+    within a hidden config file- begin editing it with “nano ~/.bashrc”. Because it
+    exists within the user’s home directory every alias will be pertinent only to
+    that user. At the bottom of the file we can begin creating alias as per the following
+    example:
+
+
+    ```
+
+    alias gohome=''cd ~ && ls''
+
+    ```
+
+
+    This alias will change the directory to home and display the contents by typing
+    “gohome”. When creating aliases you must follow the formatting presented above
+    exactly, meaning there is no space between the command and the equal sign. Multiple
+    commands are strung together inside the single quotes separated by “&&”. For more
+    robust aliases, add a function instead. The following example combines cd and
+    ls into a single command.
+
+
+    ```
+
+    function cdls () {
+
+
+    cd "$@" && ls
+
+    }
+
+    ```
+
+
+    After writing your aliases, save the file and restart the computer. Your new commands
+    are then available for use.
+
+
+    That file we edit ,bashrc, is the configuration file for the Ubuntu terminal.
+    Besides making'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'aliases we can also use it to customize our terminal settings, such as color,
+    size, etc... A quick tip is to uncomment the “#force_color_prompt=yes” by removing
+    the # and ensuring “yes” is after the equals. This adds color to the terminal,
+    making certain words different colors. More options are available when you open
+    a terminal, right click on it, and select profiles followed by profile preferences.
+    Through the tabs here you can customize the font, size, colors, background colors,
+    and much more. Customization of the terminal is recommended if you are going to
+    be using it a lot, because it helps to be comfortable with the tools you will
+    work with.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# I/O Redirection
+
+
+    During normal terminal command execution, “normal input” (typed by the user, or
+    read from a file/attribute/hardware) is entered and parsed by the command. Sometimes
+    the command has “standard output” as well, which is the return text shown in the
+    terminal. In “ls”, the standard input is the current working directory, and the
+    standard output is the contents of the folder.
+
+
+    Input and output are normally direct, but by using I/O redirection we can do more
+    with the terminal. As an example, the “cat” command (concatenate) followed by
+    a file will output that file to the screen. Running cat by itself opens a parser
+    where any line that is input will be immediately output (use ctrl+d) to quit.
+    But with I/O redirection hotkeys (<, >, <<, >>, |) we can redirect the output
+    to another source, such as a file. And “cat > test.txt” will now put the standard
+    output in that new file. Double signs signify appending, so “cat >> test.txt”
+    will place the output at the end of the file rather than erasing the contents
+    at the beginning.
+
+
+    The vertical line character, or the “pipe”, uses another form of I/O redirection
+    to take the output of one command and directly insert it into the input of another.
+    “ls | sort -r” would take the output of ls and sort it into a backwards list.
+    We redirected the output and gave it to another command to accomplish this.
+
+
+    And finally, the “grep” command is used very often within I/O redirection. Grep
+    can search for a certain string within a specified file and return the results
+    to standard output. Using redirection, this output can be put into other commands.
+    An interesting feature of Linux to note is that object is a file, even hardware.
+    So our CPU is actually a file that stores relevant data inside of it, and we can
+    use grep and other tools to search within it. That example is fairly advanced,
+    but here is a simpler instance:'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '“grep Conclusion report.txt”
+
+
+    And it will search within the file for that specific word. I/O redirection can
+    become a complicated process with all of the new symbols and commands, but it
+    is a feature that you can incorporate into your scripts and daily use that often
+    allows for certain features and functions of Linux to be done in a single line.
+
+
+    Linux and the terminal are difficult concepts to fully master. But with practice
+    and continuing dedication you will be able to perform masterful feats of computing
+    and do helpful tasks that are not possible in Windows or OSX. Learning more about
+    commands and how to use them certainly helps in this regard, so persist in your
+    studies of new commands and their use. Positively the only command you actually
+    need to memorize is “man”, a command that will show the manual pages and documentation
+    of any other command specified. The manual pages show switches, examples, and
+    the intended use of every command on your system. Use the tool to your advantage
+    and gain intimate knowledge of your system.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# ## More Linux Information
+
+
+    To continue learning about Linux and the possibilities it can provide, consider
+    the examples in this section. It will briefly discuss more uses for Linux, and
+    a few other concepts that have yet to be talked about.
+
+
+    The “Linux file system” refers to the main layout of the files and folders on
+    your computer. If you continue to “cd ..” in the terminal, or if you click the
+    back button on the GUI until it goes no further you will stumble upon the “root”
+    directory. The folders here, bin, boot, etc, usr, and so on are how your hardware
+    and settings are configured. Each folder has a specific purpose and use, and you
+    can understand them by exploring the contents. As an example, user data is stored
+    in home, but user programs are stored in usr. Because of how diverse and complicated
+    the file system actually is it will not be discussed here, but if you wish to
+    learn more do an Internet search or read the documentation associated with your
+    operating system.
+
+
+    Linux systems are often used for purposes other than desktop use. Dedicated machines
+    run variants of Linux because of the power and stability it provides. Even our
+    cars have a Linux kernel running to keep track of error codes and help mechanics.
+
+
+    Servers often have Linux installed because of reliability and the functions the
+    distributions have within them. For instance, Linux machines are used as firewalls
+    because the “iptables” application provides excellent port blocking and intelligent
+    filtering. You yourself can run a firewall on your system with the application
+    as well, thus gaining business-level software for free. In this way, Linux is
+    also great for networking. The machine can act as a switch, router, DNS server,
+    DHCP server, and more just by installing the relevant applications.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: And finally, Linux systems are not limited to the interfaces we have seen insofar.
+    Every distro has its preferred desktop environment, but the interface can be extremely
+    customized to the individual's preference. There are even file and web browsers
+    for the terminal, which is greatly helpful for those using SSH or remote computing.
+    All-in-all, you should try out different DE's by installing them and configuring
+    them to your liking.
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# # What Next and Conclusion
+
+
+    How you continue depends on what you want to do with your Linux distribution.
+    For casual browsing and simple use, continue with Ubuntu and install the programs
+    you need. For more adventurous people, consider installing a new distribution
+    to see what each has to offer. Those wishing to learn even more deeply about Linux
+    can install one such as Arch or DSL to build their own unique OS from scratch.
+    Administrators and power users can install a server version of a distro to build
+    their own Linux network, or they can consider changing over their environment
+    from other operating systems to entirely free ones.
+
+
+    Conclusively, Linux is a powerful and relatively easy to use set of operating
+    systems. But their real potential comes from the hard-to-master terminal and command
+    line functions. Thank you for reading this publication, and I hope that it has
+    shed some light on the mysterious subject of the defacto alternative operating
+    system. If Linux has confused you or did not live up to expectations, I implore
+    you to take a second look at the features it can offer. While it may not have
+    the same caliber of games or 3 $^{\text{rd}}$ party proprietary software, the
+    OS is simple and customizable enough to be used as a primary OS with maybe Windows
+    or OSX as a secondary OS. Alternatives exist for just about every program, so
+    if it is possible to get rid of Microsoft and Apple entirely, it is highly recommended
+    you do so. Thank you again, and make good use of your new Linux knowledge.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# **Related Titles**
+
+
+    Hacking University: Freshman Edition Essential Beginner''s Guide on How to Become
+    an Amateur Hacker
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_102_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'Hacking University: Sophomore Edition, Essential Guide to Take Your Hacking
+    Skills to the Next Level. Hacking Mobile Devices, Tablets, Game Consoles, and
+    Apps
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_103_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: 'Hacking University: Junior Edition. Learn Python Computer Programming From
+    Scratch. Become a Python Zero to Hero. The Ultimate Beginners Guide in Mastering
+    the Python Language
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_104_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# Hacking University: Senior Edition Linux. Optimal Beginner''s Guide To Precisely
+    Learn And Conquer The Linux Operating System. A Complete Step By Step Guide In
+    How Linux Command Line Works
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_105_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'Hacking University: Graduation Edition_4 Manuscripts (Computer, Mobile, Python,
+    & Linux). Hacking Computers, Mobile Devices, Apps, Game Consoles and Learn Python
+    & Linux
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_106_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'Data Analytics: Practical Data Analysis and Statistical Guide to Transform
+    and Evolve Any Business, Leveraging the power of Data Analytics, Data Science,
+    and Predictive Analytics for Beginners
+
+
+    ![](img/b4564831f9e4aeede0c6ec7987331942_107_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# About the Author
+
+
+    Isaac D. Cody is a proud, savvy, and ethical hacker from New York City. After
+    receiving a Bachelors of Science at Syracuse University, Isaac now works for a
+    mid-size Informational Technology Firm in the heart of NYC. He aspires to work
+    for the United States government as a security hacker, but also loves teaching
+    others about the future of technology. Isaac firmly believes that the future will
+    heavily rely computer "geeks" for both security and the successes of companies
+    and future jobs alike. In his spare time, he loves to analyze and scrutinize everything
+    about the game of basketball.'
+  merge: -1
+  img_proc: true

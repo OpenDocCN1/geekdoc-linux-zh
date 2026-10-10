@@ -304,6 +304,7 @@
 +   [小型网络网络安全：给适度偏执者的实用指南](docs/cybersecurity-for-small-networks-a-no-nonsense-guide-for-the/README.md)
 +   [Dan Gookin 教授 Microsoft Windows Millennium Edition](docs/dan-gookin-teaches-microsoft-windows-millennium-edition-auth/README.md)
 +   [Darknet：匿名保护初学者指南（渗透测试，Kali Linux）第 1 册](docs/darknet-a-beginners-guide-to-staying-anonymous-penetration-t/README.md)
++   [数据分析与Linux操作系统](docs/data-analytics-and-linux-operating-system/README.md)
 +   [数据分析与 Linux 操作系统合集教程：使用 Linux 操作系统学习数据分析、预测性分析与数据科学初学者指南](docs/data-analytics-and-linux-operating-system-2-bundle-manuscrip/README.md)
 +   [数据分析与 Linux 操作系统：Linux 操作系统学习数据分析、预测性分析与数据科学初学者指南（数据驱动破解自由）](docs/data-analytics-and-linux-operating-system-beginners-guide-to/README.md)
 +   [数据清洗口袋指南](docs/data-cleaning-pocket-primer-computing/README.md)
