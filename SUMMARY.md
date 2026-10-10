@@ -706,6 +706,7 @@
 +   [拉丁文学（经典重印本）](docs/latin-literature-classic-reprint/README.md)
 +   [硬核学习 Bash](docs/learn-bash-the-hard-way/README.md)
 +   [通过题库学习：GNU AWK](docs/learn-by-exam-pile-gnu-awk/README.md)
++   [命令行学习教程](docs/learn-enough-command-line-to-be-dangerous-a-tutorial-introdu/README.md)
 +   [5天学会 Linux](docs/learn-linux-in-5-days/README.md)
 +   [Linux快速入门指南](docs/learn-linux-quickly/README.md)
 +   [Linux 快速入门：Ubuntu Linux 命令行全面指南](docs/learn-linux-quickly-a-comprehensive-guide-for-getting-up-to-/README.md)

@@ -1,0 +1,3571 @@
+- pgno: 0
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_0_0.png)
+
+
+    LEARN ENOUGH
+
+
+    # COMMAND LINE
+
+
+    TO BE DANGEROUS
+
+
+    TUTORIAL BY
+
+    MICHAEL HARL'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Learn Enough™ Command Line to Be Dangerous
+
+
+    Michael Hartl
+
+
+    # Contents
+
+
+    +   1. Basics .... 4
+
+    +      1.1 Running a terminal .... 7
+
+    +          Exercises .... 10
+
+    +      1.2 Our first command .... 10
+
+    +          Exercises .... 14
+
+    +      1.3 Man pages .... 14
+
+    +          Exercises .... 18
+
+    +      1.4 Editing the line .... 20
+
+    +          Exercises .... 22
+
+    +      1.5 Cleaning up .... 22
+
+    +          Exercises .... 23
+
+    +      1.6 Summary .... 23
+
+    +          Exercises .... 23'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "+   2. **Manipulating files** ........................ 24\n+       2.1 Redirecting\
+    \ and appending ........ 26\n+           Exercises ..........................................\
+    \ 29\n+       2.2 Listing ...................................... 29\n+       \
+    \    Exercises .......................................... 34\n+       2.3 Renaming,\
+    \ copying, deleting ............ 35\n+           Unix terseness ..................................\
+    \ 38\n+           Exercises .......................................... 39\n+ \
+    \      2.4 Summary .................................... 39\n+           Exercises\
+    \ .......................................... 39\n+   \n+   3. **Inspecting files**\
+    \ ........................ 41\n+       3.1 Downloading a file ....................\
+    \ 41\n+           Exercises .......................................... 44\n+ \
+    \      3.2 Making heads and tails of it ............ 44\n+           Wordcount\
+    \ and pipes .......................... 45\n+           Exercises ..........................................\
+    \ 47\n+       3.3 Less is more ................................ 47\n+        \
+    \   Exercises .......................................... 51\n+       3.4 Grepping\
+    \ .................................... 52\n+           Exercises ..........................................\
+    \ 56\n+       3.5 Summary .................................... 57\n+         \
+    \  Exercises .......................................... 57\n+   \n+   4. **Directories**\
+    \ ........................ 58\n+       4.1 Structure ..................................\
+    \ 58\n+           Exercises .......................................... 61\n+ \
+    \      4.2 Making directories ........................ 63\n+           Exercises\
+    \ .......................................... 64\n+       4.3 Navigating directories\
+    \ ................... 65\n+           Exercises ..........................................\
+    \ 69\n+       4.4 Renaming, copying, and deleting directories ... 69\n+      \
+    \     Grep redux ....................................... 71\n+           Exercises\
+    \ .......................................... 73"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '4.5 Summary . . . . . . . . . . . . . . . . . . . . . . 73
+
+    Exercices . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+
+
+    5 **Concl usion** . . . . . . . . . . . . . . . . . . . . . . . . . . 75'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '*Learn Enough™ Command Line to Be Dangerous* is an introduction to the command
+    line for complete beginners, the first in a series of tutorials designed to teach
+    the common foundations of “computer magic” (Box 1). It is aimed both at those
+    who work with software developers and those who aspire to become developers themselves.
+    *Learn Enough™ Command Line to Be Dangerous* assumes no prerequisites other than
+    general computer knowledge (how to launch an application, how to use a web browser,
+    etc.), which among other things means that it doesn''t assume you know how to
+    use a text editor, or even what a text editor is. Indeed, this tutorial doesn''t
+    even assume you know what a command line is, so if you''re confused by the title,
+    you''re still in the right place. Finally, even if you already have some familiarity
+    with the command line, you might enjoy following this tutorial (and doing the
+    exercises) to brush up on the basics.
+
+
+    # Box 1. The magic of computer programming
+
+
+    Computer programming may be as close as we get to *magic* in the real world: we
+    type incantations into a machine, and—if the incantations are right—the machine
+    does our bidding. To perform such magic, computer witches and wizards rely not
+    only on words, but also on wands, potions, and an ancient tome or two. Taken together,
+    these tricks of the trade are known as *software development*: computer programming,
+    plus tools like *command lines, text editors,* and *version control.* Knowledge
+    of these tools is perhaps the main line between “technical” and “non-technical”
+    people (or, to put it in magical terms, between wizards or witches and *Muggles*).
+    The present tutorial represents the first step needed to cross this line and *learn
+    enough* software development to be *dangerous*—to be able to cast computer spells,
+    and get the machine to do our bidding.
+
+
+    My name is *Michael Hartl*, and I am perhaps best known as the creator of the
+    Ruby on Rails Tutorial, *a book* and *screencast series* that together constitute
+    one of the leading introductions to web development. (You may also know me, in
+    my more mathematical mode, as the founder of *Tau Day* and author of *The Tau
+    Manifesto.*) One of the most frequently asked questions about the Rails Tutorial
+    is, "Is the Rails Tutorial good for complete beginners?" The answer is, "Not really."'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '> While it is possible for complete beginners to learn web development with
+    the Ruby on Rails Tutorial (and an impressively large number have), it can be
+    challenging and occasionally frustrating, and I don’t generally recommend it.
+    Instead, I recommend starting here.
+
+
+    Many programming tutorials either gloss over the command line or assume you already
+    know it. But understanding the basics of the command line is absolutely essential
+    to becoming a skilled developer. ${ }^{1}$ Indeed, if you look at the desktop
+    of an experienced computer programmer, even on a system with a polished graphical
+    user interface like Macintosh OS X, you are likely to find a large number of “terminal
+    windows”, each containing a series of commands at a command line (Figure 1). Proficiency
+    at the command line is also useful for anyone who needs to work with developers,
+    such as product managers, project managers, and designers. ${ }^{2}$ Making this
+    valuable skill accessible to as broad an audience as possible is the goal of Learn
+    Enough $^{\mathrm{TM}}$ Command Line to Be Dangerous.
+
+
+    # 1 Basics
+
+
+    As author Neal Stephenson famously put it, “In the Beginning was the Command Line.”
+    Although a graphical user interface (GUI) can dramatically simplify computer use,
+    in many contexts the most powerful and flexible way to interact with a computer
+    is through a command-line interface (CLI). In such an interface, the user types
+    commands that tell the computer to perform desired tasks. These commands can then
+    be combined in various ways to achieve a variety of outcomes. An example of a
+    typical command-line command appears in Figure 2.
+
+
+    This tutorial covers the basics of the Unix command line, where Unix refers to
+    a family of operating systems that includes Linux, Android, iOS, and Mac-\
+
+
+    As discussed in Section 1, this statement applies to the Unix tradition, which
+    is the principal computing tradition behind the Internet and the World Wide Web,
+    and the tradition followed by this tutorial.
+
+
+    Knowing the command line is also essential for system administrators (sysadmins).'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_6_0.png)
+
+
+    *Figure 1: Terminal windows on the desktop of an experienced developer.*
+
+
+    ```
+
+    ```text
+
+    [projects]$ rm -f foo.txt
+
+    ```
+
+    ```
+
+
+    *Figure 2: A typical command-line command.*
+
+
+    7'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'intosb OS. $ ^{3} $  Unix systems serve most of the software on the World Wide
+    Web, run most mobile and tablet devices, and power many of the world’s desktop
+    computers as well. As a result of Unix’s central role in modern computing, this
+    tutorial covers the Unix way of developing software. The main exception to Unix’s
+    dominance is Microsoft® Windows™, which is not part of the Unix tradition, but
+    those who mostly develop using native Windows development tools will still benefit
+    from learning the Unix command line. Among other things, at some point such users
+    are likely to need to issue commands on a Unix server (e.g., via the “secure shell”
+    command **ssh**), at which point familiarity with Unix commands becomes essential.
+    As a result, Windows users are strongly encouraged to run a free *Linux virtual
+    machine* (as described in Box 2) in order to get the most out of this tutorial.
+    Another good option is to use a cloud IDE$^{4}$ such as [Cloud9](http://www.example.com/cloud9);
+    to go this route, follow the “*Development environment*” section in the [Ruby
+    on Rails Tutorial book](http://www.example.com/ruby-on-rails-tutorial-book).
+
+
+    ![](img/4dec9c51e73c9027d3d8a4fab4408fe6_7_0.png)
+
+
+    # Box 2. Running a virtual machine
+
+
+    In order to complete this tutorial, Windows users should install a couple of free
+    programs to run a *virtual machine* (a simulation of a computer) that allows Windows
+    to host a version of the Linux operating system. The steps appear as follows:
+
+
+    +   1. Install the right version of VirtualBox for your system (free).
+
+    +   2. Download the TutorialPath Virtual Machine (large file).
+
+    +   3. Once the download is complete, double-click the resulting “OVA” file and
+    follow the instructions to install the Virtual Machine (VM).
+
+    +   4. Double-click the VM itself and log in using the default user’s password,
+    which is “foobar!”,
+
+
+    $^{3}$ In a fairly typical turn of events, the name Unix started as a pun on a
+    rival system called Multics.
+
+
+    $^{4}$ An IDE, or integrated development environment, typically integrates several
+    development tools (such as a command line and a text editor) into one application.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_8_0.png)
+
+
+    *Figure 3: A Linux virtual machine running inside a host OS.*
+
+
+    The result will be a Linux desktop environment (including a command-line terminal
+    program) pre-configured for this tutorial (Figure 3). In the longer run, I recommend
+    switching to a Mac as soon as possible. You might have to save up a bit, as Macs
+    are generally more expensive than Windows machines, but in most cases the increased
+    productivity will quickly pay for the difference. (If you find yourself liking
+    Linux, feel free to stick with it, but Macs are generally easier to use with a
+    better user interface. Plus, you can always run Linux inside a VM, even on a Mac.)
+
+
+    # 1.1 Running a terminal
+
+
+    To run a command-line command, we first need to start a *terminal*, which is the
+    program that gives us a command line. On Macintosh OS X, you can open a'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_9_0.png)
+
+
+    Figure 4: A terminal window.
+
+
+    terminal window with Spotlight by typing ⌘_ (Command-space) or by clicking on
+    the magnifying glass in the upper right and typing “terminal”; 5 on Linux, you
+    can click the terminal icon as shown in Figure 3. The result should be something
+    like Figure 4, although the exact details on your system will likely differ.
+
+
+    The example we saw in Figure 2 includes all of the typical elements of a command:
+    the prompt followed by a command, an option, and an argument (Figure 5). It’s
+    essential to understand that the prompt is supplied automatically by the terminal,
+    and you do not need to type it. (Indeed, if you do type it, it will likely result
+    in an error.) Moreover, the exact details of the prompt will differ, and are not
+    important for the purposes of this tutorial (Box 3).
+
+
+    5If you use OS X and are interested in using a more advanced and customizable
+    terminal program, I recommend installing iTerm, but this step is optional.
+
+
+    10'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_10_0.png)
+
+
+    *Figure 5: Anatomy of a command line. (Your prompt may differ.)*
+
+
+    # **Box 3. What is the prompt?**
+
+
+    Every command line starts with some symbol or symbols designed to “prompt” you
+    to action. The prompt usually ends with a dollar sign $, and is preceded by information
+    that depends on the details of your system. For example, on some systems the prompt
+    might look like this:
+
+
+    ```
+
+    ```
+
+    Michael''s MacBook Air:~ mhartl$
+
+    ```
+
+    ```
+
+
+    In Figure 4, the prompt looks like this instead:
+
+
+    ```
+
+    ```
+
+    [~]$
+
+    ```
+
+    ```
+
+
+    and in Figure 5 it looks like this:
+
+
+    ```
+
+    ```
+
+    [projects]$
+
+    ```
+
+    ```
+
+
+    Finally, the prompt I’m looking at right now looks like this:
+
+
+    ```
+
+    ```
+
+    [learn_enough_command_line (master)]$
+
+    ```
+
+    ```
+
+
+    For the purposes of this tutorial, the details of the prompt are not important,
+    but we will discuss useful ways to customize the prompt starting in the next tutorial
+    after this one (*Learn Enough*™ *Text Editor to Be Dangerous*).'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Exercises
+
+
+    Learn Enough™ Command Line to Be Dangerous includes a large number of exercises.
+    I strongly recommend getting in the habit of completing them before moving on
+    to the next section, as they reinforce the material we’ve just covered and will
+    give you essential practice in using the many commands discussed.
+
+
+    +   1.  By referring to Figure 5, identify the prompt, command, options, arguments,
+    and cursor in each line of Figure 6.
+
+
+    +   2.  Most modern terminal programs have the ability to create multiple *tabs*,
+    which are useful for organizing a set of related terminal windows. (For example,
+    when developing web applications, in addition to my main command-line tab I often
+    have separate tabs for running a local web server and an automated test suite.)
+    By examining the menu items for your terminal program, figure out how to create
+    a new tab. *Extra credit:* Learn the keyboard shortcut for creating a new tab.
+    (Learning keyboard shortcuts for your system is an excellent habit to cultivate.)
+
+
+    # **1.2** **Our first command**
+
+
+    We are now prepared to run our first command, which prints the word “hello” to
+    the screen. (The place where characters get printed is known as “standard out”,
+    which is usually just the screen, and rarely refers to a physical printer.) The
+    command is **echo**, and the argument is the string of characters that we want
+    to print. To run the **echo** command, type “echo hello” at the prompt, and then
+    press the Return key (also called Enter):
+
+
+    ```
+
+    $ echo hello
+
+    hello
+
+    $
+
+    ```
+
+
+    (I recommend always typing the commands out yourself, which will let you learn
+    more than if you rely on copying and pasting.) Here we see that **echo**'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "```\n```\n[~]$ cd ruby\n[ruby]$ ls -a\n.           .DS_Store rails\n..    \
+    \      projects\n[ruby]$ rm -f .DS_Store\n[ruby]$ ls -a\n.           projects\n\
+    ..          rails\n[ruby]$ cd projects/\n[projects]$ pwd\n/Users/mhartl/ruby/projects\n\
+    [projects]$ \n```\n```\n\n![](img/4dec9c51e73c9027d3d8a4fab4408fe6_12_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '**hello** prints “hello” and then returns another prompt. Note that, for brevity,
+    I’ve omitted all characters in the prompt except the trailing dollar sign $.
+
+
+    Just to make the pattern clear, let’s try a second **echo** command:
+
+
+    ```
+
+    ```
+
+    $ echo "goodbye"
+
+    goodbye
+
+    $ echo ''goodbye''
+
+    goodbye
+
+    $
+
+    ```
+
+    ```
+
+
+    Note here that we’ve wrapped “goodbye” in quotation marks—and we also see that
+    we can use either double quotes, as in `"goodbye"`, or single quotes, as in `''goodbye''`.
+    Such quotes can be used to group strings visually, though in many contexts they
+    are not required by **echo** (Listing 1).
+
+
+    # **Listing 1: Printing “hello, goodbye” two different ways.**
+
+
+    ```
+
+    ```
+
+    $ echo hello, goodbye
+
+    hello, goodbye
+
+    $ echo "hello, goodbye"
+
+    hello, goodbye
+
+    $
+
+    ```
+
+    ```
+
+
+    One thing that can happen when using quotes is accidentally not matching them,
+    as follows:
+
+
+    ```
+
+    ```
+
+    $ echo "hello, goodbye
+
+    >
+
+    ```
+
+    ```
+
+
+    At this point, it seems we’re stuck. There are specific ways out of this quandary
+    (in fact, in this case you can just add a closing quote and hit return), but it’s
+    good to have a general strategy for getting out of trouble (Figure 7). ⁶ This
+    strategy is called “Ctrl-C” (Box 4).'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_14_0.png)
+
+
+    > *Figure 7: This cat appears to be stuck and should probably hit `Ctrl-C`.*
+
+
+    # **Box 4. Getting out of trouble**
+
+
+    When using the command line, there are lots of things that can get you in trouble,
+    by which I mean the terminal will just hang or otherwise end up in a state that
+    makes entering further commands difficult or impossible. Here are some examples
+    of such commands:
+
+
+    ```
+
+    $ echo "hello
+
+    $ grep foobar
+
+    $ yes
+
+    $ tail
+
+    $ cat
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'In every case, the solution is the same: hit `Ctrl-C` (pronounced “control-see”).
+    Here `Ctrl` refers to the “control” key on your keyboard, and `C` refers to the
+    key labeled “C”. `Ctrl-C` thus means “While holding down the control key, press
+    C.” In particular, `C` does *not* refer to the capital letter `C`, so you should
+    not press Shift in addition to Ctrl. (`Ctrl-C` sends a *control code* to the terminal
+    and has nothing to do with producing a capital `C` when typing normal text.) The
+    result of typing `Ctrl-C` is sometimes written as `^C`, like this:
+
+
+    ```
+
+    $ tail
+
+    ^C
+
+    ```
+
+
+    The **origins of Ctrl-C** are somewhat obscure, but as a mnemonic I like to think
+    of it as meaning “cancel”. However you remember it, *do* remember it: when you
+    get into trouble at the command line, your best bet is usually to hit `Ctrl-C`.
+
+
+    *Note:* When `Ctrl-C` fails, 90% of the time hitting `ESC` (escape) will do the
+    trick.
+
+
+    # **Exercises**
+
+
+    +   1. Write a command that prints out the string “hello, world”. *Extra credit:*
+    As in Listing 1, do it two different ways, both with and without using quotation
+    marks.
+
+    +   2. Type the command `echo ‘hello` (with a mismatched single quote), and then
+    get out of trouble using the technique from Box 4.
+
+
+    # ## 1.3 Man pages
+
+
+    The program we’re using to run a command line, which is technically known as a
+    *shell*,<sup>7</sup> includes a powerful (though often cryptic) tool to learn
+    more about
+
+
+    <sup>7</sup>Many introductions to the command line cover elements of the shell
+    that require knowledge of a text editor, knowledge which (as noted in the introduction)
+    this tutorial does *not* assume. As a result, we’ll defer these
+
+
+    16'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'available commands. This tool is itself a command-line command called **man**
+    (short for “manual”). Its argument is the name of the command (such as **echo**)
+    that we want to learn more about. The details are system-dependent, but on my
+    system the result of running **man echo** appears as in Listing 2.
+
+
+    ![](img/4dec9c51e73c9027d3d8a4fab4408fe6_16_0.png)
+
+
+    On the last line of Listing 2, note the presence of a colon :, which indicates
+    that there is more information below. The details of this last line are system-dependent,
+    but on any system you should be able to access subsequent information one line
+    at a time by pressing the down arrow key, or one page at a time by pressing the
+    spacebar. To exit the man page, press “q” (for “quit”). (This interface to the
+    man pages is the same as for the **less** program, which we’ll learn about in
+    Section 3.3.)
+
+
+    important topics to the follow-on tutorials to this one (Section 5), starting
+    with *Learn Enough*™ *Text Editor To Be Dangerous*.
+
+
+    17'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_17_0.png)
+
+
+    *Figure 8: Applying man to man.*'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "Because **man** itself is a command, we can apply **man** to **man** (Figure\
+    \ 8),¹ as shown in Listing 3.\n\n# Listing 3: The result of running **man man**.\n\
+    \n```\n```\n$ man man\nman (1)                    man (1)\n\nNAME\n       man\
+    \ - format and display the on-line manual pages\n\nSYNOPSIS\n       man [-acdfFhkKtwW]\
+    \ [--path] [-m system] [-P string] [-C config file]\n           [-M pathlist]\
+    \ [-p pager] [-B browser] [-H htmtpager] [-S section_list]\n           [section]\
+    \ name ... \n\nDESCRIPTION\n       man formats and displays the on-line manual\
+    \ pages. If you specify sec-\n       tion, man only looks in that section of the\
+    \ manual.  name is normally\n       the name of the manual page, which is typically\
+    \ the name of a command,\n       function, or file.  However, if name contains\
+    \ a slash (/) then man\n       interprets it as a file specification, so that\
+    \ you can do man ./foo.5\n       or even man /cd/foo/bar.1.gz.\n\n       See below\
+    \ for a description of where man looks for the manual page\n       files.\n\n\
+    OPTIONS\n       -C config_file\n           :\n```\n```\n\nWe can see from Listing\
+    \ 3 that the synopsis of **man** looks something like this:\n\n```\n`man  [-acdfFhkKtwW]\
+    \  [--path]  [-m  system]  [-P  string]  ...`\n```\n\nCrazy, right? This is what\
+    \ I meant above when I described man pages as “often cryptic”. Indeed, in many\
+    \ cases I find the details of man pages to be almost impossible to understand,\
+    \ but being able to scan over the man page to get a high-level overview of a command\
+    \ is a valuable skill, one worth acquiring. To\n\n> ⁹ Image retrieved from https://commons.wikimedia.org/wiki/File:Jazz_at_Knicks_man_to_man_defense.jpg\
+    \ on 2015-07-22\n\n19"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'get used to reading man pages, I recommend running `man <command name>` when
+    encountering a new command. Even if the details aren''t entirely clear, reading
+    the man pages will help develop the valuable skill of *technical sophistication*
+    (Box 5).
+
+
+    # **Box 5. Technical sophistication**
+
+
+    In mathematics, many subjects that can be developed by applying pure deduction
+    to a small number of assumptions, or *axioms*. Examples include algebra, geometry,
+    number theory, and analysis. As a result, such subjects are completely self-contained,
+    and thus have no formal prerequisites. In principle, even a small child could
+    learn the subject from scratch. In practice, though, something else is required,
+    and mathematicians often recommend the informal prerequisite of *mathematical
+    maturity*, which consists of the experience and general sophistication needed
+    to understand and write mathematical proofs.
+
+
+    In technology, a similar skill (or, more accurately, set of skills) exists in
+    the form of *technical sophistication*. Essentially, this consists of a miscellaneous
+    toolkit of computer tricks, combined with an *attitude* of getting the machine
+    to do your bidding (Box 1). As shown in Figure 9, technical sophistication includes
+    things like looking for promising menu items and knowing the kinds of search terms
+    to drop into Google. These skills are hard to teach directly, so as you progress
+    through this and subsequent *Learn Enough™ tutorials*, always be on the lookout
+    for opportunities to increase your technical sophistication by adding tools to
+    your kit (including, for example, the ability to get the gist of a program by
+    scanning its man page (Section 1.3)). Over time, the cumulative effect will be
+    that, like the author of Figure 9, you''ll have the seemingly magical ability
+    to do everything in every program.
+
+
+    # **Exercises**
+
+
+    +   1. According to the man page, what is the official description of `echo` on
+    your system?'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'DEAR VARIOUS PARENTS, GRANDPARENTS, CO-WORKERS, AND OTHER “NOT COMPUTER PEOPLE.”
+
+
+    WE DON’T MAGICALLY KNOW HOW TO DO EVERYTHING IN EVERY PROGRAM. WHEN WE HELP YOU,
+    WE’RE USUALLY JUST DOING THIS:
+
+
+    ![](img/4dec9c51e73c9027d3d8a4fab4408fe6_20_0.png)
+
+
+    PLEASE PRINT THIS FLOWCHART OUT AND TAPE IT NEAR YOUR SCREEN. CONGRATULATIONS;
+    YOU’RE NOW THE LOCAL COMPUTER EXPERT!
+
+
+    > Figure 9: “*Tech Support Cheat Sheet*” (via xkcd.com). The only thing missing
+    is “Have you tried rebooting?”'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '+   2. The usual way of running **echo** includes a *newline* character (“enter”
+    or “return”) that puts the new prompt on a separate line, but there is a command-line
+    option to prevent this. By reading the man page for **echo**, determine the command
+    needed to print out “hello” without the trailing newline, and verify using your
+    terminal that it works as expected. *Hint*: The result should look something like
+    `helloworld`[ . . . ]$ , where [ . . . ] represents the unimportant details of
+    your prompt. (*Note*: This exercise may fail when using the default terminal program
+    on some older versions of Macintosh OS X. In this case, I recommend installing
+    iTerm (which isn’t a bad idea anyway).)
+
+
+    # ## 1.4 Editing the line
+
+
+    Command lines include several features to make it easy to repeat previous commands,
+    possibly in edited form. The most basic is “up arrow”, which simply retrieves
+    the previous command. Pressing up arrow again moves further up the list of commands,
+    while down arrow goes back toward the bottom.
+
+
+    When typing a new command, or dealing with a previous command, it is often convenient
+    to be able to move quickly within the line. For example, suppose we typed
+
+
+    ```
+
+    $ goodbye
+
+    ```
+
+
+    only to realize that we wanted to put **echo** in front of it. We could use the
+    left arrow key to get to the beginning of the line, but it’s easier to type `Ctrl-A`,
+    which takes us there immediately. Similarly, `Ctrl-E` moves to the end of the
+    line.$^9$ Finally, `Ctrl-U` clears to the beginning of the line and lets us start
+    over.
+
+
+    The combination of `Ctrl-A`, `Ctrl-E`, and `Ctrl-U` will work on most systems,
+    but they don’t do you much good if you’re editing a longer line, such as this
+    one containing the first line of *Sonnet 1* by William Shakespeare (Listing 4).'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_22_0.png)
+
+
+    *Figure 10: The original appearance of Shakespeare''s first sonnet.*
+
+
+    ```
+
+    **Listing 4:** Printing the first line of Shakespeare’s first sonnet.
+
+
+    ```
+
+    $ echo "From fairest creatures we desire increase,"
+
+    ```
+
+    ```
+
+
+    Suppose we wanted to change “From” to “F**R**om” to more closely match the text
+    from the original sonnet (Figure 10).¹⁰ We could type `Ctrl-A` followed by the
+    right arrow key a few times, but on some systems it’s possible to move directly
+    to the desired spot by combining the keyboard and mouse via Option-click. That
+    is, you can hold down the Option key on your keyboard, and then click with the
+    mouse pointer on the place in the command were you want the cursor. This would
+    let us move right to the “o” in “From”, allowing us to delete the “r” and yielding
+    Listing 5 directly.
+
+
+    ^1⁰Note that the *Original Pronunciation* (OP) of Shakespearean English is different
+    from modern pronunciation. Generally speaking, Shakespeare’s sonnets include many
+    word pairs that don’t rhyme in modern English but do in OP. In the case of Figure
+    10, the word “*memory*’” should be pronounced “MEM-or-aye”, leading to a rhyme
+    between lines 2 and 4 (ending in *die* and *memory*, respectively). Image retrieved
+    from https://commons.wikimedia.org/wiki/File:Sonnet_1.jpg on 2015-07-20
+
+
+    23'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '```
+
+    **Listing 5:** The result of editing a longer command-line command.
+
+    ```
+
+    $ echo "From fairest creatures we desire increase,"
+
+    ```
+
+    ```
+
+
+    I usually move around the command line with a combination of `Ctrl-A`, `Ctrl-E`,
+    and right & left arrow keys, but for longer commands Option-click can be a big
+    help. (I also frequently change my mind about the exact command I’m typing, in
+    which case I usually find that hitting `Ctrl-U` and starting over again is the
+    fastest way to proceed.)
+
+
+    # Exercises
+
+
+    +   1. Using the up arrow, print to the screen the strings “fee”, “fie”, “foe”,
+    and “fum” without retyping `echo` each time.
+
+
+    +   2. Starting with the line in Listing 4, use any combination of `Ctrl-A`, `Ctrl-E`,
+    arrow keys, or Option-click to change the occurrences of the short *s* to the
+    archaic *long s* “ſ” in order to match the appearance of the original (Figure
+    10). In other words, the argument to `echo` should read “FRom faireft creatures
+    we defire increase,”. *Hint:* It’s unlikely that your keyboard can produce “ſ”
+    natively, so either copy it from the text of this tutorial or Google for it and
+    copy it from the Internet.
+
+
+    # 1.5 Cleaning up
+
+
+    When using the command line, sometimes it’s convenient to be able to clean up
+    by clearing the screen, which we can do with `clear`:
+
+
+    ```
+
+    ```
+
+    $ clear
+
+    ```
+
+    ```
+
+
+    A keyboard shortcut for this is `Ctrl-L`.
+
+
+    Similarly, when we are done with a terminal window (or tab) and are ready to exit,
+    we can use the `exit` command:'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '| Command | Description | Example |
+
+    |---|---|---|
+
+    | `echo <string>` | Print string to screen | `$ echo hello` |
+
+    | `man <command>` | Display manual page for command | `$ man echo` |
+
+    | `Ctrl-C` | Get out of trouble | `$ tail^C` |
+
+    | `Ctrl-A` | Move to beginning of line | |
+
+    | `Ctrl-E` | Move to end of line | |
+
+    | `Ctrl-U` | Delete to beginning of line | |
+
+    | `Option-click` | Move cursor to location clicked | |
+
+    | `Up & down arrow` | Scroll through previous commands | |
+
+    | `clear` or `Ctrl-L` | Clear screen | `$ clear` |
+
+    | `exit` or `Ctrl-D` | Exit terminal | `$ exit` |
+
+
+    *Table 1: Important commands from Section 1.*
+
+
+    ```
+
+    $ exit
+
+    ```
+
+
+    A keyboard shortcut for this is **Ctrl-D**.
+
+
+    # Exercises
+
+
+    +   1. Clear the contents of the current tab.
+
+    +   2. Open a new tab, execute `echo ''hello''`, and then exit.
+
+
+    # 1.6   Summary
+
+
+    Important commands from this section are summarized in Table 1.
+
+
+    # Exercises
+
+
+    +   1. Write a command to print the string **Use** `"man echo"`, *including* the
+    quotes; i.e., take care not to print out **Use** `man echo` instead. *Hint:* Use
+    double quotes in the inner string, and wrap the whole thing in single quotes.
+
+
+    25'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "+   2.  By running `man sleep`, figure out how to make the terminal “sleep”\
+    \ for 5 seconds, and execute the command to do so. After waiting the requisite\
+    \ 5 seconds, execute the command to sleep for 5000 seconds, realize that’s well\
+    \ over an hour, and then use the instructions from Box 4 to get out of trouble.\n\
+    \n# ## 2  Manipulating files\n\nBecause this is a command-line tutorial, we’re\
+    \ not going to assume any familiarity with programs designed to edit text. (Such\
+    \ programs, called *text editors*, are the subject of the next tutorial in the\
+    \ sequence, *Learn Enough™ Text Editor to Be Dangerous*.) This means that we’ll\
+    \ need to create files by hand at the command line. But this is a feature, not\
+    \ a bug (Box 6), because learning to create files at the command line is a valuable\
+    \ skill in itself.\n\n**Box 6. Learning to speak “geek”**\n\nOne important part\
+    \ of learning software development is becoming familiar with the hacker, nerd,\
+    \ and geek culture from which much of it springs. For example, the phrase “It’s\
+    \ not a bug, it’s a feature” is a common way of recasting a seeming flaw as a\
+    \ *virtue*. As the Urban Dictionary *puts it*:\n\n**It’s not a bug, it’s a feature**\
+    \  \nExcuse made by software developers when they try to convince the user that\
+    \ a flaw in their program is actually what it’s supposed to be doing.\n\nThe *Jargon\
+    \ File*, which includes an *enormous* and entertaining *lexicon* of *hacker* terms,\
+    \ expands on this theme in its entry on *feature*:\n\nUndocumented feature is\
+    \ a common, allegedly humorous euphemism for a *bug*. There’s a related joke that\
+    \ is sometimes referred to as the"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "![](img/4dec9c51e73c9027d3d8a4fab4408fe6_26_0.png)\n\n*Figure 11: It’s not\
+    \ a bug, it’s a feature.*\n\n> “one-question geek test”. You say to someone “I\
+    \ saw a Volkswagen Beetle today with a vanity license plate that read FEATURE”.\
+    \ If he/she laughs, he/she is a *geek*.\n> \n> The joke here is that, because\
+    \ “bug” is a common slang term for a Volkswagen Beetle, a Beetle with the vanity\
+    \ plate FEATURE is a real-life manifestation of “It’s not a bug, it’s a feature”\
+    \ (Figure 11)."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# ### 2.1 Redirecting and appending
+
+
+    Let’s pick up (more or less) where we left off in Section 1, with an **echo**
+    command to print out the first line of Shakespeare’s first sonnet (Listing 4):
+
+
+    ```
+
+    $ echo "From fairest creatures we desire increase,"
+
+    From fairest creatures we desire increase,
+
+    ```
+
+
+    Our task now is to create a file containing this line. Even without the benefit
+    of a text editor, it is possible to do this using the *redirect operator* `>`:
+
+
+    ```
+
+    $ echo "From fairest creatures we desire increase," > sonnet_1.txt
+
+    ```
+
+
+    (Recall that you can use up arrow to retrieve the previous command rather than
+    typing it from scratch.) Here the right angle bracket `>` takes the string output
+    from **echo** and redirects its contents to a file called **sonnet_1.txt**.
+
+
+    How can we tell if the redirect worked? We’ll learn some more advanced command-line
+    tools for inspecting files in Section 3, but for now we’ll use the **cat** command,
+    which simply dumps the contents of the file to the screen:
+
+
+    ```
+
+    $ cat sonnet_1.txt
+
+    From fairest creatures we desire increase,
+
+    ```
+
+
+    The name **cat** is short for “**c**oncate**n**ate”, which is a hint that it can
+    be used to combine the contents of multiple files, but the usage above (to dump
+    the contents of a single file) is extremely common. Think of **cat** as a “quick-and-dirty”
+    way to view the contents of a particular file (Figure 12).<sup>11</sup>
+
+
+    In order to add the second line of the sonnet (in modernized spelling), we can
+    use the *append operator* `>>` as follows:
+
+
+    <sup>11</sup>Image retrieved from https://www.flickr.com/photos/tiffanyday/4076289864
+    on 2015-07-22'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_28_0.png)
+
+
+    Figure 12: Viewing a file with **cat**.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '```
+
+    $ echo "That thereby beauty''s Rose might never die," >> sonnet_1.txt
+
+    ```
+
+
+    This just adds the line to the end of the given file. As before, we can see the
+    result using cat:
+
+
+    ```
+
+    $ cat sonnet_1.txt
+
+    From fairest creatures we desire increase,
+
+    That thereby beauty''s Rose might never die,
+
+    ```
+
+
+    (To get to this command, I hope you just hit up arrow twice instead of retyping
+    it. If so, you''re definitely getting the hang of this.) The result above shows
+    that the double right angle bracket >> appended the string from echo to the file
+    sonnet_1.txt as expected.
+
+
+    Modernized treatments of the Sonnets sometimes emend Rose to rose (thereby obscuring
+    the likely meaning), and we can make a second file following this convention using
+    two more calls to echo:
+
+
+    ```
+
+    $ echo "From fairest creatures we desire increase," > sonnet_1_lower_case.txt
+
+    $ echo "That thereby beauty''s rose might never die," >> sonnet_1_lower_case.txt
+
+    ```
+
+
+    In order to facilitate the comparison of files that are similar but not identical,
+    Unix systems come with the helpful diff command:
+
+
+    ```
+
+    $ diff sonnet_1.txt sonnet_1_lower_case.txt
+
+    < That thereby beauty''s Rose might never die,
+
+    ---
+
+    > That thereby beauty''s rose might never die,
+
+    ```
+
+
+    When discussing computer files, diff is frequently employed both as a noun ("What''s
+    the diff between those files?") and as a verb ("You should diff the files to see
+    what changed."). As with many technical terms, this sometimes bleeds over into
+    common usage, such as "Diff present ideas against those of various past cultures,
+    and see what you get."^12
+
+
+
+
+    30'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# **Exercises**
+
+
+    At the end of each of the exercises below, use the `cat` command to verify your
+    answer.
+
+
+    +   1. Using `echo` and `>`, make files called `line_1.txt` and `line_2.txt` containing
+    the first and second lines of Sonnet 1, respectively.
+
+
+    +   2. Replicate the original `sonnet_1.txt` (containing the first two lines of
+    the sonnet) by first redirecting the contents of `line_1.txt` and then appending
+    the contents of `line_2.txt`. Call the new file `sonnet_1_copy.txt`, and confirm
+    using `diff` that it’s identical to `sonnet_1.txt`. *Hint: When there is no diff
+    between two files, `diff` simply outputs nothing.*
+
+
+    +   3. Use `cat` to combine the contents of `line_1.txt` and `line_2.txt` in reverse
+    order using a *single* command, yielding the file `sonnet_1_reversed.txt`. *Hint:
+    The `cat` command can take multiple arguments.*
+
+
+    # **2.2 Listing**
+
+
+    Perhaps the mostly frequently typed command on the Unix command line is `ls`,
+    short for “list” (Listing 6).
+
+
+    **Listing 6:** Listing files and directories with `ls`. (Output will vary.)
+
+    ```
+
+    $ ls
+
+    Desktop
+
+    Downloads
+
+    sonnet_1.txt
+
+    sonnet_1_reversed.txt
+
+    ```
+
+
+    > The verb “diff” is computer jargon, but it’s the only word with exactly the
+    sense I want. It comes from the Unix `diff` utility, which yields a list of all
+    the differences between two files. More generally it means an unselective and
+    microscopically thorough comparison between two versions of something.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_31_0.png)
+
+
+    Figure 13: The graphical equivalent of $1 s$.
+
+
+    The **ls** command simply lists all the files and directories in the current directory
+    (except for those that are *hidden*, which we’ll learn more about in a moment).
+    In this sense, it’s effectively a command-line version of the graphical browser
+    used to show files and directories (also called “folders”), as seen in Figure
+    13. (We’ll sharpen our understanding of directories and folders in Section 4.)
+    As with a graphical file browser, the output in Listing 6 is just a sample, and
+    results will differ based on the details of your system. (This goes for all the
+    **ls** examples, so don’t be concerned if there are minor differences in output.)
+
+
+    The **ls** command can be used to check if a file (or directory) exists, because
+    trying to **ls** a nonexistent file results in an error message, as seen in Listing
+    7.
+
+
+    ```
+
+    **Listing 7: Running `ls` on a nonexistent file.**
+
+    ```
+
+    $ ls foo
+
+    ls: foo: No such file or directory
+
+    $ touch foo
+
+    $ ls foo
+
+    foo
+
+    ```
+
+    ```
+
+
+    32'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "Listing 7 uses the `touch` command to create an empty file with name `foo`\
+    \ (Box 7), so the second time we run `1s` the error message is gone. (The stated\
+    \ purpose of `touch` is to change the modification time on files or directories,\
+    \ but (ab)using `touch` to create empty files as in Listing 7 is a common Unix\
+    \ idiom.)\n\n# **Box 7. Foo, bar, baz, etc.**\n\nWhen reading about computers,\
+    \ you will encounter certain strange words—words like *foo*, *bar*, and *baz*—with\
+    \ surprising frequency. Indeed, in addition to `1s foo` and `touch foo`, we have\
+    \ already seen four such references in this tutorial: in a typical command-line\
+    \ command (Figure 2), in a virtual machine password (`foobar!`, Box 2), again\
+    \ when getting out of trouble (`grep foobar`, Box 4), and yet again in a man page\
+    \ (Listing 3). The first three were my own uses, but the last I had nothing to\
+    \ do with:\n\n```\n    . . .if name contains a slash (/) then man interprets\n\
+    \    it as a file specification, so that you can do man\n    ./foo.5 or even man\
+    \ /cd/foo/bar.1.gz.\n```\n\nHere we see both *foo* and *bar* making an appearance\
+    \ in the man page for *man* itself—an unambiguous testament to their ubiquity\
+    \ in computing.\n\nWhat is the origin of these odd terms? As usual, the **Jargon\
+    \ File** (via its entry on *foo*) enlightens us:\n\n**foo**: /foo/\n\n+   1. interj.\
+    \ Term of disgust.\n+   2. [very common] Used very generally as a sample name\
+    \ for absolutely anything, esp. programs and files (esp. scratch files).\n+  \
+    \ 3. First on the standard list of **metasyntactic variables** used in syntax\
+    \ examples. See also *bar*, *baz*, *qux*, *quux*, etc.\n\nWhen ‘foo’ is used in\
+    \ connection with ‘bar’ it has generally traced to the WWII-era Army slang acronym\
+    \ *FUBAR* [*see original meaning*],"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "later modified to *foobar*. Early versions of the Jargon File interpreted this\
+    \ change as a post-war bowdlerization, but it it [sic] now seems more likely that\
+    \ FUBAR was itself a derivative of ‘foo’ perhaps influenced by German *furchtbar*\
+    \ (terrible) — “foobar” may actually have been the *original* form.\n\nFollowing\
+    \ the link to *metasyntactic variables*, we then find the following:\n\n> **metasyntactic\
+    \ variable**: n.\n> \n> A name used in examples and understood to stand for whatever\
+    \ thing is under discussion, or any random member of a class of things under discussion.\
+    \ The word *foo* is the canonical example. To avoid confusion, hackers never (well,\
+    \ hardly ever) use *foo* or other words like it as permanent names for anything.\
+    \ In filenames, a common convention is that any filename beginning with a metasyntactic-variable\
+    \ name is a scratch file that may be deleted at any time.\n> \n> Metasyntactic\
+    \ variables are so called because (1) they are variables in the metalanguage used\
+    \ to talk about programs, etc.; (2) they are variables whose values are often\
+    \ variables (as in usages like the value of f(foo,bar) is the sum of foo and bar.\
+    \ However, it has been plausibly suggested that the real reason for the term metasyntactic\
+    \ variable is that it sounds good.\n\nA common pattern when using the command\
+    \ line is changing directories using `cd` (covered in Section 4) and then immediately\
+    \ typing `ls` to view the contents of the directory. This lets you orient yourself\
+    \ and is a good first step toward whatever your next action might be.\n\nOne useful\
+    \ ability of `ls` is support for the *wildcard character* `*` (read “star”). For\
+    \ example, to list all files ending in “*txt*”, we would type this:"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '```
+
+    $ ls *.txt
+
+    sonnet_1.txt
+
+    sonnet_1_reversed.txt
+
+    ```
+
+
+    Here *.txt (read “star dot tee-ex-tee”) automatically expands to all the file-names
+    that match the pattern “any string followed by .txt”.
+
+
+    There are three particularly important optional forms of ls, starting with the
+    “long form”, using the option -l (read “dash-ell”):
+
+
+    ```
+
+    $ ls -l *.txt
+
+    total 16
+
+    -rw-r--r-- 1 mhartl staff 87 Jul 20 18:05 sonnet_1.txt
+
+    -rw-r--r-- 1 mhartl staff 294 Jul 21 12:09 sonnet_1_reversed.txt
+
+    ```
+
+
+    For now, you can safely ignore most of the information output by ls -l, but note
+    that the long form lists a date and time indicating the last time the file was
+    modified. The number before the date is the size of the file, in bytes.$^{13}$
+
+
+    A second powerful ls variant is “list by reversed time of modification (long format)”,
+    or ls -rtl. This is particularly useful when there are a lot of files in the directory,
+    but you really only care about seeing the ones that have been modified recently,
+    such when confirming a file download. We’ll see an example of this in Section
+    3.1, but you are free to try it now:
+
+
+    ```
+
+    $ ls -rtl
+
+    <results system-dependent>
+
+    ```
+
+
+    By the way, -rtl is the commonly used compact form, but you can also pass the
+    options individually, like this:
+
+
+    ```
+
+    $ ls -r -t -l
+
+    ```
+
+
+    > $^{13}$A bit is one piece of yes-or-no information (such as a 1 or a 0), and
+    a byte is eight bits. Bytes are probably most familiar from “megabytes” and “gigabytes”,
+    which represent a million and a billion bytes, respectively. (The official story
+    is a little more complicated, but level of detail here is certainly enough to
+    be dangerous.)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "In addition, their order is irrelevant, so typing `ls -t*rl` gives the same\
+    \ result.\n\nFinally, Unix has the concept of “hidden files (and directories)”,\
+    \ which don’t show up by default when listing files. Hidden files and directories\
+    \ are identified by starting with a dot `.` , and are commonly used for things\
+    \ like storing user preferences. For example, in *Learn Enough™ Git to Be Dangerous*,\
+    \ we’ll create a file called `.gitignore` that tells a particular program (Git)\
+    \ to ignore files matching certain patterns. As a concrete example, to ignore\
+    \ all files ending in “*.txt”, we could do this:\n\n```\n$ echo \"*.txt\" > .gitignore\n\
+    $ cat .gitignore\n*.txt\n```\n\nIf we then run `ls`, the file won’t show up, because\
+    \ it’s hidden:\n\n```\n$ ls\nsonnet_1.txt\nsonnet_1_reversed.txt\n```\n\nTo get\
+    \ `ls` to display hidden files and directories, we need to pass it the `-a` option\
+    \ (for “all”):\n\n```\n$ ls -a\n.\t.gitignore\tsonnet_1_reversed.txt\n..\tsonnet_1.txt\n\
+    ```\n\nNow `.gitignore` shows up, as expected. (We’ll learn what `.` and `..`\
+    \ refer to in Section 4.3.)\n\n# Exercises\n\n+   1. What’s the command to list\
+    \ all the files (and directories) that start with the letter “s”?\n\n+   2. What\
+    \ is the command to list all the files that contain the string “onnet”, long-form\
+    \ by reverse modification time? *Hint:* Use the wildcard operator twice."
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '+   3. What is the command to list *all* files (including hidden ones) by reverse
+    modification time, in long form?
+
+
+    # ## 2.3 Renaming, copying, deleting
+
+
+    Next to listing files, probably the most common file operations involve renaming,
+    copying, and deleting them. As with listing files, most modern operating systems
+    provide a graphical user interface to such tasks, but in many contexts it is more
+    convenient to perform them at the command line.
+
+
+    The way to rename a file is with the **mv** command, short for “move”:
+
+
+    ```
+
+    `$ echo "test text" > test`
+
+    `$ mv test test_file.txt`
+
+    `$ ls`
+
+    test_file.txt
+
+    ```
+
+
+    This renames the file called **test** to **test_file.txt**. The final step in
+    the example runs `ls` to confirm that the file renaming was successful, but system-specific
+    files other than the test file are omitted from the output shown. (The name “move”
+    comes from the general use of `mv` to move a file to a different directory (Section
+    4), possibly renaming it en route. When the origin and target directories coincide,
+    such a “move” reduces to a simple renaming.)
+
+
+    The way to copy a file is with **cp**, short for “copy”:
+
+
+    ```
+
+    `$ cp test_file.txt second_test.txt`
+
+    `$ ls`
+
+    second_test.txt
+
+    test_file.txt
+
+    ```
+
+
+    Finally, the command for deleting a file is **rm**, for “remove”:
+
+
+    ```
+
+    `$ rm second_test.txt`
+
+    remove second_test.txt? y
+
+    `$ ls second_test.txt`
+
+    ls: second_test.txt: No such file or directory
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'Note that, on many systems, by default you will be prompted to confirm the
+    removal of the file. Any answer starting with the letter “y” or “Y” will cause
+    the file to be deleted, and any other answers will prevent the deletion from occuring.
+
+
+    By the way, in the calls to `cp` and `rm` above, I would almost certainly not
+    type out `test_file.txt` or `second_test.txt`. Instead, I would type something
+    like `tes<tab>` or `sec<tab>` (where `<tab>` represents the tab key), thereby
+    making use of *tab completion* (Box 8).
+
+
+    # Box 8. **Tab completion**
+
+
+    Most modern command-line programs (shells) support *tab completion*, which involves
+    automatically completing a word if there’s only one valid match on the system.
+    For example, if the only file starting with the letters “tes” is `test_file`,
+    we could create the command to remove it as follows:
+
+
+    ```
+
+    $ rm tes<tab>
+
+    ```
+
+
+    The shell would then complete the filename, yielding `rm test_file`. Especially
+    with longer filenames (or directories), tab completion can save a huge amount
+    of typing. It also lowers the *cognitive load*, since it means you don’t have
+    to remember the full name of the file—only its first few letters.
+
+
+    If the match is *ambiguous*, as would happen if we had files called `foobarquux`
+    and `foobazquux`, the word will be completed only as far as possible, so
+
+
+    ```
+
+    $ ls foo<tab>
+
+    ```
+
+
+    would be completed to
+
+
+    ```
+
+    $ ls fooba
+
+    ```
+
+
+    If we then hit tab *again*, we would see a list of matches:'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '```
+
+    $ ls fooba<tab>
+
+    foobarquux foobazquux
+
+    ```
+
+
+    We could then type more letters to resolve the ambiguity, so typing the r after
+    **fooba** and hitting `<tab>` would yield
+
+
+    ```
+
+    $ ls foobar<tab>
+
+    ```
+
+
+    which would be completed to **foobarquux**. This situation is common enough that
+    experienced command-line users will often just hit something like f<tab><tab>
+    to get the shell to show all the possibilities:
+
+
+    ```
+
+    $ ls f<tab><tab>
+
+    figure_1.png  foobarquux   foobazquux
+
+    ```
+
+
+    Additional letters would then be typed as usual to resolve the ambiguity.
+
+
+    The default behavior of **rm** on an unconfigured Unix system is actually to remove
+    the file without confirmation, but (because deletion is irreversible) many systems
+    *alias* the **rm** command to use an option to turn on confirmation. (As you can
+    verify by running **man rm**, this option is **-i**, so in fact **rm** is really
+    **rm -i**.) There are many situations where confirmation is inconvenient, though,
+    such as when you’re deleting a list of files and don’t want to have to confirm
+    each one. This is especially common when using the wildcard \* introduced in Section
+    2.2. For example, to remove all the files ending with “.txt” using a single command,
+    *without* having to confirm each one, you can type this:
+
+
+    ```
+
+    $ rm -f *.txt
+
+    ```
+
+
+    Here **-f** (for “force”) overrides the implicit **-i** option and removes all
+    files immediately. (**N.B.** You are now in a position to understand the command
+    in Figure 2.)
+
+
+    39'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_39_0.png)
+
+
+    Figure 14: The terseness of Unix commands can be a source of confusion.
+
+
+    # Unix terseness
+
+
+    One thing you might notice is that the commands in this section and in Section
+    2.2 are short: instead of list, move, copy, and remove, we have ls, mv, cp, and
+    rm. Because the former command names are easier to understand and memorize, you
+    may wonder why the actual commands aren’t longer (Figure 14).
+
+
+    The answer is that Unix dates from a time when most computer users logged on to
+    centralized servers over slow connections, and there could be a noticeable delay
+    between the time users pressed a key and the time it appeared on the terminal.
+    For frequently used commands like listing files, the difference between list and
+    ls or remove and rm could be significant. As a result, the most commonly used
+    Unix commands tend to be only two or three letters long. Because it makes them
+    more difficult to memorize, this can be a minor
+
+
+    40'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'inconvenience when learning them, but over a lifetime of command-line use the
+    savings represented by, say, **mv** really add up.
+
+
+    # Exercises
+
+
+    +   1. Use the `echo` command and the redirect operator `>` to make a file called
+    `foo.txt` containing the text “hello, world”. Then, using the `cp` command, make
+    a copy of `foo.txt` called `bar.txt`. Using the `diff` command, confirm that the
+    contents of both files are the same.
+
+    +   2. By combining the `cat` command and the redirect operator `>`, create a
+    copy of `foo.txt` called `baz.txt` without using the `cp` command.
+
+    +   3. Create a file called `quux.txt` containing the contents of `foo.txt` followed
+    by the contents of `bar.txt`. Hint: As noted in Section 2.1, `cat` can take multiple
+    arguments.
+
+    +   4. How do `rm nonexistent` and `rm -f nonexistent` differ for a nonexistent
+    file?
+
+
+    # 2.4 Summary
+
+
+    Important commands from this section are summarized in Table 2.
+
+
+    # Exercises
+
+
+    +   1. By copying and pasting the text from the [HTML version](#) of Figure 15,
+    use `echo` to make a file called `sonnet_1_complete.txt` containing the full (original)
+    text of Shakespeare’s first sonnet. Hint: You may recall getting stuck when `echo`
+    was followed by an unmatched double quote (Section 1.2 and Box 4), as in `echo
+    "`, but in fact this construction allows you to print out a multi-line block of
+    text. Just remember to put a closing quote at the end, and then redirect to a
+    file with the appropriate name. Check that the contents are correct using `cat`
+    (Figure 12).'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '| Command | Description | Example |
+
+    |---|---|---|
+
+    | `>` | Redirect output to filename | `$ echo foo > foo.txt` |
+
+    | `>>` | Append output to filename | `$ echo bar >> foo.txt` |
+
+    | `cat <file>` | Print contents of file to screen | `$ cat hello.txt` |
+
+    | `diff <f1> <f2>` | Diff files 1 & 2 | `$ diff foo.txt bar.txt` |
+
+    | `ls` | List directory or file | `$ ls hello.txt` |
+
+    | `ls -l` | List long form | `$ ls -l hello.txt` |
+
+    | `ls -rtl` | Long by reverse modification time | `$ ls -rtl` |
+
+    | `ls -a` | List all (including hidden) | `$ ls -a` |
+
+    | `touch <file>` | Create an empty file | `$ touch foo` |
+
+    | `mv <old> <new>` | Rename (move) from old to new | `$ mv foo bar` |
+
+    | `cp <old> <new>` | Copy old to new | `$ cp foo bar` |
+
+    | `rm <file>` | Remove (delete) file | `$ rm foo` |
+
+    | `rm -f <file>` | Force-remove file | `$ rm -f bar` |
+
+
+    Table 2: Important commands from Section 2.
+
+
+    FRom faireft creatures we defire increafe,
+
+    That therby beauties Rofe might neuer die,
+
+    But as the ripcr fhould by time decaefe,
+
+    His tender heire might beare his memory:
+
+    But thou contracted to thine owne bright eyes,
+
+    Feed’t thy lights flame with felfe fubftantiell fewell,
+
+    Making a famine where abundance lies,
+
+    Thy felfe thy foe,to thy fweet felfe too cruell:
+
+    Thou that art now the worlds frefh ornament,
+
+    And helay to the gaudy fpring,
+
+    Within thine owne burfief thy content,
+
+    And tender chole makf’t waft in niggarding:
+
+    Pitty the world,or elfe this glutton be,
+
+    To eate the worlds due,by the graue and theee.
+
+
+    Figure 15: A copy-and-pastable version of Shakespeare’s first sonnet (cf. Figure
+    10).'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '+   2.  Type the sequence of commands needed to create an empty file called
+    foo, rename it to bar, and copy it to baz.
+
+
+    +   3.  What is the command to list only the files starting with the letter “b”?
+
+    +   Hint: Use a wildcard.
+
+
+    +   4.  Remove both bar and baz using a single call to rm. Hint: Use the wildcard
+    pattern from the previous exercise.
+
+
+    # ## 3 Inspecting files
+
+
+    Having seen how to create and manipulate files, now it’s time to learn how to
+    examine their contents. This is especially important for files too long to fit
+    on a single screen. In particular, we saw starting in Section 2.1 how to use the
+    cat command to dump the file contents to the screen, but this doesn’t work very
+    well for longer files.
+
+
+    # ### 3.1 Downloading a file
+
+
+    To give us a place to start, rather than creating a long file by hand (which is
+    cumbersome) we’ll download a file from the Internet using the powerful curl utility,
+    which allows us to interact with URLs at the command line. Although it’s not part
+    of the core Unix command set, the curl command is widely available on Unix systems.
+    To make sure it’s available on your system, we can use the which command, which
+    looks to see if the given program is available at the command line.14 The way
+    to use it is to type which followed by the name of the program—in this case, curl:
+
+
+    ```
+
+    $ which curl
+
+    /opt/curl
+
+    ```
+
+
+    14 Technically, which locates a file on the user’s path, which is a list of directories
+    where executable programs are located.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'I’ve shown the output on my system (usually read as “user bin curl”), but the
+    result on your system may differ. In particular, if the result is just a blank
+    line, you will have to install curl, which you can do by Googling for “install
+    curl” followed by the name of your operating system.
+
+
+    Once curl is installed, we can download a file containing a large corpus of text
+    using the command in Listing 8.
+
+
+    ```
+
+    **Listing 8:** Using curl to download a longer file.
+
+    ```bash
+
+    $ curl -OL https://cdn.learnenough.com/sonnets.txt
+
+    $ ls -rtl
+
+    ```
+
+    ```
+
+
+    Be sure to copy the command exactly; in particular, note that the option -OL contains
+    a capital letter “O” (O) and not a zero (0). (Figuring out what these options
+    do is left as an exercise (Section 3.5.)) Also, on some systems (for mysterious
+    reasons) you might have to run the command twice to get it to work; by inspecting
+    the results of ls -rtl, you should be able to tell if the initial call to curl
+    created the file as expected. (If you do have to repeat the curl command, you
+    could press up arrow twice to retrieve it, but see Box 9 for alternatives.)
+
+
+    **Box 9. Repeating previous commands**
+
+
+    Repeating previous commands is a frequent task when using the command line. So
+    far in this tutorial, we’ve used the up-arrow key to retrieve (and possibly edit)
+    previous commands, but this isn’t the only possibility. An even quicker way to
+    find and immediately run a previous command involves using the exclamation point
+    !, which in the context of software development is usually pronounced “bang”.
+    To run the previous command exactly as written, we can use “bang bang”:
+
+    ```bash
+
+    $ echo "foo"
+
+    foo
+
+    $ !!
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '```
+
+    ```
+
+    echo "foo"
+
+    foo
+
+    ```
+
+    ```
+
+
+    A closely related usage is “bang” followed by some number of characters, which
+    runs the last command that started with those characters. For example, to run
+    the last `curl` command, we could type this:
+
+
+    ```
+
+    ```
+
+    $ !curl
+
+    ```
+
+    ```
+
+
+    This would save us the trouble of typing out the options, the URL, etc. Depending
+    on our history of commands, the even terser `!cu` or `!c` would work as well.
+    This technique is especially useful when the desired command last happened many
+    commands ago, which can make hitting up arrow cumbersome.
+
+
+    A second and incredibly powerful technique is `Ctrl-R`, which lets you search
+    interactively through your previous commands, and then optionally edit the result
+    before executing. For example, which could try this to bring up the last `curl`
+    command:
+
+
+    ```
+
+    ```
+
+    $ <Ctrl-R>
+
+    (reverse-i-search)`:'' : curl
+
+    ```
+
+    ```
+
+
+    Hitting return would then put the last `curl` command after our prompt and allow
+    us to edit it (if desired) before hitting return to execute it. When your workflow
+    happens to involve repeatedly running a variety of similar commands, sometimes
+    it can seem like “all commands start with `Ctrl-R`.”
+
+
+    The result of running Listing 8 is **`sonnets.txt`**, a file containing all 154
+    of Shakespeare’s sonnets. This file contains 2620 lines, far too many to fit on
+    one screen. Learning how to inspect its contents is the goal of the rest of this
+    section. (Among other things, we’ll learn how to determine that it has 2620 lines
+    without counting them all by hand.)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Exercises
+
+
+    +   1. Use the command `curl -I www.learnenough.com` to fetch the *HTTP header*
+    for the **Learn Enough** website. What is the **HTTP status code** of the address?
+    How does this differ from the status code of `learnenough.com`?
+
+
+    +   2. Using `ls`, confirm that `sonnets.txt` exists on your system. How big is
+    it in bytes? *Hint:* Recall from Section 2.2 that the “long form” of `ls` displays
+    a byte count.
+
+
+    +   3. The byte count in the previous exercise is high enough that it’s more naturally
+    thought of in *kilobytes* (often treated as 1000 bytes, but actually equal to
+    $2^{10}=1024$ bytes). Using the `-h` (“human-readable”) option to `ls`, list the
+    long form of the sonnets file with a human-readable byte count.
+
+
+    +   4. Suppose you wanted to list the files and directories using **human**-readable
+    byte counts, **all**, by reverse time-sorted long-form. Why might this command
+    be the personal favorite of the author of this tutorial?[15]
+
+
+    # 3.2 Making heads and tails of it
+
+
+    Two complementary commands for inspecting files are `head` and `tail`, which respectively
+    allow us to view the beginning (head) and end (tail) of the file. The `head` command
+    shows the first 10 lines of the file (Listing 9).
+
+
+    ```
+
+    Listing 9: Looking at the head of the sample text file.
+
+    ```text
+
+    $ head sonnets.txt
+
+    Shake-speare''s Sonnets
+
+    I
+
+    ```
+
+    ```
+
+
+    > 15 Having known about `ls -a` and `ls -rt1` for a while—which together yield
+    the suggestive command `ls -art1`—one day I decided to add an “h” (for obvious
+    reasons). This is actually how I accidentally discovered the useful `-h` option
+    some years ago.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    ```
+
+    From fairest creatures we desire increase,
+
+    That thereby beauty''s Rose might never die,
+
+    But as the riper should by time decease,
+
+    His tender heir might bear his memory:
+
+    But thou contracted to thine own bright eyes,
+
+    Feed''st thy light''s flame with self-substantial fuel
+
+    ```
+
+    ```
+
+
+    Similarly, **tail** shows the last 10 lines of the file (Listing 10).
+
+
+    ```
+
+    **Listing 10: Looking at the tail of the sample text file.**
+
+    ```
+
+    $ tail sonnets.txt
+
+    The fairest votary took up that fire
+
+    Which many legion of true hearts had warm''d;
+
+    And so the general of hot desire
+
+    Was, sleeping, by a virgin hand disarm''d.
+
+    This brand she quenched in a cool well by,
+
+    Which from Love''s fire took heat perpetual,
+
+    Growing a bath and healthful remedy,
+
+    For men diseas''d; but I, my mistress'' thrall,
+
+    Came there for cure and this by that I prove,
+
+    Love''s fire heats water, water cools not love.
+
+    ```
+
+    ```
+
+
+    These two commands are useful when (as is often the case) you know for sure you
+    only need to inspect the beginning or end of a file.
+
+
+    # Wordcount and pipes
+
+
+    By the way, I didn’t recall offhand how many lines **head** and **tail** show
+    by default. Since there are only 10 lines in the output, I could have counted
+    them by hand, but in fact I was able to figure it out using the **wc** command
+    (short for “wordcount”; recall Figure 14).
+
+
+    The most common use of **wc** is on full files. For example, we can run `sonnets.txt`
+    through **wc**:
+
+
+    ```
+
+    ```
+
+    $ wc sonnets.txt
+
+    2620 17670 95635 sonnets.txt
+
+    ```
+
+    ```
+
+
+    47'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'Here the three numbers indicate how many lines, words, and bytes there are
+    in the file, so there are 2620 lines (thereby fulfilling the promise made at the
+    end of Section 3.1), 17670 words, and 95635 bytes.
+
+
+    You are now in a position to be able to guess one method for determining how many
+    lines are in head sonnets.txt. In particular, we can combine head with the redirect
+    operator (Section 2.1) to make a file with the relevant contents, and then run
+    wc on it, as shown in Listing 11.
+
+
+    ```
+
+    ```text
+
+    Listing 11: Redirecting head and running wc on the result.
+
+    $ head sonnets.txt > sonnets_head.txt
+
+    $ wc sonnets_head.txt
+
+    10    46    294 sonnets_head.txt
+
+    ```
+
+    ```
+
+
+    We see from Listing 11 that there are 10 lines in head wc (along with 46 words
+    and 294 bytes). The same method, of course, would work for tail.
+
+
+    On the other hand, you might get the feeling that it''s a little unclean to make
+    an intermediate file just to run wc on it, and indeed there''s a way to avoid
+    it using a technique called pipes. Listing 12 shows how to do it.
+
+
+    ```
+
+    ```text
+
+    Listing 12: Piping the result of head through wc.
+
+    $ head sonnets.txt | wc
+
+    10    46    294
+
+    ```
+
+    ```
+
+
+    The command in Listing 12 runs head sonnets.txt and then pipes the result through
+    wc using the pipe symbol | (Shift-backslash on QWERTY keyboards). The reason this
+    works is that the wc command, in addition to taking a filename as an argument,
+    can (like many Unix programs) take input from “standard in” (compare to “standard
+    out” mentioned in Section 1.2), which in this case is the output of head sonnets.txt
+    shown in Listing 9. The wc program takes this input and counts it the same way
+    it counts a file, yielding the same line, word, and byte counts as Listing 11.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Exercises
+
+
+    +   1. By piping the results of `tail sonnets.txt` through `wc`, confirm that
+    (like `head`) the `tail` command outputs 10 lines by default.
+
+    +   2. By running `man head`, learn how to look at the first n lines of the file.
+    By experimenting with different values of n, find a `head` command to print out
+    just enough lines to display the first sonnet in its entirety (Figure 10).
+
+    +   3. Pipe the results of the previous exercise through `tail` (with the appropriate
+    options) to print out only the 14 lines composing Sonnet 1. Hint: The command
+    will look something like `head -n <i> sonnets.txt | tail -n <j>`, where `<i>`
+    and `<j>` represent the numerical arguments to the `-n` option.
+
+    +   4. One of the most useful applications of `tail` is running `tail -f` to view
+    a file that''s actively changing. This is especially common when monitoring files
+    used to log the activity of, e.g., web servers, a practice known as "tailing the
+    log file". To simulate the creation of a log file, run `ping learnenough.com >
+    learnenough.log` in one terminal tab. (The `ping` command "pings" a server to
+    see if it''s working.) In a second tab, type the command to tail the log file.
+    (At this point, both tabs will be stuck, so once you''ve gotten the gist of `tail
+    -f` you should use the technique from Box 4 to get out of trouble.)
+
+
+    # 3.3 Less is more
+
+
+    Unix provides two utilities for the common case of wanting to look at more than
+    just the head or tail of a file. The older of these programs is called `more`,
+    but (I''d guess initially as a tongue-in-cheek joke) there''s a more powerful
+    variant called `less`.16 The `less` program is interactive, so it''s hard to capture
+    in print, but here''s roughly what it looks like:
+
+
+    > 16On some systems, apparently they''re *exactly* the *same program*, so `less`
+    really is `more` (or, more accurately, `more` is `less`).'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\n$ less sonnets.txt\nShake-speare's Sonnets\n\nI\nFrom fairest creatures\
+    \ we desire increase,\nThat thereby beauty's Rose might never die,\nBut as the\
+    \ riper should by time decease,\nHis tender heir might bear his memory:\nBut thou\
+    \ contracted to thine owne bright eyes,\nFeed'st thy light's flame with self-substantial\
+    \ fuel,\nMaking a famine where abundance lies,\nThy self thy foe, to thy sweet\
+    \ self too cruel:\nThou that art now the world's fresh ornament,\nAnd only herald\
+    \ to the gaudy spring,\nWithin thine owne bud buriest thy content,\nAnd tender\
+    \ churl mak'st waste in niggarding:\nPity the world, or else this glutton be,\n\
+    To eat the world's due, by the grave and thee.\n\nII\n\nWhen forty winters shall\
+    \ besiege thy brow,\nAnd dig deep trenches in thy beauty's field,\nsonnets.txt\n\
+    ```\n\nThe point of **less** is that it lets you navigate through the file in\
+    \ several useful ways, such as moving one line up or down with the arrow keys,\
+    \ pressing space bar to move a page down, pressing **Ctrl-F** to move forward\
+    \ a page (i.e., the same as spacebar) or **Ctrl-B** to move back a page. To quit\
+    \ **less**, type **q** (for “quit”).\n\nPerhaps the most powerful aspect of **less**\
+    \ is the forward slash key `/`, which lets you search through the file from beginning\
+    \ to end. For example, suppose we wanted to search through **sonnets.txt** for\
+    \ “rose” (Figure 16),<sup>17</sup> one of the most frequently used images used\
+    \ in the *Sonnets*.<sup>18</sup> The way to do this in **less** is to type `/rose`\
+    \ (read “slash rose”), as shown in Listing 13.\n\n> <sup>17</sup> Image retrieved\
+    \ from https://commons.wikimedia.org/wiki/File:Tudor\\_Rose.svg on 2015-07-21\n\
+    > \n> <sup>18</sup> Though undated, most of Shakespeare’s sonnets were probably\
+    \ composed during the reign of *Queen Elizabeth*, whose *royal house* adopted\
+    \ a rose (Figure 16) as its *heraldic emblem*. Given this context, Shakespeare’s\
+    \ choice of floral imagery isn’t surprising, but in fact only a few commentators\
+    \ on the *Sonnets* have *noticed* the seemingly obvious reference."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_50_0.png)
+
+
+    Figure 16: A *famous rose* from the time of Shakespeare.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# **Listing 13**: Searching for the string “rose” using **less**.
+
+
+    ```
+
+    Shake-speare''s Sonnets
+
+
+    I
+
+
+    From fairest creatures we desire increase,
+
+    That thereby beauty''s Rose might never die,
+
+    But as the riper should by time decease,
+
+    His tender heir might bear his memory;
+
+    But thou contracted to thine owb bright eyes,
+
+    Feed''st thy light''s flame with self-substantial fuel,
+
+    Making a famine where abundance lies,
+
+    Thy self thy foe, to thy sweet self too cruel:
+
+    Thou that art now the world''s fresh ornament,
+
+    And only herald to the gaudy spring,
+
+    Within thine owb bud burliest thy content,
+
+    And tender churl mak''st waste in niggarding:
+
+    Pity the world, or else this glutton be,
+
+    To eat the world''s due, by the grave and thee.
+
+
+    II
+
+
+    When forty winters shall besiege thy brow,
+
+    And dig deep trenches in thy beauty''s field,
+
+    /rose
+
+    ```
+
+
+    The result of pressing return after typing */rose* in Listing 13 is to highlight
+    the first occurence of “rose” in the file. You can then press **n** to navigate
+    to the next match, or **N** to navigate to the previous match.
+
+
+    The last two essential **less** less commands are **G** to move to the end of
+    the file and **1G** (that''s 1 followed by G) to move back to the beginning. Table
+    3 summarizes what are in my view the most important key combinations (i.e., the
+    ones I think you need to be *dangerous*), but if you''re curious you can find
+    a longer list of commands at the [Wikipedia page on *less*](https://en.wikipedia.org/wiki/Less_(Unix)).
+
+
+    I encourage you to get in the habit of using **less** as your go-to utility for
+    looking at the contents of a file. The skills you develop have other applications
+    as well; for example, the man pages (Section 1.3) use the same interface as **less**,
+    so by learning about **less** you''ll get better at navigating the man pages as
+    well.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '| Command | Description | Example |
+
+    | :--- | :--- | :--- |
+
+    | `up` & `down` arrow keys | Move up or down one line | |
+
+    | `spacebar` | Move forward one page | |
+
+    | `Ctrl-F` | Move forward one page | |
+
+    | `Ctrl-B` | Move back one page | |
+
+    | `G` | Move to end of file | |
+
+    | `1G` | Move to beginning of file | |
+
+    | `/string` | Search file for string | `/rose` |
+
+    | `n` | Move to next search result | |
+
+    | `N` | Move to previous search result | |
+
+    | `q` | Quit `less` | |
+
+
+    Table 3: The most important `less` commands.
+
+
+    # Exercises
+
+
+    +   1. Run `less` on `sonnets.txt`. Go down three pages and then back up three
+    pages. Go to the end of the file, then to the beginning, then quit.
+
+
+    +   2. Search for the string “All” (case-sensitive). Go forward a few occur-  rances,
+    then back a few occurrences. Then go to the beginning of the  file and count the
+    occurrences by searching forward until you hit the end.  Compare your count to
+    the result of running `grep All sonnets.txt`  | `wc`. (We''ll learn about `grep`
+    in Section 3.4.)
+
+
+    +   3. Using `less` and `/` (“slash”), find the sonnet that begins with the line
+    “Let  me not”. Are there any other occurrences of this string in the `Sonnets`?  *Hint:
+    Press n to find the next occurrence (if any). Extra credit: Listen to  the sonnet
+    in both modern and original pronunciation. Which version’s  rhyme scheme is better?*
+
+
+    +   4. Because `man` uses `less`, we are now in a position to search man pages  interactively.
+    By searching for the string “sort” in the man page for `ls`,  discover the option
+    to sort files by size. What is the command to display  the long form of files
+    sorted so the largest files appear at the bottom?  *Hint: Use `ls -rt1` as a model.*
+
+
+    53'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 3.4  Grepping
+
+
+    One of the most powerful tools for inspecting file contents is **grep**, which
+    probably stands for something, but it’s not important what. ${ }^{19}$ Indeed,
+    grep is frequently used as a verb, as in “You should totally grep that file.”
+
+
+    The most common use of **grep** is just to search for a substring in a file. For
+    example, we saw in Section 3.3 how to use less to search for the string “rose”
+    in Shakespeare’s sonnets. Using **grep**, we can find the references directly,
+    as shown in Listing 14.
+
+
+    ![](img/4dec9c51e73c9027d3d8a4fab4408fe6_53_0.png)
+
+
+    With the command in Listing 14, it appears that we are in a position to count
+    the number of lines containing references to the word “rose” by piping to wc (as
+    in Section 3.3), as shown in Listing 15.
+
+
+    ![](img/4dec9c51e73c9027d3d8a4fab4408fe6_53_1.png)
+
+
+    Listing 15 tells us that 10 lines contain “rose” (or “roses”, since “rose” is
+    a substring of “roses”). But you may recall from Figure 10 that Shakespeare’s
+    first sonnet contains “Rose” with a capital “R”. Referring to Listing 14, we see
+
+
+    ¹⁹ It comes from “globally search a regular expression and print”, but I told
+    you it wasn’t important.
+
+
+    54'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'that this line has in fact been missed. This is because grep is case-sensitive
+    by default, and “rose” doesn’t match “Rose”.
+
+
+    As you might suspect, grep has an option to perform case-insensitive matching
+    as well. One way to figure it out is to search through the man page for grep:
+
+
+    +   * Type man grep
+
+    +   * Type /case and then return
+
+    +   * Read off the result (Figure 17)
+
+
+    (As noted briefly in Section 1.3, the man pages use the same interface as the
+    less command we met in Section 3.3, so we can search through them using /.)
+
+
+    Applying the result of the above procedure yields Listing 16. Comparing the results
+    of Listing 16 with Listing 15, we see that we now have 12 matching lines instead
+    of only 10, so there must be a total of $12-10=2$ lines containing “Rose” (but
+    not “rose”) in the Sonnets.$^{20}$
+
+
+    # Listing 16: Doing a case-insensitive grep.
+
+
+    ```
+
+    $ grep -i rose sonnets.txt | wc
+
+    12  96  508
+
+    ```
+
+
+    The grep utility is insanely powerful, especially when combined with so-called
+    regular expressions, but learning grep and grep -i are almost enough to be dangerous
+    (including the important application of grepping processes (Box 10)). We’ll see
+    the third and final grep variant needed to be dangerous in Section 4.
+
+
+    # Box 10. Grepping processes
+
+
+    $^{20}$ Actually, “ROSE”, “R oSE”, “rOSE”, etc., all match as well, but “Rose”
+    is the likeliest candidate. Confirming this hunch is left as an exercise (Section
+    3.4).'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_55_0.png)
+
+
+    **Figure 17**: The result of searching man grep for "case".'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'One of the many uses of `grep` is filtering the Unix *process list* for running
+    programs that match a particular string. (On Unix-like systems such as Linux and
+    OS X, user and system tasks each take place within a well-defined container called
+    a *process*.) This is especially useful when there’s a rogue process on your system
+    that needs to be killed. (A good way to find such processes is by running the
+    `top` command, which shows the processes consuming the most resources.)
+
+
+    For example, at one point in the *Ruby on Rails Tutorial book*, it’s important
+    to eliminate a program called `spring` from the process list. To do this, first
+    the processes need to be found, and the way to see all the processes on your system
+    is to use the `ps` command with the `aux` options:
+
+
+    ```
+
+    ```
+
+    $ ps aux
+
+    ```
+
+    ```
+
+
+    Per Figure 14, `ps` is short for “process status”. And for **confusing and obscure
+    reasons**, options to `ps` aren’t written with a dash (so it’s `ps aux` instead
+    of `ps -aux`). (How on earth are you supposed to know this? That’s what this tutorial
+    is for.)
+
+
+    To filter the processes by program name, you pipe run the results of `ps` through
+    the `grep`:
+
+
+    ```
+
+    ```
+
+    $ ps aux | grep spring
+
+    ubuntu 12241 0.3 0.5 589960 178416 ? Ssl Sep20 1:46
+
+    spring app | sample_app | started 7 hours ago
+
+    ```
+
+    ```
+
+
+    The result shown gives some details about the process, but the most important
+    thing is the first number, which is the *process id*, or `pid` (often pronounced
+    to rhyme with “kid”). To eliminate an unwanted process, we use the `kill` command
+    to issue the Unix terminate code (which **happens to be 15**) to the `pid`:
+
+
+    ```
+
+    ```
+
+    $ kill -15 12241
+
+    ```
+
+    ```
+
+
+    This is the technique I recommend for killing individual processes, such as a
+    rogue web server (with the `pid` found via `ps aux | grep server`), but sometimes'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'it’s convenient to kill all the processes matching a particular process name,
+    such as when you want to kill all the `spring` processes gunking up your system.
+    In this case, you can kill all the processes with name `spring` using the `pkill`
+    command as follows:
+
+
+    ```
+
+    $ pkill -15 -f spring
+
+    ```
+
+
+    Any time something isn’t behaving as expected, or a process appears to be frozen,
+    it’s a good idea to run `top` or `ps aux` to see what’s going on, pipe `ps aux`
+    through `grep` to select the suspected processes, and then run `kill -15 <pid>`
+    or `pkill -15 -f <name>` to clear things up.
+
+
+    # **Exercises**
+
+
+    +   1. By searching `man grep` for “line number”, construct a command to find
+    the line numbers in `sonnets.txt` where the string “rose” appears.
+
+    +   2. You should find that the last occurrences of “rose” is (via “roses”) on
+    line 2203. Figure out how to go directly to this line when running `less sonnets.txt`.
+    *Hint:* Recall from Table 3 that `1G` goes to the top of the file, i.e., line
+    1. Similarly, `17G` goes to line 17. Etc.
+
+    +   3. By piping the output of `grep` to `head`, print out the first (and *only*
+    the first) line in `sonnets.txt` containing “rose”. *Hint:* Use the result of
+    the second exercise in Section 3.2.
+
+    +   4. In Listing 16, we saw two additional lines that case-insensitively matched
+    “rose”. Execute a command confirming that both of the lines contain the string
+    “Rose” (and not, e.g., “rOSe”). *Hint:* Use a case-sensitive `grep` for “Rose”.
+
+    +   5. You should find in the previous exercise that there are *three* lines matching
+    “Rose” instead of the two you might have expected from Listing 16.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '| Command | Description | Example |
+
+    |---|---|---|
+
+    | `curl` | Interact with URLs | `$ curl -O example.com` |
+
+    | `which` | Locate a program on the path | `$ which curl` |
+
+    | `head <file>` | Display first part of file | `$ head foo` |
+
+    | `tail <file>` | Display last part of file | `$ tail bar` |
+
+    | `wc <file>` | Count lines, words, bytes | `$ wc foo` |
+
+    | `cmd1 | cmd2` | Pipe cmd1 to cmd2 | `$ head foo | wc` |
+
+    | `less <file>` | View file contents interactively | `$ less foo` |
+
+    | `grep <string> <file>` | Find string in file | `$ grep foo bar.txt` |
+
+    | `grep -i <string> <file>` | Find case-insensitively | `$ grep -i foo bar.txt`
+    |
+
+    | `ps` | Show processes | `$ ps aux` |
+
+    | `top` | Show processes (sorted) | `$ top` |
+
+    | `kill -15 <pid>` | Kill a process | `$ kill -9 24601` |
+
+    | `pkill -15 -f <name>` | Kill matching processes | `$ pkill -9 -f spring` |
+
+
+    Table 4: Important commands from Section 3.
+
+
+    This is because there is one line that contains both “Rose” and “rose”, and thus
+    shows up in both `grep rose` and `grep -i rose`. Write a command confirming that
+    the number of lines matching “Rose” but not matching “rose” is equal to the expected
+    2. Hint: Pipe the result of `grep` to `grep -v`, and then pipe that result to
+    `wc`. (What does `-v` do? Read the man page for `grep` (Box 5.))
+
+
+    # ## 3.5 Summary
+
+
+    Important commands from this section are summarized in Table 4.
+
+
+    # ### Exercises
+
+
+    +   1. The `history` command prints the history of commands in a particular terminal
+    shell (subject to some limit, which is typically large). Pipe `history` to `less`
+    to examine your command history. What was your 17th command?
+
+
+    +   2. By piping the output of `history` to `wc`, count how many commands'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'you''ve executed so far.
+
+
+    +   3. One use of history is to grep your commands to find useful ones you''ve
+    used before, with each command preceded by the corresponding number in the command
+    history. By piping the output of history to grep, determine the number for the
+    last occurrence of curl.
+
+
+    +   4. In Box 9, we learned about ! ! ( "bang bang" ) to execute the previous
+    command. Similarly, !n executes command number n, so that, e.g., ! 17 executes
+    the 17th command in the command history. Use the result from the previous exercise
+    to re-run the last occurrence of curl.
+
+
+    +   5. What do the O and L options in Listing 8 mean? Hint: Pipe the output of
+    curl -h to less and search first for the string -O and then for the string -L.
+
+
+    # 4 Directories
+
+
+    Having examined many of Unix utilities for dealing with files, the time has come
+    to learn about directories, sometimes known by the synonym folders (Figure 18).
+    As we''ll see, many of the ideas developed in the context of files also apply
+    to directories, but there are many differences as well.
+
+
+    # 4.1 Structure
+
+
+    The structure of Unix-style directories is typically a list of directory names
+    separated by forward slashes, such as
+
+
+    ```
+
+    ```
+
+    $ /Users/mhartl/ruby
+
+    ```
+
+    ```
+
+
+    or'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_60_0.png)
+
+
+    Figure 18: The correspondence between folders & directories.
+
+
+    ```
+
+    $ /usr/local/bin
+
+    ```
+
+
+    As seen in Figure 18, these representations correspond to directories in a hierarchical
+    filesystem, with (say) **mhartl** a subdirectory of *User* and **ruby** a subdirectory
+    of **mhartl**.
+
+
+    Conventions vary when speaking about directories: a *user directory* like /Users/mhartl
+    would probably be read as “slash users slash mhartl” or “slash users mhartl”,
+    whereas omitting the initial slash in spoken language is common for *system directories*
+    such as /usr/local/bin, which would probably be pronounced “user local bin”. Because
+    all Unix directories are ultimately subdirectories of the *root directory* / (pronounced
+    “slash”), the leading and separator slashes are implied. **Note:** Referring to
+    forward slashes incorrectly as “backslashes” is a *cause of suffering*, and should
+    be strictly avoided.
+
+
+    The most important directory for a particular user is the *home directory*, which
+    on my OS X system is /Users/mhartl, corresponding to my username (**mhartl**).
+    The home directory can be specified as an *absolute path*, as in /Users/mhartl,
+    or using the shorthand for the home directory is the
+
+
+    61'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'tilde character ~ (which is typed using Shift-backtick, located just to the
+    left of the number 1 on most keyboards). As a result, the two paths shown in Figure
+    18 are identical: */Users/mhart1/ruby/projects* is the same as *~/ruby/projects*.
+    (Amusingly, the reason the tilde character is used for the home directory is simply
+    because the "Home" key was the same as the key for producing "~" on *some early
+    keyboards*.)
+
+
+    In addition to user directories, every Unix system has *system directories* for
+    the programs essential for the computer''s normal operation. Modifying system
+    files or directories requires special powers granted only to the *superuser*,
+    known as *root*. The superuser is so powerful that it''s considered bad form to
+    log in as *root*; instead, tasks executed as *root* should typically use the *sudo*
+    command (Box 11).
+
+
+    # **Box 11. "sudo make me a sandwich."**
+
+
+    *sudo* gives ordinary users the power to execute commands as the superuser. For
+    example, let''s try *touch*ing a file in the system directory */opt* as follows:
+
+
+    ```
+
+    $ touch /opt
+
+    touch: /opt/foo: Permission denied
+
+    ```
+
+
+    Because normal users don''t have permission to modify */opt*, the command fails,
+    but it succeeds with *sudo*:
+
+
+    ```
+
+    $ sudo touch /opt/foo
+
+    Password:
+
+    ```
+
+
+    As shown, after entering *sudo* we are prompted to enter our user password; if
+    entered correctly, and if the user has been configured to have *sudo* privileges
+    (which is the default on most desktop Unix systems), then the command will succeed.
+    As shown in Figure 19, this pattern of being denied at first, only to succeed
+    using *sudo*, is a common theme in computing.
+
+
+    To check that the file really was created, we can *ls* it:'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '```
+
+    $ ls -l /opt/foo
+
+    -rw-r--r-- 1 root wheel 0 Jul 23 19:13 /opt/foo
+
+    ```
+
+
+    Note that (1) a normal user can ls a file in a system directory (without sudo)
+    and (2) the name root appears in the listing, indicating that the superuser owns
+    the file. (The meaning of the second term, wheel, is a little obscure, but you
+    can learn about it on a site called, appropriately enough, superuser.)
+
+
+    To remove the file we just created, we again need superuser status:
+
+
+    ```
+
+    $ rm -f /opt/foo
+
+    rm: /opt/foo: Permission denied
+
+    $ sudo !!
+
+    $ !ls
+
+    ls: /opt/foo: No such file or directory
+
+    ```
+
+
+    Here the first rm fails, so we''ve run sudo !!, which runs sudo and then the previous
+    command, and we''ve followed that up with !ls, which runs the previous ls command
+    (Box 9).
+
+
+    As a final comment, I''d like to note the English pronunciation of something like
+    sudo !!, which is important when communicating via spoken language. As noted in
+    Box 9, !! is pronounced “bang bang”. There is disagreement, though, on the pronunciation
+    of sudo. Some people say “SOO-doh”, so that it sounds like the prefix pseudo,
+    but in fact sudo is composed of the command su (which, contrary popular belief,
+    stands for “substitute user” and not “superuser”) followed by the English word
+    “do”. In other words, sudo is a contraction of “substitute user do”. Since (outside
+    of solfege and The Sound of Music) the word “do” rhymes with “too”, the correct
+    pronunciation of sudo is “SOO-doo”, and sudo !! would therefore be read as “SOO-doo
+    bang bang”.
+
+
+    # Exercises
+
+
+    +   1. Write in words how you might speak the directory ~/foo/bar.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_63_0.png)
+
+
+    Figure 19: “*Sandwich*” (via *xkcd.com*) derives humor from the behavior of *sudo*.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '+   2. In `/Users/bill/sonnets`, what is the home directory? What is the username?
+    Which directory is deepest in the hierarchy?
+
+
+    +   3. For a user with username `bill`, how do `/Users/bill/sonnets` and `~/sonnets`
+    differ (if at all)?
+
+
+    # 4.2  Making directories
+
+
+    So far in this tutorial, we''ve created (and removed) a large number of text files.
+    The time has finally come to make a directory to contain them. Although most modern
+    operating systems include a graphical interface for this task, the Unix way to
+    do it is with `mkdir` (short for “make directory”, per Figure 14):
+
+
+    ```
+
+    ```
+
+    $ mkdir text_files
+
+    ```
+
+    ```
+
+
+    Having made the directory, we can move the text files there using a wildcard:
+
+
+    ```
+
+    ```
+
+    $ mv *.txt text_files/
+
+    ```
+
+    ```
+
+
+    We can confirm the move worked by listing the directory:
+
+
+    ```
+
+    ```
+
+    $ ls text_files/
+
+    sonnet_1.txt    sonnet_1_reversed.txt   sonnets.txt
+
+    ```
+
+    ```
+
+
+    (Depending on how closely you''ve followed this tutorial, your results may vary.)
+
+
+    By default, running `ls` on a directory shows its *contents*, but we can show
+    just the directory using the `-d` option:
+
+
+    ```
+
+    ```
+
+    $ ls -d text_files/
+
+    text_files
+
+    ```
+
+    ```
+
+
+    This usage is especially common with the `-l` option (Section 2.2):'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '```
+
+    $ ls -ld text_files/
+
+    drwxr-xr-x  7 mhartl staff  238 Jul 24 18:07 text_files
+
+    ```
+
+
+    Finally, we can change directories using `cd`:
+
+
+    ```
+
+    $ cd text_files/
+
+    ```
+
+
+    Note that `cd` typically supports tab completion, so (as described in Box 8) we
+    can actually type `cd tex<tab>`.
+
+
+    After running `cd`, we can confirm that we’re in the correct directory using the
+    “print working directory” command, `pwd`, together with another call to `ls`:
+
+
+    ```
+
+    $ pwd
+
+    /Users/mhart1/text_files
+
+    $ ls
+
+    sonnet_1.txt    sonnet_1_reversed.txt    sonnets.txt
+
+    ```
+
+
+    These last steps of typing `pwd` to double-check the directory, and especially
+    running `ls` to inspect the directory contents, are a matter of habit for many
+    a grizzled command-line veteran. (Your result for `pwd` will, of course, be different,
+    unless you happen to be using the username “mhart1” on OS X.)
+
+
+    # Exercises
+
+
+    +   1. What is the option for making intermediate directories as required, so
+    that you can create, e.g., `~/foo` and `~/foo/bar` with a single command?
+
+    +      *Hint*: Refer to the man page for `mkdir`.
+
+
+    +   2. Use the option from the previous exercise to make the directory `foo` and,
+    within it, the directory `bar` (i.e., `~/foo/bar`) with a single command.
+
+
+    +   3. By piping the output of `ls` to `grep`, list everything in the home directory
+    that contains the letter “o”.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# ## 4.3 Navigating directories
+
+
+    We saw in Section 4.2 how to use `cd` to change to a directory with a given name.
+    This is one of the most common ways of navigating, but there are a couple of special
+    forms worth knowing. The first is changing to the directory one level up in the
+    hierarchy using `cd` `..` (read “see-dee dot-dot”):
+
+
+    ```
+
+    ```
+
+    $ pwd
+
+    /Users/mhart1/text_files
+
+    $ cd ..
+
+    $ pwd
+
+    /Users/mhart1
+
+    ```
+
+    ```
+
+
+    In this case, because `/Users/mhart1` is my *home directory*, we could have accomplished
+    the same thing using `cd` by itself:
+
+
+    ```
+
+    ```
+
+    $ cd text_files/
+
+    $ pwd
+
+    /Users/mhart1/text_files
+
+    $ cd
+
+    $ pwd
+
+    /Users/mhart1
+
+    ```
+
+    ```
+
+
+    The reason this works is that `cd` by itself changes to the user’s home directory,
+    wherever that is. This means that
+
+
+    ```
+
+    ```
+
+    $ cd
+
+    ```
+
+    ```
+
+
+    and
+
+
+    ```
+
+    ```
+
+    $ cd ~
+
+    ```
+
+    ```
+
+
+    are equivalent.
+
+
+    When changing directories, it’s frequently useful to be able to specify the home
+    directory somehow. For example, suppose we make a second directory and `cd` into
+    it:'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    $ pwd
+
+    /Users/mhart1
+
+    $ mkdir second_directory
+
+    $ cd second_directory/
+
+    ```
+
+
+    Now if we want to change to the **text\_files** directory, we can **cd** to **text\_files**
+    via the home directory ~:
+
+
+    ```
+
+    $ pwd
+
+    /Users/mhart1/second_directory
+
+    $ cd ~/text\_files
+
+    $ pwd
+
+    /Users/mhart1/text\_files
+
+    ```
+
+
+    Incidentally, we’re now in a position to understand the prompts shown in Figure
+    6: I have my prompt configured to show the current directory, which might be things
+    like `[~]`, `[ruby]`, or `[projects]`. (We’ll discuss how to customize the prompt
+    in *Learn Enough™ Text Editor to Be Dangerous*. Especially eager (or impatient)
+    readers can exercise their technical sophistication (Box 5) by Googling for *how
+    to do it*. )
+
+
+    Closely related to `..` for “one directory up” is `.` (read “dot”) which means
+    “the current directory”. The most common use of `.` is when moving or copying
+    files to the current directory:
+
+
+    ```
+
+    $ pwd
+
+    /Users/mhart1/text\_files
+
+    $ cd ~/second_directory
+
+    $ ls
+
+    $ cp ~/text\_files/sonnets.txt .
+
+    $ ls
+
+    sonnets.txt
+
+    ```
+
+
+    Note in that the first call to `ls` returns nothing, because **second\_directory**
+    is initially empty.
+
+
+    Another common use of `.` is in conjunction with the **find** command, which like
+    **grep** is insanely powerful, but in my own use it looks like this **99%** of
+    the time:
+
+
+    68'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '```
+
+    $ cd
+
+    $ find -name ''*.txt''
+
+    ./text_files/sonnet_1.txt
+
+    ./text_files/sonnet_1_reversed.txt
+
+    ./text_files/sonnets.txt
+
+    ```
+
+
+    In words, what this does is find files whose names match the pattern `*.txt`,
+    starting in the current directory `.` and then in its subdirectories. The find
+    utility is incredibly useful for finding a misplaced file at the command line.
+
+
+    Perhaps my favorite use of `.` is in "open dot", which will work only on Macintosh
+    OS X:
+
+
+    ```
+
+    $ cd ~/ruby/projects
+
+    $ open .
+
+    ```
+
+
+    The remarkable open command opens its argument using whatever the default program
+    is for the given file or directory. (A similar command, xdg-open, works on some
+    Linux systems.) For example, open foo.pdf would open the PDF file with the default
+    viewer (which is Preview on most Macs). In the case of a directory such as `.`,
+    that default program is the Finder, so open `.` produces a result like that shown
+    in Figure 18.
+
+
+    A final navigational command, and one of my personal favorites, is cd -
+
+    which cds to the previous directory, wherever it was:
+
+
+    ```
+
+    $ pwd
+
+    /Users/mhartl/second_directory
+
+    $ cd ~/text_files
+
+    $ pwd
+
+    /Users/mhartl/text_file
+
+    $ cd -
+
+    /Users/mhartl/second_directory
+
+    ```
+
+
+    I find that cd - is especially useful when combining commands, as described in
+    Box 12.
+
+
+    > My directory has a huge number of text files, ‘cause that’s just how I roll,
+    so the command I ran was really `find . -name ''*.txt'' | grep text_files`, which
+    filters out anything that doesn’t match the directory being used in this tutorial.
+
+
+    69'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Box 12. Combining commands
+
+
+    It’s often convenient to combine commands at the command line, such as when installing
+    software using the Unix programs configure and make, which often appear in the
+    following sequence:
+
+
+    ```
+
+    $ ./configure ; make ; make install
+
+    ```
+
+
+    This line runs the configure program from the current directory . , and then runs
+    both make and make install . (You are not expected to understand what these programs
+    do, and indeed they won’t work on your system unless you happen to be in the directory
+    of a program designed to be installed this way.) Because they are separated by
+    the semicolon character ;, three commands are run in sequence.
+
+
+    An even better way to combine commands is with the double-ampersand &&:
+
+
+    ```
+
+    $ ./configure && make && make install
+
+    ```
+
+
+    The difference is that commands separated by && run only if the previous command
+    succeeded . In contrast, with ; all the commands will be run no matter what, which
+    will cause an error in the likely case that subsequent commands depend on the
+    results of the ones that precede them.
+
+
+    I especially like to use && in combination with cd -, which lets me do things
+    like this:
+
+
+    ```
+
+    $ build_article && cd ~/tau && deploy && cd -
+
+    ```
+
+
+    Again, you are not expected to understand these commands, but the general idea
+    is that we can (say) build an article in one directory, cd to a different directory,
+    deploy (perhaps a website) to production, and then cd back (cd -) to the original
+    directory, where we can continue our work. Then, if need be, we can just use up
+    arrow (or one of the techniques from Box 9) to retrieve the whole thing and do
+    it all again.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Exercises
+
+
+    +   1. How do the effects of cd and cd ~ differ (or do they)?
+
+
+    +   2. Change to text_directory, then change to second_directory using the “one
+    directory up” double dot operator ...
+
+
+    +   3. From wherever you are, create an empty file called nil in text_directory
+    using whatever method you wish.
+
+
+    +   4. Remove nil from the previous exercises using a different path from the
+    one you used before. (In other words, if you used the path ~/text_directory before,
+    use something like ../text_directory or /Users/<username>/text_directory.)
+
+
+    # ## 4.4 Renaming, copying, and deleting directories
+
+
+    The commands for renaming, copying, and deleting directories are similar to those
+    for files (Section 2.3), but there are some subtle differences worth noting. The
+    command with the least difference is mv, which works just as it does for files:
+
+
+    ```
+
+    $ mkdir foo
+
+    $ mv foo/ bar/
+
+    $ cd foo/
+
+    -bash: cd: foo: No such file or directory
+
+    $ cd bar/
+
+    ```
+
+
+    Here the error message indicates that the mv worked: there is no file or directory
+    called foo. (The word bash refers to the shell being run, in this case the “Bourne
+    Again Shell”.) The only minor subtlety is that the trailing slashes (which are
+    typically added automatically by tab completion (Box 8)) are optional:'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '```
+
+    $ cd
+
+    $ mv bar foo
+
+    $ cd foo/
+
+
+    ```
+
+
+    This issue with trailing slashes never makes a difference with mv, but with cp
+    it can be a source of much confusion. In particular, when copying directories,
+    the behavior you usually want is to copy the directory contents *including* the
+    directory, which on many systems requires leaving off the trailing slash. When
+    copying files, you also need to include the -r option (for "recursive"). For example,
+    to copy the contents of the text_files directory to a new directory called foobar,
+    we use the command shown in Listing 17.
+
+
+    ```
+
+    **Listing 17: Copying a directory.**
+
+    $ cd
+
+    $ mkdir foobar
+
+    $ cd foobar/
+
+    $ cp -r ../text_files .
+
+    $ ls
+
+    text_files
+
+    ```
+
+
+    Note that we’ve used .. to make a *relative path*, going up one directory and
+    then into text_files. Also note the *lack* of a trailing slash in cp -r ../text_files
+    .; if we included it, we’d get Listing 18 instead.
+
+
+    ```
+
+    **Listing 18: Copying with a trailing slash.**
+
+    $ cp -r ../text_files/ .
+
+    $ ls
+
+    sonnet_1.txt sonnet_1_reversed.txt sonnets.txt text_files
+
+    ```
+
+
+    In other words, Listing 18 copies the individual files, but not the directory
+    itself. As a result, I recommend always omitting the trailing slash, as in Listing
+    17; if you want to copy only the files, be explicit using the star operator, as
+    in:'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '```
+
+    $ cp ../text_files/* .
+
+    ```
+
+
+    Unlike renaming (moving) and copying directories, which use the same `mv` and
+    `cp` commands used for files, in the case of removing directories there’s a dedicated
+    command called `rmdir`. In my experience, though, it rarely works, as seen here:
+
+
+    ```
+
+    $ cd
+
+    $ rmdir second_directory
+
+    rmdir: second_directory/: Directory not empty
+
+    ```
+
+
+    The error message here is what happens 99% of the time when I try to remove directories,
+    because `rmdir` requires the directory to be empty. You can of course empty it
+    by hand (using `rm` repeatedly), but this is frequently inconvenient, and I almost
+    always use the more powerful (but *much* more dangerous) “remove recursive force”
+    command `rm -rf`, which removes a directory, its files, and any subdirectories
+    without confirmation (Listing 19).
+
+
+    +   **Listing 19: Using `rm -rf` to remove a directory.**
+
+    +   $ rm -rf second_directory/
+
+    +   $ ls second_directory
+
+    +   ls: second_directory: No such file or directory
+
+
+    As the error message from `ls` in Listing 19 indicates (“No such file or directory”),
+    our use of `rm -rf` succeeded in removing the directory.
+
+
+    The powerful command `rm -rf` is too convenient to ignore, but remember: “With
+    great power comes great responsibility” (Figure 20).<sup>22</sup>
+
+
+    # Grep redux
+
+
+    Now that we know a little about directories, we are in a position to add a useful
+    `grep` variation to our toolkit from Section 3.4. As with `cp` and `rm`, `grep`
+    takes'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '![](img/4dec9c51e73c9027d3d8a4fab4408fe6_73_0.png)
+
+
+    Figure 20: This *superhero* understands how to use the power of `rm -rf` responsibly.
+
+
+    a “recursive” option, `-r`, which in this case greps through a directory’s files
+    and the files in its subdirectories. This is incredibly useful when you’re looking
+    for a string in a file somewhere in a hierarchy of directories, but you’re not
+    sure where the file is. Here’s the setup, which puts the word “*sesquipedalian*”
+    in a file called `long_word.txt`:
+
+
+    ```
+
+    $ cd text_files/
+
+    $ mkdir foo
+
+    $ cd foo/
+
+    $ echo sesquipedalian > long_word.txt
+
+    $ cd
+
+    ```
+
+
+    The final `cd` puts us back in the home directory. Suppose we now want to find
+    the file containing “sesquipedalian”. The way *not* to do it is this:'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '```
+
+    `$ grep sesquipedalian text_files`
+
+    `grep: text_files: Is a directory`
+
+    ```
+
+
+    Here `grep`''s error message indicates that the command didn’t work, but adding
+    `\-r` does the trick:
+
+
+    ```
+
+    `$ grep \-r sesquipedalian text_files`
+
+    `text_files/foo/long_word.txt:sesquipedalian`
+
+    ```
+
+
+    Because case rarely matters, I recommend making a habit of adding the `\-i` option
+    when grepping recursively, as follows:
+
+
+    ```
+
+    `$ grep \-ri sesquipedalian text_files`
+
+    `text_files/foo/long_word.txt:sesquipedalian`
+
+    ```
+
+
+    Armed with `grep \-ri`, we are now equipped to find strings of our choice in arbitrarily
+    deep hierarchies of directories.
+
+
+    # ## Exercises
+
+
+    +   1. Make a directory `foo` with a subdirectory `bar`, then rename the subdirectory
+    to `baz`.
+
+    +   2. Copy all the files in `text_files`, *with* directory, into `foo`.
+
+    +   3. Copy all the files in `text_files`, *without* directory, into `bar`.
+
+    +   4. Remove `foo` and everything in it using a single command.
+
+
+    # ### 4.5 Summary
+
+
+    Important commands from this section are summarized in Table 5.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '| Command | Description | Example |
+
+    |---|---|---|
+
+    | mkdir <name> | Make directory with name | `$ mkdir foo` |
+
+    | pwd | Print working directory | `$ pwd` |
+
+    | cd <dir> | Change to <dir> | `$ cd foo/` |
+
+    | cd ~/ <dir> | cd relative to home | `$ cd ~/foo/` |
+
+    | cd | Change to home directory | `$ cd` |
+
+    | cd - | Change to previous directory | `$ cd && pwd && cd -` |
+
+    | . | The current directory | `$ cp ~/foo.txt .` |
+
+    | .. | One directory up | `$ cd ..` |
+
+    | find | Find files & directories | `$ find . -name foo*.*` |
+
+    | cp -r <old> <new> | Copy recursively | `$ cp -r ~/foo .` |
+
+    | rmdir <dir> | Remove (empty) dir | `$ rmdir foo/` |
+
+    | rm -rf <dir> | Remove dir & contents | `$ rm -rf foo/` |
+
+    | grep -ri <string> <dir> | Grep recursively (case-insensitive) | `$ grep -ri
+    foo bar/` |
+
+
+    Table 5: Important commands from Section 4.
+
+
+    # Exercises
+
+
+    +   1. Using a single command-line command, make a directory **foo**, change into
+    it, create a file **bar** with content "baz", print out **bar**''s contents, and
+    then `cd` back to your home directory. *Hint: Combine the commands as described
+    in Box 12.*
+
+    +   2. What happens when you run the previous command again? How many of the commands
+    executed? Why?
+
+    +   3. Explain why the command `rm -rf /` is unbelievably dangerous, and why you
+    should never type it into a terminal window, not even as a joke.
+
+    +   4. How can the previous command be made even more dangerous? *Hint: Refer
+    to Box 11. (This command is so dangerous you shouldn''t even think it, much less
+    type it.)*'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# ## 5 Conclusion
+
+
+    Congratulations! You’ve officially learned enough command line to be *dangerous*.
+    Of course, this is only one step on a longer journey, both toward command-line
+    excellence (Box 13) and software development wizardry. As you proceed on this
+    journey, you will probably discover that learning computer magic can be exciting
+    and empowering, but it can also be *hard*. Indeed, you may already have discovered
+    this fact, either on your own or while doing this tutorial. To those brave magicians-in-training
+    who wish to proceed, I offer the following sequence, which is currently in preparation:
+
+
+    +   1. **Software development foundations**
+
+    +      - (a) *Learn Enough™ Command Line to Be Dangerous* (you are here)
+
+    +      - (b) *Learn Enough™ Text Editor to Be Dangerous*
+
+    +      - (c) *Learn Enough™ Git to Be Dangerous*
+
+    +   2. **Web technology basics**
+
+    +      - (a) *Learn Enough™ HTML to Be Dangerous*
+
+    +      - (b) *Learn Enough™ CSS to Be Dangerous*
+
+    +   3. **Ruby web development track**
+
+    +      - (a) *Learn Enough™ Ruby to Be Dangerous*
+
+    +      - (b) *Learn Enough™ Ruby Web Development to Be Dangerous*
+
+    +      - (c) *Learn Enough™ Ruby on Rails to Be Dangerous*
+
+    +   4. **Professional-grade Ruby web development**
+
+    +      - *The Ruby on Rails Tutorial*
+
+
+    Only the first and last titles in the above list are complete, but all the other
+    links go to landing pages where you can sign up to be notified when the next tutorial
+    in the sequence is ready. See you there!'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Box 13. Additional resources
+
+
+    I recommend following the Learn Enough™ sequence, as it represents the shortest
+    path to technical proficiency and software development skills, but at some point
+    you’ll probably want to expand your command-line skills as well. When that time
+    comes, I recommend consulting this list, which consists mainly of resources recommended
+    by readers of the present tutorial:
+
+
+    +   * Conquering the Command Line book and screencasts by Mark Bates (which like
+    the present tutorial is available for free online)
+
+    +   * edX course on Linux
+
+    +   * Codecademy course on the command line
+
+    +   * The similarly named The Command Line Crash Course and A Command Line Crash
+    Course
+
+    +   * Learning the Shell'
+  merge: -1
+  img_proc: true
