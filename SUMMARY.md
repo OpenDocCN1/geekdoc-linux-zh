@@ -1038,6 +1038,7 @@
 +   [Linux 面试题：开源 Linux 操作系统面试题、答案与解析](docs/linux-interview-questions-open-source-linux-operating-system/README.md)
 +   [Linux 面试题：你最有可能遇到的问题](docs/linux-interview-questions-youll-most-likely-be-asked/README.md)
 +   [Linux 入学者指南 + UNIX 操作系统 + Linux Shell 脚本与命令行 + Linux 系统与网络管理 + 网络安全 + IT](docs/linux-introduce-to-beginners-guide-unix-operating-system-lin/README.md)
++   [Linux 期刊（2007 年 4 月）](docs/linux-journal-april-2007/README.md)
 +   [Linux 日志 (2007年8月)](docs/linux-journal-august-2007/README.md)
 +   [Linux 深度深度解析](docs/linux-journal-deep-dive-edition/README.md)
 +   [Linux 期志 (2007年2月)](docs/linux-journal-february-2007/README.md)

@@ -1,0 +1,104 @@
+
+
+## 专栏
+
+### 多疑的企鹅
+
+...使用 192.168.77.0/24。
+
+因此，这个防火墙能够也应该丢弃任何从其互联网接口到达、源 IP 地址位于上述两个私有 IP 范围内的数据包。可以安全地认为，此类数据包是被伪造（欺骗）的。攻击者有时会伪造其数据包的源 IP 地址，试图让它们通过防火墙，或绕过其他基于源 IP 的身份验证机制（如 TCPwrappers、hosts.equiv 等）。
+
+事实上，任何防火墙上的任何面向互联网的网卡都应该丢弃源 IP 地址位于任何非互联网可路由 IP 范围内的数据包，具体指的是 RFC 1918 中规定的范围：10.0.0.0/8、172.16.0.0/12 和 192.168.0.0/16。（如果你对这些以 CIDR 表示法表达的 IP 地址范围感到困惑，不要惊慌！本文稍后讨论的一些 iptables 工具并不假设你具备特定的网络专业知识。）
+
+为了更普遍地表达这一重要的防火墙设计原则：你应该配置你的防火墙，使其丢弃任何带有不可能源 IP 地址的数据包。
+
+以上是所有防火墙都应采取的一些措施。那么，如何让它们做到这些呢？
+
+## Linux 的防火墙工具
+
+所有 Linux 防火墙的工作方式都相同。通过按顺序执行一系列 iptables 命令，将防火墙规则加载到内核内存空间中。之后，内核会基于这些规则对所有进入所有网络接口进行的数据包进行评估并相应处理。这些规则被组织在表中（以前，甚至现在偶尔也被称为链）。可以随时通过 iptables 命令向任何表插入、追加、修改或删除规则，并立即生效。
+
+创建 Linux 防火墙策略最直接的方法是，从零开始编写一个 iptables 启动脚本，然后像管理 initd 中的任何其他启动脚本一样管理它。我就是这样管理我自己的 Linux 防火墙的，如果你懂网络，熟悉 iptables 命令，并且没有许多不同的防火墙需要管理，或者在某个特定防火墙上没有超过两种不同的策略，那么这样做是没问题的。
+
+要了解如何自行编写 iptables 脚本，请参阅本文的资源部分。正如我之前所说，我无法在此处公正地阐述该主题。（请注意，不同的 Linux 发行版对启动脚本的处理方式不同。）如果你想充分利用 iptables 的强大功能，包括 NAT、自定义链和数据包修改，这确实是最好的方式。
+
+假设你不能或不想直接编写 iptables 脚本，这里有一些可以帮助你使用的工具指引。
+
+## 个人（本地）防火墙
+
+我在这里讨论的第一类 iptables 工具可能已经存在于你的系统中。如今，几乎所有 Linux 发行版的安装工具中都包含一个防火墙向导。几乎总是，这个向导旨在创建本地防火墙策略——也就是说，创建一个个人防火墙脚本，仅保护本地主机。
+
+这些向导的工作方式都相同。它们询问你希望允许外部主机访问哪些本地服务（如果有的话）。例如，如果我要在 SMTP 邮件服务器上安装 Linux，我会仅允许传入连接到 TCP 端口 25（SMTP），可能还会允许连接到 TCP 端口 22（Secure Shell，我可能需要它进行远程管理）。
+
+根据你的回答，向导随后会创建一个启动脚本，其中包含 iptables 命令，允许传入到你指定的服务/端口的请求，阻止其他所有传入（源自外部）的事务，并允许所有出站（源自本地）网络事务。
+
+但是等等！那个第三个命令违反了 Runnem 的原则（拒绝所有未明确允许的），不是吗？是的，它确实违反了。这就是为什么我即使对于本地防火墙策略也编写自己的 iptables 脚本。你需要在任何给定情况下自行决定，你是否可以接受“允许部分传入，允许所有传出”的折中方案（这无疑是处理本地防火墙的最简单方法），还是你对恶意软件恶作剧的威胁感到足够担忧，以至于要编写一个更受限的脚本，无论是手动编写还是使用比你的 Linux 发行版安装程序更精密的防火墙工具。
+
+请注意，与 Linux 安装程序的其他功能一样，这些防火墙向导通常可以稍后再次运行，例如，在 SUSE 中通过 YaST 的“安全与用户 > 防火墙”模块运行。
+
+## 两种网络防火墙工具
+
+我们已经讨论了困难的方法（编写自己的 iptables 启动脚本）和简单的方法（让 Linux 安装程序生成本地防火墙脚本）。然而，这些方法忽略了生成和管理复杂防火墙脚本的另外两种工具。其中两个最流行的是 Shorewall 和 Firewall Builder（参见资源部分）。
+
+Shorewall 本质上是一个脚本/宏环境，让你以文本文件的形式创建防火墙策略，然后将其“编译”成 iptables 脚本。Shorewall 的优势在于其灵活性、能够使用户无需学习 iptables 语法即可使用以及自动生成启动脚本的便利性。然而，如果你懂网络，学习使用 Shorewall 并不一定比学习 iptables 花更少的时间。
+
+因此，我个人很少使用 Shorewall。然而，我的一些朋友，他们对网络的了解不如我，但对系统管理更精通，却对它推崇备至。
+
+Firewall Builder，我在几年前*Linux Journal*的 2003 年 5 月和 6 月刊中介绍过，完全是另一回事。它是防火墙版本的集成开发环境（IDE）——也就是说，一个用于生成 iptables 脚本（以及其他类型的防火墙）的图形化、面向对象的接口。
+
+在概念上，Firewall Builder 与 Check Point 防火墙中的策略编辑器非常相似。你为要在规则中使用的网络和主机创建“对象”，然后将这些对象和预定义的“服务”对象（如 HTTP、IMAP、FTP 等）排列成图形化的规则语句。Firewall Builder 不仅生成 iptables 脚本，还可以通过 SSH 将它们安装到其他系统上。
+
+据我的经验，Firewall Builder 的主要缺点是它稍长的依赖项列表，其中最主要的是用于 GUI 开发的 Qt 库。然而，Firewall Builder 所需的许多东西现在是典型发行版中包含的标准 Linux 软件包，因此这个问题比以前要小得多。有关详细的安装说明，请参阅 Firewall Builder 主页。
+
+其他的图形化 iptables 工具包括 Firestarter 和 Guarddog（参见资源部分）。
+
+## 结论
+
+几年前，*Linux Journal* 将 iptables 命名为当年的安全工具。它确实是一项非凡的成就。如果你严肃地对待网络安全，你会希望比我们在这篇文章中所做的更深入地探索 iptables 的功能，从 iptables(8) 手册页开始，再到 Netfilter 主页上可用的操作指南（参见资源部分）。
+
+无论你使用 iptables 保护你的笔记本电脑还是你的整个企业网络，我都希望你觉得这个介绍有用。注意安全！■
+
+> Mick Bauer (MickBauer@curewiremonkeys.org) 是美国最大银行之一的网络安全架构师。他是 O'Reilly 出版的书 *Linux Server Security, 2nd edition*（前身为 *Building Secure Web With Linux*）的作者，偶尔在信息安全会议上演讲，并撰写“网络工程投票”。
+
+## 资源
+
+- Netfilter 主页，你可以在那里找到最新的与 iptables 相关的操作指南：**www.netfilter.org**
+- Firewall Builder 主页，这是一个面向对象的 GUI，用于生成和管理几种不同类型防火墙（包括 iptables）的规则：**www.fwbuilder.org**
+- Shorewall (Shoreline Firewall) 主页：**www.shorewall.net**
+- Suehring, S., and Ziegler, R. *Linux Firewalls*, 3rd edition. Upper Saddle River, NJ: Novell Press, 2005.
+- Firestarter 主页，这是一个 iptables GUI：**www.fs-security.com**
+- Guarddog iptables GUI 主页：**www.simonzone.com/software/guarddog**
+
+# GENSTOR
+## Linux - FreeBSD - x86 Solaris - MS 等。
+
+## 成熟的技术。可靠的信誉。
+### 当你的业务数据或生产力不能承受风险时，请依赖采用 *Intel®* Xeon® 处理器的 GS-1245 服务器。
+
+### 四核 Woodcrest
+
+### 2 个节点 & 多达 16 核心 - 在 1U 中
+
+- 适用于标准 1U 外形规格的高密度集群。为了满足高 CPU 需求，多达 16 个核心。易于配置故障转移节点。
+- 特性：
+  - 1U 机架优化机箱（1.75 英寸）
+  - 每节点多达 2 个四核 Intel® Xeon® Woodcrest，带有 1333 MHz 系统总线
+  - 每 1U 机架空间多达 16 个 Woodcrest 核心
+  - 每节点多达 32GB DDR2 667 & 533 SDRAM 全缓冲 DIMM (FB-DIMM)
+  - 每节点双端口千兆以太网
+  - 每节点 2 个 SATA 可更换硬盘
+  - 每节点 1 个 (x8) PCI-Express
+
+![](img/3c4d8a97b5d96c835281dc0dacbc8551_38_0.png)
+
+### 服务器 :: 存储 :: 设备
+
+**Genstor Systems, Inc.**
+780 Montague Express, # 604
+San Jose, CA 95131
+**www.genstor.com**
+**Email: sales@genstor.com**
+**Phone: 1-877-25 SERVER 或 1-408-383-0120**
+
+Intel® Inside® Intel® Inside® 和 Intel Inside® 是 Intel Corporation 在美国和其他国家的商标。
+
