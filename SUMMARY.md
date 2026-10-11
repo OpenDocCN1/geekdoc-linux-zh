@@ -1187,6 +1187,7 @@
 +   [Linux 安全工具包指南](docs/linux-security-toolkit/README.md)
 +   [Linux Sendmail 管理指南](docs/linux-sendmail-administration/README.md)
 +   [Linux Sendmail 管理：Craig Hunt Linux 系列](docs/linux-sendmail-administration-craig-hunt-linux-library/README.md)
++   [Linux 服务器秘籍](docs/linux-server-cookbook/README.md)
 +   [Linux 服务器秘籍：高效安装、配置和管理 Linux 服务器的实用指南](docs/linux-server-cookbook-get-hands-on-recipes-to-install-config/README.md)
 +   [Linux 服务器安全：攻击与防御](docs/linux-server-security---hack-and-defend-2016/README.md)
 +   [Linux 服务部署（基于 Red Hat Linux 8.x 测试）](docs/linux-services-deployment-tested-in-red-hat-linux-8x/README.md)

@@ -1,0 +1,135 @@
+
+## Docker
+
+**Docker** 项目是 IT 行业的一场革命，因为它使 **容器**（**Containers**）的实施变得更加容易。传统上，**虚拟化**（**Virtualization**）为公司减少基础设施成本和复杂性带来了一股清新的变革之风。然而，它并未解决与应用开发及所部署系统相关的所有问题。在开发生命周期中引入 **容器**（**Containers**）帮助*开发人员*（*Developers*）能够在无需创建特定环境的情况下执行其任务。通过使用 **Docker** 提供的解决方案，他们可以使用自己的工作站或 *IT 团队*（*IT team*）提供的服务器，在 **容器**（**Containers**）内部运行自己的应用程序，并生成 **镜像**（**Images**），这些镜像可以被提升（晋级）到不同的环境（例如 *测试、预生产或生产环境*（*testing, pre-production, or production*））。
+
+**容器**（**Containers**）的普及和实施还帮助开发人员隔离其应用程序并创建*微服务*（*Microservices*），如前所述。这使得开发团队更具灵活性，并降低了对基础设施团队的依赖。随着 **容器**（**Containers**）的实施和专注于 *云*（*Cloud*）的新实践，出现了一个名为 *DevOps* 的新角色。
+
+**Docker** 基于一个正在运行的 *守护进程*（*Daemon*），该进程将监控系统内运行的 *容器*（*Containers*）的状态。这使其能够执行启动或停止容器等其他任务。**Docker** 适用于 Linux、Windows 和 Mac 系统。**Docker** 有两个主要产品：
+
+-   * **Docker 引擎**（**Docker engine**）：一种用于构建和应用容器化的开源容器化技术。
+-   * **Docker 桌面版**（**Docker desktop**）：一个用于 MacOS 和 Windows 机器的应用程序，用于构建和共享容器化应用程序和微服务。
+
+在不同 Linux 发行版中安装 **Docker 引擎**（**Docker Engine**）的步骤详细列在以下链接中：[https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)。安装后，系统中会出现一个名为 *docker.service* 的服务，可用于启动、停止或获取状态。当 **Docker 守护进程**（**Docker Daemon**）启动后，可以使用 *docker* 命令对容器和镜像执行不同的任务。
+
+### 运行第一个容器
+
+第一条命令是运行一个示例容器。参考*图 13.5*：
+
+```
+root@ubuntu:~# docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:e18f0a777aefabe0474671ab3ec3eed0541447c951ab1a6f352a06974245fe7
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+1. The Docker client contacted the Docker daemon.
+2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+   (amd64)
+3. The Docker daemon created a new container from that image which runs the
+   executable that produces the output you are currently reading.
+4. The Docker daemon streamed that output to the Docker client, which sent it
+   to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+$ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+https://hub.docker.com/
+
+For more examples and ideas, visit:
+https://docs.docker.com/get-started/
+```
+
+*图 13.5：使用 Docker 执行第一个容器*
+
+### 获取客户端和服务器的信息
+
+命令 **docker** 允许将 *run* 作为第一个参数来执行一个容器。**容器**（**Container**）基于一个 **镜像**（**Image**），参数 *hello-world* 指示要使用的镜像。输出的第一行表示该 **镜像**（**Image**）此前未被下载。**镜像**（**Image**）会自动下载，然后使用它创建 **容器**（**Container**）。输出的其余部分来自执行过程。显示完消息后，该容器将自动停止。
+
+命令 **docker** **info** 显示有关客户端和服务器信息。以下代码显示了一个示例输出：
+
+```
+root@ubuntu:~# docker info
+Client:
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  app: Docker App (Docker Inc., v0.9.1-beta3)
+  buildx: Docker Buildx (Docker Inc., v0.9.1-docker)
+  compose: Docker Compose (Docker Inc., v2.12.2)
+  scan: Docker Scan (Docker Inc., v0.21.0)
+
+Server:
+Containers: 1
+Running: 0
+Paused: 0
+Stopped: 1
+Images: 1
+Server Version: 20.10.21
+Storage Driver: overlay2
+Backing Filesystem: extfs
+(omitted)
+Logging Driver: json-file
+Cgroup Driver: systemd
+Cgroup Version: 2
+Plugins:
+Volume: local
+Network: bridge host ipvlan macvlan null overlay
+Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+Swarm: inactive
+Runtimes: io.containerd.runc.v2 io.containerd.runtime.v1.linux runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 1c90a442489720eec95342e1789ee8a5e1b9536f
+runc version: v1.1.4-0-g5fd4c4d
+init version: de40ad0
+(omitted)
+Kernel Version: 5.15.0-52-generic
+Operating System: Ubuntu 22.04.1 LTS
+OSType: linux
+Architecture: x86_64
+CPUs: 2
+Total Memory: 3.832GiB
+Name: ubuntu
+ID: SEHR:RO0N:MTHA:DFD2:A4S3:56BX:IDC6:NP34:SZ03:7WYD:XYC4:3S5Z
+Docker Root Dir: /var/lib/docker
+Debug Mode: false
+Registry: https://index.docker.io/v1/
+Labels:
+Experimental: false
+
+Insecure Registries:
+127.0.0.0/8
+
+Live Restore Enabled: false
+```
+
+上述输出提供了有关 **Docker 客户端**（**Docker Client**）和 **Docker 守护进程**（**Docker Daemon**）的有用信息：
+
+-   客户端已启用的插件包括：**app**（用于运行容器）、**buildx**（用于生成镜像）、**compose**（用于编排）以及 **scan**（用于检查本地镜像中的漏洞）。
+-   服务器有一个容器且处于停止状态（即之前示例执行的容器）；它使用名为 **overlay2** 的存储驱动和用于日志记录的 **json-file** 驱动。
+-   输出列出了用于卷、网络和日志记录的可用插件。
+-   服务器使用名为 **containerd** 的运行时。数据将存储在目录 `/var/lib/docker` 中。
+-   输出显示了有关运行该系统的信息，例如发行版版本、**内核**（**Kernel**）版本、可用 CPU 数量和内存。
+
+### 操作容器
+
+命令 `docker` 的参数 **ps** 将列出系统中正在运行的 **容器**（**Containers**）。添加选项 `-a` 将显示已停止的*容器*（*containers*）。`图 13.6` 显示了一个输出示例：
+
+![](img/863afa537de4eed7deb11978bfbfa90e_444_0.png)
+
+上述输出包含以下列：
+
+-   **容器 ID**（**Container ID**）：当创建*容器*（*container*）时，会自动为其分配一个 **ID**。长度为 64，但输出仅显示前 12 个字符。
+-   **镜像**（**Image**）：用于运行*容器*（*container*）的*镜像*（*image*）。
+-   **命令**（**Command**）：在容器内部执行的*命令*（*command*）。
+-   **创建时间**（**Created**）：容器创建的时间。
+-   **状态**（**Status**）：容器的状态；如果容器已退出，将指示其停止时间和状态（0 表示*容器*（*container*）正常结束）。
+-   **端口**（**Ports**）：用于访问*容器*（*container*）提供服务的转发端口。在之前的示例中，没有暴露任何端口。
+

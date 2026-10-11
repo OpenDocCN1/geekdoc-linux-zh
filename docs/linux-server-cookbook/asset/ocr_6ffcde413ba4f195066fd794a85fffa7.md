@@ -1,0 +1,9 @@
+Community Enterprise Operating System (CentOS) Linux is a popular production-ready distribution of Linux compatible with its upstream source, Red Hat Enterprise Linux. Between 2014 and 2020, CentOS stayed independent from RHEL, and versions of CentOS Linux 7 and 8 were released.
+
+In December 2020, Red Hat decided to finish CentOS development and focus on the development of CentOS Stream, a midstream distribution between the upstream distribution Fedora and the downstream development for RHEL. Support of CentOS Linux 7 continued till mid-2024, whereas CentOS Linux 8 is not supported anymore.
+
+CentOS Stream support is aligned to the RHEL support lifecycle, providing early access to the development stream of the next release of Red Hat Enterprise Linux. Installation steps and images are available as described before. Installation media can be downloaded from the website: https://www.centos.org/centos-stream/. After Red Hat decision, two main distributions appeared to cover the CentOS space: Rocky Linux, from the original co-founder of CentOS, and AlmaLinux, from the company CloudLinux. Both descriptions will be covered next.
+
+# Rocky Linux and Alma Linux
+
+Rocky Linux is an open-source enterprise operating system designed to be 100% compatible with RHEL, and it is developed by the community. Gregory Kurtzer, the original founder of CentOS, decided to create Rocky Linux after the Red Hat decision about CentOS. Official Rocky Linux includes the installation images on the website: https://rockylinux.org/download. CloudLinux, the creator of CloudLinux OS, decided to create a separate, totally free distribution fully compatible with RHEL 8 and future versions. It is possible to download the ISO from the following website: https://mirrors.almalinux.org/isos.html. Both distributions include a tool and commands to migrate from CentOS to Rocky Linux or AlmaLinux. Installation is with the same wizard as shown

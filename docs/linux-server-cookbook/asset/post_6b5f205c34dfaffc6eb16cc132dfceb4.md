@@ -1,0 +1,327 @@
+
+## Index
+
+### Symbols
+
+- `/etc/group` file 68
+- `/etc/gshadow` file 68
+- `/etc/passwd` file 67
+- `/etc/shadow` file 67
+
+### A
+
+- Access Control Security Policies 203
+- ACID 286
+- Active Directory 268
+- Active Directory Domain Controller 272
+- Address and Routing Parameter Area (.arpa) 241
+- AD-HOC actions 346
+- Advanced Host Controller Interface (AHCI) 158
+- advanced installation steps 19
+  - data redundancy 19
+  - link aggregation 19
+  - volume manager 19
+- advanced network configuration 193
+  - link aggregation (bonding) 193, 194
+  - network bridges 195-197
+  - Virtual LANs (VLANs) 198
+- Advanced Packet Tool (APT) 261
+- Alibaba Cloud 458, 464
+- Alma Linux 15, 39
+- ALTER statement 288
+- Amazon Elastic Kubernetes Service (EKS) 415
+- Amazon S3 Glacier 433
+- Amazon Web Services (AWS) 415, 433, 457, 460
+  - Amazon CloudFront 461
+  - Amazon DynamoDB 460
+  - Amazon Elastic Beanstalk 460
+  - Amazon Elastic Compute Cloud (EC2) 460
+  - Amazon Elastic Container Service (ECS) 460
+  - Amazon Elastic Kubernetes Service (EKS) 461
+- Amazon Elastic Load Balancing (ELB) 461
+- Amazon Lambda 461
+- Amazon Relation Database Service (RDS) 460
+- Amazon Route 53 461
+- Amazon Simple Storage Service (S3) 460
+- Amazon Virtual Private Cloud (VPC) 460
+- AWS Identity and Access Management (IAM) 461
+- Ansible 318
+  - automation, performing with 338, 339
+- ansible-playbook commands 355
+- Apache Cassandra 305
+- Apache CouchDB 305
+- Apache Hbase 305
+- Arch Linux 41
+- Artificial Intelligence (AI) 8
+- asymmetric cryptography 252
+- augmented reality (AR) 8
+- Azure Archive Storage 433
+
+### B
+
+- background process 137
+  - executing 138
+- Backup process 429, 430
+  - full backup 433
+  - incremental backup 433, 434
+  - solution features 436, 437
+  - sources 435
+  - storage media 432
+  - strategies 436
+- Bacula 437
+  - client installation 442
+  - command bconsole 443-447
+  - components 439, 440
+  - installation 438
+  - services 438
+- Bacula Console service 438
+- Bacula Director service 438
+- Bacula File service 438
+- Bacula Storage service 438
+- baremetal nodes 278
+- bash 45
+- basic CLI commands
+  - command cd 50
+  - command history 51
+  - command hostname 48
+  - command man 49, 50
+  - command pwd 47, 48
+  - command uptime 52
+  - command whoami 48
+- Big Data 8
+- binary DVD 35
+- binary packages 82
+- boot ISO 35
+- Border Gateway Protocol (BGP) 192
+
+### C
+
+- Canonical 14, 16
+- Canonical Kubernetes 415
+- Catalog 438
+- CentOS stream 39
+- Central Processing Unit (CPU) 144
+  - information, obtaining 145, 146
+  - load average 147
+  - system load 146
+- CFEngine 318
+- Chef 318
+- CircleCI 417
+- CLI commands, for data stream
+  - command echo 62
+  - command read 62
+  - command tee 62
+- CLI commands, for identifying resources
+  - command df 55
+  - command free 54
+  - command lsblk 56
+  - command lspci 52, 53
+  - command lshw 53
+  - command lspci 55
+  - command lsusb 55
+- CLI commands, for listing elements
+  - command find 57
+  - command ls 56
+- Cloudflare 491
+- cloud images 20
+- CloudLinux 15
+- Cloud Providers 456
+  - advantages 458, 459
+  - Alibaba Cloud 458
+  - Amazon Web Services (AWS) 457
+  - Business Applications 457
+  - Data Products 457
+  - desktop applications 457
+  - DevOps 456
+  - Google Cloud Platform (GCP) 458
+  - infrastructure software 456
+  - IoT 457
+  - Machine Learning 457
+  - Microsoft Azure 458
+- Cloud Storage 432
+- command atop 149
+- command awk 129
+- command bconsole 443
+- command cat 120, 121
+- command chgrp 119
+- command chmod 119, 120
+- command chown 117, 118
+- command edquota 170
+- command fio 162
+- command grep 126-128
+- command hdparm 162
+- command head 121
+- command htop 150
+- command iostat 153
+- command ip 178
+- command last 121
+- command lftp 275
+- Command Line Interface (CLI) 43
+- command mpsat 151
+- command netplan 190
+- command nmcli 185, 186
+- command nmtui 186, 187
+- command pmap 157
+- command ps 157
+- command sar 152
+- command setquota 170
+- commands, for DEB packages
+  - command apt-cache 96-100
+  - command apt-file 96
+  - command apt-get 96-98
+  - command dpkg 93-96
+- commands, for group manipulation
+  - command gpasswd 81, 82
+  - command groupadd 80
+  - command groupdel 81
+  - command groupmod 81
+  - command groups 80
+  - command newgrp 82
+- commands, for RPM packages
+  - command dnf 88-92
+  - command rpm 84-87
+  - command yum 88-92
+- commands, for user administration
+  - command adduser 72-74
+  - command chage 78, 79
+  - command id 71, 72
+  - command last 79
+  - command lslogins 75, 76
+  - command passwd 77, 78
+  - command useradd 72
+  - command userdel 77
+  - command usermod 74
+  - command w 77
+  - command who 77
+- command sqlite 303
+- command top 148, 149
+- command uptime 147
+- Common Internet File System (CIFS) 267
+- Community Enterprise Operating System (CentOS) Linux 39
+- Container Runtime 413
+- Container Runtime Interface (CRI) 414
+- Containers 382
+  - content 384
+  - sample container, running 388
+  - versus, Virtualization 383
+- Content Delivery Network (CDN) 461
+- Continuous Delivery (CD) 381, 416
+- Continuous Deployment 417
+- Continuous Integration (CI) 381, 416
+- CPU Core 144
+- CPU resources
+  - monitoring 144
+- CPU Socket (CPU slot) 144
+- CPU Thread 144
+- CREATE statement 288
+- CRUD operations 286
+- crun 414
+
+### D
+
+- database management system (DBMS) 281
+- Data Control Language (DCL) 287
+- Data Definition Language (DDL) 286
+- Data Manipulation Language (DML) 287
+- Data Query Language (DQL) 286
+- Debian 15
+- Debian GNU/Linux 20
+- Debian GNU/Linux installation
+  - base system, installing 26
+  - clock, configuring 24
+  - GRUB boot loader, installing 28, 29
+  - installer 21
+  - keyboard, configuring 22
+  - language, selecting 21
+  - location, selecting 21, 22
+  - network, configuring 22, 23
+  - package manager, configuring 27
+  - partition disks 24, 25
+  - software, installing 26
+  - users and passwords, setting up 24
+- Debian package 83
+  - apt 83
+  - apt-cache 83
+  - apt-get 83
+  - dpkg 83
+- Deep Learning 8
+- DELETE statement 290
+- Desktop Bus (D-Bus) 205
+- DevOps 3
+- disk space monitoring 157, 158
+  - command atop 160, 161
+  - command df 163
+  - command fio 162
+  - command hdparm 162
+  - command iostat 159
+  - command iotop 160
+  - command lsblk 159
+  - command lshw 158
+  - command smartctl 161, 162
+- distrowatch.com 13
+- dnf 83
+- Docker 382, 387
+  - client and server information, obtaining 388-391
+  - container actions 399-402
+  - containers, exposing 396-398
+  - containers, operating with 391-396
+  - server statistics and events 402, 403
+- Docker Client 391
+- Docker Daemon 388, 391
+- Docker desktop 388
+- Docker engine 387
+- Docker Hub portal 407
+- Docker Hub repository 425
+- Domain Name System (DNS) 235-237
+  - Linux DNS servers and client 237-245
+- dpkg (Debian Package) 20
+- DROP statement 288
+- Dynamic Host Configuration Protocol (DHCP) 228-232
+  - Linux DHCP servers and client 232-235
+
+### E
+
+- edge computing 8
+- Edwards-curve Digital Signature Algorithm 248
+- Elliptic Curve Digital Signature Algorithm 247
+- emacs 133
+- Extended Security Maintenance (ESM) 16
+
+### F
+
+- file
+  - output, formatting 129-132
+  - file editors 133
+- file /etc/login.defs 69
+- file manager 135
+- file manager mc 135
+- file managers 133
+- file /proc/loadavg 148
+- files
+  - accessing 117
+- Filesystem Hierarchy Standard (FHS) 106
+- File Transfer Protocol (FTP) 246, 260, 273-276
+- File transferred over Shell protocol (FISH) 275
+- firewall configuration 204
+- firewalld 204-210
+  - masquerading 211, 212
+  - Uncompleted Firewall (ufw) 210, 211
+- foreground process 137
+  - executing 138
+- Foreign Key 283, 284
+- fourth generation (4G) 9
+
+### G
+
+- Galaxy 376
+- Gento 41
+- GitHub Actions 417, 424-426
+- GitLab CI/CD 417, 421, 422
+- Global System for Mobile (GSM) 9
+- GNU General Public License (GPL) 285
+- GoCD 417
+- Google Cloud Platform (GCP) 458, 463
+  - Cloud CDN 464
+  - Cloud DNS 464
+  - Cloud Functions 464
+  - Cloud Load Balancing 464

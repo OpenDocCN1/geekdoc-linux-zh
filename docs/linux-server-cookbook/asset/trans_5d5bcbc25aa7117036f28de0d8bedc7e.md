@@ -1,0 +1,170 @@
+
+- 执行查询以获取 www.ubuntu.com 的 IP 地址。第一次查询是获取根域名服务器，如 9.10 图所示：
+
+```
+root@ubuntu:~# dig +trace A www.ubuntu.com
+
+; <<>> DiG 9.18.1-1ubuntu1.1-Ubuntu <<>> +trace A www.ubuntu.com
+; global options: +cmd
+.			7190	IN	NS	g.root-servers.net.
+.			7190	IN	NS	i.root-servers.net.
+.			7190	IN	NS	b.root-servers.net.
+.			7190	IN	NS	l.root-servers.net.
+.			7190	IN	NS	j.root-servers.net.
+.			7190	IN	NS	h.root-servers.net.
+.			7190	IN	NS	a.root-servers.net.
+.			7190	IN	NS	k.root-servers.net.
+.			7190	IN	NS	e.root-servers.net.
+.			7190	IN	NS	m.root-servers.net.
+.			7190	IN	NS	d.root-servers.net.
+.			7190	IN	NS	c.root-servers.net.
+.			7190	IN	NS	f.root-servers.net.
+;; Received 239 bytes from 127.0.0.53#53(127.0.0.53) in 0 ms
+```
+
+9.10 图：dig 命令的输出示例
+
+- 输出的第二部分是向 .com 顶级域（TLD）的特定域名服务器之一发起查询以获取其名称服务器。这可以在 9.11 图中看到：
+
+```
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			86400	IN	DS	30989 8 2 E2D3C916F6DEAC73294E82
+com.			86400	IN	RRSIG	DS 8 1 86400 20220917040000 20220904030000 20826 . n+t2f4RsIC6pIaAYX5UTMBTaqRLXJPOaQMTIyYhuOtxPSZpcZpcZqF1VUIv rthM73 07sj sRN/3gHp80u6R9dZ3JgGj3d9FK473ut0tq0uYks1UC8Lm Z7cOhE/0OqCFuWY3N8ONVvhJ1Czw40 yLBVK6OfIcdYUms1Xu5XDCjq4pIvw 36/A7EZI1FdEVVNK3DBHY66I1LezcjxlFoF1mFU53222muVHEPglImg6A sY hkZXVXuV0mUvUBQuY0hqBeQ20ULwDHVKFfv6g6r6WXLdG1CXC9D2DZVRS rqaq10s88T8FePBnEgBJVfywxFs4a0DnziqQq99pK8IbmFD1AYoIXDPv xnJrjw=
+;; Received 1174 bytes from 192.58.128.30#53(j.root-servers.net) in 39 ms
+```
+
+9.11 图：dig 命令的输出示例
+
+- 输出的第三部分是向其中一个顶级域（TLD）名称服务器发出的请求，查询该域的名称服务器是什么，在此情况下为 ubuntu.com。请参见 9.12 图：
+
+```
+ubuntu.com.                  172800  IN  NS  ns1.canonical.com.
+ubuntu.com.                  172800  IN  NS  ns2.canonical.com.
+ubuntu.com.                  172800  IN  NS  ns3.canonical.com.
+CK9PQJMG874LJREF7EFN843Q0VITB8Sm.com. 86400 IN NSEC3 1 1 0 - CKQ02D6N4I7E0H8NA30
+NS61O48J8UIAG5 NS SOA RRSIG DNSKEY NSEC3PARAM
+CK9PQJMG874LJREF7EFN843Q0VITB8Sm.com. 86400 IN RRSIG NSEC3 8 2 86400 202209080424
+38 20220901031438 32298 com. I5h+JXdKpB/qul9pUo+yThIAw+iHbD21Ls/ddJrfNWelFIN3Jug8Tr
+Hrwv wnjBXLAH47wmMnPFXtB4Lt1hHKg64xerIXO25VJCAgliNSFLQJJyBFL mE2tFLYJPr2ti8cZmwg
+DtCFxwDtdbxpdgpKZHClLyfJMrKKfge2u4/KQ5r M4Qiq1kaqSAw+d+REC5TSMmVtwE6FVgj1YJDLUKeXOwLXG
+H+M==
+8941O8AM9NDQ8VM84GPASGQDUOHFLF5I.com. 86400 IN NSEC3 1 1 0 - 894J39AAFLJBJGQD8T8
+RTC3G6UCBA2H NS DS RRSIG
+8941O8AM9NDQ8VM84GPASGQDUOHFLF5I.com. 86400 IN RRSIG NSEC3 8 2 86400 202209080554
+30 20220901044436 32298 com. b/PgCZmBhZTTKQGHuphfKDYaydzVm4tJct6hMPf79uD/32SOXK
+tc82 JRSZVa9J6vW6U05Fm2y3D0HbQp4Yi1AFPOYd5jb/0L2vw+A5Ouzb 69mtsPvdBHR0X9cQCwM
+0KGHIBmIYwanMmM/xX85szXQvZdno+LOyQKAY KRKNI2vLY4RsrXZ/8Qo63DST9UZ4RbDTN2f01VH
+Baq==
+;; Received 776 bytes from 192.33.14.30#53(g-tld-servers.net) in 47 ms
+```
+
+![](img/863afa537de4eed7deb11978bfbfa90e_290_0.png)
+
+- 最后一步是向该域的一个名称服务器查询有关主机信息，如 9.13 图所示：
+
+```
+www.ubuntu.com.              60      IN  A   185.125.190.20
+www.ubuntu.com.              60      IN  A   185.125.190.21
+www.ubuntu.com.              60      IN  A   185.125.190.29
+ubuntu.com.                  172800  IN  NS  ns3.canonical.com.
+ubuntu.com.                  172800  IN  NS  ns1.canonical.com.
+ubuntu.com.                  172800  IN  NS  ns2.canonical.com.
+;; Received 186 bytes from 185.125.190.66#53(ns2.canonical.com) in 47 ms
+```
+
+![](img/863afa537de4eed7deb11978bfbfa90e_290_1.png)
+
+Bind 9 允许使用高级功能，如动态更新记录（无需更新配置）以及高级配置，例如针对同一区域提供不同的响应，具体取决于执行查询的人。例如，针对外部用户的同一区域将回复一些公共地址，如果查询是来自内部网络的，它将回复私有地址。
+
+软件 dnsmasq 可用于以简单的配置来设置 DNS 域，通常用于配置网络中的内部域。如前所述，主要配置文件是 /etc/dnsmasq.conf，DNS 的一个配置示例如下所示：
+
+```
+auth-zone=example.com
+auth-server=dns.example.com,10.20.0.1
+auth-sec-servers=dns2.example.com
+auth-soa=2022090401, root.example.com, 1200, 120, 604800
+local=/example.com/192.168.122.43
+domain=example.com
+host-record=dns.example.com,10.20.0.2
+host-record=dns2.example.com,10.20.0.3
+host-record=www.example.com,10.20.0.100
+mx-host=example.com,mx1.example.com,10
+mx-host=example.com,mx2.example.com,20
+host-record=mx1.example.com,10.20.0.102
+host-record=mx2.example.com,10.20.0.103
+cname=web.example.com,www.example.com
+```
+
+其他流行的用于 DNS 查询的客户端实用工具如下：
+
+- **host 命令**：它显示关于执行的查询的简单输出。
+  ```bash
+  root@ubuntu:~# host -t ns example.com  localhost
+  Using domain server:
+  Name: localhost
+  Address: 127.0.0.1#53
+  Aliases:
+  
+  example.com name server dns.example.com.
+  example.com name server dns2.example.com.
+  ```
+  *9.14 图：host 命令的输出示例*
+
+- **nslookup 命令**：它可以作为交互式命令或简单的命令行请求命令来使用。
+  - 使用参数指定服务器和查询类型：
+    ```bash
+    root@ubuntu:~# nslookup -type=NS example.com localhost
+    Server:      localhost
+    Address:     127.0.0.1#53
+    
+    example.com      nameserver = dns.example.com.
+    example.com      nameserver = dns2.example.com.
+    ```
+    *9.15 图：nslookup 命令的输出示例*
+
+  - 使用该命令的交互模式：
+    ```bash
+    root@ubuntu:~# nslookup
+    > server localhost
+    Server: localhost
+    Default server: localhost
+    Address: 127.0.0.1#53
+    > set type=NS
+    > example.com
+    Server:            localhost
+    Address:           127.0.0.1#53
+    
+    example.com    nameserver = dns.example.com.
+    example.com    nameserver = dns2.example.com
+    ```
+    *9.16 图：nslookup 命令的输出示例*
+
+## SSH 服务和 SSH 客户端
+
+网络协议**安全外壳**或**安全套接字外壳**（SSH）为用户提供了一种安全的方式，以远程访问 Linux 系统。该系统可以在同一网络、不同网络中，或者可以通过互联网访问。使用的端口是 22，使用的协议是**传输控制协议（TCP）**。该协议于 1995 年推出，版本为 1（SSH-1）；在 2006 年，版本 2（SSH-2）被采用为标准。
+
+*SSH* 最流行的实现是一个名为**OpenSSH**的实用工具套件。它包括服务器和客户端实用工具。其他实用工具使用 SSH 协议提供不同的功能；最流行的功能是使用**安全复制**（scp）或 *rsync*在服务器之间复制文件。另一个流行的选项是**SSH 文件传输协议**（SFTP），它是**文件传输协议**（FTP）的替代方案。
+
+名为 *sshd* 的 SSH 服务包含在名为**openssh-server**的包中；客户端 ssh（通常在所有 Linux 发行版中默认安装）是**openssh-client**包的一部分（在某些发行版中为**openssh-clients**）。服务器的主要配置文件是 /etc/ssh/sshd_config。以下代码块显示了 Ubuntu 服务器系统中默认未注释的选项：
+
+```
+Include /etc/ssh/sshd_config.d/*.conf
+KbdInteractiveAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMtd no
+AcceptEnv LANG LC_*
+```
