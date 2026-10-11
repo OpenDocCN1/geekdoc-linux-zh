@@ -1,0 +1,47 @@
+Any permissions that already might have been granted will not be changed. If you are granting the group the write permission, as in
+
+```
+chmod g+w filename
+```
+
+and they already have the read permission, the group’s permission block would be rw-, not just -w-.
+
+You also can explicitly set permissions by using the = operator, which will replace any existing permissions. So, look again at the last example where the group has read permis- sion but you want them to have write permission. If you type
+
+```
+chmod g=w filename
+```
+
+the new permission block would be -w-, and not rw-. When using the = change operator, all old permissions are gone and only those you specify will be granted.
+
+The who, change, and permission arguments must not have any spaces between them. Also, multiple selections can be used in a single command. For example
+
+```
+chmod ug+x MyFile
+```
+
+would add the execute permission for the owner and the group. If the permission block on MyFile was rwxrw-r--; before the change, after the change it would be rwxrwxr--.
+
+However, if you typed
+
+```
+chmod ug-x MyFile
+```
+
+the new permissions would be --x-xrx--. Notice that any who that is not specified is not changed. In this example, others had the read permission before and after the change because others were not mentioned when using the chmod command.
+
+If you do not follow the = with a permission, all permissions for the who are removed. For example, if you have a file with a permission block of -rwxrwxrwx and enter
+
+```
+chmod go- filename
+```
+
+the new permission block would be -rwx……. Notice that the permissions for both group and others have been removed.
+
+Because using the - operator revokes any previous permissions, it is important to be care- ful when using - to set permissions. On the other hand, setting explicit permissions gives you more power to ensure that permissions are set exactly like you want them to be.
+
+For example, say you type the following:
+
+```
+chmod go-x MyFile
+```

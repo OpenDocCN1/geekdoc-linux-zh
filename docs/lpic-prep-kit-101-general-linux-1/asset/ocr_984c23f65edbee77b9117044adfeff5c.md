@@ -1,0 +1,36 @@
+```
+# mail errors to root
+errors root
+
+# create new (empty) log files after rotating old ones
+create
+
+# compress old log files
+compress
+
+# use configuration files contained in /etc/logrotate.d directory
+include /etc/logrotate.d
+
+# will only rotate wtmp monthly instead of weekly
+/var/log/wtmp {
+    monthly
+}
+```
+
+In the preceding sample configuration file, the following global options were set:
+
++   - frequency of rotation
++   - number of old logs to keep
++   - compress old logs
+
+The last section sets local options for the wtmp log only by specifying to rotate it monthly instead of weekly. Using local options enables you to configure specific logs with different parameters from the default ones you want to use for the majority of your logs.
+
+# Key Concept
+
+> The logrotate command automates the process of saving and removing the contents of your log files. One or more configuration files can be used to define how logrotate handles each log.
+
+# Archiving Logs
+
+Now that you have configured logrotate to handle logs the way you want, you need to decide how long you will keep old logs. In some instances, you might want to keep some logs for a year or so.
+
+In the earlier configuration file, logrotate was configured to keep logs for four weeks. After you have four weeks worth of logs, the oldest log is discarded and log.3 becomes log.4, log.2 becomes log.3, log.1 becomes log.2, and the current log is log. You now have four old logs (log.1, log.2, log.3, and log.4) as well as the current log.

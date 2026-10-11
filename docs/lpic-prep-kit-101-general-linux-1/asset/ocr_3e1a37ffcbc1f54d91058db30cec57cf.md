@@ -1,0 +1,32 @@
+If you use fdisk without an argument, it assumes you want to partition `/dev/hda`. Some operating systems require that they be installed on the first partition of the first disk. Because Linux does not care what disks you use, you might want to create partitions on different hard disks. Just run fdisk for each hard disk you need to partition.
+
+When using fdisk, you can get a menu of available options by typing m, as in the following example:
+
+Command (m for help): m
+Command action
+a toggle a bootable flag
+d delete a partition
+l list known partition types
+m print this menu
+n add a new partition
+p print the partition table
+q quit without saving changes
+t change a partition's system id
+u change display/entry units
+v verify the partition table
+w write table to disk and exit
+x extrafunctionality
+
+Command (m for help):
+
+If you create logical drives, you must reboot your system and go through the same options as before. However, when fdisk asks if you want to partition your drive the second time, say no.
+
+You should use the Linux version of fdisk only to create or delete partitions for the Linux operating system. If you try to create or delete partitions for other operating systems with this version of fdisk, the other operating system will not recognize the partition.
+
+After creating your partitions, you need to activate your swap partition(s), select the partition to be used as root, and format your partitions.
+
+# Key Concept
+
+The fdisk utility can be used to create or delete partitions. It also can be used to view your partition table.
+
+Let's walk through creating a couple partitions. If you have any existing partitions you will not be using, you can use the d command to delete them.

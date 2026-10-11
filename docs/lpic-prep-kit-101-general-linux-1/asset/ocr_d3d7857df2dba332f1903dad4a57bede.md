@@ -1,0 +1,30 @@
+How does this differ from the earlier command? Rather than making a copy, the files are relocated to the `filedir` directory. Were you prompted to verify that you wanted to move each file?
+
+Now type
+
+```bash
+rmdir filedir
+```
+
+What happened? You should have received a message that the directory was not empty. To remove the directory, either delete all its contents first or type `rm -r filedir` and respond y to each prompt.
+
+# ### Searching Files
+
+Copy the file searching from the CD-ROM to your home directory. At a command prompt type `grep house`. Compare this output to the output produced by the command `grep ~house`. The first output displays all the lines that contain house. The second displays only the lines that start with house. Use `grep` to display all the lines that do not contain house.
+
+Compare the output of the commands `sed /house/p searching` and `sed -n /house/p searching`. The first will print the entire file with those lines containing house appearing twice. The second displays only the lines containing house.
+
+With your home directory as your working directory, type `tar cf MyArchive.tar`. This creates a tarfile containing all the files in your home directory. Next, compress the file using `gzip` by typing `gzip MyArchive.tar`. After doing this, type `ls My*`. What do you see? The tarfile itself is no longer there. Instead, you have a compressed file called `MyArchive.tar.gz`.
+
+# ## Lab 5: Managing Your Environment
+
+One of the biggest strengths of using Linux is the ability to customize everything. You will practice changing your environment to reflect your personal preferences.
+
+# ### Environment Variables
+
+What shell are you using? Type `echo $SHELL` to determine what it is. What shells are available on your system? Type `cat /etc/shells` to see a listing of which ones are available.
+
+The `.inputrc` or `.inputrc` file can contain key mappings. Assign the F1 key to insert your name by adding the following to your `.inputrc` file:
+
+```c
+"\e[11~": "Your Name"

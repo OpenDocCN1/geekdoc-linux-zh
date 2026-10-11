@@ -1,0 +1,27 @@
+listed, and the file attributes are different. For example, if both the original file and the symbolic link is located in the pwd, the ls -l command would display the following:
+
+```
+```
+ls -l MyFile Symlink
+-rw-r--r-- 1 hadden haddsn 23 Aug 13 11:35 MyFile
+lrw-rw-rw-- 1 hadden haddsn 4 Aug 13 12:13 Symlink -> MyFile
+```
+```
+
+You can delete the original file without removing any symbolic links; however, any symbolic links will no longer work. Because a symbolic link contains only the path to the original file, when the original file is deleted the link is pointing to a nonexistent file.
+
+To create a link to a directory, use the -P option. However, symbolic links to directories can’t work exactly like you expect when using the cd command. Different shells will act differently.
+
+You can use a symbolic link to a directory as the argument to the cd command. Under the bash shell, if you then issued the pwd command, it would return the symbolic name of the directory. However, if you issue the command cd .. to move up one level in the directory structure, you are placed in the directory containing the symbolic link, rather than the parent directory of the directory referenced by the symbolic link.
+
+In other shells, issuing the pwd command returns the name of the original directory rather than the symbolic link. When you issue the cd .. command, you are placed in the parent directory of the link itself.
+
+# ### Key Concept
+
+A link provides access to a file from different locations. Remember that all hard links to a file have the same inode number as the original file. This means that each link (filename) is associated with the same physical location on the disk. A soft link, however, contains only the path to the original file.
+
+Any one of the hard links can be deleted without preventing access via other hard links to that file. If the original file is deleted then all soft links to that file will no longer work.
+
+# ## Managing System Files
+
+In Chapter 3 we discussed the hierarchical nature of the Linux filesystem. How this directory hierarchy is organized is important in maintaining your system, installing software, and managing users. You will need to understand it for the exam.

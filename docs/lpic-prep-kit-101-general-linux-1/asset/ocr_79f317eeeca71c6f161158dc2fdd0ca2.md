@@ -1,0 +1,31 @@
+| Directory | Contents |
+|---|---|
+| /usr/man/man1 | Commands you can run from within a shell |
+| /usr/man/man2 | Documentation on system calls |
+| /usr/man/man3 | Manual pages for libc functions |
+| /usr/man/man4 | Information about files in the /dev directory |
+| /usr/man/man5 | Details of formats for special files such as /etc/passwd |
+| /usr/man/man6 | Games |
+| /usr/man/man7 | Descriptions of Linux file system, man pages, and so on |
+| /usr/man/man8 | Pages for root operator utilities |
+| /usr/man/man9 | Documentation on Linux kernel source routines |
+
+After a man page is displayed, there are specific commands for navigating around the document. And these commands vary depending on the pager used to display the man pages.
+
+The two pagers that are usually used to display man pages are more and less. For both pagers, all you need to do is press the spacebar to display the next screen or b to back up one screen. less also allows you to use the <PgUp> and <PgDn> keys to scroll up or down.
+
+The Enter key will advance the display one line at a time. When you are finished, type q to quit in either less or more.
+
+Because man pages can be quite long and you cannot easily scroll up and down, a method of search is extremely valuable.
+
+In order to search for a string inside the man page, type
+
+```
+/<string>
+```
+
+which will appear on the last line of the screen. The cursor will advance to the first occurrence of the search string after you press the Enter key. To continue searching for the next occurrence of the search string, type n. If no match was found or the last instance has been found, then the pager will notify you by placing a message on the last line of the screen.
+
+When searching for a man page on a specific topic, the first page found will be displayed. The sections (directories) are not searched in numerical order, but rather in the following order:
+
++   1, 8, 2, 3, 4, 5, 6, 7, 9

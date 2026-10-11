@@ -1,0 +1,27 @@
+Each of these certifications builds on the one before. In other words, achieving LPIC-2 certification will require that LPIC-1 certification is first successfully completed.
+
+The individual who has achieved certification as LPIC-1 will be expected to be able to install and manage a Linux workstation, while the LPIC-2 certified individual will be able to manage a network. The LPIC-3 certified individual will possess specialized knowledge and be able to function as administrator of a large, complex network.
+
+The LPIC Level 1 is intended to certify that an individual can
+
++   - Install and configure a workstation, including connecting it to a LAN or configuring a modem to connect to the Internet
++   - Work at the UNIX command line
++   - Shut down and reboot the computer
++   - Perform helpdesk duties
++   - Manage user accounts
++   - Perform backups and restorations of files
+
+In order to achieve LPIC Level 1 certification, the candidate must pass two separate exams, which are
+
++   - Exam 101, General Linux I
++   - Exam 102, General Linux II
+
+To review the objectives for a specific exam, visit the LPI Web site at [http://www.lpi.org](http://www.lpi.org).
+
+# ## Registering for an Exam
+
+After you have studied and are ready to take Exam 101, General Linux I, you must register for it with VUE. To register, go to [http://www.vue.com/Linux](http://www.vue.com/Linux).
+
+When you register for your first LPI exam, you will need to call VUE. This is necessary to link your LPI testing information to your VUE information. This process is required for only the first time you register to take one of the LPI exams. The appropriate telephone number can be obtained at [http://www.vue.com/student-services/vphone.html](http://www.vue.com/student-services/vphone.html).
+
+After your LPI and VUE information is linked, you can register online at [http://www.vue.com](http://www.vue.com), by calling VUE’s main office directly, or by calling the VUE testing center where you want to take your exam.

@@ -1,0 +1,32 @@
++   Types of Backup Strategies  257
++   	Clustering  257
++   	Standby or Failover Server  257
++   	Duplicate or Backup Server  257
++   	Backup and Restoration  258
++   Backups  258
++   	Planning  258
++   	What Are You Going to Back Up?  258
++   	Backup Frequency  259
++   	How Much Time Do You Have to Run Your Backup?  259
++   	Media Selection  259
++   Types of Backups  260
++   	Copy  261
++   	Full Backup  261
++   	Partial Backup  261
++   	Incremental or Differential Backup  261
++   How Long Should You Keep Backups?  262
++   Choosing a Storage Location  263
++   Protecting Your Backups  263
++   Keeping a Log  263
++   Restoring Files from Backup  264
++   Backup Utilities  265
++   	tar  265
++   		Using tar to Create Backups  265
++   		Restoring Files with tar  268
++   	cpio  269
++   Compressing and Uncompressing Files  270
++   	gzip  271
++   	compress  272
++   	gunzip  272
++   	zcat  273
++   Summary  273

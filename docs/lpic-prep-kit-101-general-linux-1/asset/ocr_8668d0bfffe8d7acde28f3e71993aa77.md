@@ -1,0 +1,29 @@
++   6.  You need to restore a file from the backup of the home directories. How can you do this?
++   
++   A.  If you know the name of the file you want to restore, you could type
++   
++   tar xf /dev/tape filename
++   
++   However, if you are not sure of the filename, you can have tar prompt you with each filename until you find the correct one by typing
++   
++   tar xwf /dev/tape
+
++   7.  You need to compress your archive to save space on your tape. How would you modify the command you created for question 5?
++   
++   A.  You could use gzip to compress the tar file after you create it. However, a more efficient way would be to tar and compress in one action by using z and typing
++   
++   tar czfb /dev/tape 20 /directory
+
++   8.  You have created tar files of the employee database and want to store the last six months on a CD-ROM, but there is not enough space. How might you make them fit?
++   
++   A.  You should compress these files before copying them to the CD-ROM. You could use the compress utility, but gzip would be a better choice because it uses a more efficient compression algorithm.
+
+# PRACTICE TEST
+
++   1.  You have been instructed to devise a backup plan that will enable you to limit downtime to an hour while limiting the expense as much as possible. The data on this server changes rarely. Which of the following would be your best choice?
++       a.  Clustering
++       b.  Standby server
++       c.  Backup server
++       d.  Back up files to a tape drive
++   
++   Answer a is incorrect; although this would limit your downtime, it is also expensive. Answer b is incorrect; although this is less expensive than clustering, this is also an expensive solution. **Answer c is correct; because the data seldom changes, this solution would enable you to be back online within the allowed time and cost less than either clustering or a standby server.** Answer d is incorrect; even if you have a good

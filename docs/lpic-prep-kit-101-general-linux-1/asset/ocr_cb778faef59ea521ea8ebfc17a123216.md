@@ -1,0 +1,44 @@
+| Key | Action |
+| :--- | :--- |
+| Ctrl+E | Move to end of line |
+| Del | Delete one character to left of cursor |
+| Ctrl+D | Delete one character to right of cursor |
+| Esc+Del | Delete word to left of cursor |
+| Esc+d | Delete word to right of cursor |
+| Ctrl+K | Delete from cursor to end of line |
+
+**.inputrc** Just as you can configure the editor you want to use with `tc`, you also can configure the editor that is used when you are typing at the command line. To change to using the vi editor at the command line instead of the Readline Library, you would type
+
+```
+```
+set -o vi
+```
+```
+
+To change back to using `emacs` mode, type
+
+```
+```
+set -o emacs
+```
+```
+
+By default, the `/etc/inputrc` file contains the configuration information. You can override these settings by placing them in the `.inputrc` file in your home directory.
+
+You also can use the `.inputrc` file to define key mappings. These mappings can include issuing commands or inserting text. For example, to assign the F1 key to insert your name, add the following to your `.inputrc` file:
+
+```
+```
+'\e[11~': 'Your Name'
+```
+```
+
+Now every time you press the F1 key, your name will be inserted without the quotes. To see what key bindings have been defined, use the `bind -v` command.
+
+To point to another file containing the configuration, set the INPUTRC environment variable to that file. You must include the entire path to the file. Environment variables are covered later in this chapter.
+
+# ### Command-Line Completion
+
+Another helpful feature of the `bash` shell is command-line completion. You can use the Tab key to complete words you are entering on the command line.
+
+If you are typing the first word on the command line when you press the Tab key, `bash` looks for a command that starts with what you have typed so far. If one is found, it completes the word. If more than one is found, it beeps. Press Tab again to see a list of available commands.

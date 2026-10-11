@@ -1,0 +1,25 @@
+Depending on how you are using regular expressions, you might need a special character or delimiter to mark the beginning and end of your pattern. The most common delimiter is /, but vi and some other text editors allow the use of other characters as a delimiter. Most utilities use common delimiters, but grep does not. (grep is discussed later in this chapter.) Details on using regular expressions will be discussed throughout this book in conjunction with specific utilities.
+
+The most basic usage is /file/, which requires an exact match to the string file. This results in matches to file, file1, MyFile, and file.old. However, it will not match myFile because searches are case-sensitive.
+
+The use of sets overcomes this limitation. Therefore, using /[^f]ile/ will find all the files in the prior example as well as MyFile. [^f]ile means either File or file.
+
+Sets can explicitly list the acceptable characters in the preceding example or define a range of characters. So if you wanted to find a string that begins with any digit, you could use either /[@123456789]/ or /[-9]*/.
+
+Another way to designate a pattern is through the use of the pipe (|) character. You use the | character to separate possible choices, just like saying “or”. So, looking at the earlier example, using /file | File/ would find either file or File.
+
+Use the caret (^) to find a pattern at the beginning of a line. Using /^@[0-9]/, would result in finding any line starting with a digit. The dollar sign ($) can be used to find lines ending with a pattern. For example, /$[0-9]/ would find all lines ending with a digit.
+
+As each utility is discussed, the use of regular expressions will be presented. The first one we will cover is the use of grep for searching the contents of files.
+
+# ## Searching File Content
+
+Numerous utilities give you the ability to find specific patterns in a file with or without opening the file. Some of these utilities display only what was found, while others will make changes to the file’s contents. Two of these utilities discussed here are grep and sed.
+
+# ### grep
+
+The global regular expression print (grep) command searches a file for a pattern or simple string. It does not change the file but rather displays each line that contains the desired string. The syntax for grep is
+
+```
+grep [options] pattern [file list]
+```

@@ -1,0 +1,17 @@
+4. Use UNIX Streams, Pipes, and Redirects Connect files to commands and commands to other commands to efficiently process textual data. Includes redirecting standard input, standard output, and standard error; piping one command’s output into another command; and sending output to **stdout** and a file using **tee**.
+
+5. Create, Monitor, and Includes running jobs in the foreground and background, bringing a job from the background to the foreground and vice versa, monitoring active processes, sending signals to processes, and killing processes. Includes using commands such as **ps**, **top**, **kill**, **bg**, **fg**, and **jobs**.
+
+6. Modify Process Execution Priorities Run a program with higher or lower priority; determine the priority of a process; change the priority of a running process. Includes the command **nice** and its relatives.
+
+7. Perform Searches of Text Files Using Regular Expressions Includes creating simple regular expressions and using related tools such as **grep** and **sed** to perform searches.
+
+4. Devices, Linux FileSystems, Filesystem Hierarchy Standard
+
+1. Create Partitions and Filesystems Create disk partitions using **fdisk**; create a hard drive and other media filesystems using **mkfs**.
+
+2. Maintain the Integrity of Filesystems Verify the integrity of filesystems, monitor free space and inodes, and fix simple filesystem problems. Includes commands such as **fsck**, **du**, and **df**.
+
+3. Control Filesystem Mounting and Unmounting Mount and unmount filesystems manually, configure filesystem mounting on **bootup**, and configure user-mountable removable file systems. Includes managing the **/etc/fstab** file.
+
+4. Set and View Disk Quotas Set up disk quotas for filesystems, edit user quotas, check user quotas, and generate reports of user quotas. Includes the **quota**, **edquota**, **repquota**, and **quotaon** commands.

@@ -1,0 +1,37 @@
+Most files on the Linux system are ordinary files, including text files and applications. Any file a user creates is an ordinary file.
+
+To Linux, directories are just empty files. They are organized in an hierarchial manner to provide holding places for other file types.
+
+Block and character mode devices are composed of the instructions necessary for Linux to communicate with peripherals. These files are usually located in `/dev`.
+
+Links are identified in the file type character as an 1. See Chapter 6 for more information on links.
+
+# # Keeping Your Disks Healthy
+
+After your partitions are created and formatted and you have installed Linux, you will want to make sure they stay healthy. You can use several different utilities to determine the state of your filesystem or fix problems with it.
+
+# ## *fsck*
+
+The most important utility for maintaining your filesystem is the **fsck** command. Like the **mkfs** command, **fsck** is a front end to the **check_disk** command for the specified filesystem type. It is used to verify the filesystem’s structure and repair any inconsistencies. Problems most frequently occur as a result of a system crash.
+
+When a system crashes, the kernel is unable to sync the cache with the hard disk’s contents. This can result in blocks being marked as in use when they are really empty. Other errors can occur from directly writing to a device to an area containing existing data.
+
+The syntax for the **fsck** command is
+
+```
+fsck -t fs-type device
+```
+
+For example, to check the first partition created as an ext2 filesystem in our earlier example, you would type the following:
+
+```
+fsck -t ext2 /dev/hda1
+```
+
+The previous command calls the **e2fsck** command to check the ext2 filesystem on the first partition of the first IDE hard disk. Because this is the root partition, you will receive a message that the filesystem is mounted and be asked whether to continue. If you answer yes, **fsck** checks the following:
+
++   - inodes
++   - blocks
++   - file sizes
++   - directory structure
++   - links

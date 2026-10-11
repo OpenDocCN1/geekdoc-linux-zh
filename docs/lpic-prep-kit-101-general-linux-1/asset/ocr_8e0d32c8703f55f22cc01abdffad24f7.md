@@ -1,0 +1,33 @@
+# The /etc/mtab File
+
+The mount table, `/etc/mtab`, is a listing of presently mounted filesystems. This file is displayed when the `mount` command is issued without any arguments.
+
+It is created at the time the system boots. Using either the `mount` or `umount` command keeps the `/etc/mtab` file updated. This behavior can be overridden by using the `-n` option with either `mount` or `umount`. The `umount` command is discussed in the next section.
+
+# umount
+
+If you no longer want to have access to a particular filesystem, unmount it using the `umount` command. Its syntax is
+
+```
+umount [options] [device]
+```
+
+The `umount` command is generally used to unmount removable devices prior to ejecting them from the system, such as floppy disks and CD-ROMs. Always unmount all removable devices before removing them from the system. Failure to do so can result in the loss of data.
+
+The options that are used with the `umount` command are listed in Table 6.3.
+
+| Option | Action |
+|---|---|
+| -a | Unmount all filesystems listed in the `/etc/mtab` |
+| -n | Unmount the specified filesystem but do not change the `/etc/mtab` file |
+| -t *fs-type* | Unmount the *fs-type* filesystems |
+
+You can specify either the device or the mount point as an argument to the `umount` command. After the command has been issued, all pending read/writes are completed, and then the filesystem is unmounted.
+
+# Disk Quotas
+
+Setting disk quotas that limit the amount of hard disk space that can be used by each user or group will help you better manage your system.
+
+For the exam, you will need to know how to set disk quotas, including setting soft and hard limits. You also will be tested on how to monitor these quotas.
+
+Disk quotas are set on a partition-by-partition basis. You can elect to set quotas on only one partition or to have different quota values on each partition.

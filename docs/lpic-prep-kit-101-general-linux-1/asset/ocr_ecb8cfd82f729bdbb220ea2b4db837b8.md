@@ -1,0 +1,19 @@
+# # Alternate Resources
+
+Hundreds of resources exist online for information about and help with Linux. A few are listed here to get you started—you'll surely discover more as you surf the Net.
+
+# ## Support Sites
+
++   - **CNET.com—Linux**: `http://linux.cnet.com/linux`
++   - **Filesystem Hierarchy Standard**: `http://www.pathname.com/fhs/`
++   - **Linux Fool Dot Com**: `http://www.linuxfool.com/`
++   - **Partition types**: `http://www.win.tue.nl/~aeb/partitions/partition_types-1.html`
++   - **Planer IT Linux Technology Center**: `http://www.planet.it.com/techcenters/linux`
++   - **System Administrator's Guide**: `http://members.xoom.com/basiclinux/sag/book1.html`
++   - **TechRepublic**: `http://techrepublic.com/trbbs/trbbs.shtml`
+
+# ## Documentation
+
++   - **Linux Documentation Project**: `http://metalab.unc.edu/LDP/`
++   - **Linux Knowledge Base Org.**: `http://www.linuxkb.org/`
++   - **Linux.com—HOWTOs**: `http://linux.com/howto/`

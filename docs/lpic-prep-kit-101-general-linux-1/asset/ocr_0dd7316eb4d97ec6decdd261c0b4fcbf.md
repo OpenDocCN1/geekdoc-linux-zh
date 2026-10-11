@@ -1,0 +1,34 @@
+This will send messages to the console. However, you will need to notify the syslog daemon of the changes. How can you do this?
+
+You can reboot your computer in order to force the syslogd daemon to reread the configuration file. However, a better way would be to enter the command
+
+```
+kill -SIGHUP `cat /var/run/syslogd.pid`
+```
+
+Now any emergency messages will be sent to the console.
+
+Look at the contents of the directory /var/log. Do you see older log files being saved here? How is this being done? Chances are this is the result of the logrotate command. Check out the /etc/logrotate.conf file. What logs are being rotated? How frequently? How many old logs are being kept? Many distributions also install a cron job to run logrotate. Look in the /etc/cron.daily directory for the logrotate job. You can view it using cat or a text editor. Just be careful not to make any changes.
+
+# Lab 11: Backup and Recovery
+
+For this exercise, you will devise a backup strategy and implement it. You also will perform trial restores to ensure that your plan will work in case of a disaster.
+
+First, answer the following three questions:
+
++   - What are you going to back up?
++   - How often will you back up?
++   - What media will you use for your backup?
+
+The answers will vary from system to system. If you have a single-user system, you will probably back up the entire system whenever you make changes and back up your files on a daily basis. If it is a multiuser system, however, you will want to make complete backups on a regular basis as well as daily backups of user files.
+
+For this exercise, you will create a backup of your home directory on a daily basis. The first step is to construct and test the commands necessary to create your backup.
+
+For this you will use tar to create a compressed archive. You will save this to your home directory. Later you will want to modify this to save the archive to your backup device, such as a tape drive.
+
+Type the following:
+
+```
+cd
+tar czf MyBackup.tar.gz .
+```

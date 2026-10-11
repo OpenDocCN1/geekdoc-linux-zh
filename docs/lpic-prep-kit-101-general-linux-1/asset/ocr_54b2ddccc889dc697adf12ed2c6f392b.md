@@ -1,0 +1,33 @@
+# Key Concept
+
+The **ps** command is used to list the current processes on your system. To get more detailed information, use the **-1** option. The **-ef** option will format the output of **ps** as a tree showing the relationships of parent and child processes.
+
+The **top** utility dynamically displays processes, unlike **ps**, which shows a static view. **top** can be used to stop processes or reprioritize them.
+
+# nice
+
+The **nice** command can be used to lower the priority of a running process. The superuser also can use **nice** to raise the priority of a process. The syntax is
+
+```
+nice [option] command-line
+```
+
+The **command-line** argument refers to the command you want to execute. This command can be a single command or a complex one including arguments and redirection.
+
+If no option is given, **nice** uses an adjustment of 10. To use a different value, use the **-n value** option. The range of acceptable values is -20 (highest priority) to 19 (the lowest priority). A positive value decreases priority, whereas a negative one increases priority.
+
+Only the superuser can use negative values. Running a process at an increased priority can have significant impact on the system and any other processes, including the operating system itself.
+
+# Background and Foreground Processes
+
+When you issue a command, the shell creates a child process and the parent process (the shell) goes to sleep until process completes. The exception is when using built-in commands, which do not create a child process.
+
+By default, every time you issue a command it runs in the foreground. You can make it run in the background by using the &. For example,
+
+```
+pine &
+```
+
+will cause a process (**pine**) to run in the background.
+
+Under the bash shell, Ctrl+z will suspend a running program and put it in the background. Use **fg** to bring the program to the foreground where you can use Ctrl+c to kill the process if necessary.

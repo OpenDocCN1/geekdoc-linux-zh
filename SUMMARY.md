@@ -1388,6 +1388,7 @@
 +   [LPIC-2：Linux Professional Institute 认证学习指南（考试 201 和 202）](docs/lpic-2-linux-professional-institute-certification-study-guid/README.md)
 +   [LPIC-2：Linux 专业认证认证：学习指南 考试 201 与考试 202](docs/lpic-2-linux-professional-instutute-certification-study-guid/README.md)
 +   [Linux 专业协会认证考试 101 和 102 LPIC I 考试冲刺](docs/lpic-i-exam-cram-2-linux-professional-institute-certificatio/README.md)
++   [LPIC 备考指南：101 Linux 通用](docs/lpic-prep-kit-101-general-linux-1/README.md)
 +   [LPIC 101 通用 Linux I 备考包（考试指南）](docs/lpic-prep-kit-101-general-linux-i-exam-guide/README.md)
 +   [操作系统开发的简明指南](docs/ltl-bk-os-dev/README.md)
 +   [Unix 极客的 Mac OS X 入门指南](docs/mac-os-x-for-unix-geeks/README.md)
