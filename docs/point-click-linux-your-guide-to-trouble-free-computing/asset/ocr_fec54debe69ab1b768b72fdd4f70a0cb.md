@@ -1,0 +1,13 @@
+You have a wide choice of formats you can use to save your work. The OOO native ".sxw" is usually best unless you're going to send this document to someone who only has Microsoft Office, in which case you'll probably want to use the extra hard drive space it takes to save it in Microsoft Word format. Or, if you're going to publish it on the Web, you may want to choose HTML. But you don't need to make this decision while you're still typing. It's good to save as you work "just in case," and you might as well use the standard OOO file format. You can always save your final version in a different file format later.
+
+# **Save early, save often**
+
+Even though Linux and OOO are highly reliable, it's always a good idea to save your work as you go along. What if you wander away from the computer and a cat jumps on the keyboard or someone else starts pushing keys? You might get distracted and shut your computer off by mistake, or you might be using a laptop that runs out of battery power; or the power to your desktop might go off for a second. You never know.
+
+Saving your work takes next to no time; hit "Ctrl+S" and everything you've written up until that moment will be saved to your hard drive.
+
+The .sxw format OOO uses is just a fancy name for "Zipped XML," which means your work is first saved in the industry-standard "XML" format, then compressed using the industry-standard ".tar" protocol so that it takes up less hard drive space and makes for speedier email if you send your documents as email attachments.
+
+If you need to open an OOO file without a copy of OpenOffice.org (or its commercial cousin, StarOffice) handy, you can "unzip" the file with almost any zip/unzip utility, in any operating system, and then read your text with almost any word processor, including Microsoft Word.
+
+Another "Save" option in the OOO "File" menu isn't called "Save," but "Export." At this writing, the only format to which you can "Export" is PDF, and you can get the same result by clicking the "Export to PDF" line just below the "Export" choice. Presumably, there will be other "Export" choices in the future, which is why there's a separate "Export" choice with room of other to-be-included formats, but for the moment PDF is fantastic enough. PDF, the "Portable Document Format" from Adobe, is the preferred format for many online documents that may be printed out by users, as well as in other situations where documents must look the same whether they are on a computer screen or paper.

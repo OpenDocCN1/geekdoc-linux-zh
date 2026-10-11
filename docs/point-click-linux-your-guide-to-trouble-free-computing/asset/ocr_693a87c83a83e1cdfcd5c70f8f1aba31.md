@@ -1,0 +1,11 @@
+# What are protocols and ports?
+
+Protocols are methods of transferring information between computers over a local network or through the Internet.
+
+They have names only an engineer could love, like HTTP (HyperText Transfer Protocol), FTP (File Transfer Protocol), CRTP (Combat Radio Transport Protocol) , SSH (Secure Shell), and so on. Each one has a “Port Number” associated with it, like 80 for HTTP, which is how you get Web pages, and 1963 for MSN Messenger, and so on. There are thousands of possible ports. If they are all open on your PC, it means it will accept almost any kind of signal sent to it, including ones from bad people who want to steal your data or use your computer to send spam. If all the ports are closed, your computer won’t accept any data, period.
+
+So you keep some ports open by setting your firewall to allow certain signals through it, and in other cases (like HTTP), to allow signals in on that port only in response to signals it sends out.
+
+Server computers—one that “serve” Web pages, email, and other files to “client” computers like your desktop—*must* have some ports open so they can receive requests to send out Web pages or emails or whatever, so they can’t be “locked down” as securely as a desktop computer. But some desktop computers become servers accidentally because their operating system packages came with built-in server software their owners don’t know about. This is the most common security problem with Linux computers, and it’s why *SimplyMEPIS* comes with no server software, although you can certainly add server software yourself if you need it.
+
+The magic of a modern Linux distribution with a built-in firewall is that you don’t need to know any of this stuff to set up your computer network and keep it secure. And, with Linux, you don’t need to worry about all those Windows viruses, either. Just update your system now and then in case some sort of vulnerability in one of your programs has been spotted and fixed, and you can pretty much not worry about network security, but go to the beach instead.

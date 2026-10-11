@@ -1,0 +1,367 @@
+
+## Index
+
+### Numbers
+- 3-D Video cards
+  - Tux Racer arcade game, 167
+  - TuxKart arcade game, 168
+
+### A
+- Abiword, 191
+- access, BIOS commands, 12–13
+- Account Wizard, Mozilla, 62–66
+- accounting, CheckBook Tracker, 123
+  - bank downloads, 126
+  - help, 129
+  - printing checks, 128–129
+  - reports, 127
+  - starting account, 124–126
+- Acquire command (File menu—GIMP), 154
+- Add Gallery button, Digikam, 159
+- Add Printer Wizard, 19
+- address books, Mozilla, 59
+- administrators, system applications, 182–184
+- adware, 6
+- AIM (AOL Instant Messenger), 132–134
+- Albums, Digikam
+  - photo storage, 156
+  - viewing, 159
+- alias command, 216–217
+- Alt A key combination, Mozilla Select All, 85
+- amd64, 200
+- AOL, 50
+  - compatibility with Mozilla, 62
+  - Instant Messenger (AIM), Kopete Setup Wizard, 132–134
+- Appearance and Themes command (Control Center menu), 205
+- applications, 7–8
+  - editors
+    - Bluefish, 174
+    - Kate, 175
+    - KEdit, 175
+    - Kommander, 175
+    - Quanta+, 174
+  - graphics, 175
+  - KDEPrintFAX, 176
+  - KGhostView, 176
+  - Kooka, 176
+  - KPaint, 177
+  - Kvicshow, 177
+  - installation, 187–188
+    - available packages, 193–194
+    - KPackage, 190–191
+    - source selection, 188–190
+    - sources of information, 194
+  - uninstalls, 193
+  - verifying plain package names only, 192
+  - Internet, 178–179
+  - multimedia, 179–180
+  - office, 181
+  - system, 182–184
+  - using with Windows, 195
+  - CrossOver Office, 196–197
+  - networking using Samba, 198–202
+  - Win4L, 198
+  - utilities, 184
+- Apply Themes command (View menu), 79
+- apropos command, 217
+- arcade games
+  - Frozen Bubble, 165–166
+  - Tux Racer, 167
+  - TuxKart, 167
+- Ark, 184
+- aRts control tool, 180
+- Atheros, network cards, 17
+- audio CDs, K3b, 146
+- authentication, KPPP, 54
+- Autopilot Presentation, 100
+
+### B
+- Backgammon, 168
+- backgrounds, customizing desktop, 205
+- banks, CheckBook Tracker downloads, 126
+- Basic Input/Output System. See BIOS
+- Bayesian filters, 66–67
+- *Beginning Linux Programming, 3rd Edition*, 250
+- binary code, desktop graphics, 4
+- BIOS (Basic Input/Output System), 10
+  - access commands, 12–13
+  - making changes, 11
+  - settings, 10–13
+  - setup, 11–12
+- Bluefish, 96, 174
+- board games
+  - Backgammon, 168
+  - Chess, 169
+  - Kmahjongg, 170
+- bookkeeping, CheckBook Tracker, 123
+  - bank downloads, 126
+  - help, 129
+  - printing checks, 128–129
+  - reports, 127
+  - starting account, 124–126
+- Bookmark Manager, 78
+- Bookmark This Page option, 77
+- Bookmarks, GFTP, 141
+  - Mozilla Web browser, 76–78
+- booting from *SimplyMEPIS CD*, 10–11
+  - BIOS
+    - access commands, 12–13
+    - setup, 11–12
+  - changing BIOS settings, 13
+- browsers, Mozilla, 7, 57–59, 71–73
+  - Bookmarks, 76–78
+    - customizing, 78–80
+    - popup ads, 74
+    - preferences, 74–76
+- Burgess, Brice, 106
+- Burn button, K3b, 146
+- burning CDs, K3b, 143–147
+
+### C
+- cal command, 218
+- Calc, 111–114
+  - calculations, 115–119
+  - database, 114–115
+  - Support section, 119
+- Calc function dialog box, 116
+- calculations, OpenOffice.org Calc, 115–119
+- cameras, 157
+- Camstream, 178
+- card games
+  - Kpoker, 165
+  - Patience (Solitaire), 164
+- Cascading Style Sheets (CSS), 85
+- cat command, 219
+- CBT (CheckBook Tracker), 123–124
+  - bank downloads, 126
+  - help, 129
+  - printing checks, 128–129
+  - reports, 127
+  - starting account, 124–126
+- cdrom, hard drive partitions, 27
+- CDs
+  - booting MEPIS Linux, 10–11
+  - BIOS access commands, 12–13
+  - BIOS setup, 11–12
+  - changing BIOS settings, 13
+  - hard drive partitions, 27
+- K3b, 143–144
+  - CD/DVD creation software, 8
+  - ISO images, 146–147
+  - running, 144–146
+- KAudioCreator, 180
+- Central Processing Unit (CPU), 183
+- channels, IRC, 136
+- CHAP, ISP authentication protocol, 54
+- chats, OpenOffice.org Calc, 118
+  - chatting, Kopete, 131
+    - customizing look, 137
+    - IRC setup, 135–136
+    - Setup Wizard, 132–134
+- CheckBook Tracker (CBT), 123–124
+  - bank downloads, 126
+  - help, 129
+  - printing checks, 128–129
+  - reports, 127
+  - starting account, 124–126
+- checks, printing, 128–129
+- Chess game, 169
+- children games, 171
+- Chinese board game, Kmahjongg, 170
+- chmod command, 219
+- chown command, 220
+- CLI (command line interface), 215
+  - alias command, 216–217
+  - apropos command, 217
+  - cal command, 218
+  - cat command, 219
+  - chmod command, 219
+  - chown command, 220
+  - cp command, 220
+  - file command, 220–221
+  - find command, 221–222
+  - grep command, 222
+  - help, 229
+  - less command, 222–223
+  - locate command, 223
+  - ls command, 223–224
+  - mv command, 222–223
+  - mv command, 224–225
+  - rm command, 225
+  - su command, 225–226
+  - tar command, 226–228
+  - terminal window, 216
+  - test command, 228–229
+- CodeWeavers Web site, 197
+- CodeWeavers CrossOver Office package, 6
+- columns, spreadsheets, 113
+- command line interface. See CLI
+- command lines, gFTP ease of use, 140–141
+- commands
+  - BIOS access, 12–13
+  - CLI
+    - alias, 216–217
+    - apropos, 217
+    - cal, 218
+    - cat, 219
+    - chmod, 219
+    - chown, 220
+    - cp, 220
+    - file, 220–221
+    - find, 221–222
+    - grep, 222
+    - help, 229
+    - less, 222–223
+    - locate, 223
+    - ls, 223–224
+    - more, 222–223
+    - mv, 224–225
+    - rm, 225
+    - su, 225–226
+    - tar, 226–228
+    - test, 228–229
+- Control Center menu, Appearance and Themes, 205
+- Edit menu
+  - Mail & Newsgroup Account Settings, 62
+  - Select All, 85
+  - Undo, 93, 107
+- File menu
+  - Export, 90, 109
+  - New, 108
+  - Open, 106
+  - Page Preview, 95, 118
+  - Printer Settings, 95
+  - Save, 89
+- Insert menu, Scan, 91
+- Settings menu, Configure Editor, 35
+- Tools menu
+  - Message Filters, 67
+  - Spellcheck, 97
+  - Word Count, 97
+- View menu
+  - Apply Themes, 79
+  - Show/Hide, 79
+  - Sidebar, 79
+  - Text Zoom, 78
+- commands (GIMP), File menu
+  - Acquire, 154
+  - Dialogs, 152
+  - Open, 153
+  - Preferences, 152
+- commands (Mozilla), Edit menu, Preferences, 208
+- communities, Linux, 231
+  - desktops versus operating systems, 239
+  - GNU/Linux beginnings, 232–234
+  - joining LUG (Linux Users Group), 240–241
+  - learning more, 241–242
+  - membership, 235–239
+  - Tovaris, Linux, 234–235
+- Compozer, Mozilla, 59, 81–86
+- Configure Editor command (Settings menu)
+- connections, KPPP, 52
+- Control Center, customizing Linux, 204–206
+- Control Center menu commands, Appearance and Themes, 205
+- controls, K3b Tooltip window, 144
+- copying text, 32
+- cp command, 220
+- CPU (Central Processing Unit), 183
+- Create New dialog box, 29
+- creating folders, 29
+- CrossOver Office, supported Windows software, 196–197
+- CrossOver Plugin package, 6
+- CSS (Cascading Style Sheets), 85
+- customizing
+  - desktop, right-click menu box, 207–208
+  - Guarddog firewall, 209–211
+  - KDE Control Center, 204–206
+  - languages, 212
+  - multiple desktops, 206
+  - programs, 208–209
+  - sharing computer, 213
+
+### D
+- databases, Calc, 114–115
+- Debian, 246
+  - apt system, 187
+  - Project servers, 6
+- demo users, logins, 15
+- desktops
+  - customizing
+    - backgrounds, 203, 205
+    - multiple desktops, 206
+    - right-click menu box, 207–208
+    - versus operating systems, 239
+  - View Desktop icon, 16
+- dialog boxes
+  - Calc function, 116
+  - Create New, 29
+  - Export (Draw), 109
+  - File, 106
+  - File Bookmark, 77
+  - Jpeg options (Draw), 110
+  - Link (Mozilla Composer), 85
+  - Position and Size, 107
+  - Spellcheck, 114
+  - Text (Presenter), 103
+- Dialogs command (File menu—GIMP), 152
+- dialup
+  - KPPP, 49–50
+    - configuring, 51
+    - connection, 52
+    - troubleshooting connection problems, 52–55
+  - PPPoE connections, 19
+- Digikam, 155
+  - altering pictures, 160
+  - camera selection, 157
+  - downloading pictures, 158–159
+  - help, 161
+  - setup, 156
+- digital photos, Digikam, 155
+  - altering, 160
+  - camera selection, 157
+  - downloading, 158–159
+  - help, 161
+  - setup, 156
+- directories, root, 30
+- distributions
+  - Debian, 246
+  - Fedora Project, 246
+  - Knoppix, 246
+  - Mandrake Linux, 246
+  - Slackware Linux, 247
+  - SUSE Linux, 247
+- Distrowatch Web site, 245
+- documents, OpenOffice.org Writer, 89–91
+  - help, 94
+  - inserting images, 91–93
+  - printing, 95
+  - tools, 97
+- double-entry bookkeeping, 123
+- downloads
+  - digital pictures, 158–159
+  - gFTP, 139
+    - easier use, 140–141
+    - remote server, 141–142
+    - toolbar, 142
+  - software, 187–188
+    - available packages, 193–194
+    - KPackage, 190–191
+    - source selection, 188–190
+    - sources of information, 194
+    - uninstalls, 193
+    - verifying plain package names only, 192
+- Draw, 105–108
+  - modifying pictures, 108–109
+  - saving files, 109–110
+- drawings
+  - KPaint, 177
+  - OpenOffice.org Draw, 105–108
+    - modifying pictures, 108–109
+    - saving files, 109–110
+- drivers, 18–22
+  - dual-booting, 7
+  - set up, 38–42
+- DVDs, K3b, 143–144
+  - CD/DVD creation software, 8
+  - ISO images, 146–147
+  - running, 144–146

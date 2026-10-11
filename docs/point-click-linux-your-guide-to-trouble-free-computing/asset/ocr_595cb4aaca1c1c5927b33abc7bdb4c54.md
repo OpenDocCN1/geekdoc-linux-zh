@@ -1,0 +1,1 @@
+This book is obviously not a Web design manual. You should now have a basic understanding of how Mozilla Composer works. If you need to do more advanced Web design, no matter what operating system you use, you should delve into that as a separate subject with appropriate books and other material close at hand to help you learn this arcane art.

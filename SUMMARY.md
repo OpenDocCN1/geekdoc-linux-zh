@@ -1605,6 +1605,7 @@
 +   [PMP：项目管理专业考试学习指南：2015年考试更新版](docs/pmp-project-management-professional-exam-study-guide-updated/README.md)
 +   [PMP 项目管理专业人士复习指南](docs/pmp-project-management-professional-review-guide-updated-for/README.md)
 +   [Linux 入门指南](docs/pocket-linux-guide/README.md)
++   [Linux 点选使用指南](docs/point-click-linux-your-guide-to-trouble-free-computing/README.md)
 +   [Linux 策略路由使用指南（电子版）](docs/policy-routing-using-linux-electronic-resource/README.md)
 +   [PostgreSQL （Linux）](docs/postgresql-linux/README.md)
 +   [功率与性能：软件分析与优化](docs/power-and-performance-software-analysis-and-optimization/README.md)

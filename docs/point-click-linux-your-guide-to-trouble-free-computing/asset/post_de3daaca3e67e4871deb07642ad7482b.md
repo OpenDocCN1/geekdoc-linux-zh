@@ -1,0 +1,385 @@
+
+# E
+
+- Edit menu commands
+  - Mail & Newsgroup Account Settings, 62
+  - Select All, 85
+  - Undo, 93, 107
+- Edit menu commands (Mozilla), Preferences, 208
+- editing GIMP, 154
+- editors
+  - Bluefish, 174
+  - Kate, 175
+  - KEdit, 175
+  - Koromander, 175
+  - Quanta+, 174
+- email
+  - clients, Mozilla, 58
+  - KMail, 178
+  - Mozilla, 61
+    - account set up, 62-66
+    - filters, 67-69
+    - Junk Mail Controls, 66-67
+  - Messenger, 7
+    - top menu choices, 69
+  - public lists, Linux programs, 236
+- entry toolbar, Calc, 114
+- Evolution system, 57
+- Export command (File menu), 90, 109
+- Export dialog box (Draw), 109
+- exports, *SimplyMEPIS CD*, 252
+
+# F
+
+- FAT 16, 39
+- FAT 32, 39
+- faxes, KDEPrintFAX, 176
+- Fedora Project, 246
+- fields, spreadsheets, 113
+- File Bookmark dialog box, 77
+- File Bookmark option, 77
+- file command, 220-221
+- File dialog box, 106
+- File menu commands
+  - Export, 90, 109
+  - New, 108
+  - Open, 106
+  - Page Preview, 95, 118
+  - Printer Settings, 95
+  - Save, 89
+- File menu commands (GIMP)
+  - Acquire, 154
+  - Dialogs, 152
+  - Open, 153
+  - Preferences, 152
+- File Transfer Protocol. See FTP
+- files
+  - Konqueror manager, 28-31
+  - Writer, format, 90
+- filters
+  - Bayesian, 66-67
+  - Mozilla, 67-69
+- find command, 221-222
+- Firefox Web browser, 57
+- firewalls, Guarddog, 209-211
+- Flash card reader, hard drive partitions, 27
+- flat databases, Calc, 114-115
+- floppy disks, hard drive partitions, 27
+- folders
+  - creating new, 29
+  - Mozilla set up, 67-69
+- fonts, customizing Linux, 206
+- free software, 232, 237-238
+- Free Software Foundation (FSF), 233
+- freeware
+  - early Linux development, 3
+  - online *MEPIS* subscription, 6
+- Fresh Meat Web site, 194
+- Frozen Bubble (arcade game), 165-166
+- FSF (Free Software Foundation), 233
+
+# G
+
+- FTP (File Transfer Protocol), 139
+  - gFTP, 139
+    - easier use, 140-141
+    - remote server, 141-142
+    - toolbar, 142
+    - tutorials, 140
+  - FTP Planet Website, 140
+- Gagne, Marcel, *Moving to Linux: Kiss the Blue Screen of Death Goodbye*, 250
+- games
+  - arcade
+    - Frozen Bubble, 165-166
+    - Tux Racer, 167
+    - TuxKart, 167
+  - board games
+    - Backgammon, 168
+    - Chess, 169
+    - Kmahjongg, 170
+  - cards, Patience (Solitaire), 164
+  - children, 171
+  - Kpoker, 165
+  - strategy
+    - KBattleship, 171
+    - Klickety, 170
+- General Public License (GPL), 233
+- gFTP, 139
+  - easier use, 140-141
+  - remote server, 141-142
+  - toolbar, 142
+  - Web site, 142
+- GIMP (GNU Image Manipulation Program), 149-151
+  - editing, 154
+  - help, 154
+  - running, 151-153
+  - scanning, 154
+  - working with pictures, 153
+- GNU Image Manipulation Program. See GIMP
+- GNU/Linux, beginnings, 232-234
+- GnuCash system, 123
+- GPL (General Public License), 233
+- GRand Unified Bootloader (GRUB), 43
+- Graphical User Interfaces (GUIs), 26
+- graphics, 175
+  - GIMP, 149-151
+    - editing, 154
+    - help, 154
+    - running, 151-153
+    - scanning, 154
+    - working with pictures, 153
+  - inserting, OpenOffice.org (OOo), 91-93
+- KDE PrintFAX, 176
+- KGhostView, 176
+- Kooka, 176
+- KPaint, 177
+- Kquickshow, 177
+- OpenOffice.org Draw, 105-108
+  - modifying pictures, 108-109
+  - saving files, 109-110
+- Graphics Control screen, 93
+- grep command, 222
+- GRUB (GRand Unified Bootloader), 43
+- Guarddog firewall, 209-211
+- GUIs (Graphical User Interfaces), 26
+
+# H
+
+- hard drive
+  - Linux installation, 37-38
+    - dual-boot system set up, 38-42
+    - without Windows, 42-43
+    - partitions, 39-40
+    - size requirements, 38
+- help
+  - CheckBook Tracker, 129
+  - CLI, 229
+  - Digikam, 161
+  - GIMP, 154
+  - OpenOffice.org, Writer, 94
+  - running MEPIS Linux, 23
+  - Samba, 202
+  - Help buttons, OpenOffice.org, Calc, 83, 117
+  - Help menu, OpenOffice.org, Calc, 117
+- hidden files, GIMP, 152
+- history
+  - GNU/Linux, 232-234
+  - Torvalds, Linus, 234-235
+- Home directory, 30
+- Home icon, 30
+- home partitions, 42
+- HyiaFax Web site, 176
+- icons
+  - Digikam, 159
+  - KDE desktop, 26-28
+  - KWrite, 32
+- Image tool, Mozilla Composer, 83
+- images
+  - Digikam, 155
+    - altering, 160
+    - camera selection, 157
+    - downloading, 158-159
+    - help, 161
+    - setup, 156
+  - GIMP, 153-154
+  - inserting, OpenOffice.org (OOo), 91-93
+  - Kwickshow, 177
+  - OpenOffice.org, Draw, 105-110
+  - importing, Digikam, 155
+    - altering pictures, 160
+    - camera selection, 157
+    - downloading, 158-159
+    - help, 161
+    - setup, 156
+- Info Center, 182
+- Insert menu commands, Scan, 91
+- inserting images, OpenOffice.org (OOo), 91-93
+- Install button, 192
+- Install screen, 40, 192
+- installation
+  - Linux on hard drive, 37-38
+    - dual-boot system set up, 38-42
+    - without Windows, 42-43
+  - software, 187-188
+    - available packages, 193-194
+    - KPackage, 190-191
+    - source selection, 188-190
+    - sources of information, 194
+    - uninstalls, 193
+    - verifying plain package names only, 192
+- Installation Center, MEPIS, 38
+- instant messaging, Kopete, 131
+  - customizing look, 137
+  - IRC setup, 135-136
+  - Setup Wizard, 132-134
+- Internet applications, 178-179
+- Internet Relay Chat. See IRC
+- Internet Service Providers. See ISPs
+- inverted tree structure, file storage, 30-31
+- IRC (Internet Relay Chat), 131
+  - basics, 134
+  - channels, Linux programs, 236
+  - Kopete, 131
+  - customizing look, 137
+  - setup, 135-136
+  - Setup Wizard, 132-134
+- ISO images, K3b, 146-147
+- ISPs (Internet Service Providers), 49
+  - compatibility with Mozilla, 62
+  - KPPP, 49-50
+    - configuring, 51
+    - connection, 52
+    - troubleshooting connection problems, 52-55
+
+# J–K
+
+- Jpeg options dialog box (Draw), 110
+- Junk Mail Controls, 66–67
+- Just for the Fun of It, 235
+- K-Gear icon, 27
+- K3b, 143–144
+  - CD/DVD creation software, 8
+  - ISO images, 146–147
+  - running, 144–146
+- Kate, 175
+- KAudioCreator, 180
+- KBattleship game, 171
+- KCPULoad, 183
+- KDE
+  - Control Center, customizing Linux, 204–206
+  - desktop, 4, 26–27
+    - Konqueror file manager, 28–31
+    - KWrite, 31–35
+  - Panel, 27–28
+    - Info Center, 182
+    - System Guard, 183
+  - The KDE Print Handbook, 20
+- KEdit, 175
+- kernels, choices, 10
+- keyboard, shortcuts, 33
+- KFax, 176
+- KGhostView, 176
+- Klickety game, 170
+- Kmahjongg, 170
+- KMail, 57, 178
+- KMix, 180
+- KMediaPlayer, 179
+- KNetLoad, 183–184
+- Knoopix, 246
+- Kommander, 175
+- Konqueror, 28–31, 57
+- Kooka, 154, 176
+- Kopete, 131
+  - customizing look, 137
+  - IRC setup, 135–136
+  - Setup Wizard, 132–134
+- KPackage, 196
+  - Debian apt system, 187
+  - software installation, 190–191
+  - uninstalling software, 193
+- KPaint, 177
+- Kpoker, 165
+- KPPP, 49–50
+  - configuring, 51
+  - connection, 52
+  - Log Viewer, 178
+  - troubleshooting connection problems, 52–55
+- KRec, 180
+- KsCD, 179
+- KSnapshot, 177
+- KStreamripper, 178
+- KUsers manager, 213
+- KWave, 180
+- KQuickShow, 177
+- KWrite, 31–35, 96
+
+# L
+
+- languages, customizing for user, 212
+- Layers, Channels, Paths window (GIMP), 152
+- Lemmke, Ari, 235
+- less command, 222–223
+- Link dialog box (Mozilla Composer), 85
+- Linux
+  - communities, 231
+  - desktops versus operating systems, 239
+  - GNU/Linux beginnings, 232–234
+  - joining LUG (Linux Users Group), 240–241
+  - learning more, 241–242
+  - membership, 235–239
+  - Torvalds, Linus, 234–235
+- dual-booting, 7
+- flexibility, 6
+- installation, 37-38
+  - dual-boot system set up, 38-42
+  - without Windows, 42-43
+- programs, 7-8
+- running, 9-10
+  - booting from CD, 10-13
+  - help from MEPIS Web site, 23
+  - logging in, 15
+  - MEPIS System Center, 16-19
+  - printer setup, 19-22
+  - shutting down, 23
+  - users, 14
+- Windows programs, 6-7
+- The Linux Cookbook, 250
+- Linux Users Group (LUG), 240-241
+- locate command, 223
+- logins
+  - running Linux
+    - password, 15
+    - users, 14
+  - screens, 45, 200
+- ls command, 223-224
+- LUG (Linux Users Group), 240-241
+
+# M
+
+- Mail & Newsgroup Account Settings command (Edit menu), 62
+- main window, GIMP, 152
+- Mandrake Linux, 246
+- Master Boot Record (MBR), 43
+- Matthews, Neil, *Beginning Linux Programming, 3rd Edition*, 250
+- MBR (Master Boot Record), 43
+- memory use, 182
+- menus, startup, 10
+- MEPIS
+  - Installation Center, 38
+  - online subscription, 6
+- running, 9-10
+  - booting from CD, 10-13
+  - help from MEPIS Web site, 23
+  - logging in, 15
+  - MEPIS System Center, 16-19
+  - printer setup, 19-22
+  - shutting down, 23
+  - users, 14
+- *SimplyMEPIS* CD, 251-253
+- System Center, 16-19
+  - dialup PPoE connections, 19
+  - software resource selection, 188-190
+  - Web site, 23, 251
+- MEPIS.org, FTP files, 140
+- Message Filters command (Tools menu), 67
+- Message Filters control box, 67
+- Microsoft FrontPage, 96
+- Microsoft Internet Explorer (MSIE), 76
+- Microsoft Office, OpenOffice.org compatibility, 8, 121-122
+- Mindspring, 50
+- mkbashoppify.bat, 13
+- modems
+  - configuration, 53
+  - KPPP, 49-50
+    - configuring, 51
+    - connection, 52
+    - Log Viewer, 178
+    - troubleshooting connection problems, 52-55
+  - purchasing, 53
+- modifying pictures, OpenOffice.org Draw, 108-109
+- Monitor submenu, 183
+- monitors, resolution, 10
+- more command, 222-223
+- mount, Linux partitions, 41
+- Mount Partitions, 27
+- Move or Resize Windows, Mozilla Web browser, 76
