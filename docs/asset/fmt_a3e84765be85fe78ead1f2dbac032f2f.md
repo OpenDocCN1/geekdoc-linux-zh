@@ -1,0 +1,153 @@
+
+如果这不起作用，请尝试此方法（由 Nothing <nothing@cc.gatech.edu> 提出修复建议，并由 Henrik Stoerner 稍作修正）。
+
+只有当我的 `dhcpd` 没有创建 `/etc/dhcpd/resolv.conf` 时，我才需要执行这最后一步。在 `/etc/sysconfig/network-scripts/ifup` 中，我进行了以下修改（这是一个非常糟糕的变通方法，但对我有用）：
+
+```
+elif [ "$BOOTPROTO" = dhcp -a "$ISALIAS" = no ]; then
+    echo -n "Using DHCP for $(DEVICE)..."
+    /sbin/dhcpd -c /etc/sysconfig/.........
+    echo "echo $! .........
+
+if [ -f /var/run/dhcp-wait-$(DEVICE).pid ]; then
+
+^ ^
+
+echo 'failed.'
+exit 1
+```
+
+我将其改为：
+
+```
+elif [ "$BOOTPROTO" = dhcp -a "$ISALIAS" = no ]; then
+    echo -n "Using DHCP for $(DEVICE)..."
+    /sbin/dhcpd
+    echo "echo $! ...............
+
+if [ ! -f /var/run/dhcp-wait-$(DEVICE).pid ]; then
+^^^^^^
+
+echo 'failed.'
+exit 1
+```
+
+注意 `if [ ! -f /var/run/dhcp-wait-$(DEVICE).pid ];` 中的 `!`（bang）
+
+现在坐下来享受吧。
+
+### 各种注意事项
+
+以下步骤并非必需，但可能对某些用户有用。
+
+- 如果你偶尔才需要网络连接，你可以以 root 身份从命令行运行 `/usr/sbin/dhcpd` 来启动 `dhcpd`。
+- 当你需要关闭（断开）网络时，输入 `/usr/sbin/dhcpd -k`。
+
+### 故障排除
+
+如果你已按照上述步骤操作但仍无法访问网络，可能有以下几种原因。
+
+**你的网卡未正确配置** 在启动过程中，你的 Linux 系统会探测网卡，并应显示类似以下的内容：
+
+```
+eth0: 3c509 at 0x300 tag 1, 10baseT port, address 00 20 af ee 11 11, IRQ 10.
+3c509.c:1.07 6/15/95 becker@cesdis.gsfc.nasa.gov
+```
+
+如果没有出现类似这样的消息，你的以太网卡可能未被 Linux 系统识别。如果你拥有一块通用以太网卡（如 NE2000 兼容卡），你应该收到一张包含 DOS 实用工具的光盘，你可以用它来配置该卡。尝试调整 IRQ 直到 Linux 识别你的卡（IRQ 9、10、12 通常是不错的选择）。
+
+**你的 DHCP 服务器支持 RFC 1541** 尝试通过输入 `dhcpd -r` 来运行 `dhcpd`。
+
+使用 `ifconfig` 检查你的网络接口是否已配置（等待几秒钟让配置过程完成；最初它会显示 Inet. addr=0.0.0.0）。
+
+如果这解决了你的问题，请在启动脚本中添加 “-r” 标志——即，将 `/sbin/dhcpd` 更改为 `/sbin/dhcpd -r`。
+
+**启动时我收到错误信息 "Using DHCP for eth0 ... failed"，但我的系统运行正常** 你很可能正在使用 Red Hat，并且没有仔细遵循说明。你在某个 `if` 语句中缺少了 `!`（感叹号）。参见“整合所有部分”最后一部分所需的脚本更改。
+
+#### 我的网络运行几分钟后停止响应
+
+有报道称 `gated`（网关守护进程）在 Linux 机器上会搞乱路由，从而导致上述问题。检查 `gated` 是否正在运行：
+
+```
+ps -auxww | grep gated
+```
+
+如果它在运行，尝试使用 Red Hat 的 RPM 管理器将其移除，或者移除 `/etc/rc.d` 中的相应条目。
+
+#### 我的以太网卡在启动时被识别，但我仍在日志中看到“NO DHCP OFFER”消息；我碰巧拥有一块 PCMCIA 以太网卡
+
+你需要确保网卡上的 10BaseT 端口（“电话”插头）已激活。验证的最好方法是在启动时检查你的网卡配置为何种连接器类型，例如，
+
+```
+eth0: 3c509 at 0x300 tag 1, 10baseT port, address 00 20 af ee 11 11, IRQ 10. 3c509.c:1.07 6/15/95 becker@cesdis.gsfc.nasa.gov
+```
+
+我收到过笔记本电脑用户遇到此类问题的报告，原因是 PCMCIA 实用工具（特别是 `ifport`）会将连接器类型设置为 10Base2（细缆）。你必须确保为你的连接使用 10BaseT。如果没有，请重新配置该卡并重启计算机。
+
+#### 我的 DHCP 客户端广播请求但无人响应（由 Peter Amstutz 贡献）
+
+在某些系统中，你需要将机器的某个主机名作为请求的一部分包含进去。使用 `dhcpcd` 时，可以通过 ‘`dhcpcd -h foohost`’ 来实现。所需的主机名很可能是你在网络上的账户用户名。
+
+#### 我已完成所有步骤，但我的机器仍无法连接
+
+电缆调制解调器通常会记忆你的以太网卡的地址，因此如果你连接新计算机或更换网卡，你需要以某种方式让电缆调制解调器识别新计算机/卡。通常你可以在计算机开机的情况下关闭调制解调器并重新启动它，或者你需要致电技术支持告诉他们你更换了计算机中的网卡。你有防火墙规则（`ipfwadm` 规则）禁止用于 DHCP 分发配置信息的 67/68 端口流量。请仔细检查你的防火墙规则。
+
+**我使用 MediaOne Express 服务但仍无法连接** 似乎 MediaOne 向 DHCP 添加了一些不应存在的内容。据说这已不再是问题，但如果你遇到中断，请检查这些事项。如果你（不幸）在机器上使用 Windows NT，如果你在事件查看器中查看，你将看到如下警告：
+
+> DHCP received an unknown option 067 of length 005. The raw option data is given below.
+>
+> 0000: 62 61 73 69 63 basic
+
+如果这是问题所在，请访问 `ftp://vanbuer.dns.org/pub/` 下载二进制文件或获取更改的源代码。
+
+##### DHCP 服务器设置
+
+本节专注于设置 DHCP 服务器。
+
+##### Unix 的 DHCP 服务器
+
+针对类 Unix 操作系统，有几种可用的 DHCP 服务器，包括商业版和免费版本。其中更受欢迎的免费 DHCP 服务器之一是 Paul Vixie/ISC 的 `dhcpd`。最新版本是 1.0（建议大多数用户使用），而 2.0 版本正在测试中。你可以从以下地址获取它们：
+
+```
+ftp://ftp.isc.org/isc/dhcp/
+```
+
+下载其中任意一个后，你需要将其解包。进入发行版目录并输入 `./configure` 后，配置设置将需要一些时间。完成后，输入
+
+```
+make
+```
+
+然后输入
+
+```
+make install
+```
+
+##### 网络配置
+
+安装完成后，输入 `ifconfig -a`。你应该看到类似以下内容：
+
+```
+eth0 Link encap:10Mbps Ethernet HWaddr 00:C0:4F:D3:C4:62
+inet addr:183.217.19.43 Bcast:183.217.19.255
+Mask:255.255.255.0
+UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+RX packets:2875542 errors:0 dropped:0 overruns:0
+TX packets:218647 errors:0 dropped:0 overruns:0
+Interrupt:11 Base address:0x210
+```
+
+如果未显示 MULTICAST，你应该重新配置内核并添加多播支持。在大多数系统上，你不需要这样做。
+
+下一步是为 255.255.255.255 添加路由。以下内容引自 `dhcpd` 的 README：
+
+> 为了使 `dhcpd` 能够与挑剔的 DHCP 客户端（例如，Windows 95）正确工作，它必须能够发送 IP 目的地址为 255.255.255.255 的数据包。不幸的是，Linux 坚持将 255.255.255.255 更改为本地子网广播地址（在此处为 192.5.5.223）。这导致了 DHCP 协议违规，虽然许多 DHCP 客户端不会注意到这个问题，但有些（例如，所有 Microsoft DHCP 客户端）会注意到。遇到此问题的客户端将表现为无法看到来自服务器的 DHCP-OFFER 消息。
+
+输入
+
+```
+route add -host 255.255.255.255 dev eth0
+```
+
+如果你收到如下消息
