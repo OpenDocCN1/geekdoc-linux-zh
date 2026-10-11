@@ -1067,6 +1067,7 @@
 +   [Linux 内核编程：字符、块、USB 及网络接口的内核架构与设备驱动开发](docs/linux-kernel-programming-developing-kernel-architecture-and-/README.md)
 +   [Linux 内核原理（第2版）](docs/linux-kernels-internals-2nd-edition/README.md)
 +   [Linux 内核模块编程指南](docs/linux-krn-mdl-prog-dg/README.md)
++   [Linux Lab：Linux 实用指南](docs/linux-lab-hands-on-linux/README.md)
 +   [Linux 实验室与开源技术](docs/linux-labs-and-open-source-technologies/README.md)
 +   [LINUX：轻松学习 Linux 操作系统 - Linux 初学者指南，学习 Linux 命令行、Linux Shell 脚本与 Linux 编程](docs/linux-learn-the-linux-operating-system-with-ease---the-linux/README.md)
 +   [Linux：掌握操作系统与命令行终极策略。提升计算机编程技能并开始编码](docs/linux-learn-the-ultimate-strategies-to-master-operating-syst/README.md)
