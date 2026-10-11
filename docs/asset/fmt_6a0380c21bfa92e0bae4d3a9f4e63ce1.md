@@ -1,0 +1,116 @@
+
+你可以使用这些格式从头创建操作和文件类型。但是，创建操作的最简单方法是使用 `CreateAction` 工具。`CreateAction` 位于应用程序管理器（Applications Manager）中的桌面应用程序（Desktop Applications）文件夹中，它会向你展示一个填空对话框，引导你创建包含操作定义的 `action.dt` 文件。然后你可以将此文件移动到适当的目录中，以便你希望该操作具有的影响范围：`system-wide` 影响使用 `/etc/dt/appconfig/types`；`individual users` 使用 `$HOME/.dt/types`。
+
+### 创建新图标和操作
+
+创建图标是一项具有挑战性的任务。我们可以使用 Desktop_Apps 中的图标编辑器（Icon Editor）创建新图标，或者找一个我们喜欢的图片并使用它。在引入图片时需要注意的一点是，为了在面板上正确显示，它的大小不得超过 32x32 像素，否则只显示图标的一部分。在图标编辑器中查看图片可以显示图片的大小。你可能想搜索应用程序目录以查找有用的图标，或者从互联网上下载一个。
+
+在整个示例中，我将使用随 HP-UX 一起提供的即时信息（Instant Information）软件。这是 CD 上的用户手册。其他应用程序软件也完全适用；只需确保你的路径与你使用的软件相对应。此外，我将使用一个虚构用户的家目录：`/home/admin1`。
+
+1. 从 Desktop_Apps（HP-UX）、Desktoptools（AIX）或 Solaris 上的 Desktop_Tools 中调用图标编辑器，这些都在应用程序管理器中。
+2. 选择 文件 -> 打开。
+3. 输入路径或文件夹名称：`/opt/dynatext/data/bitmaps`。
+4. 输入文件名称：`logoicon.bm`。
+5. 选择 打开。
+
+我们将看到图标，并且它确实为 32x32。现在我们需要将图标保存到我们自己的 .dt 目录中。
+
+6. 选择 文件 -> 另存为。
+7. 输入路径或文件夹名称：`$HOME/.dt/icons`。对于 admin1 用户，这将是 `/home/admin1/.dt/icons`。
+
+如果我们全局执行此任务，我们会将此放在 `/etc/.dt/app-config/types/C`。
+
+8. 保留文件名称不变。
+9. 保存。
+
+现在我们有图标了，我们需要创建一个操作文件和一个说明文件与之配套。
+
+1. **使用你喜欢的文本编辑器**，输入以下内容：
+
+```
+ ACTION instinfo 
+ {
+ LABEL instinfo 
+ TYPE COMMAND 
+ WINDOW_TYPE NO_STDIO 
+ EXEC_STRING /opt/dynatext/bin/dynatext 
+ DESCRIPTION This action starts Instant Information 
+ }
+```
+
+`LABEL` 是操作的名称，`TYPE` 是命令，`WINDOW_TYPE` 是 none（无标准输入/输出，即 `NO_STDIO`），因为该应用程序有自己的窗口；`EXEC_STRING` 是要执行的命令，而 `DESCRIPTION` 只是描述该操作的作用。确保 `NO_STDIO` 使用下划线而不是连字符，并且不要忘记最后的 `}`。我犯过这两个错误，然后花了大量时间试图弄清楚为什么操作看起来不存在，或者如果它出现了，为什么它不起作用。
+
+2. **将此文件保存为** `$HOME/.dt/types/instinfo.dt`。对于 admin1 用户，这将是 `/home/admin1/.dt/types/instinfo.dt`。如果是全局配置，我们将文件保存为 `/etc/dt/appconfig/types/C/instinfo.dt`。
+
+现在我们有一个操作了，我们需要创建一个说明文件。请注意，这是一个只包含这两行的新文件。此文件的内容无关紧要，但权限 *必须* 包含可执行权限。
+
+3. 再次，**使用你喜欢的编辑器**，输入：
+
+```
+ ACTION instinfo 
+ DESCRIPTION This action starts Instant Information 
+```
+
+4. **将此文件保存为** `$HOME/.dt/appmanager/instinfo`。对于 admin1 用户，这将是 `/home/admin1/.dt/appmanager/instinfo`。如果是全局配置，我们将文件保存为 `/etc/dt/appconfig/appmanager/instinfo`。
+
+5. 按以下方式更改权限以包含执行权限：
+
+```
+chmod 555 $HOME/.dt/appmanager/instinfo
+```
+
+现在是时候修改前面板以包含我们刚刚创建的图标和操作了。前面板文件 `dtwm.fp` 位于 `/usr/dt/appconfig/types/C` 目录中。由于我们不希望覆盖系统文件，我们需要将其本地复制，然后为我们自己修改它。
+
+1. 将此文件复制到 `/$HOME/.dt/types/dtwm.fp`（针对 AIX 和 HP-UX）以及 `/$HOME/.dt/types/fp-dynamic/dtwm.fp`（针对 Solaris）。对于 admin 用户，这将是：
+
+```
+cp /usr/dt/appconfig/types/C/dtwm.fp /home/admin1/.dt/types/fp-dynamic/dtwm.fp
+```
+
+或者对于 Solaris：
+
+```
+cp /usr/dt/appconfig/types/C/dtwm.fp /home/admin1/.dt/types/fp-dynamic/dtwm.fp
+```
+
+2. **使用你喜欢的编辑器**，修改本地的 `dtwm.fp` 文件。
+
+当我们查看该文件时，我们注意到它的顺序与前面板的显示顺序相同。时钟是文件中的第一个 `CONTROL`，也是前面板上的第一项。还注意到 `POSITION_HINTS` 是 1。日期是下一个，`POSITION_HINTS` 也是 2。我们要做的是将我们的新图标和操作放在 `POSITION_HINTS` 4，即 TextEditor `CONTROL` 之后。
+
+3. 向下移动，越过以 `]` 结尾的 `CONTROL TextEditor`，并在 `CONTROL Mail` 之前。此时，**请严格按照下方所示插入以下内容**。确保大写字母大写，小写字母不大写。
+
+```
+CONTROL Info
+{
+    TYPE            icon
+    CONTAINER_NAME  Top
+    CONTAINER_TYPE  BOX
+```
+
+```
+POSITION_HINTS  5
+ICON    logoicon.bm
+LABEL   Instant Info
+PUSH_ACTION    instinfo
+}
+```
+
+4. 现在请小心：这部分比较棘手。接下来的项目需要重新编号它们的 `POSITION_HINTS`。但我们只重新编号接下来的八个项目，从“Mail”开始，到“Trash”结束。这些项目将从 5 到 12 变为 6 到 13。
+
+5. 保存文件。
+
+现在，让我们重启 Workspace Manager。如果我们做的一切都是正确的，我们将拥有一个新图标，点击该图标将显示即时信息，如图 14-9 所示。
+
+6. 将鼠标放置在工作区的空白区域并按下鼠标右键。选择重启 Workspace Manager。
+
+![](img/eff8b9287a5f38c5adf538f24aacf29e_955_0.png)
+
+图 14-9 工作区菜单和新子面板及操作
+
+在创建操作时要记住几件事：首先也是最重要的是，确保 `PUSH_ACTION` 和文件名相同。这种相似性是它们彼此发现对方的方式。确保该操作文件以 `.dt` 结尾，并确保该描述文件具有可执行权限。如果其中任何一项出错，该操作要么不起作用，要么不会显示。
+
+为了避免大量输入，最简单的方法有时是复制一个现有的定义并将其插入到你希望新控件所在的位置，然后修改它。当你在控件定义列表中向下移动时，你实际上是在前面板从左向右移动（注意每个定义中的 `POSITION_HINTS` 值都在增加）。所以，如果你希望新控件位于前面板上日期的右侧，就在“date”下面的那一行插入控件，并在你的定义中添加一行 `POSITION_HINTS 3`；如果你希望新控件位于“date”的左侧，就在“date”上面的那一行插入控件，并将 `POSITION_HINTS` 设为 1。
+
+新的控件定义可以位于控件定义列表中的任何位置。`POSITION_HINTS` 行可以防止它意外被移动到新的位置。仍然建议复制一个现有定义以避免额外输入；这降低了输入错误的几率。并且别忘了包含大括号。
+
+### 使用不同的字体
