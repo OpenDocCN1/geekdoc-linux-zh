@@ -1,0 +1,165 @@
+
+使用 `rpm` 命令更新内核时，切不要使用 `-U` 选项进行更新。这背后的原因是更新选项在更新时会删除之前的内核，而 `-i` 选项会在旧内核旁边安装新内核。如果某些功能无法正常工作或出现错误，你还有一个旧内核可以回滚。
+
+你已收到警告！
+
+无论你使用哪种方法，当内核更新完成后，你应该验证 `/boot/grub.conf` 是否已更新并包含一个更新内核的条目（stanza），并且已设置为从该内核启动。这在通过包管理器更新内核时应该会自动发生；但是，我建议你始终验证这一点（否则，你的系统可能会启动异常）。
+
+由于 RHEL01 上的内核没有更改（因为它已经是最新版本），请查看你更新内核的 Client01 上的 `grub.conf` 文件：
+
+```
+# cat /boot/grub.conf
+# grub.conf 由 anaconda 生成
+
+# 注意，修改此文件后无需重新运行 grub
+# 注意：你有一个 /boot 分区。这意味着
+# 所有内核和 initrd 路径都是相对于 /boot/ 的，例如
+# root(hd0,0)
+```
+
+## 步骤 2. 使用 sysctl 命令更改选项：
+
+```
+# sysctl -w net.ipv4.ip_forward=1
+net.ipv4.ip_forward = 1
+```
+
+注意，参数、等号或值之间没有空格。
+
+验证值是否已更改：
+
+```
+# sysctl -a | grep ipv4.ip_forward
+net.ipv4.ip_forward = 1
+```
+
+你可以看到值确实已经更改了。由于你目前不应该改动系统设置，你可以将值改回或重启系统以恢复原始值。
+
+## 步骤 4. 将参数还原为其原始值：
+
+```
+# sysctl -w net.ipv4.ip_forward=0
+net.ipv4.ip_forward = 0
+```
+
+向 `/etc/sysctl.conf` 文件中添加选项的另一种方法是编译自定义内核。这将所有自定义参数永久地包含在内核中，这样它们就不需要在引导启动时自动设置。你还可以进行性能优化。编译内核不是一项简单的任务，也不是红帽考试的一部分。不过，如果你感兴趣，有一些优秀的书籍和在线文档可供参考。
+
+## 总结
+
+虽然自定义和编译自定义内核不太可能出现在红帽考试中，但你应该熟悉更新内核并确保系统在重启后能够正常运行。你还应该熟悉通过 `/proc/sys` 文件系统调优内核参数。如果你发现自己正在寻找更好的性能，或者想学习更多内核的高级用法，我建议你在实验系统上为自己编译一个内核。只需记住，这不是一项简单的任务，需要时间才能做对。
+
+## 复习习题
+
+- 1. 使用 `rpm` 更新内核时，更新 (`-u`) 选项和安装 (`-i`) 选项的区别是什么？
+
+- 2. 使用哪个目录表示由内核创建的虚拟文件系统？
+
+- 3. 使用哪个文件在系统启动期间维护内核的自定义参数？
+
+- 4. 在更新内核到新版本后，你必须采取哪项关键步骤？
+
+## 复习习题答案
+
+- 1. 你永远不应该使用 `-u` 选项，因为它在更新时会擦除之前的内核。如果你的系统无法正常启动，你将没有回退内核可用。
+
+- 2. `/proc` 目录 `getproc/sys` 目录实际上是你调优内核参数的地方。
+
+- 3. `/etc/sysctl.conf` 文件维护了在系统启动期间应应用的自定义内核参数列表。
+
+- 4. 你必须确保 `/boot/grub/grub.conf` 文件包含新更新内核的条目，以便能够启动。
+
+## 实验 10
+
+### 任务 1 – 更新内核
+
+- 步骤 1. 使用 `yum` 命令将 RHEL02 内核更新到最新版本。
+
+- 步骤 2. 使用 `yum` 命令将 Client01 内核更新到最新版本。
+
+当 RHEL02 和 Client01 都拥有最新的内核并能够在系统重启后正常运行时，任务完成。
+
+### 任务 2 – 内核调优
+
+- 步骤 1.
+
+  a. 输出 `/proc/sys/fs/file-max` 的内容并将大小增加 100。
+
+当所有参数更改都能通过验证并能在系统重启后保留时，任务完成。
+
+本章涵盖了以下主题：
+
+- 理解 SELinux——本部分涵盖了 SELinux 如何工作以及如何配置它。
+
+- SELinux 故障排除——本部分描述了如何排查 SELinux 故障。
+
+涵盖了以下 RHCSA 考试目标：
+
+- 为 SELinux 设置强制（enforcing）和允许（permissive）模式
+
+- 列出并识别 SELinux 和文件进程上下文
+
+- 恢复默认文件上下文
+
+- 使用 Boolean 设置修改系统 SELinux 设置
+
+- 诊断并解决常规 SELinux 策略违反
+
+# 第 11 章
+
+## SELinux
+
+增强型 Linux (`SELinux`) 是 Linux 系统的另一层安全防护。它由国家安全局 (`NSA`) 开发，为不同的文件、应用程序、进程等提供了保护。许多用户刚开始尝试关闭 SELinux，因为它是一个复杂的系统，需要花费大量的时间和精力才能适应。然而，与其关闭它，你可以在“允许（permissive）”模式下使用 SELinux，这允许一切正常运行，但在操作或命令本会被拦截时记录警告。在此模式下运行有助于故障排除并理解 SELinux 的工作原理。但是，对于红帽考试，你需要知道如何在启用和强制模式下与 SELinux 协作。
+
+### 理解 SELinux
+
+如前所述，SELinux 可能非常复杂。让我们从理解 SELinux 的一些基础知识开始。它可以在三种不同的模式下运行：
+
+- `disabled`（禁用）：SELinux 已关闭且不限制任何内容。
+
+- `permissive`（允许）：SELinux 已开启，但仅在操作通常会被拦截时才记录警告。
+
+- `enforcing`（强制）：SELinux 已开启，并阻止与服务相关的操作。
+
+除了这三种模式外，你还可以使用许多命令来管理 SELinux：
+
+- `status` 显示 SELinux 的当前状态
+
+- `getenforce` 显示 SELinux 的强制状态
+
+- `setenforce` 更改 SELinux 的强制状态
+
+- `getsebool` 返回服务选项的 Boolean 值
+
+- `setsebool` 设置服务选项的 Boolean 值
+
+- `chcon` 更改文件、目录或服务的上下文
+
+- `restorecon` 重置对象的上下文
+
+278 红帽（Red Hat®）实践指南：RHCSA® 和 RHCE® 认证指南与实验手册
+
+在开始使用命令之前，你应该查看 SELinux 的更详细细分。你系统上的每个文件、目录和服务每个都有一个上下文，用于阻止或允许某些操作（见图 11-1）。SELinux 使用这些上下文配合 Boolean 值来执行某些操作或服务。
+
+```
+travel -Z /home/user
+owner -R user:group unconfined_u:user_home_t /home/user/Documents
+dwxr-xr-x user:group unconfined_u:user_home_t /home/user/Downloads
+rw-r--r user:group unconfined_u:user_home_t /home/user/Desktop
+dwxr-xr-x user:group unconfined_u:user_home_t /home/user/Music
+rw-r--r user:group unconfined_u:user_home_t /home/user/Pictures
+dwxr-xr-x user:group unconfined_u:user_home_t /home/user
+rw-r--r user:group unconfined_u:user_home_t /home/user
+```
+
+在你开始使用命令之前，你应该查看 SELinux 的进一步细分。你系统上的每个文件、目录和服务都有一个上下文，用于阻止或允许某些操作（见图 11-1）。SELinux 使用这些上下文配合 Boolean 值来执行某些操作或服务。
+
+```
+travel -Z /home/user
+owner -R user:group unconfined_u:user_home_t /home/user/Documents
+dwxr-xr-x user:group unconfined_u:user_home_t /home/user/Downloads
+rw-r--r user:group unconfined_u:user_home_t /home/user/Desktop
+dwxr-xr-x user:group unconfined_u:user_home_t /home/user/Music
+rw-r--r user:group unconfined_u:user_home_t /home/user/Pictures
+dwxr-xr-x user:group unconfined_u:user_home_t /home/user
+rw-r--r user:group unconfined_u:user_home_t /home/user
+```
