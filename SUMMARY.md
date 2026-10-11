@@ -885,6 +885,7 @@
 +   [Linux 命令示例：快速学习 Linux 命令的实用指南](docs/linux-commands-by-example-a-straight-and-practical-guide-to-/README.md)
 +   [Linux 命令、C、C++、Java 和 Python 初学者练习指南](docs/linux-commands-c-c-java-and-python-exercises-for-beginners/README.md)
 +   [Linux 命令：Linux 初学者指南，学习 Linux 基础与命令行 (1 小时上手)](docs/linux-commands-linux-for-beginners-to-learn-linux-basics-and/README.md)
++   [Linux 命令 专业人士笔记](docs/linux-commands-notes-for-professionals-book/README.md)
 +   [系统管理员 Linux 指南](docs/linux-companion-for-system-administrators-jochen-hein/README.md)
 +   [Linux 完全指南](docs/linux-complete/README.md)
 +   [Linux 备份与恢复指南](docs/linux-complete-backup-and-recovery-howto/README.md)

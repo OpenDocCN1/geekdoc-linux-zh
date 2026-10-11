@@ -1,0 +1,278 @@
+
+## 使用 `ifconfig` 工具进行静态配置（临时更改）
+
+可以按照以下方式使用 `ifconfig` 工具向接口添加静态 IP 地址：
+
+```bash
+$ ifconfig <interface> <ip-address>/<mask> up
+```
+
+示例：
+
+```bash
+$ ifconfig eth0 10.10.50.100/16 up
+```
+
+## 第 18 章：Midnight Commander
+
+Midnight Commander 或 mc 是一个控制台文件管理器。本章包括对其功能的描述以及如何使用它发挥其全部潜力的示例和技巧。
+
+### 第 18.1 节：Midnight Commander 浏览模式下的功能键
+
+以下列出了在 Midnight Commander 文件系统浏览模式下，通过键盘上的功能键触发的操作列表。
+
+- **F1** 显示帮助
+- **F2** 打开用户菜单
+- **F3** 显示所选文件的内容
+- **F4** 在内部文件编辑器中打开所选文件
+- **F5** 将所选文件复制到第二个面板中打开的目录
+- **F6** 将所选文件移动到第二个面板中打开的目录
+- **F7** 在当前面板中打开的目录下创建新目录
+- **F8** 删除所选文件或目录
+- **F9** 聚焦到屏幕顶部的主菜单
+- **F10** 退出 mc
+
+### 第 18.2 节：Midnight Commander 文件编辑模式下的功能键
+
+Midnight Commander 内置了一个编辑器，当在浏览模式下将光标移至目标文件并按 F4 功能键时启动。也可以通过执行以下命令以独立模式调用：
+
+```bash
+mcedit <filename>
+```
+
+以下列出了在编辑模式下可以触发的操作列表。
+
+- **F1** 显示帮助
+- **F2** 保存当前文件
+- **F3** 标记文本选择的起始位置。将光标向任意方向移动以进行选择。第二次按下标记选择的结束位置。
+- **F4** 调出文本搜索/替换对话框
+- **F5** 将所选文本复制到光标位置（复制/粘贴）
+- **F6** 将所选文本移动到光标位置（剪切/粘贴）
+- **F7** 调出文本搜索对话框
+- **F8** 删除所选文本
+- **F9** 聚焦到屏幕顶部的主菜单
+- **F10** 退出编辑器
+
+## 第 19 章：更改根目录 (chroot)
+
+更改根目录 (chroot) 是一种更改当前运行进程及其子进程的表面根目录的操作。在这样修改后的环境中运行的程序无法访问该环境目录树之外的文件和命令。
+
+### 第 19.1 节：要求
+
+- root 权限
+- 另一个可用的 Linux 环境，例如 Live CD 引导或现有的发行版
+- `chroot` 源和目标环境架构匹配（使用 `uname -m` 检查当前环境架构）
+- 在 `chroot` 环境中可能需要加载的内核模块必须已加载（例如，使用 `modprobe`）
+
+### 第 19.2 节：在目录中手动更改根目录
+
+1. 确保您满足了所有要求，参见“要求”部分
+
+2. 挂载临时 API 文件系统：
+
+   ```bash
+   cd /location/of/new/root
+   mount -t proc proc proc/
+   mount --rbind /sys sys/
+   mount --rbind /dev dev/
+   mount --rbind /run run/ (可选)
+   ```
+
+3. 如果您需要在 chroot 环境中使用互联网连接，请复制 DNS 详细信息：
+
+   ```bash
+   cp /etc/resolv.conf etc/resolv.conf
+   ```
+
+4. 更改根目录到 /location/of/new/root，指定 shell（在此示例中为 /bin/bash）：
+
+   ```bash
+   chroot /location/of/new/root /bin/bash
+   ```
+
+5. 在 chroot 之后，可能需要加载本地 bash 配置：
+
+   ```bash
+   source /etc/profile
+   source ~/.bashrc
+   ```
+
+6. 可选地，创建一个独特的提示符以能够区分您的 chroot 环境：
+
+   ```bash
+   export PS1="(chroot) $PS1"
+   ```
+
+7. 完成 chroot 操作后，您可以通过以下方式退出：
+
+   ```bash
+   exit
+   ```
+
+8. 卸载临时文件系统：
+
+   ```bash
+   cd /
+   umount --recursive /location/of/new/root
+   ```
+
+### 第 19.3 节：使用 chroot 的原因
+
+更改根目录通常用于在无法引导和/或登录的系统上进行系统维护。
+
+常见示例包括：
+
+- 重新安装引导加载程序
+- 重建 initramfs 镜像
+- 升级或降级软件包
+- 重置被遗忘的密码
+- 在干净的根环境中构建软件
+
+## 第 20 章：包管理器
+
+### 第 20.1 节：如何使用 apt 包管理器更新软件包
+
+高级包工具，俗称 'apt' 包管理器，可以处理 Debian、Slackware 和其他 Linux 发行版上软件的安装和移除。以下是一些简单的使用示例：
+
+**update**
+
+此选项获取并扫描 Packages.gz 文件，以便获取新包和更新包的信息。为此，输入以下命令：
+
+```bash
+sudo apt-get update
+```
+
+**upgrade**
+
+此选项用于安装系统当前安装的所有软件包的最新版本。获取并升级有新版本可用的当前安装软件包；在任何情况下，当前安装的软件包都不会被移除，或者未安装的软件包不会被获取并安装。要升级，输入以下命令：
+
+```bash
+sudo apt-get upgrade
+```
+
+**dist-upgrade**
+
+除了执行升级功能外，dist-upgrade 还会智能地处理新版本软件包的依赖关系变化。如果有必要，它会尝试升级最重要的软件包，而牺牲不那么重要的软件包。为此，输入以下命令：
+
+```bash
+sudo apt-get dist-upgrade
+```
+
+### 第 20.2 节：如何使用 pacman 包管理器安装软件包
+
+要在数据库中搜索软件包，同时搜索软件包的名称和描述：
+
+```bash
+pacman -Ss string1 string2 …
+```
+
+要安装单个软件包或软件包列表（包括依赖项），发出以下命令：
+
+```bash
+sudo pacman -S package_name1 package_name2 …
+```
+
+*source*
+
+### 第 20.3 节：如何使用 pacman 包管理器更新软件包
+
+要更新特定程序：
+
+```bash
+sudo pacman -S <programName>
+```
+
+要更新整个系统：
+
+```bash
+sudo pacman -Sy
+```
+
+### 第 20.4 节：如何使用 yum 更新软件包
+
+Yellowdog Updater, Modified，Yellow Dog Linux 最后留下的遗迹之一，是 Red Hat、Fedora 和 CentOS 系统及其衍生版本使用的包管理器。它可以处理这些 Linux 发行版中打包为 rpms 的软件的安装和移除。以下是一些简单的使用示例：
+
+#### search
+
+此命令将尝试在配置的软件库中查找符合给定搜索标准的软件包，并显示找到的匹配项的名称/版本/库位置。要使用它，输入以下命令：
+
+```bash
+yum search <queryString>
+```
+
+#### install
+
+此命令将尝试从配置的软件库中查找并安装指定的软件，递归地查找并安装所需的任何先决条件软件。要使用它，输入以下命令：
+
+```bash
+sudo yum install <packageName>
+```
+
+#### update
+
+此选项用于安装系统当前安装的所有软件包的最新版本。获取并升级有新版本可用的当前安装软件包；必要时也会获取并安装新的先决条件，并移除被替换或过时的软件包。要升级，输入以下命令：
+
+```bash
+sudo yum update
+```
+
+与 apt 不同，大多数 yum 命令如果最近没有进行库元数据检查（或如果强制进行），也会自动检查库元数据的更新，并获取和扫描更新后的元数据，以便在请求操作执行之前，关于新软件和更新软件的信息可用。
+
+## 第 21 章：编译 Linux 内核
+
+### 第 21.1 节：在 Ubuntu 上编译 Linux 内核
+
+> **警告：** 请确保您至少有 15 GB 的可用磁盘空间。
+
+在 Ubuntu >=13.04 上编译
+
+选项 A) 使用 Git
+
+如果您希望保持与最新 Ubuntu 内核源代码同步，请使用 git。详细指令可以在内核 Git 指南中找到。git 仓库不包含必要的控制文件，因此您必须通过以下命令构建它们：
+
+```bash
+fakeroot debian/rules clean
+```
+
+选项 B) 下载源代码存档
+
+下载源代码存档 - 这是适用于希望使用额外补丁重新构建标准 Ubuntu 软件包的用户。使用以下命令安装构建依赖项并提取源代码（到当前目录）：
+
+1. 安装以下软件包：
+
+```bash
+sudo apt-get build-dep linux-image-$(uname -r)
+```
+
+选项 C) 下载源代码包并构建
+
+这是适用于希望修改或尝试 Ubuntu 打补丁的内核源代码的用户。
+
+1. 从 kernel.org 获取最新的内核源代码。
+
+2. 将存档解压到目录并 cd 进入该目录：
+
+   ```bash
+   tar xf linux-*.tar.xz
+   cd linux-*
+   ```
+
+3. 构建 ncurses 配置界面：
+
+   ```bash
+   make menuconfig
+   ```
+
+4. 要接受默认配置，按 `→` 高亮显示 `< Exit >`，然后按 `Return`。
+
+5. 再次按 `Return` 保存配置。
+
+6. 使用 make 构建内核：
+
+   ```bash
+   make
+   ```
+
+请注意，您可以使用 -j 标志并行编译文件并利用多核优势。
+
+压缩的内核镜像可以在 arch/[arch]/boot/bzImage 中找到，其中 [arch] 等于 `uname -a`。
