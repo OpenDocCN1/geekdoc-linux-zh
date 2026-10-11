@@ -1271,6 +1271,7 @@
 +   [Linux 揭秘：从新手到大师](docs/linux-unveiled-from-novice-to-guru/README.md)
 +   [Linux USA 02.2023](docs/linux-usa-022023/README.md)
 +   [Linux 用户与开发者 130 - 终极发行版 2013 130](docs/linux-user-developer-130---ultimate-distros-2013-130/README.md)
++   [Linux 用户与开发者 131：树莓派遇到了对手吗？](docs/linux-user-developer-131---has-the-raspberry-pi-met-its-matc/README.md)
 +   [Linux User & Developer 132 - 构建一个树莓派机器人指南 132](docs/linux-user-developer-132---build-a-raspberry-pi-robot-132/README.md)
 +   [Linux User & Developer 133 - 加入 Ubuntu 移动革命 133](docs/linux-user-developer-133---join-the-ubuntu-mobile-revolution/README.md)
 +   [Linux 用户与开发者 134 - 树莓派：10 个实用项目](docs/linux-user-developer-134---raspberry-pi-10-practical-project/README.md)

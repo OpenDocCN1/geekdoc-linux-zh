@@ -1,0 +1,25 @@
+# Opinion
+The free software column
+OPEN SOURCE
+
+# OPEN SOURCE ROBOTICS
+
+# Linux is the platform for robotics
+
+Linux is increasingly being used for cutting-edge robotics — opening up the field to anyone interested in learning more
+
+![](bbox=[0.15, 0.36, 0.32, 0.52])
+
+Alan Broun is currently studying for a PhD at the Bristol Robotics Laboratory. He is also the managing director of Dawn Robotics Ltd — www.dawnrobotics.co.uk
+
+Robotics is a fascinating subject. It links computers to the physical world, allowing them to move around, sense their environment, and to interact with it. Building your own robot, however, has traditionally required that you spend a huge amount of time and energy to get even the most basic of robotic systems up and running. You need mechanical engineering skills to build the chassis or body, electronic engineering skills to wire up the motors and the sensors, and programming skills to animate the robot, to control its body to get it to do what you want. These barriers to entry mean that people entering into the field of robotics — either in search of a stimulating pastime, or perhaps as part of more formal research — can quickly be overwhelmed by the sheer amount of work required. The initial dreams of building a robot to fetch your beer or to walk your dog get pushed further and further back, as more and more time is sucked up just getting the basics working.
+
+Things are changing, however, and the barriers to entry are falling. The relentless march of progress in consumer goods means that a lot of commonly used robotics hardware — such as cameras, accelerometers and communication devices — are now both much cheaper and much smaller than they were ten years ago. Actually making use of electronic sensors, and motors, is also a lot easier now, as platforms like the Arduino make connecting electronic components to your computer, and controlling them, both quick and simple. On top of all this, small, powerful computers such as the Raspberry Pi and the BeagleBoard, to name but two, mean that you can now cram much more processing power into your robots at an affordable price.
+
+In order to put this hardware to good use, however, you need software, and as luck would have it, Linux is the platform where the most exciting developments in robotic software are taking place. Writing the software for modern robots can be one of the most involved and complicated parts of the process. Software is needed for controlling motors, reading values from sensors and, possibly most importantly, to provide high-level control and AI. A number of distributed software environments have been produced to try to ease the development of robotic software. But the Robot Operating System (ROS) produced by a company called Willow Garage in Silicon Valley is arguably one of the most successful. ROS is not actually an operating system, but rather a BSD-licensed open source software framework which runs on Linux. It allows interfaces to be defined for common bits of robotic software, such as the drivers for cameras and motors, and it allows this software to be run as a large number of separate processes called 'nodes' — either all on one machine, or transparently distributed over a network of machines.
+
+Over the last five years, ROS has dramatically eased the process of writing robotic software. Now you can download a large number of pre-compiled packages to quickly allow you to hook up common sensors such as cameras or Microsoft's Kinect. High-level services such as inverse kinematics, map building and speech recognition are easy to plug in, and ROS also provides a great selection of visualisation tools so that you can see what's going on from your robot's point of view. When you need to write your own software, you can do it in the language you choose. Low-level motor drivers can be written in C and then communicate over ROS's network layer with high-level control processes, written in a language such as Python or Java.
+
+Not having access to robotic hardware is no bar to entry, as ROS also provides support for simulators such as Gazebo. ROS has been embraced by the robotics research community and so lots of simulations of cutting-edge robots are now provided by the teams who built them. So, for absolutely no cost at all, you can get access to Willow Garage's PR2 robot, NASA's Robonaut and Boston Dynamics' Atlas robot. This last robot is currently being used in the DARPA Robotics Challenge, which seeks to get a humanoid robot to drive a car and move around a disaster area, so it's ambitious stuff.
+
+Now is an exciting time in robotics, and Linux is the platform on which some of the coolest stuff is happening. If you haven't tried it yet, then I would urge you to download and have a play with ROS, start building yourself a robot and join in all the fun!

@@ -1,0 +1,162 @@
+
+
+## 教程
+
+### 使用 Unison 同步你的文件
+
+Unison 用于在计算机之间同步文件——在这里我们使用的是该工具的命令行版本。此行指示 Unison 目前没有任何需要同步的内容，因为没有任何文件发生更改。此错误消息显示存在一个需要手动删除的锁文件。
+
+![](img/dd9251551a61a36067892b1cc68615b0_41_0.png)
+
+### 使用 Unison 同步你的文件
+
+学习如何使用 Unison 命令行工具快速且可靠地在计算机之间同步文件。
+
+网络连接中断，因此 Unison 无法同步文件。
+
+### 顾问
+
+Mihalis Tsoukalos 拥有超过 15 年的 UNIX 系统管理和编程经验，并自 1993 年起开始使用 Linux。他还精通 Oracle 数据库管理、Cisco、iOS、Google 和 DOS 编程。他总是在学习新事物。
+
+### 资源
+
+- Unison：[www.cs.upenn.edu/~bcpierce/unison](http://www.cs.upenn.edu/~bcpierce/unison)
+- 两台联网的 UNIX 机器
+
+Unison 是一款开源的文件同步工具，支持文本和二进制文件。它也有图形用户界面，但这里我们只关注命令行版本，因为它更快捷，并能干净利落地完成任务。当你使用多台计算机并且需要在这几台计算机之间进行同步时，Unison 的真正能力才会显现出来。
+
+Benjamin C. Pierce 领导了宾夕法尼亚大学 Unison 的创建工作，它最初是一个研究项目。它可以通过 SSH 服务使用，并且在 UNIX（如 Linux、Mac OS X 等）和 Windows 机器上同样运行良好。
+
+显然，Unison 受到了 rsync 实用程序的启发。Unison 与 rsync 的区别在于，后者是一个镜像工具，需要提前知道要保留的文件版本位于何处；而 Unison 是一个同步工具，它识别自上次同步过程以来已更改的文件，并决定如何传播这些更改。简而言之，它很智能。
+
+## 01 安装 Unison
+
+大多数 Linux 发行版都已将 Unison 打包为可直接安装的程序，因此你无需自行编译。截稿时，Unison 的当前稳定版本为 2.49.102。请注意，参与同步过程的每台机器都必须安装 Unison 的命令行版本。此外，该 Unison 副本应位于默认 `PATH`  shell 变量中的其中一个目录内。假设你正在使用基于 Debian 的系统，只需输入：
+
+```
+sudo apt-get install unison
+```
+
+要查看你正在使用的 Unison 版本，只需输入以下命令：
+
+```
+unison -version
+```
+
+![](img/dd9251551a61a36067892b1cc68615b0_42_0.png)
+
+## 02 Unison 配置文件
+
+Unison 可以在不使用任何配置文件（profile）的情况下从命令行运行，但使用配置文件可以大大简化其使用，因为拥有配置文件并不会阻止你添加额外的命令行选项（尽管本文不会过多讨论此类选项）。
+
+在罕见的情况下，如果你在使用 Unison 时遇到麻烦，你可以使用 `-debug all` 命令行选项运行它，以便更好地跟踪和解决错误。
+
+![](img/dd9251551a61a36067892b1cc68615b0_42_2.png)
+
+## 03 同步同一台计算机上的文件
+
+虽然 Unison 最初是专为同步位于不同机器上的文件而开发的，但你可以通过以下两种方法之一来同步位于同一台计算机上的文件：
+
+- 使用 localhost 作为远程机器名称。
+- 为两个 `root =` 行仅使用本地目录路径。
+
+你的顾问更喜欢第二种方式，因为它不需要 SSH 服务器处于运行状态。Unison 配置文件名为 localFiles.prf，位于 ~/.unison 目录内。以下两行用于在同一台机器上工作，因为它们不包含远程机器：
+
+```
+root = /Users/mtsouk
+root = /tmp
+```
+
+## 04 与另一台计算机同步文件
+
+假设有一个名为 articles.prf 的配置文件，位于 ~/.unison 目录内，你可以通过执行以下命令告诉 Unison 使用它：
+
+```
+$ unison articles
+```
+
+远程机器声明以 `root = ssh://` 开头。有极少数情况——通常是用户在同步前在两台计算机上都修改了文件——Unison 无法确定文件是在本地还是远程服务器上更改的。在这种情况下，Unison 会礼貌地请求你的帮助，以免错误地使用错误的版本继续操作。
+
+![](img/dd9251551a61a36067892b1cc68615b0_42_3.png)
+
+## 05 使用简单的配置文件运行 Unison
+
+关于 Unison 配置文件，你需要知道一些基本事项：
+
+- 默认备份级别为 2，这控制保留每个文件多少个先前版本（不包括当前文件版本）。因此，默认备份级别会保留两个文件备份副本。用于设置备份级别的参数称为 maxbackups。
+- 通过在 Unison 配置文件内不添加任何备份选项，你可以告诉 Unison 不保留文件备份。
+- Unison 配置文件支持 Unicode 字符。
+- 日志文件选项指示 Unison 在 .unison 目录内保留名为 unison.log 的日志文件。
+- 有时，网络问题会禁止文件同步，但 Unison 的错误消息指明了问题所在：
+
+```
+$ unison articles
+Contacting server ... 
+Connection closed by 109.x.x.y.y.zzz.
+Fatal error: Lost connection with the server
+```
+
+## 06 解释配置文件
+
+以 `#` 开头的行表示注释，不会进一步处理。必须有两行以 `root =` 开头。它们声明参与同步过程的机器（其中一台始终是本地计算机）以及被视为每台机器根目录的目录。在这些重要声明之后，列出实际要同步的目录。在此示例中，我们只有一个目录（一个 `path =` 行）。其完整路径在本地机器上是 /Users/mtsouk/docs/article/working，在名为 linode 的机器（/etc/hosts 中的 IP 别名）上是 /home/mtsouk/docs/article/working。你可以拥有尽可能多的 `path` 条目。除了匹配 `ignore` 选项的文件外，所有文件都会同步。你也可以拥有尽可能多的 `ignore =` 行，并可以在其中使用正则表达式。备份选项指示 Unison 保留所有文件的备份。
+
+```
+# Mihalis Tsoukalos
+#
+# Friday 05 July 2013
+#
+root = /Users/mtsouk
+root = ssh://linode/home/mtsouk
+
+# Paths to synchronize
+path = docs/article/working
+
+# Log file
+logfile = /Users/mtsouk/.unison/unison.log
+
+# Backup files
+backup = Name *
+ignore = Name *.DS_Store
+ignore = Name .DS_Store
+```
+
+## 07 .unison 目录
+
+Unison 的大部分维护工作都在 .unison 目录内进行，该目录位于用户的家目录中。Unison 在那里保留以下数据：
+
+- 它的配置文件，包括名为 default.prf 的默认配置。
+- 它的备份文件，如果你决定使用集中式备份。
+- 每个已使用配置的状态文件。
+- Unison 日志文件，如果你指示它保留日志。你可以将其放在任何地方，但将其放在那里非常方便。
+- Unison 在同步过程中在那里创建锁文件，并在完成后删除它们。
+- 注意：不建议同步整个 .unison 目录。仅同步配置文件是可以的。
+
+## 08 更高级的 Unison 配置文件
+
+advanced.prf 文件的内容如下：
+
+```
+root = /Users/mtsouk
+root = ssh://linode/home/mtsouk
+times = true
+batch = true
+
+# Log file
+logfile = /Users/mtsouk/.unison/unison.log
+
+# Paths to synchronize
+path = code/C
+
+# Backup files
+backup = Name *
+backuplocation = central
+maxbackups = 3
+ignore = Name {Thumbs.db}
+ignore = Name {.DS_Store}
+ignore = Path {Samples.lnk}
+```
+
+![](img/dd9251551a61a36067892b1cc68615b0_43_0.png)
+
+![](img/dd9251551a61a36067892b1cc68615b0_43_1.png)
+
