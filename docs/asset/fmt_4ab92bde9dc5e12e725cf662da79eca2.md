@@ -1,0 +1,134 @@
+
+```
+# default: off
+# description:
+# The vsftpd FTP server serves FTP connections. It uses
+# normal, unencrypted usernames and passwords for authentication.
+# vsftpd is designed to be secure.
+
+service ftp
+{
+    socket_type       = stream
+    protocol          = ftp
+    wait              = no
+    user              = root
+    server            = /usr/sbin/vsftpd
+}
+```
+
+文件名（在本例中为 `vsftpd`）可以是任意值；重要的是文件中出现在 `service` 关键字旁边的服务名称。在这种情况下，`service ftp` 这一行告诉 `xinetd` 服务的名称。`xinetd` 使用此名称从 `/etc/services` 文件中查找端口号。
+
+`/etc/xinetd.d/vsftpd` 中的属性（由花括号 `{…}` 包围）具有以下含义：
+
+- `socket_type` 属性设置为 `stream`，这告诉 `xinetd` FTP 服务使用面向连接的 TCP 套接字与客户端通信。对于使用无连接 UDP 套接字的服务，此属性设置为 `dgram`。
+- `wait` 属性设置为 `no`，这告诉 `xinetd` 为每个请求启动一个新的服务器。如果此属性设置为 `yes`，则 `xinetd` 会等待服务器退出，然后再再次启动服务器。
+- `user` 属性提供了 `xinetd` 用于运行服务器的用户 ID。在这种情况下，服务器以 `root` 身份运行 TELNET 服务器。
+- `server` 属性指定了为此服务运行的程序。在这种情况下，`xinetd` 运行 `/usr/sbin/vsftpd` 程序来提供 FTP 服务。
+
+浏览 Linux 系统 `/etc/xinetd.d` 目录中的文件，可以了解 `xinetd` 设置为启动的服务类型。如果你想关闭任何服务（许多服务默认已禁用），你可以通过编辑该服务的配置文件，并在包围所有属性的花括号内添加以下行来实现：
+
+```
+disable       = yes
+```
+
+当你更改 `xinetd` 配置文件时，必须通过输入以下命令重启 `xinetd` 服务器：
+
+```
+/etc/init.d/xinetd restart
+```
+
+**注意：** 你通常可以配置服务在 `xinetd` 下运行或作为独立服务运行。例如，SUSE 在 `xinetd` 的控制下启动 Very Secure FTP 服务器（`vsftpd`）。然而，Debian 和 Fedora Core 将 `vsftpd` 作为独立服务器运行。
+
+## 运行独立服务器
+
+通过 `inetd` 或 `xinetd` 启动服务器是一种明智的方法，但如果服务需要频繁启动，这种方法效率并不高。如果 Web 服务器由 `inetd` 或 `xinetd` 控制，就会出现这样的情况：每当用户点击网页上的链接时，都会收到一个 Web 服务请求，导致服务器频繁启动。对于此类高需求服务，最好以独立方式启动服务器。在独立模式下，服务器可以作为 *守护进程* 运行——这是一个持续运行且永不终止的进程。这意味着服务器监听指定端口，每当有请求到达时，服务器通过复制自身来处理请求。这样，只要机器在运行，服务器就保持运行状态——至少在理论上如此。更高效的策略（常用于 Web 服务器）是运行服务器的多个副本，让每个副本处理部分传入请求。
+
+你可以轻松配置 Linux 系统以自动启动各种独立服务器。本节将向你展示如何操作。
+
+### 手动启动和停止服务器
+
+要启动未运行的服务，请使用 `server` 命令。例如，如果 Web 服务器（在 Fedora Core 中称为 `httpd`）未运行，你可以通过运行以下命令的特殊 Shell 脚本来启动它：
+
+```
+/etc/init.d/httpd start
+```
+
+该命令运行 `/etc/init.d/httpd` 脚本，并将 `start` 作为参数。如果 `httpd` 服务器已经运行且你想停止它，请以 `stop` 为参数运行相同命令，如下所示：
+
+```
+/etc/init.d/httpd stop
+```
+
+若要停止并重新启动服务器，只需使用 `restart` 作为参数：
+
+```
+/etc/init.d/httpd restart
+```
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_601_0.png)
+
+在 Debian、MEPIS、Ubuntu 和 SUSE 中，Web 服务器程序称为 `apache2`，请输入 `/etc/init.d/apache2 start` 来启动 Web 服务器。在 Knoppix 和 Xandros 中，请输入 `/etc/init.d/apache start`。使用相同命令并附加参数 `stop` 或 `restart` 来停止或重新启动 Web 服务器。
+
+你可以启动和停止哪些服务？答案在 `/etc/init.d` 目录的文件中。要查看它们，请输入以下命令：
+
+```
+ls /etc/init.d
+```
+
+该命令响应中列出的所有文件都是你的 Linux 系统上安装的服务——你可以按需启动和停止它们。通常在 `/etc/init.d` 目录中可以看到 65 到 70 个列出的服务。
+
+### 在启动时自动启动服务器
+
+你可以使用 `/etc/init.d` 目录中的脚本手动启动、停止和重启服务器，但你希望某些服务在 Linux 系统启动时立即运行。你可以使用图形化服务器配置工具或命令来配置服务器在启动时自动启动。
+
+![](img/11709a8f88c8cd03868a929dc94c0e2b_601_1.png)
+
+配置服务自动启动的命令取决于发行版。在 Debian、MEPIS、Knoppix、Ubuntu 和 Xandros 中，使用 `update-rc.d` 命令。在 Fedora Core 和 SUSE 中，使用 `chkconfig` 命令。以下各节将解释这两个命令。
+
+#### 在 Fedora Core 和 SUSE 中使用 chkconfig 命令
+
+`chkconfig` 程序是 Fedora Core 和 SUSE 中用于检查和更新 Linux 中服务器当前设置的命令行工具。各种服务器组合被设置为在不同的运行级别自动启动。每个 *运行级别* 代表一种系统配置，其中运行一组选定的进程。你通常关注运行级别 3 和 5，因为运行级别 3 用于文本模式登录，而运行级别 5 用于通过图形界面登录。
+
+`chkconfig` 命令使用简单。例如，假设你想在运行级别 3 和 5 自动启动 `named` 服务器。你只需以 `root` 身份登录并在 Shell 提示符下输入以下命令：
+
+```
+chkconfig --level 35 named on
+```
+
+要查看 `named` 服务器的状态，请输入以下命令：
+
+```
+chkconfig --list named
+```
+
+你会看到类似以下的一行输出：
+
+```
+named	0:off	1:off	2:off	3:on	4:off	5:on	6:off
+```
+
+输出显示了 named 服务器在运行级别 0 到 6 的状态。如你所见，named 设置为在运行级别 3 和 5 运行。
+
+如果你想关闭 named，可以使用此命令：
+
+```
+chkconfig --level 35 named off
+```
+
+你可以使用 chkconfig 查看所有服务的状态，包括通过 xinetd 启动的服务。例如，你可以通过输入以下命令查看所有服务的状态：
+
+```
+chkconfig --list | more
+```
+
+输出显示了每个服务在运行级别 0 到 6 的状态。对于每个运行级别，服务要么开启要么关闭。在列表的末尾，chkconfig 显示由 xinetd 控制的服务列表。每个基于 xinetd 的服务也根据 xinetd 是否配置为启动该服务而标记为开启或关闭。
+
+#### 在 Debian、Knoppix、MEPIS、Ubuntu 和 Xandros 中使用 update-rc.d 命令
+
+在 Debian、Knoppix、MEPIS、Ubuntu 和 Xandros 中，你可以使用 `update-rc.d` 命令来设置应在系统启动到特定启动级别时启动的服务。最简单的设置方式是使用此形式命令中的 defaults 选项：
+
+```
+update-rc.d service defaults
+```
+
+其中 *service* 是 `/etc/init.d` 目录中启动和停止服务的脚本文件的名称，除此之外还有其它功能。
