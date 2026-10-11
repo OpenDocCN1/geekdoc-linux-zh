@@ -1,0 +1,24 @@
+
+`http://www.tld.org/LDP/Linux-Dictionary/html/index.html`
+
+Grahamoney 的机械手册页生成器 `c2man` 是一种自动文档工具，用于从 C 源代码中提取内容，生成与 Unix 程序员手册第 2 和 3 部分相同格式的函数接口文档。它通过查找代码中的注释，让程序员只需付出极少的努力。
+
+指挥与控制系统（美国军部） 摘自 `VERA`
+
+`http://www.tld.org/LDP/Linux-Dictionary/html/index.html`
+
+Commodore 128 [computer] (`Commodore`) 摘自 `VERA`
+
+`http://www.tld.org/LDP/Linux-Dictionary/html/index.html`
+
+Lexmark 2050 彩色喷射打印机 Linux 驱动过滤器，将 Postscript 文件转换为 Lexmark 2050 格式。该驱动允许你在 A4 纸上以 300dpi 打印。摘自 Debian 3.0r0 APT
+
+`http://www.tld.org/LDP/Haskell/html/index.html`
+
+C->Haskell 接口生成器
+
+`C->Haskell` 是一个简化开发 C 库 Haskell 绑定的接口。该工具处理 C 头文件以确定 C 侧的数据布局和函数签名，并结合提供 Haskell 侧类型签名和封化细节的 Haskell 模块。嵌入在 Haskell 代码中的钩子表示访问 C 结构和函数——它们由接口工具根据相应 C 头文件中的信息进行扩展。Haskell 98 是“标准函数式编程语言”。关于该语言的更多信息请访问 `http://www.haskell.org/`
+
+摘自 Debian 3.0r0 APT `http://www.tld.org/LDP/Haskell/html/index.html`
+
+用于 WWW 的 C 课程突出 `c2html` 可以突出你的课程以便在 WWW 上进行演示。它也可以用作 CGI 脚本，并检测客户端浏览器是否支持压缩数据以节省带宽。摘自 Debian 3.0r0 APT
