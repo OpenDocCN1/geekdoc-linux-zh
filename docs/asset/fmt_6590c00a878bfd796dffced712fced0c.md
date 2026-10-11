@@ -1,0 +1,127 @@
+
+- 文件系统创建时间：2019年6月17日 星期一 13:49:59
+- 最后一次挂载时间：2019年6月28日 星期五 21:14:38
+- 最后一次写入时间：2019年6月17日 星期一 13:53:39
+- 挂载次数：8
+- 最大挂载次数：-1
+- 最后检查时间：2019年6月17日 星期一 13:49:59
+- 检查间隔：0（<无>）
+- 生命周期写入量：20 GB
+- 保留块 uid：0（用户 root）
+- 保留块 gid：0（组 root）
+- 第一个 inode：11
+- inode 大小：256
+- 必需的额外 isize：32
+- 期望的额外 isize：32
+- 日志 inode：8
+- 第一个孤儿 inode：5117383
+- 默认目录哈希：half_md4
+- 目录哈希种子：fa95a22a-a119-4667-a73e-78f77af6172f
+- 日志备份：inode 块
+- 校验和类型：crc32c
+- 校验和：0xe084fe23
+
+ext 文件系统具有挂载计数。每次文件系统被挂载时，计数增加 1。当达到阈值（最大挂载次数）时，系统将在下次启动时自动使用 `e2fsck` 进行检查。
+
+可以使用 `-c N` 参数设置最大挂载次数，其中 `N` 是文件系统在被检查之前可以挂载的次数。`-C N` 参数将系统已挂载的次数设置为 `N`。请注意，命令行参数是区分大小写的，因此 `-c` 与 `-C` 不同。
+
+还可以使用 `-i` 参数定义检查之间的时间间隔，后面跟着一个数字以及表示天数的字母 `d`、表示月份的字母 `m` 或表示年的字母 `y`。例如，`-i 10d` 将每 10 天在下次重启时检查文件系统。使用零作为值可禁用此功能。
+
+可以使用 `-L` 为文件系统设置标签。此标签最多可以包含 16 个字符。`-U` 参数设置文件系统的 UUID，它是一个 128 位十六进制数。在上例中，UUID 是 `6e2c12e3-472d-4bac-a257-c49ac07f3761`。标签和 UUID 都可以代替设备名称（如 `/dev/sda1`）来挂载文件系统。
+
+选项 `-e BEHAVIOUR` 定义了发现文件系统错误时内核的行为。有三种可能的行为：
+
+- `continue`
+  将继续正常执行。
+- `remount-ro`
+  将文件系统重新挂载为只读。
+- `panic`
+  将导致内核恐慌。
+
+默认行为是 `continue`。`remount-ro` 在数据敏感应用中可能很有用，因为它会立即停止对磁盘的写入，避免更多的潜在错误。
+
+ext3 文件系统基本上是具有日志的 ext2 文件系统。使用 `tune2fs`，你可以为 ext2 文件系统添加日志，从而将其转换为 ext3。该过程很简单，只需将 `-j` 参数传递给 `tune2fs`，后跟包含该文件系统的设备：
+
+```
+# tune2fs -j /dev/sda1
+```
+
+之后，在挂载转换后的文件系统时，不要忘记将类型设置为 `ext3`，以便可以使用日志。
+
+在处理带有日志的文件系统时，`-J` 参数允许你使用额外参数来设置某些日志选项，例如使用 `-J size=` 设置日志大小（以兆字节为单位），使用 `-J location=` 指定日志应存储的位置（特定的块，或使用诸如 `M` 或 `G` 等后缀表示磁盘上的特定位置），甚至可以使用 `-J device=` 将日志放置在外部设备上。
+
+你可以通过用逗号分隔来同时指定多个参数。例如：`-J size=10,location=100M,device=/dev/sdb1` 将在设备 `/dev/sdb1` 的 100 MB 位置创建一个 10 MB 的日志。
+
+> **警告**
+>
+> `tune2fs` 有一个“强制”选项，`-f`，它将强制在完成操作时继续执行，即使发现错误。不言而喻，这应谨慎使用。
+
+### 维护 XFS 文件系统
+
+对于 XFS 文件系统，`fsck` 的等效命令是 `xfs_repair`。如果你怀疑文件系统有问题，首先要做的是扫描其损坏情况。
+
+可以通过将 `-n` 参数传递给 `xfs_repair` 后跟包含该文件系统的设备来完成。`-n` 参数意味着“不修改”：文件系统将被检查，错误将被报告，但不会进行修复：
+
+```
+# xfs_repair -n /dev/sdb1
+Phase 1 - find and verify superblock...
+Phase 2 - using internal log
+    - zero log...
+    - scan filesystem freespace and inode maps...
+    - found root inode chunk
+Phase 3 - for each AG...
+    - scan (but do not clear) agi unlinked lists...
+    - process known inodes and perform inode discovery...
+    - agno = 0
+    - agno = 1
+    - agno = 2
+    - agno = 3
+    - process newly discovered inodes...
+Phase 4 - check for duplicate blocks...
+    - setting up duplicate extent lists...
+    - check for inodes claiming duplicate blocks...
+    - agno = 1
+    - agno = 3
+    - agno = 0
+    - agno = 2
+No modify flag set, skipping phase 5
+Phase 6 - check inode connectivity...
+    - traversing filesystem ...
+    - traversal finished ...
+    - moving disconnected inodes to lost+found ...
+Phase 7 - verify link counts...
+No modify flag set, skipping filesystem flush and exiting.
+```
+
+如果发现错误，你可以去掉 `-n` 参数继续进行修复，例如：`xfs_repair /dev/sdb1`。
+
+`xfs_repair` 接受许多命令行选项。其中包括：
+
+- `-l LOGDEV` 和 `-x RTDEV`
+  如果文件系统具有外部日志和实时部分，则需要这些选项。在此情况下，请将 `LOGDEV` 和 `RTDEV` 替换为对应的设备。
+- `-m N`
+  用于将 `xfs_repair` 的内存使用量限制为 `N` 兆字节，这在服务器设置中可能有用。根据手册页，默认情况下 `xfs_repair` 会根据需要调整其内存使用量，最高可达系统物理内存的 75%。
+- `-d`
+  “危险”模式将启用对以只读方式挂载的文件系统的修复。
+- `-v`
+  你可能已经猜到了：详细模式。每次使用该参数时，“详细程度”都会增加（例如，`-v -v` 将比仅使用 `-v` 打印更多信息）。
+
+请注意，`xfs_repair` 无法修复带有“脏”日志的文件系统。你可以使用 `-L` 参数将损坏的日志“清零”，但请记住，这是最后的手段，因为它可能导致文件系统损坏和数据丢失。
+
+要调试 XFS 文件系统，可以使用实用程序 `xfs_db`，例如 `xfs_db /dev/sdb1`。这主要用于检查文件系统的各个元素和参数。
+
+该实用程序具有类似 `parted` 的交互式提示符，包含许多内部命令。还有一个帮助系统可用：输入 `help` 可查看所有命令的列表，输入 `help` 后跟命令名称可查看有关该命令的更多信息。
+
+另一个有用的实用程序是 `xfs_fsr`，它可用于重新组织（“整理碎片”）XFS 文件系统。在不带任何额外参数的情况下运行时，它将运行两小时并尝试整理 `/etc/mtab/` 文件中列出的所有已挂载、可写 XFS 文件系统的碎片。你可能需要使用 Linux 发行版的软件包管理器安装此实用程序，因为它可能不是默认安装的一部分。有关更多信息，请查阅相应的手册页。
+
+### 引导练习
+
+- 1. 使用 `du`，我们如何检查仅当前目录中的文件占用了多少空间？
+- 2. 使用 `df`，列出所有 ext4 文件系统的信息，输出按以下顺序包含以下字段：设备、挂载点、inode 总数、可用 inode 数、空闲空间百分比。
+- 3. 在 `/dev/sdc1` 上以非交互模式运行 `e2fsck` 并尝试自动修复大多数错误的命令是什么？
+- 4. 假设 `/dev/sdb1` 是一个 ext2 文件系统。如何将其转换为 ext3，同时重置其挂载次数并将其标签更改为 UserData？
+- 5. 如何检查 XFS 文件系统中的错误，*且不*修复发现的任何损坏？
+
+### 探索性练习
+
+- 1. 假设你在 `/dev/sda1` 上有一个 ext4 文件系统，并通过 `tune2fs` 获得了以下参数：
