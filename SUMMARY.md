@@ -1298,6 +1298,7 @@
 +   [Linux 用户与开发者 154 - 100 种精通命令行的方法 154](docs/linux-user-developer-154---100-ways-to-master-the-command-li/README.md)
 +   [Linux User & Developer 155 - Linux 虚拟化 155](docs/linux-user-developer-155---how-to-virtualise-linux-155/README.md)
 +   [Linux 用户与开发者 156 - FOSS 专题 156](docs/linux-user-developer-156---the-foss-issue-156/README.md)
++   [Linux 用户与开发者 157 – 构建你自己的系统工具](docs/linux-user-developer-157---build-your-own-system-tools-157/README.md)
 +   [Linux 用户与开发者 158 - Code Gnome 软件 158](docs/linux-user-developer-158---code-gnome-software-158/README.md)
 +   [Linux 用户与开发者 159：DevOps：快速创建软件](docs/linux-user-developer-159---devops-create-software-faster-159/README.md)
 +   [Linux 用户与开发者 160 - 掌握 Pi Zero 的 50 方法](docs/linux-user-developer-160---50-ways-to-master-pi-zero-160/README.md)
