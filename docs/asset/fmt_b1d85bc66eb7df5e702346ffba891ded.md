@@ -1,0 +1,170 @@
+
+![](img/c99d6f526a5f9fa62f2c34daada85ad7_186_0.png)
+
+要设置终端线路 SSH 访问，每条线路必须配置其自身的旋转组，并且必须配置 SSH 以便在访问其他设备时使用 SSH。以下步骤将引导你完成此过程。
+
+1. 必须在已启用 SSH 的路由器上配置每条线路。注意，线路号指的是远程 SSH 服务器上的端口号。例如，线路号 1 等同于端口 2001，线路号 2 等同于端口 2002，线路号 3 等同于端口 2003。以下语法显示了用于为 SSH 输入线路号的路由器命令。
+
+   语法：
+
+   `Router(config)# line <line-number> <ending-line-number>`
+
+   示例：
+
+   `Router(config)# line 1 200`
+
+2. 使用以下语法禁用每条线路的 EXEC 进程：
+
+   `Router(config)# no exec`
+
+3. 使用以下语法定义登录认证选项，该选项必须是用户名/密码：
+
+   语法：
+
+   `Router(config)# login authentication <listname>`
+
+   示例：
+
+   `Router(config)# login authentication default`
+
+4. 使用以下语法定义一组在启用 SSH 时将使用的线路：
+
+   语法：
+
+   `Router(config)# rotary <group>`
+
+   示例：
+
+   `Router(config)# rotary 1`
+
+5. 使用 `transport input` 命令定义在线路上使用 SSH，如下所示：
+
+   `Router(config)# transport input ssh`
+
+6. 使用以下语法为 TTY 线路、要连接的端口号以及旋转组配置 SSH：
+
+   语法：
+
+   `Router(config)# ip ssh port <portnumber> rotary <group>`
+
+   示例：
+
+   `Router(config)# ip ssh port 2001 rotary 1`
+
+7. 此时应已完成 SSH 终端线路访问配置！连接到已启用 SSH 的路由器端口 2001 的任何 SSH 客户端都应通过串行线路或控制台访问未启用 SSH 的路由器。
+
+一旦在 Cisco 路由器上启用了 SSH，请输入以下命令以通过串行线路连接到远程路由器：
+
+`ssh -c 3des -p 2001 <router.ip.address>`
+
+## Cisco 交换机
+
+Cisco Catalyst 操作系统（CatOS）从 6.1 版本开始支持使用 SSH。自此之后，CatOS 6.1 及更高版本仅支持 SSH 版本 1。虽然使用 SSH 版本 1 仍存在不安全因素，但在 Cisco 设备上用 SSH 替换 Telnet 已为网络设备增添了大量安全性。以下 Cisco 交换机支持 SSH：Catalyst 3550、4000、5000、6000、8540 和 8510。
+
+要在 Cisco 路由器上使用 SSH，请完成以下步骤。
+
+1. 下载正确的 CatOS 到交换机。请确保你下载的是支持 SSH 的 CatOS 版本。Cisco SSH 服务器需要 CatOS 6.1 中的 IPsec（DES 或 3DES）加密软件映像。
+
+2. 使用以下命令生成 RSA 密钥：
+
+   ```
+   Cat6509> (enable) set crypto key rsa 1024
+   ```
+
+3. 使用以下命令将 SSH 限制为授权的主机/子网：
+
+   ```
+   Cat6509> set ip permit 172.16.1.0 255.255.255.0
+   ```
+
+4. 生成密钥哈希后，使用以下命令启用 SSH：
+
+   ```
+   Cat6509> (enable) set ip permit enable ssh
+   ```
+
+5. 一旦在 Catalyst 交换机上启用了 SSH，请输入以下命令以连接到交换机上的 SSH 服务：
+
+   ```
+   ssh -C 3des -v <switch ip address>
+   ```
+
+## Cisco VPN 集中器
+
+Cisco 的 VPN 设备，即 VPN 集中器，开箱即用支持 SSH 操作。与路由器和交换机不同，无需在 VPN 集中器上加载软件。要查看集中器上的 SSH 选项，请通过任何 Web 浏览器访问你的 VPN 设备，最好通过 SSL 连接。如果未启用 SSL，请考虑通过控制台接入 VPN 设备，但不要在 Internet 等不安全网络上使用 HTTP 等明文协议。认证到配置屏幕后，浏览至“系统管理协议 SSH”。你应该会看到类似图 5.2 的配置屏幕。
+
+![](img/c99d6f526a5f9fa62f2c34daada85ad7_189_0.png)
+
+**图 5.2** Cisco VPN 集中器的 SSH 配置屏幕。
+
+表 5.1 列出并描述了配置屏幕上可用的各种 SSH 配置选项。
+
+**表 5.1** VPN 集中器 SSH 配置选项
+
+| 选项 | 描述 |
+| :--- | :--- |
+| 启用 SSH | 若要启用，只需点击“启用 SSH”复选框。此框应默认启用。 |
+| SSH 端口 | 确定 SSH 服务应监听的端口。默认端口为 22；但可以设置任何端口。 |
+| 最大会话数 | 确定允许的同时连接数。数值范围可从 1 到 10，默认设置为 4。 |
+| 密钥再生周期 | 设置重新生成密钥的时间间隔，以分钟为单位。范围可以是 0（禁用密钥再生）到 10080（最长一周）。默认设置为 60 分钟。 |
+| 加密协议 | 指定客户端与 VPN 集中器之间协商 SSH 会话时应使用哪些算法。可能的选项有 3DES-168 位密钥、RC4-128 位密钥、DES-56 位密钥和无条目。取消选中所有选项将禁用 SSH，选择“无条目”则完全不提供加密。作为最佳实践，请选择 3DES-168 位密钥和 RC4-128 位密钥。 |
+
+设置好 SSH 选项后，选择“应用”按钮以应用设置。此时 SSH 应已在 VPN 集中器的端口 22 上启用，并具有以下设置：
+
+- SSH 端口—22
+- 最大会话数—4
+- 密钥再生周期—45
+- 加密协议—3DES-168 和 RC4-128
+
+## Cisco PIX 防火墙
+
+Cisco PIX 防火墙从 5.2 版本开始支持使用 SSH。自此之后，PIX 5.2 及以上版本仅支持 SSH 版本 1。虽然使用 SSH 版本 1 仍存在不安全因素，但在 Cisco 防火墙上用 SSH 替换 Telnet 已为网络设备增添了大量安全性。
+
+要在 Cisco 防火墙上使用 SSH，请完成以下步骤：
+
+1. 下载正确的 PIX 版本到防火墙。请确保你下载的是支持 SSH 的 PIX 版本。Cisco SSH 服务器需要 5.2 版本中的 IPsec（DES 或 3DES）加密软件映像。
+
+2. 确保已为路由器配置了主机名和主机域。这些不是 SSH 命令，但使用 SSH 时必须配置。需要输入以下信息：
+
+   ```
+   Syntax: Pix# hostname <hostname>
+   Example: Pix# hostname Pix-Firewall
+   ```
+
+   ```
+   Syntax: Pix# domain-name <domainname>
+   Example: Pix# domain-name Aum.com
+   ```
+
+3. 使用以下命令为防火墙生成 RSA 密钥对并保存：
+
+   ```
+   Pix# ca generate rsa key 1024
+   Pix# CA save all
+   ```
+
+4. 选择防火墙上要使用 SSH 的接口。通常情况下，这将是内部接口。内部接口被称为 `inside`，并带有 RFC 1918 地址，如下列语法所示：
+
+   ```
+   Pix# ssh 172.16.1.1 255.255.255.255 inside
+   ```
+
+5. 设置 SSH 的认证超时时间。最大超时时间不能超过 120 秒，这也是默认值；然而，一旦会话若已建立连接，则应用 VTY 超时设置，而非 SSH 超时设置。以下语法用于设置防火墙的 SSH 会话超时：
+
+   ```
+   PIX# ssh timeout 60
+   ```
+
+- 最后，使用以下语法为防火墙设置密码：
+
+   ```
+   PIX# passwd superhardpasswordforl33th3xd0rs
+   ```
+
+一旦在 PIX 防火墙上启用了 SSH，输入以下命令以连接防火墙上的 SSH 服务（假设 `pix` 是用户名）：
+
+```
+ssh -c 3des -l pix -v <ip.address.of.pix>
+```
+
+## Network Appliance 存储控制器
