@@ -1,0 +1,193 @@
+
+# 我们看到的计数是 2（1 是因为 `grep`，第二个是因为 `applicationZZ` 处于激活状态）。
+
+# 我们通过使用 `grep` 的 `-v` 选项也解决了这个困惑：
+
+# `grep -c -v grep -` 统计包含 '`applicationZZ`' 的行数
+
+# 以忽略 (`-v`) 任何包含 '`grep`' 的行。
+
+# 因此，这一行被忽略了：14:06/00 00:00:00 `grep applicationZZ`
+
+# 当 `applicationZZ` 激活时，我期望看到计数为 1。
+
+# 当 `applicationZZ` 未激活时，我期望看到计数为 0。
+
+# 如果 `applicationZZ` 在服务器上运行的次数为 0；
+
+# 并且 `$PGM_should_be_y_or_n` 为 '`y`'，则显示错误信息。
+
+# END_DOES。
+
+### 另参：`applicationZZ.ksh` 和 `bring_up_application.ksh`
+
+```
+清除用户的屏幕。
+print "注释：这是脚本 $0"
+print "目的：显示如何使用嵌套语句。"
+```
+
+### 初始化：
+
+`day_of_week=$(date +%u)` # 周一=1; 周五=5; 周日=7
+
+`current_min=$(date +%M)` # 当前分钟：00 到 59
+
+`current_hr=$(date +%H)` # 当前小时：00 到 23；上早8点, 下午1点, 下午6点
+
+`PGM=applicationZZ`
+
+###
+
+### 用于测试：你可以取消以下 4 行的注释：
+
+# `day_of_week='5'`
+
+# `current_min='20'`
+
+# print "警告: hr, min, and day_of_week 已设置为测试.\\"
+
+```
+print "示例："
+print "让我们假设情况是周一至周五，早上 8:00 到晚上 8:30 (20:30)。"
+print "当前小时：$current_hr。当前分钟：$current_min。"
+print "星期几：$day_of_week。 (1 是周一；7 是周日)。"
+```
+
+```
+program_should_be_y_or_n='n'
+if [[ $day_of_week -ge 0 && $day_of_week -lt 6 ]]; then PGM 在这一周几运行的是 M,T,Th, 或 F
+if [[ $current_hr -lt 21 ]]; then
+  if [ "$PGM" = "PGM 在此小时通常运行" ]; then
+    if [ "$current_hr" -eq 20 ]; then 如果当前小时是晚上 8 点，那么
+      then print "现在查看时间是否已过了晚上 8:30"
+      fi
+    fi
+  fi
+fi
+if [[ $current_min -ge 0 && $current_min -lt 31 ]]; then
+    program_should_be_y_or_n='y'
+    # print "现在是晚上 8 点到 8:30 点之间。"
+  fi
+fi
+```
+
+`program_should_be_y_or_n='n'`
+
+如果我们不使用 `printf` 打印该金额，它看起来是这样的：
+
+欠金额: $33.333333。。
+
+使用 `printf` 和 `%d` (整数) 打印是一个糟糕的主意：
+
+欠金额: $33
+
+现在让我们使用 `printf` 和 `%.2f` (浮点数) 正确地打印该金额：
+
+（`"%.2f"` 意味着两位小数的精度。）
+
+欠金额: $33.33
+
+完成。`./money.ksh`
+
+文件: `move.ksh`
+
+目的：指向脚本 "`rename.ksh`"。
+
+文件: `mv.ksh`
+
+目的：指向脚本 "`rename.ksh`"。
+
+程序: `nested_if.ksh`
+
+`#!/bin/ksh`
+
+# 程序: `nested_if.ksh`
+
+# 目的：显示如何设置嵌套 if 语句。
+
+# 程序员: Larry Smith. 由 `__date__` 修订
+
+# 难度级别：中等
+
+# 用法示例：`./nested_if.ksh`
+
+### 注意：
+
+# 让我们仔细观察一下这行代码
+
+# 以防你不理解所有的细节。
+
+```
+# if [ $(ps -ef | grep -v grep) -eq 0 ]; then
+# 以下操作具有相同的功能（使用反引号）：
+# if [ `ps -ef | grep -v grep` -eq 0 ]; then
+# ps 命令列出了服务器上运行的所有进程：
+# 我们正在寻找一个名为 'applicationZZ' 的应用程序，这就是我们 grep 查找的；
+# -c grep 选项允许我们统计包含 'applicationZZ' 的行数。
+# 从命令行执行以下命令：
+# ps -ef grep applicationZZ
+# 在这里我发现的是：
+# 但请注意进程 applicationZZ 本身就是 grep
+# 换句话说，applicationZZ 目前没有在这台服务器上运行。
+# 现在尝试此命令：grep -c --grep applicationZZ
+# 我们看到的计数是 '1'；当 applicationZZ 实际上在服务器上运行时，
+# 我们看到的计数是 2（1 是因为 grep，第二个是因为 applicationZZ 处于激活状态）。
+# 我们通过使用 grep 的 -v 选项也解决了这个困惑：
+# grep -c -v grep - 统计包含 'applicationZZ' 的行数
+# 以忽略 (-v) 任何包含 'grep' 的行。
+# 因此，这一行被忽略了：14:06/00 00:00:00 grep applicationZZ
+# 当 applicationZZ 激活时，我期望看到计数为 1。
+# 当 applicationZZ 未激活时，我期望看到计数为 0。
+# 如果 applicationZZ 在服务器上运行的次数为 0；
+# 并且 $PGM_should_be_y_or_n 为 'y'，则显示错误信息。
+# END_DOES。
+```
+
+### 另参：`applicationZZ.ksh` 和 `bring_up_application.ksh`
+
+```
+清除用户的屏幕。
+print "注释：这是脚本 $0"
+print "目的：显示如何使用嵌套语句。"
+```
+
+```
+### 初始化：
+day_of_week=$(date +%u) # 周一=1; 周五=5; 周日=7
+current_min=$(date +%M) # 当前分钟：00 到 59
+current_hr=$(date +%H) # 当前小时：00 到 23；上早8点, 下午1点, 下午6点
+PGM=applicationZZ
+###
+### 用于测试：你可以取消以下 4 行的注释：
+# day_of_week='5'
+# current_min='20'
+# print "警告: hr, min, and day_of_week 已设置为测试.\\"
+```
+
+```
+print "示例："
+print "让我们假设情况是周一至周五，早上 8:00 到晚上 8:30 (20:30)。"
+print "当前小时：$current_hr。当前分钟：$current_min。"
+print "星期几：$day_of_week。 (1 是周一；7 是周日)。"
+```
+
+```
+program_should_be_y_or_n='n'
+if [[ $day_of_week -ge 0 && $day_of_week -lt 6 ]]; then PGM 在这一周几运行的是 M,T,Th, 或 F
+if [[ $current_hr -lt 21 ]]; then
+  if [ "$PGM" = "PGM 在此小时通常运行" ]; then
+    if [ "$current_hr" -eq 20 ]; then 如果当前小时是晚上 8 点，那么
+      then print "现在查看时间是否已过了晚上 8:30"
+      fi
+    fi
+  fi
+fi
+if [[ $current_min -ge 0 && $current_min -lt 31 ]]; then
+    program_should_be_y_or_n='y'
+    # print "现在是晚上 8 点到 8:30 点之间。"
+  fi
+fi
+```
+
+`program_should_be_y_or_n='n'`
