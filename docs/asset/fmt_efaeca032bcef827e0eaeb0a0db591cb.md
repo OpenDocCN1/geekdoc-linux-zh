@@ -1,0 +1,137 @@
+
+Carrots 	 Whole wheat 	 Turkey
+
+Spinach 	 White bread 	 Chicken
+
+Lettuce 	 Sourdough 	 Beef
+
+Beans 	 Pumpernickel 	 Ham
+
+Becky 希望从文件中提取第二列信息（面包列表）并将其显示在屏幕上。她输入以下命令：
+
+```
+cut -f2 food
+```
+
+选项 `-f2` 告诉 `cut` 命令从每一行中提取第二个字段。制表符分隔符将字段分开，因此 `cut` 知道在哪里查找字段。她在屏幕上看到以下输出：
+
+```
+Whole wheat
+White bread
+Sourdough
+Pumpernickel
+```
+
+她使用以下命令从文件中提取第一列和第三列：
+
+```
+cut -f1,3 food
+```
+
+该命令的结果是：
+
+```
+Carrots 	 Turkey
+Spinach 	 Chicken
+Lettuce 	 Beef
+Beans 	 Ham
+```
+
+现在，你可以通过从文件中提取姓名列表来完成 Dominion 电话号码文件的工作。首先，你将创建两个文件：`corp_phones1` 和 `corp_phones2`。`corp_phones1` 文件包含五条可变大小的记录，冒号分隔记录中的每个字段。（图 4-1(c) 说明了这种文件结构。）`corp_phones2` 文件也包含五条固定长度的记录（图 4-1(b) 中说明的文件结构类型）。图 4-3 说明了这两个文件的内容。你可以使用 `cut` 命令配合这两个文件中的任意一个来提取姓名列表。
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_132_0.png)
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_132_1.png)
+
+**图 4-3：** 公司电话文件的两个版本
+
+### 创建 corp_phones1 和 corp_phones2 文件：
+
+1. 使用 `vi` 或 `Emacs` 编辑器创建文件 `corp_phones1`。
+2. 按照原样输入以下行文本。在每行末尾按 **Enter**：
+   `219:432:4567:Harrison:Joel:M:4540:Accountant:09-12-1985`
+   `219:432:4587:Mitchell:Barbara:C:4541:Admin Asst:12-14-1995`
+   `219:432:4589:Olson:Timothy:H:4544:Supervisor:06-30-1983`
+   `219:432:4591:Moore:Sarah:H:4500:Dept Manager:08-01-1978`
+   `219:432:4527:Polk:John:S:4520:Accountant:09-22-1998`
+3. 保存该文件并创建一个名为 `corp_phones2` 的新文件。
+4. 按照原样输入以下行文本。查阅图 4-3 了解每个字符的精确位置。在每行末尾按 **Enter**。
+   `219 432 4587 Mitchell Barbara C 4541 Admin Asst 12-14-1995`
+   `219 432 4589 Olson          Timothy     H 4544 Supervisor     06-30-1983`
+   `219 432 4591 Moore           Sarah       H 4500 Dept Manager   08-01-1978`
+   `219 432 4527 Polk            John        S 4520 Accountant     09-22-1998`
+5. 保存文件并退出编辑器。
+
+你希望首先从 `corp_phones1` 文件中提取姓氏和名字。该文件包含可变长度的记录，字段由冒号字符分隔。你可以通过指定位置及分隔字符来选择要剪切的字段。
+
+### 使用 cut 命令从可变长度记录中提取字段：
+
+1. 在 `$` 命令提示符后，输入 `cut -f4-6 -d: corp_phones1` 并按 **Enter**。此命令的意思是“剪切 `corp_phones1` 文件中由冒号字符 `-d:` 定界的第四到第六个位置 `4–6` 的字段 `-f`”。
+
+你看到姓名列表：
+
+```
+Harrison:Joel:M
+Mitchell:Barbara:C
+Olson:Timothy:H
+Moore:Sarah:H
+Polk:John:S
+```
+
+现在你可以从 `corp_phones2` 文件中提取姓氏和名字。该文件包含固定长度的记录，因此你可以通过指定字符位置来剪切。
+
+### 使用 cut 命令从固定长度记录中提取字段：
+
+1. 在 `$` 命令提示符后，输入 `cut -c14-25,26-35,36 corp_phones2` 并按 **Enter**。
+
+此命令的意思是“剪切 `corp_phones2` 文件中第 14 到 25 个位置、第 26 到 35 个位置以及第 36 个位置 `14-25,26-35,36` 的字符 `-c`”。
+
+你看到姓名列表：
+
+```
+Harrison          Joel          M
+Mitchell          Barbara      C
+Olson             Timothy      H
+Moore             Sarah        H
+Polk              John         S
+```
+
+![](img/6d8286a85e2d8ad63e16f1801102da59_134_0.png)
+
+请确保不要在 `cut` 命令中连字符 `-` 选项后的代码序列中包含空格。例如，正确的语法是 `cut`（空格）`-c14-25,26-35,36`（空格）`corp_phones2`。
+
+使用 `cut` 命令处理可变长度或固定长度记录会产生类似的结果。从固定长度记录中剪切会创建更清晰的显示效果，但需要更多的存储空间。例如，`corp_phones2` 需要 345 字节，而 `corp_phones1` 需要 279 字节。
+
+## 使用 sort 命令
+
+使用 `sort` 命令按字母顺序或数字顺序对文件内容进行排序。UNIX 默认将排序后的文件显示在屏幕上，但你也可以指定将排序后的数据存储到特定文件中。
+
+`sort` 命令提供许多选项，这些选项在附录 B“UNIX 命令语法指南”中有描述。以下是其使用示例：
+
+```
+sort file1 > file2
+```
+
+在此示例中，`file1` 的内容被排序，结果存储在 `file2` 中。（如果不重定向输出，`sort` 将在屏幕上显示其结果。）以下是一个更复杂的示例：
+
+```
+sort +.10 file1 > file2
+```
+
+此命令指定了一个排序键。排序键是每行内的一个字段或字符位置。`sort` 命令根据排序键对行进行排序。加号 `+` 表示排序不是从第一个字符位置开始的，而是在行的其他位置偏移。点号 `.` 表示偏移量以字符为单位测量。（如果没有点号，偏移量以字段为单位测量。）点号后面跟随要偏移的字符数。示例命令告诉 `sort` 命令排序键从字符位置 10 开始。
+
+对 `corp_phones1` 文件进行排序相对简单，因为你可以引用字段号。当你执行后续步骤时，你会发现对固定长度文件 `corp_phones2` 进行排序更困难。在前两步中，你分别按姓氏和名字对 `corp_phones2` 文件进行排序。在第三和第四步中，你对 `corp_phones1` 执行相同操作。注意，这四个步骤的输出都发送到 `stdout`（屏幕）。最后一步使用 `-o` 选项，而不是输出重定向，将排序后的输出写入新的磁盘文件 `sorted_phones`。
+
+### 对 phones2 文件进行排序：
+
+1. 在 `$` 命令提示符后，输入 `sort +.13 corp_phones2` 并按 Enter。这将从偏移量 13 处 `+.13` 开始按姓氏对文件进行排序。你在屏幕上看到以下内容：
+```
+219 432 4567 Harrison Joel M 4540 Accountant 09-12-1985  
+219 432 4587 Mitchell Barbara C 4541 Admin Asst 12-14-1995
+```
+219 432 4591 Moore Sarah H 4500 Dept Manager 08-01-1978
+219 432 4589 Olson Timothy H 4544 Supervisor 06-30-1983
+219 432 4527 Polk John S 4520 Accountant 09-22-1998
+1. 输入 `sort +25 corp_phones2` 并按下回车键。这将按名字排序，起始位置为第 25 个字符 `+25`。您将在屏幕上看到以下内容：
+219 432 4587 Mitchell Barbara C 4541 Admin Asst 12-14-1995
+219 432 4567 Harrison Joel M 4540 Accountant 09-12-1985
