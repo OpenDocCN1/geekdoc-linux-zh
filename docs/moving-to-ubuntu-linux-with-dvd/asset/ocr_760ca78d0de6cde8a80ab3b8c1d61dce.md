@@ -1,0 +1,7 @@
+to the Database Field drop-down list. Click that list and you see all the fields that make up the records in your table. Select the Database Field you want, and then click the large arrow directly to the left. The field you selected appears in the Label Text window. Put a space after the field name, then select the last name, and click the arrow again. Press <Enter> to go to the next line in the Label Text window. Next is the address, city, and so on. You may want to put a comma between the city and province (or state). Line by line, transfer the fields that you want to have appearing in your finished label (see Figure 16–13).
+
+![](bbox=[0.143, 0.334, 0.856, 0.701])
+
+**Figure 16–13** As you select fields, they appear in the Label Text window to the left.
+
+Before we move on, let's quickly have a look at the other two tabs, Format and Options. The Format tab allows you to fine-tune your label dimensions. This includes margins, columns, rows, and pitch. If you selected one of the commercial labels from the list, this information will be filled in for you and you shouldn't have to worry about changing anything. Use the Options tab to select whether you are printing a full page of labels or a single label. The most

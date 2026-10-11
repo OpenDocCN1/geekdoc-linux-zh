@@ -1,0 +1,11 @@
+The information you see on the partitioning screen will vary from system to system. My test system has two hard drives to choose from. You may have a single drive with a Windows partition that you are happy to overwrite. Notice the first option in the list. It provides an option for resizing the current partition. This is particularly useful for those who are running Windows on their system and would like to have Ubuntu and Windows co-exist (yes, it is possible). If you select this option, the slider at the bottom of the list activates and you can use it to select the percentage of space you would like to have freed up.
+
+> Tip Unfortunately, Windows is just as likely to be taking up the entire partition table. The trick is to shrink the existing Windows partition, thereby creating some space on which to install Linux. To do this, you must defragment your disk in Windows before going ahead and resizing your partitions. You do this by clicking the Start button and then selecting Programs | Accessories | System Tools | Disk Defragmenter.
+
+For this example, I’ve chosen to use the entire first disk (the biggest on this old computer).
+
+After clicking forward past this point, a warning window appears asking if you are “Ready to install.” The choices you have made up to this point, including language, username, and so on, are all repeated for you here. If you chose to use the entire disk, like me, this is your last chance to stop before your hard drive is erased in preparation for installation. Read the dialog box carefully as it will also confirm the partitions to be created—this is particularly important if you chose to use the available free space or you opted for custom partitioning. If you are ready, have a good backup, or you simply don’t care about what’s on the PC, click Install to continue.
+
+> Tip Have I mentioned that you should have a good backup of your system, in particular, your personal data?
+
+A dialog box appears informing you of the progress as your disks are partitioned and formatted (see Figure 2-19).

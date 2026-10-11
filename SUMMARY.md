@@ -1489,6 +1489,7 @@
 +   [迁移到 Linux：告别蓝屏！](docs/moving-to-linux-kiss-the-blue-screen-of-death-goodbye/README.md)
 +   [转向 Linux 业务桌面指南](docs/moving-to-the-linux-business-desktop/README.md)
 +   [Ubuntu Linux 迁移指南](docs/moving-to-ubuntu-linux/README.md)
++   [移动至 Ubuntu Linux [附 DVD]](docs/moving-to-ubuntu-linux-with-dvd/README.md)
 +   [MS8909.LA.1.1 Linux Android 版本 1.1.23 用于 MSM8909 设备发布说明](docs/msm8909la11-linux-android-release-1123-for-msm8909-devices-r/README.md)
 +   [MT6573 Linux 设备模型客户文档](docs/mt6573-linux-device-model-customer-document/README.md)
 +   [多核应用编程：适用于 Windows、Linux 和 Oracle Solaris (开发者库)](docs/multicore-application-programming-for-windows-linux-and-orac/README.md)

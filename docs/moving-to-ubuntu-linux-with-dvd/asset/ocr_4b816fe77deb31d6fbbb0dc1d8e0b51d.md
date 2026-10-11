@@ -1,0 +1,7 @@
+![](bbox=[0.12, 0.1, 0.86, 0.38])
+
+Figure 15–4 Selecting your slide layout.
+
+Finally, there’s a rather large central pane with five tabs labeled Normal, Outline, Notes, Handout, and Slide Sorter. The Normal view is where you do most of your work, creating and editing slides. The Outline view is a kind of bird’s eye overview of the whole presentation. You can reorder slides, change titles, and so on. The Notes view does pretty much what you expect; it provides an easy way to add notes to the slides. The Handout view is, I think, very handy. Sometimes, when you are doing a presentation, you are expected to provide printouts of the slides for those in attendance. With Handout, you can define how those printouts look and how many slides fit on a single page. Finally, we have the Slide Sorter, which is just a larger version of the Slides preview pane on the left. With a larger area, sorting slides is just that much easier. For now, we will be working with the Normal view.
+
+You might notice that the various toolbars and menus have some resemblance to those of both Writer and Calc (discussed in the last two chapters). The menu bar sits just below the title bar, and the Standard bar is directly below that. Notice that the Formatting bar has a number of different options

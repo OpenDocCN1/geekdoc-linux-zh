@@ -1,0 +1,5 @@
+![](bbox=[0.28, 0.12, 0.72, 0.6])
+
+**Figure 9–9** Even when running XChat for the first time, a large number of networks is already configured.
+
+First, click the Add button to the right of the Networks list. The words *New Network* are highlighted at the top of the Networks list. Change that to something that makes sense. In my case, I entered *WFTL IRC Server*. Now, this entry is just that—a placeholder for a list of servers within a network (there can be one or many). Click Edit and the Edit Server dialog appears (see Figure 9–10). At the top, there is one host listed, news server /6667. This is just a sample entry and needs to be changed to something real. On my IRC server, that’s chat.marcelgagne.com /6667. You don’t generally need to worry about this, but 6667 is the TCP port that IRC operates on.

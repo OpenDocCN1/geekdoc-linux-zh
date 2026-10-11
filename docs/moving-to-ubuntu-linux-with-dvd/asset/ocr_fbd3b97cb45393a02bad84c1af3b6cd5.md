@@ -1,0 +1,13 @@
+Here's a cool trick. Let's say the color you want is already somewhere on your screen and you'd like to have that as your background. No problem. See that eyedropper icon just below the color wheel? Click that and you can use the eyedropper that pops up to select any color already on your screen.
+
+When you are happy with your choice, click OK to banish the dialog.
+
+# ## Save My Screen, Please!
+
+Okay, screensavers don't really do much screen saving these days. Once upon a time, the idea was to protect screens from phosphor burn-in. Old-style monochrome screens were particularly bad for this. In time, the letters from your menus (we were using text in those days) would burn in to the phosphor screen. Even when you turned off the monitor, you could still see the ghostly outline of your most popular application burned into the screen itself. As we moved to color screens and graphics, that changed somewhat, but the problem continued to exist for some time, partly due to the static nature of the applications we were using.
+
+Time passes, and some bright light somewhere got the idea that if you constantly change the image on the screen, that type of burn-in would not be as likely. What better way to achieve this than to have some kind of clever animation kick in when the user walked away from the screen for a few minutes (or hours). Heck, it might even be fun to watch. The screensaver was born. Modern screens use scanning techniques that all but banish burn-in, but screensavers did not go away. Those addictive fish, toasters, penguins, snow, spaceships, and so on have managed to keep us entertained, despite the march of technology. Let's face it, we are all hooked.
+
+Ubuntu Linux has the screensaver turned on by default. In fact, if you wait long enough (10 minutes) without doing anything on your computer, the screensaver kicks in. Let it go for more than 10 minutes and you'll see that a different screensaver starts up. That's because Ubuntu's default screensaver cycles randomly through a number of preselected screensavers. As you might expect, I'm getting a little ahead of myself.
+
+Start by clicking System in the top panel. From the Preferences menu, select Screensaver. The Screensaver Preferences dialog appears (see Figure 5-4). The main window has a list of screensavers to the left and a larger preview window to the right. At the top of the screensaver list is an option for a Blank Screen and another, the selected default, for Random. In the lower portion of the window, there's a check box labeled Activate Screensaver
