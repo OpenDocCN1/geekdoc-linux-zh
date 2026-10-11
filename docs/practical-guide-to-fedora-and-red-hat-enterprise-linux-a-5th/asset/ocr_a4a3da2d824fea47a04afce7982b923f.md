@@ -1,0 +1,31 @@
+# ## HIDDEN FILENAMES
+
+A filename that begins with a period is called a *hidden filename* (or a *hidden file* or sometimes an *invisible file*) because ls does not normally display it. The command `ls -a` displays *all* filenames, even hidden ones. Names of startup files (page 192) usually begin with a period so that they are hidden and do not clutter a directory listing. The `.plan` file (page 170) is also hidden. Two special hidden entries—a single and double period ( . and ..)—appear in every directory (page 197).
+
+# ## THE WORKING DIRECTORY
+
+`pwd` While you are logged in on a character-based interface to a Linux system, you are always associated with a directory. The directory you are associated with is called the *working directory* or *current directory*. Sometimes this association is referred to in a physical sense: “You are in (or *working in*) the jenny directory.” The `pwd` (print working directory) utility displays the pathname of the working directory.
+
+# ## YOUR HOME DIRECTORY
+
+When you first log in on a Linux system or start a terminal emulator window, your working directory is your *home directory*. To display the pathname of your home directory, use `pwd` just after you log in (Figure 6–4).
+
+When used without any arguments, the ls utility displays a list of the files in the working directory. Because your home directory has been the only working directory you have used so far, ls has always displayed a list of files in your home directory. (All the files you have created up to this point were created in your home directory.)
+
+# ### STARTUP FILES
+
+*Startup files*, which appear in your home directory, give the shell and other programs information about you and your preferences. Frequently one of these files tells the shell what kind of terminal you are using (page 1040) and executes the `stty` (set terminal) utility to establish the erase (page 139) and line kill (page 139) keys.
+
+Either you or the system administrator can put a shell startup file containing shell commands in your home directory. The shell executes the commands in this file each time you log in. Because the startup files have hidden filenames, you must use the `ls -a` command to see whether one is in your home directory. A GUI has many startup files. Usually you do not need to work with these files directly but can control startup sequences by using icons on the desktop. See page 281 for more information about startup files.
+
+```
+```
+login: alex
+Password:
+Last login: Wed Oct 20 11:14:21 from bravo
+$ pwd
+/home/alex
+```
+```
+
+![](bbox=[0.2, 0.92, 0.82, 0.94])

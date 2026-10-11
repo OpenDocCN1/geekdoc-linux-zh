@@ -1,0 +1,201 @@
+
+libattr 包含了用于操作扩展属性的库函数
+
+## 22. Acl-2.2.52
+
+Acl 包包含了用于管理访问控制列表（Access Control Lists）的实用程序，这些列表用于为文件和目录定义更细粒度的裁量访问权限。
+
+预计编译时间：少于 0.1 SBU
+所需磁盘空间：4.8 MB
+
+### 22.2.1. 安装 Acl
+
+修改修改目录使其成为一个版本化目录：
+
+```
+sed -i -e 's|/@pkg_name@|@pkg_version@|' include/builddefs.in
+```
+
+修复一些损坏的测试用例：
+
+```
+sed -i " :; sed.*:*" test/(sbits-restore,cp,misc).test
+```
+
+此外，修复一个导致 `getfacl` 在处理组名过长时发生段错误的 bug：
+
+```
+sed -i -e "/TABS-1/a (x > (TABS-1)) x = (TABS-1);" "\nlibacl/__acl_to_any_text.c
+```
+
+为编译 Acl 准备：
+
+```
+./configure --prefix=/usr \
+  --bindir=/bin \
+  --disable-static \
+  --libexecdir=/usr/lib
+```
+
+编译包：
+
+```
+make
+```
+
+Acl 的用例需要在支持访问控制的文件系统上运行，或者在构建 Coreutils 时已链接了 Acl 库。如果需要，可以在在本章后续构建完 Coreutils 后，返回此包并运行 `make -jl tests`。
+
+安装包：
+
+```
+make install install-dev install-lib
+chmod -v 755 /usr/lib/libacl.so
+```
+
+共享库需要移动到 `/lib`，结果是 `/usr/lib` 中的 `.so` 文件需要重新创建：
+
+```
+mv -v /usr/lib/libacl.so.* /lib
+ln -sf /usr/lib/$(readlink /usr/lib/libacl.so) /usr/lib/libacl
+```
+
+### 22.2.2. Acl 的内容
+
+- 已安装的程序：`chacl`, `getfacl`, 和 `setacl`
+- 已安装的库：`libacl.so`
+- 已安装的目录：`/usr/include/acld` 和 `/usr/share/doc/accl-2.2.52`
+
+## 简述
+
+- `chacl` 修改文件或目录的访问控制列表
+- `getfacl` 获取文件访问控制列表
+- `setacl` 设置文件访问控制列表
+- `libacl` 包含了用于操作访问控制列表的库函数
+
+## 23. Libcap-2.25
+
+Libcap 包实现了 Linux 内核中可用的 POSIX 1003.1le 能力（capabilities）的用户空间接口。这些能力将所有强大的 root 权限划分为一组不同的权限。
+
+**预计编译时间：** 少于 0.1 SBU
+**所需磁盘空间：** 1.3 MB
+
+### 6.23.1. 安装 Libcap
+
+防止安装静态库：
+
+```
+sed -i '/install.*STALENAME/d' libcap/Makefile
+```
+
+编译包：
+
+```
+make
+```
+
+此包不附带测试套件。
+
+安装包：
+
+```
+make RAISE_SETCAP=no lib=lib prefix=/usr install
+chmod -v 755 /usr/lib/libcap.so
+```
+
+`make` 选项的含义：
+
+> `RAISE_SETCAP=no`
+此参数跳过尝试对自身使用 `setcap`。如果内核或文件系统不支持扩展能力，这可以避免安装错误。
+
+> `lib=lib`
+此参数将库安装在 `$prefix/lib` 中，而不是 x86_64 架构下的 `$prefix/lib64`。它对 x86 架构没有影响。
+
+共享库被移动到 `/lib`，结果是 `/usr/lib/libcap` 中的 `.so` 文件将不会被重新创建。
+
+```
+mv -v /usr/lib/libcap.so.* /lib
+ln -sfv ../lib$(readlink /usr/lib/libcap.so) /usr/lib/libcap.so
+```
+
+### 6.23.2. Libcap 的内容
+
+- 已安装的程序：`capsh`, `getcap`, `getpcaps`, 和 `setcap`
+- 已安装的库：`libcap`
+
+## 简述
+
+- `capsh`: 用于探索和限制能力支持的 shell 封装
+- `getcap`: 检查文件能力
+- `getpcaps`: 显示查询进程上的能力
+- `libcap`: 包含了用于操作 POSIX 1003.1le 能力的库函数
+- `setcap`: 设置文件能力
+
+## 6.24. Sed-4.4
+
+Sed 包包含一个流编辑器。
+
+**预计编译时间：** 0.3 SBU
+所需磁盘空间：25 MB
+
+### 6.24.1. 安装 Sed
+
+首先修复 LFS 环境中的一个问题并移除一个失败的测试用例：
+
+```
+sed -i '/s/usr/tools/'      build-aux/help2man
+sed -i '/s/panic-tests.//' Makefile.in
+```
+
+为编译 Sed 准备：
+
+```
+./configure --prefix=/usr --bindir=/bin
+```
+
+编译包并生成 HTML 文档：
+
+```
+make
+make html
+```
+
+要测试结果，执行：
+
+```
+make check
+```
+
+安装包及其文档：
+
+```
+make install
+install -d -m755 /usr/share/doc/sed-4.4
+install -m644 doc/sed.html /usr/share/doc/sed-4.4
+```
+
+### 6.24.2. Sed 的内容
+
+- 已安装的程序：`sed`
+- 已安装的目录：`/usr/share/doc/sed-4.4`
+
+## 简述
+
+- `sed` 单次通过过滤和转换文本文件
+
+## 6.25. Shadow-4.4
+
+Shadow 包包含了以安全方式处理密码的程序。
+
+**预计编译时间：0.2 SBU**
+**所需磁盘空间：2 MB**
+
+### 6.25.1. 安装 Shadow
+
+> 如果你想强制使用强密码，请在构建 Shadow 之前参考 http://www.linuxfromscratch.org/view/posts/cracklib.html。然后在在 `configure` 命令中添加 `--with-libcrack`。
+
+禁用组及其手动帮助页的安装，Coreutils 提供了更好的版本。同时防止安装已经安装过的手动帮助页：
+
+```
+sed -i 's/groups//' src/Makefile.in
+find -name Makefile.in -exec sed -i 's/groups / /' \;
+```

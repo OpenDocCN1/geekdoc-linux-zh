@@ -1,0 +1,123 @@
+
+Snort 的源代码包含一个示例配置文件。如果你从发行版的包中安装，该包也应该包含一个示例 Snort 配置文件。通常这个
+
+## Snort 配置
+
+该文件名为 `snort.conf`。在大多数主流发行版（包括 SUSE 和 Debian）中，该文件（以及一组 Snort 规则）位于 `/etc/snort/` 目录下。
+
+如果您使用的是源码安装版本，示例 `snort.conf` 配置文件位于 `<snort-source>/etc/` 中，示例规则则位于 `<snort-source>/rules/` 中。对于使用源代码版本的用户，建议创建名为 `snort` 的目录（位于 `/etc/` 或 `/usr/local/etc/` 下），并将 `snort.conf` 配置文件和 Snort 规则放置在该目录中。此外，默认的 Snort 配置文件还会调用各种映射文件和额外的配置文件。这些文件也可以在 `<snort-source>/etc/` 目录中找到。创建目录并将所有文件复制进去的操作如下所示（同样，这仅适用于从源码编译 Snort 的用户）：
+
+```bash
+mkdir /etc/snort
+cp <snort-source>/etc/snort.conf /etc/snort/
+cp <snort-source>/etc/*.map /etc/snort/
+cp <snort-source>/etc/*.conf /etc/snort/
+cp <snort-source>/rules/*.rules /etc/snort/
+```
+
+对 `snort.conf` 配置文件还需进行一项额外的且重要的修改。在您将其复制到 `/etc/snort` 目录后，编辑该文件并将 `RULE_PATH` 变量从其默认值 `../rules` 更改为 `/etc/snort`。完成后，该行应看起来像这样：
+
+```bash
+var RULE_PATH /etc/snort
+```
+
+最后，使用以下命令创建 Snort 日志目录：
+
+```bash
+mkdir /var/log/snort
+```
+
+完成所有基础工作后，现在是时候首次正式启动 Snort 了。如果您是从发行版的软件包安装 Snort，很可能可以通过正常的运行控制机制启动 Snort，例如 `/etc/init.d/snort` start。如果您是从源码编译的，则需要手动启动 Snort 并指定其配置文件的位置：
+
+```bash
+/usr/local/bin/snort -c /etc/snort/snort.conf
+```
+
+如果您收到任何错误，很有可能是缺少文件。请根据配置文件，在 Snort 源码目录结构中查找缺失的文件并将其复制到相应位置。
+
+如果一切顺利，您应该在输出的末尾附近看到类似如下的消息：
+
+```text
+=== Initialization Complete ===
+```
+
+如您所见，shell 提示符没有返回。这是因为 Snort 未被指示进入守护进程模式。按 Ctrl+C 终止 Snort 并在命令行中添加 `-D`。现在它应该看起来像这样：
+
+```bash
+/usr/local/bin/snort -c /etc/snort/snort.conf -D
+```
+
+Snort 将再次启动，这次它会分叉到后台运行，并返回 shell 提示符。
+
+当然，Snort 配置的内容远不止使用默认选项和规则集使其运行那么简单。有关特定 Snort 配置的更多信息，请参阅 Snort 文档。
+
+## 测试 Snort
+
+Snort 现在已在后台运行，您可能认为它运行完美无缺，并且日志条目会被写入 `/var/log/snort` 中。然而，我不做无端假设，尤其是关于计算机安全的问题。因此，为了测试 Snort 的安装情况，我将使用方便的 `hping2` 工具构造一两个数据包并将其发送到运行 Snort 的主机上。
+
+在这种情况下，我只是想验证 Snort 正在运行并监控某些内容。默认规则用于查找坏数据包，因此使用 `hping2` 构造这样的数据包应该很简单。从网络上的另一台主机（192.168.1.10），我针对运行 Snort 的主机（192.168.1.2）执行了以下 `hping2` 命令：
+
+```bash
+hping2 -X 192.168.1.2
+```
+
+`-x` 选项执行 Xmas 扫描。查看运行 Snort 的主机上的 `/var/log/snort`，发现告警文件已接收到一些信息，并且还有一个新目录名为 192.168.1.10，它是测试数据包的来源。该目录内包含对应于我发送的数据包的文件，其内容显示如下：
+
+```text
+[**] BAD-TRAFFIC tcp port 0 traffic [**]
+06/07-16:19:00.712543 192.168.1.10:1984 -> 192.168.1.2:0
+TCP TTL:64 TOS:0x0 ID:48557 IpLen:20 DgLen:40
+*2****** Seq: 0xED1609B Ack: 0x13E893C5 Win: 0x200 Tcplen: 20
++++=+-=-++===-++===-+++---++++=---====-++====-++++==
+```
+
+```text
+[**] BAD-TRAFFIC tcp port 0 traffic [**]
+06/07-16:19:00.712610 192.168.1.2:0 -> 192.168.1.10:1984
+TCP TTL:64 TOS:0x0 ID:10034 IpLen:20 DgLen:40 DF
+***AR*** Seq: 0x0 Ack: 0xED1609B Win: 0x0 Tcplen: 20
+****=-***++==*+==-*=**+==***+==***-****=***==***==
+```
+
+如您从输出中可以看出，Snort 捕获了它认为（正确无误地）是坏 TCP 数据包。告警日志文件 `/var/log/snort/alert` 还包含一些对整理告警特别有用的信息。以下是告警日志文件中与之前显示的特定主机文件条目对应的日志条目：
+
+```text
+[**] [1:524:8] BAD-TRAFFIC tcp port 0 trafffic [**]
+[Classification: Misc activity] [Priority: 3]
+06/07-16:19:00.712543 192.168.1.10:1984 --> 192.168.1.2:0
+TCP TTL:64 TOS:0x0 ID:48557 IpLen:20 DgLen:40 DF
+*2****** Seq: 0xED1609B Ack: 0x13E893C5 Win: 0x200 Tcplen: 20
+```
+
+```text
+[**] [1:524:8] BAD-TRAFFIC tcp port 0 trafffic [**]
+[Classification: Misc activity] [Priority: 3]
+06/07-16:19:00.712610 192.168.1.2:0 --> 192.168.1.10:1984
+TCP TTL:64 TOS:0x0 ID:10034 IpLen:20 DgLen:40 DF
+****A**** Seq: 0x0 Ack: 0xED1609B Win: 0x0 Tcplen: 20
+```
+
+如您从这些条目中可以看出，有一些额外的项目，如 `Classification`（分类）和 `Priority`（优先级），可以帮助对告警进行分类和优先排序。分类和优先级都可以在告警日志文件中配置。
+
+## 接收告警
+
+我建议先使用 Snort 积累经验，熟悉规则和配置选项，然后再配置其通过电子邮件或其他方式发送告警。取决于您的网络布局，使用默认的 Snort 规则，您很容易会被大量的告警淹没。
+
+回想第 10 章中介绍的日志文件监控软件，其中提供了一个使用 Swatch 监控日志文件中特定事件的配方，届时会根据告警发送电子邮件。如果您明白我的意思，那么恭喜！
+
+## 使用 SWATCH 监控 SNORT 告警
+
+使用默认配置时，Snort 将日志记录到 `/var/log/snort/alert`。因此，创建一个 Swatch 配置来监控此文件相当简单。再次提醒，如果您根据 Snort 告警配置任何操作而不加小心，Swatch 的告警和电子邮件很容易让您或系统不堪重负，因此在您有机会进一步配置 Snort 之前，请谨慎行事。
+
+回想一下，Snort 在 `/var/log/snort/alert` 中记录了一些优先级数据。因此，您可以设置一条 Swatch 规则，监视具有特定优先级（例如 3）的任何内容，并在看到该优先级时发送电子邮件。这将放置在您的 Swatch 配置文件中，默认情况下是 `~/.swatchsrc`。以下是配置条目：
+
+```text
+watchfor /Priority: 3/
+mail
+```
+
+启动 Swatch 并指向 Snort 告警文件 `/var/log/snort/alert`，看起来像这样：
+
+```text
+swatch --tail-file=/var/log/snort/alert
+```

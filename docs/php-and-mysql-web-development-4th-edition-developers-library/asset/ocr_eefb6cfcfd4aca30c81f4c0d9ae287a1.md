@@ -1,0 +1,16 @@
++   - One effect of `--opt` is that it enables the `--extended-insert` option that causes `mysqldump` to write multiple-row `INSERT` statements. This is a disadvantage if you want a more readable dump file. To produce single-row `INSERT` statements, use the `--skip-extended-insert` option.
+
++   - The combination of `--flush-logs` and `--lock-all-tables` is helpful for checkpointing your database. `--lock-all-tables` acquires a global read lock, and `--flush-logs` closes and reopens the log files. If binary logging is enabled, flushing the logs creates a new binary log file that will contain only those data modifications that occur subsequent to the checkpoint. This synchronizes your log to the time of the backup. (The downside is that locking all the tables is detrimental to client access during the backups if you have clients that need to perform updates.)
++     - If you use `--flush-logs` to checkpoint the logs to the time of the backup, it’s probably best to dump entire databases at a time. During restore operations, it’s common to extract log contents on a per-database basis. If you dump individual tables, it’s much more difficult to synchronize log checkpoints against your backup files. (There is no option for extracting updates for individual tables from the logs, so you’ll have to extract them yourself.)
+
++   - If you’re dumping InnoDB or Falcon tables, the `--single-transaction` option dumps the tables within a transaction so that you get a consistent backup.
+
++   - If your databases contain stored routines, triggers, and events, you can explicitly include them in dump output with the `--routines`, `--triggers`, and `--events` options, which are available as of MySQL 5.0.13, 5.0.11, and 5.1.8, respectively. Each of these options has a `--skip` form as well (for example, `--skip-triggers`) to disable dumping of the corresponding objects. By default, triggers are included, but stored routines and events are not.
+
+`mysqldump` has several other options; see Appendix F.
+
+# ## 14.4.2 Making Binary Database Backups
+
+A method for backing up databases or tables that doesn’t involve `mysqldump` is to copy table files directly. Typically this is done using regular filesystem utilities (such as `cp`, `tar`, or `rsync`), or a special program developed for the task (such as `mysqldump` or InnoDB Hot Backup). There are two key points to observe when you use a direct-copy backup method:
+
++   - You must make sure the tables aren’t being used. If the server is changing a table while you’re copying it, the copy will be worthless. The best way to ensure the integrity of your backup is to stop the server, copy the files, and restart the server. Some binary backup methods in fact require that you stop the server. If you don’t want to stop the server (and the backup method doesn’t require that you do so), use a read-only locking protocol to prevent the server from changing the tables while you’re copying them. See Section 14.2, “Performing Database Maintenance with the Server Running.”

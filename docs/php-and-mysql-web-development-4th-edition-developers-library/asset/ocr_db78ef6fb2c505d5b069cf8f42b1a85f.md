@@ -1,0 +1,17 @@
+# 8.4 Using CGI in Web Applications
+
+The header() function generates a Content-Type: header that precedes the page content. It's necessary to write this header when producing Web pages from scripts, to let the browser know what kind of document to expect. (This differs from the way you write static HTML pages. For those, it's not necessary to produce a header because the Web server sends one to the browser automatically.) By default, header() writes a header that looks like this:
+
+```
+Content-Type: text/html
+```
+
+Following the header() invocation are calls to functions that generate the page content. start_html() produces the tags from the opening <html> tag through the opening <body> tag; h1() and p() write the heading and paragraph elements, and end_html() adds the closing document tags.
+
+As illustrated by the start_html() call, many CGI.pm functions allow you to specify named parameters, with each parameter given in --name==value format. This is advantageous for functions that take many parameters that are optional, because you can specify just those parameters you need, and you can list them in any order.
+
+Using CGI.pm output-generating functions doesn't preclude you from writing out raw HTML yourself if you want. You can mix the two approaches, combining calls to CGI.pm functions with print statements that generate literal tags. However, one of the advantages of using CGI.pm to generate output instead of writing HTML yourself is that you can think in logical units rather than in terms of individual markup tags, and your HTML is less likely to contain errors. (The reason I say “less likely” is that CGI.pm won't prevent you from doing bizarre things, such as including a list inside of a heading!)
+
+CGI.pm also provides some portability advantages that you don't get by writing your own HTML. For example, as of version 2.69, CGI.pm automatically writes XHTML output. If you're using an older version of CGI.pm that writes plain HTML, all you need to do is upgrade your scripts to start writing XHTML instead by updating CGI.pm itself. XHTML is similar to HTML but has a more well-defined format. HTML is easy to learn and use, but one of its problems is that browser implementations tend to differ in how they interpret it. For example, they are forgiving of malformed HTML in different ways. This means that a not-quite-correct page may display properly in one browser but incorrectly in another. XHTML's requirements are stricter, to help ensure that documents are well formed. Some of the differences between HTML and XHTML follow:
+
++   - Unlike HTML, every opening tag in XHTML must have a closing tag. For example, paragraphs are written using <p> and </p> tags, but the closing </p> tag often is omitted in HTML documents. In XHTML, the </p> tag is required. For HTML tags that don't have any body, such as <br> and <hr>, the XHTML requirement that all tags be closed in leads to ungraceful constructs like <br></> and <hr></> that I'm sorry to say are a bit ugly. If you deal with this, XHTML allows single-tag shortcut forms of <br/>, <hr/>, etc. for both the opening and closing tags. However, older browsers that see tags like these will sometimes mistake the tag names as br/ and hr/. Inserting a space before the slash and writing the tags as <br /> and <hr /> helps to minimize the occurrence of such problems.

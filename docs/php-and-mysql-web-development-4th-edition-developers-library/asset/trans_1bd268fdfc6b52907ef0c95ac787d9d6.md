@@ -1,0 +1,105 @@
+
+## G.2 C API 数据类型
+
+```
+unsigned long buffer_length;
+enum enum_field_types buffer_type;
+my_bool is_unsigned;
+...
+} MYSQL_BIND;
+```
+
+每个预处理语句的参数都应绑定一个 `MYSQL_BIND` 结构体。以下列表说明了每个 `MYSQL_BIND` 成员在输入和输出中的用途。true 表示非零值；false 表示零值。
+
+- `enum enum_field_types buffer_type`
+  绑定到参数的 C 语言变量的数据类型。此成员必须始终设置为 `MYSQL_TYPE_XXX` 值。
+  对于输入，这是包含要发送到服务器的值的变量的类型。
+  对于输出，这是您希望接收服务器返回值的变量的类型。
+  表 G.4 和表 G.5 分别显示了输入和输出中对应于 C 变量数据类型的 `buffer_type` 值。在两个方向上，如果 C 变量类型与服务器端值的 SQL 类型不对应，则尽可能进行转换。如果 C 类型和 SQL 类型直接兼容，则无需执行转换，这将提高性能。
+
+- `void *buffer`
+  指向用于发送或接收数据值的变量的指针。
+  对于输入，这是指向持有要发送到服务器的数据值的变量的指针。
+  对于输出，这是指向应存储服务器返回值的变量的指针。
+  `buffer` 始终是存储变量的地址。对于数值类型，`buffer` 指向标量变量。对于字符串类型，它指向字符缓冲区。对于时间类型，它指向 `MYSQL_TIME` 结构体。变量类型由 `buffer_type` 值指示。如果变量是无符号的，应将 `is_unsigned` 值设置为 true。
+
+- `unsigned long buffer_length`
+  `buffer` 所指向的缓冲区的实际字节大小，适用于输入和输出。这适用于字符串类型（无论是二进制还是非二进制，其长度可能变化）以及输出 BIT 值。对于其他数据类型，缓冲区长度始终由 `buffer_type` 值决定。
+
+- `unsigned long *length`
+  指向指示传输数据值中字节数的变量的指针。与 `buffer_length` 类似，此成员仅需为字符串类型和输出 BLOB 值设置。对于数值和时间类型，长度由数据类型决定。
+  对于输入，被指向的变量应设置为指示要发送到服务器的字节数。
+  对于输出，被指向的变量将由 `mysql_stmt_fetch()` 设置，该函数的返回值决定了如何解释变量值。如果 `mysql_stmt_fetch()` 返回 0（成功），则 `*length` 是返回数据值的实际长度。如果 `mysql_stmt_fetch()` 返回 `MYSQL_DATA_TRUNCATED`，则 `*length` 是假设未发生截断时值的长度，实际长度是 `*length` 和 `buffer_length` 中的最小值。
+
+- `my_bool *is_null`
+  指向指示数据值是否对应 NULL 值的变量的指针。
+  对于输入，被指向的变量应设置为 true 或 false，以指示发送到服务器的值是 NULL 还是 NOT_NULL。特殊情况：如果绑定到此参数的值永远不会是 NULL，可以将 `is_null` 设置为零，而不是 `my_bool` 变量的地址。如果值总是 NULL，将 `buffer_type` 设置为 `MYSQL_TYPE_NULL`，其他 `MYSQL_BIND` 成员则无关紧要。
+  对于输出，被指向的变量将被设置为 true 或 false，以指示服务器返回的值是 NULL 还是 NOT_NULL。
+
+- `my_bool is_unsigned`
+  一个标志，指示 `buffer` 指向的变量是否为无符号 C 变量，适用于输入和输出。此成员仅用于可以为无符号的 C 数据类型（char 和整数类型）。`is_unsigned` 适用于绑定到 `MYSQL_BIND` 结构的 C 变量，而不适用于服务器端的 SQL 值。客户端库使用 `is_unsigned` 来了解是否需要在 C 值和 SQL 值之间进行符号转换。
+
+- `my_bool *error`
+  对于输出，这是一个指向变量的指针，该变量指示是否在没有截断的情况下获取了值。获取一行后，如果没有错误，被指向的变量为 false；如果发生数据截断（例如数值超出范围或字符串值过长），则为 true。截断检查默认启用，但可以通过调用带有 `MYSQL_REPORT_DATA_TRUNCATION` 选项的 `mysql_options()` 来控制。
+
+**error** 成员在 MySQL 5.0.3 中引入。
+
+表 G.4 显示了用于从服务器发送数据值的 C 语言变量的 **buffer_type** 值。如果变量是**无符号**的，还应将 **is_unsigned** 值设置为 true。如果服务器端的 SQL 值具有表中显示的数据类型，则输入值可以无需转换直接使用。例如，如果使用 **short int** 为 **SMALLINT** 提供值，则无需转换。如果使用 **short int** 为 **DECIMAL** 提供值，则会进行转换。
+
+### 表 G.4 输入 `MYSQL_BIND buffer_type` 值
+
+| 输入 C 变量类型 | `buffer_type` 值 | 兼容的 SQL 值类型 |
+| :--- | :--- | :--- |
+| signed char | MYSQL_TYPE_TINY | TINYINT |
+| short int | MYSQL_TYPE_SHORT | SMALLINT |
+| int | MYSQL_TYPE_LONG | INT |
+| long long int | MYSQL_TYPE_LONGLONG | BIGINT |
+| float | MYSQL_TYPE_FLOAT | FLOAT |
+| double | MYSQL_TYPE_DOUBLE | DOUBLE |
+| MYSQL_TIME | MYSQL_TYPE_TIME | TIME |
+| MYSQL_TIME | MYSQL_TYPE_DATE | DATE |
+| MYSQL_TIME | MYSQL_TYPE_DATETIME | DATETIME |
+| MYSQL_TIME | MYSQL_TYPE_TIMESTAMP | TIMESTAMP |
+| char[] | MYSQL_TYPE_STRING | TEXT, CHAR, VARCHAR |
+| char[] | MYSQL_TYPE_BLOB | BLOB, BINARY, VARBINARY |
+| MYSQL_TYPE_NULL | NULL |
+
+**MYSQL_TYPE_STRING** 和 **MYSQL_TYPE_BLOB** 分别用于非二进制和二进制字符串。
+
+**MYSQL_TYPE_NULL** 仅应在输入参数始终为 NULL 时使用。否则，将 **buffer_type** 值设置为其他 **MYSQL_TYPE_XXX** 值之一，并在每次执行语句时适当设置 **is_null** 成员，以指示参数是否为 NULL。
+
+表 G.5 显示了用于从服务器接收数据值的 C 语言变量的 **buffer_type** 值。如果变量是**无符号**的，还应将 **is_unsigned** 值设置为 true。如果用于检索值的 C 变量具有表中显示的類型，則從服务器接收的 SQL 值可以無需轉換直接使用。如果您将 **SMALLINT** 获取到 **short int** 中，則無需轉換。如果您將其獲取到 **char[]** 中，該值會轉換為字符串形式。
+
+### 表 G.5 输出 `MYSQL_BIND buffer_type` 值
+
+| 源 SQL 值类型 | `buffer_type` 值 | 兼容的 C 变量类型 |
+| :---------------------- | :---------------- | :------------------------ |
+| TINYINT | MYSQL_TYPE_TINY | signed char |
+| SMALLINT | MYSQL_TYPE_SHORT | short int |
+| MEDIUMINT | MYSQL_TYPE_INT24 | int |
+| INT | MYSQL_TYPE_LONG | int |
+| BIGINT | MYSQL_TYPE_LONGLONG | long long int |
+| FLOAT | MYSQL_TYPE_FLOAT | float |
+| DOUBLE | MYSQL_TYPE_DOUBLE | double |
+| DECIMAL | MYSQL_TYPE_NEWDECIMAL | char[i] |
+| YEAR | MYSQL_TYPE_SHORT | short int |
+| TIME | MYSQL_TYPE_TIME | MYSQL_TIME |
+| DATE | MYSQL_TYPE_DATE | MYSQL_TIME |
+| DATETIME | MYSQL_TYPE_DATETIME | MYSQL_TIME |
+| TIMESTAMP | MYSQL_TYPE_TIMESTAMP | MYSQL_TIME |
+| CHAR, BINARY | MYSQL_TYPE_STRING | char[i] |
+| VARCHAR, VARBINARY | MYSQL_TYPE_VAR_STRING | char[i] |
+| TINYBLOB, TINYTEXT | MYSQL_TYPE_TINY_BLOB | char[i] |
+| BLOB, TEXT | MYSQL_TYPE_BLOB | char[i] |
+| MEDIUMBLOB, MEDIUMTEXT | MYSQL_TYPE_MEDIUM_BLOB | char[i] |
+| LONGBLOB, LONGTEXT | MYSQL_TYPE_LONG_BLOB | char[i] |
+| BIT | MYSQL_TYPE_BIT | char[i] |
+
+DECIMAL 和 BIT 值默认以字符串形式返回。如果您指定 char[] 变量来接收 DECIMAL 值，您将获得数值的字符串表示。如果您改为指定数值变量，字符串将转换为数值形式。如果您希望以数字形式接收 BIT 值，请在查询中将其转换为数值形式（例如，SELECT my_bit_val+0 . . . ）并将整数变量绑定到 MYSQL_BIND 结构体。
+
+要区分非二进制和二进制字符串列，请使用 `mysql_stmt_result_metadata()` 获取结果集元数据，并检查列的 `charset_number`。值为 63 表示二进制字符串；其他任何值表示非二进制字符串。
+
+- `MYSQL_TIME`
+
+该结构体用于向服务器发送时间值或从服务器接收它们。要将 `MYSQL_TIME` 结构与 `MYSQL_BIND` 结构体关联，请将 `MYSQL_BIND` 的 `buffer` 成员设置为 `MYSQL_TIME` 变量的地址。
+

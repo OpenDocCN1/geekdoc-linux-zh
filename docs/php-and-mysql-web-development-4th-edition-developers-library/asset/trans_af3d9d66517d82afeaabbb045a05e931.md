@@ -1,0 +1,145 @@
+
+## 7.3 连接MySQL服务器（续）
+
+以下是 `connect2.c` 中处理选项和主函数的代码片段。注意跨页内容的合并，代码块已完整保留。
+
+```c
+case '?':
+    my_print_help (my_opts);  /* print help message */
+    exit (0);
+case 'p':
+    if (!argument)            /* password */
+        /* no value given; solicit it later */
+        ask_password = 1;
+    else
+        /* copy password, overwrite original */
+        {
+            opt_password = strdup (argument);
+            if (opt_password == NULL)
+                {
+                    print_error (NULL, "could not allocate password buffer");
+                    exit (1);
+                }
+            while (*argument)
+                *argument++ = 'x';
+            ask_password = 0;
+        }
+    break;
+}
+return (0);
+
+
+int
+main (int argc, char *argv[])
+{
+int opt_err;
+
+    MY_INIT (argv[0]);
+    load_defaults ("my", client_groups, &argc, &argv);
+
+    if ((opt_err = handle_options (&argc, &argv, my_opts, get_one_option)))
+        exit (opt_err);
+
+    /* solicit password if necessary */
+    if (ask_password)
+        opt_password = get_tty_password (NULL);
+
+    /* get database name if present on command line */
+    if (argc > 0)
+    {
+        opt_db_name = argv[0];
+        --argc; ++argv;
+    }
+
+    /* initialize client library */
+    if (mysql_library_init (0, NULL, NULL))
+{
+    print_error (NULL, "mysql_library_init() failed");
+    exit (1);
+}
+
+/* initialise connection handler */
+conn = mysql_init (NULL);
+if (conn == NULL)
+{
+    print_error (NULL, "mysql_init() failed (probably out of memory)");
+    exit (1);
+}
+
+/* connect to server */
+if (mysql_real_connect (conn, opt_host_name, opt_user_name, opt_password,
+    opt_db_name, opt_port_num, opt_socket_name, opt_flags) == NULL)
+{
+    print_error (conn, "mysql_real_connect() failed");
+    mysql_close (conn);
+    exit (1);
+}
+
+/* ... issue statements and process results here ... */
+
+/* disconnect from server, terminate client library */
+mysql_close (conn);
+mysql_library_end ();
+exit (0);
+}
+```
+
+与前文开发的 `connect1` 和 `show_opt` 程序相比，`connect2` 做了几件新事情：
+
+- 允许指定一个默认数据库作为命令行参数。这与 MySQL 发行版中标准客户端的行为一致。
+- 如果参数向量中存在密码值，`get_one_option()` 会复制它并覆盖原始值。这将密码在命令行上对 `ps` 或其他系统状态程序可见的时间窗口降至最低。（注意：时间窗口只是*最小化*了，并未消除。在命令行上指定密码仍然是一个安全风险。）
+- 如果提供了密码选项但没有值，`get_one_option()` 会设置一个标志，指示程序应提示用户输入密码。这在所有选项处理完成后在 `main()` 中执行，使用 `get_tty_password()` 函数。这是客户端库中的一个实用程序，它会在屏幕上不显示输入的情况下提示用户输入密码。你可能会问：“为什么不只调用 `getpass()`？”答案是并非所有系统都有该函数（例如，Windows 就没有）。
+
+`get_tty_password()` 在系统间具有可移植性，因为它被配置为适应系统特性。
+
+编译并链接 `connect2`，然后尝试运行它：
+
+```sh
+$ ./connect2
+```
+
+如果 `connect2` 没有产生输出（如前所示），则连接成功。另一方面，你可能会看到类似这样的信息：
+
+```sh
+$ ./connect2
+mysql_real_connect() failed:
+Error 1045 (28000): Access denied for user 'sampadm'@'localhost'
+(using password: NO)
+```
+
+该输出表明连接未建立，并说明了原因。在这种情况下，“Access denied”意味着你需要提供适当的连接参数。在使用 `connect1` 时，除了编辑和重新编译外，没有其他方式来做到这一点。`connect2` 根据你在命令行或选项文件中指定的选项连接到 MySQL 服务器。假设没有选项文件使事情复杂化。如果你不带参数调用 `connect2`，它将连接到 `localhost`，并将你的 Unix 登录名和空密码传递给服务器。相反，如果你按照以下命令调用 `connect2`，它会提示输入密码（因为 `-p` 后面没有直接跟随密码值），连接到 `some_host`，并将用户名 `some_user` 和你输入的密码传递给服务器：
+
+```sh
+$ ./connect2 -h some_host -p -u some_user some_db
+```
+
+`connect2` 还将数据库名称 `some_db` 传递给 `mysql_real_connect()`，以将其作为默认数据库。如果存在选项文件，其内容将被处理并用于相应地修改连接参数。
+
+让我们回顾一下目前为止所取得成果。制作 `connect2` 所做的工作完成了每个 MySQL 客户端都需要的任务：使用适当的参数连接到服务器。如果连接尝试失败，它还能很好地报告错误。我们现在拥有的内容作为一个框架，可以作为许多不同客户端程序的基础。要编写新的客户端，请这样做：
+
+1. 复制 `connect2.c` 的副本。
+2. 如果该程序接受除 `connect2.c` 所知道的标准选项之外的额外选项，请将这些选项添加到 `my_opts` 数组中，并修改选项处理循环。
+3. 在连接和断开调用之间添加你自己的特定于应用程序的代码。
+
+就完成了。
+
+你的应用程序的所有实际动作都将在 `mysql_real_connect()` 和 `mysql_close()` 调用之间发生，但拥有一个可重用的骨架意味着你可以更多地专注于你真正感兴趣的事情——能够访问数据库的内容。
+
+## 7.4 处理SQL语句
+
+连接服务器的目的是在连接打开期间与其进行对话。本节展示了如何与服务器通信以处理语句。你执行的每个语句涉及以下步骤：
+
+1. 构造语句。你这样做的方式取决于语句的内容——特别是它是否包含二进制数据。
+2. 通过将语句发送到服务器来发出该语句。服务器将执行该语句并生成结果。
+3. 处理语句结果。这取决于你发出的语句类型。例如，`SELECT` 语句返回供你处理的数据行。`INSERT` 语句则不然。
+
+MySQL 客户端库包含两组用于语句执行的例程。第一组基于将每个语句作为字符串发送到服务器，并以所有列均返回为字符串格式的方式检索结果。第二组基于二进制协议，该协议允许非字符串数据值以原生格式发送和返回，而无需转换为字符串格式。
+
+本节讨论处理 SQL 语句的原始方法。第 7.9 节“使用服务器端预编译语句”涵盖了二进制协议。
+
+在构造语句时需要考虑的一个因素是用于将它们发送到服务器的函数。更通用的语句发出例程是 `mysql_real_query()`。使用此例程，你提供语句作为计数字符串（字符串加长度）。你必须跟踪语句字符串的长度，并将其传递给 `mysql_real_query()`，连同字符串本身。由于语句被视为计数字符串而非空终止字符串，它可能包含任何内容，包括二进制数据或空字节。
+
+另一个语句发出函数 `mysql_query()` 对其允许在语句字符串中包含的内容限制更多，但通常更容易使用。传递给 `mysql_query()` 的任何语句都应该是空终止字符串。这意味着语句文本不能包含空字节，因为那将导致它被错误地解释为比实际更短。一般来说，如果你的语句可能包含任意的二进制数据，它可能包含空字节，因此你不应该使用 `mysql_query()`。另一方面，当你使用空终止字符串时，你拥有使用标准 C 库字符串函数构造语句的奢侈品，你可能已经熟悉这些函数，例如 `strcpy()` 和 `sprintf()`。
+
+在构造语句时需要考虑的另一个因素是你是否需要执行任何字符转义操作。如果你希望使用包含二进制数据或其他棘手字符（如引号等）的值来构造语句，这是必要的。
+

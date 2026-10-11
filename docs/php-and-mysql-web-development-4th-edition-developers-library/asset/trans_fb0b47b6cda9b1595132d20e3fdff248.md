@@ -1,0 +1,298 @@
+
+## O
+
+- -O 选项，**1043-1044**
+- -o 选项
+- mysamchk 实用程序，**1055**
+- mysql 客户端程序，**1063**
+- mysqlbinlog 实用程序，**1077**
+- mysqlcheck 客户端程序，**1081**
+- 对象权限列（授权表），**710**
+- 对象权限，**636**
+- 面向对象接口（CGL.pm 模块），**503-504**
+- OCT() 函数，**848**
+- OCTET_LENGTH() 函数，**848**
+- --offset 选项（mysqlbinlog 实用程序），**1077**
+- OLD 关键字，**297, 968**
+- --old 选项（mysqld），**1090**
+- 旧系统变量，**909**
+- old-password 命令（mysqladmin 实用程序），**1075**
+- OLD_PASSWORD() 函数，**874**
+- --old-passwords 选项（mysqld），**1040, 1091**
+- old_passwords 系统变量，**909**
+- --old-style-user-limits 选项（mysqld），**1091**
+- ON 子句，**153, 156, 638, 980-981, 996, 1001**
+- ON COMPLETION NOT PRESERVE 子句，**952**
+- ON COMPLETION PRESERVE 子句，**952**
+- ON DELETE 子句，**187**
+- ON DUPLICATE KEY UPDATE 子句，**985**
+- ON SCHEDULE 子句，**660, 952**
+- ON UPDATE 子句，**188, 245**
+- 在线文档，**497**
+- MySQL 信息的在线资源，**11-12**
+- ONLY_FULL_GROUP_BY SQL 模式，**916**
+- --one-database 选项（mysql 客户端程序），**1063**
+- --one-thread 选项（mysqld），**1091**
+- 开源运动，1
+- OPEN 语句，**1033**
+- --open-files 选项（mysqlnd_safe Shell 脚本），**1103**
+- --open-files-limit 选项（mysqlnd_safe Shell 脚本），**1103**
+- Opened_files 状态变量，**928**
+- Opened_tables 状态变量，**928**
+- 在 PHP API 中打开服务器连接，**532**
+- PHP 脚本中的开始标签，**530**
+- Open_files 状态变量，**927**
+- open_files_limit 系统变量，**666, 909, 1079**
+- Open_streams 状态变量，**927**
+- Open_tables 状态变量，**927**
+- Open_table_definitions 状态变量，**927**
+- 操作系统，数据库命名约定，**593-596**
+- 运算符，**814**
+  - 算术运算符，**816-817**
+  - 位运算符，**823**
+  - 强制转换运算符，**825-826**
+  - 比较运算符，**817-822**
+  - 分组，**815**
+  - 逻辑运算符，**824-825**
+  - 模式匹配运算符，**826-830**
+  - 优先级，**271, 814-815**
+  - 类型，**266-270**
+- --opt 选项（mysqldump 实用程序），**749-751, 1109**
+- 优化。另见 查询优化；使用系统变量进行调优
+  - 转储文件的优化，**749**
+  - 使用 myisamchk 实用程序进行优化，**763**
+- --optimize 选项（mysqlcheck 客户端程序），**1081**
+- OPTIMIZE TABLE 语句，**992-993**
+- optimizer_prune_level 系统变量，909
+- optimizer_search_depth 系统变量，909
+- 选项文件，93-94, 1045-1049
+  - 访问连接参数，372-375
+  - 锁定，707-708
+  - 处理命令行参数，375-384
+- 选项值
+  - CHECK TABLE 语句，949
+  - FLUSH 语句，977-978
+  - REPAIR TABLE 语句，994
+  - RESET 语句，995
+- 服务器连接中的选项处理（C API），384-389
+- 选项
+  - 环境变量中的选项，1049-1051
+  - 选项文件中的选项，1045-1049
+  - myisamchk 实用程序，列表，1053-1056
+  - myisampack 实用程序，列表，1058-1059
+  - mysql 客户端程序，列表，1061-1065
+  - MySQL 驱动程序，Web:1181
+  - mysql_config 实用程序，列表，1071
+  - mysql_install_db Shell 脚本，列表，1072
+  - mysql_options() 函数（C API），Web:1140-Web:1144
+  - mysql_real_connect() 函数（C API），Web:1146-Web:1147
+  - mysql_refresh() 函数（C API），Web:1173-Web:1174
+  - mysql.server Shell 脚本，列表，1070
+  - myisamchk 实用程序，列表，1073
+  - mysqlbinlog 实用程序，列表，1077-1079
+  - mysqlcheck 客户端程序，列表，1080-1082
+- mysqld
+  - InnoDB 选项，1095-1096
+  - 列表，1084-1094
+  - 复制选项，1097-1100
+  - Windows 选项，1094-1095
+- mysqld_multi Shell 脚本，列表，1101-1102
+- mysqld_safe Shell 脚本，列表，1102-1104
+- mysqldump 实用程序，750-751
+  - 数据格式选项，1112
+  - 列表，1105-1112
+- mysqldotcpp 实用程序，列表，1114-1116
+- mysqlimport 客户端程序
+  - 数据格式选项，1118
+  - 列表，1117-1118
+- mysqlshog 实用程序，列表，1119
+- 服务器启动，指定，624-626
+- 设置程序变量作为选项，1044-1045
+- 指定，1039-1041
+- SSL 选项，列表，1043-1044
+- 标准选项
+  - 列表，1041-1043
+- myisamchk 对选项的支持，1052
+- myisampack 对选项的支持，1058
+- mysql 对选项的支持，1061
+- mysql_install_db 对选项的支持，1072
+- myisamchk 对选项的支持，1073
+- mysqlbinlog 对选项的支持，1077
+- mysqlcheck 对选项的支持，1079
+- mysqld 对选项的支持，1084
+- mysqld_multi 对选项的支持，1101
+- mysqld_safe 对选项的支持，1102
+- mysqldump 对选项的支持，1105
+- mysqldotcpp 对选项的支持，1114
+- mysqlimport 对选项的支持，1117
+- mysqlshog 对选项的支持，1119
+- perror 对选项的支持，1120
+- OPTIONS 子句，957
+- OR 逻辑运算符，63
+- OR REPLACE 子句，969
+- ORD() 函数，848
+- ORDER BY 子句，65-66, 79, 157, 168, 869, 944, 971, 1001, 1027-1028
+- ORDER BY RAND() 函数，68
+- --order-by-primary 选项（mysqldump 实用程序），1110
+- OUT 关键字，295-296, 954
+- 外连接，154-158
+- 输出 buffer_type 值（MYSQL_BIND 结构体），Web:1133
+- 使用 MySQL 编程进行输出定制，342
+- 日志的输出目标，652-653
+- EXPLAIN 语句的输出，975-977
+- 输出生成（CGI.pm 模块），504-506
+- 避免过度索引，310
+- OVERLAPS() 函数，882
+- 覆盖 MySQL 查询优化器，313
+- OWNER 关键字，957
+
+## P
+
+- \p 命令（mysql 客户端程序），1067
+- -p 选项（myisamchk 实用程序），1042, 1055
+- PACK_KEYS 表选项，963
+- 软件包
+  - 安装，783-786
+  - 获取，778-780
+- PAD_CHAR_TO_FULL_LENGTH SQL 模式，241, 916
+- 字符串类型的填充，241, 804
+- pager 命令（mysql 客户端程序），1067
+- --pager 选项（mysql 客户端程序），1063
+- --parallel-recover 选项（myisamchk 实用程序），1055
+- param() 函数（CGI.pm 模块），504
+- 参数绑定（Perl 的 DBI API），463
+- CHANGE MASTER 语句中的参数定义，947-948
+- 存储过程中的参数类型，295-296
+- 参数类型值（PDO 常量），Web:1224
+- 参数化服务器端预编译语句，422
+- 参数
+  - PHP API 中的输入参数，554-555
+  - 传递给脚本（CGI.pm 模块），507-510
+- 表达式中的括号，815
+- 创建部分二进制备份，752-753
+- PARTITION BY 子句，132, 964
+- 分区表，132-133
+- ALTER TABLE 语句中的分区修改，944-945
+- CREATE TABLE 语句中的分区选项，964-967
+- PARTITIONS 子句，965, 975
+- 向脚本传递参数（CGI.pm 模块），507-510
+- password 命令（mysqladmin 实用程序），1075
+- --password 选项，1042
+- PASSWORD 表选项，963
+- 密码值（作用域列内容），721
+- PASSWORD() 函数，722, 874
+- 密码，576
+  - 为其他服务器设置，615
+  - 更改/重置，644-645
+  - 用户授权表中的加密，722
+  - 忘记密码，627
+  - 为初始账户设置，610-615
+  - 安全问题，375
+  - 指定用于服务器连接，29
+  - 更新，728
+- 设置 PATH 环境变量，786-787
+- 路径名
+  - 执行 Perl 脚本，436
+  - 头文件和客户端库的路径，360, Web:1122
+- 模式匹配，73-74, 268-270
+  - Perl 的 DBI API，521-524
+  - 类型转换与模式匹配，275
+- 模式匹配运算符，826-830
+- 主机名指定符中的模式，728
+
+PDO (PHP Data Objects)，528, 543
+- 错误处理，533, 550-552
+- 多行结果集处理，544-547
+- 预编译语句，543
+- 服务器连接，532
+- SQL 语句执行，543-547
+
+PDO 类，Web:1208-Web:1215
+PDO 扩展
+- 类，Web:1208
+- 常量，Web:1223-Web:1224
+- 方法，Web:1208-Web:1209
+  - 用于 PDO 类，Web:1209-Web:1215
+  - 用于 PDOException 对象，Web:1222
+  - 用于 PDOStatement 对象，Web:1215-Web:1221
+
+PDO::ATTR_AUTOCOMMIT 常量，Web:1223
+
+PDO::ATTR_CLIENT_VERSION 常量，Web:1223
+
+PDO::ATTR_CONNECTION_STATUS 常量，Web:1223
+
+PDO::ATTR_DEFAULT_FETCH_MODE 常量，Web:1223
+
+PDO::ATTR_DRIVER_NAME 常量，Web:1223
+
+PDO::ATTR_ERRMODE 常量，Web:1223
+
+PDO::ATTR_SERVER_INFO 常量，Web:1223
+
+PDO::ATTR_SERVER_VERSION 常量，Web:1223
+
+PDO::FETCH_ASSOC 常量，Web:1223
+
+PDO::FETCH_BOTH 常量，Web:1223
+
+PDO::FETCH_BOUND 常量，Web:1223
+
+PDO::FETCH_CLASS 常量，Web:1223
+
+PDO::FETCH_INTO 常量，Web:1223
+
+PDO::FETCH_NUM 常量，Web:1224
+
+PDO::FETCH_OBJ 常量，Web:1224
+
+PDO::PARAM_BOOL 常量，Web:1224
+
+PDO::PARAM_INT 常量，Web:1224
+
+PDO::PARAM_NULL 常量，Web:1224
+
+PDO::PARAM_STR 常量，Web:1224
+
+PDOException 类，Web:1208, Web:1222
+
+PDOStatement 类，Web:1208, Web:1215-Web:1221
+
+每进程文件描述符限制，667
+
+每表 InnoDB 表空间，679
+
+性能
+- 数据目录结构的影响，597-599
+- 评估 API，352-354
+- 性能优化。另见 优化；查询优化；使用系统变量进行调优
+
+PERIOD_ADD() 函数，862
+
+PERIOD_DIFF() 函数，862
+
+Perl 脚本，436-437。另见 Perl 的 DBI API
+
+权限
+- 编辑，703-706
+- 查看，702-703
+
+perror 实用程序，1038, 1120
+
+幻影行，181
+
+PHP。另见 PHP API；PHP 脚本
+- 定义，527
+- 对 C API 的依赖，528
+- 安装
+  - 在 Unix 上，790-792
+  - 在 Windows 上，796
+- 与 MySQL 的接口，528
+- 获取，778
+- 作为 Apache 模块运行，527
+
+PHP API，346-349, 543, Web:1207。另见 PHP；PHP 脚本
+- 字符编码，541
+- 错误处理，533, 550-552
+- 评估，350-357
+

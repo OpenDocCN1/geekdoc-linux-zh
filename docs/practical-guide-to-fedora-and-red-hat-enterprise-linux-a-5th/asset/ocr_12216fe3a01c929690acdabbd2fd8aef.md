@@ -1,0 +1,46 @@
+# case
+
+The case structure (Figure 27-7, page 912) is a multiple-branch decision mechanism. The path taken through the structure depends on a match or lack of a match between the *test-string* and one of the *patterns*. The case control structure has the following syntax:
+
+```
+```
+case test-string in
+	pattern-1)
+		commands-1
+	;;
+	pattern-2)
+		commands-2
+	;;
+	pattern-3)
+		commands-3
+	;;
+... 
+	esac
+```
+```
+
+The following case structure examines the character that the user enters as the *test-string*. This value is held in the variable *letter*. If the *test-string* has a value of A, the structure executes the command following the *pattern* A. The right parenthesis is part of the case control structure, not part of the *pattern*. If the *test-string* has a value of B or C, the structure executes the command following the matching *pattern*. The asterisk (*) indicates *any string of characters* and serves as a catchall in case there is no match. If no *pattern* matches the *test-string* and if there is no catch-all (*) *pattern*, control passes to the command following the esac statement, without the case structure taking any action.
+
+```
+```
+$ cat case1
+  echo -n "Enter A, B, or C: "
+  read letter
+  case "$letter" in
+    A)   echo "You entered A"
+    ;;
+    B)   echo "You entered B"
+    ;;
+    C)   echo "You entered C"
+    ;;
+    *)   echo "You did not enter A, B, or C"
+    ;;
+  esac
+```
+
+```
+$ case1
+Enter A, B, or C: B
+You entered B
+```
+```

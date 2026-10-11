@@ -1,0 +1,14 @@
+capabilities. This gives you a means of keeping a copy of a database and making sure that changes to the original database propagate on a timely basis to the copy automatically.
+
+# 14.8.1 How Replication Works
+
+Database replication in MySQL is based on the following principles:
+
++   - In a replication relationship, one server acts as the master and another server acts as the slave. Each server must be assigned a unique replication ID.
++   - There can be multiple slaves per master. A slave can serve as a master to another slave, thus creating a chain of replication servers. Multiple-master replication to a slave is also possible, but is trickier to set up and is not covered here.
++   - Each slave must begin with its databases synchronized to those of its master. That is, any database to be replicated on the slave must be an identical copy of the master database when replication begins. After that, updates that are made on the master server propagate to the slave. Updates should not be made directly to the replicated databases on the slave.
++   - Communication of updates is based on the master server's binary log, which is where updates are recorded that are to be sent to the slaves. Binary logging therefore must be enabled on the master server. Stored updates in the binary log are called “events.”
++   - Each slave server must have permission to connect to the master and request updates. When a slave connects to its master, it tells the master how far into the master's binary log it had progressed when it last connected. This progress is measured in terms of replication coordinates: A binary log filename and position within that file. The master then begins sending to the slave those events in the binary log that occurred after the given coordinates. When the slave has read all available events, it pauses and waits for more.
++   - As new updates occur on the master server, it writes them to its binary log for later transmission to its slaves.
++   - The master server handles connected slaves much as it handles regular clients, and connected slaves count against the limit set by the max_connections system variable.
++   - On the slave side, the server uses two threads to handle replication duties. The I/O thread receives events to be processed from the master server and writes them to the slave's relay log. The SQL thread reads events from the relay log and executes them. The relay log serves as the means by which the I/O thread communicates changes to the SQL thread. As each relay log file is processed completely, the slave removes it automatically. The I/O and SQL threads operate independently, so each can be stopped or started separately from the other. This decoupling of functions into different threads has important benefits. For example, the I/O thread can continue to read events from the master server while you stop the SQL thread so that no updates occur in the slave's databases while you make a backup.

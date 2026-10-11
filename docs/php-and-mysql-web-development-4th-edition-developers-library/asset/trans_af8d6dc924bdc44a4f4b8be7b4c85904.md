@@ -1,0 +1,109 @@
+
+
+`mysql_com.h` 列出了前文列表之外的其他 `CLIENT_XXX` 值，但这些值要么未使用，要么仅供内部使用，因此客户端程序不应在标志值中指定它们。
+
+- `int mysql_select_db (MYSQL *conn, const char *db_name);`
+
+  将 `db_name` 指定的数据库选为默认数据库，该数据库将成为不包含显式数据库限定符的表引用的默认值。如果你没有权限访问该数据库，`mysql_select_db()` 将失败。
+
+  `mysql_select_db()` 最常用于在连接存续期间更改数据库。通常，在调用 `mysql_real_connect()` 时会指定要使用的初始数据库，这比连接后调用 `mysql_select_db()` 更快。
+
+  `mysql_select_db()` 成功时返回零，失败时返回非零值。
+
+- `int mysql_set_character_set (MYSQL *conn, const char *cs_name);`
+
+  设置连接的默认字符集（相当于执行了 `SET NAMES` 语句）。`cs_name` 指向包含字符集名称的字符串。
+
+  `mysql_set_character_set()` 成功时返回零，失败时返回非零值。
+
+  此例程是在 MySQL 5.0.7 中引入的。
+
+- `my_bool mysql_ssl_set (MYSQL *conn, const char *key, const char *cert, const char *ca, const char *capath, const char *cipher);`
+
+  此函数用于建立到 MySQL 服务器的 SSL 安全连接。如果客户端库未编译 SSL 支持，`mysql_ssl_set()` 不起任何作用。否则，它会在你调用 `mysql_real_connect()` 时设置建立加密连接所需的信息。（换言之，要设置安全连接，请先调用 `mysql_ssl_set()`，然后调用 `mysql_real_connect()`。）
+
+  `mysql_ssl_set()` 始终返回 0；任何 SSL 配置错误将在你调用 `mysql_real_connect()` 时导致错误。
+
+  `key` 是密钥文件的路径。`cert` 是证书文件的路径。`ca` 是证书颁发机构文件的路径。`capath` 是用于证书验证的可信证书目录的路径。`cipher` 是列出要使用的密码或密码组的字符串。任何未使用的参数都可以传递 `NULL`。
+
+关于如何编写可以使用安全连接的客户端的示例，请参阅第 7.6 节“编写包含 SSL 支持的客户端”。
+
+`mysql_ssl_set()` 需要提前进行一些额外的 MySQL 配置。请参阅第 13.3 节“设置安全连接”以获取必要的背景信息。
+
+## G.3.3 错误报告例程
+
+本节中的函数使你能够确定和报告错误的原因。可能的错误代码和消息列在 `errmsg.h`、`mysqld_error.h` 和 `sql_state.h` 这些 MySQL 头文件中。
+
+- `unsigned int mysql_errno (MYSQL *conn);`
+
+  返回最近调用的返回状态的客户机例程的错误代码。如果没有发生错误，错误代码为零；否则为非零值。
+
+```c
+if (mysql_errno (conn) == 0)  
+    printf ("Everything is okay\n");  
+else  
+    printf ("Something is wrong!\n");
+```
+
+- `const char * mysql_error (MYSQL *conn);`
+
+  返回一个以 null 结尾的字符串，包含最近调用的返回状态的客户机例程的错误消息。如果没有发生错误，返回值为空字符串（这是零长度字符串 `""`，而不是 NULL 指针）。虽然通常在你已经知道发生错误后才调用 `mysql_error()`，但返回值本身可用于检测错误的发生：
+
+```c
+const char *err = mysql_error (conn);  
+if (err[0] == '\0')      /* empty string? */  
+    printf ("Everything is okay\n");  
+else  
+    printf ("Something is wrong!\n");
+```
+
+- `const char * mysql_sqlstate (MYSQL *conn);`
+
+  返回一个以 null 结尾的字符串，包含最近调用的返回状态的客户机例程的 SQLSTATE 错误代码。此代码是一个五字符字符串。SQLSTATE 值取自 ANSI SQL 和 ODBC 标准。值为 `"00000"` 表示“无错误”。值为 `"HY000"` 表示“通用错误”。此值用于尚未分配更具体的 SQLSTATE 代码的 MySQL 错误。
+
+```c
+if (strcmp (mysql_sqlstate (conn), "00000") == 0)
+    printf ("Everything is okay\n");
+else
+    printf ("Something is wrong!\n");
+```
+
+## G.3.4 语句构建与执行例程
+
+本节中的函数使你能够将 SQL 语句发送到服务器。`mysql_hex_string()` 和 `mysql_real_escape_string()` 通过编码需要特殊处理的字符来帮助你构建语句。除非你启用了后文第 G.3.8 节“多重结果集例程”中描述的多语句执行，否则每个发送到服务器执行的字符串必须由单个 SQL 语句组成，并且不应以分号字符（`;`）或 `\g` 序列结尾。`;` 和 `\g` 是 `mysql` 客户端程序的约定，而不是 C 客户端库的约定。
+
+- `unsigned long mysql_hex_string (char *to_str, const char *from_str, unsigned long from_len);`
+
+  编码可能包含特殊字符的字符串，以便其可在 SQL 语句中使用。
+
+  要编码的缓冲区指定为计数字符串；`from_str` 指向该缓冲区，`from_len` 指示其中的字节数。`mysql_hex_string()` 使用两个十六进制数字对缓冲区中的每个字符进行编码，将编码结果写入 `to_str` 指向的缓冲区，并添加一个终止 null 字节。`to_str` 必须指向一个现有的缓冲区，其长度至少为 `(from_len*2)+1` 字节。`mysql_hex_string()` 返回编码字符串的长度，不包括终止 null 字节。
+
+  这里有一个示例：
+  `to_len = mysql_hex_string (to_str, "O\\'\\'\\n\\r\\032", 7);`
+  `printf ("to_len = %d, to_str = %s\n", to_len, to_str);`
+
+  该示例产生以下输出：
+  `to_len = 14, to_str = 005C2722204D1A`
+
+  `mysql_hex_string()` 返回的编码字符串不包含内部 null 字节，但以 null 结尾，因此你可以使用 `strlen()` 或 `strspn()` 等函数。请注意，结果值本身在 SQL 语句中作为十六进制常数是不合法的。要构建合法的常数，你应在开头添加 `0x`，或者在开头添加 `x` 并在结尾添加 `*`。
+
+- `int mysql_query (MYSQL *conn, const char *stmt_str);`
+
+  给定指定为 null 结尾字符串的 SQL 语句，`mysql_query()` 将该语句发送到服务器以执行。字符串不应包含二进制数据；特别是，它不应包含 null 字节，因为 `mysql_query()` 会将第一个 null 字节解释为语句的结尾。如果你的语句包含二进制数据，请改用 `mysql_real_query()`。`mysql_real_query()` 比 `mysql_query()` 稍快。`mysql_query()` 成功时返回零，失败时返回非零值。成功的语句是指服务器接受其为合法且无错误执行的语句。成功并不隐含关于受影响或返回的行数的任何信息。
+
+- `unsigned long mysql_real_escape_string (MYSQL *conn, char *to_str, const char *from_str, unsigned long from_len);`
+
+  编码可能包含特殊字符的字符串，以便其可在 SQL 语句中使用，并在编码时考虑当前字符集。表 G.7 列出了被视为特殊的字符及其编码方式。（请注意，该列表不包括 SQL 模式字符 '%' 和 '.'。）
+
+  MySQL 本身要求字符串内必须转义的唯一字符是反斜杠和包围字符串的引号字符（`'` 或 `"`）。`mysql_real_escape_string()` 转义其他字符，以生成更容易阅读和在日志文件中处理的字符串。
+
+| 特殊字符 | 编码 |
+|---|---|
+| NUL (零值字节) | `\0` (反斜杠-零) |
+| 反斜杠 | `\\` (反斜杠-反斜杠) |
+| 单引号 | `\'` (反斜杠-单引号) |
+| 双引号 | `\"` (反斜杠-双引号) |
+| 换行符 | `\n` (反斜杠-'n') |
+| 回车符 | `\r` (反斜杠-'r') |
+| Control-Z | `\Z` (反斜杠-'Z') |
+

@@ -1,0 +1,17 @@
+your username or your password is not correct, login displays Login incorrect, pauses, and prompts you to log in again.
+
+All passwords in the /etc/shadow file are encrypted or hashed using MD5 (page 1093). It is not feasible to recover an encrypted password. When you log in, the login process encrypts/hashes the password you type at the prompt and compares it to the encrypted/hashed password in /etc/shadow. If the two passwords match, you are authenticated.
+
+![](bbox=[0.07, 0.25, 0.15, 0.26])
+
+With a graphical login, the Upstart init daemon starts gdm (the GNOME display manager) by default on the first free virtual terminal, providing features similar to those offered by mingetty and login. The gdm utility starts an X server and presents a login window. The gdm display manager then uses PAM to authenticate the user and runs the scripts in the /etc/gdm/PreSession directory. The scripts inspect the user's ~/.dmrc file, which stores the user's default session and language, and launch the user's session. GNOME stores the state of the last saved session and attempts to restore it when the user logs back in.
+
+With NIS, login compares the username and password with the information in the appropriate naming service instead of (or in addition to) the passwd and shadow files. If the system is configured to use both methods (/etc/passwd and NIS), it checks the /etc/nsswitch.conf file (page 455) to see in which order it should consult them.
+
+PAM (page 458) — the Pluggable Authentication Module facility—allows you greater control over user logins than /etc/passwd and /etc/shadow files do. Using PAM, you can specify multiple levels of authentication, mutually exclusive authentication methods, or parallel methods, each of which is by itself sufficient to grant access to the system. For example, you can have different authentication methods for console logins and for ssh logins. Likewise, you can require that modem users authenticate themselves via two or more methods (such as a smart-card or badge reader and a password). PAM modules also provide security technology vendors with a convenient way to interface their hardware or software products with a system.
+
+When the username and password are correct, login or the scripts in PreSession consult the appropriate services to initialize your user and group IDs, establish your home directory, and determine which shell or desktop manager you will be working with.
+
+The login utility/PreSession scripts assign values to the HOME, PATH, LOGNAME, SHELL, TERM, and MAIL variables. They look in the /etc/group file (page 472) to identify the groups the user belongs to. When login has finished its work, it overlays itself with the login shell, which inherits the variables set by login. In a graphical environment, the PreSession scripts start the desktop manager.
+
+During a textual login, the login shell assigns values to additional shell variables and executes the commands in the system startup shell scripts /etc/profile and /etc/bashrc. Some systems have additional system startup shell scripts. Although the actions performed by these scripts are system dependent, they typically display the contents of the /etc/motd (message of the day) and /etc/issue files, let you know that you have mail, and set umask (page 440), the file-creation mask.

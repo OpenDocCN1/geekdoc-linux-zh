@@ -1,0 +1,20 @@
+a minimum size of 256 megabytes. The worst-case hibernation requires a swap size that is one and a half times the size of RAM. For example, a system with 1 gigabyte of RAM should have a 1- to 2-gigabyte swap partition. Although a swap partition is not required, most systems perform better when one is present. Also, some applications (e.g., Oracle) use swap space directly. On a system with more than one drive, having swap partitions on each drive can further improve performance. A swap partition is not mounted, so it is not associated with a mount point. See swap on page 479 for more information.
+
+/boot The /boot partition holds the kernel and other data the system needs when it boots; it cannot be under the control of LVM. This partition is typically approximately 200 megabytes, although the amount of space required depends on how many kernel images you want to keep on hand. It can be as small as 50 megabytes. For installation, a minimum of 300 megabytes is recommended for Fedora systems.
+
+Although you can omit the /boot partition, it is useful in many cases. Many administrators put an ext2 filesystem on this partition because the data on it does not change frequently enough to justify the overhead of the ext3 journal. Some older BIOSes require the /boot partition (or the / (root) partition if there is no /boot partition) to appear near the beginning of the disk.
+
+# Where to put the /boot partition
+
+> caution
+> On older systems, the /boot partition must reside completely below cylinder 1023 of the hard disk.
+> An easy way to ensure compliance with this restriction is to make the /boot partition one of the first partitions on the disk. When a system has more than one hard disk, the /boot partition must also reside on a drive on the following locations:
+> * Multiple IDE or EIDE drives: the primary controller
+> * Multiple SCSI drives: ID 0 or ID 1
+> * Multiple IDE and SCSI drives: the primary IDE controller or SCSI ID 0
+
+/var The name var is short for variable: The data in this partition changes frequently. Because /var holds the bulk of system logs, package information, and accounting data, making /var a separate partition is a good idea. In this way, if a user runs a job that consumes all of the users' disk space, system log files in /var/log will not be affected. The /var partition can occupy from 500 megabytes to as much as several gigabytes for extremely active systems with many verbose daemons and a lot of printer and mail activity (the print queues reside in /var/spool/cups and incoming mail is stored in /var/mail). For example, software licenses are often extremely active systems. By default, Apache content (the Web pages it serves) is stored on /var under Fedora/RHEL; you may want to change the location Apache uses.
+
+Although such a scenario is unlikely, many files or a few large files may be created under the /var directory. Creating a separate filesystem to hold the files in /var will prevent these files from overruning the entire directory structure, bringing the system to a halt, and possibly creating a difficult recovery problem.
+
+Some administrators choose to put the log directory in a separate partition to isolate system logs from other files in the /var directory.

@@ -1,0 +1,43 @@
+```
+```
+tmpfile=/tmp/$$.$script
+cp $editfile $tmpfile
+if vim $editfile
+then
+   mv $tmpfile bak.$(basename $editfile)
+   echo "$script: backup file created"
+else
+   mv $tmpfile editerr
+   echo "$script: edit error--copy of " \
+   "original file is in editerr" 1>&2
+fi
+```
+```
+
+If you call `safedit` without any arguments, the `case` structure executes its first branch and calls `vim` without a filename argument. Because an existing file is not being edited, `safedit` does not create a backup file. If you call `safedit` with one argument, it runs the commands in the second branch of the `case` structure and verifies that the file specified by `$1` does not yet exist or is the name of a file for which the user has read and write permission. The `safedit` script also verifies that the user has write permission for the working directory. If the user calls `safedit` with more than one argument, the third branch of the `case` structure presents a usage message and exits with a status of `1`.
+
+# Set `PATH`
+
+In addition to using a `case` structure for branching based on the number of command-line arguments, the `safedit` script introduces several other features. First, at the beginning of the script, the `PATH` variable is set to search `/bin` and `/usr/bin`. Setting `PATH` in this way ensures that the commands executed by the script are standard utilities, which are kept in those directories. By setting `PATH` inside a script, you can avoid the problems that might occur if users have set `PATH` to search their own directories first and have scripts or programs with the same names as the utilities the script calls. You can also include absolute pathnames within a script to achieve this end, but this practice can make a script less portable.
+
+# Name of the program
+
+In a second `safedit` feature, the following line creates a variable named `script` and assigns the simple filename of the script to it:
+
+```
+```
+script=$(basename $0)
+```
+```
+
+The `basename` utility sends the simple filename component of its argument to standard output, which is assigned to the `script` variable, using command substitution. The `$0` holds the command the script was called with (page 931). No matter which of the following commands the user calls the script with, the output of `basename` is the simple filename `safedit`:
+
+```
+```
+$ /home/alex/bin/safedit memo
+$ ./safedit memo
+$ safedit memo
+```
+```
+
+After the `script` variable is set, it replaces the filename of the script in usage and error messages. By using a variable that is derived from the command that invoked the script rather than a filename that is hardcoded into the script, you can create

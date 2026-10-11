@@ -1,0 +1,529 @@
+
+## 索引
+
+- `-r` 选项
+- `mysqlcheck` 客户端程序，1081
+- `mysqld`，1085
+- `mysqldump` 工具，1110
+- `mysqlimport` 客户端程序，1118
+- `-R` 选项 (`mysqlbinlog` 工具)，1078
+- `RADIANS()` 函数，837
+- `RaiseError` 属性 (Perl DBI API)，443, Web:1199
+- `RAND()` 函数，566, 838
+
+### range
+
+- 数据值，选择数据类型，285-286
+- 十进制数，221
+- 数值数据类型，219
+- 范围分区，132
+- `RANGE()` 函数，965
+- `range_alloc_block_size` 系统变量，911
+
+- `--raw` 选项 (`mysql` 客户端程序)，1064
+- InnoDB 共享表空间中的 raw 分区，676
+- RDBMS，定义，21-22
+
+### READ COMMITTED
+
+- 事务级别，181, 1006
+
+### READ 锁
+
+- 991
+
+### READ UNCOMMITTED
+
+- 事务级别，181, 1006
+
+- `read_buffer_size` 系统变量，667, 911, 1057
+- `--read-from-remote-server` 选项 (`mysqlbinlog` 工具)，1078
+
+### 只读访问
+
+- 锁定数据库，743
+- 锁定表，740-743
+- `--read-only` 选项 (`mysqldadmin` 工具)，1055
+- `read_only` 系统变量，911
+- `read_nd_buffer_size` 系统变量，911
+
+### 读/写访问
+
+- 锁定表，740-743
+
+- Readline 库，1060
+- `REAL` 数据类型，222
+- `REAL_AS_DEFAULT` SQL 模式，222
+- `REAL_AS_FLOAT` SQL 模式，917
+- `REBUILD PARTITION` 子句，945
+- 重建索引，328
+- `--reconnect` 选项 (`mysql` 客户端程序)，1064
+- `--record_log_pos` 选项 (`mysqlhotcopy` 工具)，1115
+- `--recover` 选项 (`mysamchk` 工具)，761, 1055
+
+### 恢复过程
+
+- 763-764
+- 数据库恢复，764
+- InnoDB 自动恢复，767-768
+- 重新执行二进制日志文件语句，765-767
+- 表恢复，764-765
+
+- `REFERENCES` 子句，187
+- `REFERENCES` 权限，716
+- 在 PHP API 中引用包含文件，537
+
+### 引用完整性
+
+- 50
+- 外键，185-192
+- 无外键，192-193
+
+- `refresh` 命令 (`mysqldadmin` 工具)，1075
+- `REFRESH_GRANT` 选项 (`mysql_refresh()` 函数)，Web:1173
+- `REFRESH_HOSTS` 选项 (`mysql_refresh()` 函数)，Web:1173
+- `REFRESH_LOG` 选项 (`mysql_refresh()` 函数)，Web:1174
+- `REFRESH_MASTER` 选项 (`mysql_refresh()` 函数)，Web:1174
+- `REFRESH_SLAVE` 选项 (`mysql_refresh()` 函数)，Web:1174
+- `REFRESH_STATUS` 选项 (`mysql_refresh()` 函数)，Web:1174
+- `REFRESH_TABLES` 选项 (`mysql_refresh()` 函数)，Web:1174
+- `REFRESH_THREADS` 选项 (`mysql_refresh()` 函数)，Web:1174
+- `REGEXP` 运算符，268, 270, 315, 827
+- `--regexp` 选项 (`mysqlhotcopy` 工具)，1116
+
+### register_globals
+
+- 配置设置 (PHP API)，555
+
+### regular expressions
+
+- 270
+- 另见 expressions
+
+### rehash
+
+- 命令 (`mysql` 客户端程序)，1068
+
+- `RELATED()` 函数，883
+- 关系函数 (空间值)，882-883
+- 相对比较运算符，带有子查询，159-160
+- `--relative` 选项 (`mysqladmin` 工具)，1073
+- 相对更新，绝对更新对比，184
+
+### relay log
+
+- 646, 652, 773
+
+### relay log index file
+
+- 646, 652
+
+- `--relay-log` 选项 (`mysqld`)，773, 1098
+- `RELAY_LOG_FILE` 参数定义，948
+- `--relay-log-index` 选项 (`mysqld`)，773, 1098
+- `--relay-log-info-file` 选项 (`mysqld`)，1098
+- `RELAY_LOG_POS` 参数定义，948
+- `relay_log_purge` 系统变量，911
+- `relay_log_space_limit` 系统变量，911
+
+### RELEASE 子句
+
+- 950, 997
+
+### RELEASE SAVEPOINT 语句
+
+- 993
+
+### RELEASE_LOCK() 函数
+
+- 876
+
+### relevance rankings
+
+- 846
+
+### reload
+
+- 命令 (`mysqladmin` 工具)，1076
+
+### RELOAD 权限
+
+- 643, 714, 730
+
+### reloading grant tables
+
+- 723
+
+### 数据目录内容迁移
+
+- 602
+- 数据库迁移，604-606
+- 整个数据目录迁移，604
+- InnoDB 共享表空间迁移，606
+- 迁移方法，602-603
+- 注意事项，603
+- 状态和日志文件迁移，607
+- 表迁移，606
+- 验证，603-604
+
+- `--remove` 选项 (`mysqld`)，1095
+
+### REMOVE PARTITIONING 子句
+
+- 945
+
+### remove_backslashes() 方法
+
+- (PHP API)，555
+
+### removing
+
+- 另见 deleting
+- InnoDB 表，590
+- 表，593
+- 临时文件，762
+
+### RENAME 子句
+
+- 144, 944
+
+### RENAME TABLE 语句
+
+- 144, 660, 994
+
+### RENAME TO 子句
+
+- 939
+
+### RENAME USER 语句
+
+- 632, 994
+
+### 重命名
+
+- 列，143
+- 表，144
+
+### 美国历史联盟示例续订通知
+
+- 发送，484, 490
+
+### REORGANIZE PARTITION 子句
+
+- 945
+
+- `--repair` 选项 (`mysqlcheck` 客户端程序)，1081
+
+### REPAIR TABLE 语句
+
+- 758, 994
+
+### 修复表
+
+- 757-758
+- `mysqladmin` 工具，760-763
+- `mysqlcheck` 工具，759-760
+- `REPAIR TABLE` 语句，758
+
+### REPEAT 语句
+
+- 1031
+
+### REPEAT() 函数
+
+- 273, 848
+
+### REPEATABLE READ
+
+- 事务级别，181, 1006
+
+### REPLACE 关键字
+
+- 987
+
+### --replace 选项
+
+- `mysqldump` 工具，1110
+- `mysqldump` 客户端程序，1118
+
+### REPLACE 语句
+
+- 995
+
+### REPLACE() 函数
+
+- 849
+
+- 替换 Unix socket 文件，627
+
+### --replicate-do-db 选项
+
+- (`mysqld`)，1098
+
+### --replicate-do-table 选项
+
+- (`mysqld`)，1098
+
+### --replicate-ignore-db 选项
+
+- (`mysqld`)，772, 1098
+
+### --replicate-ignore-table 选项
+
+- (`mysqld`)，1098
+
+### --replicate-wild-do-table 选项
+
+- (`mysqld`)，1099
+
+### --replicate-rewrite-db 选项
+
+- (`mysqld`)，1099
+
+### --replicate-same-server-id 选项
+
+- (`mysqld`)，1099
+
+### --replicate-wild-ignore-table 选项
+
+- (`mysqld`)，1099
+
+### 复制 (Replication)
+
+- 768-770
+- 管理员职责，582-583
+- 从服务器备份，774-775
+- 二进制日志格式，773
+- 建立主从关系，770-773
+- 日志复制，657-658
+- 多服务器复制，688
+
+### REPLICATION CLIENT 权限
+
+- 714
+
+### REPLICATION SLAVE 权限
+
+- 714
+
+### --report-host 选项
+
+- (`mysqld`)，1099
+
+### --report-password 选项
+
+- (`mysqld`)，1099
+
+### --report-port 选项
+
+- (`mysqld`)，1099
+
+### --report-user 选项
+
+- (`mysqld`)，1099
+
+### REQUIRE 子句
+
+- 635, 640, 642, 734, 981
+
+- Perl DBI API 要求，435
+- 要求安全连接，734-735
+- 重排序 AUTO_INCREMENT 列，261-262
+- 保留文件描述符，909
+
+### RESET 语句
+
+- 995
+
+### --resetmaster 选项
+
+- (`mysqlhotcopy` 工具)，1116
+
+### --resetslave 选项
+
+- (`mysqlhotcopy` 工具)，1116
+
+- 重置示例数据库，57-58
+- 限制资源消耗，642-643
+- 资源管理列 (用户权限表)，710, 718-719
+
+### RESTRICT 关键字
+
+- 974
+
+### --result-file 选项
+
+- `mysqlbinlog` 工具，1078
+- `mysqldump` 工具，1110
+
+### 结果集元数据
+
+- (Perl DBI API)，471, 475
+
+### 结果集处理函数
+
+- C API，Web:1152, 539-547
+- 多行结果集处理 (PHP API)，Web:1168-Web:1173
+
+### 结果集
+
+- 获取完整结果集 (Perl DBI API)，454-456
+- 处理 (C API)，391-394
+- 元数据 (C API)，400-405
+- `mysql_store_result()`，398-400
+- NULL 值，在 PHP API 中测试，547
+
+### 检索
+
+- 多表逆转，150
+- 表信息，58, 91
+
+### RETURN 语句
+
+- 292, 1031
+
+### RETURNS 子句
+
+- 292, 954
+
+### REVERSE() 函数
+
+- 849
+
+### REVOKE 语句
+
+- 614, 631, 643-644, 996-997
+
+- 撤销权限，643-644
+
+### RIGHT JOIN 关键字
+
+- 1001
+
+### 右连接
+
+- 154-158
+
+### RIGHT() 函数
+
+- 849
+
+### 回滚 (事务)
+
+- 175
+
+### ROLLBACK 语句
+
+- 176, 997
+
+### rollback() 方法
+
+- DBI database-handle，Web:1188
+- PDO 类，Web:1215
+
+- root 账户，610
+- 轮换日志表，659
+- 轮换日志，654-657
+
+### ROUND() 函数
+
+- 278, 338
+
+### 舍入
+
+- 分数，219
+- 数值数据值，226
+
+- `Routine_name` 值 (scope 列内容)，721
+- `Routine_type` 值 (scope 列内容)，721
+- routines. 另见 functions
+- `--routines` 选项 (`mysqldump` 工具)，751, 1110
+- 行构造器，815
+- 行存储格式，查询优化选择，323
+- 行子查询，158
+- 基于行的二进制日志记录，773
+- `ROW_COUNT()` 函数，887
+- `ROW_FORMAT` 表选项，963
+- 行级锁定，712
+
+### 行修改语句
+
+- C API，390–391
+- Perl DBI API，446–447
+- 在 PDO 中的处理，543
+
+### rowCount() 方法
+
+- PDOStatement 对象，Web:1221
+- PHP API，548
+
+### 行
+
+- 计算查询结果，68–70
+- 逐个删除，260
+- 删除/更新，91–93
+- 获取 (Perl DBI API)，448–452
+  - 完整结果集，454–456
+  - 计数作为，452
+  - 单行，452–453
+- 插入，53–57
+- 限制查询结果，67–68
+- 排序查询结果，65–66
+
+- `rows` 属性 (Perl DBI API)，Web:1205
+- `rows()` 方法 (DBI statement-handle)，452, Web:1195
+
+### RPAD() 函数
+
+- 849
+
+### --rpl-recovery-rank 选项
+
+- (`mysqld`)，1099
+
+- `rpl_recovery_rank` 系统变量，911
+- `Rpl_status` 状态变量，928
+- RPM 发行版，安装，783–784
+- RTF 格式，生成美国历史联盟目录，478–484
+
+### RTRIM() 函数
+
+- 849
+
+- 在 Windows 上运行多个服务器，693–695
+
+### runtime
+
+- 设置系统变量，664–665, 890
+- 指定连接参数 (C API)，371–384
+- 存储引擎选项，669
+
+## S
+
+### \s 命令
+
+- (`mysql` 客户端程序)，1068
+
+### -S 选项
+
+- (`mysamckchk` 工具)，1043, 1055
+- (`mysqladmin` 工具)，1078
+
+- `--safe-mode` 选项 (`mysqld`)，1091
+- `-saf-recover` 选项 (`mysamchk` 工具)，762, 1055
+- `--safe-show-database` 选项 (`mysqld`)，1091
+- `--safe-updates` 选项 (`mysql` 客户端程序)，1064
+- `--safe-user-create` 选项 (`mysqld`)，1091
+- `--safesmali-mem-limit` 选项 (`mysqld`)，1092
+
+### 示例数据库
+
+- 17
+- 创建，33–34
+- 成绩管理示例
+  - 在浏览器中显示分数，517–521
+  - 在线输入/编辑分数，552–565
+  - 目标，20
+  - 表创建，42–53
+- 获取和安装，777–778
+- 重置，57–58

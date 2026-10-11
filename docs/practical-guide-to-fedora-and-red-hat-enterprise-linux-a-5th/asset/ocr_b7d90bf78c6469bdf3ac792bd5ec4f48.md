@@ -1,0 +1,11 @@
+# # THE OBJECT PROPERTIES WINDOW
+
+The Object Properties window displays information about a file, such as who owns it, permissions, size, location, MIME type, ways to work with it, and so on. This window is titled *filename Properties*, where *filename* is the name of the file you clicked to open the window. To display this window, right-click an object and select *Properties* from the drop-down menu. The Properties window initially displays some basic information. Click the tabs at the top of the window to display additional information. Different types of files are associated with different sets of tabs. You can modify the settings in this window only if you have permission to do so. This section describes the five tabs most commonly found in Object Properties windows.
+
++   **Basic** The Basic tab displays information about the file, including its MIME type, and enables you to select a custom icon for the file and change its name. Change the name of the file in the text box labeled **Name**. If the filename is not listed in a text box, you do not have permission to change it. An easy way to change the icon is to open a File Browser window at * /usr/share/icons*. Work your way down through the directories until you find an icon you like, and then drag and drop it on the icon to the left of **Name** in the Basic tab of the Object Properties window. This technique does not work for files that are links (indicated by the arrow emblem at the upper right of the object).
+
++   **Emblems** The Emblems tab (Figure 4-21, left) allows you to add and remove emblems associated with the file by placing or removing a tick in the check box next to an emblem. Figure 4-17 on page 115 shows some emblems on file objects. Nautilus displays emblems in both its Icon and List views, although there may not be room for more than one emblem in the List view. Emblems are displayed on the desktop as well. You can also place an emblem on an object by dragging the emblem from the Side pane/Emblems and dropping it on an object in the View pane (page 265) of a File Browser window. Drag the Erase emblem to an object to remove most emblems from the object.
+
+![](bbox=[0.27, 0.66, 0.83, 0.88])
+
+**Figure 4-21** The Object Properties window: Emblems tab (left); Permissions tab (right)

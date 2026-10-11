@@ -1,0 +1,35 @@
+```
+#   
+    case "$answer" in
+    a)
+        date
+        ;;
+    b)
+        who
+        ;;
+    c)
+        pwd
+        ;;
+    d)
+        ls
+        ;;
+    *)
+        echo "There is no selection: $answer"
+        ;;
+    esac
+
+$ command_menu
+    COMMAND MENU
+    a. Current date and time
+    b. Users currently logged in
+    c. Name of the working directory
+    d. Contents of the working directory
+    Enter a, b, c, or d: a
+    Wed Jan 9 12:31:12 PST 2008
+```
+
+echo -e The -e option causes echo to interpret \n as a NEWLINE character. If you do not include this option, echo does not output the extra blank lines that make the menu easy to read but instead outputs the (literal) two-character sequence \n. The -e option causes echo to interpret several other backslash-quoted characters (Table 27-3). Remember to quote (i.e., place double quotation marks around the string) the backslash-quoted character so that the shell does not interpret it but passes the backslash and the character to echo. See xpg_echo (page 341) for a way to avoid using the -e option.
+
+Table 27-3 Special characters in echo (must use -e)
+
+| Quoted character | echo displays | |---|---| | \a | Alert (bell) | | \b | BACKSPACE | | \c | Suppress trailing NEWLINE | | \f | FORMFEED | | \n | NEWLINE | | \r | RETURN |

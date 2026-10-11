@@ -1,0 +1,37 @@
+# ## AMPERSAND
+
+Within a replacement string, an ampersand (&) takes on the value of the string that the search string (regular expression) matched. For example, the following **vim** Substitute command surrounds a string of one or more digits with **N**N. The ampersand in the replacement string matches whatever string of digits the regular expression (search string) matched:
+
+```
+:s/[0-9]*[0-9]*.*/NNNNNN/
+```
+
+Two character-class definitions are required because the regular expression `[0-9]*` matches *zero* or more occurrences of a digit, and *any* character string constitutes *zero* or more occurrences of a digit.
+
+# ## QUOTED DIGIT
+
+Within the search string, a bracketed regular expression, `\(\xxx*\)` (\xxx) in Perl], matches what the regular expression would have matched without the quoted parentheses, **xxx**. Within the replacement string, a quoted digit, *n*, represents the string that the bracketed regular expression (portion of the search string) beginning with the *n*th *\* matched. Perl accepts a quoted digit for this purpose, but the preferred style is to precece the digit with a dollar sign ($*n*; page 1011). For example, you can take a list of people in the form
+
+```
+last-name, first-name initial
+```
+
+and put it in the form
+
+```
+first-name initial last-name
+```
+
+with the following **vim** command:
+
+```
+:1,$s/^\\(.*,)\\.*/ (.,\\*)\\/2 \1/
+```
+
+This command addresses all the lines in the file (1,$). The Substitute command (s) uses a search string and a replacement string delimited by forward slashes. The first bracketed regular expression within the search string, `\\([^.]*)\\`, matches what the same unbracketed regular expression, `[^.]*`, would match: zero or more characters not containing a comma (the *last-name*). Following the first bracketed regular expression are a comma and a **SPACE** that match themselves. The second bracketed regular expression, `\\(.*,*)\\`, matches any string of characters (the *first-name* and *initial*).
+
+The replacement string consists of what the second bracketed regular expression matched (\2), followed by a **SPACE** and what the first bracketed regular expression matched (\1).
+
+# ## EXTENDED REGULAR EXPRESSIONS
+
+This section covers patterns that use an extended set of special characters. These patterns are called *full regular expressions* or *extended regular expressions*. In addition

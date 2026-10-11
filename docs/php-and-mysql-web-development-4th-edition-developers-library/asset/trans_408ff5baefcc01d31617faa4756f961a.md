@@ -1,0 +1,93 @@
+
+## 附录 E SQL 语法参考
+
+* **TYPE = engine_name**
+  这是 ENGINE 表选项的已弃用同义词。MySQL 在 MySQL 5.2.5 之前会识别它并生成警告，自该版本起该选项不可用。
+
+* **UNION = tbl_list**
+  此选项用于 MERGE 表。它指定了一个由逗号分隔的 MyISAM 表列表，这些表构成了 MERGE 表。
+
+### 末尾的 SELECT 语句
+
+如果指定了 select_stmt 子句（作为末尾的 SELECT 语句），则使用语句返回的结果集内容创建表。根据是否指定了 IGNORE 或 REPLACE，具有唯一索引中重复值的行将被忽略或替换现有行。如果两者均未指定，该语句将以错误中止。
+
+### 末尾的 LIKE 子句
+
+如果提供了末尾的 LIKE tbl_name2 子句，则表将作为 tbl_name2 的空副本创建。您必须拥有 tbl_name2 的 SELECT 权限。副本将包含相同的列定义、索引定义和表选项，但有以下例外：不会复制 DATA DIRECTORY 和 INDEX DIRECTORY 表选项，也不会复制外键定义。
+
+### 外键支持
+
+InnoDB 存储引擎提供外键支持。子表中的外键由 FOREIGN KEY 指示，包含一个可选的外键 ID、构成外键的列列表以及一个 REFERENCES 定义。如果给出了 ID，除非 InnoDB 自动为外键创建索引（在这种情况下，fk_name 成为索引名称），否则该 ID 会被忽略。REFERENCES 定义指定了外键所引用的父表和列，并指示在删除父表或子表行时应执行的操作。默认操作是防止会对引用完整性造成破坏的对父表或子表的删除或更新。RESTRICT 和 NO ACTION 操作与不指定操作相同。可以通过提供 ON DELETE 和 ON UPDATE 子句来指定明确的操作。InnoDB 实现的操作是 CASCADE（删除或更新对应的子表行）和 SET NULL（将对应子表行中的外键列设置为 NULL）。SET DEFAULT 操作未实现，InnoDB 会发出错误。
+
+REFERENCES 定义中的 MATCH 子句会被解析但被忽略。如果您为 InnoDB 以外的存储引擎指定外键定义，整个定义将被忽略。
+
+关于外键的进一步讨论，请参见第 2.14 节，“外键与引用完整性”。
+
+### 分区选项
+
+MySQL 5.1 引入了表分区支持，该功能允许您定义存储被划分为不同部分的表。以下讨论简要总结了定义表分区的语法。有关其他讨论和示例，请参见第 2.6.2.6 节“使用分区表”，并参阅 MySQL 参考手册以获取更多信息。
+
+分区描述以 PARTITION BY 开始，后跟一个分区函数，该函数计算每个表行的值。该值决定了行存储在哪个分区中。该描述还可以选择包含以下组件：
+
+*   一个 `PARTITIONS n` 子句，指示表有多少个分区。`n` 应为正整数。如果存在此子句且同时存在任何 `partition_definition` 子句，则必须有 `n` 个这样的定义。最大分区数为 1024，包括子分区。
+*   如何将分区划分为子分区的描述。
+*   `partition_definition` 子句列表，用于各分区。每个 `partition_definition` 描述单个分区的特征。它为分区提供名称，并可包含描述哪些分区函数值映射到该分区的 `VALUES` 子句、其他分区选项以及子分区定义列表。每个 `subpartition_definition` 子句类似，但描述的是子分区，且不能包含 `VALUES` 子句或子分区定义。
+
+有四种类型的分区函数用于计算将表行分配到分区的值。在以下描述中，`expr` 是指引用表中一个或多个列的表达式，而 `col_list` 是一个由逗号分隔的一个或多个列名列表。列名只能引用正在创建的表，而不能引用其他表。
+
+**`RANGE (expr)`** 分区将每个分区与 `expr` 可能值的范围子集相关联。它必须与包含 `VALUES LESS THAN` 子句的分区定义一起使用，该子句指定映射到该分区的函数值的整数上限。（NULL 值映射到第一个分区。）连续分区的 `VALUES` 子句应列出递增的上限值。最后一个分区可以使用 `MAXVALUE`，它适用于前面分区未涵盖的所有值。
+
+```sql
+CREATE TABLE t ( income BIGINT, ... )
+PARTITION BY RANGE (income)
+{
+    PARTITION p0 VALUES LESS THAN (10000),
+    PARTITION p1 VALUES LESS THAN (30000),
+    PARTITION p2 VALUES LESS THAN (75000),
+    PARTITION p3 VALUES LESS THAN (150000),
+    PARTITION p4 VALUES LESS THAN MAXVALUE
+};
+```
+
+**`LIST (expr)`** 分区将每个分区与一个值列表相关联。它必须与包含 `VALUES IN` 子句的分区定义一起使用，该子句枚举映射到该分区的整数函数值列表。如果 `expr` 可以评估为 NULL，请在其中一个 `VALUES` 列表中包含 NULL。
+
+```sql
+CREATE TABLE t ( id INT NULL, ... )
+PARTITION BY LIST (id)
+{
+    PARTITION p0 VALUES IN (1, 2, 3),
+    PARTITION p1 VALUES IN (4, 5, 6, NULL)
+};
+```
+
+**HASH(expr)** 分区基于根据行内容计算的 expr 值将行与分区关联。通常，HASH() 分区与指定要创建多少个分区的 PARTITIONS n 子句一起使用。行分配基于将 expr 除以 n 的余数。
+
+```sql
+CREATE TABLE t (d DATE, ...)
+PARTITION BY HASH(TO_DAYS(d))
+PARTITIONS 5;
+```
+
+HASH() 分区函数前可以加上 LINEAR，这会改变哈希算法。LINEAR 的一个优点是某些分区管理操作变得更高效，例如使用 ALTER TABLE 添加或删除分区。然而，如果未使用 LINEAR，行在各分区之间的分布可能不如未使用 LINEAR 时均匀。
+
+*   **KEY(col_list)** 分区类似于 HASH() 分区，但您指定要从中计算哈希值的表列，而服务器提供哈希函数。KEY() 前可以加上 LINEAR。
+
+如果为 HASH() 或 KEY() 分区包含分区定义列表，这些定义不应具有 VALUES 子句。VALUES 仅与 RANGE() 和 LIST() 一起使用。
+
+expr 必须是确定性的，即对于给定的输入，它始终产生相同的结果。例如，expr 可以使用 ABS()，但不能使用 RAND()。如果使用不允许的函数，CREATE TABLE 将返回错误。
+
+对于 RANGE() 或 LIST() 分区，expr 必须评估为整数值或 NULL。对于 HASH()，expr 必须评估为非 NULL、非负整数，因此如果表达式引用任何非整数列，必须将列值转换为整数。例如，如果 a 是一个 DATE 列，您可以使用 TO_DAYS(a) 将日期转换为天数，从而使得 HASH(TO_DAYS(d)) 成为一个有效的哈希函数。
+
+对于 KEY()，参数是列名，但这些列无需具有整数数据类型。
+
+每个 partition_option 值指定分区的一个附加特征，从以下列表中选择。（描述中使用了术语“partition”，但这些选项也可以用于子分区定义。）每个设置中的 = 是可选的。
+
+*   **COMMENT = 'str'**
+    分区的描述性注释。
+
+*   **DATA DIRECTORY = 'dir_name', INDEX DIRECTORY = 'dir_name'**
+    这些选项与前面描述的具有相同名称的表选项相似。它们指示存储该分区数据或索引的位置。默认位置是包含该表的数据库的数据库目录。
+
+*   **MAX_ROWS = n, MIN_ROWS = n**
+    这些选项是提示，指示您计划在该分区中存储的最大和最小行数。n 应为正整数。
+

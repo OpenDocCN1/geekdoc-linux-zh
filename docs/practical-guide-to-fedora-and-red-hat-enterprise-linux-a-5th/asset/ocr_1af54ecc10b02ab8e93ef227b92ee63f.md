@@ -1,0 +1,61 @@
+The `ls` command lists the same words as the script, demonstrating that the shell expands the asterisk into a list of files in the working directory. When the variable $firstname is surrounded by double quotation marks, the shell does not expand the asterisk. Thus the read1 script behaves correctly:
+
+```
+```
+$ read1
+Go ahead: *
+You entered: *
+```
+```
+
+If you want the shell to interpret the special meanings of special characters, do not use quotation marks.
+
+**REPLY** The read builtin has features that can make it easier to use. When you do not specify a variable to receive read's input, bash puts the input into the variable named **REPLY**. You can use the `-p` option to prompt the user instead of using a separate echo command. The following read1a script performs exactly the same task as read1:
+
+```
+```
+$ cat read1a
+read -p "Go ahead: "
+echo "You entered: $REPLY"
+```
+```
+
+The read2 script prompts for a command line and reads the user's response into the variable **cmd**. The script then attempts to execute the command line that results from the expansion of the **cmd** variable:
+
+```
+```
+$ cat read2
+read -p "Enter a command: " cmd
+$cmd
+echo "Thanks"
+```
+```
+
+In the following example, read2 reads a command line that calls the `echo` builtin. The shell executes the command and then displays **Thanks**. Next read2 reads a command line that executes the `who` utility:
+
+```
+```
+$ read2
+Enter a command: echo Please display this message.
+Please display this message.
+Thanks
+$ read2
+Enter a command: who
+alex    pts/4    Jun 17 07:50 (:0.0)
+scott   pts/12   Jun 17 11:54 (bravo.example.com)
+Thanks
+```
+```
+
+If **cmd** does not expand into a valid command line, the shell issues an error message:
+
+```
+```
+$ read2
+Enter a command: xxx
+./read2: line 2: xxx: command not found
+Thanks
+```
+```
+
+The read3 script reads values into three variables. The read builtin assigns one word (a sequence of nonblank characters) to each variable:

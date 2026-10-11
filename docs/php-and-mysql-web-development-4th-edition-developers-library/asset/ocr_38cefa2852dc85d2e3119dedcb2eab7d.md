@@ -1,0 +1,15 @@
+word as an identifier. If the ANSI_QUOTES SQL mode is enabled, identifiers can be quoted within either backticks or double quotes.
+
++   * Identifiers may be up to 64 characters long.
+
+In addition, the operating system on which a MySQL server runs may impose other constraints on identifiers. These stem from filesystem naming conventions because database and table names correspond to names of directories and files: Every database is represented in the filesystem by its database directory, and every table, no matter what storage engine is used, is represented in the filesystem by at least an .frm file. Therefore, these restrictions apply:
+
++   * MySQL allows database and table names to be up to 64 characters long, but the length of names is also bound by the length allowed by your operating system.
++   * Case sensitivity of the underlying filesystem affects how you name and refer to databases and tables. If the filesystem is case sensitive (as is typical for Unix), the two filenames abc and ABC refer to different files. If the filesystem is not case sensitive (as for Windows, or for HFS+ filesystems under Mac OS X), abc and ABC refer to the same file. You should keep this issue in mind if you develop a database on a server that uses case-sensitive filenames and there is a possibility you might move or replicate the database to a server where filenames are not case sensitive.
+
+Before MySQL 5.1.6, additional filesystem-related naming constraints are enforced:
+
++   * Database and table names cannot contain characters that are illegal in filenames. However, the rules for legal characters vary per operating system, which means there are characters that MySQL might allow in a name but that you would be well advised to avoid. For example, by using a quoted identifier, you can include a `*` character in a table name on Unix. But Windows does not allow `*` characters in filenames, so you would not be able to replicate or move the table to Windows without renaming it first. It’s best to stick with plain characters and avoid exotic ones.
++   * A database or table name cannot include the pathname separator character, even if quoted. On Unix and Windows, pathname components are separated by `/` and `\`, respectively, and neither character may be used. Both are disallowed regardless of platform to make it easier to move databases and tables from one platform to another. (For example, if you were allowed to use `/` in the name of a table on Windows, you could not move or replicate the table to Unix.)
+
+The problems just described that are caused by illegal or nonportable characters in filenames go away as of MySQL 5.1.6, because the server encodes special characters in identifiers that may be problematic in filenames. This encoding enables the restriction in names against `/`, `\`, and other characters to be lifted. In a name as used in SQL statements, any character outside the set of digits and Latin letters is mapped in the corresponding filename to `@` followed by an encoded character value. For example, `?` and `!` have

@@ -1,0 +1,21 @@
+Separating the physical control of the display (the server) from the processes needing access to the display (the client) makes it possible to run the server on one computer and the client on another computer. Most of the time, this book discusses running the X server and client applications on a single system. “Remote Computing and Local Displays” describes using X in a distributed environment.
+
+> **optional** You can run xev (X event) by giving the command xev from a terminal emulator window and then watch the information flow from the client to the server and back again. This utility opens the Event Tester window, which has a box in it, and asks the X server to send it events each time anything happens, such as moving the mouse pointer, clicking a mouse button, moving the mouse pointer into the box, typing, or resizing the window. The xev utility displays information about each event in the window you opened it from. You can use xev as an educational tool: Start it and see how much information is processed each time you move the mouse. Close the Event Tester window to exit from xev.
+
+# # Using X
+
+This section provides basic information about starting and configuring X from the command line. For more information see the Xserver man page and the man pages listed at the bottom of the Xserver man page.
+
+# ## STARTING X FROM A CHARACTER-BASED DISPLAY
+
+Once you have logged in on a virtual console (page 137), you can start an X Window System server by using startx. See page 423 for information on changing the initdefault entry in the /etc/inittab file that causes Linux to boot into single-user mode, where it displays a textual interface. When you run startx, the X server displays an X screen, using the first available virtual console. The following command causes startx to run in the background so you can switch back to this virtual console and give other commands:
+
+```
+```bash
+$ startx &
+```
+```
+
+# ## REMOTE COMPUTING AND LOCAL DISPLAYS
+
+Typically the X server and the X client run on the same machine. To identify a remote X server (display) an X application (client) is to use, you can either set a global shell variable or use a command-line option. Before you can connect to a remote X server, you must turn off two security features: You must turn off the Xorg -nolisten tcp option on the server and you must run xhost on the server to give the client permission to connect to the X server. You also need to disable the firewall or open TCP port 6000 (page 824). Unless you have a reason to leave these features off, turn them back on when you finish with the examples in this section—leaving them off weakens system security. These tasks must be performed on the X server because the features protect the server. You do not have to prepare the client. The examples in this section assume the server is named tiny and the client is named dog.

@@ -1,0 +1,7 @@
+![](bbox=[0.25, 0.07, 0.85, 0.53])
+
++   optional The shell does not require that the name of the program appear first on the command line. Thus you can structure a command line as follows:
++   $ >bb >aa cat
++   This command runs cat with standard input coming from the file named aa and standard output going to the file named bb. When the shell recognizes the redirect symbols (page 232), it recognizes and processes them and their arguments before finding the name of the program that the command line is calling. This is a properly structured—albeit rarely encountered and possibly confusing—command line.
+
++   Absolute versus relative pathnames When you give an absolute pathname on the command line or a relative pathname that is not a simple filename (i.e., any pathname that includes at least one slash), the shell looks in the specified directory (/bin in the case of the/bin/ls command) for a file that has the name ls and that you have permission to execute. When you give a simple filename, the shell searches through a list of directories for a filename that matches the specified name and that you have execute permission for. The shell does not look through all directories but only the ones specified by the variable named PATH. Refer to page 306 for more information on PATH. Also refer to the discussion of the which and whereis utilities on page 166.

@@ -1,0 +1,15 @@
+You can use this strategy when you invoke *mysqladmin* or other MySQL client programs as well.
+
+Additional discussion on using several servers can be found in Section 12.10, “Running Multiple Servers.”
+
+# ## 12.2 Arranging for MySQL Server Startup and Shutdown
+
+One general goal that you have as a MySQL administrator is to make sure that the server, *mysqld*, is running as much of the time as possible so that your users can access it. Occasionally, however, it’s necessary to stop the server. For example, if you’re relocating a database, you can’t have the server updating tables in that database at the same time, so you must shut it down. The tension between the desire to keep the server running and the need to stop it occasionally is something this book can’t resolve for you. But we can at least discuss how to get the server started and stopped so that you have the ability to perform either operation as you see fit. Many aspects of the procedures for this are different for Unix and Windows, so the following discussion covers them separately.
+
+# ### 12.2.1 Running the MySQL Server On Unix
+
+On Unix, the MySQL server can be started manually from the command line. It’s also possible to arrange for the server to run automatically at system boot time as part of the standard startup procedure. (This is in fact probably how you’ll start the server under normal operating conditions after you get everything set up the way you want.) But before discussing how to start the server, let’s consider which login account should be used to start it. On a multi-user operating system such as Unix, you have a choice about which login account to use for running the server. If you start the server manually, it runs as the Unix user you happen to be logged in as. For example, if I log in as *paul* and start the server, it runs as *paul*. If instead I use the *su* command to switch user to *root* and then start the server, it runs as *root*.
+
+Keep in mind two goals for your MySQL server startup procedures under Unix:
+
++   The server should run as some user other than *root*. To say the server runs “as” a given user means that the server process is associated with the user ID of that user’s Unix login account, and that it has that user’s privileges for reading and writing files in the filesystem. This has certain security implications, particularly for processes that run as the *root* user, because *root* is enabled to do anything, however dangerous. One way to avoid these dangers is to have the server relinquish its special privileges. Processes that start as *root* have the capability to change their user ID to that of another account and thus give up *root’s* privileges in exchange for those of a regular unprivileged user. This makes the process less dangerous. In general, you should limit the power of any process unless it really needs *root* access, and *mysqld* in particular does not. The server needs to access and manage the contents of the MySQL data directory, but little else. This means that if the server starts as *root*, you should tell it to change its user ID during startup to run as an unprivileged user.

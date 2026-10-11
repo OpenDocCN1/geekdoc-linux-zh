@@ -1,0 +1,17 @@
+| Class | Start bits | Address range | 0-7 | 8-15 | 16-23 | 24-31 |
+| :---- | :---------- | :------------ | :-- | :--- | :---- | :--- |
+| Class A | 0 | 001.000.000.000–126.000.000.000 | 0-netid | =====hostid======= | | |
+| Class B | 10 | 129.000.000.000–191.255.000.000 | 10----netid---- | ====hostid===== | | |
+| Class C | 110 | 192.000.000.000–223.255.255.000 | 110--------netid | =========hostid= | | |
+| Class D (multicast) | 1110 | 224.000.000.000–239.255.255.000 | 1110 | | | |
+| Class E (reserved) | 11110 | 240.000.000.000–255.255.255.000 | 11110 | | | |
+
+The first set of addresses, defining class A networks, is reserved for extremely large corporations, such as General Electric (3.0.0.0) and Hewlett-Packard (15.0.0.0), and for ISPs. One start bit (0) in the first position designates a class A network, 7 bits holds the network portion of the address (netid), and 24 bits holds the host portion of the address (hostid; see Table 10-2). This setup means that GE can have $2^{24}$, or approximately 16 million, hosts on its network. Unused address space and subnets (page 1109) lower this number quite a bit. The 127.0.0.0 subnet (page 373) is reserved, as are several others (see private address space on page 1100).
+
+Two start bits (10) in the first two positions designates a class B network, 14 bits holds the network portion of the address (netid), and 16 bits holds the host portion of the address, for a potential total of 65,534 hosts.$^{8}$ A class C network uses 3 start bits (100), 21 netid bits (2 million networks), and 8 hostid bits (254 hosts). Today a new large customer will not receive a class A or B network but is likely to receive a class C or several (usually contiguous) class C networks, if merited.
+
+Several other classes of networks exist. Class D networks are reserved for multicast (page 1095) networks. When you run netstat -nr on a Linux system, you can see whether the machine is a member of a multicast network. A 224.0.0.0 in the Destination column that netstat displays indicates a class D, multicast address (Table 10-2). A multicast is like a broadcast, but only hosts that subscribe to the
+
++   8. A 16-bit (class B) address can address $2^{16} = 65,536$ hosts, yet the potential number of hosts is two fewer than that because the first and last addresses on any network are reserved. In a similar manner, an 8-bit (class C) address can address only 254 hosts ($2^{8} - 2 = 254$). The 0 host address (for example, 194.16.100.0 for a class C network or 131.204.0.0 for a class B network) is reserved as a designator for the network itself. Several other operating systems use this as a broadcast address. The 255 host address (for example, 194.16.100.255 for a class C network or 131.204.255.255 for a class B network) is reserved as the IP broadcast address. An IP packet (datagram) that is sent to this address is broadcast to all hosts on the network.
+
++   The netid portion of a subnet does not have the same limitations. Often you are given the choice of reserving the first and last networks in a range as you would a hostid, but this is rarely done in practice. More often the first and last networks in the netid range provide more usable address space. Refer to “Subnets” on page 371.

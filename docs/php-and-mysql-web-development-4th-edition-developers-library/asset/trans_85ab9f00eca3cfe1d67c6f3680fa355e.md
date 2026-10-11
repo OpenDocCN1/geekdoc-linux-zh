@@ -1,0 +1,248 @@
+
+
+## 这些函数与 LENGTH() 类似，不同之处在于参数长度是按字符而非字节计算的。（多字节字符每个都计为长度 1。）
+
+### CHARSET(str)
+
+返回给定字符串的字符集名称，如果参数为 NULL，则返回 NULL。
+
+```
+CHARSET('abc')               → 'latin1'
+CHARSET(CONVERT('abc' USING utf8))          → 'utf8'
+CHARSET(123)                   → 'binary'
+```
+
+### COALESCE(expr1, expr2, . . . )
+
+返回列表中第一个非 NULL 元素，如果所有参数均为 NULL，则返回 NULL。
+
+```
+COALESCE(NULL, 1/0, 2, 'a', 45+97)         → '2'
+COALESCE(NULL, 1/0)                  → NULL
+```
+
+### COERCIBILITY(str)
+
+返回字符串的比较排序强制性，如果参数非法，则返回 NULL。比较排序强制性是指字符串在包含其他字符串的表达式中其比较排序规则被改变的程度。下表列出了从低到高比较排序强制性的返回值。
+
+| 比较排序强制性 | 含义 |
+| :----------- | :----------- |
+| 0 | 显式指定比较排序，不可强制转换 |
+| 1 | 未指定比较排序 |
+| 2 | 隐式比较排序 |
+| 3 | 系统值（如 USER()）的比较排序 |
+| 4 | 可强制转换比较排序 |
+| 5 | 可忽略比较排序（类似于 NULL） |
+
+```
+COERCIBILITY(_utf8 'abc' COLLATE utf8_bin)  → 0
+COERCIBILITY('abc')                          → 4
+```
+
+### COLLATION(str)
+
+返回给定字符串的比较排序名称，如果参数非法，则返回 NULL。
+
+```
+COLLATION(_latin2 'abc')              → 'latin2_general_ci'
+COLLATION(CONVERT('abc' USING utf8) COLLATE utf8_bin)  → 'utf8_bin'
+```
+
+### CONCAT(str1, str2, . . . )
+
+返回由所有参数串联而成的字符串，如果任何参数为 NULL，则返回 NULL。如果任何参数是二进制字符串，结果为二进制字符串；如果每个参数都是非二进制字符串，结果为非二进制字符串。除非将其强制转换为非二进制字符串，否则任何数字参数都会转换为二进制字符串。 CONCAT( ) 可以使用单个参数调用。
+
+```
+CONCAT('abc','def') → 'abcdef'
+CONCAT('abc') → 'abc'
+CONCAT('abc', NULL) → NULL
+CONCAT('Hello', ', ', 'goodbye') → 'Hello, goodbye'
+```
+
+串联字符串的另一种方法是按顺序放置；将它们彼此相邻指定。
+
+```
+'three' 'bind' 'mice' → 'threebindmice'
+'abc' 'def' = 'abcdef' → 1
+```
+
+### CONCAT_WS(delim, str1, str2, . . . )
+
+类似于 CONCAT( )，但返回由其第二个及后续参数组成的字符串，使用 delim 字符串作为字符串之间的分隔符。如果 delim 为 NULL，则返回 NULL，但忽略要串联的字符串列表中的任何 NULL 值。
+
+```
+CONCAT_WS(',', 'a','b','','d') → 'a,b,d'
+CONCAT_WS('+++', 'lemon', 'lime', NULL, 'grape') → 'lemon+++lime+++grape'
+```
+
+### CONV(n, from_base, to_base)
+
+给定以 from_base 进制表示的数字 n，返回以 to_base 进制表示的 n 的字符串表示。如果任何参数为 NULL，则结果为 NULL。 from_base 和 to_base 应为 2 到 36 范围内的整数。 n 被视为 BIGNT 值（64 位整数），但可以指定为包含高于 10 进制数字的字符串，可能包含非十进制数字。（这也是 CONV( ) 返回字符串的原因；结果可能包含从 'A' 到 'Z' 的字符（用于 11 到 36 进制。）如果 n 在 from_base 进制中不是合法数字，则结果为 0。例如，如果 from_base 是 16 且 n 是 'abcdefg'，则结果为 0，因为 'g' 不是合法的十六进制数字。
+
+n 中的非十进制字符可以指定为大写或小写。结果中的非十进制字符将是大写。
+
+将指定为十六进制数字 14 转换为二进制：
+
+```
+CONV('e',16,2) → '1110'
+```
+
+将指定为二进制的 255 转换为八进制：
+
+```
+CONV(11111111, 2, 8) → '377'
+CONV( '11111111', 2, 8) → '377'
+```
+
+默认情况下，n 被视为无符号数。如果将 `to_base` 指定为负数，则 n 被视为有符号数。
+
+```
+CONV(-10,10,16)                → 'FFFFFFFFFFFFFFFE'
+CONV(-10,10,-16)               → '-A'
+```
+
+### EXPORT_SET(n, on, off, delim[,bit_count]])
+
+返回由 *on* 和 *off* 字符串组成的字符串，以分隔符字符串 *delim* 分隔。默认分隔符是逗号。 *on* 用于表示值 *n* 中设置的每个位，而 *off* 用于表示未设置的每个位。结果中最左侧的字符串对应 *n* 中的低位。 *bit_count* 指示要检查的 *n* 中的最大位数。默认的 *bit_count* 值为 64，这也是其最大值。如果任何参数为 NULL，则返回 NULL。
+
+```
+EXPORT_SET(7,'+','-',',',5)           → '+---+'
+EXPORT_SET(0xa,'1','0',',',6)          → '010100'
+EXPORT_SET(97,'Y','N','','',8)        → 'Y,N,N,N,N,Y,Y,N'
+```
+
+### FIND_IN_SET(str,str_list)
+
+*str_list* 是由逗号分隔的子串组成的字符串（即，它类似于 SET 值）。 `FIND_IN_SET()` 返回 *str* 在 *str_list* 中的索引。如果 *str* 不在 *str_list* 中，则返回 0；如果任何参数为 NULL，则返回 NULL。第一个子串的索引为 1。
+
+```
+FIND_IN_SET('cow','moose,cow,pig')    → 2
+FIND_IN_SET('dog','moose,cow,pig')    → 0
+```
+
+### FORMAT(x,d)
+
+使用类似 '*.nnn,nnn.nnn'* 的格式将数字 *x* 格式化为 *d* 位小数，并以字符串形式返回结果。如果 *d* 为 0，则结果没有小数点或小数部分。
+
+```
+FORMAT(1234.56789,3)                  → '1,234.568'
+FORMAT(999999.99,2)                   → '999,999.99'
+FORMAT(999999.99,0)                   → '1,000,000'
+```
+
+注意最后示例中展示的舍入行为。
+
+### HEX(n)
+
+### HEX(str)
+
+对于数字参数 *n*， `HEX()` 以字符串形式返回参数的十六进制数字表示。以下两个表达式是等价的：
+
+```
+HEX(65)                                → '41'
+CONV(65,10,16)                         → '41'
+```
+
+有关更多信息，请参阅 `CONV()` 的描述。
+
+HEX() 也可以接受字符串参数；在这种情况下，它返回一个由参数中每个字符表示为两个十六进制数字组成的字符串。这种形式的 HEX() 是 UNHEX() 的逆运算。
+
+```
+HEX('255')               → '323535'
+HEX('abc')               → '616263'
+UNHEX(HEX('abc'))        → 'abc'
+```
+
+### INSERT(str, pos, len, ins_str)
+
+返回字符串 *str*，其中从位置 *pos* 开始、长度为 *len* 个字符的子串被字符串 *ins_str* 替换。如果 *pos* 超出范围，则返回原始字符串；如果任何参数为 NULL，则返回 NULL。
+
+```
+INSERT('nighttime', 6, 4, 'fall')       → 'nightfall'
+INSERT('sunshine', 1, 3, 'rain or ')   → 'rain or shine'
+INSERT('sunshine', 0, 3, 'rain or ')    → 'sunshine'
+```
+
+### INSTR(str, substr)
+
+INSTR() 类似于 LOCATE() 的双参数形式，但参数顺序相反。以下两个表达式是等价的：
+
+```
+INSTR(str, substr)
+LOCATE(substr, str)
+```
+
+### LCASE(str)
+
+此函数是 LOWER() 的同义词。
+
+### LEFT(str, len)
+
+从字符串 *str* 返回最左侧的 *len* 个字符，如果字符数不足 *len*，则返回整个字符串。如果任何参数为 NULL，则返回 NULL。如果 *len* 为 NULL 或小于 1，则返回空字符串。
+
+```
+LEFT('my left foot', 2)   → 'my'
+LEFT(NULL, 10)            → NULL
+LEFT('abc', NULL)         → NULL
+LEFT('abc', 0)            → ''
+```
+
+### LENGTH(str)
+
+返回字符串 *str* 的长度（以字节计）。（多字节字符每个都计为长度大于 1。）要测量以字符为单位的长度，请使用 CHAR_LENGTH()。
+
+```
+LENGTH('abc')                             → 3
+LENGTH(CONVERT('abc' USING ucs2))        → 6
+LENGTH('')                                → 0
+LENGTH(NULL)                              → NULL
+```
+
+### LOCATE(substr, str)
+
+### LOCATE(substr, str, pos)
+
+`LOCATE`() 的双参数形式返回字符串 *substr* 在字符串 *str* 中首次出现的位置，如果 *substr* 未出现在 *str* 中，则返回 0。如果任何参数为 `NULL`，则返回 `NULL`。如果给定位置参数 *pos*， `LOCATE`() 将从该位置开始查找 *substr*。如果任一操作数是二进制字符串，则 `LOCATE`() 将字符串作为二进制字符串进行比较；如果操作数是非二进制字符串，则使用操作数的比较排序进行比较。
+
+```
+LOCATE('b', 'abc')                    → 2
+LOCATE('b', 'ABC')                    → 2
+LOCATE(BINARY 'b', 'ABC')             → 0
+LOCATE('b' COLLATE latin_general_ci, 'ABC') → 2
+LOCATE('b' COLLATE latin_general_cs, 'ABC') → 0
+```
+
+### LOWER(str)
+
+将字符串 *str* 中的所有字符转换为小写并返回该字符串，如果 *str* 为 `NULL`，则返回 `NULL`。
+
+```
+LOWER('New York, NY')    → 'new york, ny'
+LOWER(NULL)              → NULL
+```
+
+大小写转换基于参数字符集的比较排序。如果参数是二进制字符串，则没有字符集或比较排序，且 `LOWER`() 返回未更改的 argument。
+
+```
+LOWER(BINARY 'New York, NY') → 'New York, NY'
+LOWER(0x414243)             → 'ABC'
+```
+
+为处理这种情况，将参数转换或强制转换为具有适当比较排序的非二进制字符串。
+
+```
+LOWER(CONVERT(BINARY 'New York, NY' USING latin1)) → 'new york, ny'
+LOWER(_latin1 0x414243)                           → 'abc'
+```
+
+### LPAD(str, len, pad_str)
+
+返回由字符串 *str* 的值组成的字符串，左侧用字符串 *pad_str* 填充至 *len* 个字符的长度。如果任何参数为 `NULL`，则返回 `NULL`。
+
+```
+LPAD('abc', 12, 'def')    → 'defdefdefabc'
+LPAD('abc', 10, '.')     → '.......abc'
+```
+
+如果 *str* 的长度大于 *len*， `LPAD`() 会将结果缩短为 *len* 个字符。
+

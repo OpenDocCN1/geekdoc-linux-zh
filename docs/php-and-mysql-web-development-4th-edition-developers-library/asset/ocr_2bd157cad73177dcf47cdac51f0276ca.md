@@ -1,0 +1,77 @@
+- **Table_locks_waited status variable, 929**
+- **table_lock_wait_timeout system variable, 919**
+- **Table_name value (scope column contents), 721**
+- **table_open_cache system variable, 666, 919**
+- **table_type system variable, 919**
+- **tables**
+  - adding AUTO_INCREMENT columns to, 260
+  - altering structure, 141–144
+  - analyzing, 313
+  - checking/repairing, 757–758
+  - CHECK TABLE statement, 758
+  - mysqlcheck utility, 760–763
+  - myisamcheck utility, 759–760
+  - REPAIR TABLE statement, 758
+  - converting
+    - between storage engines, 143
+    - to four-byte utf8 character set, 112
+    - copying between servers, 122
+  - creating, 122–135
+  - grade-keeping example, 42–53
+  - specifying data types during, 217–218
+  - U.S. Historical League example, 35–42
+  - creating tables from, 127–130
+  - default column values, specifying, 218–219
+  - defragmenting, 324
+  - deleting/updating rows, 91–93
+  - dropping, 135–136
+  - FEDERATED tables, 134–135
+  - file operations for, 592–593
+  - file size constraints, 596–597
+  - files associated with, 117–118
+  - indexing, 308
+  - inserting rows, 53–57
+  - locking, 183, 740–743
+  - MERGE tables, 130–132
+  - moving between databases, 144
+  - multiple-table retrievals, 150
+  - multiple-table updates and deletes, 173–174
+
+- naming conventions, 26
+- partitioned tables, 132–133
+- recovery, 764–765
+- relocating, 606
+- removing, 593
+- renaming, 144
+- retrieving information, 58, 91
+- storage engines for, 119, 590–592
+- truncating, 659
+- views, 169–173
+- **–tables option**
+  - mysqlcheck client program, 1081
+  - mysqldump utility, 1111
+- **TABLES WITH READ LOCK flush option, 978**
+- **tables_priv grant table, 710**
+- **TABLESPACE clause, 680**
+- **tablespaces**
+  - per-database InnoDB tablespaces, 679
+  - shared tablespace, 591, 674, 679
+- **tag styles for PHP scripts**
+- **Web:1207:Web:1208**
+- **TAN() function, 839**
+- **tar file binary distributions, installing, 783**
+- **–tc-heuristic-recover option (mysqlqld), 1094**
+- **Tcp_ip_max_pages used status variable, 929**
+- **Tcp_log_page_size status variable, 929**
+- **Tcp_log_page_waits status variable, 929**
+- **–tcp-ip option (mysqld_multi shell script), 1102**
+- **TCP/IP connections, 627, 629, Web:1145**
+- **Tc/ 1**
+- **technical support for MySQL, 4, 780**
+- **tee command (mysql client program), 1068**
+- **–tee option (mysql client program), 1065**
+- **–temp-pool option (mysqld), 1094**
+- **temporal. See date and time values**
+- **temporary files, removing, 762**
+- **TEMPORARY keyword, 126–127, 959, 973**
+- **temporary tables, creating, 126–127**

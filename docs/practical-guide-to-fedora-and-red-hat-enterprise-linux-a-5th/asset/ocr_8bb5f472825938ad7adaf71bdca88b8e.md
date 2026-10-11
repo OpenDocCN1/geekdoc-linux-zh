@@ -1,0 +1,40 @@
+The next command configures an HP LaserJet-compatible printer with a JetDirect interface that is connected directly to the LAN at 192.168.1.103 and names this printer HPLJ. Specifying socket in the protocol part of the URI instructs CUPS to use the JetDirect protocol, a proprietary protocol developed by HP for printers connected directly to a network.
+
+```
+# lpadmin -p HPLJ -E -v socket://192.168.1.103 -m laserjet.ppd.gz
+```
+
+The lpstat utility with the **-d** option displays the name of the default printer:
+
+```
+$ lpstat -d
+system default destination: MainPrinter
+```
+
+CUPS automatically makes the first printer you define the default printer. The following command makes HPLJ the default printer:
+
+```
+$ lpadmin -d HPLJ
+```
+
+The following command removes the configuration for the ColorPrt printer:
+
+```
+$ lpadmin -x ColorPrt
+```
+
+# PRINTING QUOTAS
+
+CUPS provides rudimentary printing quotas. You can define two forms of quotas: page count and file size. File size quotas are almost meaningless because a small PostScript file can take a long time to interpret and can require a lot more ink to print than a large one. Page quotas are more useful, although their implementation is flawed. To determine the number of pages in a document, CUPS examines the PostScript input. If a job is submitted in the printer's native language, such as PCL, CUPS bypasses this accounting mechanism. Also, if mpage is used to create a PostScript file with multiple pages printed on each sheet, CUPS counts each page in the original document, rather than each sheet of paper it prints on.
+
+Use **job-quota-period** and either **job-page-limit** or **job-k-limit** to establish a quota for each user on a given printer. The **job-quota-period** option specifies the number of seconds that the quota remains valid. The following command establishes a quota of 20 pages per day per user for the printer named HPLJ:
+
+```
+$ lpadmin -p HPLJ -o job-quota-period=86400 -o job-page-limit=20
+```
+
+The **job-k-limit** option works similarly but defines a file size limit in kilobytes. The limit is the total number of kilobytes that each user can print during the quota period. Once a user has exceeded her quota, she will not be allowed to print until the next quota period.
+
+# MANAGING PRINT QUEUES
+
+When a printer is operating normally, it accepts jobs into its print queue and prints those jobs in the order they are received. You can give the command **cupsreject** followed by the name of a printer to cause a printer to not accept jobs into its print queue; give the command **cupsaccept** to reenable it. You can also use **system-config-printer** to

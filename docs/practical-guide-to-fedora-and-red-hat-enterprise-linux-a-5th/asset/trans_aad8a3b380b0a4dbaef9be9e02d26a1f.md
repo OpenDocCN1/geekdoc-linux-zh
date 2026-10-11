@@ -1,0 +1,160 @@
+
+以下程序的前两行为 `@colors` 数组赋值并显示这些值。接下来的两对行中的每一对都使用 `sort` 将 `@colors` 数组中的值按顺序排列，将结果赋给 `@scolors`，并显示 `@scolors`。这些排序将大写字母放在小写字母之前。请观察在排序输出中，**Orange** 和 **Violet** 的位置，它们都以大写字母开头。这两对行中的第一个赋值语句使用了完整的排序语法，包括一个告诉 Perl 使用比较字符串的 `cmp` 子程序并将结果按升序排列的代码块 `{ $a cmp $b }`。当你在排序语句中省略该代码块时，如第二个赋值语句所示，Perl 也会执行升序文本排序。
+
+```
+$ cat sort3.pl
+@colors = ("red", "Orange", "yellow", "green", "blue", "indigo", "Violet");
+
+say "@colors";
+
+@scolors = sort { $a cmp $b } @colors;          # ascending sort with
+say "@scolors";                                  # an explicit block
+
+@scolors = sort @colors;                         # ascending sort with
+say "@scolors";                                  # an implicit block
+
+@scolors = sort { $b cmp $a } @colors;            # descending sort
+say "@scolors";
+
+@scolors = sort {lc($a) cmp lc($b)} @colors;      # ascending folded sort
+say "@scolors";
+
+$ perl sort3.pl
+red Orange yellow green blue indigo Violet
+Orange Violet blue green indigo red yellow
+Orange Violet blue green indigo red yellow
+yellow red indigo green blue Violet Orange
+blue green indigo Orange red Violet yellow
+```
+
+前述示例中的第三种排序反转了代码块中 `$a` 和 `$b` 的位置，以指定降序排序。最后的排序在比较之前将字符串转换为小写字母，提供了一种将大写字母折叠为小写字母的排序方式。结果，**Orange** 和 **Violet** 按字母顺序出现。
+
+要执行数值排序，请指定 `<=>` 子程序来代替 `cmp`。以下示例演示了数值升序和降序排序：
+
+```
+$ cat sort4.pl
+@numbers = (22, 188, 44, 2, 12);
+
+print "@numbers\n";
+
+@Snumbers = sort { $a <=> $b } @numbers;
+print "@Snumbers\n";
+
+@Snumbers = sort { $b <=> $a } @numbers;
+print "@Snumbers\n";
+
+$ perl sort4.pl
+22 188 44 2 12
+2 12 22 44 188
+188 44 22 12 2
+```
+
+## 子程序
+
+除非使用 my 函数将它们定义为词法变量（第 979 页），否则所有变量都是包变量（第 979 页）。在子程序中定义的词法变量局部于该子程序。
+
+以下程序包含一个主要部分和一个名为 add() 的子程序。该程序使用了名为 $one、$two 和 $ans 的变量，它们全都是包变量：它们对主程序和子程序均可用。对子程序的调用不向子程序传递值，子程序也不返回值。这种设置不典型：它说明了除非使用 my 声明为词法变量，否则所有变量都是包变量。
+
+subroutine1.pl 程序为两个变量赋值并调用一个子程序。该子程序将两个变量的值相加，并将结果赋给另一个变量。程序的主要部分显示结果。
+
+```
+$ cat subroutine1.pl
+$one = 1;
+$two = 2;
+add();
+print "Answer is $ans\n";
+sub add { 
+    $ans =$one + $two
+}
+
+$ perl subroutine1.pl
+Answer is 3
+```
+
+下一个示例与前一个类似，除了子程序利用 return 语句向主程序返回值外。程序将子程序返回的值赋给变量 $ans 并显示该值。同样，所有变量都是包变量。
+
+```
+$ cat subroutine2.pl
+$one = 1;
+$two = 2;
+$ans = add();
+print "Answer is $ans\n";
+sub add { 
+    return ($one + $two)
+}
+
+$ perl subroutine2.pl
+Answer is 3
+```
+
+在许多情况下，保持变量对子程序局部是重要的。下一个示例中的子程序改变变量的值，并通过声明和使用词法变量来隔离调用程序免受这些更改的影响。这种设置更典型。
+
+`@_` 当你在调用子程序时传递值时，Perl 使这些值在子程序中名为 `@_` 的数组中可用。尽管 `@_` 局部于子程序，但其元素是调用子程序时使用的参数的别名。更改 `@_` 数组中的值会更改底层变量的值，这可能不是你所希望的。下一个程序通过将传递给子程序的值赋给词法变量来避免这个陷阱。
+
+**subroutine3.pl** 程序调用 **addplusone()** 子程序，以两个变量作为参数，并将子程序返回的值赋给一个变量。子程序中的第一条语句声明两个词法变量，并将 `@_` 数组中的值赋给它们。**My** 告诉函数声明这些变量为词法变量。（参见第 984 页关于词法和包变量的提示。）虽然你可以使用 **my** 而不向声明的变量赋值，但示例中的语法更常用。接下来两条语句使词法变量 $lc1_one 和 $lc1_two 自增。**print** 语句在子程序内显示 $lc1_one 的值。**return** 语句返回这两个自增词法变量的和。
+
+```
+$ cat subroutine3.pl
+$one = 1;
+$two = 2;
+$sans = addplusone($one, $two);
+print "Answer is $sans\n";
+print "Value of 'lc1_one' in main: $lc1_one\n";
+print "Value of 'one' in main: $one\n";
+
+    sub addplusone {
+        my ($lc1_one, $lc1_two) = @_;
+        $lc1_one++;
+        $lc1_two++;
+        print "Value of 'lc1_one' in sub: $lc1_one\n";
+        return ($lc1_one + $lc1_two)
+    }
+
+$ perl subroutine3.pl
+    Value of 'lc1_one' in sub: 2
+    Answer is 5
+    Value of 'lc1_one' in main:
+    Value of 'one' in main: 1
+```
+
+在显示子程序返回的结果后，主程序中的 **print** 语句表明 $lc1_one 在主程序中未定义（它局部于子程序），且 **$one** 的值未改变。
+
+下一个示例说明了处理传递给子程序的参数的另一种方式。该子程序除了使用传入的 `@_` 数组外不使用其他变量，并且不更改该数组任何元素的值。
+
+```
+$ cat subroutine4.pl
+$one = 1;
+$two = 2;
+$ans = addplusone($one, $two);
+print "Answer is $ans\n";
+sub addplusone {
+    return ($_[0] + $_[1] + 2);
+}
+
+$ perl subroutine4.pl
+Answer is 5
+```
+
+本节中的最后一个示例展示了一个更典型的 Perl 子程序。子程序 max() 可以以任意数量的数值参数调用，并返回最大参数的值。它使用 **shift** 函数将子程序调用时的第一个参数的值赋给 **$biggest**，并移位其余参数。使用 **shift** 之后，第 2 个参数变为第 1 个参数（$8），第 3 个参数变为第 2 个参数（**$4**），第 4 个参数变为第 3 个参数（**$2**）。接着，**foreach** 循环遍历剩余的参数（**@_**）。每次循环 foreach 代码块时，Perl 按顺序将每个参数的值赋给 **$_**。如果 **$_** 大于 **$biggest**，则 **$biggest** 变量被赋值为 **$_**。当 **max()** 遍历完其参数后，**$biggest** 持有最大值，并由 **max()** 返回。
+
+```
+$ cat subroutine5.pl
+$ans = max (16, 8, 64, 2);
+print "Maximum value is $ans\n";
+
+sub max {
+    my $biggest = shift;   # Assign first and shift the rest of the arguments to max()
+    foreach (@_) {
+        $biggest = $_ if $_ > $biggest;
+    }
+    return ($biggest);
+}
+
+$ perl subroutine5.pl
+Maximum value is 64
+```
+
+## 正则表达式
+
+附录 A 定义并讨论了你可以在许多 Linux 工具中使用的正则表达式。附录 A 中的所有材料都适用于 Perl，除非另有说明。除了附录 A 中描述的功能外，Perl 还提供正则表达式功能，使你能够执行更复杂的字符串处理。本节回顾了附录 A 中介绍的一些正则表达式，并描述了 Perl 中可用的正则表达式的一些附加功能。它还介绍了 Perl 用于处理正则表达式的语法。
+
