@@ -1,0 +1,125 @@
+
+
+## SLP 守护进程
+
+如果你正在 NetWare 或 Windows 上运行 eDirectory，那么 SLP 的配置选项和任务非常直接。然而，在 Linux 上，你需要考虑几个问题。
+
+第一个问题是选择 SLP 守护进程。你有两个软件包可供选择：
+
+-   **slpusera**——此 SLP 守护进程随 NNLS 提供，并默认安装在你的系统上。该包提供 UA 和 SA。但是，它不包含 DA 功能。如果你在一个大型网络上使用 SLP 并且需要实现 DA，则不能使用此软件包。
+-   **OpenSLP**——此产品提供一个完整的 SLP 守护进程，包括 UA、SA 和 DA。它比 NNLS 附带的 slpusera 守护进程更强大、更可靠。
+
+> **警告**
+>
+> 如果在安装 NNLS 之前你的系统上已安装 OpenSLP，安装脚本会检测到它，并且不会安装 slpusera 守护进程。我强烈建议使用 OpenSLP 而不是 slpusera 守护进程。事实上，甚至 Novell 也建议使用 OpenSLP 而不是其自己的软件包。
+
+CLE 认证仅要求你知道如何实现 slpusera 守护进程。然而，我听到很多关于其可靠性不佳的报告。因此，我们将在本章中涵盖 slpusera 和 OpenSLP。在此之前，我们需要讨论如何在你的 Linux 服务器上启用组播。
+
+## 配置组播路由
+
+根据你的选择模式，你的服务器需要一定程度的 SLP 支持。默认情况下，大多数 Linux 发行版都禁用了组播支持。要检查这一点，请打开终端会话，并在 shell 提示符下输入 **netstat -nr**。如果你看到一个目标为 **224.0.0.0** 的路由，则已启用组播路由。如果没有，你需要启用它。
+
+图 5.7 显示了未添加组播路由的系统中 **netstat -nr** 命令的输出。
+
+图 5.8 显示了已添加路由的系统中 **netstat -nr** 的输出。
+
+### 图 5.7
+
+无组播路由时 netstat -nr 的输出。
+
+![](img/c7771e8540507f2b00c088c7a411b57b_161_0.png)
+
+### 图 5.8
+
+已添加组播路由时 netstat -nr 的输出。
+
+![](img/c7771e8540507f2b00c088c7a411b57b_161_1.png)
+
+如果需要添加组播路由，请完成以下步骤：
+
+1.  从 shell 提示符开始，通过输入 `su -` 并输入 root 用户密码切换到 root 用户账户。
+2.  输入以下内容：
+    `route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0`
+3.  再次输入 `netstat -nr` 以验证组播路由是否已添加。
+
+请注意，此路由不是持久的。如果你重新启动服务器，路由信息将丢失。为了使其持久，向 `/etc/sysconfig/network/routes` 文件添加一个条目，内容如下（假设你正在使用 eth0 作为网络接口）：
+
+```
+224.0.0.0 0.0.0.0 240.0.0.0 eth0
+```
+
+添加组播路由后，你准备好开始配置服务器上的 SLP 守护进程了。如前所述，你需要选择是使用随 NNLS 提供的 slpusera 守护进程还是 OpenSLP 守护进程。接下来将介绍两者的配置任务。
+
+## 配置 slpusera 守护进程
+
+如果没有安装 OpenSLP，NNLS 安装脚本会自动在你的服务器上安装 slpusera 守护进程。默认情况下，它配置为在服务器上加载 SA 和 UA。
+
+slpusera 守护进程在 NNLS 安装期间安装后，你可以通过编辑位于服务器 `/etc` 目录中的 `slpusera.conf` 文件来配置它。默认的 `slpusera.conf` 文件如图 5.9 所示。
+
+```
+Refer man pages to set the following parameters and remove # for the parameter
+#net.slp.MTU =
+#net.slp.isBroadcastOnly =
+#net.slp.isMulticastOnly =
+#net.slp.MulticastRadius =
+#net.slp.useScopes =
+#DA.PORT =
+```
+
+**图 5.9**
+slpusera.conf 文件。
+
+你可以在 `slpusera.conf` 文件中配置以下参数：
+
+-   **net.slp.MTU**——此参数指定 SA 用于处理请求的最大路径单元。默认值为 **1400**。
+-   **net.slp.isBroadcastOnly**——此参数指定请求是作为组播还是广播发送。当设置为值 **0**（默认值）时，此参数配置守护进程仅使用组播。当设置为值 **1** 时，它配置守护进程使用广播而不是组播。
+-   **net.slp.isMulticastOnly**——此参数用于防止本地 SA 在 DA 模式下运行。当此参数设置为值 **1** 时，SA 在启动时将不会尝试发现网络中的 DA。它不会将其服务注册给发现的 DA。默认值 **0** 配置 DA 以正常模式运行。
+-   **net.slp.MulticastRadius**——此参数指定 SA 组播包的时间生存 (TTL) 值。默认值为 32。
+-   **net.slp.useScopes**——此参数指定本地 SA 在注册或查询服务时允许使用的范围列表。
+-   **DA_ADDR**——此参数用于静态配置本地 SA 与其要注册服务的 DA 或 DAs 的 IP 地址。
+
+> **提示**
+>
+> 回想前面提到的，SA 默认在启动时会发出 DA 发现组播消息。如果它们发现 DA，则向其注册服务。如果没有，它们默认为仅 SA 模式。然而，如果你为 DA_ADDR 参数列出了 IP 地址，SA 将不会这样做。相反，它会联系指定的 DAs 并将服务仅注册给它们。
+>
+> 如果你的网络路由器未配置为转发组播流量，这是一个非常有用的参数。通过在此参数中指定 DA，你的 SA 将使用单播传输来联系它。
+>
+> 语法如下：
+> `DA_ADDR = DA_IP_address, scope_name`
+
+配置好 `slpusera.conf` 文件后，你需要重启 slpusera 守护进程。这是使用位于 `/etc/init.d` 中的 `slpusera` 脚本来完成的。
+
+> **提示**
+>
+> 在其他发行版（如 Red Hat）上，脚本位于 `/etc/rc.d/init.d`。
+
+要停止守护进程，打开终端会话并输入 `/etc/init.d/slpusera stop`。要启动守护进程，打开终端会话并输入 `/etc/init.d/slpusera start`。由于 SLP 对于 eDirectory 和其他 NNLS 组件的运行至关重要，你应该使用 `chkconfig` 命令使服务在每次系统启动时自动启动。为此，在 shell 提示符下输入 `chkconfig slpusera 345`。
+
+## 配置 OpenSLP
+
+如前所述，Novell 实际上建议你不要在任何拥有超过少数几台服务器或 eDirectory 树具有许多分区和副本的实现中使用 slpusera 守护进程。如果你想在 Linux 服务器上实现 DA，这一点尤其适用，因为 slpusera 守护进程不包含 DA 功能。
+
+> **警告**
+>
+> Novell 在 NetWare 和 Windows 上的 SLP 实现包括 DA 功能。许多管理员倾向于在这些平台之一上的网络中实现 DA，并配置 Linux 服务器上的 slpusera 守护进程以将其 SA 注册到这些 DAs。我以前这样做过并取得了相当好的成功。然而，我也与这样做并遇到严重问题的管理员交谈过。我站在 Novell 一边，说不要麻烦使用 slpusera 守护进程。请使用 OpenSLP。
+
+在这些情况下，建议在安装 NNLS 之前安装并配置 OpenSLP 开源 SLP 软件包。
+
+NNLS 安装程序将自动检测系统上存在 OpenSLP 软件包，并且不会安装 slpusera 守护进程。OpenSLP 可以免费从 [http://www.openslp.org](http://www.openslp.org) 获得，形式为 tarball 和 RPM 软件包。在本书中，我们将只使用 RPM 版本。
+
+下载后，软件包非常容易安装。打开终端会话并切换到 OpenSLP RPM 软件包所在的目录。然后输入：
+
+```
+rpm -i ./OpenSLP_package_filename
+```
+
+安装完成后，OpenSLP 守护进程 `slpd` 被复制到 `/usr/sbin`，其配置文件 `slpd.conf` 被复制到 `/etc`。
+
+初始安装后，`slpd` 守护进程配置为运行在仅 SA 模式，类似于前面讨论的 `slpusera` 守护进程。要创建 DA，你必须编辑 `slpd.conf` 文件，如图 5.10 所示。
+
+![](img/c7771e8540507f2b00c088c7a411b57b_164_0.png)
+
+以下是你可以在 `slpd.conf` 文件中配置的参数列表：
+
+-   **net.slp.useScopes**——此参数有两个功能。如果 `slpd` 守护进程运行在仅 SA 模式，此参数指定哪些
+

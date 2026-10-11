@@ -1,0 +1,327 @@
+
+# Index
+
+## R
+- RCD Group population, 193
+- required data (Client), 170
+- update files, 191
+- updating, 190
+
+## S
+- Samba component
+  - required data, 163-164
+  - version, 366-367
+- standalone implementation, 4
+- supported Linux distributions, 124-125
+- TCO (total cost of ownership) benefits, 4
+- user benefits
+  - on-site locations, 5
+  - remote locations, 5
+- version management services components, 128
+- Virtual Office component, required data, 169
+- web-based administration components, 128
+  - iManager, 129
+  - iMonitor, 129
+  - NetMail WebAdmin, 129
+- NOS (network operating system), 122-124
+- notifications for virtual teams, user settings, 509
+- Novell Directory Services
+  - introduction of, 123
+  - name change to eDirectory, 123
+- Novell exteNd, 124
+- Novell International Cryptographic Infrastructure (NICI) key file, 132
+- Novell Ngage, 124
+- Novell Nsure, 124
+- Novell Nterprise Linux Services. See NLS
+- Novell.com Website, NNLS evaluation copies, 132
+- NTP (Network Time Protocol), 111
+  - eDirectory trees, clock synchronization, 111-117
+  - implementing (lab exercise 3.3), 118-119
+  - insane time, 139
+  - time servers, list of, 113
+  - xntp package
+    - configuring, 115-117
+    - installing, 114-115
+- NTP.org Website, 113
+
+## O
+- objects
+  - DirXML
+    - associations, matching rules, 290
+    - driver, 295-296
+    - rule, 295-296
+  - eDirectory naming conventions, 209-211
+  - eDirectory trees
+    - inheritance rights, 213-215
+    - property rights, 212-213
+    - trustee rights, 212
+  - Linux User Management (LUM), 265
+  - NetMail
+    - Internet Services, 450
+    - Mailing Lists, 452
+    - Messaging Server, 450
+    - organizational unit, 452
+    - Parent, 451
+    - server, 454
+    - Templates, 451-452
+    - user, 453-454
+- oneNet
+  - introduction of, 123-124
+  - Novell exteNd, 124
+  - Novell Ngage, 124
+  - Novell Nterprise, 124
+  - Novell Nure, 124
+  - strategic goals, 123-124
+- Open Source
+  - applications development, cost advantages, 130
+  - Novell's corporate direction, advantages of, 129
+  - total cost of ownership (TCO), 130
+- OpenSLP, SLP daemon, 147
+  - configuration of, 150-153
+  - parameters, 151-152
+- Organization objects, eDirectory tree container, 206
+- Organizational role objects, eDirectory tree leaf objects, 208
+- Organizational Unit objects
+  - eDirectory tree container, 206
+  - NetMail attributes, 452
+
+## Ownership
+- files
+  - assigning (lab exercise 3.1), 85-88
+  - viewing, 77-78
+- virtual teams, setting, 502-503
+
+## P
+- packages, installation methods
+  - rpm command, 100-101
+  - tarball archive extraction, 99-100
+  - YaST Control Center, 101
+- paper certification versus practical certification, 11-13
+- Parent object (NetMail), 451
+- partitions
+  - default
+    - /boot, 31
+    - swap, 31
+  - eDirectory databases, 216-218
+  - EXT2, 29-30
+  - EXT3, 29-30
+  - mount points, 28-29
+  - ReiserFS, 29-30
+- Pass Phrase Recovery screen (iFolder), 352
+- pass phrases, use in iFolder authentication, 335
+- passwd file, user accounts, 70
+  - modifying, 73
+- shadow files, 71-72
+- Password Modification event rules (DirXML), 289
+- passwords
+  - group accounts, storage information, 75-76
+  - Virtual Office, user management options, 498-499
+- PATH variable, list of directories, 42-44
+- PC Magazine website, 365
+- PCI slots, number assignments, 89-90
+- permissions
+  - assigning, 78-83
+  - assigning (lab exercise 3.1), 85-88
+  - chmod utility, numeric arguments, 80-82
+  - Execute, 78-84
+  - group accounts, assigning, 73-74
+  - lists, viewing (ls command), 83-84
+  - Read, 78-84
+  - Write, 78-84
+- placement rules (DirXML), 291
+- platforms (iFolder client), 348
+- Pluggable Authentication Modules (PAM), 263
+- POP Agent (NetMail), 446-447
+- ports for NetMail installations, 466-467
+- post-installation process for iFolder, 338
+- postfix mail service, 438
+- practical certification versus paper certification, 11-13
+- Practicum
+  - components, 13
+  - Novell server, 14
+  - testing center computer, 14
+  - virtual server sessions, 14
+  - scenarios
+    - handling strategies, 16-17
+    - implementation strategies, 17
+    - planning strategies, 17
+    - testing resolution of, 17-18
+  - tips/strategies, 15-16
+- PRD (product requirements document), 20
+- Preferences tab (iManager), rcd product updates, 197-198
+- Printer Agent (iPrint), 404
+  - configuring, 418-422
+- Printer objects, eDirectory tree leaf objects, 209
+- printers. See also iPrint
+  - drivers, uploading (iPrint Driver Store), 410-417
+  - Implementing iPrint (lab exercise 9.1), 429-433
+  - Implementing Location-Based Printing (lab exercise 9.2), 433-435
+  - location-based maps, creating (iPrint Map Designer), 422-425
+  - Windows workstations, configuring (iPrint), 425-428
+- printing from remote locations (iPrint), 5
+- process ID (PID), 105-106
+- processes
+  - management of (lab exercise 3.2), 107-110
+  - process ID (PID), 105-106
+  - viewing (top utility), 105-106
+- processing messages (NetMail)
+  - data files, 460
+  - stage 0, 460-461
+  - stage 1, 461
+  - stage 2, 461
+  - stage 3, 461
+  - stage 4, 462
+  - stage 5, 462
+  - stage 6, 462
+  - stage 7, 462
+  - stage 8, 462
+- product dependencies
+  - DirXML, 137
+  - iFolder version, 137
+  - iManager version, 137
+  - iPrint version, 137
+  - Linux User Management (LUM), 137
+  - NetMail version, 137
+  - NNLS installation requirements, 137-138
+  - Samba version, 137
+  - Tomcat version, 137
+  - Virtual Office, 138
+- product requirements document (PRD), 20
+- property rights, eDirectory objects, 212-213
+  - add self, 213
+  - compare, 213
+  - read, 213
+  - supervisor, 212
+  - write, 213
+- Proxy Agent (NetMail), 447
+- proxy mode (iMonitor), 238-239
+- Public Web Page Link (Virtual Office), 496-498
+- publisher channel component (DirXML), 288
+  - creation rules, 290
+  - delimited text driver usage, 297-299
+  - placement rules, 291
+  - schema-mapping rules, 291-292
+  - transformation stylesheets, 292-293
+- pull protocols, 141
+- push protocols, 141
+- pwd command, 53
+
+## Q
+*Note: No entries found for Q in the provided text, but R follows P.*
+
+## R
+- RAM (random access memory), NNLS installation requirements, 135
+- rcd daemon
+  - configuring (NNLS Red Carpet), 191-194
+  - NNLS
+    - Red Carpet component, 191
+    - updating (lab exercise 5.4), 199-201
+  - product updates (NNLS Red Carpet), 194-198
+  - RCD Groups
+    - creating (NNLS), 191
+    - modifying (NNLS), 192-194
+    - populating (NNLS), 193
+- Read permission, 78-84
+- read property rights, eDirectory objects, 213
+- Read-Only replica of eDirectory databases, 219
+- Read/Write replica of eDirectory databases, 219
+- reboot command, 44
+- Red Carpet component
+  - configuring rcd daemon, 191-194
+  - daemon, active Internet connections, 157
+  - NNLS
+    - channels, 191
+    - rcd daemon, 191
+    - update files, 191
+    - update function, 190
+  - version management services functions, 128
+  - product updates, managing, 194-198
+  - RCD Groups
+    - creating, 191
+    - modifying, 192-194
+    - populating, 193
+  - required data, 170
+- Red Hat Linux, 22
+- Red Hat Package Manager (RPM), package installations, 100-101
+- RedHat Enterprise Linux AS 2.1, NNLS platform support, 124-125
+- RedHat Enterprise Linux ES 2.1, NNLS platform support, 124-125
+- redirection
+  - redirection, authentication requests (LUM), 267-271
+- relative names, eDirectory naming conventions, 211
+- remote access (Virtual Office), 479
+- remote files, accessing (NFS), 28
+- Rename Object event rules (DirXML), 289
+- rename rights (eDirectory), 212
+- replica rings, 218
+- replicas of eDirectory databases, 218
+  - Master, 218
+  - Read-Only, 219
+  - Read/Write, 219
+  - Subordinate Reference, 220
+- reports of system monitoring (iFolder), 356-357
+- ReiserFS partitions, 29-30
+- Resource Usage, NetStorage configuration, 394
+- reverse-compiling software, 22
+- rights (eDirectory), 211
+  - browse, 212
+  - create, 212
+  - delete, 212
+  - inheritance of, 213-214
+  - blocking, 215
+  - Inherited Rights Filters (IRFs), 215-216
+  - property, 212-213
+  - rename, 212
+  - supervisor, 212
+- “rip and replace” deployment, 5
+- rm command, 53
+- rmdir command, 54
+- /root directory, 51
+- referencing, 27
+- root user accounts, 33
+  - security warnings, 69
+- route command, 46
+- routers, network interfaces, configuring (YaST), 96
+- rpm command, package installations, 100-101
+- rule object (DirXML), 295-296
+- rules (DirXML), 285, 288
+  - event monitoring, 289-292
+- runlevels (services), 104-105
+
+## S
+- SA-Only mode (SLP), 143-145
+- Samba
+  - CIFS protocol, 366
+  - configuration file, 368
+  - directives, 374-376
+  - eDirectory users, converting from, 372-374
+  - function of, 364-365
+  - implementation (lab exercise 8.2), 377-381
+  - installation, 367-368
+  - NNLS
+    - component, required data, 163-164
+    - file management functions, 127
+    - version, 366-367
+  - PC Magazine website, testing of, 365
+  - Samba.org website, 381
+  - service, launching, 376
+  - SMB protocol, 365-366
+  - share-level security, 366
+  - user-level security, 366
+  - users, enabling, 368-374
+  - versus Windows servers, benefits, 364-365
+- Samba.org website, 381
+- SAP (Service Advertisement Protocol), 140-141
+  - drawbacks
+    - bandwidth, 141
+    - dependency on IPX, 141
+    - IPX server broadcasts, 140
+    - push protocol, 141
+    - server availability, 140-141
+  - versus SLP, 142
+- scenarios (CLE Practicum), 16-17
+  - implementation plans, 17
+  - resolution testing, 17-18
+  - strategy plans, 17
+- schema-mapping rules (DirXML), 291-292
+- schemas, eDirectory tree structure, 204
+- scopes (SLP), configuring, 143

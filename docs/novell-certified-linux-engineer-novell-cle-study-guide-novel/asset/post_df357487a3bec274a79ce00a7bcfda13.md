@@ -1,0 +1,315 @@
+
+# C
+
+- C compiler (gcc), 22
+- C Shell (csh), 40
+- Calendar Agent (NetMail), 442-443
+- candidates for CLE, required prerequisites, 7-8
+- cat command, 52
+- cd command, 52
+- CDs, mounting (mount command), 56-57
+- certification
+    - additional educational aids, 7-8
+    - knowledge objectives, 5-6
+    - NNLS courseware element, 6
+    - objectives, 8-10
+    - practicum element, 6
+- Certified Directory Engineer (CDE), 3
+- Certified Linux Engineer. See CLE
+- Certified Novell Administrator (CNA), 3
+- Certified Novell Engineer (CNE), 3
+- Change Password Service for Virtual Office, configuring, 498-499
+- channels (NNLS), Red Carpet component, 191
+- Channels tab (iManager), rcd product updates, 196
+- chkconfig command, default state configuration, 104-105
+- chmod utility, permissions, numeric arguments, 80-82
+- Choose Destination Location screen (iFolder), 349
+- chown command, file ownership information (GNOIE), 77-78
+- CIFS (Common Internet File System) protocol, 366
+- CLE (Certified Linux Engineer), 3
+    - candidate prerequisites, 7-8
+    - certification
+        - additional educational aids, 7-8
+        - knowledge objectives, 5-6
+        - NNLS courseware element, 6
+        - objectives, 8-10
+        - practicum element, 6
+- CLE Practicum
+    - components, 13
+    - Novell server, 14
+    - testing center computer, 14
+    - virtual server sessions, 14
+    - exam
+        - pass/fail, 521-522
+        - test-taking strategies, 521-523
+        - scenarios
+            - handling strategies, 16-17
+            - implementation strategies, 17
+            - planning strategies, 17
+            - testing resolution of, 17-18
+    - tips/strategies, 15-16
+- Client (iPrint), 405
+    - installing, 408-409
+- clients (iFolder)
+    - configuring, 353-354
+    - global policies, configuring, 346-347
+    - installing, 348-353
+    - remote access, 348
+    - supported platforms, 348
+- CNE (Certified Novell Engineer), 3
+- collaboration services (Virtual Office), 128
+- command-line interface, 24
+    - command entry, 42-44
+    - commands
+        - echo, 45
+        - env, 45
+        - halt, 44
+        - ifconfig, 46
+        - info, 45
+        - init0, 44
+        - init6, 44
+        - man, 44
+        - netstat, 45
+        - reboot, 44
+        - route, 46
+        - startx, 47
+        - su, 45
+        - top, 45
+    - shells, 39-42
+        - bash (Bourne Again Shell), 40
+        - csh (C Shell), 40
+        - sh (Bourne Shell), 40
+        - tcsh (Tom's C Shell), 40
+        - zsh (Z Shell), 40
+    - system utilities, 51-52
+        - cat, 52
+        - cd, 52
+        - cp, 52
+        - dir, 52
+        - find, 52
+        - Gedit, 62
+        - grep, 53
+        - less, 53
+        - locate, 53
+        - ls, 53
+        - mkdir, 53
+        - more, 53
+        - mount, 54-57
+        - mv, 53
+        - pwd, 53
+        - rm, 53
+        - rmdir, 54
+        - tail, 54
+        - tar, 57-58
+        - vi, 58-60, 62
+        - using (lab exercise 2.2), 47-49
+    - utilities (eDirectory), 234
+- Common Internet File System (CIFS), 366
+- Communications Networking Riser (CNR), 91
+- company information, Services Administration settings (Virtual Office), 485-486
+- compare property rights, directory objects, 213
+- component data, retrieving for NNLS installations, 158-171
+- components
+    - DirXML, 286
+    - data destination, 287
+    - data source, 287
+    - drivers, 287
+    - engine, 287
+    - interface, 287
+    - publisher channel, 288
+    - subscriber channel, 288
+    - Linux User Management, installing, 265-266
+    - NNLS, post-installation of, 189
+- compressing files
+    - gzip command, 57-58
+    - tar command, 57-58
+- configuring
+    - DirXML
+        - delimited text driver, 299-305
+        - delimited text driver (lab exercise 7.1), 306-309
+        - eDirectory driver, 315-319
+        - eDirectory driver (lab exercise 7.3), 320-329
+        - eGuide, 251-254
+    - iFolder
+        - client, 353-354
+        - global client policies, 346-347
+        - server parameters, 343-347
+        - user access, 340-342
+    - iPrint
+        - Driver Store component, 410-417
+        - Manager component, 417-418
+        - Printer Agents, 418-422
+    - Linux User Management (LUM), 272-273
+    - NetMail, 467-473
+    - NetStorage
+        - Authentication Domains, 392
+        - Current Sessions, 393
+        - iFolder Storage Provider, 393
+        - Resource Usage, 394
+        - server parameters, 391-395
+        - Statistics, 394
+        - Storage Location object, 386-390
+    - Red Carpet component (NNLS), 191
+        - product updates, 194-198
+        - RCD Group creation, 191
+        - RCD Group modification, 192-194
+        - RCD Group population, 193
+    - Samba, 368
+        - file directives, 374-376
+    - Virtual Office, 482-484
+        - Environment Administration settings, 500-504
+        - lab exercise 11.1, 512-516
+        - Services Administration settings, 484-499
+- Conflict Bin, iFolder file versions, 338
+- Connection Manager Agent (NetMail), 443-444
+- container objects, eDirectory tree structure, 204
+    - Country objects, 206
+    - Organization objects, 206
+    - Organizational Unit objects, 206
+- Context Configuration screen (iFolder), 341
+- contextless logins, Linux User Management (LUM), 266-267
+- contexts, object naming conventions for eDirectory, 209-210
+- control files, message processing (NetMail), 460
+- converting eDirectory users to Samba users, 372-374
+- Country objects, eDirectory tree container, 206
+- courseware (exam), NNLS test objectives, 19-20
+- cp command, 52
+- CPUs, NNLS installation requirements, 135
+- Create Driver Wizard (DirXML), 300
+- creation rules
+    - DirXML, 290
+    - eDirectory, 212
+- csh (C Shell), 40
+- Current Sessions, NetStorage configuration, 393
+- custom installation (NNLS), 175-177
+- Custom installs (iFolder), 338
+
+# D
+
+- DA mode (SLP), 145-146
+- daemons (SLP)
+    - OpenSLP, 147
+        - configuring, 150-153
+        - parameters, 151-152
+    - slpuser, 147
+        - configuring, 149-150
+        - parameters, 149-150
+        - stopping, 150
+- data destination component (DirXML), 287
+- data files, message processing (NetMail), 460
+- data source component (DirXML), 287
+- data synchronization, file handling (iFolder), 333-338
+- databases
+    - partitioning (eDirectory), 216-218
+    - replicas (eDirectory), 218
+        - Master, 218
+        - Read-Only, 219
+        - Read/Write, 219
+        - Subordinate Reference, 220
+- default file structure, 49
+    - /bin directory, 50
+    - /dev directory, 50
+    - /etc directory, 50
+    - /home directory, 50
+    - /media directory, 50
+    - /mnt directory, 50
+    - /root directory, 51
+    - /tmp directory, 51
+    - /usr directory, 51
+    - /var directory, 51
+- default partitions
+    - /boot, 31
+    - swap, 31
+- Delete Object event rules (DirXML), 289
+- delete rights (eDirectory), 212
+- delimited text driver (DirXML)
+    - activated status, 304
+    - configuration of, 299-305
+    - configuring (lab exercise 7.1), 306-309
+    - fields, 302
+    - function of, 296
+    - installation of, 296-299
+    - security equivalences, 302-303
+    - stopped status, 304
+    - summary information screen, 303
+    - testing (lab exercise 7.2), 309-310
+- department option placement, eDirectory driver (DirXML), 315
+- dependencies
+    - DirXML, 137
+    - iFolder version, 137
+    - iManager version, 137
+    - iPrint version, 137
+    - Linux User Management (LUM), 137
+    - NetMail version, 137
+    - Samba version, 137
+    - Tomcat version, 137
+    - Virtual Office, 138
+- deploying NetMail
+    - distributed servers, 464-465
+    - planning for, 463-465
+    - single-server, 463-464
+- designing eDirectory tree structure, 206-207
+- /dev directory, 50
+- devices, mounting, 29
+- dir command, 52
+- direct mode (iMonitor), 238-239
+- directives, file configuration (Samba), 374-376
+- directories
+    - /bin, 50
+    - /dev, 50
+    - /etc, 50
+    - full-service (eDirectory), 201-203
+    - /home, 50
+    - iFolder installations, 339
+    - iPrint installations, 408
+    - listing (PATH variable), 42-44
+    - management of (lab exercise 2.3), 62-65
+    - /media, 50
+    - /mnt, 50
+    - NetMail file system, 455-458
+    - /root, 51
+    - /tmp, 51
+    - /usr, 51
+    - /var, 51
+- Directory Agent (DA)
+    - NNLS mode, 145-146
+    - SLP, 142
+- DirXML
+    - administrators, training requirements, 296-297
+    - complexity of implementation, 296-297
+    - components, 286
+        - data destination, 287
+        - data source, 287-288
+        - engine, 287
+        - interface, 287
+    - Create Driver Wizard, 299-305
+    - delimited text driver
+        - activated status, 304
+        - configuration of, 299-305
+        - configuring (lab exercise 7.1), 306-309
+        - fields, 302
+        - function of, 296
+        - installation of, 296-299
+        - security equivalences, 302-303, 317
+        - stopped status, 304
+        - summary information screen, 303
+        - testing (lab exercise 7.2), 309-310
+    - eDirectory driver
+        - activated status, 318
+        - configuration of, 315-319
+        - configuring (lab exercise 7.3), 320-329
+        - department option placement, 315
+        - flat option placement, 314
+        - function of, 311
+        - installation of, 312-315
+        - mirrored option placement, 314
+        - stopped status, 318
+        - summary information screen, 318
+    - events, monitoring, 285
+    - filters, 285, 288
+    - authoritative data source configuration, 288-289
+    - installation
+        - affected directories, 294
+        - Custom installs, 293-294
+        - Express installs, 293-294
+        - tree object additions, 295-296

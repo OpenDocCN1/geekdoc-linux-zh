@@ -1517,6 +1517,7 @@
 +   [生产环境中的 NixOS 专业人士指南](docs/nixos-in-production-a-handbook-for-professional/README.md)
 +   [告别 Windows！Linux 来了！](docs/no-more-windows-now-comes-linux/README.md)
 +   [Novell 认证 Linux 工程师 9 (CLE 9) 学习指南](docs/novell-certified-linux-engineer-9-cle-9-study-guide/README.md)
++   [Novell 认证 Linux 工程师 (Novell CLE) 学习指南 (Novell Press)](docs/novell-certified-linux-engineer-novell-cle-study-guide-novel/README.md)
 +   [Novell 认证 Linux 专业认证 (Novell CLP) 学习指南](docs/novell-certified-linux-professional-novell-clp-study-guide/README.md)
 +   [Novell 认证 Linux 专业人士学习指南](docs/novell-certified-linux-professional-study-guide-novell-press/README.md)
 +   [Linux 和 NetWare 的 Novell 集群服务](docs/novell-cluster-services-for-linux-and-netware-novell-press/README.md)
