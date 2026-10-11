@@ -1,0 +1,11 @@
+# **SOFTWARE INSTALLATION**
+
+1 /usr/share/bluefish/icon_xml.png 2 /usr/share/doc/bluefish-0.13 3 /usr/share/doc/bluefish-0.13/AUTHORS 4 /usr/share/doc/bluefish-0.13/COPYING 5 /usr/share/doc/bluefish-0.13/README 6 /usr/share/doc/bluefish-0.13/TODO 7 /usr/share/locale/bg/LC_MESSAGES/bluefish.mo 8 /usr/share/locale/cs/LC_MESSAGES/bluefish.mo 9 /usr/share/locale/da/LC_MESSAGES/bluefish.mo 10 /usr/share/locale/de/LC_MESSAGES/bluefish.mo 11 /usr/share/locale/el/LC_MESSAGES/bluefish.mo 12 /usr/share/locale/es/LC_MESSAGES/bluefish.mo 13 /usr/share/locale/fi/LC_MESSAGES/bluefish.mo 14 /usr/share/locale/fr/LC_MESSAGES/bluefish.mo 15 /usr/share/locale/hu/LC_MESSAGES/bluefish.mo 16 /usr/share/locale/it/LC_MESSAGES/bluefish.mo 17 /usr/share/locale/ja/LC_MESSAGES/bluefish.mo 18 /usr/share/locale/nl/LC_MESSAGES/bluefish.mo 19 /usr/share/locale/no/LC_MESSAGES/bluefish.mo 20 /usr/share/locale/pl/LC_MESSAGES/bluefish.mo 21 /usr/share/locale/pt/LC_MESSAGES/bluefish.mo 22 /usr/share/locale/pt_BR/LC_MESSAGES/bluefish.mo 23 /usr/share/locale/ro/LC_MESSAGES/bluefish.mo 24 /usr/share/locale/ru/LC_MESSAGES/bluefish.mo 25 /usr/share/locale/sr/LC_MESSAGES/bluefish.mo 26 /usr/share/locale/sv/LC_MESSAGES/bluefish.mo 27 /usr/share/locale/ta/LC_MESSAGES/bluefish.mo 28 /usr/share/locale/zh_CN/LC_MESSAGES/bluefish.mo 29 /usr/share/mime-info/bluefish.keys 30 /usr/share/mime-info/bluefish.mime 31 /usr/share/pixmaps/bluefish-icon.png 32 /usr/share/pixmaps/gnome-app-list-bluefish.png [root@server1 root]#
+
+From the preceding output, you can see that the pathname to the executable file is **/usr/bin/bluefish**, which resides in a directory that is in our **PATH** variable. Upon execution in a desktop environment, you see the screen depicted in Figure 12-4.
+
+Conversely, you can find out which package a certain file belongs to by using the **-q** and **-f** (file) options with the **rpm** command, followed by the filename:
+
+```
+[root@server1 root]# rpm -qf /usr/bin/bluefish bluefish-0.13-1.1.fc2 [root@server1 root]#
+```

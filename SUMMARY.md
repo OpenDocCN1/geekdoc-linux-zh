@@ -1158,6 +1158,7 @@
 +   [Linux 常用语第 2 版](docs/linux-phrasebook-2nd-edition-2nd-ed/README.md)
 +   [Linux 常用手册 (Developer's Library)](docs/linux-phrasebook-developers-library/README.md)
 +   [Linux常用短语手册（含索引）](docs/linux-phrasebook-includes-index/README.md)
++   [Linux 2005 plus 深度剖析](docs/linux-plus-2005-in-depth/README.md)
 +   [Linux 口袋指南，第 3 版](docs/linux-pocket-guide-3e/README.md)
 +   [Linux 口袋指南：核心命令](docs/linux-pocket-guide-essential-commands/README.md)
 +   [Linux 力工具：分步指南教你如何大幅提升 Linux 系统性能](docs/linux-power-tools-step-by-step-instructions-show-you-how-to-/README.md)

@@ -1,0 +1,72 @@
+
+## KEY TERMS
+
+- **complementary metal oxide semiconductor (CMOS)** — A computer chip used to store the configurable information used by the BIOS ROM.
+- **Complex Instruction Set Computers (CISC)** — The processors that execute complex instructions on each time cycle.
+- **Control Unit (CU)** — The area in a processor where instruction code or commands are loaded and carried out.
+- **direct memory access (DMA)** — A capability provided by some bus architectures that allows peripheral devices the ability to bypass the CPU and talk directly with other peripheral components to enhance performance.
+- **disk drive** — A device that contains either a hard disk, floppy disk, CD-ROM, CD-RW, or Zip disk.
+- **DNS servers** — The servers that resolve fully qualified domain names (FQDNs) such as www.linux.org to IP addresses so that users can connect to them across the Internet.
+- **Double Data Rate Synchronous Dynamic Random Access Memory (DDR SDRAM)** — A form of SDRAM that can transfer information at higher speeds than traditional SDRAM.
+- **dual inline memory modules (DIMM)** — A newer connection slot having connectors (pins) along both edges allowing the array of integrated circuits comprising a stick of RAM to connect to the motherboard.
+- **Dynamic Host Configuration Protocol (DHCP) server** — A server on the network that hands out Internet Protocol (IP) configuration to computers that request it.
+- **dynamic RAM (DRAM)** — A type of RAM that needs to refresh its store of information thousands of times per second and is available as a SIMM or DIMM stick.
+- **electronically erasable programmable read-only memory (EEPROM)** — A type of ROM whose information store can not only be erased and rewritten as a whole, but can also be modified singly, leaving other portions intact.
+- **erasable programmable read-only memory (EPROM)** — A type of ROM whose information store can be erased and rewritten, but only as a whole.
+- **Explicitly Parallel Instruction Computing (EPIC)** — The RISC architecture used to describe the Itanium processor.
+- **extended partition** — A partition on a HDD that can be further subdivided into components called logical drives.
+- **filesystem** — The way in which a HDD partition is formatted to allow data to reside on the physical media; common Linux filesystems include ext2, ext3, REISERFS, and VFAT.
+- **FireWire (IEEE 1394)** — A mainboard connection technology that was developed by Apple Computer Inc., in 1995 and supports data transfer speeds of up to 800MB per second.
+- **flash memory drive** — A storage medium that uses EEPROM chips to store data.
+- **floppy disks** — A removable storage media consisting of a flexible medium coated with a ferrous material that are read by floppy disk drives.
+- **fully qualified domain names (FQDN)** — The user-friendly names used to identify machines on networks and on the Internet.
+- **gateway** — Also known as default gateway or gateway of last resort, the address of a computer that accepts information from the local computer and sends it to other computers if the local computer cannot.
+- **hard disk drive (HDD)** — A device used to write and read data to and from a hard disk.
+- **hard disks** — The nonremovable media consisting of a rigid disk coated with a ferrous material and used in hard disk drives (HDD).
+- **Hardware Compatibility List (HCL)** — A list of hardware components that have been tested and deemed compatible with a given operating system.
+- **host name** — A user-friendly name used to uniquely identify a computer on a network. This is usually a FQDN.
+- **hot-swappable** — The ability to add or remove hardware to or from a computer while the computer and operating system are functional.
+- **HSync (horizontal refresh)** — The rate at which horizontal elements of the video screen image are refreshed, allowing for changes or animation on the screen; HSync is measured in Hertz (Hz).
+- **Industry Standard Architecture (ISA)** — An older motherboard connection slot designed to allow peripheral components an interconnect, and which transfers information at a speed of 8MHz.
+- **Integrated Drive Electronics (IDE)** — Also known as ATA, it consists of controllers that control the flow of information to and from up to four hard disks connected to the mainboard via a ribbon cable.
+- **Internet Protocol (IP) address** — The unique number that each computer participating on the Internet must have.
+- **Interrupt Request (IRQ)** — A unique channel from a device to the CPU.
+- **I/O (Input/Output) address** — The small working area of RAM where the CPU can pass information to and receive information from a device.
+- **Level 1 (L1) cache** — The cache memory stored in the processor itself.
+- **Level 2 (L2) cache** — The cache memory stored in a computer chip on the motherboard for use by the processor or within the processor itself.
+- **Level 3 (L3) cache** — The cache memory stored in a computer chip on the motherboard for use by the processor.
+- **logical drives** — The smaller partitions contained within an extended partition on a HDD.
+- **LPT port** — A rectangular, 25-pin connection to the mainboard used to connect peripheral devices such as printers; also called parallel ports.
+- **mainboard** — A circuit board that connects all other hardware components together via slots or ports on the circuit board; also called a motherboard.
+- **Master Boot Record (MBR)** — The area of a hard disk outside a partition that stores partition information and boot loaders.
+- **motherboard** — See also mainboard.
+- **netmask** — Also known as the network mask or subnet mask, it specifies which portion of the IP address identifies the logical network the computer is on.
+- **network interface card (NIC)** — A hardware device used to connect a computer to a network of other computers and communicate or exchange information on it.
+- **parallel port** — See also LPT port.
+- **partitions** — A small section of an entire hard drive created to make the hard drive easier to use. Partitions can be primary or extended.
+- **peripheral component** — The components that attach to the mainboard of a computer and provide a specific function, such as a video card, mouse, or keyboard.
+- **Peripheral Component Interconnect (PCI)** — The most common mainboard connection slot found in computers today, which can transfer information at a speed of 33MHz and use DMA.
+- **Personal Computer Memory Card International Association (PCMCIA)** — A mainboard connection technology that allows a small card to be inserted with the electronics necessary to provide a certain function.
+- **physical memory** — A storage area for information that is directly wired through circuit boards to the processor.
+- **Plug-and-Play (PnP)** — A technology that allows peripheral devices to automatically receive the correct IRQ, I/O address, and DMA settings without any user intervention.
+- **power-on self test (POST)** — The initialization of hardware components by the ROM BIOS when the computer is first powered on.
+- **primary partitions** — The separate divisions into which a HDD can be divided (up to four are allowed per HDD).
+- **programmable read-only memory (PROM)** — A blank ROM computer chip that can be written to once and never rewritten again.
+- **PS/2 ports** — The small, round mainboard connectors developed by IBM with six pins that typically connect keyboards and mice to the computer.
+- **Rambus Dynamic Random Access Memory (RDRAM)** — A proprietary type of RAM developed by the Rambus Corporation.
+- **random access memory (RAM)** — A computer chip able to store information that is then lost when there is no power to the system.
+- **read-only memory (ROM)** — A computer chip able to store information in a static, permanent manner, even when there is no power to the system.
+- **Reduced Instruction Set Computers (RISC) processors** — The relatively fast processors that understand small instruction sets.
+- **refresh rate** — The rate at which information displayed on a video screen is refreshed; it is measured in Hertz (Hz).
+- **removable media** — The information storage media that can be removed from a computer allowing transfer of data between machines.
+- **resolution** — The total number of pixels that can be displayed on a computer video screen horizontally and vertically.
+- **serial port** — See also COM port.
+- **single inline memory modules (SIMM)** — An older type of memory stick that connects to the mainboard using connectors along only one edge.
+- **Small Computer Systems Interface (SCSI)** — A technology that consists of controllers that can connect several SCSI HDDs to the mainboard and control the flow of data to and from the SCSI HDDs.
+- **small outline dual inline memory modules (SODIMM)** — A DIMM module that is physically smaller than traditional DIMM modules and used in notebook and Macintosh computers.
+- **static RAM (SRAM)** — An expensive type of RAM commonly used in computer chips on the mainboard and which has a fast access speed.
+- **superscalar** — The ability for a computer processor to complete more than one command in a single cycle.
+- **symmetric multiprocessing (SMP)** — A system containing more than one processor in which each processor shares tasks and memory space.
+- **Synchronous Dynamic Random Access Memory (SDRAM)** — A form of RAM that uses the standard DIMM connector and transfers data at a very fast rate.
+- **universal serial bus (USB)** — A mainboard connection technology that allows data transfer speeds of up to 480MB per second and is used for many peripheral components, such as mice, printers, and scanners.
+- **video adapter card** — A peripheral component used to display graphical images to a computer monitor.

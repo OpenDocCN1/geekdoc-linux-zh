@@ -1,0 +1,70 @@
+
+- **Network File System (NFS)**—A distributed filesystem developed by Sun Microsystems that allows computers of differing types to access files shared on the network.
+- **network ID**—The portion of an IP address that denotes the network.
+- **network interface card (NIC)**—A hardware device used to connect a computer to a network of other computers and communicate or exchange information on it.
+- **newgrp command**—The command used to change temporarily the primary group of a user.
+- **newsgroup**—An Internet protocol service accessed via an application program called a newsreader. This service allows access to postings (e-mails in a central place accessible by all newsgroup users) normally organized along specific themes. Users with questions on specific topics can post messages, which can be answered by other users.
+- **nice command**—The command used to change the priority of a process as it is started.
+- **nice value**—The value that indirectly represents the priority of a process; the higher the value, the lower the priority.
+- **nmap (network mapper) command**—A command that can be used to scan ports on network computers.
+- **nohup command**—A command that prevents other commands from exiting when the parent process is killed.
+- **NTLOADER**—The boot loader used to boot Windows NT, Windows 2000, and Windows XP operating system kernels.
+- **ntsysv**—A utility that can be used to alter the daemons that are started in each runlevel.
+- **octet**—A portion of an IP address that represents eight binary bits.
+- **od command**—A Linux command used to display the contents of a file in octal format.
+- **Open Source Software (OSS)**—The programs distributed and licensed so that the source code making up the program is freely available to anyone who wants to examine, utilize, or improve upon it.
+- **operating system (OS)**—The software used to control and directly interact with the computer hardware components.
+- **options**—The specific letters that start with a dash “-” or two and appear after the command name to alter the way the command works.
+- **other**—When used in the mode of a certain file or directory, it refers to all users on the Linux system.
+- **overclocked**—A CPU that runs at a higher clock speed than it has been rated for.
+- **owner**—The user whose name appears in a long listing of a file or directory and who has the ability to change permissions on that file or directory.
+- **package dependencies**—A list of packages that are prerequisite to the current package being installed on the system.
+- **package manager**—The software used to install, maintain, and remove other software programs by storing all relevant software information in a central software database on the computer.
+- **Packet Internet Groper (ping) command**—A command used to check TCP/IP connectivity on a network.
+- **packets**—The packages of data formatted by a network protocol.
+- **parallel port**—*See also LPT port.*
+- **parent process**—A process that has started other processes (child processes).
+- **parent process ID (PPID)**—The PID of the parent process that created the current process.
+- **partition**—A small section of an entire hard drive created to make the hard drive easier to use. Partitions can be primary or extended.
+- **passwd command**—The command used to modify the password associated with a user account.
+- **patch command**—The command used to apply a patch to the Linux kernel source code.
+- **PATH variable**—A variable that stores a list of directories that will be searched in order when commands are executed without an absolute or relative pathname.
+- **peripheral component**—The components that attach to the mainboard of a computer and provide a specific function, such as a video card, mouse, or keyboard.
+- **Peripheral Component Interconnect (PCI)**—The most common motherboard connection slot found in computers today, which can transfer information at a speed of 33MHz and use DMA.
+- **permissions**—A list that identifies who can access a file or folder, and their level of access.
+- **Personal Computer Memory Card International Association (PCMCIA)**—A mainboard connection technology that allows a small card to be inserted with the electronics necessary to provide a certain function.
+- **physical memory**—A storage area for information that is directly wired through circuit boards to the processor.
+- **pipe**—A string of commands connected by | metacharacters.
+- **Plug-and-Play (PnP)**—A technology that allows peripheral devices to automatically receive the correct IRQ, I/O address, and DMA settings without any user intervention.
+- **Pluggable Authentication Modules (PAM)**—The component that handles authentication requests by daemons on a Linux system.
+- **polling**—The act of querying devices to see if they have services that need to be run.
+- **port**—A number that uniquely identifies a network service.
+- **Power On SelfTest (POST)**—An initial series of tests run when a computer is powered on to ensure that hardware components are functional.
+- **primary DNS server**—The DNS server that contains a read/write copy of the zone.
+- **primary group**—The group that is specified for a user in the /etc/passwd file and that is specified as group owner for all files created by a user.
+- **primary partitions**—The separate divisions into which a HDD can be divided (up to four are allowed per HDD).
+- **print job**—The information sent to a printer for printing.
+- **print job ID**—A unique numeric identifier used to mark and distinguish each print job.
+- **print queue**—A directory on the filesystem that holds print jobs that are waiting to be printed.
+- **Printer Configuration tool**—A graphical utility used to configure printers on the system.
+- **printing**—The process by which print jobs are sent from a print queue to a printer.
+- **priority**—The importance of system information when logging system events.
+- **proactive maintenance**—The measures taken to reduce future system problems.
+- **process**—A program loaded into memory and running on the processor performing a specific task.
+- **process ID (PID)**—A unique identifier assigned to every process as it begins.
+- **process priority**—A number assigned to a process, used to determine how many time slices on the processor it will receive; the higher the number, the lower the priority.
+- **process state**—The current state of the process on the processor; most processes are in the sleeping or running state.
+- **production kernel**—A Linux kernel whose minor number (the number after the dot in the version number) is even and deemed stable for use through widespread testing.
+- **program**—The sets of instructions that know how to interact with the operating system and computer hardware to perform specific tasks; stored as a file on some media (for example, a hard disk drive).
+- **programmable read-only memory (PROM)**—A blank ROM computer chip that can be written to once and never rewritten again.
+- **programming language**—The syntax used for developing a program. Different programming languages use different syntax.
+- **protocol**—A set of rules of communication used between computers on a network.
+- **ps command**—The command used to obtain information about processes currently running on the system.
+- **PS/2 ports**—The small, round mainboard connectors developed by IBM with six pins that typically connect keyboards and mice to the computer.
+- **pwcov command**—The command used to enable the use of the */etc/shadow* file.
+- **pwd (print working directory) command**—A Linux command used to display the current directory in the directory tree.
+- **pwnconv command**—The command used to disable the use of the */etc/shadow* file.
+- **Qt toolkit**—The software toolkit used with the K Desktop Environment.
+- **queuing**—*See also Spooling.*
+- **quota command**—A command used to view disk quotas imposed on a user.
+- **quotaoff command**—A command used to deactivate disk quotas.
