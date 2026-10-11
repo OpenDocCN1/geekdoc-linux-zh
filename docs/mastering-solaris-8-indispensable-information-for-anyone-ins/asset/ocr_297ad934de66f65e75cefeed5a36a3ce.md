@@ -1,0 +1,13 @@
+When you're using the Process Manager to troubleshoot a system, the telltale sign of a runaway process is the existence of several identical jobs all owned by the same user. An example would be an errant script that initiates processes without checking to see if the previous processes complete themselves first. Also, if a process is using a considerable percentage of CPU time, that might indicate that the process is in an endless loop. Other telltale signs are processes that execute with high *nice* numbers (see the next section) or processes that are using more and more CPU time as they execute.
+
+# Process Priorities
+
+Solaris and Unix provide commands you can use to alter the scheduling priority under which a process runs. To view the default scheduling policies of the process scheduler, use the `disadmin` command.
+
+> **WARNING** If you are going to change process priorities, be aware that you could cause your system to crash if you make a mistake. Take extra caution when adjusting priorities, and if possible, try your changes on a non-production system.
+
+The `nice` command allows you to change a scheduling priority, whereas the `priocntl` command provides a general interface to the Unix scheduler. The `nice` command runs as a shell command, and not every process supports it. You can control what shell is used to execute the `nice` command; otherwise, it uses your default shell during execution. The `nice` command sets a priority (the so-called *nice* number) from 0 to 39 (or a range of 40), where 0 is the best and 39 is the worst. Processes inherit their *nice* number from their parent, and the `ps -el` lists the number in the NI column. Mostly, `nice` is supported for backward compatibility, and you should spend your time mastering the `priocntl` (priority control) command.
+
+Processes are assigned a user execution level of from 1 to 19, and it is assumed that 10 is the default increment. A higher priority than 19 is run as 19. If a superuser enters a negative increment, the commands issued by the superuser with a negative increment are run with a higher priority than normal. Priority 1 is the highest level, 19 the lowest. The `nice` command's syntax allows you to specify the command as well as an argument used by that command.
+
+You can adjust the *nice* number to a lower priority by raising it (either with a `nice -n <positivename>` or `nice <negativename>`) from 1 to 19 points, where 19 points (either `nice -n 19` or `nice -19`) will result in the maximum *nice* number of 39. You can raise the priority by lowering the *nice* number (using `nice -n <negativename>`) to a *nice* total of 0 by using the smallest number, -20 (that is, `nice -n -20`). The default *nice*

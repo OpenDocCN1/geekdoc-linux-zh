@@ -1,0 +1,15 @@
+transferred across the network in the form of IP datagrams. IP is a stateless, con-nec-tionless datagram delivery service between hosts on the network. It makes no guaran-tee that datagrams will be delivered correctly or in sequence, similar to UDP. Quite possibly, datagrams might never arrive at their intended destination. IP relies on pro-tocols such as TCP at higher layers.
+
+Because different hosts on the network need to exchange IP datagrams correctly, the IP protocol stipulates that every system must have an IP address that is a unique identifier. Something similar to a telephone number, this address is assigned by the American Registry for Internet Numbers (ARIN); see www.arin.net for more informa-tion on the assignment of IP addresses. If you connect to the Internet by means of an Internet Service Provider, or ISP, then your IP addresses are supplied from a pool of addresses allotted to your ISP.
+
+The second protocol at the Internet layer level is the Internet Control Message Proto-col, or ICMP, which is used to communicate error messages and other network condi-tions between systems connected to the network. This protocol defines several different message types that allow systems to exchange network information efficiently. It checks to see if hosts are available and obtains routing information.
+
+The Address Resolution Protocol, or ARP, sends and receives datagrams between the Data Link and Network layers. Datagrams are mapped to Ethernet addresses (so-called 48-bit MAC addresses) from IP addresses (32 bits long). ARP manages this process, which is called name-to-device resolution.
+
+# The Data Link Layer
+
+The Data Link layer is the lowest layer in the model that isn’t hardware specific. Also know as the Network Access layer, it is responsible for converting the data from the Network layer into a format that can be transmitted over the media that connects a system to the network by way of the system’s network interface card (NIC). Although most systems contain a single NIC, some that operate on several different networks can contain two or more. Systems with more than one NIC and that operate on sev-eral different networks are referred to as *multihomed systems*.
+
+Each NIC has a hardware or physical address associated with it; the physical address is usually referred to as the Media Access Control (MAC) address. It is made up of a unique 48-bit number hard-coded on the NIC. Some vendors, however, pro-vide the ability to assign MAC addresses to NICs. Once the Data Link layer receives an IP datagram from the Network layer, it adds a header that contains the source and destination MAC address for the two network systems that are exchanging data.
+
+The main protocol for this level is the Address Resolution Protocol (ARP), which handles the mapping of IP addresses for a system to the physical or hardware address of its NIC. This is a simple protocol that consists of two types of messages: the “Who is” message and the “I am” message. When the Data Link layer sends data to a system

@@ -1,0 +1,15 @@
+with UDP, which is an unreliable connection. Network services such as rlogin and rcp need very reliable connections. TCP/IP fits the bill because it has a mechanism for determining if and when packets that were sent are received.
+
+Solaris also uses protocols such as Serial Line Internet Protocol (SLIP) and Point-to-Point Protocol (PPP). They both provide serial line connections that support the standard IP protocol and are in common use for dial-up connections to the Internet. Both are designed to work efficiently over serial lines. Because of their compatibility, any IP-based service will run successfully over these connections. There are two protocols that run over serial lines and speed things up considerably. They are XRemote and LBX (low bandwidth X). Xremote functions by compressing the X Window System protocol and makes it more efficient over slow serial lines. LBX is based on the same technology and is a part of the X Window System.
+
+# DNS and the Internet
+
+As discussed in Chapter 9, the domain name service (DNS) is a distributed service that is housed in a database. The DNS database is stored in a set of name servers that manage the root domains of the Internet. Thousands of machines cooperate on a global level in keeping the database up-to-date and replicate the information for fault tolerance and performance. These name servers translate the names of network nodes as friendly names into network or IP addresses.
+
+The Internet's DNS database contains information that maps literally hundreds of thousand of alphanumeric host names into numeric IP addresses. It is so huge that it is not contained in one place but exists on several hosts that are local to the calling site. DNS is organized in a hierarchical structure. Each country uses its International Standards Organization (ISO) country code as its domain name. The United States, however, is an exception and uses six standard (.) addresses: .com (commercial); .edu (educational), .gov (government), .mil (military), .net (network), and .org (organization). Many new extensions have been proposed and are about to be added to the pool of possible addresses. Each primary DNS domain is serviced by a set of servers. (DNS names and conventions were discussed in greater detail in Chapter 9.)
+
+Domain names are assigned by Network Solutions (which used to be a part of InterNIC) and other, similar companies. A system's full DNS name is completely unambiguous. In the U.S., the domain name tells you something about where the system is located but adds enough diversity to the name to avoid any confusion if different sites happen to choose a similar name for their system. The top-level domain name in the U.S. appears last and is not case sensitive on the Internet. The following example illustrates a typical U.S. domain:
+
+```
+locis.loc.gov
+```

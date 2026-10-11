@@ -1,0 +1,11 @@
+To access the OK prompt, a system administrator needs to use a null modem cable through the console port. The SPARC platform version of Solaris 8 features a command, `eeprom`, that can interact with the OK prompt in a limited manner. The user requires access to a video display and keyboard connected directly to the system to use the `eeprom` command.
+
+When Solaris is running, the operating system uses run levels to designate the resources that can be shared and whether the system is in single-user mode or multi-user mode. You have control over these run levels and can alter them to change security features, get more powerful access to hardware features, shut down a system, and perform many other functions.
+
+Solaris features a GUI login manager named `dtlogin` that presents for user logins a GUI interface from which the user can select the CDE or OpenWindows desktop. The CDE and OpenWindows desktops both feature various shell windows that give a user the option of typing directly to their default shells. The CDE has the Telnet window and console window. OpenWindows has the Command tool, the Shell tool and the console window. The console window in both systems displays system messages and warning messages not found in other shell interpreter windows.
+
+Several important commands were introduced in this chapter. The `find` command is used to find various files and directories. After a file or directory is found, an executable command can be started to manipulate the file and perform other functions. The `file` command is very useful in figuring out what a mystery file is by performing a series of basic tests on the file. If the file is not a common file, the `file` command will perform a byte check using a local magic file. System commands like `ifconfig` and several system files found in the `/etc` directory were also briefly presented in this chapter.
+
+This chapter also covered closing the various Solaris GUIs and shutting down your system. To exit the CDE or OpenWindows desktop, right-click anywhere in unoccupied desktop space and select the *Exit* command. This will save your current desktop settings or revert to a default home session, depending on your preference. You can use the *shutdown* command to bring your system into a state that is consistent and can be powered off.
+
+![](bbox=[0.94, 0.12, 0.98, 0.44])

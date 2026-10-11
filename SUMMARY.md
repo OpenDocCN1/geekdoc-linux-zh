@@ -1442,6 +1442,7 @@
 +   [Red Hat Linux 7.1 精通指南](docs/mastering-red-hat-linux-71-none/README.md)
 +   [Red Hat Linux Enterprise 3 高级指南](docs/mastering-red-hat-linux-enterprise-3/README.md)
 +   [Linux Shell 命令精通指南](docs/mastering-shell-commands-on-linux/README.md)
++   [精通 Solaris 8：Solaris 必备信息；Solaris 最新版本的安装、配置和管理；商业计算中 Solaris 优势的实际解析](docs/mastering-solaris-8-indispensable-information-for-anyone-ins/README.md)
 +   [SQL 精通：入门指南](docs/mastering-sql-a-beginners-guide/README.md)
 +   [红 Hat认证工程师 (RHCE) 考试精通：Linux 管理、自动化与认证完全指南](docs/mastering-the-red-hat-certified-engineer-rhce-exam-your-comp/README.md)
 +   [Red Hat ® Enterprise Linux ® 3 高级指南](docs/mastering-tm-red-hat-enterprise-linux-3/README.md)

@@ -1,0 +1,16 @@
+whose MAC address is unknown, it issues a “Who is” message. When a system receives this message, it will respond with the message “I am (name), My MAC address is xxx.x.xx:xx:xx:xx:xx.”
+
+Solaris 8 supports several different types of physical media. Standards bodies such as the Institute of Electrical and Electronics Engineers (IEEE) have standardized the most popular physical media types. They are Ethernet, Token Ring, Fiber Distributed Data Interface (FDDI), and Asynchronous Transfer Mode (ATM).
+
+# The Physical Layer
+
+The Physical layer can be made up of several basic types of network media configurations. Typically, the Physical layer is described in terms of topologies. You can have both physical and logical topologies. For example, the trunk (or backbone), star, and ring are examples of logical topologies. Physical topologies are particular architectures that use real equipment. Thus, Token Ring is an example of a physical network topology. In some instances, you can use the same equipment, such as hubs and routers, to implement two different logical topologies, such as backbone and stars.
+
+# Broadcast Networks
+
+Broadcast networks, of which Ethernet is the most prevalent example, employ a network cable that can send a message at any time. It is covered in the IEEE 802.3 standard and is one of the most common physical mediums in use. Ethernet allows multiple hosts to share the same physical media for transmitting data because it is bus based: a single host can be removed from the bus without adversely affecting the overall network. Most TCP/IP traffic is sent and delivered over Ethernet networks; thus, most data communications over the Internet is Ethernet traffic. Ethernet components outsell by far all other networking topologies in use today.
+
+Ethernet employs a transmission protocol called carrier sense multiple access with collision detection, or CSMA/CD. When a networked system is transmitting data, it listens for a carrier to determine if any other systems are transmitting. If two or more systems hear that the path is clear and begin to transmit at the same time, there will be a collision on the line. The collision will be detected by both systems. In the event of a collision, the systems will back off for a random amount of time and then attempt to transmit again. As the number of systems increases on an Ethernet network, the frequency of collisions increases in direct proportion. The frequency of collisions and retransmissions reduces the speed of the network significantly. This type of system frequently creates an overload on the network. There are times when the collision rate gets too high and the network crashes. If a Solaris system is part of a local area network (LAN), in all probability, the LAN is an Ethernet that supports rates from 10 megabits to 1 gigabit per second with enhancements in speed occurring frequently. Due to the load on the network because of overhead and traffic, however, the transfer rates are always lower than specified.
+
+PART II
+Solaris and the Network

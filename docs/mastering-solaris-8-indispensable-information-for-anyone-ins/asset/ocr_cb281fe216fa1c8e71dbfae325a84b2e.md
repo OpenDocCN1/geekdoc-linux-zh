@@ -1,0 +1,7 @@
+# The Solaris How to Buy page is a jumping-off point for obtaining the various Sun Solaris distributions.
+
+![](bbox=[0.25, 0.13, 0.95, 0.56])
+
+Sun requires that businesses using the Solaris operating system purchase a commercial license. This license applies to either a departmental or corporate server and to a developer’s workstation. When you purchase a new system from Sun, the cost of the commercial license is part of the package. However, you may find that in many instances, particularly when you purchase a workstation, the documentation set is not included with your system. The documentation may be purchased from Sun as part of the distribution described in the preceding paragraph, in that case. For instances in which you wish to upgrade your system from a previous version of Solaris to Solaris 8, be aware that Sun also sells an upgrade version of the operating system.
+
+All of the different versions of the Solaris operating system may be purchased directly from Sun through the Sun store on the Sun Web site (see Figure 3.2). Access to the Sun store may be found through a button on the Sun home page labeled Sun Store or by clicking the button labeled How to Buy in the title bar on many pages of Sun’s site. The direct URL to the Sun store is http://store.sun.com.

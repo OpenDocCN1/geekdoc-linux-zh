@@ -1,0 +1,13 @@
+S olaris is built from the ground up to support connections to the Internet. As communications technology rapidly improves on a global level, the Internet has become a major force in information technology, networking, and daily life. Solaris comes with domain support, Internet naming conventions, tools like the Netscape browser to view content, and a variety of FTP utilities for transferring files.
+
+S olaris is widely used in Internet deployments, and this is one of Sun's primary focuses. Many of the world's largest Web sites run on Sun Solaris, and this chapter gives a brief overview of the Apache Web server, which is part of the standard distribution for Solaris 8. Automating Web servers with CGI scripts is also discussed in this chapter, as are Usenet groups, electronic mail, and the pine utility.
+
+# ## Internetworking Overview
+
+An *internetwork* is a large collection of individual networks that are connected by intermediate network devices. It functions as a single large network. An *intranet* is a network that resides within an organization, connecting computers internally but restricting access to their information to in-house users. Although similar to a LAN, intranets are based on Internet technology. They provide services such as databases, e-mail, and Web pages to limited users in the group. The beauty of intranets is that they are configured to connect different types of systems and computers via their IP addresses, much as the Internet does. Intranets take the technology one step further, however.
+
+While the Internet uses one common protocol suite, an intranet can be configured to use a number of different protocols, such as Internet Protocol (IP), AppleTalk, DECnet, IPX, Extensible Name Service (XNS), or others that have been developed more recently. To communicate across networks that use different protocols, you can set up special gateways in remote sites. The gateways allow you to tunnel or encapsulate the protocols as IP packets so they can be used on the public network. More and more vendors with proprietary networking protocols like AppleTalk (Apple) and IPX (Novell) are supporting them as legacy protocols and adopting and recommending TCP/IP in their place.
+
+An intranet can work in tandem with the Internet and still keep privileged information secure within a site. A TCP/IP network that contains an internal intranet component and an external connection to the Internet (which clients or vendors can access) is called an *extranet*.
+
+Implementing a functional internetwork has its challenges. Because the speed of different networks and their connections varies, bandwidth issues often require a

@@ -1,0 +1,15 @@
+numbers on both databases to make certain they match. If the serial number on the master is larger than that of the slave's, then the slave name server will perform a zone transfer, which is a procedure used by the slave name server for obtaining a new copy of the zone database from the master name server.
+
+The hint servers do not contain authoritative information. Their only purpose is to forward queries to other name servers and cache the answer for a prescribed period of time. When a resolver queries a hint name server, the server will return the answer it has stored in its cache instead of forwarding the query to another name server. Hint name servers are used to reduce DNS traffic within large domains.
+
+To keep your DNS server as secure as possible, you must employ two techniques. The first is to restrict responses, and the second is to restrict zone transfers. Restricting zone transfers to your slave servers is the most important consideration and will offer some security in itself. However, enterprising hackers can always find a way around the zone transfer issue.
+
+Restricting zone transfers that contain all of the information about your zone is the number one priority in keeping your DNS server secure. Your entire zone database could be acquired through an illicit zone transfer. You need to allow queries to your primary or backup domains; otherwise, you won't be able to look up any records for the domains. But you should restrict general queries so others won't use your system as their name server. You need to specify the list of IP addresses that are allowed to initiate zone transfers with your name server. For Solaris 8 (BIND), you will need to specify an allow-transfer parameter for each zone directive in the name server configuration file, /etc/named.conf. The syntax for this parameter is as follows:
+
+```
+allow-transfer <address1>; <address2>; <addressN>;
+```
+
+In this example, <address1> through <addressN> are either the IP addresses or network addresses from which you want to allow zone transfers. The allow-transfer is a parameter of the zone directive, which means that you need to specify it for every zone directive in order to restrict zone transfers.
+
+The most common Solaris interface to the DNS is the Berkeley Internet Name Domain (BIND) software, which follows the client/server model. On any local network, there may be one or more systems running a name server, supporting all the local hosts as clients. If a system sends a message to another host, it queries the nearest name server to learn the remote host's IP address. The client, or resolver, may be a process running on the same computer as the name server. It may pass the request over the network to reach a server as well. To reduce network traffic and speed up the lookup process, the local name server has some knowledge of distant hosts. When a local server contacts a remote server with a request for an address, after a response, the local server adds that address to its internal table and reuses it for a while. The name server deletes the non-local information before it can become outdated.
