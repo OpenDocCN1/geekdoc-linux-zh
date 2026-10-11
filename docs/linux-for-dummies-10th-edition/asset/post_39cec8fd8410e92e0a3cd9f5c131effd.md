@@ -1,0 +1,322 @@
+
+## M
+- minimal installation, 43
+- mirror mode, 79
+- MIT (Massachusetts Institute of Technology), 11
+- mkdir command, 130
+- modems, 154–156, 169
+- mount point locations, 47
+- mounting, defined, 124
+- mouse settings, 79–80
+- move (mv) command, 130
+- movie files, viewing, 277–281
+- Mozilla. See Firefox browser
+- MPEG4 video compression, 274
+- MPG (Moving Pictures Group), 277
+- MTU (Media Transfer Unit) size, 160
+- multiplatform, Linux as, 9
+- multiple commands, running, 360
+- multiple hard drives, installing, 22–23
+- music, downloading, 260–264
+- mv (move) command, 130
+- MX Linux, aptlets in, 113
+- MySQL, 411–413
+  - Cluster Carrier Grade Edition, 402
+  - Community Edition, 402
+  - Enterprise Edition, 402
+  - Standard Edition, 402
+
+## N
+- nano, editing with, 204–205
+- natural scrolling, 80
+- Nautilus, 136
+- ndiswrapper project, 161
+- network commands, 440–441
+- network drives, accessing, 150–151
+- network interfaces, 167
+- Network Manager tool, 158–164
+- Network Security Toolkit distribution, 445
+- network weak spots, preventing, overview, 345
+- nginx server, 401
+- nmcli command, 162, 163
+- nmtui command, 162
+- notification area, 64
+- NU Image Manipulation Program (GIMP) scripts, 287–288
+
+## O
+- Ogg video compression, 274
+- Oldstable software repositories, 446
+- open source software, 11–14
+- openSUSE
+  - adding applications in, 300–301
+  - installing, 51–59, 405–407
+  - Plasma desktop, 86
+  - updating, 297–298
+- operating systems (OS)
+  - installing an, 390–393
+  - Linux compared with others, 8–10
+  - upgrading, 304
+- options parameter, 374
+- outbound SMTP relay server address, 158
+- output redirection, 318–319, 360–361
+- owners (users), for Linux filesystem, 131–133
+- ownership freedom, 7–8
+
+## P
+- packages, installing, 301–303
+- Pager widget, 89
+- Panel Editor widget, 90
+- partitioning drives, 23–29
+- passwords, 343–344, 431–432
+- PC hardware-detect tool, 31
+- permissions, 127, 131–134, 143–144
+- PHP (Hypertext Preprocessor) server, 409–410, 413–415
+- phpinfo() function, 413
+- php.ini settings, 414–415
+- ping command, 170
+- ping signal, 170
+- pinging, defined, 170
+- pipes, 320–321
+- piping, 361–362
+- platforms, defined, 9
+- Plugins tab, in `gedit`, 210–211
+- POP3 server address, 158
+- port, defined, 348
+- port setting, 412
+- ported, defined, 9
+- post-connection internet connectivity, 171–172
+- preemptive multitasking, 9
+- pre-installation, 38–39
+- presentations, 231–232
+- primary partitions, 23
+- `printenv` command, 368
+- Printer Details option, 338
+- Printer Options dialog box, 337
+- printer properties, 337–338
+- Privacy & Security section, on Firefox browser, 178–179
+- `processes` commands, 440
+- Processes tab, 339–341
+- Program, opening files with, 140
+- programming languages, 9, 401–402
+- programs, 140, 311
+- PuTTY, 351–352
+
+## Q
+- Queries pane, in LibreOffice Base, 244
+- QuickTime video format, 278
+
+## R
+- read permission, 133
+- Really Simple Syndication (RSS) readers, 201
+- RealNetworks (RM), 278
+- Red Hat Package Management (RPM), 199, 404, 445
+- redirection, 318–319
+- relative navigation, 130
+- removable media
+  - description of, 71–72
+  - in `filesystem`, 149–150
+  - mounting, 124
+- removable storage, 87
+- remove (rm) command, 130
+- Remove Printer option, 338
+- Reports pane, in LibreOffice Base, 244
+- `reset` command, 320–321
+- resolution, 78
+- Resources tab, 341–342
+- Rhythmbox, 256–258, 264
+- RM (RealNetworks), 278
+- rm (remove) command, 130
+- `/root` directory, 122–123
+- `route` command, 165, 168–169
+- router, wireless, 155–156
+- RPM (Red Hat Package Management), 199, 404, 445
+- RSS (Really Simple Syndication) readers, 201
+- Rufus program, 35
+- ruler, in LibreOffice suite, 223, 237–239
+
+## S
+- Sabayon Linux, 448
+- satellite modems, 155
+- screen resolutions, 429–430
+- script programs, writing
+  - command substitution, 371–372
+  - logic statements in, 374–378
+  - loops in, 378–380
+  - mathematical expressions in, 372–374
+  - overview, 371
+- SDSL (Symmetric Digital Subscriber Line), 154
+- Search section, on Firefox browser, 178
+- second triplet, 132–133
+- Secure Shell (SSH), 349–355
+- security
+  - online resources for, 356–358
+  - passwords for, 343–344
+  - System Log Viewer, 356–358
+  - updating software, 344–356
+- services, 123, 345–348
+- `set` command, 368
+- shebang, 363
+- `shell` prompts, 307–309
+- shell scripting
+  - command line arguments, 369–370
+  - displaying messages, 365–366
+  - exit status, 370–371
+  - formatting, 362–364
+  - output redirection, 360–361
+  - overview, 359
+  - piping, 361–362
+  - running, 364–365
+  - running multiple commands, 360
+  - using variables in, 366–369
+  - writing script programs, 371–380
+- shells
+  - bash command, 309–310
+  - commands for, 312–314
+  - overview, 305–306
+  - pipes, 320–321
+  - redirection, 318–319
+  - shell prompts, 307–309
+  - starting bash sessions using terminal application, 306–307
+  - starting programs with, 311
+  - variables, 314–318
+  - Wildcard expansion, 311–312
+- single mode, 79
+- Skype, 199–200
+- Slackware distribution, 443–444
+- SMTP relay server address, 158
+- socket, setting, 412
+- software
+  - adding to Linux
+    - compressing and packaging files, 295–296
+    - installing, 298–301
+    - opening downloaded files, 293–294
+  - OS, 304
+  - overview, 293
+  - searching for, 303–304
+  - updating, 296–298
+  - repositories for, 446
+  - types of
+    - copyleft, 12
+    - freedom, 11
+    - specialized, 16
+    - virtualization, 21
+  - updating, 344–346
+- Software Center application, 87
+- source code, 12
+- specialized Linux distribution, 16
+- specialized software, 16
+- spices. See widgets
+- spin distributions, 444
+- spins, 444
+- SSH (Secure Shell), 349–355
+- stable Debian (DEB) distributions, 446
+- Stallman, Richard, 11–12
+- static method, 157
+- stderr (standard error), 318
+- stdin (standard input), 318
+- stdout (standard output), 318
+- storage medium, 129
+- Straw program, 201
+- superuser, 133
+- Symmetric Digital Subscriber Line (SDSL), 154
+- Synaptic Package Manager, 301–302
+- Sync feature, on Firefox browser, 179
+- system administration
+  - CUPS, 331–336
+  - managing users and groups, 324–330
+  - overview, 323
+- System Monitor tool, 338–342
+- system control commands, 439–441
+- System Log Viewer, 356–358
+- System Monitor tool
+  - File Systems tab, 342
+  - overview, 338–339
+  - Processes tab, 339–341
+  - Resources tab, 341–342
+- system settings, for KDE Plasma desktop, 96–97
+- system tray, in MATE, 108
+- System Tray widget, 89
+- systemctl command, 347–348
+- systemd software, 345
+- SystemRescueCD, 448
+
+## T
+- tables, in LibreOffice Base, 245–246
+- Tables pane, in LibreOffice Base, 244
+- target host, 169
+- Task Manager widget, 89
+- Tasks pane, in LibreOffice Base, 244
+- terminal application, starting bash sessions using, 306–307
+- text files
+  - editing in KDE Plasma desktop, 211–218
+  - editing with nano, 204–205
+  - gedit text editor, 206–210
+  - overview, 202–204
+  - saving contents in, 205–206
+- themes, on Firefox browser, 179
+- third triplet, 132–133
+- 3-dimensional (3D) games, 288–289
+- Thunar file manager program, 146–148
+- Thunderbird email application, 195–197
+- Tux, 448
+- Torvalds, Linus, 10
+- touchpad settings, 79–80
+- Trash folder, 68, 142
+- triplets, 131–133
+- troubleshooting
+  - changing boot environment, 427–429
+  - changing screen resolutions, 429–430
+  - command-line login prompt, 425–426
+  - double-checking settings, 424
+  - forgotten passwords, 431–432
+  - frozen installations, 422–423
+  - GRUB2 bootloader program errors, 431
+  - GUI desktop errors, 424–425
+  - overview, 421–422
+  - tumbleweed, 51
+
+## U
+- Uber-geek hangout, 172
+- Ubuntu, 29
+  - adding applications in, 299–300
+  - checking installation mediums for errors, 423–424
+  - installing, 404–405
+  - installing Linux from boot, 49–50
+  - updating, 296–297
+- Ubuntu Live, 39–49
+- ufw firewall, 348
+- UID (userid), 366
+- Unified Extensible Firmware Interface (UEFI) information, 31
+- Universal Access options, 80–81
+- UNIX operating system, 10–12
+- unstable Debian (DEB) distributions, 446
+- USB stick, bootable, 34–36
+- User variables, 368–369
+- userid (UID), 366
+- users
+  - description of, 131–133
+  - managing
+    - adding new users, 326–328
+    - overview, 324
+    - tools for, 324–325
+- /usr directory, 125
+
+## V
+- variables, 314–318, 366–369
+- VDI (VirtualBox Disk Image). See virtual machine (VM)
+- VideoLAN Client (VLC), 259–260, 280–281
+- videos
+  - viewing DVDs, 281–282
+  - viewing movie files, 277–281
+  - watching on Internet, 277–279
+- view buttons, customizing, 139
+- View menu, for VM, 394–395
+- View tab, in gedit, 208–209
+- Views tab bar, in LibreOffice Impress, 234–235
+- virtual desktop, 74
+- virtual machine (VM)
+  - creating, 384–387
+  - customizing, 387–393
+  - navigating, 390–396
+  - VirtualBox, installing, 382–384
+  - VirtualBox Disk Image (VDI), 386

@@ -957,6 +957,7 @@
 +   [生物学家的 Linux 入门指南](docs/linux-for-biologists/README.md)
 +   [生物学家 Linux 秘籍](docs/linux-for-biologists-a-cookbook/README.md)
 +   [Linux 入门指南](docs/linux-for-dummies/README.md)
++   [Linux 傻瓜指南](docs/linux-for-dummies-10th-edition/README.md)
 +   [Linux 傻瓜指南第 7 版，源码 DVD Mp (2 DVD 装)](docs/linux-for-dummies-7th-edition-source-code-dvd-mp-2-dvd-pak/README.md)
 +   [Linux 入门指南，第 8 版](docs/linux-for-dummies-8th-edition/README.md)
 +   [Linux 初学者指南，第 9 版](docs/linux-for-dummies-9th-edition/README.md)
