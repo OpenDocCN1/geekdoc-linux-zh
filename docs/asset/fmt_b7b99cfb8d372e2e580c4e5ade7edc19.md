@@ -1,0 +1,82 @@
+
+# Azure 模块列表
+
+- `azure_rm_monitordiagnostics_module` - 更新 Azure Monitor 诊断设置。
+- `azure azure_rmmonmonitordiagninfoinfo_module` - 获取 Azure Monitor 诊断设置
+- `azure_rm_multipleazurednszones_module` - 管理多个 Azure DNS 区域
+- `azure_rm_dnsconfiguration_module` - 管理 DNS 配置
+- `azure_rm_dnsconfigurationinfo_module` - 获取 DNS 配置
+- `azure_rm_mysqldatabase_module` - 管理 MySQL 数据库
+- `azure_rm_mysqldatabaseinfo_module` - 获取 MySQL 数据库事实
+- `azure_rm_mysqlfirewall_module` - 管理 MySQL 防防火规则
+- `azure_rm_mysqlfirewallinfo_module` - 获取 MySQL 防火墙规则事实
+- `azure_rm_mysqlserver_module` - 管理 Azure MySQL Server
+- `azure_rm_mysqlserverinfo_module` - 获取 Azure MySQL Server 事实
+- `azure_rm_networkgateway_module` - 管理 Azure 网络网关
+- `azure_rm_networkgatewayinfo_module` - 获取 Azure 网络网关事实
+- `azure_rm_networkinterface_module` - 管理网络接口接口
+- `azure_rm_networkinterfaceinfo_module` - 获取网络接口事实
+- `azure_rm_notificationhub_module` - 管理通知中心
+- `azure_rm_notificationhubinfo_module` - 获取通知中心事实
+- `azure_rm_openshiftmanagedcluster_module` - 管理 Azure Red OpenShift 托管集群
+- `azure_rm_openshiftmanagedclusterinfo_module` - 获取 Azure Red OpenShift 托管集群
+- `azure_rm_postgresqlconfiguration_module` - 管理 PostgreSQL 配置
+- `azure_rm_postgresqlconfigurationinfo_module` - 获取 PostgreSQL 配置事实
+- `azure_rm_postgresqldatabase_module` - 管理 PostgreSQL 数据库
+- `azure_rm_postgresqldatabaseinfo_module` - 获取 PostgreSQL 数据库事实
+- `azure_rm_postgresqlfirewall_module` - 管理 PostgreSQL 防火墙规则
+- `azure_rm_postgresqlfirewallinfo_module` - 获取 PostgreSQL 防火墙规则事实
+- `azure_rm_postgresqlserver_module` - 管理 Azure PostgreSQL Server
+- `azure_rm_postgresqlserverinfo_module` - 获取 Azure PostgreSQL Server 事实
+- `azure_rm_privatedrecords_module` - 创建和更新私有 DNS 记录和集
+- `azure_rm_privatedrecordsinfo_module` - 获取私有 DNS 记录事实
+- `azure_rm_dnszones_module` - 管理 DNS 区域
+- `azure_rm_dnszonesinfo_module` - 获取 DNS 区域事实
+- `azure_rm_virtualnetworklink_module` - 为私有 DNS 区域创建并更新虚拟网络链接
+- `azure_rm_virtualnetworklinkinfo_module` - 获取私有 DNS 区域的虚拟网络链接
+- `azure_rm_pointendpoint_module` - 管理 Azure 终端点
+- `azure_rm_pointendpointinfo_module` - 获取 Azure 终点事实
+- `azure_rm_pointendpointconnection_module` - 管理私有端点连接
+- `azure_rm_pointendpointconnectioninfo_module` - 获取私有端点连接事实
+- `azure_rm_pointendpointsgroup_module` - 管理私有端点 DNS 区域组。
+- `azure_rm_pointendpointsgroupinfo_module` - 获取私有端点 DNS 区域组事实。
+- `azure_rm_serviceinventory_module` - 获取服务端点连接
+- `azure_rm_serviceinventoryinfo_module` - 获取服务端点事实
+- `azure_rm_proxymplacementgroup_module` - 创建并删除代理位置组事实
+- `azure_rm_proxymplacementgroupinfo_module` - 获取代理位置组事实
+- `azure_rm_publicaddress_module` - 管理 Azure 公共 IP
+- `azure_rm_publicaddressinfo_module` - 获取 Azure IP 事实
+- `azure_rm_recoveryservices_module` - 创建和删除恢复服务
+- `azure_rm_recoveryservicesinfo_module` - 获取恢复服务
+- `azure_rm_redisache_module` - 获取 Azure Redis 缓存
+- `azure_rm_redisacheinfo_module` - 获取 Redis 缓存事实
+- `azure_rm_rediswall_module` - 管理 Redis 缓存规则
+- `azure_rm_rediswallinfo_module` - 获取 Redis 缓存事实
+- `azure_rm_registration_module` - 管理 Azure 注册
+- `azure_rm_registrationinfo_module` - 获取 Azure 注册事实
+- `azure_rm_definition_module` - 管理注册定义
+- `azure_rm_definitioninfo_module` - 获取注册定义事实
+- `azure_rm_resource_module` - 管理资源
+- `azure_rm_resourceinfo_module` - 获取资源事实
+- `azure_rm_resourcegroup_module` - 管理资源组
+- `azure_rm_resourcegroupinfo_module` - 获取资源组事实
+- `azure_rm_assignment_module` - 管理分配
+- `azure_rm_assignmentinfo_module` - 获取分配事实
+- `azure_rm_role_module` - 管理角色定义
+- `azure_rm_roleinfo_module` - 获取角色定义事实
+- `azure_rm_route_module` - 管理路由
+- `azure_rm_routeinfo_module` - 获取路由事实
+- `azure_rm_routable_module` - 管理路由表
+- `azure_rm_routableinfo_module` - 获取路由表事实
+- `azure_rm_routableoute_module` - 管理可路由的路由
+- `azure_rm_routableouteinfo_module` - 获取可路由路由
+- `azure_rm_securitygroup_module` - 管理安全组
+- `azure_rm_securitygroupinfo_module` - 获取安全组事实
+- `azure_rm_servicebus_module` - 管理服务总线
+- `azure_rm_servicebusinfo_module` - 获取服务总线事实
+- `azure_rm_fabric_module` - 管理 工厂
+- `azure_rm_fabricinfo_module` - 获取 工厂事实
+- `azure_rm_queue_module` - 管理队列
+- `azure_rm_queueinfo_module` - 获取队列事实
+- `azure_rm_subscription_module` - 管理订阅
+- `azure_rm_subscriptioninfo_module` - 获取订阅事实
