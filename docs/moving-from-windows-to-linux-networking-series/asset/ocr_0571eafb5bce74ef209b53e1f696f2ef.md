@@ -1,0 +1,7 @@
+# Back Cover
+
+Most computer users utilize the Windows operating system. Today, however, many experienced computer users are either moving to Linux or would like the option. One factor holding many people back is the fear of learning a new operating system and applications. This book uses a friendly, step-by-step style to walk the user through the transition from Windows to Linux. It leverages what you know as an experienced Windows user, and applies that knowledge to Linux. Concepts in Linux are related to similar concepts in Windows, allowing you to draw on what you already know to come up to speed with Linux. The transition from applications such as Microsoft Word, Office and Adobe Photoshop to their Linux counterparts KWord, Open Office, and GIMP are treated thoroughly, and made easy. After reading through *Moving From Windows to Linux* any knowledgeable user of Windows will be able to set up, maintain, and utilize all aspects of a Linux PC.
+
+# About the Author
+
+Chuck Easttom is the author of several programming books, including *Learn JavaScript*, *Learn VB.NET* and *C++ Programming Fundamentals*. He is currently the IT manager of a Dallas insurance company, and previously was the Department Chair of the Computer Information Systems department at a private technical college. He has also worked as a professional software engineer.

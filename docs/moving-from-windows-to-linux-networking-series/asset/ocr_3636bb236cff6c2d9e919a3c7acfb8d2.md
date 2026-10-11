@@ -1,0 +1,7 @@
+like the one shown in Figure 12.8. This pop-up menu gives you access to a lot of options that we will explore.
+
+![](bbox=[0.05, 0.07, 0.35, 0.43])
+
+**Figure 12.8:** The pop-up menu.
+
+As you can see, there are several options, and most of them have submenu items under them. That means that there is a lot to explore in this pop-up menu. The same functions you see in the pop-up menu are also available in Adobe Photoshop. However, in Photoshop they are available from the drop-down menu at the top of the screen. You will find that in many cases the menu items even have the same names. They are just in a different location. The first option, File, repeats what you found under the File menu. Once again we see an application giving you multiple avenues to the same functionality. This is common practice in any application whose aim is to be user friendly. The second option, Edit, shown in Figure 12.9, should also be familiar to you. Most of its options are standard to all Edit menus. You can cut, copy, paste, undo, and so on. There are only a few items that you may not have seen before, and their functions are obvious. For example, Fill with BG Color fills the entire image with whatever color it has in its background.

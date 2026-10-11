@@ -1,0 +1,3 @@
+![](bbox=[0.055, 0.02, 0.405, 0.15])
+
+If you are connected to the Internet and the person you want to log on is connected and using Linux, he can log on to your system and take control of your desktop. The reason for the password is to ensure that only someone you authorize can log on to your system. The expiration date is to ensure that this person does not have indefinite carte blanche to hijack your system at his whim. While this tool can be dangerous because it gives another person control of your computer and should be used with care, it can be an incredible tool. If you are working remotely with someone, the ability for one of you to take control of the other's desktop and collaborate directly is invaluable.

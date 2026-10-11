@@ -1,0 +1,329 @@
+
+# Index
+
+## O
+
+- Object toolbar (Calc), 222
+- Office, 67
+- office applications
+    - AbiWord, 176–78
+    - GNOME, 175–79
+    - GNU Cash, 131–35
+    - GNumeric Worksheet, 178–79
+    - KSpread, 135–37
+- Open menu (GIMP), 290
+- Open Office, 11, 67
+    - acquiring, 185
+    - Address Book Wizard, 189–91
+    - Calc, 219–40
+    - Draw, 264–68
+    - Global, 280–81
+    - HTML Editor, 268–78
+    - Impress, 241–62
+    - Math, 279–80
+    - moving from Word to, 188–89
+    - setup, 278–79
+    - Writer, 187–217
+- open source movement, 8
+- open source software, 6–7
+- operating system (OS)
+    - Apple Macintosh OS, 5–6
+    - functions of, 5
+    - Linux, 6
+    - Microsoft Windows, 5
+    - Minix, 8
+    - open source, 6–7
+    - selecting, during installation process, 34
+    - Unix, 6, 7–8
+- Options screen, 213, 215
+- Outlook. See Microsoft Outlook
+
+## P
+
+- Package Management, 351–53
+- packages
+    - See also applications
+    - adding/removing, 43–44, 351–53
+    - desktops, 39
+    - development, 42
+    - recommended, 43
+    - Red Hat Linux, 525–77
+    - selecting, during installation process, 39–44
+    - servers, 41
+    - software, 27–29
+        - system, 42
+- Paint Bucket tool (GIMP), 301–2
+- paint programs, 119–25
+    - GNOME, 170–72
+    - Image Magick, 122–25
+    - Paint, 119–22
+- Paint tool (GIMP), 302, 303
+- Partition Information, 164, 165
+- partitioning, disk, 29–33
+- Partition Magic, 33
+- partitions
+    - resizing, 33
+    - root, 30
+    - swap, 30
+- passwd command, 441
+- passwords
+    - changing, 441
+    - expiration of, 144–45
+    - guidelines for, 142
+    - root, 36–37, 143, 441–42
+    - superuser, 143
+- path statement, 414
+- PC hardware, 517–23
+- PDAs (personal digital assistants), 338
+- Pencil tool (GIMP), 302, 303
+- personal digital assistants (PDAs), 338
+- photographs, digital, 349–51
+- Pico, 478–79
+- `ping` command, 412, 416–17
+- POP3 (Post Office Protocol), 97, 154, 312, 321
+- Power Control, 157–58
+- power off, 157
+- PowerPoint. See Microsoft PowerPoint
+- preferences, 67
+    - desktop, 75–80
+    - e-mail, 97–101
+    - setting, 80–81
+    - Web browser, 93–97
+- presentation software
+    - Impress, 241–62
+    - PowerPoint, 242
+- printers, 492–96
+- Print Screen button, 169–70
+- ProFTPD, 383–84
+- Programming, 67
+- protocols, 153–54
+    - DHCP, 84–85, 154
+    - e-mail, 97–98, 312, 321
+    - HTTP, 154, 360–61, 363
+    - POP3, 97, 154, 312, 321
+    - SMTP, 97, 154, 312, 321
+    - TCP/IP, 488
+    - proxy servers, 95–96
+- `ps` command, 412, 413
+- PureFTPD, 384–85
+- `pwd` command, 438
+
+## Q
+
+- question mark (\?), 452
+
+## R
+
+- RAM (random access memory), 454
+- rswirewin application, 21–23
+- read statement, 460–61
+- Red Hat Linux, 9
+    - applications included with, 12–13
+    - firewall included with, 36
+    - packages available from, 525–57
+    - redirect command, 407, 410
+- Regional & Accessibility options, 161
+- RJ-45 connectors, 84
+- rm command, 57–58, 406
+- rmdir command, 57–58, 406
+- Robinson, David, 364
+- root directory, 429
+- root drive, 428–29
+- root partition, 30
+- root password, 36–37, 143, 441–42
+- root user, 45, 53, 428
+- Rotation tool (GIMP), 300
+- run levels, 425–26
+
+## S
+
+- Samba, 488–92, 500
+- scientific calculators, 116–19
+- SCO (Santa Cruz Operation), 8
+- screen captures, 125–26
+- screensavers, 78–79
+- scripts. See shell scripts
+- security issues
+    - firewalls, 35–36, 164–65, 370
+    - passwords, 142–45, 441–42
+    - proxy servers, 95–96
+- Security Level Configuration, 153–54
+- Selection tools (GIMP), 297–99
+- Select menu (GIMP), 292–93
+- Server and Configuration Tools, 41
+- ServerName, 366–67
+- servers, 41
+    - FTP, 377–85
+    - Web, 359–76
+- Server Settings, 67
+- Service Configuration, 492–93
+- Service Management, 492
+- services, 148, 364, 492
+- shapes
+    - creating, in Impress, 247–48
+    - drawing basic, 203
+- shell commands, 401–21
+    - >, 407, 410
+    - advanced, 470–75
+    - cal, 470–73
+    - cat, 407, 410, 411
+    - cd, 56, 58, 406, 431–32
+    - clear, 58, 405
+    - cis, 56
+    - cmp, 406, 407–8
+    - du, 437
+    - echo, 456
+    - env, 412, 414–15
+    - file and directory management, 405–11
+    - finger, 412, 418–19
+    - free, 437
+    - fsck, 440, 441
+    - grep, 473–74
+    - groupadd, 434
+    - groups, 434–35
+    - head, 407, 410
+    - help, 405
+    - history, 404–5
+    - HISTSIZE, 404–5
+    - ifconfig, 412, 416, 436
+    - init, 426–27
+    - kill, 412, 413, 415
+    - login, 432–33
+    - ls, 54, 58, 406
+    - man, 405
+    - mkdir, 55, 58, 406
+    - multiple, on one line, 483–84
+    - mv, 406
+    - network utilities, 415–18
+    - passwd, 441
+    - ping, 412, 416–17
+    - ps, 412, 413
+    - pwd, 438
+    - redirect, 410
+    - rm, 57, 58, 406
+    - rmdir, 58, 406
+    - shutdown, 441
+    - spell, 406, 408–9
+    - su, 441–42
+    - system, 411–14
+    - top, 412, 413–14
+    - traceroute, 412, 417–18
+    - uname, 412, 420
+    - useradd, 433–34
+    - who, 412, 419–20
+    - whois, 412, 420
+- shell editors, 475–81
+    - Emacs, 479–81
+    - Pico, 478–79
+    - vi, 475–77
+- shell interface, 402–5
+- shell mode, 39
+- shells
+    - accessing, 402–3
+    - accessing man pages from, 59
+    - basics, 53–59, 402
+    - Bourne, 50
+    - Bourne-again (bash), 50, 501
+    - C, 50
+    - features of, 50
+    - Korn, 50
+    - Login, 143
+    - opening, 51–52
+    - overview, 49–52
+    - switching between, 405
+    - types of Linux, 50
+- shell scripts, 50
+    - about, 448–50
+    - advanced, 481–84
+    - basics, 450–54
+    - case statements, 481–83
+    - configuration, 161–84
+    - executable, 452
+    - if statements in, 462–65
+    - loops in, 465–66
+    - math in, 461–62
+    - multiple statements on one line, 483–84
+    - user input in, 460–61
+    - variables in, 454–60
+- shortcuts, adding/deleting, 60–61
+- shutdown command, 441
+- shut down process, 425–26
+- signature files, 97
+- Simple Mail Transfer Protocol (SMTP), 97, 154, 312, 321
+- Singh, Manish, 287
+- Skolnick, Cliff, 364
+- Slide Show menu (Impress), 246
+- slide shows
+    - creating, with Impress, 250–55
+    - setting up, with Impress, 255–57
+- SMB (Server Message Block), 488
+- SMTP (Simple Mail Transfer Protocol), 97, 154, 312, 321
+- Smudge tool (GIMP), 304
+- Soairis, 8
+- software
+    - See also applications
+    - commercial, 6
+    - limited, for Linux, 12–13
+    - open source, 6–7
+    - packages, 27–29, 39–44
+    - sources of, 499–500
+- Sound & Video, 67
+- Sound Recorder, 336
+- sound utilities, 336–38, 347–49
+- source code, open source, 6–7
+- special characters, inserting, 199–200
+- spell checker, 205, 406, 408–9
+    - `spell` command, 406, 408–9
+- spreadsheet applications, 135–37, 178–79, 219–40
+- spreadsheets, creating, 235–38
+- SQL Database Server, 41
+- Stallman, Richard, 8
+- standard deviation function (STDEV), 226–27
+- Start Here icon, 69
+- Start menu
+    - KDE, 51–52, 61–68
+    - Windows, 51–52
+- start-up mode, 51
+- static IP addresses, 84, 369
+- Status Bar tab, 211, 213
+- sticky keys, 130
+- storage devices, displaying free space on, 155–56
+- `su` command, 441–42
+- summation, 225
+- Sun Microsystems, 8
+- supercomputers, 14
+- superuser, 143, 441–42
+- swap partitions, 30
+- system administration
+    - from KDE, 159–60
+    - from the shell, 424–45
+- system commands, 411–14
+- system configuration
+    - desktop preferences, 75–80
+    - hardware settings, 81–82
+    - Internet settings, 93–101
+    - in KDE, 79–101
+    - network settings, 82–93
+    - setting preferences, 80–81
+- system monitors
+    - GKrell System Monitor, 180–81
+    - System Monitor, 149–51
+- system packages, 42
+- system requirements, 19–20
+- system resources, 424
+- System Settings, 67
+- system tools, 67, 148–56
+    - adding/removing applications, 154–55
+    - Desktop Sharing, 183–84
+    - Desktop Switcher, 182
+    - GDM Setup, 354, 357
+    - GKrell System Monitor, 180–81
+    - Hardware Browser, 151–52
+    - Internet Connection Wizard, 83–89
+    - KDiskFree, 155–56
+    - KFind, 353, 354
+    - Kickstart Configurator, 161–65
+    - Network Device Control, 83, 89–93
+    - Security Level Configuration, 153–54
+    - System Monitor, 149–51
+- system variables, 455–57

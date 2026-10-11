@@ -1,0 +1,5 @@
+# # Chapter 22: Samba, Printing, and More
+
+# ## Introduction
+
+During the time you have been reading this book, you have seen a lot that Linux can do, all at a very low cost and in many cases free. You might feel a rush of excitement and want to completely convert all computers in your home or office over to Linux. Slow down just a moment and let reality tap you gently on the shoulder. It is very unlikely that you will dispense with Windows in one fell swoop. It is not even clear that such a move would be desirable, even if it were possible. The fact is that Linux often is found in a mixed environment, one with both Windows and Linux machines and occasionally Macintosh machines as well. This means that sooner or later you are going to need to share files between a Linux machine and a Windows machine. That is where Samba comes in. Samba is a program that facilitates sharing a Linux drive so that Windows can use it and enabling Linux to access shared drives on Windows machines.

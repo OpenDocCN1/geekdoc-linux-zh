@@ -1,0 +1,21 @@
+After Extras we come to Games. There are a number of games included with Linux. It is beyond the scope of this book to explore and explain these games, but you should be aware that there is a plethora of amusing pastimes included with the standard installation of Red Hat Linux.
+
+Note This is one area where the various Linux distributions might differ. The number of games included varies from distribution to distribution.
+
+The category following Games is Graphics. In this category you will find some very useful applications, such as GIMP. GIMP is an acronym for graphics image manipulation program. It is a full-fledged graphics program comparable to Adobe Photoshop. An entire chapter is devoted to GIMP later in this book. Also in the Graphics section you will find a screen capture tool. This was used to capture most of the images for this book. If you are using a different Linux distribution and GIMP was not included, don't worry. When we get to that chapter, you will be told where to download it for free.
+
+After Graphics we come to Internet. Most readers will probably find this very useful. In this section you will find an e-mail client, a Web browser, and an instant messenger client. All of these will be explored in detail in a later chapter. At this point, it is simply necessary that you realize that they are there and where you may find them.
+
+After the Internet category we have Sound & Video. This category has a number of useful applications in it. It has an audio player, volume control, and sound recorder, all of which you might expect because you find the same items in Windows. What you may not expect is the sound mixer program. It works just like a sound mixer on an equalizer for your home stereo, but it adjusts sounds you record or work with on your Linux computer.
+
+One of the most commonly used categories is Office. This comes right after the sound and video category and contains a rich suite of office programs. If you followed the installation instructions in Chapter 2, you installed Open Office (don't worry if you did not; you will be shown where to obtain Open Office for free). Open Office contains all you might need, including presentation programs, word processors, spreadsheets, and project management software—truly a complete suite of office products. Several chapters of this book are devoted to walking you through the intricacies of this software.
+
+The next category is Preferences. You are given a plethora of choices on how to organize and view things in KDE. This section is replete with applications that enable you to personalize virtually every aspect of your computing experience with Linux. You will be walked through the basics of many of these applications later in this book.
+
+The following category, Programming, is of interest only to those readers who are programmers or who want to be. It is beyond the scope of this book to delve into programming. However, you can find a number of Web sites and books that will help you get comfortable with Linux programming. Simply keep in mind that if you are a programmer or develop an interest in programming, there are many very powerful programming tools available for Linux. Most are completely free, and many come with the Red Hat 9.0 installation.
+
+The next three areas—Server Settings, System Tools, and System Settings—are used to perform various administrative tasks in Linux. These will be examined in detail in the chapters on Linux administration. Suffice it to say that there are a number of useful applications that make system administration much easier.
+
+After these comes the Control Center, which is a convenient grouping of the most commonly used items from the previous four categories. This makes it easier for you to find those programs used most frequently to set your preferences or to administer your system.
+
+The last category we want to view is the Help category. If you select this, you are provided a rich array of helpful information and tips on how to use Linux and KDE. As you can see in Figure 3.16, there is an extensive array of documentation, including manuals for the operating system, KDE, and various applications commonly used. It also provides information on where to get technical support and how to find useful Web sites.
