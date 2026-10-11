@@ -1,0 +1,205 @@
+
+
+# 注意
+你会注意到 **billybob** 的文件在组权限中拥有写入权限，而其他文件则没有。**billybob** 账户是唯一一个将其主组设置为用户自身组，即 **billybob** 组的账户。
+
+# 按权限查找文件
+
+试图入侵你系统的攻击者通常会尝试将某些文件设置为具有 SUID 或 SGID 位，这使得它们原本普通的账户能够执行各种未授权的操。
+
+`find` 命令提供了一个运算符，使得查找你的易受攻击文件变得容易。`-perm` 运算符后面通常跟着一组三位或四位数字的权限，例如下面所示：
+
+```bash
+find /usr/bin -perm 777
+```
+
+这个极端的例子搜索 `/usr/bin` 目录及其子目录下权限恰好为 `rwxrwxrwx` 的对象。这没问题，但它无助于发现由 SUID 和 SGID 位引起的安全风险。然而，下一个命令可以做到：
+
+```bash
+find / -perm +6000
+```
+
+乍一看，这似乎是在搜索所有设置了 SUID/SGID 位，且从该点开始权限为空的文件。实际上，它搜索整个系统中所有设置了 SUID 或 SGID 位的文件，无论其他权限如何。
+
+`-perm` 运算符使用几个额外的修饰符来表示权限：
+
+- 没有前缀表示查找那些精确的权限。
+- `-` 表示查找下一组数字所加总的特殊位的精确组合（-6000 查找 SUID 和 SGID）。
+- `+` 表示查找具有构成下一组数字中任何特殊位的文件（+7000 查找 SUID、SGID 和粘滞位）。
+
+你应该安装系统，然后运行一个 `find` 命令，报告任何设置了特殊位的文件，如下所示：
+
+```bash
+find /usr/bin -perm -7000 -exec ls -l {} \;
+-rwsr-xr-x   1 root    root    35484 Nov 13 07:10 /usr/bin/chage
+-rwsr-xr-x   1 root    root    36300 Nov 13 07:10 /usr/bin/gpasswd
+-r-xr-sr-x   1 root    tty      7420 Jun 25 2003 /usr/bin/wall
+-rwsr-xr-x   1 root    root    14140 Sep 25 06:10 /usr/bin/chfn
+```
+
+将输出重定向到文件，并将该文件保存在磁盘或系统外的某个安全位置。时不时地运行相同的 find 命令，然后使用 diff 命令将结果与原始文件进行比较，例如：
+
+```bash
+diff /root/latestfindperm /mnt/floppy/findperm.orig
+> -rw-xr-xr-t 1 root root 700108 Aug 25 21:17 /usr/bin/align
+```
+
+如果你运行了上面的命令并得到上述输出，这意味着某个人或某物设置了 align 命令以使其具有粘滞位。发挥你的想象力，即兴发挥，适应环境，编写脚本！
+
+你还需要理解各个 -perm 运算符返回的文件。创建一个名为 /root/test 的新目录；然后切换到该目录。创建一组具有以下权限的四个文件：
+
+```bash
+-rwxrwxrwx 1 root root 0 Dec 8 08:30 file1
+-rwxrwsrwx 1 root root 0 Dec 8 21:14 file2
+-rwxrwxrwt 1 root root 0 Dec 8 21:16 file3
+-rw-r-s-rw- 1 root root 0 Dec 8 21:19 file4
+```
+
+运行以下查询并查看你得到了什么：
+
+- `find /dir -perm 4000` 文件：
+- `find /dir -perm -4000` 文件：
+- `find /dir -perm +6000` 文件：
+- `find /dir -perm +1000` 文件：
+
+答案：
+
+```text
+查询 4000 文件：未找到文件
+查询 +4000 文件：file1 file4
+查询 +6000 文件：file1 file2 file4
+查询 +1000 文件：file3
+```
+
+# 默认权限
+
+如果你的系统是默认的 Linux 系统，则在 /etc/bashrc 或 ~/.bashrc 文件中为用户设置了一个单一值，该值控制了任何创建对象的权限。该值被称为 umask，对于目录和文件只有一个。
+
+目录和文件的默认权限是不同的。在没有设置 umask 的情况下，默认权限为：
+
+- `rw-rw-rw-` 666—用于文件
+- `rwxrwxrwx` 777—用于目录
+
+使用以下命令检查你手边系统的 umask：
+
+```bash
+umask
+0022
+```
+
+这只是意味着在四个可能的掩码位置中，最后两个位置的写入权限被掩码（或不用）了。
+
+如果在 /root/test 目录中创建文件且 umask 设置为 022，文件的权限如下所示：
+
+```bash
+-rw-r--r--    1 root    root     881 Feb 17 09:11 file1
+```
+
+如果在同一目录中创建目录且使用相同的 umask 设置，目录的权限如下所示：
+
+```bash
+drwxr-xr-x    2 root    root    4096 Feb 17 14:47 dir1
+```
+
+你可以使用以下命令将 umask 值更改为更严格的值：
+
+```bash
+umask 027
+```
+
+现在，你可以创建另一个文件，权限应该是：
+
+```bash
+-rw-r-----    1 root    root     881 Feb 17 09:22 file2
+```
+
+创建另一个目录，权限应该是：
+
+```bash
+drwxr-x---    2 root    root    4096 Feb 17 14:48 dir2
+```
+
+正如你所见，umask 值改变创建对象的默认权限以符合以下公式：
+
+默认值 – umask 值 = 创建值
+
+请注意，umask 的值大于正在创建的文件的默认值。umask 的值从 000 到 777，因为目录对象的默认值为 777，而文件为 666。umask 必须涵盖两组可能的值，因此如果 umask 中有 7，文件就会停在 0（零），而不会变成负数。
+
+![](img/49f4f38f3aec011238fa50f89e643db3_207_0.png)
+
+umask 会出现在考试中，涉及哪个 umask 值会导致列出的文件具有这些权限，以及反向的问题。
+
+# 使用磁盘配额
+
+大多数系统管理员都曾经历过由于种种原因导致服务器系统分区填满的情况，紧随其后的通常是系统崩溃或内核恐慌（以及系统管理员的恐慌）。几乎所有 Unix/Linux 系统都有一个名为 quota 的软件包，允许你基于用户和文件系统来限制磁盘使用量。
+
+> 如果你看到两个目录树（例如 /home 和 /var/www）需要具有冲突或不同的配额，那么这些目录树必须位于不同的文件系统中，这基本上意味着不同的分区。这种情况会出现在考试中，所以要有所准备。
+
+## 配额命令和文件
+
+配额系统旨在限制用户在每个文件系统上的磁盘空间使用量。quota 命令允许用户查看其账户设置的配额。
+
+用于配额的命令和文件如下：
+
+- `quotaon`—开启配额
+- `quotaoff`—关闭配额
+- `quota check`—更新 quota.* 文件
+- `edquota`—用于编辑用户的配额数量
+- `quota`—用于用户查看配额限制/空间
+- `aquota.user`—包含用户配额信息的二进制文件
+- `aquota.group`—包含组配额信息的二进制文件
+- `usrquota`—/etc/fstab 中用户配额的选项
+- `grpquota`—/etc/fstab 中组配额的选项
+
+## 配额概念
+
+以下是配置配额需要理解的术语：
+
+- **软限制**—这是一个可以被超过的限制，直至宽限期届满为止，期间会有相应的警告。
+- **硬限制**—这通常设置为高于软限制，且不能被超过。
+- **宽限期**—软限制可以被超过，直到达到硬限制，直至宽限期的值被满足。然后，为了保存更多数据，使用的数量必须降低到软限制以下。
+
+## 配置配额
+
+要设置配额，你需要选择一个文件系统。不建议在根（/）文件系统上设置配额，而是建议在对用户和数据最活跃的文件系统上设置配额。
+
+例如，接下来的练习是在一个设备上进行的，该设备在 `/sdb5` 上有一个分区，挂载到挂载点 `/data`。`/etc/fstab` 中的一个条目在系统启动时挂载此分区。`/data` 文件系统的权限允许属于 `users` 组的用户在其中创建对象。该目录中已经有来自不同用户的文件。
+
+要在 `/data` 文件系统上设置配额，请执行以下操作：
+
+1. 通过发出 mount 命令并检查输出，确保 `/data` 分区已挂载。
+2. 在 `/data` 文件系统的根目录中创建文件 `aquota.user` 和 `aquota.group`，并使用以下命令正确设置它们的权限：
+   ```bash
+   touch /data/aquota.user ; touch /data/aquota.group
+   chmod 660 /data/aquota.*
+   ```
+3. 编辑 `/etc/fstab` 文件并添加 `usrquota` 和 `grpquota`，如下所示，以启用用户和组配额：
+   ```bash
+   /dev/sdb5   /mnt/data   ext3   defaults,usrquota,grpquota   0 0
+   ```
+4. 使用以下命令重新挂载 `/data` 文件系统：
+   ```bash
+   mount -o remount,rw /data
+   ```
+5. 使用此命令检查其是否具有正确的选项（显示 `usrquota` 和 `grpquota`）：
+   ```bash
+   mount | grep usrquota
+   /dev/sdb5 on /mnt/data type ext3 (rw,noexec,nosuid,nodev,usrquota,grpquota)
+   ```
+6. 使用以下内容添加一个普通用户来测试配额：
+   ```bash
+   useradd -m quotaboy
+   passwd quotaboy
+   usermod -G 100 quotaboy
+   ```
+7. 现在使用以下命令更新 `aquota.*` 文件：
+   ```bash
+   quotacheck -avug
+   quotacheck: WARNING - Quotafile /data/aquota.user was probably truncated. Can't save quota settings...
+   quotacheck: WARNING - Quotafile /data/aquota.group was probably truncated. Can't save quota settings...
+   quotacheck: Scanning /dev/sdb5 [/data] done
+   quotacheck: Checked 155 directories and 422 files
+   ```
+
+> **注意** 你看到的错误只是 **quota check** 命令告诉你配额文件尚未包含数据，但它会用正确的信息更新它们。
+

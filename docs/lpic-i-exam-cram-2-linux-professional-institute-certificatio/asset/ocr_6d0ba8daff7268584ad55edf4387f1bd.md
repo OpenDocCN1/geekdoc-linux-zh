@@ -1,0 +1,15 @@
++   46. Answer D is correct because quotas are on a file system—by–file system basis and conflicting quotas cannot be configured on the same partition. Answer A is incorrect because they don’t have to be on separate drives, just separate file systems. Answer B is incorrect because the special bit 4 (SUID) has nothing to do with this situation. Answer C is incorrect because there is no /etc/qtab file on a standard Linux system.
+
++   47. Answer B is correct because the reserved percentage is set with the -m option followed by a percentage value in numerals. Answer A is incorrect because it’s a description of the targetfile option, which isn’t specified. Answer C is incorrect because the ext2 file system doesn’t do journaling, so metadata isn’t journaled. Answer D is incorrect because the description is indicative of the -M option’s behavior.
+
++   48. Answer A is correct because a Red Hat machine has the /etc/passwd file set to 644 and the /etc/shadow file set to 400. All other answers are wrong because of either permission being set incorrectly.
+
++   49. Answer: quota (There are no alternative correct answers.)
+
++   50. Answer D is correct because a Debian machine has the /etc/passwd file set to 644 and the /etc/shadow file set to 640. All other answers are wrong because of either permission being set incorrectly.
+
++   51. Answers A and D are correct because the /usr directory tree contains mostly binaries and reference files and the /dev directory tree is mostly static after the server is set up properly. Answer B is incorrect because anytime a user is added or a service is configured, the /etc directory is changed and the server is a busy system. Answer C is incorrect because, if there are any users at all, the /home directory changes frequently. Answer E is incorrect because the root user’s home directory can change frequently, and on a busy system you’ll spend a good amount of time as the root user.
+
++   52. Answer A is correct because a umask of 007 creates files with the permissions set to 660 by default. Answer B is incorrect because 022 is the default and creates files that are set to 644. Answer C is incorrect because it creates files that are too restrictive—they should be set to 640. Answer D is incorrect because a umask of 054 produces files that have permissions of 622.
+
++   53. Answer D is correct because the bash ulimit option is capable of restricting a user’s ability to create files above a certain size. Answer A is incorrect because the umask only has to do with masking out permissions. Answer B is incorrect because unalias is used solely to remove aliases. Answer C is incorrect because the noclobber option is for restricting a user’s ability to overwrite existing files with > redirection. Answer E is incorrect because unset is for removing arrays that have been set.
