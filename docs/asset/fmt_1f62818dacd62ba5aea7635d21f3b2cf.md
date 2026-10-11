@@ -1,0 +1,102 @@
+
+# 114 第 5 章 域名
+
+| nsa.gov. | 3600 | IN | NS | n1.nsa.gov. |
+
+| nsa.gov. | 3600 | IN | NS | n2.nsa.gov. |
+
+| nsa.gov. | 3600 | IN | MX | 10 mail.nsa.gov. |
+
+| nsa.gov. | 3600 | IN | MX | 20 mail.nsa.gov. |
+
+| fedora.nsa.gov. | 3600 | IN | TXT | "黑雀雀密码" |
+
+| fedora.nsa.gov. | 3600 | IN | AAAA | fd7f:bad6:99f2::1337 |
+
+| fedora.nsa.gov. | 3600 | IN | A | 10.1.0.8 |
+
+| firewall.com. | 3600 | IN | A | 10.1.0.105 |
+
+| fw.nsa.gov. | 3600 | IN | TXT | "=vpf1 a mx ip4:10.1.0.25 |
+
+| mail1.nsa.gov. | 3600 | IN | A | 10.1.0.25 |
+
+| mail2.nsa.gov. | 3600 | IN | TXT | "=vpf1 a mx ip4:10.1.0.26 |
+
+| mail2.nsa.gov. | 3600 | IN | A | 10.1.0.26 |
+
+| n1.nsa.gov. | 3600 | IN | A | 10.1.0.5 |
+
+| n2.nsa.gov. | 3600 | IN | A | 10.1.0.51 |
+
+| prism.nsa.gov. | 3600 | IN | A | 172.16.40.1 |
+
+| prism6.nsa.gov. | 3600 | IN | AAAA | :: |
+
+| signt.nsa.gov. | 3600 | IN | A | 10.1.0.101 |
+
+| snowden.nsa.gov. | 3600 | IN | A | 172.16.40.1 |
+
+| vpn.nsa.gov. | 3600 | IN | A | 10.1.0.103 |
+
+| web1.nsa.gov. | 3600 | IN | CNAME | fedora.nsa.gov. |
+
+| web2.nsa.gov. | 3600 | IN | A | 10.1.0.104 |
+
+| www.nsa.gov. | 3600 | IN | CNAME | fedora.nsa.gov. |
+
+| xkeyscore.nsa.gov. | 3600 | IN | TXT | "敲两下进入" |
+
+| xkeyscore.nsa.gov. | 3600 | IN | A | 10.1.0.100 |
+
+| nsa.gov. | 3600 | IN | SOA | n1.nsa.gov.root.nsa.gov. |
+
+```
+200701041 3600 600 86400 600
+; Query time: 0 msec
+; SERVER: 192.168.56.101(192.168.56.101)
+; Word: Mon Dec 17 15:37:25 GMT 2018
+; XFR size: 27 records (messages 1, bytes 709)
+```
+
+这里包含许多主机名和 IP 地址。之前提到的 SPF 记录可以、而且也可以通过为每个邮件主机请求 TXT 记录来获取。你在这里看到的另一些内容是几个 TXT 记录，它们几乎确定是人类留下的——也许是密码？虽然通过这种方式发现密码的想法可能会让你觉得很有趣，但它确实会发生，所以要时刻留意此类错误，并将发现添加到你的笔记中以备后用。DNS 查询返回的主列表可以添加到你的目标列表中，并且应该进行进一步的 DNS 查询以获取完整的主机名和相应的 IP 地址列表。
+
+## 信息收集工具
+
+如果你足够幸运，通过区域传输在单个查询中获取所有信息，遗憾的是还有其他方法可以实现这一点。正如你所看到的，像 Recon-qc 这样的工具可以用来破解主机名。这种方法查询的是真实的 DNS。枚举单个名称服务器（无论虚拟还是非虚拟）主机名的一种方法是使用 `Fierce`。
+
+## Fierce
+
+此工具可用于从虚拟的 NSA 名称服务器收集信息。使用 `Fierce` 的帮助信息可以通过 `fierce --help` 获取。以下是一个简单的用法示例：
+
+```
+fierce -dnsserver 192.168.56.101 -dns nsa.gov
+Trying zone transfer...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the old fashioned way... brute force
+
+10.1.0 xkeyscore.nsa.gov
+10.1.0.1 mail1.nsa.gov
+10.1.51.nsa.gov
+10.1.0.101 signt.nsa.gov
+10.1.0.103 vpn.nsa.gov
+10.1.0.104 web2.nsa.gov
+10.1.0.100 xkeyscore.nsa.gov
+10.1.0.105 firewall.nsa.gov
+10.1.0.25 mail1.nsa.gov
+10.1.0.26 mail2.nsa.gov
+10.1.0.5 n1.nsa.gov
+10.1.0.51 n2.nsa.gov
+172.16.40.1 prism.nsa.gov
+172.16.40.1 snowden.nsa.gov
+10.1.0.8 fedora.nsa.gov
+fedora.nsa.gov
+www.nsa.gov
+web1.nsa.gov
+fw.nsa.gov
+nsa.gov.
+prism6.nsa.gov
+```
+
+# 第 5 章 域名系统 119
