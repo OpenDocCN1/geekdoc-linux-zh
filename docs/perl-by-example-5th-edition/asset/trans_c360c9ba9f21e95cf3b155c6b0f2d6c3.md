@@ -1,0 +1,168 @@
+
+## 示例 15.24
+
+```perl
+1  my $dbh=DBI->connect('DBI:mysql:database=sample_db;user=root;
+     password=quigley') or die "Can't connect", $dbh->errstr;
+
+2  my $sth=$dbh->prepare("SELECT * FROM coaches");
+
+3  $sth->execute();
+    print qq(\n\nContents of "coaches" table\n) or
+    die "Couldn't execute statement" . $sth->errstr;
+
+4  $sth->dump_results(); # Display results of the execute
+
+5  $sth->finish();
+6  $dbh->disconnect();
+```
+
+### 输出
+
+coaches 表的内容
+
+'1', 'John Doe', 'Chico Hardheads', 'Head Coach', '2002-12-10'
+'2', 'Jack Watson', 'Cardinals', 'Offensive Coach', '2004-10-05'
+'3', 'Bud Wilkins', 'Premont Tigers', 'Head Coach', '1999-09-06'
+'4', 'Joe Hayes', 'Premont Tigers', 'Defensive Coach', '1998-06-16'
+'5', 'George Jones', 'Bangor Rams', 'Offensive Coach', '2003-09-03'
+'6', 'Jerry O'Connell', 'Portland Penguins', 'Head Coach', '2006-02-22'
+6 行
+
+### 解释
+
+- 连接到名为 sample_db 的 MySQL 数据库，并返回一个数据库句柄 $dbh。该句柄代表连接的对象。现在我们可以访问该数据库。
+- prepare 方法用于准备 SQL 查询。它返回一个语句句柄，这是一个封装查询并准备执行的对象：（注意 SQL 语句末尾没有分号。）
+- execute 方法导致查询实际执行。现在我们准备获取查询结果。
+- 在语句句柄上调用 dump_results 方法并打印查询结果。
+
+### 以数组形式选择、执行和获取行
+
+当调用 fetchrow_array() 方法时，数据库将以数组形式返回结果的第一行，其中每个字段都是数组中的一个元素。对 fetchrow_array() 方法的每次后续调用都会产生下一行结果，直到没有更多结果，并且调用产生 undef 值。
+
+在以下示例中，我们将连接到数据库，准备查询，执行查询，并使用 fetchrow_array() 方法获取数据。在此示例中，我们可以使用 while 或 for 循环来获取所有行。（一个重要的记忆点是，当获取字段时，它们按 SQL 查询中列出的顺序赋值。）
+
+## 示例 15.25
+
+```perl
+use DBI;
+
+my $dbh=DBI->connect('DBI:mysql:database=sample_db;user=root;
+password=quigley') or die "Can't connect", $dbh->errstr;
+
+my $sth=$dbh->prepare("SELECT name, wins, losses FROM teams");
+
+$sth->execute();
+print "Contents of sample_db, the mysql database.\n\n";
+
+while(my @row=$sth->fetchrow_array()){  # 一次获取一行
+    print "name=$row[0]\n";    # 字段一
+    print "wins=$row[1]\n";    # 字段二
+    print "losses=$row[2]\n\n";    # 字段三
+}
+
+print $sth->rows, " rows were retrieved.\n";
+
+$sth->finish();
+$dbh->disconnect();
+```
+
+### 输出
+
+sample_db，mysql 数据库的内容。
+
+name=Fremont Tigers
+wins=24
+losses=26
+
+name=Chico Hardhats
+wins=19
+losses=25
+
+name=Beth Warships
+wins=32
+losses=3
+
+name=Bangor Rats
+wins=22
+losses=24
+
+检索到 4 行。
+
+### 解释
+
+- connect() 方法返回数据库句柄 $dbh，这是一个引用名为 sample_db 的 MySQL 数据库的对象。
+- 准备一条 SQL select 语句并返回一个语句句柄，称为 $sth。
+- 查询发送到数据库执行。
+- fetchrow_array() 方法从数据库返回第一行，其中字段是数组 @row 的元素。要获取后续行，使用 while 循环。当没有更多行时，循环结束。
+
+### 解释（续）
+
+- 每行中的每个字段都被分配给变量并打印。
+- rows() 方法返回受语句句柄影响的行数。
+- finish 方法释放语句句柄。
+- disconnect 方法释放数据库句柄。
+
+### 以哈希形式选择、执行和获取行
+
+fetchrow_hashref() 方法从数据库表中以哈希引用的形式获取一行，其中键是列的名称，值是该列中存储的数据。以下示例与上一个示例完全相同，只是将 fetchrow_arrayref() 替换为 fetchrow_hashref()。
+
+## 示例 15.26
+
+```perl
+1  use DBI;
+2  my $dbh=DBI->connect('DBI:mysql:database=sample_db;user=root;
+      password=quigley') or die "Can't connect", DBI->errstr;
+3  my $sth=$dbh->prepare("SELECT name, wins, losses FROM teams");
+4  $sth->execute();
+5  print "Contents of sample_db, the mysql database.\n";
+6  while (my $row = $sth->fetchrow_hashref()) {
+7      print "Name:    $row->{name}\n";
+8      print "Wins:    $row->{wins}\n";
+9      print "Losses:  $row->{losses}\n\n";
+10     }
+11     print $sth->rows, " rows were retrieved";
+12     print "There are $count rows in the sample database.\n";
+13     $sth->finish();
+14     $dbh->disconnect();
+```
+
+### 解释
+
+- connect() 方法返回数据库句柄 $dbh，这是一个引用名为 sample_db 的 MySQL 数据库的对象。
+- 准备一条 SQL select 语句并返回一个语句句柄，称为 $sth。
+- 查询发送到数据库执行。
+- fetchrow_hashref() 方法从数据库返回第一行，作为一个由键/值对组成的匿名哈希的引用。键是表中字段的名称，值是该处存储的内容。要获取后续行，使用 while 循环。当没有更多行时，循环结束。
+- 打印每个字段值，指定为键。
+- finish 方法释放语句句柄。
+- disconnect 方法释放数据库句柄。
+
+## 15.4.6 获取错误信息
+
+在处理 DBI 时，了解哪里出错很重要。连接失败了吗？你正确准备 SQL 语句了吗？DBI 定义了几种处理错误的方式。你可以使用特定句柄的 PrintError 和 RaiseError 属性进行自动错误处理，或者使用诊断方法和特殊的 DBI 变量。
+
+### 自动错误处理
+
+当连接到数据库时，DBI 模块提供自动错误处理。你可以选择在每次 DBI 方法失败时收到警告，或者让程序发送消息并中止。最常与 connect 方法一起使用的两个属性是 PrintError 和 RaiseError。
+
+#### PrintError 属性
+
+默认情况下，connect() 方法将 PrintError 设置为开（设为 1），如果任何 DBI 方法失败，会自动生成警告消息。
+
+#### RaiseError 属性
+
+RaiseError 属性可用于强制错误引发异常。默认情况下它是关闭的。当设置为开时，任何导致错误的 DBI 方法都会导致 DBI 以错误 $DBI::errstr 终止。如果你打开 RaiseError，通常你会关闭 PrintError。如果 PrintError 也开着，那么先执行 PrintError。通常，RaiseError 与 eval 块一起使用，以便你可以捕获抛出的异常。如果 eval 块中有 die、编译或运行时错误，特殊变量 $@ 会被设置为错误消息，如果没有错误则设置为 null。如果 $@ 已被设置，则可以处理错误而无需退出 DBI。
+
+### 手动错误处理
+
+如果你想手动检查特定方法失败时的错误，可以使用 DBI 模块提供的错误诊断方法或错误诊断变量。这让你控制调用的每个方法来捕获可能发生的错误。
+
+#### 错误诊断方法
+
+首先，我们将查看两个错误诊断方法：err() 或 errstr()。这些方法可以在任何有效的句柄、驱动器、数据库或语句上调用。err() 方法将返回与发生的问题相关联的错误代码。错误代码是一个数字，具体取决于所使用的数据库系统。errstr() 方法对应于错误代码号，但它是包含信息以说明最后一个 DBI 方法调用失败原因的字符串。在另一个方法调用之前，句柄的错误消息会被重置，因此应在特定句柄产生错误后立即检查。诊断方法如下所述使用。
+
+```perl
+$rv = $h->err();
+$str = $h->errstr();
+```
+

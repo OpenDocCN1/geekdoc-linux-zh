@@ -1,0 +1,197 @@
+
+## 说明
+- 1 默认情况下，引号内的字符串会被打印到屏幕（标准输出 STDOUT）。
+- 2 将用户输入的单行文本赋值给标量变量。`<=>` 运算符用于读取操作。在此情况下，它从标准输入（STDIN，即键盘）读取数据，直到按下回车键。换行符包含在赋给变量 $name 的文本中。
+- 3 打印 $name 的值。请注意，换行符会在用户输入“Joe Smith”之后断开这一行。
+- 4 `chop` 函数会移除赋给 $name 的字符串中的最后一个字符。被移除的字符会被返回。
+- 5 在执行 `chop` 操作后再次打印字符串。最后一个字符已被移除（在此“案例”中，即换行符）。
+- 6 这一次 `chop` 将移除 Joe Smith 名字中的最后一个字符，即 `Smith` 中的 `h`。
+- 7 将带引号的字符串打印到标准输出（STDOUT），表明最后一个字符已被移除。
+- 9 首先将用户输入赋值给变量 $age。移除末尾的换行符。存储在特殊变量 $/ 中的字符值被移除。默认情况下，该值为换行字符。返回被移除的字符数量。由于等号（=）运算符优先级较低，使用括号确保赋值操作发生在 `chomp` 函数执行“吞掉”操作之前。
+- 10 第二次调用 `chomp` 将不会有任何效果。换行符已经被移除了，而 `chomp` 只移除换行符。比使用 `chop` 更安全。
+- 11 打印被截取的变量 `string`。
+
+### 10.2.3 read 函数
+
+`read` 函数¹ 允许你从指定的文件句柄读取指定数量的字符到一个变量中。（第一个字符是第 0 个字符。）如果从标准输入读取，文件句柄为 STDIN。`read` 函数返回已读取的字节数。你通常会将此函数用于文件操作，或用于通过 CGI 从服务器读取输入。若要读取整个文件，你需要知道该文件的字节大小。
+
+1. `read` 函数与 C 语言中的 `fread` 函数类似。
+
+### 格式
+
+```
+number_of_bytes = read(FILEHANDLE, buffer, how_many_bytes);
+```
+
+### 示例 10.13
+
+（脚本）
+
+```perl
+use warnings;
+# Reading input in a requested number of bytes
+print "Describe your favorite food in 10 bytes or less.\n";
+print "If you type less than 10 characters, press CTRL+D on a line by itself.\n";
+my $number=read(STDIN, $favorite, 10);
+print "You just typed: $favorite\n";
+print "The number of bytes read was $number.\n";
+```
+
+（输出）
+
+```
+Describe your favorite food in 10 bytes or less.
+If you type less than 10 characters, press CTRL+D on a line by itself.
+apple pie and ice cream <user input>
+You just typed: apple pie
+The number of bytes read was 10.
+```
+
+### 说明
+
+- 向用户索取输入。如果用户输入的字符少于 10 个，应按下 <CTRL+D> 以退出。
+- read 函数接受三个参数：第一个参数是 STDIN，即输入来源；第二个参数是标量 $favorite，用于存储输入；第三个参数是要读取的字符（字节）数量。
+- 打印读取到的 10 个字符。其余字符保留在缓冲区中被忽略。
+- 实际读取的字符（字节）数量存储在 $number 中，并最终被打印出来。
+
+### 10.2.4 getc 函数
+
+getc 函数从键盘或文件中获取单个字符。在文件结束（EOF）时，getc 返回空字符串。
+
+### 语法
+
+```
+getc(FILEHANDLE)
+getc FILEHANDLE
+getc
+```
+
+### 示例 10.14
+
+（脚本）
+
+```perl
+use warnings;
+# Getting only one character of input
+print "Answer y or n ";
+
+my $answer=gets; # Gets one character from stdin
+$restofit=<>; # What remains in the input buffer is # assigned to $restofit
+
+print "$answer\n";
+print "The characters left in the input buffer were:
+$restofit\n";
+```
+
+（输出）
+
+```
+Answer y or n y
+The characters left in the input buffer were: essirreebob
+```
+
+### 说明
+
+- 1. getc 从输入缓冲区读取并存储到标量 $answer 中只有一个字符。
+- 2. 输入缓冲区中剩余的字符存储在 $restofit 中。这清空了输入缓冲区。这样，如果随后在程序中请求输入，你就不会拾取那些仍滞留在缓冲区中的字符了。
+- 3. 打印由 getc 读取到的字符。
+- 4. 显示存储在 $restofit 中的字符。
+
+### 10.2.5 将输入赋值给数组
+
+当从文件句柄 STDIN 读取输入时，如果上下文是数组，则每一行都会连同其换行符一起被读取，并被视为单个列表项，读取过程将持续到按下 <CTRL>+D（在 UNIX 中）或 <CTRL>+Z（在 Windows 中）到达文件末尾（EOF）为止。通常，你不会将输入赋值给数组，因为这可能会占用大量内存，或者因为你的程序用户可能没有意识到他应该按下 <CTRL>+D 或 <CTRL>+Z 以停止读取输入。
+
+（脚本）
+
+```perl
+use warnings;
+# Assigning input to an array
+print "Tell me everything about yourself.\n";
+my @all = <STDIN>;
+print "all";
+print "The number of elements in the array are: ",
+      $all + 1, "\n";
+print "The first element of the array is: $all[0]";
+```
+
+（输出）
+
+- 1 告诉我关于你自己的一切。
+- 2 好的。看看，我是在计算机出现之前出生的。
+- 我在 50 年代长大。
+- 我是嬉皮士一代。
+- 我开始对谈论自己感到厌倦了。
+- <CTRL>+D
+- 3 好的。看看，我是在计算机出现之前出生的。
+- 我在 50 年代长大。
+- 我是嬉皮士一代。
+- 我开始对谈论自己感到厌倦了。
+- 4 数组中的元素数量为：4。
+- 5 数组的第一个元素是：
+- 好的。看看，我是在计算机出现之前出生的。
+
+### 说明
+
+- 1 字符串“Tell me everything about yourself.”被打印到标准输出（STDOUT）。
+- 2 围绕 STDIN 的输入运算符 `<>` 会读取输入行，直到按下 <CTRL>+D 达到 EOF 为止。（在 Windows 中，使用 <CTRL>+Z 代替 <CTRL>+D。）每一行及其末尾的换行符都作为数组 @all 的一个列表元素存储。
+- 3 在用户按下 <CTRL>+D 或 <CTRL>+Z 后，用户输入被打印到屏幕上。
+- 4 `$#` 结构用于获取数组中的最后一个下标或索引值。通过在 `$#all` 上加 1，得到数组的大小；即读取的行数。
+- 5 `$all[0]` 是数组的第一个元素，其值为用户输入的第一行。读取的每行都是数组的一个元素。
+
+### 10.2.6 将输入赋值给哈希
+
+从 STDIN 读取输入并将其赋值给哈希，类似于从文件读取。读取的行可以赋值给对应于哈希键的值，或者作为键本身。
+
+### 示例 10.16
+
+（脚本）
+
+```perl
+use warnings;
+# Assign input to a hash
+my %course = (); # Empty hash
+my $course_number = 101;
+print "What is the name of course $course_number?";
+chomp($course{$course_number} = <STDIN>);
+print %course, "\n";
+```
+
+（输出）
+
+```
+What is the name of course 101? Linux Administration
+101Linux Administration
+```
+
+### 说明
+
+- 1 在这里声明哈希，%course。键和值将在稍后赋值。
+- 2 将标量变量 $course_number 赋值为 101。
+- 3 将字符串“What is the name of course 101?”打印到标准输出（STDOUT）。
+- 4 哈希的名称是 %course。我们正为哈希元素之一赋值。
+  键是 $course_number，需用花括号包裹。chomp 函数将移除用户赋值中的换行符。
+- 5 打印新的哈希。它有一个键和一个值。
+
+### 10.2.7 打开用于写入
+
+打开文件进行写入时，如果文件不存在则会被创建；如果文件已存在，则必须具有写权限。如果文件已存在，其内容将被覆盖。文件句柄用于访问系统文件。
+
+### 格式
+
+```
+open(my $filehandle, ">", "FILENAME"); # Three arguments, modern way
+open(FILEHANDLE, ">FILENAME"); # Bareword, old way
+```
+
+### 示例 10.17
+
+```
+open($fh, ">", "temp");
+open(PH, ">temp");
+```
+
+### 说明
+
+- 1 用户定义的文件句柄 $fh 将用于向名为 temp 的文件发送输出。与 shell 一样，重定向符号将默认文件句柄 STDOUT 的输出重定向到 temp 文件。
+- 2 这是创建用户定义句柄的较旧的双参数方式。
+

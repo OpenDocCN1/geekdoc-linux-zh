@@ -1,0 +1,5 @@
+# Chapter 16 · Interfacing with the System
+
+![](bbox=[0.15, 0.12, 0.73, 0.72])
+
+Each process also belongs to a **process group**, a collection of one or more processes used for job control and signal handling. Each process group also has a unique *pid* and a process leader. When you log on, the process group leader may be your login shell. Any process created from your shell will be a member of this process group. The terminal opened by the process group leader is called the **controlling terminal**, and any processes it spawns inherit it. Any signals sent to the process will be sent to all processes in the group. That is why, when you press <CTRL>+C, the process you are running and any of its children will terminate. Perl provides functions to obtain the process group ID and to set the process group.

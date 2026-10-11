@@ -1,0 +1,266 @@
+
+
+## 示例 9.13
+
+```perl
+use warnings;
+# The \S metacharacter and nonwhitespace
+1 while(<DATA>){
+2     print if s/\S/ /g;
+    }
+__DATA__
+Steve Blenheim 101
+Betty Boop 201
+Igor Chevalier 301
+Norma Cord 401
+Jonathon DeLoach 501
+Karen Evich 601
+
+(Output)
+********* **** **** ****
+**** **** ****
+**** *** **** ****
+********* **** ****
+******** ****
+```
+
+### 解释
+
+如果 `$_` 匹配包含非空白字符（即不是空格、制表符或换行符）的模式，即 `\S`，则打印该行。这次，所有非空白字符都被替换为一个 `*`。当元字符大写时，它会否定该元字符小写版本的含义；例如，`\D` 是非数字；`\d` 是数字。
+
+## 示例 9.14
+
+```perl
+use warnings;
+# Escape sequences, \n and \t
+1 while(<DATA>){
+2     print if s/\n/\t/;
+    }
+__DATA__
+Steve Blenheim 101
+Betty Boop 201
+Igor Chevalier 301
+Norma Cord 401
+Jonathon DeLoach 501
+Karen Evich 601
+
+(Output)
+Steve Blenheim 101\tBetty Boop 201\tIgor Chevalier 301
+Norma Cord 401\tJon DeLoach 501\tKaren Evich 601
+```
+
+### 解释
+
+正则表达式包含 `\n` 转义序列，表示单个换行符。该表达式的含义是：如果替换成功，则打印该行；也就是说，每个换行符都可以被替换为制表符（`\t`）。
+
+### 9.2.3 用于重复模式匹配的元字符
+
+在之前的示例中，元字符仅匹配单个字符。如果你想要匹配超过一个字符怎么办？例如，假设你要查找包含姓名且首字母必须大写的行——这可以用 `[A-Z]` 表示——但后续字母为小写，且每个姓名的字母数量各异。`[a-z]` 只匹配单个小写字母。如何匹配一个或多个小写字母？或者零个或多个小写字母？为此，你可以使用所谓的**量词**。要匹配一个或多个小写字母，正则表达式可以写为 `/[a-z]+/`，其中 `+` 号表示“前一个字符的一个或多个”，在此例中即一个或多个小写字母。Perl 提供了许多量词，如表 9.5 所示。
+
+**表 9.5 贪婪元字符**
+
+| 元字符 | 匹配内容 |
+| :--- | :--- |
+| `x?` | 匹配 x 的 0 或 1 次出现 |
+| `(xyz)?` | 匹配模式 xyz 的 0 或 1 次出现 |
+| `x*` | 匹配 x 的 0 次或多次出现 |
+| `(xyz)*` | 匹配模式 xyz 的 0 次或多次出现 |
+| `x+` | 匹配 x 的 1 次或多次出现 |
+| `(xyz)+` | 匹配模式 xyz 的 1 次或多次出现 |
+| `x{m,n}` | 匹配 x 至少 m 次，且不超过 n 次 |
+
+**贪婪因子。** 通常情况下，量词是*贪婪的*；换句话说，它们从字符串左侧开始，向右搜索，匹配尽可能多的字符集，寻找满足条件的最后一个可能字符。例如，给定以下字符串：
+
+```perl
+$s="ab123456783445554437AB"
+```
+
+以及正则表达式
+
+```perl
+m/ab[0-9]*X/;
+```
+
+搜索端将匹配 `ab123456783445554437`。所有这些内容都会被替换为一个 `X`。替换后，`$_` 将变为 `XAB`。
+
+星号（`*`）是一个贪婪元字符。它匹配前一个字符的零次或多次。换句话说，它附加在前一个字符之后，仅查找该字符的零次或多次出现。在前面的例子中，星号附加在字符类 `[0-9]` 之后。匹配从左侧开始，查找后跟零个或多个 0 到 9 之间数字的 `ab`。匹配继续进行，直到找到最后一个数字；在本例中，即数字 7。模式 `ab` 以及 0 到 9 之间的所有数字都被替换为单个 `X`。末尾的字符 `AB` 保持不变。
+
+可以关闭贪婪性，使得匹配不是基于最大数量的字符，而是基于找到的最小数量的字符。这是通过在贪婪元字符后添加一个问号来实现的（参见示例 9.23）。
+
+## 示例 9.15
+
+```perl
+use warnings;
+# The zero or one quantifier
+1  while(<DATA>) {
+2  print if /[0-9]+.?/;
+}
+
+__DATA__
+Steve Blenheim 1.10
+Betty Boop .5
+Igor Chevalier 555.100
+Norma Cord 4.01
+Jonathon DeLoach .501
+Karen Erich 601
+
+(Output)
+Steve Blenheim 1.10
+Igor Chevalier 555.100
+Norma Cord 4.01
+Karen Erich 601
+```
+
+### 解释
+
+- 正则表达式包含 `?` 元字符，表示前一个字符的零个或一个。该表达式的含义是：查找一个空格，后跟一个 0 到 9 之间的数字，再后跟一个或多个字面点（.）或者完全没有点。
+
+## 示例 9.16
+
+```perl
+use warnings;
+
+# The zero or one quantifier
+1 while(<DATA>){
+2 print if /\sB[a-z]*/ ;
+
+}
+
+__DATA__
+Steve Blenheim 1.10
+
+Betty Boop .5
+
+Igor Chevalier 555.100
+
+Norma Cord 4.01
+
+Jonathan DeLoach .501
+
+Karen Evich 601
+
+(Output)
+Steve Blenheim 1.10
+
+Betty Boop .5
+```
+
+### 解释
+
+- 正则表达式包含 `*` 元字符，表示前一个字符的零个或多个。该表达式的含义是：查找一个空格 `\s`，后跟一个 `B` 和零个或多个小写字母 `[a-z]*`。
+
+## 示例 9.17
+
+```perl
+use warnings;
+
+# The dot metacharacter and the zero or one quantifier
+1 while(<DATA>){
+2 print if s/[A-Z]*/y/Tom/ ;
+
+}
+
+__DATA__
+Steve Blenheim 101
+
+Betty Boop 201
+
+Igor Chevalier 301
+
+Norma Cord 401
+
+Jonathan DeLoach 501
+
+Karen Evich 601
+
+(Output)
+Tom Boop 201
+
+Tom 301
+```
+
+### 解释
+
+- 正则表达式包含 `.*`，其中 `*` 表示前一个字符的零个或多个。在此例中，前一个字符是点元字符，它代表任何字符。该表达式的含义是：查找一个大写字母 `[A-Z]`，后跟零个或多个任意字符 `.*`，再后跟字母 `y`。如果该行中有多个 `y`，搜索将包含直到*最后一个* `y` 的所有字符。*Betty* 和 *Igor Chevalier* 都匹配成功。注意，*Igor Chevalier* 中的空格也被包含为由点元字符匹配的字符之一。
+
+## 示例 9.18
+
+```perl
+use warnings;
+# The one or more quantifier
+1  while(<DATA>){
+2     print if /5+/;
+  }
+__DATA__
+Steve Blenheim 1.10
+Betty Boop .5
+Igor Chevalier 555.100
+Norma Cord 4.01
+Jonathon DeLoach .501
+Karen Evich 601
+
+(Output)
+*Betty Boop .5*
+*Igor Chevalier 555.100*
+*Jonathon DeLoach .501*
+```
+
+### 解释
+
+- 正则表达式包含 `+` 元字符，表示前一个字符的一个或多个。该表达式的含义是：查找数字 5 的一个或多个重复出现。
+
+## 示例 9.19
+
+```perl
+use warnings;
+# The one or more quantifier
+1  while(<DATA>){
+    print if m/\w+/X/g;
+2  }
+
+__DATA__
+Steve Blenheim 101
+Betty Boop 201
+Igor Chevalier 301
+Norma Cord 401
+Jonathan DeLoach 501
+Karen Evich 601
+
+(Output)
+X X X
+X X X
+X X X
+X X X
+X X X
+X X X
+```
+
+### 解释
+
+正则表达式包含后跟 `+` 元字符的 `\w`，表示一个或多个字母数字单词字符。例如，第一组字母数字单词字符是 *Steve*，*Steve* 被替换为 `X`。由于替换是全局的，下一组字母数字字符 *Blenheim* 也被替换为 `X`。最后，字母数字字符 `101` 也被替换为 `X`。
+
+## 示例 9.20
+
+```perl
+use warnings;
+# Repeating patterns
+while(<$DATA>) { print if / \d{1,3}/;
+}
+__DATA__
+Steve Blenheim 1.10
+Betty Boop .5
+Igor Chevalier 555 .100
+Norma Cord 4 .01
+Jonathan DeLoach .501
+Karen Evich 601
+
+(Output)
+Betty Boop .5
+Igor Chevalier 555 .100
+Jonathan DeLoach .501
+```
+
+### 解释
+
+- 正则表达式包含花括号 `{}` 元字符，表示前一个表达式重复的次数。该表达式的含义是：查找模式 `\d` 至少出现一次，且连续出现不超过三次。
+

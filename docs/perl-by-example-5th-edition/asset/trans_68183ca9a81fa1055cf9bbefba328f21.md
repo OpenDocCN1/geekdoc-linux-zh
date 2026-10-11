@@ -1,0 +1,136 @@
+
+## 14.4 继承
+
+### 示例 14.23（续）
+
+（输出）
+```text
+This is Nicky McDonald, salesman #1
+Nicky McDonald made $25060.00 last year.
+
+This is Rick Gonzales, salesman #2
+Rick Gonzales made $80976.00 last year.
+
+Charles Lee
+08/12/2013
+$5000
+Basic Math Algebra Calculus
+```
+
+代码：
+```perl
+$employee1 = bless({
+   'AnnualSales' => 1200,
+   'BasePay' => 25000,
+   'Commission' => '0.05',
+   'StartDate' => '12/12/2010',
+   'Name' => 'Nicky McDonald'
+   }, 'Salesman' );
+$employee2 = bless({
+   'BasePay' => 55000,
+   'StartDate' => '08/12/2013',
+   'Courses' => [
+      'Basic Math',
+      'Algebra',
+      'Calculus'
+   ],
+   'Name' => 'Charles Lee'
+   }, 'Teacher' );
+Rick Gonzales is leaving the firm.
+Nicky McDonald is leaving the firm.
+1 teachers were created.
+```
+
+### 解释
+
+- 1. *Salesman* 类被加载到内存中。
+- 2. *Teacher* 类也被加载到内存中。
+- 3. 通过调用 new 构造器创建了一个新的 Salesman 对象。属性作为哈希（hash）发送。通过这种方式，属性可以以任意顺序发送，因为键和值都会被发送。
+- 4. 调用了 *Salesman* 的实例/访问方法 *calculate_pay*，并返回该对象的薪酬。
+- 5. 创建了另一个 Salesman 对象。
+- 6. 计算并返回了第二个 Salesman 对象的薪酬。
+- 7. 创建了一个新的 *Teacher* 对象。由于 *Teacher* 类的类名是第一个参数，因此调用了 *Teacher* 的 *new()* 构造器（多态性的体现）。
+- 8. 调用了教师的访问方法 `set_courses()`。它的参数是对象引用（由 Perl 隐式传递）以及课程数组的引用。这些课程将作为 `Teacher` 的另一个属性添加。在接下来的几行中，使用基类方法（继承而来）和 `Teacher` 的方法获取这些值。
+- 9. 两个员工（第一位销售员和教师）的数据由 `Data::Dumper` 显示。可以看到每个员工都被祝福（bless）进了其各自的类。
+
+### 14.4.4 使用 Moose 实现多重继承和角色
+
+当一个类从多个基类（或父类）继承方法时，这被称为**多重继承**。在 Perl 中，通过向 `@ISA` 数组添加多个类来实现多重继承。
+
+```perl
+package Child;
+our @ISA = qw(Mother Father Teacher);
+```
+
+搜索是深度优先的，这意味着 Perl 将在 `Mother` 及其派生的类层级中查找，然后是 `Father` 及其派生的类层级，最后是 `Teacher` 及其所有祖先。正如现实生活中一样，当家谱中有多个父母时，层级结构可能会变得令人困惑。
+
+角色（Roles）是多重继承的一种替代方案。类似于 `Java` 接口或 Smalltalk 特性（traits），角色定义了一组方法或属性，这些定义必须被类实现，并且可以被其他类共享。角色本身不是一个类。关于描述角色的 Moose 手册：
+
+> 角色被*组合*进一个类。从实际意义上来讲，这意味着在角色中定义的所有方法、方法修饰器和属性都被直接添加到（我们有时说“展平到”）消费该角色的类中。这些属性和方法看起来就像是在类本身中定义的一样。消费类的子类将继承所有这些方法和属性。
+
+例如，如果一个 `Guard` 类和一个 `Researcher` 类扩展自我们之前创建的 `Employee` 类，并且这两个类都需要一个获取安全许可的方法，你可以使用多重继承，同时从 `Employee` 和一个 `Clearance` 类继承。但继承是一种“是一种”（is-a）关系，其中派生类是父类的特化。你可以说一个 `Guard` “是一种” `Employee`，但他不是一个 `Clearance`。更准确地说，`Guard` *需要*一个许可。并非每个员工都需要许可，但有些人需要。我们的 `Salesman` 就不需要。创建一个角色能更好地满足那些需要许可的类的要求。角色允许一个类由或消费一个角色使其完整。例如，`Guard` 和 `Salesman` 都从 `Employee` 类继承员工的所有基本要求，但 `Guard` 类在获得 `Clearance` 之前是不完整的，而 `Salesman` 则不需要。我们可以创建一个角色来完成这项工作。角色是一种“做一种”（does-a）关系，而不是“是一种”（is-a）关系。
+
+由于 Perl 没有内置创建角色的方式，Perl 库中有许多模块支持它们。最流行的是 Moose 模块，它是 Perl 5 对象系统的扩展。请尝试 *perldoc* Moose 获取完整文档。使用 Moose 的示例见附录 C，“Moose 入门（Perl 5 的后现代对象系统）”。此外还有一个叫做 Moo 的 Moose 子集，它可能更适合优化的快速启动。（参见 *http://perl.maven.com/videos/op-with-moo*。）Moose 的另一个简化版本是 Role::Tiny 模块，其文档将其描述为“像 Nouvelle Cuisine 分量大小的 Moose 切片”。
+
+在下面的示例中，我们演示了如何使用 *Moose::Role* 创建和使用*角色*。在此示例中，我们定义了一个名为 *Radius* 的软件包。该类是一个 *Shape*::*Circle*。*Circle* 类将有一个 *color* 属性和一个 *calculate_area* 方法。为了获得圆的面积，它必须有一个半径。如果我们在 *Circle* 中提供一个 *setRadius* 方法，然后如果我们想创建一个球体或圆锥体对象，我们仍然需要为这些对象设置半径。如果把它放在继承树中，我们可以说 *Circle* 是一种 *Shape*，*Rectangle* 也是一种 *Shape*，但只有 *Circle* 需要半径。因此，通过角色组合，任何需要半径的对象都可以共享 *Radius* 角色来定义 *setRadius* 和 *getRadius* 方法，或者简单地确保模块中实现了 *setRadius* 方法。如果没有实现，Perl 将抛出*异常*。使用 *Moose::Role* 模块，我们在带有 *package* 声明的 *.pm* 文件中像普通模块一样创建一个角色，然后分派使用模块将“消费”的属性和方法。Moose 角色不是类，不能实例化。它们只是角色。
+
+### 示例 14.24
+
+```perl
+1    package Radius;
+2    use Moose::Role;    # 自动开启 strict 和 warnings
+3    has 'radius' => {    # 属性和访问器
+        is => 'rw',
+        isa => 'Int',
+        required => 1,
+    };
+4    package Shape::Circle;
+use Math::Trig;
+5    use Moose;
+with 'Radius';    # Radius 是一个角色
+6    has 'color' => {    # 定义
+        is => 'rw',
+        isa => 'Str',
+        default => 'blue'
+    };
+
+7    sub calculate_area { # 定义方法，Circle 使用 radius
+  my $self = shift;
+  my $area=$self->{'radius'} ** 2 * pi;
+  return $area;
+}
+
+package main;
+use Data::Dumper;
+8    my $c1=Shape::Circle->new('radius' => 6); # 必需参数
+9    print Dumper $c1; # 查看新的 Circle 对象
+10   $c1->radius(3); # radius 是一个设置器
+11   print "The radius is ", $c1->radius, # radius 是一个获取器
+12   printf "The area is %.2f\n", $c1->calculate_area;
+13   print Dumper $c1;
+```
+
+（输出）
+
+```text
+9 $VAR1 = bless( {
+  'color' => 'blue',
+  'radius' => 6
+}, 'Shape::Circle' );
+11 The radius is 3
+12 The area is 28.27
+13 $VAR1 = bless( {
+  'color' => 'blue',
+  'radius' => 3
+}, 'Shape::Circle' );
+```
+
+### 解释
+
+- 1. *Radius.pm* 作为一个 Moose 角色。它可以被任何需要半径的类使用，或者说“消费”。
+- 2. *Moose::Role* 是 Moose 模块的扩展。（如果你使用的是 5.16 之前的 Perl 版本，可能必须下载 Moose。）
+- 3. 该*角色*有一个名为 *radius* 的属性，其值取整数，可读可写（*rw*），并且要求在“消费”类的构造器中作为参数提供半径的值。当一个类“消费”一个*角色*时，意味着该*角色*中定义的所有方法和属性都直接添加到该类中，就好像该类本身定义它们一样。*Moose* 自动为消费类创建构造器以及设置器和获取器访问方法（称为 *radius*）。
+- 4. 声明了 *Shape::Circle* 类。
+- 5. *Shape::Circle* 类将“消费”*Radius* *角色*。使用 *with* 函数将*角色*导入或组合到当前类中。现在，该类将拥有在 *Radius* *角色*中定义的 *radius* 属性。
+- 6. *Circle* 定义了一个 *color* 属性。*color* 是读/写（*rw*）的字符串（*Str*），默认值为 *‘blue’*。
+

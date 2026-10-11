@@ -1,0 +1,230 @@
+
+### 16.3 与其他操作系统接口的其他方法
+
+如果系统函数仍然不够用，Perl 提供了多种替代方式来处理操作系统。你可以使用 `syscall` 函数、命令替换、`system` 函数以及 *heredoc*（此处文档指代 here document）来获取系统信息。
+
+#### 16.3.1 `syscall` 函数与 `h2ph` 脚本
+
+`syscall` 函数通过其参数调用指定的系统调用。如果 C 系统调用未实现，则返回致命错误。第一个参数是系统调用的名称，前面加上 `SYS_` 前缀。其余参数是实际系统调用所需的实际参数。如果参数是数字，它作为 C 整数传递。如果不是，则传递字符串值的指针。如果数字不是字面量且无法通过上下文解释，可能需要通过加 0 将其强制转换为整数。
+
+在使用 *syscall* 函数之前，应运行 Perl 发行版附带的名为 `h2ph`（在 Windows 上为 `h2ph.bat`）的脚本（[http://perldoc.perl.org/h2p.html](http://perldoc.perl.org/h2p.html)）。在 `h2ph` 脚本的底部（在 `__END__` 之后）是 `h2ph` 的手册页，其中包含如何运行该脚本的说明。此脚本将合适的 C 头文件转换为对应的 Perl 头文件。如果你使用需要这些文件的函数，必须将这些文件添加到 Perl 库中。所有创建的文件都具有 `.ph` 扩展名。运行 `h2ph` 脚本后，请确保程序中的 `@INC` 数组包含这些库函数的路径。[^12]
+
+**格式**
+
+`syscall($SYS_NAME, LIST);`
+
+**示例 16.35**
+
+(UNIX：在命令行上)
+
+```bash
+$ cd /usr/include; /usr/local/bin/perl h2ph * sys/*
+```
+
+(在脚本中)
+
+```perl
+#!/bin/perl
+# 脚本的名称是 args.pl
+2  push(@INC, "/usr/local/lib");
+3  require "syscall.ph";
+4  $bytes=syscall(SYS_getpagesize);
+5  printf "这台 Sparc Sun 工作站的页大小是 %d 字节\n",$bytes;
+```
+
+(输出)
+
+```text
+5  这台 Sparc Sun 工作站的页大小是 4096 字节。
+```
+
+[^12] 参见 Perl 5 发行版附带的 `h2xs` 脚本，用于从任何 C 头文件构建 Perl 扩展。
+
+**解释**
+
+- 执行 `h2ph` 以便将必要的 C 头文件转换为 Perl 头文件。创建的文件将放置在 `/usr/local/lib` 中，并以 `.ph` 扩展名结尾。
+- 包含 `.ph` 文件的目录被推送到 `@INC` 数组中。
+- 需要使用 C 系统调用时，必须引入文件 `syscall.ph`。
+- Perl `syscall` 函数将调用 `getpagesize` 系统调用。前缀 `SYS_` 是必要的 Perl 语法。它必须附加在实际的系统调用名称之前。
+- 此 Sun4c 的页大小为 4,096 字节。
+
+### 16.3.2 命令替换——反引号
+
+虽然我们在第 5 章“名字中有什么？”中已经讨论过命令替换和反引号，但由于命令替换是 Perl 与操作系统命令接口的另一种方式，在这里快速回顾一下可能也是合适的。
+
+UNIX/Linux shell（不包括 Windows）使用反引号进行命令替换，并且在 Perl 脚本中的实现方式大致相同。例如，命令行 `` `pwd` ``（当前工作目录是 `pwd`）会导致反引号内的命令被执行，并将其结果替换到字符串中。与 UNIX/Linux shell 类似，将命令用反引号括起来会导致其执行。与 shell 不同的是，如果双引号包围反引号字符串，则不会发生命令替换。执行命令产生的输出保存在一个标量变量中。
+
+**示例 16.56**
+
+(脚本)
+
+```perl
+use warnings;
+1  print "现在是 ", `date`;
+2  my @ds = `date`;
+3  print $ds[0];
+4  @ds = split(/\s+/, `date`);
+5  print "$ds[0]\n";
+6  my $machine = `uname -n`;
+7  print "$machine\n";
+```
+
+(输出)
+
+```text
+1  现在是 Sat May 31 20:47:17 PDT 2014
+3  Sat
+5  Sat
+7  jody
+```
+
+**解释**
+
+- UNIX *date* 命令被反引号包围。它被执行并追加到字符串 *现在是* 之后。
+- 数组 `@ds` 被设置为 *date* 命令的输出。输出作为单个字符串存储在数组的第一个元素中。
+- `$ds[0]` 是整个日期时间字符串。
+- *split* 命令从 *date* 命令返回的输出创建一个列表。
+- 现在数组的第一个元素是列表中的第一个单词，*Sat*。
+- 标量 *$machine* 被赋予 UNIX 命令 *uname -n* 的值，其中包含主机机器的名称（在 BSD/Linux 上为 *hostname*）。
+- 打印主机机器的名称。
+
+### 16.3.3 `Shell.pm` 模块
+
+此模块允许你在 Perl 脚本中使用通常输入到 shell 提示符下的 UNIX 命令。这些命令被视为 Perl 子程序。参数和选项以字符串列表的形式传递给命令。截至 Perl 5.16，此核心模块已被移除，可以在 CPAN 上找到。
+
+**示例 16.57**
+
+(脚本)
+
+```perl
+1  use warnings;
+2  use Shell qw(pwd ls date); # 列出的 Shell 命令
+3  print "今天是 ", date();
+4  print "时间是 ", date("%T");
+5  print "当前工作目录是 ", pwd;
+6  my $list = ls( "-aF" );
+7  print $list;
+```
+
+(输出)
+
+```text
+3  今天是 Tue May 29 13:41:56 PDT 2014
+4  时间是 13:41:57
+5  当前工作目录是 /home/ellie/sockets
+6  ./
+   ../
+   sh.list.test*
+   sh.list.stuff
+   timeclient*
+   timeclient5*
+   timeserver*
+   timeserver5*
+```
+
+**解释**
+
+- 此程序中将使用 `Shell.pm` 模块。三个 UNIX shell 命令 `pwd`、`ls` 和 `date` 将被视为普通的 Perl 子程序。
+- *`date` 命令作为子程序执行。这是使用反引号的一种替代方法。*
+- 传递给 `date` 命令的参数是引号包围的字符串。
+- 执行 `pwd` 命令。
+- `ls` 命令的输出赋值给标量 `$list`。参数作为单个字符串传递给函数。
+- `ls -aF` 的输出是当前工作目录中的文件列表。`-a` 开关包含点文件，而 `F` 导致可执行脚本被标记为星号 (\*)，目录被标记为 /。
+
+### 16.3.4 `system` 函数
+
+与其 C 语言对应物类似，`system` 函数接受一个系统命令作为参数，将命令发送到系统 shell 进行解释，并将控制权返回给调用程序，即你的脚本。这与 `exec` 函数类似，但首先执行了 *fork*，以便将控制权返回给 Perl 脚本。由于它不会刷新输出缓冲区，特殊的 Perl 变量 `$!` 被设置为 1，以强制在 `print` 或 `write` 语句后刷新缓冲区。[^13]
+
+**格式**
+
+```perl
+system("system command");
+system "system command";
+```
+
+**示例 16.58**
+
+(UNIX：命令行)
+
+```perl
+1  system("cal 1 2015");
+   print "新年快乐!\n";
+```
+
+(输出)
+
+```text
+      2015年1月
+ Su Mo Tu We Th Fr Sa
+                    1  2
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30
+新年快乐!
+```
+
+(Windows)
+
+```perl
+2  system("notepad.exe");
+```
+
+**解释**
+
+- `system` 函数执行 UNIX *cal* 命令以打印 2015 年 1 月的日历。
+- `system` 函数执行 Windows *notepad.exe* 命令并启动记事本会话。
+
+**示例 16.59**
+
+(脚本)
+
+```perl
+1  print "你好\n";
+2  print "这台机器的名称是 ";
+3  system ("uname -n"); # 缓冲区未被刷新
+4  print "时间是 ", `date`;
+```
+
+(输出)
+
+```text
+1  你好
+3  jody
+2,4 这台机器的名称是 时间是 Tue May 29 13:39:35 PDT 2007
+```
+
+**解释**
+
+- 第一个 *print* 语句按预期执行。
+- 由于 Perl 依赖于默认的 I/O 缓冲机制，缓冲区可能不会在 *print* 语句后立即刷新；由 shell 执行的 *system* 函数的结果首先被打印。
+- *system* 函数导致 shell 执行 UNIX 命令 *uname -n*。
+- 此 *print* 语句直接打印在第 2 行的 *print* 语句之后。
+
+**示例 16.60**
+
+(脚本)
+
+```perl
+use warnings;
+1  $| = 1; # 设置特殊变量以刷新输出缓冲区
+2  print "你好\n";
+3  print "这台机器的名称是 ";
+   system ("uname -n");
+4  print "时间是 ", `date`;
+```
+
+(输出)
+
+```text
+2  你好
+3  这台机器的名称是 jody
+4  时间是 Mon Jan 26 13:43:54 PST 2015
+```
+
+**解释**
+
+- 当特殊的 `$|` 变量设置为非零值时，强制在每次 *write* 或 *print* 后刷新输出缓冲区。
+
+[^13] 注意：OCR 文本在段落末尾提到了 "13"，这可能对应脚注标记。源文本中未提供脚注 13 的具体内容，因此标记为 [^13] 以保持结构完整性，但其内容在输入中缺失。
+

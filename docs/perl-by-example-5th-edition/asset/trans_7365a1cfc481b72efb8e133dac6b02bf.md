@@ -1,0 +1,184 @@
+
+### umask 函数（UNIX）
+
+创建文件时，文件默认拥有一定的权限集。这些权限由所谓的**系统掩码**决定。在大多数系统上，该掩码为 `022`，由登录程序设置。[^8] 目录的默认权限为 `777`（`rwxrwxrwx`），文件的默认权限为 `666`（`rw-rw-rw`）。使用 `umask` 函数可以从现有掩码中移除或减去权限。
+
+若要移除“其他用户”权限集中的 `write`（写）权限，`umask` 值会从目录或文件允许的最大权限中减去：
+
+```text
+    777 (directory)        666 (file)
+   -002 (umask value)     -002 (umask value)
+   ----------------       -----------------
+      775                    664
+```
+
+`umask` 函数设置当前进程的 `umask` 并返回旧值。如果不带参数，`umask` 函数返回当前设置。
+
+### 格式
+
+```perl
+umask (EXPR)
+umask EXPR
+umask
+```
+
+### 示例 16.13
+
+```perl
+$ perl -e 'printf("The umask is %o.\n", umask);'
+The umask is 22.
+$ perl -e 'umask 027; printf("The new mask is %o.\n", umask);'
+The new mask is 027.
+```
+
+### 解释
+
+- 1. 不带参数的 `umask` 函数打印当前的 umask 值。
+- 2. `umask` 函数将掩码重置为八进制数 `027`。
+
+### 16.1.9 硬链接和软链接
+
+**UNIX。** 创建文件时，它拥有一个**硬**链接；也就是说，目录中的一个条目。你可以创建指向该文件的额外链接，这些链接实际上只是同一文件的不同名称。内核会在文件的 inode 中跟踪文件拥有多少个链接。只要文件存在链接，其数据块就不会释放给系统。文件拥有多个名称的优势在于只有一组数据，即主文件，并且该文件可以通过多个不同的名称访问。硬链接不能跨越文件系统，并且**必须**在创建链接时存在。
+
+[^8]: 用户也可以在 `profile`（`sh` 或 `ksh`）或 `.cshrc`（`csh`）初始化文件中设置 `umask`。
+
+**软链接**也称为**符号链接**，有时也称为**symlink**。符号链接实际上只是一个**非常**小的文件（它具有权限、所有权、大小等）。它仅包含另一个文件的**名称**。访问具有符号链接的文件时，内核会指向符号链接中包含的文件**名称**。例如，从 *thisfile* 到 */usr/bin/joking/otherfile* 的链接将 *thisfile* 链接到 */usr/bin/joking/otherfile*。当打开 *thisfile* 时，实际访问的文件是 *otherfile*。符号链接可以指向存在或不存在文件，可以跨越文件系统，甚至**不同**的计算机。它们也可以指向其他符号链接。[^9]
+
+### Windows
+
+Win32 系统引入了**快捷方式**，这是一种带有 *.lnk* 扩展名的特殊二进制文件。**快捷方式**类似于 UNIX 符号链接，但它由特定应用程序而非系统处理，并且是文件或目录的别名。快捷方式是一个图标，其左上角有一个带小箭头的白色方框（参见**图 16.4**）。
+
+如果你使用的是 Windows 8，请参阅 http://Support.microsoft.com/hb/2820948/en-gb 上的“如何在 Windows 8 桌面模式中创建软件快捷方式方法”。
+
+![](img/8556abcb353c0991f12099420ec28735_646_0.png)
+
+现在，在你的桌面上，你将看到应用程序的快捷方式图标：
+
+![](img/8556abcb353c0991f12099420ec28735_646_1.png)
+
+**图 16.4** 快捷方式及其 *.lnk* 扩展名。
+
+[^9]: 符号链接起源于 BSD，并在许多 ATT 系统下得到支持。你的系统可能不支持。
+
+使用 `Win32::Shortcut` 模块可以从 Perl 脚本中创建、加载、检索、保存和修改快捷方式属性。为了给你一个使用 `Win32::Shortcut` 模块的示例，以下示例是来自 Perl 文档的多个示例之一：
+
+```perl
+use Win32::Shortcut;
+
+$LINK = Win32::Shortcut->new();
+$LINK->{Path}   = "C:\Directory\Target.exe";
+$LINK->{Description} = "Target executable";
+$LINK->Save("Target.lnk");
+$LINK->Close();
+```
+
+### link 和 unlink 函数（UNIX）
+
+*link* 函数在 UNIX 系统上创建硬链接（即两个具有相同名称的文件）。*link* 函数的第一个参数是现有文件的名称；第二个参数是新文件的名称，该名称不能已经存在。只有超级用户才能创建指向目录的链接。删除目录时使用 `rmdir`。
+
+### 格式
+
+```perl
+link(OLDFILENAME, NEWFILENAME);
+```
+
+### 示例 16.16
+
+```perl
+(UNIX)
+1   $  perl -e 'link("dodo", "newdodo");'
+2   $  ls -il dodo newdodo
+     142726 -rw-r--r--    2  ellie      0 Mar  7 13:46 dodo
+     142726 -rw-r--r--    2  ellie      0 Mar  7 13:46 newdodo
+```
+
+### 解释
+
+- 1. 旧文件 `dodo` 被赋予了另一个名称，`newdodo`。
+- 2. `ls` 命令的 `i` 选项给出文件的 inode 号。如果 inode 号相同，则文件相同。旧文件 `dodo` 最初拥有一个链接。现在链接数变为两个。由于 `dodo` 和 `newdodo` 是链接的，它们是同一个文件，改变其中一个也会改变另一个。如果移除一个链接，另一个仍然存在。要移除文件，必须移除指向它的所有硬链接。
+
+*unlink* 函数在 UNIX 和 Windows 系统上删除文件列表（类似于 UNIX `rm` 命令或 MS-DOS `del` 命令）。如果文件拥有多个链接，链接数减少一个。该函数返回成功删除的文件数量。要删除目录，请使用 `rmdir` 函数，因为只有超级用户才能使用 *unlink* 函数取消链接目录。
+
+### 格式
+
+```perl
+unlink LIST;
+```
+
+### 示例 16.17
+
+```perl
+1	(The Script)
+2	unlink('a', 'b', 'c') || die "remove: $!\n";
+3	$count=unlink <*.c>;
+4	print "The number of files removed was $count\n";
+```
+
+### 解释
+
+- 1. 文件 *a*、*b* 和 *c* 被移除。
+- 2. 所有以 *.c*（C 源文件）结尾的文件被移除。移除的文件数量存储在标量 `$count` 中。
+
+*symlink* 和 *readlink* 函数（UNIX）。*symlink* 函数创建符号链接。符号链接文件是如果引用旧文件名时访问的文件名称。
+
+### 格式
+
+```perl
+symlink(OLDFILE, NEWFILE)
+```
+
+### 示例 16.18
+
+```perl
+1	$ perl -e 'symlink("/home/jody/test/old", "new");'
+2	$ ls -ld new
+3	lrwxrwxrwx 1 ellie 8 Feb 22 17:32 new -> /home/jody/test/old
+```
+
+### 解释
+
+- 1. *symlink* 函数创建新文件名 *new*，链接到旧文件名 */home/jody/test/old*。
+- 2. *ls -ld* 命令列出符号链接文件。符号 *->* 指向新文件名。权限前的 *l* 也表示这是一个符号链接文件。
+
+*readlink* 函数返回符号链接的值，如果文件不是符号链接，则返回 undefined（未定义）。
+
+### 示例 16.19
+
+```perl
+$ perl -s 'print readlink("new");'
+/home/jody/test/old
+```
+
+### 解释
+
+- 1. 文件 *new* 是一个符号链接。它指向 */home/jody/test/old*，这是 *readlink* 函数返回的值。
+
+### 16.1.10 重命名文件
+
+**rename 函数（UNIX 和 Windows）。** *rename* 函数更改文件名称，类似于 UNIX *mv* 命令。其效果是创建指向现有文件的新链接，然后删除现有文件。*rename* 函数成功时返回 *1*，失败时返回 *0*。此函数不能跨越文件系统边界。如果具有新名称的文件已经存在，其内容将被破坏。
+
+### 格式
+
+```perl
+rename(OLDFILENAME, NEWFILENAME);
+```
+
+### 示例 16.20
+
+```perl
+1 rename("tmp", "datafile");
+```
+
+### 解释
+
+- 1. 文件 *tmp* 被重命名为 *datafile*。如果 *datafile* 已经存在，其内容将被破坏。
+
+### 16.1.11 更改访问和修改时间
+
+**\*utime\* 函数。** *utime* 函数更改文件列表中每个文件的访问和修改时间，类似于 UNIX *touch* 命令。列表的前两个元素必须按顺序为数值访问时间和修改时间。*time* 函数将当前时间提供给 *utime* 函数。该函数返回成功更改的文件数量。列表中每个文件的 inode 修改时间被设置为当前时间。
+
+### 格式
+
+```perl
+utime(LIST);
+```

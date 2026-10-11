@@ -1,0 +1,15 @@
+# 15.2.3 Talking to the Database with SQL
+
+When Perl output is sent to the browser, the browser understands markup languages, such as HTML or XHTML, and these language tags are embedded in Perl's `print` statements. This output could be displayed as forms, images, styled text, colors, tables, and so on. Likewise, in order to communicate with the MySQL server, your Perl scripts must speak a language the database will understand. That language is called SQL. SQL stands for Structured Query Language, the language of choice for most modern multiser relational databases. It provides the syntax and language constructs needed to talk to relational databases in a standardized, cross-platform, structured way. Just as the English language has a variety of dialects (for example, British, American, Australian), there are many different versions of the SQL language. The version of SQL used by MySQL follows the ANSI (American National Standards Institute) standard, meaning that it must support the major keywords (such as `SELECT`, `UPDATE`, `DELETE`, `INSERT`, `WHERE`, and so on) as defined in the standard. As you can see by the names of these keywords, SQL is the language that makes it possible to manipulate the data in a database.
+
+If you are not familiar with SQL, refer to Appendix B, "SQL Language Tutorial," for a complete guide on how to use the SQL language. There are also a number of very well-written tutorials available on the Internet (see http://www.3schools.com/sql/default.asp, http://sqlcourse.com/select.html, or http://1heydata.com/sql/sql.html).
+
+**English-like Grammar.** When you create a SQL statement, it makes a request, or "queries" the database, in the form of a statement, similar to the structure of an English imperative sentence, such as "Select your partner," "Show your stuff," or "Describe that bully." The first word in a SQL statement is an English verb, an action word called a command, such as `show`, `use`, `select`, `drop`, and so on. The commands are followed by a list of noun-like words, such as `show databases`, `use database`, or `create databases`. The statement may contain prepositions, such as `in` or `from`; for example, `show tables in database` or `select phones from customer_table`. The language also lets you add conditional clauses to refine your query, such as `select companyname from suppliers where supplier_id > 20`.
+
+When listing multiple items in a query, like English, the items are separated by commas; for example, in the following SQL statement, each field in the list being selected is comma-separated:
+
+```
+select companyname, phone, address from suppliers;
+```
+
+If the queries get very long and involved, you might want to type them into your favorite editor, because once you have executed a query, the only way to get it back is to use the arrow keys in the MySQL console. By saving the query in an editor, you can cut and paste it back into the MySQL browser or command line without retyping it. But most important, make sure your query makes sense and will not cause havoc on an important database. MySQL provides a `test` database for practice.

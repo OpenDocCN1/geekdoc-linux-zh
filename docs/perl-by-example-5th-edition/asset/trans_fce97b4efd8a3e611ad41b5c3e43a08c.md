@@ -1,0 +1,190 @@
+
+## wait 和 waitpid 函数
+`wait` 函数会等待子进程执行完毕。在 `fork` 调用之后，父进程和子进程都会继续执行。`wait` 函数会强制父进程等待其子进程结束，并将子进程的 `pid` 返回给父进程。如果当前没有子进程，`wait` 将返回 -1。¹¹
+
+```
+FORMAT
+wait;
+```
+
+### 示例 16.50
+```perl
+(The Script)
+use warnings;
+$return_val=fork;
+if ( $return_val == 0 ){      # 在子进程中
+  print "This is the child process; return value
+     is $return_val.\n";
+  exec "/bin/date" || die "exec failed: $!\n";
+}
+else{ # 在父进程中
+  defined $return_val ){ 
+  print "This is the parent process; return value is $pid.\n";
+  $pid = wait;
+  print "Back in parent process.\n";
+  print "The deceased child's pid is $pid.\n";
+} else{
+  die "fork error: $!\n";
+}
+
+(Output)
+  4 This is the parent process; return value is 3530.
+  2 This is the child process; return value is 0.
+  3 Pri May 30 23:57:18 PST 2014.
+  5 Back in the parent process.
+  4 The deceased child's pid is 3530.
+```
+
+**解释**
+- 1. *fork* 函数创建当前进程的副本。现在有两个进程在运行，即父 Perl 进程和子 Perl 进程。它们都在执行紧随 *fork* 调用之后的代码。在子进程中，返回值的赋值为 0；在父进程中，赋值为子进程的 *pid*。
+- 2. 如果在子进程中，则执行 *if* 语句块。
+- 3. *exec* 函数执行 UNIX 的 date 命令，并且不会返回。
+- 4. 如果在父进程中，则执行 *elsif* 语句块。*​$return_val* 的值为子进程的 *pid*。
+- 5. `wait` 函数由父进程调用，它会等待子进程结束。已故子进程的 `pid` 会被返回。
+- 6. 如果 `fork` 失败（没有更多进程？），`die` 函数将打印错误消息，程序将退出。
+
+¹¹ *waitpid* 函数也用于等待子进程执行完毕，但它可以指定要等待哪个子进程，并且具有控制阻塞行为的特殊标志。
+
+## `exit` 函数
+`exit` 函数使程序退出。它可以接收一个介于 0 到 255 之间的整数参数。通过 `wait` 函数调用，`exit` 的值会被返回给父进程。按照惯例，以零状态退出的 UNIX 程序表示成功，而非零状态退出则表示以某种方式失败。（当然，对于成功的判定标准，不同程序员之间可能并不一致。）
+
+**格式**
+```
+exit (Integer);
+exit Integer;
+```
+
+### 示例 16.51
+```
+(The Script)
+    # 脚本名为 argo.pl
+1   exit 12 if $#ARGV == 0;
+
+(Output)
+1   $ argo.pl
+2   $ echo $?
+3   12
+```
+
+**解释**
+- 1. 脚本缺少一个参数。
+- 2. shell 的 `$?` 变量包含 Perl 程序的 `exit` 状态。如果使用 C shell，`exit` 状态存储在 `$status` 中。
+
+# 16.2.9 进程创建 Win32
+
+你可以在 Win32 系统上使用 `system` 和 `exec` 函数以及反引号，用法与在 UNIX 上完全相同。
+
+## `start` 命令
+Perl 的 `system` 函数在 Windows 和 UNIX 上都用于启动操作系统命令。`system` 函数执行一个程序，并在该程序结束之前不会返回。如果将 Windows 的 `start` 命令作为 Perl `system` 函数的参数，将会运行一个新的应用程序，同时你的脚本也会继续运行。
+
+### 示例 16.52
+```
+1  use warnings;
+2  $return_value = system ("start \"C:\Program Files\Internet Explorer\iexplore.exe\"");
+3  print "Program continues; Explorer is running.\n";
+4  print "The return_value from system is $return_value.\n";
+```
+
+```
+(Output)
+2 Program continues; Explorer is running.
+3 The return_value from system is 0.
+```
+
+**解释**
+- 1. Perl 的 `system` 函数启动一个新进程。它的行为类似于 `exec` 函数，除了先执行 fork 且父进程会等待子进程退出。通过使用 Win32 的 `start` 命令，你可以启动一个新进程，而 Perl 脚本将继续运行，而不是等待新进程完成。如果进程成功启动，`system` 函数将返回值为 0。
+- 2. 互联网浏览器（Internet Explorer）已启动，并将继续运行，直到其窗口关闭。
+- 3. 打印出 `system` 函数的返回值。
+
+## **Win32::Spawn** 函数
+`Win32::Spawn` 函数的行为类似于 `system` 函数和 Windows 的 `Start` 命令。
+
+**格式**
+```
+use Win32;
+Win32::Spawn($ProgramName, $CommandLine, $ProcessID);
+```
+
+### 示例 16.53
+```
+1  use warnings;
+2  use Win32;
+3  $|=1;
+4  $Application="C:\\ksant\\date.exe";
+5  $CommandLine="date +$D";
+6  $Status=Win32::Spawn ($Application, $CommandLine, $ProcessID);
+7  if ($Status != 0){
+8    print "pid is $ProcessID.\n";
+9  } else{
+10   print "Didn't spawn $Application.\n";
+11   print Win32::FormatMessage (Win32::GetLastError);
+```
+
+```
+(Output)
+8 pid is 448.
+```
+
+**解释**
+- 1. warnings 语法规则会发送语法警告、已初始化的值等，以帮助排查程序中可能出现的问题。
+- 2. Win32:: 模块从标准 Perl 库中加载；它是一个核心模块。它包含许多有用的模块，供 Windows 程序员处理服务器、客户端、注册表、事件、网络管理、进程等。
+- 3. 特殊标量 $! 被赋值为 1。这确保在使用 print 函数时，输出缓冲区会立即被刷新。（在你的提示符下，针对 UNIX 或 Windows，输入 *perldoc Win32*。）
+- 4. 应用程序是 MSK 工具包*，位于 C:\ 驱动。该工具包包含模拟 UNIX 命令的 *.exe 文件。*date.exe* 文件生成当天的日期。
+- 5. 命令行由将传递给应用程序的任何参数组成。
+- 6. *Win32::Spawn* 函数被调用，带三个参数。其中两个已被赋值，但 $*ProcessID* 尚未已知。它将在应用程序启动后被赋予一个值。
+- 7. 如果 *Win32::Spawn* 函数返回的状态不为 0，则打印进程 ID 号。
+- 8. 进程 ID 号是 **448**。
+- 9. 如果 .exe 文件不存在，则显示 Didn't spawn C:/msknst/date.exe.。
+- 10. 如果由于应用程序不存在而无法启动进程，*GetLastError()* 函数将打印：
+    > The system cannot find the file specified.
+    > Program continues to run...
+
+这是一个由 Windows 生成的错误，当操作系统未能启动该程序时触发。*FormatMessage* 函数创建一个可读的错误打印输出。
+
+\* 适用于 Windows NT 和 Windows 95 Release 6.1 的 MSK 工具包，由 Moritce Kern Systems Inc. 提供。
+
+# Win32::Process 模块
+
+你可以用来启动 Windows 应用程序的另一个扩展是面向对象的 *Win32::Process* 模块。它提供了一些方法来创建和管理进程。你可以使用此模块挂起、恢复和终止进程。参见表 16.12。
+
+## 表 16.12 Win32::Process 方法
+
+| 方法 | 作用 |
+| :--- | :--- |
+| *Create*(\$obj, \$AppName, \$CommandLine, \$Inherit, \$CreateFlags, \$InitialDir); | 创建进程对象 |
+| \$Obj->*GetExitCode*(\$exitCode); | 获取进程的退出代码 |
+| \$Obj->*GetPriorityClass*(\$Class); | 获取进程优先级类 |
+| `$ProcessObj->GetProcessID()` | 返回进程 ID |
+| `$Obj->Kill($ExitCode);` | 以指定退出代码终止进程 |
+| `$Obj->Resume();` | 恢复挂起的进程 |
+| `$Obj->SetPriorityClass($Class);` | 设置进程亲和性掩码（NT） |
+| `$Obj->Suspend();` | 挂起进程 |
+| `$Obj->Wait($Timeout);` | 等待进程结束 |
+
+### 示例 16.54
+```
+1 use Win32::Process;
+2 use Win32;
+3 sub ErrorReport{
+4     print Win32::FormatMessage( Win32::GetLastError );
+5 }
+
+6 Win32::Process::Create( $ProcessObj,
+7     "C:\Windows\notepad.exe", "notepad myfile.txt", 0,
+8     NORMAL_PRIORITY_CLASS, ".") || die ErrorReport;
+9 print "Notepad has started\n";
+10 print "The exit code is: ",
+11     $ProcessObj->GetExitCode( $ExitCode),"\n";
+```
+
+(Output)
+Notepad has started
+The exit code is: 1
+
+**解释**
+- 1. 加载 `Win32::Process` 模块。它用于启动 Windows 应用程序。
+- 2. 加载 `Win32` 模块。
+- 3. `ErrorReport` 函数将发送最近发生的系统错误的格式化错误消息（如果有的话）。
+- 4. `Create` 函数创建进程。第一个参数 `$ProcessObj` 是进程对象的容器，后面跟随应用程序的完整路径名、命令行参数和必需的标志。
+- 5. 返回进程的退出代码。
+

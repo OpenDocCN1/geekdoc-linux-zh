@@ -1592,6 +1592,7 @@
 +   [Linux(R) 服务器性能调优](docs/performance-tuning-for-linuxr-servers/README.md)
 +   [Perl 入门指南](docs/perl-a-beginners-guide/README.md)
 +   [Perl黑皮书](docs/perl-black-book/README.md)
++   [Perl 示例](docs/perl-by-example-5th-edition/README.md)
 +   [Perl、CGI 和 JavaScript 完全指南（第2版）](docs/perl-cgi-and-javascript-complete-2nd-edition/README.md)
 +   [永久性的生殖危机：与西尔维娅·费代里奇对谈](docs/permanent-reproductive-crisis-an-interview-with-silvia-feder/README.md)
 +   [Peter Norton Linux 入门指南](docs/peter-nortons-complete-guide-to-linux-peter-norton-sams/README.md)
