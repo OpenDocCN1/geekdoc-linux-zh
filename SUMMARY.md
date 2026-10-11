@@ -1255,6 +1255,7 @@
 +   [Linux 节省时间技巧指南](docs/linux-timesaving-techniques-for-dummies-isbn---0764571737/README.md)
 +   [Linux 高效技巧入门指南](docs/linux-timesaving-techniquestm-for-dummies/README.md)
 +   [Linux 技巧、技巧、应用与黑科技](docs/linux-tips-tricks-apps-and-hacks/README.md)
++   [开源操作系统潜能解锁指南 3](docs/linux-tips-tricks-apps-hacks-unlock-the-potential-of-open-so/README.md)
 +   [Linux 工具快速教程](docs/linux-tool-qkgd/README.md)
 +   [Linux 玩具：适用于家庭、办公室和娱乐的 13 个酷炫项目 (extremetech)](docs/linux-toys-13-cool-projects-for-home-office-and-entertainmen/README.md)
 +   [Linux Toys II：适用于家庭、办公室和娱乐的 9 个酷炫新项目 (ExtremeTech)](docs/linux-toys-ii-9-cool-new-projects-for-home-office-and-entert/README.md)
