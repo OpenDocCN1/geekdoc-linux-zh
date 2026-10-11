@@ -1,0 +1,13 @@
+# Chapter Three
+
+# Mechanisms of Behavior
+
+This chapter presents neural network models of short term and reversible changes in behavior (traditionally referred to as *motivation*). The topics covered include reactions to stimuli, making decisions and the control of movement. In our terminology, these are properties of *a given behavior* map (Chapter 1). *Learning and ontogeny* (development), in contrast, correspond to changes in a behavior map and are considered in Chapter 4.
+
+# 3.1 ANALYSIS OF BEHAVIOR SYSTEMS
+
+Before considering neural network models, we discuss in some detail the nature of motivational variables, how they cause behavior and how they enter models of behavior systems. The aim is to sketch a conceptual frame in which the different material causes of behavior are conveniently analyzed, building on the discussion in Section 1.1.
+
+Motivational variables commonly are divided into external and internal (McFarland 1999). The former usually are referred to as *stimuli*. For instance, courtship behavior in a peacock can be caused or motivated by visual stimulation provided by a peahen. Stimulation is picked up by sense organs, in this case the peacock’s eyes, and then is processed by recognition mechanisms that can determine whether a peahen is present or not. Finally, motor mechanisms produce observable courtship behavior. Such a division in sensory processing, decision making and motor control, while not of universal validity, often is convenient and is used in this chapter.
+
+Whether the peacock will court or not also depends on internal motivational variables. For instance, a hungry peacock may look for food rather than court. Internal variables can be further classified as state variables of the body and those of the nervous system (see **SENSE ORGANS** in McFarland 1987). The former will be referred to as *body states*. Examples are body water volume, blood sugar level, body temperature and so on. States of the nervous system can be further divided into *memory states* and *regulatory states*. By *memory*, we mean long-term storage, encoded in structural properties such as the pattern and strength of connections between neurons. By *regulatory states*, we mean states that are not in memory in this strict sense but that nevertheless contribute to structuring behavior in time. Instances are the activity state of neurons or the concentration of neurotransmitters and neuromodulators (note that the expression *short-term memory* is used for many phenomena and may imply both nervous activity and changes in synaptic strengths; Gibbs 1991; Gibbs & Ng 1977).

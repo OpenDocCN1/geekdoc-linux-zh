@@ -1510,6 +1510,7 @@
 +   [《计算机网络入门指南（第12版）》](docs/networking-for-dummies-12th-edition/README.md)
 +   [Windows XP 和 Linux 并行操作系统网络指南](docs/networking-guide-to-parallel-operating-systems-with-windows-/README.md)
 +   [Linux 网络：TCP/IP 实用指南](docs/networking-linux-a-practical-guide-to-tcpip/README.md)
++   [动物行为与神经网络](docs/neural-networks-and-animal-behavior-monographs-in-behavior-a/README.md)
 +   [神经网络与智能：基于模型概念的使用指南](docs/neural-networks-and-intellect-using-model-based-concepts/README.md)
 +   [鸟哥的 Linux 私房菜：基础学习篇 第四版](docs/niaoge-linux-basic-4e/README.md)
 +   [鸟哥的 Linux 私房菜：服务器架设篇 第三版](docs/niaoge-linux-svr-3e/README.md)

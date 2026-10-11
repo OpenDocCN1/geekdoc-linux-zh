@@ -1,0 +1,3 @@
+![](bbox=[0.25, 0.15, 0.8, 0.5])
+
+an animal reacts to a set of familiar stimuli, and we want to predict how it will react to one or more test stimuli (Figure 3.6). In this section we test two- and three-layer neural network on tasks modeled on actual experiments, and we show that the networks react very similarly to animals. To understand the basic biological problem and how neural networks can be applied to it, consider an animal that reacts to a

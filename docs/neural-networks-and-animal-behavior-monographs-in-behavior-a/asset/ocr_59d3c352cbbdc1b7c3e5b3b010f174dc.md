@@ -1,0 +1,7 @@
+![](bbox=[0.28, 0.14, 0.78, 0.48])
+
+Figure 3.3 Reception of a cross-shaped visual stimulus by a 5 × 5 model retina showing that the same stimulus can produce quite different patterns of activity depending on how it falls on the retina. Each retina node is active in proportion to the part of the stimulus that covers it (a lighter shade of gray corresponds to higher activity). A node that is not covered at all has a background activity of 0.05; a node that is fully covered has an activity of 1.
+
+How complex different parts should be depends on our aims and on the complexity of the behavior we want to model. For instance, if we are interested in reactions to stimuli or decision making we usually avoid modeling the control of muscles and represent the animal’s response with the activity of just one output node. A model of motor control, on the other hand, must include more details in the output part of the network. Figure 3.5 presents a few examples of how neural network components can be combined into motivational models.
+
+In Chapter 1 we stressed that to account for sequences of behavior, models of behavior must predict how the animal motivational state changes, in addition to predicting current behavior. Here we face several different situations. Regulatory states are internal to the system itself and thus should get updated as a part of the system’s own dynamics. For instance, nodes that receive recurrent connections are updated based on the activity of other nodes in the network. Other regulatory states,

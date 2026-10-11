@@ -1,0 +1,17 @@
+stimulus situation is assumed to occur if
+
+```
+$$w_{1}x_{1} + w_{2}x_{2} + w_{3}x_{3} \geq T \tag{1.6}$$
+```
+
+A more complex situation occurs when incompatible responses are motivated simultaneously (Ludlow 1980, 1976; McFarland 1989; McFarland & Sibly 1975). For instance, a hungry and thirsty animal cannot drink and eat at the same time. Usually, different behaviors or behavioral subsystems are assumed to “compete,” which means that the animal will show the subsystem corresponding to the highest motivation (McFarland 1999).
+
+The concept of thresholds and decision making can be generalized to *decision boundaries* in motivational state space. The motivational state **x** of the organism is represented as a point in a multidimensional state space, and to each point one response is assigned. Different regions in the space then are defined by setting decision boundaries. States within the same region yield the same behavior, but crossing a decision boundary leads to a change in behavior (McFarland 1999; McFarland & Houston 1981).
+
+To understand how behavior sequences are generated, we also need to consider how motivational state changes because the updated state will determine the subsequent responses (McFarland 1971). This is a complex problem that operates at various levels and time scales. Early theory of motivational state transitions was based on the drive concept (Hinde 1970). Each behavior was assumed to be controlled by a single internal factor (“drive”) that builds up with time and is reset to a low value each time the behavior is elicited. Since then, a diversity of state-transition mechanisms has been identified, and pure drives are probably rare. Modeling of motivational state-transitions and behavior sequences have benefited largely from applications of control theory and systems theory, yielding the most refined approach to date for modeling motivational processes (McFarland 1971; Metz 1977; Toates 1998; Toates & Halliday 1980). An important concept is that of feedback mechanisms (McFarland 1971; Toates 1998). Many behavioral processes can be regarded naturally as controlling internal as well as external variables important for survival and reproduction. For instance, a lizard may use behavior to regulate its body temperature by moving between warmer and colder places within its territory. Feedback allows systems to respond to state changes brought about by previous actions or the environment. Figure 1.6 depicts two block diagrams of mechanisms for motor control, one without a feed back loop and one with such a loop.
+
+However, control of behavior is not limited to feedback from consequences of behavior. Within animals, many state variables have been identified that participate in the generation of behavior sequences. How such states change depends very much on their nature and may involve processes intrinsic to the nervous system (e.g., internal clocks), physiological states and processes outside the nervous system (e.g., hormones, water and energy status) and perceived external events and circumstances (e.g., social stimuli) or any combinations of these categories.
+
+# 1.3.3.1   Summary
+
+The concept of motivational state has proved useful, and models based on such a concept have been remarkably successful. An important contribution has been the
