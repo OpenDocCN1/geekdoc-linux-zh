@@ -1,0 +1,391 @@
+
+- client command, 454
+- client entry, 374
+- clients
+  - connections, 647–650
+  - DNS, configuring, 659–671
+  - running remotely, 371–374
+- X, 368
+- ClockChip “ClockChip Type” entry, 347
+- clockchip setting, 56
+- clocks, configuring, 14, 35
+- Clocks <clock: …> entry, 347
+- closing
+  - dselect tool, 132
+  - selection screen, 131
+  - vi text editor, 516–517
+- cmdhlist option, 541
+- CNAME record, 666
+- CNAME. *See* canonical name
+- Code maturity level options menu, 507
+- colon (:), 74, 399
+- color depths, 353–354
+- -COLUMN option, 182
+- columns
+  - package lists, 123
+  - syslog.conf, 414–415
+- combining
+  - lines from multiple files, 177–178
+  - options, 68
+- comma (,), 414
+- command completion, 70
+- command lines, 67–72, 793
+- command substitution, 71
+- commands. *See specific* **commands**
+- command lines, 147, 542
+- Common Gateway Interface (CGI), 631, 793
+- Common Log Format (CLF), 635
+- compile, 793
+- compiling
+  - kernels, 497–499, 508–509
+  - modules, 498, 509
+  - software, 101–102
+  - spec files, 118
+- completion, *command*, 70
+- components
+  - contrib, 133
+  - main, 133
+  - non-free, 133
+- compress *command*, 418
+- compress *utility*, 261–262, 433
+- compression, 258–263, 431, 793
+- Computer Oracle and Password System (COPS), 736
+- conditions, *error*, 124
+- --config configfile option, 487
+- Config menu option, 132
+- config-files value, 124
+- configuration addresses, viewing, 18–20
+- configuration files
+  - creating, 20
+  - editing manually, 496–497
+  - FTP servers, 608–615
+  - networks, managing, 586–588
+  - removing, 121
+  - saving, 57, 727–728
+  - sendmail, 618
+- configuration scripts, running for new packages, 132
+- configuration tools, X Window System, 349–356
+- configure script, 98–100
+- Configure using DHCP option, 34
+- configure-any option, 120
+- configuring
+  - access to man pages, 284
+  - access to *r* commands, 703–705
+  - accounts, 36
+  - addresses of hardware, 18
+  - Apache servers, 627–636, 688–691
+  - Apsfilter, 450–451
+  - base systems, 42–43
+  - Berkeley Internet Domain Name (BIND), 654–667
+  - caching-only name servers, 667–668
+  - clocks, 14, 35
+  - cron jobs, 440
+  - DNS clients, 669–671
+  - DNS servers, 682–685
+  - environment variables, 73
+  - exports, 638–639
+  - fonts, 358–359
+  - FTP servers, 605–617
+  - global settings, 400–402
+  - hard drives for installing Linux, 12–18
+  - hostnames, 47
+  - init daemon, 602–604
+  - init process, 308–310
+  - installers, Red Hat, 29–32
+  - IP chains, 743–744
+  - kernels, 493–497, 506–508
+  - keyboards, Red Hat 7.0, 30–31
+  - Linux LiloLoader (LILO), 298–303, 499–500, 509
+  - MagicFilter, 451–452
+  - maximum print job sizes, 473
+  - mice, Red Hat 7.0, 32
+  - modems, 16–17
+  - monitors, 55
+  - network cards, 16, 34–35
+  - networks, 47–49, 580–590
+  - NFS servers, 685–688
+  - plug-and-play hardware, 18–21
+  - printers, 445, 473
+  - remote clients, 373
+  - remote logins, 373–374, 381
+  - root passwords, 36
+  - Samba, 643–646
+  - SCSI and NIC devices, 12
+  - Secure Shell (SSH) servers, 708–712
+  - security, X Window System, 371–372
+  - sendmail.cf, 619–623
+  - shell prompts, 66–67
+  - sound cards, 17
+  - TCP wrappers, 697–701
+  - Telnet, 617
+  - user settings, 400–402
+  - video cards, 55–56, 346–347
+  - volumes, 43–46
+  - X Window System, 39–40, 54–57
+  - xdm package, 362–366
+  - XDM for remote logins, 381
+  - XDM to provide choosers, 374
+  - XPlatConfig file, 341–348
+- copy-mute mode, 432
+- copy-pass mode, 432
+- copying
+  - files, 241–245
+  - kernels, 509
+  - packages, 40–41
+  - standard input to standard output, 165–166
+  - text, 521–523
+- copyright, 6
+- copyrightcase command, 418
+- core dump, 434, 793
+- core lint, 732
+- count-BLOCKs option, 244
+- cp command, 241–243
+- cpio utility, 432
+- CPU, accessing memory without going through, 18
+- cpu limit, 732
+- CPU requirements, installing Linux, 13
+- crontab tool, 735
+- create command, 418
+- cron daemon, 793
+- cron facility, 414
+- cron jobs, setting up, 440
+- crond daemon, 423–425
+- crontab command, 440, 793
+- crontab files, 423–425
+- cs command, 520
+- csh (C Shell), 66, 793
+- ctime option, 249
+- Ctrl key, 70–71, 343
+- Ctrl-a, 71
+- Ctrl-b, 70, 518
+- Ctrl-d, 71, 518
+- Ctrl-e, 71
+- Ctrl-f, 70, 518
+- Ctrl-G, 518
+- Ctrl-k, 71
+- Ctrl-l, 71
+- Ctrl-u, 518
+- Ctrl-w, 71
+- cua device, 205
+- current status values, 124
+- cursors
+  - deleting text to, 521
+  - moving in vi text editor, 517–518
+- Custom System option, 32
+- customizing
+  - applications, X Window System, 369–370
+  - boot process, 311–316
+  - FTP server configuration files, 608–615
+  - prompts, 76
+- cut utility, 170–171
+- cutting, text, 170–171
+- cw command, 520
+- cycling through commands, 72
+
+## **D**
+
+- d$ command, 521
+- d1G command, 521
+- -D<debug options>, 456–457, 461
+- -d <client> option, 733
+- -d <debug options>, 463
+- -d <STRING> option, 241
+- d command, 23, 208
+- D command, 521
+- D(^)* command, 521
+- -d delimit-list option, 171
+- -d function, 430
+- d /home_dir option, 394–395
+
+- -d option
+  - at utility, 422
+  - cp command, 242
+  - cpio utility, 432
+  - gzip utility, 433
+  - ip chains tool, 722
+  - lpr command, 462
+  - ls command, 236
+  - modinfo command, 486
+  - modprobe command, 486
+  - ping utility, 576
+  - pr tool, 182
+  - rm command, 246
+  - sort utility, 168
+  - ssh-add tool, 718
+  - sshd command, 712
+  - tftp command, 700
+  - tr utility, 175
+
+- -O option, 718, 721
+- D package verification code, 116
+- \-D PATH option, 249–250
+- \d setting, 77
+- D value, 586
+- DasSpeed <speed> entry, 347
+- daemon facility, 414
+- daemons
+  - cron, 793
+  - crond, 423–425
+  - described, 793
+  - http, 626–627
+  - inetd, 602–605, 796
+  - Line Printer (lpd), 453, 797
+  - starting and stopping, 411–412
+  - syslogd, 413–414
+  - tcpd, 697–701
+- daily command, 418
+- dash (—), 68, 415
+- data
+  - backing up, 33, 425–434
+  - sending. See processing text
+- data limit, 732
+- data volumes, configuring, 43–46
+- databases
+  - package. Querying, 122–123
+  - RPM, 105, 107, 112–115
+- date fields, 424
+- day of month field, 424
+- day of week field, 424
+- dd command, 243–244, 521
+- deb files, clearing from archives, 136
+- .deb package, converting RPM package to, 152–153
+- Debian
+  - configuring init process, 315–316
+  - described, 11–12
+  - finding information about packages, 150
+  - installing Linux, 41–58
+  - installing X Window System, 336
+  - labs, 147–153
+  - listing installed files, 148–150
+  - refreshing available package list, 148
+  - removing commands lines from source lines, 147
+
+- Debian package management system
+  - apt-get tool, 132–136
+  - dpkg tool, 119–127, 793
+  - dselect tool, 127–132
+- debug command, 454
+  - -debug option, 486
+- decompress, tarballs, 97–98
+- default prompts, changing, 89
+- DefaultColorDepth -bpp number> entry, 348
+- default option, 454
+- defaults command, 454
+- DefaultType directive, 631
+- define macro, 620
+- definitions, etc/pam.d file, 446–447
+- Del command, 70
+- Del key, 70–71
+- delaycompress command, 418
+- -delete function, 430
+- -delete option, 721
+- deleting
+  - apt-get tool, 135
+  - comment lines from source lines, 147
+  - dpkg tool, 121–122
+  - dselect tool, 131–132
+  - files, 246
+  - groups, 397
+  - hosts, 372
+  - modules, 484
+  - packages, 112, 150
+  - partitions, 26–27
+  - PCMCIA packages, 51
+  - text, 520–521
+  - unused services from hosts, 720–721
+  - users, 395
+- deny files, 423
+- DenyGroups entry, 709
+- DenyUsers entry, 709
+- dependencies, checking, 37–38, 122
+- dependency lists, 497
+- depends option, 121
+- depends-version option, 121
+- depmod command, 489–490, 498
+- Depth <bwp> entry, 349
+- –description option, 138, 486
+- descriptors, inode, 796
+- desktop environments, X Window System, 335–336, 367
+- –destination option, 722
+- development branch, 480
+- Device "Device ID" entry, 348
+- Device "Device Path" entry, 344
+- Device section, XFree86Config file, 345–348
+- devices
+  - file systems, 205
+  - ISA, 20
+  - plug-and-play, configuring, 20–21
+  - SCSI and NIC, configuring, 12
+- df utility, 216–217
+- dig command, 521
+- DHCP. See Dynamic Host Configuration Protocol
+- differential backups, 428
+- dig tool, 672–674
+- Digital Equipment, 333
+- direct memory access (DMA) channels, 18, 20
+- directives, 628–631, 635–636
+- directories
+  - block, 482
+  - boot/boot, 22
+  - cdrom, 482
+  - changing, 233–235
+  - creating, 246–247
+  - exported, mounting, 639–640
+  - ls, 482
+  - home, creating backups, 440
+  - home/home, 22
+  - ipv4, 482
+  - listing contents of, 235–239
+  - misc, 483
+  - misc font, 341
+  - net, 482
+  - present working (pwd), 800
+  - representing with HOME variable, 77
+  - scsi, 482
+  - separating by volume, 21–22, 44
+  - shared, creating, 742–743
+  - spool, 448–449, 473
+  - system, 248
+  - troubleshooting printing of, 467
+  - /usr/doc/usr/doc, 284–285
+  - /usr/src/redhat/usr/src/redhat, 117
+  - /var/lib/dpkg/var/lib/dpkg, 126
+  - /var/lib/rpm/var/lib/rpm, 107, 113
+  - video, 483
+- directory block directives, 629–630
+- DirectoryIndex directive, 631
+- disable command, 454, 459
+- DisableModule entry, 343
+- DisableVidMode entry, 343
+- disabling
+  - print banners, 473
+  - print queues, 459
+  - xdm package, 362
+- disconnect SCRIPT option, 590
+- Disk Druid, creating partitions, 25–26
+- disks
+  - boot, creating, 29, 41, 320
+  - floppy, 50, 428
+  - partitioning, 33, 43–46
+  - ramdisk, 499
+  - repair, 320–321
+- dlspace requirements, installing Linux, 14
+- –display hostname:display.screen option, 368
+- Display subsection, XFree86Config file, 349
+- DISPLAY variable, 372
+- displaying
+  - beginning of files, 176
+  - configuration addresses, 18–20
+  - current settings, 76
+  - end of files, 176–177
+  - environment variable settings, 73
+  - files backwards, 182
+  - files in other formats, 180–181
+  - members of groups, 397–398
+  - messages, 419
+  - module information, 485–490
+  - numeric details of files, 183
+  - package information, 114–115
+  - priority levels, 82
+  - processes, 78
+  - remote X applications across networks, 380–381

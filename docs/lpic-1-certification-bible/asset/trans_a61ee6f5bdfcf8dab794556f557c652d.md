@@ -1,0 +1,189 @@
+
+## 关键要点
+
+-   `init` 和 `telinit` 工具用于更改运行级别。
+-   `halt`、`poweroff` 和 `reboot` 是用于控制系统启动的工具。
+-   Linux 内核启动 `init` 进程，该进程的 PID 始终为 1。
+-   `init` 启动其他若干进程，这些进程在 `/etc/inittab` 中配置。
+-   Red Hat、其变种以及 Debian 使用 Sys V 启动。
+-   Slackware 使用 BSD 风格的启动。
+-   单个脚本文件存储在 `init.d` 目录中。
+-   Red Hat 中执行的首个脚本是 `rc.sysinit`，而 Debian 中是 `rcS`。
+-   可以使用 `chkconfig` 和 `ntsysv` 来更改不同运行级别中启动的服务。
+-   LILO 提供许多预定义的错误代码，在启动时出现问题时显示。
+-   要在单用户模式下启动，请在 LILO 提示符处向启动脚本传递 `S`。
+-   要在紧急模式下启动，请在 LILO 提示符处向 `init` 传递 `emergency`。
+-   使用 `mkbootdisk` 和 `mkboot` 命令创建启动磁盘。
+-   大多数发行版提供修复和救援磁盘，用于根分区损坏无法启动的情况。
+
+## 学习指南
+
+以下问题和练习将使你能够复习本章涵盖的信息。完成本章的这一部分时请花点时间，仔细审查你可能有的任何问题。仅仅正确回答问题并不如理解答案重要，因此请复习你仍不确定的任何材料。熟悉这里提出的问题及答案将有助于你更好地准备认证考试问题。
+
+## 评估问题
+
+1. `lilo.conf` 中的哪个条目限制用户在无密码的情况下添加启动参数？
+   - A. lock
+   - B. restricted
+   - C. noparams
+   - D. password
+2. 如果 Linux 是计算机上唯一的操作系统，你应该告诉 LILO 将引导信息放在哪里？
+   - A. MBR
+   - B. 分区引导块
+   - C. 软盘
+   - D. BIOS
+3. 你要使用哪个启动参数来挂载不同的根文件系统？
+   - A. `root=/mnt/`
+   - B. `root=/dev/hdal`
+   - C. `root=/dev/hdal`
+   - D. `root=/dev/hda`
+4. `lilo.conf` 中的哪个条目为引导映像提供第二个名称？
+   - A. `alias`
+   - B. `label`
+   - C. `name`
+   - D. `tag`
+5. 哪个命令将 Red Hat 系统更改为 GUI 登录模式？
+   - A. `startx`
+   - B. `runlevel 5`
+   - C. `init 3`
+   - D. `telinit 5`
+6. 要立即使用 `shutdown` 命令重新启动系统，你会输入命令 _______________。
+7. `reboot` 和 `poweroff` 命令实际上是指向 ____________ 的符号链接。
+8. 要更改系统启动到的运行级别，你会更改 `inittab` 中的哪一行？
+   - A. `defaultinit`
+   - B. `defrunlevel`
+   - C. `runlevel`
+   - D. `initdefault`
+9. 当用户通过 Telnet 登录到系统时，在登录提示符之前会向用户显示 ______ 文件。
+10. 哪个命令会列出关于 `inetd` 服务的运行级别信息？
+    - A. `chkconfig --list inet`
+    - B. `ntsvis --list inet`
+    - C. `/etc/rc.d/init.d/inet status`
+    - D. `ls -l /etc/rc.d/init.d/inet`
+11. 在故障排除配置中，如果旧根卷挂载在 `/mnt/root` 下，你会使用哪个命令？
+    - A. `lilo -p /mnt/root`
+    - B. `lilo -r /mnt/root/boot`
+    - C. `lilo -r /mnt/root`
+    - D. `lilo -p /mnt/root/boot`
+12. 要在不运行任何启动脚本的情况下启动系统，你会使用启动参数 _______。
+13. 要在第二个软盘驱动器上创建启动磁盘而不提示用户，你会使用哪个命令？
+    - A. `mkbootdisk --device /dev/fd1 --noprompt`
+    - B. `mkboot --device /dev/fd1 --noprompt`
+    - C. `mkbootdisk --device /dev/fd0`
+    - D. `mkboot --device /dev/fd0`
+14. `lilo.conf` 条目 ______ 用于启用从拥有超过 1024 个柱面的磁盘启动。
+    - A. lba
+    - B. lba32
+    - C. bigdisk
+    - D. linear
+15. 当你重启系统时，它首先更改为运行级别 _。
+16. 哪个进程的 PID 始终为 1？
+    - A. init
+    - B. kernel
+    - C. sync
+    - D. 第一个加载的驱动程序
+17. `inittab` 中的哪个条目告诉 `init` 在继续之前等待请求的进程结束？
+    - A. hold
+    - B. pause
+    - C. once
+    - D. wait
+18. 哪种类型的启动使用少数大型脚本文件？
+    - A. UNIX
+    - B. BSD
+    - C. Sys V
+    - D. Red Hat
+19. 要查看关于 `inetd` 进程的信息，你会输入 ________ 命令（无路径）。
+20. 当 LILO 无法加载引导装载器的第二阶段时，它显示什么？
+    - A. LI
+    - B. LIL
+    - C. SECOND STAGE NOT FOUND!
+    - D. LIL-
+
+## 场景
+
+1. 当你正在启动你的 Linux 工作站时，它在启动守护进程时挂起。你可以采取哪些步骤来解决这个问题？
+2. 你有一台 Linux 服务器，目前启动进入 X Window 系统。图形界面正在使用系统中所需的资源。你如何修复这个问题？
+3. 在编译并安装新内核后，重启时出现内核恐慌。不幸的是，你对新内核如此自信，以至于没有保留旧的内核。你能做什么来修复这个问题？
+
+## 实验练习
+
+### 实验 8-1 检查启动服务
+
+许多 Linux 发行版安装并启动你不需要的服务。要检查你的启动服务，请采取以下步骤。
+
+1. 首先通过检查 `/etc/inittab` 文件来查看你的系统默认启动到的运行级别。
+
+   ```text
+   [root@rh7 /etc]# more inittab
+   #
+   #  inittab   This file describes how the INIT process
+   #             should set up
+   #             the system in a certain run-level.
+   #
+   # Author:     Miquel van Smoorenburg,
+   #             <miquels@drinkel.nl.mugnet.org>
+   #             Modified for RHS Linux by Marc Ewing and
+   #             Donnie Barnes
+   #
+   #
+   # Default runlevel. The runlevels used by RHS are:
+   #   0 - halt (Do NOT set initdefault to this)
+   #   1 - Single user mode
+   #   2 - Multiuser, without NFS (The same as 3, if you do not
+   #       have networking)
+   #   3 - Full multiuser mode
+   #   4 - unused
+   #   5 - X11
+   #   6 - reboot (Do NOT set initdefault to this)
+   #
+   id:3:initdefault:
+   ```
+
+2. 如你所见，该系统默认设置为启动到运行级别 3。接下来，查看哪些服务被设置为在启动时启动。
+
+   ```text
+   [root@rh7 rc3.d]# ls
+   K01ppppe    S08ipchains   S16apmd     S45spcminc  S80isdn     S95anacron
+   K20nfs      S10network    S20random   S55sshd     S80sendmail S97rhnsd
+   K20rawhd    S12syslog     S25netfs    S55rawdevices S85gpm    S991nuxconf
+   K45arpwatch S13portmap    S35ident    S60lpd      S90crond    S91local
+   S05kudzu    S14ntfslock   S40atd      S75keytable S90xfs
+   ```
+
+3. 如你所见，由于脚本 **S80sendmail** 位于 `/etc/rc3.d` 目录中，该服务将启动。（如果你的系统不启动 sendmail，请选择另一个脚本，例如 **gpm** 或 **crond**。）要确认该服务，你输入：`[root@rh7 rc3.d]# ps aux | grep sendmail`
+
+   ```text
+   root         532   0.0   0.7  3232  336 ? S Mar14
+   0:01 sendmail: accepting connections
+   ```
+
+4. 要在下次启动时设置该服务不启动，你可以从目录中移除脚本链接，或者仅仅将其名称更改为不以 S 或 K 开头的名称。例如：
+
+   ```text
+   [root@rh7 rc3.d]# mv S80sendmail H80sendlamail
+   ```
+
+5. 重启系统并确保该服务没有运行。
+
+## 章节问题答案
+
+### 章节预测试
+
+1. `init` 进程由内核启动，PID 为 1。
+2. Sys V
+3. `init`、`telinit`、`shutdown` 和 `halt`
+4. `/etc/inittab`
+5. /etc/issue.net 显示给网络登录用户。
+6. 在 LILO 提示符处传递 emergency 启动参数。
+7. 介质可能有问题，或者可能存在磁盘几何转换问题。
+8. `ram=`
+9. `/etc/lilo.conf`
+10. 6
+
+### 评估问题
+
+1. B. restricted 参数阻止控制台上的用户在不知晓预设密码的情况下发布启动参数。password 选项用于指定要输入的密码。其他选项无效。更多信息参见“配置 LILO”部分。
+2. A. LILO 引导扇区应放置在驱动器的主引导记录中，而不是分区中。当安装了多个操作系统时，可以使用分区引导块。更多信息参见“使用 LILO”部分。
+3. C. root= 参数告诉系统使用哪个卷作为根卷。设备名称应指向分区。不需要挂载点。更多信息参见“使用 LILO”部分。
+4. A. 使用 alias 条目为你的引导映像提供第二个名称。label 条目为引导条目提供在 LILO 菜单上显示的名称。更多信息参见“配置 LILO”部分。
+5. D. telinit 5 命令将系统更改为运行级别 5，在 Red Hat 中这是 GUI 模式。startx 命令用于从命令行启动 X Window 系统，但不用于启动时。init 3 命令会将系统更改为多用户文本模式。选项 B 无效。更多信息参见“使用运行级别”部分。

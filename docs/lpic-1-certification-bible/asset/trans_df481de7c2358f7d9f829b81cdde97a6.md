@@ -1,0 +1,137 @@
+
+
+## Pointer
+
+本节配置指针设备。如果配置不正确，X 服务器可能无法启动，或者鼠标可能会出现异常行为。表 9-3 展示了本节可用的配置项。以下是一个示例：
+
+```
+# ************************************************
+# Pointer section
+# ************************************************
+
+Section "Pointer"
+    Protocol    "IMPS/2"
+    Device      "/dev/mouse"
+    ZAxisMapping 4 5
+EndSection
+```
+
+### 表 9-3 指针部分条目
+
+| 条目 | 功能 |
+| :--- | :--- |
+| `Protocol "Protocol Name"` | 指定鼠标设备使用的协议。请查阅 XF86Config 手册页以获取可用协议的完整列表。 |
+| `Device "Device Path"` | 指定用于与鼠标通信的设备。例如，`/dev/mouse`。 |
+| `Port "Device Path"` | 这是 Device 条目的替代方案。 |
+| `BaudRate <baud rate>` | 设置串行鼠标的波特率。 |
+| `Buttons N` | 指定指针设备具有 N 个按钮。 |
+| `Emulate3Buttons` | 允许双键鼠标在两个按钮同时按下时注册第三个按钮，从而模拟三键鼠标。 |
+| `ChordMiddle` | 告知 X 服务器，当按下中键时，鼠标发送的是左键和右键点击。这在罗技鼠标中很常见。 |
+| `SampleRate <rate>` | 定义鼠标每秒发送多少次更新。 |
+| `Resolution <count>` | 设置鼠标支持的分辨率，单位为每英寸计数（counts per inch）。 |
+| `ClearDTR` | 在使用串行鼠标时，使 DTR（数据终端就绪）线被清除。 |
+| `ClearRTS` | 在使用串行鼠标时，使 RTS（准备发送）线被清除。 |
+| `ZAxisMapping N M` | 用于滚轮鼠标。将按钮 N 映射为负向移动，将按钮 M 映射为正向移动。 |
+
+## Monitor
+
+`Monitor` 部分定义了显示器的规格并列出了可能的显示模式。表 9-4 展示了本节中可能的条目。本节中最复杂的条目是 `mode` 行，它们指定了显示器的刷新率和同步率。以下是一个示例：
+
+```
+Modeline "1024x768"  45 1024 1048 1208 1264  768 776 784 817 Interlace
+
+Mode "1024x768"
+DotClock    45
+HTimings    1024 1048 1208 1264
+VTimings    768 776 784 817
+Flags       "Interlace"
+EndMode
+```
+
+这两个条目是等效的。最好让配置工具为你的显示器创建正确的模式行，否则你可能会损坏显示器。
+
+> **提示** 互联网上许多网站都收录了流行显示器的模式行。在尝试自行创建之前，请先快速搜索一下，看看是否已有人为你完成了这项工作。
+
+### 表 9-4 显示器部分条目
+
+| 条目 | 功能 |
+| :--- | :--- |
+| `Identifier "ID String"` | 一个用户指定的字符串，将在随后的 `Screen` 部分中被引用。每个 `Monitor` 部分应有一个唯一的 `Identifier` 字符串。 |
+| `VendorName "Vendor"` | 一个可选条目，指定显示器的制造商。 |
+| `ModelName "Model"` | 一个可选条目，指定显示器的型号。 |
+| `HorizSync <horizontal sync range>` | 一个由逗号分隔的离散值列表，定义显示器支持的水平同步范围。 |
+| `VertRefresh <vertical refresh range>` | 一个由逗号分隔的离散值列表，定义显示器支持的垂直刷新率。 |
+| `Gamma <gamma value(s)>` | 一个可选条目，可用于更改显示器的伽马值。并非所有 X 服务器都支持它。它指定为单个值或三个单独的 RGB 值。 |
+| `Mode "name"` | 开始一个多行视频模式定义。 |
+| `Modeline "name" <mode description>` | 指定单行视频模式定义。 |
+
+## Device
+
+`Device` 部分定义了系统中的视频卡。`XF86Config` 文件中允许存在多个 `Device` 部分。以下是本节的一个示例：
+
+```
+Section "Device"
+    Identifier        "Nvidia TNT2"
+    VendorName        "Nvidia"
+    BoardName         "TNT2"
+    Chipset           "svga"
+EndSection
+```
+
+表 9-5 列出了本节的可能的条目。确实存在一些其他选项，它们只被少数 X 服务器使用，这些条目列在 `XF86Config` 文件的手册页中。现代的 PCI 和 AGP 视频卡在此字段中只需要很少的条目，因为 X 服务器可以探测到正确的信息。如果你使用的是旧视频卡，可能需要手动指定所有信息。
+
+> 几乎所有 PCI 和 AGP 视频卡都可以被 X 服务器探测到所需的硬件信息。
+
+![Image](img/96d9ccd181675a8ae8b6a1146c919d2b_378_0.png)
+
+### 表 9-5 设备部分条目
+
+| 条目 | 功能 |
+| :--- | :--- |
+| `Identifier "ID String"` | 指定一个字符串，将在随后的 Screen 部分中被引用。 |
+| `VendorName "Vendor"` | 一个可选条目，指定视频卡制造商的名称。 |
+| `BoardName "Model"` | 一个可选条目，指定视频卡的型号。 |
+| `Chipset "Chipset Type"` | 一个可选条目，指定视频板上的芯片组类型。如果省略此条目，X 服务器将探测卡片的类型。 |
+| `Ramdac "RAMDAC Type"` | 一个可选条目，指定安装在视频板上的 RAMDAC 类型。如果省略此条目，X 服务器将探测其类型。 |
+| `DacSpeed <speed>` | 一个可选条目，指定以 MHz 为单位的 RAMDAC 速度。这通常印在芯片上或在视频卡的文档中。 |
+| `Clocks <clock> ...` | 一个可选条目，指定某些视频卡使用的时钟条目。这仅适用于旧卡，如果使用可编程时钟芯片，你不应该使用此条目。 |
+| `ClockChip "ClockChip Type"` | 一个可选条目，指定可编程时钟芯片的类型。同样，这只用于旧视频卡。 |
+| `Option "Option String"` | 某些 X 服务器和驱动程序允许用户定义特殊设置。此条目用于将这些设置传递给 X 服务器或驱动程序。 |
+| `VideoRam <memory>` | 设置视频卡上安装的内存量，单位为 K。 |
+| `BIOSBase <Base Address>` | 一个可选条目，指定视频卡的 BIOS 基地址。默认值为 0x0C0000。如果你的视频卡使用替代地址，请在此处指定。 |
+| `MemBase <Base Address>` | 此条目被不同的 X 服务器以不同方式使用。它用于指定视频卡的基内存地址。请查阅你卡片的 X 服务器文档以获取更多信息。 |
+| `IOBase <Base Address>` | 指定 I/O 基内存地址。它仅被少数 X 服务器使用。 |
+
+## Screen
+
+**XF86Config** 文件允许你指定多个视频卡和显示器。**Screen** 部分用于将不同的视频卡与显示器定义匹配。表 9-6 展示了本节的可能的条目。以下是一个示例：
+
+```
+Section "Screen"
+    Driver     "accel"
+    Device     "My Video Card"
+    Monitor    "Gateway EV700"
+    Subsection "Display"
+        Depth    32
+        Modes    "1152x864"
+        ViewPort 0 0
+    EndSection
+EndSection
+```
+
+![Image](img/96d9ccd181675a8ae8b6a1146c919d2b_380_0.png)
+
+如果在启动 X 时收到错误，提示没有可用屏幕，请确保指定的显示器能够使用定义的视频卡支持所请求的分辨率。
+
+### 表 9-6 屏幕部分条目
+
+| 条目 | 功能 |
+| :--- | :--- |
+| `Driver "Driver Name"` | 每个 **Screen** 部分都从此条目开始。它告诉系统加载哪个 X 服务器，或者在 X 服务器中加载哪个驱动程序用于此屏幕。 |
+| `Device "Device ID"` | 指定用于此屏幕的视频卡标识符字符串。这是将视频卡与显示器匹配的方式。 |
+| `Monitor "Monitor ID"` | 指定用于此屏幕的显示器标识符字符串。这是将显示器与视频卡匹配的方式。 |
+| `DefaultColorDepth <bpp number>` | 指定用于此屏幕的色深，单位为 *bpp*（每像素位数）。 |
+| `ScreenNo <Screen Number>` | 在多显示器配置中用于覆盖默认屏幕编号。 |
+| `BlankTime <Time>` | 指定在屏幕变黑之前等待的空闲时间量，单位为分钟。默认为 10。 |
+| `StandByTime <Time>` | 指定显示器进入待机省电模式的超时时间，单位为分钟。默认为 20。 |
+

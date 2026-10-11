@@ -1,0 +1,322 @@
+
+# StartServers directive, 629
+
+- startx command, 359~361
+- statements
+  - case, 546~547
+  - if else, 545~546
+  - named.conf, 656~663
+  - order, 630
+  - until, 547~548
+  - while, 547~548
+- status
+  - packages, viewing, 124~125
+  - print queues, 456~459
+  - printers, checking, 473
+- status command, 455
+- status file, 127
+- status option, 411
+- stderr command, 161~165
+- stdin command, 161~162, 165
+- stdout command, 161~165
+- sticky bit, 258
+- sticky bits, 801
+- stop command, 455
+- stop option, 412
+
+# stopping
+
+- daemons, 411~412
+- httpd daemons, 626~627
+- printers, 456
+- processes, 81
+- storing user and group information, 391~392
+- stream editor. See sed utility
+- streams, 161~167
+- StrictModes entry, 711
+- ?string command, 527
+- :string command, 527
+- strings, prompt customization, 534
+- study guides. See also LPIC certification exam
+  - boot process, 323~330
+  - documentation, 290~293
+  - installing Linux, 59~62
+- installing software, 141~155
+- kernels, 502~511
+- managing files, 268~273
+- managing network services, 679~693
+- managing security, 739~746
+- managing users and groups, 403~407
+- networking, 592~597
+- partitions and file systems, 222~229
+- printing, 469~475
+- processing test, 192~197
+- scripts, 551~557
+- shells, 85~92, 551~557
+- system administration, 436~442
+- X Window System, 377~384
+- su command, 390, 575
+- subdirectories, /usr/src/redhat tree, 117
+- subnet masks, 566~569
+
+# SubSection “Display” entry, 348
+
+- subsections, Display, 349
+- Subsystem entry, 711
+- SUID file setting, 258, 801
+- superblocks, 206, 801
+- SuperProPoe tool, 356~357
+- superuser. See root account
+
+# support
+
+- CD drives, 15
+- DVD drives, 15
+- mice, 15
+- printers, 15
+- technical, 287~288
+- SuSe, 7, 11~12
+- syslogTime <Time> entry, 348
+- swap partitions, 22, 208
+  - configuring, 43~46
+- swap space, 801
+- swapping, 13
+- switches, 78
+
+# switching
+
+- consoles, Red Hat installations, 28
+- directories, 233~235
+- shells, 65
+- symbolic links, 252, 801
+- symbolic permissions, 253
+- SYS V start up, 311~315
+- syslog facility, 415
+  - -syslog option, 483~484, 486, 489
+- syslog daemon, 413~414
+- SysLogFacility entry, 711
+
+# system administration
+
+- backups, 425~434
+- documentation and, 287
+- limiting core dump files, 434
+- scheduling jobs, 421~425
+- starting and stopping daemons, 411~412
+- system logging, 413~421
+- technical support, 287~288
+- system directives, 248
+- system logs, 287, 413~421
+- systems, configuring, Red Hat installations, 32~34
+
+# **T**
+
+- -t CHAR option, 178
+- -t COLS option, 238
+- -T command, 24
+- -T FILE option, 431
+- -t FILESYSTEM option, 216
+- -t FILESYSTEM_TYPE option, 218
+- -t fstype option, 210
+- -t function, 430
+- -t -n <seconds> option, 733
+- -t option
+  - expand utility, 172
+  - fmt utility, 174
+  - gzip utility, 433
+  - lpr command, 462
+  - ls command, 237
+  - mcdropbe command, 487
+  - netstat utility, 584
+  - nl utility, 184
+- T package verification code, 116
+- \t setting, 77
+- -t <sleep time> option, 458
+- t -<TIME> option, 241
+- -T <title> option, 462~463
+- -t <type> option, 716
+- -t TYPE option, 180
+- ta command, 527
+- Ta command, 527
+- Tab key, 70
+- tabs
+  - Card, 352
+  - converting to spaces, 172~173
+  - Keyboard, 351
+  - Model selection, 353~354
+  - Monitor, 352~353
+  - Mouse, 350~351
+  - Other, 354
+- tac utility, 182
+- tail utility, 176~177
+- tape drives, 15, 428
+- tar files, 337
+- tar utility, 259~260, 429~431
+- tar zxvf command, 98
+- tarballs, decompressing, 97~98
+- task package, 119
+- TCP. See Transmission Control Protocol
+- TCP wrappers, configuring, 697~701
+- tcpd daemon, 697~701
+- tcpdchk command, 700
+- tcsh shell, 66
+- technical support, 287~288
+- tee command, 196
+- tee utility, 165~166
+- Telephony support menu, 508
+- Telnet, 575, 617, 802
+- temporary files, 497
+- terminal emulators, 368~369
+- Tertiary DNS option, 34
+- test command, 543~544
+- test engines, 748~749
+- testing
+  - kernels, 500, 509
+  - scripts, 542~544
+- tests, arithmetic, 548. See also exam objectives; LPIC certification exam; study guides
+- text
+  - adding line numbers to files, 183~185
+  - appending, 519
+  - ASCII, 792
+  - changing, 519, 527
+  - converting files for printing, 181~182
+  - converting tabs to spaces, 172~173
+  - copying, 521~523
+  - creating new lines, 519
+  - cutting, 170~171
+  - deleting, 520~521
+  - deleting and substituting characters, 175
+  - displaying files backwards, 182
+  - displaying files in other formats, 180~181
+  - displaying numeric details of files, 183
+  - dividing files, 179~180
+  - enhancing searches with regular expressions, 188~190
+  - formatting paragraphs, 173~175
+  - grep utility, 187~188
+  - inserting, 519
+  - joining files, 177~178
+  - moving, 521~523
+  - pasting, 171~172
+  - pipes(), 164~165
+  - redirection, 161~164
+  - replacing, 519
+  - searching for, 524~527
+  - sorting lines of files, 167~170
+  - stream editor, 185~187
+  - viewing beginning and end of files, 176~177
+- text <ENTER> option, 30
+- text editors. See specific text editors
+- themes, 334
+- three-button emulation, 55
+- time fields, 424
+- time specifications, at command, 422
+- time stamps, changing, 240~241
+- Time Zone Selection screen, Red Hat 7.0, 35~36
+- time zones, selecting, 14, 35~36
+- tkrat mail agent, 371
+- TLD. See top-level domains
+- -to-slp option, 137
+- tools. See packages; specific tools
+- top command, 79~80
+- top-level domains (TLD), 651
+- topqq command, 455
+- Torvalds, Linus, 5–6, 479
+- touch command, 240–241, 743
+- tr utility, 175
+- traceroute utility, 577–578, 584–585
+- translation, Network Address (NAT), 798
+- Transmission Control Protocol (TCP), 571–572, 801
+- Transmission Control Protocol/Internet Protocol (TCP/IP)
+  - addresses, 564–565
+  - applications used by, 573–579
+  - classes of networks, 565–566
+  - port assignments, 571–572
+  - protocols used by, 569–571
+  - subnet masks, 566–569
+- trees, /usr/src/redhat, 117
+- Tripwire, 736–737
+- Trolltech, 335
+- troubleshooting
+  - boot process, 316–321
+  - CD, 752
+  - conflicts, plug-and-play hardware, 18–21
+  - log files, 418–421
+  - networks, 580–590
+  - printing problems, 464–467
+- trusted-key statement, 663
+- tt field, 663
+- tty device, 205
+- ttyS device, 205
+- Turbolinux, 12
+- turning off, See disabling
+- turning on, See enabling
+- TXT record, 666
+- txx switch, 78
+- –type moduletype option, 487
+- TypesConfig directive, 631
+
+# U
+
+- u column, 123
+- u command, 24, 527
+- U command, 527
+- u function, 430
+- -u \u2013limit- option, 733
+- -u <n> option, 712
+- -u option
+  - cpio utility, 432
+  - fstat utility, 174
+  - locate command, 250
+  - ls command, 237
+  - mv command, 245
+  - netstat utility, 584
+  - shop command, 540
+  - wheris command, 251
+- -J option 111, 396
+- U package verification code, 116
+- \u/PATH option, 249–250
+- -use option, 77
+- -u switch, 78
+- -u option, 394, 396
+- -u user option, 424
+- -u user option, 461–462
+- –u username- option, 456, 463
+- U value, 586
+- UDP, See User Datagram Protocol
+- uid, See user id
+- ulimit command, 733
+- ulimit tool, 802
+- Ultrastor, 13
+- umas s command, 257–258
+- umask utility, 801
+- umount command, 218–219
+- undefined macro, 620
+- undo, vi text editor, 527
+- Uniform Resource Identifier (URI), 133
+- – uninstall option, 112
+- University of Helsinki, 515
+- University of Helsinki, 5
+- UNIX, operating system, accessing partitions, 25
+- unknown mode, 124
+- unmounting, file systems, 217–220
+- unpacked value, 124
+- Unresolved Dependencies screen, Red Hat 7.0, 37–38
+- unstable distribution, 133
+- until statement, 547–548
+- up arrow key, 72
+- up command, 455
+- up option, 582
+- Update menu option, 129
+- updating
+  - apt-get tool distributions, 135–136
+  - LinuxL–oader (LILO), 303–304
+  - package lists, 148
+  - packages, 134–135
+  - system logs, 287
+- upgrading
+  - apt-get tool distributions, 135–136
+  - packages, 111, 134–135
+- URI, See Uniform Resource Identifier
+- USB support menu, 508
+- Use Graphical Login option, 39
+- UseLogin entry, 711
