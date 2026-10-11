@@ -1,0 +1,171 @@
+
+
+请注意，您输入的密码必须与 `htpasswd` 工具的输出自带相同格式。因此，为了将新用户添加到 Apache Berkeley DB 数据库中，只需执行以下操作：
+
+```
+[ramon]$ sudo htpasswd /etc/httpd/conf/user-list bob
+New password:
+Re-type new password:
+Adding password for user bob
+```
+
+```
+[ramon]$ sudo mkeddb /etc/httpd/conf/user-list -o httpd/conf/user-list-DB
+```
+
+您输入的组名格式与标准 Apache 组名格式不同，因此您需要维护一个单独的文件，将其用作 `mkeddb` 的输入。考虑以下示例：
+
+```
+[ramon]$ cat /etc/httpd/conf/group-list-for-db
+staff: alice, bob, charlie
+admin: alice, bob
+operators: alice, bob, charlie, david
+```
+
+一旦您对这份列表进行了修改，只需使用 `mkeddb` 命令创建一个 Berkeley DB 数据库文件供 `mod_auth_db` 使用，使用以下命令即可：
+
+```
+[ramon]$ sudo mkeddb /etc/httpd/conf/group-list-for-db -o /etc/httpd/conf/group-list-DB
+```
+
+**mod_auth_digest** 该模块自 Apache 1.3.8 起可用，`mod_auth_digest` 模块提供 MD5 摘要认证，可防止在客户端和 Apache 服务器之间以明文形式传输用户名和密码信息。大多数标准发行版默认不加载 `mod_auth_digest` 模块；要安装它，您需要在 `httpd.conf` 文件中插入（在 Red Hat 7.0 的情况下，取消注释）以下行：
+
+```
+LoadModule digest_module  /etc/modules/mod_digest.so
+AddModule mod_digest.c
+```
+
+这两行利用 Apache 的动态共享对象（DSO）功能，纳入了一个外部共享模块，其处理句柄为 `digest_module`，并且位于文件 `/etc/modules/mod_digest.so` 中。`AddModule` 指令引用了 `mod_digest.c`，它是 `mod_auth_digest` 模块的主源文件。
+
+表 7.4 列出了适用于 `mod_auth_digest` 模块的指令。
+
+### 表 7.4 mod_auth_digest 指令
+
+| 指令 | 含义 |
+|:--|:--|
+| **AuthName** *auth-domain* | 指定要发送给 HTTP 客户端的认证域。 |
+| **AuthType** *type* | 指定密码传输类型：Basic（明文）或 Digest（MD5）。 |
+| **AuthDigestDomain** *domain* | 位于同一保护空间中的一个或多个 URL。 |
+| **AuthDigestGroupFile** *filename* | 指定包含组认证信息的 DB 文件名。 |
+| **AuthDigestFile** *filename* | 指定包含 MD5 摘要认证信息的文件名。 |
+| **AuthDBAuthitative** [ on | off ] | 当用户不可用时，避免回退到较低形式的认证。默认为 on。 |
+
+请注意，此模块使用摘要认证文件（AuthDigestFile）而不是密码文件。摘要认证文件通过 htdigest 命令进行维护，其格式为
+
+```
+user:password-hash
+```
+
+其中 *user* 是明文用户名，而 *password-hash* 是对明文密码应用加密哈希操作的结果。摘要认证文件中的条目也可以采用以下形式
+
+```
+user:realm:MD5-password-hash
+```
+
+其中 *user* 是明文用户名，*realm* 是 **AuthName** 指令中指定的领域名称，而 *MD5-password-hash* 是对明文密码应用 MD5 哈希操作的结果。**AuthDigestFile** 的示例如下：
+
+```
+[ramon]$ more .htdigest
+alice:private:sd7f90s8dfh0s89df70sdfd0fs8d70sd
+bob:private:a8839d9bc0d14b768a14423e1836fec4
+charlie:private:sd907fsd09f780sd7f0sdY7f90sydF89
+```
+
+为了便于创建 AuthDigestFile，Apache 提供了一个名为 htdigest 的工具，其命令行用法如下：
+
+`htdigest [-c] digest_file realm user`
+
+在 htdigest 命令行中，-c 指示工具创建一个新的摘要文件（digest_file），user 表示要添加到文件中的用户名，realm 指定密码的认证范围。
+
+为了在目录上设置 MD5 认证，只需在您的 .htaccess 文件中输入列表 7.6 中列出的指令即可。
+
+### 列表 7.6 使用 mod_auth_digest 指令
+
+```
+AuthType Digest
+AuthName "private area"
+AuthDigestDomain http://www.example.com/private/
+AuthDigestFile /etc/httpd/conf/digest-file
+require valid-user
+```
+
+此领域称为 *private area*，包含摘要认证的文件位于 /etc/httpd/conf/digest-file。请注意，成功认证的客户端将能够访问整个 http://www.example.com/private/ URL。
+
+摘要认证是一个具有明显优势的功能，即保护资源认证过程中的用户名/密码交换。然而，摘要认证确实限制了平面摘要文件中的用户数量。此外，较旧的 Web 浏览器可能不支持此认证方法。
+
+建议您对仅由少数用户（可能是网站管理员）访问的关键资源使用摘要认证，并且在这些情况下，您可以完全控制所使用的浏览器类型。
+
+## 访问控制
+
+Apache HTTP 服务器支持两种访问控制方法：
+
+- 自主式（基于用户名和密码）
+- 强制式（基于客户端机器的 IP 地址）
+
+自主式访问控制要求 HTTP 客户端用户提供他们知道的信息（用户名/密码组合）。凭证的选择取决于用户的决定，用户可能会根据当前扮演的角色选择不同的用户名。另一方面，强制式访问控制方法依赖于用户无法控制的凭证。HTTP 客户端的 IP 地址是最常用的强制式访问控制凭证。
+
+上一节介绍了访问 Apache 内容树的自主式认证的详细信息。本节检查了在服务器上基于请求内容的主机 IP 地址强制执行强制式访问控制规则所需的配置步骤。
+
+建议您采用一种默认安全配置，该配置拒绝所有对根树的访问，这迫使您根据需要授予访问权限。这是通过在 `httpd.conf` 文件中使用以下语法实现的：
+
+```
+<Directory />
+Deny from all
+AllowOverride None
+</Directory>
+```
+
+`Deny from all` 指令有效地拒绝了对以 `/` 开头的目录树的所有 HTTP 请求，这包括其所有相关子目录。
+
+`AllowOverride` 指令值得特别讨论。其一般格式如下：
+
+```
+AllowOverride option_1 option_2 - option_n
+```
+
+如前所述，当 Apache 在内容目录中遇到 `.htaccess` 文件时，它会应用文件中找到的访问控制指令到当前目录。但是，当其中一些指令与 `httpd.conf` 文件中包含的指令发生冲突时，`AllowOverride` 指令将被咨询以确定 Apache 可以覆盖哪个选项。
+
+例如，如果您的 `httpd.conf` 指定了指令
+
+```
+AuthType Digest
+```
+
+并且您希望通过向本地 `.htaccess` 文件添加以下内容来允许对某些目录使用 Basic 认证来授予访问权限：
+
+```
+AuthType Basic
+```
+
+那么您需要将指令
+
+```
+AllowOverride AuthType
+```
+
+添加到 `httpd.conf` 文件中，以便允许内容树某处的 `.htaccess` 文件使用 Basic 认证，而不是 `httpd.conf` 中声明的 Digest 认证。
+
+表 7.5 列出了可以使用 AllowOverride 从 .htaccess 覆盖的选项。
+
+### 表 7.5 AllowOverride 选项
+
+| **选项** | **含义** | **示例** |
+| --- | --- | --- |
+| **AuthConfig** | 覆盖授权指令 | `AuthGroupFile`, `AuthName`, `AuthType`, `AuthUserFile`, `require` |
+| **FileInfo** | 覆盖控制文档类型的指令 | `AddEncoding`, `AddLanguage`, `AddType`, `DefaultType`, `ErrorDocument`, `LanguagePriority` |
+| **Indexes** | 覆盖控制文件索引的指令 | `AddDescription`, `AddIcon`, `AddIconByEncoding`, `AddIconByType`, `DefaultIcon` |
+| **Limit** | 覆盖控制主机访问的指令 | `Allow`, `Deny` |
+| **Options** | 覆盖控制特定目录功能的指令 | `Options`, `XBitHack` |
+
+如果您希望允许个人用户单独更改其默认选项，我建议将这种能力限制在 `AuthConfig` 和 `Limit` 选项中，使用以下指令：
+
+```
+UserDir public_html
+<Directory /export/homes/*/public_html>
+  Allow from all
+  AllowOverride AuthConfig Limit
+</Directory>
+```
+
+假设您不关心用户在家庭目录中可能公开的内容的隐私性，允许覆盖 `AuthConfig` 和 `Limit` 选项将使个人用户能够使用认证和访问控制来保护他们认为敏感的内容。
+

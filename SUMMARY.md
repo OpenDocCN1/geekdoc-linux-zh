@@ -1183,6 +1183,7 @@
 +   [Linux Samba 服务器管理指南](docs/linux-samba-server-administration/README.md)
 +   [Linux Samba 服务器管理 (Craig Hunt Linux Library)](docs/linux-samba-server-administration-craig-hunt-linux-library/README.md)
 +   [LINUX 第二版：安装、配置与使用](docs/linux-second-edition-installation-configuration-and-use/README.md)
++   [Linux 安全：Craig Hunt Linux 丛书](docs/linux-security-craig-hunt-linux-library/README.md)
 +   [Linux 安全基础指南](docs/linux-security-fundamentals/README.md)
 +   [Linux 安全（网络）](docs/linux-security-networking/README.md)
 +   [Linux 安全工具包指南](docs/linux-security-toolkit/README.md)

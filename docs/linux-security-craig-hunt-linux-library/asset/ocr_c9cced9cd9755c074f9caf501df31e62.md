@@ -1,0 +1,15 @@
+To address the first vulnerability, you should make use of the **nppasswd** utility, which forces users to choose good passwords. You should also use **crack** tool, which attempts to guess poor passwords for your users may have chosen. (Chapter 3 discusses both of these utilities in detail.) To protect passwords from being sniffed, you must ensure that all remote access takes place either via Secure Shell (SSH), or using one-time passwords through an S/KEY login session. These tools are discussed in detail in Chapters 12 and 13 respectively.
+
+The advent of e-commerce on the Internet has brought about the need for a way to authenticate truly anonymous parties—i.e., those who are totally unknown to us prior to the transaction. Public-key cryptography once again provides a solution to this problem.
+
+By using certificates carrying the digital signature of a well-known *certificate authority* (*CA*), anonymous parties can be authenticated based on the transitive nature of trust in the CA. That is, if I trust the CA, and the CA can vouch for the fact that this person is whom he or she claims to be, then I should believe it.
+
+The Linux implementation of *Secure Sockets Layer* (*SSL*) includes the tools necessary to implement a simple *Public Key Infrastructure* (*PKI*) that you can use to provide strong authentication of anonymous subjects. This is topic is discussed in detail in Chapter 7, “HTTP Services.”
+
+# Data and Service Availability
+
+It has been said that in the age of networking and wireless communications that the only truly secure system is a brick—nothing goes in and nothing comes out. While this may be true, Linux administrators don’t have the luxury of taking this radical approach. In fact, the performance of most system administrators is often measured by their ability to keep the systems always up and accessible from the public network. There are obvious reasons why you would want to make sure that your Linux servers are up all the time (your corporation does want to make a profit, right?), but there are more subtle reasons why high availability is important to information security.
+
+Chances are that your users rely on your online systems for authentication and private communication of sensitive data. In the absence of these systems—i.e., if they’re not available—users are likely to use less secure methods to transmit and store data, which often results in compromising the company’s security policy. For example, consider a user who needs to send an encrypted proposal to the legal department in the next five minutes. If the PGP key server is down and the user is faced with a substantial delay, the user is more likely to send the document unencrypted, rather than face a potential loss of an important sale.
+
+The next section examines the types of vulnerabilities that are often found in Linux servers, including a specific type of vulnerability that can open the door to *denial of service* attacks, which aim to disrupt the availability of your Linux server.

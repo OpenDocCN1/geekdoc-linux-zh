@@ -1,0 +1,117 @@
+
+
+## 现状：Netfilter
+
+最后，假设你想要通过确保所有离开内部网络的流量都具有正确的源地址来防止数据包伪造：
+
+```
+ipchains -A forward -i eth1 -s !38.110.200.0/24 -j REJECT
+```
+
+这条命令使用了一条反置规则，声明所有进入服务器接口 eth1（私有接口）且不包含 38.110.200.0 C 类网络源 IP 地址的流量都应当被拒绝。
+
+截至 Linux 内核 2.4（本书撰写时的最新稳定版本），曾经由 ipfwadm 和 ipchains 提供的功能现在由 Netfilter 及其 iptables 用户空间工具提供。我建议在 2.4 内核的机器上部署你的 Linux 防火墙，并使用 Netfilter 包进行数据包过滤。这是下一节的讨论主题。
+
+Linux 内核 2.4 包含许多特性和稳定性增强，使其成为一个非常稳健的防火墙平台。该内核版本最显著的改进之一是数据包过滤子系统，现在被称为 *Netfilter*。Netfilter 的开发主要由 Watchguard Technologies 资助。这家美国公司开发和销售基于 Linux 平台的商用防火墙设备，以及基于其防火墙平台的安全服务。图 9.1 显示了 Netfilter 项目主页，位于 http://netfilter.kernelnotes.org。该网站提供
+
+-   Netfilter 项目团队成员及其贡献的信息
+-   iptables 下载
+-   关于 Linux 网络、数据包过滤、网络地址转换以及 Netfilter 架构的文档，提供英文及其他几种语言版本
+-   Netfilter 常见问题解答（FAQs）
+-   关于与 Netfilter 相关的邮件列表的信息
+
+边界安全
+
+第四部分
+
+### 图 9.1 Netfilter 项目主页
+
+![](img/3258bbaf790525f8c4eb25fabff7844a_271_0.png)
+
+下一节将解释如何利用新的 Netfilter 支持配置你的 Linux 内核，使用 Linux 服务器构建网络层防火墙。
+
+## 配置 Netfilter
+
+为了将 Netfilter 支持配置到内核中，安装 2.4 内核源代码，并在内核配置的 make config 阶段对 CONFIG_NETFILTER 问题输入 Y。
+
+> **注意** 内核配置的详细细节超出了 Linux 安全书的范围。有关 Linux 内核配置的更多信息，请参阅 Vicki Stanfield 和 Roderick W. Smith 编写的 *Linux System Administration*（Sybex, 2001）。
+
+默认情况下，Linux 系统被配置为网络主机——而非路由器。定义 Internet 标准的 RFC 要求主机*不*转发数据包。然而，为了让 Linux 系统充当防火墙，它必须转发数据包。实际上，为了让 Linux 系统充当防火墙，它必须首先充当路由器。因此，一旦内核配置为支持过滤，你可以通过将 ip_forward 开关设置为 true 来启用 IP 转发。这可以通过将变量设置为 1 来实现。一种方法是通过 /proc 文件系统设置 ip_forward 开关的值，如下例所示：
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+每次系统重启时，ip_forward 开关都会重置为 0，必须显式重置为 1。在启动脚本（如 /etc/rc.d/rc.local）中添加 echo 行以将开关重置为 1。一些 Linux 发行版，例如 Red Hat 和 Caldera，试图通过提供网络启动脚本的参数来简化此过程，该参数显式设置 ip_forward 开关。例如，在 Red Hat 7 系统上，在 /etc/sysctl.conf 文件中设置 net.ipv4.ip_forward 会将 ip_forward 开关设置为相应的值。以下示例将 ip_forward 设置为 1：
+
+```
+[ramon]$ head -2 /etc/sysctl.conf
+# Enables packet forwarding
+net.ipv4.ip_forward = 1
+```
+
+在 Caldera 系统上，可以通过在 /etc/sysconfig/network 文件中为 IPFORWARDING 设置值来设置 ip_forward 值。如果 IPFORWARDING 设置为 true 或 yes，ip_forward 将被设置为 1。如果设置为 false 或 no，ip_forward 将被设置为 0。以下示例将 ip_forward 设置为 1 以启用转发：
+
+```
+[ramon]$ cat /etc/sysconfig/network
+NETWORKING=yes
+IPFORWARDING=yes
+HOSTNAME=ibis.foobirds.org
+```
+
+个人建议，我推荐使用 echo 命令直接设置 /proc/sys/net/ipv4/ip_forward。各个厂商添加的用于简化此开关设置的扩展功能往往会增加任务的复杂性，因为这些扩展各不相同。echo 命令在所有 Linux 发行版上工作方式相同。
+
+> **注意** Netfilter 内核特性通过允许你使用 iptwadm 和 ipchains 创建数据包过滤规则，提供了向后兼容性。
+
+## iptables
+
+iptables 是 Rusty Russel 的 Netfilter 包的组成部分，它是你用来影响三个内置网络层内核过滤链（input、output 和 forward）变更的用户空间实用工具。作为 ipchains 实用工具的演进，iptables 仅在 2.3 和 2.4 Linux 内核上运行，并在许多重要方面与 ipchains 不同：
+
+-   内置参数（INPUT、OUTPUT 和 FORWARD）的名称从小写变为大写。
+-   `-i`（接口描述符）标志现在指定*传入*接口，并且仅在 input 和 forward 链中有效。如果你需要在 forward 或 output 链的规则中使用接口描述符，请改用 `-o` 标志。
+-   `iptables` 的 `-y` 标志（用于匹配设置了 SYN 位的 IP 数据包）现在是 `--syn`。
+-   你现在可以在列出单个链时将其清零（使用 `-Z` 选项）。（此功能在 `iptables` 中曾不起作用。）
+-   清零内置链会清除策略计数器（也是一个 bug 修复）。
+-   REJECT 和 LOG 链操作现在是扩展目标（独立内核模块）。
+-   链名称现在最多可以是 31 个字符。
+-   `iptables` 的 MASQ 链现在称为 MASQUERADE，并使用不同的语法（参见“网络地址转换”一节）。
+
+### 图 9.2 Linux 内核数据包过滤内置链
+
+![](img/3258bbaf790525f8c4eb25fabff7844a_273_0.png)
+
+如“使用 iptables”一节所述，*链*是用来描述按顺序检查的一组规则的术语。这些规则决定如何处理数据包。考虑以下示例：
+
+```bash
+[ramon]$ sudo iptables -A INPUT -p tcp --dport smtp -j ACCEPT
+[ramon]$ sudo iptables -A INPUT -j DROP
+```
+
+这个简单示例向 input 内置链添加了两条规则。第一条规则匹配所有传输层协议为 TCP 且目标 TCP 端口为 25（互联网邮件或 SMTP）的数据包。如果数据包匹配此规则，Netfilter 将接受该数据包。
+
+第二条规则是一个*捕获所有规则*（有时称为*隐身规则*，因为它将服务器隐藏于所有未明确允许直接与其通信的外部系统之外）。捕获所有规则指示 Netfilter 丢弃所有其他 input 链流量。前一个示例中的两条规则可用于确保你的邮件服务器仅接受旨在连接至 SMTP 端口的连接。
+
+> **注意** Netfilter 框架相较于 2.4 之前 Linux 内核中旧有的数据包过滤支持，最重要的增强之一是对 input 和 output 链的处理。在 Netfilter 之前，无论数据包最终是绑定到其他系统（路由）还是本地系统（本地处理），内核都会对所有从网络驱动程序接收到的数据包咨询 input 链。output 链也适用同样的情况，即转发的和源自本地的数据包都适用。这迫使网络管理员对 input 链应用非直观的规则，以考虑这两种类型的数据包。使用 Netfilter 后，只有绑定到本地处理的数据包才受 input 链约束，只有源自本地主机并绑定到其他主机的数据包才受 output 链约束。
+
+`iptables` 及其前身（`ipfwadm`、`ipchains`）满足相同的需求：每次系统重启时，将一组数据包过滤规则重新安装到内核中。由于内核没有任何非易失性存储，你需要在每次系统启动时使用 `iptables` 脚本重新初始化你的数据包过滤策略。由于这些规则不会在系统重启后保留，你必须将 `iptables` 命令放在一个脚本文件中，并将该脚本放入 `/etc/rc.d/init.d` 目录中。
+
+## 使用 iptables
+
+并非所有 Linux 发行版都默认附带 `iptables`。只需浏览你喜欢的 RPM 仓库（我最喜欢的是 www.rpmfind.net）并按如下方式安装最新版本：
+
+```
+[ramon]$ sudo rpm -i iptables-1.1.2-1386.rpm
+```
+
+此命令在 `/usr/lib` 中安装了一系列共享库，安装 `iptables` 的手册页，以及主可执行文件 `/sbin/iptables`。
+
+在调用 `iptables` 命令时，你必须始终拥有 root 权限，因为它实际上是在向正在运行的内核写入链规则。
+
+`iptables` 命令的一般命令行语法如下：
+
+```
+iptables -[ADC] chain rule-specifications [options]
+iptables -[RI] chain rulenum rule-specifications [options]
+iptables -D chain rulenum [options]
+```
+
