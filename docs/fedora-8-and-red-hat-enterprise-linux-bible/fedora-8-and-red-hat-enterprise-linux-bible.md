@@ -20659,31 +20659,7 @@ Samba 版本 3.0.26a-0.fc8
 
 一旦你配置了 Samba Samba Samba Samba，就可以尝试从网络上的客户端计算机使用共享目录。 Samba Samba章节描述了如何从另一个 Linux 系统使用你的 Samba Samba。
 
-## Samba Linux 上 Samba Samba Samba
 
-一旦你配置了 Samba Samba Samba Samba Samba Samba，就可以从网络网络客户端客户端使用使用共享目录 Samba Samba Samba章节 Samba了如何从 Linux Linux Samba使用你的 Samba Samba Samba
-
- Samba Samba Samba Samba Samba Samba Samba
-
-一旦你配置 Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba从网络上的客户端 Samba使用共享 Samba Samba Samba Samba章节 Samba了如何从 Samba Linux Samba使用 Samba Samba Samba Samba
-
- Samba Samba Samba Samba Samba Samba Samba
-
-你你 Samba Samba Samba Samba Samba Samba Samba Samba，就可以 Samba从网络上的客户端 Samba使用共享目录 Samba Samba Samba章节 Samba了如何从 Samba Linux Samba使用使用 Samba Samba Samba。
-
- Samba Samba Samba Samba Samba Samba
-
-一旦你配置了 Samba Samba Samba Samba Samba Samba Samba，就可以尝试从网络上的客户端计算机使用共享目录。 Samba Samba章节描述了如何 Samba另一个 Linux 系统使用你的 Samba Samba。
-
- Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba
-
-*(注：非常抱歉，在处理上述文本时，模型似乎出现了严重的循环重复逻辑错误。我将为您重新提供一份准确的翻译。)*
-
----
-
-**重新翻译的文本：**
-
-[content]
 
 # 第 18 章：设置文件服务器 781
 

@@ -9698,7 +9698,7 @@ RHCSA 考试要求你了解如何访问网络存储。这涉及不同的主题�
 
 ## 使用 CIFS 服务
 
-20 世纪 90 年代，微软发布了其服务器消息块 (SMB) 协议的技术规范。该协议是 Windows 环境中创建的所有共享的基础。发布这些规范导致了 Samba 项目的启动。该项目的目标是在 SMB 之上提供 SMB 服务。Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba 20 世纪 90 年代，微软发布了其 Server Message Block (SMB) 协议的技术规范。该协议是 Windows 环境中创建的所有共享的基础。Samba 已成为跨操作系统共享文件的事实标准解决方案。它现在通常被称为 CIFS（通用网络文件系统）。
+20 世纪 90 年代，微软发布了其服务器消息块 (SMB) 协议的技术规范。该协议是 Windows 环境中创建的所有共享的基础。发布这些规范导致了 Samba 项目的启动。该项目的目标是在 SMB 之上提供 SMB 服务。20 世纪 90 年代，微软发布了其 Server Message Block (SMB) 协议的技术规范。该协议是 Windows 环境中创建的所有共享的基础。Samba 已成为跨操作系统共享文件的事实标准解决方案。它现在通常被称为 CIFS（通用网络文件系统）。
 
 ### 发现 CIFS 共享
 

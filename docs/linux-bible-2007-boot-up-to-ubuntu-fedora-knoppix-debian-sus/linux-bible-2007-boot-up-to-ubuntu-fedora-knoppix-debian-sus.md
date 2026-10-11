@@ -17016,7 +17016,6 @@ WINS 基本上是 NetBIOS 名称的名称服务器。它提供了类似于 DNS �
 
 - Wins support（WINS 支持）——如果你想让 Samba 服务器充当 WINS 服务器，请将此值设置为 Yes。（默认是 No。）同样，如果你工作中的所有计算机都在同一个子网内，则不需要此项。
 
-, Samba is is Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba Samba the the Samba.
 
 # 操作 Samba 文件和命令
 
