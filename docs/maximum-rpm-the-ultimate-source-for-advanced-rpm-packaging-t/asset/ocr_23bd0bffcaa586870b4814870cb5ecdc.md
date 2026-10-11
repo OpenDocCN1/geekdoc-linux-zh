@@ -1,0 +1,3 @@
+# ## 10.4. And Now...
+
+Now that we've seen, in broad-brush terms, the way RPM builds packages, let's take a look at an actual build. Chapter 11, "Building Packages: A Simple Example," does just that, showing how simple it can be to build a package.

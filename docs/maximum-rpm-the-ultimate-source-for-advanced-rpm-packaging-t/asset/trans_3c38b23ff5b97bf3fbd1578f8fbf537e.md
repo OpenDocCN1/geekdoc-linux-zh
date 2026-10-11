@@ -1,0 +1,227 @@
+
+
+### 21.2.7.3. rpmdbFindByGroup()—按组搜索 RPM 数据库
+
+此函数搜索由 `db` 指定的 RPM 数据库，查找属于 `group` 指定组的软件包。它将在 `matches` 中返回匹配的记录：
+
+```c
+#include <rpm/rpmlib.h>
+#include <rpm/dbindex.h>
+
+int rpmdbFindByGroup(rpmdb db,
+                     char * group,
+                     dbiIndexSet * matches);
+```
+
+此函数返回以下状态值：
+
+- -1—读取数据库记录时发生错误。
+- 0—搜索正常完成。
+- 1—未找到搜索词。
+
+### 21.2.7.4. rpmdbFindPackage()—按软件包搜索 RPM 数据库
+
+此函数搜索由 `db` 指定的 RPM 数据库，查找软件包名称（而非标签）为 `name` 指定的软件包。它将在 `matches` 中返回匹配的记录：
+
+```c
+#include <rpm/rpmlib.h>
+#include <rpm/dbindex.h>
+
+int rpmdbFindPackage(rpmdb db,
+                     char * name,
+                     dbiIndexSet * matches);
+```
+
+此函数返回以下状态值：
+
+- -1—读取数据库记录时发生错误。
+- 0—搜索正常完成。
+- 1—未找到搜索词。
+
+### 21.2.7.5. rpmdbFindByProvides()—按 Provides 搜索 RPM 数据库
+
+此函数搜索由 `db` 指定的 RPM 数据库，查找提供 `provides` 指定的提供信息的软件包。它将在 `matches` 中返回匹配的记录：
+
+```c
+#include <rpm/rpmlib.h>
+#include <rpm/dbindex.h>
+
+int rpmdbFindByProvides(rpmdb db,
+                       char * provides,
+                       dbiIndexSet * matches);
+```
+
+此函数返回以下状态值：
+
+- -1—读取数据库记录时发生错误。
+- 0—搜索正常完成。
+- 1—未找到搜索词。
+
+### 21.2.7.6. rpmdbFindByRequiredBy()—按 Requires 搜索 RPM 数据库
+
+此函数搜索由 `db` 指定的 RPM 数据库，查找需要 `requires` 指定的依赖信息的软件包。它将在 `matches` 中返回匹配的记录：
+
+```c
+#include <rpm/rpmlib.h>
+#include <rpm/dbindex.h>
+
+int rpmdbFindByRequiredBy(rpmdb db,
+                           char * requires,
+                           dbiIndexSet * matches);
+```
+
+此函数返回以下状态值：
+
+- -1—读取数据库记录时发生错误。
+- 0—搜索正常完成。
+- 1—未找到搜索词。
+
+### 21.2.7.7. rpmdbFindByConflicts()—按 Conflicts 搜索 RPM 数据库
+
+此函数搜索由 `db` 指定的 RPM 数据库，查找与 `conflicts` 指定的冲突信息发生冲突的软件包。它将在 `matches` 中返回匹配的记录：
+
+```c
+#include <rpm/rpmlib.h>
+#include <rpm/dbindex.h>
+
+int rpmdbFindByConflicts(rpmdb db,
+                          char * conflicts,
+                          dbiIndexSet * matches);
+```
+
+此函数返回以下状态值：
+
+- -1—读取数据库记录时发生错误。
+- 0—搜索正常完成。
+- 1—未找到搜索词。
+
+## 21.2.8. 软件包操作
+
+本节描述的函数执行大多数 RPM 用户熟悉的操作。安装和删除软件包的函数在此处，以及一些相关的低级支持函数。
+
+### 21.2.8.1. rpmInstallSourcePackage()—安装源软件包文件
+
+此函数安装由 `fd` 指定的源软件包文件：
+
+```c
+#include <rpm/rpmlib.h>
+
+int rpmInstallSourcePackage(char * root,
+                           int fd,
+                           char ** specFile,
+                           rpmNotifyFunction notify,
+                           char * labelFormat);
+```
+
+如果 `root` 不为 `NULL`，它将在实际安装之前被加到变量 `RPMVAR_SOURCEDIR` 和 `RPMVAR_SPEC_DIR` 的前面。如果 `specFile` 不为 `NULL`，将返回刚刚安装的 spec 文件的完整路径和文件名。
+
+`notify` 参数用于指定一个进度跟踪函数，该函数将在安装期间被调用。有关此参数的更多信息，请参见第 21.2.8.3 节。
+
+`labelFormat` 参数可用于指定软件包标签的格式。它用于在软件包安装准备就绪时打印软件包标签。如果 `labelFormat` 为 `NULL`，则不打印软件包标签。
+
+此函数返回以下状态值：
+
+- 0—源软件包安装成功。
+- 1—源软件包文件包含错误的魔数。
+- 2—发生其他类型的错误。
+
+### 21.2.8.2. rpmInstallPackage()—安装二进制软件包文件
+
+此函数安装由 `fd` 指定的二进制软件包文件：
+
+```c
+#include <rpm/rpmlib.h>
+
+int rpmInstallPackage(char * rootdir,
+                      rpmdb db,
+                      int fd,
+                      char * prefix,
+                      int flags,
+                      rpmNotifyFunction notify,
+                      char * labelFormat,
+                      char * netsharedPath);
+```
+
+如果在 `rootdir` 中指定了路径，软件包将使用该路径作为根目录进行安装。如果在 `prefix` 中指定了路径，它将用作可重定位软件包的前缀。由 `db` 指定的 `RPM` 数据库将被更新以反映新安装的软件包。
+
+`flags` 参数用于控制安装行为。标志在 `rpmlib.h` 中定义，形式为 `RPMINSTALL_xxx`，其中 `xxx` 是标志的名称。
+
+当前定义了以下标志：
+
+1. `RPMINSTALL_REPLACEPKG`---即使软件包已安装，也安装该软件包。
+2. `RPMINSTALL_REPLACEFILES`---即使软件包将替换属于其他软件包的文件，也安装该软件包。
+3. `RPMINSTALL_TEST`---执行所有安装时检查，但不实际安装软件包。
+4. `RPMINSTALL_UPGRADE`---安装软件包，并删除该软件包的所有旧版本。
+5. `RPMINSTALL_UPGRADETOOLD`---即使软件包是已安装软件包的旧版本，也安装该软件包。
+6. `RPMINSTALL_NODOCS`---不安装软件包的文本文档文件。
+7. `RPMINSTALL_NOSCRIPTS`---不执行软件包的安装和擦除时（在升级情况下）脚本。
+8. `RPMINSTALL_NOARCH`---不执行架构兼容性测试。
+9. `RPMINSTALL_NOOS`---不执行操作系统兼容性测试。
+
+`notify` 参数用于指定一个进度跟踪函数，该函数将在安装期间被调用。有关此参数的更多信息，请参见第 21.2.8.3 节。
+
+`labelFormat` 参数可用于指定软件包标签的格式。此信息在软件包安装准备就绪时打印软件包标签时使用。如果 `labelFormat` 为 `NULL`，则不打印软件包标签。
+
+`netsharedPath` 参数用于指定本地文件系统中与其他系统共享的部分。如果存在多个共享路径，则路径之间应以冒号分隔。
+
+此函数返回以下状态值：
+
+1. 0---二进制软件包安装成功。
+2. 1---二进制软件包文件包含错误的魔数。
+3. 2---发生其他类型的错误。
+
+### 21.2.8.3. rpmNotifyFunction()---跟踪软件包安装进度
+
+可以通过 `notify` 参数将函数传递给 `rpmInstallSourcePackage` 或 `rpmInstallPackage`：
+
+```c
+#include <rpm/rpmlib.h>
+
+typedef void (*rpmNotifyFunction)(const unsigned long amount,
+                                  const unsigned long total);
+```
+
+该函数将在安装期间定期调用，并接收两个参数：
+
+- amount—目前已完成的安装字节数。
+- total—将要安装的总字节数。
+
+此功能允许在软件包安装期间创建一个动态更新的进度指示器。
+
+### 21.2.8.4. rpmRemovePackage()—移除已安装的软件包
+
+此函数移除由 `db` 指定的 RPM 数据库中记录号为 `offset` 的软件包：
+
+```c
+#include <rpm/rpmlib.h>
+
+int rpmRemovePackage(char * root,
+                     rpmdb db,
+                     unsigned int offset,
+                     int flags);
+```
+
+如果指定了 `root`，它将用作目录的路径，该目录将在移除软件包期间充当根目录。
+
+`flags` 参数用于控制软件包移除行为。可以传递的标志在 `rpmlib.h` 中定义，形式为 `RPMINSTALL_xxx`，其中 `xxx` 是标志的名称。
+
+当前定义了以下标志：
+
+- `RPMINSTALL_TEST`—执行所有擦除时检查，但不实际移除软件包。
+- `RPMINSTALL_NOSCRIPTS`—不执行软件包的擦除时脚本。
+
+此函数返回以下状态值：
+
+- 0—软件包移除成功。
+- 1—软件包移除失败。
+
+## 21.2.9. 软件包和文件验证
+
+本节的函数执行必要的验证操作，以确保组成软件包的文件自安装以来未被修改。
+
+验证在三个不同的层级上进行：
+
+- 在单个文件层级上
+- 在整个软件包层级上，通过使用 `%verifyscript` 验证脚本
+- 在软件包之间层级上，通过 RPM 的正常依赖关系处理
+

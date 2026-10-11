@@ -1,0 +1,417 @@
+
+## P
+
+- PGP 签名，238-240
+- 平台 (platforms)，270
+- 安装后 (postinstallation)，182
+- 卸载后 (postuninstallation)，183
+- 前缀标签 (prefix tag)，221
+- 安装前 (preinstallation)，182
+- 卸载前 (preuninstallation)，183
+- 程序引用 (program references)，219
+- 提供 (providing)，60, 65
+- 查询 (queries)，8, 57, 117
+  - *数组迭代器 (array iterators)*，71-72
+  - *二进制 (binary)*，62
+  - *能力 (capabilities)*，65-66
+  - *兼容性 (compatibility)*，60
+  - *自定义 (customizing)*，68
+  - *数据 (data)*，61-62
+  - *发行版 (distribution)*，62
+  - *文档 (documentation)*，63
+  - *转义序列 (escape sequences)*，69
+  - *字段宽度 (field width)*，70
+  - *文件 (files)*，57-59, 64
+  - *组 (groups)*，59-60
+  - *对齐方式 (justification)*，70
+  - *标签 (labels)*，55-57
+  - *字面文本 (literal text)*，69
+  - *可读数据 (readable data)*，70-71
+  - *脚本 (scripts)*，67-68
+  - *单条目标签 (single-entry tags)*，73
+  - *源 RPM 文件 (source RPM files)*，62
+  - *标准输入 (standard input)*，59
+  - *摘要 (Summary)*，62
+  - *标签 (tags)*，70, 73-74
+  - *URLs*，59
+  - *版本 (version)*，61
+- README 文件，221
+- 重新构建 (rebuilding)，10, 102-103, 373
+- 重新编译 (recompiling)，161
+- 可重定位 (relocatable)
+  - *配置文件 (config file)*，221
+  - *安装 (installation)*，222-223
+  - *前缀标签 (prefix tag)*，216
+  - *符号链接 (symlinks)*，223
+  - *测试 (testing)*，222-223
+- 重定位 (relocation)，31-32, 216
+  - *引用 (references)*，219
+  - *符号链接 (symlinks)*，219
+- 重定位前缀标签 (relocation prefix tag)，217
+- 必需 (required)，65-66, 170, 213
+- 需要 (requiring)，60
+- 恢复 (restoring)，43
+- RPM 签名，240-241
+  - *脚本 (scripts)*，8
+    - *preinstall*，32
+    - *postinstall*，32
+    - *postuninstall*，39
+    - *preuninstall*，39
+- 序列号 (serial numbers)，211
+- 签名 (signatures)，97, 152, 238, 241-242, 324, 343-346, 349, 365
+  - *添加 (adding)*，152, 244, 373
+  - *数字 (digital)*，419
+  - *相同 (identical)*，245
+  - *多个 (multiple)*，244
+  - *打印 (printing)*，329
+  - *替换 (replacing)*，243, 373
+  - *验证 (verification)*，374
+- 软件 (software)，5
+  - *版权 (copyrights)*，167
+  - *图标 (icons)*，168
+  - *厂商 (vendors)*，168
+- 共享对象名 (sonames)，213
+- 源代码 (source)，160-162, 289-291
+  - *排除源文件 (source files, excluding)*，176
+  - *原始源代码 (sources, pristine)*，114-115
+  - *状态 (status)*，307
+- 排除子目录 (subdirectories, excluding)，199
+- 子包 (subpackages)，200
+- *符号链接（绝对路径） (symlinks (absolute))*，217
+- *标签（排他性,xxx） (tags (exclusive,xxx))*，270
+- 测试 (testing)，137, 296
+- 时间限制 (time limits)，158
+- 无法卸载 (uninstallable)，6-8, 11
+  - *升级 (upgrades)*，6, 12
+  - *升级过程 (upgrading)*，50, 320, 371
+- 验证 (verification)，85-86, 100, 183, 221, 238, 319, 369
+  - *客户端 (clients)*，303
+  - *失败输出 (failure output)*，83
+  - *输出失败 (output failure)*，84
+  - *签名 (signatures)*，323
+  - *版本 (versions)*，115
+- 比较运算符 (comparison operators)，210
+- 数字 (numbers)，210
+- 查看 (viewing)，5, 74
+- 虚拟 (virtual)，169, 212
+- 写入磁盘 (writing a disk)，339
+- 包管理系统，参见 PMS
+
+## 包操作函数
+
+- *rpmNotifyFunction()*，317
+- *rpmRemovePackage()*，318
+- 参数 (parameters)，1, 18
+- *rpm -K 命令*，94
+- *rpm -U 命令*，46
+- 密码短语（密钥） (passphrases (secret keys))，239-240
+- PATCH --queryformat 标签，379
+- patch % 宏，191
+- *补丁文件 (patch files)*
+  - *压缩 (compression)*，194
+  - *移除输出文件 (output files, removing)*，193
+  - *patch 标签*，176, 393
+  - *patch 标签 (patch tags)*，286
+    - *nopatch*，177, 393
+    - *patch*，176, 393
+  - *patch% 宏*，193-194
+- *补丁 (patches)*，120-121, 145, 283
+  - *amanda*，281-283
+  - *创建 (creating)*，121
+  - *从包中排除 (excluding from packages)*，177
+  - *文件名 (filenames)*，177
+  - *软件 (software)*，176
+  - *URLs*，177
+- *专利 (patents)*
+  - *PGP*，421
+  - *软件 (software)*，410
+- *路径前缀 (path prefixes)*，223
+- *路径 (paths)*
+  - *二进制应用 (binary app)*，364
+  - *编辑数据库 (databases, editing)*，42
+  - *目录 (directories)*，241, 365-366
+  - *文件名 (filenames)*，200
+  - *前缀 (prefixes)*，221-222
+  - *共享 (sharing)*，363
+  - *源文件 (source files)*，365
+  - *spec 文件 (spec files)*，365
+  - *符号链接 (symlinks)*，58
+  - *顶级目录 (top-level directories)*，366
+- *-percent rpm -i 命令选项*，18, 33, 370
+- *-percent rpm -U 命令选项*，46, 371
+- 性能（RPM 版本 2） (performance (RPM version 2))，10
+
+## Perl 编程语言
+
+- (RPM)，9
+
+## 权限
+
+- 包文件 (package files)，14
+- 构建包 (packages, building)，142
+
+## PGP (pretty good privacy) 软件
+
+- 94, 364, 418, 421
+  - 构建 (building)，422
+  - 商业用途 (commercial use)，421
+  - 解密 (decryption)，419
+  - 数字签名 (digital signature)，419
+  - 下载 (downloading)，421-422
+  - 加密 (encryption)，418, 420
+  - 修复服务器 (fix servers)，422
+  - 密钥对 (key pairs)
+    - 创建 (creating)，238-239
+    - 随机比特 (random bits)，240
+  - 法律地位 (legal status)，420
+    - 许可 (licensing)，421
+  - Linux (ELF-based)，422
+    - MFT，421
+  - MPIB，421-422
+    - 非商业用途 (non-commercial use)，421
+    - 包文件验证 (package file verification)，94
+    - 签名 (signature)，238-240
+    - 公钥 (public keys)，95, 238, 363
+    - 限制 (restrictions)，421
+  - RSA REF，421
+  - 私钥 (secret keys)，238
+  - 安全（公钥） (security (public key))，418
+  - 验证（公钥） (verification (public keys))，97
+  - Web 页面 (Web page)，421
+
+- ppg 名称条目 (ppg name entry)，241, 363
+- ppg 路径条目 (ppg path entry)，241, 364
+- pkg1 ...pkgn rpm
+  - <c 命令参数 (command parameter)，38
+  - -q 命令选项 (command option)，54
+- 平台配置文件 (platform configuration files)，278
+- 平台相关条件 (platform-dependent conditions)，266
+- 平台相关标签 (platform-dependent tags)，265, 269
+- 平台 (platforms)，264
+  - 构建 (build)，265
+  - 构建数据 (build data)，267
+  - 规范名称 (canonical names)，266
+  - 规范编号 (canonical numbers)，266
+  - 排除 (excluded)，270
+  - 硬件 (hardware)，172
+  - 覆盖 (overriding)，268
+  - 另见 架构；操作系统
+- PM，9
+- PMS (包管理系统)，7
+  - BOGUS 发行版，9
+  - 创建 (creating)，7
+  - 查询 (queries)，9
+- 移植应用到多个操作系统 (porting applications to multiple operating systems)，116
+- 端口（提示） (ports (tip))，34, 362
+- post%n 安装脚本，182
+- POSTIN - queryformat 标签，379
+- 安装后脚本 (postinstall scripts)，68, 132
+  - 安装 (installation)，32
+  - 查询 (queries)，32
+  - 服务器 (servers)，300
+  - 升级 (upgrades)，51-52
+- 安装后任务 (postinstall tasks)，19
+- 包安装后 (postinstallation (packages))，182
+- POSTUN - queryformat 标签，379
+- postun%n 卸载时脚本，183
+- 卸载后脚本 (postuninstall scripts)，68, 132
+  - 防止执行 (execution, preventing)，42
+  - 包 (packages)，39, 41
+  - rpm -c 命令，39
+- 包卸载后 (postuninstallation (packages))，183
+- ppc 架构，338
+- prep%n 安装脚本，182
+- 序言 (preamble)，127
+  - "%%package 指令，250
+  - 架构标签 (architecture tags)，392
+  - 注释行 (comment lines)，129
+  - 版权 (copyright)，128
+  - 依赖项（autoreprov） (dependency (autoreprov))，129
+  - 依赖项标签 (dependency tags)，390-391
+  - 描述 (description)，129
+  - 描述标签 (description tags)，389
+  - 描述性标签 (descriptive tags)，389-390
+  - 指令标签 (directive tags)，390
+  - 目录标签 (directory tags)，392
+  - 发行版 (distribution)，128
+  - GPL，410
+  - 组 (group)，128
+  - 名称 (name)，128
+  - 操作系统标签 (operating system tags)，392
+  - 包命名标签 (package-naming tags)，388
+  - 打包者 (packager)，129
+  - patch 标签，393
+  - 发行版 (release)，7
+  - 源代码 (source)，128
+  - 源代码标签 (source tags)，393
+  - URLs，128
+  - 厂商 (vendor)，129
+  - 版本 (version)，128
+- 序言部分 (preambles)，121
+- 前缀目录标签 (prefix directory tags)，174, 392
+  - - prefix <path> rpm -i
+    - 命令选项，18, 31-32
+  - 前缀重定位标签 (prefix relocation tag)，216-217
+  - - prefix rpm -i 命令选项，370
+  - - prefix <path> rpm -U
+    - 命令选项，46
+  - - prefix rpm -U 命令选项，371
+- 前缀（路径） (prefixes (paths))，221-223
+- PREIN - queryformat 标签，379
+- 安装前脚本 (preinstall scripts)，68, 132
+  - 安装 (installation)，32
+  - 查询 (queries)，32
+  - 升级 (upgrades)，51-52
+- 安装前任务（软件安装） (preinstall tasks (software installation))，19
+- 包安装前 (preinstallation (packages))，182
+- 序言（依赖项标签冲突） (preamble (dependency tag conflicts))，391
+- prep 部分 (prep sections)，121
+- prep%n 构建时脚本，179
+- 预处理器指令 (preprocessor directives)，422
+- Pretty Good Privacy, Inc.，421
+- Pretty Good Privacy，参见 PGP
+- PREUN - queryformat 标签，379
+- preun%n 卸载时脚本，183
+- 卸载前脚本 (preuninstall script)，132
+- **卸载后脚本 (preuninstall scripts)**，68
+  - 防止执行 (execution, preventing)，42
+  - 包 (packages)，39, 41
+  - rpm -e 命令，39
+- **包卸载前动作 (preuninstallaction (packages),)**，183
+- **防止 (preventing)**
+  - 卸载后脚本，执行，42
+  - 卸载前脚本，执行，42
+  - 脚本（执行） (scripts (execution))，51-52
+- **打印 (printing)**
+  - 页眉 (headers)，325
+  - 包（签名） (packages (signatures))，329
+- **原始源代码 (pristine sources)**，8, 120
+  - BOGUS 发行版，9
+  - PM，9
+- **私钥加密 (private key encryption)**，418
+- **处理 (processing)**
+  - 依赖项 (dependency)，320, 171
+  - spec 文件（操作系统） (spec files (operating systems))，203
+- **提供的包 (provided packages)**，213
+  - 能力 (capabilities)，65
+- **提供的能力 (provided capabilities)**，206
+- **PROVIDES** · --queryformat 标签，383
+- **provides 依赖项标签 (provides dependency tag)**，169, 390
+- · --provides rpm -q 命令选项，369
+- **provides 标签 (provides tag)**，212
+- **提供包 (providing packages)**，60
+- **代理服务器 (proxy servers)**，362
+  - ftp，34
+  - ISP，34
+  - 安全 (security)，34
+- **公钥加密 (public key encryption)**，418
+- **公钥 (public keys)**
+  - 定位 (locating)，95
+  - PGP，97, 238, 363
+
+## Q
+
+- **查询 (queries)**，117
+  - 数据库 (databases)，8, 10
+  - 文件 (files)，57-59
+  - 包标签 (package labels)，55-56
+- 包 (packages)，57
+  - 数组迭代器 (array iterators)，71-72
+  - 二进制 (binary)，62
+  - 能力 (capabilities)，65-66
+  - 兼容性 (compatibility)，60
+  - 自定义 (customizing)，68
+  - 数据 (data)，61-62
+  - 发行版 (distribution)，62
+  - 文档 (documentation)，63
+  - 转义序列 (escape sequences)，69
+  - 字段宽度 (field width)，70
+  - 文件 (files)，57-59, 64
+  - 组 (groups)，59-60
+  - 已安装 (installed)，57
+  - 对齐方式 (justification)，70
+  - 标签 (labels)，55-56
+  - 字面文本 (literal text)，69
+  - 可读数据 (readable data)，70-71
+  - 脚本 (scripts)，67-68
+  - 单条目标签 (single-entry tags)，73
+  - 源 RPM 文件 (source RPM files)，62
+  - 标准输入 (standard input)，59
+  - 摘要 (summary)，62
+  - 标签 (tags)，70, 73-74
+  - URLs，59
+  - 版本 (version)，61
+
+- PMS，9
+- 脚本 (scripts)，32
+- 标签 (tags)，73-74
+- · --query 命令，参见 rpm -q
+- · --queryformat rpm -q 命令选项，369
+- · --queryformat 标签
+  - ARCH，379
+  - ARCHIVESIZE，382
+  - AUTOREQPROV，385
+  - BUILDLHOST，377
+  - BUILDROOT，384
+  - BUILDTIME，377
+  - CHANGELOG，378
+  - CONFLICTFLAGS，384
+  - CONFLICTNAME，384
+  - CONFLICTVERSION，384
+  - COPYRIGHT，378
+  - DEFAULTPREFIX，384
+  - DESCRIPTION，377
+  - DISTRIBUTION，377
+  - EXCLUDE，382
+  - EXCLUDEARCH，385
+  - EXCLUDEOS，385
+  - EXCLUSIVE，382
+  - EXCLUSIVEARCH，385
+  - EXCLUSIVEOS，385
+  - FILEFLAGS，381
+  - FILEGIDS，380
+  - FILEGROUPNAME，382
+  - FILELINKTOS，381
+  - FILEMD5，381
+  - FILEMODES，380
+  - FILEMTIMES，381
+  - FILENAMES，380
+  - FILENDEV，381
+  - FILESIZES，380
+  - FILESTATES，380
+  - FILEUIDS，380
+  - FILESERNAME，382
+  - FILEVERIFYFLAGS，382
+  - GIF，378
+  - GROUP，378
+  - ICON，382
+  - INSTALLPREFIX，384
+  - INSTALLTIME，377
+  - NAME，376
+  - NOPATCH，383
+  - NOSOURCE，383
+  - OS，379
+  - PACKAGER，378
+  - PATCH，379
+  - POSTIN，379
+  - POSTUN，379
+  - PREIN，379
+  - PREUN，379
+  - PROVIDES，383
+  - RELEASE，376
+  - REQUREFLAGS，383
+  - REQURLENAME，383
+  - REQUREVERSION，383
+  - ROOT，381
+  - RPMVERSION，385
+  - SERIAL，376
+  - SIZE，377
+  - SOURCE，378
+  - SOURCERPM，382
+  - SUMMARY，377
+  - TRIGGERINDEX，386
+  - TRIGGERFLAGS，386
+  - TRIGGERNAME，385
+  - TRIGGERSCRIPTS，385
+  - TRIGGERVERSION，386
+

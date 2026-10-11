@@ -1457,6 +1457,7 @@
 +   [Linux 最大安全：黑客视角下的 Linux 服务器与工作站保护指南](docs/maximum-linux-security-a-hackers-guide-to-protecting-your-li/README.md)
 +   [RPM 权威指南](docs/maximum-rpm-rpm-other-sams/README.md)
 +   [Maximum RPM：极致挑战 Red Hat 包管理器](docs/maximum-rpm-taking-the-red-hat-package-manager-to-the-limit/README.md)
++   [Maximum RPM：RPM 打包技术高级指南](docs/maximum-rpm-the-ultimate-source-for-advanced-rpm-packaging-t/README.md)
 +   [也许人就是时代](docs/maybe-the-people-would-be-the-times/README.md)
 +   [麦格罗希科学与技术百科全书（第5版）](docs/mcgraw-hill-concise-encyclopedia-of-science-technology-5th-e/README.md)
 +   [麦格罗手册科学与技术百科全书（第五版）](docs/mcgraw-hill-concise-encyclopedia-of-science-technology-fifth/README.md)
