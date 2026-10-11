@@ -1,0 +1,1 @@
+that the attacker can attempt to crack offline. Once cracked the encrypted service ticket will reveal the accounts plain text password.

@@ -1573,6 +1573,7 @@
 +   [Pack 未来之路](docs/pack-to-the-future/README.md)
 +   [Painless Vim：最强大编辑器的理性指南](docs/painless-vim-a-sane-persons-guide-to-the-worlds-most-powerfu/README.md)
 +   [PAM 高级指南](docs/pam-mastery/README.md)
++   [kali linux 密码破解](docs/password-cracking-with-kali-linux/README.md)
 +   [图案纹样：素材书 Graham McCallum. 四千个图案纹样](docs/pattern-motifs-a-sourcebook-graham-mccallum-four-thousand-pa/README.md)
 +   [模式：面向服务的架构与 Web 服务](docs/patterns-service-oriented-architecture-and-web-services/README.md)
 +   [PC magazine® Windows XP Media Center Edition 2005 指南：全面整合数字生活中心的完整指南](docs/pc-magazine-guide-to-windows-xp-media-center-edition-2005-yo/README.md)
