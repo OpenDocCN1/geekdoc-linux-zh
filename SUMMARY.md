@@ -1313,6 +1313,7 @@
 +   [Linux User & Developer 171 - 24 小时打造更优服务器 171](docs/linux-user-developer-171---better-servers-in-24-hours-171/README.md)
 +   [Linux 用户与开发者 172 - 掌控命令行界面 172](docs/linux-user-developer-172---take-charge-of-the-command-line-i/README.md)
 +   [Linux 用户与开发者 173 - 系统管理员生存技能 173](docs/linux-user-developer-173---sysadmin-survival-skills-173/README.md)
++   [Linux 用户与开发者 174 - 锁定您的系统](docs/linux-user-developer-174---lock-down-your-system-174/README.md)
 +   [Linux User & Developer 175 - 构建完美网络指南 175](docs/linux-user-developer-175---build-the-perfect-network-175/README.md)
 +   [Linux 用户与开发者 177 - 征服云端 177](docs/linux-user-developer-177---conquer-the-cloud-177/README.md)
 +   [Linux User & Developer 178 - Ubuntu 17.04 启动包 178](docs/linux-user-developer-178---ubuntu-1704-launch-pack-178/README.md)
