@@ -1,0 +1,357 @@
+
+## 主题索引
+
+- failure semantics（失效语义），538
+- fake directory create times（伪造目录创建时间），714
+- fake oplocks（伪机会锁），253, 714
+- fake-permissions 模块，485
+- fake_permissions，56
+- fake_perms，431, 485
+- fdisk，434
+- Federated Identity Management（联合身份管理），参见 FIM
+- federated organizations（联合组织），49
+- federated-identity（联合身份），49
+- Fiber Channel（光纤通道），539
+- fiddle，115
+- fid，537
+- file access permissions（文件访问权限），243
+- File Naming Conventions（文件命名约定），246
+- file ownership（文件所有权），75
+- file serving（文件服务），299
+- File System（文件系统），245
+  - case sensitivity（大小写敏感性），245
+  - feature comparison（功能对比），245
+  - UNIX，245
+  - Windows，245
+- file system capabilities（文件系统功能），249
+- FILE:，340
+- filemanager，133
+- filename mangling（文件名乱码处理），550
+- filter（过滤器），362
+- Filter Oplock（过滤机会锁），267
+- FilterLimit，370
+- filters（过滤器），362
+- FIM，50, 148
+- firewall（防火墙），281, 283, 579
+  - firewall active（防火墙激活），283
+  - firewall setups（防火墙配置），283
+- fixed IP address（固定 IP 地址），99, 100
+- fixed IP addresses（固定 IP 地址），97
+- flush local locks（清空本地锁），267
+- flush name cache（清空名称缓存），138
+- follow symlinks（跟随符号链接），715
+- foomatic，359, 361, 369, 374, 406, 407
+- Foomatic database（Foomatic 数据库），410
+- Foomatic Printer（Foomatic 打印机），369
+- Foomatic tutorial（Foomatic 教程），409
+- foomatic-rip，361, 369, 372, 406, 408, 409
+- Foomatic/cupsomatic，374
+- force an election（强制选举），125
+- force create mode（强制创建模式），252, 258, 702, 715, 725
+- force directory mode（强制目录模式），252, 258, 709, 715, 725
+- force directory security mode（强制目录安全模式），252, 258, 709, 715
+- force election（强制选举），126
+- force group（强制组），250, 251, 716
+- force printname（强制打印名称），717
+- force security mode（强制安全模式），252, 258, 717, 767
+- force unknown acl user（强制未知 ACL 用户），214, 717
+- force user（强制用户），250, 251, 264, 270, 717, 718
+- forced synchronization（强制同步），122
+- foreign domain（外部域），147, 182
+- foreign SID（外部 SID），442
+- foreign user（外部用户），442
+- FQDN，619
+- framing error（成帧错误），618
+- free support（免费支持），627, 628
+- FreeBSD，61, 526
+- freezing（冻结），434
+- French（法语），572
+- front-end virtual server（前端虚拟服务器），537
+- frustrating experience（令人沮丧的体验），149
+- fstype，718
+- FTP，147
+- ftp，532, 596
+- ftp access（FTP 访问），455
+- ftp service（FTP 服务），454
+- ftp services（FTP 服务），455
+- ftpd，498
+- full rights（完全权限），181
+- functional components（功能组件），592
+- functionality（功能），559
+- gateway address（网关地址），99
+- gcc，585, 605
+- gdb，585, 593
+- GDI，354, 377
+- general security service application programming interface（通用安全服务应用程序编程接口），参见 GSSAPI
+- generic PostScript（通用 PostScript），361
+- generic raster（通用光栅），365
+- generic raster format（通用光栅格式），360
+- genlogon.pl，464
+- Gentoo，617
+- Germany（德国），535
+- get，582
+- git quota command（git 配额命令），718
+- getdriver，319, 322
+- getdirdver，395
+- getent，192, 228, 450
+- getent group demo，182
+- gethostbyname() function call（gethostbyname() 函数调用），132
+- getpwnam，162, 222
+- getpwname() call（getpwname() 调用），555
+- GetSID.exe，484
+- gotwd cache（gotwd 缓存），719
+- GhostScript，另见 PostScript 356, 357
+- Ghostscript，360, 372
+- ESP，参见 ESP GhostScript 358
+- GID，72, 77, 83, 89, 147, 148, 177, 178, 189, 193, 221-225, 439, 442, 450
+- GID numbers（GID 编号），223
+- GID range（GID 范围），287
+- GIF，362
+- Gimp-Print，366, 409
+- global print command（全局打印命令），312
+- global right（全局权限），238
+- global section（全局节），306
+- Global support（全球支持），560
+- global-level（全局级别），301
+- GNOME，463
+- GNU Ghostscript，360, 365
+- GNU GPL，532
+- GNU tar，532
+- GNU/Linux，429
+- GPG，597
+- GPL，463
+- gpoldmg.exe，471
+- GPOs，467, 469, 470, 472, 473, 489
+- grace time（宽限时间），156
+- grant rights（授予权限），237
+- graphical objects（图形对象），356
+- graphically illustrated client configuration（图形化客户端配置说明），97
+- grayscale（灰度），369
+- greater scalability（更高的可扩展性），143
+- greatest mistake（最大的错误），95
+- grep，446
+- group（组），72, 149, 150, 248, 716
+  - account（账户），55
+  - mapping（映射），48
+- group account（组账户），182, 225
+- group accounts（组账户），105, 149, 177, 180, 223
+- group management（组管理），190
+- group mapping（组映射），177
+- group mappings（组映射），178
+- group membership（组成员资格），181
+- group ownership（组所有权），439
+- group permissions（组权限），561
+- Group Policies（组策略），467
+- group policies（组策略），467
+- Group Policy（组策略），468
+- group policy（组策略），56
+- Group Policy Container（组策略容器），参见 GPC 470
+- Group Policy Editor（组策略编辑器），468, 473, 565
+- Group Policy Objects（组策略对象），参见 GPO 467, 560
+- group policy objects（组策略对象），参见 GPOs 467
+- Group Policy Template（组策略模板），参见 GPT 470
+- group privileges（组特权），179
+- group profiles（组配置文件），485
+- group SID（组 SID），208
+- groupadd，178, 185, 186
+  - groupadd limitations（groupadd 局限性），185
+- groupdel，178
+- groupmap，177
+- grouprold，178
+- grouppol.inf，468
+- groups（组），190, 467
+  - domain（域），180
+  - mapping（映射），177
+  - nested（嵌套），181
+- groups of users（用户组），201
+- growing（增长），434
+- GSSAPI，49
+- gtklp，410
+- guest（访客），55, 93
+- guest account（访客账户），93, 94, 134, 138, 309, 312, 579, 719, 720, 741, 742, 761, 769-771
+- guest ok（允许访客），251, 309, 310, 316, 705, 719, 720, 766
+- guest only（仅限访客），720, 769
+- GUL，347
+- h-node，117, 118
+- harvesting password hashes（收集密码哈希），168
+- hashed password equivalent（哈希密码等效），144
+- headers files（头文件），88
+- Heimdal，85, 86, 227, 496
+- Heimdal kerberos（Heimdal Kerberos），227, 230
+- help（帮助），627
+- help command（帮助命令），582
+- heterogeneous computing（异构计算），439
+- HEX，525
+- hi-res photo（高分辨率照片），369
+- hide dot files（隐藏点文件），253, 720
+- hide files（隐藏文件），253, 720
+- hide special files（隐藏特殊文件），721
+- hide unreadable（隐藏不可读文件），252, 721
+- hide unwritable files（隐藏不可写文件），252, 721
+- high availability（高可用性），535
+- high order ports（高位端口），283
+- high-availability（高可用性），268
+- high-availability services（高可用性服务），539
+- high-speed server interconnect（高速服务器互连），539
+- higher availability（更高可用性），295
+- **HKEY_CURRENT_USER**，487
+- **HKEY_LOCAL_MACHINE**，469
+- holy grail（圣杯），439
+- home directories（主目录），143, 450
+- home directory（主目录），77, 160
+- home directory template（主目录模板），455
+- home drive（主驱动器），68
+- homeDir map（homeDir 映射），721, 748
+- host msdfs（托管 MSDFS），295, 722, 746
+- host multiple servers（托管多台服务器），545
+- host security（主机安全），281
+- host-based protection（基于主机的保护），281
+- hostname（主机名），86
+- hostname lookups（主机名查找），722
+- hosts allow（允许主机），282, 310, 579, 722, 723
+- hosts deny（拒绝主机），282, 310, 579, 722, 723
+- hosts equiv（等效主机），723
+- house-keeping（维护），238
+- HOWTO documents（HOWTO 文档），149
+- HP JetDirect，374
+- HP Photosmart，410
+- HP-GL，362
+- HP-GL，363
+- hpgltops，362
+- HPJS，409
+- HPUX，307
+- http，532
+- hybrid（混合模式），118
+- Hybrid node（混合节点），130
+- IANA，365
+- ID mapping（ID 映射），73, 550
+- ID mapping database（ID 映射数据库），444
+- ID range（ID 范围），177
+- IDEALX，161
+- Identification（标识），105
+- identify（识别），228
+- identity（身份），222
+- identity information（身份信息），50
+- identity management（身份管理），48, 81
+  - centralized（集中式），49
+- identity resolution（身份解析），439
+- IDMAP，178, 221-223, 228
+- idmap，557
+- IDMAP backend（IDMAP 后端），148
+- idmap backend（idmap 后端），72, 73, 147, 223, 224, 439, 724, 819
+- idmap GID，557
+- idmap gid，147, 178, 223, 224, 228, 439, 548, 508, 724, 816, 819
+- IDMAP infrastructure（IDMAP 基础设施），221
+- idmap UID，557
+- idmap uid，147, 177, 178, 223, 224, 228, 439, 458, 508, 724, 816, 819
+- idmap-ad，148
+- idmap.lad module（idmap.lad 模块），557
+- idmap_rid，223, 228
+- IETF，347
+- ifconfig，601, 618
+- ignore connection（忽略连接），283
+- imagetoraster，365
+- immutable（不可变的），249
+- impersonate（冒充），168
+- implementing oplocks（实施机会锁），270
+- Implicit Classes（隐式类），425
+- important announcements（重要公告），284
+- Ipoints，341
+- imprints（印记），353
+- include（包含），543, 725
+- independent（独立的），91, 544
+- individual domain user（单个域用户），181
+- individual section（独立节），306
+- inetd，568, 580, 600
+- inetd.conf，580, 581
+- inetpperson.schema，163
+- inf file（inf 文件），319
+- infrastructure（基础设施），148, 441
+- inherit acIs（继承 ACL），725
+- inherit owner（继承所有者），725
+- inherit permissions（继承权限），725
+- inheritance（继承），249
+- inherits rights（继承权限），179
+- initdb.idif，29
+- initGroups.sh，26, 185, 186, 563
+- inktpy，369
+- insecure（不安全的），91, 282
+- inspire simplicity（启发简洁性），92
+- inspired structure（灵感结构），535
+- install drivers（安装驱动程序），299, 313
+- interactive help（交互式帮助），627
+- interdomain
+  - trust
+    - account（账户），47
+    - trustrs（信任者），34
+- interdomain connection（跨域连接），291
+- interdomain trust（跨域信任），290, 292
+- interdomain trust accounts（跨域信任账户），141, 149
+- Interdomain Trusts（跨域信任），287
+  - Completing（完成），289
+  - creating（创建），289
+  - Facilities（设施），289
+- interdomain trusts（跨域信任），190, 288
+- interface（接口），98
+- interface scripts（接口脚本），152
+- interface-based exclusion（基于接口的排除），281
+- interfaces（接口），126, 134, 283, 544, 545, 581, 601, 698, 725, 747
+- intermediate information（中间信息），149
+- intermediate tools（中间工具），148
+- internal ordering（内部排序），567
+- internationalization support（国际化支持），568
+- Internet（互联网），282, 283
+- Internet Engineering Task Force（互联网工程任务组），参见 IETF 347
+- Internet Printing Protocol（互联网打印协议），参见 IPP 347
+- Internet Protocol TCP/IP（互联网协议 TCP/IP），101
+- Internetworking Packet Exchange（网际分组交换），参见 IPX 516
+- internetworking super daemon（网际超级守护进程），567
+- interoperability（互操作性），33, 47, 49, 221, 243, 439, 538
+- intolerance（不容忍），535
+- invalid shell（无效 Shell），38
+- invalid users（无效用户），250, 251, 579, 726, 764
+- IP address（IP 地址），581
+- IP address automatically（自动分配 IP 地址），98, 100
+- IP addresses（IP 地址），512
+- IP aliases（IP 别名），99
+- IPC$，59, 134, 284
+- IPC$ connections（IPC$ 连接），537
+- ipchains，579
+- ipconfig，119
+- iPlanet，80
+- IPP，391
+- IPP client（IPP 客户端），423
+- iptables，579
+- IPX，131
+- IRC，627
+- IRIX，429, 526
+- ISC
+  - DHCP，631
+  - DNS，631
+- ISC DHCP server（ISC DHCP 服务器），98, 102
+- isolated workgroup（孤立工作组），123
+- IXFR，512
+- Japanese（日语），525, 572
+- Japanese locale（日语区域设置），526
+- Japanese UNIX（日本 UNIX），526
+- Java，527
+- JIS X 0208，525
+- join（加入），226
+- join client（加入客户端），238
+- join domain（加入域），62
+- join the ADS domain（加入 ADS 域），82
+- join the domain（加入域），81, 82
+- join the machine（加入机器），80
+- joined client（已加入客户端），77
+- Joined domain（已加入域），82
+- joining domain（正在加入域），448
+- joining the domain（正在加入域），82
+- JPEG，362
+- KB 12902，279
+- KB 224992，279
+- KB 296264，279
+- KB 811492，278
+- KB 812937，278
+- KDC，84, 87
+- KDE，463
+- KDE konqueror，462

@@ -1,0 +1,15 @@
+Another common cause of these two errors is having something already running on port 139, such as Samba (smbd is running from inetd already) or Digital's Pathworks. Check your **inetd.conf** file before trying to start smbd as a daemon — it can avoid a lot of frustration! And yet another possible cause for failure of this test is when the subnet mask and/or broadcast address settings are incorrect. Please check that the network interface IP address/broadcast address/subnet mask settings are correct and that Samba has correctly noted these in the **log.nmbd** file.
+
++   4. Run the command **nmblookup -B BIGSERVER_SAMBA...**. You should get back the IP address of your Samba server. If you do not, then nmbd is incorrectly installed. Check your **inetd.conf** if you run it from there, or that the daemon is running and listening to UDP port 137. One common problem is that many inetd implementations can't take many parameters on the command line. If this is the case, then create a one-line script that contains the right parameters and run that from inetd.
+
++   5. Run the command **nmblookup -B ACLIENT *\***. You should get the PC's IP address back. If you do not, then the client software on the PC isn't installed correctly, or isn't started, or you got the name of the PC wrong. If ACLIENT does not resolve via DNS, then use the IP address of the client in the above test.
+
++   6. Run the command **nmblookup -d 2 *\***. This time we are trying the same as the previous test but are trying it via a broadcast to the default broadcast address. A number of NetBIOS/TCP/IP hosts on the network should respond, although Samba may not catch all of the responses in the short time it listens. You should see the **got a positive name query response** messages from several hosts. If this does not give a result similar to the previous test, then nmblookup isn't correctly getting your broadcast address through its automatic mechanism. In this case you should experiment with the **interfaces** option in **smb.conf** to manually configure your IP address, broadcast, and netmask. If your PC and server aren't on the same subnet, then you will need to use the -B option to set the broadcast address to that of the PC's subnet. This test will probably fail if your subnet mask and broadcast address are not correct. (Refer to test 3 notes above).
+
++   7. Run the command **smbclient //BIGSERVER/TMP**. You should then be prompted for a password. You should use the password of the account with which you are logged into the UNIX box. If you want to test with another account, then add the **-U accountname** option to the end of the command line — for example, **smbclient //bigserver/tmp -U johndoe**.
+
+![](bbox=[0.11, 0.83, 0.15, 0.88])
+
+> It is possible to specify the password along with the username as follows: **smbclient //bigserver/tmp -U johndoe%secret**.
+
+Once you enter the password, you should get the **smb>** prompt. If you do not, then

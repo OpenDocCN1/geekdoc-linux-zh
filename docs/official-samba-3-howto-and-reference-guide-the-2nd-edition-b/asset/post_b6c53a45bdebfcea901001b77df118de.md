@@ -1,0 +1,362 @@
+
+## Subject Index
+
+- KDE session, 462
+- KDEPrint, 347
+- keepalive, 727
+- Kerberos, 84, 86–88, 288, 443, 496, 556
+  - /etc/krb5.conf, 85
+- kerberos, 47, 85, 227
+- Kerberos authentication, 88
+- kernel change notify, 727
+- kernel clocks, 727, 731
+- killall, 601
+- kinit, 85–88
+- kixstart, 562
+- kprinter, 410
+- KRB, 227
+- KR5, 85
+- krb5.conf, 85
+- LAN, 125, 539, 585
+- LanMan, 48, 66, 76, 143, 313
+- lanman auth, 727, 746
+- LanMan logon service, 54
+- LanMan passwords, 142
+- LanManager, 35, 104
+- LanManager-compatible, 128
+- laptops, 532
+- large directory, 541
+- large domain, 228
+- large numbers of files, 541
+- large organizations, 288
+- large readwrite, 728
+- latency, 269
+- laws, 152
+- LDAP, 47, 49–51, 69, 71, 72, 74, 76, 80, 81, 89, 141, 143, 144, 147–150, 160–162, 165, 166, 183, 221, 223–225, 287, 288, 313, 439, 443, 496, 556, 560
+  - directories, 148
+  - master, 68, 69
+  - server, 69
+  - slave, 65, 68
+- ldap admin dn, 71, 89, 728, 805
+- LDAP administration password, 71
+- LDAP administrative password, 89
+- LDAP backend, 92, 225, 549
+- LDAP backends, 147
+- LDAP database, 72, 164, 560
+- ldap delete dn, 728
+- LDAP deployment, 148
+- LDAP directory, 148, 161, 550
+- ldap group suffix, 557, 728
+- LDAP idmap Backend, 147
+- ldap idmap suffix, 71, 89, 557, 728
+- ldap machine suffix, 557, 728, 730
+- ldap passwd sync, 170, 728, 729
+- ldap port, 729
+- LDAP queries, 557
+- LDAP redirects, 224
+- ldap replication sleep, 69, 729
+- LDAP server, 224
+- ldap server, 729, 730
+- ldap ssl, 168, 730, 752
+- ldap suffix, 71, 557, 728, 730
+- ldap timeout, 730
+- ldap user suffix, 557, 730
+- LDAP-based, 147, 287
+- LDAP-, 149
+- LDAP/Kerberos, 549
+- LDAPS, 168
+- ldapsnn, 55, 76, 141, 160, 161, 183, 224, 557, 560
+- ldapsam:trusted, 729
+- ldapsam.compat, 142, 557
+- ldapsearch, 556
+- LDAPv3, 168
+- ldconfig, 446
+- ldd, 348
+- LDIF, 165, 556
+- LDIF file, 164
+- legacy systems, 49
+- legal UNIX system account name, 90
+- Level Oplock, 267
+- Level2 oplock, 267
+- Level2 oplocks, 267
+- level2 oplocks, 731
+- LGPL, 161
+- lib cups, 311, 348
+- libcups.so, 348
+- libcups.so.2, 348
+- Liberty Alliance, 49
+- libcov, 527
+- libnss-winbind, 181, 446
+- libnss_winbind.so, 443, 446
+- libnss_winbind.so, 514
+- libraries, 85
+- lixoML2, 172
+- licensing, 559
+- limitations, 288
+- linewideth, 356
+- link loader configuration, 447
+- Links
+  - hard, 246
+  - soft, 246
+- Linux, 148, 495, 526
+- Linux High Availability project, 539
+- Linux LVM, 434
+- Linux LVM partition, 434
+- LinuxKongress2002, 409
+- Linuxprinting.org, 369, 405, 409
+- list of domain controllers, 82
+- listen for connections, 283
+- listen own socket, 544
+- LLC, 511
+- lm announce, 116, 731
+- lm interval, 116, 731
+- LM/NT password hashes, 159, 168
+- LMB, 54, see Local Master Browser 118, 122–127, see Local Master Browser 127, 128, 131, 133, 135–137
+- LMIHOSTS, 122, 516
+- lmhosts, 128
+- load balancing, 295
+- load printers, 303, 304, 307, 731, 759
+- loaded modules, 429
+- loading printer drivers, 309
+- local
+  - groups, 190
+  - master browser, 54
+- local access permissions, 182
+- local accounts, 223
+- local administrative privileges, 181
+- Local Area Connection, 98
+- Local Area Connection Properties, 100
+- local authentication, 91
+- local authentication database, 92
+- local cache, 516
+- local disk, 532
+- local domain, 442
+- local group, 241
+- local groups, 181, 182, 222, 443
+- Local Machine Trust Account, 73
+- local master, 116, 124, 125, 650, 732
+- Local Master Browser, 118, 124, 127
+- local master browser, see LMB 122
+- local names, 118
+- local print driver, 315
+- local profile, 477, 479
+- local profiles, 475
+- local registry values, 470
+- Local security policies, 423
+- local spbasswd file, 92
+- local spool area, 300
+- local subnet, 125
+- local system printing, 300
+- local UNIX groups, 189
+- local user, 222, 454
+- local user account, 147
+- local users, 222, 443
+- locale, 572
+- localhost, 282
+- locally known UID, 193
+- locate domain controller, 70
+- Lock caching, 266
+- lock dir, 732
+- lock directory, 544, 732, 742
+- lock password, 93
+- lock spin count, 732, 733
+- lock spin time, 732
+- lock the account, 156
+- locking, 265, 266, 537, 732
+- locking protocol, 265
+- locking semantics, 265, 266
+- locking.tdb, see also TDB 404
+- lookout, 41
+- log file, 431, 733
+- log files, 578
+  - monitoring, 578
+- log level, 90, 133, 228, 430, 480, 585, 592, 733
+- log.nmbd, 133, 581
+- logging, 431, 592
+- logical directories, 295
+- Logical Link Control, see LLC 516
+- logical volume, 434
+- Logical Volume Manager, see LVM 433
+- Login, 147
+- login, 454, 495
+- login name, 5
+- login shells, 148
+- LoginID, 222
+- logon, 37
+- logon authentication, 71
+- logon drive, 56, 480, 733
+- logon home, 56, 169, 176, 476, 477, 480, 483, 733, 734
+- logon name, 201
+- logon path, 56, 174, 477, 479, 480, 483, 734
+- logon processing, 56
+- logon requests, 66, 70, 74
+- logon script, 56, 76, 174, 735
+- Logon Scripts, 560
+- Logon scripts, 562
+- logon server, 59, 487
+- logons, 476
+- lookups, 159
+- loopback adapter, 580
+- loopback interface, 283, 607
+- lower-case, 35
+- lowercase filenames, 542
+- lp, 302, 425
+- lpadmin, 370, 376, 405, 413
+- LPD, 307
+- lprint, 368
+- lpause command, 349, 379, 418, 736, 737
+- lpc cache time, 308, 736
+- lpc command, 308, 349, 418, 736
+- lpremove command, 349, 418, 737
+- lprm command, 349, 418, 737
+- LPRNG, 307
+- lprstat, 4, 403
+- LPT1:, 340
+- LsaEnumerTrustedDomains, 585
+- LTSP, 463
+- LUSTRE, 537
+- lvcreate, 434
+- LVM, 433, 434
+- LVM snapshots, 435
+- LVM volume, 434, 435
+- lvm10 package, 434
+- m-node, 117
+- MAC address, 512
+- MAC Addresses, 513
+- Mac OS X, 527
+- machine, 149
+  - account, 37
+- machine account, 47, 48, 51, 69, 160, 235
+- machine account password
+  - change protocol, 83
+- machine accounts, 77, 149, 150, 235
+- machine accounts database, 66
+- machine authentication, 81
+- machine name, 513, 515
+- machine password timed, 738
+- Machine Policy Objects, 560
+- machine SID, 208
+- Machine Trust Account, 76–78, 80
+  - creation, 79
+  - password, 78
+  - UNIX account, 79
+- machine trust account, 48, 53, 59, 75, 80, 87, 89
+  - create privilege, 79
+  - creation, 77
+  - password, 53, 76
+- Machine Trust Accounts, 73, 76
+  - creating, 77
+- machine trust accounts, 74, 78, 89, 141, 149
+- machine-name, 78
+- machine-nickname, 78
+- Macintosh, 527
+- macros, 311
+- magic output, 738, 739
+- magic script, 738
+- mail, 148
+- mailing list, 627
+- mailing lists, 627
+- maintaining ids, 550
+- make, 514, 598
+- man, 567
+- man page, 448
+- man pages, 190
+- man-in-the-middle, 235
+- manage accounts, 152
+- manage drivers, 299
+- manage groups, 201
+- manage printers, 201
+- manage privileges, 236
+- manage roaming profiles, 475
+- manage share permissions, 252
+- manage share-level ACL, 183
+- manage shares, 201
+- manage users, 201
+- Manageability, 560
+- manageability, 559
+- managed by humans, 535
+- management bottleneck, 269
+- management costs, 148
+- management overheads, 48
+- management procedures, 49
+- management tools, 150
+- managing rights, 236
+- mandatory profiles, 484
+- Mandrake, 410
+- Mandriva, 410
+- mangle prefix, 740
+- mangled map, 739
+- mangled names, 739
+- mangling char, 739, 740
+- mangling method, 740
+- manual UNIX account creation, 77
+- manual WINS server entries, 99, 101
+- manually configured, 102
+- manually configured DNS settings, 99
+- map, 80, 562
+- map acl inherit, 740
+- map archive, 725, 741, 777
+- map hidden, 725, 741, 776, 777
+- map system, 725, 741, 777
+- map to guest, 316, 336, 422, 741, 768-771
+- mapped, 182, 189, 193
+- mapping, 147, 193
+- mapping home directory, 285
+- mapping printer driver, 327
+- mappings, 89
+- maps UNIX users and groups, 89
+- master browser, 125
+- master browsers, 135
+- master server, 560
+- master smb.conf, 545
+- MasterAnnouncement, 136
+- match case, 541
+- max connections, 732, 742
+- max disk size, 742
+- max log size, 431, 743
+- max mux, 743
+- max open files, 743
+- max print jobs, 307, 743
+- max protocol, 743, 746
+- max reported print jobs, 744
+- max smbd processes, 744
+- max stat cache size, 744
+- max ttl, 744
+- max wins ttl, 744
+- max xmit, 616, 745
+- maximum value, 287
+- mbuf kept spawning, 618
+- Meccano set, 531
+- mechanism, 82
+- media type, 369
+- member, 52, 237
+- member machine, 181
+- memory, 146
+- message command, 745
+- messages.tdb, see also TDB 404
+- messaging system, 148
+- Meta node, 130
+- meta-directory, 49
+- meta-service, 3, 4
+- meta-services, 544
+- Microsoft Active Directory, 496
+- Microsoft Developer Network CDs, 587
+- Microsoft driver, 382
+- Microsoft management console, see MMC 48
+- Microsoft Remote Procedure Call, see MSRPC 442
+- Microsoft Windows 9x/Me, 78
+- Microsoft Wollpack, 539
+- middle-ware, 148
+- migrate, 33, 559
+- migrate account settings, 562
+- migrate accounts, 158
+- migrate group, 562
+- migrate user, 562
+- migrating, 550
+- migration, 560
+- migration plan, 559
+- migration process, 559
+- MIME, 361-363, 371
+  - filters, 361
+  - raw, 17, 94, 352
+- MIME conversion rules, 360

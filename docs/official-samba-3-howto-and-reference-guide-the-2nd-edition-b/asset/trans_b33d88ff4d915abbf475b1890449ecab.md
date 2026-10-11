@@ -1,0 +1,194 @@
+
+通过执行以下命令，可以添加一个名为“SupportEngrs”的 Windows 组账户：
+
+```
+root#  net rpc group add "SupportEngrs" -Uroot%not24get
+```
+
+添加完成后，新的组账户将立即可用，可通过执行此命令进行验证：
+
+```
+root#  net rpc group list -Uroot%not24get
+Password:
+Domain Admins
+Domain Users
+Domain Guests
+Print Operators
+Backup Operators
+Replicator
+Domain Computers
+Engineers
+SupportEngrs
+```
+
+以下内容演示了通过调用 *add group script = /opt/IDEALX/sbin/smbldap-groupadd -p “%g” interface script* 已创建了 POSIX（UNIX/Linux 系统账户）组：
+
+```
+root#  getent group
+..
+Domain Admins:x:512:root
+Domain Users:x:513:ght,ict,ajt,met
+Domain Guests:x:514:
+Print Operators:x:550:
+Backup Operators:x:551:
+Replicator:x:552:
+Domain Computers:x:553:
+Engineers:x:1002:ght
+SupportEngrs:x:1003:
+```
+
+以下内容演示了使用 *net* 命令添加组账户会导致已创建的 POSIX 组立即映射到 Windows 组账户，如下所示：
+
+```
+root#  net groupmap list
+Domain Admins (S-1-5-21-72630-4128915-11681869-512) -> Domain Admins
+Domain Users (S-1-5-21-72630-4128915-11681869-513) -> Domain Users
+Domain Guests (S-1-5-21-72630-4128915-11681869-514) -> Domain Guests
+Print Operators (S-1-5-21-72630-4128915-11681869-550) -> Print Operators
+Backup Operators (S-1-5-21-72630-4128915-11681869-551) -> Backup Operators
+Replicator (S-1-5-21-72630-4128915-11681869-552) -> Replicator
+Domain Computers (S-1-5-21-72630-4128915-11681869-553) -> Domain Computers
+Engineers (S-1-5-21-72630-4128915-11681869-3005) -> Engineers
+SupportEngrs (S-1-5-21-72630-4128915-11681869-3007) -> SupportEngrs
+```
+
+### 12.3.1.2 将 Windows 组映射到 UNIX 组
+
+Windows 组必须映射到 UNIX 系统（POSIX）组，以便能够以一种与托管 Samba 服务器的主机操作系统所采用的适当方法一致的方式实施文件系统访问控制。
+
+在托管 Samba 服务器的 UNIX/Linux 服务器文件系统内，所有文件系统（文件和目录）访问控制都是通过 UID/GID 身份元组实现的。Samba 在某种程度上都不会覆盖或替换 UNIX 文件系统语义。因此，所有访问文件系统的 Windows 网络操作都需要提供一种机制，将 Windows 用户映射到特定的 UNIX/Linux 组账户。用户账户还必须映射到本地已知的 UID。请注意，**net** 命令在此处不会调用任何 RPC 函数，而是直接访问 passwd。
+
+Samba 依赖于 Domain Admins、Domain Users 和 Domain Guests 全局组的默认映射。可以像刚才给出的示例那样添加额外的组。有时需要将现有的 UNIX 组账户映射到 Windows 组。此操作实际上会创建映射，从而作为结果创建一个 Windows 组账户。
+
+允许的操作包括：**添加**、**修改**和**删除**。每个操作的示例如下所示。
+
+在此示例中，可以将现有的 UNIX 组映射到现有的 Windows 组：
+
+```
+root# net groupmap modify ntgroup="Domain Users" unixgroup=users
+```
+
+如下所示，可以将现有的 UNIX 组映射到新的 Windows 组：
+
+```
+root# net groupmap add ntgroup="EliteEngrs" unixgroup=Engineers type=d
+```
+
+```
+root#  net groupmap add ntgroup=EngineDrivers unixgroup=Engineers type=d
+```
+
+删除和添加操作仅影响被称为 Windows 组或域组的逻辑实体。这些操作对 UNIX 系统组没有影响，这意味着它们既不删除也不创建 UNIX 系统组。将 UNIX 组映射到 Windows 组会使该 UNIX 组可作为 Windows 组使用，从而允许在域成员客户端（工作站和服务器）上的文件和文件夹为域用户和组提供全域范围的访问控制。
+
+可以创建两种类型的 Windows 组：域（全局）和本地。在之前的示例中，创建的 Windows 组类型为域或全局。以下命令将创建一个类型为本地的 Windows 组。
+
+```
+root#  net groupmap add ntgroup=Pixies unixgroup=pixies type=l
+```
+
+支持的映射类型为 'd'（域全局）和 'l'（域本地），Samba 中的域本地组被视为相对于单个 Samba 服务器的本地组。可以使用 Samba 中的本地组来启用多级嵌套组支持。
+
+### 12.3.1.3 删除组账户
+
+通过执行以下命令可以删除组账户：
+
+```
+root#  net rpc group delete SupportEngineers -Uroot%not24get
+```
+
+建议验证删除操作。可以执行上述所示的相同命令。
+
+### 12.3.1.4 重命名组账户
+
+> **注意**
+> 
+> 此命令未在 man 页中记录；它在源代码中已实现，但目前不起作用。给出的示例根据源代码说明了其应有的工作方式。请留意未来版本的发布说明，以了解此问题何时可能已修复。
+
+有时需要重命名组账户。优秀的管理员知道，如果忽略这个简单的请求，某些管理者的要求可能会带来多大的痛苦。以下命令演示了如何将 Windows 组“SupportEngrs”重命名为“CustomerSupport”：
+
+```
+root# net rpc group rename SupportEngrs \
+CustomerSupport -Uroot%not24get
+```
+
+## 12.3.2 管理组成员身份
+
+关于组成员身份可以执行三种操作。可以：
+- (1) 将 Windows 用户添加到 Windows 组，
+- (2) 从 Windows 组中删除 Windows 用户，以及
+- (3) 列出作为 Windows 组成员的 Windows 用户。
+
+为了避免混淆，在尝试进行任何更改之前检查组成员身份是有意义的。`getent group` 将列出 UNIX/Linux 组成员。通过 `net groupmap` 命令映射的 Windows 组，其 UNIX/Linux 组成员也会被视为该 Windows 组的成员（参见第 11 章，“组映射：MS Windows 和 UNIX”）。以下 UNIX/Linux 组成员列表显示用户 ajt 是 UNIX/Linux 组 Engineers 的成员。
+
+```
+root# getent group
+.
+Domain Admins:x:512:root
+Domain Users:x:513:jht,ict,ajt,met,vlendecke
+Domain Guests:x:514:
+Print Operators:x:550:
+Backup Operators:x:551:
+Replicator:x:552:
+Domain Computers:x:553:
+Engineers:x:1000:jht,ajt
+```
+
+UNIX/Linux 组已映射到 Windows 组，如下所示：
+
+```
+root# net groupmap list
+Domain Admins (S-1-5-21-72630-412605-116429-512) -> Domain Admins
+Domain Users (S-1-5-21-72630-412605-116429-513) -> Domain Users
+Domain Guests (S-1-5-21-72630-412605-116429-514) -> Domain Guests
+Print Operators (S-1-5-21-72630-412605-116429-550) -> Print Operators
+Backup Operators (S-1-5-21-72630-412605-116429-551) -> Backup Operators
+Replicator (S-1-5-21-72630-412605-116429-552) -> Replicator
+Domain Computers (S-1-5-21-72630-412605-116429-553) -> Domain Computers
+Engineers (S-1-5-21-72630-412605-116429-3001) -> Engineers
+```
+
+鉴于用户 ajt 已经是 UNIX/Linux 组的成员，并且通过组映射也是 Windows 组的成员，再次尝试添加该账户应该会失败。这里对此进行了演示：
+
+```
+root#  net rpc group addmem "MIDEARTH\Engineers" ajt -Uroot%not24get
+Could not add ajt to MIDEARTH\Engineers: NT_STATUS_MEMBER_IN_GROUP
+```
+
+这表明 UNIX/Linux 组与 Windows 组之间的组映射是有效且透明的。
+
+为了允许使用 **net rpc group** 实用程序添加用户 ajt，必须首先移除该账户。以下是移除操作及其效果确认的演示：
+
+```
+root#  net rpc group delmem "MIDEARTH\Engineers" ajt -Uroot%not24get
+root#  getent group Engineers
+Engineers:x:1000:ajt
+root#  net rpc group members Engineers -Uroot%not24get
+MIDEARTH\ajt
+```
+
+在此示例中，在 UNIX/Linux 系统层面，该组不再包含 ajt 作为成员。上述内容也表明，在 Windows 组成员身份中也是如此。
+
+现在，使用 **net rpc group** 实用程序再次添加该账户：
+
+```
+root#  net rpc group addmem "MIDEARTH\Engineers" ajt -Uroot%not24get
+root#  getent group Engineers
+Engineers:x:1000:ajt,ajt
+root#  net rpc group members Engineers -Uroot%not24get
+MIDEARTH\ajt
+MIDEARTH\ajt
+```
+
+在此示例中，使用 **net rpc group** 实用程序验证了 Windows Domain Users 账户的成员。请注意，四个段落之前已显示了 UNIX/Linux 组的内容。Windows（域）组成员身份显示如下：
+
+```
+root#  net rpc group members "Domain Users" -Uroot%not24get
+MIDEARTH\jht
+MIDEARTH\lct
+MIDEARTH\ajt
+MIDEARTH\met
+MIDEARTH\vlendecke
+```
+
+此明确示例表明，Samba（与 MS Windows 一样）以不区分大小写的方式处理 Windows 组名：
+

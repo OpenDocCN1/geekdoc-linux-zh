@@ -1,0 +1,100 @@
+
+
+虽然此方法在早期 Samba-3 版本中可以正常工作，但如果未来版本中添加了 WINS 复制功能，该方法可能会发生变化。
+
+## 9.6 有用的提示
+
+以下提示值得仔细考虑，因为它们是很多新任网络管理员的绊脚石。
+
+### 9.6.1 Windows 网络协议
+
+浏览问题的常见原因是在 MS Windows 机器上安装了多个协议。
+
+> **警告**
+> 不要在 MS Windows 客户端上使用多个协议。
+
+每台 NetBIOS 机器都会参与每 15 分钟一次的 LMB（以及 DMB）选举过程。会使用一套选举标准来确定赢得该选举过程的优先顺序。运行 Samba 或 Windows NT 的机器会具有偏见，因此最合适的机器将可预测地获胜，从而保持其角色。
+
+选举过程在某种意义上是通过每个 NetBIOS 网络接口进行的。对于同时安装了 TCP/IP 和 IPX 且在这两种协议上都启用了 NetBIOS 的 Windows 9x/Me 机器，选举将通过这两种协议决定。通常，如果 Windows 9x/Me 机器是唯一拥有这两种协议的机器，那么 LMB 可能在 IPX 协议上的 NetBIOS 接口上获胜。Samba 随后将失去 LMB 角色，因为 Windows 9x/Me 会坚持认为它知道 LMB 是谁。Samba 随后将停止作为 LMB 运行，因此所有仅使用 TCP/IP 的机器的浏览列表操作将失败。
+
+Windows 95、98、98se 和 Me 通常统称为 Windows 9x/Me。Windows NT4、200x 和 XP 使用通用协议。这些大致被称为 Windows NT 系列，但应认识到 2000 和 XP/2003 引入了新的协议扩展，导致它们的行为与 MS Windows NT4 不同。通常，如果服务器不支持较新或扩展的协议，这些协议将回退到 NT1 协议。
+
+所有规则中最安全的规则是：只使用一种协议！
+
+### 9.6.2 名称解析顺序
+
+NetBIOS 名称到 IP 地址的解析可以通过多种方法实现。能够提供 NetBIOS *名称类型* 信息的仅有：
+
+- WINS — 最佳工具。
+- LMHOSTS — 静态且难以维护。
+- 广播 — 使用 UDP，无法解析远程分段中的名称。
+
+名称解析的替代方法包括：
+
+- 静态 /etc/hosts — 难以维护且缺乏 *名称类型* 信息。
+- DNS — 是一个不错的选择，但缺乏必要的 NetBIOS *名称类型* 信息。
+
+许多站点希望限制 DNS 查找并避免广播名称解析流量。*name resolve order* 参数在此处非常有帮助。*name resolve order* 参数的语法为：
+
+```
+name resolve order = wins lmhosts bcast host
+```
+
+*或者*
+
+```
+name resolve order = wins lmhosts (消除 bcast 和 host)
+```
+
+默认值为：
+
+```
+name resolve order = host lmhosts wins bcast
+```
+
+其中“host”指的是 UNIX 系统用于实现 *gethostbyname()* 函数调用的本机方法。这通常由 /etc/host.conf、/etc/nsswitch.conf 和 /etc/resolv.conf 控制。
+
+## 9.7 浏览的技术概述
+
+SMB 网络提供了一种机制，客户端可以访问网络中称为 *浏览列表* 的机器列表。此列表包含准备向网络中其他机器提供文件和/或打印服务的机器。因此，它不包括当前无法执行服务器任务的机器。浏览列表被所有 SMB 客户端大量使用。SMB 浏览的配置对一些 Samba 用户来说一直是个问题，因此有此文档。
+
+MS Windows 2000 及更高版本，与 Samba-3 及更高版本一样，可以配置为不使用 TCP/IP 上的 NetBIOS。按此方式配置时，必须确保 *名称解析*（使用 DNS/LDAP/ADS）配置正确并处于工作状态。如果从 SMB 机器名称到 IP 地址的名称解析功能不正确，浏览将无法工作。
+
+如果启用了 TCP/IP 上的 NetBIOS，强烈建议使用 WINS 服务器来帮助将 NetBIOS（SMB）名称解析为 IP 地址。WINS 允许远程分段客户端获取其他名称解析方式无法提供的 NetBIOS 名称类型信息。
+
+### 9.7.1 Samba 中的浏览支持
+
+Samba 支持浏览。浏览由 nmbd 支持，并由 smb.conf 文件中的选项控制。Samba 可以作为工作组的 LMB，现在支持域登录和脚本的能力也已可用。
+
+Samba 也可以作为工作组的 DMB。这意味着它将把来自 LMB 的列表汇总为广域网服务器列表。为了让浏览客户端解析在此列表中可能找到的名称，建议 Samba 和您的客户端都使用 WINS 服务器。
+
+不要将 Samba 设置为与 NT 域名称相同的工作组的域主控。在每个广域网上，每个工作组只能有一个 DMB，无论提供此服务的是 NT、Samba 还是其他类型的域主控。
+
+> **注意**
+> nmbd 可以配置为 WINS 服务器，但不需要专门使用 Samba 作为您的 WINS 服务器。MS Windows NT4、Server 或 Advanced Server 200x 可以配置为您的 WINS 服务器。在包含 NT/200x 服务器和 Samba 的 WAN 混合环境中，建议使用 Microsoft WINS 服务器功能。在仅使用 Samba 的环境中，建议使用且仅使用一台 Samba 服务器作为 WINS 服务器。
+
+要使浏览正常工作，需要照常运行 nmbd，但必须使用 smb.conf 中的 workgroup 选项来控制 Samba 所属的工作组。
+
+Samba 还有一个有用的选项，允许 Samba 服务器在其他子网上提供自己用于浏览。建议将此选项仅用于“特殊”目的：例如通过互联网发布公告。请参阅 smb.conf 手册页中的 remote announce。
+
+### 9.7.2 问题解决
+
+如果有问题无法正常工作，log.nmbd 文件有助于追踪问题所在。尝试使用日志级别 2 或 3 来查找问题。还要注意，当前的浏览列表通常以文本形式存储在名为 browse.dat 的文件中。
+
+如果它不工作，您仍然应该能够在文件管理器中输入服务器名称 \\SERVER，然后按回车。此时文件管理器应显示可用共享列表。
+
+有些人发现浏览失败是因为他们没有将全局来宾账户设置为有效账户。请记住，列出共享的 IPC$ 连接是以来宾身份完成的，因此您必须有一个有效的来宾账户。
+
+> **注意**
+> IPC$ 共享被所有 SMB/CIFS 客户端用于获取服务器上可用资源的列表。这是通过使用 Windows 资源管理器浏览 SMB/CIFS 服务器（也是 Windows 机器）上的 Windows 网络邻居（也称为我的网络位置）到 Windows 服务器时，共享和打印机列表的来源。此时，客户端已打开到 \\server\\IPC$ 资源的连接。点击共享将打开到 \\server\\share 的连接。
+
+MS Windows 2000 及更高版本（与 Samba 一样）可以配置为禁止匿名（即来宾账户）访问 IPC$ 共享。在这种情况下，作为 SMB/CIFS 客户端的 MS Windows 2000/XP/2003 机器将使用当前登录用户的名称来查询 IPC$ 共享。MS Windows 9x/Me 客户端无法这样做，因此将无法浏览服务器资源。
+
+人们遇到的另一个主要问题是他们的广播地址、子网掩码或 IP 地址错误（在 smb.conf 中通过 interfaces 选项指定）。
+
+### 9.7.3 跨子网浏览
+
+自 Samba 1.9.17 (alpha1) 发布以来，Samba 已支持在子网边界之间复制浏览列表。本节描述如何在不同设置中配置此功能。
+
+要查看跨越 TCP/IP 子网的浏览列表（即由不传递广播流量的路由器分隔的网络），必须设置至少一个 WINS 服务器。WINS 服务器充当 NetBIOS 名称的 DNS。这将允许通过直接查询 WINS 服务器来完成 NetBIOS 名称到 IP 地址的转换。这是通过向 WINS 服务器机器发送针对端口 137 的定向 UDP 数据包来实现的。WINS 服务器避免了默认 NetBIOS 名称到 IP 地址转换的必要性，这种转换通常使用来自查询机器的 UDP 广播完成。这意味着一个子网中的机器如果不使用 WINS 服务器，将无法解析另一个子网中机器的名称。Samba 的 hacks、remote browse sync 和 remote announce 旨在绕过防止 UDP 广播传播的自然限制。这些 hacks 不是通用解决方案，不应替代 WINS；它们被视为最后的手段。
+

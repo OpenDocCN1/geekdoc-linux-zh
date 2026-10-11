@@ -1,0 +1,284 @@
+
+打印页描述语言
+
+## 便携式文档格式（PDF）
+一种高度压缩的文档格式，基于 PostScript，用作文档分发格式，得到 Web 浏览器以及许多应用程序的支持。Adobe 还分发了一款名为“Acrobat”的应用程序，它是一个 PDF 阅读器。
+
+## 页描述语言（PDL）
+一种用于描述打印页面的布局和内容的语言。最著名的 PDL 是 Adobe PostScript 和 惠普 PCL（打印机控制语言），两者都用于控制激光打印机。
+
+## PostScript 打印机描述（PPD）
+PPD 指定并控制 PostScript 打印机支持的选项，例如双面打印、订书和 DPI。另见第 21.1.4 节。打印应用程序可以读取 PPD 文件，以便为特定的 PostScript 打印机启用正确的 PostScript 页面布局。
+
+## 远程过程调用（RPC）
+RPC 是执行网络操作的一种手段。RPC 协议独立于传输协议。RPC 不试图实现任何形式的可靠性，使用 RPC 的应用程序必须了解 RPC 下层传输协议的类型。RPC 就像通过网络的一个编程跳转子程序。在 UNIX 环境中使用的 RPC 在 RFC 1050 中指定。RPC 是构建分布式、基于客户机-服务器的应用程序的强有力技术。它基于扩展传统或本地过程调用的概念，使得被调用的过程不必存在于与调用过程相同的地址空间中。这两个进程可以在同一个系统上，也可以在通过网络连接的不同系统上。通过使用 RPC，分布式应用程序的程序员避免了与网络接口的细节。RPC 的传输独立性使应用程序与数据通信机制的物理和逻辑元素隔离，并允许应用程序使用各种传输方式。
+
+## 服务器消息块（SMB）
+SMB 是协议“所说”的 Samba 的原始名称。它由 IBM 在 20 世纪 80 年代发明，并由 Microsoft 采用和进一步扩展。Microsoft 在 20 世纪 90 年代的互联网热潮中将协议重命名为 CIFS。
+
+## 用户标识符（UID）
+UNIX 系统用户标识符：在旧系统中是 32 位无符号整数，在新系统中是 64 位无符号整数。UID 用于类 UNIX 操作系统中所有用户级别的访问控制。
+
+## 通用命名约定（UNC）
+一种用于指定网络资源位置（如文件共享）的语法。UNC 语法是在 MS DOS 3.x 的早期开发，并在内部被 SMB 协议使用。
+
+## 主题索引
+
+- “打印机”文件夹, 387, 393, 402
+- 有效的, 784
+- /source/nsswitch, 454
+- AppleDouble, 432
+- PDS 扩展, 480
+- ai, 361
+- eps, 361
+- pdf, 361
+- 配置文件, 476
+- ps, 361
+- 回收站, 431
+- /bin/false, 38, 235
+- /dev/null, 235
+- /dev/shadowvol, 434
+- /etc/cups/, 361
+- /etc/cups/mime.conv, 351, 352, 362, 371
+- /etc/cups/mime.types, 351, 352, 371
+- /etc/fstab, 435
+- /etc/group, 37, 180, 181, 185, 222, 308, 440, 605
+- /etc/groups, 498
+- /etc/host.conf, 512, 514
+- /etc/hosts, 87, 122, 512, 513, 515, 578
+- /etc/hosts>, 512
+- /etc/inetd.conf, 454, 601
+- /etc/init.d/samba, 83, 451
+- /etc/init.d/samba.server, 452
+- /etc/init.d/smb, 451
+- /etc/krb5.conf, 85, 88, 227, 230
+- /etc/ldap.conf, 232, 234
+- /etc/loggingroup, 605
+- /etc/mime.conv, 94
+- /etc/mime.types, 94
+- /etc/nsswitch.conf, 223, 225, 229, 234, 443, 446, 512, 514
+- /etc/openldap/slapd.conf, 27
+- /etc/openldap/sldap.conf, 167
+- /etc/pam.conf, 456, 495, 497
+- /etc/pam.d, 445, 454, 495
+- /etc/pam.d/, 444, 497
+- /etc/pam.d/ftp, 455
+- /etc/pam.d/login, 455
+- /etc/pam.d/samba, 454
+- /etc/passwd, 36-38, 61, 76, 77, 79, 90, 92, 93, 142, 159, 162, 183, 222, 291, 440, 450, 495, 496
+- /etc/printcap, 348
+- /etc/resolv.conf, 512, 578
+- /etc/samba, 545, 578
+- /etc/samba/smb.conf, 198
+- /etc/samba/scripts, 83
+- /etc/samba/secrets.tdb, 83
+- /etc/samba/smb.conf, 3
+- /etc/samba/smbpasswd, 159
+- /etc/samba/smbusers, 201
+- /etc/shadow, 92, 142
+- /etc/smbpasswd, 159
+- /etc/sl/cts/olapd.pem, 69
+- /etc/xinetd.d, 454
+- /etc/xinetd.d/telnet, 454
+- /export, 92
+- /lib/libnss_example.so, 443
+- /lib/libnss_files.so, 443
+- /lib/security, 454, 497
+- /lib/security/, 444
+- /opt/samba/bin, 568
+- /tmp, 248
+- /usr/lib/openssl, 572
+- /usr/lib/samba/vfs, 429
+- /usr/lib/security, 447, 454
+- /usr/lib/security/methods.cfg, 447
+- /usr/local/lib, 447
+- /usr/local/samba, 449
+- /usr/local/samba/bin, 451, 452, 568
+- /usr/local/samba/lib, 578
+- /usr/local/samba/lib/vfs, 429
+- /usr/local/samba/private/secrets.tdb, 83
+- /usr/local/samba/swat, 571
+- /usr/local/samba/var, 251, 578
+- /usr/local/samba/var/locks, 130
+- /usr/sbin, 568, 571
+- /usr/share/samba/swat, 571
+- /var/locks/*, 618
+- /var/log/samba, 578
+- /var/run/samba, 130
+- /var/spool/cups/, 417
+- /var/spool/samba, 93, 417
+- [global], 544
+- $, 77
+- %L, 544
+- %PDF, 361
+- %SystemRoot%\System32\config, 67
+- %I 宏, 545
+- _kerberos.REALM.NAME, 85
+- _kerberos_udp, 88
+- ldap_tcp, 88
+- ldap_tcp.pdc.msdc.quenya.org, 71
+- \\SERVER, 133
+- \\%L\%U\profiles, 476
+- >域用户管理器, 289
+- 250 用户限制, 160
+- 3.0.11, 240
+- 4.500 用户帐户, 160
+- 8.3 文件名, 245
+- 4294967295, 287
+- 简化的击键, 97
+- 中止关机脚本, 692
+- 中止关机, 238
+- 接受连接, 283
+- 访问, 237
+- 访问身份验证, 148
+- 访问控制, 105
+- 访问控制, 46, 49, 91, 251, 461
+- 访问控制项, _参见_ ACE 282
+- 访问控制列表, 243
+- 访问控制需求, 561
+- 访问控制, 560
+- 访问控制, 75, 148, 152, 193, 244, 248
+- 访问被拒绝, 284
+- 访问策略, 157
+- 访问权限, 75, 189, 288
+- 帐户, 5, 46, 80, 498
+- 后端, 47, 51
+- 数据库, 37
+- 后端, 34
+- 帐户访问控制, 143
+- 帐户属性, 225
+- 帐户后端, 141
+- 帐户容器, 164
+- 帐户控制, 472
+- 帐户控制, 76
+- 帐户数据库, 159
+- 帐户已删除, 155
+- 帐户信息, 66, 76, 162, 199
+- 帐户信息数据库, 147
+- 帐户管理, 225
+- 帐户迁移, 143, 152
+- 帐户名称, 222, 235, 291
+- 帐户策略, 54
+- 帐户策略, 151
+- 帐户限制, 472
+- 帐户安全, 152
+- 帐户存储后端, 556
+- 帐户存储机制, 141
+- 帐户存储系统, 141
+- 未知帐户, 181
+- 问责制, 152
+- 帐户, 445
+- ACL, 168, 181, 238, 282, 313, 619
+- acl 兼容性, 692
+- ACL, 243, 314
+- 文件系统, 247
+- POSIX, 243, 244
+- 共享, 244
+- Windows, 244
+- 共享上的 ACL, 253
+- 共享上的 ACL, 244
+- 跨网络段, 118
+- Active_Directory, 70, 84, 190, 222, 228, 287
+- 活动目录, 34, 47, 48, 54, 57
+- 活动目录服务器, 560
+- AD4UNIX, 224
+- ADAM, 230
+- 添加用户帐户, 155
+- 添加客户机, 237
+- 将域用户和组添加到本地组, 241
+- 添加驱动程序, 308
+- 添加组脚本, 186, 192, 692
+- 添加机器脚本, 63, 69, 78, 79, 90, 106, 237, 556, 693
+- 添加打印机命令, 336
+- 添加打印机向导, 299, 307, 313
+- 添加打印机向导, 353
+- 添加共享命令, 210, 694
+- 添加用户脚本, 147, 152, 556, 694
+- 添加用户到组脚本, 695
+- 添加/删除/更改共享, 238
+- adddriver, 323, 324, 326, 327, 395, 403
+- 额外驱动程序, 330
+- 额外特权, 238
+- addmem, 182
+- addrpinter 命令, 693, 694
+- AddPrinterDriver(), 395
+- 管理员用户, 251, 264, 695
+- admincfg.exe, 611
+- 管理操作, 236
+- 管理职责, 190
+- 管理特权, 181, 448
+- 管理责任, 288
+- 管理权限, 238, 241
+- 管理权限和特权, 241
+- 管理模板, 469
+- 管理员, 179, 182, 448
+- 管理员帐户, 87
+- 管理员帐户, 79, 80
+- 管理员密码, 88
+- Administrator%password, 82
+- Adobe, 354, 382, 409
+- Adobe 驱动程序, 388
+- Adobe 驱动文件, 385
+- Adobe PostScript, 387, 414
+- Adobe PostScript 驱动程序, 394
+- Adobe PPD, 406
+- Adobe 规范, 369
+- ADS, 39, 49, 50, 52, 75, 76, 80, 82, 84, 参见活动目录 84, 85–88, 115, 119, 120, 135, 141, 142, 148, 167, 190, 222, 223, 225, 230, 235, 287, 288, 292, 313, 439, 444, 467, 470, 472, 473, 489, 495, 496, 512, 549, 556, 560, 631
+- ADS DC, 84
+- ADS 域, 223, 227
+- ADS 域成员, 221
+- ADS 管理器, 87
+- ADS 架构, 225
+- 高级 TCP/IP 配置, 99
+- 优势, 560
+- 影响用户, 467
+- 可负担的电力, 536
+- AFPL, 358
+- AFPL Ghostscript, 365
+- AFS, 537
+- afs 共享, 695
+- afs 用户名映射, 695
+- AIX, 148, 307, 447
+- 算法映射, 224
+- 算法 rid 基础, 696
+- 别名组, 181
+- 分配舍入大小, 696
+- 允许访问, 282
+- 允许主机, 722
+- 允许受信任的域, 228, 696
+- 已存在, 89
+- 替代解决方案, 560
+- Amanda, 532
+- 分析数据, 585
+- 公告为, 696
+- 公告版本, 697
+- 匿名, 93
+- 打印服务器, 15
+- 读写服务器, 15
+- 匿名访问, 134
+- 匿名文件服务器, 545
+- 匿名服务器, 543
+- ANSI 合规, 605
+- 预见故障, 535
+- API, 160
+- 设备, 441
+- 应用程序服务器, 76
+- application/cnvq.md-postscript, 388
+- application/octet-stream, 352, 353, 362, 371
+- application/pdf, 361, 362
+- application/postscript, 361–364, 388
+- application/vnd.cups-eps, 363, 364
+- application/vnd.cups-raster, 372
+- application/vnd.cups-pdf, 372
+- application/x-shell, 362, 363
+- apt-get, 434
+- ARCFour-HMAC-MD5, 88
+- 体系结构, 148
+- ARP/RARP, 513
+- ASCII, 362, 523, 525
+- ASCII 文本, 363
+- 分配权限, 237
+- 分配的 RID, 180
+- 协助, 627
+- 关联, 177
+

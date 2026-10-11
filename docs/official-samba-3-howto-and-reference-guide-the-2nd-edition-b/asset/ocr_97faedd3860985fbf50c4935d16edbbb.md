@@ -1,0 +1,10 @@
+# CLASSICAL PRINTING
+SUPPORT
+
+# **20.1**  Features and Benefits
+
+Printing is often a mission-critical service for the users. Samba can provide this service reliably and seamlessly for a client network consisting of Windows workstations.
+
+A Samba print service may be run on a standalone or domain member server, side by side with file serving functions, or on a dedicated print server. It can be made as tightly or as loosely secured as needs dictate. Configurations may be simple or complex. Available authentication schemes are essentially the same as described for file services in previous chapters. Overall, Samba's printing support is now able to replace an NT or Windows 2000 print server full-square, with additional benefits in many cases. Clients may download and install drivers and printers through their familiar `Point'n'Print` mechanism. Printer installations executed by **Logon Scripts** are no problem. Administrators can upload and manage drivers to be used by clients through the familiar **Add Printer Wizard**. As an additional benefit, driver and printer management may be run from the command line or through scripts, making it more efficient in case of large numbers of printers. If a central accounting of print jobs (tracking every single page and supplying the raw data for all sorts of statistical reports) is required, this function is best supported by the newer Common UNIX Printing System (CUPS) as the print subsystem underneath the Samba hood.
+
+This chapter outlines the fundamentals of Samba printing as implemented by the more traditional UNIX BSD- and System V-style printing systems. Much of the information in this chapter applies also to CUPS. If you use CUPS, you may be tempted to jump to the next chapter, but you will certainly miss a few things if you do. For further information refer to Chapter 21, "CUPS Printing Support".

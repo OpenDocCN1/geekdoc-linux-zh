@@ -1,0 +1,357 @@
+
+## Subject Index
+
+- failure semantics, 538
+- fake directory create times, 714
+- fake oplocks, 253, 714
+- fake-permissions module, 485
+- fake_permissions, 56
+- fake_perms, 431, 485
+- fdisk, 434
+- Federated Identity Management, see FIM
+- federated organizations, 49
+- federated-identity, 49
+- Fiber Channel, 539
+- fiddle, 115
+- fid, 537
+- file access permissions, 243
+- File Naming Conventions, 246
+- file ownership, 75
+- file serving, 299
+- File System, 245
+  - case sensitivity, 245
+  - feature comparison, 245
+  - UNIX, 245
+  - Windows, 245
+- file system capabilities, 249
+- FILE:, 340
+- filemanager, 133
+- filename mangling, 550
+- filter, 362
+- Filter Oplock, 267
+- FilterLimit, 370
+- filters, 362
+- FIM, 50, 148
+- firewall, 281, 283, 579
+  - firewall active, 283
+  - firewall setups, 283
+- fixed IP address, 99, 100
+- fixed IP addresses, 97
+- flush local locks, 267
+- flush name cache, 138
+- follow symlinks, 715
+- foomatic, 359, 361, 369, 374, 406, 407
+- Foomatic database, 410
+- Foomatic Printer, 369
+- Foomatic tutorial, 409
+- foomatic-rip, 361, 369, 372, 406, 408, 409
+- Foomatic/cupsomatic, 374
+- force an election, 125
+- force create mode, 252, 258, 702, 715, 725
+- force directory mode, 252, 258, 709, 715, 725
+- force directory security mode, 252, 258, 709, 715
+- force election, 126
+- force group, 250, 251, 716
+- force printname, 717
+- force security mode, 252, 258, 717, 767
+- force unknown acl user, 214, 717
+- force user, 250, 251, 264, 270, 717, 718
+- forced synchronization, 122
+- foreign domain, 147, 182
+- foreign SID, 442
+- foreign user, 442
+- FQDN, 619
+- framing error, 618
+- free support, 627, 628
+- FreeBSD, 61, 526
+- freezing, 434
+- French, 572
+- front-end virtual server, 537
+- frustrating experience, 149
+- fstype, 718
+- FTP, 147
+- ftp, 532, 596
+- ftp access, 455
+- ftp service, 454
+- ftp services, 455
+- ftpd, 498
+- full rights, 181
+- functional components, 592
+- functionality, 559
+- gateway address, 99
+- gcc, 585, 605
+- gdb, 585, 593
+- GDI, 354, 377
+- general security service application programming interface, see GSSAPI
+- generic PostScript, 361
+- generic raster, 365
+- generic raster format, 360
+- genlogon.pl, 464
+- Gentoo, 617
+- Germany, 535
+- get, 582
+- git quota command, 718
+- getdriver, 319, 322
+- getdirdver, 395
+- getent, 192, 228, 450
+- getent group demo, 182
+- gethostbyname() function call, 132
+- getpwnam, 162, 222
+- getpwname() call, 555
+- GetSID.exe, 484
+- gotwd cache, 719
+- GhostScript, see also PostScript 356, 357
+- Ghostscript, 360, 372
+- ESP, see ESP GhostScript 358
+- GID, 72, 77, 83, 89, 147, 148, 177, 178, 189, 193, 221-225, 439, 442, 450
+- GID numbers, 223
+- GID range, 287
+- GIF, 362
+- Gimp-Print, 366, 409
+- global print command, 312
+- global right, 238
+- global section, 306
+- Global support, 560
+- global-level, 301
+- GNOME, 463
+- GNU Ghostscript, 360, 365
+- GNU GPL, 532
+- GNU tar, 532
+- GNU/Linux, 429
+- GPG, 597
+- GPL, 463
+- gpoldmg.exe, 471
+- GPOs, 467, 469, 470, 472, 473, 489
+- grace time, 156
+- grant rights, 237
+- graphical objects, 356
+- graphically illustrated client configuration, 97
+- grayscale, 369
+- greater scalability, 143
+- greatest mistake, 95
+- grep, 446
+- group, 72, 149, 150, 248, 716
+  - account, 55
+  - mapping, 48
+- group account, 182, 225
+- group accounts, 105, 149, 177, 180, 223
+- group management, 190
+- group mapping, 177
+- group mappings, 178
+- group membership, 181
+- group ownership, 439
+- group permissions, 561
+- Group Policies, 467
+- group policies, 467
+- Group Policy, 468
+- group policy, 56
+- Group Policy Container, see GPC 470
+- Group Policy Editor, 468, 473, 565
+- Group Policy Objects, see GPO 467, 560
+- group policy objects, see GPOs 467
+- Group Policy Template, see GPT 470
+- group privileges, 179
+- group profiles, 485
+- group SID, 208
+- groupadd, 178, 185, 186
+  - groupadd limitations, 185
+- groupdel, 178
+- groupmap, 177
+- grouprold, 178
+- grouppol.inf, 468
+- groups, 190, 467
+  - domain, 180
+  - mapping, 177
+  - nested, 181
+- groups of users, 201
+- growing, 434
+- GSSAPI, 49
+- gtklp, 410
+- guest, 55, 93
+- guest account, 93, 94, 134, 138, 309, 312, 579, 719, 720, 741, 742, 761, 769-771
+- guest ok, 251, 309, 310, 316, 705, 719, 720, 766
+- guest only, 720, 769
+- GUL, 347
+- h-node, 117, 118
+- harvesting password hashes, 168
+- hashed password equivalent, 144
+- headers files, 88
+- Heimdal, 85, 86, 227, 496
+- Heimdal kerberos, 227, 230
+- help, 627
+- help command, 582
+- heterogeneous computing, 439
+- HEX, 525
+- hi-res photo, 369
+- hide dot files, 253, 720
+- hide files, 253, 720
+- hide special files, 721
+- hide unreadable, 252, 721
+- hide unwritable files, 252, 721
+- high availability, 535
+- high order ports, 283
+- high-availability, 268
+- high-availability services, 539
+- high-speed server interconnect, 539
+- higher availability, 295
+- **HKEY_CURRENT_USER**, 487
+- **HKEY_LOCAL_MACHINE**, 469
+- holy grail, 439
+- home directories, 143, 450
+- home directory, 77, 160
+- home directory template, 455
+- home drive, 68
+- homeDir map, 721, 748
+- host msdfs, 295, 722, 746
+- host multiple servers, 545
+- host security, 281
+- host-based protection, 281
+- hostname, 86
+- hostname lookups, 722
+- hosts allow, 282, 310, 579, 722, 723
+- hosts deny, 282, 310, 579, 722, 723
+- hosts equiv, 723
+- house-keeping, 238
+- HOWTO documents, 149
+- HP JetDirect, 374
+- HP Photosmart, 410
+- HP-GL, 362
+- HP-GL, 363
+- hpgltops, 362
+- HPJS, 409
+- HPUX, 307
+- http, 532
+- hybrid, 118
+- Hybrid node, 130
+- IANA, 365
+- ID mapping, 73, 550
+- ID mapping database, 444
+- ID range, 177
+- IDEALX, 161
+- Identification, 105
+- identify, 228
+- identity, 222
+- identity information, 50
+- identity management, 48, 81
+  - centralized, 49
+- identity resolution, 439
+- IDMAP, 178, 221-223, 228
+- idmap, 557
+- IDMAP backend, 148
+- idmap backend, 72, 73, 147, 223, 224, 439, 724, 819
+- idmap GID, 557
+- idmap gid, 147, 178, 223, 224, 228, 439, 548, 508, 724, 816, 819
+- IDMAP infrastructure, 221
+- idmap UID, 557
+- idmap uid, 147, 177, 178, 223, 224, 228, 439, 458, 508, 724, 816, 819
+- idmap-ad, 148
+- idmap.lad module, 557
+- idmap_rid, 223, 228
+- IETF, 347
+- ifconfig, 601, 618
+- ignore connection, 283
+- imagetoraster, 365
+- immutable, 249
+- impersonate, 168
+- implementing oplocks, 270
+- Implicit Classes, 425
+- important announcements, 284
+- Ipoints, 341
+- imprints, 353
+- include, 543, 725
+- independent, 91, 544
+- individual domain user, 181
+- individual section, 306
+- inetd, 568, 580, 600
+- inetd.conf, 580, 581
+- inetpperson.schema, 163
+- inf file, 319
+- infrastructure, 148, 441
+- inherit acIs, 725
+- inherit owner, 725
+- inherit permissions, 725
+- inheritance, 249
+- inherits rights, 179
+- initdb.idif, 29
+- initGroups.sh, 26, 185, 186, 563
+- inktpy, 369
+- insecure, 91, 282
+- inspire simplicity, 92
+- inspired structure, 535
+- install drivers, 299, 313
+- interactive help, 627
+- interdomain
+  - trust
+    - account, 47
+    - trustrs, 34
+- interdomain connection, 291
+- interdomain trust, 290, 292
+- interdomain trust accounts, 141, 149
+- Interdomain Trusts, 287
+  - Completing, 289
+  - creating, 289
+  - Facilities, 289
+- interdomain trusts, 190, 288
+- interface, 98
+- interface scripts, 152
+- interface-based exclusion, 281
+- interfaces, 126, 134, 283, 544, 545, 581, 601, 698, 725, 747
+- intermediate information, 149
+- intermediate tools, 148
+- internal ordering, 567
+- internationalization support, 568
+- Internet, 282, 283
+- Internet Engineering Task Force, see IETF 347
+- Internet Printing Protocol, see IPP 347
+- Internet Protocol TCP/IP, 101
+- Internetworking Packet Exchange, see IPX 516
+- internetworking super daemon, 567
+- interoperability, 33, 47, 49, 221, 243, 439, 538
+- intolerance, 535
+- invalid shell, 38
+- invalid users, 250, 251, 579, 726, 764
+- IP address, 581
+- IP address automatically, 98, 100
+- IP addresses, 512
+- IP aliases, 99
+- IPC$, 59, 134, 284
+- IPC$ connections, 537
+- ipchains, 579
+- ipconfig, 119
+- iPlanet, 80
+- IPP, 391
+- IPP client, 423
+- iptables, 579
+- IPX, 131
+- IRC, 627
+- IRIX, 429, 526
+- ISC
+  - DHCP, 631
+  - DNS, 631
+- ISC DHCP server, 98, 102
+- isolated workgroup, 123
+- IXFR, 512
+- Japanese, 525, 572
+- Japanese locale, 526
+- Japanese UNIX, 526
+- Java, 527
+- JIS X 0208, 525
+- join, 226
+- join client, 238
+- join domain, 62
+- join the ADS domain, 82
+- join the domain, 81, 82
+- join the machine, 80
+- joined client, 77
+- Joined domain, 82
+- joining domain, 448
+- joining the domain, 82
+- JPEG, 362
+- KB 12902, 279
+- KB 224992, 279
+- KB 296264, 279
+- KB 811492, 278
+- KB 812937, 278
+- KDC, 84, 87
+- KDE, 463
+- KDE konqueror, 462

@@ -1,0 +1,107 @@
+
+从版本 2.2.0 开始，Samba 支持对名称服务切换（NSS）基础设施的扩展，以便 Linux 客户端能够解析 MS Windows NetBIOS 名称至 IP 地址。要获得此功能，Samba 需要在 make 命令中传入相应的参数进行编译（即 `make nsswitch/libnss_wins.so`）。生成的库文件应安装到 `/lib` 目录中，并且需要在 `/etc/nsswitch.conf` 文件的 “hosts:” 行中添加 wins 参数。此时，只要 Samba 机器和 MS Windows 机器属于同一工作组，就可以通过 NetBIOS 机器名 ping 任何 MS Windows 机器。
+
+## 28.4 MS Windows 网络中使用的名称解析
+
+MS Windows 网络基于每台机器被赋予的名称。这个名称以不同（且不一致）的方式被称为“计算机名”、“机器名”、“网络名”、“NetBIOS 名称”或“SMB 名称”。除了“NetBIOS 名称”外，所有术语含义相同，“NetBIOS 名称”也可以指代工作组名称或域名。术语“工作组”和“域”实际上只是机器关联的一个简单名称。所有 NetBIOS 名称的长度恰好为 16 个字符。第 15 个字符是保留位。它用于存储一个 1 字节的值，指示已注册的 NetBIOS 名称的服务级别信息。因此，NetBIOS 机器名称为客户端/服务器提供的每种服务类型进行注册。
+
+表 28.1 和表 28.2 列出了典型的 NetBIOS 名称/服务类型注册情况。
+
+**表 28.1 唯一的 NetBIOS 名称**
+
+| 名称 | 描述 |
+| :--- | :--- |
+| `MACHINENAME<00>` | 服务器服务正在 MACHINENAME 上运行 |
+| `MACHINENAME<03>` | 通用机器名称（NetBIOS 名称） |
+| `MACHINENAME<20>` | LanMan 服务器服务正在 MACHINENAME 上运行 |
+| `WORKGROUP<1b>` | 域主浏览器 |
+
+**表 28.2 组名称**
+
+| 名称 | 描述 |
+| :--- | :--- |
+| `WORKGROUP<03>` | 由 WORKGROUP 所有成员注册的通用名称 |
+| `WORKGROUP<1c>` | 域控制器/Netlogon 服务器 |
+| `WORKGROUP<1d>` | 本地主浏览器 |
+| `WORKGROUP<1e>` | 浏览器选举服务 |
+
+需要注意的是，所有 NetBIOS 机器都会按照表 28.1 和表 28.2 注册自己的名称。这与 TCP/IP 环境形成鲜明对比，在后者中，系统管理员传统上通过 `/etc/hosts` 文件或 DNS 数据库来确定与每个 IP 地址关联的名称。
+
+还有另一点需要澄清。`/etc/hosts` 文件和 DNS 记录并不提供 MS Windows 客户端用于定位可能需要之服务类型所依赖的 NetBIOS 名称信息。一个例子是当 MS Windows 客户端试图定位域登录服务器时发生的情况。它通过执行查找（通过 NetBIOS 广播）来枚举所有已注册名称类型 `*<1C>` 的机器，从而找到该服务及其提供该服务的服务器的 IP 地址。然后，登录请求会被发送到枚举的 IP 地址列表中的每个 IP 地址。最先回复的机器最终将提供登录服务。
+
+“工作组”或“域”的名称确实容易令人困惑，因为它们还具有表明 MS Windows 网络安全架构的额外意义。术语“工作组”表明网络环境的主要性质是点对点设计。在工作组中，所有机器都负责自己的安全性，通常这种安全性仅限于使用密码（称为共享级别安全性）。在大多数点对点网络情况下，控制自己机器的用户通常选择完全没有任何安全性。在工作组环境中也可以有用户级别的安全性，从而要求使用用户名和匹配的密码。
+
+因此，MS Windows 网络被预先设定为对所有本地和远程机器消息传递使用机器名称。使用的协议称为服务器消息块（SMB），这是使用 NetBIOS 协议（网络基本输入/输出系统）实现的。NetBIOS 可以使用 LLC（逻辑链路控制）协议进行封装——在这种情况下，生成的协议称为 NetBEUI（网络基本扩展用户界面）。NetBIOS 也可以在 Novell NetWare 使用的 IPX（网际包交换）协议上运行，也可以运行在 TCP/IP 协议上——在这种情况下，生成的协议称为 NBT 或 NetBT，即基于 TCP/IP 的 NetBIOS。
+
+MS Windows 机器使用复杂的名称解析机制数组。由于我们主要关注 TCP/IP，此演示仅限于此领域。
+
+### 28.4.1 NetBIOS 名称缓存
+
+所有 MS Windows 机器都使用一个内存缓冲区，其中存储了过去 10 到 15 分钟内该机器与之通信的所有外部机器的 NetBIOS 名称和 IP 地址。从本地缓存获取机器的 IP 地址比遍历所有已配置的名称解析机制更有效率。
+
+如果本地缓存中的机器在名称过期并从缓存中清除之前关闭，那么尝试与该机器交换消息将遇到超时延迟。其名称在缓存中，因此名称解析查找会成功，但该机器无法响应。这对用户来说可能令人沮丧，但这是协议的固有特性。
+
+允许检查 NetBIOS 名称缓存的 MS Windows 实用程序称为 `nbtstat`。Samba 的等效程序称为 `nmblookup`。
+
+### 28.4.2 LMHOSTS 文件
+
+此文件通常位于 MS Windows NT 4.0 或 Windows 2000/XP 的目录 `%SystemRoot%\SYSTEM32\DRIVERS\ETC` 中，并以成对匹配的形式包含 IP 地址和机器名称。`LMHOSTS` 文件执行从 NetBIOS 名称到 IP 地址的映射。
+
+它通常看起来像这样：
+
+```
+# Copyright (c) 1998 Microsoft Corp.
+#
+# This is a sample LMHOSTS file used by the Microsoft WINS Client (NetBIOS
+# over TCP/IP) stack for Windows98
+#
+# This file contains the mappings of IP addresses to NT computer names
+# (NetBIOS) names. Each entry should be kept on an individual line.
+# The IP address should be placed in the first column followed by the
+# corresponding computer name. The address and the computer name
+# should be separated by at least one space or tab. The "#" character
+# is generally used to denote the start of a comment (see the exceptions
+# below).
+#
+# This file is compatible with Microsoft LAN Manager 2.x TCP/IP LMHOSTS
+# files and offers the following extensions:
+#
+#       #PRE
+#
+#       #DOM:<domain>
+#
+#       #INCLUDE <filename>
+#
+#       #BEGIN_ALTERNATE
+#
+#       #END_ALTERNATE
+#
+#       \0xnn (non-printing character support)
+#
+# Following any entry in the file with the characters "#PRE" will cause
+# the entry to be preloaded into the name cache. By default, entries are
+# not preloaded, but are parsed only after dynamic name resolution fails.
+#
+# Following an entry with the "#DOM:<domain>" tag will associate the
+# entry with the domain specified by <domain>. This effects how the
+# browser and logon services behave in TCP/IP environments. To preload
+# the host name associated with #DOM entry, it is necessary to also add a
+# #PRE to the line. The <domain> is always pre-loaded although it will not
+# be shown when the name cache is viewed.
+#
+# Specifying "#INCLUDE <filename>" will force the RFC NetBIOS (NBT)
+# software to seek the specified <filename> and parse it as if it were
+# local. <filename> is generally a UNC-based name, allowing a
+# centralized LMHOSTS file to be maintained on a server.
+#
+# It is ALWAYS necessary to provide a mapping for the IP address of the
+# server prior to the #INCLUDE. This mapping must use the #PRE directive.
+#
+# In addition the share "public" in the example below must be in the
+# LanMan Server list of "NullSessionShares" in order for client machines to
+# be able to read the LMHOSTS file successfully. This key is under
+# \machine\system\currentcontrolset\services\lanmanserver\
+# parameters\nullsessionshares
+# in the registry. Simply add "public" to the list found there.
+```
+

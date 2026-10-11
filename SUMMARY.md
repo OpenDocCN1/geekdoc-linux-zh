@@ -1537,6 +1537,7 @@
 +   [Fedora 官方指南：Fedora 项目指南](docs/official-fedora-companion-your-guide-to-the-fedora-project/README.md)
 +   [红帽 Linux 6.1 操作系统官方参考指南](docs/official-red-hat-linux-61-operating-system-reference-guide/README.md)
 +   [Intel 电脑官方 Redhat Linux 6.1 操作系统](docs/official-redhat-linux-61-operating-system-for-intel-computer/README.md)
++   [Samba-3 官方 HOWTO 与参考指南](docs/official-samba-3-howto-and-reference-guide-the-2nd-edition-b/README.md)
 +   [Ubuntu Server 官方指南](docs/official-ubuntu-server-book-the/README.md)
 +   [旧电脑，新生命：使用 Ubuntu 修复旧硬件](docs/old-computer-new-life-restoring-old-hardware-with-ubuntu/README.md)
 +   [GNU/Linux 入门指南](docs/on-gnulinux/README.md)
