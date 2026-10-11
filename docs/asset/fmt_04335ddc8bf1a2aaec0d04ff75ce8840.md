@@ -1,0 +1,106 @@
+
+```java
+super("TextArea Demo");
+
+Box box = Box.createHorizontalBox(); // 创建框
+
+String demo = "This is a demo to\n" + "illustrate copying textfrom one textarea to \n" + "another textarea using an\n";
+
+textArea1 = new JTextArea(demo, 10, 15); // 创建 textarea
+
+box.add(new JScrollPane(textArea1)); // 添加滚动面板
+
+copyButton = new JButton("Copy >>>"); // 创建按钮
+
+box.add(copyButton);
+
+copyButton.addActionListener(new ActionListener() { // 匿名内部类
+
+    // 将 textArea2 的文本设置为 textArea1 的选中文本
+
+    public void actionPerformed(ActionEvent event) {
+
+        textArea2.setText(textArea1.getText());
+
+    } // end method actionPerformed
+
+}); // end anonymous internal class
+
+} // end constructor
+
+} // end class TextArea
+```
+
+**图 11.47** | 将选中文本从一个 `JTextArea` 复制到另一个。（第 1/2 部分）。
+
+## 11.19 JTextArea 587
+
+```java
+textArea2 = new JTextArea(10, 15); // 创建第二个文本区域
+textArea2.setEditable(false); // 禁用编辑
+box.add(new JScrollPane(textArea2) ); // 添加滚动面板
+
+add( box ); // 将 box 添加到框架
+} // TextAreaFrame 构造函数结束
+} // 类 TextAreaFrame 结束
+```
+
+图 11.47 从一个 `TextArea` 复制选中的文本到另一个。（2 部分中的第 2 部分。）
+
+```java
+// 图 11.48: TextAreaDemo.java
+// 从一个 textarea 复制选中的文本到。
+import javax.swing.JFrame;
+
+public class TextAreaDemo
+{
+  public static void main(String[] args) {
+
+    TextArea textAreaFrame = new TextAreaFrame();
+    textAreaFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    textAreaFrame.setSize(425, 200); // 设置框架大小
+    textAreaFrame.setVisible(true); // 显示框架
+  } // main 结束
+} // 类 TextAreaDemo 结束
+```
+
+![](img/1df0d1e8ac6007b95647eb8ea38390af_632_0.png)
+
+图 11.48 `TextAreaFrame` 的测试。
+
+在构造函数中（第 18–48 行），21 行创建了一个 `Box`（属于 `java.swing` 包）来组织 GUI 组件。`Box` 是 `Container` 的一个子类，它使用 `BoxLayout` 布局管理器（在详述 22.9 节中讨论）以水平或垂直方式排列 GUI 组件。`Box` 的静态方法 `createHorizontalBox` 创建一个 `Box`，它按照组件添加的顺序从左到右排列组件。
+
+第 26 行和第 43 行创建了 `JTextArea` `textArea1` 和 `textArea2`。第 26 行使用了 `TextArea` 构造函数，接受一个表示初始文本的 `String` 和两个指定 `JTextArea` 有 10 行 15 列的 `int`。第 43 行使用了 `TextArea` 的双参数构造函数，指定 `JTextArea` 有 10 行 15 列。第 26 行指定 `demo` 应该显示为默认的 `TextArea` 内容。因此，27 行创建了一个 `JScrollPane` 对象，用 `textArea1` 初始化它并将其附加到容器 `box` 上。默认情况下，`JScrollPane` 会根据需要显示水平和垂直滚动条。
+
+第 29–41 行创建了标签为 `"Copy >>>"` 的 `JButton` `copyButton`，将该按钮添加到容器中，并为 `copyButton` 的 `ActionEvent` 注册了事件处理程序。此按钮提供了外部事件，决定了程序何时应该将 `textArea1` 中的文本复制到 `textArea2`。当用户点击 `copyButton` 时，`actionPerformed` 方法中的第 38 行指示方法 `getSelected`（继承自 `JComponent`）应该返回来自 `textArea1` 的选中文本。用户通过在所需的文本上拖动鼠标来高亮它以进行选择。`SetText` 方法将 `textArea2` 中的文本更改为由 `getSelectedText` 返回的字符串。
+
+第 43–45 行创建了 `textArea2`，将其可编辑属性（`editable property`）设置为 `false`，并将其添加到容器中。第 47 行将 `box` 添加到 `JFrame`。回想第 11.17 节，`JFrame` 的默认布局是 `BorderLayout`，且该方法默认将其参数附加到 `BorderLayout` 的 `CENTER`（中心位置）。
+
+当文本到达 `JTextArea` 的右侧时，有时希望它能换到下一行。这被称为换行（`line wrapping`）。默认情况下，`JTextArea` 不会换行。
+
+![](img/1df0d1e8ac6007b95647eb8ea38390af_633_0.png)
+
+## 外观观察 Look-and-Feel Observation II.20
+
+要为 `JTextArea` 提供换行功能，调用 `JTextArea` 方法 `setLineWrap` 并传入 `true` 参数。
+
+## JScrollPane 滚动条策略
+
+此示例使用 `JScrollPane` 为 `JTextArea` 提供滚动功能。默认情况下，如果需要，`JScrollPane` 会显示滚动条。你可以在构造 `JScrollPane` 时设置其水平和垂直滚动条策略。如果程序拥有一个 `JScrollPane` 的引用，则程序可以使用 `JScrollPane` 的方法 `setHorizontalScrollBarPolicy` 和 `setVerticalScrollBarPolicy` 随时更改滚动条策略。
+
+```
+JScrollPane.VERTICAL_SCROLLBAR_ALWAYS
+JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS
+```
+表示滚动条应该始终出现，常量
+
+```
+JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
+JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED
+```
+表示滚动条仅在需要时才出现（默认值），常量
+
+```
+JScrollPane.VERTICAL_SCROLLBAR_NEVER
+JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
+```
