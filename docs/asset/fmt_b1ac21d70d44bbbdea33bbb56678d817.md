@@ -1,0 +1,205 @@
+
+# 索引
+
+- 远程打印机，添加 UNIX, 458
+- 远程打印机，配置, 457
+- 设置 CUPS, 449–452
+- 使用打印机配置窗口设置, 452–457
+- 理解 CUPS, 448–449
+- 使用 CUPS, 459–463
+- 打印机类，CUPS, 448
+
+## 打印机配置窗口
+
+- 添加远程打印机, 457
+- 添加远程 UNIX, 458
+- 添加 Windows (SMB) 打印机, 458
+- 配置 CUPS 服务器, 460–461
+- 配置远程打印机, 457
+- 配置共享 CUPS 打印机, 466
+- 设置打印机, 452–457
+- 打印机控制语言 (PCL), 454
+- 打印选项选项卡，本地打印机, 456
+- 选择, 453
+- 配置 Slackware, 655
+- 创建全局 Samba 设置, 491
+- Ubuntu 8.10 桌面, 508
+- 在 Nautilus 中查看共享, 66
+- 打印机链接，CUPS, 452
+- 隐私偏好，Freder, 170, 173–174
+- 私钥加密, 393–394
+- PID (OPID), 247
+- 进程模型，Linux 开发, 732–733
+- Debian 安装, 552
+- Fedora 安装, 533
+- Freprite 安装, 661
+- KNOPIX 安装, 592
+- Linux 安装, 215
+- Mandriva 安装, 675
+- Slackware 安装, 648
+- 理解 Linux, 10
+- Procmail 邮件工具, 382–383
+- 专业的，成为 Linux 专家, 30–31
+- 编程环境, 729–744
+- 命令行, 744–745
+- 概述, 729–730
+- 理解, 729–730
+- 使用 Linux, 730
+- 图形编程环境, 739–744
+- Arjunta, 742–743
+- Code Crusader, 742–744
+- 使用 Eclipse, 739–741
+- KDev, 741–742
+- 概述, 739
+- 编程环境，Linux 开发, 731–739
+- 模块化哲学, 737–739
+- CPU 和内存保护, 733–734
+- 进程间通信, 737
+- 多用户化设计, 736–737
+- 抢占式多任务, 735–736
+- 进程模型, 732–733
+- 安全模型, 734–735
+- 编程接口, 745–757
+- 应用, 753–757
+- 命令行, 746–752
+- defeo, 720, 745
+- 图形, 752–753
+- 概述, 745
+- 编程工具和实用程序, 759–788
+- 使用 make 自动化构建, 766–768
+- GCC 编译器, 760–776
+- GNU 器, 770–788
+- KNOPIX, 587
+- 库。见 libraries
+- 概述, 12
+- 源码控制。见 source code
+- 使用功能丰富的工具包, 759–760
+- `/project` 目录，带有 NFS, 483
+- 项目，Linux, 19–21, 24–25
+- 提示符, 239–240, 261–262
+- 属性
+  - 在 Dolphin 中显示, 45
+  - GNOME 面板, 64
+- 协议分析器, 393
+- 代理，Conquer, 551
+- `ps` 命令, 246–247
+- 公钥加密, 394–395。另见 SSL。（安全套接层）
+- 在 Web 上发布, 145–146
+- PulseAudio, 86–87
+- `pungi` 工具，Amoceda, 526
+- Puppy Linux, 721–722
+- PVRs (个人视频记录),使用 Linux, 18
+- `pvowcm` 命令, 368
+- `pwd` 命令, 244, 272
+
+# Q
+
+- `vi` 命令，vi 文本编辑器, 282
+- Qt，使用 Qt 创建 GUI, 752
+- Qi Parted, 217
+- Quake III Arena 游戏, 182, 198
+- 问号 (?) 字符, 283
+- 退出文件，vi 文本编辑器, 282
+
+# R
+
+- 竞争, 736
+- RAID，Mandriva 安装, 675
+- RAM
+  - Debian 安装, 533, 552
+  - freesprite 安装, 861
+  - KNOPPIX 限制, 589
+  - Linux 安装, 215
+  - Mandriva 安装, 675
+  - openUSE 安装, 579
+  - 运行 KNPIX, 592
+  - 运行 KNPIX, 398
+  - Slackware 安装, 648
+  - 理解, 11
+- 随机密码生成器, 366
+- `rc` 命令, 376
+- Ubuntu, 506–507, 511
+- Yellow Dog Linux, 608–609, 612
+- 重制
+  - KNPIX, 724
+  - 启动 CD, 724
+  - Ubuntu Linux, 724
+- Remasters 脚本, 724
+- 远程 MDA, 432
+- 远程打印机, 457–458
+- 可移动的
+  - 在 GNOME 桌面配置, 312–314
+  - 在 KDE 桌面配置, 314–315
+  - 挂载, 325–332
+- 回复邮件
+  - 在 Evolution 中, 160–161
+  - 在 Thunderbird 中, 157
+- 存储
+  - 添加到 Ubuntu, 518–521
+  - 并发版本系统, 777–780
+- RCS (版本控制系统), 773–776
+- 读取
+  - 配置错误, 425
+- 读取邮件
+  - 在 Evolution 中, 161
+  - 带有文本阅读器, 163–165
+  - 在 Thunderbird 中, 157
+- 重启，以及 KNPIX, 589, 592
+- 录制音乐, 99–101
+- 声调板, 888
+- 美国录音工业协会 (RIAA), 84
+- 使用启动 CD 恢复, 712
+- Red Hat 认证架构师 (RHCA), 30
+- Red Hat 认证数据中心专家 (RHCDS), 30
+- Red Hat 认证工程师 (RHCE), 30
+- Red Hat 认证专家 (RHCSS), 30
+- Red Hat 认证技术员 (RHCT), 30
+- RHCI, 定义, 521
+- Red Hat，Mandriva 工具, 607
+- Red Hat 软件包管理器：见 RPM
+- `redhat-config`, 528
+- 区域，debian 安装, 554
+- openUSE 安装, 583
+- 拒绝文件，Exim, 441
+- Release Notes，openUSE, 583
+- 发布的 Debian/Linux, 551
+- Mandriva Linux, 667
+- 管理 Debian 包, 561
+- 版本控制系统, 774–776
+- 运行 shell 命令, 251–256
+- 命令行编辑, 252–254
+- 命令行回, 255–256
+- 使用命令的按键, 256–257
+- 救援 CD, 711–712
+- ResourceConfig, Apache, 415
+- 重启命令，CUPS 服务器, 461
+- 保留选项，NFS, 480
+- 重试选项，NFS, 480
+- 返回 Castle Wolf 游戏, 199
+- 环, 774
+- RHCA (Red Hat 认证架构师), 30
+- RHCDS (Red Hat 认证数据中心专家), 30
+
+# Release Notes，openUSE, 583
+
+- 发布的 Debian/Linux, 551
+- Mandriva Linux, 667
+- 管理 Debian 包, 561
+- 版本控制系统, 774–776
+- 运行 shell 命令, 251–256
+- 命令行编辑, 252–254
+- 命令行回, 255–256
+- 使用命令的按键, 256–257
+- 救援 CD, 711–712
+- ResourceConfig, Apache, 415
+- 重启命令，CUPS 服务器, 461
+- 保留选项，NFS, 480
+- 重试选项，NFS, 480
+- 返回 Castle Wolf 游戏, 199
+- 环, 774
+- RHCA (Red Hat 认证架构师), 30
+- RHCDS (Red Hat 认证数据中心专家), 30
+- RHCE (Red Hat 认证工程师), 30
+- RHCSS (Red Hat 认证专家), 30
+- RHCT (Red Hat 认证技术员), 30
+- RHEL (Red Hat Enterprise Linux)
