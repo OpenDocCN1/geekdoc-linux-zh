@@ -1,0 +1,1 @@
+To delete a record from the database, press F3. The screen that results from deleting a record in shown in Figure 22.3.

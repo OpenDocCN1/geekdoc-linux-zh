@@ -1,0 +1,1 @@
+The window this program creates is illustrated in Figure 11.2.

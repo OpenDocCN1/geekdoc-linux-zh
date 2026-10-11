@@ -1,0 +1,5 @@
+The vi text editor can come to your rescue if you find yourself in such a jam. You can command vi to locate the information that you need in your text. Say, for example, that you want to find the word bye in your program (don’t ask me why). You are, of course, in the command mode and ready to give some orders. You can then type /bye if you know that this word must fall somewhere after your current cursor position. This command appears at the bottom of your screen, ready for you to press Enter (see Figure B-5).
+
+![](bbox=[0.07, 0.27, 0.85, 0.58])
+
+After you press Enter, notice that the cursor jumps to the beginning of the search item — in this case the word bye, as shown in Figure B-6. (Of course, this demonstration is more impressive if you have really big and complex text, but you get the idea.)

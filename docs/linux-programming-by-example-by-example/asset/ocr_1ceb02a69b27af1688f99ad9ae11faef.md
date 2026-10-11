@@ -1,0 +1,3 @@
+# What's Next?
+
+In this chapter, you learned a good deal about working with Linux's basic file-handling calls. The next chapter extends this discussion by covering advanced material about topics such as the ext2 filesystem, multiplexing, non-blocking I/O, memory-mapped files, and file and record locking. This will complete the discussion of Linux's file-handling interface, which prepares you to learn about a database API and shared memory.

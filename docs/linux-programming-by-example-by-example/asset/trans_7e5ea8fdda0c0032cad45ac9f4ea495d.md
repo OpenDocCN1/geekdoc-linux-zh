@@ -1,0 +1,185 @@
+
+## 输出
+
+```
+$ ./newmask
+old umask is 022
+new umask is 0666
+$ ls -l foo
+---------- 1 kwall users 0 Jul 24 10:03 foo
+```
+
+如程序输出所示：新的 umask 被设置为 0666。`touch` 实用程序通常创建的文件权限模式为 666。然而，0666 的 umask 要求所有新建文件均不设置任何权限位。结果是，`foo` 文件被创建时没有任何权限位，这正是 `ls` 报告的内容。
+
+## 文件处理接口
+
+大多数文件处理选项都有两种形式：一种基于文件名，另一种基于文件描述符。*文件描述符* 是小的正整数，充当内核为每个进程维护的打开文件数组的索引。例如，`stat` 和 `fstat` 函数返回文件信息。它们在 `<unistd.h>` 中的原型定义如下：
+
+```c
+int stat(const char *filename, struct stat *buf);
+int fstat(int fildes, struct stat *buf);
+```
+
+如您所见，`stat` 期望通过 `filename` 传入文件名，而 `fstat` 期望通过 `fildes` 传入文件描述符。
+
+每个进程始终拥有三个打开的文件：标准输入、标准输出和标准错误。它们分别对应文件描述符 0、1 和 2。但是，应该使用 `<unistd.h>` 中定义的三个宏，而不是直接使用数字：`STDIN_FILENO`、`STDOUT_FILENO` 和 `STDERR_FILENO`。建议您使用这些宏而不是硬编码 0、1 或 2，因为您的程序可能在标准输入、标准输出和标准错误不对应整数 0、1 和 2 的系统上编译。
+
+> **注意**
+> 本章其余部分关于文件处理例程的讨论不包含标准库例程，如 `open`、`fclose` 等，因为假定您已知晓这些内容。如果您需要快速回顾，请参阅 Brian Kernighan 和 Dennis Ritchie 著的 *《The C Programming Language, Second Edition》*（*《C 程序设计语言（第二版）》*），*Greg Perry’s C by Example*（*《Greg Perry 的 C 语言实例》*），或 Peter Aitken 和 Brad Jones 著的 *《Sams Teach Yourself C in 21 Days, Fifth Edition》*（*《Sams 21 天学会 C 语言（第五版）》*）。
+
+### 打开和关闭文件
+
+打开文件有两种方式：`open` 和 `creat`。它们在 `<unistd.h>` 中有原型定义，但您还必须包含 `<fcntl.h>` 头文件。
+
+### open 系统调用
+
+```c
+int open(const char *pathname, int flags);
+int open(const char *pathname, int flags, mode_t mode);
+```
+
+`open` 尝试打开 `pathname` 指定的文件，并按 `flags` 中指定的访问方式打开。如果文件正在被创建，`mode` 参数包含文件模式。您必须将 `flags` 设置为 `O_RDONLY`、`O_WRONLY` 或 `O_RDWR`，分别指定只读、只写或读写访问。此外，您还可以设置表 7.3 中列出的零个或多个值。（如果使用多个值，必须使用按位或运算将它们组合在一起。）如果默认文件模式适合您的需求，请使用第一种形式的 `open`。如果您希望设置特定的文件模式（该模式会受到进程 umask 的影响），请使用第二种形式的 `open`。`open` 的两种形式在成功时都返回文件描述符。失败时，它们返回 -1 并设置 `errno`。
+
+表 7.3：open 和 creat 的访问标志
+
+| 标志 | 描述 |
+| :--- | :--- |
+| O_CREAT | 如果文件不存在则创建该文件 |
+| O_EXCL | 仅与 O_CREAT 一起使用，如果文件已存在则打开失败 |
+| O_NOCTTY | 如果文件是终端设备，它将不会成为进程的控制终端 |
+| O_TRUNC | 将文件的大小设置为 0 |
+| O_APPEND | 写入操作发生在文件末尾 |
+| O_NONBLOCK | 以非阻塞模式打开文件，因此读取将返回零字节而不是阻塞 |
+| O_SYNC | 在调用返回之前，文件的所有写入操作都已写入磁盘 |
+
+### creat 系统调用
+
+`creat` 也用于打开文件，如果文件不存在则创建它。其原型定义为：
+
+```c
+int creat(const char *pathname, mode_t mode);
+```
+
+它等同于以下代码：
+
+```c
+open(pathname, O_CREAT | O_TRUNC | O_WRONLY, mode);
+```
+
+本书中的程序不使用 `creat`，原因有二。首先，它的拼写有误。其次，`open` 调用更通用，只要使用 `O_CREAT` 标志，就能达到相同的结果。`creat` 成功时返回文件描述符，失败时则设置 `errno` 并返回 -1。
+
+### close 系统调用
+
+要关闭文件，请使用 `close` 调用，其在 `<unistd.h>` 中的原型定义如下：
+
+```c
+int close(int fd);
+```
+
+`close` 关闭与 `fd` 关联的文件，成功时返回 0，出错时返回 -1。
+
+### 示例
+
+![](img/be588b36b489136ce784030a08a1d3d4_169_0.png)
+
+以下程序简单地打开并关闭名为 `hello` 的文件：
+
+```c
+/*
+* fopn.c - Opening/closing files
+*/
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void)
+{
+  int fd;
+  char path[] = "hello";
+
+  if((fd = open(path, O_CREAT | O_TRUNC | O_WRONLY, 0644)) < 0) {
+    perror("open");
+    exit(EXIT_FAILURE);
+  } else
+    printf("Opened %s\n", path);
+
+  if(close(fd) < 0) {
+    perror("close");
+    exit(EXIT_FAILURE);
+  } else
+    printf("Closed %s\n", path);
+
+  exit(EXIT_SUCCESS);
+}
+```
+
+`open` 语句尝试以只读模式打开文件 `hello`。`O_CREAT` 会导致如果文件不存在则创建该文件，但如果文件存在，`O_TRUNC` 会将文件长度设置为零，仿佛它是新创建的。当文件打开时，`fopen` 会立即关闭它。
+
+特别需要注意的是，源代码检查了 `close` 的返回值。虽然通常不这样做，但这是一个严重的编程错误，原因有二。首先，在网络文件系统（如 NFS）上，`close` 调用可能因网络延迟而失败。其次，许多系统配置了写后缓存（write-behind caching），意味着 `write` 调用会成功返回，但操作系统会等待一个更合适的时间才执行实际的磁盘写入。正如 `close(2)` 手册页所述：
+
+> “错误状态可能在后续的写入操作中报告，但保证在关闭文件时会报告。在关闭文件时不检查返回值可能导致数据静默丢失。”
+
+## 读写文件
+
+您可能希望从文件中读取、向文件写入以及在文件中移动。为了读写文件，`unistd.h` 中提供了以下两个函数：
+
+```c
+ssize_t read(int fd, void *buf, size_t count);
+ssize_t write(int fd, const void *buf, size_t count);
+```
+
+`read` 尝试从文件描述符 `fd` 打开的文件中读取最多 `count` 个字节，并将读取的数据存储到由 `buf` 指定的缓冲区中。成功时返回读取的字节数（0 表示文件末尾条件），该数值可能小于请求的字节数；如果发生错误，则返回 -1，并设置 `errno`。在 `read` 成功执行后，文件指针会向前移动所读取的字节数，不一定是 `count`。
+
+类似地，`write` 从由 `buf` 指向的缓冲区向文件描述符 `fd` 写入最多 `count` 个字节。成功的 `write` 返回写入的字节数（0 表示未写入任何内容）。发生错误时，`write` 返回 -1 并设置 `errno`。
+
+### 示例
+
+![](img/be588b36b489136ce784030a08a1d3d4_170_0.png)
+
+以下程序读取其自身的源代码，然后将其写入 `/dev/null` 以及名为 `/tmp/foo.bar` 的文件：
+
+```c
+/*
+ * fread.c - The read and write system calls
+ */
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void)
+{
+  int fdsrc, fdnull, fdtmp, nbytes;
+  char fname[] = "fread.c";
+  char buf[10];
+
+  /* open the source file, /dev/null, and /tmp/foo.bar */
+  if((fdsrc = open(fname, O_RDONLY)) < 0) {
+    perror("open fdsrc");
+    exit(EXIT_FAILURE);
+  }
+  if((fdnull = open("/dev/null", O_WRONLY)) < 0) {
+    perror("open fdnull");
+    close(fdsrc); /* close this since we've opened it */
+    exit(EXIT_FAILURE);
+  }
+  if((fdtmp = open("/tmp/foo.bar",
+    O_CREAT | O_TRUNC | O_WRONLY,
+    0644)) < 0) {
+    perror("open fdtmp");
+    close(fdsrc); /* have to close both of these now */
+    close(fdnull);
+    exit(EXIT_FAILURE);
+  }
+
+  /* read up to 10 bytes, write up to 10 bytes */
+  while((nbytes = read(fdsrc, buf, 10)) != 0) {
+    if(write(fdnull, buf, 10) < 0) /* the null device */
+      perror("write /dev/null");
+    if(write(fdtmp, buf, nbytes) < 0) /* a temporary file in /tmp */
+      perror("write /tmp/foo.bar");
+  }
+}
+```
+
