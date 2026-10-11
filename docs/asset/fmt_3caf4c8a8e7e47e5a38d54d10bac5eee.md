@@ -1,0 +1,111 @@
+
+- 正则表达式 (regular expressions)
+  - 相对路径, 36
+- 远程执行 (remote execution)
+  - `Cygwin`, 18
+  - 安全性, 175
+  - `VNC`, 180
+  - 交互式移除, 49
+- `renice`, 84
+- `resolv.conf`, 41, 160, 172
+- 恢复, 151
+- `RGID`, 71
+- `rlogin`, 175, 182
+- `rm`, 49
+- `rmdir`, 49
+- 文件创建掩码, 62
+- 根目录 (root directory), 32
+- 根登录, 15
+- 根分区, 29
+- 路由, 160
+- 安装, 128
+- 移除软件包, 128
+- 搜索文件, 128
+- 搜索软件包, 128
+- `rpm`, 128
+- `rsh`, 175, 182
+- `rsync`, 151
+- `RUID`, 70
+- 运行级别 (run level), 78, 81
+- `rc` 文件, 79
+- 运行路径, 90
+- `Qmail`, 167
+- 配额 (quota), 39
+- 无电 (radio), 42
+- 内存 (ram), 42
+- 范围 (ranges)
+  - 替换, 50
+- `rc*`, 41
+- `rc*`, d, 79
+- 桌面, 180
+- `README`, 127, 147
+- 重启 (reboot), 18
+- `sbin`, 34
+- 批处理 (batch), 89
+- `cron`, 89
+- 执行时间, 85
+- 睡眠 (sleep), 88
+- 分隔 (sep), 179
+- 屏幕 (screen), 70
+- 脚本 (script)
+  - 示例, 120
+  - 第一行, 120
+  - 初始化脚本示例, 121
+- `chmod`, 120
+- `sd`, 42
+- 安全外壳 (Secure SHELL)
+  - 身份验证密钥, 180
+  - 示例, 17
+  - 安全拷贝, 179
+  - 身份验证, 177
+- `SHELL`, 38, 114
+- 切换, 16
+- 关机 (`shutdown`), 77, 79, 81
+- `SIGHUP`, 75
+- `SIGINT`, 85, 87
+- `SIGKILL`, 75, 87
+- `SIGTERM`, 75, 87
+- 单用户模式, 78
+- 斜杠 (slash), 36
+- 声音 (sound), 41
+- 排序 (`sort`), 99
+- 特殊 (special), 58
+- 标准输入 (`stdin`), 94
+- 标准输出 (`stdout`), 94
+- 粘性位 (sticky bit), 63
+- `ssh-keygen`, 177
+- `sudo`, 60
+- 交换分区 (swap partition), 29
+- 交换操作 (swapping), 84
+- 符号链接 (symbolic links), 57
+- 系统 (system), 84
+- `TTY`, 70
+- `UID`, 114
+- `ulimit`, 55
+- `umask`, 61
+- `UNIX`, 1
+- 更新, 130
+- 运行时间 (`uptime`), 82
+- `USB`, 72
+- 用户名, 35
+- 用户, 36
+- `var`, 34
+- 变量, 43
+- 变量, 43
+- 可视 (visual), 104
+- `vmstat`, 84
+- `VISUAL`, 114
+- `VNC`, 180
+- `VoIP`, 193
+- 广播 (`wall`), 76
+- `wc`, 36
+- 网页浏览器 (web browsers)
+  - 概述, 169
+- `whatis`
+  - 示例, 20
+- `which`, 36, 50
+- `who`, 78
+  - 示例, 76
+- `whois`, 164
+- 窗口管理器 (window manager), 124
+- `write`, 76
