@@ -1,0 +1,330 @@
+
+## Index
+
+### A
+- CPUs, 626
+- device drivers, information, 619
+- distribution channels, 557
+- hard disks, 629–630
+- hardware, Linux Web site, 619
+- keyboards, 640–641
+- mice, 640–641
+- modems, 642–644
+- monitors, 638–639
+- motherboards, 626–628
+- network hardware, 641–642
+- optical disks, 630–631
+- power supplies, 626–629
+- primers, 645–646
+- removable disks, 630–631
+- scanners, 644–645
+- SCSI host adapters, 632–633
+- sizes, 556
+- sound cards, 633–634
+- tape backup drives, 631–632
+- video cards, 637–638
+- video cords, 636–637
+
+### M
+- mapping theory of keyboards, 416–417
+- marketplace, x86 CPU (central processing unit), 27–29
+- Master Boot Record (MBR), deleting, 275
+- Master from/To window, 222
+- Master Image window, 223
+- matching
+  - cases to motherboards, 111–113
+  - motherboards and CPUs (central processing units), 33–37
+- math coprocessors, 16
+- Matrox Graphics, Inc.,
+  - chipsets, Web site, 340
+  - contact information, 636
+- Maxell Corporation of America, contact information, 630, 632
+- Maxi Switch, Inc., contact information, 640
+- maximum
+  - resolution, monitors, 388–389
+  - sizes of motherboards, 51
+- vertical scan rate, 386
+- maximum horizontal scan rate, 387
+- Maximum Linux Security, 508
+- Maxtop Corporation, contact information, 631, 640
+- Maxtor Corporation, contact information, 629
+- Mbps (megabits per second), 153
+- MBps (megabytes per second), 153
+- MBR (Master Boot Record), deleting, 275
+- MCA (Micro Channel Architecture)
+  - bus, 42
+  - sound cards, 282
+- MDRAM (Multibank DRAM), 347
+- mechanical key switches, 411–412
+- mechanical mice, 426–428
+- media
+  - access, DVD-ROM, 206–207
+  - backing, CD-R and CD-RW, 205
+  - exchanging with OoS, 184–189
+  - optical, accessing in Linux, 214–217
+  - removable storage, comparing notebooks and desktops, 591
+- media access control (MAC), 469, 501
+- media types
+  - CD-R, 197
+  - digital cameras, 361
+- megabits per second (Mbps), 153
+- megabytes per second (MBps), 153
+- megahertz (MHz), dot clock, 396
+- megapixels, 361
+- membrane keyboards, 414
+- memory
+  - 16-bit, 76
+  - 32-bit, 76
+  - 8086 CPUs, (central processing units), 16
+  - 80286 CPUs, (central processing units), 16
+  - BIOS (basic input/output system), 92, 99
+  - boot BIOSes, 99
+  - cache, 17, 92–96
+  - chips, metallic pins, 81
+  - CMOS (complementary metal oxide semiconductors), 99
+  - DIMMs (dual inline memory modules), 82–87, 590
+  - EDO DRAM (extended data out dynamic RAM), 87
+  - electrical types, 87–89
+  - EPROM (erasable program-mable read-only memory), 55
+  - flash ROMs, reprogramming, 98
+  - FPM DRAM (fast page dynamic RAM), 87
+  - free command, 160
+  - holes, microboards, 92
+  - modules, 81–87
+  - motherboards, 72, 89, 91–92
+  - notebooks and desktops, comparing, 590
+  - plugs-ins, 89–90, 99–101
+  - RAM, non-motherboard types, 89
+  - RDRAM (Rambus dynamic RAM), 88–89
+  - requirements, 76–78
+  - RIMMs (Rambus inline memory modules), 85–86
+  - ROM (read-only memory), 96–98
+  - SDRAM (synchronous DRAM), 88
+  - SIMMs (single inline memory modules), 82–87, 590
+  - Socket 7 motherboards, 96
+  - SO-DIMM, 590
+  - split accesses, 84
+  - swap space, 79–81
+  - use estimates, adjusting, 78–79
+  - virtual, 79–81
+- menus
+  - Ethernet, 476–477
+  - Network device support, 474–476
+- Merecd, Itanium CPU, 28
+- Mesa (OpenGL) Web sites, 344
+- metallic pins, memory chips, 81
+- methods
+  - interface, Slot A CPU, 28
+  - kernel, configuration sessions, 614–615
+- Metro-X (X server option), 45, 355–356, 598
+- Metrolink OpenGL (OpenGL)
+  - Web sites, 344
+- Metrolink Web site, 355
+- mezzanine bus, 44
+- meetty+sendfax Web site, 493
+- MHz (megahertz), dot clock, 396
+- mice, 420
+  - ATX motherboard, port block, 404
+  - BusMouse protocol, 432
+  - button, 422
+  - conventional, 404, 421–423
+  - cordless, 423
+  - device drivers, 429–431
+  - device files, 429–431
+  - ergonomics, 422
+  - gpm program (text-mode operation), 431–432
+  - IMP5/2 protocol, 432
+  - input, receiving, 429–431
+  - IntelIMouse protocol, 432
+  - interfaces, 422
+  - Logictech protocol, 432
+  - Macintosh, USB (Universal Serial Bus) ports, 409
+  - manufacturers, 640–641
+  - Microsoft protocol, 432
+  - MouseMan protocol, 432
+  - MouseSystems protocol, 433
+  - notebooks, 592, 599
+  - ports, 65–66, 404–411
+  - PS/2 protocol, 433
+  - purchasing criteria, 422
+  - resolution, 422
+  - rollers, 426, 428
+  - scroll wheels, 421, 423
+  - sensor technology, 422
+  - serial port drivers, 430
+  - symmetry, 422
+  - technologies, 426–429
+  - touch pads, 423, 425
+  - trackballs, 423
+  - tracking speeds, adjusting, 422
+  - TrackPoint, 425–426
+  - USB (Universal Serial Bus), 430, 559
+  - wheel, 407, 433
+  - Xfree86 mouse protocols, 432–433
+- Micro Channel Architecture
+  - See MCA
+- Micro Warehouse, contact information, 648
+- micro-ATX form factors, 48–52, 111
+- micro-filters, 500
+- Microchannel (MCA) computer, sound cards, 282
+- Microm Networking
+  - Protocols (MNP) 1–5, 487
+- microphones, 323–329
+- Microsoft
+  - contact information, 641
+  - mouse protocol, 432
+  - Web site, mice, 429
+  - Windows, 583
+- Microsoft, contact information, 644
+- MicroWay, Inc., contact information, 647
+- mid-tower cases, 106
+- MIDI (Musical Instrument Digital Interface), 289, 293
+  - option, 307
+  - editor, sequencer, 307
+  - external devices, 290
+  - files, editing or playing, 307–308
+  - FM (frequency modulation)
+    - synthesis, 290–291
+  - sequencer, 308
+  - wavefile synthesis, 291–296
+  - xypladium, 308
+- MIDIA FTP site, 293–294
+- mikrosofts tool, FTP site, 219
+- millimeters (mm), dot pitch, 388
+- mini-ATX form factors, 48–52, 111
+- mini-tower cases, 106
+- minimum memory requirements, 76–78, 136–137
+- Minix filesystem, 185
+- miscovenger (monitors), 391
+- Mitsubishi Display Devices
+  - America, Inc., contact information, 639
+- Mitsumi Electronics
+  - Corporation, contact information, 631, 641
+- mixed generation CPUs (central processing units), 24
+- mixing utilities, 310–311
+- mixing SDRAM and EDO
+  - DRAM, 88
+- mkfs command, 188
+- mklifsrd tool, Web site, 219
+- MkLinux, 14
+- mklsvax command, 80
+- mm (millimeters), dot pitch, 388
+- MMX (multimedia extension), 18
+- MNP 1–4 (Microm Networking Protocols), 487
+- MNP 5 (Microm Networking Protocols), 487
+- MO (magneto-optical)
+  - disks, 173–174
+  - drives, 192
+- modelines, Xfree86, 395–398
+
+### M (Continued)
+- modems (modulator-demodulator), 559
+  - analog, v. 590 protocol, 485
+  - asymmetrical speeds, 487
+  - baud, 486
+  - cables, 440, 462, 506–510
+  - DSL (Digital Subscriber Line), 130, 454, 462, 484, 498–505
+  - dumb terminals, 496
+  - external, 489–490
+  - faxes, 493
+  - getty program, variants, 496
+  - internal, 490, 492
+  - ISDN (Integrated Services Digital Network), 498
+  - ISPs (Internet service providers), 487
+  - K56flex, 492
+  - manufacturers, 642–644
+  - MNP 1–4 (Micromom Networking Protocols), 487
+  - MNP 5 (Micromom Networking Protocols), 487
+  - motherboards, 71
+  - network bridges, 503
+  - notebooks, 599
+  - null modem cables, 494–497
+  - PLIP, high-speed cable pinouts, 497
+  - ports, adding, 443–444
+  - routers, 503
+  - software, 444, 488, 492
+  - symmetrical speeds, 487
+  - telephone, 484–493
+  - Turbo LapLink cable, 497
+  - USB CDC-ACM (Communication Device Class Abstract Control Model) interface, 490
+  - USB-interface DSL, Linux Web site, 503
+  - v.34, speed, testing, 487
+  - v.42 protocol, 487
+  - v.42bis protocol, 487
+  - virtual consoles, 496
+  - voice features, 493
+  - Web site, 444
+  - Windows-only, 101
+  - WinModems, 444
+
+- modes, cache or linear burst, 32, 492
+- modprobe command, 477
+- modulator-demodulator. See modems
+- modules
+  - chips, 90
+  - continuity, RIMM sockets on motherboards, 86
+  - memory, 82–87
+- moire (monitors), 391
+- money, donating for driver development, 623
+- Monitor section (XF86Config file), 394, 399
+- monitors
+  - adaptive color schemes, 379
+  - brightness, 390
+  - color balance, 391
+  - color dual-scan designs, 383
+  - contrast, 391
+  - control layout, 392
+  - CRTs (cathode ray tubes), 378–385
+  - DCF (dot clock frequency) in hertz, 398
+  - dead pixels, 384, 392
+  - defect discoveries, Deja News Web site, 393
+  - displays, analog versus digital, 385–386
+  - distortion, 391
+  - dot clock, MHz (megahertz), 396
+  - dot pitch, 388–389
+  - fixed frequency designs, 388
+  - flicker, 391
+  - gas plasma displays, 383
+  - HDTV (high-definition television), 385
+  - HFL (horizontal frame length), 398
+  - human photoreceptor persistence, 380
+  - in-store checkout, 390–392
+  - LCDs (liquid crystal displays), 381–386
+  - magnetic field damage, 318
+  - manufacturers, 638–639
+  - maximum resolution, 388–389
+  - misconvergence, 391
+  - more, 391
+  - mounting on cases, 105
+  - phosphor persistence, 379
+  - polarized light, 382
+  - portrait orientation, 390
+  - quality, evaluating, 386
+  - refresh rates, 345, 386–388
+  - RR (refresh rate) in hertz, 398
+  - sample testing, 392–393
+  - screen flatness, 392
+  - sharpness, 390
+  - size, 392
+  - STN (super twist numeric), 383
+  - subtractive color schemes, 379
+  - technologies, 378
+  - VLF (vertical frame length), 398
+  - viewing angles, 389–390
+  - weight, 392
+  - XFree86, 393–397
+- mono microphones, 325–326
+- motherboard buses
+  - AGP (Accelerated Graphics Port), 338
+  - chipsets, 338–341
+  - EISA, 270
+  - ISA (Industry Standard Architecture), 268–270, 282–283, 336–337
+  - PCI (Peripheral Component Interconnect), 271, 282–284, 337
+  - SCSI host adapters, 268–272
+  - sound cards, 282
+  - video chipsets, 338
+  - XL-Bus, 270, 337
+  - V.656c compatibility, 341–342
+- motherboards, 561–562
+  - Adapter Web site, 272
+  - adapters, 69–72

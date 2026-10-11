@@ -1,0 +1,9 @@
+![](bbox=[0.2, 0.12, 0.74, 0.44])
+
+# FIGURE 11.1
+
+The traditional design for speakers uses one pair for stereo reproduction.
+
+An alternative to the two-speaker design that’s gained popularity in computer circles in the late 1990s uses three speakers for stereo sound reproduction. The human ear is good at localizing high-pitched (or *treble*) sounds, but not so good at locating the source of lower (*bass*) tones. The reproduction of bass tones, however, is the source of the increased size of higher-quality speakers. These tones require large speaker elements, known as *woofers* or *subwoofers*. If most of the bass tone reproduction is shifted into a third speaker, located between the two stereo speakers (which are now referred to as *satellite speakers*), those satellite speakers can be greatly reduced in size. A typical three-speaker system uses satellite speakers that are only about 2–4 inches on a side, and a subwoofer roughly 12-inch×8-inch×8-inch in size. Figure 11.2 depicts such an arrangement.
+
+Which type of speaker should you get? There’s no easy answer to this question. Both two- and three-speaker designs can achieve good sound reproduction; neither type is uniformly better than the other. The bulk of the higher-quality speaker sets marketed for computers in 2000, however, use three-speaker designs. The advantage of the three-speaker design is that it’s less demanding of desk space. The satellite speakers are small and unimposing. The three-speaker system’s subwoofer is quite bulky, however, so if under-desk space is limited, you might want to favor a two-speaker design. Another drawback to the three-speaker design is that it involves more in the way of cabling. A typical two-speaker design uses just two audio cables, one leading from one speaker to the computer and another leading from the first speaker to the second.

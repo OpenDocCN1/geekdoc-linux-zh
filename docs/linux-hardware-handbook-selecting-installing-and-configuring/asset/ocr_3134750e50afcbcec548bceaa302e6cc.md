@@ -1,0 +1,13 @@
+In Linux today, SoundBlaster compatibility is next to useless. Linux relies upon its own native drivers for all sound functions. Linux does, of course, include drivers for most SoundBlaster models, but because most SoundBlaster-compatible sound boards require proprietary commands to enable SoundBlaster mode, these drivers don't do much good unless the board has already been initialized in SoundBlaster mode. Even then, because most SoundBlaster-compatible cards only emulate the 8-bit SoundBlaster Pro, you won't be able to use the card's 16-bit functionality.
+
+**TIP**
+If you've got a SoundBlaster-compatible card that has no native Linux driver, you might be able to get it working by running DOS and whatever DOS utilities the board manufactur er provides to to initiate SoundBlaster compatibility mode. When you've done this, you can press Ctrl+Alt+Del to reboot to Linux, or use LOADLIN.EXE to boot Linux directly from DOS. If all goes well, Linux will then detect the board as a SoundBlaster Pro and you can use it as such. You won't be able to use 16-bit sound features, but 8-bit sound might be preferable to none. You might even want to set up a small (1MB\~2MB should be adequate) DOS boot partition that includes a call to LOADLIN.EXE in its AUTOEXEC.BAT file in order to boot Linux automatically. You can then boot Linux regularly via this small DOS partition. A better solution is to replace the sound card, unless it's integrated into the computer (in a laptop, for instance).
+
+In sum, ignore the words SoundBlaster compatible in any advertising or on any product boxes you might see. Instead, focus on the chipsets used by the sound cards, and look for boards that use the chipsets for which Linux drivers exist and are stable.
+
+# ## Common ISA Chipsets
+
+Through the mid- and late-1990s, dozens of audio chipsets emerged on ISA sound cards. Most of these chipsets are used by several sound card manufacturers, although some are used by just one or two. Most have support in Linux. Some of the more popular chipset manufacturers and models include
+
++   * **AMD** AMD (http://www.amd.com) produced one major ISA sound chipset, the Interwave. This product included a Gravis UltraSound compatibility mode and, in fact, was used on the UltraSound PhP model, among others.
++   * **Aztech** Many low-cost boards from Aztech (http://www.aztechca.com) and others in the mid-1990s used Aztech chipsets, often with the names Sound Galaxy and Washington. Aztech products are less common today. Linux drivers exist for most Aztech products.

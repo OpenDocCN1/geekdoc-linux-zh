@@ -1,0 +1,15 @@
++   * **Slackware 7.0**  Slackware (<http://www.slackware.com>) is the oldest surviving major Linux distribution. It uses neither RPM nor Debian packages, which means it can be difficult to add and remove packages from the OS. Like Debian, Slackware shuns GUI configuration screens, so it’s best for experienced UNIX administrators.
+
++   * **SuSE 6.4**  SuSE (<http://www.suse.com>) originates in Germany. It’s an RPM-based distribution, and is somewhat more compatible with Red Hat RPMs than is Caldera, but less so than Mandrake. Its configuration tools are not quite as sophisticated as are those of Red Hat, Mandrake, Caldera, or Corel, but it’s better than Debian or Slackware in this respect. The commercial version of SuSE is distinguished by being available either on several CD-ROMs or on a single DVD-ROM. It comes with an unusually wide selection of software.
+
+If you’re new to Linux and have Linux-using friends or colleagues, you might want to use whatever distribution your friends or colleagues use. That way, you’ll have an easier time getting support from these individuals. If you’re a lone new user, I recommend you start with Caldera, Corel, Mandrake, or Red Hat, because these are the easiest for a new user to install and configure. If you want to dive in without the “crutches” of GUI configuration tools, Debian would be my choice, although Slackware also deserves praise.
+
+# # Running a Linux Installation
+
+Today, most Linux distributions come on bootable CD-ROMs. You can insert the CD-ROM in the drive, turn on the computer, and the installation routine starts up—if your BIOS is configured to boot from the CD-ROM drive. Details differ from one Hat BIOS to another, but you can typically adjust this detail by entering the CMOS setup utility by pressing a key such as F2 or Delete early in the boot process. You can then locate and adjust the boot order option so that the CD-ROM drive comes first, as shown in Figure 21.4. If booting from the CD-ROM drive doesn’t work for some reason, you can usually create a boot floppy disk or start the installation from DOS or Windows. Consult your distribution’s documentation for details.
+
+The details of Linux installation vary substantially, but as a general rule they proceed through several steps:
+
++   * **Basic configuration**  The installation routines ask what language to use, what sort of keyboard and mouse you have, and so on. Distributions sometimes also ask you about SCSI host adapters and Ethernet cards.
+
++   * **Package selection**  You must tell the system what programs to install. Increasingly, distributions offer simple options, such as *desktop system* or *server configuration*. These options select a large number of packages. Other distributions, such as Debian 2.1, require that you select packages on a more fine-grained basis, or offer such selection as an “advanced” installation option.

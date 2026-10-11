@@ -1,0 +1,15 @@
+# Evaluating Ease of Access
+
+If you ever have cause to open a computer to remove, replace, or add components, you must be concerned with ease of access to those components. Here are some things to look for:
+
++   * Ease of opening Cases from the mid-1990s almost invariably required 4–6 screws to hold the case together. You would remove these screws before pulling the lid off the case. Some cases use thumbscrews in place of conventional screws, and it’s possible to purchase aftermarket thumbscrews that replace conventional screws for older cases. Some designs use fewer screws, or use latches instead of screws, so that it’s not necessary to unscrew anything to open the case.
+
++   * Number of panels Some cases have but a single opening, which is generally a large piece of metal bent to cover three sides of the case. These panels can be difficult to remove and replace, particularly in full tower designs. Other computers use separate panels for each side of the computer, which can be convenient when you only need access to one side of the computer. Some cases require that you open one panel before removing another; for instance, you might need to remove the front panel before opening the main case lid. These designs can be inconvenient.
+
++   * Access location Most cases require that you manipulate something at the rear of the case in order to gain access to the interior. The manipulation can be removing screws or simply squeezing a latch. Other cases let you gain entry by performing similar actions at the front of the computer. Front access is generally easier than rear access, all other things being equal. Some tower cases now have sides that swing out or down, which can be quite convenient if you have sufficient clearance to the side of the computer.
+
++   * Blocked motherboard components Particularly on small cases, drive bays, the power supply, and other case components sometimes block access to motherboard components. For instance, memory sockets might lie hidden behind drive bays. Try to avoid such designs.
+
++   * Motherboard trays Sometimes it’s difficult to fit a motherboard into a case. Some cases help ease this access by using a removable motherboard tray. You mount the motherboard to a case component that can be easily removed by sliding or lifting it out of the case. In the best of these designs, the motherboard tray includes the external slots for expansion cards, so you can remove the motherboard and its cards without removing the cards from the motherboard. This design allows for easy access to motherboard components that might be blocked by parts of the case or by cables within the case.
+
++   * Access to drive bays If the case requires bolting drives directly to their bays, be sure you’ve got clear access to both sides of the bays. This access is awkward on some computers, because it might require removal of the motherboard or drive bays located to the side of the one you want to access. Cases that use rails generally provide easier access to drives.

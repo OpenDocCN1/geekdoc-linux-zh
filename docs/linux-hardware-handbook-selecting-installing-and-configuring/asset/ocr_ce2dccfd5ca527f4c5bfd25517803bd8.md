@@ -1,0 +1,14 @@
++   - **Human photoreceptor persistence** The cells in your eyes that detect light also experience persistence. Where a monitor’s phosphors continue glowing for a time after being struck by an electron beam, your photoreceptors continue firing electrical impulses to your brain after a light source has been removed. The human eye contains two broad classes of photoreceptors: *rods*, which are responsible for black-and-white vision, and *cones*, which are responsible for color vision. Rods are more common in your peripheral vision, and are generally more sensitive and have lower persistence.
+
+> **Tip**
+> As described later in this chapter, a monitor’s refresh rate—how often the display is renewed—is one of its most important performance characteristics. If the refresh rate is too low, phosphor and photoreceptor persistence become insufficient, and you perceive flicker in the displayed image. You can detect this flicker most easily by looking slightly away from a monitor, so that you view it with your more sensitive rods. If you can perceive flicker in a display when you view it peripherally, you should adjust its refresh rate upwards, if possible. Failing to do so can result in headaches and eye strain when you use a monitor for a prolonged period.
+
+# Picture Tube Types
+
+Two basic types of picture tube are in common use today:
+
++   - **Shadow mask** In a shadow mask tube, a metallic screen lies between the electron gun and the front of the display. This screen is used to help keep the electron beam directed onto the proper color phosphors, without leakage onto nearby colors. Shadow mask technology is quite old, and results in a display that’s *curved* both horizontally and vertically.
+
++   - **Aperture grille** Sony invented the aperture grille design as an alternative to the shadow mask, and marketed the technology under the *Trinitron* name. These tubes use a series of fine wires strung vertically across the monitor instead of a shadow mask. This design allows a picture tube to be flat in the vertical direction, although the tube must still be curved horizontally. Today, aperture grille designs are available from several manufacturers, some of whom use Sony’s Trinitron tubes and some of whom do not.
+
+As a general rule, aperture grille designs are more expensive and produce brighter displays than do shadow mask designs. Shadow mask designs have traditionally had an edge in text display sharpness, but this is less true today than it used to be. Aperture grille designs suffer from the presence of one or two dark horizontal lines, a third of the way up from the bottom or down from the top of the screen. These lines are shadows cast by stabilizing wires that keep the aperture grille wires aligned.

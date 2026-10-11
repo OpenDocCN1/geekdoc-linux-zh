@@ -1,0 +1,13 @@
+# CAUTION
+
+The brown and blue wires always carry current when the power supply is plugged in! Therefore, you should only try to connect or disconnect these wires *after* unplugging the computer from the wall!
+
+# Power Supply Quality
+
+Like all products, power supplies vary in quality, although it's hard for a consumer to detect this variation. Power supply quality differences manifest in terms of the stability of power delivered to devices inside the computer's case, even through power fluctuations in the current delivered to the computer. Over time, power fluctuations can damage or destroy the components inside the computer. In extreme cases, a power supply might conceivably deliver far too much power, or power at the wrong voltage, quickly destroying the computer.
+
+To some extent, you can rely upon certifications to assure a minimum level of quality. In the United States, Underwriter's Laboratory (UL) certifies electrical products, including power supplies, for safety. Equivalents in other countries include the Canadian Standards Agency (CSA), Germany's TÜV Rheinland and VDE, and Norway's NEMKO.
+
+A few manufacturers, most notably Astec (http://www.astec.com) and PC Power and Cooling (http://www.pcpowercooling.com), are noted for producing power supplies of unusually high quality. If you want to get the highest-quality power supply possible, you won't go far wrong with a product from either firm, assuming the power supply you purchase meets your wattage requirements.
+
+If your power supply dies, you can obtain a replacement from a variety of local or mail-order computer parts suppliers. Generally speaking, any store that sells cases also sells power supplies. Be sure the replacement power supply you purchase matches the form factor of the one it's intended to replace (AT, ATX, and so on). You must typically unplug the power supply from the case by removing four screws from the outside rear of the case—but be sure you get the correct screws, because some power supplies place their own screws in locations that are also accessible from the rear of the case. You must then disconnect all the power leads from the power supply to all the internal devices—the motherboard, hard disks, floppy disks, and so on. If it's an AT power supply, you must disconnect the power supply from the case's main switch. You can then remove the power supply and reverse the operation with the new unit.

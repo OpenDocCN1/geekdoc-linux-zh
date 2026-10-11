@@ -1016,6 +1016,7 @@
 +   [Linux 手册：IBM Linux 解决方案与资源指南 - 2003年4月 - SG24-7000-00](docs/linux-handbook-a-guide-to-ibm-linux-solutions-and-resources-/README.md)
 +   [敌对网络中的 Linux 加固：从 TLS 到 Tor 的服务器安全 (Pearson 开源软件开发系列)](docs/linux-hardening-in-hostile-networks-server-security-from-tls/README.md)
 +   [Linux硬件手册（Sams白皮书系列）](docs/linux-hardware-handbook-sams-white-book-series/README.md)
++   [Linux 硬件手册：为你的 Linux 系统选择、安装和配置合适的组件](docs/linux-hardware-handbook-selecting-installing-and-configuring/README.md)
 +   [Linux HPC 集群安装指南](docs/linux-hpc-cluster-installation/README.md)
 +   [Linux!：原来你还能这样做……（互联网）](docs/linux-i-didnt-know-you-could-do-that-internet/README.md)
 +   [Linux！原来你还能这么做……](docs/linux-i-didnt-know-you-could-do-thattm/README.md)

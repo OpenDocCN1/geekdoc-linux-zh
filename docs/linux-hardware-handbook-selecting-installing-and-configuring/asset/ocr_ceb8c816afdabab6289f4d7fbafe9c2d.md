@@ -1,0 +1,15 @@
++   * **IDSL** ISDN-based DSL (IDSL) uses ISDN technology to deliver symmetric DSL service at speeds of 128–144Kbps. This speed is low compared to other DSL technologies, but it can be used at distances of up to 38,000 feet. IDSL service typically sells for $100–$300/month.
+
++   * **xDSL** This isn't a separate type of DSL; it's simply a term that refers to any variety of DSL service.
+
+The preceding summary of DSL technologies should be taken as a rough guideline. For various reasons, many providers limit DSL speed or won't install at distances near the limits I've outlined here. There are also more exotic forms of DSL that might be available in your area, although ADSL (and its G.Lite variant), SDSL, and IDSL dominate the marketplace.
+
+# # DSL Authentication
+
+DSL providers, like other ISPs, need some way to authenticate their users. There are three methods in common use:
+
++   * **Static IP addresses** Some providers assign each user one or more static IP addresses. You then enter this information into your Linux system as if you were connecting to an Ethernet network. Static IP addresses are great if you want to run a server, but they're the least secure form of authentication. It's often possible for another DSL user to "hijack" your DSL IP address. If this happens, you might find yourself unable to use your DSL service.
+
++   * **DHCP** The dynamic host configuration protocol (DHCP) is a means for ISPs to assign IP addresses dynamically. A server that the ISP maintains keeps a record of IP addresses available, and assigns them to computers as they come online. DHCP can be configured to use your Ethernet card's media access control (MAC) number as authentication, so it's somewhat more secure than a static IP address. It's also possible for an ISP to assign a given customer the same IP address every time the customer boots the computer. Most DSL ISPs don't work in this way, though, so you might get a new IP address every time you boot. Configuring Linux to use DHCP is simple, as I described in Chapter 17, "Network Hardware."
+
++   * **PPPoE** PPP over Ethernet is the latest craze in the DSL world. This protocol uses PPP to authenticate computers, but over a DSL modem rather than a conventional telephone modem. The 2.2.x and 2.3.x kernels don't include support for PPPoE, but there is work underway to integrate PPPoE into the kernel. In the meantime, several alternative PPPoE implementations for Linux exist. Links to many of these are at http://www.rodsbooks.com/network/network-dsl.html. PPPoE is the most secure of the authentication methods currently in use, but also the least convenient for Linux users. Most PPPoE implementations assign a new IP address every time you boot the computer, so PPPoE is a poor choice if you want to run a server. Some ISPs provide a fixed IP address via PPPoE, typically for a higher price than a random IP address.

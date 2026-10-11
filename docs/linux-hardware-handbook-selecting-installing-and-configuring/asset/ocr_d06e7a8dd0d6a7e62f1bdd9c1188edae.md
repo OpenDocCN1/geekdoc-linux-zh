@@ -1,0 +1,15 @@
++   * **Wireless networking** A number of wireless networking protocols are gaining in popularity. Linux supports several of these, but you should check the kernel configuration options to be sure Linux supports any given product before you make a purchase.
++   
++   * **Mult port cards** A few manufacturers, including Intel (http://www.intel.com) and Adaptec (http://www.adaptec.com), offer cards with two or more Ethernet ports. These ports are independent, so you can use them to connect a single computer to two or more networks. In most cases, using multiple NICs is less expensive, because these multiport cards are costly. If you're running short on slots, though, and need to connect a computer to two or more networks, these devices can be quite convenient. They're configured just like ordinary Ethernet NICs; each product registers as two or more separate devices.
++   
++   * **Gigabit Ethernet** Beyond 100Mbps Ethernet lies 1,000Mbps, or 1Gbps, Ethernet. This technology is still fairly new, but Linux adds support for several gigabit Ethernet cards in the 2.3.x kernel series.
++   
++   * **Dial-up networking** Many individuals and small businesses connect to the Internet through dial-up accounts with local ISPs. These accounts typically use the Point-to-Point Protocol (PPP), or occasionally the Serial Line Interface Protocol (SLIP), via a modem. Linux supports both protocols. There are also a number of implementations of PPP over Ethernet (PPPoE) for Linux. This protocol is becoming popular on DSL networks. See http://www.roadbooks.com/network/network-dsl.html for information on several PPPoE implementations for Linux.
+
+As a general rule, when you compile support for an exotic network interface into your kernel, you can then use that hardware in conjunction with the normal Linux TCP/IP stack, including client programs such as Netscape Navigator and server programs such as Apache. If the network to which you're attaching is linked to the Internet, you can then communicate with any Internet-connected computer in the world, regardless of the network hardware used on that computer.
+
+# ### Cabling Choices
+
+To a large extent, the cabling you use is determined by the type of network to which you're connecting. You can't use LocalTalk cables on an Ethernet network, for instance. If you're building a network from scratch, you might need to decide not just what type of network cards to buy, but what type of cabling. This is particularly true of 10Mbps Ethernet, which supports two types of Ethernet cabling—coaxial and twisted-pair. Understanding the differences between these cable types can be important even if you're connecting a computer to an existing network. An error in connecting your computer can cause problems to other users of the network, so it's important that you do the job correctly. Table 17.1 summarizes some of the characteristics of these cabling types.
+
+![](bbox=[0.78, 0.26, 0.82, 0.44])

@@ -1,0 +1,14 @@
+# ## Mixing Memory Types
+
+Most motherboards don't cope well with a combination of SDRAM and other RAM types. Therefore, if you use any SDRAM on a motherboard, you can't normally use other memory types. As a general rule, mixing FPM DRAM with EDO DRAM doesn't pose as many problems, but you should check with your motherboard's manual to be sure.
+
+Some motherboards don't work well with mixed SIMMs and DIMMs, even when both module types contain the same type of RAM. You should therefore consult your motherboard's manual before adding RAM of one type to a system that contains another type of memory. For example, when mixing types is allowed, it might not be possible to use all the RAM sockets. For example, a Pentium motherboard might contain two 168-pin DIMM sockets and four 72-pin SIMM sockets (two banks of two sockets). The motherboard might support only three banks of memory total, however, meaning that you must leave either one DIMM socket or two SIMM sockets unoccupied. Once again, you should consult your motherboard's manual for details.
+
+# ## Miscellaneous Additional Factors
+
+Particularly with older memory types, there are additional factors that can influence the reliability of specific memory modules in specific motherboards. These factors include
+
++   * **Jumper settings**	Early 80486 and earlier computers often used jumpers on the motherboard to identify the amount of RAM installed. Later 80486 and later computers generally auto-detect the amount and, where applicable, type of memory. If you have an older motherboard, you might need to adjust jumper settings when you add or remove RAM.
++   * **Number of chips**	In the mid-1990s, there was a great deal of discussion about 2- or 3-chip 30-pin SIMMs as opposed to 8- or 9-chip 30-pin SIMMs. The 2- or 3-chip SIMMs used higher-capacity chips than did their 8- or 9-chip counterparts of the same capacity, and this difference resulted in some subtle electronic differences. The 2- and 8-chip SIMMs lacked parity, whereas the 3- and 9-chip variants were parity SIMMs. In general, it's best to keep the number of chips on each SIMM the same, particularly within a single bank, on motherboards of this era. More recent motherboards that use 72-pin SIMMs and 168-pin DIMMs are less troubled by such effects.
++   * **Sidedness**	Memory modules can have chips mounted on one or both sides. This characteristic is correlated with electronic differences, and some motherboards have specific requirements for single- or double-sided SIMMs or DIMMs. These requirements are usually documented in the motherboard manual, so you should check there for further information.
++   * **Parity**	If you plan to expand your memory, try to use parity memory if your system currently uses it, or non-parity, if not. Most computers report whether the memory is parity or non-parity in a brief display during bootup.

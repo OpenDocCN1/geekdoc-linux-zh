@@ -1,0 +1,7 @@
+Rather than buy a Windows computer and then struggle to obtain a refund, it's generally better to buy a computer with Linux preinstalled, or at least without an OS installed at all. (Many of the small- and mid-sized PC manufacturers will build a computer without an OS installed.) Linux machines are typically harder to find than Windows-based computers, but they're not unobtainable. Chapter 22 covers this topic in more detail.
+
+# ## Summary
+
+If you're in the market for a new computer, one option is to purchase a machine that was never designed to run Linux, but to run Linux on it anyhow. Most computers can work in this way, although you might have to replace one or two components, such as a software modem or sound card, to get it to work. If you buy a computer from a vendor that will build a system to your specifications, you can ensure that it has adequate hardware from the beginning. You must do some research on basic Linux hardware, particularly video cards, SCSI adapters, and sound cards, if you don't want to be stuck with a machine that runs Linux poorly, if at all.
+
+After you've got your computer, you'll need to spend some time preparing it to run Linux and installing the OS. This task is no different from installing Linux on a system you've had for some time. The task can be safer because, if you make a mistake that wipes out Windows, you can probably recover Windows to its immediate post-installation state by running a recovery CD provided by the computer's manufacturer.

@@ -1,0 +1,15 @@
+# **PART II**
+
+A data backup device is an indispensable accessory for serious computing. Hard disks are very delicate instruments that can be easily damaged. More importantly, humans are error-prone beings who have a tendency to mistype important commands or click on the wrong files or program options. When your computer loses its data because of mechanical or human error, a backup device can let you recover your data—a few files or your entire system—with minimal fuss.
+
+Note that I used the word *when* in the preceding paragraph with respect to data loss, not *if*. It’s possible you’ve been lucky so far and have never experienced the need for backup, but, if so, that state of affairs will change. Thinking otherwise is—to put it bluntly—deluding yourself. A backup device is therefore a requirement for any but the most trivial Linux installations.
+
+What *type* of backup, though? Several data storage devices I’ve covered in previous chapters have merit:
+
++   * **Hard disks** You can add a second hard disk at low cost and periodically back up your system to this disk. Hard disks are fast and convenient, but unless you purchase twice or more of your main disk’s capacity, you can usually only store a single backup on a disk. Worse, they’re usually stored in the same case as the main disk, so a physical trauma that destroys the main drive will most likely destroy the backup, too. If you decide to use a hard disk, I recommend using an external Small Computer System Interface (SCSI) model, or buying a kit that lets you easily remove the backup disk when it’s not in use.
+
++   * **Removable disks** Disk devices like a Iomega Zip drive, LS-120 drive, or magneto-optical (MO) disk can be used for backup. Most of these devices are fairly low in capacity, however, or are quite expensive as backup media. If you have a large MO disk, however, it can prove to be a convenient and reliable backup medium if you don’t mind the cost.
+
++   * **Optical discs** Some people favor CD-R and CD-RW drives for backup purposes. The media are inexpensive and durable, and reading the data back is a snap. Recordable CD technologies impose low capacity limits, however (650MB), and the CD-creation process can sometimes be awkward. Recordable DVD technologies are better suited to this purpose, and are an increasingly realistic option as the price and availability of recordable DVD drives and media improve.
+
+All things considered, another technology is often best suited for backup purposes—tape. Unlike the media I’ve just described, tape is a *sequential-access* medium, which means you must read the beginning of the tape before you can get to the end. (There are exceptions to this rule, however.) This characteristic makes tapes unsuitable for use in most data storage capacities, but it’s not too great an obstacle for a backup medium, which is usually accessed in sequential write mode. Tapes are also inexpensive on a per-megabyte basis when compared to most other potential backup media. The tapes themselves are compact and removable, so you

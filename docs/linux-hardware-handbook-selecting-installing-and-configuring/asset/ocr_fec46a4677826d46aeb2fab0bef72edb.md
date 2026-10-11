@@ -1,0 +1,12 @@
+# Linux PC Card Support
+
+The 2.2.x kernel series includes essentially no support for PC Card devices. Instead, a separate package of kernel modules is available from the Linux PC Card site, http://pcmcia.sourceforge.org. You can obtain these drivers and install them separately from the kernel.
+When installed, these drivers work as if they were normal kernel modules. In the 2.3.x kernel, drivers for some PC Card devices exist in the main kernel. PC Card Ethernet adapter support, for instance, exists in the Network device support, PCMCIA network device support kernel menu. For other uses, such as PC Card hard disk support, you must still acquire the separate PC Card support package.
+
+PC Cards are designed to be hot-swappable—that is, you can insert or remove them when the computer is powered on. This fact presents certain challenges to Linux, which tends to assume devices won’t disappear unexpectedly. Therefore, PC Card support in Linux requires special software. This support is provided by a feature known as Card Services, which is available from the Linux PC Card site. When installed, Card Services controls PC Card access through files in the /etc/pcmcia directory. There’s a script in this directory for each type of PC Card—for instance, network and ide.
+
+> **NOTE**
+> Devices such as palmtop computers and digital cameras frequently use *Compact Flash* (CF) or SmartMedia cards for storage. These devices are *not* hard disks, but they can look like PC Card IDE hard disks when coupled with an appropriate adapter. You can therefore use Linux’s PC Card support to access these storage media. You can use this feature to read images you’ve recorded with a digital camera because these devices use the FAT filesystem.
+
+Fortunately, most Linux distributions ship with PC Card support enabled by default. You therefore don’t normally need to be concerned with starting Card Services yourself.
+When you insert or remove a PC Card, Card Services runs the appropriate script in /etc/pcmcia. This script shuts down or starts up whatever functions are required for the device. For instance, when you insert a PC Card Ethernet adapter, Card Services loads the PC Card’s kernel driver and then activates the Ethernet interface, including assigning its IP address, setting a default route, and so on. When you eject that Ethernet card, Card Services shuts down the interface, removes the interface’s routing table entries, and so on.

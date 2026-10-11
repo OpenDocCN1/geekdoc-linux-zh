@@ -1,0 +1,12 @@
+probably get a good idea of a dealer's level of Linux expertise by asking a few questions, such as
+
++   *   **What version of Linux, and why that one?**  Ask what Linux distributions the dealer offers, and why. Be wary of a reply like \"We use distribution \(X\) because it's the best.\" As I outlined in the section \"Obtaining a Linux Distribution\" in Chapter 21, there is no single best Linux distribution; every one has its advantages and disadvantages.
++   *   **What partitioning options do you offer?**  A serious Linux vendor should allow you to specify any partitioning scheme you like. A dealer with little or no experience might offer just one or two configurations, or might respond in a way that indicates confusion about the question.
++   *   **Why do you use component X?**  Ask about one or two components that are particularly important to you personally or that can cause problems in Linux, such as video cards or sound cards. Does the response match what you read on Usenet newsgroups and any relevant Linux Web sites? (You can search for recent Usenet news postings about a component on http://www.deja.com/usenet/. ) Be particularly wary if the dealer refers to reviews in mainstream computer magazines, which seldom consider Linux compatibility. Windows benchmarks are particularly unreliable for predicting Linux performance.
++   *   **What do you suggest for peripheral X?**  Even if the dealer doesn't offer peripherals such as printers or scanners, a knowledgeable Linux shop should have some idea about what works well and what doesn't. Compare the dealer's response to the listings on appropriate Linux hardware Web sites, such as http://www.picaante.com/gtaylor/phr/printer\_list.cgi for printers or http://www.mostang.com/sane/ for scanners.
++   *   **What Linux support do you offer?**  If the dealer offers post-sale Linux support, this is a good thing. Some dealers might not offer Linux support after the sale, or might rely on a third party to offer that support.
++   *   **How long have you been offering Linux?**  The longer a firm has been installing Linux on its computers, the better they're likely to understand its capabilities and requirements. You might also express this question in terms of how *many* Linux computers they've sold.
+
+> > **TIP**
+> >
+> > If the dealer also sells Windows-based systems, try to ask these questions of a dealer's Linux expert. A salesperson might not be familiar with the details of Linux systems, but that doesn't mean that the expertise doesn't exist elsewhere in the company.
