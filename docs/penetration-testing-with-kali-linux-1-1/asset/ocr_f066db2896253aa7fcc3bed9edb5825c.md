@@ -1,0 +1,11 @@
+*Listing 859 - Command to run wpscan*
+
+WPScan outputs useful information about the target:
+
+```
+...\n[i] Plugin(s) Identified:\n\n[+] elementor\n| Location: http://sandbox.local/wp-content/plugins/elementor/\n| Last Updated: 2019-12-08T17:19:00.000Z\n| [!] The version is out of date, the latest version is 2.7.6\n\n| Found By: Urls In Homepage (Passive Detection)\n\n| Version: 2.7.4 (100% confidence)\n| Found By: Query Parameter (Passive Detection)\n| - http://sandbox.local/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.7.4\n| - http://sandbox.local/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.7.4\n| Confirmed By: Readme - Stable Tag (Aggressive Detection)\n| - http://sandbox.local/wp-content/plugins/elementor/readme.txt\n\n[+] ocean-extra\n| Location: http://sandbox.local/wp-content/plugins/ocean-extra/\n| Last Updated: 2019-11-13T16:17:00.000Z\n| [!] The version is out of date, the latest version is 1.5.19\n\n| Found By: Urls In Homepage (Passive Detection)\n\n| Version: 1.5.16 (100% confidence)\n| Found By: Readme - Stable Tag (Aggressive Detection)\n| - http://sandbox.local/wp-content/plugins/ocean-extra/readme.txt\n| Confirmed By: Readme - Changelog Section (Aggressive Detection)\n| - http://sandbox.local/wp-content/plugins/ocean-extra/readme.txt\n\n[+] wp-survey-and-poll\n| Location: http://sandbox.local/wp-content/plugins/wp-survey-and-poll/\n| Last Updated: 2019-10-15T10:32:00.000Z\n| [!] The version is out of date, the latest version is 1.5.8.2\n\n| Found By: Urls In Homepage (Passive Detection)\n\n| Version: 1.5.7.3 (50% confidence)\n| Found By: Readme - Changelog Section (Aggressive Detection)\n| - http://sandbox.local/wp-content/plugins/wp-survey-and-poll/readme.txt\n\n[+] Enumerating All Themes (via Passive and Aggressive Methods)
+```
+
+*Listing 860 - Output of wpscan scan*
+
+The most interesting items that we discovered are the three plugins that are installed: elementor, ocean-extra, and wp-survey-and-poll. WPScan has its own vulnerability database that the tool can use, but it requires registration. To avoid registration, since we only found three plugins, we can use

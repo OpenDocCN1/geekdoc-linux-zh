@@ -1,0 +1,141 @@
+
+
+## 10.2.1 易受漏洞影响的代码示例
+
+以下列表展示了一个非常基础的 C 语言源代码，该应用程序易受缓冲区溢出攻击。
+
+```
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[])  
+{
+    char buffer[64];
+
+    if (argc < 2)
+    {
+        printf("Error – You must supply at least one argument\n");
+        return 1;
+    }
+
+    strcpy(buffer, argv[1]);
+
+    return 0;
+}
+```
+
+列表 339 - 一个易受漏洞影响的 C 函数
+
+即使您之前从未接触过 C 代码，上述列表所示的逻辑应该也比较容易理解。首先，值得注意的是，在 C 语言中，主函数与其他函数一样被同等对待；它可以接收参数、向调用程序返回值等。唯一的区别是，它在进程启动时由操作系统本身“调用”。
+
+在这种情况下，主函数首先定义了一个名为 buffer 的字符数组，该数组最多可容纳 64 个字符。由于该变量是在函数内定义的，C 编译器将其视为局部变量，并会在栈上为其保留空间（64 字节）。具体来说，当程序运行时，在主函数执行期间，这块内存空间将在主函数的栈帧内被保留。
+
+> 顾名思义，局部变量具有局部作用域，这意味着它们仅在其声明的函数或代码块内可被访问。相比之下，全局变量存储在程序的 .data 段中，这是程序的一个不同的内存区域，所有应用程序代码都可以全局访问。
+
+随后，程序继续将给定的命令行参数内容（`argv[1]`[^303]）复制到 buffer 字符数组中（使用 `strcpy`[^302]）。请注意，C 语言不原生支持字符串作为数据类型。在底层，字符串是一序列以空字符（`\0`）结尾的字符，或者换句话说，是一个一维字符数组。
+
+最后，程序终止其执行，并向操作系统返回一个零（标准成功退出码）。
+
+当我们调用此程序时，我们会向其传递命令行参数。`main` 函数借助两个参数 `argc` 和 `argv` 来处理这些参数，它们分别代表传递给程序的参数数量（以整数形式传递）以及指向参数“字符串”本身的指针数组。
+
+如果传递给 `main` 函数的参数长度不超过 64 个字符，该程序将按预期工作并正常退出。然而，由于没有对输入大小进行检查，如果参数更长，例如 80 字节，目标缓冲区相邻的部分栈将被剩余的 16 个字符覆盖，从而溢出数组边界。图 182 对此进行了说明。
+
+| StrCpy 前 | 复制 32 个 A | 复制 80 个 A |
+| :---: | :---: | :---: |
+| StrCpy 目标地址 | StrCpy 目标地址 | StrCpy 目标地址 |
+| StrCpy 源地址 | StrCpy 源地址 | StrCpy 源地址 |
+| 保留的 char buffer 内存 | AAAAAAAAAAAAAAAAAA | AAAAAAAAAAAAAAAAAA |
+| 保留的 char buffer 内存 | AAAAAAAAAAAAAAAAAA | AAAAAAAAAAAAAAAAAA |
+| 保留的 char buffer 内存 | 保留的 char buffer 内存 | AAAAAAAAAAAAAAAAAA |
+| 保留的 char buffer 内存 | 保留的 char buffer 内存 | AAAAAAAAAAAAAAAAAA |
+| main 的返回地址 | main 的返回地址 | AAAA |
+| Main 参数 1 | Main 参数 1 | AAAA |
+| Main 参数 2 | Main 参数 2 | AAAA |
+
+![](img/ec25e59d75726b7041242a56d3376832_351_0.png)
+
+这种内存破坏的影响取决于多个因素，包括溢出的大小以及该溢出中包含的数据。为了了解在我们的场景中这是如何运作的，我们可以向应用程序应用一个超尺寸参数并观察其影响。
+
+[^302]: (linux die net), https://linux.die.net/man/3/strcpy
+[^303]: (GBdirect), https://publications.gbdirect.co.uk/c-book/chapter10/arguments_to_main.html
+
+## 10.2.2 介绍 Immunity 调试器
+
+我们可以使用一种称为调试器[^304]的应用程序来辅助漏洞利用开发过程。调试器充当应用程序和 CPU 之间的代理，它允许我们在任何时间停止执行流程，以检查寄存器的内容以及进程内存空间。在通过调试器运行应用程序时，我们还可以逐条执行汇编指令，以便更好地理解代码的详细流程。虽然可用的调试器有很多种，但我们将使用 *Immunity Debugger*[^305]，它有一个相对简单的界面，并允许我们使用 Python 脚本自动化任务。
+
+我们可以尝试在易受漏洞影响的测试应用程序中溢出缓冲区，并使用 Immunity Debugger 更好地理解程序执行每个阶段具体发生了什么。
+
+为了启动 Immunity 并执行代码，我们将通过桌面快捷方式启动它，并导航至 *File > Open*（文件 > 打开），如图 183 所示。
+
+![](img/ec25e59d75726b7041242a56d3376832_352_0.png)
+
+> *图 183: Immunity 调试器*
+
+在对话框中，我们导航到 **windows_buffer_overflow** 目录并打开 *strcpy.exe*，这是上一节中分析的源代码的编译版本。在点击 *Open*（打开）之前，我们如图 184 所示，在 *Arguments*（参数）字段中添加十二个 "A" 字符。这 12 个字符将作为程序的命令行参数，随后被 strcpy 函数使用。
+
+[^304]: (Wikipedia, 2019), https://en.wikipedia.org/wiki/Debugger
+[^305]: (Immunity, 2019), https://www.immunityinc.com/products/debugger/
+
+![](img/ec25e59d75726b7041242a56d3376832_353_0.png)
+
+图 184: 加载应用程序
+
+当调试器启动时，应用程序的执行流程将暂停在入口点[^306]。不幸的是，在这个例子中，入口点并不与主函数的开始部分重合。这并不罕见，因为通常入口点由编译器设置为一段旨在帮助准备程序执行的代码段。除其他事项外，这种准备包括设置 main 可能预期的所有参数。
+
+在继续之前，让我们更熟悉一下 Immunity 并练习导航最相关的功能。图 185 显示了主屏幕，它被分成四个窗口或窗格。
+
+[^306]: (Wikipedia, 2019). https://en.wikipedia.org/wiki/Entry_point
+
+![](img/ec25e59d75726b7041242a56d3376832_354_0.png)
+
+*图 185: Immunity 调试器布局*
+
+左上角的窗口显示了构成应用程序的汇编指令。蓝色高亮的指令（*SUB ESP,0C*）是下一条要执行的汇编指令，它位于进程内存空间中的地址 0x004014E0：
+
+```
+004014E0   : 89EC 0C             ...  EBP,EC
+004014E3   : C705 3834A000       MOV DWORD PTR DS:[403834],0
+004014ED   : E8 5E020000         CALL strcpy.0040174D
+004014F2   : 88C4 9F             ...  ESP,RC
+004014F5   : E9 76FCFFFF          JMP strcpy.00401176
+004014FB   : 90                   NOP
+004014FC   : 90                   NOP
+004014FD   : 90                   NOP
+004014FE   : 90                   NOP
+004014FF   : 90                   NOP
+00401500   : 55                   PUSH EBP
+00401501   : 89E5                 ...  EBP,ESP
+00401503   : 83EC 18             SUB ESP,18
+00401506   : A1 2C39A000         EAX DWORD PTR DS:[40392C]
+0040150B   : 85C0                TEST EAX,EAX
+0040150D   : 74 30               JE SHORT strcpy.0040154B
+0040150F   : C7A424 00A0A00      MOV DWORD PTR SS:[ESP+...  ASCII "libgcj-16.dll"
+00401516   : FF15 24614000       CALL DWORD PTR DS:[46124]
+0040151C   : 05C2 84             ...  ESP,4
+0040151F   : 85C0                TEST EAX,EAX
+00401521   : B4 00000000         MOV EDX,0
+00401525   : 74 15               JE SHORT strcpy.0040153E
+00401528   : C7A424 04 0E41      MOV DWORD PTR SS:[ESP+4...  ASCII "_Jv_RegisterClasses"
+00401530   : B99424              MOV DWORD PTR SS:[ESP+... 
+00401533   : FF15 29614000       CALL DWORD PTR DS:[46129]...  GetProcAddress
+00401539   : 83EC 08             SUB ESP,8
+0040153C   : 89F2                MOV EDX,EAX
+0040153E   : 85D2                TEST EDX,EDX
+00401540   : 74 09               JE SHORT strcpy.0040154B
+00401542   : C70424 2C30A00      MOV DWORD PTR SS:[ESP]...  strcpy.0040302C
+00401549   : FFD2                CALL EDX
+0040154B   : C70424 601540      MOV DWORD PTR SS:[ESP],...  strcpy.00401548
+00401552   : E3 29610000         CALL strcpy.00461000
+00401557   : C9                   LEAVE
+00401558   : C3                   RET
+00401559   : 89C426 000000       LEA DS:[ESI]
+00401560   : 55                   PUSH EBP
+00401561   : 89E5                 ...  EBP,ESP
+00401563   : 5D                   POP EBP
+00401564   : C3                   RET
+```
+
+图 186: Immunity 调试器汇编窗口
+
+右上角的窗口（图 187）包含所有寄存器，包括我们最感兴趣的两个：ESP 和 EIP。由于根据定义 EIP 指向下一条要执行的代码指令，它被设置为 0x004014E0，即汇编窗口（图 185）中高亮的指令。
+

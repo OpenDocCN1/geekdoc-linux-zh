@@ -1,0 +1,3 @@
+![](bbox=[0.12, 0.05, 0.27, 0.1])
+
+All rights reserved to Offensive Security, 2020 No part of this publication, in whole or in part, may be reproduced, copied, transferred or any other right reserved to its copyright owner, including photocopying and all other copying, any transfer or transmission using any network or other means of communication, any broadcast for distant learning, in any form or by any means such as any information storage, transmission or retrieval system, without prior written permission from the author.

@@ -1584,6 +1584,7 @@
 +   [求职者的渗透测试：使用 Kali Linux、Burp Suite、MobSF 和 Metasploit 对 Web 应用、网络和移动设备进行道德黑客攻击（英文版）](docs/penetration-testing-for-jobseekers-perform-ethical-hacking-a/README.md)
 +   [Kali Linux 渗透测试](docs/penetration-testing-with-kali-linux/README.md)
 +   [Kali Linux 渗透测试 - PEN-200 2023](docs/penetration-testing-with-kali-linux---pen-200-2023/README.md)
++   [Kali Linux 渗透测试](docs/penetration-testing-with-kali-linux-1-1/README.md)
 +   [Kali Linux 渗透测试：攻击性安全](docs/penetration-testing-with-kali-linux-offensive-security/README.md)
 +   [Kali Linux 渗透测试 (OSCP)](docs/penetration-testing-with-kali-linux-oscp/README.md)
 +   [Kali Linux 渗透测试 v1.0.1](docs/penetration-testing-with-kali-linux-v101/README.md)

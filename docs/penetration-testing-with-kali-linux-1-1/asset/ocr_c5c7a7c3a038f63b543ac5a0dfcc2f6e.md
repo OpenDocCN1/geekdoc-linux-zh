@@ -1,0 +1,7 @@
+![](bbox=[0.11, 0.1, 0.88, 0.28])
+
+We must linger at this point a while longer to understand the bigger picture. When strcpy copied the input string (12 bytes) from the command line argument to the stack buffer variable, it started to write at address 0x0065FE70 and onwards. In this case, there are no boundary checks on the size of the copy in our C code, therefore if we pass a longer string as an input to our program, enough data will be written to the stack and eventually we should be able to overwrite the return address of the main parent function located at offset 0x4C from the buffer variable. This means that if the return address overwrite is performed correctly, the instruction pointer will end up under our control as it will contain some of our argument data when the main function returns to the parent.
+
+# 10.2.4 Overflowing the Buffer
+
+In the previous example, we only wrote 12 bytes out of the available 64 bytes so the program ran and exited cleanly as expected. However, the offset between the buffer address (0x0065FE70) and the main function return address is 76 (0x4c in hex) bytes, so if we supply 80 "A"s as an argument, they should all be copied onto the stack and write past the bounds of the assigned buffer into the target return address as illustrated in Figure 202.
