@@ -1,0 +1,120 @@
+
+# Samba - SMB
+
+## 客户端执行程序（安装包：`samba-client`）
+
+共享视图查看与服务器的连接，并执行管理任务。
+
+- `smbcontrol`：管理 Samba 共享，在远程服务器上复制、管理文件/目录。
+- `smbclient`：将远程服务器挂载为本地目录。
+- `smbsount`：执行 NetBIOS 名称解析（在网络上查找 Samba 服务器）。
+- `smbcals`：远程文件访问，查看和修改托管服务器上的 Windows ACL。
+
+## 客户端上的 Systemd
+
+- `smbd` 服务：主 SMB/CIFS 守护进程，处理文件/打印服务。
+- `nmbd`：提供 NetBIOS 名称服务。
+- `cifs` 服务：统计 CIFS/samba 计数。
+
+## 服务端执行程序（安装包：`samba`）
+
+- `samba-tool`：用于配置、用户、共享、Kerberos 设置以及其他管理任务。
+- `smbd`：显示 Samba 服务器状态，包括活跃的连接和共享。
+- `testparam`：在重启服务器之前验证 `/etc/samba/samba.conf` 的语法。
+- `smpasswd`：修改 Samba 用户账户密码。
+
+## 服务器上的 Systemd
+
+- `smbd.service`：主 SMB/CIFS 守护进程，提供客户端访问，处理文件/打印服务。
+- `nmbd.service`：提供 NetBIOS 名称服务。
+- `samba.service`：允许 Windows 域认证。
+- `samba-ad-dc.service`：Samba Active Directory 域控制器服务。
+
+## 主配置文件
+
+主配置文件 `/etc/samba/samba.conf`（资源、用户认证、安全性、等）
+
+可选配置：`/etc/samba/samba-conf.security`（配置）或 `/etc/samba/smb.secrets`（用于敏感信息）
+
+`/etc/samba.conf` - 使用 `[sharesename]` 共享目录或文件；用户或/组的权限；LDAP 和加密选项，以及安全性。
+
+- 共享：使用 `[sharesename]` 定义目录或文件。
+- 权限：`只读 = yes`，`可写 = yes` 以及特定的用户/组条目。
+- LDAP 集成：`security = ads` 选项以及 LDAP 服务器详细信息。
+- 安全设置：通过这些选项增强安全性：
+  - `encrypt passwords = yes` - 对用于存储的密码进行加密。
+  - `map to guest = bad` - 从浏览中隐藏共享。
+  - `browable = no` - 禁止访客访问。
+  - `valid users = @users` - 限制访问本地用户名或指定组中的用户。
+
+### 示例 `smb.conf`
+
+```ini
+[Global]
+
+workgroup = MYWORKGROUP 网络浏览时的网络名称
+
+server = My Samba Server 你的 Samba 服务器的描述性名称
+
+security = ads 为用户认证启用 LDAP 安全
+
+encrypt passwords = yes 为了增加安全性对密码进行加密
+
+map to guest = bad 为未认证用户提供访问权限（这些用户并不存在！）
+
+log level = 0.0.0.1 用于名称解析的 Wins 服务，记录访问并指定接口到（并非所有）
+
+logging = file file-blocking # 记录警告和更多消息
+
+log file = /var/log/samba.log 指定日志文件位置
+
+# Interfaces = 1 仅在 IP 192.168.1.0/24 子网上监听
+```
+
+```ini
+[Shared]
+
+path = /home/share 你想要共享的目录路径
+
+browable = no 从网络浏览中隐藏此共享
+
+writable = yes 允许修改文件
+
+read only = no 允许读取和写入
+
+valid users = @share 仅允许 "share_access" 组中的用户访问
+
+mask = 0664 示例：新文件获得 rw-rw- 权限（用户:组）
+
+directory mask = 0775 设置默认的 getwxwx-x 权限
+```
+
+```ini
+[Another]
+
+path = /var/www/html Web 目录路径（示例）
+
+read only = yes 允许用户只读取此共享中的文件
+
+valid users = user2 @web_admins 允许特定用户和组访问
+
+# locking = ... 控制多个客户端共享文件访问的选项
+
+# oplocks = ... 与乐观锁相关的选项（高级）
+
+# write cache = (read 'cache') = yes 启用缓存写/读以提高性能
+```
+
+`map to guest = bad user` 将会匹配任何认证失败（被拒绝）的用户。
+
+# Kerberos 实现
+
+登录到 Kerberos 服务器
+启动本地终端以进入 CLI
+添加服务主体
+
+```bash
+为 SMB 服务器创建 keytab
+ktadd -k /etc/krb5.keytab <hostname> (按回车，返回，输入 type 退出 CLI)
+... (truncated)
+```
