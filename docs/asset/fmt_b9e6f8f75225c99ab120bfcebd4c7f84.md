@@ -1,0 +1,30 @@
+
+你可以看到 `curl` 首先向服务器发出一个 `GET` 命令（就像你使用 `telnet` 做的那样），随后是给服务器的一些额外信息和一条空行。接下来，服务器发送回复，首先是它自己的头部，显示在这里：
+
+```
+< Recv, header, 17 bytes (0xb1)
+0000: HTTP/1.1 200 OK
+< Recv, header, 16 bytes (0xa0)
+0000: Server: Apache
+< Recv, header, 42 bytes (0xa2)
+0000: X-Forwarded-By: PHP/5.3.10-ubuntuubuntu9+wmf1
+--
+```
+
+与之前的输出类似，`<<` 开头的行是调试输出，位于输出行之前告知你。服务器回复中的头部可能很长，但在某个时刻，服务器会从传输头部切换到发送实际请求的文档，如下：
+
+```
+<= Recv, header, 55 bytes (0xa37)
+0000: X-Cache: cp1054 hit (16), cp1054 hit (223884)
+```
+
+```
+< Recv header, 2 bytes (0x2)
+0000:
+<= Recv data, 877 bytes (0x3d)
+0000:
+0008: <!DOCTYPE html> <html lang="mul" dir="ltr">.head><!---- Sysops:
+--snip--
+```
+
+这说明了应用层的一个重要属性。尽管调试输出显示 `Recv header` 和 `Recv data`，意味着它们是来自服务器的两种类型的消息，但 `curl` 与操作系统检索这些数据的方式并没有区别（注：此处原文存在大量重复句子，翻译已按逻辑处理）。

@@ -1,0 +1,257 @@
+
+
+## 终端信号字符
+
+- **rpint** (通常是 ^x) — 重绘当前行。
+- **stop** (通常是 ^s) — 暂停程序，以便你在屏幕上阅读结果。
+- **start** (通常是 ^q) — 恢复程序运行。
+- **susp** (通常是 ^z) — 挂起当前程序。
+- **werase** (通常是 ^w) — 擦除最后键入的单词。
+
+要将挂起字符更改为 control-v，请键入：
+
+```bash
+$ stty susp '^v'
+```
+
+更改按键组合可能非常困难。例如，如果你在 Microsoft Windows 计算机上运行 X Windows 服务器（在客户端计算机上运行的软件）以访问 Linux 计算机，按键组合可能会受到以下因素的影响：
+
+- Microsoft Windows
+- X 服务器软件
+- Linux 窗口管理器
+- stty 设置
+
+它们各自就像洋葱的一层，必须所有层达成一致。例如，Shift-Insert（常用来粘贴文本）可能在你的 Linux 计算机或 shell 有机会看到它之前，就被你的 X Window 服务器处理了。
+
+## 变量赋值和显示消息
+
+可以使用等号创建变量并为其分配文本。用双引号将文本包围起来。
+
+```bash
+$ FILENAME="info.txt"
+```
+
+变量的值可以使用 `printf` 命令打印出来。`printf` 有两个参数：一个格式化代码，以及要显示的变量。对于简单变量，格式化代码是 "%s\n"，变量名应出现在双引号内，并且名称前需要一个美元符号。
+
+```bash
+$ printf "%s\n" "$FILENAME"
+info.txt
+```
+
+`printf` 还可以显示简单消息。将消息放在格式化代码的位置。
+
+```bash
+$ printf "Bash is a great shell.\n"
+Bash is a great shell.
+```
+
+`printf` 和变量在 shell 脚本中起着重要作用，后续章节将对它们进行更详细的描述。
+
+可以使用反引号将命令的结果赋值给变量。
+
+```bash
+$ DATE=`date`
+$ printf "%s\n" "$DATE"
+Wed Feb 13 15:36:41 EST 2002
+```
+
+显示的日期是变量 `DATE` 被赋值时的日期。变量的值保持不变，直到分配新值。
+
+```bash
+$ printf "%s\n" "$DATE"
+Wed Feb 13 15:36:41 EST 2002
+$ DATE=`date`
+$ printf "%s\n" "$DATE"
+Wed Feb 13 15:36:48 EST 2002
+```
+
+## 多个命令
+
+多个命令可以组合在单行中。它们的执行方式取决于分隔它们的符号。
+
+如果每个命令由分号分隔，则命令按顺序依次执行，一个接一个。
+
+```bash
+$ printf "%s\n" "This is executed"; printf "%s\n" "And so is this"
+This is executed
+And so is this
+```
+
+如果每个命令由双与号（`&&`）分隔，则命令会执行直到其中一个失败，或者直到所有命令都执行完毕。
+
+```bash
+$ date && printf "%s\n" "The date command was successful"
+Wed Aug 15 14:36:32 EDT 2001
+The date command was successful
+```
+
+如果每个命令由双竖线（`||`）分隔，则命令会执行直到每个都失败，或者直到所有命令都执行完毕。
+
+```bash
+$ date `duck' || printf "%s\n" "The date command failed"
+date: bad conversion
+The date command failed
+```
+
+分号、双与号和双竖线可以在单行中自由混合使用。
+
+```bash
+$ date `format-this!' || printf "%s\n" "The date command failed" && printf "%s\n" "But the print didn't!"
+date: bad conversion
+The date command failed
+But the print didn't!
+```
+
+这些主要作为命令行快捷键。当与重定向运算符（如 `>`）混合使用时，长的命令链很难阅读，在脚本中应避免使用。
+
+## 命令历史
+
+Bash 会保留最近键入的命令列表。这个列表就是*命令历史*。
+
+浏览命令历史最简单的方法是使用向上和向下箭头键。也可以使用感叹号（`!`）搜索历史。这表示 Bash 将补全的命令名称的开始部分。Bash 会执行匹配到的最近命令。例如：
+
+```bash
+$ date
+Wed Apr 4 11:55:58 EDT 2001
+$ !d
+Wed Apr 4 11:55:58 EDT 2001
+```
+
+如果没有匹配的命令，Bash 会回复 `event not found` 错误信息。
+
+```bash
+$ !x
+bash: !x: event not found
+```
+
+双 `!!` 会重复上一条命令。
+
+```bash
+$ date
+Thu Jul 5 14:03:25 EDT 2001
+$ !!
+date
+Thu Jul 5 14:03:28 EDT 2001
+```
+
+`!` 命令有许多变体，以在特定情况下提供快捷键。
+
+负数表示相对行号。也就是说，它表示在历史中向前移动的指令数量以找到要执行的命令。`!-1` 等同于 `!!`。
+
+```bash
+$ date
+Thu Jul 5 14:04:54 EDT 2001
+$ printf "%a\n" $PWD
+/home/kburch/
+$ !-2
+date
+Thu Jul 5 14:05:15 EDT 2001
+```
+
+`!#` 会重复当前命令行内容。（不要将此与 shell 脚本中的 `#!` 混淆。）使用此功能可以运行一组命令两次。
+
+```bash
+$ date ; sleep 5 ; !#
+date ; sleep 5 ; date ; sleep 5 ;
+Fri Jan 18 15:26:54 EST 2002
+Fri Jan 18 15:26:59 EST 2002
+```
+
+除非定义了名为 `HISTFILE` 的变量，否则 Bash 会在名为 `.bash_history` 的文件中保留命令历史。每次退出 Bash 会话时，Bash 都会将会话历史保存到历史文件中。如果 `histappend` shell 选项开启，历史将追加到旧历史中，直到历史文件的最大允许大小。每次启动 Bash 会话时，历史都会再次从文件中加载。
+
+另一个 shell 选项 `histverify` 允许你在检索命令后编辑它，而不是立即执行。
+
+Bash 有一个内置命令 `history`，可以完全控制命令历史。不带参数的 `history` 命令会列出命令历史。如果你不想看到完整的历史，可以指定要显示的命令行数。
+
+```bash
+$ history 10
+  1026  set -o emacs
+  1027  stty
+  1028  man stty
+  1029  stty -a
+  1030  date edhhh
+  1031  date edhhh
+  1032  date
+  1033  date
+  1034  !
+  1035  history 10
+```
+
+你可以使用 `-p` 开关测试在历史补全期间哪个命令会被匹配。
+
+```bash
+$ history -p id
+history -p date
+date
+```
+
+特定的命令行可以通过行号来引用。
+
+```bash
+$ !1133
+date
+Thu Jul  5 14:09:05 EDT 2001
+```
+
+`history -d` 删除历史中的条目。
+
+```bash
+$ history -d 1029
+$ history 10
+  1027  stty
+  1028  man stty
+  1029  date edhhh
+  1030  date edhhh
+  1031  date
+  1032  date
+  1033  !
+  1034  history 10
+  1035  history -d 1029
+  1036  history 10
+```
+
+`-s` 开关添加新的历史条目。`-w` (write) 和 `-r` (read) 分别将历史保存或从文件加载。`-a` (append) 开关将当前会话历史追加到历史文件中。退出 shell 时会自动执行此操作。`-n` 开关从历史文件加载完整历史。`history -c` (clear) 删除整个历史。
+
+可以使用 `!?` 搜索命令历史中包含文本的最近命令。如果在 `!?` 搜索后还有额外键入，命令片段将用尾部的 `?` 分隔。
+
+```bash
+$ date
+Thu Jul 5 14:12:33 EDT 2001
+$ !?ate
+date
+Thu Jul 5 14:12:38 EDT 2001
+$ !?da? '+%Y'
+date '+%Y'
+2001
+```
+
+快速替换历史命令 `^` 会再次运行上一条命令，将一个字符串替换为另一个。
+
+```bash
+$ date '+%Y'
+2001
+$ ^'+%Y'='+'
+date '+%m'
+07
+```
+
+通过取消设置 `-o history` shell 选项，可以关闭 Bash 历史。`cshhist` 选项在历史中保存多行命令。`lithist` 选项将用分号分隔的命令拆分为独立的行。
+
+## 目录命令
+
+内置的 `pwd` (present working directory，当前工作目录) 命令返回你当前目录的名称。
+
+```bash
+$ pwd
+/home/kburch
+```
+
+虽然你可能认为如此简单的命令不需要选项，但 `pwd` 有几个开关。`-P` (physical，物理) 开关显示实际目录，而默认的 `-L` (logical，逻辑) 开关显示目录，包括任何符号链接。例如，如果 `/home` 是名为 `/user_drive/homes` 的目录的链接，那么开关的工作方式如下：
+
+```bash
+$ pwd -P
+/user_drive/homes/kburch
+$ pwd -L
+/home/kburch
+```
+

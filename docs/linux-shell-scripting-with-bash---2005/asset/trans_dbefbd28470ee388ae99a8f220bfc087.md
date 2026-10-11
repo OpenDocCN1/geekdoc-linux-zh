@@ -1,0 +1,174 @@
+
+
+# 创建转录记录
+
+若要向 CVS 仓库添加新的项目目录，请使用 **import** 命令。**Import** 将当前目录的文件以指定名称放入仓库中。**Import** 还要求提供一个短字符串来标识谁添加了该项目，以及一个描述项目状态的字符串。这些字符串本质上就是注释，可以是任何内容：使用你的登录名和表示初始版本的 **init-rel** 是不错的选择。
+
+```
+$ cvs import scripts kburcht init-rel
+```
+
+CVS 会根据环境变量 **EDITOR** 或 **CVSEDITOR** 启动你的默认文本编辑器。CVS 不识别 **VISUAL** 变量。待编辑的文件包含以 **CVS:** 开头标记的注释行：
+
+```
+CVS:  
+CVS: Enter Log. Lines beginning with `CVS:' are removed automatically  
+CVS:  
+CVS:
+```
+
+编辑完成后，CVS 会将你的程序添加到仓库中，并将你的注释记录在变更日志中。结果会输出到屏幕上。
+
+```
+N scripts/ftp.sh
+No conflicts created by this import
+```
+
+带有 N 的 **scripts/ftp.sh** 行表示 CVS 创建了一个名为 **scripts** 的新项目，并将 Bash 脚本 **ftp.sh** 添加到其中。**ftp.sh** 现在存储在 CVS 仓库中，随时可以与开发团队成员共享。此时可以安全地删除你目录中的项目目录了。实际上，在继续对该项目的工作之前，必须删除该目录。
+
+使用 CVS 命令 **checkout**（或 **co**）来对项目进行操作。此 CVS 命令会将项目的一份副本保存在当前目录中。它还会创建一个 CVS 目录，用于保存 CVS 使用的私有数据文件。
+
+要使用 **checkout**，请移动到主目录并输入：
+
+```
+$ cvs checkout scripts
+cvs checkout: Updating .
+U scripts/ftp.sh
+```
+
+名为 **scripts** 的子目录包含从仓库中获取的项目文件个人副本。CVS 维护 **ftp.sh** 的原始副本。在你操作个人副本的同时，其他程序员也可以对 **ftp.sh** 执行 **checkout** 操作。
+
+若要向项目目录添加新文件或目录，请使用 **add** 命令。若要添加名为 **process_orders.sh** 的文件，请使用以下命令：
+
+```
+$ cvs add process_orders.sh
+```
+
+在编写脚本时，请定期使用 **update** 命令将你的工作成果与仓库进行对比。如果其他程序员对脚本进行了修改，CVS 会更新你的项目目录以反映这些脚本更改。然而，你自己所做的更改尚未添加到仓库副本中。
+
+```
+$ cvs update
+cvs update: Updating .
+```
+
+有时更改涉及脚本的相同部分，CVS 无法自动合并这些更改。CVS 将这种情况称为冲突，并在更新时用一个 c 进行标记。CVS 会标记发生冲突的位置；你必须自己编辑脚本来解决冲突。
+
+如果在更新后没有其他问题，你可以继续编写源代码。
+
+若要删除已存在于仓库中的脚本，请使用 `rm` 命令移除它，并执行一次 `CVS` 更新。`CVS` 将会删除该文件。
+
+在编写源代码时，直到你准备好之前，更改不会分发给团队的其他成员。当脚本测试完毕且你准备将其发布时，使用 `commit`（或 `ci`，即 *check in* 的缩写）。在提交更改之前，请删除非必要的文件（如临时文件），以节省仓库空间。
+
+```
+$ cvs commit
+```
+
+与 `import` 类似，`CVS commit` 命令会启动你的编辑器，并提示你输入对所作更改的描述。
+
+`CVS commit` 还会自动增加你所修改脚本的版本号。按照惯例，`CVS` 以 `1.1` 开始对项目的编号。若要启动新版本 `2.1`，请编辑 `#header` 行中的版本号（或脚本中的任何其他 `CVS` 关键字），并将数字更改为 `2.0`。`CVS` 会将脚本保存为版本 `2.1`。
+
+在任何时候，你都可以检索某个脚本或整个项目的日志。`CVS log` 命令会显示所有相关的日志条目、脚本和版本号：
+
+```
+$ cvs log project
+cvs log: Logging project
+RCS file: /home/repository/scripts/ftp.sh,v
+Working file: scripts/ftp.sh
+head: 1.1
+branch: 1.1.1
+locker: atrict
+access: liat:
+symbolic names:
+keyword substitution: kv
+total revisions: 2; selected revisions: 2
+description:
+revision 1.1
+date: 1999/01/13 17:27:33; author: kburcht; state: Exp;
+branches: 1.1.1;
+Initial revision
+revision 1.1.1.1
+date: 1999/01/13 17:27:33; author: kburtch; state: Exp; lines: +0 -0
+Project started
+=====================================================================
+```
+
+status 命令可以为你提供项目目录的概览，以及尚未提交到仓库的脚本列表。
+
+```
+$ cvs status scripts
+cvs status: Examining scripts
+=====================================================================
+File: ftp.sh Status: Up-to-date
+Working revision: 1.1.1.1 Wed Jan 13 17:27:33 1999
+Repository revision: 1.1.1.1 /home/repository/scripts/ftp.sh,v
+Sticky Tag: (none)
+Sticky Date: (none)
+Sticky Options: (none)
+```
+
+CVS 还有许多其他未在此处讨论的专业功能。请查阅 CVS 的手册页以获取更多信息。
+
+可以使用 `tee` 命令将命令的输出保存到文件中。该名称象征着一根在 T 型接头处分成两股的管道：输出的副本被存储在一个文件中，而不会重定向原始标准输出。若要同时捕获标准输出和标准错误，请在将结果管道传输到 tee 之前，将标准错误重定向到标准输出。
+
+```
+$ bash buggy_script.sh >& | tee results.txt
+```
+
+tee 的 -append（-a）开关会将输出追加到现有文件的末尾。-ignore-interrupts（-i）开关确保即使 tee 被 Linux 信号中断，它仍会继续运行。
+
+此技术不会复制在标准输入中键入的内容。若要获取脚本运行的完整记录，Linux 提供了一个 script 命令。当 shell 脚本在 script 下运行时，会在当前目录创建一个名为 typescript 的文件。typescript 文件是一个文本文件，记录在 shell 会话中出现的所有内容列表。
+
+你可以使用 `exit` 命令停止记录过程。
+
+```
+$ script
+Script started, file is typescript
+$ bash buggy_script.sh
+...
+$ exit
+exit
+Script done, file is typescript
+```
+
+# 监视运行中的脚本
+
+若要在未将 cron 脚本安装到 `cron` 下进行测试，请使用 `watch` 命令。`watch` 会定期 `重新运行` 命令并在屏幕上显示结果。`watch` 每两秒运行一次命令，但你可以通过 `--interval=`（或 `-n`）开关指定不同的秒数。你可以过滤结果，以便仅显示差异（`--differences` 或 `-d`），或者显示迄今为止的所有差异（`--differences=cumulative`）。
+
+## 使用 Time 计时执行
+
+有两个可用于对程序或脚本进行计时的命令。
+
+`Bash` 内置命令 `time` 告诉你程序运行所花费的时间。你还可以使用 `time` 对一系列管道命令进行计时。除了实际使用的时间外，`time` 返回的统计数据是指脚本使用的系统资源，而不是脚本运行的任何命令。
+
+结果格式根据 `TIMEFORMAT` 变量的值进行设置。`TIMEFORMAT` 的布局类似于 `date` 命令的格式化字符串，它使用一组 `%` 格式代码。
+
+- `%%` — 一个字面量 `%`。
+- `%[precision][I]R` — 实际时间；以秒为单位的经过时间。
+- `%[precision][I]U` — 用户模式下消耗的 `CPU` 秒数。
+- `%[precision][I]S` — 系统模式下消耗的 `CPU` 秒数。
+- `%P` — `CPU` 百分比，计算方式为 `($U + $S) / $R`。
+
+`precision` 指示要显示的小数位数，默认为 `3`。字符 `I`（`ion`）打印的值是以分钟和秒为单位的。如果没有 `TIMEFORMAT` 变量，`Bash` 将使用 `\nreal \t%3R\nuser \t%3U\nsys \t%3S`。
+
+```
+$ unset TIMEFORMAT
+$ time ls > /dev/null
+real    0m0.018s
+user    0m0.010s
+sys     0m0.010s
+```
+
+```
+$ declare -x TIMEFORMAT="%P"
+$ time ls > /dev/null
+75.34
+```
+
+```
+$ declare -x TIMEFORMAT="The real time is %lR"
+$ time ls > /dev/null
+The real time is 0m0.023s
+```
+
+请注意，由于计算机上运行的其他程序的影响，每次运行的时间可能会有细微差异。为了获得最准确的时间，请多次测试脚本并取最低值。
+

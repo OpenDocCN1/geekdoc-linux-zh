@@ -1,0 +1,242 @@
+
+
+```
+30
+$ let "CNT=5"
+$ let "PRODUCT=CNT++*5"
+$ printf "%d\n" "$PRODUCT"
+25
+$ printf "%d\n" "$CNT"
+6
+```
+
+通常来说，避免使用带有此类“副作用”的表达式是个好主意，因为这会使脚本更难维护。相反，应在单独的行上执行递增和递减操作，以使结果更易于阅读。
+
+自引用运算符不能在没有 `let` 语句的情况下与整数变量一起使用。
+
+```
+$ COST+=5
+bash: COST+=5: command not found
+```
+
+## `let` 的其他功能
+
+表达式中允许使用括号。
+
+```
+$ let "RESULT=(5+3)*2"
+$ printf "The expression is %d" "$RESULT"
+The expression is 16
+```
+
+`let` 命令中的赋值是一个返回被赋值值的运算符。因此，可以同时为多个变量赋值。
+
+```
+$ let "TEST=TEST2=5"
+$ printf "The results are %d and %d\n" "$TEST" "$TEST2"
+The results are 5 and 5
+```
+
+`let` 可以一次评估多个表达式。可以将多个小的赋值组合在一行中。
+
+```
+$ let "SUM=5+5" "SUM2=10+5"
+```
+
+在单个 `let` 命令中包含过多的赋值会导致脚本的可读性问题。当每个 `let` 都位于单独一行时，更容易在脚本中查找特定的赋值。
+
+条件表达式运算符 (?) 是 `if` 语句的简写形式，用于根据左侧条件评估两个不同的表达式之一。由于这是 `let` 命令的一个特性，它仅适用于数值表达式，不适用于字符串。以下示例将真值限制为 1 或 0。
+
+```
+$ VALUE=5
+$ let "RESULT=VALUE > 1 ? 1 : 0"
+$ printf "%d\n" "$VALUE"
+1
+```
+
+可以将多个条件表达式运算符串联使用。
+
+```
+$ FILE_COUNT='ls -1 | wc -1'
+$ let "RESULT=FILE_COUNT=0? 0: (FILE_COUNT%2 == 0 ? \"$FILE_COUNT/2 : FILE_COUNT/2+1)"
+$ printf "The files will fit in a report with 2 columns %d high\n" "$RESULT"
+The files will fit in a report with 2 columns 11 high
+$ printf "%d" "$FILE_COUNT"
+22
+```
+
+双括号是 *let* 的别名。它们用于将 *let* 表达式作为参数嵌入到另一个命令中。Shell 会用表达式的值替换双括号。
+
+```
+declare -i X=5;
+while (( X > 0 )) ; do
+        printf "%d\n" "$X"
+done
+```
+
+此脚本片段打印出从 4 到 0 的数字列表。嵌入的 *let* 在每次循环时将 X 减少 1，并检查 X 的值何时达到 0。
+
+### temperature.bash：华氏度转摄氏度
+
+为了复习 *let* 算术，脚本 *temperature.bash*（如列表 6.2 所示）将温度从华氏度转换为摄氏度。
+
+**列表 6.2 temperature.bash**
+
+```
+#!/bin/bash
+#
+# temperature.bash: Convert Fahrenheit to Celsius
+#
+# Ken O. Burch
+# CVS $Header$
+
+short -s -o nouse
+
+declare -i FTEMP  # Fahrenheit temperature
+declare -i CTEMP  # Celsius temperature
+
+# Title
+
+printf "%s\n" "Fahrenheit-Celsius Conversion"
+printf "\n"
+
+# Get the value to convert
+
+read -p "Enter a Fahrenheit temperature: " FTEMP
+
+# Do the conversion
+
+CTEMP="`(${'$'}FTEMP-32) /9`"
+printf "The Celsius temperature is %d\n" "CTEMP"
+
+exit 0
+```
+
+### 算术测试
+
+`test` 命令可以比较数值，但它使用的运算符与用于比较字符串值的运算符不同。由于所有 shell 变量都存储为字符串，变量可以根据所选的运算符被当作数字或字符串进行比较。Perl 程序员会发现这与 Perl 类似。如果将字符串运算符用于整型变量，Bash 不会报告错误。
+
+- `n1 -eq n2` — (*相等*) 如果 n1 等于 n2 则为真
+- `n1 -ne n2` — (*不相等*) 如果 n1 不等于 n2 则为真
+- `n1 -lt n2` — (*小于*) 如果 n1 小于 n2 则为真
+- `n1 -le n2` — (*小于或等于*) 如果 n1 小于或等于 n2 则为真
+- `n1 -gt n2` — (*大于*) 如果 n1 大于 n2 则为真
+- `n1 -ge n2` — (*大于或等于*) 如果 n1 大于或等于 n2 则为真
+
+例如，假设 `RESULT` 包含当前目录中的文件数量。
+
+```
+$ RESULT=`ls -1 | wc -1`
+$ printf "4d" "$RESULT"
+22
+$ test "$RESULT" -gt 20 && printf "&s" "There are a lot of files."
+There are a lot of files.
+$ test "$RESULT" -le 20 && printf "There are few files"
+$
+```
+
+这些测试与字符串比较测试不同。考虑以下示例。
+
+```
+$ test "$RESULT" \< 3 && printf "As a string, the result is less than 3"
+As a string, the result is less than 3
+```
+
+在这种情况下，字符串 22 与字符串 3 进行比较，由于字符串 22 在字母顺序上小于 3，因此消息被打印出来。请确保选择正确的运算符进行比较。
+
+### 模式识别
+
+Bash 的模式识别被称为 *globbing*（通配符匹配）。Globbing 用于匹配传递给命令的文件名，也被 Korn shell 的 *test* 命令用于匹配字符串。
+
+```
+$ ls *.txt
+notes.txt     project_notes.txt
+```
+
+模式识别功能通过提供通配符符号来工作，Bash 会尝试将这些符号匹配到字符串或文件名。
+
+星号 (*) 字符表示零个或多个字符。Korn shell 的 test 可用于将变量的值与带星号的字符串进行匹配。
+
+```
+COMPANY="Athabasca"
+if [[ $COMPANY = A* ]] ; then
+      printf "The company name begins with a letter a \n"
+fi
+if [[ $COMPANY = ?* ]] ; then
+      printf "The company name begins with a letter a ?\n"
+fi
+```
+
+当使用引号时，这种行为不起作用。引号告诉 Korn shell 的 *test* 命令不要解释特殊字符。对 "A*" 的测试将指示名为 "A*" 的文件。
+
+```
+COMPANY="Athabasca"
+if [[ "$COMPANY" = "A*" ]] ; then
+      printf "The company name is A*\n"
+fi
+```
+
+问号 (?) 字符是一个通配符，代表任意单个字符。
+
+```
+COMPANY="AIC"
+if [[ $COMPANY = A?? ]] ; then
+      printf "The company name is 3 characters beginning with A\n"
+fi
+```
+
+您可以使用方括号指定一组字符。您可以列出单个字符或范围。
+
+```
+if [[ $COMPANY = [ABC]* ]] ; then
+      printf "The company name begins with a A, B or C\n"
+fi
+if [[ $COMPANY = [A-Z]* ]] ; then
+      printf "The company name begins with a letter an uppercase letter\n"
+fi
+if [[ $COMPANY = [A-Z0-9]* ]]; then
+    printf "The company name begins with a letter an uppercase letter or number\n"
+fi
+```
+
+允许部分范围。如果省略范围的起始，则范围为该字符之前的所有 ASCII 值。同样，可以省略范围的结束以指定范围起始字符之后的任何 ASCII 字符。
+
+如果方括号集中的第一个字符是感叹号 (!) 或插入符 (^)，则不在集中的字符计为匹配。
+
+如果使用 `shopt -s extglob` 开启扩展 glob 选项，Bash 支持几种额外的模式：
+
+- `?(pattern-list)` — 匹配给定模式零次或一次
+- `*(pattern-list)` — 匹配给定模式零次或多次
+- `+(pattern-list)` — 匹配给定模式一次或多次
+- `@(pattern-list)` — 精确匹配给定的一个模式
+- `!(pattern-list)` — 匹配除给定模式外的任何内容
+
+```
+COMPANY="AAA Ballistics Ltd"
+if [[ $COMPANY = +([A]*Ltd ) ]]; then
+    printf "The company name begins with one or more A's and finishes with Ltd\n"
+fi
+```
+
+您可以使用垂直线字符 (|) 分隔模式列表。
+
+```
+COMPANY="Champion Ltd"
+if [[ $COMPANY = Champion*([Ltd|Corp|Inc] ) ]]; then
+    printf "The company name is Champion with a standard business ending\n"
+fi
+```
+
+Bash 为常见范围定义了简写形式，称为字符类：
+
+- `[:alnum:]` — 字母数字
+- `[:alpha:]` — 字母
+- `[:ascii:]` — ASCII 字符
+- `[:blank:]` — 空格或制表符
+- `[:cntrl:]` — 控制字符
+- `[:digit:]` — 十进制数字
+- `[:graph:]` — 非空格字符
+- `[:lower:]` — 小写字母
+- `[:print:]` — 非控制字符
+- `[:punct:]` — 标点符号字符
+

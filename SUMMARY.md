@@ -1196,6 +1196,7 @@
 +   [Linux Shell 脚本：从基础到精通](docs/linux-shell-scripting-from-basics-to-expert-proficiency/README.md)
 +   [Linux Shell 脚本入门指南](docs/linux-shell-scripting-tutorial/README.md)
 +   [Linux Shell 脚本教程：初学者指南](docs/linux-shell-scripting-tutorial-a-beginners-handbook/README.md)
++   [bash linux shell 脚本](docs/linux-shell-scripting-with-bash---2005/README.md)
 +   [Bash Linux Shell 脚本指南](docs/linux-shell-scripting-with-bash-includes-index/README.md)
 +   [Linux Shell 脚本：从基础到精通](docs/linux-shell-scriptingfrom-basics-to-expert-proficiency/README.md)
 +   [Linux Shell 示例](docs/linux-shells-by-example-with-cd-rom/README.md)
