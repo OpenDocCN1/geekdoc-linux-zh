@@ -1,0 +1,229 @@
+
+```c
+extern mem_map_t * mem_map;
+
+/*
+ * 只有一个页面分配函数，以及两个主要的命名空间。
+ * `alloc_page*()` 变体返回 `struct page *`，因此可以分配高端内存页面，
+ * 而 `get*page*()` 变体返回分配页面的虚拟内核地址。
+*/
+extern struct page * FASTCALL(__alloc_pages(zonelist_t *zonelist, unsigned long order));
+extern struct page * alloc_pages_node(int nid, int gfp_mask, unsigned long order);
+
+#ifndef CONFIG_DISCONTIGMEM
+extern inline struct page * alloc_pages(int gfp_mask, unsigned long order)
+{
+	/* 临时检查。 */
+	if (contig_page_data.node_zonelists[gfp_mask].gfp_mask != (gfp_mask))
+		BUG();
+	/*
+	 * 会被编译器优化掉。
+	 */
+	if (order >= MAX_ORDER)
+		return NULL;
+	return __alloc_pages(contig_page_data.node_zonelists+(gfp_mask), order);
+}
+#else /* !CONFIG_DISCONTIGMEM */
+extern struct page * alloc_pages(int gfp_mask, unsigned long order);
+#endif /* !CONFIG_DISCONTIGMEM */
+
+#define alloc_page(gfp_mask) alloc_pages(gfp_mask, 0)
+
+extern inline unsigned long __get_free_pages (int gfp_mask, unsigned long order)
+{
+    struct page * page;
+
+    page = alloc_pages(gfp_mask, order);
+    if (!page)
+        return 0;
+    return page_address(page);
+}
+
+#define __get_free_page(gfp_mask) \
+    __get_free_pages((gfp_mask),0)
+
+#define __get_dma_pages(gfp_mask, order) \
+    __get_free_pages((gfp_mask) | GFP_DMA,(order))
+
+extern inline unsigned long get_zeroed_page(int gfp_mask)
+{
+    unsigned long page;
+
+    page = __get_free_page(gfp_mask);
+    if (page)
+        clear_page((void *)page);
+    return page;
+}
+
+/*
+ * 旧接口名称将在 2.5 中移除：
+ */
+#define get_free_page get_zeroed_page
+
+/*
+ * 只有一个核心的页面释放函数。
+ */
+extern void FASTCALL(__free_pages_ok(struct page * page, unsigned long order));
+extern inline void __free_pages(struct page *page, unsigned long order)
+{
+    if (!put_page_testzero(page))
+        return;
+    __free_pages_ok(page, order);
+}
+
+#define __free_page(page) __free_pages(page, 0)
+
+extern inline void free_pages(unsigned long addr, unsigned long order)
+{
+    unsigned long map_nr;
+
+#ifdef CONFIG_DISCONTIGMEM
+    if (addr == 0) return;
+#endif
+    map_nr = MAP_NR(addr);
+    if (map_nr < max_mapnr)
+        __free_pages(mem_map + map_nr, order);
+}
+
+#define free_page(addr) free_pages((addr),0)
+
+extern void show_free_areas(void);
+extern void show_free_areas_node(int nid);
+
+extern void clear_page_tables(struct mm_struct *, unsigned long, int);
+
+extern int map_zero_setup(struct vm_area_struct *);
+
+extern void zap_page_range(struct mm_struct *mm, unsigned long address, unsigned long size);
+extern int copy_page_range(struct mm_struct *dst, struct mm_struct *src, struct vm_area_struct *vma);
+extern int remap_page_range(unsigned long from, unsigned long to, unsigned long size, pprot_t prot);
+extern int zeromap_page_range(unsigned long from, unsigned long size, pprot_t prot);
+
+extern void vmtruncate(struct inode * inode, loff_t offset);
+extern int handle_mm_fault(struct task_struct *tsk,struct vm_area_struct *vma, unsigned long address, int write_access);
+extern int make_pages_present(unsigned long addr, unsigned long end);
+extern int access_process_vm(struct task_struct *tsk, unsigned long addr, void *buf, int len, int write);
+extern int ptrace_readdata(struct task_struct *tsk, unsigned long src, char *dst, int len);
+extern int ptrace_writedata(struct task_struct *tsk, char * src, unsigned long dst, int len);
+
+extern int pgt_cache_water[2];
+extern int check_pgt_cache(void);
+
+extern void free_area_init(unsigned long * zones_size);
+extern void free_area_init_node(int nid, pg_data_t *pgdat, unsigned long * zones_size, unsigned long zone_start_paddr);
+extern void mem_init(void);
+extern void show_mem(void);
+extern void si_meminfo(struct sysinfo * val);
+extern void swapin_readahead(swp_entry_t);
+
+/* mmap.c */
+extern void vma_init(void);
+extern void merge_segments(struct mm_struct *, unsigned long, unsigned long);
+extern void insert_vm_struct(struct mm_struct *, struct vm_area_struct *);
+extern void build_mmap_avl(struct mm_struct *);
+extern void exit_mmap(struct mm_struct *);
+extern unsigned long get_unmapped_area(unsigned long, unsigned long);
+
+extern unsigned long do_mmap_pgoff(struct file *file, unsigned long addr,
+        unsigned long len, unsigned long prot,
+        unsigned long flag, unsigned long pgoff);
+
+extern inline unsigned long do_mmap(struct file *file, unsigned long addr,
+unsigned long len, unsigned long prot,
+unsigned long flag, unsigned long offset)
+{
+        unsigned long ret = -EINVAL;
+        if (((offset + PAGE_ALIGN(len)) < offset)
+                goto out;
+        if (!(offset & ~PAGE_MASK))
+                ret = do_mmap_pgoff(file, addr, len, prot, flag, offset >> PAGE_SHIFT);
+out:
+        return ret;
+}
+
+extern int do_munmap(unsigned long, size_t);
+extern unsigned long do_brk(unsigned long, unsigned long);
+
+struct zone_t;
+/* filemap.c */
+extern void remove_inode_page(struct page *);
+extern unsigned long page_unuse(struct page *);
+extern int shrink_mmap(int, int, zone_t *);
+extern void truncate_inode_pages(struct address_space *, loff_t);
+
+/* 为堆叠文件系统导出的通用 vm_area_ops */
+extern int filemap_swapout(struct page * page, struct file *file);
+extern pte_t filemap_swapin(struct vm_area_struct * vma,
+                unsigned long offset, unsigned long entry);
+extern int filemap_sync(struct vm_area_struct * vma, unsigned long address,
+                size_t size, unsigned int flags);
+extern struct page *filemap_nopage(struct vm_area_struct * area,
+                unsigned long address, int no_share);
+
+/*
+ * GFP 位掩码..
+ */
+#define __GFP_WAIT 0x01
+#define __GFP_HIGH 0x02
+#define __GFP_IO 0x04
+#define __GFP_DMA 0x08
+#ifdef CONFIG_HIGHMEM
+#define __GFP_HIGHMEM        0x10
+#else
+#define __GFP_HIGHMEM        0x0 /* 空操作 */
+#endif
+
+#define GFP_BUFFER (__GFP_HIGH | __GFP_WAIT)
+#define GFP_ATOMIC (__GFP_HIGH)
+#define GFP_USER  (__GFP_WAIT | __GFP_IO)
+#define GFP_HIGUSER       (GFP_USER | __GFP_HIGHMEM)
+#define GFP_KERNEL(__GFP_HIGH | __GFP_WAIT | __GFP_IO)
+#define GFP_NFS (__GFP_HIGH | __GFP_WAIT | __GFP_IO)
+#define GFP_KSWAPD (__GFP_IO)
+
+/* 标志 - 指示该缓冲区适用于 DMA。在某些
+   平台被忽略，在其他平台酌情使用 */
+#define GFP_DMA __GFP_DMA
+
+/* 标志 - 指示该缓冲区可以从高端内存中获取，而高端内存并未
+   被内核永久映射 */
+#define GFP_HIGHMEM __GFP_HIGHMEM
+
+/* `vma` 是第一个满足 `address < vma->vm_end` 的 VMA，
+   * 甚至 `address < vma->vm_start`。必须扩展 `vma`。 */
+static inline int expand_stack(struct vm_area_struct * vma, unsigned long address)
+{
+    unsigned long grow;
+
+    address &= PAGE_MASK;
+    grow = (vma->vm_start - address) >> PAGE_SHIFT;
+    if (vma->vm_end - address > current->rlim[RLIMIT_STACK].rlim_cur ||
+        ((vma->vm_mm->total_vm + grow) << PAGE_SHIFT) > current->rlim[RLIMIT_AS].rlim_cur)
+        return -ENOMEM;
+    vma->vm_start = address;
+    vma->vm_pgoff -= grow;
+    vma->vm_mm->total_vm += grow;
+    if (vma->vm_flags & VM_LOCKED)
+        vma->vm_mm->locked_vm += grow;
+    return 0;
+}
+
+/* 查找第一个满足 `addr < vm_end` 的 VMA，如果没有则返回 `NULL`。 */
+extern struct vm_area_struct * find_vma(struct mm_struct * mm, unsigned long addr);
+extern struct vm_area_struct * find_vma_prev(struct mm_struct * mm, unsigned long addr,
+    struct vm_area_struct **pprev);
+
+/* 查找第一个与区间 `start_addr..end_addr-1` 相交的 VMA，
+   如果没有则返回 `NULL`。假设 `start_addr < end_addr`。 */
+static inline struct vm_area_struct * find_vma_intersection(struct mm_struct * mm,
+unsigned long start_addr, unsigned long end_addr)
+{
+    struct vm_area_struct * vma = find_vma(mm,start_addr);
+
+    if (vma && end_addr <= vma->vm_start)
+        vma = NULL;
+    return vma;
+}
+
+extern struct vm_area_struct *find_extend_vma(struct task_struct *tsk, unsigned long addr);
+```

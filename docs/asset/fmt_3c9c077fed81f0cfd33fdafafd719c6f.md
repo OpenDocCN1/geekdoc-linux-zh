@@ -1,0 +1,221 @@
+
+```c
+429 } 
+430 
+431 #ifndef INIT_TASK_SIZE
+432 # define INIT_TASK_SIZE 2048*sizeof(long)
+433 #endif
+434 
+435 union task_union {
+436     struct task_struct task;
+437     unsigned long stack[INIT_TASK_SIZE/sizeof(long)];
+438 };
+439 
+440 extern union task_union init_task_union;
+441 
+442 extern struct  mm_struct init_mm;
+443 extern struct task_struct *init_tasks[NR_CPUS];
+444 
+445 /* PID 哈希。（这不应该动态计算吗？） */
+446 #define PIDHASH_SZ (4096 >> 2)
+447 extern struct task_struct *pidhash[PIDHASH_SZ];
+448 
+449 #define pid_hashfn(x)   ((((x) >> 8) ^ (x)) & (PIDHASH_SZ - 1))
+450 
+451 extern __inline__ void hash_pid(struct task_struct *p)
+452 {
+453     struct task_struct **htable = &pidhash[pid_hashfn(p->pid)];
+454 
+455     if((p->pidhash_next = *htable) != NULL)
+456         (*htable)->pidhash_pprev = &p->pidhash_next;
+457     *htable = p;
+458     p->pidhash_pprev = htable;
+459 }
+460 
+461 extern __inline__ void unhash_pid(struct task_struct *p)
+462 {
+463     if(p->pidhash_next)
+464         p->pidhash_next->pidhash_pprev = p->pidhash_pprev;
+465     *p->pidhash_pprev = p->pidhash_next;
+466 }
+467 
+468 extern __inline__ struct task_struct *find_task_by_pid(int pid)
+469 {
+470     struct task_struct *p, **htable = &pidhash[pid_hashfn(pid)];
+471 
+472     for(p = *htable; p && p->pid != pid; p = p->pidhash_next)
+473         ;
+474 
+475     return p;
+476 }
+477 
+478 /* 基于 UID 的进程计费。 */
+479 extern int alloc_uid(struct task_struct *);
+480 void free_uid(struct task_struct *);
+481 
+482 #include <asm/current.h>
+
+## Linux 调度器
+
+483
+484  extern unsigned long volatile jiffies;
+485  extern unsigned long itimer_ticks;
+486  extern unsigned long itimer_next;
+487  extern struct timeval xtime;
+488  extern void do_timer(struct pt_regs *);
+489
+490  extern unsigned int * prof_buffer;
+491  extern unsigned long prof_len;
+492  extern unsigned long prof_shift;
+493
+494  #define CURRENT_TIME (xtime.tv_sec)
+495
+496  extern void FASTCALL(_wake_up(wait_queue_head_t *q, unsigned int mode));
+497  extern void FASTCALL(_wake_up_sync(wait_queue_head_t *q, unsigned int mode));
+498  extern void FASTCALL(sleep_on(wait_queue_head_t *q));
+499  extern long FASTCALL(sleep_on_timeout(wait_queue_head_t *q,
+500                              signed long timeout));
+501  extern void FASTCALL(interruptible_sleep_on(wait_queue_head_t *q));
+502  extern long FASTCALL(interruptible_sleep_on_timeout(wait_queue_head_t *q,
+503                              signed long timeout));
+504  extern void FASTCALL(wake_up_process(struct task_struct * tsk));
+505
+506  #define wake_up(x)               _wake_up((x),TASK_UNINTERRUPTIBLE |
+507                                TASK_INTERRUPTIBLE | TASK_EXCLUSIVE)
+508  #define wake_up_all(x)           _wake_up((x),TASK_UNINTERRUPTIBLE |
+509                                TASK_INTERRUPTIBLE)
+510  #define wake_up_sync(x)          _wake_up_sync((x),TASK_UNINTERRUPTIBLE
+511                                  | TASK_INTERRUPTIBLE | TASK_EXCLUSIVE)
+512  #define wake_up_interruptible(x) _wake_up((x),TASK_INTERRUPTIBLE |
+513                                  TASK_EXCLUSIVE)
+514  #define wake_up_interruptible_all(x) _wake_up((x),TASK_INTERRUPTIBLE)
+515  #define wake_up_interruptible_sync(x) _wake_up_sync((x),TASK_INTERRUPTIBLE |
+516                                  TASK_EXCLUSIVE)
+517
+518  extern int in_group_p(pid_t);
+519  extern int in_egroup_p(pid_t);
+520
+521  extern void flush_signals(struct task_struct *);
+522  extern void flush_signal_handlers(struct task_struct *);
+523  extern int dequeue_signal(sigset_t *, siginfo_t *);
+524  extern int send_sig_info(int, struct siginfo *, struct task_struct *);
+525  extern int force_sig_info(int, struct siginfo *, struct task_struct *);
+526  extern int kill_pg_info(int, struct siginfo *, pid_t);
+527  extern int kill_s1_info(int, struct siginfo *, pid_t);
+528  extern int kill_proc_info(int, struct siginfo *, pid_t);
+529  extern int kill_something_info(int, struct siginfo *, int);
+530  extern void notify_parent(struct task_struct *, int);
+531  extern void force_sig(int, struct task_struct *);
+532  extern int send_sig(int, struct task_struct *, int);
+533  extern int kill_pg(pid_t, int, int);
+534  extern int kill_s1(pid_t, int, int);
+535  extern int kill_proc(pid_t, int, int);
+536  extern int do_sigaction(int, const struct k_sigaction *, struct k_sigaction *);
+
+532 extern int do_sigaltstack(const stack_t *, stack_t *, unsigned long);
+533 extern inline int signal_pending(struct task_struct *p)
+534 {
+535     return (p->sigpending != 0);
+536 }
+537 
+538 /* 重新评估任务是否有挂起的信号待处理。
+539    每次被阻塞的 sigset_t 发生变化时都需要执行此操作。
+540    所有调用者都应持有 t->sigmask_lock。 */
+541 
+542 static inline void recalc_sigpending(struct task_struct *t)
+543 {
+544     unsigned long ready;
+545     long i;
+546 
+547     switch (_NSIG_WORDS) {
+548         default:
+549             for (i = _NSIG_WORDS, ready = 0; --i >= 0 ;) {
+550                 ready |= t->signal.sig[i] &~ t->blocked.sig[i];
+551             }
+552             break;
+553 
+554         case 4: ready = t->signal.sig[3] &~ t->blocked.sig[3];
+555                ready |= t->signal.sig[2] &~ t->blocked.sig[2];
+556                ready |= t->signal.sig[1] &~ t->blocked.sig[1];
+557                ready |= t->signal.sig[0] &~ t->blocked.sig[0];
+558                break;
+559 
+560         case 2: ready = t->signal.sig[1] &~ t->blocked.sig[1];
+561                ready |= t->signal.sig[0] &~ t->blocked.sig[0];
+562                break;
+563 
+564         case 1: ready = t->signal.sig[0] &~ t->blocked.sig[0];
+565     }
+566 
+567     t->sigpending = (ready != 0);
+568 }
+569 /* 如果我们在备用信号栈上，则返回真。 */
+570 
+571 static inline int on_sig_stack(unsigned long sp)
+572 {
+573     return (sp - current->sas_ss_sp < current->sas_ss_size);
+574 }
+575 
+576 static inline int sas_ss_flags(unsigned long sp)
+577 {
+578     return (current->sas_ss_size == 0 ? SS_DISABLE
+579                 : on_sig_stack(sp) ? SS_ONSTACK : 0);
+580 }
+581 
+582 extern int request_irq(unsigned int,
+583                 void (*handler)(int, void *, struct pt_regs *),
+584                 unsigned long, const char *, void *);
+
+586 extern void free_irq(unsigned int, void *);
+587 
+588 /*
+589  * 这现在变成了一个例程而不是宏，如果返回真，它会设置一个标志位
+590  * （用于执行 BSD 风格的计费，当进程使用 root 权限时会被标记）。
+591  * 这意味着你应该先执行正常的权限检查，最后检查 suser()。
+592  *
+593  * [1997年12月 -- Chris Evans]
+594  * 为了正确性，上述考虑需要扩展到
+595  * fsuser()。这是通过最后执行 fsuser() 检查来实现的。
+596  *
+597  * 这些将被移除，但在此期间，当设置 SECURE_NOROOT
+598  * 标志时，uid 不授予特权。
+599  */
+602 extern inline int suser(void)
+603 {
+604 		if (!issecure(SECURE_NOROOT) && current->euid == 0) {
+605 			current->flags |= PF_SUPERPRIV;
+606 			return 1;
+607 		}
+608 		return 0;
+609 }
+610 
+611 extern inline int fsuser(void)
+612 {
+613 		if (!issecure(SECURE_NOROOT) && current->fsuid == 0) {
+614 			current->flags |= PF_SUPERPRIV;
+615 			return 1;
+616 		}
+617 		return 0;
+618 }
+619 
+620 /*
+621  * capable() 检查特定的能力。
+622  * 新的权限检查应使用此接口，而不是 suser() 或
+623  * fsuser()。有关定义的能力，请参阅 include/linux/capability.h。
+624  */
+625 
+626 extern inline int capable(int cap)
+627 {
+628 #if 1 /* ok now */
+629 		if (cap_raised(current->cap_effective, cap))
+630 #else
+631 		if (cap_is_fs_cap(cap) ? current->fsuid == 0 : current->euid == 0)
+632 #endif
+633 		{
+634 			current->flags |= PF_SUPERPRIV;
+635 			return 1;
+636 		}
+637 		return 0;
+638 }
+639 
+```
