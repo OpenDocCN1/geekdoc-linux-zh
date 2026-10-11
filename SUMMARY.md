@@ -1048,6 +1048,7 @@
 +   [Linux 日志 (2007年5月)](docs/linux-journal-may-2007/README.md)
 +   [Linux 日志 (2007年11月)](docs/linux-journal-november-2007/README.md)
 +   [《Linux期刊》（2007年9月）](docs/linux-journal-september-2007/README.md)
++   [Linux 内核 2.4 深入剖析](docs/linux-kernel-24-internals/README.md)
 +   [Linux 内核调试：利用开源工具和高级技术调试 Linux 内核或模块问题](docs/linux-kernel-debugging-leverage-open-source-tools-and-advanc/README.md)
 +   [Linux 内核开发](docs/linux-kernel-development/README.md)
 +   [Linux 内核开发第 3 版](docs/linux-kernel-development-3rd-edition/README.md)

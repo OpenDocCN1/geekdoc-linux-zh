@@ -1,0 +1,284 @@
+- - '##'
+  - 1. 引导
+- - '##'
+  - 1.7 x86 上的 SMP 引导
+- - '##'
+  - 1.8 释放初始化数据和代码
+- - '##'
+  - 1.9 处理内核命令行
+- - '###'
+  - 2.2 任务和内核线程的创建与终止
+- - '##'
+  - 2.3 Linux 调度器
+- - '###'
+  - 2.3.1 调度器
+- - '##'
+  - 3.1 索引节点缓存及其与 Dcache 的交互
+- - '###'
+  - 3.2 Inode 缓存生命周期
+- - '##'
+  - 3.2 文件系统注册/注销
+- - '###'
+  - 3.3 文件描述符管理
+- - '###'
+  - 3.4 文件结构管理
+- - '###'
+  - 3.5 超级块和挂载点管理
+- - '###'
+  - 3.6 虚拟文件系统示例：pipefs
+- - '###'
+  - 3.7 磁盘文件系统示例：BFS
+- - '###'
+  - 3.8 执行域和二进制定位
+- - '##'
+  - 4. Linux 页缓存
+- - '##'
+  - 5. 进程间通信机制
+- - '###'
+  - 5.1 信号量
+- - '####'
+  - 信号量系统调用接口
+- - '#####'
+  - sys_semget()
+- - '#####'
+  - sys_semctl()
+- - '#####'
+  - sys_semmop()
+- - '####'
+  - 非阻塞信号量操作
+- - '####'
+  - 失败的信号量操作
+- - '####'
+  - 阻塞的信号量操作
+- - '####'
+  - 信号量专用支持结构
+- - '#####'
+  - struct sem_array
+- - '#####'
+  - struct sem
+- - '#####'
+  - struct seminfo
+- - '#####'
+  - struct semid64_ds
+- - '#####'
+  - struct sem_queue
+- - '#####'
+  - struct sembuf
+- - '#####'
+  - struct sem_undo
+- - '####'
+  - 信号量支持函数
+- - '#####'
+  - newary()
+- - '#####'
+  - freeary()
+- - '####'
+  - semctl_down()
+- - '#####'
+  - IPC_RMID
+- - '#####'
+  - IPC_SET
+- - '####'
+  - semctl_nolock()
+- - '#####'
+  - IPC_INFO 和 SEM_INFO
+- - '#####'
+  - SEM_STAT
+- - '####'
+  - semctl_main()
+- - '#####'
+  - GETALL
+- - '#####'
+  - SETALL
+- - '#####'
+  - IPC_STAT
+- - '#####'
+  - GETVAL
+- - '#####'
+  - GETPID
+- - '#####'
+  - GETNCNT
+- - '#####'
+  - GETZCNT
+- - '#####'
+  - SETVAL
+- - '####'
+  - count_semcnt()
+- - '####'
+  - count_semzcnt()
+- - '####'
+  - update_queue()
+- - '####'
+  - try_atomic_semop()
+- - '####'
+  - sem_revalidate()
+- - '####'
+  - freeundos()
+- - '####'
+  - alloc_undo()
+- - '####'
+  - sem_exit()
+- - '###'
+  - 5.2 消息队列
+- - '####'
+  - 消息系统调用接口
+- - '#####'
+  - sys_msget()
+- - '#####'
+  - sys_msgctl()
+- - '######'
+  - IPC_INFO (或 MSG_INFO)
+- - '######'
+  - IPC_STAT (或 MSG_STAT)
+- - '######'
+  - IPC_SET
+- - '######'
+  - IPC_RMID
+- - '#####'
+  - sys_msgsnd()
+- - '#####'
+  - sys_msgrcv()
+- - '####'
+  - 消息特定结构
+- - '#####'
+  - struct msg_queue
+- - '#####'
+  - struct msg_msg
+- - '#####'
+  - struct msg_msgseg
+- - '#####'
+  - struct msg_sender
+- - '#####'
+  - struct msg_receiver
+- - '#####'
+  - struct msqid64_ds
+- - '#####'
+  - struct msqid_ds
+- - '#####'
+  - struct msg_setbuf
+- - '####'
+  - 消息支持函数
+- - '#####'
+  - newque()
+- - '#####'
+  - freeque()
+- - '#####'
+  - ss_wakeup()
+- - '#####'
+  - ss_add()
+- - '#####'
+  - ss_del()
+- - '#####'
+  - expunge_all()
+- - '#####'
+  - load_msg()
+- - '#####'
+  - store_msg()
+- - '#####'
+  - free_msg()
+- - '#####'
+  - convert_mode()
+- - '#####'
+  - testmsg()
+- - '####'
+  - pipelined_send()
+- - '####'
+  - copy_msqid_to_user()
+- - '####'
+  - copy_msqid_from_user()
+- - '###'
+  - 5.3 共享内存
+- - '####'
+  - 共享内存系统调用接口
+- - '#####'
+  - sys_shmget()
+- - '#####'
+  - sys_shmctl()
+- - '######'
+  - IPC_INFO
+- - '######'
+  - SHM_INFO
+- - '######'
+  - SHM_STAT, IPC_STAT
+- - '######'
+  - SHM_LOCK, SHM_UNLOCK
+- - '######'
+  - IPC_RMID
+- - '######'
+  - IPC_SET
+- - '#####'
+  - sys_shmat()
+- - '#####'
+  - sys_shmdt()
+- - '####'
+  - 共享内存支持结构
+- - '#####'
+  - '`struct shminfo64`'
+- - '#####'
+  - '`struct shm_info`'
+- - '#####'
+  - '`struct shmid_kernel`'
+- - '#####'
+  - '`struct shmid64_ds`'
+- - '#####'
+  - '`struct shmem_inode_info`'
+- - '####'
+  - 共享内存支持函数
+- - '#####'
+  - newseg()
+- - '#####'
+  - shm_get_stat()
+- - '#####'
+  - shmem_lock()
+- - '#####'
+  - shm_destroy()
+- - '#####'
+  - shm_inc()
+- - '#####'
+  - shm_close()
+- - '#####'
+  - shmem_file_setup()
+- - '###'
+  - 5.4 Linux IPC 原语
+- - '####'
+  - 用于信号量、消息和共享内存的通用 Linux IPC 原语
+- - '#####'
+  - ipc_alloc()
+- - '#####'
+  - ipc_addid()
+- - '#####'
+  - ipc_rmid()
+- - '#####'
+  - ipc_buildid()
+- - '#####'
+  - 8.4.1 IPC ID 序列号
+- - '#####'
+  - 8.4.2 IPC 校验 ID
+- - '#####'
+  - 8.4.3 扩展数组
+- - '#####'
+  - 8.4.4 查找键
+- - '#####'
+  - 8.4.5 检查权限
+- - '#####'
+  - 8.4.6 加锁
+- - '#####'
+  - 8.4.7 解锁
+- - '#####'
+  - 8.4.8 全部加锁
+- - '#####'
+  - 8.4.9 全部解锁
+- - '####'
+  - 8.5 通用 IPC 获取/解析函数
+- - '#####'
+  - 8.5.1 ipc_get()
+- - '#####'
+  - 8.5.2 ipc_parse_version()
+- - '####'
+  - 8.6 用于信号量、消息和共享内存的通用 IPC 结构
+- - '#####'
+  - 8.6.1 struct kern_ipc_perm
+- - '#####'
+  - 8.6.2 struct ipc_ids
+- - '#####'
+  - 8.6.3 struct ipc_id
