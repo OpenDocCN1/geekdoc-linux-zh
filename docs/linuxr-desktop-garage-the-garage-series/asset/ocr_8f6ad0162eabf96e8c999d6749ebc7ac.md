@@ -1,0 +1,11 @@
+Epiphany has most of the functions and features you will recognize in any browser, and also at least one innovation: The program uses the Mozilla Gecko layout engine for rendering Web pages. The advantage of using Mozilla’s layout engine is that you, as a user, can still benefit from the antialiased text and other nice aspects of the Gecko engine. The big difference in Epiphany is in how the browser handles bookmarks. We are used to the tree list or folder list when looking at our bookmarks. Epiphany has tossed the convention and opted for organizing bookmarks by keyword searching. To go to a stored bookmark, you type the bookmark name or a word from the URL in the address bar. Possible matches show in a drop-down list under the address bar. I like this new approach for finding bookmarks that you want to get to quickly. You do, however, lose the browsing of forgotten bookmarks when using this keyword method.
+
+# Opera
+
+| Program Info | |
+| :--- | :--- |
+| Program URL | http://www.opera.com |
+
+Opera is a classic. It’s like fine cheese, Norwegian cheese. This browser has been around for quite some time. Opera has been a friend to the Linux community for a while as well, by providing a Linux version long before it was popular to do so. Opera provides versions for all major Linux distributions, including Fedora, Mandrake, Red Hat, Debian, SuSE, and also a Macintosh Power PC package. The program is both a Web browser and an e-mail client with additional capabilities for participating in IRC chat (more on IRC in Topic 10, “Instant Messaging and Chat”). Opera is not entirely free; it’s a commercial application that you need to buy, but you can choose to download an ad-supported version.
+
+Once again, like all of the browsers we are talking about, there aren’t a lot of wildly differing features in the Opera browser. Among its attributes is the capability to search directly in the address bar by adding in a search engine’s shortcut before your keywords, such as a g for “Google.” So, type “g modern delusions of grandeur,” and you will go to the Google search result for those search terms, probably with my Web site as your top search result. Opera also takes pride in supporting Web standards, such as those set out by the W3C (see http://www.w3c.org). Now, Web standards might not mean much to you as a

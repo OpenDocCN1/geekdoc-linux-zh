@@ -1,0 +1,13 @@
+Windows install with programs and data that you are too in love with to back up and reinstall, you will have to try to resize your Windows partition. This is the more difficult choice.
+
++   2. **Back up everything.** If you are not the kind of person who regularly backs up your data, start now. Hard drives can crash. Power lines can surge. Computers lose things. Especially back up any of your data from Windows before beginning this process.
+
++   3. **Plan the partitions.** If you need to resize a Windows partition, two options are a commerical program called Partition Magic and a DOS program called FIPS. (FIPS has many limitations; you should really try to use Partition Magic.) Both URLs are in the "Links" section at the end of the chapter. *Always defrag your Windows partition before resizing it.* For file sharing between partitions, a good idea is to create a third partition as a data partition. See "Sharing Files Between OS Partitions," later in this chapter, for more detail. *Remember to give Linux at least 5GB just so that you have room to play with.*
+
++   4. **Install Windows first.** Windows likes to be in control. Windows takes over the Master Boot Record during installation, with no choice to do otherwise. If you are installing XP or Windows 2000, use the option in the install to put Windows on one partition and leave the rest of the intended Linux space as free space. When installing Windows 95 or 98, use fdisk (a DOS utility usually available on a Windows boot floppy) to create the partition you will use for Windows, and leave the rest of the drive as free space.
+
++   5. **Start your Linux install.** Read up on the details in the installation section below. While moving through the installer screens, pay attention to what device the partitions are on; note them down, in case any of the OS partitions are not properly detected (i.e. Windows on `/dev/hda1` and the Linux root partition on `/dev/hda3`).
+
++   6. **Set up the boot loader.** This is done during the installation. Whether you use GRUB or LILO, follow the directions to set up the labels and default OS to boot into. The choices automatically are detected for you, but you can add or edit if something is missed.
+
+> NTFS partition, *but the options are fairly new, kind of buggy, and none too fun. If you plan to do a lot of file sharing, save yourself an ulcer and format the Windows partition with Fat32.*
