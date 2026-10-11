@@ -1,0 +1,112 @@
+
+```
+# dpkg -I google-chrome-stable_current_amd64.deb
+new Debian package, version 2.0.
+size 59477810 bytes: control archive=10394 bytes.
+    1222 bytes,    13 lines      control
+   16906 bytes,    457 lines *  postinst             #!/bin/sh
+   12983 bytes,    344 lines *  postrm               #!/bin/sh
+    1385 bytes,     42 lines *  prerem               #!/bin/sh
+Package: google-chrome-stable
+Version: 76.0.3809.100-1
+Architecture: amd64
+Maintainer: Chrome Linux Team <chromium-dev@chromium.org>
+Installed-Size: 205436
+Pre-Depends: dpkg (>= 1.14.0)
+Depends: ca-certificates, fonts-liberation, libappindicator3-1, libasound2 (>= 1.0.16), libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libatspi2.0-0 (>= 2.9.90), libc6 (>= 2.16), libcairo2 (>= 1.6.0), libcupsc2 (>= 1.4.0), libdbus-1-3 (>= 1.5.12), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.8),
+libgtk-3-0 (>= 3.9.10), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.22), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libuuid1 (>= 2.16), libx11-6 (>= 2:1.4.99.1),
+libx11-xcb1, libxcb1 (>= 1.6), libxcomposite1 (>= 1:0.3-1), libxcursor1 (>= 1:1.1.2),
+libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxi6 (>= 2:1.2.99.4), libxrandr2 (>=
+2:1.2.99.3), libxrender1, libxss1, libxst6, lsb-release, wget, xdg-utils (>= 1.0.2)
+Recommends: libu2f-udev
+Provides: www-browser
+Section: web
+Priority: optional
+Description: The web browser from Google
+Google Chrome is a browser that combines a minimal design with sophisticated technology to
+make the web faster, safer, and easier.
+```
+
+## 列出已安装的软件包及软件包内容
+
+要获取系统上所有已安装软件包的列表，请使用 `--get-selections` 选项，例如 `dpkg --get-selections`。您还可以通过向 `dpkg` 传递 `-L PACKAGENAME` 参数来获取特定软件包安装的所有文件列表，如下所示：
+
+```
+# dpkg -L unrar
+/.
+/usr
+/usr/bin
+/usr/bin/unrar-nonfree
+/usr/share
+/usr/share/doc
+/usr/share/doc/unrar
+/usr/share/doc/unrar/changelog.Debian.gz
+/usr/share/doc/unrar/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/unrar-nonfree.1.gz
+```
+
+## 查找拥有特定文件的软件包
+
+有时，您可能需要查找系统中哪个软件包拥有某个特定文件。您可以使用 `dpkg-query` 工具，后接 `-S` 参数以及目标文件的路径来实现：
+
+```
+# dpkg-query -S /usr/bin/unrar-nonfree
+unrar: /usr/bin/unrar-nonfree
+```
+
+## 重新配置已安装的软件包
+
+当软件包安装时，有一个称为安装后（post-install）的配置步骤，其中脚本会运行以设置软件运行所需的一切，例如权限、配置文件的放置位置等。这还可能会询问用户一些问题，以设置软件运行的偏好。
+
+有时，由于配置文件的损坏或格式错误，您可能希望将软件包的设置恢复为“初始”状态。或者，您可能希望更改您对初始配置问题的回答。为此，请运行 `dpkg-reconfigure` 工具，后接软件包名称。
+
+该程序将备份旧的配置文件，在正确的目录中解包新的配置文件，并运行软件包提供的安装后脚本，就好像该软件包是首次安装一样。使用以下示例尝试重新配置 `tzdata` 软件包：
+
+```
+# dpkg-reconfigure tzdata
+```
+
+### 高级软件包工具 (apt)
+
+高级软件包工具 `APT` 是一个软件包管理系统，包含一套工具，极大地简化了软件包的安装、升级、删除和管理。`APT` 提供了高级搜索功能和自动依赖项解析等功能。
+
+`APT` 不是 `dpkg` 的“替代品”。你可以将其视为一个“前端”，它简化了操作，并弥补了 `dpkg` 功能中的不足，例如依赖项解析。
+
+`APT` 与包含可安装软件包的软件源协同工作。这些软件源可以是本地或远程服务器，或者（较少见的）CD-ROM 光盘。
+
+Linux 发行版，如 Debian 和 Ubuntu，维护它们自己的软件源，其他软件源可能由开发人员或用户组维护，以提供主要发行版软件源中不可用的软件。
+
+有许多与 `APT` 交互的工具，主要的有：
+
+- `apt-get` 用于从系统下载、安装、升级或删除软件包。
+- `apt-cache` 用于在软件包索引中执行操作，如搜索。
+- `apt-file` 用于在软件包内搜索文件。
+
+还有一个名为 `apt` 的更“友好”的工具，它结合了 `apt-get` 和 `apt-cache` 中最常用的选项。`apt` 的许多命令与 `apt-get` 的命令相同，因此在这种情况下它们通常是可互换的。然而，由于系统上可能未安装 `apt`，建议学习如何使用 `apt-get` 和 `apt-cache`。
+
+> **注意** `apt` 和 `apt-get` 可能需要网络连接，因为可能需要从远程服务器下载软件包和软件包索引。
+
+## 更新软件包索引
+
+在使用 `APT` 安装或升级软件之前，建议先更新软件包索引，以获取关于新软件包和更新软件包的信息。这是通过 `apt-get` 命令后接 `update` 参数来完成的：
+
+```
+# apt-get update
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 https://repo.skype.com/deb stable InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu disco InRelease
+Hit:4 http://repository.spotify.com stable InRelease
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+Hit:6 http://apt.pop-os.org/proprietary disco InRelease
+Hit:7 http://ppa.launchpad.net/system76/pop/ubuntu disco InRelease
+Hit:8 http://us.archive.ubuntu.com/ubuntu disco-security InRelease
+Hit:9 http://us.archive.ubuntu.com/ubuntu disco-updates InRelease
+Hit:10 http://us.archive.ubuntu.com/ubuntu disco-backports InRelease
+Reading package lists... Done
+```
+
+> **提示** 除了使用 `apt-get update`，您还可以使用 `apt update`。
+
+## 安装和删除软件包
