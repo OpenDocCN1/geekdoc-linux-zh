@@ -1,0 +1,42 @@
+
+![](img/fb76008333fb7aef815b136f9f1afe5f_46_0.png)
+
+Start with a population greater than zero (e.g. 0.1) and you'll find that for growth constants greater than 1 but less than 3, the population increases to a maximum value at which point it stabilises. That final value is greater for higher growth rates. With a growth constant of just over 3, though, very different behaviour emerges. Now there's no single final population but one that oscillates between different values between generations. This has been explained as a 'boom and bust' phenomenon in which alternate generations are too large for the environment to support them so there is high mortality which is reflected in the next generation. Next, try a growth rate of 3.5 and you'll find that the final population oscillates between four different values and, at even higher growth rates, you could find the final population oscillating between 8, 16 or more values. This doesn't happen forever, though. When the growth rate hits around 3.7 the final population thrashes around wildly between different values which might look chaotic but, although the system is now chaotic, that word means something quite different. For all the smaller values of the growth constant, had you started with a different value of the initial population, the final population would have converged on the same value or values. Not so in the chaotic region. If you start with an initial population of 0.101 instead of 0.1, although growth will start the same, it will soon start to take a quite different path – the final graph in Figure 2 illustrates this. In fact, however close the two starting values, the end result will always diverge eventually. The growth of an initial population of 0.1001 would mirror that of an initial population of 0.1 for longer, but it too will diverge eventually. This is what's meant by the phrase super-sensitivity to initial conditions and it limits our ability to model some natural phenomena – perhaps most notably the weather – for too long into the future.
+
+So far in our discussion of chaos theory we've seen some equations and visualised these as simple line graphs, but we've not seen anything to rival the Mandelbrot set. All this is about to change as we discover the bifurcation diagram. Here's how to generate it and, again, this is a simple programming exercise. Using just a single value of the initial population, calculate the value or values corresponding to the final population for growth rates ranging from 1 to 4 (although the region from 1 to, say, 2.5 isn't especially interesting). We consider the final population to be the one after the population has stabilised and the best way to achieve this is to discard the first few generations, perhaps the first 150. Now, plot the final population(s) against the growth rate as an X-Y plot. The result, which is shown as Figure 3 (p48), is called the bifurcation diagram and very similar versions of this diagram can be produced from very different formulae describing chaotic systems. You'll notice the characteristic bifurcations (i.e. splitting into two) at a growth rate of 3, and further bifurcations at higher growth rates. You'll also notice the chaotic area above about 3.65. However, it’s also apparent that chaos doesn’t continue forever. In fact, there are three obvious bands where order once more prevails before chaos is again restored.
+
+> Above This simple model of population growth behaves very differently depending on the growth rate
+
+# Chaos theory
+
+![](img/fb76008333fb7aef815b136f9f1afe5f_47_0.png)
+
+Above The bifurcation diagram has been described as the picture of chaos
+
+Our discussion of chaos theory now takes us to the peculiar world of the strange attractor. Mathematically, an attractor is one or more values to which a system evolves. In the case of the simple population model with growth rates less than 3, therefore, the attractor is a single value, while for values over just over 3 the attractor is a pair of values. To cut a long story short – and, after all, this is just an introduction to fractals and chaos – the attractor for a chaotic system is what mathematicians call a strange attractor and if you plot a strange attractor, you’ll find that it’s a fractal image. As you delve further into chaos theory you might be inspired to read up on strange attractors but, even if you don’t fully understand them, plotting strange attractors is an interesting way of generating an infinite number of intricate images and, in so doing, further underline the mind-blowing nature of these spheres of mathematics. A first step would be to use off-the-shelf software and our recommendation is Chaoscope, which is free and you can download from http://www.chaoscope.org.
+
+# The link-up
+
+So far we’ve looked at fractal geometry and we’ve looked at chaos theory. It’s a valid question, though, to ask why we’ve chosen to bundle these two apparently separate branches of maths together. We’re not going to get embroiled in a formal mathematical treatment of this question but we will, nevertheless, highlight a number of amazing facts that show that there’s more in common between fractals and chaos than is apparent at first sight.
+
+A number of amazing facts show that there’s more in common between fractals and chaos than is apparent at first sight
+
+The first link is one that you might already have picked up on. A common factor between fractals and chaos is that both involve the same sort of mathematical function. Called an iterative function, this involves performing some mathematical function on a value and then doing the same on the result over and over again. Many of the other links are much more unexpected.
+
+Let’s think about a highly zoomed in image of the Mandelbrot set. Now let’s consider two points, representing two complex numbers, one just inside the Mandelbrot set, normally shown in black, and one just the other side of the perimeter, normally shown coloured. These numbers could be almost identical, differing perhaps in the umpteenth decimal point, but one heads off to infinity when the iterated function is performed while the other remains close to zero. In other words, there is super-sensitivity to initial condition – which, of course, is the definition of a chaotic system.
+
+Now we'll put the bifurcation diagram under the spotlight – quite literally. This can be thought of as the image of chaos but, if we were to zoom in on parts of it, we would discover that it's actually a fractal image in its own right.
+
+But we've left the most amazing common feature to the end. If you display an image of the complete Mandelbrot set directly below an image of the bifurcation diagram but plotted the opposite way round to the way it's normally shown, i.e. with numbers along the horizontal axis decreasing as you go left to right, you'll discover something quite astonishing. If you scale the bifurcation diagram so that the section to the first bifurcation (i.e. split) occupies the same horizontal space as the main cardioid part of the Mandelbrot set you'll notice that other features line up too. In particular, you'll find that the section of the bifurcation diagram between the first and second bifurcations lines up with the first circular bulb of the Mandelbrot set, the section between the second and third bifurcation lines up with the second bulb and so on. You'll also find that the sections of the bifurcation diagram where order returns within the area of chaos, correspond to the small copies of the Mandelbrot set on the 'antenna' of the main Mandelbrot set. Surely that's something to convince you that maths can be truly astonishing after all!
+
+![](img/fb76008333fb7aef815b136f9f1afe5f_48_0.png)
+
+Above Many plants have fractal forms, but rarely is it as obvious as in the Romanesco broccoli
+
+![](img/fb76008333fb7aef815b136f9f1afe5f_48_1.png)
+
+# Ensemble forecasting
+
+Because the weather is a chaotic system, yet it's impossible to measure the initial conditions of temperature, wind speed, humidity and so on with infinite accuracy, long-range weather forecasting is tricky. However, ensemble forecasting offers a partial solution because the weather isn't always equally erratic. The approach involves solving the equations with lots of slightly different values of the initial conditions and assigning a confidence factor depending on how well they agree.
+
+Above Chaoscope enables you to play with the strange attractors – themselves fractal images – which describe chaotic systems
