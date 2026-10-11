@@ -1,0 +1,116 @@
+
+## 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`
+
+```bash
+root@innoxone:/stunnel/stunnel-3.22
+文件 编辑 设置 帮助
+正在检查 pthread sigmask... 是
+正在检查 ANSI C 头文件... 是
+正在检查 sys/types.h... 是
+正在检查 sys/stat.h... 是
+正在检查 stdlib.h... 是
+正在检查 memory.h... 是
+正在检查 strings.h... 是
+正在检查 inttypes.h...
+正在检查 unistd.h... (已缓存)
+正在检查 unsigned char... 正在检查 unsigned char 的大小... ...
+正在检查 unsigned short... 是
+正在检查 unsigned short 的大小... 2
+正在检查 unsigned int... 是
+正在检查 unsigned int 的大小... 4
+正在检查 unsigned long... 是
+正在检查 unsigned long 的大小... 6
+正在检查 unsigned long 的大小.../configstatus 8
+configure: 正在创建 config.status
+config.status: 正在创建 Makefile
+[root]@stunnel-3.22]#
+```
+
+抱歉，由于之前的输出中出现了严重的重复和格式错误，我将重新为您提供翻译后的图 4-31。
+
+## 图 4-31 翻译
+
+图 4-31 等待 `make` 命令被调用且 `/components` 完成。
+
+以下是完整的翻译结果：
+
+```bash
+root@innoxone://stunnel/stunnel-3.22
+文件 编辑 设置 帮助
+正在检查 pthread sigmask... 是
+正在检查 ANSI C 头文件... 是
+正在检查 sys/types.h... 是
+正在检查 sys/stat.h... 是
+正在检查 stdlib.h... 是
+正在检查 memory.h... 是
+正在检查 strings.h... 是
+正在检查 inttypes.h...
+正在检查 unistd.h... (已缓存)
+正在检查 unsigned char... 
+正在检查 unsigned char 的大小... ...
+正在检查 unsigned short... 是
+正在检查 unsigned short 的大小... 2
+正在检查 unsigned int... 是
+正在检查 unsigned int 的大小... 4
+正在检查 unsigned long... 是
+正在检查 unsigned long 的大小... 6
+正在检查 unsigned long 的大小.../configstatus 8
+configure: 正在创建 config.status
+config.status: 正在创建 Makefile
+[root]@stunnel-3.22]#
+```
+
+图 4-31 等待 `make` 命令被调用且 `/components` 完成。
+
+```bash
+root@innoxone:/stunnel/stunnel-3.22
+文件 编辑 设置 帮助
+正在检查 unsigned long... 是
+正在检查 unsigned long long 的大小... 8
+configure: 正在创建 /config.status
+config.status: 正在创建 Makefile
+[root]@stunnel-3.22]#
+[root]@stunnel-3.22]#
+[root]@stunnel-3.22]#
+[root]@stunnel-3.22]#
+[root]@stunnel-3.22]#
+gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*/
+-DHAVE_HOME="/usr/local" -DNO_HOME -DHAVE_HOST="i386-pc-linux-gnu" -DHAVE_LIBC=1 -DHAVE_LIBPHTREAD=1 -DHAVE_LIBHUTIL=1
+-DHAVE_LIBHAARE=1 -DHAVE_DEVP_PATH=1 -DHAVE_HOST=1 -DHAVE_HAVE_SYS
+-DHAVE_SOCKET=1 -DHAVE_GETTOPEH=1 -DHAVE_GETTOPEH-1 -DHAVE_HAVE_SYS-1=1 -DHAVE_VSHPRINT=1 -DHAVE_OPENTI=1 -DHAVE_DEMON=1 -DHAVE_VAITPRD=1 -DHAVE_WAIT1 -DHAVE_HAVE_EPOLL=1 -DHAVE_HAVE_SELECT=1 -DHAVE_EPOLL=1 -DHAVE_HAVE_SYS-1 -DHAVE_TYPES_H=1 -DHAVE_STAT_H=1 -DHAVE_H=1 -DHAVE_STRING_H=1 -
+-DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_TYPES_H=1 -DHAVE_STINT_H=1 -DHAVE-UNISTD_H=1 -SIZED_OFFSET_LONG=8 -SIZED_UNLONG=8 -SIZED_UNSIGNED_SHORT=2 -SIZED_UNSIGNED-INT=4 -SIZED_OFFSET_UNSIGNED=8 -SIZED_OFFSET_UNSIGNED=8 -SIZED_CHDIR=4="/usr/lib/local/*" -DOPIDDIR="/usr/local/var/stunnel"
+- c client created。
+```
+
+## 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序
+
+第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
+
+你将被要求输入信息，这些信息将整合到你的证书请求中。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
+有许多字段你可以留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
+
+```bash
+$ stunnel/stunnel-3.22
+国家名称（2 位代码）[US]
+州或省份（全称）[State-Name]:Texas
+地名（例如，城市）[Mesquite]
+组织名称（例如，公司）[Shanghai]:Defcon-VMS
+组织单元名称（部门）[cflug]
+通用名称（你的服务器）[localhost]:
+test -1 eq 1 -f /dev/urandom || /dev/random 512 stunnel.pem
+test -1 eq 1 -f /dev/urandom || \
+/usr/bin/openssl x509 -dates -fingerprint -nout \
+||
+subject=C=US/ST=Texas/L=Mesquite/O=Defcon-VMS/OU=cflug/CN=localhost
+notBefore=Aug 27 01:51:24 2023 GMT
+notAfter=Aug 27 01:51:24 2024 GMT
+M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
+[root@stunnel-3.22]# 
+```
+
+## 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件
