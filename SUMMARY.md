@@ -1603,6 +1603,7 @@
 +   [PHP3：基于浏览器的应用程序开发](docs/php3-programming-browser-based-applications-with-php/README.md)
 +   [Picatrix：中世纪星象魔法论（历史中的魔法）](docs/picatrix-a-medieval-treatise-on-astral-magic-magic-in-histor/README.md)
 +   [PMP：项目管理专业考试学习指南：2015年考试更新版](docs/pmp-project-management-professional-exam-study-guide-updated/README.md)
++   [PMP 项目管理专业人士复习指南](docs/pmp-project-management-professional-review-guide-updated-for/README.md)
 +   [Linux 入门指南](docs/pocket-linux-guide/README.md)
 +   [Linux 策略路由使用指南（电子版）](docs/policy-routing-using-linux-electronic-resource/README.md)
 +   [PostgreSQL （Linux）](docs/postgresql-linux/README.md)
