@@ -1,0 +1,184 @@
+
+```cpp
+cout << "Please type in your last name:" << endl;
+
+string lastName;
+
+cin >> lastName;
+
+// 在它们之间加一个空格将它们组合
+
+string fullName = firstName + ' ' + lastName;
+
+// 在屏幕上显示组合后的名称并带有消息
+
+cout << "Hello ";
+
+cout << fullName;
+
+cout << "! How are you?" << endl;
+
+return 0;
+
+}
+```
+
+注意，如果没有空格，这条语句：
+
+`string fullName = firstName + lastName; // 两个名字在没有空格的情况下组合`
+
+...一旦程序执行，它将把两个名字并排显示，中间完全没有任何间隔。
+
+`Jimi` 和 `Hendrix` 将被加在一起形成：
+
+`JimiHendrix`
+
+...而不是：
+
+`Jimi Hendrix`
+
+在编写组合文本片段的程序时，这是一个非常常见的问题。你有时可能希望字符串的各个部分通过空格或标点符号隔开，否则它们在屏幕上可能变得难以阅读。
+
+262 | 在树莓派上使用 C++ 学习编程
+
+此程序选择固定数量的随机数字来构建一个 PIN 序列。一旦选择，每个随机数字都会被附加到名为 `pinString` 的字符串值中。此过程一直持续，直到 PIN 达到所需的长度，该长度由常量 `PIN_LENGTH` 指定。
+
+## 示例 8.16-generate_pin.cpp
+
+```cpp
+#include <iostream>    // 程序将在屏幕上显示一些文本
+
+#include <cstdlib>           // 程序使用 random() 和 srand() 函数
+
+#include <ctime>               // 程序使用 time() 函数作为随机种子
+
+using namespace std;        // 将使用标识符 string, cout and endl
+
+int main() {
+
+    // 告诉电脑每个 PIN 有多长
+    const int PIN_LENGTH = 4;   //在此修改以获取更长的 PIN
+
+    // 创建一个新的空字符串来存放 PIN
+    string pinString = "";
+
+    // 设置（种子）随机数生成器
+    srand(time(0));
+
+    // 我们将选择随机整数
+    int pos;
+    int randomDigit;
+    int asciiCode;
+
+    for ( pos = 0; pos < PIN_LENGTH; pos++)
+
+    {
+        // 选择一个 0 到 9 之间的随机数字
+        randomDigit = random() % 9;
+        // 将其转换为 0 到 9 之间的 ASCII 字符
+        asciiCode = 48 + randomDigit;    // '0' 的代码是 48
+        // 将 ASCII 码转换为字符
+        // 然后将其附加到 PIN 字符串末尾
+        pinString += static_cast<char>(asciiCode);
+    } // 循环结束
+
+    // 在屏幕上显示完成的 PIN
+    cout << "The new PIN is ";
+    cout << pinString << endl;
+
+    return 0;
+
+}
+```
+
+执行时，程序将生成并显示一个随机的 4 位 PIN：
+
+![](img/0c86cf81300257fe2415e40f8fb03508_264_0.png)
+
+## 密码生成器
+
+接上一个生成简单 PIN 的示例，此程序生成由字母表字母组成的随机密码。
+
+程序允许你选择想要生成多少个密码，以及每个密码的长度应该是多少。
+
+每个密码通过一个接一个将一个随机字符添加到名为 `password` 的字符串值中构造。
+
+## 示例 8.17–random_password.cpp
+
+```cpp
+#include <iostream>               // 程序将使用键盘和屏幕
+
+#include <cstdlib>                // 程序使用 random() 和 srand() 函数
+
+#include <ctime>                    // 程序使用 time() 函数作为随机种子
+
+using namespace std;                            // 将使用标准标识符 string, cin, cout, endl
+
+int main() {
+
+    // 为随机数生成器设置种子
+    // 这只需要在程序运行时执行一次，以确保
+    // 数字不会遵循可预测的模式
+    srand(time(0));
+
+    cout << "How many passwords do you want to be generated?" << endl;
+    unsigned int numRequired;
+    cin >> numRequired;
+
+    cout << "How many characters should each password contain?" << endl;
+    unsigned int howLong;
+    cin >> howLong;
+
+    string password;
+    char randomChar;
+    unsigned int numCharsAdded, chosenNumber, asciiCode;
+
+    // 重复制作密码
+    for ( unsigned int numMade = 0; numMade < numRequired; numMade++ ) {
+        password = "";    // 为新密码从空字符串开始
+        // 选择随机字符并将其添加到密码中
+        for ( numCharsAdded = 0; numCharsAdded < howLong; {
+            chosenNumber = random() % 26;
+            asciiCode = 65 + chosenNumber;
+            randomChar = static_cast<char>(asciiCode);
+            password += randomChar;
+        } // 循环结束
+        // 显示生成的密码
+        cout << password << endl; // 显示生成的密码
+    } // 循环结束
+
+    return 0;
+
+}
+```
+*(注：由于原文 8.17 代码块本身存在语法残缺，翻译已保留其原样)*
+
+以下程序将字符串和字符值的混合体附加到另一个字符串值上。它要求用户输入名字和姓氏，这些内容被存储在字符串变量 `firstName` 和 `lastName` 中。结果通过将 `firstName` 的内容、一个空格字符以及 `lastName` 的内容相加，创建了一个名为 `fullName` 的新字符串值。`fullName` 的结果值将显示在屏幕上。
+
+## 示例 8.15 – append_mixed.cpp
+
+```cpp
+#include <iostream> // 程序将使用键盘和屏幕
+
+using namespace std; // 将使用标准标识符 string, cin, cout, endl
+
+int main() {
+
+    // 此程序将两个字符串变量组合成一个新的字符串。
+    // 让用户输入他们的名字
+    cout << "Please type in your first name:" << endl;
+    string firstName;
+    cin >> firstName;
+
+    // 让用户输入姓氏
+    cout << "Please type in your last name:" << endl;
+    string lastName;
+    cin >> lastName;
+
+    // 在它们之间加一个空格将它们组合
+    string fullName = firstName + ' ' + lastName;
+
+    // 在屏幕上显示组合后的名称并带有消息
+    cout << "Hello ";
+    cout << fullName;
+```
