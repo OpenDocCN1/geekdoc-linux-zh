@@ -1087,6 +1087,7 @@
 +   [Linux 简明](docs/linux-made-simple/README.md)
 +   [Linux 入门指南 - 第6版，2021](docs/linux-made-simple---6th-edition-2021/README.md)
 +   [Linux 简易入门：第9版（2024年8月）](docs/linux-made-simple-9th-edition---august-2024/README.md)
++   [简明Linux](docs/linux-made-simple-ed9-2024/README.md)
 +   [Linux 简易指南：开源计算终极指南](docs/linux-made-simple-the-ultimate-guide-to-open-source-computin/README.md)
 +   [Linux Magazine 第236 期 2020-07 美国](docs/linux-magazine-236-2020-07-usa/README.md)
 +   [Linux Magazine 237 2020-08 美国版](docs/linux-magazine-237-2020-08-usa/README.md)
