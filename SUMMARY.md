@@ -1205,6 +1205,7 @@
 +   [Linux Shell 示例](docs/linux-shells-by-example-with-cd-rom/README.md)
 +   [Linux 智能家居初学者指南](docs/linux-smart-homes-for-dummies-for-dummies-computertech/README.md)
 +   [Linux 套接字编程](docs/linux-socket-programming/README.md)
++   [Linux Socket 编程示例](docs/linux-socket-programming-by-example-by-example/README.md)
 +   [Linux、软件无线电与业余无线电](docs/linux-software-radio-and-the-radio-amateur/README.md)
 +   [Linux+：学习指南；[涵盖 2005 考试；XKO-002 考试]](docs/linux-study-guide-covers-2005-exam-exam-xko-002/README.md)
 +   [Linux+ 学习指南：考试 XKO 001 (附 CD-ROM)](docs/linux-study-guide-exam-xko-001-with-cd-rom/README.md)
