@@ -1,0 +1,203 @@
+
+# yum list installed xterm
+
+Loaded plugins: refresh-packagekit
+
+Error: No matching Packages to list
+
+使用 `uprm` 和 `zypper` 列出详细软件包信息的命令在表 9.2 中。你可以使用 `zypper` 命令的 `info` 选项从仓库获取更详细的软件包信息。
+
+## 表 9.2 如何使用 zypper 和 uprm 查看各种软件包详情
+
+| 详情类型 | 前端工具 | 命令 |
+| :--- | :--- | :--- |
+| 软件包信息 | uprm | `uprm -i package_name` |
+| 已安装？ | uprm | `rpm -q package_name` |
+| 软件包信息 | zypper | `zypper search -s package_name` |
+| 已安装？ | zypper | 相同的命令，但在 Status 列中查找 i |
+
+最后，如果你需要找出文件系统上的某个特定文件是由哪个软件包提供的，这个多功能工具也能做到这一点！只需输入命令：
+`yum provides file_name`
+
+这里有一个尝试查找哪个软件提供了 `/etc/yum.conf` 配置文件的示例：
+
+```
+# yum provides /etc/yum.conf refresh-packagekit, security
+
+Loaded plugins: fastmirror, refresh
+
+ining fastest mirrors
+
+* base: mirror.web-ster.com
+
+* extras: centros.chi.host-engine.com
+
+* updates: mirror.umd.edu
+
+yum-3.2.29-40.el16.centos.noarch : RPM package installer/updatemer/manager
+
+Repo : base
+
+Matched from:
+
+Filename : /etc/yum.conf
+
+yum-3.2.29-43.el16.centos.noarch : RPM package installer/updatemer/manager
+
+Repo : updates
+
+Matched from:
+
+Filename : /etc/yum.conf
+
+yum-3.2.29-40.el16.centos.noarch : RPM package installer/updatemer/manager
+
+Repo : installed
+
+Matched from:
+
+Other : Provides-match: /etc/yum.conf
+```
+
+`yum` 检查了三个独立的仓库：`base`、`updates` 和 `installed`。从这些仓库中得到的答案都是：`yum` 软件包提供了这个文件！
+
+## 使用 yum 安装软件
+
+使用 `yum` 安装软件包非常简单。以下是基本步骤：
+
+```
+$ su -
+
+yum yum install fastestmirror, refresh-packagekit, security
+
+Loaded plugins: fastest mirrors
+
+Determining fastest mirrors
+
+* base: mirrors.bluehost.com
+
+* extras: mirror.5ninesolutions.com
+
+* updates: mirror.san.fastserv.com
+
+Setting up Install Process
+
+Resolving Dependencies
+
+-> Setting up transaction
+
+-> Checking dependencies
+
+-> Checking for GPG keys
+
+-> Checking transaction integrity
+
+-> Running transaction
+
+Installed:
+
+  xterm-253-1.el66.i686
+
+Done
+```
+
+## 注意
+
+在 `yum` 之前，`aptitude` 为处理基于 Debian 的 `dpkg` 工具提供了智能的命令行选项。现在是时候查看基于 Red Hat 的发行版的 `rpm` 工具及其各种前端界面了。
+
+## 基于 Red Hat 的系统
+
+与基于 Debian 的发行版一样，基于 Red Hat 的系统也有几个不同的前端工具可用。这些是常用的工具：
+
+- `yum`：用于 Red Hat 和 Fedora
+- `urpm`：用于 Mandriva
+- `zypper`：用于 openSUSE
+
+这些前端都基于 `rpm` 命令行工具。接下来的章节将讨论如何使用这些各种基于 `rpm` 的工具来管理软件包。重点是 `yum`，但也包含了针对 `zypper` 和 `urpm` 的信息。
+
+## 列出已安装的软件包
+
+要找出你的系统上安装了哪些内容，在 shell 提示符下输入以下命令：
+
+`yum list installed`
+
+信息可能会在显示屏幕上飞快地闪过，因此最好将已安装的软件列表重定向到一个文件中。你可以使用 `less` 命令（或 GUI 编辑器）以受控的方式查看列表。
+
+`yum list installed > installed_software`
+
+要列出你的 openSUSE 或 Mandriva 发行版上已安装的软件包，请参阅表 9.1 中的命令。遗憾的是，Mandriva 中使用的 `rpm` 工具无法生成当前安装的软件列表。因此，你需要回到底层的 `rpm` 工具。
+
+### 表 9.1 使用 zypper 和 urpm 列出已安装软件
+
+| 发行版 | 前端工具 | 命令 |
+| :--- | :--- | :--- |
+| Mandriva | urpm | `rpm -qa > installed_software` |
+| openSUSE | zypper | `zypper search -I > installed_software` |
+
+要获取特定软件包的详细信息，`yum` 真真正大显异彩。它提供了该软件包非常详尽的描述，通过另一个简单的命令，你可以查看软件包是否已安装：
+
+```
+# yum list xterm
+
+Loaded plugins: langpacks, presto, refresh-packagekit
+
+Adding en_US to language list
+
+Available Packages
+
+xterm.i686 253-1.el66
+
+#
+
+# yum list installed xterm
+
+Loaded plugins: refresh-packagekit
+
+Error: No matching Packages to list
+```
+
+使用 `uprm` 和 `zypper` 列出详细软件包信息的命令在表 9.2 中。你可以使用 `zypper` 命令的 `info` 选项从仓库获取更详细的软件包信息。
+
+## 表 9.2 如何使用 zypper 和 uprm 查看各种软件包详情
+
+| 详情类型 | 前端工具 | 命令 |
+| :--- | :--- | :--- |
+| 软件包信息 | uprm | `uprm -i package_name` |
+| 已安装？ | uprm | `rpm -q package_name` |
+| 软件包信息 | zypper | `zypper search -s package_name` |
+| 已安装？ | zypper | 相同的命令，但在 Status 列中查找 i |
+
+最后，如果你需要找出文件系统上的某个特定文件是由哪个软件包提供的，这个多功能工具也能做到这一点！只需输入命令：
+`yum provides file_name`
+
+这里有一个尝试查找哪个软件提供了 `/etc/yum.conf` 配置文件的示例：
+
+```
+# yum provides /etc/yum.conf refresh-packagekit, security
+
+Loaded plugins: fastmirror, refresh
+
+ining fastest mirrors
+
+* base: mirror.web-ster.com
+
+* extras: centros.chi.host-engine.com
+
+* updates: mirror.umd.edu
+
+yum-3.2.29-40.el16.centos.noarch : RPM package installer/updatemer/manager
+
+Repo : base
+
+Matched from:
+
+Filename : /etc/yum.conf
+
+yum-3.2.29-43.el16.centos.noarch : RPM package installer/updatemer/manager
+
+Repo : updates
+
+Matched from:
+
+Filename : /etc/yum.conf
+```
