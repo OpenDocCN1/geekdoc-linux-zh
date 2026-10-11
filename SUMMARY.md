@@ -1479,6 +1479,7 @@
 +   [现代操作系统全球版](docs/modern-operating-systems-global-edition/README.md)
 +   [Modern Perl 入门指南](docs/modern-perl/README.md)
 +   [忙碌的 Python 开发者的现代 Tkinter 指南](docs/modern-tkinter-for-busy-python-dev-elopers/README.md)
++   [Python 标准 GUI 工具包现代 Tkinter 开发指南](docs/modern-tkinter-for-busy-python-developers-quickly-learn-to-c/README.md)
 +   [忙碌 Python 开发者的现代 Tkinter：第三版](docs/modern-tkinter-for-busy-python-developers-third-edition/README.md)
 +   [从 Windows 迁移到 Linux](docs/moving-from-windows-to-linux-team-ddu/README.md)
 +   [迁移到自由软件指南](docs/moving-to-free-software/README.md)

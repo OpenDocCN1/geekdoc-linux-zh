@@ -1,0 +1,84 @@
+- - '#'
+  - Python 标准 GUI 工具包现代 Tkinter 开发指南
+- - '###'
+  - 第一个必备程序
+- - '##'
+  - 创建和使用小部件
+- - '###'
+  - 创建和使用小部件
+- - '####'
+  - 创建按钮
+- - '###'
+  - 检查 text 选项的当前值：
+- - '###'
+  - 修改 text 选项的值：
+- - '###'
+  - 做同样事情的另一方法：
+- - '###'
+  - 检查 text 选项的当前值：
+- - '###'
+  - 获取关于 text 选项的所有信息：
+- - '###'
+  - 获取该小部件所有选项的信息：
+- - '##'
+  - 布局
+- - '###'
+  - 网格几何管理器
+- - '####'
+  - 列和行
+- - '####'
+  - 跨越多格
+- - '#####'
+  - 单元格内的布局
+- - '#####'
+  - 处理大小调整
+- - '#####'
+  - 内边距
+- - '####'
+  - 更多网格功能
+- - '#####'
+  - 查询和修改网格选项
+- - '#####'
+  - 内部填充
+- - '#####'
+  - Forget 和 Remove
+- - '#####'
+  - 嵌套布局
+- - '#'
+  - 'Initialize our country "databases":'
+- - '#'
+  - '- the list of country codes (a subset anyway)'
+- - '#'
+  - '- a parallel list of country names, in the same order as the country codes'
+- - '#'
+  - '- a hash table mapping country code to population'
+- - '#'
+  - Names of the gifts we can send
+- - '#'
+  - State variables
+- - '#'
+  - Called when the selection in the listbox changes; figure out
+- - '#'
+  - which country is currently selected, and then lookup its country
+- - '#'
+  - code, and from that, its population.  Update the status message
+- - '#'
+  - with the new population.  As well, clear the message about the
+- - '#'
+  - gift being sent, so it doesn't stick around after we start doing
+- - '#'
+  - other things.
+- - '###'
+  - Mac OS X
+- - '##'
+  - Python code placeholder from original OCR error "PYHONTODO"
+- - '###'
+  - 第一个窗格，内部将网格布局组件：
+- - '###'
+  - 插入到根节点，由程序选择 id：
+- - '###'
+  - 同样的操作，但插入为第一个子项：
+- - '###'
+  - 由树视图选择 id：
+- - '###'
+  - 插入到现有节点下方：
