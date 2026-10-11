@@ -1,0 +1,8 @@
++   1. **Defragment Your Hard Disk (Dual-Boot Setups Only)** If you would like to create a dual-boot setup, which allows you to start up in either Windows or Xandros, it is best for you to first defragment your Windows hard disk before proceeding. This will make the installation process faster later on when Xandros shrinks your Windows partition so as to make space to install itself.
++   While still running Windows, open the My Computer window, right-click the icon for your hard disk, and select **Properties**. You can now defragment your hard disk (in Windows XP) by clicking the **Tools** tab in the Properties window and then clicking the **Defragment Now** button at the center of the window (Figure 2-4). In Windows NT, you can do this by going to the **Start** menu and selecting **Control Panel** \(\ast\) **Administrative Tools** \(\ast\) **Computer Management** \(\ast\) **Disk Defragmenter**, while in Windows 98 and some other versions, you can do the same by selecting **Programs** \(\ast\) **System Tools** \(\ast\) **Disk Defragmenter**.
+
+![](bbox=[0.18, 0.37, 0.82, 0.75])
+
++   2. **Start 'er up** Place the Xandros Install disc in your CD drive (and a boot floppy in your floppy drive, if your machine cannot boot from CD), and start or restart your machine.
+
++   3. **Welcome** After your machine starts, you’ll see its usual hardware BIOS screens, which appear regardless of the system you are using. After that, the first Xandros screen, a semi-graphical and predominantly black opening screen will appear. This will be followed by the first screen of the Xandros Installation Wizard—the Welcome screen (Figure 2-5). All you need to do when it appears is click the **Next** button.

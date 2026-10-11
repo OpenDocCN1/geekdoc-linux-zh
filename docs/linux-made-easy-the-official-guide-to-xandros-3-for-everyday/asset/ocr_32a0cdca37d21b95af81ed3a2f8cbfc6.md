@@ -1,0 +1,15 @@
+# An Untethered Connection—Wireless
+
+The great thing about laptop computers when they first came out was that they freed people from their desks. People could do whatever they needed or wanted to do on their computer wherever they wanted. As a cross-legged-on-the-floor kind of guy, it was really great for me, as I could prop my laptop down right there on the floor in front of the TV, and then sit there writing and gaming while playing Wall Street for the twentieth time on my VCR. Yes, everything was great, but then came the Internet. Laptops suddenly became tethered to telephone lines and Ethernet cables.
+
+Fortunately, laptops have unleashed again as the computer world goes wireless. With the right wireless hardware, you can now use your computer just about anywhere you can catch a wave, so to speak. Whether you happen to be at your breakfast table, on your backyard deck, in the library of your university, or at your local Starbucks, you can now go online without having to physically hook up your computer to anything.
+
+# Do I Need to Go Wireless?
+
+Whether or not you should join the fray and go wireless is still primarily a question of personal choice or individual needs. For example, if you don't have a laptop, you will have a hard time of it, as Linux support for desktop wireless hardware is not really ready for prime time. If, on the other hand, you have a laptop that you would like to prop down on the dining room table and use during dinner (married readers beware), or while sitting in the Santa Fe depot in San Diego waiting for your train to L.A., or while sitting in your hotel room looking for things to do during your vacation in Seattle, or just while sitting on your front porch taking in a bit of sun, then why not go for it? Whether you are ready to commit, still considering, or just plain curious, read on.
+
+# Wi-Fi
+
+To get up to speed in the wireless world, you should first be aware of the three wireless protocols commonly in use today: 802.11a, 802.11b, and 802.11g, which are collectively referred to as Wi-Fi (wireless fidelity). In case you are wondering, a protocol is basically a data-transmission format that has been generally agreed upon, in this case by the IEEE (Institute of Electrical and Electronics Engineers). Of these three 802.11 protocols, average home users need only concern themselves with 802.11b and 802.11g, because the hardware for these protocols is considerably less expensive than that for 802.11a, which is primarily used in large office environments.
+
+The faster of the two protocols is 802.11g, which has a transmission speed of 54 Mbps; the 802.11b's speed is 11 Mbps. Linux support for 802.11g wireless cards, however, is still developmental at best, which means that you had better stick to the 802.11b protocol when selecting a wireless card. Although this may sound like an undesirable limitation, it is pretty much

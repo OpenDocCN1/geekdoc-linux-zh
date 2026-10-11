@@ -1,0 +1,14 @@
+# 13A-2: Sending and Receiving Attachments in Thunderbird
+
+One question I am often asked by compu-novices and casual compu-users is how to deal with email attachments. Attachments, in case you don’t know, are files, such as photos, word processor or spreadsheet documents, compressed archives (such as ZIP files), and even music files, that are sent attached to an email message (hence the name).
+
+Attachments are a very convenient way of sending such files to others, but, unfortunately, they are also a common way of spreading viruses. Although, as a Linux user, you are pretty safe from the viruses that are out there in the world today, a bit of caution is always a good thing. That said, before moving on to the subject of dealing with attachments, let me first lay down some basic ground rules you should follow when dealing with them, regardless of the system you happen to be using.
+
+Here they are:
+
++   - Don’t open or save attachments if you don’t know the sender.
++   - Don’t open or save any attachment that ends in .pif, .scr, or .exe, as these are the most common forms in which viruses are masked and sent. There should be little reason for anyone to be sending you these kinds of files anyway.
++   - If you do receive attachments of this sort (.pif, .scr, or .exe) from senders you know, don’t assume that person is deliberately sending you viruses. As I mentioned earlier, many viruses spread themselves by searching through Windows users’ Outlook address books and then mailing copies of themselves to all of the contacts listed therein. A person’s computer might thus be sending out hundreds of virus-infected emails without the person knowing it is doing so. If you receive email with such attachments from someone you know, let them know so; their system might be infected. Of course, since such files are created to infect Windows systems, they shouldn’t do yours any harm, but still it is best to avoid them.
++   - Don’t open or save any attachment of which you do not recognize the file extension. Most files you receive should end in familiar extensions, such as .jpg, .png, .gif, .swx, .swc, .doc, .xls, .mp3, and .ogg. Again, even if you recognize the extension, don’t open or save the attachment if you don’t recognize the sender because virus authors are always finding new ways to worm their creations into your system, even via .jpg files.
++   - If you receive an email attachment from someone you know, but it, or the email itself, seems suspicious, check with the sender before opening or saving the attachment so as to make sure that the sender did indeed intend to send it.
++   - Always be suspicious of files attached to mail forwarded to you. Check with the sender first before opening or saving the attachment, and even then be wary. After all, even though you know who forwarded the attachment to you, you can’t be too sure where it came from in the first place.

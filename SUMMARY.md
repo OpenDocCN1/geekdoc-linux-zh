@@ -1079,6 +1079,7 @@
 +   [Linux 入门指南：从新手到高手的简单步骤指南](docs/linux-linux-from-newbie-to-guru-in-easy-steps/README.md)
 +   [Linux 精通：Linux 操作系统与命令行终极指南](docs/linux-linux-mastery-the-ultimate-linux-operating-system-and-/README.md)
 +   [Linux：安全与管理指南](docs/linux-linux-security-and-administration/README.md)
++   [Xandros 3 日常使用官方指南](docs/linux-made-easy-the-official-guide-to-xandros-3-for-everyday/README.md)
 +   [Linux 易用：XANDROS 5 普通用户官方指南](docs/linux-made-easy-the-official-guide-to-xandros-5-for-everyday/README.md)
 +   [Linux 简上手法：通往高薪技术职业的快速通道：获取雇主渴求的 Linux 专业技能，开启职业新高度](docs/linux-made-easy-your-fast-track-to-a-lucrative-tech-career-g/README.md)
 +   [Linux 简明](docs/linux-made-simple/README.md)

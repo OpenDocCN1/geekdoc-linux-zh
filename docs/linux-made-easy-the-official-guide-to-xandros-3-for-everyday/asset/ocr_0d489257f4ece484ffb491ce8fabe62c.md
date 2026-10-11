@@ -1,0 +1,3 @@
+# Where Do I Go from Here?
+
+Okay, so you sort of enjoyed the slightly geekier side of things and are keen on learning more, eh? Or maybe you’re not all that excited about it, but you now see how a bit of command action can be useful. Fortunately for you, the Internet is filled with all sorts of command references and tutorials. Just do a Google search for Linux commands, and see what you get. A sure bet in my book is LinuxCommand.org, which has a great step-by-step approach to making the command line understandable to the newbie. It also goes on to teach you how to write shell scripts with which you can do even more interesting things via the command line. Check it out at http://linuxcommand.org.
