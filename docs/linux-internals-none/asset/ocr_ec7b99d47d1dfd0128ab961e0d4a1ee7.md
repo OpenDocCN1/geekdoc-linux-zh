@@ -1,0 +1,56 @@
+# Logical Volume Manager Abstract
+
+```
+PV Name (#)              /dev/sdg1 (5)
+PV Status               available / allocatable
+Total PE / Free PE      131 / 131
+
+PV Name (#)              /dev/sdh1 (6)
+PV Status               available / allocatable
+Total PE / Free PE      131 / 131
+
+PV Name (#)              /dev/sdi1 (7)
+PV Status               available / allocatable
+Total PE / Free PE      131 / 131
+
+PV Name (#)              /dev/sdj1 (8)
+PV Status               available / allocatable
+Total PE / Free PE      125 / 125
+
+PV Name (#)              /dev/sdk1 (9)
+PV Status               available / allocatable
+Total PE / Free PE      537 / 537
+```
+
+```
+# create a linear physical volume with all space of the volume group
+lvcreate -l1579 my_first_vg
+lvcreate -- doing automatic backup of my_first_vg
+lvcreate -- logical volume /dev/my_first_vg/lvol1 successfully created
+
+# create an ext2fs on newly created logical volume
+mke2fs /dev/my_first_vg/lvol1
+mke2fs 1.10, 24-Apr-97 for EXT2 FS 0.5b, 95/08/09
+Linux ext2 file system format
+File system label=
+3235840 inodes, 12939264 blocks
+646963 blocks (5.00%) reserved for the super user
+First data block=1
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+1580 block groups
+8192 blocks per group, 8192 fragments per group
+2048 inodes per group
+Superblock backups stored on blocks:
+		1024, 8192, 32768, 98304, 163840, 245760, 409600, 524288, 655360,
+		1310720, 1310720,
+
+Writing superblocks and file system accounting information: done
+0.66user 26.55system 3:06.62elapsed 14%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (97major+522minor)pagefaults 0swaps
+```
+
+```
+# and mount it (not very exixting :-) )
+mount /dev/my_first_vg/lvol1 /mnt
+```

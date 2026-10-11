@@ -1,0 +1,13 @@
+The MMU and the kernel work together to translate addresses. The kernel asks the MMU which virtual pages to map onto physical pages for each user address space. The MMU then carries out the translation for the kernel. The MMU has the capability to send out a signal, an interrupt, whenever an error occurs during translation. The most common error condition is that the physical page is not available in RAM. When this *page fault* occurs, the kernel has to retrieve the required page from the swapping device or swapping file.
+
+Another possibility for an error condition is when a user-space program is trying to address a virtual address that lies within another user’s address space. Or it might try to access the kernel’s protected memory. Another possibility is trying to write to a read-only area of a user’s own address space. All these errors are signaled by the MMU to the kernel so that the kernel can take appropriate measures.
+
+The Linux VM manager has a two-tier notion of address translation tables. The IA32 has a hard-wired three-tier approach to address translation. This, as we shall shortly see, is not an impediment. Other processors might have different architectures, but the kernel knows how to deal with them through its generalized approach to address translation. The diagram in Figure 5.2 shows the process to translate an address. Whenever a user-space program needs to have access to a virtual memory address, the MMU breaks that address down into three components:
+
++   1. A page directory entry (PGD) or level-1.
++   2. A page table entry (PTE), (sometimes also called page frame number, [PFN]) or level-2.
++   3. An offset or level-3.
+
+The page directory is an array of pointers to page tables. Each page is an array of pointers to pages. Therefore, translating addresses means traversing the whole chain of pointers to get to the address within the physical page. A page table directory points, therefore, to a page table. This in turn points to a page. The offset, finally, points to an address within that page.
+
+Linux runs on a great variety of architectures, and architecture-dependent code has to be kept to a minimum. Therefore, the kernel designers decided to adopt a three-tier view of the MMU. To make this three-tier view work with the two-tier (or two-level) paradigm present in IA32, the size of the page middle directory was set to 1. The page middle directory has therefore, for all intents and purposes, the same behavior as the page directory.

@@ -1,0 +1,22 @@
+sonycd535= [HW, CD] 
+sound= [SOUND] 
+soundmodem= [HW, AX25, SOUND] Use sound card as packet radio modem. 
+specialix= [HW, SERIAL] Specialix multi-serial port adapter. 
+st= [HW] SCSI tape parameters (buffers, etc.). 
+st0x= [HW, SCSI] 
+stram_swap= [HW] 
+switches= [HW, M68K] 
+sym53c416= [HW, SCSI] 
+sym53c8xx= [HW, SCSI] 
+t128= [HW, SCSI] 
+tmc8xx= [HW, SCSI] 
+tmcsim= [HW, SCSI] 
+tp720= [HW, PS2] 
+ul4-34f= [HW, SCSI] 
+video= [FB] frame buffer configuration. 
+vga= [KNL] on ix386, enable to choose a peculiar video mode (use vga=ask for menu). 
+wd33c93= [HW, SCSI] 
+wd7000= [HW, SCSI] 
+wdt= [HW] 
+xd= [HW, XT] Original XT pre-IDE (RLL encoded) disks. 
+xd_geo= [HW, XT]

@@ -1,0 +1,13 @@
+in cases where a sophisticated application wants complete control over how it performs data caching, and the overhead of the usual cache is not justified. A raw device could also be used in data-critical situations, where we want to ensure that the data gets written to the disk immediately so that, in the event of a system failure, no data are lost.
+
+Previous proposals for raw I/O device support were not deemed fit for inclusion, as they required literally doubling the number of device nodes, to give every block device a raw device node. Regrettably, this is the implementation that many commercial UNIX systems use.
+
+The 2.4 Linux implementation uses a pool of device nodes, which can be associated with any arbitrary block device. To facilitate this, 2.4 includes a new object called a *kiobuf*. A kiobuf is just an abstract description of an arbitrary bunch of kernel pages, set up during boot time by the code in init.c, as empty pages in kernel space to be used as buffers. Kiobufs can be used to describe any sort of buffer at all.
+
+Raw I/O works by creating a kiobuf and populating it with the physical pages, which contain the data buffer that a process is using for I/O. Once the correct physical pages of memory have been located for the data, the kiobuf is then passed to the I/O layers for reading or writing. The I/O layers don't have to know that the pages concerned happen to belong to a user process: kiobufs hide all that detail from them. All the I/O layers see is a set of physical pages and an I/O request into those pages.
+
+# # Process Resource Limits
+
+Within the context of processes, limits exist for several system resources that are used by processes when they execute; the system establishes default values and maximum values for each of the resources controlled by these resource limits. These resource limits are practically the only limitation. For each of the six resource limits defined, there is a `rlim_cur` (current resource limit), which is the default value, and a `rlim_max` (maximum resource limit), which is the system-imposed maximum value for the resource. In Linux 2.4, the default limit value set by the system for open files, per process, is 1,024.
+
+Each process can only have open, at any given moment, up to `rlim_fd_cur` files. Remember that, for any process, the total number of open files always contains three additional ones, because every process has three open files as soon as it comes into existence: *stdin*, *stdout*,

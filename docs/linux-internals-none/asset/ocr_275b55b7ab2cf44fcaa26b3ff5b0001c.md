@@ -1,0 +1,11 @@
+SMP scheduler in Linux is very clever. Having a clever SMP scheduler is critical for performance. If the scheduler is not aware of SMP, then the performance on an SMP machine can be even worse than on a UP machine (which occurs is in 2.2.x without the new heuristics).
+
+# ## Improving the Scheduler
+
+We will now examine a few examples of how we might add our own functionality to the kernel. The beauty of having source available for the kernel is exactly this: if a kernel hacker feels particularly bold about the improvement, bug fix, or added feature, he or she can send same to Linus Torvalds or to his Number-Two man, Alan Cox, and hope it will be included in a future version. However, it is extremely difficult to have a patch accepted by Linus Torvalds into a future version. For one thing, most ideas have already been discussed in the past at some point or another, and there are usually very good reasons for not including a concept, functionality, or change. Also, it takes formidable knowledge of the functioning of a whole Linux system, together with user-space programs and subsystems, to understand the full implications of a small change in the kernel. Only very few people actually have this overview, and accordingly it is up to them to decide on any changes. Still, participation is not only appreciated but actively encouraged.
+
+Let's now look at a good-example of an improvement in the kernel.
+
+# ## Varying CPUs Offline and Online
+
+At present (kernel 2.4.x), it is not possible to take a CPU offline during execution, but it's not very hard to implement that maneuver either. Basically, the function `cpu_idle()` must check whether the current CPU should be shut down before calling the ASM instruction `halt` (an *unsigned long* word could provide such info). If it should be shut down, we can simply enter a loop; the hardware would remove the power to the CPU, thus allowing its removal from the slot or socket (the function to stop the CPU is `stop_this_cpu()`—it basically enters an infinite loop). The last thing that we must do is to let the scheduler know that a shut-down CPU must execute the idle task ASAP (or that we'll be able to shut down CPUs only if the system is not heavily CPU loaded).

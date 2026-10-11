@@ -1,0 +1,12 @@
+tem corruption or failures, with a secondary goal of preserving data in the face of corruption. This means the utility may throw away data in the interest of achieving file system consistency. Specifically, data is discarded when the utility does not have the information needed to restore a structurally inconsistent file or directory to a consistent state without making assumptions. In the case of an inconsistent file or directory, the entire file or directory is discarded with no attempt to save any portion. Any file or subdirectories orphaned by the deletion of a corrupted directory are placed in the lost+found directory located at the root of the file system.
+
+An important consideration for a file system check/repair utility is the amount of virtual memory it requires. Traditionally, the amount of virtual memory required by these utilities is dependent on file system size, because the bulk of the required virtual memory is used to track the allocation state of the individual blocks in the file system. As file systems grow larger, the number of blocks increases and so does the amount of virtual memory needed to track these blocks.
+
+The design of the JFS check/repair utility differs from the ordinary Linux fsck in that its virtual memory requirements are dictated by the number of files and directories within the file system, rather than by the file system's number of blocks. The virtual memory requirements for the JFS check/repair utility are on the order of 32 bytes per file or directory, or approximately 32 Mbytes for a file system that contains 1 million files and directories, regardless of the file system size. Like all other file systems, the JFS utility needs to track block allocation states—but avoids using virtual memory to do so by using a small reserved work area located within the actual file system.
+
+# How JFS is Set Up at Boot Time
+
+At boot time the file system create utility, mkfs, creates an aggregate that is wholly contained within each logical volume (partition) mounted. An aggregate is an array of disk blocks allocated according to a specific format. The aggregate includes:
+
++   - A superblock, which identifies the partition as a JFS aggregate.
++   - An allocation map, which describes the allocation state of each data block within the aggregate.

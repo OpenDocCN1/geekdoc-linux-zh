@@ -1,0 +1,290 @@
+
+## Index
+
+- Netwerk Time Protocol (NTP), 58
+- Non-maskable interrupt (NMI), 64, 221
+- NTFS file system, 5, 258
+- Offsets, journaling file systems (JFS), 266
+- One-way associative cache, 28
+- Open Source, 1–7, 22
+- Opening a file, 242
+- Operating system (OS), 22–23
+- Optimization and performance, file system support, 245–246
+
+### P
+- Page, 242
+- Page aging, 126
+- Page allocation and deallocation, virtual memory manager (VM), 122–123
+- Page coloring, 133
+- Page directory entry (PGD), 120
+- Page faults, 25, 118, 120
+- Page frame number (PFN), 120
+- Page in swap, 129
+- Page replacement, 118–119
+- Page table entry (PTE), 120, 126–127, 129
+- PalmPilot, 6
+- Parallelism, instruction-level (ILP), 24, 26–27, 27t
+- Patches, 10
+- Paths, 36–37
+- PDP architecture, 119
+- Pending signals, 199
+- Pentium, 10, 25, 26
+- Performance limitations, 96–97
+- Persistent map, 261–262
+- Physical address extension (PAE), 132
+- Physical extents (PE), 238, 271
+- Physical volumes (PV), 238
+- Pipes, 5
+- PKZIP, 16
+- Platform support (See also file system support), 5, 6, 20
+- Portable Operating System Interface (POSIX), 5, 196–197
+- Ports, 20, 20t
+- PowerPC, 5
+- Preemption, 171–172
+- Preemptive multitasking, 172
+- Printer support, 4
+- Printf, 16
+- Printk, 16
+- Prinkt.c, 16
+- Process control, 5, 81–114
+  - 2.4 threaded kernel, 96
+  - atomic operations in, 163
+  - binary handlers, 91–93
+  - child processes, 87, 96–97
+  - classes, scheduling classes, 164–165
+  - clone command, 87
+  - CORE default disposition, 197
+  - critical sections in, 163
+  - deadlock avoidance in, 163
+  - events, 163
+  - EXIT default disposition, 197
+  - father processes, 85–86
+  - forking, 85–93, 96–97
+  - heuristics, scheduling heuristics in, 164
+  - IGNORE default disposition, 197
+  - init and, 85–86
+  - kernel stack allocation in, 83–84, 84
+  - killing a process, 200–201
+  - lightweight processes (LWP), 95
+  - linux/sched.h data structure, 98–114
+  - mutual exclusion in, 163
+  - performance limitations, 96–97
+  - process structure in, 82
+  - processes in, 82–85, 162
+  - program identification (PID) assignment, 87–89
+  - real-time (RT) tasks, 164
+  - resource limits and, 247–248
+  - running processing state, 162
+  - running/ready to run processing state, 162
+  - runtime priority in, 97
+  - scheduler, 96–97, 162
+  - zombie processing state, 201
+  - semaphores in, 163
+  - signal handling, 94, 196
+  - Solaris platforms and, 84–85
+  - STOP default disposition, 197
+  - stopped processing state, 162
+  - symmetric multi-processing (SMP) and, 95–96
+  - synchronization primitives in, 163, 163t
+  - task scheduling with, 162–163
+  - task_struct in, 82–84, 84
+  - tasks handling in, 84–85, 84
+  - threads, 87, 93–96, 165–167
+  - tracing processes, 228
+  - UNIX platforms and, 84–85, 84
+  - virtual memory manager (VM), 93
+  - waiting/interruptible processing state, 162
+  - waiting/uninterruptible processing state, 162
+  - zombie processing state, 162
+- Process structure, 82
+- Processes, 82–85, 162
+- Processor ID number (PPID), 31
+- Profiling, real-time, 63–65
+- Program identification (PID) assignment, 87–89
+- Psion 5, 6
+
+### Q
+- QNX file system, 6
+- Quality Assurance (QA), 2
+
+### R
+- RAID devices, 37–38
+  - file system support, 240
+- RAM (*See also memory; Virtual Memory Manager*), 6, 25, 27, 116
+- Raw I/O, 246–247
+- Raymond, Eric, 2
+- Reader/writer locks, 32
+- Real-time (RT) signals, 199, 204
+- Real-time (RT) tasks, 164
+- Real-time clock (RTC), 53–60, 66
+- Real-time profiling, 63–65
+- Reboot, linux/reboot.h data structure, 70–71
+- RedHat, 4, 10
+- Reduced instruction set (RISC), 23
+- Reducing page size, 128
+- Registers, 23–24
+- Reiser, Hans, 15, 258f
+- Reiserfs file system, 15, 258f
+- Removable media, journaling file systems (JFS), 264
+- Request, 243
+- Reschedule, 169–171
+- Resource limits, file system support, 247–248
+- Resource management, 23
+- Rotational latency, 37
+- Round-robin schedulers, 166
+- Running processing state, 162
+- Running/ready to run processing state, 162
+- Runtime priority, 97
+
+### S
+- Samba, 257
+  - critical sections in, 163, 172
+  - deadlock avoidance in, 163
+  - events, 163
+  - flow of scheduling in Linux kernel, 171
+  - garbage collection in, 172–173
+  - goodness concept in, 167–171
+  - heuristics, scheduling heuristics in, 164, 167–171
+  - hint-based scheduling in, 176–177
+  - improvement of, 173
+  - include/linux/sched.h data structure, 133–149
+  - kernel preemption, 171–172
+  - linux/sched.h data structure, 177–194
+  - linux/sched.h data structure, 98–114
+  - locking, 172
+  - mutual exclusion in, 163
+  - preemption, 171–172
+  - preemptive multitasking, 172
+  - priority of tasks in, 162–163
+  - processes and, 162
+  - real-time (RT) tasks, 164
+  - reschedule, 169–171
+  - round-robin schedulers, 166
+  - running processing state, 162
+  - running/ready to run processing state, 162
+  - scaling of, 172
+  - schedule, 169–171
+  - semaphores in, 163
+  - spinlocks, 172
+  - stopped processing state, 162
+  - symmetric multi-processing (SMP), 166–171
+  - synchronization primitives in, 163, 163f
+  - task scheduling with, 162–163
+  - threads, 165–167
+  - translation lookahead buffer (TLB), 166
+  - uniprocessor (UP) schedulers, 166
+  - user preemption, 171–172
+  - varying CPUs off- and online, 173
+  - waiting/interruptible processing state, 162
+  - waiting/uninterruptible processing state, 162
+  - zombie processing state, 162, 201
+- SCSI interface/devices, 10, 36–37, 196
+- Selection phase, 36
+- Semaphores, 15, 163
+- Sequence of kernel table creation at boot, 68
+- Serialization, 30–31
+- Shared libraries, 5
+- Shared page in swap, 129
+- Shared pages, swapping out shared pages, 129
+- Shrink_mmap, 124
+- Shutdown, 69–70, 69
+- Signals handling, 14, 94, 195–212
+  - asynchronous signals, 197, 202
+  - blocked signals, 199
+  - classic signals, 204
+  - CORE default disposition, 197
+  - default actions, 197, 198–199t
+  - dispositions, default dispositions for, 197, 200–201
+  - double-linked lists of signals, 199
+  - EXIT default disposition, 197
+  - generic signals, 204
+  - IGNORE default disposition, 197
+  - include/linux/kernel.h data structure, 210–212
+  - include/linux/signal.h data structure, 206–210
+  - interrupt descriptor tables (IDTs), 200
+  - interrupts, 197, 206
+  - killing a process, 200–201
+  - list of signals and default actions, 197, 198–199t
+  - pending signals, 199
+  - processes, 196
+  - real-time (RT) signals, 199, 204
+  - scheduler, zombie processing state, 201
+  - signal handlers in, 199
+  - spinlocks, per-thread, 199
+  - STOP default disposition, 197
+  - symmetric multi-processing (SMP), 206
+  - synchronous signals, 197, 202–206
+  - threads, 196
+  - trap signals, 197, 202–206
+- Silicon Graphics Inc. (SGI), 24f, 257
+- SLIP, 4
+- SMP (See symmetric multi-processing)
+- Sockets, 5
+- Software issues, functions and, 29–30
+- Solaris, 5, 29, 84–85, 95, 165–166
+- Source code tree structure, 10–14
+- Sparc, 5
+- Sparse files, 268–269
+- Special files, 35
+- Speed of processor, 15
+- Spinlocks (mutexes), 30–33, 172
+  - per-thread, 199
+  - spinning, 32
+- Stallman, Richard, Free Software Foundation, 2
+- Static file systems, 251, 255, 255
+- Static web pages, 214
+- STOP default disposition, 197
+- Stopped processing state, 162
+- Streaming DMA mapping, 40, 42–45
+- Striping, 37
+- Sun, 257
+- Super_block, 242
+- Superblocks, 258–259
+- SuSE, 4, 10
+- Swap cache, 127
+- Swap daemon, 124, 125–128
+- Swapping out shared pages, 129
+- Swapping pages, 129–130, 129
+- Swapping, 5, 117, 118, 124–128, 126
+- Symmetric multi-processing (SMP), 6, 15, 16, 29–30, 50, 63–65, 95–96
+  - file system support, 241–243
+  - scheduler, 166–171
+  - signals handling, 206
+- Synchronization primitives, 163, 163t
+- Synchronous signals, 197, 202–206
+- System calls, 22, 219–236
+  - adding your own, 228–229
+  - complex types, 227–228
+  - errors, 222
+  - event classes and, on IA32, 220–221
+  - exception handlers, 221–222
+  - exceptions, 221–222
+  - include/asm-i386/hw_irq.h data structure, 232–236
+  - include/linux/sys.h data structure, 232
+  - interface for, 225–228
+  - interrupt descriptor table (IDT), 223–225, 223t
+  - interrupts, 221
+  - Java exceptions, object nature of, 222
+  - list of, IA32 kernel, 229–231t
+  - maskable interrupts, 221
+  - non-maskable interrupts (NMI), 221
+  - throwable exceptions, 222
+  - tracing, 228
+  - user-space system call code library for, 228
+  - vectors, 222–225, 223t
+- System clock (See also clock; time-keeping functions), 52–60
+- System crash, 23
+- System initialization and boot, 67–79
+  - hardware recognition at boot, 68–69
+  - hierarchical initialization, 69
+  - initrd utility, 67–68
+  - JFS setup, 260–264
+  - linux/irq.h data structure, 77–79
+  - linux/mmzone.h data structure, 71–73
+  - linux/root.h data structure, 70–71
+  - linux/time.h data structure, 76–77
+  - linux/timer.h data structure, 73–76
+  - memory, 69
+  - sequence of kernel table creation at boot, 68
+  - shutdown, 69–70
+  - virtual memory, 69

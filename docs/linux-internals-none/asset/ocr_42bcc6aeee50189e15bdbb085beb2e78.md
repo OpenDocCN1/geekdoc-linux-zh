@@ -1,0 +1,11 @@
+Memory is a primary resource in a Linux system; it must be carefully managed. Obviously, every programmer would like infinite memory. Unfortunately this is not yet possible, and so early computer architects implemented a memory hierarchy, with a small amount of very fast, expensive, volatile cache; dozens or hundreds of megabytes of medium-speed, medium-price, volatile RAM; and hundreds and then thousands of megabytes—and upward—of nonvolatile, cheap disk storage. It is up to the operating system to coordinate how these memories are used.
+
+To do this, the Linux memory manager manages a number of tables that list existing pages of virtual memory, their status, their age, and other useful information. The memory manager also makes use of the hardware functionality of the CPU to translate virtual memory addresses into RAM addresses. The CPU itself has a table, called translation look-aside buffer (TLB) to speed up the translation process.
+
+Because the virtual memory subsystem has huge impact on the performance of user programs (the kernel itself is not pageable in Linux as it is, for instance, in AIX), special care was given to the C source code comprising the functionality of the memory manager.
+
+This chapter first examines the general aspects of the virtual memory manager and its functions, and then addresses the peculiarities of its implementation in the 2.4 kernel. Because VM is among the least understood concepts of OS theory, we will spend more time explaining the workings of VM than we have for other subsystems in other chapters of this book. We will see which tables are maintained by the kernel and which algorithms interact with them. Finally we will see, using the example of a new page replacement algorithm, how a kernel hacker would change things.
+
+# ## VM Concepts
+
+Each user process sees a single, private contiguous VM address space and each such space can contain several types of memory objects. Objects such as program text and program data are effectively a single memory-mapped file (the binary file being run), but program code is read-only, while program data is copy-on-write. Arbitrary files can be memory-mapped into the address space as well, which is how the shared library mechanism works. Such mappings can require modifications to remain private to the process creating them.
