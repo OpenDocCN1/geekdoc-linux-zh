@@ -1284,6 +1284,7 @@
 +   [Linux 用户与开发者 140 - 10 个必备树莓派升级指南 140](docs/linux-user-developer-140---10-essential-raspberry-pi-upgrade/README.md)
 +   [Linux 用户与开发者 141 - Kano：像乐高一样简单，由 Pi 驱动 141](docs/linux-user-developer-141---kano-simple-as-lego-powered-by-pi/README.md)
 +   [Linux 用户与开发者 142 - Linux Mint 17 142](docs/linux-user-developer-142---linux-mint-17-142/README.md)
++   [Linux 用户与开发者 143 - 10 个引人入胜的树莓派项目 143](docs/linux-user-developer-143---10-inspiring-raspberry-pi-project/README.md)
 +   [Linux 用户与开发者 144 - KDE Plasma 5 - 你的新桌面？ 144](docs/linux-user-developer-144---kde-plasma-5---your-new-desktop-1/README.md)
 +   [Linux 用户与开发者 145 - 树莓派超级构建指南](docs/linux-user-developer-145---build-a-super-raspberry-pi-145/README.md)
 +   [Linux 用户与开发者 146 - 为什么你需要 Python 3 146](docs/linux-user-developer-146---why-you-need-python-3-146/README.md)
