@@ -1,0 +1,140 @@
+
+# 系统管理员的日常：最后的话
+
+## 该说再见了
+
+作为一名系统管理员专栏作家已有二十年，查利使用 FIGlet 创建的一个登录横幅，献上了一段恰到好处的告别。*作者：Charly Kühnast*
+
+当我登录到服务器或网络组件时，通常会看到一个使用大号字体的横幅，里面的信息内容各不相同。有时它只是告诉我主机名，有时是内核版本，有时则会显示**请勿在上午8点至下午8点之间重启**。
+
+当然，关于横幅是否有意义，还是仅仅是一堆废话，是可以辩证的。我在自己的系统上很少使用它们。然而，那些我不能随意乱动的服务器会用一个横幅来警告我，上面写着 *Abyssus abyssum invocat*（一个错误会导致另一个错误）。
+
+另一方面，用于评估新软件的测试系统则会愉快地向我打招呼，横幅上写着 *Morturi te salutant*（那些即将死去的人向你致敬）。这些年来，我对那个横幅的运气还不错，但你该如何创建一个呢？
+
+我使用 FIGlet [1] 来做到这一点。所有流行的发行版都包含这个工具，它支持多种字体并提供各种设计选项。我没有任何使用——我只是想在登录时传递一个明确的信息。这就是我为什么只使用 `-c` 参数来居中对齐横幅，否则它将是左对齐的。对于我的告别横幅，我破例也使用了 `-D` 参数，它允许显示德语变音符号。在我使用拉丁语格言时，我通常可以忽略这些符号。FIGlet 会将诸如 `[`、`\` 和 `]` 这样的特殊字符替换为 `Â`、`Ö` 和 `Û`，而 `Ĺ`、`l` 和 `}` 则会给出对应的小写字母。该命令：
+
+FIGlet `-C -D` Vielen Dank für `20` Jahre
+
+产生了如图 1 所示的横幅（英文版见图 2）。
+
+好了，就是这样。我要与我在这个专栏上的工作告别，该专栏始于 2002 年 2 月的 *Linux Magazine* 德语版，现结束于 2022 年 2 月的这一期。我之所以采取这一步，是因为我未来希望减少写作频率，但写得更详细。我要感谢整个编辑团队的支持，特别是 *Linux Magazine* 德语版的主编 Jan Klemert 和 Jörg Lüther。但最大的感谢献给你们，亲爱的 Linux 朋友们！
+
+![](img/8286bf901ba268fe114d66ada92d1dd6_45_0.png)
+
+![](img/8286bf901ba268fe114d66ada92d1dd6_45_1.png)
+
+## 信息
+
+- [1] FIGlet: http://www.figlet.org
+
+## 作者简介
+
+Charly Kühnast 在德国下莱茵地区的数据中心管理 Unix 系统。他的职责包括确保防火墙和 DMZ 的安全性和可用性。
+
+![](img/8286bf901ba268fe114d66ada92d1dd6_45_2.png)
+
+# 深入解析
+
+## Checkmk
+
+![](img/8286bf901ba268fe114d66ada92d1dd6_46_0.png)
+
+# 使用 Checkmk 进行简单监控
+
+## 检查一下
+
+我们将向您展示如何使用 Checkmk 开源监控工具来监控您的家庭路由器。
+
+作者：Martin Hirschnvogel
+
+每个组织都需要监控，以确保服务器、网络、应用程序、云资产和其他元素按预期运行。监控还提供了及时的警报，并帮助 IT 团队追踪（潜在）问题的原因。拥有一个合适的监控工具可以帮助你更快地解决问题，理想情况下，在问题对运营系统产生影响之前。Checkmk [1] 是一个开源监控工具，非常适合现代混合环境，它结合了企业级可扩展性和安全性，以及开源软件的可扩展性。
+
+在大多数情况下，Checkmk 运行在专用的服务器或虚拟机（VM）上。由于我只是为了家庭办公环境运行一个小规模的监控设置，我的主机将是运行 Ubuntu 18.04 的电脑。这台电脑有四个 CPU 核心和 4GB 内存，这对于入门来说绰绰有余。Checkmk 也运行在其他 Linux 发行版上，如 Debian、Red Hat Enterprise Linux、CentOS 或 SUSE Linux Enterprise Server，你也可以在 Docker 容器或虚拟设备上运行 Checkmk。如果你在一台专用主机上安装 Checkmk，你唯一需要做的额外步骤是将文件传输到服务器。
+
+Checkmk 可以监控任何具有 IP 地址的设备，包括服务器、云资产和网络设备，以及属于物联网（IoT）的系统。在这篇文章中，我选择监控我的 TP-Link 路由器。Checkmk 还预装了合理的警报阈值。这些预配置的阈值会很有用，因为你无需担心设置警报，即可在几分钟内启动监控。
+
+## 选择 Checkmk 版本
+
+你可以免费使用 Checkmk。对于这个教程，我选择了 Checkmk Raw Edition。你也可以选择 Checkmk Free Edition，它是 Checkmk Enterprise Edition 的免费版本，提供额外的功能。30 天后，Free Edition 仅限于 25 台主机。Checkmk Raw Edition 是完全开源的，且永久免费。
+
+Checkmk 几年前作为 Nagios [2] 开源监控工具的前端起步，但在 2012 年成为独立的监控解决方案，并取代了几乎所有 Nagios 组件。Checkmk Raw Edition 仍然使用 Nagios 监控核心作为实用工具。要开始使用 Checkmk，请访问项目网站 [3] 的下载部分，在那里你可以找到最新版本。选择 Checkmk Raw Edition，选择最新的稳定版本（本教程基于版本 2.0.0p13），然后选择你的平台和操作系统版本。点击下载按钮下载软件包。
+
+下载完成后，你需要安装该软件包，包括所有依赖项。安装步骤因发行版而异。在我的情况下，我将切换到终端，进入下载文件夹，然后以 root 身份运行 apt install（见图 1）：
+
+```bash
+apt install ../check-mk-raw-2.0.0p13_0.bionic_amd64.deb
+```
+
+```bash
+root@FerndinandPC:/home/ferdinand/Downloads# apt install ./check-mk-raw-2.0.0p13_0.bionic_amd64.deb
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Note, selecting 'check-mk-raw-2.0.0p13' instead of './check-mk-raw-2.0.0p13_0.bionic_amd64.deb'
+The following NEW packages will be installed:
+ check-mk-raw-2.0.0p13
+0 upgraded, 1 newly installed, 0 to remove and 46 not upgraded.
+```
+
+图 1：安装 Checkmk。
+
+安装完成后，你可以进行测试。**omd** 命令现在应该可以访问了。以下命令：
+
+```bash
+omd version
+```
+
+应该返回你当前使用的 Checkmk 版本的详细信息。
+
+**omd** 命令代表 Open Monitoring Distribution（OMD），这是一个由 Checkmk [4] 创始人 Mathias Kettner 创建的开源项目。OMD 项目包括由各种组件组装而成的监控解决方案。
+
+## 创建你的 Checkmk 监控站点
+
+下一步是启动一个初始监控站点（站点也被称为实例）。确保你仍然是 root，并使用 **omd create** 创建一个新的 Checkmk 站点，并按你的意愿命名（图 2）。本教程使用 **cmk\_tutorial**：
+
+```bash
+omd create cmk_tutorial
+```
+
+```bash
+root@FerndinandPC:/home/ferdinand# omd create cmk_tutorial
+Adding /opt/omd/sites/cmk_tutorial/tmp to /etc/fstab.
+Creating temporary filesystem /omd/sites/cmk_tutorial/tmp...OK
+Updating core configuration...OK
+Generating configuration for core (type nagios)...Precompiling host checks...OK
+OK
+Executing post-create script "01_create-sample-config.py"...OK
+Restarting Apache...OK
+```
+
+图 2：创建监控站点。
+
+```text
+Created new site cmk_tutorial with version 2.0.0p13.cre.
+
+The site can be started with 'omd start cmk_tutorial'.
+The default web UI is available at 'http://FerndinandPC/cmk_tutorial/'.
+
+The admin user for the web applications is 'cmkadmin' with password: 'E34jQcAgL'.
+For command line administration of the site, log in with 'omd su cmk_tutorial'.
+After logging in you can change the password for cmkadmin with 'htpasswd etc/htpasswd cmkadmin'.
+```
+
+图 3：安装结束时会显示有关如何访问站点的说明。请务必更改密码——可以在命令行或通过 Checkmk 用户界面进行更改。
+
+在输出的末尾，你现在应该可以看到关于如何启动和访问你的 Checkmk 站点的信息（图 3）。你可以按照步骤在终端中更改管理员密码，但我更喜欢在 Checkmk 用户界面中这样做。
+
+复制随机生成的密码（你在下一步需要用到它），并使用 **omd start** 启动你的监控站点：
+
+```bash
+omd start cmk_tutorial
+```
+
+如果你以后想更深入地了解 Checkmk，理解刚刚发生的事情非常重要。通过创建一个新的 Checkmk 站点，你创建了一个新用户，称为站点用户，以及服务器上以站点名称命名的组。将在 /omd/sites 下创建一个站点的目录（例如，/omd/sites/cmk\_tutorial）。Checkmk 还将其默认配置复制到了新目录中，并创建了一个名为 **cmkadmin** 的用户用于 Checkmk Web 界面。
+
+## 使用 Checkmk 开始监控
+
+在转到 Checkmk 用户界面之前，请想想你要监控的系统。对于这个教程，我将使用经典的协议 Simple Network Monitoring Protocol (SNMP) 来监控我的 TP-Link TD-W9960v 路由器。如果你也想使用 SNMP 监控系统，你应该确保设备上的 SNMP 代理处于活动状态。在我的情况下，我不得不在路由器的 Web 界面中激活它，并决定将 SNMP 团体保持为默认值 **public**。（在真实环境设置中，你希望更改此团体字符串，而不是使用默认值。）
+
+一旦你确定要监控的主机已准备好提供监控数据，是时候在浏览器中切换到 Checkmk 用户界面了。每个 Checkmk 站点都有自己的 URL，它由监控服务器的 IP 地址或主机名以及 Checkmk 站点的名称组成。在我的例子中，这是 **127.0.0.1/cmk\_tutorial**。
+

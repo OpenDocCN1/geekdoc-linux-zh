@@ -1,0 +1,17 @@
+# IN-DEPTH
+
+# LibreOffice vs OpenOffice
+
+![](bbox=[0.0, 0.08, 1.0, 0.48])
+
+# Comparing LibreOffice and OpenOffice
+
+# The Clear Choice
+
+While LibreOffice and OpenOffice have a shared past, LibreOffice outstrips OpenOffice in contributors, code commits, and features. By Bruce Byfield
+
+A search for comparisons of LibreOffice and Apache OpenOffice returns over 8.3 million results. That number comes as no surprise, given that LibreOffice and OpenOffice are the best-known open source office suites and share a common past. However, what is surprising is how shallow many of the comparisons are. Many offer only a superficial glimpse at either office suite from the viewpoint of an unsophisticated and undermanding user. Often, the comparisons are obsolete. Also important to note is that many comparisons strive for a false sense of objectivity by declaring that any differences are minor. However, by every possible standard, LibreOffice outshines OpenOffice and shows OpenOffice to be outdated. To pretend otherwise is a distortion of the truth. As you might know, the two office suites share a common history (Figure 1). Both originate in OpenOffice.org, a project run by Sun Microsystems from 2000-2011. In fact, OpenOffice claims to be the legal descendent of OpenOffice.org because in 2011 Sun passed OpenOffice.org to Oracle, which in turn passed it on to the Apache Foundation – but the concept of ownership has little relevance in open source. At the same time, Go-o.o, a semi-official fork that had operated quietly since 2007, created LibreOffice and its governing body, The Document Foundation. Go-o.o had been contentious in OpenOffice.org because it advocated a faster pace of development, so the creation of the two new projects seemed to formalize a division that already existed. Certainly LibreOffice and OpenOffice showed little love for one another from the beginning. Also from the start, OpenOffice faced challenges that LibreOffice did not. To start with, OpenOffice uses the Apache License, while LibreOffice uses a dual LGPLv3/Mozilla Public License (MPL). A major consequence of this difference in licenses is that LibreOffice can borrow code from OpenOffice, while OpenOffice cannot borrow code from LibreOffice. Just as importantly, from late March 2014 to March 2015, OpenOffice had a total of 16 contributors, 12 of whom stopped contributing when IBM stopped supporting OpenOffice [1]. Since then, OpenOffice has been reluctant to publish the number of contributors, but, considering that OpenOffice claimed 120 contributors in 2012 [2], it is doubtful that the number today is more than a small fraction of LibreOffice’s 1,722 [3]. The result is predictable: OpenOffice has not had a major release since 2014 and only 11 minor ones. In comparison, LibreOffice has had 13 major releases and 87 minor releases. And in 2019, LibreOffice had over 15,000 code commits and OpenOffice had 595 [4]. Equally inevitably, LibreOffice has attracted important corporate supporters such as Red Hat and Collabora while OpenOffice has been unable to fill the void left by IBM eight years ago. OpenOffice’s continued existence has been quaint, even admirable, but the project is simply not structured to compete.
+
+# The Feature Disparity
+
+Aside from Go-o.o’s contributions a decade ago, the two projects initially

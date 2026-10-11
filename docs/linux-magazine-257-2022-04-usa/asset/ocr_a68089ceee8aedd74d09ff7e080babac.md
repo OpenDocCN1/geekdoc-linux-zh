@@ -1,0 +1,21 @@
+# Teeworlds
+
+When Teeworlds describes itself as a multiplayer shooter, you might be forgiven for thinking it may be a game set in space where you zoom across a star field chasing ships being flown by online competitors. This game, however, is set in the world of a retro, 2D, side-scrolling platformer, and you play as a cartoon smiley face with a gun. The background artwork and animation is similarly cartoon-like, featuring seasonal changes and the usual mix of canyons, snow and ice, and intensely green foliage. You jump and zoom around these levels trying to avoid getting shot while also trying to shoot the other players in the same level. Rather than simply pointing left or right in your direction of travel, the gun angle can be changed as you fly through the levels, helping you aim more accurately. This is an unusual mechanic that can feel a little like playing classic two-player tanks while on the move, but it also requires an additional level of skill as you try and take on all the variables, including gravity, special effects, and bullet type. Another unique element is a Bionic Commando-style grapple or swinging arm that helps you traverse the level like a caffeine-fueled Spiderman, leading to some very unique gameplay. The multiplayer aspect is core to the game, and there are several online modes to choose between. The most popular are Deathmatch and Capture the Flag – where you hunt down the flag, capture it for yourself, and defend it against your adversaries for as long as you can. This all depends on the popularity of the game online, and thankfully, the game is well established and has a great following. There were over 600 servers when we checked and over 1, 200 players playing online, making it easy to find a game. You can also run your own server locally for your own use or as part of the online community, and it's the same for the levels themselves thanks to a super-easy level designer.
+
+Project Website
+https://www.teeworlds.com
+
+![](bbox=[0.57, 0.09, 0.93, 0.28])
+
+Teeworlds' license is OSI compliant, but its bespoke wording is closer to a public domain game than we'd like.
+
+# Crispy Doom
+
+There will never be enough Doom. It's one of those games that hasn't really aged, despite technology advancing towards science fiction levels. Modern graphics capabilities eclipse those of a game nearly 30 years old, and modern gameplay is now far more complex and nuanced. And yet, Doom is still perfectly nuanced, and the original aesthetic, sprites, and control methods are part of that experience. Crispy Doom is a clone that plays with this idea slightly, lifting some of the limits on the original Doom to explore other possibilities without breaking any of the core mechanics that made the original game so successful. This is why it describes itself as a friendly fork of Chocolate Doom, a clone that attempts to accurately reproduce Doom as it would have been in 1993 on hardware. Crispy Doom differs from the original in several ways that make it more convenient on modern hardware. It can run with a widescreen aspect ratio for our modern monitors and at a 1993-eclipsing 640x400 display resolution. There's gamma correction for playing with the contrast and darkness, and options that can enable free vertical looking, a heads-up display, colorized status bars, and many other options. All of these can be set from the in-game menu or via the configuration file installed when you first run the game, with none of the options breaking the essential playability of the game. It's actually remarkable how modern the game can feel by simply running it at 120 frames per second on a modern screen. It's perfect for playing on a Raspberry Pi, for example, and builds quickly on its ARMch64 system architecture. Putting this together with a battery, controller, and screen could be the basis for a Raspberry Pi gaming handheld, and Doom would remain just as fun.
+
+![](bbox=[0.57, 0.53, 0.93, 0.72])
+
+Crispy Doom requires the original WAD file to play the game, but the Doom demo WAD is free and others are easy to purchase or retrieve from your own copy.
+
+Project Website
+https://github.com/fabiangreffath/crispy-doom

@@ -1093,6 +1093,7 @@
 +   [Linux Magazine 第254 期 2022-01 美国](docs/linux-magazine-254-2022-01-usa/README.md)
 +   [Linux Magazine 第 255 期 2022-02 美国](docs/linux-magazine-255-2022-02-usa/README.md)
 +   [Linux Magazine 第256 期 2022-03 美国版](docs/linux-magazine-256-2022-03-usa/README.md)
++   [Linux 杂志 257 2022-04 美国](docs/linux-magazine-257-2022-04-usa/README.md)
 +   [Linux Magazine 第258 期 2022-05 美国版](docs/linux-magazine-258-2022-05-usa/README.md)
 +   [Linux 杂志 259 2022-06 美国版](docs/linux-magazine-259-2022-06-usa/README.md)
 +   [Linux Magazine 第260 期 2022-07 美国版](docs/linux-magazine-260-2022-07-usa/README.md)
