@@ -1385,6 +1385,7 @@
 +   [LPIC-1：Linux Professional Institute 认证](docs/lpic-1-linux-professional-institute-certification/README.md)
 +   [LPIC-1 Linux Professional Institute 认证实践测试：考试 101-500 和考试 102-500](docs/lpic-1-linux-professional-institute-certification-practice-t/README.md)
 +   [LPIC-1：Linux Professional Institute 认证学习指南 (Level 1 考试 101 和 102)](docs/lpic-1-linux-professional-institute-certification-study-guid/README.md)
++   [LPIC-1／CompTIA Linux+ 认证一体化考试指南（考试 LPIC-1／LX0-101 与 LX0-102）](docs/lpic-1comptia-linux-certification-all-in-one-exam-guide-exam/README.md)
 +   [LPIC-2 认证指南：(201-400 和 202-400 考试) (认证指南)](docs/lpic-2-cert-guide-201-400-and-202-400-exams-certification-gu/README.md)
 +   [LPIC-2：Linux Professional Institute 认证学习指南（考试 201 和 202）](docs/lpic-2-linux-professional-institute-certification-study-guid/README.md)
 +   [LPIC-2：Linux 专业认证认证：学习指南 考试 201 与考试 202](docs/lpic-2-linux-professional-instutute-certification-study-guid/README.md)

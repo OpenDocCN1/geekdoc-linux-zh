@@ -1,0 +1,17 @@
++   * *Techies never read the documentation for anything.* It’s much more fun to experiment and figure it out on our own. Besides, we already know what we’re doing, right?
++   * *Techies hate to plan out anything on paper, especially a hardware or software deployment.* It takes the fun out of playing with all that cool new stuff. Besides, it’s all in our heads anyway, right?
++   * *Techies hate to document anything.* We’ll remember what we did three years down the road when something breaks, right?
+
+When deploying Linux (or any other system, for that matter), you must overcome these tendencies and do things the right way. If you don’t change your ways, you’ll be spending a lot of time fixing your mistakes later. If you keep it up long enough, you’ll also be spending a lot of time working on your résumé.
+
+If you’re working on a test system at home or in a lab environment, you can usually get away with implementing Linux the techie way. There’s probably no real risk in making mistakes. In fact, it can be a great learning experience. I highly recommend it when time permits because you can really learn a lot.
+
+However, when you’re deploying systems that will be used in your organization’s production environment, the techie approach is completely unacceptable. Mistakes on your part will lead to system outages. Outages cost your organization time and money and will probably cost you your job.
+
+Instead of deploying systems in a haphazard, unstructured manner, you should develop a deployment plan before you start buying hardware and installing software. Doing so will help you prevent costly errors (and probably save your job).
+
+Being a confessed techie myself, I know how painful this process can be. When tasked with deploying new Linux systems, your first impulse is to get on the phone with your hardware vendor and start ordering. Resist this urge! If you will instead follow the process laid out in this chapter and actually plan the implementation before you start ordering hardware and software, life will be good for you and for those who will follow in your footsteps.
+
+Let me give you an example of what I’m talking about. Years ago, I worked for a major networking software vendor. One of the functional groups in my department wanted to implement a new application that would make their jobs easier. When reviewing the system requirements, they found that the software required a specific version of the Windows server software, one that we didn’t currently have. Implementing the application would first require a new server to be installed. Rather than develop a plan for the new server deployment, the individuals in this group completely winged it. They ordered a new server and set up the software themselves without telling anyone.
+
+Not a big deal, you think? Consider this: All of the critical data from that group as well as the group I worked for was saved on this server. This data represented thousands of hours of work and was worth millions of dollars. No one on my team gave it a second thought until several years later when we discovered that our company’s Information Systems team had no idea that server even existed on the network. No one had ever run a single backup of the data on that server. No one had attached an uninterruptible power supply (UPS) to it. No one was responsible for patching the operating system. Millions of dollars’ worth of information was completely unprotected. One simple

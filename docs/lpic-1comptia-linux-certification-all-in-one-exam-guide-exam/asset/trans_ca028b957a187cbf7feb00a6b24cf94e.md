@@ -1,0 +1,189 @@
+
+system。如果没有，您可能需要使用 rpm 实用程序从您的安装存储库手动安装它。
+
+用于启动 atd 守护进程的启动脚本位于您的 init 脚本目录中，该目录根据您特定的发行版可能是 */`/etc/init.d`* 或 */`/etc/rc.d`*。如图 13-14 所示，该脚本的名称为 atd。
+
+在尝试使用 at 之前，您需要确保 atd 守护进程正在运行。您可以通过在 shell 提示符下输入 **rcat start** 来实现这一点。您也可以运行带有完整路径并后跟 **start** 的 rc 文件，在 shell 提示符下完成相同任务。使用 insserv 或 chkconfig 命令确保 atd 守护进程在启动时自动启动。
+
+您还需要指定哪些用户可以创建 at 作业，哪些用户不可以创建。这可以通过编辑以下文件来完成：
+
+- */`/etc/at.allow`*：列在此文件中的用户允许创建 at 作业。
+- */`/etc/at.deny`*：列在此文件中的用户不允许创建 at 作业。
+
+若要使用 at 在将来的时间调度命令执行，请完成以下操作：
+
+1. 在 shell 提示符下输入 **at time**。at 守护进程在如何指定此命令中的时间值方面非常灵活。请观察表 13-2 中显示的语法。输入 at 命令和表 13-2 中的时间值后，将显示 **at> 提示符，如下所示：**
+
+```
+ws2:~ # at now +10 minutes
+warning: commands will be executed using /bin/sh
+at>
+```
+
+2. 在 **at>** 提示符下，输入您希望 at 为您执行的命令。需要注意的是，如果您的命令在 shell 提示符下的屏幕上显示输出，当 at 运行这些命令时，您将不会看到输出。您可以查看输出有两个不同的选项。首先，如果您没有指定任何其他选项，at 会将输出电子邮件发送至您的本地用户帐户。
+
+或者，您也可以将输出重定向到文件。您在本书前面已经学习了如何做到这一点。例如，如果要在 **at>** 提示符下运行 tail */`/var/log/messages > ~/atoutput.txt`*，将命令的输出发送到主目录中名为 atoutput.txt 的文本文件。
+
+![](img/fb5404b3ce1e1e1d707f5abc39814a4a_542_0.png)
+
+**图 13-14 atd 守护进程启动脚本**
+
+| 参考类型 | 语法 | 描述 |
+|---|---|---|
+| 固定 | HH:MM | 指定应运行命令的确切小时和分钟。除非该时间已经过去，否则 `at` 守护进程假设指定的是今天的小时和分钟；如果时间已过，则假设为明天。您还可以在值后添加 `am` 或 `pm` 以指定上午或下午。 |
+| | Noon | 指定在 12:00 下午运行命令。 |
+| | Midnight | 指定在 12:00 凌晨运行命令。 |
+| | Teatime | 指定在 4:00 下午运行命令。 |
+| | MMDDYY 或 MM/DD/YY 或 MM.DD.YY | 指定运行命令的确切月份、日期和年份。 |
+| | HH:MM MMDDYY | 指定运行命令的确切月份、日期、年份和时间。 |
+| 相对 | now | 指定立即运行命令。 |
+| | now + value | 指定在将来的特定时间运行命令。例如，您可以输入以下内容：<br>`now + 5 minutes`<br>`now + 2 hours`<br>`now + 3 days` |
+| | today | 指定今天运行命令。您可以将此值与上述固定类型之一中的固定值混合使用，例如 `2 pm today`。 |
+| | tomorrow | 指定明天运行命令。您也可以将此值与固定值混合使用，例如 `2 pm tomorrow`。 |
+
+**表 13-2** *at* 命令时间语法选项
+
+3. 如果希望添加更多命令，请按 ENTER。您可以在同一作业中运行多个命令。每个命令应位于单独的行上。
+4. 完成输入命令后，按 CTRL-D。执行此操作时，`at>` 提示符将消失，作业将被调度，并分配一个作业编号，如下所示：
+
+```
+ws2:~ # at now +10 minutes
+warning: commands will be executed using /bin/sh
+at> tail /var/log/messages > ~/atoutput.txt
+at> ^D
+job 3 at 2011-04-02 08:57
+ws2:~ #
+```
+
+配置好作业后，可以使用 `atq` 命令查看待处理的 *at* 作业列表。如下所示：
+
+```
+ws2:~ # atq
+3 2011-04-02 08:57 a root
+ws2:~ #
+```
+
+如果您以普通用户身份登录，atq 命令将仅显示与当前用户帐户相关的作业。如果您以 root 身份登录，atq 将显示所有用户的所有待处理作业。如果需要从列表中移除待处理作业，可以使用 atrm job_number 命令。
+
+除了 at 守护进程，还可以使用 cron 守护进程来调度未来作业。接下来我们将讨论如何做到这一点。
+
+## 使用 cron 守护进程
+
+at 守护进程非常出色；然而，它有一个主要缺点。它只能调度作业在未来运行一次。如果您只想让作业运行一次，这不是问题。但是，有许多时候您希望作业在将来的定期计划中运行。例如，您可能需要在每天特定时间运行进程，如备份实用程序。在这种情况下，at 守护进程就不够用了。我们需要一个能够处理重复调度的工具。
+
+cron 守护进程可以做到这一点。与 at 不同，cron 可以根据您指定的计划运行命令。这是一个非常强大且非常有用的服务。我偶尔使用 at。然而，cron 是我一直使用的服务。事实上，没有它我很难完成工作。我大多数客户的办公室离我的办公室都有许多英里。每天去所有客户处运行备份将占用我所有的时间。当然，我不敢信任客户的管理人员确保每天进行备份。相反，我设置 cron 守护进程为我运行备份。这样，我知道备份在定期计划中进行，并且已经发出创建备份的正确命令。
+
+在本章的这一部分中，我们将讨论以下内容：
+
+- cron 如何工作
+- 使用 cron 管理计划系统作业
+- 使用 cron 管理计划用户作业
+
+让我们从了解 cron 服务如何工作开始。
+
+## cron 如何工作
+
+cron 守护进程是一个在系统后台持续运行的服务，每分钟检查一个称为 crontab 文件的特殊文件，以查看是否有应运行的计划作业。cron 守护进程使用 init 目录中的 cron init 脚本进行管理，如图 13-15 所示。
+
+默认情况下，在大多数 Linux 发行版中，cron 守护进程配置为在每次系统启动时自动运行。如果没有，您需要使用系统 init 目录中的 cron init 脚本手动启动它。
+
+您可以配置 cron 运行系统作业或特定用户作业。让我们先谈谈运行系统作业。
+
+![](img/fb5404b3ce1e1e1d707f5abc39814a4a_545_0.png)
+
+**图 13-15** 查看 cron init 脚本。
+
+## 使用 cron 管理计划系统作业
+
+对于 Linux 系统管理员来说，使用 cron 运行计划系统作业是一个极其有用的工具。您可以配置系统自动定期执行各种任务，从而为您节省大量时间和精力。
+
+还记得我提到定期运行备份的问题吗？在 cron 中创建在定期计划上运行备份的系统作业为我节省了大量时间。如果我在某一天没有时间去客户现场，我不必担心。我知道 cron 会在预配置的时间运行备份。我只需要时不时去确认一切仍然正常工作，并可能轮换备份介质。我喜欢 cron！
+
+要运行系统作业，cron 服务使用 /etc/crontab 文件（如下所示）来配置要运行的作业。
+
+```bash
+ws2:/etc/init.d # ls
+.
+depend.boot
+depend.halt
+depend.start
+depend.stop
+ifup-restart init2
+ifup-restart init2_setup
+ifup-restart2
+test
+...
+cron
+
+boot.idcconfig
+boot.leadmodules
+boot.local
+boot.localnet
+boot.md
+boot.multipath
+boot.proc
+boot.netsch
+boot.startpreload
+boot.swap
+boot.systcl
+boot.uudev
+boot.uudev_retry
+cron
+
+irq-balancer
+joystick
+kbd
+kexec
+keyscapsd
+knockd
+lirc
+lirc_sensors
+misclog
+modmd
+multiplathd
+mySQL
+network
+network-rmnetns
+nfs
+nmb
+nscd
+ntp
+
+rcs.d
+rcs.d
+rcs.d
+rcs.d
+reboot
+rpcbind
+rpcapckd
+rpcstat
+setwall2
+tgla
+stalemon
+skeleton.compat
+smartd
+swd
+snapt
+spand
+spandd
+```
+
+```bash
+ws2:/etc # cat ./crontab
+SHELL=/bin/sh
+PATH=/usr/bin:/usr/sbin:/usr/bin:/bin:/usr/sbin:/usr/lib/news/bin
+MAILTO=root
+#
+# check scripts in cron.hourly, cron.daily, cron.weekly, and cron.monthly
+#
+*/15 * * * * root test -x /usr/lib/cron/run-crons && /usr/lib/cron/run-crons
+< /dev/null 2>&1
+ws2:/etc #
+```
+
+如您在此示例中看到的，/etc/crontab 文件包含用于运行位于四个不同目录中的脚本的命令：
+
+- */`/etc/cron.hourly`*：包含每小时运行的 cron 脚本。
+- */`/etc/cron.daily`*：包含每天运行的 cron 脚本。
+- */`/etc/cron.weekly`*：包含每周运行一次的 cron 脚本。
+- */`/etc/cron.monthly`*：包含每月运行一次的 cron 脚本。
