@@ -1,0 +1,58 @@
+
+- **RAM。** Random Access Memory（随机存取存储器），计算机系统的易失性主内存。
+- **Red Hat Linux。** Linux 操作系统的一个发行版。
+- **重定向（Redirection）。** 将命令的输出发送到其配置输出以外的地方。
+- **右键单击（Right-Click）。** 使用鼠标右键单击桌面上的对象。通常，右键单击会显示一个快捷菜单。
+- **ROM。** Read Only Memory（只读存储器），计算机主板上存储 BIOS（基本输入输出系统）的芯片。
+- **路由器（Router）。** OSI 模型网络层设备。其目的是路径确定和网络上的分组交换。
+- **路由（Routing）。** 由服务器或网络设备（路由器）提供的服务，用于网络上分组的路由和路径确定。
+- **RPM。** RPM，或 Red Hat Package Manager（Red Hat 包管理器），是一个用于在 Linux 操作系统上安装、卸载、验证、查询和更新包包的包管理系统。
+- **RSA。** Rivest-Shamir-Adleman，一种用于生成数字证书的算法。
+- **运行级别（Runlevel）。** 这是 Linux 操作系统使用的一个设置，用于指定哪些程序将启动和停止。
+- **Samba。** 这是 Linux 对 Windows NT Server 的回应。Windows 使用 SMB 协议在计算机网络上的计算机之间共享资源。Linux 通过 Samba 提供 SMB 协议，Samba 是一套提供与 NT 服务器相同功能的程序。
+- **SCSI。** Small Computer System Interface（小型计算机系统接口）的首字母缩写，一种用于计算机系统连接外围设备的并行接口标准。通常用于连接硬盘驱动器。
+- **安全更新（Security Update）。** 为了防止安全漏洞而对操作系统进行的小更改。
+- **服务器（Server）。** 一种用于服务客户端计算机系统的 Linux 安装类型。它可以提供 Web 服务、文件服务、消息服务、数据库服务和网络服务。
+- **服务（Service）。** 在服务器上运行并为客户端计算机提供资源的程序。
+- **影子密码（Shadow Passwords）。** 一套将系统密码移动并加密到只有 `root` 可以读取的安全文件的程序。
+- **共享软件（Shareware）。** 可以免费分发，但保留作者版权的软件。如果您决定保留该软件，则期望您注册并支付少量费用。
+- **Shell 脚本（Shell Script）。** 存储在文件中并可以在 shell 环境下执行的一组命令。
+- **快捷菜单（Shortcut Menu）。** 一个弹出菜单，显示被右键单击的对象选项。
+- **签名包（Signed Packages）。** 这些是支持 PGP 或 GPG 电子签名以验证创建者的包。
+- **SIMM。** Single Inline Memory Module（单列直插式存储器模块），一种类型的 RAM。
+- **SLP。** Stampede Linux Package 的首字母缩写。来自 Stampede Linux 发行版的 SLP 格式使用 `tar` 和压缩工具 `bzip2` 作为其基础。
+- **SMB/CIFS。** Server Message Block/Common Internet File System（服务器消息块/公共 Internet 文件系统）的缩写。SMB/CIFS 由 Microsoft 开发，并使用 139 端口。
+- **SMTP。** Simple Mail Transfer Protocol（简单邮件传输协议）的首字母缩写，一种在 TCP/IP 网络上用于在服务器之间以及从客户端到服务器发送电子邮件消息的协议。它使用 25 端口。
+- **SNMP。** Simple Network Management Protocol（简单网络管理协议）的缩写，一种用于管理 TCP/IP 网络的协议。它使用 161 和 162 端口。
+- **SODIMM。** Small Outline Dual Inline Memory Module（小外形双列直插式存储器模块），一种通常用于笔记本电脑计算机的 RAM 类型。
+- **软件（Software）。** 在计算机硬件上执行的程序。这些可以包括系统软件，如操作系统，或应用软件，如字处理程序。
+- **SOHO。** Small Office/Home Office（小型办公室/家庭办公室）的首字母缩写。
+- **Spooler（打印队列程序）。** 控制队列中打印作业的程序。Spooler 一次取一个打印作业并按顺序将它们发送到打印机。
+- **SQUID。** 针对 Web 客户端的高性能代理缓存服务器。
+- **SSH。** Secure Shell（安全外壳程序），一个用于通过网络登录到另一台计算机以在远程机器上执行命令的程序。SSH 提供强大的身份验证和安全通信。
+- **子网掩码（Subnet Mask）。** 一个 32 位值，分为四个 8 位八位组。此掩码使您可以将网络划分为具有较少计算机的段，使网络比具有大量计算机的非常大的段更容易管理。
+- **SUSE。** Linux 操作系统的一个发行版。
+- **交换区（Swap）。** 该术语指的是计算机用于在主内存中分页信息和换出信息的存储容量。这使得您可以运行否则内存中没有足够空间运行的程序。
+- **交换机（Switch）。** 基于物理 MAC 地址路由网络信息的设备。它在 OSI 模型的数据链路层工作。
+- **SysV。** 源自旧 Unix 版本 System V 的 Linux 操作系统启动过程。它是 Linux 系统上最常用的启动过程。
+- **TAR。** Tape ARChive（磁带归档）的缩写。TAR 是一个将一组文件合并到一个文件中的 Linux 实用程序。`tar` 命令不压缩文件。
+- **Tar 包（Tar Balls）。** 程序文件的存储库，被 Linux 和 Unix 系统普遍接受。
+- **TCP。** Transmission Control Protocol（传输控制协议），一种面向连接的、可靠的协议，用于 TCP/IP 网络。
+- **TCP Wrappers。** TCP wrappers 是一种基本的访问控制形式。它们在允许连接之前提供身份验证请求、横幅和其他服务。
+- **TCP/IP。** Transmission Control Protocol/Internet Protocol（传输控制协议/互联网协议）的缩写。TCP/IP 是一种用于通过 Internet 和大多数局域网进行通信的协议套件。
+- **Telnet。** 一个在 TCP/IP 网络上用于连接到其他主机的程序。Telnet 会话为远程计算机提供命令行界面。Telnet 不是一个安全的程序，并使用 23 端口。
+- **TGZ。** 以 `.tar.gz` 或 `.tgz` 结尾的文件是用 `gzip` 程序压缩的 `tar` 文件，使其更小并且更快地通过网络传输。
+- **Traceroute。** 一个尝试跟踪 IP 分组到远程主机所走路线的程序。`traceroute` 使用在 RFC 792 中定义的 Internet Control Message Protocol (ICMP)。
+- **TurboLinux。** Linux 操作系统的一个发行版。
+- **UDP。** User Datagram Protocol（用户数据报协议），一种无连接且不可靠的传输协议，用于 TCP/IP 网络。
+- **UID。** 分配给每个用户的唯一识别号，称为 `userid`。
+- **Unix。** 在 20 世纪 70 年代初由 Bell Labs 开发的一个多用户、多任务操作系统。
+- **USB。** Universal Serial Bus（通用串行总线），计算机系统上的一种端口类型，允许最多连接 127 个设备。
+- **Usenet。** 一个可以通过 Internet 访问的公告板系统，称为新闻组。
+- **用户名（Username）。** 由用户输入的字母数字字符串，用于识别一个且仅一个账户。两个用户不能拥有相同的用户名。
+- **vi。** 一个只允许添加、更改和删除文本的命令行文本编辑器。
+- **虚拟控制台（Virtual Consoles）。** 由 Linux 操作系统提供，可以显示不同类型的信息的额外控制台。
+- **VPN。** Virtual Private Network（虚拟专用网络）的首字母缩写。VPN 使用公共连接为远程用户提供与通过私有连接提供的相同的网络连接。
+- **Web 服务器（Web Server）。** 使用 HTTP 协议提供 Web 内容访问的计算机。
+- **工作站（Workstation）。** 类似于个人桌面 Linux 安装的一种 Linux 安装类型，但通常包括图形软件开发工具，有时还包括网络管理工具。工作站是为工作环境设计的计算机。
+- **X。** 作为图形用户界面操作系统核心的窗口系统。
