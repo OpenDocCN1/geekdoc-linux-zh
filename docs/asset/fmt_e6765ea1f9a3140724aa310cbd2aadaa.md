@@ -1,0 +1,240 @@
+
+## portmap, 1358-1359
+- remote execution, 1376-1377
+- remote login, 1377-1378
+- remote quota, 1384
+- remote shell, 1385-1386
+- remote communication, 1405-1406
+- options, 628
+- set, 628-630
+
+## XF86_VGA, 616-633
+- configuration, 631
+- file, 633
+- options, 632
+- set, 632
+
+## sessreg, 480-481
+- shell command, 40-42
+- telnet command, 509-510
+- `set-allow(id)` action (xterm), 715
+- `set-screen()` action (xterm), 715
+- `set-appcursor()` action (xterm), 715
+- `set-autofeline()` action (xterm), 715
+- `set-autowrap()` action (xterm), 715
+- `set-curseen()` action (xterm), 715
+- specifying, zet, 607-608
+- system status, 1386-1387
+- message format, 1386-1387
+
+## XF82, 632
+
+## XFree8, 636-641
+- configuration, 636
+- types, 637
+- network connections, 637
+- options, 638
+
+## Window System, 638
+- access control, 638-643
+- display server, 638-640
+- font server, 638-641
+- listing, 638-643
+- killing processor, 638-645
+- starting, 638-646
+- services, 638-647
+- de-fault, 638-1384
+- GETALL, 638-1384
+- GETCNCT, 638-1384
+- GETPID, 638-1384
+- GETVAL, 638-1384
+- GETZCNT, 638-1384
+- IPC_RMID, 638-1384
+- IPC_SET, 638-1384
+- IPC_STAT, 638-1384
+- SETVAL, 638-1384
+
+# shell 变量 (bash)
+- `nlinks`, 18
+- `notify`, 17
+- `OLDPWD`, 15
+- `OPTARG`, 16
+- `OPTERR`, 17
+- `OPTIND`, 16
+- `OSTYPE`, 16
+- `PATH`, 16
+- `PPID`, 15
+- `PROMPT_COMMAND`, 17
+- `PS1`, 16
+- `PS2`, 16
+- `PS3`, 17
+- `PS4`, 17
+- `PWD`, 15
+- `RANDOM`, 15
+- `REPLY`, 15
+- `SECONDS`, 15
+- `SHLVL`, 15
+- `MTOUT`, 17
+- `UID`, 15
+- shells
+- 存档, 创建, 484-487
+- Bourne-again, 11-46
+- `alias`, 23-24
+- 参数, 11
+- 算术求值, 34
+- 空格, 12
+- 漏洞, 46
+- 命令执行, 25
+- 注释, 14
+- 复合命令, 13
+- 控制运算符, 12
+- 环境, 25
+- 转义字符, 14
+- 退出状态, 26
+- 扩展, 18-21
+- 文件, 46
+- 函数, 23
+- 历史列表, 32-33
+- 调用, 45-46
+- 作业控制, 24-25
+- 列表, 12-13
+- 元字符, 12
+- 名称, 12
+- 选项, 11
+- 参数, 14-15
+- 管道 (), 12
+- 提示, 26
+- 引用, 14
+- `read`, 27-32
+- 重定向, 21-23
+- 预留字, 12
+- shell 变量, 15-18
+- 信号, 25
+- 简单命令, 12
+- 内置命令, 35-45
+- `alias`, 35
+- `bg`, 35
+- `bind`, 35
+- `break`, 35
+- `builtin`, 35
+- `cd`, 35-36
+- `command`, 36
+- `continue`, 36
+- `declare`, 36
+- `dirs`, 36
+- `echo`, 36-37
+- 启用/禁用, 37
+- `eval`, 37
+- `exec`, 37
+- `exit`, 37
+- `export`, 37
+- `fc`, 37-38
+- `fg`, 38
+- `getopts`, 38
+- `hash`, 38
+- `help`, 38
+- `history`, 39
+- `jobs`, 39
+- `kill`, 39
+- `let`, 39
+- `local`, 39
+- `logout`, 39
+- `popd`, 39-40
+- `pushd`, 40
+- `pwd`, 40
+- `read`, 40
+- `readonly`, 40
+- `return`, 40
+- `set`, 40-42
+- `shift`, 42
+- 挂, 42-43
+- `test expr`, 43
+- `times`, 43
+- `trap`, 43-44
+- `type`, 44
+- `ulimit`, 44-45
+- 掩码, 45
+- `unalias`, 45
+- `unset`, 45
+- `wait`, 45
+- 执行命令, 1047
+- 退出, 37
+- 交互式, 45
+- 登录, 45
+- 更改, 63
+- 退出, 39
+- 路径名, 1186
+- 远程, 466-467
+- 服务器, 1385-1386
+- 挂起执行, 42-43
+- 用户, 946-947
+- shell 文件, 1186
+- `shift` (命令), 42
+- shock, 487
+- `SHLI` 变量 (bash), 15
+- 선, 849-851
+- 命令, 850
+- 错误, 851
+- 系统调用, 851
+- `shget`, 851-853
+- 漏洞, 853
+- 错误, 852
+- 系统调用, 852
+- `shomp`, 852-854
+- 歧义时显示所有变量 (只读), 28
+- `showmount`, 1396
+- `showwrgb`, 488
+- `shrinkfile`, 488
+- 关, 855, 1396-1397
+- 漏洞, 1397
+- 错误, 855
+- 文件, 1397
+- 选项, 1397
+- `sigaction`, 855-857
+- `sigaddset`, 1019-1020
+- `sigblock`, 858
+- `sigdbget`, 1019-1020
+- `sigemptys`, 1019-1020
+- `sigfilset`, 1019-1020
+- `sigetmask`, 858
+- `siginterrupt()` 函数, 1019
+- `signumber`, 1020
+- `sigmark`, 858
+- 信号, 855-858, 1248-1249
+- 漏洞, 1249
+- 信号消息, 打印, 996
+- 可用的 (列表), 1248-1249
+- bash, 25
+- site (ftp 命令), 152
+- 大, 489-490
+- 拷贝, 489-490
+- ftp 命令, 152
+- snatch, 139
+- slc 命令 (telnet), 510
+- sldptmp, 489-491
+- `sleep()` 函数, 1021
+- splogrin, 1399-1400
+- 诊断, 1400
+- `/etc/slip` 格式, 1400
+- example, 1400
+- filesize, 126
+- smproxy, 409-492
+- `SOCK_DGRAM`, sockets, 860-861
+- `SOCK_RAW`, sockets, 861
+- `SOCK_PACKET`, sockets, 860-861
+- `SOCK_STREAM`, sockets, 860-861
+- soft重置 (xterm), 715
+- Solitaire 文件, 转换为任何, 488-489, 494
+- `sort`, 492-493
+- 排序数组, 搜索, 900-901
+- 排序文件, 删除, 560
+- 重复行, 560
+- 排序的单词列表, 压缩-的/解压缩, 496
+- 排序数组, 1000
+- 驱动程序, 启动参数, 1224
+- source 命令 (auth), 591
+- `socketcall`, 862
+- `socketpair`, 862-863
+- 连接, 740-741
+- 初始化, 752-753
+- 监听, 792-793
