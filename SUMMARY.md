@@ -1061,6 +1061,7 @@
 +   [Linux 内核开发 (开发者库)](docs/linux-kernel-development-developers-library/README.md)
 +   [Linux 内核开发：如何深度理解](docs/linux-kernel-development-how-to-gain-significant-understandi/README.md)
 +   [Linux 内核开发 第二版](docs/linux-kernel-development-second-edition/README.md)
++   [Linux 内核开发（第三版）](docs/linux-kernel-developmentthird-edition/README.md)
 +   [Linux 内核精要](docs/linux-kernel-in-a-nutshell/README.md)
 +   [Linux 内核模块编程指南](docs/linux-kernel-module-programming-guide/README.md)
 +   [Linux 内核编程：字符、块、USB 及网络接口的内核架构与设备驱动开发](docs/linux-kernel-programming-developing-kernel-architecture-and-/README.md)

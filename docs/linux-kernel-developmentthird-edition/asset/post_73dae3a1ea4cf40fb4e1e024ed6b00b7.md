@@ -1,0 +1,342 @@
+
+### f
+
+- UNIX filesystems, 263
+- VFS (Virtual Filesystem)
+    - data structures, 265–266
+    - objects, 265–266
+- files_struct data structure, 287
+- find_get_page() method, 329
+- find_vma() function, 316–317
+- find_vma_prev() function, 317
+- find_vma_intersection() function, 317
+- firmware directory, kernel source code, 13
+- fixed-size stacks, 20
+- flags
+    - clone() function, 34–35
+    - interrupt handlers, 116–117
+    - map type flags, 319
+    - page protection flags, 319
+    - VMAs (virtual memory areas), 311–312
+- flat address spaces, 305
+- floating point instructions, 20
+- flush scheduled work() function, 154
+- flusher threads, 331–335
+- flushing work queues, 154
+- fork() function, 24, 31–34
+- forking, 32
+- free lists, 245
+- free_percpu() function, 258
+- free_irq() function, 118
+- freeing
+    - data structures, slab layers, 245–252
+    - interrupt handlers, 118
+    - freeing pages, 237
+- frequencies, timer interrupts, 209
+- front/back merging, I/O scheduler, 299–300
+- fs directory, kernel source tree, 13
+- fs_struct data structure, 287
+- time() library call, 221
+- functions
+    - account_process_tick(), 219
+    - child(), 128
+    - clone(), 34–35
+    - coding style, 400
+    - context_switch(), 62
+    - copy_process(), 32
+    - disable_irq(), 129–130
+    - disable_irq_nosync(), 130
+    - do_exit(), 36
+    - do_IRQ(), 123–125
+    - do_mmap(), 318–320
+    - do_unmmap(), 320
+    - do_sigfirq(), 138
+    - enable_irq(), 130
+    - exec(), 31
+    - find_vma_prev(), 317
+    - find_vma(), 316–317
+    - find_vma_intersection(), 317
+    - fork(), 31–32, 34
+    - free_irq(), 118
+    - hello_init(), 339
+    - idr_destroy(), 103
+    - inline functions, 18–19, 400
+    - in_interrupt(), 130
+    - in_irq(), 130
+    - irqs_disabled(), 130
+    - kfree() function, 243–244
+    - kmalloc(), 238–244
+        - gfp_mask flags, 238–243
+    - kthread_create(), 36
+    - likely(), 20
+    - list_add(), 91
+    - list_del(), 91
+    - list_for_each(), 93
+    - list_for_each_entry(), 96
+    - list_move(), 92
+    - list_splice(), 92
+    - local_bh_disable(), 157
+    - local_irq_disable(), 130
+    - local_irq_enable(), 130
+    - local_irq_restore(), 130
+    - local_irq_save(), 130
+    - malloc(), 238
+    - mmap(), 319–320
+    - munmap(), 320
+    - nice(), 66
+    - open(), 5
+    - panic(), 371
+    - printf(), 5, 17, 364–367
+    - printk(), 17, 364–367, 375
+    - raise_softirq(), 141
+    - read(), 326
+    - relationship with time, 207
+    - request_irq(), 118
+    - schedule_timeout(), 227–230
+    - strcpy(), 5
+    - tasklet_disable(), 145
+    - tasklet_disable_nosync(), 145
+    - tasklet_enable(), 146
+    - tasklet_kill(), 146
+    - tick_periodic(), 219
+    - unlikely(), 20
+    - update_curr(), 51–52
+    - vfork(), 33–34
+    - vmalloc(), 244–245
+    - void local_bh_disable(), 158
+    - void local_bh_enable(), 158
+    - wait(), 24
+    - wake_up_process(), 36
+    - write(), 5
+
+### G
+
+- Gagne, Greg, 407
+- Galvin, Peter Baer, 407
+- gcc (GNU Compiler Collection), 18
+- gdb, 373
+- generating patches, 404–405
+- get bh() function, 293
+- get cpu() function, 202
+- get sb() function, 285
+- get_cpu_var() function, 258
+- get_free_page() function, 236
+- get_zerod_page() function, 237
+- gettimeofday() function, 221
+- gettimeofday() system call, 221
+- gfp_mask flags, kmalloc() function, 238–243
+- gid_t data type, 384
+- git source management tool, 11–12
+    - binary searching, 376–377
+    - generating patches, 405
+- global hash, page caches, 330
+- global variables, jiffies, 212–216
+- GNU C, 18
+    - branch annotation, 19–20
+    - inline assembly, 19
+    - inline functions, 18–19
+- GNU debugger, 372–373
+- GNU General Public License (GPL), 4
+- Goudel, Escher, Bach, 409
+- granularity, locking, 171
+
+### H
+
+- hackers, 403
+- HAL (hardware abstraction layer), 357
+- halves
+    - division of work, 134
+    - interrupt handlers, 115–116
+- handlers, system calls, 73–74
+- hard real-time scheduling policies, 64
+- hard sectors. See sectors
+- hardware, applications, relationship, 6
+- header files, 17
+- heads, 290
+- Hello, World! module, 338–340
+- hello_init() function, 339
+- HI_SOFTIRQ tasklet, 140
+- high memory, 393
+- high memory mappings, 253–255
+- hitting, timers, 208
+- Hofstadter, Douglas, 409
+- HP-UX (Hewlett-Packard), 2
+- *HP-UX 11.1 Internals, 408*
+- HRTIMER_SOFTIRQ tasklet, 140
+- Hungarian notation, 400
+- Hz values, 208–212
+- jiffies global variable, 216
+
+### I
+
+- idle process, operating systems, 6
+- idr_destroy() function, 103
+- IEEE (Institute of Electrical and Electronics Engineers), 70
+- ifdef preprocessor directives, coding style, 402
+- implementation
+    - interrupt handlers, 123–126
+    - softirqs, 137–140
+    - system calls, 74–78
+    - tasklets, 142–144
+    - timers, 224
+    - work queues, 149–153
+- implementing system calls, 82–83
+- in interrupt() function, 130
+- in-kernel debugger, 372–373
+- in_interrupt() function, 130
+- in_irq() function, 130
+- include directory, kernel source tree, 13
+- incremental patches, 12
+- increments, atomic operations, 175–176
+- indent utility, 403
+- indentation, coding style, 396
+- indexes, softirqs, 140–141
+- init completion() function, 198
+- init directory, kernel source tree, 13
+- initialization, semaphores, 192
+- inline functions, 400
+    - GNU C, 18–19
+
+### J
+
+- jiffies, 391
+    - origins of term, 212–213
+    - sequential locks, 200
+- jiffies global variable, 212–213
+    - HZ values, 216
+    - internal representation, 213–214
+    - wraparounds, 214–216
+- implementing, linked lists, 88–90
+- installing, 16
+- interrupt context, 5
+- interrupt handlers, 5
+
+### K
+
+- lack of memory protection, 20
+- modules, 7
+- monolithic, 7
+- naming conventions, 9
+- portability, 21
+- preemption, concurrency, 167
+- producer and consumer pattern, 96
+- root directories, 12–13
+- rules, 16–21
+- small, fixed-size, 21
+- source tree, 12–13
+- stable kernel, 8–9, 11
+- structure, 88
+- synchronization, 21
+- system calls, 71
+- vendor kernels, 14
+
+- kernel directory, kernel source tree, 13
+- Kernel Event Layer
+    - D-BUS, 361
+    - kobjects, 361–362
+    - netlink, 361
+    - parameters, 362
+    - payloads, 361
+    - verb strings, 361
+- kernel locked() function, 199
+- kernel maintainer, 403
+- kernel messages
+    - klogd daemon, 367
+    - log buffer, 366–367
+    - oops, 367–370
+    - syslogd daemon, 367
+- kallsyms, 369–370
+- Karels, Michael J., 408
+- kbuild build system, building modules, 340–342
+- KERN ALERT loglevel, printk() function, 366
+- KERN CRIT loglevel, printk() function, 366
+- KERN DEBUG loglevel, printk() function, 366
+- KERN EMERG loglevel, printk() function, 366
+- KERN ERR loglevel, printk() function, 366
+- KERN INFO loglevel, printk() function, 366
+- KERN NOTICE loglevel, printk() function, 366
+- KERN WARNING loglevel, printk() function, 366
+- kernel
+    - applications, relationship, 6
+    - building, 13–16
+    - C library, 17
+    - concurrency, 21
+    - configuring, 14–15
+    - debugging help resources, 377
+    - defined, 4
+    - development kernel, 8–10
+    - downloading, 11
+    - fixed-size stack, 20
+    - floating point instructions, 20
+    - hardware, 5
+    - relationship, 6
+    - integer atomic operations, 176–179
+        - 64-bit atomic operations, 180–181
+    - interfaces
+        - atomic operations, 176
+        - filesystem, 261–262
+        - slab layers, 249–252
+        - wrapping, 402
+    - internal representation, jiffies global variable, 213–214
+    - internal values, timers, 222
+    - interprocess communication (IPC) mechanism, 7
+    - interrupt context, 5
+        - kernels, 122
+        - stack space, 122–123
+    - interrupt handlers, 5, 113
+        - bottom halves, 115–116, 133–135
+        - benefits, 134–135
+        - BH interface, 135–136
+        - softirqs, 136–141
+        - task queues, 135
+        - tasklets, 136
+        - controlling interrupts, 127–130
+        - do_IRQ() function, 123–125
+        - flags, 116–117
+        - freeing, 118
+        - free_irq() function, 118
+        - function of, 114–115
+        - implementing, 123–126
+        - interrupt-safe code, 168
+        - limitations, 133
+        - locks, 185–186
+        - reentrancy, 119
+        - registering, 116
+        - request_irq() function, 118
+        - RTC (real-time clock) driver, 120–122
+        - shared, 119–120
+        - speed of, 122
+        - timer, 217–220
+        - top half, 115
+        - top halves, 133
+        - when to use, 135
+        - writing, 118–119
+    - interrupt request (IRQ), 114
+    - interrupt service routine (ISR). See interrupt handlers
+    - interrupt stacks, 122
+    - interrupt-safe code, 168
+    - interrupts, 5, 113–114, 117, 131
+        - asynchronous, 114
+        - concurrency, 167
+        - context, 115
+        - controlling, 127–130
+        - disable_irq_nosync() function, 130
+        - disabling, 127–129
+        - enable_irq() function, 130
+        - enabling, 127–128
+        - in_interrupt() function, 130
+        - in_irq() function, 130
+        - irqs_disabled() function, 130
+        - local_irq_disable() function, 130
+        - local_irq_enable() function, 130
+        - local_irq_save() function, 130
+        - synchronous, 114
+        - timers, frequencies, 209
+    - ioctl() method, 284
+    - IPC (interprocess communication) mechanism, 7
+    - ipc directory, kernel source tree, 13
+    - IRIX (SGI), 2
+    - IRQ (interrupt request), 114
+    - irqs_disabled() function, 130
+    - ISR (interrupt service routine), 114
+    - iterating linked lists, 94–95
