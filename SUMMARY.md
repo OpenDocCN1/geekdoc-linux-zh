@@ -777,6 +777,7 @@
 +   [Linux 初学者指南](docs/linux-all-in-one-for-dummies-for-dummies-computertech/README.md)
 +   [Linux 全能指南](docs/linux-all-in-one-for-dummies-linux-all-in-one/README.md)
 +   [Linux 傻瓜书大全 第6版](docs/linux-all-in-one-for-dummies版本-6/README.md)
++   [Linux 入门指南](docs/linux-an-introduction/README.md)
 +   [Linux 与分支银行业务 [电子资源]](docs/linux-and-branch-banking-electronic-resource/README.md)
 +   [Linux 和 LPIC-1 Linux 认证指南](docs/linux-and-lpic-1-guide-to-linux-certification/README.md)
 +   [Linux+ 和 LPIC-1 Linux 认证指南，第5版](docs/linux-and-lpic-1-guide-to-linux-certification-5th-edition/README.md)
