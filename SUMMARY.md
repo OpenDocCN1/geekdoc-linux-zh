@@ -1254,6 +1254,7 @@
 +   [Linux：逐步过渡到 Linux ：三合一（英、俄、法）](docs/linux-the-transition-to-linux-step-by-step-three-in-one-engl/README.md)
 +   [LINUX：终极初学者指南！](docs/linux-the-ultimate-beginners-guide/README.md)
 +   [Linux 终极指南](docs/linux-the-ultimate-guide/README.md)
++   [Linux 终极分步指南：快速轻松掌握 Linux](docs/linux-the-ultimate-step-by-step-guide-to-quickly-and-easily-/README.md)
 +   [Linux 节省时间技巧指南](docs/linux-timesaving-techniques-for-dummies-isbn---0764571737/README.md)
 +   [Linux 高效技巧入门指南](docs/linux-timesaving-techniquestm-for-dummies/README.md)
 +   [Linux 技巧、技巧、应用与黑科技](docs/linux-tips-tricks-apps-and-hacks/README.md)

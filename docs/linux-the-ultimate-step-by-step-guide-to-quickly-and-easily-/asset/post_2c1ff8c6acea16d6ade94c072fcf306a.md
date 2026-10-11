@@ -1,0 +1,314 @@
+
+## Shell 算术运算示例
+
+以下脚本演示了基本的算术操作：
+
+```sh
+#!/bin/sh
+
+a=10
+b=20
+val=`expr $a + $b`
+echo "a + b : $val"
+
+val=`expr $a - $b`
+echo "a - b : $val"
+
+val=`expr $a \* $b`
+echo "a * b : $val"
+
+val=`expr $b / $a`
+echo "b / a : $val"
+
+val=`expr $b % $a`
+echo "b % a : $val"
+
+if [ $a == $b ]
+then
+  echo "a is equal to b"
+fi
+
+if [ $a != $b ]
+then
+  echo "a is not equal to b"
+fi
+```
+
+输出结果：
+
+```text
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a is not equal to b
+```
+
+注意：
+- 操作符和表达式之间必须有空格，例如 `2+2` 是错误的，应写作 `2 + 2`。
+- 完整的表达式应被反引号（inverted commas，即 ` ` ` 和 ` ` `）或引号包围。
+- 乘法运算中使用 `\*` 代替 `*` 符号。
+- **if...then...fi** 语句是决策语句，将在下一章解释。
+
+算术运算符表：
+
+| 运算符 | 描述 | 示例 |
+| :--- | :--- | :--- |
+| + | 加法 - 将操作符两侧的值相加 | `expr $a + $b` 结果为 30 |
+| - | 减法 - 从左手操作数中减去右手操作数 | `expr $a - $b` 结果为 -10 |
+| \* | 乘法 - 将操作符两侧的值相乘 | `expr $a \* $b` 结果为 200 |
+| / | 除法 - 左手操作数除以右手操作数 | `expr $b / $a` 结果为 2 |
+| % | 取模 - 左手操作数除以右手操作数并返回余数 | `expr $b % $a` 结果为 0 |
+| = | 赋值 - 将右手操作数赋值给左手操作数 | `a=$b` 将 b 的值赋给 a |
+| == | 相等 - 比较两个数字，如果相同则返回 true | `[ $a == $b ]` 返回 false |
+| != | 不等 - 比较两个数字，如果不同则返回 true | `[ $a != $b ]` 返回 true |
+
+请注意，所有条件表达式都必须放在方括号内，且周围需有一个空格，例如 `[ $a == $b ]` 是正确的，而 `[$a== $b]` 是错误的。
+
+所有算术计算均使用长整型（long integers）。
+
+## 关系运算符
+
+Bourne Shell 支持以下关系运算符，它们仅适用于数值。这些运算符不适用于字符串值，除非其值为数字。例如，以下运算符检查 10 和 20 之间的关系，也检查 "10" 和 "20" 之间的关系，但不检查 "ten" 和 "twenty" 之间的关系。假设变量 a 持有 10，变量 b 持有 20：
+
+此示例使用了所有关系运算符：
+
+```sh
+#!/bin/sh
+
+a=10
+b=20
+
+if [ $a -eq $b ]
+then
+echo "$a -eq $b : a is equal to b"
+else
+echo "$a -eq $b: a is not equal to b"
+fi
+
+if [ $a -ne $b ]
+then
+echo "$a -ne $b: a is not equal to b"
+else
+echo "$a -ne $b : a is equal to b"
+fi
+
+if [ $a -gt $b ]
+then
+echo "$a -gt $b: a is greater than b"
+else
+echo "$a -gt $b: a is not greater than b"
+fi
+
+if [ $a -lt $b ]
+then
+echo "$a -lt $b: a is less than b"
+else
+echo "$a -lt $b: a is not less than b"
+fi
+
+if [ $a -ge $b ]
+then
+echo "$a -ge $b: a is greater or equal to b"
+else
+echo "$a -ge $b: a is not greater or equal to b"
+fi
+
+if [ $a -le $b ]
+then
+    echo "$a -le $b: a is less or equal to b"
+else
+    echo "$a -le $b: a is not less or equal to b"
+fi
+```
+
+输出结果：
+
+```text
+10 -eq 20: a is not equal to b
+10 -ne 20: a is not equal to b
+10 -gt 20: a is not greater than b
+10 -lt 20: a is less than b
+10 -ge 20: a is not greater or equal to b
+10 -le 20: a is less or equal to b
+```
+
+注意：
+- 操作符和表达式之间必须有空格，例如 `2+2` 是错误的，应写作 `2 + 2`。
+- **if…then…else…fi** 语句是决策语句，将在下一章解释。
+
+关系运算符表：
+
+| 运算符 | 描述 | 示例 |
+| :--- | :--- | :--- |
+| **-eq** | 检查两个操作数的值是否相等，如果是则条件为 true | `[ $a -eq $b ]` 不为 true |
+| **-ne** | 检查两个操作数的值是否相等，如果不等则条件为 true | `[ $a -ne $b ]` 为 true |
+| **-gt** | 检查左手操作数的值是否大于右手操作数的值，如果是则条件为 true | `[ $a -gt $b ]` 不为 true |
+| **-lt** | 检查左手操作数的值是否小于右手操作数的值，如果是则条件为 true | `[ $a -lt $b ]` 为 true |
+| **-ge** | 检查左手操作数的值是否大于或等于右手操作数的值，如果是则条件为 true | `[ $a -ge $b ]` 不为 true |
+| **-le** | 检查左手操作数的值是否小于或等于右手操作数的值，如果是则条件为 true | `[ $a -le $b ]` 为 true |
+
+请注意，所有条件表达式都必须放在方括号内，且周围需有一个空格，例如 `[ $a <= $b ]` 是正确的，而 `[$a <= $b]` 是错误的。
+
+## 布尔运算符
+
+Bourne Shell 支持以下布尔运算符。
+
+假设变量 ‘a’ 持有 10，变量 ‘b’ 持有 20：
+
+此示例使用了所有布尔运算符：
+
+```sh
+#!/bin/sh
+
+a=10
+b=20
+
+if [ $a != $b ]
+then
+    echo "$a != $b : a is not equal to b"
+else
+    echo "$a != $b: a is equal to b"
+fi
+
+if [ $a -lt 100 -a $b -gt 15 ]
+then
+    echo "$a -lt 100 -a $b -gt 15 : returns true"
+else
+    echo "$a -lt 100 -a $b -gt 15 : returns false"
+fi
+
+if [ $a -lt 100 -o $b -gt 100 ]
+then
+    echo "$a -lt 100 -o $b -gt 100 : returns true"
+else
+    echo "$a -lt 100 -o $b -gt 100 : returns false"
+fi
+
+if [ $a -lt 5 -o $b -gt 100 ]
+then
+    echo "$a -lt 5 -o $b -gt 100 : returns true"
+else
+  echo "$a -lt 5 -o $b -gt 100 : returns false"
+fi
+```
+
+输出结果：
+
+```text
+10 != 20 : a is not equal to b
+10 -lt 100 -a 20 -gt 15 : returns true
+10 -lt 100 -o 20 -gt 100 : returns true
+10 -lt 5 -o 20 -gt 100 : returns false
+```
+
+注意：
+- 操作符和表达式之间必须有空格，例如 `2+2` 是错误的，应写作 `2 + 2`。
+
+布尔运算符表：
+
+| 运算符 | 描述 | 示例 |
+| :--- | :--- | :--- |
+| ! | 逻辑否定。将 true 条件反转为 false，反之亦然 | `[ ! false ]` 为 true |
+| -o | 逻辑 OR。如果任一操作数为 true，则条件为 true | `[ $a -lt 20 -o $b -gt 100 ]` 为 true |
+| -a | 逻辑 AND。如果两个操作数均为 true，则条件为 true，否则为 false | `[ $a -lt 20 -a $b -gt 100 ]` 为 false |
+
+## 字符串运算符
+
+Bourne Shell 支持以下字符串运算符。
+
+假设变量 ‘a’ 持有 "abc"，变量 ‘b’ 持有 "efg"：
+
+此示例使用了所有字符串运算符：
+
+```sh
+#!/bin/sh
+
+a="abc"
+b="efg"
+
+if [ $a = $b ]
+then
+    echo "$a = $b : a is equal to b"
+else
+    echo "$a = $b: a is not equal to b"
+fi
+
+if [ $a != $b ]
+then
+    echo "$a != $b : a is not equal to b"
+else
+    echo "$a != $b: a is equal to b"
+fi
+
+if [ -z $a ]
+then
+    echo "-z $a : string length is zero"
+else
+    echo "-z $a : string length is not zero"
+fi
+
+if [ -n $a ]
+then
+    echo "-n $a : string length is not zero"
+else
+    echo "-n $a : string length is zero"
+fi
+
+if [ $a ]
+then
+    echo "$a : string is not empty"
+else
+    echo "$a : string is empty"
+fi
+```
+
+输出结果：
+
+```text
+abc = efg: a is not equal to b
+abc != efg : a is not equal to b
+-z abc : string length is not zero
+-n abc : string length is not zero
+abc : string is not empty
+```
+
+注意：
+- 操作符和表达式之间必须有空格，例如 `2+2` 是错误的，应写作 `2 + 2`。
+
+字符串运算符表：
+
+| 运算符 | 描述 | 示例 |
+| :--- | :--- | :--- |
+| = | 检查两个操作数的值是否相等，如果是则条件为 true | `[ $a = $b ]` 不为 true |
+| != | 检查两个操作数的值是否相等，如果不等则条件为 true | `[ $a != $b ]` 为 true |
+| -z | 检查给定字符串操作数的长度是否为零。如果长度为零则返回 true | `[ -z $a ]` 不为 true |
+| -n | 检查给定字符串操作数的长度是否非零。如果长度非零则返回 true | `[ -z $a ]` 不为 false (注：原文如此，意指 `[ -n $a ]` 的判断) |
+| **str** | 检查 str 是否为非空字符串。如果为空则返回 false | `[ $a ]` 不为 false |
+
+## 文件测试运算符
+
+以下运算符测试与 Unix 文件相关的各种属性。
+
+假设变量 `file` 持有现有的文件名 "test"，其大小为 100 字节，并具有读、写和执行权限：
+
+此示例使用了所有文件测试运算符：
+
+```sh
+#!/bin/sh
+
+file="/var/www/tutorialspoint/unix/test.sh"
+
+if [ -r $file ]
+then
+  echo "File has read access"
+else
+  echo "File does not have read access"
+fi
+
+if [ -w $file ]
+then
+  echo "File has write permission"
+fi
+```
