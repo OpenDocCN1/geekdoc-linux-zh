@@ -1,0 +1,165 @@
+
+[root@server postfix-2.8.7]# `cat /etc/init.d/postfix`
+
+```
+root@server postfix-2.8.7]# 运行启动脚本：
+```
+
+[root@server postfix-2.8.7]# `/etc/init.d/postfix start`
+
+```root@server postfix-2.8.7]# 运行停止脚本：
+```
+
+[root@server postfix-2.8.7]# `/etc/init.d/postfix stop`
+
+Postfix 的源码版本包含一个很好的 shell 脚本，可以为我们处理启动和关闭过程。为了保持一致性，你可以将其封装进标准的启动脚本，并通过 `chkconfig` 进行管理。利用第 6 章学到的技术，创建一个名为 `/etc/init.d/postfix` 的 shell 脚本。你可以使用以下代码列表作为 `postfix` 脚本：
+
+```bash
+#!/bin/sh
+
+# Postfix Start/Stop the Postfix mail system
+
+# chkconfig: 35 99 01
+
+# /etc/init.d/functions
+
+[ -f /usr/sbin/postfix ] || exit 0
+
+# 查看我们是如何调用的。
+
+case "$1" in
+
+start)
+
+    echo "正在启动 postfix..."
+
+    /usr/sbin/postfix start
+
+    echo "已完成"
+
+    ;;
+
+stop)
+
+    echo "正在停止 postfix..."
+
+    /usr/sbin/postfix stop
+
+    echo "已完成"
+
+    ;;
+
+*)
+
+    echo "用法: postfix start|stop"
+
+    exit 1
+
+esac
+```
+
+一旦二进制文件安装完成，就可以从启动脚本中禁用 Sendmail。你可以使用 `chkconfig` 命令来实现，如下：
+
+```
+[root@server postfix-2.8.7]# chkconfig sendmail off
+```
+
+## 在 Ubuntu 中通过 APT 安装 Postfix
+
+可以使用高级软件包工具 `APT` 在 Ubuntu 中安装 Postfix。与其它 Linux 发行版不同，Ubuntu 并没有预装任何配置好并运行的 MTA 软件。你需要显式地安装并设置它。要在 Ubuntu 中安装 Postfix MTA，请运行此命令：
+
+```
+master@ubuntu-server:-$ sudo apt-get -y install postfix
+```
+
+安装过程提供了多种 Postfix 配置选项的选择：
+
+- **无配置 (No configuration)**：此选项将保持当前配置不变。
+- **Internet 站点 (Internet site)**：直接使用 SMTP 发送和接收邮件。
+- **带智能主机的 Internet (Internet with smarthost)**：直接使用 SMTP 或运行 `fetchmail` 等工具接收邮件。发出的邮件使用 `smarthost` 发送。
+- **卫星系统 (Satellite system)**：所有邮件都发送到另一台称为 `smarthost` 的机器进行投递。
+- **仅本地 (Local only)**：唯一投递的邮件是给本地用户的。此选项不需要任何网络连接。
+
+我们将在示例 Ubuntu 服务器上使用第一种选项，**无配置 (No configuration)**。安装过程还会创建 Postfix 所需的用户名和组账户。
+
+## 从源码安装 Postfix
+
+首先从 `www.postfix.org` 下载 Postfix 源码。截至本文编写时，最新的稳定版本是 `postfix-2.8.7.tar.gz`。下载文件后，使用 `tar` 命令解压内容：
+
+```
+[root@server src]# tar xzvf postfix-2.8.7.tar.gz
+```
+
+一旦解压 Postfix，进入 `postfix-2.8.7` 目录并运行 `make` 命令（如果存在该目录）：
+
+```
+[root@server src]# cd postfix-2.8.7
+root@server postfix-2.8.7]# make
+```
+
+整个编译过程将需要几分钟，但它应该无故障地运行。
+请注意，如果编译步骤因无法找到 "`db.h`" 或任何其他类型的 "`db`" 引用而失败，那么很有可能是你的系统没有安装 Berkeley DB 开发工具。虽然可以编译 Berkeley DB 工具，但不建议这样做，因为 Postfix 使用的 DB 与其他系统库使用的 DB 不同，Postfix 将无法运行。要修复此，请使用 `Yum` 安装 `db4-devel` 包。具体命令如下：
+
+```
+# yum -y install db4-devel
+```
+
+由于 Postfix 可能会替换你的 Sendmail 程序，你可能想对 Postfix 二进制文件进行备份。操作方法如下：
+
+```
+[root@server postfix-2.8.7]# mv /usr/bin/sendmail /usr/sbin/sendmail.OFF
+root@server postfix-2.8.7]# mv /usr/bin/newaliases /usr/bin/newaliases.OFF
+root@server postfix-2.8.7]# mv /usr/bin/mailq /usr/bin/mailq.OFF
+```
+
+现在，你需要创建一个供 Postfix 运行的用户和用户组。你可能会发现某些发行版已经定义了这些账户。如果是这样，添加用户的过程将导致错误。
+
+```
+[root@server postfix-2.8.7]# useradd -M -d /home -s /sbin/shell postfix
+root@server postfix-2.8.7]# groupadd -r postfix
+root@server postfix-2.8.7]# groupadd -r postdrop
+```
+
+现在你已准备好执行 `make install` 来安装实际的软件。Postfix 包含一个交互式脚本，它会提示各项内容应该放置的位置值。只需在每个提示处直接按 ENTER 键即可保持默认设置。
+
+```
+[root@server postfix-2.8.7]# make install
+```
+
+二进制文件安装后，是时候从启动脚本中禁用 Sendmail 了。你可以使用 `chkconfig` 命令来实现，如下：
+
+```
+[root@server postfix-2.8.7]# chkconfig sendmail off
+```
+
+Postfix 的源码版本包含一个很好的 shell 脚本，可以为我们处理启动和关闭过程。为了保持一致性，你可以将其封装进标准的启动脚本，并通过 `chkconfig` 进行管理。利用第 6 章学到的技术，创建一个名为 `/etc/init.d/postfix` 的 shell 脚本。你可以使用以下代码列表作为 `postfix` 脚本：
+
+```bash
+#!/bin/sh
+
+# Postfix Start/Stop the Postfix mail system
+
+# chkconfig: 35 99 01
+
+# /etc/init.d/functions
+
+[ -f /usr/sbin/postfix ] || exit 0
+
+# 查看我们是如何调用的。
+
+case "$1" in
+
+start)
+
+    echo "正在启动 postfix..."
+
+    /usr/sbin/postfix start
+
+    echo "已完成"
+
+    ;;
+
+stop)
+
+    echo "正在停止 postfix..."
+```
