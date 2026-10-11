@@ -1471,6 +1471,7 @@
 +   [Microsoft Word - Linux  Java 编程](docs/microsoft-word---java-programming-on-linux----waite-group-pr/README.md)
 +   [Microsoft Word - 动词与肉体](docs/microsoft-word---o-verbo-e-a-carne/README.md)
 +   [中年幽灵猎人：超自然女性小说](docs/midlife-ghost-hunter-a-paranormal-womens-fiction/README.md)
++   [从 RedHat 迁移到 SUSE Linux Enterprise Server 10](docs/migrating-from-redhat-to-suse-linux-enterprise-server-10/README.md)
 +   [从 RedHat 迁移到 SUSE Linux Enterprise Server 10 管理手册](docs/migrating-from-redhat-to-suse-linux-enterprise-server-10-adm/README.md)
 +   [极小值图谱或患者成为行动者](docs/minima-cartographia-or-the-patient-becomes-the-agent/README.md)
 +   [MkLinux：适用于 Power Macintosh 的微内核 Linux：Apple Computer 发布的 Power Macintosh MkLinux 参考版本](docs/mklinux-microkernel-linux-for-the-power-macintosh-apple-comp/README.md)

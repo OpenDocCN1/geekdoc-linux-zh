@@ -1,0 +1,3 @@
+**1 HARDCOPY PERMITTED-NO DISTRIBUTION ALLOWED**
+
+*Copying all or part of this manual, or distributing such copies, is strictly prohibited. To report suspected copying, please call 1-800-PIRATES.*

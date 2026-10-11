@@ -1,0 +1,165 @@
+
+## initramfs
+
+在系统安装过程中，会创建一个包含适当模块的 initramfs，例如访问文件系统所需的模块。需要包含的模块列在 `/etc/sysconfig/kernel` 文件中的变量 **INITRD_MODULES=** 中。如果需要额外或不同的模块（例如由于硬件变更），您需要编辑模块列表，然后重新构建 initramfs。该命令与构建 initrd 的命令相同，即 **mkinitrd：**
+
+```
+dai10:~ # mkinitrd
+Root device: /dev/sda2 (mounted on / as reiserfs)
+Module list: piix aic7xxx sym53c8xx processor thermal
+fan reiserfs edd (xennet xenblk)
+
+Kernel image: /boot/vmlinuz-2.6.16.14-6-smp
+Initrd image: /boot/initrd-2.6.16.14-6-smp
+Shared libs: lib/ld-2.4.so lib/libacl.so.1.1.0
+lib/libattr.so.1.1.0 lib/libc-2.4.so lib/libdl-2.4.so
+lib/libhistory.so.5.1 lib/libncurses.so.5.5
+lib/libpthread-2.4.so lib/libreadline.so.5.1
+lib/librt-2.4.so lib/libuuid.so.1.2
+
+Driver modules: ide-core ide-disk scsi_mod sd_mod piix
+scsi_transport_spi aic7xxx sym53c8xx processor thermal fan
+edd
+
+Filesystem modules: reiserfs
+Including: initramfs fsck.reiserfs
+BootSplash: SuSE-SLES (1024x768)
+12765 blocks
+```
+
+> mkinitrd 的手册页列出了可以通过内核命令行传递给 initramfs 中 init 程序的参数。
+
+## init
+
+在检查分区并挂载根文件系统后，位于 initramfs 中的 init 程序将启动 /sbin/init，进而启动系统及其所有程序和配置。
+
+init 进程始终被分配进程 ID 号 1，并依赖 /etc/inittab 文件获取关于如何运行初始化过程的配置信息。
+
+一旦 init 进程启动，它首先访问 /etc/init.d/boot 脚本。/etc/init.d/boot 脚本控制服务（如初始化磁盘配额和挂载本地文件系统）的启动，并执行 /etc/init.d/boot.d/ 中的 Sxx 脚本。
+
+当 boot 脚本执行完成后，init 启动 /etc/init.d/rc 脚本，该脚本使用配置的运行级别来启动服务和守护进程。
+
+每个运行级别都有自己的服务集合。例如，运行级别 5 包括运行 Linux 桌面的 X Window 组件。
+
+![](img/63e88022bf135307e3eac051ad238b5b_227_0.png)
+
+> 有关 init 的更多详细信息，请参见第 5-23 页的“管理运行级别”。
+
+## 目标 2
+
+### GRUB (Grand Unified Bootloader)
+
+RHEL 和 SLES 10 都将 GRUB 作为其默认引导加载程序。
+
+要管理 GRUB（Grand Unified Bootloader），您需要了解以下内容：
+
+- 什么是引导管理器
+- SUSE Linux 中的引导管理器
+- 启动 GRUB Shell
+- 修改 GRUB 配置文件
+- 使用 YaST 配置 GRUB
+- 直接以 Shell 模式启动系统
+
+#### 什么是引导管理器
+
+要启动系统，您需要一个能够加载相应操作系统到内存中的程序。这个被称为 *引导加载程序* 的程序负责加载操作系统内核，然后由内核加载系统。
+
+在执行加电自检（POST）之后，PC BIOS 会在 BIOS 中配置的各种介质中搜索引导加载程序。如果找到引导加载程序，BIOS 会将引导过程的控制权移交给引导加载程序。
+
+引导加载程序随后会在硬盘上定位操作系统文件并启动操作系统。
+
+*引导管理器* 不仅是一个引导加载程序，还可以处理多个操作系统。如果存在多个操作系统，引导管理器将显示一个菜单，允许您选择要加载的具体操作系统。
+
+Linux 引导管理器可用于加载 Linux 或其他操作系统，例如 Microsoft Windows。
+
+GRUB 采用以下两阶段架构设计：
+
+- **阶段 1。** 引导加载程序的第一阶段通常安装在硬盘的主引导记录（MBR）中（第一阶段引导加载程序）。
+  - 由于 MBR 的空间限制在 446 字节，因此这段程序代码仅包含加载下一阶段的信息。
+  - 阶段 1 可以安装在 MBR、分区引导扇区或软盘中。
+- **阶段 2。** 这个阶段通常包含实际的引导加载程序。第二阶段引导加载程序的文件位于 /boot/ 目录中。
+
+#### SUSE Linux 中的引导管理器
+
+SUSE Linux Enterprise Server 为 Linux 环境提供 2 个引导管理器：GRUB（Grand Unified Bootloader）和 LILO（Linux LOader）。
+
+为了更好地理解这些引导管理器，您需要了解以下内容：
+
+- GRUB 引导管理器
+- LILO 引导管理器
+- 映射文件、GRUB 和 LILO
+
+#### GRUB 引导管理器
+
+GRUB 是 SUSE Linux Enterprise Server 的标准引导管理器。GRUB 的一些特殊功能如下：
+
+- 文件系统支持。阶段 2 包含 ReiserFS、ext2、ext3、Minix、JFS、XFS、FAT 和 FFS（BSD）的文件系统驱动程序。因此，即使操作系统尚未加载，引导管理器也可以通过文件名访问文件。
+
+  当引导管理器配置出现故障且您需要搜索并加载内核时，此功能非常有用。
+
+- 交互式控制。GRUB 拥有自己的 shell，允许交互式控制引导管理器。
+
+#### LILO 引导管理器
+
+由于 LILO 不是 SUSE Linux Enterprise Server 的默认引导管理器，因此本节仅简要介绍。
+
+LILO 配置文件是 /etc/lilo.conf。其结构与 GRUB 配置文件相似。
+
+> 修改配置文件 /etc/lilo.conf 后，您需要输入命令 **lilo** 才能使更改生效。
+>
+> 在移动硬盘上的内核或 initrd 时，也需要使用 lilo 命令。
+
+#### 映射文件、GRUB 和 LILO
+
+启动操作系统的主要障碍在于，内核通常是磁盘上某个分区文件系统中的文件。BIOS 并不了解这些概念。为了解决这个问题，引入了映射和映射文件。
+
+这些映射简单地记录了组成逻辑文件的物理块号。当处理此类映射时，BIOS 会按映射中记录的顺序加载所有物理块，从而在内存中构建逻辑文件。
+
+与完全依赖映射的 LILO 不同，GRUB 试图在早期阶段摆脱对固定映射的依赖。GRUB 通过文件系统代码实现这一点，从而可以使用路径规范而不是块号来访问文件。
+
+![](img/63e88022bf135307e3eac051ad238b5b_231_0.png)
+
+有关 GRUB 和 LILO 的更多信息，可以在各自的手册页、info 页以及 /usr/share/doc/packages/grub 和 /usr/share/doc/packages/lilo 中找到。
+
+#### 启动 GRUB Shell
+
+由于 GRUB 拥有自己的 shell，如果 Linux 系统因引导管理器中的错误而无法启动，您可以手动启动系统。
+
+启动 GRUB shell 有两种方法：
+
+- 在运行中的系统中启动 GRUB Shell
+- 在启动提示符处启动 GRUB Shell
+
+##### 在运行中的系统中启动 GRUB Shell
+
+要在系统运行期间启动 GRUB shell，请以 root 身份输入命令 grub。随后将显示以下内容：
+
+```
+GNU GRUB version 0.94 (640K lower / 3072K upper memory)
+
+[ Minimal BASH-like line editing is supported. For the first word, TAB
+lists possible command completions. Anywhere else TAB lists the
+possible completions of a device/filename. ]
+grub>
+```
+
+与 bash shell 一样，您可以使用 Tab 键补全 GRUB shell 命令。若要查看哪个分区包含内核，请输入命令 find，如下所示：
+
+```
+grub> find /boot/vmlinuz
+(hd0,2)
+grub>
+```
+
+在此示例中，内核（/boot/vmlinuz）位于第一块硬盘的第三个分区（hd0,2）中。
+
+输入 quit 即可关闭 GRUB shell。
+
+##### 在启动提示符处启动 GRUB Shell
+
+请按照以下步骤在启动提示符处启动 GRUB shell：
+
+1. 在图形化引导选择菜单中，按 Esc。
+   将出现文本菜单。
+2. 输入 c（美式键盘布局）以启动 GRUB shell。
+
