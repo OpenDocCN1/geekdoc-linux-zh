@@ -1114,6 +1114,7 @@
 +   [Linux Magazine USA - 第 263 期 - 2022年10月](docs/linux-magazine-usa---issue-263---october-2022/README.md)
 +   [Linux Magazine USA 2025年8月刊](docs/linux-magazine-usa-august-2025/README.md)
 +   [Linux 杂志（美国版）_ 2024年12月](docs/linux-magazine-usa-december-2024/README.md)
++   [Linux恶意软件事件响应： volatile数据取证收集与检查实践者指南： Linux系统恶意软件取证场指南节选](docs/linux-malware-incident-response-a-practitioners-guide-to-for/README.md)
 +   [Linux Mandrake 用户指南](docs/linux-mandrake-user-guide/README.md)
 +   [Linux 精通：100+ 技能构建练习](docs/linux-mastery-100-exercises-for-building-your-skills/README.md)
 +   [Linux 精通：初学者及进阶全面指南](docs/linux-mastery-a-comprehensive-guide-for-beginners-and-beyond/README.md)
