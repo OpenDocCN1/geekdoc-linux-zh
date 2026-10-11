@@ -1524,6 +1524,7 @@
 +   [Novell Linux 认证实践实验室手册](docs/novell-linux-certification-practicum-lab-manual-novell-press/README.md)
 +   [Novell Linux Desktop 9 管理员手册：包含索引](docs/novell-linux-desktop-9-administrators-handbook-includes-inde/README.md)
 +   [Novell Linux 桌面 9：用户手册 - 附赠 DVD - 包含索引](docs/novell-linux-desktop-9-users-handbook---accompanied-by-suppl/README.md)
++   [Novell Nterprise Linux 服务课程 3015 教师指南，第 2 卷](docs/novell-nterprise-linux-services-course-3015-instructor-guide/README.md)
 +   [Novell Open Enterprise Server 管理员手册：SUSE Linux 版](docs/novell-open-enterprise-server-administrators-handbook-suse-l/README.md)
 +   [Novell ZENworks 7 Linux 管理员手册](docs/novell-zenworks-7-linux-management-administrators-handbook-n/README.md)
 +   [NW.js 精要：使用最新 Web 技术构建适用于 Windows、Mac OS 或 Linux 的原生桌面应用程序](docs/nwjs-essentials-build-native-desktop-applications-for-window/README.md)
