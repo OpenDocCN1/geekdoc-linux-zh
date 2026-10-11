@@ -1633,6 +1633,7 @@
 +   [IBM system Z 上从 x86 到 Linux 的实用迁移指南](docs/practical-migration-from-x86-to-linux-on-ibm-system-z/README.md)
 +   [实用数据包分析：使用 Wireshark 解决真实网络问题](docs/practical-packet-analysis-using-wireshark-to-solve-real-worl/README.md)
 +   [PHP 和 MySQL 实用指南：构建八个动态 Web 应用程序](docs/practical-php-and-mysqlr-building-eight-dynamic-web-applicat/README.md)
++   [Raspberry Pi 实用项目 第1卷：Raspberry Pi 实用指南](docs/practical-raspberry-pi-projects-volume-1-get-hands-on-with-y/README.md)
 +   [Practical Unix：内容概览](docs/practical-unix-contents-at-a-glance/README.md)
 +   [Practical UNIX 实用指南](docs/practical-unix-practical/README.md)
 +   [实用虚拟化解决方案：实战经验总结](docs/practical-virtualization-solutions-virtualization-from-the-t/README.md)

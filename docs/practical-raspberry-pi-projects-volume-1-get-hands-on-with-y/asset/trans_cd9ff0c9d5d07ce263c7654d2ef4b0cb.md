@@ -1,0 +1,209 @@
+
+# 组装一只《我的世界》超能力手套
+
+使用树莓派，然后将此 IP 地址输入到这段代码中：`mc = minecraft.Minecraft.create()`。例如，`mc = minecraft.Minecraft.create("192.168.2.234")`，将另一个树莓派在游戏内的 IP 地址填入空括号中。请记住，这是另一位玩家的树莓派的 IP 地址，而不是你自己的 IP 地址。
+
+## 14 查找你的 IP 地址
+
+要查找树莓派的 IP 地址，请打开 LX 终端，输入 `ifconfig` 并按下 `Enter` 键——地址将显示在以 `inet_addr` 开头的行上。这就是你要输入到 `mc = minecraft.Minecraft.create("192.168.2.234")` 中的数字。请记住，在手套树莓派上，要输入另一位玩家的树莓派的 IP 地址，而不是你自己的。
+
+## 15 运行两个程序
+
+没有健康竞争和策略的游戏是不完整的。第二个程序部署在网络上另一位玩家的设备上，用于跟踪并记录他们是否击中或攻击了你。该程序会检查他们击中的方块，并将其与玩家的位置进行比较。
+
+![](img/a1548a579bd09ff29b2b92de3f565e63_128_0.png)
+
+## 16 测试命中情况
+
+要检查另一位玩家是否击中了你，请在进行追逐的玩家树莓派上运行第二个程序。该程序基本上会找到另一位“手套”玩家的当前位置并将其存储在一个变量中。然后，它会将你被剑击中的位置记录下来并存储。随后程序会比较这些数值。如果它们匹配，说明你击中了另一位玩家并赢得了游戏。如果不匹配，请准备好进行超能力的互换吧。请注意，为了监控另一位玩家的位置，你必须将代码行 `mc1 = minecraft.Minecraft.create()` 设置为手套树莓派的 IP 地址；例如，`mc1 = minecraft.Minecraft.create("192.168.1.251")`。
+
+## 17 游戏开始
+
+现在你可以准备开始游戏了，再次检查 IP 地址是否设置为对方的树莓派，而不是你自己的。创建一个全新的《我的世界》世界，并在负责追逐的玩家树莓派上开始新游戏。加载完成后，手套玩家加入多人游戏——这将是 Steve（参见步骤 11）。加载完成后，你应该能在世界中看到两名玩家。然后运行“树莓派手套超能力”程序，并在另一台树莓派上运行“你击中我了程序”。别忘了将 IP 地址设置为对方的树莓派。
+
+设置完成后，你可以修改超能力动作，使用不同的方块并添加新招式。你可以创建一个计时器和评分系统来追踪哪位玩家能存活最久。如果你感到冒险，你可以想为每位玩家制作另一只超能力手套。
+
+> 程序会比较这些数值，如果匹配，说明你击中了另一位玩家并赢得了游戏。如果不匹配，请准备好进行超能力的互换吧。
+
+### PiGlovePowerMoves.py (续)
+
+```python
+#Main code to run
+try:
+    lava_check = 0
+    mc.postToChat("Minecraft Power Glove Enabled")
+    while True:
+        if GPIO.input(L7) == 0:
+            Firewall()
+        if GPIO.input(L8) == 0:  #Needs to stop
+            Lay_Lava()
+
+        #GPIO.output(L10, GPIO.LOW)
+
+        if GPIO.input(L3) == 0:
+            Mega_Jump()
+
+        if GPIO.input(L1) == 0:
+            Mega_Water_Puddle()
+
+except:
+    print("Error")
+```
+
+### YouWereHit.py
+
+```python
+import time
+from mcpi import minecraft
+
+mc1 = minecraft.Minecraft.create("192.168.1.245")
+#The other players IP address goes here
+
+mc = minecraft.Minecraft.create()
+mc.postToChat("####Here I come")
+Hit = 1
+
+while Hit == 1:
+
+    #Find the block stood on
+    stood_x, stood_y, stood_z = mc1.player.getPosition()
+    time.sleep(0.1)
+
+    blockHits = mc.events.pollBlockHits()
+    if blockHits:
+        for blockHit in blockHits:
+            if stood_z == blockHit.pos.z and stood_y == blockHit.pos.y+1:
+                mc.postToChat("I got you")
+                time.sleep(1)
+                mc.postToChat("###GAME OVER###")
+                time.sleep(1)
+                Hit = 0
+                mc.postToChat("####Restart Hit Code")
+```
+
+![](img/a1548a579bd09ff29b2b92de3f565e63_129_0.png)
+
+![](img/a1548a579bd09ff29b2b92de3f565e63_129_1.png)
+
+# 你将需要的东西
+
+- 面包板和导线
+- 16x16 LED 矩阵
+- 2x 74HC238
+- 2x 74HC244
+- 16x 220 欧姆电阻
+
+# 构建复杂的 LED 矩阵
+
+LED 矩阵显示系统的应用随处可见，从花哨的烤肉店到令人印象深刻的蒸汽朋克风格系统。
+
+高效驱动 LED 本身也是一门科学。单板计算机的普及使得这项技术触手可及。
+
+## 01 思考 LED
+
+在处理 LED 显示时，必须考虑两种不同的系统。我们将重点介绍传统的基于矩阵的系统，它们由一个或多个 LED 组成。其低廉的价格使它们非常适合经典显示应用：它们传达货币价格，为股票经纪人提供交易大厅的更新，甚至曾被用作原始示波器的基本显示器。
+
+标准化。LED 很原始——当电流通过时它们就会发光。驱动几个 LED 就像将它们与电阻一起连接到 GPIO 引脚一样简单。遗憾的是，一旦涉及超过几个 LED，这种方法就会变得浪费——驱动 16 个二极管会占用 16 个引脚。
+
+## 02 排列你的二极管
+
+最后，我们还将为您提供电子学基础知识的概览。这个教程比我们要之前介绍的要稍微高级一些，而且值得注意的是，我们将使用 C 语言而不是 Python 进行编程。请使用上述代码列表跟随操作。
+
+人们想出了减少所需引脚数量的方法。基于矩阵的系统对单个二极管的故障具有韧性，并提供 n=(n/2)^2 的引脚与 LED 比率。以下步骤假设使用根据图 A 制造的 16x16 LED 矩阵。由于 LED 只允许电流单向流动，你可以通过将相应的引脚设置为高电平和低电平来启用单个 LED。
+
+![](img/a1548a579bd09ff29b2b92de3f565e63_130_0.png)
+
+上方：该原理图的扩展版本在 File5ilo.co.uk 中——只需登录并前往 Issue #191 页面
+
+## 03 利用 MUX
+
+我们的 LED 模块总共有 32 个输入，这会让旧版本的树莓派不堪重负。限制其数量的第一种形式是 74HC238，这是一个描述为 3 对 8 线解码器/分路器的组件。其功能描述在下一页的图 B 图像中。
+
+## 04 分离关注点
+
+第二个芯片名为 74HC244，描述为具有三态能力的八位缓冲器。三态输出在物理上可以自行断开与总线线的连接。这允许你将它们的输出连接在一起，而无需担心短路。只要除一个芯片外的所有芯片都处于三态模式，电流就无法在高电平和低电平输出引脚之间流动。
+
+## 05 把它们收集起来
+
+四个 GPIO 引脚控制当前启用的显示“行”。三个引脚配置要发出的地址，而从第四个引脚发出的信号连接到活动输入。这确保只有一个 IC 处于活动状态。74HC244 确保在任一时刻只有两组中的一组处于活动状态。
+
+## 06 配置引脚
+
+我们使用了 Hussam Al-Hertani 的 Herzwillie 博客（herzwillie.com/2014/07/07/rpimmappgpio）上的一个库。第一步涉及设置输出功能。由于 GPIO 被设置为输出，三态功能可能会将内部状态连接到 IC 的输出引脚。如果输出没有关闭，这可能导致内部短路。
+
+### 完整代码列表
+
+```c
+#include "GnammpGpio.h"
+#include <unistd.h>
+#include <stdio.h>
+
+#define PINA0   2 // 3
+#define PINA1   3 // 5
+#define PINA2   4 // 7
+#define PINA3   14 // 8
+#define PINC0   17 // 11
+#define PINC1   18 // 12
+
+#define PIND0   23 // 16
+#define PIND1   24 // 18
+#define PIND2   10 // 19
+#define PIND3   9 // 21
+#define PIND4   25 // 22
+#define PIND5   11 // 23
+#define PIND6   8 // 24
+#define PIND7   7 // 26
+```
+
+```c
+void setAddress(unsigned char _which, mmapGpio* _where)
+{
+    if(_which&1)
+    {
+        _where->writePinHigh(PINA0);
+    }
+    else
+    {
+        _where->writePinLow(PINA0);
+    }
+    if(_which&2)
+    {
+        _where->writePinHigh(PINA1);
+    }
+    else
+    {
+        _where->writePinLow(PINA1);
+    }
+    if(_which&4)
+    {
+        _where->writePinHigh(PINA2);
+    }
+    else
+    {
+        _where->writePinLow(PINA2);
+    }
+    if(_which&8)
+    {
+        _where->writePinHigh(PINA3);
+    }
+    else
+    {
+        _where->writePinLow(PINA3);
+    }
+}
+```
+
+```c
+void safelySetRow(unsigned char _which, mmapGpio* _where)
+{
+    _where->writePinHigh(PINC0);
+    _where->writePinHigh(PINC1);
+    if(_which==0)
+    {
+        _where->writePinLow(PINC0);
+    }
+    else
+    {
+    }
+}
+```

@@ -1,0 +1,111 @@
+# BUILD A COMPLEX LED MATRIX
+
+Our LED model has a total of 32 inputs, which overwhelms older versions
+
+![](bbox=[0.11, 0.25, 0.44, 0.48])
+
+Above The extended version of this schematic is inside File5ilo.co.uk — just sign in and head to the Issue #191 page
+
+# 03 Harness the MUX
+
+Our LED module has a total of 32 inputs, which overwhelms older versions of the Raspberry Pi. The first way to restrict their number comes in the shape of the 74HC238, a component described as a 3-to-8 line decoder/demultiplexer. Its function is described in the Figure B image on the next page.
+
+# 04 Separate concerns
+
+Chip two goes by the name of 74HC244, which is described as an octal buffer with tri-state capability. Tri-State outputs can physically disconnect themselves from the bus line. This permits you to tie their outputs together without fear of short circuits. As long as all but one chip are in tri-state mode, no current can flow between high and low output pins.
+
+# 05 Round them up
+
+Four GPIO pins control the currently-enabled 'line' of the display. Three pins configure the address which is to be emitted, while the signal emitted from the fourth pin is connected to the activity inputs. This ensures that but one IC is active. The 74HC244 ensures that but one of the two groups is active at any given time.
+
+# 06 Configure the pins
+
+We used a library from Hussam Al-Hertani's HertaWille blog (herzwillie.com/2014/07/07/rpimmappgpio). The first step involves setting output functions. As the GPIOs are set to outputs, the tri-state feature might connect the internal state to the output pins of the IC. This could lead to internal shorting if the output is not turned off.
+
+# Full code listing
+
+```
+Step 12
+```c
+#include "GnammpGpio.h"
+#include <unistd.h>
+#include <stdio.h>
+
+#define PINA0   2 // 3
+#define PINA1   3 // 5
+#define PINA2   4 // 7
+#define PINA3   14 // 8
+#define PINC0   17 // 11
+#define PINC1   18 // 12
+
+#define PIND0   23 // 16
+#define PIND1   24 // 18
+#define PIND2   10 // 19
+#define PIND3   9 // 21
+#define PIND4   25 // 22
+#define PIND5   11 // 23
+#define PIND6   8 // 24
+#define PIND7   7 // 26
+```
+```
+
+```
+Step 07
+```c
+void setAddress(unsigned char _which, mmapGpio* _where)
+{
+    if(_which&1)
+    {
+        _where->writePinHigh(PINA0);
+    }
+    else
+    {
+        _where->writePinLow(PINA0);
+    }
+    if(_which&2)
+    {
+        _where->writePinHigh(PINA1);
+    }
+    else
+    {
+        _where->writePinLow(PINA1);
+    }
+```
+```
+
+```
+```c
+if(_which&4)
+{
+    _where->writePinHigh(PINA2);
+}
+else
+{
+    _where->writePinLow(PINA2);
+}
+if(_which&8)
+{
+    _where->writePinHigh(PINA3);
+}
+else
+{
+    _where->writePinLow(PINA3);
+}
+```
+```
+
+```
+Step 08
+```c
+void safelySetRow(unsigned char _which, mmapGpio* _where)
+{
+    _where->writePinHigh(PINC50);
+    _where->writePinHigh(PINC51);
+    if(_which==0)
+    {
+        _where->writePinLow(PINC50);
+    }
+    else
+    {
+```
+```
