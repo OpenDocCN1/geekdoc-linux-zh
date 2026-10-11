@@ -1531,6 +1531,7 @@
 +   [OCP：Oracle9i DBA 基础 II 学习指南](docs/ocp-oracle9i-dba-fundamentals-ii-study-guide/README.md)
 +   [OCP：Oracle9i DBA 基础 II学习指南：考试 1Z0-032](docs/ocp-oracle9i-dba-fundamentals-ii-study-guide-exam-1z0-032/README.md)
 +   [OCP：Oracle9i 性能调优学习指南：[EXAM 1Z0-033]](docs/ocp-oracle9i-performance-tuning-study-guide-exam-1z0-033/README.md)
++   [OCP：Oracle 9i 性能调优学习指南（附CD）](docs/ocp-oracle9i-performance-tuning-study-guide-with-cdrom/README.md)
 +   [Octa Marathon 题库：C++ 认证专业程序员：最后冲刺指南](docs/octa-marathon-dump-c-certified-professional-programmer-last-/README.md)
 +   [Fedora 官方指南：Fedora 项目指南](docs/official-fedora-companion-your-guide-to-the-fedora-project/README.md)
 +   [Intel 电脑官方 Redhat Linux 6.1 操作系统](docs/official-redhat-linux-61-operating-system-for-intel-computer/README.md)

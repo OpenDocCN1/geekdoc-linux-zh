@@ -1,0 +1,181 @@
+
+
+## 关键术语
+
+在参加考试之前，请确保你熟悉以下术语：
+
+- 警告日志
+- BACKGROUND_DUMP_DEST
+- 数据字典视图
+- 数据库事件
+- 动态性能视图
+- Fixit Job
+- 图形用户界面（GUI）
+- MAX_DUMP_FILE_SIZE
+- 最佳灵活架构（OFA）
+- Oracle 诊断包
+- Oracle 企业管理器（OEM）
+- Oracle 专家
+- Oracle 智能代理
+- 性能管理器
+- SQL 分析
+- STATSPACK
+- TopSessions
+- 跟踪数据查看器
+- 跟踪文件
+- USER_DUMP_DEST
+- UTLBSTAT.SQL
+- UTLSTAT.SQL
+
+## 复习题
+
+1. 警告日志不包含以下哪项信息？
+    - A. 实例启动和关闭。
+    - B. 新数据库用户的创建。
+    - C. 重做日志切换。
+    - D. 以上所有都在警告日志中。
+
+2. 以下哪些视图可用于确定哪个用户生成了特定的用户跟踪文件？（选择所有适用项。）
+    - A. V$SYSTEM
+    - B. V$SESSION
+    - C. V$USER
+    - D. V$PROCESS
+
+3. 以下哪个 `init.ora` 参数会在实例级别激活跟踪？
+    - A. TRACE_ON
+    - B. TRACE_SQL
+    - C. SQL_FILE
+    - D. SQL_TRACE
+
+4. 以下哪个 Oracle 提供的 PL/SQL 包可用于激活另一个用户的会话跟踪？
+    - A. DBMS_SYSTEM
+    - B. DBMS_SESSION
+    - C. DBMS_TRACE
+    - D. DBMS_UTILITY
+
+5. 以下哪个视图包含有关整体系统统计信息的信息，包括之前和当前连接的统计信息？
+    - A. V$SGASTAT
+    - B. V$STATNAME
+    - C. V$SESSSTAT
+    - D. V$SYSSTAT
+
+6. 哪个 DBA 视图会显示单个表的存储、行和块信息？
+    - A. DBA_TABLES
+    - B. DBA_OBJECTS
+    - C. DBA_TABLE_SIZE
+    - D. DBA_TAB_PRIVS
+
+7. 由 UTLBSTAT.SQL 和 UTLESTAT.SQL 生成的文件名称是什么？
+    - A. REPORT.TXT
+    - B. REPORT.LOG
+    - C. REPORT.LST
+    - D. REPORT.SQL
+
+8. 在每个 Oracle 服务器上运行，用于管理作业并监视该节点上事件的自治进程被称为：
+    - A. Oracle 网络监听器
+    - B. 企业管理器控制台
+    - C. 智能代理
+    - D. 数据收集器
+
+9. 以图形方式实时记录和报告数据库性能统计信息的 OEM 图形用户界面工具被称为：
+    - A. TopSessions
+    - B. 性能管理器
+    - C. 跟踪数据查看器
+    - D. 容量规划器
+
+10. 收集性能数据、分析该数据并做出适当调优建议的图形用户界面工具叫什么？
+    - A. SQL 分析
+    - B. Oracle 专家
+    - C. 跟踪专家
+    - D. SQL 专家
+
+11. 当你使用 UTLBSTAT/UTLESTAT 时，如果你想要准确的统计信息，应该避免做什么？
+    - A. 断开与启动 UTLBSTAT 实用程序进程的连接。
+    - B. 停止并启动 Oracle 实例。
+    - C. 停止 Oracle 代理。
+    - D. 这些都不会对该实用程序造成问题。
+
+12. 拥有 STATSPACK 实用程序使用的所有对象的模式（Schema）名称是什么？
+    - A. PERFSTAT
+    - B. DBSNMP
+    - C. SYS
+    - D. SYSTEM
+
+13. STATSPACK 相比 UTLBSTAT/UTLESTAT 的优势是什么？
+    - A. 每次运行过程后统计信息不会被删除。
+    - B. 可以在任何两个快照时间点之间生成性能统计信息。
+    - C. STATSPACK 报告比 UTLBSTAT/UTLESTAT 的输出清晰得多。
+    - D. 这些全是优势。
+
+14. SPAUTO.SQL 脚本执行什么操作？
+    - A. 生成 STATSPACK 报告
+    - B. 使用 STATSPACK 手动收集数据库统计信息的方法
+    - C. 使用 STATSPACK 自动收集数据库统计信息的方法。
+    - D. 以上都不是
+
+15. 以下哪个 Oracle 企业管理器组件可以生成调优建议列表？
+    - A. 智能代理
+    - B. 性能管理器
+    - C. Oracle 专家
+    - D. Oracle 管理服务器
+
+16. Enterprise Manager 监视的每个服务器节点上最多可以运行多少个智能代理进程？
+    - A. 一个
+    - B. 两个
+    - C. 四个
+    - D. 取决于 CPU 的数量
+
+17. “监视用户会话活动，包括资源消耗和锁定”最准确地描述的是什么实用工具？
+    - A. 容量规划器
+    - B. TopSessions
+    - C. 跟踪数据查看器
+    - D. 性能管理器
+
+18. 开发人员编写了一个未最佳调整的查询。DBA 可以使用什么实用工具协助开发人员调整此查询？
+    - A. STATSPACK
+    - B. 容量规划器
+    - C. UTLBSTAT/UTLESTAT
+    - D. SQL 分析
+
+19. 一位 DBA 进行了系统监视，并有一些关于可以改进系统性能的数据库变更想法。可以使用什么实用工具来支持她的发现并增强她建议的可信度？
+    - A. STATSPACK
+    - B. Oracle 专家
+    - C. REPORT.TXT
+    - D. 智能代理
+
+20. 智能代理使用哪个用户连接到数据库？
+    - A. DBSNMP
+    - B. SYS
+    - C. SYSTEM
+    - D. PERFSTAT
+
+21. 可以使用哪个图形用户界面工具来监视哪些用户正在发出资源密集型最高的 SQL 语句？
+    - A. Top SQL
+    - B. 锁定监视器
+    - C. 索引调优向导
+    - D. 跟踪数据查看器
+
+## 复习题答案
+
+1. B. 警告日志不包含任何用户信息。
+2. B, D. 联接 `V$SESSION` 和 `V$PROCESS` 视图可以将用户名与进程 ID 关联起来。此进程 ID 包含在用户的跟踪文件名中。
+3. D. 将 `init.ora` 参数 `SQL_TRACE` 设置为 `TRUE` 将为连接到实例的每个会话激活跟踪。
+4. A. `DBMS_SYSTEM` 中的 `SET_SQL_TRACE_IN_SESSION` 过程用于使用来自 `V$SESSION` 的用户的 `sid` 和 `serial#` 在另一个用户的会话中激活跟踪。
+5. D. `V$SYSSTAT` 显示自实例启动以来所有当前和历史会话的整体系统统计信息。
+6. A. 一旦进行分析，表的存储利用率、块使用和行长度信息可以在 `DBA_TABLES` 中找到。
+7. A. `UTLSTAT.SQL` 脚本通过对由 `UTLBSTAT.SQL` 创建的表中的 `stat$bg` 和由 `UTLESTAT.SQL` 创建的 `stat$ses`nd 表执行计算，生成 `REPORT.TXT` 文件。
+8. C. Oracle 智能代理在每个包含 Oracle 数据库的节点上运行。代理代表 Oracle 企业管理器控制台监视该节点上的数据库。
+9. B. OEM 性能管理器图形用户界面工具以图形格式显示数据库性能数据。
+10. B. Oracle 专家工具在做出调优建议之前，会根据你的规范分析数据库统计信息。
+11. B. 使用 `UTLBSTAT`/`UTLESTAT` 实用程序时，不应停止并重新启动实例。这将使已收集的任何统计信息失效。
+12. A. `PERFSTAT` 模式拥有 `STATSPACK` 实用程序使用的所有对象。
+13. D. 这些都是 STATSPACK 相比 UTLBSTAT/UTLESTAT 的优势。因为此信息存储在 Oracle 数据库中，并且在 STATSPACK 过程的执行之间不会被删除，所以可以查询并在任何时间段内保留。此外，报告更容易理解。
+14. C. SPAUTO.SQL 提供了执行 STATSPACK 实用程序的自动化方式。该脚本使用 Oracle 的 DBMS_JOBS 包来安排快照统计数据收集。
+15. C. Oracle 专家 OEM 组件可以生成一份冗长的报告，其中包含所选分析领域的调优建议。
+16. A. 每个 Oracle 服务器节点上的智能代理进程最大数量为一个。
+17. B. TopSessions 实用工具是 Oracle 企业管理器诊断包的一部分，可用于监视用户会话活动，包括资源消耗和锁定。
+18. D. DBA 将使用 SQL 分析实用工具帮助开发人员处理该查询。此实用工具特别适用于有问题的 SQL 语句调优。
+19. B. 可以 Oracle 专家实用工具作为帮助 DBA 发现性能瓶颈的工具；它还建议对系统进行更改以提高性能。这是一个有价值的工具，可用于验证 DBA 自己的分析。
+20. A. 每个节点上的智能代理进程以用户 DBSNMP 的身份连接到该节点上的数据库。
+21. A. Oracle 企业管理器诊断包中的 Top SQL 组件显示了哪些应用程序用户正在消耗最多的服务器资源。
+

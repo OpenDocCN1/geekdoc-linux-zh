@@ -1,0 +1,106 @@
+
+# 图 9.6 Oracle 锁机制示例
+
+![](img/832fbc6aca8b6075843ca6f2356c0a8d_521_0.png)
+
+> 如果需要更严格的表级锁，可以将 `init.ora` 参数 **ROW_LOCKING** 设置为 **INTENT** 值。该参数的默认值为 **ALWAYS**，这将产生行级锁。
+
+Oracle 使用两种锁类型来执行其锁定操作：*DML 或数据锁* 和 *DDL 或字典锁*。在执行这些锁定功能时，Oracle 还使用两种不同的锁定模式来实现数据并发和数据一致性目标。第一种模式，*排他模式*，限制最严格。*排他锁* 会将资源锁定，直到持有该锁的事务完成为止。当资源处于排他模式锁定时，其他用户无法修改该资源。第二种锁模式，*共享锁*，限制最少。*共享锁* 锁定资源，但允许其他用户也在同一资源上获取额外的共享锁。以下章节将讨论这些锁类型和模式。
+
+# Oracle 目标
+
+定义锁的级别
+
+DML 锁
+
+DML 或数据锁由 TM 表示，用于在用户执行 INSERT、UPDATE 和 DELETE 命令时锁定表。数据锁可以是表级的，也可以是行级的。每个在表上执行 DML 的用户实际上都会获得两个表锁：一个表级的共享锁和一个行级的排他锁。这两个锁是隐式的，这意味着 Oracle 为用户执行锁定操作。在执行 DML 命令时也可以获取显式锁。显式锁需要手动请求指定的锁类型。表 9.3 比较了 DML 锁使用的模式。
+
+# 表 9.3 Oracle DML 锁模式比较
+
+| 锁类型 | 锁模式 (锁符号) | 命令 | 描述 |
+| :--- | :--- | :--- | :--- |
+| 隐式 | 行独占 (RX) | INSERT, UPDATE, DELETE | 其他用户仍然可以对表中的任何其他行执行 DML 操作。 |
+| 隐式 | 表行共享 (RS) | SELECT ... FOR UPDATE | 其他用户仍然可以对表中未被 SELECT 语句返回的行执行 DML 操作。 |
+| 隐式 | 共享 (S) | 对具有与子表外键关系的父表执行 UPDATE 和 DELETE | 只要子表的外键列上存在索引，用户仍然可以在父表或子表中的任何其他行上执行 DML 操作。 |
+| 隐式 | 共享行独占 (SRX) | 对具有与子表外键关系的父表执行 DELETE | 只要子表的外键列上存在索引，用户仍然可以在父表或子表中的任何其他行上执行 DML 操作。* |
+| 显式 | 排他 (X) | LOCK TABLE ... IN EXCLUSIVE MODE | 其他用户只能查询该表，直到锁定事务被提交或回滚。 |
+
+* 在 9i 之前的版本中，当子表的外键列上不存在适当的索引时，Oracle 会在子表上获取更严格的锁。
+
+![](img/832fbc6aca8b6075843ca6f2356c0a8d_523_0.png)
+
+默认情况下，DML 锁的数量由 init.ora 中 TRANSACTIONS 参数的值推导得出。此默认值通常足够，但也可以通过设置 init.ora 中的 DML_LOCKS 参数手动调整 DML 锁的数量。
+
+DDL 锁
+
+DDL 或字典锁由 TX 表示，用于在用户创建、修改或删除表时锁定表。这种锁始终处于表级别，旨在防止两个用户同时修改表结构。表 9.4 显示了用于 DDL 锁的不同模式的比较。
+
+# 表 9.4 Oracle DDL 锁模式比较
+
+| 锁类型 | 锁模式 | 命令 | 描述 |
+| :--- | :--- | :--- | :--- |
+| 隐式 | 排他 (X) | CREATE, DROP, ALTER | 在 CREATE、DROP 或 ALTER 操作完成之前，阻止其他用户对引用的表发出 DML 或 SELECT 语句 |
+| 隐式 | 共享 (S) | CREATE PROCEDURE, AUDIT | 在 CREATE PROCEDURE 或 AUDIT 操作完成之前，阻止其他用户修改或删除引用的表 |
+| 隐式 | 可中断解析 | - | 用于共享池中缓存的语句；从不阻止任何用户执行任何类型的 DML、DDL 或 SELECT |
+
+# 真实世界场景
+## 死锁的特殊情况
+
+我曾与一名应用用户一起工作，他当时正在培训一名新员工使用公司的客户关系管理 (CRM) 系统。在他们一起工作时，我听到资深员工说：“偶尔我会遇到这种奇怪的死锁错误。我不知道那是什么，但如果看到那个错误，只需重新输入数据即可正常工作。” 该用户描述的错误称为*死锁*（有时也称为*“致命拥抱”*）。每当两个或更多用户等待的数据锁已经被这两个或更多用户之一锁定时，就会发生死锁错误。听起来很混乱吗？一个简单的例子有助于澄清定义：
+
+- 1. Malka 通过更改员工 20 的姓为 Jones 来更新 EMP 表：
+  ```sql
+  SQL> UPDATE emp
+  2  SET last_name = 'Jones'
+  3  WHERE id = 20;
+  1 row updated.
+  ```
+- 2. 接下来，Jennifer 更新 EMP 表，将员工 25 的薪水更改为 50,000 美元：
+  ```sql
+  SQL> UPDATE emp
+  2  SET salary = 50000
+  3  WHERE id = 25;
+  1 row updated.
+  ```
+- 3. Malka 还更新员工 25，将姓更改为 Smith。此时，Malka 卡在 Jennifer 对同一行的锁后面等待，因此 Malka 的会话挂起：
+  ```sql
+  SQL> UPDATE emp
+  2  SET last_name = 'Smith'
+  3  WHERE id = 25;
+  ```
+- 4. 现在，Jennifer 开始更新员工 20（Malka 在第一步中锁定的行），并试图将其薪水更改为 80,000 美元：
+  ```sql
+  SQL> UPDATE emp
+  2  SET salary = 60000
+  3  WHERE id = 20;
+  ```
+
+这使得 Jennifer 卡在 Malka 对同一行的锁后面等待。两个用户都在等待对方释放锁，但由于他们的会话挂起，他们都无法发出 COMMIT 或 ROLLBACK 来释放锁。这是一种死锁情况。
+
+如果没有解决此情况的方法，这两个用户将无限期地等待对方释放锁。幸运的是，Oracle 通过简单地回滚其中一个阻塞语句，从而释放死锁中涉及的锁之一，自动为您解决死锁。被回滚的语句将属于检测到死锁情况的会话。在我们的示例中，这将是 Malka 的会话，她将会看到以下错误：
+
+```
+ORA-00060: deadlock detected while waiting for resource
+```
+
+Malka 的会话还会在 init.ora 中指定为 USER_DUMP_DEST 的目录中生成一个跟踪文件。该跟踪文件将指示死锁事件发生的时间以及涉及的表。以下是 Malka 跟踪文件的一部分：
+
+```
+*** 2002.02.13.10.07.14.777
+*** SESSION ID:(16,43) 2002.02.13.10.07.14.750
+ksged1: deadlock detected via did
+DEADLOCK DETECTED
+Current SQL statement for this session:
+UPDATE emp
+SET last_name = 'Smith'
+WHERE id = 25
+
+The following deadlock is not an ORACLE error. It is a
+deadlock due to user error in the design of an application
+or from issuing incorrect ad-hoc SQL. The following
+information may aid in determining the deadlock:
+Deadlock graph:... .
+```
+
+资深员工向新受训者提供的建议是合理的，因为通常再次尝试输入相同数据时，导致死锁所需的锁事件组合不太可能连续发生，因此不会导致另一个死锁错误。从 DBA 的角度来看，您应该监控 USER_DUMP_DEST 目录中包含死锁错误的跟踪文件。如果它们频繁发生，您应考虑修改应用程序代码或调整业务流程以减少死锁的发生。
+

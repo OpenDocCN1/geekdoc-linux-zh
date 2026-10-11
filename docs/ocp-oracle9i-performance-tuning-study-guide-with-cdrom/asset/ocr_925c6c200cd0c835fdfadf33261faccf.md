@@ -1,0 +1,13 @@
+# How the Emphasis Method Manages Parallel Query Resources
+
+The Parallel Query (PQ) resource that is controlled by Resource Manager is the PQ degree of parallelism. Degree of parallelism refers to the number of query slave processes that an individual session is allowed to start when processing its query. The more query slaves started, the faster the query will be processed. However, this increased speed comes at the expense of increased CPU utilization and disk I/O. Resource manager uses the Absolute method to control Parallel Query resources. This means that the maximum degree of parallelism is a specific (i.e., absolute) value. We can use the analogy of building a home to illustrate this concept.
+
+Suppose you were an affluent homeowner who is looking to build an expensive new house and your builder employs ten carpenters. However, this builder will also be working on seven other customers' houses at the same time your home is being constructed. The builder's construction manager (Resource Manager) is responsible for making sure that the ten carpenters (resources) employed by the builder complete all the work required to build the homes. If several carpenters work together (i.e., parallel) on your home, your new home will be completed more quickly than if one carpenter worked alone. However, if all the carpenters work exclusively on your home, the other customers' homes will not be completed on time.
+
+Since your home is the largest (and most profitable), the construction manager has decided to allow up to four carpenters to work on your house simultaneously. The construction manager has also decided to allow up to three carpenters to work simultaneously on the second-most-profitable house under construction, and the remaining carpenters will work on the last six houses being constructed.
+
+The previous analogy is conceptually identical to the way Resource Manager controls requests for access to the PQ resources. For example, suppose you decided to limit PQ resources for users in the resource consumer group from the previous example called POWER_USERS. As with CPU resources, the two resource plans, TECHNICAL and FUNCTIONAL, can also be assigned PQ priority on up to eight levels of granularity. Figure 10.6 conceptually shows how this resource allocation can be broken down.
+
+The FUNCTIONAL resource plan shown in Figure 10.6 can utilize up to five Parallel Query processes when performing Parallel Query operations. If any Parallel Query resources are left over, then the remaining Parallel Query resources will be allocated in this manner:
+
++   *   Up to five additional query processes can be started if any resources remain after Level 1 needs are serviced.

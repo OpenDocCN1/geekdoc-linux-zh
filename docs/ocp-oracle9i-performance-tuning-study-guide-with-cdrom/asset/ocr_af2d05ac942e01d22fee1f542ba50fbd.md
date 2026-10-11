@@ -1,0 +1,12 @@
+The data contained in these two families of views are beneficial for both performance tuning benchmarking and subsequent performance monitoring. Before examining the contents of these views in detail, let's look at a brief summary of how these two types of views differ:
+
++   - The names of the V$ views are generally singular whereas the DBA views usually have plural names. For example $\text{V\$DATAFILE}$ vs. $\text{DBA\_DATA\_FILES}$.
++   - Many of the V$ views are available when the database is in a nomount or mount state. DBA views are only available when the database is open.
++   - The data contained in the V$ views is generally lowercase. The data contained in the DBA views is usually uppercase. This is important to remember when specifying WHERE clauses in your queries against these views.
++   - The V$ views contain dynamic performance data which is lost each time the instance is shut down. Because of this, these views always contain statistics that have been gathered since the instance was started. From a performance tuning perspective, *when* you examine the data in these views can be as important as *how* you examine the data in these views. If the instance is up most of the time and rarely shut down, these statistics may encompass so much time that they are useless. The data contained in the DBA views is more static and is not cleared at instance shutdown. Because of the dynamic nature of the V$ views, you will find that they are the more commonly used data dictionary views for performance tuning.
+
+The dynamic performance views and data dictionary views are discussed in greater detail in the following sections.
+
+# **V$ Views Commonly Used in Performance Tuning**
+
+There are approximately 225 V$ dynamic performance views in an Oracle9i database. These views are based on dynamic tables collectively known as the X$ tables. These virtual tables exist only in memory and are largely undocumented, having cryptic names like $\text{X}\$\text{KSMS}\text{P}$ and $\text{X}\$\text{KMQS}\text{I}$. Therefore, most performance tuning information is obtained from the V$ views themselves. Table 2.4 contains a partial listing of the V$ views that are frequently used in performance tuning.

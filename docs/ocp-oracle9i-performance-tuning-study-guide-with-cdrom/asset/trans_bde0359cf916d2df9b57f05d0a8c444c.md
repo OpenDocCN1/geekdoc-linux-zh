@@ -1,0 +1,174 @@
+
+## 将资源分配给用户
+
+您可以通过将 RCG 直接授予个别用户，或将 RCG 授予数据库角色，从而将资源使用者组分配给数据库用户。图 10.14 展示了如何使用 `DBMS_RESOURCE_MANAGER_PRIVS` 包中的 `GRANT_SWITCH_CONSUMER_GROUP` 过程将 `POWER_USERS` RCG 分配给名为 Betty 的用户，且该用户不具备将权限传递给其他用户的能力（即没有 GRANT OPTION 权限）。
+
+### 图 10.14  将资源使用者组分配给用户
+
+```sql
+SQL> EXECUTE dbms_resource_manager_privs.grant_switch_consumer_group ( grantee_name => 'BETTY', consumer_group => 'POWER_USERS', grant_option => FALSE);
+PL/SQL procedure successfully completed.
+```
+
+由于用户一次可以是多个 RCG 的成员，通常建议指定一个默认 RCG，当用户最初连接到数据库时，该 RCG 将处于激活状态。用户的默认 RCG 是使用 `DBMS_RESOURCE_MANAGER` 包中的 `SET_INITIAL_CONSUMER_GROUP` 过程分配的。图 10.15 展示了如何为 Betty 分配默认 RCG `POWER_USERS`。如果未为用户分配默认使用者组，其初始 RCG 将是公用组 `DEFAULT_CONSUMER_GROUP`。
+
+### 图 10.15  为用户分配默认资源使用者组
+
+```sql
+SQL> EXECUTE dbms_resource_manager.set_initial_consumer_group ( user => 'BETTY', consumer_group => 'POWER_USERS');
+PL/SQL procedure successfully completed.
+```
+
+![](img/832fbc6aca8b6075843ca6f2356c0a8d_570_0.png)
+
+虽然 RCG 可以通过角色进行分配，但通过角色授予的资源使用者组不能指定为某个用户的默认 RCG。
+
+通过应用程序使用 `DBMS_SESSION` 包和 `SWITCH_CURRENT_CONSUMER_GROUP` 过程，还可以动态更改用户当前的活跃 RCG。这是一个有用的功能，允许应用程序在用户导航应用程序并执行具有不同资源需求级别的活动时，激活和停用各种 RCG。图 10.16 展示了可以嵌入在应用程序中的示例 PL/SQL 代码，用于在用户执行资源密集型计算时，使用 `DBMS_SESSION` 将用户的当前 RCG 更改为 `POWER_USERS`。
+
+### 图 10.16  使用 DBMS_SESSION 更改活跃资源使用者组
+
+```sql
+ 1 SQL> CREATE OR REPLACE PROCEDURE calc_tax
+ 2   IS
+ 3     v_original_rcg varchar2(30);
+ 4     v_previous_rcg varchar2(30);
+ 5     CURSOR c_sales IS
+ 6       SELECT sales_amount
+ 7       FROM sales;
+ 8     v_tax number;
+ 9   BEGIN
+10
+11     -- set the user's RCG to POWER_USERS before calculating the tax
+12     -- the current RCG will be stored in the v_initial_rcg variable
+13
+14     DBMS_SESSION.SWITCH_CURRENT_CONSUMER_GROUP ( new_consumer_group => 'POWER_USERS', old_consumer_group => v_original_rcg, initial_group_on_error => FALSE);
+15
+16     FOR r_sales IN c_sales LOOP
+17       v_tax := r_sales.sales_amount * .05;
+18       dbms_output.put_line (v_tax);
+19     END LOOP;
+20
+21     -- switch back to the original RCG
+22
+23     DBMS_SESSION.SWITCH_CURRENT_CONSUMER_GROUP ( new_consumer_group => v_original_rcg, old_consumer_group => v_previous_rcg, initial_group_on_error => TRUE);
+24   END;
+25   /
+26 Procedure created.
+```
+
+一旦所有资源管理组、计划和指导方针都已就位并分配给用户，必须启用资源管理功能，以便这些指导方针生效。
+
+> **自动使用者组切换**
+>
+> 如果用户在指定时间段内保持活跃，可以配置资源管理器（Resource Manager）自动将该用户的会话切换到次要资源组。此功能通过指定三个资源计划指导方针参数来管理：
+>
+> - `SWITCH_TIME`
+> - `SWITCH_GROUP`
+> - `SWITCH_ESTIMATE`
+
+`SWITCH_TIME` 参数（默认值为 1,000,000）用于指定会话必须保持活跃的持续时间（以秒为单位），之后资源管理器会将会话切换到由 `SWITCH_GROUP` 参数（默认值为 NULL）指定的组。如果将 `SWITCH_ESTIMATE` 参数（默认值为 FALSE）设置为 TRUE，则资源管理器将使用估计的执行时间来决定是否在开始执行之前就将会话分配给 `SWITCH_GROUP`，而无需等待实际执行时间超过由 `SWITCH_TIME` 指定的值。
+
+## 设置实例资源目标
+
+可以激活任何已定义的资源计划。然而，同一时间只能激活一个资源计划。实例的活跃资源计划可以使用 `init.ora` 中的 `RESOURCE_MANAGER_PLAN` 参数来定义，或者通过动态发出 `ALTER SYSTEM SET RESOURCE_MANAGER_PLAN` 命令来指定哪个资源计划对实例有效。如果未设置此参数，则资源管理器的功能将被禁用。图 10.17 展示了如何在 `POWER_USERS` 资源使用者组中动态将实例级别的资源计划设置为 `TECHNICAL` 计划。
+
+![](img/832fbc6aca8b6075843ca6f2356c0a8d_572_0.png)
+
+```sql
+SQL> alter system set resource_manager_plan = technical;
+System altered.
+```
+
+**注意** 如果在 `init.ora` 中指定一个不存在的资源计划，Oracle 将返回 `ORA-07452 "Specified Resource Manager Plan Does Not Exist in the Data Dictionary Error at Instance Startup"` 错误信息。
+
+Oracle 还提供了动态更改单个连接用户的活跃 RCG 的功能。图 10.18 演示了如何使用 `DBMS_RESOURCE_MANAGER` 包中的 `SWITCH_CONSUMER_GROUP_FOR_USER` 过程在 Betty 的会话中激活 `POWER_USERS` RCG。
+
+### 图 10.18  更改连接用户的活跃资源使用者组
+
+```sql
+SQL> EXECUTE dbms_resource_manager.switch_consumer_group_for_user ( user => 'BETTY', consumer_group => 'POWER_USERS');
+
+PL/SQL procedure successfully completed.
+```
+
+对活跃资源计划的任何更改将立即生效。
+
+在某些应用程序中，应用程序使用相同的数据库用户名连接数据库，代表所有用户（尽管每个应用程序用户都有独特的登录名）。在这种情况下，由于所有连接用户将激活相同的 RCG，因此无法使用图 10.18 中所示的技术。在这种情况下，可以使用 `DBMS_RESOURCE` 包中的 `SWITCH_CONSUMER_GROUP_FOR_SESS` 过程来更改单个用户会话的活跃 RCG——即使该用户使用与另一个连接用户相同的用户名连接到数据库。该过程接受要更改的会话的 `SID` 和 `SERIAL#` 作为输入参数。`SID` 和 `SERIAL#` 都可以通过查询 `V$SESSION` 来获取。图 10.19 演示了当所有应用程序用户使用数据库用户名 `APPS` 连接数据库时，如何使用此过程仅更改 Betty 会话的 RCG。
+
+### 图 10.19  更改指定会话的活跃资源使用者组
+
+```sql
+SQL> SELECT sid, serial#, username, consumer
+ 2   FROM v$session
+ 3   WHERE username = 'betty';
+
+    SID SERIAL# USERNAME   CONSUMER
+---------- ---------- ------------------- ------------------------
+       13     14 APPS     betty
+
+1 row selected.
+
+SQL> EXECUTE dbms_resource_manager.switch_consumer_group_for_sess ( session_id => 13, session_serial => 14, consumer_group => 'POWER_USERS');
+
+PL/SQL procedure successfully completed.
+```
+
+如果被授予允许切换到该特定使用者组的权限，非 DBA 用户也可以使用 `DBMS_SESSION` 包中的 `SWITCH_CURRENT_CONSUMER_GROUP` 过程更改其活跃资源使用者组。
+
+## 真实世界场景
+
+### 确定应用程序用户 CPU 利用率
+
+您已决定想要探索使用 Oracle9i 资源管理功能来控制每个应用程序用户可消耗的 CPU 资源数量的可能性。那么，您如何决定应该允许每个应用程序用户的资源组消耗多少 CPU？
+
+确定用户消耗多少 CPU 资源的一种方法是将特定用户会话的 CPU 使用量与整个实例的 CPU 使用量进行比较。您可以通过使用下面显示的脚本来完成此操作：
+
+```sql
+set echo off
+set feedback off
+set verify off
+set serveroutput on
+ACCEPT uname PROMPT "Enter the username of the user whose CPU ratio you wish to calculate: "
+
+DECLARE
+v_username          VARCHAR2(30);
+v_session_cpu       NUMBER:=0;
+v_system_cpu        NUMBER:=0;
+v_cpu_ratio         NUMBER:=0;
+BEGIN
+   v_username := UPPER('&uname');
+
+SELECT value
+  INTO v_session_cpu
+  FROM V$sesstat
+ WHERE sid = (SELECT sid
+               FROM v$session
+               WHERE username = v_username)
+   AND statistic# = 12;
+
+SELECT value
+  INTO v_system_cpu
+  FROM V$sysstat
+ WHERE name = 'CPU used by this session';
+
+v_cpu_ratio := ROUND((v_session_cpu/v_system_cpu)*100,2);
+dbms_output.put_line
+  (v_cpu_ratio||' % of the total system CPU used was requested by the user '||v_username);
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    dbms_output.put_line ('The user you entered is not currently connected');
+END;
+/
+```
+
+执行时，该脚本会提示您输入想要计算其 CPU 消耗量的连接用户名称：
+
+```sql
+SQL> @userCPURatio.sql
+Enter the username of the user whose CPU ratio you wish to calculate: BETTY
+25.52% of the total system CPU used was requested by the user BETTY
+SQL>
+```
+
+查询输出表明，自...以来，用户 BETTY 大约消耗了总 CPU 调用量的 25%
+
