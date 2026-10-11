@@ -1,0 +1,3 @@
+# IN THIS PART
+
+Now that you have your system up and working and are developing your administrative skills, Part II takes the next step: showing how you can use and build those skills to meet the ongoing real-time needs of your Linux system. Chapter 5 shows you some straightforward techniques for setting up servers, using basic UNIX commands to carry out administrative tasks; Chapter 6 explains the Linux kernel and how to rebuild it for optimization (some examples of Linux kernel code that appear in this chapter reflect actual commands used in Linux); Chapter 7 examines the new user and group management functions of your proper use. When you have finished this section, you're on the way to knowing what an administrator must know about how Linux works.

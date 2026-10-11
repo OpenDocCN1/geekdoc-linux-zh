@@ -1,0 +1,294 @@
+
+## G
+
+- GNU zip utility, 7
+- compressing and uncompressed files with, 132–133
+- goals
+    - defining, 33–42
+    - record keeping, 34
+- .gov, in Web site address, 339
+- graphical user interface (GUI), 16
+- grep command, narrowing searches with, 127–128
+- group user numbers, 253
+- groupadd command, adding users to groups with, 252–253
+- groupdel command, removing a group with, 253
+- groupmod command, modifying a group name or number with, 253
+- groups
+    - adding users to, 252–253
+    - defining, 251–254
+    - modifying a name or number, 253
+    - numbers, 253–254
+    - password security for, 253
+    - removing, 253
+- growth, handling, 57–59
+- GUID bit, 123
+- .gz filename extension, 7
+
+## H
+
+- -h nmap option, 270
+- hackers
+    - danger of, 403
+    - Ethical Hackers Against Pedophilia, 404
+- halt user ID number, 257
+- hard drives
+    - available storage from external, 53
+    - partitioning, 9–10
+    - using as backup devices, 313–314
+- hard links, creating, 69
+- hardware
+    - basic requirements for installing Slackware, 3–4
+    - keeping failure-free, 39
+- Hardware-HOWTO on CD-ROM
+    - checking for compatible printers, 145
+- checking for hardware supported by Linux, 169
+- hexadecimal permission notation, 254–257
+- hidden programs (Trojan horses), effect on host security, 263–264
+- /home directory, 73
+- host addresses, in network classes, 339
+- host security, 261–308
+    - attacks by scanning well-known ports, 269–271
+    - back door attacks, 264–265
+    - basic aspects of, 266
+    - checking application and file integrity as part of, 273
+    - checking permissions as part of, 272
+    - denial-of-service attacks, 265–266
+    - disabling extraneous applications as part of, 272
+    - disabling known insecure applications as part of, 272
+    - intrusion attacks, 261–262
+    - program exploit attacks, 262–263
+    - running scans to check for holes, 279–302
+    - software tools for checking, 44
+    - Trojan horse attacks, 263–264
+    - using cryptography applications for, 274–279
+- hostname, setting, 215–216
+- HTML interface scanner, 43
+- HTTP daemons (Web servers), 382
+- i file attribute, 259
+- -i nmap option, 270
+- ICMP networking device files, 92
+- IDE disk partitions, 9
+- IDE hard drive, 92
+- ifconfig command, using, 361
+- -ignore option, using with ls command, 124–125
+- IMAP daemon, 381
+- incident reports, importance of, 37–38
+- incremental backups
+    - as part of system security program, 31, 53
+    - example script for, 55–56, 312
+    - for disaster recovery, 312
+    - restoring, 56
+- inetd, control of daemons by, 346–350
+- info.c code listing, 162–163
+- init device file, 92
+- init_settimer() function, viewing, 167–168
+- init, defining at boot time, 194
+- initial octet, in network classes, 339
+- inode, 63
+    - command for checking file integrity, 70–71
+    - default partition size for, 15, 64
+    - viewing, 65
+- input file commands, 95
+- installation disks, creating, 6–9
+- installation packages, 15–16
+- installation process
+    - examining, 10–14
+    - package installation suggestions by user category, 16
+- installing
+    - Linux on laptop computers, 4
+    - Slackware Linux, 3–4
+- installpkg command, using, 132
+- int_settimer() function, viewing, 167–168
+- Intel Binary Compatibility Specification (IBCS), ensuring file compatibility among binaries, 218
+- Internet
+    - applications, 373–405
+    - exploring dangers of, 403–405
+    - hostnames, 271
+- interpreter, kernel as, 153
+- interval timer
+    - buffer overflow error handling, 168
+    - getting current values of, 166–167
+    - switching values of, 165–166
+    - using, 164–168
+    - viewing the int_settimer() function, 167–168
+- intrusion attacks, on host, 261–262
+- Iomega Jaz drive. See Jaz drives
+- Iomega Zip drive. See Zip drives
+- iota, checking and reserving I/O ports, 162
+- IP addresses, 271
+    - masquerading, 364
+    - understanding, 338
+
+## J
+
+- ipfwadm command, firewall administration interface, 364
+- iptraf program, using as part of system security program, 279
+- IPX (Internet Packet eXchange) protocol
+    - communicating within a LAN with, 370–371
+    - Web site address for downloading tools for, 370
+- IPX RIP daemon, ftp site for, 370
+- ISDN subsystem options, Xconfig screen, 178
+- ISS's Internet Security Scanner software tool, 43
+    - analysis report, 286–288
+    - main xiss screen, 280
+    - report by hosts, 295–302
+    - report of services, 289–290
+    - scanning for services, 290–295
+    - trusted hosts, 288–289
+    - using as part of system security program, 279–302
+    - viewing a scan report from, 45–47, 282–286
+    - viewing the xiss analyzer configuration screen, 281
+    - viewing the xiss scanner configuration screen, 281
+- ISO 9660 CD-ROM standard, 4
+- itimer.c code listing, for setting timing functions, 164–165
+- Jaz drives
+    - available storage from, 53
+    - for system backups, 3–4, 314
+    - mounting, 102–102
+- jifﬁestvto() function, 165–166
+- jiffy, 165
+- jobs,
+    - scheduling one-time, 136
+    - scheduling with cron, 137
+- journal, importance of keeping daily, 37
+
+## K
+
+- K (Linux kernel source) package, 15
+- KBakup utility, 315
+    - actions menu, 320
+    - configuration menu, 318
+    - file menu, 319
+    - main menu, 317
+    - settings menu, 319
+    - using, 316–320
+    - Web site address for, 310
+    - welcome screen, 317
+- Kernel hacking options, Xconfig screen, 181
+- kernel panic, 154–156
+- kernels
+    - changing the source for optimization or adding features, 190–191
+    - checking the iotable, 162
+    - cleaning out old directory files, 171–172
+    - cleaning out old object files, 182–183
+    - device driver handling, 159–162
+    - editing LILO configuration file for, 186–187
+    - examining during a panic, 154–156
+    - examining upgrades and patches, 189–190
+    - hacking, 190–191
+    - how they work, 153–168
+    - installing new with make zImage, 183
+    - interface with hardware, 154
+    - I/O handling by, 159–162
+    - learning about, 169
+    - matching installation media to, 6
+    - moving new to root directory, 185–
+    - rebuilding, 169–187
+    - troubleshooting, 187–188
+    - using uname command with, 169
+    - viewing where it uploads the device driver, 161–162
+    - ways to run reconfigure command, 172
+    - Web site addresses for upgrades and patches, 189
+- kill command, manipulating processes with, 135
+- kmem group number, 254
+
+## L
+
+- -l ls command option, 125
+- -l nmap option, 270
+- -L nmap option, 270
+- laptop computers
+    - battery status monitors, 329–330
+    - installing Linux on, 4
+- laptop power management tools, 330
+- LessTif (mwm) window manager, 140
+- /lib directory, 73
+- /lib/modules directory, 73
+- library links, script for updating, 217
+- LILO (LIlinux LOADER)
+    - booting your system with, 17–18, 195–196
+    - configuring, 196–199
+- links
+    - hard, 69–70
+    - symbolic, 70
+- Linux. See Slackware Linux operating system
+- Linux Backup Utility, 315
+- Linux Center, Web site address for, 109
+- Linux DNS client, 341
+- Linux firewalls, 363–364
+- Linux Headquarters, Web site address for, 109
+- Linux host, configuring, 343–346
+- Linux Configuration and Installation, Fourth Edition, 4, 144
+- Linux Kernel Archives, Web site address for, 109
+- Linux nameserver, setting up, 341–343
+- Linux routers, 360–364
+- Linux Security mailing list address, 273
+- Linuxconf, Web site address for, 150
+- Listserv
+    - basic commands, 380
+    - Web site address for, 381
+- load_ramdisk, defining at boot time, 194
+- Loadable module support options, Xconfig screen, 174
+- Loadlin, booting your system with, 199–
+- log files
+    - checking to maintain system and file integrity, 303–308
+    - importance of, 34–37
+- loopback interfaces, 93
+- /lost+found directory, 73
+- lp
+    - group number, 254
+    - user ID number, 257
+- lpc (line printer control) command, 146
+- lpq command, checking jobs in print queue with, 147
+- lpr command
+    - printing a file with, 146–147
+    - versus pr command, 147
+- lprm command, removing print jobs from the queue with, 147
+- ls command
+    - finding links with, 113
+    - using, 124–126
+- Lynx browser, viewing Web page information with, 382–383
+
+## M
+
+- -M mmap option, 270
+- MAC address, 338
+- mail
+    - group number, 254
+    - user ID number, 257
+- mailing lists
+    - Listerv, 380–381
+    - Majordomo, 376–380
+- maintenance
+    - exploring issues, 22–25
+    - importance of for keeping hardware failure-free, 39
+- major number, device files, 97–98
+- Majordomo
+    - automating Internet mailing lists with, 376–380
+    - commands, 378–380
+    - help file, 377–378
+    - sending commands to a server, 378
+    - Web site address for, 380
+- make bziImage, using, 183–185
+- make config command, reconfiguring the kernel with, 172
+- make zImage, installing a new kernel with, 183
+- make menuconfig command, reconfiguring the kernel with, 172
+- make improper, cleaning out old object files by running, 171–172
+- make xconfig command, reconfiguring the kernel with, 172
+- makepkg command, creating packages with, 132
+- makewhatis command, building or rebuilding the whatis database with, 149
+- man
+    - group number, 254
+    - user ID number, 257
+- man pages, 144
+    - adding to your system, 148–149
+    - sections, 148
+- master hard drive
+    - on primary controller, 89–90
+    - on secondary controller, 90–91
+- MD5 message digest executable, ftp address for, 273
+- mem group number, 254
+- mem=, defining at boot time, 194
+- memory
+    - access device files, /dev directory, 93
+    - monitoring usage of, 28

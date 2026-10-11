@@ -1,0 +1,3 @@
+# IN THIS PART
+
+As Linux gains popularity, many Linux hosts are being networked to other hosts. These two chapters introduce you networking your Linux system and making the most of Internet applications and functionality. Chapter 11 shows you how to set up Linux networking, particularly with TCP/IP. Chapter 12 discusses usage of Internet applications on your system and how to set up a Web server on a Linux host.

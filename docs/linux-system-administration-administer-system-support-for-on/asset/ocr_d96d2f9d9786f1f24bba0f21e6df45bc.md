@@ -1,0 +1,5 @@
+# Acknowledgments
+
+I would like to acknowledge Russ Henmi for his utmost love and support; Neil Salkind for showing me nothing's impossible; Jeff Mercer, who spent hours on the phone helping me build my PC; Doug Burkes for showing me the finer points of system administration; Stephanie Miller, who helped me develop my interest in UNIX security; Mom and Dad, who always knew I'd be a writer; Robb Barco, Scott Drummond, David Hockenberry, and Mark Kadrich at International Network Services for supporting me in my professional endeavors; Mark Rush and Audra Bassett for showing me support through the years; MaryAnn Leiby who restored my faith in writing; and Laura Lewin, Laura Brown, and Patrick Volkerding for their patience and helpfulness.
+
+Also, I'd like to thank everyone else who helped me during this process; a list can't hold all of you, but I will always remember.

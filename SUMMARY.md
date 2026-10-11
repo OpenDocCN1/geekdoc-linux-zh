@@ -1212,6 +1212,7 @@
 +   [Linux+ 学习指南：考试 XKO 001 (附 CD-ROM)](docs/linux-study-guide-exam-xko-001-with-cd-rom/README.md)
 +   [Linux 入门指南](docs/linux-succinctly/README.md)
 +   [Linux 系统管理：用户指南](docs/linux-system-administration-a-users-guide/README.md)
++   [Linux 系统管理：为单数百用户系统提供管理支持](docs/linux-system-administration-administer-system-support-for-on/README.md)
 +   [IBM Elogo Server Xseries 和 Netfinity Linux 系统管理与备份工具 (IBM Redbooks)](docs/linux-system-administration-and-backup-tools-for-ibm-elogo-s/README.md)
 +   [Linux 系统管理黑书：部署和配置领先的开源操作系统的权威指南](docs/linux-system-administration-black-book-the-definitive-guide-/README.md)
 +   [Linux 系统管理手册 / CD-ROM](docs/linux-system-administration-handbook-cd-rom/README.md)
