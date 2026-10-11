@@ -1,0 +1,39 @@
+# 6) CONFIGURING DNS
+
+Domain Name System Overview . . . . . . . . . . . . . . .130
+Installing DNS . . . . . . . . . . . . . . . . . . . . . . . . . . . .136
+Setting Up DNS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .140
+Managing DNS Server Tasks . . . . . . . . . . . . . . . . . . . .146
+Configuring Server Properties . . . . . . . . . . . . . . . . . . . .152
+Managing Zone Data . . . . . . . . . . . . . . . . . . . . . . . . . . . .158
+Managing Zone Resource Records
+and Delegation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .160
+Configuring Zone Properties . . . . . . . . . . . . . . . . . . . . . . .166
+
+![](bbox=[0.62, 0.16, 0.98, 0.38])
+
+# 7) ROUTING AND REMOTE ACCESS SERVICE
+
+Enabling Remote Access Service . . . . . . . . . . . . . . . . . . . . .170
+Disabling RAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .176
+Examining Basic RAS Options . . . . . . . . . . . . . . . . . . . . . . .178
+Exploring Server Properties . . . . . . . . . . . . . . . . . . . . . . . . . . .180
+Exploring Routing Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . .184
+Creating a New IP Tunnel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .188
+Adding RAS Policies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .190
+Editing RAS Policies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .192
+Configuring RAS Ports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .196
+Configuring IP Routing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .198
+
+![](bbox=[0.62, 0.44, 0.98, 0.66])
+
+# 3  PLANNING THE ACTIVE DIRECTORY
+
+# 8) PLANNING THE ACTIVE DIRECTORY NAME
+
+DNS Namespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .204
+Why the Name Is So Important . . . . . . . . . . . . . . . . . . . . . . . . .204
+How Should I Decide My Domain Name? . . . . . . . . . . . . . . . . . .205
+Internet Presence and Naming Options . . . . . . . . . . . . . . . . . . . . .208
+
+![](bbox=[0.66, 0.85, 0.98, 0.9])

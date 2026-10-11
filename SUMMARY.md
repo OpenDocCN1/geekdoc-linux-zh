@@ -1403,6 +1403,7 @@
 +   [Mandrake Linux 入门指南](docs/mandrake-linux/README.md)
 +   [Mandrake Linux 8.1 安装与用户指南](docs/mandrake-linux-81-insallation-and-user-guide/README.md)
 +   [玛丽：完美的女人，极具魅力，魅力无限、谦逊、幽默且充满主意。总是正确的，因为她是……玛丽：趣味](docs/mary-noun-mary-the-perfect-woman-super-sexy-with-infinite-ch/README.md)
++   [Active Directory 可视掌握](docs/master-active-directory-visually-idgs-3-d-visual-series/README.md)
 +   [Linux Mint 21.3 终极指南...2024](docs/master-linux-mint-213-the-ultimate-guide2024/README.md)
 +   [Autodesk VIZ 2008 精通指南](docs/mastering-autodesk-viz-2008/README.md)
 +   [CMake 精通指南：[跨平台构建系统；涵盖 CMake 的安装与运行；详述将现有构建流程转换为 CMake；创建强大的跨平台构建脚本]](docs/mastering-cmake-a-cross-platform-build-system-covers-install/README.md)

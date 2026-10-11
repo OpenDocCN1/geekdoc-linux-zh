@@ -1,0 +1,5 @@
+domains so that users can access resources (for which they have permissions) in any domain. A transitive trust is a *two-way trust*, which means that if Domain 1 trusts Domain 2 and Domain 2 trusts Domain 3, then Domain 1 automatically trusts Domain 3. The trust relationships are established from the root domain so that all domains trust each other. For example, acmegraphics.com is the root domain and has transitive trust relationships with New York and Toronto. Even though New York and Toronto do not actually have a trust relationship established, they still indirectly trust each other through transitive trust.
+
+The Active Directory multiple-domain model is an effective solution that provides decentralized administration, domain-level security, domain-level policies, and ease of management. Also, the multiple-domain model provides lower replication traffic because only changes to the global catalog server need be replicated. Because of the transitive trust relationships, users can find any resource in any domain using an LDAP search.
+
+![](bbox=[0.51, 0.26, 0.96, 0.63])
