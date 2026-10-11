@@ -1,0 +1,116 @@
+
+- 挂载远程文件系统，并配置系统以便在启动时自动挂载 Linux 系统上的自动网络共享
+- 在磁盘上设置用户配额，以保护 Linux 系统的可用性和安全性，并防止用户占用系统所有磁盘驱动器空间
+- 编辑和修改 `/etc/fstab` 文件以管理本地和远程 NFS 共享以及所需的磁盘挂载配置
+- 配置和使用 `repquota` 命令来验证用户的磁盘空间使用情况并管理配额
+
+#### 必需的设置和工具
+
+本实验不需要使用 Mock IT 基础设施 - Cisco 核心骨干网络。此外，讲师虚拟机工作站和学生虚拟机工作站应与内部网络物理断开连接，并隔离在课堂专用的二层交换机上。这将允许使用共享的 DHCP 服务器来分配讲师和学生工作站的 IP 地址。
+
+基于此设备的实验需要以下条件：
+
+- A) 一个教室工作站（至少 2 Gig 内存），能够支持连接到课堂二层交换机的可移动硬盘，该硬盘包含虚拟机服务器农场。
+- B) 一个讲师工作站（建议至少 4 Gig 内存），将作为讲师演示实验室工作站。讲师将通过 LCD 投影仪显示讲师工作站，以演示如何使用 VMware Player 加载和配置讲师虚拟机工作站。
+- C) 学生实验室工作站将使用他们自己的虚拟机服务器农场和虚拟机学生工作站。`VMware Player` 将用于运行学生虚拟机和目标虚拟机。
+
+以下是执行实验 #4 所需的设置、配置和设备摘要：
+
+- 1. 一个虚拟化服务器农场，包含以下组件：
+  - a. 用于分配学生 IP 主机地址的 Microsoft DHCP 服务器
+  - b. 一个学生和/或讲师虚拟机工作站
+  - c. Fedora Linux 目标虚拟机
+- 2. 标准的现场学生工作站必须加载以下软件应用程序以执行此实验：
+  - a. `VMware Player 3.x`
+  - b. Microsoft Office 2007 或更高版本，用于实验评估问题及答案
+
+#### 推荐步骤
+
+##### 基于设备的实验 #4 – 学生步骤：
+
+学生应执行以下步骤：
+
+- 1. 将学生可移动硬盘连接到你的工作站
+- 2. 启动学生虚拟机和 Microsoft DHCP 虚拟机服务器以分配 IP 主机地址
+- 3. 启用你的 DOS 命令提示符并输入 "`ipconfig`" 以及 "`ping`" 你分配的 IP 主机地址 `172.30.0.____`，DHCP 服务器 `172.30.0.10`，以及 IP 默认网关路由器 `172.30.0.1`
+- 4. 使用以下凭证登录到学生虚拟机：
+  - 登录 ID: "`student`"（区分大小写）
+  - 密码: "`!SS316Security`"（区分大小写）
+- 5. 从 GNOME 桌面，在左上角，点击 "`Applications`" -> `Systems Tools` -> `Terminal`
+
+**注意：** 为了正确完成此实验，你的 Fedora 14 虚拟机需要 **实时** 互联网连接。请勿将学生工作站从课堂网络和互联网连接断开。
+
+**注意：** 在 `sudo & su` 命令能够按预期执行之前，用户账户 **必须** 是 `wheel group` 的成员，并且 `wheel group` 必须被赋予如在实验 3 中指示的有限 `sudo` 访问权限。
+
+##### 创建虚拟磁盘镜像 & 目录
+
+- 6. 为虚拟镜像创建目录
+  - a) 输入命令：`su -c ' mkdir -p /virtualimages/disk'` 并按 `<enter>`
+  - b) 密码: `ISS316Security`
+  - c) 输入命令：`su -c ' mkdir /archives && mkdir /common '` 并按 `<enter>`
+  - d) 密码: `ISS316Security`
+  - e) 输入命令：`su -c ' dd if=/dev/zero of=/virtimages/disk/quota-img.img count=300000 '` 并按 `<enter>`
+  - f) 密码: `ISS316Security`
+  - g) 输入命令：`su -c ' dd if=/dev/zero of=/virtimages/disk/readonly-img.img count=100000 '` 并按 `<enter>`
+  - h) 密码: `ISS316Security`
+  - i) 输入命令：`su -c ' mkfs -t ext3 -q /virtimages/disk/readonly-img.img -F '` 并按 `<enter>`。
+  - j) 密码: `ISS316Security`
+  - k) 输入命令：`su -c ' mkfs -t ext3 -q /virtimages/disk/quota-img.img -F '` 并按 `<enter>`。
+  - l) 密码: `ISS316Security`
+
+- 7. 在 `vim` 编辑器中编辑 `/etc/fstab`。输入命令：`su -c ' vi /etc/fstab '` 并按 `<enter>`
+- 8. 按“ `i` ”进入 INSERT 模式。
+- 9. 滚动到最后一行的后面以创建新行。
+- 10. 输入以下行：
+
+```
+/virtimages/disk/readonly-img.img /archives ext3 loop,defaults 0 0
+```
+
+- 11. 为配额分区创建挂载点。在新行中键入以下内容：
+
+```
+virtimages/disk/quota-img.img /common ext3 loop,usrquota,defaults 0 0
+```
+
+- 12. 保存更改并退出文件。按 `escape` 键退出插入模式，然后按 “`shift`” & “`:`” 键进入命令模式。在命令模式的冒号提示符处，键入 `wq` 以退出。
+- 13. 挂载文件系统。输入命令：`sudo mount /archives && sudo mount /common` 并按 `<enter>`。如果需要，输入学生用户账户的密码（ `ISS316Security` ）。
+- 14. 授予授权用户在 `/common` 中的权限
+  - a) 输入命令：`cd /common` 并按 `<enter>`。
+  - b) 输入命令：`su -c ' mkdir student && chown student:student student -R '` 并按 `<enter>`。
+  - c) 密码：`ISSSecurity`
+
+- 15. 在 `/archives` 目录中授予授权用户权限
+  - a) 输入命令：`cd /archives` 并 `<enter>` 键
+  - b) 输入命令：`su -c 'mkdir 2011 && chown student:student 2011 -R'` 并 `<enter>` 键。
+
+- 16. 输入命令：`cd /archives/2011` 并 `<enter>` 键
+- 17. 在 `vim` 编辑器中创建并打开存档文件。输入命令：`vi financials.txt`
+- 18. 在 `vim` 编辑器中按 “`i`” 键进入 INSERT（插入）模式。
+- 19. 在文件中输入以下文本：
+
+This file should not change. Ever.
+
+- 20. 保存更改并退出文件。按 `escape` 键退出插入模式，然后按 “`shift`” 键与 “`:`” 键进入命令模式。在命令模式的冒号提示符处，输入 `wq` 以退出。
+- 21. 在 `vim` 编辑器中编辑 `/etc/fstab`。输入命令：`su -c ' vi /etc/fstab'` 并 `<enter>` 键。
+- 22. 密码：`ISS316Security`
+
+##### 以只读权限挂载文件系统
+
+- 23. 在 `vim` 编辑器中打开 `/etc/fstab`。输入命令：`su -c ' vi /etc/fstab '` 并 `<enter>` 键。
+- 24. 按 “`i`” 键进入 INSERT（插入）模式。
+- 25. 为 `/archives` 文件系统添加只读权限 (`ro`)。找到第 5 步中创建的该行，在 `defaults` 之后添加一个逗号 ( `,` ) 和 `ro`，使该行显示为：
+
+```
+/virtimages/disk/readonly-img.img /archives ext3 loop,defaults,ro 0 0
+```
+
+```
+/virtimages/disk/readonly-img.img /archives ext3 loop,defaults,ro 0 0
+/virtimages/disk/quota-img.img /common ext3 loop,defaults 0 0
+```
+
+![](img/73be0eef2ceb12f43f3eb92c420134f5_46_0.png)
+
+- 26. 保存更改并退出文件。按 `escape` 键退出插入模式，然后按 “`shift`” 键与 “`:`” 键进入命令模式。在命令模式的冒号提示符处，输入 `wq` 以退出。
+- 27. 在对 `fstab` 进行更改并保存后，重新挂载 `/archives` 分区：输入命令：`su -c ' mount -o remount /archives'` 并 `<enter>` 键。
