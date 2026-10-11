@@ -1,0 +1,353 @@
+
+
+# 更改默认SSH端口
+
+更改默认SSH端口有助于减少自动化攻击。修改SSH端口的方法如下：
+
+1. 编辑SSH配置文件：
+
+```
+sudo nano /etc/ssh/sshd_config
+```
+
+2. 找到 `#Port 22` 这一行，并将其更改为非标准端口，例如 `Port 2222`
+
+3. 重启SSH服务：
+
+```
+sudo systemctl restart ssh
+```
+
+4. 更新防火墙规则以允许新端口
+
+## 限制SSH访问
+
+将SSH访问限制为特定用户或组：
+
+1. 编辑SSH配置文件：
+
+```
+sudo nano /etc/ssh/sshd_config
+```
+
+2. 添加以下行：
+
+```
+AllowUsers user1 user2
+AllowGroups sshusers
+```
+
+3. 重启SSH服务
+
+## 其他SSH加固措施
+
+1. 禁用root登录：
+
+在 `sshd_config` 中设置 `PermitRootLogin no`
+
+2. 使用强加密和密钥交换算法：
+
+```
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+```
+
+3. 限制SSH协议版本：
+
+在 `sshd_config` 中设置 `Protocol 2`
+
+4. 设置登录宽限期：
+
+在 `sshd_config` 中设置 `LoginGraceTime 30`
+
+5. 禁用空密码：
+
+在 `sshd_config` 中设置 `PermitEmptyPasswords no`
+
+# 使用Sudo管理用户
+
+sudo命令允许用户以提权执行命令，提供了比直接使用root账户更安全的替代方案。
+
+## 安装Sudo
+
+Sudo通常预装在Debian系统中。如果没有安装，可以使用以下命令安装：
+
+```bash
+su -
+apt install sudo
+```
+
+## 将用户添加到Sudo组
+
+为了授予用户sudo权限，请将其添加到sudo组：
+
+```
+usermod -aG sudo username
+```
+
+# 配置Sudo
+
+Sudo配置文件位于 `/etc/sudoers`。建议使用 `visudo` 命令编辑此文件，因为它会执行语法检查：
+
+```
+sudo visudo
+```
+
+# 基本Sudo配置
+
+以下是一个基本的sudo配置，允许sudo组成员执行任何命令：
+
+```
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+```
+
+# 限制Sudo访问
+
+为了将某用户的sudo访问限制为特定命令：
+
+```
+username ALL=(ALL) /usr/bin/apt
+```
+
+这允许用户仅使用sudo运行 `apt` 命令。
+
+# 无密码Sudo
+
+为了允许用户使用sudo而不输入密码（请谨慎使用）：
+
+```
+username ALL=(ALL) NOPASSWD: ALL
+```
+
+# Sudo最佳实践
+
+1. 使用sudo代替切换到root用户
+2. 仅向受信任的用户授予sudo访问权限
+3. 定期使用 `sudo journalctl /usr/bin/sudo` 审计sudo使用情况
+4. 使用命令别名来组合相关命令
+5. 为sudo会话设置较短的超时时间
+
+# 配置SELinux和AppArmor以增强安全性
+
+SELinux（Security-Enhanced Linux）和AppArmor是强制访问控制（MAC）系统，提供了超越传统Unix权限的额外安全层。
+
+# SELinux
+
+SELinux是一个强大的安全模块，强制执行强制访问控制策略。
+
+## 安装SELinux
+
+要在Debian上安装SELinux：
+
+```
+sudo apt install selinux-basics selinux-policy-default auditd
+```
+
+## 启用SELinux
+
+1. 编辑GRUB配置：
+
+```
+sudo nano /etc/default/grub
+```
+
+2. 在 `GRUB_CMDLINE_LINUX_DEFAULT` 行中添加 `security=selinux selinux=1`
+
+3. 更新GRUB：
+
+```
+sudo update-grub
+```
+
+4. 重启系统
+
+## SELinux模式
+
+SELinux有三种模式：
+
+1. Enforcing：SELinux策略被强制执行
+2. Permissive：SELinux打印警告但不强制执行策略
+3. Disabled：SELinux被关闭
+
+要检查当前模式：
+
+```
+getenforce
+```
+
+要更改模式：
+
+```
+sudo setenforce 1  # Enforcing
+sudo setenforce 0  # Permissive
+```
+
+## SELinux上下文
+
+SELinux使用上下文来确定访问权限。要查看文件的上下文：
+
+```
+ls -Z /path/to/file
+```
+
+要更改文件的上下文：
+
+```
+sudo chcon -t httpd_sys_content_t /path/to/file
+```
+
+## SELinux布尔值
+
+SELinux布尔值允许你在运行时更改SELinux策略的一部分。要列出所有布尔值：
+
+```
+getsebool -a
+```
+
+要更改布尔值：
+
+```
+sudo setsebool httpd_can_network_connect on
+```
+
+# AppArmor
+
+AppArmor是另一种MAC系统，比SELinux配置更容易，但提供的粒度控制较少。
+
+## 安装AppArmor
+
+AppArmor通常预装在Debian系统中。如果没有安装，可以使用以下命令安装：
+
+```
+sudo apt install apparmor apparmor-utils
+```
+
+## 启用AppArmor
+
+1. 编辑GRUB配置：
+
+```
+sudo nano /etc/default/grub
+```
+
+2. 在 `GRUB_CMDLINE_LINUX_DEFAULT` 行中添加 `apparmor=1 security=apparmor`
+
+3. 更新GRUB：
+
+```
+sudo update-grub
+```
+
+4. 重启系统
+
+# AppArmor模式
+
+AppArmor配置文件可以处于两种模式之一：
+
+1. Enforce：配置文件被强制执行
+2. Complain：配置文件记录策略违规但不强制执行
+
+要检查AppArmor状态：
+
+```
+sudo aa-status
+```
+
+# 管理AppArmor配置文件
+
+要列出可用的配置文件：
+
+```
+sudo aa-status
+```
+
+要将配置文件置于complain模式：
+
+```
+sudo aa-complain /path/to/profile
+```
+
+要将配置文件置于enforce模式：
+
+```
+sudo aa-enforce /path/to/profile
+```
+
+## 创建AppArmor配置文件
+
+AppArmor配置文件存储在 `/etc/apparmor.d/`。要创建新的配置文件：
+
+1. 生成基本配置文件：
+
+```
+sudo aa-genprof /path/to/application
+```
+
+2. 运行应用程序并执行典型任务
+3. 根据应用程序的行为更新配置文件：
+
+```
+sudo aa-logprof
+```
+
+4. 保存并强制执行新的配置文件
+
+## 结论
+
+保护Debian系统涉及实施多层保护，从基本安全原则到SELinux和AppArmor等高级访问控制系统。通过遵循本章概述的实践，你可以显著增强Debian系统的安全性。
+
+请记住，安全是一个持续的过程。定期审查和更新你的安全措施，了解新的漏洞和威胁，并始终遵循最小权限原则。通过谨慎和适当的配置，你可以维护一个安全和稳健的Debian系统。
+
+# 第6章：服务与守护进程
+
+## 介绍Systemd
+
+Systemd是Linux操作系统的现代init系统和服务管理器。它已成为许多主要Linux发行版的默认init系统，取代了如SysV init等旧系统。Systemd旨在提供更好的进程管理、服务启动并行化以及依赖关系跟踪。
+
+## Systemd的关键特性
+
+1. **快速启动时间：** Systemd可以并行启动服务，减少整体启动时间。
+2. **按需服务激活：** 服务可以仅在需要时启动，从而节省系统资源。
+3. **依赖管理：** Systemd可以自动处理复杂的服务依赖关系。
+4. **一致的管理界面：** 一个统一的命令行工具（`systemctl`）用于管理单元、目标和系统状态。
+5. **Journal：** 一个集中式日志系统，收集并管理来自各种来源的日志数据。
+6. **资源控制：** Systemd可以为服务管理CPU、内存和其他资源分配。
+
+## Systemd单元
+
+Systemd围绕“单元”组织其配置和管理。单元是一个配置文件，描述了服务、挂载点、设备或其他系统组件。最常见的单元类型包括：
+
+- **服务单元：** 定义和管理系统服务。
+- **目标单元：** 将其他单元分组以实现特定的系统状态（类似于SysV init中的运行级别）。
+- **挂载单元：** 控制文件系统的挂载。
+- **设备单元：** 管理Linux设备树中的设备。
+- **套接字单元：** 管理用于服务激活的网络或IPC套接字。
+- **定时器单元：** 调度任务（类似于cron任务）。
+
+# Systemd目录结构
+
+Systemd单元文件通常存储在以下目录中：
+
+- `/lib/systemd/system/`：由已安装包提供的单元文件。
+- `/etc/systemd/system/`：由系统管理员创建的单元文件，其优先级高于 `/lib/systemd/system/` 中的文件。
+- `/run/systemd/system/`：运行时单元文件。
+
+# 基本Systemd命令
+
+以下是使用 `systemctl` 工具的一些基本systemd命令：
+
+- `systemctl list-units`：列出所有活动的单元。
+- `systemctl list-unit-files`：列出所有已安装的单元文件及其状态。
+- `systemctl status [unit]`：显示特定单元的状态。
+- `systemctl is-active [unit]`：检查单元是否处于活动状态。
+- `systemctl is-enabled [unit]`：检查单元是否已启用以在启动时启动。
+
+# 管理服务：启动、停止、启用和禁用
+
+Systemd通过 `systemctl` 命令提供了管理服务的统一界面。本节将介绍控制服务的基本操作。
+
+# 启动服务
+
+要立即启动服务，请使用以下命令：
+

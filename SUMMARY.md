@@ -1409,6 +1409,7 @@
 +   [Corel Linux 精通指南](docs/mastering-corel-linux/README.md)
 +   [CSS 精通：入门指南](docs/mastering-css-a-beginners-guide/README.md)
 +   [精通 CSS：初学者指南 (计算机科学大师))](docs/mastering-css-a-beginners-guide-mastering-computer-science/README.md)
++   [精通 Debian Linux：从初学者到高级](docs/mastering-debian-linux-from-beginner-to-advanced/README.md)
 +   [防御性安全精通：Windows、Linux、IoT 和云基础设施安全有效技术](docs/mastering-defensive-security-effective-techniques-to-secure-/README.md)
 +   [从零开始掌握嵌入式系统第 4 部分：（嵌入式 Linux、ROS、Adaptive AUTOSAR 基础）](docs/mastering-embedded-system-from-scratch-part-4-embedded-linux/README.md)
 +   [Gnome 精级指南](docs/mastering-gnome/README.md)

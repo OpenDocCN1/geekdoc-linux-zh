@@ -1,0 +1,226 @@
+
+## 2. ls：列出目录内容
+- 列出当前目录中的文件和目录。
+- 常用选项：
+  - `-1`：详细信息的长格式
+  - `-a`：显示隐藏文件
+  - `-h`：以人类可读的格式显示文件大小
+- 示例：`ls -lah`
+
+## 3. cd：切换目录
+- 更改当前工作目录。
+- 示例：`cd /home/user/Documents`
+
+## 4. mkdir：创建目录
+- 创建一个新的目录。
+- 示例：`mkdir new_folder`
+
+## 5. rmdir：删除目录
+- 删除一个空目录。
+- 示例：`rmdir empty_folder`
+
+## 6. touch：创建空文件
+- 创建一个新的空文件，或更新现有文件的时间戳。
+- 示例：`touch new_file.txt`
+
+## 7. cp：复制
+- 复制文件或目录。
+- 示例：`cp source.txt destination.txt`
+
+## 8. mv：移动或重命名
+- 移动或重命名文件和目录。
+- 示例：`mv old_name.txt new_name.txt`
+
+## 9. rm：删除
+- 删除文件或目录。
+- 请谨慎使用，特别是使用 `-r`（递归）选项时。
+- 示例：`rm unwanted_file.txt`
+
+### 文件查看和编辑
+
+## 10. cat：连接并显示
+- 显示文件的内容。
+- 示例：`cat file.txt`
+
+## 11. less：分页文件查看器
+- 允许滚动查看大文件。
+- 示例：`less large_file.txt`
+
+## 12. head：显示文件开头
+- 显示文件的前几行。
+- 示例：`head -n 10 file.txt`
+
+## 13. tail：显示文件末尾
+- 显示文件的最后几行。
+- 示例：`tail -n 20 file.txt`
+
+## 14. nano：文本编辑器
+- 简单的命令行文本编辑器。
+- 示例：`nano document.txt`
+
+### 文件权限和所有权
+
+## 15. chmod：更改文件权限
+- 修改文件访问权限。
+- 示例：`chmod 644 file.txt`
+
+## 16. chown：更改文件所有者
+- 更改文件或目录的所有者。
+- 示例：`chown user:group file.txt`
+
+### 系统信息
+
+## 17. uname：打印系统信息
+- 显示系统信息。
+- 示例：`uname -a`
+
+## 18. df：磁盘空间
+- 显示磁盘空间使用情况。
+- 示例：`df -h`
+
+## 19. free：显示内存使用情况
+- 显示内存和交换分区使用情况。
+- 示例：`free -h`
+
+## 20. top：任务管理器
+- 显示实时系统进程和资源使用情况。
+- 示例：`top`
+
+## 文本处理
+
+## 21. grep：搜索文本
+- 在文本中搜索模式。
+- 示例：`grep "pattern" file.txt`
+
+## 22. sed：流编辑器
+- 执行文本转换。
+- 示例：`sed 's/old/new/g' file.txt`
+
+## 23. awk：文本处理工具
+- 处理和分析文本数据。
+- 示例：`awk '{print $1}' file.txt`
+
+## 网络命令
+
+## 24. ping：网络连接测试
+- 测试与主机的网络连接。
+- 示例：`ping google.com`
+
+## 25. ifconfig：网络接口配置
+- 显示或配置网络接口。
+- 示例：`ifconfig`
+
+## 26. netstat：网络统计
+- 显示网络连接和统计信息。
+- 示例：`netstat -tuln`
+
+## 进程管理
+
+## 27. ps：进程状态
+- 列出正在运行的进程。
+- 示例：`ps aux`
+
+## 28. kill：终止进程
+- 向进程发送信号，通常用于终止它们。
+- 示例：`kill -9 1234`
+
+这些基本的 Bash 命令为通过命令行界面导航和管理 Debian 系统奠定了基础。熟悉并练习这些命令将极大地提高您在 Debian 环境中高效工作的能力。
+
+# 系统启动和关机
+
+理解系统启动和关机过程对于有效管理 Debian 系统至关重要。Debian 使用 systemd 作为其初始化系统，用于管理引导过程和系统服务。
+
+## 系统启动过程
+- 1. **BIOS/UEFI 初始化：**
+  - 计算机的 BIOS 或 UEFI 固件初始化硬件组件。
+  - 它定位包含引导加载程序的启动设备（例如，硬盘、SSD）。
+
+- 2. **引导加载程序（GRUB）：**
+  - GRUB（Grand Unified Bootloader）加载并显示引导选项。
+  - 它将 Linux 内核和初始 RAM 磁盘（initrd）加载到内存中。
+
+- 3. **内核初始化：**
+  - Linux 内核初始化硬件驱动程序并挂载根文件系统。
+  - 它启动初始化进程（在 Debian 中为 systemd）。
+
+- 4. **Systemd 初始化：**
+  - Systemd 成为第一个用户空间进程（PID 1）。
+  - 它读取系统配置并启动系统服务。
+
+- 5. **服务启动：**
+  - Systemd 启动各种系统服务和守护进程。
+  - 初始化网络接口、系统日志记录和其他必要服务。
+
+- 6. **显示管理器：**
+  - 如果已配置，显示管理器（例如，GDM、LightDM）将启动图形环境。
+
+- 7. **用户登录：**
+  - 系统显示登录提示（文本或图形）进行用户身份验证。
+
+# Systemd 单元和目标
+
+Systemd 使用单元来管理服务、设备和其他系统组件。最常见的单元类型包括：
+- **服务单元：** 定义系统服务和守护进程。
+- **目标单元：** 将其他单元组合在一起以对应特定的系统状态。
+- **套接字单元：** 管理网络和 IPC 套接字。
+- **设备单元：** 管理硬件设备。
+
+Systemd 目标取代了传统的运行级别。常见目标包括：
+- **default.target：** 默认目标，通常指向 graphical.target 或 multi-user.target。
+- **graphical.target：** 具有网络功能的完整图形环境。
+- **multi-user.target：** 具有网络功能的多用户文本模式。
+- **rescue.target：** 用于系统恢复的单用户模式。
+
+## 系统关机过程
+- 1. **关机命令：**
+  - 关机过程由 shutdown 命令或通过桌面环境发起。
+
+- 2. **Systemd 关机：**
+  - Systemd 开始停止正在运行的服务和进程。
+  - 它发送 SIGTERM 信号以允许优雅终止。
+
+- 3. **强制终止剩余进程：**
+  - 任何剩余进程将使用 SIGKILL 强制终止。
+
+- 4. **卸载文件系统：**
+  - 卸载文件系统以确保数据完整性。
+
+- 5. **最终系统停止：**
+  - 根据请求停止或重新启动系统。
+
+## 系统控制的重要命令
+- 1. `systemctl`：控制 systemd 的主要命令
+  - 启动服务：`sudo systemctl start service_name`
+  - 停止服务：`sudo systemctl stop service_name`
+  - 重启服务：`sudo systemctl restart service_name`
+  - 启用服务在启动时运行：`sudo systemctl enable service_name`
+  - 禁用服务在启动时运行：`sudo systemctl disable service_name`
+  - 检查服务状态：`systemctl status service_name`
+
+- 2. `shutdown`：系统关机或重启
+  - 立即关机：`sudo shutdown now`
+  - 重启：`sudo shutdown -r now`
+  - 计划关机：`sudo shutdown +30 "System will shutdown in 30 minutes"`
+
+- 3. **reboot**：重启系统
+  - `sudo reboot`
+
+- 4. **poweroff**：关闭系统电源
+  - `sudo poweroff`
+
+- 5. **journalctl**：查看 systemd 日志
+  - 查看所有日志：`journalctl`
+  - 查看特定服务的日志：`journalctl -u service_name`
+  - 查看内核消息：`journalctl -k`
+
+理解系统启动和关机过程以及控制这些过程的工具，对于 Debian 系统的有效管理和故障排除至关重要。
+
+# 使用 Debian 包管理系统（APT）
+
+Debian 的 Advanced Package Tool（APT）是一个强大的包管理系统，简化了软件包的安装、更新和删除过程。APT 处理依赖项、配置和升级，使系统维护更加高效。
+
+## APT 组件
+1. **apt**：包管理的高级命令行界面。
+2. **apt-get**：低级包管理工具。
+3. **apt-cache**：查询 APT 包缓存。
+4. **dpkg**：Debian 包管理器（由 APT 使用）。
