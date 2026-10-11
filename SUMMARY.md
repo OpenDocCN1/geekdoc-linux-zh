@@ -741,6 +741,7 @@
 +   [Linux+ 2005 深度解析](docs/linux-2005-in-depth/README.md)
 +   [Linux：2019 初学者指南，学习 Linux 操作系统和 Linux 命令行，包含 99 个技巧](docs/linux-2019-easy-guide-for-beginners-to-learn-the-linux-opera/README.md)
 +   [LINUX：第二版！初学者速成 - Linux 初学者指南：Linux 命令行、Linux 系统及 Linux 命令（计算机科学、Linux 编程、Linux 操作系统第 1 册）](docs/linux-2nd-edition-beginners-crash-course---linux-for-beginne/README.md)
++   [Linux：三合一：Linux 入门 + Linux 命令行与 Shell 脚本 + Linux 安全与系统管理](docs/linux-3-books-in-1-linux-for-beginners-linux-command-lines-a/README.md)
 +   [Linux 3D 图形编程指南](docs/linux-3-d-graphics-programming/README.md)
 +   [Linux 第7版入门指南](docs/linux-7th-edition-in-easy-steps/README.md)
 +   [Linux 操作系统入门指南](docs/linux-a-beginners-guide-to-linux-operating-system/README.md)

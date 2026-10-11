@@ -1,0 +1,11 @@
+changed the operating system as they deemed fit.
+
+Major educational institutions and companies liked the concept of this new operating system because everyone who had the source code could install Linux on his or her computer. This is how people started creating different versions of the Linux operating system. Students from the University of California, Berkeley, tried to start creating a version. People from China and people with different occupations also started creating versions to suit their personal needs.
+
+The availability of the source code to the public facilitated the creation of distros or distributions. Distributions are different versions of Linux that people have been creating over time. Linux has different versions, and its many distributions offer it several capabilities. When you have to decide which Linux distribution you need to use, you have to decide what you want your computer to do with Linux. I will explain it by running an analogy with the Windows operating system. When you install Microsoft Windows operating system on our computer, every distribution is built to do things in a particular manner.
+
+There is a version of Linux known as Trustix. Linux Trustix is labeled as the most secure Linux operating system in the market. It is simply a brick. You set up Linux Trustix, and no one will be able to hack it until you do something immensely stupid. There will be no sneaking in by viruses. It is a secure and solid server. However, you have to decide that you really need a secure server before picking up the source code and installing the system.
+
+If you are looking out for a computer that you can use for some office applications, you may need an Ubuntu Linux desktop version. If you are looking for a super-secure computer, then you may need Linux Trustix. If you are looking forward to something that comes with enterprise-level support, you may need to use a Linux distribution paired up with a tech support center to help you out. In this case, Red Hat Linux will be the answer to your needs. Again, you must decide what you want your computer to do to determine the most appropriate Linux distribution to install on your computer system.
+
+# Linux is Open-Source

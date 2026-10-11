@@ -1,0 +1,1 @@
+| free | $ free | Shows the systems memory use. Add -h to the command to show the info in human readable format | grep | $ grep | Searches files for specified patterns and displays those lines with the pattern | groups | $ groups | Displays the groups a specified user belongs to | gzip | $ gzip | Compresses a specified file and replaces it with a file with a .gz extension |
