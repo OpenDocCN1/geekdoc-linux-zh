@@ -1,0 +1,65 @@
+
+注意 `ModuleName` 和 `ContentType` 的条目。当你为 DSO 创建条目时，在 `http.conf` 文件中需要这些值。
+
+在继续之前，在浏览器中激活 DSO 以确保其运行正常。（现在，你的 HTML 文件除了显示一个带有“Home”字样的简单页面外不应该显示其他内容。稍后你将添加一些代码，这样就不需要不断移动这些文件了。）确保在编译时始终更新 DSO 的方法是将项目的输出目录设置为 Apache 存放 DSO 文件的目录。通常，标准安装会将 DSO 模块放在 `/usr/local/apache/libexec` 或 `/usr/lib/apache`。
+
+一旦 DSO 运行起来，为应用程序添加另一个页面。将页面命名为 `Login`，并为它选择一个 `TAdapterPageProducer`。将页面保存为 `wmlLogin` 并向新的 Web 模块添加一个 `TLoginFormAdapter` 组件。它看起来应该是这样：
+
+![](img/d784fa8294cae585d61ec86b987ea212_559_0.png)
+
+图 22-9：带有 `TLoginFormAdapter` 的登录 Web 模块
+
+右键点击 `LoginFormAdapter` 组件，选择 `Fields Editor…`（字段编辑器），在左侧面板的树视图上右键点击并选择 `All Fields`（所有字段）。你将得到一个看起来类似于下图的组件编辑器：
+
+![](img/d784fa8294cae585d61ec86b987ea212_559_1.png)
+
+图 22-10：添加了三个默认字段的 `TLoginFormAdapter` 字段编辑器
+
+# 第 22 章：WebSnap 简介
+
+回到 `LoginFormAdapter` 并同样添加所有的 `Actions`（动作）。你将得到一个名为 `ActionLogin` 的单个 `AdapterAction`。
+
+双击 `AdapterPageProducer`。这将打开 Web Surface 设计器。在右上角右键点击 `AdapterPageProducer` 并选择 `New Component | Adapter Form`（新建组件 | 适配器表单）。右键点击 `AdapterForm1`。然后选择 `New Component | AdapterErrorList`（新建组件 | 适配器错误列表）。在对话框的右上面板选择 `AdapterErrorList`。进入 `Inspector`（检查器）并将 `Adapter` 属性设置为 `LoginFormAdapter1`。这将消除你在底部面板看到的错误消息。再次右键点击 `AdapterForm1`。选择一个 `AdapterFieldGroup`（适配器字段组）。进入 `Inspector` 并将 `AdapterField` 的属性设置为 `LoginFormAdapter1` 组件。
+
+再次选择 `AdapterForm1`，右键点击，选择 `New` 并添加一个 `AdapterCommand`。选择 `AdapterCommand1` 并将其 `DisplayComponent` 属性设置为 `AdapterFieldGroup`。右键点击 `AdapterGroup1` 并添加所有 `Fields`（字段）。右键点击 `AdapterCommand1` 并选择所有 `Commands`（命令）。
+
+你显然注意到，在这种情况下，HTML 在底部面板中生成，因为 `TAdapterPageProducer` 使用来自 `TLoginFormAdapter` 的字段和动作为你构建了一个登录表单。你的组件编辑器现在应该是这样的：
+
+![](img/d784fa8294cae585d61ec86b987ea212_560_0.png)
+
+如果你回到 IDE，在代码编辑器中选择 `Login` 页面并选择底部的 `Preview` 标签，你将看到带有用户名和密码编辑框的登录预览。
+
+接下来，你可以编译应用程序，将登录页的 HTML 文件移动到 DSO 目录，重启 Apache 并在浏览器中查看应用程序的新版本。
+
+# Kylix 2 开发第 22 章：WebSnap 简介
+
+> 提示：遗憾的是，WebSnap 向导创建的默认设置并没有真正创建一个标准的 DSO。为了能够在 Apache 中使用该 DSO，你需要对项目的 DPR 文件进行一些额外添加。你应该让它看起来像这样：
+KylixDemo:
+
+```pascal
+uses
+
+WebBroker,
+
+ApacheApp,
+
+Home in 'wmHome.pas' (Home: TWebTabPageModule) (*.html);
+
+$R *.res
+
+exports
+
+apache_module name='kylixdemo_module';
+
+begin
+
+ModuleName='kylixdemo_module';
+
+ContentType='kylixdemo-handler';
+
+Application.Initialize;
+
+Application.Run;
+
+end.
+```
