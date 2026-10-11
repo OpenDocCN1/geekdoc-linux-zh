@@ -1108,6 +1108,7 @@
 +   [Linux Magazine 269 2023-04 美国](docs/linux-magazine-269-2023-04-usa/README.md)
 +   [Linux 杂志 270 期 2023-05 美国版](docs/linux-magazine-270-2023-05-usa/README.md)
 +   [Linux Magazine 第272 期 2023-07](docs/linux-magazine-272-2023-07/README.md)
++   [Linux 杂志 273 2023年8月](docs/linux-magazine-273-2023-08/README.md)
 +   [Linux Magazine 第274 期 2023-09 美国](docs/linux-magazine-274-2023-09-usa/README.md)
 +   [Linux 杂志 2025年7月](docs/linux-magazine-july-2025/README.md)
 +   [Linux Magazine USA - 第 263 期 - 2022年10月](docs/linux-magazine-usa---issue-263---october-2022/README.md)

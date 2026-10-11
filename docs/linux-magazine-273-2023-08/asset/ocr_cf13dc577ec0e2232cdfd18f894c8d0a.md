@@ -1,0 +1,13 @@
+# Hone your skills with special editions!
+
+Get to know Shell, LibreOffice, Linux, and more from our Special Edition library.
+
+The Linux Magazine team has created a series of single volumes that give you a deep-dive into the topics you want.  
+
+Available in print or digital format
+
+# Check out the full library!
+
+sparkhaus-shop.com/specials
+
+![](bbox=[0.08, 0.53, 0.92, 0.99])
