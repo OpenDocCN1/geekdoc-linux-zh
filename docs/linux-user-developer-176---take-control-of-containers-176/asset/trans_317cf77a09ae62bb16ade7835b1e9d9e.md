@@ -1,0 +1,91 @@
+
+## 12 未安装 JAVA
+
+开箱即用的 Linux 并不包含 Java 编程语言。当你确实需要安装它时，也有许多不同的选择。首先要决定的问题是使用开源版本（OpenJDK）还是闭源版本（Oracle）Java。实际上，如今两者之间差别并不大；然而，根据你使用 Java 的用途，你可能需要特定版本。大多数发行版的软件源中包含了 OpenJDK，因此可以通过如下命令进行安装：
+
+```bash
+$ apt-get install openjdk-8-jre
+```
+
+若要安装 Oracle 的 Java，最简单的方法是使用 PPA，例如由 webupd8team 提供的那个 —— 使用如下命令：
+
+```bash
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+```
+
+请注意，如果你并非专门进行 Java 开发，可能只需要安装 JRE（Java 运行环境）而非 JDK（Java 开发工具包）。
+
+不过，如果你需要同时安装两种类型的 Java，或者可能需要多个版本（Java 7 / 8 等），你可以这样做 —— 并切换系统中默认启用的版本。使用如下命令：
+
+```bash
+$ sudo update-alternatives --config java
+```
+
+……以交互式方式选择你偏好的版本（如果需要，对 javac 也做相同操作）。
+
+Java 的默认安装不会在你的浏览器中启用支持 —— 如有需要，你必须手动安装插件。Oracle 在其网站上有一个支持页面，详细介绍了操作方法。[bit.ly/2lZIu8](bit.ly/2lZIu8)。
+
+## 13 此应用程序未正确安装
+
+我们可以打赌，如果你使用 Linux 已经有一段时间了，那么你肯定已经厌倦了直接从命令行安装应用程序，而不是使用 GUI 安装器。大多数新用户在应用依赖项方面会很快且粗暴地学到教训 —— 例如，当 GUI 变得难以处理时，尝试安装 Chrome 浏览器就成了一次学习如何使用命令行的练习。你会注意到，当你尝试安装 DEB 软件包时，有时由于缺少依赖项且未自动解析，它们将安装失败。如果你遇到这种情况（如 Chrome 案例），通常可以使用如下命令自动修复问题：
+
+```bash
+$ apt-get install -f
+```
+
+## 14 我无法播放任何视频
+
+Linux 的新手常常惊讶地发现系统并未预装功能强大的媒体播放器，因此播放视频文件可能会遇到问题。幸运的是，有一种简单的解决方案，即 VLC。VLC 是一款免费且开源的跨平台多媒体播放器及框架，能够播放大多数多媒体文件，以及 DVD、音频 CD、VCD 和各种流媒体协议。要在你的 Linux 机器上安装，你可以从发行版的软件源安装（我们保证它在那里），或者使用 www.videolan.org 上提供的软件包。浏览器插件（browser-plugin-vlc）和额外的流媒体编解码器（libavcodec-extra-53）也可用。为了播放区域锁定的 DVD，你需要按照 VLC 网站上的指南安装 libdvdcss2。
+
+# 调整与改进
+
+Linux 几乎可以无限地针对你的特定需求进行调优，但有一些关键事项是你想要做的
+
+## 15 电池续航不如 Windows
+
+这是一个残酷的现实：在便携式设备上运行 Linux 的电池续航通常比同一台机器运行 Windows 要差。这主要归因于制造商针对设备/操作系统组合做了特定的电池优化，且驱动程序更加成熟。然而，一个有助于缓解这种情况的秘密武器是 TLP。TLP 让你享受到 Linux 高级电源管理的益处，而无需了解每一个技术细节。TLP 带有默认配置，已针对电池续航进行了优化，因此你可以安装后直接忽略，尽管它高度可定制，若需满足特定要求亦可调整。安装完成后（TLP 存在于大多数发行版软件源中），可以使用如下命令启动：
+
+```bash
+sudo tlp start
+```
+
+然后使用：
+
+```bash
+sudo tlp-stat -s
+```
+
+……以检查系统是否正常工作。
+
+## 16 我想要一个“桌面”快捷方式
+
+有时是小事起了决定性的作用，而这就是一个绝佳的例子 —— 你不会相信启动器上有一个“桌面”快捷方式有多有用。更好的是，启用它通常非常简单明了。具体步骤取决于你使用的发行版，但以使用 Unity 的 Ubuntu 为例，只需安装 unity-tweak-tool，导航至 Launcher 部分，并切换“显示桌面图标”设置。图标应会立即出现。该应用还有许多其他有用的调整选项！
+
+## 17 我缺少一些重要的字体
+
+如果你正在加载从他人那里收到的文档，你可能会注意到缺少一些在 Windows 电脑上默认安装的字体。幸运的是，有简单的解决方法。只需安装 ttf-mscorefonts-installer 软件包，你的系统就会更新并包含 Andale Mono、Arial、Comic Sans MS（是的）、Courier New、Georgia、Impact、Times New Roman、Trebuchet、Verdana 和 Webdings。由于这是一个基本字体集，你仍会缺少 Calibri 和 Cambria 等某些微软字体。不幸的是，这些字体并不官方支持 Linux。
+
+## 18 默认主题有点丑
+
+尽管现在的状况比过去好多了，但 Linux 的图形界面开箱即用时仍算不上最漂亮，即使在运行 Unity 的 Ubuntu 旗舰发行版上也是如此。坏消息就是这样 —— 好消息是大多数发行版都易于换肤。试试下面这种简单的方式来让你的 Ubuntu 机器看起来比之前更酷。安装 unity-tweak-tool。从 [github.com/adapta-project/adapta-gtk-theme](https://github.com/adapta-project/adapta-gtk-theme) 下载 Adapta-gtk-theme。然后从 [snwh.org/paper](https://snwh.org/paper) 下载 paper 图标。使用 tweak tool 启用这两者。现在，看起来是不是像完全不同的操作系统了？太美了。
+
+## 19 我无法在平板电脑上操作 GRUB
+
+现在有很多配备强大硬件的可转换笔记本电脑，这意味着它们也是极好的 Ubuntu 机器（戴尔 XPS / Latitude 12 7275 就是完美的例子）。你很可能会对机器进行双系统启动，这会立即引发一个问题。GRUB 算不上什么触控优化的，对吧？在默认配置下，GRUB 将无限期地等待输入。这不是理想的。要绕过这个问题，你应该更新 GRUB 配置，添加默认选项和超时时间。编辑 /etc/default/grub，将 GRUB_DEFAULT 设置为所需值（列表从 0 开始）和合适的秒数 GRUB_TIMEOUT 值。另外，将 GRUB_HIDDEN_TIMEOUT_QUIET 设置为 false。运行如下命令后：
+
+```bash
+$ sudo update-grub
+```
+
+……问题就解决了。现在你至少可以在没有键盘的情况下启动机器了！
+
+## 20 没有可用的屏幕键盘
+
+一旦你成功在平板电脑上进入 Ubuntu，就会遇到一个新问题 —— 没有屏幕键盘。可以说，与其他平台相比，Linux 的平板体验稍显不足，但仍可使用。要做到这一点，加载系统设置并选择通用访问中的输入标签。启用屏幕键盘设置后，屏幕顶部会出现一个新图标，可用于显示键盘 —— 即使未登录时也可以。当处于适合输入文本的位置时，键盘也应该会自动显示和隐藏。
+
+## 21 我想安装一些杀毒软件
+
+“只有 Windows 才需要杀毒软件”。这是最后一句名言吗？尽管由于安装基数庞大，Windows 确实比 Linux 或 Mac OS X 遭受更多攻击，但对于 Linux 用户来说，安装杀毒软件也是良好的实践。大多数大型杀毒软件公司都提供保护 —— 通常免费。Linux 上最常用的杀毒软件是 ClamAV，它默认不带 GUI，但有一个轻量级的第三方 GUI 提供，即 clamtk 前端，可从 https://github.com/clamtk 获取。
+

@@ -1315,6 +1315,7 @@
 +   [Linux 用户与开发者 173 - 系统管理员生存技能 173](docs/linux-user-developer-173---sysadmin-survival-skills-173/README.md)
 +   [Linux 用户与开发者 174 - 锁定您的系统](docs/linux-user-developer-174---lock-down-your-system-174/README.md)
 +   [Linux User & Developer 175 - 构建完美网络指南 175](docs/linux-user-developer-175---build-the-perfect-network-175/README.md)
++   [Linux 用户与开发者第 176 期 - 掌控容器 176](docs/linux-user-developer-176---take-control-of-containers-176/README.md)
 +   [Linux 用户与开发者 177 - 征服云端 177](docs/linux-user-developer-177---conquer-the-cloud-177/README.md)
 +   [Linux User & Developer 178 - Ubuntu 17.04 启动包 178](docs/linux-user-developer-178---ubuntu-1704-launch-pack-178/README.md)
 +   [Linux用户与开发者 179：全套发行版工具包 179](docs/linux-user-developer-179---total-distro-toolkit-179/README.md)
