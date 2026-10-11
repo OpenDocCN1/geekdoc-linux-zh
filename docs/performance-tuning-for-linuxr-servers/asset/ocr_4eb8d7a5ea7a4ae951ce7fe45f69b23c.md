@@ -1,0 +1,14 @@
+# Web Server Benchmarks
+
+This section discusses the following web server benchmarks:
+
++   - SPECweb, SPECweb SSL, and TPC-W
++   - SPECjAppServer and ECPerf
+
+# SPECweb, SPECweb SSL, and TPC-W
+
+Web serving is a very common workload today. Everyone is interested in ensuring that their web server is fast enough to serve up whatever content they have to publish. Of course, different people publish or make available different information or services via the web. Three benchmarks worth highlighting are SPECweb, SPECweb SSL, and TPC-W. Each of these benchmarks covers a somewhat different class of web servers, although there are some overlaps. Most web serving today has a mix of static content (for example, "publish once-read often" content) and dynamic content (for example, where each page is created on-the-fly with localized or customized content). Static content is often items like news stories, PDF documents, results files, source archives, audio or video files, and so on. These documents vary in size, depending on the goals of the web server, so sometimes the static content is very small, and sometimes very large, with every possible mix in between. More often, today's coolest sites are those that allow you to log in, set your preferences, and get content tailored to your interests. This might include customized news stories, targeted advertising, personalized shopping information, and so on. SPECweb is a test designed to model the access to a web server and benchmark the rate at which the web server can provide static and dynamic content to the user. The rate of static to dynamic content is pre-set by the benchmark rules, although with some tinkering, those numbers can be adjusted to better model your own workload.
+
+SPECweb SSL is built on top of the same SPECweb harness, but its goal is to measure the performance of encrypted data transfers using the standard Secure Sockets Layer (SSL) encryption methods. Because of the overhead of encryption, the computational power required for SSL transfers is higher on the server. Therefore the maximum number of connections that can be simultaneously supported with reasonable latency is typically less than that of non-SSL-based connections.
+
+The third major benchmark in this class is TPC-W, which is a more comprehensive test in that it attempts to model an entire e-commerce site. This includes a mix of SSL and non-SSL accesses, includes the assumption of a database underlyring the related web-based queries, and allows for transactions on that database via the web interface. In part, TPC-W is a database benchmark as well as a web-serving benchmark.

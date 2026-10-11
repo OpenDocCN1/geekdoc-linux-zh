@@ -1,0 +1,3 @@
+# Introduction
+
+Linux supports several types of file systems, including non-journaling file systems and several journaling file systems. We will discuss the journaling and non-journaling file system types available in Linux, including their purpose, implementation, and use, and we will examine ways to tune each type of file system. We will also look at factors that affect file system performance, including how file systems are implemented and created, and how the disks on which they reside affect their performance.

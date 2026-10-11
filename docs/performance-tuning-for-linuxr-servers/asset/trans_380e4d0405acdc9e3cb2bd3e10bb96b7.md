@@ -1,0 +1,257 @@
+
+
+## 索引
+
+- LVM (Linux 逻辑卷管理器)
+  - 元数据
+  - mkfs 命令
+  - 网络文件系统协议 2nd 3rd 4th 5th 6th 7th 8th
+  - procfs 2nd 3rd
+  - RAID 2nd
+  - 原始磁盘 I/O 2nd 3rd 4th
+  - ReiserFS 2nd 3rd
+    - 创建 2nd
+    - 外部日志
+    - 内核配置支持
+    - 布局分析 2nd
+    - 挂载 2nd 3rd 4th 5th
+    - 调优 2nd 3rd 4th 5th 6th
+    - 实用工具 2nd
+  - 选择 2nd
+  - 超级块
+  - sysfs 2nd
+  - tune 命令
+  - 调优
+  - VFS (虚拟文件系统)
+  - VGs (卷组) 2nd
+  - XFS
+    - 布局分析
+    - 调优 2nd 3rd 4th 5th
+  - XFS (下一代文件系统) 2nd
+    - 分配组
+    - 创建 2nd
+    - 外部日志
+    - 满度
+    - 内核配置支持
+    - 挂载 2nd
+    - 分区
+    - 调优 2nd
+    - 实用工具 2nd 3rd 4th
+  - file-max 参数 (内核)
+  - file-nr 参数 (内核)
+  - 文件
+    - 大小
+    - 增加
+  - 文件系统层次标准 (FHS) [参见 FHS (文件系统层次标准)]
+  - 闪速 Web 服务器
+    - 调优
+  - 灵活文件系统基准测试 (FFSB)
+  - 强制文件同步
+  - FORTRAN 编程语言
+  - 转发确认 (FACK)，TCP_enabling forwarding_parameter (内核)
+  - 碎片
+    - 文件系统 2nd
+    - 外部碎片
+    - 内部碎片
+  - front_merges 参数 (I/O 调度器)
+  - fsck.ext3 实用工具 (Ext3 文件系统)
+  - fsync 函数
+  - 函数
+    - 异步 I/O 2nd
+    - 文件同步 2nd
+  - gc stale time 参数 (内核)
+  - gcc
+    - GNU 编译器集合编译器
+      - 调优选项 2nd 3rd
+  - GFS
+    - 千兆以太网
+      - 调优
+        - Netperf3 2nd 3rd
+  - 全局内存
+    - 数据库 2nd 3rd
+  - GNU C 库 (GLIBC) 异步 I/O 接口
+  - GNU 编译器集合 (gcc) 编译器 [参见 代码，编译器，gcc (GNU 编译器集合)，编译器]
+  - GNU 通用公共许可证 (GPL)
+    - Linux 内核
+  - gprof 命令
+  - 粒度锁
+    - 处理器
+  - gtop 命令
+    - CPU 利用率 2nd 3rd
+  - Gunther, Harvey
+  - HA (高可用性) 集群 2nd 3rd
+  - 硬盘
+    - 多个硬盘
+      - 配置 2nd
+    - 分区
+      - 放置 2nd 3rd 4th
+    - RAID (廉价磁盘冗余阵列)
+      - 配置 2nd 3rd
+  - 硬件
+    - 分析方法论
+    - 应用服务器 2nd
+    - IBM zSeries 大型机
+    - NUMA 服务器
+  - hdparm 命令
+    - 驱动器信息
+      - 查看 2nd 3rd 4th
+  - 异构性
+    - 应用服务器
+  - 层次结构
+    - NUMA 服务器
+  - 进程
+    - 查看 2nd 3rd
+  - 高可用性 (HA) 集群 [参见 HA (高可用性) 集群]
+  - 高带宽互连
+    - NUMA 服务器
+  - 高性能集群 (HPCs) [参见 集群；HPCs (高性能集群)]
+  - highmen 接口
+  - 持有时间统计
+    - JLM (Java 锁监视器) 2nd 3rd 4th
+  - 主分区
+    - 放置 2nd 3rd 4th
+  - 横向集群
+    - 应用服务器
+  - hostname 参数 (内核)
+  - hot_list_length 参数 (内核)
+  - HPCs
+    - 高性能集群
+  - HTML 生成器
+    - CGI (通用网关接口)
+    - Java  servlets
+  - HTTP
+    - ISO 分层模型
+    - 请求 2nd 3rd
+      - 字节范围请求
+    - 响应 2nd 3rd 4th
+      - 分块编码
+    - WebDAV 扩展
+    - HTTP (超文本传输协议)
+    - 巨大 TLB 页面支持
+    - 超文本传输协议 (HTTP)
+  - 超线程
+    - 应用服务器 2nd
+  - I/O
+    - 数据库
+      - 异步 I/O 2nd
+      - 块大小 I/O
+      - 弹回缓冲区
+      - 直接 I/O
+      - 原始 I/O
+      - 请求锁
+      - 调优
+      - 矢量 I/O
+    - 文件 I/O 2nd
+    - 文件系统
+      - 测量 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th
+    - 请求锁
+      - 数据库
+    - 利用率
+      - 监控 2nd 3rd 4th 5th 6th 7th 8th
+  - I/O 总线
+  - I/O 设备
+    - 寻址
+  - I/O 提升器 2nd
+  - I/O 操作
+    - 异步 I/O
+      - 文件系统 2nd 3rd 4th 5th
+      - IBM zSeries 大型机 2nd
+    - 原始磁盘 I/O
+      - 文件系统 2nd 3rd 4th
+  - I/O 调度器 2nd 3rd 4th 5th 6th 7th 8th
+  - 16 路 RAID-0 设置
+    - 基准测试 2nd
+  - 8 路 NUMA RAID 设置
+    - 基准测试 2nd 3rd 4th 5th
+  - AS (预期 I/O 调度器) 2nd 3rd 4th
+    - 衰减频率表
+    - 最低逻辑块信息
+    - 定位时间
+    - 读取预期过程 2nd 3rd
+  - 调优 2nd
+    - AS 调度器 2nd
+      - deadline 行为 2nd 3rd
+      - 基准测试 2nd 3rd 4th
+      - CFQ (完全公平队列) I/O 调度器
+        - 调优 2nd 3rd 4th 5th
+      - deadline I/O 调度器 2nd 3rd
+      - noop I/O 调度器
+      - 性能
+      - 性能问题
+      - 性能排名
+      - 重新排序
+      - 请求池
+      - 单 CPU 单磁盘设置
+        - 基准测试 2nd 3rd
+        - 调优 2nd 3rd
+  - I/O 子系统
+    - I/O 调度器 2nd 3rd 4th 5th
+      - AS (预期 I/O 调度器) 2nd 3rd 4th 5th 6th 7th
+      - CFQ (完全公平队列) I/O 调度器
+        - deadline I/O 调度器 2nd 3rd
+        - noop I/O 调度器
+        - 性能问题
+        - 调优 2nd 3rd
+    - 集成
+      - 缺乏
+      - 性能问题 2nd
+  - I/O 子系统
+    - MPIO
+      - 多路径 I/O
+      - 服务器 2nd
+  - IBM
+    - 应用服务器
+    - JFS
+      - JFS (日志文件系统)
+      - Netperf3
+    - IBM JFS (日志文件系统)
+    - IBM WebSphere 应用服务器
+    - Trade3 基准测试
+      - 商业负载 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th 19th 20th 21st 22nd 23rd 24th 25th 26th 27th 28th 29th 30th 31st 32nd 33rd 34th 35th 36th 37th 38th 39th 40th 41st 42nd 43rd 44th
+      - IBM zSeries 大型机 2nd 3rd
+      - CRO (持续可靠运行)
+  - 硬件
+    - I/O 操作 2nd
+  - ICMP
+    - 内核参数 2nd
+    - icmp_echo_ignore_all 参数 (内核)
+    - icmp_echo_ignore_broadcasts 参数 (内核)
+    - icmp_ignore_bogus_error_responses 参数 (内核)
+    - icmp_ratelimit 参数 (内核)
+    - icmp_ratemask 参数 (内核)
+  - IDE 硬盘
+    - hdparm 命令 2nd 3rd 4th
+  - 标识符
+    - IPC (进程间通信) 2nd
+  - 恒等映射段 (虚拟内存) [参见 内核映像段 (虚拟内存)]
+  - igmp_max_membership 参数 (内核)
+  - 实现
+    - 文件系统 2nd
+  - init 进程 2nd 3rd 4th 5th 6th 7th 8th
+  - 初始化表 2nd
+  - 初始化
+    - BSD 2nd 3rd 4th 5th 6th 7th 8th
+    - init 进程 2nd 3rd 4th 5th 6th 7th 8th
+    - 初始化表 2nd
+    - System V 2nd 3rd 4th 5th 6th 7th 8th
+    - 初始化表 2nd
+    - BSD initab
+    - Slackware 2nd
+    - System V initab
+    - Red Hat 2nd 3rd
+  - inode-nr 参数 (内核)
+  - inode-state 参数 (内核)
+  - inodes
+    - Ext2 文件系统
+    - 文件系统
+    - JFS (日志文件系统)
+  - 安装
+    - Linux
+    - 预安装规划 2nd 3rd 4th 5th 6th 7th 8th
+  - 指令跟踪
+    - PI (性能检查器) 2nd 3rd
+  - 集成
+    - I/O 子系统
+    - 缺乏
+  - 交互式任务
+

@@ -1,0 +1,3 @@
+# Kernel Auto Tuning
+
+The kernel initializes certain variables at boot up based on the resources (such as the amount of memory) in the system. Often, this initial adjustment is sufficient. Some variables are also dynamically tuned by the kernel, such as the size of the socket buffer in use. This alleviates the need for the users to track and adjust the kernel variables manually for optimum performance. However, in some cases this dynamic tuning is insufficient, and adequate or improved performance requires the manual tuning of kernel parameters.

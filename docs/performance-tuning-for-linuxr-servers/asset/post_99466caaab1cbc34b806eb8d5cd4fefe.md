@@ -1,0 +1,616 @@
+
+## Index
+
+### 0-9
+- 16-way RAID-0 setup
+    - benchmark 2nd
+- 8-way NUMA RAID setup
+    - benchmark
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+
+### A
+- AS scheduler
+    - compared
+    - benchmarks
+    - _performance
+- application server
+    - clustering
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+- algorithms
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - 7th
+    - 8th
+    - 9th
+    - 10th
+    - 11th
+    - 12th
+    - 13th
+    - 14th
+    - 15th
+    - 16th
+    - 17th
+    - 18th
+    - 19th
+    - 20th
+    - 21st
+    - 22nd
+    - 23rd
+    - 24th
+    - 25th
+    - 26th
+    - 27th
+- As tuning tools
+    - 2nd
+    - 3rd
+- asuring data integrity
+    - 2nd
+
+### B
+- benchmark
+    - VolcanoMark
+    - 2nd
+    - 3rd
+    - ReiserFS layout analysis
+    - XFS layout analysis
+    - CFQ (Completely Fair Queuing) I/O scheduler
+    - CFQ I/O scheduler
+    - 16-way RAID-0 setup
+    - 8-way NUMA RAID setup
+    - sngle-CPU sngle-disk setup
+- byte range requests
+    - client server model
+    - 2nd
+    - 3rd
+
+### C
+- channel cards
+- CGI (Common Gateway Interface)
+- chattr utility (Ext2/Ext3 file system)
+- CHILD_PENALTY parameter (scheduler)
+    - tuning
+- childen
+    - sleep averages
+    - tuning 2nd
+- chunked encoding
+- client server model
+    - requests
+    - 2nd
+    - 3rd
+    - byte range requests
+    - responses
+    - 2nd
+    - 3rd
+    - chunked encoding
+- client-server model
+    - WWW (World Wide Web)
+- clients
+    - designing
+    - 2nd
+    - tuning
+        - file change notifications
+        - metadata
+        - opportunistic locking
+        - 2nd
+        - 3rd
+        - protocol layering
+        - 2nd
+        - 3rd
+        - 4th
+        - read-only clients
+        - 2nd
+- clustering
+    - application server
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - cluster interconnect technology
+    - databases
+- clusters
+    - 2nd
+    - HA (high availability) clusters
+    - 2nd
+    - 3rd
+    - HPCs (high performance clusters)
+- code
+    - compilers
+        - as tuning tools
+        - 2nd
+        - 3rd
+        - gcc
+        - gcc (GNU Compiler Collection) compiler
+        - compiling
+        - 2nd
+    - native code
+    - application servers
+    - programs
+    - designing
+    - tuning
+    - 2nd
+    - 3rd
+- Comer, Douglass E
+- commands
+    - debugfs
+    - dump2efs
+    - gprof
+    - gtop
+        - CPU utilization
+        - 2nd
+        - 3rd
+    - hdparm
+    - 2nd
+    - 3rd
+    - 4th
+    - iostat
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - 7th
+    - 8th
+    - I/O utilization
+    - 2nd
+    - ipconfig
+    - ipcs
+    - 2nd
+    - 3rd
+    - jfs_mkfs
+    - less
+    - logrotate
+    - mkfs
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - mke2fs
+    - 2nd
+    - netstat
+        - network utilization
+        - 2nd
+        - 3rd
+        - 4th
+        - 5th
+    - nfsstat
+        - network utilization
+    - OProfile
+    - op_merge
+    - op_time
+    - op_to_source
+    - opcontrol
+    - 2nd
+    - 3rd
+    - 4th
+    - oprofpp
+    - 2nd
+    - system tracing
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - 7th
+    - 8th
+    - 9th
+    - 10th
+- P1 (Performance Inspector)
+    - pipcntl
+    - post
+    - ptt
+    - pttstats
+    - swtrace
+    - 2nd
+    - prof
+- ps
+    - memory utilization
+    - 2nd
+    - pttstats
+    - 2nd
+    - run.ltrace
+    - 2nd
+- sar
+    - CPU utilization
+    - 2nd
+    - 3rd
+    - 4th
+    - I/O utilization
+    - 2nd
+    - 3rd
+- sh
+- strace
+    - system tracing
+    - 2nd
+    - 3rd
+    - 4th
+- sysctl
+- sysctl(8)
+- top
+    - CPU utilization
+    - 2nd
+    - 3rd
+    - system tracing
+    - 2nd
+    - 3rd
+- tprof
+    - 2nd
+- gprof reports
+- tune
+- vmstat
+    - CPU utilization
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - memory utilization
+    - 2nd
+- commercial workload
+    - J2EE model
+    - 2nd
+    - Trade3 benchmark
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - 7th
+    - 8th
+    - 9th
+    - 10th
+    - 11th
+    - 12th
+    - 13th
+    - 14th
+    - 15th
+    - 16th
+    - 17th
+    - 18th
+    - 19th
+    - 20th
+    - 21st
+    - 22nd
+    - 23rd
+    - 24th
+    - 25th
+    - connection pools
+    - 2nd
+    - database I/O activity
+    - 2nd
+    - hyperthreading
+    - 2nd
+    - JVM (Java Virtual Machine)
+    - 2nd
+    - 3rd
+    - pass-by-reference
+    - thread dumps
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - thread pools
+    - 2nd
+    - Web servers
+    - tuning
+    - 2nd
+- Common Gateway Interface (CGI)
+- compile_et utility (Ext2/Ext3 file system)
+- compilers
+    - as tuning tools
+    - 2nd
+    - 3rd
+    - gcc
+        - (GNU Compiler Collection) compiler
+    - compiling
+    - code
+    - 2nd
+    - Completely Fair Queueing (CFQ) I/O scheduler
+- component benchmarks [See microbenchmarks]
+- computers
+- concurrency
+    - application servers
+    - Web servers
+- CONFIG
+    - kernel parameters
+    - 2nd
+- configuration
+    - Ext3 file system
+    - 2nd
+    - hard drives
+        - multiple hard drives
+        - 2nd
+    - IPC (interprocess communication)
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - JFS (Journaled File System)
+    - kernel
+        - configurable features
+        - 2nd
+    - RAID (Redundant Array of Inexpensive Disks)
+    - 2nd
+    - 3rd
+    - ReiserFS
+    - XFS (Next Generation File System)
+- connection management
+    - TCP
+        - kernel parameters
+        - 2nd
+- connection pools
+    - application servers
+    - 2nd
+- contention statistics
+    - generating
+        - JLM (Java Lock Monitor)
+        - 2nd
+        - 3rd
+        - 4th
+- context switching
+    - 2nd
+- conversions
+    - file systems
+    - 2nd
+    - 3rd
+- counter (OProfile)
+- counters
+    - JLM (Java Lock Monitor)
+    - 2nd
+    - 3rd
+    - 4th
+- CPU scheduler
+    - virtual memory
+    - 2nd
+    - 3rd
+    - 4th
+- CPUs
+    - utilization
+        - monitoring
+        - 2nd
+        - 3rd
+        - 4th
+        - 5th
+        - 6th
+        - 7th
+        - 8th
+        - 9th
+        - 10th
+        - 11th
+        - 12th
+        - 13th
+        - 14th
+        - 15th
+        - 16th
+        - 17th
+        - 18th
+        - 19th
+        - 20th
+- create benchmarks
+
+### D
+- CREDIT_LIMIT parameter (scheduler)
+    - tuning
+- crediting
+    - interactive tasks
+    - scheduler
+- CRO (Continuous Reliable Operation)
+    - IBM zSeries mainframes
+- D-SACK, TCP, enabling
+- data integrity
+    - application servers
+        - assuring
+        - 2nd
+- data movement
+    - burst transfer rates
+    - disks
+    - 2nd
+    - internal transfer rates
+    - sustained transfer rates
+- data=writeback column (NetBench)
+- database benchmarks
+    - 2nd
+    - 3rd
+    - results
+- database servers
+    - 2nd
+    - application servers
+    - interactivity
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+- databases
+    - application servers
+        - support for
+        - architectures
+        - 2nd
+        - 3rd
+        - clustering interconnect technology
+        - decision support system (DSS) workloads
+    - I/O management
+        - asynchronous I/O
+        - 2nd
+        - block size I/O
+        - bounce buffers
+        - direct I/O
+        - raw I/O
+        - request locks
+        - vectored I/O
+    - logging devices
+    - 2nd
+    - 3rd
+    - memory management
+    - 2nd
+    - OLTP (online transaction processing)
+    - process management
+    - 2nd
+    - tuning
+        - global memory
+        - 2nd
+        - 3rd
+- I/O
+    - load balancing
+    - 2nd
+    - queue length
+    - response times
+    - workloads
+    - 2nd
+- dbench
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+- dcache read copy update column (NetBench)
+- deadline behavior
+    - AS scheduler
+    - 2nd
+    - 3rd
+- deadline I/O elevators
+- deadline I/O schedulers
+    - 2nd
+    - 3rd
+- deadlocking
+    - semaphores
+- debugfs command
+- debugfs utility (Ext2 file system)
+- debugging
+    - kernel parameters
+- debugreiserfs utility (ReiserFS)
+- decayed frequency tables
+- decision support (DS)
+- decision support system (DSS) workloads
+    - databases
+- dedicated network storage servers
+- default threads
+    - virtual memory
+- de-fragmentation
+    - file systems
+- delay_first_probe_time parameter (kernel)
+- dentry-state parameter (kernel)
+- designing
+    - programs
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - 7th
+    - 8th
+    - clients
+    - 2nd
+    - code
+    - file I/O
+    - 2nd
+    - servers
+    - 2nd
+    - 3rd
+    - sockets
+    - 2nd
+    - 3rd
+    - synchronization
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - threads
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - timing routines
+    - 2nd
+    - 3rd
+- detailed symbol mode reports (OProfile)
+- devfs
+- device special files
+- devices
+    - I/O devices
+    - addressing
+- dir-notify-enable parameter (kernel)
+- direct I/O
+    - databases
+- directories
+    - Ext2 file system
+    - 2nd
+    - JFS (Journaled File System)
+- dirty bits
+    - dirty_background_ratio parameter (virtual memory)
+    - dirty_expire_centisecs parameter (virtual memory)
+    - dirty_ratio parameter (virtual memory)
+    - dirty_writeback_centisecs parameter (virtual memory)
+- disk benchmarks
+    - Bonnie/Bonnie++ benchmarks
+    - 2nd
+    - 3rd
+    - dbench
+    - 2nd
+    - 3rd
+    - 4th
+    - 5th
+    - 6th
+    - IOMeter benchmarks
+    - IZone benchmarks
+    - Penguinmeter benchmarks
+    - tiobench
+    - 2nd
+    - 3rd
+- disks
+    - file systems
+    - data movement
+    - 2nd
+    - hdparm command
+    - 2nd
+    - 3rd
+    - 4th
+    - rotational speed
+    - 2nd
+    - track-to-track seek speed
+    - 2nd
+    - transfer rates
+    - 2nd
+    - multiple disks
+        - configuring
+        - 2nd
+    - partitions
+        - placement
+        - 2nd
+        - 3rd
+        - 4th
+    - RAID (Redundant Array of Inexpensive Disks)
+        - configuring
+        - 2nd
+        - 3rd
+- distribution
+    - application servers
+- DMZ topology
+    - application server
+    - 2nd
+- DNS servers
+    - domainname parameter (kernel)
+    - dquot-max parameter (kernel)
+    - dquot-nr parameter (kernel)
+- drives
+    - multiple drives
+        - configuring
+        - 2nd
+    - partitions
+        - placement
+        - 2nd
+        - 3rd
+        - 4th
+    - RAID (Redundant Array of Inexpensive Disks)
+        - configuring
+        - 2nd
+        - 3rd
+- DS (decision support)
+- dump2efs command

@@ -1,0 +1,32 @@
+```
+VolanoMark version = 2.1.2
+Messages sent = 200000
+Messages received = 380000
+Total messages = 400000
+Elapsed Time = 79.49 seconds
+Average throughput = 50321 messages per second
+```
+
+SPECjvm is a benchmark controlled by and made available through the Standard Performance Evaluation Corporation (SPEC). SPE measure the client-side performance of JVM, including how well it runs on the underlying operating system. SPECjvm also measures in-time (JIT) compiler. The underlying operating system and hardware performance also affect the throughput measures of SPECjvm.
+
+SPECjbb measures a more complex application environment, specifically that of an order processing application for a wholesale supplier. It measures the system's underlying hardware and operating system performance. SPECjbb is loosely modeled on the TPC-C but entirely in Java. SPECjbb models a three-tier system (database, application, user interface) with a focus on the Java-based application and client-side database access. It is the basis for the generated metrics of interest. SPECjbb is conveniently sized so that it does not need a complex database to be installed (it implements a simple tree-based data structure in JVM for the database tier) because it provides a randomized simulation of user input on the first tier.
+
+# PostMark
+
+PostMark is another type of application test, although a bit different from the preceding Java application tests. PostMark provides a usage pattern on a file system/specifically, the usage pattern that might be seen on a mail server. In particular, mail servers tend to use many of the other benchmarks focus specifically on file system throughput in terms of the amount of data sent to or fetched from a specific location. It recognizes the pattern used by mail servers (and often news servers, and possibly some web-based e-commerce servers) in which files are created and written, appended to, read and deleted. In fact, the access patterns of most mail servers are a subset of all possible access patterns on a file system. Therefore an I/O and disk storage subsystem that performs that set of operations well should provide a higher-performance postmark score.
+
+PostMark provides statistics at the completion of a run that indicate how many files can be modified in common patterns per second. These include the overall elapsed time, elapsed time performing actual transactions and the average transaction rate in terms of files per second. These are the creation rate, total number of files read and the average rate at which those files were read, and so on for file appends, deletions and writes. It also reports on the overall amount and rate of data read and written.
+
+As with many of the more complex benchmarks, many of the parameters for rates of file creation, appends, and so on can be modified for each workload. See http://www.netapp.com/tech_library/3022.html for more information on PostMark.
+
+# Database Benchmarks
+
+Database benchmarks are worthy of an entire book of their own and are mentioned here only briefly. Databases are often the backbone of enterprise applications, maintaining customer records, sales records, inventory, marketing patterns, video clips, images, sounds, order fulfillment information and many other kinds of data. There are two major models of database use: online transaction processing (OLTP) and decision support systems (DSS, or data warehouse). These two major models have fairly different operational characteristics, especially as to how they stress the operating system. OLTP tends to be used more often for recording all aspects of transactions done in a dynamic environment. For example, it can be viewed as a store of point of sale (POS) terminals all doing queries on current inventory, updating sales numbers, looking up prices or making credit card authorizations. In a more static environment, DSS is used to make decisions based on large amounts of historical data. For example, a company might use DSS to decide which products to discontinue based on sales trends over the last five years, or to identify the best locations for new stores based on demographic data. Both OLTP and DSS are important, and both are tested by different benchmarks.
+
+Decision support, on the other hand, is often run on a database generated through an OLTP mode of operation. However, in this case the benchmark is not concerned with how quickly the data is processed, but rather how quickly the data can be retrieved. For example, a decision support system might be used to analyze sales trends, customer behavior, or other types of data to help make business decisions. These queries are typically more complex and involve aggregating, sorting, and joining large amounts of data.
+
+These two models are significantly different in that distinct benchmarks help model these workloads. For the OLTP model, the gold standard is the TPC-C benchmark, published by the Transaction Processing Council (http://www.tpc.org/). The same organization also publishes benchmarks for other database workloads, including TPC-H, which is a decision support benchmark, and TPC-W, which is a web-based transaction processing benchmark. Each of these benchmarks has its own specific workload and measurement criteria, and they are designed to be fair and comparable across different database systems.
+
+The downside of these tests is that they can be very resource-intensive to set up and run. In some cases, the size of the database can be so large that it takes hours or days to create and load the initial database. After the database is loaded, runs can take anywhere from a few minutes to several hours. For these reasons, most organizations do not run these benchmarks on a regular basis, but rather use them for specific purposes, such as comparing different database products or tuning a specific system.
+
+As an alternative to the expensive, complex, and rigorously controlled databases, the Open Source Development Lab (http://www.osdl.org) has developed a suite of benchmarks for testing database performance on open source systems. These benchmarks are designed to be more flexible and easier to run than the TPC benchmarks, and they can be used to compare different database systems under a variety of workloads.

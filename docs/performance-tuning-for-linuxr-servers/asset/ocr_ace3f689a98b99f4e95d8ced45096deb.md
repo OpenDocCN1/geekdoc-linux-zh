@@ -1,0 +1,3 @@
+# Introduction
+
+Now that we've covered Linux kernel fundamentals, it's time to define the typical server processing model most common in the Linux Server market. We'll describe some of the basic building blocks and standard features that comprise today's server platforms. The focus in this chapter is on computers with multiple CPUs and large memory, and those that support large disks. We'll also focus on the architecture of the server more than the software algorithms designed to utilize the various capabilities of large computers. By the end of the chapter, you will have a better understanding of some of the main architectures and topologies available. You will understand the difference between SMP, NUMA, and clustered systems.

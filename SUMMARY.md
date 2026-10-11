@@ -1589,6 +1589,7 @@
 +   [Kali Linux 渗透测试 (OSCP)](docs/penetration-testing-with-kali-linux-oscp/README.md)
 +   [Kali Linux 渗透测试 v1.0.1](docs/penetration-testing-with-kali-linux-v101/README.md)
 +   [企鹅无痛：Windows 用户的 Linux 指南](docs/penguins-dont-feel-pain-linux-for-windows-users/README.md)
++   [Linux(R) 服务器性能调优](docs/performance-tuning-for-linuxr-servers/README.md)
 +   [Perl 入门指南](docs/perl-a-beginners-guide/README.md)
 +   [Perl黑皮书](docs/perl-black-book/README.md)
 +   [Perl、CGI 和 JavaScript 完全指南（第2版）](docs/perl-cgi-and-javascript-complete-2nd-edition/README.md)

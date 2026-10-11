@@ -1,0 +1,15 @@
+The following sections examine the Linux operating system as the platform of choice for application servers. The growing popularity of Linux in the open-source community has helped improve its performance and reliability. With the support of big companies like IBM, Red Hat, HP, and Sun, the Linux operating system has evolved from an inexpensive UNIX-like desktop operating system into a powerful enterprise server. Many Linux boxes are now used as web servers, mail servers, network gateways, and DNS servers. In the application server space, big companies have already begun migrating their J2EE applications to Linux. At the same time, more and more application server vendors are supporting different versions of Linux.
+
+# ## Application Server Hot Spots
+
+This section discusses some of the performance "*hot spots*" common across most application servers.
+
+# ## JVM
+
+The Java Virtual Machine that comes with the application server interprets and executes both the application server and the enterprise applications. A poorly performing JVM can cause the whole system to degrade. A JVM can perform well on a different operating system than Linux on the same hardware. A possible reason for this is that the Linux implementation might not have used the right system calls for a given function. The JIT compiler is a critical piece of the JVM because it translates Java byte code to the native code. Again, if the JIT compiler does not use or misuses the services available in Linux, performance can be affected significantly. Performance differences can also be seen even for the same JVM on Linux from the same vendor but on two different platforms. A classic example is the use of the system call `usleep()` emitted by the JIT compiler for the PowerPC platform using Linux kernel 2.4. It turns out that on the IA32 platform, the JIT compiler emits `sched_yield()` instead of `usleep()`. The semantics of `usleep(n)` are to make the calling thread sleep for $n$ microseconds, but `usleep()` calls `nanosleep()`, which has a minimum granularity of 10 milliseconds (longer than 100 microseconds). Thus, the thread sleeps longer than intended. As an effect, this has caused tremendous scalability problems on the PowerPC platform. The JIT compiler must be fixed to use the `sched_yield()` system call instead.
+
+It is important not only to choose a high-performing JVM, but also to tune the JVM properly. Performance tuning is discussed later in this chapter in the "[Performance Tuning](#performance_tuning)" section.
+
+# ## Networking
+
+Application servers, because they are servers, imply network communication. However, application servers are not just plain files or timer servers. Application servers are highly complex, and consequently, high network traffic is an inherent characteristic of application servers.

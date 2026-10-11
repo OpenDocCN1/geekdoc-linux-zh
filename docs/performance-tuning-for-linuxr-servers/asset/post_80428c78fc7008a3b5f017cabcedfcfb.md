@@ -1,0 +1,310 @@
+
+## Initialization
+
+- Init process (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+- Initialization table (2nd)
+- System V (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+
+### System Initialization Table
+- /etc/inittab
+- System parameters
+- System performance analysis (2nd, 3rd)
+- CPU utilization (2nd, 3rd, 4th, 5th)
+    - gtop command (2nd, 3rd)
+    - sar command (2nd, 3rd, 4th)
+    - top command (2nd, 3rd)
+    - vmstat (2nd, 3rd, 4th, 5th)
+- I/O utilization (2nd, 3rd)
+    - iostat command (2nd)
+    - sar command (2nd, 3rd)
+- Memory utilization
+    - /proc file system (2nd, 3rd)
+    - ps command (2nd)
+    - vmstat command (2nd)
+- Network utilization (2nd, 3rd)
+    - netstat command (2nd, 3rd, 4th, 5th)
+    - nfsstat command
+
+## System Trace Data Collection Tool (Performance Inspector)
+
+- System tracing (2nd)
+- OProfile command (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+- Performance Inspector (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th)
+- Above Idle tool (2nd, 3rd)
+- Dynamic kernel patches
+- Instruction tracing (2nd, 3rd)
+- JLM (Java Lock Monitor) tool (2nd, 3rd, 4th, 5th)
+- JPROF tool (2nd)
+- Performance counters
+- pipcntr tool
+- post tool
+- ptt tool
+- pttstats tool (2nd, 3rd, 4th)
+- swtrace tool (2nd)
+- System Trace Data Collection tool
+- tprof tool (2nd)
+- Requirements
+- strace command (2nd, 3rd, 4th)
+- top utility (2nd, 3rd)
+
+## System V
+
+- BSD
+    - Compared (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+- Initialization table
+    - Red Hat (2nd, 3rd)
+    - IPC (Interprocess Communication)
+    - System initialization (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+    - System initialization
+        - Initialization table (2nd)
+- Systems
+    - Servers
+        - Blades
+        - IBM zSeries mainframes (2nd, 3rd, 4th, 5th, 6th, 7th)
+        - NUMA (Non-Uniform Memory Architecture) (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+- SysV
+    - IPC resources (2nd, 3rd, 4th, 5th)
+- SysV (System V)
+
+## Index
+
+### T
+
+- Tables
+    - Decayed frequency tables
+    - Page frame maps
+    - Page tables (2nd, 3rd, 4th)
+- Targets
+    - Benchmarks
+    - Setting
+- Tasks
+    - Interactive tasks
+        - Crediting
+        - Rewarding
+    - Non-interactive tasks
+        - Starving
+    - Sleep averages
+        - Tuning (2nd)
+    - Threads
+    - Timeslices
+        - Tuning (2nd)
+    - TSRUN (TASK_RUNNABLE) state
+    - Virtual memory
+- TCP
+    - Connection management
+        - Kernel parameters (2nd)
+    - D-SACK
+        - Enabling
+    - FACK (Forward Acknowledgement)
+        - Enabling
+    - Keepalive management
+        - Kernel parameters (2nd, 3rd)
+    - Memory management
+        - Kernel parameters (2nd)
+    - Read/write buffers
+        - Kernel parameters
+    - SACK (Selective Acknowledgements)
+        - Enabling
+    - SYN Queue length
+        - Controlling
+        - Window scaling
+            - Enabling
+- TCP benchmarks (2nd, 3rd)
+- TCP/IP (Transport Control Protocol/Internet Protocol)
+    - Kernel parameters (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th)
+    - Statistics
+        - Displaying
+- TCP/IP stacks
+    - tcp_app_win parameter (kernel)
+    - tcp_dsack parameter (kernel) (2nd)
+    - tcp_fack parameter (kernel) (2nd)
+    - tcp_fin_timeout parameter (kernel)
+    - tcp_keepalive_intvl parameter (kernel) (2nd)
+    - tcp_keepalive_probes parameter (kernel) (2nd)
+    - tcp_keepalive_time parameter (kernel) (2nd)
+    - tcp_max_orphans parameter (kernel)
+    - tcp_max_syn_backlog parameter (kernel) (2nd)
+    - tcp_max_tw_buckets parameter (kernel)
+    - tcp_mem parameter (kernel) (2nd)
+    - tcp_reordering parameter (kernel)
+    - tcp_retries1 parameter (kernel)
+    - tcp_retries2 parameter (kernel)
+    - tcp_rfc1337 parameter (kernel)
+    - tcp_rmem parameter (kernel) (2nd)
+    - tcp_sack parameter (kernel) (2nd)
+    - tcp_stdurg parameter (kernel)
+    - tcp_syn_retries parameter (kernel)
+    - tcp_synack_retries parameter (kernel)
+    - tcp_timestamps parameter (kernel)
+    - tcp_tw_reuse parameter (kernel)
+    - tcp_window_scaling parameter (kernel) (2nd)
+    - tcp_wmem parameter (kernel) (2nd)
+- Thread dumps
+    - JVM (Java Virtual Machine) (2nd, 3rd, 4th, 5th)
+    - Thread listeners (2nd)
+    - Thread pools
+        - Application servers (2nd)
+    - Thread scheduler (2nd, 3rd, 4th)
+    - Thread schedulers
+    - thread_max parameter (kernel)
+- Threads
+    - Application servers
+        - Default threads
+    - Virtual memory
+    - Designing (2nd, 3rd, 4th, 5th)
+    - Hyperthreading (2nd)
+    - Kernel threads
+    - PTT (Per Thread Time)
+    - Monitoring (2nd)
+    - SMT (Symmetric Multithreading)
+    - Schedulers
+    - Thread dumps
+    - TSRUN (TASK_RUNNABLE) state
+- Three-tier topology
+    - Application servers
+- Tightly coupled multiprocessor systems
+- Timers
+    - NUMA servers
+    - Timeslices
+        - Processes
+        - Tuning
+            - Scheduler (2nd)
+- Timing routines (2nd, 3rd)
+- tiobench (2nd, 3rd)
+- TLB
+    - Huge TLB page support
+- TOE (TCP Offload Engine) (2nd, 3rd)
+- top command
+    - CPU utilization (2nd, 3rd)
+    - System tracing (2nd, 3rd)
+- Topologies
+    - Application servers (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+    - Multiprocessor systems (2nd, 3rd)
+- Torvalds, Linus
+- tprof command (2nd)
+    - JPROF reports
+        - Generating
+- Tracing
+    - Runtime information collection
+    - Tracing systems (2nd)
+        - OProfile command (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+        - PI (Performance Inspector) (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th)
+        - Above Idle tool (2nd, 3rd)
+        - Dynamic kernel patches
+        - Instruction tracing (2nd, 3rd)
+        - JLM (Java Lock Monitor) tool (2nd, 3rd, 4th, 5th)
+        - JPROF tool (2nd)
+        - Performance counters
+        - pipcntr tool
+        - post tool
+        - pti tool
+        - pti_stats tool (2nd, 3rd, 4th)
+        - swtrace tool (2nd)
+        - System Trace Data Collection tool
+        - tprof tool (2nd)
+        - Requirements
+        - strace command (2nd, 3rd, 4th)
+        - top utility (2nd, 3rd)
+- Track-to-track seek speed
+    - Disks (2nd)
+- Trade benchmark
+    - Commercial workload (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th, 19th, 20th, 21st, 22nd, 23rd, 24th, 25th, 26th, 27th, 28th, 29th, 30th, 31st, 32nd, 33rd, 34th, 35th, 36th, 37th, 38th, 39th, 40th, 41st, 42nd, 43rd, 44th, 45th, 46th, 47th, 48th, 49th, 50th)
+        - Connection pools (2nd, 3rd, 4th)
+        - Database I/O activity (2nd, 3rd, 4th)
+        - Hyperthreading (2nd, 3rd, 4th)
+        - JVM (Java Virtual Machine) (2nd, 3rd, 4th, 5th, 6th)
+        - Pass-by-reference (2nd)
+        - Thread dumps (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+        - Thread pools (2nd, 3rd, 4th)
+        - Web servers (2nd)
+- Transactions
+    - Application servers
+        - Journaled file systems (2nd, 3rd)
+        - Web servers (2nd)
+- Transfer rates
+    - Disks (2nd)
+- Transport Control Protocol/Internet Protocol (TCP/IP) [See TCP/IP]
+- TSO (TCP Segmentation Offloading)
+    - Network performance (2nd, 3rd, 4th, 5th)
+- TSRUN (TASK_RUNNABLE) state
+- Tunable parameters
+    - Kernel
+        - CONFIG (2nd)
+        - Debugging
+            - File system (2nd)
+            - ICMP (2nd)
+            - IP fragmentation
+            - NEIGHBOR (2nd)
+            - Net core
+            - Network (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+            - Processes
+            - Profiling
+            - Routing
+            - Shared memory
+            - Signals
+            - System
+            - TCP (2nd, 3rd)
+            - Virtual memory (2nd, 3rd, 4th)
+    - tune command
+        - File systems
+    - Tuning
+    - tune2fs utility (Ext2 file system)
+    - Tuning
+        - Application servers (2nd, 3rd, 4th, 5th, 6th)
+        - Commercial workload (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th, 19th, 20th, 21st, 22nd, 23rd, 24th, 25th)
+        - AS (Anticipatory I/O scheduler) (2nd)
+        - Benchmarks (2nd, 3rd)
+        - CFQ I/O scheduler (2nd, 3rd, 4th, 5th)
+        - Clients
+            - File change notifications
+            - Metadata
+            - Opportunistic locking (2nd, 3rd)
+            - Protocol layering (2nd, 3rd, 4th)
+            - Read-only clients (2nd)
+        - Code (2nd, 3rd)
+            - Algorithms (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th, 19th, 20th, 21st, 22nd, 23rd, 24th, 25th, 26th, 27th)
+            - Commercial workload (2nd)
+        - Compilers
+            - AS tuning tools (2nd, 3rd)
+            - Databases
+            - Global memory (2nd, 3rd)
+        - I/O
+            - Load balancing (2nd)
+            - Queue length
+            - Response times
+        - Ext3 file system
+        - File servers (2nd)
+        - Load measurement
+        - NFS (Network File System) (2nd)
+        - Performance measurement (2nd)
+        - Samba (2nd, 3rd)
+        - File systems
+            - Ext3 file system (2nd, 3rd, 4th, 5th)
+            - JFS (Journaled File System) (2nd, 3rd)
+            - ReiserFS (2nd, 3rd)
+            - XFS (2nd, 3rd, 4th, 5th)
+        - Gigabit Ethernet
+            - Netperf (2nd, 3rd)
+        - I/O schedulers (2nd, 3rd)
+        - JFS (Journaled File System) (2nd)
+        - Kernel parameters
+            - procfs interface (2nd, 3rd)
+            - sysctl interface (2nd, 3rd, 4th)
+            - sysfs interface (2nd)
+        - Networks
+            - Kernel parameter tuning mechanisms (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th)
+            - Network protocol stack (2nd, 3rd)
+        - Profiling (2nd, 3rd)
+        - ReiserFS (2nd, 3rd)
+        - Schedulers (2nd, 3rd, 4th, 5th)
+        - Virtual memory (2nd, 3rd, 4th)
+        - Web servers (2nd)
+            - Apache Web servers (2nd)
+            - Event-driven Web servers
+            - Flash Web servers
+            - Log analysis tools
+            - Tux Web servers
+            - Workload generators (2nd)
+        - XFS (Next Generation File System) (2nd)
+        - Tux Web servers
+        - Tuning

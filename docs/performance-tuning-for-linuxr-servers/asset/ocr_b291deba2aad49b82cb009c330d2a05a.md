@@ -1,0 +1,12 @@
+# ## Introduction
+
+As the need for more network storage continues to increase, file and print servers continue to quietly fill a key role in business, school, and even home networks. However, they are often taken for granted. Since the introduction of the first Network Operating Systems (NOSs) by Novell, 3Com, IBM, and others in the 1980s, file and print servers have increased in importance in the enterprise as their ease of use, security, performance, and reliability have improved. Although primitive UNIX file and print servers based on Network File System (NFS) were available as early as 1985 (at roughly the same time that the IBM PC LAN Program was introduced for DOS/Windows), Windows 2000 was a significant improvement over existing servers, bringing to the mass market an easy-to-manage, integrated suite of services, including the following:
+
++   - Distributed file services
++   - Advanced print server
++   - Centralized directory and integrated management
++   - Rich security framework and single sign-on
+
+These services were tied together tightly and were better than earlier broad attempts at integrated services such as OSF DCE, helping Windows 2000 become popular. Businesses that stored data centrally in file servers often could better utilize resources by amortizing server storage cost among many employees and efficiently managing these server systems with consistent, easy-to-use tools. However, this quiet revolution in integrated file servers created an opportunity for the Linux community. Windows 2000 (and even its successor, Windows 2003) did not offer the configuration flexibility of Linux, was harder to integrate into heterogeneous environments (for example, with mixed UNIX and Windows systems), and often was at a performance disadvantage when compared to Linux. Also, its implementation complexity and lack of openness made the actual security of the network hard to predict and nearly impossible to assess. The open-source community responded. With dramatic improvements to the Linux kernel, Samba, and the NFS subsystem, Linux has become an appealing file and print server choice with impressive performance.
+
+In the sections ahead, we describe the major types of network file servers, their performance tuning and measurement, and print server performance.

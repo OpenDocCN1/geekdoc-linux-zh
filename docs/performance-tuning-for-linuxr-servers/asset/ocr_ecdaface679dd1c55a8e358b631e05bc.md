@@ -1,0 +1,1 @@
+As we continue to the next section, we further illustrate the performance behavior of the AS scheduler design that views the I/O subsystem based on a notion that an I/O device has only one physical (seek) head; this study analyzes the sequential read performance in different hardware setups. The results are compared to the CFQ scheduler.

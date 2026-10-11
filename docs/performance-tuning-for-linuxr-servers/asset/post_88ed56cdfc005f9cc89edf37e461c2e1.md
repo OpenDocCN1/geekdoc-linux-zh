@@ -1,0 +1,274 @@
+
+## Index
+
+### N
+
+- networks
+  - kernel parameters (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+  - performance (2nd, 3rd)
+    - benchmarks (2nd, 3rd, 4th)
+    - IRQ affinity (2nd, 3rd, 4th, 5th)
+    - kernel enhancements (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th)
+    - NAPI (network device driver API) (2nd, 3rd, 4th)
+    - NetBench (2nd, 3rd, 4th)
+    - Netperf3 benchmark (2nd, 3rd)
+    - process affinity
+    - SendFile API (2nd, 3rd, 4th)
+    - SPECWeb99 benchmark (2nd, 3rd, 4th)
+    - TOE (TCP Offload Engine) (2nd, 3rd)
+    - TSO (TCP Segmentation Offloading) (2nd, 3rd, 4th, 5th)
+    - VolcanoMark benchmark (2nd, 3rd)
+    - Zerocopy (2nd, 3rd, 4th)
+- tuning
+  - kernel parameter tuning mechanisms (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th)
+  - network protocol stack (2nd, 3rd)
+    - utilization
+      - monitoring (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th)
+- nfract parameter (bdflush)
+- nfract_stop_bdflush_parameter (bdflush)
+- nfract_sync_parameter (bdflush)
+- NFS
+  - (Network File System)
+  - client/server implementations
+  - tuning (2nd)
+- nfsstat command
+- network utilization
+  - monitoring
+- NICs
+  - Gigabit Ethernet NICs
+  - tuning (2nd, 3rd)
+- nodes
+  - device nodes
+  - memory
+  - NUMA servers (2nd)
+- non-interactive tasks
+  - starving
+- Non-Uniform Memory Access (NUMA)
+- Non-Uniform Memory Architecture (NUMA) [See NUMA (Non-Uniform Memory Architecture)]
+- noop I/O scheduler
+- NOS (Network Operating Systems)
+- Novel SUSE Linux Enterprise Server
+- Novell
+- nr_pdflush_threads parameter (virtual memory)
+- NUMA (Non-Uniform Memory Access)
+- NUMA (non-uniform memory access)
+  - schedulers
+- NUMA (Non-Uniform Memory Architecture) (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+  - hardware
+    - hierarchy
+  - high bandwidth interconnect
+  - interconnects (2nd, 3rd)
+  - latency ratios
+  - MPIO (Multipath I/O)
+  - nodes (2nd)
+  - timers
+- numerical analysis
+
+### O
+
+- O(1) scheduler column (NetBench)
+- objects
+  - reference counted objects
+- ObjRMAP (object-based reversed mapping)
+- OLTP (online transaction processing)
+  - databases
+- OLTP workloads
+- databases
+  - logging devices (2nd, 3rd)
+- online transaction processing (OLTP)
+- op_merge command (OProfile)
+- op_time command (OProfile)
+- op_to_source command (OProfile)
+- opcontrol command (OProfile) (2nd, 3rd, 4th)
+- open source
+  - kernel
+- Open Source Development Lab (OSDL)
+- Realm benchmarks
+- operating system benchmarks (2nd, 3rd)
+  - AIM7
+  - AIM9 (2nd, 3rd)
+  - analysis methodology (2nd, 3rd)
+    - exit strategies (2nd)
+    - measurements (2nd, 3rd)
+    - run rules
+    - target setting
+    - tuning (2nd, 3rd)
+  - Linux kernel performance benchmarks (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th)
+  - Lmbench (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th)
+  - methodology case study
+  - numerical analysis
+  - Realm
+  - simulators
+  - SPEC SDET (2nd, 3rd)
+  - tracing
+  - workload characterization
+- operating systems [See also kernel]
+
+### P
+
+- kernel performance benchmarks (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th)
+  - microkernel operating systems
+  - NOS (Network Operating Systems)
+    - performance evaluation methodologies
+      - analysis methodology (2nd, 3rd, 4th, 5th, 6th, 8th, 9th, 10th)
+      - benchmarking methodology case study
+      - numerical analysis
+      - simulators
+      - tracing
+      - workload characterization
+  - opportunistic locking
+    - clients (2nd, 3rd)
+  - oprof_start (opcontrol)
+  - OProfile
+    - counter
+    - OProfile command
+      - system tracing (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+    - OProfile tool
+      - op_merge
+      - op_time
+      - op_to_source
+      - opcontrol (2nd, 3rd, 4th)
+      - oprofpp (2nd)
+  - oprofpp command (OProfile) (2nd)
+  - optmem_max parameter (kernel) (2nd)
+  - Oracle
+    - application servers
+    - Oracle Applications Standard Benchmark
+  - Orion
+    - application servers
+  - OSDL (Open Source Development Lab)
+    - Realm benchmarks
+  - osrelease parameter (kernel)
+  - otype parameter (kernel)
+  - overcommit_memory parameter (virtual memory)
+  - overcommit_ratio parameter (virtual memory)
+  - overhead (locking)
+    - processors
+
+### P (Continued)
+
+- packets
+  - Ethereal packet capture tool (2nd, 3rd, 4th, 5th)
+- PAE (Physical Address Extension)
+- page frame maps
+- page tables (2nd, 3rd, 4th)
+- page-cluster parameter (kernel)
+- page-cluster parameter (virtual memory)
+- pages
+  - allocating
+  - replacing
+- pagesets
+- pagetable cache parameter (kernel)
+- paging
+  - virtual address spaces (2nd)
+    - memory balancing
+    - page replacement
+    - replacement policy (2nd)
+  - virtual memory (2nd)
+- parameters
+  - IPC (interprocess communication)
+    - dynamically modifying (2nd, 3rd, 4th)
+    - statically modifying
+  - kernel
+    - CONFIG (2nd)
+    - debugging
+    - file system (2nd)
+    - ICMP (2nd)
+    - IP fragmentation
+    - NEIGHBOR (2nd)
+    - net core
+    - network (2nd, 3rd, 4th, 5th, 6th, 7th, 8th)
+    - network tuning (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th)
+    - processes
+    - profiling
+    - routing
+    - shared memory
+    - signals
+  - system
+  - TCP (2nd, 3rd)
+  - virtual memory (2nd, 3rd, 4th)
+  - message queues (2nd, 3rd)
+  - semaphores (2nd, 3rd, 4th, 5th)
+  - shared memory segments (2nd, 3rd)
+- PARENT_PENALTY parameter (scheduler)
+- tuning
+- parents
+- sleep averages
+  - tuning (2nd)
+- partitions
+  - Ext3 partitions
+    - creating (2nd, 3rd)
+    - placement (2nd, 3rd, 4th)
+  - XFS (Next Generation File System)
+- pass-by-reference
+  - application servers
+- PCI I/O busses
+- Penguinoemeter benchmarks
+- per thread time (PTT) [See PTT (per thread time)]
+
+### P (Performance)
+
+- performance
+  - application server
+    - requirements (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th, 19th, 20th)
+  - benchmarks
+    - enterprise applications
+      - clustering (2nd, 3rd, 4th, 5th)
+      - SMP scaling (2nd)
+      - topologies (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+      - tuning (2nd, 3rd, 4th, 5th, 6th)
+  - evaluation methodologies
+    - analysis methodology (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+    - benchmarking methodology case study
+    - numerical analysis
+    - simulators
+    - tracing
+    - workload characterization
+  - file systems
+    - disks (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+    - I/O schedulers (2nd)
+      - 16-way RAID-0 setup (2nd)
+      - 8-way NUMA RAID setup (2nd, 3rd, 4th, 5th)
+      - AS scheduler (2nd, 3rd, 4th, 5th)
+      - CFQ I/O scheduler; tuning (2nd, 3rd, 4th, 5th)
+      - single-CPU, single-disk setup (2nd, 3rd)
+    - I/O subsystem (2nd)
+    - kernel performance benchmarks (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th)
+      - networks (2nd, 3rd)
+        - benchmarks (2nd, 3rd, 4th)
+        - IRQ affinity (2nd, 3rd, 4th, 5th)
+        - kernel enhancements (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th)
+      - NAPI (network device driver API) (2nd, 3rd, 4th)
+      - NetBench (2nd, 3rd, 4th)
+      - Netperf3 benchmark (2nd, 3rd)
+      - process affinity
+      - SendFile API (2nd, 3rd, 4th)
+      - SPECWeb99 benchmark (2nd, 3rd, 4th)
+      - TOE (TCP Offload Engine) (2nd, 3rd)
+      - TSO (TCP Segmentation Offloading) (2nd, 3rd, 4th, 5th)
+      - VolcanoMark benchmark (2nd, 3rd)
+      - Zerocopy (2nd, 3rd, 4th)
+    - print servers
+    - Web servers
+      - tuning (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+    - workloads
+      - benchmarking (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th, 18th, 19th, 20th, 21st, 22nd, 23rd, 24th, 25th, 26th, 27th, 28th, 29th, 30th, 31st, 32nd, 33rd, 34th, 35th, 36th, 37th, 38th, 39th, 40th, 41st, 42nd, 43rd, 44th, 45th, 46th, 47th, 48th, 49th, 50th, 51st, 52nd, 53rd, 54th, 55th, 56th, 57th, 58th, 59th, 60th, 61st, 62nd)
+    - performance analysis (2nd, 3rd)
+      - CPU utilization (2nd, 3rd, 4th, 5th)
+        - .gtop command (2nd, 3rd)
+        - sar command (2nd, 3rd, 4th)
+        - top command (2nd, 3rd)
+        - vmstat (2nd, 3rd, 4th, 5th)
+      - I/O utilization (2nd, 3rd)
+        - iostat command (2nd)
+        - sar command (2nd, 3rd)
+      - memory utilization
+        - /proc file system (2nd, 3rd)
+        - .ps command (2nd)
+        - vmstat command (2nd)
+      - network utilization (2nd, 3rd)
+        - netstat command (2nd, 3rd, 4th, 5th)
+        - nfsstat command
+      - system tracing (2nd)
+      - OProfile command (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th)
+      - PI (Performance Inspector) (2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th)

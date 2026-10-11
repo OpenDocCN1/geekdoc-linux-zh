@@ -1,0 +1,9 @@
+which enables a process to run longer without being preempted by a higher-priority process. Because this policy of turning off the priority preemption is not acceptable for all workloads, the patch is enabled through a new scheduler tuning parameter. The other patch, the TCP soft affinity patch, is related to TCP/IP, so a detailed discussion of this patch is not appropriate for this chapter.
+
+# Figure 21-5. VolanoMark case study.
+
+![](bbox=[0.18, 0.24, 0.82, 0.54])
+
+The loopback code path in the TCP/IP stack is inefficient. The send and receive threads of this benchmark always execute on different CPUs in an SMP system. This results in extra loading of data in two different L2 caches. To make the sender and the receiver threads of a connection execute on the same CPU, the code is changed to wake the receiver thread on the sender's CPU. Because the O(1) scheduler tries to keep the thread on the same processor, after the receiver thread is moved to the sender CPU, the receiver thread stays on the sender CPU, eliminating the loading of the same data on two different CPUs.
+
+Patch1 in Figure 21-5 is the SMP Scalable Timer patch. Patch2 is the Scheduler Priority Preemption patch. Patch3 is the TCP Soft Affinity patch. The SMP Scalable Timer patch is already included in the 2.5 Linux kernel. The two prototype patches are done to exemplify the problems unique to this benchmark. These patches are enabled in the kernel through the configuration option and can be made available through tuning to suit appropriate workloads. The Priority Preemption patch was submitted to the open source community, but the TCP soft affinity is not disclosed except in this book.

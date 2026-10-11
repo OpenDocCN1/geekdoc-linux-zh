@@ -1,0 +1,15 @@
+multiple off-node latencies. This latency is used to analyze the cost of memory references to different parts of the physical address space and thus influences decisions affecting memory usage.
+
+# Specific NUMA Implementations
+
+Several hardware vendors are building NUMA machines that run the Linux operating system. This section briefly describes some of these machines, but it is not an all-inclusive survey of the existing implementations.
+
+One of the earlier commercial NUMA machines is the IBM NUMA-Q. This machine is based on nodes that contain four processors (i386), memory, and PCI buses. Each node also contains a management module to coordinate booting, monitor environmental, and communicate with the system console. The nodes are interconnected using a ring topology. Up to 16 nodes can be connected for a maximum of 64 processors and 64GB of memory. Remote-to-local memory latency ratios range from 10:1 to 20:1. Each node has a large remote cache that helps compensate for the large remote memory latencies. Much of the Linux NUMA development has been on these systems because of their availability.
+
+NEC builds NUMA systems using the Intel Itanium processor. The most recent system in this line is the NEC TX7. The TX7 supports up to 32 Itanium2 processors in nodes of four processors each. The nodes are connected by a crossbar and grouped in two supernodes of four nodes each. The crossbar provides fast access to nonlocal memory with low latency and high bandwidth (12.8GBps per node). The memory latency ratio for remote-to-local memory in the same supernode is 1.6:1. The remote-to-local memory latency ratio for outside the supernode is 2.1:1. There is no node-level cache. I/O devices are connected through PCI-X buses to the crossbar interconnect and thus are all the same distance to any CPU/node.
+
+The large IBM xSeries boxes use Intel processors and the IBM XA-32 chipset. This chipset provides an architecture that supports four processors, memory, PCI buses, and three interconnect ports. These interconnect ports allow point-to-point connection of up to four nodes for a 16-processor system. The system depicted in Figure 3-2 approximates the configuration of a four-node x440. Also supported is a connection to an external system with additional PCI slots to increase the system's I/O capacity. The IBM eServer xSeries 440 is built on this architecture with Intel Xeon processors.
+
+# MPIO on NUMA Systems
+
+Multipath I/O, as mentioned earlier in this chapter, can provide additional I/O bandwidth for servers. However, on NUMA platforms, it can provide even larger benefits. MPIO involves using multiple I/O adaptors (SCSI cards, network cards) to gain multiple paths to the underlying resource (hard disks, the network), thus increasing overall bandwidth. On SMP platforms, potential speedups due to MPIO are limited by the fact that all CPUs and memory typically share a bus, which has a maximum bandwidth. On NUMA platforms, however, different groups of CPUs,

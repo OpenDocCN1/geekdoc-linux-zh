@@ -1,0 +1,3 @@
+# Fragmenting a File System
+
+Over time, the files on your file system can get broken into pieces so that they are not contiguous. This reduces file system performance when reading or writing data to the file. Defragmenting rearranges all the data on a volume so that files are written on consecutive sectors and tracks. This means that the disk heads have less moving to do in order to read from or write to a file. Thus, overall system throughput increases. To defragment a file system, see the sections describing each file system later in this chapter. Be aware that disk defragmentation can take quite a long time and it is the kind of operation that should be done when the system has a relatively small load running on it.

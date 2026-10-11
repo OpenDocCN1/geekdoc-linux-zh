@@ -1,0 +1,15 @@
++   • Finally, a target may be predicated on making changes to the application. For example, if the methodology the application uses for asynchronous I/O is known to be inefficient, it may be desirable to select the performance target assuming the I/O method will be changed.
+
+# Measurement, Analysis, and Tuning
+
+The benchmark executions are initiated according to the run rules in order to measure both performance and scalability in terms of the defined performance metric. When calculating SMP scalability for a given machine, there exists an alternative between computing this metric based on the performance of a UP kernel and computing it based on the performance of an SMP kernel, with the number of processors set to 1 (1P). The important factor here is consistency, so either option is acceptable, as long as the same alternative is used when comparing results.
+
+Before any measurements are made, both the hardware and software configurations are tuned before performance and scalability are analyzed. Tuning is an iterative cycle of tuning and measuring. It involves measuring components of the system such as CPU utilization and memory usage, and possibly adjusting system hardware parameters, system resource parameters, and middleware parameters. Tuning is one of the first steps of performance analysis. Without tuning, scaling results may be misleading. In other words, they might not indicate kernel limitations, but rather some other issue.
+
+The first step required to analyze the SUT’s performance and scalability is to understand the benchmark and the workload tested. Initial performance analysis is made against a tuned system. Sometimes analysis uncovers additional modifications to tuning parameters.
+
+Analyzing the SUT’s performance and scalability requires a set of performance tools. The use of open-source community (OSC) tools is desirable whenever possible to facilitate posting of analysis data to the OSC in order to illustrate performance and scalability bottlenecks. It also allows those in the OSC to replicate results with the tool or to understand the results after using the tool on another application on which they can experiment. In many instances, ad hoc performance tools are developed to gain a better understanding of a specific performance bottleneck. Ad hoc performance tools are usually simple tools that instrument a specific component of the Linux kernel. It is advantageous to share such tools with the OSC. A sample listing of performance tools available includes the following:
+
++   - */proc file system*. meminfo, slabinfo, interrupts, network stats, I/O stats, and so on.
++   - *SGI’s lockmeter*. For SMP lock analysis.
++   - *SGI’s kernel profiler (kernprof)*. Time-based profiling, performance counter-based profiling, annotated call graph (ACG) of kernel space only.

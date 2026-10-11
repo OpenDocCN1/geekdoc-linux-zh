@@ -1,0 +1,1 @@
+performance analyst may want to develop a relationship with the vendor to help understand how the benchmark results may compare to his local configuration and situation.

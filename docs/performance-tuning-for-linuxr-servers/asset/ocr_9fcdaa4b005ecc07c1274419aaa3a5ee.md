@@ -1,0 +1,5 @@
+# # Introduction
+
+You've made the decision, and you're ready to begin. However, you may have to slow down a little and make some crucial decisions before beginning your Linux installation. This chapter can help! It is important to discuss several installation issues that pertain to overall system performance. The decisions you make about these areas can help optimize the performance of the Linux operating system as well as the applications that will eventually run on it. You'll also need to review key configurable kernel features that are available in the 2.6 kernel that can impact performance for some applications. These features can be set or selected during installation or bootup time. It's also important to review the simple but powerful Linux logging facility. And last, this chapter helps you examine Linux system initialization and the two different initialization styles that have been adopted by various Linux distributions.
+
+So, you have some planning to do. Certain areas of the installation need some thought before you proceed.

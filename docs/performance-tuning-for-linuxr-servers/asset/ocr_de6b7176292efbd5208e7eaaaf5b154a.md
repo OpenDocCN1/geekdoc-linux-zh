@@ -1,0 +1,15 @@
+cache is reused. The read cache abstraction allows the system to implement file-system-dependent read-ahead functionalities, as well as to construct large contiguous (SCSI) I/O commands that can be served via a single Direct Memory Access (DMA) operation. In circumstances where the cache represents pure memory bus overhead, I/O features such as direct I/O should be explored, especially in situations where the system is CPU-bound. In a general write scenario, the system is not necessarily concerned with the previous content of a file, because a write() operation normally results in overwriting the contents.
+
+The write cache emphasizes other aspects such as asynchronous updates. There is also the possibility of omitting some write requests in the case where multiple write() operations into the cache subsystem result in a single I/O write to a physical disk. Such a scenario may occur in an environment where updates to the same or a similar inode offset are processed within a short time span.
+
+The block layer in Linux 2.4 is organized around the buffer_head data structure. It is a daunting task to create a truly effective and performance-enhanced block I/O subsystem if the underlying buffer_head structures force each I/O request to be decomposed into 512-byte chunks.
+
+The new representation of the block I/O layer in Linux 2.6 encourages large I/O operations. The block I/O layer now tracks data buffers by using struct page pointers. Linux 2.4 systems are prone to losing sight of the logical form of the writeback cache when flushing the cache subsystem. Linux 2.6 utilizes logical pages attached to inodes to flush dirty data, which allows combining multiple pages that belong to the same inode into a single bio. The single bio can then be submitted to the I/O layer, a process that works fine if the file is not fragmented on disk.
+
+# ## The 2.4 Linux I/O Scheduler
+
+The default 2.4 Linux I/O scheduler primarily manages the disk utilization. The scheduler has a single internal queue. For each new bio, the I/O scheduler determines if the bio can be merged with an existing request. If this is not the case, a new request is placed in the internal queue, and it is sorted by the starting device block number of the request. This approach focuses on minimizing disk seek times, if the actual disk device driver processes the requests in first-in-first-out (FIFO) order. An aging mechanism implemented by the I/O scheduler limits the number of times an existing I/O request in the queue can be omitted and passed by a more recent request. This process prevents any potential starvation scenario. The dequeue function in the I/O framework represents a simple removal of requests from the head of the internal queue.
+
+# ## The 2.6 Deadline I/O Scheduler
+
+The deadline I/O scheduler incorporates a per-request expiration-based approach and operates on five I/O queues. The basic idea behind the implementation is to aggressively reorder requests to improve I/O performance while simultaneously ensuring that no I/O request is starved. More specifically, the scheduler introduces

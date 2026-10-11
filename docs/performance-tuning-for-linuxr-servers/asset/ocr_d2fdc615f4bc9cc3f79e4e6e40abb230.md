@@ -1,0 +1,7 @@
+# ## Summary
+
+This chapter has introduced a number of tools to help you identify performance problems and bottlenecks. It is important that you have a controlled test environment as well as a detailed test scenario to follow. The test must be repeatable and reliable. Start with the simplest items and continue to the more complex items as you collect and establish base data points. Trying to analyze everything at once will only lead to more time wasted finding the real problem.
+
+Many other trace tools are currently being produced. Some that are worth exploring are *vtune*, which can be used on Intel platforms; *dprobes*, which is available on multiple platforms for looking at the kernel and load-module debug tracing-type information; *Tracer*, which hooks into the kernel and provides tracing information; and many others. The tools covered in this chapter have been in existence for a number of years and provide good documentation and report formatting. They also provide a wide variety of reporting format options. As with most Linux products, they are provided free of charge via open source.
+
+How performance analysis, tracing, and tuning are carried out is an individual preference. Each environment is unique and requires that the person performing the analysis use tools and methods that he is comfortable with and can understand. The golden rule to follow is to keep it simple. As long as the analysis is done in a simple and methodical manner, the chances for success are high.

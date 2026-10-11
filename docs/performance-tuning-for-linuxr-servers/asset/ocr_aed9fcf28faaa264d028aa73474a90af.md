@@ -1,0 +1,7 @@
+# ## Numerical Analysis
+
+Numerical analysis involves the creation of mathematical models for hardware or software systems. This methodology has the advantage of quickly obtaining data. Numerical models are useful for determining high-level trends about the behavior of systems that are simple to moderate in levels of complexity. However, the accuracy of numerical models is diminished as the level of complexity of the system modeled is increased. In addition, these models require workload characterization information, statistical random number input parameters, or other information to drive them.
+
+# ## Simulation
+
+Simulation is a programmatic model of a system, and it varies from simple to complex. A simulator is typically driven by traces, events, or some other means. Simulators, specifically those that are detailed models of the system under study, offer the advantage of accuracy of results. However, they are time-consuming to execute, with some simulators executing for days, weeks, or months before producing results. In addition, simulators may also consume an extensive amount of resources. There are mechanisms for mitigating the impact of complex simulators, such as checkpointing interim results as the simulator executes. However, simulators are typically not the methodology used for tuning the performance of systems in a timely manner.

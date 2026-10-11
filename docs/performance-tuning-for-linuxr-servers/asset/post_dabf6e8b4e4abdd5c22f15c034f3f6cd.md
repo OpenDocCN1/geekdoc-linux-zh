@@ -1,0 +1,272 @@
+
+## Index
+
+# C
+- **C**
+  - *programming language*
+- **C programming language**
+- **C++**
+  - *programming language*
+- **C++ programming language**
+- **cache coherency**
+  - SMP (Symmetrical Multiprocessor) system
+- **caches**
+  - *2nd*
+  - locality of reference
+- **case sensitivity**
+  - enforced column (NetBench)
+- **case studies**
+  - benchmarking methodology
+  - commercial workload
+  - Trade3 benchmark *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th 19th 20th 21st 22nd 23rd 24th 25th 26th 27th 28th 29th 30th 31st 32nd 33rd 34th 35th 36th 37th 38th 39th 40th 41st 42nd 43rd 44th*
+  - Ext2/Ext3 file system layout analysis *2nd 3rd 4th 5th 6th 7th 8th*
+  - file systems
+    - I/O measurement *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th*
+    - tuning *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th*
+  - I/O schedulers
+    - *2nd*
+  - 16-way RAID-0 setup *2nd*
+  - 8-way NUMA RAID setup *2nd 3rd 4th 5th*
+  - AS scheduler *2nd 3rd 4th 5th*
+  - benchmarks *2nd 3rd 4th*
+  - CFQ I/O scheduler *2nd 3rd 4th 5th*
+    - performance
+    - single-CPU single-disk setup *2nd 3rd*
+  - JFS (Journaled File System) layout analysis *2nd 3rd*
+  - network performance *2nd 3rd*
+    - benchmarks *2nd 3rd 4th*
+    - kernel enhancements *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th*
+  - NetBench
+    - 1
+    - 2nd 3rd 4th
+  - Netperf3 benchmark *2nd 3rd*
+  - SPECWeb99 benchmark *2nd 3rd 4th*
+- **VolcanoMark benchmark** *2nd 3rd*
+- **ReiserFS layout analysis** *2nd*
+- **XFS layout analysis**
+- **CFQ (Completely Fair Queuing) I/O scheduler**
+- **CFQ I/O scheduler**
+- **16-way RAID-0 setup**
+  - benchmark *2nd*
+- **8-way NUMA RAID setup**
+  - benchmark *2nd 3rd 4th 5th*
+- **AS scheduler**
+  - compared *2nd 3rd 4th 5th*
+  - benchmarks
+  - *performance*
+- **single-CPU single-disk setup**
+  - benchmark *2nd 3rd*
+  - tuning *2nd 3rd 4th 5th*
+- **CGI (Common Gateway Interface)**
+- **channel cards**
+  - ESCON cards
+  - FICON cards
+- **chattr utility** (Ext2/Ext3 file system)
+- **CHILD_PENALTY parameter** (scheduler)
+  - tuning
+- **children**
+  - sleep averages
+  - tuning *2nd*
+- **chunked encoding**
+- **client-server model**
+  - requests
+    - *2nd 3rd*
+    - byte range requests
+    - responses
+      - *2nd 3rd*
+      - chunked encoding
+- **client-server model**
+  - WWW (World Wide Web)
+- **clients**
+  - designing *2nd*
+  - tuning
+    - file change notifications
+    - metadata
+    - opportunistic locking *2nd 3rd*
+    - protocol layering *2nd 3rd 4th*
+    - read-only clients *2nd*
+- **clustering**
+  - application server *2nd 3rd 4th 5th*
+- **clustering interconnect technology**
+
+# D
+- **databases**
+  - clusters *2nd*
+  - HA (high availability) clusters *2nd 3rd*
+  - HPCs (high performance clusters)
+- **code**
+  - compilers
+    - as tuning tools *2nd 3rd*
+    - gcc
+      - gcc (GNU Compiler Collection) compiler
+      - compiling
+        - code *2nd*
+        - native code
+      - application servers
+      - programs
+        - designing
+        - tuning *2nd 3rd*
+  - algorithms *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th 19th 20th 21st 22nd 23rd 24th 25th 26th 27th*
+- **Comer, Douglass E.**
+- **commands**
+  - debugfs
+  - dump2efs
+  - gprof
+  - gtop
+    - CPU utilization *2nd 3rd*
+  - hdparm *2nd 3rd 4th*
+  - iostat *2nd 3rd 4th 5th 6th 7th 8th*
+    - I/O utilization *2nd*
+  - ipconfig
+  - ipcs *2nd 3rd*
+  - jfs_mkfs
+  - less
+  - logrotate
+  - mkfs *2nd 3rd 4th 5th 6th*
+  - mke2fs *2nd*
+  - netstat
+    - network utilization *2nd 3rd 4th 5th*
+  - nfsstat
+    - network utilization
+  - OPprofile
+  - op_merge
+  - op_time
+  - op_to_source
+  - opcontrol *2nd 3rd 4th*
+  - oprofpp *2nd*
+  - system tracing *2nd 3rd 4th 5th 6th 7th 8th 9th 10th*
+  - P1 (Performance Inspector)
+  - pipcntlr
+  - post
+  - ptt
+  - pttstats
+  - swtrace *2nd*
+  - prof
+  - ps
+    - memory utilization *2nd*
+    - pttstats *2nd*
+    - run.ltrace *2nd*
+  - sar
+    - CPU utilization *2nd 3rd 4th*
+    - I/O utilization *2nd 3rd*
+  - sh
+  - strace
+    - system tracing *2nd 3rd 4th*
+  - sysctl
+  - sysctl(8)
+  - top
+    - CPU utilization *2nd 3rd*
+    - system tracing *2nd 3rd*
+  - tprof *2nd*
+  - JPROF reports
+  - tune
+  - vmstat
+    - CPU utilization *2nd 3rd 4th 5th*
+    - memory utilization *2nd*
+- **commercial workload**
+  - J2EE model *2nd*
+  - Trade3 benchmark *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th 19th 20th 21st 22nd 23rd 24th 25th*
+  - connection pools *2nd*
+  - database I/O activity *2nd*
+  - hyperthreading *2nd*
+  - JVM (Java Virtual Machine) *2nd 3rd*
+  - pass-by-reference
+  - thread dumps *2nd 3rd 4th 5th*
+  - thread pools *2nd*
+  - Web servers
+  - tuning *2nd*
+- **Common Gateway Interface (CGI)**
+- **compile_et utility** (Ext2/Ext3 file system)
+- **compilers**
+  - as tuning tools *2nd 3rd*
+  - gcc
+    - (GNU Compiler Collection) compiler
+    - compiling
+      - code *2nd*
+      - Completely Fair Queueing (CFQ) I/O scheduler
+  - component benchmarks [See microbenchmarks]
+    - computers
+- **concurrency**
+  - application servers
+  - Web servers
+- **CONFIG**
+  - kernel parameters *2nd*
+- **configuration**
+  - Ext3 file system *2nd*
+  - hard drives
+    - multiple hard drives *2nd*
+  - IPC (interprocess communication) *2nd 3rd 4th 5th*
+  - JFS (Journaled File System)
+  - kernel
+    - configurable features *2nd*
+  - RAID (Redundant Array of Inexpensive Disks) *2nd 3rd*
+  - ReiserFS
+  - XFS (Next Generation File System)
+- **connection management**
+  - TCP
+    - kernel parameters *2nd*
+- **connection pools**
+  - application servers *2nd*
+- **contention statistics**
+  - generating
+    - JLM (Java Lock Monitor) *2nd 3rd 4th*
+- **context switching** *2nd*
+- **conversions**
+  - file systems *2nd 3rd*
+- **counter (OProfile)**
+- **counters**
+  - JLM (Java Lock Monitor) *2nd 3rd 4th*
+- **CPU scheduler**
+  - virtual memory *2nd 3rd 4th*
+- **CPUs**
+  - utilization
+    - monitoring *2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th 18th 19th 20th*
+- **create benchmarks**
+
+# E
+- **CREDIT_LIMIT parameter** (scheduler)
+  - tuning
+- **crediting**
+  - interactive tasks
+  - scheduler
+- **CRO (Continuous Reliable Operation)**
+  - IBM zSeries mainframes
+
+# D-SACK
+- D-SACK, TCP, enabling
+- **data integrity**
+  - application servers
+  - assuring *2nd*
+- **data movement**
+  - burst transfer rates
+  - disks *2nd*
+  - internal transfer rates
+  - sustained transfer rates
+- **data=writeback** column (NetBench)
+- **database benchmarks** *2nd 3rd*
+  - results
+- **database servers** *2nd*
+  - application servers
+  - interactivity *2nd 3rd 4th 5th*
+- **databases**
+  - application servers
+    - support for
+  - architectures *2nd 3rd*
+  - clustering interconnect technology
+  - decision support system (DSS) workloads
+  - I/O management
+    - asynchronous I/O *2nd*
+    - block size I/O
+    - bounce buffers
+    - direct I/O
+    - raw I/O
+    - request locks
+    - vectored I/O
+  - logging devices *2nd 3rd*
+  - memory management *2nd*
+  - OLTP (online transaction processing)
+  - process management *2nd*
+  - tuning
+    - global memory *2nd 3rd*
+- **I/O**
+  - load balancing *2nd*

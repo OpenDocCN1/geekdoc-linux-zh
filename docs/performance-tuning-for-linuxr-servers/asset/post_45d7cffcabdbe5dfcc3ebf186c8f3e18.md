@@ -1,0 +1,271 @@
+
+## Index
+
+- single-CPU, single-disk setup
+- I/O subsystem
+- kernel performance benchmarks
+  - networks
+    - benchmarks
+      - IRQ affinity
+      - kernel enhancements
+      - NAPI (network device driver API)
+      - NetBench
+      - Netperf3 benchmark
+      - process affinity
+      - SendFile API
+      - SPECWeb99 benchmark
+      - TOE (TCP Offload Engine)
+      - TSO (TCP Segmentation Offloading)
+      - VolcanoMark benchmark
+      - Zerocopy
+- print servers
+- Web servers
+  - tuning
+- workloads
+  - benchmarking
+- performance analysis
+  - CPU utilization
+    - .gtop command
+    - sar command
+    - top command
+    - vmstat
+  - I/O utilization
+    - iostat command
+    - sar command
+  - memory utilization
+    - /proc file system
+    - ps command
+    - vmstat command
+  - network utilization
+    - netstat command
+    - nfsstat command
+  - system tracing
+  - OProfile command
+  - PI (Performance Inspector)
+  - requirements
+  - strace command
+  - top utility
+  - performance counters
+    - PI (Performance Inspector)
+      - Performance Inspector (PI) [See PI (Performance Inspector)]
+      - performance monitoring
+      - performance tuning [See tuning]
+      - Physical Address Extension (PAE)
+      - physical memory
+        - banks
+  - PI (Performance Inspector)
+    - Above Idle tool
+    - dynamic kernel patches
+    - instruction tracing
+    - JLM (Java Lock Monitor) tool
+    - JPROF tool
+    - performance counters
+    - pipcctr tool
+    - post tool
+    - ptl tool
+    - pttstats tool
+    - swtrace tool
+    - System Trace Data Collection tool
+    - tprof tool
+  - pipcctr tool (Performance Inspector)
+  - pipes
+    - IPC (Interprocess Communication)
+    - IPC (interprocess communication)
+    - named pipes
+  - planning
+    - file systems
+    - pre-installation planning
+      - Linux
+  - point of sale (POS) terminals
+  - policies
+    - resource management policies
+    - schedulers
+  - pools of requests
+  - I/O schedulers
+  - positioning time
+  - processes
+  - post tool (Performance Inspector)
+  - PostMark application benchmarks
+  - pre-installation planning
+    - Linux
+  - print servers
+  - performance
+  - printk parameter (kernel)
+  - PRIO_BONUS_RATIO parameter (scheduler)
+    - tuning
+  - proc file system
+    - memory utilization
+  - proc file system interface
+    - virtual memory parameters
+      - tuning
+  - process affinity column (NetBench)
+  - process management
+    - context switching
+      - kernel threads
+    - process scheduling
+    - processes
+    - tasks
+    - threads
+  - processes
+    - affinity
+    - hierarchies
+      - viewing
+    - IPC
+      - interprocess communication
+      - dynamic modification
+        - FIFOs
+        - identifiers
+        - message queues
+        - pipes
+        - semaphores
+        - shared memory segments
+        - SysV (System V)
+        - SysV resources
+      - IPC (Interprocess Communication) mechanisms
+        - pipes
+        - semaphores
+        - signals
+        - System V
+  - kernel parameters
+  - managing
+    - databases
+    - positioning time
+  - read anticipation process
+    - AS (anticipatory I/O scheduler)
+    - scheduling timeslices
+  - virtual memory
+    - address spaces
+    - address translation process
+  - processor affinity
+    - SMP (Symmetrical Multiprocessor) system
+  - processors
+    - Linux
+      - support
+      - memory
+      - caches
+    - monitoring
+      - Above Idle tool (PI)
+  - multiprocessing
+    - clusters
+    - NUMA (Non-Uniform Memory Architecture)
+      - processor mixing
+      - SMP (Symmetrical Multiprocessing)
+  - registers
+  - schedulers
+    - 2.6 Linux scheduler
+      - load balancing
+      - NUMA (non-uniform memory access)
+      - single processor systems
+      - SMP (symmetric multiproccessing)
+      - SMT (symmetric multithreading)
+      - tuning
+  - service processors
+    - SMP (Symmetrical Multiprocessor) system
+      - cache coherency
+      - concurrency
+      - data serialization
+      - locks
+      - processor affinity
+  - utilization
+    - monitoring
+    - word sizes
+  - procs interface
+    - kernel parameters
+      - CONFIG
+      - debugging
+      - file system
+      - ICMP
+      - IP fragmentation
+      - NEIGHBOR
+      - net core
+      - networks
+      - processes
+      - profiling
+      - routing
+      - shared memory
+      - signals
+      - system
+      - TCP
+      - tuning
+      - virtual memory
+  - prof command
+  - profiling
+    - applications
+    - kernel parameters
+    - programming languages
+      - choosing
+      - J2EE (Java 2 Enterprise Edition)
+      - application servers
+      - Java
+      - application servers
+      - programs
+      - designing
+      - clients
+      - code
+      - file I/O
+      - servers
+      - sockets
+      - synchronization
+      - threads
+      - timing routines
+      - protocol layering
+        - clients
+      - protocol stack (network)
+      - TCP/IP
+      - protocols
+      - network file system protocols
+      - network protocol stack
+      - TCP/IP
+  - proxy arp parameter (kernel)
+  - proxy_delay parameter (kernel)
+  - proxy_q_len parameter (kernel)
+  - ps command
+    - memory utilization
+  - PTT (per thread time)
+    - monitoring
+    - pttstats tool (PI)
+    - ptt tool (Performance Inspector)
+    - pttstats command
+    - PTT (per thread time)
+      - monitoring
+      - pttstats tool (Performance Inspector)
+  - Pulavarti, Badari
+  - Python programming language
+  - queue length
+  - databases
+  - RAID
+    - Redundant Array of Inexpensive Disks
+    - configuring
+    - levels
+    - multiple hard drives
+    - raw disk I/O
+    - file systems
+    - raw I/O
+    - databases
+    - read anticipation process
+      - AS (anticipatory I/O scheduler)
+    - read buffers
+    - TCP
+      - kernel parameters
+    - read-only clients
+    - read_batch_expire_parameter (AS I/O scheduler)
+    - read_expire_parameter (AS I/O scheduler)
+    - read_expire_parameter (I/O scheduler)
+    - Realm benchmarks
+    - real-root-dev parameter (kernel)
+    - Red Hat
+      - System V initialization table
+    - Red Hat Enterprise Linux
+    - Redundant Array of Inexpensive Disks (RAID) [See hard drives; RAID (Redundant Array of Inexpensive Disks)]
+    - reentrancy
+    - reference counted objects
+    - registers
+      - processors
+    - ReiserFS
+      - creating
+      - external logs
+      - kernel configuration support
+      - layout
+        - analyzing
+        - mounting
+        - tuning

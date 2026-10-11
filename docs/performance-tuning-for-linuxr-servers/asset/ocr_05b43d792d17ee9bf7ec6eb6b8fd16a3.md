@@ -1,0 +1,11 @@
+# ## Summary
+
+This case study clearly shows that network performance in the Linux 2.4, 2.5, and 2.6 kernels has been improving because of new feature enhancements. The TCP/IP Offload Engine is a controversial piece of work that is likely to become an important performance enhancement for the Linux storage network workload. The TCP Segment Offload, process and IRQ affinity, SendFile, and ZeroCopy are all important network features likely to be widely exploited by network applications. SPECWeb99 SSL is an examination of the benchmark results from SPECWeb99. On Linux, SPECWeb99 SSL is an indication that Linux network performance is comparable to that of other commercial operating systems.
+
+In this chapter, only the performance of some of the network features was discussed. Asynchronous network I/O, which improves the number of simultaneous connections a server can sustain, is not discussed. Features such as Stream Control Transmission Protocol (SCTP) and IPV6 that are being added to the 2.5 and 2.6 kernels were not explored here. The Linux 2.5 and 2.6 kernels also support 10 Gigabit Ethernet NICs, whose performance evaluation will be another interesting topic for future work. Determining whether multiple Gigabit Ethernet NICs scale on newer processors and on higher-speed buses is another challenge that needs evaluation to improve Gigabit Ethernet NIC scalability.
+
+Network SMP scalability and NIC scalability were discussed to some extent, but as network bandwidth increases, the system bus, processor, and other system components need to improve to keep up with the higher-bandwidth network data. Therefore, the performance of high-bandwidth networks, such as Gigabit, is likely to improve as the systems improve.
+
+Another technological development that is being introduced to overcome the Gigabit Ethernet bottleneck is remote direct memory access (RDMA). RDMA is a network interface card feature that lets one computer directly place information in the memory of another computer. RDMA justifies offloading the TCP/IP protocol more than any other application.
+
+The Linux network performance study is a vibrant subject relevant to the entire computing community. How the emerging technologies in networking are being adopted by Linux and evaluated for performance are ongoing areas of interest for the Linux and networking communities.
