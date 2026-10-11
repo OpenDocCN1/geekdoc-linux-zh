@@ -1,0 +1,3 @@
+![](bbox=[0.06, 0.12, 0.88, 0.55])
+
+The / directory, the root of the entire logical hierarchy, is special in an additional way: /. and /.. refer to the same directory; this is not true of any other directory on the system. (Thus, after something like `cd /..,/../.`, you’re still in /. ) This behavior is implemented in a simple fashion: Both /. and /.. are hard links to the filesystem’s root directory. (You can see this in both Figure 8.1 and Figure 8.2.) Every filesystem works this way, but the kernel treats / specially and does not treat as a special case the `..` directory for the filesystem mounted on /.

@@ -1,0 +1,122 @@
+
+
+```c
+#include <signal.h>
+
+int sighold(int sig);             // Add sig to process signal mask
+int sigrelse(int sig);           // Remove sig from process signal mask
+
+int sigignore(int sig);          // Short for sigset(sig, SIG_IGN)
+int sigpause(int sig);          // Suspend process, allow sig to come in
+void (*sigsset(int sig, void (*disp)(int))); // sighandler_t sigset(int sig, sighandler_t disp);
+```
+
+这些函数的 POSIX 标准基于每个进程的**进程信号掩码**来描述其行为。进程信号掩码用于跟踪当前哪些信号（如果有）被进程阻塞。有关更详细的说明，请参阅第 10.6.2 节“信号集：`sigset_t` 及相关函数”（第 368 页）。在 System V Release 3 API 中，无法以整体方式获取或修改进程信号掩码。这些函数的运作方式如下：
+
+-   `int sighold(int sig)`
+    将 *sig* 添加到阻塞信号列表（即进程信号掩码）中。
+
+-   `int sigrelse(int sig)`
+    从进程信号掩码中移除（解除阻塞）*sig*。
+
+-   `int sigignore(int sig)`
+    忽略 *sig*。这是一个便捷函数。
+
+-   `int sigpause(int sig)`
+    从进程信号掩码中移除 *sig*，然后挂起进程，直到有信号到来为止（参见第 10.7 节“用于进程间通信的信号”（第 379 页））。
+
+-   `sighandler_t sigset(int sig, sighandler_t disp)`
+    是 *signal()* 的替代品。（此处我们使用 GNU/Linux 手册页的表示法，以使声明更易读。）
+
+对于 *sigset()*，*handler* 参数可以是 *SIG_DFL*、*SIG_IGN* 或函数指针，这与 *signal()* 的情况相同。但是，它也可以是 *SIG_HOLD*。在这种情况下，*sig* 会被添加到进程的进程信号掩码中，但其关联的动作在其他方面保持不变。（换句话说，如果它之前有处理程序，该处理程序仍然有效；如果是默认动作，则该动作未发生变化。）
+
+当使用 *sigset()* 安装信号处理程序且信号到来时，内核首先将该信号添加到进程信号掩码中，从而阻塞该信号的进一步接收。处理程序运行，当它返回时，内核将进程信号掩码恢复为处理程序运行前的状态。（在 POSIX 模型中，如果信号处理程序修改了信号掩码，这种修改会在处理程序返回时通过恢复先前掩码而被覆盖。）
+
+*signal()* 和 *sigrelse()* 可以一起使用，用于界定所谓的**临界区**代码：即不应被特定信号中断的代码片段，以防信号处理程序中的代码导致数据结构损坏。
+
+> **注意** POSIX 标准已将这些 API 标准化，因为 POSIX 的一个主要目标是在尽可能多的情况下正式化现有实践。然而，下文描述的 *sigaction()* API 可以让你完成这些 API 所能做的一切，甚至更多。你不应在新程序中使用这些 API。相反，请使用 *sigaction()*。（我们注意到，甚至没有 *sigset(2)* 的 GNU/Linux 手册页！）
+
+## 10.6 POSIX 信号
+
+POSIX API 基于 4.2 和 4.3 BSD 中的 *sigvec()* API。经过微小的修改，该 API 能够涵盖 V7 和 System V Release 3 API 的功能。POSIX 对这些变更进行了调整，并将该 API 重命名为 *sigaction()*。由于 *sigvec()* 接口并未被广泛使用，我们不再对其加以描述。相反，本节仅描述 *sigaction()*，这也应该是你使用的方式。（事实上，1994 年的 4.4 BSD 手册已标记 *sigvec()* 为过时，并引导读者参考 *sigaction()*。）
+
+### 10.6.1 揭示问题所在
+
+System V Release 3 API 有什么问题？毕竟，它们提供了信号阻塞，因此信号不会丢失，且任何给定信号都可以可靠地得到处理。
+
+答案是该 API 一次只能处理*一个信号*。程序通常处理多个信号。当你在处理一个信号的过程中，你不希望还要担心处理另一个信号。（假设你刚接起办公室电话，此时你的手机开始响了：你更希望电话系统告知来电者你正在另一条线上稍后会回电，而不是由你自己来做这件事。）
+
+使用 *sigset()* API 时，每个信号处理程序都必须暂时阻塞*所有*其他信号，完成其工作，然后解除阻塞。问题在于，在两次 `sighold()` 调用之间的间隔内，可能会有尚未被阻塞的信号出现。这种场景再次充满了竞态条件。
+
+解决方案是使能够原子地处理信号组，即通过一次系统调用来完成。你通过操作信号集和进程信号掩码来实现这一点。
+
+### 10.6.2 信号集：`sigset_t` 及相关函数
+
+*进程信号掩码* 是进程当前阻塞的信号的列表。POSIX API 的优势在于可以原子地、整体地操作进程信号掩码。
+
+进程信号掩码在编程上通过*信号集*来表示。这就是 `sigset_t` 类型。从概念上讲，它只是一个位掩码，掩码中的 0 和 1 值代表特定信号在掩码中不存在或存在：
+
+```c
+/* Signal mask manipulated directly.  DO NOT DO THIS! */
+int mask = (1 << SIGHUP) | (1 << SIGINT);  /* bitmask for SIGHUP and SIGINT */
+```
+
+然而，由于一个系统可能拥有的信号数量超过单个 `int` 或 long 所能容纳的数量，并且大量使用位运算符导致可读性差，因此存在多种用于操作信号集的 API：
+
+```c
+#include <signal.h>            /* POSIX */
+int sigemptyset(sigset_t *set);
+int sigfillset(sigset_t *set);
+int sigaddset(sigset_t *set, int signum);
+int sigdelset(sigset_t *set, int signum);
+int sigismember(const sigset_t *set, int signum);
+```
+
+这些函数的功能如下：
+
+-   `int sigemptyset(sigset_t *set)`
+    清空一个信号集。返回时，`*set` 中不包含任何信号。成功返回 0，出错返回 -1。
+
+-   `int sigfillset(sigset_t *set)`
+    完全填充一个信号集。返回时，`*set` 包含系统定义的所有信号。成功返回 0，出错返回 -1。
+
+-   `int sigaddset(sigset_t *set, int signum)`
+    将 `signum` 添加到 `*set` 中的进程信号掩码里。成功返回 0，出错返回 -1。
+
+-   `int sigdelset(sigset_t *set, int signum)`
+    从 `*set` 中的进程信号掩码里移除 *signum*。成功返回 0，出错返回 -1。
+
+-   `int sigismember(const sigset_t *set, int signum)`
+    如果 *signum* 存在或不存在于 `*set` 中，则返回 *true*/*false*。
+
+在对 *sigset_t* 变量执行任何其他操作之前，必须始终调用 *sigemptyset*() 或 *sigfillset*() 其中之一。这两种接口的存在是因为有时你希望从一个空集开始，然后只操作一两个信号；而其他时候，你希望操作所有信号，可能移除其中的一两个。
+
+### 10.6.3 管理信号掩码：`sigprocmask()` 等
+
+进程信号掩码最初是*空的*——一开始，没有信号被阻塞。（这是一种简化；参见第 10.9 节“跨 *fork*() 和 *exec*() 的信号”（第 398 页）。）三个函数允许你直接操作进程信号掩码：
+
+```c
+#include <signal.h>
+
+int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
+int sigpending(sigset_t *set);
+int sigsuspend(const sigset_t *set);
+```
+
+这些函数的功能如下：
+
+`int sigprocmask(int how, const sigset_t *set, sigset_t *oldset)`
+
+如果 *oldset* 不是 *NULL*，则获取当前的进程信号掩码并将其存入 `*oldset`。然后根据 *set* 的内容和 *how* 的值更新进程信号掩码，*how* 必须是以下之一：
+
+-   **SIG_BLOCK**  
+    将 `*set` 中的信号与当前进程信号掩码合并。新掩码是当前掩码和 `*set` 的并集。
+
+-   **SIG_UNBLOCK**  
+    从进程信号掩码中移除 `*set` 中的信号。即使 `*set` 中包含一个当前不在进程信号掩码中的信号，也不是问题。
+
+-   **SIG_SETMASK**  
+    用 `*set` 的内容替换进程信号掩码。
+
+如果 *set* 是 *NULL* 而 *oldset* 不是，则 *how* 的值不重要。这种组合用于获取当前的进程信号掩码而不对其进行修改。（这在 POSIX 标准中是明确规定的，但从 GNU/Linux 手册页中看不太清楚。）
+

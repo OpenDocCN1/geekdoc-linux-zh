@@ -1,0 +1,156 @@
+
+`memcpy()` 函数最初是 System V 用于复制内存块的 API；对于重叠内存块的行为，并未以特定方式加以明确规定。在 1989 年 C 标准制定时，委员会认为这种未定义的行为是一个问题；因此，他们发明了 `memmove()`。为了保持历史兼容性，`memcpy()` 保持不变，其针对重叠内存的行为被明确声明为未定义，而 `memmove()` 则被创造出来，以提供一个能够正确处理问题情况的例程。
+
+在你自己的代码中应该使用哪一个？对于一个没有传入内存区域知识的库函数，你应该使用 `memmove()`。这样，就能保证重叠区域不会出现任何问题。对于“知道”两个区域不重叠的应用级代码，使用 `memcpy()` 是安全的。
+
+对于 `memcpy()` 和 `memmove()`（就像 `strcpy()` 一样），目标缓冲区是第一个参数，源是第二个参数。要记住这一点，请注意这与赋值语句中的顺序相同：
+
+```
+dest = src;
+```
+
+（许多系统的 man 手册页没有提供多大帮助，它们将原型提供为 `void *memcpy(void *buf1, void *buf2, size_t n)`' 并依赖文字说明来解释哪个是哪个。幸运的是，GNU/Linux 的 man 手册页使用了更好的名称。）
+
+### 12.2.3 比较内存块：`memcmp()`
+
+`memcmp()` 函数比较两个任意数据缓冲区中的 count 个字节。其返回值与 `strcmp()` 类似：如果第一个缓冲区小于、等于或大于第二个缓冲区，则分别返回负值、零或正值。
+
+你可能会问：“为什么不用 `strcmp()` 进行这样的比较？”这两个函数的区别在于 `memcmp()` 不关心零字节（`'\0'` 字符串终止符）。因此，当你需要比较任意二进制数据时，应使用 `memcmp()`。
+
+`memcmp()` 的另一个优势是它比典型的 C 实现更快：
+
+```c
+/* memcmp --- 示例 C 实现，不用于实际用途 */
+int memcmp(const void *buf1, const void *buf2, size_t count)
+{
+    const unsigned char *cp1 = (const unsigned char *) buf1;
+    const unsigned char *cp2 = (const unsigned char *) buf2;
+    int diff;
+
+    while (count-- != 0) {
+        diff = *cp1++ - *cp2++;
+        if (diff != 0)
+            return diff;
+    }
+    return 0;
+}
+```
+
+速度上的优势可能源于许多体系结构支持的专用“块内存比较”指令，或源于以大于字节的单位进行比较。（后者操作复杂，最好留给库的作者处理。）
+
+基于这些原因，你应该*始终*使用库版本的 `memcmp()`，而不是自己编写一个。库作者比你更了解机器的可能性极大。
+
+### 12.2.4 搜索字节值：memchr()
+
+`memchr()` 函数类似于 `strchr()` 函数：它返回某个特定值在任意缓冲区中的位置。就像 `memcmp()` 与 `strcmp()` 一样，使用 `memchr()` 的主要原因是你处理的是任意二进制数据。
+
+GNU `wc` 在仅统计行数和字节数时使用 `memchr()`，[^4] 这使得 `wc` 相当快速。以下内容来自 GNU Coreutils 中的 `wc.c`：
+
+[^4]: 参见 `wc(1)`。`wc` 统计行数、单词数和字符数。
+
+```c
+257 else if (!count_chars && !count_complicated)
+258 {
+259 /* Use a separate loop when counting only lines or lines and bytes --
+260 but not chars or words. */
+261 while ((bytes_read = safe_read(fd, buf, BUFFER_SIZE)) > 0)
+262 {
+263 register char *p = buf;
+264
+265 if (bytes_read == SAFE_READ_ERROR)
+266 {
+267 error(0, errno, "&s", file);
+268 exit_status = 1;
+269 break;
+270 }
+271
+272 while ((p = memchr (p, '\n', (buf + bytes_read) - p)))
+273 {
+274 ++p;
+275 ++lines;
+276 }
+277 bytes += bytes_read;
+278 }
+279}
+```
+
+外层循环（第 261–278 行）从输入文件读取数据块。内层循环（第 272–276 行）使用 `memchr()` 查找并统计换行符。复杂表达式 `(buf + bytes_read) - p` 解析为当前 *p* 值与缓冲区末尾之间的剩余字节数。
+
+第 259–260 行的注释需要一些解释。简而言之，现代系统可以使用在内存和磁盘上占用多于一字节的字符。（这在第 13.4 节“你能拼一下吗？”第 521 页中讨论得更多。）因此，当 `wc` 需要区分字符和字节时，必须使用不同的代码；此代码处理的是按字节统计的情况。
+
+## 12.3 临时文件
+
+*临时文件* 顾名思义：它是一个文件，在程序运行期间保存数据，一旦程序退出就不再需要这些数据。一个很好的例子是 *sort* 程序。如果在命令行中没有指定文件名，或者使用 `-` 作为文件名，*sort* 会读取标准输入。然而，*sort* 必须读取*所有*输入数据后才能输出排序结果。（稍微思考一下，你就会发现这是事实。）在读取标准输入期间，数据必须存储在某处，直到 *sort* 可以对其进行排序；这是使用临时文件的完美场景。*sort* 还使用临时文件来存储中间排序结果。
+
+令人惊讶的是，创建临时文件有五种不同的函数。其中三种通过创建表示（假定的）唯一文件名的字符串来工作。我们将看到，通常应避免使用这些方法。另外两种通过创建并打开临时文件来工作；这些函数更受推荐。
+
+### 12.3.1 生成临时文件名（不良做法）
+
+有三种函数的目的是创建一个唯一、不存在的文件的名称。一旦你拥有了这样的文件名，就可以用它来创建临时文件。由于名称是唯一的，你被“保证”对该文件的独占使用权。以下是函数声明：
+
+```c
+#include <stdio.h>
+char *tmpnam(char *s); /* ISO C */
+char *tempnam(const char *dir, const char *px); /* XSI */
+char *mktemp(char *template); /* ISO C */
+```
+
+这些函数都提供了相同主题的不同变体：它们填充或创建一个缓冲区，其中包含唯一临时文件名的路径。该文件的唯一性在于，在函数创建名称并返回名称时，所创建的名称不存在。这些函数的工作方式如下：
+
+**`char *tmpnam(char *s)`**
+生成唯一的文件名。如果 *s* 不为 NULL，其大小应至少为 *L_tmpnam* 字节，唯一的名称将被复制到其中。如果 *s* 为 NULL，则名称在内部静态缓冲区中生成，后续调用可能会覆盖该缓冲区。路径的目录前缀将是 *P_tmpdir*。*P_tmpdir* 和 *L_tmpnam* 均定义在 <stdio.h> 中。
+
+**`char *tempnam(const char *dir, const char *px)`**
+类似于 *tmpnam()*，允许你指定目录前缀。如果 *dir* 为 NULL，则使用 *P_tmpdir*。如果 *px* 参数不为 NULL，则指定最多五个字符用作文件名的前导字符。
+
+*tmpnam()* 为其生成的文件名分配存储空间。返回的指针可以稍后与 *free()* 一起使用（如果你希望避免内存泄漏，则应该使用）。
+
+**`char *mktemp(char *template)`**
+基于模板生成唯一的文件名。*template* 的最后六个字符必须是 'XXXXXX'；这些字符将被替换为唯一后缀。
+
+> 注意：`mktemp()` 的模板参数会被就地覆盖。因此，它不应是字符串常量。许多标准之前的 C 编译器将字符串常量放入数据段，与普通全局变量在一起。虽然在源代码中定义为常量，但它们是*可写的*；因此，像下面的代码并不罕见：
+
+```c
+/* 旧式代码：不要这样做。 */
+char *tfile = mktemp("/tmp/myprogXXXXXX");
+... use tfile...
+```
+
+> 在现代系统上，此类代码很可能会失败；如今，字符串常量位于内存的只读段中。
+
+使用这些函数非常简单。文件 `ch12-mktemp.c` 演示了 `mktemp()`；更改为使用其他函数并不困难：
+
+```c
+1 /* ch12-mktemp.c --- 演示 mktemp() 的朴素用法。
+2                          为简洁起见省略了错误检查 */
+3
+4 #include <stdio.h>
+5 #include <fcntl.h>              /* for open flags */
+6 #include <limits.h>             /* for PATH_MAX */
+7
+8 int main(void)
+9 {      static char template[] = "/tmp/myfileXXXXXXX";
+10      char fname[PATH_MAX];
+11      static char msg[] =
+12             "Here's lookin' at you, kid!\n";    /* beats "hello, world" */
+13      int fd;
+14
+15      strcpy(fname, template);
+16      mktemp(fname);
+17
+18      /* RACE CONDITION WINDOW OPENS */
+19
+20      printf("Filename is %s\n", fname);
+21
+22      /* RACE CONDITION WINDOW LASTS TO HERE */
+23
+24      fd = open(fname, O_CREAT|O_RDWR|O_TRUNC, 0600);
+25      write(fd, msg, strlen(msg));
+26      close(fd);
+27
+28      /* unlink(fname); */
+29
+30      return 0;
+31 }
+```
+

@@ -1361,6 +1361,7 @@
 +   [Linux 自 Linux：概念与编程](docs/linux-yourself-concept-and-programming/README.md)
 +   [Linux 故障排除指南](docs/linux-устранение-неполадок/README.md)
 +   [Linux 源码趣读](docs/linux-源码趣读/README.md)
++   [linux调试与性能优化技巧](docs/linuxr-debugging-and-performance-tuning-tips-and-techniques-/README.md)
 +   [GNU/Linux 桌面实战指南](docs/linuxr-desktop-garage-the-garage-series/README.md)
 +   [Linux 补丁管理：保持 Linux 系统更新 (Bruce Perens 开源系列)](docs/linuxr-patch-management-keeping-linuxr-systems-up-to-date-br/README.md)
 +   [Linux+ 学习指南：考试 XK0-001](docs/linuxtm-study-guide-exam-xk0-001/README.md)

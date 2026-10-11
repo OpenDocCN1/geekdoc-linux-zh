@@ -1,0 +1,183 @@
+
+## 5.3 读取目录
+
+当 4.2 BSD 引入了一种允许更长的文件名并提供了更好性能的文件系统格式时，它还引入了一系列新函数以提供目录读取的抽象。无论底层文件系统和目录组织如何，这套函数都可以使用。其基本部分已由 POSIX 标准化，使用它的程序在 GNU/Linux 和 Unix 系统之间具有可移植性。
+
+### 5.3.1 基本目录读取
+
+目录项由 `struct dirent` 结构体表示（与 V7 的 `struct direct` 不同）：
+
+```
+struct dirent {
+    ...
+    ino_t d_ino;        /* XSI 扩展 --- 参见正文 */
+    char d_name[...];  /* 参见正文关于此数组大小的说明 */
+    ...
+};
+```
+
+为了可移植性，POSIX 仅指定了 `d_name` 字段，它是一个以零结尾的字节数组，表示目录项的文件名部分。除说明终止零之前最多可能有 `NAME_MAX` 个字节外，标准并未规定 `d_name` 的大小。（`NAME_MAX` 定义在 `<limits.h>` 中。）POSIX 的 XSI 扩展提供了 `d_ino` inode 数字段。
+
+实际上，由于文件名长度可变，且 `NAME_MAX` 通常相当大（例如 255），`struct dirent` 包含额外的成员，以辅助记录磁盘上变长目录项的详细信息。这些额外成员对于日常代码并不重要。
+
+以下函数提供了目录读取接口：
+
+```
+#include <sys/types.h>			POSIX
+#include <dirent.h>
+
+DIR *opendir(const char *name);		打开目录以供读取
+struct dirent *readdir(DIR *dir);		每次返回一个 struct dirent
+int closedir(DIR *dir);			关闭已打开的目录
+void rewinddir(DIR *dirp);		返回目录的开头
+```
+
+`DIR` 类型类似于 `<stdio.h>` 中的 `FILE` 类型。它是一个不透明类型，意味着应用程序代码不应知道其内部是什么；其内容供其他目录例程使用。如果 `opendir()` 返回 `NULL`，则表明指定的目录无法打开以供读取，并且 `errno` 会被设置以指示错误。
+
+一旦你拥有一个打开的 `DIR *` 变量，就可以使用它来获取指向下一个目录项的 `struct dirent` 的指针，`readdir()` 在文件结束或出错时返回 `NULL`。
+
+最后，`closedir()` 类似于 `stdio.h` 中的 `fclose()` 函数；它关闭打开的 `DIR *` 变量。`rewinddir()` 函数可用于从目录的开头重新开始。
+
+掌握了这些例程（或者至少在 C 库中），我们可以编写一个简单的 `catdir` 程序来“输出”目录的内容。这样一个程序展示在 `ch05-catdir.c` 中：
+
+```c
+/* ch05-catdir.c --- 演示 opendir(), readdir(), closedir()。 */
+#include <stdio.h>    /* 用于 printf() 等 */
+#include <errno.h>    /* 用于 errno */
+#include <sys/types.h> /* 用于系统类型 */
+#include <dirent.h>   /* 用于目录函数 */
+
+char *myname;
+int process(char *dir);
+/* main --- 循环处理目录参数 */
+
+int main(int argc, char **argv)
+{
+    int i;
+    int errs = 0;
+
+    myname = argv[0];
+
+    if (argc == 1)
+        errs += process(".");  /* 默认为当前目录 */
+    else
+        for (i = 1; i < argc; i++)
+            errs += process(argv[i]);
+
+    return (errs != 0);
+}
+```
+
+这个程序与 `ch04-cat.c`（见 4.2 节，“展示基本程序结构”，第 84 页）非常相似；`main()` 函数几乎相同。主要区别在于，如果没有参数，它默认使用当前目录（第 20–21 行）。
+
+```c
+29   /*
+30    * process --- 对目录执行某些操作，在此情况下，
+31    *           将 inode/名称对打印到标准输出。
+32    *           如果一切正常返回 0，否则返回 1。
+33    */
+34 
+35   int
+36   process(char *dir)
+37   {
+38      DIR *dp;
+39      struct dirent *ent;
+40 
+41      if ((dp = opendir(dir)) == NULL) {
+42         fprintf(stderr, "%s: %s: 无法打开以供读取: %s\n",
+43                myname, dir, strerror(errno));
+44         return 1;
+45      }
+46 
+47      errno = 0;
+48      while ((ent = readdir(dp)) != NULL)
+49         printf("%8ld %s\n", ent->d_ino, ent->d_name);
+50 
+51      if (errno != 0) {
+52         fprintf(stderr, "%s: %s: 读取目录项: %s\n",
+53                myname, dir, strerror(errno));
+54         return 1;
+55      }
+56 
+57      if (closedir(dp) != 0) {
+58         fprintf(stderr, "%s: %s: closedir: %s\n",
+59                myname, dir, strerror(errno));
+60         return 1;
+61      }
+62 
+63      return 0;
+64   }
+```
+
+`process()` 函数完成所有工作，其中大部分是错误检查代码。函数的核心部分是第 48 行和第 49 行：
+
+```
+while ((ent = readdir(dp)) != NULL)
+   printf("%8ld %s\n", ent->d_ino, ent->d_name);
+```
+
+此循环逐个读取目录项，直到 `readdir()` 返回 `NULL`。循环体打印每个项的 inode 数字和文件名。以下是程序运行时的情况：
+
+```
+$ ch05-catdir          默认为当前目录
+639063 .
+639062 ..
+639064 proposal.txt
+639012 lightsabers.url
+688470 code
+638976 proget.texi
+639305 texinfo.tex
+639007 15-processes.texi
+639011 00-preface.texi
+639020 18-try.texi
+638980 Makefile
+639239 19-118n.texi
+...
+```
+
+输出并未以任何方式排序；它表示目录的线性内容。（我们在 6.2 节，“排序和搜索函数”，第 181 页中描述如何对目录内容进行排序。）
+
+#### 5.3.1.1 可移植性考虑
+
+有几个可移植性方面的考虑事项。首先，你不应该假设 `readdir()` 返回的前两个项总是 ‘.’ 和 ‘..’。许多文件系统使用的目录组织不同于原始 Unix 设计，‘.’ 和 ‘..’ 可能位于目录中间，甚至可能不存在。[sup 4](#fn4)
+
+其次，POSIX 标准对 `d_ino` 的可能取值保持沉默。它指出返回的结构体代表文件的目录项；这意味着 `readdir()` 不返回空槽位，因此 GNU/Linux 的 `readdir()` 实现不会费心返回 ‘d_ino == 0’ 的项；它会继续到下一个有效的目录项。
+
+因此，至少在 GNU/Linux 和 Unix 系统上，`d_ino` 不太可能为零。但是，如果可以的话，最好避免完全使用此字段。
+
+最后，一些系统在 `struct dirent` 内部使用 `d_fileno` 代替 `d_ino`。如果你需要将目录读取代码移植到此类系统，请留意这一点。
+
+## 间接系统调用
+
+> “孩子们，不要在家尝试这个！”
+> —魔法先生（Mr. Wizard）—
+
+许多系统调用，如 `open()`、`read()` 和 `write()`，旨在由用户级应用程序代码直接调用：换句话说，由你作为 GNU/Linux 开发者编写的代码调用。
+
+然而，其他系统调用仅存在于为了让实现更高层的标准库函数成为可能，并且*不应*直接调用。GNU/Linux 的 `getdents()` 系统调用就是这样一种情况；它将多个目录项读取到由调用者提供的缓冲区中——在这种情况下，是实现 `readdir()` 的代码。`readdir()` 代码随后从缓冲区中逐个返回有效的目录项，并按需重新填充缓冲区。
+
+这些仅供库使用的系统调用可以通过它们在手册页中的外观来与供用户使用的系统调用区分开。例如，来自 `getdents(2)`：
+
+**名称**
+`getdents` – 获取目录项
+
+**概要**
+
+```
+#include <unistd.h>
+#include <linux/types.h>
+#include <linux/dirent.h>
+#include <linux/unistd.h>
+
+_syscall3(int, getdents, int, fd, struct dirent *, dirp, uint, count);
+int getdents(unsigned int fd, struct dirent *dirp, unsigned int count);
+```
+
+任何使用 `_syscallX()` 宏的系统调用都*不应*由应用程序代码调用。（关于这些调用的更多信息可以在 `intro(2)` 手册页中找到；如果你还没有阅读过，应该读一下该手册页。）
+
+对于 `getdents()` 来说，许多其他 Unix 系统具有类似的系统调用；有时名称相同，有时名称不同。因此，尝试使用这些调用只会导致巨大的可移植性混乱；在所有情况下，你最好还是使用接口定义明确、标准且可移植的 `readdir()`。
+
+#### 5.3.1.2 Linux 和 BSD 目录项
+
+虽然我们刚才说你应该只使用 `struct dirent` 的 `d_ino` 和 `d_name` 成员，但了解 BSD 和 Linux `struct dirent` 中的 `d_type` 成员是值得的。这是一个无符号字符值，存储目录项所命名文件的类型：
+
