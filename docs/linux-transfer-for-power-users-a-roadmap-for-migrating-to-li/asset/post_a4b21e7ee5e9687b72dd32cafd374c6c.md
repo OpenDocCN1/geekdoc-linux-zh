@@ -1,0 +1,308 @@
+
+## Index
+
+### C
+- Clock applet, 120, 129–132
+- codec programs, 263–264
+- color options
+  - GIMP interface, 245–248
+  - KPaint, 240–241
+- command history, 316
+- command line
+  - usability, 6–7
+  - utilities, 312
+- Command Line Interface (CLI), 311
+- command prompts
+  - customizing, 313–315
+  - definition, 312–313
+  - Kudo, 277
+- command windows
+  - attributes, 317–319
+  - case sensitivity, 316
+  - command history, 316
+  - definition, 311
+  - multiple, 317
+  - opening, 315–316
+  - string completion, 316–317
+  - title bar, 312
+- commands. See also specific names of commands
+  - comments for, 327
+  - cron daemon, 328–329, 330
+  - directory navigation and manipulation, 322
+  - file manipulation, 323
+  - finding other commands, 323–324
+  - help commands, 321
+  - info pages, 322
+  - N.E.G. (not elsewhere classified), 325–326
+  - permissions, 325, 327
+  - running manually, 276
+  - shell scripts (Linux batch files), 327–328
+  - types of, 320
+  - working with files, 324
+  - comments, with commands, 327
+- compress files, 214
+- compressed archives, 214
+- Configuration Complete screen, 74
+- Control Center applet, 224–227
+- Convert Format function, gThumb, 254
+- cookies, managing, 182–183
+- cp command, 323
+- Create Launcher dialog, 117
+- cron daemon, 328–329, 330
+- crontab daemon, 328
+- cropping images, 249–251
+- cross-platform systems, 192
+- Crossover Office, WINE program, 6
+- Current Conditions, 133
+- current directory, referencing (.), 322, 327
+- Current Session, advanced options, 227
+
+### D
+- daemons, 328
+- data. See also data: files
+  - definition, 135
+  - migration from Windows to Linux, 160–161
+- data files, 192
+- Date and Time screen, 51–52
+- Date/Time Properties dialog, 131
+- Debian, downloading, 9
+- desktop configuration
+  - customizing
+    - applets, 126–133
+    - desktop, 116–117
+    - menus, 124–126
+    - panel, 117–124
+  - default desktop, 108–116
+  - interface considerations, 107–108
+- Desktop Switching Tool, 109–110
+- df command, 140
+- DHCP (Dynamic Host Configuration Protocol), 63. See also IP addresses
+- DHCP server, 166
+- digital images
+  - advantages, 233
+  - downloading from digital camera, 233–239
+  - The GIMP
+    - cropping images, 249–251
+    - editing images, 251
+    - features, 244–245
+    - interface, 245–248
+    - screen shots, 248–249
+  - KPaint, 240–243
+  - screen shots, 239–240
+  - viewing
+    - with GView, 124, 252–253
+    - with qThumb, 253–254
+- directory navigation and manipulation, 322
+- directory structures
+  - C: drive, 137–139
+  - folder names, 139–144
+  - multiple drives, 144–146
+  - path considerations, 321
+  - update, 79
+- Disk Druid tool, 32
+- disk partitioning, 32–33, 58–61
+- Disk Setup screen, Fedora Core, 59–60
+- DNS (Domain Name Server), 166–167
+- Do Nothing option, 277
+- document templates, 195
+- documentation, for hardware, 22
+- drawing
+  - Fredhand images with KPaint, 240–243
+  - icons with KIconEdit, 243–244
+- Driver options, printers, 282
+- du command, 325
+
+### E
+- echo command, 320, 325
+- “Edit a print queue” dialog, 282
+- Edit Interface dialog, 64
+- Edit Partition dialog, 60–61
+- Edit | Repeat command, OpenOffice.org, 197–198
+- editing
+  - icons, 243–244
+  - images, 251
+  - menus, 125
+  - print queue, 282
+  - tasks or subtasks, 222
+- editors
+  - basic functions, 187–191
+  - gedit, 188–191
+  - PlayList Editor, 271, 272
+  - vi, 328, 329–330
+- e-mail clients
+  - Evolution, 168–174
+  - icons, 124
+  - KMail, 175–180
+  - network connections and, 163
+  - selecting, 167
+- encoder programs, 263–264
+- Enterprise archive, 214
+- env command, 325
+- environment variables, 319–320
+- equal sign key (=), cropping images, 248
+- Equalizer, XMMS, 268, 272
+- error messages
+  - command not found, 327
+  - disconnected printer, 281
+  - generic, 102–103
+  - invalid GPG signature, 78
+  - scanner, 285
+  - up2date, 70–71
+- /etc folder, 140
+- Ethernet Device dialog, 165
+- Ethernet interface, 65
+- Everything check box, Package Group Selection, 40
+- Evolution
+  - basic functions, 173–174
+  - icon, 124
+  - interface, 168
+  - setup, 168–172
+  - expanding panels, 122
+  - Eye of Gnome, 252
+
+### F
+- F-Prot, 304
+- FAILED message, 49–50
+- Fedora Core. See also installation; multimedia; Red Hat Network Alert Notification Tool; Red Hat Package Manager
+  - advantages, 5, 213
+  - APT (Advanced Packaging Tool), 71–72
+  - archives, 100–104
+  - Audio Devices, 258
+  - bash, profile file, 313
+  - burning CDs, 16–21
+  - configuration
+    - boot loader, 34–35, 61–63
+    - boot menu, 89
+    - Date and Time screen, 51–52
+    - firewall, 35–36
+    - keyboard and mouse, 29–30
+    - language support, 37
+    - monitor, 31
+    - network, 35
+    - root password, 37–38
+    - time zone selection, 37
+    - user account, 52–53
+  - decision process, 167
+  - defaults
+    - desktop, 57–58, 108–116
+    - e-mail client, 168
+    - shell program, 311
+  - distributions, 31–32
+  - downloading, 9, 13–16
+  - help system, 93–95
+  - ISO files, 11–12
+  - login screen, 56
+  - Mozilla Web browser, 180–184
+  - PDF viewers, 223–224
+  - Preferences applets, 224–227
+  - System Tools applets, 228–232
+  - Unix-style editors, 188
+  - update, 70–71, 76
+  - updating, 69–69
+  - Username text box, 56–57
+  - vi text editor, 328, 329–330
+  - Web sites, 95–100
+  - Welcome screen, 29–30
+- X-CD Roast, 291
+- yum, 71
+- file associations, 154–160
+- file command, 325–326
+- file compression software, 213
+- file formats
+  - archives, 214
+  - audio, 260–261, 272
+  - CDDA, 259–260
+  - considerations, 194–195
+  - converting audio formats, 264
+  - digital images, 242–243
+  - proprietary, 192
+  - xine multimedia player, 273
+- File Management Preferences dialog, 150
+- file managers
+  - features, 146–147
+  - Konqueror, 150–154, 156
+  - Midnight Commander, 147–148
+  - Nautilus, 148–150
+- file name mask, 217
+- File Roller
+  - archives, 214–218
+  - basic functions, 213–214
+  - extracting files, 219
+  - formats, 214
+- files. *See also* data; editors; OpenOffice.org
+  - accessing, 161
+  - adding to archives, 217
+  - audio, 259–261
+  - case sensitivity, 136, 316, 320
+  - executing programs, 321
+  - extracting with File Roller, 219
+  - importing OIF files, 208
+  - manipulating, 323
+  - naming conventions, 135–136
+  - opening, 161
+  - PDF files, 192
+- filters, e-mail, 174
+- Find command, 323–324
+- finish dialog, printer settings, 280
+- firewall configuration, 35–36, 308–309
+- folders, naming conventions, 139–144
+- foomatic package, 88
+- Forecast dialog, 132–133
+- Function toolbar, OpenOffice.org, 196
+
+### G
+- gateway address, 66
+- gedit, 188–191, 189
+- Gentoo, downloading, 10
+- Ghostview, PDF viewer, 223–224
+- GIMP (GNU Image Manipulation Program)
+  - cropping images, 249–251
+  - editing images, 251
+  - features, 244–245
+  - interface, 245–248
+  - node, 158–160, 227
+  - print dialog, 283
+  - screen shots, 248–249
+- GikRelM System Monitor, 230
+- global path settings, 321
+- GNOME interface, 93–94, 109–116. *See also* gedit
+- Nautilus
+- Rhythmbox, 264, 265–268
+- RPM file, 305
+- GNU Privacy Guard (GPG), 76. *See also* GIMP
+- GnuCash, 40, 187, 208–211
+- Gnumeric, 206–209
+- GQViewer, 124, 252–253
+- graphical style, editors, 188. *See also* gedit
+- graphical user interface (GUI), 107–108
+- graphics. *See digital images*
+- grayscale queue, 282
+- grep command, 324
+- Grip program
+  - configuration, 263–264
+  - converting formats, 264
+  - features, 261–263
+- Group Properties dialog, 300
+- groups, passwords, 298–303
+- gThumb, 252, 253–254
+- gk tool, 23, 23–234
+- GUI (graphical user interface), 107–108
+- gzip files, 214
+
+### H
+- Hardware Browser, 228
+- hardware documentation, 22
+- heading levels, OpenOffice.org, 203
+- help commands, 321
+- help files
+  - Fedora Core Web sites, 95–100
+  - GnuCash, 209
+  - interactive help, 96
+  - mailing lists
+    - archives, 100–104
+    - resources, 96–98
+    - subscribing, 98–100
+  - online help, 93–95
+  - static help, 93
+  - TLDP, 95
+- home directory, referencing, 322

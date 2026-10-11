@@ -1,0 +1,15 @@
+including the programs and applications installed on the panel and desktop, as well as the visual components of the desktop manager.
+
+Another advantage is that each user gets his or her own directory under the /home directory. In Figure 8, you can see the home directories for each user. For example, herman's home directory is /home/herman, while Igor's is /home/Igor. Access to this directory is restricted to the user; to prove it, create another user on your machine, and then log on as yourself and try saving a file in it other user's directory.
+
+This means that you can make sure that each person's data is segregated. You won't have anyone accidentally (or maliciously) messing with someone else's data. This also means that the unknown user, such as an attacker that gains access to your machine, is restricted to the harm they can perform. If they take control of your machine due to an action that you perform (such as visiting an evil-laden Web site), they'll only have the same access that you do. If you were running as root, they'd have full run of your machine: yet another reason for not running as the root user during your day-to-day chores.
+
+This discussion has centered on users, yet the section heading says “Users and groups.” What's a group and why should you care? A group is a collection of users who all have common attributes, needs, and requirements. The most common reason for creating a group is so that several users can share a set of files. Because each individual user's files are owned just by that user, one user can't generally access another user's files. There are ways around this, but those methods are awkward, inconvenient, and generally a bad idea.
+
+The better solution is to create a “joint use” whose files can be accessed by others who have been given special permission. Another name for this “joint use” is a group. The fundamental idea is that you create a group, and then add users to that group. When users create files as part of that group, those files can then be accessed by anyone else who is a member of the group.
+
+Specifically, here is how you would make this happen. Suppose Herman and Igor needed to share files. You would create a group, say, “theboys,” by opening the User Manager and selecting Add Group. Enter the name of the group, as shown in Figure 10. When you're done, the new group is listed on the Groups tab of the User Manager window, shown in Figure 11. You'll note that each user has its own group, or, if you think about it in a different way, every time you create a user, a group is created that contains one and only one member—that user. That's why each user is restricted to only its own files.
+
+You'll also notice that the “theboys” group doesn't have any members yet. Select the group in the list and the Properties button will become enabled; click it to bring forward the Group Properties dialog. Select the Group Members tab in the Group Properties dialog, as shown in Figure 12, and you'll see a list of users who are eligible to join the group. Scroll down and select both Herman and Igor.
+
+![](bbox=[0.07, 0.73, 0.39, 0.94])
