@@ -1,0 +1,3 @@
+# ## Centralized Account Management
+
+Sometimes, the most frustrating part of managing a large network is trying to make sure all the machines have the right user account information. You may not necessarily want all users to have accounts on all machines, but if you need any sort of crossover and have a lot of users coming and going, it can be quite frustrating and time-consuming to keep up with accounts. Many administrators utilize the NIS or NIS+ package to centralize account management. These packages are covered in Chapter, 16.

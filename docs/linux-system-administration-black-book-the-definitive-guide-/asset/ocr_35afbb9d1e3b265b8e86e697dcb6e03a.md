@@ -1,0 +1,2 @@
++   3. Type "dd if=/mnt/cdrom/images/rescue.img of=/dev/fd0 bs=1440k".
++   4. When the image is finished writing, clearly label the disk as a rescue disk and put it with the boot disk(s). Rescue disks are not individual to particular machines, so you don't need a specific one for each machine.

@@ -1,0 +1,14 @@
+* *Do not use personal information.* We have all seen it in the movies. Someone is able to hack into a system because they did some research and tried all of the account owner's personal information as password variants. While some of the movie versions are a bit farfetched, it is dangerous to use birthdays or pet names or other well-known information as a password. This especially applies to people who know significant information about you who might want to mess with your account in anger or as a practical joke. Or, they may just tell the wrong person.
+
+> NOTE: Although Linux does not offer a password hint feature as part of the login process, there are many computer services and products that do these days. You need to be really careful with these hints! If you use obvious personal information for a password, then it makes life really easy for the people that know you and want to break in.
+
++   * *Do not write your password down on a piece of paper and "hide" it in your desk drawer.* A caveat to this rule used by some people is to bury the password in an address or some other fake information. This practice still is risky if not done very carefully.
++   * *Use acronyms.* One good method of making effective passwords is to think of a long sentence, and use one letter from each word as the password. However, make sure that the resulting password does not run afoul of the other concerns listed here.
+
+# ### Shadow Passwords
+
+Another issue is how the passwords are stored. The file /etc/passwd must be readable by all users for your system to function properly. This issue is unavoidable. Unfortunately, this means that if someone breaks into any account on your system, they can grab a copy of /etc/passwd. After someone has a copy of the master user and password file, they have a list of every existing account and the access to decrypt every password.
+
+There is a solution to this issue that is so widely used that it is implemented by default in most Linux distributions, including Red Hat: the shadow password suite. Most other packages available in Linux today work properly with shadow passwords. The programs that do not support the shadow suite are specifically mentioned where they are covered throughout the book. This situation is much improved from even a few years ago, when choosing whether or not to use shadow was a serious decision.
+
+When you convert your system to using shadow passwords (see "Activating And Deactivating The Shadow Suite," in the Immediate Solutions section, for instructions on how to do this), a version of /etc/passwd is placed in a new file: /etc/shadow. Every password field in /etc/passwd is changed to an "x" and the

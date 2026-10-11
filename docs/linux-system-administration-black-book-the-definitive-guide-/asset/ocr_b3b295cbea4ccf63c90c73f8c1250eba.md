@@ -1,0 +1,3 @@
+A group name, however, has an @ symbol at the front of it, as in the preceding [public] share definition.
+
+After this section comes a series of example shares. Each of these shares demonstrates something you can do with Samba. Rather than covering these examples in detail in this chapter, you should look them over in the file on your own. Most of the elements should already be familiar, and explanations for any that you aren't familiar with are available in the man page for smb.conf.
