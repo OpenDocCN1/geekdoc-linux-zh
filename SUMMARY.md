@@ -1309,6 +1309,7 @@
 +   [Linux 用户与开发者 165 - Ubuntu 16.04 启动包 165](docs/linux-user-developer-165---ubuntu-1604-launch-pack-165/README.md)
 +   [Linux User & Developer 166 - 使用 Micro:bit 制作 166](docs/linux-user-developer-166---make-with-microbit-166/README.md)
 +   [Linux 用户与开发者 167 - 系统安全指南 167](docs/linux-user-developer-167---secure-your-system-167/README.md)
++   [Linux 用户与开发者 168 - 多启动您的系统 168](docs/linux-user-developer-168---multi-boot-your-system-168/README.md)
 +   [Linux 用户与开发者 170 - 系统虚拟化 170](docs/linux-user-developer-170---virtualise-your-system-170/README.md)
 +   [Linux User & Developer 171 - 24 小时打造更优服务器 171](docs/linux-user-developer-171---better-servers-in-24-hours-171/README.md)
 +   [Linux 用户与开发者 172 - 掌控命令行界面 172](docs/linux-user-developer-172---take-charge-of-the-command-line-i/README.md)
