@@ -1,0 +1,13 @@
+The next stage puts more teeth in what some people call “good programming.” Part of the problem with functional design is the tendency to violate scoping rules. The scope of defined variables, functions, procedures, and modules lays out “who has the right to see what.” If he has no scoping rules (or the scope is not enforced), the programmer’s temptation is to use all resources available to get the job done quickly. In a scopeless environment (which often happened with functional design), every function has access to all other functions and all variables. Creating global variables is one example of a scoping violation.
+
+# Global Versus Scratchpad Variables
+
+Do not think that you cannot ever use global variables. In some instances (like embedded system programming), you must be very careful about wasted memory. Programs often use memory spaces for temporary calculations. If you are careful, you can share a few scratchpad variables without scoping violation. Just remember that doing this seriously affects concurrent (or threaded) programming.
+
+Many programmers avoid global variables because of side effects. If several sections of the program depend on a specific variable and a code revision changes the variable, all the dependent sections must change as well. (This does not apply to global read-only data, because the program cannot revise it.)
+
+Modular programming (a slight extension to structured programming) sets scoping rules that all programmers must follow. The programmer must surround all variables with a set of implementations or interfaces (described in the “Interfaces” section, later in this chapter). Another name for modular programming is encapsulation, described in the “Implementation Encapsulation” section, later in this chapter. Modular programming extends the concept further with support for concurrency—monitors. A monitor is a function or procedure that allows only one execution thread through at a time.
+
+Modular programming offers you an understanding and interface with the outside world. If you organize your programs into modules with interfaces, you can change out a module and insert a new and improved one without very much reengineering.
+
+Modular programming still had its drawbacks. But it did introduce a concept that has helped in defining many reusable libraries. Because it provided reliable interfaces that rarely changed, writing pluggable modules for other programmers became very inviting. Also, the programmer would not need to know the implementation details, so revisions to the code were more welcome.

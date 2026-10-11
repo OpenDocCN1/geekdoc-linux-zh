@@ -1,0 +1,7 @@
+Connectionless message passing is similar to mailing a letter: You need to address each message before sending. To do this, you must use calls other than `send()` and `recv()` that the connection-based communication uses. These are `sendto()` and `recvfrom()`. These system calls mirror the other calls but add destination and source addresses.
+
+Transaction TCP (T/TCP) is essentially a connectionless TCP. If supported (Linux does not yet support T/TCP), T/TCP helps you to avoid the lengthy setup and shutdown times. This speeds transmission of your messages. Also, the abbreviated protocol focuses on the packet instead of the stream and reduces interaction to three message packets.
+
+By default UDP is connectionless, but you may connect the UDP socket to ease programming. Unlike TCP, you can reconnect the same socket to different peers.
+
+TCP provides you reliability but also carries a load of overhead. You can add reliability to UDP one piece at a time by ensuring data arrival, sequencing packets, eliminating redundancy, verifying data integrity, and removing data flow problems. TCP and UDP provide different levels of reliability and interaction. TCP lets you view the information like a stream; UDP gives your program access to the individual messages. Each of these builds on IP's architecture, functionality, and model.

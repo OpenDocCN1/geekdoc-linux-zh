@@ -1,0 +1,15 @@
+Looking from a developer-user perspective, knowing all the eccentricities of network programming may be more laborious than you want. Sometimes, you or your peers (the developers) simply want to focus on the development of the programs at hand and leave the network details to established libraries or tools. Remote Procedure Calls (RPCs) fit that bill perfectly. RPCs handle all the connection and data translation for your developer-users. From the perspective of the developer-users, the networking piece is a small part of the program’s feature set. For them to dedicate more than a small portion of their time to the writing and testing of the network interfaces would be very costly and inefficient.
+
+In turn, you could write tools (service calls) that provide their programs robust ways of communicating. These tools would interface with the client, server, and peer. Depending on the protocol, your service calls can be complex—requiring your tools to provide large amounts of checking and retransmission (UDP)—or simple (TCP).
+
+This chapter shows you how to write RPCs from two different approaches. The first approach demonstrates how to write them with your own bare hands, without any tools. The second introduces the rpcgen tool. Before all of this, the next section revisits the concepts of the network model to show how RPCs fit.
+
+# Revisiting the OSI Model
+
+Back in Chapter 5, “Understanding the Network Layering Model,” you read that the network model includes all features and operations, hiding information from the user and the program. The operation includes information about how the network actually passes data from one program to another. The network layering model also increases the likelihood that the destination gets the message. According to networking theory, no user actually interfaces with anything other than the Application layer (layer 7).
+
+The IP protocol stack, however, effectively stops at layer 4 (the Networking layer). TCP is the last protocol and has the highest reliability of the IP protocol stack. You can create a socket that acts a lot like a file stream. This gives you a lot of power and flexibility. The protocol leaves the responsibility of implementing the higher layers to the applications.
+
+This does present a small problem. Without defining the higher layers, many applications have emerged that essentially duplicate effort. Consider the FTP and Telnet protocols. Each provides an authentication phase—user login. While the login interfaces may be small and minor, they duplicate the procedure. Furthermore, this complicates methods for you as a professional programmer. If you want to incorporate authentication in a client program, you basically have to write your own.
+
+You can provide some of this functionality using your own interfaces. Other programs can then use these functions. As with the various networking models, you may want to make the

@@ -1,0 +1,306 @@
+
+## Index
+
+### E
+
+- send() system call, 42
+- sendfile() system call, 433
+- setsockopt() system call, 447
+- write() system call, 40, 474
+
+- **EBUSY error**, 163, 461
+- **ECCs (error correction codes)**, 90
+- **ECHILD error**, 456
+- echo client/server, 296-298
+- echo clients (Java), 266
+- Echo-Client.cpp (listing), 296
+- echo servers (Java), 268
+- example, 118
+  - listing, 124
+  - multitasking, 168
+- Echo-Server.cpp (listing), 297
+
+- **ECONNREFUSED error**, 426
+- **EDEADLK error**
+  - fcntl() system call, 467
+  - pthread_join() system call, 458-459
+  - pthread_mutex_trylock() system call, 461
+- **EEWOULDBLOCK error**, 22
+- **EFAULT error**
+  - accept() system call, 425
+  - connect() system call, 426
+  - exec() system call, 453
+  - fcntl() system call, 467
+  - gethostname() system call, 443
+  - getpeername() system call, 443
+  - getsockopt() system call, 447
+  - pipe() system call, 469
+  - poll() system call, 470
+  - read() system call, 471
+  - recv() system call, 434
+  - send() system call, 429
+  - setsockopt() system call, 447
+  - signal() system call, 464
+  - sigprocmask() system call, 465
+  - socketpair() system call, 428
+  - write() system call, 40, 474
+- **EAGAIN error**
+  - clone() system call, 452
+  - fork() system call, 450
+- **EINPROGRESS error**, 426
+- **EINTR error**
+  - fcntl() system call, 468
+  - poll() system call, 470
+  - read() system call, 471
+  - recv() system call, 434
+  - select() system call, 473
+  - send() system call, 429
+  - signal() system call, 464
+  - wait()/waitPID() system calls, 456
+  - write() system call, 474
+- **EINVAL error**
+  - bind() system call, 423
+  - exec() system call, 454
+  - fcntl() system call, 468
+  - gethostname() system call, 443
+  - pthread_join() system call, 458-459
+  - pthread_mutex_lock() system call, 461
+  - pthread_mutex_trylock() system call, 461
+  - read() system call, 21, 471
+  - recv() system call, 434
+  - select() system call, 473
+  - sendfile() system call, 433
+  - signal() system call, 464
+  - socket() system call, 15, 422
+  - write() system call, 40, 474
+- **EIO error**
+  - read() system call, 471
+  - sendfile() system call, 433
+  - write() system call, 474
+- **EISCONN error**, 426
+- **EISDIR error**
+  - exec() system call, 454
+  - read() system call, 471
+- **electrical transmissions**, 348-349
+- **elements (classes)**, 255
+- **ELIBBAD error**, 454
+- **ELOOP error**, 454
+- **EMFILE error**
+  - exec() system call, 454
+  - fcntl() system call, 468
+  - pipe() system call, 469
+  - socket() system call, 422, 428
+- **EMSGSIZE error**, 42, 429
+- **enabling**
+  - multicasting, 367
+  - socket waiting queues, 121
+- **ENAMETOOLONG error**, 453
+- **encapsulation**, 246, 250-251
+- **encryption**, 350-352
+  - 128-bit encryption, 350
+  - ciphers, 351-352
+  - limitations, 352
+  - one-way encryption, 350
+  - EnergyStar standards, 350
+- **ENETUNREACH error**, 426
+- **ENFILE error**
+  - pipe() system call, 454
+  - pipe() system call, 469
+  - socket() system call, 422
+- **ENOLCK error**, 468
+- **ENOBUFS error**
+  - accept() system call, 425
+  - send() system call, 429
+  - socket() system call, 422
+- **ENOENT error**, 454
+- **ENOEXEC error**, 453
+- **ENOMEM error**
+  - accept() system call, 425
+  - clone() system call, 452
+  - fork() system call, 450
+  - poll() system call, 470
+  - select() system call, 473
+  - sendfile() system call, 433
+  - socket() system call, 422
+- **ENOPROTOOPT error**
+  - getsockopt() system call, 447
+  - setsockopt() system call, 447
+- **ENOSPC error**, 474
+- **ENOTCONN error**, 23, 334
+- **ENOTFOUND error**, 444
+- **ENOTSOCK error**, 423
+- **ENOTSOCK error**
+  - accept() system call, 425
+  - getsockopt() system call, 447
+  - listen() system call, 424
+  - recv() system call, 23, 334
+  - send() system call, 42, 429
+  - setsockopt() system call, 447
+- **ENO_ADDR error**, 444
+- **ENO_DATA error**, 444
+- **ENO_RECOVERY error**, 444
+- **ENOTSUP error**, 428
+- **EOPNOTSUPP error**
+  - accept() system call, 425
+  - listen() system call, 424
+- **EPERM error**
+  - accept() system call, 425
+  - exec() system call, 453
+  - fcntl() system call, 468
+  - pthread_mutex_unlock() system call, 462
+- **ephemeral ports**, 37
+- **EPIPE error**
+  - send() system call, 42, 429
+  - write() system call, 40, 474
+- **ETPROTONOSUPPORT error**
+  - socket() system call, 14, 422
+  - socketpair() system call, 428
+- **error correction codes (ECCs)**, 90
+- **errors**
+  - accept() system call, 124, 425
+  - bind() system call, 120, 214, 423
+  - clone() system call, 452
+  - close() system call, 23, 475
+  - connect() system call, 426
+  - data errors, 104
+  - detected by the subsystem, 73
+- **EBUSY**, 163
+  - exec() system call, 453
+  - fcntl() system call, 467
+  - fork() system call, 142, 450
+  - gethostbyname() system call, 444
+  - gethostname() system call, 443
+  - getpeername() system call, 443
+  - getsockopt() system call, 447
+  - listen() system call, 122, 424
+  - messages (ICMP), 58
+  - pipe() system call, 469
+  - poll() system call, 470
+  - pthread_create() library call, 166
+  - pthread_detach() system call, 459
+  - pthread_join() system call, 458
+  - pthread_mutex_lock() / pthread_mutex_trylock() system calls, 461
+  - read() system call, 21, 471
+  - recv() system call, 23, 334
+  - recvfrom() system call, 435
+  - recvmsg() system call, 436
+  - select() system call, 473
+  - send() system call, 42, 429
+  - sendfile() system call, 433
+  - sendmsg() system call, 214
+  - socket() system call, 430
+  - setsockopt() system call, 447
+  - shutdown() system call, 437
+  - sigaction() system call, 464
+  - sigprocmask() system call, 465
+  - socket() system call, 14, 422
+  - socketpair() system call, 428
+  - state failures, 336
+  - transmission, 216
+  - write() system call, 40, 474
+- **ESRCH error**
+  - pthread_detach() system call, 459
+  - pthread_join() system call, 458–459
+- **/etc/protocols file**
+  - listing, 404
+  - protocol information, 374
+
+### F
+
+- **/etc/services file (listing)**, 405-406
+- **Ethernet**
+  - cards, security, 345
+  - IDs, 29
+  - LAN cards, 98
+  - ETH_P_ALL filter, 69
+- **ETIMEDOUT error**, 426
+- **ETXTBUSY error**, 454
+- **events (object programming)**, 257-258
+- **Exception class**, 288
+- **exception classes (C++ programming language)**, 478
+  - **Exception superclass**, 478
+  - exception-cases, 306
+- **exceptions**
+  - Broadcast class, 485
+  - Datagram class, 484
+  - frameworks, 288-289
+  - handlers, 298
+  - HostAddress class, 480
+  - Java, 485
+  - java.io.BufferedReader class, 489
+  - java.io.InputStream class, 490
+  - java.io.ObjectInputStream class, 490
+  - java.io.ObjectOutputStream class, 492
+  - java.io.OutputStream abstract class, 490
+  - java.io.PrintWriter class, 494
+  - java.net.DatagramSocket class, 497
+  - java.net.InetAddress class, 487
+  - java.net.MulticastSocket class, 498
+  - java.net.Sockets, 496
+  - java.net.Socket class, 496
+  - managing (socket frameworks), 287
+  - **MessageGroup class**, 485
+  - **object programming**, 257-258
+  - **Socket superclass**, 482
+  - **SocketClient class**, 484
+  - **SocketServer class**, 483
+  - **SocketStream class**, 483
+- **exec() system call**, 452
+  - errors, 453
+  - zombies, 167
+- **exec1() system call API**, 168-170
+- **exec1() system call**, 169
+- **execl() system call**, 169
+- **execp() system call**, 169
+- **execv() system call**, 170
+- **execvp() system call**, 170
+- **extensions (object programming)**, 255-258
+  - events, 257-258
+  - exceptions, 257-258
+  - interfaces, 257
+  - overloading, 257
+  - persistence, 256
+  - streaming, 256
+  - templates, 256
+- **extranets**, 342
+- **F**
+- **fault-intolerant data**, 56
+- **fault-tolerance with influence**, 141
+- **fcntl() system call**, 179, 185, 466-467
+- **fd (file descriptors)**, 40, 151
+- **fd parameter**, 151
+- **features (object programming). See object programming.**
+- **fgets() library call**, 72
+- **fields**, 17
+- **file descriptors (fd)**, 40, 151
+- **file I/O (Java)**, 273
+- **FILE***
+  - data-buffering subsystem, 41
+  - socket connections, 20
+- **FileException**, 478
+- **files**
+  - management
+    - functions, 465
+    - **robust programming**, 229
+  - permissions, 344
+  - sending through sockets, 432
+- **filters**
+  - active filtering, 345
+  - I/O (Java), 273
+  - passive filtering, 345
+  - **SOCK_PACKET**, 69
+  - subnet masks, 32
+- **fine-grained locking**, 162
+- **firewalls**, 345
+  - active filtering, 345
+  - Demilitarized Zones (DMZs), 346-348
+  - encryption through filters, 350
+  - passive filtering, 345
+- **flags**
+  - clear, 161
+  - mutex semaphore, 161
+  - packet fragmentation, 52
+  - **recv() system call**, 21-22
+  - **send() system call**, 41
+  - set, 161
+  - shareable task data, 146

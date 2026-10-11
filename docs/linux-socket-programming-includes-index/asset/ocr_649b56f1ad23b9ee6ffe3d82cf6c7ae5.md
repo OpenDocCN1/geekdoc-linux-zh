@@ -1,0 +1,15 @@
++   * IPV6_MULTICAST_HOPS Similar to the IPv4 version (TTL), this option lets you define the maximum number of router hops before expiring. (Integer-byte, 1 by default.)
++   * IPV6_MULTICAST_IF Similar to the IPv4 version, this option lets you define which interface (by IP address) to use for multicasting messages. (struct in6_addr, zero by default.)
++   * IPV6_MULTICAST_LOOP Like the IPv4 version, this option echoes every message you send on multicast. (Boolean, disabled by default.)
++   * IPV6_NEXTOP This option lets you specify the next hop for a datagram when you use sendmsg(). You need to have root access to perform this operation. (Boolean, disabled by default.)
++   * IPV6_PKTINFO Normally you can't get very much information about the received packet. This option lets you get the arriving interface index and destination IPv6 address. (Boolean, disabled by default.)
++   * IPV6_PKTOPTIONS Similar to the IPv4's IP_OPTIONS, you can directly specify the options using a byte array. In most cases you send IPv6 options via the ancillary data of the sendmsg() system call. (Byte array, none by default.)
++   * IPV6_UNICAST_HOPS Similar to the IPv4's IP_TTL, this option lets you specify the maximum number of router hops before expiring the packet. (Integer-byte, 64 by default.)
+
+# ## TCP-Specific Socket Options
+
+The TCP-specific socket options apply to the streaming capabilities of the TCP layer. To use these options, you must set the 1evel parameter in getsockopt() and setsockopt() to SOL_TCP.
+
++   * TCP_KEEPALIVE The SO_KEEPALIVE waits for 2 hours before checking for a connection. This option lets you change that delay. The value's units are in seconds. On Linux the sysctl() call replaced this option. (Integer, 7200 by default.)
++   * TCP_MAXRT This option lets you specify the retransmit time in seconds. A 0 selects the kernel default, and a -1 forces the network subsystem to retransmit forever. (Integer, 0 by default.)
++   * TCP_MAXSEG The TCP stream is packetized into chunks of data. The Maximum Segment Size (MSS) specifies the amount of data in each chunk. The network subsystem coordinates this value with the peer's MSS. You cannot increase this value over the peer's MSS, but you can decrease it. (Integer, 540 bytes by default.)

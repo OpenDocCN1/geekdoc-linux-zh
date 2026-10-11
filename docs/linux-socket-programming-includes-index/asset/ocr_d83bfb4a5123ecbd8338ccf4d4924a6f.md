@@ -1,0 +1,30 @@
+Listing 13.3  Echo-Server.cpp, Part 2
+
+```
+//*****************************************************
+// Server's client service routine (Echoer)
+try
+{
+	TextMessage msg(1024);  // Get a message buffer
+	client.Send(welcome);  // Send \"welcome\" message
+	do                         // Repeat until \"bye\"
+	{
+		client.Receive(msg);  // Get message
+		client.Send(msg);     // Echo it back
+	}
+	while ( msg.GetSize() > 0 &&
+	         strcmp(msg.GetBuffer(), \"bye\n\") != 0 );
+}
+```
+
+Again the algorithm is simple: accept a message and send it back until the client sends a bye message. You may notice that this program excerpt has its own try...catch() block. This is a good idea. If an error occurs with this connection, it is only associated with that connection and must not affect the main socket. Without the dedicated try...catch block in Listing 13.3, when the client suddenly disconnects, the whole server would crash because main's try...catch block would capture the exception.
+
+# Placing Exception Handlers
+
+Plan carefully where and when to place an exception handler. Also, you may not want to handle all exception types. Instead you may want to support only specific types. Generally, different connections require their own try...catch() blocks, and catastrophic exceptions should reside only at the root of the calling tree.
+
+The current implementation of the server does not offer multitasking. The class includes some of the hooks you need to implement it.
+
+# Multitasking Peer-to-Peer
+
+You can still do multitasking with processes or threads. Even though the current framework does not implement it, you can create tasks in your code. The classic example is the datagram that must accept any number of messages while sending them (see Listing 13.4).

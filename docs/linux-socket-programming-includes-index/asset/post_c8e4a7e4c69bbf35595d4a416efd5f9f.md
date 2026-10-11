@@ -1,0 +1,70 @@
+
+## The Next Stage: Good Programming
+The next stage puts more teeth in what some people call “good programming.” Part of the problem with functional design is the tendency to violate scoping rules. The scope of defined variables, functions, procedures, and modules lays out “who has the right to see what.” If there are no scoping rules (or the scope is not enforced), the programmer’s temptation is to use all resources available to get the job done quickly. In a scopeless environment (which often happened with functional design), every function has access to all other functions and all variables. Creating global variables is one example of a scoping violation.
+
+### Global Versus Scratchpad Variables
+Do not think that you cannot ever use global variables. In some instances (like embedded system programming), you must be very careful about wasted memory. Programs often use memory spaces for temporary calculations. If you are careful, you can share a few scratchpad variables without scoping violation. Just remember that doing this seriously affects concurrent (or threaded) programming.
+
+Many programmers avoid global variables because of side effects. If several sections of the program depend on a specific variable and a code revision changes the variable, all the dependent sections must change as well. (This does not apply to global read-only data, because the program cannot revise it.)
+
+Modular programming (a slight extension to structured programming) sets scoping rules that all programmers must follow. The programmer must surround all variables with a set of implementations or interfaces (described in the “Interfaces” section, later in this chapter). Another name for modular programming is encapsulation, described in the “Implementation Encapsulation” section, later in this chapter. Modular programming extends the concept further with support for concurrency—monitors. A monitor is a function or procedure that allows only one execution thread through at a time.
+
+Modular programming offers you an understanding and interface with the outside world. If you organize your programs into modules with interfaces, you can change out a module and insert a new and improved one without very much reengineering.
+
+Modular programming still had its drawbacks. But it did introduce a concept that has helped in defining many reusable libraries. Because it provided reliable interfaces that rarely changed, writing pluggable modules for other programmers became very inviting. Also, the programmer would not need to know the implementation details, so revisions to the code were more welcome.
+
+## Not Needing the Details: Abstract Programming
+Some details are so remote from the implementation needs that programmers began to look at abstract computer science concepts. With modular programming, data could be simply blocks of data with little meaning to the module. A classic example is a queue or FIFO (first in, first out); the algorithm does not need to know what is going in—only that it must come out.
+
+Some of the first abstractions include queue, stack, tree, dictionary, bag, set, array, and so on. Each of these has a particular set of methods that you can use every day. In fact, version 5 of UNIX, back before it split, had about 10 implementations of the queue. With data abstraction, the programmers could have avoided that duplication and focused on several more interesting problems.
+
+When programming some problem, see if you can generalize some aspect of the program. With careful analysis and practice, you can see sections that can be useful elsewhere. Also, you can find many generalized algorithms already written for you.
+
+Looking at the data abstractly was a really significant step in the computer science field. With abstraction, the programmer does not need to know everything about the data that his program passes around. He simply focuses on what it can do.
+
+## Getting Close to Nature Through Object Programming
+The current programming trend is object programming, but perhaps a better perspective would be responsibility modeling. Object programming focuses on the things in the system you are trying to program. It extends the concept of modular programming with two questions: “What does it know?” and “What does it do?” This is why the term *responsibility modeling* might be closer to the intent.
+
+Objects take one step further by trying to approximate nature. Everything in nature has features (attributes) and behaviors (functions or methods). They also have intrinsic capabilities. For example, the offspring can receive features and functions from the parent. The fact that a dog has certain behaviors may stem from parental genes or oversight.
+
+## Reaching Programming Nirvana
+The end-all and be-all of programming is to avoid having to write the same code over and over. Wouldn’t it be great to invent something equivalent to a hammer-program that you can use over and over, changing its behavior only slightly to meet the needs of the moment?
+
+The programmer tries to reach that lofty height through two goals: reuse and pluggability. The following sections describe these goals in more detail.
+
+## Reusing Your Work
+Correctly applied, object programming yields a design that others can leverage or reuse. The holy grail of all software engineering is to write-once and reuse-many times. Objects bring you closer to that idyllic state.
+
+The problems you face from day to day as a programmer do not stray much from those faced by others who have programmed before you. In fact, most problems are just mutations of age-old designs. Some reusable designs include that of TCP messengers or servers, such as email or HTTP. Regrettably, much of their designs are locked behind the walls of proprietary software.
+
+The power of reuse is the ability to take others' work and build on it. Consider how long it would take an architect to build your new home if he had to pour metal to make nails? Now, that industry can pump out very impressive, sturdy, and well-built homes in a factory and ship the pieces to the site in only three days! Why can't the computer industry do that? Well, it can, but it takes discipline.
+
+> **NIH: Not Invented Here**
+> 
+> When I worked at my first job, I was among the most intelligent and gifted engineers I had ever met. Trying to stand out of the crowd was a constant struggle. However, there was one trait many of them shared that limited their potential: NIH. *Not Invented Here is a mindset that stipulates that "If we didn't do it, it was probably done wrong (or not perfectly)."* I have learned that this erroneous (if not arrogant) viewpoint is prevalent throughout nearly all software firms.
+
+You might want to consider two angles of reuse—accepting others' work and promoting your own. The first is really straightforward and requires a little trust between you and the provider. This is fine, as long as the provider is responsive to your needs.
+
+The flipside makes you the provider for the user-programmer. To promote your work, the libraries must be robust and you need to respond quickly to your users. A good and intuitive design keeps your customer coming back for later versions. Also, providing clear upgrade paths helps make a difficult transition easier.
+
+Lastly, generalizing your design simplifies reuse. Look at the problem as a set of puzzle pieces. The closer you make the pieces to a generalized form, the more likely your users can reuse your work.
+
+## Strengthening Reuse with Pluggability
+Another ultimate goal is the ability to replace a library with another, better library. For example, batteries have specific interfaces but many different styles of manufacture and features. Batteries can be simple dry cell or even the newer lithium-ion. Each still uses a pole-style of interface, one end positive and the other negative. The dry cell is cheaper, and the lithium-ion is more efficient, is rechargeable, and has a longer life.
+
+Following this style, you want to select an interface and rest from changing it. Therefore, no matter what happens, you can improve the implementation (boosting performance, increasing reliability, fixing defects). The ability to change libraries or modules in and out is *pluggability*.
+
+You need to follow certain rules to produce pluggable code. First, define an interface and stick to it. A thoroughly thought out interface determines the longevity of the module. If the interface cannot keep pace with evolving needs, designers discard it for a newer (sometimes less proven) technology. A good (but often confusing) example of a flexible interface is the `socket()` system call itself. While initially less than intuitive, the interface is so flexible that it has survived several years of network development and many networking technologies.
+
+The second rule for pluggable code is *minimalism*—making the interface as simple as possible increases the likelihood of adoption. *Coupling* is the number of distinct connections (or, in terms of modules, the number of distinct data elements passed in) a system has. Increasing the coupling increases dependence and reduces adaptability. Socket programming actually is a mixture of simplified interfaces with complex interfacing. To get a socket running, you have to make several system calls (up to seven). While this provides a lot of adaptability, it does nothing to help the programmer. The only reason sockets have survived for so long is their ability to change.
+
+The third and final rule is *layering*. *Layering* does more than modularize a set of data; it places a single boundary around an entire technology. The TCP or OSI layering models do a good to great job of layering the technology. Each layer has rules to it, and each has interfaces. The rules always envision a product that can adapt to new technologies.
+
+## Laying the Object Foundation
+As stated earlier, object-oriented programming stands on all good programming models invented to date. It extends a few ideas and places limits on a few others. The result is a set of concepts that you can use most of the time to solve programming problems. But before you get your expectations set too high, you may want to read the limitations in Chapter 14, “Limits to Objects.”
+
+This section identifies the foundations of objects. Some of these you may be familiar with; some may be very new. Object-oriented programming is founded on four intrinsic foundations:
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction

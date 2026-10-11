@@ -1,0 +1,15 @@
+The network subnet mask is specifically for identifying the group of contiguous addresses an interface can reach. It provides an additional filter that permits only specific messages to pass through. When a message arrives, the router uses the subnet mask on the message's destination address. If it matches, the router passes the message on. You may build mask any way you wish, but the least significant set bit specifies the subnetwork.
+
+For example, if you had a small network of eight machines, and you expected the group to grow by no more than five machines, you could set your router subnet mask to 187.35.209.176. The last bit in the address is in the 176 (1101,0000). The address range is in 'X' part (active subnet) of 1101,XXXX. From here, you can dole out the addresses: 187.35.209.176 (router), 187.35.209.177 (host #1), up to 187.35.209.222. You can have any combination, but the least significant set bit is the marker.
+
+# Subnetwork Masks and Default Addresses
+
+Using the network mask as a host address may cause conflict and lose packets. This is due to the special address 0 (zero). The example, 187.35.209.0, has the last eight bits as zeros. If the address matches the network mask, it is the zeroth address. You should always reserve the zeroth address for the network address mask. Likewise, you may have noticed that the example omits 187.35.209.223. If you were to use that ID, that host may never see a message. The number 223 with the active subnet as all ones: 1101,1111. This is a broadcast address. You should not use that as a host address.
+
+In most cases you do not need to worry about setting up routers, and the configuration is beyond the scope of this book. Usually, when you see the subnetwork mask in the network configuration, you can accept the mask that the script offers you.
+
+# Routers and Address Resolution
+
+Local area networks (LANs) can become very burdened by all the messages between hosts. Every computer on the Internet potentially could hear every message. But with all the traffic, the networks become very cluttered, packets collide with others (simultaneous transmissions), and throughput drops to near nothing.
+
+LANs use addressing and submasking to limit the traffic within groups (or clusters) of computers. Beyond passing messages to the appropriate interfaces, routers act as information control gates that localize the traffic. Local traffic stays inside the cluster, and external traffic passes through.

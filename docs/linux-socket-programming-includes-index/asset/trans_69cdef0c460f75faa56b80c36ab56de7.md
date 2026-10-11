@@ -1,0 +1,192 @@
+
+# 异步写入
+
+由于内核缓冲区的作用，你需要以略有不同的方式编写异步写入代码。当你的程序首次调用 `send()` 时，内核缓冲区很可能能够存储整个数据块。但也可能存在无法存储的情况，此时内核只会缓存部分数据。
+
+因此，请检查每个 `write()` 的返回值，以确保所有数据都已发送。甚至可能至关重要的是，将某个通道的所有传出数据保留在单个队列中。这能降低与多个缓冲区相关的代码复杂性。尽管如此，使缓冲具有灵活性也很重要，以便队列可以根据需要增长和缩小。
+
+在这种情况下，一个数据库查询示例非常适用。它可以生成大量数据，这些数据可以在发送响应时进行处理或收集，如清单 8.5 所示。
+
+### 清单 8.5 异步写入器算法
+
+```c
+/***** Database Query Async Writer Example: process query ***/
+/** while generating results. `*/
+/*******...*******/
+int ready=0, bytes, size=0, pos=0;
+...
+int sig_io(int sig)
+{
+    if ( size > 0 )
+    {
+        bytes = send(client, buffer, size+pos, 0);
+        if ( bytes > 0 )
+        {
+            pos += bytes;
+            ready = 1;
+        }
+    }
+}
+...
+```
+
+### 清单 8.5 续
+
+```c
+/**** Enable nonblocking, signal-driven I/O; claim SIGIO ***/
+while ( !done )
+{
+    if ( /*** channel available ***/ )
+        /*** Send message, no blocking ***/
+    else
+        /*** queue message ***/
+}
+...
+```
+
+每当通道清空并准备好接收更多数据时，内核会向进程发送 SIGIO 信号。使用前面示例中展示的信号，以按需方式流出数据。
+
+# 按需连接
+
+你可以创建一个按需连接服务器（理论上）。本质上它看起来像一个按需读取器，但程序调用的不是读取文件，而是 `accept()`。处理程序需要三个全局变量与主循环通信：套接字接收器（`sd`）、描述符数组，以及当前连接数。信号处理程序创建的任何局部变量在处理程序结束时都会丢失。
+
+处理程序可能如下所示：
+
+```c
+/***** On-Demand Connection Example:  Make connection in ***/
+/*** signal handler.  Main loop cycles through each open ***/
+/*** socket for messages. (Excerpt from damedom-accept.c ***/
+/*** on CD.)
+...
+int Connections[MAXCONNECTIONS];
+int sd, NumConnections=0;
+void sig_io(int sig)
+{
+    int client;
+
+    /*** Accept connection.  If too many, error & close ***/
+    if ( !(client = accept(sd, 0, 0)) > 0 )
+    {
+        if ( NumConnections < MAXCONNECTIONS )
+            Connections[NumConnections++] = client;
+        else
+        {
+            send(client, "Too many connections\n", 22, 0);
+            close(client);
+        }
+    }
+    else
+        perror("Accept");
+}
+...
+```
+
+虽然按需服务器很有用，但多任务处理的明显优势在于它允许你保留局部变量，并为每个连接设置一个特定的任务。
+
+除非你的服务器容易出现任务过载（程序创建了如此多的进程以至于性能下降），否则使用按需连接可能会给编程带来负担。对于设计和实现按需连接服务器所投入的所有精力，你很可能无法获得同等的回报。使用多任务处理或轮询技术要简单得多。
+
+## 使用 `poll()` 和 `select()` 解决不必要的 I/O 阻塞
+
+Linux 提供了两种工具，帮助你同时处理多个打开的通道。这些工具比手动轮询更高效（可能更容易实现）。每个工具背后的核心理念是，系统调用会阻塞，直到任何通道改变状态。
+
+状态变化包括诸如数据可供读取、通道可以写入或发生错误等条件。返回时，一个或多个通道的状态可能已经改变。调用的返回值代表状态发生变化的通道数量。
+
+然而，`select()` 系统调用稍微复杂一些，涉及几个帮助管理描述符列表的宏：
+
+```c
+#include <sys/time.h>
+#include <sys/types.h>
+#include <unistd.h>
+int select(int maxfd, fd_set *to_read, fd_set *to_write, fd_set *except, struct timeval *timeout);
+
+FD_CLR(int fd, fd_set *set);            /* remove fd from set */
+FD_ISSET(int fd, fd_set *set);          /* check if fd is in set */
+FD_SET(int fd, fd_set *set);            /* add fd to set */
+FD_ZERO(fd_set *set);                   /* initialize set for use */
+```
+
+主要例程是 `select()` 系统调用。它有几个辅助宏（`FD_CLR()`、`FD_ISSET()`、`FD_SET()`、`FD_ZERO()`）来管理描述符列表。参数在表 8.3 中定义。
+
+# 服务器视角与负载控制
+
+# 第二部分
+
+### 表 8.3 `select()` 系统调用的参数
+
+| 参数 | 描述 |
+| :--- | :--- |
+| *maxfd* | 集合中编号最大的文件描述符加 1。（详情请参见下文。） |
+| *to_read* | 等待读取的描述符集合。这是你想测试读取的集合。 |
+| *to_write* | 等待写入的描述符集合。 |
+| *except* | 等待优先消息的描述符集合。 |
+| *timeout* | 放弃前等待的微秒数。（更多详情请参见下文。） |
+| *fd* | 要添加、删除或测试的文件描述符。 |
+| *set* | 要操作的描述符集合。 |
+
+`maxfd` 参数是三个集合中编号最大的描述符槽位加 1。每个任务获得一定数量的 I/O 描述符槽位（通常为 1024）。每个 I/O 通道占用一个槽位（`stdin` 为 0，`stdout` 为 1，`stderr` 为 2）。如果集合在 `to_read` 中有描述符 `[3,6]`，在 `to_write` 中有 `[4,5,6]`，在 `except` 中有 `[3,4]`，则 `maxfd` 变为 6（最大的描述符编号）加 1，即 7。
+
+`timeout` 参数提供了设置系统调用等待时间限制的灵活性：
+
+- 如果是 `NULL`，则无限期等待。
+- 如果是正数，则等待指定的微秒数。
+- 如果是零，则在检查完所有描述符一次后立即返回。
+
+例如，如果你有三个打开的客户端通道，编号为 `[3,4,6]`，你可以像这样等待它们向程序发送数据：
+
+```c
+/*  ************************************  */
+/*  Select() Example.              ***  */
+/*  ************************************  */
+int count;
+fd_set set;
+struct timeval timeout;
+...
+FD_ZERO(&set);               /* Clear set */
+FD_SET(3, &set);             /* Add client channel #3 */
+FD_SET(4, &set);             /* Add client channel #4 */
+FD_SET(6, &set);             /* Add client channel #6 */
+
+timeout.tv_sec = 5;          /* Timeout after 5.25 seconds */
+timeout.tv_usec = 250000;
+
+/*--- Wait for select() ---*/
+if ( (count = select(6+1, &set, 0, 0, &timeout)) > 0 )
+    /*** Find the descriptors that changed ****/
+else if ( count == 0 )
+    fprintf(stderr, "Timed out!");
+else
+    perror("Select");
+...
+```
+
+在此示例中，当 `select()` 系统调用返回正数时，三个通道之一有数据可读。要确定哪个通道已准备好，添加嵌套代码并读取数据。然而，如果返回值为零，则表示调用超出了 5.25 秒的时间限制。
+
+`poll()` 系统调用与 `select()` 类似，可能更容易管理。它使用结构体数组来定义行为：
+
+```c
+struct pollfd
+{
+    int fd;        /* the descriptor to test */
+    short events;  /* requested events to watch */
+    short revents; /* events that fired */
+};
+```
+
+第一个字段 `fd` 是文件或套接字描述符。第二和第三个字段 `events` 和 `revents` 是特定事件的位掩码：
+
+- `POLLERR`：任何错误条件。如果通道上发生任何错误则返回。
+- `POLLHUP`：对端挂断。如果对端挂断则返回。
+- `POLLIN`：传入数据。如果数据准备好读取则返回。
+- `POLLINVAL`：`fd` 未打开。如果通道不是打开的文件或套接字则返回。
+- `POLLPRI`：优先消息。如果收到优先消息则返回。
+- `POLLOUT`：通道可用性。如果 `write()` 不会阻塞则返回。
+
+对 `poll()` 的系统调用如下所示：
+
+```c
+#include <sys/poll.h>
+int poll(struct pollfd *list, unsigned int cnt, int timeout);
+```
+
+程序在使用此系统调用之前会填充一个 `pollfd` 结构体数组。`cnt` 参数是数组中合法套接字描述符的数量。（请记住保持这些描述符连续；如果其中一个关闭，请压缩数组。并非所有实现都能很好地处理空槽位。）`timeout` 参数的作用类似于 `select()` 的超时，但以毫秒为单位。
+

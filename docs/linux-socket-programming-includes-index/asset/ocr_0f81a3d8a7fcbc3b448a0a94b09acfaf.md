@@ -1,0 +1,50 @@
+This appendix groups all the networking library and system calls.
+
+# # Connecting to the Network
+
+The Sockets API provides tools to help you create sockets and connect to other hosts. This section describes the API relevant to socket creation and connection.
+
+# ## socket()
+
+socket() creates a bidirectional channel that typically connects with the network. You can use this channel with network-specific system calls or general file I/O.
+
+# **Prototype**
+
+```
+```c
+#include <resolv.h>
+#include <sys/socket.h>
+#include <sys/types.h>int socket(int domain, int type, int protocol);
+```
+```
+
+# **Return Value**
+
+If successful, the call returns a valid socket descriptor. Otherwise, the result is less than zero. Check errno for more information about the error.
+
+# **Parameters**
+
+**domain** Selects the network protocol for socket (see Appendix A, “Data Tables”).
+
+**type** Selects the network layer (see Appendix A).
+
+**protocol** Usually zero (see Appendix A).
+
+# **Possible Errors**
+
++   - **EPROTONOSUPPORT** The protocol type or the specified protocol is not supported within this domain.
++   - **ENFILE** Not enough kernel memory to allocate a new socket structure.
++   - **EMFILE** Process file table overflow.
++   - **EACCES and ENOBUFS** Permission to create a socket of the specified type or protocol is denied.
++   - **ENOMEM** Insufficient memory is available. The socket cannot be created until sufficient resources are freed.
++   - **EINVAL** Unknown protocol or protocol family not available.
+
+# **Examples**
+
+```
+```c
+/** Create a TCP socket **/
+int sd;
+sd = socket(PF_INET, SOCK_STREAM, 0);
+```
+```
