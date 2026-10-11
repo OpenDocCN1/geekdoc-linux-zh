@@ -1292,6 +1292,7 @@
 +   [Linux 用户与开发者 148 - 终极发行版与开源软件指南 2015 148](docs/linux-user-developer-148---ultimate-distro-foss-guide-2015-1/README.md)
 +   [Linux 用户与开发者 149 - 树莓派 2 专版 149](docs/linux-user-developer-149---exclusive-raspberry-pi-2-149/README.md)
 +   [Linux 用户与开发者 150 - 三系统启动 150](docs/linux-user-developer-150---triple-boot-150/README.md)
++   [Linux 用户与开发者 151 个树莓派项目](docs/linux-user-developer-151---20-raspberry-pi-projects-151/README.md)
 +   [Linux 用户与开发者 152 - 50 个关键修复 152](docs/linux-user-developer-152---50-critical-fixes-152/README.md)
 +   [Linux 用户与开发者 153 - 更快速、更好的服务器 153](docs/linux-user-developer-153---faster-better-servers-153/README.md)
 +   [Linux 用户与开发者 154 - 100 种精通命令行的方法 154](docs/linux-user-developer-154---100-ways-to-master-the-command-li/README.md)

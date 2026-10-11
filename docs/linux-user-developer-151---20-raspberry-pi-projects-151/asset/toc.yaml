@@ -1,0 +1,75 @@
+- - '#'
+  - 教程
+- - '####'
+  - 13 混合下混
+- - '###'
+  - 14 导出文件
+- - '###'
+  - 15 配置 VLC
+- - '###'
+  - 16 探索选项
+- - '###'
+  - 17 设置快捷键
+- - '###'
+  - 18 做好准备
+- - '###'
+  - 19 开始转录
+- - '##'
+  - 机器转录
+- - '####'
+  - 20 更好地转录
+- - '#'
+  - netstat -tunlapo
+- - '#'
+  - netstat -tup -W
+- - '#'
+  - netstat -nlp
+- - '#'
+  - netstat -1lpe
+- - '#'
+  - netstat -ant | grep apache2 | grep ESTABLISHED | awk -F "[ ]+" '{print $4}' |
+    uniq -c
+- - '#'
+  - netstat -ant | awk '{print $6}' | grep -v established | grep -v Foreign | sort|uniq
+    -c|sort -n
+- - '#'
+  - 'netstat -ltpe | awk ''{print $7}'' | grep -v Address | grep -v "" | sort | uniq
+    -c | awk ''{print $2 ": " $1}'''
+- - '###'
+  - 01 选择一个发行版
+- - '###'
+  - 02 目前我们拥有什么
+- - '###'
+  - 03 PCManFM 中的缩略图
+- - '###'
+  - 04 获取 Otter Browser
+- - '###'
+  - 05 选择你的 AWS 区域
+- - '###'
+  - 06 启动新的 EC2 实例
+- - '###'
+  - 07 选择基于 Linux 的 AMI
+- - '###'
+  - 08 选择实例类型
+- - '###'
+  - 09 配置实例详细信息
+- - '###'
+  - 10 附加存储
+- - '###'
+  - 11 为你的 Linux 实例添加标签
+- - '###'
+  - Your first need to import the required modules
+- - '###'
+  - Next, you need to create a Decoder object
+- - '###'
+  - You need to jump over the header information in your WAV file
+- - '###'
+  - Now you can decode the audio
+- - '###'
+  - The most likely result is the first one
+- - '###'
+  - To do live decoding, you need the PyAudio module
+- - '###'
+  - You can now open an input stream
+- - '###'
+  - Now you can start decoding

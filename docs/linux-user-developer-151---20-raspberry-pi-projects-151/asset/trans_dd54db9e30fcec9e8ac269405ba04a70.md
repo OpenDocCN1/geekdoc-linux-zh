@@ -1,0 +1,136 @@
+
+## 问答
+
+Facebook：Linux User & Developer
+
+Twitter：@linuxusermag
+
+### 开放 LDAP
+
+我在 GSSAPI 和 LDAP 方面遇到了问题。根据现有的信息，我将问题范围缩小到了 GSSAPI 模块中的 `acquire_cred1` 或 `gss_krb5_canonicalize_name` 函数所在的某个位置。
+
+我真正需要的是理解 minor_status 参数是如何被设置的，因为这可能告诉我具体问题出在哪里。然而，对 `ldapwhoami` 命令使用 strace 只显示了客户端在做什么，而问题出在服务器端。slapd 服务已经开启了全级别日志，但它提供的信息不够，因为问题似乎出在 GSSAPI 中，而不是 slapd 中。
+
+我尝试使用 strace 运行 slapd，但我似乎无法以一种让 slapd 服务像通过 `service slapd start` 命令启动时那样运行的方式做到这一点。使用 strace 似乎会导致所有 LDAP* 命令完全无法找到 LDAP 服务。
+
+我甚至不知道在 slapd 上使用 strace 是否能捕获到我想要的信息。我该如何捕获 GSSAPI 模块中的信息？谢谢！
+
+Phil Coping
+
+> 这个问题听起来像是 openldap 的问题，而不是 GSSAPI 的问题——主要是因为它没有权限访问文件。不过这个问题可以修复。首先检查服务是否正常启动。然后执行：
+
+```
+sudo pidof slapd
+```
+
+> 这将给你 PID 号，然后你需要运行：
+
+```
+sudo strace -o /tmp/dumps/ldap.log -f -s 1024 -p <insert pid>
+```
+
+> 然后打开另一个终端窗口并在其中进行测试。完成测试后，在运行 strace 的窗口中按 Ctrl+C。
+
+### C 库
+
+我目前使用的 main distro 是 Ubuntu 12.04。我有 G++ 编译器来编译 C++ 文件。但我感觉我的 complex.h 头文件有点问题。我把它复制到了源文件所在的目录，但我不确定这是否有帮助。我甚至不确定这是正确的版本。其他头文件没问题，比如 math.h。我如何确保标准 C 库在我的 Ubuntu 版本中存在？
+
+Alex B
+
+好的，所以 complex.h 是用于 C 的，因此你需要在 C++ 模板中包含 complex。至于是否已安装或版本是否正确，有几种方法可以尝试检查。
+
+首先，locate 命令可以让你完全检查包名，以确保它存在于系统中。否则，你可以使用 debsums 检查包的 md5 值（与 md5 文件进行比较），以查看它是否是正确的。希望其中之一能解决你的问题。
+
+### 密码行为
+
+嘿，我试图找到一种方法，在一整天内通过脚本将文件复制到我的几个服务器上，但我不知道该怎么做。我无法弄清楚的部分是如何将密码传递给远程服务器。我正在使用通用的 scp 命令：
+
+```
+scp *.* jobee@192.168.1.7:/mnt/bigdrive/Backups
+```
+
+我该如何包含密码，以便脚本可以在没有用户干预的情况下工作？google 一下没有帮助。嗯，有一个结果看起来可能能做到我想做的，但当我读到第三页时，我决定在这里发布一个问题。这是可能的吗？如果是，怎么做？
+
+Jg
+
+好的，你需要使用 sshpass 来通过 SSH 发送密码。你需要修改你的命令，使用类似这样的命令：
+
+```
+sshpass -p 'password' scp -r [Path to folder to backup] root@192.168.1.7:/mnt/bigdrive/Backups/Docs
+```
+
+显然，在脚本或 bash 中直接保留 root 账户的密码有点不安全，所以你应该考虑创建一个备用账户或以某种方式对其进行加密。希望这有帮助！
+
+### 图像裁剪
+
+我有一堆 jpg 文件，我需要从每个图像中提取部分，并仅以真实尺寸保存选定的部分，即不拉伸以适应原始图像的尺寸。由于选择区域的几何形状因文件而异，这看起来是一个繁琐的过程，但 imagemagick 的 display 应用程序似乎提供了一种更方便的过程。使用其菜单，我可以在原始图像上绘制一个矩形来概述我想要的部分，然后将仅选定的矩形保存到新文件。然而，它变形图像以适应原始几何形状，我无法找到任何方法来执行 --repage 选项以确保使用新几何形状保存。我该如何精确地做到这一点，或者你认为使用不同的软件会更好吗？
+
+Paul B
+
+最好的方法是使用 GIMP——它有一种非常简单的方法来做这件事，你只需要选择你要裁剪的区域，然后在 Image 下拉菜单中选择“Crop to selection”。
+
+### 书签
+
+我的大多数书签都（尽管杂乱无章地）按主题组织在文件夹中——有少数几个经常使用，所以单独放置，还有更多尚未整理或删除的。
+
+昨天我开始注意到其中一个文件夹消失了（讽刺的是，名为 Linux 的那个文件夹）。我认为我不会因错误而删除它，但也想不出其他答案，并决定重新创建列表。
+
+然后我再次感到惊讶，当我标记 LinuxUser.co.uk（例如）时，它提出编辑现有书签，声称它仍然存在于名为 Linux 的文件夹中。当我尝试替换其他书签时，发生了同样的事情。
+
+这几乎不是世界末日——我有书签备份，如有必要可以重新开始。但我想了解那个文件夹是否可恢复，最初出了什么问题。
+
+Tsu J
+
+> 嗨 Tsu。发生这种情况的通常原因是你无意中做了傻事，例如将 Linux 文件夹拖到另一个文件夹中。接受编辑书签的选项，然后尝试将文件夹恢复到其通常位置。这应该能解决一切问题！
+
+右，Firefox 的书签管理比 Chrome 好得多。虽然 VLC 有很多非常令人惊叹的功能——从几乎可以播放任何内容到强大的流媒体和流媒体捕获选项，但其一些较正常的用户功能没有工作得那么好。例如，播放列表。我们过去也遇到过类似问题。通常的好解决方案是确保保存所有内容并确保包含 xsp 扩展。如果你仍然遇到问题，也可以尝试使用外部文件管理器来创建正确的播放列表文件——我们认为后者通常也更容易使用。
+
+![](img/c9d26cf718256f071c3af699b9670538_89_0.png)
+![](img/c9d26cf718256f071c3af699b9670538_90_0.png)
+![](img/c9d26cf718256f071c3af699b9670538_90_1.png)
+
+## 托管列表
+
+**赞助机会**
+你知道你可以在这里获得赞助机会吗？请联系 Luke Baldashie，电话：+44/01932 598631。
+
+**有你认为我们应该列出的交易吗？**
+无论你是托管公司还是希望列出的喜欢的提供商的满意客户，请发送详细信息：linuxuser@hexagons.com 或 Linux User@hexagons.com
+
+## 专用服务器列表
+
+| 名称和网址 | 套餐 | 电话号码 | 每月费用 | 最短合约期 | CPU 核心/速度 | 磁盘空间 | 1Gbps 互联网连接 | 硬件 RAID | 远程电源重启 | 永久 KVM | 正常运行时间保证 | 网络备份存储 | 私有子网 | 24/7 电话支持 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Nectecera www.netctecera.co.uk/linux | 2200DC | 0800 8085450 | £25 | 1 个月 | 双核 2.2GHz | 16GB | N/A | Raid 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| | 3600DC | 0800 8085450 | £40 | 1 个月 | 双核 3GHz | 2 x 250GB | N/A | Raid 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| | 2560DC | 0800 8085450 | £55 | 1 个月 | Intel 2.4GHz 四核 Xeon 处理器 | 2 x 500GB | N/A | Raid 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| | Developer | 0800 8085450 | £2.99 | 1 个月 | N/A | 1GB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| | Core | 0800 8085450 | £9.99 | 1 个月 | N/A | 5GB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| | Reseller | 0800 8085450 | £24.99 | 1 个月 | N/A | 无限制 | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| bravo4 http://bravo4.co.uk/ | Starter Linux | N/A | £20 | N/A | N/A | 2,000MB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| bravo4 http://bravo4.co.uk/ | Starter Windows | N/A | £20 | N/A | N/A | 2,000MB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| bravo4 http://bravo4.co.uk/ | Business Linux | N/A | £45 | N/A | N/A | 4,000MB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| bravo4 http://bravo4.co.uk/ | Business Windows | N/A | £45 | N/A | N/A | 4,000MB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| bravo4 http://bravo4.co.uk/ | Ultimate Linux | N/A | £80 | N/A | N/A | 无限制 | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| bravo4 http://bravo4.co.uk/ | Ultimate Windows | N/A | £80 | N/A | N/A | 无限制 | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| catalyst2 (www.catalyst2.com) | Bare Metal Dedicated Server | 0800 127 79 79 | £199 | 1 个月 | 1x 2.4GHz x2 CPU | 40GB | ✓ | ✓ | ✓ | ✓ | 99.90% | ✓ | ✓ | ✓ |
+| catalyst2 (www.catalyst2.com) | Silver Managed Dedicated Server | 0800 127 79 79 | £299 | 1 个月 | 1x 2.4GHz x4 CPU | 80GB | ✓ | ✓ | ✓ | ✓ | 99.90% | ✓ | ✓ | ✓ |
+| catalyst2 (www.catalyst2.com) | Gold Managed Dedicated Server | 0800 127 79 79 | £399 | 1 个月 | 2x 2.4GHz x8 CPU | 150GB | ✓ | ✓ | ✓ | ✓ | 99.90% | ✓ | ✓ | ✓ |
+| 123-Reg (www.123-reg.co.uk) | Dell PowerEdge R210 (X2/Ubuntu) | 0871 230 9825 | £59.99 | 12 个月 | 4x 2.13GHz | 2x 160GB | 12Mbit | ✓ | ✓ | ✓ | 99.98% | 0 | ✓ | ✓ |
+| 123-Reg (www.123-reg.co.uk) | Dell PowerEdge R210 (Windows Web Edition) | 0871 230 9825 | £79.99 | 12 个月 | 4x 2.13GHz | 2x 160GB | 12Mbit | ✓ | ✓ | ✓ | 99.98% | 0 | ✓ | ✓ |
+| Daily (www.daily.co.uk) | Linux VPS Pro | 0845 466 2100 | £25.99 | 1 个月 | 2.27 Intel 四核 | 65GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Daily (www.daily.co.uk) | Linux VPS Max | 0845 466 2100 | £59.99 | 1 个月 | 2.27 Intel 四核 | 100GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Daily (www.daily.co.uk) | Windows VPS Pro | 0845 466 2100 | £34.99 | 1 个月 | 2.27 Intel 四核 | 40GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Daily (www.daily.co.uk) | Windows VPS Max | 0845 466 2100 | £64.99 | 1 个月 | 2.27 Intel 四核 | 100GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Daily (www.daily.co.uk) | VPS Pro/Type II | 0845 466 2100 | £44.99 | 1 个月 | 2.27 Intel 四核 | 65GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Daily (www.daily.co.uk) | VPS Max/Type II | 0845 466 2100 | £74.99 | 1 个月 | 2.27 Intel 四核 | 100GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Daily (www.daily.co.uk) | VPS Ultra/Type II | 0845 466 2100 | £199.99 | 1 个月 | 2.27 Intel 四核 | 300GB | 100Mbps | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Heart Internet (www.heartinternet.co.uk/dedicated-servers) | Linux Quad Core | 0845 644 7750 | £79.99 | 12 个月 | 双核 Xeon 2.26GHz | 160GB | ✓ | ✓ | ✓ | ✓ | 99.98% | ✓ | ✓ | ✓ |
+| Heart Internet (www.heartinternet.co.uk/dedicated-servers) | Windows Dual Core | 0845 644 7750 | £89.99 | 12 个月 | 双核 Xeon 2.26GHz | 160GB | ✓ | ✓ | ✓ | ✓ | 99.98% | ✓ | ✓ | ✓ |
+| Heart Internet (www.heartinternet.co.uk/dedicated-servers) | Linux Quad Core | 0845 644 7750 | £129.99 | 12 个月 | 四核 Xeon 2.5GHz | 250GB | ✓ | ✓ | ✓ | ✓ | 99.98% | ✓ | ✓ | ✓ |
+| Webfusion (www.webfusion.co.uk) | Dell PowerEdge R210 | 0845 130 1622 | £29.99 | 12 个月 | 2x 3.00GHz | 250GB | 高达 100Mbit | ✓ | ✓ | ✓ | 99.99% | Free | 0 | ✓ |
+| Webfusion (www.webfusion.co.uk) | Dell PowerEdge R210 | 0845 130 1622 | £119.99 | 12 个月 | 4x 2.56GHz | 2x 250GB | 高达 10Mbit | ✓ | ✓ | ✓ | 99.99% | Free | 0 | ✓ |
+| Webfusion (www.webfusion.co.uk) | Dell PowerEdge R210 | 0845 130 1622 | £149.99 | 12 个月 | 4x 2.56GHz | 2x 500GB | 高达 10Mbit | ✓ | ✓ | ✓ | 99.99% | Free | 0 | ✓ |
+
+0 = 可选
+
