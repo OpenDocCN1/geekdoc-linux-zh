@@ -1,0 +1,17 @@
+# Lab Exercises
+
+# Equipment Requirements
+
+In order to complete these exercises you will need a computer running any version of Linux. You need to have an account and be able to log in to the computer. These exercises are designed to be run from a command line. If you are running X Windows then perform these from a terminal window.
+
+# Lab 1: Using Local Documentation
+
+In this lab, you will learn how to use the documentation that was installed on your computer when Linux was installed.
+
+# Using the man Pages
+
+After logging in to the computer, perform a listing of the */usr/man* directory. Notice that there are several subdirectories of the */usr/man* directory. Each of these refers to a class of documentation. Refer to Chapter 1, “Finding and Creating Documentation,” for more details on what is contained in each of these directories.
+
+At the command prompt, type *man man*. This will display the manual page that covers how to use and configure your man pages. Notice the section that discusses how to change your configuration. This is controlled by the file */etc/man.config*, which might also be called */etc/man.conf*.
+
+Review your configuration file and see what the *manpath* is. Depending on what applications are installed on your computer, more than one directory might be included on this path.

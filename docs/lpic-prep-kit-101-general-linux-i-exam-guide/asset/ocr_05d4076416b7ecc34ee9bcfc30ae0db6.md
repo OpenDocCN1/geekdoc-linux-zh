@@ -1,0 +1,25 @@
+# QUESTIONS AND ANSWERS
+
++   1. You have an important meeting with your boss this afternoon and do not want to forget it. What should you do?
++   
++   A. You could try putting Post-it notes on your monitor; however, a better solution is to use the at command to display a reminder of the meeting a short time before it begins.
+
++   2. You need to reindex your database but want to do it when the system's load is low to prevent adversely affecting your users. What should you do?
++   
++   A. You can use the batch command to run the indexing job. That way it will not start until the system load is low.
+
++   3. You have a user who every morning schedules a job to run at 8 a.m. that slows down your system. What can you do to prevent him from scheduling a job using at?
++   
++   A. You can add that user's name to the /etc/at.deny file to prevent him from running any more at jobs. If he really needs to run this, educate him about the batch command.
+
++   4. Your database administrator needs to run a script every day for system maintenance. You do not allow users to run cron jobs. How could you make her job easier?
++   
++   A. You could schedule the job to run yourself. However, mail messages from crond about this job would be delivered to you rather than the database administrator, who should get them. You could either construct the job to mail the messages to her or add her name to the /etc/cron.allow file, which would allow her to schedule the job herself.
+
++   5. You want to save all the messages from mail to the /var/log/maillog file. What should you do to make this happen?
++   
++   A. You can edit the /etc/syslog.conf file by adding the following line:
++   
++   mail,*/var/log/maillog
++   
++   This directs any messages from mail to the /var/log/maillog file.

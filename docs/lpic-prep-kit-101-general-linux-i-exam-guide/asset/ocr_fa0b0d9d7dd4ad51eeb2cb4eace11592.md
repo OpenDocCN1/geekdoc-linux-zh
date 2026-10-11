@@ -1,0 +1,19 @@
+# Using the CD-ROM
+
+The CD-ROM accompanying this book contains 250 questions that comprise the practice tests covering the material you have studied. These questions should be used when you have finished the book and think you are ready to take the exam.
+
+All the questions presented here are multiple choice or short answers. When typing in your answers, use lowercase unless a command requires uppercase. These are the same types of questions you will see on the exam.
+
+# Equipment Requirements
+
+To use the Self-Tests, you must have an Intel-based computer running the Linux operating system. The distribution does not matter. The test is designed to run under the command-line interface; therefore, it is not guaranteed to run correctly in a terminal window under X.
+
+# Installing the Self-Test Software
+
+Installation consists of creating a directory and copying the appropriate files from the CD-ROM to this directory. The steps to do this are as follows:
+
++   1. Create a directory to contain the testing files. Usually, this should be a subdirectory of your home directory.
+
++   2. Copy the following files into this directory: 
++      - `1pic`
++      - `test`

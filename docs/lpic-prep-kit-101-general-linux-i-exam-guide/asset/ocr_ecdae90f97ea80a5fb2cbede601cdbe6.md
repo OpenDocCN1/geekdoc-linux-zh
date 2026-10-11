@@ -1,0 +1,36 @@
+**Table 8.1 Use These sed Options to Add, Delete, or Replace Text**
+
+| Option | Action |
+| --- | --- |
+| a | Adds after the specified line |
+| b | Adds before the specified line |
+| d | Deletes the specified line |
+| c | Replaces the specified line with the following |
+
+The a and c options enable you to specify a range of lines. The c option replaces lines by first inserting the text before the lines and then deleting the lines. Because these commands are used to manipulate larger sections of text, they are usually used only in sed scripts.
+
+You also can use sed to insert another file into the original file by using r, as in
+
+```
+```
+/term/r IncludeFile
+```
+```
+
+This would place the contents of IncludeFile immediately following the line containing term. You always must specify an address when using r.
+
+# sort
+
+The sort command is used to put lists in alphabetic or numeric order. In addition, it can merge one or more text files. The syntax for sort is
+
+```
+```
+sort [options] [filelist]
+```
+```
+
+sort takes its input from the files you specify or the standard input. Its output is sent to the standard output unless you use the -o option followed by a filename, which writes the output to that file.
+
+The default action is to sort a file in alphabetic order. To sort a file in numeric order, use the -n option. This means that periods as well as plus and minus signs are interpreted in arithmetic order.
+
+sort considers any leading blanks to be part of the field. Use the -b option to cause sort to ignore white space. Other options that you should know are listed in Table 8.2.

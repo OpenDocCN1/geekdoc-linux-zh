@@ -1,0 +1,39 @@
+**Table 9.3 Options to Use with chmod**
+
+| Option | Action |
+|:------|:-------|
+| -c | Displays the names of those files whose permissions are changed |
+| -f | Does not display any error messages |
+| -v | Displays a list of each file that is changed and any error messages |
+
+# Changing Permissions with Numbers
+
+You can change permissions by passing a three-digit octal number to the `chmod` command. This octal number represents the bit pattern for the new permissions. Each digit of this number represents the permissions for one of the entities—owner, group, and others, in that order. See Figure 9.3.
+
+```
+chmod nnn<br>
+       |\<br>
+| \<br>
+| others<br>
+group
+```
+
+![](bbox=[0.15, 0.46, 0.72, 0.51])
+
+The value of each permission is shown in Table 9.4.
+
+**Table 9.4 Numbers Used to Grant Permissions**
+
+| Number | Permission |
+|:------|:---------|
+| 4 | Read (r) |
+| 2 | Write (w) |
+| 1 | Execute (x) |
+
+You sum the permissions you want to grant and pass that number to `chmod`. If you enter the command
+
+```
+chmod 764 MyFile
+```
+
+you would be granting read, write, and execute to the owner, which is 4 (read) + 2 (write) + 1 (execute) = 7. The group is granted read and write, or 4 (read) + 2 (write) = 6. And all others would get read only, or 4.

@@ -1,0 +1,61 @@
+**crash** An unexpected stoppage of a program or computer system; termination of software or hardware due to some failure or error.
+
+**Ctrl** The Control key on a keyboard.
+
+**current working directory** Present location in filesystem hierarchy.
+
+**cwd** See current working directory.
+
+**cylinder** All tracks located in the same location on every disk surface.
+
+**daemon** A program that runs in the background and performs an operation when required.
+
+**data** Facts and figures that can be processed to provide information.
+
+**database** A collection of data stored in a logical and accessible manner; program used to access this data.
+
+**default** The assumed value of a parameter if no value is explicitly specified.
+
+**Del** The Delete key on a keyboard.
+
+**delete** To remove or erase data.
+
+**device** A piece of hardware that can be attached to a computer.
+
+**die** To stop execution.
+
+**Direct Memory Access** Circuitry that moves data from one memory block to another, bypassing the CPU.
+
+**directory** A type of file on a disk used to organize other files.
+
+**disk** A direct access storage device.
+
+**display** A screen or monitor used to display information from a computer.
+
+**distribution** A collection of software needed to operate a computer, including the Linux kernel and various utilities and applications.
+
+**DMA** See Direct Memory Access.
+
+**documentation** A written document that describes a system or application.
+
+**drive** A device that provides the capability to store and retrieve data.
+
+**driver** Software that provides access to a peripheral device.
+
+**dynamic** Decisions or actions performed during instead of before processing.
+
+**editor** Software used to create and edit text files.
+
+**emulator** Software that acts like another type of hardware or software.
+
+**environment** Configuration of hardware or software variables that are used by a process.
+
+**environment variables** Parameters used to define the hardware or software configuration.
+
+**Esc** The Escape key on a keyboard.
+
+**Ethernet** A shared media type of LAN in which all nodes share the available bandwidth.
+
+**event** A happening or occurrence.
+
+**executable** A binary or script that can be run.

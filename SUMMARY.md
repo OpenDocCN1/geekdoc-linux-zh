@@ -1387,6 +1387,7 @@
 +   [LPIC-2 认证指南：(201-400 和 202-400 考试) (认证指南)](docs/lpic-2-cert-guide-201-400-and-202-400-exams-certification-gu/README.md)
 +   [LPIC-2：Linux Professional Institute 认证学习指南（考试 201 和 202）](docs/lpic-2-linux-professional-institute-certification-study-guid/README.md)
 +   [LPIC-2：Linux 专业认证认证：学习指南 考试 201 与考试 202](docs/lpic-2-linux-professional-instutute-certification-study-guid/README.md)
++   [LPIC 101 通用 Linux I 备考包（考试指南）](docs/lpic-prep-kit-101-general-linux-i-exam-guide/README.md)
 +   [操作系统开发的简明指南](docs/ltl-bk-os-dev/README.md)
 +   [Unix 极客的 Mac OS X 入门指南](docs/mac-os-x-for-unix-geeks/README.md)
 +   [MAC OS X UNIX 工具箱：Mac OS X 1000+ 条命令](docs/mac-os-x-unix-toolbox-1000-commands-for-the-mac-os-x/README.md)

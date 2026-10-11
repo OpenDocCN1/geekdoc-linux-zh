@@ -1,0 +1,10 @@
+Answer a is incorrect; the `compress` utility is an older compression utility that does not have the most optimum compression algorithm. **Answer b is correct; this command would use gzip instead of compress to perform the compression, resulting in a smaller file.** Answer c is incorrect; although this command line would achieve the same results as b, it is less efficient. Answer d is incorrect; the command pipes the `tar` file to the `compress` utility; it does not save it to the `compress` directory.
+
++   **10.** You used the command `gzip memo.bill` to compress the file `memo.bill`. You now want to review some figures that were included in this file. How could you do this?
++   
++      a. `zcat memo.bill.gz`
++      b. `gunzip memo.bill.gz; less memo.bill`
++      c. `cat memo.bill.gz`
++      d. `less memo.bill.gz`
+
+**Answer a is correct; the `zcat` utility enables you to examine the contents of a compressed file without compressing it.** Answer b is incorrect; this would uncompress the file and then display it using the `less` command, but you would then have to recompress it. Answer c is incorrect; the `cat` command cannot display compressed files. Answer d is incorrect; the `less` command cannot display a compressed file.

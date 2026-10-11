@@ -1,0 +1,29 @@
+# ## Finding Lost Files
+
+As you can see from Table 6.9, there might be several places where a certain file is stored, so you could spend considerable time searching multiple directories for a specific file. To prevent this waste of time, some utilities are available on your system to assist you in locating that long-lost command.
+
+For the exam you will need to be comfortable using these commands. You might be asked a question where you will need to select which command would be the most appropriate to use in a given situation.
+
+# **find**
+
+This utility can be used to find files starting at the specified directory and searching all its subdirectories to find filenames that match the specified pattern. The syntax for `find` is `find [path] [condition]`
+
+If no modifying condition is passed to the `find` command, it will produce a listing of all files and directories starting with the specified directory recursively through the entire directory tree. If no directory is specified, `find` searches the present working directory and all its subdirectories. Table 6.10 lists the possible conditions that can be used with the `find` command to narrow the results.
+
+Table 6.10 Conditions That Can Be Used to Modify the Results from Running the `find` Command
+
+| Condition | Action |
+| :--- | :--- |
+| -atime n\u0022 | Find files based on number of days since last accessed |
+| -ctime n\u0022 | Find files based on number of days since directory entry last changed |
+| -group groupname | Find files belonging to `groupname`; can be name of GID |
+| -inum n | Find files with inode n |
+| -links n | Find files with n links |
+| -mount | Find files only on same filesystem |
+| -mtime n\u0022 | Find files based on number of days since last modified |
+| -name pattern | Find files matching specified pattern |
+| -perm nnn | Find files with specified permission block |
+| -print | Display matching files and their full paths; default action |
+| -size n\[c\] | Find files n blocks in size or n characters |
+| -type c | Find files of type c, which can be b for block, c for character device, d for directory, 1 for link, or f for plain file |
+| -user username | Find files belonging to `username`; can be name of UID |

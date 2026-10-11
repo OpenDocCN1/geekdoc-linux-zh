@@ -1,0 +1,35 @@
+You use the same options with batch as you use with at (see Table 10.1).
+
+If a time is not specified with batch, the job will run as soon as the system load is low. If a time is specified, the job will run as soon as the system load falls after the specified time.
+
+batch examines the /proc/loadavg to check the system load. It executes when the average load falls below 1.5.
+
+Commands that are run using batch or at -b run with a lower priority than when run in the background. Unlike background tasks, which are killed when you log off the system, batch commands continue until the system is shut down. In addition, batch sends you a mail message when the job is completed or if any errors occur.
+
+# crontab
+
+Often you will have a job that needs to be run on a regular basis. The at command allows you to schedule a reminder or job only once. To schedule recurring events, you can use the crontab command. Your scheduled events are then saved in a personal file.
+
+The syntax for the crontab command is
+
+```
+crontab  [options]  [file]  [username]
+```
+
+To use crontab, you first create a text file (with any name other than crontab) containing six fields, with a space between each field. The first five fields are minute, hour, day of the month, month, and day of the week; the sixth field is the command to be run. Table 10.2 shows the allowable values for these fields.
+
+| **Table 10.2** Allowable Values for Fields When Creating a cron Job | |
+| --- | --- |
+| **Field** | **Values** |
+| minute | 0–59 |
+| hour | 0–23 |
+| day of month | 0–31 |
+| month | 0–12 (or names) |
+| day of week | 0–7 (0 or 7 is Sun, or use names) |
+
+
+You can use an asterisk (*) to indicate commands are to be run in every instance of that field. Also note that days of the week can be defined by a number—with 0 or 7 for Sunday—or by name. In addition, times are specified in a 24-hour format. If you wanted to create a file containing who is logged on to your system every day at 10 a.m., you would type
+
+```
+00 10 * * * who >> userList
+```

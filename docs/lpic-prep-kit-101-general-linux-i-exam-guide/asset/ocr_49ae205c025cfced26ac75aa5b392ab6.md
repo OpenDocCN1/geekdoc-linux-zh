@@ -1,0 +1,33 @@
+| Table 3.0 The Options Used with the du Command |||
+| --- | --- |
+| Option | Action |
+|-a | Displays file usage |
+|-b | Displays usage in bytes |
+|-c | Prints grand total |
+|-h | Appends a letter to identify the measurement being used for the report, such as M for megabytes |
+|-k | Displays usage in kilobytes, the default |
+|-m | Displays usage in megabytes |
+|-1 | Counts links |
+|-s | Prints only the grand total |
+
+
+
+Unless you use the -a option, du displays only the directories, even though the space occupied by all the files is counted. If you do not have permission to a file, du will display an error message and not count that file when displaying disk usage.
+
+# df
+
+Both the du and df commands report on object size. Whereas du reports on the size of objects such as files, df reports on the size of devices such as partitions. The syntax for the df command is
+
+```
+df [options] [filename]
+```
+
+The df command returns the following information values:
+
++   ☐ Size of the device
++   ☐ Number of free blocks on the device
++   ☐ Number of occupied blocks on the device
++   ☐ Percent of total blocks that are free
++   ☐ Name of the device
+
+If you pass an ordinary file's name to df, it will report on the device containing that file. If you do not name a file, df reports on all mounted filesystems. The options used with the df command are listed in Table 3.9.

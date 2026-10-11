@@ -1,0 +1,28 @@
+If you need to temporarily restrict a user's access, place an asterisk at the beginning of the password field for her account. Be careful not to make any other changes to this field. Although this is not 100 percent foolproof, it is usually adequate. You can use this method for users who are on vacation or away for an extended period of time. If this field is left empty, only the username is required to log in. The user will not be prompted for a password. Although this is sometimes helpful, if you want to have a guest account, it is also a significant security risk. Make sure that if you have an account with a blank password, you lock the account's access down as much as possible.
+
+# User ID Field
+
+The third field in each record is the user ID (UID). The system tracks users by UID rather than by name. For example, when a user starts a process, his UID is associated with that process and is displayed when using the ps command. Generally, ranges of UIDs are used to define the type of account. UIDs less than 100 are usually reserved for system accounts, root always has a UID of 0, and users are given UIDs greater than 100. The starting number for user IDs varies with different distributions but the principle is the same. The beginning user ID is defined in the /etc/login.defs file, an example of which might look like the following:
+
+```
+```
+# *REQUIRED*
+#	Directory where mailboxes reside, _or_ name of file, relative to the
+#	home directory.  If you _do_ define both, MAIL_DIR takes precedence.
+#	OMAIL_DIR is for Omail
+#	OMAIL_DIR	Maildir
+MAIL_DIR	/var/spool/mail
+MAIL_FILE	.mail
+
+# Password aging controls:
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+#	PASS_MIN_DAYS	Minimum number of days allowed between password changes.
+#	PASS_MIN_LEN	Minimum acceptable password length.
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_MIN_LEN	5
+PASS_WARN_AGE	7
+```
+```

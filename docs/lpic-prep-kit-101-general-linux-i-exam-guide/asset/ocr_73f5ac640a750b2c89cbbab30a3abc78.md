@@ -1,0 +1,3 @@
++   4. Automate System Administration Tasks by Scheduling Jobs to Run in the Future Use `cron` to run jobs at regular intervals, `at` to run jobs at a specific time, manage `cron` and `at` jobs, and configure user access to `cron` and `at` services. 232-239
+
++   5. Maintain an Effective Data Backup Strategy Plan a backup strategy, back up file systems automatically to various media, perform partial and manual backups, verify the integrity of backup files, and partially or fully restore backups. 255-280
