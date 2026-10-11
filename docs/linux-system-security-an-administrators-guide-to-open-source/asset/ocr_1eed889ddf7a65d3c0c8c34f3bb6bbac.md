@@ -1,0 +1,13 @@
+There are a number of hash algorithms available. Among them are the RSA Data Security, Inc., MD4 Message Digest Algorithm (simply known as MD4); the RSA Data Security, Inc., MD5 Message Digest Algorithm (simply known as MD5); the Secure Hash Algorithm (SHA-1), which is part of the larger specification known as the Digital Signature Algorithm¹² (DSA); and the Research and Development in Advanced Communication Technologies in Europe Integrity Primitives Evaluation Message Digest (RIPEMD).
+
+# ## Passwords Aren't Encrypted, They're Hashed!
+
+Another hashing algorithm is the Linux crypt(3) function. It implements a modified DES algorithm which accepts a maximum 64-bit input (8 characters) and produces a 104-bit hash value (13 characters, the first 2 of which are not part of the hash [see man 3 crypt]). This is the function used as the standard password hashing function. Each user’s 13-character hashed password is stored in /etc/shadow (or, in its absence, /etc/passwd). Quite often, the hashed password is referred to as the encrypted password. The use of the term encrypted implies that the encrypted data may be decrypted. While it may be possible to decrypt a hashed password, it is computationally difficult (perhaps impossible when MD5 is used) and it is not done. Instead, when a user enters his or her password, the password is hashed by crypt(3) and the resulting hash is compared to what is stored in /etc/shadow. For this reason, we will use the phrase hashed password instead of encrypted password throughout the book.
+
+**Digital Signatures** *A digital signature is an authentication mechanism designed to verify the author or sender of electronic information. Digital signatures are commonly generated using asymmetric algorithms. Very frequently, digital signatures include the hash value of the signed file to verify not only the author but also the integrity of the file.*
+
+# ## An Overview of PGP
+
+Pretty Good Privacy (PGP) was written by Phil Zimmerman. It is a software package that utilizes asymmetric algorithms (RSA only in PGP version 2.6.x; RSA and Diffie-Hellman are available in PGP version 5.0 and later) for general data encryption (generally e-mail and secret keys) and for the generation and validation of digital signatures. PGP also uses IDEA for symmetric encryption of files.
+
+> ¹². DSA is an algorithm that incorporates El Gamal for encryption and SHA-1 for hash computations. It was adopted by the National Institute of Standards and Technology (NIST) in 1991.

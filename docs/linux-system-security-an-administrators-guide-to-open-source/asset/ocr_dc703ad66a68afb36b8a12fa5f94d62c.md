@@ -1,0 +1,12 @@
+Table 11.5 Keywords in /etc/ssh/sshd_config (Continued)
+| Keyword | Description |
+| PermtEmptyPasswords | If yes (the default), users with no passwords are allowed to be authenticated by sshd. If no, empty passwords are not allowed by sshd. |
+| PermtRootLogin | If yes (the default), then root is allowed to log in. If no, then root does not need to supply root's password, but in this case must be authenticated through one of the three non-password authentication schemes. Otherwise no pwd behaves like no, disallowing root logins altogether. The exception is that root may execute a command through ssh if RSA Authentication is enabled and configured. |
+| PidFile | Location of the file containing the PID of the master sshd process. The default is /var/run/sshd.pid. |
+| Port | Specifies the port number to which sshd binds. Default is 22. |
+| PrintMotd | If yes (the default), the /etc/motd file is displayed after login. |
+| QuietMode | If no, suppresses all logging except fatal errors. Normally, the initial connection request, authentication information, and connection termination are logged through the syslog facility DAEMON. See the SyslogFacility keyword in this table for configuration options. The default is yes. This keyword is overridden by the -q command line option, if specified. |
+| RandomSeed | Specifies the file containing the random seed for the server. The default is /etc/ssh_random_seed; the default in the RPMs is /etc/ssh/ssh_random_seed. |
+| RhostsAuthentication | If yes, Rhosts Authentication is allowed. The default is no. In order to enable this scheme, this keyword must be set to yes both here and in the appropriate configuration file on the client. See TrustedHostAuthentication on page 260 for a detailed discussion of this scheme. |
+| RhostsRSAAuthentication | If yes (the default), then Rhosts and RSA Authentication is allowed. In order to enable this scheme, this keyword must be set to yes both here and in the appropriate configuration file on the client. See Rhosts and RSA Authentication on page 260 for a detailed discussion of this scheme. |
+| RSAAuthentication | If yes (the default), then RSA Authentication is allowed. In order to enable this scheme, this keyword must be set to yes both here and in the appropriate configuration file on the client. See RSA Authentication on page 261 or a detailed discussion of this scheme. |

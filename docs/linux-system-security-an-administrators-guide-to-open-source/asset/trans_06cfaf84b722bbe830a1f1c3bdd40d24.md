@@ -1,0 +1,128 @@
+
+## 表 5.10 pam_listfile 的参数
+
+| 参数 | 描述 |
+| :------- | :---------- |
+| onerr | 取值可以是 succeed 或 fail。如果发生错误（例如无法读取配置文件），该模块应返回成功还是失败？ |
+| sense | 取值可以是 allow 或 deny。这指示模块该列表是允许列表还是拒绝列表。 |
+| file | 需要配置文件的路径名。 |
+| item | user、tty、rhost、user、group 或 shell 之一。它告知模块在配置文件中查找什么内容。 |
+| apply | 接受用户名或以 @ 开头的组名。仅当 item 设置为 tty、rhost 或 shell 时才有意义。 |
+
+它应该期望在 /etc/security/nocsh 中找到用户名——每行一个。sense=deny 参数告诉 pam_listfile，/etc/security/nocsh 是一个拒绝列表；也就是说，列在该文件中的任何用户都会导致 pam_listfile 失败，进而（由于必需的控制标志）导致认证失败并禁止该用户更改 shell。
+
+剩下的任务就是创建 /etc/security/nocsh 并列出我们要禁止使用 csh 的用户。这是一个示例文件：
+
+```
+guest
+joe
+```
+
+这两个用户 guest 和 joe（我们不再信任他了）将无法成功执行 csh，正如用户 guest 在示例 5-17 中演示的那样。希望事件流程变得越来越清晰。当 guest 执行 csh（一个支持 PAM 的应用程序）时，Linux-PAM 被调用，并执行 /etc/pam.d/csh 中的 auth 栈。参考第 100 页的示例 5-16，调用的第一个 auth 模块是 pam_rootok。由于 guest 不是 root，该模块失败并调用 pam_pwdb，从而触发密码提示。用户 guest 成功输入了正确的密码（这一点请相信我），然后执行权传递给 pam_listfile，它检查其拒绝列表并在其中找到了 guest，导致认证失败（因此出现通用的 Password error 消息）。
+
+## 示例 5-17 由于 pam_listfile 导致的 csh 尝试失败
+
+```
+$ telnet livfreordie
+Trying 10.1.1....
+Escape character is '^]'.
+
+This is a restricted system. All activity is logged.
+login: guest
+Password:
+
+livfreordie$ csh -s /bin/bash
+Changing shell for guest.
+Password:
+Password error.
+livfreordie$
+```
+
+考虑另一个例子。假设我们要限制其他人可以 *su* 的用户——我们希望一般性地限制 *su* 的使用（不仅仅是 *su* 到 root），将其限制为一组特定的用户。我们在 `/etc/pam.d/su` 中添加一个 pam_listfile 条目，如示例 5-18 所示。这次我们使用的是允许列表。只需将每个允许的用户名每行一个放在 `/etc/security/suok` 文件中。例如，如果我们的 `/etc/security/suok` 包含以下用户：
+
+- root
+- mary
+- bill
+- Jane
+- efram
+
+那么这些将是唯一被接受作为 *su* 用户参数的用户。任何人都可以执行 *su*，但只能变成列表中的某个用户。示例 5-19 展示了当 *paul* 尝试 *su* 到 *guest* 然后到 *root* 时会发生什么。*su* 到 *guest* 失败，因为 *guest* 不在 `/etc/security/suok` 文件中。然而，*su* 到 root 成功了，因为 *root* 在 `/etc/security/suok` 文件中，并且 *Paul* 知道 root 密码。
+
+## 示例 5-18 带有 pam_listfile 的 *su* 配置文件
+
+| 类型 | 控制 | 模块 | 参数 |
+| :--- | :--- | :--- | :--- |
+| auth | required | /lib/security/pam_listfile.so | onerr=fail item=user sense=allow file=/etc/security/suok |
+| auth | required | /lib/security/pam_pwdb.so | |
+| account | required | /lib/security/pam_pwdb.so | |
+| password | required | /lib/security/pam_cracklib.so | minlen=20 retry=3 |
+| password | required | /lib/security/pam_pwdb.so | md5 use_authtok |
+| session | required | /lib/security/pam_pwdb.so | |
+
+## 示例 5-19 由于 pam_listfile 导致的 *su* 尝试失败
+
+```
+$ whoami
+joe
+$ su - guest
+Password:
+su:  incorrect password
+$ su -
+Password:
+#
+```
+
+请注意，错误信息并未指示实际的失败原因。如果你回顾之前其他 PAM 模块的失败消息，你会发现这是 PAM 的一个特性。其想法是通过错误信息不向用户透露任何信息。作为具有 root 访问权限的管理员，你始终可以检查日志文件。默认情况下，你可以在 `/var/log/messages` 中找到由 PAM 生成的日志消息（这些文件和 *syslog* 通常会在第 8 章中讨论）。
+
+注意，当示例 5-18 中的 *sense=allow* 更改为 *sense=deny* 时，`/etc/security/suok` 文件变成了拒绝列表，这意味着用户将无法 *su* 到列表中的任何用户。如果你希望实现 *sudo*（*sudo* 在第 9 章中讨论）并完全禁止 *su* 到 root，这特别有用。
+
+## PAM 和 su
+
+与上一个限制可以通过 su 切换到的用户的 pam_listfile 示例不同，pam_wheel 专门用于将 su 到 root 用户的成功执行限制在特定范围内。它通过利用一个名为 wheel 且 GID 为 0 的特殊组来实现这一点。当此模块生效时，其默认行为是仅允许 wheel 组的成员 su 到 root。这是另一个仅用于认证的模块。其参数在表 5.11 中有描述。该模块有一些参数是你绝对不想要使用的。use_id 参数会导致 pam_wheel 使用用户的有效 UID。这样一来，非 wheel 组成员可以 su 到 wheel 组成员，进而能够 su 到 root。这很可能不是你寻求的行为。
+
+trust 参数可能导致 wheel 成员无需密码即可 su 到 root，具体取决于模块堆叠的方式。除非你在调试或已为这些后果做好准备，否则请避免使用这两个参数。
+
+在许多 Linux 发行版中，有一个 GID 为 0 的 root 组。因此，你可能希望创建一个具有不同 GID 的 wheel 组——例如 GID=10（Red Hat 5.2/6.0 会为你这样做）——然后在 pam_wheel 中使用 group 参数。示例 5-20 显示了一个典型的 /etc/pam.d/su 文件。确保你在 /etc/group 中有一个名为 wheel 的组。该组的任何成员都将允许 su 到 root。所有其他用户都会收到密码错误消息，即使他们知道正确的密码。
+
+## 示例 5-20 带有 pam_wheel 的 /etc/pam.d/su 文件
+
+| 类型 | 控制 | 模块 | 参数 |
+| :--- | :--- | :--- | :--- |
+| auth | required | /lib/security/pam_wheel.so | group=wheel |
+| auth | required | /lib/security/pam_pwdb.so | |
+| account | required | /lib/security/pam_unix.so | |
+| password | required | /lib/security/pam_cracklib.so | minlen=20 retry=3 |
+| password | required | /lib/security/pam_pwdb.so | md5 use_authtok |
+| session | required | /lib/security/pam_unix.so | |
+
+## 表 5.11 pam_wheel 的参数
+
+| 参数 | 描述 |
+|---|---|
+| debug | 向 syslog 生成额外的输出。 |
+| use_id | 使用当前进程的 UID，而不是 getlogin 返回的 UID。这可能会导致使用有效 UID，不推荐在生产环境中使用。 |
+| trust | 如果用户是 wheel 组成员，则导致此模块成功。此选项可能导致 wheel 成员无需密码即可变成 root。使用此参数时请非常小心。 |
+| deny | 反转此模块的逻辑。 |
+| group=groupname | 不允许可用户组 wheel 中的用户，而是允许可 groupname 组中的用户。 |
+
+## 使用 pam_access
+
+pam_access 模块是另一个访问控制模块。它与 pam_listfile 类似，因为它是一种通用的访问控制机制。然而，它和 pam_listfile 有两个不同之处。首先，它仅支持模块类型 account。从本质上说，这意味着我们可以使用类似的功能来控制模块类型 auth（pam_listfile）和模块类型 account（pam_access）。这使我们能够控制不支持其中一种或两种模块类型的应用程序。第 11 章第 304 页“使用 PAM 进一步限制访问”部分提供了一个此类情况的示例。其次，它需要配置文件 /etc/security/access.conf。
+
+该文件中的条目形式如下：
+
+```
+permission : users : origins
+```
+
+/etc/security/access.conf 中的每个字段在表 5.12 中有描述。当调用 pam_access 模块时，会搜索 /etc/security/access.conf 文件，查找第一个匹配用户名以及 tty 或主机名对的条目。如果未找到匹配项，则授予访问权限。
+
+例如，假设你希望限制特定用户从特定主机在特定系统上的登录访问；让我们将本地主机称为 pyram-id。示例 5-21 说明了 pyramid 上提供访问限制的 /etc/security/access.conf 文件的示例。示例 5-21 中的行号是为了清晰起见提供的，并不是文件的一部分。在这种情况下，第 2 行禁止来自 evil.com 和 spam.org 域的所有访问。第 3 行禁止除 root 以外的所有控制台访问。第 4 行授予除 root 以外的所有用户访问权限，如果连接来自 172.17.0.0 网络。第 5 行授予 wheel 组的所有成员以及来自主机 leghorn 的用户 paul 访问权限。第 6 行拒绝所有其他访问。
+
+## 表 5.12 /etc/security/access.conf 中的字段
+
+| 字段 | 描述 |
+| :--- | :--- |
+| permission | 要么 + 表示允许访问，要么 - 表示拒绝访问。 |
+| users | 以空格分隔的用户名、组名或 netgroup 列表。所有 netgroup 名称前必须加 @。还可以使用特殊通配符 ALL 来在此字段中始终匹配。你还可以使用特殊关键字 EXCEPT 来使列表有条件化。 |
+| origins | 以空格分隔的 ttnames、hostnames、domainnames（任何以 "." 开头的名称）或网络地址（IP 地址的网络部分以 "." 结尾）列表。通配符 ALL（始终匹配）和 LOCAL（匹配任何不以 "." 结尾的名称）也可以使用。你还可以使用特殊关键字 EXCEPT 来使列表有条件化。 |

@@ -1,0 +1,13 @@
+# Password Aging and the Shadow File
+
+Password aging is the process of limiting the length of time for which a user's password is valid. Password aging may be implemented on a systemwide basis as described in the section The /etc/login.defs File on page 63. It may also be implemented on a per-user basis by using the /etc/shadow file. This file, often referred to as simply the shadow file, contains the hashed password and password aging information for each user. It does not exist, by default. Let's take a look at creating and using the shadow file.
+
+The Red Hat 5.2/6.0 distribution of Linux makes it easy to create a shadow file. If your distribution of Linux supports the shadow file, you should use it. Here's why. The shadow file contains the hashed password of each user, together with password aging information. Further, its permissions are set to read-only by root. Thus, by creating the shadow file, you significantly restrict access to the system's hashed passwords, and you get additional password aging capabilities. Since the permissions of the /etc/passwd file include world readability by default, any user is able to read and, therefore, copy it. If you don't use a shadow file, this means that all hashed passwords are retained in /etc/passwd. Enter Crack (see Chapter 12) and your system is compromised.
+
+To create the shadow file on Red Hat 5.2/6.0, simply execute the pwconv command as root. It will automatically create the /etc/shadow file and move all of the hashed passwords into it. It also removes all password entries (hashed passwords or *) from /etc/passwd and puts an x in the second field of each user account. If for some reason you need to reverse this process, it is very simple; just execute pwunconv as root. Of course, you will lose all password aging information contained in /etc/shadow after executing pwunconv.
+
+Password aging, on a per-user basis, becomes functional only with the existence of the /etc/shadow file. Once created, you can use the chage command to generate password aging entries for each user. Example 4-2 shows a sample incomplete shadow file (not related to Example 4-1 on page 60).
+
+![](bbox=[0.1, 0.51, 0.93, 0.68])
+
+Much like the password file, the shadow file contains a record (one line) for each user. Each record contains a colon-separated list of fields. There are nine fields per record. The meaning of each field is described in Table 4.1. There is no requirement to use any or all password aging parameters listed in Table 4.1. You may use those options that are appropriate for your users and environment.

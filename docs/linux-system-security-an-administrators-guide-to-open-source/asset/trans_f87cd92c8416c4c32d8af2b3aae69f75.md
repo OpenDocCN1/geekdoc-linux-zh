@@ -1,0 +1,198 @@
+
+
+## 示例 17-5 在包含文件中覆盖默认指令（续）
+
+```
+prerotate
+/usr/bin/chattr -a /var/log/netconf.log
+endscript
+postrotate
+/usr/bin/chattr +a /var/log/netconf.log
+endscript
+}
+
+/var/log/boot.log {
+  nocompress
+  monthly
+
+  prerotate
+    /usr/bin/chattr -a /var/log/boot.log
+  endscript
+  postrotate
+    /usr/bin/chattr +a /var/log/boot.log
+  endscript
+}
+```
+
+## 综合应用
+
+安装和运行 logrotate 并不需要太多工作量。基本上，你只需要识别日志文件，为它们创建轮换指令，并通过 cron 运行 logrotate。默认情况下，Red Hat 随附了示例 17-6 中所示的 crontab 以完成此任务。
+
+## 示例 17-6 从 /etc/cron.daily 运行的 logrotate crontab
+
+```
+# cat /etc/cron.daily/logrotate
+#!/bin/sh
+
+/usr/sbin/logrotate /etc/logrotate.conf
+```
+
+## swatch
+
+swatch（简单看门狗）是一款旨在监控日志文件并在发生有趣事件时通知你的程序。你可以以批处理模式运行 swatch——检查日志文件内容然后退出——或者以监控模式运行——swatch 持续监视日志文件，评估每条新记录（即尾部追踪文件）。swatch 可以比 logcheck 提供更实时的通知。然而，缺点是，你需要在每台希望监控的机器和每个日志文件上运行一个 swatch 进程，如果你没有将日志文件记录到中央机器上，这会相当繁琐。
+
+swatch 由 E. Todd Atkins 编写并维护，他在 GPL 许可下分发 swatch。swatch-3.0 提供了多种通知选项（如果你的终端支持该功能，则提供七种颜色、终端铃声、电子邮件、向终端窗口发送消息等），并且在配置便利性方面优于 swatch 版本 2。如果你已经为 swatch 版本 2 编写了配置文件，版本 3 的发布具有兼容模式以读取旧式配置文件，并提供一个可用于将旧格式文件转换为新格式的工具。
+
+### 获取 swatch
+
+swatch 可以在其官方网站或 COAST 存档中找到
+
+```
+ftp://ftp.stanford.edu/general/security-tools/swatch/
+ftp://coast.cs.purdue.edu/pub/tools/unix/swatch/
+```
+
+从 ftp 站点，你需要以下文件（或可用的最新版本）：
+
+- FILES
+- swatch.tar.asc
+- swatch-3.0.tar.gz
+
+FILES 文件包含有关获取用于签名分发包的 PGP 密钥的信息。
+
+你可以从 http://www.stanford.edu/~security 页面的链接获取 PGP 密钥。下载公钥（我们将其称为 stanford-security-pgp.asc），将密钥添加到你的 PGP 密钥环中，并验证签名是否有效（如果你使用 PGP 版本 5，则可以使用 pgpv）。
+
+```
+# pgp stanford-security-pgp.asc
+# pgp swatch.tar.asc
+```
+
+swatch-3.0 需要 Perl 5 或更高版本以及以下 Perl 模块：
+
+- Time::HiRes
+- Date::Calc
+- File::Tail
+
+如果你的系统尚未安装所需的 Perl 模块，swatch 安装脚本将尝试从综合 Perl 归档网络（CPAN）站点之一自动为你安装它们。如果失败，你可以自己安装它们。
+
+解压并解包以显示示例 17-7 中所示的文件。一如既往，阅读常规文件（COPYING、README 等）以了解有关此程序的详细信息（特别是 KNOWN_BUGS）。
+
+## 示例 17-7 swatch 发行版内容
+
+```
+CHANGES
+COPYING
+COPYRIGHT
+INSTALL
+KNOWN_BUGS
+MANIFEST
+Makefile.PL
+README
+README.Y2K
+examples/
+swatch
+swatch_oldrc2newrc
+t
+```
+
+1. 有关更多信息，请参阅 [http://www.cpan.org/](http://www.cpan.org/) 的主页。
+
+由于安装脚本可能会尝试从 CPAN 安装 Perl 模块，你可能希望在开始前阅读以下简短的 CPAN 概述。如果你已经使用过 CPAN，可以随时跳至下一节。
+
+## 顺便说一下...
+
+有数百个 CPAN 站点，但它们都是同一个主站点的镜像。镜像的存在是为了让你可以找到一个离你最近的站点，从中获取所有 Perl 相关资源。Perl 模块是为特定目的编写的库，由网络上的人们贡献。如果你愿意，可以编写并贡献你自己的模块。其中一个模块是 CPAN.pm。此模块可用于 Perl 程序中，帮助你安装程序可能需要的其他模块。然而，你应该阅读以下关于 CPAN 安全性的声明。
+
+### 安全性
+
+CPAN.pm 没有强大的安全层。CPAN.pm 帮助你安装外部、未签名、未标记的代码到你的机器上。我们将它与来自网络的校验和进行比较，就像分发包本身一样。如果有人设法篡改了分发包，他们可能也篡改了 CHECKSUMS 文件。未来的发展将朝着强认证的方向前进。
+
+如果你选择使用 CPAN.pm 模块自动安装模块，你应该至少在你的站点安装 MD5 模块，以便 CPAN.pm 模块可以验证你正在下载的包的签名。你可以在 CPAN 站点的目录中找到 MD5 模块（以及解释如何安装它的 README 文件）
+
+```
+modules/by-module/MD5/
+```
+
+如果你无法使 CPAN.pm 模块正常工作，你仍然可以从 CPAN 站点 FTP 下载所需的模块和签名，自行验证它们，并将它们放入你的 Perl 库目录（在 Red Hat 上为 /usr/lib/perl5）。
+
+当你运行 CPAN.pm 模块时，它会询问你关于 CPAN 站点偏好的问题。示例 17-8 展示了该对话的样本，为简洁起见进行了删节。由于有很多镜像，你可以选择离你近的站点。有关更多信息，请参阅 CPAN 主页。
+
+## 安装 swatch
+
+swatch 的安装相当简单。首先执行 `perl Makefile.PL`，如示例 17-8 所示。当 CPAN.pm 模块尝试定位服务器并获取模块时，会有大量的对话。你只需要进行一次 CPAN.pm 配置对话，然后你的偏好设置将被保存以供下次使用。
+
+## 示例 17-8 perl Makefile.PL 期间的 CPAN.pm 对话样本
+
+```
+# perl Makefile.PL
+
+# /usr/lib/perl5/CPAN/Config.pm initialized.
+The CPAN module needs a directory of its own to cache important
+index files and maybe keep a temporary mirror of CPAN files. This may
+be a site-wide directory or a personal directory.
+
+First of all, I'd like to create this directory. Where?
+CPAN build and cache directory? [/home/root/.cpan|/root/.cpan]
+If you want, I can keep the source files after a build in the cpan
+home directory. If you choose so then future builds will take the
+files from there. If you don't want to keep them, answer 0 to the
+next question.
+
+How big should the disk cache be for keeping the build directories
+with all the intermediate files?
+Cache size for build directory (in MB)? [10]
+The CPAN module will need a few external programs to work
+properly. Please correct me, if I guess the wrong path for a program.
+Don't panic if you do not have some of them, just press ENTER for
+those.
+
+Where is your gsisp program? [/usr/bin/gzip]
+Where is your tar program? [/bin/tar]
+Where is your unzip program? [/usr/bin/unzip]
+Where is your make program? [/usr/bin/make]
+Where is your lnxx program? [/usr/bin/lnxx]
+Where is your ncftp program? [/usr/bin/ncftp]
+Where is your ftp program? [/usr/bin/ftp]
+What is your favorite pager program? [/usr/bin/less]
+What is your favorite shell? [/bin/tcsh]
+Every Makefile.PL is run by perl in a separate process. Likewise we
+run 'make' and 'make install' in processes. If you don't want to pass to
+the calls, please specify this here.
+(e.g., PREFIX, INSTALLPREFIX, UNINST or the like) you want to pass to
+the calls, please specify this here.
+
+If you don't understand this question, just press ENTER.
+Parameters for the 'perl Makefile.PL' command? []
+Parameters for the 'make' command? []
+Parameters for the 'make install' command? []
+  Sometimes you may wish to leave the process running by CPAN alone
+without caring about them. As sometimes the Makefile.PL contains
+question you're expected to answer, you can set a timer that will
+kill a 'perl Makefile.PL' process after the specified time in seconds.
+If you set this value to 0, these processes will wait forever. This is
+the default and recommended setting.
+
+Timeout for inactivity during Makefile.PL? [0]
+We need to know the URL of your favorite CPAN site.
+Please enter it here: ftp://ftp.fu-berlin.de/pub/languages/perl/CPAN
+Testing 'ftp://ftp.fu-berlin.de/pub/languages/perl/CPAN' ...
+Listing '/usr/bin/ftp' -n'
+Local directory now /root/.cpan/sources
+GOT '/root/.cpan/sources/MIRROR0s'
+  ftp://ftp.fu-berlin.de/pub/languages/perl/CPAN' seems to work
+WAIT support is available as a plugin. You need the CPAN::WAIT module
+to actually use it. But we need to know your favorite WAIT server. If
+you don't know a WAIT server near you, just press ENTER.
+Your favorite WAIT server? [wait://i.is6.informatik.uni-dortmund.de:1404]
+If you're accessing the net via proxies, you can specify them in the
+CPAN configuration or via environment variables. The variable in the
+the $SPAN::Config takes precedence.
+Your ftp_proxy?
+Your no_proxy?
+commit: wrote /usr/lib/perl5/CPAN/Config.pm
+Checking for Date::Calc ::
+You don't have the Date::Calc module installed.
+Would you like to install the module now ?
+I issuing "/usr/bin/ftp -n"
+```
+

@@ -1,0 +1,15 @@
+| **Option** | **Description** | **Red Hat Use** |
+| --- | --- | --- |
+| PARANOID | This option causes a reverse (IP address to hostname) lookup. When the reverse lookup provides conflicting information with respect to the forward lookup, this option automatically drops the connection. Turning this off merely disables the automated nature of this mechanism; paranoid mode may still be invoked with the PARANOID option; see Table 10.3 on page 203 | No |
+| HOSTNAME | Selects automated client hostname lookups. On, by default. Turning this off simply allows for control of hostname lookups through the access control files. | No |
+| KILL_OPT | If on, refuse any connection request that has source routing turned on in the IP header. The default is off | Yes |
+
+A few notes are warranted on Table 10.1. In the “Red Hat Use” column, “No” means that the indicated option was not used or was turned off (commented out with a # character in the *Makefile*). “Yes” means that the option was used or was turned on (uncommented). “Default” means that the *Makefile* includes more than one choice for this option, and the one that was originally uncommented was used. Make sure that you read through the *README* file and the *man* pages, *hosts_access*, *hosts_options*, *tcpd*, *tcpdchk*, and *tcpdmatch*. All of these files are originally found in the */usr/src/tcp_wrappers* top-level build directory.
+
+# OH, BY THE WAY...
+
+If you are wondering how to determine which compile-time options were used by the folks at Red Hat for their distribution, it turns out that they maintain this information in an appropriately named file with a .spec suffix. This file is part of the source *RPM*, so that when you install it, it will end up in the directory */usr/src/redhat/SPECS* by default. For *TCP_wrappers*, the file is called, *tcp_wrappers-7.6.spec*. To determine the compile-time options, search this file for the *Patch* keyword, which will specify the name of the patch file; in this case it is *tcpw7.2-config.patch*, which is in the directory */usr/src/redhat/SOURCES* (use *locate* or *find* to determine the location). The file is in simple *diff* output and may be applied to the *TCP_wrappers Makefile* with a patch or read to determine which options were used. Note that this file will report a – in front of lines that were removed and a + in front of lines which were added. Although not the case for *TCP_wrappers*, you will often find additional compile-time options specified by the make invocation recorded in the .spec file. This file may also be used to build its program. See *Maximum RPM* as cited in *RPM Resources* on page 28 for further details.
+
+# Running make linux for TCP_Wrappers
+
+Once you have determined which options you want to use, implement them by modifying the *TCP_wrappers Makefile* accordingly. Even if you are going to use the defaults, as described in

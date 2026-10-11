@@ -1,0 +1,100 @@
+
+
+## 输出示例
+
+您可能还希望编写自己的脚本或程序，或使用其他（除 logcheck 和 swatch 外）现成的工具来捕获特定类型的活动。示例 8-3 展示了由 login 和 PAM 报告给 syslogd 的登录失败序列（换行是由于格式限制所致），这可能代表一次入侵尝试。
+
+### 示例 8-3 使用相同用户名尝试登录失败
+
+```
+Mar  2 17:54:15 topcat login[14435]: FAILED LOGIN 1 FROM roadrunner FOR guest, Authentication failure
+Mar  2 17:54:23 topcat login[14435]: FAILED LOGIN 2 FROM roadrunner FOR guest, Authentication failure
+Mar  2 17:54:28 topcat login[14435]: TOO MANY LOGIN TRIES (3) FROM roadrunner FOR guest, Have exhausted maximum number of retries for service.
+Mar  2 17:54:28 topcat PAM_pwdb[14435]: 3 authentication failures; (uid=0) -> guest for login service
+```
+
+然而，请注意，不同的攻击会产生不同的日志条目（通常称为签名）。不幸的是，由于攻击的动态性质，收集一份详尽的攻击模式列表（它永远不可能完整！）是困难的。识别攻击的过程被称为入侵检测。第 172 页的“入侵检测”部分提供了与主题相关的一些资源。在此期间，示例 8-4 向我们展示了另一组不同的登录失败尝试（换行）。
+
+### 示例 8-4 使用不同用户名尝试登录失败
+
+```
+Mar  2 18:00:10 topcat login[14478]: FAILED LOGIN 1 FROM roadrunner FOR guest, Authentication failure
+Mar  2 18:00:16 topcat login[14478]: FAILED LOGIN 2 FROM roadrunner FOR joe, Authentication failure
+Mar  2 18:00:20 topcat login[14478]: FAILED LOGIN 3 FROM roadrunner FOR mary, Authentication failure
+Mar  2 18:00:24 topcat login[14478]: FAILED LOGIN SESSION FROM roadrunner FOR sdm, Authentication failure
+Mar  2 18:00:24 topcat PAM_pwdb[14478]: 1 authentication failure; (uid=0) -> sdm for login service
+Mar  2 18:00:24 topcat PAM_pwdb[14478]: 1 authentication failure; (uid=0) -> mary for login service
+Mar  2 18:00:24 topcat PAM_pwdb[14478]: 1 authentication failure; (uid=0) -> joe for login service
+Mar  2 18:00:24 topcat PAM_pwdb[14478]: 1 authentication failure; (uid=0) -> guest for login service
+```
+
+关于示例 8-3 和 8-4 的重要之处在于注意到任何可能用于编写脚本来捕获这些入侵尝试的类似关键字或短语。在这种情况下，请注意，虽然这两个示例显示了两种攻击的不同日志条目，但在每次攻击序列中，进程标识符（关键词 login 或 PAM_pwdb 后括号内的数字）是相同的。这一点，再加上事实：关键短语 authentication failure 出现在与这些攻击相关的几乎每个条目中，使得编写脚本来捕获这些信息相当直接（当然，在示例 8-3 中，这可能只是一个忘记了他或她密码的用户，代表着误报）。如果您决定编写自己的脚本和/或程序，请充分利用已存在的脚本。阅读它们并从他人的经验——和错误——中受益。
+
+## klogd 守护进程
+
+klogd 守护进程捕获并记录 Linux 内核消息。通常，它将所有消息提交给 syslog 进行记录。然而，如果使用 -t *filename* 参数调用，它会将所有消息记录到 *filename* 中，而不是将它们传递给 *syslog*。当指定替代文件用于记录时，klogd 会将所有级别或优先级的消息报告到该文件。klogd 没有类似于 /etc/syslogd.conf 的配置文件。让 klogd 避免使用 syslogd 的优势主要在于调试。但是，如果某人的内核已被入侵，使用此功能可能有助于确定修改内容。如果您熟悉内核及其源代码，这可能很有价值。如果不熟悉，一旦确定您的内核已被未经授权的方式修改，最好从干净备份中恢复（在第 3 章中讨论）。
+
+> **注意**
+>
+> syslogd 和 klogd 都在系统进入运行级别 2 时启动。当系统降至运行级别 1 时，它们会被终止。在 Red Hat 5.2/6.0 中，控制脚本是 /etc/rc.d/init.d/syslog。
+
+## 其他日志
+
+您将在 /var/log 以及其他系统位置（取决于您拥有的发行版和您配置的应用程序）找到许多其他日志文件。当然，/etc/syslog.conf 将列出由 syslogd 管理的所有日志文件的名称和位置。其他日志文件将由其他应用程序管理。例如，在 Red Hat 5.2/6.0 中，Apache Web 服务器生成 /var/log/htaccess.log 文件以记录客户端访问，以及 /var/log/httpd/error.log 以捕获 syslog 之外的错误状况。cron 实用程序维护自己的信息日志文件 /var/log/cron。linuxconf 实用程序每当记录系统重新配置信息时都会生成 /var/log/netconf.log 等日志文件。Samba（一种基于服务器消息块 (SMB) 的实用程序，功能类似于 NFS）在其 /var/log/samba 目录中维护其日志文件。您将在 /var/log 中找到另一组与连接和进程记账相关的文件。这些文件包括 wtmp、paccct 和 lastlog，每个都在第 7 章中讨论。
+
+这些文件中的许多包含与安全相关的信息，因此需要您的关注。标准日志文件在本文各处讨论；其他则依赖于应用程序和站点。
+
+## syslog 的替代方案
+
+在非常繁忙的系统上，syslogd 可能会丢失消息。在这样的系统上，您可能希望查看 cyclog。它是 syslogd 的替代方案，可以缓冲日志消息并确保日志文件同步。它还自动轮转它管理的日志文件。它是 daemontools 实用程序集的一部分，可以从以下地址获取：
+
+```
+ftp://koocbera.math.umich.edu/ww/daemon-tools.html
+```
+
+## 审计实用程序
+
+一种公开可用的工具，对于捕获超出 syslogd 或系统记账（在第 7 章中讨论）范围以外的系统活动非常有用，那就是 auditd。此实用程序可以从以下地址获取：
+
+```
+ftp://ftp.tet.org/pub/linux/auditd/
+```
+
+此实用程序允许捕获各种系统事件，如电子邮件、入站和出站网络连接、登录、su 使用、文件访问和内核模块更改。与依赖其他进程生成消息的 syslogd 不同，auditd 基于配置文件在内核中捕获系统调用。它类似于 IRIX 6.5.x、Solaris 2.x 中的基本安全模块 (BSM) 或 IRIX 6.5.x 中的安全审计跟踪 (SAT)。
+
+auditd 实用程序可以生成其所运行系统的相当完整的审计跟踪。这种详细程度对于暴露于互联网的系统（如防火墙、Web 服务器和 ftp 服务器）非常有用。在包含敏感数据的内部系统上运行此实用程序也有优势。
+
+安装此工具需要重新构建内核，因此在首次为 Linux 内核构建之前，请确保您阅读了在线文档 /usr/src/linux/README 和 /usr/doc/HOWTO/kernel-HOWTO。第 15 章第 420 页的“重新构建和重新编译内核”描述了为透明加密文件系统 (TCFS) 重新构建内核的过程，并提供了一个好的例子。
+
+## 摘要
+
+本章概述了 syslog 实用程序。我们描述了 syslogd 的操作和配置文件 /etc/syslog.conf。
+
+## 延伸阅读
+
+### 通用系统日志
+
+- Frisch, Aileen, *Essential System Administration*, 2d ed., Sebastopol, California, O’Reilly & Associates, Inc., 1995.
+- Hein, Jochen, *Linux Companion for System Administrators*, Harlow, England, Addison-Wesley, 1999.
+- Nemeth, Evi, et al., *UNIX System Administration Handbook*, Englewood Cliffs, New Jersey, Prentice Hall PTR, 1995.
+
+### 入侵检测
+
+有一个入侵检测系统 (IDS) 邮件列表。您可以通过向 majordomo@uow.edu.au 发送电子邮件，在消息主体中包含 subscribe ids 来订阅它。
+
+IDS 常见问题 (FAQ) 可在以下地址获取：
+
+```
+http://www.ticm.com/kb/faq/idsfaq.html
+```
+
+关于 IDS 和日志管理工具的研究可在以下地址找到：
+
+```
+http://www-rnks.informatik.tu-cottbus.de/~schirrey/ids.html
+```
+
+要了解入侵检测的良好概述，请阅读这本书：
+
+- Escamilla, Terry, *Intrusion Detection: Network Security beyond the Firewall*, New York, New York, John Wiley & Sons, Inc., 1998.
+

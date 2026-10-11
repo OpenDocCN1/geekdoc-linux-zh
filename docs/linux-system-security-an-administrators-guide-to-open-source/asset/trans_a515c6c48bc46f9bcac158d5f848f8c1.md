@@ -1,0 +1,212 @@
+
+
+## 延伸阅读
+
+### 在线文档
+
+以下列表列出了随 Tripwire 一起提供的文档。
+
+- /usr/doc/tripwire-1.2/Changelog
+- /usr/doc/tripwire-1.2/FAQ
+- /usr/doc/tripwire-1.2/INTERNALS
+- /usr/doc/tripwire-1.2/README
+- /usr/doc/tripwire-1.2/README.FIRST
+- /usr/doc/tripwire-1.2/Readme
+- /usr/doc/tripwire-1.2/TODO
+- /usr/doc/tripwire-1.2/WHAT'SNEW
+- /usr/doc/tripwire-1.2/docs
+- /usr/doc/tripwire-1.2/docs/README
+- /usr/doc/tripwire-1.2/docs/appdev.txt
+- /usr/doc/tripwire-1.2/docs/design.doc.ps
+- /usr/doc/tripwire-1.2/docs/sans.txt
+- /usr/man/man5/tw.config.5
+- /usr/man/man8/siggen.8
+- /usr/man/man8/tripwire.8
+
+### 网站
+
+以下网络资源包含有关 Tripwire 的额外信息。
+
+http://www.tripwiresecurity.com/
+
+## 太空，黑客前沿
+
+### 加密文件系统与透明加密文件系统
+
+加密是一件美妙的事情。在一个你永远无法确定谁在访问你的系统的时代，通过加密保护数据的能力可以帮助你夜安枕。在本章中，我们将探讨两种公开可用的工具——加密文件系统（CFS）和透明加密文件系统（TCFS）——它们将协助你保护数据安全。
+
+这两个实用程序均基于 NFS 客户端-服务器模型运行，因此你需要确保在适当的系统上具备 NFS 客户端和服务器功能。
+
+#### 加密文件系统概述
+
+我们将首先查看 CFS，因为它是 TCFS 的核心。在 *第 431 页的《CFS 与 TCFS 比较》* 中，我们将讨论两者之间的差异。
+
+与能够按*单文件*基础加密数据的 PGP 不同，CFS 提供了一种通过标准 UNIX 文件系统接口加密目录及其内容的机制。这样，CFS 允许通过几乎任何文件系统（包括 Linux ext2 文件系统和 NFS）来加密文件和目录。CFS 永不在磁盘上存储明文，也永远不通过网络传输明文。
+
+用户通过使用口令来创建和访问其加密目录，该口令用于生成用户所选加密算法的加密密钥。创建 CFS 目录后，用户可以使用 `cftattach` 命令和他们的口令来访问它。在 CFS 目录内创建的所有内容都会对用户透明地被加密。
+
+从系统管理的角度来看，CFS 的初始设置非常简单，并在 *第 408 页的《CFS 管理任务》* 中进行了描述。CFS 的主要影响在于与对需要解密和加密的 CFS 资源的活动读写相关的性能（例如，在加密状态下捕获和恢复 CFS 资源的备份和恢复）。在预期对 CFS 进行多次同时访问的环境中，系统应配置大量的内存和高速处理器。或者，此类环境使用 TCFS 可能更有益，TCFS 在 *第 416 页的《TCFS 概述》* 中进行了讨论。
+
+### CFS 事件流
+
+CFS 的实现不是编译型的。图 15.1 展示了应用程序如何将读写请求传递给 CFS 守护进程（cfasd）以进行解密和加密服务的方式。
+
+应用程序实际上对 CFS 一无所知，因为它处理的是一个本地目录。如果本地目录恰好是一个 NFS 挂载点（通过回环接口 localhost 在端口 3049（默认）上连接到 cfsd）。cfsd 既充当 NFS 服务器（通过挂载点（通常是 /crypt）响应客户端请求），也充当加密引擎（通过系统调用）。文件系统对待来自 cfsd 的读写请求的方式与对待任何其他读写请求的方式相同。因此，加密/解密机制对用户和内核是完全透明的。
+
+现在让我们来看看获取和安装 CFS。
+
+### 获取和安装 CFS
+
+CFS 由 Matt Blaze 编写（版权归 AT&T 所有）。它免费可用，但受美国出口管制法律约束。有关更多详细信息，请参阅构建目录中的 README.install 文件。
+
+在撰写本文时，CFS 的最新版本是 1.4.0beta2。它可以在美国和加拿大通过以下网址获取：
+
+http://cryptography.org/
+
+在那里，你必须首先证明你是美国或加拿大的公民或永久居民。然后，你将被允许访问下载页面（该页面经常更改）。
+
+CFS 版本 1.3.3 在全球范围内可通过以下网址获取：
+
+http://www.replay.com/redhat/cfs.html
+
+![](img/7933c44717ab0711177ea7153f959fc5_448_0.png)
+
+**图 15.1 CFS 事件流**
+
+以 RPM 格式。那里既有源代码 RPM，也有 i386 二进制 RPM。如果你只想安装 RPM，请检查 PGP 签名，然后执行
+
+```bash
+# rpm -ivh cfs-1.3.3-3.i386.rpm
+```
+
+你也可以类似地安装源 RPM。
+
+如果你希望编译 1.4.beta2 版本，你需要进行一些更改。这些更改将允许在 Red Hat 5.2 或 6.0 上进行编译。首先在构建目录（我们将使用 /usr/src/custom/cfs1.4）中提取发行版，
+
+```bash
+# cd /usr/src/custom/cfs1.4
+# tar xzvf cfs-1.4.0.beta2_tar.gz
+```
+
+在 *Makefile* 中，确保示例 15-1 中列出的标志如所示设置。此外，务必注释掉 *cc=you_forget_to_edit_the_makefile* 这一行，如示例 15-1 所示。
+
+**示例 15-1 正确的 CFS 版本 1.4.0beta2 Makefile 条目**
+
+```text
+<many lines not shown>
+BINDIR=/usr/bin    # For our examples
+ETCDIR=/usr/sbin  # For our examples
+<many lines not shown>
+CC=gcc
+COPF=-O2 -DPROTOTYPES=1
+<many lines not shown>
+CFLAGS=${COPF} -D __STDC__ -D_FILeno -INO -I8(RINCLUFES)
+LIBS=
+COMPAT=
+RPCOFTS=-k -h
+#CC=you forgot to edit the makefile
+<many lines not shown>
+<remainder of file not shown>
+```
+
+接下来，你需要对文件 *tru*erand.c 应用一些更正（参见 http://www.mit.edu/8008/bloom-picayune/cfs/）。在该文件中，找到
+
+```c
+longjmp(env, 1);
+```
+
+并将其更改为
+
+```c
+siglongjmp(env, 1);
+```
+
+还找到
+
+```c
+if (setjmp(env))
+```
+
+并将其更改为
+
+```c
+if (sigsetjmp(env, 1))
+```
+
+保存更改并关闭文件。现在运行
+
+```bash
+# make cfs
+# make install_cfs
+```
+
+你的编译和安装应该能顺利进行。
+
+**注意**
+
+> 如果你运行 *make cfs* 时编译失败，请修改文件 *nfsrpc_svr.c* 和 *nfsproto_svr.c*，使所有 *xdr_argument* 和 *xdr_result* 的实例分别变为 _xdr_argument* 和 _xdr_result*。不要全局替换这些变量，因为某些实例已经具有前导下划线 _。此步骤必须在 *make cfs* 失败后执行。
+
+现在你准备好设置 CFS 了。
+
+### CFS 管理任务
+
+安装 CFS（任一版本）后，root 用户需要配置 CFS 以供使用。步骤相当简单，完成后可以通过启动脚本实现自动化。以下两个部分涵盖了详细信息。
+
+#### 建立引导挂载点
+
+**注意**
+
+> 如果你是通过安装 `cfs-1.3.3-i386.rpm` 来安装 CFS 的，那么你只需要执行本节中的 `exportfs -a` 步骤。
+
+CFS 需要为明文目录（称为*虚拟目录*）提供一个引导挂载点。你可以为这个挂载点选择任何名称。我们将使用 `/.cfsfs`。创建该目录并将权限设置为 null。
+
+```bash
+# mkdir /.cfsfs
+# chmod 0 /.cfsfs
+```
+
+通过在 `/etc/exports` 中放入以下条目来导出这个新创建的资源
+
+```text
+/.cfsfs      localhost
+```
+
+并使用以下命令导出该资源
+
+```bash
+# /usr/sbin/exportfs -a
+```
+
+每次重启时，由于它存在于 `/etc/exports` 中，该资源将自动导出。
+
+接下来创建 CFS 挂载点。再次，选择任意名称。在我们的示例中，我们将使用 `/crypt`。
+
+```bash
+# mkdir /crypt
+# chmod 755 /crypt
+```
+
+至此，你已准备好使资源可用。
+
+**运行 cfsd 并挂载引导目录**
+
+为了将虚拟目录 `/crypt` 挂载到引导挂载点 `/.cfsfs`，你首先需要运行 `cfsd`。默认情况下，`cfsd` 在端口 3049 上运行，但如果出于某种原因你无法让 `cfsd` 在该端口上运行，你可以将所需的端口号作为参数指定；例如，在默认端口 3049 上启动它
+
+```bash
+# /usr/sbin/cfsd
+```
+
+或在不同的端口上，例如 9111，
+
+```bash
+# /usr/sbin/cfsd 9111
+```
+
+接下来，将虚拟目录挂载到引导目录。
+
+```bash
+# /bin/mount -o port=3049,intr localhost:/.cfsfs /crypt
+```
+
+选项 `port=3049` 是必需的，因为默认情况下 `mount` 命令尝试与 NFS 通信，而 NFS 监听端口号 2049。你可能希望在启动脚本（例如 `/etc/rc.d/rc.local`）中自动化此过程。示例 15-2 中的脚本片段将起到作用。
+

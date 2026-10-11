@@ -1226,6 +1226,7 @@
 +   [Linux 系统命令：终极手册](docs/linux-system-commands-the-ultimate-shop-manual/README.md)
 +   [程序员 Linux 系统指南](docs/linux-system-guide-for-programmers/README.md)
 +   [Linux 系统：Linux 操作系统入门指南：Linux 系统要求](docs/linux-system-how-to-get-started-with-the-linux-operating-sys/README.md)
++   [Linux 系统安全：开源安全工具管理员指南](docs/linux-system-security-an-administrators-guide-to-open-source/README.md)
 +   [Linux 系统：什么是 Linux 操作系统？：Linux 文件系统](docs/linux-system-what-is-linux-operating-system-linux-file-syste/README.md)
 +   [Linux 对抗微软：发现 Linux 相比微软的卓越性能与节能优势](docs/linux-tackles-microsoft-discover-the-superior-performance-an/README.md)
 +   [嵌入式系统 Linux TCP/IP 网络指南](docs/linux-tcpip-networking-for-embedded-systems-networking/README.md)
