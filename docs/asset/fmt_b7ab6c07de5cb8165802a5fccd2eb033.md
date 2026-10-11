@@ -1,0 +1,174 @@
+
+**步骤 4** 假设我们创建的变量 `A` 是游戏中的生命值。每次玩家死亡时，数值减少 1。程序员可以插入一个类似以下的例程：
+
+```python
+a=a-1
+print("You’ve just lost a life!")
+print("You now have", a, "lives left!")
+```
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_103_3.png)
+
+### 第 5 步
+
+虽然我们已知变量 `A` 是存活的，并且玩家刚刚失去了一条命，但随意观看的观众或查看代码的人可能并不知情。请想象一下，如果代码有两万行长，而不仅仅是我们的七行，你能明白注释是多么方便。
+
+### 第 8 步
+
+内联注释是紧跟在代码段之后的注释。拿我们上面的示例来说，除了在单独的一行中插入代码外，我们还可以使用：
+
+```python
+a=10 # 将 A 的初始值设置为 10
+print("The value of A is:", a) # 打印 A 的当前值
+a=a-1 # 玩家失去一条命！
+print("You've just lost a life!")
+print("You now have", a, "lives left") # 告知玩家，并显示 A 的当前值（剩余生命数）
+```
+
+### 第 6 步
+
+本质上，新代码连同注释看起来可能像这样：
+
+### 第 9 步
+
+注释，即井号符号，也可以用于注释掉你不希望程序执行的代码段。例如，如果你想移除第一个 `print` 语句，你可以使用：
+
+```python
+### 将 A 的初始值设置为 10
+a=10
+### 打印 A 的当前值
+print("The value of A is:", a)
+### 玩家失去一条命！
+a=a-1
+### 告知玩家，并显示 A 的当前值（剩余生命数）
+print("You've just lost a life!")
+print("You now have", a, "lives left")
+```
+
+```python
+# print("The value of A is:", a)
+```
+
+### 第 7 步
+
+你可以以不同的方式使用注释。例如，块注释（Block Comments）是一大段文本，用于详细说明代码中正在发生的事情，例如告诉代码阅读者你打算使用哪些变量：
+
+### 第 10 步
+
+你还使用三个单引号来注释掉块注释或多行注释部分。将它们放在你要注释的区域之前和之后，使它们生效：
+
+```text
+# This is the best game ever, and has been developed by a crack squad of Python experts # who haven't slept or washed in weeks. Despite being very smelly, the code at least works really well..
+```
+
+```text
+"""
+This is the best game ever, and has been developed by a crack squad of Python experts who haven't slept or washed in weeks. Despite being very smelly, the code at least works really well.
+"""
+```
+
+## 处理变量
+
+我们已经在 Python 代码中看到了一些变量的例子，但始终值得深入了解它们的运作方式以及 Python 如何创建并给变量分配特定值。
+
+### 各种变量
+
+在本教程中，你将在 Python 3 IDLE 壳（Shell）中工作。如果你还没有打开，请打开 Python 3 或关闭之前的 IDLE Shell，以清除所有旧代码。
+
+- **第 1 步**
+
+  在某些编程语言中，你需要使用美元符号来表示字符串，字符串是由多个字符组成的变量，例如一个人的名字。在 Python 中，这并非必要。例如，在 Shell 中输入：`name`="David Hayward"（或者使用你自己的名字，除非你也叫 David Hayward）。
+
+- **第 3 步**
+
+  你之前已经看到，变量可以使用变量名之间的加号进行连接。在我们的示例中，我们可以使用：`print (name + ": " + title)`。引号之间的中间部分允许我们添加冒号和空格，因为变量连接时没有空格，所以我们需要手动添加它们。
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_105_0.png)
+
+![](img/d501697c83491ed0bb4b382b0d28ef0a_105_1.png)
+
+- **第 2 步**
+
+  你可以通过发出 `type ()` 命令来检查正在使用的变量类型，将变量名放在括号内。在我们的示例中，这将显示为：`type (name)`。添加一个新的字符串变量：`title`="Descended from Vikings"。
+
+- **第 4 步**
+
+  你还可以将变量组合在另一个变量中。例如，要将 `name` 和 `title` 两个变量组合成一个新的变量，我们可以使用：`character`=`name` + ": " + `title`
+
+  然后输出新变量的内容为：`print (character)`
+
+  数字以不同的变量存储：`age`=44
+
+  `Type (age)`
+
+  正如我们所知，这些是整数。
+
+## 处理变量
+
+- **第 5 步**
+
+  然而，你不能在同一个命令中组合字符串和整型变量，就像组合一组类似变量那样。你需要将其中一个转换为另一个，反之亦然。当你尝试组合两者时，你会收到一条错误消息：
+
+  `print (name + age)`
+
+```python
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license"() for more information.
+>>> name=input(name)
+'>>> "David Hayward"
+David Hayward
+>>> print (name)
+David Hayward
+>>> char="descended from vikings"
+>>> print (name + " " + title)
+David Hayward: Descended from Vikings
+>>> char="-4"  # title
+>>> char=""
+>>> print(char+name)
+David Hayward
+>> "type(age)
+<class "str">
+>>> age= "40"
+>> "type(age)
+<class "int">
+>>> print (name+age)
+'>>> print (name+age)
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license"() for more information.
+>>> name=input(name)
+'>>> "David Hayward"
+David Hayward
+>>> print (name)
+David Hayward
+>>> title="descended from vikings"
+>>> print (name + " " + title)
+David Hayward: Descended from Vikings
+>>> char="-4"  # title
+>>> char=""
+>>> print(char+name)
+David Hayward
+>> "type(age)
+<class "str">
+>>> age= "40"
+>> "type(age)
+<class "int">
+>>> print (name+age)
+Traceback (most recent call last):
+  File "<pyshell#10>", line 1, in <module>
+    print (name+age)
+TypeError: Can't convert 'int' object to str implicitly
+```
+
+- **第 6 步**
+
+  这是一个称为类型转换（TypeCasting）的过程。Python 代码是：
+
+  `print (character + " is " + str(age) + " years old.")`
+
+  或者你可以使用：
+
+  `print (character, "is", age, "years old.")`
+
+  再次注意，在最后一个示例中，引号中的单词之间不需要空格，因为逗号将 `print` 的每个参数分开处理。
