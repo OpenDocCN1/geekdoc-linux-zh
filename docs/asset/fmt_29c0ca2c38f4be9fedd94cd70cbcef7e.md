@@ -1,0 +1,41 @@
+
+# Linux 词典
+
+- `.SRP` 脚本文件 (QuickLink) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SRZ` 源文件 (DataFlex) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SS` 位图图图形 (Splash) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SSA` 视频文件 (Sub Station Alpha) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SSD` 数据文件 (SAS/PC) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SSD01` SAS 数据库 (Dos) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- SAS 数据集 (Unix) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SSF` 电子表格文件 (Enable) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SSP` 数据文件 (SAS Transport) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.ST` 磁盘镜像文件 (Atari) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.ST` 乐库 (Scream Tracker) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.ST` 源代码文件 (Little SmallTalk) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STA` 邮章文件 (NeoPaint) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STA` 保存状态 (Reflection 4.0) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STA` 栈文件 (SpinMaker Plus) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STB` 存根库 (Genus GX Kernel) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STD` 标准脚本文件 (LocScript) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STD` 状态转换图 (Prosa) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STF` 压缩存档 (SHRINKTOFT) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STL` 固形光化文件 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STM` 音乐文件 (Scream Tracker) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STM` 音乐模块 (MOD) (Scream Tracker) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STM` 包含服务器端 .html 文件的短后缀 (SSI) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STO` 状态文件 (Prosa) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STQ` 存根文件 (Genus Kernel) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STR` 文本文件 (Statistica) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STR` 屏屏文件 (Soft) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STS` 项目列表 (Microsoft C++) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STW` 歌曲文件 (Music) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STX` 数据文件 (Smart) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STX` 书籍文件 (Word) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STY` 样式表 (Generic) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.STY` 样式表 (Ventura) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SUI` 工具包 (Toolkit) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SUM` 摘要文件 (Generic) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SUN` 栅格文件 (Sun) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SUP` 补充字典 (Word) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
+- `.SVD` 文文件 (Word) 来自 Whatis–Extensions `http://www.tldp.org/LDP/Linux-Dictionary/html/index.html`
