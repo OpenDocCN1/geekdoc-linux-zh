@@ -1,0 +1,73 @@
+
+每一代或每种类型的 `CPU`（`80386`、`80486`、`Pentium`、`Pentium Pro`/`Pentium-II`/`Pentium-III`/`Celeron`，以及 `Athlon`）都需要其自己的主板芯片组设计。例如，你不能将 `80486` 芯片组用于 `Pentium`（除了 `Pentium Overdrive`，它旨在用于 `80486` 主板）。在接下来的章节中，我将重点关注 `Pentium` 及以后 `CPU` 的芯片组，因为这些是你在新型和较新主板上最可能遇到的芯片组。
+
+## 识别你的芯片组
+
+如果你已经有一块主板但不确定它使用的是什么芯片组，请查看主板上永久焊接的最大芯片。这些芯片上应该有一些标识。例如，图 2.11 展示了图 2.1 中所示主板上的一个主要芯片。该芯片清楚地表明芯片组来自 `VIA`，实际上它是 `VIA MVP3` 芯片组的一部分。你可能需要浏览芯片组制造商的网站来查找特定芯片 ID 代码的参考信息。
+
+![](img/860d0c38bd76c9ded976e9d1e179ef25_77_0.png)
+
+**图 2.11**
+
+`主板的芯片组通常可以通过板上最大芯片上的标记来识别。`
+
+**注意**
+
+主板并不是唯一使用芯片组的计算机组件。扩展卡制造商常常试图通过遮盖关键组件上的贴纸，甚至用他们自己的丝印代替芯片组制造商的丝印来隐藏芯片组制造商的身份。某些芯片组，特别是在高端视频卡和某些主板上，运行速度如此之快，以至于主板制造商在组件上放置了散热片。`你不应该尝试移除已粘合到芯片组组件上的散热片`。你可以安全地移除贴纸，但如果你发现芯片上有一个玻璃窗口，请重新贴好贴纸或在窗口上贴一个新的。此类窗口通常用于可擦除可编程只读存储器（`EPROM`）芯片，并通过将芯片暴露在紫外线下辐射来擦除内存。阳光照射可能会意外地擦除这样的芯片，这通常不是你想要发生的。
+
+识别芯片组的另一种方法是检查 `Linux` `/proc` 目录中的文件。如果主板具有 `PCI` 总线，`/proc/pci` 目录可以提供特别有用的信息。
+
+例如，除了其他条目外，图 2.1 和 2.11 中所示主板上的计算机生成以下 `/proc/pci` 信息：
+
+```
+Bus  0, device  7, function  0:
+    ISA bridge: VIA Technologies, Inc. VT82C586/A/B PCI-to-ISA  [Apollo VP]  (rev 71).
+    Bus  0, device  7, function  1:
+        IDE interface: VIA Technologies, Inc. VT82C586  IDE  [Apollo]  (rev 6).
+        Master Capable.  Latency=64.
+        I/O at 0xe400  [0xe40f].
+    Bus  0, device  7, function  2:
+        USB Controller: VIA Technologies, Inc. VT82C586B  USB  (rev 2).
+        IRQ 5.
+        Master Capable.  Latency=64.
+        I/O at 0xe000  [0xe01f].
+    Bus  0, device  7, function  3:
+        PCI bridge: VIA Technologies, Inc. VT82C586B  ACP1  (rev 16).
+```
+
+注意 `82C586` 标识符既出现在芯片上，也出现在几个 `/proc/pci` 条目中。该芯片在 `/proc/pci` 中的多次出现表明它服务于多个功能。
+
+## ALi 芯片组
+
+`Acer Laboratories, Inc.`（`ALi`，位于 `http://www.ali.com.tw`）生产用于各种主板的几种芯片组。这些芯片组及其基本特性总结在表 2.1 中。
+
+`ALi Aladdin IV`、`V` 和 `7` 芯片组旨在用于 `Socket 7` 主板。`Aladdin 7` 专门针对 `AMD K6-III` 营销，其特点是包含广泛的多媒体功能，包括通常存在于独立卡上的音频和视频功能。不幸的是，目前这些功能没有可用的 `Linux` 驱动程序。
+
+`Aladdin Pro II`、`TNT2` 和 `Pro IV` 芯片组是 `ALi` 参与 `Pentium-II` 芯片组竞赛的产品。与 `Aladdin 7` 类似，`TNT2` 包含视频卡芯片组功能，但不支持声音。
+
+`Linux` 内核包含对 `ALi` 快速 `EIDE` 控制器的支持，因此你可以从连接到基于 `ALi` 的主板的 `EIDE` 设备中获得全速性能。
+
+| 名称 | 最大总线速度 | 支持的 CPU | SMP 支持 | 内存类型 | 内存错误处理 | 最大内存 | 最大可缓存内存 | AGP 支持 | IDE 支持 | USB 支持 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `Aladdin IV` | 83.3MHz | `Pentium` 级别 | 否 | `FPM`, `EDO`, `SDRAM` | 奇偶校验, `ECC` | 1GB | 512MB | 否 | `Ultra-33` | 是 |
+| `Aladdin V` | 100MHz | `Pentium` 级别 | 否 | `FPM`, `EDO`, `SDRAM` | 奇偶校验, `ECC` | 1GB | 1GB | `1x` 和 `2x` | `Ultra-33` | 是 |
+| `Aladdin 7` | 133MHz | `Pentium` 级别 | 否 | `SDRAM` | 奇偶校验, `ECC` | 1GB | 1GB | `1x-8x` | `Ultra-53` | 是 |
+| `Aladdin Pro II` | 100MHz | `Pentium II` | 是 | `FPM`, `EDO`, `SDRAM` | 奇偶校验, `ECC` | 1GB (`FPM`) 或 2GB (`SDRAM` 或 `EDO`) | 不适用 | `1x` 和 `2x` | `Ultra-33` | 是 |
+| `Aladdin TNT2` | 100MHz | `Pentium II` | 否 | `EDO`, `SDRAM`, `VC-SDRAM` | 奇偶校验, `ECC` | 1.5GB | 不适用 | `1x` 和 `2x` | `Ultra-33` 或 66 | 是 |
+| `Aladdin Pro IV` | 100MHz | `Pentium II`, `Pentium III`, `Celeron` | 否 | `EDO`, `SDRAM`, `VC-SDRAM` | 奇偶校验, `ECC` | 1.5GB | 不适用 | `1x-4x` | `Ultra-66` | 是 |
+
+![](img/860d0c38bd76c9ded976e9d1e179ef25_79_0.png)
+
+# 第一部分
+
+## AMD 芯片组
+
+`AMD` (`http://www.amd.com`) 是芯片组市场的新晋者。除了与 `VIA` 合作生产名为 640 的 `VIA Apollo VP-2` `Pentium` 级芯片组的近克隆品这一短暂尝试外，`AMD` 的第一个芯片组产品是 750（又名 `Irontate`），它是为支持 `AMD Athlon` `CPU` 而开发的。`750` 具有 `200MHz` 总线速度；`768MB` `SDRAM` 内存；`AGP`、`PCI` 和 `ISA` 总线；两个 `Ultra-66` `IDE` 端口；以及四个 `USB` 端口。作为 `Athlon` `CPU` 的芯片组，`AMD 750` 不能用于 `Pentium` 或 `Pentium-III`/`II` 主板。
+
+## Intel 芯片组
+
+`Intel` (`http://www.intel.com`) 提供了大量的芯片组，如表 2.2 所述。事实上，`Intel` 主导了 `Pentium-II` 芯片组市场。在 `Intel` 停止开发新的 `Pentium` 级芯片组之前，该公司也主导了该市场。然而，随着 `Intel` 从 `Pentium` `CPU` 转向，它将 `Socket 7` 芯片组市场留给了竞争对手。
+
+`Intel` 的芯片组在所有级别的计算机中都非常流行。`810` 芯片组在笔记本电脑上特别流行，因为它包含集成图形。`Intel` 在 `http://support.intel.com/support/graphics/intel810/linuxsoftware.htm` 分发适用于此芯片组的 `Linux` `X` 服务器，格式包括 `RPM` 和 `tarball`。`Linux` 内核包含对集成在近期 `Intel` 芯片组中的高级 `EIDE` 控制器的支持，因此你可以充分利用这些控制器的速度。在 `800` 系列芯片组中，`ISA` 接口是可选的，实际上，基于这些芯片组的许多主板缺少 `ISA` 插槽。这种变化降低了芯片组的成本和复杂性，但限制了你的扩展卡选择。近期的 `Intel` 芯片组，包括 `820` 和 `840`，也使用 `RDRAM`（见第 3 章），而不是较旧的 `RAM` 技术。`RDRAM` 增加了内存访问速度，但 `RDRAM` 仍然相对较新。
+
+## SiS 芯片组
