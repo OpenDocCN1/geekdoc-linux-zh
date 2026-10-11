@@ -1,0 +1,330 @@
+
+| `wversion` | `WORD` | 请求的 Windows sockets 版本。 |
+| `itdata` | `WSADATA*` | 用于接收信息的结构体指针。 |
+
+## 返回值
+
+`WSAStartup` 成功时返回 0，返回 `SOCKET_ERROR` 表示发生了错误。
+
+# WSAGocket 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = WSAGocket ( &idata );
+```
+
+## 描述
+
+`WSAGocket` 获取有关当前正在使用的 Windows Sockets 实现的信息。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `itdata` | `WSADATA*` | 用于接收信息的结构体指针。 |
+
+## 返回值
+
+（源码中未描述返回值）
+
+# WSACleanup 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = WSACleanup ( );
+```
+
+## 描述
+
+`WSACleanup` 终止 Windows Sockets DLL。
+
+## 返回值
+
+`WSACleanup` 成功时返回 0。
+
+# Socketclose 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = socketclose ( socket );
+```
+
+## 描述
+
+`socketclose` 关闭指定的套接字描述符。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `socket` | `SOCKET` | 要关闭的套接字描述符。 |
+
+## 返回值
+
+`socketclose` 成功时返回 0。
+
+# Setsockopt 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = setsockopt ( socket, level, opt, optval, optlen );
+```
+
+## 描述
+
+`Setsockopt` 允许应用程序更改与套接字或其使用的协议相关的选项。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `socket` | `SOCKET` | 套接字描述符。 |
+| `level` | `int` | 标识协议（例如 TCP）的整数。 |
+| `opt` | `int` | 标识选项的整数。 |
+| `optval` | `const char FAR*` | 包含值的缓冲区地址（非零启用选项，零禁用）。 |
+| `optlen` | `int` | `optlen` 的长度。 |
+
+`setsockopt` 支持的选项包括：
+
+- `SO_BROADCAST` 发送广播消息的权限
+- `SO_DORUTE` 出站消息绕过路由
+- `SO_LINGER` 如果存在数据时关闭时保持连接
+- `SO_OBINLINE` 在带内接收带外数据
+- `SO_RCBUF` 设置输入缓冲区大小
+- `SO_SNDBUF` 设置输出缓冲区大小
+
+## 返回值
+
+`Setsockopt` 成功时返回 0，返回 `SOCKET_ERROR` 表示发生了错误。当发生错误时，可以调用 `WSAGetLastError()` 获取提供特定错误原因的代码。
+
+# Shutdown 函数
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = shutdown ( socket, how );
+```
+
+## 描述
+
+`shutdown` 函数用于终止传输、接收或两者。该函数通常与已连接的 TCP 套接字配合使用，以单向关闭连接（例如，关闭从客户端到服务器的数据连接，但允许服务器向客户端发送）。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `socket` | `SOCKET` | 套接字描述符。 |
+| `how` | `int` | 期望关闭的方向：0 表示终止进一步接收，1 表示终止进一步传输，2 表示终止两者。 |
+
+## 返回值
+
+`shutdown` 调用成功时返回 0，或返回 `SOCKET_ERROR` 表示发生了错误。当发生错误时，可以调用 `WSAGetLastError()` 获取提供特定错误原因的代码。
+
+# Socket 函数
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = socket (afam, type, protocol);
+```
+
+## 描述
+
+`socket` 函数创建一个用于网络通信的套接字，并返回该套接字的整数描述符。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+|---|---|---|
+| `afam` | `int` | 协议或地址族（TCP/IP 使用 `PF_INET`）。 |
+| `type` | `int` | 服务类型（TCP 使用 `SOCK_STREAM` 或 UDP 使用 `SOCK_DGRAM`）。 |
+| `protocol` | `int` | 与套接字一起使用的协议号，或使用 0 使用与指定的 `afam` 和 `type` 值匹配的标准协议。 |
+
+## 返回值
+
+`socket` 调用成功时返回新创建的套接字的描述符，或返回 `INVALID_SOCKET` 表示发生了错误。当发生错误时，可以调用 `WSAGetLastError()` 获取提供特定错误原因的代码。
+
+`WSACleanup` 成功时返回 0，返回值 `SOCKET_ERROR` 表示发生了错误。当发生错误时，可以调用 `WSAGetLastError()` 获取提供特定错误原因的代码。
+
+# WSAGetLastError 函数
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = WSAGetLastError ( void );
+```
+
+## 描述
+
+应用程序调用 `WSAGetLastError` 函数来检索套接字函数调用失败后的特定错误代码。`WSAGetLastError` 是 Windows Sockets 对早期 sockets 实现中使用的全局变量 `errno` 的替代，但在多线程环境中无法使用。
+
+注意：应用程序应在 `socket` 函数返回后立即调用 `WSAGetLastError`。
+
+## 参数
+
+（源码中未列出 `WSAGetLastError` 的参数，尽管签名包含 `void`）
+
+## 返回值
+
+（源码中未描述返回值）
+
+# WSAStartup 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = WSAStartup ( wversion, &idata );
+```
+
+## 描述
+
+`WSAStartup` 初始化 Windows Sockets DLL。该函数接收版本信息和一个指向要填充的结构体指针。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `wversion` | `WORD` | 请求的 Windows sockets 版本。 |
+| `itdata` | `WSADATA*` | 用于接收信息的结构体指针。 |
+
+## 返回值
+
+`WSAStartup` 成功时返回 0，返回 `SOCKET_ERROR` 表示发生了错误。
+
+# WSAGocket 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = WSAGocket ( &idata );
+```
+
+## 描述
+
+`WSAGocket` 获取有关当前正在使用的 Windows Sockets 实现的信息。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `itdata` | `WSADATA*` | 用于接收信息的结构体指针。 |
+
+## 返回值
+
+（源码中未描述返回值）
+
+# WSACleanup 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = WSACleanup ( );
+```
+
+## 描述
+
+`WSACleanup` 终止 Windows Sockets DLL。
+
+## 返回值
+
+`WSACleanup` 成功时返回 0。
+
+# Socketclose 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = socketclose ( socket );
+```
+
+## 描述
+
+`socketclose` 关闭指定的套接字描述符。
+
+## 参数
+
+| 参数 | 类型 | 含义 |
+| --- | --- | --- |
+| `socket` | `SOCKET` | 要关闭的套接字描述符。 |
+
+## 返回值
+
+`socketclose` 成功时返回 0。
+
+# Setsockopt 函数
+
+## 包含头文件
+
+```
+#include <winsock.h>
+```
+
+## 用法
+
+```
+retvalue = setsockopt ( socket, level, opt, optval, optlen );
+```
