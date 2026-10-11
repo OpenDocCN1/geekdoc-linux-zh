@@ -1260,6 +1260,7 @@
 +   [Linux 玩具：适用于家庭、办公室和娱乐的 13 个酷炫项目 (extremetech)](docs/linux-toys-13-cool-projects-for-home-office-and-entertainmen/README.md)
 +   [Linux Toys II：适用于家庭、办公室和娱乐的 9 个酷炫新项目 (ExtremeTech)](docs/linux-toys-ii-9-cool-new-projects-for-home-office-and-entert/README.md)
 +   [Windows 网络管理员 Linux 迁移指南：Linux 文件和打印服务器构建指南](docs/linux-transfer-for-windows-network-admins-a-roadmap-for-buil/README.md)
++   [Linux 技巧与窍门](docs/linux-tricks-and-tips/README.md)
 +   [Linux 技巧与窍门 第 11 版 2022](docs/linux-tricks-and-tips---11th-edition-2022/README.md)
 +   [Linux 技巧与窍门 - 第 5 版 2021](docs/linux-tricks-and-tips---5th-edition-2021/README.md)
 +   [Linux 故障排除圣经](docs/linux-troubleshooting-bible/README.md)

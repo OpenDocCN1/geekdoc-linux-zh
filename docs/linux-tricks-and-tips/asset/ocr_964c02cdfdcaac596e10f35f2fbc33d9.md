@@ -1,0 +1,60 @@
+# Structure of a C++ Program
+
+C++ has a very defined structure and way of doing things. Miss something out, even as small as a semicolon, and your entire program will fail to be compiled and executed. Many a professional programmer has fallen foul of sloppy structure.
+
+# #INCLUDE <C++ STRUCTURE>
+
+Learning the basics of programming, you begin to understand the structure of a program. The commands may be different from one language to the next but you can start to see how the code works.
+
+![](bbox=[0.26, 0.43, 0.48, 0.66])
+
++   **C++**
++   
++   C++ was invented by Danish student Bjarne Stroustrup in 1979, as a part of his Ph.D. thesis. Initially C++ was called C with Classes, which added features to the already popular C programming language, while making it a more user-friendly environment through a new structure.
+
++   **INT MAIN()**
++   
++   int main() initiates the declaration of a function, which is a group of code statements under the name ‘main’. All C++ code begins at the main function, regardless of where it actually lies within the code.
+
+```
+```cpp
+helloworld.cpp
+1  #include <iostream>
+2
+3  int main()
+4
+5
+```
+```
+
++   **#INCLUDE**
++   
++   The structure of a C++ program is quite precise. Every C++ code begins with a directive: `#include <...>`. The directive instructs the pre-processor to include a section of the standard C++ code. For example: `#include <iostream>` includes the iostream header to support input/output operations.
+
+```
+```cpp
+helloworld.cpp
+1  #include <iostream>
+2
+3
+4
+```
+```
+
++   **BRACES**
++   
++   The open brace (curly brackets) is something that you may not have come across before, especially if you’re used to Python. The open brace indicates the beginning of the main function and contains all the code that belongs to that function.
+
+```
+```cpp
+helloworld.cpp
+1  #include <iostream>
+2
+3  int main()
+4  {
+5
+6  }
+7
+8
+```
+```

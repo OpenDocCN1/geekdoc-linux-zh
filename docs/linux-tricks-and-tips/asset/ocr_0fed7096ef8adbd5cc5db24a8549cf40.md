@@ -1,0 +1,42 @@
+# Python on Linux
+
+# Numbers and Expressions
+
+We've seen some basic mathematical expressions with Python, simple addition and the like. Let's expand on that now and see just how powerful Python is as a calculator. You can work within the IDLE Shell or in the Editor, whichever you like.
+
+# IT'S ALL MATHS, MAN
+
+You can get some really impressive results with the mathematical powers of Python; as with most, if not all, programming languages, maths is the driving force behind the code.
+
++   **STEP 1**
++   Open up the GUI version of Python 3, as mentioned you can use either the Shell or the Editor. For the time being, you're going to use the Shell just to warm our maths muscle, which we believe is a small gland located at the back of the brain (or not).
+
+![](bbox=[0.06, 0.45, 0.49, 0.63])
+
++   **STEP 2**
++   In the Shell enter the following:
++   > 2+2
++   > 54356+34553245
++   > 99867344*27344484221
++   
++   You can see that Python can handle some quite large numbers.
+
+![](bbox=[0.06, 0.78, 0.49, 0.935])
+
++   **STEP 3**
++   You can use all the usual mathematical operations: divide, multiply, brackets and so on. Practise with a few, for example:
++   > 1/2
++   > 6/2
++   > 2+2*3
++   > (1+2)*(3*4)
+
+![](bbox=[0.51, 0.47, 0.94, 0.63])
+
++   **STEP 4**
++   You've no doubt noticed, division produces a decimal number. In Python these are called floats, or floating point arithmetic. However, if you need an integer as opposed to a decimal answer, then you can use a double slash:
++   > 1//2
++   > 6//2
++   
++   And so on.
+
+![](bbox=[0.51, 0.78, 0.94, 0.935])

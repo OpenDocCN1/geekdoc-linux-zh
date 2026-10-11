@@ -1,0 +1,166 @@
+# Working with Variables
+
+However, you can't combine both strings and integer type variables in the same command, as you would a set of similar variables. You need to either turn one into the other or vice versa. When you do try to combine both, you get an error message:
+
+```
+`print (name + age)`
+```
+
+```
+```
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license()" for more information.
+>>> name='David Hayward'
+>>> print (name)
+David Hayward
+>>> tclass `<str>`
+>>> title=`Descended from Vikings`
+>>> print (name + " " + title)
+David Hayward: Descended from Vikings
+>>> character=name + ":" + title
+>>> print (character)
+David Hayward: Descended from Vikings
+>>> age=44
+>>> ttype (age)
+<class `int`>
+>>> print (name+age)
+Traceback (most recent call last):
+  File `"pyshell"0` , line 1, in <module>
+print (name+age)
+TypeError: Can't convert 'int' object to str implicitly
+>>> |
+```
+```
+
+This is a process known as TypeCasting. The Python code is:
+
+```
+```
+print (character + " is "+ str(age) + " years old.")
+```
+```
+
+or you can use:
+
+```
+`print (character, "is", age, "years old.")`
+```
+
+Notice again that in the last example, you don't need the spaces between the words in quotes as the commas treat each argument to print separately.
+
+```
+```
+>>> print (name + age)
+Traceback (most recent call last):
+  File `"pyshell"0` , line 1, in <module>
+print (name + age)
+TypeError: Can't convert 'int' object to str implicitly
+>>> print (character + " is "+ str(age) + " years old.")
+David Hayward: Descended from Vikings is 44 years old.
+>>> print (character, "is", age, "years old.")
+David Hayward: Descended from Vikings is 44 years old.
+>>> |
+```
+```
+
+Another example of TypeCasting is when you ask for input from the user, such as a name. for example, enter:
+
+```
+`age= input ("How old are you? ")`
+```
+
+All data stored from the Input command is stored as a string variable.
+
+```
+```
+Python 3.4.2 Shell
+
+File Edit Shell Debug Options Windows Help
+
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license()" for more information.
+>>> age= input ("How old are you? ")
+How old are you? 44
+>>> ttype(age)
+<class `str`>
+>>> |
+```
+```
+
+This presents a bit of a problem when you want to work with a number that's been inputted by the user, as age + 10 won't work due to being a string variable and an integer. Instead, you need to enter:
+
+```
+`int (age) + 10`
+```
+
+This will TypeCast the age string into an integer that can be worked with.
+
+```
+```
+Python 3.4.2 Shell
+
+File Edit Shell Debug Options Windows Help
+
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license()" for more information.
+>>> age= input ("How old are you? ")
+How old are you? 44
+>>> ttype(age)
+<class `str`>
+>>> age + 10
+Traceback (most recent call last):
+  File `"pyshell"0` , line 1, in <module>
+ age + 10
+TypeError: Can't convert 'int' object to str implicitly
+>>> int(age) + 10
+54
+>>> |
+```
+```
+
+The use of TypeCasting is also important when dealing with floating point arithmetic; remember: numbers that have a decimal point in them. For example, enter:
+
+```
+`shirt=19.99`
+```
+
+Now enter type(shirt) and you'll see that Python has allocated the number as a 'float', because the value contains a decimal point.
+
+```
+```
+Python 3.4.2 Shell
+
+File Edit Shell Debug Options Windows Help
+
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license()" for more information.
+>>> shirt=19.99
+>>> ttype(shirt)
+<class `float`>
+>>> |
+```
+```
+
+When combining integers and floats Python usually converts the integer to a float, but should the reverse ever be applied it's worth remembering that Python doesn't return the exact value. When converting a float to an integer, Python will always round down to the nearest integer, called truncating; in our case instead of 19.99 it becomes 19.
+
+```
+```
+Python 3.4.2 Shell
+
+File Edit Shell Debug Options Windows Help
+
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+[GCC 4.9.1] on linux
+Type "copyright", "credits" or "license()" for more information.
+>>> shirt=19.99
+>>> ttype(shirt)
+<class `float`>
+>>> int(shirt)
+19
+>>> |
+```
+```
