@@ -1434,6 +1434,7 @@
 +   [Perl 精通：入门指南](docs/mastering-perl-a-beginners-guide/README.md)
 +   [精通 Perl：初学者指南 (计算机科学大师系列)](docs/mastering-perl-a-beginners-guide-mastering-computer-science/README.md)
 +   [Web 开发 Python 精通：初学者指南（计算机科学大师）](docs/mastering-python-for-web-a-beginners-guide-mastering-compute/README.md)
++   [Red Hat Enterprise Linux 3 精通指南](docs/mastering-red-hat-enterprise-linux-3/README.md)
 +   [Red Hat Linux 7.1 精通指南](docs/mastering-red-hat-linux-71/README.md)
 +   [Red Hat Linux 7.1 精通指南](docs/mastering-red-hat-linux-71-none/README.md)
 +   [Red Hat Linux Enterprise 3 高级指南](docs/mastering-red-hat-linux-enterprise-3/README.md)
