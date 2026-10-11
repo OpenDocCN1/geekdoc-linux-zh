@@ -1,0 +1,181 @@
+
+`tftpd_anon_write` -- off
+
+...
+
+# `setsebool -P ftp_home_dir=on`
+
+# `getsebool ftp_home_dir`
+
+`tftp_home_dir` -- on
+
+```
+9. 要列出系统中所有的 SELinux 策略及其版本号，请输入 `semodule -l`。
+
+> 注意：如果你选择 `/etc/selinux/targeted/modules/active/modules/*.pp` 作为问题 9 的答案，是可以的，但此命令不会提供策略的版本号。只有 `semodule -l` 才能提供版本号。
+```
+
+10. 要准备系统以运行受 SELinux 保护的 vsftpd FTP 服务器，以普通用户身份（在本示例中使用 chris）登录并尝试复制文件（这将导致 AVC 拒绝拒绝），然后输入以下内容：
+
+```bash
+# getenforce
+
+Enforcing
+
+# yum install vsftpd ftp syslog setroubleshoot-server
+
+# systemctl start syslog
+
+# systemctl start vsftpd
+
+# semodule -DB
+
+# getsebool ftp_home_dir
+
+tftp_home_dir -- off
+
+# lftp -u chris localhost
+
+Password: *************
+
+lftp chris@localhost:-- > put /etc/services
+
+put: Access failed: 553 Could not create file. (services)
+
+lftp chris@localhost:-- quit
+```
+
+要查看有关拒绝的信息并更改 Boolean 以允许 FTP 访问，请执行以下操作：
+
+```bash
+# ausearch -m avc
+
+type=AVC msg=audit(1411217594.188:70555): avc: denied { create } for
+
+pid=25470 comm="vsftpd" name="services"
+
+context=system=u:object_t:r:file_t:s0:s0:c01c0123
+
+acontext=system=u:object_t:home_t:s0 class=file
+
+# journal grep "is preventing"
+
+Sep 20 08:53:16-host1 fedora20: SELinux is preventing /usr/bin/vsftpd from create access on the file services.
+
+# selalert -1 2ad99ca-13d8-4b41-8d74-ffbc31b68f8f
+
+# sealert -1 2ad99ca-13d8-4b41-8d74-ffbc31b68f8f
+
+SELinux is preventing /usr/bin/vsftpd from create access on the file services
+```
+
+如果你想确定 ftppd 是否可以读写用户主目录中的文件，那么必须通过启用 `ftp_home_dir` Boolean 来告诉 SELinux 这一点。你可以阅读 `user_selinux` 手页以获取更多详情。
+`setsebool -P ftp_home_dir 1`
+
+## 第 25 章：网络上的 Linux 安全
+
+1. 要在你本地系统上安装 Network Mapper (`nmap`) 工具：
+   a. 在 Fedora RHEL 上，在命令行输入 `yum install nmap`。
+   b. 在 Ubuntu 上，`nmap` 可能已经预装。如果没有，在命令行输入 `sudo apt-get install nmap`。
+
+2. 要要在你的本地回环地址上运行 TCP 连接扫描，请在命令行输入 `nmap -sT 127.0.0.1`。你在 Linux 服务器上运行的端口会有所不同。它们看起来可能类似于所示：
+
+```
+# nmap -sT 127.0.0.1
+
+...
+
+PORT    STATE SERVICE
+
+25/tcp   open   smtp
+
+631/tcp  open   ipp
+```
+
+3. 从远程系统对你的 Linux 系统运行 UDP 连接扫描：
+   a. 在命令行输入 `ifconfig` 来确定你 Linux 服务器的 IP 地址。输出将所示，你的系统 IP 地址位于 `ifconfig` 命令输出中 "`inet addr:`" 之后。
+
+```bash
+# ifconfig
+
+eth2p1 Link encap:Ethernet HwAddr 08:00:27:E5:89:5A
+
+inet addr:10.140.67.23
+```
+
+   b. 从远程 Linux 系统，在命令行使用命令 `nmap -sU IP 地址`，使用上面获取的 IP。例如：
+   `# nmap -sU 10.140.67.23`
+
+4. 要检查你的 Linux 系统是否使用 TCP Wrapper，请在命令行输入 `ldd /usr/bin/sshd | grep wrap`。如果使用了 TCP Wrapper，输出将所示。如果没有使用，则没有输出。
+
+```bash
+$ ldd /usr/bin/sshd | grep wrap
+
+libwrap.so => /lib64/libwrap.so (0x0000...)
+```
+
+5. 要允许从指定的远程系统访问你 Linux 系统上的 ssh 并使用 Wrappers 拒绝所有访问，你需要修改 `/etc/hosts.allow` 和 `/etc/hosts.deny` 文件。修改将所示：
+
+```
+# cat /etc/hosts.allow
+
+...
+
+# cat /etc/hosts.deny
+```
+
+6. 要确定你 Linux 系统的 netfilter/`iptables` 策略和规则，请在命令行输入 `iptables -L`。
+
+7. 要刷新你 Linux 系统的当前的防火墙规则，请在命令行输入 `iptables -F`。若要在旧版本的 Fedora 或 RHEL 6 系统上恢复防火墙，请输入 `iptables-restore <etc/sysconfig/iptables`。在 RHEL 7 系统上，使用 `systemctl restart firewalld` 来恢复你系统的永久防火墙规则。
+
+8. 这是一个技巧！你不能将 Linux 过滤器策略设置为拒绝（reject），但你可以将其设置为丢弃（drop）。要将你的 Linux 系统的输入链（input chain）的过滤器表设置为 DROP 策略，请在命令行输入 `iptables -P DROP`。
+
+9. 要将你的 Linux 系统的输入链过滤器策略改回接受（accept），请输入 `iptables -P ACCEPT`。要添加一条规则丢弃来自 IP 地址 `10.140.67.23` 的所有网络包，请在命令行输入 `iptables -A INPUT -s 10.140.67.23 -j DROP`。
+
+10. 要在不刷新系统规则的情况下删除你上面添加的规则，请在命令行输入 `iptables -D INPUT 1`，假设你添加的规则是第一条。如果不是，将 `1` 改为相应的规则编号。
+
+## 第 26 章：使用 Linux 进行云计算
+
+1. 要检查你的电脑是否支持 KVM 虚拟化，请输入以下内容：
+
+```
+# cat /proc/cpuinfo | grep -E "vmx|svm"
+
+flags             fpu vme mce apic cmov flflush dse  sse  syscall
+```
+
+2. 要检查你的电脑是否可以支持 KVM 虚拟化，请输入以下：
+
+```
+# cat /proc/cpuinfo | grep -E "vmx|svm"
+
+flags             fpu vme ...
+```
+
+3. 要准备你的系统以运行受 SELinux 保护的 vsftpd FTP 服务器，以普通用户身份（在本示例中使用 chris）登录并尝试复制文件（这将导致 AVC 拒绝拒绝），然后输入以下内容：
+
+```bash
+# getenforce
+
+Enforcing
+
+# yum install vsftpd ftp syslog setroubleshoot-server
+
+# systemctl start syslog
+
+# systemctl start vsftpd
+
+# semodule -DB
+
+# getsebool ftp_home_dir
+
+tftp_home_dir -- off
+
+# lftp -u chris localhost
+
+Password: *************
+
+lftp chris@localhost:-- > put /etc/services
+
+put: Access failed: 553 Could not create file. (services)
+```
