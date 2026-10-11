@@ -1,0 +1,101 @@
+
+```text
+martyn$ ps -ef
+UID PR FPID PPID C STIME TTY TIME CMD
+root 0 0 0 Feb 18 ? 0:01 sched
+root 1 0 0 Feb 18 ? 1:30 /etc/init
+root 2 0 0 Feb 18 ? 0:02 pagingd
+root 3 0 1 Feb 18 ? 813:44 (aislush)
+root 3063 3059 0 Feb 22 ? 0:10 /usr/dt/bin/hsperfclertner - -H r
+root 88 1 0 Feb 18 ? 0:02 /usr/bin/in.nutd -g
+root 478 0 Feb 18 ? 0:00 /usr/lib/saff/mnc - 300
+root 94 0 0 Feb 18 ? 2:50 /usr/sbin/syslogd
+root 150 1 0 Feb 18 ? 0:03 /usr/sbin/syslogd
+root 96 1 0 Feb 18 ? 0:00 /usr/sbin/keyserv
+root 144 Feb 18 ? 50: /usr/lib/autofs/automountd
+root 1010 Feb 18 ? /usr/per/bin/mld/daemon
+root 106 Feb 18 ? /usr/lib/netcfg/usrp/bpbind -troot
+root 156 Feb 18 ? /usr/sbin/cron
+root 176 Feb 18 ? /usr/lib/lpschec
+root 128 Feb 18 ? /usr/lib/nf/lockd
+daemon 130 Feb 18 ? /usr/lib/nf/statd
+root 14798 Mar ? 3.8 /usr/sbin/nscd
+root 133 Mar ? 1.4 /usr/sbin/smbd -s
+root 197 Feb ? 1.2 /usr/lib/powpd/ powerd
+root 146 Feb ? .4 /opt/licensed/lgardate. -c /d
+root 213 Feb ? 4+03:09 /usr/bin/osvid
+root 199 Feb ? .03 suntechd -T 4 -c -qt/optd
+root 219 Feb ? .02 /usr/lib/libd/tbd-tsd
+root 269 Feb ? /usr/lib/utmpd
+root 2335 Feb ? 4+ /usr/openwin/bin/Xenv 10 -nbomanna
+root 4728 Feb ? - .
+root 2963 Feb ? . /usr/openwin/bin/Xfvconsoldes
+root 479 Jun ? 4.80 /usr/lib/afps/g -h -p xunsc
+root 10374 Jun ? 0.00 /opt/per/bin/td
+root 7468 Feb ? 0.13 /opt/per/bin/pvslard
+root 224 Feb ? 0.01 /usr/lib/bin/clogind -daemon
+martyP 16763 07:46: ptd4 0.1 .ksh
+root 10795 Jun ? 0 /opt/per/bin/periodl
+root 484 Feb ? . 30 /usr/lib/aat/ctayson
+root 458 Feb ? .24 /usr/lib/anmp/anmpsbd y c <net/f
+root 16782 Feb ? .6 /usr/lib/msd/daemon -mode blank
+root 471 Feb ? .03 /usr/lib/dm/dmd
+root 474 Feb ? .00 /usr/lib/dmir/xmpsDad -a
+root 485 Feb ? .4 /usr/lib/bin/dscrecon -y 3974
+root 2954 Feb ? 0.2 /bin/ksh /usr/dm/Demo/
+root 2936 Feb ? .00 /usr/dt/bin/dtogain -daemon
+root 3061 Feb ? . 12 dtwm
+root 3058 Feb ? 9.91 /usr/dt/bin/tdsession
+root 712 Feb ? .02 pty:tfd/userverd
+root 11001 Feb ? 0.01 <defunct
+root 2938 Feb ? 0.00 /usr/openwin/bin/fvconsoldes -d 10
+root 2939 Feb ptn2 . /usr/dt/birdt/ shell -o ut
+root 3059 Feb ptn2 293.15 /usr/dt/bin/DTsession
+root 3063 Feb ? .03 /usr/dt/bin/dtclgpreview -help/tegr
+root 3099 Feb ? .014 /usr/dt/bin/dtftile -geometry +700
+root 11000 Feb ? . 42 /opt/per/bin/agusetserver - t alar/
+root 3022 Feb ptn2 . 01 /usr/dt/bin/ unget DT. DIALP2
+root 730 Feb ? .17 pty:rstard
+root 3062 Feb ? .217 /usr/dt/bin/dfsile -geometry -r 700
+root 3067 Feb ? 0.07 /bin/ksh /usr/dt/bin/dtsoldochec
+root 3000 Feb ? .00 /usr/dt/bin/tdse
+root 3078 Feb ? .0 /bin/cat /tmp/.removeablenotify
+root 10396 Jun ? 32.42 /opt/per/kse/p/bin/dsed -b
+root 16761 07:46: ? 0.00 telnetd
+martyP $
+```
+
+## AIX 示例
+
+```text
+martyP $ ps -ef
+     UID   PID  PPID     C   STIME  TTY TIME CMD
+     root    1     0    0 Feb 24     5.07 /init
+     root  2208  1521    0 Feb 24     8.22  dcnm
+     root  2664  2842    0 Feb 24     0.00 /usr/lib/dm/dloglm -daemon
+     root  2882    1    0 Feb 24    158.41 /usr/sbin/syncd 60
+     root  3376  2664    5 Feb 24    3594:41 /usr/lib/sxlib/bin/Xs -D /usr/lib/
+     root  3624    1    0 Feb 24     0.00 /usr/sbin/sshd -la
+     root  3950    1    6 Feb 24     5550:30 /usr/ppc/lfp/bin/libld
+     root  4144    1    0 Feb 24     0.00 /usr/ppc/lfp/bin/aidmion
+     root  4890    1    0 Feb 24     0.48 /usr/lpp/perf/bin/ptlbod
+     root  4996    1    0 Feb 24     0.00 /usr/lfp/arm/daemon
+     root  5172    1    0 Feb 24     0.00 /usr/sbin/smartd
+     root  5724  5172    0 Feb 24     9.54 /usr/sbin/syslogd
+     root  6424  5172    0 Feb 24     0.00 /usr/sbin/biod 6
+     root  6450  5172    0 Feb 24     0.32 sendmail: accepting connections
+```
+
+## HP-UX 示例（部分列表）
+
+```text
+marty% $ ps -ef
+
+    PID    PPID STIME TTY TIME COMMAND
+    0      0    Mar 7  ?  107:28 swapper
+    1      0    Mar 9  ?  2:27 init
+    2      0    Mar 9  ?  14:13 vanda
+    3      0    Mar 9  ?  11:43:58 ata/daemon
+    4      0    Mar 9  ?  5:57 unhashed
+    7      0    Mar 9  ?  154:33 ttsh
+```
