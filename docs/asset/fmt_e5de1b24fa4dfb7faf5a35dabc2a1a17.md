@@ -1,0 +1,226 @@
+
+# 脚本示例
+
+```bash
+expiration_date=$(date "+%b") # 今日日期。例如：'Jan 26'
+expiration_year=2099
+sed_command_file="/home/library/ROSETTA/INPUT_FILES/sed_command_file_APPEND"
+append_the_words="PLEASE CONTACT"
+```
+
+```bash
+# 为输入创建一个文件：
+print "Yes, the new models of the Veg-o-matic are now available!" >>$IN_FILE1
+print "Don't delay call! PLEASE CONTACT!" >>$IN_FILE1
+print "Have you ever considered raising ALPACAS?!" >>$IN_FILE1
+print "Be YOUR OWN BOSS! call us NOW!" >>$IN_FILE1
+print "The offer expires on ${expiration_date}, ${expiration_year}" >>$IN_FILE1
+print "# PLEASE CONTACT!"
+```
+
+```bash
+# 我们现在创建一个包含我们 sed 命令的文件：
+echo "${append_the_words}\a" >>$sed_command_file # "a" 表示追加
+# 此文件追加了一行：
+echo "# Happy Face Enterprises" >>$sed_command_file
+echo "t123 happy Trail!" >>$sed_command_file
+echo "tvalley, NE 68277" >>$sed_command_file
+echo "telask for Smilin! Sam! (555) 111-2222" >>$sed_command_file
+echo "tfirstptmons" >>$sed_command_file
+echo "tlasttask!" >>$sed_command_file
+# 此文件追加了一行：
+```
+
+```bash
+print "here the following sed command makes the changes:"
+s -f $sed_command_file $IN_FILE > $OUT_FILE
+```
+
+```bash
+print "AFTER THE CHANGES:"
+cat $OUT_FILE
+
+print "\nDONE. Script: $0"
+cat $OUT_FILE
+
+print OUTPUT: append_info_after_seeing PLEASE CONTACT in file.ksh.OUTPUT
+HOW THE SCRIPT WAS EXECUTED: ./append_info_after_seeing PLEASE CONTACT in file.ksh
+OUTPUT follows:
+```
+
+注释：这是脚本 `./append_info_after_seeing PLEASE CONTACT in file.ksh`。
+
+目的：展示如何在文件中找到 `'PLEASE CONTACT'` 之后追加一个地址。
+
+注释：`'append'` 意味着‘在……之后添加数据’。
+
+## `sed_commands_file` 的内容
+
+```
+/PLEASE CONTACT:/s/
+
+Happy Face Enterprises
+
+123 Happy Trail
+
+Happy Valley, NE 68787
+
+Ask for Smilin' Sam!!
+
+Phone: (555) 111-2222
+
+!!!
+```
+
+`sed` 文件最初看起来很奇怪，但在你了解以下两点后你就会理解了：
+
+1. `sed` 文件的第一行包含你想在输入文件中定位的字符串。
+   该字符串位于两个斜杠 `'/'` 之间。
+2. `PLEASE CONTACT:` `'a'` 是一个执行“追加”的命令：
+   `('Append')` 意味着在……之后添加数据。
+3. `'a'` 放置在第一行的第二个斜杠之后。
+   每个 `'a'` 出现的地方都会被追加。
+4. `sed` 文件中的每一行都必须以反斜杠结束（最后一行除外）。
+
+### 这里是修改之前的输入文件：
+
+```
+YES, the new models of the Veg-o-matic are now available!
+
+Don't delay! Call Now! PLEASE CONTACT:
+
+HAVE YOU ever considered raising ALPACAS ?!?
+
+BE YOUR OWN BOSS! Call us NOW!
+
+This offer expires on Jan 26, 2009
+
+PLEASE CONTACT:
+```
+
+### 修改之后：
+
+```
+YES, the new models of the Veg-o-matic are now available!
+
+Don't delay! Call Now! PLEASE CONTACT:
+
+Happy Face Enterprises
+
+123 Happy Trail
+
+Happy Valley, NE 68787
+
+Ask for Smilin' Sam!!
+
+Phone: (555) 111-2222
+
+!!!
+
+HAVE YOU ever considered raising ALPACAS ?!?
+
+BE YOUR OWN BOSS! Call us NOW!
+
+This offer expires on Jan 26, 2009
+
+PLEASE CONTACT:
+
+Happy Face Enterprises
+
+123 Happy Trail
+
+Happy Valley, NE 68787
+
+Ask for Smilin' Sam!!
+
+Phone: (555) 111-2222
+
+!!!
+```
+
+完成。脚本：`/append_info_after_seeing_PLEASE_CONTACT_in_file.ksh`
+
+```bash
+PROGRAM: applicationZZZ.ksh
+#!/bin/ksh
+# PROGRAM: applicationZZZ.ksh
+# PURPOSE: 此脚本由 "ps.ksh" 和 "bring_up_application.ksh" 执行。
+# PROGRAMMER: Larry Smith, Revised by ____ on __date__
+
+# # 难度级别: 简单
+```
+
+```bash
+# 用法: ./applicationZZZ.ksh & 使用 '&' 在后台运行此程序
+
+# 注意：
+
+# 此脚本由 "ps.ksh" 和 "bring_up_application.ksh" 执行。
+
+# 此脚本仅仅是让系统睡眠秒钟，但通过系统的 "ps -ef" 将显示
+
+# applicationZZZ.ksh 处于活动状态。
+```
+
+```bash
+PROGRAM: array.ksh
+
+#!/bin/ksh
+
+# PROGRAM: array.ksh
+
+# PURPOSE: 演示数组处理。
+
+# PROGRAMMER: Larry Smith Revised by on __date__
+
+# DIFFICULTY LEVEL: 中等
+
+# 用法: example -array.ksh
+
+### 注意：
+
+# 在不同版本的数组中，
+
+# 可用功能存在一些（偶尔的）差异。
+
+# 在各种版本的操作系统（如 HP, SCO, REDHAT, SOLARIS）中，
+
+# "set -A" 是可用的。
+
+# 例如，你可能需要比较 "typeset" 的输出。
+
+# 此脚本仅仅是让系统睡眠秒，但通过系统的 "ps -ef" 将显示
+
+# applicationZZZ.ksh 处于活动状态。
+
+# "set -A" 不在所有 shell 脚本中有效。
+
+# "typeset" 在 ksh 中是有效的。
+
+# 这是一个数组示例。
+```
+
+```bash
+# 我们现在创建一个包含我们 sed 命令的文件：
+echo "${append_the_words}\a" >>$sed_command_file # "a" 表示追加
+# 此文件追加了一行：
+```
+
+```bash
+print "这里下面的 sed 命令进行了更改："
+s -f $sed_command_file $IN_FILE > $OUT_FILE
+```
+
+```bash
+print "修改之后："
+cat $OUT_FILE
+
+print "\n完成。脚本: $0"
+cat $OUT_FILE
+
+print 输出：在 file.ksh 中看到 PLEASE CONTACT 之后追加了 append_info。
+脚本执行方式：./append_info_after_seeing PLEASE CONTACT in file.ksh
+输出如下：
+```
+
+注释：这是脚本 `./append_info_after_seeing PLEASE CONTACT in file.ksh`。

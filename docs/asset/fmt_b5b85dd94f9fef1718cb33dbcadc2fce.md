@@ -1,0 +1,94 @@
+
+```
+# Given two capture sources, "prism2a" and "prism2b", we want prism2a to stay
+# on channel 6 and prism2b to hop normally. By not setting a sourcechannels
+# line for prism2b, it will use the standard hopping.
+# sourcechannels=prism2a:6
+```
+
+如果你没有指定 `sourcechannels` 参数且 `channelhop=true`，系统将自动遍历默认信道。如果你有多个源，你可以为其中一个设备设置特定的 `sourcechannels`，让它监控几个特定信道，而另一个设备检查剩余的信道。这在 Wardriving 中很有效。一个源将其所有时间都花在检查 1、6 和 11 上（这些信道最可能有信号），而另一个源可以检查剩余的信道。
+
+你也可以使用此功能将工作负载分散到多个源中。一张网卡可以处理较低的信道，另一张处理较高的信道，并且能够比单张网卡更快地遍历所有内容。
+
+![](img/d6ac176c353d2b7687c1186a140180a1_131_0.png)
+
+![](img/d6ac176c353d2b7687c1186a140180a1_131_1.png)
+
+```
+# To assign the same custom hop channel to multiple sources, or to split the
+# same custom hop channel over two sources (if splitchannels is true), list
+# them all on the same sourcechannels line:
+# sourcechannels=prism2a,prism2b,prism2c;1,6,11
+```
+
+你还可以在指定的 `sourcechannel` 中嵌套多个源。如果 `channelsplit=true`，Kismet 将循环遍历信道，并确保没有两个源在同一时间处于同一信道上，从而最大化在高使用率信道上花费的时间，并确保不重叠扫描信道。在配置文件示例中，三个源将循环遍历每个三个信道而不重叠。
+
+```
+# Port to serve GUI data
+tcpport=2501
+```
+
+你可以在这里指定服务器向客户端提供服务的 TCP 端口。通常没有实际原因需要更改此设置。如果你觉得需要更改它，请确保在 `kismet_ui.conf` 文件中做出相应的更改。
+
+```
+# People allowed to connect, comma separated IP addresses or network/mask
+# blocks. Netmasks can be expressed as dotted quad (/255.255.255.0) or as
+# numbers (/24)
+allowedhosts=127.0.0.1
+```
+
+这是设置远程监控的地方。默认情况下，出于安全原因，只有运行服务器的宿主才能连接客户端（localhost）。如果你想使用另一台系统上的 Kismet 客户端并连接到远程服务器，你需要指定连接到服务器的宿主机的网络地址。这是通过将其追加到现有行（使用逗号分隔，不留空格）来实现的。
+
+`allowedhosts=127.0.0.1,192.168.0.34,10.0.50.45`
+
+你还可以指定有效的网络块；`allowedhosts=127.0.0.1,192.168.0.0/24` 或 `allowedhosts=127.0.0.1,192.168.0.0/255.255.255.0` 将允许整个 192.168.0.x 网络块连接。
+
+最好限制可以连接的主机。如果你正在监控公司网络并允许任何人连接，你可能会将你的数据转储访问权限提供给攻击者，因为 Kismet 除了这里之外不进行任何身份验证。
+
+```
+# Address to bind to. Should be an address already configured already on
+# this host, reverts to INADDR_ANY if specified incorrectly.
+bindaddress=127.0.0.1
+```
+
+Kismet 服务器可以绑定到多宿主系统上的特定地址。默认情况下，Kismet 将绑定到所有已配置的地址并在所有接口上监听。如果你想将其限制为仅一个地址，请在此处指定。
+
+```
+# Maximum number of concurrent GUI's
+maxclients=5
+```
+
+此参数指定的就是它所显示的含义；可以连接到服务器的最大客户端数。客户端越多，服务器需要做的处理越多，因此最好不要允许或运行太多。
+
+```
+# Do we have a GPS?
+gps=true
+```
+
+这是一个不言自明的参数。如果你想使用 GPS，你需要将此设置为 true 才能使用它。如果设置为 false，你可以在非常精简的系统中节省一点内存。
+
+```
+# Host:port that GPSD is running on. This can be localhost OR remote!
+gpshost=localhost:2947
+```
+
+Kismet 使用 `GPSD` 获取 GPS 坐标并导入 Kismet，进而导入你的日志。`GPSD` 与你的串口/通用串行总线（USB）端口接口，接收传入的 NMEA 数据并通过 TCP 端口输出。Kismet 连接到该端口并将数据放入服务器。
+
+指定 `GPSD` 运行的位置和端口。大多数配置中，`GPSD` 运行在与 `kismet_server` 相同的系统上，因此根据名称解析是否正常工作，它会被设置为 "`gpshost=localhost:2947`" 或 "`gpshost=127.0.0.1:2947`"。
+
+> **注意**
+>
+> 如果由于某种原因，`GPSD` 位于与 `kismet_server` 在同一网络的另一台机器上，且该机器上可以访问 `GPSD`，你可以指定该系统的地址。注意：如果你获取的 GPS 数据来自未附加到运行 `kismet_server` 的系统的源，那么你所有的位置信息似乎都会来自远程系统的位置，从而导致你的结果出现偏差。如果你正在运行远程无人机，这也是真的。如果你的 GPS 位置不在你的传感器位置，那么你的 GPS 数据将不正确。
+
+## 是否锁定模式？
+
+```
+# Do we lock the mode? This overrides coordinates of lock "0", which will
+# generate some bad information until you get a GPS lock, but it will
+# fix problems with GPS units with broken NMEA that report lock 0
+gpsmodelock=false
+```
+
+此参数用于解决那些在获得 GPS 卫星锁定之前不会发送正确数据的 GPS 设备的问题。如果您的 GPS 在启动时出现问题，请将此参数设置为 "true"。您可能还需要检查您的 GPS 是否有更新的固件。
+
+## 包过滤选项
