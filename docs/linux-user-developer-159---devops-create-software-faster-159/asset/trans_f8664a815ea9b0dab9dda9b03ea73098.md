@@ -1,0 +1,181 @@
+
+## 使用 Docker 容器部署 DevOps
+
+Docker 为跨团队管理基础设施提供了一种绝佳的方式。让我们看看它是如何工作的，以及如何利用其功能来实施 DevOps。
+
+![](img/0fc17bd4c29dc437e3ac28a53f7559db_19_0.png)
+
+## Docker 及其用途
+
+容器提供了一种运行自包含软件单元的绝佳方式，能够内部处理软件所需的任何依赖项。Docker 通过简单且易于创建的 Dockerfile 更进一步，这些 Dockerfile 充当 Docker 容器的构建模块。再加上联合文件系统方法的便利性，这种方法允许将不同文件系统（称为分支）的文件和目录透明地覆盖，以形成一个连贯的文件系统，从而可以将一个容器覆盖在另一个容器之上。那么，这一切如何汇聚起来，使不同团队能够轻松地在 DevOps 层面上协作呢？以下是几个用例：
+
+- 需要在所有团队中使用特定的操作系统版本吗？只需为该操作系统版本创建 Dockerfile 并将其分发即可。就这样！现在任何人都可以从 Dockerfile 轻松创建容器，并使用它来执行代码。
+- 需要在发布代码之前对其执行测试吗？为你的代码创建 Docker 容器，并部署多个相同系统的容器。你即可在同一系统上运行并发测试。
+
+## 在 Docker 中管理容器
+
+![](img/0fc17bd4c29dc437e3ac28a53f7559db_19_1.png)
+
+### DOCKER RUN 命令
+
+`docker run` 命令从 Docker 镜像生成一个 Docker 容器。`run` 命令拥有比其他命令更多的选项。在这里，我们使用了 `-p`（标志）将容器的端口（27017）发布到暴露格式。这会使暴露的端口在主机上可访问，并且对于能够到达主机的任何客户端，该端口都将是可用的。
+
+### DOCKER PS 命令
+
+`docker ps` 命令以表格形式列出所有当前正在运行的容器。你可以使用 `ps` 命令获取大量信息。第一列显示唯一的容器 ID，下一列显示作为容器基础的镜像。
+
+### COMMAND 列
+
+Command 列显示容器的入口命令。Created 列显示自容器创建以来经过的时间。Status 显示容器是启动/停止状态以及持续时长。Ports 列显示与主机映射的端口。最后一列是 Name 列，指示容器的名称。
+
+### 识别容器
+
+`-name` 标志使用你分配的名称来识别容器。这里创建的容器将被分配名称 “mongod_instance_1”。我们使用了 `-d` 标志来指示分离模式。在这种模式下，所有 I/O 应通过网络连接或共享卷完成，因为容器不再监听命令行。
+
+## 创建 DOCKERFILE
+
+我们已经讨论了为应用程序创建 Docker 容器以及部署容器是多么容易。现在让我们从头开始创建一个容器，以了解其中涉及的步骤。作为一个例子，让我们为 MongoDB 创建一个容器，MongoDB 是一个开源的跨平台 NoSQL 数据库，被企业应用程序非常频繁地使用。首先，在你想要创建镜像的目录中创建一个名为 Dockerfile 的文件。
+
+```
+$ nano Dockerfile
+```
+
+然后在你最喜欢的编辑器中打开该文件，开始添加指令。首先，使用 `FROM ubuntu:latest` 将基础镜像设置为 Ubuntu。然后声明 Dockerfile 的维护者。
+
+```
+MAINTAINER Name <email@address-here>
+```
+
+现在让我们完成安装前提条件：
+
+```
+RUN apt-key adv --keyserver http://keyserver.ubuntu.com:80 --recv 7F0CEB10
+RUN echo "deb http://repo.mongodb.org/apt/ubuntu\ 14.04 release -x04/mongodb-org/3.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+```
+
+然后安装 MongoDB：
+
+```
+RUN apt-get update && apt-get install -y mongodb-org
+```
+
+MongoDB 还需要一个数据目录。使用以下命令创建它：
+
+```
+RUN mkdir -p /data/db
+```
+
+最后，将容器的相关端口暴露给主机，并设置入口点为 MongoDB 守护进程：
+
+```
+EXPOSE 27017
+ENTRYPOINT ["/usr/bin/mongod"]
+```
+
+保存此文件。我们现在可以继续从这个 Dockerfile 构建镜像。要构建镜像，请在终端中输入以下内容：
+
+```
+$ docker build --tag mymongodb .
+```
+
+这告诉 Docker 从当前目录中的 Dockerfile（注意结尾的 `.`）构建一个镜像，并将其标记为 `mymongodb`。现在你的 MongoDB 镜像已经准备就绪可以运行了。让我们从该镜像生成一个容器。
+
+```
+$ docker run -p 27017:27017 --name mongo_db_instance_01 -d mymongodb
+```
+
+这创建了一个名为 `mongo_db_instance_01` 的容器并执行它。你可以使用以下命令检查当前正在运行的容器：
+
+```
+$ docker ps
+```
+
+最后，你可以通过运行以下命令连接到 MongoDB 容器：
+
+```
+$ mongo --port 27017
+```
+
+- 需要自动化测试流程吗？使用 Daisi 等工具，它们从仓库获取代码，然后以 Docker 容器的形式将其部署到预定义的硬件节点上。
+
+Docker 在实施新的 DevOps 成功路径方面提供了极大的灵活性。现在让我们来看看一些使 Docker 成为灵活工具的关键功能。
+
+### 联合文件系统
+
+Docker 鲜为人知的功能之一是联合文件系统。虽然对最终用户来说并不显见，但联合文件系统在后台工作，以实现在旧容器之上构建新容器，从而避免重复劳动。让我们可视化这个过程。每个 Docker 镜像都始于一个基础镜像。当你在 Dockerfile 中添加指令时，每条指令都会在结果镜像中创建一个新的层。当你最终运行该镜像时，联合文件系统将所有层合并为一个单一镜像，然后作为容器运行。这种分层方法意味着你也可以使用现有镜像作为新镜像的基础。
+
+### Docker Registry
+
+我们所有人都不知道 GitHub。Docker Registry 可以被认为是 Docker 镜像的类似物。虽然不属于你的 Docker 安装的一部分，但 Docker Registry 与 Docker 紧密集成，允许你轻松推送/拉取 Docker 镜像。
+
+从 DevOps 的角度来看，这提供了大量的连通性。即使团队位于不同的地理位置，他们也更容易共享和分发 Docker 镜像。如果你对 Docker 本身提供的云托管 Docker Registry 感兴趣，请前往 hub.docker.com。
+
+### Docker Swarm
+
+为了能够在集群上部署和管理多个 Docker 镜像，Docker 提供了一种名为 Docker Swarm 的工具。开始使用 Swarm 的前提条件是：本地系统安装了 VirtualBox，所有节点都可以访问 Docker 以拉取镜像，并且每个节点都关联了一个发现服务，如 etcd、Consul、ZooKeeper 等。
+
+### 浏览器内终端
+
+Wetty (Web+http) 是一个由 JavaScript 驱动的浏览器内终端模拟器。你可以使用 DockerInBrowser 的 Wetty 在浏览器中运行 Linux shell；Docker 镜像已经在 DockerHub 上可用，所以你只需要输入：
+
+```
+$ docker run -p 3000:3000 -d nathanaele/wetty
+```
+
+注意，Wetty 目前仅在 Chrome 浏览器中工作。
+
+![](img/0fc17bd4c29dc437e3ac28a53f7559db_20_0.png)
+
+![](img/0fc17bd4c29dc437e3ac28a53f7559db_20_1.png)
+
+左：如果你需要管理许多 Docker 镜像，请充分利用 Docker Swarm 工具
+
+## 使用 PUPPET 自动配置节点
+
+Puppet 允许你管理 IT 基础设施的状态。在这里，我们将看看 Puppet 的安装过程，然后是主/代理设置。
+
+![](img/0fc17bd4c29dc437e3ac28a53f7559db_21_0.png)
+
+上：你可以在 puppetlabs.com 上了解有关 Puppet 状态的更多信息
+
+自动化是实施 DevOps 的关键因素之一。你越少在重复任务中投入人力，就能从你的劳动力中获得越多。IT 基础设施配置是涉及重复任务的一个领域——配置物理和虚拟机、编排、报告和其他类似任务。以下是配置管理工具提供的一些优势：
+
+- 代码提交日志向你展示了基础设施上变更的完整历史
+- 在系统间可复现
+- 易于扩展
+- 一致且连贯的服务器设置
+- 针对开发、测试和生产节点的协调环境
+
+因此，一个能让你处理所有这些及更多内容，而不必让你在编码中脏手头的工具，可以极大地帮助你在 DevOps 道路上走得更远。Puppet 就是这样的工具。简而言之，Puppet 让你管理你的 IT 基础设施的状态。在主/代理设置中，主节点是中央 Puppet 服务器，所有你的配置数据都将从此进行管理和分发，而你其余的服务器都将是 Puppet 代理节点，可以由 Puppet 主节点配置。在独立 Puppet 中，每个节点定期使用 **puppet apply** 命令使用完整的 Puppet 模块和清单来编译和应用程序自己的配置。换句话说，每个节点需要与主/代理 Puppet 中的 Puppet 主节点所需的相同文件和数据。在本教程中，我们将专注于主/代理 Puppet 设置。
+
+### 01 安装前步骤
+
+一旦你决定了设置类型，即主/代理或独立，下一步是识别主节点（如果你计划使用主/代理设置）。注意，Windows 机器不能充当主节点。此外，主节点应该是一台专用机器，至少拥有两个处理器核心和 1GB 的 RAM。它还必须可以通过可靠的主机名访问。你可以通过确保主节点位于 *puppet* 的默认主机名下来减少代理节点上的设置时间。Puppet 主节点应允许入站流量使用端口 8140，代理节点应能够连接到主节点。Puppet 主节点充当证书颁发机构，因此它必须准确设置系统时间，否则它可能会错误地从遥远的过去或未来颁发代理证书，其他节点会将这些视为过期。一旦所有这些都被处理完毕，你就可以继续 Puppet 安装的下一步。
+
+### 02 在主节点上安装
+
+是时候在主节点上安装 Puppet 了。首先启用 Puppet Labs 软件包存储库；一旦启用了此存储库，我们就可以安装 Puppet。输入：
+
+```bash
+$ wget https://apt.puppetlabs.com/puppet-labs-release-trusty.deb
+$ sudo dpkg -i puppet-labs-release-trusty.deb
+$ sudo apt-get update
+```
+
+接下来，在 Puppet 主节点上，输入以下内容之一：
+
+```bash
+$ sudo apt-get install puppetmaster-passenger
+```
+
+... 这是 PuppetLabs 本身推荐的，因为它安装了 Puppet 及其先决条件，并自动配置了一个具备生产容量的 Web 服务器；或者，输入：
+
+```bash
+$ sudo apt-get install puppetmaster
+```
+
+... 这将仅安装 Puppet、其先决条件以及用于运行测试级 Puppet 主节点服务器的 init 脚本 */etc/init.d/puppetmaster*。
+
+### 声明式语言
+
+Puppet 使用声明式语言帮助你描述系统的状态。这意味着你不需要考虑通过安装 Apache、MySQL 和 PHP 来构建 LAMP 堆栈：然后调整 php.ini；然后启用 mod_php；等等。你只需描述你想要的状态 – 例如，“一个具有 Apache、MySQL 和 WordPress 的 Web 服务器” – 然后让 Puppet 使其发生。

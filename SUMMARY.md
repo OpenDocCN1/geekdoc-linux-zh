@@ -1299,6 +1299,7 @@
 +   [Linux User & Developer 155 - Linux 虚拟化 155](docs/linux-user-developer-155---how-to-virtualise-linux-155/README.md)
 +   [Linux 用户与开发者 156 - FOSS 专题 156](docs/linux-user-developer-156---the-foss-issue-156/README.md)
 +   [Linux 用户与开发者 158 - Code Gnome 软件 158](docs/linux-user-developer-158---code-gnome-software-158/README.md)
++   [Linux 用户与开发者 159：DevOps：快速创建软件](docs/linux-user-developer-159---devops-create-software-faster-159/README.md)
 +   [Linux 用户与开发者 160 - 掌握 Pi Zero 的 50 方法](docs/linux-user-developer-160---50-ways-to-master-pi-zero-160/README.md)
 +   [Linux 用户与开发者 161 - 构建你自己的 Linux PC 161](docs/linux-user-developer-161---build-your-own-linux-pc-161/README.md)
 +   [Linux 用户与开发者 162 - 全方位发行版工具包 162](docs/linux-user-developer-162---total-distro-toolkit-162/README.md)
